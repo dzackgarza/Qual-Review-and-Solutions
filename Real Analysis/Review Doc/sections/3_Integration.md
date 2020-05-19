@@ -202,17 +202,19 @@ Proof
 
 ## $L^p$ Spaces
 
-**Lemma:**
-The following are dense subspaces of $L^2([0, 1])$:
+Lemma
+:   The following are dense subspaces of $L^2([0, 1])$:
 
-- Simple functions
-- Step functions
-- $C_0([0, 1])$
-- Smoothly differentiable functions $C_0^\infty([0, 1])$
-- Smooth compactly supported functions $C_c^\infty$
+    - Simple functions
+    - Step functions
+    - $C_0([0, 1])$
+    - Smoothly differentiable functions $C_0^\infty([0, 1])$
+    - Smooth compactly supported functions $C_c^\infty$
 
-**Dual Spaces:**
-In general, $(L^p)\dual \cong L^q$
+Theorem (Dual Lp Spaces)
+:   $(L^p)\dual \cong L^q$
+
+Proof (p=1)
 
 - For qual, supposed to know the $p=1$ case, i.e. $(L^1)\dual \cong L^\infty$
   - For the analogous $p=\infty$ case: $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. So this containment is always proper (requires Hahn-Banach Theorem).
