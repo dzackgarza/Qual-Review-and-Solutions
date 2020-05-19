@@ -50,47 +50,48 @@ Lemma
     \int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \abs{f}
     .\end{align*}
 
-> *Proof:* Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
-\begin{align*}
-\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
-,\end{align*}
-so the DCT applies to $g_n$ and
-\begin{align*}
-\norm{f_n - f}_1 = \int \abs{f_n - f} + \abs{f_n} - \abs{f_n}
-= \int \abs{f_n} - g_n\\
-\to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
-.\end{align*}
+Proof 
+:   Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
+    \begin{align*}
+    \abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
+    ,\end{align*}
+    so the DCT applies to $g_n$ and
+    \begin{align*}
+    \norm{f_n - f}_1 = \int \abs{f_n - f} + \abs{f_n} - \abs{f_n}
+    = \int \abs{f_n} - g_n\\
+    \to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
+    .\end{align*}
 
-**Fatou's Lemma**:
+Fatou's Lemma
+:   If $f_n \in L^+$, then
+    \begin{align*}
+    \int \liminf_n f_n &\leq \liminf_n \int f_n \\
+    \limsup_n \int f_n &\leq \int \limsup_n f_n
+    .\end{align*}
 
-If $f_n \in L^+$, then
-\begin{align*}
-\int \liminf_n f_n &\leq \liminf_n \int f_n \\
-\limsup_n \int f_n &\leq \int \limsup_n f_n
-.\end{align*}
+    > Only need positivity.
 
-> Only need positivity.
+Theorem (Tonelli)
+:   For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
 
-**Theorem (Tonelli):**
-For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
+    - $f_x(y)$ is a **measurable** function
+    - $F(x) = \int f(x, y) ~dy$ is a **measurable** function,
+    - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
+    - $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
 
-- $f_x(y)$ is a **measurable** function
-- $F(x) = \int f(x, y) ~dy$ is a **measurable** function,
-- For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
-- $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
+Theorem (Fubini)
+:   For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
 
-**Theorem (Fubini):**
-For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
+    - $f_x(y)$ is an **integrable** function
+    - $F(x) = \int f(x, y) ~dy$ is an **integrable** function,
+    - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
+    - $\int f = \int \int f(x,y)$, i.e. any iterated integral is equal to the original
 
-- $f_x(y)$ is an **integrable** function
-- $F(x) = \int f(x, y) ~dy$ is an **integrable** function,
-- For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
-- $\int f = \int \int f(x,y)$, i.e. any iterated integral is equal to the original
+Theorem (Fubini/Tonelli)
+: If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
 
-**Theorem (Fubini/Tonelli):**
-If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
-
-**Differentiating under the integral**:
+**Useful Technique**:
+Differentiating under the integral. 
 
 If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
 \begin{align*}
@@ -108,32 +109,32 @@ so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
 Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
 
 
-**Lemma (Swapping Sum and Integral)**
-If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
+Proposition (Swapping Sum and Integral)
+: If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
 
-> *Proof: MCT.* 
-> Let $F_N = \sum^N f_n$ be a finite partial sum; then there are simple functions $\phi_n \nearrow f_n$ and so $\sum^N \phi_n \nearrow F_N$, so apply MCT.
+Proof
+: MCT. Let $F_N = \sum^N f_n$ be a finite partial sum; then there are simple functions $\phi_n \nearrow f_n$ and so $\sum^N \phi_n \nearrow F_N$, so apply MCT.
 
-**Lemma:**
-If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+Lemma
+:   If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
 
-> *Proof:*
-> Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
-> Almost everywhere convergence: ?
+Proof
+:   Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
+    Almost everywhere convergence: ?
 
 ## $L^1$ Facts
 
-**Lemma (Translation Invariance):**
-The Lebesgue integral is translation invariant, i.e. 
-$\int f(x) ~dx = \int f(x + h) ~dx$ for any $h$.
+Lemma (Translation Invariance)
+:   The Lebesgue integral is translation invariant, i.e. 
+    $\int f(x) ~dx = \int f(x + h) ~dx$ for any $h$.
 
-> *Proof:* 
-> 
-> - For characteristic functions, $\int_E f(x+h) = \int_{E + h} f(x) = m(E+h) = m(E) = \int_E f$ by translation invariance of measure.
-> - So this also holds for simple functions by linearity
-> - For $f\in L^+$, choose $\phi_n \nearrow f$ so $\int \phi_n \to \int f$.
-> - Similarly, $\tau_h \phi_n \nearrow \tau_h f$ so $\int \tau_h f \to \int f$
-> - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
+Proof
+:   \hfill
+    - For characteristic functions, $\int_E f(x+h) = \int_{E + h} f(x) = m(E+h) = m(E) = \int_E f$ by translation invariance of measure.
+    - So this also holds for simple functions by linearity
+    - For $f\in L^+$, choose $\phi_n \nearrow f$ so $\int \phi_n \to \int f$.
+    - Similarly, $\tau_h \phi_n \nearrow \tau_h f$ so $\int \tau_h f \to \int f$
+    - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
 
 **Lemma (Integrals Distribute Over Disjoint Sets):**
 
