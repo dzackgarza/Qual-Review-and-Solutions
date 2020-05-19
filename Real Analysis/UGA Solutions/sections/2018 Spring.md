@@ -18,12 +18,12 @@ E_j \definedas \theset{x\in [0, 1] \suchthat \
 
 Note that we can write $E_j$ is a union of intervals
 \begin{align*}
-E_j = (0, {1 \over j^3}) \union 
-B_{1 \over j^3}\qty{1\over j} \union
+E_j =& (1, {1 \over j^3}) \\
+&\union B_{1 \over j^3}\qty{1\over j} \union
 B_{1 \over j^3}\qty{2\over j} \union
 \cdots 
-B_{1 \over j^3}\qty{j-1\over j} \union
-(1 - {1\over j^3}, 1)
+B_{1 \over j^3}\qty{j-1\over j} \\
+&\union (1 - {1\over j^3}, 1)
 ,\end{align*}
 
 from which we can conclude that $E_j$ is Borel and thus Lebesgue measurable, and that for each $j$, there are exactly $j+1$ possible choices for a numerator (corresponding to the $j+1$ sets appearing above.)
