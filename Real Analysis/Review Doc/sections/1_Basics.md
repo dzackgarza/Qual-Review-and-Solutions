@@ -80,27 +80,28 @@ Proposition
 
 Proof
 :   \hfill
- 1. Let $\theset{f_k}$ be Cauchy in $X$.
 
- 2. Define a candidate limit using pointwise convergence:
+    1.  Let $\theset{f_k}$ be Cauchy in $X$.
 
-    Fix an $x$; since
-    $$
-    \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
-    $$ 
-    the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
-    So define $f(x) \definedas \lim_k f_k(x)$.
+    2.  Define a candidate limit using pointwise convergence:
+
+        Fix an $x$; since
+        $$
+        \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
+        $$ 
+        the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
+        So define $f(x) \definedas \lim_k f_k(x)$.
 
 
- 3. Show that $\norm{f_k - f} \to 0$:
-    $$
-    \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
-    $$
-    Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+    3.  Show that $\norm{f_k - f} \to 0$:
+        $$
+        \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
+        $$
+        Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
 
- 4. Show that $f\in X$:
+    4.  Show that $f\in X$:
 
-    The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
+        The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
 
 Lemma
 :	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
