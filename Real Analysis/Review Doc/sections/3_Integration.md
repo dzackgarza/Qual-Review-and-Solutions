@@ -1,15 +1,15 @@
 # Integration
 
-**Definition:**
-$f\in L^+$ iff $f$ is measurable and non-negative.
+Definition
+:	$f\in L^+$ iff $f$ is measurable and non-negative.
 
 > Useful techniques: 
 >
 > - Break integration domain up into disjoint annuli.
 > - Break real integrals up into $x < 1$ and $x>1$.
 
-**Definition:**
-A measurable function is integrable iff $\norm{f}_1 < \infty$.
+Definition
+:	A measurable function is integrable iff $\norm{f}_1 < \infty$.
 
 Useful facts about $C_c$ functions:
 
@@ -18,38 +18,37 @@ Useful facts about $C_c$ functions:
 
 ## Convergence Theorems
 
-**Monotone Convergence Theorem (MCT)**:
+Theorem (Monotone Convergence)
+:   If $f_n \in L^+$ and $f_n \nearrow f$ a.e., then
+    $$
+    \lim \int f_n
+    = \int \lim f_n = \int f
+    \quad \text{i.e.}~~ \int f_n \to \int f
+    .$$
 
-If $f_n \in L^+$ and $f_n \nearrow f$ a.e., then
-$$
-\lim \int f_n
-= \int \lim f_n = \int f
-\quad \text{i.e.}~~ \int f_n \to \int f
-.$$
+    > Needs to be positive and increasing.
 
-> Needs to be positive and increasing.
+Theorem (Dominated Convergence)
 
-**Dominated Convergence Theorem (DCT)**:
+:   If $f_n \in L^1$ and $f_n \to f$ a.e. with $\abs {f_n} \leq g$ for some $g\in L^1$, then
+    $$
+    \lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f
+    ,$$
 
-If $f_n \in L^1$ and $f_n \to f$ a.e. with $\abs {f_n} \leq g$ for some $g\in L^1$, then
-$$
-\lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f
-,$$
+    and more generally,
+    $$
+    \int \abs{f_n - f} \to 0
+    .$$
 
-and more generally,
-$$
-\int \abs{f_n - f} \to 0
-.$$
+    > Positivity *not* needed.
 
-> Positivity *not* needed.
+    > Generalized DCT: can relax $\abs {f_n} < g$ to $\abs{f_n} < g_n \to g\in L^1$.
 
-> Generalized DCT: can relax $\abs {f_n} < g$ to $\abs{f_n} < g_n \to g\in L^1$.
-
-**Lemma:**
-If $f\in L^1$, then
-\begin{align*}
-\int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \abs{f}
-.\end{align*}
+Lemma
+:   If $f\in L^1$, then
+    \begin{align*}
+    \int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \abs{f}
+    .\end{align*}
 
 > *Proof:* Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
 \begin{align*}
