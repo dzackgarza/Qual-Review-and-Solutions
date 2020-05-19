@@ -98,6 +98,7 @@ Proof
 
 Lemma
 :	  \hfill
+    
     - Characteristic functions are measurable
     - If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
     - Sums and differences of measurable functions are measurable, 
