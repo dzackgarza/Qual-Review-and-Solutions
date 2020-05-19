@@ -212,10 +212,15 @@ Lemma
     - Smooth compactly supported functions $C_c^\infty$
 
 Theorem (Dual Lp Spaces)
-:   $(L^p)\dual \cong L^q$
+:   For $p\neq \infty$, $(L^p)\dual \cong L^q$.
 
 Proof (p=1)
+: ?
 
-- For qual, supposed to know the $p=1$ case, i.e. $(L^1)\dual \cong L^\infty$
-  - For the analogous $p=\infty$ case: $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. So this containment is always proper (requires Hahn-Banach Theorem).
-- The $p=2$ case: Easy by the Riesz Representation for Hilbert spaces.
+Proof (p=2)
+> Use Riesz Representation for Hilbert spaces.
+ 
+
+For the $p=\infty$ case: 
+$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
+So this containment is always proper (requires Hahn-Banach Theorem).
