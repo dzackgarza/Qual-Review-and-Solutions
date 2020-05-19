@@ -116,16 +116,17 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 
 > Negating: find an $x$ which depends on $n$ for which the norm is bounded below.
 
-**Useful Technique**: If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
+**Useful Technique**: 
+If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
 
-**Lemma (Baby Commuting Limits with Integrals):**
-If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+Lemma (Baby Commuting Limits with Integrals)
+: If $f_n \to f$ uniformly, then $\int f_n = \int f$.
 
-**Lemma (Uniform Convergence and Derivatives)**
-If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
+Lemma (Uniform Convergence and Derivatives)
+: If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
 
-**Lemma (Uniform Convergence of Series):**
-If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
+Lemma (Uniform Convergence of Series)
+: If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
 Lemma
 :	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
@@ -133,18 +134,18 @@ Lemma
 **Useful Technique:**
 For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
 
-**Lemma (M-test for Series)**:
-If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
+**Lemma (M-test for Series)
+: If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
 
 **Lemma (p-tests)**:
-Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
-\begin{align*}
-\sum \frac 1 {n^p} < \infty &\iff p>1 \\
-\int_\varepsilon^\infty \frac 1 {x^p} < \infty 
-&\iff p>1 \\
-\int_0^1 \frac 1 {x^p} < \infty 
-&\iff p<1 \\
-\int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
-\int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
-.\end{align*}
+:   Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
+    \begin{align*}
+    \sum \frac 1 {n^p} < \infty &\iff p>1 \\
+    \int_\varepsilon^\infty \frac 1 {x^p} < \infty 
+    &\iff p>1 \\
+    \int_0^1 \frac 1 {x^p} < \infty 
+    &\iff p<1 \\
+    \int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
+    \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
+    .\end{align*}
 
