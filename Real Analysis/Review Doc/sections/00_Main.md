@@ -44,8 +44,12 @@ Proof
 \qtext{with equality} \iff f = \lambda g
 .\end{align*}
 
-
 > Relates inner product to norm, and only happens to relate norms in $L^1$.
+
+Proof
+: ?
+
+
 
 **Minkowski's Inequality:**
 $$
@@ -61,7 +65,8 @@ $$
 \|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
 .\end{align*}
 
-> Useful specific cases:
+**Application**:
+Some useful specific cases:
 \begin{align*}
 \norm{f\ast g}_1 &\leq \norm{f}_1 \norm{g}_1 \\
 \|f * g\|_{p} &\leq\|f\|_{1}\|g\|_{p}, \\
