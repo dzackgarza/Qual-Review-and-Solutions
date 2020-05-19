@@ -136,20 +136,17 @@ Proof
     - Similarly, $\tau_h \phi_n \nearrow \tau_h f$ so $\int \tau_h f \to \int f$
     - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
 
-**Lemma (Integrals Distribute Over Disjoint Sets):**
+Lemma (Integrals Distribute Over Disjoint Sets)
+: If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
 
-If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
 
-
-**Lemma ($L^1$ functions may Decay Rapidly):**
-
-If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
+Lemma (Unif. Cts. L1 Functions Decay Rapidly)
+: If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
 
 > Doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
 
-**Lemma ($L^1$ functions have Small Tails):**
-
-If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
+Lemma (L1 Functions Have Small Tails)
+: If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
 
 > *Proof: Approximate with compactly supported functions.* 
 > Take $g\converges{L_1}\to f$ with $g\in C_c$, then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)^c$, then $\int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}$.
