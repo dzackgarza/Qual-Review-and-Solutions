@@ -21,27 +21,29 @@ $$
 \frac 1 p + \frac 1 q = 1 \implies \|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}
 .\end{align*}
 
-> *Application:*
->For finite measure spaces,
+*Application:*
+For finite measure spaces,
 $$
 1 \leq p < q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
 $$
 
-> *Proof:* Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
-> Then let $h = \abs{f}^p$:
-\begin{align*}
-\norm{f}_p^p = \norm{h\cdot 1}_1 \leq \norm{1}_s \norm{h}_r = \mu(X)^{\frac 1 s} \norm{f}_q^{\frac q r}
-\implies \norm{f}_p \leq \mu(X)^{\frac 1 p - \frac 1 q}\norm{f}_q
-.\end{align*}
->
+Proof 
+: Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
+  Then let $h = \abs{f}^p$:
+  \begin{align*}
+  \norm{f}_p^p = \norm{h\cdot 1}_1 \leq \norm{1}_s \norm{h}_r = \mu(X)^{\frac 1 s} \norm{f}_q^{\frac q r}
+  \implies \norm{f}_p \leq \mu(X)^{\frac 1 p - \frac 1 q}\norm{f}_q
+  .\end{align*}
+
 > Note: doesn't work for $\ell$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
 
 **Cauchy-Schwarz**:
 
 \begin{align*}
 \abs{\inner{f}{g}} = \norm{fg}_1 \leq \norm{f}_2 \norm{g}_2
-,\end{align*}
-with equality $\iff f = \lambda g$.
+\qtext{with equality} \iff f = \lambda g
+.\end{align*}
+
 
 > Relates inner product to norm, and only happens to relate norms in $L^1$.
 
