@@ -2,7 +2,10 @@
 
 ## 1
 
-We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$, th
+We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result will follow from that fact that 
+$$
+m(E) = m\qty{\union_{n\in \ZZ} E \intersect [n, n+1] \leq \sum m(E \intersect [n, n+1]) = 0
+$$
 Define
 \begin{align*}
 E_j \definedas \theset{x\in \RR \suchthat \
