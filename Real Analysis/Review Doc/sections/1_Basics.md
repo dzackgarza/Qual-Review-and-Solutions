@@ -5,7 +5,7 @@ $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \le
 Similarly, a limit does not exist iff $\liminf f_n > \limsup f_n$.
 
 Lemma (Convergent Sums Have Small Tails)
-:   $$\sum a_n < \infty \implies a_n \to 0$ and $\sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
+:   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
 
 Theorem (Heine-Borel)
 : $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
