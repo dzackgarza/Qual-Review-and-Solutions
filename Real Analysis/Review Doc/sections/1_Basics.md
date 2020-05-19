@@ -106,10 +106,11 @@ Proof
 Lemma
 :	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
 
-**Corollary:**
-The unit ball in $C([0, 1])$ with the sup norm is not compact.
+Proposition
+: The unit ball in $C([0, 1])$ with the sup norm is not compact.
 
-> *Proof:* Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
+Proof 
+: Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
 
 Lemma
 :	A uniform limit of continuous functions is continuous.
