@@ -21,19 +21,21 @@ E_j = (0, {1 \over j^3}) \union ({1\over j} - {1\over j^3},{1\over j} + {1 \over
 ({j-1 \over j} - {1\over j^3}, {j-1 \over j} + {1\over j^3}) \union (1 - {1\over j^3}, 1)
 ,\end{align*}
 
-from which we can conclude that $E_j$ is Borel and thus Lebesgue measurable, and that for each $j$, there are exactly $j+1$ possible choices for a numerator.
+from which we can conclude that $E_j$ is Borel and thus Lebesgue measurable, and that for each $j$, there are exactly $j+1$ possible choices for a numerator (corresponding to the $j+1$ sets appearing above.)
+
+The first and last interval are length $1 \over j^3$ and the remaining $(j+1)-2 = j-1$ intervals are length $2 \over j^3$, we find that
+$$
+m(E_j) = 2 \qty{1 \over j^3} + (j-1) \qty{2 \over j^3} = {2 \over j^2}
+$$
 
 Note that 
 \begin{align*}
-E_j \subseteq B_{q^3}(\frac {p_j}{q_j})
-&\implies 
-m(E_j) \leq 2 \cdot \mathrm{radius} \left(B_{q^3}\left(\frac {p_j}{q_j}\right)\right) = \frac{2}{q_j^3} \\
-&\implies \sum_{j\in \NN} m(E_j) \leq 2\sum_{j\in \NN} \frac 1 {q_j^{3}} < \sum_{j=1}^\infty \frac 1 {j^3} < \infty
+&\implies \sum_{j\in \NN} m(E_j) \leq 2\sum_{j\in \NN} \frac 1 {j^{2}} < \infty
 ,\end{align*}
 
 which converges by the $p\dash$test for sums.
 
-Since $\theset{E_j}$ is a countable collection of measurable sets such that $\sum m(E_j) < \infty$, so Borel-Cantelli applies and $m(\limsup_j E_j) = 0$, where we can just note that $\limsup_j E_j = E$.
+Since $\theset{E_j}$ is a countable collection of measurable sets such that $\sum m(E_j) < \infty$, so Borel-Cantelli applies and $m(\limsup_j E_j) = 0$, where we can just note that $\limsup_j E_j = E \intersect [0, 1]$.
 
 > *Proof of Borel Cantelli:*
 > 
