@@ -28,7 +28,7 @@ B_{1 \over j^3}\qty{j-1\over j} \\
 
 from which we can conclude that $E_j$ is Borel and thus Lebesgue measurable, and that for each $j$, there are exactly $j+1$ possible choices for a numerator (corresponding to the $j+1$ sets appearing above.)
 
-The first and last interval are length $1 \over j^3$ and the remaining $(j+1)-2 = j-1$ intervals are length $2 \over j^3$, we find that
+The first and last intervals are length $1 \over j^3$ and the remaining $(j+1)-2 = j-1$ intervals are length $2 \over j^3$, so we find that
 $$
 m(E_j) = 2 \qty{1 \over j^3} + (j-1) \qty{2 \over j^3} = {2 \over j^2}
 $$
