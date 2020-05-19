@@ -148,22 +148,23 @@ Lemma (Unif. Cts. L1 Functions Decay Rapidly)
 Lemma (L1 Functions Have Small Tails)
 : If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
 
-> *Proof: Approximate with compactly supported functions.* 
-> Take $g\converges{L_1}\to f$ with $g\in C_c$, then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)^c$, then $\int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}$.
+Proof
+:   Approximate with compactly supported functions.
+    Take $g\converges{L_1}\to f$ with $g\in C_c$, then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)^c$, then $\int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}$.
 
-**Lemma ($L^1$ functions have absolutely continuity):**
+Lemma (L1 Functions Have Absolutely Continuity)
+: $m(E) \to 0 \implies \int_E f \to 0$.
 
-$m(E) \to 0 \implies \int_E f \to 0$.
+Proof
+:   Approximate with compactly supported functions.
+    Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
 
-> *Proof: Approximate with compactly supported functions.*
-> Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
+Lemma (L1 Functions Are Finite a.e.)
+: If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
 
-**Lemma ($L^1$ functions are finite almost everywhere):**
-
-If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
-
-> *Proof (Split up domain2):*
-> Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
+Proof 
+:   Idea: Split up domain
+    Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
 
 **Lemma (Continuity in $L^1$)**:
 $\norm{\tau_h f - f}_1 \to 0$ as $h\to 0$.
