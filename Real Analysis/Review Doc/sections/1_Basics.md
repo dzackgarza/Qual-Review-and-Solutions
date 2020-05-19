@@ -4,11 +4,11 @@
 $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
 Similarly, a limit does not exist iff $\liminf f_n > \limsup f_n$.
 
-**Lemma:**
-$\sum a_n < \infty \implies a_n \to 0$ and $\sum_{k=N}^\infty \converges{N\to\infty}\to 0$, i.e. the terms/tails of convergent sums go to zero.
+Lemma (Convergent Sums Have Small Tails)
+:   $$\sum a_n < \infty \implies a_n \to 0$ and $\sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
 
-**Lemma (Heine-Borel):**
-A subset of $\RR^n$ is compact iff it is closed and bounded.
+Theorem (Heine-Borel)
+: A subset of $\RR^n$ is compact iff it is closed and bounded.
 
 **Lemma (Geometric Series):**
 \begin{align*}
@@ -18,11 +18,11 @@ A subset of $\RR^n$ is compact iff it is closed and bounded.
 > *Corollary:* 
 > $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
 
-**Definition:**
-A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
+Definition
+: A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 
-**Definition:**
-A set is **meager** if it is a *countable* union of nowhere dense sets.
+Definition
+: A set is **meager** if it is a *countable* union of nowhere dense sets.
 
 > Note that a *finite* union of nowhere dense is still nowhere dense.
 
