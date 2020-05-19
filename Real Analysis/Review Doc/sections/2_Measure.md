@@ -105,5 +105,5 @@ Lemma
     - Compositions $f\circ T$ for $T$ a linear transformation are measurable,
     - "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
 
-**Proof (Convolution):**
-Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+Proof (Convolution)
+: Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
