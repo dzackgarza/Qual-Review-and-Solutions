@@ -77,8 +77,8 @@ Definition
 Lemma
 :	If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
 
-> *Proof:* 
-> Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
+Proof
+: Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
 
 Theorem (Borel-Cantelli)
 :   Let $\{E_k\}$ be a countable collection of measurable sets.
@@ -87,15 +87,9 @@ Theorem (Borel-Cantelli)
     \sum_k m(E_k) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_k
     .$$
 
-**Application:**
-\begin{align*}
-m\left(\theset{x \text{ such that $\exists$ inf. many $\frac p q$ with } \left|x-\frac{p}{q}\right| \leq \frac{1}{q^{3}}}\right) = 0
-.\end{align*}
-
-
 Proof
-:   Idea: write $E_j$ to be the above set with $p, q$ replaced by $p_j, q_j$ where $r_j = \frac {p_j}{q_j}$ is an enumeration of $\QQ$, then $m(E_j) \leq \frac{2}{q^3}$ and $\sum \frac{1}{q^3} < \infty$.
- 
+:   \hfill
+
     - If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
     - If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
     - If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
@@ -103,14 +97,13 @@ Proof
     - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
 
 Lemma
-:	
-
-- Characteristic functions are measurable
-- If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
-- Sums and differences of measurable functions are measurable, 
-- Cones $F(x,y) = f(x)$ are measurable, 
-- Compositions $f\circ T$ for $T$ a linear transformation are measurable,
-- "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
+:	  \hfill
+    - Characteristic functions are measurable
+    - If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
+    - Sums and differences of measurable functions are measurable, 
+    - Cones $F(x,y) = f(x)$ are measurable, 
+    - Compositions $f\circ T$ for $T$ a linear transformation are measurable,
+    - "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
 
 **Proof (Convolution):**
 Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
