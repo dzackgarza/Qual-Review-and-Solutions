@@ -8,7 +8,7 @@ Lemma (Convergent Sums Have Small Tails)
 :   $$\sum a_n < \infty \implies a_n \to 0$ and $\sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
 
 Theorem (Heine-Borel)
-: A subset of $\RR^n$ is compact iff it is closed and bounded.
+: $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
 
 **Lemma (Geometric Series):**
 \begin{align*}
