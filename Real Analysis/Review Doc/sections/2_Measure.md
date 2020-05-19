@@ -24,7 +24,7 @@ Lemma (Properties of Outer Measure)
   
     [^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
-Lemma (Subtraction of Measure):
+Lemma (Subtraction of Measure)
 : $$m(A) = m(B) + m(C), ~~m(C) < \infty \implies m(A) - m(C) = m(B).$$
 
 Lemma (Continuity of Measure)
