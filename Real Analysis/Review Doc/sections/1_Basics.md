@@ -29,15 +29,16 @@ Definition
 Lemma
 : The Cantor set is closed with empty interior.
 
-> Proof: Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
+Proof
+: Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
 
-> **Corollary:**
-> The Cantor set is nowhere dense.
+**Corollary:**
+The Cantor set is nowhere dense.
 
-**Definition:**
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
-
-> Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+Definition
+:	An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+  
+  > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
 Lemma
 :	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
@@ -49,8 +50,9 @@ Theorem (Baire)
 Lemma
 :	There is a function discontinuous precisely on $\QQ$.
 
-> *Proof:* $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
-The limit at every point is 0.
+Proof
+: $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
+  The limit at every point is 0.
 
 Lemma
 :	There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
@@ -63,42 +65,41 @@ Lemma
 
 # Uniform Convergence
 
-**Theorem (Egorov)**:
+Theorem (Egorov)
+:   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$ exists almost everywhere.
 
-Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$ exists almost everywhere.
+    Then $f_k \to f$ *almost uniformly*, i.e.
+    \begin{align*}
+    \forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
+    m(E\setminus F) < \varepsilon ~\text{ and }~ f_k \mapsvia{u}  f ~\text{on}~ F
+    .\end{align*}
 
-Then $f_k \to f$ *almost uniformly*, i.e.
-\begin{align*}
-\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-m(E\setminus F) < \varepsilon ~\text{ and }~ f_k \mapsvia{u}  f ~\text{on}~ F
-.\end{align*}
+Proposition 
+: The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
 
-**Theorem (Important Example):**
-The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+Proof
+:   \hfill
+ 1. Let $\theset{f_k}$ be Cauchy in $X$.
 
-> *Proof:*
->
-> *Step 0:* Let $\theset{f_k}$ be Cauchy in $X$.
->
-> *Step 1*: Define a candidate limit using pointwise convergence:
->
-> Fix an $x$; since
-$$\abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
-,$$ 
-> the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
-> So define $f(x) \definedas \lim_k f_k(x)$.
->
->
-> *Step 2:* Show that $\norm{f_k - f} \to 0$:
-$$
-\abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
-$$
-> Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
->
-> *Step 3:* Show that $f\in X$:
->
-> The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
-> $\qed$
+ 2. Define a candidate limit using pointwise convergence:
+
+    Fix an $x$; since
+    $$
+    \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
+    $$ 
+    the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
+    So define $f(x) \definedas \lim_k f_k(x)$.
+
+
+ 3. Show that $\norm{f_k - f} \to 0$:
+    $$
+    \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
+    $$
+    Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+
+ 4. Show that $f\in X$:
+
+    The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
 
 Lemma
 :	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
