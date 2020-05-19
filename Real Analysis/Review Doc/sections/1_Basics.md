@@ -15,8 +15,8 @@ Lemma (Geometric Series)
   \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
   .\end{align*}
 
-> *Corollary:* 
-> $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
+*Corollary:* 
+$\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
 
 Definition
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
