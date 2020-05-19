@@ -21,7 +21,7 @@ Note that we can write $E_j$ is a union of intervals
 E_j =& (1, {1 \over j^3}) \\
 &\union B_{1 \over j^3}\qty{1\over j} \union
 B_{1 \over j^3}\qty{2\over j} \union
-\cdots 
+\cdots \union
 B_{1 \over j^3}\qty{j-1\over j} \\
 &\union (1 - {1\over j^3}, 1)
 ,\end{align*}
