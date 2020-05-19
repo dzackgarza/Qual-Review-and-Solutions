@@ -2,14 +2,14 @@
 
 ## 1
 
-Let $\QQ = \theset{\frac {p_j} {q_j}}_{j\in\NN}$ be an enumeration of the rationals, and define
+We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$, th
+Define
 \begin{align*}
-E_j \definedas \theset{x\in \RR \suchthat \abs{x - \frac{p_j}{q_j} } < \frac 1 {q^3}} 
-\definedas
-B_{q^3}\left(\frac {p_j}{q_j}\right)
+E_j \definedas \theset{x\in \RR \suchthat \
+\exists p\in \ZZ^{\geq 0} \text{ s.t. } \abs{x - \frac{p}{j} } < \frac 1 {j^3}} 
 .\end{align*}
 
-Each $E_j$ is an open interval,
+Note that we can write $E_j$ is a union of intervals
 \begin{align*}
 E_j = \left(\frac{p_j}{q_j} - \frac{1}{q_j^3},~ \frac{p_j}{q_j} + \frac{1}{q_j^3} \right)
 ,\end{align*}
