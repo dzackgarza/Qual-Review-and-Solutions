@@ -1,19 +1,23 @@
 ---
-title: Analysis Qual Solutions
+ title: Real Analysis Qualifying Exam Solutions
 ---
 
-!include sections/Fall 2019.md
 
-!include sections/Spring 2019.md
+!include sections/2019 Spring.md
 
-!include sections/Fall 2018.md
+!include sections/2019 Fall.md
 
-!include sections/Spring 2018.md
+!include sections/2018 Spring.md
 
-!include sections/Fall 2017.md
+!include sections/2018 Fall.md
 
-!include sections/Spring 2017.md
+!include sections/2017 Spring.md
 
-!include sections/Fall 2016.md
+!include sections/2017 Fall.md
 
-!include sections/Spring 2014.md
+!include sections/2016 Spring.md
+
+!include sections/2016 Fall.md
+
+!include sections/2014 Spring.md
+

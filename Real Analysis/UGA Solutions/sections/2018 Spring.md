@@ -4,12 +4,13 @@
 
 We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result will follow from that fact that 
 $$
-m(E) = m\qty{\union_{n\in \ZZ} E \intersect [n, n+1] \leq \sum m(E \intersect [n, n+1]) = 0
+m(E) = m \qty{\union_{n\in \ZZ} E \intersect [n, n+1]} \leq \sum m(E \intersect [n, n+1]) = 0
 $$
 
 By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
 
 Define
+
 \begin{align*}
 E_j \definedas \theset{x\in [0, 1] \suchthat \
 \exists p\in \ZZ^{\geq 0} \text{ s.t. } \abs{x - \frac{p}{j} } < \frac 1 {j^3}} 
@@ -28,14 +29,14 @@ $$
 m(E_j) = 2 \qty{1 \over j^3} + (j-1) \qty{2 \over j^3} = {2 \over j^2}
 $$
 
-Note that 
+We can then note that
 \begin{align*}
-&\implies \sum_{j\in \NN} m(E_j) \leq 2\sum_{j\in \NN} \frac 1 {j^{2}} < \infty
+\sum_{j\in \NN} m(E_j) \leq 2\sum_{j\in \NN} \frac 1 {j^2} < \infty
 ,\end{align*}
 
 which converges by the $p\dash$test for sums.
 
-Since $\theset{E_j}$ is a countable collection of measurable sets such that $\sum m(E_j) < \infty$, so Borel-Cantelli applies and $m(\limsup_j E_j) = 0$, where we can just note that $\limsup_j E_j = E \intersect [0, 1]$.
+Since $\theset{E_j}$ is a countable collection of measurable sets such that $\sum m(E_j) < \infty$, Borel-Cantelli applies and $m(\limsup_j E_j) = 0$, where we can just note that $\limsup_j E_j = E \intersect [0, 1]$.
 
 > *Proof of Borel Cantelli:*
 > 
