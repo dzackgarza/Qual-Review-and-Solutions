@@ -11,12 +11,12 @@ Theorem (Heine-Borel)
 : $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
 
 Lemma (Geometric Series)
-: \begin{align*}
-  \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
-  .\end{align*}
+:   \begin{align*}
+    \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
+    .\end{align*}
 
-*Corollary:* 
-$\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
+    *Corollary:* 
+    $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
 
 Definition
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
@@ -30,15 +30,15 @@ Lemma
 : The Cantor set is closed with empty interior.
 
 Proof
-: Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
+:   Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
 
-**Corollary:**
-The Cantor set is nowhere dense.
+    **Corollary:**
+    The Cantor set is nowhere dense.
 
 Definition
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
-    *Mnemonic: "F" stands for **ferme**, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+    *Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.*
 
 Lemma
 :	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
