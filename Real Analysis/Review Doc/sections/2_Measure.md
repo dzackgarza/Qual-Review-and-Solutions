@@ -37,10 +37,9 @@ Lemma (Continuity of Measure)
 
 Proof
 :   \hfill
-
     1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
 
-2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+    2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
 
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
