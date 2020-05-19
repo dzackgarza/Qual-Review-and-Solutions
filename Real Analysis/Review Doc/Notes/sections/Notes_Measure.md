@@ -60,9 +60,10 @@ If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ a
 
 > **Useful technique:** $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
-> *Proof:* For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\setminus K_n) \leq \frac 1 n$.
-> Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
-> Take $N\definedas E\setminus K$, then $m(N) = 0$.
+**Proof:** 
+For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\setminus K_n) \leq \frac 1 n$.
+Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
+Take $N\definedas E\setminus K$, then $m(N) = 0$.
 
 **Lemma:**
 \begin{align*}
@@ -92,6 +93,14 @@ m\left(\theset{x \text{ such that $\exists$ inf. many $\frac p q$ with } \left|x
 > *Proof:*
 > Write $E_j$ to be the above set with $p, q$ replaced by $p_j, q_j$ where $r_j = \frac {p_j}{q_j}$ is an enumeration of $\QQ$, then $m(E_j) \leq \frac{2}{q^3}$ and $\sum \frac{1}{q^3} < \infty$.
 
+**Proof**
+ 
+- If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
+- If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
+- If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
+- $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
+- $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
+
 **Lemma:**
 
 - Characteristic functions are measurable
@@ -101,5 +110,5 @@ m\left(\theset{x \text{ such that $\exists$ inf. many $\frac p q$ with } \left|x
 - Compositions $f\circ T$ for $T$ a linear transformation are measurable,
 - "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
 
-> **Proof (Convolution):**
-> Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+**Proof (Convolution):**
+Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
