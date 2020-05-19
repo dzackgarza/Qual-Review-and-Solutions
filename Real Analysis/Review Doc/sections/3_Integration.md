@@ -166,27 +166,28 @@ Proof
 :   Idea: Split up domain
     Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
 
-**Lemma (Continuity in $L^1$)**:
-$\norm{\tau_h f - f}_1 \to 0$ as $h\to 0$.
+Proposition (Continuity in L1)
+: $$\norm{\tau_h f - f}_1 \to 0$ as $h\to 0$$
 
-> *Proof: Approximate with compactly supported functions*.
-> Take $g\converges{L_1}\to f$ with $g\in C_c$.
-\begin{align*}
-\int f(x+h) - f(x) \leq \\ 
-\int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
-\to 2 \varepsilon + \int g(x+h) - g(x) \\
-= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x) \to 0
-,\end{align*}
-> which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
+Proof
+:   Approximate with compactly supported functions.
+    Take $g\converges{L_1}\to f$ with $g\in C_c$.
+    \begin{align*}
+    \int f(x+h) - f(x) \leq \\ 
+    \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
+    \to 2 \varepsilon + \int g(x+h) - g(x) \\
+    = \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x) \to 0
+    ,\end{align*}
+    which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
 
-**Theorem (Integration by Parts, Special Case)**:
-\begin{align*}
-F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
-\implies
-\int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
-.\end{align*}
+**Proposition (Integration by Parts, Special Case)**:
+:   \begin{align*}
+    F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
+    \implies
+    \int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
+    .\end{align*}
 
-> *Proof:* Fubini-Tonelli, and sketch region to change integration bounds.
+Proof Fubini-Tonelli, and sketch region to change integration bounds.
 
 **Theorem (Lebesgue Density)**:
 \begin{align*}
