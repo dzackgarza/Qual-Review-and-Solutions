@@ -6,8 +6,8 @@ $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ 
 **Useful Techniques**:
 Always consider bounded sets, and if $E$ is unbounded write $E = \union_n B_n(0) \intersect E$ and use countable subadditivity or continuity of measure.
 
-**Lemma:**
-Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+Lemma
+:	Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
 
 **Definition**:
 The outer measure of a set is given by
@@ -38,21 +38,22 @@ m(E_1) < \infty \text{ and } E_i \searrow E &\implies m(E_i) \to m(E)
 > 
 > 2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
 
-**Lemma:**
+Lemma
+:	
 Lebesgue measure is translation and dilation invariant.
 
 > *Proof:* 
 > Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
 
-**Theorem (Non-Measurable Sets)**:
-There is a non-measurable set.
+Theorem (Non-Measurable Sets)
+: There is a non-measurable set.
 
-> *Proof:*
->
-> - Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
-> - Enumerate the rationals in $[0, 1]$ as $q_j$, and define $N_j = N + q_j$. These intersect trivially.
-> - Define $M \definedas \disjoint N_j$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
-> By translation invariance, $m(N_j) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
+Proof
+:   \hfill
+    - Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
+    - Enumerate the rationals in $[0, 1]$ as $q_j$, and define $N_j = N + q_j$. These intersect trivially.
+    - Define $M \definedas \disjoint N_j$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
+    By translation invariance, $m(N_j) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
 
 **Lemma (Borel Characterization of Measurable Sets)**
 
@@ -65,13 +66,15 @@ For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\s
 Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
 Take $N\definedas E\setminus K$, then $m(N) = 0$.
 
-**Lemma:**
+Lemma
+:	
 \begin{align*}
 \limsup_n A_n = \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
 \liminf_n A_n = \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
 .\end{align*}
 
-**Lemma:**
+Lemma
+:	
 If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
 
 > *Proof:* 
@@ -101,7 +104,8 @@ m\left(\theset{x \text{ such that $\exists$ inf. many $\frac p q$ with } \left|x
 - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
 - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
 
-**Lemma:**
+Lemma
+:	
 
 - Characteristic functions are measurable
 - If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
