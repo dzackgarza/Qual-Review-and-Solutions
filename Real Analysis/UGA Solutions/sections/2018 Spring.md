@@ -42,6 +42,8 @@ which converges by the $p\dash$test for sums.
 
 Since $\theset{E_j}$ is a countable collection of measurable sets such that $\sum m(E_j) < \infty$, Borel-Cantelli applies and $m(\limsup_j E_j) = 0$, where we can just note that $\limsup_j E_j = E \intersect [0, 1]$.
 
+$\qed$
+
 > *Proof of Borel Cantelli:*
 > 
 > - If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
