@@ -6,18 +6,22 @@ We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the resu
 $$
 m(E) = m\qty{\union_{n\in \ZZ} E \intersect [n, n+1] \leq \sum m(E \intersect [n, n+1]) = 0
 $$
+
+By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
+
 Define
 \begin{align*}
-E_j \definedas \theset{x\in \RR \suchthat \
+E_j \definedas \theset{x\in [0, 1] \suchthat \
 \exists p\in \ZZ^{\geq 0} \text{ s.t. } \abs{x - \frac{p}{j} } < \frac 1 {j^3}} 
 .\end{align*}
 
 Note that we can write $E_j$ is a union of intervals
 \begin{align*}
-E_j = \left(\frac{p_j}{q_j} - \frac{1}{q_j^3},~ \frac{p_j}{q_j} + \frac{1}{q_j^3} \right)
+E_j = (0, {1 \over j^3}) \union ({1\over j} - {1\over j^3},{1\over j} + {1 \over j^3} ) \union ({2 \over j} - {1 \over j^3}, {2 \over j} + {1 \over j^3}) \union \cdots \union
+({j-1 \over j} - {1\over j^3}, {j-1 \over j} + {1\over j^3}) \union (1 - {1\over j^3}, 1)
 ,\end{align*}
 
-and is Borel and thus Lebesgue measurable.
+from which we can conclude that $E_j$ is Borel and thus Lebesgue measurable, and that for each $j$, there are exactly $j+1$ possible choices for a numerator.
 
 Note that 
 \begin{align*}
