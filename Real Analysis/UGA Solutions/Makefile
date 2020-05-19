@@ -1,5 +1,5 @@
 SHELL:=/bin/zsh
-FILENAME="Solutions.md"
+FILENAME="Real_Analysis_Qual_Solutions.md"
 TITLE="Real Analysis Qualifying Exam Solutions"
 
 define renew_md = 
