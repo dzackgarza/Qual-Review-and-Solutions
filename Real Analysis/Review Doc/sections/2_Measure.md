@@ -15,17 +15,17 @@ Definition
     m_*(E) = \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
     .\end{align*}
 
-Lemma (Properties of [Outer] Measure)
+Lemma (Properties of Outer Measure)
 :   \hfill
     - Montonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
     - Countable Subadditivity: $m_*(\union E_i) \leq \sum m_*(E_i)$.
     - Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
-    - Disjoint* Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
+    - Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
   
-> Note: this holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
+    [^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
 Lemma (Subtraction of Measure):
-: $m(A) = m(B) + m(C)$ and $m(C) < \infty$ implies that $m(A) - m(C) = m(B)$.
+: $$m(A) = m(B) + m(C), ~~m(C) < \infty \implies m(A) - m(C) = m(B).$$
 
 Lemma (Continuity of Measure)
 :   \hfill
