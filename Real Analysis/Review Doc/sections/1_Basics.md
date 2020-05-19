@@ -26,8 +26,8 @@ Definition
 
 > Note that a *finite* union of nowhere dense is still nowhere dense.
 
-**Lemma:**
-The Cantor set is closed with empty interior.
+Lemma
+: The Cantor set is closed with empty interior.
 
 > Proof: Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
 
@@ -39,27 +39,27 @@ An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersec
 
 > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
-**Lemma:**
-Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
+Lemma
+:	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
 
 **Theorem (Baire):**
 $\RR$ is a Baire space, i.e. countable intersections of open, dense sets are still dense. 
 Thus $\RR$ can not be written as a countable union of nowhere dense sets.
 
-**Lemma:**
-There is a function discontinuous precisely on $\QQ$.
+Lemma
+:	There is a function discontinuous precisely on $\QQ$.
 
 > *Proof:* $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
 The limit at every point is 0.
 
-**Lemma:**
-There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
+Lemma
+:	There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
 
 > *Proof:* $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
 > $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 
-**Lemma:**
-Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+Lemma
+:	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
 
 # Uniform Convergence
 
@@ -100,16 +100,16 @@ $$
 > The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
 > $\qed$
 
-**Lemma:**
-Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+Lemma
+:	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
 
 **Corollary:**
 The unit ball in $C([0, 1])$ with the sup norm is not compact.
 
 > *Proof:* Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
 
-**Lemma:**
-A uniform limit of continuous functions is continuous.
+Lemma
+:	A uniform limit of continuous functions is continuous.
 
 **Lemma (Testing Uniform Convergence):**
 $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
@@ -127,8 +127,8 @@ If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at
 **Lemma (Uniform Convergence of Series):**
 If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
-**Lemma:**
-If $\sum f_n$ converges then $f_n \to 0$ uniformly.
+Lemma
+:	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
 
 **Useful Technique:**
 For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
