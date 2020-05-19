@@ -36,9 +36,9 @@ Proof
 The Cantor set is nowhere dense.
 
 Definition
-:	An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+:	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
-  > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+    *Mnemonic: "F" stands for **ferme**, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
 Lemma
 :	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
