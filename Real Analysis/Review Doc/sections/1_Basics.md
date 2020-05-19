@@ -10,10 +10,10 @@ Lemma (Convergent Sums Have Small Tails)
 Theorem (Heine-Borel)
 : $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
 
-**Lemma (Geometric Series):**
-\begin{align*}
-\sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
-.\end{align*}
+Lemma (Geometric Series)
+: \begin{align*}
+  \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
+  .\end{align*}
 
 > *Corollary:* 
 > $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
