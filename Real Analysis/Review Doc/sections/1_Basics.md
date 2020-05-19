@@ -114,10 +114,10 @@ The unit ball in $C([0, 1])$ with the sup norm is not compact.
 Lemma
 :	A uniform limit of continuous functions is continuous.
 
-**Lemma (Testing Uniform Convergence):**
-$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
+Lemma (Testing Uniform Convergence)
+:   $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
 
-> Negating: find an $x$ which depends on $n$ for which the norm is bounded below.
+    **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
 
 **Useful Technique**: 
 If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
@@ -137,10 +137,10 @@ Lemma
 **Useful Technique:**
 For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
 
-**Lemma (M-test for Series)
+Lemma (M-test for Series)
 : If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
 
-**Lemma (p-tests)**:
+Lemma (p-tests)
 :   Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
     \begin{align*}
     \sum \frac 1 {n^p} < \infty &\iff p>1 \\
