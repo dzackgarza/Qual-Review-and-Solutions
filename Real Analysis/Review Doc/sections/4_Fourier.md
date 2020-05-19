@@ -22,11 +22,8 @@ Lemma (Riemann-Lebesgue)
 
     > Motto: Fourier transforms have small tails.
 
-**Lemma:**
-If $f \in L^1$, then $\hat f$ is continuous and bounded.
+Lemma
+: If $f \in L^1$, then $\hat f$ is continuous and bounded.
 
-> *Proof:*
-> $\abs{\hat f} \leq \int \abs{f}\cdot \abs{e^{\cdots}} \leq \norm{f}_1$, and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
-
-
-Todo: search qual alerts.
+Proof
+: $\abs{\hat f} \leq \int \abs{f}\cdot \abs{e^{\cdots}} \leq \norm{f}_1$, and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
