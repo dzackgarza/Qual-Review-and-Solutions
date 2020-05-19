@@ -15,35 +15,38 @@ The outer measure of a set is given by
 m_*(E) = \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
 .\end{align*}
 
-**Lemma (Properties of [Outer] Measure)**:
-
-- Montonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
-- Countable Subadditivity: $m_*(\union E_i) \leq \sum m_*(E_i)$.
-- Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
-- Disjoint* Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
+Lemma (Properties of [Outer] Measure)
+:   \hfill
+    - Montonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
+    - Countable Subadditivity: $m_*(\union E_i) \leq \sum m_*(E_i)$.
+    - Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
+    - Disjoint* Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
   
-	> Note: this holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
+> Note: this holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
-**Lemma (Subtraction of Measure):**
-$m(A) = m(B) + m(C)$ and $m(C) < \infty$ implies that $m(A) - m(C) = m(B)$.
+Lemma (Subtraction of Measure):
+: $m(A) = m(B) + m(C)$ and $m(C) < \infty$ implies that $m(A) - m(C) = m(B)$.
 
-**Lemma (Continuity of Measure):**
-\begin{align*}
-E_i \nearrow E &\implies m(E_i) \to m(E) \\
-m(E_1) < \infty \text{ and } E_i \searrow E &\implies m(E_i) \to m(E)
-.\end{align*}
+Lemma (Continuity of Measure)
+:   \hfill
 
-> Proof:
-> 1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
-> 
-> 2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+    \begin{align*}
+    E_i \nearrow E &\implies m(E_i) \to m(E) \\
+    m(E_1) < \infty \text{ and } E_i \searrow E &\implies m(E_i) \to m(E)
+    .\end{align*}
+
+Proof
+:   \hfill
+
+    1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
+
+2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
 
 Lemma
-:	
-Lebesgue measure is translation and dilation invariant.
+:	Lebesgue measure is translation and dilation invariant.
 
-> *Proof:* 
-> Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
+Proof
+: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
 
 Theorem (Non-Measurable Sets)
 : There is a non-measurable set.
@@ -67,42 +70,39 @@ Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
 Take $N\definedas E\setminus K$, then $m(N) = 0$.
 
 Lemma
-:	
-\begin{align*}
-\limsup_n A_n = \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
-\liminf_n A_n = \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
-.\end{align*}
+:   \hfill	
+    \begin{align*}
+    \limsup_n A_n = \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
+    \liminf_n A_n = \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
+    .\end{align*}
 
 Lemma
-:	
-If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
+:	If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
 
 > *Proof:* 
 > Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
 
-**Lemma (Borel-Cantelli)**:
-
-Let $\{E_k\}$ be a countable collection of measurable sets.
-Then
-$$
-\sum_k m(E_k) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_k
-.$$
+Theorem (Borel-Cantelli)
+:   Let $\{E_k\}$ be a countable collection of measurable sets.
+    Then
+    $$
+    \sum_k m(E_k) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_k
+    .$$
 
 **Application:**
 \begin{align*}
 m\left(\theset{x \text{ such that $\exists$ inf. many $\frac p q$ with } \left|x-\frac{p}{q}\right| \leq \frac{1}{q^{3}}}\right) = 0
 .\end{align*}
 
-> *Proof:*
-> Write $E_j$ to be the above set with $p, q$ replaced by $p_j, q_j$ where $r_j = \frac {p_j}{q_j}$ is an enumeration of $\QQ$, then $m(E_j) \leq \frac{2}{q^3}$ and $\sum \frac{1}{q^3} < \infty$.
 
-**Proof**
+Proof
+:   Idea: write $E_j$ to be the above set with $p, q$ replaced by $p_j, q_j$ where $r_j = \frac {p_j}{q_j}$ is an enumeration of $\QQ$, then $m(E_j) \leq \frac{2}{q^3}$ and $\sum \frac{1}{q^3} < \infty$.
  
-- If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
-- If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
-- If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
-- $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
-- $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
+    - If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
+    - If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
+    - If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
+    - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
+    - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
 
 Lemma
 :	
