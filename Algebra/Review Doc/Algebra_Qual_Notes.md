@@ -3,13 +3,15 @@
 ---
 
 
-!include sections/Notes_Fields.md
+!include sections/00_Syllabus.md
 
-!include sections/Notes_Groups.md
+!include sections/1_Groups.md
 
-!include sections/Notes_Modules.md
+!include sections/2_Rings.md
 
-!include sections/Notes_Rings.md
+!include sections/3_Fields.md
 
-!include sections/Notes_Syllabus.md
+!include sections/4_Modules.md
+
+!include sections/99_AlgebraSummary.md
 
