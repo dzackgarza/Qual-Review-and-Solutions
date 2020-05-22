@@ -35,7 +35,7 @@ Proof
   \implies \norm{f}_p \leq \mu(X)^{\frac 1 p - \frac 1 q}\norm{f}_q
   .\end{align*}
 
-> Note: doesn't work for $\ell$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
+> Note: doesn't work for $\ell_p$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
 
 **Cauchy-Schwarz**:
 
@@ -72,6 +72,11 @@ Some useful specific cases:
 \|f * g\|_{p} &\leq\|f\|_{1}\|g\|_{p}, \\
 \norm{f\ast g}_\infty &\leq \norm{f}_2 \norm{g}_2 \\
 \norm{f\ast g}_\infty &\leq \norm{f}_p \norm{g}_q
+.\end{align*}
+
+**? Inequality**:
+\begin{align*}
+(a+b)^p \leq 2^p (a^p + b^p)
 .\end{align*}
 
 **Bessel's Inequality:**
