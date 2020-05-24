@@ -37,3 +37,4 @@ S^n, \DD^n, T^n \RP^n, \CP^n, M, K, \Sigma_g, \RP^\infty, \CP^\infty
 - Cones
 - Suspension
 - Loop space
+-  Identifying a finite number of points
