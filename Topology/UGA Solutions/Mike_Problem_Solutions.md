@@ -2,6 +2,11 @@
 title: Topology Qualifying Exam Solutions
 ---
 
+# Definitions
+
+- Compact
+- Several characterizations of *closed* sets
+
 # General Topology
 
 ## 2
@@ -30,7 +35,6 @@ iii. Use Heine-Borel again: $X$ is not closed because it does not contain all of
 - Then $I_k \intersect X \subset U_j$ contains infinitely many such points.
 - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
 - So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
-
 
 ## 4
 
@@ -71,9 +75,6 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 Statement: prove that $[0, 1] \subset \RR$ is compact.
 
 ### Proof 1 (DZG)
-- Use the Heine-Borel property? Compact sets are closed and bounded.
-  - Bounded: take $r=1$, then $x, y \in [0, 1] \implies d(x, y) \leq r = 1$.
-  - Closed: Write its complements as $(-\infty, 0) \union (1, \infty)$, an arbitrary union of open intervals. 
 
 Todo: find a direct proof.
 
