@@ -19,7 +19,7 @@ title: Topology Qualifying Exam Solutions
   - Compactness?
   - Connectedness?
   - Separability
-  - **Not** density
+  - Density **only when** $f$ is surjective
   - **Not** openness
   - **Not** closedness
 
