@@ -18,6 +18,10 @@ title: Topology Qualifying Exam Solutions
 - Properties pushed forward through continuous maps:
   - Compactness?
   - Connectedness?
+  - Separability
+  - **Not** density
+  - **Not** openness
+  - **Not** closedness
 
 # General Topology
 
