@@ -22,6 +22,8 @@ title: Topology Qualifying Exam Solutions
   - Density **only when** $f$ is surjective
   - **Not** openness
   - **Not** closedness
+- Results that only work for metric spaces
+  - ?
 
 # General Topology
 
