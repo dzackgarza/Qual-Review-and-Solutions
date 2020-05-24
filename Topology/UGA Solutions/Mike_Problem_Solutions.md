@@ -4,8 +4,20 @@ title: Topology Qualifying Exam Solutions
 
 # Definitions
 
+- Closed (several characterizations)
+- Bounded
 - Compact
-- Several characterizations of *closed* sets
+- Connectedness
+- Subspace topology
+
+# Theorems
+
+- Closed subsets of Hausdorff spaces are compact? (check)
+- Cantor's intersection theorem?
+- Tube lemma
+- Properties pushed forward through continuous maps:
+  - Compactness?
+  - Connectedness?
 
 # General Topology
 
