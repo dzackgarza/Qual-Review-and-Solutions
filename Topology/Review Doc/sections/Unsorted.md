@@ -57,3 +57,11 @@ Example: $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchtha
 Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_A(z) = x^2$ and $\iota_B(z) = y^3$.
 So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 
+Suppose $X = U_1 \union U_2$ such that $U_1\intersect U_2 \neq \emptyset$ is path connected.
+Then taking $x_0 \in U\definedas U_1 \intersect U_2$ yields a pushout of fundamental groups
+
+\begin{align*}
+\pi_1(X; x_0) = \pi_1(U_1;x_0) \ast_{\pi_1(U; x_0)} \pi_1(U_2; x_0)
+.\end{align*}
+
+
