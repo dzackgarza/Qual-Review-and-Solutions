@@ -187,4 +187,6 @@ $X$ is connected:
 
 # 12
 
-- Any interval of the form $(x, y)$ for $0 \leq x, y < \infty$.
+- Any point $Z = \theset{x_0}$ where $0\leq x_0 <\infty$, via the map $f(x_0) = x_0$ and $f(t) = (1-t)x$.
+- Any interval of the form $(a, b)$ for $0 \leq a, b < \infty$ via the map $f(t) = ta
+- 
