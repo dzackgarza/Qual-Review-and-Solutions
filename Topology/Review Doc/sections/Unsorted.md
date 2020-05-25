@@ -52,3 +52,8 @@ B \ar[r]          & Z \ar[l, "\iota_B"] \ar[u, "\iota_A"]
 \end{center}
 
 For groups, the pushout is given by the amalgamated free product: if $A = \generators{G_A \suchthat R_A}, B = \generators{G_B \suchthat R_B}$, then $A \ast_Z B = \generators{G_A, G_B \suchthat R_A, R_B, T}$ where $T$ is a set of relations given by $T = \theset{\iota_A(z) \iota_B(z)\inv \suchthat z\in Z}$.
+
+Example: $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
+Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_A(z) = x^2$ and $\iota_B(z) = y^3$.
+So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
+
