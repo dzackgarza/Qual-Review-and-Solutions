@@ -18,7 +18,7 @@ title: Topology Qualifying Exam Solutions
 - Tube lemma
 - Properties pushed forward through continuous maps:
   - Compactness?
-  - Connectedness?
+  - Connectedness (when surjective)
   - Separability
   - Density **only when** $f$ is surjective
   - **Not** openness
