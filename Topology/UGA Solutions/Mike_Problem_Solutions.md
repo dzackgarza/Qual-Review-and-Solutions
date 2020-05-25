@@ -189,4 +189,5 @@ $X$ is connected:
 # 12
 
 - Any point $Z = \theset{x_0}$ where $0\leq x_0 <\infty$, via the constant map $f(x) = x_0$ or the identity map $f(x) = x$.
-- 
+- Using the fact that $[0, \infty) \subset \RR$ is Hausdorf, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
+  - Note that $\eps = N$ recovers the first case.
