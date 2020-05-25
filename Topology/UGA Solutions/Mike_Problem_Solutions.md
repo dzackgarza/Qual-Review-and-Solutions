@@ -9,7 +9,7 @@ title: Topology Qualifying Exam Solutions
 - Compact
 - Connectedness
 - Subspace topology
-- Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$.
+- Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
 
 # Theorems
 
@@ -186,3 +186,5 @@ $X$ is connected:
     - So $U \intersect L \intersect G \neq \emptyset$, contradicting $L\intersect G = \emptyset$.
 
 # 12
+
+
