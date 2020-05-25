@@ -7,7 +7,9 @@ title: Topology Qualifying Exam Solutions
 - Closed (several characterizations)
 - Bounded
 - Compact
-- Connectedness
+- Connectedness: 
+  There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
+  Equivalently, $X$ contains no proper nonempty clopen sets.
 - Subspace topology
 - Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
 
@@ -195,3 +197,5 @@ $X$ is connected:
 - ?
 
 # 14
+
+- Toward a contradiction, suppose $\union X_\alpha = A \disjoint B$ where $A, B$ are disjoint nonempty proper sets; we will show $B = \emptyset$.
