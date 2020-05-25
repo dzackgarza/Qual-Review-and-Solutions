@@ -187,4 +187,4 @@ $X$ is connected:
 
 # 12
 
-
+- Any interval of the form $(x, y)$ for $0 \leq x, y < \infty$.
