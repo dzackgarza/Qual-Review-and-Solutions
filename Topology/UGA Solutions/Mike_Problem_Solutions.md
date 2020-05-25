@@ -198,4 +198,5 @@ $X$ is connected:
 
 # 14
 
-- Toward a contradiction, suppose $\union X_\alpha = A \disjoint B$ where $A, B$ are disjoint nonempty proper sets; we will show $B = \emptyset$.
+- Toward a contradiction, suppose $X \definedas \union X_\alpha = A \disjoint B$ where $A, B$ are disjoint nonempty proper sets; we will show $B = \emptyset$.
+- By assumption, there exists a $p\in \intersect X_\alpha$, 
