@@ -25,7 +25,7 @@ title: Topology Qualifying Exam Solutions
   - **Not** closedness
 - Results that only work for metric spaces
   - ?
-- A retract of a Hausdroff space must be closed.
+- A retract of a Hausdroff space is closed.
 
 # General Topology
 
