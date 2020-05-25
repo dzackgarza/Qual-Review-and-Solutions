@@ -191,3 +191,7 @@ $X$ is connected:
 
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
   - Note that $\eps = N$ yields all one point sets $\theset{x_0}$ for $x_0 \geq 0$.
+- No finite discrete sets occur, since the retract of a connected set is connected.
+- ?
+
+# 14
