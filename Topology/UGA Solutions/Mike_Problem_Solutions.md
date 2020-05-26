@@ -229,7 +229,7 @@ Show stronger statement: this is an iff.
 $\implies$:
 
 - Suppose $S$ is not connected; we then have sets $A \union B = S$ from above and it suffices to show $\cl_Y(A) \intersect B = A \intersect \cl_X(B) = \emptyset$. 
-- $A$ is open by assumption and $A^c = B$ is closed in $Y$, so $A$ is clopen.
+- $A$ is open by assumption and $Y\setminus A = B$ is closed in $Y$, so $A$ is clopen.
 - Write $\cl_Y(A) \definedas \cl_X(A) \intersect Y$.
 - Since $A$ is closed in $Y$, $A = \cl_Y(A)$ by definition, so $A = \cl_Y(A) = \cl_X(A) \intersect Y$.
 - Since $A\intersect B = \emptyset$, we then have $\cl_Y(A) \intersect B = \emptyset$.
