@@ -222,3 +222,4 @@ $X$ is connected:
 - Or equivalently, there exists a nontrivial clopen $A\subset S$.
 
 
+- Suppose $S$ is not connected; we then have sets $A \union B = S$ from above and it suffices to show $\bar A \intersect B = A \intersect \bar B = \emptyset$. 
