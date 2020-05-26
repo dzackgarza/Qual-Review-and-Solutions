@@ -5,6 +5,7 @@ title: Topology Qualifying Exam Solutions
 # Definitions
 
 - Closed (several characterizations)
+ - Closure in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
 - Bounded
 - Compact
 - Connectedness: 
@@ -238,4 +239,5 @@ $\implies$:
 $\impliedby$
 
 - Suppose displayed condition holds; given such $A, B$ we will show they are clopen in $Y$.
-- Since $\cl_Y(A) \intersect B = \emptyset$
+- Since $\cl_Y(A) \intersect B = \emptyset$, (claim) we have $\cl_Y(A) = A$ and thus $A$ is closed in $Y$.
+  - Why? 
