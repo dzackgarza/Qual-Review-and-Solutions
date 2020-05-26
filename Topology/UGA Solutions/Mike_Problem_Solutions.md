@@ -214,8 +214,10 @@ $X$ is connected:
 
 # 16
 
-- $S\subset X$ is **not** connected iff there exist two sets $A, B \subset X$ such that 
+- $S\subset X$ is **not** connected iff there exist two open sets $A, B \subset X$ such that 
   - $A, B \neq \emptyset$
   - $A \intersect B = \emptyset$
   - $S = A \disjoint B$
   - $\bar A \intersect B = A \intersect \bar B = \emptyset$.
+  - Or equivalently, there exists a nontrivial clopen subset.
+
