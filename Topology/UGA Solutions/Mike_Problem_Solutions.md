@@ -214,6 +214,9 @@ $X$ is connected:
 
 # 16
 
+> Topic: closure and connectedness in the subspace topology.
+> See Munkres p.148
+
 - $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
   - I.e. there exist $A, B \subset S$ such that 
     - $A, B \neq \emptyset$,
@@ -221,8 +224,17 @@ $X$ is connected:
     - $A \disjoint B = S$.
 - Or equivalently, there exists a nontrivial clopen $A\subset S$.
 
+Show stronger statement: this is an iff.
 
-- Suppose $S$ is not connected; we then have sets $A \union B = S$ from above and it suffices to show $\bar A \intersect B = A \intersect \bar B = \emptyset$. 
+$\implies$:
+
+- Suppose $S$ is not connected; we then have sets $A \union B = S$ from above and it suffices to show $\cl_Y(A) \intersect B = A \intersect \cl_X(B) = \emptyset$. 
 - $A$ is open by assumption and $A^c = B$ is closed in $Y$, so $A$ is clopen.
 - Write $\cl_Y(A) \definedas \cl_X(A) \intersect Y$.
-- Since $A$ is closed in $Y$, $A = \cl_Y(A)$ by definition, so $A = \cl_X(A) \intersect Y$.
+- Since $A$ is closed in $Y$, $A = \cl_Y(A)$ by definition, so $A = \cl_Y(A) = \cl_X(A) \intersect Y$.
+- Since $A\intersect B = \emptyset$, we then have $\cl_Y(A) \intersect B = \emptyset$.
+- The same argument applies to $B$, so $\cl_Y(B) \intersect A = \emptyset$.
+
+$\impliedby$
+
+- Suppose displayed condition holds; given such $A, B$ we will show they are clopen in $Y$.
