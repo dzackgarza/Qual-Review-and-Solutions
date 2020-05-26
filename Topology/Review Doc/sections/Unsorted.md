@@ -1,5 +1,8 @@
 # Unsorted 
 
+## Definitions
+
+- Topology: arbitrary unions, finite intersections
 
 ## Common Spaces
 \begin{align*}
