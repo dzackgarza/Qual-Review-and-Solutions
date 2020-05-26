@@ -222,7 +222,7 @@ $X$ is connected:
     - $A, B \neq \emptyset$,
     - $A\intersect B = \emptyset$,
     - $A \disjoint B = S$.
-- Or equivalently, there exists a nontrivial clopen $A\subset S$.
+- Or equivalently, there exists a nontrivial $A\subset S$ that is clopen in $S$.
 
 Show stronger statement: this is an iff.
 
@@ -238,3 +238,4 @@ $\implies$:
 $\impliedby$
 
 - Suppose displayed condition holds; given such $A, B$ we will show they are clopen in $Y$.
+- Since $\cl_Y(A) \intersect B = \emptyset$
