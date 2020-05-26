@@ -212,3 +212,10 @@ $X$ is connected:
 - Thus $A = X\union Y$, forcing $B = \emptyset$.
 
 
+# 16
+
+- $S\subset X$ is **not** connected iff there exist two sets $A, B \subset X$ such that 
+  - $A, B \neq \emptyset$
+  - $A \intersect B = \emptyset$
+  - $S = A \disjoint B$
+  - $\bar A \intersect B = A \intersect \bar B = \emptyset$.
