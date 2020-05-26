@@ -198,7 +198,6 @@ $X$ is connected:
 
 # 14
 
-- Toward a contradiction, suppose $X \definedas \union X_\alpha = A \disjoint B$ where $A, B$ are disjoint nonempty proper sets; we will show $B = \emptyset$.
-- Note that 
-- 
-- By assumption, there exists a $p\in \intersect X_\alpha$, 
+- Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
+- Write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
+
