@@ -200,4 +200,13 @@ $X$ is connected:
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
-
+-   Since $p\in X \union Y = A\disjoint B$, WLOG $p\in A$. 
+    We will show $B$ must be empty.
+- Claim: $A\intersect X$ is clopen in $X$.
+  - $A\intersect X$ is open in $X$: ?
+  - $A\intersect X$ is closed in $X$: ?
+- The only clopen sets of a connected set are empty or the entire thing, and since $p\in A$, we must have $A\intersect X = X$.
+- By the same argument, $A\intersect Y = Y$.
+- So $A\intersect \qty{X\union Y} = \qty{A\intersect X} \union \qty{A\intersect Y} = X\union Y$
+- Since $A\subset X\union Y$, $A\intersect \qty{X\union Y} = A$
+- Thus $A = X\union Y$, forcing $B = \emptyset$.
