@@ -214,10 +214,11 @@ $X$ is connected:
 
 # 16
 
-- $S\subset X$ is **not** connected iff there exist two open sets $A, B \subset X$ such that 
-  - $A, B \neq \emptyset$
-  - $A \intersect B = \emptyset$
-  - $S = A \disjoint B$
-  - $\bar A \intersect B = A \intersect \bar B = \emptyset$.
-  - Or equivalently, there exists a nontrivial clopen subset.
+- $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
+  - I.e. there exist $A, B \subset S$ such that 
+    - $A, B \neq \emptyset$,
+    - $A\intersect B = \emptyset$,
+    - $A \disjoint B = S$.
+- Or equivalently, there exists a nontrivial clopen $A\subset S$.
+
 
