@@ -8,9 +8,13 @@ title: Topology Qualifying Exam Solutions
  - Closure in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
 - Bounded
 - Compact
-- Connectedness: 
+- Connected: 
   There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
   Equivalently, $X$ contains no proper nonempty clopen sets.
+  - Additional condition for a subspace $Y\subset X$: $\cl_Y(A) \intersect V = A \intersect \cl_Y(B) = \emptyset$.
+- Locally connected:
+  A space is locally connected at a point $x$ iff $\forall N_x \ni x$, there exists a $U\subset N_x$ containing $x$ that is connected.
+  
 - Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
 - Uniform Continuity: For $f: (X, d_x) \to (Y, d_Y)$ metric spaces,
 \begin{align*}
@@ -20,8 +24,11 @@ title: Topology Qualifying Exam Solutions
 \begin{align*}
 A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
 .\end{align*}
-- Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
-  - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+- Paracompact
+- Components: 
+  Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes
+- Path Components:
+  Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes
 
 # Theorems
 
@@ -40,6 +47,8 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
 - A retract of a Hausdroff/connected/compact space is closed/connected/compact respectively.
 - A continuous function on a compact set is uniformly continuous.
   - Proof: take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
+- Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+  - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
 
 # General Topology
 
