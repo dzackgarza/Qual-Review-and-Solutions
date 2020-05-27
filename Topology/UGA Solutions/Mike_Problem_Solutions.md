@@ -281,6 +281,6 @@ x &\mapsto d_X(x, f(x))
 \begin{align*}
 d(f(f(x_0)), f(x_0)) 
 &\leq C\cdot d(f(x_0), x_0) \\ 
-&< d(f(x_0), x_0) \\
+&< d(f(x_0), x_0) \quad\text{since } C<1\\
 &\leq m
 ,\end{align*}
