@@ -240,4 +240,9 @@ $\impliedby$
 
 - Suppose displayed condition holds; given such $A, B$ we will show they are clopen in $Y$.
 - Since $\cl_Y(A) \intersect B = \emptyset$, (claim) we have $\cl_Y(A) = A$ and thus $A$ is closed in $Y$.
-  - Why? $\cl_Y(A) \definedas \cl_X(A) \intersect Y = \cl_X(A) \intersect \qty{A\disjoint B} = \qty{\cl_X(A) \intersect A} \disjoint \qty{\cl_Y(A) \intersect B}$
+\begin{align*}
+\cl_Y(A) &\definedas \cl_X(A) \intersect Y \\ 
+&= \cl_X(A) \intersect \qty{A\disjoint B} \\ 
+&= \qty{\cl_X(A) \intersect A} \disjoint \qty{\cl_X(A) \intersect B} \\
+&= A  \disjoint \qty{\cl_X(A) \intersect B} \quad\text{since } A \subset \cl_Y(A)
+.\end{align*}
