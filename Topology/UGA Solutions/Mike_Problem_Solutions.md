@@ -2,6 +2,13 @@
 title: Topology Qualifying Exam Solutions
 ---
 
+# Problems to Revisit
+
+- 4
+- 6 (Without Heine-Borel)
+- 8
+- 10
+
 # Definitions
 
 - Hausdorff
@@ -9,7 +16,10 @@ title: Topology Qualifying Exam Solutions
 - Closed (several characterizations)
  - Closure in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
 - Bounded
-- Compact
+- Compact:
+    A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
+    That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X \subseteq \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
+
 - Locally compact
   For every $x\in X$, there exists a $K_x \ni x$ such that $K_x$ is compact.
 - Connected: 
@@ -78,8 +88,7 @@ Alternative topologies to consider:
 
 Statement: state the definition of compactness, determine if the sets $\theset{0} \union \theset{1 \over n}, (0, 1]$ are compact.
 
-i.  A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
-    That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X \subseteq \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
+i.  See definition section.
 
 ii. Use Heine-Borel theorem: a set $U\subset \RR^n$ is compact $\iff U$ is *closed* and *bounded*.
     - $X$ is closed in $\RR$, since we can write its complement as an arbitrary union of open intervals:
