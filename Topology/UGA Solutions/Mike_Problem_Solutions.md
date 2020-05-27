@@ -160,13 +160,16 @@ Statement: prove that $[0, 1] \subset \RR$ is compact.
   - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
 - Let $a\in A$ and $b\in B$ where WLOG $a<b$ (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
 - Let $K = [a, b]$ and define $A_K \definedas A\intersect K$ and $B_K \definedas B\intersect K$.
-- Let $s = \sup(A_K)$, which exists since $\RR$ is complete and has the LUB property, then (claim) $s \in \cl_\RR(A_K)$
+- Let $s = \sup(A_1)$, which exists since $\RR$ is complete and has the LUB property
+- Claim: $s \in \cl_\RR(A_K)$. Proof:
   - If $s\in A_K$ there's nothing to show since $A_K \subset \cl_\RR(A_K)$, so assume $s\in \RR\setminus A_K$.
   - Now let $N_s$ be an arbitrary neighborhood of $s$, then using ??? we can find an $\eps>0$ such that $B_\eps(s) \subset N_s$
   - Since $s$ is a supremum, there exists an $a\in A_K$ such that $s-\eps < a$.
   - But then $a \in B_\eps(s)$ and $a\in N_s$ with $a\neq s$.
   - Since $N_s$ was arbitrary, every $N_s$ contains a point of $A_K$ not equal to $s$, so $s$ is a limit point by definition.
-- 
+- Since $s\in \cl_\RR(A_K)$ and $\cl_\RR(A_K)\intersect B_K = \emptyset$, we have $s\not \in B_K$.
+- Then the subinterval $(c, b] \intersect A_K = \emptyset$ since $c \definedas \sup A_K$.
+- But since $(c)
 
 
 ## 8
