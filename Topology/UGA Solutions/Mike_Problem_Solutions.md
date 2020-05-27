@@ -244,5 +244,9 @@ $\impliedby$
 \cl_Y(A) &\definedas \cl_X(A) \intersect Y \\ 
 &= \cl_X(A) \intersect \qty{A\disjoint B} \\ 
 &= \qty{\cl_X(A) \intersect A} \disjoint \qty{\cl_X(A) \intersect B} \\
-&= A  \disjoint \qty{\cl_X(A) \intersect B} \quad\text{since } A \subset \cl_Y(A)
+&= A  \disjoint \qty{\cl_X(A) \intersect B} 
+\quad\text{since } A \subset \cl_Y(A) \\
+&= A \disjoint \qty{\cl_Y(A) \intersect B} 
+\quad \text{since } B \subset Y \\
+&= A \disjoint \emptyset
 .\end{align*}
