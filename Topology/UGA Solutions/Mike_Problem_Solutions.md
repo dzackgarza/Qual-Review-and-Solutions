@@ -281,7 +281,7 @@ $X$ is connected:
 ## 14
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
-- Write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
+- Toward a contradiction: write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
 -   Since $p\in X \union Y = A\disjoint B$, WLOG $p\in A$. 
     We will show $B$ must be empty.
 - Claim: $A\intersect X$ is clopen in $X$.
