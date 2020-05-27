@@ -13,6 +13,7 @@ title: Topology Qualifying Exam Solutions
   Equivalently, $X$ contains no proper nonempty clopen sets.
 - Subspace topology
 - Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
+- Uniform Continuity
 
 # Theorems
 
