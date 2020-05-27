@@ -21,6 +21,7 @@ title: Topology Qualifying Exam Solutions
 \begin{align*}
 A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
 .\end{align*}
+- Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
 
 # Theorems
 
