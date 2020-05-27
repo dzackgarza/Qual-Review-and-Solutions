@@ -158,7 +158,8 @@ Statement: prove that $[0, 1] \subset \RR$ is compact.
   - $A, B \neq \emptyset$
   - $A \disjoint B = I$
   - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
-- Let $a\in A$ and $b\in B$ where WLOG $a<b$ (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
+- Let $a\in A$ and $b\in B$ where WLOG $a<b$ 
+  - (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
 - Let $K = [a, b]$ and define $A_K \definedas A\intersect K$ and $B_K \definedas B\intersect K$.
 - Now $A_K, B_K$ is a disconnection of $K$.
 - Let $s = \sup(A_K)$, which exists since $\RR$ is complete and has the LUB property
