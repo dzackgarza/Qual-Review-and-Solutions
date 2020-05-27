@@ -8,6 +8,7 @@ title: Topology Qualifying Exam Solutions
 - 6 (Without Heine-Borel)
 - 8
 - 10
+
 - 11
 - 14
 
