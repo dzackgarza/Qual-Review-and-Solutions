@@ -336,15 +336,22 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 
 ## 20
 
+| Space                  | Connected  | Locally Connected |
+| ------                 | ---------  | ----------------- |
+| $\RR$                  | \checkmark | \checkmark        |
+| $[0, 1] \union [2, 3]$ |            | \checkmark        |
+| Sine Curve             | \checkmark |                   |
+| $\QQ$                  |            |                   |
+
 a. See definitions in intro.
 
-b. The space $X = [-1, 1]\smz \subset \RR$ is disconnected by the sets $[-1, 0)$ and $(0, 1]$, but (claim) locally connected.
+b. Claim: the Topologist's sine curve $X$ suffices.
 
-  - Why? $\RR$ is locally connected, since a basis is given by intervals, which are all connected. So the only potential problem points would be $\theset{0, \pm 1}$.
+Proof:
+
+- Claim 1: $X$ is connected.
+- Claim 2: $X$ is **not** locally path connected.
 
 
-|Space  | Connected | Locally Connected |
-|------ | --------- | ----------------- |
-| $\RR$ | \checkmar   | \checkmark     |
-| $[0, 1] \union [2, 3]$      |    | \checkmark      |
-| Since Curve      |    |      |
+  
+
