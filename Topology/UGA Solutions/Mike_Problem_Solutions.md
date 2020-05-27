@@ -342,3 +342,9 @@ b. The space $X = [-1, 1]\smz \subset \RR$ is disconnected by the sets $[-1, 0)$
 
   - Why? $\RR$ is locally connected, since a basis is given by intervals, which are all connected. So the only potential problem points would be $\theset{0, \pm 1}$.
 
+
+|Space  | Connected | Locally Connected |
+|------ | --------- | ----------------- |
+| $\RR$ | \checkmar   | \checkmark     |
+| $[0, 1] \union [2, 3]$      |    | \checkmark      |
+| Since Curve      |    |      |
