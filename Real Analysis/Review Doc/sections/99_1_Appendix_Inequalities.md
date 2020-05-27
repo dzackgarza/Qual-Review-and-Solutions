@@ -1,35 +1,34 @@
 # Inequalities and Equalities
 
-Proposition (AM-GM Inequality
+Proposition (AM-GM Inequality)
 :	\hfill
-\begin{align*}
-\sqrt{ab} \leq \frac{a+b}{2}
-.\end{align*}
+  \begin{align*}
+  \sqrt{ab} \leq \frac{a+b}{2}
+  .\end{align*}
 
 Proposition (Reverse Triangle Inequality)
 :	\hfill
-\begin{align*}
-\abs{\norm{x} - \norm{y}} \leq \norm{x - y}
-.\end{align*}
-
+  \begin{align*}
+  \abs{\norm{x} - \norm{y}} \leq \norm{x - y}
+  .\end{align*}
 
 Proposition (Chebyshev's Inequality)
 :	\hfill
-\begin{align*}
-\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\|f\|_{p}}{\alpha}\right)^{p}
-.\end{align*}
+  \begin{align*}
+  \mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\|f\|_{p}}{\alpha}\right)^{p}
+  .\end{align*}
 
 Proposition (Holder's Inequality (when surjective)
 :	\hfill
-\begin{align*}
-\frac 1 p + \frac 1 q = 1 \implies \|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}
-.\end{align*}
+  \begin{align*}
+  \frac 1 p + \frac 1 q = 1 \implies \|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}
+  .\end{align*}
 
 *Application:*
 For finite measure spaces,
-$$
+\begin{align*}
 1 \leq p < q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
-$$
+.\end{align*}
 
 Proof (Holder's Inequality) 
 : Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
@@ -45,14 +44,14 @@ Proof (Holder's Inequality)
 
 > Note: doesn't work for $\ell_p$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
 
-Proposition (Cauchy-Schwarz)
+Proposition (Cauchy-Schwarz Inequality)
 :	\hfill
   \begin{align*}
   \abs{\inner{f}{g}} = \norm{fg}_1 \leq \norm{f}_2 \norm{g}_2
   \qtext{with equality} \iff f = \lambda g
-.\end{align*}
+  .\end{align*}
 
-> Relates inner product to norm, and only happens to relate norms in $L^1$.
+Note: Relates inner product to norm, and only happens to relate norms in $L^1$.
 
 Proof
 : ?
