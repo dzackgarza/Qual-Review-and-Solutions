@@ -154,6 +154,8 @@ Statement: prove that $[0, 1] \subset \RR$ is compact.
 
 ### Proof 1: Direct (DZG)
 
+[Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
+
 - Let $I = [0, 1] = A\union B$ be a disconnection, so
   - $A, B \neq \emptyset$
   - $A \disjoint B = I$
@@ -174,6 +176,10 @@ Statement: prove that $[0, 1] \subset \RR$ is compact.
 - But since $A_K \disjoint B_K = K$, we must have $(x, b] \subset B_K$, and thus $s\in \cl_I(B_K)$.
 - Since $A_K, B_K$ were assumed disconnecting, $s\not \in A_K$
 - But then $s\in K$ but $s\not\in A_K \disjoint B_K = K$, a contradiction.
+
+$\qed$
+
+[A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
 
 
 ## 8
