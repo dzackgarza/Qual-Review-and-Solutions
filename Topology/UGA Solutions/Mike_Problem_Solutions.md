@@ -14,6 +14,7 @@ title: Topology Qualifying Exam Solutions
 
 # Definitions
 
+- Neighborhood: A neighborhood of a point $x$ is any open set containing $x$.
 - Hausdorff
 - Second Countable: admits a countable basis.
 - Closed (several characterizations)
