@@ -33,6 +33,7 @@ title: Topology Qualifying Exam Solutions
 - Results that only work for metric spaces
   - ?
 - A retract of a Hausdroff/connected/compact space is closed/connected/compact respectively.
+- A continuous function on a compact set is uniformly continuous.
 
 # General Topology
 
@@ -288,4 +289,10 @@ d(f(f(x_0)), f(x_0))
 &\leq m
 \end{align*}
 
-- Proof that $g$ is (continuous:
+- Proof that $g$ is continuous: use the definition of $g$, the triangle inequality, and that $f$ is a contraction:
+\begin{align*}
+d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
+\implies d(x, f(x)) - d(y, f(y)) &\leq d(x, y) + d(f(x), f(y)) \\
+\implies g(x) - g(y) &\leq d(x, y) + C\cdot d(x, y)  = (C+1) \cdot d(x, y)\\
+\end{align*}
+  - This shows that $g$ is Lipschitz continuous with constant $C+1$ (implies uniformly continuous, but not used).
