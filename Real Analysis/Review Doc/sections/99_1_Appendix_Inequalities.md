@@ -56,8 +56,6 @@ Note: Relates inner product to norm, and only happens to relate norms in $L^1$.
 Proof
 : ?
 
-
-
 Proposition (Minkowski's Inequality:)
 :	\hfill
   \begin{align*}
