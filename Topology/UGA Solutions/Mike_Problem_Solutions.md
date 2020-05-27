@@ -13,7 +13,10 @@ title: Topology Qualifying Exam Solutions
   Equivalently, $X$ contains no proper nonempty clopen sets.
 - Subspace topology
 - Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
-- Uniform Continuity
+- Uniform Continuity: For $f: (X, d_x) \to (Y, d_Y)$ metric spaces,
+\begin{align*}
+\forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_X(x_1, x_2) < \delta \implies d_Y(f(x_1), f(x_2)) < \eps
+.\end{align*} 
 
 # Theorems
 
@@ -283,4 +286,6 @@ d(f(f(x_0)), f(x_0))
 &\leq C\cdot d(f(x_0), x_0) \\ 
 &< d(f(x_0), x_0) \quad\text{since } C<1\\
 &\leq m
-,\end{align*}
+\end{align*}
+
+- Proof that $g$ is (continuous:
