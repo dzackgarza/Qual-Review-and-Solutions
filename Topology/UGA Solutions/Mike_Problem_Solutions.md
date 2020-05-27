@@ -46,6 +46,9 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
 - Path Components:
   Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes
 - Separable: countable dense subset.
+- Limit Point:
+    For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
+    Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
 
 # Theorems
 
@@ -151,10 +154,19 @@ Statement: prove that $[0, 1] \subset \RR$ is compact.
 
 ### Proof 1: Direct (DZG)
 
-- Let $[0, 1] = A\union B$ be a disconnection, so
+- Let $I = [0, 1] = A\union B$ be a disconnection, so
   - $A, B \neq \emptyset$
+  - $A \disjoint B = I$
   - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
-
+- Let $a\in A$ and $b\in B$ where WLOG $a<b$ (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
+- Let $K = [a, b]$ and define $A_K \definedas A\intersect K$ and $B_K \definedas B\intersect K$.
+- Let $s = \sup(A_K)$, which exists since $\RR$ is complete and has the LUB property, then (claim) $s \in \cl_\RR(A_K)$
+  - If $s\in A_K$ there's nothing to show since $A_K \subset \cl_\RR(A_K)$, so assume $s\in \RR\setminus A_K$.
+  - Now let $N_s$ be an arbitrary neighborhood of $s$, then using ??? we can find an $\eps>0$ such that $B_\eps(s) \subset N_s$
+  - Since $s$ is a supremum, there exists an $a\in A_K$ such that $s-\eps < a$.
+  - But then $a \in B_\eps(s)$ and $a\in N_s$ with $a\neq s$.
+  - Since $N_s$ was arbitrary, every $N_s$ contains a point of $A_K$ not equal to $s$, so $s$ is a limit point by definition.
+- 
 
 
 ## 8
