@@ -8,6 +8,7 @@ title: Topology Qualifying Exam Solutions
  - Closure in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
 - Bounded
 - Compact
+- Locally compact
 - Connected: 
   There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
   Equivalently, $X$ contains no proper nonempty clopen sets.
@@ -53,16 +54,17 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
 
 # Sandbox of Spaces
 
+- Finite discrete sets with the discrete topology 
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
   - $\ts{0} \union \ts{1 \over n\suchthat n\in \ZZ^{\geq 1}}$
 - $\QQ$
-- Finite discrete spaces
 - The topologist's sine curve
 
 Alternative topologies to consider:
 
 - Cofinite
-  - For $\RR$: all proper closed subsets are finite, every subset is compact.
+- Discrete and Indiscrete
+- 
 
 # General Topology
 
