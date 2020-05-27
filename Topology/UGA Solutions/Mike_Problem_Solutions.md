@@ -236,17 +236,25 @@ $\implies$:
 - Since $A\intersect B = \emptyset$, we then have $\cl_Y(A) \intersect B = \emptyset$.
 - The same argument applies to $B$, so $\cl_Y(B) \intersect A = \emptyset$.
 
-$\impliedby$
+$\impliedby$:
 
 - Suppose displayed condition holds; given such $A, B$ we will show they are clopen in $Y$.
 - Since $\cl_Y(A) \intersect B = \emptyset$, (claim) we have $\cl_Y(A) = A$ and thus $A$ is closed in $Y$.
-\begin{align*}
-\cl_Y(A) &\definedas \cl_X(A) \intersect Y \\ 
-&= \cl_X(A) \intersect \qty{A\disjoint B} \\ 
-&= \qty{\cl_X(A) \intersect A} \disjoint \qty{\cl_X(A) \intersect B} \\
-&= A  \disjoint \qty{\cl_X(A) \intersect B} 
-\quad\text{since } A \subset \cl_Y(A) \\
-&= A \disjoint \qty{\cl_Y(A) \intersect B} 
-\quad \text{since } B \subset Y \\
-&= A \disjoint \emptyset
-.\end{align*}
+  - Why?
+  \begin{align*}
+  \cl_Y(A) &\definedas \cl_X(A) \intersect Y \\ 
+  &= \cl_X(A) \intersect \qty{A\disjoint B} \\ 
+  &= \qty{\cl_X(A) \intersect A} \disjoint \qty{\cl_X(A) \intersect B} \\
+  &= A  \disjoint \qty{\cl_X(A) \intersect B} 
+  \quad\text{since } A \subset \cl_Y(A) \\
+  &= A \disjoint \qty{\cl_Y(A) \intersect B} 
+  \quad \text{since } B \subset Y \\
+  &= A \disjoint \emptyset \quad\text{using the assumption} \\
+  &= A
+  .\end{align*}
+- But $A = Y\setminus B$ where $B$ is closed, so $A$ is open and thus a nontrivial clopen subset.
+
+$\qed$
+
+![](figures/image_2020-05-26-20-08-04.png)
+
