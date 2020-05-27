@@ -17,6 +17,10 @@ title: Topology Qualifying Exam Solutions
 \begin{align*}
 \forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_X(x_1, x_2) < \delta \implies d_Y(f(x_1), f(x_2)) < \eps
 .\end{align*} 
+- Lebesgue number: For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_L > 0$ such that 
+\begin{align*}
+A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
+.\end{align*}
 
 # Theorems
 
@@ -34,6 +38,7 @@ title: Topology Qualifying Exam Solutions
   - ?
 - A retract of a Hausdroff/connected/compact space is closed/connected/compact respectively.
 - A continuous function on a compact set is uniformly continuous.
+  - Proof: take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
 
 # General Topology
 
