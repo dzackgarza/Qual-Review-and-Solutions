@@ -8,6 +8,8 @@ title: Topology Qualifying Exam Solutions
 - 6 (Without Heine-Borel)
 - 8
 - 10
+- 11
+- 14
 
 # Definitions
 
@@ -86,7 +88,6 @@ Alternative topologies to consider:
 
 ## 2
 
-Statement: state the definition of compactness, determine if the sets $\theset{0} \union \theset{1 \over n}, (0, 1]$ are compact.
 
 i.  See definition section.
 
@@ -148,9 +149,13 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 
 Statement: prove that $[0, 1] \subset \RR$ is compact.
 
-### Proof 1 (DZG)
+### Proof 1: Direct (DZG)
 
-Todo: find a direct proof.
+- Let $[0, 1] = A\union B$ be a disconnection, so
+  - $A, B \neq \emptyset$
+  - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
+
+
 
 ## 8
 
