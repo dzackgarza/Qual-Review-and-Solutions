@@ -100,3 +100,9 @@ For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 Proposition (Parseval's Identity:)
 :	\hfill
 Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+
+Proposition (Jensen's Inequality)
+: \hfill
+  \begin{align*}
+  f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
+  .\end{align*}
