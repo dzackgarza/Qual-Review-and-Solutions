@@ -261,4 +261,12 @@ $\qed$
 
 ## 18
 
+- Define a new function
+\begin{align*}
+g: X \to \RR \\
+x &\mapsto d_X(x, f(x))$
+.\end{align*}
 
+- Attempt to minimize. Claim: $g$ is a continuous function.
+- Given claim, a continuous function on a compact space attains its infimum, so set \[m \definedas \inf_{x\in X} g(x) \] and produce $x_0\in X$ such that $g(x) = m$.
+- 
