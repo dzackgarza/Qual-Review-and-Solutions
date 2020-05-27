@@ -50,6 +50,13 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
 - Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
   - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
 
+# Sandbox of Spaces
+
+- Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
+  - $\ts{0} \union \ts{1 \over n\suchthat n\in \ZZ^{\geq 1}}$
+- $\QQ$
+- The topologist's sine curve
+
 # General Topology
 
 ## 2
