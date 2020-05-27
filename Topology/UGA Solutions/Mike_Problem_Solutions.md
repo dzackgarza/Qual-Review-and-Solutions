@@ -268,8 +268,15 @@ x &\mapsto d_X(x, f(x))
 .\end{align*}
 
 - Attempt to minimize. Claim: $g$ is a continuous function.
-- Given claim, a continuous function on a compact space attains its infimum, so set \[ m \definedas \inf_{x\in X} g(x) \] and produce $x_0\in X$ such that $g(x) = m$.
-- Then \[ m> 0 \iff d(x_0, f(x_0)) > 0 \iff x_0 \neq f(x_0) \]
+- Given claim, a continuous function on a compact space attains its infimum, so set 
+    \begin{align*}
+    m \definedas \inf_{x\in X} g(x) 
+    \end{align*} 
+    and produce $x_0\in X$ such that $g(x) = m$.
+- Then 
+  \begin{align*}
+  m> 0 \iff d(x_0, f(x_0)) > 0 \iff x_0 \neq f(x_0)
+  .\end{align*} 
 - Now apply $f$ and use the assumption that $f$ is a contraction to contradict minimality of $m$:
 \begin{align*}
 d(f(f(x_0)), f(x_0)) 
