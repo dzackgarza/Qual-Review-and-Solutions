@@ -49,13 +49,20 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
   - Proof: take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
 - Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
   - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+- Extreme Value Theorem: for $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
 
 # Sandbox of Spaces
 
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
   - $\ts{0} \union \ts{1 \over n\suchthat n\in \ZZ^{\geq 1}}$
 - $\QQ$
+- Finite discrete spaces
 - The topologist's sine curve
+
+Alternative topologies to consider:
+
+- Cofinite
+  - For $\RR$: all proper closed subsets are finite, every subset is compact.
 
 # General Topology
 
