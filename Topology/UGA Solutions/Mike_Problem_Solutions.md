@@ -33,6 +33,7 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
   Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes
 - Path Components:
   Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes
+- Separable: countable dense subset.
 
 # Theorems
 
@@ -63,6 +64,7 @@ A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some }
 - $\QQ$
 - The topologist's sine curve
 - One-point compactifications
+- $\RR^\omega$
 
 Alternative topologies to consider:
 
