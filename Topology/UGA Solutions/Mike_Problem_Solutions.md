@@ -11,7 +11,6 @@ title: Topology Qualifying Exam Solutions
 - Connectedness: 
   There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
   Equivalently, $X$ contains no proper nonempty clopen sets.
-- Subspace topology
 - Retract: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
 - Uniform Continuity: For $f: (X, d_x) \to (Y, d_Y)$ metric spaces,
 \begin{align*}
@@ -22,6 +21,7 @@ title: Topology Qualifying Exam Solutions
 A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
 .\end{align*}
 - Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+  - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
 
 # Theorems
 
@@ -302,3 +302,7 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 \implies g(x) - g(y) &\leq d(x, y) + C\cdot d(x, y)  = (C+1) \cdot d(x, y)\\
 \end{align*}
   - This shows that $g$ is Lipschitz continuous with constant $C+1$ (implies uniformly continuous, but not used).
+
+## 20
+
+See definitions in intro.
