@@ -196,7 +196,7 @@ Shorter mnemonic:
 ![](figures/image_2020-05-22-11-39-10.png)
 
 
-# 10
+## 10
 
 $X$ is connected:
 
@@ -231,7 +231,7 @@ $X$ is connected:
     - But any such ball contains points of $G$: namely take $n$ large enough such that ${1 \over n\pi} < r$.
     - So $U \intersect L \intersect G \neq \emptyset$, contradicting $L\intersect G = \emptyset$.
 
-# 12
+## 12
 
 
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
@@ -239,7 +239,7 @@ $X$ is connected:
 - No finite discrete sets occur, since the retract of a connected set is connected.
 - ?
 
-# 14
+## 14
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
@@ -255,7 +255,7 @@ $X$ is connected:
 - Thus $A = X\union Y$, forcing $B = \emptyset$.
 
 
-# 16
+## 16
 
 > Topic: closure and connectedness in the subspace topology.
 > See Munkres p.148
