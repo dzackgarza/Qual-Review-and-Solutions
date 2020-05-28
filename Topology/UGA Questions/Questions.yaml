@@ -4,6 +4,7 @@
   number: 1
   tags:
     - Point-Set 
+    - Continuity
   question: |
     Suppose $(X, d)$ is a metric space. State criteria for continuity of a function $f : X \to X$ in terms of:
 
@@ -22,6 +23,7 @@
   number: 2
   tags:
     - Point-Set 
+    - Compactness
   question: |
     Let $X$ be a topological space.
 
@@ -38,6 +40,8 @@
   number: 3
   tags:
     - Point-Set 
+    - Compact Spaces
+    - Analysis
   question: |
     Let $(X, d)$ be a compact metric space, and let $f : X \to X$ be an isometry: 
     $$\forall~ x, y \in X, \qquad d(f (x), f (y)) = d(x, y).$$
@@ -50,6 +54,8 @@
   number: 4
   tags:
     - Point-Set 
+    - Compact Spaces
+    - Metric Spaces
   question: |
     Suppose $(X, d)$ is a compact metric space and $U$ is an open covering of $X$. 
 
@@ -62,6 +68,7 @@
   number: 5
   tags:
     - Point-Set 
+    - Closure
   question: |
     Let $X$ be a topological space, and $B \subset A \subset X$. 
     Equip $A$ with the subspace topology, and write $\cl_X (B)$ or $\cl_A (B)$ for the closure of $B$ as a subset of, respectively, $X$ or $A$. 
@@ -77,6 +84,8 @@
   number: 6
   tags:
     - Point-Set 
+    - Compactness
+    - Euclidean Spaces
   question: |
     Prove that the unit interval $I$ is compact. Be sure to explicitly state any properties of $\RR$ that you use.
 
@@ -87,6 +96,7 @@
   number: 7
   tags:
     - Point-Set 
+    - Compactness
   question: |
     A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
 
@@ -99,6 +109,8 @@
   number: 8
   tags:
     - Point-Set 
+    - Compactness
+    - Tube Lemma
   question: |
     Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact if and only if both $X$ and $Y$ are compact.
 
@@ -109,6 +121,7 @@
   number: 9
   tags:
     - Point-Set 
+    - Connectedness
   question: |
     Recall that a topological space is said to be **connected** if there
     does not exist a pair $U, V$ of disjoint nonempty subsets whose union is $X$.
@@ -125,6 +138,9 @@
   number: 10
   tags:
     - Point-Set 
+    - Connectedness
+    - Counterexamples
+    - Euclidean Spaces
   question: |
     Let 
     $$
@@ -138,7 +154,9 @@
   exam: Topology 
   number: 11
   tags:
-    - Analysis
+    - Connectedness
+    - Point-Set 
+    - Euclidean Spaces
   question: |
     Let
     \begin{align*}
@@ -156,6 +174,7 @@
   number: 12
   tags:
     - Point-Set 
+    - Euclidean Spaces
   question: |
     Write $Y$ for the interval $[0, \infty)$, equipped with the usual topology. 
 
@@ -168,6 +187,8 @@
   number: 13
   tags:
     - Point-Set 
+    - Connectedness
+    - Counterexamples
   question: |
     a. Prove that if the space $X$ is connected and locally path connected then $X$ is path connected.
 
@@ -180,6 +201,7 @@
   number: 14
   tags:
     - Point-Set 
+    - Connectedness
   question: |
     Let $\theset{X_\alpha \mid \alpha \in A}$ be a family of connected subspaces of a space $X$ such that there is a point $p \in X$ which is in each of the $X_\alpha$.
 
@@ -192,6 +214,9 @@
   number: 15
   tags:
     - Point-Set 
+    - Connectedness
+    - Compact spaces
+    - Counterexamples
   question: |
     Let $X$ be a topological space.
 
@@ -214,6 +239,7 @@
   number: 16
   tags:
     - Point-Set 
+    - Connectedness
   question: |
     If $X$ is a topological space and $S \subset X$, define in terms of
     open subsets of $X$ what it means for $S$ **not** to be connected. 
@@ -233,6 +259,7 @@
   number: 17
   tags:
     - Point-Set 
+    - Connectedness
   question: |
     A topological space is **totally disconnected** if its only connected subsets are one-point sets. 
 
@@ -247,6 +274,9 @@
   number: 17
   tags:
     - Point-Set 
+    - Compact Spaces
+    - Metric Spaces
+    - Analysis
   question: |
     Prove that if $(X, d)$ is a compact metric space, $f : X \to X$ is a
     continuous map, and $C$ is a constant with $0 < C < 1$ such that 
@@ -262,6 +292,7 @@
   number: 19
   tags:
     - Point-Set 
+    - Connectedness
   question: |
     Prove that the product of two connected topological spaces is connected.
 
@@ -272,6 +303,8 @@
   number: 20
   tags:
     - Point-Set 
+    - Connectedness
+    - Counterexamples
   question: |
     a. Define what it means for a topological space to be:
 
@@ -317,6 +350,7 @@
   number: 25
   tags:
     - Point-Set 
+    - Compactness
   question: |
     Define a family $\mct$ of subsets of $\RR$ by saying that $A \in T$ is $\iff A = \emptyset$ or $\RR \setminus A$ is a finite set. 
 
@@ -329,6 +363,9 @@
   number: 26
   tags:
     - Point-Set 
+    - Compact Spaces
+    - Counterexamples
+    - Analysis
   question: |
     In each part of this problem $X$ is a compact topological space.
 
@@ -345,6 +382,7 @@
   number: 27
   tags:
     - Point-Set 
+    - Counterexamples
   question: |
     Let $\mcs, \mct$ be topologies on a set $X$.
     Show that $\mcs \cap \mct$ is a topology on $X$. 
@@ -358,6 +396,7 @@
   number: 28
   tags:
     - Point-Set 
+    - Compactness
   question: |
     Let $f : X \to Y$ be a continuous function between topological spaces. 
 
@@ -377,6 +416,8 @@
   number: 29
   tags:
     - Point-Set 
+    - Metric spaces
+    - Analysis
   question: |
   A metric space is said to be **totally bounded** if for every $\eps > 0$ there exists a finite cover of $X$ by open balls of radius $\eps$.
 
@@ -393,6 +434,7 @@
   number: 30
   tags:
     - Point-Set 
+    - Compactness
   question: |
     Suppose that $X$ is a Hausdorff topological space and that $A \subset X$. 
 
@@ -405,6 +447,7 @@
   number: 31
   tags:
     - Point-Set 
+    - Hausdorff spaces
   question: |
     a. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
 
@@ -417,6 +460,7 @@
   number: 32
   tags:
     - Point-Set 
+    - Hausdorff spaces
   question: |
     Let $X$ be a topological space and let
     $$
@@ -432,6 +476,8 @@
   number: 33
   tags:
     - Point-Set 
+    - Hausdorff spaces
+    - Compactness
   question: |
     If $f$ is a function from $X$ to $Y$ , consider the graph 
     $$
@@ -449,6 +495,8 @@
   number: 34
   tags:
     - Point-Set 
+    - Hausdorff spaces
+    - Compactness
   question: |
     Let X be a noncompact locally compact Hausdorff space, with topology $\mct$. 
     Let $\tilde X = X \cup \theset{\infty}$ ($X$ with one point adjoined), and consider the family $\mcb$ of subsets of $\tilde X$ defined by
@@ -474,6 +522,7 @@
   number: 35
   tags:
     - Point-Set 
+    - Metric spaces
   question: |
     Prove that a metric space $X$ is **normal**, i.e. if $A, B \subset X$ are closed and disjoint then there exist open sets $A \subset U \subset X, ~B \subset V \subset X$ such that
     $U \cap V = \emptyset$.
@@ -485,6 +534,8 @@
   number: 36
   tags:
     - Point-Set 
+    - Compact spaces
+    - Hausdorff spaces
   question: |
     Prove that every compact, Hausdorff topological space is normal.
 
@@ -495,6 +546,7 @@
   number: 37
   tags:
     - Point-Set 
+    - Connected spaces
   question: |
     Show that a connected, normal topological space with more than a single point is uncountable.
 
@@ -505,6 +557,9 @@
   number: 38
   tags:
     - Point-Set 
+    - Hausdorff Spaces
+    - Counterexamples
+    - Quotient Space
   question: |
     Give an example of a quotient map in which the domain is Hausdorff, but the quotient is not.
 
@@ -515,6 +570,8 @@
   number: 39
   tags:
     - Point-Set 
+    - Hausdorff Spaces
+    - Quotient Spaces
   question: |
     Let $X$ be a compact Hausdorff space and suppose $R \subset X \times X$ is a closed equivalence relation. 
 
@@ -527,6 +584,9 @@
   number: 40
   tags:
     - Point-Set 
+    - Euclidean Spaces
+    - Hausdorff Spaces
+    - Quotient Spaces
   question: |
     Let $U \subset \RR^n$ be an open set which is bounded in the standard Euclidean metric. 
 
@@ -539,6 +599,7 @@
   number: 41
   tags:
     - Point-Set 
+    - Quotient Spaces
   question: |
     Let $A$ be a closed subset of a normal topological space $X$.
 
@@ -551,6 +612,7 @@
   number: 42
   tags:
     - Point-Set 
+    - Quotient Spaces
   question: |
     Define an equivalence relation $\sim$ on $\RR$ by $x \sim y$ if and only if $x - y \in Q$. 
     Let $X$ be the set of equivalence classes, endowed with the quotient topology induced by the canonical projection $\pi : \RR \to X$.
@@ -564,6 +626,7 @@
   number: 43
   tags:
     - Point-Set 
+    - Quotient Spaces 
   question: |
     Let $A$ denote a subset of points of $S^2$ that looks exactly like the capital letter A. 
     Let $Q$ be the quotient of $S^2$ given by identifying all points of $A$ to a single point. 
@@ -577,6 +640,9 @@
   number: 44
   tags:
     - Point-Set 
+    - Density
+    - Metric Spaces
+    - Bases
   question: |
     a. Prove that a topological space that has a countable base for its topology also contains a countable dense subset.
 
@@ -589,6 +655,7 @@
   number: 45
   tags:
     - Point-Set 
+    - Bases
   question: |
     Recall that a topological space is **regular** if for every point $p \in X$ and for every closed subset $F \subset X$ not containing $p$, there exist disjoint open sets $U, V \subset X$ with $p \in U$ and $F \subset V$. 
 
