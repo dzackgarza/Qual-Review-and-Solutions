@@ -11,6 +11,8 @@ Point-Set:
 - The topologist's sine curve
 - One-point compactifications
 - $\RR^\omega$
+- Hawaiian earring
+- Cantor set
 
 Non-Hausdorff spaces:
 
@@ -23,23 +25,27 @@ General Spaces:
 S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP^\infty
 .\end{align*}
 
+"Constructed" Spaces
+
 - Knot complements in $S^3$
-- Lens spaces
-- Prism spaces
-- $\HP^n$
-- Dunce Cap
-- Matrix groups
-- Pair of pants
 - Covering spaces (hyperbolic geometry)
+- Lens spaces
+- Matrix groups
+- Prism spaces
+- Pair of pants
 - Seifert surfaces
 - Surgery
-- Hawaiian earring
-- Horned sphere
-- Cantor set
+
 - Simplicial Complexes
   - Nice minimal example:
   
 ![](figures/image_2020-05-22-18-58-03.png) 
+
+Exotic/Pathological Spaces
+
+- $\HP^n$
+- Dunce Cap
+- Horned sphere
 
 Operations
 
