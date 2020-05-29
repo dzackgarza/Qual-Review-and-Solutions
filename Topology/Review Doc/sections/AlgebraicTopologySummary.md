@@ -94,7 +94,11 @@ Facts used to compute the above table:
 
 - $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
-- $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
+- $S^n \cong B^n / \del B^n$ and employs an attaching map 
+ \begin{align*}
+  \phi: (D^n, \del D^n) &\to S^n \\ 
+  (D^n, \del D^n) &\mapsto (e^n, e^0)
+ .\end{align*}
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
