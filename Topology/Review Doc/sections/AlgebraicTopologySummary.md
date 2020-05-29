@@ -88,11 +88,13 @@ $$
 
 \normalsize
 
+Facts used to compute the above table:
+
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
 
-- All calculations follow from the fact that $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
+- $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
-- This uses the fact that $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
+- $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
