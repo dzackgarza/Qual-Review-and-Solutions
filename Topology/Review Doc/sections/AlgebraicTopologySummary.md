@@ -102,7 +102,7 @@ Facts used to compute the above table:
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
-- Use the inclusion $S^n = B^{n+1}$ as the attaching map.
+- Use the inclusion $S^n \injects B^{n+1}$ as the attaching map.
 
 - $\CP^1 \homotopic S^2$.
 
