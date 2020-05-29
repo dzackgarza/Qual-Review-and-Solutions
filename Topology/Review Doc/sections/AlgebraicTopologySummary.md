@@ -61,29 +61,70 @@ $$
 
 | Space $X$                   | $\pi_*(X)$                                   | $H_*(X)$                                                         | CW                                               | $H^*(X)$                                |
 |-----------------------------|----------------------------------------------|------------------------------------------------------------------|--------------------------------------------------|---------------------------------------|
-| $\RR^n$ [^1]                | $0$                                          | $0$                                                              | $(\union_{\ZZ} e^0 + \union_{\ZZ}e^1)^n$         | 0                                     |
-| $D(k, \RR^n)$[^pplane]      | $\pi_*\bigvee^k S^1$                         | $\bigoplus_k H_* M(\ZZ, 1)$                                            | $e^0 + ke^1$                                     |                                       |
-| $B^n$ [^2]                  | $\pi_*(\RR^n)$                               | $H_*(\RR^n)$                                                     | $e^0 + e^n + e^{n+1}$[^4]                        | 0                                     |
-| $S^n$                       | $[0 \ldots , \ZZ, ? \ldots]$                 | $H_*M(\ZZ, n)$                                                   | $e^0 + e^n$ [^3]                                 |$\ZZ[{}_{n}x]/(x^2)$                                       |
+| $\RR^n$                     | $0$                                          | $0$                                                              | $(\union_{\ZZ} e^0 + \union_{\ZZ}e^1)^n$         | 0                                     |
+| $D(k, \RR^n)$               | $\pi_*\bigvee^k S^1$                         | $\bigoplus_k H_* M(\ZZ, 1)$                                            | $e^0 + ke^1$                                     |                                       |
+| $B^n$                       | $\pi_*(\RR^n)$                               | $H_*(\RR^n)$                                                     | $e^0 + e^n + e^{n+1}$[^4]                        | 0                                     |
+| $S^n$                       | $[0 \ldots , \ZZ, ? \ldots]$                 | $H_*M(\ZZ, n)$                                                   | $e^0 + e^n$                                  |$\ZZ[{}_{n}x]/(x^2)$                                       |
 | $D(k, S^n)$[^punctsphere]   | $\pi_*\bigvee^{k-1}S^1$                      | $\bigoplus_{k-1}H_*M(\ZZ, 1)$                                          | $e^0 + (k-1)e^1$                                 |                                       |
 | $T^2$                       | $\pi_*S^1 \times \pi_* S^1$                  | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                                    | $e^0 + 2e^1 + e^2$                               | $\Lambda({}_{1}x_1, {}_{1}x_2)$               |
 | $T^n$                       | $\prod^n \pi_* S^1$[^5]                      | $$\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$$                         | $$(e^0 + e^1)^n = \sum_{i=1}^n {n\choose i}e^i$$ | $\Lambda({}_{1}x_1, {}_{1}x_2, \ldots {}_{1}x_n)$ |
 | $D(k, T^n)$                 | $[0, 0, 0, 0, \ldots]$?                      | $[0, 0, 0, 0, \ldots]$?                                          | $e^0 + e^1$                                      |                                       |
 | $S^1 \vee S^1$              | $\pi_*S^1 \ast \pi_* S^1$                    | $(H_*M(\ZZ, 1))^2$                                          | $e^0 + 2e^1$                                     |                                       |
-| $\bigvee^n S^1$[^circwedge] | $\bigast^n \pi_* S^1$                        | $\prod H_* M(\ZZ, 1)$                                                  | $e^0 + e^1$                                      |                                       |
-| $\RP^1$[^rp1circle]         | $\pi_* S^1$                                  | $H_* M(\ZZ, 1)$                                                        | $e^0 + e^1$                                      | ${}_{0}\ZZ \times {}_{1}\ZZ$                                      |
+| $\bigvee^n S^1$   | $\bigast^n \pi_* S^1$                        | $\prod H_* M(\ZZ, 1)$                                                  | $e^0 + e^1$                                      |                                       |
+| $\RP^1$         | $\pi_* S^1$                                  | $H_* M(\ZZ, 1)$                                                        | $e^0 + e^1$                                      | ${}_{0}\ZZ \times {}_{1}\ZZ$                                      |
 | $\RP^2$                     | $\pi_*K(\ZZ_2, 1)\times \pi_* S^2$           | $H_*M(\ZZ_2, 1)$                                                 | $e^0 + e^1 + e^2$                                | ${}_{0}\ZZ \times {}_{2}\ZZ_2$                                       |
 | $\RP^3$                     | $\pi_*K(\ZZ_2, 1)\times \pi_* S^3$           | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ, 3)$                                   | $e^0 + e^1 + e^2 + e^3$                          | ${}_{0}\ZZ \times {}_{2}\ZZ_2 \times {}_{3}\ZZ$                                      |
 | $\RP^4$                     | $\pi_*K(\ZZ_2, 1)\times \pi_* S^4$           | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ_2, 3)$                           | $e^0 + e^1 + e^2 + e^3 + e^4$                    | ${}_{0}\ZZ \times ({}_{2}\ZZ_2)^2$                                      |
-| $\RP^n, n \geq 4$ even      | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$[^rpn]      | $$\prod_{\text{odd}~i < n} H_*M(\ZZ_2, i)$$                      | $\sum_{i=1}^n e^i$                               | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ_2$                                      |
-| $\RP^n, n \geq 4$ odd       | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$[^rpn]      | $$\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ_2, i) \times H_* S^n$$ | $\sum_{i=1}^n e^i$                               | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                                      |
+| $\RP^n, n \geq 4$ even      | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$      | $$\prod_{\text{odd}~i < n} H_*M(\ZZ_2, i)$$                      | $\sum_{i=1}^n e^i$                               | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ_2$                                      |
+| $\RP^n, n \geq 4$ odd       | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$      | $$\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ_2, i) \times H_* S^n$$ | $\sum_{i=1}^n e^i$                               | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                                      |
 | $\CP^1$[^cp1sphere]         | $\pi_*K(\ZZ, 2)  \times \pi_* S^3$           | $H_* S^2$                                                        | $e^0 + e^2$                                      | $\ZZ[{}_{2}x]/({}_2x^{2})$                                      |
 | $\CP^2$                     | $\pi_*K(\ZZ, 2)  \times \pi_* S^5$           | $H_*S^2 \times H_* S^4$                                          | $e^0 + e^2 + e^4$                                | $\ZZ[{}_{2}x]/({}_2x^{3})$                                      |
-| $\CP^n, n \geq 2$           | $\pi_*K(\ZZ, 2)  \times \pi_*S^{2n+1}$[^cpn] | $\prod_{i=1}^n H_* S^{2i}$                                       | $\sum_{i=1}^n e^{2i}$                            | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                                      |
+| $\CP^n, n \geq 2$           | $\pi_*K(\ZZ, 2)  \times \pi_*S^{2n+1}$ | $\prod_{i=1}^n H_* S^{2i}$                                       | $\sum_{i=1}^n e^{2i}$                            | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                                      |
 | Mobius Band [^mobius]       | $\pi_* S^1$                                  | $H_* S^1$                                                        | $e^0 + e^1$                                      |                                       |
 | Klein Bottle                | $K(\ZZ\semidirect_{x \mapsto -x} \ZZ, 1)$[^piklein]      | $H_*S^1 \times H_* \RP^\infty$                                   | $e^0 + 2e^1 + e^2$                               |                                       |
 
 
+- $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
+
+- All calculations follow from the fact that $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
+
+- This uses the fact that $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
+
+- $B^n \homotopic \RR^n$ by normalizing vectors.
+
+- Use the inclusion $S^n = B^{n+1}$ as the attaching map.
+
+- $\CP^1 \homotopic S^2$.
+
+- $\RP^1 \homotopic S^1$.
+
+
+
+
+[^5]: Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+
+[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
+$$
+H_n(\prod_{j=1}^k X_j) = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
+$$
+
+[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
+
+[^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+
+[^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
+
+[^rpn]: Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
+
+[^cpn]: Use $\CP^n = S^{2n+1} / S^1$
+
+[^circwedge]: ?
+
+[^piklein]: Alternatively, the fundamental group is $\ZZ\ast\ZZ/ bab^{-1}a$. Use the fact the $\tilde K = \RR^2$.
+
+[^mobius]: Uses the fact that $M \homotopic S^1$ by deformation-retracting onto the center circle.
+
+[^punctsphere]: Use the fact that $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 # Euler Characteristics
 - Only surfaces with positive $\chi$:
 	- $\chi S^2 = 2$
@@ -164,7 +205,7 @@ $$
 * The Stiefel manifold $V_n(k)$
 
 * Possible modifications to a space $X$:
-	* Remove $k$ points by taking $D(k, X)
+	* Remove $k$ points by taking $D(k, X)$
 	* Remove a line segment
 	* Remove an entire line/axis
 	* Remove a hole
@@ -450,41 +491,4 @@ $$
 
 
 
-[^pplane]: All calculations follow from the fact that $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
-[^cp1sphere]: $\CP^1 \homotopic S^2$.
-
-[^rp1circle]: $\RP^1 \homotopic S^1$.
-
-[^1]: $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
-
-[^2]: $B^n \homotopic \RR^n$ by normalizing vectors.
-
-[^3]: This uses the fact that $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
-
-[^4]: Use the inclusion $S^n = B^{n+1}$ as the attaching map.
-
-[^5]: Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
-
-[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
-$$
-H_n(\prod_{j=1}^k X_j) = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
-$$
-
-[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
-
-[^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
-
-[^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
-
-[^rpn]: Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
-
-[^cpn]: Use $\CP^n = S^{2n+1} / S^1$
-
-[^circwedge]: ?
-
-[^piklein]: Alternatively, the fundamental group is $\ZZ\ast\ZZ/ bab^{-1}a$. Use the fact the $\tilde K = \RR^2$.
-
-[^mobius]: Uses the fact that $M \homotopic S^1$ by deformation-retracting onto the center circle.
-
-[^punctsphere]: Use the fact that $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
