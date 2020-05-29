@@ -56,7 +56,7 @@ $$
 
 * $S^{n-1} = \del B^{n} = \theset{\vector{v} \in \RR^{n} \mid \norm{\vector{v}} = 1} \subset \RR^n$
 
-![sphere ball correct](figures/sphere-v-ball-correct.png)
+![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
 
 
 * $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
@@ -145,9 +145,6 @@ Facts used to compute the above table:
 
 
 # Useful Facts and Techniques
-
-* Fundamental group:
-  * Van Kampen
 
 * Homotopy Groups
   * Hurewicz map
