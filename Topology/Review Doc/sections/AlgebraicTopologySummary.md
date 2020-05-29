@@ -21,7 +21,7 @@
 
 * The **free product** of $n$ free abelian groups:
   $$
-  \ZZ^{\ast n} \definedas \ZZ \ast \ZZ \ast \ldots \ZZ
+  \ZZ^{\ast n} \definedas \Asterisk_{i=1}^n = \ZZ \ast \ZZ \ast \ldots \ZZ
   $$ 
   This is a free *nonabelian* group on $n$ generators.
 
