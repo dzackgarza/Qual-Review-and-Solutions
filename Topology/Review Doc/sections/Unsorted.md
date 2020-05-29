@@ -1,7 +1,0 @@
-# Unsorted 
-
-
-## Definitions
-
-## Theorems
-

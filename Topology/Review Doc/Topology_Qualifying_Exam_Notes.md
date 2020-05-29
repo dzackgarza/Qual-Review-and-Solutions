@@ -3,11 +3,9 @@
 ---
 
 
-!include sections/ExamCrib.md
+!include sections/Definitions.md
 
-!include sections/Study Guide.md
+!include sections/Examples.md
 
 !include sections/Theorems.md
-
-!include sections/Unsorted.md
 
