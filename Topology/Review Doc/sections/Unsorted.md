@@ -152,7 +152,7 @@ Theorem (Van Kampen)
 :   The pushout is the northwest colimit of the following diagram
     \begin{center}
     \begin{tikzcd}
-    A \disjoint_Z B   & A \ar[d] \ar[l] \
+    A \disjoint_Z B   & A \ar[d] \ar[l] \\
     B \ar[r]          & Z \ar[l, "\iota_B"] \ar[u, "\iota_A"]
     \end{tikzcd}
     \end{center}
