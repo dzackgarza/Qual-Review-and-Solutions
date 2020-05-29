@@ -6,9 +6,11 @@
 	* $\pi_*(X) = [\pi_1(X), \pi_2(X), \pi_3(X), \cdots]$
 	* $H_*(X) = [H_1(X), H_2(X), H_3(X), \cdots]$
 
-* For a finite index set $I$, it is the case that $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
+* For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
 
-	In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
+    Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
+
+	  In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
 
 * $\ZZ^n \definedas \prod_{i=1}^n \ZZ = \ZZ \times \ZZ \times \ldots \ZZ$ is the free abelian group of rank $n$.
 	- $x \in \ZZ^n = \left< a_1, \cdots, a_n\right> \implies x = \sum_n c_i a_i$ for some $c_i \in \ZZ$ , i.e. $a_i$ form a basis.
@@ -95,10 +97,10 @@ Facts used to compute the above table:
 - $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
 - $S^n \cong B^n / \del B^n$ and employs an attaching map 
- \begin{align*}
+  \begin{align*}
   \phi: (D^n, \del D^n) &\to S^n \\ 
   (D^n, \del D^n) &\mapsto (e^n, e^0)
- .\end{align*}
+  .\end{align*}
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
@@ -108,31 +110,21 @@ Facts used to compute the above table:
 
 - $\RP^1 \cong S^1$.
 
-- Use $\left\[\pi_1, \prod\right\]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+- Use $\left[ \pi_1, \prod \right]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
 
-[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
-$$
-H_n(\prod_{j=1}^k X_j) = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
-$$
+- Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
 
-[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
+- Use $\CP^n = S^{2n+1} / S^1$
 
-[^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+- Alternatively, the fundamental group is $\ZZ\ast\ZZ/ bab^{-1}a$. Use the fact the $\tilde K = \RR^2$.
 
-[^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
+- $M \homotopic S^1$ by deformation-retracting onto the center circle.
 
-[^rpn]: Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
+- $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 
-[^cpn]: Use $\CP^n = S^{2n+1} / S^1$
 
-[^circwedge]: ?
-
-[^piklein]: Alternatively, the fundamental group is $\ZZ\ast\ZZ/ bab^{-1}a$. Use the fact the $\tilde K = \RR^2$.
-
-[^mobius]: Uses the fact that $M \homotopic S^1$ by deformation-retracting onto the center circle.
-
- Use the fact that $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 # Euler Characteristics
+
 - Only surfaces with positive $\chi$:
 	- $\chi S^2 = 2$
 	- $\chi \RP^2 = 1$
@@ -144,6 +136,7 @@ $$
 
 
 # Useful Facts and Techniques
+
 * Fundamental group:
   * Van Kampen
 
@@ -253,41 +246,14 @@ $$
 
 
 
-[^pplane]: All calculations follow from the fact that $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
-
-[^cp1sphere]: $\CP^1 \homotopic S^2$.
-
-[^rp1circle]: $\RP^1 \homotopic S^1$.
-
-[^1]: $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
-
-[^2]: $B^n \homotopic \RR^n$ by normalizing vectors.
-
-[^3]: This uses the fact that $S^n \cong B^n / \del B^n$ and employs an attaching map $$ \phi: (D^n, \del D^n) \to S^n \\ (D^n, \del D^n) \mapsto (e^n, e^0)$$
-
-[^4]: Use the inclusion $S^n = B^{n+1}$ as the attaching map.
-
-[^5]: Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
-
 [^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
 $$
 H_n(\prod_{j=1}^k X_j) = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
 $$
-
 [^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
 
 [^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
 
-[^rpn]: Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
 
-[^cpn]: Use $\CP^n = S^{2n+1} / S^1$
-
-[^circwedge]: ?
-
-[^piklein]: Alternatively, the fundamental group is $\ZZ\ast\ZZ/ bab^{-1}a$. Use the fact the $\tilde K = \RR^2$.
-
-[^mobius]: Uses the fact that $M \homotopic S^1$ by deformation-retracting onto the center circle.
-
-[^punctsphere]: Use the fact that $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$ Conventions
