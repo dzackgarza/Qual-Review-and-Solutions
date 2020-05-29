@@ -6,17 +6,20 @@
 	* $\pi_*(X) = [\pi_1(X), \pi_2(X), \pi_3(X), \cdots]$
 	* $H_*(X) = [H_1(X), H_2(X), H_3(X), \cdots]$
 
-* For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
+*   For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
 
     Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
 
-	  In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
+    In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
 
-* $\ZZ^n \definedas \prod_{i=1}^n \ZZ = \ZZ \times \ZZ \times \ldots \ZZ$ is the free abelian group of rank $n$.
+* The free abelian group of rank $n$: 
+  $$
+  \ZZ^n \definedas \prod_{i=1}^n \ZZ = \ZZ \times \ZZ \times \ldots \ZZ
+  .$$ 
 	- $x \in \ZZ^n = \left< a_1, \cdots, a_n\right> \implies x = \sum_n c_i a_i$ for some $c_i \in \ZZ$ , i.e. $a_i$ form a basis.
 	- Example: $x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2$.
 
-* $\ZZ^{\ast n} \definedas \ZZ \ast \ZZ \ast \ldots \ZZ$ is the free product of $n$ free abelian groups, i.e. a free (nonabelian) group on $n$ generators.
+* $$\ZZ^{\ast n} \definedas \ZZ \ast \ZZ \ast \ldots \ZZ$$ is the free product of $n$ free abelian groups, i.e. a free (nonabelian) group on $n$ generators.
 	- $x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>$ implies that $x$ is a finite word in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
 	- Example: $x = a_1^2 a_2^4 a_1 a_2^{-2}$
 
@@ -44,19 +47,20 @@ $$
 	- $M(\ZZ_2, 1) = \RP^2$
 	- $M(\ZZ_p, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
 
-* $T^n = \prod_n S^1$ is the $n\dash$torus
-
-* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_1, x_2, \ldots x_k}$ where each $x_i \in X$.
-
-* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ_2$
-
-* $\mathbb{CP}^n = S^{2n+1} / S^1$
-
 * $B^n = \theset{\vector{v} \in \RR^n \mid \norm{\vector{v}} \leq 1} \subset \RR^n$
 
 * $S^{n-1} = \del B^{n} = \theset{\vector{v} \in \RR^{n} \mid \norm{\vector{v}} = 1} \subset \RR^n$
 
 ![sphere ball correct](figures/sphere-v-ball-correct.png)
+
+
+* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ_2$
+
+* $\mathbb{CP}^n = S^{2n+1} / S^1$
+
+* $T^n = \prod_n S^1$ is the $n\dash$torus
+
+* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_1, x_2, \ldots x_k}$ where each $x_i \in X$.
 
 
 # Table of Homotopy and Homology Structures
