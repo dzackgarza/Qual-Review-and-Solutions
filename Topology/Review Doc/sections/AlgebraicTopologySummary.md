@@ -19,7 +19,12 @@
 	- $x \in \ZZ^n = \left< a_1, \cdots, a_n\right> \implies x = \sum_n c_i a_i$ for some $c_i \in \ZZ$ , i.e. $a_i$ form a basis.
 	- Example: $x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2$.
 
-* $$\ZZ^{\ast n} \definedas \ZZ \ast \ZZ \ast \ldots \ZZ$$ is the free product of $n$ free abelian groups, i.e. a free (nonabelian) group on $n$ generators.
+* The **free product** of $n$ free abelian groups:
+  $$
+  \ZZ^{\ast n} \definedas \ZZ \ast \ZZ \ast \ldots \ZZ
+  $$ 
+  This is a free *nonabelian* group on $n$ generators.
+
 	- $x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>$ implies that $x$ is a finite word in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
 	- Example: $x = a_1^2 a_2^4 a_1 a_2^{-2}$
 
