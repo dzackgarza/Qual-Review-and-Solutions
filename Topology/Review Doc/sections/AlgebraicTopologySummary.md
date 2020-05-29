@@ -21,7 +21,7 @@
 
 * The **free product** of $n$ free abelian groups:
   $$
-  \ZZ^{\ast n} \definedas \Asterisk_{i=1}^n = \ZZ \ast \ZZ \ast \ldots \ZZ
+  \ZZ^{\ast n} \definedas \Conv_{i=1}^n \ZZ = \ZZ \ast \ZZ \ast \ldots \ZZ
   $$ 
   This is a free *nonabelian* group on $n$ generators.
 
@@ -38,7 +38,7 @@ G & k=n, \\
 $$
 	- $K(\ZZ, 1) = S^1$
 	- $K(\ZZ, 2) = \CP^\infty$
-	- $K(\ZZ_2, 1) = \RP^\infty$
+	- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
 
 * $M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
 $$
@@ -49,8 +49,8 @@ G & k=n, \\
 \end{cases}
 $$
 	- $M(\ZZ, n) = S^n$
-	- $M(\ZZ_2, 1) = \RP^2$
-	- $M(\ZZ_p, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
+	- $M(\ZZ/2\ZZ, 1) = \RP^2$
+	- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
 
 * $B^n = \theset{\vector{v} \in \RR^n \mid \norm{\vector{v}} \leq 1} \subset \RR^n$
 
@@ -59,7 +59,7 @@ $$
 ![sphere ball correct](figures/sphere-v-ball-correct.png)
 
 
-* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ_2$
+* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
 
 * $\mathbb{CP}^n = S^{2n+1} / S^1$
 
@@ -86,11 +86,11 @@ $$
 | $S^1 \vee S^1$                | $\pi_*S^1 \ast \pi_* S^1$                      | $(H_*M(\ZZ, 1))^2$                                                 | $1 + 2x$                                           | ?                                                  |
 | $\bigvee^n S^1$               | $\bigast^n \pi_* S^1$                          | $\prod H_* M(\ZZ, 1)$                                              | $1 + x$                                            | ?                                                  |
 | $\RP^1$                       | $\pi_* S^1$                                    | $H_* M(\ZZ, 1)$                                                    | $1 + x$                                            | ${}_{0}\ZZ \times {}_{1}\ZZ$                       |
-| $\RP^2$                       | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_* S^2$               | $H_*M(\ZZ_2, 1)$                                                   | $1 + x + x^2$                                      | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ$                  |
-| $\RP^3$                       | $\pi_*K(\ZZ/2\ZZ, 1)+  \pi_* S^3$              | $H_*M(\ZZ_2, 1) + H_*M(\ZZ, 3)$                                    | $1 + x + x^2 + x^3$                                | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ \times {}_{3}\ZZ$ |
-| $\RP^4$                       | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_* S^4$               | $H_*M(\ZZ_2, 1) + H_*M(\ZZ_2, 3)$                                  | $1 + x + x^2 + x^3 + x^4$                          | ${}_{0}\ZZ \times ({}_{2}\ZZ/2\ZZ)^2$              |
-| $\RP^n, n \geq 4$ even        | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_*S^n$                | $\prod_{\text{odd}~i < n} H_*M(\ZZ_2, i)$                          | $\sum_{i=1}^n x^i$                                 | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ/2\ZZ$ |
-| $\RP^n, n \geq 4$ odd         | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_*S^n$                | $\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ_2, i) \times H_* S^n$     | $\sum_{i=1}^n x^i$                                 | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                  |
+| $\RP^2$                       | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_* S^2$               | $H_*M(\ZZ/2\ZZ, 1)$                                                   | $1 + x + x^2$                                      | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ$                  |
+| $\RP^3$                       | $\pi_*K(\ZZ/2\ZZ, 1)+  \pi_* S^3$              | $H_*M(\ZZ/2\ZZ, 1) + H_*M(\ZZ, 3)$                                    | $1 + x + x^2 + x^3$                                | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ \times {}_{3}\ZZ$ |
+| $\RP^4$                       | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_* S^4$               | $H_*M(\ZZ/2\ZZ, 1) + H_*M(\ZZ/2\ZZ, 3)$                                  | $1 + x + x^2 + x^3 + x^4$                          | ${}_{0}\ZZ \times ({}_{2}\ZZ/2\ZZ)^2$              |
+| $\RP^n, n \geq 4$ even        | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_*S^n$                | $\prod_{\text{odd}~i < n} H_*M(\ZZ/2\ZZ, i)$                          | $\sum_{i=1}^n x^i$                                 | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ/2\ZZ$ |
+| $\RP^n, n \geq 4$ odd         | $\pi_*K(\ZZ/2\ZZ, 1)+ \pi_*S^n$                | $\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ/2\ZZ, i) \times H_* S^n$     | $\sum_{i=1}^n x^i$                                 | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                  |
 | $\CP^1$                       | $\pi_*K(\ZZ, 2)  + \pi_* S^3$                  | $H_* S^2$                                                          | $x^0 + x^2$                                        | $\ZZ[{}_{2}x]/({}_2x^{2})$                         |
 | $\CP^2$                       | $\pi_*K(\ZZ, 2)  + \pi_* S^5$                  | $H_*S^2 \times H_* S^4$                                            | $x^0 + x^2 + x^4$                                  | $\ZZ[{}_{2}x]/({}_2x^{3})$                         |
 | $\CP^n, n \geq 2$             | $\pi_*K(\ZZ, 2)  + \pi_*S^{2n+1}$              | $\prod_{i=1}^n H_* S^{2i}$                                         | $\sum_{i=1}^n x^{2i}$                              | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                       |
@@ -231,9 +231,9 @@ Facts used to compute the above table:
 * $\pi_k(SU_n) = \ZZ\cdot\indic{k~\text{odd}}$
   * $\pi_1(SU_n) = 0$
 
-* $\pi_k(U_n) = \ZZ_2\cdot\indic{k = 0,1\mod 8} + \ZZ\cdot\indic{k = 3,7 \mod 8}$
+* $\pi_k(U_n) = \ZZ/2\ZZ\cdot\indic{k = 0,1\mod 8} + \ZZ\cdot\indic{k = 3,7 \mod 8}$
 
-* $\pi_k(SP_n) = \ZZ_2\cdot\indic{k = 4,5\mod 8} + \ZZ\cdot\indic{k = 3,7 \mod 8}$
+* $\pi_k(SP_n) = \ZZ/2\ZZ\cdot\indic{k = 4,5\mod 8} + \ZZ\cdot\indic{k = 3,7 \mod 8}$
 
 
 # Spheres
