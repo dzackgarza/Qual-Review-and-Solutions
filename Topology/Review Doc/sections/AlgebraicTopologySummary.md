@@ -104,11 +104,11 @@ Facts used to compute the above table:
 
 - Use the inclusion $S^n \injects B^{n+1}$ as the attaching map.
 
-- $\CP^1 \homotopic S^2$.
+- $\CP^1 \cong S^2$.
 
-- $\RP^1 \homotopic S^1$.
+- $\RP^1 \cong S^1$.
 
-- Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+- Use $[\pi_1, \Prod] = 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
 
 [^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
 $$
