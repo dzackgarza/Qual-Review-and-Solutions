@@ -65,9 +65,9 @@ $$
 | $D(k, \RR^n)$               | $\pi_*\bigvee^k S^1$                         | $\bigoplus_k H_* M(\ZZ, 1)$                                            | $e^0 + ke^1$                                     |                                       |
 | $B^n$                       | $\pi_*(\RR^n)$                               | $H_*(\RR^n)$                                                     | $e^0 + e^n + e^{n+1}$[^4]                        | 0                                     |
 | $S^n$                       | $[0 \ldots , \ZZ, ? \ldots]$                 | $H_*M(\ZZ, n)$                                                   | $e^0 + e^n$                                  |$\ZZ[{}_{n}x]/(x^2)$                                       |
-| $D(k, S^n)$[^punctsphere]   | $\pi_*\bigvee^{k-1}S^1$                      | $\bigoplus_{k-1}H_*M(\ZZ, 1)$                                          | $e^0 + (k-1)e^1$                                 |                                       |
+| $D(k, S^n)$   | $\pi_*\bigvee^{k-1}S^1$                      | $\bigoplus_{k-1}H_*M(\ZZ, 1)$                                          | $e^0 + (k-1)e^1$                                 |                                       |
 | $T^2$                       | $\pi_*S^1 \times \pi_* S^1$                  | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                                    | $e^0 + 2e^1 + e^2$                               | $\Lambda({}_{1}x_1, {}_{1}x_2)$               |
-| $T^n$                       | $\prod^n \pi_* S^1$[^5]                      | $$\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$$                         | $$(e^0 + e^1)^n = \sum_{i=1}^n {n\choose i}e^i$$ | $\Lambda({}_{1}x_1, {}_{1}x_2, \ldots {}_{1}x_n)$ |
+| $T^n$                       | $\prod^n \pi_* S^1$                      | $$\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$$                         | $$(e^0 + e^1)^n = \sum_{i=1}^n {n\choose i}e^i$$ | $\Lambda({}_{1}x_1, {}_{1}x_2, \ldots {}_{1}x_n)$ |
 | $D(k, T^n)$                 | $[0, 0, 0, 0, \ldots]$?                      | $[0, 0, 0, 0, \ldots]$?                                          | $e^0 + e^1$                                      |                                       |
 | $S^1 \vee S^1$              | $\pi_*S^1 \ast \pi_* S^1$                    | $(H_*M(\ZZ, 1))^2$                                          | $e^0 + 2e^1$                                     |                                       |
 | $\bigvee^n S^1$   | $\bigast^n \pi_* S^1$                        | $\prod H_* M(\ZZ, 1)$                                                  | $e^0 + e^1$                                      |                                       |
@@ -81,7 +81,7 @@ $$
 | $\CP^2$                     | $\pi_*K(\ZZ, 2)  \times \pi_* S^5$           | $H_*S^2 \times H_* S^4$                                          | $e^0 + e^2 + e^4$                                | $\ZZ[{}_{2}x]/({}_2x^{3})$                                      |
 | $\CP^n, n \geq 2$           | $\pi_*K(\ZZ, 2)  \times \pi_*S^{2n+1}$ | $\prod_{i=1}^n H_* S^{2i}$                                       | $\sum_{i=1}^n e^{2i}$                            | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                                      |
 | Mobius Band [^mobius]       | $\pi_* S^1$                                  | $H_* S^1$                                                        | $e^0 + e^1$                                      |                                       |
-| Klein Bottle                | $K(\ZZ\semidirect_{x \mapsto -x} \ZZ, 1)$[^piklein]      | $H_*S^1 \times H_* \RP^\infty$                                   | $e^0 + 2e^1 + e^2$                               |                                       |
+| Klein Bottle                | $K(\ZZ\semidirect_{x \mapsto -x} \ZZ, 1)$      | $H_*S^1 \times H_* \RP^\infty$                                   | $e^0 + 2e^1 + e^2$                               |                                       |
 
 
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
@@ -98,10 +98,7 @@ $$
 
 - $\RP^1 \homotopic S^1$.
 
-
-
-
-[^5]: Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+- Use $\pi_1 \prod = \prod \pi_1$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
 
 [^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
 $$
