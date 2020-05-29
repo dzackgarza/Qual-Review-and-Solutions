@@ -250,11 +250,9 @@ Facts used to compute the above table:
 * $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
 
 
-
-
 [^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbb{x} \in \mathcal{P}(n,k) \implies \mathbb{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
 $$
-H_n(\prod_{j=1}^k X_j) = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
+H_n\qty{\prod_{j=1}^k X_j} = \bigoplus_{\mathbb{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
 $$
 [^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
 
