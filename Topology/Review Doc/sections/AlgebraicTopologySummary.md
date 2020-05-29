@@ -159,7 +159,7 @@ Facts used to compute the above table:
 * $\pi_{i\geq 2}(X)$ is always abelian.
 
 * The ranks of $\pi_0$ and $H_0$ are the number of path components, and $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
-	* $X$ simply connected implies $\pi_k(X) \cong H_k(X)$ up to and including the first nonvanishing $H_k$
+	* $X$ simply connected $\implies \pi_k(X) \cong H_k(X)$ up to and including the first nonvanishing $H_k$
 	* $H_1(X) = \pi_1 X / [\pi_1X, \pi_1X]$, the abelianization.
 
 * General mantra: homotopy plays nicely with products, homology with wedge products.[^pullbacks]
