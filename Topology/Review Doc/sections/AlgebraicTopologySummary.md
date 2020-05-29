@@ -58,6 +58,7 @@ $$
 
 # Table of Homotopy and Homology Structures
 
+\scriptsize
 
 | $X$                           | $\pi_*(X)$                                     | $H_*(X)$                                                           | CW Structure                                       | $H^*(X)$                                          |
 | ----------------------------- | ---------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------           |
@@ -72,18 +73,19 @@ $$
 | $D(k, T^n)$                   | $[0, 0, 0, 0, \ldots]$?                        | $[0, 0, 0, 0, \ldots]$?                                            | $1 + x$                                            |                                                   |
 | $S^1 \vee S^1$                | $\pi_*S^1 \ast \pi_* S^1$                      | $(H_*M(\ZZ, 1))^2$                                                 | $1 + 2x$                                           |                                                   |
 | $\bigvee^n S^1$               | $\bigast^n \pi_* S^1$                          | $\prod H_* M(\ZZ, 1)$                                              | $1 + x$                                            |                                                   |
-| $\RP^1$                       | $\pi_* S^1$                                    | $H_* M(\ZZ, 1)$                                                    | $1 + x$                                            | $\ZZ[{}_1 x]/(x^2)$                      |
-| $\RP^2$                       | $\pi_*K(\ZZ_2, 1)\times \pi_* S^2$             | $H_*M(\ZZ_2, 1)$                                                   | $1 + x + x^2$                                      | ${}_{0}\ZZ \times {}_{2}\ZZ_2$                    |
-| $\RP^3$                       | $\pi_*K(\ZZ_2, 1)\times \pi_* S^3$             | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ, 3)$                               | $1 + x + x^2 + x^3$                                | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ \times {}_{3}\ZZ$   |
-| $\RP^4$                       | $\pi_*K(\ZZ_2, 1)\times \pi_* S^4$             | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ_2, 3)$                             | $1 + x + x^2 + x^3 + x^4$                          | ${}_{0}\ZZ \times ({}_{2}\ZZ/2\ZZ)^2$                |
-| $\RP^n, n \geq 4$ even        | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$              | $$\prod_{\text{odd}~i < n} H_*M(\ZZ_2, i)$$                        | $\sum_{i=1}^n x^i$                                 | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ_2$   |
-| $\RP^n, n \geq 4$ odd         | $\pi_*K(\ZZ_2, 1)\times \pi_*S^n$              | $$\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ_2, i) \times H_* S^n$$   | $\sum_{i=1}^n x^i$                                 | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                 |
-| $\CP^1$[^cp1sphere]           | $\pi_*K(\ZZ, 2)  \times \pi_* S^3$             | $H_* S^2$                                                          | $x^0 + x^2$                                        | $\ZZ[{}_{2}x]/({}_2x^{2})$                        |
-| $\CP^2$                       | $\pi_*K(\ZZ, 2)  \times \pi_* S^5$             | $H_*S^2 \times H_* S^4$                                            | $x^0 + x^2 + x^4$                                  | $\ZZ[{}_{2}x]/({}_2x^{3})$                        |
-| $\CP^n, n \geq 2$             | $\pi_*K(\ZZ, 2)  \times \pi_*S^{2n+1}$         | $\prod_{i=1}^n H_* S^{2i}$                                         | $\sum_{i=1}^n x^{2i}$                              | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                      |
-| Mobius Band [^mobius]         | $\pi_* S^1$                                    | $H_* S^1$                                                          | $1 + x$                                            |                                                   |
+| $\RP^1$                       | $\pi_* S^1$                                    | $H_* M(\ZZ, 1)$                                                    | $1 + x$                                            | ${}_{0}\ZZ \times {}_{1}\ZZ$                      |
+| $\RP^2$                       | $\pi_*K(\ZZ_2, 1)+ \pi_* S^2$             | $H_*M(\ZZ_2, 1)$                                                   | $1 + x + x^2$                                      | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ$                    |
+| $\RP^3$                       | $\pi_*K(\ZZ_2, 1)+  \pi_* S^3$             | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ, 3)$                               | $1 + x + x^2 + x^3$                                | ${}_{0}\ZZ \times {}_{2}\ZZ/2\ZZ \times {}_{3}\ZZ$   |
+| $\RP^4$                       | $\pi_*K(\ZZ_2, 1)+ \pi_* S^4$             | $H_*M(\ZZ_2, 1) \times H_*M(\ZZ_2, 3)$                             | $1 + x + x^2 + x^3 + x^4$                          | ${}_{0}\ZZ \times ({}_{2}\ZZ/2\ZZ)^2$                |
+| $\RP^n, n \geq 4$ even        | $\pi_*K(\ZZ_2, 1)+ \pi_*S^n$              | $$\prod_{\text{odd}~i < n} H_*M(\ZZ_2, i)$$                        | $\sum_{i=1}^n x^i$                                 | ${}_{0}\ZZ \times \prod_{i=1}^{n/2}{}_{2}\ZZ/2\ZZ$   |
+| $\RP^n, n \geq 4$ odd         | $\pi_*K(\ZZ_2, 1)+ \pi_*S^n$              | $$\prod_{\text{odd}~ i \leq n-2} H_*M(\ZZ_2, i) \times H_* S^n$$   | $\sum_{i=1}^n x^i$                                 | $H^*(\RP^{n-1}) \times {}_{n}\ZZ$                 |
+| $\CP^1$           | $\pi_*K(\ZZ, 2)  \times \pi_* S^3$             | $H_* S^2$                                                          | $x^0 + x^2$                                        | $\ZZ[{}_{2}x]/({}_2x^{2})$                        |
+| $\CP^2$                       | $\pi_*K(\ZZ, 2)  + \pi_* S^5$             | $H_*S^2 \times H_* S^4$                                            | $x^0 + x^2 + x^4$                                  | $\ZZ[{}_{2}x]/({}_2x^{3})$                        |
+| $\CP^n, n \geq 2$             | $\pi_*K(\ZZ, 2)  + \pi_*S^{2n+1}$         | $\prod_{i=1}^n H_* S^{2i}$                                         | $\sum_{i=1}^n x^{2i}$                              | $\ZZ[{}_{2}x]/({}_2x^{n+1})$                      |
+| Mobius Band          | $\pi_* S^1$                                    | $H_* S^1$                                                          | $1 + x$                                            |                                                   |
 | Klein Bottle                  | $K(\ZZ\semidirect_{x \mapsto -x} \ZZ, 1)$      | $H_*S^1 \times H_* \RP^\infty$                                     | $1 + 2x + x^2$                                     |                                                   |
 
+\normalsize
 
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
 
