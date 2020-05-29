@@ -3,6 +3,8 @@
 ---
 
 
+!include sections/AlgebraicTopologySummary.md
+
 !include sections/Definitions.md
 
 !include sections/Examples.md
