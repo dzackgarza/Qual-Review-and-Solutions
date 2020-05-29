@@ -20,7 +20,7 @@ Non-Hausdorff spaces:
 
 General Spaces:
 \begin{align*}
-S^n, \DD^n, T^n \RP^n, \CP^n, M, K, \Sigma_g, \RP^\infty, \CP^\infty
+S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP^\infty
 .\end{align*}
 
 - Knot complements in $S^3$
