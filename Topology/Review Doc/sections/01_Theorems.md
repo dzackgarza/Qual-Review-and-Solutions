@@ -2,8 +2,13 @@
 
 ## Point-Set
 
-- Closed subsets of Hausdorff spaces are compact? (check)
-- Cantor's intersection theorem?
+Theorem
+: $U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+
+Theorem (Cantor's Intersection Theorem)
+: A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ is nonempty.
+
+
 - Tube lemma
 
 - Properties pushed forward through continuous maps:
