@@ -92,7 +92,9 @@
 	is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
 	On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
 	* Applications
-		- $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. Proof: todo
+		- $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
+  
+Proof: todo
 
 * CW Complex
 
@@ -222,7 +224,7 @@
 
 * Lefschetz duality
 
-* Lefshetz Number
+* Lefschetz Number
 
 * Lens Space
 
@@ -249,7 +251,7 @@
 * Loop Space
 
 * Manifold
-	* An $n\dash$maniofld is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
+	* An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
 
 * Manifold with boundary
 	* A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_i > 0}$.
@@ -260,7 +262,7 @@
 
 * Mapping Path Space
 
-* Mayer-vietoris Sequence
+* Mayer-Vietoris Sequence
 
 * Monodromy
 
