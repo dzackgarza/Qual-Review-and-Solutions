@@ -1,3 +1,5 @@
+# AT Summary
+
 ## Conventions
 
 * $\pi_0(X)$ is the set of path components of $X$, and I write $\pi_0(X) = \ZZ$ if $X$ is path-connected (although it is not a group). Similarly, $H_0(X)$ is a free abelian group on the set of path components of $X$.
@@ -68,7 +70,7 @@ $$
 * $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_1, x_2, \ldots x_k}$ where each $x_i \in X$.
 
 
-# Table of Homotopy and Homology Structures
+## Table of Homotopy and Homology Structures
 
 \scriptsize
 
@@ -132,7 +134,7 @@ Facts used to compute the above table:
 - $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 
 
-# Euler Characteristics
+## Euler Characteristics
 
 - Only surfaces with positive $\chi$:
 	- $\chi S^2 = 2$
@@ -144,7 +146,7 @@ Facts used to compute the above table:
 	- $\Sigma_{g \geq 2}$ by $\chi(X) = 2-2g$.
 
 
-# Useful Facts and Techniques
+## Useful Facts and Techniques
 
 * Homotopy Groups
   * Hurewicz map
@@ -185,7 +187,7 @@ Facts used to compute the above table:
 	* Poincare Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
 
 
-# Other Interesting Things To Consider
+## Other Interesting Things To Consider
 
 * The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$
 
@@ -233,7 +235,7 @@ Facts used to compute the above table:
 * $\pi_k(SP_n) = \ZZ/2\ZZ\cdot\indic{k = 4,5\mod 8} + \ZZ\cdot\indic{k = 3,7 \mod 8}$
 
 
-# Spheres
+## Spheres
 
 * $\pi_i(S^n) = 0$ for $i < n$, $\pi_n(S^n) = \ZZ$
   * Not necessarily true that $\pi_i(S^n) = 0$ when $i > n$!!!

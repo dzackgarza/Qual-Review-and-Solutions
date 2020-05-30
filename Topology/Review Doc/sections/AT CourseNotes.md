@@ -373,9 +373,9 @@ $$
 
 # Pasting Diagrams
 
-![$S^2, \RP^2, T^2, \KK$](/assets/Results-37710.png)
+$S^2, \RP^2, T^2, \KK$: todo
 
-![$\mathbb{M}$](/assets/Results-f9d55.png)
+Mobius strip: todo
 
 # Useful Covering Spaces
 - $\RR \mapsvia{\pi} S^1 \leftarrow \ZZ$
@@ -383,6 +383,7 @@ $$
 - $\RP^n \mapsvia{\pi} S^n \leftarrow \ZZ_2$
 - $\vee_n S^1 \mapsvia{\pi} C^n \leftarrow \ZZ^{\ast n}$ where $C^n$ is the $n\dash$valent Cayley Graph
     ![Cayley Graph on $Z^{\ast 2$}](/assets/Results-9ba56.png)
+
 - $M \mapsvia{\pi} \tilde M \leftarrow \ZZ_2$, the orientation double cover
 - $T^2 \mapsvia{\times 2} \KK$
 - $L_{p/q} \mapsvia{\pi} S^3 \leftarrow \ZZ_q$
