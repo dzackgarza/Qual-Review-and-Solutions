@@ -76,7 +76,7 @@ Theorem (Van Kampen)
     \begin{center}
     \begin{tikzcd}
     A \disjoint_Z B   & A \ar[d] \ar[l] \\
-    B \ar[r]          & Z \ar[l, "\iota_B"] \ar[u, "\iota_A"]
+    B \ar[u]\ar[r]          & Z \ar[l, "\iota_B"] \ar[u, "\iota_A"]
     \end{tikzcd}
     \end{center}
 
