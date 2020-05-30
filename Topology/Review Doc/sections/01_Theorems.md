@@ -22,10 +22,13 @@ Proposition
 Proof
 : Take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
 
-- Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
-  - Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+Corollary
+: Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
 
-- Extreme Value Theorem: for $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
+Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+
+Theorem (Extreme Value Theorem)
+: For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
 
 
 Theorem
