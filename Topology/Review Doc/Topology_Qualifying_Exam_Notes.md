@@ -9,7 +9,7 @@
 
 !include sections/02_Examples.md
 
-!include sections/999_AlgebraicTopologySummary.md
+<!--!include sections/999_AlgebraicTopologySummary.md-->
 
 !include sections/999_UCSD_Fall 2014.md
 

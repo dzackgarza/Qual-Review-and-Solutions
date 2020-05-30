@@ -23,7 +23,7 @@ $i_V: V \into CX$ where $(x, s) \mapsto (x, 2s)$.
 
 But $CX$ is contractible by the homotopy $H:CX \cross I \into CX$ where $H((c,s), t) = (c, s(1-t))$.
 
-So $\pi_1(U) = \pi_1(V) = 0​$. 
+So $\pi_1(U) = \pi_1(V) = 0$. 
 
 By Van Kampen, we have $\pi_1(X) = 0 \ast_{\pi_1(X)} 0 = 0.$
 
