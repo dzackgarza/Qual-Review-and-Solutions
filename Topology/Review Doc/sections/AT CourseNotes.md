@@ -1,7 +1,3 @@
----
-title: Course Notes
----
-
 # Summary
 
 * Algebraic topology topics:
@@ -515,33 +511,10 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 ## Lemma: Contracting Spaces in Products
 $X\cross \RR^n \homotopic X \cross \pt$
 
----
-@import "Cheat Sheet.md"
-
----
-@import "sections/Fundamental Group.md"
-
----
-@import "sections/Covering Spaces.md"
-
----
-@import "sections/CW and Simplicial Complexes.md"
-
----
-@import "sections/Algebra.md"
-
----
 
 ## Mayer-Vietoris
 Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
 
-```latex {cmd=true, hide=true, run_on_save=true}
-\documentclass[crop, tikz]{standalone}
-\usepackage{tikz}
-\usepackage{dsfont}
-\usepackage{amsmath, amsthm, amssymb}
-\usetikzlibrary{matrix, cd}
-\begin{document}
 
 \begin{tikzcd}
  &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
@@ -555,8 +528,6 @@ H_0 (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_0 A \oplus H_0 B \arrow[rr, "
 0 &  &  &  &
 \end{tikzcd}
 
-\end{document}
-```
 
 This is sometimes written in the following compact form:
 $$ \cdots  H_n(A \cap B) \xrightarrow{(i^*,~ j^*)} H_n(A) \oplus H_n(B) \xrightarrow{l^* - r^*}  H_n(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots$$
