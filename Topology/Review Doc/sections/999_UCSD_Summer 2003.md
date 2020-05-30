@@ -1,7 +1,9 @@
 # Summer 2003
 
 # 1. Describe all possible covering maps between $S^2, T^2, K$
+
 Useful facts:
+
 1. $\tilde X \surjects X$ induces $\pi_1(\tilde X) \injects \pi_1(X)$
 2. $\chi(\tilde X) = n \chi (X)$
 3. $\pi_n(X) = [S^n, X]$

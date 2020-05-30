@@ -10,8 +10,10 @@ Moreover $X \homotopic S^1\vee S^1 \vee S^1$ which has only a 1-skeleton, thus $
 ?
 
 ## 3. Let $L$ be a 3-manifold with homology $[\ZZ, \ZZ_3, 0, \ZZ, \ldots]$ and let $X = L \cross \Sigma L$. Compute $H_*(X), H^*(X)$.
+
 Useful facts:
-- $ H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(Y))$
+
+- $H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(Y))$
 - $\tilde H_i(\Sigma X) = \tilde H_{i-1}(X)$
 
 We will use the fact that $H_*(\Sigma L) = [\ZZ, \ZZ, \ZZ_3, 0, \ZZ]$.
@@ -36,7 +38,9 @@ and $$H^*(X)= [\ZZ, \ZZ, 0,\ZZ,\ZZ^2,0,0,\ZZ] \times [0, 0,\ZZ_3,\ZZ_3,\ZZ_3,\ZZ
 $\qed$
 
 ## 4. Let $M$ be a closed, connected, oriented 4-manifold such that $H_2(M; \ZZ)$ has rank 1. Show that there is not a free $\ZZ_2$ action on $M$.
+
 Useful facts:
+
 - $X \surjects_{\times p} Y$ induces $\chi(X) = p\chi(Y)$
 - Moral: always try a simple Euler characteristic argument first!
 
@@ -45,7 +49,9 @@ We know that $H_*(M) = [\ZZ, A, \ZZ \times G, A, \ZZ]$ for some group $A$ and so
 However, a free action of $\ZZ_2 \actson M$ would produce a double covering $M \surjects_{\times 2} M/\ZZ_2$, and multiplicativity of Euler characteristics would force $\chi(M) = 2 \chi(M/\ZZ_2)$ and thus $3-2n = 2k$ for some integer $k$. This would require $3-2n$ to be even, so we have a contradiction. $\qed$
 
 ## 5. Let $X$ be $T^2$ with a 2-cell attached to the interior along a longitude. Compute $\pi_2(X)$.
+
 Useful facts:
+
 - $T^2 = e^0 + e^1_1 + e^1_2 + e^2$ as a CW complex.
 - $S^2/(x_0 \sim x_1) \homotopic S^2 \wedge S^1$ when $x_0, x_1$ are two distinct points. (Picture: sphere with a string handle connecting north/south poles.)
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$ for $\tilde X \surjects X$ the universal cover.
