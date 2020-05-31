@@ -198,6 +198,7 @@ $X$ is connected:
 - Claim: $X$ is *not* path-connected.
   - Todo: "can't get from $L$ to $G$ in finite time".
   - Toward a contradiction, choose a continuous function $f:I \to X$ with $f(0) \in G$ and $f(1) \in L$.
+    - Somehow extend/reparameterize so that $f(1) = (0, 1) \in L \subset \RR^2$.
   - Let $\eps = {1\over 2}$; by continuity there exists a $\delta\in I$ such that 
     $$
     t\in B_\delta(1) \subset I \implies f(t) \in B_\eps(\vector 0) \in X
@@ -218,6 +219,13 @@ $X$ is connected:
   - Now toward the contradiction, choose $x = {1 \over 2n\pi - \pi/2} \in \RR$ with $n$ large enough such that $x\in (0, x_0)$.
     - Note that $\sin\qty{1\over x} = -1$ by construction.
     - Apply the previous statement: there exists a $t$ such that $f(t) = (x, \sin\qty{1\over x}) = (x, -1)$.
+    - But then 
+      $$
+      \norm{f(t) - f(x)} = \norm{(x, -1) - (0, 1)} = \norm{(x, 2)} > {1\over 2}
+      ,$$
+      contradicting continuity of $f$.
+
+$\qed$
 
 ## 12
 
