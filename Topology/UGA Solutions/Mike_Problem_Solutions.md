@@ -214,6 +214,7 @@ $X$ is connected:
   - Then $F([1-\delta, 1]) \subset \RR$ is connected and thus must be an interval $(a, b)$
   - Since $f(1) = \vector 0$ which has $x\dash$component zero, $[0, b] \subset (a, b)$.
   - Since $f(1-\delta) = \vector x$, $F(\vector x) = x_0$ and this $[0, x_0] \subset (a, b)$.
+  - Thus for all $x \in (0, x_0]$ there exists a $t\in [1-\delta, 1]$ such that $f(t) = (x, \sin\qty{1\over x})$.
 
 ## 12
 
