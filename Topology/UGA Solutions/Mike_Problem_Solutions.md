@@ -198,7 +198,8 @@ $X$ is connected:
 - Claim: $X$ is *not* path-connected.
   - Todo: "can't get from $L$ to $G$ in finite time".
   - Toward a contradiction, choose a continuous function $f:I \to X$ with $f(0) \in G$ and $f(1) \in L$.
-    - Somehow extend/reparameterize so that $f(1) = (0, 1) \in L \subset \RR^2$.
+    - Since $L \cong [0, 1]$, use path-connectedness to create a path $f(1) \to (0, 1)$
+    - Concatenate paths and reparameterize to obtain $f(1) = (0, 1) \in L \subset \RR^2$.
   - Let $\eps = {1\over 2}$; by continuity there exists a $\delta\in I$ such that 
     $$
     t\in B_\delta(1) \subset I \implies f(t) \in B_\eps(\vector 0) \in X
