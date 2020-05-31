@@ -139,4 +139,7 @@ Theorem (Van Kampen)
     J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
     .\end{align*}
 
+Theorem
+: A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+
 
