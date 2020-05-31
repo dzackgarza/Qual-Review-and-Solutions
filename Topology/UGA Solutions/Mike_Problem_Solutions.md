@@ -203,7 +203,17 @@ $X$ is connected:
     t\in B_\delta(1) \subset I \implies f(t) \in B_\eps(\vector 0) \in X
     $$
   - Using the fact that $[1-\delta, 1]$ is connected, $f([1-\delta, 1]) \subset X$ is connected.
-  - Let $f(1-\delta) = \vector x_0 \subset X\subset \RR^2$.
+  - Let $f(1-\delta) = \vector x_0 = (x_0, y_0) \subset X\subset \RR^2$.
+  - Define a composite map 
+    \begin{align*}
+    F: [0, 1] &\to \RR
+    F &\definedas \pr_{x\dash\text{axis}} \circ f
+    .\end{align*}
+
+    - $F$ is continuous as a composition of continuous functions.
+  - Then $F([1-\delta, 1]) \subset \RR$ is connected and thus must be an interval $(a, b)$
+  - Since $f(1) = \vector 0$ which has $x\dash$component zero, $[0, b] \subset (a, b)$.
+  - Since $f(1-\delta) = \vector x$, $F(\vector x) = x_0$ and this $[0, x_0] \subset (a, b)$.
 
 ## 12
 
