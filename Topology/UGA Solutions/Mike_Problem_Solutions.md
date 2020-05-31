@@ -197,7 +197,11 @@ $X$ is connected:
 
 - Claim: $X$ is *not* path-connected.
   - Todo: "can't get from $L$ to $G$ in finite time".
-  - Toward a contradiction, choose a continuous function $f:I \to X$ with $f(0) \in L$ and $f(1) \in G$.
+  - Toward a contradiction, choose a continuous function $f:I \to X$ with $f(0) \in G$ and $f(1) \in L$.
+  - Let $\eps = {1\over 2}$; by continuity there exists a $\delta\in I$ such that 
+    $$
+    t\in B_\delta(1) \subset I \implies f(t) \in B_\eps(\vector 0) \in X
+    $$
 
 ## 12
 
