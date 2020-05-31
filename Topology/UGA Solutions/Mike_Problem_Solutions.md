@@ -202,6 +202,8 @@ $X$ is connected:
     $$
     t\in B_\delta(1) \subset I \implies f(t) \in B_\eps(\vector 0) \in X
     $$
+  - Using the fact that $[1-\delta, 1]$ is connected, $f([1-\delta, 1]) \subset X$ is connected.
+  - Let $f(1-\delta) = \vector x_0 \subset X\subset \RR^2$.
 
 ## 12
 
