@@ -197,6 +197,7 @@ $X$ is connected:
 
 - Claim: $X$ is *not* path-connected.
   - Todo: "can't get from $L$ to $G$ in finite time".
+  - Toward a contradiction, choose a continuous function $f:I \to X$ with $f(0) \in L$ and $f(1) \in G$.
 
 ## 12
 
