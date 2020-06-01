@@ -4,4 +4,4 @@
 3. Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
 4. Describe all connected covering spaces of $\RP^2 \vee \RP^2$.
 5. Compute the homology of the Klein bottle using the Mayer-Vietoris sequence and a decomposition $K = M \disjoint_f M$
-
+6. Show that if $X = S^2 \disjoint_\id S^2$ is a pushout along the equators, then $H_n(X) = [\ZZ, 0, \ZZ^3, 0, \cdots]$.
