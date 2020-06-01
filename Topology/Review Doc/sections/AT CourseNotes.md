@@ -559,3 +559,7 @@ $$
   (A,B) & & \large\longleftarrow &  & A
   \end{matrix}
 $$
+
+
+
+![Barycentric Subdivision](figures/image_2020-06-01-00-35-21.png)
