@@ -269,16 +269,21 @@ $$
 
 ## Cyclotomic Polynomials
 
-**Definition:**
-Let $\zeta_n = e^{2\pi i/n}$, then
-$$
-\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
-,$$
+Definition (Cyclotomic Polynomials)
+:   Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
+    $$
+    \Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
+    ,$$
 
-which is a product over primitive roots of unity.
+    which is a product over primitive roots of unity.
+    It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
 
-**Lemma:**
-$\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
+
+Proposition: 
+: $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
+
+Proof
+: $\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
 
 **Computing $\Phi_n$:**
 
