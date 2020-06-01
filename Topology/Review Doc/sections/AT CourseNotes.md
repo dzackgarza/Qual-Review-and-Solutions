@@ -26,7 +26,7 @@
 	* Poincare lemma
 	* Poincare duality
 	* de Rham theorem
-	* Seifer-van Kampen theorem
+	* Seifert-van Kampen theorem
 * Covering space theory topics:
 	* Covering maps
 	* Free actions
@@ -134,7 +134,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 - Poincare Duality
 - If $M^n$ is a **closed orientable manifold without boundary**, then $H^k(M^n; F) \cong H_{n-k}(M^n; F)$ for a field $F$.
 - This is a strict implication, so failure of the RHS implies missing conditions on the LHS.
-- The intersection pairing is nodegenerate modulo torsion.
+- The intersection pairing is nondegenerate modulo torsion.
 - Lefschetz Duality
 - If $M^n$ is a **closed orientable manifold with boundary** then  $H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)$
 - $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\mathbf{T}(H_{n-1}) = 0$
@@ -153,10 +153,10 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 	- Every $B^n \selfmap_f$ has a fixed point.
 * Hairy Ball Theorem
 	- There is no non-vanishing tangent vector field on even dimensional spheres.
-* Borsuk-ulam Theorem
+* Borsuk-Ulam Theorem
 	- For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
 * Ham Sandwich Theorem
-* Eilenberg-Zilber
+* Eilenberg-Zilberg
 * Freudenthal Suspension
 
 
@@ -291,7 +291,8 @@ Thins that behave like "the identity functor":
 - $\hom(\ZZ, \wait)$
 - $\wait \tensor_\ZZ \ZZ$ and $\ZZ \tensor_\ZZ \wait$
 
-For description of $\mathcal{A_p}$, see [here](http://math.jhu.edu/~jmb/note/torext.pdf). This is a certain ring of adeles.
+For description of $\mathcal{A_p}$, see [here](http://math.jhu.edu/~jmb/note/torext.pdf). 
+This is a certain ring of adeles.
 
 -----
 
@@ -356,14 +357,15 @@ How to compute:
 	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
     4. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
     5. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
-    eg.
-$$
+    e.g.
+\begin{align*}
 \pmatrix{\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0} \to 
 \pmatrix{\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}\\ \ker = 
 \left\{\pmatrix{2\\-1\\0\\0},
 \pmatrix{2\\0\\-1\\-1}\right\}\\
 \im = \generators{a+2b+2d,c-d}
-$$
+.\end{align*}
+     
     6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
 
 
@@ -376,7 +378,7 @@ $$
 
 $S^2, \RP^2, T^2, \KK$: todo
 
-Mobius strip: todo
+Möbius strip: todo
 
 # Useful Covering Spaces
 
@@ -469,7 +471,8 @@ $$
 
 # Further Notes
 On the complements of spaces in $\RR^3$:
-> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always K(π,1)s. Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
+> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
+> Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
 
 For a graph $G$, we always have $\pi_1(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
 
@@ -479,7 +482,7 @@ Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take 
 
 If $M$ is a closed 3-manifold and $K$ is a nullhomologous knot in $M$, then $H_1(X -n(K)) \cong H_1(X) \times \ZZ$ where $n(K)$ is a tubular neighborhood.
 
-Take $M=S^3$, $K$ any knot, then $H_*(S^3 - K) = [\ZZ, \ZZ, 0\rightarrow]$. Follows from MV taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. (Note $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$).
+Take $M=S^3$, $K$ any knot, then $H_*(S^3 - K) = [\ZZ, \ZZ, 0\rightarrow]$. Follows from Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. (Note $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$).
 
 When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
 
@@ -555,7 +558,7 @@ A\union B & & \large\longleftarrow &  & A \oplus B
 \end{matrix}
 $$
 
-### Application: Ismorphisms in the homology of spheres.
+### Application: Isomorphisms in the homology of spheres.
 
 Claim: $H^i(S^n) \cong H^{i-1}(S^{n-1})$.
 
