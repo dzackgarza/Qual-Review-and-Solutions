@@ -94,6 +94,8 @@ Example
 
 Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 
+Useful fact: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
+
 Theorem (Mayer Vietoris)
 :   Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
     \begin{align*}
