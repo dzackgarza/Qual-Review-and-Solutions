@@ -15,24 +15,25 @@ Theorem
 Proof
 : Todo?
 
+Theorem (Gauss' Lemma)
+:   Let $R$ be a UFD and $F$ its field of fractions.
+    Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+
+Corollary
+: A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
+
+
 Theorem (Eisenstein's Criterion)
 :   If $f(x) = \displaystyle\sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 
     - $p$ divides every coefficient *except* $a_n$ and
     - $p^2$ does not divide $a_0$,
 
-    then $f$ is irreducible.
+    then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 
 Definition (Primitive)
 : For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 
-
-Theorem (Gauss' Lemma)
-:   Let $R$ be a UFD and $F$ its field of fractions.
-    Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
-
-Corollary
-: A primitive polynomial $p\in \QQ[x]$ is irreducible iff $p$ is irreducible in $\ZZ[x]$.
 
 ## Finite Fields
 
