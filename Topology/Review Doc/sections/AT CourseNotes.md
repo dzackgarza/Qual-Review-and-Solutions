@@ -84,29 +84,6 @@ H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
 H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 $$
 
-## Seifert-van Kampen Theorem
-
-Statement: Suppose $X = U_1 \union U_2$ where $U \definedas U_1 \intersect U_2 \neq \emptyset$ is path-connected, and let $\pt \in U$. Then the maps $i_1: U_1 \into X$ and $i_2: U_2 \into X$ induce the following group homomorphisms:
-
-$$
-i_1^*: \pi_1(U_1 ,\pt) \into \pi_1(X, \pt) \\
-i_2^*: \pi_1(U_2 ,\pt) \into \pi_1(X, \pt)
-$$
-
-and letting $P = \pi_1(U), \pt$, there is a natural isomorphism
-
-$$
-\pi_1(X, \pt) \cong \pi_1(U_1, \pt) ~\bigast_P~ \pi_1(U_2, \pt)
-$$
-where $\bigast_P$ is the amalgamated free product over $P$.
-
-> (Todo: formulate in terms of pushouts)
-
-### Examples
-- Computing $\pi_1(S^1 \vee S^1)$
-- Computing $\pi_1(S^1 \cross S^1)$
-- Counterexample when $U\cap V$ isn't path-connected: $S^1$ with $U,V$ neighborhoods of the poles.
-
 
 ## Whitehead Theorem
 A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
