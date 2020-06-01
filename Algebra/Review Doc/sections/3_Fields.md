@@ -8,28 +8,26 @@ Let $k$ denote a field.
 - All fields are simple rings
 - Any homomorphism of fields is either 0 or injective
 - If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
+- Every finite extension is algebraic.
 
-**Lemma:**
-Every finite extension is algebraic.
+Theorem (Eisenstein's Criterion)
+:   If $f(x) = \displaystyle\sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 
-**Eisenstein's Criterion:**
-If $f(x) = \displaystyle\sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
+    - $p$ divides every coefficient *except* $a_n$ and
+    - $p^2$ does not divide $a_0$,
 
-- $p$ divides every coefficient *except* $a_n$ and
-- $p^2$ does not divide $a_0$,
+    then $f$ is irreducible.
 
-then $f$ is irreducible.
-
-**Definition:**
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+Definition (Primitive)
+: For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 
 
-**Gauss' Lemma**:
-Let $R$ be a UFD and $F$ its field of fractions.
-Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+Theorem (Gauss' Lemma)
+:   Let $R$ be a UFD and $F$ its field of fractions.
+    Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
 
-> *Corollary:*
-> A primitive polynomial $p\in \QQ[x]$ is irreducible iff $p$ is irreducible in $\ZZ[x]$.
+Corollary
+: A primitive polynomial $p\in \QQ[x]$ is irreducible iff $p$ is irreducible in $\ZZ[x]$.
 
 ## Finite Fields
 
