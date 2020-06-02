@@ -9,4 +9,9 @@
 5. Show that if $p\in \QQ[x]$ and $r\in \QQ$ is a rational root, then in fact $r\in \ZZ$.
 6. If $\theset{\alpha_i}_{i=1}^n \subset F$ are algebraic over $K$, show that $K[\alpha_1, \cdots, \alpha_n] = K(\alpha_1, \cdots, \alpha_n)$.
 7. Show that the Galois group of $x^n - 2$ is $D_n$, the dihedral group on $n$ vertices.
+8. Compute the galois group and all intermediate field extensions of $\QQ(\sqrt 2, \sqrt 3)$.
+ 
+  ![](figures/image_2020-06-01-20-56-35.png)
+
+9.
 
