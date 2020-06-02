@@ -14,9 +14,12 @@ $$
 
 where $\theset{\lambda_i}_{i=1}^m \subset \CC$ are the **distinct** eigenvalues of $A^n$.
 
-Moreover $A\in \GL(m,\CC) \implies A^n \in \GL(m,\CC)$, so $\lambda_i \neq 0$ for any $i$.
+Moreover $A\in \GL(m,\CC) \implies A^n \in \GL(m,\CC)$: $A$ is invertible $\iff \det(A) = d \in \FF\units$, and so $\det(A^n) = \det(A)^n = d^n \in \FF\units$ using the fact that the determinant is a ring morphism $\det: \Mat(m\times\m) \to\FF$ and $\FF\units$ is closed under multiplication.
 
-This implies that there are no roots with multiplicity, since $x^k$ is not a factor of $\mu_{A^n}(x)$, meaning that the $k$ terms in the product correspond to exactly $k$ **distinct** factors.
+So $A^n$ is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so $\lambda_i \neq 0$ for any $i$.
+
+Since the $\lambda_i$ are distinct and nonzero, this implies $x^k$ is not a factor of $\mu_{A^n}(x)$ for any $k\geq 0$. 
+Thus meaning that the $m$ terms in the product correspond to exactly $m$ **distinct** factors.
 
 We can now construct a polynomial that annihilates $A$, namely
 $$
