@@ -1,5 +1,9 @@
 # Extra Problems
 
+## Group Theory
+
+1. Show that every group of prime order is cyclic.
+
 ## Field Theory
 
 1. What is $[\QQ(\sqrt 2 + \sqrt 3): \QQ]$?
