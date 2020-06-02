@@ -54,20 +54,20 @@ $\qed$
 > Go to a field extension.
 > Orders of multiplicative groups for finite fields are known.
 
-We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map $\rho: \FF_p[x] \to K$.
+We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
 
 Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
 
-So every element in $K$ satisfies $q(x) = x^{p^d}-x$.
+So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
 
-Now letting $x\in \FF^p$ be arbitray, since $f$ is a group homomorphism, we have
+Since $\rho$ is a ring morphism, we have
 
 \begin{align*}
-\rho(q(x)) = q(\rho(x)) = \rho(x)^{p^d} - \rho(x)
+\rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
 &= 0 \in K \\
-&\implies q(x) \in \ker \rho \\
-&\implies q(x) \in \generators{\pi(x)} \\
-&\implies \pi(x) \divides q(x) = x^{p^d}-x
+&\iff q(x) \in \ker \rho \\
+&\iff q(x) \in \generators{\pi(x)} \\
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
 .\end{align*}
 
 $\qed$
