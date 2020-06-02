@@ -25,3 +25,6 @@
 1. Prove the Cayley-Hamilton theorem.
 2. Prove that the minimal polynomial divides the characteristic polynomial.
 
+## Commutative Algebra
+
+1. Show that a finitely generated module over a Noetherian local ring is flat iff it is free using Nakayama and Tor.
