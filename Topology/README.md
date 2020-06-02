@@ -6,7 +6,7 @@ title: Topology Qualifying Exam
 
 | Exam                    | Typeset   | Imported to MakeMeAQual   | Solutions   |
 | ----------------------- | --------- | ------------------------- | ----------- |
-| Mike Usher's Collection | ✓         |                           | IP          |
+| Mike Usher's Collection | ✓         | ✓                         | IP          |
 | Fall 2019               |           |                           |             |
 | Spring 2019             |           |                           |             |
 | Fall 2018               |           |                           |             |
