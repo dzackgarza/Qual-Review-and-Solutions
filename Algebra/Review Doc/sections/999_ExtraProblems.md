@@ -4,6 +4,10 @@
 
 1. Show that every group of prime order is cyclic.
 
+## Ring Theory
+
+1. Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
+
 ## Field Theory
 
 1. What is $[\QQ(\sqrt 2 + \sqrt 3): \QQ]$?
