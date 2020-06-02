@@ -19,3 +19,9 @@
 
 9. Compute all intermediate field extensions of $\QQ(2^{1\over 4}, \zeta_8)$.
 10. Show that $\QQ(2^{1\over 3})$ and $\QQ(\zeta_3 2^{1\over 3})$
+
+## Modules and Linear Algebra
+
+1. Prove the Cayley-Hamilton theorem.
+2. Prove that the minimal polynomial divides the characteristic polynomial.
+
