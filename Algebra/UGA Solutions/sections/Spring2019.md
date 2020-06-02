@@ -28,6 +28,10 @@ $$
 
 where we can note that $q_A(A) = \min_{A^n}(A^n) = 0$, and so $\min_A(x) \divides q_A(x)$ by minimality.
 
+We now claim that $q_A(x)$ has exactly $m\cdot n$ distinct linear factors, which reduces to showing that no pair $x^n-\lambda_i, x^n-\lambda_j$ share a root.
+and that $x^n-\lambda_i$ does not have multiple roots.
+For the second claim, we can check that $\dd{}{x}\qty{x^n - \lambda_i} = nx^{n-1}\neq 0\in \CC$, and $\gcd(x^n-\lambda_i, nx^{n-1}) = 1$.
+
 But by construction, $q_A(x)$ has exactly $m$ distinct linear factors, so $\min_A(x)$ can only have distinct linear factors, and $A$ is diagonalizable.
 
 $\qed$
