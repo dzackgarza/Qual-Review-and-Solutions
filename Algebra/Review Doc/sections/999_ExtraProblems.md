@@ -18,4 +18,4 @@
   ![](figures/image_2020-06-01-20-56-35.png)
 
 9. Compute all intermediate field extensions of $\QQ(2^{1\over 4}, \zeta_8)$.
-
+10. Show that $\QQ(2^{1\over 3})$ and $\QQ(\zeta_3 2^{1\over 3})$
