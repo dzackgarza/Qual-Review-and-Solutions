@@ -5,13 +5,14 @@
 > $A$ is diagonalizable iff $\min_A(x)$ is separable.\
 > See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
 
+Let $A \in \Gl(m, \CC)$. 
 Since $A^n$ is diagonalizable (and $\CC$ is algebraically closed), we can write $\min_{A^n}(x)$ as a product of **distinct** linear factors:
 
 $$
 \min_{A^n}(x) = \prod_{i=1}^k (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
 $$
 
-where $\lambda_i$ are the **distinct** eigenvalues of $A^n$.
+where $\lambda_i\in\CC$ are the **distinct** eigenvalues of $A^n$.
 
 Moreover $A\in \GL(n,\CC) \implies A^n \in \GL(n,\CC)$, so $\lambda_i \neq 0$ for any $i$.
 
