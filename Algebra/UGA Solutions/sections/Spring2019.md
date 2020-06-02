@@ -9,7 +9,7 @@ Claim: If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, the
 
 
 Let $A \in \Gl(m, \CC)$. 
-Since $A^n$ is diagonalizable (and $\CC$ is algebraically closed), we can write $\min_{A^n}(x)$ as a product of $m$ **distinct** linear factors:
+Since $A^n$ is diagonalizable, $\min_{A^n}(x) \in \CC[x]$ is separable and thus factors as a product of $m$ **distinct** linear factors:
 
 $$
 \min_{A^n}(x) = \prod_{i=1}^m (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
