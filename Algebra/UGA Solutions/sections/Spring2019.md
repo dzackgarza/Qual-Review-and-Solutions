@@ -6,15 +6,15 @@
 > See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
 
 Let $A \in \Gl(m, \CC)$. 
-Since $A^n$ is diagonalizable (and $\CC$ is algebraically closed), we can write $\min_{A^n}(x)$ as a product of **distinct** linear factors:
+Since $A^n$ is diagonalizable (and $\CC$ is algebraically closed), we can write $\min_{A^n}(x)$ as a product of $m$ **distinct** linear factors:
 
 $$
-\min_{A^n}(x) = \prod_{i=1}^k (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
+\min_{A^n}(x) = \prod_{i=1}^m (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
 $$
 
-where $\lambda_i\in\CC$ are the **distinct** eigenvalues of $A^n$.
+where $\theset{\lambda_i}_{i=1}^m \subset \CC$ are the **distinct** eigenvalues of $A^n$.
 
-Moreover $A\in \GL(n,\CC) \implies A^n \in \GL(n,\CC)$, so $\lambda_i \neq 0$ for any $i$.
+Moreover $A\in \GL(m,\CC) \implies A^n \in \GL(m,\CC)$, so $\lambda_i \neq 0$ for any $i$.
 
 This implies that there are no roots with multiplicity, since $x^k$ is not a factor of $\mu_{A^n}(x)$, meaning that the $k$ terms in the product correspond to exactly $k$ **distinct** factors.
 
