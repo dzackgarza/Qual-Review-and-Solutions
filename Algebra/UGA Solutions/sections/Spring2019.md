@@ -19,16 +19,16 @@ Moreover $A\in \GL(m,\CC) \implies A^n \in \GL(m,\CC)$: $A$ is invertible $\iff 
 So $A^n$ is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so $\lambda_i \neq 0$ for any $i$.
 
 Since the $\lambda_i$ are distinct and nonzero, this implies $x^k$ is not a factor of $\mu_{A^n}(x)$ for any $k\geq 0$. 
-Thus meaning that the $m$ terms in the product correspond to exactly $m$ **distinct** factors.
+Thus meaning that the $m$ terms in the product correspond to exactly $m$ **distinct linear** factors.
 
 We can now construct a polynomial that annihilates $A$, namely
 $$
-q_A(x) \definedas \min_{A^n}(x^n) = \prod_{i=1}^k (x^n-\lambda_i),
+q_A(x) \definedas \min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i),
 $$
 
 where we can note that $q_A(A) = \min_{A^n}(A^n) = 0$, and so $\min_A(x) \divides q_A(x)$ by minimality.
 
-But then $\min_A(x)$ must have distinct linear factors, so $A$ is diagonalizable.
+But by construction, $q_A(x)$ has exactly $m$ distinct linear factors, so $\min_A(x)$ can only have distinct linear factors, and $A$ is diagonalizable.
 
 $\qed$
 
