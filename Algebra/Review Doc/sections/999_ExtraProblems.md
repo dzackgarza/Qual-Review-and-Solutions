@@ -47,6 +47,7 @@
 20. Show that $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
 21. Show that $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 22. Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+23. Compute the galois group of $x^n - 1 \in \QQ[x]$.
 
 ## Modules and Linear Algebra
 
