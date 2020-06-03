@@ -4,6 +4,7 @@
 
 > $A$ is diagonalizable over $\FF$ iff $\min_A(x)$ is splits into distinct linear factors over $\FF$.
 > See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
+> Also $A \in GL(n, R)\iff \det(A)\in R\units$.
 
 Claim: If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
 
