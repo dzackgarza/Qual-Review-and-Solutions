@@ -1,5 +1,5 @@
 ---
-title: Topology Qualifying Exam 
+title: Complex Analysis Qualifying Exam 
 ---
 
 # Progress
