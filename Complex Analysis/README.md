@@ -1,79 +1,103 @@
-Study Guide for Complex Analysis Exam
+---
+title: Topology Qualifying Exam 
+---
 
-I. Calculus and Undergraduate Analysis
+# Progress
 
-Continuity and differentiation in one and several real variables
+| Exam                     | Typeset   | Imported to MakeMeAQual   | Solutions   |
+| -----------------------  | --------- | ------------------------- | ----------- |
+| Jingzhi Tie's Collection | ✓         | ✓                         | IP          |
+| Fall 2019                |           |                           |             |
+| Spring 2019              |           |                           |             |
+| Fall 2018                |           |                           |             |
+| Spring 2018              |           |                           |             |
+| Fall 2017                |           |                           |             |
+| Spring 2017              |           |                           |             |
+| Fall 2016                |           |                           |             |
+| Spring 2016              |           |                           |             |
+| Fall 2015                |           |                           |             |
+| Spring 2015              |           |                           |             |
+| Fall 2014                |           |                           |             |
+| Spring 2014              |           |                           |             |
 
-Inverse and implicit function theorems
 
-Compactness and connectedness in analysis
+# Qualifying Exam Syllabus 
 
-Uniform convergence and uniform continuity
 
-Riemann integrals
+## Calculus and Undergraduate Analysis
 
-Contour integrals and Green's theorem
+- Continuity and differentiation in one and several real variables
 
-Reference: \[3\].
+- Inverse and implicit function theorems
 
-II\. Preliminary Topics in Complex Analysis
+- Compactness and connectedness in analysis
 
-Complex arithmetic
+- Uniform convergence and uniform continuity
 
-Analyticity, harmonic functions, and the Cauchy-Riemann equations
+- Riemann integrals
 
-Contour Integration in C
+- Contour integrals and Green's theorem
 
-References: \[1\] Chapters 1, 2; \[2\] Chapters 1, 2, 4; \[4\] Chapter
+> Reference: \[3\].
+
+## Preliminary Topics in Complex Analysis
+
+- Complex arithmetic
+
+- Analyticity, harmonic functions, and the Cauchy-Riemann equations
+
+- Contour Integration in C
+
+> References: \[1\] Chapters 1, 2; \[2\] Chapters 1, 2, 4; \[4\] Chapter
 1.
 
-III\. Cauchy's Theorem and its consequences
+## Cauchy's Theorem and its consequences
 
-Cauchy's theorem and integral formula, Morera's theorem, Schwarz
-reflection
+- Cauchy's theorem and integral formula, 
+- Morera's theorem, 
+- Schwarz reflection
+- Uniform convergence of analytic functions
 
-Uniform convergence of analytic functions
+- Taylor and Laurent expansions
 
-Taylor and Laurent expansions
+- Maximum modulus principle and Schwarz's lemma
 
-Maximum modulus principle and Schwarz's lemma
+- Liouville's theorem and the Fundamental theorem of algebra
 
-Liouville's theorem and the Fundamental theorem of algebra
+- Residue theorem and applications
 
-Residue theorem and applications
+- Singularities and meromorphic functions, including the
 
-Singularities and meromorphic functions, including the
-Casorati-Weierstrass theorem
+- Casorati-Weierstrass theorem
 
-Rouche's theorem, the argument principle, and the open mapping theorem
+- Rouche's theorem, the argument principle, and the open mapping theorem
 
-Estimates using Cauchy Integral Formula: Cauchy inequalities and, more
-generally,
+- Estimates using Cauchy Integral Formula: 
+  - Cauchy inequalities 
+  - More generally, bounds on holomorphic functions and their derivatives on compact sets
 
-bounds on holomorphic functions and their derivatives on compact sets
-
-References: \[1\] Chapters 4, 5, 6; \[2\] Chapters 5, 7, 8, 9; \[4\]
+> References: \[1\] Chapters 4, 5, 6; \[2\] Chapters 5, 7, 8, 9; \[4\]
 Chapters 2, 3, 5, 8 (§2,3).
 
-IV\. Conformal Mapping
+## Conformal Mapping
 
-General properties of conformal mappings
+- General properties of conformal mappings
 
-Analytic and mapping properties of linear fractional transformations
+- Analytic and mapping properties of linear fractional transformations
 
-Automorphisms of the disk, plane, and Riemann sphere
+- Automorphisms of the disk, plane, and Riemann sphere
 
-References: \[1\] Chapters 3, 8; \[2\] Chapters 3, 4; \[4\] Chapter 8
+> References: \[1\] Chapters 3, 8; \[2\] Chapters 3, 4; \[4\] Chapter 8
 (§1,2).
 
-References
+## References
 
-L. Ahlfors, Complex Analysis, Third Edition, McGraw-Hill.
+1. L. Ahlfors, Complex Analysis, Third Edition, McGraw-Hill.
 
-E. Hille, Analytic Function Theory, Vol. 1, Ginn and Company.
+2. E. Hille, Analytic Function Theory, Vol. 1, Ginn and Company.
 
-W. Rudin, Principles of Mathematical Analysis, Third Edition,
+3. W. Rudin, Principles of Mathematical Analysis, Third Edition,
 McGraw-Hill.
 
-E. M. Stein and R. Shakarchi, Complex Analysis, Princeton University
+4. E. M. Stein and R. Shakarchi, Complex Analysis, Princeton University
 Press.
