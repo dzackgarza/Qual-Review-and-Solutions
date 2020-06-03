@@ -98,15 +98,10 @@ for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
 
 $\impliedby$:
-
+If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
+So $f = f_i$ for some $i$.
 
 $\qed$
-
-
-> Proof of converse:
-> If $d\divides n$, use the fact that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. So $f = f_i$ for some $i$.
-> Proof of that fact:
->
 
 ## 3
 

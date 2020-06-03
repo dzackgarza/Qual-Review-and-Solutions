@@ -31,6 +31,10 @@
 16. Prove that $x^{p^n}-x$ is the product of all monic irreducible polynomials in $\FF_p[x]$ with degree dividing $n$.
 17. Prove that an irreducible $\pi(x)\in \FF_p[x]$ divides $x^{p^n}-x \iff \deg \pi(x)$ divides $n$.
 18. Show that a field with $p^n$ elements has exactly one subfield of size $p^d$ for every $d$ dividing $n$.
+19. Show that  $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+20. Show that $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+21. Show that $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+22. Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 
 ## Modules and Linear Algebra
 
