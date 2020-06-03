@@ -4,6 +4,16 @@
 
 1. Show that every group of prime order is cyclic.
 2. Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
+3. Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
+4. Analyze groups of order $p^2$.
+5. Show that $p\dash$groups have nontrivial centers.
+7. Show that every $p\dash$group is nilpotent.
+7. Show that every $p\dash$group is solvable.
+8. Show that every normal subgroup of $G$ is contained in $Z(G)$.
+6. Show that $A_n$ is simple for $n\geq 5$
+7. Analyze groups of order $pq$.
+7. Analyze groups of order $p^2 q$.
+8. 
 
 ## Ring Theory
 
