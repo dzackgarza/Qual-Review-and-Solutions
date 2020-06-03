@@ -28,6 +28,8 @@
 13. Show that any finite integral domain is a field.
 14. Prove that if $R$ is an integral domain, then $R[t]$ is again an integral domain.
 15. Show that $ff(R[t]) = ff(R)(t)$.
+16. Prove that $x^{p^n}-x$ is the product of all monic irreducible polynomials in $\FF_p[x]$ with degree dividing $n$.
+17. Prove that an irreducible $\pi(x)\in \FF_p[x]$ divides $x^{p^n}-x \iff \deg \pi(x)$ divides $n$.
 
 ## Modules and Linear Algebra
 
