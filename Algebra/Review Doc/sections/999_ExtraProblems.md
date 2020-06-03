@@ -25,6 +25,7 @@
 10. Show that $\QQ(2^{1\over 3})$ and $\QQ(\zeta_3 2^{1\over 3})$
 11. Show that if $L/K$ is separable, then $L$ is normal $\iff$ there exists a polynomial $p(x) = \prod_{i=1}^n x- \alpha_i\in K[x]$ such that $L = K(\alpha_1, \cdots, \alpha_n)$ (so $L$ is the splitting field of $p$).
 12. Is $\QQ(2^{1\over 3})/\QQ$ normal? 
+13. Show that any finite integral domain is a field.
 
 ## Modules and Linear Algebra
 
