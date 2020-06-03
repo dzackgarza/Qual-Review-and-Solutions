@@ -23,112 +23,99 @@ title: Algebra Qualifying Exam
 
 ## Group Theory
 
-subgroups and quotient groups
+- Subgroups and quotient groups
 
-Lagrange's Theorem
+- Lagrange's Theorem
 
-fundamental homomorphism theorems
+- Fundamental homomorphism theorems
 
-group actions with applications to the structure of groups such as
+- Group actions with applications to the structure of groups such as the Sylow Theorems
 
-the Sylow Theorems
+- group constructions such as direct and semi-direct products
 
-group constructions such as:
+- structures of special types of groups such as:
+  - p-groups
+  - dihedral, 
+  - symmetric 
+  - alternating
+  
+- Cycle decompositions
 
-direct and semi-direct products
+- The simplicity of $A_n$, for n $\geq$ 5
 
-structures of special types of groups such as:
+- Free groups, generators and relations
 
-p-groups
+- Solvable groups
 
-dihedral, symmetric and alternating groups, cycle decompositions
-
-the simplicity of An, for n $\geq$ 5
-
-free groups, generators and relations
-
-solvable groups
-
-References: \[1,3,4\]
+> References: \[1,3,4\]
 
 ## Linear Algebra
 
-determinants
+- Determinants
 
-eigenvalues and eigenvectors
+- Eigenvalues and eigenvectors
 
-Cayley-Hamilton Theorem
+- Cayley-Hamilton Theorem
 
-canonical forms for matrices
+- Canonical forms for matrices
 
-linear groups (GLn , SLn, On, Un)
+- Linear groups ($\GL_n , \SL_n, O_n, U_n$)
 
-dual spaces, dual bases, induced dual map, double duals
+- Duality
+  - Dual spaces, 
+  - Dual bases, 
+  - Induced dual map, 
+  - Double duals
 
-finite-dimensional spectral theorem
+- Finite-dimensional spectral theorem
 
-References: \[1,2,4\]
+> References: \[1,2,4\]
 
 ## Foundations
 
-Zorn's Lemma and its uses in various existence theorems such as that of
-a basis
+- Zorn's Lemma and its uses in various existence theorems such as that of
 
-for a vector space or existence of maximal ideals.
+  - A basis for a vector space or 
+  - Existence of maximal ideals.
 
 References: \[1,3,4\]
 
 ## Rings and Modules
 
-basic properties of ideals and quotient rings
+- Basic properties of ideals and quotient rings
 
-fundamental homomorphism theorems for rings and modules
+- Fundamental homomorphism theorems for rings and modules
 
-characterizations and properties of special domains such as:
+- Characterizations and properties of special domains such as:
 
-Euclidean implies PID implies UFD
+- Euclidean implies PID implies UFD
 
-classification of finitely generated modules over PIDs with emphasis on
-Euclidean
+- Classification of finitely generated modules over PIDs with emphasis on Euclidean domains applications to the structure of:
 
-domains
+  - Finitely generated abelian groups
 
-applications to the structure of:
-
-finitely generated abelian groups
-
-canonical forms of matrices
+  - Canonical forms of matrices
 
 References: \[1,3,4\]
 
 ## Field Theory
 
-algebraic extensions of fields
+- Algebraic extensions of fields
 
-fundamental theorem of Galois theory
+- Fundamental theorem of Galois theory
 
-properties of finite fields
+- Properties of finite fields
 
-separable extensions
+- Separable extensions
 
-computations of Galois groups of polynomials of small degree and
-cyclotomic
-
-polynomials
-
-solvability of polynomials by radicals
+- Computations of Galois groups of polynomials of small degree and cyclotomic polynomials solvability of polynomials by radicals
 
 References: \[1,3,4\]
 
 As a general rule, students are responsible for knowing both the theory
 (proofs) and practical
 applications (e.g. how to find the Jordan or rational canonical form of
-a given matrix, or the
-Galois group of a given polynomial) of the topics mentioned. A
-supplement to this study guide
-
-
-
+a given matrix, or the Galois group of a given polynomial) of the topics mentioned. 
 
 ## References
 
@@ -138,6 +125,5 @@ supplement to this study guide
 
 3. Thomas W. Hungerford, Algebra, Springer, 1974.
 
-4. Roy Smith, Algebra Course Notes (843-1 through 845-3),
-http://www.math.uga.edu/\~roy/,
+4. Roy Smith, [Algebra Course Notes](http://www.math.uga.edu/\~roy/) (843-1 through 845-3),
 
