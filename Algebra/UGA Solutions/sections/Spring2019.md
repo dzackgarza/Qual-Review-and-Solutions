@@ -67,7 +67,7 @@ Since $\rho$ is a ring morphism, we have
 &= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \generators{\pi(x)} \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x
+&\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
 .\end{align*}
 
 $\qed$
@@ -76,7 +76,7 @@ $\qed$
 
 > Some potentially useful facts:
 >
-> - $\GF(p^n)$ is the splitting field of $x^{p^n} - x$
+> - $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
 > - $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
 > - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 > - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
