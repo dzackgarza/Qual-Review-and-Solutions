@@ -81,16 +81,11 @@ $\qed$
 > - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 > - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 
-Let $\phi_n(x) = x^{p^n} - x$ and $\phi_d(x) = x^{p^d} - x$, and set $d = \deg \pi(x)$.
+Claim: $\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
 
-Let $\gamma$ be an irreducible degree $n$ polynomial over $\FF_p$, then $L\definedas \FF[x]/\generators \gamma \cong \GF(p^n)$.
-
-Note that by (a), $\pi(x) \divides \phi_d(x)$ and $\gamma(x) \divides \phi_n(x)$.
-
-Claim: $\phi_n(x)$ splits in $L$, and since $\pi(x) \divides \phi_n(x)$, $\pi(x)$ also splits in $L$.
-
-Let $\alpha \in L$ be a root of $\pi(x)$.
-Since $\pi(x)$ is irreducible, $\deg\min_\alpha(x)/\FF_p = d = [\FF_p(\alpha):\FF_p]$.
+$\implies$:
+Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
+Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
 
 Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
 \begin{align*}
@@ -100,6 +95,10 @@ n &= [L: \FF_p] \\
 ,\end{align*}
 
 for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
+
+
+$\impliedby$:
+
 
 $\qed$
 
