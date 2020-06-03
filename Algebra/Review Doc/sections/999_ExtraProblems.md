@@ -3,6 +3,7 @@
 ## Group Theory
 
 1. Show that every group of prime order is cyclic.
+2. Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
 
 ## Ring Theory
 
