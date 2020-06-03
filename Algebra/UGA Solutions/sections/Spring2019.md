@@ -90,7 +90,7 @@ Note that by (a), $\pi(x) \divides \phi_d(x)$ and $\gamma(x) \divides \phi_n(x)$
 Claim: $\phi_n(x)$ splits in $L$, and since $\pi(x) \divides \phi_n(x)$, $\pi(x)$ also splits in $L$.
 
 Let $\alpha \in L$ be a root of $\pi(x)$.
-Since $\pi(x)$ is irreducible, $\deg\min_\alpha(x)/\FF_p = d$.
+Since $\pi(x)$ is irreducible, $\deg\min_\alpha(x)/\FF_p = d = [\FF_p(\alpha):\FF_p]$.
 
 Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
 \begin{align*}
@@ -99,7 +99,7 @@ n &= [L: \FF_p] \\
 &= \ell d
 ,\end{align*}
 
-so $d$ divides $n$.
+for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
 $\qed$
 
