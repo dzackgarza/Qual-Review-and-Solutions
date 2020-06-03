@@ -13,7 +13,8 @@
 6. Show that $A_n$ is simple for $n\geq 5$
 7. Analyze groups of order $pq$.
 7. Analyze groups of order $p^2 q$.
-8. 
+8. Give a necessary and sufficient condition for a cyclic group to be solvable.
+9. Prove that every simple abelian group is cyclic.
 
 ## Ring Theory
 
