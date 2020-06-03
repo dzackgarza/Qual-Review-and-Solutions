@@ -81,17 +81,16 @@ $\qed$
 > - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 > - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 
-Let $\phi_n(x) = x^{p^n} - x$ and $\phi_d(x) = x^{p^d} - x$.
+Let $\phi_n(x) = x^{p^n} - x$ and $\phi_d(x) = x^{p^d} - x$, and set $d = \deg \pi(x)$.
 
 Let $\gamma$ be an irreducible degree $n$ polynomial over $\FF_p$, then $L\definedas \FF[x]/\generators \gamma \cong \GF(p^n)$.
 
 Note that by (a), $\pi(x) \divides \phi_d(x)$ and $\gamma(x) \divides \phi_n(x)$.
 
-Then **(claim)** $\phi_n(x)$ splits in $L$.
-Since $\pi(x) \divides \phi_n(x)$, $\pi(x)$ also splits in $L$.
+Claim: $\phi_n(x)$ splits in $L$, and since $\pi(x) \divides \phi_n(x)$, $\pi(x)$ also splits in $L$.
 
 Let $\alpha \in L$ be a root of $\pi(x)$.
-Since $\pi(x)$ is irreducible, $\deg\min(\alpha, \FF_p) = d$.
+Since $\pi(x)$ is irreducible, $\deg\min_\alpha(x)/\FF_p = d$.
 
 Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
 \begin{align*}
