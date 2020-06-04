@@ -19,6 +19,8 @@
 11. Show that all groups of order 45 are abelian.
 12. Show that $\abs{G}/\abs{H} = [G: H]$.
 13. Show that the order of any element in a group divides the order of the group.
+14. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
+
 
 ## Ring Theory
 
