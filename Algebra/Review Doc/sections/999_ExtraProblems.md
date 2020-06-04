@@ -50,6 +50,7 @@
 21. Show that $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 22. Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 23. Compute the Galois group of $x^n - 1 \in \QQ[x]$ as a function of $n$.
+24. Identify all of the elements of the Galois group of $x^p-2$ for $p$ an odd prime (note: this has a complicated presentation).
 
 ## Modules and Linear Algebra
 
