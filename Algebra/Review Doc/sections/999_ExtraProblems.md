@@ -2,25 +2,39 @@
 
 ## Group Theory
 
-14. Show that any group of prime order is cyclic and simple.
+### Basic Structure
+
+
 2. Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
 3. Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
-4. Analyze groups of order $p^2$.
-5. Show that $p\dash$groups have nontrivial centers.
-7. Show that every $p\dash$group is nilpotent.
-7. Show that every $p\dash$group is solvable.
 8. Show that every normal subgroup of $G$ is contained in $Z(G)$.
-6. Show that $A_n$ is simple for $n\geq 5$
-7. Analyze groups of order $pq$.
-7. Analyze groups of order $p^2 q$.
-8. Give a necessary and sufficient condition for a cyclic group to be solvable.
-9. Prove that every simple abelian group is cyclic.
-10. Show that no group of order 90 is simple.
-11. Show that all groups of order 45 are abelian.
 12. Show that $\abs{G}/\abs{H} = [G: H]$.
 13. Show that the order of any element in a group divides the order of the group.
 14. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
+16. Show that the intersection of two subgroups is again a subgroup.
 
+### Primes in Group Theory
+
+14. Show that any group of prime order is cyclic and simple.
+4. Analyze groups of order $p^2$.
+7. Analyze groups of order $pq$.
+7. Analyze groups of order $p^2 q$.
+7. Show that every $p\dash$group is nilpotent.
+7. Show that every $p\dash$group is solvable.
+5. Show that $p\dash$groups have nontrivial centers.
+
+### Classification
+
+10. Show that no group of order 90 is simple.
+11. Show that all groups of order 45 are abelian.
+
+
+### Series
+
+6. Show that $A_n$ is simple for $n\geq 5$
+8. Give a necessary and sufficient condition for a cyclic group to be solvable.
+9. Prove that every simple abelian group is cyclic.
+15. Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
 
 ## Ring Theory
 
