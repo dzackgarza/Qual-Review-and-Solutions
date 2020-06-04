@@ -15,6 +15,8 @@
 7. Analyze groups of order $p^2 q$.
 8. Give a necessary and sufficient condition for a cyclic group to be solvable.
 9. Prove that every simple abelian group is cyclic.
+10. Show that no group of order 90 is simple.
+11. Show that all groups of order 45 are abelian.
 
 ## Ring Theory
 
@@ -47,7 +49,7 @@
 20. Show that $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
 21. Show that $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
 22. Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
-23. Compute the galois group of $x^n - 1 \in \QQ[x]$.
+23. Compute the Galois group of $x^n - 1 \in \QQ[x]$ as a function of $n$.
 
 ## Modules and Linear Algebra
 
