@@ -4,8 +4,18 @@ Recommended Problems
 - Section 4: 19, 21, 22; 
 - Section 5: 1, 5, 10, 16
 - Section 7: 4, 6, 12, 13, 14
-- Section 8: 1, 3, 6, 8, 12
+- Section 8: 1, 3, 6, 8, 12from Section 3
+
+
+Surfaces
 - Surfaces: 3, 6, 7, 11, and 14
+
+On $\pi_1$
+- Section 2: 1 
+- Section 3: 1bc, 6, 7, and 8 
+
+On Point Set
+- 8, 10, 11, 14, and 16.
 
 # General Topology
 
