@@ -1,3 +1,12 @@
+Recommended Problems
+
+- Section 4: 2, 4, 5, 8, 13
+- Section 4: 19, 21, 22; 
+- Section 5: 1, 5, 10, 16
+- Section 7: 4, 6, 12, 13, 14
+- Section 8: 1, 3, 6, 8, 12
+- Surfaces: 3, 6, 7, 11, and 14
+
 # General Topology
 
 ## 1 (Spring '06). 
