@@ -85,6 +85,9 @@
 1. Prove the Cayley-Hamilton theorem.
 2. Prove that the minimal polynomial divides the characteristic polynomial.
 3. Prove that the cokernel of $A\in \mat(n\times n, \ZZ)$ is finite $\iff \det A \neq 0$, and show that in this case $\abs{\coker(A)} = \abs{\det(A)}$.
+4. Show that a nilpotent operator is diagonalizable.
+5. Show that if $A,B$ are diagonalizable and $[A, B] = 0$ then $A,B$ are simultaneously diagonalizable.
+6. Does diagonalizable imply invertible? The converse?
 
 ## Commutative Algebra
 
