@@ -4,6 +4,8 @@ title: Algebra Qualifying Exam
 
 | Exam                        | Typeset   | Imported to MakeMeAQual   | Solutions   |
 | -------------               | --------- | ------------------------- | ----------- |
+| 2020 Spring                 |           |                           |             |
+| 2019 Fall Midterm and Final | ✓         |                           |             |
 | 2019 Fall Midterm and Final | ✓         |                           |             |
 | 2019 Fall                   | ✓         | ✓                         | ✓           |
 | 2019 Spring                 | ✓         | ✓                         | ✓           |
