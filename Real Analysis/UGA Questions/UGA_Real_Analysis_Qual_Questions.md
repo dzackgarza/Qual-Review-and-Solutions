@@ -1,6 +1,5 @@
 ---
- title: UGA Qualifying Exam Questions
- book: true
+ title: UGA Real Analysis Qualifying Exam Questions
 ---
 
 
