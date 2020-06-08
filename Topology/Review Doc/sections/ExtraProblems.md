@@ -10,3 +10,5 @@
 9. Compute $H^*(S^2 \vee S^2 \vee S^4)$
   - Known to be $[\ZZ, 0, \ZZ^2, 0, \ZZ, 0, 0, \cdots]$.
 
+10. Show that $\chi(\Sigma_g + \Sigma_h) = \chi(\Sigma_g)  + \chi(\Sigma_h) - 2$.
+
