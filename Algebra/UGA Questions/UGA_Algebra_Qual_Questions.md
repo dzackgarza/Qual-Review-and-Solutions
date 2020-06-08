@@ -7,6 +7,8 @@
 
 !include sections/2019 Fall.md
 
+!include sections/2019_Exam_Questions.md
+
 !include sections/2018 Spring.md
 
 !include sections/2018 Fall.md
