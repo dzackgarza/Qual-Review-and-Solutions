@@ -59,13 +59,34 @@ a. Prove that there is a bijection between the left cosets $G/G_x$ and $G\cdot x
 b. Prove that the center of every finite $p\dash$group $G$ is nontrivial by considering that action of $G$ on $X=G$ by conjugation.
 
 
-## 1
+## 6
+
+Let $K$ be a Galois extension of a field $F$ with $[K: F] = 2015$.
+Prove that $K$ is an extension by radicals of the field $F$.
+
+## 7
+
+Let $D = \QQ[x]$ and let $M$ be a $\QQ[x]\dash$module such that
+\begin{align*}
+M \cong \frac{\mathbb{Q}[x]}{(x-1)^{3}} \oplus \frac{\mathbb{Q}[x]}{\left(x^{2}+1\right)^{3}} \oplus \frac{\mathbb{Q}[x]}{(x-1)\left(x^{2}+1\right)^{5}} \oplus \frac{\mathbb{Q}[x]}{(x+2)\left(x^{2}+1\right)^{2}}
+.\end{align*}
+
+Determine the elementary divisors and invariant factors of $M$.
 
 
-## 1
+## 8
 
+Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
 
-## 1
+i. $R$ has no zero divisors, and
+ii. If $x\in R$ with $x\neq 0$ then $2x\neq 0$, where $2x\definedas x+x$.
+
+Prove the following:
+
+a. For each $x\in R$ there is one and only one element $y\in R$ such that $x = 2y$.
+b. Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
+
+> You can get partial credit for (b) by showing it in the case $R$ has a 1.
 
 
 
