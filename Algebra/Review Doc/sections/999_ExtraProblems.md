@@ -84,7 +84,7 @@
 
 1. Prove the Cayley-Hamilton theorem.
 2. Prove that the minimal polynomial divides the characteristic polynomial.
-3. Prove that the cokernel of an $n\times n$ matrix $A$ is finite $\iff \det A \neq 0$, and show that in this case $\abs{\coker(A)} = \abs{\det(A)}$.
+3. Prove that the cokernel of $A\in \mat(n\times n, \ZZ)$ is finite $\iff \det A \neq 0$, and show that in this case $\abs{\coker(A)} = \abs{\det(A)}$.
 
 ## Commutative Algebra
 
