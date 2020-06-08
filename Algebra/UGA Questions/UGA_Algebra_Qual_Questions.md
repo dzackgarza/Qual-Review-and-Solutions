@@ -1,6 +1,5 @@
 ---
- title: 'UGA Qualifying Exam Questions: Algebra'
- book: true
+ title: UGA Algebra Qualifying Exam Questions
 ---
 
 
