@@ -3,6 +3,8 @@
 ---
 
 
+!include sections/Spring2019.md
+
 !include sections/2019 Spring.md
 
 !include sections/2019 Fall.md
