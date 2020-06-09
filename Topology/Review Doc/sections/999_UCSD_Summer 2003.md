@@ -1,6 +1,8 @@
 # Summer 2003
 
-# 1. Describe all possible covering maps between $S^2, T^2, K$
+## 1 
+
+Describe all possible covering maps between $S^2, T^2, K$
 
 Useful facts:
 
@@ -26,7 +28,10 @@ Spaces
 $\qed$
 
 
-## 2. Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n$.
+## 2
+
+Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n$.
+
 Facts Used
 1. $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$
 2. $\tilde X \surjects X \implies \pi_1(\tilde X) \injects \pi_1(X)$
@@ -39,39 +44,48 @@ Just take the covering space $\tilde X \surjects S^1 \vee S^1$ defined via the g
 
 $\qed$
 
-## 3. Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$
+## 3
+
+Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$.
+
 Facts used:
 - Construction of Moore Spaces
 - $\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)$, using $\Sigma X = C_X \union_X C_X$ and Mayer-Vietoris.
 
 Take $X = e^0 \union_{\Phi_1} e^5 \union_{\Phi_2} e^6$, where
-$$
+\begin{align*}
 \Phi_1: \del B^5 = S^4 \mapsvia{z~\mapsto z^0} e^0 \\
 \Phi_2: \del B^6 = S^5 \mapsvia{z~\mapsto z^4} e^5
-$$
+.\end{align*}
 
 where $\deg \Phi_2 = 4$.$\qed$
 
-## 4. Compute the complement of a knotted solid torus in $S^3$.
+## 4 
+
+Compute the complement of a knotted solid torus in $S^3$.
+
 Facts used:
+
 - $H_*(T^2) = [\ZZ, \ZZ^2, \ZZ, 0\rightarrow]$
 - $N^{(1)} \homotopic S^1$, so $H_{\geq 2}(N) = 0$.
 - A SES $0\to A\to B \to F \to 0$ with $F$ free splits.
 - $0\to A \to B \mapsvia{\cong} C \to D \to 0$ implies $A = D = 0$.
+
 Let $N$ be the knotted solid torus, so that $\del N = T^2$, and let $X = S^3 - N$. Then
+
 - $S^3 = N \union_{T^2} X$
 - $N \cap X = T^2$
 
 
 and we apply Mayer-Vietoris to $S^3$:
 
-$$
+\begin{align*}
 4\qquad H_4(T^2) \to H_4(N) \times H_4(X) \to H_4(S^3) \\
 3\qquad H_3(T^2) \to H_3(N) \times H_3(X) \to H_3(S^3) \\
 2\qquad H_2(T^2) \to H_2(N) \times H_2(X) \to H_2(S^3) \\
 1\qquad H_1(T^2) \to H_1(N) \times H_1(X) \to H_1(S^3) \\
 0\qquad H_0(T^2) \to H_0(N) \times H_0(X) \to H_0(S^3) \\
-$$
+.\end{align*}
 
 where we can plug in known information and deduce some maps:
 $$
@@ -89,15 +103,20 @@ We then deduce:
 - $H_1(X) = \ZZ$ by the line 1 SES $$0 \to \ZZ^2 \to \ZZ \cross H_1(X) \to 0$$ which yields an isomorphism.
 - $H_2(X) = H_3(X) = 0$ by examining the SES spanning lines 3 and 2: $$0 \injects H_3(X) \injects \ZZ \mapsvia{\cong_{\del_3}} \ZZ \surjects H_2(X) \surjects 0$$
  	Since $\del_3$ must be an isomorphism, this forces the edge terms to be zero.
+
 $\qed$
 
-## 5. Compute the homology and cohomology of a closed, connected, oriented 3-manifold $M$ with $\pi_1(M) = \ZZ^{\ast 2}$.
+## 5 
+
+Compute the homology and cohomology of a closed, connected, oriented 3-manifold $M$ with $\pi_1(M) = \ZZ^{\ast 2}$.
+
 Facts used:
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
 - $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
 - For orientable manifolds $H_n(M^n) = \ZZ$
 
 **Homology**
+
 - Since $M$ is connected, $H_0 = \ZZ$
 - Since $\pi_1(M) = \ZZ^{\ast 2}$, $H_1$ is the abelianization and $H_1(X) = \ZZ^2$
 - Since $M$ is closed/connected/oriented, Poincare Duality holds and $H_2 = H^{3-2} = H^1 = \mathbf{F} H_1 + \mathbf{T}H_0$ by UCT. Since $H_0=\ZZ$ is torsion-free, we have $H_2(M) = H_1(M) =  \ZZ^2$.
@@ -105,12 +124,17 @@ Facts used:
 - So $H_*(M) = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$
 
 **Cohomology**
+
 - By Poincare Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
+
 $\qed$
 
+## 6
 
-## 6. Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
+Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
+
 Facts Used:
+
 1. $\ext(\ZZ, \ZZ_m) = \ZZ_m$
 2. $\ext(\ZZ_m, \ZZ) = 0$
 3. $\ext(\prod_i A_i, \prod_j B_j) = \prod_i \prod_j \ext(A_i, B_j)$
@@ -122,9 +146,14 @@ $\ZZ$                           | 0       | 0       | 0
 $\ZZ_2$                         | $\ZZ_2$ | $\ZZ_2$ | 0
 $\ZZ_3$                         | $\ZZ_3$ | 0       | 0
 
-So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. $\qed$
+So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
 
-## 7. Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
+$\qed$
+
+## 7 
+
+Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
+
 Facts used:
 1. Every homeomorphism induces isomorphisms on homotopy/homology/cohomology.
 2. $H^*(\CP^2) = \ZZ[\alpha] / (\alpha^2)$ where $\deg \alpha = 2$.
@@ -141,7 +170,10 @@ Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\
 
 We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. $\qed$
 
-## 8. Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi_2(X)$.
+## 8 
+
+Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi_2(X)$.
+
 Facts used:
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
@@ -149,14 +181,17 @@ Facts used:
 
 $\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.$\qed$
 
-## 9. Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
+## 9
+
+Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
+
 Facts used:
 - Homotopy LES
 - Hurewicz
 - $0\to A\to B \to 0$ exact iff $A\cong B$
 
 From the LES in homotopy we have
-$$
+
 \begin{align}
 4\qquad \pi_4(S^3) \to \pi_4(E) \to \pi_4(S^5) \\
 3\qquad \pi_3(S^3) \to \pi_3(E) \to \pi_3(S^5) \\
@@ -164,10 +199,10 @@ $$
 1\qquad \pi_1(S^3) \to \pi_1(E) \to \pi_1(S^5) \\
 0\qquad \pi_0(S^3) \to \pi_0(E) \to \pi_0(S^5) \\
 \end{align}
-$$
+
 
 and plugging in known information yields
-$$
+
 \begin{align}
 4\qquad &\pi_4(S^3) \to &\pi_4(E) \quad \to 0 \\
 3\qquad &\ZZ \to &\pi_3(E) \quad\to 0 \\
@@ -175,8 +210,10 @@ $$
 1\qquad &0 \to &\pi_1(E) \quad\to 0 \\
 0\qquad &\ZZ \to &\pi_0(E) \quad\to \ZZ \\
 \end{align}
-$$
+
 
 where rows 3 and 4 force $\pi_3(E) \cong \ZZ$, rows 0 and 1 force $\pi_0(E) = \ZZ$, and the remaining rows force $\pi_1(E) = \pi_2(E) = 0$.
 
-By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. $\qed$
+By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
+
+$\qed$
