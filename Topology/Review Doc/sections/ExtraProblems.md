@@ -1,4 +1,3 @@
-
 1. Compute $\pi_1(X)$ where $X \definedas S^2/\sim$, where $x\sim -x$ only for $x$ on the equator $S^1 \injects S^2$.
   - Hint: try cellular homology. Should yield $[\ZZ, \ZZ/2\ZZ, \ZZ, 0, \cdots]$.
 3. Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
@@ -12,3 +11,12 @@
 
 10. Show that $\chi(\Sigma_g + \Sigma_h) = \chi(\Sigma_g)  + \chi(\Sigma_h) - 2$.
 
+Suggested by Ernest
+
+1. Let $X$ be a compact space and let $A$ be a closed subspace. 
+  Show that $A$ is compact.
+2. Let $f : X -> Y$ be a continuous function, with $X$ compact. 
+  Show that $f(X)$ is compact.
+3. Let $A$ be a compact subspace of a Hausdorff space $X$. 
+  Show that $A$ is closed.
+4. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
