@@ -291,7 +291,7 @@ This is a certain ring of adeles.
 # Low Dimensional Homology Examples
 
 \begin{align*}
-\begin{array}{}
+\begin{array}{cccccccccc}
 S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \MM   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \RP^1 &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
@@ -447,9 +447,9 @@ Then the images under inclusion define homology classes
 
 Denoting their Poincare duals by
 
-- $[A]^\dual \in H^i X$
-- $[B]^\dual \in H^j X$
-- $[A\intersect B]^\dual \in H^{i+j}X$
+- $[A]\dual \in H^i X$
+- $[B]\dual \in H^j X$
+- $[A\intersect B]\dual \in H^{i+j}X$
 
 We then have
 $$
@@ -464,13 +464,15 @@ Example: For $T^2$, we have
 
 Then $A\cap B = \pm [p]$, and so
 $$
-[A]^\dual \smile [B]^\dual = [p]^\dual\\
-[B]^\dual \smile [A]^\dual = -[p]^\dual
+[A]\dual \smile [B]\dual = [p]\dual\\
+[B]\dual \smile [A]\dual = -[p]\dual
 $$
 
 # Further Notes
+
 On the complements of spaces in $\RR^3$:
-> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
+
+> > My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
 > Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
 
 For a graph $G$, we always have $\pi_1(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
@@ -502,7 +504,6 @@ Proof: homomorphisms preserve torsion; the former has $n\dash$torsion while the 
 This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
 
 
-
 ## Different Types of Product/Sum Structures
 
 - Cartesian Product $X\cross Y, \prod_i X_i$
@@ -513,12 +514,13 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 - Tensor Product $X \tensor Y, \bigotimes_i X_i, X^{\otimes_i}$
 
 ## Lemma: Contracting Spaces in Products
-$X\cross \RR^n \homotopic X \cross \pt$
+
+$X\cross \RR^n \homotopic X \cross \pt \cong X$
 
 
 ## Mayer-Vietoris
-Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
 
+Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
 
 \begin{tikzcd}
  &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
@@ -538,24 +540,24 @@ $$ \cdots  H_n(A \cap B) \xrightarrow{(i^*,~ j^*)} H_n(A) \oplus H_n(B) \xrighta
 
 Where
 
-$i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
+- $i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
 
-$j: A\cap B \hookrightarrow B$ induces $j^*: H_*(A\cap B) \to H_*(B)$
+- $j: A\cap B \hookrightarrow B$ induces $j^*: H_*(A\cap B) \to H_*(B)$
 
-$l: A \hookrightarrow A\cup B$ induces $l^*: H_*(A) \to H_*(X)$
+- $l: A \hookrightarrow A\cup B$ induces $l^*: H_*(A) \to H_*(X)$
 
-$r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
+- $r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
 
 The connecting homomorphisms $\delta_n :H_n(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_n(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_i$ where each $c_i$ is an $x+y$ chain. Then $\del(c_i) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
 
 Handy mnemonic diagram:
-$$
+\begin{align*}
 \begin{matrix}
  && A\intersect B & \\
 &\large\diagup &  & \large\diagdown \\
 A\union B & & \large\longleftarrow &  & A \oplus B
 \end{matrix}
-$$
+.\end{align*}
 
 ### Application: Isomorphisms in the homology of spheres.
 
@@ -563,24 +565,28 @@ Claim: $H^i(S^n) \cong H^{i-1}(S^{n-1})$.
 
 Write $X = A \cup B$, the northern and southern hemispheres, so that $A \cap B = S^{n-1}$, the equator. In the LES, we have:
 
-$H^{i+1}(S^n) \xrightarrow{} H^i(S^{n-1}) \xrightarrow{} H^iA \oplus H^i B \xrightarrow{} H^i S^n \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} H^{i-1}A \oplus H^{i-1}B$
+\begin{align*}
+H^{i+1}(S^n) \xrightarrow{} H^i(S^{n-1}) \xrightarrow{} H^iA \oplus H^i B \xrightarrow{} H^i S^n \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} H^{i-1}A \oplus H^{i-1}B
+.\end{align*}
 
 But $A, B$ are contractible, so $H^iA= H^iB = 0$, so we have
 
-$H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0$
+\begin{align*}
+H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0
+.\end{align*}
 
 And in particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
 
 ## The Long Exact Sequence of a Pair
+
 LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n-1}(B) \cdots$
-$$
+
+\begin{align*}
 \begin{matrix}
-   && B & \\
-  &\large\diagup &  & \large\diagdown \\
-  (A,B) & & \large\longleftarrow &  & A
-  \end{matrix}
-$$
-
-
+  && B & \\
+&\large\diagup &  & \large\diagdown \\
+(A,B) & & \large\longleftarrow &  & A
+\end{matrix}
+.\end{align*}
 
 ![Barycentric Subdivision](figures/image_2020-06-01-00-35-21.png)
