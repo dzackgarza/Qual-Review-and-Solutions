@@ -1,4 +1,4 @@
-# Spring 2011
+# Spring 2012
 
 ## 1
 Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
