@@ -364,9 +364,12 @@ How to compute:
 \end{pmatrix}
 \begin{pmatrix}
 \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-\end{pmatrix}
-     
-    \pmatrix{}\\ \ker = 
+\end{pmatrix} \\
+    \ker = 
+\begin{pmatrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{pmatrix} \\
+
     \left\{\pmatrix{2\\-1\\0\\0},
     \pmatrix{2\\0\\-1\\-1}\right\}\\
     \im = \generators{a+2b+2d,c-d}
