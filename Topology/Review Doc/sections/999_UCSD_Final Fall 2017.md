@@ -1,10 +1,12 @@
-# 1
+# Fall 2017 Final
+
+## 1
 
 Let $X$ be the subspace of the unit cube $I^3$ consisting of the union of the 6 faces and the 4 internal diagonals. Compute $\pi_1(X)$.
 
 **Solution**:
 
-# 2
+## 2
 
 Let $X$ be an arbitrary topological space, and compute $\pi_1(\Sigma X)$.
 
@@ -27,7 +29,7 @@ So $\pi_1(U) = \pi_1(V) = 0$.
 
 By Van Kampen, we have $\pi_1(X) = 0 \ast_{\pi_1(X)} 0 = 0.$
 
-# 3
+## 3
 
 Let $X = S^1 \cross S^1$ and $A\subset X$ be a subspace with $A \cong S^1 \vee S^1$. Show that there is no retraction from $X$ to $A$.
 
@@ -41,7 +43,7 @@ Suppose $X$ retracts onto $A$, we can then look at the inclusion $\iota: A \inje
 
 This is a contradiction, because no such injection can exists. In particular, the commutator $[a,b]$ is nontrivial in the source. But $f(aba^{-1}b^{-1}) = f(a)f(b)f(a)^{-1}f(b)^{-1}$ since $f$ is a homomorphism, but since the target is a commutative group, this has to equal $f(a)f(a)^{-1} f(b)f(b)^{-1} = e$. So there is a non-trivial element in the kernel of $f$, and $f$ can not be injective - a contradiction.
 
-# 4
+## 4
 
 Show that for every map $f: S^2 \to S^1$, there is a point $x\in S^2$ such that $f(x) = f(-x)$.
 
@@ -65,7 +67,7 @@ But $\pi_1(\RP 2) = \ZZ_2$ and $\pi_1(\RP 1) = \ZZ$, and $\tilde g_*: \ZZ^2 \int
 
 Use covering space $\RR \surjects S^1$?
 
-# 5
+## 5
 
 How many path-connected 2-fold covering spaces does $S^1 \vee \RP 2$ have? What are the total spaces?
 
@@ -73,7 +75,7 @@ How many path-connected 2-fold covering spaces does $S^1 \vee \RP 2$ have? What 
 
 First note that $\pi_1(X) = \pi_1(S^1) \ast_{\pt} \pi_1(\RP 2)$ by Van-Kampen, and this is equal to $\ZZ \ast \ZZ_2$.
 
-# 6
+## 6
 
 Let $G = <a, b>$ and $H \leq G$ where $H = <aba^{-1}b^{-1},~ a^2ba^{-2}b^{-1},~ a^{-1}bab^{-1},~ aba^{-2}b^{-1}a>$. To what well-known group is $H$ isomorphic?
 
