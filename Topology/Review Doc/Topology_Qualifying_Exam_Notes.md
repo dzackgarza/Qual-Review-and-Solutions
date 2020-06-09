@@ -17,7 +17,7 @@
 
 !include sections/999_UCSD_Final Fall 2017.md
 
-<!--!include sections/999_UCSD_Summer 2003.md-->
+!include sections/999_UCSD_Summer 2003.md
 
 <!--!include sections/AT CourseNotes.md-->
 
