@@ -347,16 +347,26 @@ How to compute:
 
 1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
 2. Compute differentials $\del_i: C^i \to C^{i-1}$
-    1. *Note: if $C^0$ is a point, $\del_1$ is the zero map.*
-    2. *Note: $H_n X = 0 \iff C^n = \emptyset$.*
-    3. Compute degrees: Use $\del_n(e_i^n) = \sum_i d_i e_i^{n-1}$ where $$d_i = \deg(\text{Attach }e_i^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
+    2. *Note: if $C^0$ is a point, $\del_1$ is the zero map.*
+    3. *Note: $H_n X = 0 \iff C^n = \emptyset$.*
+    4. Compute degrees: Use $\del_n(e_i^n) = \sum_i d_i e_i^{n-1}$ where $$d_i = \deg(\text{Attach }e_i^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
 	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
-    4. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
-    5. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
+    5. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
+    6. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
     e.g.
     \begin{align*}
-    \pmatrix{\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0} \to 
-    \pmatrix{\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}\\ \ker = 
+\begin{pmatrix}
+\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}
+\end{pmatrix} 
+\to
+\begin{pmatrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{pmatrix}
+\begin{pmatrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{pmatrix}
+     
+    \pmatrix{}\\ \ker = 
     \left\{\pmatrix{2\\-1\\0\\0},
     \pmatrix{2\\0\\-1\\-1}\right\}\\
     \im = \generators{a+2b+2d,c-d}
