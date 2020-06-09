@@ -356,23 +356,23 @@ How to compute:
     e.g.
     
     \begin{align*}
-    \begin{pmatrix}
-    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}
-    \end{pmatrix} 
+    \begin{matrix}
+    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+    \end{matrix} 
     \to
-    \begin{pmatrix}
+    \begin{matrix}
     \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{pmatrix}
-    \begin{pmatrix}
+    \end{matrix}
+    \begin{matrix}
     \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{pmatrix} \\
+    \end{matrix} \\
     \ker = 
-    \begin{pmatrix}
-    3\\-1\\0\\0}2\\-1\\0\\0
-    \end{pmatrix} 
-    \begin{pmatrix}
+    \begin{matrix}
+    2\\-1\\0\\0
+    \end{matrix} 
+    \begin{matrix}
     3\\0\\-1\\-1
-    \end{pmatrix}\\
+    \end{matrix}\\
     \im = \generators{a+2b+2d,c-d}
     .\end{align*}
      

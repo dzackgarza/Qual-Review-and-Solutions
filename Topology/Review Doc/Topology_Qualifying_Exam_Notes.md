@@ -21,7 +21,7 @@
 
 !include sections/AT CourseNotes.md
 
-<!--!include sections/AT Definitions.md-->
+!include sections/AT Definitions.md
 
 !include sections/ExtraProblems.md
 
