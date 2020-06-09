@@ -1,4 +1,4 @@
-# Spring 2014
+# Spring 2013
 
 ## 1
 Let $R$ be a commutative ring.
