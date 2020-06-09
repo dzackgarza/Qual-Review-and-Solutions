@@ -44,25 +44,26 @@
 
 ## Useful long exact sequences
 $$
-{ \cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots }
+\cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots
 $$
 
 $$
-{\cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots }
+\cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots
 $$
 
 ## Useful Short Exact Sequences
+
 > Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
 
 Homology to cohomology:
 $$
-{\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0.}
-$$
+\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
+.$$
 
 Cohomology to dual space:
 $$
-{ 0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0.}
-$$
+0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
+.$$
 
 Product of spaces to tensor product of homology:
 $$
@@ -86,6 +87,7 @@ $$
 
 
 ## Whitehead Theorem
+
 A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
 
 **Counterexample:**
@@ -98,15 +100,18 @@ The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\l
 Any continuous map between CW complexes is homotopy equivalent to a cellular map.
 
 ### Applications:
+
 - $\pi_{k\leq n}S^n = 0$
 - $\pi_n(X) \cong \pi_n(X^{(n)})$
 
 ## Commuting Homology/Homotopy Products
+
 - $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
 - $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 
 
 ## Results for Manifolds
+
 - Every $\CC\dash$manifold is canonically orientable.
 - If $M^n$ is **closed and connected**, then $H_{\geq n}(X) = 0$ and $M^n$ is orientable iff $H_n(X) = \ZZ$.
 - Poincare Duality
@@ -125,21 +130,29 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 # Major Results
+
 * Lefschetz Fixed Point Theorem
 	- If $\Lambda_f \neq 0$ then $f$ has a fixed point, where $X\selfmap_f$ and $\Lambda_f = \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(H_k(X; \QQ) \selfmap_{f_*})$.
+
 * Brouwer Fixed Point Theorem
 	- Every $B^n \selfmap_f$ has a fixed point.
+
 * Hairy Ball Theorem
 	- There is no non-vanishing tangent vector field on even dimensional spheres.
+
 * Borsuk-Ulam Theorem
 	- For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
+
 * Ham Sandwich Theorem
+
 * Eilenberg-Zilberg
+
 * Freudenthal Suspension
 
 
 ##  The Universal Coefficient Theorems
-For changing coefficients from $\ZZ$ to $G$ an arbitrary group. There are short exact sequences
+
+For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
 $$
 0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
 $$
@@ -174,6 +187,7 @@ $$
 
 
 ## Free Resolutions
+
 The canonical example:
 $$
 0 \to \ZZ \mapsvia{\times m} \ZZ \mapsvia{\mod m} \ZZ_m \to 0
@@ -211,6 +225,7 @@ $$
 $$
 
 ## Properties of Tensor Product
+
 - $A\tensor B \cong B\tensor A$
 - $(\wait) \tensor_R R^n = \id$
 - $\bigoplus_i A_i \tensor \bigoplus_j B_j = \bigoplus_i\bigoplus_j(A_i \tensor B_j)$
@@ -218,6 +233,7 @@ $$
 - $\ZZ_n \tensor A = A/nA$
 
 ## Properties of Hom
+
 - $\hom_R (\bigoplus_i A_i, \prod B_j) = \bigoplus_i \prod_j \hom(A_i, B_j)$
 - Contravariant in first slot, covariant in second
 - Exact over vector spaces
@@ -272,11 +288,9 @@ Thins that behave like "the identity functor":
 For description of $\mathcal{A_p}$, see [here](http://math.jhu.edu/~jmb/note/torext.pdf). 
 This is a certain ring of adeles.
 
------
-
 # Low Dimensional Homology Examples
 
-$$
+\begin{align*}
 \begin{array}{}
 S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \MM   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
@@ -290,15 +304,18 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \CP^1 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
 \CP^2 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &\ZZ,  &0\rightarrow & ]\\
 \end{array}
-$$
+.\end{align*}
+
 
 # Low Dimensional Equivalences
+
 - $\RP^1 \cong S^1$
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 
 # Homology Results
+
 - $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 - $H_n(X, A) \cong H_n(X/A)$
 - $H_n(X) = 0 \iff X$ has no $n\dash$cells.
@@ -306,12 +323,13 @@ $$
 - $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
 
 ## Constructing a CW Complex with Prescribed Homology
+
 - Given $G = \bigoplus G_i$, and want a space such that $H_i X = G$? Construct $X = \bigvee X_i$ and then $H_i (\bigvee X_i) = \bigoplus H_i X_i$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_n(Y) = G$.
   - Attach an $e^n$ to a point to get $H_n = \ZZ$
   - Then attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_n = \ZZ_d$
 
 # Long Exact Sequences
-$$
+
 \begin{align*}
 X = A\cup B \implies
 &A\cap B \to A \oplus B \to A \cup B \mapsvia{\delta} \cdots
@@ -322,7 +340,7 @@ A\to B \to C \implies
 A\to B \to C \implies
 & \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
 \end{align*}
-$$
+
 
 # Cellular Homology
 How to compute:
@@ -336,13 +354,13 @@ How to compute:
     4. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
     5. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
     e.g.
-\begin{align*}
-\pmatrix{\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0} \to 
-\pmatrix{\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}\\ \ker = 
-\left\{\pmatrix{2\\-1\\0\\0},
-\pmatrix{2\\0\\-1\\-1}\right\}\\
-\im = \generators{a+2b+2d,c-d}
-.\end{align*}
+    \begin{align*}
+    \pmatrix{\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0} \to 
+    \pmatrix{\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0}\\ \ker = 
+    \left\{\pmatrix{2\\-1\\0\\0},
+    \pmatrix{2\\0\\-1\\-1}\right\}\\
+    \im = \generators{a+2b+2d,c-d}
+    .\end{align*}
      
     6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
 
@@ -373,6 +391,7 @@ Möbius strip: todo
 - Covering spaces of orientable manifolds are orientable.
 
 # Classification of Compact Surfaces (Euler Characteristic)
+
 - Classified by $\chi$ and orientability.
 - $\chi X = \chi U + \chi V - \chi (U\cap V)$
 - $\chi A \# B = \chi A + \chi B - 2$
@@ -421,18 +440,20 @@ $$
 which determines an orientation on $A\intersect B$.
 
 Then the images under inclusion define homology classes
+
 - $[A] \in H_{\hat i}X$
 - $[B] \in H_{\hat j}X$
 - $[A\intersect B] \in H_{\widehat{i+j}}X$.
 
 Denoting their Poincare duals by
+
 - $[A]^\dual \in H^i X$
 - $[B]^\dual \in H^j X$
 - $[A\intersect B]^\dual \in H^{i+j}X$
 
 We then have
 $$
-[A]^\dual \smile [B]^\dual = [A\intersect B]^\dual \in H^{i+j} X
+[A]\dual \smile [B]\dual = [A\intersect B]\dual \in H^{i+j} X
 $$
 
 Example: in $\CP^n$, each even-dimensional cohomology $H^{2i}\CP^n$ has a generator $\alpha_i$ with is Poincare dual to an $\hat i$ plane. A generic $\hat i$ plane intersects a $\hat j$ plane in a $\widehat{i+j}$ plane, yielding $\alpha_i \smile \alpha_j = \alpha_{i+j}$ for $i+j \leq n$.
