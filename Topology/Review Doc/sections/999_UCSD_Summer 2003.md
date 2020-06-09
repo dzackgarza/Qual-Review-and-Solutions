@@ -16,17 +16,22 @@ Useful facts:
 8. $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 
 Spaces
+
 - $S^2 \surjects T^2$
 - $S^2 \surjects K$
 - $K \surjects S^2$
 - $T^2 \surjects S^2$
-	- All covered by the fact that $$\ZZ = \pi_2(S^2) \neq \pi_2(X) = 0$$ for $X = T^2, K$.
+	- All covered by the fact that 
+  $$
+    \ZZ = \pi_2(S^2) \neq \pi_2(X) = 0
+    $$ 
+    for $X = T^2, K$.
 - $K \surjects T^2$
 	- Doesn't cover, would induce $\pi_1(K) \injects \pi_1(T^2) \implies \ZZ\semidirect \ZZ \injects \ZZ^2$ but this would be a non-abelian subgroup of an abelian group.
 - $T^2 \surjects K$
   - ?
-$\qed$
 
+$\qed$
 
 ## 2
 
@@ -88,7 +93,7 @@ and we apply Mayer-Vietoris to $S^3$:
 .\end{align*}
 
 where we can plug in known information and deduce some maps:
-$$
+
 \begin{align}
 4\qquad &0 \to &0 \qquad\to &0 \mapsvia{\del_4} \\
 3\qquad &0 \to &H_3(X) \qquad\to &\ZZ \mapsvia{\del_3}\\
@@ -96,12 +101,23 @@ $$
 1\qquad &\ZZ^2 \cong &\ZZ \times H_1(X) \qquad\to &0 \mapsvia{\del_1}\\
 0\qquad &\ZZ \to &\ZZ \times H_0(X) \qquad\to &\ZZ \to 0 \\
 \end{align}
-$$
+
 
 We then deduce:
-- $H_0(X) = \ZZ$ by the splitting of the line 0 SES $$0 \to \ZZ \to \ZZ \cross H_0(X) \to \ZZ \to 0$$ yielding $Z\cross H_0(X) \cong \ZZ \times \ZZ$.
-- $H_1(X) = \ZZ$ by the line 1 SES $$0 \to \ZZ^2 \to \ZZ \cross H_1(X) \to 0$$ which yields an isomorphism.
-- $H_2(X) = H_3(X) = 0$ by examining the SES spanning lines 3 and 2: $$0 \injects H_3(X) \injects \ZZ \mapsvia{\cong_{\del_3}} \ZZ \surjects H_2(X) \surjects 0$$
+- $H_0(X) = \ZZ$ by the splitting of the line 0 SES 
+  $$
+  0 \to \ZZ \to \ZZ \cross H_0(X) \to \ZZ \to 0
+  $$ 
+  yielding $Z\cross H_0(X) \cong \ZZ \times \ZZ$.
+- $H_1(X) = \ZZ$ by the line 1 SES 
+  $$
+  0 \to \ZZ^2 \to \ZZ \cross H_1(X) \to 0
+  $$ 
+  which yields an isomorphism.
+- $H_2(X) = H_3(X) = 0$ by examining the SES spanning lines 3 and 2: 
+  $$
+  0 \injects H_3(X) \injects \ZZ \mapsvia{\cong_{\del_3}} \ZZ \surjects H_2(X) \surjects 0
+  $$
  	Since $\del_3$ must be an isomorphism, this forces the edge terms to be zero.
 
 $\qed$
@@ -155,6 +171,7 @@ $\qed$
 Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
 
 Facts used:
+
 1. Every homeomorphism induces isomorphisms on homotopy/homology/cohomology.
 2. $H^*(\CP^2) = \ZZ[\alpha] / (\alpha^2)$ where $\deg \alpha = 2$.
 3. $[f(X)] = f_*([X])$
@@ -163,7 +180,9 @@ Facts used:
 Supposing such a homeomorphism exists, we would have $[\CP^1] \dot{} [f(\CP^1)] = 0$ by the definition of these submanifolds being disjoint.
 
 But $[\CP^1]\dot{}[f(\CP^1)] = [\CP^1]\dot{} f_*([\CP^1])$, where
-$$f_*: H^*(\CP^2) \to H^*(\CP^2)$$
+$$
+f_*: H^*(\CP^2) \to H^*(\CP^2)
+$$
 is the induced map on cohomology.
 
 Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\CP^1]) = 0$.

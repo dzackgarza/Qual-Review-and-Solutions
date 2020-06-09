@@ -19,7 +19,7 @@
 
 !include sections/999_UCSD_Summer 2003.md
 
-<!--!include sections/AT CourseNotes.md-->
+!include sections/AT CourseNotes.md
 
 <!--!include sections/AT Definitions.md-->
 
