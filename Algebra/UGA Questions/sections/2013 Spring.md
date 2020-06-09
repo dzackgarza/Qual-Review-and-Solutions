@@ -66,7 +66,7 @@ b. Prove that $\gal(E/B) \intersect \gal(E/C) = \theset{1}$.
 
 c. If $B\intersect C = \QQ$, show that $\gal(E/B) \gal(E/C) = \gal(E/\QQ)$.
 
-d. Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \imes \gal(E/C)$.
+d. Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(E/C)$.
 
 e. Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
 
