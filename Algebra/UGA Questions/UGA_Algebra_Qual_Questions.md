@@ -35,8 +35,6 @@
 
 !include sections/2013 Fall.md
 
-!include sections/2012 Spring.md
-
 !include sections/2012 Fall.md
 
 !include sections/2011 Spring.md
