@@ -43,12 +43,43 @@ c. Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
 
 
 ## 6
+Let $k$ be a field and let the group $G = \GL(m, k) \cross \GL(n, k)$ acts on the set of $m\times n$ matrices $M_{m, n}(k)$ as follows:
+\begin{align*}
+(A, B) \cdot X = AXB\inv
+\end{align*}
+where $(A, B) \in G$ and $X\in M_{m, n}(k)$.
+
+a. State what it means for a group to act on a set.
+  Prove that the above definition yields a group action.
+
+b. Exhibit with justification a subset $S$ of $M_{m, n}(k)$ which contains precisely one element of each orbit under this action.
 
 
 ## 7
+Consider the following matrix as a linear transformation from $V\definedas \CC^5$ to itself:
+\begin{align*}
+A=\left(\begin{array}{ccccc}
+-1 & 1 & 0 & 0 & 0 \\
+-4 & 3 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 2
+\end{array}\right)
+.\end{align*}
 
+a. Find the invariant factors of $A$.
+
+b. Express $V$ in terms of a direct sum of indecomposable $\CC[x]\dash$modules.
+
+c. Find the Jordan canonical form of $A$.
 
 ## 8
+Let $V$ be a finite-dimensional vector space over a field $k$ and $T:V\to V$ a linear transformation.
 
+a. Provide a definition for the *minimal polynomial* in $k[x]$ for $T$.
+
+b. Define the *characteristic polynomial* for $T$.
+
+c. Prove the Cayley-Hamilton theorem: the linear transformation $T$ satisfies its characteristic polynomial.
 
 
