@@ -20,15 +20,16 @@
 14. Show that any group of prime order is cyclic and simple.
 4. Analyze groups of order $p^2$.
 7. Analyze groups of order $pq$.
-7. Analyze groups of order $p^2 q$.
-8. Show that no group of order $p^2 q^2$ is simple for $p<q$ primes.
-8. Show that a group of order $p^2 q^2$ has a normal Sylow subgroup. 
-8. Show that a group of order $p^2 q^2$ where $q$ does not divide $p^2-1$ and $p$ does not divide $q^2-1$ is abelian.
-9. Show that every group of order $pqr$ with $p<q<r$ primes contains a normal Sylow subgroup.
-9. Show that every $p\dash$group is nilpotent.
-9. Show that every $p\dash$group is solvable.
-7. Show that $p\dash$groups have nontrivial centers.
-8. Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
+8. Show that a group of order $pq$ with $q<p$ and $q$ not dividing $p-1$ is cyclic of order $pq$.
+8. Analyze groups of order $p^2 q$.
+9. Show that no group of order $p^2 q^2$ is simple for $p<q$ primes.
+9. Show that a group of order $p^2 q^2$ has a normal Sylow subgroup. 
+9. Show that a group of order $p^2 q^2$ where $q$ does not divide $p^2-1$ and $p$ does not divide $q^2-1$ is abelian.
+10. Show that every group of order $pqr$ with $p<q<r$ primes contains a normal Sylow subgroup.
+10. Show that every $p\dash$group is nilpotent.
+10. Show that every $p\dash$group is solvable.
+8. Show that $p\dash$groups have nontrivial centers.
+9. Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
 
 ### Classification
 
