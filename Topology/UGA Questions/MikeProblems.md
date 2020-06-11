@@ -1072,6 +1072,11 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
 4. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
   \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
 
+5. Let $A \subset X$ be a connected subspace.
+  Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
+
+
+- Counterexample
 
 ## Point Set
 
