@@ -34,8 +34,13 @@
   > Suggested by Ernest
 
 - Show that a closed subset of a Hausdorff space need not be compact.
-- Show that in a compact Hausdorff space, $A$ is closed iff $A$ is compact.
+- Show that in a *compact* Hausdorff space, $A$ is closed iff $A$ is compact.
 - Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
+
+- Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+  \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
+
+  > Suggested by Ernest
 
 ## Algebraic Topology
 
@@ -60,8 +65,5 @@
 
 ## Suggested by Ernest
 
-
-- Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-  \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
 
 
