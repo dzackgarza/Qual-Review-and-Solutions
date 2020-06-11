@@ -1,5 +1,16 @@
 # Theorems
 
+Properties preserved and not preserved by continuous functions: [Link](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
+
+- Properties pushed forward through continuous maps:
+  - Compactness?
+  - Connectedness (when surjective)
+  - Separability
+  - Density **only when** $f$ is surjective
+  - **Not** openness
+  - **Not** closedness
+
+
 ## Point-Set
 
 Theorem
@@ -9,17 +20,11 @@ Theorem (Cantor's Intersection Theorem)
 : A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
 
 
-
+Theorem (Cantor's Nested Intervals Theorem)
+: If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
+  If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
 
 - Tube lemma
-
-- Properties pushed forward through continuous maps:
-  - Compactness?
-  - Connectedness (when surjective)
-  - Separability
-  - Density **only when** $f$ is surjective
-  - **Not** openness
-  - **Not** closedness
 
 - A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
 
@@ -73,11 +78,8 @@ Theorem
 : The continuous image of a compact set is compact.
 
 Theorem
-:   A closed subset of a Hausdorff space is compact.
-
-
+: A closed subset of a Hausdorff space is compact.
 
 Theorem
 : A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
-
 

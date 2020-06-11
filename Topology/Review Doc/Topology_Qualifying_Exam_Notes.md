@@ -25,3 +25,5 @@
 
 !include sections/ExtraProblems.md
 
+!include sections/ExtraProblems_Solutions.md
+

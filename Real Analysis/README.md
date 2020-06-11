@@ -6,6 +6,7 @@ title: Real Analysis Qualifying Exam
 
 | Exam        | Typeset | Imported to MakeMeAQual | Solutions |
 |-------------|---------|-------------------------|-----------|
+| Spring 2020 |         |                         |           |
 | Fall 2019   | ✓       | ✓                       | ✓         |
 | Spring 2019 | ✓       | ✓                       | ✓         |
 | Fall 2018   | ✓       | ✓                       | ✓         |
