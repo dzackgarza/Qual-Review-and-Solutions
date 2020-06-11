@@ -7,12 +7,17 @@
 
 - Show that $\RR$ with the cofinite topology is compact.
 - Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
-- Show that a closed subspace of a compact space is compact.
+
+- Let $X$ be a compact space and let $A$ be a closed subspace. 
+  Show that $A$ is compact. 
+  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
   
   > Suggested by Ernest
 
-- Show that the continuous image of a compact space is compact.
-  
+- Let $f : X \to Y$ be a continuous function, with $X$ compact. 
+  Show that $f(X)$ is compact.
+  \hyperref[problem:compact_continuous_soln]{Solution} \label{problem:compact_continuous}
+ 
   > Suggested by Ernest
 
 ### Connectedness
@@ -50,14 +55,6 @@
 - Show that $\chi(\Sigma_g + \Sigma_h) = \chi(\Sigma_g)  + \chi(\Sigma_h) - 2$.
 
 ## Suggested by Ernest
-
-- Let $X$ be a compact space and let $A$ be a closed subspace. 
-  Show that $A$ is compact. 
-  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
-
-- Let $f : X \to Y$ be a continuous function, with $X$ compact. 
-  Show that $f(X)$ is compact.
-  \hyperref[problem:compact_continuous_soln]{Solution} \label{problem:compact_continuous}
 
 - Let $A$ be a compact subspace of a Hausdorff space $X$. 
   Show that $A$ is closed.
