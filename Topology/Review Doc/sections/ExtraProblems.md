@@ -1,3 +1,4 @@
+\newpage
 # Extra Problems
 
 ## Point Set
@@ -58,4 +59,3 @@
   \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
 
 
-\newpage
