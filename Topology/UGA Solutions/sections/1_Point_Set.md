@@ -91,25 +91,6 @@ $\impliedby$:
 
 $\implies$:
 
-Proof of Tube Lemma:
-
-- Let $\theset{U_j\cross V_j \suchthat j\in J} \covers X\cross Y$. 
-- Fix a point $x_0\in X$, then $\theset{x_0}\cross Y \subset N$ for some open set $N$.
-- By the tube lemma, there is a $U^x \subset X$ such that the tube $U^x \cross Y \subset N$.
-- Since $\theset{x_0}\cross Y \cong Y$ which is compact, there is a finite subcover $\theset{U_j \cross V_j \suchthat j\leq n} \covers \theset{x_0}\cross Y$. 
--   "Integrate the $X$": write 
-    $$W = \intersect_{j=1}^n U_j,$$ 
-    then $x_0 \in W$ and $W$ is a finite intersection of open sets and thus open.
-- Claim: $\theset{U_j \cross V_j \suchthat j\leq n}\covers W\cross Y$
-  - Let $(x, y) \in W\cross Y$; want to show $(x, y)\in U_j \cross V_j$ for some $j\leq n$.
-  - Then $(x_0, y) \in \theset{x_0}\cross Y$ is on the same horizontal line
-  - $(x_0, y)\in U_j \cross V_j$ for some $j$ by construction
-  - So $y\in V_j$ for this $j$
-  - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
-  - So $(x, y) \in U_j \cross V_j$
-
-Actual Proof:
-
 - Let $\theset{U_j \suchthat j\in J} \covers X\cross Y$. 
 - Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is compact and can be covered by finitely many elements $\theset{U_j\suchthat j\leq m} \covers \theset{x_0} \cross Y$.
   - Sum: write $N = \union_{j=1}^m U_j$; then $\theset{x_0} \cross Y \subset N$.
@@ -149,9 +130,25 @@ Then $\theset{W_x} \rightrightarrows X$ as $x$ varies is an open cover of $X$, a
 But then $X \cross Y = \union_{j} W_{x_j} \cross Y = \union_j \union_i W_{x_j} \cross V_{x_j, i} \subset \union_\alpha U_\alpha$ is a finite cover.
 
 
-### Proof of Tube Lemma
+### Proof of Tube Lemma (Todo: Check)
 
-Todo: Prove tube lemma.
+Proof of Tube Lemma:
+
+- Let $\theset{U_j\cross V_j \suchthat j\in J} \covers X\cross Y$. 
+- Fix a point $x_0\in X$, then $\theset{x_0}\cross Y \subset N$ for some open set $N$.
+- By the tube lemma, there is a $U^x \subset X$ such that the tube $U^x \cross Y \subset N$.
+- Since $\theset{x_0}\cross Y \cong Y$ which is compact, there is a finite subcover $\theset{U_j \cross V_j \suchthat j\leq n} \covers \theset{x_0}\cross Y$. 
+-   "Integrate the $X$": write 
+    $$W = \intersect_{j=1}^n U_j,$$ 
+    then $x_0 \in W$ and $W$ is a finite intersection of open sets and thus open.
+- Claim: $\theset{U_j \cross V_j \suchthat j\leq n}\covers W\cross Y$
+  - Let $(x, y) \in W\cross Y$; want to show $(x, y)\in U_j \cross V_j$ for some $j\leq n$.
+  - Then $(x_0, y) \in \theset{x_0}\cross Y$ is on the same horizontal line
+  - $(x_0, y)\in U_j \cross V_j$ for some $j$ by construction
+  - So $y\in V_j$ for this $j$
+  - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
+  - So $(x, y) \in U_j \cross V_j$
+
 
 
 ## 9
@@ -262,7 +259,7 @@ If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subs
 If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
 
 
-## 12 (Todo)
+## 12 (Todo: Not Finished)
 
 
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
@@ -272,6 +269,8 @@ If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR
 
 
 ## 14 
+
+### Proof 1
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Toward a contradiction: write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
