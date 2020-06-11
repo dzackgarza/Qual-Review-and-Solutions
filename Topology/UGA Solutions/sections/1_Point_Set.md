@@ -435,7 +435,7 @@ $\qed$
 > Todo: what's the picture?
 
 
-## Problem 23
+## 23
 
 Note: this is precisely the cofinite topology.
 
@@ -451,7 +451,7 @@ Fix any $U_\alpha$, then $U_\alpha^c = \theset{p_1, \cdots, p_n}$ is finite, say
 So pick $U_1 \ni p_1, \cdots, U_n \ni p_n$; then $\RR \subset U_\alpha \union_{i=1}^n U_i$ is a finite cover.
 
   
-## Problem 27
+## 27
 
 > Notes: use diagonal trick to construct the Cauchy sequence.
 
@@ -484,7 +484,7 @@ Take $X = C^0([0, 1])$ with the sup-norm, then $f_n(x) = x^n$ are all bounded by
 
 Moreover, $\theset{f_n}$ is closed. (Why?)
 
-## Problem 30
+## 30
 
 Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
 Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
@@ -496,7 +496,7 @@ Note that both $U$ and $V_x$ are open.
 But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
 
 
-## Problem 31
+## 31
 
 ### a
 
@@ -526,7 +526,7 @@ Let $g$ be the inverse map; then note that $1 \in \tau_1$ but $g\inv(1) = 1$ is 
 
 $\qed$
 
-## Problem 32
+## 32
 
 $\implies$:
 
@@ -549,7 +549,7 @@ $\impliedby$:
   - Otherwise, $z\in U\intersect V \implies (z, z) \in B$, but $B \intersect \Delta^c = \emptyset$. 
 
 
-## Problem 38
+## 38
 
 $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
 So take the quotient map $\pi:\RR \to \RR/\QQ$.
@@ -561,7 +561,7 @@ Direct proof that $\RR/\QQ$ isn't Hausdorff:
 - Both $A, B$ contain intervals, so they contain rationals $p\in A, q\in B$
 - Then $[p] = [q] \in U\intersect V$.
 
-## Problem 42
+## 42
 
 Proof that $\RR/\QQ$ has the indiscrete topology:
 
@@ -573,7 +573,7 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\union_{q\in \QQ}(a-q, b+q) \in V \implies \RR \subset V$.
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 
-## Problem 44
+## 44
 
 ### a
 
