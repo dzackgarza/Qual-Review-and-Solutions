@@ -1055,24 +1055,30 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
 
 # Extra Problems
 
+## Suggested in Problem Sessions
+
+1. Let $X$ be a compact space and let $A$ be a closed subspace. 
+  Show that $A$ is compact. 
+  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
+  
+2. Let $f : X \to Y$ be a continuous function, with $X$ compact. 
+  Show that $f(X)$ is compact.
+  \hyperref[problem:compact_continuous_soln]{Solution} \label{problem:compact_continuous}
+ 
+3. Let $A$ be a compact subspace of a Hausdorff space $X$. 
+  Show that $A$ is closed.
+  \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
+
+4. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+  \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
+
+
 ## Point Set
 
 ### Compactness
 
 - Show that $\RR$ with the cofinite topology is compact.
 - Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
-
-- Let $X$ be a compact space and let $A$ be a closed subspace. 
-  Show that $A$ is compact. 
-  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
-  
-  > Suggested by Ernest
-
-- Let $f : X \to Y$ be a continuous function, with $X$ compact. 
-  Show that $f(X)$ is compact.
-  \hyperref[problem:compact_continuous_soln]{Solution} \label{problem:compact_continuous}
- 
-  > Suggested by Ernest
 
 ### Connectedness
 
@@ -1081,20 +1087,10 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
 
 ### Hausdorff Spaces
 
-- Let $A$ be a compact subspace of a Hausdorff space $X$. 
-  Show that $A$ is closed.
-  \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
-  
-  > Suggested by Ernest
-
 - Show that a closed subset of a Hausdorff space need not be compact.
 - Show that in a *compact* Hausdorff space, $A$ is closed iff $A$ is compact.
 - Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
 
-- Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-  \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
-
-  > Suggested by Ernest
 
 ## Algebraic Topology
 
