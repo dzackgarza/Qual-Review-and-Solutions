@@ -18,9 +18,10 @@
 ### Hausdorff Spaces
 
 5. Show that compact subset of a Hausdorff space is closed.
-6. Show that a closed subset of a Hausdorff space need not be compact.
-7. Show that in a compact Hausdorff space, $A$ is closed iff $A$ is compact.
-3. Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
+  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
+7. Show that a closed subset of a Hausdorff space need not be compact.
+8. Show that in a compact Hausdorff space, $A$ is closed iff $A$ is compact.
+4. Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
 
 ## Algebraic Topology
 
