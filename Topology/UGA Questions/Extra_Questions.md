@@ -1,8 +1,11 @@
-# Extra Problems
+---
+title: Extra Problems
+---
 
-## Point Set
 
-### Compactness
+# Point Set
+
+## Compactness
 
 - Show that $\RR$ with the cofinite topology is compact.
 - Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
@@ -19,12 +22,12 @@
  
   > Suggested by Ernest
 
-### Connectedness
+## Connectedness
 
 - Show that $[0, 1]$ is connected.
   \hyperref[problem:interval_is_connected_soln]{Solution} \label{problem:interval_is_connected}
 
-### Hausdorff Spaces
+## Hausdorff Spaces
 
 - Let $A$ be a compact subspace of a Hausdorff space $X$. 
   Show that $A$ is closed.
@@ -41,19 +44,19 @@
 
   > Suggested by Ernest
 
-## Algebraic Topology
+# Algebraic Topology
 
-### Fundamental Group
+## Fundamental Group
 
 - Compute $\pi_1(X)$ where $X \definedas S^2/\sim$, where $x\sim -x$ only for $x$ on the equator $S^1 \injects S^2$.
   - Hint: try cellular homology. Should yield $[\ZZ, \ZZ/2\ZZ, \ZZ, 0, \cdots]$.
 - Show that if $X = S^2 \disjoint_\id S^2$ is a pushout along the equators, then $H_n(X) = [\ZZ, 0, \ZZ^3, 0, \cdots]$.
 
-### Covering Spaces
+## Covering Spaces
 
 - Describe all connected covering spaces of $\RP^2 \vee \RP^2$.
 
-### Homology
+## Homology
 
 - Compute the homology of the Klein bottle using the Mayer-Vietoris sequence and a decomposition $K = M \disjoint_f M$
 - Use the Kunneth formula to compute $H^*(S^2\cross S^2; \ZZ)$.
