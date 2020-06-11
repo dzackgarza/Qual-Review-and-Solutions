@@ -1055,7 +1055,7 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
 
 # Extra Problems
 
-## Suggested in Problem Sessions
+## From Problem Sessions
 
 1. Let $X$ be a compact space and let $A$ be a closed subspace. 
   Show that $A$ is compact. 
@@ -1076,7 +1076,8 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
   Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
 
 
-- Counterexample
+- Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.
+- Show that any infinite set with the cofinite topology is compact.
 
 ## Point Set
 
