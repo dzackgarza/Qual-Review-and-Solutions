@@ -4,7 +4,9 @@
 
 1. \hyperref[problem:interval_is_connected]{Problem Statement} \label{problem:interval_is_connected_soln}
 
-[Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
+> [Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
+>
+> [A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
 
 - Let $I = [0, 1] = A\union B$ be a disconnection, so
   - $A, B \neq \emptyset$
@@ -29,7 +31,6 @@
 
 $\qed$
 
-[A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
 
 
 
