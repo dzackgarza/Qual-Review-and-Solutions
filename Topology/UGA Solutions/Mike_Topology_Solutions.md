@@ -4,10 +4,22 @@
 
 
 !include sections/0_Preface.md
- \newpage
+ 
+ \newpage 
+
 !include sections/1_Point_Set.md
- \newpage
+ 
+ \newpage 
+
 !include sections/2_Fundamental_Group.md
- \newpage
+ 
+ \newpage 
+
+!include sections/3_Covering_Spaces.md
+ 
+ \newpage 
+
 !include sections/99_2019 Spring.md
- \newpage
+ 
+ \newpage 
+

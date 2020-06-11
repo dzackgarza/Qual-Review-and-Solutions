@@ -411,13 +411,6 @@ Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ 
 
 ## 20
 
-| Space                  | Connected  | Locally Connected |
-| ------                 | ---------  | ----------------- |
-| $\RR$                  | \checkmark | \checkmark        |
-| $[0, 1] \union [2, 3]$ |            | \checkmark        |
-| Sine Curve             | \checkmark |                   |
-| $\QQ$                  |            |                   |
-
 a. See definitions in intro.
 
 b. Claim: the Topologist's sine curve $X$ suffices.
@@ -430,6 +423,14 @@ Proof:
     - Take any $B_\eps(0) \in \RR^2$; then $\pi_X B_\eps(0)$ yields infinitely many arcs, each intersecting the graph at two points on $\bd B_\eps(0)$.
     - These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
 $\qed$
+
+| Space                  | Connected  | Locally Connected |
+| ------                 | ---------  | ----------------- |
+| $\RR$                  | \checkmark | \checkmark        |
+| $[0, 1] \union [2, 3]$ |            | \checkmark        |
+| Sine Curve             | \checkmark |                   |
+| $\QQ$                  |            |                   |
+
 
 > Todo: what's the picture?
 
