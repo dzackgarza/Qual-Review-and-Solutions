@@ -1,6 +1,8 @@
 # Extra Problem Solutions
 
-1. Proof the $I$ is Connected: Direct (DZG)
+### Connectedness
+
+1. \hyperref[problem:interval_is_connected]{Problem Statement} \label{problem:interval_is_connected_soln}
 
 [Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
 
