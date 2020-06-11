@@ -12,6 +12,7 @@
 ### Connectedness
 
 1. Show that $[0, 1]$ is connected.
+  \hyperref[problem:interval_is_connected_soln]{Solution} \label{problem:interval_is_connected}
 
 ### Hausdorff Spaces
 
@@ -55,5 +56,6 @@
 
 6. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
   \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
+
 
 \newpage
