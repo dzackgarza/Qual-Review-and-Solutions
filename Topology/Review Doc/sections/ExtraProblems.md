@@ -8,9 +8,11 @@
 - Show that $\RR$ with the cofinite topology is compact.
 - Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
 - Show that a closed subspace of a compact space is compact.
+  
   > Suggested by Ernest
 
 - Show that the continuous image of a compact space is compact.
+  
   > Suggested by Ernest
 
 ### Connectedness
