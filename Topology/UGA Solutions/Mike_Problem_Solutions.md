@@ -17,27 +17,23 @@ title: Topology Qualifying Exam Solutions
 
 ## 2
 
+> See Munkres p.164, especially for (ii).
+
 i.  See definition section of review doc.
 
-ii. Use Heine-Borel theorem: a set $U\subset \RR^n$ is compact $\iff U$ is *closed* and *bounded*.
-    - $X$ is closed in $\RR$, since we can write its complement as an arbitrary union of open intervals:
-    $$X^c = (-\infty, 0) \union \qty{\union_{n\in \ZZ^+} \qty{{1\over n}, {1\over n+1}} } \union (1, \infty)$$
-    - $X$ is *bounded*, since we can pick $r=1$, then $x, y\in X \implies d(x, y) \leq r = 1$.
+ii. Direct proof: 
 
-iii. Use Heine-Borel again: $X$ is not closed because it does not contain all of its limit points, e.g. the sequence $\theset{x_n \definedas {1 \over n} \suchthat n\in \ZZ^{\geq 1}} \subset X$ but $x_n \converges{n\to\infty}\to 0 \in X^c$. Thus is is **not** compact.
+  - Let $\theset{U_i \suchthat j\in J}\covers X$; then $0\in U_j$ for some $j\in J$.
+  - In the subspace topology, $U_i$ is given by some $V\in \tau(\RR)$ such that $V\intersect X = U_i$
+    - A basis for the subspace topology on $\RR$ is open intervals, so write $V$ as a union of open intervals $V = \union_{k\in K} I_k$.
+    - Since $0\in U_j$, $0\in I_k$ for some $k$.
+  - Since $I_k$ is an interval, it contains infinitely many points of the form $x_n = {1 \over n} \in X$
+  - Then $I_k \intersect X \subset U_j$ contains infinitely many such points.
+  - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
+  - So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
 
-### Alternate Proof of (ii)
 
-> See Munkres p.164
-
-- Let $\theset{U_i \suchthat j\in J}\covers X$; then $0\in U_j$ for some $j\in J$.
-- In the subspace topology, $U_i$ is given by some $V\in \tau(\RR)$ such that $V\intersect X = U_i$
-  - A basis for the subspace topology on $\RR$ is open intervals, so write $V$ as a union of open intervals $V = \union_{k\in K} I_k$.
-  - Since $0\in U_j$, $0\in I_k$ for some $k$.
-- Since $I_k$ is an interval, it contains infinitely many points of the form $x_n = {1 \over n} \in X$
-- Then $I_k \intersect X \subset U_j$ contains infinitely many such points.
-- So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
-- So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
+iii. Todo: Need direct proof. 
 
 ## 3 (Todo)
 
