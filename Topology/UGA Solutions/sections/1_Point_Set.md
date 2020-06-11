@@ -1,7 +1,5 @@
 # 1: Point-Set 
 
-## 1 (Todo)
-
 ## 2
 
 > See Munkres p.164, especially for (ii).
@@ -22,7 +20,6 @@ ii. Direct proof:
 
 iii. Todo: Need direct proof. 
 
-## 3 (Todo)
 
 ## 4
 
@@ -58,7 +55,6 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
     - So there is some particular $i$ such that $d(x, X\setminus U_i) \geq \delta$.
     - But then $B_\delta \subseteq U_i$ as desired.
 
-## 5 (Todo)
 
 ## 6
 
@@ -77,7 +73,6 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 - Then if ${1\over 2^N} < \eps$, for $n\geq N$ we have $$[a_n, b_n] \subseteq (p-\eps, p+\eps) \subseteq U_\alpha.$$
 - But then $U_\alpha \covers [a_n, b_n]$, yielding a finite subcover of $[a_n, b_n]$, a contradiction.
 
-## 7 (Todo)
 
 ## 8
 
@@ -256,7 +251,7 @@ In particular, we can pick $n$ large enough such that $\norm{\vector x_n}$ is as
 
 
 
-## 11 (Todo)
+## 11
 
 Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
 (I.e. this sends points to lines through the origin with rational slope).
@@ -275,7 +270,6 @@ If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR
 - No finite discrete sets occur, since the retract of a connected set is connected.
 - ?
 
-## 13 (Todo)
 
 ## 14 
 
@@ -305,7 +299,6 @@ But then these two sets disconnect $X_\alpha$, which was assumed to be connected
 
 
 
-## 15 (Todo)
 
 ## 16
 
@@ -367,7 +360,6 @@ Similarly, since $A$ is open, $B$ is closed, and $\bar B = B \implies \bar B \ca
 
 
 
-## 17 (Todo)
 
 ## 18
 
@@ -403,7 +395,7 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 \end{align*}
   - This shows that $g$ is Lipschitz continuous with constant $C+1$ (implies uniformly continuous, but not used).
 
-## 19 (Todo)
+## 19 
 
 Statement: prove that the product of two connected spaces is connected.
 
@@ -443,7 +435,7 @@ $\qed$
 > Todo: what's the picture?
 
 
-# Problem 23
+## Problem 23
 
 Note: this is precisely the cofinite topology.
 
@@ -459,11 +451,12 @@ Fix any $U_\alpha$, then $U_\alpha^c = \theset{p_1, \cdots, p_n}$ is finite, say
 So pick $U_1 \ni p_1, \cdots, U_n \ni p_n$; then $\RR \subset U_\alpha \union_{i=1}^n U_i$ is a finite cover.
 
   
-# Problem 27
+## Problem 27
 
 > Notes: use diagonal trick to construct the Cauchy sequence.
 
-## a
+### a
+
 $\implies$:
 
 If $X$ is totally bounded, let $\varepsilon  = \frac 1 n$ for each $n$, and let $\theset{x_i}$ be an arbitrary sequence.
@@ -485,13 +478,13 @@ Continue by picking $x_{n+1} \in S_n^c$ (Since $X$ is not totally bounded, this 
 
 Then $\theset{x_n}$ is not Cauchy, because $d(x_i, x_j) > \varepsilon$ for every $i\neq j$.
 
-## b
+### b
 
 Take $X = C^0([0, 1])$ with the sup-norm, then $f_n(x) = x^n$ are all bounded by 1, but $\norm{f_i - f_j} = 1$ for every $i, j$, so no subsequence can be Cauchy, so $X$ can not be totally bounded.
 
 Moreover, $\theset{f_n}$ is closed. (Why?)
 
-# Problem 30
+## Problem 30
 
 Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
 Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
@@ -503,9 +496,9 @@ Note that both $U$ and $V_x$ are open.
 But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
 
 
-# Problem 31
+## Problem 31
 
-## a
+### a
 
 Theorems used:
 
@@ -522,7 +515,7 @@ Let $U \in X$ be closed.
 - Since $f$ is continuous, $f(U)$ is compact
 - Since $Y$ is Hausdorff, $f(U)$ is closed.
 
-## b
+### b
 
 Note that any finite space is clearly compact.
 
@@ -533,7 +526,7 @@ Let $g$ be the inverse map; then note that $1 \in \tau_1$ but $g\inv(1) = 1$ is 
 
 $\qed$
 
-# Problem 32
+## Problem 32
 
 $\implies$:
 
@@ -556,7 +549,7 @@ $\impliedby$:
   - Otherwise, $z\in U\intersect V \implies (z, z) \in B$, but $B \intersect \Delta^c = \emptyset$. 
 
 
-# Problem 38
+## Problem 38
 
 $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
 So take the quotient map $\pi:\RR \to \RR/\QQ$.
@@ -568,7 +561,7 @@ Direct proof that $\RR/\QQ$ isn't Hausdorff:
 - Both $A, B$ contain intervals, so they contain rationals $p\in A, q\in B$
 - Then $[p] = [q] \in U\intersect V$.
 
-# Problem 42
+## Problem 42
 
 Proof that $\RR/\QQ$ has the indiscrete topology:
 
@@ -580,9 +573,9 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\union_{q\in \QQ}(a-q, b+q) \in V \implies \RR \subset V$.
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 
-# Problem 44
+## Problem 44
 
-## a
+### a
 
 - Suppose $X$ has a countable basis $B = \theset{B_i}$.
 - Choose an arbitrary $x_i \in B_i$ for each $i$. Define $Q = \theset{x_i}$.
@@ -591,7 +584,7 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - Since $x_i \in B_i$, $Q\intersect N_y \neq \emptyset$.
 - Thus $Q$ is dense in $X$.
 
-## b
+### b
 
 - Let $\theset{q_i}$ be a countable dense subset.
 - Define $B_{i, j} = B_{\frac 1 i}(q_j)$, which is still countable.
