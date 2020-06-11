@@ -27,8 +27,12 @@
 
 ### Hausdorff Spaces
 
-- Show that compact subset of a Hausdorff space is closed.
-  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
+- Let $A$ be a compact subspace of a Hausdorff space $X$. 
+  Show that $A$ is closed.
+  \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
+  
+  > Suggested by Ernest
+
 - Show that a closed subset of a Hausdorff space need not be compact.
 - Show that in a compact Hausdorff space, $A$ is closed iff $A$ is compact.
 - Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
@@ -56,9 +60,6 @@
 
 ## Suggested by Ernest
 
-- Let $A$ be a compact subspace of a Hausdorff space $X$. 
-  Show that $A$ is closed.
-  \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
 
 - Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
   \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
