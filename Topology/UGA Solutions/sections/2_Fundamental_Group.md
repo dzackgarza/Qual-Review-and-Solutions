@@ -1,8 +1,4 @@
----
-title: Problem Set 4
----
-
-# The Fundamental Group
+# 2: Fundamental Group
 
 ## 1
 
