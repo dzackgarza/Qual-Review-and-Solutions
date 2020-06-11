@@ -1077,6 +1077,7 @@ c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
 
 
 - Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.
+\hyperref[problem:open_but_not_in_ambient_space_soln]{Solution} \label{problem:open_but_not_in_ambient_space}
 - Show that any infinite set with the cofinite topology is compact.
 
 ## Point Set
@@ -1194,3 +1195,8 @@ $\qed$
   - Since $f$ is continuous, $f(U)$ is compact (since the continuous image of a compact set is compact)
   - Since $Y$ is Hausdorff and $f(U)$ is compact, $f(U)$ is closed (since compact subsets of Hausdorff spaces are closed)
   - Since $f \definedas g\inv, f(U) = g\inv(U)$ is thus closed.
+
+- \hyperref[problem:open_but_not_in_ambient_space]{Problem Statement} \label{problem:open_but_not_in_ambient_space_soln}
+
+  - Take $[0, 1] \subset [0, 1] \subset \RR$.
+    Then $[0, 1]$ is tautologically open in $[0, 1]$ as it is the entire space, but $[0, 1]$ is not open in $\RR$ since (e.g.) $\theset{1}$ is not an interior point (every neighborhood intersects the complement $\RR\setminus[0, 1]$).
