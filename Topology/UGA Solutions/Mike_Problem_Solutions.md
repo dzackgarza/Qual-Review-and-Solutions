@@ -2,48 +2,18 @@
 title: Topology Qualifying Exam Solutions
 ---
 
-# Problems Suggest by Mike Usher
-
- General Topology
-
-- 8 
-- 10
-- 11
-- 14
-- 16
-- 19
-- 22
-- 23
-- 27
-- 30
-- 31
-- 32
-- 38
-- 42
-- 44
-
-Fundamental Group
-
-- 1
-
-Covering Spaces
-
-- 1
-- 6
-- 7
-- 8
-
 # Problems to Revisit
 
 - 4
 - 6 (Without Heine-Borel)
 - 8
 - 10
-
 - 11
 - 14
 
 # General Topology
+
+## 1 (Todo)
 
 ## 2
 
@@ -68,6 +38,8 @@ iii. Use Heine-Borel again: $X$ is not closed because it does not contain all of
 - Then $I_k \intersect X \subset U_j$ contains infinitely many such points.
 - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
 - So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
+
+## 3 (Todo)
 
 ## 4
 
@@ -103,6 +75,8 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
     - So there is some particular $i$ such that $d(x, X\setminus U_i) \geq \delta$.
     - But then $B_\delta \subseteq U_i$ as desired.
 
+## 5 (Todo)
+
 ## 6
 
 > Facts used: 
@@ -120,6 +94,8 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 - Then if ${1\over 2^N} < \eps$, for $n\geq N$ we have $$[a_n, b_n] \subseteq (p-\eps, p+\eps) \subseteq U_\alpha.$$
 - But then $U_\alpha \covers [a_n, b_n]$, yielding a finite subcover of $[a_n, b_n]$, a contradiction.
 
+## 7 (Todo)
+
 ## 8
 
 > Topic: proof of the tube lemma.
@@ -127,7 +103,7 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 Statement: show $X, Y \in \Top_{\cpt} \iff X\cross Y\in \Top_\cpt$
 
 
-### Proof 1 (DZG)
+### Proof 1
 
 $\impliedby$:
 
@@ -172,6 +148,7 @@ Shorter mnemonic:
 
 ![](figures/image_2020-05-22-11-39-10.png)
 
+## 9
 
 ## 10
 
@@ -240,9 +217,9 @@ $X$ is connected:
       ,$$
       contradicting continuity of $f$.
 
-$\qed$
+## 11 (Todo)
 
-## 12
+## 12 (Todo)
 
 
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
@@ -250,7 +227,9 @@ $\qed$
 - No finite discrete sets occur, since the retract of a connected set is connected.
 - ?
 
-## 14
+## 13 (Todo)
+
+## 14 
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Toward a contradiction: write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
@@ -265,6 +244,7 @@ $\qed$
 - Since $A\subset X\union Y$, $A\intersect \qty{X\union Y} = A$
 - Thus $A = X\union Y$, forcing $B = \emptyset$.
 
+## 15 (Todo)
 
 ## 16
 
@@ -311,6 +291,8 @@ $\qed$
 
 ![](figures/image_2020-05-26-20-08-04.png)
 
+## 17 (Todo)
+
 ## 18
 
 - Define a new function
@@ -345,6 +327,8 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 \end{align*}
   - This shows that $g$ is Lipschitz continuous with constant $C+1$ (implies uniformly continuous, but not used).
 
+## 19 (Todo)
+
 ## 20
 
 | Space                  | Connected  | Locally Connected |
@@ -367,7 +351,7 @@ Proof:
     - These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
 $\qed$
 
-Todo: what's the picture?
+> Todo: what's the picture?
 
 
   
