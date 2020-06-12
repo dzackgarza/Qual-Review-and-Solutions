@@ -93,21 +93,6 @@ Chapters 1-9 of Dummit and Foote
 
 ### General facts
 
-- $|G| = p^e$ (P-groups)
-
-  - $Z(G) \neq \{e\}$ (Use class equation)
-
-- $|G| = p$
-
-  - Always cyclic
-    - Proof: Any nontrivial cyclic subgroup's order is $> 1$ and divides $p$, so equals $p$.
-
-- $|G| = p^2$
-  - Always abelian
-    - Proof: $|G/Z(G)| = 1, p$ . If $p$, it's cyclic, and $G$ is abelian. Otherwise it's $1$, so $G = Z(G)$.
-  - Two possibilities:
-    - $Z_{p^2}$ (cyclic)
-    - $Z_p \times Z_p$
 
 - $|G| = pq$
   - $p \not\divides q-1 (q \neq 1 \mod p$):

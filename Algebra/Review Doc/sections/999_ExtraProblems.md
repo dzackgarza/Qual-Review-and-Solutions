@@ -24,7 +24,6 @@
 ### Primes in Group Theory
 
 14. Show that any group of prime order is cyclic and simple.
-4. Analyze groups of order $p^2$.
 7. Analyze groups of order $pq$.
 8. Show that a group of order $pq$ with $q<p$ and $q$ not dividing $p-1$ is cyclic of order $pq$.
 8. Analyze groups of order $p^2 q$.
@@ -41,7 +40,10 @@
 
 - Show that every $p\dash$group has a nontrivial center.
 - Show that every group of order $p$ is cyclic.
-- Show that every group of order $p^2$ is abelian
+- Show that every group of order $p^2$ is abelian and classify them.
+  
+  > Hint: Consider $G/Z(G)$.
+
 - Let $O_P(G)$ be the intersection of all Sylow $p\dash$subgroups of $G$.
   Show that $O_p(G) \normal G$, is maximal among all normal $p\dash$subgroups of $G$
 - Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
