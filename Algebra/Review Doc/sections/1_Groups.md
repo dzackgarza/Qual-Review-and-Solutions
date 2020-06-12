@@ -331,7 +331,7 @@ $$
 >
 > *Proof:* This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 
-**Burnside's Formula:**
+Theorem (Burnside's Formula)
 $$
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 .$$

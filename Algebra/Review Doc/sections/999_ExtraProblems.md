@@ -55,6 +55,7 @@
 
 1. Show that the stabilizer of an element $G_x$ is a subgroup of $G$.
 2. Show that if $x, y$ are in the same orbit, then their stabilizers are conjugate.
+3. Show that the stabilizer of an element need not be a normal subgroup?
 
 ### Series
 
