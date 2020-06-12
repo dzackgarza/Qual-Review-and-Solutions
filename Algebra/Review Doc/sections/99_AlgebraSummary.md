@@ -91,14 +91,6 @@ Chapters 1-9 of Dummit and Foote
 ## Common Groups
 
 
-### $S_{n}$
-$S_n, n\geq 4$
-
-- Every element is a product of transpositions
-  - A cycle of length $k$ can be written as $k-1$ transpositions
-  - Parity of the cycle equals the parity of $k-1$.
-- The order of an element is the lcm of the size of the cycles.
-
 ### $A_n$
 
 - Simple for $n\geq 5$
