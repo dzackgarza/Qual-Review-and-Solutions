@@ -1,7 +1,6 @@
 # Spring 2018
 
-## 1
-## 1 \label{problem:session_1_6_1_soln}
+## 1 \label{problem:session_1_5_1_soln}
 
 ### a
 We have
