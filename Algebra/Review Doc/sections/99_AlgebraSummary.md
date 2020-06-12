@@ -146,19 +146,7 @@ Chapters 1-9 of Dummit and Foote
 
     Then $\text{im}\psi = Inn(G), \text{ker}\psi = Z(G)$
 
-  - Facts:
 
-    - $Inn(G) \unlhd Aut(G)$
-    - $Inn(G) \cong G / Z(G)$
-
-### **Conjugacy Class** of an element
-
-  - $$[a] = \{ gag^{-1} : g \in  G\}=\bigcup_{g\in G} \{gag^{-1}\}$$
-  - Equivalently, $[a] = \mathcal{O}_a$ under $G$ acting on itself via conjugation
-  - Facts:
-    - Equivalence relation, partitions the group
-    - $|[a]|$ divides $|G|$
-    - $a \in Z(G) \Rightarrow [a] =\{a\}$
 
 ### **Characteristic** subgroup
 
