@@ -18,6 +18,7 @@ Concepts Used:
     .\end{align*}
 
 - Every group of order $p^2$ is abelian.
+- Classification of finite abelian groups.
 
 ### a
 
@@ -56,7 +57,7 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - By Sylow
 
   - $n_5 \divides 7^2,\quad n_5\cong 1\mod 5 \implies n_5\in\theset{1, 7, 49}\setminus\theset{7, 49} = \theset{1} \implies n_5 = 1$
-  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus\theset{5, 25} \implies n_7 = 1$
+  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus\theset{5, 25} =\theset{1} \implies n_7 = 1$
 
 - By recognition of direct products, $G = S_5 \cross S_7$
   - By above, $S_5, S_7\normal G$
@@ -67,8 +68,6 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - The direct product of abelian groups is abelian.
 
 ### d
-
-By the classification of finite abelian groups and the Chinese Remainder theorem,
 
 1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
 1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
