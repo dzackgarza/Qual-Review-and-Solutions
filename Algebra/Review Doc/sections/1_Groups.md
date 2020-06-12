@@ -219,22 +219,25 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 ### Group Actions
 
 Definition (Group Action)
-: An action of $G$ on $X$ is a group morphism
-  \begin{align*}
-  \phi:G \times X &\rightarrow X \\ 
-  (g,x) &\mapsto g\cdot x
-  \end{align*}
-  or equivalently
-  \begin{align*}
-  \phi: G &\to \aut(X) \\
-  g \mapsto (x \mapsto \phi_g(x) \definedas g\cdot x)
-  \end{align*}
-  satisfying
+:   An action of $G$ on $X$ is a group morphism
+    \begin{align*}
+    \phi:G \times X &\rightarrow X \\ 
+    (g,x) &\mapsto g\cdot x
+    \end{align*}
+    or equivalently
+    \begin{align*}
+    \phi: G &\to \aut(X) \\
+    g \mapsto (x \mapsto \phi_g(x) \definedas g\cdot x)
+    \end{align*}
+    satisfying
+
+    1. $e\cdot x = x$
+    2. $g\cdot (h\cdot x) = (gh)\cdot x$
   
-  - $e\sim x = x$
-  - $(gh) \sim x = g \sim (h \sim x)$
-- Equivalently, a function $$\psi: G \rightarrow Sym(X) \\ g \mapsto \phi_g$$
-  - $$\text{ker}\psi = \bigcap_{x\in X} G_x$$ (intersection of all stabilizers)
+Note that $\ker \psi = \bigcap_{x\in X} G_x$ is the intersection of all stabilizers.
+
+Definition (Transitive)
+: A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
  
 **Notation:**
 For a group $G$ acting on a set $X$,

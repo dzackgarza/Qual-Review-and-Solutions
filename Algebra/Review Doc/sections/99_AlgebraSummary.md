@@ -144,30 +144,6 @@ Chapters 1-9 of Dummit and Foote
   - Equivalently, $$H^G = \bigcap \{ N: H \leq N \unlhd G \}$$
     - (The smallest normal subgroup of $G$ containing $H$)
 
-### **Group Action** of a group on a set
-
-  - Given as a function $$\phi:G \times X \rightarrow X \\ (g,x) \mapsto g\sim x$$
-    which gives rise to a function $$\phi_g: X \rightarrow X \\ x \mapsto g\sim x$$
-    (which is a bijection)
-    where $\sim$ denotes a group element acting on a set element, and $\forall x\in X$,
-    - $e\sim x = x$
-    - $(gh) \sim x = g \sim (h \sim x)$
-  - Equivalently, a function $$\psi: G \rightarrow Sym(X) \\ g \mapsto \phi_g$$
-    - $$\text{ker}\psi = \bigcap_{x\in X} G_x$$ (intersection of all stabilizers)
-  
-  - Interesting actions:
-    - Left multiplication of $G$ on $G$: $$ \phi: G \ \rightarrow G \rightarrow G \\ \qquad g \mapsto \phi_g: G \rightarrow G \\ \qquad \qquad\qquad h \mapsto gh$$
-      - $\mathcal{O}_x = G$ (transitive)
-      - $G_x = e$
-     - $G$ acting on $S = \{ H : H \leq G\}$ via conjugation:
-      - $$\phi :G\rightarrow S \rightarrow S \\ \qquad g \mapsto \psi_g: S \rightarrow S \\\qquad\qquad\qquad H \mapsto gHg^{-1}$$
-      - $\mathcal{O}_H = [H] = \{ gHg^{-1} : g\in G\}$, conjugate subgroups of $H$
-      - $G_x = N_G(H) =\{ g\in G : gHg^{-1} = H\}$
-
-### Transitive Group Actions
-
-  - $\forall x,y \in X, \exists g\in G : g\sim x = y$
-  - Equivalent, actions with a single orbit
 
 ### Orbit of an Element of a Set 
 
