@@ -15,14 +15,14 @@
   \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
 
 4. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-  \hyperref[problem:continuous_bijection_hausdorff]{Solution} \label{problem:continuous_bijection_hausdorff}
+  \hyperref[problem:continuous_bijection_hausdorff_soln]{Solution} \label{problem:continuous_bijection_hausdorff}
 
 5. Let $A \subset X$ be a connected subspace.
   Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
 
+6. Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.\hyperref[problem:open_but_not_in_ambient_space_soln]{Solution} \label{problem:open_but_not_in_ambient_space}
 
-- Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.
-- Show that any infinite set with the cofinite topology is compact.
+7. Show that any infinite set with the cofinite topology is compact.
 
 ## Point Set
 

@@ -65,15 +65,21 @@ $\qed$
     - Note $U\intersect V = \emptyset$.
   - Done: for every $x\in X\setminus A$, we have found an open set $V\ni x$ such that $V\intersect A = \emptyset$, so $x$ is an interior point and a set is open iff every point is an interior point.
 
-4. \hyperref[problem:continuous_bijection_hausdorff]{Problem Statement} \label{problem:continuous_bijection_hausdorff]}
+4. \hyperref[problem:continuous_bijection_hausdorff]{Problem Statement} \label{problem:continuous_bijection_hausdorff_soln}
 
-  - Since $f:X\to Y$ is a bijection, set $g\definedas f\inv:Y\to X$ (to distinguish images from preimages), we will show $g$ is continuous by showing that $U\in X$ closed implies $g\inv(U) \in X$ closed. 
-  - Let $U\in X$ be closed; since $X$ is closed, $U$ is compact (since closed subsets of compact spaces are compact)
-  - Since $f$ is continuous, $f(U)$ is compact (since the continuous image of a compact set is compact)
-  - Since $Y$ is Hausdorff and $f(U)$ is compact, $f(U)$ is closed (since compact subsets of Hausdorff spaces are closed)
-  - Since $f \definedas g\inv, f(U) = g\inv(U)$ is thus closed.
+  - It suffices to show that $f$ is a closed map, i.e. if $U\subseteq X$ is closed then $f(U)\subseteq Y$ is again closed.
+  - Let $U\in X$ be closed; since $X$ is closed, $U$ is compact 
+    - Since closed subsets of compact spaces are compact.
+  - Since $f$ is continuous, $f(U)$ is compact
+    - Since the continuous image of a compact set is compact.
+  - Since $Y$ is Hausdorff and $f(U)$ is compact, $f(U)$ is closed 
+    - Since compact subsets of Hausdorff spaces are closed.
 
-- \hyperref[problem:open_but_not_in_ambient_space]{Problem Statement} \label{problem:open_but_not_in_ambient_space_soln}
+5. Todo
+
+6. \hyperref[problem:open_but_not_in_ambient_space]{Problem Statement} \label{problem:open_but_not_in_ambient_space_soln}
 
   - Take $[0, 1] \subset [0, 1] \subset \RR$.
     Then $[0, 1]$ is tautologically open in $[0, 1]$ as it is the entire space, but $[0, 1]$ is not open in $\RR$ since (e.g.) $\theset{1}$ is not an interior point (every neighborhood intersects the complement $\RR\setminus[0, 1]$).
+
+7. Todo
