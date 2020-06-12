@@ -138,16 +138,6 @@ Chapters 1-9 of Dummit and Foote
   - Facts:
     - $H_G \unlhd G$ and is an idempotent operation
 
-### **Normal Closure** of a subgroup
-
-  - $H^G = \{gHg^{-1}: g\in G\}$
-  - Equivalently, $$H^G = \bigcap \{ N: H \leq N \unlhd G \}$$
-    - (The smallest normal subgroup of $G$ containing $H$)
-
-### Automorphisms of a group
-
-  - $Aut(G) = \{ \phi : G \rightarrow G : \text{$\phi$ is an isomorphism}\}$
-
 ### Inner Automorphisms of a Group
 
   - $Inn(G)  =\{ \phi_g \in Aut(G) : \phi_g(x) = gxg^{-1} \}$
@@ -160,10 +150,6 @@ Chapters 1-9 of Dummit and Foote
 
     - $Inn(G) \unlhd Aut(G)$
     - $Inn(G) \cong G / Z(G)$
-
-### **Outer Automorphisms** of a group
-
-  - $Out(G) = Aut(G) / Inn(G)$
 
 ### **Conjugacy Class** of an element
 

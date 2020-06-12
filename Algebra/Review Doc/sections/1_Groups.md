@@ -17,6 +17,14 @@ N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \su
 \mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  \text{Outer Aut.} \\
 \end{align*}
 
+Definition (Normal Closure of a subgroup)
+:   \hfill
+    - $H^G = \{gHg^{-1}: g\in G\}$
+    - Equivalently, $$H^G = \bigcap \{ N: H \leq N \unlhd G \}$$
+      - (The smallest normal subgroup of $G$ containing $H$)
+
+
+
 ## Basics
 
 **Definition (Centralizer)**:
