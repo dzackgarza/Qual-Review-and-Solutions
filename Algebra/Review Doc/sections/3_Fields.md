@@ -302,22 +302,24 @@ x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n
 $$
 so just use polynomial long division.
 
-**Lemma:**
-\begin{align*}
-\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
-\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
-.\end{align*}
+Lemma
+:   \hfill
+    \begin{align*}
+    \Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
+    \Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
+    .\end{align*}
 
-**Lemma:**
-$$
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-$$
+Lemma
+:   \hfill
+    $$
+    k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
+    $$
 
-**Definition:**
-An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
+Definition
+: An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
 
-**Theorem (Primitive Element):**
-Every finite separable extension is simple.
+Theorem (Primitive Element)
+: Every finite separable extension is simple.
 
-**Corollary:**
-$\GF(p^n)$ is a simple extension over $\FF_p$.
+Corollary
+: $\GF(p^n)$ is a simple extension over $\FF_p$.
