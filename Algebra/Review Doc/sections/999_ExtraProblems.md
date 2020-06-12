@@ -39,11 +39,13 @@
 
 ### p-Groups
 
+- Show that every $p\dash$group has a nontrivial center.
+- Show that every group of order $p$ is cyclic.
+- Show that every group of order $p^2$ is abelian
 - Let $O_P(G)$ be the intersection of all Sylow $p\dash$subgroups of $G$.
   Show that $O_p(G) \normal G$, is maximal among all normal $p\dash$subgroups of $G$
 - Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
 - Show that Sylow $p_i\dash$subgroups $S_{p_1}, S_{p_2}$ for distinct primes $p_1\neq p_2$ intersect trivially.
-- Show that every $p\dash$group has a nontrivial center.
 
 ### Classification
 
