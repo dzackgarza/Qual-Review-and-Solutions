@@ -135,25 +135,27 @@ $$
 P([g, h] = 1) = \frac n {\abs G}
 $$
 
+Strategy: Burnside.
+
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
-- What are the orbits? 
-  $$
-  \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
-  ,$$ 
-  which is the conjugacy class of $g$.
+  - What are the orbits? 
+    $$
+    \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+    ,$$ 
+    which is the conjugacy class of $g$.
 
-- What are the fixed points? 
-  $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
-  which are the elements of $G$ that commute with $g$.
+  - What are the fixed points? 
+    $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+    which are the elements of $G$ that commute with $g$.
 
-Then $\abs{X/G} = n$, the number of conjugacy classes.
+- Note $\abs{X/G} = n$, the number of conjugacy classes.
 
-We have Burnside's formula:
+- Apply Burnside
 $$
-| X / G | = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+\abs{X / G} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
 $$
 
 We can rearrange Burnside's formula to obtain
