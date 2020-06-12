@@ -6,6 +6,16 @@ Concepts Used:
 
 - Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
 - Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
+- $G/Z(G)$ cyclic $\iff G$ is abelian.
+  
+  > *Proof:*
+    \begin{align*}
+    G/Z(G) = \generators{xZ} 
+    &\iff g\in G \implies gZ = x^mZ \\
+    &\iff g(x^m)\inv \in Z \\
+    &\iff g = x^m z \qtext{for some}z\in Z\\
+    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
+    .\end{align*}
 
 ### a
 
@@ -33,25 +43,11 @@ Strategy: get $p$ to divide $\abs{Z(G)}$.
 
 ### b
 
-> **Lemma:** 
-> $G/Z(G)$ cyclic $\iff G$ is abelian.
->
-> *Proof:*
-\begin{align*}
-G/Z(G) = \generators{xZ} 
-&\iff g\in G \implies gZ = x^mZ \\
-&\iff g(x^m)\inv \in Z \\
-&\iff g = x^m z \qtext{for some}z\in Z\\
-&\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
-.\end{align*}
+Strategy: examine $\abs{G/Z(G)}$ by cases.
 
-Since $G$ is a $p\dash$group, $G$ has a nontrivial center, so consider $G/Z(G)$. 
-
-This could have three possible orders:
-
-- $p^2$: Not possible, since $\abs {Z(G)} > 1$
-- $p$: Then $G/Z(G)$ is cyclic, and (theorem) thus $G$ is abelian
 - $1$: Then $G = Z(G)$ and $G$ is abelian.
+- $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
+- $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
 
 ### c
 
