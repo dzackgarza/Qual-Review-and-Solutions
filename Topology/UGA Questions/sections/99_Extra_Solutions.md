@@ -65,7 +65,8 @@ $\qed$
     - Note $U\intersect V = \emptyset$.
   - Done: for every $x\in X\setminus A$, we have found an open set $V\ni x$ such that $V\intersect A = \emptyset$, so $x$ is an interior point and a set is open iff every point is an interior point.
 
- ![](figures/image_2020-06-11-20-14-26.png) 
+  ![](figures/image_2020-06-11-20-14-26.png) 
+  ![](figures/image_2020-06-11-20-35-11.png) 
 
 4. \hyperref[problem:continuous_bijection_hausdorff]{Problem Statement} \label{problem:continuous_bijection_hausdorff_soln}
 
