@@ -167,7 +167,8 @@
 - Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 - Compute the Galois group of $x^n - 1 \in \QQ[x]$ as a function of $n$.
 - Identify all of the elements of the Galois group of $x^p-2$ for $p$ an odd prime (note: this has a complicated presentation).
-- Compute $\gal(x^{15}+2)/\QQ$.
+- Show that $\gal(x^{15}+2)/\QQ \cong S_2 \semidirect \ZZ/15\ZZ$ for $S_2$ a Sylow $2\dash$subgroup.
+- Show that $\gal(x^3+4x+2)/\QQ \cong S_3$, a symmetric group.
 
 ## Modules and Linear Algebra
 
