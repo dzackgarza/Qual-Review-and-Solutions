@@ -90,22 +90,10 @@ Chapters 1-9 of Dummit and Foote
 
 ## Common Groups
 
-### $S_{3}$
-$S_3 = \left\langle (12), (23), (13)\right\rangle$
-
-- $Z(S_3) = e$
-- $Aut(S_3) = Inn(S_3)$, since $$Z(G) = e = \text{ker}\psi \\ \Rightarrow Out(S_3) = Inn(S_3) \\ \Rightarrow Aut(S_3) \cong S_3$$
 
 ### $S_{n}$
 $S_n, n\geq 4$
 
-- $Z(S_n) = e$
-  - Let $\sigma(a) = b$, choose $\tau = (bc)$ so $\tau\sigma(a) = \tau(b) = c \neq b = \sigma(a0 = \sigma\tau(a)$
-- Conjugacy classes are determined entirely by cycle structure
-  - There are exactly $p(n)$ of them (partition function)
-- Disjoint cycles commute
-- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
-- Every element is a product of disjoint cycles
 - Every element is a product of transpositions
   - A cycle of length $k$ can be written as $k-1$ transpositions
   - Parity of the cycle equals the parity of $k-1$.
