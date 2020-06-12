@@ -139,10 +139,15 @@ $$
 
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
-- What are the orbits? $\mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}$, which is the conjugacy class of $g$.
+- What are the orbits? 
+  $$
+  \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+  ,$$ 
+  which is the conjugacy class of $g$.
 
-What are the fixed points?
-$X^g = \theset{h\in G \suchthat hgh\inv = g}$, which are the elements of $G$ that commute with $g$.
+- What are the fixed points? 
+  $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+  which are the elements of $G$ that commute with $g$.
 
 Then $\abs{X/G} = n$, the number of conjugacy classes.
 
