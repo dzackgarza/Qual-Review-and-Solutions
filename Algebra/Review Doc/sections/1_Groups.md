@@ -35,19 +35,28 @@ Definition (Normal Core of a subgroup)
     - Facts:
       - $H_G \unlhd G$ and is an idempotent operation
 
-
+Definition (Characteristic subgroup)
+:   \hfill
+    - $H~\text{char}~G \iff \forall \phi \in Aut(G), \phi(H) = H$
+      - i.e., $H$ is fixed by all automorphisms of $G$.
 
 ## Basics
 
-**Definition (Centralizer)**:
-$$
-C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
-$$
+Definition (Centralizer):
+: \hfill
+  $$
+  C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
+  $$
 
-**Definition (Normalizer)**:
-$$
-N_G(H) = \theset{g\in G \suchthat gHg\inv = H}
-$$
+Definition (Normalizer)
+: \hfill
+  $$
+  N_G(H) = \theset{g\in G \suchthat gHg\inv = H}
+  $$
+
+  - Equivalently, $\bigcup \{ K: H\unlhd K \leq G \}$ (the largest $K \leq G$ for which $H \unlhd K$)
+  - Equivalently, the stabilizer of $H$ under $G$ acting on its subgroups via conjugation
+  
 
 **Lemma:**
 $C_G(H) \normal N_G(H)$

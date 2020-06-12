@@ -49,6 +49,26 @@
 8. Give a necessary and sufficient condition for a cyclic group to be solvable.
 9. Prove that every simple abelian group is cyclic.
 
+### Misc
+
+- Show that the size of a conjugacy class divides the order of a group.
+
+- Show that $\Inn(G) \normal Aut(G)$
+
+- Show that $\Inn(G) \cong G / Z(G)$
+
+- Show that the kernel of the map $G\to \aut(G)$ given by $g\mapsto (h\mapsto ghg\inv)$ is $Z(G)$.
+
+- Show that $C_G(H) \subseteq N_G(H) \leq G$.
+
+- Show that $N_G(H) / C_G(H) \cong A \leq Aut(H)$
+
+- Given $H\subseteq G$, let $S(H)= \bigcup_{g\in G} gHg^{-1}$, so $\abs{S(H)}$ is the number of conjugates to $H$. 
+  Show that $\abs{S(H)} = [G : N_G(H)]$.
+  - That is, the number of subgroups conjugate to $H$ equals the index of the normalizer of $H$.
+
+- Show that $Z(G) = \bigcap_{a\in G} C_G(a)$.
+
 ## Ring Theory
 
 1. Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.

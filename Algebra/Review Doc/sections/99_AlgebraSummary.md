@@ -110,22 +110,7 @@ Chapters 1-9 of Dummit and Foote
     - $C_G(G) = Z(G)$
     - $C_H(a) = H \intersect C_G(a)$
 
-### **Center** of a group
-
-  - $Z(G) = \{ g\in G : \forall x \in G, gx = xg\}$
-  - Facts
-    - $$Z(G) = \bigcap_{a\in G} C_G(a)$$
-
-### **Normalizer** of a subgroup
-
-  - $$N_G(H) = \{ g\in G : gHg^{-1} = H \}$$
-
-  - Facts:
-    - $C_G(H) \subseteq N_G(H) \leq G$
-    - $N_G(H) / C_G(H) \cong A \leq Aut(H)$
-    - Given $H\subseteq G$, let $$S(H)= \bigcup_{g\in G} gHg^{-1}$$, so $|S(H)|$ is the number of conjugates to $H$. Then $$|S(H)| = [G : N_G(H)]$$
-      - i.e. the number of subgroups conjugate to $H$ equals the index of the normalizer of $H$.
-
+    
 ### **Simple** group
 
   - $G$ is simple $\iff$ $H \unlhd G \Rightarrow H = e$ or $G$
