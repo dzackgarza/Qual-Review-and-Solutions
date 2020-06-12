@@ -183,13 +183,6 @@ Chapters 1-9 of Dummit and Foote
   - Partitions $X$ according to the equivalence relation $x \cong y \iff \exists g\in G : g\cdot x = y$
   - $G$ acts transitively on $X$ if restricted to any single orbit
 
-### Stabilizer of an Element of a Set
-
-  - $G_x = \{ g\in G : g \cdot x  = x \}$
-  - Facts:
-    - $G_x \leq G$, not usually normal
-    - $x,y \in \mathcal{O}_x \Rightarrow G_x$ is conjugate to $G_y$
-
 ### **Automorphisms** of a group
 
   - $Aut(G) = \{ \phi : G \rightarrow G : \text{$\phi$ is an isomorphism}\}$
