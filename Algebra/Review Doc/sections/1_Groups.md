@@ -407,34 +407,34 @@ Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 > Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 > Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 
-**Fratini's Argument**:
-If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
+Theorem (Fratini's Argument)
+: If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
 
 ## Products
 
 Theorem (Recognizing Direct Products)
-: We have $G \cong H \times K$ when
+:   We have $G \cong H \times K$ when
 
-- $G = HK = \theset{hk \suchthat h\in H, k\in K}$
+    - $G = HK$.
 
-- $H\intersect K = \theset{e} \subset G$
+    - $H\intersect K = \theset{e} \subset G$
 
-- $H, K \normal G$
+    - $H, K \normal G$
 
-> Can relax to only $H\normal G$ to get a semidirect product instead
+    > Can relax to only $H\normal G$ and $K\leq G$ to get a semidirect product instead
 
-**Characterizing semidirect products**:
-$G = N \semidirect_\psi H$ when
+Theorem (Recognizing Semidirect Products)
+: We have $G = N \semidirect_\psi H$ when
 
-- $G =  NH$
+  - $G =  NH$
 
-- $N \normal G$
+  - $N \normal G$
 
-- $H \actson N$ by conjugation via a map
-\begin{align*}
-\psi: H \to \Aut(N) \\
-h \mapsto h(\wait)h^{-1}
-.\end{align*}
+  - $H \actson N$ by conjugation via a map
+    \begin{align*}
+    \psi: H \to \Aut(N) \\
+    h \mapsto h(\wait)h^{-1}
+    .\end{align*}
 
 **Useful Facts**
 
