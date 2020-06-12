@@ -69,6 +69,8 @@
 
 - Show that $Z(G) = \bigcap_{a\in G} C_G(a)$.
 
+- Show that the centralizer $G_G(H)$ of a subgroup is again a subgroup.
+
 ## Ring Theory
 
 1. Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.

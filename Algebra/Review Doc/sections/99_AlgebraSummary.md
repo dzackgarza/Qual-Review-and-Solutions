@@ -110,12 +110,6 @@ Chapters 1-9 of Dummit and Foote
     - $C_G(G) = Z(G)$
     - $C_H(a) = H \intersect C_G(a)$
 
-    
-### **Simple** group
-
-  - $G$ is simple $\iff$ $H \unlhd G \Rightarrow H = e$ or $G$
-    - No non-trivial normal subgroups
-
 
 ## Structural Results
 
