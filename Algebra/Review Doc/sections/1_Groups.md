@@ -473,10 +473,10 @@ Corollary
 
 **Cancellation / 3rd Isomorphism Theorem**
 
-If $H, K \normal G$ with $H \normal K$, then
-$$
-\frac{G/H}{G/K} \cong \frac{G}{K}
-$$
+Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
+
+
+1. $\frac{G/H}{G/K} \cong \frac{G}{K}$
 
 > Note: for this to make sense, we also have $G/K \normal G/H$.
 
