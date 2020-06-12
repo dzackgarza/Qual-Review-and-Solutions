@@ -99,17 +99,6 @@ Chapters 1-9 of Dummit and Foote
 
 ### Isomorphisms Theorems
 
--*First Isomorphism Theorem**
-
-- Conditions:
-  -  $\phi:G\rightarrow G'$ is a homomorphism.
-- Result:
-  - $\text{ker}\phi \unlhd G$
-  - $\text{im}\phi \leq G'$
-  - $G/\text{ker}\phi \cong \text{im}\phi$.
-- Corollaries:
-  - $\text{ker}\phi = e \Rightarrow G \cong G'$
-
 -*Second Isomorphism Theorem**
 
 - Conditions:
