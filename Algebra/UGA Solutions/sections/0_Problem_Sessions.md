@@ -11,5 +11,6 @@ Problem Session 1: Group Theory
 - 6.2, Group Actions
   \hyperref[problem:session_1_6_2_soln]{Solution} 
 - Bonus: 2.4, Conjugacy Classes
+  \hyperref[problem:session_1_2_4_soln]{Solution} 
 
 

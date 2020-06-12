@@ -122,7 +122,7 @@ Thus
 
 $\qed$
 
-## 4
+## 4 \label{problem:session_1_2_4_soln}
 
 > - Notation: $X/G$ is the set of $G\dash$orbits
 > - Notation: $X^g = \theset{x\in x\suchthat g\actson x = x}$
@@ -130,17 +130,16 @@ $\qed$
 
 ### a
 
-Letting $n$ be the number of conjugacy classes, what we want to show is that
+Set $n$ be the number of conjugacy classes, we want to show 
 $$
 P([g, h] = 1) = \frac n {\abs G}
 $$
 
-Define a sample space $\Omega = G^2$, so $\abs{\Omega} = \abs{G}^2$.
+- Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
-Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
+- Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
-What are the orbits?
-$\mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}$, which is the conjugacy class of $g$.
+- What are the orbits? $\mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}$, which is the conjugacy class of $g$.
 
 What are the fixed points?
 $X^g = \theset{h\in G \suchthat hgh\inv = g}$, which are the elements of $G$ that commute with $g$.
