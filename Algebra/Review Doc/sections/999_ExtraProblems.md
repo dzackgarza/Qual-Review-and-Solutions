@@ -36,6 +36,8 @@
 
 - Show that for $H\leq G$, $C_H(x) = H \intersect C_G(x)$.
 
+- Let $H, K \leq G$ a finite group, and without using the normalizers of $H$ or $K$, show that $\abs{HK} = \abs{H} \abs{K}/\abs{H\intersect K}$.
+
 
 ### Primes in Group Theory
 
