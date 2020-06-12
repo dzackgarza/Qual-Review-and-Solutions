@@ -88,29 +88,7 @@ Chapters 1-9 of Dummit and Foote
 
 # Groups
 
-## Definitions
-
-### **Subgroup Generated** by a set $A$
-
-  - $\left\langle A\right\rangle  = \{a_1^{\pm 1},a_2^{\pm 1}, \cdots a_2^{\pm 1} : a_i \in A, n \in \mathbb{N}\}$
-  - Equivalently, the intersection of all $H$ such that $A \subseteq H \leq G$
-
-
 ## Numeric Results
-
-### Cauchy's Theorem
-
-  - For any $p$ dividing $|G|$, there is a subgroup of order $p$.
-
-### Sylow Theorems: $|G| = p^km$ where $p \not\mid m$
-
-  -  At least one Sylow-p subgroup always exists: $\exists P \leq G$ with $|P| = p^k$
-  -  All such subgroups are conjugate: $\forall P, P', \exists g\in G : gPg^{-1} = P'$
-  -  $n_p$ satisfies:
-     - $n_p$ divides $m = [G : P]$
-     - $n_p = 1~\text{mod}~p$
-     - $n_p = [G : N_G(P)]$ (Not as useful)
-  -  Every $p$-subgroup of $G$ is a $p$-subgroup of $P$ (i.e. $P$ is maximal and contains all subgroups of order $p^l$ with $l \leq k$)
 
 ### Orbit-stabilizer Theorem
 
