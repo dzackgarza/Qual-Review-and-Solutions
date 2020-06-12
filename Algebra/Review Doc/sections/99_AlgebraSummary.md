@@ -88,31 +88,6 @@ Chapters 1-9 of Dummit and Foote
 
 # Groups
 
-## Numeric Results
-
-
-### General facts
-
-
-- $|G| = pq$
-  - $p \not\divides q-1 (q \neq 1 \mod p$):
-    - One possibility:
-      - $G \cong Z_{pq}$ (cyclic)
-    - Facts:
-      - $\exists P \unlhd G$ (A Sylow-$P$ subgroup)
-  - $p$ divides $q-1$ ($q = 1$ mod $p$):
-    - Two possibilities:
-      - $G \cong Z_{pq}$ (cyclic)
-      - $G\cong Z_q \rtimes Z_p$
-  - Never simple
-
-- $|G| = p^2 q$
-  - $\exists P \unlhd G$ (A Sylow-$P$ subgroup)
-
-- $|G| = p_1 p_2 p_3$ (distinct)
-
-  - Not simple
-
 ## Common Groups
 
 ### $S_{3}$
