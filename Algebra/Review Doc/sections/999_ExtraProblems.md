@@ -23,18 +23,23 @@
 
 ### Primes in Group Theory
 
-14. Show that any group of prime order is cyclic and simple.
-7. Analyze groups of order $pq$.
-8. Show that a group of order $pq$ with $q<p$ and $q$ not dividing $p-1$ is cyclic of order $pq$.
-8. Analyze groups of order $p^2 q$.
-9. Show that no group of order $p^2 q^2$ is simple for $p<q$ primes.
-9. Show that a group of order $p^2 q^2$ has a normal Sylow subgroup. 
-9. Show that a group of order $p^2 q^2$ where $q$ does not divide $p^2-1$ and $p$ does not divide $q^2-1$ is abelian.
-10. Show that every group of order $pqr$ with $p<q<r$ primes contains a normal Sylow subgroup.
-10. Show that every $p\dash$group is nilpotent.
-10. Show that every $p\dash$group is solvable.
-8. Show that $p\dash$groups have nontrivial centers.
-9. Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
+- Show that any group of prime order is cyclic and simple.
+- Analyze groups of order $pq$ with $q<p$.
+
+  > Hint: consider the cases when $p$ does or does not divide $q-1$.
+
+  - Show that if $q$ does not divide $p-1$, then $G$ is cyclic.
+  - Show that $G$ is never simple. 
+
+9. Analyze groups of order $p^2 q$.
+10. Show that no group of order $p^2 q^2$ is simple for $p<q$ primes.
+10. Show that a group of order $p^2 q^2$ has a normal Sylow subgroup. 
+10. Show that a group of order $p^2 q^2$ where $q$ does not divide $p^2-1$ and $p$ does not divide $q^2-1$ is abelian.
+11. Show that every group of order $pqr$ with $p<q<r$ primes contains a normal Sylow subgroup.
+11. Show that every $p\dash$group is nilpotent.
+11. Show that every $p\dash$group is solvable.
+9. Show that $p\dash$groups have nontrivial centers.
+10. Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
 
 ### p-Groups
 
