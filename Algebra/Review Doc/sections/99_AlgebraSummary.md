@@ -90,26 +90,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Numeric Results
 
-### Orbit-stabilizer Theorem
-
-  - Given a group action, $G/G_x \cong \mathcal{O}_x$
-
-  - Gives the numeric result $|\mathcal{O}_x| =|G / G_x| = [G : G_x] = \frac{|G|}{|G_x|}$
-
-  - Also useful in the form $|G| = |\mathcal{O}_x| |G_x|$
-
-  - Proof:
-
-    - Use the map $$\phi :G \rightarrow X \\ g \mapsto g\sim x$$
-
-      Where $\text{im} \phi = \mathcal{O}_x$ and  $\text{ker}\phi = G_x$.
-
-### Burnside's Lemma
-
-  - $$|X_G| = \frac{1}{|G|} \sum_{g\in G} |X^g|$$
-    - $|X_G|$ is the number of orbits
-    - $X^g = \{ x\in X: g\sim x = x\}$
-
 ### The class equation
 
   - $$|G| = |Z(G)| + \sum_{a\in A} [G : C_G(a)]$$
