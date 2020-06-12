@@ -51,6 +51,14 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 
 ### c
 
+- By Sylow
+
+  - $n_5 \divides 7^2,\quad n_5\cong 1\mod 5 \implies n_5\in\theset{1, 7, 49}\setminus{7, 49} = \theset{1} \implies n_5 = 1$
+  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus{5, 25} \implies n_7 = 1$
+
+- By recognition of direct products, $G = S_5 \cross S_7$
+
+
 By Sylow, we have $n_5 = 1$ and $n_7=1$, so both $P_5, P_7 \normal G$, and by recognition of direct products we have $G \cong P_5 \cross P_7$.
 
 Since the sizes of both of these groups are $p^2$ for a prime, by (b) they are abelian, and the direct product of abelian groups is again abelian.
