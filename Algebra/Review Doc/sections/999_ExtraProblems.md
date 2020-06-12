@@ -81,6 +81,17 @@
 
 - Show that for $H\leq G$, $C_H(x) = H \intersect C_G(x)$.
 
+### Nonstandard Topics
+
+- Show that $H~\text{char}~G \Rightarrow H \unlhd G$
+  
+  > Thus "characteristic" is a strictly stronger condition than normality
+
+- Show that $H ~\text{char}~ K ~\text{char}~G \Rightarrow H ~\text{char}~ G$
+  
+  > So "characteristic" is a transitive relation for subgroups.
+
+
 ## Ring Theory
 
 1. Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
