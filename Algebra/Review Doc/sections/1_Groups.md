@@ -412,8 +412,8 @@ If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ 
 
 ## Products
 
-**Characterizing direct products**:
-$G \cong H \times K$ when
+Theorem (Recognizing Direct Products)
+: We have $G \cong H \times K$ when
 
 - $G = HK = \theset{hk \suchthat h\in H, k\in K}$
 

@@ -19,6 +19,7 @@
 18. Show that $G/N$ is abelian iff $[G, G] \leq N$.
 19. Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
 20. Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
+21. Give an example showing that normality is not transitive: i.e. $H\normal K \normal G$ with $H$ *not* normal in $G$.
 
 ### Primes in Group Theory
 
@@ -91,6 +92,9 @@
   
   > So "characteristic" is a transitive relation for subgroups.
 
+- Show that if $H \leq G$, $K\normal G$ is a normal subgroup, and $H~\text{char}~K$ then $H$ is normal in  $G$.
+
+  > So normality is not transitive, but strengthening one to "characteristic" gives a weak form of transitivity.
 
 ## Ring Theory
 

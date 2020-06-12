@@ -98,12 +98,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Misc Results
 
-- $H \unlhd G, K \unlhd G$ and $H \intersect K = e \Rightarrow hk =kh \forall h\in H, \in K$
-  - Normal subgroups with trivial intersection commute
-- $H~\text{char}~G \Rightarrow H \unlhd G$
-  - Characteristic is a strictly stronger condition than normality
-- $H ~\text{char}~ K ~\text{char}~G \Rightarrow H ~\text{char}~ G$
-  - Characteristic is transitive
 - $H \leq G$, $K\unlhd G$, $H~\text{char}~K$ $\Rightarrow$ $H \unlhd G$
   - i.e., normality is **not** transitive, strengthening normality to $\text{char}$ gives "weak transitivity"
 - Recognizing (Internal) Direct Products:$H \leq G, K \leq G$
