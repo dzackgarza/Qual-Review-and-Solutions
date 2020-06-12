@@ -140,7 +140,10 @@ Strategy: Burnside.
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
 - Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
-  - Set $A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1}$, note $A = \disjoint_{g\in G} A_g$.
+  - Define and note: 
+    $$
+    A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
+    .$$
 
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
@@ -156,6 +159,11 @@ Strategy: Burnside.
 
 - Note $\abs{X/G} = n$, the number of conjugacy classes.
 
+- Note that 
+  $$
+  \abs{A} = \abs{\disjoint_{g\in G} A_g} = \sum_{g\in G} \abs{A_g} = \sum_{g\in G}\abs{X^g}
+  .$$
+
 
 - Apply Burnside
 $$
@@ -167,16 +175,14 @@ n \abs{G}
 = \abs{X/G} \abs{G}
 = \sum _ { g \in G } \left| X ^ { g } \right|
 $$
-
-and so
+- Compute probability:
 \begin{align*}
 P(A)
-&= {\abs A \over \abs \Omega} \\
-&= \frac{\abs{\theset{(g,h) \in G\cross G \suchthat [g,h] = 1}}}{\abs{G}^2} \\ \\
-&= \frac{\sum _ { g \in G } \left| X ^ { g } \right|}{\abs{G}^2} \\
-&= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} \\
-&= \frac{n \abs{G}}{\abs{G}^2} \\
-&= \frac n {\abs G}
+= {\abs A \over \abs \Omega} 
+= \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
+= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
+= \frac{n \abs{G}}{\abs{G}^2} 
+= \frac n {\abs G}
 .\end{align*}
 
 $\qed$
