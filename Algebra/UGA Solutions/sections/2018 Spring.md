@@ -17,6 +17,17 @@ Concepts Used:
 - Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
 - Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
 - Use $$[G: C_G(x_i)] = 1 \iff C_G(x_i) = G \iff \theset{g\in G\suchthat gx_ig\inv = x_i} = G \iff x_i \in Z(G).$$
+  - Thus every index appearing in the sum is greater than 1, and thus equal to $p^{\ell_i}$ for some $1\leq \ell_i \leq k$
+  - So $p$ divides every term in the sum
+
+- Rearrange 
+\begin{align*}
+\abs{G} -  \sum [G: C_G(x_i)]
+= \abs{Z(G)} 
+.\end{align*}
+
+- $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
+
 
 ### b
 
