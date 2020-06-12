@@ -152,7 +152,7 @@ Strategy: Burnside.
 
   - What are the fixed points? 
     $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
-    which are the elements of $G$ that commute with $g$.
+    which are the elements of $G$ that commute with $g$, which is precisely $A_g$.
 
 - Note $\abs{X/G} = n$, the number of conjugacy classes.
 
