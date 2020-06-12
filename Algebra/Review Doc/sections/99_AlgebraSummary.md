@@ -99,19 +99,6 @@ Chapters 1-9 of Dummit and Foote
 
 ### Isomorphisms Theorems
 
--*Second Isomorphism Theorem**
-
-- Conditions:
-  - $N \unlhd G, H \leq G$
-- Results:
-  - $HN \leq G$
-  - $N \intersect H \unlhd H$
-  - $$\frac{H}{H\intersect N} \cong \frac{HN}{N}$$
-- Corrolaries:
-  - (Weaker) Relaxing $N \unlhd G$ to $H \subseteq N(N)$ yields
-    - $N\intersect H \subseteq G$ (Not normal)
-    - $N\intersect H \unlhd H$
-
 -*Third Isomorphism Theorem**
 
 - Conditions:

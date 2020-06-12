@@ -468,6 +468,9 @@ Mnemonic:
 > - $SN \leq G$,
 > - $S\intersect N \normal S$,
 
+Corollary
+: If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+
 **Cancellation / 3rd Isomorphism Theorem**
 
 If $H, K \normal G$ with $H \normal K$, then
