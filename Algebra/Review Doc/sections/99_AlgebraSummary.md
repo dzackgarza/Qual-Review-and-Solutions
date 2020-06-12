@@ -96,13 +96,6 @@ Chapters 1-9 of Dummit and Foote
   - Equivalently, the intersection of all $H$ such that $A \subseteq H \leq G$
 
 
-## Misc Results
-
-- P Groups
-  - ${} \intersect P = O_P(G)~\text{char}~ G$. And $O_P(G) \unlhd G$ as well.
-  - $N \unlhd G$ implies that $P_N \leq N$ are of the form $N\intersect P_G$
-  - $P \intersect Q = e$
-
 ## Numeric Results
 
 ### Cauchy's Theorem

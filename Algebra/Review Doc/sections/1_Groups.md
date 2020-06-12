@@ -222,27 +222,23 @@ A_4 =
 
 ## Counting Theorems
 
-**Lagrange's Theorem**:
+Theorem (Lagrange's Theorem)
+: $H \leq G \implies \abs H \divides \abs G$.
 
-$$
-H \leq G \implies \abs H \divides \abs G
-.$$
+Corollary
+: The order of every element divides the size of $G$, i.e.
+  $$
+  g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
+  .$$
 
-*Corollary*:
-The order of every element divides the size of $G$, i.e.
-$$
-g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
-.$$
-
-> **Warning:**
+**Warning:**
 There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
->
-> Counterexample:
-> $\abs{A_4} = 12$ but has no subgroup of order 6.
 
-**Cauchy's Theorem**:
+Counterexample:
+$\abs{A_4} = 12$ but has no subgroup of order 6.
 
-For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
+Theorem (Cauchy's Theorem)
+: For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
 
 > This is a partial converse to Lagrange's theorem, and strengthened by Sylow's theorem.
 
@@ -353,12 +349,10 @@ Write
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
-**Definition**:
-A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
-If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
+Definition
+: A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
+  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
 
-> **Lemma:**
-> $p\dash$groups have nontrivial centers.
 
 Some useful facts:
 
