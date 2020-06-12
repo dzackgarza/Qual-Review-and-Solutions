@@ -2,14 +2,19 @@
 
 ## 1 \label{problem:session_1_5_1_soln}
 
-### a
-We have
+Concepts Used:
 
+- Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
+- Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
+
+### a
+
+- Apply the class equation:
 \begin{align*}
-\abs{G} = \abs{Z(G)} + \sum [G: Z(x_i)]
+\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
 ,\end{align*}
 
-and since $e \in Z(G)$, $\abs{Z(G)} \geq 1$.
+- $e \in Z(G)$ implies that $\abs{Z(G)} \geq 1$.
 Since $p\divides \abs{G}$, we must have $p\divides \abs{Z(G)} \neq 0$ and so $\abs{Z(G)} \geq p$.
 
 ### b

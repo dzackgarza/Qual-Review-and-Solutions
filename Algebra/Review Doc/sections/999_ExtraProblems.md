@@ -14,6 +14,7 @@
 13. Show that $\abs{G}/\abs{H} = [G: H]$.
 14. Show that the order of any element in a group divides the order of the group.
 15. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
+16. Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
 
 ### Primes in Group Theory
 
