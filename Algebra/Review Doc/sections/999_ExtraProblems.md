@@ -17,7 +17,8 @@
 16. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
 17. Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
 18. Show that $G/N$ is abelian iff $[G, G] \leq N$.
-19. Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$
+19. Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
+20. Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
 
 ### Primes in Group Theory
 
