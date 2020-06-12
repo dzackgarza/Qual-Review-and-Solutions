@@ -38,9 +38,10 @@ Strategy: get $p$ to divide $\abs{Z(G)}$.
 >
 > *Proof:*
 \begin{align*}
-G/Z(G) = \generators{x + Z} 
-&\iff g\in G \implies g + Z = x^m + Z \\
-&\iff g(x^m)\inv = z \iff g = x^m z \\
+G/Z(G) = \generators{xZ} 
+&\iff g\in G \implies gZ = x^mZ \\
+&\iff g(x^m)\inv \in Z \\
+&\iff g = x^m z \qtext{for some}z\in Z\\
 &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
 .\end{align*}
 
