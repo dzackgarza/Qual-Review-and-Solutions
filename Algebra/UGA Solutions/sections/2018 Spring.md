@@ -12,10 +12,11 @@ Concepts Used:
 - Apply the class equation:
 \begin{align*}
 \abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
-,\end{align*}
+.\end{align*}
 
-- $e \in Z(G)$ implies that $\abs{Z(G)} \geq 1$.
-Since $p\divides \abs{G}$, we must have $p\divides \abs{Z(G)} \neq 0$ and so $\abs{Z(G)} \geq p$.
+- Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
+- Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
+- Use $$[G: C_G(x_i)] = 1 \iff C_G(x_i) = G \iff \theset{g\in G\suchthat gx_ig\inv = x_i} = G \iff x_i \in Z(G).$$
 
 ### b
 
