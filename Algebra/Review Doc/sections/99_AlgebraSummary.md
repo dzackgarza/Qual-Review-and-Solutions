@@ -168,22 +168,24 @@ Chapters 1-9 of Dummit and Foote
       - $\mathcal{O}_H = [H] = \{ gHg^{-1} : g\in G\}$, conjugate subgroups of $H$
       - $G_x = N_G(H) =\{ g\in G : gHg^{-1} = H\}$
 
-### **Transitive** group actions
+### Transitivegroup actions
 
   - $\forall x,y \in X, \exists g\in G : g\sim x = y$
   - Equivalent, actions with a single orbit
 
-### **Orbit** of a set element
+### Orbit of an Element of a Set 
 
-$$\mathcal{O}_x = \{ g \sim x : x\in X  \} = \bigcup_{g\in G} \{g \sim x \}$$
+\begin{align*}
+\mathcal{O}_x = \{ g \cdot x \suchthat x\in X  \} = \bigcup_{g\in G} \{g \cdot x \}
+.\end{align*}
 
-  - The set of all orbits is denoted $X/G$ or $X_G = \{\mathcal{O}_x: x\in X\}$
-  - Partitions $X$ according to the equivalence relation $x \cong y \iff \exists g\in G : g\sim x = y$
-  - $G$ acts transitively on $X$ when restricted to any single orbit
+  - The set of all orbits is denoted $X/G = \{\mathcal{O}_x \suchthat x\in X\}$
+  - Partitions $X$ according to the equivalence relation $x \cong y \iff \exists g\in G : g\cdot x = y$
+  - $G$ acts transitively on $X$ if restricted to any single orbit
 
-### **Stabilizer** of a set element
+### Stabilizer of an Element of a Set
 
-  - $G_x = \{ g\in G : g \sim x  = x \}$
+  - $G_x = \{ g\in G : g \cdot x  = x \}$
   - Facts:
     - $G_x \leq G$, not usually normal
     - $x,y \in \mathcal{O}_x \Rightarrow G_x$ is conjugate to $G_y$
