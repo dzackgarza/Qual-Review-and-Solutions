@@ -55,6 +55,11 @@
 - Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
 - Show that Sylow $p_i\dash$subgroups $S_{p_1}, S_{p_2}$ for distinct primes $p_1\neq p_2$ intersect trivially.
 
+### Specific Groups
+
+- Show that the center of $S_3$ is trivial.
+- Show that $\Aut(S_3) = \Inn(S_3)$
+
 ### Classification
 
 10. Show that no group of order 36 is simple.
