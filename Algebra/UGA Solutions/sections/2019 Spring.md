@@ -157,18 +157,17 @@ Strategy: Burnside.
 $$
 \abs{X / G} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
 $$
-
-We can rearrange Burnside's formula to obtain
+- Rearrange and use definition:
 $$
-\abs{X/G} \abs{G}
-= n \abs{G}
+n \abs{G}
+= \abs{X/G} \abs{G}
 = \sum _ { g \in G } \left| X ^ { g } \right|
 $$
 
 and so
 \begin{align*}
 P([g, h] = 1)
-&= \frac{\abs{\theset{(g,h) \suchthat [g,h] = 1}}}{\abs{G}^2} \\ \\
+&= \frac{\abs{\theset{(g,h) \in G\cross G \suchthat [g,h] = 1}}}{\abs{G}^2} \\ \\
 &= \frac{\sum _ { g \in G } \left| X ^ { g } \right|}{\abs{G}^2} \\
 &= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} \\
 &= \frac{n \abs{G}}{\abs{G}^2} \\
