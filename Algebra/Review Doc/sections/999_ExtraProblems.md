@@ -80,6 +80,8 @@
 - Show that $\Out(A_4)$ is nontrivial.
 - Show that an $m\dash$cycle is an odd permutation iff $m$ is an even number.
 - Show that a permutation is odd iff it has an odd number of even cycles.
+- Show that the center of $S_n$ for $n\geq 4$ is nontrivial.
+- Show that disjoint cycles commute.
 
 ### Classification
 
