@@ -17,6 +17,8 @@ Concepts Used:
     &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
     .\end{align*}
 
+- Every group of order $p^2$ is abelian.
+
 ### a
 
 Strategy: get $p$ to divide $\abs{Z(G)}$.
@@ -57,11 +59,8 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
   - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus{5, 25} \implies n_7 = 1$
 
 - By recognition of direct products, $G = S_5 \cross S_7$
-
-
-By Sylow, we have $n_5 = 1$ and $n_7=1$, so both $P_5, P_7 \normal G$, and by recognition of direct products we have $G \cong P_5 \cross P_7$.
-
-Since the sizes of both of these groups are $p^2$ for a prime, by (b) they are abelian, and the direct product of abelian groups is again abelian.
+- $S_5, S_7$ are abelian since they are groups of order $p^2$.
+- The direct product of abelian groups is abelian.
 
 ### d
 
