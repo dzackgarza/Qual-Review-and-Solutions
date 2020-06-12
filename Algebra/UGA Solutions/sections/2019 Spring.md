@@ -124,16 +124,14 @@ $\qed$
 
 ## 4 \label{problem:session_1_2_4_soln}
 
-> - Notation: $X/G$ is the set of $G\dash$orbits
-> - Notation: $X^g = \theset{x\in x\suchthat g\actson x = x}$
-> - Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+Concepts Used:
+
+- Notation: $X/G$ is the set of $G\dash$orbits
+- Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
+- Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
 
 ### a
 
-Set $n$ be the number of conjugacy classes, we want to show 
-$$
-P([g, h] = 1) = \frac n {\abs G}
-$$
 
 Strategy: Burnside.
 
@@ -141,10 +139,12 @@ Strategy: Burnside.
 
 - Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
   - Define and note: 
-    $$
+    \begin{align*}
     A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
-    .$$
+    .\end{align*}
 
+- Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
+ 
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
   - What are the orbits? 
