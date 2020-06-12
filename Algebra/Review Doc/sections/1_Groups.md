@@ -362,7 +362,7 @@ Some useful facts:
 
 ### Sylow 1 (Cauchy for Prime Powers)
 
-Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$.
+Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
 \begin{align*}
 \forall p^n \text{ dividing } \abs{G} \quad \text{ there exists a subgroup of size } p^n
