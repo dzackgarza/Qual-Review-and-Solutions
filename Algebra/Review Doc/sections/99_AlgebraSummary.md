@@ -138,15 +138,6 @@ Chapters 1-9 of Dummit and Foote
   - Facts:
     - $H_G \unlhd G$ and is an idempotent operation
 
-### Inner Automorphisms of a Group
-
-  - $Inn(G)  =\{ \phi_g \in Aut(G) : \phi_g(x) = gxg^{-1} \}$
-
-  - Also consider the map $$\psi: G \rightarrow Aut(G) \\ g \mapsto (\lambda: x \mapsto gxg^{-1})$$
-
-    Then $\text{im}\psi = Inn(G), \text{ker}\psi = Z(G)$
-
-
 
 ### **Characteristic** subgroup
 
