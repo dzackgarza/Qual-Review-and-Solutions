@@ -6,15 +6,15 @@
 ## Big List of Notation
 
 \begin{align*}
-C(x) 			=       &&  \theset{g\in G \mid gxg^{-1} = x}                 &&  \subseteq G       &&  \text{Centralizer} \\
-C_G(h) 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
+C_G(x) 			=       &&  \theset{g\in G \mid gxg^{-1} = x}                 &&  \subseteq G       &&  \text{Centralizer} \\
+? 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
 \OO_x, G\cdot x 			=       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  \text{Orbit} \\
-\stab_G(x),\stab_G(x),  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
-X_{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && \text{Fixed Points} \\
+\stab_G(x),  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
+X^{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && \text{Fixed Points} \\
 Z(G) 			=       &&  \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x} &&  \subseteq G       &&  \text{Center} \\
+N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  \text{Normalizer} \\
 \mathrm{Inn}(G) = &&  \theset{\phi_g(x) = gxg^{-1} }                 &&  \subseteq \Aut(G) &&  \text{Inner Aut.} \\
 \mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  \text{Outer Aut.} \\
-N(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  \text{Normalizer}
 \end{align*}
 
 ## Basics
