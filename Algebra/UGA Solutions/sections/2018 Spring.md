@@ -59,7 +59,11 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
   - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus{5, 25} \implies n_7 = 1$
 
 - By recognition of direct products, $G = S_5 \cross S_7$
-- $S_5, S_7$ are abelian since they are groups of order $p^2$.
+  - By above, $S_5, S_7\normal G$
+  - Check $S_5\intersect S_7 = \theset{e}$ since they have coprime order.
+  - Check $S_5S_7 = G$ since $\abs{S_5 S_7} = 5^2 7^2 = \abs{G}$
+
+- By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
 - The direct product of abelian groups is abelian.
 
 ### d
