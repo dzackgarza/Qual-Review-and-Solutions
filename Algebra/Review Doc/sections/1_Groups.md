@@ -221,17 +221,20 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 Definition (Group Action)
 : An action of $G$ on $X$ is a group morphism
   \begin{align*}
-  \phi:G \times X \rightarrow X \\ 
-  (g,x) \mapsto g\cdot x
-  .\end{align*}
+  \phi:G \times X &\rightarrow X \\ 
+  (g,x) &\mapsto g\cdot x
+  \end{align*}
+  or equivalently
+  \begin{align*}
+  \phi: G &\to \aut(X) \\
+  g \mapsto (x \mapsto \phi_g(x) \definedas g\cdot x)
+  \end{align*}
+  satisfying
   
-    which gives rise to a function $$\phi_g: X \rightarrow X \\ x \mapsto g\sim x$$
-    (which is a bijection)
-    where $\sim$ denotes a group element acting on a set element, and $\forall x\in X$,
-    - $e\sim x = x$
-    - $(gh) \sim x = g \sim (h \sim x)$
-  - Equivalently, a function $$\psi: G \rightarrow Sym(X) \\ g \mapsto \phi_g$$
-    - $$\text{ker}\psi = \bigcap_{x\in X} G_x$$ (intersection of all stabilizers)
+  - $e\sim x = x$
+  - $(gh) \sim x = g \sim (h \sim x)$
+- Equivalently, a function $$\psi: G \rightarrow Sym(X) \\ g \mapsto \phi_g$$
+  - $$\text{ker}\psi = \bigcap_{x\in X} G_x$$ (intersection of all stabilizers)
  
 **Notation:**
 For a group $G$ acting on a set $X$,
