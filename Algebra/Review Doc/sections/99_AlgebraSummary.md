@@ -120,7 +120,6 @@ Chapters 1-9 of Dummit and Foote
 
   - $$N_G(H) = \{ g\in G : gHg^{-1} = H \}$$
 
-  - Differs from centralizer; can have $gh = h'g$
   - Facts:
     - $C_G(H) \subseteq N_G(H) \leq G$
     - $N_G(H) / C_G(H) \cong A \leq Aut(H)$
