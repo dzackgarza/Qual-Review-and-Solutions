@@ -60,10 +60,12 @@ $\qed$
   - Fix $x\in X\setminus A$.
   - Since $X$ is Hausdorff, for every $y\in A$ we can find $U_y \ni y$ and $V_x(y) \ni x$ depending on $y$ such that $U_x(y) \intersect U_y = \emptyset$.
   - Then $\theset{U_y \suchthat y\in A} \covers A$, and by compactness of $A$ there is a finite subcover corresponding to a finite collection $\theset{y_1, \cdots, y_n}$.
-  - Set $U = \union U_{y_i}$ and $V = \intersect V_x(y_i)$; 
+  - **Magic Step**: set $U = \union U_{y_i}$ and $V = \intersect V_x(y_i)$; 
     - Note $A\subset U$ and $x\in V$
     - Note $U\intersect V = \emptyset$.
   - Done: for every $x\in X\setminus A$, we have found an open set $V\ni x$ such that $V\intersect A = \emptyset$, so $x$ is an interior point and a set is open iff every point is an interior point.
+
+ ![](figures/image_2020-06-11-20-14-26.png) 
 
 4. \hyperref[problem:continuous_bijection_hausdorff]{Problem Statement} \label{problem:continuous_bijection_hausdorff_soln}
 
