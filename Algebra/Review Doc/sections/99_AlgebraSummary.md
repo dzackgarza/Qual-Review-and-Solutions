@@ -144,17 +144,6 @@ Chapters 1-9 of Dummit and Foote
   - Equivalently, $$H^G = \bigcap \{ N: H \leq N \unlhd G \}$$
     - (The smallest normal subgroup of $G$ containing $H$)
 
-
-### Orbit of an Element of a Set 
-
-\begin{align*}
-\mathcal{O}_x = \{ g \cdot x \suchthat x\in X  \} = \bigcup_{g\in G} \{g \cdot x \}
-.\end{align*}
-
-  - The set of all orbits is denoted $X/G = \{\mathcal{O}_x \suchthat x\in X\}$
-  - Partitions $X$ according to the equivalence relation $x \cong y \iff \exists g\in G : g\cdot x = y$
-  - $G$ acts transitively on $X$ if restricted to any single orbit
-
 ### Automorphisms of a group
 
   - $Aut(G) = \{ \phi : G \rightarrow G : \text{$\phi$ is an isomorphism}\}$

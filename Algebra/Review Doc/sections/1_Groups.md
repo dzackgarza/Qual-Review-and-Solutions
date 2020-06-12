@@ -238,6 +238,7 @@ Note that $\ker \psi = \bigcap_{x\in X} G_x$ is the intersection of all stabiliz
 
 Definition (Transitive)
 : A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
+  Equivalently, the action has a single orbit.
  
 **Notation:**
 For a group $G$ acting on a set $X$,
@@ -249,6 +250,8 @@ For a group $G$ acting on a set $X$,
 - $X/G \subset \mathcal P(X)$ is the set of orbits
 
 - $X^g = \theset{x\in X \suchthat g\actson x = x} \subseteq X$ are the fixed points
+
+Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 
 **Orbit-Stabilizer**:
 $$
