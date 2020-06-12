@@ -16,6 +16,8 @@
 15. Show that the order of any element in a group divides the order of the group.
 16. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
 17. Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
+18. Show that $G/N$ is abelian iff $[G, G] \leq N$.
+19. Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$
 
 ### Primes in Group Theory
 

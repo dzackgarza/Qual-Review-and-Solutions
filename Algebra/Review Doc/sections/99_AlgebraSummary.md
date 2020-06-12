@@ -98,8 +98,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Misc Results
 
-- $G/N$ is abelian $\iff$ $[G, G] \leq N$
-- $HK$ is not always a subgroup - see conditions in 2nd Isomorphism theorem'
 - $H \unlhd G, K \unlhd G$ and $H \intersect K = e \Rightarrow hk =kh \forall h\in H, \in K$
   - Normal subgroups with trivial intersection commute
 - $H~\text{char}~G \Rightarrow H \unlhd G$
