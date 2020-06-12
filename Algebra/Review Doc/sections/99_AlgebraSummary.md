@@ -154,16 +154,12 @@ Chapters 1-9 of Dummit and Foote
     - $(gh) \sim x = g \sim (h \sim x)$
   - Equivalently, a function $$\psi: G \rightarrow Sym(X) \\ g \mapsto \phi_g$$
     - $$\text{ker}\psi = \bigcap_{x\in X} G_x$$ (intersection of all stabilizers)
+  
   - Interesting actions:
     - Left multiplication of $G$ on $G$: $$ \phi: G \ \rightarrow G \rightarrow G \\ \qquad g \mapsto \phi_g: G \rightarrow G \\ \qquad \qquad\qquad h \mapsto gh$$
       - $\mathcal{O}_x = G$ (transitive)
       - $G_x = e$
-    - $G$ acting via conjugation on itself:
-      $$\phi: G \rightarrow G \rightarrow G \\ \qquad g \mapsto \psi_g : G\rightarrow G \\ \qquad \qquad \qquad h \mapsto ghg^{-1}$$
-      - A common notation is $x^g = g^{-1}xg$ which obeys $(x^g)^h = x^{gh}$
-      - $\mathcal{O}_x = [x]$ (Conjugacy classes, so not generally transitive)
-      - $G_x = \{g\in G : gxg^{-1} = g\}= C_G(x)$
-    - $G$ acting on $S = \{ H : H \leq G\}$ via conjugation:
+     - $G$ acting on $S = \{ H : H \leq G\}$ via conjugation:
       - $$\phi :G\rightarrow S \rightarrow S \\ \qquad g \mapsto \psi_g: S \rightarrow S \\\qquad\qquad\qquad H \mapsto gHg^{-1}$$
       - $\mathcal{O}_H = [H] = \{ gHg^{-1} : g\in G\}$, conjugate subgroups of $H$
       - $G_x = N_G(H) =\{ g\in G : gHg^{-1} = H\}$

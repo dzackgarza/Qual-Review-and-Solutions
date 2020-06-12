@@ -242,9 +242,9 @@ $$
 - The stabilizer $G_x$ is only the identity.
 - The fixed points $X^g$ are only the identity.
 
-1. Let $G$ act on itself by conjugation.
+1. Let $G$ act on *itself* by conjugation.
 
-- $G \cdot x$ is the **conjugacy class** of $x$
+- $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
 
 - $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
 
@@ -258,17 +258,17 @@ $$
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: Z(x_i)]
 $$
 
-1. Let $G$ act on $S$, its set of *subgroups*, by conjugation.
+1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
 
 - $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
 
 - $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
 
-- $S^G$ is the set of **normal subgroups** of $G$
+- $X^g$ is the set of **normal subgroups** of $G$
 
 > Corollary: Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
 
-1. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left-multiplication.
+1. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
 
 - $G\cdot gH = G/H$, i.e. this is a *transitive* action.
 
