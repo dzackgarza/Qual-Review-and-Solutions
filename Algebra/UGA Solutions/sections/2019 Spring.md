@@ -139,6 +139,8 @@ Strategy: Burnside.
 
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
+- Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
+
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
   - What are the orbits? 
@@ -166,7 +168,8 @@ $$
 
 and so
 \begin{align*}
-P([g, h] = 1)
+P(A)
+&= {\abs A \over \abs \Omega} \\
 &= \frac{\abs{\theset{(g,h) \in G\cross G \suchthat [g,h] = 1}}}{\abs{G}^2} \\ \\
 &= \frac{\sum _ { g \in G } \left| X ^ { g } \right|}{\abs{G}^2} \\
 &= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} \\
