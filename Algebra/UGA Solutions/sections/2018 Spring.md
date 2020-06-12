@@ -9,6 +9,8 @@ Concepts Used:
 
 ### a
 
+Strategy: get $p$ to divide $\abs{Z(G)}$.
+
 - Apply the class equation:
 \begin{align*}
 \abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
