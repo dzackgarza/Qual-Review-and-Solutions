@@ -118,6 +118,7 @@
 
 - Show that $N_G(H) / C_G(H) \cong A \leq Aut(H)$
 
+- Show that if $\abs{G} = 12$ and has a normal subgroup of order 4, then $G \cong A_4$.
 
 
 ### Nonstandard Topics
