@@ -475,10 +475,15 @@ Corollary
 
 Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 
+1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
+2. If $K\normal G$ then $K/N \normal G/N$.
+3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
+3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
+4. If $K\normal G$, then we have cancellation:
+\begin{align*}
+\frac{G/N}{K/N} \cong \frac{G}{K}
+.\end{align*}
 
-1. $\frac{G/H}{G/K} \cong \frac{G}{K}$
-
-> Note: for this to make sense, we also have $G/K \normal G/H$.
 
 **The Correspondence Theorem / 4th Isomorphism Theorem:**
 Suppose $N \normal G$, then there exists a correspondence:
