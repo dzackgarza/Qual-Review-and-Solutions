@@ -174,6 +174,7 @@ Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ ch
 
 ## The Symmetric Group
 
+
 **Definitions:**
 
 - A cycle is **even** $\iff$ product of an *even* number of transpositions.
@@ -206,8 +207,9 @@ A_4 =
 (2,4,3)\}
 .\end{align*}
 
-**Lemmas:**
+Useful Facts:
 
+- Conjugacy classes are determined by cycle type
 - The transitive subgroups of $S_3$ are $S_3, A_3$
 - The transitive subgroups of $S_4$ are $S_4, A_4, D_4, \ZZ_2^2, \ZZ_4$.
 - $S_4$ has two normal subgroups: $A_4, \ZZ_2^2$.
@@ -218,6 +220,7 @@ A_4 =
 - $[A_4, A_4] \cong \ZZ_2^2$
 - $[A_n, A_n] = A_n$ for $n\geq 5$, so $A_{n\geq 5}$ is nonabelian.
 - $A_{n\geq 5}$ is *simple*.
+- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 
 ## Counting Theorems
 
