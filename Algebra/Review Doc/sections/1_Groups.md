@@ -59,29 +59,25 @@ Definition (Normalizer)
   - Equivalently, the stabilizer of $H$ under $G$ acting on its subgroups via conjugation
   
 
-**Lemma:**
-$C_G(H) \normal N_G(H)$
+Lemma
+: $C_G(H) \normal N_G(H)$
 
-**Lemma:**
-The size of the conjugacy class of $H$ is the index of its centralizer, i.e.
-$$
-\abs{\theset{gHg\inv \suchthat g\in G}} = [G: C_G(H)]
-.$$
+Lemma
+:   The size of the conjugacy class of $H$ is the index of its centralizer, i.e.
+    $$
+    \abs{\theset{gHg\inv \suchthat g\in G}} = [G: C_G(H)]
+    .$$
 
 > Proof: Orbit-stabilizer.
 
-**Lemma ("The Fundamental Theorem of Cosets")**:
-$$
-aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset
-$$
+Theorem (The Fundamental Theorem of Cosets)
+: $aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
 
-**Definition**:
-$[x, y] = x\inv y\inv xy$ is the **commutator**, and $[G, G] \definedas \theset{[x, y] \suchthat x,y\in G}$ is the **commutator subgroup**.
+Definition (Commutator)
+: $[x, y] = x\inv y\inv xy$ is the **commutator**, and $[G, G] \definedas \theset{[x, y] \suchthat x,y\in G}$ is the **commutator subgroup**.
 
-**Lemma:**
-$$
-[G,G] \leq H \text{ and } H \normal G \implies G/H \text{ is abelian. }
-$$
+Lemma
+: $[G,G] \leq H \text{ and } H \normal G \implies G/H$ is abelian.
 
 
 **Lemmas:**
