@@ -43,7 +43,7 @@ Definition
 Lemma (Characterization of Prime Subfields)
 : The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for some $p$.
 
-Proposition ("Freshman's Dream")
+Proposition (Freshman's Dream)
 : If $\ch k = p$ then $(a+b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$.
 
 Proof
@@ -94,45 +94,45 @@ Proof
 
 ## Galois Theory
 
-**Definition:**
-A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
+Definition
+:   A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 
-**Definition:**
-Let $L/k$ be a finite extension.
-Then TFAE:
+Definition
+:   Let $L/k$ be a finite extension.
+    Then TFAE:
 
-- $L/k$ is **normal**.
+    - $L/k$ is **normal**.
 
-- Every irreducible $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
-  - i.e. every polynomial splits into linear factors
+    - Every irreducible $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
+      - i.e. every polynomial splits into linear factors
 
-- Every embedding $\sigma: L \injects \overline k$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
+    - Every embedding $\sigma: L \injects \overline k$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
-- If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
+    - If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
 
-**Definition:**
-Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
-TFAE:
+Definition
+:   Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
+    TFAE:
 
-- $L/k$ is **separable**
-- $f$ has no repeated factors/roots
-- $\gcd(f, f') = 1$, i.e. $f$ is coprime to its derivative
-- $f' \not\equiv 0$
+    - $L/k$ is **separable**
+    - $f$ has no repeated factors/roots
+    - $\gcd(f, f') = 1$, i.e. $f$ is coprime to its derivative
+    - $f' \not\equiv 0$
 
-> **Lemma:**
-If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
+Lemma
+: If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 
-**Definition:**
-$\aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
+Definition
+: $\aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
 
-**Lemma:**
-If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
+Lemma
+: If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
 
-**Lemma:**
-$\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
+Lemma
+: $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 
-**Definition:**
-If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
+Definition
+: If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
 
 ### Lemmas About Towers
 
@@ -181,39 +181,39 @@ k
 
 - $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
 
-**Definition (Characterizations of Galois Extensions):**
-Let $L/k$ be a finite field extension.
-TFAE:
+Definition (Characterizations of Galois Extensions)
+:   Let $L/k$ be a finite field extension.
+    TFAE:
 
-- $L/k$ is **Galois**
-- $L/k$ is finite, normal, and separable.
-- $L/k$ is the splitting field of a separable polynomial
-- $\abs{\aut(L/k)} = [L: k]$
-- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
+    - $L/k$ is **Galois**
+    - $L/k$ is finite, normal, and separable.
+    - $L/k$ is the splitting field of a separable polynomial
+    - $\abs{\aut(L/k)} = [L: k]$
+    - The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 
-**Fundamental Theorem of Galois Theory:**
-Let $L/k$ be a Galois extension, then there is a correspondence:
-\begin{align*}
-\correspond{\text{Subgroups } H \leq \Gal(L/k)}
-&\iff
-\correspond{\text{Fields }  F \text{ such}\\ \text{that } L/F/k} \\
-H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
-\correspond{\Gal(L/F) \definedas \theset{ \sigma \in \Gal(L/k) \suchthat \sigma(F) = F}} &\leftarrow F
-.\end{align*}
+Theorem (Fundamental Theorem of Galois Theory)
+:   Let $L/k$ be a Galois extension, then there is a correspondence:
+    \begin{align*}
+    \correspond{\text{Subgroups } H \leq \Gal(L/k)}
+    &\iff
+    \correspond{\text{Fields }  F \text{ such}\\ \text{that } L/F/k} \\
+    H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
+    \correspond{\Gal(L/F) \definedas \theset{ \sigma \in \Gal(L/k) \suchthat \sigma(F) = F}} &\leftarrow F
+    .\end{align*}
 
-- This is contravariant with respect to subgroups/subfields.
+    - This is contravariant with respect to subgroups/subfields.
 
-- $[F: k] = [G: H]$, so degrees of extensions over the base field correspond to indices of subgroups.
+    - $[F: k] = [G: H]$, so degrees of extensions over the base field correspond to indices of subgroups.
 
-- $[K : F] = \abs{H}$
+    - $[K : F] = \abs{H}$
 
-- $L/F$ is Galois and $Gal(K/F) = H$
+    - $L/F$ is Galois and $Gal(K/F) = H$
 
-- $F/k$ is Galois $\iff H$ is normal, and $\Gal(F/k) = \Gal(L/k)/H$.
+    - $F/k$ is Galois $\iff H$ is normal, and $\Gal(F/k) = \Gal(L/k)/H$.
 
-- The compositum $F_1 F_2$ corresponds to $H_1 \intersect H_2$.
+    - The compositum $F_1 F_2$ corresponds to $H_1 \intersect H_2$.
 
-- The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
+    - The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
 
 ### Examples
 
@@ -233,33 +233,34 @@ $\Gal(\GF(p^n)/\FF_p) \cong \ZZ/(n)$, a cyclic group generated by powers of the 
 x &\mapsto x^p
 .\end{align*}
 
-**Lemma:**
-Every quadratic extension is Galois.
+Lemma
+: Every quadratic extension is Galois.
 
-**Lemma:**
-If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
+Lemma
+: If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
 
-> Corollary:
-> $n$ divides the order $\abs{ \Gal(K/\QQ)}$.
+Corollary
+: $n$ divides the order $\abs{ \Gal(K/\QQ)}$.
 
-**Definition:**
-TFAE
+Definition
+:   TFAE:
 
-- $k$ is a **perfect** field.
+    - $k$ is a **perfect** field.
 
-- Every irreducible polynomial $p\in k[x]$ is separable
+    - Every irreducible polynomial $p\in k[x]$ is separable
 
-- Every finite extension $F/k$ is separable.
+    - Every finite extension $F/k$ is separable.
 
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+    - If $\ch k > 0$, the Frobenius is an automorphism of $k$.
 
-**Theorem:**
+Theorem
+:   \hfill
 
-- If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
+    - If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
 
-- $k = \QQ, \FF_p$ are perfect, and any finite normal extension is Galois.
+    - $k = \QQ, \FF_p$ are perfect, and any finite normal extension is Galois.
 
-- Every splitting field of a polynomial over a perfect field is Galois.
+    - Every splitting field of a polynomial over a perfect field is Galois.
 
 Proposition (Composite Extensions)
 :   If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
@@ -279,7 +280,7 @@ Definition (Cyclotomic Polynomials)
     It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
 
 
-Proposition: 
+Proposition
 : $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 
 Proof

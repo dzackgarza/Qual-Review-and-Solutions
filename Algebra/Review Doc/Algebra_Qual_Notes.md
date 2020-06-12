@@ -11,9 +11,9 @@
 
 !include sections/3_Fields.md
 
-<!--!include sections/4_Modules.md-->
+!include sections/4_Modules.md
 
-<!--!include sections/999_ExtraProblems.md-->
+!include sections/999_ExtraProblems.md
 
-<!--!include sections/99_AlgebraSummary.md-->
+!include sections/99_AlgebraSummary.md
 
