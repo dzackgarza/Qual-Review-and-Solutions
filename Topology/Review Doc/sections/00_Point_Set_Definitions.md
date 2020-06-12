@@ -30,6 +30,9 @@
     
     That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X \subseteq \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
 
+- Covering:
+  A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
+  If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$
 
 - Locally compact
   For every $x\in X$, there exists a $K_x \ni x$ such that $K_x$ is compact.
