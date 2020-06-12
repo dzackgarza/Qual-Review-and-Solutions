@@ -5,16 +5,17 @@
 ### Basic Structure
 
 
-15. Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
-16. Show that the intersection of two subgroups is again a subgroup.
-17. Show that if $G \actson X$ is a group action, then the stabilizer $G_x$ of a point is a subgroup.
-3. Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
-4. Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
-9. Show that every normal subgroup of $G$ is contained in $Z(G)$.
-13. Show that $\abs{G}/\abs{H} = [G: H]$.
-14. Show that the order of any element in a group divides the order of the group.
-15. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
-16. Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
+15. Show that any cyclic group is abelian.
+16. Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
+17. Show that the intersection of two subgroups is again a subgroup.
+18. Show that if $G \actson X$ is a group action, then the stabilizer $G_x$ of a point is a subgroup.
+4. Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
+5. Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
+10. Show that every normal subgroup of $G$ is contained in $Z(G)$.
+14. Show that $\abs{G}/\abs{H} = [G: H]$.
+15. Show that the order of any element in a group divides the order of the group.
+16. Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
+17. Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
 
 ### Primes in Group Theory
 
@@ -70,6 +71,12 @@
 - Show that $Z(G) = \bigcap_{a\in G} C_G(a)$.
 
 - Show that the centralizer $G_G(H)$ of a subgroup is again a subgroup.
+
+- Show that $C_G(H) \normal N_G(H)$ is a normal subgroup.
+
+- Show that $C_G(G) = Z(G)$.
+
+- Show that for $H\leq G$, $C_H(x) = H \intersect C_G(x)$.
 
 ## Ring Theory
 

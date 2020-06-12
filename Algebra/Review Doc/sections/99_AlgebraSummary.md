@@ -95,27 +95,7 @@ Chapters 1-9 of Dummit and Foote
   - $\left\langle A\right\rangle  = \{a_1^{\pm 1},a_2^{\pm 1}, \cdots a_2^{\pm 1} : a_i \in A, n \in \mathbb{N}\}$
   - Equivalently, the intersection of all $H$ such that $A \subseteq H \leq G$
 
-### **Free Group** on a set $X$
-
-  - Equivalently, words over the alphabet $X$ made into a group via concatenation
-
-### **Centralizer** of an element or a subgroup
-
-  - $C_G(a) = \{ g\in G : ga = ag \}$
-  - $$C_G(H) = \{ g\in G : \forall h\in H, gh = hg \} = \bigcap_{h\in H} C_G(h)$$
-    - Note - requires the same $g$ on both sides!
-  - Facts:
-    - $C_G(H) \leq G$
-    - $C_G(H) \unlhd N_G(H)$
-    - $C_G(G) = Z(G)$
-    - $C_H(a) = H \intersect C_G(a)$
-
-
 ## Structural Results
-
-- Cyclic $\Rightarrow$ abelian
-- $G/Z(G)$ cyclic $\Rightarrow G$ is abelian
-- Intersections of subgroups are also subgroups
 
 ### Isomorphisms Theorems
 
