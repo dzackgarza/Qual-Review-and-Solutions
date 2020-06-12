@@ -1,4 +1,4 @@
-# Preface
+# Problem Session Links
 
 Problem Session 1: Group Theory
 
