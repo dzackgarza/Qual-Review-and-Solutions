@@ -6,7 +6,8 @@
 ## Big List of Notation
 
 \begin{align*}
-C_G(x) 			=       &&  \theset{g\in G \mid gxg^{-1} = x}                 &&  \subseteq G       &&  \text{Centralizer} \\
+C_G(x) 			=       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  \text{Centralizer (Element)} \\
+C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  \text{Centralizer (Subgroup)} \\
 ? 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
 \OO_x, G\cdot x 			=       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  \text{Orbit} \\
 \stab_G(x),  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
@@ -552,8 +553,8 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
       - Otherwise, a nontrivial semidirect product.
   
 
-**Definition:**
-A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
+Definition (Simple Groups)
+: A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
 
 > **Lemma:**
 > If $G$ is *not* simple, then for any $N\normal G$, it is the case that $G \cong E$ for an extension of the form $N\to E\to G/N$.
