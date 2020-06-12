@@ -332,9 +332,10 @@ $$
 > *Proof:* This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 
 Theorem (Burnside's Formula)
-$$
-\abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
-.$$
+:   \hfill
+    $$
+    \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
+    .$$
 
 
 ### Sylow Theorems
@@ -449,10 +450,14 @@ Theorem (Recognizing Semidirect Products)
 **Useful Facts**
 
 -  If $\sigma \in \Aut(H)$, then $N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H$.
-- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size $- $\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})$.
+
+- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size $\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})$.
+  
   - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
+
 - $\Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})$ where $\varphi$ is the totient function.
   - $\varphi(p^k) = p^{k-1}(p-1)$
+
 - If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.
 
 
