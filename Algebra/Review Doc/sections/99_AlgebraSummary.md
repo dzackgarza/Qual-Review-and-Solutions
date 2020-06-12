@@ -168,7 +168,7 @@ Chapters 1-9 of Dummit and Foote
       - $\mathcal{O}_H = [H] = \{ gHg^{-1} : g\in G\}$, conjugate subgroups of $H$
       - $G_x = N_G(H) =\{ g\in G : gHg^{-1} = H\}$
 
-### Transitivegroup actions
+### Transitive Group Actions
 
   - $\forall x,y \in X, \exists g\in G : g\sim x = y$
   - Equivalent, actions with a single orbit
@@ -183,11 +183,11 @@ Chapters 1-9 of Dummit and Foote
   - Partitions $X$ according to the equivalence relation $x \cong y \iff \exists g\in G : g\cdot x = y$
   - $G$ acts transitively on $X$ if restricted to any single orbit
 
-### **Automorphisms** of a group
+### Automorphisms of a group
 
   - $Aut(G) = \{ \phi : G \rightarrow G : \text{$\phi$ is an isomorphism}\}$
 
-### **Inner Automorphisms** of a group
+### Inner Automorphisms of a Group
 
   - $Inn(G)  =\{ \phi_g \in Aut(G) : \phi_g(x) = gxg^{-1} \}$
 
