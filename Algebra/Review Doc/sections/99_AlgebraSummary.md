@@ -90,12 +90,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Numeric Results
 
-### The class equation
-
-  - $$|G| = |Z(G)| + \sum_{a\in A} [G : C_G(a)]$$
-    - Where $A = \{a_1 , a_2, \dots ,a_n : a_1 \in [a_1], a_2\in [a_2], \dots\}$ is a set containing one element from each conjugacy class
-    - $[G: C_G(a)]$ is the number of elements in $[a]$
-    - Each element in $Z(G)$ has a singleton conjugacy class
 
 ### General facts
 

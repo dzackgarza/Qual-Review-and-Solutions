@@ -301,13 +301,17 @@ $$
 
 - $G^g$ (the fixed points) is the **center** $Z(G)$.
 
-> *Corollary:*
-> The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
->
-> *Corollary*: the **Class Equation**:
-$$
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: Z(x_i)]
-$$
+Corollary
+: The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
+
+
+Corollary (Class Equation)
+:   \hfill
+    $$
+    \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
+    $$
+
+    Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 
 1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
 
