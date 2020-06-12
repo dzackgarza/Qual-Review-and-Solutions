@@ -37,6 +37,12 @@
 8. Show that $p\dash$groups have nontrivial centers.
 9. Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
 
+### p-Groups
+
+- Let $O_P(G)$ be the intersection of all Sylow $p\dash$subgroups of $G$.
+  Show that $O_p(G) \normal G$, is maximal among all normal $p\dash$subgroups of $G$
+- Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
+
 ### Classification
 
 10. Show that no group of order 36 is simple.
