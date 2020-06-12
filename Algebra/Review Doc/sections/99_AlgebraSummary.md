@@ -93,9 +93,6 @@ Chapters 1-9 of Dummit and Foote
 
 ### General facts
 
-  - $|G| = p \Rightarrow G$ is cyclic
-  - $|G| = p^e \Rightarrow Z(G) \neq e$
-
 - $|G| = p^e$ (P-groups)
 
   - $Z(G) \neq \{e\}$ (Use class equation)
