@@ -95,25 +95,9 @@ Chapters 1-9 of Dummit and Foote
   - $\left\langle A\right\rangle  = \{a_1^{\pm 1},a_2^{\pm 1}, \cdots a_2^{\pm 1} : a_i \in A, n \in \mathbb{N}\}$
   - Equivalently, the intersection of all $H$ such that $A \subseteq H \leq G$
 
-## Structural Results
-
-### Isomorphisms Theorems
-
--*Third Isomorphism Theorem**
-
-- Conditions:
-  - $N \unlhd G, N \leq A \leq G$
-- Results:
-  - $A/N \leq G/N$
-    - Every subgroup of $G/N$ is of this form for *some* such $A$
-  - $$ \frac{G/N}{A/N} \cong \frac{G}{A}$$
-    - Cancel the $N$!
-- Corrolaries:
-  - $A \unlhd G \Rightarrow A/N \unlhd G/N$
-    - All normal subgroups of $G/N$ are of this form for some $A$.
-
 
 ## Misc Results
+
 - $G/N$ is abelian $\iff$ $[G, G] \leq N$
 - $HK$ is not always a subgroup - see conditions in 2nd Isomorphism theorem'
 - $H \unlhd G, K \unlhd G$ and $H \intersect K = e \Rightarrow hk =kh \forall h\in H, \in K$

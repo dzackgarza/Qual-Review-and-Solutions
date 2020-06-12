@@ -479,7 +479,7 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 2. If $K\normal G$ then $K/N \normal G/N$.
 3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
 3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
-4. If $K\normal G$, then we have cancellation:
+4. If $K\normal G$, then we can cancel normal subgroups:
 \begin{align*}
 \frac{G/N}{K/N} \cong \frac{G}{K}
 .\end{align*}
