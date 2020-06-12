@@ -415,13 +415,26 @@ Theorem (Fratini's Argument)
 Theorem (Recognizing Direct Products)
 :   We have $G \cong H \times K$ when
 
+    - $H, K \normal G$
+    
     - $G = HK$.
 
     - $H\intersect K = \theset{e} \subset G$
 
-    - $H, K \normal G$
+    > Note: can relax to $[h,k] = 1$ for all $h, k$.
 
-    > Can relax to only $H\normal G$ and $K\leq G$ to get a semidirect product instead
+
+Theorem (Recognizing Generalized Direct Products)
+:   We have $G = \prod_{i=1}^n H_i$ when
+
+    - $H_i \normal G$ for all $i$.
+    
+    - $G = H_1 \cdots H_n$
+
+    - $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
+
+> Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
+
 
 Theorem (Recognizing Semidirect Products)
 : We have $G = N \semidirect_\psi H$ when
@@ -435,6 +448,8 @@ Theorem (Recognizing Semidirect Products)
     \psi: H \to \Aut(N) \\
     h \mapsto h(\wait)h^{-1}
     .\end{align*}
+
+  > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
 
 **Useful Facts**
 
