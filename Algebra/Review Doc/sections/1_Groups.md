@@ -345,7 +345,7 @@ For any $p$, let $\mathrm{Syl}_p(G)$ be the set of Sylow$\dash p$ subgroups of $
 
 Write
 
-- $\abs{G} = p^n m$ where $(m, p) = 1$,
+- $\abs{G} = p^k m$ where $(p, m) = 1$,
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
@@ -362,11 +362,14 @@ Some useful facts:
 
 ### Sylow 1 (Cauchy for Prime Powers)
 
+Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$.
+
 \begin{align*}
 \forall p^n \text{ dividing } \abs{G} \quad \text{ there exists a subgroup of size } p^n
 .\end{align*}
 
 > If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
+
 > In particular, Sylow $p\dash$subgroups always exist.
 
 ### Sylow 2 (Sylows are Conjugate)
