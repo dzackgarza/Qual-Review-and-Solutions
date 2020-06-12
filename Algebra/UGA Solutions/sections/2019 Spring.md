@@ -140,6 +140,7 @@ Strategy: Burnside.
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
 - Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
+  - Set $A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1}$.
 
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
@@ -154,6 +155,8 @@ Strategy: Burnside.
     which are the elements of $G$ that commute with $g$.
 
 - Note $\abs{X/G} = n$, the number of conjugacy classes.
+
+- Note that $A
 
 - Apply Burnside
 $$
