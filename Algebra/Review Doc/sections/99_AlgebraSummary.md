@@ -129,16 +129,6 @@ Chapters 1-9 of Dummit and Foote
     - Given $H\subseteq G$, let $$S(H)= \bigcup_{g\in G} gHg^{-1}$$, so $|S(H)|$ is the number of conjugates to $H$. Then $$|S(H)| = [G : N_G(H)]$$
       - i.e. the number of subgroups conjugate to $H$ equals the index of the normalizer of $H$.
 
-### **Normal Core** of a subgroup
-
-  - $$H_G = \bigcap_{g\in G} gHg^{-1}$$
-  - Equivalently, $H_G = \left\langle  N: N \unlhd G ~\&~ N \leq H\right\rangle$
-    - Largest normal subgroup that contains $H$
-  - Equivalently, $H_G = \text{ker}\psi$ where $\psi: G \rightarrow Sym(G/H);~ g\sim(xH) =(gx)H$
-  - Facts:
-    - $H_G \unlhd G$ and is an idempotent operation
-
-
 ### **Characteristic** subgroup
 
   - $H~\text{char}~G \iff \forall \phi \in Aut(G), \phi(H) = H$
