@@ -38,6 +38,10 @@
 10. Show that no group of order 90 is simple.
 11. Show that all groups of order 45 are abelian.
 
+### Group Actions
+
+1. Show that the stabilizer of an element $G_x$ is a subgroup of $G$.
+2. Show that if $x, y$ are in the same orbit, then their stabilizers are conjugate.
 
 ### Series
 

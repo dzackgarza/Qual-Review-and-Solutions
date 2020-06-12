@@ -236,6 +236,12 @@ $$
 
 ### Examples of Orbit-Stabilizer
 
+1. Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
+
+- The orbit $G\cdot x = G$ is the entire group
+- The stabilizer $G_x$ is only the identity.
+- The fixed points $X^g$ are only the identity.
+
 1. Let $G$ act on itself by conjugation.
 
 - $G \cdot x$ is the **conjugacy class** of $x$
