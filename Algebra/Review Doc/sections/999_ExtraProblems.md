@@ -171,12 +171,11 @@ Basic Structure
 - Show that if an ideal $I\normal R$ contains a unit then $I = R$.
 
 Ideals
-
+- Show that every proper ideal is contained in a maximal ideal
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
 - Show that intersections, products, and sums of ideals are ideals.
 - Show that the union of two ideals need not be an ideal.
 - Show that every ring has a proper maximal ideal.
-- Show that every proper ideal is contained in a maximal ideal
 - Show that $I\normal R$ is maximal iff $R/I$ is a field.
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
