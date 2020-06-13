@@ -622,6 +622,12 @@ Definition (Nilpotent)
 
 > Moral: the adjoint map is nilpotent.
 
+Theorem
+: A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
+
+Theorem
+: A group $G$ is nilpotent iff every maximal subgroup is normal.
+
 **Lemma:**
 For $G$ a finite group, TFAE:
 
