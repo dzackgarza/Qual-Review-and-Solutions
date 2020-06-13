@@ -107,7 +107,7 @@ Definition (Invariant Factor Decomposition)
 *Example:*
 Given the invariant factor decomposition
 \begin{align*}
-G = {\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{3}\times\mathbb{Z}_{3}\times\mathbb{Z}_{25}},
+G = {\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{3}\times\mathbb{Z}_{3}\times\mathbb{Z}_{5^2}}
 .\end{align*}
 
 | $p = 2$  | $p= 3$  | $p =5$ |
@@ -130,15 +130,15 @@ $\implies n_{m-2} = 2$
 
 and thus
 \begin{align*}
-G \cong \ZZ/(2) \oplus \ZZ/(3\cdot 2) \oplus \ZZ/(5^2 \cdot 3 \cdot 2)
+G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 .\end{align*}
 
 **Classifying Abelian Groups of a Given Order:**
 
 
-> Let $p(x)$ be the integer partition function.
->
-> Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
+Let $p(x)$ be the integer partition function.
+
+Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
 
 Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
 
