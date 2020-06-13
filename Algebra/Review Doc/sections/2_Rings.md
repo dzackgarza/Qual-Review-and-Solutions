@@ -3,8 +3,6 @@
 ## Definitions
 
 
-Theorem (Krull)
-: Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 
 Definition (Simple Ring)
 : A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
@@ -30,6 +28,17 @@ Examples:
 
 Definition (Max Spectrum)
 : $\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+
+Definition (Nilradical)
+: $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
+
+Definition (Jacobson Radical)
+: The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
+  $$
+  \jacobson(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
+  $$
+Definition (Semisimple)
+: A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 
 
 
@@ -63,22 +72,22 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 -  A ring that is not an integral domain: $\ZZ/(4)$
    - *Proof*: $2 \mod 4$ is a zero divisor.
 
-**Lemma:**
-In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
+Lemma
+: In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 
-> Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
->
-> *Example of a prime that is not irreducible:*
-> $x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
->
-> *Example of an irreducible that is not prime:*
-> $3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
 
-**Lemma:**
-If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+*Example of a prime that is not irreducible:*
+$x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
 
-Definition (Semisimple)
-: A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
+*Example of an irreducible that is not prime:*
+$3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+
+Lemma
+: If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+
+Theorem (Krull)
+: Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 
 Theorem (Artin-Wedderubrn)
 : If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
@@ -86,64 +95,39 @@ Theorem (Artin-Wedderubrn)
 Corollary
 : If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 
-## Ideals
-
-### Maximal and Prime Ideals
-
-
-### Nilradical and Jacobson Radical
-
-Definition (Nilradical)
-: $\nilrad \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
-
-Definition (Jacobson Radical)
-: The **Jacobson radical** $\jacobsonrad$ is the intersection of all **maximal** ideals, i.e.
-$$
-\jacobson(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
-$$
-
-Lemma
-: $\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)$.
-
-> *Proof:*
-> Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
-
 ### Zorn's Lemma
 
-**Lemma**:
-A field has no nontrivial proper ideals.
+Lemma
+: Fields are simple rings. 
 
-**Lemma:**
-If $I\normal R$ is a proper ideal $\iff I$ contains no units.
+Lemma
+: If $I\normal R$ is a proper ideal $\iff I$ contains no units.
 
-> *Proof:*
-> $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
+Proof
+: $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
 
-**Lemma:**
-If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
+Lemma
+: If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
 
-**Example Application of Zorn's Lemma:**
+**Example Application:**
 Every proper ideal is contained in a maximal ideal.
 
-> *Proof:*
-> Let $0 < I < R$ be a proper ideal, and consider the set
-$$
-S = \theset{J \suchthat I   \subseteq J < R}
-.$$
->
-> Note $I\in S$, so $S$ is nonempty.
-> The claim is that $S$ contains a maximal element $M$.
->
-> $S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
->
-> Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat C = \union_i C_i$.
->
-> **$\hat C$ is an upper bound for $C$:**
->
-> This follows because every $C_i \subseteq \hat C$.
->
-> **$\hat C$ is in $S$:**
->
-> Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
->
-> $\qed$
+Proof
+:   Let $0 < I < R$ be a proper ideal, and consider the set
+    $$
+    S = \theset{J \suchthat I   \subseteq J < R}
+    .$$
+
+    Note $I\in S$, so $S$ is nonempty.
+    The claim is that $S$ contains a maximal element $M$.
+
+    $S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
+
+    Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat C = \union_i C_i$.
+
+    **$\hat C$ is an upper bound for $C$:**
+    This follows because every $C_i \subseteq \hat C$.
+
+    **$\hat C$ is in $S$:**
+    Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
+

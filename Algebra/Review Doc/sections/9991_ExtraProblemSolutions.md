@@ -23,7 +23,7 @@ Proof
 *Counterexample*: $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
 
 Lemma
-: The nilradical is the intersection of all **prime** ideals, i.e.
+: The nilradical is the intersection of all prime ideals, i.e.
   $$
   \mathfrak{N}(R) = \intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
   $$
@@ -35,5 +35,23 @@ Proof
     $\mathfrak{N}^c \subseteq \union \mathfrak{p}^c$:
     Define $S = \theset{I\normal R \suchthat a^n\not\in I \text{ for any } n}$.
     Then apply Zorn's lemma to get a maximal ideal $\mm$, and maximal $\implies$ prime.
+
+Lemma
+: $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
+
+Proof
+:   \hfill
+    \begin{align*}
+    a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
+    &\implies a^n \in \mathfrak N(R) \\
+    &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
+    &\implies a\in \mathfrak N(R)
+    .\end{align*}
+
+Lemma
+: $\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)$.
+
+Proof
+: Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
 
 

@@ -76,8 +76,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Prime ideals
 
-- $I$ prime $\iff R/I$ an integral domain,
-- (maximal $\implies$ prime)
 - $\text{rad}(I^n) = I$
 
 ## Radicals

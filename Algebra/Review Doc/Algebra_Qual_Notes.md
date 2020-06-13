@@ -13,6 +13,8 @@
 
 !include sections/4_Modules.md
 
+!include sections/9991_ExtraProblemSolutions.md
+
 !include sections/999_ExtraProblems.md
 
 !include sections/99_AlgebraSummary.md
