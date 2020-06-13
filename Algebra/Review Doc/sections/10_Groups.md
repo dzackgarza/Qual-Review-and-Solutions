@@ -480,36 +480,34 @@ Theorem (Recognizing Semidirect Products)
 Lemma
 : If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
 
-**Diamond Theorem / 2nd Isomorphism Theorem**:
+Theorem (Diamond Theorem / 2nd Isomorphism Theorem)
 
-If $S \leq G$ and $N \normal G$, then
-$$
-\frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
-$$
+:   If $S \leq G$ and $N \normal G$, then
+    $$
+    \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
+    $$
+    > Note: for this to make sense, we also have
+    >
+    > - $SN \leq G$,
+    > - $S\intersect N \normal S$,
 
-Mnemonic:
-![Image](figures/2020-01-01-15-20-27.png)\
-
-> Note: for this to make sense, we also have
->
-> - $SN \leq G$,
-> - $S\intersect N \normal S$,
+    ![Image](figures/2020-01-01-15-20-27.png)
 
 Corollary
-: If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+:   If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
 
-**Cancellation / 3rd Isomorphism Theorem**
+Theorem (Cancellation / 3rd Isomorphism Theorem)
 
-Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
+:   Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 
-1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
-2. If $K\normal G$ then $K/N \normal G/N$.
-3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
-3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
-4. If $K\normal G$, then we can cancel normal subgroups:
-\begin{align*}
-\frac{G/N}{K/N} \cong \frac{G}{K}
-.\end{align*}
+    1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
+    2. If $K\normal G$ then $K/N \normal G/N$.
+    3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
+    3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
+    4. If $K\normal G$, then we can cancel normal subgroups:
+    \begin{align*}
+    \frac{G/N}{K/N} \cong \frac{G}{K}
+    .\end{align*}
 
 
 Theorem (The Correspondence Theorem / 4th Isomorphism Theorem)
@@ -549,9 +547,6 @@ Definition (p-groups)
 
 Definition (Normalizers Grow)
 : If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
-
-
-**Facts about other special order groups:**
 
 
 ## Classification of Groups
