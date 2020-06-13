@@ -30,12 +30,13 @@ Definition (Normal Closure of a subgroup)
 Definition (Normal Core of a subgroup)
 :   The largest normal subgroup of $G$ containing $H$:
     \begin{align*}
-    H_G = \bigcap_{g\in G} gHg^{-1} = \left\langle  N: N \unlhd G ~\&~ N \leq H\right\rangle
+    H_G = \bigcap_{g\in G} gHg^{-1} = \left\langle  N: N \unlhd G ~\&~ N \leq H\right\rangle = \ker \psi
     .\end{align*}    
-
-    - Equivalently, $H_G = \text{ker}\psi$ where $\psi: G \rightarrow Sym(G/H);~ g\sim(xH) =(gx)H$
-    - Facts:
-      - $H_G \unlhd G$ and is an idempotent operation
+    where
+    \begin{align*}
+    \psi: G &\to \aut(G/H) \\
+    g\mapsto (xH\mapsto gxH)
+    .\end{align*}
 
 Definition (Characteristic subgroup)
 :   \hfill
