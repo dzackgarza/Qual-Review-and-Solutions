@@ -189,7 +189,7 @@ Ideals
 - Show that every prime ideal is radical.
 - Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
-- Show that every prime ideal is primary.
+- Show that if $\spec(R) \subseteq \maxspec(R)$ then $R$ is a UFD.
 
 Characterizing Certain Ideals
 
@@ -203,6 +203,7 @@ Misc
 - Show that $R$ is a local ring iff for every $x\in R$, either $x$ or $1-x$ is a unit.
 - Show that if $R$ is a local ring then $R\setminus R\units$ is a proper ideal that is contained in $\jacobsonrad(R)$.
 - Show that if $R\neq 0$ is a ring in which every non-unit is nilpotent then $R$ is local.
+- Show that every prime ideal is primary.
 
 ## Field Theory
 
