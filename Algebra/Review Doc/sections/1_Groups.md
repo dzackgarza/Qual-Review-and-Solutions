@@ -604,6 +604,9 @@ Definition (Lower Central Series)
 
 Definition (Upper Central Series)
 : Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.
+  Then $Z_0 \leq Z_1 \leq \cdots$ is the *upper central series* of $G$.
+
+> Mnemonic: "upper" because the chain is ascending
 
 Definition (Derived Series)
 : Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
