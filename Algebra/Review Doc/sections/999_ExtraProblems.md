@@ -190,6 +190,7 @@ Ideals
 - Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
 - Show that if $\spec(R) \subseteq \maxspec(R)$ then $R$ is a UFD.
+- Show that if $R$ is Noetherian then every ideal is finitely generated.
 
 Characterizing Certain Ideals
 
