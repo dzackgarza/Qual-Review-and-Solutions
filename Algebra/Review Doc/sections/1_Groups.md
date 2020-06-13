@@ -600,6 +600,11 @@ Lemma
 Definition (Lower Central Series)
 : Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *lower central series* of $G$.
 
+> Mnemonic: "lower" because the chain is descending.
+
+Definition (Upper Central Series)
+: Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.
+
 Definition (Derived Series)
 : Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
 
@@ -611,6 +616,9 @@ Definition (Solvable)
 
 Theorem
 : A group $G$ is solvable iff its derived series terminates.
+
+Theorem
+: If $n\geq 4$ then $S_n$ is solvable.
 
 **Lemmas:**
 
