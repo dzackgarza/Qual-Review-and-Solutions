@@ -4,7 +4,6 @@
 
 ### Basic Structure
 
-
 - Show that any cyclic group is abelian.
 - Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
 - Show that the intersection of two subgroups is again a subgroup.
@@ -77,7 +76,7 @@
 - Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
 - Show that Sylow $p_i\dash$subgroups $S_{p_1}, S_{p_2}$ for distinct primes $p_1\neq p_2$ intersect trivially.
 
-### Specific Groups
+### Symmetric, Alternating, Dihedral Groups 
 
 - Show that the center of $S_3$ is trivial.
 - Show that $\Aut(S_3) = \Inn(S_3) \cong S_3$.
