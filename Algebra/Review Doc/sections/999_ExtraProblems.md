@@ -13,7 +13,7 @@
 - Show that every normal subgroup of $G$ is contained in $Z(G)$.
 - Show that $\abs{G}/\abs{H} = [G: H]$.
 - Show that the order of any element in a group divides the order of the group.
-- Show that $\phi(n) = n \prod{p\mid n}\qty{1 - {1\over p}}$.
+- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
 - Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
 - Show that $G/N$ is abelian iff $[G, G] \leq N$.
 - Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
@@ -106,7 +106,6 @@
 
 ### Classification
 
-
 - Show that no group of order 36 is simple.
 - Show that no group of order 90 is simple.
 - Show that all groups of order 45 are abelian.
@@ -120,7 +119,7 @@
 - Show that if $x, y$ are in the same orbit, then their stabilizers are conjugate.
 - Show that the stabilizer of an element need not be a normal subgroup?
 
-### Series
+### Series of Groups
 
 - Show that $A_n$ is simple for $n\geq 5$
 - Give a necessary and sufficient condition for a cyclic group to be solvable.
