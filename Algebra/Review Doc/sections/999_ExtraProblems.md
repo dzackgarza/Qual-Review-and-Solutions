@@ -175,6 +175,9 @@
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
+- Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
+- Show that if $R$ is a finite ring then every $a\in R$ is either a unit or a zero divisor.
+
 
 ## Field Theory
 

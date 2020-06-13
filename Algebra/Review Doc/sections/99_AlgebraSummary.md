@@ -74,14 +74,7 @@ Chapters 1-9 of Dummit and Foote
 
 ## Facts about ideals:
 
-## Maximal ideals
-
-- $R$ commutative $\implies R/I$  a field
-- Union of maximal ideals = $R - R^\times$
-- $(X-a) \unlhd R[X]$ is maximal for $a\in R$
-
 ## Prime ideals
-$I \unlhd R$ *prime* when $pq\in I \implies p\in I \vee q \in I$
 
 - $I$ prime $\iff R/I$ an integral domain,
 - (maximal $\implies$ prime)

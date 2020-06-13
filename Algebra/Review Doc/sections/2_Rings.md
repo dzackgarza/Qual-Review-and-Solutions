@@ -77,23 +77,16 @@ In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 **Lemma:**
 If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 
-**Definition:**
-A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
+Definition (Semisimple)
+: A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 
-**Theorem (Artin-Wedderubrn)**:
-If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
+Theorem (Artin-Wedderubrn)
+: If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
 
-> *Corollary:* If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
+Corollary
+: If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 
 ## Nontrivial Properties
-
-**Lemma:**
-Every $a\in R$ for a finite ring is either a unit or a zero divisor.
-
-> *Proof:*
-> Let $a\in R$ and define $\phi(x) = ax$.
-> If $\phi$ is injective, then it is surjective, so $1 = ax$ for some $x \implies x\inv = a$.
-> Otherwise, $ax_1 = ax_2$ with $x_1 \neq x_2 \implies a(x_1 - x_2) = 0$ and $x_1 - x_2 \neq 0$, so $a$ is a zero divisor.
 
 ## Ideals
 
@@ -101,7 +94,6 @@ Every $a\in R$ for a finite ring is either a unit or a zero divisor.
 
 Lemma
 : Maximal $\implies$ prime, but generally not the converse.
-
 
 Proof
 :   Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
@@ -116,17 +108,6 @@ Proof
 
 *Counterexample*: $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
 
-**Lemma:**
-If $x$ is not a unit, then $x$ is contained in some maximal ideal $\mm$.
-
-> *Proof:*
-> Zorn's lemma.
-
-**Lemma:**
-$R/\mm$ is a field $\iff \mm$ is maximal.
-
-**Lemma:**
-$R/\pr$ is an integral domain $\iff \pr$ is prime.
 
 ### Nilradical and Jacobson Radical
 
