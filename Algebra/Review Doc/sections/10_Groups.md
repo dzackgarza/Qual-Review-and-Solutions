@@ -138,29 +138,28 @@ G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 
 Let $p(x)$ be the integer partition function.
 
-Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
+> Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
 
 Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
 
 ## The Symmetric Group
 
+Definition (Parity of a Cycle)
+:   \hfill
+    - A cycle is **even** $\iff$ product of an *even* number of transpositions.
 
-**Definitions:**
+    - A cycle of even *length* is **odd**
 
-- A cycle is **even** $\iff$ product of an *even* number of transpositions.
+    - A cycle of odd *length* is **even**
 
-  - A cycle of even *length* is **odd**
+Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
 
-  - A cycle of odd *length* is **even**
-
-> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
-
-**Definition**
-The **alternating group** is the subgroup of **even** permutations, i.e.
+Definition (Alternating Group)
+: The **alternating group** is the subgroup of **even** permutations, i.e.
 $A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}$ where $\sign(\sigma) = (-1)^{m}$ where $m$ is the number of cycles of even length.
 
->  *Corollary:*
-Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
+Corollary
+: Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
 
 > *Example:*
 \begin{align*}
@@ -179,8 +178,6 @@ A_4 =
 (2,4,3)\}
 .\end{align*}
 
-Definition (Dihedral Groups)
-: $\left\langle  a,b \mid a^n=b^2=1, bab^{-1} = a^{-1}\right\rangle  \cong \left\langle r, s\right\rangle$
 
 Useful Facts:
 
