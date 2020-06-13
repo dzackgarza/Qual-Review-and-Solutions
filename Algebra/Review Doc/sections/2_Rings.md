@@ -2,10 +2,20 @@
 
 ## Definitions
 
+Definition (Principal Ideals
+: $I \unlhd R$ *principal* when $\exists a\in R : I = \generators{a}$
 
+Definition (Irreducible Ideal)
+: $I \unlhd R$ *irreducible* when $\not\exists \{J \unlhd R : I \subset J\} : I = \bigcap J$
+
+Definition (Primary Ideal)
+: An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 
 Definition (Simple Ring)
 : A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
+
+Definition (Local Ring)
+: A ring $R$ is *local* iff it contains a unique maximal ideal.
 
 Definition (Irreducible Element)
 : An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.

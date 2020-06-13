@@ -77,16 +77,7 @@ Chapters 1-9 of Dummit and Foote
 ## Other ideals
 
 
-- $I \subset R \iff 1,u \not\in I$ ($u \in R^\times$)
 
-- $\{ I : I \unlhd R\}$ is a poset
-
-- Zorn's lemma can be applied to $\{I \unlhd R : 1 \not\in I\}$
-- Every proper ideal is contained in a maximal ideal.
-
-- Facts about units
-
-- $R^\times$ is closed under multiplication, but *not* under addition.
 - $R-R^\times$ an additive group $\iff$ $R$ is a local ring
 
 - Integral Domain
