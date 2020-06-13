@@ -132,6 +132,7 @@
 - Show that if $N$ and $G/N$ are solvable, then $G$ is solvable.
 - Show that if $G$ is finite and solvable then every composition factor has prime order.
 - Show that $G$ is solvable iff its derived series terminates.
+- Show that $S_3$ is not nilpotent.
 
 ### Misc
 

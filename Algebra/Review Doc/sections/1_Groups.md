@@ -597,6 +597,9 @@ Definition (Simple Groups)
 Lemma
 : If $G$ is *not* simple, then for any $N\normal G$, it is the case that $G \cong E$ for an extension of the form $N\to E\to G/N$.
 
+Definition (Lower Central Series)
+: Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *lower central series* of $G$.
+
 Definition (Derived Series)
 : Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
 
