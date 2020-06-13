@@ -180,6 +180,9 @@
 - Show that if $R$ is a finite ring then every $a\in R$ is either a unit or a zero divisor.
 - Show that $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
 - Show that the nilradical is contained in the Jacobson radical. 
+- Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
+- Show that every prime ideal is radical.
+- Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
 
 ## Field Theory
 
