@@ -40,8 +40,11 @@ Definition (Jacobson Radical)
 Definition (Semisimple)
 : A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 
+Definition (Radical of an Ideal)
+: For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+
 Definition (Radical Ideal)
-: An ideal $I\normal R$ is *radical* if $x\in I \iff x^n \in I$.
+: An ideal is *radical* iff $\rad(I) = I$. 
 
 
 **Lemma (Characterizations of Rings):**
