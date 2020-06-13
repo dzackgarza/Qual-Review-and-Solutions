@@ -562,25 +562,5 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 - Order $p$: cyclic.
 - Order $p^2q$: ?
 
-### $pq$
-
-$\abs{G} = pq$: Two possibilities. By cases:
-
-- If $p$ divides $q-1$, two cases:
-  - $G\cong \ZZ/(pq)$ or $\ZZ(p)\cross \ZZ/(q)$
-
-- Otherwise, $G\cong \ZZ/(pq)$
-
-
-### $p^2q$
-
-- $\abs{G} = p^2q$:
-  - $q \divides p^2 - 1$: Two abelian possibilities, $\ZZ/(p) \times \ZZ/(q^2)$, or $\ZZ/(pq) \times \ZZ/(q)$.
-  - Otherwise, the sylow-q subgroup $H$ is normal and order $q^2$, so either $\ZZ/(q)^2$ or $\ZZ/(q^2)$.
-    - Case 2: $\abs{\aut(\ZZ/(q)^2)} = q(q-1)$, so only trivial action
-    - Case 1: $\abs{\aut(\ZZ/(q^2))} = q(q-1)^2(q+1)$
-      - If $p$ doesn't divide $q+1$, noting new
-      - Otherwise, a nontrivial semidirect product.
-
 
 ## Groups of Small Order
