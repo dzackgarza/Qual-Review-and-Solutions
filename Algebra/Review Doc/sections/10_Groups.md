@@ -92,10 +92,9 @@ Definition (Invariant Factor Decomposition)
 
 *Example:*
 \begin{align*}
-&\ZZ/(2) \oplus \ZZ/(2) \oplus \ZZ/(2^3\cdot 5^2\cdot 7)
+\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
 \cong
-&\ZZ/(2) \oplus \ZZ/(2)\oplus
-\ZZ/(2^3) \oplus \ZZ/(5^2) \oplus \ZZ/(7)
+\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2} \times \ZZ_7
 .\end{align*}
 
 
