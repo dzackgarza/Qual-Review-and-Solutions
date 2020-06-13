@@ -66,8 +66,8 @@ Theorem (The Fundamental Theorem of Cosets)
 Definition (The Quaternion Group)
 : The *Quaternion group* of order 8 is given by
   \begin{align*}
-  Q &= \generators{x,y,z \mid x^2 = y^2 = z^2 = xyz = -1} \\
-    &= \generators{x, y \mid x^4 = y^4 , x^2 = y^2, yxy\inv = x\inv}
+  Q &= \generators{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
+    &= \generators{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
   .\end{align*}
 
 
