@@ -611,8 +611,8 @@ G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian fo
 - Every group of order less than 60 is solvable.
 
 
-**Definition:**
-A group $G$ is **nilpotent** iff $G$ has a terminating central series, upper central series, or lower central series.
+Definition (Nilpotent)
+: A group $G$ is **nilpotent** iff $G$ has a terminating central series, upper central series, or lower central series.
 
 > Moral: the adjoint map is nilpotent.
 

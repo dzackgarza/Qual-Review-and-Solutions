@@ -38,6 +38,10 @@
 
 - Let $H, K \leq G$ a finite group, and without using the normalizers of $H$ or $K$, show that $\abs{HK} = \abs{H} \abs{K}/\abs{H\intersect K}$.
 
+- Show that if $H \leq N_G(K)$ then $HK \leq H$, and give a counterexample showing that this condition is necessary.
+
+- Show that $HK$ is a subgroup of $G$ iff $HK = KH$.
+
 
 ### Primes in Group Theory
 
@@ -98,7 +102,8 @@
 - Show that if $N\normal D_n$ is a normal subgroup of a dihedral group, then $D_n/N$ is again a dihedral group.
 - Prove that $A_n$ is normal in $S_n$.
 - Argue that $A_n$ is simple for $n \geq 5$.
-- Compute $\aut()
+- Compute $\aut(\ZZ/n\ZZ)$ for $n$ composite.
+- Compute $\aut(\qty{\ZZ/p\ZZ}^n)$.
 
 ### Classification
 
