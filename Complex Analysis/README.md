@@ -4,21 +4,22 @@ title: Complex Analysis Qualifying Exam
 
 # Progress
 
-| Exam                     | Typeset   | Imported to MakeMeAQual   | Solutions   |
-| -----------------------  | --------- | ------------------------- | ----------- |
-| Jingzhi Tie's Collection | ✓         | ✓                         | IP          |
-| Fall 2019                |           |                           |             |
-| Spring 2019              |           |                           |             |
-| Fall 2018                |           |                           |             |
-| Spring 2018              |           |                           |             |
-| Fall 2017                |           |                           |             |
-| Spring 2017              |           |                           |             |
-| Fall 2016                |           |                           |             |
-| Spring 2016              |           |                           |             |
-| Fall 2015                |           |                           |             |
-| Spring 2015              |           |                           |             |
-| Fall 2014                |           |                           |             |
-| Spring 2014              |           |                           |             |
+| Exam                          | Typeset   | Imported to MakeMeAQual   | Solutions   |
+| -----------------------       | --------- | ------------------------- | ----------- |
+| Edward Azoff's Collection (?) |           |                           | IP          |
+| Jingzhi Tie's Collection      | ✓         | ✓                         | IP          |
+| Fall 2019                     |           |                           |             |
+| Spring 2019                   |           |                           |             |
+| Fall 2018                     |           |                           |             |
+| Spring 2018                   |           |                           |             |
+| Fall 2017                     |           |                           |             |
+| Spring 2017                   |           |                           |             |
+| Fall 2016                     |           |                           |             |
+| Spring 2016                   |           |                           |             |
+| Fall 2015                     |           |                           |             |
+| Spring 2015                   |           |                           |             |
+| Fall 2014                     |           |                           |             |
+| Spring 2014                   |           |                           |             |
 
 
 # Qualifying Exam Syllabus 
@@ -46,7 +47,7 @@ title: Complex Analysis Qualifying Exam
 
 - Analyticity, harmonic functions, and the Cauchy-Riemann equations
 
-- Contour Integration in C
+- Contour Integration in $\CC$
 
 > References: \[1\] Chapters 1, 2; \[2\] Chapters 1, 2, 4; \[4\] Chapter 1.
 
