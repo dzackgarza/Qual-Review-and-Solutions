@@ -477,6 +477,17 @@ Theorem (Recognizing Semidirect Products)
 
 ## Isomorphism Theorems
 
+Theorem (1st Isomorphism Theorem)
+:   If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
+
+    Note: for this to make sense, we also have
+
+    - $\ker \phi \normal G$
+    - $\im \phi \leq G$
+
+Corollary
+: If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
+
 Lemma
 : If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
 
@@ -486,10 +497,10 @@ Theorem (Diamond Theorem / 2nd Isomorphism Theorem)
     $$
     \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
     $$
-    > Note: for this to make sense, we also have
-    >
-    > - $SN \leq G$,
-    > - $S\intersect N \normal S$,
+    Note: for this to make sense, we also have
+    
+    - $SN \leq G$,
+    - $S\intersect N \normal S$,
 
     ![Image](figures/2020-01-01-15-20-27.png)
 

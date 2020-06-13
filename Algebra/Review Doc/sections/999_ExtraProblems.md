@@ -41,6 +41,7 @@
 
 - Show that $HK$ is a subgroup of $G$ iff $HK = KH$.
 
+- Prove that the kernel of a homomorphism is a normal subgroup.
 
 ### Primes in Group Theory
 
@@ -53,6 +54,9 @@
   - Show that $G$ is never simple. 
 
 - Analyze groups of order $p^2 q$.
+
+  > Hint: Consider the cases when $q$ does or does not divide $p^2 - 1$.
+
 - Show that no group of order $p^2 q^2$ is simple for $p<q$ primes.
 - Show that a group of order $p^2 q^2$ has a normal Sylow subgroup. 
 - Show that a group of order $p^2 q^2$ where $q$ does not divide $p^2-1$ and $p$ does not divide $q^2-1$ is abelian.
