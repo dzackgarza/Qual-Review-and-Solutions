@@ -550,20 +550,29 @@ Definition (p-groups)
 Definition (Normalizers Grow)
 : If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
 
-- Normalizers grow
-
 
 **Facts about other special order groups:**
 
+
+## Classification of Groups
+
 General strategy: find a normal subgroup (usually a Sylow) and use recognition of semidirect products.
 
-- $\abs{G} = pq$: Two possibilities. By cases:
-  - If $p$ divides $q-1$, two cases:
-    - $G\cong \ZZ/(pq)$ or $\ZZ(p)\cross \ZZ/(q)$
-  - Otherwise, $G\cong \ZZ/(pq)$
-  
-  > Proof: Sylow theorems.
-  > Note: Such groups are never simple.
+- [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
+- Order $p$: cyclic.
+- Order $p^2q$: ?
+
+### $pq$
+
+$\abs{G} = pq$: Two possibilities. By cases:
+
+- If $p$ divides $q-1$, two cases:
+  - $G\cong \ZZ/(pq)$ or $\ZZ(p)\cross \ZZ/(q)$
+
+- Otherwise, $G\cong \ZZ/(pq)$
+
+
+### $p^2q$
 
 - $\abs{G} = p^2q$:
   - $q \divides p^2 - 1$: Two abelian possibilities, $\ZZ/(p) \times \ZZ/(q^2)$, or $\ZZ/(pq) \times \ZZ/(q)$.
@@ -573,12 +582,5 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
       - If $p$ doesn't divide $q+1$, noting new
       - Otherwise, a nontrivial semidirect product.
 
-
-## Classification of Groups
-
-- [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
-- Order $p$: cyclic.
-- Order $pq$: ?
-- Order $p^2q$: ?
 
 ## Groups of Small Order

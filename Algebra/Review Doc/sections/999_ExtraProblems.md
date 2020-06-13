@@ -66,8 +66,11 @@
 - Show that every $p\dash$group has a nontrivial center.
 - Show that every $p\dash$group is nilpotent.
 - Show that every $p\dash$group is solvable.
+- Show that every maximal subgroup of a $p\dash$group has index $p$.
+- Show that every maximal subgroup of a $p\dash$group is normal.
 - Show that every group of order $p$ is cyclic.
 - Show that every group of order $p^2$ is abelian and classify them.
+- Show that every normal subgroup of a $p\dash$group is contained in the center.
   
   > Hint: Consider $G/Z(G)$.
 
