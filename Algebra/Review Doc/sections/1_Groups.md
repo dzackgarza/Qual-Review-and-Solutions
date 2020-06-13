@@ -594,11 +594,13 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 Definition (Simple Groups)
 : A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
 
-> **Lemma:**
-> If $G$ is *not* simple, then for any $N\normal G$, it is the case that $G \cong E$ for an extension of the form $N\to E\to G/N$.
-> >
+Lemma
+: If $G$ is *not* simple, then for any $N\normal G$, it is the case that $G \cong E$ for an extension of the form $N\to E\to G/N$.
 
-Definition
+Definition (Derived Series)
+: Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
+
+Definition (Solvable)
 : A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
   $$
   G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
