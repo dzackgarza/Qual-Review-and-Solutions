@@ -79,7 +79,6 @@ Chapters 1-9 of Dummit and Foote
 - $\text{rad}(I^n) = I$
 
 ## Radicals
-$I \unlhd R$ *radical* when $\forall a\in R, a^n \in I \implies a \in I$
 
 - The nilradical: $\text{nilrad}(I) = \bigcap P$  such that $P \unlhd R$ is prime
 
