@@ -81,7 +81,7 @@ Definition (The Dihedral Group)
 Definition (Invariant Factor Decomposition)
 : \hfill
   $$
-  G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/(n_j)
+  G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
   \quad \text{ where } n_1 \divides \cdots \divides n_m
   .$$
 
@@ -92,10 +92,10 @@ Definition (Invariant Factor Decomposition)
 
 *Example:*
 \begin{align*}
-&\ZZ/(2) \oplus \ZZ/(2) \oplus \ZZ/(2^3\cdot 5^2\cdot 7) \\
+&\ZZ/(2) \oplus \ZZ/(2) \oplus \ZZ/(2^3\cdot 5^2\cdot 7)
 \cong
 &\ZZ/(2) \oplus \ZZ/(2)\oplus
-\ZZ/(2^3) \oplus \ZZ/(5^2) \oplus \ZZ/(7) \\
+\ZZ/(2^3) \oplus \ZZ/(5^2) \oplus \ZZ/(7)
 .\end{align*}
 
 
