@@ -625,16 +625,17 @@ Theorem
 Theorem
 : If $n\geq 4$ then $S_n$ is solvable.
 
-**Lemmas:**
+Lemmas
+:   \hfill
 
-- $G$ is solvable iff $G$ has a terminating *derived series*.
-- Solvable groups satisfy the 2 out of 3 property
-- Abelian $\implies$ solvable
-- Every group of order less than 60 is solvable.
+    - $G$ is solvable iff $G$ has a terminating *derived series*.
+    - Solvable groups satisfy the 2 out of 3 property
+    - Abelian $\implies$ solvable
+    - Every group of order less than 60 is solvable.
 
 
 Definition (Nilpotent)
-: A group $G$ is **nilpotent** iff $G$ has a terminating central series, upper central series, or lower central series.
+: A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
 
 > Moral: the adjoint map is nilpotent.
 
@@ -644,6 +645,11 @@ Theorem
 Theorem
 : A group $G$ is nilpotent iff every maximal subgroup is normal.
 
+Theorem
+: $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
+
+Theorem 
+: $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 
 
 **Lemma:**
