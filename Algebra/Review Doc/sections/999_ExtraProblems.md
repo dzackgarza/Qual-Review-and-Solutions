@@ -167,6 +167,10 @@
 ## Ring Theory
 
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
+- Show that intersections, products, and sums of ideals are ideals.
+- Show that the union of two ideals need not be an ideal.
+- Show that every ring has a proper maximal ideal.
+- Show that every proper ideal is contained in a maximal ideal
 
 ## Field Theory
 
