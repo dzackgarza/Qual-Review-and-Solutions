@@ -606,6 +606,9 @@ Definition (Solvable)
   G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
   .$$
 
+Theorem
+: A group $G$ is solvable iff its derived series terminates.
+
 **Lemmas:**
 
 - $G$ is solvable iff $G$ has a terminating *derived series*.
