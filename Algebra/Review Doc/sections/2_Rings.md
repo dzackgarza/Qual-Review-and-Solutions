@@ -2,36 +2,35 @@
 
 ## Definitions
 
-**Lemma:**
-Intersections, products, and sums (but not necessarily unions) of ideals are ideals.
 
-**Theorem (Krull):**
-Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
+Theorem (Krull)
+: Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 
-**Definition:**
-A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
+Definition (Simple Ring)
+: A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
 
-**Definition:**
-An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
+Definition (Irreducible Elements)
+: An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
 
-**Definition:**
-An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
+Definition (Prime Elements)
+: An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
 
-**Definition:**
-$\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
+Definition (Prime Ideals)
+: $\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
 
-**Definition:**
-$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+Definition (Prime Spectrum)
+: $\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
 
-**Definition:**
-$\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
+Definition (Maximal Ideal)
+: $\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
 
-> Example: Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+Examples: 
 
-**Definition:**
-$\spec_{\text{max}}(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+- Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 
-> Note: nonstandard notation / definition.
+Definition (Max Spectrum)
+: $\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+
 
 **Lemmas (Quotients of Rings):**
 

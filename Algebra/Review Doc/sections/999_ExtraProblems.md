@@ -171,6 +171,10 @@
 - Show that the union of two ideals need not be an ideal.
 - Show that every ring has a proper maximal ideal.
 - Show that every proper ideal is contained in a maximal ideal
+- Show that $I\normal R$ is maximal iff $R/I$ is a field.
+- Show that $I \normal R$ is prime iff $R/I$ is a domain.
+- $R/I$ is a domain $\iff I$ is prime,
+- $R/I$ is a field $\iff I$ is maximal.
 
 ## Field Theory
 

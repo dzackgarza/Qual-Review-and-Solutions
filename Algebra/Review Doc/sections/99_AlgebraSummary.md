@@ -74,12 +74,6 @@ Chapters 1-9 of Dummit and Foote
 
 ## Facts about ideals:
 
-- Intersections, products, and sums of ideals are ideals
-- Not necessarily unions
-- Every ring has proper maximal ideals
-- Apply Z.L. to $\{ I \unlhd R : I \neq R\}$
-- Every proper ideal is contained in a maximal ideal
-
 ## Maximal ideals
 $I \unlhd R$ *maximal* if $\not\exists J \unlhd R : I \subset J \subset R$
 
