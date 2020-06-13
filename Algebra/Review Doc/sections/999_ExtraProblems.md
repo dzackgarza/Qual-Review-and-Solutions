@@ -178,6 +178,8 @@
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
 - Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 - Show that if $R$ is a finite ring then every $a\in R$ is either a unit or a zero divisor.
+- Show that $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
+- Show that $\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)$.
 
 ## Field Theory
 

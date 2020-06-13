@@ -94,27 +94,16 @@ Corollary
 ### Nilradical and Jacobson Radical
 
 Definition (Nilradical)
-: $\mathfrak{N} \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
+: $\nilrad \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
 
-**Lemma:**
-$R/\mathfrak N(R)$ has no nonzero nilpotent elements.
-
-> *Proof:*
-\begin{align*}
-a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
-&\implies a^n \in \mathfrak N(R) \\
-&\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-&\implies a\in \mathfrak N(R)
-.\end{align*}
-
-**Definition:**
-The **Jacobson radical** is the intersection of all **maximal** ideals, i.e.
+Definition (Jacobson Radical)
+: The **Jacobson radical** $\jacobsonrad$ is the intersection of all **maximal** ideals, i.e.
 $$
-J(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
+\jacobson(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
 $$
 
-**Lemma:**
-$\mathfrak N(R) \subseteq J(R)$.
+Lemma
+: $\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)$.
 
 > *Proof:*
 > Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
