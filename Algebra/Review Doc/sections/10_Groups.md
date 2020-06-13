@@ -78,13 +78,14 @@ Definition (The Dihedral Group)
 
 ## Finitely Generated Abelian Groups
 
-Invariant factor decomposition:
-$$
-G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/(n_j)
-\quad \text{ where } n_1 \divides \cdots \divides n_m
-.$$
+Definition (Invariant Factor Decomposition)
+: \hfill
+  $$
+  G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/(n_j)
+  \quad \text{ where } n_1 \divides \cdots \divides n_m
+  .$$
 
-**Going from invariant divisors to elementary divisors:**
+**Invariant factors $\to$ Elementary Divisors:**
 
 - Take prime factorization of each factor
 - Split into coprime pieces
