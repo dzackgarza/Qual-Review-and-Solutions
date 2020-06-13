@@ -59,39 +59,20 @@ Definition (Normalizer)
   N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union_{H\normal M \leq G} M
   $$
 
-Lemma
-:   The size of the conjugacy class of $H$ is the index of its centralizer, i.e.
-    $$
-    \abs{\theset{gHg\inv \suchthat g\in G}} = [G: C_G(H)]
-    .$$
-
-> Proof: Orbit-stabilizer.
-
 Theorem (The Fundamental Theorem of Cosets)
 : $aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
 
-Definition (Commutator)
-: $[x, y] = x\inv y\inv xy$ is the **commutator**, and $[G, G] \definedas \theset{[x, y] \suchthat x,y\in G}$ is the **commutator subgroup**.
 
-Lemma
-: $[G,G] \leq H \text{ and } H \normal G \implies G/H$ is abelian.
-
-
-**Lemmas:**
-
-- Every subgroup of a cyclic group is itself cyclic.
-
-- Intersections of subgroups are still subgroups
-  - Intersections of distinct coprime-order subgroups are trivial
-  - Intersections of subgroups of the same prime order are either trivial or equality
-
-- The Quaternion group has only one element of order 2, namely $-1$.
-
-  - They also have the presentation
+Definition (The Quaternion Group)
+: The *Quaternion group* of order 8 is given by
   \begin{align*}
   Q &= \generators{x,y,z \mid x^2 = y^2 = z^2 = xyz = -1} \\
-    &= \generators{x, y \mid x^4 = y^4 = e, x^2 = y^2, yxy\inv = x\inv}
+    &= \generators{x, y \mid x^4 = y^4 , x^2 = y^2, yxy\inv = x\inv}
   .\end{align*}
+
+
+
+  - They also have the presentation
 
 - A dihedral group always has a presentation of the form
   $$
