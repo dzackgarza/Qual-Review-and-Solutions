@@ -2,6 +2,27 @@
 
 ## Definitions
 
+Definition (Irreducible Element)
+: An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
+
+Definition (Prime Element)
+: An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
+
+Definition (Integral Domain)
+: ?
+
+Definition (Principal Ideal Domain)
+: ?
+
+Definition (Unique Factorization Domain)
+: ?
+
+Definition (Noetherian)
+: A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
+
+Theorem (Zorn's Lemma)
+: If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
+
 Definition (Principal Ideals
 : $I \unlhd R$ *principal* when $\exists a\in R : I = \generators{a}$
 
@@ -16,12 +37,6 @@ Definition (Simple Ring)
 
 Definition (Local Ring)
 : A ring $R$ is *local* iff it contains a unique maximal ideal.
-
-Definition (Irreducible Element)
-: An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
-
-Definition (Prime Element)
-: An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
 
 Definition (Prime Ideal)
 : $\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.

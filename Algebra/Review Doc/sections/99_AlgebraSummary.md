@@ -77,25 +77,8 @@ Chapters 1-9 of Dummit and Foote
 ## Other ideals
 
 
-
-- $R-R^\times$ an additive group $\iff$ $R$ is a local ring
-
-- Integral Domain
-
-- Principal Ideal Domain
-
 - (Prime $\implies$ maximal) $\implies$ UFD
 
-- Unique Factorization Domain
-
-- Field
-
-- When $(0)$ is the only proper ideal
-- $R/M$ a field $\iff$ M maximal
-
-- Localization
-
-- Zorn's Lemma: For every poset $P$, every chain in $P$ has an upper bound $\implies$ $P$ has a maximal element.
 
 - Noetherian: Every ideal is finitely generated
 
