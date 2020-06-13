@@ -76,16 +76,9 @@ Chapters 1-9 of Dummit and Foote
 
 ## Prime ideals
 
-- $\text{rad}(I^n) = I$
-
 ## Radicals
 
-- The nilradical: $\text{nilrad}(I) = \bigcap P$  such that $P \unlhd R$ is prime
 
-- $\text{rad}(I) = \{ x\in  \mid \exists n : x^n \in I \}$
-
-- $\text{rad}(0) = \text{nilrad}(R)$
-- $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
 - $\text{rad}(I) = \bigcap J$ such that $I \subset J, J$ prime
     (i.e. intersection of all prime ideals containing $I$)
 
