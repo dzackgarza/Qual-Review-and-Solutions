@@ -21,20 +21,17 @@ Lemma
 Definition (Lower Central Series)
 : Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *lower central series* of $G$.
 
-> Moral: Iterate the adjoint map $[\wait, G]$.
 > Mnemonic: "lower" because the chain is descending.
-
-
-> $G$ is nilpotent $\iff$ the LCS terminates.
+> Iterate the adjoint map $[\wait, G]$, if this terminates then the map is nilpotent, so call $G$ nilpotent!
 
 
 Definition (Upper Central Series)
 : Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.
   Then $Z_0 \leq Z_1 \leq \cdots$ is the *upper central series* of $G$.
 
-  Equivalently, since $Z_i\normal G$, 
+  Equivalently, since $Z_i\normal G$, there is a quotient map $\pi:G\to G/Z_i$, so define $Z_{i+1} \definedas \pi\inv(Z(G/Z_i))$ (?).
 
-> Mnemonic: "upper" because the chain is ascending
+> Mnemonic: "upper" because the chain is ascending. "Take higher centers".
 
 Definition (Derived Series)
 : Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
@@ -77,6 +74,7 @@ Theorem
 Theorem 
 : $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 
+: 
 
 **Lemma:**
 For $G$ a finite group, TFAE:
@@ -97,16 +95,3 @@ For $G$ a finite group, TFAE:
 - $G$ nilpotent $\implies Z(G) \neq 0$
 - Abelian $\implies$ nilpotent
 - p-groups $\implies$ nilpotent
-
-
-
-## Series of Groups
-
-
-
-**Definition:**
-An **upper central series** is a terminating normal series $G \to G^1 \to \cdots \to \theset{e}$ such that $G^1 = Z(G)$ and $G^{i+1}$ is defined such that $G^{i+1}/G^i = Z(G^i)$.
-
-> Moral: Iterate taking "higher centers".
-
-
