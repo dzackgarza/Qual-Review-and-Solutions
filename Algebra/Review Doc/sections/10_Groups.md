@@ -512,48 +512,43 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 .\end{align*}
 
 
-**The Correspondence Theorem / 4th Isomorphism Theorem:**
-Suppose $N \normal G$, then there exists a correspondence:
+Theorem (The Correspondence Theorem / 4th Isomorphism Theorem)
+:   Suppose $N \normal G$, then there exists a correspondence:
 
-\begin{align*}
-\left\{
-H < G \suchthat N \subseteq H
-\right\}
-\iff
-\left\{
-H \suchthat H < \frac G N
-\right\}
-\\
-\correspond{
-  \text{Subgroups of $G$} \\
-  \text{containing $N$}
-} \iff
-\correspond{
-  \text{Subgroups of the } \\
-  \text{quotient $G/N$}
-}
-.\end{align*}
+    \begin{align*}
+    \left\{
+    H < G \suchthat N \subseteq H
+    \right\}
+    \iff
+    \left\{
+    H \suchthat H < \frac G N
+    \right\}
+    \\
+    \correspond{
+      \text{Subgroups of $G$} \\
+      \text{containing $N$}
+    } \iff
+    \correspond{
+      \text{Subgroups of the } \\
+      \text{quotient $G/N$}
+    }
+    .\end{align*}
 
-In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
+    In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
 
-> Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
+Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 
 
 ## Special Classes of Groups
 
-**Definition:**
-The **"2 out of 3 property"** is satisfied by a class of groups $\mathcal C$ iff whenever $G \in \mathcal C$, then $N, G/N \in \mathcal{C}$ for any $N \normal G$.
+Definition (2 out of 3 Property)
+: The **"2 out of 3 property"** is satisfied by a class of groups $\mathcal C$ iff whenever $G \in \mathcal C$, then $N, G/N \in \mathcal{C}$ for any $N \normal G$.
 
-**Definition:**
-If $\abs{G} = p^k$, then $G$ is a **p-group.**
+Definition (p-groups)
+: If $\abs{G} = p^k$, then $G$ is a **p-group.**
 
 **Facts about p-groups:**
 
-- If $k=1$ then $G$ is cyclic
-- If $k=2$, then $G \cong \ZZ/(p)^2$ or $\ZZ/(p^2)$.
-
-- p-groups have nontrivial centers
-  - Proof: Use class equation.
 
 - Every normal subgroup is contained in the center
 
