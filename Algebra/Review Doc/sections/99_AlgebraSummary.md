@@ -75,9 +75,7 @@ Chapters 1-9 of Dummit and Foote
 ## Facts about ideals:
 
 ## Other ideals
-- $I \unlhd R$ *primary* when $pq \in I \implies a \in I \vee \exists n\in \mathbb{N} : b^n \in I$
 
-- Prime $\implies$ primary
 
 - $I \subset R \iff 1,u \not\in I$ ($u \in R^\times$)
 

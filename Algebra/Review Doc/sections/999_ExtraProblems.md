@@ -166,6 +166,12 @@
 
 ## Ring Theory
 
+Basic Structure
+
+- Show that if an ideal $I\normal R$ contains a unit then $I = R$.
+
+Ideals
+
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
 - Show that intersections, products, and sums of ideals are ideals.
 - Show that the union of two ideals need not be an ideal.
@@ -182,11 +188,13 @@
 - Show that every prime ideal is radical.
 - Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
+- Show that every prime ideal is primary.
 
 Characterizing Certain Ideals
 
 - Show that the nilradical is the intersection of all prime ideals.
 - Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
+- Show that $\rad(I)$ is the intersection of all prime ideals containing $I$.
 
 ## Field Theory
 
