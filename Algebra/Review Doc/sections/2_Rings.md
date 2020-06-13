@@ -41,7 +41,7 @@ Definition (Semisimple)
 : A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 
 Definition (Radical Ideal)
-: An ideal $I\normal R$ is *radical* iff $a^n\in I$ implies that $a\in I$.
+: An ideal $I\normal R$ is *radical* if $x\in I \iff x^n \in I$.
 
 
 **Lemma (Characterizations of Rings):**
