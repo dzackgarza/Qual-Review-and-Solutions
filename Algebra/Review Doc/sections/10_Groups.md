@@ -547,20 +547,8 @@ Definition (2 out of 3 Property)
 Definition (p-groups)
 : If $\abs{G} = p^k$, then $G$ is a **p-group.**
 
-**Facts about p-groups:**
-
-
-- Every normal subgroup is contained in the center
-
 - Normalizers grow
 
-- Every maximal is normal
-
-- Every maximal has index $p$
-
-- p-groups are *nilpotent*
-
-- p-groups are *solvable*
 
 **Facts about other special order groups:**
 
