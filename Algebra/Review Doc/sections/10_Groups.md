@@ -547,6 +547,9 @@ Definition (2 out of 3 Property)
 Definition (p-groups)
 : If $\abs{G} = p^k$, then $G$ is a **p-group.**
 
+Definition (Normalizers Grow)
+: If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
+
 - Normalizers grow
 
 
