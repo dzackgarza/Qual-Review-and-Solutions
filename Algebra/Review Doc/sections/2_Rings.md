@@ -35,7 +35,7 @@ Definition (Nilradical)
 Definition (Jacobson Radical)
 : The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
   $$
-  \jacobson(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
+  \jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
   $$
 Definition (Semisimple)
 : A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
