@@ -169,8 +169,10 @@
 Basic Structure
 
 - Show that if an ideal $I\normal R$ contains a unit then $I = R$.
+- Show that $R\units$ need not be closed under addition.
 
 Ideals
+
 - Show that every proper ideal is contained in a maximal ideal
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
 - Show that intersections, products, and sums of ideals are ideals.
@@ -194,6 +196,12 @@ Characterizing Certain Ideals
 - Show that the nilradical is the intersection of all prime ideals.
 - Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
 - Show that $\rad(I)$ is the intersection of all prime ideals containing $I$.
+
+Misc
+
+- Show that localizing a ring at a prime ideal produces a local ring.
+- Show that $R$ is a local ring iff for every $x\in R$, either $x$ or $1-x$ is a unit.
+- Show that if $R$ is a local ring then $R\setminus R\units$ is a proper ideal that is contained in $\jacobsonrad(R)$.
 
 ## Field Theory
 
