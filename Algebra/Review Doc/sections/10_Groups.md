@@ -70,13 +70,10 @@ Definition (The Quaternion Group)
     &= \generators{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
   .\end{align*}
 
-
-
-  - They also have the presentation
-
-- A dihedral group always has a presentation of the form
+Definition (The Dihedral Group)
+: A *dihedral group* of order $2n$ is given by 
   $$
-  D_n = \generators{x, y \mid x^n = y^2 = (xy)^2 = e}
+  D_n = \generators{x, y \suchthat x^n = y^2 = (xy)^2 = e}
   ,$$
   yielding at least 2 distinct elements of order 2.
 
