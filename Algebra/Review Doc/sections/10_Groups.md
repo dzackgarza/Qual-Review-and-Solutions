@@ -72,11 +72,9 @@ Definition (The Quaternion Group)
 
 Definition (The Dihedral Group)
 : A *dihedral group* of order $2n$ is given by 
-  $$
-  D_n = \generators{x, y \suchthat x^n = y^2 = (xy)^2 = e}
-  ,$$
-  yielding at least 2 distinct elements of order 2.
-
+  \begin{align*}
+  D_n = \generators{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
+  .\end{align*}
 
 ## Finitely Generated Abelian Groups
 
