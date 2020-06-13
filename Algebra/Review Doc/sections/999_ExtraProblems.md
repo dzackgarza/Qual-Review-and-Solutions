@@ -174,15 +174,19 @@
 - Show that $I\normal R$ is maximal iff $R/I$ is a field.
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
-- Show that the nilradical is the intersection of all prime ideals.
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
 - Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 - Show that if $R$ is a finite ring then every $a\in R$ is either a unit or a zero divisor.
 - Show that $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
 - Show that the nilradical is contained in the Jacobson radical. 
-- Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
 - Show that every prime ideal is radical.
 - Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
+- Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
+
+Characterizing Certain Ideals
+
+- Show that the nilradical is the intersection of all prime ideals.
+- Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
 
 ## Field Theory
 

@@ -74,22 +74,10 @@ Chapters 1-9 of Dummit and Foote
 
 ## Facts about ideals:
 
-## Prime ideals
-
-## Radicals
-
-
-- $\text{rad}(I) = \bigcap J$ such that $I \subset J, J$ prime
-    (i.e. intersection of all prime ideals containing $I$)
-
 ## Other ideals
 - $I \unlhd R$ *primary* when $pq \in I \implies a \in I \vee \exists n\in \mathbb{N} : b^n \in I$
 
 - Prime $\implies$ primary
-
-- $I \unlhd R$ *principal* when $\exists a\in R : I = \generators{a}$
-
-- $I \unlhd R$ *irreducible* when $\not\exists \{J \unlhd R : I \subset J\} : I = \bigcap J$
 
 - $I \subset R \iff 1,u \not\in I$ ($u \in R^\times$)
 
