@@ -4,28 +4,34 @@
 
 ### Basic Structure
 
-- Show that any cyclic group is abelian.
-- Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
-- Show that $G/N$ is abelian iff $[G, G] \leq N$.
+Just Structure
+
 - Show that the intersection of two subgroups is again a subgroup.
-- Show that if $G \actson X$ is a group action, then the stabilizer $G_x$ of a point is a subgroup.
 - Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
 - Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
-- Show that every normal subgroup of $G$ is contained in $Z(G)$.
-- Show that $\abs{G}/\abs{H} = [G: H]$.
-- Show that the order of any element in a group divides the order of the group.
-- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
-- Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
-- Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
 - Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
-- Give an example showing that normality is not transitive: i.e. $H\normal K \normal G$ with $H$ *not* normal in $G$.
+- Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
+- Show that the order of any element in a group divides the order of the group.
 - Show that the size of a conjugacy class divides the order of a group.
+- Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
+
+Cyclic Groups
+
+- Show that any cyclic group is abelian.
+- Show that every subgroup of a cyclic group is cyclic.
+- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
+- Show that $\abs{G}/\abs{H} = [G: H]$.
+- Show that $G/N$ is abelian iff $[G, G] \leq N$.
+- Show that every normal subgroup of $G$ is contained in $Z(G)$.
+- Give an example showing that normality is not transitive: i.e. $H\normal K \normal G$ with $H$ *not* normal in $G$.
 
   > Hint: Orbit-stabilizer
 
 ### Centralizing and Normalizing
 
 - Show that $C_G(H) \subseteq N_G(H) \leq G$.
+
+- Show that $Z(G) \subseteq C_G(H) \subseteq N_G(H)$.
 - Given $H\subseteq G$, let $S(H)= \bigcup_{g\in G} gHg^{-1}$, so $\abs{S(H)}$ is the number of conjugates to $H$. 
   Show that $\abs{S(H)} = [G : N_G(H)]$.
   - That is, the number of subgroups conjugate to $H$ equals the index of the normalizer of $H$.
@@ -130,6 +136,7 @@
 - Show that the stabilizer of an element $G_x$ is a subgroup of $G$.
 - Show that if $x, y$ are in the same orbit, then their stabilizers are conjugate.
 - Show that the stabilizer of an element need not be a normal subgroup?
+- Show that if $G \actson X$ is a group action, then the stabilizer $G_x$ of a point is a subgroup.
 
 ### Series of Groups
 
