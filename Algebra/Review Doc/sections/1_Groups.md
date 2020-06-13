@@ -183,6 +183,8 @@ Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ ch
 
   - A cycle of odd *length* is **even**
 
+> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
+
 **Definition**
 The **alternating group** is the subgroup of **even** permutations, i.e.
 $A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}$ where $\sign(\sigma) = (-1)^{m}$ where $m$ is the number of cycles of even length.
@@ -207,9 +209,14 @@ A_4 =
 (2,4,3)\}
 .\end{align*}
 
+Definition (Dihedral Groups)
+: $\left\langle  a,b \mid a^n=b^2=1, bab^{-1} = a^{-1}\right\rangle  \cong \left\langle r, s\right\rangle$
+
 Useful Facts:
 
 - Conjugacy classes are determined by cycle type
+- The order of a cycle is its length.
+- The order of an element is the least common multiple of the sizes of its cycles.
 - The transitive subgroups of $S_3$ are $S_3, A_3$
 - The transitive subgroups of $S_4$ are $S_4, A_4, D_4, \ZZ_2^2, \ZZ_4$.
 - $S_4$ has two normal subgroups: $A_4, \ZZ_2^2$.
