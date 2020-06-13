@@ -9,13 +9,13 @@ Theorem (Krull)
 Definition (Simple Ring)
 : A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
 
-Definition (Irreducible Elements)
+Definition (Irreducible Element)
 : An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
 
-Definition (Prime Elements)
+Definition (Prime Element)
 : An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
 
-Definition (Prime Ideals)
+Definition (Prime Ideal)
 : $\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
 
 Definition (Prime Spectrum)
@@ -32,11 +32,6 @@ Definition (Max Spectrum)
 : $\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
 
 
-**Lemmas (Quotients of Rings):**
-
-- $R/I$ is a domain $\iff I$ is prime,
-- $R/I$ is a field $\iff I$ is maximal.
-- For $R$ a PID, $I$ is prime $\iff I$ is maximal.
 
 **Lemma (Characterizations of Rings):**
 
@@ -104,22 +99,22 @@ Every $a\in R$ for a finite ring is either a unit or a zero divisor.
 
 ### Maximal and Prime Ideals
 
-**Lemma:**
-Maximal $\implies$ prime, but generally not the converse.
+Lemma
+: Maximal $\implies$ prime, but generally not the converse.
 
-> *Counterexample*: $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
 
-> *Proof:*
-> Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
-> Then there is a containment of ideals $\mm \subsetneq \mm + (b) \implies \mm + (b) = R$.
->
-> So
-$$
-1 = m + rb \implies a = am + r(ab)
-,$$
-> but $am\in \mm$ and $ab\in \mm \implies a\in \mm$.
->
-> $\qed$
+Proof
+:   Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
+    Then there is a containment of ideals $\mm \subsetneq \mm + (b) \implies \mm + (b) = R$.
+
+    So
+    $$
+    1 = m + rb \implies a = am + r(ab)
+    ,$$
+    but $am\in \mm$ and $ab\in \mm \implies a\in \mm$.
+
+
+*Counterexample*: $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
 
 **Lemma:**
 If $x$ is not a unit, then $x$ is contained in some maximal ideal $\mm$.
@@ -135,8 +130,8 @@ $R/\pr$ is an integral domain $\iff \pr$ is prime.
 
 ### Nilradical and Jacobson Radical
 
-**Definition:**
-$\mathfrak{N} \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
+Definition (Nilradical)
+: $\mathfrak{N} \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
 
 **Lemma:**
 The nilradical is the intersection of all **prime** ideals, i.e.

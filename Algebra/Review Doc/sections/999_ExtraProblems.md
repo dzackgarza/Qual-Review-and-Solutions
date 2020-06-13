@@ -174,6 +174,7 @@
 - Show that $I\normal R$ is maximal iff $R/I$ is a field.
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
+- Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
 
 ## Field Theory
 
