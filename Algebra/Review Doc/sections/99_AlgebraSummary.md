@@ -75,9 +75,7 @@ Chapters 1-9 of Dummit and Foote
 ## Facts about ideals:
 
 ## Maximal ideals
-$I \unlhd R$ *maximal* if $\not\exists J \unlhd R : I \subset J \subset R$
 
-- Every nonzero ring has a maximal ideal (Krull's Theorem)
 - $R$ commutative $\implies R/I$  a field
 - Union of maximal ideals = $R - R^\times$
 - $(X-a) \unlhd R[X]$ is maximal for $a\in R$
