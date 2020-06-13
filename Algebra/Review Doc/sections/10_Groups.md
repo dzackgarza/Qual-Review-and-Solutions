@@ -591,8 +591,14 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 ## Series of Groups
 
+Definition
+: A **normal series** of a group $G$ is a sequence $G \to G^1 \to G^2 \to \cdots$ such that $G^{i+1} \normal G_i$ for every $i$.
+
+Definition
+: A **central series** for a group $G$ is a terminating normal series $G \to G^1 \to \cdots \to \theset{e}$ such that each quotient is **central**, i.e. $[G, G^i] \leq G^{i-1}$ for all $i$.
+
 Definition (Composition Series)
-: ?
+: A **composition series** of a group $G$ is a finite normal series such that $G^{i+1}$ is a *maximal proper* normal subgroup of $G^i$.
 
 Theorem (Jordan-Holder)
 : Any two composition series of a group have the same length and isomorphic composition factors (up to permutation).
@@ -681,17 +687,6 @@ For $G$ a finite group, TFAE:
 
 
 ## Series of Groups
-
-**Definition**:
-A **normal series** of a group $G$ is a sequence $G \to G^1 \to G^2 \to \cdots$ such that $G^{i+1} \normal G_i$ for every $i$.
-
-**Definition**
-A **composition series** of a group $G$ is a finite normal series such that $G^{i+1}$ is a *maximal proper* normal subgroup of $G^i$.
-
-
-
-**Definition:**
-A **central series** for a group $G$ is a terminating normal series $G \to G^1 \to \cdots \to \theset{e}$ such that each quotient is **central**, i.e. $[G, G^i] \leq G^{i-1}$ for all $i$.
 
 **Definition:**
 A **lower central series** is a terminating normal series $G \to G^1 \to \cdots \to \theset{e}$ such that $G^{i+1} = [G^i, G]$
