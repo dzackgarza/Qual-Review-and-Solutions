@@ -588,7 +588,8 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
     - Case 1: $\abs{\aut(\ZZ/(q^2))} = q(q-1)^2(q+1)$
       - If $p$ doesn't divide $q+1$, noting new
       - Otherwise, a nontrivial semidirect product.
-  
+
+## Series of Groups
 
 Definition (Simple Groups)
 : A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
