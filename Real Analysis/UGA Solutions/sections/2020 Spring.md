@@ -44,8 +44,25 @@ Using the fact that $C([0, 1], \norm{\wait}_\infty)\subseteq L^1([0, 1])$, $f$ i
 Concepts used:
 
 - Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs Q_j$ where $\theset{Q_j}$ is a countable collection of closed cubes.
-- Theorem: $m_*(E) 
 
 ### a
 
-Suppose $m_*(E) < \infty
+Suppose $m_*(E) = N< \infty$.
+
+Since $m_*(E)$ is an infimum, by definition, for every $\eps> 0$ there exists a covering by closed cubes $\theset{Q_i(\eps)}_{i=1}^\infty \covers E$ such that $\sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps$.
+
+Set $\eps_n = {1\over n}$ to produce such a collection $\theset{Q_i(\eps_n)}$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
+Then (theorem) $m_*(B_n) = \sum \abs{Q_i(\eps_n)} < N + \eps_n$.
+
+Now set $B \definedas \intersect_{n=1}^\infty B_n$.
+
+- Since $E\subseteq B_n$ for every $n$, $E\subseteq B$
+- Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
+- Since $B_n \subseteq B$ for every $n$, we can apply subadditivity to obtain the inequality
+\begin{align*}
+N \leq m_*(B) \leq m_*(B_n) \leq N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1}
+.\end{align*}
+
+This forces $m_*(E) = m_*(B)$.
+
+### b
