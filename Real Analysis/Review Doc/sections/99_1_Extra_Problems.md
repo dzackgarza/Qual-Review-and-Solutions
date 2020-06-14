@@ -1,3 +1,9 @@
+Measure Theory
+
+- $\star$: Show that for $E\subseteq \RR^n$, TFAE: 
+  1. $E$ is measurable
+  2. $E = H\union Z$ here $H$ is $F_\sigma$ and $Z$ is null
+  3. $E = V\etminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
 
 Continuity
 
