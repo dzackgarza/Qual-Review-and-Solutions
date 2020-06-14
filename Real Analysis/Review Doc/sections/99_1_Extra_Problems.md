@@ -2,6 +2,10 @@ Basics
 
 - If $f$ is continuous, is it necessarily the case that $f'$ is continuous?
 - If $f_n \to f$, is it necessarily the case that $f_n'$ converges to $f'$ (or at all)?
+- Is it true that the sum of differentiable functions is differentiable?
+- Is it true that the limit of integrals equals the integral of the limit?
+- Is it true that a limit of continuous functions is continuous?
+- Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
 
 Measure Theory
 
@@ -54,4 +58,5 @@ Fourier Analysis
 Lp
 
 - Show that if $E\subseteq \RR^n$ is measurable with $\mu(E) < \infty$ and $f\in L^p(X)$ then $\norm{f}_{L^p(X)} \coverges{p\to\infty}\to \norm{f}_\infty$.
-- 
+- Is it true that the converse to the DCT holds? 
+  I.e. if $\int f_n \to \int f$, is there a $g\in L^p$ such that $f_n < g$ a.e. for every $n$?
