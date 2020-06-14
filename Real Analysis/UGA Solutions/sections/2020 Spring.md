@@ -38,3 +38,7 @@ Using the fact that $C([0, 1], \norm{\wait}_\infty)\subseteq L^1([0, 1])$, $f$ i
 - By linearity, it is true for any polynomial.
 - By Stone Weierstrass, $f$ is a uniform limit of polynomials.
 - Uniform convergence implies $L^1$ convergence on compact intervals?
+
+## 2
+
+?
