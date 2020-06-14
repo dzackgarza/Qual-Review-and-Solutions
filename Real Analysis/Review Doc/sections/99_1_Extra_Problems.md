@@ -30,4 +30,7 @@ Fourier Analysis
   - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
 - Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
 - Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
-- $\star$: show that $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
+- $\star$: show that if $f, g\in L^1$, then $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
+- Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
+  - Give an example showing that this fails if $g$ is not bounded.
+- Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
