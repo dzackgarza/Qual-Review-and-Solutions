@@ -1,9 +1,16 @@
+Basics
+
+- If $f$ is continuous, is it necessarily the case that $f'$ is continuous?
+- If $f_n \to f$, is it necessarily the case that $f_n'$ converges to $f'$ (or at all)?
+
 Measure Theory
 
 - $\star$: Show that for $E\subseteq \RR^n$, TFAE: 
   1. $E$ is measurable
   2. $E = H\union Z$ here $H$ is $F_\sigma$ and $Z$ is null
-  3. $E = V\etminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
+  3. $E = V\setminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
+
+- $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup_{K\subset E\text{ compact}} m(K)$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
 
 Continuity
 
@@ -42,3 +49,9 @@ Fourier Analysis
 - Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
   - Give an example showing that this fails if $g$ is not bounded.
 - Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
+- Show that if $f\in C^1$ then $f$ is equal to its Fourier series.
+
+Lp
+
+- Show that if $E\subseteq \RR^n$ is measurable with $\mu(E) < \infty$ and $f\in L^p(X)$ then $\norm{f}_{L^p(X)} \coverges{p\to\infty}\to \norm{f}_\infty$.
+- 
