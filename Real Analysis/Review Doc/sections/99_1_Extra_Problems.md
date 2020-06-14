@@ -6,6 +6,7 @@ Basics
 - Is it true that the limit of integrals equals the integral of the limit?
 - Is it true that a limit of continuous functions is continuous?
 - Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
+- Show that if $K$ is compact and $F$ is closed with $K, F$ disjoint then $\dist(K, F) > 0$.
 
 Measure Theory
 
