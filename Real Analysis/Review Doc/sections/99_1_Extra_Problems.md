@@ -11,3 +11,6 @@ Fourier Analysis
 
 - Show that if $f\in L^1$ then $\hat f$ is bounded and uniformly continuous. 
 - Is it the case that $f\in L^1$ implies $\hat f\in L^1$?
+- Show that if $f, \hat f \in L^1$ then $f$ is bounded, continuous, and vanishes at infinity.
+  - Show that this is not true for arbitrary $L^1$ functions.
+-
