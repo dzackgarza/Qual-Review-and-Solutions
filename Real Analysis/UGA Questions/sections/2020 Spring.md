@@ -22,7 +22,7 @@ b. Prove that if $E\subseteq \RR$ has the property that
   \end{align*}
   for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ such that $E = B\setminus N$ with $m_*(N) = 0$.
 
-  Be sure to address the case when $m_*(E) = \infty$.
+    Be sure to address the case when $m_*(E) = \infty$.
 
 ## 3
 
@@ -54,3 +54,23 @@ Compute the following limit and justify your calculations:
 \begin{align*}
 \lim_{n\to\infty} \int_0^n \qty{1 + {x^2 \over n}}^{-(n+1)} \,dx
 .\end{align*}
+
+## 6
+
+a. Show that
+  \begin{align*}
+  L^2([0, 1]) \subseteq L^1([0, 1]) \qtext{and} \ell^1(\ZZ) \subseteq \ell^2(\ZZ)
+  .\end{align*}
+
+b. For $f\in L^1([0, 1])$ define
+  \begin{align*}
+  \hat{f}(n) \definedas \int_0^1 f(x) e^{-2\pi i n x} \, dx
+  .\end{align*}
+
+  Prove that if $f\in L^1([0, 1])$ and $\theset{\hat f(n)} \in \ell^1(\ZZ)$ then
+  \begin{align*}
+  S_N f(x) \definedas \sum_{\abs n \leq N} \hat f (n) e^{2\pi i n x}
+  .\end{align*}
+  converges uniformly on $[0, 1]$ to a continuous function $g$ such that $g = f$ almost everywhere.
+
+  > Hint: One approach is to argue that if $f\in L^1([0, 1])$ with $\theset{\hat f (n)} \in \ell^1(\ZZ)$ then $f\in L^2([0, 1])$.
