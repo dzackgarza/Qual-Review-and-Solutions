@@ -41,4 +41,11 @@ Using the fact that $C([0, 1], \norm{\wait}_\infty)\subseteq L^1([0, 1])$, $f$ i
 
 ## 2
 
-?
+Concepts used:
+
+- Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs Q_j$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+- Theorem: $m_*(E) 
+
+### a
+
+Suppose $m_*(E) < \infty
