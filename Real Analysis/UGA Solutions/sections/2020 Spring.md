@@ -43,7 +43,7 @@ Using the fact that $C([0, 1], \norm{\wait}_\infty)\subseteq L^1([0, 1])$, $f$ i
 
 Concepts used:
 
-- Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs Q_j$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+- Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
 
 ### a
 
@@ -66,3 +66,5 @@ N \leq m_*(B) \leq m_*(B_n) \leq N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1
 This forces $m_*(E) = m_*(B)$.
 
 ### b
+
+
