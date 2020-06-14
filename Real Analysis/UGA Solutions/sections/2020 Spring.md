@@ -52,7 +52,10 @@ Suppose $m_*(E) = N< \infty$.
 Since $m_*(E)$ is an infimum, by definition, for every $\eps> 0$ there exists a covering by closed cubes $\theset{Q_i(\eps)}_{i=1}^\infty \covers E$ such that $\sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps$.
 
 Set $\eps_n = {1\over n}$ to produce such a collection $\theset{Q_i(\eps_n)}$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
-Then (theorem) $m_*(B_n) = \sum \abs{Q_i(\eps_n)} < N + \eps_n$.
+Then (theorem) the outer measure of cubes is *equal* to the sum of their volumes, so 
+\begin{align*}
+m_*(B_n) = \sum \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
+.\end{align*}
 
 Now set $B \definedas \intersect_{n=1}^\infty B_n$.
 
