@@ -3,9 +3,17 @@ Continuity
 
 - Show that a continuous function on a compact set is uniformly continuous.
 
+Measurability
+
+- Show that $f=0$ a.e. iff $\int_E f = 0$ for every measurable set $E$.
+
 Integrability
 
 - Show that a bounded function is Lebesgue integrable iff it is measurable.
+- Show that simple functions are dense in $L^1$.
+- Show that step functions are dense in $L^1$.
+- Show that smooth compactly supposed functions are dense in $L^1$.
+- 
 
 Fourier Analysis
 
@@ -13,4 +21,7 @@ Fourier Analysis
 - Is it the case that $f\in L^1$ implies $\hat f\in L^1$?
 - Show that if $f, \hat f \in L^1$ then $f$ is bounded, continuous, and vanishes at infinity.
   - Show that this is not true for arbitrary $L^1$ functions.
--
+- Show that if $f\in L^1$ and $\hat f = 0$ a.e. then $f=0$ a.e.
+  - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
+- Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
+- 
