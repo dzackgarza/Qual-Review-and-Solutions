@@ -11,5 +11,5 @@ Suppose $f\in C^\infty(\RR)$ is smooth, then
 &= f(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} f(x) } \, dx
 ,\end{align*}
 
-and thus it suffices to show that $\int_0^1 x^k \qty{\dd{}{x} f(x) } \, dx \converges{k\to\infty}\to 0$.
+and thus it suffices to show that $\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} f(x) } \, dx = 0$.
 
