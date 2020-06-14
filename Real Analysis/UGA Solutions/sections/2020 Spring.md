@@ -13,3 +13,8 @@ Suppose $f\in C^\infty(\RR)$ is smooth, then
 
 and thus it suffices to show that $\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} f(x) } \, dx = 0$.
 
+Integrating by parts a second time yields
+\begin{align*}
+\int_0^1 x^k \qty{\dd{}{x} f(x) } \, dx
+&= {x^{k+1} \over k+1} f'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{^2 x}f(x)} \, dx
+.\end{align*}
