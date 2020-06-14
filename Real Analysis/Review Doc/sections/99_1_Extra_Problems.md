@@ -12,11 +12,13 @@ Continuity
 Measurability
 
 - Show that $f=0$ a.e. iff $\int_E f = 0$ for every measurable set $E$.
+- $\star$: Show that cylinder functions are measurable, i.e. if $f$ is measurable on $\RR^s$, then $F(x, y) \definedas f(x)$ is measurable on $\RR^s\cross \RR^t$ for any $t$.
 
 Integrability
 
-- $\star$: Prove that the Lebesgue integral is translation invariant.
-- Show that
+- $\star$: Prove that the Lebesgue integral is translation invariant, i.e. if $\tau_h(x) = x+h$ then $\int \tau_h f = \int f$.
+- $\star$: Prove that the Lebesgue integral is dilation invariant, i.e. if $f_\delta(x) = {f({x\over \delta}) \over \delta^n}$ then $\int f_\delta = \int f$.
+- $\star$: Prove continuity in $L^1$, i.e.
   \begin{align*}
   f \in L^{1} \Longrightarrow \lim _{h \rightarrow 0} \int|f(x+h)-f(x)|=0
   .\end{align*}
