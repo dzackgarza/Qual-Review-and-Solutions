@@ -68,6 +68,8 @@ N \leq m_*(B) \leq m_*(B_n) < N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1}
 
 This forces $m_*(E) = m_*(B)$.
 
+If $m_*(E) = \infty$, then take $B = \RR^n$ since $m(\RR^n) = \infty$.
+
 ### b
 
 
