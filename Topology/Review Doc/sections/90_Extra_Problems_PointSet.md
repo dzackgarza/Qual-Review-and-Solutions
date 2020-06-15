@@ -5,3 +5,9 @@
 - Show that any countable space with the discrete topology is separable.
 - Show that the minimal uncountable order with the order topology is not separable.
 - Show that every first countable space is second countable.
+- Show that the diagonal map $\Delta(x) = (x, x)$ is continuous.
+- Show that $X$ is Hausdorff iff $\Delta(X)$ is closed in $X\cross X$.
+- Prove that $X, Y$ are Hausdorff iff $X\cross Y$ is Hausdorff.
+- Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
+- Use the fact that intervals are connected to prove the intermediate value theorem.
+- Prove that the continuous image of a connected set is connected.
