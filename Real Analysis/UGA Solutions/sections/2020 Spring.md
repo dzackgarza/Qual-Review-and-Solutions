@@ -112,4 +112,4 @@ However $f(x) = 1$ for any even integer $x > N$, so $f(x) \not\to 0$.
 
 ### b
 
-
+?
