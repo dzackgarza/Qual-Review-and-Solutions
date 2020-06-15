@@ -15,6 +15,8 @@ Measure Theory
   2. $E = H\union Z$ here $H$ is $F_\sigma$ and $Z$ is null
   3. $E = V\setminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
 
+- Show that continuity of measure from above/below holds for outer measures.
+
 - $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup_{K\subset E\text{ compact}} m(K)$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
 
 Continuity
