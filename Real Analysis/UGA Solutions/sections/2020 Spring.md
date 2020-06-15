@@ -88,4 +88,4 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\
 - If $m_*(E) = \infty$, ?
   - Apply result to $E_R\definedas E \intersect B_R(\vector 0)$ in $\RR^n$, so $E = \union_R E_R$
   - Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
-  - Take $B = \union_R B_R$
+  - Take $B = \union_R B_R$; then continuity of measure gives $m_*(E_R) \to m_*(E)$ and $m_*(B_R) \to m_*(B)$ and since $m_*(E_R)= m_*(B_R)$ for every $R$, uniqueness of limits gives $m_*(E) = m_*(B)$.
