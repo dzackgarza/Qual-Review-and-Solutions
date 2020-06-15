@@ -93,6 +93,8 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\
 
 ## 3
 
+### a
+
 - Let $\eps > 0$
 - Use the fact that $C_c(\RR^n) \injects L^1(\RR^n)$ is dense and choose a sequence $\theset{f_n} \covers f$ so $\norm{f_n - f}_1 \to 0$.
 - Choose $n$ large enough so that $\norm{f_n - f} < \eps$. Fix this $n$.
@@ -103,3 +105,7 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} = \int_{\abs x > N} \abs{f - f_n + 
 .\end{align*}
 
 - Now take $n\to \infty$?
+
+### b
+
+
