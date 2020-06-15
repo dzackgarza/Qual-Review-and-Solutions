@@ -72,4 +72,20 @@ If $m_*(E) = \infty$, then take $B = \RR^n$ since $m(\RR^n) = \infty$.
 
 ### b
 
+Suppose $m_*(E) < \infty$.
 
+- By (a), find a Borel set $B\supseteq E$ such that $m_*(B) = m_*(E)$
+- Note that $E\subseteq B \implies B\intersect E = E$ and $B\intersect E^c = B\setminus E$.
+- By assumption, 
+\begin{align*}
+m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
+m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
+m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\ 
+\implies m_*(B\setminus E) = 0
+.\end{align*}
+
+- So take $N = B\setminus E$; this shows $m_*(N) = 0$ and $E = B\setminus (B\setminus E) = B\setminus N$.
+- If $m_*(E) = \infty$, ?
+  - Apply result to $E_R\definedas E \intersect B_R(\vector 0)$ in $\RR^n$, so $E = \union_R E_R$
+  - Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
+  - Take $B = \union_R B_R$
