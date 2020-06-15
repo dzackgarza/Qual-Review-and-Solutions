@@ -11,3 +11,4 @@
 - Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
 - Use the fact that intervals are connected to prove the intermediate value theorem.
 - Prove that the continuous image of a connected set is connected.
+- Prove that $X$ is connected iff the only clopen subsets are $\emptyset, X$.
