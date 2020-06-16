@@ -12,3 +12,7 @@
 - Use the fact that intervals are connected to prove the intermediate value theorem.
 - Prove that the continuous image of a connected set is connected.
 - Prove that $X$ is connected iff the only clopen subsets are $\emptyset, X$.
+- Show that:
+  - Connected does not imply path connected
+  - Connected and locally path connected *does* imply path connected
+  - Path connected implies connected
