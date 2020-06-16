@@ -1,3 +1,7 @@
+Integration
+
+- Show that if $f\in C^1(\RR)$ and $\lim_{x\to \infty} f(x), f'(x)$ exist, then $\lim f'(x) = 0$.
+
 Basics
 
 - If $f$ is continuous, is it necessarily the case that $f'$ is continuous?

@@ -112,4 +112,60 @@ However $f(x) = 1$ for any even integer $x > N$, so $f(x) \not\to 0$.
 
 ### b
 
-?
+Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
+\begin{align*}
+x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
+.\end{align*}
+
+Now integrate over $[x, 2x]$, using monotonicity of the integral:
+\begin{align*}
+\int_x^{2x} f(x) \,dt \leq 
+\int_x^{2x} f(t) \,dt \leq 
+\int_x^{2x} f(x-n) \,dt \implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
+.\end{align*}
+
+By (a), $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$ (?) so $\lim_{x\to \infty} xf(x) = 0$.
+Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ and thus $f(x) \to 0$ as well.
+
+### c
+
+???
+
+## 4
+
+\begin{align*}
+\norm{(f\ast g)(x)}_1 
+&= \norm{\int H(x, y) \,dy }_1 \\
+&= \norm{\int f(y) g(x-y) \,dy }_1 \\
+&\leq \int \norm{f(y) g(x-y)}_1 \,dy \\ 
+&\leq \int \abs{f(y)}\norm{g(x-y)}_1 \,dy \\ 
+&\leq \int \abs{f(y)} \norm{g}_1 \,dy \\ 
+&\leq \norm{g}_1 \int \abs{f(y)} \,dy \\ 
+&\leq \norm{g}_1 \norm{f}_1\\ 
+.\end{align*}
+
+Todo: 
+
+- Dependence on $x$ doesn't make sense.
+-  Show $H\in L^1$: Fubini-Tonelli?
+
+## 5 
+
+Note that 
+\begin{align*}
+\lim_{n} \qty{1 + {x^2 \over n}}^{-(n+1)} 
+&= {1 \over \lim_{n} \qty{1 + {x^2 \over n}}^1 \qty{1 + {x^2 \over n}}^n } \\
+&= {1 \over 1 \cdot e^{x^2}} \\
+&= e^{-x^2}
+.\end{align*}
+
+If passing the limit through the integral is justified, we will have $\int_0^\infty e^{-x^2} = {\sqrt \pi \over 2}$.
+
+Todo:
+
+- Justify, DCT?
+- How to compute the integral?
+
+## 6 
+
+
