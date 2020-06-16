@@ -419,8 +419,8 @@ Proof:
 
 - Claim 1: $X$ is connected.
   - Intervals and graphs of cts functions are connected, so the only problem point is $0$.
-- Claim 2: $X$ is **not** locally path connected.
-    - Take any $B_\eps(0) \in \RR^2$; then $\pi_X B_\eps(0)$ yields infinitely many arcs, each intersecting the graph at two points on $\bd B_\eps(0)$.
+- Claim 2: $X$ is **not** locally connected.
+    - Take any $B_\eps(0) \in \RR^2$; then projecting onto the subspace $\pi_X(B_\eps(0))$ yields infinitely many arcs, each intersecting the graph at two points on $\bd B_\eps(0)$.
     - These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
 $\qed$
 
