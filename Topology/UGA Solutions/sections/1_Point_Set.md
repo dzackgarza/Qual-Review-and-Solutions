@@ -530,23 +530,22 @@ $\qed$
 
 $\implies$:
 
-- Let $p\in \Delta^c$.
+- Let $p\in X^2\setminus \Delta$.
 - Then $p$ is of the form $(x, y)$ where $x\neq y$ and $x,y\in X$.
 - Since $X$ is Hausdorff, pick $N_x, N_y$ in $X$ such that $N_x \intersect N_y = \emptyset$.
 - Then $N_p\definedas N_x \cross N_y$ is an open set in $X^2$ containing $p$.
 - Claim: $N_p \intersect \Delta = \emptyset$.
   - If $q \in N_p \intersect \Delta$, then $q = (z, z)$ where $z\in X$, and $q\in N_p \implies q\in N_x \intersect N_y = \emptyset$.
-- Then $\Delta^c = \union_p N_p$ is open.
+- Then $X^2\setminus \Delta = \union_p N_p$ is open.
  
 $\impliedby$:
 
 - Let $x\neq y\in X$.
 - Consider $(x, y) \in \Delta^c \subset X^2$, which is open.
 - Thus $(x, y) \in B$ for some box in the product topology.
-- $B = U \cross V$ where $U, V$ are open in $X$, and $B \subset \Delta^c$.
-- So $x\in U, y\in V$.
+- $B = U \cross V$ where $U\ni x, V\ni y$ are open in $X$, and $B \subset X^2\setminus \Delta$.
 - Claim: $U\intersect V = \emptyset$.
-  - Otherwise, $z\in U\intersect V \implies (z, z) \in B$, but $B \intersect \Delta^c = \emptyset$. 
+  - Otherwise, $z\in U\intersect V \implies (z, z) \in B\intersect \Delta$, but $B \subset X^2\setminus \Delta \implies B \intersect \Delta = \emptyset$. 
 
 
 ## 38
