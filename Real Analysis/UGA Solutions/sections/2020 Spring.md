@@ -33,13 +33,15 @@ The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact,
 We now use the Weierstrass approximation theorem: if $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p}_\infty < \eps$.
 Thus 
 \begin{align*}
-\abs{ \int_0^1 kx^{k-1} p(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
-&= \abs{ \int_0^1 kx^{k-1} \qty{p(x) - f(x)} \,dx  } \\
-&\leq \abs{ \int_0^1 kx^{k-1} \norm{p-f}_\infty \,dx  } \\
-&= \norm{p-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
-&= \norm{p-f}_\infty \cdot x^k \evalfrom_0^1 \\
-&= \norm{p-f}_\infty \to 0
-.\end{align*}
+\abs{ \int_0^1 kx^{k-1} p_\eps(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
+&= \abs{ \int_0^1 kx^{k-1} \qty{p_\eps(x) - f(x)} \,dx  } \\
+&\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
+&= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
+\end{align*}
+
+and the integrals are equal.
 
 
 ### Proof 2 (Simpler)
