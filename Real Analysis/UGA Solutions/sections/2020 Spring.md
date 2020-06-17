@@ -33,7 +33,11 @@ The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact,
 We now use the Weierstrass approximation theorem: if $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p}_\infty < \eps$.
 Thus 
 \begin{align*}
-\abs{f(1) - p(1)} \leq \sup_{x\in [0, 1]} \abs{f(x) - p(x)} = \norm{f - p}_\infty  \to 0
+\abs{ \int_0^1 kx^{k-1} p(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
+&= \abs{ \int_0^1 kx^{k-1} \qty{p(x) - f(x)} \,dx  } \\
+&\leq \abs{ \int_0^1 kx^{k-1} \norm{p-f}_\infty \,dx  } \\
+&= \norm{p-f}_\infty \abs{ \int_0^1 kx^{k-1} \,dx  } \\
+&= \norm{p-f}_\infty x^k \evalfrom_0^1 
 .\end{align*}
 
 
