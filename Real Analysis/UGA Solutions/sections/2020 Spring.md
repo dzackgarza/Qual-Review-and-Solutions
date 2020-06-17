@@ -21,9 +21,9 @@ Integrating by parts a second time yields
 \lim_{k\to\infty} 
 \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
 &= \lim_{k\to\infty} 
-{x^{k+1} \over k+1} p'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{^2 x}f(x)} \, dx \\
-&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{^2 x}p(x)} \, dx \\
-&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{^2 x}p(x)} \, dx \quad\text{by DCT} \\
+{x^{k+1} \over k+1} p'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}f(x)} \, dx \\
+&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
 &= - \int_0^1 0 \qty{ \dd{^2}{^2 x}f(x)} \, dx \\
 &= 0
 .\end{align*}
