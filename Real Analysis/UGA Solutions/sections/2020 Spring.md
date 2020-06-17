@@ -41,7 +41,8 @@ Thus
 &= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
 \end{align*}
 
-and the integrals are equal.
+and the integrals are equal. 
+Finally, the first integral is equal to $p_\eps(1)$ for each $\eps$, which converges to $f(1)$ since uniform convergence implies pointwise convergence.
 
 
 ### Proof 2 (Simpler)
