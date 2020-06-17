@@ -3,7 +3,7 @@
 
 ## 1
 
-Suppose $f\in C^\infty([0, 1])$ is smooth, then
+Suppose $f$ is a polynomial, then
 \begin{align*}
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } f(x) \, dx \\
