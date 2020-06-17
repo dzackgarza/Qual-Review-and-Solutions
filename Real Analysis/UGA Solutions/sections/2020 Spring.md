@@ -36,8 +36,8 @@ Thus
 \abs{ \int_0^1 kx^{k-1} p(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
 &= \abs{ \int_0^1 kx^{k-1} \qty{p(x) - f(x)} \,dx  } \\
 &\leq \abs{ \int_0^1 kx^{k-1} \norm{p-f}_\infty \,dx  } \\
-&= \norm{p-f}_\infty \abs{ \int_0^1 kx^{k-1} \,dx  } \\
-&= \norm{p-f}_\infty \cdot x^k \evalfrom_0^1 
+&= \norm{p-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
+&= \norm{p-f}_\infty \cdot \abs{ x^k \evalfrom_0^1 }
 .\end{align*}
 
 
