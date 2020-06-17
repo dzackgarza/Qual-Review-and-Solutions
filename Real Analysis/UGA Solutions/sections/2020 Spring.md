@@ -50,6 +50,7 @@ Finally, the first integral is equal to $p_\eps(1)$ for each $\eps$, which conve
 Concepts used:
 
 - Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+- Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$
 
 ### a
 
