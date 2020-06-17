@@ -88,13 +88,16 @@ Suppose $m_*(E) < \infty$.
 m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
 m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
 m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\ 
-\implies m_*(B\setminus E) = 0
+\implies m_*(B\setminus E) &= 0
 .\end{align*}
-
 - So take $N = B\setminus E$; this shows $m_*(N) = 0$ and $E = B\setminus (B\setminus E) = B\setminus N$.
+
+
 - If $m_*(E) = \infty$
   - Apply result to $E_R\definedas E \intersect [R, R+1]^n \subset \RR^n$ for $R\in \ZZ$, so $E = \union_R E_R$
   - Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
+  - Then $B\definedas \union_R B_R$ contains $E$ since $B_R$ contains $E_R$ for each $R$, and $B$ is still Borel.
+  - And $N\definedas \union N_R$ is still null and we have $B\setminus N = E$.
 
 ## 3
 
