@@ -45,13 +45,6 @@ and the integrals are equal.
 Finally, the first integral is equal to $p_\eps(1)$ for each $\eps$, which converges to $f(1)$ since uniform convergence implies pointwise convergence.
 
 
-### Proof 2 (Simpler)
-
-- Show the result is true for $f(x) = x^n$ for a fixed $n$.
-- By linearity, it is true for any polynomial.
-- By Stone Weierstrass, $f$ is a uniform limit of polynomials.
-- Uniform convergence implies $L^1$ convergence on compact intervals?
-
 ## 2
 
 Concepts used:
