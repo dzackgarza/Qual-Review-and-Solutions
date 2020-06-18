@@ -1,8 +1,8 @@
 # Spring 2020 Homework 3
 
-# Problems From Tie
+## Problems From Tie
 
-## 1
+### 1
 
 Problem
 : Prove that if $f$ has two Laurent series expansions,
@@ -11,7 +11,7 @@ Problem
   $$
   then $c_n = c_n'$.
 
-### Solution
+#### Solution
 
 By taking the difference of two such expansions, it suffices to show that if $f$ is identically zero and $f(z) = \sum_{n=-\infty}^\infty c_n (z-a)^n$ about some point $a$, then $c_n = 0$ for all $n$.
 
@@ -29,14 +29,14 @@ which shows that $c_n = 0$ for all $n$.
 
 $\qed$
 
-## 2
+### 2
 
 Problem
 : Find Laurent series expansions of
   $$\begin{aligned}\frac{1}{1-z^2} + \frac{1}{3-z}\end{aligned}$$
   How many such expansions are there? In what domains are each valid?
 
-### Solution
+#### Solution
 
 Note that $f$ has poles at $z=-1, 1, 3$, all with multiplicity 1, and so there are 3 regions to consider:
 
@@ -124,14 +124,14 @@ By construction, this converges on $\theset{\abs z^2 > 1} \intersect \theset{\ab
 $\qed$
 
 
-## 3
+### 3
 
 Problem
 : Let $P, Q$ be polynomials with no common zeros. Assume $a$ is a root of
 $Q$.
   Find the principal part of $P/Q$ at $z=a$ in terms of $P$ and $Q$ if $a$ is (1) a simple root, and (2) a double root.
 
-### Solution
+#### Solution
 
 We'll use the following definition: if $f: \CC \to \CC$ is analytic with Laurent expansion $f(z) = \sum_{k=-\infty}^\infty c_k (z-a)^k$ at the point $a\in\CC$, then the **principal part** of $f$ at $a$ is given by
 $$
@@ -169,7 +169,7 @@ $\qed$
 
 \newpage
 
-## 4
+### 4
 
 Problem
 :   Let $f$ be non-constant, analytic in $\abs{z} > 0$, where $f(z_n) = 0$
@@ -179,7 +179,7 @@ for infinitely many points $z_n$ with $\lim_{n\to\infty} z_n = 0$.
 
     > Example: $f(z) = \sin(1/z)$.
 
-### Solution
+#### Solution
 
 We first note that $z=0$ is in fact a singularity of $f$, since the zeros of analytic functions are isolated.
 
@@ -201,13 +201,13 @@ However, it is a theorem that the zeros of an analytic function are isolated, wh
 
 $\qed$
 
-## 5
+### 5
 
 Problem
 : Show that if $f$ is entire and $\lim_{z\to\infty}f(z) = \infty$, then
 $f$ is a polynomial.
 
-### Solution
+#### Solution
 
 Since $f$ is entire, it is analytic on $\CC$, so there is an expansion $f(z) = \sum_{k=0}^\infty c_k z^k$ that converges to $f$ everywhere.
 Let $F(z) = f(1/z)$; then $\lim_{z\to 0} F(z) = \infty$ by assumption.
@@ -224,7 +224,7 @@ This implies that $f(z) = \sum_{k=0}^N c_k z^k$, which has finitely many terms a
 $\qed$
 
 
-## 6
+### 6
 
 Problem
 :   \hfill
@@ -235,7 +235,7 @@ Problem
     \int_0^1 \log(\sin(\pi x)) ~dx = -\log 2
     .\end{align*}
 
-### Solution Part (a)
+#### Solution Part (a)
 
 Let $I$ be the integral in question, then substituting $z = e^{i\theta}$ and ${dz \over iz} = d\theta$ yields
 \begin{align*}
@@ -277,17 +277,17 @@ is holomorphic, making $z=0$ removable.
 
 Since $f$ is also analytic, the Cauchy-Goursat theorem applies and $\int_{S^1} f = 0$.
 
-### Solution Part (b)
+#### Solution Part (b)
 
 > No clue how to relate these two!
 
-## 7
+### 7
 
 Problem
 : Let $0<a<4$ and evaluate $$\begin{aligned}
     \int_0^\infty \frac{x^{\alpha-1}}{1+x^3} ~dx\end{aligned}$$
 
-### Solution
+#### Solution
 
 Let $I$ denote the integral in question.
 We will compute this using a closed contour and the residue theorem, so first note that
@@ -386,7 +386,7 @@ $\qed$
 
 > Note: this seems to be wrong, because plugging in $a=1,2,3$ doesn't result in a real value.
 
-## 8
+### 8
 
 Problem
 :   Prove the fundamental theorem of Algebra using
@@ -394,7 +394,7 @@ Problem
     a.  Rouche's Theorem.
     b. The maximum modulus principle.
 
-### Solution (Rouche)
+#### Solution (Rouche)
 
 We want to show that every $f \in \CC[x]$ has precisely $n$ roots, and we'll use the follow formulation of Rouche's theorem:
 
@@ -424,7 +424,7 @@ Since $g$ has precisely $n$ roots, $f$ does as well.
 
 $\qed$
 
-### Solution (Maximum Modulus Principle)
+#### Solution (Maximum Modulus Principle)
 
 Toward a contradiction, suppose $f$ is non-constant and has *no* zeros.
 Then $g(z) \definedas 1/f(z)$ is non-constant and holomorphic on $\CC$.
@@ -444,7 +444,7 @@ But by the maximum modulus principle, this forces $g$ to be constant, and since 
 
 $\qed$
 
-## 9
+### 9
 
 Problem
 :   Let $f$ be analytic in a region $D$ and $\gamma$ a rectifiable curve in
@@ -452,7 +452,7 @@ $D$ with interior in $D$.
 
     Prove that if $f(z)$ is real for all $z\in \gamma$, then $f$ is constant.
 
-### Solution
+#### Solution
 
 Without loss of generality, assume $0\in D$ (by considering the translate $f(z) - w$ if necessary) and $\gamma$ is not entirely contained in $\RR$ (by taking a homotopic curve).
 
@@ -477,13 +477,13 @@ But since there is at least one $z\in \gamma$ with $y\neq 0$, this forces $c_1 =
 
 $\qed$
 
-## 10
+### 10
 
 Problem
 : For $a> 0$, evaluate
   $$\begin{aligned} \int_0^{\pi/2} \frac{d\theta}{a + \sin^2 \theta}\end{aligned}$$
 
-### Solution
+#### Solution
 
 We have
 \begin{align*}
@@ -531,13 +531,13 @@ $\qed$
 
 > Note: I know I'm off by a constant here at least, since $a=1$ should reduce to $\pi/2\sqrt 2$.
 
-## 11
+### 11
 
 Problem
 : Find the number of roots of $p(z) = 4z^4 - 6z + 3$ in $\abs{z} < 1$ and
 $1 < \abs{z} < 2$ respectively.
 
-### Solution
+#### Solution
 
 For $\abs{z} < 1$, take $f(z) = -6z$ and $g(z) = z^4+3$, noting that $f+g = p$.
 Using the maximum modulus principal, we know that the max/mins of $f, g$ occur on $\abs{z} = 1$, on which we have
@@ -560,13 +560,13 @@ Thus $p$ has $4-1 = \mathbf{3}$ **zeros** on $1 \leq \abs{z} \leq 2$.
 
 $\qed$
 
-## 12
+### 12
 
 Problem
 : Prove that $z^4 + 2z^3 -2z + 10$ has exactly one root in each open
 quadrant.
 
-### Solution
+#### Solution
 
 Let $f(z) = z^4 +2z^3 -2z + 10$, and consider the following contour:
 
@@ -635,12 +635,12 @@ By cases, for $z\in \RR$,
 
 $\qed$
 
-## 13
+### 13
 
 Problem
 : Prove that for $a> 0$, $z\tan z - a$ has only real roots.
 
-### Solution
+#### Solution
 
 We can extend Rouche's theorem in the following way: if $f = g+h$ with $\abs{g} > \abs{h}$ on $\gamma$ then $Z_f - P_f = Z_g - P_g$, where $Z, P$ denote the number of zeros and poles respectively.
 
@@ -661,7 +661,7 @@ $$
 > Trying to analyze the related function $\tan(z) - {a \over z}$ didn't seem to help either.
 > General idea: decompose $f = g + h$, try to bound $\abs{h} < \abs{g}$ on edges of the rectangle $R=[-N\pi, N\pi] \cross i[-N\pi, N\pi]$, use Rouche to get $Z_f - P_f = Z_g - P_g \implies Z_f = P_f + Z_g - P_g$ and use the fact that $\cos(z)$ has only real zeros to count $P_f$ in $R$.
 
-## 14
+### 14
 
 Problem
 :   Let $f$ be nonzero, analytic on a bounded region $\Omega$ and continuous
@@ -669,7 +669,7 @@ on its closure $\overline \Omega$.
 
     Show that if $\abs{f(z)} \equiv M$ is constant for $z\in \partial \Omega$, then $f(z) \equiv Me^{i\theta}$ for some real constant $\theta$.
 
-### Solution
+#### Solution
 
 By the maximum modulus principle applied to $f$ in $\bar \Omega$, we know that $\max \abs{f} = M$.
 Similarly, the maximum modulus principle applied to $\frac 1 f$ in $\bar{\Omega^c}$ since $f$ is nonzero in $\Omega$, and we can conclude that $\min \abs{f} = M$ as well.
