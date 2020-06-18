@@ -1,5 +1,7 @@
 # Integrals and Cauchy's Theorem
 
+> Some interesting problems: 3, 4, 9, 10.
+
 ## 1
 
 Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in [0, 1]$,
