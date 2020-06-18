@@ -149,6 +149,9 @@ Alternatively showing $f(x) \converges{x\to \infty} 0$:
   \int_\RR \abs{f} \geq \int_{x}^\infty f(t)\, dt \geq \int_x^\infty 1 =\infty
  .\end{align*}
 
+- Otherwise $f(x) \to L$ with $\abs{L} < \infty$.
+- 
+
 ### c
 
 
