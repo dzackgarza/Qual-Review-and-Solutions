@@ -206,8 +206,10 @@ Computing the integral:
 &= \int_\RR \int_\RR e^{-(x+y)^2}\, dx \\
 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r\, dr \, d\theta \qquad u=r^2 \\
 &= {1\over 2} \int_0^{2\pi } \int_0^\infty e^{-u}\, du \, d\theta \\
-&= -{1\over 2} \int_0^{2\pi} 
-.\end{align*}
+&= {1\over 2} \int_0^{2\pi} 1 \\
+&= \pi
+,\end{align*}
+and now use the fact that the function is even.
 
 Todo:
 
