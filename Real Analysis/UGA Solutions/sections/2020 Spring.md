@@ -163,6 +163,10 @@ Alternatively showing $f(x) \converges{x\to \infty} 0$:
 
 ## 4
 
+Relevant concepts:
+
+- Fubini: for non-negative and measurable functions yields measurability of slices and and equality of iterated integrals
+
 \begin{align*}
 \norm{(f\ast g)(x)}_1 
 &= \norm{\int_\RR H(x, y) \,dy }_1 \\
