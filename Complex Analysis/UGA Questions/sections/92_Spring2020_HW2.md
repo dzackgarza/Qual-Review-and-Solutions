@@ -109,7 +109,11 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 
 
 ### 4
-
+Without using Cauchy's integral formula, show that if $\abs{a} < r < \abs{b}$, then
+\begin{align*}
+\int_{\gamma} \frac{d z}{(z-\alpha)(z-\beta)}=\frac{2 \pi i}{\alpha-\beta}
+\end{align*}
+where $\gamma$ denotes the circle centered at the origin of radius $r$ with positive orientation.
 
 ### 5
 Assume $f$ is continuous in the region $\theset{x+iy \suchthat x\geq x_0, ~ 0\leq y \leq b}$, and the following limit exists independent of $y$:
