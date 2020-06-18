@@ -72,9 +72,19 @@ Use $n$th roots of unity to show that
 .\end{align*}
 
 ## 7
+Prove that $f(z) = \abs{z}^2$ has a derivative at $z=0$ and nowhere else.
 
 
 ## 8
+
+Let $f(z)$ be analytic in a domain, and prove that $f$ is constant if it satisfies any of the following conditions:
+
+a. $\abs{f(z)}$ is constant.
+b. $\Re(f(z))$ is constant.
+c. $\arg(f(z))$ is constant.
+d. $\bar{f(z)}$ is analytic.
+
+How do you generalized (a) and (b)?
 
 
 ## 9
