@@ -133,7 +133,7 @@ x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
 .\end{align*}
 
 - By (a), $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$ (?) 
-- So $\lim_{x\to \infty} xf(x) = 0$.
+- So the LHS term $\lim_{x\to \infty} xf(x) = 0$.
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
 - Thus $f(x) \to 0$ as well.
 
