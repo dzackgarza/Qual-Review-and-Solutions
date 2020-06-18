@@ -84,13 +84,19 @@ b. $\Re(f(z))$ is constant.
 c. $\arg(f(z))$ is constant.
 d. $\bar{f(z)}$ is analytic.
 
-How do you generalized (a) and (b)?
+How do you generalize (a) and (b)?
 
 
 ## 9
+Prove that if $z\mapsto f(z)$ is analytic, then $z \mapsto \bar{f(\bar z)}$ is analytic.
 
 
 ## 10
+
+a. Show that in polar coordinates, the Cauchy-Riemann equations take the form
+\begin{align*}
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \text { and } \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta}
+.\end{align*}
 
 
 ## 11
