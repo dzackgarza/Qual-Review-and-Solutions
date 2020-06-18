@@ -27,9 +27,6 @@ Show that
 
 > Hint: use the fact that this integral equals $\frac{1}{2 i} \int_{-\infty}^{\infty} \frac{e^{i x}-1}{x} d x$, and integrate around an indented semicircle.
 
-### 2.6.4
-Todo
-
 ### 2.6.5
 
 Suppose $f\in C_\CC^1(\Omega)$ and $T\subset \Omega$ is a triangle with $T^\circ \subset \Omega$.
@@ -101,3 +98,43 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 > Hint: Extend $f$ to all of $\CC$ by $f(z) = 1/ \bar{f(1/\bar z)}$ for any $\abs{z} > 1$, and argue as in the Schwarz reflection principle.
 
 ## Additional Problems
+
+### 1
+
+
+### 2
+
+
+### 3
+
+
+### 4
+
+
+### 5
+
+
+### 6
+
+
+### 7
+
+
+### 8
+
+
+### 9
+
+
+### 10
+
+
+### 11
+
+### 12
+
+
+### 13
+
+
+
