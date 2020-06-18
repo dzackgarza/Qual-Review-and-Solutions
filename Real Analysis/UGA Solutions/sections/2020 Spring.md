@@ -165,7 +165,9 @@ Alternatively showing $f(x) \converges{x\to \infty} 0$:
 
 Relevant concepts:
 
-- Fubini: for non-negative and measurable functions yields measurability of slices and and equality of iterated integrals
+- Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
+- Fubini:i $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
+- F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
 
 \begin{align*}
 \norm{(f\ast g)(x)}_1 
