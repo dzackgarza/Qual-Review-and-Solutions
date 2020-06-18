@@ -94,11 +94,21 @@ Prove that if $z\mapsto f(z)$ is analytic, then $z \mapsto \bar{f(\bar z)}$ is a
 ## 10
 
 a. Show that in polar coordinates, the Cauchy-Riemann equations take the form
-\begin{align*}
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \text { and } \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta}
-.\end{align*}
+  \begin{align*}
+  \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \text { and } \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta}
+  .\end{align*}
 
+b. Use (a) to show that the logarithm function, defined as 
+  \begin{align*}
+  \log z=\log r+i \theta \text { where } z=r e^{i \theta} \text { with }-\pi<\theta<\pi
+  .\end{align*}
+  is holomorphic on the region $r> 0, -\pi < \theta < \pi$.
+
+  Also show that this function is not continuous in $r>0$.
 
 ## 11
 
-
+Prove that the distinct complex numbers $z_1, z_2, z_3$ are the vertices of an equilateral triangle if and only if
+\begin{align*}
+z_{1}^{2}+z_{2}^{2}+z_{3}^{2}=z_{1} z_{2}+z_{2} z_{3}+z_{3} z_{1}
+.\end{align*}
