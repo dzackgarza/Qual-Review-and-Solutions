@@ -236,3 +236,5 @@ Want to show
 \sum_{n=1}^\infty \abs{c_n}^2 &\leq \sum_{n=1}^\infty \abs{c_n}
 .\end{align*}
 
+- First inequality: ?
+- Second inequality: break into 2 pieces?
