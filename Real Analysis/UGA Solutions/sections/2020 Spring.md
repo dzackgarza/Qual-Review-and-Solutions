@@ -206,7 +206,7 @@ Computing the integral:
 &= \int_\RR \int_\RR e^{-(x+y)^2}\, dx \\
 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r\, dr \, d\theta \qquad u=r^2 \\
 &= {1\over 2} \int_0^{2\pi } \int_0^\infty e^{-u}\, du \, d\theta \\
-&= \int_0^{2\pi} 
+&= -{1\over 2} \int_0^{2\pi} 
 .\end{align*}
 
 Todo:
@@ -216,4 +216,13 @@ Todo:
 
 ## 6 
 
+Concepts used:
+
+- For $e_n(x) \definedas 2^{2\pi i n x}$, the set $\theset{e_n}$ is an orthonormal basis for $L^2([0, 1])$.
+- For any orthonormal set in a Hilbert space, Bessel's inequality:
+  \begin{align*}
+  \sum_{k=1}^{\infty}\left|\left\langle x, e_{k}\right\rangle\right|^{2} \leq\|x\|^{2}
+  .\end{align*}
+- When a basis, the above is an inequality (Parseval)
+- Arguing uniform convergence: since $\theset{\hat f(n)} \in \ell^1(\ZZ)$, we should be able to apply the $M$ test.
 
