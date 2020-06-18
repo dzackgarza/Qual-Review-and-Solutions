@@ -2,9 +2,9 @@
 
 > Note on notation: I sometimes use $f_x \definedas \dd{f}{x}$ to denote partial derivatives, and $\bd_z^n f$ as $f^{(n)}(z)$.
 
-# Stein And Shakarchi
+## Stein And Shakarchi
 
-## 2.6.1
+### 2.6.1
 
 Show that
 \begin{align*}
@@ -85,7 +85,7 @@ Equating real and imaginary parts, we can conclude that $I_C = I_S$ (since the L
 $\qed$
 
 
-## 2.6.2
+### 2.6.2
 
 Show that
 
@@ -151,7 +151,7 @@ Taken together, this yields
 
 $\qed$
 
-## 2.6.5
+### 2.6.5
 
 Suppose $f\in C_\CC^1(\Omega)$ and $T\subset \Omega$ is a triangle with $T^\circ \subset \Omega$.
 Apply Green's theorem to show that $\int_T f(z) ~dz = 0$.
@@ -189,7 +189,7 @@ Thus if $f$ is holomorphic with continuous partials on $\Omega$, then $\int_T f 
 
 $\qed$
 
-## 2.6.6
+### 2.6.6
 
 Suppose that $f$ is holomorphic on a punctured open set $\Omega\setminus\theset{w_0}$ and let $T\subset \Omega$ be a triangle containing $w_0$.
 Prove that if $f$ is bounded near $w_0$, then $\int_T f(z) ~dz = 0$.
@@ -218,7 +218,7 @@ since the perimeter of $T_k$ evidently goes to zero.
 
 $\qed$
 
-## 2.6.7
+### 2.6.7
 
 Suppose $f: \DD \to \CC$ is holomorphic and let $d \definedas \sup_{z, w\in \DD}\abs{f(z) - f(w)}$ be the diameter of the image of $f$.
 Show that $2 \abs{f'(0)} \leq d$, and that equality holds iff $f$ is linear, so $f(z) = a_1 z + a_2$.
@@ -258,7 +258,7 @@ where a direct computation shows that $2f'(0) = 2a$, making this an equality.
 $\qed$
 
 
-## 2.6.8
+### 2.6.8
 
 Suppose that $f$ is holomorphic on the strip $S = \theset{x+iy \suchthat x\in \RR,~ -1<y<1}$ with $\abs{f(z)} \leq A \qty{1 + \abs z}^\nu$ for $\nu$ some fixed real number.
 Show that for all $z\in S$, for each integer $n\geq 0$ there exists an $A_n \geq 0$ such that $\abs{f^{(n)}(x)} \leq A_n (1 + \abs x)^\nu$ for all $x\in \RR$.
@@ -287,7 +287,7 @@ So taking $A_n \definedas {2^\nu} {An!}$ suffices.
 
 $\qed$
 
-## 2.6.9
+### 2.6.9
 
 Let $\Omega \subset \CC$ be open and bounded and $\phi: \Omega \to \Omega$ holomorphic.
 Prove that if there exists a point $z_0 \in \Omega$ such that $\phi(z_0) = z_0$ and $\phi'(z_0) = 1$, then $\phi$ is linear.
@@ -342,7 +342,7 @@ which forces $a_n = 0$, a contradiction.
 
 $\qed$
 
-## 2.6.10
+### 2.6.10
 
 Can every continuous function on $\bar \DD$ be uniformly approximated by polynomials in the variable $z$?
 
@@ -352,7 +352,7 @@ Can every continuous function on $\bar \DD$ be uniformly approximated by polynom
 No; consider the function $f(z) = \bar z$.
 This function is known to *not* be holomorphic, but since polynomials are entire, if $P_n(z) \to f$ uniformly on the compact set $\bar \DD$, this would force $f$ to be holomorphic as well.
 
-## 2.6.13
+### 2.6.13
 
 Suppose $f$ is analytic, defined on all of $\CC$, and for each $z_0 \in \CC$ there is at least one coefficient in the expansion $f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n$ is zero.
 Prove that $f$ is a polynomial.
@@ -382,7 +382,7 @@ So $f^{(n)}(z) \equiv 0$ for some finite $n$, making $f$ a polynomial.
 
 $\qed$
 
-## 2.6.14
+### 2.6.14
 
 Suppose that $f$ is holomorphic in an open set containing $\DD$ except for a pole $z_0 \in \bd \DD$.
 Let $\sum_{n=0}^\infty a_n z^n$ be the power series expansion of $f$ in $\DD$, and show that $\lim \frac{a_n}{a_{n+1}} = z_0$.
@@ -446,7 +446,7 @@ c {(n+p-1) + 1 \choose p -1}
 
 $\qed$
 
-## 2.6.15
+### 2.6.15
 
 Suppose $f$ is continuous and nonvanishing on $\bar \DD$, and holomorphic in $\DD$.
 Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
@@ -483,9 +483,9 @@ However, since $F$ is known to be holomorphic away from $\bd \DD$,
 
 $\qed$
 
-# Additional Problems
+## Additional Problems
 
-## Problem 1
+### Problem 1
 
 *Proposition:*
 $L = \lim \abs{a_{n+1}}/\abs{a_n} \implies L = \lim \sqrt[n]{a_n}$
@@ -522,7 +522,7 @@ So $R \leq L + \eps$ for every $\eps>0$, and thus $R = L$.
 
 $\qed$
 
-## Problem 2
+### Problem 2
 
 *Proposition:*
 If $f$ is a power series centered at the origin, then $f$ has a power series expansion about any point in its domain.
@@ -547,9 +547,9 @@ f(z)
 $\qed$
 
 
-## Problem 3
+### Problem 3
 
-### a
+#### a
 
 *Proposition:*
 $\sum n z^n$ does not converge for any $\abs{z} = 1$.
@@ -562,7 +562,7 @@ a_n = nz^n \implies \abs{a_n} = n\abs{z}^n = n \converges{n\to\infty}{\not\to} 0
 .\end{align*}
 
 
-### b
+#### b
 
 *Proposition:*
 $\sum_n z^n/n^2$ converges for every $\abs{z} \leq 1$.
@@ -574,7 +574,7 @@ $\sum_n z^n/n^2$ converges for every $\abs{z} \leq 1$.
 .\end{align*}
 
 
-### c
+#### c
 
 *Proposition:*
 $\sum z^n/n$ converges for every $\abs{z}\leq 1$ except $z=1$.
@@ -584,7 +584,7 @@ By Abel's test, since $\theset{a_n = \frac 1 n} \searrow 0$ and this sequence is
 To see that $f(1)$ diverges, we just note that $f(1) = \sum \frac 1 n$ is the harmonic series, which is known to diverge.
 
 
-## Problem 4
+### Problem 4
 
 *Proposition:*
 Let $\gamma$ denote a circle centered at the origin of radius $r$ with positive orientation.
@@ -606,7 +606,7 @@ By partial fraction decomposition, we have
 .\end{align*}
 
 
-## Problem 5
+### Problem 5
 
 *Proposition:*
 Suppose $f$ is continuous for $x\geq x_0, 0\leq y \leq b$ and $\lim_{x\to\infty}f(x+iy) = A$ independent of $y$.
@@ -621,7 +621,7 @@ Let $\gamma_x \definedas \theset{z\suchthat z = x+it,~ 0\leq t \leq b}$, then
 > ??? 
 > Seems like this should involve integrating over the rectangular contour $[x_0, R] \cross i[0, b]$ and taking $R\to\infty$, but it's not clear what the integral over the whole contour is or even any of the edges.
 
-## Problem 6
+### Problem 6
 
 *Proposition:*
 There exists a function $f$ that is holomorphic on $0 < \abs z < 1$ with $\int_{\bd D_r(0)} = 0$ for all $r<1$ but $f$ is not holomorphic at $z=0$.
@@ -635,7 +635,7 @@ To this end, take $f(z) = \frac 1 {z^2}$, which is clearly discontinuous at zero
 .\end{align*}
 
 
-## Problem 7
+### Problem 7
 
 Let $f$ be analytic on $\Omega$ and $f'(z_0) \neq 0$ for some $z_0 \in \Omega$.
 Show that if $C$ is a circle centered at $z_0$ of sufficiently small radius, then
@@ -673,7 +673,7 @@ Applying Cauchy's Integral Formula, we obtain
 > It's not clear to me how to prove the last equality!
 > It seems like this is where we would use the fact that $f$ is analytic, but expanding in a power series doesn't seem to help remove the square in the denominator.
 
-## Problem 8
+### Problem 8
 
 *Proposition:*
 Let $u, v \in C^1(\RR^2)$.
@@ -702,7 +702,7 @@ and this limit is zero iff the Cauchy-Riemann equations hold at $z_0$ iff $f'(z_
 $\qed$
 
 
-## Problem 9
+### Problem 9
 
 *Proposition:*
 Let $\gamma$ be piecewise smooth with interior $\Omega_1$ and exterior $\Omega_2$.
@@ -732,7 +732,7 @@ We can deduce that $a_0 = A$, and integrate term by term:
 
 > Note: pretty sure this is not right. Also not sure how to compute for $z\in \Omega_1$ without using the residue theorem.
 
-## Problem 10
+### Problem 10
 
 *Proposition:*
 Let $f$ be bounded and analytic and $a\neq b \in \CC$ be fixed, then the following limit exists:
@@ -758,7 +758,7 @@ By partial fractions we have
 
 since this is a constant independent of $R$.
 
-## Problem 11
+### Problem 11
 
 *Proposition:*
 Suppose $f$ is entire and $\frac{f(z)}{z} \converges{z\to\infty}\to 0$.
@@ -779,7 +779,7 @@ Since $z\inv f(z) \to 0$ by assumption, we must have $f'(z) \equiv 0$, which for
 
 
 
-## Problem 12
+### Problem 12
 
 *Proposition:*
 Let $f$ be analytic on $\Omega$ and $\gamma$ a closed curve in $\Omega$.
@@ -825,7 +825,7 @@ And similarly the RHS:
 $\qed$
 
 
-## Problem 13
+### Problem 13
 Compute
 
 \begin{align*}
