@@ -106,7 +106,13 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 
 
 ### 3
+Prove the following:
 
+a. $\sum_{n} nz^n$ does not converge at any point of $S^1$
+
+b. $\sum_n {z^n \over n^2}$ converges at every point of $S^1$.
+
+c. $\sum_n {z^n \over n}$ converges at every point of $S^1$ except $z=1$.
 
 ### 4
 Without using Cauchy's integral formula, show that if $\abs{a} < r < \abs{b}$, then
