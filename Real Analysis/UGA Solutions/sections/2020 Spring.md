@@ -114,9 +114,12 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} = \int_{\abs x > N} \abs{f - f_n + 
 
 - Now take $n\to \infty$?
 
-To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$, take $f(x)$ to be a train of boxes of height 1 and area $1/2^j$ centered on even integers.
-Then the $\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j$ which tends to zero as $N\to \infty$.
-However $f(x) = 1$ for any even integer $x > N$, so $f(x) \not\to 0$.
+Second part:
+
+- To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
+- Take $f(x)$ to be a train of boxes of height 1 and area $1/2^j$ centered on even integers.
+- Then the $\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j$ which tends to zero as $N\to \infty$.
+- However $f(x) = 1$ for any even integer $x > N$, so $f(x) \not\to 0$.
 
 ### b
 
