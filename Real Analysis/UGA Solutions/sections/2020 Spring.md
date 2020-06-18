@@ -120,20 +120,22 @@ However $f(x) = 1$ for any even integer $x > N$, so $f(x) \not\to 0$.
 
 ### b
 
-Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
+- Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
 \begin{align*}
 x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
 .\end{align*}
 
-Now integrate over $[x, 2x]$, using monotonicity of the integral:
+- Integrate over $[x, 2x]$, using monotonicity of the integral:
 \begin{align*}
 \int_x^{2x} f(x) \,dt \leq 
 \int_x^{2x} f(t) \,dt \leq 
 \int_x^{2x} f(x-n) \,dt \implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
 .\end{align*}
 
-By (a), $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$ (?) so $\lim_{x\to \infty} xf(x) = 0$.
-Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ and thus $f(x) \to 0$ as well.
+- By (a), $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$ (?) 
+- So $\lim_{x\to \infty} xf(x) = 0$.
+- Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
+- Thus $f(x) \to 0$ as well.
 
 ### c
 
