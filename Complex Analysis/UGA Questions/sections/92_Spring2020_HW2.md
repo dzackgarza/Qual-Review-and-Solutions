@@ -121,6 +121,11 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 
 
 ### 8
+Assume two functions $u, b: \RR^2 \to \RR$ have continuous partial derivatives at $(x_0 ,y_0)$.
+Show that $f \definedas u + iv$ has derivative $f'(z_0)$ at $z_0 = =x_0 + iy_0$ if and only if
+\begin{align*}
+\lim _{r \rightarrow 0} \frac{1}{\pi r^{2}} \int_{\left|z-z_{0}\right|=r} f(z) d z=0
+.\end{align*}
 
 
 ### 9 (Cauchy's Formula for Exterior Regions)
