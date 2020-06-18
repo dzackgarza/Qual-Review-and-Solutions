@@ -101,8 +101,31 @@ d. Show that if the real part of an entire function is bounded, then $f$ is cons
 
 ### 3.8.17
 
+Let $f$ be non-constant and holomorphic in an open set containing the closed unit disc.
+
+a. Show that if $\abs{f(z)} = 1$ whenever $\abs{z} = 1$, then the image of $f$ contains the unit disc.
+
+    > Hint: Show that $f(z) = w_0$ has a root for every $w_0 \in \DD$, for which it suffices to show that $f(z) = 0$ has a root.
+    > Conclude using the maximum modulus principle.
+
+b. If $\abs{f(z)} \geq 1$ whenever $\abs{z} = 1$ and there exists a $z_0\in \DD$ such that $\abs{f(z_0)} < 1$, then the image of $f$ contains the unit disc.
+
 
 ### 3.8.19
+
+Prove that maximum principle for harmonic functions, i.e.
+
+a. If $u$ is a non-constant real-valued harmonic function in a region $\Omega$, then $u$ can not attain a maximum or a minimum in $\Omega$.
+
+b. Suppose $\Omega$ is a region with compact closure $\bar \Omega$.
+    If $u$ is harmonic in $\Omega$ and continuous in $\bar \Omega$, then 
+    \begin{align*}
+    \sup _{z \in \Omega}|u(z)| \leq \sup _{z \in \bar \Omega -\Omega}|u(z)|
+    .\end{align*}
+
+> Hint: to prove (a), assume $u$ attains a local maximum at $z_0$.
+> Let $f$ be holomorphic near $z_0$ with $\Re(f) = u$, and show that $f$ is not an open map.
+> Then (a) implies (b).
 
 
 ## Problems From Tie
