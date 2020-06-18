@@ -165,13 +165,14 @@ Alternatively showing $f(x) \converges{x\to \infty} 0$:
 
 \begin{align*}
 \norm{(f\ast g)(x)}_1 
-&= \norm{\int H(x, y) \,dy }_1 \\
-&= \norm{\int f(y) g(x-y) \,dy }_1 \\
-&\leq \int \norm{f(y) g(x-y)}_1 \,dy \\ 
-&\leq \int \abs{f(y)}\norm{g(x-y)}_1 \,dy \\ 
-&\leq \int \abs{f(y)} \norm{g}_1 \,dy \\ 
-&\leq \norm{g}_1 \int \abs{f(y)} \,dy \\ 
+&= \norm{\int_\RR H(x, y) \,dy }_1 \\
+&\definedas \norm{\int_\RR f(y) g(x-y) \,dy }_1 \\
+&\leq \int_\RR \norm{f(y) g(x-y)}_1 \,dy \\ 
+&\leq \int_\RR \abs{f(y)} \cdot \norm{g(x-y)}_1 \,dy \\ 
+&\leq \int_\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\ 
+&\leq \norm{g}_1 \int_\RR \abs{f(y)} \,dy \\ 
 &\leq \norm{g}_1 \norm{f}_1\\ 
+&< \infty \qtext{by assumption}
 .\end{align*}
 
 Todo: 
