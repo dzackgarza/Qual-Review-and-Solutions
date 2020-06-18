@@ -81,6 +81,15 @@ Prove that all entire functions that are injective are of the form $f(z) = az + 
 > Hint: Apply the Casorati-Weierstrass theorem to $f(1/z)$.
 
 ### 3.8.15
+Use the Cauchy inequalities or the maximum modulus principle to solve the following problems:
+
+a. Prove that if $f$ is an entire function that satisfies
+    \begin{align*}
+    \sup _{|z|=R}|f(z)| \leq A R^{k}+B
+    \end{align*}
+    for all $R>0$, some integer $k\geq 0$, and some constants $A, B > 0$, then $f$ is a polynomial of degree $\leq k$.
+
+b. Show that if $f$ is holomorphic in the unit disc, is bounded, and converges uniformly to zero in the sector $\theta < \arg(z) < \phi$ as $\abs{z} \to 0$, then $f \equiv 0$.
 
 
 ### 3.8.17
