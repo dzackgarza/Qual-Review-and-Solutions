@@ -198,6 +198,17 @@ Note that
 
 If passing the limit through the integral is justified, we will have $\int_0^\infty e^{-x^2} = {\sqrt \pi \over 2}$.
 
+Computing the integral:
+
+\begin{align*}
+\qty{\int_\RR e^{-x^2}\, dx}^2
+&= \qty{\int_\RR e^{-x^2}\,dx} \qty{\int_\RR e^{-y^2}\,dx} \\
+&= \int_\RR \int_\RR e^{-(x+y)^2}\, dx \\
+&= \int_0^{2\pi} \int_0^\infty e^{-r^2} r\, dr \, d\theta \qquad u=r^2 \\
+&= {1\over 2} \int_0^{2\pi } \int_0^\infty e^{-u}\, du \, d\theta \\
+&= \int_0^{2\pi} 
+.\end{align*}
+
 Todo:
 
 - Justify, DCT?
