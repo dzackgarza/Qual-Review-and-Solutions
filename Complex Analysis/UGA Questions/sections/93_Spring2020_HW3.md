@@ -3,34 +3,82 @@
 ## Stein and Shakarchi
 
 ### 3.8.1
+Use the following formula to show that the complex zeros of $\sin(\pi z)$ are exactly the integers, and they are each of order 1:
+\begin{align*}
+\sin \pi z=\frac{e^{i \pi z}-e^{-i \pi z}}{2 i}
+.\end{align*}
+
+Calculate the residue of ${1\over \sin(\pi z)}$ at $z=n\in \ZZ$.
 
 
 ### 3.8.2
 
+Evaluate the integral
+\begin{align*}
+\int_\RR {dx \over 1 + x^4}
+.\end{align*}
+
+What are the poles of ${1\over 1 + z^4}$ ?
+
 
 ### 3.8.4
+Show that
+\begin{align*}
+\int_{-\infty}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x=\pi e^{-a}, \quad \text { for all } a>0
+.\end{align*}
 
 
 ### 3.8.5
+Show that if $\xi\in \RR$, then
+\begin{align*}
+\int_{-\infty}^{\infty} \frac{e^{-2 \pi i x \xi}}{\left(1+x^{2}\right)^{2}} d x=\frac{\pi}{2}(1+2 \pi|\xi|) e^{-2 \pi|\xi|}
+.\end{align*}
 
 
 ### 3.8.6
+Show that
+\begin{align*}
+\int_{-\infty}^{\infty} \frac{d x}{\left(1+x^{2}\right)^{n+1}}=\frac{1 \cdot 3 \cdot 5 \cdots(2 n-1)}{2 \cdot 4 \cdot 6 \cdots(2 n)} \cdot \pi
+.\end{align*}
 
 
 ### 3.8.7
+Show that
+\begin{align*}
+\int_{0}^{2 \pi} \frac{d \theta}{(a+\cos \theta)^{2}}=\frac{2 \pi a}{\left(a^{2}-1\right)^{3 / 2}}, \quad \text { whenever } a>1
+.\end{align*}
 
 
 ### 3.8.8
-
+Show that if $a,b\in \RR$ with $a > \abs{b}$, then
+\begin{align*}
+\int_{0}^{2 \pi} \frac{d \theta}{a+b \cos \theta}=\frac{2 \pi}{\sqrt{a^{2}-b^{2}}}
+.\end{align*}
 
 ### 3.8.9
+Show that
+\begin{align*}
+\int_{0}^{1} \log (\sin \pi x) d x=-\log 2
+.\end{align*}
 
+Hint: use the following contour.
+
+![](figures/image_2020-06-17-21-52-40.png)
 
 ### 3.8.10
+Show that if $a>0$, then
+\begin{align*}
+\int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x=\frac{\pi}{2 a} \log a
+.\end{align*}
 
+Hint: use the following contour.
+
+![](figures/image_2020-06-17-21-53-19.png)
 
 ### 3.8.14
+Prove that all entire functions that are injective are of the form $f(z) = az + b$ with $a,b\in \CC$ and $a\neq 0$.
 
+> Hint: Apply the Casorati-Weierstrass theorem to $f(1/z)$.
 
 ### 3.8.15
 
