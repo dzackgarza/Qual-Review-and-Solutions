@@ -112,6 +112,15 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 
 
 ### 5
+Assume $f$ is continuous in the region $\theset{x+iy \suchthat x\geq x_0, ~ 0\leq y \leq b}$, and the following limit exists independent of $y$:
+\begin{align*}
+\lim_{x\to +\infty}f(x+iy) = A
+.\end{align*}
+
+Show that if $\gamma_x \definedas \theset{z = x+it \suchthat 0 \leq t \leq b}$, then
+\begin{align*}
+\lim_{x\to +\infty} \int_{\gamma_x} f(z) \,dz = iAb
+.\end{align*}
 
 
 ### 6
