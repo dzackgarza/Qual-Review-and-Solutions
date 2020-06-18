@@ -123,18 +123,55 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 ### 8
 
 
-### 9
+### 9 (Cauchy's Formula for Exterior Regions)
+
+Let $\gamma$ be a piecewise smooth simple closed curve with interior $\Omega_1$ and exterior $\Omega_2$.
+Assume $f'$ exists in an open set containing $\gamma$ and $\Omega_2$ with $\lim_{z\to \infty} f(z) = A$.
+Show that
+\begin{align*}
+\frac{1}{2 \pi i} \int_{\gamma} \frac{f(\xi)}{\xi-z} d \xi=\left\{\begin{array}{ll}
+A, & \text { if } z \in \Omega_{1} \\
+-f(z)+A, & \text { if } z \in \Omega_{2}
+\end{array}\right.
+.\end{align*}
 
 
 ### 10
+Let $f(z)$ be bounded and analytic in $\CC$.
+Let $a\neq b$ be any fixed complex numbers.
+Show that the following limit exists:
+\begin{align*}
+\lim_{R\to \infty} \int_{\abs z = R} {f(z) \over (z-a)(z-b)} \,dz
+.\end{align*}
+
+Use this to show that $f(z)$ must be constant.
 
 
 ### 11
+Suppose $f(z)$ is entire and 
+\begin{align*}
+\lim_{z\to\infty} {f(z) \over z} = 0
+.\end{align*}
+
+Show that $f(z)$ is a constant.
 
 ### 12
+Let $f$ be analytic in a domain $D$ and $\gamma$ be a closed curve in $D$.
+For any $z_0\in D$ not on $\gamma$, show that
+\begin{align*}
+\int_{\gamma} \frac{f^{\prime}(z)}{\left(z-z_{0}\right)} d z=\int_{\gamma} \frac{f(z)}{\left(z-z_{0}\right)^{2}} d z
+.\end{align*}
+Give a generalization of this result.
 
 
 ### 13
 
-
+Compute
+\begin{align*}
+\int_{\abs z = 1} \qty{z + {1\over z}}^{2n} {dz \over z}
+\end{align*}
+and use it to show that
+\begin{align*}
+\in_0^{2\pi} \cos^{2n}(\theta) \, d\theta = 2\pi \qty{1\cdot 3 \cdot 5 \cdots (2n-1) \over 2 \cdot 4 \cdot 6 \cdots (2n)}
+.\end{align*}
 
