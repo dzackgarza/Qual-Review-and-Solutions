@@ -183,8 +183,8 @@ Relevant concepts:
 
 Todo: 
 
-- Dependence on $x$ doesn't make sense.
--  Show $H\in L^1$: Fubini-Tonelli?
+- Change of variables for $x-y$?
+- How to justify F/T?
 
 ## 5 
 
