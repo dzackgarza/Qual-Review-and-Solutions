@@ -61,9 +61,9 @@ Show that
 \int_{0}^{1} \log (\sin \pi x) d x=-\log 2
 .\end{align*}
 
-Hint: use the following contour.
-
-![](figures/image_2020-06-17-21-52-40.png)
+> Hint: use the following contour.
+>
+> ![](figures/image_2020-06-17-21-52-40.png)
 
 ### 3.8.10
 Show that if $a>0$, then
@@ -71,9 +71,9 @@ Show that if $a>0$, then
 \int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x=\frac{\pi}{2 a} \log a
 .\end{align*}
 
-Hint: use the following contour.
-
-![](figures/image_2020-06-17-21-53-19.png)
+> Hint: use the following contour.
+>
+> ![](figures/image_2020-06-17-21-53-19.png)
 
 ### 3.8.14
 Prove that all entire functions that are injective are of the form $f(z) = az + b$ with $a,b\in \CC$ and $a\neq 0$.
