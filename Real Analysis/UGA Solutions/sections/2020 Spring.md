@@ -141,9 +141,17 @@ x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
 - Thus $f(x) \to 0$ as well.
 
+Alternatively showing $f(x) \converges{x\to \infty} 0$:
+
+- Toward a contradiction, suppose not.
+- If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x\gg 1$ so that $\abs{f(x)} > 1$, then 
+ \begin{align*}
+  \int_\RR \abs{f} \geq \int_{x}^\infty f(t)\, dt \geq \int_x^\infty 1 =\infty
+ .\end{align*}
+
 ### c
 
-???
+
 
 ## 4
 
