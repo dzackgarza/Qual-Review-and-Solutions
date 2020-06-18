@@ -213,8 +213,10 @@ and now use the fact that the function is even.
 
 Todo:
 
-- Justify, DCT?
-- How to compute the integral?
+- Justify, DCT? Possible have 
+\begin{align*}
+f_n(x) \definedas {1 \over \qty{1+{x^2 \over n}}^{n+1} } \nearrow e^{-x^2}
+.\end{align*}
 
 ## 6 
 
