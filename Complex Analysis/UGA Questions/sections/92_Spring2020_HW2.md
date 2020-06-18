@@ -115,9 +115,20 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 
 
 ### 6
-
+Show by example that there exists a function $f(z)$ that is holomorphic on $\theset{z\in \CC \suchthat 0 < \abs{z} < 1}$ and for all $r<1$,
+\begin{align*}
+\int_{\abs z = r} f(z) \, dz = 0
+,\end{align*}
+but $f$ is not holomorphic at $z=0$.
 
 ### 7
+Let $f$ be analytic on a region $R$ and suppose $f'(z_0) \neq 0$ for some $z_0 \in R$.
+Show that if $C$ is a circle of sufficiently small radius centered at $z_0$, then 
+\begin{align*}
+\frac{2 \pi i}{f^{\prime}\left(z_{0}\right)}=\int_{C} \frac{d z}{f(z)-f\left(z_{0}\right)}
+.\end{align*}
+
+> Hint: use the inverse function theorem.
 
 
 ### 8
