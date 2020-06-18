@@ -100,9 +100,16 @@ Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
 ## Additional Problems
 
 ### 1
+Let $a_n\neq 0$ and show that
+\begin{align*}
+\lim_{n\to \infty} {\abs{a_{n+1}} \over \abs{a_n}} = L \implies \lim_{n\to\infty} \abs{a_n}^{1\over n} = L
+.\end{align*}
 
+In particular, this shows that when applicable, the ratio test can be used to calculate the radius of convergence of a power series.
 
 ### 2
+Let $f$ be a power series centered at the origin.
+Prove that $f$ has a power series expansion about any point in its disc of convergence.
 
 
 ### 3
