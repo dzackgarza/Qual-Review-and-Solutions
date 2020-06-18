@@ -230,3 +230,7 @@ Concepts used:
 - When a basis, the above is an inequality (Parseval)
 - Arguing uniform convergence: since $\theset{\hat f(n)} \in \ell^1(\ZZ)$, we should be able to apply the $M$ test.
 
+Want to show
+\begin{align*}
+\int_0^1 \abs{f(x)}^2 \,dx \leq \int_0^1 \abs{f(x)} \,dx
+.\end{align*}
