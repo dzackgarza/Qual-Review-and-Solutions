@@ -103,9 +103,11 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\
 
 ### a
 
+Stated integral equality: 
+
 - Let $\eps > 0$
-- Use the fact that $C_c(\RR^n) \injects L^1(\RR^n)$ is dense and choose a sequence $\theset{f_n} \covers f$ so $\norm{f_n - f}_1 \to 0$.
-- Choose $n$ large enough so that $\norm{f_n - f} < \eps$. Fix this $n$.
+- $C_c(\RR^n) \injects L^1(\RR^n)$ is dense so choose $\theset{f_n} \covers f$ so $\norm{f_n - f}_1 \to 0$.
+- Choose $n \gg 1$ so that $\norm{f_n - f} < \eps$. Fix this $n$.
 - Since $\theset{f_n}$ are compactly supported, choose $N_0$ large enough such that $f_n$ is zero outside of $B_N(\vector 0)$.
 - Then
 \begin{align*}
