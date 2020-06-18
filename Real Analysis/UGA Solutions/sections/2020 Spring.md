@@ -232,5 +232,6 @@ Concepts used:
 
 Want to show
 \begin{align*}
-\int_0^1 \abs{f(x)}^2 \,dx \leq \int_0^1 \abs{f(x)} \,dx
+\int_0^1 \abs{f(x)}^2 \,dx &\leq \int_0^1 \abs{f(x)} \,dx \\
+\sum_{n=1}^\infty \abs{c_n}^2 &\leq \sum_{n=1}^\infty \abs{c_n}
 .\end{align*}
