@@ -1,5 +1,14 @@
 ## Algebraic
 
+#### Fundamental Group
+
+Conjugacy in $\pi_1$:
+
+- See Hatcher 1.19, p.28
+- See Hatcher's proof that $\pi_1$ is a group
+- See change of basepoint map
+
+
 ### Homotopy
 
 > Todo: Merge the two van Kampen theorems.
