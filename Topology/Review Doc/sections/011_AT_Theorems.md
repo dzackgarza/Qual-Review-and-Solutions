@@ -4,6 +4,7 @@
 
 > Todo: Merge the two van Kampen theorems.
 
+Note: Van Kampen critically requires the intersection to be path connected!
 
 Theorem (Van Kampen)
 :   The pushout is the northwest colimit of the following diagram
