@@ -175,6 +175,11 @@ f(x-n) \int_x^{2x} \,dt  \\
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
 - Thus $f(x) \to 0$ as well.
 
+Alternatively, use mean value theorem for integrals:
+\begin{align*}
+\int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
+.\end{align*}
+
 Alternatively showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
