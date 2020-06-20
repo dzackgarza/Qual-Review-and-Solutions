@@ -232,6 +232,12 @@ Relevant concepts:
 &< \infty \qtext{by assumption}
 .\end{align*}
 
+
+\begin{align*}
+\norm{H(x)}_1 
+&= \int_\RR \abs{H(x, y)} \, dy
+.\end{align*}
+
 Todo: 
 
 - Change of variables for $x-y$?
