@@ -3,6 +3,11 @@
 
 ## 1
 
+Concepts used:
+
+- DCT
+- Weierstrass Approximation Theorem
+
 Suppose $p$ is a polynomial, then
 \begin{align*}
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
@@ -49,19 +54,22 @@ Finally, the first integral is equal to $p_\eps(1)$ for each $\eps$, which conve
 
 Concepts used:
 
-- Definition: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
-- Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$
+- Definition of outer measure: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+- Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$, each with finite measure.
 
 ### a
 
 Suppose $m_*(E) = N< \infty$.
 
-Since $m_*(E)$ is an infimum, by definition, for every $\eps> 0$ there exists a covering by closed cubes $\theset{Q_i(\eps)}_{i=1}^\infty \covers E$ such that $\sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps$.
+Since $m_*(E)$ is an infimum, by definition, for every $\eps> 0$ there exists a covering by closed cubes $\theset{Q_i(\eps)}_{i=1}^\infty \covers E$ such that 
+$$
+\sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps
+.$$
 
 Set $\eps_n = {1\over n}$ to produce such a collection $\theset{Q_i(\eps_n)}$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
 Then (theorem) the outer measure of cubes is *equal* to the sum of their volumes, so 
 \begin{align*}
-m_*(B_n) = \sum \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
+m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
 .\end{align*}
 
 Now set $B \definedas \intersect_{n=1}^\infty B_n$.
