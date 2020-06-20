@@ -159,9 +159,9 @@ x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
 
 - Integrate over $[x, 2x]$, using monotonicity of the integral:
 \begin{align*}
-\int_x^{2x} f(x) \,dt \leq 
 \int_x^{2x} f(t) \,dt \leq 
-\int_x^{2x} f(x-n) \,dt \implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
+\int_x^{2x} f(t) \,dt \leq 
+\int_x^{2x} f(t-n) \,dt \implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
 .\end{align*}
 
 - By the Cauchy Criterion for integrals, $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$.
