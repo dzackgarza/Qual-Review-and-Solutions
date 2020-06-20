@@ -235,7 +235,8 @@ Relevant concepts:
 
 \begin{align*}
 \norm{H(x)}_1 
-&= \int_\RR \abs{H(x, y)} \, dy
+&= \int_\RR \abs{H(x, y)} \, dy \\
+&= \int_\RR \abs{\int_\RR f(y)g(x-y) } \, dy \\
 .\end{align*}
 
 Todo: 
