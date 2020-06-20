@@ -129,7 +129,10 @@ Stated integral equality:
 - Since $\theset{f_n}$ are compactly supported, choose $N_0\gg 1$ such that $f_n$ is zero outside of $B_N(\vector 0)$.
 - Then
 \begin{align*}
-N\geq N_0 \implies \int_{\abs x > N} \abs{f} = \int_{\abs x > N} \abs{f - f_n + f_n} \leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} = \eps+ 0 
+N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n + f_n} \\
+&\leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} \\
+&= \int_{\abs x > N} \abs{f-f_n} \\ 
+&= ?
 .\end{align*}
 
 - Now take $n\to \infty$.
