@@ -180,6 +180,8 @@ Alternatively, use mean value theorem for integrals:
 \int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
 .\end{align*}
 
+- Since $f$ is decreasing, $x\leq c_x \leq 2x \implies f(2x)\leq f(c_x) \leq f(x)$
+
 Alternatively showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
