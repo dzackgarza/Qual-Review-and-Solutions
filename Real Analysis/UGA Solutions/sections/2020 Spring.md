@@ -132,7 +132,7 @@ Stated integral equality:
 N\geq N_0 \implies \int_{\abs x > N} \abs{f} = \int_{\abs x > N} \abs{f - f_n + f_n} \leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} = \eps+ 0 
 .\end{align*}
 
-- Now take $n\to \infty$?
+- Now take $n\to \infty$.
 
 To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 
