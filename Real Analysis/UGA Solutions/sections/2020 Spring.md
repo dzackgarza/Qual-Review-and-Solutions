@@ -167,15 +167,10 @@ x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
 Alternatively showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
-- If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x\gg 1$ so that $\abs{f(x)} > 1$, then 
+- If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x_0 \gg 1$ so that $x\geq x_0 \implies f(x) < -1$, then 
  \begin{align*}
-  \int_\RR \abs{f} \geq \int_{x}^\infty f(t)\, dt \geq \int_x^\infty 1 =\infty
+  \int_\RR \abs{f} \geq \int_{x}^\infty \abs{f(t) } \, dt \geq \int_x^\infty 1 =\infty
  .\end{align*}
-
-- WLOG replace $f$ with $-f$ to make $f$ increasing (since $\norm{f}_1 = \norm{f}_2$).
-- Otherwise $f(x) \to L$ with $L < \infty$. Fix $\eps>0$.
-- Choose $x\gg 1$ so that $t\geq x \implies L - \eps \leq f(t) \leq L$
-- Then $\int_{x}^\infty f \geq \int_x^\infty (L-\eps) = \infty$.
 
 ### c
 
