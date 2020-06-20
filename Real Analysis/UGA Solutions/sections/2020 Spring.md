@@ -175,7 +175,11 @@ Alternatively showing $f(x) \converges{x\to \infty}\to 0$:
 ### c
 
 - No: take $f(x) = {1\over x\ln x}$
-- Then $\int f = \ln\qty{\ln (x)} \to \infty$ is unbounded, so $f\not\in L^1([1, \infty))$.
+- Then 
+\begin{align*}
+\int f = \ln\qty{\ln (x)} \converges{x\to\infty}\to \infty
+\end{align*}
+is unbounded, so $f\not\in L^1([1, \infty))$.
 - But $xf(x) = 1/\ln(x) \to 0$
 
 
