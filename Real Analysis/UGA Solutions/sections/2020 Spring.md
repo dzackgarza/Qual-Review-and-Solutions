@@ -241,6 +241,7 @@ Relevant concepts:
 &= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
 &= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
 &= \int_\RR \qty{ \int_\RR \abs{f(y)}\abs{g(t)}  \, dt}\, dy \\
+&= \int_\RR \abs{f(y)} \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
 .\end{align*}
 
 Todo: 
