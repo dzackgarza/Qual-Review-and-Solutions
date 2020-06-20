@@ -242,7 +242,9 @@ Relevant concepts:
 &= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
 &= \int_\RR \qty{ \int_\RR \abs{f(y)}\abs{g(t)}  \, dt}\, dy \\
 &= \int_\RR \abs{f(y)} \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
-&= \int_\RR \abs{f(y)} \norm{g}_1 \,dy \\
+&\definedas \int_\RR \abs{f(y)} \norm{g}_1 \,dy \\
+&= \norm{g}_1 \int_\RR \abs{f(y)} \,dy \\
+&\definedas \norm{g}_1 \norm{f}_1 
 .\end{align*}
 
 Todo: 
