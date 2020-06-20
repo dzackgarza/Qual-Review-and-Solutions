@@ -132,8 +132,10 @@ Stated integral equality:
 N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n + f_n} \\
 &\leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} \\
 &= \int_{\abs x > N} \abs{f-f_n} \\ 
-&= ?
+&\leq \int_{\abs x > N} \norm{f-f_n}_1 \\ 
 .\end{align*}
+
+- Now check
 
 - Now take $n\to \infty$.
 
