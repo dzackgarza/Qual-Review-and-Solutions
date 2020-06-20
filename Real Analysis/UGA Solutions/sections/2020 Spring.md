@@ -122,7 +122,7 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \
 Concepts used:
 
 - Limits
-- Cauchy Criterion for Integrals
+- Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$.
 
 ### a
 
