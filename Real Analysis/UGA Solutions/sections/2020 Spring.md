@@ -180,9 +180,17 @@ Alternatively, use mean value theorem for integrals:
 \int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
 .\end{align*}
 
-- Since $f$ is decreasing, $x\leq c_x \leq 2x \implies f(2x)\leq f(c_x) \leq f(x)$
+- Since $f$ is decreasing, 
+\begin{align*}
+x\leq c_x \leq 2x 
+&\implies f(2x)\leq f(c_x) \leq f(x) \\
+&\implies xf(2x)\leq xf(c_x) \leq xf(x) \\
+&\implies xf(2x)\leq x\int_x^{2x} f(t)\, dt \leq xf(x) \\
+.\end{align*}
 
-Alternatively showing $f(x) \converges{x\to \infty}\to 0$:
+- By Cauchy Criterion, $\int_x^{2x} f \to 0$.
+
+Alternatively, *just* showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
 - If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x_0 \gg 1$ so that $x\geq x_0 \implies f(x) < -1$, then 
