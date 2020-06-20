@@ -239,7 +239,8 @@ Relevant concepts:
 &= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
 &\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
 &= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx
+&= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)}\abs{g(t)}  \, dt} \\
 .\end{align*}
 
 Todo: 
