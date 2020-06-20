@@ -133,13 +133,11 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n +
 &= \int_{\abs x > N} \abs{f-f_n} \\ 
 &\leq \int_{\abs x > N} \norm{f-f_n}_1 \\
 &= \norm{f_n-f}_1 \qty{\int_{\abs x > N} 1} \\
-&\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} = 0\\
+&\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} \\
+&= 0\\
 &\converges{N\to\infty}\to 0
 .\end{align*}
 
-- Now check
-
-- Now take $n\to \infty$.
 
 To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 
