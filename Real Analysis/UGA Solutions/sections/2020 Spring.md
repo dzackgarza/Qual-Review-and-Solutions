@@ -96,7 +96,7 @@ Suppose $m_*(E) < \infty$.
 \begin{align*}
 m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
 m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
-m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since} m_*(E) < \infty \\ 
+m_*(E) - m_*(E) &= m_*(B\setminus E) \quad\text{since } m_*(E) < \infty \\ 
 \implies m_*(B\setminus E) &= 0
 .\end{align*}
 - So take $N = B\setminus E$; this shows $m_*(N) = 0$ and $E = B\setminus (B\setminus E) = B\setminus N$.
