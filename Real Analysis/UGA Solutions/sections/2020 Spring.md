@@ -235,11 +235,11 @@ Relevant concepts:
 
 \begin{align*}
 \norm{H(x)}_1 
-&= \int_\RR \abs{H(x, y)} \, dy \\
-&= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dx } \, dy \\
-&\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx } \, dy \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy} \, dx \quad\text{by Tonelli} \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy} \, dx  
+&= \int_\RR \abs{H(x, y)} \, dx \\
+&= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
+&\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy  
 .\end{align*}
 
 Todo: 
