@@ -78,6 +78,7 @@ Now set $B \definedas \intersect_{n=1}^\infty B_n$.
 - Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
 - Since $B_n \subseteq B$ for every $n$, we can apply subadditivity to obtain the inequality
 \begin{align*}
+E \subseteq B \subseteq B_n \implies
 N \leq m_*(B) \leq m_*(B_n) < N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1}
 .\end{align*}
 
