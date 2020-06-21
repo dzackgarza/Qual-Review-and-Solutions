@@ -247,6 +247,12 @@ Relevant concepts:
 &\definedas \norm{g}_1 \norm{f}_1 
 .\end{align*}
 
+Now to justify the interchange of integrals:
+
+- We first apply Fubini to $f$:
+  - Checking measurability: $f \in L^1$ implies that $f$ is measurable (by how $L^1$ is defined)
+  - The function $\tau_y(x) = x-y$ for a fixed $y$ is measurable
+
 Todo: 
 
 - Change of variables for $x-y$?
