@@ -73,7 +73,14 @@ Definition (Locally Path-Connected)
     A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
     .\end{align*}
 
-- Paracompact
+Definition (Locally Finite)
+: A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
+
+Definition (Refinement)
+: A cover $\mcv \covers X$ is a *refinement* of $\mcu \coverx X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
+
+Definition (Paracompact)
+: A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
 
 - Components: 
     Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.

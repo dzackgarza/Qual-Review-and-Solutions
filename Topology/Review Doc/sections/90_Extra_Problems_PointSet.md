@@ -3,6 +3,7 @@
 ## Basics
 - Show that for $A\subseteq X$, $\cl_X(A)$ is the smallest closed subset containing $A$.
 - Show that the diagonal map $\Delta(x) = (x, x)$ is continuous.
+- Show that if $A_i \subseteq X$, then $\cl_X(\union_i A_i) = \union_i \cl_X(A_i)$.
 
 ## Topologies 
 - Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
