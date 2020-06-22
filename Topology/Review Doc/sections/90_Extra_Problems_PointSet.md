@@ -46,3 +46,4 @@
 - Show that any countable space with the discrete topology is separable.
 - Show that the minimal uncountable order with the order topology is not separable.
 - Show that every first countable space is second countable.
+- Show that every metric space is Hausdorff in its metric topology.
