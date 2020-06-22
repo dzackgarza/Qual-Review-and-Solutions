@@ -16,3 +16,12 @@
   - Connected does not imply path connected
   - Connected and locally path connected *does* imply path connected
   - Path connected implies connected
+
+- Show that if $f: A\to B$ is a continuous map between metric spaces and $K\subset A$ is compact, then $\restrictionof{f}{K}$ is uniformly continuous.
+
+- Show that if $X$ is second countable and Hausdorff, or a metric space, then TFAE:
+  - $X$ is compact
+  - Every infinite subset $A\subseteq X$ has a limit point in $X$.
+  - Every sequence in $X$ has a convergent subsequence in $X$. 
+
+- Show that every compact metric space is complete.
