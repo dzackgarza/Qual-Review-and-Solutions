@@ -58,8 +58,6 @@ Theorem
 Theorem (Baire)
 : If $X$ is a complete metric space, then the intersection of countably many dense open sets is dense in $X$.
 
-Theorem
-: A continuous bijective open map is a homeomorphism.
 
 Theorem
 : A closed subset $A$ of a compact set $B$ is compact.
@@ -79,6 +77,9 @@ Theorem
 
 Theorem
 : A closed subset of a Hausdorff space is compact.
+
+Theorem
+: A continuous bijective open map is a homeomorphism.
 
 Theorem
 : A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
