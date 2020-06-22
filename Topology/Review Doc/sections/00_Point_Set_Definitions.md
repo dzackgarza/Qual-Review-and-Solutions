@@ -30,8 +30,8 @@
     
     That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X \subseteq \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
 
-- Covering:
-  A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
+Definition (Cover)
+: A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
   If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$
 
 - Locally compact
@@ -45,6 +45,9 @@
 
 - Locally connected:
   A space is locally connected at a point $x$ iff $\forall N_x \ni x$, there exists a $U\subset N_x$ containing $x$ that is connected.
+
+Definition (Locally Path-Connected)
+: A space is *locally path-connected* if it admits a basis of path-connected open subsets.
   
 - Retract: 
     A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
@@ -69,8 +72,8 @@
 - Path Components:
     Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes.
 
-- Separable: 
-    Contains a countable dense subset.
+Definition (Separable)
+: Contains a countable dense subset.
 
 - Limit Point:
     For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.

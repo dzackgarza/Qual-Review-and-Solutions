@@ -16,6 +16,11 @@
   - Path connected implies connected
 - Use the fact that intervals are connected to prove the intermediate value theorem.
 - Prove that the continuous image of a connected set is connected.
+- Show that if $X$ is locally path connected, then 
+  - Every open subset of $X$ is again locally path-connected.
+  - $X$ is connected $\iff X$ is path-connected.
+  - Every path component of $X$ is a connected component of $X$.
+  - Every connected component of $X$ is open in $X$.
 
 ## Compactness
 - Show that every compact metric space is complete.
