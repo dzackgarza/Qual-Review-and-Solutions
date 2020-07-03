@@ -3,13 +3,15 @@
 ---
 
 
-!include sections/2019 Spring.md
+!include sections/00_Problem Sessions.md
 
-!include sections/2019 Fall.md
+!include sections/01_2020 Spring.md
 
-!include sections/2018 Spring.md
+!include sections/02_2019 Fall.md
 
-!include sections/2018 Fall.md
+!include sections/03_2019 Spring.md
 
-!include sections/0_Problem_Sessions.md
+!include sections/04_2018 Fall.md
+
+!include sections/05_2018 Spring.md
 

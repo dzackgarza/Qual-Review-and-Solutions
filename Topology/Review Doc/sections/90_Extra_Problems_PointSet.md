@@ -4,6 +4,7 @@
 - Show that for $A\subseteq X$, $\cl_X(A)$ is the smallest closed subset containing $A$.
 - Show that the diagonal map $\Delta(x) = (x, x)$ is continuous.
 - Show that if $A_i \subseteq X$, then $\cl_X(\union_i A_i) = \union_i \cl_X(A_i)$.
+- Show that $\RR$ is not homeomorphic to $[0, \infty)$.
 
 ## Topologies 
 - Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
@@ -37,6 +38,8 @@
 - Show that if $X$ is compact and $A\subseteq X$ is closed then $A$ is compact.
 - Show that if $X$ is Hausdorff and $A\subseteq X$ is compact then $A$ is closed.
 - Show that if $X$ is a metric space and $A\subseteq X$ is compact then $A$ is bounded.
+- Show that a continuous map from a compact space to a Hausdorff space is closed.
+- Show that an injective continuous map from a compact space to a Hausdorff space is an embedding (a homeomorphism onto its image).
 
 ## Separation
 

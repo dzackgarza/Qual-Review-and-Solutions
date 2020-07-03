@@ -11,6 +11,14 @@ Basics
 - Is it true that a limit of continuous functions is continuous?
 - Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
 - Show that if $K$ is compact and $F$ is closed with $K, F$ disjoint then $\dist(K, F) > 0$.
+- Show that if $f_n\to f$ uniformly with each $f_n$ continuous then $f$ is continuous.
+- Show that a subset of a metric space is closed iff it is complete. 
+- Show that if a subset of a metric space is complete and totally bounded, then it is compact.
+- Show that every compact set is closed and bounded.
+- Show that a uniform limit of bounded functions is bounded.
+- Show that a uniform limit of continuous function is continuous.
+- Show that if $f_n\to f$ pointwise, $f_n' \to g$ uniformly for some $f, g$, then $f$ is differentiable and $g = f'$.
+
 
 Measure Theory
 
@@ -22,6 +30,7 @@ Measure Theory
 - Show that continuity of measure from above/below holds for outer measures.
 
 - $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup_{K\subset E\text{ compact}} m(K)$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
+- Show that a countable union of null sets is null.
 
 Continuity
 
@@ -31,6 +40,7 @@ Measurability
 
 - Show that $f=0$ a.e. iff $\int_E f = 0$ for every measurable set $E$.
 - $\star$: Show that cylinder functions are measurable, i.e. if $f$ is measurable on $\RR^s$, then $F(x, y) \definedas f(x)$ is measurable on $\RR^s\cross \RR^t$ for any $t$.
+- Show that if $f$ is a measurable function, then $f=0$ a.e. iff $\int f = 0$.
 
 Integrability
 
@@ -44,7 +54,11 @@ Integrability
 - Show that simple functions are dense in $L^1$.
 - Show that step functions are dense in $L^1$.
 - Show that smooth compactly supposed functions are dense in $L^1$.
-- 
+
+Convergence
+
+- Prove Fatou's lemma using the Monotone Convergence Theorem.
+- Show that if $\theset{f_n}$ is in $L^1$ and $\sum \int \abs{f_n} < \infty$ then $\sum f_n$ convergence to an $L^1$ function and $\int \sum f_n = \sum \int f_n$.
 
 Fourier Analysis
 

@@ -3,7 +3,7 @@ FILENAME="UGA_Real_Analysis_Qual_Questions.md"
 TITLE="UGA Real Analysis Qualifying Exam Questions"
 
 define renew_md = 
-{echo "---\n title: $(TITLE)\n---\n\n" && fd --full-path ./sections | sort -nr | sed 'N;s/\(.*\)\n\(.*\)/\2\n\1/' | grep "md" | sort -nr | awk -F ":" '{print "!include " $$1 "\n";}' } > $(FILENAME) 2>&1
+{echo "---\n title: $(TITLE)\n---\n\n" && fd --full-path ./sections | sort -nr | sed 'N;s/\(.*\)\n\(.*\)/\2\n\1/' | grep "md" | sort -n | awk -F ":" '{print "!include " $$1 "\n";}' } > $(FILENAME) 2>&1
 endef
 
 

@@ -15,6 +15,8 @@
 
 !include sections/40_Modules.md
 
+!include sections/50_Linear Algebra.md
+
 !include sections/9991_ExtraProblemSolutions.md
 
 !include sections/999_ExtraProblems.md
