@@ -288,6 +288,9 @@ Misc
 - Show that a nilpotent operator is diagonalizable.
 - Show that if $A,B$ are diagonalizable and $[A, B] = 0$ then $A,B$ are simultaneously diagonalizable.
 - Does diagonalizable imply invertible? The converse?
+- Does diagonalizable imply distinct eigenvalues?
+- Show that if a matrix is diagonalizable, its minimal polynomial is squarefree.
+- Show that a matrix representing a linear map $T:V\to V$ is diagonalizable iff $V$ is a direct sum of eigenspaces $V = \bigoplus_i \ker(T -\lambda_i I)$.
 
 ## Commutative Algebra
 
