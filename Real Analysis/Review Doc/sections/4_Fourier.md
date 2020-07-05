@@ -49,7 +49,8 @@ Proof
 Proposition (Eigenfunction of the Fourier Transform)
 :
 \begin{align*}
-g(x) \definedas e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi)
+g(x) \definedas e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi) \qtext{and} \\
+\hat g_t(x) = g(tx) = e^{-\pi t^2 \abs{x}^2}, \qquad \mcf\qty{e^{2\pi i x\cdot \xi} }
 .\end{align*}
 
 Proposition (Properties of the Fourier Transform)
