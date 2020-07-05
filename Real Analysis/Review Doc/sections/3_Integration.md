@@ -1,20 +1,42 @@
 # Integration
 
-Definition
+## Useful techniques: 
+
+- Break integration domain up into disjoint annuli.
+- Break real integrals up into $x < 1$ and $x>1$.
+
+
+
+## Definitions
+
+Definition (\$L^+\$)
 :	$f\in L^+$ iff $f$ is measurable and non-negative.
 
-> Useful techniques: 
->
-> - Break integration domain up into disjoint annuli.
-> - Break real integrals up into $x < 1$ and $x>1$.
-
-Definition
+Definition (Integrable)
 :	A measurable function is integrable iff $\norm{f}_1 < \infty$.
+
+Definition (\$L^\infty\$ and Essentially Bounded Functions)
+:   For $(X, \mcm, \mu)$ a measure space,
+    \begin{align*}
+    L^\infty(X) \definedas \theset{f \in \mcm \suchthat f \text{ is essentially bounded }}
+    ,\end{align*}
+    where $f$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$.
+
+    If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+
+Example:
+
+- $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
+
+
+
+## Theorems
 
 Useful facts about $C_c$ functions:
 
 - Bounded almost everywhere
 - Uniformly continuous
+
 
 Theorem (\$p\dash\$Test for Integrals)
 :
@@ -259,9 +281,8 @@ Proof (p=1)
 : ?
 
 Proof (p=2)
-> Use Riesz Representation for Hilbert spaces.
+: Use Riesz Representation for Hilbert spaces.
  
-
-For the $p=\infty$ case: 
-$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
+Proof ($p=\infty$) 
+: $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
 So this containment is always proper (requires Hahn-Banach Theorem).
