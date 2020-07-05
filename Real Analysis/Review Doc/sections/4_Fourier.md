@@ -38,48 +38,48 @@ Proof
 
 
 Theorem (Fourier Inversion)
-:
-\begin{align*}
-f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
-.\end{align*}
+:   \hfill
+    \begin{align*}
+    f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
+    .\end{align*}
 
 Proof
-: Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
+:   Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
 
-  - Take the modified integral:
-  
-  \begin{align*}
-  I_t(x)
-  &= \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
-  &= \int \hat f(\xi) \phi(\xi) \\
-  &= \int f(\xi) \hat \phi(\xi) \\
-  &= \int f(\xi) \widehat{\hat g}(\xi - x) \\
-  &= \int f(\xi) g_t(x - \xi)  ~d\xi \\
-  &= \int f(y-x) g_t(y) ~dy  \quad (\xi = y-x)\\
-  &= (f \ast g_t) \\
-  &\to f \text{ in $L^1$ as }t \to 0
-  .\end{align*}
+    - Take the modified integral:
+    
+    \begin{align*}
+    I_t(x)
+    &= \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
+    &= \int \hat f(\xi) \phi(\xi) \\
+    &= \int f(\xi) \hat \phi(\xi) \\
+    &= \int f(\xi) \widehat{\hat g}(\xi - x) \\
+    &= \int f(\xi) g_t(x - \xi)  ~d\xi \\
+    &= \int f(y-x) g_t(y) ~dy  \quad (\xi = y-x)\\
+    &= (f \ast g_t) \\
+    &\to f \text{ in $L^1$ as }t \to 0
+    .\end{align*}
 
-  - We also have
-  \begin{align*}
-  \lim_{t\to 0} I_t(x)
-  &= 
-  \lim_{t\to 0} \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
-  &= 
-  \lim_{t\to 0} \int \hat f(\xi) \phi(\xi) \\
-  &=_{DCT} 
-  \int \hat f(\xi) \lim_{t\to 0} \phi(\xi) \\
-  &=
-  \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} \\
-  .\end{align*}
+    - We also have
+    \begin{align*}
+    \lim_{t\to 0} I_t(x)
+    &= 
+    \lim_{t\to 0} \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
+    &= 
+    \lim_{t\to 0} \int \hat f(\xi) \phi(\xi) \\
+    &=_{DCT} 
+    \int \hat f(\xi) \lim_{t\to 0} \phi(\xi) \\
+    &=
+    \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} \\
+    .\end{align*}
 
-  - So 
-  \begin{align*}
-  I_t(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\pnorm{I_t(x) - f(x)}{1} \to 0
-  .\end{align*}
+    - So 
+    \begin{align*}
+    I_t(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\pnorm{I_t(x) - f(x)}{1} \to 0
+    .\end{align*}
 
-  - So there is a subsequence $I_{t_n}$ such that $I_{t_n}(x) \to f(x)$ almost everywhere
-  - Thus $f(x) = \int \hat f(\xi) ~e^{2\pi i x \cdot \xi}$ almost everywhere by uniqueness of limits. 
+    - So there is a subsequence $I_{t_n}$ such that $I_{t_n}(x) \to f(x)$ almost everywhere
+    - Thus $f(x) = \int \hat f(\xi) ~e^{2\pi i x \cdot \xi}$ almost everywhere by uniqueness of limits. 
 
 
 Proposition (Eigenfunction of the Fourier Transform)
