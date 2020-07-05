@@ -9,13 +9,13 @@
 
 ## Definitions
 
-Definition
+Definition (Nowhere Dense Sets)
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 
-Definition
+Definition (Meager Sets)
 : A set is **meager** if it is a *countable* union of nowhere dense sets.
 
-Definition
+Definition (\$F_\\Sigma\$ and \$G_\\delta\$)
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
 

@@ -4,8 +4,6 @@
 ---
 
 
-!include sections/00_Definitions.md
-
 !include sections/1_Basics.md
 
 !include sections/2_Measure.md
