@@ -1,5 +1,10 @@
 # Integration
 
+Notation:
+
+- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
+- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
+
 ## Useful Techniques
 
 - Break integration domain up into disjoint annuli.
@@ -10,6 +15,7 @@
 - Useful facts about compactly supported continuous functions:
   - Uniformly continuous
   - Bounded
+
 
 ## Definitions
 
@@ -218,7 +224,7 @@ Lemma (Integrals Distribute Over Disjoint Sets)
 : If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
 
 
-Lemma (Unif. Cts. L1 Functions Decay Rapidly)
+Lemma (Unif. Cts. L1 Functions Vanish at Infinity)
 : If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
 
 > Doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
@@ -251,9 +257,10 @@ Proof
 :   Approximate with compactly supported functions.
     Take $g\converges{L_1}\to f$ with $g\in C_c$.
     \begin{align*}
-    \int f(x+h) - f(x) \leq \\ 
+    \int f(x+h) - f(x) 
+    \\ &\leq 
     \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
-    \to 2 \varepsilon + \int g(x+h) - g(x) \\
+    \converges{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
     = \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x) \to 0
     ,\end{align*}
     which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
