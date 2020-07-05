@@ -27,12 +27,9 @@ Lemma
 Proof
 : $\abs{\hat f} \leq \int \abs{f}\cdot \abs{e^{\cdots}} \leq \norm{f}_1$, and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
 
-Lemma
-: Young's Inequality?
-  
-  \begin{align*}
-  {1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
-  .\end{align*}
+\[  
+{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
+\]
 
 - Useful variant - take $q = 1$ to get $\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
@@ -48,10 +45,11 @@ Fact: $\int \phi = \int \phi_t = 1$
 
 
 Theorem (Norm Convergence of Approximate Identities)
-: 
-\begin{align*}
-\norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0.
-.\end{align*}
+:   \hfill
+
+    \begin{align*}
+    \norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0
+    .\end{align*}
 
 Proof
 : 
