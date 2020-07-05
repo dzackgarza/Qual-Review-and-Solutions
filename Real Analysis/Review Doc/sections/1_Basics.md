@@ -32,6 +32,19 @@ Definition (\$F_\\sigma\$ and \$G_\\delta\$)
 
 ## Theorems
 
+### Topology / Sets
+
+
+Lemma
+:	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+
+Proposition
+: The unit ball in $C([0, 1])$ with the sup norm is not compact.
+
+Proof 
+: Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
+
+
 Proposition
 : A *finite* union of nowhere dense is again nowhere dense.
 
@@ -66,6 +79,11 @@ Theorem (Baire)
   Thus $\RR$ can not be written as a countable union of nowhere dense sets.
 
 Lemma
+:	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+
+### Functions
+
+Lemma
 :	There is a function discontinuous precisely on $\QQ$.
 
 Proof
@@ -79,8 +97,6 @@ Proof
 :   $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
     $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 
-Lemma
-:	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
 
 ## Uniform Convergence
 
@@ -121,16 +137,7 @@ Proof
 
         The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
 
-Lemma
-:	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
-
-Proposition
-: The unit ball in $C([0, 1])$ with the sup norm is not compact.
-
-Proof 
-: Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
-
-Lemma
+Theorem (Uniform Limits of Continuous Functions are Continuous)
 :	A uniform limit of continuous functions is continuous.
 
 Theorem (Heine-Cantor)
@@ -141,14 +148,13 @@ Lemma (Testing Uniform Convergence)
 
     **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
 
-
-Lemma (Baby Commuting Limits with Integrals)
+Lemma (Uniform Limits Commute with Integrals)
 : If $f_n \to f$ uniformly, then $\int f_n = \int f$.
 
 Lemma (Uniform Convergence and Derivatives)
 : If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
 
-Lemma (Uniform Convergence of Series)
+Lemma (Uniform Convergence of Series of Numbers)
 : If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
 Lemma (Small Tails for Series of Functions)
