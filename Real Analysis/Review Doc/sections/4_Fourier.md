@@ -37,12 +37,6 @@ Proof
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
 
-- Useful variant: take $q = 1$ to get 
-\begin{align*}
-\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1
-.\end{align*}
-
-- Take $p=1$ to show $L_1$ is closed under $\ast$.
 
 Definition (Approximation to the Identity)
 : ?
@@ -77,14 +71,14 @@ Proof
 \int_{y \geq \delta} \phi_t(y) \left( \norm{f}_1 + \norm{\tau_y f}_1 \right) dy \quad\text{by continuity in } L^1 \\
 &\leq \varepsilon + 
 2\norm{f}_1 \int_{y \geq \delta} \phi_t(y) dy \\
-&\leq \varepsilon + 2\norm{f}_1 \varepsilon \quad\text{since $\phi_t$ has small tails} \\
-&\to 0 \qed
+&\leq \varepsilon + 2\norm{f}_1 \cdot \varepsilon \quad\text{since $\phi_t$ has small tails} \\
+&\converges{\eps\to 0}\to 0 
 .\end{align*}
 
 Theorem (Convolutions Vanish at Infinity)
 : 
 \begin{align*}
-f,g \in L^1 \text{ and  bounded}  \implies \lim _{|x| \rightarrow \infty} (f * g)(x) = 0
+f,g \in L^1 \text{ and  bounded}  \implies \lim_{|x| \rightarrow \infty} (f * g)(x) = 0
 .\end{align*}
 
 Proof
@@ -112,5 +106,15 @@ Proof
 Proposition (Young's Inequality?)
 :
 \begin{align*}
-{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
+{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \pnorm{f \ast g}{r} \leq \pnorm{f}{p} \norm{g}{q}
 .\end{align*}
+
+Corollary
+: Take $q = 1$ to obtain
+\begin{align*}
+\pnorm{f \ast g}p \leq \norm{f}p \norm{g}1
+.\end{align*}
+
+Corollary
+: If $f, g \in L^1$ then $f\ast g\in L^1$.
+
