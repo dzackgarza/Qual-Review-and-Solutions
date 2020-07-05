@@ -30,14 +30,18 @@ Proof
     \begin{align*}
     \abs{\hat f(\xi)} 
     \leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} 
-    = \norm{f}
+    = \pnorm{f}{1}
     .\end{align*}
 
     - Continuity:
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
 
-- Useful variant: take $q = 1$ to get $$\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$$
+- Useful variant: take $q = 1$ to get 
+\begin{align*}
+\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1
+.\end{align*}
+
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
 
 Definition (Approximation to the Identity)
@@ -53,7 +57,7 @@ Fact: $\int \phi = \int \phi_t = 1$
 Theorem (Norm Convergence of Approximate Identities)
 : 
 \begin{align*}
-\norm{f \ast \phi_t - f}_1 \converges{t\to 0}\to 0
+\pnorm{f \ast \phi_t - f}{1} \converges{t\to 0}\to 0
 .\end{align*}
 
 
