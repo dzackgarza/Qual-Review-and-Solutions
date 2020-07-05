@@ -106,7 +106,7 @@ $L^p$ Spaces
 - Prove continuity in $L^p$: If $f$ is uniformly continuous then for all $p$, $$\norm{\tau_h f - f}_p \converges{h\to 0}\to 0.$$ 
 - Prove the following inclusions of $L^p$ spaces for $m(X) < \infty$:
 \begin{align*}
-&L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
-&\ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
+L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
+\ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
 .\end{align*}
 
