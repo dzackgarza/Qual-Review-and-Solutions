@@ -39,13 +39,11 @@ Proof
 
 
 Definition (Approximation to the Identity)
-: ?
-\begin{align*}
-\phi(x) = e^{-\pi x^2} \\
-\phi_t(x) = t^{-n} \phi(\frac x t)
-.\end{align*}
+:   For $\phi$ any function on $\RR^n$, define $\phi_t(x) \definedas {1\over t^n} \phi\qty{x\over t}$.
+    For $\phi\in L^1$, we have $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
+    
+    Example: $\phi(x) = e^{-\pi x^2}$
 
-Fact: $\int \phi = \int \phi_t = 1$
 
 
 Theorem (Norm Convergence of Approximate Identities)
