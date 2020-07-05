@@ -77,8 +77,8 @@ Convolution
 - Show that $f,g \in L^1 \implies f\ast g \in L^1$ and $\norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1$.
 - Show that $f\in L^1, g \leq M \implies f\ast g \leq M'$ and is uniformly continuous.
 - Show that if $f, g\in L^1$ with $f \leq M, g \leq M'$, then $f\ast g \converges{x\to\infty}\to 0$.
-- $f\in L^1, g'$ exists, $\dd{g}{x_i}$ all bounded $\implies \dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$
-- $f, g \in C_c^\infty \implies f\ast g \in C^\infty$ and $f\ast g \mapsvia{x\to\infty} 0$.
+- Show that if $f\in L^1$ and $g'$ exists with $\dd{g}{x_i}$ all bounded, then $\dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$
+- Show that if $f, g$ are smooth and compactly supported then $f\ast g$ is smooth and $f\ast g \converges{x\to\infty}\to 0$.
 - $\star$: show that if $f, g\in L^1$, then $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
 - Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
 - Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.

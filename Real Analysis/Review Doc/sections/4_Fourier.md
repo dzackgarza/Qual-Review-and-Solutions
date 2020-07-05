@@ -41,3 +41,10 @@ Lemma
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
 
 
+
+Definition (Approximation to the Identity)
+: ?
+\begin{align*}
+\phi(x) = e^{-\pi x^2} \\
+\phi_t(x) = t^{-n} \phi(\frac x t)
+.\end{align*}
