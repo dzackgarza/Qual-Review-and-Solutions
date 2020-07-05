@@ -39,8 +39,7 @@ Proof
 
 
 Definition (Approximation to the Identity)
-:   For $\phi$ any function on $\RR^n$, define $\phi_t(x) \definedas {1\over t^n} \phi\qty{x\over t}$.
-    For $\phi\in L^1$, we have $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
+:   For $\phi\in L^1$, we have $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
     
     Example: $\phi(x) = e^{-\pi x^2}$
 
