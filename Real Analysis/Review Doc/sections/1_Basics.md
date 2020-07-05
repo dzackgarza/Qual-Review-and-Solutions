@@ -1,8 +1,10 @@
 # Basics
 
 ## Useful Techniques
-$\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
-Similarly, a limit does not exist iff $\liminf f_n > \limsup f_n$.
+
+- $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
+- A  limit does not exist iff $\liminf f_n > \limsup f_n$.
+- If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
 
 ## Definitions
 
@@ -12,9 +14,6 @@ Definition
 Definition
 : A set is **meager** if it is a *countable* union of nowhere dense sets.
 
-Proposition
-: A *finite* union of nowhere dense is again nowhere dense.
-
 Definition
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
@@ -22,6 +21,9 @@ Definition
 > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
 ## Theorems
+
+Proposition
+: A *finite* union of nowhere dense is again nowhere dense.
 
 Lemma (Convergent Sums Have Small Tails)
 :   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
@@ -43,9 +45,8 @@ Lemma
 Proof
 :   Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
 
-    **Corollary:**
-    The Cantor set is nowhere dense.
-
+Corollary
+: The Cantor set is nowhere dense.
 
 Lemma
 :	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
@@ -71,7 +72,7 @@ Proof
 Lemma
 :	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
 
-# Uniform Convergence
+## Uniform Convergence
 
 Theorem (Egorov)
 :   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $$f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$$ exists almost everywhere.
@@ -127,8 +128,6 @@ Lemma (Testing Uniform Convergence)
 
     **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
 
-**Useful Technique**: 
-If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
 
 Lemma (Baby Commuting Limits with Integrals)
 : If $f_n \to f$ uniformly, then $\int f_n = \int f$.
