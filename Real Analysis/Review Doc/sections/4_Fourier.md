@@ -47,6 +47,7 @@ Proof
 : Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
 
   - Take the modified integral:
+  
   \begin{align*}
   I_t(x)
   &= \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
@@ -74,7 +75,7 @@ Proof
 
   - So 
   \begin{align*}
-  I_t(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\norm{I_t(x) - f(x)}_1 \to 0
+  I_t(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\pnorm{I_t(x) - f(x)}{1} \to 0
   .\end{align*}
 
   - So there is a subsequence $I_{t_n}$ such that $I_{t_n}(x) \to f(x)$ almost everywhere
@@ -97,14 +98,16 @@ Proposition (Properties of the Fourier Transform)
 ## Approximate Identities 
 
 Definition (Dilation)
-: $$ \phi_{t}(x)=t^{-n} \phi\left(t^{-1} x\right).$$
+: 
+\begin{align*}
+\phi_{t}(x) = t^{-n} \phi\left(t^{-1} x\right)
+.\end{align*}
 
 
 Definition (Approximation to the Identity)
 :   For $\phi\in L^1$, the dilations satisfy $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
     
     Example: $\phi(x) = e^{-\pi x^2}$
-
 
 
 Theorem (Convolution Against Approximate Identities Converge in \$L^1\$)
