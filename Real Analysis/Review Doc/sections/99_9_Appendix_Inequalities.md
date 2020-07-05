@@ -1,11 +1,5 @@
 # Inequalities and Equalities
 
-Proposition (AM-GM Inequality)
-:	\hfill
-  \begin{align*}
-  \sqrt{ab} \leq \frac{a+b}{2}
-  .\end{align*}
-
 Proposition (Reverse Triangle Inequality)
 :	\hfill
   \begin{align*}
@@ -66,11 +60,13 @@ Proposition (Minkowski's Inequality:)
 > Use to prove $L^p$ is a normed space.
 
 Proposition (Young's Inequality*)
-:	\hfill
-\begin{align*}
-\frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
-\|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
-.\end{align*}
+:	  \hfill
+    \[
+    \begin{align*}
+    \frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
+    \|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
+    .\end{align*}
+    \]
 
 **Application**:
 Some useful specific cases:
@@ -98,8 +94,17 @@ For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 > Note: this does not need to be a basis.
 
 Proposition (Parseval's Identity:)
+:	Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+
+## Less Explicitly Used Inequalities
+
+
+Proposition (AM-GM Inequality)
 :	\hfill
-Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+  \begin{align*}
+  \sqrt{ab} \leq \frac{a+b}{2}
+  .\end{align*}
+
 
 Proposition (Jensen's Inequality)
 : \hfill
