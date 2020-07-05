@@ -58,4 +58,51 @@ Proof
     \norm{x}^2 \qed
     .\end{align*}
 
+Definition
+:   A map $L: X \to \CC$ is a linear functional iff
+    \begin{align*}
+    L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
+    .\end{align*}
+
+
+
+Theorem (Riesz Representation for Hilbert Spaces)
+:   If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
+    \begin{align*}
+    \forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
+    .\end{align*}
+
+Proof
+:   \hfill
+    - Define $M \definedas \ker \Lambda$.
+    - Then $M$ is a closed subspace and so $H = M \oplus M^\perp$
+    - There is some $z\in M^\perp$ such that $\norm{z} = 1$.
+    - Set $u \definedas \Lambda(x) z - \Lambda(z) x$
+    - Check 
+
+    $$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M$$
+
+    - Compute
+
+    \begin{align*}
+    0 &= \inner{u}{z} \\ 
+    &= \inner{\Lambda(x) z - \Lambda(z) x}{z} \\
+    &= \inner{\Lambda(x) z}{z} - \inner{\Lambda(z) x}{z} \\
+    &= \Lambda(x) \inner{z}{z} - \Lambda(z) \inner{x}{z} \\
+    &= \Lambda(x) \norm{z}^2 - \Lambda(z) \inner{x}{z} \\
+    &= \Lambda(x) - \Lambda(z) \inner{x}{z} \\
+    &= \Lambda(x) -  \inner{x}{\overline{\Lambda(z)} z}
+    ,\end{align*}
+
+    - Choose $y \definedas \overline{\Lambda(z)} z$.
+    - Check uniqueness:
+
+    \begin{align*}
+    \inner{x}{y} &= \inner{x}{y'} \quad\forall x \\
+    \implies  \inner{x}{y-y'} &= 0 \quad\forall x \\
+    \implies \inner{y-y'}{y-y'} &= 0 \\
+    \implies \norm{y-y'} &= 0 \\
+    \implies y-y' &= \vector 0 \implies y = y'
+    .\end{align*}
+
 
