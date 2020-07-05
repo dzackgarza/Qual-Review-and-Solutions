@@ -257,8 +257,8 @@ Proof
 :   Approximate with compactly supported functions.
     Take $g\converges{L_1}\to f$ with $g\in C_c$.
     \begin{align*}
-    \int f(x+h) - f(x) \\ 
-    &\leq  \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
+    \int f(x+h) - f(x) 
+    &\leq \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
     &\converges{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
     &= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x) \to 0
     ,\end{align*}
