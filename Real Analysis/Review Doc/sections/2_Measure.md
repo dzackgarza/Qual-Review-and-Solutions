@@ -50,7 +50,19 @@ Proof
       - Fix $\eps>0$, then there exists (claim) an a *open* covering $\theset{Q_i} \covers E$ with $\mu(E) \leq \qty{\sum \abs{Q_i}} + \eps$
       - Set $U\definedas \union Q_i$ then $U$ is open, $E\subseteq U$, and $\mu(U) \leq \mu(E) + \eps$
       - Since $E\subset U$, we have $\mu(E) \leq \mu(U)$. 
-    - Second equality
+    - Second equality:
+      - Suppose $E$ is bounded.
+      - If $E$ is closed, $E$ is compact, so take $E\covers E$
+      - Otherwise for any $\eps>0$, choose an open set $U\supseteq \bar{E} \setminus E$ with $\mu(U) \leq \mu(\bar{E} \setminus E) + \eps$.
+      - Set $K = \bar{E}\setminus U$; then $K$ is closed and bounded and thus compact.
+      - We have $K\subset E$ and
+      \begin{align*}
+      \mu(K) &= \mu(E) - \mu(E\intersect U) \\
+      &= \mu(E) - \qty{\mu(U) - \mu(U\setminus E) } \\
+      &\geq \mu(E) - \mu(U) + \mu(\bar{E} \setminus E) \\
+      &\geq \mu(E) - \qty{ \mu(U) - \mu(\bar{E} \setminus E)} \\
+      &\geq \mu(E) - \eps \quad\text{since } \mu(U) - \mu(\bar{E}\setminus E) \leq \eps
+      .\end{align*}
 
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
