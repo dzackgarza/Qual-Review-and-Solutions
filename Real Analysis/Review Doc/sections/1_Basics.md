@@ -15,7 +15,7 @@ Definition (Nowhere Dense Sets)
 Definition (Meager Sets)
 : A set is **meager** if it is a *countable* union of nowhere dense sets.
 
-Definition (\$F_\\Sigma\$ and \$G_\\delta\$)
+Definition ($F_\sigma$ and $G_\delta$)
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
 
