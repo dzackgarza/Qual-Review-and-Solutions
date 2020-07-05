@@ -77,7 +77,9 @@ Lemma
 :	Lebesgue measure is translation and dilation invariant.
 
 Proof
-: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.\todo{Need to flesh this out.}
+: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
+
+\todo{Flesh out this proof.}
 
 Theorem (Non-Measurable Sets)
 : There is a non-measurable set.
@@ -121,7 +123,7 @@ Proof
     - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
     - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
 
-Proposition (Extending Measurable Functions)
+Lemma
 :	  \hfill
     
     - Characteristic functions are measurable

@@ -5,6 +5,11 @@
 - Break integration domain up into disjoint annuli.
 - Break real integrals up into $x < 1$ and $x>1$.
 - Calculus techniques: Taylor series, IVT, ...
+- Approximate by dense subsets of functions
+
+- Useful facts about compactly supported continuous functions:
+  - Uniformly continuous
+  - Bounded
 
 ## Definitions
 
@@ -15,23 +20,25 @@ Definition (Integrable)
 :	A measurable function is integrable iff $\norm{f}_1 < \infty$.
 
 Definition (The Infinity Norm)
-:
-\begin{align*}
-L^\infty(X) &= \theset{f: X \to \CC \suchthat \norm{f}_\infty < \infty} \\
-&\text{where} \\
-\norm{f}_\infty &= \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
-.\end{align*}
+:   \hfill
+    \begin{align*}
+    \norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+    .\end{align*}
 
 
 Definition (Essentially Bounded Functions)
-:   For $(X, \mcm, \mu)$ a measure space,
+: A function $f:X \to \CC$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
+
+If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+
+Definition (L infty)
+:   \hfill
+
     \begin{align*}
-    L^\infty(X) \definedas \theset{f \in \mcm \suchthat f \text{ is essentially bounded }}
+    L^\infty(X) 
+    \definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
+    \definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
     ,\end{align*}
-    where $f$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$.
-
-    If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
-
 
 Example:
 
@@ -47,7 +54,7 @@ Useful facts about $C_c$ functions:
 - Uniformly continuous
 
 
-Theorem (\$p\dash\$Test for Integrals)
+Theorem (p-Test for Integrals)
 :
 \begin{align*}
 \int_0^1 x^{-p} < \infty \iff  p < 1 \\
@@ -56,7 +63,7 @@ Theorem (\$p\dash\$Test for Integrals)
 
 > Yields a general technique: break integrals apart at $x=1$.
 
-## Convergence Theorems
+###  Convergence Theorems
 
 Theorem (Monotone Convergence)
 :   If $f_n \in L^+$ and $f_n \nearrow f$ a.e., then
