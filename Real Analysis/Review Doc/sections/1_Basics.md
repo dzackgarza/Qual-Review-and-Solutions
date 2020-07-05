@@ -5,6 +5,7 @@
 - $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
 - A  limit does not exist iff $\liminf f_n > \limsup f_n$.
 - If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
+- For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
 
 ## Definitions
 
@@ -141,8 +142,6 @@ Lemma (Uniform Convergence of Series)
 Lemma
 :	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
 
-**Useful Technique:**
-For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
 
 Lemma (M-test for Series)
 : If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
@@ -165,4 +164,4 @@ Proposition
 
 Proposition
 : There exist smooth compactly supported functions, e.g. take 
-$$f(x) = e^{\frac{-1}{x^2}} \chi_{(0, \infty)}(x).$$
+$$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$

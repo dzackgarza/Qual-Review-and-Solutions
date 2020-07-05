@@ -1,19 +1,31 @@
 # Measure Theory
 
-**Useful Technique:**
-$s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
+## Useful Techniques
 
-**Useful Techniques**:
-Always consider bounded sets, and if $E$ is unbounded write $E = \union_n B_n(0) \intersect E$ and use countable subadditivity or continuity of measure.
+- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
 
-Lemma
-:	Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+- Always consider bounded sets, and if $E$ is unbounded write $E = \union_n B_n(0) \intersect E$ and use countable subadditivity or continuity of measure.
 
-Definition
+## Definitions
+
+Definition (Outer Measure)
 :   The outer measure of a set is given by
     \begin{align*}
     m_*(E) = \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
     .\end{align*}
+
+Definition (Limsup and Liminf of Sets)
+:   \hfill	
+    \begin{align*}
+    \limsup_n A_n \definedas \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
+    \liminf_n A_n \definedas \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
+    .\end{align*}
+
+
+## Theorems
+
+Lemma
+:	Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
 
 Lemma (Properties of Outer Measure)
 :   \hfill
@@ -60,14 +72,12 @@ Proof
       - Set $K_n = F\intersect \DD_n$, a ball of radius $n$ about $0$.
       - Then $E\setminus K_n \searrow E\setminus F$
       - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_n) < \eps$.
-    
-
 
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
 
 Proof
-: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
+: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.\todo{Need to flesh this out.}
 
 Theorem (Non-Measurable Sets)
 : There is a non-measurable set.
@@ -88,13 +98,6 @@ Proof
 :   For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\setminus K_n) \leq \frac 1 n$.
     Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
     Take $N\definedas E\setminus K$, then $m(N) = 0$.
-
-Definition
-:   \hfill	
-    \begin{align*}
-    \limsup_n A_n \definedas \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
-    \liminf_n A_n \definedas \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
-    .\end{align*}
 
 Lemma
 :	If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
@@ -118,7 +121,7 @@ Proof
     - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
     - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
 
-Lemma
+Proposition (Extending Measurable Functions)
 :	  \hfill
     
     - Characteristic functions are measurable
