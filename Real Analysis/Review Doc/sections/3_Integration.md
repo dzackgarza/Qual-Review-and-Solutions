@@ -282,6 +282,6 @@ Proof (p=1)
 Proof (p=2)
 : Use Riesz Representation for Hilbert spaces.
  
-Proof ($p=\infty$) 
+Proof (\$p=\infty\$) 
 : $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
 So this containment is always proper (requires Hahn-Banach Theorem).
