@@ -45,11 +45,10 @@ Fact: $\int \phi = \int \phi_t = 1$
 
 
 Theorem (Norm Convergence of Approximate Identities)
-:   \hfill
-
-    \begin{align*}
-    \norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0
-    .\end{align*}
+: 
+\begin{align*}
+\norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0
+.\end{align*}
 
 Proof
 : 
