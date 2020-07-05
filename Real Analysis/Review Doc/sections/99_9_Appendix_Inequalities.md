@@ -128,11 +128,6 @@ Some useful specific cases:
 \norm{f\ast g}_\infty & \leq \norm{f}_p \norm{g}_q
 .\end{align*}
 
-Proposition (? Inequality)
-:	\hfill
-\begin{align*}
-(a+b)^p \leq 2^p (a^p + b^p)
-.\end{align*}
 
 Proposition (Bezel's Inequality:)
 :	\hfill
@@ -166,4 +161,18 @@ Proposition (???)
 :
 \begin{align*}
 AB \leq {A^p \over p} + {B^q \over q}
+.\end{align*}
+
+
+Proposition (? Inequality)
+:	\hfill
+\begin{align*}
+(a+b)^p \leq 2^p (a^p + b^p)
+.\end{align*}
+
+
+Proposition (Bernoulli's Inequality)
+: 
+\begin{align*}
+(1 + x)^n \geq 1 +nx \quad x\geq -1, \text{or} n\in 2\ZZ \text{ and } \forall x
 .\end{align*}
