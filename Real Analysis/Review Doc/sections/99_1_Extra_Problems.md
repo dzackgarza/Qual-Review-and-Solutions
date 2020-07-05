@@ -62,18 +62,6 @@ Convergence
 - Prove Fatou's lemma using the Monotone Convergence Theorem.
 - Show that if $\theset{f_n}$ is in $L^1$ and $\sum \int \abs{f_n} < \infty$ then $\sum f_n$ convergence to an $L^1$ function and $\int \sum f_n = \sum \int f_n$.
 
-Fourier Analysis
-
-- Show that if $f\in L^1$ then $\hat f$ is bounded and uniformly continuous. 
-- Is it the case that $f\in L^1$ implies $\hat f\in L^1$?
-- Show that if $f, \hat f \in L^1$ then $f$ is bounded, continuous, and vanishes at infinity.
-  - Show that this is not true for arbitrary $L^1$ functions.
-- Show that if $f\in L^1$ and $\hat f = 0$ a.e. then $f=0$ a.e.
-  - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
-- Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
-  - Give an example showing that this fails if $g$ is not bounded.
-- Show that if $f\in C^1$ then $f$ is equal to its Fourier series.
-
 Convolution
 
 - Show that $f,g \in L^1 \implies f\ast g \in L^1$ and $\norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1$.
@@ -86,8 +74,17 @@ Convolution
 - Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
 - Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
 
-Fourier Transforms
+Fourier Analysis
 
+- Show that if $f\in L^1$ then $\hat f$ is bounded and uniformly continuous. 
+- Is it the case that $f\in L^1$ implies $\hat f\in L^1$?
+- Show that if $f, \hat f \in L^1$ then $f$ is bounded, uniformly continuous, and vanishes at infinity.
+  - Show that this is not true for arbitrary $L^1$ functions.
+- Show that if $f\in L^1$ and $\hat f = 0$ almost everywhere then $f = 0$ almost everywhere.
+  - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
+- Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
+  - Give an example showing that this fails if $g$ is not bounded.
+- Show that if $f\in C^1$ then $f$ is equal to its Fourier *series*.
 
 Approximate Identities
 
