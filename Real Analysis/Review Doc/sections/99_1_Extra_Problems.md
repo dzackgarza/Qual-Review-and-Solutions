@@ -85,6 +85,7 @@ Convolution
 - Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
 - Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
 - Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
+- Show that is $f$ is bounded and uniformly continuous and $\phi_t$ is an approximation to the identity, then $f\ast \phi_t$ uniformly converges to $f$.
 
 Lp
 

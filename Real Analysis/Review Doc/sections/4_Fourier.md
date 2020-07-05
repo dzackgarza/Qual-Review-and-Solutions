@@ -21,7 +21,6 @@ f\in L^1 \implies
 \hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
 .\end{align*}
 
-
 Lemma
 : If $f \in L^1$, then $\hat f$ is continuous and bounded.
 
@@ -30,6 +29,7 @@ Proof
 
 Lemma
 : Young's Inequality?
+  
   \begin{align*}
   {1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
   .\end{align*}
