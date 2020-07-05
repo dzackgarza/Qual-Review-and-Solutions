@@ -12,9 +12,9 @@ Definition (The Fourier Transform)
   .\end{align*}
 
 Lemma
-: $\hat f = \hat g \implies f=g$ almost everywhere.
+: If $\hat f = \hat g$ then $f=g$ almost everywhere.
 
-Lemma (Riemann-Lebesgue: Fourier transforms have small tails.)
+Lemma (Riemann-Lebesgue: Fourier transforms have small tails)
 : 
 \begin{align*}
 f\in L^1 \implies
@@ -25,11 +25,15 @@ Lemma
 : If $f \in L^1$, then $\hat f$ is continuous and bounded.
 
 Proof
-: $\abs{\hat f} \leq \int \abs{f}\cdot \abs{e^{\cdots}} \leq \norm{f}_1$, and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
-
+: 
 \begin{align*}
-{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
+\abs{\hat f(\xi)} 
+&\leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} \\
+&\leq \norm{f}_1
 .\end{align*}
+
+    and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
+
 
 - Useful variant - take $q = 1$ to get $\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
@@ -47,8 +51,9 @@ Fact: $\int \phi = \int \phi_t = 1$
 Theorem (Norm Convergence of Approximate Identities)
 : 
 \begin{align*}
-\norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0
+\norm{f \ast \phi_t - f}_1 \converges{t\to 0}\to 0
 .\end{align*}
+
 
 Proof
 : 
@@ -78,15 +83,28 @@ f,g \in L^1 \text{ and  bounded}  \implies \lim _{|x| \rightarrow \infty} (f * g
 
 Proof
 :   \hfill
+    
     - Choose $M \geq f,g$.
+    
     - By small tails, choose $N$ such that $\int_{B_N^c} \abs{f}, \int_{B_n^c} \abs{g} < \varepsilon$
 
-    - Note $$\abs{f \ast g} \leq \displaystyle\int \abs{f(x-y)} ~\abs{g(y)} ~dy \definedas I$$
+    - Note 
+    \begin{align*}
+    \abs{f \ast g} \leq \displaystyle\int \abs{f(x-y)} ~\abs{g(y)} ~dy \definedas I
+    .\end{align*}
 
     - Use $\abs{x} \leq \abs{x-y} + \abs{y}$, take $\abs{x}\geq 2N$ so either
-      
-      - $$\abs{x-y} \geq N \implies I \leq \int_{\theset{x-y \geq N}} \abs{f(x-y)}M ~dy\leq \varepsilon M \to 0$$
-      
-      - $$\abs{y} \geq N \implies I \leq \int_{\theset{y \geq N}} M\abs{g(y)} ~dy\leq  M \varepsilon \to 0$$
+    \begin{align*}
+    \abs{x-y} \geq N \implies I \leq \int_{\theset{x-y \geq N}} \abs{f(x-y)}M ~dy\leq \varepsilon M \to 0
+    \end{align*}
+      then
+    \begin{align*}
+      \abs{y} \geq N \implies I \leq \int_{\theset{y \geq N}} M\abs{g(y)} ~dy\leq  M \varepsilon \to 0
+    .\end{align*}
 
 
+Proposition (Young's Inequality?)
+:
+\begin{align*}
+{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \norm{f \ast g}_r \leq \norm{f}_p \norm{g}_q
+.\end{align*}
