@@ -30,7 +30,7 @@ Proof
     \begin{align*}
     \abs{\hat f(\xi)} 
     \leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} 
-    = \norm{f}_1
+    = \norm{f}
     .\end{align*}
 
     - Continuity:
