@@ -9,13 +9,13 @@ Proposition (Reverse Triangle Inequality)
 Proposition (Chebyshev's Inequality)
 :	\hfill
   \begin{align*}
-  \mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\|f\|_{p}}{\alpha}\right)^{p}
+  \mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
   .\end{align*}
 
 Proposition (Holder's Inequality (when surjective)
 :	\hfill
   \begin{align*}
-  \frac 1 p + \frac 1 q = 1 \implies \|f g\|_{1} \leq\|f\|_{p}\|g\|_{q}
+  \frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
   .\end{align*}
 
 *Application:*
@@ -29,11 +29,11 @@ Proof (Holder's Inequality)
   Then let $h = \abs{f}^p$:
   
   \begin{align*}
-  \norm{f}_p^p 
-  = \norm{h\cdot 1}_1 \leq \norm{1}_s \norm{h}_r 
-  = \mu(X)^{\frac 1 s} \norm{f}_q^{\frac q r}
-  \implies \norm{f}_p 
-  \leq \mu(X)^{\frac 1 p - \frac 1 q}\norm{f}_q
+  \pnorm{f}{p}^p 
+  = \pnorm{h\cdot 1}1 \leq \pnorm{1}s \pnorm{h}r 
+  = \mu(X)^{\frac 1 s} \pnorm{f}q^{\frac q r}
+  \implies \pnorm{f}p 
+  \leq \mu(X)^{\frac 1 p - \frac 1 q} \pnorm{f}q
   .\end{align*}
 
 > Note: doesn't work for $\ell_p$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
@@ -41,7 +41,7 @@ Proof (Holder's Inequality)
 Proposition (Cauchy-Schwarz Inequality)
 :	\hfill
   \begin{align*}
-  \abs{\inner{f}{g}} = \norm{fg}_1 \leq \norm{f}_2 \norm{g}_2
+  \abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
   \qtext{with equality} \iff f = \lambda g
   .\end{align*}
 
