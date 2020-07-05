@@ -1,8 +1,26 @@
 # Basics
 
-**Useful Technique:**
+## Useful Techniques
 $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
 Similarly, a limit does not exist iff $\liminf f_n > \limsup f_n$.
+
+## Definitions
+
+Definition
+: A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
+
+Definition
+: A set is **meager** if it is a *countable* union of nowhere dense sets.
+
+> Note that a *finite* union of nowhere dense is still nowhere dense.
+
+Definition
+:	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+  
+
+> Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
+## Theorems
 
 Lemma (Convergent Sums Have Small Tails)
 :   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
@@ -18,14 +36,6 @@ Lemma (Geometric Series)
     *Corollary:* 
     $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
 
-Definition
-: A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
-
-Definition
-: A set is **meager** if it is a *countable* union of nowhere dense sets.
-
-> Note that a *finite* union of nowhere dense is still nowhere dense.
-
 Lemma
 : The Cantor set is closed with empty interior.
 
@@ -35,10 +45,6 @@ Proof
     **Corollary:**
     The Cantor set is nowhere dense.
 
-Definition
-:	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
-  
-    *Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.*
 
 Lemma
 :	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
