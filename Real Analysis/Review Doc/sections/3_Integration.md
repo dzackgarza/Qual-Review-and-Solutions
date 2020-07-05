@@ -282,6 +282,35 @@ Lemma
     - $C_0([0, 1])$
     - Smoothly differentiable functions $C_0^\infty([0, 1])$
     - Smooth compactly supported functions $C_c^\infty$
+Theorem
+:
+\begin{align*}
+m(X) < \infty \implies \lim_{p\to\infty} \norm{f}_p = \norm{f}_\infty 
+.\end{align*}
+
+Proof
+:   \hfill
+    - Let $M = \norm{f}_\infty$.
+    - For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
+    - Then $m(S) > 0$ and
+
+    \begin{align*}
+    \pnorm{f}p 
+    &= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+    &\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
+    &\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
+    &\implies \liminf_p \pnorm{f}p \geq M
+    .\end{align*}
+
+    We also have
+    \begin{align*}
+    \pnorm{f}p 
+    &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+    &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
+    &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
+    &\implies \limsup_p \pnorm{f}p \leq M \qed
+    .\end{align*}
+
 
 Theorem (Dual Lp Spaces)
 :   For $p\neq \infty$, $(L^p)\dual \cong L^q$.
