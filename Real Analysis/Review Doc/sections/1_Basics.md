@@ -18,7 +18,6 @@ Definition (Uniform Continuity)
     .\end{align*}
 
 
-
 Definition (Nowhere Dense Sets)
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 
@@ -152,7 +151,7 @@ Lemma (Uniform Convergence and Derivatives)
 Lemma (Uniform Convergence of Series)
 : If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
-Lemma
+Lemma (Small Tails for Series of Functions)
 :	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
 
 
@@ -175,6 +174,10 @@ Proposition
 :   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
     In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
 
-Proposition
+Proposition (Existence of Smooth Compactly Supported Functions)
 : There exist smooth compactly supported functions, e.g. take 
 $$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$
+
+
+Theorem (Weierstrass Approximation)
+: If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
