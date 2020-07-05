@@ -43,3 +43,7 @@ Definition (Approximation to the Identity)
 \phi(x) = e^{-\pi x^2} \\
 \phi_t(x) = t^{-n} \phi(\frac x t)
 .\end{align*}
+
+Fact:
+
+$\int \phi = \int \phi_t = 1$
