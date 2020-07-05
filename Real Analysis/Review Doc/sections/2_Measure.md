@@ -25,7 +25,7 @@ Lemma (Properties of Outer Measure)
     [^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
 Lemma (Subtraction of Measure)
-: $$m(A) = m(B) + m(C), ~~m(C) < \infty \implies m(A) - m(C) = m(B).$$
+: $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
 
 Lemma (Continuity of Measure)
 :   \hfill
@@ -40,6 +40,9 @@ Proof
     1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
 
     2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+
+Theorem
+: If $E$ is Lebesgue measurable, then $$\mu(E) = \inf_{U\supseteq E \text{ open}} \mu(U) = \sup_{K\subseteq E \text{ compact}} \mu(K).$$
 
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
@@ -108,3 +111,4 @@ Lemma
 
 Proof (Convolution)
 : Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+
