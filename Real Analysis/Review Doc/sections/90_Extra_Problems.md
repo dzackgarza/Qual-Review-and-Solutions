@@ -88,25 +88,25 @@ Fourier Analysis
   - Show that this is not true for arbitrary $L^1$ functions.
 - Show that if $f\in L^1$ and $\hat f = 0$ almost everywhere then $f = 0$ almost everywhere.
   - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
-- Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
+- Show that if $f, g \in L^1$ then $$\int \hat f g = \int f\hat g.$$
   - Give an example showing that this fails if $g$ is not bounded.
 - Show that if $f\in C^1$ then $f$ is equal to its Fourier *series*.
 
 Approximate Identities
 
-- Show that if $\phi$ is an approximate identity, then $\norm{f\ast \phi_t - f}_1 \converges{t\to 0}\to 0$.
+- Show that if $\phi$ is an approximate identity, then $$\norm{f\ast \phi_t - f}_1 \converges{t\to 0}\to 0.$$
   - Show that if additionally $\abs{\phi(x)} \leq c(1 + \abs{x})^{-n-\eps}$ for some $c,\eps>0$, then this converges is almost everywhere.
 - Show that is $f$ is bounded and uniformly continuous and $\phi_t$ is an approximation to the identity, then $f\ast \phi_t$ uniformly converges to $f$.
 
 $L^p$ Spaces
 
-- Show that if $E\subseteq \RR^n$ is measurable with $\mu(E) < \infty$ and $f\in L^p(X)$ then $\norm{f}_{L^p(X)} \converges{p\to\infty}\to \norm{f}_\infty$.
+- Show that if $E\subseteq \RR^n$ is measurable with $\mu(E) < \infty$ and $f\in L^p(X)$ then $$\norm{f}_{L^p(X)} \converges{p\to\infty}\to \norm{f}_\infty.$$
 - Is it true that the converse to the DCT holds? 
   I.e. if $\int f_n \to \int f$, is there a $g\in L^p$ such that $f_n < g$ a.e. for every $n$?
-- Prove continuity in $L^p$: If $f$ is uniformly continuous then $\norm{\tau_h f - f}_p \to 0$ as $h\to 0$ for all $p$.
+- Prove continuity in $L^p$: If $f$ is uniformly continuous then for all $p$, $$\norm{\tau_h f - f}_p \converges{h\to 0}\to 0.$$ 
 - Prove the following inclusions of $L^p$ spaces for $m(X) < \infty$:
 \begin{align*}
-&L^\infty(X) \subset L^2(X) \subset L^1(X) \\
-&\ell^2(\ZZ) \subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
+&L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
+&\ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
 .\end{align*}
 
