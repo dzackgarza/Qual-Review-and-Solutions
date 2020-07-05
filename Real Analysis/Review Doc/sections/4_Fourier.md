@@ -46,7 +46,7 @@ Definition (Approximation to the Identity)
 
 
 
-Theorem (Convolution Against Approximate Identities Converge in $L^1$)
+Theorem (Convolution Against Approximate Identities Converge in \$L^1\$)
 : 
 \begin{align*}
 \pnorm{f \ast \phi_t - f}{1} \converges{t\to 0}\to 0
