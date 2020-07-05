@@ -44,6 +44,52 @@ Definition (Approximation to the Identity)
 \phi_t(x) = t^{-n} \phi(\frac x t)
 .\end{align*}
 
-Fact:
+Fact: $\int \phi = \int \phi_t = 1$
 
-$\int \phi = \int \phi_t = 1$
+
+Theorem (Norm Convergence of Approximate Identities)
+: 
+\begin{align*}
+\norm{f \ast \phi_t - f}_1 \mapsvia{t\to 0} 0.
+.\end{align*}
+
+Proof
+: 
+\begin{align*}
+\norm{f - f\ast \phi_t}_1 
+&= \int f(x) - \int f(x-y)\phi_t(y) ~dy dx \\
+&= \int f(x)\int \phi_t(y) ~dy - \int f(x-y)\phi_t(y) ~dy dx \\
+&= \int \int \phi_t(y)[f(x) - f(x-y)] ~dy dx \\
+&=_{FT} \int \int \phi_t(y)[f(x) - f(x-y)] ~dx dy \\
+&= \int \phi_t(y) \int f(x) - f(x-y) ~dx dy \\
+&= \int \phi_t(y) \norm{f - \tau_y f}_1 dy \\
+&= \int_{y < \delta} \phi_t(y) \norm{f - \tau_y f}_1 dy  +
+\int_{y \geq \delta} \phi_t(y) \norm{f - \tau_y f}_1 dy \\
+&\leq \int_{y < \delta} \phi_t(y) \varepsilon +
+\int_{y \geq \delta} \phi_t(y) \left( \norm{f}_1 + \norm{\tau_y f}_1 \right) dy \quad\text{by continuity in } L^1 \\
+&\leq \varepsilon + 
+2\norm{f}_1 \int_{y \geq \delta} \phi_t(y) dy \\
+&\leq \varepsilon + 2\norm{f}_1 \varepsilon \quad\text{since $\phi_t$ has small tails} \\
+&\to 0 \qed
+.\end{align*}
+
+Theorem (Convolutions Vanish at Infinity)
+: 
+\begin{align*}
+f,g \in L^1 \text{ and  bounded}  \implies \lim _{|x| \rightarrow \infty} (f * g)(x) = 0
+.\end{align*}
+
+Proof
+:   \hfill
+    - Choose $M \geq f,g$.
+    - By small tails, choose $N$ such that $\int_{B_N^c} \abs{f}, \int_{B_n^c} \abs{g} < \varepsilon$
+
+    - Note $$\abs{f \ast g} \leq \displaystyle\int \abs{f(x-y)} ~\abs{g(y)} ~dy \definedas I$$
+
+    - Use $\abs{x} \leq \abs{x-y} + \abs{y}$, take $\abs{x}\geq 2N$ so either
+      
+      - $$\abs{x-y} \geq N \implies I \leq \int_{\theset{x-y \geq N}} \abs{f(x-y)}M ~dy\leq \varepsilon M \to 0$$
+      
+      - $$\abs{y} \geq N \implies I \leq \int_{\theset{y \geq N}} M\abs{g(y)} ~dy\leq  M \varepsilon \to 0$$
+
+
