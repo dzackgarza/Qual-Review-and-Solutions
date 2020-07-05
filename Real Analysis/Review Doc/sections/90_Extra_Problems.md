@@ -78,7 +78,7 @@ Convolution
   - $f, g$ smooth and compactly supported (and in fact $f\ast g$ is smooth)
   - $f\in L^1$ and $g$ smooth and compactly supported (and in fact $f\ast g$ is smooth)
 - Show that if $f\in L^1$ and $g'$ exists with $\dd{g}{x_i}$ all bounded, then $$\dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$$
-- Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
+- If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 
 Fourier Analysis
 
