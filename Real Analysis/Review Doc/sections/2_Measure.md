@@ -42,27 +42,26 @@ Proof
     2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
 
 Theorem
-: If $E$ is Lebesgue measurable, then $$\mu(E) = \inf_{U\supseteq E \text{ open}} \mu(U) = \sup_{K\subseteq E \text{ compact}} \mu(K).$$
+:   Suppose $E$ is measurable; then for every $\eps>0$,
+
+    1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
+    2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
+    3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
 
 Proof
 :   \hfill
-    - First equality:
-      - Fix $\eps>0$, then there exists (claim) an a *open* covering $\theset{Q_i} \covers E$ with $\mu(E) \leq \qty{\sum \abs{Q_i}} + \eps$
-      - Set $U\definedas \union Q_i$ then $U$ is open, $E\subseteq U$, and $\mu(U) \leq \mu(E) + \eps$
-      - Since $E\subset U$, we have $\mu(E) \leq \mu(U)$. 
-    - Second equality:
-      - Suppose $E$ is bounded.
-      - If $E$ is closed, $E$ is compact, so take $E\covers E$
-      - Otherwise for any $\eps>0$, choose an open set $U\supseteq \bar{E} \setminus E$ with $\mu(U) \leq \mu(\bar{E} \setminus E) + \eps$.
-      - Set $K = \bar{E}\setminus U$; then $K$ is closed and bounded and thus compact.
-      - We have $K\subset E$ and
-      \begin{align*}
-      \mu(K) &= \mu(E) - \mu(E\intersect U) \\
-      &= \mu(E) - \qty{\mu(U) - \mu(U\setminus E) } \\
-      &\geq \mu(E) - \mu(U) + \mu(\bar{E} \setminus E) \\
-      &\geq \mu(E) - \qty{ \mu(U) - \mu(\bar{E} \setminus E)} \\
-      &\geq \mu(E) - \eps \quad\text{since } \mu(U) - \mu(\bar{E}\setminus E) \leq \eps
-      .\end{align*}
+
+    - (1): Take $\theset{Q_i} \covers E$ and set $O = \union Q_i$.
+    - (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
+      - Set $F = O^c$, so $F$ is closed.
+      - Then $F\subset E$ by taking complements of $O\supset E^c$
+      - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
+    - (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
+      - Set $K_n = F\intersect \DD_n$, a ball of radius $n$ about $0$.
+      - Then $E\setminus K_n \searrow E\setminus F$
+      - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_n) < \eps$.
+    
+
 
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
