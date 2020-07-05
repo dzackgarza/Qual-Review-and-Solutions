@@ -37,7 +37,7 @@ Proof
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
 
-- Useful variant - take $q = 1$ to get $\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$
+- Useful variant: take $q = 1$ to get $$\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$$
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
 
 Definition (Approximation to the Identity)
