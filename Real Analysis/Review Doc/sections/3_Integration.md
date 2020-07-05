@@ -115,7 +115,7 @@ Theorem (Fatou's)
     \limsup_n \int f_n &\leq \int \limsup_n f_n
     .\end{align*}
 
-    > Only need positivity.
+Note that this has virtually no requirements (doesn't require positivity).
 
 Theorem (Tonelli)
 :   For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
