@@ -44,6 +44,14 @@ Proof
 Theorem
 : If $E$ is Lebesgue measurable, then $$\mu(E) = \inf_{U\supseteq E \text{ open}} \mu(U) = \sup_{K\subseteq E \text{ compact}} \mu(K).$$
 
+Proof
+:   \hfill
+    - First equality:
+      - Fix $\eps>0$, then there exists (claim) an a *open* covering $\theset{Q_i} \covers E$ with $\mu(E) \leq \qty{\sum \abs{Q_i}} + \eps$
+      - Set $U\definedas \union Q_i$ then $U$ is open, $E\subseteq U$, and $\mu(U) \leq \mu(E) + \eps$
+      - Since $E\subset U$, we have $\mu(E) \leq \mu(U)$. 
+    - Second equality
+
 Lemma
 :	Lebesgue measure is translation and dilation invariant.
 
