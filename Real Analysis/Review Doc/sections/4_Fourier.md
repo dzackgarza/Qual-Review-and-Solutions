@@ -52,6 +52,12 @@ Proposition (Eigenfunction of the Fourier Transform)
 g(x) \definedas e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi)
 .\end{align*}
 
+Proposition (Properties of the Fourier Transform)
+: 
+\begin{align*}
+
+.\end{align*}
+
 ## Approximate Identities 
 
 Definition (Dilation)
