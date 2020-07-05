@@ -1,7 +1,10 @@
 ---
  title: Real Analysis Qualifying Exam Notes
+ book: true
 ---
 
+
+!include sections/00_Definitions.md
 
 !include sections/1_Basics.md
 
