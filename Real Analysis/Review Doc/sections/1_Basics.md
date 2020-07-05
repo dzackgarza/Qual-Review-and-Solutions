@@ -153,3 +153,10 @@ Lemma (p-tests)
     \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
     .\end{align*}
 
+Proposition
+:   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
+    In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
+
+Proposition
+: There exist smooth compactly supported functions, e.g. take 
+$$f(x) = e^{\frac{-1}{x^2}} \chi_{(0, \infty)}(x).$$
