@@ -9,6 +9,16 @@
 
 ## Definitions
 
+Definition (Uniform Continuity)
+:   $f$ is uniformly continuous iff  
+
+    \begin{align*}
+        &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
+    \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon \\
+    .\end{align*}
+
+
+
 Definition (Nowhere Dense Sets)
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 
@@ -123,6 +133,9 @@ Proof
 
 Lemma
 :	A uniform limit of continuous functions is continuous.
+
+Theorem (Heine-Cantor)
+: Every continuous function on a compact space is uniformly continuous.
 
 Lemma (Testing Uniform Convergence)
 :   $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
