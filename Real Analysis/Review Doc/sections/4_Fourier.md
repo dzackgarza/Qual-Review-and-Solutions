@@ -1,4 +1,6 @@
-# Fourier Series and Convolution
+# Fourier Transform and Convolution
+
+## The Fourier Transform
 
 Definition (Convolution)
 : $$f * g(x)=\int f(x-y) g(y) d y .$$
@@ -34,6 +36,7 @@ Proof
     - Continuity:
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
+## Approximate Identities 
 Definition (Dilation)
 : $$ \phi_{t}(x)=t^{-n} \phi\left(t^{-1} x\right).$$
 
