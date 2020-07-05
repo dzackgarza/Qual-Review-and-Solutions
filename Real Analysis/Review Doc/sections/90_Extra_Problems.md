@@ -1,26 +1,35 @@
 # Extra Problems
 
+Topology
+
+- Show that every compact set is closed and bounded.
+- Show that if a subset of a metric space is complete and totally bounded, then it is compact.
+- Show that if $K$ is compact and $F$ is closed with $K, F$ disjoint then $\dist(K, F) > 0$.
+
+Continuity
+
+- Show that a continuous function on a compact set is uniformly continuous.
+
 Differentiation
 
 - Show that if $f\in C^1(\RR)$ and both $\lim_{x\to \infty} f(x)$ and $\lim_{x\to \infty} f'(x)$ exist, then $\lim_{x\to\infty} f'(x)$ must be zero.
 
-Basics
+Advanced Limitology
 
 - If $f$ is continuous, is it necessarily the case that $f'$ is continuous?
 - If $f_n \to f$, is it necessarily the case that $f_n'$ converges to $f'$ (or at all)?
 - Is it true that the sum of differentiable functions is differentiable?
 - Is it true that the limit of integrals equals the integral of the limit?
 - Is it true that a limit of continuous functions is continuous?
-- Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
-- Show that if $K$ is compact and $F$ is closed with $K, F$ disjoint then $\dist(K, F) > 0$.
-- Show that if $f_n\to f$ uniformly with each $f_n$ continuous then $f$ is continuous.
 - Show that a subset of a metric space is closed iff it is complete. 
-- Show that if a subset of a metric space is complete and totally bounded, then it is compact.
-- Show that every compact set is closed and bounded.
+
+Uniform Convergence
+
 - Show that a uniform limit of bounded functions is bounded.
 - Show that a uniform limit of continuous function is continuous.
+  - I.e. if $f_n\to f$ uniformly with each $f_n$ continuous then $f$ is continuous.
 - Show that if $f_n\to f$ pointwise, $f_n' \to g$ uniformly for some $f, g$, then $f$ is differentiable and $g = f'$.
-
+- Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
 
 Measure Theory
 
@@ -31,21 +40,17 @@ Measure Theory
 
 - Show that continuity of measure from above/below holds for outer measures.
 
-- $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup_{K\subset E\text{ compact}} m(K)$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
+- $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup \theset{ m(K) \suchthat K\subset E\text{ compact}}$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
 - Show that a countable union of null sets is null.
-
-Continuity
-
-- Show that a continuous function on a compact set is uniformly continuous.
 
 Measurability
 
 - Show that $f=0$ a.e. iff $\int_E f = 0$ for every measurable set $E$.
 - $\star$: Show that cylinder functions are measurable, i.e. if $f$ is measurable on $\RR^s$, then $F(x, y) \definedas f(x)$ is measurable on $\RR^s\cross \RR^t$ for any $t$.
-- Show that if $f$ is a measurable function, then $f=0$ a.e. iff $\int f = 0$.
 
 Integrability
 
+- Show that if $f$ is a measurable function, then $f=0$ a.e. iff $\int f = 0$.
 - $\star$: Prove that the Lebesgue integral is translation invariant, i.e. if $\tau_h(x) = x+h$ then $\int \tau_h f = \int f$.
 - $\star$: Prove that the Lebesgue integral is dilation invariant, i.e. if $f_\delta(x) = {f({x\over \delta}) \over \delta^n}$ then $\int f_\delta = \int f$.
 - $\star$: Prove continuity in $L^1$, i.e.
@@ -55,24 +60,25 @@ Integrability
 - Show that a bounded function is Lebesgue integrable iff it is measurable.
 - Show that simple functions are dense in $L^1$.
 - Show that step functions are dense in $L^1$.
-- Show that smooth compactly supposed functions are dense in $L^1$.
+- Show that smooth compactly supported functions are dense in $L^1$.
 
 Convergence
 
 - Prove Fatou's lemma using the Monotone Convergence Theorem.
-- Show that if $\theset{f_n}$ is in $L^1$ and $\sum \int \abs{f_n} < \infty$ then $\sum f_n$ convergence to an $L^1$ function and $\int \sum f_n = \sum \int f_n$.
+- Show that if $\theset{f_n}$ is in $L^1$ and $\sum \int \abs{f_n} < \infty$ then $\sum f_n$ converges to an $L^1$ function and 
+  $$\int \sum f_n = \sum \int f_n.$$
 
 Convolution
 
-- Show that $f,g \in L^1 \implies f\ast g \in L^1$ and $\norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1$.
+- Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
 - Show that $f\in L^1, g \leq M \implies f\ast g \leq M'$ and is uniformly continuous.
-- Show that if $f, g\in L^1$ with $f \leq M, g \leq M'$, then $f\ast g \converges{x\to\infty}\to 0$.
-- Show that if $f\in L^1$ and $g'$ exists with $\dd{g}{x_i}$ all bounded, then $\dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$
-- Show that if $f, g$ are smooth and compactly supported then $f\ast g$ is smooth and $f\ast g \converges{x\to\infty}\to 0$.
-- $\star$: show that if $f, g\in L^1$, then $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
-- Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
+- Show that if $f, g\in L^1$ are both bounded, then $f\ast g$ vanishes at infinity.
+  - Show that this still holds if $f$ is not assumed to be bounded.
 - Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
-- Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
+- Show that if $f\in L^1$ and $g'$ exists with $\dd{g}{x_i}$ all bounded, then $$\dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$$
+- Show that if $f, g$ are smooth and compactly supported then $f\ast g$ is smooth and $f\ast g \converges{x\to\infty}\to 0$.
+- $\star$: show that if $f, g\in L^1$, then $$\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1.$$
+- Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
 
 Fourier Analysis
 
