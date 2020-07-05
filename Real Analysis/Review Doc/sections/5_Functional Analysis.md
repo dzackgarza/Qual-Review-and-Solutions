@@ -8,7 +8,7 @@ Definition (Orthonormal Sequence)
 : ?
 
 Definition (Basis)
-: ?
+: A set $\theset{u_n}$ is a *basis* for a Hilbert space $\mch$ iff it is dense in $\mch$.
 
 Definition (Complete)
 : A collection of vectors $\theset{u_n}\subset H$ is *complete* iff $\inner{x}{u_n} = 0$ for all $n \iff x = 0$ in $H$.
@@ -40,7 +40,7 @@ Definition (Hilbert Space)
 ## Theorems
 
 Theorem (Bessel's Inequality)
-:   \hfill
+:   For any orthonormal set $\theset{u_n} \subseteq \mch$ a Hilbert space (not necessarily a basis),
     \begin{align*}
     \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
     \end{align*}
@@ -193,5 +193,35 @@ Proof
     &\leq \varepsilon \norm{x} + c\norm{x} \\
     &= (\varepsilon + c)\norm{x} \qed
     .\end{align*}
+
+Theorem (Riesz-Fischer)
+:   Let $U = \theset{u_n}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
+
+    1. There is an isometric surjection
+
+    \begin{align*}
+    \mathcal{H} &\to \ell^2(\NN) \\
+    \vector x &\mapsto \theset{\inner{\vector x}{\vector u_n}}_{n=1}^\infty
+    \end{align*}
+
+    i.e. if $\theset{a_n} \in \ell^2(\NN)$, so $\sum \abs{a_n}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
+    $$
+    a_n = \inner{\vector x}{\vector u_n} \quad \forall n.
+    $$
+
+    2. $\vector x$ can be chosen such that
+    $$
+    \norm{\vector x}^2 = \sum \abs{a_n}^2
+    $$
+
+    > Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_n}$ is **complete**, i.e. $\inner{\vector x}{\vector u_n} = 0$ for all $n$ implies $\vector x = \vector 0$.
+
+Proof
+:   \hfill
+    
+    - Given $\theset{a_n}$, define $S_N = \sum^N a_n \vector u_n$.
+    - $S_N$ is Cauchy in $\mathcal{H}$ and so $S_N \to \vector x$ for some $\vector x \in \mathcal{H}$.
+    - $\inner{x}{u_n} = \inner{x - S_N}{u_n} + \inner{S_N}{u_n} \to a_n$
+    - By construction, $\norm{x-S_N}^2 = \norm{x}^2 - \sum^N \abs{a_n}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_n}^2$.
 
 
