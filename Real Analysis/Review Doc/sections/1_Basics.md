@@ -12,7 +12,8 @@ Definition
 Definition
 : A set is **meager** if it is a *countable* union of nowhere dense sets.
 
-> Note that a *finite* union of nowhere dense is still nowhere dense.
+Proposition
+: A *finite* union of nowhere dense is again nowhere dense.
 
 Definition
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
