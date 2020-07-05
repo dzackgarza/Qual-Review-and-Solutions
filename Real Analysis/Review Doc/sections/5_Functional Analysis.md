@@ -165,7 +165,7 @@ Proof
 .\end{align*}
 
 Theorem (Completeness in Operator Norm)
-: If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}}$ is a Banach space.
+: If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
 
 Proof
 :   \hfill
