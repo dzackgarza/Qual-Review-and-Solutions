@@ -14,9 +14,9 @@
 
 !include sections/5_Functional Analysis.md
 
-!include sections/91_1_Fall_2019_Exam_2.md
+!include sections/90_Extra_Problems.md
 
-!include sections/92_Extra_Problems.md
+!include sections/91_1_Fall_2019_Exam_2.md
 
 !include sections/99_9_Appendix_Inequalities.md
 
