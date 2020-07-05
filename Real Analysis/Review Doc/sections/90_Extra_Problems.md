@@ -30,6 +30,7 @@ Uniform Convergence
   - I.e. if $f_n\to f$ uniformly with each $f_n$ continuous then $f$ is continuous.
 - Show that if $f_n\to f$ pointwise, $f_n' \to g$ uniformly for some $f, g$, then $f$ is differentiable and $g = f'$.
 - Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
+- Show that $\sum {x^n \over n!}$ converges uniformly on any compact subset of $\RR$. 
 
 Measure Theory
 
