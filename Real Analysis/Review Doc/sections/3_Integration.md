@@ -4,6 +4,8 @@
 
 - Break integration domain up into disjoint annuli.
 - Break real integrals up into $x < 1$ and $x>1$.
+- Take a Taylor series
+- Use the Intermediate Value Theorem
 
 
 
