@@ -15,14 +15,14 @@ Lemma
 : $\hat f = \hat g \implies f=g$ almost everywhere.
 
 Lemma (Riemann-Lebesgue)
-: \hfill
+: 
+\begin{align*}
+f\in L^1 \implies
+\hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
+.\end{align*}
 
-  \begin{align*}
-  f\in L^1 \implies
-  \hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
-  .\end{align*}
 
-    > Motto: Fourier transforms have small tails.
+  > Motto: Fourier transforms have small tails.
 
 Lemma
 : If $f \in L^1$, then $\hat f$ is continuous and bounded.
@@ -39,8 +39,6 @@ Lemma
   
 - Useful variant - take $q = 1$ to get $\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$
 - Take $p=1$ to show $L_1$ is closed under $\ast$.
-
-
 
 Definition (Approximation to the Identity)
 : ?
