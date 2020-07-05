@@ -40,14 +40,14 @@ Definition (Hilbert Space)
 ## Theorems
 
 Theorem (Bessel's Inequality)
-:
-\begin{align*}
-\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-\end{align*}
-and thus
-\begin{align*}
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-.\end{align*}
+:   \hfill
+    \begin{align*}
+    \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+    \end{align*}
+    and thus
+    \begin{align*}
+    \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+    .\end{align*}
 
 
 Proof
