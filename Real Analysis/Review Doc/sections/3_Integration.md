@@ -14,6 +14,15 @@ Definition (\$L^+\$)
 Definition (Integrable)
 :	A measurable function is integrable iff $\norm{f}_1 < \infty$.
 
+Definition (The Infinity Norm)
+:
+\begin{align*}
+L^\infty(X) &= \theset{f: X \to \CC \suchthat \norm{f}_\infty < \infty} \\
+&\text{where} \\
+\norm{f}_\infty &= \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+.\end{align*}
+
+
 Definition (Essentially Bounded Functions)
 :   For $(X, \mcm, \mu)$ a measure space,
     \begin{align*}
@@ -22,6 +31,7 @@ Definition (Essentially Bounded Functions)
     where $f$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$.
 
     If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+
 
 Example:
 
