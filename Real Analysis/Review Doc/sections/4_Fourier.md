@@ -25,14 +25,16 @@ Lemma
 : If $f \in L^1$, then $\hat f$ is continuous and bounded.
 
 Proof
-: 
+:    
+- Boundedness:
 \begin{align*}
 \abs{\hat f(\xi)} 
-&\leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} \\
-&\leq \norm{f}_1
+\leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} 
+= \norm{f}_1
 .\end{align*}
 
-    and the DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
+- Continuity:
+  - The DCT shows that $\abs{\hat f(\xi_n) - \hat f(\xi)} \to 0$.
 
 
 - Useful variant - take $q = 1$ to get $\norm{f \ast g}_p \leq \norm{f}_p \norm{g}_1$
