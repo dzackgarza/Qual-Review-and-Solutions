@@ -155,7 +155,7 @@ Proof
 
     We have $\abs{L(x-y)} \leq c\norm{x-y}$, so given $\varepsilon \geq 0$ simply choose $\delta = \frac \varepsilon c$.
 
-Theorem: (Operator Norm is a Norm)
+Theorem (Operator Norm is a Norm)
 : If $H$ is a Hilbert space, then $(H\dual, \norm{\wait}_{\text{op}})$ is a normed space.
 
 Proof
