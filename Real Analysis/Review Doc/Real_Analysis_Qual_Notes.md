@@ -5,9 +5,9 @@
 
 <!--!include sections/100_Fall_2019_Exam_2.md-->
 
-!include sections/1_Basics.md
+<!--!include sections/1_Basics.md-->
 
-!include sections/2_Measure.md
+<!--!include sections/2_Measure.md-->
 
 !include sections/3_Integration.md
 
