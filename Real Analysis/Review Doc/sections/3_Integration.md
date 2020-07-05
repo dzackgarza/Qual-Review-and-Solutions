@@ -108,7 +108,7 @@ Proof
     \to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
     .\end{align*}
 
-Fatou's Lemma
+Theorem (Fatou's)
 :   If $f_n \in L^+$, then
     \begin{align*}
     \int \liminf_n f_n &\leq \liminf_n \int f_n \\
