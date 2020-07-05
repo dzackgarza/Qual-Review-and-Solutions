@@ -71,14 +71,14 @@ Convergence
 Convolution
 
 - $\star$: Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
-- Show that $f\in L^1, g \leq M \implies f\ast g \leq M'$ and is uniformly continuous.
+- Show that if $f\in L^1$ and $g$ is bounded, then  $f\ast g$ is bounded and uniformly continuous.
+- If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 - Show that under any of the following assumptions, $f\ast g$ vanishes at infinity:
   - $f, g\in L^1$ are both bounded.
   - $f, g\in L^1$ with just $g$ bounded. 
   - $f, g$ smooth and compactly supported (and in fact $f\ast g$ is smooth)
   - $f\in L^1$ and $g$ smooth and compactly supported (and in fact $f\ast g$ is smooth)
 - Show that if $f\in L^1$ and $g'$ exists with $\dd{g}{x_i}$ all bounded, then $$\dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$$
-- If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 
 Fourier Analysis
 
