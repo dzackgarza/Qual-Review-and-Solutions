@@ -69,12 +69,20 @@ Fourier Analysis
 - Show that if $f\in L^1$ and $\hat f = 0$ a.e. then $f=0$ a.e.
   - Prove that $\hat f = \hat g$ implies that $f=g$ a.e.
 - Show that if $f, g \in L^1$ then $\int \hat f g = \int f\hat g$.
-- Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
-- $\star$: show that if $f, g\in L^1$, then $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
-- Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
   - Give an example showing that this fails if $g$ is not bounded.
-- Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
 - Show that if $f\in C^1$ then $f$ is equal to its Fourier series.
+
+Convolution
+
+- Show that $f,g \in L^1 \implies f\ast g \in L^1$ and $\norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1$.
+- Show that $f\in L^1, g \leq M \implies f\ast g \leq M'$ and is uniformly continuous.
+- Show that if $f, g\in L^1$ with $f \leq M, g \leq M'$, then $f\ast g \converges{x\to\infty}\to 0$.
+- $f\in L^1, g'$ exists, $\dd{g}{x_i}$ all bounded $\implies \dd{}{x_i}(f\ast g) = f \ast \dd{g}{x_i}$
+- $f, g \in C_c^\infty \implies f\ast g \in C^\infty$ and $f\ast g \mapsvia{x\to\infty} 0$.
+- $\star$: show that if $f, g\in L^1$, then $\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1$.
+- Is it the case that $f, g\in C_c$ implies that $f\ast g \in C_c$?
+- Show that if $f\in L^1$ and $g\in C_c^\infty$ then $f\ast g$ is smooth and $f\ast g$ vanishes at infinity.
+- Show that if $f,g \in L^1$ and $g$ is bounded, then $\lim_{\abs x\to\infty}(f\ast g)(x) = 0$.
 
 Lp
 
