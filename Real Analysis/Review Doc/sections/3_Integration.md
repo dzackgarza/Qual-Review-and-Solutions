@@ -16,6 +16,15 @@ Useful facts about $C_c$ functions:
 - Bounded almost everywhere
 - Uniformly continuous
 
+Theorem (\$p\dash\$Test for Integrals)
+:
+\begin{align*}
+\int_0^1 x^{-p} < \infty \iff  p < 1 \\
+\int_1^\infty x^{-p} < \infty \iff  p > 1 
+.\end{align*}
+
+> Yields a general technique: break integrals apart at $x=1$.
+
 ## Convergence Theorems
 
 Theorem (Monotone Convergence)
@@ -128,7 +137,7 @@ Proposition (Differentiating Under an Integral)
 :   If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
     \begin{align*}
     \dd{}{t} F(t)
-    &\definedas \lim _{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
+    &\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
     &\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
     .\end{align*}
 
