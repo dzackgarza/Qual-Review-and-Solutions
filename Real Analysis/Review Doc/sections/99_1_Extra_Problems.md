@@ -92,9 +92,15 @@ Approximate Identities
   - Show that if additionally $\abs{\phi(x)} \leq c(1 + \abs{x})^{-n-\eps}$ for some $c,\eps>0$, then this converges is almost everywhere.
 - Show that is $f$ is bounded and uniformly continuous and $\phi_t$ is an approximation to the identity, then $f\ast \phi_t$ uniformly converges to $f$.
 
-Lp
+$L^p$ Spaces
 
 - Show that if $E\subseteq \RR^n$ is measurable with $\mu(E) < \infty$ and $f\in L^p(X)$ then $\norm{f}_{L^p(X)} \converges{p\to\infty}\to \norm{f}_\infty$.
 - Is it true that the converse to the DCT holds? 
   I.e. if $\int f_n \to \int f$, is there a $g\in L^p$ such that $f_n < g$ a.e. for every $n$?
 - Prove continuity in $L^p$: If $f$ is uniformly continuous then $\norm{\tau_h f - f}_p \to 0$ as $h\to 0$ for all $p$.
+- Prove the following inclusions of $L^p$ spaces for $m(X) < \infty$:
+\begin{align*}
+&L^\infty(X) \subset L^2(X) \subset L^1(X) \\
+&\ell^2(\ZZ) \subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
+.\end{align*}
+
