@@ -71,7 +71,6 @@ Convergence
 Convolution
 
 - $\star$: Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
-- $\star$: show that if $f, g\in L^1$, then $$\norm{f\ast g}_{1} \leq \norm{f}_1 \norm{g}_1.$$
 - Show that $f\in L^1, g \leq M \implies f\ast g \leq M'$ and is uniformly continuous.
 - Show that under any of the following assumptions, $f\ast g$ vanishes at infinity:
   - $f, g\in L^1$ are both bounded.
