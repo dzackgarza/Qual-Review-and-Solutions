@@ -36,7 +36,24 @@ Proof
     - Continuity:
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
+
+Theorem (Fourier Inversion)
+:
+\begin{align*}
+f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
+.\end{align*}
+
+Proof
+: Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
+
+Proposition (Eigenfunction of the Fourier Transform)
+:
+\begin{align*}
+g(x) \definedas e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi)
+.\end{align*}
+
 ## Approximate Identities 
+
 Definition (Dilation)
 : $$ \phi_{t}(x)=t^{-n} \phi\left(t^{-1} x\right).$$
 
