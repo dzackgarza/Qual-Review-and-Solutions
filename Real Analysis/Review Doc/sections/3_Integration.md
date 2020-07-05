@@ -1,6 +1,6 @@
 # Integration
 
-## Useful techniques: 
+## Useful Techniques
 
 - Break integration domain up into disjoint annuli.
 - Break real integrals up into $x < 1$ and $x>1$.
@@ -14,7 +14,7 @@ Definition (\$L^+\$)
 Definition (Integrable)
 :	A measurable function is integrable iff $\norm{f}_1 < \infty$.
 
-Definition (\$L^\infty\$ and Essentially Bounded Functions)
+Definition (Essentially Bounded Functions)
 :   For $(X, \mcm, \mu)$ a measure space,
     \begin{align*}
     L^\infty(X) \definedas \theset{f \in \mcm \suchthat f \text{ is essentially bounded }}
