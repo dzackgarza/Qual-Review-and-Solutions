@@ -160,9 +160,9 @@ Theorem (Operator Norm is a Norm)
 
 Proof
 : The only nontrivial property is the triangle inequality, but
-\begin{align*}
-\norm{L_1 + L_2} = \sup \abs{L_1(x) + L_2(x)} \leq \sup L_1(x) + \sup L_2(x) = \norm{L_1} + \norm{L_2}
-.\end{align*}
+  \begin{align*}
+  \pnorm{L_1 + L_2}{\op} = \sup \abs{L_1(x) + L_2(x)} \leq \sup \abs{L_1(x)} + \abs{\sup L_2(x)} = \pnorm{L_1}\op + \pnorm{L_2}\op
+  .\end{align*}
 
 Theorem (Completeness in Operator Norm)
 : If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
