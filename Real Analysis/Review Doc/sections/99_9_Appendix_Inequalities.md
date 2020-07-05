@@ -161,3 +161,9 @@ Proposition (Jensen's Inequality)
   \begin{align*}
   f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
   .\end{align*}
+
+Proposition (???)
+:
+\begin{align*}
+AB \leq {A^p \over p} + {B^q \over q}
+.\end{align*}
