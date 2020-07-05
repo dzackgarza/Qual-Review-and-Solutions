@@ -1,5 +1,15 @@
 # Functional Analysis
 
+Notation: $H$ denotes a Hilbert space.
+
+Definition (Orthonormal Sequence)
+: ?
+
+Definition (Basis)
+: ?
+
+Definition (Complete)
+: A collection of vectors $\theset{u_n}\subset H$ is *complete* iff $\inner{x}{u_n} = 0$ for all $n \iff x = 0$ in $H$.
 
 Theorem (Bessel's Inequality)
 :
