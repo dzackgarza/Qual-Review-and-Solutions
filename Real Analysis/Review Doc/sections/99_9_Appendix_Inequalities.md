@@ -53,7 +53,7 @@ Proof
 Proposition (Minkowski's Inequality:)
 :	\hfill
   \begin{align*}
-  1\leq p < \infty \implies \|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}
+  1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
   .\end{align*}
 
 > Note: does not handle $p=\infty$ case.
@@ -71,10 +71,10 @@ Proposition (Young's Inequality*)
 **Application**:
 Some useful specific cases:
 \begin{align*}
-\norm{f\ast g}_1 &\leq \norm{f}_1 \norm{g}_1 \\
-\|f * g\|_{p} &\leq\|f\|_{1}\|g\|_{p}, \\
-\norm{f\ast g}_\infty &\leq \norm{f}_2 \norm{g}_2 \\
-\norm{f\ast g}_\infty &\leq \norm{f}_p \norm{g}_q
+\norm{f\ast g}_1      & \leq \norm{f}_1 \norm{g}_1 \\
+\|f * g\|_{p}         & \leq \norm{f}_1 \norm{g}p, \\
+\norm{f\ast g}_\infty & \leq \norm{f}_2 \norm{g}_2 \\
+\norm{f\ast g}_\infty & \leq \norm{f}_p \norm{g}_q
 .\end{align*}
 
 Proposition (? Inequality)
@@ -97,7 +97,6 @@ Proposition (Parseval's Identity:)
 :	Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
 
 ## Less Explicitly Used Inequalities
-
 
 Proposition (AM-GM Inequality)
 :	\hfill
