@@ -1,8 +1,8 @@
 # Extra Problems
 
-Integration
+Differentiation
 
-- Show that if $f\in C^1(\RR)$ and $\lim_{x\to \infty} f(x), f'(x)$ exist, then $\lim f'(x) = 0$.
+- Show that if $f\in C^1(\RR)$ and both $\lim_{x\to \infty} f(x)$ and $\lim_{x\to \infty} f'(x)$ exist, then $\lim_{x\to\infty} f'(x)$ must be zero.
 
 Basics
 
