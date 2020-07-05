@@ -27,8 +27,10 @@ Definition (Meager Sets)
 Definition (\$F_\\sigma\$ and \$G_\\delta\$)
 :	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
   
-
 > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
+Theorem (Heine-Cantor)
+: Every continuous function on a compact space is uniformly continuous.
 
 ## Theorems
 
@@ -83,6 +85,10 @@ Lemma
 
 ### Functions
 
+Proposition (Existence of Smooth Compactly Supported Functions)
+: There exist smooth compactly supported functions, e.g. take 
+$$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$
+
 Lemma
 :	There is a function discontinuous precisely on $\QQ$.
 
@@ -97,8 +103,15 @@ Proof
 :   $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
     $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 
+Proposition
+:   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
+    In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
+
 
 ## Uniform Convergence
+
+Theorem (Weierstrass Approximation)
+: If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
 
 Theorem (Egorov)
 :   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $$f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$$ exists almost everywhere.
@@ -135,13 +148,13 @@ Proof
 
     4.  Show that $f\in X$:
 
-        The uniform limit of continuous functions is continuous. (Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.)
+        The uniform limit of continuous functions is continuous.
+
+        > Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 
 Theorem (Uniform Limits of Continuous Functions are Continuous)
 :	A uniform limit of continuous functions is continuous.
 
-Theorem (Heine-Cantor)
-: Every continuous function on a compact space is uniformly continuous.
 
 Lemma (Testing Uniform Convergence)
 :   $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
@@ -154,12 +167,13 @@ Lemma (Uniform Limits Commute with Integrals)
 Lemma (Uniform Convergence and Derivatives)
 : If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
 
+### Series
+
 Lemma (Uniform Convergence of Series of Numbers)
 : If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
 Lemma (Small Tails for Series of Functions)
 :	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
-
 
 Lemma (M-test for Series)
 : If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
@@ -176,14 +190,3 @@ Lemma (p-tests)
     \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
     .\end{align*}
 
-Proposition
-:   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
-    In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
-
-Proposition (Existence of Smooth Compactly Supported Functions)
-: There exist smooth compactly supported functions, e.g. take 
-$$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$
-
-
-Theorem (Weierstrass Approximation)
-: If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
