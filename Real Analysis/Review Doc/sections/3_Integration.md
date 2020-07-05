@@ -83,30 +83,62 @@ Theorem (Fubini)
 :   For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
 
     - $f_x(y)$ is an **integrable** function
-    - $F(x) = \int f(x, y) ~dy$ is an **integrable** function,
+    - $F(x) \definedas \int f(x, y) ~dy$ is an **integrable** function,
     - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
     - $\int f = \int \int f(x,y)$, i.e. any iterated integral is equal to the original
 
 Theorem (Fubini/Tonelli)
 : If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
 
-**Useful Technique**:
-Differentiating under the integral. 
+Corollary (Measurable Slices)
+:   Let $E$ be a measurable subset of $\RR^n$. Then
 
-If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
-\begin{align*}
-\dd{}{t} F(t)
-&\definedas \lim _{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
-&\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
-.\end{align*}
+    - For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
+    - The function
 
-To justify passing the limit, let $h_k \to 0$ be any sequence and define
-$$
-f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
-,$$
-so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
+    \begin{align*}
+    F: \RR^{n_1} &\to \RR \\
+    x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
+    \end{align*}
+    is measurable and 
+    $$
+    m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
+    = \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
+    $$
 
-Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
+Proof (Measurable Slices)
+:   \hfill
+
+    $\implies$:
+
+    - Let $f$ be measurable on $\RR^n$.
+    - Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
+    - Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
+
+
+    $\impliedby$:
+
+    - Let $A$ be measurable in $\RR^{n+1}$.
+    - Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
+    - By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
+    - Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
+
+
+Proposition (Differentiating Under an Integral)
+:   If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
+    \begin{align*}
+    \dd{}{t} F(t)
+    &\definedas \lim _{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
+    &\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
+    .\end{align*}
+
+    To justify passing the limit, let $h_k \to 0$ be any sequence and define
+    $$
+    f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
+    ,$$
+    so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
+
+    Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
 
 
 Proposition (Swapping Sum and Integral)
