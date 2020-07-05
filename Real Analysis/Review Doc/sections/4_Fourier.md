@@ -3,8 +3,6 @@
 Definition (Convolution)
 : $$f * g(x)=\int f(x-y) g(y) d y .$$
 
-Definition (Dilation)
-: $$ \phi_{t}(x)=t^{-n} \phi\left(t^{-1} x\right).$$
 
 Definition (The Fourier Transform)
 : \begin{align*}
@@ -36,10 +34,12 @@ Proof
     - Continuity:
       - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
 
+Definition (Dilation)
+: $$ \phi_{t}(x)=t^{-n} \phi\left(t^{-1} x\right).$$
 
 
 Definition (Approximation to the Identity)
-:   For $\phi\in L^1$, we have $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
+:   For $\phi\in L^1$, the dilations satisfy $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
     
     Example: $\phi(x) = e^{-\pi x^2}$
 
