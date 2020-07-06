@@ -25,9 +25,6 @@ Definition (Lebesgue Measurable Set)
 : A subset $E\subseteq \RR^n$ is *Lebesgue measurable* iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
 In this case, we define $m(E) \definedas m_*(E)$.
 
-Definition (Borel Measurable Set)
-: ?
-
 
 ## Theorems
 
