@@ -11,7 +11,7 @@
 Definition (Outer Measure)
 :   The outer measure of a set is given by
     \begin{align*}
-    m_*(E) = \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
+    m_*(E) \definedas \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
     .\end{align*}
 
 Definition (Limsup and Liminf of Sets)
@@ -20,6 +20,13 @@ Definition (Limsup and Liminf of Sets)
     \limsup_n A_n \definedas \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
     \liminf_n A_n \definedas \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
     .\end{align*}
+
+Definition (Lebesgue Measurable Set)
+: A subset $E\subseteq \RR^n$ is *Lebesgue measurable* iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
+In this case, we define $m(E) \definedas m_*(E)$.
+
+Definition (Borel Measurable Set)
+: ?
 
 
 ## Theorems
