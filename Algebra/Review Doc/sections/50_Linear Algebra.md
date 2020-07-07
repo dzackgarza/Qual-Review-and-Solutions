@@ -1,5 +1,12 @@
 # Linear Algebra
 
+
+Definition (Invariant Factor)
+: ?
+
+Definition (Elementary Divisor)
+: ?
+
 ## Minimal / Characteristic Polynomials
 
 Fix some notation:
@@ -8,11 +15,11 @@ Fix some notation:
 \chi_A(x): \quad & \text{The characteristic polynomial of } A
 .\end{align*}
 
-**Definition:**
-The minimal polynomial is the unique polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
+Definition
+: The *minimal polynomial* of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
 
-**Definition:**
-The **characteristic polynomial** of $A$ is given by
+Definition
+: The **characteristic polynomial** of $A$ is given by
 $$
 \chi_A(x) = \det(A - xI))= \det(SNF(A - xI))
 .$$
