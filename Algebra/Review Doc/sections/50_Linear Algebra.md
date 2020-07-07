@@ -82,17 +82,29 @@ Definition (Companion Matrix)
 
 Corresponds to the **Invariant Factor Decomposition** of $T$.
 
+Theorem (Structure Theorem)
+: For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
+\begin{align*}
+M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
+\end{align*}
+where each $a_i$ is an invariant factor.
+
+Proposition
+: Each $a_i$ corresponds
+
 Proposition (RCF Relates to Invariant Factors)
 : $RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
 
 Proof
 :   The derivation:
 
-    - Let $k[x] \actson V$ using $T$, take invariant factors $a_i$,
+    - Let $k[x] \actson V$ using $T$, makes $V$ into a $k[x]\dash$module. 
+
+    - $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain invariant factors $a_i$,
 
     - Note that $T\actson V$ by multiplication by $x$
 
-    - Write $\overline x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
+    - Write $\bar x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
 
     - Write $a_i(x) = \sum b_i x^i$, note that $V \to F[x]$ pushes $T\actson V$ to $T\actson k[x]$ by multiplication by $\overline x$
 
