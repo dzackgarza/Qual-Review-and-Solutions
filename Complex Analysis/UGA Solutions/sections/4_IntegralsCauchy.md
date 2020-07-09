@@ -1,4 +1,19 @@
-# Integrals and Cauchy's Theorem
+# Integrals and Cauchy's Theorem (8155d)
+
+
+## 5
+
+Show that there is no sequence of polynomials converging uniformly to $f(z) = 1/z$ on $S^1$.
+
+Solution
+
+- By Cauchy's integral formula, $\int_{S^1} f = 2\pi i$
+- If $p_j$ is any polynomial, then $p_j$ is holomorphic in $\DD$, so $\int_{S^1} p_j = 0$.
+- Contradiction: compact sets in $\CC$ are bounded, so 
+  \begin{align*}
+  \abs{\int f - \int p_j} \leq \int \abs{p_j - f} \leq \int \norm{p_j - f}_\infty  = \norm{p_j - f}_\infty \int_{S^1} 1 \,dz = \norm{p_j-f}_\infty \cdot 2\pi \to 0
+  \end{align*}
+  which forces $\int f = \int p_j = 0$.
 
 ## 9
 
@@ -19,45 +34,22 @@
 - Case 3: $\Delta$ intersects both $\HH^+$ and $\HH^-$.
   - Break into smaller triangles, each of which falls into one of the previous two cases.
 
-# Laurent Polynomials
+## 10
 
-## 1
+Suppose $f:\CC\to\CC$ is entire and bounded, and use Cauchy's theorem to prove that $f' \equiv 0$ and thus $f$ is constant.
 
-Let $f(z) = {z+1\over z(z-1)}$.
+Solution
 
-About $z=0$:
-
-\begin{align*}
-f(z) 
-&= (z+1) \qty{- {1 \over z} + {1\over z-1} } \\
-&=  -(z+1) \qty{{1\over z} + \sum_{n=0}^\infty z^n } \\
-&= -(z+1)\sum_{n=-1}^\infty z^n \\
-&= {1\over z} + 2\sum_{n=0}^\infty z^n \\
-&= -{1\over z} -2 - 2z - 2z^2 - \cdots
-.\end{align*}
-
-About $z=1$:
-
-\begin{align*}
-f(z) 
-&= \qty{(1-z) -2 \over 1-z} \qty{1 \over 1 - (1-z)} \\
-&= \qty{1 - {2\over 1-z}} \sum_{n=0}^\infty (1-z)^n \\ 
-&= \sum_{n=0}^\infty (1-z)^n - 2 \sum_{n=-1}^\infty (1-z)^n \\
-&= -{2\over 1-z} - \sum_{n=0}^\infty (1-z)^n \\
-&= {2\over z-1} + \sum_{n=0}^\infty (-1)^{n+1} (z-1)^n \\
-&= {2\over z-1} - 1 + (z-1) - (z-1)^2 + \cdots
-.\end{align*}
+- Suffices to prove $f' = 0$ because $\CC$ is connected (see Stein Ch 1, 3.4)
+  - Idea: Fix $w_0$, show $f(w) = f(w_0)$ for any $w\neq w_0$
+  - Connected = Path connected in $\CC$, so take $\gamma$ joining $w$ to $w_0$.
+  - $f$ is a primitive for $f'$, and $\int_\gamma f' = f(w) - f(w_0)$, but $f'=0$.
+- Fix $z_0\in \CC$, let $B$ be the bound for $f$, so $\abs{f(z)} \leq B$ for all $z$.
+- Apply Cauchy inequalities: if $f$ is holomorphic on $U\supset \bar D_R(z_0)$ then setting $\norm{f}_C \definedas \sup_{z\in C} \abs{f(z)}$,
+  \begin{align*}
+  \abs{f^{(n)} (z_0)} \leq {n! \norm{f}_C \over R^n}
+  .\end{align*}
+  - Yields $\abs{ f'(z_0) } \leq B/R$
+- Take $R\to \infty$, QED.
 
 
-## 2
-
-\begin{align*}
-e^{1\over z} = \sum_{n=0}^\infty {1\over n!} \qty{1\over z}^n = 1 + {1\over z} + {1 \over 2z^2} + {1\over 6z^3} + \cdots
-.\end{align*}
-
-\begin{align*}
-\cos\qty{1\over z} 
-&= {1\over 2}\qty{ e^{i\over z} + e^{-{i\over z}} }  \\
-&= {1\over 2} \sum_{n=0}^\infty {1\over n!}\qty{ \qty{i\over z}^n + \qty{-i \over z}^n  } \\
-&= \sum_{n=0}^\infty {(-1)^n \over (2n)!} \qty{1\over z}^{2n}
-.\end{align*}

@@ -1,44 +1,6 @@
-# Week 1
-## Integrals and Cauchy's Theorem
+# Liouville's Theorem, Power Series (8155e)
 
-
-### 5
-
-Show that there is no sequence of polynomials converging uniformly to $f(z) = 1/z$ on $S^1$.
-
-Solution
-
-- By Cauchy's integral formula, $\int_{S^1} f = 2\pi i$
-- If $p_j$ is any polynomial, then $p_j$ is holomorphic in $\DD$, so $\int_{S^1} p_j = 0$.
-- Contradiction: compact sets in $\CC$ are bounded, so 
-  \begin{align*}
-  \abs{\int f - \int p_j} \leq \int \abs{p_j - f} \leq \int \norm{p_j - f}_\infty  = \norm{p_j - f}_\infty \int_{S^1} 1 \,dz = \norm{p_j-f}_\infty \cdot 2\pi \to 0
-  \end{align*}
-  which forces $\int f = \int p_j = 0$.
-
-### 9
-
-### 10
-
-Suppose $f:\CC\to\CC$ is entire and bounded, and use Cauchy's theorem to prove that $f' \equiv 0$ and thus $f$ is constant.
-
-Solution
-
-- Suffices to prove $f' = 0$ because $\CC$ is connected (see Stein Ch 1, 3.4)
-  - Idea: Fix $w_0$, show $f(w) = f(w_0)$ for any $w\neq w_0$
-  - Connected = Path connected in $\CC$, so take $\gamma$ joining $w$ to $w_0$.
-  - $f$ is a primitive for $f'$, and $\int_\gamma f' = f(w) - f(w_0)$, but $f'=0$.
-- Fix $z_0\in \CC$, let $B$ be the bound for $f$, so $\abs{f(z)} \leq B$ for all $z$.
-- Apply Cauchy inequalities: if $f$ is holomorphic on $U\supset \bar D_R(z_0)$ then setting $\norm{f}_C \definedas \sup_{z\in C} \abs{f(z)}$,
-  \begin{align*}
-  \abs{f^{(n)} (z_0)} \leq {n! \norm{f}_C \over R^n}
-  .\end{align*}
-  - Yields $\abs{ f'(z_0) } \leq B/R$
-- Take $R\to \infty$, QED.
-
-## Liouville. The Fundamental Theorem of Algebra, Power Series
-
-### 1
+## 1
 
 Suppose $f$ is analytic on $\Omega \supseteq \DD$ whose power series $\sum a_n z^n$ has radius of convergence 1.
 
@@ -72,7 +34,7 @@ b. Take $\sum {z^n \over n}$; then $z=1$ yields the harmonic series, which diver
 c. ?
 
 
-### 5
+## 5
 
 Prove the Fundamental Theorem of Algebra: every non-constant polynomial $p(z) = a_nz^n + \cdots + a_0 \in \CC[x]$ has a root in $\CC$.
 
@@ -99,7 +61,7 @@ Solution:
 - By Liouville's theorem, $1/p$ is constant and thus $p$ is constant, a contradiction.
 
 
-### 6
+## 6
 
 Find all entire functions $f$ which satisfy the following inequality, and prove the list is complete:
 \begin{align*}

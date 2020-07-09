@@ -38,7 +38,7 @@ Theorem (Argument Principle)
 : ?
 
 Theorem (Green's)
-:   If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA$.
+:   If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 
 Theorem (Rouche)
 : If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
@@ -58,7 +58,7 @@ Example
 Example
 :   \hfill
 
-    - Claim: the equation $\alphaz e^z = 1$ where $\abs{\alpha} > e$ has exactly one solution in $\DD$.
+    - Claim: the equation $\alpha z e^z = 1$ where $\abs{\alpha} > e$ has exactly one solution in $\DD$.
     - Set $f(z) = \alpha z$ and $g(z) = e^{-z}$.
     - Estimate at $\abs{z} =1$ we have $\abs{g} =\abs{e^{-z}} = e^{-\Re(z)} \leq e^1 < \abs{\alpha} = \abs{f(z)}$
     - $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
@@ -78,7 +78,7 @@ Theorem (Cayley Transform)
 : The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 
 Theorem (Continuation Principle)
-: If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\thezet{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
+: If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 
 
 Theorem (Schwarz Reflection)
