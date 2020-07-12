@@ -268,6 +268,7 @@ Extensions?
 - Show that $\alpha/F$ is algebraic $\iff F(\alpha)/F$ is a finite extension.
 - Show that every finite field extension is algebraic.
 - Show that if $\alpha, \beta$ are algebraic over $F$, then $\alpha\pm \beta, \alpha\beta^{\pm 1}$ are all algebraic over $F$.
+- Show that if $L/K/F$ with $K/F$ algebraic and $L/K$ algebraic then $L$ is algebraic.
 
 Special Polynomials
 
