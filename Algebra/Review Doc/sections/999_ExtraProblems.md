@@ -254,12 +254,15 @@ Misc
 - What is $[\QQ(2^{3\over 2}) : \QQ]$?
 - Show that every field is simple.
 - Show that any field morphism is either 0 or injective.
+- Show that if $L/F$ and $\alpha$ is algebraic over both $F$ and $L$, then the minimal polynomial of $\alpha$ over $L$ divides the minimal polynomial over $F$.
 - Show that if $p\in \QQ[x]$ and $r\in \QQ$ is a rational root, then in fact $r\in \ZZ$.
 - If $\theset{\alpha_i}_{i=1}^n \subset F$ are algebraic over $K$, show that $K[\alpha_1, \cdots, \alpha_n] = K(\alpha_1, \cdots, \alpha_n)$.
 - Show that the Galois group of $x^n - 2$ is $D_n$, the dihedral group on $n$ vertices.
 - Compute all intermediate field extensions of $\QQ(\sqrt 2, \sqrt 3)$, show it is equal to $\QQ(\sqrt 2 + \sqrt 3)$, and find a corresponding minimal polynomial.
  
 ![](figures/image_2020-06-01-20-56-35.png)
+
+## Galois Theory
 
 - Compute all intermediate field extensions of $\QQ(2^{1\over 4}, \zeta_8)$.
 - Show that $\QQ(2^{1\over 3})$ and $\QQ(\zeta_3 2^{1\over 3})$
