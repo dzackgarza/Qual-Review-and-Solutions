@@ -267,6 +267,7 @@ Extensions?
 - If $\theset{\alpha_i}_{i=1}^n \subset F$ are algebraic over $K$, show that $K[\alpha_1, \cdots, \alpha_n] = K(\alpha_1, \cdots, \alpha_n)$.
 - Show that $\alpha/F$ is algebraic $\iff F(\alpha)/F$ is a finite extension.
 - Show that every finite field extension is algebraic.
+- Show that if $\alpha, \beta$ are algebraic over $F$, then $\alpha\pm \beta, \alpha\beta^{\pm 1}$ are all algebraic over $F$.
 
 Special Polynomials
 
