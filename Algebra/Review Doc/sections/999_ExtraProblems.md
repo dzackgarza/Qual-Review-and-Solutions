@@ -265,6 +265,8 @@ Extensions?
 - What is $[\QQ(2^{3\over 2}) : \QQ]$?
 - Show that if $p\in \QQ[x]$ and $r\in \QQ$ is a rational root, then in fact $r\in \ZZ$.
 - If $\theset{\alpha_i}_{i=1}^n \subset F$ are algebraic over $K$, show that $K[\alpha_1, \cdots, \alpha_n] = K(\alpha_1, \cdots, \alpha_n)$.
+- Show that $\alpha/F$ is algebraic $\iff F(\alpha)/F$ is a finite extension.
+- Show that every finite field extension is algebraic.
 
 Special Polynomials
 
