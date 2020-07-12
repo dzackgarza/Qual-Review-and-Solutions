@@ -252,32 +252,33 @@ Misc
 
 - What is $[\QQ(\sqrt 2 + \sqrt 3): \QQ]$?
 - What is $[\QQ(2^{3\over 2}) : \QQ]$?
+- Show that any finite integral domain is a field.
 - Show that every field is simple.
 - Show that any field morphism is either 0 or injective.
 - Show that if $L/F$ and $\alpha$ is algebraic over both $F$ and $L$, then the minimal polynomial of $\alpha$ over $L$ divides the minimal polynomial over $F$.
 - Show that if $p\in \QQ[x]$ and $r\in \QQ$ is a rational root, then in fact $r\in \ZZ$.
 - If $\theset{\alpha_i}_{i=1}^n \subset F$ are algebraic over $K$, show that $K[\alpha_1, \cdots, \alpha_n] = K(\alpha_1, \cdots, \alpha_n)$.
+- Prove that if $R$ is an integral domain, then $R[t]$ is again an integral domain.
+- Show that $ff(R[t]) = ff(R)(t)$.
+- Show that a field with $p^n$ elements has exactly one subfield of size $p^d$ for every $d$ dividing $n$.
+- Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+- Show that $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+- Prove that $x^{p^n}-x$ is the product of all monic irreducible polynomials in $\FF_p[x]$ with degree dividing $n$.
+- Prove that an irreducible $\pi(x)\in \FF_p[x]$ divides $x^{p^n}-x \iff \deg \pi(x)$ divides $n$.
+
+## Galois Theory
+
 - Show that the Galois group of $x^n - 2$ is $D_n$, the dihedral group on $n$ vertices.
 - Compute all intermediate field extensions of $\QQ(\sqrt 2, \sqrt 3)$, show it is equal to $\QQ(\sqrt 2 + \sqrt 3)$, and find a corresponding minimal polynomial.
  
 ![](figures/image_2020-06-01-20-56-35.png)
 
-## Galois Theory
-
 - Compute all intermediate field extensions of $\QQ(2^{1\over 4}, \zeta_8)$.
 - Show that $\QQ(2^{1\over 3})$ and $\QQ(\zeta_3 2^{1\over 3})$
 - Show that if $L/K$ is separable, then $L$ is normal $\iff$ there exists a polynomial $p(x) = \prod_{i=1}^n x- \alpha_i\in K[x]$ such that $L = K(\alpha_1, \cdots, \alpha_n)$ (so $L$ is the splitting field of $p$).
 - Is $\QQ(2^{1\over 3})/\QQ$ normal? 
-- Show that any finite integral domain is a field.
-- Prove that if $R$ is an integral domain, then $R[t]$ is again an integral domain.
-- Show that $ff(R[t]) = ff(R)(t)$.
-- Prove that $x^{p^n}-x$ is the product of all monic irreducible polynomials in $\FF_p[x]$ with degree dividing $n$.
-- Prove that an irreducible $\pi(x)\in \FF_p[x]$ divides $x^{p^n}-x \iff \deg \pi(x)$ divides $n$.
-- Show that a field with $p^n$ elements has exactly one subfield of size $p^d$ for every $d$ dividing $n$.
 - Show that  $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
-- Show that $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
 - Show that $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
-- Show that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 - Compute the Galois group of $x^n - 1 \in \QQ[x]$ as a function of $n$.
 - Identify all of the elements of the Galois group of $x^p-2$ for $p$ an odd prime (note: this has a complicated presentation).
 - Show that $\gal(x^{15}+2)/\QQ \cong S_2 \semidirect \ZZ/15\ZZ$ for $S_2$ a Sylow $2\dash$subgroup.
