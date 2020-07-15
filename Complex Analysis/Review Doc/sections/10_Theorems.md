@@ -70,6 +70,8 @@ Theorem (Open Mapping)
 Theorem (Maximum Modulus)
 : If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
   If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
+  
+  Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
 
 
 Theorem (Casorati-Weierstrass)
