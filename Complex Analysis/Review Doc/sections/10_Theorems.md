@@ -96,3 +96,8 @@ Theorem (Schwarz Lemma)
     2. $\abs{f'(0)} \leq 1$.
 
     Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+
+Theorem (Riemann Mapping)
+:   If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
+
+    Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
