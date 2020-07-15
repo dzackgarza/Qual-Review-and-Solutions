@@ -68,7 +68,8 @@ Theorem (Open Mapping)
 
 
 Theorem (Maximum Modulus)
-: If $f$ is holomorphic and nonconstant on $\Omega$, then $\abs{f}$ can not attain a 
+: If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
+  If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
 
 
 Theorem (Casorati-Weierstrass)
@@ -85,3 +86,10 @@ Theorem (Schwarz Reflection)
 :   If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
 
     > Note: $\HH^+, \HH^-$ can be replaced with any region symmetric about a line segment $L\subseteq \RR$.
+
+Theorem (Schwarz Lemma)
+:   If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
+
+    1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$.
+    2. If there exists a $0\neq z_0 \in \DD$ with $f(z) = z$, then $f$ is a rotation.
+    3. $\abs{f'(0)} \leq 1$ with equality $\iff f$ is a rotation.
