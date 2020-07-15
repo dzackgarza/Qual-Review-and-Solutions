@@ -95,4 +95,4 @@ Theorem (Schwarz Lemma)
     1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
     2. $\abs{f'(0)} \leq 1$.
 
-    Moreover, if $\abs{f(z)} = \abs{z}$ for any $z$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+    Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
