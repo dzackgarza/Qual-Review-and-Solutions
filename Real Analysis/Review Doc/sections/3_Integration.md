@@ -94,17 +94,43 @@ Theorem (Dominated Convergence)
 
     > Positivity *not* needed.
 
-    > Generalized DCT: can relax $\abs {f_n} < g$ to $\abs{f_n} < g_n \to g\in L^1$.
-
 Theorem (Generalized DCT)
 :   If 
     
     - $f_n \in L^1$ with $f_n \to f$ a.e., 
-    - There exist $g_n \in L^1$ with $\abs{f_n} \leq \abs{g_n}$, 
+    - There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, 
     - $g_n\to g$ a.e. with $g\in L^1$, and 
     - $\lim \int g_n = \int g$, 
 
     then $\lim \int f_n = \int f$.
+
+    > Note that this is the DCT with $\abs{f_n} < \abs{g}$ relaxed to $\abs{f_n} < g_n \to g\in L^1$.
+
+Proof (Generalized DCT)
+:   Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
+
+    - $\int f \geq \limsup \int f_n$:
+    \begin{align*}
+    \int g - \int f 
+    &= \int \qty{g-f} \\
+    &\leq \liminf \int \qty{g_n - f_n} \\
+    &= \lim \int g_n + \liminf \int (-f_n) \\
+    &= \lim \int g_n - \limsup \int f_n \\
+    &= \int g - \limsup \int f_n \\
+    \\
+    \implies \int f &\geq \limsup \int f_n
+    .\end{align*}
+
+    - $\int f \leq \liminf \int f_n$:
+    \begin{align*}
+    \int g + \int f 
+    &= \int(g+f) \\
+    &\leq \liminf \int \qty{g_n + f_n} \\
+    &= \lim \int g_n + \liminf \int f_n \\
+    &= \int g + \liminf f_n \\
+    \\
+    \int f &\leq \liminf \int f_n
+    .\end{align*}
   
 
 Lemma
