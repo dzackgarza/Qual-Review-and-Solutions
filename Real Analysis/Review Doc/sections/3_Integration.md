@@ -96,6 +96,17 @@ Theorem (Dominated Convergence)
 
     > Generalized DCT: can relax $\abs {f_n} < g$ to $\abs{f_n} < g_n \to g\in L^1$.
 
+Theorem (Generalized DCT)
+:   If 
+    
+    - $f_n \in L^1$ with $f_n \to f$ a.e., 
+    - There exist $g_n \in L^1$ with $\abs{f_n} \leq \abs{g_n}$, 
+    - $g_n\to g$ a.e. with $g\in L^1$, and 
+    - $\lim \int g_n = \int g$, 
+
+    then $\lim \int f_n = \int f$.
+  
+
 Lemma
 :   If $f\in L^1$, then
     \begin{align*}
