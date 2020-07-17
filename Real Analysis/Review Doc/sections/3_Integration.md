@@ -82,9 +82,9 @@ Theorem (Monotone Convergence)
 
 Theorem (Dominated Convergence)
 
-:   If $f_n \in L^1$ and $f_n \to f$ a.e. with $\abs {f_n} \leq g$ for some $g\in L^1$, then
+:   If $f_n \in L^1$ and $f_n \to f$ a.e. with $\abs {f_n} \leq g$ for some $g\in L^1$, then $f\in L^1$ and
     $$
-    \lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f
+    \lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f < \infty
     ,$$
 
     and more generally,
@@ -98,11 +98,11 @@ Theorem (Generalized DCT)
 :   If 
     
     - $f_n \in L^1$ with $f_n \to f$ a.e., 
-    - There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, 
+    - There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
     - $g_n\to g$ a.e. with $g\in L^1$, and 
     - $\lim \int g_n = \int g$, 
 
-    then $\lim \int f_n = \int f$.
+    then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
 
     > Note that this is the DCT with $\abs{f_n} < \abs{g}$ relaxed to $\abs{f_n} < g_n \to g\in L^1$.
 
@@ -113,13 +113,15 @@ Proof (Generalized DCT)
     \begin{align*}
     \int g - \int f 
     &= \int \qty{g-f} \\
-    &\leq \liminf \int \qty{g_n - f_n} \\
+    &\leq \liminf \int \qty{g_n - f_n} \quad \text{Fatou} \\
     &= \lim \int g_n + \liminf \int (-f_n) \\
     &= \lim \int g_n - \limsup \int f_n \\
     &= \int g - \limsup \int f_n \\
     \\
     \implies \int f &\geq \limsup \int f_n
     .\end{align*}
+
+      - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with 
 
     - $\int f \leq \liminf \int f_n$:
     \begin{align*}
