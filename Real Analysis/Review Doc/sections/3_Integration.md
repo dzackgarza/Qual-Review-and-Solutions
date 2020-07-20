@@ -17,6 +17,7 @@ Notation:
   - Bounded
 
 
+
 ## Definitions
 
 Definition (\$L^+\$)
@@ -60,12 +61,23 @@ Useful facts about $C_c$ functions:
 - Uniformly continuous
 
 
-Theorem (p-Test for Integrals)
+Theorem (p-Test for Integrals in \$\\RR\$)
 :   \hfill
 \begin{align*}
-\int_0^1 x^{-p} < \infty \iff  p < 1 \\
-\int_1^\infty x^{-p} < \infty \iff  p > 1 
+\int_0^1 {1\over x^p} < \infty \iff  p < 1 \\
+\int_1^\infty {1\over x^p} < \infty \iff  p > 1 
 .\end{align*}
+
+Some integrable functions:
+
+- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty} \pi/2 < \infty$
+- Any bounded function (or continuous on a compact set, by EVT)
+- 
+
+Some non-integrable functions:
+
+- $\int_0^1 {1\over x} = \infty$.
+- $\int_1^\infty {1\over x} = \infty$.
 
 
 ###  Convergence Theorems
