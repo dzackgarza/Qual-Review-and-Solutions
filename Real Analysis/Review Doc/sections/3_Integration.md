@@ -68,20 +68,23 @@ Theorem (p-Test for Integrals in \$\\RR\$)
 \int_1^\infty {1\over x^p} < \infty \iff  p > 1 
 .\end{align*}
 
+> Slogan: big powers of $x$ help us in neighborhoods of infinity and hurt around zero
+
 Some integrable functions:
 
 - $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty} \pi/2 < \infty$
 - Any bounded function (or continuous on a compact set, by EVT)
 - $\int_0^1 {1 \over \sqrt{x}} < \infty$
 - $\int_0^1 {1\over x^{1-\eps}} < \infty$
-- $\int_1^\infty {1\over x^{1+\eps}} = \infty$
+- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
 
 Some non-integrable functions:
 
 - $\int_0^1 {1\over x} = \infty$.
 - $\int_1^\infty {1\over x} = \infty$.
+- $\int_1^\infty {1 \over \sqrt{x}} = \infty$
 - $\int_1^\infty {1\over x^{1-\eps}} = \infty$
-- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
+- $\int_0^1 {1\over x^{1+\eps}} = \infty$
 
 
 ###  Convergence Theorems
