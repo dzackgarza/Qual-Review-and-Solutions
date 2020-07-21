@@ -44,6 +44,9 @@
 - Show that an injective continuous map from a compact space to a Hausdorff space is an embedding (a homeomorphism onto its image).
 - Show that $[0, 1]$ is compact.
 - Show that a compact Hausdorff space is is metrizable iff it is second-countable.
+- Show that if $X$ is metrizable, then $X$ is compact
+- Give an example of a space that is compact but not sequentially compact, and vice versa.
+- Show that a sequentially compact space is totally bounded.
 
 ## Separation
 
