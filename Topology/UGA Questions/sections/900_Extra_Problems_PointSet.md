@@ -25,6 +25,8 @@
   - Every connected component of $X$ is open in $X$.
 - Show that $[0, 1]$ is connected.
 - Show that in a metrizable space
+- Show that $[0, 1]$ is connected.
+  \hyperref[problem:interval_is_connected_soln]{Solution} \label{problem:interval_is_connected}
 
 ## Compactness
 - Show that every compact metric space is complete.
@@ -47,6 +49,8 @@
 - Show that if $X$ is metrizable, then $X$ is compact
 - Give an example of a space that is compact but not sequentially compact, and vice versa.
 - Show that a sequentially compact space is totally bounded.
+- Show that $\RR$ with the cofinite topology is compact.
+- Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
 
 ## Separation
 
@@ -58,3 +62,35 @@
 - Show that the minimal uncountable order with the order topology is not separable.
 - Show that every first countable space is second countable.
 - Show that every metric space is Hausdorff in its metric topology.
+
+## Hausdorff Spaces
+
+- Show that a closed subset of a Hausdorff space need not be compact.
+- Show that in a *compact* Hausdorff space, $A$ is closed iff $A$ is compact.
+- Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
+
+
+## From Problem Sessions
+
+1. Let $X$ be a compact space and let $A$ be a closed subspace. 
+  Show that $A$ is compact. 
+  \hyperref[problem:compact_closed_subspace_solution]{Solution} \label{problem:compact_closed_subspace}
+  
+2. Let $f : X \to Y$ be a continuous function, with $X$ compact. 
+  Show that $f(X)$ is compact.
+  \hyperref[problem:compact_continuous_soln]{Solution} \label{problem:compact_continuous}
+ 
+3. Let $A$ be a compact subspace of a Hausdorff space $X$. 
+  Show that $A$ is closed.
+  \hyperref[problem:compact_closed_hausdorff_soln]{Solution} \label{problem:compact_closed_hausdorff}
+
+4. Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+  \hyperref[problem:continuous_bijection_hausdorff_soln]{Solution} \label{problem:continuous_bijection_hausdorff}
+
+5. Let $A \subset X$ be a connected subspace.
+  Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
+
+6. Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.\hyperref[problem:open_but_not_in_ambient_space_soln]{Solution} \label{problem:open_but_not_in_ambient_space}
+
+7. Show that any infinite set with the cofinite topology is compact.
+
