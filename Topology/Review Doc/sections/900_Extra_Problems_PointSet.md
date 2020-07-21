@@ -23,6 +23,8 @@
   - $X$ is connected $\iff X$ is path-connected.
   - Every path component of $X$ is a connected component of $X$.
   - Every connected component of $X$ is open in $X$.
+- Show that $[0, 1]$ is connected.
+- Show that in a metrizable space
 
 ## Compactness
 - Show that every compact metric space is complete.
@@ -40,6 +42,8 @@
 - Show that if $X$ is a metric space and $A\subseteq X$ is compact then $A$ is bounded.
 - Show that a continuous map from a compact space to a Hausdorff space is closed.
 - Show that an injective continuous map from a compact space to a Hausdorff space is an embedding (a homeomorphism onto its image).
+- Show that $[0, 1]$ is compact.
+- Show that a compact Hausdorff space is is metrizable iff it is second-countable.
 
 ## Separation
 
