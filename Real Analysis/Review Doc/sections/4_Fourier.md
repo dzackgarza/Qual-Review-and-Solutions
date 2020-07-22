@@ -7,21 +7,20 @@ Definition (Convolution)
 
 
 Definition (The Fourier Transform)
-: \begin{align*}
+: \[
   \hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
-  .\end{align*}
+  \]
 
 Lemma
 : If $\hat f = \hat g$ then $f=g$ almost everywhere.
 
 Lemma (Riemann-Lebesgue: Fourier transforms have small tails)
 : 
-\begin{align*}
+\[
 f\in L^1 \implies
 \hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
-.\end{align*}
+\]
 
-Lemma
 : If $f \in L^1$, then $\hat f$ is continuous and bounded.
 
 Proof
@@ -34,7 +33,8 @@ Proof
     .\end{align*}
 
     - Continuity:
-      - Apply DCT to show $\abs{\hat f(\xi_n) - \hat f(\xi)} \converges{n\to\infty}\to 0$.
+      - $\abs{\hat{f}(\xi_n) - \hat{f} (\xi) }$
+      - Apply DCT to show $a\converges{n\to\infty}\to 0$.
 
 
 Theorem (Fourier Inversion)
