@@ -1,6 +1,6 @@
-## Homological Algebra
+# Appendix: Homological Algebra
 
-**Free Resolutions**:
+## Free Resolutions
 
 The canonical example:
 $$
@@ -38,7 +38,7 @@ $$
 \ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
 $$
 
-## Properties of Tensor Product
+## Properties of Tensor Products
 
 - $A\tensor B \cong B\tensor A$
 - $(\wait) \tensor_R R^n = \id$
