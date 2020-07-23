@@ -18,5 +18,9 @@
 
 !include sections/91_1_Fall_2019_Exam_2.md
 
+!include sections/91_2_Fall_2018_Exam_2.md
+
+!include sections/91_3_Fall_2014_Exam_2.md
+
 !include sections/99_9_Appendix_Inequalities.md
 

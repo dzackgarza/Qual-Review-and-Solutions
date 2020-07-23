@@ -7,21 +7,23 @@ Definition (Convolution)
 
 
 Definition (The Fourier Transform)
-: \[
-  \hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
-  \]
+:   \hfill
+    \begin{align*}
+    \hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
+    .\end{align*}
 
 Lemma
 : If $\hat f = \hat g$ then $f=g$ almost everywhere.
 
-Lemma (Riemann-Lebesgue: Fourier transforms have small tails)
-: 
-\[
-f\in L^1 \implies
-\hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
-\]
+Lemma (Riemann-Lebesgue\: Fourier transforms have small tails)
+:   \hfill
+    
+    \begin{align*}
+    f\in L^1 \implies
+    \hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
+    ,\end{align*}
 
-: If $f \in L^1$, then $\hat f$ is continuous and bounded.
+    if $f \in L^1$, then $\hat f$ is continuous and bounded.
 
 Proof
 :   \hfill 
