@@ -83,4 +83,16 @@ $$
 [B]\dual \smile [A]\dual = -[p]\dual
 $$
 
+## The Long Exact Sequence of a Pair
 
+LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n-1}(B) \cdots$
+
+\begin{align*}
+\begin{matrix}
+  && B & \\
+&\large\diagup &  & \large\diagdown \\
+(A,B) & & \large\longleftarrow &  & A
+\end{matrix}
+.\end{align*}
+
+![Barycentric Subdivision](figures/image_2020-06-01-00-35-21.png)

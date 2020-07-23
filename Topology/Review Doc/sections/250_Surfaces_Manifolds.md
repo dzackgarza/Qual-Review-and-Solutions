@@ -1,5 +1,7 @@
 # Surfaces and Manifolds
 
+To show something is not a manifold, try looking at local homology. Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
+
 ## Euler Characteristics
 
 \todo[inline]{General formula involving genus and nonorientable genus. Presentation of monoid of surfaces}
@@ -47,4 +49,31 @@ $S^2, \RP^2, T^2, \KK$, Mobius Strip
 
 * $H^n(M^n) = \ZZ$ if $M^n$ is orientable and zero if $M^n$ is nonorientable.
 * Poincare Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
+
+On the complements of spaces in $\RR^3$:
+
+> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
+> Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
+
+If $M$ is a closed 3-manifold and $K$ is a nullhomologous knot in $M$, then $H_1(X -n(K)) \cong H_1(X) \times \ZZ$ where $n(K)$ is a tubular neighborhood.
+
+Take $M=S^3$, $K$ any knot, then $H_*(S^3 - K) = [\ZZ, \ZZ, 0\rightarrow]$. Follows from Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. (Note $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$).
+
+- Every $\CC\dash$manifold is canonically orientable.
+- If $M^n$ is **closed and connected**, then $H_{\geq n}(X) = 0$ and $M^n$ is orientable iff $H_n(X) = \ZZ$.
+- Poincare Duality
+- If $M^n$ is a **closed orientable manifold without boundary**, then $H^k(M^n; F) \cong H_{n-k}(M^n; F)$ for a field $F$.
+- This is a strict implication, so failure of the RHS implies missing conditions on the LHS.
+- The intersection pairing is nondegenerate modulo torsion.
+- Lefschetz Duality
+- If $M^n$ is a **closed orientable manifold with boundary** then  $H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)$
+- $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\mathbf{T}(H_{n-1}) = 0$
+- $M^n$ closed and $n$ odd implies $\chi(M^n) = 0$.
+- Any map $X \to Y$ with $X$ factors through the orientation cover $\tilde Y_o$.
+- If $Y$ is non-orientable, this is a double cover.
+- If $n$ is odd, $\chi(M^n) = 0$ by Poincare Duality.
+- $M$ is orientable if $\pi_1(M)$ has no subgroup of index 2.
+- If $M^\text{orientable} \mapsvia{\pi_k} M^\text{non-orientable}$ is a $k\dash$fold cover, then $k$ is even or $\infty$.
+
+
 

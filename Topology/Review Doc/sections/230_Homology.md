@@ -48,6 +48,7 @@ A\to B \to C \implies
   - Attach an $e^n$ to a point to get $H_n = \ZZ$
   - Then attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_n = \ZZ_d$
 
+## Mayer-Vietoris
 
 Theorem (Mayer Vietoris)
 :   Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
@@ -61,6 +62,65 @@ Theorem (Mayer Vietoris)
     \begin{align*}
     \cdots \to H_n(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_n(A) \oplus H_n(B) \mapsvia{(x, y) \mapsto x+y} H_n(X) \to \cdots
     .\end{align*}
+
+
+Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
+
+\begin{tikzcd}
+ &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
+ &  &  &  &  \\
+H_2(A\cap B) \arrow[rr] \arrow[rr, "{(i^*, -j^*)_2}"] &  & H_2 A \oplus H_2 B \arrow[rr, "(l^* - r^*)_2"] &  & H_2 (A\cup B) \arrow[lllldd, "\delta_2"', out=0, in=-180] \\
+ &  &  &  &  \\
+H_1(A\cap B) \arrow[rr, "{(i^*, -j^*)_1}"] &  & H_1 A \oplus H_1 B \arrow[rr, "(l^*-r^*)_1"] &  & H_1 (A\cup B) \arrow[lllldd, "\delta_1"', out=0, in=-180] \\
+ &  &  &  &  \\
+H_0 (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_0 A \oplus H_0 B \arrow[rr, "(l^* - r^*)_0"] &  & H_0 (A\cup B) \arrow[lllldd, "\delta_0"', out=0, in=-180] \\
+ &  &  &  &  \\
+0 &  &  &  &
+\end{tikzcd}
+
+
+This is sometimes written in the following compact form:
+$$ \cdots  H_n(A \cap B) \xrightarrow{(i^*,~ j^*)} H_n(A) \oplus H_n(B) \xrightarrow{l^* - r^*}  H_n(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots$$
+
+Where
+
+- $i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
+
+- $j: A\cap B \hookrightarrow B$ induces $j^*: H_*(A\cap B) \to H_*(B)$
+
+- $l: A \hookrightarrow A\cup B$ induces $l^*: H_*(A) \to H_*(X)$
+
+- $r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
+
+The connecting homomorphisms $\delta_n :H_n(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_n(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_i$ where each $c_i$ is an $x+y$ chain. Then $\del(c_i) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
+
+Handy mnemonic diagram:
+\begin{align*}
+\begin{matrix}
+ && A\intersect B & \\
+&\large\diagup &  & \large\diagdown \\
+A\union B & & \large\longleftarrow &  & A \oplus B
+\end{matrix}
+.\end{align*}
+
+### Application: Isomorphisms in the homology of spheres.
+
+Claim: $H^i(S^n) \cong H^{i-1}(S^{n-1})$.
+
+Write $X = A \cup B$, the northern and southern hemispheres, so that $A \cap B = S^{n-1}$, the equator. In the LES, we have:
+
+\begin{align*}
+H^{i+1}(S^n) \xrightarrow{} H^i(S^{n-1}) \xrightarrow{} H^iA \oplus H^i B \xrightarrow{} H^i S^n \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} H^{i-1}A \oplus H^{i-1}B
+.\end{align*}
+
+But $A, B$ are contractible, so $H^iA= H^iB = 0$, so we have
+
+\begin{align*}
+H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0
+.\end{align*}
+
+And in particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
+
 
 Theorem (Eilenberg-Zilber)
 :   Given two spaces $X, Y$, there are chain maps

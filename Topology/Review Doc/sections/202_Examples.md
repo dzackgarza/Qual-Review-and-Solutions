@@ -75,15 +75,37 @@ $$
     * The modular groups $PSL_n(\ZZ)$
       * Specifically $PSL_2(\ZZ)$
 
-## Low Dimensional Homotopy Equivalences 
+## Facts About Low Dimensional and/or Standard Spaces
 
 - $\RP^1 \cong S^1$
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 
+- $S^{2n+1} \subset \CC^{n+1}$
+- $\CP^n = S^{2n+1} / S^n$
+
 
 ## Table of Homotopy and Homology Structures
+
+# Low Dimensional Homology Examples
+
+\begin{align*}
+\begin{array}{cccccccccc}
+S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
+\MM   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
+\RP^1 &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
+\RP^2 &=  &[&\ZZ, &\ZZ_2,             &0,    &0,      &0,    &0\rightarrow & ]\\
+\RP^3 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ,    &0,    &0\rightarrow & ]\\
+\RP^4 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ_2,  &0,    &0\rightarrow & ]\\
+ S^2  &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
+\TT^2 &=  &[&\ZZ, &\ZZ^2,             &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
+\KK   &=  &[&\ZZ, &\ZZ \oplus \ZZ_2,  &0,    &0,      &0,    &0\rightarrow & ]\\
+\CP^1 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
+\CP^2 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &\ZZ,  &0\rightarrow & ]\\
+\end{array}
+.\end{align*}
+
 
 \scriptsize
 
@@ -113,6 +135,7 @@ $$
 | Klein Bottle                  | $K(\ZZ\semidirect_{-1} \ZZ, 1)$                | $H_*S^1 \times H_* \RP^\infty$                                     | $1 + 2x + x^2$                                     | ?                                                  |
 
 \normalsize
+
 
 Facts used to compute the above table:
 
