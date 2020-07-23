@@ -1,5 +1,7 @@
 # Examples: Algebraic Topology
 
+## Standard Spaces and Modifications
+
 * $K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
 $$
 \pi_k(K(G, n)) = 
@@ -73,7 +75,12 @@ $$
     * The modular groups $PSL_n(\ZZ)$
       * Specifically $PSL_2(\ZZ)$
 
+## Low Dimensional Homotopy Equivalences 
 
+- $\RP^1 \cong S^1$
+- $\CP^1 \cong S^2$
+- $\MM \homotopic S^1$
+- $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 
 
 ## Table of Homotopy and Homology Structures

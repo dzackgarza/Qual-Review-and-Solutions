@@ -1,6 +1,9 @@
 # Covering Spaces
 
-# Useful Covering Spaces
+When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
+
+
+## Useful Covering Spaces
 
 - $\RR \mapsvia{\pi} S^1 \leftarrow \ZZ$
 - $\RR^n \mapsvia{\pi} T^n \leftarrow \ZZ^n$

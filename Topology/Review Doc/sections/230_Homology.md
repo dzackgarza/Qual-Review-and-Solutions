@@ -1,5 +1,6 @@
 # Homology
 
+## Unsorted
 
 - $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
 - $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
@@ -27,6 +28,18 @@
 * $H_i(S^n) = \indic{i \in \theset{0, n}}$
 * $H_n(\bigvee_i X_i) \cong \prod_i H_n(X_i)$ for "good pairs"
   * Corollary: $H_n(\bigvee_k S^n) = \ZZ^k$
+
+\begin{align*}
+X = A\cup B \implies
+&A\cap B \to A \oplus B \to A \cup B \mapsvia{\delta} \cdots
+(X,A) \implies
+&A \to X \to X,A \mapsvia{\delta} \cdots\\
+A\to B \to C \implies
+& \tor(A, G) \to \tor(B, G) \to \tor(C, G) \mapsvia{\delta_\downarrow} \cdots \\
+A\to B \to C \implies
+& \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
+\end{align*}
+
 
 
 ## Constructing a CW Complex with Prescribed Homology
