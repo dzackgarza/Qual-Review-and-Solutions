@@ -42,72 +42,6 @@
 # Unsorted
 
 
-## Useful long exact sequences
-$$
-\cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots
-$$
-
-$$
-\cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots
-$$
-
-## Useful Short Exact Sequences
-
-> Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
-
-Homology to cohomology:
-$$
-\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
-.$$
-
-Cohomology to dual space:
-$$
-0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
-.$$
-
-Product of spaces to tensor product of homology:
-$$
-0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
-$$
-
-## Useful shortcuts
-
-* Cohomology: If $A$ is a field, then $$H^i(X; A) \cong \hom(H_i(X; A), A)$$
-
-* Kunneth: If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
-$$ 
-H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(X))
-$$
-
-* Universal Coefficients Theorem: If $X$ is a finite CW complex then
-$$
-H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
-H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
-$$
-
-
-## Whitehead Theorem
-
-A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
-
-**Counterexample:**
-Individual maps may not work, take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
-
-## Hurewicz Theorem
-The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
-
-## Cellular approximation theorem
-Any continuous map between CW complexes is homotopy equivalent to a cellular map.
-
-### Applications:
-
-- $\pi_{k\leq n}S^n = 0$
-- $\pi_n(X) \cong \pi_n(X^{(n)})$
-
-## Commuting Homology/Homotopy Products
-
-- $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 
 
 ## Results for Manifolds
@@ -131,162 +65,10 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 # Major Results
 
-* Lefschetz Fixed Point Theorem
-	- If $\Lambda_f \neq 0$ then $f$ has a fixed point, where $X\selfmap_f$ and $\Lambda_f = \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(H_k(X; \QQ) \selfmap_{f_*})$.
-
-* Brouwer Fixed Point Theorem
-	- Every $B^n \selfmap_f$ has a fixed point.
-
-* Hairy Ball Theorem
-	- There is no non-vanishing tangent vector field on even dimensional spheres.
-
-* Borsuk-Ulam Theorem
-	- For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
-
-* Ham Sandwich Theorem
-
-* Eilenberg-Zilberg
-
-* Freudenthal Suspension
 
 
-##  The Universal Coefficient Theorems
-
-For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
-$$
-0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
-$$
-
-$$
-0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
-$$
-
-which split unnaturally:
-$$
-H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
-$$
-
-$$
-H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
-$$
-
-When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
-$$
-H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
-$$
-
-## The Kunneth Formula
-$$
-0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
-$$
-
-Non-canonical splitting:
-$$
-H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
-$$
 
 
-## Free Resolutions
-
-The canonical example:
-$$
-0 \to \ZZ \mapsvia{\times m} \ZZ \mapsvia{\mod m} \ZZ_m \to 0
-$$
-
-Or more generally for a finitely generated group $G = \generators{g_1, g_2, \cdots, g_n}$,
-$$
-\cdots \to \ker(f) \to F[g_1, g_2, \cdots, g_n] \mapsvia{f} G \to 0
-$$ 
-where $F$ denotes taking the free group.
-
-Every abelian groups has a resolution of this form and length 2.
-
-## Computing Tor
-
-$$
-\tor(A, B) = h[\cdots \to A_n \tensor B \to A_{n-1}\tensor B \to \cdots A_1\tensor B \to 0]
-$$ 
-where $A_*$ is any free resolution of $A$.
-
-Shorthand/mnemonic: 
-$$
-\tor: \mathcal{F}(A) \to (\wait \tensor B) \to H_*
-$$
-
-## Computing Ext
-$$
-\ext(A, B) = h[\cdots \hom(A, B_n) \to \hom(A, B_{n-1}) \to \cdots \to \hom(A, B_1) \to 0 ]
-$$ 
-where $B_*$ is a any free resolution of $B$.
-
-Shorthand/mnemonic: 
-$$
-\ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
-$$
-
-## Properties of Tensor Product
-
-- $A\tensor B \cong B\tensor A$
-- $(\wait) \tensor_R R^n = \id$
-- $\bigoplus_i A_i \tensor \bigoplus_j B_j = \bigoplus_i\bigoplus_j(A_i \tensor B_j)$
-- $\ZZ_m \tensor \ZZ_n = \ZZ_d$
-- $\ZZ_n \tensor A = A/nA$
-
-## Properties of Hom
-
-- $\hom_R (\bigoplus_i A_i, \prod B_j) = \bigoplus_i \prod_j \hom(A_i, B_j)$
-- Contravariant in first slot, covariant in second
-- Exact over vector spaces
-
-## Properties of Tor
-
-- $\tor_R^0(A, B) = A \tensor_R B$
-- $\tor(\bigoplus_i A_i, \bigoplus_j B) = \bigoplus_i \bigoplus_j \tor(\mathbf{T}A_i, \mathbf{T}B_j)$  where $\mathbf{T}G$ is the torsion component of $G$.
-- $\tor(\ZZ_n, G) = \ker (g \mapsto ng) = \theset{g\in G\mid ng = 0}$
-- $\tor(A, B) = \tor(B, A)$
-
-## Properties of Ext
-
-- $\ext_R^0(A, B) = \hom_R(A, B)$
-- $\ext(\bigoplus_i A_i, \prod_j B_j) = \bigoplus_i \prod_j \ext(\mathbf{T}A_i, B_j)$
-- $\ext(F, G) = 0$ if $F$ is free
-- $\ext(\ZZ_n, G) \cong G/nG$
-
-## Hom/Ext/Tor Tables
-
-$\hom$    | $\ZZ_m$  | $\ZZ$  | $\QQ$
---|---|---|--
-$\ZZ_n$   | $\ZZ_d$  | $0$    | $0$
-$\ZZ$     | $\ZZ_m$  | $\ZZ$  | $\QQ$
-$\QQ$     | $0$      | $0$    | $\QQ$
-
-$\tor$    | $\ZZ_m$ | $\ZZ$ | $\QQ$
---|---|---|--
-$\ZZ_n$   | $\ZZ_d$ | $0$   | $0$
-$\ZZ$     | $0$     | $0$   | $0$
-$\QQ$     | $0$     | $0$   | $0$
-
-$\ext$    | $\ZZ_m$   | $\ZZ$                 | $\QQ$
---|---|---|--
-$\ZZ_n$   | $\ZZ_d$   | $\ZZ_n$               | $0$
-$\ZZ$     | $0$       | $0$                   | $0$
-$\QQ$     | $0$       | $\mathcal{A_p}/\QQ$   | $0$
-
-Where $d = \gcd(m, n)$ and $\ZZ_0 \definedas 0$.
-
-Things that behave like "the zero functor":
-
-- $\ext(\ZZ, \wait)$
-- $\tor(\wait, \ZZ), \tor(\ZZ, \wait)$
-- $\tor(\wait, \QQ), \tor(\QQ, \wait)$
-
-Thins that behave like "the identity functor":
-
-- $\hom(\ZZ, \wait)$
-- $\wait \tensor_\ZZ \ZZ$ and $\ZZ \tensor_\ZZ \wait$
-
-For description of $\mathcal{A_p}$, see [here](http://math.jhu.edu/~jmb/note/torext.pdf). 
-This is a certain ring of adeles.
 
 # Low Dimensional Homology Examples
 
@@ -316,18 +98,6 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 
 # Homology Results
 
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
-- $H_n(X, A) \cong H_n(X/A)$
-- $H_n(X) = 0 \iff X$ has no $n\dash$cells.
-- $C^0 X = \pt \implies d_1: C^1 \to C^0$ is the zero map.
-- $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
-
-## Constructing a CW Complex with Prescribed Homology
-
-- Given $G = \bigoplus G_i$, and want a space such that $H_i X = G$? Construct $X = \bigvee X_i$ and then $H_i (\bigvee X_i) = \bigoplus H_i X_i$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_n(Y) = G$.
-  - Attach an $e^n$ to a point to get $H_n = \ZZ$
-  - Then attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_n = \ZZ_d$
-
 # Long Exact Sequences
 
 \begin{align*}
@@ -341,42 +111,6 @@ A\to B \to C \implies
 & \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
 \end{align*}
 
-
-# Cellular Homology
-How to compute:
-
-1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
-2. Compute differentials $\del_i: C^i \to C^{i-1}$
-    3. *Note: if $C^0$ is a point, $\del_1$ is the zero map.*
-    4. *Note: $H_n X = 0 \iff C^n = \emptyset$.*
-    5. Compute degrees: Use $\del_n(e_i^n) = \sum_i d_i e_i^{n-1}$ where $$d_i = \deg(\text{Attach }e_i^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
-	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
-    6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
-    7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
-    e.g.
-    
-    \begin{align*}
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} 
-    \to
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix}
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} \\
-    \ker = 
-    \begin{matrix}
-    2\\-1\\0\\0
-    \end{matrix} 
-    \begin{matrix}
-    3\\0\\-1\\-1
-    \end{matrix}\\
-    \im = \generators{a+2b+2d,c-d}
-    .\end{align*}
-     
-    6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
 
 
 # Surfaces
