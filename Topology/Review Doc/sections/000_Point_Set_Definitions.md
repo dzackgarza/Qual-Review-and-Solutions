@@ -117,7 +117,7 @@ Definition (Second Countable)
 : A space is *second-countable* iff it admits a countable basis.
 
 Definition (Regular)
-: \todo{Todo}
+: \todo[inline]{Todo}
 
 ## Todo
 
