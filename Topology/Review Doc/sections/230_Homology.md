@@ -14,8 +14,22 @@
 - $C^0 X = \pt \implies d_1: C^1 \to C^0$ is the zero map.
 - $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
 
+- Useful tools:
+  - Mayer-Vietoris
+    - $(X = A \union B) \mapsto (\intersect, \oplus, \union)$ in homology
+  - LES of a pair
+	  - $(A \injects X) \mapsto (A, X, X/A)$
+  - Excision
 
-### Constructing a CW Complex with Prescribed Homology
+* $H_k \prod X \neq \prod H_k X$ due to torsion.
+  * Nice case: $H_k (A\cross B) = \prod_{i+j=k} H_i A \tensor H_j B$ by Kunneth when all groups are torsion-free.[^kunneth]
+* $H_k \bigvee X = \prod H_k X$ by Mayer-Vietoris.[^wedge]
+* $H_i(S^n) = \indic{i \in \theset{0, n}}$
+* $H_n(\bigvee_i X_i) \cong \prod_i H_n(X_i)$ for "good pairs"
+  * Corollary: $H_n(\bigvee_k S^n) = \ZZ^k$
+
+
+## Constructing a CW Complex with Prescribed Homology
 
 - Given $G = \bigoplus G_i$, and want a space such that $H_i X = G$? Construct $X = \bigvee X_i$ and then $H_i (\bigvee X_i) = \bigoplus H_i X_i$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_n(Y) = G$.
   - Attach an $e^n$ to a point to get $H_n = \ZZ$
@@ -128,4 +142,51 @@ $$
 H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
 H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 $$
+
+## Cellular Homology
+
+* $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
+
+How to compute:
+
+1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
+2. Compute differentials $\del_i: C^i \to C^{i-1}$
+    3. *Note: if $C^0$ is a point, $\del_1$ is the zero map.*
+    4. *Note: $H_n X = 0 \iff C^n = \emptyset$.*
+    5. Compute degrees: Use $\del_n(e_i^n) = \sum_i d_i e_i^{n-1}$ where $$d_i = \deg(\text{Attach }e_i^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
+	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
+    6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
+    7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
+    e.g.
+    
+    \begin{align*}
+    \begin{matrix}
+    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+    \end{matrix} 
+    \to
+    \begin{matrix}
+    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+    \end{matrix}
+    \begin{matrix}
+    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+    \end{matrix} \\
+    \ker = 
+    \begin{matrix}
+    2\\-1\\0\\0
+    \end{matrix} 
+    \begin{matrix}
+    3\\0\\-1\\-1
+    \end{matrix}\\
+    \im = \generators{a+2b+2d,c-d}
+    .\end{align*}
+     
+    6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
+
+
+[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbf{x} \in \mathcal{P}(n,k) \implies \mathbf{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
+$$
+H_n\qty{\prod_{j=1}^k X_j} = \bigoplus_{\mathbf{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
+$$
+[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
+
 
