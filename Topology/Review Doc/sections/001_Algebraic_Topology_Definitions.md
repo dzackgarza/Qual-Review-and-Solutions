@@ -1,3 +1,8 @@
+# Definitions: Algebraic Topology
+
+
+Definition (Retract)
+: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
 - Acyclic
 
 - Alexander duality

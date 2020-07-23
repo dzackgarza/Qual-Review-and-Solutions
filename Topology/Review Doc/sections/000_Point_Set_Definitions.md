@@ -13,7 +13,6 @@ Definition (Limit Point)
     
     Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
 
-
 Definition (Closed)
 :   There are several characterizations of a closed set:
  
