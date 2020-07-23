@@ -11,22 +11,14 @@ Properties preserved and not preserved by continuous functions: [Link](https://p
   - **Not** closedness
 
 
-## Point-Set
-
-Theorem
-: $U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+## Metric Spaces and Analysis
 
 Theorem (Cantor's Intersection Theorem)
 : A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
 
-
 Theorem (Cantor's Nested Intervals Theorem)
 : If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
   If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
-
-- Tube lemma
-
-- A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
 
 Proposition
 : A continuous function on a compact set is uniformly continuous.
@@ -37,14 +29,10 @@ Proof
 Corollary
 : Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
 
-Counterexample to converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+Counterexample to the converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
 
 Theorem (Extreme Value Theorem)
 : For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
-
-
-Theorem
-: Points are closed in $T_1$ spaces.
 
 Theorem
 : A metric space $X$ is sequentially compact iff it is complete and totally bounded.
@@ -58,6 +46,17 @@ Theorem
 Theorem (Baire)
 : If $X$ is a complete metric space, then the intersection of countably many dense open sets is dense in $X$.
 
+
+
+## Connectedness
+
+Theorem (Tube Lemma)
+:   \todo[inline]{Todo}
+
+## Compactness
+
+Theorem
+: $U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
 
 Theorem
 : A closed subset $A$ of a compact set $B$ is compact.
@@ -79,10 +78,21 @@ Theorem
 : A closed subset of a Hausdorff space is compact.
 
 Theorem
-: A continuous bijective open map is a homeomorphism.
+: A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+
+## Separability
+
+Proposition 
+: A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
 
 Theorem
-: A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+: Points are closed in $T_1$ spaces.
+
+
+## Maps and Homeomorphism
+
+Theorem
+: A continuous bijective open map is a homeomorphism.
 
 Theorem (Munkres 18.1)
 :   For $f:X\to Y$, TFAE:
@@ -93,7 +103,7 @@ Theorem (Munkres 18.1)
     - For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
 
 Proof
-: Todo, see Munkres page 104.
+: \todo[inline]{Todo, see Munkres page 104}
 
 Theorem (Lee A.52)
 :   If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
