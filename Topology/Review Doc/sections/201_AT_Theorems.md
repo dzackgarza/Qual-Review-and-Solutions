@@ -8,9 +8,6 @@ Example
   So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 
 
-- Computing $\pi_1(S^1 \vee S^1)$
-- Computing $\pi_1(S^1 \cross S^1)$
-- Counterexample when $U\cap V$ isn't path-connected: $S^1$ with $U,V$ neighborhoods of the poles.
 
 
 ## Fundamental Group
@@ -97,9 +94,11 @@ Theorem (Seifert-van Kampen Theorem)
     $$
     where $\bigast_P$ is the amalgamated free product over $P$.
 
-    > (Todo: formulate in terms of pushouts)
+    \todo[inline]{Formulate in terms of pushouts.}
 
 ![](figures/image_2020-06-01-00-07-39.png)
+
+Note that the hypothesis that $U\cap V$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
 
 Theorem (Whitehead)
 : A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
