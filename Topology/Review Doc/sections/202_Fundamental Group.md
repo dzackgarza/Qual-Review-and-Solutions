@@ -151,6 +151,12 @@ In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibra
 
 Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
+Proposition (Contracting Spaces in Products)
+:   \hfill
+    \begin{align*}
+    X\cross \RR^n \homotopic X \cross \pt \cong X
+    .\end{align*}
+
 ---
 
 [^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
