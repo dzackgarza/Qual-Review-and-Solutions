@@ -14,3 +14,9 @@
 - Manifolds with negative $\chi$
 	- $\Sigma_{g \geq 2}$ by $\chi(X) = 2-2g$.
 
+## Manifolds
+
+
+* $H^n(M^n) = \ZZ$ if $M^n$ is orientable and zero if $M^n$ is nonorientable.
+* Poincare Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
+
