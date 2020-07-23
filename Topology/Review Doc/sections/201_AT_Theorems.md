@@ -1,8 +1,5 @@
 # Theorems: Algebraic Topology
 
-## Examples
-
-
 
 ## Fundamental Group
 
@@ -15,9 +12,7 @@ Conjugacy in $\pi_1$:
 
 ## Homotopy
 
-> Todo: Merge the two van Kampen theorems.
-
-Note: Van Kampen critically requires the intersection to be path connected!
+\todo{Merge Van Kampen theorems.}
 
 Theorem (Van Kampen)
 :   The pushout is the northwest colimit of the following diagram
@@ -394,21 +389,3 @@ How to compute:
      
     6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
 
-
-
-## Fixed Points and Degree
-
-Theorem (Lefschetz Fixed Point)
-: If $\Lambda_f \neq 0$ then $f$ has a fixed point, where $X\selfmap_f$ and $\Lambda_f = \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(H_k(X; \QQ) \selfmap_{f_*})$.
-
-Theorem: (Brouwer Fixed Point)
-: Every $B^n \selfmap_f$ has a fixed point.
-
-Theorem (Hairy Ball)
-: There is no non-vanishing tangent vector field on even dimensional spheres.
-
-Theorem (Borsuk-Ulam)
-: For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
-
-Theorem (Ham Sandwich)
-:   \todo[inline]{Todo}

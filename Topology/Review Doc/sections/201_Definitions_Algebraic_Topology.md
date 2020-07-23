@@ -1,16 +1,5 @@
 # Definitions: Algebraic Topology
 
-**Notation**
-
-- $C_X$
-- $\Sigma(X)$
-- $\Sigma_g$
-- $\iota, \pi$
-- $\widehat {i+j}$: for an $n\dash$dimensional manifold, the "dual" dimension $\widehat{i+j} \definedas n - (i+j)$.
-Definition (Retract)
-: A subspace $A \subset X$ is a *retract* of $X$ iff there exists a continuous map $f: X\to A$ such that $f\mid_{A} = \id_A$. Equivalently it is a *left* inverse to the inclusion.
-
-
 
 - Acyclic
 
@@ -397,6 +386,3 @@ $$
 - Weak Topology
 
 - Wedge Product
-
-
-
