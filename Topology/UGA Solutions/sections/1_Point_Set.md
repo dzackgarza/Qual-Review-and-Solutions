@@ -4,7 +4,7 @@
 
 > See Munkres p.164, especially for (ii).
 
-i.  See definition section of review doc.
+i.  See definitions in review doc.
 
 ii. Direct proof: 
 
