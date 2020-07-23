@@ -1,6 +1,5 @@
 # Surfaces and Manifolds
 
-
 ## Euler Characteristics
 
 \todo[inline]{General formula involving genus and nonorientable genus. Presentation of monoid of surfaces}
@@ -13,6 +12,19 @@
 	- $T^2, K, M, S^1 \cross I$
 - Manifolds with negative $\chi$
 	- $\Sigma_{g \geq 2}$ by $\chi(X) = 2-2g$.
+
+
+## Classification of Surfaces
+
+- Orientable: $S^n, T^n, \RP^\text{odd}$
+- Nonorientable: $\RP^\text{even}, \mathbb{M}, \mathbb{K}$
+
+# Pasting Diagrams
+
+$S^2, \RP^2, T^2, \KK$
+\todo[inline]{Pasting diagrams.}
+
+
 
 ## Manifolds
 
