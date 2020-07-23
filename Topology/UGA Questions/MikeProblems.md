@@ -7,9 +7,9 @@
 
 !include sections/010_Mike_Problems.md
 
-!include sections/900_Extra_Problems_PointSet.md
+!include sections/990_Extra_Problems_PointSet.md
 
-!include sections/901_Extra Problems AT.md
+!include sections/991_Extra Problems AT.md
 
-!include sections/990_Extra_Solutions.md
+!include sections/995_Extra_Solutions_PointSet.md
 
