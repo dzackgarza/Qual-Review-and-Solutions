@@ -116,3 +116,16 @@ Definition (First Countable)
 Definition (Second Countable)
 : A space is *second-countable* iff it admits a countable basis.
 
+Definition (Regular)
+: \todo{Todo}
+
+## Todo
+
+- Saturated
+- Quotient Map
+- The subspace topology
+- The quotient topology
+- The product topology
+- Topological Embedding
+- Continuous map
+- Open and Closed maps
