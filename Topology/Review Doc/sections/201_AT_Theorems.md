@@ -144,6 +144,55 @@ Theorem (Mayer Vietoris)
     \cdots \to H_n(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_n(A) \oplus H_n(B) \mapsvia{(x, y) \mapsto x+y} H_n(X) \to \cdots
     .\end{align*}
 
+Theorem (Eilenberg-Zilber)
+:   Given two spaces $X, Y$, there are chain maps
+
+    \begin{align*}
+    F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
+    G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
+    \end{align*}
+
+    such that $FG = \id$ and $GF \homotopic \id$.
+    In particular,
+    \begin{align*}
+    H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
+    .\end{align*}
+
+Theorem (Kunneth)
+:   There exists a short exact sequence
+    $$
+    0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
+    $$
+    It has a non-canonical splitting given by
+    $$
+    H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
+    $$
+
+
+Theorem (Universal Coefficients for Change of Group)
+:   For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
+    $$
+    0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
+    $$
+
+    $$
+    0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
+    $$
+
+    which split unnaturally:
+    $$
+    H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
+    $$
+
+    $$
+    H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
+    $$
+
+    When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
+    $$
+    H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
+    $$
+
 
 ### Useful long exact sequences
 
@@ -189,4 +238,19 @@ H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
 H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 $$
 
-   
+## Fixed Points and Degree
+
+Theorem (Lefschetz Fixed Point)
+: If $\Lambda_f \neq 0$ then $f$ has a fixed point, where $X\selfmap_f$ and $\Lambda_f = \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(H_k(X; \QQ) \selfmap_{f_*})$.
+
+Theorem: (Brouwer Fixed Point)
+: Every $B^n \selfmap_f$ has a fixed point.
+
+Theorem (Hairy Ball)
+: There is no non-vanishing tangent vector field on even dimensional spheres.
+
+Theorem (Borsuk-Ulam)
+: For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
+
+Theorem (Ham Sandwich)
+:   \todo[inline]{Todo}
