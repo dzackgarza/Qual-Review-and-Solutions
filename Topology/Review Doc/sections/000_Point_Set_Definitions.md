@@ -109,7 +109,6 @@ Definition (Separable)
 Definition (Hausdorff)
 : A topo.ogical space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
 
-
 Definition (First Countable)
 : A space is *first-countable* iff every point admits a countable neighborhood basis.
 
@@ -118,6 +117,16 @@ Definition (Second Countable)
 
 Definition (Regular)
 : \todo[inline]{Todo}
+
+Definition (Normal)
+: \todo[inline]{Todo}
+
+## Misc
+
+Definition (Normal)
+:   \todo[inline]{Todo}
+
+
 
 ## Todo
 
