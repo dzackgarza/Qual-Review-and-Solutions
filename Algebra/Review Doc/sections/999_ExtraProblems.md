@@ -280,6 +280,12 @@ Special Polynomials
 
 ## Galois Theory
 
+### Theory
+- Show that if $K/F$ is the splitting field of a separable polynomial then it is Galois.
+- Show that any quadratic extension of a field $F$ with $\ch(F)\neq 2$ is Galois.
+
+
+### Computations
 - Show that the Galois group of $x^n - 2$ is $D_n$, the dihedral group on $n$ vertices.
 - Compute all intermediate field extensions of $\QQ(\sqrt 2, \sqrt 3)$, show it is equal to $\QQ(\sqrt 2 + \sqrt 3)$, and find a corresponding minimal polynomial.
  
