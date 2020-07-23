@@ -1,6 +1,19 @@
-## Algebraic
+# Theorems: Algebraic Topology
 
-#### Fundamental Group
+## Examples
+
+Example
+: $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
+  Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_A(z) = x^2$ and $\iota_B(z) = y^3$.
+  So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
+
+
+- Computing $\pi_1(S^1 \vee S^1)$
+- Computing $\pi_1(S^1 \cross S^1)$
+- Counterexample when $U\cap V$ isn't path-connected: $S^1$ with $U,V$ neighborhoods of the poles.
+
+
+## Fundamental Group
 
 Conjugacy in $\pi_1$:
 
@@ -9,7 +22,7 @@ Conjugacy in $\pi_1$:
 - See change of basepoint map
 
 
-### Homotopy
+## Homotopy
 
 > Todo: Merge the two van Kampen theorems.
 
@@ -88,23 +101,35 @@ Theorem (Seifert-van Kampen Theorem)
 
 ![](figures/image_2020-06-01-00-07-39.png)
 
-**Examples**
+Theorem (Whitehead)
+: A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
 
-Example
-: $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
-  Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_A(z) = x^2$ and $\iota_B(z) = y^3$.
-  So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
+Warning
+: Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
+
+Theorem (Hurewicz)
+: The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
+
+Theorem (Cellular Approximation)
+: Any continuous map between CW complexes is homotopy equivalent to a cellular map.
+
+### Applications:
+
+- $\pi_{k\leq n}S^n = 0$
+- $\pi_n(X) \cong \pi_n(X^{(n)})$
+
+Theorem (Freudenthal Suspension)
+:   \todo[inline]{Todo}
+
+## Homology
 
 
-- Computing $\pi_1(S^1 \vee S^1)$
-- Computing $\pi_1(S^1 \cross S^1)$
-- Counterexample when $U\cap V$ isn't path-connected: $S^1$ with $U,V$ neighborhoods of the poles.
+- $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
+- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 
-### Homology
+- Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 
-Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
-
-Useful fact: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
+- Useful fact: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
 
 Theorem (Mayer Vietoris)
 :   Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
@@ -119,4 +144,49 @@ Theorem (Mayer Vietoris)
     \cdots \to H_n(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_n(A) \oplus H_n(B) \mapsvia{(x, y) \mapsto x+y} H_n(X) \to \cdots
     .\end{align*}
 
-    
+
+### Useful long exact sequences
+
+$$
+\cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots
+$$
+
+$$
+\cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots
+$$
+
+### Useful Short Exact Sequences
+
+> Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
+
+Homology to cohomology:
+$$
+\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
+.$$
+
+Cohomology to dual space:
+$$
+0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
+.$$
+
+Product of spaces to tensor product of homology:
+$$
+0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
+$$
+
+### Useful Shortcuts
+
+* Cohomology: If $A$ is a field, then $$H^i(X; A) \cong \hom(H_i(X; A), A)$$
+
+* Kunneth: If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
+$$ 
+H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(X))
+$$
+
+* Universal Coefficients Theorem: If $X$ is a finite CW complex then
+$$
+H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
+H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
+$$
+
+   
