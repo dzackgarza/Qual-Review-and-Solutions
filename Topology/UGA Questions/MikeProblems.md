@@ -11,5 +11,3 @@
 
 !include sections/991_Extra Problems AT.md
 
-!include sections/995_Extra_Solutions_PointSet.md
-
