@@ -971,14 +971,29 @@ For $G$ a finite group, TFAE:
 ## Definitions
 
 :::{.definition title="Irreducible Element"}
-An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
+An element $r\in R$ is **irreducible** iff 
+\[  
+r=ab \implies a \in R\units \txor b\in R\units
+.\]
 :::
 
 :::{.definition title="Prime Element"}
-An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
+An element $p\in R$ is **prime** iff 
+\[  
+a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txor b\divides p
+.\]
+:::
+
+
+:::{.definition title="Zero Divisor"}
+An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
 :::
 
 :::{.definition title="Integral Domain"}
+Slogan: no nonzero zero divisors, i.e.
+\[  
+a, b\in R\smz
+.\]
 ?
 :::
 
