@@ -1,9 +1,9 @@
 ## Series of Groups
 
-Definition
+Definition (Normal Series)
 : A **normal series** of a group $G$ is a sequence $G \to G^1 \to G^2 \to \cdots$ such that $G^{i+1} \normal G_i$ for every $i$.
 
-Definition
+Definition (Central Series)
 : A **central series** for a group $G$ is a terminating normal series $G \to G^1 \to \cdots \to \theset{e}$ such that each quotient is **central**, i.e. $[G, G^i] \leq G^{i-1}$ for all $i$.
 
 Definition (Composition Series)
@@ -16,7 +16,8 @@ Definition (Simple Groups)
 : A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
 
 Lemma
-: If $G$ is *not* simple, then for any $N\normal G$, it is the case that $G \cong E$ for an extension of the form $N\to E\to G/N$.
+: If $G$ is *not* simple, then $G$ is an extension of any of its normal subgroups.
+I.e. for any $N\normal G$, $G \cong E$ for some extension of the form $N\to E\to G/N$.
 
 Definition (Lower Central Series)
 : Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *lower central series* of $G$.
