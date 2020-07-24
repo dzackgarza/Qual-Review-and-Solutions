@@ -211,7 +211,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - The fundamental isomorphism theorems for rings 
 
-    *(An easy and useful exercise)*
+  > An easy and useful exercise
 
 - How to use Zorn's lemma
   - To find maximal ideals
@@ -223,33 +223,27 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 - Results about PIDs *(DF Section 8.2)*
 
   - Example of a PID that is not a Euclidean domain
-
     *(DF p.277)*
 
   - Proof that a Euclidean domain is a PID and hence a UFD
 
   - Proof that $\ZZ$ and $k[x]$ are UFDs
-
     *(p.289 Smith, p.300 DF)*
 
 - A polynomial ring in infinitely many variables over a UFD is still a UFD 
-
   *(Easy, DF, p.305)*
 
 - Eisenstein's criterion
-
   *(DF p.309)*
 
-  - Stated only for monic polynomials -- proof of general case identical.
-
-  - See Smith's notes for the  full version.
+  > Stated only for monic polynomials -- proof of general case identical.
+  > See Smith's notes for the  full version.
 
 - Cyclic product structure of $(\ZZ/n\ZZ)\units$
 
-  *(exercise in DF, Smith 844-2, section 18)*
+  > Exercise in DF, Smith 844-2, section 18
 
 - Gröbner bases and division algorithms for polynomials in several variables
-
   *(DF 9.6.)*
 
 - Modules over PIDs and canonical forms of matrices.
