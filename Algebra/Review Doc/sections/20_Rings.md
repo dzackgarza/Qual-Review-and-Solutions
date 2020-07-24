@@ -47,6 +47,19 @@ ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
 $I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
 :::
 
+:::{.definition title="Maximal Ideal"}
+$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm$.
+:::
+
+:::{.example}
+- Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+:::
+
+:::{.definition title="Max Spectrum"}
+$\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+:::
+
+
 ### Types of Rings
 
 :::{.definition title="Integral Domain"}
@@ -82,18 +95,6 @@ An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in 
 
 :::{.definition title="Simple Ring"}
 A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
-:::
-
-:::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm$.
-:::
-
-Examples 
-
-- Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
-
-:::{.definition title="Max Spectrum"}
-$\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
 :::
 
 :::{.definition title="Nilradical"}
