@@ -412,8 +412,9 @@ Useful Facts:
 
 ## Counting Theorems
 
-Theorem (Lagrange's Theorem)
+:::{.theorem title="Lagrange's Theorem"}
 $H \leq G \implies \abs H \divides \abs G$.
+:::
 
 Corollary
 The order of every element divides the size of $G$, i.e.
@@ -427,8 +428,9 @@ There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \
 Counterexample:
 $\abs{A_4} = 12$ but has no subgroup of order 6.
 
-Theorem (Cauchy's Theorem)
+:::{.theorem title="Cauchy's Theorem"}
 For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
+:::
 
 > This is a partial converse to Lagrange's theorem, and strengthened by Sylow's theorem.
 
@@ -462,10 +464,11 @@ Equivalently, the action has a single orbit.
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 
-**Orbit-Stabilizer**:
+:::{.theorem title="Orbit-Stabilizer}
 $$
 \abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
 $$
+:::
 
 > Mnemonic: $G/G_x \cong G\cdot x$.
 
@@ -523,7 +526,7 @@ If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 Proof
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 
-Theorem (Burnside's Formula)
+:::{.theorem title="Burnside's Formula"}
 
     $$
     \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
@@ -595,12 +598,12 @@ Let $H \leq G$ be a $p\dash$subgroup.
     Otherwise, it is contained in some $p\dash$subgroup $H^1$.
     Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 
-Theorem (Fratini's Argument)
+:::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
 
 ## Products
 
-Theorem (Recognizing Direct Products)
+:::{.theorem title="Recognizing Direct Products"}
 We have $G \cong H \times K$ when
 
     - $H, K \normal G$
@@ -612,7 +615,7 @@ We have $G \cong H \times K$ when
     > Note: can relax to $[h,k] = 1$ for all $h, k$.
 
 
-Theorem (Recognizing Generalized Direct Products)
+:::{.theorem title="Recognizing Generalized Direct Products"}
 We have $G = \prod_{i=1}^n H_i$ when
 
     - $H_i \normal G$ for all $i$.
@@ -624,7 +627,7 @@ We have $G = \prod_{i=1}^n H_i$ when
 > Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
 
 
-Theorem (Recognizing Semidirect Products)
+:::{.theorem title="Recognizing Semidirect Products"}
 We have $G = N \semidirect_\psi H$ when
 
   - $G =  NH$
@@ -655,7 +658,7 @@ We have $G = N \semidirect_\psi H$ when
 
 ## Isomorphism Theorems
 
-Theorem (1st Isomorphism Theorem)
+:::{.theorem title="1st Isomorphism Theorem"}
 If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
 
     Note: for this to make sense, we also have
@@ -669,7 +672,7 @@ If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
 Lemma
 If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
 
-Theorem (Diamond Theorem / 2nd Isomorphism Theorem)
+:::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
 
 If $S \leq G$ and $N \normal G$, then
     $$
@@ -685,7 +688,7 @@ If $S \leq G$ and $N \normal G$, then
 Corollary
 If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
 
-Theorem (Cancellation / 3rd Isomorphism Theorem)
+:::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
 
 Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 
@@ -699,7 +702,7 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
     .\end{align*}
 
 
-Theorem (The Correspondence Theorem / 4th Isomorphism Theorem)
+:::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
 Suppose $N \normal G$, then there exists a correspondence:
 
     \begin{align*}
