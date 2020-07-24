@@ -12,7 +12,7 @@ Galois group of a given polynomial**) of the topics mentioned."
 
 ## Group Theory
 
-References: [^1],[^3],[^4]
+References: [@dummitAbstractAlgebra],[^3],[^4]
 
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
