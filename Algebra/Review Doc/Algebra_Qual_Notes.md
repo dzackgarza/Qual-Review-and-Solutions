@@ -1011,6 +1011,10 @@ a, b\in R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
 .\]
 :::
 
+:::{.definition title="Principal Ideal"}
+$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$
+:::
+
 :::{.definition title="Principal Ideal Domain"}
 A ring $R$ is *principal* iff whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
 :::
@@ -1027,13 +1031,7 @@ where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates
 A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
 :::
 
-:::{.theorem title="Zorn's Lemma"}
-If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
-:::
 
-:::{.definition title="Principal Ideal"}
-$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$
-:::
 
 :::{.definition title="Irreducible Ideal"}
 $I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
@@ -1146,18 +1144,24 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 :::
 
-:::{.theorem title="Artin-Wedderubrn"}
+:::{.theorem title="Artin-Wedderburn"}
 If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
 :::
 
-Corollary
+:::{.corollary}
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
+:::
 
 ### Zorn's Lemma
 
+:::{.theorem title="Zorn's Lemma"}
+If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
+:::
+
+Some useful propositions used when *applying* Zorn's lemma:
+
 :::{.proposition}
 Fields are simple rings. 
-  
 :::
 
 :::{.proposition
@@ -1172,8 +1176,9 @@ $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdo
 If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
 :::
 
-Example:
+:::{.proposition
 Every proper ideal is contained in a maximal ideal.
+:::
 
 :::{.proof}
   
@@ -1196,6 +1201,7 @@ This follows because every $C_i \subseteq \hat C$.
 Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
 :::
 
+### Toward Algebraic Geometry
 # Fields
 
 Let $k$ denote a field.
