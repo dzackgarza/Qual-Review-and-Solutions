@@ -6,15 +6,15 @@
 
 :::{.definition title="Irreducible Element"}
 An element $r\in R$ is **irreducible** iff 
-\[  
-r=ab \implies a \in R\units \txor b\in R\units
-.\]
+\[
+r=ab \implies a \in R\units \txt{or} b\in R\units
+\]
 :::
 
 :::{.definition title="Prime Element"}
 An element $p\in R$ is **prime** iff 
 \[  
-a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txor b\divides p
+a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txt{or} b\divides p
 .\]
 :::
 
