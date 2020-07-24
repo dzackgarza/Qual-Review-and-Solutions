@@ -13,5 +13,8 @@ watch:
 view: 
 	latex_preview -f $(FILENAME) -v -z
 
+tex:
+	latex_preview -f $(FILENAME) -x -j -z
+
 .ONESHELL:
 
