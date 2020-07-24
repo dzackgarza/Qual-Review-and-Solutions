@@ -7,7 +7,7 @@ C_G(x) 			=       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subse
 C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  \text{Centralizer (Subgroup)} \\
 C(h) 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
 \OO_x, G\cdot x 			=       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  \text{Orbit} \\
-\stab_G(x),  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
+\stab_G(x)\txt{or}  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
 X^{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && \text{Fixed Points} \\
 Z(G) 			=       &&  \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x} &&  \subseteq G       &&  \text{Center} \\
 N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  \text{Normalizer} \\
