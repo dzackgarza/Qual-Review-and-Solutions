@@ -140,7 +140,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 > The last two (one easy, one hard) are left as exercises.
 
-**The proof JH is seldom tested on the qual**, but proofs are always of interest.
+**The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 - Fundamental theorem of finite abelian groups
 
@@ -149,7 +149,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 - The simple groups of order between 60 and 168 have prime order
 
 
-## Rings:
+## Rings
 
 
 - DF Chapters 7,8,9.
@@ -181,7 +181,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
     *(p.289 Smith, p.300 DF)*
 
-- A polynomial ring in infinitely many variables over a UFD is still a ufd
+- A polynomial ring in infinitely many variables over a UFD is still a UFD 
 
   *(Easy, DF, p.305)*
 
@@ -197,11 +197,11 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
   *(exercise in DF, Smith 844-2, section 18)*
 
-- Grobner bases and division algorithms for polynomials in several variables
+- Gröbner bases and division algorithms for polynomials in several variables
 
   *(DF 9.6.)*
 
-- Modules over pid's and Canonical forms of matrices.
+- Modules over PIDs and canonical forms of matrices.
 
   *DF sections 10.1, 10.2, 10.3, and 12.1, 12.2, 12.3.*
 
