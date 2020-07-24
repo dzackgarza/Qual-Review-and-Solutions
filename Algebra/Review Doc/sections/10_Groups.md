@@ -327,7 +327,7 @@ Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maxi
 
 All sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
 \[
-S_p^1, S_p^2 \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^1g\inv = S_p^2
+S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
 \]
 
 :::{.corollary}
