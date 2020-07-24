@@ -580,11 +580,11 @@ Some useful facts:
 
 ### Sylow 1 (Cauchy for Prime Powers)
 
-Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
-
 \[
 \forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
 \]
+
+Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
 > If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
 > In particular, Sylow $p\dash$subgroups always exist.
@@ -633,24 +633,23 @@ If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ 
 :::{.theorem title="Recognizing Direct Products"}
 We have $G \cong H \times K$ when
 
-    - $H, K \normal G$
-    
-    - $G = HK$.
+- $H, K \normal G$
 
-    - $H\intersect K = \theset{e} \subset G$
+- $G = HK$.
 
-    > Note: can relax to $[h,k] = 1$ for all $h, k$.
+- $H\intersect K = \theset{e} \subset G$
+
+> Note: can relax to $[h,k] = 1$ for all $h, k$.
 :::
-
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
 We have $G = \prod_{i=1}^n H_i$ when
 
-    - $H_i \normal G$ for all $i$.
-    
-    - $G = H_1 \cdots H_n$
+- $H_i \normal G$ for all $i$.
 
-    - $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
+- $G = H_1 \cdots H_n$
+
+- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
 
 > Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
 :::
