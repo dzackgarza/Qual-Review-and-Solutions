@@ -4,22 +4,14 @@ title: Qualifying Exam Syllabus
 
 # Study Guide for Algebra Qualifying Exam
 
-**References**:
-
-[1].  David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
-
-[2].  Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
-
-[3].  Thomas W. Hungerford, Algebra, Springer, 1974.
-
-[4].  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
-
 
 > As a general rule, students are responsible for knowing both the theory (proofs) and practical
 applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the
 Galois group of a given polynomial**) of the topics mentioned.
 
 ## Group Theory
+
+References: [^1],[^3],[^4]
 
 Chapters 1-9 of Dummit and Foote
 
@@ -47,7 +39,6 @@ Chapters 1-9 of Dummit and Foote
 
 - Solvable groups
 
-References: [1,3,4]
 
 
 - Groups
@@ -86,6 +77,8 @@ References: [1,3,4]
 
 ## Linear Algebra
 
+References: [^1],[^2],[^4]
+
 - Determinants
 
 - Eigenvalues and eigenvectors
@@ -104,7 +97,6 @@ References: [1,3,4]
 
 - Finite-dimensional spectral theorem
 
-References: [1,2,4]
 
 ## Rings
 
@@ -177,7 +169,7 @@ References: [1,3,4]
 
 - Solvability of polynomials by radicals
 
-References: [1,3,4]
+References: [^1],[^3],[^4]
 
 
 # Remarks
@@ -200,9 +192,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - The Jordan Holder theorem,
 
-> The last two (one easy, one hard) are left as exercises.
+  > The last two (one easy, one hard) are left as exercises.
 
-**The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
+  **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 - Fundamental theorem of finite abelian groups
 
@@ -281,6 +273,15 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
   - 844-1, sections 7-9 (20 pages)
   - 844-2, sections 10-16, (37 pages)
 
-## Outline of Topics: UCSD Qual Algebra, Fall 2018
+
+**References**:
+
+[^1]:  David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
+
+[^2]:  Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
+
+[^3]:  Thomas W. Hungerford, Algebra, Springer, 1974.
+
+[^4]:  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
 
 
