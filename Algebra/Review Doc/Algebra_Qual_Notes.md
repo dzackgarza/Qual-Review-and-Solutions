@@ -283,11 +283,12 @@ N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \su
 [G, H] = && \left\langle [g,h] : g\in G, h\in H\right\rangle  &&  \leq G  &&  \text{Commutator (Subgroup)} \\
 \end{align*}
 
-Definition (Normal Closure of a subgroup)
-:   The smallest normal subgroup of $G$ containing $H$:
-    \begin{align*}
-    H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \{ N: H \leq N \unlhd G \}
-    .\end{align*}
+:::{.definition title="Normal Closure of a Subgroup"}
+The smallest normal subgroup of $G$ containing $H$:
+\[
+H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \{ N: H \leq N \unlhd G \}
+.\]
+:::
 
 Definition (Normal Core of a subgroup)
 :   The largest normal subgroup of $G$ containing $H$:
