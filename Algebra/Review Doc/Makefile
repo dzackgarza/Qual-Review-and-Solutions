@@ -3,22 +3,15 @@ FILENAME="Algebra_Qual_Notes.md"
 TITLE="Algebra Qualifying Exam Notes"
 
 
-renew: 
-	cat sections/*.md > $(FILENAME)
-	echo "Done"
-
 compile:
-	make renew
-	latex_preview -f $(FILENAME) -j
+	latex_preview -f $(FILENAME) -j -z
 	echo "Make done"
 
 watch:
-	make renew
-	latex_preview -f $(FILENAME) 
+	latex_preview -f $(FILENAME) -z
 
 view: 
-	make renew
-	latex_preview -f $(FILENAME) -v
+	latex_preview -f $(FILENAME) -v -z
 
 .ONESHELL:
 
