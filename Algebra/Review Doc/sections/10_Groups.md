@@ -112,7 +112,7 @@ Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
 
 :::{.definition title="Alternating Group"}
 The **alternating group** is the subgroup of **even** permutations, i.e.
-$A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}$ where $\sign(\sigma) = (-1)^{m}$ where $m$ is the number of cycles of even length.
+\[A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}\] where $\sign(\sigma) = (-1)^{m}$ andd $m$ is the number of cycles of even length.
 :::
 
 :::{.corollary title="Alternating Group"}
@@ -154,7 +154,7 @@ Useful Facts:
 ## Counting Theorems
 
 :::{.theorem title="Lagrange's Theorem"}
-$H \leq G \implies \abs H \divides \abs G$.
+\[H \leq G \implies \abs H \divides \abs G.\]
 :::
 
 :::{.corollary}
@@ -195,7 +195,8 @@ satisfying
 2. $g\cdot (h\cdot x) = (gh)\cdot x$
 :::
   
-Note that $\ker \psi = \bigcap_{x\in X} G_x$ is the intersection of all stabilizers.
+Useful fact:
+$\ker \psi = \bigcap_{x\in X} G_x$ is the intersection of all stabilizers.
 
 :::{.definition title="Transitive Group Action"}
 A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
