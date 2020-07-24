@@ -385,8 +385,8 @@ $A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}$ where $\sig
 Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
 :::
 
-*Example:*
-\begin{align*}
+:::{.example title=""}
+\[
 A_4 =
 &\{\id, \\
 &(1,3)(2,4),
@@ -400,7 +400,10 @@ A_4 =
 (1,4,3), \\
 & (2,3,4),
 (2,4,3)\}
-.\end{align*}
+\]
+  
+:::
+
 
 
 Useful Facts:
