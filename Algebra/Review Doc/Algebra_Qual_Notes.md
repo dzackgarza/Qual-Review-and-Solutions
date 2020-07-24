@@ -1088,7 +1088,6 @@ The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal id
 A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 :::
 
-
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
 - $R$ a finite integral domain $\implies R$ is a field.
@@ -1139,7 +1138,6 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 :::
 
-:::{.theorem title="Artin-Wedderburn"}
 If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
 :::
 
@@ -1195,8 +1193,11 @@ This follows because every $C_i \subseteq \hat C$.
 Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
 :::
 
-### Toward Algebraic Geometry
+### Toward Number Theory and Algebraic Geometry
 
+:::{.definition title="Reduced Ring"}
+A ring $R$ is *reduced* if $R$ contains no nonzero nilpotent elements. 
+:::
 
 :::{.definition title="Local Ring"}
 A ring $R$ is *local* iff it contains a unique maximal ideal.
