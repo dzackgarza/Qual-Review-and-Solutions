@@ -1,6 +1,7 @@
 # Group Theory
 
 - $2^X$ denotes the powerset of $X$.
+- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 ## Big List of Notation
 
@@ -274,14 +275,16 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
 
   - $(G/H)^G = \emptyset$
 
-*Application:* 
+:::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+:::
 
 :::{.proof}
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 :::
 
 :::{.theorem title="Burnside's Formula"}
+Slogan: the number of orbits is equal to the average number of fixed points, i.e.
 \[
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
@@ -289,8 +292,6 @@ This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies 
 
 ### Sylow Theorems
 
-**Notation**:
-For any $p$, let $\mathrm{Syl}_p(G)$ be the set of Sylow$\dash p$ subgroups of $G$.
 
 Write
 
