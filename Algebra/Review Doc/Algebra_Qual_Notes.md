@@ -418,17 +418,18 @@ Useful Facts:
 $H \leq G \implies \abs H \divides \abs G$.
 :::
 
-Corollary
+:::{.corollary}
 The order of every element divides the size of $G$, i.e.
   $$
   g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
   .$$
+:::
 
-Warning
+:::{.warning}
 There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
+Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
+:::
 
-Counterexample:
-$\abs{A_4} = 12$ but has no subgroup of order 6.
 
 :::{.theorem title="Cauchy's Theorem"}
 For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
@@ -490,11 +491,11 @@ $$
 
 - $G^g$ (the fixed points) is the **center** $Z(G)$.
 
-Corollary
+:::{.corollary}
 The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
+:::
 
-
-Corollary (Class Equation)
+### The Class Equation
 
     $$
     \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
@@ -525,8 +526,9 @@ Corollary (Class Equation)
 *Application:* 
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
 
-Proof
+:::{.proof}
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
+:::
 
 :::{.theorem title="Burnside's Formula"}
 
@@ -546,9 +548,10 @@ Write
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
-Definition
+:::{.definition}
 A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
   If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
+:::
 
 Some useful facts:
 
@@ -576,8 +579,9 @@ All sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
 S_p^1, S_p^2 \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^1g\inv = S_p^2
 .\end{align*}
 
-Corollary
+:::{.corollary}
 $n_p = 1 \iff S_p \normal G$
+:::
 
 ### Sylow 3 (Numerical Constraints)
 
@@ -587,18 +591,21 @@ $n_p = 1 \iff S_p \normal G$
 
  3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
 
-Corollary
+:::{.corollary}
 $p$ does not divide $n_p$.
+:::
 
-Proposition
+:::{.proposition}
 Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+:::
 
-Proof
+:::{.proof}
 Let $H \leq G$ be a $p\dash$subgroup.
-    If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
+If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
 
-    Otherwise, it is contained in some $p\dash$subgroup $H^1$.
-    Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
+Otherwise, it is contained in some $p\dash$subgroup $H^1$.
+Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
+:::
 
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
@@ -635,17 +642,17 @@ We have $G = \prod_{i=1}^n H_i$ when
 :::{.theorem title="Recognizing Semidirect Products"}
 We have $G = N \semidirect_\psi H$ when
 
-  - $G =  NH$
+- $G =  NH$
 
-  - $N \normal G$
+- $N \normal G$
 
-  - $H \actson N$ by conjugation via a map
-    \begin{align*}
-    \psi: H \to \Aut(N) \\
-    h \mapsto h(\wait)h^{-1}
-    .\end{align*}
+- $H \actson N$ by conjugation via a map
+  \begin{align*}
+  \psi: H \to \Aut(N) \\
+  h \mapsto h(\wait)h^{-1}
+  .\end{align*}
 
-  > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
+> Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
 :::
 
 **Useful Facts**
@@ -673,14 +680,15 @@ If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
     - $\im \phi \leq G$
 :::
 
-Corollary
+:::{.corollary}
 If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
+:::
 
-Lemma
+:::{.proposition}
 If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
+:::
 
 :::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
-
 If $S \leq G$ and $N \normal G$, then
     $$
     \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
@@ -693,11 +701,11 @@ If $S \leq G$ and $N \normal G$, then
     ![Image](figures/2020-01-01-15-20-27.png)
 :::
 
-Corollary
+:::{.corollary}
 If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+:::
 
 :::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
-
 Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 
     1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
@@ -714,26 +722,26 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 :::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
 Suppose $N \normal G$, then there exists a correspondence:
 
-    \begin{align*}
-    \left\{
-    H < G \suchthat N \subseteq H
-    \right\}
-    \iff
-    \left\{
-    H \suchthat H < \frac G N
-    \right\}
-    \\
-    \correspond{
-      \text{Subgroups of $G$} \\
-      \text{containing $N$}
-    } \iff
-    \correspond{
-      \text{Subgroups of the } \\
-      \text{quotient $G/N$}
-    }
-    .\end{align*}
+\begin{align*}
+\left\{
+H < G \suchthat N \subseteq H
+\right\}
+\iff
+\left\{
+H \suchthat H < \frac G N
+\right\}
+\\
+\correspond{
+  \text{Subgroups of $G$} \\
+  \text{containing $N$}
+} \iff
+\correspond{
+  \text{Subgroups of the } \\
+  \text{quotient $G/N$}
+}
+.\end{align*}
 
-    In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
+In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
 :::
 
 Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
@@ -776,13 +784,13 @@ G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 - Take prime factorization of each factor
 - Split into coprime pieces
 
-*Example:*
+:::{.example}
 \begin{align*}
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
 \cong
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2} \times \ZZ_7
 .\end{align*}
-
+:::
 
 **Going from elementary divisors to invariant factors:**
 
@@ -790,7 +798,7 @@ G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 - Take highest power from each prime as *last* invariant factor
 - Take highest power from all remaining primes as next, etc
 
-*Example:*
+:::{.example}
 Given the invariant factor decomposition
 \begin{align*}
 G = {\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{3}\times\mathbb{Z}_{3}\times\mathbb{Z}_{5^2}}
@@ -818,6 +826,7 @@ and thus
 \begin{align*}
 G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 .\end{align*}
+:::
 
 **Classifying Abelian Groups of a Given Order:**
 
