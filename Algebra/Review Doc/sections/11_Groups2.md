@@ -12,8 +12,9 @@ A **central series** for a group $G$ is a terminating normal series $G \to G^1 \
 A **composition series** of a group $G$ is a finite normal series such that $G^{i+1}$ is a *maximal proper* normal subgroup of $G^i$.
 :::
 
-Theorem (Jordan-Holder)
+:::{.theorem title="Jordan-Holder"}
 Any two composition series of a group have the same length and isomorphic composition factors (up to permutation).
+:::
 
 :::{.definition title="Simple Groups"}
 A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
@@ -51,11 +52,11 @@ G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian fo
 .\]
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="Characterization of Solvable"}
 A group $G$ is solvable iff its derived series terminates.
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="$S_n$ is Almost Always Solvable"}
 If $n\geq 4$ then $S_n$ is solvable.
 :::
 
@@ -72,25 +73,25 @@ A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
 
 > Moral: the adjoint map is nilpotent.
 
-:::{.theorem title=""}
+:::{.theorem title="Nilpotents Have All Sylows Normal"}
 A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="Nilpotent Implies Maximal Noramsl"}
 A group $G$ is nilpotent iff every maximal subgroup is normal.
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="Characterization of Nilpotent Groups"}}
 $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
 :::
 
 Theorem 
-:::{.theorem title=""}
+:::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 :::
 
 
-:::{.proposition title=""}
+:::{.proposition}
 For $G$ a finite group, TFAE:
 
 - $G$ is nilpotent
