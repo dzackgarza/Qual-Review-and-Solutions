@@ -1,5 +1,5 @@
 
-# Rings
+# Ring Theory
 
 ## Definitions
 
