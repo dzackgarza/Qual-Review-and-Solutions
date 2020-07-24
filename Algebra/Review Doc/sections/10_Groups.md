@@ -205,18 +205,18 @@ Equivalently, the action has a single orbit.
  
 > Reminder of notation: for a group $G$ acting on a set $X$,
 > 
-> - $G\cdot x = \theset{g\actson x \suchthat g\in G} \subseteq X$ is the orbit
+> - $G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X$ is the orbit
 >
-> - $G_x = \theset{g\in G \suchthat g\actson x = x} \subseteq G$ is the stabilizer
+> - $G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G$ is the stabilizer
 >
-> - $X/G \subset \mathcal P(X)$ is the set of orbits
+> - $X/G \subset 2^X$ is the set of orbits
 >
-> - $X^g = \theset{x\in X \suchthat g\actson x = x} \subseteq X$ are the fixed points
+> - $X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X$ are the fixed points
 
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 
-:::{.theorem title="Orbit-Stabilizer}
+:::{.theorem title="Orbit-Stabilizer"}
 $$
 \abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
 $$
@@ -232,7 +232,7 @@ $$
 - The stabilizer $G_x$ is only the identity.
 - The fixed points $X^g$ are only the identity.
 
-1. Let $G$ act on *itself* by conjugation.
+2. Let $G$ act on *itself* by conjugation.
 
 - $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
 
@@ -246,11 +246,11 @@ The number of conjugates of an element (i.e. the size of its conjugacy class) is
 
 ### The Class Equation
 
-    $$
-    \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
-    $$
+\[
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
+\]
 
-    Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
+Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 
 **Examples**
 
