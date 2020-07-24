@@ -1,5 +1,6 @@
 ---
  title: Algebra Qualifying Exam Notes
+ bibliography: bibliography.bib
 ---
 
 
