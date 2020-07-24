@@ -205,15 +205,15 @@ A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists
 Equivalently, the action has a single orbit.
 :::
  
-Reminder of notation: for a group $G$ acting on a set $X$,
-
-- $G\cdot x = \theset{g\actson x \suchthat g\in G} \subseteq X$ is the orbit
-
-- $G_x = \theset{g\in G \suchthat g\actson x = x} \subseteq G$ is the stabilizer
-
-- $X/G \subset \mathcal P(X)$ is the set of orbits
-
-- $X^g = \theset{x\in X \suchthat g\actson x = x} \subseteq X$ are the fixed points
+> Reminder of notation: for a group $G$ acting on a set $X$,
+> 
+> - $G\cdot x = \theset{g\actson x \suchthat g\in G} \subseteq X$ is the orbit
+>
+> - $G_x = \theset{g\in G \suchthat g\actson x = x} \subseteq G$ is the stabilizer
+>
+> - $X/G \subset \mathcal P(X)$ is the set of orbits
+>
+> - $X^g = \theset{x\in X \suchthat g\actson x = x} \subseteq X$ are the fixed points
 
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
