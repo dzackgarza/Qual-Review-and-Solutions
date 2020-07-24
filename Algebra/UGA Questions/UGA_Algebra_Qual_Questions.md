@@ -1,4 +1,8 @@
 
+---
+title: "Algebra Qualifying Exam Questions"
+---
+
 # Spring 2020
 
 ## 1
