@@ -95,10 +95,10 @@ $\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spec
 :::
 
 :::{.definition title="Maximal Ideal"}
-$\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
+$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm$.
 :::
 
-Examples: 
+Examples 
 
 - Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 
@@ -187,19 +187,24 @@ If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a mat
 
 ### Zorn's Lemma
 
-Lemma
+:::{.proposition}
 Fields are simple rings. 
+  
+:::
 
-Lemma
+:::{.proposition
 If $I\normal R$ is a proper ideal $\iff I$ contains no units.
+:::
 
-Proof
+:::{.proof}
 $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
+:::
 
-Lemma
+:::{.proposition
 If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
+:::
 
-**Example Application:**
+Example:
 Every proper ideal is contained in a maximal ideal.
 
 :::{.proof}
