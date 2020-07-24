@@ -46,15 +46,15 @@ ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
 :::
 
 :::{.definition title="Irreducible Ideal"}
-$I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
+An ideal $I\normal R$ is *irreducible* if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
 :::
 
 :::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm$.
+$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm \iff R/I$ is a field.
 :::
 
 :::{.example}
-- Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 :::{.definition title="Max Spectrum"}
@@ -72,11 +72,12 @@ a, b\in R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
 :::
 
 :::{.definition title="Principal Ideal"}
-$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$
+$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$,
+i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
 :::
 
 :::{.definition title="Principal Ideal Domain"}
-A ring $R$ is *principal* iff every ideal is principal, i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
+A ring $R$ is *principal* iff every ideal is principal.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
@@ -88,7 +89,7 @@ where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates
 :::
 
 :::{.definition title="Noetherian"}
-A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
+A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
 
 :::{.definition title="Primary Ideal"}
@@ -106,7 +107,7 @@ $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is th
 :::{.definition title="Jacobson Radical"}
 The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
 \[  
-\jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
+\jacobsonrad(R) = \intersect_{\mm \in \mspec } \mm
 .\]
 :::
 
@@ -115,8 +116,7 @@ A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ 
 :::
 
 
-**Lemma (Characterizations of Rings):**
-
+:::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
 - $R$ a finite integral domain $\implies R$ is a field.
 - $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
@@ -126,6 +126,7 @@ A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ 
 - $R$ a PID $\implies R[x]$ is a UFD
 - $R$ a PID $\implies R$ Noetherian
 - $R[x]$ a PID $\implies R$ is a field.
+:::
 
 :::{.proposition}
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
