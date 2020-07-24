@@ -987,6 +987,12 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txor b\divides p
 
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
+Equivalently, the map
+\[  
+r_\wait: R &\to R \\
+x &\mapsto rx
+\]
+fails to be injective.
 :::
 
 :::{.definition title="Integral Domain"}
