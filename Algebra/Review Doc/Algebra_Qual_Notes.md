@@ -966,6 +966,7 @@ For $G$ a finite group, TFAE:
 
 - Nilpotent groups satisfy the 2 out of 3 property.\todo{Specify.}
 - $G$ has normal subgroups of order $d$ for *every* $d$ dividing $\abs{G}$
+
 # Rings
 
 ## Definitions
