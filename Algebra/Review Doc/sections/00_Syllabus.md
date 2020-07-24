@@ -209,7 +209,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
   - $\ZZ[x]$ is a UFD
   - $R[x]$ is a UFD when $R$ is a UFD
 
-- The fundamental isomorphism theorems for rings (easy and useful exercise)
+- The fundamental isomorphism theorems for rings 
+
+    *(An easy and useful exercise)*
 
 - How to use Zorn's lemma
   - To find maximal ideals
