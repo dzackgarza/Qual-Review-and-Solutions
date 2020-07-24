@@ -404,24 +404,18 @@ A_4 =
   
 :::
 
+:::{.definition title="Transitive Subgroup"}
+A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
+:::
 
 
 Useful Facts:
 
+- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 - Conjugacy classes are determined by cycle type
 - The order of a cycle is its length.
 - The order of an element is the least common multiple of the sizes of its cycles.
-- The transitive subgroups of $S_3$ are $S_3, A_3$
-- The transitive subgroups of $S_4$ are $S_4, A_4, D_4, \ZZ_2^2, \ZZ_4$.
-- $S_4$ has two normal subgroups: $A_4, \ZZ_2^2$.
-- $S_{n\geq 5}$ has one normal subgroup: $A_n$.
-- $Z(S_n) = 1$ for $n\geq 3$
-- $Z(A_n) = 1$ for $n\geq 4$
-- $[S_n, S_n] = A_n$
-- $[A_4, A_4] \cong \ZZ_2^2$
-- $[A_n, A_n] = A_n$ for $n\geq 5$, so $A_{n\geq 5}$ is nonabelian.
 - $A_{n\geq 5}$ is *simple*.
-- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 
 ## Counting Theorems
 
@@ -469,7 +463,7 @@ satisfying
   
 Note that $\ker \psi = \bigcap_{x\in X} G_x$ is the intersection of all stabilizers.
 
-:::{.definition title="Transitive"}
+:::{.definition title="Transitive Group Action"}
 A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
 Equivalently, the action has a single orbit.
 :::
@@ -2005,7 +1999,16 @@ Cyclic Groups
 Specific Groups
 
 - Show that the center of $S_3$ is trivial.
+- Show that $Z(S_n) = 1$ for $n\geq 3$
 - Show that $\Aut(S_3) = \Inn(S_3) \cong S_3$.
+- Show that the transitive subgroups of $S_3$ are $S_3, A_3$
+- Show that the transitive subgroups of $S_4$ are $S_4, A_4, D_4, \ZZ_2^2, \ZZ_4$.
+- Show that $S_4$ has two normal subgroups: $A_4, \ZZ_2^2$.
+- Show that $S_{n\geq 5}$ has one normal subgroup: $A_n$.
+- $Z(A_n) = 1$ for $n\geq 4$
+- Show that $[S_n, S_n] = A_n$
+- Show that $[A_4, A_4] \cong \ZZ_2^2$
+- Show that $[A_n, A_n] = A_n$ for $n\geq 5$, so $A_{n\geq 5}$ is nonabelian.
 
 General Structure
 

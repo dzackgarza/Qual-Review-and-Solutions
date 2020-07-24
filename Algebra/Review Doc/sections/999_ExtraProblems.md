@@ -108,7 +108,16 @@ Cyclic Groups
 Specific Groups
 
 - Show that the center of $S_3$ is trivial.
+- Show that $Z(S_n) = 1$ for $n\geq 3$
 - Show that $\Aut(S_3) = \Inn(S_3) \cong S_3$.
+- Show that the transitive subgroups of $S_3$ are $S_3, A_3$
+- Show that the transitive subgroups of $S_4$ are $S_4, A_4, D_4, \ZZ_2^2, \ZZ_4$.
+- Show that $S_4$ has two normal subgroups: $A_4, \ZZ_2^2$.
+- Show that $S_{n\geq 5}$ has one normal subgroup: $A_n$.
+- $Z(A_n) = 1$ for $n\geq 4$
+- Show that $[S_n, S_n] = A_n$
+- Show that $[A_4, A_4] \cong \ZZ_2^2$
+- Show that $[A_n, A_n] = A_n$ for $n\geq 5$, so $A_{n\geq 5}$ is nonabelian.
 
 General Structure
 
