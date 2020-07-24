@@ -718,7 +718,7 @@ Note: for this to make sense, we also have
 - $SN \leq G$,
 - $S\intersect N \normal S$,
 
-![Image](figures/2020-01-01-15-20-27.png)
+![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png)
 
 :::
 
