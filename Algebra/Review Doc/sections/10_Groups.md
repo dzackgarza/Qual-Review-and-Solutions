@@ -282,10 +282,9 @@ This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies 
 :::
 
 :::{.theorem title="Burnside's Formula"}
-
-    $$
-    \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
-    .$$
+\[
+\abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
+\]
 :::
 
 ### Sylow Theorems
