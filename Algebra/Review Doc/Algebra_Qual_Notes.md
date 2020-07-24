@@ -986,6 +986,8 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txt{or} b\divides 
 .\]
 :::
 
+*Example of an irreducible element that is not prime:*
+$3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
 
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
@@ -1002,6 +1004,17 @@ $a, b\in R$ are *associates* iff there exists a $u\in R\units$ such that $a = ub
 Equivalently, $a\divides b$ and $b\divides a$.
 :::
 
+:::{.definition title="Prime Ideal"}
+$\mfp$ is a **prime** ideal $\iff$
+\[ 
+ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
+.\]
+:::
+
+:::{.definition title="Irreducible Ideal"}
+$I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
+:::
+
 ### Types of Rings
 
 :::{.definition title="Integral Domain"}
@@ -1016,7 +1029,7 @@ $I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$
 :::
 
 :::{.definition title="Principal Ideal Domain"}
-A ring $R$ is *principal* iff whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
+A ring $R$ is *principal* iff every ideal is principal, i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
@@ -1031,33 +1044,12 @@ where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates
 A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
 :::
 
-
-
-:::{.definition title="Irreducible Ideal"}
-$I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
-:::
-
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
 
 :::{.definition title="Simple Ring"}
 A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
-:::
-
-:::{.definition title="Local Ring"}
-A ring $R$ is *local* iff it contains a unique maximal ideal.
-:::
-
-:::{.definition title="Prime Ideal"}
-$\mfp$ is a **prime** ideal $\iff$
-\[ 
-ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
-.\]
-:::
-
-:::{.definition title="Prime Spectrum"}
-$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
 :::
 
 :::{.definition title="Maximal Ideal"}
@@ -1087,14 +1079,6 @@ The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal id
 A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 :::
 
-:::{.definition title="Radical of an Ideal"}
-For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
-:::
-
-:::{.definition title="Radical Ideal"}
-An ideal is *radical* iff $\rad(I) = I$. 
-:::
-
 
 **Lemma (Characterizations of Rings):**
 
@@ -1108,9 +1092,11 @@ An ideal is *radical* iff $\rad(I) = I$.
 - $R$ a PID $\implies R$ Noetherian
 - $R[x]$ a PID $\implies R$ is a field.
 
-**Lemma:**
+:::{.proposition
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
+:::
 
+:::{.example}
 - A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
   - *Proof*: Use previous lemma, and $x$ is not invertible
 
@@ -1126,19 +1112,20 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 -  A ring that is not an integral domain: $\ZZ/(4)$
    - *Proof*: $2 \mod 4$ is a zero divisor.
 
-Lemma
+  
+:::
+:::{.proposition
 In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
+:::
 
 Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
 
-*Example of a prime that is not irreducible:*
 $x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
 
-*Example of an irreducible that is not prime:*
-$3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
 
-Lemma
+:::{.proposition
 If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+:::
 
 :::{.theorem title="Krull"}
 Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
@@ -1202,6 +1189,25 @@ Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ conta
 :::
 
 ### Toward Algebraic Geometry
+
+
+:::{.definition title="Local Ring"}
+A ring $R$ is *local* iff it contains a unique maximal ideal.
+:::
+
+:::{.definition title="Prime Spectrum"}
+$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+:::
+
+:::{.definition title="Radical of an Ideal"}
+For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+:::
+
+:::{.definition title="Radical Ideal"}
+An ideal is *radical* iff $\rad(I) = I$. 
+:::
+
+
 # Fields
 
 Let $k$ denote a field.
