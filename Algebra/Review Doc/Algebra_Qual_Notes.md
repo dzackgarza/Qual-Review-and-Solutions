@@ -1000,7 +1000,6 @@ Slogan: no nonzero zero divisors, i.e.
 \[  
 a, b\in \R\smz, ab = 0 \implies a = 0 \txor b = 0
 .\]
-?
 :::
 
 :::{.definition title="Principal Ideal Domain"}
@@ -1008,7 +1007,11 @@ A ring $R$ is *principal* iff whenever $I\normal R$, there is some single $a\in 
 :::
 
 :::{.definition title="Unique Factorization Domain"}
-?
+A ring $R$ is a *UFD* iff $R$ is an integral domain and every $r\in R\smz$ admits a decomposition
+\[  
+r = u \prod_{i=1}^n p_i
+\]
+where $u\in R\units$ and the $p_i$ irreducible.
 :::
 
 :::{.definition title="Noetherian"}
