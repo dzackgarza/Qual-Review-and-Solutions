@@ -1092,7 +1092,7 @@ A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ 
 - $R$ a PID $\implies R$ Noetherian
 - $R[x]$ a PID $\implies R$ is a field.
 
-:::{.proposition
+:::{.proposition}
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
 :::
 
@@ -1111,10 +1111,9 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 
 -  A ring that is not an integral domain: $\ZZ/(4)$
    - *Proof*: $2 \mod 4$ is a zero divisor.
-
-  
 :::
-:::{.proposition
+
+:::{.proposition}
 In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 :::
 
@@ -1123,7 +1122,7 @@ Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally no
 $x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
 
 
-:::{.proposition
+:::{.proposition}
 If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 :::
 
@@ -1168,7 +1167,6 @@ Every proper ideal is contained in a maximal ideal.
 :::
 
 :::{.proof}
-  
 Let $0 < I < R$ be a proper ideal, and consider the set
 $$
 S = \theset{J \suchthat I   \subseteq J < R}
