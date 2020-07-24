@@ -227,18 +227,18 @@ $$
 ### Examples of Orbit-Stabilizer
 
 1. Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
-
-- The orbit $G\cdot x = G$ is the entire group
-- The stabilizer $G_x$ is only the identity.
-- The fixed points $X^g$ are only the identity.
+  - The orbit $G\cdot x = G$ is the entire group
+  
+  - The stabilizer $G_x$ is only the identity.
+  
+  - The fixed points $X^g$ are only the identity.
 
 2. Let $G$ act on *itself* by conjugation.
+  - $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
 
-- $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
+  - $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
 
-- $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
-
-- $G^g$ (the fixed points) is the **center** $Z(G)$.
+  - $G^g$ (the fixed points) is the **center** $Z(G)$.
 
 :::{.corollary}
 The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
@@ -256,21 +256,23 @@ Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x
 
 1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
 
-- $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+  - $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
 
-- $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
+  - $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
 
-- $X^g$ is the set of **normal subgroups** of $G$
+  - $X^g$ is the set of **normal subgroups** of $G$
 
-> Corollary: Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
+:::{.corollary }
+Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
+:::
 
-1. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
+2. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
 
-- $G\cdot gH = G/H$, i.e. this is a *transitive* action.
+  - $G\cdot gH = G/H$, i.e. this is a *transitive* action.
 
-- $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
+  - $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
 
-- $(G/H)^G = \emptyset$
+  - $(G/H)^G = \emptyset$
 
 *Application:* 
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
