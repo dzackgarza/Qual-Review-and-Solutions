@@ -268,7 +268,7 @@ References: [^1],[^3],[^4]
 
 ## Big List of Notation
 
-\begin{align*}
+\[
 C_G(x) 			=       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  \text{Centralizer (Element)} \\
 C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  \text{Centralizer (Subgroup)} \\
 C(h) 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
@@ -281,7 +281,7 @@ N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \su
 \mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  \text{Outer Aut.} \\
 [g, h] = &&  ghgh\inv                      &&  \in G  &&  \text{Commutator (Element)} \\
 [G, H] = && \left\langle [g,h] : g\in G, h\in H\right\rangle  &&  \leq G  &&  \text{Commutator (Subgroup)} \\
-\end{align*}
+\]
 
 For a group $G$ acting on a set $X$,
 
