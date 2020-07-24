@@ -267,7 +267,7 @@ This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies 
     $$
     \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
     .$$
-
+:::
 
 ### Sylow Theorems
 
@@ -336,6 +336,7 @@ Let $H \leq G$ be a $p\dash$subgroup.
 
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
+:::
 
 ## Products
 
@@ -349,6 +350,7 @@ We have $G \cong H \times K$ when
     - $H\intersect K = \theset{e} \subset G$
 
     > Note: can relax to $[h,k] = 1$ for all $h, k$.
+:::
 
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
@@ -361,6 +363,7 @@ We have $G = \prod_{i=1}^n H_i$ when
     - $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
 
 > Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
+:::
 
 
 :::{.theorem title="Recognizing Semidirect Products"}
@@ -377,6 +380,7 @@ We have $G = N \semidirect_\psi H$ when
     .\end{align*}
 
   > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
+:::
 
 **Useful Facts**
 
@@ -401,6 +405,7 @@ If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
 
     - $\ker \phi \normal G$
     - $\im \phi \leq G$
+:::
 
 Corollary
 If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
@@ -420,6 +425,7 @@ If $S \leq G$ and $N \normal G$, then
     - $S\intersect N \normal S$,
 
     ![Image](figures/2020-01-01-15-20-27.png)
+:::
 
 Corollary
 If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
@@ -436,6 +442,7 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
     \begin{align*}
     \frac{G/N}{K/N} \cong \frac{G}{K}
     .\end{align*}
+:::
 
 
 :::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
@@ -461,6 +468,7 @@ Suppose $N \normal G$, then there exists a correspondence:
     .\end{align*}
 
     In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
+:::
 
 Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 
@@ -486,9 +494,6 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 - [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
 - Order $p$: cyclic.
 - Order $p^2q$: ?
-
-
-## Groups of Small Order
 
 
 ## Finitely Generated Abelian Groups
