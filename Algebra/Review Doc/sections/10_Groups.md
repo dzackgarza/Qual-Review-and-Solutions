@@ -451,10 +451,9 @@ Note: for this to make sense, we also have
     
 - $SN \leq G$,
 - $S\intersect N \normal S$,
+:::
 
 ![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png)
-
-:::
 
 :::{.corollary}
 If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
