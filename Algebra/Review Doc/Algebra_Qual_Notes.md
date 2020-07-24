@@ -592,9 +592,9 @@ Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maxi
 ### Sylow 2 (Sylows are Conjugate)
 
 All sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
-\begin{align*}
+\[
 S_p^1, S_p^2 \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^1g\inv = S_p^2
-.\end{align*}
+\]
 
 :::{.corollary}
 $n_p = 1 \iff S_p \normal G$
