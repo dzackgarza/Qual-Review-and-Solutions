@@ -2,13 +2,9 @@ SHELL:=/bin/zsh
 FILENAME="Algebra_Qual_Notes.md"
 TITLE="Algebra Qualifying Exam Notes"
 
-define renew_md = 
-{echo "---\n title: $(TITLE)\n bibliography: bibliography.bib\n---\n\n" && fd --full-path ./sections | sort -nr | sed 'N;s/\(.*\)\n\(.*\)/\2\n\1/' | grep "md" | sort -n | awk -F ":" '{print "!include " $$1 "\n";}' } > $(FILENAME) 2>&1
-endef
-
 
 renew: 
-	@$(renew_md)
+	cat sections/*.md > $(FILENAME)
 	echo "Done"
 
 compile:
