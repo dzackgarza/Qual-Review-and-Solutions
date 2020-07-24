@@ -508,39 +508,47 @@ References: \footnote{David Dummit and Richard Foote, Abstract Algebra,
 \hypertarget{group-theory-1}{%
 \section{Group Theory}\label{group-theory-1}}
 
+\begin{itemize}
+\tightlist
+\item
+  \(2^X\) denotes the powerset of \(X\).
+\item
+  For any \(p\) dividing the order of \(G\), \(\mathrm{Syl}_p(G)\)
+  denotes the \emph{set} of Sylow\(\dash p\) subgroups of \(G\).
+\end{itemize}
+
 \hypertarget{big-list-of-notation}{%
 \subsection{Big List of Notation}\label{big-list-of-notation}}
 
 \begin{align*}
-C_G(x)          =       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  \text{Centralizer (Element)} \\
-C_G(H)          =       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  \text{Centralizer (Subgroup)} \\
-C(h)        =       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
-\OO_x, G\cdot x             =       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  \text{Orbit} \\
-\stab_G(x),  G_x            =       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  \text{Stabilizer} \\
-X^{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && \text{Fixed Points} \\
-Z(G)            =       &&  \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x} &&  \subseteq G       &&  \text{Center} \\
-N_G(H)          =       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  \text{Normalizer} \\
-\mathrm{Inn}(G) = &&  \theset{\phi_g(x) = gxg^{-1} }                 &&  \subseteq \Aut(G) &&  \text{Inner Aut.} \\
-\mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  \text{Outer Aut.} \\
-[g, h] = &&  ghgh\inv                      &&  \in G  &&  \text{Commutator (Element)} \\
-[G, H] = && \left\langle [g,h] : g\in G, h\in H\right\rangle  &&  \leq G  &&  \text{Commutator (Subgroup)} \\
+C_G(x)          =       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  
+\parbox{7em}{\small\centering Centralizer \\ (Element)} \\
+C_G(H)          =       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  
+\parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
+C(h)        =       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  
+\text{Conjugacy Class} \\
+Z(G)            =       &&  \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x} &&  \subseteq G       &&  
+\text{Center} \\
+N_G(H)          =       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  
+\text{Normalizer} \\
+\mathrm{Inn}(G) = &&  \theset{\phi_g(x) = gxg^{-1} }                 &&  \subseteq \Aut(G) &&  
+\text{Inner Aut.} \\
+\mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  
+\text{Outer Aut.} \\
+[g, h] = &&  ghgh\inv                      &&  \in G  &&  
+\parbox{7em}{\small\centering Commutator \\ (Element)} \\
+[G, H] = && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle  &&  \leq G  &&  
+\parbox{7em}{\small\centering Commutator \\ (Subgroup)} \\
+\cline{1-6}
+\OO_x\txt{or} G\cdot x          =       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  
+\text{Orbit} \\
+\stab_G(x)\txt{or}  G_x             =       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  
+\text{Stabilizer} \\
+X/G = && \theset{G_x \suchthat x\in X} && \subseteq 2^X && 
+\text{Set of Orbits} \\
+X^{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && 
+\text{Fixed Points} \\
 \end{align*}
-
-For a group \(G\) acting on a set \(X\),
-
-\begin{itemize}
-\item
-  \(G\cdot x = \theset{g\actson x \suchthat g\in G} \subseteq X\) is the
-  orbit
-\item
-  \(G_x = \theset{g\in G \suchthat g\actson x = x} \subseteq G\) is the
-  stabilizer
-\item
-  \(X/G \subset \mathcal P(X)\) is the set of orbits
-\item
-  \(X^g = \theset{x\in X \suchthat g\actson x = x} \subseteq X\) are the
-  fixed points
-\end{itemize}
 
 \begin{definition}[Normal Closure of a Subgroup]
 
@@ -641,9 +649,9 @@ Mnemonic: the parity of a \(k\dash\)cycle is the parity of \(k-1\).
 
 The \textbf{alternating group} is the subgroup of \textbf{even}
 permutations, i.e.
-\(A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}\)
-where \(\sign(\sigma) = (-1)^{m}\) where \(m\) is the number of cycles
-of even length.
+\begin{align*}A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}\end{align*}
+where \(\sign(\sigma) = (-1)^{m}\) andd \(m\) is the number of cycles of
+even length.
 
 \end{definition}
 
@@ -654,7 +662,9 @@ Every \(\sigma \in A_n\) has an even number of \emph{odd} cycles
 
 \end{corollary}
 
-\emph{Example:} \begin{align*}
+\begin{example}
+
+\begin{align*}
 A_4 =
 &\{\id, \\
 &(1,3)(2,4),
@@ -668,12 +678,23 @@ A_4 =
 (1,4,3), \\
 & (2,3,4),
 (2,4,3)\}
-.\end{align*}
+\end{align*}
+
+\end{example}
+
+\begin{definition}[Transitive Subgroup]
+
+A subgroup of \(S_n\) is \textbf{transitive} iff its action on
+\(\theset{1, 2, \cdots, n}\) is transitive.
+
+\end{definition}
 
 Useful Facts:
 
 \begin{itemize}
 \tightlist
+\item
+  \(\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))\)
 \item
   Conjugacy classes are determined by cycle type
 \item
@@ -682,29 +703,7 @@ Useful Facts:
   The order of an element is the least common multiple of the sizes of
   its cycles.
 \item
-  The transitive subgroups of \(S_3\) are \(S_3, A_3\)
-\item
-  The transitive subgroups of \(S_4\) are
-  \(S_4, A_4, D_4, \ZZ_2^2, \ZZ_4\).
-\item
-  \(S_4\) has two normal subgroups: \(A_4, \ZZ_2^2\).
-\item
-  \(S_{n\geq 5}\) has one normal subgroup: \(A_n\).
-\item
-  \(Z(S_n) = 1\) for \(n\geq 3\)
-\item
-  \(Z(A_n) = 1\) for \(n\geq 4\)
-\item
-  \([S_n, S_n] = A_n\)
-\item
-  \([A_4, A_4] \cong \ZZ_2^2\)
-\item
-  \([A_n, A_n] = A_n\) for \(n\geq 5\), so \(A_{n\geq 5}\) is
-  nonabelian.
-\item
   \(A_{n\geq 5}\) is \emph{simple}.
-\item
-  \(\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))\)
 \end{itemize}
 
 \hypertarget{counting-theorems}{%
@@ -712,7 +711,7 @@ Useful Facts:
 
 \begin{theorem}[Lagrange's Theorem]
 
-\(H \leq G \implies \abs H \divides \abs G\).
+\begin{align*}H \leq G \implies \abs H \divides \abs G.\end{align*}
 
 \end{theorem}
 
@@ -769,10 +768,10 @@ g \mapsto (x \mapsto \phi_g(x) \definedas g\cdot x)
 
 \end{definition}
 
-Note that \(\ker \psi = \bigcap_{x\in X} G_x\) is the intersection of
+Useful fact: \(\ker \psi = \bigcap_{x\in X} G_x\) is the intersection of
 all stabilizers.
 
-\begin{definition}[Transitive]
+\begin{definition}[Transitive Group Action]
 
 A group action \(G\actson X\) is \emph{transitive} iff for all
 \(x, y\in X\) there exists a \(g\in G\) such that \(g\cdot x = x\).
@@ -780,11 +779,29 @@ Equivalently, the action has a single orbit.
 
 \end{definition}
 
+\begin{quote}
+Reminder of notation: for a group \(G\) acting on a set \(X\),
+
+\begin{itemize}
+\item
+  \(G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X\) is the
+  orbit
+\item
+  \(G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G\) is the
+  stabilizer
+\item
+  \(X/G \subset 2^X\) is the set of orbits
+\item
+  \(X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X\) are the
+  fixed points
+\end{itemize}
+\end{quote}
+
 Note that being in the same orbit is an equivalence relation which
 partitions \(X\), and \(G\) acts transitively if restricted to any
 single orbit.
 
-\begin{theorem}["Orbit-Stabilizer]
+\begin{theorem}[Orbit-Stabilizer]
 
 \begin{align*}
 \abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
@@ -809,7 +826,6 @@ Orbit-Stabilizer}\label{examples-of-orbit-stabilizer}}
 \end{enumerate}
 
 \begin{itemize}
-\tightlist
 \item
   The orbit \(G\cdot x = G\) is the entire group
 \item
@@ -820,6 +836,7 @@ Orbit-Stabilizer}\label{examples-of-orbit-stabilizer}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \tightlist
 \item
   Let \(G\) act on \emph{itself} by conjugation.
@@ -846,13 +863,13 @@ class) is the index of its centralizer, \([G: C_G(x)]\).
 \hypertarget{the-class-equation}{%
 \subsubsection{The Class Equation}\label{the-class-equation}}
 
-\begin{verbatim}
-$$
+\begin{align*}
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
-$$
+\end{align*}
 
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-\end{verbatim}
+Note that \([G: C_G(x_i)]\) is the number of elements in the conjugacy
+class of \(x_i\), and each \(x_i \in Z(G)\) has a singleton conjugacy
+class.
 
 \textbf{Examples}
 
@@ -873,13 +890,16 @@ Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x
   \(X^g\) is the set of \textbf{normal subgroups} of \(G\)
 \end{itemize}
 
-\begin{quote}
-Corollary: Given \(H \leq G\), the number of conjugate subgroups is
+\begin{corollary}
+
+Given \(H \leq G\), the number of conjugate subgroups is
 \([G: N_G(H)]\).
-\end{quote}
+
+\end{corollary}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \tightlist
 \item
   For a fixed proper subgroup \(H< G\), let \(G\) act on its cosets
@@ -895,9 +915,12 @@ Corollary: Given \(H \leq G\), the number of conjugate subgroups is
   \((G/H)^G = \emptyset\)
 \end{itemize}
 
-\emph{Application:} If \(G\) is simple, \(H < G\) proper, and
-\([G:H] = n\), then there exists an injective map
-\(\phi: G \injects S_n\).
+\begin{proposition}[Application of the Class Equation]
+
+If \(G\) is simple, \(H < G\) proper, and \([G:H] = n\), then there
+exists an injective map \(\phi: G \injects S_n\).
+
+\end{proposition}
 
 \begin{proof}
 
@@ -909,19 +932,24 @@ implies \(\ker \phi = 1\).
 
 \begin{theorem}[Burnside's Formula]
 
-\begin{verbatim}
-$$
+Slogan: the number of orbits is equal to the average number of fixed
+points, i.e.
+\begin{align*}
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
-.$$
-\end{verbatim}
+\end{align*}
 
 \end{theorem}
 
 \hypertarget{sylow-theorems}{%
 \subsubsection{Sylow Theorems}\label{sylow-theorems}}
 
-\textbf{Notation}: For any \(p\), let \(\mathrm{Syl}_p(G)\) be the set
-of Sylow\(\dash p\) subgroups of \(G\).
+\begin{definition}
+
+A \(p\dash\)group is a group \(G\) such that every element is order
+\(p^k\) for some \(k\). If \(G\) is a finite \(p\dash\)group, then
+\(\abs G = p^j\) for some \(j\).
+
+\end{definition}
 
 Write
 
@@ -934,14 +962,6 @@ Write
 \item
   \(n_p\) the number of Sylow\(\dash p\) subgroups.
 \end{itemize}
-
-\begin{definition}
-
-A \(p\dash\)group is a group \(G\) such that every element is order
-\(p^k\) for some \(k\). If \(G\) is a finite \(p\dash\)group, then
-\(\abs G = p^j\) for some \(j\).
-
-\end{definition}
 
 Some useful facts:
 
@@ -958,22 +978,19 @@ Some useful facts:
 \subsubsection{Sylow 1 (Cauchy for Prime
 Powers)}\label{sylow-1-cauchy-for-prime-powers}}
 
+\begin{align*}
+\forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
+\end{align*}
+
 Idea: Sylow \(p\dash\)subgroups exist for any \(p\) dividing
 \(\abs{G}\), and are maximal in the sense that every \(p\dash\)subgroup
 of \(G\) is contained in a Sylow \(p\dash\)subgroup.
 
-\begin{align*}
-\forall p^n \text{ dividing } \abs{G} \quad \text{ there exists a subgroup of size } p^n
-.\end{align*}
-
 \begin{quote}
 If \(\abs G = \prod p_i^{\alpha_i}\), then there exist subgroups of
 order \(p_i^{\beta_i}\) for every \(i\) and every
-\(0 \leq \beta_i \leq \alpha_i\).
-\end{quote}
-
-\begin{quote}
-In particular, Sylow \(p\dash\)subgroups always exist.
+\(0 \leq \beta_i \leq \alpha_i\). In particular, Sylow
+\(p\dash\)subgroups always exist.
 \end{quote}
 
 \hypertarget{sylow-2-sylows-are-conjugate}{%
@@ -982,8 +999,8 @@ Conjugate)}\label{sylow-2-sylows-are-conjugate}}
 
 All sylow\(\dash p\) subgroups \(S_p\) are conjugate, i.e.
 \begin{align*}
-S_p^1, S_p^2 \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^1g\inv = S_p^2
-.\end{align*}
+S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
+\end{align*}
 
 \begin{corollary}
 
@@ -1045,15 +1062,18 @@ and \([G: H]\) divides \(\abs{N_G(P)}\).
 
 We have \(G \cong H \times K\) when
 
-\begin{verbatim}
-- $H, K \normal G$
+\begin{itemize}
+\item
+  \(H, K \normal G\)
+\item
+  \(G = HK\).
+\item
+  \(H\intersect K = \theset{e} \subset G\)
+\end{itemize}
 
-- $G = HK$.
-
-- $H\intersect K = \theset{e} \subset G$
-
-> Note: can relax to $[h,k] = 1$ for all $h, k$.
-\end{verbatim}
+\begin{quote}
+Note: can relax to \([h,k] = 1\) for all \(h, k\).
+\end{quote}
 
 \end{theorem}
 
@@ -1061,13 +1081,14 @@ We have \(G \cong H \times K\) when
 
 We have \(G = \prod_{i=1}^n H_i\) when
 
-\begin{verbatim}
-- $H_i \normal G$ for all $i$.
-
-- $G = H_1 \cdots H_n$
-
-- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
-\end{verbatim}
+\begin{itemize}
+\item
+  \(H_i \normal G\) for all \(i\).
+\item
+  \(G = H_1 \cdots H_n\)
+\item
+  \(H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset\)
+\end{itemize}
 
 \begin{quote}
 Note on notation: intersect \(H_k\) with the amalgam \emph{leaving out}
@@ -1086,7 +1107,8 @@ We have \(G = N \semidirect_\psi H\) when
 \item
   \(N \normal G\)
 \item
-  \(H \actson N\) by conjugation via a map \begin{align*}
+  \(H \actson N\) by conjugation via a map
+  \begin{align*}  
   \psi: H \to \Aut(N) \\
   h \mapsto h(\wait)h^{-1}
   .\end{align*}
@@ -1107,7 +1129,9 @@ Note relaxed conditions compared to direct product: \(H\normal G\) and
   \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
 \item
   \(\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)\), which has size
-  \(\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})\).
+  \begin{align*}  
+  \abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+  .\end{align*}
 
   \begin{itemize}
   \tightlist
@@ -1116,8 +1140,9 @@ Note relaxed conditions compared to direct product: \(H\normal G\) and
     similarity classes of matrices (i.e.~just use canonical forms)
   \end{itemize}
 \item
-  \(\Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\) where
-  \(\varphi\) is the totient function.
+
+  \begin{align*} \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\end{align*}
+  where \(\varphi\) is the totient function.
 
   \begin{itemize}
   \tightlist
@@ -1135,14 +1160,17 @@ Note relaxed conditions compared to direct product: \(H\normal G\) and
 \begin{theorem}[1st Isomorphism Theorem]
 
 If \(\phi:G\to H\) is a group morphism then
-\(G/\ker \phi \cong \im \phi\).
+\begin{align*}G/\ker \phi \cong \im \phi.\end{align*}
 
-\begin{verbatim}
 Note: for this to make sense, we also have
 
-- $\ker \phi \normal G$
-- $\im \phi \leq G$
-\end{verbatim}
+\begin{itemize}
+\tightlist
+\item
+  \(\ker \phi \normal G\)
+\item
+  \(\im \phi \leq G\)
+\end{itemize}
 
 \end{theorem}
 
@@ -1163,15 +1191,24 @@ If \(H,K \leq G\) and \(H \leq N_G(K)\) (or \(K \normal G\)) then
 
 If \(S \leq G\) and \(N \normal G\), then
 \begin{align*}
-    \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
-    \end{align*} Note: for this to make sense, we also have
+\frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
+.\end{align*}
 
-\begin{verbatim}
-- $SN \leq G$,
-- $S\intersect N \normal S$,
+Note: for this to make sense, we also have
 
-![Image](figures/2020-01-01-15-20-27.png)
-\end{verbatim}
+\begin{itemize}
+\tightlist
+\item
+  \(SN \leq G\),
+\item
+  \(S\intersect N \normal S\),
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{figures/2020-01-01-15-20-27.png}
+\caption{Image}
+\end{figure}
 
 \end{theorem}
 
@@ -2994,7 +3031,27 @@ Specific Groups
 \item
   Show that the center of \(S_3\) is trivial.
 \item
+  Show that \(Z(S_n) = 1\) for \(n\geq 3\)
+\item
   Show that \(\Aut(S_3) = \Inn(S_3) \cong S_3\).
+\item
+  Show that the transitive subgroups of \(S_3\) are \(S_3, A_3\)
+\item
+  Show that the transitive subgroups of \(S_4\) are
+  \(S_4, A_4, D_4, \ZZ_2^2, \ZZ_4\).
+\item
+  Show that \(S_4\) has two normal subgroups: \(A_4, \ZZ_2^2\).
+\item
+  Show that \(S_{n\geq 5}\) has one normal subgroup: \(A_n\).
+\item
+  \(Z(A_n) = 1\) for \(n\geq 4\)
+\item
+  Show that \([S_n, S_n] = A_n\)
+\item
+  Show that \([A_4, A_4] \cong \ZZ_2^2\)
+\item
+  Show that \([A_n, A_n] = A_n\) for \(n\geq 5\), so \(A_{n\geq 5}\) is
+  nonabelian.
 \end{itemize}
 
 General Structure

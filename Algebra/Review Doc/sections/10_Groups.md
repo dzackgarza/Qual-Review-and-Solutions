@@ -400,7 +400,7 @@ We have $G = N \semidirect_\psi H$ when
   \[  
   \psi: H \to \Aut(N) \\
   h \mapsto h(\wait)h^{-1}
-  \]
+  .\]
 
 > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
 :::
@@ -416,7 +416,7 @@ We have $G = N \semidirect_\psi H$ when
   
   - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
 
-- $\Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})$ where $\varphi$ is the totient function.
+- \[ \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\] where $\varphi$ is the totient function.
   - $\varphi(p^k) = p^{k-1}(p-1)$
 
 - If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.
@@ -425,7 +425,7 @@ We have $G = N \semidirect_\psi H$ when
 ## Isomorphism Theorems
 
 :::{.theorem title="1st Isomorphism Theorem"}
-If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
+If $\phi:G\to H$ is a group morphism then \[G/\ker \phi \cong \im \phi.\]
 
 Note: for this to make sense, we also have
 
@@ -443,15 +443,17 @@ If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a sub
 
 :::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
 If $S \leq G$ and $N \normal G$, then
-    $$
-    \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
-    $$
-    Note: for this to make sense, we also have
-    
-    - $SN \leq G$,
-    - $S\intersect N \normal S$,
+\[
+\frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
+.\]
 
-    ![Image](figures/2020-01-01-15-20-27.png)
+Note: for this to make sense, we also have
+    
+- $SN \leq G$,
+- $S\intersect N \normal S$,
+
+![Image](figures/2020-01-01-15-20-27.png)
+
 :::
 
 :::{.corollary}
