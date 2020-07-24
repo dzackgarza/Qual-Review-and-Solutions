@@ -100,6 +100,8 @@ References: [^1],[^2],[^4]
 
 ## Rings
 
+References: [^1],[^3],[^4]
+
 - Properties of ideals and quotient rings
 - $I$ maximal iff $R/I$ is a field
 - Zorn's lemma
@@ -136,13 +138,9 @@ References: [^1],[^2],[^4]
 - Eisenstein's criterion
 
 
-
-
-
-
-References: [1,3,4]
-
 ## Modules
+
+References: [^1],[^3],[^4]
 
 - Fundamental homomorphism theorems for rings and modules
 
@@ -170,7 +168,6 @@ References: [1,3,4]
 - Solvability of polynomials by radicals
 
 References: [^1],[^3],[^4]
-
 
 # Remarks
 
@@ -206,7 +203,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 ## Rings
 
 
-- DF Chapters 7,8,9.
+- DF Chapters 7, 8, 9.
 
 - Gauss's important theorem on unique factorization of polynomials:
   - $\ZZ[x]$ is a UFD
@@ -221,9 +218,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
   > Smith discusses extensively in 844-1.
 
-- Results about PIDs
-
-  (DF Section 8.2)
+- Results about PIDs *(DF Section 8.2)*
 
   - Example of a PID that is not a Euclidean domain
 
