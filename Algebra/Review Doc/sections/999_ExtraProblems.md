@@ -186,6 +186,12 @@ Generating Sets
 - Show that $G$ is solvable iff its derived series terminates.
 - Show that $S_3$ is not nilpotent.
 
+- Show that $G$ nilpotent $\implies G$ solvable
+- Show that nilpotent groups have nontrivial centers.
+- Show that Abelian $\implies$ nilpotent
+- Show that p-groups $\implies$ nilpotent
+
+
 ### Misc
 
 - Prove Burnside's theorem.

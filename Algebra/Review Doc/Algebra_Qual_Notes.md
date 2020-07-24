@@ -555,7 +555,6 @@ Slogan: the number of orbits is equal to the average number of fixed points, i.e
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
 :::
-
 ### Sylow Theorems
 
 :::{.definition}
@@ -733,16 +732,16 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
     3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
     3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
     4. If $K\normal G$, then we can cancel normal subgroups:
-    \begin{align*}
+    \[  
     \frac{G/N}{K/N} \cong \frac{G}{K}
-    .\end{align*}
+    .\]
 :::
 
 
 :::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
 Suppose $N \normal G$, then there exists a correspondence:
 
-\begin{align*}
+\[  
 \left\{
 H < G \suchthat N \subseteq H
 \right\}
@@ -759,7 +758,7 @@ H \suchthat H < \frac G N
   \text{Subgroups of the } \\
   \text{quotient $G/N$}
 }
-.\end{align*}
+.\]
 
 In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
 :::
@@ -931,6 +930,7 @@ Lemmas:
 
 :::{.definition title="Nilpotent"}
 A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
+:::
 
 > Moral: the adjoint map is nilpotent.
 
@@ -942,15 +942,13 @@ A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for e
 A group $G$ is nilpotent iff every maximal subgroup is normal.
 :::
 
-:::{.theorem title="Characterization of Nilpotent Groups"}}
+:::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
 :::
 
-Theorem 
 :::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 :::
-
 
 :::{.proposition}
 For $G$ a finite group, TFAE:
@@ -2085,6 +2083,12 @@ Generating Sets
 - Show that if $G$ is finite and solvable then every composition factor has prime order.
 - Show that $G$ is solvable iff its derived series terminates.
 - Show that $S_3$ is not nilpotent.
+
+- Show that $G$ nilpotent $\implies G$ solvable
+- Show that nilpotent groups have nontrivial centers.
+- Show that Abelian $\implies$ nilpotent
+- Show that p-groups $\implies$ nilpotent
+
 
 ### Misc
 

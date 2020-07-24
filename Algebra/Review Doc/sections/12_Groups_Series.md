@@ -70,6 +70,7 @@ Lemmas:
 
 :::{.definition title="Nilpotent"}
 A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
+:::
 
 > Moral: the adjoint map is nilpotent.
 
@@ -81,15 +82,13 @@ A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for e
 A group $G$ is nilpotent iff every maximal subgroup is normal.
 :::
 
-:::{.theorem title="Characterization of Nilpotent Groups"}}
+:::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
 :::
 
-Theorem 
 :::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 :::
-
 
 :::{.proposition}
 For $G$ a finite group, TFAE:
