@@ -104,9 +104,5 @@ For $G$ a finite group, TFAE:
 
 **Lemmas:**
 
-- $G$ nilpotent $\implies G$ solvable
-- Nilpotent groups satisfy the 2 out of 3 property.
+- Nilpotent groups satisfy the 2 out of 3 property.\todo{Specify.}
 - $G$ has normal subgroups of order $d$ for *every* $d$ dividing $\abs{G}$
-- $G$ nilpotent $\implies Z(G) \neq 0$
-- Abelian $\implies$ nilpotent
-- p-groups $\implies$ nilpotent
