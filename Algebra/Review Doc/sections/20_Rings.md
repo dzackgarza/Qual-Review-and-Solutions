@@ -183,7 +183,7 @@ Some useful propositions used when *applying* Zorn's lemma:
 Fields are simple rings. 
 :::
 
-:::{.proposition
+:::{.proposition}
 If $I\normal R$ is a proper ideal $\iff I$ contains no units.
 :::
 
@@ -191,11 +191,11 @@ If $I\normal R$ is a proper ideal $\iff I$ contains no units.
 $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
 :::
 
-:::{.proposition
+:::{.proposition}
 If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
 :::
 
-:::{.proposition
+:::{.proposition}
 Every proper ideal is contained in a maximal ideal.
 :::
 
