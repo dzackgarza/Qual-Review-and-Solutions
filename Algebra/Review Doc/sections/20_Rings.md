@@ -36,24 +36,31 @@ $I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$
 
 :::{.definition title="Irreducible Ideal"}
 $I \normal R$ *irreducible* when $\not\exists \{J \normal R : I \subset J\} : I = \bigcap J$
+:::
 
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
+:::
 
 :::{.definition title="Simple Ring"}
 A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
+:::
 
 :::{.definition title="Local Ring"}
 A ring $R$ is *local* iff it contains a unique maximal ideal.
+:::
 
 :::{.definition title="Prime Ideal"}
 $\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
+:::
 
 :::{.definition title="Prime Spectrum"}
 $\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+:::
 
 :::{.definition title="Maximal Ideal"}
 $\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
+:::
 
 Examples: 
 
@@ -61,23 +68,30 @@ Examples:
 
 :::{.definition title="Max Spectrum"}
 $\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+:::
 
 :::{.definition title="Nilradical"}
 $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
+:::
 
 :::{.definition title="Jacobson Radical"}
 The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
-  $$
-  \jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
-  $$
+\[  
+\jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
+.\]
+:::
+
 :::{.definition title="Semisimple"}
 A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
+:::
 
 :::{.definition title="Radical of an Ideal"}
 For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+:::
 
 :::{.definition title="Radical Ideal"}
 An ideal is *radical* iff $\rad(I) = I$. 
+:::
 
 
 **Lemma (Characterizations of Rings):**
@@ -126,9 +140,11 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 
 :::{.theorem title="Krull"}
 Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
+:::
 
 :::{.theorem title="Artin-Wedderubrn"}
 If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
+:::
 
 Corollary
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
@@ -150,22 +166,24 @@ If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ide
 **Example Application:**
 Every proper ideal is contained in a maximal ideal.
 
-Proof
+:::{.proof}
+  
 Let $0 < I < R$ be a proper ideal, and consider the set
-    $$
-    S = \theset{J \suchthat I   \subseteq J < R}
-    .$$
+$$
+S = \theset{J \suchthat I   \subseteq J < R}
+.$$
 
-    Note $I\in S$, so $S$ is nonempty.
-    The claim is that $S$ contains a maximal element $M$.
+Note $I\in S$, so $S$ is nonempty.
+The claim is that $S$ contains a maximal element $M$.
 
-    $S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
+$S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
 
-    Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat C = \union_i C_i$.
+Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat C = \union_i C_i$.
 
-    **$\hat C$ is an upper bound for $C$:**
-    This follows because every $C_i \subseteq \hat C$.
+**$\hat C$ is an upper bound for $C$:**
+This follows because every $C_i \subseteq \hat C$.
 
-    **$\hat C$ is in $S$:**
-    Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
+**$\hat C$ is in $S$:**
+Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
+:::
 
