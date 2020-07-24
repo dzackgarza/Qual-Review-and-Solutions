@@ -358,6 +358,7 @@ D_n = \generators{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 ## The Symmetric Group
 
 :::{.definition title="Parity of a Cycle"}
+
 - A cycle is **even** $\iff$ product of an *even* number of transpositions.
 
 - A cycle of even *length* is **odd**
@@ -372,8 +373,9 @@ The **alternating group** is the subgroup of **even** permutations, i.e.
 $A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}$ where $\sign(\sigma) = (-1)^{m}$ where $m$ is the number of cycles of even length.
 :::
 
-Corollary
+:::{.corollary title="Alternating Group"}
 Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
+:::
 
 *Example:*
 \begin{align*}
@@ -422,7 +424,7 @@ The order of every element divides the size of $G$, i.e.
   g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
   .$$
 
-**Warning:**
+Warning
 There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
 
 Counterexample:
