@@ -262,6 +262,7 @@ Misc
 - Show that if $R$ is a local ring then $R\setminus R\units$ is a proper ideal that is contained in $\jacobsonrad(R)$.
 - Show that if $R\neq 0$ is a ring in which every non-unit is nilpotent then $R$ is local.
 - Show that every prime ideal is primary.
+- Show that every prime ideal is irreducible.
 
 ## Field Theory
 
