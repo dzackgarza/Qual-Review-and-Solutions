@@ -970,74 +970,74 @@ For $G$ a finite group, TFAE:
 
 ## Definitions
 
-Definition (Irreducible Element)
-: An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
+:::{.definition title="Irreducible Element"}
+An element $r\in R$ is **irreducible** iff $r = ab \implies a$ is a unit or $b$ is a unit.
 
-Definition (Prime Element)
-: An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
+:::{.definition title="Prime Element"}
+An element $r\in R$ is **prime** iff $ab \divides r \implies a\divides r$ or $b\divides r$ whenever $a,b$ are nonzero and not units.
 
-Definition (Integral Domain)
-: ?
+:::{.definition title="Integral Domain"}
+?
 
-Definition (Principal Ideal Domain)
-: ?
+:::{.definition title="Principal Ideal Domain"}
+?
 
-Definition (Unique Factorization Domain)
-: ?
+:::{.definition title="Unique Factorization Domain"}
+?
 
-Definition (Noetherian)
-: A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
+:::{.definition title="Noetherian"}
+A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes. 
 
-Theorem (Zorn's Lemma)
-: If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
+:::{.theorem title="Zorn's Lemma"}
+If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 
 Definition (Principal Ideals
-: $I \unlhd R$ *principal* when $\exists a\in R : I = \generators{a}$
+$I \unlhd R$ *principal* when $\exists a\in R : I = \generators{a}$
 
-Definition (Irreducible Ideal)
-: $I \unlhd R$ *irreducible* when $\not\exists \{J \unlhd R : I \subset J\} : I = \bigcap J$
+:::{.definition title="Irreducible Ideal"}
+$I \unlhd R$ *irreducible* when $\not\exists \{J \unlhd R : I \subset J\} : I = \bigcap J$
 
-Definition (Primary Ideal)
-: An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
+:::{.definition title="Primary Ideal"}
+An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 
-Definition (Simple Ring)
-: A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
+:::{.definition title="Simple Ring"}
+A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
 
-Definition (Local Ring)
-: A ring $R$ is *local* iff it contains a unique maximal ideal.
+:::{.definition title="Local Ring"}
+A ring $R$ is *local* iff it contains a unique maximal ideal.
 
-Definition (Prime Ideal)
-: $\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
+:::{.definition title="Prime Ideal"}
+$\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
 
-Definition (Prime Spectrum)
-: $\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+:::{.definition title="Prime Spectrum"}
+$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
 
-Definition (Maximal Ideal)
-: $\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
+:::{.definition title="Maximal Ideal"}
+$\mathfrak m$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mathfrak m$.
 
 Examples: 
 
 - Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 
-Definition (Max Spectrum)
-: $\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+:::{.definition title="Max Spectrum"}
+$\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
 
-Definition (Nilradical)
-: $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
+:::{.definition title="Nilradical"}
+$\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
 
-Definition (Jacobson Radical)
-: The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
+:::{.definition title="Jacobson Radical"}
+The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
   $$
   \jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
   $$
-Definition (Semisimple)
-: A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
+:::{.definition title="Semisimple"}
+A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
 
-Definition (Radical of an Ideal)
-: For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+:::{.definition title="Radical of an Ideal"}
+For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
 
-Definition (Radical Ideal)
-: An ideal is *radical* iff $\rad(I) = I$. 
+:::{.definition title="Radical Ideal"}
+An ideal is *radical* iff $\rad(I) = I$. 
 
 
 **Lemma (Characterizations of Rings):**
@@ -1071,7 +1071,7 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
    - *Proof*: $2 \mod 4$ is a zero divisor.
 
 Lemma
-: In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
+In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 
 Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
 
@@ -1082,36 +1082,36 @@ $x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but
 $3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
 
 Lemma
-: If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 
-Theorem (Krull)
-: Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
+:::{.theorem title="Krull"}
+Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 
-Theorem (Artin-Wedderubrn)
-: If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
+:::{.theorem title="Artin-Wedderubrn"}
+If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
 
 Corollary
-: If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
+If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 
 ### Zorn's Lemma
 
 Lemma
-: Fields are simple rings. 
+Fields are simple rings. 
 
 Lemma
-: If $I\normal R$ is a proper ideal $\iff I$ contains no units.
+If $I\normal R$ is a proper ideal $\iff I$ contains no units.
 
 Proof
-: $r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
+$r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
 
 Lemma
-: If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
+If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
 
 **Example Application:**
 Every proper ideal is contained in a maximal ideal.
 
 Proof
-:   Let $0 < I < R$ be a proper ideal, and consider the set
+Let $0 < I < R$ be a proper ideal, and consider the set
     $$
     S = \theset{J \suchthat I   \subseteq J < R}
     .$$
