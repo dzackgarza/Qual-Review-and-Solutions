@@ -1,8 +1,5 @@
 # Group Theory
 
-## Random References
-
-
 ## Big List of Notation
 
 \begin{align*}
