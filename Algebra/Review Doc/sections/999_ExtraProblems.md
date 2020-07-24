@@ -263,6 +263,7 @@ Misc
 - Show that if $R\neq 0$ is a ring in which every non-unit is nilpotent then $R$ is local.
 - Show that every prime ideal is primary.
 - Show that every prime ideal is irreducible.
+- Show that
 
 ## Field Theory
 
@@ -302,7 +303,7 @@ Special Polynomials
 - Show that if $K/E/F$ with $K/F$ Galois then $K/E$ is always Galois with $g(K/E) \leq g(K/F)$.
   - Show additionally $E/F$ is Galois $\iff g(K/E) \normal g(K/F)$.
   - Show that in this case, $g(E/F) = g(K/F) / g(K/E)$.
-
+- Show that if $E/k, F/k$ are Galois with $E\intersect F = k$, then $EF/k$ is Galois and $G(EF/k) \cong G(E/k)\times G(F/k)$.
 
 ### Computations
 - Show that the Galois group of $x^n - 2$ is $D_n$, the dihedral group on $n$ vertices.
