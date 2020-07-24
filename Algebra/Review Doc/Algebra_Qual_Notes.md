@@ -663,19 +663,22 @@ We have $G = N \semidirect_\psi H$ when
 - $N \normal G$
 
 - $H \actson N$ by conjugation via a map
-  \begin{align*}
+  \[  
   \psi: H \to \Aut(N) \\
   h \mapsto h(\wait)h^{-1}
-  .\end{align*}
+  \]
 
 > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
 :::
 
 **Useful Facts**
 
--  If $\sigma \in \Aut(H)$, then $N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H$.
+-  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
 
-- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size $\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})$.
+- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size 
+\[  
+\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+.\]
   
   - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
 
@@ -690,10 +693,10 @@ We have $G = N \semidirect_\psi H$ when
 :::{.theorem title="1st Isomorphism Theorem"}
 If $\phi:G\to H$ is a group morphism then $G/\ker \phi \cong \im \phi$.
 
-    Note: for this to make sense, we also have
+Note: for this to make sense, we also have
 
-    - $\ker \phi \normal G$
-    - $\im \phi \leq G$
+- $\ker \phi \normal G$
+- $\im \phi \leq G$
 :::
 
 :::{.corollary}
