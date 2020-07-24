@@ -511,7 +511,7 @@ References: \footnote{David Dummit and Richard Foote, Abstract Algebra,
 \hypertarget{big-list-of-notation}{%
 \subsection{Big List of Notation}\label{big-list-of-notation}}
 
-\[
+\begin{align*}
 C_G(x)          =       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  \text{Centralizer (Element)} \\
 C_G(H)          =       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  \text{Centralizer (Subgroup)} \\
 C(h)        =       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  \text{Conjugacy Class} \\
@@ -524,7 +524,7 @@ N_G(H)          =       &&  \theset{g\in G \mid gHg^{-1} = H}                  &
 \mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  \text{Outer Aut.} \\
 [g, h] = &&  ghgh\inv                      &&  \in G  &&  \text{Commutator (Element)} \\
 [G, H] = && \left\langle [g,h] : g\in G, h\in H\right\rangle  &&  \leq G  &&  \text{Commutator (Subgroup)} \\
-\]
+\end{align*}
 
 For a group \(G\) acting on a set \(X\),
 
@@ -544,9 +544,10 @@ For a group \(G\) acting on a set \(X\),
 
 \begin{definition}[Normal Closure of a Subgroup]
 
-The smallest normal subgroup of \(G\) containing \(H\): \[
+The smallest normal subgroup of \(G\) containing \(H\):
+\begin{align*}
 H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \{ N: H \leq N \unlhd G \}
-.\]
+.\end{align*}
 
 \end{definition}
 
@@ -580,17 +581,17 @@ If \(H\subset G\), then \(\gens{H}\) is the smallest subgroup containing
 
 \begin{definition}[Centralizer]
 
-\[
+\begin{align*}
 C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
-\]
+\end{align*}
 
 \end{definition}
 
 \begin{definition}[Normalizer]
 
-\[
+\begin{align*}
 N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union_{H\normal M \leq G} M
-\]
+\end{align*}
 
 \end{definition}
 
@@ -717,9 +718,10 @@ Useful Facts:
 
 \begin{corollary}
 
-The order of every element divides the size of \(G\), i.e. \[
+The order of every element divides the size of \(G\), i.e.
+\begin{align*}
   g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
-  .\]
+  .\end{align*}
 
 \end{corollary}
 
@@ -784,9 +786,9 @@ single orbit.
 
 \begin{theorem}["Orbit-Stabilizer]
 
-\[
+\begin{align*}
 \abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
-\]
+\end{align*}
 
 \end{theorem}
 
@@ -1159,9 +1161,10 @@ If \(H,K \leq G\) and \(H \leq N_G(K)\) (or \(K \normal G\)) then
 
 \begin{theorem}[Diamond Theorem / 2nd Isomorphism Theorem]
 
-If \(S \leq G\) and \(N \normal G\), then \[
+If \(S \leq G\) and \(N \normal G\), then
+\begin{align*}
     \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
-    \] Note: for this to make sense, we also have
+    \end{align*} Note: for this to make sense, we also have
 
 \begin{verbatim}
 - $SN \leq G$,
@@ -1275,10 +1278,10 @@ Groups}\label{finitely-generated-abelian-groups}}
 
 \begin{definition}[Invariant Factor Decomposition]
 
-\[
+\begin{align*}
 G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 \quad \text{ where } n_1 \divides \cdots \divides n_m
-.\]
+.\end{align*}
 
 \end{definition}
 
@@ -1455,9 +1458,10 @@ Set \(G^{(0)} = G\) and \(G^{(i+1)} = [G^{(i)}, G^{(i)}]\), then
 \begin{definition}[Solvable]
 
 A group \(G\) is \textbf{solvable} iff \(G\) has a terminating normal
-series with abelian composition factors, i.e. \[
+series with abelian composition factors, i.e.
+\begin{align*}
   G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
-  .\]
+  .\end{align*}
 
 \end{definition}
 
@@ -1600,9 +1604,10 @@ is the \textbf{max-spectrum} of \(R\).
 is the \textbf{nilradical} of \(R\).
 \item[Definition (Jacobson Radical)]
 The \textbf{Jacobson radical} \(\jacobsonrad(R)\) is the intersection of
-all maximal ideals, i.e. \[
+all maximal ideals, i.e.
+\begin{align*}
   \jacobsonrad(R) = \intersect_{\mm \in \spec_{\text{max}}} \mm
-  \] Definition (Semisimple)
+  \end{align*} Definition (Semisimple)
 
 A nonzero unital ring \(R\) is \textbf{semisimple} iff
 \(R \cong \bigoplus_{i=1}^n M_i\) with each \(M_i\) a simple module.
@@ -1744,9 +1749,10 @@ maximal ideal.
 
 \begin{description}
 \item[Proof]
-Let \(0 < I < R\) be a proper ideal, and consider the set \[
+Let \(0 < I < R\) be a proper ideal, and consider the set
+\begin{align*}
 S = \theset{J \suchthat I   \subseteq J < R}
-.\]
+.\end{align*}
 
 Note \(I\in S\), so \(S\) is nonempty. The claim is that \(S\) contains
 a maximal element \(M\).
@@ -2124,9 +2130,10 @@ TFAE:
 \end{itemize}
 \item[Proposition (Composite Extensions)]
 If \(F/k\) is finite and Galois and \(L/k\) is arbitrary, then \(FL/L\)
-is Galois and \[
+is Galois and
+\begin{align*}
 \Gal(FL/L) = \Gal(F / F\intersect L) \subset \Gal(F/k)
-.\]
+.\end{align*}
 \end{description}
 
 \hypertarget{cyclotomic-polynomials}{%
@@ -2135,9 +2142,10 @@ is Galois and \[
 \begin{description}
 \item[Definition (Cyclotomic Polynomials)]
 Let \(\zeta_n = e^{2\pi i/n}\), then the \textbf{\(n\)th cyclotomic
-polynomial} is given by \[
+polynomial} is given by
+\begin{align*}
 \Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
-,\]
+,\end{align*}
 
 which is a product over primitive roots of unity. It is the unique
 irreducible polynomial which is a divisor of \(x^n - 1\) but \emph{not}
@@ -2154,15 +2162,18 @@ the number of numbers less than and coprime to \(n\).
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \[
+
+  \begin{align*}
   \Phi_{n}(z)=\prod_{d | n, d>0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
-  \] where \[
+  \end{align*} where
+  \begin{align*}
   \mu(n) \equiv\left\{\begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
-  \]
+  \end{align*}
 \item
-  \[
+
+  \begin{align*}
   x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d < n} \Phi_{d}(x)},
-  \] so just use polynomial long division.
+  \end{align*} so just use polynomial long division.
 \end{enumerate}
 
 \begin{description}
@@ -2176,9 +2187,9 @@ the number of numbers less than and coprime to \(n\).
 \item[Lemma]
 \hfill
 
-\[
+\begin{align*}
 k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-\]
+\end{align*}
 \item[Definition]
 An extension \(F/k\) is \textbf{simple} if \(F = k[\alpha]\) for a
 single element \(\alpha\).
@@ -2253,15 +2264,17 @@ Suppose \(I\) is free as an \(R\dash\)module, and let
 write \(M = \generators{B}\).
 
 Suppose that \(\abs{B} \geq 2\), so we can pick at least 2 basis
-elements \(\vector m_1\neq \vector m_2\), and consider \[
+elements \(\vector m_1\neq \vector m_2\), and consider
+\begin{align*}
 \vector c = \vector m_1 \vector m_2 - \vector m_2 \vector m_1,
-\]
+\end{align*}
 
 which is also an element of \(M\) .
 
-Since \(R\) is an integral domain, \(R\) is commutative, and so \[
+Since \(R\) is an integral domain, \(R\) is commutative, and so
+\begin{align*}
 \vector c = \vector m_1 \vector m_2 - \vector m_2 \vector m_1 = \vector m_1 \vector m_2 - \vector m_1 \vector m_2 = \vector 0_M
-\]
+\end{align*}
 
 However, this exhibits a linear dependence between \(\vector m_1\) and
 \(\vector m_2\), namely that there exist \(\alpha_1, \alpha_2 \neq 0_R\)
@@ -2318,9 +2331,10 @@ Fix some notation: \begin{align*}
 The \emph{minimal polynomial} of a linear morphism is the unique monic
 polynomial \(\min_A(x)\) of minimal degree such that \(\min_A(A) = 0\).
 \item[Definition]
-The \textbf{characteristic polynomial} of \(A\) is given by \[
+The \textbf{characteristic polynomial} of \(A\) is given by
+\begin{align*}
 \chi_A(x) = \det(A - xI))= \det(SNF(A - xI))
-.\]
+.\end{align*}
 \item[Lemma]
 If \(A\) is upper triangular, then \(\det(A) = \prod_{i} a_{ii}\)
 \item[Theorem (Cayley-Hamilton)]
@@ -2331,9 +2345,10 @@ By Cayley-Hamilton, \(\min_A\) divides \(\chi_A\). Every \(\lambda_i\)
 is a root of \(\mu_M\):
 
 Let \((\vector v_i, \lambda_i)\) be a nontrivial eigenpair. Then by
-linearity, \[
+linearity,
+\begin{align*}
 \min_A(\lambda_i)\vector v_i = \min_A(A)\vector v_i = \vector 0
-,\] which forces \(\min_A(\lambda_i) = 0\).
+,\end{align*} which forces \(\min_A(\lambda_i) = 0\).
 \item[Definition (Similar Matrices)]
 Two matrices \(A,B\) are \textbf{similar} (i.e.~\(A = PBP\inv\))
 \(\iff A,B\) have the same Jordan Canonical Form (JCF).
@@ -2475,14 +2490,16 @@ Writing \(\spec(A) = \theset{(\lambda_i, b_i)}\), \begin{align*}
 \begin{description}
 \item[Lemma]
 The characteristic polynomial is the \emph{product of the invariant
-factors}, i.e. \[
+factors}, i.e.
+\begin{align*}
 \chi_A(x) = \prod_{j=1}^n f_j(x)
-.\]
+.\end{align*}
 \item[Lemma]
 The minimal polynomial of \(A\) is the \emph{invariant factor of highest
-degree}, i.e. \[
+degree}, i.e.
+\begin{align*}
 \min_A(x) = f_n(x)
-.\]
+.\end{align*}
 \item[Lemma]
 For a linear operator on a vector space of nonzero finite dimension,
 TFAE:
@@ -2538,11 +2555,13 @@ Statements:
 \item
   Let \(W_1 = \spanof_k\theset{\vector v_1}^\perp\).
 \item
-  Then for any \(\vector w_1 \in W_1\), \[
+  Then for any \(\vector w_1 \in W_1\),
+  \begin{align*}
   \inner{\vector v_1}{ A \vector w_1} =
   \inner{A \vector v_1}{\vector w_1} =
   \lambda \inner{\vector v_1}{\vector w_1} = 0,
-  \] so \(A(W_1) \subseteq W_1\) is an invariant subspace, etc.
+  \end{align*} so \(A(W_1) \subseteq W_1\) is an invariant subspace,
+  etc.
 \item
   Suppose now that \(A\) is symmetric.
 \item
@@ -2665,7 +2684,7 @@ M = \left[\begin{array}{rr}
   Non-similar matrices with the same characteristic polynomial
 \end{enumerate}
 
-\[
+\begin{align*}
 \left[\begin{array}{ll}
 {1}  & {0} \\
 {0} & {1}
@@ -2675,7 +2694,7 @@ M = \left[\begin{array}{rr}
  {1} & {1} \\
  {0} & {1}
   \end{array}\right]
-\]
+\end{align*}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2719,9 +2738,10 @@ Suppose \(\mm\) is maximal, \(ab\in \mm\), and \(b\not\in \mm\). Then
 there is a containment of ideals
 \(\mm \subsetneq \mm + (b) \implies \mm + (b) = R\).
 
-So \[
+So
+\begin{align*}
 1 = m + rb \implies a = am + r(ab)
-,\] but \(am\in \mm\) and \(ab\in \mm \implies a\in \mm\).
+,\end{align*} but \(am\in \mm\) and \(ab\in \mm \implies a\in \mm\).
 \end{description}
 
 \emph{Counterexample}: \((0) \in \ZZ\) is prime since \(\ZZ\) is a
@@ -2730,9 +2750,10 @@ ideal.
 
 \begin{description}
 \item[Lemma]
-The nilradical is the intersection of all prime ideals, i.e. \[
+The nilradical is the intersection of all prime ideals, i.e.
+\begin{align*}
   \mathfrak{N}(R) = \intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
-  \]
+  \end{align*}
 \item[Proof]
 \(\mathfrak{N} \subseteq \intersect \mathfrak{p}\):
 \(x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p\).
@@ -2822,7 +2843,8 @@ Cyclic Groups
 \item
   Show that every subgroup of a cyclic group is cyclic.
 \item
-  Show that \[\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.\]
+  Show that
+  \begin{align*}\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.\end{align*}
 \item
   Compute \(\aut(\ZZ/n\ZZ)\) for \(n\) composite.
 \item
