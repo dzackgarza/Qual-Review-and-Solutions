@@ -913,19 +913,20 @@ G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian fo
 .\]
 :::
 
-Theorem
+:::{.theorem title=""}
 A group $G$ is solvable iff its derived series terminates.
+:::
 
-Theorem
+:::{.theorem title=""}
 If $n\geq 4$ then $S_n$ is solvable.
+:::
 
-Lemmas
-\hfill
+Lemmas:
 
-    - $G$ is solvable iff $G$ has a terminating *derived series*.
-    - Solvable groups satisfy the 2 out of 3 property
-    - Abelian $\implies$ solvable
-    - Every group of order less than 60 is solvable.
+- $G$ is solvable iff $G$ has a terminating *derived series*.
+- Solvable groups satisfy the 2 out of 3 property
+- Abelian $\implies$ solvable
+- Every group of order less than 60 is solvable.
 
 
 :::{.definition title="Nilpotent"}
@@ -933,21 +934,25 @@ A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
 
 > Moral: the adjoint map is nilpotent.
 
-Theorem
+:::{.theorem title=""}
 A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
+:::
 
-Theorem
+:::{.theorem title=""}
 A group $G$ is nilpotent iff every maximal subgroup is normal.
+:::
 
-Theorem
+:::{.theorem title=""}
 $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
+:::
 
 Theorem 
+:::{.theorem title=""}
 $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
+:::
 
 
-
-**Lemma:**
+:::{.proposition title=""}
 For $G$ a finite group, TFAE:
 
 - $G$ is nilpotent
@@ -957,6 +962,7 @@ For $G$ a finite group, TFAE:
 - Every maximal subgroup is normal
 - $G$ has a terminating *Lower* Central Series
 - $G$ has a terminating *Upper* Central Series
+:::
 
 **Lemmas:**
 
