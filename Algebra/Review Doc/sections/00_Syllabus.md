@@ -122,9 +122,9 @@ References: [1,3,4]
 
 > Adapted from remark written by Roy Smith, August 2006
 
-## Group theory:
+## Group Theory
 
-The first 6 chapters (220 pages) of DF are excellent.
+The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1.
 

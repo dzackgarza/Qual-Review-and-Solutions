@@ -290,6 +290,8 @@ Corollary (Class Equation)
 
     Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 
+**Examples**
+
 1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
 
 - $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
@@ -308,9 +310,11 @@ Corollary (Class Equation)
 
 - $(G/H)^G = \emptyset$
 
-> *Application:* If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
->
-> *Proof:* This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
+*Application:* 
+If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+
+Proof
+: This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 
 Theorem (Burnside's Formula)
 :   \hfill
@@ -360,8 +364,8 @@ All sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
 S_p^1, S_p^2 \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^1g\inv = S_p^2
 .\end{align*}
 
-**Corollary**:
-$n_p = 1 \iff S_p \normal G$
+Corollary
+: $n_p = 1 \iff S_p \normal G$
 
 ### Sylow 3 (Numerical Constraints)
 
@@ -371,18 +375,18 @@ $n_p = 1 \iff S_p \normal G$
 
  3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
 
-**Corollary:**
-$p$ does not divide $n_p$.
+Corollary
+: $p$ does not divide $n_p$.
 
-**Lemma:**
-Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+Proposition
+: Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
-> *Proof:*
-> Let $H \leq G$ be a $p\dash$subgroup.
-> If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
->
-> Otherwise, it is contained in some $p\dash$subgroup $H^1$.
-> Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
+Proof
+:   Let $H \leq G$ be a $p\dash$subgroup.
+    If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
+
+    Otherwise, it is contained in some $p\dash$subgroup $H^1$.
+    Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 
 Theorem (Fratini's Argument)
 : If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
