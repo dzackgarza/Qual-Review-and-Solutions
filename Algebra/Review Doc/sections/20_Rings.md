@@ -84,7 +84,10 @@ A ring $R$ is *local* iff it contains a unique maximal ideal.
 :::
 
 :::{.definition title="Prime Ideal"}
-$\mathfrak{p}$ is a **prime** ideal $\iff ab\in \mathfrak p \implies a\in \mathfrak p$ or $b\in \mathfrak p$.
+$\mfp$ is a **prime** ideal $\iff$
+\[ 
+ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
+.\]
 :::
 
 :::{.definition title="Prime Spectrum"}
