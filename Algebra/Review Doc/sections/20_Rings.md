@@ -39,7 +39,7 @@ Equivalently, $a\divides b$ and $b\divides a$.
 :::{.definition title="Integral Domain"}
 Slogan: no nonzero zero divisors, i.e.
 \[  
-a, b\in \R\smz, ab = 0 \implies a = 0 \txor b = 0
+a, b\in \R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
 .\]
 :::
 
