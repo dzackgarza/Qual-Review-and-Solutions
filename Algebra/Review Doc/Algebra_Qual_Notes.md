@@ -970,6 +970,8 @@ For $G$ a finite group, TFAE:
 
 ## Definitions
 
+### Basics
+
 :::{.definition title="Irreducible Element"}
 An element $r\in R$ is **irreducible** iff 
 \[  
@@ -995,6 +997,13 @@ x &\mapsto rx
 fails to be injective.
 :::
 
+:::{.definition title="Associate Elements"}
+$a, b\in R$ are *associates* iff there exists a $u\in R\units$ such that $a = ub$. 
+Equivalently, $a\divides b$ and $b\divides a$.
+:::
+
+### Types of Rings
+
 :::{.definition title="Integral Domain"}
 Slogan: no nonzero zero divisors, i.e.
 \[  
@@ -1011,7 +1020,7 @@ A ring $R$ is a *UFD* iff $R$ is an integral domain and every $r\in R\smz$ admit
 \[  
 r = u \prod_{i=1}^n p_i
 \]
-where $u\in R\units$ and the $p_i$ irreducible.
+where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::
 
 :::{.definition title="Noetherian"}
