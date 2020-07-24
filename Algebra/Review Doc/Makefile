@@ -1,7 +1,5 @@
 SHELL:=/bin/zsh
 FILENAME="Algebra_Qual_Notes.md"
-TITLE="Algebra Qualifying Exam Notes"
-
 
 compile:
 	latex_preview -f $(FILENAME) -j -z

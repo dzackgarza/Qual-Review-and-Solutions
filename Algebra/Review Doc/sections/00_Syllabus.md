@@ -1,7 +1,3 @@
----
-title: Qualifying Exam Syllabus
----
-
 # Topics and Remarks 
 
 > Adapted from remark written by Roy Smith, August 2006
