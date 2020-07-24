@@ -908,9 +908,9 @@ Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1
 
 :::{.definition title="Solvable"}
 A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
-  $$
-  G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
-  .$$
+\[
+G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
+.\]
 :::
 
 Theorem
