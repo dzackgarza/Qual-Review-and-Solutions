@@ -1,3 +1,4 @@
+
 ---
 title: Qualifying Exam Syllabus
 ---
@@ -262,6 +263,7 @@ References: [^1],[^3],[^4]
 [^3]:  Thomas W. Hungerford, Algebra, Springer, 1974.
 
 [^4]:  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
+
 
 
 # Group Theory
@@ -555,6 +557,7 @@ Slogan: the number of orbits is equal to the average number of fixed points, i.e
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
 :::
+
 ### Sylow Theorems
 
 :::{.definition}
@@ -858,6 +861,7 @@ Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ ch
 
 
 
+
 ## Series of Groups
 
 :::{.definition title="Normal Series"}
@@ -987,8 +991,10 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txt{or} b\divides 
 .\]
 :::
 
-*Example of an irreducible element that is not prime:*
-$3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::{.example title="An irreducible element that is not prime."}
+$3\in \ZZ[\sqrt{-5}]$. 
+Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::
 
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
@@ -1206,6 +1212,7 @@ For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchth
 :::{.definition title="Radical Ideal"}
 An ideal is *radical* iff $\rad(I) = I$. 
 :::
+
 
 
 # Fields
@@ -1534,6 +1541,7 @@ Theorem (Primitive Element)
 
 Corollary
 : $\GF(p^n)$ is a simple extension over $\FF_p$.
+
 # Modules
 
 ## General Modules
@@ -1606,6 +1614,7 @@ Proof
     But since $M \subset R$, we have $\alpha, m \in R$ and $\vector 0_M = 0_R$, and since $R$ is an integral domain, we have $\alpha m = 0_R \implies \alpha = 0_R$ or $m = 0_R$.
 
     Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be a linearly independent set and thus a basis for $M$ as an $R\dash$module.
+
 
 # Linear Algebra
 
@@ -1918,6 +1927,7 @@ $$
 1 & 0
 \end{array}\right]
 .\end{align*}
+
 Lemma
 : Every $a\in R$ for a finite ring is either a unit or a zero divisor.
 
@@ -1973,6 +1983,7 @@ Lemma
 
 Proof
 : Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
+
 
 
 # Extra Problems

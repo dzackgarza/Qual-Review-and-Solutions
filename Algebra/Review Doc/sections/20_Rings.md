@@ -1,4 +1,3 @@
-
 # Ring Theory
 
 ## Definitions
@@ -19,8 +18,10 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txt{or} b\divides 
 .\]
 :::
 
-*Example of an irreducible element that is not prime:*
-$3\in \ZZ[\sqrt{-5}]$. Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::{.example title="An irreducible element that is not prime."}
+$3\in \ZZ[\sqrt{-5}]$. 
+Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::
 
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
