@@ -583,7 +583,7 @@ Some useful facts:
 Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
 \[
-\forall p^n \text{ dividing } \abs{G} \quad \text{ there exists a subgroup of size } p^n
+\forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
 \]
 
 > If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
