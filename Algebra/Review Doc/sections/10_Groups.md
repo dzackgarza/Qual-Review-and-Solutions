@@ -292,17 +292,18 @@ Slogan: the number of orbits is equal to the average number of fixed points, i.e
 
 ### Sylow Theorems
 
+:::{.definition}
+A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
+  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
+:::
 
 Write
+
 
 - $\abs{G} = p^k m$ where $(p, m) = 1$,
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
-:::{.definition}
-A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
-  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
-:::
 
 Some useful facts:
 
@@ -315,12 +316,11 @@ Some useful facts:
 
 Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
-\begin{align*}
+\[
 \forall p^n \text{ dividing } \abs{G} \quad \text{ there exists a subgroup of size } p^n
-.\end{align*}
+\]
 
 > If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
-
 > In particular, Sylow $p\dash$subgroups always exist.
 
 ### Sylow 2 (Sylows are Conjugate)
