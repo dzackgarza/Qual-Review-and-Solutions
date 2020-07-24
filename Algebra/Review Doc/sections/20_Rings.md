@@ -30,13 +30,13 @@ fails to be injective.
 :::{.definition title="Integral Domain"}
 Slogan: no nonzero zero divisors, i.e.
 \[  
-a, b\in R\smz
+a, b\in \R\smz, ab = 0 \implies a = 0 \txor b = 0
 .\]
 ?
 :::
 
 :::{.definition title="Principal Ideal Domain"}
-?
+A ring $R$ is *principal* iff whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
