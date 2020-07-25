@@ -44,7 +44,7 @@ H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \theset{N: H \leq N \normal G }
 :::
 
 
-\gens{asdasd}
+$\gens{asdasd}$
 
 
 :::{.definition title="Normal Core of a subgroup"}
