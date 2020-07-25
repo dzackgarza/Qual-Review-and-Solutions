@@ -115,7 +115,10 @@ D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 
 :::{.definition title="Alternating Group"}
 The **alternating group** is the subgroup of **even** permutations, i.e.
-\[A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}\] where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
+\[
+A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
+\] 
+where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
 :::
 
 :::{.corollary title="Alternating Group"}
