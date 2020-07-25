@@ -58,7 +58,7 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 :::{.definition title="Max Spectrum"}
-$\maxspec(R) = \theset{\mm \normal R \suchthat \mm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+$\maxspec(R) = \theset{\mfm \normal R \suchthat \mfm \text{ is maximal}}$ is the **max-spectrum** of $R$.
 :::
 
 
@@ -72,8 +72,7 @@ a, b\in R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
 :::
 
 :::{.definition title="Principal Ideal"}
-$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$,
-i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
+$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$, i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
 :::
 
 :::{.definition title="Principal Ideal Domain"}
@@ -107,7 +106,7 @@ $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is th
 :::{.definition title="Jacobson Radical"}
 The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
 \[  
-\jacobsonrad(R) = \intersect_{\mm \in \mspec } \mm
+\jacobsonrad(R) = \intersect {\mfm \suchthat \mfm \in \maxspec(R) }
 .\]
 :::
 
@@ -211,13 +210,13 @@ The claim is that $S$ contains a maximal element $M$.
 
 $S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
 
-Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat C = \union_i C_i$.
+Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat{C} = \union_i C_i$.
 
-**$\hat C$ is an upper bound for $C$:**
+**$\hat{C}$ is an upper bound for $C$:**
 This follows because every $C_i \subseteq \hat C$.
 
-**$\hat C$ is in $S$:**
-Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat C$ doesn't contain a unit, and is thus proper.
+**$\hat{C}$ is in $S$:**
+Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
 :::
 
 ### Toward Number Theory and Algebraic Geometry
