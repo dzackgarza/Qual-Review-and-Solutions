@@ -24,7 +24,7 @@ Corollary
 
 
 Theorem (Eisenstein's Criterion)
-:   If $f(x) = \displaystyle\sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
+:   If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 
     - $p$ divides every coefficient *except* $a_n$ and
     - $p^2$ does not divide $a_0$,
@@ -50,7 +50,7 @@ Proof
 : Todo
 
 Theorem (Construction of Finite Fields)
-: $\GF(p^n)\cong \displaystyle\frac{\FF_p}{(f)}$ where $f \in \FF_p[x]$ is any irreducible of degree $n$, and $\GF(p^n) \cong \FF[\alpha] \cong \spanof_\FF\theset{1, \alpha, \cdots, \alpha^{n-1}}$ for any root $\alpha$ of $f$.
+: $\GF(p^n)\cong \frac{\FF_p}{(f)}$ where $f \in \FF_p[x]$ is any irreducible of degree $n$, and $\GF(p^n) \cong \FF[\alpha] \cong \spanof_\FF\theset{1, \alpha, \cdots, \alpha^{n-1}}$ for any root $\alpha$ of $f$.
 
 Lemma (Prime Subfields of Finite Fields)
 : Every finite field $F$ is isomorphic to a unique field of the form $\GF(p^n)$ and if $\ch F = p$, it has prime subfield $\FF_p$.
