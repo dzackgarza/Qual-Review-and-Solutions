@@ -8,7 +8,7 @@
 \[
 C_G(x) 			=       &&  \theset{g\in G \suchthat [g, x] = 1}                 &&  \subseteq G       &&  
 \parbox{7em}{\small\centering Centralizer \\ (Element)} \\
-C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h\in H} C_G(h)                 &&  \leq G       &&  
+C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h \in H} C_G(h)                 &&  \leq G       &&  
 \parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
 C(h) 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  
 \text{Conjugacy Class} \\
