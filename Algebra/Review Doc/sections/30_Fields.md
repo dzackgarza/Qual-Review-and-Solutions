@@ -123,7 +123,7 @@ Lemma
 : If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 
 Definition
-: $\aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
+: $\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
 
 Lemma
 : If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
@@ -188,7 +188,7 @@ Definition (Characterizations of Galois Extensions)
     - $L/k$ is **Galois**
     - $L/k$ is finite, normal, and separable.
     - $L/k$ is the splitting field of a separable polynomial
-    - $\abs{\aut(L/k)} = [L: k]$
+    - $\abs{\Aut(L/k)} = [L: k]$
     - The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 
 Theorem (Fundamental Theorem of Galois Theory)
