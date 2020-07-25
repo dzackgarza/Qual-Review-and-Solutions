@@ -3,11 +3,6 @@
 - $2^X$ denotes the powerset of $X$.
 - For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
-\[
-\intersect_a
-\cap_a
-\cup_a
-\]
 
 ## Big List of Notation
 \[
