@@ -6,9 +6,20 @@
 applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the
 Galois group of a given polynomial**) of the topics mentioned."
 
+## References
+
+- [1]  David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
+
+- [2]  Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
+
+- [3]  Thomas W. Hungerford, Algebra, Springer, 1974.
+
+- [4]  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
+
+
 ## Group Theory
 
-References: [@dummitAbstractAlgebra],[^3],[^4]
+References: [1], [3], [4]
 
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
@@ -96,7 +107,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 ## Linear Algebra
 
-References: [^1],[^2],[^4]
+References: [1],[2],[4]
 
 - Determinants
 
@@ -119,7 +130,7 @@ References: [^1],[^2],[^4]
 
 ## Rings
 
-References: [^1],[^3],[^4]
+References: [1],[3],[4]
 
 - DF chapters 13,14 (about 145 pages).
 
@@ -211,7 +222,7 @@ References: [^1],[^3],[^4]
 
 ## Modules
 
-References: [^1],[^3],[^4]
+References: [1],[3],[4]
 
 - Fundamental homomorphism theorems for rings and modules
 
@@ -233,7 +244,7 @@ References: [^1],[^3],[^4]
 
 ## Field Theory
 
-References: [^1],[^3],[^4]
+References: [1],[3],[4]
 
 - Algebraic extensions of fields
 
@@ -248,15 +259,5 @@ References: [^1],[^3],[^4]
 - Polynomials
 
 - Solvability of polynomials by radicals
-
-\newpage
-
-[^1]:  David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
-
-[^2]:  Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
-
-[^3]:  Thomas W. Hungerford, Algebra, Springer, 1974.
-
-[^4]:  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
 
 
