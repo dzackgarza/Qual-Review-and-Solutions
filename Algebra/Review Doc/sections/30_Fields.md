@@ -106,7 +106,7 @@ Definition
     - Every irreducible $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
       - i.e. every polynomial splits into linear factors
 
-    - Every embedding $\sigma: L \injects \overline k$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
+    - Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
     - If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
 
