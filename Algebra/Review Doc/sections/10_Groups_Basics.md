@@ -45,9 +45,9 @@ H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \{ N: H \leq N \unlhd G \}
 
 :::{.definition title="Normal Core of a subgroup"}
 The largest normal subgroup of $G$ containing $H$:
-\begin{align*}
-H_G = \bigcap_{g\in G} gHg^{-1} = \left\langle  N: N \unlhd G ~\&~ N \leq H\right\rangle = \ker \psi
-.\end{align*}    
+\[
+H_G = \intersect_{g\in G} gHg^{-1} = \gens{ N: N \normal G ~\&~ N \leq H} = \ker \psi
+.\]
 where
 \begin{align*}
 \psi: G &\to \aut(G/H) \\
