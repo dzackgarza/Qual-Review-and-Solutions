@@ -60,7 +60,7 @@ A group $G$ is solvable iff its derived series terminates.
 If $n\geq 4$ then $S_n$ is solvable.
 :::
 
-Lemmas:
+**Lemmas**:
 
 - $G$ is solvable iff $G$ has a terminating *derived series*.
 - Solvable groups satisfy the 2 out of 3 property
@@ -104,5 +104,5 @@ For $G$ a finite group, TFAE:
 
 **Lemmas:**
 
-- Nilpotent groups satisfy the 2 out of 3 property.\todo{Specify.}
+- Nilpotent groups satisfy the 2 out of 3 property.\todo{Todo. Specify.}
 - $G$ has normal subgroups of order $d$ for *every* $d$ dividing $\abs{G}$
