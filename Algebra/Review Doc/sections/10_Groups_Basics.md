@@ -4,7 +4,6 @@
 - For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 ## Big List of Notation
-
 \[
 C_G(x) 			=       &&  \theset{g\in G \mid [g, x] = 1}                 &&  \subseteq G       &&  
 \parbox{7em}{\small\centering Centralizer \\ (Element)} \\
