@@ -263,7 +263,7 @@ Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x
 
   - $X^g$ is the set of **normal subgroups** of $G$
 
-:::{.corollary }
+:::{.corollary}
 Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
 :::
 
