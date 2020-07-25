@@ -212,7 +212,7 @@ Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 ## Special Classes of Groups
 
 :::{.definition title="2 out of 3 Property"}
-The **"2 out of 3 property"** is satisfied by a class of groups $\mathcal C$ iff whenever $G \in \mathcal C$, then $N, G/N \in \mathcal{C}$ for any $N \normal G$.
+The **"2 out of 3 property"** is satisfied by a class of groups $\mathcal{C}$ iff whenever $G \in \mathcal{C}$, then $N, G/N \in \mathcal{C}$ for any $N \normal G$.
 :::
 
 :::{.definition title="p-groups"}
@@ -247,11 +247,11 @@ G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 - Split into coprime pieces
 
 :::{.example}
-\begin{align*}
+\[
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
 \cong
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2} \times \ZZ_7
-.\end{align*}
+\]
 :::
 
 **Going from elementary divisors to invariant factors:**
@@ -262,9 +262,9 @@ G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 
 :::{.example}
 Given the invariant factor decomposition
-\begin{align*}
-G = {\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{2}\times\mathbb{Z}_{3}\times\mathbb{Z}_{3}\times\mathbb{Z}_{5^2}}
-.\end{align*}
+\[
+G = {\ZZ_{2}\times\ZZ_{2}\times\ZZ_{2}\times\ZZ_{3}\times\ZZ_{3}\times\ZZ_{5^2}}
+\]
 
 | $p = 2$  | $p= 3$  | $p =5$ |
 |---|---|---|
@@ -285,9 +285,9 @@ $\implies n_{m-1} = 3 \cdot 2$
 $\implies n_{m-2} = 2$
 
 and thus
-\begin{align*}
+\[
 G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
-.\end{align*}
+\]
 :::
 
 **Classifying Abelian Groups of a Given Order:**

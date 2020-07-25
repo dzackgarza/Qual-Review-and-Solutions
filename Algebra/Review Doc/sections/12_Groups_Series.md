@@ -78,7 +78,7 @@ A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
 A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
 :::
 
-:::{.theorem title="Nilpotent Implies Maximal Noramsl"}
+:::{.theorem title="Nilpotent Implies Maximal Normals"}
 A group $G$ is nilpotent iff every maximal subgroup is normal.
 :::
 
