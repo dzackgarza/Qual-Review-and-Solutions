@@ -58,7 +58,7 @@ $p$ does not divide $n_p$.
 Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 :::
 
-asdsad proof asdsad 
+Something proof title="Something"
 
 :::{. proof }
 Let $H \leq G$ be a $p\dash$subgroup.
