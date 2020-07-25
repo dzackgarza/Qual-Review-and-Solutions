@@ -20,9 +20,10 @@ Any two composition series of a group have the same length and isomorphic compos
 A group $G$ is **simple** iff $H\normal G \implies H = \theset{e}, G$, i.e. it has no non-trivial proper subgroups.
 :::
 
-Lemma
+:::{.proposition}
 If $G$ is *not* simple, then $G$ is an extension of any of its normal subgroups.
 I.e. for any $N\normal G$, $G \cong E$ for some extension of the form $N\to E\to G/N$.
+:::
 
 :::{.definition title="Lower Central Series"}
 Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *lower central series* of $G$.
@@ -34,11 +35,12 @@ Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *
 
 :::{.definition title="Upper Central Series"}
 Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.
-  Then $Z_0 \leq Z_1 \leq \cdots$ is the *upper central series* of $G$.
+Then $Z_0 \leq Z_1 \leq \cdots$ is the *upper central series* of $G$.
 
-  Equivalently, since $Z_i\normal G$, there is a quotient map $\pi:G\to G/Z_i$, so define $Z_{i+1} \definedas \pi\inv(Z(G/Z_i))$ (?).
+Equivalently, since $Z_i\normal G$, there is a quotient map $\pi:G\to G/Z_i$, so define $Z_{i+1} \definedas \pi\inv(Z(G/Z_i))$ (?).
 
 > Mnemonic: "upper" because the chain is ascending. "Take higher centers".
+
 :::
 
 :::{.definition title="Derived Series"}
