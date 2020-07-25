@@ -1229,7 +1229,7 @@ Let $k$ denote a field.
 - If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 - Every field morphism is either zero or injective.
 
-:::{.theorem title=""}
+:::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
 :::
 
