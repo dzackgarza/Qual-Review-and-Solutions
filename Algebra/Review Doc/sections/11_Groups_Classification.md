@@ -60,7 +60,7 @@ Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 
 Something proof title="Something"
 
-:::{. proof }
+:::{.proof}
 Let $H \leq G$ be a $p\dash$subgroup.
 If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
 
