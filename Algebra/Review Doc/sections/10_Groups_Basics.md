@@ -107,9 +107,11 @@ D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 - A cycle of even *length* is **odd**
 
 - A cycle of odd *length* is **even**
+
+> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
+
 :::
 
-Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
 
 :::{.definition title="Alternating Group"}
 The **alternating group** is the subgroup of **even** permutations, i.e.
