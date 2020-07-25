@@ -1365,7 +1365,7 @@ TFAE:
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::
 
-:::{.definition title=""}
+:::{.definition title="Field Automorphisms"}
 $\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
 :::
 
@@ -1494,7 +1494,7 @@ If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $
 $n$ divides the order $\abs{ \Gal(K/\QQ)}$.
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="Characterization of Perfect Fields"}
 TFAE:
 
 - $k$ is a **perfect** field.
@@ -1506,7 +1506,7 @@ TFAE:
 - If $\ch k > 0$, the Frobenius is an automorphism of $k$.
 :::
 
-:::{.theorem title=""}
+:::{.theorem title="Splitting + Perfect implies Galois"}
 - If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
 
 - $k = \QQ, \FF_p$ are perfect, and any finite normal extension is Galois.
@@ -1571,7 +1571,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
-:::{.definition title=""}
+:::{.definition title="Simple Extension"}
 An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
 :::
 
