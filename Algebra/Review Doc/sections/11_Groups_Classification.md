@@ -82,6 +82,7 @@ We have $G \cong H \times K$ when
 - $H\intersect K = \theset{e} \subset G$
 
 > Note: can relax to $[h,k] = 1$ for all $h, k$.
+
 :::
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
@@ -94,6 +95,7 @@ We have $G = \prod_{i=1}^n H_i$ when
 - $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
 
 > Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
+
 :::
 
 
@@ -111,6 +113,7 @@ We have $G = N \semidirect_\psi H$ when
   .\]
 
 > Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
+
 :::
 
 **Useful Facts**
