@@ -178,9 +178,11 @@ Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
 
 :::{.theorem title="Cauchy's Theorem"}
 For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
-:::
 
 > This is a partial converse to Lagrange's theorem, and strengthened by Sylow's theorem.
+
+:::
+
 
 ### Group Actions
 
