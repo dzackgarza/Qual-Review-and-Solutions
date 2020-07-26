@@ -4,64 +4,6 @@
 - For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 
-## The Symmetric Group
-
-:::{.definition title="Parity of a Cycle"}
-
-- A cycle is **even** $\iff$ product of an *even* number of transpositions.
-
-- A cycle of even *length* is **odd**
-
-- A cycle of odd *length* is **even**
-
-> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
-
-:::
-
-
-:::{.definition title="Alternating Group"}
-The **alternating group** is the subgroup of **even** permutations, i.e.
-\[
-A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
-\] 
-where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
-:::
-
-:::{.corollary title="Alternating Group"}
-Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
-:::
-
-:::{.example}
-\[
-A_4 =
-& \{\id, \\
-& (1,3)(2,4),
-(1,2)(3,4),
-(1,4)(2,3), \\
-& (1,2,3),
-(1,3,2), \\
-& (1,2,4),
-(1,4,2), \\
-& (1,3,4),
-(1,4,3), \\
-& (2,3,4),
-(2,4,3) \}
-\]
-:::
-
-:::{.definition title="Transitive Subgroup"}
-A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
-:::
-
-
-Useful Facts:
-
-- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
-- Conjugacy classes are determined by cycle type
-- The order of a cycle is its length.
-- The order of an element is the least common multiple of the sizes of its cycles.
-- $A_{n\geq 5}$ is *simple*.
-
 ## Big List of Notation
 \[
 C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
@@ -156,6 +98,64 @@ A *dihedral group* of order $2n$ is given by
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 \]
 :::
+
+## The Symmetric Group
+
+:::{.definition title="Parity of a Cycle"}
+
+- A cycle is **even** $\iff$ product of an *even* number of transpositions.
+
+- A cycle of even *length* is **odd**
+
+- A cycle of odd *length* is **even**
+
+> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
+
+:::
+
+
+:::{.definition title="Alternating Group"}
+The **alternating group** is the subgroup of **even** permutations, i.e.
+\[
+A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
+\] 
+where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
+:::
+
+:::{.corollary title="Alternating Group"}
+Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
+:::
+
+:::{.example}
+\[
+A_4 =
+& \{\id, \\
+& (1,3)(2,4),
+(1,2)(3,4),
+(1,4)(2,3), \\
+& (1,2,3),
+(1,3,2), \\
+& (1,2,4),
+(1,4,2), \\
+& (1,3,4),
+(1,4,3), \\
+& (2,3,4),
+(2,4,3) \}
+\]
+:::
+
+:::{.definition title="Transitive Subgroup"}
+A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
+:::
+
+
+Useful Facts:
+
+- $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
+- Conjugacy classes are determined by cycle type
+- The order of a cycle is its length.
+- The order of an element is the least common multiple of the sizes of its cycles.
+- $A_{n\geq 5}$ is *simple*.
 
 ## Counting Theorems
 
