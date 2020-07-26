@@ -253,7 +253,7 @@ The number of conjugates of an element (i.e. the size of its conjugacy class) is
 ### The Class Equation
 
 \[
-\abs{G} = \abs{Z(G)} + \sum _{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
 \]
 
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
