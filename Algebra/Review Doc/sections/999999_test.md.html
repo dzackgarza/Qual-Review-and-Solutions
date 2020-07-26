@@ -1,0 +1,59 @@
+[WARNING] This document format
+ requires a nonempty <title> element.
+  Defaulting to '999999_test' as the title.
+  To specify a title, use
+ 'title' in metadata or --metadata t
+itle="...".
+
+\input{"/home/zack/Notes/Latex/preamble.tex"}
+\let\Begin\begin
+\let\End\end
+\newcommand\wrapenv[1]{#1}
+
+\makeatletter
+\def\ScaleWidthIfNeeded{%
+ \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\ScaleHeightIfNeeded{%
+  \ifdim\Gin@nat@height>0.9\textheight
+    0.9\textheight
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\setkeys{Gin}{width=\ScaleWidthIfNeeded,height=\ScaleHeightIfNeeded,keepaspectratio}%
+% Create indices up front
+\makeindex[title=Concept index]
+
+\title{
+\textbf{
+    Title
+  }
+  }
+
+\author{D. Zack Garza}
+
+\date{\today}
+
+
+
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+
+
+\bibliography{/home/zack/Notes/library.bib}
+
+\end{document}
+
