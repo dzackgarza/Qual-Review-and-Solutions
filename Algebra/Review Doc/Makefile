@@ -1,6 +1,8 @@
 SHELL:=/bin/zsh
 FILENAME="Algebra_Qual_Notes.md"
 
+.SILENT:
+
 compile:
 	latex_preview -f $(FILENAME) -j -z
 	echo "Make done"
