@@ -1,4 +1,4 @@
-### Sylow Theorems
+## Sylow Theorems
 
 :::{.definition}
 A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
