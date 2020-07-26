@@ -22,6 +22,7 @@ Some useful facts:
 
 ### Sylow 1 (Cauchy for Prime Powers)
 
+
 \[
 \forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
 \]
