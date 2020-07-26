@@ -6,32 +6,32 @@
 
 ## Big List of Notation
 \[
-C_G(x) 			=       &&  \theset{g\in G \suchthat [g, x] = 1}                 &&  \subseteq G       &&  
+C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
 \parbox{7em}{\small\centering Centralizer \\ (Element)} \\
-C_G(H) 			=       &&  \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h \in H} C_G(h)                 &&  \leq G       &&  
+C_G(H) 			=                                               && \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h \in H} C_G(h) && \leq G            &&
 \parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
-C(h) 		=       &&  \theset{ghg^{-1} \mid g\in G}                     &&  \subseteq G       &&  
+C(h) 		=                                                   && \theset{ghg^{-1} \mid g\in G}                                                 && \subseteq G       &&
 \text{Conjugacy Class} \\
-Z(G) 			=       &&  \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x} &&  \subseteq G       &&  
+Z(G) 			=                                                 && \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x}                            && \subseteq G       &&
 \text{Center} \\
-N_G(H) 			=       &&  \theset{g\in G \mid gHg^{-1} = H}                  &&  \subseteq G       &&  
+N_G(H) 			=                                               && \theset{g\in G \mid gHg^{-1} = H}                                             && \subseteq G       &&
 \text{Normalizer} \\
-\mathrm{Inn}(G) = &&  \theset{\phi_g(x) = gxg^{-1} }                 &&  \subseteq \Aut(G) &&  
+\mathrm{Inn}(G) =                                           && \theset{\phi_g(x) = gxg^{-1} }                                                && \subseteq \Aut(G) &&
 \text{Inner Aut.} \\
-\mathrm{Out}(G) = &&  \Aut(G) / \mathrm{Inn}(G)                      &&  \injects \Aut(G)  &&  
+\mathrm{Out}(G) =                                           && \Aut(G) / \mathrm{Inn}(G)                                                     && \injects \Aut(G)  &&
 \text{Outer Aut.} \\
-[g, h] = &&  ghgh\inv                      &&  \in G  &&  
+[g, h] =                                                    && ghgh\inv                                                                      && \in G             &&
 \parbox{7em}{\small\centering Commutator \\ (Element)} \\
-[G, H] = && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle  &&  \leq G  &&  
+[G, H] =                                                    && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle            && \leq G            &&
 \parbox{7em}{\small\centering Commutator \\ (Subgroup)} \\
 \cline{1-6}
-\OO_x\txt{or} G\cdot x 			=       &&  \theset{g.x \mid x\in X}                          &&  \subseteq X       &&  
+\OO_x\txt{or} G\cdot x 			=                               && \theset{g.x \mid x\in X}                                                      && \subseteq X       &&
 \text{Orbit} \\
-\stab_G(x)\txt{or}  G_x 			=       &&  \theset{g\in G \mid g.x = x}                      &&  \subseteq G       &&  
+\stab_G(x)\txt{or}  G_x 			=                             && \theset{g\in G \mid g.x = x}                                                  && \subseteq G       &&
 \text{Stabilizer} \\
-X/G = && \theset{G_x \suchthat x\in X} && \subseteq 2^X && 
+X/G =                                                       && \theset{G_x \suchthat x\in X}                                                 && \subseteq 2^X     &&
 \text{Set of Orbits} \\
-X^{g} = && \theset{x\in X \suchthat \forall g\in G,~ g.x = x} && \subseteq X && 
+X^{g} =                                                     && \theset{x\in X \suchthat \forall g\in G,~ g.x = x}                            && \subseteq X       &&
 \text{Fixed Points} \\
 \]
 
