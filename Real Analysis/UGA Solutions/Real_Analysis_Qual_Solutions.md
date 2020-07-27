@@ -2176,6 +2176,7 @@ Concepts used:
 \]
 
   - The LHS is zero by assumption and thus so is the RHS.
+  
 
 - Note that $gf$ is positive.
 
