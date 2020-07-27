@@ -2269,7 +2269,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 - Claim: $\norm{f_n - f}_u \converges{n\to\infty}\to 0$
 
-- $\norm{f_n - f}_u \to 0$, so $f_n$ converges to $f$, which is in the same space.
+- Thus the Cauchy sequence $\theset{f_n}$ converges to a function $f$ in the $u\dash$norm where $f$ is an element of this space, making it complete.
 
 
 # Fall 2016
