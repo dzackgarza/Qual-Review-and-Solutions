@@ -2176,7 +2176,8 @@ Concepts used:
 \]
 
   - The LHS is zero by assumption and thus so is the RHS.
-  
+
+  - $m \ll \mu$ by construction.
 
 - Note that $gf$ is positive.
 
