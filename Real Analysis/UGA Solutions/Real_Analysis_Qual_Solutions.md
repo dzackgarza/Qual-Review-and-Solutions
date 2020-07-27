@@ -2099,13 +2099,13 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
 
 - As in the construction of the Cantor set, let 
 
-  - $K_1$ denote $[0, 1]$ with 1 interval $[0.4, 0.5]$ of length $\frac{1}{10}$ deleted
-  - $K_2$ denote $K_1$ with 9 intervals $[0.04, 0.05], ~[0.14, 0.15], \cdots [0.94, 0.95]$ length $\frac 1 {100}$ deleted
+  - $K_1$ denote $[0, 1]$ with 1 interval $[{4 \over 10}, {5 \over 10} ]$ of length $$ deleted
+  - $K_2$ denote $K_1$ with 9 intervals $[{1 \over 100}, {5\over 100}], ~[{14 \over 100}, {15 \over 100}], \cdots [{94\over 100}, {95 \over 100}]$ length ${1 \over 100}$ deleted
   - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $10^{-n}$ deleted.
 
 - Then $K = \intersect K_n$, and 
 \[
-m(K) = 1 - m(K^c) = 1 - \sum_{j=0}^\infty \frac{9^n}{10^{n+1}} = 1 - \frac{1}{10} \left( \frac{1}{1 - \frac 9 {10}} \right) = 0,
+m(K) = 1 - m(K^c) = 1 - \sum_{j=0}^\infty {9^n \over 10^{n+1} } = 1 - {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 0,
 \]
   and since any interval has strictly positive measure, $K$ can not contain any interval.
 
