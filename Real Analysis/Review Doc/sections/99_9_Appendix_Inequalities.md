@@ -127,12 +127,12 @@ Some useful specific cases:
 .\]
 
 
-Proposition (Bezel's Inequality:)
+Proposition (Bessel's Inequality:)
 :	\hfill
 
 For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 \[  
-\sum_{k=1}^{\infty}\left|\left\langle x, e_{k}\right\rangle\right|^{2} \leq\|x\|^{2}
+\sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
 .\]
 
 > Note: this does not need to be a basis.
