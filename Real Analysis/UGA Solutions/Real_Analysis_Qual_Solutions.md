@@ -2185,7 +2185,7 @@ A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) 
 
   - Note that $gf$ is positive.
 
-- Define $A_k = \theset{x\in X \suchthat gf \cdot \chi_E > {1 \over k} }$, then by Chebyshev, for every $k$ we have
+- Define $A_k = \theset{x\in X \suchthat gf \cdot \chi_E > {1 \over k} }$, then by Chebyshev , for every $k$ we have
 
 \[
 \mu(A_k) \leq k \int_E gf ~d\mu = 0
