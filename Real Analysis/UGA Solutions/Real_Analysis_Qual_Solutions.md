@@ -2177,17 +2177,16 @@ Concepts used:
 
   - The LHS is zero by assumption and thus so is the RHS.
 
-Note that $gf$ is positive.
+- Note that $gf$ is positive.
 
-
-Define $A_k = \theset{x\in X \suchthat gf \chi_E > \frac 1 k}$, then by Chebyshev
+- Define $A_k = \theset{x\in X \suchthat gf \chi_E > \frac 1 k}$, then by Chebyshe
 \[
 \mu(A_k) \leq k \int_E gf ~d\mu = 0
 \]
 
 which holds for every $k$.
 
-Then noting that $A_k \searrow A \definedas \theset{x\in E \suchthat x^2  > 0}$, and $gf$ is positive, we have 
+- Then noting that $A_k \searrow A \definedas \theset{x\in E \suchthat x^2  > 0}$, and $gf$ is positive, we have 
 \[
 x\in E \iff gf\chi_E(x) > 0 \iff x\in A
 \]
