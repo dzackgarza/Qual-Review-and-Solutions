@@ -20,9 +20,9 @@ Proposition (Holder's Inequality When Surjective)
 
 *Application:*
 For finite measure spaces,
-\begin{align*}
+\[
 1 \leq p < q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
-.\end{align*}
+.\]
 
 Proof (Holder's Inequality) 
 : Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
@@ -46,11 +46,9 @@ Proof (Holder's Inequality)
     .\]
 
     Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
-    \begin{align*}
     \[  
     \int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
     .\]
-    .\end{align*}
 
 
 Proposition (Cauchy-Schwarz Inequality)
@@ -83,14 +81,12 @@ Proof
     .\]
 
     - Note that if $p,q$ are conjugate exponents then
-    \begin{align*}
     \[  
     \frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
     q &= \frac p {p-1} 
     .\]
 
     - Then taking integrals yields
-    \begin{align*}
     \[  
     \norm{f+g}_p^p &=
     \int \abs{f+g}^p \\
@@ -148,33 +144,33 @@ Proposition (Parseval's Identity:)
 
 Proposition (AM-GM Inequality)
 :	\hfill
-  \begin{align*}
+  \[
   \sqrt{ab} \leq \frac{a+b}{2}
-  .\end{align*}
+  .\]
 
 
 Proposition (Jensen's Inequality)
 : \hfill
-  \begin{align*}
+  \[
   f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
-  .\end{align*}
+  .\]
 
 Proposition (???)
 :
-\begin{align*}
+\[
 AB \leq {A^p \over p} + {B^q \over q}
-.\end{align*}
+.\]
 
 
 Proposition (? Inequality)
 :	\hfill
-\begin{align*}
+\[
 (a+b)^p \leq 2^p (a^p + b^p)
-.\end{align*}
+.\]
 
 
 Proposition (Bernoulli's Inequality)
 : 
-\begin{align*}
+\[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{or} n\in 2\ZZ \text{ and } \forall x
-.\end{align*}
+.\]
