@@ -2155,12 +2155,11 @@ Concepts used:
 - Then
 \[
 \lambda(E) \definedas \int_E f ~d\mu 
-&= \lim_{n\to\infty} \theset{s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j) }
+&= \lim_{n\to\infty} \theset{\int_E s_n \,d\mu \suchthat s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j),\, s_n \nearrow f}
 \]
+  where we take a sequence of simple functions increasing to $f$.
 
-where we take a sequence of simple functions increasing to $f$.
-
-But since each $E_j \subseteq E$, we must have $\mu(E_j) = 0$ for any such $E_j$, so every such $\phi_n$ must be zero and thus $\lambda(E) = 0$.
+- But since each $E_j \subseteq E$, we must have $\mu(E_j) = 0$ for any such $E_j$, so every such $s_n$ must be zero and thus $\lambda(E) = 0$.
 
 ### b
 
