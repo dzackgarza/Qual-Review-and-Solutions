@@ -2102,24 +2102,32 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
 
 - As in the construction of the Cantor set, let 
 
-  - $K_1$ denote $[0, 1]$ with 1 interval $\left[{4 \over 10}, {5 \over 10} \right]$ of length $1 \over 10$ deleted, so \[m(K_1^c) = {1\over 10}\]
-  - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}, {15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ of length ${1 \over 100}$ deleted, so \[m(K_2^c) = {1\over 10} + {9 \over 100}\].
-  - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $1 \over 10^{n}$ deleted, so \[m(K_n^c) = {1\over 10} + {9 \over 100} + \cdots + {9^{n-1} \over 10^n}\]
+  - $K_0$ denote $[0, 1]$ with 1 interval $\left[{4 \over 10}, {5 \over 10} \right]$ of length $1 \over 10$ deleted, so 
+  \[m(K_0^c) = {1\over 10}.\]
+  - $K_1$ denote $K_0$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}, {15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ of length ${1 \over 100}$ deleted, so 
+  \[m(K_1^c) = {1\over 10} + {9 \over 100}.\]
+  - $K_n$ denote $K_{n-1}$ with $9^{n}$ such intervals of length $1 \over 10^{n+1}$ deleted, so 
+  \[m(K_n^c) = {1\over 10} + {9 \over 100} + \cdots + {9^{n} \over 10^{n+1}}.\]
 
-- Note that 
+- Then compute 
 \[
 m(K^c) 
-= \sum_{j=1}^\infty {9^n \over 10^{n+1} } 
-= {1\over 10} \sum_{j=1}^\infty \qty{9\over 10}^n 
-= {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 1,
+= \sum_{j=0}^\infty {9^n \over 10^{n+1} } 
+= {1\over 10} \sum_{j=0}^\infty \qty{9\over 10}^n 
+= {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } 
+= 1.
 \]
 
 Claim: **$K$ has no isolated points**:
 
-- A point $x\in K$ is isolated iff there there is an open ball $B_r(x)$ containing $x$ such that $B_r(x) \intersect K = \emptyset$, so every point in this ball has a 4 in its decimal expansion.
+- A point $x\in K$ is isolated iff there there is an open ball $B_r(x)$ containing $x$ such that $B_r(x) \intersect K = \emptyset$.
+  - So every point in this ball should have a 4 in its decimal expansion.
 
 - Note that $m(K_n) = \left( \frac 9 {10} \right)^n \to 0$ and that the endpoints of intervals are never removed and are thus elements of $K$.
-Then for every $\varepsilon$, we can choose $n$ such that $\left( \frac 9 {10} \right)^n < \varepsilon$; then there is an endpoint of a removed interval $e_n$ satisfying $\abs{x - e_n} \leq  \left( \frac 9 {10} \right)^n < \varepsilon$. 
+
+- So for every $\varepsilon$, we can choose $n$ such that $\left( \frac 9 {10} \right)^n < \varepsilon$; 
+
+- Then there is an endpoint of a removed interval $e_n$ satisfying \[\abs{x - e_n} \leq  \left( \frac 9 {10} \right)^n < \varepsilon$. 
 
 - So every ball containing $x$ contains some endpoint of a removed interval, and thus an element of $K$.
 
