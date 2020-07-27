@@ -2106,11 +2106,13 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
   - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}, {15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ of length ${1 \over 100}$ deleted, so $m(K_2^c) = {9 \over 100}$.
   - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $1 \over 10^{n}$ deleted, so $m(K_n^c) = {9^{n-1} \over 10^n}$
 
-- By construction, $K = \intersect_{n=1}^\infty K_n$, and 
+- Note that all of the $K
+
+- By construction, $K^c = \union_{n=1}^\infty K_n^c$, and 
 \[
 m(K^c) 
 = \sum_{j=0}^\infty {9^n \over 10^{n+1} } 
-= {1\over 10} \sum_{j=0}^\infty {9^n \over 10^{n} } 
+= {1\over 10} \sum_{j=0}^\infty \qty{9\over 10}^n 
 = {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 1,
 \]
 
