@@ -2155,7 +2155,7 @@ Concepts used:
 - Then
 \[
 \lambda(E) \definedas \int_E f ~d\mu 
-&= \lim_{n\to\infty} \theset{\s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j) }
+&= \lim_{n\to\infty} \theset{s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j) }
 \]
 
 where we take a sequence of simple functions increasing to $f$.
