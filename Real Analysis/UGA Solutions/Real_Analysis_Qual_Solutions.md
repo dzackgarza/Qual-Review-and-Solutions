@@ -2045,6 +2045,7 @@ Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm
 Concepts used:
 
 - Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
+  - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
 
 **Solution**
 
@@ -2095,7 +2096,8 @@ j < k \iff 10^{-j} > 10^{-k}
 
 Claim: **$K$ is nowhere dense and $m(K) = 0$:**
 
-- Since $K$ is closed, we'll show that $K$ can not properly contain any interval, so $(\bar{K})^\circ = \emptyset$.
+- Strategy: Show $\qty{\bar K}^\circ = \emptyset$.
+- Since $K$ is closed, $\bar K = K$, so it suffices to show that $K$ does not properly contain any interval.
 
 - As in the construction of the Cantor set, let 
 
@@ -2103,7 +2105,7 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
   - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}\right], \left[{15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ length ${1 \over 100}$ deleted
   - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $10^{-n}$ deleted.
 
-- Then $K = \intersect K_n$, and 
+- By construction, $K = \intersect K_n$, and 
 \[
 m(K) = 1 - m(K^c) = 1 - \sum_{j=0}^\infty {9^n \over 10^{n+1} } = 1 - {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 0,
 \]
