@@ -2141,21 +2141,22 @@ Claim: **$K$ has no isolated points**:
 Concepts used:
 
 - Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
-- Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int
+- Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
 
 ### a
 
-By Radon-Nikodym, if $\lambda \ll \mu$ then $d\lambda = f d\mu$, which would yield 
-\begin{align*}
+- By Radon-Nikodym, if $\lambda \ll \mu$ then $d\lambda = f d\mu$, which would yield 
+\[  
 \int g ~d\lambda = \int g f ~d\mu
-.\end{align*}
+.\]
 
-So let $E$ be measurable and suppose $\mu(E) = 0$.
-Then
-\begin{align*}
+- So let $E$ be measurable and suppose $\mu(E) = 0$.
+
+- Then
+\[
 \lambda(E) \definedas \int_E f ~d\mu 
-&= \lim_n \theset{\phi_n \definedas \sum_j c_j \mu(E_j) }
-,\end{align*}
+&= \lim_{n\to\infty} \theset{\s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j) }
+\]
 
 where we take a sequence of simple functions increasing to $f$.
 
