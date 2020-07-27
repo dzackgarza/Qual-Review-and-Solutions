@@ -172,5 +172,5 @@ Proposition (? Inequality)
 Proposition (Bernoulli's Inequality)
 : 
 \[
-(1 + x)^n \geq 1 +nx \quad x\geq -1, \text{or} n\in 2\ZZ \text{ and } \forall x
+(1 + x)^n \geq 1 +nx \quad x\geq -1, \txor n\in 2\ZZ \tx and } \forall x
 .\]
