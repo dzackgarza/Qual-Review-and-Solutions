@@ -77,9 +77,9 @@ Some useful facts:
 \subsubsection{Sylow 1 (Cauchy for Prime
 Powers)}\label{sylow-1-cauchy-for-prime-powers}}
 
-\[
+\begin{align*}
 \forall p^n \text{ dividing } {\left\lvert {G} \right\rvert} \text{ there exists a subgroup of size } p^n
-\]
+\end{align*}
 
 Idea: Sylow \(p{\hbox{-}}\)subgroups exist for any \(p\) dividing
 \({\left\lvert {G} \right\rvert}\), and are maximal in the sense that
@@ -97,9 +97,10 @@ exist subgroups of order \(p_i^{\beta_i}\) for every \(i\) and every
 \subsubsection{Sylow 2 (Sylows are
 Conjugate)}\label{sylow-2-sylows-are-conjugate}}
 
-All sylow\({\hbox{-}}p\) subgroups \(S_p\) are conjugate, i.e. \[
+All sylow\({\hbox{-}}p\) subgroups \(S_p\) are conjugate, i.e.
+\begin{align*}
 S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g^{-1}= S_p^j
-\]
+\end{align*}
 
 \(n_p = 1 \iff S_p {~\trianglelefteq~}G\)
 
@@ -179,10 +180,11 @@ We have \(G = N \rtimes_\psi H\) when
 \item
   \(N {~\trianglelefteq~}G\)
 \item
-  \(H \curvearrowright N\) by conjugation via a map \[  
+  \(H \curvearrowright N\) by conjugation via a map
+  \begin{align*}  
   \psi: H \longrightarrow{\mathrm{Aut}}(N) \\
   h \mapsto h({\,\cdot\,})h^{-1}
-  .\]
+  .\end{align*}
 \end{itemize}
 
 \begin{quote}
@@ -199,9 +201,10 @@ instead
   \(N \rtimes_\psi H \cong N \rtimes_{\psi \circ \sigma} H\).
 \item
   \({\mathrm{Aut}}(({\mathbb{Z}}/(p)^n) \cong \mathrm{GL}(n, {\mathbb{F}}_p)\),
-  which has size \[  
+  which has size
+  \begin{align*}  
   {\left\lvert {{\mathrm{Aut}}({\mathbb{Z}}/(p)^n)} \right\rvert} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
-  .\]
+  .\end{align*}
 
   \begin{itemize}
   \tightlist
@@ -210,7 +213,8 @@ instead
     similarity classes of matrices (i.e.~just use canonical forms)
   \end{itemize}
 \item
-  \[ {\mathrm{Aut}}({\mathbb{Z}}/(n)) \cong {\mathbb{Z}}/(n)^{\times}\cong {\mathbb{Z}}/({\varphi(n)})\]
+
+  \begin{align*} {\mathrm{Aut}}({\mathbb{Z}}/(n)) \cong {\mathbb{Z}}/(n)^{\times}\cong {\mathbb{Z}}/({\varphi(n)})\end{align*}
   where \(\varphi\) is the totient function.
 
   \begin{itemize}
@@ -227,7 +231,7 @@ instead
 \subsection{Isomorphism Theorems}\label{isomorphism-theorems}}
 
 If \(\phi:G\longrightarrow H\) is a group morphism then
-\[G/\ker \phi \cong {\text{im}~}\phi.\]
+\begin{align*}G/\ker \phi \cong {\text{im}~}\phi.\end{align*}
 
 Note: for this to make sense, we also have
 
@@ -245,9 +249,10 @@ If \(\phi: G\longrightarrow H\) is surjective then
 If \(H,K \leq G\) and \(H \leq N_G(K)\) (or \(K {~\trianglelefteq~}G\))
 then \(HK \leq G\) is a subgroup.
 
-If \(S \leq G\) and \(N {~\trianglelefteq~}G\), then \[
+If \(S \leq G\) and \(N {~\trianglelefteq~}G\), then
+\begin{align*}
 \frac{SN}{N} \cong \frac{S}{S\bigcap N} \quad \text{ and }\quad {\left\lvert {SN} \right\rvert} = \frac{{\left\lvert {S} \right\rvert} {\left\lvert {N} \right\rvert}}{{\left\lvert {S\bigcap N} \right\rvert}}
-.\]
+.\end{align*}
 
 Note: for this to make sense, we also have
 
@@ -287,14 +292,14 @@ Suppose \(N, K \leq G\) with \(N {~\trianglelefteq~}G\) and
   some such \(K {~\trianglelefteq~}G\).
 \item
   If \(K{~\trianglelefteq~}G\), then we can cancel normal subgroups:
-  \[  
+  \begin{align*}  
   \frac{G/N}{K/N} \cong \frac{G}{K}
-  .\]
+  .\end{align*}
 \end{enumerate}
 
 Suppose \(N {~\trianglelefteq~}G\), then there exists a correspondence:
 
-\[  
+\begin{align*}  
 \left\{
 H < G {~\mathrel{\Big|}~}N \subseteq H
 \right\}
@@ -311,7 +316,7 @@ H {~\mathrel{\Big|}~}H < \frac G N
   \text{Subgroups of the } \\
   \text{quotient $G/N$}
 }}\right\}
-.\]
+.\end{align*}
 
 In words, subgroups of \(G\) containing \(N\) correspond to subgroups of
 the quotient group \(G/N\). This is given by the map \(H \mapsto H/N\).
@@ -353,10 +358,10 @@ recognition of semidirect products.
 \subsection{Finitely Generated Abelian
 Groups}\label{finitely-generated-abelian-groups}}
 
-\[
+\begin{align*}
 G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
 \quad \text{ where } n_1 {~\Bigm|~}\cdots {~\Bigm|~}n_m
-.\]
+.\end{align*}
 
 \textbf{Invariant factors \(\longrightarrow\) Elementary Divisors:}
 
@@ -368,11 +373,11 @@ G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
   Split into coprime pieces
 \end{itemize}
 
-\[
+\begin{align*}
 {\mathbb{Z}}_2 \times {\mathbb{Z}}_2 \times {\mathbb{Z}}_{2^3 \cdot 5^2 \cdot 7}
 \cong
 {\mathbb{Z}}_2 \times {\mathbb{Z}}_2 \times {\mathbb{Z}}_{2^3} \times {\mathbb{Z}}_{5^2} \times {\mathbb{Z}}_7
-\]
+\end{align*}
 
 \textbf{Going from elementary divisors to invariant factors:}
 
@@ -386,9 +391,10 @@ G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
   Take highest power from all remaining primes as next, etc
 \end{itemize}
 
-Given the invariant factor decomposition \[
+Given the invariant factor decomposition
+\begin{align*}
 G = {{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{3}\times{\mathbb{Z}}_{3}\times{\mathbb{Z}}_{5^2}}
-\]
+\end{align*}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
@@ -423,9 +429,10 @@ G = {{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{
 
 \(\implies n_{m-2} = 2\)
 
-and thus \[
+and thus
+\begin{align*}
 G\cong {\mathbb{Z}}_2 \times {\mathbb{Z}}_{3\cdot 2} \times {\mathbb{Z}}_{5^2 \cdot 3 \cdot 2}
-\]
+\end{align*}
 
 \textbf{Classifying Abelian Groups of a Given Order:}
 
