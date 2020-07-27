@@ -2123,11 +2123,12 @@ Claim: **$K$ has no isolated points**:
 - A point $x\in K$ is isolated iff there there is an open ball $B_r(x)$ containing $x$ such that $B_r(x) \intersect K = \emptyset$.
   - So every point in this ball should have a 4 in its decimal expansion.
 
-- Note that $m(K_n) = \left( \frac 9 {10} \right)^n \to 0$ and that the endpoints of intervals are never removed and are thus elements of $K$.
+- Note that $m(K_n) = \left( \frac 9 {10} \right)^n \converges{n\to\infty}\to 0$ and the endpoints of intervals are never removed 
+  - Thus endpoints of deleted intervals are elements of $K$.
 
-- So for every $\varepsilon$, we can choose $n$ such that $\left( \frac 9 {10} \right)^n < \varepsilon$; 
+- So for every $\varepsilon$, by the Archimedean property of $\RR$, choose $n$ such that $\left( \frac 9 {10} \right)^n < \varepsilon$.
 
-- Then there is an endpoint of a removed interval $e_n$ satisfying \[\abs{x - e_n} \leq  \left( \frac 9 {10} \right)^n < \varepsilon$. 
+- Then there is an endpoint $x_n$ of some deleted interval $I_n$ satisfying \[\abs{x - x_n} \leq  \left( \frac 9 {10} \right)^n < \eps.\]
 
 - So every ball containing $x$ contains some endpoint of a removed interval, and thus an element of $K$.
 
