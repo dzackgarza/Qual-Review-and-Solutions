@@ -2182,6 +2182,7 @@ Concepts used:
   - Note that $gf$ is positive.
 
 - Define $A_k = \theset{x\in X \suchthat gf \chi_E > \frac 1 k}$, then by Chebyshev, for every $k$ we have
+
 \[
 \mu(A_k) \leq k \int_E gf ~d\mu = 0
 \]
