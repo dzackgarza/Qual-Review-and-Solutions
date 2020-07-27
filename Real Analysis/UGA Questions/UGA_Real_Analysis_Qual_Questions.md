@@ -1,6 +1,6 @@
 
 ---
-title: Real Analysis Qualifying Exam Notes
+title: Real Analysis Qualifying Exam Questions
 ---
 
 # Spring 2020
