@@ -2169,7 +2169,7 @@ Concepts used:
 
 ### b
 
-- Set $g(x) = x^2$
+- Set $g(x) = x^2$, note that $g$ is positive and measurable.
 - By part (a), there exists a positive $f$ such that for any $E\subseteq \RR$,
 \[
 \int_E g ~dm = \int_E gf ~d\mu 
@@ -2178,6 +2178,7 @@ Concepts used:
   - The LHS is zero by assumption and thus so is the RHS.
 
 Note that $gf$ is positive.
+
 
 Define $A_k = \theset{x\in X \suchthat gf \chi_E > \frac 1 k}$, then by Chebyshev
 \[
