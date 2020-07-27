@@ -174,3 +174,6 @@ Proposition (Bernoulli's Inequality)
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \txor n\in 2\ZZ \txand \forall x
 .\]
+
+
+
