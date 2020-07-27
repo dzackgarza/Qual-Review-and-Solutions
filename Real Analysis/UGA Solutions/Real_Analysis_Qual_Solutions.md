@@ -2144,7 +2144,7 @@ Concepts used:
 - Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
 - Chebyshev's inequality:
 \[  
-\mu\qty{\theset{ x\in X \suchtat \abs{f(x)} \  }}
+\mu\qty{\theset{ x\in X \suchtat \abs{f(x)} \geq c  }} \leq 
 .\]
 
 ### a
