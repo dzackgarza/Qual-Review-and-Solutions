@@ -2142,7 +2142,10 @@ Concepts used:
 
 - Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
 - Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
-- Che
+- Chebyshev's inequality:
+\[  
+\mu\qty{\theset{ }}
+.\]
 
 ### a
 
