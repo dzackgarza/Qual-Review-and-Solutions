@@ -2105,7 +2105,7 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
   - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}\right], \left[{15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ length ${1 \over 100}$ deleted
   - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $10^{-n}$ deleted.
 
-- y construction, $K = \intersect_{n=1}^\infty K_n$, and 
+- By construction, $K = \intersect_{n=1}^\infty K_n$, and 
 \[
 m(K) = 1 - m(K^c) = 1 - \sum_{j=0}^\infty {9^n \over 10^{n+1} } = 1 - {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 0,
 \]
