@@ -2054,8 +2054,13 @@ Concepts used:
     Then $K$ will be a closed and bounded subset of $\RR$ and thus compact by Heine-Borel.
 
   - Strategy: write $K^c$ as the union of open balls (since these form a basis for the Euclidean topology on $\RR$).
+    
+    - Do this by showing every point $x\in K^c$ is an interior point, i.e. $x$ admits a neighborhood $N_x$ such that $N_x \subseteq K^c$.
 
   - Identify $K^c$ as the set of real numbers in $[0, 1]$ whose decimal expansion **does** contain a 4.
+    
+    - We will show that there exists a neighborhood small enough such that all points in it contain a $4$ in their decimal expansions.
+  
   - Let $x\in K^c$, suppose a 4 occurs as the $k$th digit, and write
   \[  
   x = 0.d_1 d_2 \cdots d_{k-1}~ 4 ~d_{k+1}\cdots 
