@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>-</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="group-theory">Group Theory</h1>
+<ul>
+<li><span class="math inline">2<sup><em>X</em></sup></span> denotes the powerset of <span class="math inline"><em>X</em></span>.</li>
+<li>For any <span class="math inline"><em>p</em></span> dividing the order of <span class="math inline"><em>G</em></span>, <span class="math inline"><em>S</em><em>y</em><em>l</em><sub><em>p</em></sub>(<em>G</em>)</span> denotes the <em>set</em> of Sylow<span class="math inline">${\hbox{-}}p$</span> subgroups of <span class="math inline"><em>G</em></span>.</li>
+</ul>
+<h2 id="big-list-of-notation">Big List of Notation</h2>
+<p><br /><span class="math display">$$
+C_G(x)          =                                               &amp;&amp; \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\}                                          &amp;&amp; \subseteq G       &amp;&amp;
+\parbox{7em}{\small\centering Centralizer \\ (Element)} \\
+C_G(H)          =                                               &amp;&amp; \left\{{g\in G \mathrel{\Big|}[g, h] = 1 ~\forall h\in H}\right\} = \bigcap_{h \in H} C_G(h) &amp;&amp; \leq G            &amp;&amp;
+\parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
+C(h)        =                                                   &amp;&amp; \left\{{ghg^{-1} \mathrel{\Big|}g\in G}\right\}                                                 &amp;&amp; \subseteq G       &amp;&amp;
+\text{Conjugacy Class} \\
+Z(G)            =                                                 &amp;&amp; \left\{{x\in G \mathrel{\Big|}\forall g\in G,~ gxg^{-1} = x}\right\}                            &amp;&amp; \subseteq G       &amp;&amp;
+\text{Center} \\
+N_G(H)          =                                               &amp;&amp; \left\{{g\in G \mathrel{\Big|}gHg^{-1} = H}\right\}                                             &amp;&amp; \subseteq G       &amp;&amp;
+\text{Normalizer} \\
+\mathrm{Inn}(G) =                                           &amp;&amp; \left\{{\phi_g(x) = gxg^{-1} }\right\}                                                &amp;&amp; \subseteq {\mathrm{Aut}}(G) &amp;&amp;
+\text{Inner Aut.} \\
+\mathrm{Out}(G) =                                           &amp;&amp; {\mathrm{Aut}}(G) / \mathrm{Inn}(G)                                                     &amp;&amp; \hookrightarrow{\mathrm{Aut}}(G)  &amp;&amp;
+\text{Outer Aut.} \\
+[g, h] =                                                    &amp;&amp; ghgh^{-1}&amp;&amp; \in G             &amp;&amp;
+\parbox{7em}{\small\centering Commutator \\ (Element)} \\
+[G, H] =                                                    &amp;&amp; \left\langle \left\{{[g,h] {~\mathrel{\Big|}~}g\in G, h\in H}\right\} \right\rangle            &amp;&amp; \leq G            &amp;&amp;
+\parbox{7em}{\small\centering Commutator \\ (Subgroup)} \\
+\cline{1-6}
+{\mathcal{O}}_x{\text{ {or} }} G\cdot x          =                               &amp;&amp; \left\{{g.x \mathrel{\Big|}x\in X}\right\}                                                      &amp;&amp; \subseteq X       &amp;&amp;
+\text{Orbit} \\
+{\mathrm{Stab}}_G(x){\text{ {or} }}  G_x             =                             &amp;&amp; \left\{{g\in G \mathrel{\Big|}g.x = x}\right\}                                                  &amp;&amp; \subseteq G       &amp;&amp;
+\text{Stabilizer} \\
+X/G =                                                       &amp;&amp; \left\{{G_x {~\mathrel{\Big|}~}x\in X}\right\}                                                 &amp;&amp; \subseteq 2^X     &amp;&amp;
+\text{Set of Orbits} \\
+X^{g} =                                                     &amp;&amp; \left\{{x\in X {~\mathrel{\Big|}~}\forall g\in G,~ g.x = x}\right\}                            &amp;&amp; \subseteq X       &amp;&amp;
+\text{Fixed Points} \\
+$$</span><br /></p>
+<div class="definition" title="Normal Closure of a Subgroup">
+<p>The smallest normal subgroup of <span class="math inline"><em>G</em></span> containing <span class="math inline"><em>H</em></span>: <br /><span class="math display"><em>H</em><sup><em>G</em></sup> ≔ {<em>g</em><em>H</em><em>g</em><sup> − 1</sup> : <em>g</em> ∈ <em>G</em>} = ⋂{<em>N</em>:<em>H</em>≤<em>N</em> ⊴ <em>G</em>}.</span><br /></p>
+</div>
+<div class="definition" title="Normal Core of a subgroup">
+<p>The largest normal subgroup of <span class="math inline"><em>G</em></span> containing <span class="math inline"><em>H</em></span>: <br /><span class="math display"><em>H</em><sub><em>G</em></sub> = ⋂<sub><em>g</em> ∈ <em>G</em></sub><em>g</em><em>H</em><em>g</em><sup> − 1</sup> = ⟨<em>N</em>:<em>N</em> ⊴ <em>G</em> &amp; <em>N</em>≤<em>H</em>⟩ = ker <em>ψ</em>.</span><br /> where <br /><span class="math display">$$
+\psi: G &amp;\longrightarrow{\mathrm{Aut}}(G/H) \\
+g &amp;\mapsto (xH\mapsto gxH)
+$$</span><br /></p>
+</div>
+<div class="definition" title="Characteristic subgroup">
+<p><span class="math inline"><em>H</em> ≤ <em>G</em></span> is <em>characteristic</em> iff <span class="math inline"><em>H</em></span> is fixed by every element of <span class="math inline"><em>A</em><em>u</em><em>t</em>(<em>G</em>)</span>.</p>
+</div>
+<div class="definition" title="Subgroup Generated by a Subset">
+<p>If <span class="math inline"><em>H</em> ⊂ <em>G</em></span>, then <span class="math inline">⟨<em>H</em>⟩</span> is the smallest subgroup containing <span class="math inline"><em>H</em></span>: <br /><span class="math display">⟨<em>H</em>⟩ = ⋂{<em>H</em> | <em>H</em>⊆<em>M</em>≤<em>G</em>}<em>M</em> = {<em>h</em><sub>1</sub><sup> ± 1</sup>⋯<em>h</em><sub><em>n</em></sub><sup> ± 1</sup> | <em>n</em>≥0,<em>h</em><sub><em>i</em></sub>∈<em>H</em>}</span><br /></p>
+</div>
+<div class="definition" title="Centralizer">
+<p><br /><span class="math display"><em>C</em><sub><em>G</em></sub>(<em>H</em>) = {<em>g</em>∈<em>G</em> | <em>g</em><em>h</em><em>g</em><sup> − 1</sup>=<em>h</em> ∀<em>h</em>∈<em>H</em>}</span><br /></p>
+</div>
+<div class="definition" title="Normalizer">
+<p><br /><span class="math display"><em>N</em><sub><em>G</em></sub>(<em>H</em>) = {<em>g</em>∈<em>G</em> | <em>g</em><em>H</em><em>g</em><sup> − 1</sup>=<em>H</em>} = ⋃{<em>H</em> | <em>H</em> ⊴ <em>M</em>≤<em>G</em>}<em>M</em></span><br /></p>
+</div>
+<div class="theorem" title="The Fundamental Theorem of Cosets">
+<p><span class="math inline"><em>a</em><em>H</em> = <em>b</em><em>H</em> ⇔ <em>a</em><sup> − 1</sup><em>b</em> ∈ <em>H</em> or <em>a</em><em>H</em>⋂<em>b</em><em>H</em> = ∅</span></p>
+</div>
+<div class="definition" title="The Quaternion Group">
+<p>The <em>Quaternion group</em> of order 8 is given by <br /><span class="math display">$$
+Q &amp;= \left\langle{x,y,z {~\mathrel{\Big|}~}x^2 = y^2 = z^2 = xyz = -1}\right\rangle \\
+  &amp;= \left\langle{x, y {~\mathrel{\Big|}~}x^4 = y^4, x^2 = y^2, yxy^{-1}= x^{-1}}\right\rangle
+$$</span><br /></p>
+</div>
+<div class="definition" title="The Dihedral Group">
+<p>A <em>dihedral group</em> of order <span class="math inline">2<em>n</em></span> is given by <br /><span class="math display"><em>D</em><sub><em>n</em></sub> = ⟨<em>r</em>,<em>s</em> | <em>r</em><sup><em>n</em></sup>,<em>s</em><sup>2</sup>,<em>r</em><em>s</em><em>r</em><sup> − 1</sup>=<em>s</em><sup> − 1</sup>⟩</span><br /></p>
+</div>
+<h2 id="the-symmetric-group">The Symmetric Group</h2>
+<div class="definition" title="Parity of a Cycle">
+<ul>
+<li><p>A cycle is <strong>even</strong> <span class="math inline">⇔</span> product of an <em>even</em> number of transpositions.</p></li>
+<li><p>A cycle of even <em>length</em> is <strong>odd</strong></p></li>
+<li><p>A cycle of odd <em>length</em> is <strong>even</strong></p></li>
+</ul>
+<blockquote>
+<p>Mnemonic: the parity of a <span class="math inline">$k{\hbox{-}}$</span>cycle is the parity of <span class="math inline"><em>k</em> − 1</span>.</p>
+</blockquote>
+</div>
+<div class="definition" title="Alternating Group">
+<p>The <strong>alternating group</strong> is the subgroup of <strong>even</strong> permutations, i.e. <br /><span class="math display"><em>A</em><sub><em>n</em></sub> ≔ {<em>σ</em>∈<em>S</em><sub><em>n</em></sub> | <em>s</em><em>i</em><em>g</em><em>n</em>(<em>σ</em>)=1}</span><br /> where <span class="math inline"><em>s</em><em>i</em><em>g</em><em>n</em>(<em>σ</em>) = ( − 1)<sup><em>m</em></sup></span> and <span class="math inline"><em>m</em></span> is the number of cycles of even length.</p>
+</div>
+<div class="corollary" title="Alternating Group">
+<p>Every <span class="math inline"><em>σ</em> ∈ <em>A</em><sub><em>n</em></sub></span> has an even number of <em>odd</em> cycles (i.e. an even number of <em>even-length</em> cycles).</p>
+</div>
+<div class="example">
+<p><br /><span class="math display">$$
+A_4 =
+&amp; \{\text{id}, \\
+&amp; (1,3)(2,4),
+(1,2)(3,4),
+(1,4)(2,3), \\
+&amp; (1,2,3),
+(1,3,2), \\
+&amp; (1,2,4),
+(1,4,2), \\
+&amp; (1,3,4),
+(1,4,3), \\
+&amp; (2,3,4),
+(2,4,3) \}
+$$</span><br /></p>
+</div>
+<div class="definition" title="Transitive Subgroup">
+<p>A subgroup of <span class="math inline"><em>S</em><sub><em>n</em></sub></span> is <strong>transitive</strong> iff its action on <span class="math inline">{1,2,⋯,<em>n</em>}</span> is transitive.</p>
+</div>
+<p>Useful Facts:</p>
+<ul>
+<li><span class="math inline"><em>σ</em> ∘ (<em>a</em><sub>1</sub>⋯<em>a</em><sub><em>k</em></sub>) ∘ <em>σ</em><sup> − 1</sup> = (<em>σ</em>(<em>a</em><sub>1</sub>), ⋯<em>σ</em>(<em>a</em><sub><em>k</em></sub>))</span></li>
+<li>Conjugacy classes are determined by cycle type</li>
+<li>The order of a cycle is its length.</li>
+<li>The order of an element is the least common multiple of the sizes of its cycles.</li>
+<li><span class="math inline"><em>A</em><sub><em>n</em> ≥ 5</sub></span> is <em>simple</em>.</li>
+</ul>
+<h2 id="counting-theorems">Counting Theorems</h2>
+<div class="theorem" title="Lagrange&#39;s Theorem">
+<p><br /><span class="math display">$$H \leq G \implies {\left\lvert {H} \right\rvert} {~\Bigm|~}{\left\lvert {G} \right\rvert}.$$</span><br /></p>
+</div>
+<div class="corollary">
+<p>The order of every element divides the size of <span class="math inline"><em>G</em></span>, i.e. <br /><span class="math display">$$
+  g\in G \implies o(g) {~\Bigm|~}o(G) \implies g^{{\left\lvert {G} \right\rvert}} = e
+  .$$</span><br /></p>
+</div>
+<div class="warning">
+<p>There does <strong>not</strong> necessarily exist <span class="math inline"><em>H</em> ≤ <em>G</em></span> with <span class="math inline">|<em>H</em>| = <em>n</em></span> for every <span class="math inline">$n {~\Bigm|~}{\left\lvert {G} \right\rvert}$</span>. Counterexample: <span class="math inline">|<em>A</em><sub>4</sub>| = 12</span> but has no subgroup of order 6.</p>
+</div>
+<div class="theorem" title="Cauchy&#39;s Theorem">
+<p>For every prime <span class="math inline"><em>p</em></span> dividing <span class="math inline">|<em>G</em>|</span>. there is an element (and thus a subgroup) of order <span class="math inline"><em>p</em></span>.</p>
+<blockquote>
+<p>This is a partial converse to Lagrange’s theorem, and strengthened by Sylow’s theorem.</p>
+</blockquote>
+</div>
+<h3 id="group-actions">Group Actions</h3>
+<div class="definition" title="Group Action">
+<p>An action of <span class="math inline"><em>G</em></span> on <span class="math inline"><em>X</em></span> is a group morphism <br /><span class="math display">$$
+\phi:G \times X &amp;\rightarrow X \\ 
+(g,x) &amp;\mapsto g\cdot x
+$$</span><br /> or equivalently <br /><span class="math display">$$
+\phi: G &amp;\longrightarrow{\mathrm{Aut}}(X) \\
+g \mapsto (x \mapsto \phi_g (x) \coloneqq g\cdot x)
+$$</span><br /> satisfying</p>
+<ol type="1">
+<li><span class="math inline"><em>e</em> ⋅ <em>x</em> = <em>x</em></span></li>
+<li><span class="math inline"><em>g</em> ⋅ (<em>h</em> ⋅ <em>x</em>) = (<em>g</em><em>h</em>) ⋅ <em>x</em></span></li>
+</ol>
+</div>
+<p>Useful fact: <span class="math inline">ker <em>ψ</em> = ⋂<sub><em>x</em> ∈ <em>X</em></sub><em>G</em><sub><em>x</em></sub></span> is the intersection of all stabilizers.</p>
+<div class="definition" title="Transitive Group Action">
+<p>A group action <span class="math inline"><em>G</em> ↷ <em>X</em></span> is <em>transitive</em> iff for all <span class="math inline"><em>x</em>, <em>y</em> ∈ <em>X</em></span> there exists a <span class="math inline"><em>g</em> ∈ <em>G</em></span> such that <span class="math inline"><em>g</em> ⋅ <em>x</em> = <em>x</em></span>. Equivalently, the action has a single orbit.</p>
+</div>
+<blockquote>
+<p>Reminder of notation: for a group <span class="math inline"><em>G</em></span> acting on a set <span class="math inline"><em>X</em></span>,</p>
+<ul>
+<li><p><span class="math inline"><em>G</em> ⋅ <em>x</em> = {<em>g</em>⋅<em>x</em> | <em>g</em>∈<em>G</em>} ⊆ <em>X</em></span> is the orbit</p></li>
+<li><p><span class="math inline"><em>G</em><sub><em>x</em></sub> = {<em>g</em>∈<em>G</em> | <em>g</em>⋅<em>x</em>=<em>x</em>} ⊆ <em>G</em></span> is the stabilizer</p></li>
+<li><p><span class="math inline"><em>X</em>/<em>G</em> ⊂ 2<sup><em>X</em></sup></span> is the set of orbits</p></li>
+<li><p><span class="math inline"><em>X</em><sup><em>g</em></sup> = {<em>x</em>∈<em>X</em> | <em>g</em>⋅<em>x</em>=<em>x</em>} ⊆ <em>X</em></span> are the fixed points</p></li>
+</ul>
+</blockquote>
+<p>Note that being in the same orbit is an equivalence relation which partitions <span class="math inline"><em>X</em></span>, and <span class="math inline"><em>G</em></span> acts transitively if restricted to any single orbit.</p>
+<div class="theorem" title="Orbit-Stabilizer">
+<p><br /><span class="math display">|<em>G</em>⋅<em>x</em>| = [<em>G</em> : <em>G</em><sub><em>x</em></sub>] = |<em>G</em>|/|<em>G</em><sub><em>x</em></sub>|  if <em>G</em> is finite</span><br /></p>
+</div>
+<blockquote>
+<p>Mnemonic: <span class="math inline"><em>G</em>/<em>G</em><sub><em>x</em></sub> ≅ <em>G</em> ⋅ <em>x</em></span>.</p>
+</blockquote>
+<h3 id="examples-of-orbit-stabilizer">Examples of Orbit-Stabilizer</h3>
+<ol type="1">
+<li>Let <span class="math inline"><em>G</em></span> act on itself by left translation, where <span class="math inline"><em>g</em> ↦ (<em>h</em> ↦ <em>g</em><em>h</em>)</span>.</li>
+</ol>
+<ul>
+<li><p>The orbit <span class="math inline"><em>G</em> ⋅ <em>x</em> = <em>G</em></span> is the entire group</p></li>
+<li><p>The stabilizer <span class="math inline"><em>G</em><sub><em>x</em></sub></span> is only the identity.</p></li>
+<li><p>The fixed points <span class="math inline"><em>X</em><sup><em>g</em></sup></span> are only the identity.</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Let <span class="math inline"><em>G</em></span> act on <em>itself</em> by conjugation.</li>
+</ol>
+<ul>
+<li><p><span class="math inline"><em>G</em> ⋅ <em>x</em></span> is the <strong>conjugacy class</strong> of <span class="math inline"><em>x</em></span> (so not generally transitive)</p></li>
+<li><p><span class="math inline"><em>G</em><sub><em>x</em></sub> = <em>Z</em>(<em>x</em>) ≔ <em>C</em><sub><em>G</em></sub>(<em>x</em>) = {<em>g</em> | [<em>g</em>,<em>x</em>]=<em>e</em>}</span>, the <strong>centralizer</strong> of <span class="math inline"><em>x</em></span>.</p></li>
+<li><p><span class="math inline"><em>G</em><sup><em>g</em></sup></span> (the fixed points) is the <strong>center</strong> <span class="math inline"><em>Z</em>(<em>G</em>)</span>.</p></li>
+</ul>
+<div class="corollary">
+<p>The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, <span class="math inline">[<em>G</em> : <em>C</em><sub><em>G</em></sub>(<em>x</em>)]</span>.</p>
+</div>
+<h3 id="the-class-equation">The Class Equation</h3>
+<p><br /><span class="math display">$$
+{\left\lvert {G} \right\rvert} = {\left\lvert {Z(G)} \right\rvert} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
+$$</span><br /></p>
+<p>Note that <span class="math inline">[<em>G</em> : <em>C</em><sub><em>G</em></sub>(<em>x</em><sub><em>i</em></sub>)]</span> is the number of elements in the conjugacy class of <span class="math inline"><em>x</em><sub><em>i</em></sub></span>, and each <span class="math inline"><em>x</em><sub><em>i</em></sub> ∈ <em>Z</em>(<em>G</em>)</span> has a singleton conjugacy class.</p>
+<p><strong>Examples</strong></p>
+<ol type="1">
+<li>Let <span class="math inline"><em>G</em></span> act on <span class="math inline"><em>X</em></span>, its set of <em>subgroups</em>, by conjugation.</li>
+</ol>
+<ul>
+<li><p><span class="math inline"><em>G</em> ⋅ <em>H</em> = {<em>g</em><em>H</em><em>g</em><sup> − 1</sup>}</span> is the <strong>set of conjugate subgroups</strong> of <span class="math inline"><em>H</em></span></p></li>
+<li><p><span class="math inline"><em>G</em><sub><em>H</em></sub> = <em>N</em><sub><em>G</em></sub>(<em>H</em>)</span> is the <strong>normalizer</strong> of in <span class="math inline"><em>G</em></span> of <span class="math inline"><em>H</em></span></p></li>
+<li><p><span class="math inline"><em>X</em><sup><em>g</em></sup></span> is the set of <strong>normal subgroups</strong> of <span class="math inline"><em>G</em></span></p></li>
+</ul>
+<div class="corollary">
+<p>Given <span class="math inline"><em>H</em> ≤ <em>G</em></span>, the number of conjugate subgroups is <span class="math inline">[<em>G</em> : <em>N</em><sub><em>G</em></sub>(<em>H</em>)]</span>.</p>
+</div>
+<ol start="2" type="1">
+<li>For a fixed proper subgroup <span class="math inline"><em>H</em> &lt; <em>G</em></span>, let <span class="math inline"><em>G</em></span> act on its cosets <span class="math inline"><em>G</em>/<em>H</em> = {<em>g</em><em>H</em> | <em>g</em>∈<em>G</em>}</span> by left translation.</li>
+</ol>
+<ul>
+<li><p><span class="math inline"><em>G</em> ⋅ <em>g</em><em>H</em> = <em>G</em>/<em>H</em></span>, i.e. this is a <em>transitive</em> action.</p></li>
+<li><p><span class="math inline"><em>G</em><sub><em>g</em><em>H</em></sub> = <em>g</em><em>H</em><em>g</em><sup> − 1</sup></span> is a <em>conjugate subgroup</em> of <span class="math inline"><em>H</em></span></p></li>
+<li><p><span class="math inline">(<em>G</em>/<em>H</em>)<sup><em>G</em></sup> = ∅</span></p></li>
+</ul>
+<div class="proposition" title="Application of the Class Equation">
+<p>If <span class="math inline"><em>G</em></span> is simple, <span class="math inline"><em>H</em> &lt; <em>G</em></span> proper, and <span class="math inline">[<em>G</em> : <em>H</em>] = <em>n</em></span>, then there exists an injective map <span class="math inline"><em>ϕ</em> : <em>G</em> ↪ <em>S</em><sub><em>n</em></sub></span>.</p>
+</div>
+<div class="proof">
+<p>This action induces <span class="math inline"><em>ϕ</em></span>; it is nontrivial since <span class="math inline"><em>g</em><em>H</em> = <em>H</em></span> for all <span class="math inline"><em>g</em></span> implies <span class="math inline"><em>H</em> = <em>G</em></span>; <span class="math inline">ker <em>ϕ</em> ⊴ <em>G</em></span> and <span class="math inline"><em>G</em></span> simple implies <span class="math inline">ker <em>ϕ</em> = 1</span>.</p>
+</div>
+<div class="theorem" title="Burnside&#39;s Formula">
+<p>Slogan: the number of orbits is equal to the average number of fixed points, i.e. <br /><span class="math display">$$
+{\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert} }\sum_{g\in G} {\left\lvert {X^g} \right\rvert}
+$$</span><br /></p>
+</div>
+</body>
+</html>
