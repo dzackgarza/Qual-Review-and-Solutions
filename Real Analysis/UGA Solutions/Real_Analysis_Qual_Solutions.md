@@ -2098,18 +2098,18 @@ Claim: **$K$ is nowhere dense and $m(K) = 0$:**
 
 - Strategy: Show $\qty{\bar K}^\circ = \emptyset$.
 - Since $K$ is closed, $\bar K = K$, so it suffices to show that $K$ does not properly contain any interval.
+- It suffices to show $m(K^c) = 1$, since this implies $m(K) = 0$ and since any interval has strictly positive measure, this will mean $K$ can not contain an interval.
 
 - As in the construction of the Cantor set, let 
 
   - $K_1$ denote $[0, 1]$ with 1 interval $\left[{4 \over 10}, {5 \over 10} \right]$ of length $1 \over 10$ deleted, so $m(K_1^c) = {1\over 10}$
-  - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}], \left[{15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ of length ${1 \over 100}$ deleted, so $m(K_2^c) = {9 \over 100}$.
+  - $K_2$ denote $K_1$ with 9 intervals $\left[{1 \over 100}, {5\over 100}\right], ~\left[{14 \over 100}, {15 \over 100}\right], \cdots \left[{94\over 100}, {95 \over 100}\right]$ of length ${1 \over 100}$ deleted, so $m(K_2^c) = {9 \over 100}$.
   - $K_n$ denote $K_{n-1}$ with $9^{n-1}$ such intervals of length $1 \over 10^{n}$ deleted, so $m(K_n^c) = {9^{n-1} \over 10^n}$
 
 - By construction, $K = \intersect_{n=1}^\infty K_n$, and 
 \[
-m(K) = 1 - m(K^c) = 1 - \sum_{j=0}^\infty {9^n \over 10^{n+1} } = 1 - {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 0,
+m(K^c) = \sum_{j=0}^\infty {9^n \over 10^{n+1} } = {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } = 0,
 \]
-- Since any interval has strictly positive measure, $K$ can not contain any interval.
 
 Claim: **$K$ has no isolated points**:
 
