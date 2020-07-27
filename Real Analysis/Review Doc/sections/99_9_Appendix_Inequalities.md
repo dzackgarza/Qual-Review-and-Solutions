@@ -176,4 +176,3 @@ Proposition (Bernoulli's Inequality)
 .\]
 
 
-
