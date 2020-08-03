@@ -2281,7 +2281,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 \dd{}{x} \lim_{N\to\infty} \sum_{n=1}^N n^{-x}
 &= \lim_{N\to\infty} \dd{}{x} \sum_{n=1}^N n^{-x} \\
 &= \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x} n^{-x} \quad\text{(since this is a finite sum)}\\
-&= \lim_{N\to\infty} \sum_{n=1}^N {-\ln(n) \over n^x} 
+&= \lim_{N\to\infty} \sum_{n=1}^N {-\ln(n) \over n^x}  \\
 &= \lim_{N\to\infty} \sum_{n=1}^N {\ln({1\over n}) \over n^x} 
 .\]
 
