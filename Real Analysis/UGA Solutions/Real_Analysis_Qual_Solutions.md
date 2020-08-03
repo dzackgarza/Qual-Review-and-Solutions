@@ -2322,8 +2322,10 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 - But $g$ is smooth and compactly supported on $E$, and thus uniformly continuous on $E$, so
 \[  
-\lim_{x\to 0} \int_E \abs{g(y-x) - g(y)} \,dy =
-\int_E \lim_{x\to 0} \abs{g(y-x) - g(y)} \,dy 
+\lim_{x\to 0} \int_E \abs{g(y-x) - g(y)} \,dy 
+&= \int_E \lim_{x\to 0} \abs{g(y-x) - g(y)} \,dy \\
+&= \int_E 0 \,dy \\
+&= 0
 .\]
 
 
