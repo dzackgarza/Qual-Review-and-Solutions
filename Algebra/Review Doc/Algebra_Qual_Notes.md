@@ -306,6 +306,13 @@ X^{g} =                                                     && \theset{x\in X \s
 \text{Fixed Points} \\
 \]
 
+Some useful facts:
+
+- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+
+- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
+
+---
 
 :::{.definition title="Normal Closure of a Subgroup"}
 The smallest normal subgroup of $G$ containing $H$:
@@ -353,6 +360,19 @@ N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \no
 
 :::{.theorem title="The Fundamental Theorem of Cosets"}
 $aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
+:::
+
+:::{.theorem title="Counting Quotients"}
+If $H\normal G$, then
+\[  
+[G: H] = \abs{G/H} = {\abs G \over \abs H}
+.\]
+:::
+
+:::{.theorem title="Counting by Towers"}
+\[  
+[G:K] = [G:H]\, [H:K]
+.\]
 :::
 
 :::{.definition title="The Quaternion Group"}
@@ -568,6 +588,12 @@ Slogan: the number of orbits is equal to the average number of fixed points, i.e
 \]
 :::
 
+:::{.theorem title="Subgroups of Cyclic Groups"}
+If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
+:::
+
+
+
 ## Sylow Theorems
 
 :::{.definition}
@@ -583,15 +609,8 @@ Write
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
 
-Some useful facts:
-
-- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
-
-- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
-
 
 ### Sylow 1 (Cauchy for Prime Powers)
-
 
 \[
 \forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
@@ -2059,7 +2078,6 @@ Just Structure
 - Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
 - Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
 - Show that the order of any element in a group divides the order of the group.
-- Show that the size of a conjugacy class divides the order of a group.
 - Show that $\abs{G}/\abs{H} = [G: H]$.
 
 Centers
@@ -2076,6 +2094,12 @@ Cyclic Groups
 - Compute $\aut(\ZZ/n\ZZ)$ for $n$ composite.
 - Compute $\aut(\qty{\ZZ/p\ZZ}^n)$.
 
+Conjugacy
+
+- Show that the size of a conjugacy class divides the order of a group.
+- Let $G$ be finite with $H\leq G$ and show that $G$ is not the union of the conjugates of $H$.
+
+  > Hint: consider the intersection and count.
 
   > Hint: Orbit-stabilizer
 
@@ -2126,7 +2150,18 @@ Cyclic Groups
 - Show that every group of order $pqr$ with $p<q<r$ primes contains a normal Sylow subgroup.
   - Show that $G$ is never simple.
 
+- Let $p$ be a prime and $\abs{G} = p^3$. 
+  Prove that $G$ has a normal subgroup $N$ of order $p^2$.
+  - Suppose $N = \gens{h}$ is cyclic and classify all possibilities for $G$ if:
+    - $\abs h = p^3$
+    - $\abs h = p$.
+
+    > Hint: Sylow and semidirect products.
+
 - Show that any normal $p\dash$ subgroup is contained in every Sylow $p\dash$subgroup of $G$.
+
+- Show that the order of $1+p$ in $\qty{\ZZ/p^2\ZZ}\units$ is equal to $p$.
+  Use this to construct a non-abelian group of order $p^3$.
 
 ### p-Groups
 
@@ -2147,6 +2182,8 @@ Cyclic Groups
 - Let $P\in \syl_p(H)$ where $H\normal G$ and show that $P\intersect H \in \syl_p(H)$.
 
 - Show that Sylow $p_i\dash$subgroups $S_{p_1}, S_{p_2}$ for distinct primes $p_1\neq p_2$ intersect trivially.
+
+- Show that in a $p$ group, every normal subgroup intersects the center nontrivially.
 
 ### Symmetric Groups 
 
@@ -2205,11 +2242,18 @@ Generating Sets
 
 - Show that no group of order 36 is simple.
 - Show that no group of order 90 is simple.
+- Classifying all groups of order 99.
 - Show that all groups of order 45 are abelian.
 - Classify all groups of order 10.
 - Classify the five groups of order 12.
 - Classify the four groups of order 28.
 - Show that if $\abs{G} = 12$ and has a normal subgroup of order 4, then $G \cong A_4$.
+- Suppose $\abs G = 240 = s^4 \cdot 3 \cdot 5$.
+  - How many Sylow-$p$ subgroups does $G$ have for $p\in \theset{2, 3, 5}$?
+  - Show that if $G$ has a subgroup of order 15, it has an element of order 15.
+  - Show that if $G$ does not have such a subgroup, the number of Sylow-$3$ subgroups is either 10 or 40.
+
+  > Hint: Sylow on the subgroup of order 15 and semidirect products.
 
 ### Group Actions
 
@@ -2250,6 +2294,7 @@ Generating Sets
 - Show that $N_G(H) / C_G(H) \cong A \leq Aut(H)$
 
 - Give an example showing that normality is not transitive: i.e. $H\normal K \normal G$ with $H$ *not* normal in $G$.
+
 
 
 ### Nonstandard Topics

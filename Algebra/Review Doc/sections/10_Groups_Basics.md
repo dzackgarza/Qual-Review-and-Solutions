@@ -35,6 +35,13 @@ X^{g} =                                                     && \theset{x\in X \s
 \text{Fixed Points} \\
 \]
 
+Some useful facts:
+
+- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+
+- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
+
+---
 
 :::{.definition title="Normal Closure of a Subgroup"}
 The smallest normal subgroup of $G$ containing $H$:
@@ -82,6 +89,19 @@ N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \no
 
 :::{.theorem title="The Fundamental Theorem of Cosets"}
 $aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
+:::
+
+:::{.theorem title="Counting Quotients"}
+If $H\normal G$, then
+\[  
+[G: H] = \abs{G/H} = {\abs G \over \abs H}
+.\]
+:::
+
+:::{.theorem title="Counting by Towers"}
+\[  
+[G:K] = [G:H]\, [H:K]
+.\]
 :::
 
 :::{.definition title="The Quaternion Group"}
@@ -296,3 +316,9 @@ Slogan: the number of orbits is equal to the average number of fixed points, i.e
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
 :::
+
+:::{.theorem title="Subgroups of Cyclic Groups"}
+If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
+:::
+
+

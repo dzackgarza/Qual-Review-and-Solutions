@@ -1,28 +1,19 @@
 SHELL:=/bin/zsh
 FILENAME="Topology_Qualifying_Exam_Notes.md"
-TITLE="Topology Qualifying Exam Notes"
 
-define renew_md = 
-{echo "---\n title: $(TITLE)\n---\n\n" && fd --full-path ./sections | sort -nr | sed 'N;s/\(.*\)\n\(.*\)/\2\n\1/' | grep "md" | sort -n | awk -F ":" '{print "!include " $$1 "\n";}' } > $(FILENAME) 2>&1
-endef
-
-
-renew: 
-	@$(renew_md)
-	echo "Done"
+.SILENT:
 
 compile:
-	make renew
-	latex_preview -f $(FILENAME) -j
+	latex_preview -f $(FILENAME) -j -z
 	echo "Make done"
 
 watch:
-	make renew
-	latex_preview -f $(FILENAME) 
+	latex_preview -f $(FILENAME) -z
 
 view: 
-	make renew
-	latex_preview -f $(FILENAME) -v
+	latex_preview -f $(FILENAME) -v -z
+
+tex:
+	latex_preview -f $(FILENAME) -x -j -z
 
 .ONESHELL:
-

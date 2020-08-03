@@ -13,15 +13,8 @@ Write
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
 
-Some useful facts:
-
-- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
-
-- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
-
 
 ### Sylow 1 (Cauchy for Prime Powers)
-
 
 \[
 \forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
