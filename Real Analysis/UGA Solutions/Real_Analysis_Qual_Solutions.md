@@ -2352,7 +2352,9 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   &\leq \mu \qty{\union_{n=N}^\infty E_n^c} \quad\text{for every } N \\
   &\leq \sum_{n=N}^\infty \mu(E_n^c) \\
   &\definedas \sum_{n=N}^\infty \mu(X\setminus E_n) \\
+  &\converges{N\to\infty}\to 0
   .\]
+  \todo{Last step sketchy.}
   
 
 # Spring 2016
