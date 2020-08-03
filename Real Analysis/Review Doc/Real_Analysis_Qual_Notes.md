@@ -52,7 +52,7 @@ Proposition
 : A *finite* union of nowhere dense is again nowhere dense.
 
 Lemma (Convergent Sums Have Small Tails)
-:   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty \converges{N\to\infty}\to 0$$
+:   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
 
 Theorem (Heine-Borel)
 : $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
@@ -170,7 +170,7 @@ Lemma (Uniform Convergence and Derivatives)
 
 ### Series
 
-Lemma (Uniform Convergence of Series of Numbers)
+Lemma (Pointwise Convergence for a Series of Functions)
 : If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
 
 Lemma (Small Tails for Series of Functions)
