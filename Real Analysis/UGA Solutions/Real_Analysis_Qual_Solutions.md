@@ -2320,7 +2320,10 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 &= \int_E \abs{g(y-x) - g(y)} \,dy 
 .\]
 
-- B
+- But $g$ is smooth and compactly supported on $E$, and thus uniformly continuous on $E$, so
+\[  
+\lim_{
+.\]
 
 
 # Spring 2016
