@@ -2293,7 +2293,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - If $\int f = \int g$ then $\int \qty{f-g} = 0$, so it suffices to show that $\int f = 0 \implies f = 0$ a.e. or there exists a measurable set $E$ such that $\int_E f > 0$.
 
 - Suppose $\int f = 0$ and it is *not* the case that $f=0$ a.e.
-- By definition, $m\qty{\theset{x\in [a, b] \suchthat f(x) > 0}} 
+- By definition, $m\qty{\theset{x\in [a, b] \suchthat f(x) > 0}} \neq 0$.
 
 
 
