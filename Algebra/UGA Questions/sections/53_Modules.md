@@ -175,8 +175,9 @@ Let $I = (2, x)$ be an ideal in $R = \ZZ[x]$, and show that $I$ is not a direct 
 
 ### Fall 2019 Final #5 
 Let $R$ be a PID. 
-  - Classify irreducible $R\dash$modules up to isomorphism.
-  - Classify indecomposable $R\dash$modules up to isomorphism.
+
+- Classify irreducible $R\dash$modules up to isomorphism.
+- Classify indecomposable $R\dash$modules up to isomorphism.
 
 ### Fall 2019 Final #6 
 Let $V$ be a finite-dimensional $k\dash$vector space and $T:V\to V$ a non-invertible $k\dash$linear map. Show that there exists a $k\dash$linear map $S:V\to V$ with $T\circ S = 0$ but $S\circ T\neq 0$. 

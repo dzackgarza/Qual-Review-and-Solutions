@@ -28,7 +28,7 @@ Let $E = F [\omega]$ and let $k = [E : F]$.
 
 (a) Prove that $n$ divides $q^{k}-1$.
 
-(b) Let $m$ be the order of $q$ in $\ZZ/n\ZZ$.
+(b) Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
 Prove that $m$ divides $k$.
 
 (c) Prove that $m = k$.
