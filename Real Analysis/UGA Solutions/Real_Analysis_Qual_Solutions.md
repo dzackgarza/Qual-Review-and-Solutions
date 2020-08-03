@@ -2316,7 +2316,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 \[  
 \norm{\tau_x g_n - g_n}_1 
 &= \int_\RR \abs{g(y-x) - g(y)\,dy \\
-&= \int_E \abs{g(y)\,dy + \int_{E^c} g(y)\,dy
+&= \int_E \abs{g(y-x) - g(y)} \,dy + \int_{E^c} \abs{g(y-x)g(y)\,dy
 .\]
 
 
