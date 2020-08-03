@@ -2312,7 +2312,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   &\leq 2\eps + \norm{\tau_y g_n - g_n}_1
   .\]
 
-- Write
+- Let $g\in C_c^\infty(\RR^1)$ and write
 \[  
 \norm{\tau_y g
 .\]
