@@ -2343,7 +2343,13 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
   - But now $G$ is obtained by countable intersections/unions of measurable sets, since $E_n\in \mcm$ for all $n$ implies that $E_n^c\in \mcm$ and $\mcm$ is a $\sigma\dash$algebra.
 
-- Claim: $\mu(G) = 0$:
+- Claim: $\mu(G) = 0$.
+
+  - We have
+  \[  
+  \mu(G)
+  \mu\qty\intersect_{N=1}^\infty \union_{n=N}^\infty E_n^c
+  .\]
   
 
 # Spring 2016
