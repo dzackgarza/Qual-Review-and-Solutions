@@ -2298,7 +2298,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 ## 3
 
-- Fixing notation, set $\tau_x f(y) f(y-x)$; we then want to show
+- Fixing notation, set $\tau_x f(y) = f(y-x)$; we then want to show
 \[  
 \norm{\tau_yf -f}_{L^1} \converges{y\to 0}\to 0
 .\]
@@ -2315,7 +2315,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - Let $g\in C_c^\infty(\RR^1)$, let $E = \supp(g)$, and write
 \[  
 \norm{\tau_y g_n - g_n}_1 
-&= \int_\RR \abs{g(g(x)\,dx \\
+&= \int_\RR \abs{g(y-x) - g(x)\,dx \\
 &= \int_E g(x)\,dx + \int_{E^c} g(x)\,dx
 .\]
 
