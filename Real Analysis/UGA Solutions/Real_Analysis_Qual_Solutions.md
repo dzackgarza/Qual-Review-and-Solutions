@@ -2293,9 +2293,22 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - If $\int f = \int g$ then $\int \qty{f-g} = 0$, so it suffices to show that $\int f = 0 \implies f = 0$ a.e. or there exists a measurable set $E$ such that $\int_E f > 0$.
 
 - Suppose $\int f = 0$ and it is *not* the case that $f=0$ a.e.
-- By definition, if $E\defined \theset{x\in [a, b] \suchthat f(x) > 0} \neq 0$ then $m(E) > 0$.
+- By definition, if $E\definedas \theset{x\in [a, b] \suchthat f(x) > 0} \neq 0$ then $m(E) > 0$.
 - In particular, $f>0$ on $E$, and by monotonicty of the integral, $\int_E f > \int_E 0 = 0$.
 
+## 3
+
+- Fixing notation, set $\tau_x f(y) f(y-x)$; we then want to show
+\[  
+\norm{\tau_yf -f}_{L^1} \converges{y\to 0}\to 0
+.\]
+- By an $\eps/3$ argument, it suffices to show this for compactly support functions:
+  - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $\norm{f-g_n}_{L^1} \to 0$
+  - Then
+  \[  
+  \norm{\tau_yf - f}_1 
+  &= \norm{\tau_y f - \tau_y g_n + \tau_y g_n - g_n +
+  .\]
 
 
 
