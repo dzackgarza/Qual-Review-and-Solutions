@@ -1570,10 +1570,8 @@ Proof (Holder's Inequality)
     .\]
 
     Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
-    \[
     \[  
     \int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
-    .\]
     .\]
 
 
@@ -1607,7 +1605,6 @@ Proof
     .\]
 
     - Note that if $p,q$ are conjugate exponents then
-    \[
     \[  
     \frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
     q &= \frac p {p-1} 
@@ -1654,12 +1651,12 @@ Some useful specific cases:
 .\]
 
 
-Proposition (Bezel's Inequality:)
+Proposition (Bessel's Inequality:)
 :	\hfill
 
 For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 \[  
-\sum_{k=1}^{\infty}\left|\left\langle x, e_{k}\right\rangle\right|^{2} \leq\|x\|^{2}
+\sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
 .\]
 
 > Note: this does not need to be a basis.
@@ -1699,5 +1696,7 @@ Proposition (? Inequality)
 Proposition (Bernoulli's Inequality)
 : 
 \[
-(1 + x)^n \geq 1 +nx \quad x\geq -1, \text{or} n\in 2\ZZ \text{ and } \forall x
+(1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
+
+
