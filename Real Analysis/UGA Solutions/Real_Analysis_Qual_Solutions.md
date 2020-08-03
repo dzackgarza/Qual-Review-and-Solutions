@@ -2275,6 +2275,15 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 ## 1
 
+- Set $f_N(x) \definedas \sum_{n=1}^N n^{-x}$, so $f(x) = \lim_{N\to\infty} f_N(x)$.
+- If an interchange of limits is justified, we have
+\[  
+\dd{}{x} \lim_{N\to\infty} \sum_{n=1}^N n^{-x}
+&= \lim_{N\to\infty} \dd{}{x} \sum_{n=1}^N n^{-x} \\
+&= \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x} n^{-x} \quad\text{(since this is a finite sum)}\\
+&= \lim_{N\to\infty} \sum_{n=1}^N {-\ln(n) \over n^x} 
+.\]
+
 # Spring 2016
 
 ## 1
