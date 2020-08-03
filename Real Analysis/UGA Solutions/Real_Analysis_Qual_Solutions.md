@@ -2295,6 +2295,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - Suppose $\int f = 0$ and it is *not* the case that $f=0$ a.e.
 - By definition, if $E\definedas \theset{x\in [a, b] \suchthat f(x) > 0} \neq 0$ then $m(E) > 0$.
 - In particular, $f>0$ on $E$, and by monotonicty of the integral, $\int_E f > \int_E 0 = 0$.
+\todo{Way too short! Missing something?}
 
 ## 3
 
@@ -2311,6 +2312,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   &\leq \norm{\tau_x f - \tau_x g_n}_1 + \norm{\tau_x g_n - g_n}_1 + \norm{g_n - f}_{1} \\
   &\leq 2\eps + \norm{\tau_x g_n - g_n}_1
   .\]
+  \todo{Need to argue that $\tau g_n$ approximates $\tau f$.}
 
 - Let $g\in C_c^\infty(\RR^1)$, let $E = \supp(g)$, and write
 \[  
@@ -2327,6 +2329,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 &= \int_E 0 \,dy \\
 &= 0
 .\]
+\todo{Sketchy.}
 
 
 # Spring 2016
