@@ -2308,6 +2308,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   \[  
   \norm{\tau_yf - f}_1 
   &= \norm{\tau_y f - \tau_y g_n + \tau_y g_n - g_n +g_n - f}_{1}
+  &\leq \norm{\tau_y f - \tau_y g_n}_1 + \norm{\tau_y g_n - g_n}_1 + \norm{g_n - f}_{1}
   .\]
 
 
