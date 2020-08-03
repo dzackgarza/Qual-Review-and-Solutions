@@ -2320,6 +2320,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 &= \int_E \abs{g(y-x) - g(y)} \,dy 
 .\]
 
+- B
+
 
 # Spring 2016
 
