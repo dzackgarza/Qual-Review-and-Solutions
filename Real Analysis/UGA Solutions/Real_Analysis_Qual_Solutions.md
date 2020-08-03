@@ -2349,7 +2349,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   \[  
   \mu(G)
   &= \mu\qty{\intersect_{N=1}^\infty \union_{n=N}^\infty E_n^c} \\
-  &\leq \mu \qty{\union_{n=N}^\infty
+  &\leq \mu \qty{\union_{n=N}^\infty E_n^c} \quad\text{for every } N \\
+  &= \mu
   .\]
   
 
