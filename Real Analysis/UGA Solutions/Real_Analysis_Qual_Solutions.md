@@ -2300,14 +2300,14 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 - Fixing notation, set $\tau_x f(y) = f(y-x)$; we then want to show
 \[  
-\norm{\tau_yf -f}_{L^1} \converges{y\to 0}\to 0
+\norm{\tau_x f -f}_{L^1} \converges{x\to 0}\to 0
 .\]
 - By an $\eps/3$ argument, it suffices to show this for compactly supported functions:
   - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $\norm{f-g_n}_{L^1} \to 0$
   - Then
   \[  
-  \norm{\tau_yf - f}_1 
-  &= \norm{\tau_y f - \tau_y g_n + \tau_y g_n - g_n +g_n - f}_{1} \\
+  \norm{\tau_x f - f}_1 
+  &= \norm{\tau_x f - \tau_y g_n + \tau_y g_n - g_n +g_n - f}_{1} \\
   &\leq \norm{\tau_y f - \tau_y g_n}_1 + \norm{\tau_y g_n - g_n}_1 + \norm{g_n - f}_{1} \\
   &\leq 2\eps + \norm{\tau_y g_n - g_n}_1
   .\]
@@ -2315,8 +2315,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - Let $g\in C_c^\infty(\RR^1)$, let $E = \supp(g)$, and write
 \[  
 \norm{\tau_y g_n - g_n}_1 
-&= \int_\RR \abs{g(y-x) - g(x)\,dx \\
-&= \int_E g(x)\,dx + \int_{E^c} g(x)\,dx
+&= \int_\RR \abs{g(y-x) - g(y)\,dy \\
+&= \int_E g(y)\,dy + \int_{E^c} g(y)\,dy
 .\]
 
 
