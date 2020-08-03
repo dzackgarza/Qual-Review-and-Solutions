@@ -2315,8 +2315,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - Let $g\in C_c^\infty(\RR^1)$, let $E = \supp(g)$, and write
 \[  
 \norm{\tau_y g_n - g_n}_1 
-&= \int_\RR g(x)\,dx \\
-&= \int_E g(x)\dx + \int_{E^c} g(x)\,dx
+&= \int_\RR \abs{g(g(x)\,dx \\
+&= \int_E g(x)\,dx + \int_{E^c} g(x)\,dx
 .\]
 
 
