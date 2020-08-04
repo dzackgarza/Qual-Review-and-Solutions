@@ -67,7 +67,6 @@
 A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_0$ is the same.
 :::
 
-
 - Colimit
 
 - Compact
