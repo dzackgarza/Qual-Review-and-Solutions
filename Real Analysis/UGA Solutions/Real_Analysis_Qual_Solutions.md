@@ -2320,8 +2320,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 ## 2
 
 
-- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)$, we have $m(E) > 0$.
-- Write $A = \theset{f>g} \disjoint \theset{f\leq g}$
+- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)$, we have $m(A) > 0$.
+- Write $A = \theset{f>g} \disjoint \theset{f\leq g}$; 
 
 ## 3
 
