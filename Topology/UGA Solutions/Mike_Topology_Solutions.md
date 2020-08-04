@@ -738,6 +738,13 @@ Yes,
 ## 6
 
 - Note that "homotopic to a constant function" equivalently means "nullhomotopic".
+- Since $f$ is not surjective, there is some point $x_0\not\in\im(f)$, and thus $f$ descends to a map $g: S^3\cross S^3 \to \RP^3\setminus\theset{x_0}$.
+- Claim: the codomain deformation retracts onto $\RP^2$.
+  - Why: puncture the sphere at two antipodal points
+  - Then retract each hemisphere onto the equator
+  - Which is a copy of $\RP^2$.
+
+- So $f$ induces a map on $\pi_1$, $f_*:\ZZ^2 \to \ZZ/2\ZZ$
 
 # Extra Problem Solutions
 
