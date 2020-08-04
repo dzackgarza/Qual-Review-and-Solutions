@@ -2327,7 +2327,9 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 ,\]
   then $m(A_1) > 0$ or $m(A_2) > 0$ (or both).
 
-- Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$
+- Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$.
+
+- Then on $A_1$, we have $f(x)>g(x)$ pointwise, and integrating this
 
 
 ## 3
