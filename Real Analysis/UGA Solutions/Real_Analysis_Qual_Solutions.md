@@ -2289,7 +2289,6 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   so it suffices to show the last sum converges on $(1, \infty)$.
 
 
-\todo{No idea how. But if this works, does this show both parts?}
 
 ## 2
 
