@@ -2332,8 +2332,8 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 - Then on $E$, we have $f(x)>g(x)$ pointwise. 
   This is preserved by monotonicity of the integral, thus
   \[  
-  f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int 
-  .\]  
+  f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int_{E} g(x)\, dx 
+  .\] 
 
 
 ## 3
