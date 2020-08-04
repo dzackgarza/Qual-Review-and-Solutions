@@ -2329,7 +2329,11 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 
 - Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$.
 
-- Then on $A_1$, we have $f(x)>g(x)$ pointwise, and integrating this
+- Then on $A_1$, we have $f(x)>g(x)$ pointwise. 
+  This is preserved by monotonicity of the integral, thus
+  \[  
+  
+  .\]  
 
 
 ## 3
