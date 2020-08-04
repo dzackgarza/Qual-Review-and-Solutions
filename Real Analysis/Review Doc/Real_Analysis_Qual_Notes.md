@@ -3,6 +3,7 @@
 
 ## Useful Techniques
 
+- General advice: try swapping the orders of limits, sums, integrals, etc.
 - Limits:
   - Take the $\limsup$ or $\liminf$, which always exist, and aim for an inequality like
   \[  
