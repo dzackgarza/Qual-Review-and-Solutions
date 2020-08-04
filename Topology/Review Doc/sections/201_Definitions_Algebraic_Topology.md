@@ -63,6 +63,11 @@
 
 - Cocycle
 
+:::{.definition title="Constant Map"}
+A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the value $f(x) = y_0$ is the same.
+:::
+
+
 - Colimit
 
 - Compact
@@ -284,8 +289,15 @@
 
 - N-connected
 
-- Nullhomotopic
-	* A map $X\mapsvia{f} Y$ is nullhomotopic if it is homotopic to a constant map $X \mapsvia{c} \theset{y_0}$; that is, there exists a homotopy
+:::{.definition title="Nullhomotopic"}
+A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_0}$; that is, there exists a homotopy 
+\[  
+F: X\cross I &\to Y \\
+\restrictionof{F}{X\cross\theset{0}} &= f \quad F(x, 0) = f(x) \\
+\restrictionof{F}{X\cross\theset{1}} &= g  \quad F(x, 1) = g(x) = y_0\\
+.\]
+:::
+
 
 - Orientable manifold
 	* A manifold for which an orientation exists, see "Orientation of a Manifold".
