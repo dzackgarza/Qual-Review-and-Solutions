@@ -2293,8 +2293,11 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - Claim: $\sum n^{-x}\ln(n)$ converges.
   - Use the fact that
   \[  
-  \lim_{n\to\infty}
-  .\]
+  \lim_{n\to\infty} {\ln(n) \over n^x} 
+  \equalsbecause{L.H.} \lim_{n\to\infty}{1/n \over xn^{x-1}} 
+  = \lim_{n\to\infty} {1\over xn^x} = 0
+  ,\]
+  which implies that for a fixed $x$, there exists an $N$ large enough such that $n\geq N$ implies $
 
 
 
