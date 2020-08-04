@@ -538,7 +538,8 @@ Examples:
 
 - Products
 - Pullbacks
-- Inverse limits
+- Inverse/Projective limits
+- The $p\dash$adic integers $\ZZ/
 :::
 
 

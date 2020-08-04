@@ -75,6 +75,7 @@ Examples:
 - Products
 - Pullbacks
 - Inverse/Projective limits
+- The $p\dash$adic integers $\ZZ_p$.
 :::
 
 
