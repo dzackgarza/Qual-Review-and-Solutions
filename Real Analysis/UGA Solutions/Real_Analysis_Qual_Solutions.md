@@ -2395,9 +2395,9 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
   \[  
   \mu(G)
   &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
-  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c} \quad\text{for every } N \\
-  &\leq \sum_{n=N}^\infty \mu(E_n^c) \\
-  &\definedas \sum_{n=N}^\infty \mu(X\setminus E_n) \\
+  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
+  &\leq \sum_{N=1}^\infty \mu(E_M^c) \quad \forall M\geq N \\
+  &\definedas \sum_{n=1}^\infty \mu(X\setminus E_n) \\
   &\converges{N\to\infty}\to 0
   .\]
   \todo{Last step sketchy.}
