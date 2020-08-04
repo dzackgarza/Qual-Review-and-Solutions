@@ -31,7 +31,7 @@
   .\]
 
 - Simplifications:
-  - 
+  - To prove something for a measurable set, show it for bounded/compact/elementary sets
 
 ## Definitions
 
