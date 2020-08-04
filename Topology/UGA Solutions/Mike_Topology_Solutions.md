@@ -688,6 +688,8 @@ Yes,
 ![Image](figures/2020-02-04-21:50.png)
 
 
+# Misc
+
 # Extra Problem Solutions
 
 ## Point Set
