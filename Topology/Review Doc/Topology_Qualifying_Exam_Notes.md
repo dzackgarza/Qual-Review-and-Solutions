@@ -6,6 +6,11 @@ title: "Topology Qualifying Exam Notes"
 
 # Summary and Topics: Point-Set Topology 
 
+- Connectedness
+- Compactness
+- Hausdorff Spaces
+
+
 # Definitions: Point-Set Topology
 
 ## Basics
