@@ -2298,6 +2298,11 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   = \lim_{n\to\infty} {1\over \eps n^\eps} = 0
   ,\]
   - This implies that for a fixed $\eps >0$ and for any constant $c>0$ there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^\eps < c$, i.e. $\ln(n) < c n^{\eps}$.
+  - Taking $c=1$, we have $n\geq N \implies \ln(n) < n^\eps$
+  - We thus break up the sum:
+  \[  
+  
+  .\]
 
 
 
