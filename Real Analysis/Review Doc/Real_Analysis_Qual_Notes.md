@@ -32,7 +32,9 @@
   .\]
 
 - Simplifications:
-  - To prove something for a measurable set, show it for bounded
+  - To show something for a measurable set, show it for bounded/compact/elementary sets/
+  - To show something for a function, show it for continuous, bounded, compactly supported, simple, $L^1$, etc
+  - 
 
 ## Definitions
 
