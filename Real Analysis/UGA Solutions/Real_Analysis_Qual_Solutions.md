@@ -2387,7 +2387,7 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 
     - This follows because $x$ is in the RHS iff $x\in E_n^c$ for infinitely many $n$ iff $x\in E_n$ for at most finitely many $n$.
 
-  - But now $G$ is obtained by countable intersections/unions of measurable sets, since $E_n\in \mcm$ for all $n$ implies that $E_n^c\in \mcm$ and $\mcm$ is a $\sigma\dash$algebra.
+  - But $\mcm$ is a $\sigma\dash$algebra, and this exhibits $G$ as a countable unio/unions of measurable sets, since $E_n\in \mcm$ for all $n$ implies that $E_n^c\in \mcm$ and $\mcm$ is a $\sigma\dash$algebra.
 
 - Claim: $\mu(G) = 0$.
 
