@@ -1,5 +1,8 @@
 # Extra Problems: Algebraic Topology
 
+## Homotopy 101
+
+- Show that if $X\mapsvia{f} X^n$ is not surjective, then $f$ is nullhomotopic.
 
 ## $\pi_1$
 

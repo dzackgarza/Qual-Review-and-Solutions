@@ -712,6 +712,9 @@ Yes,
 - Identify $\pi_1 \RP^2 = \ZZ/2\ZZ$ and $\pi_1(S^1\cross S^1) = \pi_1 S^1 \cross \pi_1 S^1 = \ZZ^2$.
 - But as a $\ZZ\dash$module morphism, $f_*$ will preserve torsion submodules, and since $\ZZ^2$ is free we must have $f_* = 0$.
 
+- Lemma: $f_* = 0$ implies $f$ is nullhomotopic. \todo{Why? What is the homotopy?}
+  - Note that $\widetilde{S^1\cross S^1} = \RR^2$.
+
 
 ## 4
 
@@ -727,6 +730,14 @@ Yes,
   - But no element of the image $\ZZ$ is annihilated by $2$, so $f_*$ can only be the zero map.
 
 - But then $f$ is nullhomotopic.
+
+- Lemma: $f_* = 0$ implies $f$ is nullhomotopic. \todo{Why?}
+
+## 5 (Todo)
+
+## 6
+
+- Note that "homotopic to a constant function" equivalently means "nullhomotopic".
 
 # Extra Problem Solutions
 
