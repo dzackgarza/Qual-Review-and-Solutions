@@ -2343,6 +2343,7 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 .\]
 - By an $\eps/3$ argument, it suffices to show this for compactly supported functions:
   - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $\norm{f-g}_{L^1} < \eps$
+  - Claim: $\norm{\tau f - \tau g} < \eps$
   - Then
   \[  
   \norm{\tau_x f - f}_1 
