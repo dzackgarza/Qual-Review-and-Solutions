@@ -69,6 +69,7 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for ever
 
 - Colimit
 :::{.definition title="Colimit"}
+For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that $\
 
 Examples:
 
