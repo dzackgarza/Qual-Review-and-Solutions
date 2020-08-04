@@ -533,7 +533,14 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for ever
 
 - Colimit
 :::{.definition title="Colimit"}
-For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that $\
+For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
+
+\begin{center}
+\begin{tikzcd}
+ & Y & \\
+ & X & \\
+\end{tikzcd}
+\end{center}
 
 Examples:
 
