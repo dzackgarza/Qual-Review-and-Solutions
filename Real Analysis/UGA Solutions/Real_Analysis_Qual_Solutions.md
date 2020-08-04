@@ -2303,7 +2303,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   \[  
   \sum_{n\in \NN} {\ln(n) \over n^x} 
   &= \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {\ln(n) \over n^x} \\
-  &\leq \sum_{n=1}^{N-1} n^{-x} \ln(n) + \sum_{n=N}^\infty {n^\eps \over n^x} \\
+  &\leq \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {n^\eps \over n^x} \\
+  & + \sum_{n=N}^\infty {n^\eps \over n^x} \\
   .\]
 
 
