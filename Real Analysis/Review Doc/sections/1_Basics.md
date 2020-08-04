@@ -2,10 +2,36 @@
 
 ## Useful Techniques
 
-- $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so $\limsup f_n \leq g \leq \liminf f_n$ implies that $g = \lim f$. 
-- A  limit does not exist iff $\liminf f_n > \limsup f_n$.
+- Limits:
+  - Take the $\limsup$ or $\liminf$, which always exist, and aim for an inequality like
+  \[  
+  c \leq \liminf a_n \leq \limsup a_n \leq c
+  .\]
+  - $\lim f_n = \limsup f_n = \liminf f_n$ iff the limit exists, so to show some $g$ is a limit, show
+  \[  
+\limsup f_n \leq g \leq \liminf f_n \qquad (\implies g = \lim f) 
+  .\]
+
+  - A  limit does *not* exist iff $\liminf f_n > \limsup f_n$.
 - If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
 - For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
+
+- Equalities
+  - Split into upper and lower bounds:
+  \[  
+  a=b \iff a\leq b \txand a\geq b
+  .\]
+  - Use an epsilon of room:
+  \[  
+  a < b + \eps \,\forall \eps \implies a\leq b 
+  .\]
+  - Showing something is zero:
+  \[  
+  \abs{a} \leq \eps \,\forall\eps\implies a = 0
+  .\]
+
+- Simplifications:
+  - 
 
 ## Definitions
 
