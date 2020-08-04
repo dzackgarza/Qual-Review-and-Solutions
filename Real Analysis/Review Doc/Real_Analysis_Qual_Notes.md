@@ -13,7 +13,7 @@
   \[  
 \limsup f_n \leq g \leq \liminf f_n \qquad (\implies g = \lim f) 
   .\]
-  - A  limit does *not* exist iff $\liminf f_n > \limsup f_n$.
+  - A  limit does *not* exist if $\liminf a_n > \limsup a_n$.
 
 - Sequences and Series
   - If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
