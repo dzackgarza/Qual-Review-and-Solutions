@@ -20,7 +20,7 @@ When covering spaces are involved in any way, try computing Euler characteristic
 
 ## Theorems
 
-:::{.theorem title=""}
-
+:::{.theorem title="Lifts to Universal Cover"}
+If $
 :::
 

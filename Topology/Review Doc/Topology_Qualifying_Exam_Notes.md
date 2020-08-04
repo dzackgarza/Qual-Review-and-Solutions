@@ -1241,6 +1241,11 @@ When covering spaces are involved in any way, try computing Euler characteristic
 - Covering spaces of orientable manifolds are orientable.
 
 
+## Theorems
+
+:::{.theorem title="Lifts to Universal Cover"}
+
+:::
 
 
 # Homology
