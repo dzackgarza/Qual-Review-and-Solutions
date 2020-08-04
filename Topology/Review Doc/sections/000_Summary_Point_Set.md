@@ -3,4 +3,4 @@
 - Connectedness
 - Compactness
 - Hausdorff Spaces
-
+- Path-Connectedness
