@@ -38,6 +38,9 @@
   - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
+- Integrals
+  - Break up into $
+
 ## Definitions
 
 Definition (Uniform Continuity)
