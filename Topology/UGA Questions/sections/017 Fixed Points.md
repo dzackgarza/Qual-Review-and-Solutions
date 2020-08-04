@@ -1,4 +1,4 @@
-# Fixed points
+# Fixed Points
 
 ## 1 (Fall '14). 
 Prove that, for every continuous map $f : B^2 \to B^2$, there is a point $x$ such that $f (x) = x$. 

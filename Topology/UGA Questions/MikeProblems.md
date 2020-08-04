@@ -539,7 +539,7 @@ Prove that for each $x \in X$ the set $p\inv (\theset{p(x)})$ is finite, and has
 
 
 
-# Cell Complexes and "Attaching Map" Spaces
+# Cell Complexes and Adjunction Spaces
 
 ## 1 (Fall '07). 
 Describe a cell complex structure on the torus $T = S^1 \times S^1$ and use
@@ -926,7 +926,7 @@ Prove that $H_2 \qty{\Sigma \setminus \union_{i=1}^k {p_i} } = 0$.
 
 
 
-# Fixed points
+# Fixed Points
 
 ## 1 (Fall '14). 
 Prove that, for every continuous map $f : B^2 \to B^2$, there is a point $x$ such that $f (x) = x$. 

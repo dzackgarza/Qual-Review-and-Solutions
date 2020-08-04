@@ -1,4 +1,4 @@
-# Cell Complexes and "Attaching Map" Spaces
+# Cell Complexes and Adjunction Spaces
 
 ## 1 (Fall '07). 
 Describe a cell complex structure on the torus $T = S^1 \times S^1$ and use
