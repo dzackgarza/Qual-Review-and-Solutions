@@ -34,7 +34,7 @@
   - To show something for a measurable set, show it for bounded/compact/elementary sets/
   - To show something for a function, show it for continuous, bounded, compactly supported, simple, $L^1$, etc
   - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
-  - Intersect with a 
+  - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
 ## Definitions
 
