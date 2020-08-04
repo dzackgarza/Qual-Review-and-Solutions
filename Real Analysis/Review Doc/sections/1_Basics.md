@@ -38,7 +38,7 @@
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
 - Integrals
-  - Break up into $
+  - Break up $\RR^n = \theset{\abs{x} \leq 1} \coproduct \theset{\abs{x} > 1}$.
 
 ## Definitions
 
