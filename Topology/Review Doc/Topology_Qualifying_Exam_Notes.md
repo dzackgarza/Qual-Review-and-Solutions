@@ -532,8 +532,13 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for ever
 :::
 
 - Colimit
-:::{.definition title=""}
+:::{.definition title="Colimit"}
 
+Examples:
+
+- Products
+- Pullbacks
+- Inverse limits
 :::
 
 

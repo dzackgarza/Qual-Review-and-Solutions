@@ -74,7 +74,7 @@ Examples:
 
 - Products
 - Pullbacks
-- 
+- Inverse/Projective limits
 :::
 
 
