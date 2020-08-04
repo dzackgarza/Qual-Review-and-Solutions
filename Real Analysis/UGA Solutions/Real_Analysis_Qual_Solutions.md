@@ -2321,7 +2321,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 
 - Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)$, we have $m(A) > 0$.
-- Write $A = \theset{f>g} \disjoint \theset{f\leq g}$; 
+- Write $A = \theset{f>g} \disjoint \theset{f\leq g}$, then one of these sets must have positive measure. Wlog suppose $E\definedas \theset{f>g}$ 
 
 ## 3
 
