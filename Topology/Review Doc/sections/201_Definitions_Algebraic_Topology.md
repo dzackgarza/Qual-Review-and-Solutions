@@ -68,6 +68,15 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for ever
 :::
 
 - Colimit
+:::{.definition title="Colimit"}
+
+Examples:
+
+- Products
+- Pullbacks
+- 
+:::
+
 
 - Compact
 	* A space $X$ is compact iff every open cover of $X$ has a finite subcover.
