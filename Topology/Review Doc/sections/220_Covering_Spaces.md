@@ -21,6 +21,6 @@ When covering spaces are involved in any way, try computing Euler characteristic
 ## Theorems
 
 :::{.theorem title="Lifts to Universal Cover"}
-If $Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique left
+If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\tilde f: Y\to \tilde X$
 :::
 
