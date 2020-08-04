@@ -11,9 +11,10 @@
   \[  
 \limsup f_n \leq g \leq \liminf f_n \qquad (\implies g = \lim f) 
   .\]
-
   - A  limit does *not* exist iff $\liminf f_n > \limsup f_n$.
-- If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
+
+- Sequences and Series
+  - If $f_n$ has a global maximum (computed using $f_n'$ and the first derivative test) $M_n \to 0$, then $f_n \to 0$ uniformly.
 - For a fixed $x$, if $f = \sum f_n$ converges *uniformly* on some $B_r(x)$ and each $f_n$ is continuous at $x$, then $f$ is also continuous at $x$ .
 
 - Equalities
