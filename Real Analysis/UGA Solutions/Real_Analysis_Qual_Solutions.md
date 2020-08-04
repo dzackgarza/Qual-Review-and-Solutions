@@ -2376,14 +2376,13 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 &= \int_E 0 \,dy \\
 &= 0
 .\]
-\todo{Sketchy.}
 
 ## 4
 
 - Claim: $G\in \mcm$.
   - Claim:
   \[  
-  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c
+  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect{n=N}^\infty E_n^c
   .\]
 
     - This follows because $x$ is in the RHS iff $x\in E_n^c$ for infinitely many $n$ iff $x\in E_n$ for at most finitely many $n$.
