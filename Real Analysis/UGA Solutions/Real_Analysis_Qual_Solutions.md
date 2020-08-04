@@ -2346,7 +2346,7 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
   - Claim: $\norm{\tau_x f - \tau_x g} < \eps$.
     - This follows from a change of variables:
     \[  
-    \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy
+    \norm{\tau_x f - \tau_x g} \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy
     &= \int_\RR \abs{f(y-x) - g(y-x)}\, dy  \\
     &= \int_\RR \abs{f(u) - g(u)}\, du \qquad (u=y-x,\, du=dy) \\
     &= \norm{f-g}_1 \\
