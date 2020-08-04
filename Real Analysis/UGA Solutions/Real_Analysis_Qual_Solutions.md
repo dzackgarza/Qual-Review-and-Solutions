@@ -2296,8 +2296,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   \lim_{n\to\infty} {\ln(n) \over n^x} 
   \equalsbecause{L.H.} \lim_{n\to\infty}{1/n \over xn^{x-1}} 
   = \lim_{n\to\infty} {1\over xn^x} = 0
-  ,\]
-  which implies that for a fixed $x$, there exists an $N$ large enough such that $n\geq N$ implies $
+  .\]
+  - This implies that for any fixed $x$, there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^x < \eps$
 
 
 
