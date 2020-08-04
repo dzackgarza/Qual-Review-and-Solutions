@@ -1,4 +1,4 @@
-# 2: Fundamental Group
+# Fundamental Group
 
 ## 1
 

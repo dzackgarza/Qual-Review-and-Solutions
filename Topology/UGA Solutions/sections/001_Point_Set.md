@@ -1,4 +1,4 @@
-# 1: Point-Set 
+# Point-Set 
 
 ## 2
 

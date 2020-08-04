@@ -3,7 +3,7 @@
 title: "Solutions to Mike's Compendium of Problems"
 ---
 
-# 1: Point-Set 
+# Point-Set 
 
 ## 2
 
@@ -689,6 +689,8 @@ Yes,
 
 
 # Misc
+
+
 
 # Extra Problem Solutions
 
