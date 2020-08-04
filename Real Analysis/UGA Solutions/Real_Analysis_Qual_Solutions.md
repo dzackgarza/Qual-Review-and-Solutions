@@ -2279,12 +2279,13 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - If an interchange of limits is justified, we have
 \[  
 \dd{}{x} \lim_{N\to\infty} \sum_{n=1}^N n^{-x}
-&= \lim_{N\to\infty} \dd{}{x} \sum_{n=1}^N n^{-x} \\
-&= \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x} n^{-x} \quad\text{(since this is a finite sum)}\\
-&= \lim_{N\to\infty} \sum_{n=1}^N {-\ln(n) \over n^x}  \\
-&= \lim_{N\to\infty} \sum_{n=1}^N {\ln\qty{{1\over n}} \over n^x} 
+&= \lim_{h\to 0} \lim_{N\to\infty} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
+&\equalsbecause{?} \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
+&= \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ {\sum_{n=1}^N n^{-x}} - {n^{-(x+h)} }\right] \quad\text{(1)} \\
+&= \lim_{N\to\infty} \sum_{n=1}^N \lim_{h\to 0} {1\over h} \left[ n^{-x} - n^{-(x+h)} \right] \quad\text{(2)} \\
 ,\]
   so it suffices to show the last sum converges on $(1, \infty)$.
+
 
 \todo{No idea how. But if this works, does this show both parts?}
 
