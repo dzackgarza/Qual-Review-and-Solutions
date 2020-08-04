@@ -2347,6 +2347,8 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
     - This follows from a change of variables:
     \[  
     \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy
+    &=
+    \int_\RR \abs{f(y-x) - g(y-x)}\, dy  \\
     
     .\]
   - Then
