@@ -2301,7 +2301,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   - Taking $c=1$, we have $n\geq N \implies \ln(n) < n^\eps$
   - We thus break up the sum:
   \[  
-  
+  \sum_{n\in \NN} n^{-x} \ln(n) = \sum_{n=1}^{N
   .\]
 
 
