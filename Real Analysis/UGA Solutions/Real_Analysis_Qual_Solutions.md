@@ -2297,7 +2297,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   \equalsbecause{L.H.} \lim_{n\to\infty}{1/n \over \delta n^{\delta-1}} 
   = \lim_{n\to\infty} {1\over \delta n^\delta} = 0
   ,\]
-  - This implies that for a fixed $\delta >0$ and for any $\eps>0$ there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^\delta < \eps$, i.e. $\ln(n) < \eps n^{\delta}$.
+  - This implies that for a fixed $\delta >0$ and for any constant $\eps>0$ there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^\delta < \eps$, i.e. $\ln(n) < \eps n^{\delta}$.
 
 
 
