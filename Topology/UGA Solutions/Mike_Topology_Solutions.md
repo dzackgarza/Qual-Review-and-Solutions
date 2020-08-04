@@ -599,7 +599,7 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
   - Take $i < \min(i_1, i_2)$, then $N_i(x) \ni q_j$. for some $j$.
   - Thus $x\in B_{i, j}$.
 
-# 2: Fundamental Group
+# Fundamental Group
 
 ## 1
 
@@ -687,6 +687,14 @@ Yes,
 
 ![Image](figures/2020-02-04-21:50.png)
 
+
+# Cell Complexes
+
+# Homology and Degree Theory
+
+# Surfaces
+
+# Fixed Points
 
 # Misc
 

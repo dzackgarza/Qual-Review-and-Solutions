@@ -429,7 +429,7 @@ iii. Prove that the fundamental group of $X_2$ is a free group on two generators
 
 
 
-# Covering spaces
+# Covering Spaces
 
 ## 1 (Spring 11/Spring '14). 
 a.  Give the definition of a **covering space** $\hat{X}$
