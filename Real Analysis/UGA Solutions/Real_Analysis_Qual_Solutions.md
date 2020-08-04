@@ -2346,9 +2346,9 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
   - Then
   \[  
   \norm{\tau_x f - f}_1 
-  &= \norm{\tau_x f - \tau_x g_n + \tau_x g_n - g_n +g_n - f}_{1} \\
-  &\leq \norm{\tau_x f - \tau_x g_n}_1 + \norm{\tau_x g_n - g_n}_1 + \norm{g_n - f}_{1} \\
-  &\leq 2\eps + \norm{\tau_x g_n - g_n}_1
+  &= \norm{\tau_x f - \tau_x g + \tau_x g - g +g - f}_{1} \\
+  &\leq \norm{\tau_x f - \tau_x g}_1 + \norm{\tau_x g - g}_1 + \norm{g - f}_{1} \\
+  &\leq 2\eps + \norm{\tau_x g - g}_1
   .\]
   \todo{Need to argue that $\tau g_n$ approximates $\tau f$.}
 
