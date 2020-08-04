@@ -535,12 +535,13 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for ever
 :::{.definition title="Colimit"}
 For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
-\begin{center}
 \begin{tikzcd}
- & Y & \\
- & X & \\
+                 &                            &  & Y \arrow[lldddd, "\psi_j"] \arrow[rrdddd, "\psi_i"] \arrow[dd, "\exists!", dashed] &  &               &        \\
+                 &                            &  &                                                                                    &  &               &        \\
+                 &                            &  & X \arrow[lldd, "\pi_j"] \arrow[rrdd, "\pi_i"]                                      &  &               &        \\
+                 &                            &  &                                                                                    &  &               &        \\
+\cdots \arrow[r] & X_j \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_i \arrow[r] & \cdots
 \end{tikzcd}
-\end{center}
 
 Examples:
 
@@ -556,9 +557,9 @@ Examples:
 
 - Cone
 	* For a space $X$, defined as
-	$$
+	\[  
 	CX = \frac{X\cross I} {X \cross \theset{0}}
-	$$
+	.\]
 	Example: The cone on the circle $CS^1$ ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)
 	Note that the cone embeds $X$ in a contractible space $CX$.
 
