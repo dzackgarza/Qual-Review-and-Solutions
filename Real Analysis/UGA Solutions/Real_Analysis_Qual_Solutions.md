@@ -2342,12 +2342,12 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
 \norm{\tau_x f -f}_{L^1} \converges{x\to 0}\to 0
 .\]
 - By an $\eps/3$ argument, it suffices to show this for compactly supported functions:
-  - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $\norm{f-g}_{L^1} < \eps$
+  - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $$\norm{f-g}_{L^1} < \eps.$$
   - Claim: $\norm{\tau_x f - \tau_x g} < \eps$.
     - This follows from a change of variables:
     \[  
     \norm{\tau_x f - \tau_x g} 
-    &\definedas \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy
+    &\definedas \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy \\
     &= \int_\RR \abs{f(y-x) - g(y-x)}\, dy  \\
     &= \int_\RR \abs{f(u) - g(u)}\, du \qquad (u=y-x,\, du=dy) \\
     &= \norm{f-g}_1 \\
