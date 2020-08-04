@@ -20,7 +20,7 @@ When covering spaces are involved in any way, try computing Euler characteristic
 
 ## Theorems
 
-:::{.theorem title="Lifts to Universal Cover"}
+:::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
 If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$.
 :::
 
