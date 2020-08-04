@@ -2286,7 +2286,8 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 &\definedas \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x}\qty{1 \over n^x} \\ 
 &= \lim_{N\to\infty} \sum_{n=1}^N -{\ln(n) \over n^x}
 ,\]
-  so it suffices to justify (1show that the last sum converges on $(1, \infty)$.
+  where the combining of sums in (1) is valid because $\sum n^{-x}
+  so it suffices to justify show that the last sum converges on $(1, \infty)$.
 
 
 
