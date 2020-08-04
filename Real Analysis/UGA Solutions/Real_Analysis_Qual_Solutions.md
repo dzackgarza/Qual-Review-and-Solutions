@@ -2309,7 +2309,11 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   ,\]
   where the last term converges by the $p\dash$test if $x-\eps > 1$.
 
-  - But $\eps$ can depend on $x$, and if $x\in (0, \infty)$ 
+  - But $\eps$ can depend on $x$, and if $x\in (1, \infty)$ is fixed we can choose $\eps < \abs{x-1}$ to ensure this. 
+
+
+- Claim: the interchange of limits is justified.
+\todo{?}
 
 
 
@@ -2318,9 +2322,6 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 - If $\int f = \int g$ then $\int \qty{f-g} = 0$, so it suffices to show that $\int f = 0 \implies f = 0$ a.e. or there exists a measurable set $E$ such that $\int_E f > 0$.
 
 - Suppose $\int f = 0$ and it is *not* the case that $f=0$ a.e.
-- By definition, if $E\definedas \theset{x\in [a, b] \suchthat f(x) > 0} \neq 0$ then $m(E) > 0$.
-- In particular, $f>0$ on $E$, and by monotonicty of the integral, $\int_E f > \int_E 0 = 0$.
-\todo{Way too short! Missing something?}
 
 ## 3
 
