@@ -2385,7 +2385,7 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
   G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c
   .\]
 
-    - This follows because $x$ is in the RHS iff $x\in E_n^c$ for infinitely many $n$ iff $x\in E_n$ for at most finitely many $n$.
+    - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
 
   - But $\mcm$ is a $\sigma\dash$algebra, and this shows $G$ is obtained by countable unions/intersections/complementes of measurable sets, so $G\in \mcm$. 
 
