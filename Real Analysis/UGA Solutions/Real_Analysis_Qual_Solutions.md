@@ -2301,10 +2301,9 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
   - Taking $c=1$, we have $n\geq N \implies \ln(n) < n^\eps$
   - We thus break up the sum:
   \[  
-  \sum_{n\in \NN} n^{-x} \ln(n) 
-  &= \sum_{n=1}^{N-1} n^{-x} \ln(n) + \sum_{n=N}^\infty n^{-x} \ln(n) \\
-  &= \sum_{n=1}^{N-1} n^{-x} \ln(n) + \sum_{n=N}^\infty n^{-x} \ln(n) \\
-  &\leq
+  \sum_{n\in \NN} {\ln(n) \over n^x} 
+  &= \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {\ln(n) \over n^x} \\
+  &\leq \sum_{n=1}^{N-1} n^{-x} \ln(n) + \sum_{n=N}^\infty {n^\eps \over n^x} \\
   .\]
 
 
