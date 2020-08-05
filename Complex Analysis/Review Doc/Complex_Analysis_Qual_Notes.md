@@ -13,9 +13,9 @@ References
 
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
-\begin{align*}
+\[
 \sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-.\end{align*}
+\]
 
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
 :::
@@ -27,21 +27,21 @@ If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle 
 :::{.theorem title="Cauchy Integral Formula"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 
-\begin{align*}
+\[
 f(z) = {1 \over 2\pi i} \oint_{\bd \Omega}
-\end{align*}
+\]
 and
-\begin{align*}
+\[
 \dd{^nf }{z^n}(z) - {n! \over 2\pi i} \oint_{\bd \Omega} {f\xi \over (\xi - z)^{n+1}} \,d\xi
-.\end{align*}
+.\]
 :::
 
 :::{.theorem title="Cauchy's Inequality"}
 For $z_o \in D_R(z_0) \subset \Omega$, we have
 
-\begin{align*}
+\[
 \left|f^{(n)}\left(z_{0}\right)\right| \leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{\|f\|_{C_{R}}}{R^{n+1}} R d \theta=\frac{n !\|f\|_{C_{R}}}{R^{n}} 
-.\end{align*}
+.\]
 :::
 
 :::{.theorem title="Liouville"}
@@ -110,24 +110,29 @@ If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a 
 
 :::{.theorem title="Schwarz Reflection"}
 If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
+:::
 
+:::{.remark}
+$\HH^+, \HH^-$ can be replaced with any region symmetric about a line segment $L\subseteq \RR$.
+:::
+
+:::{.theorem title="Schwarz Lemma"}
+If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
+
+1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
+2. $\abs{f'(0)} \leq 1$.
+
+Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+:::
+
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
+
+Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
 :::
 
 
 
-
-Theorem (Schwarz Lemma)
-:   If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
-
-    1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
-    2. $\abs{f'(0)} \leq 1$.
-
-    Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
-
-Theorem (Riemann Mapping)
-:   If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
-
-    Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
 
 # Stuff
 
