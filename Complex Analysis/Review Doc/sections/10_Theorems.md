@@ -8,6 +8,7 @@
 ???
 :::
 
+once complex differentiable in neighborhoods of every point.
 :::{.definition title="Holomorphic"}
 ???
 :::
@@ -178,16 +179,24 @@ If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
 Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
 :::
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
-
-Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
-:::
-
 
 :::{.theorem title="Little Picard"}
 Todo
 :::
 \todo{???}
 
+## Conformal Maps
 
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
+
+Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
+:::
+
+:::{.theorem title="Classification of Conformal Maps"}
+There are 8 major types of conformal maps:
+
+- ?
+- ?
+:::
+\todo[inline]{???}
