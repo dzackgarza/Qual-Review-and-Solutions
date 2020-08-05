@@ -26,7 +26,7 @@ Find a fractional linear transformation $T$ which maps $\HH$ to $\DD$, and expli
 Find a conformal map from $\theset{z\in \CC\suchthat \abs{z-i} > 1,\, \Re(z) > 0}$ to $\HH$.
 
 ## 5
-Find a conf
+Find a conformal map from $\theset{z\in \CC \suchthat \abs{z} < 1,\, }
 
 # Integrals and Cauchy's Theorem (8155d)
 
