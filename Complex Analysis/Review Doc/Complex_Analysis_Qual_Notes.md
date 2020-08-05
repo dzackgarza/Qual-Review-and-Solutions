@@ -33,7 +33,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 ## Integrals and Residues
 
 
-:::{.theorem title="Cauchy Integral Formula"}
+:::{.theorem title="$\star$ Cauchy Integral Formula"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 
 \[
