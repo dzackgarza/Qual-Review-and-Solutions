@@ -1,5 +1,4 @@
 # Appendix
-
 \[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\
@@ -7,19 +6,6 @@ f_z &= f_x = i\inv f_y \\
 \int_{0}^{2 \pi} e^{i \ell x} d x
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
 .\]
-
-
-
-## Things to know well:
-
-- Estimates for derivatives, mean value theorem
-
-## Theorems
-
-### The Argument Principle
-
-
-### Rouche
 
 ## Misc Prereq
 
@@ -61,31 +47,8 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
 \log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
+\dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
 \]
-
-**Cauchy-Riemann Equations**
-
-\[
-u_x = v_y \quad\text{and}\quad u_y = -v_x \\
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
-.\]
-
-
-
-## Useful Techniques
-
-## Residues
-
-If $p$ is a simple pole, $\Res(p, f) = \lim_{z\to p} (z-p)f(z)$.
-Example: Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
-
-
-Green's Theorem:
-Todo
-
-$\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
-
-
 
 
 

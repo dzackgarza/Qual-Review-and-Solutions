@@ -8,12 +8,10 @@
 **Showing a function is zero**:
 Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
 
+Things to know well:
 
-**Deriving Polar Cauchy-Riemann:**
-See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
-Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
-Then equate real and imaginary parts.
-See problem set 1.
+- Estimates for derivatives, mean value theorem
+
 
 **Computing Arguments:**
 $\Arg(z/w) = \Arg(z) - \Arg(w)$.
@@ -69,9 +67,35 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
 :::
 
+:::{.theorem title="Cauchy-Riemann Equations"}
+\[
+u_x = v_y \quad\text{and}\quad u_y = -v_x \\
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
+.\]
+:::
+\todo[inline]{Formulate better.}
+
+:::{.corollary title="Polar Cauchy-Riemann Equations"}
+Todo.
+:::
+\todo[inline]{Todo.}
+
+:::{.proof}
+See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
+Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
+Then equate real and imaginary parts.
+See problem set 1.
+
+:::
+
+
 
 
 ## Integrals and Residues
+
+If $p$ is a simple pole, $\Res(p, f) = \lim_{z\to p} (z-p)f(z)$.
+Example: Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
+
 
 
 :::{.theorem title="$\star$ Cauchy Integral Formula"}
