@@ -589,7 +589,8 @@ Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$ and prove that
 .\]
 
 ## 2
-Let $\bar B(a, r)$
+Let $\bar B(a, r)$ denote the closed disc of radius $r$ about $a\in \CC$.
+Let $f$ be holomorphic on an open set containing $\bar B(a, r)$
 
 # Spring 2020 Homework 1
 
