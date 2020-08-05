@@ -17,5 +17,5 @@ Show that
 
 Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$ and prove that
 \[  
-\exists \lambda \in S^1
+\exists \lambda \in S^1 \qtext{such that}
 .\]
