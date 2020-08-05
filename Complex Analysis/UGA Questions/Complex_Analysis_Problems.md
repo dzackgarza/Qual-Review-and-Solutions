@@ -639,6 +639,12 @@ Let $g(z) = \bar z$, and show
 (T^{-1} \circ g \circ T)(z) = 1/\bar z
 .\]
 
+### c
+Suppose that $f$ is holomorphic on $\DD$, continuous on $\bar \DD$, and real on $S^1$.
+Show that $f$ must be constant.
+
+
+
 # Spring 2020 Homework 1
 
 ## 1
