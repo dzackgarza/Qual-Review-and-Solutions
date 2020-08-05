@@ -38,6 +38,24 @@ Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the 
 
 Find an injective conformal map from $\Omega$ onto some annulus $\theset{r < \abs{z} < 1}$ for an appropriate constant $r$.
 
+## 8
+Let $D$ be the region obtained by deleting the real interval $[0, 1)$ from $\DD$; find a conformal map from $D$ to $\DD$.
+
+## 9
+Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\leq 0}$ to $\DD$.
+
+## 10
+Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\geq 1}$ to $\DD$.
+
+## 11
+Find a bijective conformal map from $G$ to $\HH$, where
+\[  
+G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt 2} \setminus [0, i)
+.\]
+
+## 12
+Prove that TFAE for a Mobius transforma
+
 # Integrals and Cauchy's Theorem (8155d)
 
 > Some interesting problems: 3, 4, 9, 10.
