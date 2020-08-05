@@ -34,6 +34,8 @@ Say that $f$ is *uniformly differentiable* iff
 \forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad \abs{x-y} < \delta \implies \abs{ {f(x) - f(y) \over x-y}  - f'(y)}  < \eps
 .\]
 
+Prove that $f$ is uniformly differentiable on $[a, b] \iff f'$ is continuous on $[a]
+
 # Several Variables (8155h)
 
 # Conformal Maps (8155c)
