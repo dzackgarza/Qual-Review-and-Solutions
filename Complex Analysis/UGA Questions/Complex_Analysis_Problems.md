@@ -643,7 +643,8 @@ Let $g(z) = \bar z$, and show
 Suppose that $f$ is holomorphic on $\DD$, continuous on $\bar \DD$, and real on $S^1$.
 Show that $f$ must be constant.
 
-
+## 8
+Suppose $f, g: \DD\to \Omega$ are holomorphic
 
 # Spring 2020 Homework 1
 
