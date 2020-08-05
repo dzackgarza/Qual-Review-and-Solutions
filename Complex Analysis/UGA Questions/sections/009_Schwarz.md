@@ -8,4 +8,4 @@ Prove that $f$ is a rational function.
 
 ### b
 Suppose that $z=0$ is the unique zero of $f$.
-Show that $
+Show that there is some $\lambda \in \CC$
