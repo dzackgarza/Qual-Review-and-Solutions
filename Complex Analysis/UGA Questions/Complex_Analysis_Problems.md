@@ -58,7 +58,8 @@ Prove that TFAE for a Möbius transformation $T$ given by $T(z) = {az + b \over 
 
 a. $T$ maps $\RR\union \theset{\infty}$ to itself.
 b. It is possible to choose $a,b,c,d$ to be real numbers.
-c. 
+c. $\bar{T(z)} = T(\bar z)$ for every $z\in \CP^1$.
+d. 
 
 # Integrals and Cauchy's Theorem (8155d)
 
