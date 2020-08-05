@@ -17,6 +17,12 @@ References
 The intersection of open dense sets is open.
 :::
 
+:::{.theorem title="Mean Value Theorem"}
+?
+:::
+\todo[inline]{???}
+
+
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
