@@ -42,6 +42,7 @@ Prove that there exist $a\in A, b\in B$ such that
 \[  
 \norm{a - b} = \inf\theset{\norm{x-y} \suchthat x\in A,\, y\in B}
 .\]
+## 
 
 # Several Variables (8155h)
 
