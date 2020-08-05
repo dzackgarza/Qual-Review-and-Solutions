@@ -1015,9 +1015,9 @@ and use it to show that
 
 ### 3.8.1
 Use the following formula to show that the complex zeros of $\sin(\pi z)$ are exactly the integers, and they are each of order 1:
-\begin{align*}
+\[
 \sin \pi z=\frac{e^{i \pi z}-e^{-i \pi z}}{2 i}
-.\end{align*}
+.\]
 
 Calculate the residue of ${1\over \sin(\pi z)}$ at $z=n\in \ZZ$.
 
@@ -1025,52 +1025,52 @@ Calculate the residue of ${1\over \sin(\pi z)}$ at $z=n\in \ZZ$.
 ### 3.8.2
 
 Evaluate the integral
-\begin{align*}
+\[
 \int_\RR {dx \over 1 + x^4}
-.\end{align*}
+.\]
 
 What are the poles of ${1\over 1 + z^4}$ ?
 
 
 ### 3.8.4
 Show that
-\begin{align*}
+\[
 \int_{-\infty}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x=\pi e^{-a}, \quad \text { for all } a>0
-.\end{align*}
+.\]
 
 
 ### 3.8.5
 Show that if $\xi\in \RR$, then
-\begin{align*}
+\[
 \int_{-\infty}^{\infty} \frac{e^{-2 \pi i x \xi}}{\left(1+x^{2}\right)^{2}} d x=\frac{\pi}{2}(1+2 \pi|\xi|) e^{-2 \pi|\xi|}
-.\end{align*}
+.\]
 
 
 ### 3.8.6
 Show that
-\begin{align*}
+\[
 \int_{-\infty}^{\infty} \frac{d x}{\left(1+x^{2}\right)^{n+1}}=\frac{1 \cdot 3 \cdot 5 \cdots(2 n-1)}{2 \cdot 4 \cdot 6 \cdots(2 n)} \cdot \pi
-.\end{align*}
+.\]
 
 
 ### 3.8.7
 Show that
-\begin{align*}
+\[
 \int_{0}^{2 \pi} \frac{d \theta}{(a+\cos \theta)^{2}}=\frac{2 \pi a}{\left(a^{2}-1\right)^{3 / 2}}, \quad \text { whenever } a>1
-.\end{align*}
+.\]
 
 
 ### 3.8.8
 Show that if $a,b\in \RR$ with $a > \abs{b}$, then
-\begin{align*}
+\[
 \int_{0}^{2 \pi} \frac{d \theta}{a+b \cos \theta}=\frac{2 \pi}{\sqrt{a^{2}-b^{2}}}
-.\end{align*}
+.\]
 
 ### 3.8.9
 Show that
-\begin{align*}
+\[
 \int_{0}^{1} \log (\sin \pi x) d x=-\log 2
-.\end{align*}
+.\]
 
 > Hint: use the following contour.
 >
@@ -1078,9 +1078,9 @@ Show that
 
 ### 3.8.10
 Show that if $a>0$, then
-\begin{align*}
+\[
 \int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x=\frac{\pi}{2 a} \log a
-.\end{align*}
+.\]
 
 > Hint: use the following contour.
 >
@@ -1095,9 +1095,9 @@ Prove that all entire functions that are injective are of the form $f(z) = az + 
 Use the Cauchy inequalities or the maximum modulus principle to solve the following problems:
 
 a. Prove that if $f$ is an entire function that satisfies
-    \begin{align*}
+    \[
     \sup _{|z|=R}|f(z)| \leq A R^{k}+B
-    \end{align*}
+    \]
     for all $R>0$, some integer $k\geq 0$, and some constants $A, B > 0$, then $f$ is a polynomial of degree $\leq k$.
 
 b. Show that if $f$ is holomorphic in the unit disc, is bounded, and converges uniformly to zero in the sector $\theta < \arg(z) < \phi$ as $\abs{z} \to 0$, then $f \equiv 0$.
@@ -1130,9 +1130,9 @@ a. If $u$ is a non-constant real-valued harmonic function in a region $\Omega$, 
 
 b. Suppose $\Omega$ is a region with compact closure $\bar \Omega$.
     If $u$ is harmonic in $\Omega$ and continuous in $\bar \Omega$, then 
-    \begin{align*}
+    \[
     \sup _{z \in \Omega}|u(z)| \leq \sup _{z \in \bar \Omega -\Omega}|u(z)|
-    .\end{align*}
+    .\]
 
 > Hint: to prove (a), assume $u$ attains a local maximum at $z_0$.
 > Let $f$ be holomorphic near $z_0$ with $\Re(f) = u$, and show that $f$ is not an open map.
@@ -1187,9 +1187,9 @@ Problem
     a. Show (without using 3.8.9 in the S&S) that
     $$\begin{aligned}\int_0^{2\pi} \log\abs{1 - e^{i\theta}}~d\theta = 0\end{aligned}$$
     b. Show that this identity is equivalent to S&S 3.8.9:
-    \begin{align*}
+    \[
     \int_0^1 \log(\sin(\pi x)) ~dx = -\log 2
-    .\end{align*}
+    .\]
 
 ### 7
 
