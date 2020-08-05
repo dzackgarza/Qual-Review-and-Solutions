@@ -576,7 +576,10 @@ Prove that $f$ is a rational function.
 
 ### b
 Suppose that $z=0$ is the unique zero of $f$.
-Show that $
+Show that there is some $\lambda \in \CC$ with $\abs{\lambda}=1$ and some $n\in \NN$ such that
+\[  
+f(z) = \lambda z^n
+.\]
 
 # Spring 2020 Homework 1
 
