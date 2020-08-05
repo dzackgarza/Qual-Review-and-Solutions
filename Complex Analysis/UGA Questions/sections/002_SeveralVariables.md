@@ -20,4 +20,26 @@ Complete this definition: "$f: \RR^n\to \RR^m$ is real-differentiable a point $p
 Give an example of a function $f:\RR^2\to \RR$ whose first-order partial derivatives exist everywhere but $f$ is not differentiable at $(0, 0)$.
 
 ### c
-Give an example ofa function $f: \RR^2 \to \RR$ which is real-differentiable
+Give an example of a function $f: \RR^2 \to \RR$ which is real-differentiable everywhere but nowhere complex-differentiable.
+
+## 3
+Let $f:\RR^2\to \RR$.
+
+### a
+Define in terms of linear transformations what it means for $f$ to be differentiable at a point $(a, b) \in \RR^2$.
+
+### b
+State a version of the inverse function theorem in this setting.
+
+### c
+Identify $\RR^2$ with $\CC$ and give a necessary and sufficient condition for a real-differentiable function at $(a, b)$ to be complex differentiable at the point $a+ib$.
+
+## 4
+Let $f = u+iv$ be complex-differentiable with continuous partial derivatives at a point $z = re^{i\theta}$ with $r\neq 0$.
+Show that
+\[  
+\dd{u}{r} = {1\over r}\dd{v}{\theta} \qquad \dd{v}{r} = -{1\over r}\dd{u}{\theta}
+.\]
+
+## 5
+Let $P
