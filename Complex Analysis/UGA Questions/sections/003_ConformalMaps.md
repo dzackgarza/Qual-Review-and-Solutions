@@ -22,3 +22,5 @@ Find a conformal  map from $\theset{\abs{z-1} < 2} \intersect \theset{\abs{z+1} 
 
 ## 7
 Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the circle $\abs{z-{1\over 4}} = {1\over 4}$.
+
+Find an injective conformal map 
