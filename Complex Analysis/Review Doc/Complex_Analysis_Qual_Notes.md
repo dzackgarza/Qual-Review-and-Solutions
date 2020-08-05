@@ -15,11 +15,12 @@ References
 ???
 :::
 
+Equal to its Taylor series expansion:
 :::{.definition title="Analytic"}
 ???
 :::
 
-once complex differentiable in neighborhoods of every point.
+Once complex differentiable in neighborhoods of every point:
 :::{.definition title="Holomorphic"}
 ???
 :::

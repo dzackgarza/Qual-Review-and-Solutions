@@ -8,18 +8,11 @@ f_z &= f_x = i\inv f_y \\
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
 .\]
 
-- Holomorphic: once complex differentiable in neighborhoods of every point.
-- Analytic: equal to its Taylor series expansion
 
-> Collection of facts used on problem sets
 
 ## Things to know well:
 
-- Cauchy Integral Formula
 - Estimates for derivatives, mean value theorem
-- Rouché's theorem
-- Casorati-Weierstrass
-- The 8 types of conformal maps
 
 ## Theorems
 
