@@ -423,83 +423,83 @@ d. Conclude that $f = g$.
 
 ## 1
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {1 \over (1+z)^2 (z+9x^2)} \, dx
-.\end{align*}
+.\]
 
 
 ## 2
 Let $a>0$ and calculate
-\begin{align*}
+\[
 \int_0^\infty {x\sin(x) \over x^2 + a^2} \,dx
-.\end{align*}
+.\]
 
 
 ## 3
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\sqrt x \over (x+1)^2} \,dx
-.\end{align*}
+.\]
 
 ## 4
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\cos(x) - \cos(4x) \over x^2} \, dx
-.\end{align*}
+.\]
 
 ## 5
 Let $a>0$ and calculate
-\begin{align*}
+\[
 \int_0^\infty {x^2 \over (x^2 + a^2)^2} \, dx
-.\end{align*}
+.\]
 
 ## 6
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\sin(x) \over x}\, dx
-.\end{align*}
+.\]
 
 ## 7
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\sin(x) \over x(x^2+1)}\, dx
-.\end{align*}
+.\]
 
 ## 8
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\sqrt x \over 1 + x^2} \, dx
-.\end{align*}
+.\]
 
 ## 9
 Calculate
-\begin{align*}
+\[
 \int_{-\infty}^\infty {1+x^2 \over 1+x^4}\, dx
-.\end{align*}
+.\]
 
 ## 10
 Let $a>0$ and calculate
-\begin{align*}
+\[
 \int_0^\infty {\cos(x) \over (x^2 + a^2)^2}\, dx
-.\end{align*}
+.\]
 
 ## 11
 Calculate
-\begin{align*}
+\[
 \int_0^\infty {\sin^3(x) \over x^3} \, dx
-.\end{align*}
+.\]
 
 ## 12
 Let $n\in \ZZ^{\geq 1}$ and $0<\theta<\pi$ and show that
-\begin{align*}
+\[
 {1\over 2\pi i} \int_{\abs z = 2} {z^n \over 1 -3z\cos(\theta) + z^2} \,dz = {\sin(n\theta) \over \sin(\theta)}
-.\end{align*}
+.\]
 
 ## 13
 Suppose $a>b>0$ and calculate
-\begin{align*}
+\[
 \int_0^{2\pi} {1 \over (a+b\cos(\theta))^2} \,d\theta
-.\end{align*}
+.\]
 
 
 # Rouche's Theorem (8155h)
@@ -507,17 +507,17 @@ Suppose $a>b>0$ and calculate
 ## 1
 
 Prove that for every $n\in \ZZ^{\geq 0}$ the following polynomial has no roots in the open unit disc:
-\begin{align*}
+\[
 f_n(x) \definedas \sum_{k=0}^n {z^k \over k!}
-.\end{align*}
+.\]
 
 > Hint: check $n=1,2$ directly.
 
 ## 2
 Assume that $\abs b < 1$ and show that the following polynomial has exactly two roots (counting multiplicity) in $\abs{z} < 1$:
-\begin{align*}
+\[
 f(z) \definedas z^3 + 3z^2 + bz + b^2
-.\end{align*}
+.\]
 
 
 ## 3
@@ -527,16 +527,16 @@ Show that on the open set $\theset{z\in \CC \suchthat \Re(z) < 1}$, the function
 
 ## 4
 How many roots does the following polynomial have in the open disc $\abs{z} < 1$?
-\begin{align*}
+\[
 f(z) = z^7 - 4z^3 - 1
-.\end{align*}
+.\]
 
 
 ## 5
 Let $n\in \ZZ^{\geq 0}$ and show that the equation
-\begin{align*}
+\[
 e^z = az^n
-\end{align*}
+\]
 has $n$ solutions in the open unit disc if $\abs{a} > e$, and no solutions if $\abs{a} < {1\over e}$.
 
 ## 6
@@ -547,24 +547,24 @@ Show that there exists $\delta >0$ and $\eps > 0$ such that for each $w$ such th
 
 ## 7
 For $k=1,2,\cdots, n$, suppose $\abs{a_k} < 1$ and
-\begin{align*}
+\[
 f(z) \definedas \qty{z - a_1 \over 1 - \bar a_q z} \qty{z-a_2 \over 1 - \bar a_2 z} \cdots \qty{z - a_n \over 1 - \bar a_n z}
-.\end{align*}
+.\]
 Show that $f(z) = b$ has $n$ solutions in $\abs{z} < 1$.
 
 
 ## 8
 For each $n\in \ZZ^{\geq 1}$, let
-\begin{align*}
+\[
 P_n(z) = 1 + z + {1\over 2!} z^2 + \cdots + {1\over n!}z^n
-.\end{align*}
+.\]
 Show that for sufficiently large $n$, the polynomial $P_n$ has no zeros in $\abs{z} < 10$, while the polynomial $P_n(z) - 1$ has precisely 3 zeros there.
 
 ## 9
 Prove that
-\begin{align*}
+\[
 \max_{\abs z = 1} \abs{a_0 + a_1 z + \cdots + a_{n-1}z^{n-1} + z^n} \geq 1
-.\end{align*}
+.\]
 
 > Hint: the first part of the problem asks for a statement of Rouche's theorem.
 
