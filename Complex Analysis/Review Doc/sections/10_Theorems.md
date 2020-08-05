@@ -1,3 +1,26 @@
+# Useful Techniques
+
+**Showing a function is constant:**
+
+- Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.
+- Show that $f$ is entire and bounded.
+
+**Showing a function is zero**:
+Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
+
+
+**Deriving Polar Cauchy-Riemann:**
+See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
+Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
+Then equate real and imaginary parts.
+See problem set 1.
+
+**Computing Arguments:**
+$\Arg(z/w) = \Arg(z) - \Arg(w)$.
+
+The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
+
+
 # Definitions
 
 :::{.definition title="Complex Differentiable"}
@@ -17,8 +40,6 @@ Once complex differentiable in neighborhoods of every point:
 :::{.definition title="Meromorphic"}
 ???
 :::
-
-
 
 
 # Theorems
@@ -47,6 +68,8 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
 :::
+
+
 
 ## Integrals and Residues
 

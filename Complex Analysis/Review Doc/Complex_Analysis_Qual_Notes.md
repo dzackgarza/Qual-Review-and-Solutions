@@ -9,6 +9,29 @@ References
 
 - Simon
 
+# Useful Techniques
+
+**Showing a function is constant:**
+
+- Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.
+- Show that $f$ is entire and bounded.
+
+**Showing a function is zero**:
+Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
+
+
+**Deriving Polar Cauchy-Riemann:**
+See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
+Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
+Then equate real and imaginary parts.
+See problem set 1.
+
+**Computing Arguments:**
+$\Arg(z/w) = \Arg(z) - \Arg(w)$.
+
+The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
+
+
 # Definitions
 
 :::{.definition title="Complex Differentiable"}
@@ -28,8 +51,6 @@ Once complex differentiable in neighborhoods of every point:
 :::{.definition title="Meromorphic"}
 ???
 :::
-
-
 
 
 # Theorems
@@ -58,6 +79,8 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
 :::
+
+
 
 ## Integrals and Residues
 
@@ -348,10 +371,6 @@ f_z &= f_x = i\inv f_y \\
 
 ### Rouche
 
-Theorem (Statement 1)
-:   Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-    Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
-
 ## Misc Prereq
 
 **Standard forms of conic sections:**
@@ -394,7 +413,6 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 \log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
 \]
 
-
 **Cauchy-Riemann Equations**
 
 \[
@@ -405,26 +423,6 @@ u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 
 
 ## Useful Techniques
-
-**Showing a function is constant:**
-
-- Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.
-- Show that $f$ is entire and bounded.
-
-**Showing a function is zero**:
-Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
-
-
-**Deriving Polar Cauchy-Riemann:**
-See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
-Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
-Then equate real and imaginary parts.
-See problem set 1.
-
-**Computing Arguments:**
-$\Arg(z/w) = \Arg(z) - \Arg(w)$.
-
-The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
 
 ## Residues
 
