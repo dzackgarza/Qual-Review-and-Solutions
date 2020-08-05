@@ -11,6 +11,12 @@ References
 
 # Theorems
 
+## Basics
+
+:::{.theorem title="Green's Theorem"}
+If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
+:::
+
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 \[
@@ -20,9 +26,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
 :::
 
-:::{.theorem title="Morera's Theorem"}
-If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
-:::
+## Integrals and Residues
 
 :::{.theorem title="Cauchy Integral Formula"}
 Suppose $f$ is holomorphic on $\Omega$, then 
@@ -44,21 +48,24 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 .\]
 :::
 
+## Holomorphic and Entire Functions
+
+:::{.theorem title="Morera's Theorem"}
+If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
+:::
+
 :::{.theorem title="Liouville"}
 If $f$ is entire and bounded, $f$ is constant.
 :::
+
+## Rouché
 
 :::{.theorem title="Argument Principle"}
 Todo
 :::
 \todo{Argument principle.}
 
-
-:::{.theorem title="Green's Theorem"}
-If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
-:::
-
-:::{.theorem title="Rouche"}
+:::{.theorem title="Rouché"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
 :::
 
