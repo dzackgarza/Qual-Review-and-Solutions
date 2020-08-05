@@ -55,8 +55,12 @@ f_n(x) \geq f_{n+1}(x) \geq 0 \quad \forall n\in \NN,\, \forall x\in [0, 1]
 Prove that if $\theset{f_n}$ converges pointwise to $0$ on $[0, 1]$ then it converges to $0$ uniformly on $[0, 1]$.
 
 ## 9
+Show that if $E\subset [0, 1]$ is uncountable, then there is some $t\in \RR$ such that $E\intersect (-\infty ,t)$ and $E\intersect (t, \infty)$ are also uncountable.
 
 # Several Variables (8155h)
+
+## 1
+Is the following function continuous, differentiable, continuously differentiable?
 
 # Conformal Maps (8155c)
 
