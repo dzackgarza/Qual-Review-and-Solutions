@@ -33,4 +33,40 @@ z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\abs{ f(z) - f(a)} \over \abs{
 .\]
 
 ## 3
+Define
+\[  
+G \definedas \theset{z\in \CC\suchthat \Re(z) > 0, \, \abs{z-1} > 1}
+.\]
 
+Find all of the injective conformal maps $G\to \DD$.
+These may be expressed as compositions of maps, but explain why this list is complete.
+
+## 4
+Suppose $f: \HH\union \RR\to \CC$ satisfies the following:
+
+- $f(i) = i$
+- $f$ is continuous
+- $f$ is analytic on $\HH$
+- $f(z) \in \RR \iff z\in \RR$.
+
+Show that $f(\HH)$ is a dense subset of $\HH$.
+
+## 5
+Suppose $f: \DD\to \HH$ is analytic and satisfies $f(0) = 2$.
+Find a sharp upper bound for $\abs{f'(0)}$, and prove it is sharp by example.
+
+## 6
+Suppose $f:\DD\to\DD$ is analytic, has a single zero of order $k$ at $z=0$, and satsifies $\lim_{\abs z \to 1} \abs{f(z)} = 1$.
+Give with proof a formula for $f(z)$.
+
+## 7
+
+### a
+State the standard Schwarz reflection principle involving reflection across the real axis.
+
+### b
+Give a linear fractional transformation $T$ mapping $\DD$ to $\HH$.
+Let $g(z) = \bar z$, and show
+\[  
+(T^{-1} \circ g \circ T)(z) = 1/\bar z
+.\]
