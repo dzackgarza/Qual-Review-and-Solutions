@@ -121,12 +121,5 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
 
 
-## Precise Refinements
 
-**Cauchy Inequality:**
-Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
-Using the integral formula, defining $\norm{f}_{C_R} = \max_{\abs{z-z_0} = R} \abs{f(z)}$
 
-\[
-\abs{ f^{(n)}(z_0) } \leq \frac{n!}{2\pi} \int_0^{2\pi} \frac{\norm{f}_{C_R}}{R^{n+1}} R~d\theta = \frac{n! \norm{f}_{C_R}}{R^{n}}
-.\]

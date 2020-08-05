@@ -44,7 +44,6 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 \todo{These don't quite match up.}
 
 :::{.proof}
-**Cauchy Inequality:**
 Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 Using the integral formula, defining $\norm{f}_{C_R} = \max_{\abs{z-z_0} = R} \abs{f(z)}$
 
