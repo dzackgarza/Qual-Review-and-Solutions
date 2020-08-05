@@ -8,7 +8,7 @@ Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \su
 Give an example of such an $f$ that converges at every point of $S^1$.
 
 ### b 
-Giv an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
+Give an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
 ### c 
 Prove that $f$ can not be analytic at *every* point of $S^1$.
