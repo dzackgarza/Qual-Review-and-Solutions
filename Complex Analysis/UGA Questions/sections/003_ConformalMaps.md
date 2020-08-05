@@ -21,4 +21,4 @@ Find a conformal map from $\theset{z\in \CC \suchthat \abs{z} < 1,\, \abs{z - {1
 Find a conformal  map from $\theset{\abs{z-1} < 2} \intersect \theset{\abs{z+1} < 2}$ to $\HH$.
 
 ## 7
-Let $\Omega$ be the region insude 
+Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the circle $\abs{z-{1\over 4}} = {1\over 4}$.
