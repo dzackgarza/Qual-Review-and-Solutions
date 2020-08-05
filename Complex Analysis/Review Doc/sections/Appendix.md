@@ -1,12 +1,12 @@
 # Appendix
 
-\begin{align*}
+\[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\
 f_z &= f_x = i\inv f_y \\
 \int_{0}^{2 \pi} e^{i \ell x} d x
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
-.\end{align*}
+.\]
 
 - Holomorphic: once complex differentiable in neighborhoods of every point.
 - Analytic: equal to its Taylor series expansion
@@ -54,10 +54,10 @@ Theorem (Statement 1)
 
 **Completing the square:**
 
-\begin{align*}
+\[
 x^2 - bx = (x - s)^2 - s^2 \quad\text{where} s = \frac{b}{2} \\
 x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
-.\end{align*}
+.\]
 
 
 **Useful Properties**
@@ -69,20 +69,20 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 
 **Useful Series**
 
-\begin{align*}
+\[
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
 \log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
-\end{align*}
+\]
 
 
 **Cauchy-Riemann Equations**
 
-\begin{align*}
+\[
 u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
-.\end{align*}
+.\]
 
 
 
@@ -124,8 +124,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 - Little Picard: $f$ misses at most one point and is a homeomorphism onto its image.
 - Baire's Theorem: The intersection of open dense sets is open.
 - Casorati-Weierstrass: The image of a disc punctured at an essential singularity is dense in $\CC$.
-- Open Mapping: Holomorphic functions preserve open sets.
-- Argument Principle: The logarithmic derivative measures the difference of zeros and poles.
 - Liouville: Bounded entire functions are constant.
 - Maximum Modulus: Holomorphic functions take extrema only on boundaries.
 - Cauchy Inequalities: The $n$th Taylor coefficient is at most $\sup_{\abs z = R} \abs{f}/R^n$.
@@ -141,6 +139,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 Using the integral formula, defining $\norm{f}_{C_R} = \max_{\abs{z-z_0} = R} \abs{f(z)}$
 
-\begin{align*}
+\[
 \abs{ f^{(n)}(z_0) } \leq \frac{n!}{2\pi} \int_0^{2\pi} \frac{\norm{f}_{C_R}}{R^{n+1}} R~d\theta = \frac{n! \norm{f}_{C_R}}{R^{n}}
-.\end{align*}
+.\]

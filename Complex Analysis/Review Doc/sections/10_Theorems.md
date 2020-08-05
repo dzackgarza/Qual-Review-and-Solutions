@@ -17,6 +17,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 ## Integrals and Residues
 
+
 :::{.theorem title="Cauchy Integral Formula"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 
@@ -29,6 +30,7 @@ and
 .\]
 :::
 
+The $n$th Taylor coefficient og a hois at most $\sup_{\abs z = R} \abs{f}/R^n$:
 :::{.theorem title="Cauchy's Inequality"}
 For $z_o \in D_R(z_0) \subset \Omega$, we have
 
@@ -38,6 +40,14 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 :::
 
 ## Holomorphic and Entire Functions
+
+Integrals of holomorphic functions vanish:
+:::{.theorem title="Cauchy's Theorem"}
+If $f$ is holomorphic on $\Omega$, then 
+\[  
+\int_{\bd \Omega} f(z) \, dz = 0
+.\]
+:::
 
 :::{.theorem title="Morera's Theorem"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
@@ -49,6 +59,7 @@ If $f$ is entire and bounded, $f$ is constant.
 
 ## Rouché
 
+The logarithmic derivative measures the difference of zeros and poles:
 :::{.theorem title="Argument Principle"}
 Todo
 :::
@@ -76,9 +87,11 @@ If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$
 - $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
 :::
 
+Holomorphic functions preserve open sets:
 :::{.theorem title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
 :::
+
 
 :::{.theorem title="Maximum Modulus"}
 If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
@@ -90,7 +103,7 @@ Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is cons
 
 :::
 
-
+The image of a disc punctured at an essential singularity is dense in $\CC$:
 :::{.theorem title="Casorati-Weierstrass"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
 :::

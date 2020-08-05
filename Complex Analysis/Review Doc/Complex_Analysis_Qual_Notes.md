@@ -28,11 +28,12 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 ## Integrals and Residues
 
+
 :::{.theorem title="Cauchy Integral Formula"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 
 \[
-f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(z) \over z-a}
+f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(z) \over z-a}\,dz
 \]
 and
 \[
@@ -40,6 +41,7 @@ and
 .\]
 :::
 
+The $n$th Taylor coefficient og a is at most $\sup_{\abs z = R} \abs{f}/R^n$:
 :::{.theorem title="Cauchy's Inequality"}
 For $z_o \in D_R(z_0) \subset \Omega$, we have
 
@@ -49,6 +51,14 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 :::
 
 ## Holomorphic and Entire Functions
+
+Integrals of holomorphic functions vanish:
+:::{.theorem title="Cauchy's Theorem"}
+If $f$ is holomorphic on $\Omega$, then 
+\[  
+\int_{\bd \Omega} f(z) \, dz = 0
+.\]
+:::
 
 :::{.theorem title="Morera's Theorem"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
@@ -60,6 +70,7 @@ If $f$ is entire and bounded, $f$ is constant.
 
 ## Rouché
 
+The logarithmic derivative measures the difference of zeros and poles:
 :::{.theorem title="Argument Principle"}
 Todo
 :::
@@ -87,9 +98,11 @@ If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$
 - $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
 :::
 
+Holomorphic functions preserve open sets:
 :::{.theorem title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
 :::
+
 
 :::{.theorem title="Maximum Modulus"}
 If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
@@ -101,7 +114,7 @@ Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is cons
 
 :::
 
-
+The image of a disc punctured at an essential singularity is dense in $\CC$:
 :::{.theorem title="Casorati-Weierstrass"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
 :::
@@ -245,13 +258,13 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 
 # Appendix
 
-\begin{align*}
+\[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\
 f_z &= f_x = i\inv f_y \\
 \int_{0}^{2 \pi} e^{i \ell x} d x
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
-.\end{align*}
+.\]
 
 - Holomorphic: once complex differentiable in neighborhoods of every point.
 - Analytic: equal to its Taylor series expansion
@@ -299,10 +312,10 @@ Theorem (Statement 1)
 
 **Completing the square:**
 
-\begin{align*}
+\[
 x^2 - bx = (x - s)^2 - s^2 \quad\text{where} s = \frac{b}{2} \\
 x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
-.\end{align*}
+.\]
 
 
 **Useful Properties**
@@ -314,20 +327,20 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 
 **Useful Series**
 
-\begin{align*}
+\[
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
 \log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
-\end{align*}
+\]
 
 
 **Cauchy-Riemann Equations**
 
-\begin{align*}
+\[
 u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
-.\end{align*}
+.\]
 
 
 
@@ -369,8 +382,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 - Little Picard: $f$ misses at most one point and is a homeomorphism onto its image.
 - Baire's Theorem: The intersection of open dense sets is open.
 - Casorati-Weierstrass: The image of a disc punctured at an essential singularity is dense in $\CC$.
-- Open Mapping: Holomorphic functions preserve open sets.
-- Argument Principle: The logarithmic derivative measures the difference of zeros and poles.
 - Liouville: Bounded entire functions are constant.
 - Maximum Modulus: Holomorphic functions take extrema only on boundaries.
 - Cauchy Inequalities: The $n$th Taylor coefficient is at most $\sup_{\abs z = R} \abs{f}/R^n$.
@@ -386,9 +397,9 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 Using the integral formula, defining $\norm{f}_{C_R} = \max_{\abs{z-z_0} = R} \abs{f(z)}$
 
-\begin{align*}
+\[
 \abs{ f^{(n)}(z_0) } \leq \frac{n!}{2\pi} \int_0^{2\pi} \frac{\norm{f}_{C_R}}{R^{n+1}} R~d\theta = \frac{n! \norm{f}_{C_R}}{R^{n}}
-.\end{align*}
+.\]
 
 Basics
 
