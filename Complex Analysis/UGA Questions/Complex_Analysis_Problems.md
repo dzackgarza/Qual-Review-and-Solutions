@@ -73,8 +73,13 @@ f(x, y) &=
 ## 2
 
 ### a 
+Complete this definition: "$f: \RR^n\to \RR^m$ is real-differentiable a point $p\in \RR^n$ iff there exists a linear transformation..."
 
-Complete this definition: ""
+### b
+Give an example of a function $f:\RR^2\to \RR$ whose first-order partial derivatives exist everywhere but $f$ is not differentiable at $(0, 0)$.
+
+### c
+Give an example ofa function $f: \RR^2 \to \RR$ which is real-differentiable
 
 # Conformal Maps (8155c)
 
