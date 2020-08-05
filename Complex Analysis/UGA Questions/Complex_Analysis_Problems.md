@@ -597,7 +597,7 @@ M \definedas \sup_{z\in \bar B(a, r)} \abs{f(z)}
 
 Prove that 
 \[  
-z\in \bar B\qty{a, {r\over 2}}
+z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\absf(z) - f(a) \over}
 .\]
 
 # Spring 2020 Homework 1
