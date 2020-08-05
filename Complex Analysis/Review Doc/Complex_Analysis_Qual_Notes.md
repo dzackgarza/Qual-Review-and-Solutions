@@ -13,6 +13,10 @@ References
 
 ## Basics
 
+:::{.theorem title="Baire"}
+
+:::
+
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
@@ -61,7 +65,7 @@ If $f$ is holomorphic on $\Omega$, then
 :::
 
 
-: Integrals vanishing along every rectangle implies holomorphic.
+All integrals vanishing along every triangle implies holomorphic:
 :::{.theorem title="Morera's Theorem"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
 :::
@@ -384,8 +388,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
 - Little Picard: $f$ misses at most one point and is a homeomorphism onto its image.
 - Baire's Theorem: The intersection of open dense sets is open.
-- Morera: Integrals vanishing along every rectangle implies holomorphic.
-- Schwarz Reflection: ???
 - The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements

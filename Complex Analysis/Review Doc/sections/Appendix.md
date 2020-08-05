@@ -123,8 +123,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
 - Little Picard: $f$ misses at most one point and is a homeomorphism onto its image.
 - Baire's Theorem: The intersection of open dense sets is open.
-- Morera: Integrals vanishing along every rectangle implies holomorphic.
-- Schwarz Reflection: ???
 - The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements
