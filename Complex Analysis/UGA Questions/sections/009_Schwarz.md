@@ -29,5 +29,8 @@ M \definedas \sup_{z\in \bar B(a, r)} \abs{f(z)}
 
 Prove that 
 \[  
-z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\absf(z) - f(a) \over}
+z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\abs{ f(z) - f(a)} \over \abs{z-a}} \leq {2M \over r}
 .\]
+
+## 3
+
