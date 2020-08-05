@@ -10,5 +10,6 @@ Prove that $f$ is a rational function.
 Suppose that $z=0$ is the unique zero of $f$.
 Show that
 \[  
-\exists n\in \NN, \lambda \in S^1 f(z) = \lambda z^n, \quad n\in \NN, \lambda \in S^1
+\exists n\in \NN, \lambda \in S^1 \qtext{ such that }f(z) = \lambda z^n
 .\]
+
