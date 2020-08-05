@@ -47,6 +47,9 @@ Prove that there exist $a\in A, b\in B$ such that
 Suppose $A, B\subseteq \RR^n$ are connected and not disjoint.
 Prove that $A\union B$ is also connected.
 
+## 8
+Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of continuous functions $f_n: [0, 1]\to \RR$ such that $
+
 # Several Variables (8155h)
 
 # Conformal Maps (8155c)
