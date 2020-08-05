@@ -3,6 +3,13 @@
 title: "Complex Analysis Qualifying Exam Solutions"
 ---
 
+**Acknowledgments**
+
+Thanks to the following people for their contributions:
+
+- Jingzhi Tie, for supplying many practice problems.
+- Edward Azoff, for supplying 
+
 # Topology and Functions of One Variable (8155a)
 
 
@@ -256,3 +263,23 @@ Note
 
 
 ## Additional Problems
+
+# Spring 2020 Homework 3
+
+## Stein and Shakarchi
+
+## Extra Problems
+
+# Extra Questions from Jingzhi Tie
+
+## Fall 2009
+
+## Fall 2011
+
+## Spring 2014
+
+## Fall 2015
+
+## Spring 2015
+
+## Fall 2016

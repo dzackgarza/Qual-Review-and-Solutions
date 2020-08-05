@@ -1139,7 +1139,7 @@ b. Suppose $\Omega$ is a region with compact closure $\bar \Omega$.
 > Then (a) implies (b).
 
 
-## Problems From Tie
+## Extra Problems
 
 ### 1
 
