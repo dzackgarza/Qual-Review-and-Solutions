@@ -123,6 +123,11 @@ Two functions agreeing on a set with a limit point are equal on a domain:
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 :::
 
+:::{.corollary title=""}
+
+:::
+
+
 
 :::{.theorem title="Schwarz Reflection"}
 If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
@@ -151,5 +156,5 @@ Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
 :::{.theorem title="Little Picard"}
 Todo
 :::
-\todo{}
+\todo{???}
 
