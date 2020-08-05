@@ -41,4 +41,7 @@ Suppose $A, B\subseteq \RR^n$ are connected and not disjoint.
 Prove that $A\union B$ is also connected.
 
 ## 8
-Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of continuous functions $f_n: [0, 1]\to \RR$ such that $
+Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of continuous functions $f_n: [0, 1]\to \RR$ such that 
+\[  
+f_n(x) \geq f_{n+1}(x) \geq 0 \quad \forall n\in \NN,\, \forall x\in [0, 1]
+.\]
