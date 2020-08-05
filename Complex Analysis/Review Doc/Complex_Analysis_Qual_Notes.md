@@ -123,7 +123,8 @@ If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essenti
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
 
-:::{.theorem title="Continuation Principle"}
+Two functions agreeing on a set with a limit point are equal on a domain
+:::{.theorem title="Continuation Principle / Identity Theorem"}
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 :::
 
@@ -381,14 +382,8 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
 - Little Picard: $f$ misses at most one point and is a homeomorphism onto its image.
 - Baire's Theorem: The intersection of open dense sets is open.
-- Casorati-Weierstrass: The image of a disc punctured at an essential singularity is dense in $\CC$.
-- Liouville: Bounded entire functions are constant.
-- Maximum Modulus: Holomorphic functions take extrema only on boundaries.
-- Cauchy Inequalities: The $n$th Taylor coefficient is at most $\sup_{\abs z = R} \abs{f}/R^n$.
-- Cauchy's Theorem: Integrals of holomorphic functions vanish.
 - Morera: Integrals vanishing along every rectangle implies holomorphic.
 - Schwarz Reflection: ???
-- Identity Theorem: Two functions agreeing on a set with a limit point are equal on a domain.
 - The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements

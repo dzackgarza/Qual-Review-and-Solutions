@@ -125,7 +125,6 @@ $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 - Baire's Theorem: The intersection of open dense sets is open.
 - Morera: Integrals vanishing along every rectangle implies holomorphic.
 - Schwarz Reflection: ???
-- Identity Theorem: Two functions agreeing on a set with a limit point are equal on a domain.
 - The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements
