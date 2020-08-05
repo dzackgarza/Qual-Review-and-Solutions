@@ -42,7 +42,10 @@ Prove that there exist $a\in A, b\in B$ such that
 \[  
 \norm{a - b} = \inf\theset{\norm{x-y} \suchthat x\in A,\, y\in B}
 .\]
-## 
+
+## 7
+Suppose $A, B\subseteq \RR^n$ are connected and not disjoint.
+Prove that $A\union B$ is also connected.
 
 # Several Variables (8155h)
 
