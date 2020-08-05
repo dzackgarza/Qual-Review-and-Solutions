@@ -60,6 +60,8 @@ If $f$ is holomorphic on $\Omega$, then
 .\]
 :::
 
+
+: Integrals vanishing along every rectangle implies holomorphic.
 :::{.theorem title="Morera's Theorem"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
 :::
@@ -123,7 +125,7 @@ If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essenti
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
 
-Two functions agreeing on a set with a limit point are equal on a domain
+Two functions agreeing on a set with a limit point are equal on a domain:
 :::{.theorem title="Continuation Principle / Identity Theorem"}
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 :::
