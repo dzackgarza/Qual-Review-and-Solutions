@@ -9,6 +9,8 @@ title: "Complex Analysis Qualifying Exam Solutions"
 # Several Variables (8155h)
 
 
+# Conformal Maps (8155c)
+
 # Integrals and Cauchy's Theorem (8155d)
 
 
@@ -200,6 +202,8 @@ e^{1\over z} = \sum_{n=0}^\infty {1\over n!} \qty{1\over z}^n = 1 + {1\over z} +
 
 Idea: show their $f-g$ is analytic by taking away all of the negative powers, and bounded by (c).
 
+# Residues (8155g)
+
 # Rouche's Theorem (8155h)
 
 ## 1
@@ -240,3 +244,5 @@ Note
 - So $h$ and $h+g$ have the same number of roots, but $h$ has three roots here.
 
  
+
+# Schwarz Lemma and Reflection Principle (8155i)
