@@ -32,7 +32,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 Suppose $f$ is holomorphic on $\Omega$, then 
 
 \[
-f(z) = {1 \over 2\pi i} \oint_{\bd \Omega}
+f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(z) \over z-a}
 \]
 and
 \[
