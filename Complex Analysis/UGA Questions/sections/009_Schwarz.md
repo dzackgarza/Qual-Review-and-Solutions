@@ -82,3 +82,5 @@ Show that
 \[  
 \forall 0 < r < 1,\qquad g\qty{\theset{\abs{z} < r}} \subseteq f\qty{\theset{\abs{z} < r}}
 .\]
+
+> The first part of this problem asks for a statement of the Schwarz lemma.
