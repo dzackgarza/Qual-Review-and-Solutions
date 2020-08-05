@@ -9,6 +9,22 @@ References
 
 - Simon
 
+# Definitions
+
+:::{.definition title="Complex Differentiable"}
+???
+:::
+
+:::{.definition title="Analytic"}
+???
+:::
+
+:::{.definition title="Holomorphic"}
+???
+:::
+
+
+
 # Theorems
 
 ## Basics

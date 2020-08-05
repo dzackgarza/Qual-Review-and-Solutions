@@ -1,3 +1,19 @@
+# Definitions
+
+:::{.definition title="Complex Differentiable"}
+???
+:::
+
+:::{.definition title="Analytic"}
+???
+:::
+
+:::{.definition title="Holomorphic"}
+???
+:::
+
+
+
 # Theorems
 
 ## Basics
@@ -87,7 +103,7 @@ Todo
 :::
 \todo{Argument principle.}
 
-:::{.theorem title="Rouché"}
+:::{.theorem title="$\star$ Rouché"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
 :::
 
