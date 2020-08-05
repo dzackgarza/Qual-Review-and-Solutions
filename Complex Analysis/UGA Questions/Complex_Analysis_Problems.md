@@ -54,7 +54,7 @@ G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt
 .\]
 
 ## 12
-Prove that TFAE for a Mobius transforma
+Prove that TFAE for a Möbius transformation
 
 # Integrals and Cauchy's Theorem (8155d)
 
