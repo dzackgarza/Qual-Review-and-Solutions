@@ -84,3 +84,16 @@ Show that
 .\]
 
 > The first part of this problem asks for a statement of the Schwarz lemma.
+
+## 9
+Let $S\definedas \theset{z\in \DD\suchthat \Im(z) \geq 0}$.
+Suppose $f:S\to \CC$ is continuous on $S$, real on $S\intersect \RR$, and holomorphic on $S^\circ$.
+
+Prove that $f$ is the restriction of a holomorphic function on $\DD$.
+
+## 10
+Suppose $f:\DD\to \DD$ is analytic.
+Prove that 
+\[  
+\forall a\in \DD, \qquad {\abs{f'(a)} \over 1 - \abs{f(a)}^2 } \leq {1 \over 1 - \abs{a}^2}
+.\]
