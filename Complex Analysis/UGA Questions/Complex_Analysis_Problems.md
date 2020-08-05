@@ -11,7 +11,7 @@ title: "Complex Analysis Problems"
 Find a conformal map from $\DD$ to $\HH$.
 
 ## 2
-
+Find a conformal map from the strip $
 
 # Several Variables (8155h)
 

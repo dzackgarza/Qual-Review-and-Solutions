@@ -4,4 +4,4 @@
 Find a conformal map from $\DD$ to $\HH$.
 
 ## 2
-
+Find a conformal map from the strip $\theset
