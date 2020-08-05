@@ -114,7 +114,7 @@ Todo
 :::
 \todo{Argument principle.}
 
-:::{.theorem title="Rouché"}
+:::{.theorem title="$\star$ Rouché"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
 :::
 
@@ -153,7 +153,7 @@ Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is cons
 :::
 
 The image of a disc punctured at an essential singularity is dense in $\CC$:
-:::{.theorem title="Casorati-Weierstrass"}
+:::{.theorem title="$\star$ Casorati-Weierstrass"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
 :::
 
@@ -200,6 +200,7 @@ Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
 Todo
 :::
 \todo{???}
+
 
 
 # Stuff
