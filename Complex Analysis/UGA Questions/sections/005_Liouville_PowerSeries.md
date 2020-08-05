@@ -8,19 +8,23 @@ Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \su
 Give an example of such an $f$ that converges at every point of $S^1$.
 
 ### b 
-Given an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
+Giv an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
-c. Prove that $f$ can not be analytic at *every* point of $S^1$.
+### c 
+Prove that $f$ can not be analytic at *every* point of $S^1$.
 
 ## 2
 
 Suppose $f$ is entire and has Taylor series $\sum a_n z^n$ about 0.
 
-a. Express $a_n$ as a contour integral along the circle $\abs{z} = R$.
+### a 
+Express $a_n$ as a contour integral along the circle $\abs{z} = R$.
 
-b. Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of $\CC$.
+### b
+Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of $\CC$.
 
-c. Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
+### c
+Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
 
 
 ## 3
