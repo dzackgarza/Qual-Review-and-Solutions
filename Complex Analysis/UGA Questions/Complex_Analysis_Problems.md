@@ -644,7 +644,12 @@ Suppose that $f$ is holomorphic on $\DD$, continuous on $\bar \DD$, and real on 
 Show that $f$ must be constant.
 
 ## 8
-Suppose $f, g: \DD\to \Omega$ are holomorphic
+Suppose $f, g: \DD\to \Omega$ are holomorphic with $f$ injective and $f(0) = g(0)$.
+
+Show that 
+\[  
+\forall 
+.\]
 
 # Spring 2020 Homework 1
 
