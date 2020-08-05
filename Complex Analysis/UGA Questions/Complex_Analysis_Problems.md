@@ -1223,7 +1223,9 @@ $D$ with interior in $D$.
 
 Problem
 : For $a> 0$, evaluate
-  $$\begin{aligned} \int_0^{\pi/2} \frac{d\theta}{a + \sin^2 \theta}\end{aligned}$$
+  \[
+  \int_0^{\pi/2} \frac{d\theta}{a + \sin^2 \theta}
+  \]
 
 ### 11
 
