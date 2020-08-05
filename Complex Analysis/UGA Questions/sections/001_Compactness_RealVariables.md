@@ -21,4 +21,8 @@ Prove that the sequence $\theset{f\circ g_n}$ is uniformly convergent.
 
 ## 5
 Let $f$ be differentiable on $[a, b]$.
-Say that $f$ is *uniformly differentiable* iff for each $\eps > 0$ there exists a $\delta
+Say that $f$ is *uniformly differentiable* iff 
+
+\[  
+\forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad \abs{x-y} < \delta \implies \abs{f(x) - f(y)} < \eps
+.\]
