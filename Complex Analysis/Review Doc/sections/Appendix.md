@@ -18,14 +18,8 @@ f_z &= f_x = i\inv f_y \\
 
 ### The Argument Principle
 
-Theorem (Statement 1)
-: For $f$ meromorphic in $\gamma^\circ$, $$\Delta_\gamma \arg f(z) = 2\pi (Z_f - P_f).$$
 
 ### Rouche
-
-Theorem (Statement 1)
-:   Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-    Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
 
 ## Misc Prereq
 

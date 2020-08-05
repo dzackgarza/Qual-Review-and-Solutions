@@ -25,6 +25,11 @@ Once complex differentiable in neighborhoods of every point:
 ???
 :::
 
+:::{.definition title="Meromorphic"}
+???
+:::
+
+
 
 
 # Theorems
@@ -112,12 +117,17 @@ If $f$ is entire and bounded, $f$ is constant.
 
 The logarithmic derivative measures the difference of zeros and poles:
 :::{.theorem title="Argument Principle"}
-Todo
+For $f$ meromorphic in $\gamma^\circ$, $$\Delta_\gamma \arg f(z) = 2\pi (Z_f - P_f).$$
 :::
 \todo{Argument principle.}
 
 :::{.theorem title="$\star$ Rouché"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
+
+Alternatively:
+
+Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
+Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
 :::
 
 :::{.example}
@@ -325,25 +335,16 @@ f_z &= f_x = i\inv f_y \\
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
 .\]
 
-- Holomorphic: once complex differentiable in neighborhoods of every point.
-- Analytic: equal to its Taylor series expansion
 
-> Collection of facts used on problem sets
 
 ## Things to know well:
 
-- Cauchy Integral Formula
 - Estimates for derivatives, mean value theorem
-- Rouché's theorem
-- Casorati-Weierstrass
-- The 8 types of conformal maps
 
 ## Theorems
 
 ### The Argument Principle
 
-Theorem (Statement 1)
-: For $f$ meromorphic in $\gamma^\circ$, $$\Delta_\gamma \arg f(z) = 2\pi (Z_f - P_f).$$
 
 ### Rouche
 
