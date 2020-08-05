@@ -1,15 +1,18 @@
 # Theorems
 
-Theorem (Summation by Parts)
-:   Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
-    \begin{align*}
-    \sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-    .\end{align*}
+:::{.theorem title="Summation by Parts"}
+Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
+\begin{align*}
+\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
+.\end{align*}
 
-    > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
+> Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
+:::
 
-Theorem (Morera's Theorem)
-: If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
+:::{.theorem title="Morera's Theorem"}
+
+:::
+
 
 Theorem (Cauchy Integral Formula)
 :   Suppose $f$ is holomorphic on $\Omega$, then 
