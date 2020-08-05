@@ -48,7 +48,7 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 \left|f^{(n)}\left(z_{0}\right)\right| \leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{\|f\|_{C_{R}}}{R^{n+1}} R d \theta=\frac{n !\|f\|_{C_{R}}}{R^{n}} 
 .\]
 :::
-\todo{}
+\todo{These don't quite match up.}
 
 ## Holomorphic and Entire Functions
 
