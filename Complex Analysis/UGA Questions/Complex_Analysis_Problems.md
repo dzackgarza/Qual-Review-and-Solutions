@@ -31,7 +31,7 @@ Let $f$ be differentiable on $[a, b]$.
 Say that $f$ is *uniformly differentiable* iff 
 
 \[  
-\forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad \abs{x-y} < \delta \implies \abs{ {f(x) - f(y)}  < \eps
+\forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad \abs{x-y} < \delta \implies \abs{ {f(x) - f(y) \over x-y}  - f'(y)}  < \eps
 .\]
 
 # Several Variables (8155h)
