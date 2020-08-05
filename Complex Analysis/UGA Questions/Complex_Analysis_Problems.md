@@ -266,7 +266,8 @@ Use Cauchy's formula to prove that $f'\equiv 0$ and hence $f$ is constant.
 
 Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \subseteq \CC$ and $f(z) = \sum_{n=0}^\infty a_n z^n$ is a power series with radius of convergence exactly 1.
 
-a. Give an example of such an $f$ that converges at every point of $S^1$.
+### a
+Give an example of such an $f$ that converges at every point of $S^1$.
 
 b. Given an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
