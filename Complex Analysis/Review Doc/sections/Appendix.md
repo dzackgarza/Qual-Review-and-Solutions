@@ -119,9 +119,7 @@ Todo
 
 $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
-## Pithy Statements
 
-- The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements
 

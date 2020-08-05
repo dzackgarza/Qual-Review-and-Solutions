@@ -54,6 +54,8 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 :::
 \todo{These don't quite match up.}
 
+
+
 ## Holomorphic and Entire Functions
 
 Integrals of holomorphic functions vanish:
@@ -134,8 +136,8 @@ Two functions agreeing on a set with a limit point are equal on a domain:
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 :::
 
-:::{.corollary title=""}
-
+:::{.corollary}
+The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
 :::
 
 
@@ -393,9 +395,7 @@ Todo
 
 $\dd{}{z} \sum_{j=0}^\infty a_j z^j = \sum_{j=0}^\infty a_{j+1}z^j$.
 
-## Pithy Statements
 
-- The ring of holomorphic functions on a domain in $\CC$ has no zero divisors (by the identity principle).
 
 ## Precise Refinements
 

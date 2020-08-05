@@ -43,6 +43,17 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 :::
 \todo{These don't quite match up.}
 
+:::{.proof}
+**Cauchy Inequality:**
+Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
+Using the integral formula, defining $\norm{f}_{C_R} = \max_{\abs{z-z_0} = R} \abs{f(z)}$
+
+\[
+\abs{ f^{(n)}(z_0) } \leq \frac{n!}{2\pi} \int_0^{2\pi} \frac{\norm{f}_{C_R}}{R^{n+1}} R~d\theta = \frac{n! \norm{f}_{C_R}}{R^{n}}
+.\]
+:::
+
+
 ## Holomorphic and Entire Functions
 
 Integrals of holomorphic functions vanish:
@@ -123,8 +134,8 @@ Two functions agreeing on a set with a limit point are equal on a domain:
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
 :::
 
-:::{.corollary title=""}
-
+:::{.corollary}
+The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
 :::
 
 
