@@ -581,6 +581,9 @@ Show that
 \exists n\in \NN, \lambda \in S^1 \qtext{ such that }f(z) = \lambda z^n
 .\]
 
+### c
+
+Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$
 
 # Spring 2020 Homework 1
 
