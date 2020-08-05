@@ -585,7 +585,7 @@ Show that
 
 Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$ and prove that
 \[  
-\exists \lambda \in S^1
+\exists \lambda \in S^1 \qtext{such that} f(z) = \lambda \prod_{j=1}^n {z - a_j \over 1 - \bar}
 .\]
 
 # Spring 2020 Homework 1
