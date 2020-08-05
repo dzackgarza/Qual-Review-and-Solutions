@@ -115,6 +115,13 @@ State the above conclusion when $f$ is considered a function $\CC^2\to \CC$.
 ### c
 Use the implicit function theorem for a function $\RR\cross \RR^2 \to \RR^2$ to prove (b).
 
+> There are various approaches: using the definition of the complex derivative, the Cauchy-Riemann equations, considering total derivatives, etc.
+
+## 6
+Let $F:\RR^2\to \RR$ be continuously differentiable with $F(0, 0) = 0$ and $\norm{\nabla F(0, 0)} < 1$.
+
+Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenever $\norm{(x, y)} < r$.
+
 
 # Conformal Maps (8155c)
 
