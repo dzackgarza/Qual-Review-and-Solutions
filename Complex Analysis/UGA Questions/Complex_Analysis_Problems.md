@@ -317,7 +317,7 @@ Prove the Fundamental Theorem of Algebra (using complex analysis).
 
 ## 6
 Find all entire functions that satisfy
-\begin{align*}
+\[
 \abs{f(z)} \geq \abs{z} \quad \forall z\in \CC
 .\end{align*}
 Prove this list is complete.
@@ -334,7 +334,7 @@ Suppose $0 < r < \abs{z_0}$ and show that the series converges uniformly on $\ab
 ## 8
 
 Suppose $f$ is entire and suppose that for some integer $n\geq 1$,
-\begin{align*}
+\[
 \lim_{z\to \infty} {f(z) \over z^n} = 0
 .\end{align*}
 
@@ -344,7 +344,7 @@ Prove that $f$ is a polynomial of degree at most $n-1$.
 ## 9
 
 Find all entire functions satisfying
-\begin{align*}
+\[
 \abs{f(z)} \leq \abs{z}^{1\over 2} \quad\text{ for } \abs{z} > 10
 .\end{align*}
 
@@ -352,7 +352,7 @@ Find all entire functions satisfying
 ## 10
 
 Prove that the following series converges uniformly on the set $\theset{z \suchthat \Im(z) < \ln 2}$:
-\begin{align*}
+\[
 \sum_{n=1}^\infty {\sin(nz) \over 2^n}
 .\end{align*}
 
