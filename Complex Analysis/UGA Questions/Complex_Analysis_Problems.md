@@ -648,7 +648,7 @@ Suppose $f, g: \DD\to \Omega$ are holomorphic with $f$ injective and $f(0) = g(0
 
 Show that 
 \[  
-\forall 
+\forall 0 < r < 1,\qquad g\qty{\theset{\abs{z} < r}} \subseteq
 .\]
 
 # Spring 2020 Homework 1
