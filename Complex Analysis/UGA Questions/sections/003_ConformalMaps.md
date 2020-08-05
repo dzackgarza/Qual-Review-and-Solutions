@@ -44,4 +44,5 @@ G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt
 Prove that TFAE for a Möbius transformation $T$ given by $T(z) = {az + b \over cz + d}$:
 
 a. $T$ maps $\RR\union \theset{\infty}$ to itself.
-b. 
+b. It is possible to choose $a,b,c,d$ to be real numbers.
+c. 
