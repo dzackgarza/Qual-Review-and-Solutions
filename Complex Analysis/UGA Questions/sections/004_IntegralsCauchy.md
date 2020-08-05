@@ -5,9 +5,9 @@
 ## 1
 
 Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in [0, 1]$,
-\begin{align*}
+\[
 \abs{g(x) - g(y)} \leq \abs{f(x) - f(y)}
-.\end{align*}
+.\]
 
 Prove that $g$ is Riemann integrable.
 
@@ -47,9 +47,9 @@ Prove that there is no sequence of polynomials that uniformly converge to $f(z) 
 
 Suppose that $f: \RR\to\RR$ is a continuous function that vanishes outside of some finite interval.
 For each $z\in \CC$, define
-\begin{align*}
+\[
 g(z) = \int_{-\infty}^\infty f(t) e^{-izt} \,dt
-.\end{align*}
+.\]
 
 Show that $g$ is entire.
 
@@ -57,9 +57,9 @@ Show that $g$ is entire.
 ## 7
 
 Suppose $f: \CC\to \CC$ is entire and
-\begin{align*}
+\[
 \abs{f(z)} \leq \abs{z}^{1\over 2} \quad\text{ when } \abs{z} > 10
-.\end{align*}
+.\]
 
 Prove that $f$ is constant.
 
@@ -68,9 +68,9 @@ Prove that $f$ is constant.
 Let $\gamma$ be a smooth curve joining two distinct points $a, b\in \CC$.
 
 Prove that the function
-\begin{align*}
+\[
 f(z) \definedas \int_\gamma {g(w) \over w-z} \,dw
-\end{align*}
+\]
 is analytic in $\CC\setminus\gamma$.
 
 ## 9
