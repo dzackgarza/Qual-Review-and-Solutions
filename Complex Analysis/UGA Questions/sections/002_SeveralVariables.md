@@ -63,3 +63,7 @@ Let $F:\RR^2\to \RR$ be continuously differentiable with $F(0, 0) = 0$ and $\nor
 
 Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenever $\norm{(x, y)} < r$.
 
+## 7
+State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
+
+

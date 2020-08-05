@@ -122,6 +122,10 @@ Let $F:\RR^2\to \RR$ be continuously differentiable with $F(0, 0) = 0$ and $\nor
 
 Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenever $\norm{(x, y)} < r$.
 
+## 7
+State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
+
+
 
 # Conformal Maps (8155c)
 
@@ -563,6 +567,16 @@ Use Rouche's theorem to prove the Fundamental Theorem of Algebra.
 
 
 # Schwarz Lemma and Reflection Principle (8155i)
+
+## 1
+Suppose $f:\DD\to\DD$ is analytic and admits a continuous extension $\tilde f: \bar \DD \to \bar \DD$ such that $\abs{z} = 1 \implies \abs{f(z)} = 1$.
+
+### a
+Prove that $f$ is a rational function.
+
+### b
+Suppose that $z=0$ is the unique zero of $f$.
+Show that $
 
 # Spring 2020 Homework 1
 
