@@ -28,3 +28,10 @@ Say that $f$ is *uniformly differentiable* iff
 .\]
 
 Prove that $f$ is uniformly differentiable on $[a, b] \iff f'$ is continuous on $[a, b]$.
+
+## 6
+Suppose $A, B \subseteq \RR^n$ are disjoint and compact.
+Prove that there exist $a\in A, b\in B$ such that
+\[  
+
+.\]
