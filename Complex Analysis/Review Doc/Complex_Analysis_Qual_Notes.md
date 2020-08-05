@@ -13,8 +13,8 @@ References
 
 ## Basics
 
-:::{.theorem title="Baire"}
-
+:::{.theorem title="Baire Category Theorem"}
+The intersection of open dense sets is open.
 :::
 
 :::{.theorem title="Green's Theorem"}
@@ -159,6 +159,10 @@ Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
 :::
 
 
+:::{.theorem title="Little Picard"}
+Todo
+:::
+\todo{}
 
 
 # Stuff
