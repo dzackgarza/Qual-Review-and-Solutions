@@ -2416,11 +2416,10 @@ Concepts used:
   - Since $\abs \phi \leq \norm{\phi}_\infty$ a.e., we can write 
   \[  
   \int_\RR { \abs{\phi(x)}^n \over 1+ x^2} 
-  &\leq
-  \int_\RR { \norm{\phi}_\infty \over 1+ x^2}  \\
-  &= \norm{\phi}_\infty \int_\RR {1\over 1 + x^2}\\
-  &= \norm{\phi}_\infty \arctan(x)\evalfrom_{-\infty}^{\infty} 
-  &= \norm{\phi}_\infty\qty{{\pi \over 2} -  } 
+  &\leq \int_\RR { \norm{\phi}_\infty \over 1+ x^2}  \\
+  &= \norm{\phi}_\infty \int_\RR {1\over 1 + x^2} \\
+  &= \norm{\phi}_\infty \arctan(x)\evalfrom_{-\infty}^{\infty}  \\
+  &= \norm{\phi}_\infty\qty{{\pi \over 2} - {-\pi \over 2} } 
   .\]
 
   
