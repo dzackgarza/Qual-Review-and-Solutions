@@ -2415,13 +2415,15 @@ Concepts used:
 - Claim: $L\leq R$.
   - Since $\abs \phi \leq \norm{\phi}_\infty$ a.e., we can write 
   \[  
-  \int_\RR { \abs{\phi(x)}^n \over 1+ x^2} 
+  L^{1\over n} 
+  &\definedas \int_\RR { \abs{\phi(x)}^n \over 1+ x^2} \\
   &\leq \int_\RR { \norm{\phi}_\infty^n \over 1+ x^2}  \\
   &= \norm{\phi}_\infty^n \int_\RR {1\over 1 + x^2} \\
   &= \norm{\phi}_\infty^n \arctan(x)\evalfrom_{-\infty}^{\infty}  \\
   &= \norm{\phi}_\infty^n \qty{{\pi \over 2} - {-\pi \over 2} }  \\
   &= \pi \norm{\phi}_\infty^n \\
-  \implies L &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
+  \implies L^{1\over n} &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
+  \implies
   .\]
 
   
