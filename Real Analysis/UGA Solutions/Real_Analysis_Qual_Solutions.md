@@ -2432,6 +2432,10 @@ Claim: $L\leq R$.
 Claim: $R\leq L$.
 
 - We will show that $R\leq L + \eps$ for every $\eps>0$.
+- Set 
+\[  
+S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\infty - \eps}
+.\]
 
 
 
