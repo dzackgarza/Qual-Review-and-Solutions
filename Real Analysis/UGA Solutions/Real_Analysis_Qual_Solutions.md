@@ -2449,17 +2449,20 @@ S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\in
 &\converges{n\to\infty}\to
 \qty{\norm{\phi}_\infty - \eps} \cdot 1 \\
 &\converges{\eps\to 0}\to \norm{\phi}_\infty
-.\]
-
+,\]
+  where we've again used the fact that $c^{1\over n} \to 1$ for any constant.
 
 
 
 ## 6
 
-- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
+- Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
-\forall \eps,\, \exists N\in \NN \qst \lim_{t\to \pm \infty} \int_{\abs{x} \geq {N}} h(x) \,dx < \eps
+\forall \eps,\, \exists N\in \NN \qst \int_{\abs{x} \geq {N}} \abs{h(x)}^2 \,dx < \eps
 .\]
+\todo[inline]{How to prove small tails in $L^p$?}
+
+- So choose $N$ large enough so the tails of both $f$ and $g$ are small
 
 
 
