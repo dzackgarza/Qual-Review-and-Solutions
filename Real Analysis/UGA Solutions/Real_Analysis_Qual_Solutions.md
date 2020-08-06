@@ -2420,7 +2420,8 @@ Concepts used:
   &= \norm{\phi}_\infty^n \int_\RR {1\over 1 + x^2} \\
   &= \norm{\phi}_\infty^n \arctan(x)\evalfrom_{-\infty}^{\infty}  \\
   &= \norm{\phi}_\infty\qty{{\pi \over 2} - {-\pi \over 2} } 
-  &= \pi \norm{\phi}_\infty
+  &= \pi \norm{\phi}_\infty^n \\
+  \implies L 
   .\]
 
   
