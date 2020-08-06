@@ -44,14 +44,14 @@
 
 ## Definitions
 
-Definition (Uniform Continuity)
-:   $f$ is uniformly continuous iff  
+:::{.definition title="Uniform Continuity"}
+$f$ is uniformly continuous iff
 
-    \begin{align*}
-        &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
-    \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon \\
-    .\end{align*}
-
+\[
+    &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
+\iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
+.\]
+:::
 
 Definition (Nowhere Dense Sets)
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
@@ -59,8 +59,9 @@ Definition (Nowhere Dense Sets)
 Definition (Meager Sets)
 : A set is **meager** if it is a *countable* union of nowhere dense sets.
 
-Definition (\$F_\\sigma\$ and \$G_\\delta\$)
-:	  An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+:::
   
 > Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
@@ -100,9 +101,9 @@ Theorem (Heine-Borel)
 : $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
 
 Lemma (Geometric Series)
-:   \begin{align*}
+:   \[
     \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
-    .\end{align*}
+    .\]
 
     *Corollary:* 
     $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
@@ -160,10 +161,10 @@ Theorem (Egorov)
 :   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $$f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$$ exists almost everywhere.
 
     Then $f_k \to f$ *almost uniformly*, i.e.
-    \begin{align*}
+    \[
     \forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
     m(E\setminus F) < \varepsilon ~\text{ and }~ f_k \mapsvia{u}  f ~\text{on}~ F
-    .\end{align*}
+    .\]
 
 Proposition 
 : The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
@@ -223,7 +224,7 @@ Lemma (M-test for Series)
 
 Lemma (p-tests)
 :   Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
-    \begin{align*}
+    \[
     \sum \frac 1 {n^p} < \infty &\iff p>1 \\
     \int_\varepsilon^\infty \frac 1 {x^p} < \infty 
     &\iff p>1 \\
@@ -231,7 +232,7 @@ Lemma (p-tests)
     &\iff p<1 \\
     \int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
     \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
-    .\end{align*}
+    .\]
 
 
 # Measure Theory
@@ -1232,7 +1233,7 @@ Proof
 - Is it true that the limit of integrals equals the integral of the limit?
 - Is it true that a limit of continuous functions is continuous?
 - Show that a subset of a metric space is closed iff it is complete. 
-- Show that if $m(E) < \infty$ and $f_n\to f$ uniformly, then $\lim \int_E f_n = \
+- Show that if $m(E) < \infty$ and $f_n\to f$ uniformly, then $\lim \int_E f_n = \int_E f$.
 
 
 Uniform Convergence
