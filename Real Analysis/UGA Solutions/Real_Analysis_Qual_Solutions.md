@@ -2419,7 +2419,7 @@ Concepts used:
   &\leq
   \int_\RR { \norm{\phi}_\infty \over 1+ x^2}  \\
   &= \norm{\phi}_\infty \int_\RR {1\over 1 + x^2}\\
-  &= \norm{\phi}_\infty \arctan(x)\evalfrom 
+  &= \norm{\phi}_\infty \arctan(x)\evalfrom_{-\infty}^{\infty} 
   .\]
 
   
