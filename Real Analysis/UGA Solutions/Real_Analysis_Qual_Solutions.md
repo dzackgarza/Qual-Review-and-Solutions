@@ -2431,6 +2431,8 @@ Claim: $L\leq R$.
   
 Claim: $R\leq L$.
 
+- Use the fact that $L^2$ has small tails 
+
 
 
 ## 6
