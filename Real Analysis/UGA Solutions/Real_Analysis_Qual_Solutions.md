@@ -2424,8 +2424,9 @@ Concepts used:
   &= \pi \norm{\phi}_\infty^n \\
   \implies L^{1\over n} &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
   \implies L \leq \pi^{1\over n} \norm{\phi}_\infty \\
-  &\converges{n\to \infty }
-  .\]
+  &\converges{n\to \infty } \norm{\phi}_\infty
+  ,\]
+  where we've used the fact that $c^{1\over n} \to 1$
 
   
 
