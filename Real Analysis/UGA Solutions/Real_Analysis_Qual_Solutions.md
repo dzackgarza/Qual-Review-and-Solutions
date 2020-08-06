@@ -2462,7 +2462,14 @@ S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\in
 .\]
 \todo[inline]{How to prove small tails in $L^p$?}
 
-- So choose $N$ large enough so the tails of both $f$ and $g$ are small
+- So choose $n$ large enough so the tails of both $f$ and $g$ are smaller than $\eps$.
+
+- Apply Cauchy-Schwarz:
+\[  
+\abs{\int_\RR f(x) g(x+n) \,dx} 
+&\leq \int_\RR \abs{f(x) g(x+n)}\,dx \\
+&\leq \int
+.\]
 
 
 
