@@ -2440,15 +2440,15 @@ S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\in
 \[  
 \int_\RR {\abs{\phi(x)}^n \over 1 +x^2}\,dx
 &\geq \int_{S_\eps} {\abs{\phi(x)}^n \over 1 +x^2}\,dx \quad S_\eps \subset \RR \\
-&\geq \int_{S_\eps} { \qty{\norm{\phi}_\infty - \eps}^n \over 1 +x^2}\,dx  \quad\text{by definition of }S_\eps \\
+&\geq \int_{S_\eps} { \qty{\norm{\phi}_\infty - \eps}^n \over 1 +x^2}\,dx  \qquad\text{by definition of }S_\eps \\
 &= \qty{\norm{\phi}_\infty - \eps}^n \int_{S_\eps} { 1 \over 1 +x^2}\,dx \\
-&= \qty{\norm{\phi}_\infty - \eps}^n C_\eps \quad\text{where $C_\eps$ is some constant}\\
+&= \qty{\norm{\phi}_\infty - \eps}^n C_\eps \qquad\text{where $C_\eps$ is some constant} \\ \\
 \implies 
-
 \qty{ \int_\RR {\abs{\phi(x)}^n \over 1 +x^2}\,dx }^{1\over n} 
-&\geq 
-
-&= \qty{\norm{\phi}_\infty - \eps}^n C_\eps \quad\text{where $C_\eps$ is some constant}\\
+&\geq \qty{\norm{\phi}_\infty - \eps} C_\eps^{1 \over n} \\
+&\converges{n\to\infty}\to
+\qty{\norm{\phi}_\infty - \eps} \cdot 1 \\
+&\converges{\eps\to 0}\to \norm{\phi}_\infty
 .\]
 
 
