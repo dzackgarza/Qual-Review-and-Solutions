@@ -2411,8 +2411,9 @@ Concepts used:
 
 ## 5
 
-- Let $L$ be the LHS and $R$ be the RHS.
-- Claim: $L\leq R$.
+Let $L$ be the LHS and $R$ be the RHS.
+
+Claim: $L\leq R$.
   - Since $\abs \phi \leq \norm{\phi}_\infty$ a.e., we can write 
   \[  
   L^{1\over n} 
@@ -2421,13 +2422,18 @@ Concepts used:
   &= \norm{\phi}_\infty^n \int_\RR {1\over 1 + x^2} \\
   &= \norm{\phi}_\infty^n \arctan(x)\evalfrom_{-\infty}^{\infty}  \\
   &= \norm{\phi}_\infty^n \qty{{\pi \over 2} - {-\pi \over 2} }  \\
-  &= \pi \norm{\phi}_\infty^n \\
+  &= \pi \norm{\phi}_\infty^n \\ \\
   \implies L^{1\over n} &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
-  \implies L \leq \pi^{1\over n} \norm{\phi}_\infty \\
+  \implies L &\leq \pi^{1\over n} \norm{\phi}_\infty \\
   &\converges{n\to \infty }\to \norm{\phi}_\infty
   ,\]
-  where we've used the fact that $c^{1\over n} \converges{n\to\infty}\to 1$
+  where we've used the fact that $c^{1\over n} \converges{n\to\infty}\to 1$ for any constant $c$. \todo[inline]{Actually true? Need conditions?}
+  
+Claim: $R\leq L$.
 
+
+
+## 6
   
 
 # Spring 2016
