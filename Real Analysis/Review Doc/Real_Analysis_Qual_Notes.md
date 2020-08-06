@@ -53,6 +53,7 @@ $f$ is uniformly continuous iff
 .\]
 :::
 
+
 Definition (Nowhere Dense Sets)
 : A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 
