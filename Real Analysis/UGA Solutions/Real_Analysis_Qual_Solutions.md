@@ -2431,7 +2431,10 @@ Claim: $L\leq R$.
   
 Claim: $R\leq L$.
 
-- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, $\lim_{t\to \pm \infty} \int_{\abs{x} \geq \abs{t}} h(x) \,dx < \eps$.
+- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
+\[  
+\lim_{t\to \pm \infty} \int_{\abs{x} \geq \abs{t}} h(x) \,dx < \eps
+.\]
 
 
 
