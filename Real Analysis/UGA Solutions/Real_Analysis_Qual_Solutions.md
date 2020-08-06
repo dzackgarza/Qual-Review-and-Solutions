@@ -2423,7 +2423,8 @@ Concepts used:
   &= \norm{\phi}_\infty^n \qty{{\pi \over 2} - {-\pi \over 2} }  \\
   &= \pi \norm{\phi}_\infty^n \\
   \implies L^{1\over n} &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
-  \implies
+  \implies L \leq \pi^{1\over n} \norm{\phi}_\infty \\
+  &\converges{n\to \infty }
   .\]
 
   
