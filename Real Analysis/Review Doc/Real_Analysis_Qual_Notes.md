@@ -1209,6 +1209,10 @@ Proof
   .\]
 - $\star$: Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
 
+- $\star$: Show that if $X\subseteq \RR$ with $\mu(X) < \infty$ then
+\[  
+\norm{f}_p \converges{p\to\infty}\to \norm{f}_\infty
+.\]
 
 ## By Topic
 

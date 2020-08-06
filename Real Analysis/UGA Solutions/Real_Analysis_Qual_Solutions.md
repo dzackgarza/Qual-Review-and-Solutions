@@ -2350,7 +2350,7 @@ Concepts used:
   - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $$\norm{f-g}_{L^1} < \eps.$$
   - Claim: $\norm{\tau_x f - \tau_x g} < \eps$.
     - Proof 1: translation invariance of the integral.
-    - Proof 2: This follows from a change of variables:
+    - Proof 2: Apply a change of variables:
   \[  
     \norm{\tau_x f - \tau_x g}_1
     &\definedas \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy \\
@@ -2403,8 +2403,8 @@ Concepts used:
   \mu(G)
   &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
   &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
-  &\leq \sum_{N=1}^\infty \mu(E_M^c) \quad \forall M\geq N \\
-  &\definedas \sum_{n=1}^\infty \mu(X\setminus E_M) \\
+  &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
+  &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
   .\]
   \todo{Last step sketchy.}
