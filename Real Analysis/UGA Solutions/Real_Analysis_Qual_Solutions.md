@@ -2431,7 +2431,7 @@ Claim: $L\leq R$.
   
 Claim: $R\leq L$.
 
-- Use the fact that $L^2$ has small tails 
+- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then $\lim_{t\to \pm \infty} \int
 
 
 
