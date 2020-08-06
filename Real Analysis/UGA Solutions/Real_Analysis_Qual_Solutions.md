@@ -2407,10 +2407,19 @@ Concepts used:
   &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
   .\]
-  \todo{Last step sketchy.}
+  \todo{Last step seems wrong!}
 
 ## 5
 
+- Let $L$ be the LHS and $R$ be the RHS.
+- Claim: $L\leq R$.
+  - Since $\abs \phi \leq \norm{\phi}_\infty$ a.e., we can write 
+  \[  
+  \int_\RR { \abs{\phi(x)}^n \over 1+ x^2} 
+  &\leq
+  \int_\RR { \norm{\phi}_\infty \over 1+ x^2}  \\
+  &= \norm{\phi}_\infty \int_\RR {1\over 1 + x^2}
+  .\]
 
   
 
