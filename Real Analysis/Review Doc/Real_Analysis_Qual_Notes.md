@@ -1191,21 +1191,40 @@ Proof
 
 # Extra Problems
 
-Topology
+## Greatest Hits
+
+- $\star$: Show that for $E\subseteq \RR^n$, TFAE: 
+  1. $E$ is measurable
+  2. $E = H\union Z$ here $H$ is $F_\sigma$ and $Z$ is null
+  3. $E = V\setminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
+- $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup \theset{ m(K) \suchthat K\subset E\text{ compact}}$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
+- $\star$: Show that cylinder functions are measurable, i.e. if $f$ is measurable on $\RR^s$, then $F(x, y) \definedas f(x)$ is measurable on $\RR^s\cross \RR^t$ for any $t$.
+- $\star$: Prove that the Lebesgue integral is translation invariant, i.e. if $\tau_h(x) = x+h$ then $\int \tau_h f = \int f$.
+- $\star$: Prove that the Lebesgue integral is dilation invariant, i.e. if $f_\delta(x) = {f({x\over \delta}) \over \delta^n}$ then $\int f_\delta = \int f$.
+- $\star$: Prove continuity in $L^1$, i.e.
+  \[
+  f \in L^{1} \Longrightarrow \lim _{h \rightarrow 0} \int|f(x+h)-f(x)|=0
+  .\]
+- $\star$: Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
+
+
+## By Topic
+
+### Topology
 
 - Show that every compact set is closed and bounded.
 - Show that if a subset of a metric space is complete and totally bounded, then it is compact.
 - Show that if $K$ is compact and $F$ is closed with $K, F$ disjoint then $\dist(K, F) > 0$.
 
-Continuity
+### Continuity
 
 - Show that a continuous function on a compact set is uniformly continuous.
 
-Differentiation
+### Differentiation
 
 - Show that if $f\in C^1(\RR)$ and both $\lim_{x\to \infty} f(x)$ and $\lim_{x\to \infty} f'(x)$ exist, then $\lim_{x\to\infty} f'(x)$ must be zero.
 
-Advanced Limitology
+### Advanced Limitology
 
 - If $f$ is continuous, is it necessarily the case that $f'$ is continuous?
 - If $f_n \to f$, is it necessarily the case that $f_n'$ converges to $f'$ (or at all)?
@@ -1213,6 +1232,8 @@ Advanced Limitology
 - Is it true that the limit of integrals equals the integral of the limit?
 - Is it true that a limit of continuous functions is continuous?
 - Show that a subset of a metric space is closed iff it is complete. 
+- Show that if $m(E) < \infty$ and $f_n\to f$ uniformly, then $\lim \int_E f_n = \
+
 
 Uniform Convergence
 
@@ -1225,30 +1246,18 @@ Uniform Convergence
 
 Measure Theory
 
-- $\star$: Show that for $E\subseteq \RR^n$, TFAE: 
-  1. $E$ is measurable
-  2. $E = H\union Z$ here $H$ is $F_\sigma$ and $Z$ is null
-  3. $E = V\setminus Z'$ where $V\in G_\delta$ and $Z'$ is null.
 
 - Show that continuity of measure from above/below holds for outer measures.
 
-- $\star$: Show that if $E\subseteq \RR^n$ is measurable then $m(E) = \sup \theset{ m(K) \suchthat K\subset E\text{ compact}}$ iff for all $\eps> 0$ there exists a compact $K\subseteq E$ such that $m(K) \geq m(E) - \eps$.
 - Show that a countable union of null sets is null.
 
 Measurability
 
 - Show that $f=0$ a.e. iff $\int_E f = 0$ for every measurable set $E$.
-- $\star$: Show that cylinder functions are measurable, i.e. if $f$ is measurable on $\RR^s$, then $F(x, y) \definedas f(x)$ is measurable on $\RR^s\cross \RR^t$ for any $t$.
 
 Integrability
 
 - Show that if $f$ is a measurable function, then $f=0$ a.e. iff $\int f = 0$.
-- $\star$: Prove that the Lebesgue integral is translation invariant, i.e. if $\tau_h(x) = x+h$ then $\int \tau_h f = \int f$.
-- $\star$: Prove that the Lebesgue integral is dilation invariant, i.e. if $f_\delta(x) = {f({x\over \delta}) \over \delta^n}$ then $\int f_\delta = \int f$.
-- $\star$: Prove continuity in $L^1$, i.e.
-  \begin{align*}
-  f \in L^{1} \Longrightarrow \lim _{h \rightarrow 0} \int|f(x+h)-f(x)|=0
-  .\end{align*}
 - Show that a bounded function is Lebesgue integrable iff it is measurable.
 - Show that simple functions are dense in $L^1$.
 - Show that step functions are dense in $L^1$.
@@ -1262,7 +1271,6 @@ Convergence
 
 Convolution
 
-- $\star$: Show that $$f,g \in L^1 \implies f\ast g \in L^1 \qtext{and} \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1.$$
 - Show that if $f\in L^1$ and $g$ is bounded, then  $f\ast g$ is bounded and uniformly continuous.
 - If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 - Show that under any of the following assumptions, $f\ast g$ vanishes at infinity:
@@ -1297,10 +1305,10 @@ $L^p$ Spaces
   I.e. if $\int f_n \to \int f$, is there a $g\in L^p$ such that $f_n < g$ a.e. for every $n$?
 - Prove continuity in $L^p$: If $f$ is uniformly continuous then for all $p$, $$\norm{\tau_h f - f}_p \converges{h\to 0}\to 0.$$ 
 - Prove the following inclusions of $L^p$ spaces for $m(X) < \infty$:
-\begin{align*}
+\[
 L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
 \ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
-.\end{align*}
+.\]
 
 
 # Practice Exam (November 2014)

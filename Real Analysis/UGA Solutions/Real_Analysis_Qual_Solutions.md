@@ -2349,7 +2349,8 @@ Concepts used:
 - Claim: by an $\eps/3$ argument, it suffices to show this for compactly supported functions:
   - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $$\norm{f-g}_{L^1} < \eps.$$
   - Claim: $\norm{\tau_x f - \tau_x g} < \eps$.
-    - This follows from a change of variables:
+    - Proof 1: translation invariance of the integral.
+    - Proof 2: This follows from a change of variables:
   \[  
     \norm{\tau_x f - \tau_x g}_1
     &\definedas \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy \\
