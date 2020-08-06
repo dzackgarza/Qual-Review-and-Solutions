@@ -2431,15 +2431,18 @@ Claim: $L\leq R$.
   
 Claim: $R\leq L$.
 
-- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
-\[  
-\forall \eps,\, \exists t \qst \lim_{t\to \pm \infty} \int_{\abs{x} \geq \abs{t}} h(x) \,dx < \eps
-.\]
+- We will show that $R\leq L + \eps$ for every $\eps>0$.
 
 
 
 ## 6
-  
+
+- Use the fact that $L^2$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
+\[  
+\forall \eps,\, \exists N\in \NN \qst \lim_{t\to \pm \infty} \int_{\abs{x} \geq {N}} h(x) \,dx < \eps
+.\]
+
+ 
 
 # Spring 2016
 
