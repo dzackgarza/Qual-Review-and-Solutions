@@ -2420,6 +2420,7 @@ Concepts used:
   \int_\RR { \norm{\phi}_\infty \over 1+ x^2}  \\
   &= \norm{\phi}_\infty \int_\RR {1\over 1 + x^2}\\
   &= \norm{\phi}_\infty \arctan(x)\evalfrom_{-\infty}^{\infty} 
+  &= \norm{\phi}_\infty\qty{{\pi \over 2} -  } 
   .\]
 
   
