@@ -1843,6 +1843,20 @@ Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{
 - So $\min_{T, F}$ splits into distinct linear factors
 - Thus $T$ is diagonalizable.
 
+# Group Theory
+
+# Commutative Algebra
+
+# Fields and Galois Theory
+
+# Modules
+
+## Torsion and the Structure Theorem
+
+# Linear Algebra: JCF
+
+# Linear Algebra
+
 # Spring 2013
 
 ## 1
