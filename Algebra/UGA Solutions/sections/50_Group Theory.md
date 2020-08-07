@@ -62,7 +62,7 @@ So for every $g\in G$, we have $g = g_j$ for some $j$, and thus $g = g_j \in Z(g
 Then $G\subseteq Z(G)$ and $G$ is abelian.
 
 
-## Fall 2019 # 
+## Fall 2019 #2 
 
 Relevant Ideas:
 
