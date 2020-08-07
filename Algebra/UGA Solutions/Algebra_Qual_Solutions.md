@@ -876,7 +876,9 @@ $\qed$
 
     - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
 
-    - But since $R$ is an integral domain and $\alpha \neq 0$, we must have $s_i = 0$ for all $i$.
+    - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
+
+    - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
 
   - **Spanning:**
 
@@ -888,41 +890,45 @@ $\qed$
   \[
   \vector x
   &= \pi(\vector m) \\
-  &= \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
-  &= \sum_{i=1}^n s_i \pi(\vector r_i) \\
-  &= \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
+  &\definedas \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
+  &= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
+  &\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
   ,\]
   which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
 
 ### c
 
 **$M$ is not free:**
-**Claim**: If $I \normal R$ is a free $R\dash$module, then $I$ is a principal ideal.
 
-*Proof:*
-Let $I = \generators{B}$ for some basis -- if $B$ contains more than 1 element, say $m_1$ and $m_2$, then $m_2m_1 - m_1 m_2 = 0$ is a linear dependence, so $B$ has only one element $m$.
+- **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
 
-But then $I = \generators{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
-The result follows by the contrapositive.
+  - Suppose $I$ is free and let $I = \generators{B}$ for some basis
+  - If $\abs{B} \geq 2$ , say $m_1$ and $m_2$, then $m_2m_1 - m_1 m_2 = 0$ is a linear dependence, so $B$ has only one element $m$.
 
+  - But then $I = \generators{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
+  - The result follows by the contrapositive.
 
 **$M$ is rank 1**:
-For any module, we can take an element $M\neq 0_M$ and consider its cyclic module $Rm$.
 
-Thus the rank of $M$ is at least 1, since $\theset{m}$ is a subset of a spanning set.
-It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
+- For any module, we can take an element $M\neq 0_M$ and consider its cyclic module $Rm$.
 
-However, the rank is at most 1 since $R$ is commutative.
-If we take two elements $\vector m, \vector n \in M$, then since $m, n\in R$ as well, we have $nm = mn$ and so
-$$
+- Thus the rank of $M$ is at least 1, since $\theset{m}$ is a subset of a spanning set.
+
+- It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
+
+- However, the rank is at most 1 since $R$ is commutative.
+
+- If we take two elements $\vector m, \vector n \in M$, then since $m, n\in R$ as well, we have $nm = mn$ and so
+\[
 (n)\vector m + (-m)\vector n = 0_R = 0_M
-$$
-is a linear dependence.
-2
+\]
+  is a linear dependence.
+
 **$M$ is torsion-free**:
 
-Let $x \in \tor M$, then there exists some $r\neq 0\in R$ such that $rx = 0$.
-But $x\in R$ and $R$ is an integral domain, so $x=0$, and thus $\tor(M) = \theset{0_R}$.
+- Let $x \in \tor M$, then there exists some $r\neq 0\in R$ such that $rx = 0$.
+
+- But $x\in R$ and $R$ is an integral domain, so $x=0$, and thus $\tor(M) = \theset{0_R}$.
 
 $\qed$
 
