@@ -871,7 +871,8 @@ $\qed$
   \[  
   \sum_{i=1}^n (s_i \vector r_i) + \tor(M)
   .\]
-    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $
+    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $s_i \vector r_i \in \tor(M)$ for all $i$.
+    
   \[
   \sum_{i=1}^n s_i \vector r_i \in \tor(M) \implies \exists \alpha \in R\nonzero \text{ such that }
   \alpha_i \sum s_i \vector r_i = \vector 0_M
