@@ -919,7 +919,7 @@ $\qed$
 
 - We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of a spanning set.
 
-- $It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
+- $R\vector m$ can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha \vector m = 0 \implies \alpha = 0$.
 
 - However, the rank is at most 1 since $R$ is commutative.
 
