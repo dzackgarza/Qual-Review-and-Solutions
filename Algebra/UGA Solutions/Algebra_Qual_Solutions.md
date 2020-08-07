@@ -923,7 +923,7 @@ $\qed$
 
 - Claim: since $R$ is commutative, $\rank_R(M) \leq 1$.
 
-  - If we take two elements $\vector m, \vector n \in M$, then since $m, n\in R$ as well, we have $nm = mn$ and so
+  - If we take two elements $\vector m, \vector n \in M\nonzero$, then since $m, n\in R$ as well, we have $nm = mn$ and so
 \[
 (n)\vector m + (-m)\vector n = 0_R = \vector 0
 \]
