@@ -855,21 +855,22 @@ $\qed$
 ### b
 
 - Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
-- Let $M' \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
+- Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
 
 - **Claim:** 
-  $\pi(\mathcal B)$ is a basis for $M'$.
+  $\tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}$ is a basis for $\tilde M$.
 
   - **Linearly Independent:**
 
-    - Let $\mathcal B' = \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}_{i=1}^n$ and suppose that
+    - Suppose that
   \[
-  \sum_{i=1}^n s_i (\vector r_i + \tor M) = \vector 0_{M'}
+  \sum_{i=1}^n s_i (\vector r_i + \tor M) = \vector 0_{\tilde M}
   .\]
 
-    - Since $x = 0 \in M' \iff x \in \tor(M)$,
+    - T
+    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $
   \[
-  \sum_{i=1}^n s_i \vector r_i \in \tor(M) \implies \exists \alpha \neq 0_R \in R \text{ such that }
+  \sum_{i=1}^n s_i \vector r_i \in \tor(M) \implies \exists \alpha \in R\nonzero \text{ such that }
   \alpha_i \sum s_i \vector r_i = \vector 0_M
   .\]
 
@@ -879,7 +880,7 @@ $\qed$
 
     - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
 
-    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surj
+    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
 
     - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
   \[
