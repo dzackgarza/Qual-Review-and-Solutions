@@ -909,7 +909,7 @@ $\qed$
 
   - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
 
-  - Now since $I$ was asu
+  - Now since $M$ was assumed to *not* be principal, $M$ is not free.
 
 **$M$ is rank 1**:
 
