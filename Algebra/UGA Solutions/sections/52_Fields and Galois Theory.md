@@ -171,4 +171,94 @@ So $f = f_i$ for some $i$.
 
 $\qed$
 
+## Spring 2019 #8
+
+Concepts used:
+
+- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
+  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
+- $\deg \Phi_n(x) = \phi(n)$
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
+
+Let $K = \QQ(\zeta)$
+
+### a
+
+- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
+- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
+- The degree of the field extension is the degree of $\Phi_8$, which is
+\[
+\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
+.\]
+- So $[\QQ(\zeta): \QQ] = 4$.
+
+### b
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
+- $\ZZ/(4)$ has exactly one subgroup of index 2.
+- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
+
+### c
+- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
+
+- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
+  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
+    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
+  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
+    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
+
+- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
+  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
+
+- Conclude
+\[
+[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
+\]
+  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
+
+
+## Fall 2018 #3
+
+Let $L/K/F$.
+
+### a
+
+**False**: 
+Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
+
+Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
+
+But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
+
+### b
+
+**True**: 
+If $L/F$ is Galois, then $L/K$ is normal and separable:
+
+- $L/K$ is normal, since if $\sigma: L \injects \overline K$ lifts the identity on $K$ and fixes $L$, i-t also lifts the identity on $F$ and fixes $L$ (and $\overline K = \overline F$).
+
+- $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
+
+### c
+
+**False**: 
+Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
+
+Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ is not the splitting field of any polynomial (noting that it does not split $x^4 - 2$ completely.)
+
+## Fall 2018 #4
+Let $m(x)$ be the minimal polynomial of $\phi$.
+If the polynomial $f(x) = x$ doesn't divide $m$, then $f$ does not have zero as an eigenvalue, so $\phi$ is nonsingular and since $0$ is nilpotent, $\phi + 0$ works.
+
+Otherwise, write $\phi(x) = x^m \rho(x)$ where $\gcd(x, \rho(x)) = 1$.
+
+Then
+\begin{align*}
+V \cong \frac{k[x]}{m(x)} \cong \frac{k[x]}{(x^m)} \oplus \frac{k[x]}{(\rho)}
+\definedas U \oplus W
+\end{align*}
+by the Chinese Remainder theorem.
+
+We can now note that $\restrictionof{\phi}{U}$ is nilpotent because it has characteristic polynomial $x^m$, and $\restrictionof{\phi}{W}$ is nonsingular since $\lambda = 0$ is not an eigenvalue by construction.
+
 

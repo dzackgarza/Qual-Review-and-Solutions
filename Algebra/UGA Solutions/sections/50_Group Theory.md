@@ -285,4 +285,112 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 .\]
 
 
+## Fall 2018 #1 
+
+Concepts Used:
+
+- Sylow 2: All Sylow $p\dash$subgroups are conjugate.
+- $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
+- Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
+
+### a
+
+- Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
+
+- $P \normal G \iff gPg\inv = P$ for all $g\in G$.
+
+- Let $S_p^j$ be any other Sylow $p\dash$subgroup, 
+- Since Sylow $p\dash$subgroups are all conjugate $gS_p^i g\inv = S_p^j$ for *some* $g\in G$.
+
+- Then 
+\begin{align*}
+P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
+.\end{align*}
+
+### b
+
+- If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
+- By maximality of $M$, $MP = G$
+- Note that $M\intersect P \leq P$ and $\abs{P} = p^c$ implies $\abs{M\intersect P} = p^a$ for some $a\leq c$ by Lagrange
+- Then write
+  \begin{align*}
+  G = MP
+  &\iff \abs{G} = \frac{\abs{M} \abs{P}}{\abs{M\intersect P}} \\ \\
+  &\iff { \abs{G} \over \abs{M}} = {\abs{P}  \over \abs{M\intersect P}} = {p^c \over p^a} = p^{c-a} \definedas p^b
+  \end{align*}
+
+  where $a\leq c \implies 0 \leq c-b \leq c$ so $0\leq b \leq c$.
+
+## Fall 2018 #2 
+
+Concepts used:
+
+- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
+- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
+- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
+- $abc\in H \iff b\in a\inv H c\inv$
+- Set of orbits for $G\actson X$, notated $X/G$.
+- Set of fixed points for $G\actson X$, notated $X^g$.
+- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
+  - Number of orbits equals average number of fixed points.
+
+### a
+
+- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
+- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
+- Then
+\begin{align*}
+h \in G\cdot x 
+&\iff h\cdot x = x \qtext{by being in the stabilizer} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
+&\iff (g h g\inv) \cdot y = y \\
+&\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
+&\iff h\in g\inv G_y g
+,\end{align*}
+
+so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
+
+### b
+
+Let $G$ act on its subgroups by conjugation, 
+
+- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
+
+- The stabilizer of $H$ is $G_H = N_G(H)$.
+
+- By orbit-stabilizer,
+\begin{align*}
+G\cdot H = [G: G_H] = [G: N_G(H)]
+.\end{align*}
+
+- Since $\abs H = n$, and all of its conjugate also have order $n$.
+
+- Note that 
+\begin{align*}
+H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
+,\end{align*}
+
+- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
+\begin{align*}
+\abs{\union_{g\in G}gHg\inv} 
+&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+&\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
+& = [G: N_G(H)] \abs{H} \\
+&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
+&\leq {\abs G \over \abs H} \abs H \\
+&= \abs{G}
+.\end{align*}
+
+### c
+
+- Let $G\actson X$ transitively where $\abs{X} \geq 2$
+- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
+- Apply Burnside's Lemma
+\begin{align*}
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
+\end{align*}
+- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
+- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
+- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
+
 

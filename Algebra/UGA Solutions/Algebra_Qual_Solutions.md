@@ -20,543 +20,7 @@ Problem Session 1: Group Theory
 
 
 
-# Spring 2019
-
-## 6
-
-### a
-
-Define the set of proper ideals
-$$
-S = \theset{J \suchthat I   \subseteq J < R}
-,$$
-
-which is a poset under set inclusion.
-
-Given a chain $J_1 \subseteq \cdots$, there is an upper bound $J \definedas \union J_i$, so Zorn's lemma applies.
-
-### b
-$\implies$:
-
-We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
-
-Let $x\in J(R)$, so it is in every maximal ideal, and suppose toward a contradiction that $1+x$ is **not** a unit.
-
-Then consider $I = \generators{1+x} \normal R$. 
-Since $1+x$ is not a unit, we can't write $s(1+x) = 1$ for any $s\in R$, and so $1 \not\in I$ and $I\neq R$
-
-So $I < R$ is proper and thus contained in some maximal proper ideal $\mathfrak{m} < R$ by part (1), and so we have $1+x \in \mathfrak{m}$.
-Since $x\in J(R)$, $x\in \mathfrak{m}$ as well.
-
-But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
-
-$\impliedby$
-
-Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
-
- 
-Suppose towards a contradiction that there is a maximal ideal $\mathfrak{m}$ such that $x\not \in \mathfrak{m}$ and thus $x\not\in J(R)$.
-
-Consider 
-$$
-M' \definedas \theset{rx + m \suchthat r\in R,~ m\in M}
-.$$
-
-Since $\mathfrak{m}$ was maximal, $\mathfrak{m} \subsetneq M'$ and so $M' = R$.
-
-So every element in $R$ can be written as $rx + m$ for some $r\in R, m\in M$.
-But $1\in R$, so we have 
-$$
-1 = rx + m
-.$$ 
-
-So let $s = -r$ and write $1 = sx - m$, and so $m = 1 + sx$.
-
-Since $s\in R$ by assumption $1+sx$ is a unit and thus $m \in \mathfrak{m}$ is a unit, a contradiction.
-
-So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
-
-### c
-
-> - $\mathfrak N(R) = \theset{x\in R \suchthat x^n = 0 \text{ for some } n}$.
-> - $J(R) = \spec_{\text{max}}(R) = \displaystyle\intersect_{\mm \text{ maximal}} \mm$.
-
-We want to show $J(R) = \mathfrak N(R)$.
-
-$\mathfrak N(R) \subseteq J(R)$:
-
-We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
-$$
-\sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)\inv
-.$$
-
-$J(R) \subseteq \mathfrak N(R)$:
-
-Let $x \in J(R) \setminus \mathfrak N(R)$.
-
-Since $R$ is finite, $x^m = x$ for some $m > 0$.
-Without loss of generality, we can suppose $x^2 = x$ by replacing $x^m$ with $x^{2m}$.
-
-If $1-x$ is not a unit, then $\generators{1-x}$ is a nontrivial proper ideal, which by (a) is contained in some maximal ideal $\mm$. 
-But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradiction.
-
-So $1-x$ is a unit, so let $u = (1-x)\inv$.
-
-Then
-\[
-(1-x)x &= x - x^2 = x - x = 0 \\
-&\implies u (1-x)x = x = 0 \\
-&\implies x=0
-.\]
-
-## 7
-
-> Work with matrix of all ones instead.
-> Eyeball eigenvectors.
-> Coefficients in minimal polynomial: size of largest Jordan block
-> Dimension of eigenspace: number of Jordan blocks
-
-### a
-
-Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
-
-- Noting that $B = A+I$, we have
-  \[
-  &B\vector x = \lambda \vector x \\
-  &\iff (A+I) \vector x = \lambda \vector x \\
-  &\iff A \vector x = (\lambda - 1) \vector x
-  ,\]
-    so we will find the eigenvalues of $B$ and subtract one from each.
-
-- Note that $B\vector v = \thevector{\sum v_i, \sum v_i, \cdots, \sum v_i}$, i.e. it has the effect of summing all of the entries of $\vector v$ and placing that sum in each component.
-
-- We proceed by finding $p$ eigenvectors and eigenvalues, since the JCF and minimal polynomials will involve eigenvalues and the transformation matrix will involve (generalized) eigenvectors.
-
-- Claim: each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
-  - Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
-  - So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
-  - Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
-  - These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
-  \[
-  \det 
-\begin{bmatrix}
-1 & 1 & 1 & \cdots & 1\\
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
-= (1) \cdot \det 
-\begin{bmatrix}
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
- = (-1)^{p-2} \neq 0
-.\]
-
-  where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
-
-- Claim: $\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
-  - Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
-  - $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
-
-
-- Using that the eigenvalues of $A$ are $1+\lambda_i$ for $\lambda_i$ the above eigenvalues for $B$,
-\[
-\spec(B) \definedas \theset{(\lambda_i, m_i)} &=  \theset{(p, 1), (0, p-1)}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
-\implies \spec(A) &= \theset{(p-1,1), (-1, p-1) }  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
-\]
-
-> Note: we can always read off the *characteristic* polynomial from the spectrum.
-
-
-- The dimensions of eigenspaces are preserved, thus
-\[
-JCF_\QQ(A)
-=  J_{p-1}^{1} \oplus (p-1)J_{-1}^1
-=
-\left[\begin{array}{r|r|r|r|r|r}
-p-1 & 0 & 0 & \cdots & 0 & 0 \\
-\hline
-0& -1 & 0 & 0 & 0 & 0 \\ \hline
-0& 0 & -1 & 0 & 0 & 0 \\ \hline
-0& 0 & 0 & \ddots & \ddots & 0 \\ \hline
-0& 0 & 0 & \cdots & -1 & 0 \\ \hline
-0& 0 & 0 & \cdots & 0 & -1 \\
-\end{array}\right]
-.\]
-
-- The matrix $P$ such that $A = PJP\inv$ will have columns the bases of the generalized eigenspaces.
-- In this case, the generalized eigenspaces are the usual eigenspaces, so
-\[
-P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
-\left[\begin{array}{rrrrrr}
-1 & 1 & 1 & 1 & 1 & 1  \\
-1 & -1 & 0 & 0 & 0 & 0 \\
-1 & 0 & -1 & 0 & 0 & 0 \\
-1 & 0 & 0 & -1 & 0 & 0 \\
-1 & \vdots & \vdots & \vdots & \ddots & \vdots\\
-1 & 0 & 0 & 0 & 0 & -1 \\
-\end{array}\right]
-.\]
-
-### b
-
-For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
-
-- A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
-  - Thus the largest Jordan block corresponding to $\lambda = -1$ is of size 2
-- Can check that $\det(A) = \pm 1 \in \FF_p\units$, so the vectors $\vector e_1 - \vector e_i$ are still linearly independent and thus $\dim E_{-1} = p-1$
-  - So there are $p-1$ Jordan blocks for $\lambda = 0$.
-
-Summary:
-\[
-\min_{A, \FF_p}(x) &= (x+1)^2 \\
-\chi_{A, \FF_p}(x) &\equiv (x+1)^p \\
-\dim E_{-1} &= p-1
-.\]
-
-Thus
-\[
-JCF_{\FF_p}(A)
-=  J_{-1}^{2} \oplus (p-2)J_{-1}^1
-= \left[\begin{array}{rr|r|r|r|r}
--1 & 1 & 0 & \cdots & 0 & 0 \\
-0& -1 & 0 & 0 & 0 & 0 \\
-\hline
-0& 0 & -1 & 0 & 0 & 0 \\ \hline
-0& 0 & 0 & \ddots & \ddots & 0 \\ \hline
-0& 0 & 0 & \cdots & -1 & 0 \\ \hline
-0& 0 & 0 & \cdots & 0 & -1 \\
-\end{array}\right]
-.\]
-
-To obtain a basis for $E_{\lambda = 0}$, first note that the matrix $P = [\vector v_1, \vector p_1, \cdots , \vector p_{p-1}]$ from part (a) is singular over $\FF_p$, since
-\[
-\vector v_1 + \vector p_1 + \vector p_2 + \cdots + \vector p_{p-2}
-&= [p-1, 0, 0, \cdots, 0, 1] \\
-&= [-1, 0,0,\cdots, 0, 1] \\
-&= - \vector p_{p-1}
-.\]
-
-We still have a linearly independent set given by the first $p-1$ columns of $P$, so we can extend this to a basis by finding one linearly independent generalized eigenvector.
-
-Solving $(A-I\lambda)\vector x = \vector v_1$ is our only option (the others won't yield solutions).
-This amounts to solving $B\vector x = \vector v_1$, which imposes the condition $\sum x_i = 1$, so we can choose $\vector x = [1, 0, \cdots, 0]$.
-
-Thus
-\[
-P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
-\left[\begin{array}{rrrrrr}
-1 & 1 & 1 & 1 & 1 & 1  \\
-1 & 0 & -1 & 0 & 0 & 0 \\
-1 & 0 & 0 & -1 & 0 & 0 \\
-1 & \vdots & \vdots & \vdots & \ddots & \vdots \\
-1 & 0 & 0 & 0 & 0 & -1\\
-1 & 0 & 0 & 0 & 0 & 0 \\
-\end{array}\right]
-.\]
-
-## 8
-
-Concepts used:
-
-- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
-  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
-- $\deg \Phi_n(x) = \phi(n)$
-- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
-
-Let $K = \QQ(\zeta)$
-
-### a
-
-- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
-- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
-- The degree of the field extension is the degree of $\Phi_8$, which is
-\[
-\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
-.\]
-- So $[\QQ(\zeta): \QQ] = 4$.
-
-### b
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
-- $\ZZ/(4)$ has exactly one subgroup of index 2.
-- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
-
-### c
-- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
-
-- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
-  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
-    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
-  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
-    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
-
-- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
-  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
-
-- Conclude
-\[
-[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
-\]
-  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
-
 # Fall 2018
-
-## 1 \label{problem:session_1_6_1_soln}
-
-Concepts Used:
-
-- Sylow 2: All Sylow $p\dash$subgroups are conjugate.
-- $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
-- Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
-
-### a
-
-- Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
-
-- $P \normal G \iff gPg\inv = P$ for all $g\in G$.
-
-- Let $S_p^j$ be any other Sylow $p\dash$subgroup, 
-- Since Sylow $p\dash$subgroups are all conjugate $gS_p^i g\inv = S_p^j$ for *some* $g\in G$.
-
-- Then 
-\begin{align*}
-P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
-.\end{align*}
-
-### b
-
-- If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
-- By maximality of $M$, $MP = G$
-- Note that $M\intersect P \leq P$ and $\abs{P} = p^c$ implies $\abs{M\intersect P} = p^a$ for some $a\leq c$ by Lagrange
-- Then write
-  \begin{align*}
-  G = MP
-  &\iff \abs{G} = \frac{\abs{M} \abs{P}}{\abs{M\intersect P}} \\ \\
-  &\iff { \abs{G} \over \abs{M}} = {\abs{P}  \over \abs{M\intersect P}} = {p^c \over p^a} = p^{c-a} \definedas p^b
-  \end{align*}
-
-  where $a\leq c \implies 0 \leq c-b \leq c$ so $0\leq b \leq c$.
-
-## 2 \label{problem:session_1_6_2_soln}
-
-Concepts used:
-
-- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
-- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
-- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
-- $abc\in H \iff b\in a\inv H c\inv$
-- Set of orbits for $G\actson X$, notated $X/G$.
-- Set of fixed points for $G\actson X$, notated $X^g$.
-- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
-  - Number of orbits equals average number of fixed points.
-
-### a
-
-- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
-- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
-- Then
-\begin{align*}
-h \in G\cdot x 
-&\iff h\cdot x = x \qtext{by being in the stabilizer} \\
-&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
-&\iff (g h g\inv) \cdot y = y \\
-&\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
-&\iff h\in g\inv G_y g
-,\end{align*}
-
-so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
-
-### b
-
-Let $G$ act on its subgroups by conjugation, 
-
-- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
-
-- The stabilizer of $H$ is $G_H = N_G(H)$.
-
-- By orbit-stabilizer,
-\begin{align*}
-G\cdot H = [G: G_H] = [G: N_G(H)]
-.\end{align*}
-
-- Since $\abs H = n$, and all of its conjugate also have order $n$.
-
-- Note that 
-\begin{align*}
-H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
-,\end{align*}
-
-- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
-\begin{align*}
-\abs{\union_{g\in G}gHg\inv} 
-&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
-&\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
-& = [G: N_G(H)] \abs{H} \\
-&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
-&\leq {\abs G \over \abs H} \abs H \\
-&= \abs{G}
-.\end{align*}
-
-### c
-
-- Let $G\actson X$ transitively where $\abs{X} \geq 2$
-- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
-- Apply Burnside's Lemma
-\begin{align*}
-1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
-\end{align*}
-- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
-- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
-- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
-
-## 3
-
-Let $L/K/F$.
-
-### a
-
-**False**: 
-Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
-
-Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
-
-But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
-
-### b
-
-**True**: 
-If $L/F$ is Galois, then $L/K$ is normal and separable:
-
-- $L/K$ is normal, since if $\sigma: L \injects \overline K$ lifts the identity on $K$ and fixes $L$, i-t also lifts the identity on $F$ and fixes $L$ (and $\overline K = \overline F$).
-
-- $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
-
-### c
-
-**False**: 
-Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
-
-Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ is not the splitting field of any polynomial (noting that it does not split $x^4 - 2$ completely.)
-
-## 4
-
-Let $m(x)$ be the minimal polynomial of $\phi$.
-If the polynomial $f(x) = x$ doesn't divide $m$, then $f$ does not have zero as an eigenvalue, so $\phi$ is nonsingular and since $0$ is nilpotent, $\phi + 0$ works.
-
-Otherwise, write $\phi(x) = x^m \rho(x)$ where $\gcd(x, \rho(x)) = 1$.
-
-Then
-\begin{align*}
-V \cong \frac{k[x]}{m(x)} \cong \frac{k[x]}{(x^m)} \oplus \frac{k[x]}{(\rho)}
-\definedas U \oplus W
-\end{align*}
-by the Chinese Remainder theorem.
-
-We can now note that $\restrictionof{\phi}{U}$ is nilpotent because it has characteristic polynomial $x^m$, and $\restrictionof{\phi}{W}$ is nonsingular since $\lambda = 0$ is not an eigenvalue by construction.
-
-## 5
-
-### a
-
-Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have 
-\begin{align*}
-B\vector v = \sum_{j=0}^{n-1}c_j A^j \vector v
-.\end{align*}
-
-So let $p(x) = \sum_{j=0}^{n-1}c_jx^j$.
-Then consider how $B$ acts on any basis vector $A^k \vector v$.
-
-We have 
-\begin{align*}
-BA^k \vector v 
-&= A^k B\vector v \\
-&= A^k p(A) \vector v \\
-&= p(A) A^k \vector v
-,\end{align*}
-
-so $B = p(A)$ as operators since their actions agree on every basis vector in $V$.
-
-### b
-
-$\implies$:
-
-If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
-
-So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
-
-$\impliedby$:
-
-Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
-This induces an invariant factor decomposition $V =\cong \bigoplus k[x]/(f_i)$.
-Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
-$$
-V\cong \frac{k[x]}{(\chi_A(x))}
-$$
-as an isomorphism of $k[x]\dash$modules.
-
-So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$.
-
-> I.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
-
-But then noting that monomials span $k[x]$, we can write
-\begin{align*}
-V &\cong
-k[x] \actson \vector v \\
-&\definedas \theset{f(x) \actson \vector v \suchthat f \in k[x]} \\
-&= \spanof_k \theset{x^k \actson \vector v \suchthat k \geq 0} \\
-&\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
-.\end{align*}
-
-Moreover, we can note that if $k \geq \deg \chi_A(x)$, then $A^k$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
-\begin{align*}
-V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
-&= \spanof_k \theset{A^k\vector v \suchthat 1 \leq k \leq n-1}
-.\end{align*}
-
-$\qed$
-
-## 6
-
-### a
-
-By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
-
-So 
-
-- $M$ is maximal:
-
-- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
-
-- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
-
-- $\iff M/N$ is simple.
-
-### b
-
-Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
-
-By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
-In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
-So $\abs{M/N}$ can not be composite, and therefore must be prime.
-
-### c
-
-Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
-
-Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
-
-But this means there are infinitely many elements in $G\setminus H$, and so $\infty = [G: H] = \abs{G/H}$ is not a prime. 
-Thus by (b), $H$ can not be maximal, a contradiction.
-
-$\qed$
-
 
 ## 7
 
@@ -564,13 +28,13 @@ $\qed$
 
 Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
 
-\begin{align*}
+\[
 \phi(s\vector x + \vector y) 
 &= r(s\vector x + \vector y) \\
 &= rs\vector x + r\vector y \\
 &= s(r\vector x) + (r\vector y) \\
 &= s\phi(\vector x) + \phi(\vector y)
-.\end{align*}
+.\]
 
 ### b
 
@@ -624,7 +88,7 @@ If $R$ has characteristic 2, we can check the other 3 possibilities.
 
 We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
 
-\begin{align*}
+\[
 \begin{array}{c|cccc}
 			& 0 & 1 	& t & 1+t 	\\ \hline
 0 		& 0 & 0 	& 0 & 0   	\\ 
@@ -632,29 +96,29 @@ We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and 
 t 		& 0 & t 	& \mathbf{0} & t   	\\ 
 1 + t & 0 & 1+t & t & 1   	\\ 
 \end{array}
-,\end{align*}
+,\]
 
 and so we find that $t, 0$ are the zero divisors.
 
 In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
 
 Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
-\begin{align*}
+\[
 \left[\begin{array}{c|cc}
 	& t 	& 1 +t \\ \hline
 t & 1+t & 1 \\
 t & 1 	& t \\
 \end{array}\right]
-,\end{align*}
+,\]
 
 and so this ring only has one zero divisor.
 
 Thus the only possibilities are:
 
-\begin{align*}
+\[
 R &\cong \ZZ/(4) \\
 R &\cong \ZZ/(2)[t] / (t^2)
-.\end{align*}
+.\]
 
 $\qed$
 
@@ -1213,6 +677,114 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 .\]
 
 
+## Fall 2018 #1 
+
+Concepts Used:
+
+- Sylow 2: All Sylow $p\dash$subgroups are conjugate.
+- $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
+- Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
+
+### a
+
+- Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
+
+- $P \normal G \iff gPg\inv = P$ for all $g\in G$.
+
+- Let $S_p^j$ be any other Sylow $p\dash$subgroup, 
+- Since Sylow $p\dash$subgroups are all conjugate $gS_p^i g\inv = S_p^j$ for *some* $g\in G$.
+
+- Then 
+\begin{align*}
+P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
+.\end{align*}
+
+### b
+
+- If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
+- By maximality of $M$, $MP = G$
+- Note that $M\intersect P \leq P$ and $\abs{P} = p^c$ implies $\abs{M\intersect P} = p^a$ for some $a\leq c$ by Lagrange
+- Then write
+  \begin{align*}
+  G = MP
+  &\iff \abs{G} = \frac{\abs{M} \abs{P}}{\abs{M\intersect P}} \\ \\
+  &\iff { \abs{G} \over \abs{M}} = {\abs{P}  \over \abs{M\intersect P}} = {p^c \over p^a} = p^{c-a} \definedas p^b
+  \end{align*}
+
+  where $a\leq c \implies 0 \leq c-b \leq c$ so $0\leq b \leq c$.
+
+## Fall 2018 #2 
+
+Concepts used:
+
+- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
+- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
+- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
+- $abc\in H \iff b\in a\inv H c\inv$
+- Set of orbits for $G\actson X$, notated $X/G$.
+- Set of fixed points for $G\actson X$, notated $X^g$.
+- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
+  - Number of orbits equals average number of fixed points.
+
+### a
+
+- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
+- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
+- Then
+\begin{align*}
+h \in G\cdot x 
+&\iff h\cdot x = x \qtext{by being in the stabilizer} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
+&\iff (g h g\inv) \cdot y = y \\
+&\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
+&\iff h\in g\inv G_y g
+,\end{align*}
+
+so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
+
+### b
+
+Let $G$ act on its subgroups by conjugation, 
+
+- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
+
+- The stabilizer of $H$ is $G_H = N_G(H)$.
+
+- By orbit-stabilizer,
+\begin{align*}
+G\cdot H = [G: G_H] = [G: N_G(H)]
+.\end{align*}
+
+- Since $\abs H = n$, and all of its conjugate also have order $n$.
+
+- Note that 
+\begin{align*}
+H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
+,\end{align*}
+
+- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
+\begin{align*}
+\abs{\union_{g\in G}gHg\inv} 
+&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+&\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
+& = [G: N_G(H)] \abs{H} \\
+&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
+&\leq {\abs G \over \abs H} \abs H \\
+&= \abs{G}
+.\end{align*}
+
+### c
+
+- Let $G\actson X$ transitively where $\abs{X} \geq 2$
+- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
+- Apply Burnside's Lemma
+\begin{align*}
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
+\end{align*}
+- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
+- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
+- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
+
 
 
 # Commutative Algebra
@@ -1542,6 +1114,96 @@ So $f = f_i$ for some $i$.
 
 $\qed$
 
+## Spring 2019 #8
+
+Concepts used:
+
+- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
+  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
+- $\deg \Phi_n(x) = \phi(n)$
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
+
+Let $K = \QQ(\zeta)$
+
+### a
+
+- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
+- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
+- The degree of the field extension is the degree of $\Phi_8$, which is
+\[
+\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
+.\]
+- So $[\QQ(\zeta): \QQ] = 4$.
+
+### b
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
+- $\ZZ/(4)$ has exactly one subgroup of index 2.
+- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
+
+### c
+- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
+
+- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
+  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
+    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
+  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
+    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
+
+- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
+  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
+
+- Conclude
+\[
+[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
+\]
+  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
+
+
+## Fall 2018 #3
+
+Let $L/K/F$.
+
+### a
+
+**False**: 
+Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
+
+Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
+
+But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
+
+### b
+
+**True**: 
+If $L/F$ is Galois, then $L/K$ is normal and separable:
+
+- $L/K$ is normal, since if $\sigma: L \injects \overline K$ lifts the identity on $K$ and fixes $L$, i-t also lifts the identity on $F$ and fixes $L$ (and $\overline K = \overline F$).
+
+- $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
+
+### c
+
+**False**: 
+Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
+
+Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ is not the splitting field of any polynomial (noting that it does not split $x^4 - 2$ completely.)
+
+## Fall 2018 #4
+Let $m(x)$ be the minimal polynomial of $\phi$.
+If the polynomial $f(x) = x$ doesn't divide $m$, then $f$ does not have zero as an eigenvalue, so $\phi$ is nonsingular and since $0$ is nilpotent, $\phi + 0$ works.
+
+Otherwise, write $\phi(x) = x^m \rho(x)$ where $\gcd(x, \rho(x)) = 1$.
+
+Then
+\begin{align*}
+V \cong \frac{k[x]}{m(x)} \cong \frac{k[x]}{(x^m)} \oplus \frac{k[x]}{(\rho)}
+\definedas U \oplus W
+\end{align*}
+by the Chinese Remainder theorem.
+
+We can now note that $\restrictionof{\phi}{U}$ is nilpotent because it has characteristic polynomial $x^m$, and $\restrictionof{\phi}{W}$ is nonsingular since $\lambda = 0$ is not an eigenvalue by construction.
+
 
 
 # Modules
@@ -1571,18 +1233,18 @@ $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq
 ### c
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
-\begin{align*}
+\[
 0 \to N \to M \mapsvia{\pi} F \to 0
-.\end{align*}
+.\]
 
 - Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
 - If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
 - Note $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $$\pi(y_\alpha) = \iota(x_\alpha).$$
 - Define a map
-\begin{align*}
+\[
 f: X&\to M \\
 x_\alpha &\mapsto y_\alpha
-.\end{align*}
+.\]
 - By the universal property, this yields a map $h: F\to M$, commutativity forces $(h\circ \iota)(x_\alpha) = y_\alpha$, i.e. we have a diagram
 \begin{center}
 \begin{tikzcd}
@@ -1592,7 +1254,7 @@ x_\alpha &\mapsto y_\alpha
 \end{center}
 
 - It remains to check that it's a section:
-\begin{align*}
+\[
 f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 \implies (\pi \circ h)(f) 
 &= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
@@ -1601,7 +1263,7 @@ f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 &= \sum_\alpha r_\alpha \pi(y_\alpha) \\
 &= \sum_\alpha r_\alpha \iota(x_\alpha) \\
 &\definedas f
-\end{align*}
+\]
 
 - Checking $(h\circ \pi)(m) = m$: seems to be hard! 
 - Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
@@ -1791,9 +1453,198 @@ $\qed$
 
 $\qed$
 
+## Fall 2018 #6
+
+### a
+
+By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
+
+So 
+
+- $M$ is maximal:
+
+- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
+
+- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
+
+- $\iff M/N$ is simple.
+
+### b
+
+Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
+
+By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
+In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
+So $\abs{M/N}$ can not be composite, and therefore must be prime.
+
+### c
+
+Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
+
+Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
+
+But this means there are infinitely many elements in $G\setminus H$, and so $\infty = [G: H] = \abs{G/H}$ is not a prime. 
+Thus by (b), $H$ can not be maximal, a contradiction.
+
+$\qed$
 
 
-# Linear Algebra: JCF
+
+# Linear Algebra: Canonical Forms
+
+## Spring 2019 #7
+
+> Work with matrix of all ones instead.
+> Eyeball eigenvectors.
+> Coefficients in minimal polynomial: size of largest Jordan block
+> Dimension of eigenspace: number of Jordan blocks
+
+### a
+
+Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
+
+- Noting that $B = A+I$, we have
+  \[
+  &B\vector x = \lambda \vector x \\
+  &\iff (A+I) \vector x = \lambda \vector x \\
+  &\iff A \vector x = (\lambda - 1) \vector x
+  ,\]
+    so we will find the eigenvalues of $B$ and subtract one from each.
+
+- Note that $B\vector v = \thevector{\sum v_i, \sum v_i, \cdots, \sum v_i}$, i.e. it has the effect of summing all of the entries of $\vector v$ and placing that sum in each component.
+
+- We proceed by finding $p$ eigenvectors and eigenvalues, since the JCF and minimal polynomials will involve eigenvalues and the transformation matrix will involve (generalized) eigenvectors.
+
+- Claim: each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
+  - Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
+  - So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
+  - Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
+  - These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
+  \[
+  \det 
+\begin{bmatrix}
+1 & 1 & 1 & \cdots & 1\\
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+= (1) \cdot \det 
+\begin{bmatrix}
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+ = (-1)^{p-2} \neq 0
+.\]
+
+  where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
+
+- Claim: $\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
+  - Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
+  - $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
+
+
+- Using that the eigenvalues of $A$ are $1+\lambda_i$ for $\lambda_i$ the above eigenvalues for $B$,
+\[
+\spec(B) \definedas \theset{(\lambda_i, m_i)} &=  \theset{(p, 1), (0, p-1)}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
+\implies \spec(A) &= \theset{(p-1,1), (-1, p-1) }  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
+\]
+
+> Note: we can always read off the *characteristic* polynomial from the spectrum.
+
+
+- The dimensions of eigenspaces are preserved, thus
+\[
+JCF_\QQ(A)
+=  J_{p-1}^{1} \oplus (p-1)J_{-1}^1
+=
+\left[\begin{array}{r|r|r|r|r|r}
+p-1 & 0 & 0 & \cdots & 0 & 0 \\
+\hline
+0& -1 & 0 & 0 & 0 & 0 \\ \hline
+0& 0 & -1 & 0 & 0 & 0 \\ \hline
+0& 0 & 0 & \ddots & \ddots & 0 \\ \hline
+0& 0 & 0 & \cdots & -1 & 0 \\ \hline
+0& 0 & 0 & \cdots & 0 & -1 \\
+\end{array}\right]
+.\]
+
+- The matrix $P$ such that $A = PJP\inv$ will have columns the bases of the generalized eigenspaces.
+- In this case, the generalized eigenspaces are the usual eigenspaces, so
+\[
+P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
+\left[\begin{array}{rrrrrr}
+1 & 1 & 1 & 1 & 1 & 1  \\
+1 & -1 & 0 & 0 & 0 & 0 \\
+1 & 0 & -1 & 0 & 0 & 0 \\
+1 & 0 & 0 & -1 & 0 & 0 \\
+1 & \vdots & \vdots & \vdots & \ddots & \vdots\\
+1 & 0 & 0 & 0 & 0 & -1 \\
+\end{array}\right]
+.\]
+
+### b
+
+For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
+
+- A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
+  - Thus the largest Jordan block corresponding to $\lambda = -1$ is of size 2
+- Can check that $\det(A) = \pm 1 \in \FF_p\units$, so the vectors $\vector e_1 - \vector e_i$ are still linearly independent and thus $\dim E_{-1} = p-1$
+  - So there are $p-1$ Jordan blocks for $\lambda = 0$.
+
+Summary:
+\[
+\min_{A, \FF_p}(x) &= (x+1)^2 \\
+\chi_{A, \FF_p}(x) &\equiv (x+1)^p \\
+\dim E_{-1} &= p-1
+.\]
+
+Thus
+\[
+JCF_{\FF_p}(A)
+=  J_{-1}^{2} \oplus (p-2)J_{-1}^1
+= \left[\begin{array}{rr|r|r|r|r}
+-1 & 1 & 0 & \cdots & 0 & 0 \\
+0& -1 & 0 & 0 & 0 & 0 \\
+\hline
+0& 0 & -1 & 0 & 0 & 0 \\ \hline
+0& 0 & 0 & \ddots & \ddots & 0 \\ \hline
+0& 0 & 0 & \cdots & -1 & 0 \\ \hline
+0& 0 & 0 & \cdots & 0 & -1 \\
+\end{array}\right]
+.\]
+
+To obtain a basis for $E_{\lambda = 0}$, first note that the matrix $P = [\vector v_1, \vector p_1, \cdots , \vector p_{p-1}]$ from part (a) is singular over $\FF_p$, since
+\[
+\vector v_1 + \vector p_1 + \vector p_2 + \cdots + \vector p_{p-2}
+&= [p-1, 0, 0, \cdots, 0, 1] \\
+&= [-1, 0,0,\cdots, 0, 1] \\
+&= - \vector p_{p-1}
+.\]
+
+We still have a linearly independent set given by the first $p-1$ columns of $P$, so we can extend this to a basis by finding one linearly independent generalized eigenvector.
+
+Solving $(A-I\lambda)\vector x = \vector v_1$ is our only option (the others won't yield solutions).
+This amounts to solving $B\vector x = \vector v_1$, which imposes the condition $\sum x_i = 1$, so we can choose $\vector x = [1, 0, \cdots, 0]$.
+
+Thus
+\[
+P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
+\left[\begin{array}{rrrrrr}
+1 & 1 & 1 & 1 & 1 & 1  \\
+1 & 0 & -1 & 0 & 0 & 0 \\
+1 & 0 & 0 & -1 & 0 & 0 \\
+1 & \vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & 0 & 0 & 0 & 0 & -1\\
+1 & 0 & 0 & 0 & 0 & 0 \\
+\end{array}\right]
+.\]
+
+
 
 # Linear Algebra: Diagonalizability
 
@@ -1939,6 +1790,70 @@ $\qed$
 ### c.
 
 \todo{Todo.}
+
+
+## Fall 2018 #5
+
+### a
+
+Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have 
+\[
+B\vector v = \sum_{j=0}^{n-1}c_j A^j \vector v
+.\]
+
+So let $p(x) = \sum_{j=0}^{n-1}c_jx^j$.
+Then consider how $B$ acts on any basis vector $A^k \vector v$.
+
+We have 
+\[
+BA^k \vector v 
+&= A^k B\vector v \\
+&= A^k p(A) \vector v \\
+&= p(A) A^k \vector v
+,\]
+
+so $B = p(A)$ as operators since their actions agree on every basis vector in $V$.
+
+### b
+
+$\implies$:
+
+If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
+
+So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
+
+$\impliedby$:
+
+Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
+This induces an invariant factor decomposition $V =\cong \bigoplus k[x]/(f_i)$.
+Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
+$$
+V\cong \frac{k[x]}{(\chi_A(x))}
+$$
+as an isomorphism of $k[x]\dash$modules.
+
+So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$.
+
+> I.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
+
+But then noting that monomials span $k[x]$, we can write
+\[
+V &\cong
+k[x] \actson \vector v \\
+&\definedas \theset{f(x) \actson \vector v \suchthat f \in k[x]} \\
+&= \spanof_k \theset{x^k \actson \vector v \suchthat k \geq 0} \\
+&\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
+.\]
+
+Moreover, we can note that if $k \geq \deg \chi_A(x)$, then $A^k$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
+\[
+V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
+&= \spanof_k \theset{A^k\vector v \suchthat 1 \leq k \leq n-1}
+.\]
+
+$\qed$
+
+
 
 # Spring 2013
 

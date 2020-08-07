@@ -25,18 +25,18 @@ $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq
 ### c
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
-\begin{align*}
+\[
 0 \to N \to M \mapsvia{\pi} F \to 0
-.\end{align*}
+.\]
 
 - Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
 - If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
 - Note $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $$\pi(y_\alpha) = \iota(x_\alpha).$$
 - Define a map
-\begin{align*}
+\[
 f: X&\to M \\
 x_\alpha &\mapsto y_\alpha
-.\end{align*}
+.\]
 - By the universal property, this yields a map $h: F\to M$, commutativity forces $(h\circ \iota)(x_\alpha) = y_\alpha$, i.e. we have a diagram
 \begin{center}
 \begin{tikzcd}
@@ -46,7 +46,7 @@ x_\alpha &\mapsto y_\alpha
 \end{center}
 
 - It remains to check that it's a section:
-\begin{align*}
+\[
 f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 \implies (\pi \circ h)(f) 
 &= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
@@ -55,7 +55,7 @@ f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 &= \sum_\alpha r_\alpha \pi(y_\alpha) \\
 &= \sum_\alpha r_\alpha \iota(x_\alpha) \\
 &\definedas f
-\end{align*}
+\]
 
 - Checking $(h\circ \pi)(m) = m$: seems to be hard! 
 - Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
@@ -242,6 +242,41 @@ $\qed$
 - Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
 
 - But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
+
+$\qed$
+
+## Fall 2018 #6
+
+### a
+
+By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
+
+So 
+
+- $M$ is maximal:
+
+- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
+
+- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
+
+- $\iff M/N$ is simple.
+
+### b
+
+Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
+
+By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
+In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
+So $\abs{M/N}$ can not be composite, and therefore must be prime.
+
+### c
+
+Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
+
+Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
+
+But this means there are infinitely many elements in $G\setminus H$, and so $\infty = [G: H] = \abs{G/H}$ is not a prime. 
+Thus by (b), $H$ can not be maximal, a contradiction.
 
 $\qed$
 

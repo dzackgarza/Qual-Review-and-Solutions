@@ -142,3 +142,67 @@ $\qed$
 ### c.
 
 \todo{Todo.}
+
+
+## Fall 2018 #5
+
+### a
+
+Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have 
+\[
+B\vector v = \sum_{j=0}^{n-1}c_j A^j \vector v
+.\]
+
+So let $p(x) = \sum_{j=0}^{n-1}c_jx^j$.
+Then consider how $B$ acts on any basis vector $A^k \vector v$.
+
+We have 
+\[
+BA^k \vector v 
+&= A^k B\vector v \\
+&= A^k p(A) \vector v \\
+&= p(A) A^k \vector v
+,\]
+
+so $B = p(A)$ as operators since their actions agree on every basis vector in $V$.
+
+### b
+
+$\implies$:
+
+If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
+
+So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
+
+$\impliedby$:
+
+Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
+This induces an invariant factor decomposition $V =\cong \bigoplus k[x]/(f_i)$.
+Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
+$$
+V\cong \frac{k[x]}{(\chi_A(x))}
+$$
+as an isomorphism of $k[x]\dash$modules.
+
+So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$.
+
+> I.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
+
+But then noting that monomials span $k[x]$, we can write
+\[
+V &\cong
+k[x] \actson \vector v \\
+&\definedas \theset{f(x) \actson \vector v \suchthat f \in k[x]} \\
+&= \spanof_k \theset{x^k \actson \vector v \suchthat k \geq 0} \\
+&\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
+.\]
+
+Moreover, we can note that if $k \geq \deg \chi_A(x)$, then $A^k$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
+\[
+V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
+&= \spanof_k \theset{A^k\vector v \suchthat 1 \leq k \leq n-1}
+.\]
+
+$\qed$
+
+
