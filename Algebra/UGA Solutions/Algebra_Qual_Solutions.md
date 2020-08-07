@@ -873,9 +873,9 @@ $\qed$
   \alpha_i \sum s_i \vector r_i = \vector 0_M
   .\]
 
-But since $R$ is an integral domain and $\alpha \neq 0$, we must have $s_i = 0$ for all $i$.
+    - But since $R$ is an integral domain and $\alpha \neq 0$, we must have $s_i = 0$ for all $i$.
 
-**Spanning:**
+  **Spanning:**
 
 Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$.
 
