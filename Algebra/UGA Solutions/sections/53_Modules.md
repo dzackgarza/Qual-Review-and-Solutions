@@ -97,7 +97,7 @@ M \ar[r, "\pi"] & N
 \end{center}
   and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
 
-## 5
+## Fall 2019 #5
 
 > One-step submodule test.
 

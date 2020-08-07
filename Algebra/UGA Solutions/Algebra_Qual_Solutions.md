@@ -39,96 +39,6 @@ Problem Session 1: Group Theory
 # Fall 2019
 
 
-## 4
-
-## 5
-
-> One-step submodule test.
-
-### a
-
-It suffices to show that 
-$$
-r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
-.$$
-
-We have
-\[
-t_1 \in \Tor(M) &\implies \exists s_1 \neq 0 \text{ such that } s_1 t_1  = 0 \\
-t_2 \in \Tor(M) &\implies \exists s_2 \neq 0 \text{ such that } s_2 t_2  = 0 
-.\]
-
-Since $R$ is an integral domain, $s_1 s_2 \neq 0$.
-Then
-\[
-s_1 s_2(rt_1 + t_2) 
-&= s_1 s_2 r t_1 + s_1 s_2t_2 \\
-&= s_2 r (s_1 t_1) + s_1 (s_2 t_2)  \quad\text{since $R$ is commutative} \\
-&=  s_2 r(0) + s_1(0) \\
-&= 0
-.\]
-
-### b
-
-Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
-
-Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 + [3]_6 = [5]_6$, where 5 is coprime to 6, and thus $[n]_6\actson [5]_6 = [0] \implies [n]_6 = [0]_6$. So $[5]_6$ is *not* a torsion element.
-
-So the set of torsion elements are not closed under addition, and thus not a submodule.
-
-### c
-
-Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
-Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
-$$
-a\actson bm = (ab)\actson m = 0\actson m = 0_M
-,$$ 
-so $m$ is a torsion element for any $m$.
-
-$\qed$
-
-## 6
-
-> Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
-> Silly fact: 0 is in every ideal!
-> 
-> **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
-> 
-> **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
-> (TODO: PROVE)
->
-> **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
-> (TODO: PROVE)
->
-> **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
-
-### a
-
-Let $\mathfrak{p}$ be prime and $x\in N$.
-Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
-Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
-
-### b
-
-Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
-Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
-
-By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
-
-Since $R$ is commutative, $\mathfrak{p}$ is prime.
-
-### c
-
-Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
-
-Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
-
-Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
-
-Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
-Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
-But then $r\not\in \mathfrak{p}$, a contradiction.
-
 ## 7
 
 > Galois Theory.
@@ -1723,6 +1633,7 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 
 # Fields and Galois Theory
 
+
 > Theorem: $F\units$ is always cyclic for $F$ a field
 
 ### a
@@ -1860,7 +1771,7 @@ M \ar[r, "\pi"] & N
 \end{center}
   and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
 
-## 5
+## Fall 2019 #5
 
 > One-step submodule test.
 
