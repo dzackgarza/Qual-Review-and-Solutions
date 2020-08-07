@@ -903,8 +903,8 @@ $\qed$
 - **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
 
   - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
-  - Toward a contradiction, suppose $\abs{B} \geq 2$, then let $m_1, m_2\in B$.
-  - Then $m_2m_1 - m_1 m_2 = 0$ is a linear dependence, so $B$ has only one element $m$.
+  - Toward a contradiction, suppose $\abs{B} \geq 2$ and let $m_1, m_2\in B$.
+  - Then  since $m_2 m_1 - m_1 m_2 = 0$ is a linear dependence, so $B$ has only one element $m$.
 
   - But then $I = \generators{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
   - The result follows by the contrapositive.
