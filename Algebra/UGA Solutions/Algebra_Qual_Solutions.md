@@ -1759,6 +1759,10 @@ By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an
 
 But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so $\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \intersect E_2$.
 
+# Spring 2015
+
+## 4
+
 # Spring 2013
 
 ## 6
