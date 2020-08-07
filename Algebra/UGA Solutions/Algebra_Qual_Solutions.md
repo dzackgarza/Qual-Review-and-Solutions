@@ -931,7 +931,7 @@ $\qed$
 
 **$M$ is torsion-free**:
 
-- Let $x \in \tor M$, then there exists some $r\neq 0\in R$ such that $rx = 0$.
+- Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
 
 - But $x\in R$ and $R$ is an integral domain, so $x=0$, and thus $\tor(M) = \theset{0_R}$.
 
