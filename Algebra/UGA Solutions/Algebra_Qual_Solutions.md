@@ -872,7 +872,7 @@ $\qed$
   \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
   \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
   .\]
-    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $s_i \vector r_i \in \tor(M)$ for all $i$.
+    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
 
     - Then
   \[
