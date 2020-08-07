@@ -1853,6 +1853,10 @@ Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{
 
 ## Torsion and the Structure Theorem
 
+, , 
+, , 
+
+
 # Linear Algebra: JCF
 
 # Linear Algebra
