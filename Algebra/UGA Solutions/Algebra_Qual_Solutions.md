@@ -913,7 +913,7 @@ $\qed$
 
 **$M$ is rank 1**:
 
-- For any module, we can take an element $m\in M\nonzero$ and consider its cyclic module $Rm$.
+- For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
 
 - Thus the rank of $M$ is at least 1, since $\theset{m}$ is a subset of a spanning set.
 
