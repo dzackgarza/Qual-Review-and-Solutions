@@ -898,6 +898,8 @@ $\qed$
 
 ### c
 
+Notation: Let $0_R$ denote 
+
 **$M$ is not free:**
 
 - **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
