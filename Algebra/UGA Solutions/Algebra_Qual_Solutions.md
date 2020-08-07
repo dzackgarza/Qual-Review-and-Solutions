@@ -20,111 +20,9 @@ Problem Session 1: Group Theory
 
 
 
-# Fall 2018
-
-## 7
-
-### a
-
-Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
-
-\[
-\phi(s\vector x + \vector y) 
-&= r(s\vector x + \vector y) \\
-&= rs\vector x + r\vector y \\
-&= s(r\vector x) + (r\vector y) \\
-&= s\phi(\vector x) + \phi(\vector y)
-.\]
-
-### b
-
-We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
-
-Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
-So let $y\in \im \phi$.
-Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
-
-But then 
-$$
-yz = rxz = xrz = x\cdot 0 = 0
-$$ 
-since $R$ is commutative, so $y$ is a zero divisor.
-
-
-### c
-
-> See 1964 Annals "Properties of rings with a finite number of zero divisors"
-
-Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
-Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
-
-Fix an $i$.
-By (b), $K_i$ consists of zero divisors, so 
-$$
-\abs{K_i} \leq n < \infty \quad \text{for each } i
-.$$
-
-Now consider $R/K_i \definedas \theset{r + K_i}$.
-By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
-$$
-[R: K_i] = \abs{R/K_i} = \abs{\im \phi_i} \leq n 
-.$$
-
-But then 
-$$
-\abs{R} = [R:K_i]\cdot \abs{K_i} \leq n\cdot n = n^2 
-.$$
-
-### d
-
-By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
-Since every element in a finite ring is either a unit or a zero divisor, and $\abs{R\units} \geq 2$ since $\pm 1$ are always units, we must have $\abs{R} = 4$.
-
-Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
-
-Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
-
-If $R$ has characteristic 2, we can check the other 3 possibilities.
-
-We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
-
-\[
-\begin{array}{c|cccc}
-			& 0 & 1 	& t & 1+t 	\\ \hline
-0 		& 0 & 0 	& 0 & 0   	\\ 
-1 		& 0 & 1 	& t & 1+t 	\\ 
-t 		& 0 & t 	& \mathbf{0} & t   	\\ 
-1 + t & 0 & 1+t & t & 1   	\\ 
-\end{array}
-,\]
-
-and so we find that $t, 0$ are the zero divisors.
-
-In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
-
-Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
-\[
-\left[\begin{array}{c|cc}
-	& t 	& 1 +t \\ \hline
-t & 1+t & 1 \\
-t & 1 	& t \\
-\end{array}\right]
-,\]
-
-and so this ring only has one zero divisor.
-
-Thus the only possibilities are:
-
-\[
-R &\cong \ZZ/(4) \\
-R &\cong \ZZ/(2)[t] / (t^2)
-.\]
-
-$\qed$
-
 # Spring 2018
 
-## 1 \label{problem:session_1_5_1_soln}
+## Spring 2018 #1 
 
 Concepts Used:
 
@@ -200,7 +98,7 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 
 $\qed$
 
-## 2
+## Spring 2018 #2
 
 > Not the nicest proof! Would be better to replace the ad-hoc computations at the end..
 
@@ -274,7 +172,7 @@ and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\
 
 ?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
 
-## 3
+## Spring 2018 #3
 
 > Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
 
@@ -785,6 +683,82 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 - Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
 - Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
 
+## Spring 2018 #1 
+
+Concepts Used:
+
+- Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
+- Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
+- $G/Z(G)$ cyclic $\iff G$ is abelian.
+  
+  > *Proof:*
+    \begin{align*}
+    G/Z(G) = \generators{xZ} 
+    &\iff g\in G \implies gZ = x^mZ \\
+    &\iff g(x^m)\inv \in Z \\
+    &\iff g = x^m z \qtext{for some}z\in Z\\
+    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
+    .\end{align*}
+
+- Every group of order $p^2$ is abelian.
+- Classification of finite abelian groups.
+
+### a
+
+Strategy: get $p$ to divide $\abs{Z(G)}$.
+
+- Apply the class equation:
+\begin{align*}
+\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
+.\end{align*}
+
+- Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
+- Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
+- Use $$[G: C_G(x_i)] = 1 \iff C_G(x_i) = G \iff \theset{g\in G\suchthat gx_ig\inv = x_i} = G \iff x_i \in Z(G).$$
+  - Thus every index appearing in the sum is greater than 1, and thus equal to $p^{\ell_i}$ for some $1\leq \ell_i \leq k$
+  - So $p$ divides every term in the sum
+
+- Rearrange 
+\begin{align*}
+\abs{G} -  \sum [G: C_G(x_i)]
+= \abs{Z(G)} 
+.\end{align*}
+
+- $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
+
+
+### b
+
+Strategy: examine $\abs{G/Z(G)}$ by cases.
+
+- $1$: Then $G = Z(G)$ and $G$ is abelian.
+- $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
+- $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
+
+### c
+
+- By Sylow
+
+  - $n_5 \divides 7^2,\quad n_5\cong 1\mod 5 \implies n_5\in\theset{1, 7, 49}\setminus\theset{7, 49} = \theset{1} \implies n_5 = 1$
+  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus\theset{5, 25} =\theset{1} \implies n_7 = 1$
+
+- By recognition of direct products, $G = S_5 \cross S_7$
+  - By above, $S_5, S_7\normal G$
+  - Check $S_5\intersect S_7 = \theset{e}$ since they have coprime order.
+  - Check $S_5S_7 = G$ since $\abs{S_5 S_7} = 5^2 7^2 = \abs{G}$
+
+- By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
+- The direct product of abelian groups is abelian.
+
+### d
+
+1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
+1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
+1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
+1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
+
+$\qed$
+
 
 
 # Commutative Algebra
@@ -939,7 +913,105 @@ Then
 &\implies x=0
 .\]
 
+## Fall 2018 #7
 
+### a
+
+Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
+
+\[
+\phi(s\vector x + \vector y) 
+&= r(s\vector x + \vector y) \\
+&= rs\vector x + r\vector y \\
+&= s(r\vector x) + (r\vector y) \\
+&= s\phi(\vector x) + \phi(\vector y)
+.\]
+
+### b
+
+We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
+
+Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
+So let $y\in \im \phi$.
+Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+
+But then 
+$$
+yz = rxz = xrz = x\cdot 0 = 0
+$$ 
+since $R$ is commutative, so $y$ is a zero divisor.
+
+
+### c
+
+> See 1964 Annals "Properties of rings with a finite number of zero divisors"
+
+Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
+Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
+
+Fix an $i$.
+By (b), $K_i$ consists of zero divisors, so 
+$$
+\abs{K_i} \leq n < \infty \quad \text{for each } i
+.$$
+
+Now consider $R/K_i \definedas \theset{r + K_i}$.
+By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
+$$
+[R: K_i] = \abs{R/K_i} = \abs{\im \phi_i} \leq n 
+.$$
+
+But then 
+$$
+\abs{R} = [R:K_i]\cdot \abs{K_i} \leq n\cdot n = n^2 
+.$$
+
+### d
+
+By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
+Since every element in a finite ring is either a unit or a zero divisor, and $\abs{R\units} \geq 2$ since $\pm 1$ are always units, we must have $\abs{R} = 4$.
+
+Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
+
+Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
+
+If $R$ has characteristic 2, we can check the other 3 possibilities.
+
+We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
+
+\[
+\begin{array}{c|cccc}
+			& 0 & 1 	& t & 1+t 	\\ \hline
+0 		& 0 & 0 	& 0 & 0   	\\ 
+1 		& 0 & 1 	& t & 1+t 	\\ 
+t 		& 0 & t 	& \mathbf{0} & t   	\\ 
+1 + t & 0 & 1+t & t & 1   	\\ 
+\end{array}
+,\]
+
+and so we find that $t, 0$ are the zero divisors.
+
+In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
+
+Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
+\[
+\left[\begin{array}{c|cc}
+	& t 	& 1 +t \\ \hline
+t & 1+t & 1 \\
+t & 1 	& t \\
+\end{array}\right]
+,\]
+
+and so this ring only has one zero divisor.
+
+Thus the only possibilities are:
+
+\[
+R &\cong \ZZ/(4) \\
+R &\cong \ZZ/(2)[t] / (t^2)
+.\]
+
+$\qed$
 
 # Fields and Galois Theory
 
