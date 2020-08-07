@@ -874,11 +874,7 @@ $\qed$
   .\]
     - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
 
-    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum
-  \[
-  \exists \alpha \in R\nonzero \text{ such that }
-  \alpha_i \sum s_i \vector r_i = \vector 0_M
-  .\]
+    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
 
     - But since $R$ is an integral domain and $\alpha \neq 0$, we must have $s_i = 0$ for all $i$.
 
