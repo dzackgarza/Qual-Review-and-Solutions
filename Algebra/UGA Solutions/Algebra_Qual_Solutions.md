@@ -876,7 +876,7 @@ $\qed$
 
     - Then
   \[
-  \sum_{i=1}^n s_i \vector r_i \in \tor(M) \implies \exists \alpha \in R\nonzero \text{ such that }
+  exists \alpha \in R\nonzero \text{ such that }
   \alpha_i \sum s_i \vector r_i = \vector 0_M
   .\]
 
