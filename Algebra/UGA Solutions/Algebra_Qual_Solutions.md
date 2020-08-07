@@ -917,9 +917,9 @@ $\qed$
 
 - Since $M$ is not principle, it is not the zero ideal, and contains at least two elements. So we can consider an element $\vector m\in M$.
 
-- We have $\rank_R(M) \geq 1$, since $\theset{m}$ is a subset of a spanning set.
+- We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of a spanning set.
 
-- It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
+- $It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
 
 - However, the rank is at most 1 since $R$ is commutative.
 
