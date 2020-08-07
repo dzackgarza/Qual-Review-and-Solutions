@@ -3,92 +3,9 @@
 title: "Algebraic Qualifying Exam Solutions"
 ---
 
-# Problem Session Links
-
-Problem Session 1: Group Theory
-
-- 3.2, Sylow Theory
-  \hyperref[problem:session_1_3_2_soln]{Solution} 
-- 5.1, Class Equation
-  \hyperref[problem:session_1_5_1_soln]{Solution} 
-- 6.1, Sylow Theory
-  \hyperref[problem:session_1_6_1_soln]{Solution} 
-- 6.2, Group Actions
-  \hyperref[problem:session_1_6_2_soln]{Solution} 
-- Bonus: 2.4, Conjugacy Classes
-  \hyperref[problem:session_1_2_4_soln]{Solution} 
-
-
-
-
-
-
-# Spring 2015
-
-## 4
-
 # Spring 2013
 
-## 6
 
-Lemma: every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
-
-- $\implies$: Same as argument below.
-- $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
-- 
-
-### a
-
-Let $f$ be the characteristic polynomial of $T$.
-
-$\implies$:
-
-- By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
-- Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
-- Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
-  - Matrix-dependent proof: \todo{Is there a proof without matrices? What if $V$ is infinite dimensional?}
-    - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
-    - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.\todo{How to extend basis?}
-      - Note that since $W<V$ is proper, $j\geq 1$.
-    - Restrict $T$ to $W$ to get $T_W$, then let $B = [T_W]_{\mcb_W}$ be the matrix representation of $T_W$ with respect to $\mcb_W$.
-    - Now consider the matrix representation $[T]_{\mcb_V}$, in block form this is given by
-    \begin{align*}
-    [T]_{\mcb_V} = 
-    \begin{bmatrix}
-    B & C \\
-    0 & D
-    \end{bmatrix}
-    \end{align*}
-      where we've used that $W<V$ is proper to get the existence of $C, D$ (there is at least one additional row/column since $j\geq 1$ in the extended basis.)
-    \todo{Why?}
-    - Now expand along the first column block to obtain
-    \begin{align*}
-    \chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
-    .\end{align*}
-    - Claim: $\det(D - xI) \in xF[x]$ is nontrivial
-    - The claim follows because this forces $\deg(\det(D-xI)) \geq 1$ and so $\chi_{T, W}(x)$ is a proper divisor of $\chi_{T, V}(x)$.
-- Thus $f$ is reducible.
-
-$\impliedby$
-
-- Suppose $f$ is reducible, then we will produce a proper $T\dash$invariant subspace.
-- Claim: if $f$ is reducible, there exists a nonzero, noncyclic vector $\vector v$.
-- Then $\spanof_k\theset{T^j\vector v}_{j=1}^d$ is a $T\dash$invariant subspace that is nonzero, and not the entire space since $\vector v$ is not cyclic.
-
-### b
-
-Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
-
-- Let $\min_{T, F}(x)$ be the minimal polynomial of $T$ and $\chi_{T, F}(x)$ be its characteristic polynomial.
-- By Cayley-Hamilton, $\min_{T, F}(x)$ divides $\chi_{T, F}$
-- Since $\chi_{T, F}$ is irreducible, these polynomials are equal.
-- Claim: $T/F$ is diagonalizable $\iff \min_{T, F}$ splits over $F$ and is squarefree.
-- Replace $F$ with its algebraic closure, then $\min_{T, F}$ splits.
-- Claim: in characteristic zero, every irreducible polynomial is separable
-  - Proof: it must be the case that either $\gcd(f, f') = 1$ or $f' \equiv 0$, where the second case only happens in characteristic $p>0$.
-  - The first case is true because $\deg f' < \deg f$, and if $\gcd(f, f') = p$, then $\deg p < \deg f$ and $p\divides f$ forces $p=1$ since $f$ is irreducible.
-- So $\min_{T, F}$ splits into distinct linear factors
-- Thus $T$ is diagonalizable.
 
 # Group Theory
 
@@ -1691,7 +1608,66 @@ But now since $q_A(x)$ has exactly distinct linear factors in $\bar \FF[x]$ and 
 
 $\qed$
 
+## Spring 2013 #6
 
+Lemma: every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
+
+- $\implies$: Same as argument below.
+- $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
+- 
+
+### a
+
+Let $f$ be the characteristic polynomial of $T$.
+
+$\implies$:
+
+- By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
+- Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
+- Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
+  - Matrix-dependent proof: \todo{Is there a proof without matrices? What if $V$ is infinite dimensional?}
+    - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
+    - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.\todo{How to extend basis?}
+      - Note that since $W<V$ is proper, $j\geq 1$.
+    - Restrict $T$ to $W$ to get $T_W$, then let $B = [T_W]_{\mcb_W}$ be the matrix representation of $T_W$ with respect to $\mcb_W$.
+    - Now consider the matrix representation $[T]_{\mcb_V}$, in block form this is given by
+    \begin{align*}
+    [T]_{\mcb_V} = 
+    \begin{bmatrix}
+    B & C \\
+    0 & D
+    \end{bmatrix}
+    \end{align*}
+      where we've used that $W<V$ is proper to get the existence of $C, D$ (there is at least one additional row/column since $j\geq 1$ in the extended basis.)
+    \todo{Why?}
+    - Now expand along the first column block to obtain
+    \begin{align*}
+    \chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
+    .\end{align*}
+    - Claim: $\det(D - xI) \in xF[x]$ is nontrivial
+    - The claim follows because this forces $\deg(\det(D-xI)) \geq 1$ and so $\chi_{T, W}(x)$ is a proper divisor of $\chi_{T, V}(x)$.
+- Thus $f$ is reducible.
+
+$\impliedby$
+
+- Suppose $f$ is reducible, then we will produce a proper $T\dash$invariant subspace.
+- Claim: if $f$ is reducible, there exists a nonzero, noncyclic vector $\vector v$.
+- Then $\spanof_k\theset{T^j\vector v}_{j=1}^d$ is a $T\dash$invariant subspace that is nonzero, and not the entire space since $\vector v$ is not cyclic.
+
+### b
+
+Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
+
+- Let $\min_{T, F}(x)$ be the minimal polynomial of $T$ and $\chi_{T, F}(x)$ be its characteristic polynomial.
+- By Cayley-Hamilton, $\min_{T, F}(x)$ divides $\chi_{T, F}$
+- Since $\chi_{T, F}$ is irreducible, these polynomials are equal.
+- Claim: $T/F$ is diagonalizable $\iff \min_{T, F}$ splits over $F$ and is squarefree.
+- Replace $F$ with its algebraic closure, then $\min_{T, F}$ splits.
+- Claim: in characteristic zero, every irreducible polynomial is separable
+  - Proof: it must be the case that either $\gcd(f, f') = 1$ or $f' \equiv 0$, where the second case only happens in characteristic $p>0$.
+  - The first case is true because $\deg f' < \deg f$, and if $\gcd(f, f') = p$, then $\deg p < \deg f$ and $p\divides f$ forces $p=1$ since $f$ is irreducible.
+- So $\min_{T, F}$ splits into distinct linear factors
+- Thus $T$ is diagonalizable.
 
 # Linear Algebra: Misc
 
@@ -1850,15 +1826,3 @@ V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
 $\qed$
 
 
-
-# Spring 2013
-
-## 1
-
-Possibly useful facts:
-
-- Normal subgroups correspond to normal extensions (any polynomial with one root in the extension $L/k$ splits in $L$)
-- If $L$ is finite and separable (automatic if $K$ is finite or characteristic zero), then $L/k$ is normal iff $L$ is the splitting field of an irreducible polynomial in $k[x]$.
-
-
-## 2
