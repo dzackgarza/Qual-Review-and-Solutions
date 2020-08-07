@@ -22,82 +22,6 @@ Problem Session 1: Group Theory
 
 # Spring 2018
 
-## Spring 2018 #1 
-
-Concepts Used:
-
-- Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
-- Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
-- $G/Z(G)$ cyclic $\iff G$ is abelian.
-  
-  > *Proof:*
-    \begin{align*}
-    G/Z(G) = \generators{xZ} 
-    &\iff g\in G \implies gZ = x^mZ \\
-    &\iff g(x^m)\inv \in Z \\
-    &\iff g = x^m z \qtext{for some}z\in Z\\
-    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
-    .\end{align*}
-
-- Every group of order $p^2$ is abelian.
-- Classification of finite abelian groups.
-
-### a
-
-Strategy: get $p$ to divide $\abs{Z(G)}$.
-
-- Apply the class equation:
-\begin{align*}
-\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
-.\end{align*}
-
-- Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
-- Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
-- Use $$[G: C_G(x_i)] = 1 \iff C_G(x_i) = G \iff \theset{g\in G\suchthat gx_ig\inv = x_i} = G \iff x_i \in Z(G).$$
-  - Thus every index appearing in the sum is greater than 1, and thus equal to $p^{\ell_i}$ for some $1\leq \ell_i \leq k$
-  - So $p$ divides every term in the sum
-
-- Rearrange 
-\begin{align*}
-\abs{G} -  \sum [G: C_G(x_i)]
-= \abs{Z(G)} 
-.\end{align*}
-
-- $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
-
-
-### b
-
-Strategy: examine $\abs{G/Z(G)}$ by cases.
-
-- $1$: Then $G = Z(G)$ and $G$ is abelian.
-- $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
-- $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
-
-### c
-
-- By Sylow
-
-  - $n_5 \divides 7^2,\quad n_5\cong 1\mod 5 \implies n_5\in\theset{1, 7, 49}\setminus\theset{7, 49} = \theset{1} \implies n_5 = 1$
-  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus\theset{5, 25} =\theset{1} \implies n_7 = 1$
-
-- By recognition of direct products, $G = S_5 \cross S_7$
-  - By above, $S_5, S_7\normal G$
-  - Check $S_5\intersect S_7 = \theset{e}$ since they have coprime order.
-  - Check $S_5S_7 = G$ since $\abs{S_5 S_7} = 5^2 7^2 = \abs{G}$
-
-- By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
-- The direct product of abelian groups is abelian.
-
-### d
-
-1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
-1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
-1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
-1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
-
-$\qed$
-
 ## Spring 2018 #2
 
 > Not the nicest proof! Would be better to replace the ad-hoc computations at the end..
@@ -105,12 +29,12 @@ $\qed$
 ### a
 
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
-\begin{align*}
+\[
 \alpha_1 &= \sqrt{2 + \sqrt 2} \\
 \alpha_2 &= \sqrt{2 - \sqrt 2} \\
 \alpha_3 &= -\alpha_1 \\
 \alpha_4 &= -\alpha_2
-.\end{align*}
+.\]
 
 and splitting field $K = \QQ(\theset{\alpha_i})$.
 
@@ -130,9 +54,9 @@ We can note that $g$ splits over $L \definedas \QQ(\sqrt 2)$, an extension of de
 We can now note that $\min(\alpha, L)$ is given by $p(x) = x^2 - (2 + \sqrt 2)$, and so $[K: L] = 2$.
 
 We then have
-\begin{align*}
+\[
 [K: \QQ] = [K: L] [L : \QQ] = (2)(2) = 4
-.\end{align*}
+.\]
 
 This $\abs{\Gal(K/\QQ)} = 4$, which leaves only two possibilities:
 
@@ -141,10 +65,10 @@ This $\abs{\Gal(K/\QQ)} = 4$, which leaves only two possibilities:
 
 We can next check orders of elements.
 Take
-\begin{align*}
+\[
 \sigma &\in \Gal(K/\QQ) \\
 \alpha_1 &\mapsto \alpha_2
-.\end{align*}
+.\]
 
 
 Computations show that 
@@ -153,7 +77,7 @@ Computations show that
 - $\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2$
 
 and thus
-\begin{align*}
+\[
 \sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
 &= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
 &= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
@@ -163,7 +87,7 @@ and thus
 &= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
 &= \alpha_2 -\alpha_1 \sqrt 2 \\
 &\neq \alpha_1
-,\end{align*}
+,\]
 
 and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
 
@@ -208,9 +132,9 @@ $$
 
 and substituting $e = \sigma_1(e)$ on the RHS yields
 
-\begin{align*}
+\[
 \sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
-,\end{align*}
+,\]
 
 where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
 
@@ -593,9 +517,9 @@ Concepts Used:
 - Since Sylow $p\dash$subgroups are all conjugate $gS_p^i g\inv = S_p^j$ for *some* $g\in G$.
 
 - Then 
-\begin{align*}
+\[
 P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
-.\end{align*}
+.\]
 
 ### b
 
@@ -603,11 +527,11 @@ P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 - By maximality of $M$, $MP = G$
 - Note that $M\intersect P \leq P$ and $\abs{P} = p^c$ implies $\abs{M\intersect P} = p^a$ for some $a\leq c$ by Lagrange
 - Then write
-  \begin{align*}
+  \[
   G = MP
   &\iff \abs{G} = \frac{\abs{M} \abs{P}}{\abs{M\intersect P}} \\ \\
   &\iff { \abs{G} \over \abs{M}} = {\abs{P}  \over \abs{M\intersect P}} = {p^c \over p^a} = p^{c-a} \definedas p^b
-  \end{align*}
+  \]
 
   where $a\leq c \implies 0 \leq c-b \leq c$ so $0\leq b \leq c$.
 
@@ -629,14 +553,14 @@ Concepts used:
 - Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
 - Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
 - Then
-\begin{align*}
+\[
 h \in G\cdot x 
 &\iff h\cdot x = x \qtext{by being in the stabilizer} \\
 &\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
 &\iff (g h g\inv) \cdot y = y \\
 &\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
 &\iff h\in g\inv G_y g
-,\end{align*}
+,\]
 
 so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
 
@@ -649,19 +573,19 @@ Let $G$ act on its subgroups by conjugation,
 - The stabilizer of $H$ is $G_H = N_G(H)$.
 
 - By orbit-stabilizer,
-\begin{align*}
+\[
 G\cdot H = [G: G_H] = [G: N_G(H)]
-.\end{align*}
+.\]
 
 - Since $\abs H = n$, and all of its conjugate also have order $n$.
 
 - Note that 
-\begin{align*}
+\[
 H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
-,\end{align*}
+,\]
 
 - Now *strictly* bound the size of the union by overcounting their intersections at the identity:
-\begin{align*}
+\[
 \abs{\union_{g\in G}gHg\inv} 
 &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
 &\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
@@ -669,21 +593,21 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 &= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
 &\leq {\abs G \over \abs H} \abs H \\
 &= \abs{G}
-.\end{align*}
+.\]
 
 ### c
 
 - Let $G\actson X$ transitively where $\abs{X} \geq 2$
 - An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
 - Apply Burnside's Lemma
-\begin{align*}
+\[
 1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
-\end{align*}
+\]
 - Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
 - Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
 - Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
 
-## Spring 2018 #1 
+# Spring 2018 #1 
 
 Concepts Used:
 
@@ -692,13 +616,13 @@ Concepts Used:
 - $G/Z(G)$ cyclic $\iff G$ is abelian.
   
   > *Proof:*
-    \begin{align*}
+    \[
     G/Z(G) = \generators{xZ} 
     &\iff g\in G \implies gZ = x^mZ \\
     &\iff g(x^m)\inv \in Z \\
     &\iff g = x^m z \qtext{for some}z\in Z\\
     &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
-    .\end{align*}
+    .\]
 
 - Every group of order $p^2$ is abelian.
 - Classification of finite abelian groups.
@@ -708,9 +632,9 @@ Concepts Used:
 Strategy: get $p$ to divide $\abs{Z(G)}$.
 
 - Apply the class equation:
-\begin{align*}
+\[
 \abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
-.\end{align*}
+.\]
 
 - Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
 - Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
@@ -719,10 +643,10 @@ Strategy: get $p$ to divide $\abs{Z(G)}$.
   - So $p$ divides every term in the sum
 
 - Rearrange 
-\begin{align*}
+\[
 \abs{G} -  \sum [G: C_G(x_i)]
 = \abs{Z(G)} 
-.\end{align*}
+.\]
 
 - $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
 
