@@ -874,9 +874,9 @@ $\qed$
   .\]
     - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
 
-    - Then
+    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum
   \[
-  exists \alpha \in R\nonzero \text{ such that }
+  \exists \alpha \in R\nonzero \text{ such that }
   \alpha_i \sum s_i \vector r_i = \vector 0_M
   .\]
 
