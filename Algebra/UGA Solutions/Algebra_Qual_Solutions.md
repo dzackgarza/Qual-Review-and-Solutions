@@ -643,9 +643,9 @@ We now claim that $q_A(x)$ has exactly $n\cdot m$ distinct linear factors in $\b
 and that $x^n-\lambda_i$ does not have multiple roots.
 
 - For the first claim, we can factor
-  \begin{align*}
+  \[
   x^n - \lambda_i = \prod_{k=1}^n (x - \lambda_i^{1\over n} e^{2\pi i k \over n}) \definedas \prod_{k=1}^n (x-\lambda^{1\over n} \zeta_n^k)
-  ,\end{align*}
+  ,\]
   where we now use the fact that $i\neq j \implies \lambda_i^{1\over n} \neq \lambda_j^{1\over n}$. 
   Thus no term in the above product appears as a factor in $x^n - \lambda_j$ for $j\neq i$.
 
@@ -670,13 +670,13 @@ So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
 
 Since $\rho$ is a ring morphism, we have
 
-\begin{align*}
+\[
 \rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
 &= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \generators{\pi(x)} \\
 &\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
-.\end{align*}
+.\]
 
 $\qed$
 
@@ -696,11 +696,11 @@ Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x
 Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
 
 Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
-\begin{align*}
+\[
 n &= [L: \FF_p] \\
 &= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
 &= \ell d
-,\end{align*}
+,\]
 
 for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
@@ -747,9 +747,9 @@ Strategy: Burnside.
 
 - Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
   - Define and note: 
-    \begin{align*}
+    \[
     A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
-    .\end{align*}
+    .\]
 
 - Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
  
@@ -784,23 +784,23 @@ n \abs{G}
 = \sum _ { g \in G } \left| X ^ { g } \right|
 $$
 - Compute probability:
-\begin{align*}
+\[
 P(A)
 = {\abs A \over \abs \Omega} 
 = \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
 = \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
 = \frac{n \abs{G}}{\abs{G}^2} 
 = \frac n {\abs G}
-.\end{align*}
+.\]
 
 $\qed$
 
 ### b
 
 Class equation:
-\begin{align*}
+\[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
-\end{align*}
+\]
 
 where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
 
@@ -826,7 +826,7 @@ Now note
   - Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
 
 Thus
-\begin{align*}
+\[
 n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 &= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
 &= \frac 1 2 \abs{G} + \frac 1 2 \abs{Z(G)} \\
@@ -834,7 +834,7 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 \implies \frac n {\abs G}
 &\leq \frac 1 2 \frac{\abs{G}}{\abs{G}}  + \frac 1 2 \frac{\abs{Z(G)}}{\abs{G}} \\
 &= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
-.\end{align*}
+.\]
 
 
 ## 5
@@ -875,20 +875,20 @@ $\qed$
 
     - But since $R$ is an integral domain and $\alpha \neq 0$, we must have $s_i = 0$ for all $i$.
 
-  **Spanning:**
+  - **Spanning:**
 
-Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$.
+    - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$.
 
-Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$.
+    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$.
 
-But since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
-\begin{align*}
+    - But since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
+\[
 \vector x
 &= \pi(\vector m) \\
 &= \pi(\sum_{i=1}^n s_i \vector r_i) \\
 &= \sum_{i=1}^n s_i \pi(\vector r_i) \\
 &= \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
-,\end{align*}
+,\]
 
 which expresses $\vector x$ as a linear combination of elements in $\mathcal B'$.
 
@@ -1005,11 +1005,11 @@ But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradi
 So $1-x$ is a unit, so let $u = (1-x)\inv$.
 
 Then
-\begin{align*}
+\[
 (1-x)x &= x - x^2 = x - x = 0 \\
 &\implies u (1-x)x = x = 0 \\
 &\implies x=0
-.\end{align*}
+.\]
 
 ## 7
 
@@ -1023,11 +1023,11 @@ Then
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
 
 - Noting that $B = A+I$, we have
-  \begin{align*}
+  \[
   &B\vector x = \lambda \vector x \\
   &\iff (A+I) \vector x = \lambda \vector x \\
   &\iff A \vector x = (\lambda - 1) \vector x
-  ,\end{align*}
+  ,\]
     so we will find the eigenvalues of $B$ and subtract one from each.
 
 - Note that $B\vector v = \thevector{\sum v_i, \sum v_i, \cdots, \sum v_i}$, i.e. it has the effect of summing all of the entries of $\vector v$ and placing that sum in each component.
@@ -1039,7 +1039,7 @@ Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in e
   - So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
   - Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
   - These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
-  \begin{align*}
+  \[
   \det 
 \begin{bmatrix}
 1 & 1 & 1 & \cdots & 1\\
@@ -1058,7 +1058,7 @@ Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in e
 0 & 0  & 0 & \cdots & -1\\
 \end{bmatrix}
  = (-1)^{p-2} \neq 0
-.\end{align*}
+.\]
 
   where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
 
@@ -1068,16 +1068,16 @@ Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in e
 
 
 - Using that the eigenvalues of $A$ are $1+\lambda_i$ for $\lambda_i$ the above eigenvalues for $B$,
-\begin{align*}
+\[
 \spec(B) \definedas \theset{(\lambda_i, m_i)} &=  \theset{(p, 1), (0, p-1)}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
 \implies \spec(A) &= \theset{(p-1,1), (-1, p-1) }  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
-\end{align*}
+\]
 
 > Note: we can always read off the *characteristic* polynomial from the spectrum.
 
 
 - The dimensions of eigenspaces are preserved, thus
-\begin{align*}
+\[
 JCF_\QQ(A)
 =  J_{p-1}^{1} \oplus (p-1)J_{-1}^1
 =
@@ -1090,11 +1090,11 @@ p-1 & 0 & 0 & \cdots & 0 & 0 \\
 0& 0 & 0 & \cdots & -1 & 0 \\ \hline
 0& 0 & 0 & \cdots & 0 & -1 \\
 \end{array}\right]
-.\end{align*}
+.\]
 
 - The matrix $P$ such that $A = PJP\inv$ will have columns the bases of the generalized eigenspaces.
 - In this case, the generalized eigenspaces are the usual eigenspaces, so
-\begin{align*}
+\[
 P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 \left[\begin{array}{rrrrrr}
 1 & 1 & 1 & 1 & 1 & 1  \\
@@ -1104,7 +1104,7 @@ P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 1 & \vdots & \vdots & \vdots & \ddots & \vdots\\
 1 & 0 & 0 & 0 & 0 & -1 \\
 \end{array}\right]
-.\end{align*}
+.\]
 
 ### b
 
@@ -1116,14 +1116,14 @@ For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1
   - So there are $p-1$ Jordan blocks for $\lambda = 0$.
 
 Summary:
-\begin{align*}
+\[
 \min_{A, \FF_p}(x) &= (x+1)^2 \\
 \chi_{A, \FF_p}(x) &\equiv (x+1)^p \\
 \dim E_{-1} &= p-1
-.\end{align*}
+.\]
 
 Thus
-\begin{align*}
+\[
 JCF_{\FF_p}(A)
 =  J_{-1}^{2} \oplus (p-2)J_{-1}^1
 = \left[\begin{array}{rr|r|r|r|r}
@@ -1135,15 +1135,15 @@ JCF_{\FF_p}(A)
 0& 0 & 0 & \cdots & -1 & 0 \\ \hline
 0& 0 & 0 & \cdots & 0 & -1 \\
 \end{array}\right]
-.\end{align*}
+.\]
 
 To obtain a basis for $E_{\lambda = 0}$, first note that the matrix $P = [\vector v_1, \vector p_1, \cdots , \vector p_{p-1}]$ from part (a) is singular over $\FF_p$, since
-\begin{align*}
+\[
 \vector v_1 + \vector p_1 + \vector p_2 + \cdots + \vector p_{p-2}
 &= [p-1, 0, 0, \cdots, 0, 1] \\
 &= [-1, 0,0,\cdots, 0, 1] \\
 &= - \vector p_{p-1}
-.\end{align*}
+.\]
 
 We still have a linearly independent set given by the first $p-1$ columns of $P$, so we can extend this to a basis by finding one linearly independent generalized eigenvector.
 
@@ -1151,7 +1151,7 @@ Solving $(A-I\lambda)\vector x = \vector v_1$ is our only option (the others won
 This amounts to solving $B\vector x = \vector v_1$, which imposes the condition $\sum x_i = 1$, so we can choose $\vector x = [1, 0, \cdots, 0]$.
 
 Thus
-\begin{align*}
+\[
 P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 \left[\begin{array}{rrrrrr}
 1 & 1 & 1 & 1 & 1 & 1  \\
@@ -1161,7 +1161,7 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 1 & 0 & 0 & 0 & 0 & -1\\
 1 & 0 & 0 & 0 & 0 & 0 \\
 \end{array}\right]
-.\end{align*}
+.\]
 
 ## 8
 
@@ -1180,9 +1180,9 @@ Let $K = \QQ(\zeta)$
 - $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
 - The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
 - The degree of the field extension is the degree of $\Phi_8$, which is
-\begin{align*}
+\[
 \phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
-.\end{align*}
+.\]
 - So $[\QQ(\zeta): \QQ] = 4$.
 
 ### b
@@ -1203,9 +1203,9 @@ Let $K = \QQ(\zeta)$
   - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
 
 - Conclude
-\begin{align*}
+\[
 [L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
-\end{align*}
+\]
   using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
 
 # Fall 2018
