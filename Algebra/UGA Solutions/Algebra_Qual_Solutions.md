@@ -867,7 +867,7 @@ $\qed$
   \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
   .\]
 
-    - This equals
+    - Then  
   \[  
   \sum_{i=1}^n (s_i \vector r_i) + \tor(M)
   .\]
