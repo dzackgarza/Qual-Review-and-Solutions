@@ -39,161 +39,7 @@ Problem Session 1: Group Theory
 # Fall 2019
 
 
-## 2 \label{problem:session_1_3_2_soln}
-
-Relevant Ideas:
-
-- The $pqr$ theorem.
-- Sylow 3: $\abs{G} = p^n m$ implies $n_p \divides m$ and $n_p \cong 1 \mod p$.
-- **Theorem**: If $H, K \leq G$ and any of the following conditions hold, $HK$ is a subgroup:
-  - $H\normal G$ (wlog)
-  - $[H, K] = 1$
-  - $H \leq N_G(K)$ 
-
-- **Theorem**: For a positive integer $n$, all groups of order $n$ are cyclic $\iff n$ is
-squarefree and, for each pair of distinct primes $p$ and $q$ dividing $n$, $q - 1 \neq 0 \mod p$.
-
-- **Theorem:** 
-\begin{align*}
-A_i\normal G, \quad G = A_1 \cdots A_k,\quad A_k \intersect \prod_{i\neq k} A_i = \emptyset \implies G = \prod A_i
-.\end{align*}
-
-- The intersection of subgroups is a again a subgroup.
-- Any subgroups of coprime order intersect trivially?
-
-
-### a
-We have 
-
-- $n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \mod 3 \implies n_3 \in \theset{1, 5, 7, 35} \setminus \theset{5, 35}$
-- $n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \mod 5 \implies n_5 \in \theset{1, 3, 7, 21}\setminus \theset{3, 7}$
-- $n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 3, 5, 15}\setminus\theset{3, 5}$
-
-Thus
-\begin{align*}
-n_3 \in \theset{1, 7} \quad n_5 \in \theset{1, 21} \quad n_7 \in \theset{1, 15}
-.\end{align*}
-
-Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then 
-\begin{align*}
-\abs{\syl(5) \union \syl(7)} = (5-1)n_5 + (7-1)n_7 + 1 
-&= 4(21) + 6(15) = 174 > 105 \text{ elements}
-\end{align*}
-using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
-
-### b (Todo)
-
-By (a), either $Q$ or $R$ is normal.
-Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
-
-By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
-
-### c
-We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
-
-Note that we can write
-\begin{align*}
-G = \theset{\text{elements of order } n} \disjoint \theset{\text{elements of order not } n}
-.\end{align*}
-for any $n$, so we count for $n=5, 7$:
-
-- Elements in $QR$ of order **not** equal to 5: $\abs{QR - Q\theset{\id} + \theset{\id}} = 35 - 5 + 1 = 31$
-- Elements in $QR$ of order **not** equal to 7: $\abs{QR - \theset{\id}R + \theset{\id}} = 35 - 7 + 1 = 29$
-
-Since $QR \leq G$, we have
-
-- Elements in $G$ of order **not** equal to 5 $\geq 31$.
-- Elements in $G$ of order **not** equal to 7 $\geq 29$.
-
-Now both cases lead to contradictions:
-
-- $n_5 = 21$:
-\begin{align*}
-\abs{G}  &= \abs{\theset{\text{elements of order } 5} \disjoint \theset{\text{elements of order not } 5}} \\
-&\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = \abs{G}
-.\end{align*}
-
-- $n_7 = 15$:
-\begin{align*}
-\abs{G}  &= \abs{\theset{\text{elements of order } 7} \disjoint \theset{\text{elements of order not } 7}} \\
-&\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = \abs{G}
-.\end{align*}
-
-### d
-
-Suppose $P$ is normal and recall $\abs{P} = 3, \abs{Q} = 5, \abs{R} = 7$.
-
-- $P\intersect QR = \theset{e}$ since $(3, 35) = 1$ 
-- $R\intersect PQ = \theset{e}$ since $(5, 21) = 1$ 
-- $Q\intersect RP = \theset{e}$ since $(7, 15) = 1$ 
-
-We also have $PQR = G$ since $\abs{PQR} = \abs{G}$ (???).
-
-We thus have an internal direct product 
-\begin{align*}
-G \cong P\cross Q \cross R \cong \ZZ_3 \cross \ZZ_5 \cross \ZZ_7 \cong \ZZ_{105}
-.\end{align*}
-by the Chinese Remainder Theorem, which is cyclic.
-
-
-## 3
-
-> Just fiddling with computations.
-> Context hints that we should be considering things like $x^2$ and $a+b$.
-
-### a
-\begin{align*}
-2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
-.\end{align*}
-
-Note that this implies $x = -x$ for all $x\in R$.
-
-### b
-\begin{align*}
-a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
-&\implies ab + ba = 0 \\
-&\implies ab = -ba \\
-&\implies ab = ba \quad\text{by (a)}
-.\end{align*}
-
 ## 4
-
-> Theorem: $F\units$ is always cyclic for $F$ a field
-
-### a
-
-Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
-Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
-
-### b
-
-Rephrasing (a), we have 
-\begin{align*}
-n \divides q^k-1 
-&\iff q^k-1 \cong 0 \mod n \\
-&\iff q^k \cong 1 \mod n \\
-&\iff m \definedas o(q) \divides k
-.\end{align*}
-
-### c
-
-Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
-\begin{align*}
-E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
-,\end{align*}
-
-so $M$ is a degree $m$ extension of $E$.
-
-Now consider $M\units$. 
-By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
-
-But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
-So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
-
-But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
-Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
-
-> Todo: **revisit**, tricky!
 
 ## 5
 
@@ -207,20 +53,20 @@ r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
 .$$
 
 We have
-\begin{align*}
+\[
 t_1 \in \Tor(M) &\implies \exists s_1 \neq 0 \text{ such that } s_1 t_1  = 0 \\
 t_2 \in \Tor(M) &\implies \exists s_2 \neq 0 \text{ such that } s_2 t_2  = 0 
-.\end{align*}
+.\]
 
 Since $R$ is an integral domain, $s_1 s_2 \neq 0$.
 Then
-\begin{align*}
+\[
 s_1 s_2(rt_1 + t_2) 
 &= s_1 s_2 r t_1 + s_1 s_2t_2 \\
 &= s_2 r (s_1 t_1) + s_1 (s_2 t_2)  \quad\text{since $R$ is commutative} \\
 &=  s_2 r(0) + s_1(0) \\
 &= 0
-.\end{align*}
+.\]
 
 ### b
 
@@ -310,19 +156,19 @@ We also have $f'(x) = nx^{n-1}$ and $\gcd(f, f') = 1$ since they can not share a
 Since it is a Galois extension, $\abs{\Gal(K/\QQ)} = [K: \QQ] = \phi(n)$ for the totient function.
 
 We can now define maps
-\begin{align*}
+\[
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
-\end{align*}
+\]
 
 and if we restrict to $j$ such that $\gcd(n, j) = 1$, this yields $\phi(n)$ maps.
 Noting that if $\zeta$ is a primitive root, then $(n, j) = 1$ implies that that $\zeta^j$ is also a primitive root, and hence another root of $\min(\zeta, \QQ)$, and so these are in fact automorphisms of $K$ that fix $\QQ$ and thus elements of $\Gal(K/\QQ)$.
 
 So define a map
-\begin{align*}
+\[
 \theta: \ZZ_n\units &\to K \\
 [j]_n &\mapsto \tau_j
-.\end{align*}
+.\]
 
 from the *multiplicative* group of units to the Galois group.
 
@@ -341,10 +187,10 @@ Thus $\theta$ is surjective.
 
 **Homomorphism:**
 
-\begin{align*}
+\[
 \tau_j \circ \tau_k (\zeta) =\tau_j(\zeta^k) = \zeta^{jk} \implies
 \tau_{jk} = \theta(jk) = \tau_j \circ \tau_k
-.\end{align*}
+.\]
 
 **Part 2:**
 
@@ -365,11 +211,11 @@ For some elements $\omega_i$ which exist by the primitive element theorem.
 Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
 
 Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
-\begin{align*}
+\[
 \inner{\vector v}{\vector x} 
 &= \inner{\sum_{i=1}^n r_i \vector e_i}{\sum_{j=1}^n s_j \vector e_j } \\
 &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j \inner{\vector e_i}{\vector e_j }  \in \ZZ
-\end{align*}
+\]
 
 since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
 
@@ -381,7 +227,7 @@ since this is a sum of products of integers (since $\inner{\vector e_i}{\vector 
 Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
 
 Note that 
-\begin{align*}
+\[
 M\vector v = 0 &\implies
 \left[
 \begin{array}{ccc}
@@ -394,7 +240,7 @@ M\vector v = 0 &\implies
 v_1 \\ v_2 \\ \vdots
 \end{array}\right] = \vector 0 \\ \\
 &\implies \sum_{j=1}^n v_j\inner{\vector e_k}{\vector e_j} = 0 \qtext{for each fixed} k
-.\end{align*}
+.\]
 
 We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
 
@@ -403,14 +249,14 @@ $\qed$
 *Alternative proof:*
 
 Write $M = A^tA$ where $A$ has the $\vector e_i$ as columns. Then
-\begin{align*}
+\[
 M\vector x = 0 
 &\implies A^t A \vector x = 0 \\
 &\implies \vector x^t A^t A \vector x = 0 \\
 &\implies \norm{A \vector x}^2  = 0 \\
 &\implies A\vector x = 0 \\
 &\implies \vector x = 0
-,\end{align*}
+,\]
 
 since $A$ has full rank because the $\vector e_i$ are linearly independent.
 
@@ -427,22 +273,22 @@ Let $B = A^{-t}$ and let $\vector b_i$ denote the columns of $B$, so $\im B = \s
 
 Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
 
-\begin{align*}
+\[
 \vector v \in \Lambda\dual 
 &\implies \inner{\vector e_i}{\vector v} = z_i \in \ZZ \quad \forall i \\
 &\implies A^t \vector v = \vector z \definedas [z_1, \cdots, z_n] \in \ZZ^n \\
 &\implies \vector v = A^{-t} \vector z \definedas B\vector z \in \im B \\
 &\implies \vector v \in \im B \\
 &\implies \Lambda\dual \subseteq \im B
-,\end{align*}
+,\]
 
 and
 
-\begin{align*}
+\[
 B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \vector b_i \cdot \vector e_j = \delta_{ij} \in \ZZ \\
 \implies \im B \subseteq \spanof~ \Lambda\dual
-.\end{align*}
+.\]
 
 $\qed$
 
@@ -1853,7 +1699,7 @@ by the Chinese Remainder Theorem, which is cyclic.
 # Commutative Algebra
 
 
-## Fall 2019 3
+## Fall 2019 #3
 
 > Just fiddling with computations.
 > Context hints that we should be considering things like $x^2$ and $a+b$.
@@ -1876,6 +1722,44 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 
 
 # Fields and Galois Theory
+
+> Theorem: $F\units$ is always cyclic for $F$ a field
+
+### a
+
+Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
+Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
+
+### b
+
+Rephrasing (a), we have 
+\[
+n \divides q^k-1 
+&\iff q^k-1 \cong 0 \mod n \\
+&\iff q^k \cong 1 \mod n \\
+&\iff m \definedas o(q) \divides k
+.\]
+
+### c
+
+Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
+\[
+E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+,\]
+
+so $M$ is a degree $m$ extension of $E$.
+
+Now consider $M\units$. 
+By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
+
+But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
+So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
+
+But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
+Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
+
+\todo{Revisit. Tricky!}
+
 
 # Modules
 
@@ -1975,6 +1859,52 @@ M \ar[r, "\pi"] & N
 \end{tikzcd}
 \end{center}
   and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
+
+## 5
+
+> One-step submodule test.
+
+### a
+
+It suffices to show that 
+$$
+r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
+.$$
+
+We have
+\[
+t_1 \in \Tor(M) &\implies \exists s_1 \neq 0 \text{ such that } s_1 t_1  = 0 \\
+t_2 \in \Tor(M) &\implies \exists s_2 \neq 0 \text{ such that } s_2 t_2  = 0 
+.\]
+
+Since $R$ is an integral domain, $s_1 s_2 \neq 0$.
+Then
+\[
+s_1 s_2(rt_1 + t_2) 
+&= s_1 s_2 r t_1 + s_1 s_2t_2 \\
+&= s_2 r (s_1 t_1) + s_1 (s_2 t_2)  \quad\text{since $R$ is commutative} \\
+&=  s_2 r(0) + s_1(0) \\
+&= 0
+.\]
+
+### b
+
+Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
+
+Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 + [3]_6 = [5]_6$, where 5 is coprime to 6, and thus $[n]_6\actson [5]_6 = [0] \implies [n]_6 = [0]_6$. So $[5]_6$ is *not* a torsion element.
+
+So the set of torsion elements are not closed under addition, and thus not a submodule.
+
+### c
+
+Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
+Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
+$$
+a\actson bm = (ab)\actson m = 0\actson m = 0_M
+,$$ 
+so $m$ is a torsion element for any $m$.
+
+$\qed$
 
 
 

@@ -97,4 +97,50 @@ M \ar[r, "\pi"] & N
 \end{center}
   and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
 
+## 5
+
+> One-step submodule test.
+
+### a
+
+It suffices to show that 
+$$
+r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
+.$$
+
+We have
+\[
+t_1 \in \Tor(M) &\implies \exists s_1 \neq 0 \text{ such that } s_1 t_1  = 0 \\
+t_2 \in \Tor(M) &\implies \exists s_2 \neq 0 \text{ such that } s_2 t_2  = 0 
+.\]
+
+Since $R$ is an integral domain, $s_1 s_2 \neq 0$.
+Then
+\[
+s_1 s_2(rt_1 + t_2) 
+&= s_1 s_2 r t_1 + s_1 s_2t_2 \\
+&= s_2 r (s_1 t_1) + s_1 (s_2 t_2)  \quad\text{since $R$ is commutative} \\
+&=  s_2 r(0) + s_1(0) \\
+&= 0
+.\]
+
+### b
+
+Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
+
+Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 + [3]_6 = [5]_6$, where 5 is coprime to 6, and thus $[n]_6\actson [5]_6 = [0] \implies [n]_6 = [0]_6$. So $[5]_6$ is *not* a torsion element.
+
+So the set of torsion elements are not closed under addition, and thus not a submodule.
+
+### c
+
+Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
+Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
+$$
+a\actson bm = (ab)\actson m = 0\actson m = 0_M
+,$$ 
+so $m$ is a torsion element for any $m$.
+
+$\qed$
+
 
