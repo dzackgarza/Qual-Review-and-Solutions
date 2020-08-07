@@ -915,7 +915,7 @@ $\qed$
 
 - For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
 
-
+- Since $M$ is not principle, it is not the zero ideal, and contains at least two elements.
 - Thus the rank of $M$ is at least 1, since $\theset{m}$ is a subset of a spanning set.
 
 - It can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha m = 0 \implies \alpha = 0$.
