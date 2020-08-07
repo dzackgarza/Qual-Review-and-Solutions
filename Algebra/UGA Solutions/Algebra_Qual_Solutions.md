@@ -867,7 +867,7 @@ $\qed$
   \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
   .\]
 
-    - Then using 
+    - Then using the definition of coset addition/multiplication, we can write this as
   \[  
   \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
   \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M) 
