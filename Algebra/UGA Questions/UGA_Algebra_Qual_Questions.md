@@ -2394,6 +2394,21 @@ c. Suppose that M is a non-principal ideal of $R$.
 
 #### c
 
+> Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
+
+**$M$ is not free:**
+
+- **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
+
+  - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
+  - Toward a contradiction, suppose $\abs{B} \geq 2$ and let $m_1, m_2\in B$.
+  - Then  since $R$ is commutative, $m_2 m_1 - m_1 m_2 = 0$ and this yields a linear dependence
+  - So $B$ has only one element $m$.
+
+  - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
+
+  - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
+
 **$M$ is rank 1**:
 
 - For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
