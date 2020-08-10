@@ -2996,8 +2996,11 @@ B & C \\
 \[
 \chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
 .\]
+
 - Claim: $\det(D - xI) \in xF[x]$ is nontrivial
+
 - The claim follows because this forces $\deg(\det(D-xI)) \geq 1$ and so $\chi_{T, W}(x)$ is a proper divisor of $\chi_{T, V}(x)$.
+
 - Thus $f$ is reducible.
 
 $\impliedby$
