@@ -85,8 +85,6 @@ Concepts used:
 
 :::
 
-
-
 ## Fall 2019 #2
 
 Let $G$ be a group of order 105 and let $P, Q, R$ be Sylow 3, 5, 7 subgroups respectively.
@@ -531,8 +529,6 @@ Concepts Used:
 
 - Every group of order $p^2$ is abelian.
 - Classification of finite abelian groups.
-
-**Solution**
 
 ### a
 
