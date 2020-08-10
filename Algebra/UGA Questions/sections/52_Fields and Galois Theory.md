@@ -48,6 +48,7 @@ Prove that $m$ divides $k$.
 (c) Prove that $m = k$.
 
 \todo{Revisit. Tricky!}
+\todo[inline]{}
 
 :::{.solution}
 
