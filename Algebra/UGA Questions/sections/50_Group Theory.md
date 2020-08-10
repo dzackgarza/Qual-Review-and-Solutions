@@ -15,8 +15,6 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 
 ## Fall 2019 #1 $\bowtie$ 
 
-
-
 Let $G$ be a finite group with $n$ distinct conjugacy classes.
 Let $g_1 \cdots g_n$ be representatives of the conjugacy classes of $G$.
 
@@ -87,7 +85,7 @@ Concepts used:
 
 :::
 
-## Fall 2019 #2 
+## Fall 2019 #2  $\bowtie$
 
 Let $G$ be a group of order 105 and let $P, Q, R$ be Sylow 3, 5, 7 subgroups respectively.
 
@@ -200,9 +198,7 @@ by the Chinese Remainder Theorem, which is cyclic.
 
 :::
 
-
-
-## Spring 2019 #3
+## Spring 2019 #3 $\bowtie$
 
 How many isomorphism classes are there of groups of order 45?
 
@@ -231,9 +227,7 @@ Thus
 \todo[inline]{Revisit, seems short.}
 :::
 
-
-
-## Spring 2019 #4
+## Spring 2019 #4 $\bowtie$
 
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
@@ -363,7 +357,7 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 
 
 
-## Fall 2018 #1
+## Fall 2018 #1 $\bowtie$
 
 Let $G$ be a finite group whose order is divisible by a prime number $p$.
 Let $P$ be a normal $p\dash$subgroup of $G$
@@ -414,7 +408,7 @@ P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 
 
 
-## Fall 2018 #2
+## Fall 2018 #2 $\bowtie$
 
 (a) Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
 
@@ -503,7 +497,7 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 
 
 
-## Spring 2018 #1
+## Spring 2018 #1 $\bowtie$
 
 (a) Use the Class Equation (equivalently, the conjugation action of a group on itself) to prove that any $p\dash$group (a group whose order is a positive power of a prime integer $p$) has a nontrivial center.
 
