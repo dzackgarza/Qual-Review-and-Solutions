@@ -208,6 +208,31 @@ How many isomorphism classes are there of groups of order 45?
 
 Describe a representative from each class.
 
+:::{.solution}
+Concepts used:
+
+- Sylow theorems:
+- $n_p \cong 1 \mod p$
+- $n_p \divides m$.
+
+**Solution**
+
+It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
+
+There is only one possibility for $S_5$, namely $S_5\cong \ZZ/(5)$.
+
+There are two possibilities for $S_3$, namely $S_3 \cong \ZZ/(3^2)$ and $\ZZ/(3)^2$.
+
+Thus
+
+- $G \cong \ZZ/(9) \cross \ZZ/(5)$, or
+- $G \cong \ZZ/(3)^2 \cross \ZZ/(5)$.
+
+\todo[inline]{Revisit, seems short.}
+:::
+
+
+
 ## Spring 2019 #4
 
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
@@ -224,6 +249,119 @@ $$
 .$$
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
+
+:::{.solution}
+
+Concepts Used:
+
+- Notation: $X/G$ is the set of $G\dash$orbits
+- Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
+- Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+
+**Solution**
+
+### a
+
+
+Strategy: Burnside.
+
+- Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
+
+- Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
+  - Define and note: 
+    \[
+    A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
+    .\]
+
+- Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
+ 
+- Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
+
+  - What are the orbits? 
+    $$
+    \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+    ,$$ 
+    which is the conjugacy class of $g$.
+
+  - What are the fixed points? 
+    $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+    which are the elements of $G$ that commute with $g$, which is precisely $A_g$.
+
+- Note $\abs{X/G} = n$, the number of conjugacy classes.
+
+- Note that 
+  $$
+  \abs{A} = \abs{\disjoint_{g\in G} A_g} = \sum_{g\in G} \abs{A_g} = \sum_{g\in G}\abs{X^g}
+  .$$
+
+
+- Apply Burnside
+$$
+\abs{X / G} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+$$
+- Rearrange and use definition:
+$$
+n \abs{G}
+= \abs{X/G} \abs{G}
+= \sum _ { g \in G } \left| X ^ { g } \right|
+$$
+- Compute probability:
+\[
+P(A)
+= {\abs A \over \abs \Omega} 
+= \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
+= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
+= \frac{n \abs{G}}{\abs{G}^2} 
+= \frac n {\abs G}
+.\]
+
+$\qed$
+
+### b
+
+Class equation:
+\[
+\abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
+\]
+
+where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+
+### c
+
+> Todo: revisit.
+
+As shown in part 1,
+$$
+\mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
+,$$
+and by the class equation
+
+$$
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
+$$
+
+Now note
+
+- Each element of $Z(G)$ is in its own conjugacy class, contributing $\abs{Z(G)}$ classes to $n$.
+
+- Every other class of elements in $G\setminus Z(G)$ contains at least 2 elements
+  - Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
+
+Thus
+\[
+n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
+&= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
+&= \frac 1 2 \abs{G} + \frac 1 2 \abs{Z(G)} \\
+\\
+\implies \frac n {\abs G}
+&\leq \frac 1 2 \frac{\abs{G}}{\abs{G}}  + \frac 1 2 \frac{\abs{Z(G)}}{\abs{G}} \\
+&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
+.\]
+
+
+:::
+
+
 
 ## Fall 2012 #1
 Let $G$ be a finite group and $X$ a set on which $G$ acts.
