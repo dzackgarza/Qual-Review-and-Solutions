@@ -2626,30 +2626,6 @@ Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\i
 
 # Linear Algebra: Canonical Forms
 
-## Spring 2020 #7
-
-Let
-\[
-A=\left[\begin{array}{ccc}
-2 & 0 & 0 \\
-4 & 6 & 1 \\
--16 & -16 & -2
-\end{array}\right] \in M_{3}(\mathrm{C})
-.\]
-
-a. Find the Jordan canonical form $J$ of $A$.
-
-b. Find an invertible matrix $P$ such that $P\inv A P = J$. 
-  You should not need to compute $P\inv$.
-
-c. Write down the minimal polynomial of $A$.
-
-## Spring 2020 #8
-
-Let $T:V\to V$ be a linear transformation where $V$ is a finite-dimensional vector space over $\CC$.
-Prove the Cayley-Hamilton theorem: if $p(x)$ is the characteristic polynomial of $T$, then $p(T) = 0$.
-You may use canonical forms.
-
 ## Spring 2019 #7 $\bowtie$
 
 Let $p$ be a prime number.
@@ -2825,6 +2801,50 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 
 
 
+## $\star$ Spring 2012 #7
+Consider the following matrix as a linear transformation from $V\definedas \CC^5$ to itself:
+\[
+A=\left(\begin{array}{ccccc}
+-1 & 1 & 0 & 0 & 0 \\
+-4 & 3 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 2
+\end{array}\right)
+.\]
+
+a. Find the invariant factors of $A$.
+
+b. Express $V$ in terms of a direct sum of indecomposable $\CC[x]\dash$modules.
+
+c. Find the Jordan canonical form of $A$.
+
+
+
+## Spring 2020 #7
+
+Let
+\[
+A=\left[\begin{array}{ccc}
+2 & 0 & 0 \\
+4 & 6 & 1 \\
+-16 & -16 & -2
+\end{array}\right] \in M_{3}(\mathrm{C})
+.\]
+
+a. Find the Jordan canonical form $J$ of $A$.
+
+b. Find an invertible matrix $P$ such that $P\inv A P = J$. 
+  You should not need to compute $P\inv$.
+
+c. Write down the minimal polynomial of $A$.
+
+## Spring 2020 #8
+
+Let $T:V\to V$ be a linear transformation where $V$ is a finite-dimensional vector space over $\CC$.
+Prove the Cayley-Hamilton theorem: if $p(x)$ is the characteristic polynomial of $T$, then $p(T) = 0$.
+You may use canonical forms.
+
 ## Spring 2012 #8
 Let $V$ be a finite-dimensional vector space over a field $k$ and $T:V\to V$ a linear transformation.
 
@@ -2915,26 +2935,6 @@ Let $T: V\to V$ be a linear map from a 5-dimensional $\CC\dash$vector space to i
 a. Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there *does* exist a vector $w\in V$ such that $T^2 w= w$.
 
 b. Give all of the possible Jordan canonical forms of $T$.
-
-
-## $\star$ Spring 2012 #7
-Consider the following matrix as a linear transformation from $V\definedas \CC^5$ to itself:
-\[
-A=\left(\begin{array}{ccccc}
--1 & 1 & 0 & 0 & 0 \\
--4 & 3 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 1 \\
-0 & 0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 0 & 2
-\end{array}\right)
-.\]
-
-a. Find the invariant factors of $A$.
-
-b. Express $V$ in terms of a direct sum of indecomposable $\CC[x]\dash$modules.
-
-c. Find the Jordan canonical form of $A$.
-
 
 
 
