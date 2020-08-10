@@ -2337,6 +2337,61 @@ c. Suppose that M is a non-principal ideal of $R$.
 
 :::{.solution}
 
+#### a
+
+- Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
+- Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
+\[  
+\sum_{i=1}^n s_i \vector r_i = 0 \implies s_i = 0_R \,\forall i
+.\]
+- Let $\vector r$ be any of of these generating elements.
+- Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
+- Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
+
+#### b
+
+- Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
+- Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
+
+- **Claim:** 
+  $\tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}$ is a basis for $\tilde M$.
+
+  - **Linearly Independent:**
+
+    - Suppose that
+  \[
+  \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
+  .\]
+
+    - Then using the definition of coset addition/multiplication, we can write this as
+  \[  
+  \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
+  \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
+  .\]
+    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
+
+    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
+
+    - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
+
+    - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
+
+  - **Spanning:**
+
+    - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
+
+    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
+
+    - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
+  \[
+  \vector x
+  &= \pi(\vector m) \\
+  &\definedas \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
+  &= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
+  &\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
+  ,\]
+  which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
+
 #### c
 
 > Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
@@ -2353,30 +2408,6 @@ c. Suppose that M is a non-principal ideal of $R$.
   - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
 
   - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
-
-**$M$ is rank 1**:
-
-- For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
-
-- Since $M$ is not principle, it is not the zero ideal, and contains at least two elements. So we can consider an element $\vector m\in M$.
-
-- We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of some spanning set.
-
-- $R\vector m$ can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha \vector m = \vector 0 \implies \alpha = 0_R$.
-
-- Claim: since $R$ is commutative, $\rank_R(M) \leq 1$.
-
-  - If we take two elements $\vector m, \vector n \in M\nonzero$, then since $m, n\in R$ as well, we have $nm = mn$ and so
-\[
-(n)\vector m + (-m)\vector n = 0_R = \vector 0
-\]
-  is a linear dependence.
-
-**$M$ is torsion-free**:
-
-- Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
-
-- But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
 
 
 :::
