@@ -2819,6 +2819,7 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 .\]
 
 
+
 :::
 
 
@@ -2952,6 +2953,9 @@ a. Show that $f(x)$ is irreducible in $F[x] \iff$ there are no proper nonzero su
 
 b. If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that $T$ is diagonalizable when we extend the field to its algebraic closure.
 
+\todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
+\todo[inline]{How to extend basis?}
+
 :::{.solution}
 
 Lemma: every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
@@ -2968,30 +2972,31 @@ $\implies$:
 
 - By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
 - Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
-- Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
-  - Matrix-dependent proof: 
-  \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
-    - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
-    - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.
-    \todo[inline]{How to extend basis?}
-      - Note that since $W<V$ is proper, $j\geq 1$.
-    - Restrict $T$ to $W$ to get $T_W$, then let $B = [T_W]_{\mcb_W}$ be the matrix representation of $T_W$ with respect to $\mcb_W$.
-    - Now consider the matrix representation $[T]_{\mcb_V}$, in block form this is given by
-    \begin{align*}
-    [T]_{\mcb_V} = 
-    \begin{bmatrix}
-    B & C \\
-    0 & D
-    \end{bmatrix}
-    \end{align*}
-      where we've used that $W<V$ is proper to get the existence of $C, D$ (there is at least one additional row/column since $j\geq 1$ in the extended basis.)
-    \todo{Why?}
-    - Now expand along the first column block to obtain
-    \begin{align*}
-    \chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
-    .\end{align*}
-    - Claim: $\det(D - xI) \in xF[x]$ is nontrivial
-    - The claim follows because this forces $\deg(\det(D-xI)) \geq 1$ and so $\chi_{T, W}(x)$ is a proper divisor of $\chi_{T, V}(x)$.
+
+Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
+
+> Matrix-dependent proof
+
+- Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
+- Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.
+  - Note that since $W<V$ is proper, $j\geq 1$.
+- Restrict $T$ to $W$ to get $T_W$, then let $B = [T_W]_{\mcb_W}$ be the matrix representation of $T_W$ with respect to $\mcb_W$.
+- Now consider the matrix representation $[T]_{\mcb_V}$, in block form this is given by
+\[
+[T]_{\mcb_V} = 
+\begin{bmatrix}
+B & C \\
+0 & D
+\end{bmatrix}
+\]
+  where we've used that $W<V$ is proper to get the existence of $C, D$ (there is at least one additional row/column since $j\geq 1$ in the extended basis.)
+\todo[inline]{Why?}
+- Now expand along the first column block to obtain
+\[
+\chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
+.\]
+- Claim: $\det(D - xI) \in xF[x]$ is nontrivial
+- The claim follows because this forces $\deg(\det(D-xI)) \geq 1$ and so $\chi_{T, W}(x)$ is a proper divisor of $\chi_{T, V}(x)$.
 - Thus $f$ is reducible.
 
 $\impliedby$
@@ -3133,6 +3138,7 @@ Let $V$ be a finite dimensional vector space over a field (the field is not nece
 Let $\phi : V \to V$ be a linear transformation. Prove that there exists a decomposition of $V$ as $V = U \oplus W$ , where $U$ and $W$ are $\phi\dash$invariant subspaces of $V$ , $\restrictionof{\phi}{U}$ is nilpotent, and $\restrictionof{\phi}{W}$ is nonsingular.
 
 \todo[inline]{Revisit.}
+
 :::{.solution}
 Let $m(x)$ be the minimal polynomial of $\phi$.
 If the polynomial $f(x) = x$ doesn't divide $m$, then $f$ does not have zero as an eigenvalue, so $\phi$ is nonsingular and since $0$ is nilpotent, $\phi + 0$ works.
@@ -3285,7 +3291,6 @@ v_1 \\ v_2 \\ \vdots
 
 We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
 
-$\qed$
 
 *Alternative proof:*
 
@@ -3300,8 +3305,6 @@ M\vector x = 0
 ,\]
 
 since $A$ has full rank because the $\vector e_i$ are linearly independent.
-
-$\qed$
 
 Let $A = [\vector e_1^t, \cdots, \vector e_n^t]$ be the matrix with $\vector e_i$ in the $i$th column.
 
@@ -3331,11 +3334,9 @@ B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \im B \subseteq \spanof~ \Lambda\dual
 .\]
 
-$\qed$
-
 ### c.
 
-
+?
 
 :::
 

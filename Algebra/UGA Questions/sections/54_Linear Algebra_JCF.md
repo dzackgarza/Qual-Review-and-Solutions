@@ -193,6 +193,7 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 .\]
 
 
+
 :::
 
 
