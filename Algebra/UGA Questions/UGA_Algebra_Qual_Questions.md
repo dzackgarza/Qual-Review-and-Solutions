@@ -2337,7 +2337,7 @@ c. Suppose that M is a non-principal ideal of $R$.
 
 :::{.solution}
 
-#### a
+**Part a**
 
 - Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
 - Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
@@ -2348,7 +2348,8 @@ c. Suppose that M is a non-principal ideal of $R$.
 - Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
 - Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
 
-#### b
+**Part b**
+
 
 - Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
 - Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
@@ -2396,7 +2397,7 @@ is a basis for $\tilde M$.
   ,\]
     which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
 
-#### c
+**Part c**
 
 > Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
 
@@ -2441,7 +2442,10 @@ is a basis for $\tilde M$.
 - But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
 
 
+
 :::
+
+
 
 ### $\star$ Spring 2020 #6 $\bowtie$
 
@@ -2965,7 +2969,7 @@ $\implies$:
 - By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
 - Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
 - Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
-  - Matrix-dependent proof: \todo{Is there a proof without matrices? What if $V$ is infinite dimensional?}
+  - Matrix-dependent proof: \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
     - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
     - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.\todo{How to extend basis?}
       - Note that since $W<V$ is proper, $j\geq 1$.
