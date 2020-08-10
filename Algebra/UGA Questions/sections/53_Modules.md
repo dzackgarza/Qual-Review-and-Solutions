@@ -76,9 +76,9 @@ Prove that if $\alpha$ and $\gamma$ are isomorphisms then $\beta$ is an isomorph
 Let $R$ be a PID and $M$ a finitely generated $R\dash$module.
 
 a. Prove that there are $R\dash$submodules 
-  \begin{align*}
+  \[
   0 = M_0 \subset M_1 \subset \cdots \subset M_n = M
-  \end{align*}
+  \]
   such that for all $0\leq i \leq n-1$, the module $M_{i+1}/M_i$ is cyclic.
 
 b. Is the integer $n$ in part (a) uniquely determined by $M$? 
@@ -155,9 +155,9 @@ a. Give a definition for a free module over $R$.
 b. Define what it means for an $R\dash$module to be torsion free.
 
 c. Prove that if $F$ is a free module, then any short exact sequence of $R\dash$modules of the following form splits:
-\begin{align*}
+\[
 0 \to N \to M \to F \to 0
-.\end{align*}
+.\]
 
 d. Let $R$ be a PID. 
   Show that any finitely generated $R\dash$module $M$ can be expressed as a direct sum of a torsion module and a free module.
@@ -165,9 +165,9 @@ d. Let $R$ be a PID.
 
 ### Fall 2019 Final #3 
 Let $R = k[x]$ for $k$ a field and let $M$ be the $R\dash$module given by
-  \begin{align*}
+  \[
   M=\frac{k[x]}{(x-1)^{3}} \oplus \frac{k[x]}{\left(x^{2}+1\right)^{2}} \oplus \frac{k[x]}{(x-1)\left(x^{2}+1\right)^{4}} \oplus \frac{k[x]}{(x+2)\left(x^{2}+1\right)^{2}}
-  .\end{align*}
+  .\]
   Describe the elementary divisors and invariant factors of $M$.
 
 ### Fall 2019 Final #4 
@@ -192,14 +192,14 @@ Exhibit the rational canonical form for
 
 ### Fall 2019 Final #9 
 Exhibit the rational and Jordan canonical forms for the following matrix $A\in M_4(\CC)$:
-  \begin{align*}
+  \[
   A=\left(\begin{array}{cccc}
   2 & 0 & 0 & 0 \\
   1 & 1 & 0 & 0 \\
   -2 & -2 & 0 & 1 \\
   -2 & 0 & -1 & -2
   \end{array}\right)
-  .\end{align*}
+  .\]
 
 ### Fall 2019 Final #10 
 Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.

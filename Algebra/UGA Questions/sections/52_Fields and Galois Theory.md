@@ -135,13 +135,13 @@ c. Show that the extension $E/F$ in (b) is a Galois extension.
 a. Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
   Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
 
-  \begin{align*}
+  \[
   \left(\begin{array}{ll}
   a & b \\
   0 & 1
   \end{array}\right) 
   \qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
-  .\end{align*}
+  .\]
 
 b. Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
 

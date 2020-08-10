@@ -52,10 +52,10 @@ of the nilpotent elements in R.
 Let $R$ be a commutative ring.
 
 (a) Let $r \in R$. Show that the map
-\begin{align*}
+\[
 r\bullet : R &\to R \\
 x &\mapsto r x
-.\end{align*}
+.\]
 is an $R\dash$module endomorphism of $R$.
 
 (b) We say that $r$ is a **zero-divisor** if r$\bullet$ is not injective.
@@ -243,9 +243,9 @@ a. Define a *maximal ideal* and prove that $R$ has a maximal ideal.
 b. Show than an element $r\in R$ is not invertible $\iff r$ is contained in a maximal ideal.
 
 c. Let $M$ be an $R\dash$module, and recall that for $0\neq \mu \in M$, the *annihilator* of $\mu$ is the set
-  \begin{align*}
+  \[
   \ann(\mu) = \theset{r\in R \suchthat r\mu = 0}
-  .\end{align*}
+  .\]
   Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property that there exists an element $\mu \in M$ such that $I = \ann(\mu)$ for some $\mu \in M$.
   In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \ann(\nu) \subsetneq R$ such that $I\subsetneq J$.
 

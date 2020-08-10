@@ -3,13 +3,13 @@
 ## Spring 2020 #7
 
 Let
-\begin{align*}
+\[
 A=\left[\begin{array}{ccc}
 2 & 0 & 0 \\
 4 & 6 & 1 \\
 -16 & -16 & -2
 \end{array}\right] \in M_{3}(\mathrm{C})
-.\end{align*}
+.\]
 
 a. Find the Jordan canonical form $J$ of $A$.
 
@@ -75,13 +75,13 @@ b. Find a nonzero matrix $P\in M_n(\CC)$ such that $P\inv A P$ is in Jordan cano
 
 ## Spring 2016 #1
 Let
-\begin{align*}
+\[
 A=\left(\begin{array}{ccc}
 -3 & 3 & -2 \\
 -7 & 6 & -3 \\
 1 & -1 & 2
 \end{array}\right) \in M_{3}(\mathrm{C})
-.\end{align*}
+.\]
 
 a. Find the Jordan canonical form $J$ of $A$.
 
@@ -92,9 +92,9 @@ b. Find an invertible matrix $P$ such that $P\inv A P = J$.
 ## Spring 2016 #7
 
 Let $D = \QQ[x]$ and let $M$ be a $\QQ[x]\dash$module such that
-\begin{align*}
+\[
 M \cong \frac{\mathbb{Q}[x]}{(x-1)^{3}} \oplus \frac{\mathbb{Q}[x]}{\left(x^{2}+1\right)^{3}} \oplus \frac{\mathbb{Q}[x]}{(x-1)\left(x^{2}+1\right)^{5}} \oplus \frac{\mathbb{Q}[x]}{(x+2)\left(x^{2}+1\right)^{2}}
-.\end{align*}
+.\]
 
 Determine the elementary divisors and invariant factors of $M$.
 
@@ -107,13 +107,13 @@ Determine the elementary divisors and invariant factors of $M$.
 ## Spring 2015 #6
 
 Let $F$ be a field and $n$ a positive integer, and consider
-\begin{align*}
+\[
 A=\left[\begin{array}{ccc}
 1 & \dots & 1 \\
 & \ddots & \\
 1 & \dots & 1
 \end{array}\right] \in M_{n}(F)
-.\end{align*}
+.\]
 
 Show that $A$ has a Jordan normal form over $F$ and find it.
 
@@ -134,7 +134,7 @@ b. Give all of the possible Jordan canonical forms of $T$.
 
 ## $\star$ Spring 2012 #7
 Consider the following matrix as a linear transformation from $V\definedas \CC^5$ to itself:
-\begin{align*}
+\[
 A=\left(\begin{array}{ccccc}
 -1 & 1 & 0 & 0 & 0 \\
 -4 & 3 & 1 & 0 & 0 \\
@@ -142,7 +142,7 @@ A=\left(\begin{array}{ccccc}
 0 & 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 0 & 2
 \end{array}\right)
-.\end{align*}
+.\]
 
 a. Find the invariant factors of $A$.
 
