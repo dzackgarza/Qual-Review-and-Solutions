@@ -108,9 +108,9 @@ $$
 
 ## Spring 2012 #6
 Let $k$ be a field and let the group $G = \GL(m, k) \cross \GL(n, k)$ acts on the set of $m\times n$ matrices $M_{m, n}(k)$ as follows:
-\begin{align*}
+\[
 (A, B) \cdot X = AXB\inv
-\end{align*}
+\]
 where $(A, B) \in G$ and $X\in M_{m, n}(k)$.
 
 a. State what it means for a group to act on a set.
@@ -123,9 +123,9 @@ Let $G = \GL(3, \QQ[x])$ be the group of invertible $3\times 3$ matrices over $\
 For each $f\in \QQ[x]$, let $S_f$ be the set of $3\times 3$ matrices $A$ over $\QQ[x]$ such that $\det(A) = c f(x)$ for some nonzero constant $c\in \QQ$.
 
 a. Show that for $(P, Q) \in G\cross G$ and $A\in S_f$, the formula
-  \begin{align*}
+  \[
   (P, Q)\cdot A \definedas PAQ\inv
-  \end{align*}
+  \]
   gives a well defined map $G\cross G \cross S_f \to S_f$ and show that this map gives a group action of $G\cross G$ on $S_f$.
 
 b. For $f(x) = x^3(x^2+1)^2$, give one representative from each orbit of the group action in (a), and justify your assertion.
@@ -143,23 +143,23 @@ b. If $k\in F[x]$ is nonzero and of degree strictly less than $g$, then $k[T]$ i
 ## Fall 2015 #8
 Let $V$ be a vector space over a field $F$ and $V\dual$ its dual.
 A *symmetric bilinear form* $(\wait, \wait)$ on $V$ is a map $V\cross V\to F$ satisfying
-\begin{align*}
+\[
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) \qtext{and} (v_1, v_2) = (v_2, v_1)
-\end{align*}
+\]
 for all $a, b\in F$ and $v_1, v_2 \in V$.
 The form is *nondegenerate* if the only element $w\in V$ satisfying $(v, w) = 0$ for all $v\in V$ is $w=0$.
 
 Suppose $(\wait, \wait)$ is a nondegenerate symmetric bilinear form on $V$.
 If $W$ is a subspace of $V$, define
-\begin{align*}
+\[
 W\perp \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
-.\end{align*}
+.\]
 
 a. Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X\perp \subseteq Y\perp$.
 
 b. Define an injective linear map 
-  \begin{align*}
+  \[
   \psi: Y\perp/X\perp \injects (X/Y)\dual
-  \end{align*}
+  \]
   which is an isomorphism if $V$ is finite dimensional.
 
