@@ -1,3 +1,3 @@
 ---
-title: "Algebra Qualifying Exam Questions"
+title: "UGA Algebra Qualifying Exam Questions and Solutions"
 ---
