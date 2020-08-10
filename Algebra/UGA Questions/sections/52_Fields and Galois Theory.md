@@ -47,6 +47,8 @@ Prove that $m$ divides $k$.
 
 (c) Prove that $m = k$.
 
+\todo{Revisit. Tricky!}
+
 :::{.solution}
 
 Concepts used:
@@ -91,7 +93,6 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 
 - Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
 :::
-\todo{Revisit. Tricky!}
 
 
 
