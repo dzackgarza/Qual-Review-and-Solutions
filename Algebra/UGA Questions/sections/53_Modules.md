@@ -198,3 +198,16 @@ so $m$ is a torsion element for any $m$.
 
 
 :::
+
+### $\star$ Spring 2019 #5 $\bowtie$
+
+Let $R$ be an integral domain. Recall that if $M$ is an $R\dash$module, the *rank* of $M$ is
+defined to be the maximum number of $R\dash$linearly independent elements of $M$ .
+
+a. Prove that for any $R\dash$module $M$, the rank of $\tor(M )$ is 0.
+
+b. Prove that the rank of $M$ is equal to the rank of of $M/\tor(M )$.
+
+c. Suppose that M is a non-principal ideal of $R$.
+
+  Prove that $M$ is torsion-free of rank 1 but not free.
