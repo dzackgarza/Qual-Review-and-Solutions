@@ -1,5 +1,6 @@
-Here is a thing 
-\[
-A\coloneqq B
-\] 
-and more.
+a. Show that for $(P, Q) \in G\cross G$ and $A\in S_f$, the formula
+  \[
+  (P, Q)\cdot A \definedas PAQ\inv
+  \]
+
+b. Something else.
