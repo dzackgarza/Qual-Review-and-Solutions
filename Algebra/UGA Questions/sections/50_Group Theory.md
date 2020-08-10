@@ -363,6 +363,236 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 
 
 
+## Fall 2018 #1
+
+Let $G$ be a finite group whose order is divisible by a prime number $p$.
+Let $P$ be a normal $p\dash$subgroup of $G$
+(so $\abs P = p^c$ for some $c$).
+
+(a) Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
+
+(b) Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
+
+:::{.solution}
+Concepts Used:
+
+- Sylow 2: All Sylow $p\dash$subgroups are conjugate.
+- $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
+- Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
+
+**Solution**
+
+### a
+
+- Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
+
+- $P \normal G \iff gPg\inv = P$ for all $g\in G$.
+
+- Let $S_p^j$ be any other Sylow $p\dash$subgroup, 
+- Since Sylow $p\dash$subgroups are all conjugate $gS_p^i g\inv = S_p^j$ for *some* $g\in G$.
+
+- Then 
+\[
+P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
+.\]
+
+### b
+
+- If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
+- By maximality of $M$, $MP = G$
+- Note that $M\intersect P \leq P$ and $\abs{P} = p^c$ implies $\abs{M\intersect P} = p^a$ for some $a\leq c$ by Lagrange
+- Then write
+  \[
+  G = MP
+  &\iff \abs{G} = \frac{\abs{M} \abs{P}}{\abs{M\intersect P}} \\ \\
+  &\iff { \abs{G} \over \abs{M}} = {\abs{P}  \over \abs{M\intersect P}} = {p^c \over p^a} = p^{c-a} \definedas p^b
+  \]
+
+  where $a\leq c \implies 0 \leq c-b \leq c$ so $0\leq b \leq c$.
+
+:::
+
+
+
+## Fall 2018 #2
+
+(a) Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
+
+(b) Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
+$$
+\union_{g\in G} gHg\inv \subsetneq G
+$$
+
+(c) Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
+
+:::{.solution}
+Concepts used:
+
+- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
+- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
+- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
+- $abc\in H \iff b\in a\inv H c\inv$
+- Set of orbits for $G\actson X$, notated $X/G$.
+- Set of fixed points for $G\actson X$, notated $X^g$.
+- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
+  - Number of orbits equals average number of fixed points.
+
+**Solution**
+
+### a
+
+- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
+- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
+- Then
+\[
+h \in G\cdot x 
+&\iff h\cdot x = x \qtext{by being in the stabilizer} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
+&\iff (g h g\inv) \cdot y = y \\
+&\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
+&\iff h\in g\inv G_y g
+,\]
+
+so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
+
+### b
+
+Let $G$ act on its subgroups by conjugation, 
+
+- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
+
+- The stabilizer of $H$ is $G_H = N_G(H)$.
+
+- By orbit-stabilizer,
+\[
+G\cdot H = [G: G_H] = [G: N_G(H)]
+.\]
+
+- Since $\abs H = n$, and all of its conjugate also have order $n$.
+
+- Note that 
+\[
+H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
+,\]
+
+- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
+\[
+\abs{\union_{g\in G}gHg\inv} 
+&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+&\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
+& = [G: N_G(H)] \abs{H} \\
+&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
+&\leq {\abs G \over \abs H} \abs H \\
+&= \abs{G}
+.\]
+
+### c
+
+- Let $G\actson X$ transitively where $\abs{X} \geq 2$
+- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
+- Apply Burnside's Lemma
+\[
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
+\]
+- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
+- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
+- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
+
+
+:::
+
+
+
+## Spring 2018 #1
+
+(a) Use the Class Equation (equivalently, the conjugation action of a group on itself) to prove that any $p\dash$group (a group whose order is a positive power of a prime integer $p$) has a nontrivial center.
+
+(b) Prove that any group of order $p^2$ (where $p$ is prime) is abelian.
+
+(c) Prove that any group of order $5^2 \cdot 7^2$ is abelian.
+
+(d) Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
+
+:::{.solution}
+Concepts Used:
+
+- Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
+- Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
+- $G/Z(G)$ cyclic $\iff G$ is abelian.
+  
+  > *Proof:*
+    \[
+    G/Z(G) = \generators{xZ} 
+    &\iff g\in G \implies gZ = x^mZ \\
+    &\iff g(x^m)\inv \in Z \\
+    &\iff g = x^m z \qtext{for some}z\in Z\\
+    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
+    .\]
+
+- Every group of order $p^2$ is abelian.
+- Classification of finite abelian groups.
+
+**Solution**
+
+### a
+
+Strategy: get $p$ to divide $\abs{Z(G)}$.
+
+- Apply the class equation:
+\[
+\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]
+.\]
+
+- Since $C_G(x_i) \leq G$ and $\abs{G} = p^k$, by Lagrange $\abs{C_G(x_i)} = p^\ell$ for some $0\leq \ell \leq k$.
+- Since $\abs{G} = p^k$ for some $k$ and $Z(G), C_G(x_i) \leq G$ are subgroups, their orders are powers of $p$.
+- Use $$[G: C_G(x_i)] = 1 \iff C_G(x_i) = G \iff \theset{g\in G\suchthat gx_ig\inv = x_i} = G \iff x_i \in Z(G).$$
+  - Thus every index appearing in the sum is greater than 1, and thus equal to $p^{\ell_i}$ for some $1\leq \ell_i \leq k$
+  - So $p$ divides every term in the sum
+
+- Rearrange 
+\[
+\abs{G} -  \sum [G: C_G(x_i)]
+= \abs{Z(G)} 
+.\]
+
+- $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
+
+
+### b
+
+Strategy: examine $\abs{G/Z(G)}$ by cases.
+
+- $1$: Then $G = Z(G)$ and $G$ is abelian.
+- $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
+- $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
+
+### c
+
+- By Sylow
+
+  - $n_5 \divides 7^2,\quad n_5\cong 1\mod 5 \implies n_5\in\theset{1, 7, 49}\setminus\theset{7, 49} = \theset{1} \implies n_5 = 1$
+  - $n_7 \divides 5^2, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 5, 25}\setminus\theset{5, 25} =\theset{1} \implies n_7 = 1$
+
+- By recognition of direct products, $G = S_5 \cross S_7$
+  - By above, $S_5, S_7\normal G$
+  - Check $S_5\intersect S_7 = \theset{e}$ since they have coprime order.
+  - Check $S_5S_7 = G$ since $\abs{S_5 S_7} = 5^2 7^2 = \abs{G}$
+
+- By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
+- The direct product of abelian groups is abelian.
+
+### d
+
+1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
+1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
+1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
+1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
+
+
+:::
+
+
+
 ## Fall 2012 #1
 Let $G$ be a finite group and $X$ a set on which $G$ acts.
 
@@ -395,39 +625,6 @@ Let $G$ be a group of order 70.
 a. Show that $G$ is not simple.
 
 b. Exhibit 3 nonisomorphic groups of order 70 and prove that they are not isomorphic.
-
-## Fall 2018 #1
-
-Let $G$ be a finite group whose order is divisible by a prime number $p$.
-Let $P$ be a normal $p\dash$subgroup of $G$
-(so $\abs P = p^c$ for some $c$).
-
-(a) Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
-
-(b) Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
-
-
-## Fall 2018 #2
-
-(a) Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
-
-(b) Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
-$$
-\union_{g\in G} gHg\inv \subsetneq G
-$$
-
-(c) Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
-
-
-## Spring 2018 #1
-
-(a) Use the Class Equation (equivalently, the conjugation action of a group on itself) to prove that any $p\dash$group (a group whose order is a positive power of a prime integer $p$) has a nontrivial center.
-
-(b) Prove that any group of order $p^2$ (where $p$ is prime) is abelian.
-
-(c) Prove that any group of order $5^2 \cdot 7^2$ is abelian.
-
-(d) Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
 
 ## Fall 2017 #1
 
