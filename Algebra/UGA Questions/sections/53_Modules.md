@@ -31,7 +31,7 @@ is a free basis for $N$ .
 
 (c) Use the previous part to describe $M/N$ as a direct sum of cyclic $\ZZ\dash$modules.
 
-### Fall 2018 #6.
+### Fall 2018 #6 $\bowtie$
 
 Let $R$ be a commutative ring, and let $M$ be an $R\dash$module. 
 An $R\dash$submodule $N$ of $M$ is maximal if there is no $R\dash$module $P$ with $N \subsetneq P \subsetneq M$.
@@ -42,6 +42,44 @@ An $R\dash$submodule $N$ of $M$ is maximal if there is no $R\dash$module $P$ wit
 
 (c) Let $M$ be the $\ZZ\dash$module of all roots of unity in $\CC$ under multiplication.
 Show that there is no maximal $\ZZ\dash$submodule of $M$.
+
+:::{.solution}
+
+### a
+
+By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
+
+So 
+
+- $M$ is maximal:
+
+- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
+
+- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
+
+- $\iff M/N$ is simple.
+
+### b
+
+Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
+
+By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
+In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
+So $\abs{M/N}$ can not be composite, and therefore must be prime.
+
+### c
+
+Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
+
+Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
+
+But this means there are infinitely many elements in $G\setminus H$, and so $\infty = [G: H] = \abs{G/H}$ is not a prime. 
+Thus by (b), $H$ can not be maximal, a contradiction.
+
+
+:::
+
+
 
 ### Spring 2018 #7.
 
@@ -100,7 +138,7 @@ Let $A$ be an abelian group, and show $A$ is a $\ZZ\dash$module in a unique way.
 
 ## Torsion and the Structure Theorem
 
-## $\star$ Fall 2019 #5 $\bowtie$
+### $\star$ Fall 2019 #5 $\bowtie$
 
 Let $R$ be a ring and $M$ an $R\dash$module.
 
@@ -119,7 +157,7 @@ $$
 
 > One-step submodule test.
 
-### a
+#### a
 
 It suffices to show that 
 $$
@@ -142,7 +180,7 @@ s_1 s_2(rt_1 + t_2)
 &= 0
 .\]
 
-### b
+#### b
 
 Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
 
@@ -150,7 +188,7 @@ Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 +
 
 So the set of torsion elements are not closed under addition, and thus not a submodule.
 
-### c
+#### c
 
 Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
 Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
@@ -164,7 +202,7 @@ so $m$ is a torsion element for any $m$.
 
 
 
-## $\star$ Spring 2019 #5 $\bowtie$
+### $\star$ Spring 2019 #5 $\bowtie$
 
 Let $R$ be an integral domain. Recall that if $M$ is an $R\dash$module, the *rank* of $M$ is
 defined to be the maximum number of $R\dash$linearly independent elements of $M$ .
@@ -179,7 +217,7 @@ defined to be the maximum number of $R\dash$linearly independent elements of $M$
 
 :::{.solution}
 
-### a
+#### a
 
 - Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
 - Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
@@ -192,7 +230,7 @@ defined to be the maximum number of $R\dash$linearly independent elements of $M$
 
 $\qed$
 
-### b
+#### b
 
 - Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
 - Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
@@ -236,7 +274,7 @@ $\qed$
   ,\]
   which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
 
-### c
+#### c
 
 > Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
 
@@ -283,7 +321,7 @@ $\qed$
 
 
 
-## $\star$ Spring 2020 #6 $\bowtie$
+### $\star$ Spring 2020 #6 $\bowtie$
 
 Let $R$ be a ring with unity.
 
@@ -304,7 +342,7 @@ d. Let $R$ be a PID.
 :::{.solution}
 Let $R$ be a ring with 1.
 
-### a
+#### a
 An $R\dash$module $M$ is **free** if any of the following conditions hold:
 
 - $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
@@ -317,11 +355,11 @@ X \ar[u, hook] \ar[r, "f"] & N
 \end{tikzcd}
 \end{center}
 
-### b
+#### b
 
 $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
 
-### c
+#### c
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
 \[
@@ -378,7 +416,7 @@ M \ar[r, "\pi"] & N
 \end{tikzcd}
 \end{center}
 
-### d
+#### d
 
 - Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
 - Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
@@ -418,34 +456,34 @@ a. Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is
 
 b. Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
 
-### Fall 2019 Final #3 
+### Fall 2019 Final #3
 Let $R = k[x]$ for $k$ a field and let $M$ be the $R\dash$module given by
   \[
   M=\frac{k[x]}{(x-1)^{3}} \oplus \frac{k[x]}{\left(x^{2}+1\right)^{2}} \oplus \frac{k[x]}{(x-1)\left(x^{2}+1\right)^{4}} \oplus \frac{k[x]}{(x+2)\left(x^{2}+1\right)^{2}}
   .\]
   Describe the elementary divisors and invariant factors of $M$.
 
-### Fall 2019 Final #4 
+### Fall 2019 Final #4
 Let $I = (2, x)$ be an ideal in $R = \ZZ[x]$, and show that $I$ is not a direct sum of nontrivial cyclic $R\dash$modules.
 
-### Fall 2019 Final #5 
+### Fall 2019 Final #5
 Let $R$ be a PID. 
 
 - Classify irreducible $R\dash$modules up to isomorphism.
 - Classify indecomposable $R\dash$modules up to isomorphism.
 
-### Fall 2019 Final #6 
+### Fall 2019 Final #6
 Let $V$ be a finite-dimensional $k\dash$vector space and $T:V\to V$ a non-invertible $k\dash$linear map. Show that there exists a $k\dash$linear map $S:V\to V$ with $T\circ S = 0$ but $S\circ T\neq 0$. 
 
-### Fall 2019 Final #7 
+### Fall 2019 Final #7
 Let $A\in M_n(\CC)$ with $A^2 = A$. Show that $A$ is similar to a diagonal matrix, and exhibit an explicit diagonal matrix similar to $A$.
 
-### Fall 2019 Final #8 
+### Fall 2019 Final #8
 Exhibit the rational canonical form for
   - $A\in M_6(\QQ)$ with minimal polynomial $(x-1)(x^2 + 1)^2$.
   - $A\in M_{10}(\QQ)$ with minimal polynomial $(x^2+1)^2(x^3 + 1)$.
 
-### Fall 2019 Final #9 
+### Fall 2019 Final #9
 Exhibit the rational and Jordan canonical forms for the following matrix $A\in M_4(\CC)$:
   \[
   A=\left(\begin{array}{cccc}
@@ -456,6 +494,6 @@ Exhibit the rational and Jordan canonical forms for the following matrix $A\in M
   \end{array}\right)
   .\]
 
-### Fall 2019 Final #10 
+### Fall 2019 Final #10
 Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.
 
