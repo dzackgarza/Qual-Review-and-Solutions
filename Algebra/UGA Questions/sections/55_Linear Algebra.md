@@ -302,7 +302,7 @@ $$
 
 (c) Prove that $\det M = |\Lambda\dual /\Lambda|$.
 
-\todo{Todo.}
+\todo[inline]{Todo.}
 
 :::{.solution}
 
