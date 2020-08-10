@@ -14,24 +14,6 @@ a. Show that $\bar F$ is not a finite extension of $F$.
 b. Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
   Show that $F(\alpha)/F$ has degree 8.
 
-## Spring 2020 #3
-
-Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
-
-a. Show that $F(\alpha) = F(\alpha^2)$.
-
-b. Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
-
-## Spring 2020 #4
-
-Let $f(x) = x^4-2 \in \QQ[x]$.
-
-a. Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
-
-b. Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
-
-c. Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
-
 ## Fall 2019 #4 $\bowtie$
 
 Let $F$ be a finite field with $q$ elements.
@@ -518,12 +500,23 @@ But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an 
 
 
 
-## Fall 2017 #3
+## Spring 2020 #4
 
-Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
-be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
+Let $f(x) = x^4-2 \in \QQ[x]$.
 
-Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
+a. Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
+
+b. Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
+
+c. Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
+
+## Spring 2020 #3
+
+Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
+
+a. Show that $F(\alpha) = F(\alpha^2)$.
+
+b. Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
 
 ## Fall 2017 #4
 
@@ -534,6 +527,13 @@ Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is
 (b) Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
 
 
+
+## Fall 2017 #3
+
+Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
+be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
+
+Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
 
 ## Spring 2017 #7 
 
