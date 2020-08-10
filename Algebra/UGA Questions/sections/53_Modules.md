@@ -271,20 +271,29 @@ c. Suppose that M is a non-principal ideal of $R$.
 
 #### c
 
-> Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
+**$M$ is rank 1**:
 
-**$M$ is not free:**
+- For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
 
-- **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
+- Since $M$ is not principle, it is not the zero ideal, and contains at least two elements. So we can consider an element $\vector m\in M$.
 
-  - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
-  - Toward a contradiction, suppose $\abs{B} \geq 2$ and let $m_1, m_2\in B$.
-  - Then  since $R$ is commutative, $m_2 m_1 - m_1 m_2 = 0$ and this yields a linear dependence
-  - So $B$ has only one element $m$.
+- We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of some spanning set.
 
-  - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
+- $R\vector m$ can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha \vector m = \vector 0 \implies \alpha = 0_R$.
 
-  - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
+- Claim: since $R$ is commutative, $\rank_R(M) \leq 1$.
+
+  - If we take two elements $\vector m, \vector n \in M\nonzero$, then since $m, n\in R$ as well, we have $nm = mn$ and so
+\[
+(n)\vector m + (-m)\vector n = 0_R = \vector 0
+\]
+  is a linear dependence.
+
+**$M$ is torsion-free**:
+
+- Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
+
+- But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
 
 
 :::
