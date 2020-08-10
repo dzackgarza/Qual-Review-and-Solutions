@@ -2991,6 +2991,7 @@ B & C \\
 \]
   where we've used that $W<V$ is proper to get the existence of $C, D$ (there is at least one additional row/column since $j\geq 1$ in the extended basis.)
 \todo[inline]{Why?}
+
 - Now expand along the first column block to obtain
 \[
 \chi_{T, V}(x) \definedas \det([T]_{\mcb_V} - xI) = \det(B - xI)\cdot \det(D - xI) \definedas \chi_{T, W}(x) \cdot \det(D-xI)
