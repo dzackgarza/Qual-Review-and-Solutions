@@ -100,23 +100,6 @@ Let $A$ be an abelian group, and show $A$ is a $\ZZ\dash$module in a unique way.
 
 ## Torsion and the Structure Theorem
 
-### Spring 2012 #5
-Let $M$ be a finitely generated module over a PID $R$.
-
-a. $M_t$ be the set of torsion elements of $M$, and show that $M_t$ is a submodule of $M$.
-
-b. Show that $M/M_t$ is torsion free.
-
-c. Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
-
-### Spring 2017 #5
-
-Let $R$ be an integral domain and let $M$ be a nonzero torsion $R\dash$module.
-
-a. Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is nonzero.
-
-b. Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
-
 ### $\star$ Fall 2019 #5
 
 Let $R$ be a ring and $M$ an $R\dash$module.
@@ -162,6 +145,23 @@ c. Prove that if $F$ is a free module, then any short exact sequence of $R\dash$
 d. Let $R$ be a PID. 
   Show that any finitely generated $R\dash$module $M$ can be expressed as a direct sum of a torsion module and a free module.
   You may assume that a finitely generated torsionfree module over a PID is free.
+
+### Spring 2012 #5
+Let $M$ be a finitely generated module over a PID $R$.
+
+a. $M_t$ be the set of torsion elements of $M$, and show that $M_t$ is a submodule of $M$.
+
+b. Show that $M/M_t$ is torsion free.
+
+c. Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
+
+### Spring 2017 #5
+
+Let $R$ be an integral domain and let $M$ be a nonzero torsion $R\dash$module.
+
+a. Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is nonzero.
+
+b. Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
 
 ### Fall 2019 Final #3 
 Let $R = k[x]$ for $k$ a field and let $M$ be the $R\dash$module given by

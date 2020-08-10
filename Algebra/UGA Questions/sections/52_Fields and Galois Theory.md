@@ -1,5 +1,19 @@
 # Fields and Galois Theory
 
+## $\star$ Fall 2016 #5
+
+How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
+Justify your answer.
+
+
+## $\star$ Fall 2013 #7
+Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
+
+a. Show that $\bar F$ is not a finite extension of $F$.
+
+b. Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
+  Show that $F(\alpha)/F$ has degree 8.
+
 ## Spring 2020 #3
 
 Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
@@ -561,12 +575,6 @@ b. Find the Galois group $G$ of $K$ over $\QQ$.
 c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 
-## $\star$ Fall 2016 #5
-
-How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
-Justify your answer.
-
-
 ## Spring 2016 #2
 
 Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
@@ -691,14 +699,6 @@ d. How many distinct quartic subfields of $K$ are there?
   Justify your answer.
 
 
-
-## $\star$ Fall 2013 #7
-Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
-
-a. Show that $\bar F$ is not a finite extension of $F$.
-
-b. Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
-  Show that $F(\alpha)/F$ has degree 8.
 
 ## Spring 2013 #7
 Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
