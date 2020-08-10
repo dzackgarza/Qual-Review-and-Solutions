@@ -372,8 +372,7 @@ Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
 
 (c) Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
 
-\todo{}
-\todo[inline]{}
+\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
 :::{.solution}
 
