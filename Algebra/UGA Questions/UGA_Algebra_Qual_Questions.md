@@ -2125,36 +2125,6 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 
 ## General Questions
 
-### Fall 2019 Final #2 
-Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by $f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]$. Find a basis for $N$ and describe $\ZZ^3/N$.
-
-### Spring 2018 #6.
-
-Let
-$$
-M = \{(w, x, y, z) \in \ZZ^4 \suchthat w + x + y + z \in 2\ZZ\}
-,$$
-
-and
-
-$$
-N = \{(w, x, y, z) \in \ZZ^4 \suchthat 4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)\}
-.$$
-
-a. Show that $N$ is a $\ZZ\dash$submodule of $M$ .
-
-b. Find vectors $u_1 , u_2 , u_3 , u_4 \in \ZZ^4$ and integers $d_1 , d_2 , d_3 , d_4$ such that
-$$
-\{u_1 , u_2 , u_3 , u_4 \}
-$$
-is a free basis for $M$, and
-$$
-\{d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 \}
-$$
-is a free basis for $N$ .
-
-c. Use the previous part to describe $M/N$ as a direct sum of cyclic $\ZZ\dash$modules.
-
 ### Fall 2018 #6 $\bowtie$
 
 Let $R$ be a commutative ring, and let $M$ be an $R\dash$module. 
@@ -2202,7 +2172,37 @@ Thus by (b), $H$ can not be maximal, a contradiction.
 
 :::
 
-### Spring 2018 #7.
+### Fall 2019 Final #2 
+Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by $f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]$. Find a basis for $N$ and describe $\ZZ^3/N$.
+
+### Spring 2018 #6
+
+Let
+$$
+M = \{(w, x, y, z) \in \ZZ^4 \suchthat w + x + y + z \in 2\ZZ\}
+,$$
+
+and
+
+$$
+N = \{(w, x, y, z) \in \ZZ^4 \suchthat 4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)\}
+.$$
+
+a. Show that $N$ is a $\ZZ\dash$submodule of $M$ .
+
+b. Find vectors $u_1 , u_2 , u_3 , u_4 \in \ZZ^4$ and integers $d_1 , d_2 , d_3 , d_4$ such that
+$$
+\{u_1 , u_2 , u_3 , u_4 \}
+$$
+is a free basis for $M$, and
+$$
+\{d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 \}
+$$
+is a free basis for $N$ .
+
+c. Use the previous part to describe $M/N$ as a direct sum of cyclic $\ZZ\dash$modules.
+
+### Spring 2018 #7
 
 Let $R$ be a PID and $M$ be an $R\dash$module. Let $p$ be a prime element of $R$. The module $M$ is called *$\generators{p}\dash$primary* if for every $m \in M$ there exists $k > 0$ such that $p^k m = 0$.
 
