@@ -1,1 +1,5 @@
-Here is a thing $A\coloneqq B$ and more.
+Here is a thing 
+\[
+A\coloneqq B
+\] 
+and more.
