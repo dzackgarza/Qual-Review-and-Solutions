@@ -46,7 +46,7 @@ Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
 :::{.solution}
 
-#### a
+a
 
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
 
@@ -60,7 +60,7 @@ So
 
 - $\iff M/N$ is simple.
 
-#### b
+b
 
 Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
 
@@ -68,7 +68,7 @@ By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides 
 In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
 So $\abs{M/N}$ can not be composite, and therefore must be prime.
 
-#### c
+c
 
 Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
 
