@@ -210,4 +210,238 @@ b. Prove that the rank of $M$ is equal to the rank of of $M/\tor(M )$.
 
 c. Suppose that M is a non-principal ideal of $R$.
 
-  Prove that $M$ is torsion-free of rank 1 but not free.
+    Prove that $M$ is torsion-free of rank 1 but not free.
+
+:::{.solution}
+
+#### a
+
+- Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
+- Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
+\[  
+\sum_{i=1}^n s_i \vector r_i = 0 \implies s_i = 0_R \,\forall i
+.\]
+- Let $\vector r$ be any of of these generating elements.
+- Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
+- Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
+
+#### c
+
+> Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
+
+**$M$ is not free:**
+
+- **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
+
+  - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
+  - Toward a contradiction, suppose $\abs{B} \geq 2$ and let $m_1, m_2\in B$.
+  - Then  since $R$ is commutative, $m_2 m_1 - m_1 m_2 = 0$ and this yields a linear dependence
+  - So $B$ has only one element $m$.
+
+  - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
+
+  - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
+
+**$M$ is rank 1**:
+
+- For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
+
+- Since $M$ is not principle, it is not the zero ideal, and contains at least two elements. So we can consider an element $\vector m\in M$.
+
+- We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of some spanning set.
+
+- $R\vector m$ can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha \vector m = \vector 0 \implies \alpha = 0_R$.
+
+- Claim: since $R$ is commutative, $\rank_R(M) \leq 1$.
+
+  - If we take two elements $\vector m, \vector n \in M\nonzero$, then since $m, n\in R$ as well, we have $nm = mn$ and so
+\[
+(n)\vector m + (-m)\vector n = 0_R = \vector 0
+\]
+  is a linear dependence.
+
+**$M$ is torsion-free**:
+
+- Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
+
+- But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
+
+
+:::
+
+### $\star$ Spring 2020 #6 $\bowtie$
+
+Let $R$ be a ring with unity.
+
+a. Give a definition for a free module over $R$.
+
+b. Define what it means for an $R\dash$module to be torsion free.
+
+c. Prove that if $F$ is a free module, then any short exact sequence of $R\dash$modules of the following form splits:
+\[
+0 \to N \to M \to F \to 0
+.\]
+
+d. Let $R$ be a PID. 
+  Show that any finitely generated $R\dash$module $M$ can be expressed as a direct sum of a torsion module and a free module.
+  
+> You may assume that a finitely generated torsionfree module over a PID is free.
+
+:::{.solution}
+Let $R$ be a ring with 1.
+
+#### a
+An $R\dash$module $M$ is **free** if any of the following conditions hold:
+
+- $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
+- $M \cong \bigoplus_{\alpha} R$ are isomorphic as $R\dash$modules.
+- There is a nonempty set $X$ and an inclusion $X\injects M$ such that for every $R\dash$modules $N$, every map $X\to N$ lifts to a unique map $M\to N$, so the following diagram commutes:
+\begin{center}
+\begin{tikzcd}
+M \ar[rd, dotted, "\exists ! \tilde f"] & \\
+X \ar[u, hook] \ar[r, "f"] & N
+\end{tikzcd}
+\end{center}
+
+#### b
+
+$M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
+
+#### c
+
+- Let the following be an SES where $F$ is a free $R\dash$module:
+\[
+0 \to N \to M \mapsvia{\pi} F \to 0
+.\]
+
+- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
+- If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
+- Note $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $$\pi(y_\alpha) = \iota(x_\alpha).$$
+- Define a map
+\[
+f: X&\to M \\
+x_\alpha &\mapsto y_\alpha
+.\]
+- By the universal property, this yields a map $h: F\to M$, commutativity forces $(h\circ \iota)(x_\alpha) = y_\alpha$, i.e. we have a diagram
+\begin{center}
+\begin{tikzcd}
+& & & X=\theset{x_\alpha} \ar[dd, hook, "\iota"]\ar[ddl, "f"'] &  \\ \\
+0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
+\end{tikzcd}
+\end{center}
+
+- It remains to check that it's a section:
+\[
+f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
+\implies (\pi \circ h)(f) 
+&= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
+&= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
+&= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
+&= \sum_\alpha r_\alpha \pi(y_\alpha) \\
+&= \sum_\alpha r_\alpha \iota(x_\alpha) \\
+&\definedas f
+\]
+
+- Checking $(h\circ \pi)(m) = m$: seems to be hard! 
+- Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
+
+
+Short proof:
+
+- Free implies projective
+- Universal property of projective modules: for every surjective $\pi:M\to N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+\begin{center}
+\begin{tikzcd}
+ & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
+M \ar[r, "\pi"] & N
+\end{tikzcd}
+\end{center}
+- Take the identity map:
+\begin{center}
+\begin{tikzcd}
+ & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
+0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
+\end{tikzcd}
+\end{center}
+
+#### d
+
+- Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
+- Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
+  - Let $m+M_t \in M/M_t$ and suppose it is torsion, we will show that is must be the zero coset.
+  - Then there exists an $r\in R$ such that $r(m + M_t) = M_t$
+  - Then $rm + M_t = M_t$, so $rm\in M_t$.
+  - By definition of $M_t$, every element is torsion, so there exists some $s\in R$ such $s(rm) = 0_M$.
+  - Then $(sr)m = 0_M$ which forces $m\in M_t$
+  - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
+- There is a SES
+\begin{center}
+\begin{tikzcd}
+0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
+\end{tikzcd}
+\end{center}
+  and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
+
+
+:::
+
+
+
+### Spring 2012 #5
+Let $M$ be a finitely generated module over a PID $R$.
+
+a. $M_t$ be the set of torsion elements of $M$, and show that $M_t$ is a submodule of $M$.
+
+b. Show that $M/M_t$ is torsion free.
+
+c. Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
+
+### Spring 2017 #5
+
+Let $R$ be an integral domain and let $M$ be a nonzero torsion $R\dash$module.
+
+a. Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is nonzero.
+
+b. Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
+
+### Fall 2019 Final #3
+Let $R = k[x]$ for $k$ a field and let $M$ be the $R\dash$module given by
+  \[
+  M=\frac{k[x]}{(x-1)^{3}} \oplus \frac{k[x]}{\left(x^{2}+1\right)^{2}} \oplus \frac{k[x]}{(x-1)\left(x^{2}+1\right)^{4}} \oplus \frac{k[x]}{(x+2)\left(x^{2}+1\right)^{2}}
+  .\]
+  Describe the elementary divisors and invariant factors of $M$.
+
+### Fall 2019 Final #4
+Let $I = (2, x)$ be an ideal in $R = \ZZ[x]$, and show that $I$ is not a direct sum of nontrivial cyclic $R\dash$modules.
+
+### Fall 2019 Final #5
+Let $R$ be a PID. 
+
+- Classify irreducible $R\dash$modules up to isomorphism.
+- Classify indecomposable $R\dash$modules up to isomorphism.
+
+### Fall 2019 Final #6
+Let $V$ be a finite-dimensional $k\dash$vector space and $T:V\to V$ a non-invertible $k\dash$linear map. Show that there exists a $k\dash$linear map $S:V\to V$ with $T\circ S = 0$ but $S\circ T\neq 0$. 
+
+### Fall 2019 Final #7
+Let $A\in M_n(\CC)$ with $A^2 = A$. Show that $A$ is similar to a diagonal matrix, and exhibit an explicit diagonal matrix similar to $A$.
+
+### Fall 2019 Final #8
+Exhibit the rational canonical form for
+  - $A\in M_6(\QQ)$ with minimal polynomial $(x-1)(x^2 + 1)^2$.
+  - $A\in M_{10}(\QQ)$ with minimal polynomial $(x^2+1)^2(x^3 + 1)$.
+
+### Fall 2019 Final #9
+Exhibit the rational and Jordan canonical forms for the following matrix $A\in M_4(\CC)$:
+  \[
+  A=\left(\begin{array}{cccc}
+  2 & 0 & 0 & 0 \\
+  1 & 1 & 0 & 0 \\
+  -2 & -2 & 0 & 1 \\
+  -2 & 0 & -1 & -2
+  \end{array}\right)
+  .\]
+
+### Fall 2019 Final #10
+Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.
+
