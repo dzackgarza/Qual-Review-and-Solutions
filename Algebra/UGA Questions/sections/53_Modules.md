@@ -46,10 +46,6 @@ Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
 :::{.solution}
 
-a
-
-By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
-
 :::
 
 ### Spring 2018 #7.
