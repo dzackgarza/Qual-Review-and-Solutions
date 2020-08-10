@@ -1,5 +1,6 @@
 # Modules
 
+## General Questions
 
 ### Fall 2019 Final #2 
 Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by $f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]$. Find a basis for $N$ and describe $\ZZ^3/N$.
@@ -45,7 +46,7 @@ Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
 :::{.solution}
 
-### a
+#### a
 
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
 
@@ -59,7 +60,7 @@ So
 
 - $\iff M/N$ is simple.
 
-### b
+#### b
 
 Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
 
@@ -67,7 +68,7 @@ By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides 
 In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
 So $\abs{M/N}$ can not be composite, and therefore must be prime.
 
-### c
+#### c
 
 Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
 
@@ -78,8 +79,6 @@ Thus by (b), $H$ can not be maximal, a contradiction.
 
 
 :::
-
-
 
 ### Spring 2018 #7.
 
