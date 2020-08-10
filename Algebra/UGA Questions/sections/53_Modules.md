@@ -231,27 +231,31 @@ c. Suppose that M is a non-principal ideal of $R$.
 - Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
 
 **Claim:** 
-\[\tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}$ is a basis for $\tilde M$.
+\[
+\tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}
+\]
+is a basis for $\tilde M$.
 
-  - **Linearly Independent:**
+- **Linearly Independent:**
 
-    - Suppose that
+  - Suppose that
   \[
   \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
   .\]
 
-    - Then using the definition of coset addition/multiplication, we can write this as
+  - Then using the definition of coset addition/multiplication, we can write this as
   \[  
   \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
   \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
   .\]
-    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
+  
+  - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
 
-    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
+  - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
 
-    - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
+  - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
 
-    - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
+  - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
 
   - **Spanning:**
 
