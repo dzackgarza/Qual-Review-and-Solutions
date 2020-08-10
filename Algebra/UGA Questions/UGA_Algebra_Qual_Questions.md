@@ -2439,8 +2439,6 @@ $\qed$
 :::
 
 
-
-
 ### $\star$ Spring 2020 #6 $\bowtie$
 
 Let $R$ be a ring with unity.
