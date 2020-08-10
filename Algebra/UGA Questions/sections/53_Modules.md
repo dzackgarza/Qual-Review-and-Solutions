@@ -50,18 +50,6 @@ a
 
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
 
-So 
-
-- $M$ is maximal:
-
-- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
-
-- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
-
-- $\iff M/N$ is simple.
-
-
-
 :::
 
 ### Spring 2018 #7.
