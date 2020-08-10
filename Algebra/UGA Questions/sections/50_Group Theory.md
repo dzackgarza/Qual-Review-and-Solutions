@@ -13,7 +13,7 @@ c. Describe one nonabelian group of order 2020.
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
-## $\rockon$ Fall 2019 #1 
+## Fall 2019 #1 $\bowtie$ 
 
 
 
@@ -87,7 +87,7 @@ Concepts used:
 
 :::
 
-## Fall 2019 #2
+## Fall 2019 #2 $\bowtie$
 
 Let $G$ be a group of order 105 and let $P, Q, R$ be Sylow 3, 5, 7 subgroups respectively.
 
