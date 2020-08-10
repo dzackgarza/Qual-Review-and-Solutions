@@ -2380,13 +2380,13 @@ is a basis for $\tilde M$.
 
   - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
 
-  - **Spanning:**
+- **Spanning:**
 
-    - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
+  - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
 
-    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
+  - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
 
-    - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
+  - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
   \[
   \vector x
   &= \pi(\vector m) \\
@@ -2394,7 +2394,7 @@ is a basis for $\tilde M$.
   &= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
   &\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
   ,\]
-  which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
+    which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
 
 #### c
 
