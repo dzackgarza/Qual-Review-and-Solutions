@@ -1351,503 +1351,774 @@ c. Is a Euclidean domain an UFD?
 d. Is a UFD a Euclidean domain?
   Give either a proof or a counterexample with justification.
 
-# Modules
+# Fields and Galois Theory
 
-## General Questions
+## $\star$ Fall 2016 #5
 
-### Fall 2019 Final #2 
-Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by $f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]$. Find a basis for $N$ and describe $\ZZ^3/N$.
-
-### Spring 2018 #6.
-
-Let
-$$
-M = \{(w, x, y, z) \in \ZZ^4 \suchthat w + x + y + z \in 2\ZZ\}
-,$$
-
-and
-
-$$
-N = \{(w, x, y, z) \in \ZZ^4 \suchthat 4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)\}
-.$$
-
-(a) Show that $N$ is a $\ZZ\dash$submodule of $M$ .
-
-(b) Find vectors $u_1 , u_2 , u_3 , u_4 \in \ZZ^4$ and integers $d_1 , d_2 , d_3 , d_4$ such that
-$$
-\{u_1 , u_2 , u_3 , u_4 \}
-$$
-is a free basis for $M$, and
-$$
-\{d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 \}
-$$
-is a free basis for $N$ .
-
-(c) Use the previous part to describe $M/N$ as a direct sum of cyclic $\ZZ\dash$modules.
-
-### Fall 2018 #6 $\bowtie$
-
-Let $R$ be a commutative ring, and let $M$ be an $R\dash$module. 
-An $R\dash$submodule $N$ of $M$ is maximal if there is no $R\dash$module $P$ with $N \subsetneq P \subsetneq M$.
-
-(a) Show that an $R\dash$submodule $N$ of $M$ is maximal $\iff M /N$ is a simple $R\dash$module: i.e., $M /N$ is nonzero and has no proper, nonzero $R\dash$submodules.
-
-(b) Let $M$ be a $\ZZ\dash$module. Show that a $\ZZ\dash$submodule $N$ of $M$ is maximal $\iff \#M /N$ is a prime number.
-
-(c) Let $M$ be the $\ZZ\dash$module of all roots of unity in $\CC$ under multiplication.
-Show that there is no maximal $\ZZ\dash$submodule of $M$.
-
-:::{.solution}
-
-#### a
-
-By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
-
-So 
-
-- $M$ is maximal:
-
-- $\iff$ no such (proper, nontrivial) submodule $A$ exists 
-
-- $\iff$ there are no (proper, nontrivial) submodules of $M/N$ 
-
-- $\iff M/N$ is simple.
-
-#### b
-
-Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
-
-By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
-In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
-So $\abs{M/N}$ can not be composite, and therefore must be prime.
-
-#### c
-
-Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
-
-Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
-
-But this means there are infinitely many elements in $G\setminus H$, and so $\infty = [G: H] = \abs{G/H}$ is not a prime. 
-Thus by (b), $H$ can not be maximal, a contradiction.
+How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
+Justify your answer.
 
 
-:::
+## $\star$ Fall 2013 #7
+Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
 
-### Spring 2018 #7.
+a. Show that $\bar F$ is not a finite extension of $F$.
 
-Let $R$ be a PID and $M$ be an $R\dash$module. Let $p$ be a prime element of $R$. The module $M$ is called *$\generators{p}\dash$primary* if for every $m \in M$ there exists $k > 0$ such that $p^k m = 0$.
+b. Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
+  Show that $F(\alpha)/F$ has degree 8.
 
-(a) Suppose M is $\generators{p}\dash$primary. Show that if $m \in M$ and $t \in R, ~t \not\in \generators{p}$, then there exists $a \in R$ such that
-$atm = m$.
+## Spring 2020 #3
 
-(b) A submodule $S$ of $M$ is said to be *pure* if $S \cap r M = rS$ for all $r \in R$. Show that if $M$ is $\generators{p}\dash$primary, then $S$ is pure if and only if $S \cap p^k M = p^k S$ for all $k \geq 0$.
+Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
 
+a. Show that $F(\alpha) = F(\alpha^2)$.
 
-### Fall 2016 #6
-Let $R$ be a ring and $f: M\to N$ and $g: N\to M$ be $R\dash$module homomorphisms such that $g\circ f = \id_M$.
-Show that $N\cong \im f \oplus \ker g$.
+b. Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
 
+## Spring 2020 #4
 
-### Spring 2016 #4
+Let $f(x) = x^4-2 \in \QQ[x]$.
 
-Let $R$ be a ring with the following commutative diagram of $R\dash$modules, where each row represents a short exact sequence of $R\dash$modules:
+a. Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
 
-\begin{center}
-\begin{tikzcd}
-0 \ar[r] & A \ar[d, "\alpha"] \ar[r, "f"] & B \ar[d, "\beta"] \ar[r, "g"] & C \ar[r] \ar[d, "\gamma"] & 0 \\
-0 \ar[r] & A' \ar[r, "f'"] & B'\ar[r, "g'"] & C' \ar[r] & 0 
-\end{tikzcd}
-\end{center}
+b. Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
 
-Prove that if $\alpha$ and $\gamma$ are isomorphisms then $\beta$ is an isomorphism.
+c. Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
 
+## Fall 2019 #4 $\bowtie$
 
-### Spring 2015 #8
-Let $R$ be a PID and $M$ a finitely generated $R\dash$module.
+Let $F$ be a finite field with $q$ elements.
 
-a. Prove that there are $R\dash$submodules 
-  \[
-  0 = M_0 \subset M_1 \subset \cdots \subset M_n = M
-  \]
-  such that for all $0\leq i \leq n-1$, the module $M_{i+1}/M_i$ is cyclic.
+Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
 
-b. Is the integer $n$ in part (a) uniquely determined by $M$? 
-  Prove your answer.
+Let $E = F [\omega]$ and let $k = [E : F]$.
 
+(a) Prove that $n$ divides $q^{k}-1$.
 
+(b) Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
+Prove that $m$ divides $k$.
 
-### Fall 2012 #6
-Let $R$ be a ring and $M$ an $R\dash$module.
-Recall that $M$ is *Noetherian* iff any strictly increasing chain of submodule $M_1 \subsetneq M_2 \subsetneq \cdots$ is finite.
-Call a proper submodule $M' \subsetneq M$ *intersection-decomposable* if it can not be written as the intersection of two proper submodules $M' = M_1\intersect M_2$ with $M_i \subsetneq M$.
+(c) Prove that $m = k$.
 
-Prove that for every Noetherian module $M$, any proper submodule $N\subsetneq M$ can be written as a finite intersection $N = N_1 \intersect \cdots \intersect N_k$ of intersection-indecomposable modules.
-
-
-### Fall 2019 Final #1 
-Let $A$ be an abelian group, and show $A$ is a $\ZZ\dash$module in a unique way.
-
-
-## Torsion and the Structure Theorem
-
-### $\star$ Fall 2019 #5 $\bowtie$
-
-Let $R$ be a ring and $M$ an $R\dash$module.
-
-> Recall that the set of torsion elements in M is defined by
-$$
-\Tor(m) = \{m \in M \suchthat \exists r \in R, ~r \neq 0, ~rm = 0\}
-.$$
-
-(a) Prove that if $R$ is an integral domain, then $\Tor(M )$ is a submodule of $M$ .
-
-(b) Give an example where $\Tor(M )$ is not a submodule of $M$.
-
-(c) If $R$ has zero-divisors, prove that every non-zero $R\dash$module has non-zero torsion elements.
+\todo[inline]{Revisit, tricky!}
 
 :::{.solution}
 
-> One-step submodule test.
+Concepts used:
 
-#### a
+- Theorem: $F\units$ is always cyclic for $F$ a field
 
-It suffices to show that 
-$$
-r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
-.$$
+**Solution**:
 
-We have
+### a
+
+- Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
+
+- Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
+
+### b
+
+- Rephrasing (a), we have 
 \[
-t_1 \in \Tor(M) &\implies \exists s_1 \neq 0 \text{ such that } s_1 t_1  = 0 \\
-t_2 \in \Tor(M) &\implies \exists s_2 \neq 0 \text{ such that } s_2 t_2  = 0 
+n \divides q^k-1 
+&\iff q^k-1 \cong 0 \mod n \\
+&\iff q^k \cong 1 \mod n \\
+&\iff m \definedas o(q) \divides k
 .\]
 
-Since $R$ is an integral domain, $s_1 s_2 \neq 0$.
-Then
+### c
+
+- Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
 \[
-s_1 s_2(rt_1 + t_2) 
-&= s_1 s_2 r t_1 + s_1 s_2t_2 \\
-&= s_2 r (s_1 t_1) + s_1 (s_2 t_2)  \quad\text{since $R$ is commutative} \\
-&=  s_2 r(0) + s_1(0) \\
-&= 0
-.\]
+E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+,\]
 
-#### b
+  so $M$ is a degree $m$ extension of $E$.
 
-Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
+- Now consider $M\units$. 
+- By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
 
-Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 + [3]_6 = [5]_6$, where 5 is coprime to 6, and thus $[n]_6\actson [5]_6 = [0] \implies [n]_6 = [0]_6$. So $[5]_6$ is *not* a torsion element.
+- But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
 
-So the set of torsion elements are not closed under addition, and thus not a submodule.
+- So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
 
-#### c
+- But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
 
-Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
-Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
-$$
-a\actson bm = (ab)\actson m = 0\actson m = 0_M
-,$$ 
-so $m$ is a torsion element for any $m$.
-
-
+- Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
 :::
 
 
 
-### $\star$ Spring 2019 #5 $\bowtie$
+## Fall 2019 #7 $\bowtie$
 
-Let $R$ be an integral domain. Recall that if $M$ is an $R\dash$module, the *rank* of $M$ is
-defined to be the maximum number of $R\dash$linearly independent elements of $M$ .
+Let $\zeta_n$ denote a primitive $n$th root of 1 $\in \QQ$.
+You may assume the roots of the minimal polynomial $p_n(x)$ of $\zeta_n$ are exactly the primitive $n$th roots of 1.
 
-(a) Prove that for any $R\dash$module $M$, the rank of $\tor(M )$ is 0.
+Show that the field extension $\QQ(\zeta_n )$ over $\QQ$ is Galois and prove its Galois group is $(\ZZ/n\ZZ)\units$.
 
-(b) Prove that the rank of $M$ is equal to the rank of of $M/\tor(M )$.
-
-(c) Suppose that M is a non-principal ideal of $R$.
-
-    Prove that $M$ is torsion-free of rank 1 but not free.
+How many subfields are there of $\QQ(\zeta_{20} )$?
 
 :::{.solution}
 
-#### a
+Concepts Used:
 
-- Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
-- Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
-\[  
-\sum_{i=1}^n s_i \vector r_i = 0 \implies s_i = 0_R \,\forall i
+- **Galois** = normal + separable.
+
+- **Separable**: Minimal polynomial of every element has distinct roots.
+
+- **Normal (if separable)**: Splitting field of an irreducible polynomial.
+
+- Definition: $\zeta$ is a primitive root of unity iff $o(\zeta) = n$ in $F\units$.
+ 
+- $\phi(p^k) = p^{k-1}(p-1)$
+
+- The lattice: 
+
+![](figures/2019-12-24-13-19-15.png)
+
+**Solution**:
+
+Let $K = \QQ(\zeta)$. 
+Then $K$ is the splitting field of $f(x) = x^n - 1$, which is irreducible over $\QQ$, so $K/\QQ$ is normal.
+We also have $f'(x) = nx^{n-1}$ and $\gcd(f, f') = 1$ since they can not share any roots.
+
+> Or equivalently, $f$ splits into distinct linear factors $f(x) = \prod_{k\leq n}(x-\zeta^k)$.
+
+Since it is a Galois extension, $\abs{\Gal(K/\QQ)} = [K: \QQ] = \phi(n)$ for the totient function.
+
+We can now define maps
+\[
+\tau_j: K &\to K \\
+\zeta &\mapsto \zeta^j 
+\]
+
+and if we restrict to $j$ such that $\gcd(n, j) = 1$, this yields $\phi(n)$ maps.
+Noting that if $\zeta$ is a primitive root, then $(n, j) = 1$ implies that that $\zeta^j$ is also a primitive root, and hence another root of $\min(\zeta, \QQ)$, and so these are in fact automorphisms of $K$ that fix $\QQ$ and thus elements of $\Gal(K/\QQ)$.
+
+So define a map
+\[
+\theta: \ZZ_n\units &\to K \\
+[j]_n &\mapsto \tau_j
 .\]
-- Let $\vector r$ be any of of these generating elements.
-- Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
-- Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
+
+from the *multiplicative* group of units to the Galois group.
+
+The claim is that this is a surjective homomorphism, and since both groups are the same size, an isomorphism.
+
+**Surjectivity:**
+
+Letting $\sigma \in K$ be arbitrary, noting that $[K: \QQ]$ has a basis $\theset{1, \zeta, \zeta^2, \cdots, \zeta^{n-1}}$, it suffices to specify $\sigma(\zeta)$ to fully determine the automorphism.
+(Since $\sigma(\zeta^k) = \sigma(\zeta)^k$.)
+
+In particular, $\sigma(\zeta)$ satisfies the polynomial $x^n - 1$, since $\sigma(\zeta)^n = \sigma(\zeta^n) = \sigma(1) = 1$, which means $\sigma(\zeta)$ is another root of unity and $\sigma(\zeta) = \zeta^k$ for some $1\leq k \leq n$.
+
+Moreover, since $o(\zeta) = n \in K\units$, we must have $o(\zeta^k) = n \in K\units$ as well. Noting that $\theset{\zeta^i}$ forms a cyclic subgroup $H\leq K\units$, then $o(\zeta^k) = n \iff (n, k) = 1$ (by general theory of cyclic groups).
+
+Thus $\theta$ is surjective.
+
+**Homomorphism:**
+
+\[
+\tau_j \circ \tau_k (\zeta) =\tau_j(\zeta^k) = \zeta^{jk} \implies
+\tau_{jk} = \theta(jk) = \tau_j \circ \tau_k
+.\]
+
+**Part 2:**
+
+We have $K \cong \ZZ_{20}\units$ and $\phi(20) = 8$, so $K \cong \ZZ_8$, so we have the following subgroups and corresponding intermediate fields:
+
+- $0 \sim \QQ(\zeta_{20})$
+- $\ZZ_2 \sim \QQ(\omega_1)$
+- $\ZZ_4 \sim \QQ(\omega_2)$
+- $\ZZ_8 \sim \QQ$
+
+For some elements $\omega_i$ which exist by the primitive element theorem.
+
+
+
+:::
+
+## Spring 2019 #2 $\bowtie$
+
+Let $F = \FF_p$ , where $p$ is a prime number.
+
+(a) Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
+
+
+(b) Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$,
+then $\deg \pi(x)$ divides $n$.
+
+:::{.solution}
+
+### (a)
+
+> Go to a field extension.
+> Orders of multiplicative groups for finite fields are known.
+
+We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
+
+Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
+
+So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
+
+Since $\rho$ is a ring morphism, we have
+
+\[
+\rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
+&= 0 \in K \\
+&\iff q(x) \in \ker \rho \\
+&\iff q(x) \in \generators{\pi(x)} \\
+&\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
+.\]
 
 $\qed$
 
-#### b
+### (b)
 
-- Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
-- Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
+> Some potentially useful facts:
+>
+> - $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+> - $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+> - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+> - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 
-- **Claim:** 
-  $\tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}$ is a basis for $\tilde M$.
+Claim: $\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
 
-  - **Linearly Independent:**
+$\implies$:
+Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
+Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
 
-    - Suppose that
-  \[
-  \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
-  .\]
-
-    - Then using the definition of coset addition/multiplication, we can write this as
-  \[  
-  \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
-  \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
-  .\]
-    - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
-
-    - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
-
-    - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
-
-    - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
-
-  - **Spanning:**
-
-    - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
-
-    - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
-
-    - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
-  \[
-  \vector x
-  &= \pi(\vector m) \\
-  &\definedas \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
-  &= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
-  &\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
-  ,\]
-  which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
-
-#### c
-
-> Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
-
-**$M$ is not free:**
-
-- **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
-
-  - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
-  - Toward a contradiction, suppose $\abs{B} \geq 2$ and let $m_1, m_2\in B$.
-  - Then  since $R$ is commutative, $m_2 m_1 - m_1 m_2 = 0$ and this yields a linear dependence
-  - So $B$ has only one element $m$.
-
-  - But then $I = \gens{m} = R_m$ is cyclic as an $R\dash$ module and thus principal as an ideal of $R$. 
-
-  - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
-
-**$M$ is rank 1**:
-
-- For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
-
-- Since $M$ is not principle, it is not the zero ideal, and contains at least two elements. So we can consider an element $\vector m\in M$.
-
-- We have $\rank_R(M) \geq 1$, since $R\vector m \leq M$ and $\theset{m}$ is a subset of some spanning set.
-
-- $R\vector m$ can not be linearly dependent, since $R$ is an integral domain and $M\subseteq R$, so $\alpha \vector m = \vector 0 \implies \alpha = 0_R$.
-
-- Claim: since $R$ is commutative, $\rank_R(M) \leq 1$.
-
-  - If we take two elements $\vector m, \vector n \in M\nonzero$, then since $m, n\in R$ as well, we have $nm = mn$ and so
+Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
 \[
-(n)\vector m + (-m)\vector n = 0_R = \vector 0
-\]
-  is a linear dependence.
+n &= [L: \FF_p] \\
+&= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
+&= \ell d
+,\]
 
-**$M$ is torsion-free**:
+for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
-- Let $\vector x \in \tor M$, then there exists some $r\neq 0\in R$ such that $r\vector x = \vector 0$.
 
-- But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
+$\impliedby$:
+If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
+So $f = f_i$ for some $i$.
 
 
 :::
 
 
 
+## Spring 2019 #8 $\bowtie$
 
-### $\star$ Spring 2020 #6 $\bowtie$
+Let $\zeta = e^{2\pi i/8}$.
 
-Let $R$ be a ring with unity.
+(a) What is the degree of $\QQ(\zeta)/\QQ$?
 
-a. Give a definition for a free module over $R$.
+(b) How many quadratic subfields of $\QQ(\zeta)$ are there?
 
-b. Define what it means for an $R\dash$module to be torsion free.
+(c) What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 
-c. Prove that if $F$ is a free module, then any short exact sequence of $R\dash$modules of the following form splits:
-\[
-0 \to N \to M \to F \to 0
-.\]
-
-d. Let $R$ be a PID. 
-  Show that any finitely generated $R\dash$module $M$ can be expressed as a direct sum of a torsion module and a free module.
-  
-> You may assume that a finitely generated torsionfree module over a PID is free.
 
 :::{.solution}
-Let $R$ be a ring with 1.
 
-#### a
-An $R\dash$module $M$ is **free** if any of the following conditions hold:
+Concepts used:
 
-- $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
-- $M \cong \bigoplus_{\alpha} R$ are isomorphic as $R\dash$modules.
-- There is a nonempty set $X$ and an inclusion $X\injects M$ such that for every $R\dash$modules $N$, every map $X\to N$ lifts to a unique map $M\to N$, so the following diagram commutes:
-\begin{center}
-\begin{tikzcd}
-M \ar[rd, dotted, "\exists ! \tilde f"] & \\
-X \ar[u, hook] \ar[r, "f"] & N
-\end{tikzcd}
-\end{center}
+- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
+  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
+- $\deg \Phi_n(x) = \phi(n)$
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
-#### b
+**Solution**:
 
-$M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
+Let $K = \QQ(\zeta)$
 
-#### c
+### a
 
-- Let the following be an SES where $F$ is a free $R\dash$module:
+- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
+- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
+- The degree of the field extension is the degree of $\Phi_8$, which is
 \[
-0 \to N \to M \mapsvia{\pi} F \to 0
+\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
 .\]
+- So $[\QQ(\zeta): \QQ] = 4$.
 
-- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
-- If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
-- Note $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $$\pi(y_\alpha) = \iota(x_\alpha).$$
-- Define a map
-\[
-f: X&\to M \\
-x_\alpha &\mapsto y_\alpha
-.\]
-- By the universal property, this yields a map $h: F\to M$, commutativity forces $(h\circ \iota)(x_\alpha) = y_\alpha$, i.e. we have a diagram
-\begin{center}
-\begin{tikzcd}
-& & & X=\theset{x_\alpha} \ar[dd, hook, "\iota"]\ar[ddl, "f"'] &  \\ \\
-0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
-\end{tikzcd}
-\end{center}
+### b
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
+- $\ZZ/(4)$ has exactly one subgroup of index 2.
+- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
 
-- It remains to check that it's a section:
+### c
+- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
+
+- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
+  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
+    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
+  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
+    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
+
+- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
+  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
+
+- Conclude
 \[
-f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
-\implies (\pi \circ h)(f) 
-&= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
-&= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
-&= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
-&= \sum_\alpha r_\alpha \pi(y_\alpha) \\
-&= \sum_\alpha r_\alpha \iota(x_\alpha) \\
-&\definedas f
+[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
 \]
-
-- Checking $(h\circ \pi)(m) = m$: seems to be hard! 
-- Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
-
-
-Short proof:
-
-- Free implies projective
-- Universal property of projective modules: for every surjective $\pi:M\to N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
-\begin{center}
-\begin{tikzcd}
- & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
-M \ar[r, "\pi"] & N
-\end{tikzcd}
-\end{center}
-- Take the identity map:
-\begin{center}
-\begin{tikzcd}
- & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
-0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
-\end{tikzcd}
-\end{center}
-
-#### d
-
-- Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
-- Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
-  - Let $m+M_t \in M/M_t$ and suppose it is torsion, we will show that is must be the zero coset.
-  - Then there exists an $r\in R$ such that $r(m + M_t) = M_t$
-  - Then $rm + M_t = M_t$, so $rm\in M_t$.
-  - By definition of $M_t$, every element is torsion, so there exists some $s\in R$ such $s(rm) = 0_M$.
-  - Then $(sr)m = 0_M$ which forces $m\in M_t$
-  - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
-- There is a SES
-\begin{center}
-\begin{tikzcd}
-0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
-\end{tikzcd}
-\end{center}
-  and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
+  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
 
 
 :::
 
 
 
-### Spring 2012 #5
-Let $M$ be a finitely generated module over a PID $R$.
+## Fall 2018 #3 $\bowtie$
 
-a. $M_t$ be the set of torsion elements of $M$, and show that $M_t$ is a submodule of $M$.
+Let $F \subset K \subset L$ be finite degree field extensions.
+For each of the following assertions, give a proof or a counterexample.
 
-b. Show that $M/M_t$ is torsion free.
+(a) If $L/F$ is Galois, then so is $K/F$.
 
-c. Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
+(b) If $L/F$ is Galois, then so is $L/K$.
 
-### Spring 2017 #5
+(c) If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
-Let $R$ be an integral domain and let $M$ be a nonzero torsion $R\dash$module.
+:::{.solution}
 
-a. Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is nonzero.
+Let $L/K/F$.
 
-b. Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
+### a
 
-### Fall 2019 Final #3
-Let $R = k[x]$ for $k$ a field and let $M$ be the $R\dash$module given by
+**False**: 
+Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
+
+Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
+
+But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
+
+### b
+
+**True**: 
+If $L/F$ is Galois, then $L/K$ is normal and separable:
+
+- $L/K$ is normal, since if $\sigma: L \injects \overline K$ lifts the identity on $K$ and fixes $L$, i-t also lifts the identity on $F$ and fixes $L$ (and $\overline K = \overline F$).
+
+- $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
+
+### c
+
+**False**: 
+Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
+
+Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ is not the splitting field of any polynomial (noting that it does not split $x^4 - 2$ completely.)
+
+
+:::
+
+
+
+## Spring 2018 #2 $\bowtie$
+
+Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
+
+(a) Find the splitting field $K$ of $f$, and compute $[K: \QQ]$.
+
+(b) Find the Galois group $G$ of $f$, both as an explicit group of automorphisms, and as a familiar abstract group to which it is isomorphic.
+
+(c) Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
+
+\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
+
+:::{.solution}
+
+### a
+
+Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
+\[
+\alpha_1 &= \sqrt{2 + \sqrt 2} \\
+\alpha_2 &= \sqrt{2 - \sqrt 2} \\
+\alpha_3 &= -\alpha_1 \\
+\alpha_4 &= -\alpha_2
+.\]
+
+and splitting field $K = \QQ(\theset{\alpha_i})$.
+
+### b
+
+$K$ is the splitting field of a separable polynomial and thus Galois over $\QQ$.
+Moreover, Since $f$ is irreducible by Eisenstein with $p=2$, the Galois group is a transitive subgroup of $S^4$, so the possibilities are:
+
+- $S_4$
+- $A_4$
+- $D_4$
+- $\ZZ/(2) \cross \ZZ/(2)$
+- $\ZZ/(4)$
+
+We can note that $g$ splits over $L \definedas \QQ(\sqrt 2)$, an extension of degree 2.
+
+We can now note that $\min(\alpha, L)$ is given by $p(x) = x^2 - (2 + \sqrt 2)$, and so $[K: L] = 2$.
+
+We then have
+\[
+[K: \QQ] = [K: L] [L : \QQ] = (2)(2) = 4
+.\]
+
+This $\abs{\Gal(K/\QQ)} = 4$, which leaves only two possibilities:
+
+- $\ZZ/(2) \cross \ZZ/(2)$
+- $\ZZ/(4)$
+
+We can next check orders of elements.
+Take
+\[
+\sigma &\in \Gal(K/\QQ) \\
+\alpha_1 &\mapsto \alpha_2
+.\]
+
+
+Computations show that 
+
+- $\alpha_1^2 \alpha_2^2 = 2$, so $\alpha_1 \alpha_2 = \sqrt 2$
+- $\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2$
+
+and thus
+\[
+\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
+&= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
+&= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
+&= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
+&= \frac{\alpha_2^2 - 2}{\alpha_2} \\
+&= \alpha_2 -2\alpha_2\inv \\
+&= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
+&= \alpha_2 -\alpha_1 \sqrt 2 \\
+&\neq \alpha_1
+,\]
+
+and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
+
+### c
+
+
+?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
+
+
+:::
+
+## Spring 2018 #3 $\bowtie$
+
+Let $K$ be a Galois extension of $\QQ$ with Galois group $G$, and let $E_1 , E_2$ be intermediate fields of $K$ which are the splitting fields of irreducible $f_i (x) \in \QQ[x]$. 
+
+Let $E = E_1 E_2 \subset K$. 
+
+Let $H_i = \Gal(K/E_i)$ and $H = \Gal(K/E)$.
+
+(a) Show that $H = H_1 \cap H_2$.
+
+(b) Show that $H_1 H_2$ is a subgroup of $G$.
+
+(c) Show that 
+$$
+\Gal(K/(E_1 \cap E_2 )) = H_1 H_2
+.$$
+
+:::{.solution}
+
+> Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
+
+### a
+
+By the Galois correspondence, it suffices to show that the fixed field of $H_1 \intersect H_2$ is $E_1 E_2$.
+
+Let $\sigma \in H_1 \intersect H_2$; then $\sigma \in \Aut(K)$ fixes both $E_1$ and $E_2$.
+
+> Not sure if this works -- compositum is not literally product..?
+
+Writing $x \in E_1E_2$ as $x=e_1 e_2$, we have 
+$$
+\sigma(x) = \sigma(e_1 e_2) = \sigma(e_1) \sigma(e_2) = e_1 e_2  =x,
+$$
+
+so $\sigma$ fixes $E_1 E_2$.
+
+### b
+
+That $H_1 H_2 \subseteq G$ is clear, since if $\sigma = \tau_1 \tau_2 \in H_1 H_2$, then each $\tau_i$ is an automorphism of $K$ that fixes $E_i \supseteq \QQ$, so each $\tau_i$ fixes $\QQ$ and thus $\sigma$ fixes $\QQ$.
+
+That it is a subgroup follows from the fact that elements commute. (?)
+ 
+To see this, let $\sigma = \sigma_1 \sigma_2 \in H_1 H_2$.
+
+Note that $\sigma_1(e) = e$ for all $e\in E_1$ by definition, since $H_1$ fixes $E_1$, and $\sigma_2(e) \in E_1$ (?).
+
+Then 
+$$
+\sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
+$$  
+
+and substituting $e = \sigma_1(e)$ on the RHS yields
+
+\[
+\sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
+,\]
+
+where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
+
+
+### c
+
+By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an intermediate field $E$ such that $K/E/\QQ$ and $E$ is the fixed field of $H_1 H_2$.
+
+But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so $\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \intersect E_2$.
+:::
+
+
+
+## Fall 2017 #3
+
+Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
+be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
+
+Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
+
+## Fall 2017 #4
+
+(a) Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
+
+    Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
+
+(b) Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
+
+
+
+## Spring 2017 #7 
+
+Let $F$ be a field and let $f(x) \in F[x]$.
+
+a. Define what a splitting field of $f(x)$ over $F$ is.
+
+b. Let $F$ now be a finite field with $q$ elements.
+  Let $E/F$ be a finite extension of degree $n>0$.
+  Exhibit an explicit polynomial $g(x) \in F[x]$ such that $E/F$ is a splitting field of $g(x)$ over $F$.
+  Fully justify your answer.
+
+c. Show that the extension $E/F$ in (b) is a Galois extension.
+
+
+## Spring 2017 #8
+
+a. Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
+  Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
+
   \[
-  M=\frac{k[x]}{(x-1)^{3}} \oplus \frac{k[x]}{\left(x^{2}+1\right)^{2}} \oplus \frac{k[x]}{(x-1)\left(x^{2}+1\right)^{4}} \oplus \frac{k[x]}{(x+2)\left(x^{2}+1\right)^{2}}
-  .\]
-  Describe the elementary divisors and invariant factors of $M$.
-
-### Fall 2019 Final #4
-Let $I = (2, x)$ be an ideal in $R = \ZZ[x]$, and show that $I$ is not a direct sum of nontrivial cyclic $R\dash$modules.
-
-### Fall 2019 Final #5
-Let $R$ be a PID. 
-
-- Classify irreducible $R\dash$modules up to isomorphism.
-- Classify indecomposable $R\dash$modules up to isomorphism.
-
-### Fall 2019 Final #6
-Let $V$ be a finite-dimensional $k\dash$vector space and $T:V\to V$ a non-invertible $k\dash$linear map. Show that there exists a $k\dash$linear map $S:V\to V$ with $T\circ S = 0$ but $S\circ T\neq 0$. 
-
-### Fall 2019 Final #7
-Let $A\in M_n(\CC)$ with $A^2 = A$. Show that $A$ is similar to a diagonal matrix, and exhibit an explicit diagonal matrix similar to $A$.
-
-### Fall 2019 Final #8
-Exhibit the rational canonical form for
-  - $A\in M_6(\QQ)$ with minimal polynomial $(x-1)(x^2 + 1)^2$.
-  - $A\in M_{10}(\QQ)$ with minimal polynomial $(x^2+1)^2(x^3 + 1)$.
-
-### Fall 2019 Final #9
-Exhibit the rational and Jordan canonical forms for the following matrix $A\in M_4(\CC)$:
-  \[
-  A=\left(\begin{array}{cccc}
-  2 & 0 & 0 & 0 \\
-  1 & 1 & 0 & 0 \\
-  -2 & -2 & 0 & 1 \\
-  -2 & 0 & -1 & -2
-  \end{array}\right)
+  \left(\begin{array}{ll}
+  a & b \\
+  0 & 1
+  \end{array}\right) 
+  \qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
   .\]
 
-### Fall 2019 Final #10
-Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.
+b. Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
+
+
+## Fall 2016 #4
+
+Set $f(x) = x^3 - 5 \in \QQ[x]$.
+
+a. Find the splitting field $K$ of $f(x)$ over $\QQ$.
+
+b. Find the Galois group $G$ of $K$ over $\QQ$.
+
+c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+
+## Spring 2016 #2
+
+Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
+
+a. Find $[K: \QQ]$.
+
+b. Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
+
+c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+
+## Spring 2016 #6
+
+Let $K$ be a Galois extension of a field $F$ with $[K: F] = 2015$.
+Prove that $K$ is an extension by radicals of the field $F$.
+
+
+## Fall 2015 #5
+Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
+
+a. Find (with justification) the minimal polynomial $f(x)$ of $u$ over $\QQ$.
+
+b. Show $v\in E$, and show that $E$ is a splitting field of $f(x)$ over $\QQ$.
+
+c. Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
+
+
+## Fall 2015 #6
+
+a. Let $G$ be a finite group.
+  Show that there exists a field extension $K/F$ with $\gal(K/F) = G$.
+
+  > You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
+
+b. Let $K$ be a Galois extension of $F$ with $\abs{\gal(K/F)} = 12$.
+  Prove that there exists an intermediate field $E$ of $K/F$ with $[E: F] = 3$.
+
+c. With $K/F$ as in (b), does an intermediate field $L$ necessarily exist satisfying $[L: F] = 2$?
+  Give a proof or counterexample.
+
+
+## Spring 2015 #2
+Let $\FF$ be a finite field.
+
+a. Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
+
+b. The *exponent* of a finite group is the least common multiple of the orders of its elements.
+  Prove that a finite abelian group has an element of order equal to its exponent.
+
+c. Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
+
+
+## Spring 2015 #5
+Let $f(x) = x^4 - 5 \in \QQ[x]$.
+
+a. Compute the Galois group of $f$ over $\QQ$.
+b. Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
+
+
+## Fall 2014 #1
+Let $f\in \QQ[x]$ be an irreducible polynomial and $L$ a finite Galois extension of $\QQ$.
+Let $f(x) = g_1(x)g_2(x)\cdots g_r(x)$ be a factorization of $f$ into irreducibles in $L[x]$.
+
+a. Prove that each of the factors $g_i(x)$ has the same degree.
+
+b. Give an example showing that if $L$ is not Galois over $\QQ$, the conclusion of part (a) need not hold.
+
+
+
+## Fall 2014 #3
+Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
+
+a. What is the structure of the Galois group of $E/\QQ$?
+
+b. Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
+  Describe the corresponding subgroups of the Galois group.
+
+## Spring 2014 #3
+Let $F\subset C$ be a field extension with $C$ algebraically closed.
+
+a. Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
+
+b. Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
+
+
+## Spring 2014 #4
+Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
+
+a. Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
+
+  > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
+
+b. Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
+
+c. Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
+
+## Fall 2013 #5
+Let $L/K$ be a finite extension of fields.
+
+a. Define what it means for $L/K$ to be *separable*.
+
+b. Show that if $K$ is a finite field, then $L/K$ is always separable.
+
+c. Give an example of a finite extension $L/K$ that is not separable.
+
+
+## Fall 2013 #6
+Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
+
+a. Show that $K/\QQ$ contains both $\QQ(i)$ and $\QQ(\sqrt[4]{2})$ and has degree 8 over $\QQ$/
+
+b. Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
+  Show that $N$ is normal in $G$ and $NH = G$.
+
+  > Hint: what field is fixed by $NH$?
+
+c. Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
+
+  > Equivalently, show it is the dihedral group of order 8.
+
+d. How many distinct quartic subfields of $K$ are there? 
+  Justify your answer.
+
+
+
+## Spring 2013 #7
+Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
+
+a. Prove that $\gal(E/B)$ and $\gal(E/C)$ are normal subgroups of $\gal(E/\QQ)$.
+
+b. Prove that $\gal(E/B) \intersect \gal(E/C) = \theset{1}$.
+
+c. If $B\intersect C = \QQ$, show that $\gal(E/B) \gal(E/C) = \gal(E/\QQ)$.
+
+d. Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(E/C)$.
+
+e. Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
+
+
+## Spring 2013 #8
+Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
+You may assume that $f$ is irreducible over $F$.
+
+a. Show that if $r$ is a root of $f$ in $K$, then $r^9 = 1$ but $r^3\neq 1$.
+
+b. Find $\gal(K/F)$ and express each intermediate field between $F$ and $K$ as $F(\beta)$ for an appropriate $\beta \in K$.
+
+
+
+## Fall 2012 #3
+Let $f(x) \in \QQ[x]$ be an irreducible polynomial of degree 5.
+Assume that $f$ has all but two roots in $\RR$.
+Compute the Galois group of $f(x)$ over $\QQ$ and justify your answer.
+
+
+## Fall 2012 #4
+Let $f(x) \in \QQ[x]$ be a polynomial and $K$ be a splitting field of $f$ over $\QQ$.
+Assume that $[K:\QQ] = 1225$ and show that $f(x)$ is solvable by radicals.
+
+## Spring 2012 #1
+Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
+
+a. Show that there exists a unique intermediate field $K$ with $F\subset K \subset E$ such that $[K: F] = 2$.
+
+b. Assume that there are at least two distinct intermediate subfields $F \subset L_1, L_2 \subset E$ with $[L_i: F]= 7$.
+  Prove that $\gal(E/F)$ is nonabelian.
+
+
+## Spring 2012 #4
+Let $f(x) = x^7 - 3\in \QQ[x]$ and $E/\QQ$ be a splitting field of $f$ with $\alpha \in E$ a root of $f$.
+
+a. Show that $E$ contains a primitive 7th root of unity.
+
+b. Show that $E\neq \QQ(\alpha)$.
+
+## Fall 2019 Midterm #6 
+Compute the Galois group of $f(x) = x^3-3x -3\in \QQ[x]/\QQ$.
+
+## Fall 2019 Midterm #7 
+Show that a field $k$ of characteristic $p\neq 0$ is perfect $\iff$ for every $x\in k$ there exists a $y\in k$ such that $y^p=x$.
+
+## Fall 2019 Midterm #8 
+Let $k$ be a field of characteristic $p\neq 0$ and $f\in k[x]$ irreducible. Show that $f(x) = g(x^{p^d})$ where $g(x) \in k[x]$ is irreducible and separable. Concluded that every root of $f$ has the same multiplicity $p^d$ in the splitting field of $f$ over $k$.
+
+## Fall 2019 Midterm #9 
+Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(\zeta_n + \zeta_n\inv): \QQ] = \phi(n)/2$ for $\phi$ the totient function.
+10. Let $L/K$ be a finite normal extension
+  - Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
+  - Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
+
 
 
 # Linear Algebra: Canonical Forms
