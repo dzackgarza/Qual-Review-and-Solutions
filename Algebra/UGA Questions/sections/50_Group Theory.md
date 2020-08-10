@@ -1,5 +1,13 @@
 # Group Theory
 
+## $\star$ Fall 2016 #7
+
+a. Define what it means for a group $G$ to be *solvable*.
+
+b. Show that every group $G$ of order 36 is solvable.
+
+  > Hint: you can use that $S_4$ is solvable.
+
 ## Spring 2020 #1
 
 a. Show that any group of order 2020 is solvable.
@@ -676,14 +684,6 @@ D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigm
 ## Fall 2016 #3
 How many groups are there up to isomorphism of order $pq$ where $p<q$ are prime integers?
 
-
-## $\star$ Fall 2016 #7
-
-a. Define what it means for a group $G$ to be *solvable*.
-
-b. Show that every group $G$ of order 36 is solvable.
-
-  > Hint: you can use that $S_4$ is solvable.
 
 ## Spring 2016 #3
 
