@@ -2337,17 +2337,6 @@ c. Suppose that M is a non-principal ideal of $R$.
 
 :::{.solution}
 
-#### a
-
-- Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
-- Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
-\[  
-\sum_{i=1}^n s_i \vector r_i = 0 \implies s_i = 0_R \,\forall i
-.\]
-- Let $\vector r$ be any of of these generating elements.
-- Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
-- Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
-
 #### c
 
 > Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
