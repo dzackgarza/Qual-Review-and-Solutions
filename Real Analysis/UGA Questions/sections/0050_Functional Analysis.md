@@ -3,19 +3,84 @@
 ## Fall 2019 # 4. 
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
 
-a. Prove that for every $x ∈ \mathcal H$ one has 
-$$
+### a 
+Prove that for every $x ∈ \mathcal H$ one has 
+\[
 \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+\]
+
+### b
+Prove that for any sequence $\{a_n\}_{n=1}^\infty \in \ell^2(\NN)$ there exists an element $x\in\mathcal H$ such that 
+\[
+a_n = \inner{x}{u_n} \text{ for all } n\in \NN
+\]
+and
+\[
+\norm{x}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+\]
+
+:::{.solution}
+Concepts used:
+
+- Bessel's Inequality
+- Pythagoras
+- Surjectivity of the Riesz map
+- Parseval's Identity
+- Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
+
+
+### a
+
+**Claim:**
+\begin{align*}
+0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
+&= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
+&\implies
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+.\end{align*}
+
+*Proof:*
+Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
+Then
+\begin{align*}
+0 
+&\leq \norm{x - S_N}^2 \\ 
+&= \inner{x - S_n}{x - S_N} \\
+&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
+&\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
+.\end{align*}
+
+
+### b
+
+1. Fix $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
+
+2. Define 
+$$
+x \definedas \displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
 $$
 
-b. Prove that for any sequence $\{a_n\}_{n=1}^\infty \in \ell^2(\NN)$ there exists an element $x\in\mathcal H$ such that 
-  $$
-  a_n = \inner{x}{u_n} \text{ for all } n\in \NN
-  $$
-  and
-  $$
-  \norm{x}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-  $$
+3. $\theset{S_N}$ Cauchy (by 1) and $H$ complete $\implies x\in H$.
+
+4.  
+$$
+\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n \quad \forall n\in \NN
+$$ 
+since the $u_k$ are all orthogonal.
+
+5.
+$$
+\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
+$$ 
+by Pythagoras since the $u_k$ are normal.
+
+> Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
+If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
+
+
+:::
+
+
 
 ## Spring 2019 # 5
 

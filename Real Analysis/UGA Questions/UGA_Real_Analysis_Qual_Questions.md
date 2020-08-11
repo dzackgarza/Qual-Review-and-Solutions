@@ -469,6 +469,68 @@ for all positive integers $k$ and $K$ with $k < K$, then $µ(B) = 1$.
 
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
+:::{.solution}
+Concepts used:
+
+- Borel-Cantelli: for a sequence of sets $X_n$, 
+\begin{align*}
+\limsup_n X_n &= \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
+&= \intersect_{m\in \NN} \union_{n\geq m} X_n
+\\
+\liminf_n X_n &= \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
+&= \union_{m\in \NN} \intersect_{n\geq m} X_n
+.\end{align*}
+
+- Properties of logs and exponentials:
+\begin{align*}
+\prod_n e^{x_n} = e^{\Sigma_n x_n} \quad\text{and} \quad \sum_n \log(x_n) = \log\left(\prod_n x_n\right)
+.\end{align*}
+
+- Tails of convergent sums vanish.
+-  Continuity of measure: $B_n \searrow B$ and $\mu(B_0)<\infty$ implies $\lim_n \mu(B_n) = \mu(B)$, and $B_n\nearrow B \implies \lim_n \mu(B_n) = \mu(B)$.
+
+### a
+
+- The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
+- $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
+
+### b
+
+- Tails of convergent sums go to zero, so $\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0$, 
+- $B_M \definedas \intersect_{m = 1}^M \union_{n\geq m} B_n \searrow B$.
+
+\begin{align*}
+\mu(B_M) 
+&= \mu\left(\intersect_{m\in \NN} \union_{n\geq m} B_n\right) \\
+&\leq \mu\left( \union_{n\geq m} B_n \right) \quad \text{for all } m\in \NN \text{ by countable subadditivity} \\ 
+&\to 0
+,\end{align*}
+
+- The result follows by continuity of measure.
+
+### c
+
+- To show $\mu(B) = 1$, we'll show $\mu(B^c) = 0$.
+
+- Let $B_k = \intersect_{m=1}^\infty \union_{n = m}^K B_n$. Then
+\begin{align*}
+\mu(B_K^c) 
+&= \mu \left(\union_{m=1}^\infty \intersect_{n=m}^K B_n^c\right) \\
+&\leq \sum_{m=1}^\infty \mu\left( \intersect_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
+&= \sum_{m=1}^\infty \prod_{n=m}^K \qty{1 - \mu(B_n)} \quad \text{by assumption} \\ 
+&\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
+&= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
+&\converges{K\to\infty}\to 0
+\end{align*}
+  since $\displaystyle\sum_{n=m}^K \mu(B_n^c) \converges{K\to\infty}\to \infty$ by assumption 
+
+- We can apply continuity of measure since $B_K^c \mapsvia{K\to\infty} B^c$.
+
+> Proving the hint: ?
+
+
+:::
+
 ## Spring 2019 # 2
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
   
@@ -1109,19 +1171,88 @@ For $x\geq 1$,
 
 ## Fall 2019 # 5.
 
-a. Show that if $f$ is continuous with compact support on $\RR$, then 
-$$
+### a
+Show that if $f$ is continuous with compact support on $\RR$, then 
+\[
 \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
-$$
+\]
 
-b. Let $f\in L^1(\RR)$ and for each $h > 0$ let 
-$$
+### b 
+Let $f\in L^1(\RR)$ and for each $h > 0$ let 
+\[
 \mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
-$$
+\]
 
 i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
+
+:::{.solution}
+
+> Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
+>
+> Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+
+## a
+
+Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
+
+By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
+
+Write
+\begin{align*}
+\norm{\tau f - f}_1 
+&= \norm{\tau_h f - g + g - \tau_h g + \tau_h g - f}_1 \\
+&\leq \norm{\tau_h f - \tau_h g} + \norm{g - f} + \norm{\tau_h g - g} \\
+&\to \norm{\tau_h g - g}
+,\end{align*}
+
+so it suffices to show that $\norm{\tau_h g - g} \to 0$ for $g\in C_c^0$.
+
+Fix $\varepsilon > 0$.
+Enlarge the support of $g$ to $K$ such that
+\begin{align*}
+\abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
+.\end{align*}
+
+By uniform continuity of $g$, pick $\delta \leq 1$ small enough such that 
+$$
+x\in K, ~\abs{h} \leq \delta \implies \abs{g(x-h) -g(x)} < \varepsilon
+,$$
+
+then
+$$
+\int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
+$$
+
+
+## b
+
+We have
+\begin{align*}
+\int_\RR \abs{A_h(f)(x)} ~dx 
+&= \int_\RR \abs{\frac{1}{2h} \int_{x-h}^{x+h} f(y)~dy} ~dx \\
+&\leq \frac{1}{2h} \int_\RR \int_{x-h}^{x+h} \abs{f(y)} ~dy ~dx    \\
+&=_{FT} \frac{1}{2h} \int_\RR \int_{y-h}^{y+h} \abs{f(y)} ~\mathbf{dx} ~\mathbf{dy}    \\
+&= \int_\RR \abs{f(y)} ~{dy} \\
+&= \norm{f}_1
+.\end{align*}
+
+and (rough sketch)
+
+\begin{align*}
+\int_\RR \abs{A_h(f)(x) - f(x)} ~dx 
+&= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - f(x)}~dx \\
+&= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - \frac{1}{2h}\int_{B(h, x)} f(x) ~dy}~dx \\
+&\leq_{FT} \frac{1}{2h} \int_\RR  \int_{B(h, x)}\abs{ f(y-x) - f(x)} ~\mathbf{dx} ~\mathbf{dy} \\
+&\leq \frac 1 {2h} \int_\RR \norm{\tau_x f - f}_1 ~dy \\
+&\to 0 \quad\text{by (a)}
+.\end{align*}
+
+
+:::
+
+
 
 ## Fall 2017 # 3
 Let 
@@ -1405,19 +1536,84 @@ f\in L^1(\RR^n), \quad g\in L^\infty(\RR^n) \quad
 ## Fall 2019 # 4. 
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
 
-a. Prove that for every $x ∈ \mathcal H$ one has 
-$$
+### a 
+Prove that for every $x ∈ \mathcal H$ one has 
+\[
 \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+\]
+
+### b
+Prove that for any sequence $\{a_n\}_{n=1}^\infty \in \ell^2(\NN)$ there exists an element $x\in\mathcal H$ such that 
+\[
+a_n = \inner{x}{u_n} \text{ for all } n\in \NN
+\]
+and
+\[
+\norm{x}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+\]
+
+:::{.solution}
+Concepts used:
+
+- Bessel's Inequality
+- Pythagoras
+- Surjectivity of the Riesz map
+- Parseval's Identity
+- Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
+
+
+### a
+
+**Claim:**
+\begin{align*}
+0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
+&= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
+&\implies
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+.\end{align*}
+
+*Proof:*
+Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
+Then
+\begin{align*}
+0 
+&\leq \norm{x - S_N}^2 \\ 
+&= \inner{x - S_n}{x - S_N} \\
+&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
+&\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
+.\end{align*}
+
+
+### b
+
+1. Fix $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
+
+2. Define 
+$$
+x \definedas \displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
 $$
 
-b. Prove that for any sequence $\{a_n\}_{n=1}^\infty \in \ell^2(\NN)$ there exists an element $x\in\mathcal H$ such that 
-  $$
-  a_n = \inner{x}{u_n} \text{ for all } n\in \NN
-  $$
-  and
-  $$
-  \norm{x}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-  $$
+3. $\theset{S_N}$ Cauchy (by 1) and $H$ complete $\implies x\in H$.
+
+4.  
+$$
+\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n \quad \forall n\in \NN
+$$ 
+since the $u_k$ are all orthogonal.
+
+5.
+$$
+\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
+$$ 
+by Pythagoras since the $u_k$ are normal.
+
+> Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
+If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
+
+
+:::
+
+
 
 ## Spring 2019 # 5
 

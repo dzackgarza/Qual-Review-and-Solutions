@@ -133,6 +133,68 @@ for all positive integers $k$ and $K$ with $k < K$, then $µ(B) = 1$.
 
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
+:::{.solution}
+Concepts used:
+
+- Borel-Cantelli: for a sequence of sets $X_n$, 
+\begin{align*}
+\limsup_n X_n &= \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
+&= \intersect_{m\in \NN} \union_{n\geq m} X_n
+\\
+\liminf_n X_n &= \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
+&= \union_{m\in \NN} \intersect_{n\geq m} X_n
+.\end{align*}
+
+- Properties of logs and exponentials:
+\begin{align*}
+\prod_n e^{x_n} = e^{\Sigma_n x_n} \quad\text{and} \quad \sum_n \log(x_n) = \log\left(\prod_n x_n\right)
+.\end{align*}
+
+- Tails of convergent sums vanish.
+-  Continuity of measure: $B_n \searrow B$ and $\mu(B_0)<\infty$ implies $\lim_n \mu(B_n) = \mu(B)$, and $B_n\nearrow B \implies \lim_n \mu(B_n) = \mu(B)$.
+
+### a
+
+- The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
+- $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
+
+### b
+
+- Tails of convergent sums go to zero, so $\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0$, 
+- $B_M \definedas \intersect_{m = 1}^M \union_{n\geq m} B_n \searrow B$.
+
+\begin{align*}
+\mu(B_M) 
+&= \mu\left(\intersect_{m\in \NN} \union_{n\geq m} B_n\right) \\
+&\leq \mu\left( \union_{n\geq m} B_n \right) \quad \text{for all } m\in \NN \text{ by countable subadditivity} \\ 
+&\to 0
+,\end{align*}
+
+- The result follows by continuity of measure.
+
+### c
+
+- To show $\mu(B) = 1$, we'll show $\mu(B^c) = 0$.
+
+- Let $B_k = \intersect_{m=1}^\infty \union_{n = m}^K B_n$. Then
+\begin{align*}
+\mu(B_K^c) 
+&= \mu \left(\union_{m=1}^\infty \intersect_{n=m}^K B_n^c\right) \\
+&\leq \sum_{m=1}^\infty \mu\left( \intersect_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
+&= \sum_{m=1}^\infty \prod_{n=m}^K \qty{1 - \mu(B_n)} \quad \text{by assumption} \\ 
+&\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
+&= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
+&\converges{K\to\infty}\to 0
+\end{align*}
+  since $\displaystyle\sum_{n=m}^K \mu(B_n^c) \converges{K\to\infty}\to \infty$ by assumption 
+
+- We can apply continuity of measure since $B_K^c \mapsvia{K\to\infty} B^c$.
+
+> Proving the hint: ?
+
+
+:::
+
 ## Spring 2019 # 2
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
   

@@ -220,19 +220,88 @@ For $x\geq 1$,
 
 ## Fall 2019 # 5.
 
-a. Show that if $f$ is continuous with compact support on $\RR$, then 
-$$
+### a
+Show that if $f$ is continuous with compact support on $\RR$, then 
+\[
 \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
-$$
+\]
 
-b. Let $f\in L^1(\RR)$ and for each $h > 0$ let 
-$$
+### b 
+Let $f\in L^1(\RR)$ and for each $h > 0$ let 
+\[
 \mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
-$$
+\]
 
 i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
+
+:::{.solution}
+
+> Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
+>
+> Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+
+## a
+
+Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
+
+By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
+
+Write
+\begin{align*}
+\norm{\tau f - f}_1 
+&= \norm{\tau_h f - g + g - \tau_h g + \tau_h g - f}_1 \\
+&\leq \norm{\tau_h f - \tau_h g} + \norm{g - f} + \norm{\tau_h g - g} \\
+&\to \norm{\tau_h g - g}
+,\end{align*}
+
+so it suffices to show that $\norm{\tau_h g - g} \to 0$ for $g\in C_c^0$.
+
+Fix $\varepsilon > 0$.
+Enlarge the support of $g$ to $K$ such that
+\begin{align*}
+\abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
+.\end{align*}
+
+By uniform continuity of $g$, pick $\delta \leq 1$ small enough such that 
+$$
+x\in K, ~\abs{h} \leq \delta \implies \abs{g(x-h) -g(x)} < \varepsilon
+,$$
+
+then
+$$
+\int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
+$$
+
+
+## b
+
+We have
+\begin{align*}
+\int_\RR \abs{A_h(f)(x)} ~dx 
+&= \int_\RR \abs{\frac{1}{2h} \int_{x-h}^{x+h} f(y)~dy} ~dx \\
+&\leq \frac{1}{2h} \int_\RR \int_{x-h}^{x+h} \abs{f(y)} ~dy ~dx    \\
+&=_{FT} \frac{1}{2h} \int_\RR \int_{y-h}^{y+h} \abs{f(y)} ~\mathbf{dx} ~\mathbf{dy}    \\
+&= \int_\RR \abs{f(y)} ~{dy} \\
+&= \norm{f}_1
+.\end{align*}
+
+and (rough sketch)
+
+\begin{align*}
+\int_\RR \abs{A_h(f)(x) - f(x)} ~dx 
+&= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - f(x)}~dx \\
+&= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - \frac{1}{2h}\int_{B(h, x)} f(x) ~dy}~dx \\
+&\leq_{FT} \frac{1}{2h} \int_\RR  \int_{B(h, x)}\abs{ f(y-x) - f(x)} ~\mathbf{dx} ~\mathbf{dy} \\
+&\leq \frac 1 {2h} \int_\RR \norm{\tau_x f - f}_1 ~dy \\
+&\to 0 \quad\text{by (a)}
+.\end{align*}
+
+
+:::
+
+
 
 ## Fall 2017 # 3
 Let 
