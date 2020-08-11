@@ -101,6 +101,20 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
+:::{.solution}
+
+Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
+\begin{align*}
+\int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
+,\end{align*}
+
+so $f$ is not integrable.
+
+
+:::
+
+
+
 ## Spring 2015 # 1
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f: X\to Y$, and $x_0 \in X$.
 
@@ -421,6 +435,28 @@ b.
 \qtext{and}
 \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
 \]
+\todo[inline]{Not complete.}
+:::{.solution}
+
+### a
+
+Letting $x_n \definedas \frac 1 n$, we have
+
+\begin{align*}
+\sum_{k=1}^\infty \abs{f_k(x)} \geq \abs{f_n(x_n)} 
+=\abs{ae^{-ax} - be^{-bx}} \definedas M
+.\end{align*}
+
+In particular, $\sup_{x} \abs{f_n(x)} \not\to 0$, so the terms do not go to zero and the sum can not converge.
+
+### b
+
+?
+
+
+:::
+
+
 
 ## Fall 2016 # 1
 

@@ -106,6 +106,20 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
+:::{.solution}
+
+Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
+\begin{align*}
+\int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
+,\end{align*}
+
+so $f$ is not integrable.
+
+
+:::
+
+
+
 ## Spring 2015 # 1
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f: X\to Y$, and $x_0 \in X$.
 
@@ -426,6 +440,28 @@ b.
 \qtext{and}
 \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
 \]
+\todo[inline]{Not complete.}
+:::{.solution}
+
+### a
+
+Letting $x_n \definedas \frac 1 n$, we have
+
+\begin{align*}
+\sum_{k=1}^\infty \abs{f_k(x)} \geq \abs{f_n(x_n)} 
+=\abs{ae^{-ax} - be^{-bx}} \definedas M
+.\end{align*}
+
+In particular, $\sup_{x} \abs{f_n(x)} \not\to 0$, so the terms do not go to zero and the sum can not converge.
+
+### b
+
+?
+
+
+:::
+
+
 
 ## Fall 2016 # 1
 
@@ -764,7 +800,7 @@ m(A)
 .\end{align*}
 
 :::
-\todo{All messed up.}
+\todo[inline]{All messed up!}
 
 
 
@@ -1044,23 +1080,98 @@ Restricting to $[0, \infty)$, $f$ is bijection, and thus so is $\phi$.
 
 ## Spring 2017 # 2
 
-a. Let $\mu$ be a measure on a measurable space $(X, \mathcal M)$ and $f$ a positive measurable function.
+### a 
+Let $\mu$ be a measure on a measurable space $(X, \mathcal M)$ and $f$ a positive measurable function.
   
-    Define a measure $\lambda$ by
-$$
+  Define a measure $\lambda$ by
+\[
 \lambda(E):=\int_{E} f ~d \mu, \quad E \in \mathcal{M}
-$$
+\]
 
-    Show that for $g$ any positive measurable function, 
-$$
+Show that for $g$ any positive measurable function, 
+\[
 \int_{X} g ~d \lambda=\int_{X} f g ~d \mu
-$$
+\]
 
-b. Let $E \subset \RR$ be a measurable set such that 
-$$
+### b 
+Let $E \subset \RR$ be a measurable set such that 
+\[
 \int_{E} x^{2} ~d m=0.
-$$
-  Show that $m(E) = 0$.
+\]
+Show that $m(E) = 0$.
+
+:::{.solution}
+
+Concepts used:
+
+- Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
+- Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
+- Chebyshev's inequality:
+\[  
+A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) \leq c^{-p} \int_{A_c} \abs{f}^p \,d\mu \quad \forall 0 < p < \infty
+.\]
+
+### a
+
+- Strategy: use approximation by simple functions to show absolute continuity and apply Radon-Nikodym 
+
+- Claim: $\lambda \ll \mu$, i.e. $\mu(E) = 0 \implies \lambda(E) = 0$.
+
+  - Note that if this holds, by Radon-Nikodym, $f = \dd{\lambda}{\mu} \implies d\lambda = f d\mu$, which would yield 
+  \[  
+  \int g ~d\lambda = \int g f ~d\mu
+  .\]
+
+- So let $E$ be measurable and suppose $\mu(E) = 0$.
+
+- Then
+\[
+\lambda(E) \definedas \int_E f ~d\mu 
+&= \lim_{n\to\infty} \theset{\int_E s_n \,d\mu \suchthat s_n \definedas \sum_{j=1}^\infty c_j \mu(E_j),\, s_n \nearrow f}
+\]
+  where we take a sequence of simple functions increasing to $f$.
+
+- But since each $E_j \subseteq E$, we must have $\mu(E_j) = 0$ for any such $E_j$, so every such $s_n$ must be zero and thus $\lambda(E) = 0$.
+
+\todo[inline]{What is the final step in this approximation?}
+
+### b
+
+- Set $g(x) = x^2$, note that $g$ is positive and measurable.
+- By part (a), there exists a positive $f$ such that for any $E\subseteq \RR$,
+\[
+\int_E g ~dm = \int_E gf ~d\mu 
+\]
+
+  - The LHS is zero by assumption and thus so is the RHS.
+
+  - $m \ll \mu$ by construction.
+
+  - Note that $gf$ is positive.
+
+- Define $A_k = \theset{x\in X \suchthat gf \cdot \chi_E > {1 \over k} }$, for $k\in \ZZ^{\geq 0}$
+
+- Then by Chebyshev with $p=1$, for every $k$ we have
+
+\[
+\mu(A_k) \leq k \int_E gf ~d\mu = 0
+\]
+
+- Then noting that $A_k \searrow A \definedas \theset{x\in X \suchthat gf\cdot \chi_E(x)  > 0}$, we have $\mu(A) = 0$.
+
+- Since $gf$ is positive, we have 
+\[
+x\in E \iff gf\chi_E(x) > 0 \iff x\in A
+\]
+  so $E = A$ and $\mu(E) = \mu(A)$.
+
+- But $m \ll \mu$ and $\mu(E) = 0$, so we can conclude that $m(E) = 0$.
+
+
+
+:::
+
+
 
 ## Fall 2016 # 4
 Let $(X, \mathcal M, \mu)$ be a measure space and suppose $\theset{E_n} \subset \mathcal M$ satisfies
@@ -1147,6 +1258,107 @@ different from 4, we replace the digit $4$ with $399\cdots$. For example, $0.875
 
 Show that $K$ is a compact, nowhere dense set without isolated points, and find the
 Lebesgue measure $m(K)$.
+
+:::{.solution}
+
+Concepts used:
+
+- Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
+  - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
+
+**Solution**
+
+Claim: **$K$ is compact**.
+
+- It suffices to show that $K^c \definedas [0, 1]\setminus K$ is open; 
+  Then $K$ will be a closed and bounded subset of $\RR$ and thus compact by Heine-Borel.
+
+- Strategy: write $K^c$ as the union of open balls (since these form a basis for the Euclidean topology on $\RR$).
+  
+  - Do this by showing every point $x\in K^c$ is an interior point, i.e. $x$ admits a neighborhood $N_x$ such that $N_x \subseteq K^c$.
+
+- Identify $K^c$ as the set of real numbers in $[0, 1]$ whose decimal expansion **does** contain a 4.
+  
+  - We will show that there exists a neighborhood small enough such that all points in it contain a $4$ in their decimal expansions.
+
+- Let $x\in K^c$, suppose a 4 occurs as the $k$th digit, and write
+\[  
+x = 0.d_1 d_2 \cdots d_{k-1}~ 4 ~d_{k+1}\cdots 
+= \qty{\sum_{j=1}^k d_j 10^{-j}} + \qty{4\cdot 10^{-k}} + \qty{\sum_{j=k+1}^\infty d_j 10^{-j}}
+.\]
+
+- Set $r_x < 10^{-k}$ and let $y \in [0, 1] \intersect B_{r_x}(x)$ be arbitrary and write 
+\[  
+y = \sum_{j=1}^\infty c_j 10^{-j}
+.\]
+
+- Thus $\abs{x-y} < r_x < 10^{-k}$, and the first $k$ digits of $x$ and $y$ must agree:
+
+  - We first compute the difference:
+\[  
+x - y &= \sum_{i=1}^\infty d_j 10^{-j} - \sum_{i=1}^\infty c_j 10^{-j} = \sum_{i=1}^\infty \qty{d_j - c_j} 10^{-j} \\
+\]
+  - Thus (claim)
+\[
+\abs{x-y} &\leq \sum_{j=1}^\infty \abs{d_j - c_j} 10^j < 10^{-k} \iff \abs{d_j - c_j} = 0 \quad \forall j\leq k
+.\]
+  - Otherwise we can note that any term $\abs{d_j - c_j}\geq 1$ and there is a contribution to $\abs{x-y}$ of at least $1\cdot 10^{-j}$ for some $j < k$, whereas
+\[  
+j < k \iff 10^{-j} > 10^{-k}
+,\]
+  a contradiction.
+  
+- This means that for all $j \leq k$ we have $d_j = c_j$, and in particular $d_k = 4 = c_k$, so $y$ has a 4 in its decimal expansion.
+
+- But then $K^c = \union_x B_{r_x}(x)$ is a union of open sets and thus open.
+
+
+Claim: **$K$ is nowhere dense and $m(K) = 0$:**
+
+- Strategy: Show $\qty{\bar K}^\circ = \emptyset$.
+- Since $K$ is closed, $\bar K = K$, so it suffices to show that $K$ does not properly contain any interval.
+- It suffices to show $m(K^c) = 1$, since this implies $m(K) = 0$ and since any interval has strictly positive measure, this will mean $K$ can not contain an interval.
+
+- As in the construction of the Cantor set, let 
+
+  - $K_0$ denote $[0, 1]$ with 1 interval $\left({4 \over 10}, {5 \over 10} \right)$ of length $1 \over 10$ deleted, so 
+  \[m(K_0^c) = {1\over 10}.\]
+  - $K_1$ denote $K_0$ with 9 intervals $\left({1 \over 100}, {5\over 100}\right), ~\left({14 \over 100}, {15 \over 100}\right), \cdots \left({94\over 100}, {95 \over 100}\right)$ of length ${1 \over 100}$ deleted, so 
+  \[m(K_1^c) = {1\over 10} + {9 \over 100}.\]
+  - $K_n$ denote $K_{n-1}$ with $9^{n}$ such intervals of length $1 \over 10^{n+1}$ deleted, so 
+  \[m(K_n^c) = {1\over 10} + {9 \over 100} + \cdots + {9^{n} \over 10^{n+1}}.\]
+
+- Then compute 
+\[
+m(K^c) 
+= \sum_{j=0}^\infty {9^n \over 10^{n+1} } 
+= {1\over 10} \sum_{j=0}^\infty \qty{9\over 10}^n 
+= {1 \over 10} \qty{ {1 \over 1 - {9 \over 10 } } } 
+= 1.
+\]
+
+Claim: **$K$ has no isolated points**:
+
+- A point $x\in K$ is isolated iff there there is an open ball $B_r(x)$ containing $x$ such that $B_r(x) \subsetneq K^c$.
+  - So every point in this ball **should** have a 4 in its decimal expansion.
+
+- Strategy: show that if $x\in K$, every neighborhood of $x$ intersects $K$.
+
+- Note that $m(K_n) = \left( \frac 9 {10} \right)^n \converges{n\to\infty}\to 0$ 
+- Also note that we deleted open intervals, and the endpoints of these intervals are never deleted.
+  - Thus endpoints of deleted intervals are elements of $K$.
+
+- Fix $x$. Then for every $\varepsilon$, by the Archimedean property of $\RR$, choose $n$ such that $\left( \frac 9 {10} \right)^n < \varepsilon$.
+
+- Then there is an endpoint $x_n$ of some deleted interval $I_n$ satisfying \[\abs{x - x_n} \leq  \left( \frac 9 {10} \right)^n < \eps.\]
+
+- So every ball containing $x$ contains some endpoint of a removed interval, and thus an element of $K$.
+
+
+
+:::
+
+
 
 ## Spring 2016 # 2
 Let $0 < \lambda < 1$ and construct a Cantor set $C_\lambda$ by successively removing middle intervals of length $\lambda$.
@@ -2959,18 +3171,59 @@ $$
 - $\theset{f_n}$ is Cauchy: geometrically subtracting areas yields a single triangle whose area tends to 0.
 - But $f_n$ converges to $\chi_{[{1\over 2}, 1]}$ which is discontinuous.
 
-> Todo: show that $\int_0^1 \abs{f_n(x) - f_m(x)} \,dx \to 0$ rigorously, show that no $g\in L^1([0, 1])$ can converge to this indicator function.
-
+\todo[inline]{show that $\int_0^1 \abs{f_n(x) - f_m(x)} \,dx \to 0$ rigorously, show that no $g\in L^1([0, 1])$ can converge to this indicator function.}
 
 :::
 
 
 
-## Spring 2017 # 5
+## Spring 2017 # 6
 Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \[
 \|f\|:=\sup _{x \in[a, b]}|f(x)|+\sup _{x \in[a, b]}\left|f^{\prime}(x)\right|.
 \]
+
+:::{.solution}
+
+> See https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space
+
+- Denote this norm $\norm{\wait}_u$
+
+- Let $f_n$ be a Cauchy sequence in this space, so $\norm{f_n}_u < \infty$ for every $n$ and $\norm{f_j - f_k}_u \converges{j, k\to\infty}\to 0$.
+
+and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\to\infty} f_n(x).\]
+
+- Note that 
+\[ 
+\norm{f_n}_\infty &\leq \norm{f_n}_u < \infty \\
+\norm{f_n'}_\infty &\leq \norm{f_n}_u < \infty
+.\]
+
+  - Thus both $f_n, f_n'$ are Cauchy sequences in $C^0([a, b], \norm{\wait}_\infty)$, which is a Banach space, so they converge.
+
+- So 
+  - $f_n \to f$ uniformly (by uniqueness of limits), 
+  - $f_n' \to g$ uniformly for some $g$, and
+  - $f, g\in C^0([a, b])$.
+
+- Claim: $g = f'$
+  - For any fixed $a\in I$, we have
+  \[
+  f_n(x) - f_n(a) \quad &\converges{u}\to f(x) - f(a) \\
+  \int_a^x f'_n  \quad &\converges{u}\to \int_a^x  g
+  .\]
+  - By the FTC, the left-hand sides are equal.
+  - By uniqueness of limits so are the right-hand sides, so $f' = g$.
+
+- Claim: the limit $f$ is an element in this space.
+  - Since $f, f'\in C^0([a, b])$, they are bounded, and so $\norm{f}_u < \infty$. 
+
+- Claim: $\norm{f_n - f}_u \converges{n\to\infty}\to 0$
+
+- Thus the Cauchy sequence $\theset{f_n}$ converges to a function $f$ in the $u\dash$norm where $f$ is an element of this space, making it complete.
+:::
+
+
 
 ## Fall 2017 # 6
 Let $X$ be a complete metric space and define a norm
