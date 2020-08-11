@@ -9,6 +9,9 @@ Concepts used:
 
 - Uniform continuity.
 
+**Solution**:
+
+
 Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
 
 - Note that
@@ -58,6 +61,12 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 
 \todo[inline]{Review and consolidate.}
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 Note that $f(x) = e^x$ is entire and thus equal to its power series.
 So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
 
@@ -99,8 +108,14 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
-\todo[inline]{Redo.}
+\todo[inline]{Redo, may just be wrong.}
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
 \begin{align*}
 \int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty

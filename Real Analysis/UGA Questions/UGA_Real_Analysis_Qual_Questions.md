@@ -14,6 +14,9 @@ Concepts used:
 
 - Uniform continuity.
 
+**Solution**:
+
+
 Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
 
 - Note that
@@ -63,6 +66,12 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 
 \todo[inline]{Review and consolidate.}
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 Note that $f(x) = e^x$ is entire and thus equal to its power series.
 So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
 
@@ -104,8 +113,14 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
-\todo[inline]{Redo.}
+\todo[inline]{Redo, may just be wrong.}
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
 \begin{align*}
 \int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
@@ -611,6 +626,12 @@ Let $f, g \in L^2(\RR)$. Show that
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 - Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
@@ -691,26 +712,29 @@ Concepts used:
 - Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$, each with finite measure.
 - Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
 
-Proof (of Theorem)
-:   Statement: if $Q$ is a closed cube, then $m_*(Q) = \abs{Q}$, the usual volume.
 
-    - $m_*(Q) \leq \abs{Q}$:
-      - Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
-    - $\abs{Q} \leq m_*(Q)$:
-      - Fix $\eps > 0$.
-      - Let $\theset{Q_i}_{i=1}^\infty \covers Q$ be arbitrary, it suffices to show that 
-          $$\abs{Q} \leq \qty{\sum_{i=1}^\infty \abs{Q_i}} + \eps.$$
-      -  Pick open cubes $S_i$ such that $Q_i\subseteq S_i$ and $\abs{Q_i} \leq \abs{S_i} \leq (1+\eps)\abs{Q_i}$.
-      - Then $\theset{S_i} \covers Q$, so by compactness of $Q$ pick a finite subcover with $N$ elements.
+:::{.proof}
 
-      - Note 
-      \begin{align*}
-      Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
-      .\end{align*}
-      - Taking an infimum over coverings on the RHS preserves the inequality, so 
-        $$\abs{Q} \leq (1+\eps) m_*(Q)$$
-      - Take $\eps\to 0$ to obtain final inequality.
+- $m_*(Q) \leq \abs{Q}$:
+- Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
+- $\abs{Q} \leq m_*(Q)$:
+- Fix $\eps > 0$.
+- Let $\theset{Q_i}_{i=1}^\infty \covers Q$ be arbitrary, it suffices to show that 
+    $$\abs{Q} \leq \qty{\sum_{i=1}^\infty \abs{Q_i}} + \eps.$$
+-  Pick open cubes $S_i$ such that $Q_i\subseteq S_i$ and $\abs{Q_i} \leq \abs{S_i} \leq (1+\eps)\abs{Q_i}$.
+- Then $\theset{S_i} \covers Q$, so by compactness of $Q$ pick a finite subcover with $N$ elements.
 
+- Note 
+\begin{align*}
+Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
+.\end{align*}
+- Taking an infimum over coverings on the RHS preserves the inequality, so 
+  $$\abs{Q} \leq (1+\eps) m_*(Q)$$
+- Take $\eps\to 0$ to obtain final inequality.
+:::
+
+
+**Solution**:
 
 ### a
 
