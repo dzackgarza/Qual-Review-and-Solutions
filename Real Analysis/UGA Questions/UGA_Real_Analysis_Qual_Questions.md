@@ -373,6 +373,7 @@ where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 
 
 
 
+
 ## Fall 2019 # 3. 
 Let $(X, \mathcal B, µ)$ be a measure space with $µ(X) = 1$ and $\{B_n\}_{n=1}^\infty$ be a sequence of $\mathcal B$-measurable subsets of $X$, and
 $$
@@ -727,6 +728,175 @@ b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\inf
 
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
 
+:::{.solution}
+Concepts used:
+
+- Limits
+- Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
+- Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
+- Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
+
+### a
+
+Stated integral equality: 
+
+- Let $\eps > 0$
+- $C_c(\RR^n) \injects L^1(\RR^n)$ is dense so choose $\theset{f_n} \to f$ with $\norm{f_n - f}_1 \to 0$.
+- Since $\theset{f_n}$ are compactly supported, choose $N_0\gg 1$ such that $f_n$ is zero outside of $B_{N_0}(\vector 0)$.
+- Then
+\begin{align*}
+N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n + f_n} \\
+&\leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} \\
+&= \int_{\abs x > N} \abs{f-f_n} \\ 
+&\leq \int_{\abs x > N} \norm{f-f_n}_1 \\
+&= \norm{f_n-f}_1 \qty{\int_{\abs x > N} 1} \\
+&\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} \\
+&= 0\\
+&\converges{N\to\infty}\to 0
+.\end{align*}
+
+
+To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
+
+- Take $f(x)$ to be a train of rectangles of height 1 and area $1/2^j$ centered on even integers.
+- Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\to 0$$ as the tail of a convergent sum. 
+- However $f(x) = 1$ for infinitely many even integers $x > N$, so $f(x) \not\to 0$ as $\abs{x}\to\infty$.
+
+### b
+
+#### Solution 1 ("Trick")
+
+- Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
+\begin{align*}
+x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
+.\end{align*}
+
+- Integrate over $[x, 2x]$, using monotonicity of the integral:
+\begin{align*}
+\int_x^{2x} f(x) \,dt \leq 
+\int_x^{2x} f(t) \,dt \leq 
+\int_x^{2x} f(x-n) \,dt \\ 
+\implies 
+f(x) \int_x^{2x} \,dt \leq 
+\int_x^{2x} f(t) \,dt \leq 
+f(x-n) \int_x^{2x} \,dt  \\
+\implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
+.\end{align*}
+
+- By the Cauchy Criterion for integrals, $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$.
+- So the LHS term $xf(x) \converges{x\to\infty}\to 0$.
+- Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
+- Thus $f(x) \converges{x\to\infty}\to 0$ as well.
+
+#### Solution 2 (Variation on the Trick)
+
+- Use mean value theorem for integrals:
+\begin{align*}
+\int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
+.\end{align*}
+
+- Since $f$ is decreasing, 
+\begin{align*}
+x\leq c_x \leq 2x 
+&\implies f(2x)\leq f(c_x) \leq f(x) \\
+&\implies 2xf(2x)\leq 2xf(c_x) \leq 2xf(x) \\
+&\implies 2xf(2x)\leq 2x\int_x^{2x} f(t)\, dt \leq 2xf(x) \\
+.\end{align*}
+
+- By Cauchy Criterion, $\int_x^{2x} f \to 0$.
+- So $2x f(2x) \to 0$, which by a change of variables gives $uf(u) \to 0$.
+- Since $u\geq 1$, $f(u) \leq uf(u)$ so $f(u) \to 0$ as well.
+
+#### Solution 3 (Contradiction)
+\hfill
+Just showing $f(x) \converges{x\to \infty}\to 0$:
+
+- Toward a contradiction, suppose not.
+- Since $f$ is decreasing, it can not diverge to $+\infty$
+- If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x_0 \gg 1$ so that $t\geq x_0 \implies f(t) < -1$, then 
+- Then $t\geq x_0 \implies \abs{f(t)} \geq 1$, so
+ \begin{align*}
+\int_1^\infty \abs{f} \geq \int_{x_0}^\infty \abs{f(t) } \, dt \geq \int_{x_0}^\infty 1 =\infty
+ .\end{align*}
+
+- Otherwise $f(x) \to L\neq 0$, some finite limit.
+- If $L>0$:
+  - Fix $\eps>0$, choose $x_0\gg 1$ such that $t\geq x_0 \implies L-\eps \leq f(t) \leq L$
+  - Then $$\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L-\eps}\,dt = \infty$$
+- If $L<0$:
+  - Fix $\eps > 0$, choose $x_0\gg 1$ such that $t\geq x_0 \implies L \leq f(t) \leq L + \eps$.
+  - Then $$\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L}\,dt = \infty$$
+
+Showing $xf(x) \converges{x\to \infty}\to 0$.
+
+- Toward a contradiction, suppose not.
+- (How to show that $xf(x) \not\to + \infty$?)
+- If $xf(x)\to -\infty$
+  - Choose a sequence $\Gamma = \theset{\hat x_i}$ such that $x_i \to \infty$ and $x_i f(x_i) \to -\infty$.
+  - Choose a subsequence $\Gamma' = \theset{x_i}$ such that $x_if(x_i) \leq -1$ for all $i$ and $x_i \leq x_{i+1}$.
+  - Choose a further subsequence $S = \theset{x_i \in \Gamma' \suchthat 2x_i  < x_{i+1}}$.
+  - Then since $f$ is always decreasing, for $t\geq x_0$, $\abs f$ is increasing, and $\abs{f(x_i)} \leq \abs{f(2x_i)}$, so
+  \begin{align*}
+  \int_1^{\infty} \abs{f} \geq \int_{x_0}^\infty \abs{f} \geq \sum_{x_i \in S} \int_{x_i}^{2x_i} \abs{f(t)} \, dt \geq 
+  \sum_{x_i \in S} \int_{x_i}^{2x_i} \abs{f(x_i)} &= \sum_{x_i \in S} x_i f(x_i) \to \infty
+  .\end{align*}
+
+- If $xf(x) \to L \neq 0$ for $0 < L< \infty$:
+  - Fix $\eps> 0$, choose an infinite sequence $\theset{x_i}$ such that $L-\eps \leq x_i f(x_i) \leq L$ for all $i$.
+\begin{align*}
+\int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L-\eps} \to \infty
+.\end{align*}
+- If $xf(x) \to L \neq 0$ for $-\infty < L < 0$:
+  - Fix $\eps> 0$, choose an infinite sequence $\theset{x_i}$ such that $L \leq x_i f(x_i) \leq L + \eps$ for all $i$.
+\begin{align*}
+\int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L} \to \infty
+.\end{align*}
+
+#### Solution 4 (Akos's Suggestion)
+
+For $x\geq 1$, 
+\begin{align*}
+\abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
+\end{align*}
+  where we've used 
+  
+  - Since $f$ is decreasing and $\lim_{x\to\infty}f(x) =0$ from part (a), $f$ is non-negative.
+  - Since $f$ is positive and decreasing, for every $t\in[a, b]$ we have $\abs{f(a)} \leq \abs{f(t)}$.
+  - By part (a), the last integral goes to zero.
+
+#### Solution 5 (Peter's)
+
+- Toward a contradiction, produce a sequence $x_i\to\infty$ with $x_i f(x_i) \to \infty$ and $x_if(x_i) > \eps > 0$, then
+\begin{align*}
+\int f(x) \, dx 
+&\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x) \, dx \\
+&\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x_{i+1}) \, dx \\
+&=    \sum_{i=1}^\infty f(x_{i+1}) \int_{x_i}^{x_{i+1}} \, dx \\
+&\geq \sum_{i=1}^\infty (x_{i+1} - x_i) f(x_{i+1}) \\
+&\geq \sum_{i=1}^\infty (x_{i+1} - x_i) {\eps \over x_{i+1}} \\
+&= \eps \sum_{i=1}^\infty \qty{ 1 - {x_{i-1} \over x_i}} \to \infty
+\end{align*}
+  which can be ensured by passing to a subsequence where $\sum {x_{i-1} \over x_i} < \infty$.
+
+### c
+
+- No: take $f(x) = {1\over x\ln x}$
+- Then by a $u\dash$substitution,
+  \begin{align*}
+  \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\to \infty
+  \end{align*}
+  is unbounded, so $f\not\in L^1([1, \infty))$.
+- But 
+  \begin{align*}
+  xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
+  .\end{align*}
+
+
+
+:::
+
+
+
 ## Fall 2019 # 5.
 
 a. Show that if $f$ is continuous with compact support on $\RR$, then 
@@ -796,6 +966,50 @@ defines a function in $L^1(\RR)$ that satisfies
 \[
 \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1
 .\]
+
+:::{.solution}
+
+Relevant concepts:
+
+- Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
+- Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
+- F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
+
+\begin{align*}
+\norm{H(x)}_1 
+&= \int_\RR \abs{H(x, y)} \, dx \\
+&= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
+&\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
+&= \int_\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
+&= \int_\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
+&\definedas \int_\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
+&= \norm{g}_1 \int_\RR \abs{f(y)} \,dy \\
+&\definedas \norm{g}_1 \norm{f}_1  \\
+&< \infty \qtext{by assumption}
+.\end{align*}
+
+- $H$ is measurable on $\RR^2$:
+  - If we can show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, then $H = \tilde f \cdot \tilde g$ is a product of measurable functions and thus measurable. 
+  - $f \in L^1$, and $L^1$ functions are measurable by definition.
+  - The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
+    - Let $g$ be measurable on $\RR$, then the cylinder function $G(x, y) = g(x)$ on $\RR^2$ is always measurable
+    - Define a linear transformation $T \definedas \thevector{1, -1; 0, 1}$ which sends $(x,y) \to (x-y, y)$, then $T\in \GL(2, \RR)$ is linear and thus measurable.
+    - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
+
+- Apply **Tonelli** to $\abs{H}$
+  - $H$ measurable implies $\abs{H}$ is measurable
+  - $\abs{H}$ is non-negative
+  - So the iterated integrals are equal in the extended sense
+  - The calculation shows the iterated integral is finite, to $\int \abs{H}$ is finite and $H$ is thus integrable on $\RR^2$.
+
+> Note: Fubini is not needed, since we're not calculating the actual integral, just showing $H$ is integrable.
+
+
+:::
+
+
 
 ## Spring 2019 # 4
 Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n × \RR : 0 ≤ t ≤ f (x)\}$.
