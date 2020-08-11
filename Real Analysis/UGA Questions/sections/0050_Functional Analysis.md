@@ -180,7 +180,8 @@ Let $\Lambda \in L^1(X)\dual$ be arbitrary.
 #### (ii): $g$ is in $L^\infty$
 
 - It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
-- Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. \todo{Is this assumed..? Or did we show it..?}
+- Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. 
+  \todo[inline]{Is this assumed..? Or did we show it..?}
 
 - Claim: $\norm{\Lambda}_{L^1(X)\dual} =\norm{g}_{L^\infty(X)}$
   - The result follows because $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.

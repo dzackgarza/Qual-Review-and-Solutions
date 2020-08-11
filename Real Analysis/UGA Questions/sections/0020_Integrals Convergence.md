@@ -212,12 +212,7 @@ Equality of Integrals:
 
 - Now take a nested sequence of sets $F_{\eps}$ with $\mu(F_\eps) \to 0$ and applying continuity of measure yields the desired statement.
 
-
-
-
 :::
-
-
 
 
 ## Fall 2018 # 6
@@ -236,6 +231,45 @@ Show that
 \[
 F'(t)=-\int _{-\infty}^{\infty} x f(x) \sin (x t) dx
 .\]
+
+:::{.solution}
+Concepts used:
+
+-  Mean Value Theorem
+- DCT
+
+\begin{align*}
+\dd{}{t} F(t) 
+&= \dd{}{t} \int_\RR f(x) \cos(xt) ~dx \\
+&\overset{DCT}= \int_\RR f(x) \dd{}{t} \cos(xt) ~dx \\
+&= \int_\RR xf(x) \cos(xt)~dx
+,\end{align*}
+so it only remains to justify the DCT.
+
+- Fix $t$, then let $t_n \to t$ be arbitrary.
+- Define 
+$$
+h_n(x, t) = f(x)
+\left(\frac{\cos(tx) - \cos(t_n x)}{t_n - t}\right) \converges{n\to\infty}\to \dd{}{t} \qty{f(x) \cos(xt)}
+$$
+ since $\cos(tx)$ is differentiable in $t$ and this is the limit definition of differentiability.
+
+- Note that
+\begin{align*}
+\dd{}{t} \cos(tx) 
+&\definedas \lim_{t_n \to t} \frac{\cos(tx) - \cos(t_n x)}{t_n - t} \\
+&\overset{MVT} = \dd{}{t}\cos(tx)\mid_{t  = \xi_n} \hspace{6em} \text{for some } \xi_n \in [t, t_n] \text{ or } [t_n, t] \\
+&= x\sin(\xi_n x)
+\end{align*}
+  where $\xi_n \converges{n\to\infty}\to t$ since wlog $t_n \leq \xi_n \leq t$ and $t_n \nearrow t$.
+
+- We then have $$\abs{h_n(x)} = \abs{f(x) x\sin(\xi_n x)} \leq \abs{xf(x)}\quad\text{since } \abs{\sin(\xi_n x)} \leq  1$$ for every $x$ and every $n$.
+- Since $xf(x) \in L^1(\RR)$ by assumption, the DCT applies. 
+
+
+:::
+
+
 
 ## Spring 2018 # 5
 

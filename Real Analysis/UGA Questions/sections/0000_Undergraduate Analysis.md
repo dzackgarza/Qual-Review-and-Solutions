@@ -4,6 +4,51 @@
 Let $f(x) = \frac 1 x$.
 Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 
+:::{.solution}
+## 1
+
+Concepts used:
+
+- Uniform continuity.
+
+Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
+
+- Note that
+$$
+\abs{x}, \abs y > c > 0 \implies \abs{xy} = \abs{x}\abs{y} > c^2 \implies \frac{1}{\abs{xy}} < \frac 1 {c^{2}}
+.$$
+
+- Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
+ - Note that $\delta$ does not depend on $x, y$.
+- Then
+\begin{align*}
+\abs{f(x) - f(y)}
+&= \abs{\frac 1 x - \frac 1 y} \\
+&= \frac{\abs{x-y}}{xy} \\
+&\leq \frac{\delta}{xy} \\
+&< \frac{\delta}{c^2} \\
+&< \varepsilon
+,\end{align*}
+  which shows uniform continuity.
+
+To see that $f$ is not uniformly continuous when $c=0$:
+
+> Note: negating uniform continuity says $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
+
+- Let $\varepsilon < 1$.
+- Let $x_n = \frac 1 n$ for $n\geq 1$.
+- Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
+  - Why this can be done: by the archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
+  - Then
+  \begin{align*}
+  {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
+  .\end{align*}
+- Note $f(x_n) = n$ and thus $$\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon.$$
+
+
+:::
+
+
 
 ## Fall 2017 # 1
 Let 
