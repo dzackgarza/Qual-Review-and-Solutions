@@ -179,4 +179,8 @@ different from 4, we replace the digit $4$ with $399\cdots$. For example, $0.875
 Show that $K$ is a compact, nowhere dense set without isolated points, and find the
 Lebesgue measure $m(K)$.
 
+## Spring 2016 # 2
+Let $0 < \lambda < 1$ and construct a Cantor set $C_\lambda$ by successively removing middle intervals of length $\lambda$.
+
+Prove that $m(C_\lambda) = 0$.
 
