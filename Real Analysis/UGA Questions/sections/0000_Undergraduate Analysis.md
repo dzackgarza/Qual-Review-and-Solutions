@@ -120,3 +120,31 @@ Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies 
 = \norm{\phi}_\infty.
 \]
 
+## Fall 2016 # 6
+
+Let $f, g \in L^2(\RR)$. Show that
+\[
+\lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
+\]
+
+## Spring 2016 # 1
+For $n\in \NN$, define
+$$
+e_{n} = \left (1+ {1\over n} \right)^{n} 
+\qtext{and}
+E_{n} = \left( 1+ {1\over n} \right)^{n+1}
+$$
+
+Show that $e_n < E_n$, and prove Bernoulli's inequality:
+$$
+(1+x)^{n} \geq 1+n x \text { for }-1<x<\infty \text { and } n \in \mathbb{N}
+$$
+
+Use this to show the following:
+
+1. The sequence $e_n$ is increasing.
+2. The sequence $E_n$ is decreasing.
+3. $2 < e_n < E_n < 4$.
+4. $\lim _{n \rightarrow \infty} e_{n}=\lim _{n \rightarrow \infty} E_{n}$.
+
+
