@@ -37,7 +37,6 @@ Prove that the following statements are equivalent:
 2. The sequence $\theset{f(x_n)}_{n=1}^\infty \to f(x_0)$ for every sequence $\theset{x_n} \to x_0$ in $X$.
 
 
-
 # General Analysis
 
 ## Spring 2020 # 1
