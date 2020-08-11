@@ -1,4 +1,4 @@
-# Functional Analysis
+# Functional Analysis: General
 
 ## Fall 2019 # 4. 
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
@@ -48,3 +48,16 @@ Without using the Riesz Representation Theorem, compute
 \[
 \sup \left\{\left|\int_{0}^{1} f(x) e^{x} d x\right| \suchthat f \in L^{2}([0,1], m),~~ \|f\|_{2} \leq 1\right\}
 \]
+
+## Spring 2015 # 5
+Let $\mathcal H$ be a Hilbert space.
+
+1. Let $x\in \mathcal H$ and $\theset{u_n}_{n=1}^N$ be an orthonormal set.
+  Prove that the best approximation to $x$ in $\mathcal H$ by an element in $\spanof_\CC\theset{u_n}$ is given by
+  $$
+  \hat x \definedas \sum_{n=1}^N \inner{x}{u_n}u_n.
+  $$
+2. Conclude that finite dimensional subspaces of $\mathcal H$ are always closed.
+
+
+# Functional Analysis: Banach Spaces
