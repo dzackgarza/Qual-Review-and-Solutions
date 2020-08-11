@@ -3265,7 +3265,6 @@ by Pythagoras since the $u_k$ are normal.
 > Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
 If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
 
-
 :::
 
 
@@ -3598,5 +3597,3 @@ Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
 .\end{align*}
 :::
-
-
