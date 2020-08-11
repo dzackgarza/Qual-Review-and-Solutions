@@ -3454,6 +3454,12 @@ a. Prove that $C([0, 1])$ is complete under the uniform norm $\norm{f}_u := \dis
 b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 = \displaystyle\int_0^1 |f (x)| ~dx$.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 
@@ -3519,8 +3525,13 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \]
 
 :::{.solution}
+Concepts used:
 
-> See https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space
+- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space
+
+**Solution**:
+
+
 
 - Denote this norm $\norm{\wait}_u$
 

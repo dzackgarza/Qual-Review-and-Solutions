@@ -338,8 +338,11 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \]
 
 :::{.solution}
+Concepts used:
 
-> See https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space
+- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
+
+**Solution**:
 
 - Denote this norm $\norm{\wait}_u$
 
