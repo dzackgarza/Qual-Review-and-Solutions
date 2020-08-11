@@ -2784,7 +2784,6 @@ Concepts used:
 
 **Solution**:
 
-
 ### a
 
 $\implies$:
@@ -2965,6 +2964,8 @@ Concepts used:
   .\end{align*}
 - When $\theset{e_n}$ is a basis, the above is an *equality* (Parseval)
 - Arguing uniform convergence: since $\theset{\hat f(n)} \in \ell^1(\ZZ)$, we should be able to apply the $M$ test.
+
+**Solution**:
 
 ### a
 
