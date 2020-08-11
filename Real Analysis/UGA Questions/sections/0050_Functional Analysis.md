@@ -78,7 +78,6 @@ by Pythagoras since the $u_k$ are normal.
 > Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
 If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
 
-
 :::
 
 
@@ -391,6 +390,12 @@ $$
 Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\to \RR$) is complete.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 > Should be supremum maybe..?
 
@@ -404,8 +409,6 @@ Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm
 \begin{align*}
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
 .\end{align*}
-
-
 :::
 
 

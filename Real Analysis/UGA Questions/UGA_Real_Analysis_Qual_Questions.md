@@ -3527,11 +3527,9 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 :::{.solution}
 Concepts used:
 
-- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space
+- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 
 **Solution**:
-
-
 
 - Denote this norm $\norm{\wait}_u$
 
@@ -3580,6 +3578,12 @@ $$
 Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\to \RR$) is complete.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 > Should be supremum maybe..?
 
@@ -3593,8 +3597,6 @@ Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm
 \begin{align*}
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
 .\end{align*}
-
-
 :::
 
 
