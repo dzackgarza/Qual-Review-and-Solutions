@@ -85,3 +85,11 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \[
 \|f\|:=\sup _{x \in[a, b]}|f(x)|+\sup _{x \in[a, b]}\left|f^{\prime}(x)\right|.
 \]
+
+## Fall 2017 # 6
+Let $X$ be a complete metric space and define a norm
+$$
+\|f\|:=\max \{|f(x)|: x \in X\}.
+$$
+
+Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\to \RR$) is complete.
