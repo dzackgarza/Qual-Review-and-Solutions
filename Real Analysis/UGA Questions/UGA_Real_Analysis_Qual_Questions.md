@@ -2106,13 +2106,15 @@ Show that
 \[
 \lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
 \]
-
+\todo[inline]{Missing some stuff.}
 :::{.solution}
 
 Concepts used:
 
 - $C_c^\infty \injects L^p$ is dense.
 - If $f$...?
+
+**Solution**:
 
 - Fixing notation, set $\tau_x f(y) \definedas f(y-x)$; we then want to show
 \[  

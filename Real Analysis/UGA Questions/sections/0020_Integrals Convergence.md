@@ -468,6 +468,8 @@ Concepts used:
 - $C_c^\infty \injects L^p$ is dense.
 - If $f$...?
 
+**Solution**:
+
 - Fixing notation, set $\tau_x f(y) \definedas f(y-x)$; we then want to show
 \[  
 \norm{\tau_x f -f}_{L^1} \converges{x\to 0}\to 0
@@ -509,7 +511,6 @@ Concepts used:
   &= \int_E 0 \,dy \\
   &= 0
   .\]
-
 
 :::
 
