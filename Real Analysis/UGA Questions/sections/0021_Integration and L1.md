@@ -202,6 +202,8 @@ Concepts used:
 - Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 
+**Solution**:
+
 ### a
 
 Stated integral equality: 
