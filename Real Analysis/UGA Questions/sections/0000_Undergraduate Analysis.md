@@ -147,4 +147,12 @@ Use this to show the following:
 3. $2 < e_n < E_n < 4$.
 4. $\lim _{n \to \infty} e_{n} = \lim _{n \to \infty} E_{n}$.
 
+## Fall 2015 # 1
+Define
+$$
+f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { even and } c_{n}>0.
+$$
+
+Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
+
 

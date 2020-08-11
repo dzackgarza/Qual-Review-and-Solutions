@@ -76,6 +76,25 @@ Show that
 \lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
 \]
 
+## Fall 2015 # 3
+Compute the following limit:
+\[
+\lim _{n \rightarrow \infty} \int_{1}^{n} \frac{n e^{-x}}{1+n x^{2}} \, \sin \left(\frac x n\right) \, dx
+\]
+
+## Fall 2015 # 4
+Let $f: [1, \infty) \to \RR$ such that $f(1) = 1$ and
+$$
+f^{\prime}(x)= \frac{1} {x^{2}+f(x)^{2}}
+$$
+
+Show that the following limit exists and satisfies the equality
+$$
+\lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
+$$
+
+
+
 # Integrals: Approximation
 
 ## Spring 2018 # 3
