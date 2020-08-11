@@ -2385,6 +2385,8 @@ Concepts used:
 - Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 
+**Solution**:
+
 ### a
 
 Stated integral equality: 
@@ -2565,10 +2567,14 @@ i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
 
 :::{.solution}
+Concepts used:
 
 > Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
->
 > Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+- ??
+
+**Solution**:
+
 
 ## a
 

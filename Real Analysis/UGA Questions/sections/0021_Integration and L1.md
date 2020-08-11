@@ -384,10 +384,12 @@ i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
 
 :::{.solution}
+Concepts used:
 
-> Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
->
-> Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+- Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
+- Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+
+**Solution**:
 
 ## a
 
