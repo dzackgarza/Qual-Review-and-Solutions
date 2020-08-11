@@ -1,4 +1,4 @@
-# Convergence Theorems
+# Integrals: Convergence
 
 ## Fall 2019 # 2. 
 
@@ -45,6 +45,47 @@ Show that
 F'(t)=-\int _{-\infty}^{\infty} x f(x) \sin (x t) dx
 .\]
 
+## Spring 2018 # 5
+
+Suppose that
+
+- $f_n, f \in L^1$,
+- $f_n \to f$ almost everywhere, and
+- $\int\left|f_{n}\right| \rightarrow \int|f|$.
+
+Show that $\int f_{n} \rightarrow \int f$
+
+## Spring 2018 # 2
+Let
+\[
+f_{n}(x):=\frac{x}{1+x^{n}}, \quad x \geq 0.
+\]
+
+a. Show that this sequence converges pointwise and find its limit. Is the convergence uniform on $[0, \infty)$?
+
+b. Compute 
+\[
+\lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
+\]
+
+
+# Integrals: Approximation
+
+## Spring 2018 # 3
+Let $f$ be a non-negative measurable function on $[0, 1]$. 
+
+Show that
+$$
+\lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
+$$
+
+## Spring 2018 # 4
+Let $f\in L^2([0, 1])$ and suppose
+$$
+\int _{[0,1]} f(x) x^{n} d x=0 \text { for all integers } n \geq 0.
+$$
+Show that $f = 0$ almost everywhere.
+
 
 # $L^1$
 
@@ -75,6 +116,19 @@ and demonstrate that it is not necessarily the case that $f(x) \to 0$ as $\abs{x
 b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\infty}f(x) =0$ and in fact $\lim_{x\to \infty} xf(x) = 0$.
 
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
+
+## Fall 2017 # 3
+Let 
+$$
+S = \spanof_\CC\theset{\chi_{(a, b)} \suchthat a, b \in \RR},
+$$
+the complex linear span of characteristic functions of intervals of the form $(a, b)$.
+
+Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\theset{f_n} \subset S$ such that 
+$$
+\lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{1}=0
+$$
+
 
 # Fubini-Tonelli
 

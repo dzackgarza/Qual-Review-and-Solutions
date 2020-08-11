@@ -51,3 +51,18 @@ $$
 
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
+## Fall 2017 # 4
+Let
+$$
+f_{n}(x)=n x(1-x)^{n}, \quad n \in \mathbb{N}.
+$$
+
+1. Show that $f_n \to 0$ pointwise but not uniformly on $[0, 1]$.
+    
+    > Hint: Consider the maximum of $f_n$.
+
+2. 
+$$
+\lim _{n \rightarrow \infty} \int_{0}^{1} n(1-x)^{n} \sin x d x=0
+$$
+
