@@ -28,6 +28,11 @@ $$
 
 > Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
 
+## Fall 2018 # 6
+Compute the following limit and justify your calculations:
+$$
+\lim_{n \rightarrow \infty} \int_{1}^{n} \frac{d x}{\left(1+\frac{x}{n}\right)^{n} \sqrt[n]{x}}
+$$
 
 # $L^1$
 
@@ -85,4 +90,10 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
+## Fall 2018 # 5
+Let $f \geq 0$ be a measurable function on $\RR$.
+Show that
+$$
+\int _{\RR} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
+$$
 
