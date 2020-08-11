@@ -68,6 +68,13 @@ b. Compute
 \lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
 \]
 
+## Fall 2016 # 3
+
+Let $f\in L^1(\RR)$.
+Show that
+\[
+\lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
+\]
 
 # Integrals: Approximation
 
