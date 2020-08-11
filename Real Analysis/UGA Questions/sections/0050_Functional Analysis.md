@@ -28,6 +28,7 @@ Concepts used:
 - Parseval's Identity
 - Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
 
+**Solution**:
 
 ### a
 
@@ -117,17 +118,20 @@ Concepts used:
 - $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
 - **Lemma**:  $m(X) < \infty \implies L^p(X) \subset L^2(X)$.
 
-> *Proof:*
-> Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
+:::{.proof}
+\hfill
+- Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
 \begin{align*}
 \norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
 .\end{align*}
->
-> Now take $a = \frac 2 p$ and this reduces to 
+
+- Now take $a = \frac 2 p$ and this reduces to 
 \begin{align*}
 \norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
 \implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
 .\end{align*}
+:::
+
 
 
 ### a
