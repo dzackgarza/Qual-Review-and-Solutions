@@ -712,9 +712,8 @@ Concepts used:
 - Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$, each with finite measure.
 - Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
 
-
 :::{.proof}
-
+\hfill
 - $m_*(Q) \leq \abs{Q}$:
 - Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
 - $\abs{Q} \leq m_*(Q)$:
@@ -842,6 +841,8 @@ Concepts used:
 - Tails of convergent sums vanish.
 -  Continuity of measure: $B_n \searrow B$ and $\mu(B_0)<\infty$ implies $\lim_n \mu(B_n) = \mu(B)$, and $B_n\nearrow B \implies \lim_n \mu(B_n) = \mu(B)$.
 
+**Solution**:
+
 ### a
 
 - The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
@@ -899,6 +900,12 @@ Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with
 Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 
@@ -970,6 +977,7 @@ m(A)
 Let $E\subset \RR$ be a Lebesgue measurable set.
 Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
+\todo[inline]{Move this to review notes to clean things up.}
 :::{.solution}
 Concepts used:
 
@@ -1038,6 +1046,8 @@ O\setminus E
     m_*(E^c\setminus S) \leq m_*(\OO_N \setminus E) \leq {1\over N} \quad \forall N \implies m_*(E^c\setminus S) = 0
     .$$
   - Thus $E^c\setminus S$ is measurable.
+
+**Solution**
   
 ### Indirect Proof
 
