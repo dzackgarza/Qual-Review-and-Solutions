@@ -480,6 +480,51 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \left(\frac{1}{n^{x}}\right)' = -\frac{1}{n^{x}} \ln n
 \]
 
+:::{.solution}
+
+- Set $f_N(x) \definedas \sum_{n=1}^N n^{-x}$, so $f(x) = \lim_{N\to\infty} f_N(x)$.
+- If an interchange of limits is justified, we have
+\[  
+\dd{}{x} \lim_{N\to\infty} \sum_{n=1}^N n^{-x}
+&= \lim_{h\to 0} \lim_{N\to\infty} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
+&\equalsbecause{?} \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
+&= \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ {\sum_{n=1}^N n^{-x}} - {n^{-(x+h)} }\right] \quad\text{(1)} \\
+&= \lim_{N\to\infty} \sum_{n=1}^N \lim_{h\to 0} {1\over h} \left[ n^{-x} - n^{-(x+h)} \right] \quad\text{since this is a finite sum} \\
+&\definedas \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x}\qty{1 \over n^x} \\ 
+&= \lim_{N\to\infty} \sum_{n=1}^N -{\ln(n) \over n^x}
+,\]
+  where the combining of sums in (1) is valid because $\sum n^{-x}$ is absolutely convergent for $x>1$ by the $p\dash$test.
+
+- Thus it suffices to justify the interchange of limits and show that the last sum converges on $(1, \infty)$.
+
+- Claim: $\sum n^{-x}\ln(n)$ converges.
+  - Use the fact that for any fixed $\eps>0$,
+  \[  
+  \lim_{n\to\infty} {\ln(n) \over n^\eps} 
+  \equalsbecause{L.H.} \lim_{n\to\infty}{1/n \over \eps n^{\eps-1}} 
+  = \lim_{n\to\infty} {1\over \eps n^\eps} = 0
+  ,\]
+  - This implies that for a fixed $\eps >0$ and for any constant $c>0$ there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^\eps < c$, i.e. $\ln(n) < c n^{\eps}$.
+  - Taking $c=1$, we have $n\geq N \implies \ln(n) < n^\eps$
+  - We thus break up the sum:
+  \[  
+  \sum_{n\in \NN} {\ln(n) \over n^x} 
+  &= \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {\ln(n) \over n^x} \\
+  &\leq \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {n^\eps \over n^x} \\
+  &\definedas C_\eps + \sum_{n=N}^\infty {n^\eps \over n^x} \quad \text{with $C_\eps<\infty$ a constant}\\
+  &= C_\eps + \sum_{n=N}^\infty {1 \over n^{x-\eps}}
+  ,\]
+  where the last term converges by the $p\dash$test if $x-\eps > 1$.
+
+  - But $\eps$ can depend on $x$, and if $x\in (1, \infty)$ is fixed we can choose $\eps < \abs{x-1}$ to ensure this. 
+
+
+- Claim: the interchange of limits is justified.
+\todo[inline]{?}
+:::
+
+
+
 ## Fall 2016 # 5
 
 Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies the equality
@@ -896,7 +941,6 @@ E\setminus B \definedas E\setminus  \OO^c \definedas E\intersect (\OO^c)^c = E\i
 :::
 
 
-
 ## Spring 2018 # 1
 Define
 $$
@@ -1175,16 +1219,46 @@ x\in E \iff gf\chi_E(x) > 0 \iff x\in A
 
 ## Fall 2016 # 4
 Let $(X, \mathcal M, \mu)$ be a measure space and suppose $\theset{E_n} \subset \mathcal M$ satisfies
-$$
+\[
 \lim _{n \rightarrow \infty} \mu\left(X \backslash E_{n}\right)=0.
-$$
+\]
 
 Define
-$$
+\[
 G \definedas \theset{x\in X \suchthat x\in E_n \text{ for only finitely many  } n}.
-$$
+\]
 
 Show that $G \in \mathcal M$ and $\mu(G) = 0$.
+
+:::{.solution}
+
+- Claim: $G\in \mcm$.
+  - Claim:
+  \[  
+  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c
+  .\]
+
+    - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
+
+  - But $\mcm$ is a $\sigma\dash$algebra, and this shows $G$ is obtained by countable unions/intersections/complementes of measurable sets, so $G\in \mcm$. 
+
+- Claim: $\mu(G) = 0$.
+
+  - We have
+  \[  
+  \mu(G)
+  &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
+  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
+  &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
+  &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
+  &\converges{N\to\infty}\to 0
+  .\]
+  \todo{Last step seems wrong!}
+
+
+:::
+
+
 
 ## Spring 2016 # 3
 Let $f$ be Lebesgue measurable on $\RR$ and $E \subset \RR$ be measurable such that
@@ -1378,9 +1452,32 @@ Show that either
 
 1. $f(x) = g(x)$ almost everywhere, or
 2. There exists a measurable set $E \subset [a, b]$ such that
-$$
-\int_{E} f(x) ~d x>\int_{E} g(x) ~d x
-$$
+\[]
+\int _{E} f(x) \, dx > \int _{E} g(x) \, dx
+\]
+
+:::{.solution}
+
+
+- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
+- Write 
+\[  
+A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
+,\]
+  then $m(A_1) > 0$ or $m(A_2) > 0$ (or both).
+
+- Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$, and take $E\definedas A_1$.
+
+- Then on $E$, we have $f(x)>g(x)$ pointwise. 
+  This is preserved by monotonicity of the integral, thus
+  \[  
+  f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int_{E} g(x)\, dx 
+  .\] 
+
+
+:::
+
+
 
 ## Spring 2016 # 4
 Let $E \subset \RR$ be measurable with $m(E) < \infty$. 
@@ -1847,6 +1944,60 @@ Show that
 \[
 \lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
 \]
+
+:::{.solution}
+
+Concepts used:
+
+- $C_c^\infty \injects L^p$ is dense.
+- If $f
+
+- Fixing notation, set $\tau_x f(y) \definedas f(y-x)$; we then want to show
+\[  
+\norm{\tau_x f -f}_{L^1} \converges{x\to 0}\to 0
+.\]
+- Claim: by an $\eps/3$ argument, it suffices to show this for compactly supported functions:
+  - Since $f\in L^1$, choose $g_n\subset C_c^\infty(\RR^1)$ smooth and compactly supported so that $$\norm{f-g}_{L^1} < \eps.$$
+  - Claim: $\norm{\tau_x f - \tau_x g} < \eps$.
+    - Proof 1: translation invariance of the integral.
+    - Proof 2: Apply a change of variables:
+  \[  
+    \norm{\tau_x f - \tau_x g}_1
+    &\definedas \int_\RR \abs{\tau_x f(y) - \tau_x g(y)}\, dy \\
+    &= \int_\RR \abs{f(y-x) - g(y-x)}\, dy  \\
+    &= \int_\RR \abs{f(u) - g(u)}\, du \qquad (u=y-x,\, du=dy) \\
+    &= \norm{f-g}_1 \\
+    &< \eps
+  .\]
+  - Then
+  \[  
+  \norm{\tau_x f - f}_1 
+  &= \norm{\tau_x f - \tau_x g + \tau_x g - g +g - f}_{1} \\
+  &\leq \norm{\tau_x f - \tau_x g}_1 + \norm{\tau_x g - g}_1 + \norm{g - f}_{1} \\
+  &\leq 2\eps + \norm{\tau_x g - g}_1
+  .\]
+
+- To show this for compactly supported functions:
+  - Let $g\in C_c^\infty(\RR^1)$, let $E = \supp(g)$, and write
+  \[  
+  \norm{\tau_x g - g}_1 
+  &= \int_\RR \abs{g(y-x) - g(y)}\,dy \\
+  &= \int_E \abs{g(y-x) - g(y)} \,dy + \int_{E^c} \abs{g(y-x) - g(y)} \,dy\\
+  &= \int_E \abs{g(y-x) - g(y)} \,dy 
+  .\]
+
+  - But $g$ is smooth and compactly supported on $E$, and thus uniformly continuous on $E$, so
+  \[  
+  \lim_{x\to 0} \int_E \abs{g(y-x) - g(y)} \,dy 
+  &= \int_E \lim_{x\to 0} \abs{g(y-x) - g(y)} \,dy \\
+  &= \int_E 0 \,dy \\
+  &= 0
+  .\]
+
+
+:::
+
+
 
 ## Fall 2015 # 3
 Compute the following limit:

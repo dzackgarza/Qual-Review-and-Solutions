@@ -369,7 +369,6 @@ E\setminus B \definedas E\setminus  \OO^c \definedas E\intersect (\OO^c)^c = E\i
 :::
 
 
-
 ## Spring 2018 # 1
 Define
 $$
@@ -648,16 +647,46 @@ x\in E \iff gf\chi_E(x) > 0 \iff x\in A
 
 ## Fall 2016 # 4
 Let $(X, \mathcal M, \mu)$ be a measure space and suppose $\theset{E_n} \subset \mathcal M$ satisfies
-$$
+\[
 \lim _{n \rightarrow \infty} \mu\left(X \backslash E_{n}\right)=0.
-$$
+\]
 
 Define
-$$
+\[
 G \definedas \theset{x\in X \suchthat x\in E_n \text{ for only finitely many  } n}.
-$$
+\]
 
 Show that $G \in \mathcal M$ and $\mu(G) = 0$.
+
+:::{.solution}
+
+- Claim: $G\in \mcm$.
+  - Claim:
+  \[  
+  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c
+  .\]
+
+    - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
+
+  - But $\mcm$ is a $\sigma\dash$algebra, and this shows $G$ is obtained by countable unions/intersections/complements of measurable sets, so $G\in \mcm$. 
+
+- Claim: $\mu(G) = 0$.
+
+  - We have
+  \[  
+  \mu(G)
+  &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
+  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
+  &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
+  &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
+  &\converges{N\to\infty}\to 0
+  .\]
+  \todo[inline]{Last step seems wrong!}
+
+
+:::
+
+
 
 ## Spring 2016 # 3
 Let $f$ be Lebesgue measurable on $\RR$ and $E \subset \RR$ be measurable such that
@@ -851,9 +880,32 @@ Show that either
 
 1. $f(x) = g(x)$ almost everywhere, or
 2. There exists a measurable set $E \subset [a, b]$ such that
-$$
-\int_{E} f(x) ~d x>\int_{E} g(x) ~d x
-$$
+\[]
+\int _{E} f(x) \, dx > \int _{E} g(x) \, dx
+\]
+
+:::{.solution}
+
+
+- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
+- Write 
+\[  
+A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
+,\]
+  then $m(A_1) > 0$ or $m(A_2) > 0$ (or both).
+
+- Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$, and take $E\definedas A_1$.
+
+- Then on $E$, we have $f(x)>g(x)$ pointwise. 
+  This is preserved by monotonicity of the integral, thus
+  \[  
+  f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int_{E} g(x)\, dx 
+  .\] 
+
+
+:::
+
+
 
 ## Spring 2016 # 4
 Let $E \subset \RR$ be measurable with $m(E) < \infty$. 
