@@ -57,11 +57,39 @@ To see that $f$ is not uniformly continuous when $c=0$:
 
 ## Fall 2017 # 1
 Let 
-$$
-f(x) = s \sum_{n=0}^{\infty} \frac{x^{n}}{n !}.
-$$
+\[
+f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
+\]
 
 Describe the intervals on which $f$ does and does not converge uniformly.
+
+:::{.solution}
+
+Note that $f(x) = e^x$ is entire and thus equal to its power series.
+So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
+
+Letting $f_N(x) = \sum_{j=1}^N \frac 1 {j!} x^j$, we have $f_N(x) \to f(x)$ pointwise on $(-\infty ,\infty)$.
+
+For any compact interval $[-M, M]$, we have
+
+\begin{align*}
+\norm{f_N(x) - f(x)}_\infty
+&= \sup_{-M\leq x \leq M} ~\abs{\sum_{j=N+1}^\infty \frac 1 {j!} x^j} \\
+&\leq \sup_{-M\leq x \leq M} ~ \sum_{j=N+1}^\infty \frac 1 {j!} \abs{x}^j \\
+&\leq \sum_{j=N+1}^\infty \frac 1 {j!} M^j \\
+&\leq \sum_{j=0}^\infty \frac 1 {j!} M^j \\
+&= e^M \\
+&<\infty
+,\end{align*}
+
+so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
+Thus it converges on any bounded interval.
+
+It does not converge on $\RR$, since $x^N$ is unbounded.
+
+
+:::
+
 
 ## Fall 2014 # 1
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
@@ -1349,7 +1377,66 @@ Suppose that
 - $f_n \to f$ almost everywhere, and
 - $\int\left|f_{n}\right| \rightarrow \int|f|$.
 
-Show that $\int f_{n} \rightarrow \int f$
+Show that $\int f_{n} \rightarrow \int f$.
+
+:::{.solution}
+Concepts used:
+
+- $\int \abs{f_n - f} \to \iff \int f_n = \int f$.
+- Fatou:
+\begin{align*}
+\int \liminf f_n \leq \liminf \int f_n \\
+\int \limsup f_n \geq \limsup \int f_n
+.\end{align*}
+
+**Solution**:
+
+- Since $\int \abs{f_n} \converges{n\to\infty}\to \int \abs{f}$, define
+\begin{align*}
+h_n &= \abs{f_n - f} &\converges{n\to\infty}\to 0 ~a.e.\\
+g_n &= \abs{f_n} + \abs{f} &\converges{n\to\infty}\to 2\abs {f} ~a.e.
+\end{align*}
+
+  - Note that $g_n - h_n \converges{n\to\infty}\to 2\abs{f} - 0 = 2\abs{f}$.
+
+- Then
+\begin{align*}
+\int 2 \abs {f} 
+&= \int \liminf_n (g_n - h_n) \\
+&= \int \liminf_n(g_n) + \int \liminf_n(-h_n) \\
+&= \int \liminf_n(g_n) - \int \limsup_n(h_n) \\
+&= \int 2 \abs{f} - \int \limsup_n(h_n) \\
+&\leq \int 2\abs{f} - \limsup_n \int h_n \quad\text{by Fatou}
+,\end{align*}
+
+- Since $f\in L^1$, $\int 2\abs{f}  = 2\norm{f}_1 < \infty$ and it makes sense to subtract it from both sides, thus
+\begin{align*}
+0 &\leq - \limsup_n \int h_n \\
+&\definedas - \limsup_n \int \abs{f_n - f}
+.\end{align*}
+  which forces $\limsup_n \int \abs{f_n -f}  = 0$, since
+    
+    - The integral of a nonnegative function is nonnegative, so $\int \abs{f_n - f} \geq 0$.
+    - So $\qty{ -\int \abs{f_n - f} } \leq 0$.
+    - But the above inequality shows $\qty{ -\int \abs{f_n - f} } \geq 0$ as well.
+- Since $\liminf_n \int h_n \leq \limsup_n \int h_n = 0$, $\lim_n \int h_n$ exists and is equal to zero.
+
+- But then 
+\begin{align*}
+\abs{\int f_n - \int f}
+&= \abs{\int f_n -f}
+\leq \int \abs{f_n - f}
+,\end{align*}
+  and taking $\lim_{n\to\infty}$ on both sides yields
+  \begin{align*}
+  \lim_{n\to\infty} \abs{\int f_n - \int f} \leq \lim_{n\to\infty} \int \abs{f_n - f} = 0
+  ,\end{align*}
+  so $\lim_{n\to\infty} \int f_n = \int f$.
+
+
+:::
+
+
 
 ## Spring 2018 # 2
 Let
@@ -1363,6 +1450,75 @@ b. Compute
 \[
 \lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
 \]
+
+:::{.solution}
+
+### a
+
+Claim: $f_n$ does not converge uniformly to its limit.
+
+- Note each $f_n(x)$ is clearly continuous on $(0, \infty)$, since it is a quotient of continuous functions where the denominator is never zero.
+
+- Note 
+\begin{align*}
+x < 1 \implies x^n \converges{n\to\infty}\to 0\qtext{and} x>1 \implies x^n \converges{n\to\infty}\to \infty
+.\end{align*}
+
+- Thus
+\begin{align*}
+f_n(x) = \frac{x}{1+ x^n}\converges{n\to\infty}\longrightarrow
+f(x) \definedas
+\begin{cases}
+x, & 0 \leq x < 1 \\
+\frac 1 2, & x = 1 \\
+0, & x > 1 \\
+\end{cases}
+.\end{align*}
+
+- If $f_n \to f$ uniformly on $[0, \infty)$, it would converge uniformly on every subset and thus uniformly on $(0, \infty)$.
+  - Then $f$ would be a uniform limit of continuous functions on $(0, \infty)$ and thus continuous on $(0, \infty)$.
+  - By uniqueness of limits, $f_n$ would converge to the pointwise limit $f$ above, which is not continuous at $x=1$, a contradiction.
+
+### b
+
+- If the DCT applies, interchange the limit and integral:
+    \begin{align*}
+    \lim_{n\to\infty }\int_0^\infty f_n(x)\, dx 
+&= \int_0^\infty \lim_{n\to\infty}f_n(x) \, dx \quad\text{DCT}\\
+    &=\int_0^\infty f(x) \,dx \\
+    &= \int_0^1 x \,dx + \int_1^\infty 0\, dx \\
+    &= {1\over 2}x^2 \evalfrom_0^1 \\
+    &= {1\over 2}
+    .\end{align*}
+
+- To justify the DCT, write 
+\begin{align*}
+\int_0^\infty f_n(x)
+= \int_0^1 f_n(x) + \int_1^\infty f_n(x)
+.\end{align*}
+
+- $f_n$ restricted to $(0, 1)$ is uniformly bounded by $g_0(x) = 1$ in the first integral, since
+  \begin{align*}
+  x \in [0, 1] \implies \frac{x}{1+x^n} < \frac{1}{1+x^n} < 1 \definedas g(x)
+  \end{align*}
+  so 
+  \begin{align*}
+  \int_0^1 f_n(x)\,dx \leq \int_0^1 1 \,dx = 1 < \infty
+  .\end{align*}
+  Also note that $g_0\cdot \chi_{(0, 1)} \in L^1((0, \infty))$.
+
+- The $f_n$ restricted to $(1, \infty)$ are uniformly bounded by $g_1(x) = {1\over x^{2}}$ on $[1, \infty)$, since
+  \begin{align*}
+  x \in (1, \infty) \implies \frac{x}{1+x^n} \leq {x \over x^n} = {1 \over x^{n-1}} \leq {1\over x^2}\in L^1([1, \infty) \text{ when } n\geq 3
+  ,\end{align*}
+  by the $p\dash$test for integrals.
+
+- So set $$g \definedas g_0 \cdot \chi_{(0, 1)} + g_1 \cdot \chi_{[1, \infty)},$$ then by the above arguments $g \in L^1((0, \infty))$ and $f_n \leq g$ everywhere, so the DCT applies.
+
+
+:::
+
+
 
 ## Fall 2016 # 3
 
@@ -1399,9 +1555,73 @@ $$
 Let $f$ be a non-negative measurable function on $[0, 1]$. 
 
 Show that
-$$
+\[
 \lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
-$$
+\]
+
+:::{.solution}
+
+Concepts used:
+
+- $\norm{f}_\infty \definedas \inf_t {\theset{ t\suchthat m\qty{\theset{x\in \RR^n \suchthat f(x) > t}} = 0 } }$, i.e. this is the lowest upper bound that holds almost everywhere.
+
+**Solution**:
+
+- $\norm{f}_p \leq \norm{f}_\infty$:
+  - Note $\abs{f(x)} \leq \norm{f}_\infty$ almost everywhere and taking $p$th powers preserves this inequality.
+  - Thus
+  \begin{align*}
+  \abs{f(x)} &\leq \norm{f}_\infty \quad\text{a.e. by definition} \\
+  \implies 
+  \abs{f(x)}^p &\leq \norm{f}_\infty^p \quad\text{for } p\geq 0 \\  
+  \implies
+  \norm{f}_p^p 
+  &= \int_X \abs{f(x)}^p ~dx \\
+  &\leq \int_X \norm{f}_\infty^p ~dx  \\
+  &= \norm{f}_\infty^p \int_X 1\,dx \\ 
+  &= \norm{f}_\infty^p \cdot m(X) \quad\text{since the norm doesn't depend on }x \\
+  &= \norm{f}_\infty^p \qquad \text{since } m(X) = 1
+  .\end{align*}
+
+    - Thus $\norm{f}_p \leq \norm{f}_\infty$ for all $p$ and taking $\lim_{p\to\infty}$ preserves this inequality.
+
+- $\norm{f}_p \geq \norm{f}_\infty$:
+  - Fix $\varepsilon > 0$.
+
+  - Define 
+  \begin{align*}
+  S_\varepsilon \definedas \theset{x\in \RR^n \suchthat \abs{f(x)} \geq \norm{f}_\infty - \varepsilon}
+  .\end{align*}
+
+    - Note that $m(S_\eps) > 0$; otherwise if $m(S_\eps) = 0$, then $t\definedas \norm{f}_\infty - \eps < \norm{f}_\eps$.
+    But this produces a *smaller* upper bound almost everywhere than $\norm{f}_\eps$, contradicting the definition of $\norm{f}_\eps$ as an infimum over such bounds.
+    
+
+
+  - Then
+  \begin{align*}
+  \norm{f}_p^p 
+  &= \int_X \abs{f(x)}^p ~dx \\
+  &\geq \int_{S_\varepsilon} \abs{f(x)}^p ~dx \quad\text{since } S_\eps \subseteq X \\
+  &\geq \int_{S_\varepsilon} \abs{\norm{f}_\infty - \varepsilon}^p ~dx \quad\text{since on } S_\eps, \abs{f} \geq \norm{f}_\infty - \eps \\
+  &= \abs{\norm{f}_\infty - \varepsilon}^p \cdot m(S_\varepsilon) \quad\text{since the integrand is independent of }x \\
+  & \geq 0 \quad\text{since } m(S_\eps) > 0
+  \end{align*}
+  
+  - Taking $p$th roots for $p\geq 1$ preserves the inequality, so
+  \begin{align*}
+  \implies \norm{f}_p &\geq \abs{\norm{f}_\infty - \varepsilon} \cdot m(S_\varepsilon)^{\frac 1 p} 
+  \converges{p\to\infty}\to \abs{\norm{f}_\infty - \varepsilon} 
+  \converges{\varepsilon \to 0}\to \norm{f}_\infty
+  \end{align*}
+  where we've used the fact that above arguments work 
+
+  - Thus $\norm{f}_p \geq \norm{f}_\infty$.
+
+
+:::
+
+
 
 ## Spring 2018 # 4
 Let $f\in L^2([0, 1])$ and suppose
@@ -1418,6 +1638,89 @@ Prove that
 \]
 
 > Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
+
+:::{.solution}
+
+
+
+### Proof 1: Using Fourier Transforms
+
+Concepts used:
+
+- Weierstrass Approximation: A uniformly continuous function on a compact set can be uniformly approximated by polynomials.
+
+**Solution**:
+
+- Fix $k \in \ZZ$.
+- Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
+- Thus there is a sequence of polynomials $P_\ell$ such that 
+$$
+P_{\ell, k} \converges{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+.$$
+
+- Note applying linearity to the assumption $\int f(x) \, x^n$, we have
+$$
+\int f(x) x^n \,dx = 0 ~\forall n \implies \int f(x) p(x) \,dx = 0 
+$$
+  for any polynomial $p(x)$, and in particular for $P_{\ell, k}(x)$ for every $\ell$ and every $k$.
+
+- But then  
+\begin{align*}
+\inner{f}{e_k} 
+&= \int_0^1 f(x) e^{-2\pi i k x} ~dx \\
+&= \int_0^1 f(x) \lim_{\ell \to \infty} P_\ell(x) \\
+&= \lim_{\ell \to \infty}  \int_0^1 f(x) P_\ell(x) \quad\quad \text{by uniform convergence on a compact interval} \\
+&= \lim_{\ell \to \infty} 0 \quad\text{by assumption}\\
+&= 0 \quad \forall k\in \ZZ
+,\end{align*}
+ so $f$ is orthogonal to every $e_k$. 
+
+- Thus $f\in S^\perp \definedas \spanof_\CC\theset{e_k}_{k\in \ZZ}^\perp \subseteq L^2([0, 1])$, but since this is a basis, $S$ is dense and thus $S^\perp = \theset{0}$ in $L^2([0, 1])$.
+
+- Thus $f\equiv 0$ in $L^2([0, 1])$, which implies that $f$ is zero almost everywhere.
+
+$\qed$
+
+### Alternative Proof
+
+Concepts used
+
+- $C^1([0, 1])$ is dense in $L^2([0, 1])$
+- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
+  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
+
+**Solution**:
+
+- By density of polynomials, for $f\in L^2([0, 1])$ choose $p_\eps(x)$ such that $\norm{f - p_\eps} < \eps$ by Weierstrass approximation.
+- Then on one hand,
+\begin{align*}
+\norm{f(f-p_\eps)}_1 
+&= \norm{f^2}_1 - \norm{f\cdot p_\eps}_1 \\
+&= \norm{f^2}_1 - 0 \quad\text{by assumption} \\
+&= \norm{f}_2^2
+.\end{align*}
+
+  - Where we've used that $\norm{f^2}_1 = \int \abs{f^2} = \int \abs{f}^2 = \norm{f}_2^2$.
+
+- On the other hand
+\begin{align*}
+\norm{f(f-p_\eps)} 
+&\leq \norm{f}_1 \norm{f-p_\eps}_\infty \quad\text{by Holder} \\
+&\leq \eps \norm{f}_1  \\
+&\leq \eps \norm{f}_2 \sqrt{m(X)} \\ 
+&= \eps \norm{f}_2 \quad\text{since } m(X)= 1
+.\end{align*}
+  - Where we've used that $\norm{fg}_1 = \int \abs{fg} = \int \abs{f}\abs{g} \leq \int \norm{f}_\infty \abs{g} = \norm{f}_\infty \norm{g}_1$.
+
+- Combining these,
+\begin{align*}
+\norm{f}_2^2 \leq \norm{f}_2 \eps \implies \norm{f}_2 < \eps \to 0,
+.\end{align*}
+  so $\norm{f}_2 = 0$, which implies $f=0$ almost everywhere.
+
+
+:::
+
 
 
 ## Fall 2014 # 4

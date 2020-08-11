@@ -293,7 +293,66 @@ Suppose that
 - $f_n \to f$ almost everywhere, and
 - $\int\left|f_{n}\right| \rightarrow \int|f|$.
 
-Show that $\int f_{n} \rightarrow \int f$
+Show that $\int f_{n} \rightarrow \int f$.
+
+:::{.solution}
+Concepts used:
+
+- $\int \abs{f_n - f} \to \iff \int f_n = \int f$.
+- Fatou:
+\begin{align*}
+\int \liminf f_n \leq \liminf \int f_n \\
+\int \limsup f_n \geq \limsup \int f_n
+.\end{align*}
+
+**Solution**:
+
+- Since $\int \abs{f_n} \converges{n\to\infty}\to \int \abs{f}$, define
+\begin{align*}
+h_n &= \abs{f_n - f} &\converges{n\to\infty}\to 0 ~a.e.\\
+g_n &= \abs{f_n} + \abs{f} &\converges{n\to\infty}\to 2\abs {f} ~a.e.
+\end{align*}
+
+  - Note that $g_n - h_n \converges{n\to\infty}\to 2\abs{f} - 0 = 2\abs{f}$.
+
+- Then
+\begin{align*}
+\int 2 \abs {f} 
+&= \int \liminf_n (g_n - h_n) \\
+&= \int \liminf_n(g_n) + \int \liminf_n(-h_n) \\
+&= \int \liminf_n(g_n) - \int \limsup_n(h_n) \\
+&= \int 2 \abs{f} - \int \limsup_n(h_n) \\
+&\leq \int 2\abs{f} - \limsup_n \int h_n \quad\text{by Fatou}
+,\end{align*}
+
+- Since $f\in L^1$, $\int 2\abs{f}  = 2\norm{f}_1 < \infty$ and it makes sense to subtract it from both sides, thus
+\begin{align*}
+0 &\leq - \limsup_n \int h_n \\
+&\definedas - \limsup_n \int \abs{f_n - f}
+.\end{align*}
+  which forces $\limsup_n \int \abs{f_n -f}  = 0$, since
+    
+    - The integral of a nonnegative function is nonnegative, so $\int \abs{f_n - f} \geq 0$.
+    - So $\qty{ -\int \abs{f_n - f} } \leq 0$.
+    - But the above inequality shows $\qty{ -\int \abs{f_n - f} } \geq 0$ as well.
+- Since $\liminf_n \int h_n \leq \limsup_n \int h_n = 0$, $\lim_n \int h_n$ exists and is equal to zero.
+
+- But then 
+\begin{align*}
+\abs{\int f_n - \int f}
+&= \abs{\int f_n -f}
+\leq \int \abs{f_n - f}
+,\end{align*}
+  and taking $\lim_{n\to\infty}$ on both sides yields
+  \begin{align*}
+  \lim_{n\to\infty} \abs{\int f_n - \int f} \leq \lim_{n\to\infty} \int \abs{f_n - f} = 0
+  ,\end{align*}
+  so $\lim_{n\to\infty} \int f_n = \int f$.
+
+
+:::
+
+
 
 ## Spring 2018 # 2
 Let
@@ -307,6 +366,75 @@ b. Compute
 \[
 \lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
 \]
+
+:::{.solution}
+
+### a
+
+Claim: $f_n$ does not converge uniformly to its limit.
+
+- Note each $f_n(x)$ is clearly continuous on $(0, \infty)$, since it is a quotient of continuous functions where the denominator is never zero.
+
+- Note 
+\begin{align*}
+x < 1 \implies x^n \converges{n\to\infty}\to 0\qtext{and} x>1 \implies x^n \converges{n\to\infty}\to \infty
+.\end{align*}
+
+- Thus
+\begin{align*}
+f_n(x) = \frac{x}{1+ x^n}\converges{n\to\infty}\longrightarrow
+f(x) \definedas
+\begin{cases}
+x, & 0 \leq x < 1 \\
+\frac 1 2, & x = 1 \\
+0, & x > 1 \\
+\end{cases}
+.\end{align*}
+
+- If $f_n \to f$ uniformly on $[0, \infty)$, it would converge uniformly on every subset and thus uniformly on $(0, \infty)$.
+  - Then $f$ would be a uniform limit of continuous functions on $(0, \infty)$ and thus continuous on $(0, \infty)$.
+  - By uniqueness of limits, $f_n$ would converge to the pointwise limit $f$ above, which is not continuous at $x=1$, a contradiction.
+
+### b
+
+- If the DCT applies, interchange the limit and integral:
+    \begin{align*}
+    \lim_{n\to\infty }\int_0^\infty f_n(x)\, dx 
+&= \int_0^\infty \lim_{n\to\infty}f_n(x) \, dx \quad\text{DCT}\\
+    &=\int_0^\infty f(x) \,dx \\
+    &= \int_0^1 x \,dx + \int_1^\infty 0\, dx \\
+    &= {1\over 2}x^2 \evalfrom_0^1 \\
+    &= {1\over 2}
+    .\end{align*}
+
+- To justify the DCT, write 
+\begin{align*}
+\int_0^\infty f_n(x)
+= \int_0^1 f_n(x) + \int_1^\infty f_n(x)
+.\end{align*}
+
+- $f_n$ restricted to $(0, 1)$ is uniformly bounded by $g_0(x) = 1$ in the first integral, since
+  \begin{align*}
+  x \in [0, 1] \implies \frac{x}{1+x^n} < \frac{1}{1+x^n} < 1 \definedas g(x)
+  \end{align*}
+  so 
+  \begin{align*}
+  \int_0^1 f_n(x)\,dx \leq \int_0^1 1 \,dx = 1 < \infty
+  .\end{align*}
+  Also note that $g_0\cdot \chi_{(0, 1)} \in L^1((0, \infty))$.
+
+- The $f_n$ restricted to $(1, \infty)$ are uniformly bounded by $g_1(x) = {1\over x^{2}}$ on $[1, \infty)$, since
+  \begin{align*}
+  x \in (1, \infty) \implies \frac{x}{1+x^n} \leq {x \over x^n} = {1 \over x^{n-1}} \leq {1\over x^2}\in L^1([1, \infty) \text{ when } n\geq 3
+  ,\end{align*}
+  by the $p\dash$test for integrals.
+
+- So set $$g \definedas g_0 \cdot \chi_{(0, 1)} + g_1 \cdot \chi_{[1, \infty)},$$ then by the above arguments $g \in L^1((0, \infty))$ and $f_n \leq g$ everywhere, so the DCT applies.
+
+
+:::
+
+
 
 ## Fall 2016 # 3
 

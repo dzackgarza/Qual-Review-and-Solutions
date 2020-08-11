@@ -4,9 +4,73 @@
 Let $f$ be a non-negative measurable function on $[0, 1]$. 
 
 Show that
-$$
+\[
 \lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
-$$
+\]
+
+:::{.solution}
+
+Concepts used:
+
+- $\norm{f}_\infty \definedas \inf_t {\theset{ t\suchthat m\qty{\theset{x\in \RR^n \suchthat f(x) > t}} = 0 } }$, i.e. this is the lowest upper bound that holds almost everywhere.
+
+**Solution**:
+
+- $\norm{f}_p \leq \norm{f}_\infty$:
+  - Note $\abs{f(x)} \leq \norm{f}_\infty$ almost everywhere and taking $p$th powers preserves this inequality.
+  - Thus
+  \begin{align*}
+  \abs{f(x)} &\leq \norm{f}_\infty \quad\text{a.e. by definition} \\
+  \implies 
+  \abs{f(x)}^p &\leq \norm{f}_\infty^p \quad\text{for } p\geq 0 \\  
+  \implies
+  \norm{f}_p^p 
+  &= \int_X \abs{f(x)}^p ~dx \\
+  &\leq \int_X \norm{f}_\infty^p ~dx  \\
+  &= \norm{f}_\infty^p \int_X 1\,dx \\ 
+  &= \norm{f}_\infty^p \cdot m(X) \quad\text{since the norm doesn't depend on }x \\
+  &= \norm{f}_\infty^p \qquad \text{since } m(X) = 1
+  .\end{align*}
+
+    - Thus $\norm{f}_p \leq \norm{f}_\infty$ for all $p$ and taking $\lim_{p\to\infty}$ preserves this inequality.
+
+- $\norm{f}_p \geq \norm{f}_\infty$:
+  - Fix $\varepsilon > 0$.
+
+  - Define 
+  \begin{align*}
+  S_\varepsilon \definedas \theset{x\in \RR^n \suchthat \abs{f(x)} \geq \norm{f}_\infty - \varepsilon}
+  .\end{align*}
+
+    - Note that $m(S_\eps) > 0$; otherwise if $m(S_\eps) = 0$, then $t\definedas \norm{f}_\infty - \eps < \norm{f}_\eps$.
+    But this produces a *smaller* upper bound almost everywhere than $\norm{f}_\eps$, contradicting the definition of $\norm{f}_\eps$ as an infimum over such bounds.
+    
+
+
+  - Then
+  \begin{align*}
+  \norm{f}_p^p 
+  &= \int_X \abs{f(x)}^p ~dx \\
+  &\geq \int_{S_\varepsilon} \abs{f(x)}^p ~dx \quad\text{since } S_\eps \subseteq X \\
+  &\geq \int_{S_\varepsilon} \abs{\norm{f}_\infty - \varepsilon}^p ~dx \quad\text{since on } S_\eps, \abs{f} \geq \norm{f}_\infty - \eps \\
+  &= \abs{\norm{f}_\infty - \varepsilon}^p \cdot m(S_\varepsilon) \quad\text{since the integrand is independent of }x \\
+  & \geq 0 \quad\text{since } m(S_\eps) > 0
+  \end{align*}
+  
+  - Taking $p$th roots for $p\geq 1$ preserves the inequality, so
+  \begin{align*}
+  \implies \norm{f}_p &\geq \abs{\norm{f}_\infty - \varepsilon} \cdot m(S_\varepsilon)^{\frac 1 p} 
+  \converges{p\to\infty}\to \abs{\norm{f}_\infty - \varepsilon} 
+  \converges{\varepsilon \to 0}\to \norm{f}_\infty
+  \end{align*}
+  where we've used the fact that above arguments work 
+
+  - Thus $\norm{f}_p \geq \norm{f}_\infty$.
+
+
+:::
+
+
 
 ## Spring 2018 # 4
 Let $f\in L^2([0, 1])$ and suppose
@@ -23,6 +87,89 @@ Prove that
 \]
 
 > Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
+
+:::{.solution}
+
+
+
+### Proof 1: Using Fourier Transforms
+
+Concepts used:
+
+- Weierstrass Approximation: A uniformly continuous function on a compact set can be uniformly approximated by polynomials.
+
+**Solution**:
+
+- Fix $k \in \ZZ$.
+- Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
+- Thus there is a sequence of polynomials $P_\ell$ such that 
+$$
+P_{\ell, k} \converges{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+.$$
+
+- Note applying linearity to the assumption $\int f(x) \, x^n$, we have
+$$
+\int f(x) x^n \,dx = 0 ~\forall n \implies \int f(x) p(x) \,dx = 0 
+$$
+  for any polynomial $p(x)$, and in particular for $P_{\ell, k}(x)$ for every $\ell$ and every $k$.
+
+- But then  
+\begin{align*}
+\inner{f}{e_k} 
+&= \int_0^1 f(x) e^{-2\pi i k x} ~dx \\
+&= \int_0^1 f(x) \lim_{\ell \to \infty} P_\ell(x) \\
+&= \lim_{\ell \to \infty}  \int_0^1 f(x) P_\ell(x) \quad\quad \text{by uniform convergence on a compact interval} \\
+&= \lim_{\ell \to \infty} 0 \quad\text{by assumption}\\
+&= 0 \quad \forall k\in \ZZ
+,\end{align*}
+ so $f$ is orthogonal to every $e_k$. 
+
+- Thus $f\in S^\perp \definedas \spanof_\CC\theset{e_k}_{k\in \ZZ}^\perp \subseteq L^2([0, 1])$, but since this is a basis, $S$ is dense and thus $S^\perp = \theset{0}$ in $L^2([0, 1])$.
+
+- Thus $f\equiv 0$ in $L^2([0, 1])$, which implies that $f$ is zero almost everywhere.
+
+$\qed$
+
+### Alternative Proof
+
+Concepts used
+
+- $C^1([0, 1])$ is dense in $L^2([0, 1])$
+- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
+  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
+
+**Solution**:
+
+- By density of polynomials, for $f\in L^2([0, 1])$ choose $p_\eps(x)$ such that $\norm{f - p_\eps} < \eps$ by Weierstrass approximation.
+- Then on one hand,
+\begin{align*}
+\norm{f(f-p_\eps)}_1 
+&= \norm{f^2}_1 - \norm{f\cdot p_\eps}_1 \\
+&= \norm{f^2}_1 - 0 \quad\text{by assumption} \\
+&= \norm{f}_2^2
+.\end{align*}
+
+  - Where we've used that $\norm{f^2}_1 = \int \abs{f^2} = \int \abs{f}^2 = \norm{f}_2^2$.
+
+- On the other hand
+\begin{align*}
+\norm{f(f-p_\eps)} 
+&\leq \norm{f}_1 \norm{f-p_\eps}_\infty \quad\text{by Holder} \\
+&\leq \eps \norm{f}_1  \\
+&\leq \eps \norm{f}_2 \sqrt{m(X)} \\ 
+&= \eps \norm{f}_2 \quad\text{since } m(X)= 1
+.\end{align*}
+  - Where we've used that $\norm{fg}_1 = \int \abs{fg} = \int \abs{f}\abs{g} \leq \int \norm{f}_\infty \abs{g} = \norm{f}_\infty \norm{g}_1$.
+
+- Combining these,
+\begin{align*}
+\norm{f}_2^2 \leq \norm{f}_2 \eps \implies \norm{f}_2 < \eps \to 0,
+.\end{align*}
+  so $\norm{f}_2 = 0$, which implies $f=0$ almost everywhere.
+
+
+:::
+
 
 
 ## Fall 2014 # 4
