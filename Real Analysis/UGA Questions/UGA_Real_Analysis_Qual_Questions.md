@@ -77,6 +77,67 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \,dx = f(1)
 .\]
 
+:::{.solution}
+
+Concepts used:
+
+- DCT
+- Weierstrass Approximation Theorem
+
+**Solution**:
+
+- Suppose $p$ is a polynomial, then
+\begin{align*}
+\lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
+&= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
+&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx \right] \quad\text{integrating by parts}\\
+&= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+,\end{align*}
+
+- Thus it suffices to show that
+\begin{align*}
+\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx = 0
+.\end{align*}
+
+- Integrating by parts a second time yields
+\begin{align*}
+\lim_{k\to\infty} 
+\int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+&= \lim_{k\to\infty} 
+{x^{k+1} \over k+1} p'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
+&= - \int_0^1 0 \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= 0
+.\end{align*}
+
+  - The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact, so $f''$ is bounded on $[0, 1]$ by a constant $M$ and 
+  $$\int_0^1 \abs{x^k f''(x)} \leq \int_0^1 1\cdot M = M < \infty.$$
+
+- Now use the Weierstrass approximation theorem: 
+  - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
+
+- Thus 
+\begin{align*}
+\abs{ \int_0^1 kx^{k-1} p_\eps(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
+&= \abs{ \int_0^1 kx^{k-1} \qty{p_\eps(x) - f(x)} \,dx  } \\
+&\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
+&= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
+\end{align*}
+
+  and the integrals are equal. 
+
+- By the first argument, $$\int_0^1 kx^{k-1} p_\eps(x) \,dx = p_\eps(1) \text{ for each } \eps$$ 
+- Since uniform convergence implies pointwise convergence, $p_\eps(1) \converges{\eps\to 0}\to f(1)$.
+
+
+
+:::
+
+
+
 ## Fall 2019 # 1. 
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
@@ -202,18 +263,115 @@ Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR
 
 Let $m_*$ denote the Lebesgue outer measure on $\RR$.
 
-a. Prove that for every $E\subseteq \RR$ there exists a Borel set $B$ containing $E$ such that
-  \[
-  m_*(B) = m_*(E)
-  .\]
+### a. 
+Prove that for every $E\subseteq \RR$ there exists a Borel set $B$ containing $E$ such that
+\[
+m_*(B) = m_*(E)
+.\]
 
-b. Prove that if $E\subseteq \RR$ has the property that
-  \[
-  m_*(A) = m_*(A\intersect E) + m_*(A\intersect E^c)
-  \]
-  for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ such that $E = B\setminus N$ with $m_*(N) = 0$.
+### b. 
+Prove that if $E\subseteq \RR$ has the property that
+\[
+m_*(A) = m_*(A\intersect E) + m_*(A\intersect E^c)
+\]
+for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ such that $E = B\setminus N$ with $m_*(N) = 0$.
 
-    Be sure to address the case when $m_*(E) = \infty$.
+Be sure to address the case when $m_*(E) = \infty$.
+
+:::{.solution}
+Concepts used:
+
+- Definition of outer measure: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+- Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$, each with finite measure.
+- Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
+
+Proof (of Theorem)
+:   Statement: if $Q$ is a closed cube, then $m_*(Q) = \abs{Q}$, the usual volume.
+
+    - $m_*(Q) \leq \abs{Q}$:
+      - Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
+    - $\abs{Q} \leq m_*(Q)$:
+      - Fix $\eps > 0$.
+      - Let $\theset{Q_i}_{i=1}^\infty \covers Q$ be arbitrary, it suffices to show that 
+          $$\abs{Q} \leq \qty{\sum_{i=1}^\infty \abs{Q_i}} + \eps.$$
+      -  Pick open cubes $S_i$ such that $Q_i\subseteq S_i$ and $\abs{Q_i} \leq \abs{S_i} \leq (1+\eps)\abs{Q_i}$.
+      - Then $\theset{S_i} \covers Q$, so by compactness of $Q$ pick a finite subcover with $N$ elements.
+
+      - Note 
+      \begin{align*}
+      Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
+      .\end{align*}
+      - Taking an infimum over coverings on the RHS preserves the inequality, so 
+        $$\abs{Q} \leq (1+\eps) m_*(Q)$$
+      - Take $\eps\to 0$ to obtain final inequality.
+
+
+### a
+
+- If $m_*(E) = \infty$, then take $B = \RR^n$ since $m(\RR^n) = \infty$.
+- Suppose $N \definedas m_*(E) < \infty$.
+
+- Since $m_*(E)$ is an infimum, by definition, for every $\eps> 0$ there exists a covering by closed cubes $\theset{Q_i(\eps)}_{i=1}^\infty \covers E$ depending on $\eps$ such that 
+$$
+\sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps
+.$$
+
+- For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
+
+- The outer measure of cubes is *equal* to the sum of their volumes, so 
+\begin{align*}
+m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
+.\end{align*}
+
+- Now set $B \definedas \intersect_{n=1}^\infty B_n$.
+
+  - Since $E\subseteq B_n$ for every $n$, $E\subseteq B$
+  - Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
+  - Since $B_n \subseteq B$ for every $n$, we can apply subadditivity to obtain the inequality
+  \begin{align*}
+  E \subseteq B \subseteq B_n \implies
+  N \leq m_*(B) \leq m_*(B_n) < N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1}
+  .\end{align*}
+
+- This forces $m_*(E) = m_*(B)$.
+
+
+### b
+
+Suppose $m_*(E) < \infty$.
+
+- By (a), find a Borel set $B\supseteq E$ such that $m_*(B) = m_*(E)$
+- Note that $E\subseteq B \implies B\intersect E = E$ and $B\intersect E^c = B\setminus E$.
+- By assumption, 
+\begin{align*}
+m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
+m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
+m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \\ 
+\implies m_*(B\setminus E) &= 0
+.\end{align*}
+- So take $N = B\setminus E$; this shows $m_*(N) = 0$ and $E = B\setminus (B\setminus E) = B\setminus N$.
+
+
+If $m_*(E) = \infty$:
+
+- Apply result to $E_R\definedas E \intersect [R, R+1)^n \subset \RR^n$ for $R\in \ZZ$, so $E = \disjoint_R E_R$
+- Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
+- Note that
+  -   $B\definedas \union_R B_R$ is a union of Borel sets and thus still Borel
+  -  $E = \union_R E_R$
+  - $N\definedas B\setminus E$
+  - $N' \definedas \union_R N_R$ is a union of null sets and thus still null
+- Since $E_R \subset B_R$ for every $R$, we have $E\subset B$
+- We can compute
+\begin{align*}
+N = B\setminus E = \qty{ \union_R B_R } \setminus \qty{\union_R E_R } \subseteq \union_R \qty{B_R\setminus E_R} = \union_R N_R \definedas N'
+\end{align*}
+where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 0$.
+
+
+:::
+
+
 
 ## Fall 2019 # 3. 
 Let $(X, \mathcal B, µ)$ be a measure space with $µ(X) = 1$ and $\{B_n\}_{n=1}^\infty$ be a sequence of $\mathcal B$-measurable subsets of $X$, and

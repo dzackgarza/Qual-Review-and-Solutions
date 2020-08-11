@@ -72,6 +72,67 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \,dx = f(1)
 .\]
 
+:::{.solution}
+
+Concepts used:
+
+- DCT
+- Weierstrass Approximation Theorem
+
+**Solution**:
+
+- Suppose $p$ is a polynomial, then
+\begin{align*}
+\lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
+&= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
+&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx \right] \quad\text{integrating by parts}\\
+&= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+,\end{align*}
+
+- Thus it suffices to show that
+\begin{align*}
+\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx = 0
+.\end{align*}
+
+- Integrating by parts a second time yields
+\begin{align*}
+\lim_{k\to\infty} 
+\int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+&= \lim_{k\to\infty} 
+{x^{k+1} \over k+1} p'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
+&= - \int_0^1 0 \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+&= 0
+.\end{align*}
+
+  - The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact, so $f''$ is bounded on $[0, 1]$ by a constant $M$ and 
+  $$\int_0^1 \abs{x^k f''(x)} \leq \int_0^1 1\cdot M = M < \infty.$$
+
+- Now use the Weierstrass approximation theorem: 
+  - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
+
+- Thus 
+\begin{align*}
+\abs{ \int_0^1 kx^{k-1} p_\eps(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
+&= \abs{ \int_0^1 kx^{k-1} \qty{p_\eps(x) - f(x)} \,dx  } \\
+&\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
+&= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
+&= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
+\end{align*}
+
+  and the integrals are equal. 
+
+- By the first argument, $$\int_0^1 kx^{k-1} p_\eps(x) \,dx = p_\eps(1) \text{ for each } \eps$$ 
+- Since uniform convergence implies pointwise convergence, $p_\eps(1) \converges{\eps\to 0}\to f(1)$.
+
+
+
+:::
+
+
+
 ## Fall 2019 # 1. 
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
