@@ -82,7 +82,7 @@ a. $f$ is a Lebesgue measurable function on $\RR^n \iff  \mathcal A$ is a Lebesg
 
 b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 \[
-m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}: f(x) \geq t\right\}\right) d t
+m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
 
