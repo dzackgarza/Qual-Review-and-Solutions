@@ -2721,11 +2721,13 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.solution}
-Relevant concepts:
+Concepts used:
 
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 - Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
+
+**Solution**:
 
 \begin{align*}
 \norm{H(x)}_1 
