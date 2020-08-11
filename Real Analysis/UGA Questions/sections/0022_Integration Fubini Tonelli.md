@@ -67,6 +67,59 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
+:::{.solution}
+
+> See S&S p.82.
+
+### a
+
+$\implies$:
+
+- Suppose $f$ is a measurable function.
+- Note that $\mathcal{A} = \theset{f(x) - t \geq 0} \intersect \theset{t \geq 0}$.
+- Define $F(x, t) = f(x)$, $G(x, t) = t$, which are cylinders on measurable functions and thus measurable.
+- Define $H(x, y) = F(x, t) - G(x, t)$, which are linear combinations of measurable functions and thus measurable.
+- Then $\mathcal{A} = \theset{H \geq 0} \intersect \theset{G \geq 0}$ as a countable intersection of measurable sets, which is again measurable.
+
+
+$\impliedby$:
+
+- Suppose $\mca$ is a measurable set.
+- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
+\begin{align*}
+\mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
+\end{align*}
+
+- But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
+
+
+### b
+
+- Note
+\begin{align*}
+\mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
+\\
+\mathcal{A}_t &= \theset{x
+\in \RR^n \suchthat t\leq f(x) }
+.\end{align*}
+
+- Then
+\begin{align*}
+\int_{\RR^n} f(x) ~dx 
+&= \int_{\RR^n} \int_0^{f(x)} 1 ~dt~dx \\
+&= \int_{\RR^n} \int_{0}^\infty \chi_\mathcal{A} ~dt~dx \\
+&\overset{F.T.}= \int_{0}^\infty \int_{\RR^n} \chi_\mathcal{A} ~dx~dt\\
+&= \int_0^\infty m(\mathcal{A}_t) ~dt
+,\end{align*}
+  where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
+
+- By F.T., all of these integrals are equal. 
+  \todo[inline]{Why is FT justified.}
+
+:::
+
+
+
 ## Fall 2018 # 5
 Let $f \geq 0$ be a measurable function on $\RR$.
 Show that

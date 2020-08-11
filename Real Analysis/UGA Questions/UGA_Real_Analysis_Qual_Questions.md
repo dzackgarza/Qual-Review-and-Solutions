@@ -975,7 +975,8 @@ $L^2$ bound:
 
 - Thus $\norm{f}_2 \leq \sqrt{M} < \infty$ implying $f\in L^2$.
 
-Equality of Integrals: \todo{What is the "right" proof here that uses the first part?}
+\todo[inline]{What is the "right" proof here that uses the first part?}
+Equality of Integrals: 
 
 - Take the sequence $\eps_n = {1\over n}$
 - Apply Egorov's theorem: obtain a set $F_\eps$ such that $f_n \to f$ uniformly on $F_\eps$ and $m(I\setminus F_\eps) < \eps$. 
@@ -1493,6 +1494,59 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
+:::{.solution}
+
+> See S&S p.82.
+
+### a
+
+$\implies$:
+
+- Suppose $f$ is a measurable function.
+- Note that $\mathcal{A} = \theset{f(x) - t \geq 0} \intersect \theset{t \geq 0}$.
+- Define $F(x, t) = f(x)$, $G(x, t) = t$, which are cylinders on measurable functions and thus measurable.
+- Define $H(x, y) = F(x, t) - G(x, t)$, which are linear combinations of measurable functions and thus measurable.
+- Then $\mathcal{A} = \theset{H \geq 0} \intersect \theset{G \geq 0}$ as a countable intersection of measurable sets, which is again measurable.
+
+
+$\impliedby$:
+
+- Suppose $\mca$ is a measurable set.
+- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
+\begin{align*}
+\mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
+\end{align*}
+
+- But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
+
+
+### b
+
+- Note
+\begin{align*}
+\mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
+\\
+\mathcal{A}_t &= \theset{x
+\in \RR^n \suchthat t\leq f(x) }
+.\end{align*}
+
+- Then
+\begin{align*}
+\int_{\RR^n} f(x) ~dx 
+&= \int_{\RR^n} \int_0^{f(x)} 1 ~dt~dx \\
+&= \int_{\RR^n} \int_{0}^\infty \chi_\mathcal{A} ~dt~dx \\
+&\overset{F.T.}= \int_{0}^\infty \int_{\RR^n} \chi_\mathcal{A} ~dx~dt\\
+&= \int_0^\infty m(\mathcal{A}_t) ~dt
+,\end{align*}
+  where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
+
+- By F.T., all of these integrals are equal. 
+  \todo[inline]{Why is FT justified.}
+
+:::
+
+
+
 ## Fall 2018 # 5
 Let $f \geq 0$ be a measurable function on $\RR$.
 Show that
@@ -1770,6 +1824,121 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   \[
   \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1])\dual}
   \]
+
+:::{.solution}
+
+Concepts used:
+
+- Holders' inequality: $\norm{fg}_1 \leq \norm{f}_p \norm{f}_q$
+- Riesz Representation for $L^2$: If $\Lambda \in (L^2)\dual$ then there exists a unique $g\in L^2$ such that $\Lambda(f) = \int fg$.
+- $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
+- **Lemma**:  $m(X) < \infty \implies L^p(X) \subset L^2(X)$.
+
+> *Proof:*
+> Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
+\begin{align*}
+\norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
+.\end{align*}
+>
+> Now take $a = \frac 2 p$ and this reduces to 
+\begin{align*}
+\norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
+\implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
+.\end{align*}
+
+
+### a
+
+- Note $X = [0, 1] \implies m(X) = 1$.
+- By Holder's inequality with $p=q=2$, 
+\begin{align*}
+\norm{f}_1 = \norm{f\cdot 1}_1 \leq \norm{f}_2 \cdot \norm{1}_2 = \norm{f}_2 \cdot m(X)^{\frac 1 2} = \norm{f}_2,
+\end{align*}
+
+- Thus $L^2(X) \subseteq L^1(X)$ 
+- Since they share a common dense subset (simple functions) $L^2$ is dense in $L^1$ 
+  \todo[inline]{What theorem is this using?}
+
+### b
+
+Let $\Lambda \in L^1(X)\dual$ be arbitrary.
+
+#### (i): Existence of $g$ Representing $\Lambda$.
+
+- Let $f\in L^2\subseteq L^1$ be arbitrary
+
+- Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
+
+  - Suffices to show that $\norm{\Gamma}_{L^2(X)\dual} \definedas \sup_{\norm{f}_2 = 1} \abs{\Gamma(f)} < \infty$, since bounded implies continuous.
+
+  - By the lemma, $\norm{f}_1 \leq C\norm{f}_2$ for some constant $C \approx m(X)$.
+
+  - Note $$\norm{\Lambda}_{L^1(X)\dual} \definedas \displaystyle\sup_{\norm{f}_1 = 1} \abs{\Lambda(f)}$$
+
+  - Define $\hat f = {f\over \norm{f}_1}$ so $\norm{\hat f}_1 = 1$
+
+  - Since $\norm{\Lambda}_{1\dual}$ is a supremum over *all* $f \in L^1(X)$ with $\norm{f}_1 =1$, 
+  \begin{align*}
+  \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{(L^1(X))\dual}
+  ,\end{align*}
+
+  - Then
+  \begin{align*}
+\frac{\abs{\Lambda(f)}}{\norm{f}_1} &= \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{L^1(X)\dual} \\
+  \implies \abs{\Lambda(f)} 
+  &\leq \norm{\Lambda}_{1\dual} \cdot \norm{f}_1 \\
+  &\leq \norm{\Lambda}_{1\dual} \cdot C \norm{f}_2 < \infty \quad\text{by assumption}
+  ,\end{align*}
+
+  - So $\Lambda \in (L^2)\dual$.
+
+- Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
+
+#### (ii): $g$ is in $L^\infty$
+
+- It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
+- Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. \todo{Is this assumed..? Or did we show it..?}
+
+- Claim: $\norm{\Lambda}_{L^1(X)\dual} =\norm{g}_{L^\infty(X)}$
+  - The result follows because $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.
+  - $\leq$: 
+  \begin{align*}
+  \norm{\Lambda}_{L^1(X)\dual} 
+  &= \sup_{\norm{f}_1 = 1} \abs{\Lambda(f)} \\
+&= \sup_{\norm{f}_1 = 1} \abs{\int_X f \bar g} \quad\text{by (i)}\\
+  &= \sup_{\norm{f}_1 = 1} \int_X \abs{f \bar g} \\
+  &\definedas \sup_{\norm{f}_1 = 1} \norm{fg}_1 \\
+  &\leq \sup_{\norm{f}_1 = 1} \norm{f}_1 \norm{g}_\infty \quad\text{by Holder with } p=1,q=\infty\\
+  &= \norm{g}_\infty
+  ,\end{align*}
+
+  - $\geq$:
+
+    - Suppose toward a contradiction that $\norm{g}_\infty > \norm{\Lambda}_{1\dual}$.
+
+    - Then there exists some $E\subseteq X$ with $m(E) > 0$ such that $$x\in E \implies \abs{g(x)} > \norm{\Lambda}_{L^1(X)\dual}.$$
+
+    - Define 
+    \begin{align*}
+    h = \frac{1}{m(E)} \frac{\overline{g}}{\abs g} \chi_E
+    .\end{align*}
+  
+    - Note $\norm{h}_{L^1(X)} = 1$.
+    
+    - Then
+    \begin{align*}
+    \Lambda(h) &= \int_X hg \\
+    &\definedas \int_X \frac{1}{m(E)} \frac{g \overline g}{\abs g} \chi_E \\
+    &= \frac{1}{m(E)} \int_E \abs{g} \\
+    &\geq \frac{1}{m(E)} \norm{g}_\infty m(E) \\
+    &= \norm{g}_\infty \\
+    &> \norm{\Lambda}_{L^1(X)\dual}
+    ,\end{align*}
+      a contradiction since $\norm{\Lambda}_{L^1(X)\dual}$ is the supremum over all $h_\alpha$ with $\norm{h_\alpha}_{L^1(X)} = 1$.
+
+:::
+
+
 
 ## Spring 2016 # 6
 Without using the Riesz Representation Theorem, compute

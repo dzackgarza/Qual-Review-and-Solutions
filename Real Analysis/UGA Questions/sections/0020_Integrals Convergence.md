@@ -184,7 +184,8 @@ $L^2$ bound:
 
 - Thus $\norm{f}_2 \leq \sqrt{M} < \infty$ implying $f\in L^2$.
 
-Equality of Integrals: \todo{What is the "right" proof here that uses the first part?}
+\todo[inline]{What is the "right" proof here that uses the first part?}
+Equality of Integrals: 
 
 - Take the sequence $\eps_n = {1\over n}$
 - Apply Egorov's theorem: obtain a set $F_\eps$ such that $f_n \to f$ uniformly on $F_\eps$ and $m(I\setminus F_\eps) < \eps$. 
