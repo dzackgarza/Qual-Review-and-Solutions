@@ -223,18 +223,19 @@ Concepts used:
 ## Fall 2019 # 1. 
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-a. Prove that if $\displaystyle\lim_{n→∞} a_n = 0$, then 
+### a
+Prove that if $\displaystyle\lim_{n→∞} a_n = 0$, then 
 \[
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
-b. Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then 
+### b
+Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then 
 \[
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
 :::{.solution}
-
 Concepts used:
 
 - Cesaro mean/summation. 
@@ -319,10 +320,15 @@ Prove that
 $$
 \lim_{n \to \infty} \int_{0}^{1} f(x) \abs{\sin n x} ~d x= \frac{2}{\pi} \int_{0}^{1} f(x) ~d x
 $$
-
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
 :::{.solution}
+Concepts used:
+
+- ?
+
+
+**Solution**:
 
 Case of characteristic function
 
@@ -377,6 +383,9 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \]
 
 :::{.solution}
+Concepts used:
+
+- ?
 
 ### a
 
@@ -440,6 +449,9 @@ b.
 \]
 \todo[inline]{Not complete.}
 :::{.solution}
+Concepts used:
+
+- ?
 
 ### a
 
@@ -479,6 +491,11 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \]
 
 :::{.solution}
+Concepts used:
+
+- ? 
+
+**Solution**:
 
 - Set $f_N(x) \definedas \sum_{n=1}^N n^{-x}$, so $f(x) = \lim_{N\to\infty} f_N(x)$.
 - If an interchange of limits is justified, we have
@@ -530,8 +547,13 @@ Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies 
 \lim _{n \to \infty} \left(\int _{\mathbb{R}} \frac{|\phi(x)|^{n}}{1+x^{2}} \, dx \right) ^ {\frac{1}{n}} 
 = \norm{\phi}_\infty.
 \]
-
+\todo[inline]{Review and clean up.}
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
 
 Let $L$ be the LHS and $R$ be the RHS.
 
