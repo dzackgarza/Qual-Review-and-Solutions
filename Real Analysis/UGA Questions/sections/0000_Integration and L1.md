@@ -11,6 +11,24 @@ for all $x \neq 0$ and positive integers $n$.
 
 > Hint: Consider $\displaystyle\int_0^1 \cos(tx) dt$
 
+## Spring 2020 # 5
+
+Compute the following limit and justify your calculations:
+\[
+\lim_{n\to\infty} \int_0^n \qty{1 + {x^2 \over n}}^{-(n+1)} \,dx
+.\]
+
+## Spring 2019 # 3 
+Let $\{f_k\}$ be any sequence of functions in $L^2([0, 1])$ satisfying $\norm{f_k}_2 ≤ M$ for all $k ∈ \NN$.
+  
+Prove that if $f_k → f$ almost everywhere, then $f ∈ L^2([0, 1])$ with $\norm{f}_2 ≤ M$ and
+$$
+\lim _{k \rightarrow \infty} \int_{0}^{1} f_{k}(x) dx = \int_{0}^{1} f(x) d x
+$$
+
+> Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
+
+
 # $L^1$
 
 ## Fall 2019 # 5.
@@ -42,5 +60,29 @@ b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\inf
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
 
 # Fubini-Tonelli
+
+## Spring 2020 # 4
+
+Let $f, g\in L^1(\RR)$. 
+Argue that $H(x, y) \definedas f(y) g(x-y)$ defines a function in $L^1(\RR^2)$ and deduce from this fact that
+\[
+(f\ast g)(x) \definedas \int_\RR f(y) g(x-y) \,dy
+\]
+defines a function in $L^1(\RR)$ that satisfies 
+\[
+\norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1
+.\]
+
+## Spring 2019 # 4
+Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n × \RR : 0 ≤ t ≤ f (x)\}$.
+
+Prove the validity of the following two statements:
+
+a. $f$ is a Lebesgue measurable function on $\RR^n \iff  \mathcal A$ is a Lebesgue measurable subset of $\RR^{n+1}$
+
+b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
+\[
+m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}: f(x) \geq t\right\}\right) d t
+\]
 
 
