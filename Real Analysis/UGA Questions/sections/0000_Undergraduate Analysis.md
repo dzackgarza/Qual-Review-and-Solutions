@@ -112,3 +112,11 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \left(\frac{1}{n^{x}}\right)' = -\frac{1}{n^{x}} \ln n
 \]
 
+## Fall 2016 # 5
+
+Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies the equality
+\[
+\lim _{n \to \infty} \left(\int _{\mathbb{R}} \frac{|\phi(x)|^{n}}{1+x^{2}} \, dx \right) ^ {\frac{1}{n}} 
+= \norm{\phi}_\infty.
+\]
+
