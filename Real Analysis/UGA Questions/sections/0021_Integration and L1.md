@@ -89,7 +89,11 @@ Prove that
 > Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
 
 :::{.solution}
+Concepts used:
 
+- ??
+
+**Solution**:
 
 
 ### Proof 1: Using Fourier Transforms

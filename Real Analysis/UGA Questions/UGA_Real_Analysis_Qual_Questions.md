@@ -1877,7 +1877,6 @@ Concepts used:
 
 **Solution**:
 
-
 - Note that $x^{1\over n} \converges{n\to\infty}\to 1$ for any $0 < x < \infty$.
 - Thus the integrand converges to ${1\over e^x}$, which is integrable on $(0, \infty)$ and integrates to 1.
 - Break the integrand up:
@@ -2273,6 +2272,11 @@ Prove that
 > Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
 
 
 
