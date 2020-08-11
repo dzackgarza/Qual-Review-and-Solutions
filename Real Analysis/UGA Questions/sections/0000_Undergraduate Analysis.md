@@ -53,16 +53,36 @@ $$
 
 ## Fall 2017 # 4
 Let
-$$
-f_{n}(x)=n x(1-x)^{n}, \quad n \in \mathbb{N}.
-$$
+\[
+f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
+\]
 
 1. Show that $f_n \to 0$ pointwise but not uniformly on $[0, 1]$.
     
-    > Hint: Consider the maximum of $f_n$.
+  > Hint: Consider the maximum of $f_n$.
 
 2. 
-$$
-\lim _{n \rightarrow \infty} \int_{0}^{1} n(1-x)^{n} \sin x d x=0
-$$
+\[
+\lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
+\]
+
+## Spring 2017 # 3
+
+Let
+\[
+f_{n}(x) = a e^{-n a x} - b e^{-n b x} \quad \text{ where } 0 < a < b.
+\]
+
+Show that 
+
+a. $\sum_{n=1}^{\infty} \left|f_{n}\right|$ is not in $L^{1}([0, \infty), m)$
+
+  > Hint: $f_n(x)$ has a root $x_n$.
+
+b. 
+\[
+\sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
+\qtext{and}
+\int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
+\]
 
