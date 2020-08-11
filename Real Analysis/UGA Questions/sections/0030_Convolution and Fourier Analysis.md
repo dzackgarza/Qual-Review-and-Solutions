@@ -101,6 +101,119 @@ and prove the following:
 \lim _{y \to 0} \int _{\RR} |f(x-y)-f(x)| dy = 0
 \]
 
+:::{.solution}
+
+
+### a
+
+**Lemma:** If $\phi \in C_c^1$, then
+$(f \ast \phi)' = f \ast \phi'$ almost everywhere.
+
+*Silly Proof:*
+
+\begin{align*}
+\mathcal{F}(
+	(f \ast \phi)'
+ )
+&= 2\pi i \xi ~\mathcal{F}(f\ast \phi) \\
+&= 2\pi i \xi ~ \mathcal{F}(f) ~ \mathcal{F}(\phi) \\
+&= \mathcal{F}(f) \cdot \left( 2\pi i \xi ~\mathcal{F}(\phi)\right) \\
+&= \mathcal{F}(f) \cdot \mathcal{F}(\phi') \\
+&= \mathcal{F}(f\ast \phi')
+.\end{align*}
+
+*Actual proof*:
+
+\begin{align*}
+(f\ast \phi)'(x)
+&= (\phi\ast f)'(x) \\
+&= \lim_{h\to 0} \frac{(\phi\ast f)'(x+h) - (\phi\ast f)'(x)}{h} \\
+&= \lim_{h\to 0} \int \frac{\phi(x + h - y) - \phi(x - y)}{h} f(y) \\
+&\overset{DCT}=  \int \lim_{h\to 0} \frac{\phi(x + h - y) - \phi(x - y)}{h} f(y) \\
+&= \int \phi'(x-y) f(y) \\
+&= (\phi' \ast f)(x) \\
+&= (f \ast \phi')(x)
+.\end{align*}
+ 
+
+ To see that the DCT is justified, we can apply the MVT on the interval $[0, h]$ to $f$ to obtain
+
+\begin{align*}
+\frac{\phi(x + h - y) - \phi(x - y)}{h}
+&= \phi'(c) \quad c\in [0, h]
+,\end{align*}
+ 
+and since $\phi'$ is continuous and compactly supported, $\phi'$ is bounded by some $M < \infty$ by the extreme value theorem and thus
+\begin{align*}
+\int \abs{\frac{\phi(x + h - y) - \phi(x - y)}{h} f(y)} 
+&= \int \abs{\phi'(c) f(y)} \\
+&\leq \int \abs{M}\abs{f} \\
+&= \abs{M} \int \abs{f} < \infty
+,\end{align*}
+
+since $f\in L^1$ by assumption, so we can take $g\definedas \abs{M} \abs{f}$ as the dominating function.
+
+Applying this theorem infinitely many times shows that $f\ast \phi$ is smooth.
+
+To see that $f\ast \phi$ is compactly supported, approximate $f$ by a *continuous* compactly supported function $h$, so $\norm{h - f}_1 \converges{L^1}\to 0$. 
+
+Now let $g_x(y) = \phi(x-y)$, and note that $\mathrm{supp}(g) = x - \mathrm{supp}(\phi)$ which is still compact.
+ 
+But since $\mathrm{supp}(h)$ is bounded, there is some $N$ such that 
+$$
+\abs{x} > N \implies A_x\definedas \mathrm{supp}(h) \intersect \mathrm{supp}(g_x) = \emptyset
+$$
+
+and thus 
+\begin{align*}
+(h\ast \phi)(x) 
+&= \int_\RR \phi(x-y) h(y)~dy \\
+&= \int_{A_x} g_x(y) h(y) \\
+&= 0
+,\end{align*}
+
+so $\theset{x \suchthat f\ast g(x) = 0}$ is open, and its complement is closed and bounded and thus compact.
+
+### b
+
+\begin{align*}
+\norm{f\ast K_j - f}_1 
+&= \int \abs{\int f(x-y) K_j(y) ~dy  - f(x)}~dx \\
+&= \int \abs{\int f(x-y) K_j(y) ~dy  - \int f(x) K_j(y) ~ dy}~dx \\
+&= \int \abs{\int ( f(x-y) - f(x) ) K_j(y) ~dy } ~dx \\
+&\leq \int \int \abs{(f(x-y) - f(x))} \cdot \abs{K_j(y)} ~ dy~dx \\
+&\overset{FT}= \int \int \abs{(f(x-y) - f(x))} \cdot \abs{K_j(y)} \mathbf{~ dx~dy}\\
+&= \int \abs{K_j(y)} \left( \int \abs{(f(x-y) - f(x))}  ~ dx\right) ~dy \\
+&= \int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy
+.\end{align*}
+
+We now split the integral up into pieces. 
+
+1. Chose $\delta$ small enough such that
+ $\abs{y} < \delta \implies \norm{f - \tau_y f}_1 < \varepsilon$ by continuity of translation in $L^1$, and
+
+2. Since $\phi$ is compactly supported, choose $J$ large enough such that
+$$
+j > J \implies \int_{\abs{y} \geq \delta} \abs{K_j(y)} ~dy 
+= \int_{\abs{y} \geq \delta} \abs{j\phi(jy)} = 0
+$$
+
+Then
+\begin{align*}
+\norm{f\ast K_j - f}_1 
+&\leq 
+\int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
+&= \int_{\abs y < \delta} \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy 
++ \int_{\abs y \geq  \delta} \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
+&= \varepsilon \int_{\abs y \geq  \delta} \abs{K_j(y)} + 0 \\
+&\leq \varepsilon(1) \to 0
+.\end{align*}
+
+
+:::
+
+
+
 ## Spring 2017 # 5
 Let $f, g \in L^2(\RR)$. 
 Prove that the formula

@@ -359,6 +359,49 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
 \]
 
+:::{.solution}
+
+### a
+
+Let $G(x) = \sum_{n=1}^\infty nx(1-x)^n$. 
+Applying the ratio test, we have
+\begin{align*}
+\abs{\frac{(n+1)x(1-x)^{n+1}}{nx(1-x)^n}} = \frac{n+1}{n} \abs{1-x} \converges{n\to\infty}\to \abs{1-x} < 1 \iff 0 \leq x \leq 2
+,\end{align*}
+
+and in particular, this series converges on $[0, 2]$. 
+Thus its terms go to zero, and $nx(1-x)^n \to 0$ on $[0, 1] \subset [0, 2]$.
+
+To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsilon > \frac 1 e$, then
+\begin{align*}
+\sup_{x\in [0, 1]}\abs{nx(1-x)^n - 0} 
+\geq \abs{nx_n (1-x_n)^n} 
+= \abs{\left( 1 - \frac 1 n\right)^n} 
+\converges{n\to\infty}\to e\inv
+> \varepsilon
+.\end{align*}
+
+
+### b
+
+> Note: could use the first part with $\sin(x) \leq x$, but then integral ends up more complicated.
+
+Noting that $\sin(x) \leq 1$, we have
+We have
+\begin{align*}
+\abs{\int_0^1  n(1-x)^{n} \sin(x)} 
+&\leq \int_0^1  \abs{n(1-x)^n \sin(x)} \\
+&\leq \int_0^1  \abs{n (1-x)^n}  \\
+&= n\int_0^1 (1-x)^n \\
+&= -\frac{n(1-x)^{n+1}}{n+1} \\
+&\converges{n\to\infty}\longrightarrow 0
+.\end{align*}
+
+
+:::
+
+
+
 ## Spring 2017 # 3
 
 Let
