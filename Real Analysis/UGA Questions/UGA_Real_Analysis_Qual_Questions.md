@@ -2025,6 +2025,12 @@ b. Compute
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 
@@ -2106,7 +2112,7 @@ Show that
 Concepts used:
 
 - $C_c^\infty \injects L^p$ is dense.
-- If $f
+- If $f$...?
 
 - Fixing notation, set $\tau_x f(y) \definedas f(y-x)$; we then want to show
 \[  
