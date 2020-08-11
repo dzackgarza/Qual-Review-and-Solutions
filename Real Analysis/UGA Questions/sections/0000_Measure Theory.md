@@ -150,3 +150,23 @@ $$
 H \subseteq E \subseteq V \quad \text{and}\quad \mu(V\setminus H) = 0
 $$
 
+## Spring 2014 # 3
+Let $f: \RR \to \RR$ and suppose
+$$
+\forall x\in \RR,\quad f(x) \geq \limsup _{y \rightarrow x} f(y)
+$$
+Prove that $f$ is Borel measurable.
+
+## Spring 2014 # 4
+Let $(X, \mathcal M, \mu)$ be a measure space and suppose $f$ is a measurable function on $X$.
+Show that
+$$
+\lim _{n \rightarrow \infty} \int_{X} f^{n} ~d \mu =
+\begin{cases}
+\infty & \text{or} \\
+\mu(f\inv(1)),
+\end{cases}
+$$
+and characterize the collection of functions of each type.
+
+
