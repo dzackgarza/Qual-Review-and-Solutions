@@ -30,9 +30,21 @@ $$
 
 ## Fall 2018 # 6
 Compute the following limit and justify your calculations:
-$$
+\[
 \lim_{n \rightarrow \infty} \int_{1}^{n} \frac{d x}{\left(1+\frac{x}{n}\right)^{n} \sqrt[n]{x}}
-$$
+\]
+
+## Fall 2018 # 3
+Suppose $f(x)$ and $xf(x)$ are integrable on $\RR$.
+Define $F$ by
+\[
+F(t)\definedas \int _{-\infty}^{\infty} f(x) \cos (x t) dx
+\]
+Show that 
+\[
+F'(t)=-\int _{-\infty}^{\infty} x f(x) \sin (x t) dx
+.\]
+
 
 # $L^1$
 
