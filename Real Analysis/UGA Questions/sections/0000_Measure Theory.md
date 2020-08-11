@@ -93,4 +93,28 @@ $$
 $$
   Show that $m(E) = 0$.
 
+## Fall 2016 # 4
+Let $(X, \mathcal M, \mu)$ be a measure space and suppose $\theset{E_n} \subset \mathcal M$ satisfies
+$$
+\lim _{n \rightarrow \infty} \mu\left(X \backslash E_{n}\right)=0.
+$$
+
+Define
+$$
+G \definedas \theset{x\in X \suchthat x\in E_n \text{ for only finitely many  } n}.
+$$
+
+Show that $G \in \mathcal M$ and $\mu(G) = 0$.
+
+## Spring 2016 # 3
+Let $f$ be Lebesgue measurable on $\RR$ and $E \subset \RR$ be measurable such that
+$$
+0<A=\int_{E} f(x) d x<\infty.
+$$
+
+Show that for every $0 < t < 1$, there exists a measurable set $E_t \subset E$ such that
+$$
+\int_{E_{t}} f(x) d x=t A.
+$$
+
 
