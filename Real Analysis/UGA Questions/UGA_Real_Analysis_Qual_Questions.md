@@ -151,6 +151,83 @@ b. Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, t
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
+:::{.solution}
+
+> Cesaro mean/summation. Break series apart into pieces that can be handled separately.
+
+### a
+
+Prove a stronger result: 
+$$
+a_k \to S \implies S_N\definedas \frac 1 N \sum_{k=1}^N a_k \to S
+.$$
+
+> Idea: once $N$ is large enough, $a_k \approx S$, and all smaller terms will die off as $N\to \infty$.
+>
+> See [this MSE answer](https://math.stackexchange.com/questions/514802/convergence-of-series-implies-convergence-of-cesaro-mean).
+
+- Use convergence $a_k \to S$: choose $M$ large enough such that 
+$$
+k\geq M+1 \implies \abs{a_k - S} < \varepsilon
+.$$
+
+
+Then
+\begin{align*}
+\left|\left(\frac{1}{N} \sum_{k=1}^{N} a_{k}\right)-S\right| 
+&= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - NS  } \\
+&= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - \sum_{k=1}^N S  } \\
+&=\frac{1}{N}\left|\sum_{k=1}^{N}\left(a_{k}-S\right)\right| \\
+&\leq \frac{1}{N} \sum_{k=1}^{N}\left|a_{k}-S\right| \\
+&= {1\over N} \sum_{k=1}^M \abs{a_k - S} + \sum_{k=M+1}^N \abs{a_k - S} \\
+&\leq {1\over N} \sum_{k=1}^M \abs{a_k - S} + \sum_{k=M+1}^N {\eps \over 2} \\
+&= {1\over N} \sum_{k=1}^M \abs{a_k - S} + (N - M){\eps \over 2} \\
+&\converges{\eps\to 0}\to {1\over N} \sum_{k=1}^M \abs{a_k - S} + 0 \\
+&\converges{N\to \infty}\to 0 + 0
+.\end{align*}
+  
+> Note: $M$ is fixed, so the last sum is some constant $c$, and $c/N \to 0$ as $N\to\infty$ for any constant.
+> To be more careful, choose $M$ first to get $\eps/2$ for the tail, then choose $N(M)>M$ for the remaining truncated part of the sum. 
+
+### b
+
+- Define
+\begin{align*}
+\Gamma_n \definedas \sum_{k=n}^\infty \frac{a_k}{k}
+.\end{align*}
+
+- $\Gamma_1 = \sum_{k=1}^n \frac{ a_k } k$ is the original series and each $\Gamma_n$ is a tail of $\Gamma_1$, so by assumption $\Gamma_n \converges{n\to\infty}\to 0$.
+
+- Compute
+\begin{align*}
+\frac 1 n \sum_{k=1}^n a_k 
+&= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
+.\end{align*}
+
+- This comes from consider the following summation:
+\begin{tikzcd}
+\Gamma_1:&\arrow[dash, ddddd]   & a_1 & + \frac{a_2}{2} & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
+\Gamma_2:                                                       &               &     & \frac{a_2}{2}   & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
+\Gamma_3:                                                       &               &     &                 & \frac{a_3}{3}   & + \cdots &     &                                    &          &  &  &  \\
+ \arrow[dash, rrrrrrrrrr] &&&&&&&&&&{}&   \\
+\sum_{i=1}^n \Gamma_i:                                          &               & a_1 & +a_2            & +a_3            & + \cdots & a_n & + \frac{a_{n+1}}{n+1}              & + \cdots &  &  &  \\
+& {}               &     &                 &                 &          &     &   &          &  &  & 
+\end{tikzcd}
+
+- Use part (a): since $\Gamma_n \converges{n\to\infty}\to 0$, we have ${1\over n} \sum_{k=1}^n \Gamma_k \converges{n\to\infty}\to 0$.
+- Also a minor check: $\Gamma_n \to 0 \implies {1\over n}\Gamma_n \to 0$.
+- Then
+\begin{align*}
+\frac 1 n \sum_{k=1}^n a_k 
+&= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
+&= \qty{ {1\over n } \sum_{k=0}^n \Gamma_k } - \qty{{1\over n}\Gamma_{n+1} } \\
+&\converges{n\to\infty}\to 0
+.\end{align*}
+
+:::
+
+
+
 ## Fall 2018 # 4
 Let $f\in L^1([0, 1])$.
 Prove that
@@ -590,6 +667,86 @@ Prove that
 for all $x \neq 0$ and positive integers $n$.
 
 > Hint: Consider $\displaystyle\int_0^1 \cos(tx) dt$
+
+:::{.solution}
+Concepts used:
+
+- DCT
+- Bounding in the right place. 
+  Don't evaluate the actual integral!
+
+**Solution**:
+
+- By induction on the number of limits we can pass through the integral.
+- For $n=1$ we first pass one derivative into the integral: let $x_n \to x$ be any sequence converging to $x$, then
+\begin{align*}
+\dd{}{x} {\sin(x) \over x} 
+&= \dd{}{x} \int_0^1 \cos(tx)\,dt  \\
+&= \lim_{x_n\to x} {1\over x_n - x} \qty{ \int_0^1 \cos(t x_n)\,dt  - \int_0^1 \cos(tx) \,dt} \\
+&= \lim_{x_n\to x} \qty{ \int_0^1 { \cos(tx_n)  - \cos(tx) \over x_n - x}   \,dt} \\
+&= \lim_{x_n\to x} \qty{ \int_0^1 \qty{t\sin(tx)\mid_{x=\xi_n}}  \,dt} \qtext{where} \xi_n \in [x_n, x] \text{ by MVT}, \xi_n\to x \\
+&= \lim_{\xi_n\to x} \qty{ \int_0^1 t \sin(t \xi_n)  \,dt}  \\
+&=_{\text{DCT}}  \int_0^1 \lim_{\xi_n \to x} t \sin(t \xi_n)  \,dt \\
+&= \int_0^1 t\sin(tx) \,dt \\
+.\end{align*}
+
+- Taking absolute values we obtain an upper bound 
+\begin{align*}
+\abs{ \dd{}{x} {\sin(x) \over x} } 
+&= \abs{ \int_0^1 t\sin(tx) \,dt } \\
+&\leq \int_0^1 \abs{t\sin(tx)} \,dt \\
+&\leq \int_0^1 1 \, dt = 1
+,\end{align*}
+  since $t\in [0, 1] \implies \abs{t} < 1$, and $\abs{\sin(xt)} \leq 1$ for any $x$ and $t$.
+
+- Note that this bound also justifies the DCT, since the functions $f_n(t) = t\sin(t \xi_n )$ are uniformly dominated by $g(t) = 1$ on $L^1([0, 1])$.
+
+> Note: integrating by parts here yields the actual formula:
+\begin{align*}
+\int_0^1 t\sin(tx) \,dt 
+&=_{\text{IBP}} \qty{-t\cos(tx) \over x}\mid_{t=0}^{t=1} - \int_0^1 {\cos(tx) \over x} \,dt \\
+&= {-\cos(x) \over x} - {\sin(x) \over x^2} \\
+&= {x\cos(x) - \sin(x) \over x^2}
+.\end{align*}
+
+- For the inductive step, we assume that we can pass $n-1$ limits through the integral and show we can pass the $n$th through as well.
+\begin{align*}
+\dd{^n}{x^n} {\sin(x) \over x} 
+&= \dd{^n}{x^n} \int_0^1 \cos(tx)\,dt  \\
+&= \dd{}{x} \int_0^1 \dd{^{n-1}}{x^{n-1}} \cos(tx)\,dt  \\
+&= \dd{}{x} \int_0^1 t^{n-1} f_{n-1}(x, t) \,dt 
+\end{align*}
+  - Note that $f_n(x, t) = \pm \sin(tx)$ when $n$ is odd and $f_n(x, t) = \pm \cos(tx)$ when $n$ is even, and a constant factor of $t$ is multiplied when each derivative is taken.
+
+- We continue as in the base case:
+\begin{align*}
+\dd{}{x} \int_0^1 t^{n-1} f_{n-1}(x, t) \,dt 
+&= \lim_{x_k\to x} \int_0^1 t^{n-1} \qty{ f_{n-1}(x_n, t) - f_{n-1}(x, t) \over x_n - x} \,dt \\
+&=_{\text{IVT}} \lim_{x_k\to x} \int_0^1 t^{n-1} \dd{f_{n-1}}{x}(\xi_k, t) \,dt \quad\text{where } \xi_k\in [x_k, x],\, \xi_k \to x \\
+&=_{\text{DCT}} \int_0^1 \lim_{x_k\to x} t^{n-1} \dd{f_{n-1}}{x}(\xi_k, t) \,dt \\
+&\definedas \int_0^1 \lim_{x_k\to x} t^{n} f_n(\xi_k, t) \,dt \\
+&\definedas \int_0^1 t^{n} f_n(x, t) \,dt 
+.\end{align*}
+  - We've used the fact that $f_0(x) = \cos(tx)$ is smooth as a function of $x$, and in particular continuous 
+  - The DCT is justified because the functions $h_{n, k}(x, t) = t^n f_n(\xi_k, t)$ are again uniformly (in $k$) bounded by 1 since $t\leq 1 \implies t^n \leq 1$ and each $f_n$ is a sin or cosine.
+
+- Now take absolute values
+\begin{align*}
+\abs {\dd{^n}{x^n} {\sin(x) \over x}  }
+&= \abs{ \int_0^1 -t^n f_n(x, t) ~dt } \\ 
+&\leq \int_0^1 \abs{t^n f_n(x, t)} ~dt \\
+&\leq \int_0^1 \abs{t^n} \abs{f_n(x, t)} ~dt \\
+&\leq \int_0^1 \abs{ t^n} \cdot 1 ~dt \\ 
+&\leq \int_0^1 t^n ~dt \quad\text{since $t$ is positive} \\ 
+&= \frac{1}{n+1} \\
+&< \frac{1}{n}
+.\end{align*}
+  - We've again used the fact that $f_n(x, t)$ is of the form $\pm \cos(tx)$ or $\pm \sin(tx)$, both of which are bounded by 1.
+
+
+:::
+
+
 
 ## Spring 2020 # 5
 
@@ -1186,7 +1343,6 @@ Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 
 > Note: this proof shows $L^2(X) \subseteq L^1(X)$ whenever $\mu(X) < \infty$.
 :::
-
 
 
 ## Fall 2017 # 5
