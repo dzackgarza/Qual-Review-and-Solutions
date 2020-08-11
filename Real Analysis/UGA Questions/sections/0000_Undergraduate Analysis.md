@@ -42,3 +42,12 @@ b. Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, t
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
+## Fall 2018 # 4
+Let $f\in L^1([0, 1])$.
+Prove that
+$$
+\lim_{n \to \infty} \int_{0}^{1} f(x) \abs{\sin n x} ~d x= \frac{2}{\pi} \int_{0}^{1} f(x) ~d x
+$$
+
+> Hint: Begin with the case that $f$ is the characteristic function of an interval.
+
