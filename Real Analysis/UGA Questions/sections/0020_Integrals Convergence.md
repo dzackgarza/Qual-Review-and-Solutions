@@ -385,7 +385,6 @@ Concepts used:
 
 **Solution**:
 
-
 ### a
 
 Claim: $f_n$ does not converge uniformly to its limit.

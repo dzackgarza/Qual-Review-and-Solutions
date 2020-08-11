@@ -2031,7 +2031,6 @@ Concepts used:
 
 **Solution**:
 
-
 ### a
 
 Claim: $f_n$ does not converge uniformly to its limit.
@@ -2157,7 +2156,6 @@ Concepts used:
   &= \int_E 0 \,dy \\
   &= 0
   .\]
-
 
 :::
 
