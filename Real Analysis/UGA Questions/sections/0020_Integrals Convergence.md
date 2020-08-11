@@ -1,0 +1,98 @@
+# Integrals: Convergence
+
+## Fall 2019 # 2. 
+
+Prove that
+\[
+\left| \frac{d^{n}}{d x^{n}} \frac{\sin x}{x}\right| \leq \frac{1}{n}
+\]
+
+for all $x \neq 0$ and positive integers $n$.
+
+> Hint: Consider $\displaystyle\int_0^1 \cos(tx) dt$
+
+## Spring 2020 # 5
+
+Compute the following limit and justify your calculations:
+\[
+\lim_{n\to\infty} \int_0^n \qty{1 + {x^2 \over n}}^{-(n+1)} \,dx
+.\]
+
+## Spring 2019 # 3 
+Let $\{f_k\}$ be any sequence of functions in $L^2([0, 1])$ satisfying $\norm{f_k}_2 ≤ M$ for all $k ∈ \NN$.
+  
+Prove that if $f_k → f$ almost everywhere, then $f ∈ L^2([0, 1])$ with $\norm{f}_2 ≤ M$ and
+$$
+\lim _{k \rightarrow \infty} \int_{0}^{1} f_{k}(x) dx = \int_{0}^{1} f(x) d x
+$$
+
+> Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
+
+## Fall 2018 # 6
+Compute the following limit and justify your calculations:
+\[
+\lim_{n \rightarrow \infty} \int_{1}^{n} \frac{d x}{\left(1+\frac{x}{n}\right)^{n} \sqrt[n]{x}}
+\]
+
+## Fall 2018 # 3
+Suppose $f(x)$ and $xf(x)$ are integrable on $\RR$.
+Define $F$ by
+\[
+F(t)\definedas \int _{-\infty}^{\infty} f(x) \cos (x t) dx
+\]
+Show that 
+\[
+F'(t)=-\int _{-\infty}^{\infty} x f(x) \sin (x t) dx
+.\]
+
+## Spring 2018 # 5
+
+Suppose that
+
+- $f_n, f \in L^1$,
+- $f_n \to f$ almost everywhere, and
+- $\int\left|f_{n}\right| \rightarrow \int|f|$.
+
+Show that $\int f_{n} \rightarrow \int f$
+
+## Spring 2018 # 2
+Let
+\[
+f_{n}(x):=\frac{x}{1+x^{n}}, \quad x \geq 0.
+\]
+
+a. Show that this sequence converges pointwise and find its limit. Is the convergence uniform on $[0, \infty)$?
+
+b. Compute 
+\[
+\lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
+\]
+
+## Fall 2016 # 3
+
+Let $f\in L^1(\RR)$.
+Show that
+\[
+\lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
+\]
+
+## Fall 2015 # 3
+Compute the following limit:
+\[
+\lim _{n \rightarrow \infty} \int_{1}^{n} \frac{n e^{-x}}{1+n x^{2}} \, \sin \left(\frac x n\right) \, dx
+\]
+
+## Fall 2015 # 4
+Let $f: [1, \infty) \to \RR$ such that $f(1) = 1$ and
+$$
+f^{\prime}(x)= \frac{1} {x^{2}+f(x)^{2}}
+$$
+
+Show that the following limit exists and satisfies the equality
+$$
+\lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
+$$
+
+
+
+

@@ -58,6 +58,21 @@ Let $f \in L^1(\RR)$ and $g$ be a bounded measurable function on $\RR$.
 
 1. Show that the convolution $f\ast g$ is well-defined, bounded, and uniformly continuous on $\RR$.
 2. Prove that one further assumes that $g \in C^1(\RR)$ with bounded derivative, then $f\ast g \in C^1(\RR)$ and
-$$
+\[
 \frac{d}{d x}(f * g)=f *\left(\frac{d}{d x} g\right)
-$$
+\]
+
+## Fall 2014 # 5
+
+1. Let $f \in C_c^0(\RR^n)$, and show
+\[
+\lim _{t \to 0} \int_{\RR^n} |f(x+t) - f(x)| \, dx = 0
+.\]
+
+2. Extend the above result to $f\in L^1(\RR^n)$ and show that
+\[
+f\in L^1(\RR^n), \quad g\in L^\infty(\RR^n) \quad
+\implies f \ast g \text{ is bounded and uniformly continuous. }
+\]
+
+

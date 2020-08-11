@@ -36,6 +36,32 @@ Prove that the following statements are equivalent:
 1. For every $\varepsilon > 0 \quad \exists \delta > 0$ such that $\rho( f(x), f(x_0)  ) < \varepsilon$ whenever $d(x, x_0) < \delta$.
 2. The sequence $\theset{f(x_n)}_{n=1}^\infty \to f(x_0)$ for every sequence $\theset{x_n} \to x_0$ in $X$.
 
+## Fall 2014 # 2
+Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
+
+1. Show that
+$$
+\sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
+$$
+
+2. Suppose $I = \QQ$ and $\sum_{q \in \mathbb{Q}} a(q)<\infty$.
+  Define
+  $$
+  f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
+  $$
+  Show that $f$ is continuous at $x \iff x\not\in \QQ$.
+
+
+## Spring 2014 # 2
+Let $\theset{a_n}$ be a sequence of real numbers such that
+$$
+\theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
+$$
+Show that $\sum a_n^2 < \infty$.
+
+> Note: Assume $a_n, b_n$ are all non-negative.
+
+
 
 # General Analysis
 
