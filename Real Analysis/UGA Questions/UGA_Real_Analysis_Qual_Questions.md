@@ -2778,8 +2778,12 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 \]
 
 :::{.solution}
+Concepts used:
 
-> See S&S p.82.
+- See S&S p.82.
+
+**Solution**:
+
 
 ### a
 
