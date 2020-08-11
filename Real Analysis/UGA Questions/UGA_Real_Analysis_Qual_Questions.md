@@ -798,6 +798,98 @@ $$
 
 Prove that $m(E) = 0$.
 
+:::{.solution}
+Concepts used:
+
+- Borel-Cantelli: If $\theset{E_k}_{k\in\ZZ}\subset 2^\RR$ is a countable collection of Lebesgue measurable sets with $\sum_{k\in \ZZ} m(E_k) < \infty$, then almost every $x\in \RR$ is in *at most finitely* many $E_k$.
+  - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \intersect_{k=1}^\infty \union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
+
+**Solution**:
+
+- Strategy: Borel-Cantelli.
+
+- We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
+\begin{align*}
+m(E) = m \qty{\union_{n\in \ZZ} E \intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \intersect [n, n+1]) = 0
+.\end{align*}
+
+- By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
+  - So WLOG, replace $E$ with $E\intersect [0, 1]$.
+
+- Define
+\begin{align*}
+E_j \definedas \theset{x\in [0, 1] \suchthat \
+\exists p\in \ZZ^{\geq 0} \text{ s.t. } \abs{x - \frac{p}{j} } < \frac 1 {j^3}} 
+.\end{align*}
+
+  - Note that $E_j \subseteq \disjoint_{p\in \ZZ^{\geq 0}} B_{j^{-3}}\qty{p\over j}$, i.e. a union over integers $p$ of intervals of radius $1/j^3$ around the points $p/j$.
+    Since $1/j^3 < 1/j$, this union is in fact disjoint.
+
+- Importantly, note that 
+  \begin{align*}
+\limsup_{j\to\infty} E_j \definedas \intersect_{n=1}^\infty \union_{j=n}^\infty E_j = E
+  \end{align*}
+  
+  since 
+  
+  \begin{align*}
+  x \in \limsup_j E_j 
+  &\iff x \in E_j \text{ for infinitely many } j  \\
+  &\iff \text{ there are infinitely many $j$ for which there exist a $p$ such that } \abs{x - {p\over j}} < j^{-3}  \\
+  &\iff \text{ there are infinitely many such pairs $p, j$}  \\
+  &\iff x\in E
+  .\end{align*}
+
+- Intersecting with $[0, 1]$, we can write $E_j$ as a union of intervals:
+\begin{align*}
+E_j =& \qty{0, {j^{-3}}} 
+\quad \disjoint \quad 
+B_{j^{-3}}\qty{1\over j} \disjoint
+B_{j^{-3}}\qty{2\over j} \disjoint
+\cdots \disjoint
+B_{j^{-3}}\qty{j-1\over j} 
+\quad \disjoint \quad 
+(1 - {j^{-3}}, 1)
+,\end{align*}
+  where we've separated out the "boundary" terms to emphasize that they are balls about $0$ and $1$ intersected with $[0, 1]$.
+
+
+- Since $E_j$ is a union of open sets, it is Borel and thus Lebesgue measurable.
+
+- Computing the measure of $E_j$:
+
+  - For a fixed $j$, there are exactly $j+1$ possible choices for a numerator ($0, 1, \cdots, j$), thus there are exactly $j+1$ sets appearing in the above decomposition.
+
+  - The first and last intervals are length $1 \over j^3$ 
+  - The remaining $(j+1)-2 = j-1$ intervals are twice this length, $2 \over j^3$
+  - Thus
+  $$
+  m(E_j) = 2 \qty{1 \over j^3} + (j-1) \qty{2 \over j^3} = {2 \over j^2}
+  $$
+
+- Note that 
+\begin{align*}
+\sum_{j\in \NN} m(E_j) =  2\sum_{j\in \NN} \frac 1 {j^2} < \infty
+,\end{align*}
+  which converges by the $p\dash$test for sums.
+  
+- But then
+\begin{align*}
+m(E) 
+&= m(\limsup_j E_j) \\
+&= m(\intersect_{n\in \NN} \union_{j\geq n} E_j) \\
+&\leq m(\union_{j\geq N} E_j) \quad\text{for every } N \\
+&\leq \sum_{j\geq N} m(E_j) \\
+&\converges{N\to\infty}\to 0 \quad\text{}
+.\end{align*}
+
+- Thus $E$ is measurable as a subset of a null set and $m(E) = 0$.
+
+
+:::
+
+
+
 ## Fall 2017 # 2
 Let $f(x) = x^2$ and $E \subset [0, \infty) \definedas \RR^+$.
 
@@ -1184,6 +1276,20 @@ Compute the following limit and justify your calculations:
 \[
 \lim_{n \rightarrow \infty} \int_{1}^{n} \frac{d x}{\left(1+\frac{x}{n}\right)^{n} \sqrt[n]{x}}
 \]
+
+:::{.solution}
+
+- Note that $x^{1\over n} \converges{n\to\infty}\to 1$ for any $0 < x < \infty$.
+- Thus the integrand converges to ${1\over e^x}$, which is integrable on $(0, \infty)$ and integrates to 1.
+- Break the integrand up:
+\begin{align*}
+\int_0^\infty {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
+= \int_0^1 {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
+= \int_1^\infty {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
+.\end{align*}
+:::
+
+
 
 ## Fall 2018 # 3
 Suppose $f(x)$ and $xf(x)$ are integrable on $\RR$.
@@ -1757,9 +1863,73 @@ $\impliedby$:
 ## Fall 2018 # 5
 Let $f \geq 0$ be a measurable function on $\RR$.
 Show that
-$$
+\[
 \int _{\RR} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
+\]
+
+:::{.solution}
+
+Concepts used:
+
+- Claim: If $E\subseteq \RR^a \cross \RR^b$ is a measurable set, then for almost every $y\in \RR^b$, the slice $E^y$ is measurable and
+\begin{align*}
+m(E) = \int_{\RR^b} m(E^y) \,dy
+.\end{align*}
+  - Set $g = \chi_E$, which is non-negative and measurable, so apply Tonelli.
+  - Conclude that $g^y = \chi_{E^y}$ is measurable, the function $y\mapsto \int g^y(x)\, dx$ is measurable, and $\int \int g^y(x)\,dx \,dy = \int g$.
+  - But $\int g = m(E)$ and $\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy$.
+
+**Solution**
+
+> Note: $f$ is a function $\RR\to \RR$ in the original problem, but here I've assumed $f:\RR^n\to \RR$.
+
+- Since $f\geq 0$, set 
 $$
+E\definedas \theset{(x, t) \in \RR^{n} \cross \RR \suchthat f(x) > t}
+= \theset{(x, t) \in \RR^n \cross \RR \suchthat 0 \leq t < f(x)}
+.$$
+- Claim: since $f$ is measurable, $E$ is measurable and thus $m(E)$ makes sense.
+  - Since $f$ is measurable, $F(x, t) \definedas t - f(x)$ is measurable on $\RR^n \cross \RR$.
+  - Then write $E = \theset{F < 0} \intersect \theset{t\geq 0}$ as an intersection of measurable sets.
+- We have slices 
+\begin{align*}
+E^t &\definedas \theset{x\in \RR^n \suchthat (x, t) \in E} = \theset{x\in \RR^n \suchthat 0 \leq t < f(x)} \\
+E^x &\definedas \theset{t\in \RR \suchthat (x, t) \in E} = \theset{t\in \RR \suchthat 0 \leq t \leq f(x)} = [0, f(x)]
+.\end{align*}
+  - $E_t$ is precisely the set that appears in the original RHS integrand.
+  - $m(E^x) = f(x)$.
+- Claim: $\chi_E$ satisfies the conditions of Tonelli, and thus $m(E) = \int \chi_E$ is equal to any iterated integral.
+  - Non-negative: clear since $0\leq \chi_E \leq 1$
+  - Measurable: characteristic functions of measurable sets are measurable.
+
+- Conclude:
+  1. For almost every $x$, $E^x$ is a measurable set, $x\mapsto m(E^x)$ is a measurable function, and $m(E) = \int_{\RR^n} m(E^x) \, dx$ 
+  2. For almost every $t$, $E^t$ is a measurable set, $t\mapsto m(E^t)$ is a measurable function, and $m(E) = \int_{\RR} m(E^t) \, dt$ 
+- On one hand,
+\begin{align*}
+m(E) 
+&= \int_{\RR^{n+1}} \chi_E(x, t) \\
+&= \int_{\RR} \int_{\RR^n} \chi_E(x, t) \,dt \,dx \quad\text{by Tonelli}\\
+&= \int_{\RR^n} m(E^x) \,dx \quad\text{first conclusion}\\
+&= \int_{\RR^n} f(x) \,dx 
+.\end{align*}
+- On the other hand,
+\begin{align*}
+m(E) 
+&= \int_{\RR^{n+1}} \chi_E(x, t) \\
+&= \int_\RR \int_{\RR^n} \chi_E(x, t) \, dx \,dt \quad\text{by Tonelli} \\
+&= \int_\RR m(E^t) \,dt \quad\text{second conclusion}
+.\end{align*}
+
+- Thus
+\begin{align*}
+\int_{\RR^n} f \,dx = m(E) = \int_\RR m(E^t) \,dt = \int_\RR m\qty{\theset{x\suchthat f(x) > t}}
+.\end{align*}
+
+
+:::
+
+
 
 ## Fall 2015 # 5
 Let $f, g \in L^1(\RR)$ be Borel measurable.
