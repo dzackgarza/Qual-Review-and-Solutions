@@ -282,6 +282,45 @@ $$
 
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
+:::{.solution}
+
+Case of characteristic function
+
+- First suppose $f(x) = \chi_{[0, 1]}(x)$.
+- Note that $\sin(nx)$ has a period of $2\pi/n$, and thus $\floor{n\over 2\pi}$ full periods in $[0, 1]$.
+- Taking the absolute value yields a new function with half the period, so a period of $\pi/n$ and $\floor{\pi / n}$ full periods in $[0, 1]$.
+- We can compute the integral over one full period (which is independent of *which* period is chosen), and since $\sin(x)$ is positive and agrees with $\abs{\sin(nx)}$ on the first period, we have
+\begin{align*}
+\int_{\text{One Period}} \abs{\sin(nx)} \, dx 
+&= \int_0^{\pi/n} \sin(nx)\,dx \\
+&= {1\over n} \int_0^\pi \sin(u) \,du \quad u = nx \\
+&= {1\over n} -\cos(u)\mid_0^\pi \\
+&= {2 \over n}
+.\end{align*}
+
+
+- Then break the integral up into integrals over periods $P_1, P_2, \cdots, P_N$ where $N \definedas \floor{n/\pi}$:
+\begin{align*}
+\int_0^1 \abs{\sin(nx)} \, dx 
+&= \qty{ \sum_{j=1}^{N} \int_{P_j} \abs{\sin(nx)} \, dx } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
+&= \qty{ \sum_{j=1}^{N} {2\over n} } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
+&= N \qty{2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
+&\definedas \floor{n \over \pi} {2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
+&= {2\over \pi} + \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
+&\definedas {2\over \pi} + R(n) 
+\end{align*}
+  so it suffices to show that $R(n) \converges{n\to\infty}\to 0$. 
+  \todo[inline]{Need to justify removing floor function and cancellation.}
+
+- Showing this: ???????????? \todo[inline]{No clue how to show this.}
+
+General case
+
+\todo[inline]{Not sure. Approximate $f$ by simple functions...?}
+:::
+
+
+
 ## Fall 2017 # 4
 Let
 \[
