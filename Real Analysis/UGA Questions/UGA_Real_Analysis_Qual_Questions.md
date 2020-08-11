@@ -3036,6 +3036,11 @@ and prove the following:
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
 
 
 ### a
