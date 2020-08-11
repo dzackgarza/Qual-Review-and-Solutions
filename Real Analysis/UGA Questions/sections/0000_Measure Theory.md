@@ -1,4 +1,4 @@
-# Measure Theory
+# Measure Theory: Sets
 
 ## Spring 2020 # 2
 
@@ -183,4 +183,21 @@ Lebesgue measure $m(K)$.
 Let $0 < \lambda < 1$ and construct a Cantor set $C_\lambda$ by successively removing middle intervals of length $\lambda$.
 
 Prove that $m(C_\lambda) = 0$.
+
+# Measure Theory: Functions
+
+## Fall 2016 # 2
+
+Let $f, g: [a, b] \to \RR$ be measurable with
+$$
+\int_{a}^{b} f(x) ~d x=\int_{a}^{b} g(x) ~d x.
+$$
+
+Show that either
+
+1. $f(x) = g(x)$ almost everywhere, or
+2. There exists a measurable set $E \subset [a, b]$ such that
+$$
+\int_{E} f(x) ~d x>\int_{E} g(x) ~d x
+$$
 

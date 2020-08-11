@@ -45,3 +45,11 @@ and prove the following:
 \lim _{y \to 0} \int _{\RR} |f(x-y)-f(x)| dy = 0
 \]
 
+## Spring 2017 # 5
+Let $f, g \in L^2(\RR)$. 
+Prove that the formula
+\[
+h(x) \definedas \int _{-\infty}^{\infty} f(t) g(x-t) \, dt
+\]
+defines a uniformly continuous function $h$ on $\RR$.
+

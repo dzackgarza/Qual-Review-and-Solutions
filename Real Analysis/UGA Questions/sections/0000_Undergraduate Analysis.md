@@ -18,6 +18,15 @@ Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ co
 
 Prove that $\sum f_n$ is also continuous.
 
+## Spring 2017 # 4
+Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
+$$
+f(x, y) = \begin{cases}
+\frac{x y}{\left(x^{2}+y^{2}\right)^{2}} & (x, y) \neq (0, 0) \\
+0 & (x, y) = (0, 0)
+\end{cases}
+$$
+Determine if $f$ is integrable.
 
 
 # General Analysis
@@ -84,5 +93,22 @@ b.
 \sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
 \qtext{and}
 \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
+\]
+
+## Fall 2016 # 1
+
+Define
+\[
+f(x) = \sum_{n=1}^{\infty} \frac{1}{n^{x}}.
+\] 
+
+Show that $f$ converges to a differentiable function on $(1, \infty)$ and that
+\[
+f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
+\]
+
+> Hint:
+\[
+\left(\frac{1}{n^{x}}\right)' = -\frac{1}{n^{x}} \ln n
 \]
 
