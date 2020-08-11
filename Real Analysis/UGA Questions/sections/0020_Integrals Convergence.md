@@ -105,6 +105,8 @@ Concepts used:
 - DCT
 - Passing limits through products and quotients
 
+**Solution**:
+
 Note that 
 \begin{align*}
 \lim_{n} \qty{1 + {x^2 \over n}}^{-(n+1)} 
@@ -167,6 +169,7 @@ Concepts used:
 - Fatou: For any sequence of $L^+$ functions, $\int \liminf f_n \leq \liminf \int f_n$.
 - Egorov's Theorem: If $E\subseteq \RR^n$ is measurable, $m(E) > 0$, $f_k:E\to \RR$ a sequence of measurable functions where $\lim_{n\to\infty} f_n(x)$ exists and is finite a.e., then $f_n\to f$ *almost uniformly*: for every $\eps>0$ there exists a closed subset $F_\eps \subseteq E$ with $m(E\setminus F) < \eps$ and $f_n\to f$ uniformly on $F$.
 
+**Solution**:
 
 $L^2$ bound:
 
@@ -222,6 +225,12 @@ Compute the following limit and justify your calculations:
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 - Note that $x^{1\over n} \converges{n\to\infty}\to 1$ for any $0 < x < \infty$.
 - Thus the integrand converges to ${1\over e^x}$, which is integrable on $(0, \infty)$ and integrates to 1.
@@ -251,6 +260,8 @@ Concepts used:
 
 -  Mean Value Theorem
 - DCT
+
+**Solution**:
 
 \begin{align*}
 \dd{}{t} F(t) 
@@ -368,6 +379,12 @@ b. Compute
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 

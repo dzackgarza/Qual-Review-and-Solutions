@@ -732,7 +732,6 @@ Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq
 - Take $\eps\to 0$ to obtain final inequality.
 :::
 
-
 **Solution**:
 
 ### a
@@ -1185,6 +1184,12 @@ E &\mapsto f(E)
   is a bijection from the class of Lebesgue measurable sets of $[0, \infty)$ to itself.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 
@@ -1282,6 +1287,8 @@ Concepts used:
 A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) \leq c^{-p} \int_{A_c} \abs{f}^p \,d\mu \quad \forall 0 < p < \infty
 .\]
 
+**Solutions**
+
 ### a
 
 - Strategy: use approximation by simple functions to show absolute continuity and apply Radon-Nikodym 
@@ -1358,6 +1365,12 @@ G \definedas \theset{x\in X \suchthat x\in E_n \text{ for only finitely many  } 
 Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 - Claim: $G\in \mcm$.
   - Claim:
@@ -1467,7 +1480,7 @@ Concepts used:
 - Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
   - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
 
-**Solution**
+**Solution**:
 
 Claim: **$K$ is compact**.
 
@@ -1584,6 +1597,11 @@ Show that either
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
 
 
 - Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
@@ -1733,6 +1751,8 @@ Concepts used:
 - DCT
 - Passing limits through products and quotients
 
+**Solution**:
+
 Note that 
 \begin{align*}
 \lim_{n} \qty{1 + {x^2 \over n}}^{-(n+1)} 
@@ -1795,6 +1815,7 @@ Concepts used:
 - Fatou: For any sequence of $L^+$ functions, $\int \liminf f_n \leq \liminf \int f_n$.
 - Egorov's Theorem: If $E\subseteq \RR^n$ is measurable, $m(E) > 0$, $f_k:E\to \RR$ a sequence of measurable functions where $\lim_{n\to\infty} f_n(x)$ exists and is finite a.e., then $f_n\to f$ *almost uniformly*: for every $\eps>0$ there exists a closed subset $F_\eps \subseteq E$ with $m(E\setminus F) < \eps$ and $f_n\to f$ uniformly on $F$.
 
+**Solution**:
 
 $L^2$ bound:
 
@@ -1850,6 +1871,12 @@ Compute the following limit and justify your calculations:
 \]
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 - Note that $x^{1\over n} \converges{n\to\infty}\to 1$ for any $0 < x < \infty$.
 - Thus the integrand converges to ${1\over e^x}$, which is integrable on $(0, \infty)$ and integrates to 1.
@@ -1879,6 +1906,8 @@ Concepts used:
 
 -  Mean Value Theorem
 - DCT
+
+**Solution**:
 
 \begin{align*}
 \dd{}{t} F(t) 
