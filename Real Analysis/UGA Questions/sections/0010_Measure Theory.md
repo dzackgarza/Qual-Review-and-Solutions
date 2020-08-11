@@ -198,12 +198,84 @@ Concepts used:
 ## Spring 2019 # 2
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
   
-  a. Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
-  $$
-  \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
-  $$
-  b. Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
-    Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
+### a 
+Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
+\[
+\lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
+\]
+
+### b 
+Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
+
+Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
+
+:::{.solution}
+
+### a
+
+> See Folland p.26
+
+- Lemma 1: $\mu(\disjoint_{k=1}^\infty E_k) = \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k)$.
+
+- Suppose $F_0 \supseteq F_1 \supseteq \cdots$.
+- Let $A_k = F_k \setminus F_{k+1}$, since the $F_k$ are nested the $A_k$ are disjoint
+- Set $A \definedas \disjoint_{k=1}^\infty A_k$ and $F \definedas \intersect_{k=1}^\infty F_k$.
+- Note $X = X\setminus Y ~\disjoint~ X\intersect Y$ for any two sets (just write $X\setminus Y \definedas X\intersect  Y^c$)
+- Note that $A$ contains anything that was removed from $F_0$ when passing from any $F_j$ to $F_{j+1}$, while $F$ contains everything that is never removed at any stage, and these are disjoint possibilities.
+- Thus $F_0 = F \disjoint A$, so 
+\begin{align*}
+\mu(F_0) 
+&= \mu(F) + \mu(A) \\
+&= \mu(F) + \mu(\disjoint_{k=1}^\infty A_k) \\
+&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(A_k) \quad \text{by countable additivity}\\
+&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
+&= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
+&=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
+,\end{align*}
+
+- Since $\mu$ is a finite measure, $\mu(F_1) < \infty$ and can be subtracted, yielding
+\begin{align*}
+\mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
+\implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
+\implies \mu\qty{\intersect_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
+.\end{align*}
+
+### b
+
+- Toward a contradiction, negate the implication: suppose there exists an $\eps>0$ such that for all $\delta$, we have $m(E) < \delta$ but $\mu(E) > \eps$.
+- The sequence $\theset{\delta_n \definedas {1\over 2^n}}_{n\in \NN}$ and produce sets $A_n\in \mcb$ such $m(A_n) < {1\over 2^n}$ but $\mu(A_n) > \varepsilon$.
+- Define
+\begin{align*}
+F_n &\definedas \union_{j\geq n} A_j \\
+C_m &\definedas \intersect_{k=1}^m F_k \\
+A &\definedas C_\infty \definedas \intersect_{k=1}^\infty F_k 
+.\end{align*}
+
+- Note that $F_1 \supseteq F_2 \supseteq \cdots$, since each increase in index unions fewer sets.
+- By continuity for the Lebesgue measure, 
+\begin{align*}
+m(A) 
+= m \qty{\intersect_{k=1}^\infty F_k }
+= \lim_{k\to \infty} m (F_k) 
+= \lim_{k\to\infty} m\qty{\union_{j\geq k} A_j } 
+\leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
+= \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
+= 0
+,\end{align*}
+  which follows because this is the tail of a convergent sum
+
+- Thus $m(A) = 0$ and by assumption, this implies $\mu(A) = 0$.
+
+- However, by part (a),
+\begin{align*}
+\mu(A) = \lim_n \mu\left( \union_{k=n}^\infty A_k \right)
+\geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
+.\end{align*}
+
+:::
+\todo{All messed up.}
+
+
 
 ## Fall 2018 # 2
 Let $E\subset \RR$ be a Lebesgue measurable set.

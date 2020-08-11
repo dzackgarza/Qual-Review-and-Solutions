@@ -534,12 +534,84 @@ Concepts used:
 ## Spring 2019 # 2
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
   
-  a. Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
-  $$
-  \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
-  $$
-  b. Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
-    Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
+### a 
+Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
+\[
+\lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
+\]
+
+### b 
+Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
+
+Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
+
+:::{.solution}
+
+### a
+
+> See Folland p.26
+
+- Lemma 1: $\mu(\disjoint_{k=1}^\infty E_k) = \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k)$.
+
+- Suppose $F_0 \supseteq F_1 \supseteq \cdots$.
+- Let $A_k = F_k \setminus F_{k+1}$, since the $F_k$ are nested the $A_k$ are disjoint
+- Set $A \definedas \disjoint_{k=1}^\infty A_k$ and $F \definedas \intersect_{k=1}^\infty F_k$.
+- Note $X = X\setminus Y ~\disjoint~ X\intersect Y$ for any two sets (just write $X\setminus Y \definedas X\intersect  Y^c$)
+- Note that $A$ contains anything that was removed from $F_0$ when passing from any $F_j$ to $F_{j+1}$, while $F$ contains everything that is never removed at any stage, and these are disjoint possibilities.
+- Thus $F_0 = F \disjoint A$, so 
+\begin{align*}
+\mu(F_0) 
+&= \mu(F) + \mu(A) \\
+&= \mu(F) + \mu(\disjoint_{k=1}^\infty A_k) \\
+&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(A_k) \quad \text{by countable additivity}\\
+&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
+&= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
+&=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
+,\end{align*}
+
+- Since $\mu$ is a finite measure, $\mu(F_1) < \infty$ and can be subtracted, yielding
+\begin{align*}
+\mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
+\implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
+\implies \mu\qty{\intersect_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
+.\end{align*}
+
+### b
+
+- Toward a contradiction, negate the implication: suppose there exists an $\eps>0$ such that for all $\delta$, we have $m(E) < \delta$ but $\mu(E) > \eps$.
+- The sequence $\theset{\delta_n \definedas {1\over 2^n}}_{n\in \NN}$ and produce sets $A_n\in \mcb$ such $m(A_n) < {1\over 2^n}$ but $\mu(A_n) > \varepsilon$.
+- Define
+\begin{align*}
+F_n &\definedas \union_{j\geq n} A_j \\
+C_m &\definedas \intersect_{k=1}^m F_k \\
+A &\definedas C_\infty \definedas \intersect_{k=1}^\infty F_k 
+.\end{align*}
+
+- Note that $F_1 \supseteq F_2 \supseteq \cdots$, since each increase in index unions fewer sets.
+- By continuity for the Lebesgue measure, 
+\begin{align*}
+m(A) 
+= m \qty{\intersect_{k=1}^\infty F_k }
+= \lim_{k\to \infty} m (F_k) 
+= \lim_{k\to\infty} m\qty{\union_{j\geq k} A_j } 
+\leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
+= \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
+= 0
+,\end{align*}
+  which follows because this is the tail of a convergent sum
+
+- Thus $m(A) = 0$ and by assumption, this implies $\mu(A) = 0$.
+
+- However, by part (a),
+\begin{align*}
+\mu(A) = \lim_n \mu\left( \union_{k=n}^\infty A_k \right)
+\geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
+.\end{align*}
+
+:::
+\todo{All messed up.}
+
+
 
 ## Fall 2018 # 2
 Let $E\subset \RR$ be a Lebesgue measurable set.
@@ -877,6 +949,64 @@ $$
 $$
 
 > Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
+
+:::{.solution}
+
+Concepts used:
+
+- Definition of $L^+$: space of measurable function $X\to [0, \infty]$.
+- Fatou: For any sequence of $L^+$ functions, $\int \liminf f_n \leq \liminf \int f_n$.
+- Egorov's Theorem: If $E\subseteq \RR^n$ is measurable, $m(E) > 0$, $f_k:E\to \RR$ a sequence of measurable functions where $\lim_{n\to\infty} f_n(x)$ exists and is finite a.e., then $f_n\to f$ *almost uniformly*: for every $\eps>0$ there exists a closed subset $F_\eps \subseteq E$ with $m(E\setminus F) < \eps$ and $f_n\to f$ uniformly on $F$.
+
+
+$L^2$ bound:
+
+- Since $f_k \to f$ almost everywhere, $\liminf_n f_n(x) = f(x)$ a.e.
+- $\norm{f_n}_2 < \infty$ implies each $f_n$ is measurable and thus $\abs{f_n}^2 \in L^+$, so we can apply Fatou:
+
+\begin{align*}
+\norm{f}_2^2
+&= \int \abs{f(x)}^2  \\
+&= \int \liminf_n \abs{f_n(x)}^2 \\
+&\underset{\text{Fatou}}\leq\liminf_n \int \abs{f_n(x)}^2 \\
+&\leq \liminf_n M \\
+&= M
+.\end{align*}
+
+- Thus $\norm{f}_2 \leq \sqrt{M} < \infty$ implying $f\in L^2$.
+
+Equality of Integrals: \todo{What is the "right" proof here that uses the first part?}
+
+- Take the sequence $\eps_n = {1\over n}$
+- Apply Egorov's theorem: obtain a set $F_\eps$ such that $f_n \to f$ uniformly on $F_\eps$ and $m(I\setminus F_\eps) < \eps$. 
+\begin{align*}
+\lim_{n\to \infty} \abs{ \int_0^1 f_n - f }
+&\leq \lim_{n\to\infty} \int_0^1 \abs{f_n - f} \\
+&= \lim_{n\to\infty} \qty{ \int_{F_\eps} \abs{f_n - f} + \int_{I\setminus F_\eps} \abs{f_n - f} } \\
+&= \int_{F_\eps} \lim_{n\to\infty} \abs{f_n - f} + \lim_{n\to\infty} \int_{I\setminus F_\eps} \abs{f_n - f} \quad\text{by uniform convergence} \\ 
+&= 0 + \lim_{n\to\infty} \int_{I\setminus F_\eps} \abs{f_n - f}
+,\end{align*}
+
+  so it suffices to show $\int_{I\setminus F_\eps} \abs{f_n - f} \converges{n\to\infty}\to 0$.
+
+- We can obtain a bound using Holder's inequality with $p=q=2$:
+\begin{align*}
+\int_{I\setminus F_\eps} \abs{f_n - f} 
+&\leq \qty{ \int_{I\setminus F_\eps} \abs{f_n - f}^2 } \qty{ \int_{I\setminus F_\eps} \abs{1}^2  } \\
+&= \qty{ \int_{I\setminus F_\eps} \abs{f_n - f}^2 } \mu(F_\eps) \\
+&\leq \norm{f_n - f}_2 \mu(F_\eps) \\
+&\leq \qty{ \norm{f_n}_2 + \norm{f}_2 } \mu(F_\eps) \\
+&\leq 2M \cdot \mu(F_\eps)
+\end{align*}
+  where $M$ is now a constant not depending on $\eps$ or $n$.
+
+- Now take a nested sequence of sets $F_{\eps}$ with $\mu(F_\eps) \to 0$ and applying continuity of measure yields the desired statement.
+
+
+
+
+:::
+
 
 
 
@@ -1678,6 +1808,66 @@ Let $C([0, 1])$ denote the space of all continuous real-valued functions on $[0,
 a. Prove that $C([0, 1])$ is complete under the uniform norm $\norm{f}_u := \displaystyle\sup_{x\in [0,1]} |f (x)|$.
 
 b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 = \displaystyle\int_0^1 |f (x)| ~dx$.
+
+:::{.solution}
+
+### a
+
+- Let $\theset{f_n}$ be  a Cauchy sequence in $C(I, \norm{\wait}_\infty)$, so $\lim_n\lim_m \norm{f_m - f_n}_\infty = 0$, we will show it converges to some $f$ in this space.
+- For each fixed $x_0 \in [0, 1]$, the sequence of real numbers $\theset{f_n(x_0)}$ is Cauchy in $\RR$ since
+$$
+x_0\in I \implies \abs{f_m(x_0) - f_n(x_0)} \leq \sup_{x\in I} \abs{f_m(x) - f_n(x)} \definedas \norm{f_m - f_n}_\infty \converges{m>n\to\infty}\to 0,
+$$
+- Since $\RR$ is complete, this sequence converges and we can define $f(x) \definedas \lim_{k\to \infty} f_n(x)$.
+- Thus $f_n\to f$ pointwise by construction
+- Claim: $\norm{f - f_n} \converges{n\to\infty}\to 0$, so $f_n$ converges to $f$ in $C([0, 1], \norm{\wait}_\infty)$.
+
+  - Proof:
+    - Fix $\eps > 0$; we will show there exists an $N$ such that $n\geq N \implies \norm{f_n - f} < \eps$
+    - Fix an $x_0 \in I$. Since $f_n \to f$ pointwise, choose $N_1$ large enough so that $$n\geq N_1 \implies \abs{f_n(x_0) - f(x_0)} < \eps/2.$$
+    - Since $\norm{f_n - f_m}_\infty \to 0$, choose and $N_2$ large enough so that $$n, m \geq N_2 \implies \norm{f_n - f_m}_\infty < \eps/2.$$
+    - Then for $n, m \geq \max(N_1, N_2)$, we have
+  \begin{align*}
+        \abs{f_n(x_0) - f(x_0)} 
+  &=    \abs{f_n(x_0) - f(x_0) + f_m(x_0) - f_m(x_0)} \\
+  &=    \abs{f_n(x_0) - f_m(x_0) + f_m(x_0) - f(x_0)} \\
+  &\leq \abs{f_n(x_0) - f_m(x_0)} + \abs{f_m(x_0) - f(x_0)} \\
+  &<  \abs{f_n(x_0) - f_m(x_0)} + {\eps \over 2} \\
+  &\leq  \sup_{x\in I} \abs{f_n(x) - f_m(x)} + {\eps \over 2} \\
+  &<  \norm{f_n - f_m}_\infty + {\eps \over 2} \\
+  &\leq  {\eps \over 2} + {\eps \over 2} \\ 
+  \implies \abs{f_n(x_0) - f(x_0)} &< \eps\\
+  \implies \sup_{x\in I} \abs{f_n(x_0) - f(x_0)} &\leq \sup_{x\in I} \eps \quad\text{by order limit laws} \\
+  \implies \norm{f_n - f} &\leq \eps\\
+  .\end{align*}
+
+- $f$ is the uniform limit of continuous functions and thus continuous, so $f\in C([0, 1])$.
+
+### b
+
+- It suffices to produce a Cauchy sequence that does not converge to a continuous function. 
+
+- Take the following sequence of functions:
+  - $f_1$ increases linearly from 0 to 1 on $[0, 1/2]$ and is 1 on $[1/2, 1]$
+  - $f_2$ is 0 on $[0, 1/4]$ increases linearly from 0 to 1 on $[1/4, 1/2]$ and is 1 on $[1/2, 1]$
+  - $f_3$ is 0 on $[0, 3/8]$ increases linearly from 0 to 1 on $[3/8, 1/2]$ and is 1 on $[1/2, 1]$
+  - $f_3$ is 0 on $[0, (1/2 - 3/8)/2]$ increases linearly from 0 to 1 on $[(1/2 - 3/8)/2, 1/2]$ and is 1 on $[1/2, 1]$
+
+  > Idea: take sequence starting points for the triangles: $0, 0 + {1\over 4}, 0 + {1 \over 4} + {1\over 8}, \cdots$ which converges to $1/2$ since $\sum_{k=1}^\infty{1\over 2^k} = -{1\over 2} + \sum_{k=0}^\infty  {1\over 2^k}$.
+
+
+![](figures/image_2020-06-29-20-40-22.png)
+
+- Then each $f_n$ is clearly integrable, since its graph is contained in the unit square.
+- $\theset{f_n}$ is Cauchy: geometrically subtracting areas yields a single triangle whose area tends to 0.
+- But $f_n$ converges to $\chi_{[{1\over 2}, 1]}$ which is discontinuous.
+
+> Todo: show that $\int_0^1 \abs{f_n(x) - f_m(x)} \,dx \to 0$ rigorously, show that no $g\in L^1([0, 1])$ can converge to this indicator function.
+
+
+:::
+
+
 
 ## Spring 2017 # 5
 Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
