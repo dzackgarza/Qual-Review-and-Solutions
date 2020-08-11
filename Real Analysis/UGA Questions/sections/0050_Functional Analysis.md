@@ -132,7 +132,7 @@ Concepts used:
 .\end{align*}
 :::
 
-
+**Solution**:
 
 ### a
 
@@ -267,6 +267,12 @@ a. Prove that $C([0, 1])$ is complete under the uniform norm $\norm{f}_u := \dis
 b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 = \displaystyle\int_0^1 |f (x)| ~dx$.
 
 :::{.solution}
+Concepts used:
+
+- ??
+
+**Solution**:
+
 
 ### a
 
