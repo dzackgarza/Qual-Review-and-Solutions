@@ -10,8 +10,6 @@ Let $f(x) = \frac 1 x$.
 Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 
 :::{.solution}
-## 1
-
 Concepts used:
 
 - Uniform continuity.
@@ -63,8 +61,8 @@ f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
+\todo[inline]{Review and consolidate.}
 :::{.solution}
-
 Note that $f(x) = e^x$ is entire and thus equal to its power series.
 So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
 
@@ -106,16 +104,14 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
+\todo[inline]{Redo.}
 :::{.solution}
-
 Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
 \begin{align*}
 \int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
 ,\end{align*}
 
 so $f$ is not integrable.
-
-
 :::
 
 
@@ -165,7 +161,6 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 .\]
 
 :::{.solution}
-
 Concepts used:
 
 - DCT
@@ -240,7 +235,10 @@ b. Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, t
 
 :::{.solution}
 
-> Cesaro mean/summation. Break series apart into pieces that can be handled separately.
+Concepts used:
+
+- Cesaro mean/summation. 
+- Break series apart into pieces that can be handled separately.
 
 ### a
 
@@ -533,12 +531,85 @@ Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies 
 = \norm{\phi}_\infty.
 \]
 
+:::{.solution}
+
+Let $L$ be the LHS and $R$ be the RHS.
+
+Claim: $L\leq R$.
+  - Since $\abs \phi \leq \norm{\phi}_\infty$ a.e., we can write 
+  \[  
+  L^{1\over n} 
+  &\definedas \int_\RR { \abs{\phi(x)}^n \over 1+ x^2} \\
+  &\leq \int_\RR { \norm{\phi}_\infty^n \over 1+ x^2}  \\
+  &= \norm{\phi}_\infty^n \int_\RR {1\over 1 + x^2} \\
+  &= \norm{\phi}_\infty^n \arctan(x)\evalfrom_{-\infty}^{\infty}  \\
+  &= \norm{\phi}_\infty^n \qty{{\pi \over 2} - {-\pi \over 2} }  \\
+  &= \pi \norm{\phi}_\infty^n \\ \\
+  \implies L^{1\over n} &\leq \sqrt[n]{\pi \norm{\phi}_\infty^n} \\ 
+  \implies L &\leq \pi^{1\over n} \norm{\phi}_\infty \\
+  &\converges{n\to \infty }\to \norm{\phi}_\infty
+  ,\]
+  where we've used the fact that $c^{1\over n} \converges{n\to\infty}\to 1$ for any constant $c$. \todo[inline]{Actually true? Need conditions?}
+  
+Claim: $R\leq L$.
+
+- We will show that $R\leq L + \eps$ for every $\eps>0$.
+- Set 
+\[  
+S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\infty - \eps}
+.\]
+- Then we have
+\[  
+\int_\RR {\abs{\phi(x)}^n \over 1 +x^2}\,dx
+&\geq \int_{S_\eps} {\abs{\phi(x)}^n \over 1 +x^2}\,dx \quad S_\eps \subset \RR \\
+&\geq \int_{S_\eps} { \qty{\norm{\phi}_\infty - \eps}^n \over 1 +x^2}\,dx  \qquad\text{by definition of }S_\eps \\
+&= \qty{\norm{\phi}_\infty - \eps}^n \int_{S_\eps} { 1 \over 1 +x^2}\,dx \\
+&= \qty{\norm{\phi}_\infty - \eps}^n C_\eps \qquad\text{where $C_\eps$ is some constant} \\ \\
+\implies 
+\qty{ \int_\RR {\abs{\phi(x)}^n \over 1 +x^2}\,dx }^{1\over n} 
+&\geq \qty{\norm{\phi}_\infty - \eps} C_\eps^{1 \over n} \\
+&\converges{n\to\infty}\to
+\qty{\norm{\phi}_\infty - \eps} \cdot 1 \\
+&\converges{\eps\to 0}\to \norm{\phi}_\infty
+,\]
+  where we've again used the fact that $c^{1\over n} \to 1$ for any constant.
+
+
+
+
+:::
+
+
+
 ## Fall 2016 # 6
 
 Let $f, g \in L^2(\RR)$. Show that
 \[
 \lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
 \]
+
+:::{.solution}
+
+- Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
+\[  
+\forall \eps,\, \exists N\in \NN \qst \int_{\abs{x} \geq {N}} \abs{h(x)}^2 \,dx < \eps
+.\]
+\todo[inline]{How to prove small tails in $L^p$?}
+
+- So choose $n$ large enough so the tails of both $f$ and $g$ are smaller than $\eps$.
+
+- Apply Cauchy-Schwarz:
+\[  
+\abs{\int_\RR f(x) g(x+n) \,dx} 
+&\leq \int_\RR \abs{f(x) g(x+n)}\,dx \\
+&\leq \int_\RR
+.\]
+
+
+
+:::
+
+
 
 ## Spring 2016 # 1
 For $n\in \NN$, define
@@ -1240,7 +1311,7 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 
     - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
 
-  - But $\mcm$ is a $\sigma\dash$algebra, and this shows $G$ is obtained by countable unions/intersections/complementes of measurable sets, so $G\in \mcm$. 
+  - But $\mcm$ is a $\sigma\dash$algebra, and this shows $G$ is obtained by countable unions/intersections/complements of measurable sets, so $G\in \mcm$. 
 
 - Claim: $\mu(G) = 0$.
 
@@ -1253,7 +1324,7 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
   &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
   .\]
-  \todo{Last step seems wrong!}
+  \todo[inline]{Last step seems wrong!}
 
 
 :::
