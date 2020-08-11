@@ -200,4 +200,22 @@ Show that either
 $$
 \int_{E} f(x) ~d x>\int_{E} g(x) ~d x
 $$
+## Spring 2016 # 4
+Let $E \subset \RR$ be measurable with $m(E) < \infty$. 
+Define
+$$
+f(x)=m(E \cap(E+x)).
+$$
+
+Show that
+
+1. $f\in L^1(\RR)$.
+2. $f$ is uniformly continuous.
+3. $\lim _{|x| \to \infty} f(x) = 0$.
+
+> Hint: 
+$$
+\chi_{E \cap(E+x)}(y)=\chi_{E}(y) \chi_{E}(y-x)
+$$
+
 
