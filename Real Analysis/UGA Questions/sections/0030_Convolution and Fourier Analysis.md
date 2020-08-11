@@ -22,6 +22,8 @@ converges uniformly on $[0, 1]$ to a continuous function $g$ such that $g = f$ a
 
 > Hint: One approach is to argue that if $f\in L^1([0, 1])$ with $\theset{\hat f (n)} \in \ell^1(\ZZ)$ then $f\in L^2([0, 1])$.
 
+
+
 ## Fall 2017 # 5
 Let $\phi$ be a compactly supported smooth function that vanishes outside of an interval $[-N, N]$ such that $\int _{\RR} \phi(x) \, dx = 1$.
 

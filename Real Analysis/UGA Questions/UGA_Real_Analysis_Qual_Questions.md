@@ -598,6 +598,57 @@ Compute the following limit and justify your calculations:
 \lim_{n\to\infty} \int_0^n \qty{1 + {x^2 \over n}}^{-(n+1)} \,dx
 .\]
 
+\todo[inline]{Not finished, flesh out.}
+:::{.solution}
+Concepts used:
+
+- DCT
+- Passing limits through products and quotients
+
+Note that 
+\begin{align*}
+\lim_{n} \qty{1 + {x^2 \over n}}^{-(n+1)} 
+&= {1 \over \lim_{n} \qty{1 + {x^2 \over n}}^1 \qty{1 + {x^2 \over n}}^n } \\
+&= {1 \over 1 \cdot e^{x^2}} \\
+&= e^{-x^2}
+.\end{align*}
+
+If passing the limit through the integral is justified, we will have
+\begin{align*}
+\lim_{n\to\infty} \int_0^n \qty{ 1 + {x^2\over n}}^{-(n+1)}\, dx 
+&= \lim_{n\to\infty} \int_\RR \chi_{[0, n]} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \\
+&= \int_\RR \lim_{n\to\infty} \chi_{[0, n]} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \qtext{by the DCT} \\
+&= \int_\RR \lim_{n\to\infty} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \\
+&= \int_0^\infty e^{-x^2}  \\
+&= {\sqrt \pi \over 2}
+.\end{align*}
+
+Computing the last integral:
+
+\begin{align*}
+\qty{\int_\RR e^{-x^2}\, dx}^2
+&= \qty{\int_\RR e^{-x^2}\,dx} \qty{\int_\RR e^{-y^2}\,dx} \\
+&= \int_\RR \int_\RR e^{-(x+y)^2}\, dx \\
+&= \int_0^{2\pi} \int_0^\infty e^{-r^2} r\, dr \, d\theta \qquad u=r^2 \\
+&= {1\over 2} \int_0^{2\pi } \int_0^\infty e^{-u}\, du \, d\theta \\
+&= {1\over 2} \int_0^{2\pi} 1 \\
+&= \pi
+,\end{align*}
+and now use the fact that the function is even so $\int_0^\infty f = {1\over 2} \int_\RR f$.
+
+Justifying the DCT:
+
+- Apply Bernoulli's inequality: 
+\begin{align*}
+{1 + {x^2\over n}}^{n+1} \geq {1 + {x^2\over n}}\qty{1 + x^2} \geq {1 + x^2}
+,\end{align*}
+  where the last inequality follows from the fact that $1 + {x^2 \over n} \geq 1$
+
+
+:::
+
+
+
 ## Spring 2019 # 3 
 Let $\{f_k\}$ be any sequence of functions in $L^2([0, 1])$ satisfying $\norm{f_k}_2 ≤ M$ for all $k ∈ \NN$.
   
@@ -607,6 +658,8 @@ $$
 $$
 
 > Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
+
+
 
 ## Fall 2018 # 6
 Compute the following limit and justify your calculations:
@@ -968,7 +1021,6 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.solution}
-
 Relevant concepts:
 
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
@@ -1079,6 +1131,8 @@ S_N f(x) \definedas \sum_{\abs n \leq N} \hat f (n) e^{2 \pi i n x}
 converges uniformly on $[0, 1]$ to a continuous function $g$ such that $g = f$ almost everywhere.
 
 > Hint: One approach is to argue that if $f\in L^1([0, 1])$ with $\theset{\hat f (n)} \in \ell^1(\ZZ)$ then $f\in L^2([0, 1])$.
+
+
 
 ## Fall 2017 # 5
 Let $\phi$ be a compactly supported smooth function that vanishes outside of an interval $[-N, N]$ such that $\int _{\RR} \phi(x) \, dx = 1$.

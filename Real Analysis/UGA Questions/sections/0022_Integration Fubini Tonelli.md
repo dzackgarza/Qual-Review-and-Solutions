@@ -13,7 +13,6 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.solution}
-
 Relevant concepts:
 
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
