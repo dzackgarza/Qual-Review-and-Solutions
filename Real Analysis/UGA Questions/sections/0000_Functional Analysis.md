@@ -59,6 +59,18 @@ Let $\mathcal H$ be a Hilbert space.
   $$
 2. Conclude that finite dimensional subspaces of $\mathcal H$ are always closed.
 
+## Fall 2015 # 6
+Let $f: [0, 1] \to \RR$ be continuous.
+Show that
+\[
+\sup \left\{\|f g\|_{1} \suchthat g \in L^{1}[0,1],~~ \|g\|_{1} \leq 1\right\}=\|f\|_{\infty}
+\]
+
+## Fall 2014 # 6
+Let $1 \leq p,q \leq \infty$ be conjugate exponents, and show that
+\[
+f \in L^p(\RR^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x) g(x) d x\right|
+\]
 
 # Functional Analysis: Banach Spaces
 
