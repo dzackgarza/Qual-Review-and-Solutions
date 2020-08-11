@@ -2566,7 +2566,7 @@ i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 
 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
 
-\todo[inline]{}
+\todo[inline]{Fix up.}
 :::{.solution}
 Concepts used:
 
@@ -2649,8 +2649,12 @@ $$
 $$
 
 :::{.solution}
+Concepts used:
 
-> From homework: $E$ is Lebesgue measurable iff there exists a finite union of closed cubes $A$ such that $m(E\Delta A) < \varepsilon$.
+- From homework: $E$ is Lebesgue measurable iff there exists a finite union of closed cubes $A$ such that $m(E\Delta A) < \varepsilon$.
+
+**Solution**:
+
 
 It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
 
