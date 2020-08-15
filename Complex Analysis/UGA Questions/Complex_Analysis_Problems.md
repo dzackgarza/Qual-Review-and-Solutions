@@ -1,13 +1,25 @@
 
 ---
-title: "Complex Analysis Problems"
+title: UGA Complex Analysis Qualifying Exam Questions and Solutions
+hidesolutions: false
+todos: true
 ---
 
+
+**Preface**
+
+I'd like to thank the following individuals for their contributions to this document:
+
+- Edward Azoff, for supplying a problem sheet broken out by topic.
+- Mentzelos Melistas, for explaining and documenting many solutions to these questions.
+- Jingzhi Tie, for supplying many additional problems and solutions.
+
+\todo[inline]{Add references.}
 
 
 # Topology and Functions of One Variable (8155a)
 
-## 1
+## 1 $\work$
 Let $x_0 = a, x_1 = b$, and set
 \[  
 x_n \definedas {x_{n-1} + x_{n-2} \over 2} \quad n\geq 2
@@ -15,18 +27,18 @@ x_n \definedas {x_{n-1} + x_{n-2} \over 2} \quad n\geq 2
 
 Show that $\theset{x_n}$ is a Cauchy sequence and find its limit in terms of $a$ and $b$.
 
-## 2
+## 2 $\work$
 Suppose $f:\RR\to\RR$ is continuous and $\lim_{x\to \pm \infty} f(x) = 0$.
 Prove that $f$ is uniformly continuous.
 
-## 3
+## 3 $\work$
 Give an example of a function $f:\RR\to \RR$ that is everywhere differentiable but $f'$ is not continuous at 0.
 
-## 4
+## 4 $\work$
 Suppose $\theset{g_n}$ is a uniformly convergent sequence of functions from $\RR$ to $\RR$ and $f:\RR\to \RR$ is uniformly continuous.
 Prove that the sequence $\theset{f\circ g_n}$ is uniformly convergent.
 
-## 5
+## 5 $\work$
 Let $f$ be differentiable on $[a, b]$.
 Say that $f$ is *uniformly differentiable* iff 
 
@@ -36,30 +48,30 @@ Say that $f$ is *uniformly differentiable* iff
 
 Prove that $f$ is uniformly differentiable on $[a, b] \iff f'$ is continuous on $[a, b]$.
 
-## 6
+## 6 $\work$
 Suppose $A, B \subseteq \RR^n$ are disjoint and compact.
 Prove that there exist $a\in A, b\in B$ such that
 \[  
 \norm{a - b} = \inf\theset{\norm{x-y} \suchthat x\in A,\, y\in B}
 .\]
 
-## 7
+## 7 $\work$
 Suppose $A, B\subseteq \RR^n$ are connected and not disjoint.
 Prove that $A\union B$ is also connected.
 
-## 8
+## 8 $\work$
 Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of continuous functions $f_n: [0, 1]\to \RR$ such that 
 \[  
 f_n(x) \geq f_{n+1}(x) \geq 0 \quad \forall n\in \NN,\, \forall x\in [0, 1]
 .\]
 Prove that if $\theset{f_n}$ converges pointwise to $0$ on $[0, 1]$ then it converges to $0$ uniformly on $[0, 1]$.
 
-## 9
+## 9 $\work$
 Show that if $E\subset [0, 1]$ is uncountable, then there is some $t\in \RR$ such that $E\intersect (-\infty ,t)$ and $E\intersect (t, \infty)$ are also uncountable.
 
 # Several Variables (8155h)
 
-## 1
+## 1 $\work$
 Is the following function continuous, differentiable, continuously differentiable?
 \[  
 f: \RR^2 &\to \RR  \\
@@ -70,59 +82,59 @@ f(x, y) &=
 \end{cases}
 \]
 
-## 2
+## 2 $\work$
 
-### a 
+### a  $\work$
 Complete this definition: "$f: \RR^n\to \RR^m$ is real-differentiable a point $p\in \RR^n$ iff there exists a linear transformation..."
 
-### b
+### b $\work$
 Give an example of a function $f:\RR^2\to \RR$ whose first-order partial derivatives exist everywhere but $f$ is not differentiable at $(0, 0)$.
 
-### c
+### c $\work$
 Give an example of a function $f: \RR^2 \to \RR$ which is real-differentiable everywhere but nowhere complex-differentiable.
 
-## 3
+## 3 $\work$
 Let $f:\RR^2\to \RR$.
 
-### a
+### a $\work$
 Define in terms of linear transformations what it means for $f$ to be differentiable at a point $(a, b) \in \RR^2$.
 
-### b
+### b $\work$
 State a version of the inverse function theorem in this setting.
 
-### c
+### c $\work$
 Identify $\RR^2$ with $\CC$ and give a necessary and sufficient condition for a real-differentiable function at $(a, b)$ to be complex differentiable at the point $a+ib$.
 
-## 4
+## 4 $\work$
 Let $f = u+iv$ be complex-differentiable with continuous partial derivatives at a point $z = re^{i\theta}$ with $r\neq 0$.
 Show that
 \[  
 \dd{u}{r} = {1\over r}\dd{v}{\theta} \qquad \dd{v}{r} = -{1\over r}\dd{u}{\theta}
 .\]
 
-## 5
+## 5 $\work$
 Let $P = (1, 3) \in \RR^2$ and define
 \[  
 f(s, t) \definedas ps^3 -6st + t^2
 .\]
 
-### a
+### a $\work$
 State the conclusion of the implicit function theorem concerning $f(s, t) = 0$ when $f$ is considered a function $\RR^2\to\RR$.
 
-### b
+### b $\work$
 State the above conclusion when $f$ is considered a function $\CC^2\to \CC$.
 
-### c
+### c $\work$
 Use the implicit function theorem for a function $\RR\cross \RR^2 \to \RR^2$ to prove (b).
 
 > There are various approaches: using the definition of the complex derivative, the Cauchy-Riemann equations, considering total derivatives, etc.
 
-## 6
+## 6 $\work$
 Let $F:\RR^2\to \RR$ be continuously differentiable with $F(0, 0) = 0$ and $\norm{\nabla F(0, 0)} < 1$.
 
 Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenever $\norm{(x, y)} < r$.
 
-## 7
+## 7 $\work$
 State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
 
 
@@ -131,45 +143,45 @@ State the most general version of the implicit function theorem for real functio
 
 > Notation: $\DD$ is the open unit disc, $\HH$ is the open upper half-plane.
 
-## 1
+## 1 $\work$
 Find a conformal map from $\DD$ to $\HH$.
 
-## 2
+## 2 $\work$
 Find a conformal map from the strip $\theset{z\in \CC \suchthat 0 < \Im(z) < 1}$ to $\HH$.
 
-## 3
+## 3 $\work$
 Find a fractional linear transformation $T$ which maps $\HH$ to $\DD$, and explicitly describe the image of the first quadrant under $T$.
 
-## 4
+## 4 $\work$
 Find a conformal map from $\theset{z\in \CC\suchthat \abs{z-i} > 1,\, \Re(z) > 0}$ to $\HH$.
 
-## 5
+## 5 $\work$
 Find a conformal map from $\theset{z\in \CC \suchthat \abs{z} < 1,\, \abs{z - {1\over 2}} > {1\over 2} }$ to $\DD$.
 
-## 6
+## 6 $\work$
 Find a conformal  map from $\theset{\abs{z-1} < 2} \intersect \theset{\abs{z+1} < 2}$ to $\HH$.
 
-## 7
+## 7 $\work$
 Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the circle $\abs{z-{1\over 4}} = {1\over 4}$.
 
 Find an injective conformal map from $\Omega$ onto some annulus $\theset{r < \abs{z} < 1}$ for gonstant $r$.
 
-## 8
+## 8 $\work$
 Let $D$ be the region obtained by deleting the real interval $[0, 1)$ from $\DD$; find a conformal map from $D$ to $\DD$.
 
-## 9
+## 9 $\work$
 Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\leq 0}$ to $\DD$.
 
-## 10
+## 10 $\work$
 Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\geq 1}$ to $\DD$.
 
-## 11
+## 11 $\work$
 Find a bijective conformal map from $G$ to $\HH$, where
 \[  
 G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt 2} \setminus [0, i)
 .\]
 
-## 12
+## 12 $\work$
 Prove that TFAE for a Möbius transformation $T$ given by $T(z) = {az + b \over cz + d}$:
 
 a. $T$ maps $\RR\union \theset{\infty}$ to itself.
@@ -181,7 +193,7 @@ d. There exist $\alpha\in \RR, \beta \in \CC\setminus \RR$ such that $T(\alpha) 
 
 > Some interesting problems: 3, 4, 9, 10.
 
-## 1
+## 1 $\work$
 
 Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in [0, 1]$,
 \[
@@ -190,21 +202,21 @@ Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in 
 
 Prove that $g$ is Riemann integrable.
 
-## 2
+## 2 $\work$
 
 State and prove Green's Theorem for rectangles.
 
 Then use it to prove Cauchy's Theory for functions that are analytic in a rectangle.
 
 
-## 3
+## 3 $\work$
 
 Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of analytic functions on $\DD \definedas \theset{z\in \CC \suchthat \abs{z} < 1}$.
 
 Show that if $f_n\to g$ for some $g: \DD \to \CC$ uniformly on every compact $K\subset \DD$, then $g$ is analytic on $\DD$.
 
 
-## 4
+## 4 $\work$
 
 Suppose $\theset{f_n}_{n\in \NN}$ is a sequence of entire functions where
 
@@ -216,13 +228,28 @@ Show that
 - $g$ is entire, and
 - $f_n\to g$ uniformly on every compact subset of $\CC$.
 
-
-## 5
+## 5 $\done$
 
 Prove that there is no sequence of polynomials that uniformly converge to $f(z) = {1\over z}$ on $S^1$.
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 
-## 6
+:::
+
+- By Cauchy's integral formula, $\int_{S^1} f = 2\pi i$
+- If $p_j$ is any polynomial, then $p_j$ is holomorphic in $\DD$, so $\int_{S^1} p_j = 0$.
+- Contradiction: compact sets in $\CC$ are bounded, so 
+  \[
+  \abs{\int f - \int p_j} \leq \int \abs{p_j - f} \leq \int \norm{p_j - f}_\infty  = \norm{p_j - f}_\infty \int_{S^1} 1 \,dz = \norm{p_j-f}_\infty \cdot 2\pi \to 0
+  \]
+  which forces $\int f = \int p_j = 0$.
+:::
+
+
+## 6 $\work$
 
 Suppose that $f: \RR\to\RR$ is a continuous function that vanishes outside of some finite interval.
 For each $z\in \CC$, define
@@ -233,7 +260,7 @@ g(z) = \int_{-\infty}^\infty f(t) e^{-izt} \,dt
 Show that $g$ is entire.
 
 
-## 7
+## 7 $\work$
 
 Suppose $f: \CC\to \CC$ is entire and
 \[
@@ -242,7 +269,7 @@ Suppose $f: \CC\to \CC$ is entire and
 
 Prove that $f$ is constant.
 
-## 8
+## 8 $\work$
 
 Let $\gamma$ be a smooth curve joining two distinct points $a, b\in \CC$.
 
@@ -252,51 +279,132 @@ f(z) \definedas \int_\gamma {g(w) \over w-z} \,dw
 \]
 is analytic in $\CC\setminus\gamma$.
 
-## 9
+## 9 $\done$
 Suppose that $f: \CC\to\CC$ is continuous everywhere and analytic on $\CC\setminus \RR$ and prove that $f$ is entire.
 
-## 10
+\todo[inline]{Something missing?}
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+- Note $f$ is continuous on $\CC$ since analytic implies continuous ($f$ equals its power series, where the partials sums uniformly converge to it, and uniform limit of continuous is continuous).
+- Strategy: take $D$ a disc centered at a point $x\in \RR$, show $f$ is holomorphic in $D$ by Morera's theorem.
+- Let $\Delta \subset D$ be a triangle in $D$.
+- Case 1: If $\Delta \intersect \RR = 0$, then $f$ is holomorphic on $\Delta$ and $\int_\Delta f = 0$.
+- Case 2: one side or vertex of $\Delta$ intersects $\RR$, and wlog the rest of $\Delta$ is in $\HH^+$.
+  - Then let $\Delta_\eps$ be the perturbation $\Delta + i\eps = \theset{z+ i\eps \suchthat z\in \Delta}$; then $\Delta_\eps \intersect \RR = 0$ and $\int_{\Delta_\eps} f = 0$.
+  - Now let $\eps\to 0$ and conclude by continuity of $f$ (???)
+    - We want
+    \begin{align*}
+    \int_{\Delta_\eps} f = \int_a^b f(\gamma_\eps(t)) \gamma_\eps'(t)\,dt \converges{\eps\to 0}\to \int_a^b f(\gamma(t)) \gamma_\eps'(t)\,dt =\int_{\Delta}  f
+    \end{align*}
+    where $\gamma_\eps, \gamma$ are curves parametrizing $\Delta_\eps, \Delta$ respectively.
+    - Since $\gamma, \gamma_\eps$ are closed and bounded in $\CC$, they are compact subsets. Thus it suffices to show that $f(\gamma_\eps(t)) \gamma_\eps'(t)$ converges uniformly to $f(\gamma(t))\gamma'(t)$.
+    -  ??
+- Case 3: $\Delta$ intersects both $\HH^+$ and $\HH^-$.
+  - Break into smaller triangles, each of which falls into one of the previous two cases.
+
+:::
+
+
+## 10 $\done$
 Prove Liouville's theorem: suppose $f:\CC\to\CC$ is entire and bounded. 
 Use Cauchy's formula to prove that $f'\equiv 0$ and hence $f$ is constant.
+
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+- Suffices to prove $f' = 0$ because $\CC$ is connected (see Stein Ch 1, 3.4)
+  - Idea: Fix $w_0$, show $f(w) = f(w_0)$ for any $w\neq w_0$
+  - Connected = Path connected in $\CC$, so take $\gamma$ joining $w$ to $w_0$.
+  - $f$ is a primitive for $f'$, and $\int_\gamma f' = f(w) - f(w_0)$, but $f'=0$.
+- Fix $z_0\in \CC$, let $B$ be the bound for $f$, so $\abs{f(z)} \leq B$ for all $z$.
+- Apply Cauchy inequalities: if $f$ is holomorphic on $U\supset \bar D_R(z_0)$ then setting $\norm{f}_C \definedas \sup_{z\in C} \abs{f(z)}$,
+  \begin{align*}
+  \abs{f^{(n)} (z_0)} \leq {n! \norm{f}_C \over R^n}
+  .\end{align*}
+  - Yields $\abs{ f'(z_0) } \leq B/R$
+- Take $R\to \infty$, QED.
+:::
 
 
 # Liouville's Theorem, Power Series (8155e)
 
-## 1
+## 1 $\done$
 
 Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \subseteq \CC$ and $f(z) = \sum_{n=0}^\infty a_n z^n$ is a power series with radius of convergence exactly 1.
 
-### a
+### a $\work$
 Give an example of such an $f$ that converges at every point of $S^1$.
 
-### b 
+### b  $\work$
 Give an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
-### c 
+### c  $\work$
 Prove that $f$ can not be analytic at *every* point of $S^1$.
 
-## 2
+\todo[inline]{Missing part (c)}
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+
+### a  $\work$
+Take $\sum {z^n \over n^2}$; then $\abs{z}\leq 1 \implies \abs{z^n\over n^2} \leq {1\over n^2}$ which is summable, so the series converges for $\abs{z}\leq 1$.
+
+### b $\work$
+Take $\sum {z^n \over n}$; then $z=1$ yields the harmonic series, which diverges.
+
+- For $z\in S^1\setminus\theset{1}$, we have $z = e^{2\pi it}$ for $0<t<2\pi$. 
+- So fix $t$.
+
+- Toward applying the Dirichlet test, set $a_n = 1/n, b_n = z^n$.
+
+- Then for all $N$,
+\[
+\abs{\sum_{n=1}^N b_n}
+= \abs{\sum_{n=1}^N b_n}
+= \abs{\sum_{n=1}^N z^n}
+= \abs{  {z-z^{N+1} \over \abs{1 - z}} } 
+\leq {2 \over 1-z} < \infty
+.\]
+
+- Thus $\sum a_n b_n < \infty$ and $\sum z^n/n$ converges.
+
+c. ?
+
+:::
+
+## 2 $\work$
 
 Suppose $f$ is entire and has Taylor series $\sum a_n z^n$ about 0.
 
-### a 
+### a  $\work$
 Express $a_n$ as a contour integral along the circle $\abs{z} = R$.
 
-### b
+### b $\work$
 Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of $\CC$.
 
-### c
+### c $\work$
 Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
 
 
-## 3
+
+## 3 $\work$
 
 Suppose $D$ is a domain and $f, g$ are analytic on $D$.
 
 Prove that if $fg = 0$ on $D$, then either $f \equiv 0$ or $g\equiv 0$ on $D$.
 
 
-## 4
+## 4 $\work$
 
 Suppose $f$ is analytic on $\DD^\circ$.
 Determine with proof which of the following are possible:
@@ -310,28 +418,80 @@ c. $f\qty{1\over n^2} = {1\over n}$ for each integer $n>1$.
 d. $f\qty{1\over n} = {n-2 \over n-1}$ for each integer $n>1$.
 
 
-## 5
+## 5 $\done$
 
 Prove the Fundamental Theorem of Algebra (using complex analysis).
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 
-## 6
+:::
+- Strategy: By contradiction with Liouville's Theorem
+- Suppose $p$ is non-constant and has no roots.
+- Claim: $1/p(z)$ is a bounded holomorphic function on $\CC$.
+  - Holomorphic: clear? Since $p$ has no roots.
+  - Bounded: for $z\neq 0$, write
+    \begin{align*}
+    \frac{P(z)}{z^{n}}=a_{n}+\left(\frac{a_{n-1}}{z}+\cdots+\frac{a_{0}}{z^{n}}\right)
+    .\end{align*}
+
+  - The term in parentheses goes to 0 as $\abs{z}\to \infty$
+  - Thus there exists an $R>0$ such that
+    \begin{align*}
+    \abs{z} > R \implies \abs{P(z) \over z^n} \geq c \definedas {\abs{a_n} \over 2}
+    .\end{align*}
+
+  - So $p$ is bounded below when $\abs{z} > R$
+  - Since $p$ is continuous and has no roots in $\abs{z} \leq R$, it is bounded below when $\abs{z} \leq R$.
+  - Thus $p$ is bounded below on $\CC$ and thus $1/p$ is bounded above on $\CC$.
+- By Liouville's theorem, $1/p$ is constant and thus $p$ is constant, a contradiction.
+:::
+
+
+
+## 6 $\done$
 Find all entire functions that satisfy
 \[
 \abs{f(z)} \geq \abs{z} \quad \forall z\in \CC
 .\]
 Prove this list is complete.
 
-## 7
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+- Suppose $f$ is entire and define $g(z) \definedas {z \over f(z)}$.
+- By the inequality, $\abs{g(z)} \leq 1$, so $g$ is bounded.
+- $g$ potentially has singularities at the zeros $Z_f \definedas f\inv(0)$, but since $f$ is entire, $g$ is holomorphic on $\CC\setminus Z_f$.
+- Claim: $Z_f = \theset{0}$.
+  - If $f(z) = 0$, then $\abs{z} \leq \abs{f(z)} = 0$ which forces $z=0$.
+- We can now apply Riemann's removable singularity theorem:
+  - Check $g$ is bounded on some open subset $D\smz$, clear since it's bounded everywhere
+  - Check $g$ is holomorphic on $D\smz$, clear since the only singularity of $g$ is $z=0$.
+- By Riemann's removable singularity theorem, the singularity $z = 0$ is removable and $g$ has an extension to an entire function $\tilde g$.
+- By continuity, we have $\abs{\tilde g(z)} \leq 1$ on all of $\CC$
+  - If not, then $\abs{\tilde g(0)} = 1+\eps > 1$, but then there would be a domain $\Omega \subseteq \CC\smz$ such that $1 < \abs{\tilde g(z)} \leq 1 +\eps$ on $\Omega$, a contradiction.
+- By Liouville, $\tilde g$ is constant, so $\tilde g(z) = c_0$ with $\abs {c_0} \leq 1$
+- Thus $f(z) = c_0\inv z \definedas cz$ where $\abs{c}\geq 1$
+
+Thus all such functions are of the form $f(z) = cz$ for some $c\in \CC$ with $\abs{c}\geq 1$.
+:::
+
+
+## 7 $\work$
 Suppose $\sum_{n=0}^\infty a_n z^n$ converges for some $z_0 \neq 0$.
 
-### a 
+### a  $\work$
 Prove that the series converges absolutely for each $z$ with $\abs z < \abs z_0$.
 
-### b 
+### b  $\work$
 Suppose $0 < r < \abs{z_0}$ and show that the series converges uniformly on $\abs{z} \leq r$.
 
-## 8
+## 8 $\work$
 
 Suppose $f$ is entire and suppose that for some integer $n\geq 1$,
 \[
@@ -341,7 +501,7 @@ Suppose $f$ is entire and suppose that for some integer $n\geq 1$,
 Prove that $f$ is a polynomial of degree at most $n-1$.
 
 
-## 9
+## 9 $\work$
 
 Find all entire functions satisfying
 \[
@@ -349,7 +509,7 @@ Find all entire functions satisfying
 .\]
 
 
-## 10
+## 10 $\work$
 
 Prove that the following series converges uniformly on the set $\theset{z \suchthat \Im(z) < \ln 2}$:
 \[
@@ -359,22 +519,90 @@ Prove that the following series converges uniformly on the set $\theset{z \sucht
 
 # Laurent Expansions and Singularities (8155f)
 
-## 1 
+## 1 $\done$
 Find the Laurent expansion of
 \[
 f(z) = {z + 1 \over z(z-1)}
 \]
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+Let $f(z) = {z+1\over z(z-1)}$.
+
+About $z=0$:
+
+\begin{align*}
+f(z) 
+&= (z+1) \qty{- {1 \over z} + {1\over z-1} } \\
+&=  -(z+1) \qty{{1\over z} + \sum_{n=0}^\infty z^n } \\
+&= -(z+1)\sum_{n=-1}^\infty z^n \\
+&= {1\over z} + 2\sum_{n=0}^\infty z^n \\
+&= -{1\over z} -2 - 2z - 2z^2 - \cdots
+.\end{align*}
+
+About $z=1$:
+
+\begin{align*}
+f(z) 
+&= \qty{(1-z) -2 \over 1-z} \qty{1 \over 1 - (1-z)} \\
+&= \qty{1 - {2\over 1-z}} \sum_{n=0}^\infty (1-z)^n \\ 
+&= \sum_{n=0}^\infty (1-z)^n - 2 \sum_{n=-1}^\infty (1-z)^n \\
+&= -{2\over 1-z} - \sum_{n=0}^\infty (1-z)^n \\
+&= {2\over z-1} + \sum_{n=0}^\infty (-1)^{n+1} (z-1)^n \\
+&= {2\over z-1} - 1 + (z-1) - (z-1)^2 + \cdots
+.\end{align*}
+:::
+
+
 about $z=0$ and $z=1$ respectively.
 
-## 2
+## 2 $\done$
 
 Find the Laurent expansions about $z=0$ of the following functions:
 \[
 \exp{1\over z} \hspace{8em} \cos \qty{1\over z}
 .\]
 
-## 3
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+Let $f(z) = {z+1\over z(z-1)}$.
+
+About $z=0$:
+
+\begin{align*}
+f(z) 
+&= (z+1) \qty{- {1 \over z} + {1\over z-1} } \\
+&=  -(z+1) \qty{{1\over z} + \sum_{n=0}^\infty z^n } \\
+&= -(z+1)\sum_{n=-1}^\infty z^n \\
+&= {1\over z} + 2\sum_{n=0}^\infty z^n \\
+&= -{1\over z} -2 - 2z - 2z^2 - \cdots
+.\end{align*}
+
+About $z=1$:
+
+\begin{align*}
+f(z) 
+&= \qty{(1-z) -2 \over 1-z} \qty{1 \over 1 - (1-z)} \\
+&= \qty{1 - {2\over 1-z}} \sum_{n=0}^\infty (1-z)^n \\ 
+&= \sum_{n=0}^\infty (1-z)^n - 2 \sum_{n=-1}^\infty (1-z)^n \\
+&= -{2\over 1-z} - \sum_{n=0}^\infty (1-z)^n \\
+&= {2\over z-1} + \sum_{n=0}^\infty (-1)^{n+1} (z-1)^n \\
+&= {2\over z-1} - 1 + (z-1) - (z-1)^2 + \cdots
+.\end{align*}
+
+
+:::
+
+
+## 3 $\work$
 
 Find the Laurent expansion of 
 \[
@@ -384,7 +612,7 @@ about $z=0$ and $z=1$ respectively.
 
 > Hint: recall that power series can be differentiated.
 
-## 4
+## 4 $\work$
 
 For the following functions, find the Laurent series about $0$ and classify their singularities there:
 \[
@@ -393,21 +621,21 @@ z \exp{1\over z^2} \\
 {1 \over z(4-z)}
 .\]
 
-## 5
+## 5 $\work$
 
 Find all entire functions with have poles at $\infty$.
 
-## 6
+## 6 $\work$
 
 Find all functions on the Riemann sphere that have a simple pole at $z=2$ and a double pole at $z=\infty$, but are analytic elsewhere.
 
-## 7
+## 7 $\work$
 Let $f$ be entire, and discuss (with proofs and examples) the types of singularities $f$ might have (removable, pole, or essential) at $z=\infty$ in the following cases:
 
 1. $f$ has at most finitely many zeros in $\CC$.
 2. $f$ has infinitely many zeros in $\CC$.
 
-## 8
+## 8 $\work$
 Define
 \[
 f(z) &= {\pi^2 \over \sin^2 \qty{\pi z} } \\
@@ -419,83 +647,94 @@ b. Show that $f$ and $g$ have the same singular parts at each of their singulari
 c. Show that $f, g$ each have period one and approach zero uniformly on $0\leq x \leq 1$ as $\abs{y}\to \infty$.
 d. Conclude that $f = g$.
 
+\todo[inline]{Not finished.}
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+Idea: show their $f-g$ is analytic by taking away all of the negative powers, and bounded by (c).
+:::
+
+:::
+
+
 # Residues (8155g)
 
-## 1
+## 1 $\work$
 Calculate
 \[
 \int_0^\infty {1 \over (1+z)^2 (z+9x^2)} \, dx
 .\]
 
 
-## 2
+## 2 $\work$
 Let $a>0$ and calculate
 \[
 \int_0^\infty {x\sin(x) \over x^2 + a^2} \,dx
 .\]
 
 
-## 3
+## 3 $\work$
 Calculate
 \[
 \int_0^\infty {\sqrt x \over (x+1)^2} \,dx
 .\]
 
-## 4
+## 4 $\work$
 Calculate
 \[
 \int_0^\infty {\cos(x) - \cos(4x) \over x^2} \, dx
 .\]
 
-## 5
+## 5 $\work$
 Let $a>0$ and calculate
 \[
 \int_0^\infty {x^2 \over (x^2 + a^2)^2} \, dx
 .\]
 
-## 6
+## 6 $\work$
 Calculate
 \[
 \int_0^\infty {\sin(x) \over x}\, dx
 .\]
 
-## 7
+## 7 $\work$
 Calculate
 \[
 \int_0^\infty {\sin(x) \over x(x^2+1)}\, dx
 .\]
 
-## 8
+## 8 $\work$
 Calculate
 \[
 \int_0^\infty {\sqrt x \over 1 + x^2} \, dx
 .\]
 
-## 9
+## 9 $\work$
 Calculate
 \[
 \int_{-\infty}^\infty {1+x^2 \over 1+x^4}\, dx
 .\]
 
-## 10
+## 10 $\work$
 Let $a>0$ and calculate
 \[
 \int_0^\infty {\cos(x) \over (x^2 + a^2)^2}\, dx
 .\]
 
-## 11
+## 11 $\work$
 Calculate
 \[
 \int_0^\infty {\sin^3(x) \over x^3} \, dx
 .\]
 
-## 12
+## 12 $\work$
 Let $n\in \ZZ^{\geq 1}$ and $0<\theta<\pi$ and show that
 \[
 {1\over 2\pi i} \int_{\abs z = 2} {z^n \over 1 -3z\cos(\theta) + z^2} \,dz = {\sin(n\theta) \over \sin(\theta)}
 .\]
 
-## 13
+## 13 $\work$
 Suppose $a>b>0$ and calculate
 \[
 \int_0^{2\pi} {1 \over (a+b\cos(\theta))^2} \,d\theta
@@ -504,7 +743,7 @@ Suppose $a>b>0$ and calculate
 
 # Rouche's Theorem (8155h)
 
-## 1
+## 1 $\done$
 
 Prove that for every $n\in \ZZ^{\geq 0}$ the following polynomial has no roots in the open unit disc:
 \[
@@ -513,39 +752,91 @@ f_n(x) \definedas \sum_{k=0}^n {z^k \over k!}
 
 > Hint: check $n=1,2$ directly.
 
-## 2
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+Note
+
+- $f_1(z) = 1+z$, which has the single root $z=-1$ which is not inside $\abs{z} < 1$.
+- $f_2(z) = 1 + z + {1\over 2}z^2 = (z - (1+i))(z- (1-i))$, and $\abs{1\pm i} = \sqrt 2 >1$.
+
+- Note that $p_n(z) \converges{n\to\infty}e^z$ uniformly on any compact set.
+- Let $r$ be arbitrary and fix $N \definedas \DD_r(0)$, then $p_n(z) \to e^z$ uniformly on $\bar{N}$.
+- Set $g_n(z) \definedas p_n(z) / e^z$, then $g_n \to 1$ uniformly on $\bar N$.
+- Choose $n\gg 0$ so that $\abs{f(z) - 1} < \eps < 1$ for all $z\in \bar{N}$.
+- So take $h(z) = 1$, then on $\bd N$,?
+
+:::
+
+
+## 2 $\done$
 Assume that $\abs b < 1$ and show that the following polynomial has exactly two roots (counting multiplicity) in $\abs{z} < 1$:
 \[
 f(z) \definedas z^3 + 3z^2 + bz + b^2
 .\]
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+Multiple versions of Rouches theorem!
+:::
 
-## 3
+- Set $h(z) = 3z^2$ and $g(z) = z^3 + bz + b^2$.
+- Then on $\abs{z} = 1$,
+\begin{align*}
+\abs{g(z)} \leq 1 + b + b^2 < 3 = 3\abs{z}^2 = \abs{3z^2} = \abs{h}
+,\end{align*}
+  so $g, h$ have the same number of roots in $\abs{z} \leq_? 1$.
+
+- But $h$ evidently has two roots in this region.
+
+:::
+
+
+## 3 $\work$
 Let $c\in \CC$ with $\abs{c} < {1\over 3}$.
 Show that on the open set $\theset{z\in \CC \suchthat \Re(z) < 1}$, the function $f(z) \definedas ce^z$ has exactly one fixed point.
 
 
-## 4
+## 4 $\done$
 How many roots does the following polynomial have in the open disc $\abs{z} < 1$?
 \[
 f(z) = z^7 - 4z^3 - 1
 .\]
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 
-## 5
+:::
+- Set $h(z) = -4z^3$ and $g(z) = z^7 - 1$, then on $\abs{z} = 1$,
+\begin{align*}
+\abs{g(z)} = \abs{z^7 - 1} \leq 1 + 1 = 2 < 4 = \abs{-4z^3} = \abs{h(z)}
+.\end{align*}
+
+- So $h$ and $h+g$ have the same number of roots, but $h$ has three roots here.
+:::
+
+
+## 5 $\done$
 Let $n\in \ZZ^{\geq 0}$ and show that the equation
 \[
 e^z = az^n
 \]
 has $n$ solutions in the open unit disc if $\abs{a} > e$, and no solutions if $\abs{a} < {1\over e}$.
 
-## 6
+## 6 $\work$
 Let $f$ be analytic in a domain $D$ and fix $z_0 \in D$ with $w_0 \definedas f(z_0)$.
 Suppose $z_0$ is a zero of $f(z) - w_0$ with finite multiplicity $m$.
 Show that there exists $\delta >0$ and $\eps > 0$ such that for each $w$ such that $0 < \abs{w-w_0} < \eps$, the equation $f(z) - w = 0$ has exactly $m$ *distinct* solutions inside the disc $\abs{z-z_0} < \delta$.
 
 
-## 7
+## 7 $\work$
 For $k=1,2,\cdots, n$, suppose $\abs{a_k} < 1$ and
 \[
 f(z) \definedas \qty{z - a_1 \over 1 - \bar a_q z} \qty{z-a_2 \over 1 - \bar a_2 z} \cdots \qty{z - a_n \over 1 - \bar a_n z}
@@ -553,14 +844,14 @@ f(z) \definedas \qty{z - a_1 \over 1 - \bar a_q z} \qty{z-a_2 \over 1 - \bar a_2
 Show that $f(z) = b$ has $n$ solutions in $\abs{z} < 1$.
 
 
-## 8
+## 8 $\work$
 For each $n\in \ZZ^{\geq 1}$, let
 \[
 P_n(z) = 1 + z + {1\over 2!} z^2 + \cdots + {1\over n!}z^n
 .\]
 Show that for sufficiently large $n$, the polynomial $P_n$ has no zeros in $\abs{z} < 10$, while the polynomial $P_n(z) - 1$ has precisely 3 zeros there.
 
-## 9
+## 9 $\work$
 Prove that
 \[
 \max_{\abs z = 1} \abs{a_0 + a_1 z + \cdots + a_{n-1}z^{n-1} + z^n} \geq 1
@@ -568,7 +859,7 @@ Prove that
 
 > Hint: the first part of the problem asks for a statement of Rouche's theorem.
 
-## 10
+## 10 $\work$
 Use Rouche's theorem to prove the Fundamental Theorem of Algebra.
 
 
@@ -576,27 +867,27 @@ Use Rouche's theorem to prove the Fundamental Theorem of Algebra.
 
 # Schwarz Lemma and Reflection Principle (8155i)
 
-## 1
+## 1 $\work$
 Suppose $f:\DD\to\DD$ is analytic and admits a continuous extension $\tilde f: \bar \DD \to \bar \DD$ such that $\abs{z} = 1 \implies \abs{f(z)} = 1$.
 
-### a
+### a $\work$
 Prove that $f$ is a rational function.
 
-### b
+### b $\work$
 Suppose that $z=0$ is the unique zero of $f$.
 Show that
 \[  
 \exists n\in \NN, \lambda \in S^1 \qtext{ such that }f(z) = \lambda z^n
 .\]
 
-### c
+### c $\work$
 
 Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$ and prove that
 \[  
 \exists \lambda \in S^1 \qtext{such that} f(z) = \lambda \prod_{j=1}^n {z - a_j \over 1 - \bar{a_j} z}
 .\]
 
-## 2
+## 2 $\work$
 Let $\bar B(a, r)$ denote the closed disc of radius $r$ about $a\in \CC$.
 Let $f$ be holomorphic on an open set containing $\bar B(a, r)$ and let 
 \[  
@@ -608,7 +899,7 @@ Prove that
 z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\abs{ f(z) - f(a)} \over \abs{z-a}} \leq {2M \over r}
 .\]
 
-## 3
+## 3 $\work$
 Define
 \[  
 G \definedas \theset{z\in \CC\suchthat \Re(z) > 0, \, \abs{z-1} > 1}
@@ -617,7 +908,7 @@ G \definedas \theset{z\in \CC\suchthat \Re(z) > 0, \, \abs{z-1} > 1}
 Find all of the injective conformal maps $G\to \DD$.
 These may be expressed as compositions of maps, but explain why this list is complete.
 
-## 4
+## 4 $\work$
 Suppose $f: \HH\union \RR\to \CC$ satisfies the following:
 
 - $f(i) = i$
@@ -627,31 +918,31 @@ Suppose $f: \HH\union \RR\to \CC$ satisfies the following:
 
 Show that $f(\HH)$ is a dense subset of $\HH$.
 
-## 5
+## 5 $\work$
 Suppose $f: \DD\to \HH$ is analytic and satisfies $f(0) = 2$.
 Find a sharp upper bound for $\abs{f'(0)}$, and prove it is sharp by example.
 
-## 6
+## 6 $\work$
 Suppose $f:\DD\to\DD$ is analytic, has a single zero of order $k$ at $z=0$, and satsifies $\lim_{\abs z \to 1} \abs{f(z)} = 1$.
 Give with proof a formula for $f(z)$.
 
-## 7
+## 7 $\work$
 
-### a
+### a $\work$
 State the standard Schwarz reflection principle involving reflection across the real axis.
 
-### b
+### b $\work$
 Give a linear fractional transformation $T$ mapping $\DD$ to $\HH$.
 Let $g(z) = \bar z$, and show
 \[  
 (T^{-1} \circ g \circ T)(z) = 1/\bar z
 .\]
 
-### c
+### c $\work$
 Suppose that $f$ is holomorphic on $\DD$, continuous on $\bar \DD$, and real on $S^1$.
 Show that $f$ must be constant.
 
-## 8
+## 8 $\work$
 Suppose $f, g: \DD\to \Omega$ are holomorphic with $f$ injective and $f(0) = g(0)$.
 
 Show that 
@@ -661,13 +952,13 @@ Show that
 
 > The first part of this problem asks for a statement of the Schwarz lemma.
 
-## 9
+## 9 $\work$
 Let $S\definedas \theset{z\in \DD\suchthat \Im(z) \geq 0}$.
 Suppose $f:S\to \CC$ is continuous on $S$, real on $S\intersect \RR$, and holomorphic on $S^\circ$.
 
 Prove that $f$ is the restriction of a holomorphic function on $\DD$.
 
-## 10
+## 10 $\work$
 Suppose $f:\DD\to \DD$ is analytic.
 Prove that 
 \[  

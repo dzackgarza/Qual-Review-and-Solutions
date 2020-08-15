@@ -1,23 +1,25 @@
 
 ---
 title: Real Analysis Qualifying Exam Questions
+hidesolutions: false
+todos: true
 ---
 
 # Undergraduate Analysis: Uniform Convergence
 
-## Fall 2018 # 1
+## Fall 2018 # 1 $\done$
 Let $f(x) = \frac 1 x$.
 Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Uniform continuity.
+:::
 
-**Solution**:
-
-
-Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
+- Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
 
 - Note that
 $$
@@ -27,14 +29,14 @@ $$
 - Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
  - Note that $\delta$ does not depend on $x, y$.
 - Then
-\begin{align*}
+\[
 \abs{f(x) - f(y)}
 &= \abs{\frac 1 x - \frac 1 y} \\
 &= \frac{\abs{x-y}}{xy} \\
 &\leq \frac{\delta}{xy} \\
 &< \frac{\delta}{c^2} \\
 &< \varepsilon
-,\end{align*}
+,\]
   which shows uniform continuity.
 
 To see that $f$ is not uniformly continuous when $c=0$:
@@ -46,17 +48,15 @@ To see that $f$ is not uniformly continuous when $c=0$:
 - Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
   - Why this can be done: by the archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
   - Then
-  \begin{align*}
+  \[
   {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
-  .\end{align*}
+  .\]
 - Note $f(x_n) = n$ and thus $$\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon.$$
-
 
 :::
 
 
-
-## Fall 2017 # 1
+## Fall 2017 # 1 $\done$
 Let 
 \[
 f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
@@ -64,13 +64,15 @@ f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
-\todo[inline]{Review and consolidate.}
+\todo[inline]{Walk through.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 Note that $f(x) = e^x$ is entire and thus equal to its power series.
 So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
@@ -79,7 +81,7 @@ Letting $f_N(x) = \sum_{j=1}^N \frac 1 {j!} x^j$, we have $f_N(x) \to f(x)$ poin
 
 For any compact interval $[-M, M]$, we have
 
-\begin{align*}
+\[
 \norm{f_N(x) - f(x)}_\infty
 &= \sup_{-M\leq x \leq M} ~\abs{\sum_{j=N+1}^\infty \frac 1 {j!} x^j} \\
 &\leq \sup_{-M\leq x \leq M} ~ \sum_{j=N+1}^\infty \frac 1 {j!} \abs{x}^j \\
@@ -87,23 +89,21 @@ For any compact interval $[-M, M]$, we have
 &\leq \sum_{j=0}^\infty \frac 1 {j!} M^j \\
 &= e^M \\
 &<\infty
-,\end{align*}
+,\]
 
 so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 Thus it converges on any bounded interval.
 
 It does not converge on $\RR$, since $x^N$ is unbounded.
-
-
 :::
 
 
-## Fall 2014 # 1
+## Fall 2014 # 1 $\work$
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
 
 Prove that $\sum f_n$ is also continuous.
 
-## Spring 2017 # 4
+## Spring 2017 # 4 $\done$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
 $$
 f(x, y) = \begin{cases}
@@ -114,24 +114,24 @@ $$
 Determine if $f$ is integrable.
 
 \todo[inline]{Redo, may just be wrong.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
-\begin{align*}
+\[
 \int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
-,\end{align*}
+,\]
 
 so $f$ is not integrable.
 :::
 
-
-
-## Spring 2015 # 1
+## Spring 2015 # 1 $\done$
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f: X\to Y$, and $x_0 \in X$.
 
 Prove that the following statements are equivalent:
@@ -139,7 +139,7 @@ Prove that the following statements are equivalent:
 1. For every $\varepsilon > 0 \quad \exists \delta > 0$ such that $\rho( f(x), f(x_0)  ) < \varepsilon$ whenever $d(x, x_0) < \delta$.
 2. The sequence $\theset{f(x_n)}_{n=1}^\infty \to f(x_0)$ for every sequence $\theset{x_n} \to x_0$ in $X$.
 
-## Fall 2014 # 2
+## Fall 2014 # 2  $\work$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
 1. Show that
@@ -155,7 +155,8 @@ $$
   Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
 
-## Spring 2014 # 2
+## Spring 2014 # 2  $\work$
+
 Let $\theset{a_n}$ be a sequence of real numbers such that
 $$
 \theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
@@ -168,7 +169,7 @@ Show that $\sum a_n^2 < \infty$.
 
 # General Analysis
 
-## Spring 2020 # 1
+## Spring 2020 # 1 $\done$
 
 Prove that if $f: [0, 1] \to \RR$ is continuous then
 \[
@@ -176,28 +177,28 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 .\]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - DCT
 - Weierstrass Approximation Theorem
-
-**Solution**:
+:::
 
 - Suppose $p$ is a polynomial, then
-\begin{align*}
+\[
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
 &= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx \right] \quad\text{integrating by parts}\\
 &= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
-,\end{align*}
+,\]
 
 - Thus it suffices to show that
-\begin{align*}
+\[
 \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx = 0
-.\end{align*}
+.\]
 
 - Integrating by parts a second time yields
-\begin{align*}
+\[
 \lim_{k\to\infty} 
 \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
 &= \lim_{k\to\infty} 
@@ -206,7 +207,7 @@ Concepts used:
 &= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
 &= - \int_0^1 0 \qty{ \dd{^2}{x^2}p(x)} \, dx \\
 &= 0
-.\end{align*}
+.\]
 
   - The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact, so $f''$ is bounded on $[0, 1]$ by a constant $M$ and 
   $$\int_0^1 \abs{x^k f''(x)} \leq \int_0^1 1\cdot M = M < \infty.$$
@@ -215,27 +216,23 @@ Concepts used:
   - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
 
 - Thus 
-\begin{align*}
+\[
 \abs{ \int_0^1 kx^{k-1} p_\eps(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
 &= \abs{ \int_0^1 kx^{k-1} \qty{p_\eps(x) - f(x)} \,dx  } \\
 &\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
 &= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
-\end{align*}
+\]
 
   and the integrals are equal. 
 
 - By the first argument, $$\int_0^1 kx^{k-1} p_\eps(x) \,dx = p_\eps(1) \text{ for each } \eps$$ 
 - Since uniform convergence implies pointwise convergence, $p_\eps(1) \converges{\eps\to 0}\to f(1)$.
 
-
-
 :::
 
-
-
-## Fall 2019 # 1. 
+## Fall 2019 # 1 $\done$
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
 ### a
@@ -251,10 +248,12 @@ Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then
 \]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Cesaro mean/summation. 
 - Break series apart into pieces that can be handled separately.
+:::
 
 ### a
 
@@ -274,7 +273,7 @@ k\geq M+1 \implies \abs{a_k - S} < \varepsilon
 
 
 Then
-\begin{align*}
+\[
 \left|\left(\frac{1}{N} \sum_{k=1}^{N} a_{k}\right)-S\right| 
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - NS  } \\
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - \sum_{k=1}^N S  } \\
@@ -285,7 +284,7 @@ Then
 &= {1\over N} \sum_{k=1}^M \abs{a_k - S} + (N - M){\eps \over 2} \\
 &\converges{\eps\to 0}\to {1\over N} \sum_{k=1}^M \abs{a_k - S} + 0 \\
 &\converges{N\to \infty}\to 0 + 0
-.\end{align*}
+.\]
   
 > Note: $M$ is fixed, so the last sum is some constant $c$, and $c/N \to 0$ as $N\to\infty$ for any constant.
 > To be more careful, choose $M$ first to get $\eps/2$ for the tail, then choose $N(M)>M$ for the remaining truncated part of the sum. 
@@ -293,20 +292,20 @@ Then
 ### b
 
 - Define
-\begin{align*}
+\[
 \Gamma_n \definedas \sum_{k=n}^\infty \frac{a_k}{k}
-.\end{align*}
+.\]
 
 - $\Gamma_1 = \sum_{k=1}^n \frac{ a_k } k$ is the original series and each $\Gamma_n$ is a tail of $\Gamma_1$, so by assumption $\Gamma_n \converges{n\to\infty}\to 0$.
 
 - Compute
-\begin{align*}
+\[
 \frac 1 n \sum_{k=1}^n a_k 
 &= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
-.\end{align*}
+.\]
 
 - This comes from consider the following summation:
-\begin{tikzcd}
+\begin{tikzcd}[row sep=small, column sep=small]
 \Gamma_1:&\arrow[dash, ddddd]   & a_1 & + \frac{a_2}{2} & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
 \Gamma_2:                                                       &               &     & \frac{a_2}{2}   & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
 \Gamma_3:                                                       &               &     &                 & \frac{a_3}{3}   & + \cdots &     &                                    &          &  &  &  \\
@@ -318,18 +317,15 @@ Then
 - Use part (a): since $\Gamma_n \converges{n\to\infty}\to 0$, we have ${1\over n} \sum_{k=1}^n \Gamma_k \converges{n\to\infty}\to 0$.
 - Also a minor check: $\Gamma_n \to 0 \implies {1\over n}\Gamma_n \to 0$.
 - Then
-\begin{align*}
+\[
 \frac 1 n \sum_{k=1}^n a_k 
 &= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
 &= \qty{ {1\over n } \sum_{k=0}^n \Gamma_k } - \qty{{1\over n}\Gamma_{n+1} } \\
 &\converges{n\to\infty}\to 0
-.\end{align*}
-
+.\]
 :::
 
-
-
-## Fall 2018 # 4
+## Fall 2018 # 4 $\done$
 Let $f\in L^1([0, 1])$.
 Prove that
 $$
@@ -337,13 +333,14 @@ $$
 $$
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - ?
-
-
-**Solution**:
+:::
 
 Case of characteristic function
 
@@ -351,17 +348,17 @@ Case of characteristic function
 - Note that $\sin(nx)$ has a period of $2\pi/n$, and thus $\floor{n\over 2\pi}$ full periods in $[0, 1]$.
 - Taking the absolute value yields a new function with half the period, so a period of $\pi/n$ and $\floor{\pi / n}$ full periods in $[0, 1]$.
 - We can compute the integral over one full period (which is independent of *which* period is chosen), and since $\sin(x)$ is positive and agrees with $\abs{\sin(nx)}$ on the first period, we have
-\begin{align*}
+\[
 \int_{\text{One Period}} \abs{\sin(nx)} \, dx 
 &= \int_0^{\pi/n} \sin(nx)\,dx \\
 &= {1\over n} \int_0^\pi \sin(u) \,du \quad u = nx \\
 &= {1\over n} -\cos(u)\mid_0^\pi \\
 &= {2 \over n}
-.\end{align*}
+.\]
 
 
 - Then break the integral up into integrals over periods $P_1, P_2, \cdots, P_N$ where $N \definedas \floor{n/\pi}$:
-\begin{align*}
+\[
 \int_0^1 \abs{\sin(nx)} \, dx 
 &= \qty{ \sum_{j=1}^{N} \int_{P_j} \abs{\sin(nx)} \, dx } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &= \qty{ \sum_{j=1}^{N} {2\over n} } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
@@ -369,7 +366,7 @@ Case of characteristic function
 &\definedas \floor{n \over \pi} {2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &= {2\over \pi} + \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &\definedas {2\over \pi} + R(n) 
-\end{align*}
+\]
   so it suffices to show that $R(n) \converges{n\to\infty}\to 0$. 
   \todo[inline]{Need to justify removing floor function and cancellation.}
 
@@ -380,9 +377,7 @@ General case
 \todo[inline]{Not sure. Approximate $f$ by simple functions...?}
 :::
 
-
-
-## Fall 2017 # 4
+## Fall 2017 # 4 $\done$
 Let
 \[
 f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
@@ -397,30 +392,36 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
 \]
 
-:::{.solution}
-Concepts used:
+\todo[inline]{Add concepts.}
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - ?
+:::
+
 
 ### a
 
 Let $G(x) = \sum_{n=1}^\infty nx(1-x)^n$. 
 Applying the ratio test, we have
-\begin{align*}
+\[
 \abs{\frac{(n+1)x(1-x)^{n+1}}{nx(1-x)^n}} = \frac{n+1}{n} \abs{1-x} \converges{n\to\infty}\to \abs{1-x} < 1 \iff 0 \leq x \leq 2
-,\end{align*}
+,\]
 
 and in particular, this series converges on $[0, 2]$. 
 Thus its terms go to zero, and $nx(1-x)^n \to 0$ on $[0, 1] \subset [0, 2]$.
 
 To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsilon > \frac 1 e$, then
-\begin{align*}
+\[
 \sup_{x\in [0, 1]}\abs{nx(1-x)^n - 0} 
 \geq \abs{nx_n (1-x_n)^n} 
 = \abs{\left( 1 - \frac 1 n\right)^n} 
 \converges{n\to\infty}\to e\inv
 > \varepsilon
-.\end{align*}
+.\]
 
 
 ### b
@@ -429,21 +430,17 @@ To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsil
 
 Noting that $\sin(x) \leq 1$, we have
 We have
-\begin{align*}
+\[
 \abs{\int_0^1  n(1-x)^{n} \sin(x)} 
 &\leq \int_0^1  \abs{n(1-x)^n \sin(x)} \\
 &\leq \int_0^1  \abs{n (1-x)^n}  \\
 &= n\int_0^1 (1-x)^n \\
 &= -\frac{n(1-x)^{n+1}}{n+1} \\
 &\converges{n\to\infty}\longrightarrow 0
-.\end{align*}
-
-
+.\]
 :::
 
-
-
-## Spring 2017 # 3
+## Spring 2017 # 3 $\done$
 
 Let
 \[
@@ -463,32 +460,33 @@ b.
 \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
 \]
 \todo[inline]{Not complete.}
-:::{.solution}
-Concepts used:
+\todo[inline]{Add concepts.}
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - ?
+:::
 
 ### a
 
 Letting $x_n \definedas \frac 1 n$, we have
 
-\begin{align*}
+\[
 \sum_{k=1}^\infty \abs{f_k(x)} \geq \abs{f_n(x_n)} 
 =\abs{ae^{-ax} - be^{-bx}} \definedas M
-.\end{align*}
+.\]
 
 In particular, $\sup_{x} \abs{f_n(x)} \not\to 0$, so the terms do not go to zero and the sum can not converge.
 
 ### b
 
 ?
-
-
 :::
 
-
-
-## Fall 2016 # 1
+## Fall 2016 # 1 $\done$
 
 Define
 \[
@@ -505,12 +503,14 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \left(\frac{1}{n^{x}}\right)' = -\frac{1}{n^{x}} \ln n
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ? 
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Set $f_N(x) \definedas \sum_{n=1}^N n^{-x}$, so $f(x) = \lim_{N\to\infty} f_N(x)$.
 - If an interchange of limits is justified, we have
@@ -553,22 +553,23 @@ Concepts used:
 \todo[inline]{?}
 :::
 
-
-
-## Fall 2016 # 5
+## Fall 2016 # 5 $\done$
 
 Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies the equality
 \[
 \lim _{n \to \infty} \left(\int _{\mathbb{R}} \frac{|\phi(x)|^{n}}{1+x^{2}} \, dx \right) ^ {\frac{1}{n}} 
 = \norm{\phi}_\infty.
 \]
-\todo[inline]{Review and clean up.}
+\todo[inline]{Walk through.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
-- ??
-
-**Solution**:
 
 Let $L$ be the LHS and $R$ be the RHS.
 
@@ -610,28 +611,22 @@ S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\in
 &\converges{\eps\to 0}\to \norm{\phi}_\infty
 ,\]
   where we've again used the fact that $c^{1\over n} \to 1$ for any constant.
-
-
-
-
 :::
 
-
-
-## Fall 2016 # 6
+## Fall 2016 # 6 $\done$
 
 Let $f, g \in L^2(\RR)$. Show that
 \[
 \lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
 \]
+\todo[inline]{Add concepts.}
 
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
@@ -647,14 +642,10 @@ Concepts used:
 &\leq \int_\RR \abs{f(x) g(x+n)}\,dx \\
 &\leq \int_\RR
 .\]
-
-
-
 :::
 
+## Spring 2016 # 1  $\work$
 
-
-## Spring 2016 # 1
 For $n\in \NN$, define
 \[]
 e_{n} = \left (1+ {1\over n} \right)^{n} 
@@ -674,21 +665,20 @@ Use this to show the following:
 3. $2 < e_n < E_n < 4$.
 4. $\lim _{n \to \infty} e_{n} = \lim _{n \to \infty} E_{n}$.
 
-## Fall 2015 # 1
+## Fall 2015 # 1  $\work$
+
 Define
-$$
+\[
 f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { even and } c_{n}>0.
-$$
+\]
 
 Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
 
-
-
 # Measure Theory: Sets
 
-## Spring 2020 # 2
+## Spring 2020 # 2 $\done$
 
-Let $m_*$ denote the Lebesgue outer measure on $\RR$.
+Let $m_*$ denote the Lebesgue outer measure on \( \RR \).
 
 ### a. 
 Prove that for every $E\subseteq \RR$ there exists a Borel set $B$ containing $E$ such that
@@ -706,11 +696,18 @@ for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ s
 Be sure to address the case when $m_*(E) = \infty$.
 
 :::{.solution}
-Concepts used:
-
-- Definition of outer measure: $m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}$ where $\theset{Q_j}$ is a countable collection of closed cubes.
+\hfill
+:::{.concept}
+\hfill
+- Definition of outer measure: 
+  \[ 
+  m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}
+  \] 
+  where $\theset{Q_j}$ is a countable collection of closed cubes.
 - Break $\RR$ into $\disjoint_{n\in \ZZ} [n, n+1)$, each with finite measure.
 - Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
+:::
+
 
 :::{.proof}
 \hfill
@@ -724,15 +721,13 @@ Concepts used:
 - Then $\theset{S_i} \covers Q$, so by compactness of $Q$ pick a finite subcover with $N$ elements.
 
 - Note 
-\begin{align*}
+\[
 Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
-.\end{align*}
+.\]
 - Taking an infimum over coverings on the RHS preserves the inequality, so 
   $$\abs{Q} \leq (1+\eps) m_*(Q)$$
 - Take $\eps\to 0$ to obtain final inequality.
 :::
-
-**Solution**:
 
 ### a
 
@@ -747,19 +742,19 @@ $$
 - For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
 
 - The outer measure of cubes is *equal* to the sum of their volumes, so 
-\begin{align*}
+\[
 m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
-.\end{align*}
+.\]
 
 - Now set $B \definedas \intersect_{n=1}^\infty B_n$.
 
   - Since $E\subseteq B_n$ for every $n$, $E\subseteq B$
   - Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
   - Since $B_n \subseteq B$ for every $n$, we can apply subadditivity to obtain the inequality
-  \begin{align*}
+  \[
   E \subseteq B \subseteq B_n \implies
   N \leq m_*(B) \leq m_*(B_n) < N + {1\over n} \qtext{for all} n\in \ZZ^{\geq 1}
-  .\end{align*}
+  .\]
 
 - This forces $m_*(E) = m_*(B)$.
 
@@ -771,12 +766,12 @@ Suppose $m_*(E) < \infty$.
 - By (a), find a Borel set $B\supseteq E$ such that $m_*(B) = m_*(E)$
 - Note that $E\subseteq B \implies B\intersect E = E$ and $B\intersect E^c = B\setminus E$.
 - By assumption, 
-\begin{align*}
+\[
 m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
 m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
 m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \\ 
 \implies m_*(B\setminus E) &= 0
-.\end{align*}
+.\]
 - So take $N = B\setminus E$; this shows $m_*(N) = 0$ and $E = B\setminus (B\setminus E) = B\setminus N$.
 
 
@@ -791,18 +786,13 @@ If $m_*(E) = \infty$:
   - $N' \definedas \union_R N_R$ is a union of null sets and thus still null
 - Since $E_R \subset B_R$ for every $R$, we have $E\subset B$
 - We can compute
-\begin{align*}
+\[
 N = B\setminus E = \qty{ \union_R B_R } \setminus \qty{\union_R E_R } \subseteq \union_R \qty{B_R\setminus E_R} = \union_R N_R \definedas N'
-\end{align*}
+\]
 where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 0$.
-
-
 :::
 
-
-
-
-## Fall 2019 # 3. 
+## Fall 2019 # 3. $\done$
 Let $(X, \mathcal B, µ)$ be a measure space with $µ(X) = 1$ and $\{B_n\}_{n=1}^\infty$ be a sequence of $\mathcal B$-measurable subsets of $X$, and
 $$
 B \definedas \theset{x\in X \suchthat x\in B_n \text{ for infinitely many } n}.
@@ -821,26 +811,27 @@ for all positive integers $k$ and $K$ with $k < K$, then $µ(B) = 1$.
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Borel-Cantelli: for a sequence of sets $X_n$, 
-\begin{align*}
+\[
 \limsup_n X_n &= \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
 &= \intersect_{m\in \NN} \union_{n\geq m} X_n
 \\
 \liminf_n X_n &= \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
 &= \union_{m\in \NN} \intersect_{n\geq m} X_n
-.\end{align*}
+.\]
 
 - Properties of logs and exponentials:
-\begin{align*}
+\[
 \prod_n e^{x_n} = e^{\Sigma_n x_n} \quad\text{and} \quad \sum_n \log(x_n) = \log\left(\prod_n x_n\right)
-.\end{align*}
+.\]
 
 - Tails of convergent sums vanish.
 -  Continuity of measure: $B_n \searrow B$ and $\mu(B_0)<\infty$ implies $\lim_n \mu(B_n) = \mu(B)$, and $B_n\nearrow B \implies \lim_n \mu(B_n) = \mu(B)$.
 
-**Solution**:
+:::
 
 ### a
 
@@ -852,12 +843,12 @@ Concepts used:
 - Tails of convergent sums go to zero, so $\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0$, 
 - $B_M \definedas \intersect_{m = 1}^M \union_{n\geq m} B_n \searrow B$.
 
-\begin{align*}
+\[
 \mu(B_M) 
 &= \mu\left(\intersect_{m\in \NN} \union_{n\geq m} B_n\right) \\
 &\leq \mu\left( \union_{n\geq m} B_n \right) \quad \text{for all } m\in \NN \text{ by countable subadditivity} \\ 
 &\to 0
-,\end{align*}
+,\]
 
 - The result follows by continuity of measure.
 
@@ -866,7 +857,7 @@ Concepts used:
 - To show $\mu(B) = 1$, we'll show $\mu(B^c) = 0$.
 
 - Let $B_k = \intersect_{m=1}^\infty \union_{n = m}^K B_n$. Then
-\begin{align*}
+\[
 \mu(B_K^c) 
 &= \mu \left(\union_{m=1}^\infty \intersect_{n=m}^K B_n^c\right) \\
 &\leq \sum_{m=1}^\infty \mu\left( \intersect_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
@@ -874,17 +865,15 @@ Concepts used:
 &\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
 &= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
 &\converges{K\to\infty}\to 0
-\end{align*}
+\]
   since $\displaystyle\sum_{n=m}^K \mu(B_n^c) \converges{K\to\infty}\to \infty$ by assumption 
 
 - We can apply continuity of measure since $B_K^c \mapsvia{K\to\infty} B^c$.
 
-> Proving the hint: ?
-
-
+\todo[inline]{How to prove the hint..?}
 :::
 
-## Spring 2019 # 2
+## Spring 2019 # 2 $\done$
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
   
 ### a 
@@ -898,13 +887,14 @@ Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with
 
 Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 ### a
 
@@ -918,7 +908,7 @@ Concepts used:
 - Note $X = X\setminus Y ~\disjoint~ X\intersect Y$ for any two sets (just write $X\setminus Y \definedas X\intersect  Y^c$)
 - Note that $A$ contains anything that was removed from $F_0$ when passing from any $F_j$ to $F_{j+1}$, while $F$ contains everything that is never removed at any stage, and these are disjoint possibilities.
 - Thus $F_0 = F \disjoint A$, so 
-\begin{align*}
+\[
 \mu(F_0) 
 &= \mu(F) + \mu(A) \\
 &= \mu(F) + \mu(\disjoint_{k=1}^\infty A_k) \\
@@ -926,29 +916,29 @@ Concepts used:
 &= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
 &= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
 &=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
-,\end{align*}
+,\]
 
 - Since $\mu$ is a finite measure, $\mu(F_1) < \infty$ and can be subtracted, yielding
-\begin{align*}
+\[
 \mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
 \implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
 \implies \mu\qty{\intersect_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
-.\end{align*}
+.\]
 
 ### b
 
 - Toward a contradiction, negate the implication: suppose there exists an $\eps>0$ such that for all $\delta$, we have $m(E) < \delta$ but $\mu(E) > \eps$.
 - The sequence $\theset{\delta_n \definedas {1\over 2^n}}_{n\in \NN}$ and produce sets $A_n\in \mcb$ such $m(A_n) < {1\over 2^n}$ but $\mu(A_n) > \varepsilon$.
 - Define
-\begin{align*}
+\[
 F_n &\definedas \union_{j\geq n} A_j \\
 C_m &\definedas \intersect_{k=1}^m F_k \\
 A &\definedas C_\infty \definedas \intersect_{k=1}^\infty F_k 
-.\end{align*}
+.\]
 
 - Note that $F_1 \supseteq F_2 \supseteq \cdots$, since each increase in index unions fewer sets.
 - By continuity for the Lebesgue measure, 
-\begin{align*}
+\[
 m(A) 
 = m \qty{\intersect_{k=1}^\infty F_k }
 = \lim_{k\to \infty} m (F_k) 
@@ -956,30 +946,29 @@ m(A)
 \leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
 = \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
 = 0
-,\end{align*}
+,\]
   which follows because this is the tail of a convergent sum
 
 - Thus $m(A) = 0$ and by assumption, this implies $\mu(A) = 0$.
 
 - However, by part (a),
-\begin{align*}
+\[
 \mu(A) = \lim_n \mu\left( \union_{k=n}^\infty A_k \right)
 \geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
-.\end{align*}
-
+.\]
 :::
 \todo[inline]{All messed up!}
 
-
-
-## Fall 2018 # 2
+## Fall 2018 # 2 $\done$
 Let $E\subset \RR$ be a Lebesgue measurable set.
 Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
 \todo[inline]{Move this to review notes to clean things up.}
-:::{.solution}
-Concepts used:
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - Definition of measurability: there exists an open $O\supset E$ such that $m_*(O\setminus E) < \eps$ for all $\eps> 0$.
 - Theorem: $E$ is Lebesgue measurable iff there exists a closed set $F\subseteq E$ such that $m_*(E\setminus F) < \eps$ for all $\eps>0$.
 - Every $F_\sigma, G_\delta$ is Borel.
@@ -992,17 +981,17 @@ Concepts used:
   - Set $O_N \definedas \intersect_{n=1}^N G_n$ and $O\definedas \intersect_{n=1}^\infty G_n$.
   - Suppose $E$ is bounded.
     - Note $O_N \searrow O$ and $m_*(O_1) < \infty$ if $E$ is bounded, since in this case
-    \begin{align*}
+    \[
     m_*(G_n\setminus E) = m_*(G_1) - m_*(E) < 1 \iff m_*(G_1) < m_*(E) + {1\over n} < \infty
-    .\end{align*}
+    .\]
     - Note $O_N \setminus E \searrow O \setminus E$ since $O_N\setminus E \definedas O_N \intersect E^c \supseteq O_{N+1} \intersect E^c$ for all $N$, and again $m_*(O_1 \setminus E) < \infty$.
     - So it's valid to apply continuity of measure from above:
-\begin{align*}
+\[
 m_*(O\setminus E) 
 &= \lim_{N\to\infty} m_*(O_N\setminus E) \\ 
 &\leq \lim_{N\to \infty} m_*(G_N\setminus E) \\ 
 &= \lim_{N\to\infty} {1\over N} = 0
-,\end{align*}
+,\]
       where the inequality uses subadditivity on $\intersect_{n=1}^N G_n \subseteq G_N$
   - Suppose $E$ is unbounded.
     - Write $E^k = E \intersect [k, k+1]^d \subset \RR^d$ as the intersection of $E$ with an annulus, and note that $E = \disjoint_{k\in \NN} E_k$.
@@ -1010,13 +999,13 @@ m_*(O\setminus E)
     - So write $O_k = E_k \disjoint N_k$ where $N_k \definedas O_k \setminus E_k$ is a null set.
     - Define $O = \union_{k\in \NN} O_k$, note that $E\subseteq O$.
     - Now note
-\begin{align*}
+\[
 O\setminus E 
 &= \qty{\disjoint_k O_k}\setminus \qty{\disjoint_K E_k} \\
 &\subseteq \disjoint_k \qty{O_k \setminus E_k} \\
 \implies m_*(O\setminus E) 
 &\leq m_*\qty{\disjoint \qty{O_k \setminus E_k} } = 0
-,\end{align*}
+,\]
   since any countable union of null sets is again null.
   - So $O\supseteq E$ with $m(O\setminus E) = 0$.
 - Theorem: since $E$ is measurable, $E^c$ is measurable
@@ -1025,13 +1014,13 @@ O\setminus E
   - Since $E$ is measurable, for every $\eps > 0$ there exists an open $\OO_\eps \supseteq E$ such that $m_*(\OO_\eps \setminus E) < \eps$.
   - Take the sequence $\theset{\eps_n \definedas {1\over n}}$ to produce a sequence of sets $\OO_n$.
   - Note that each $\OO_n^c$ is closed and 
-  \begin{align*}
+  \[
   \OO_n \supseteq E \iff \OO_n^c \subseteq E^c
-  .\end{align*}
+  .\]
   - Set $S \definedas \union_n \OO_n^c$, which is a union of closed sets, thus an $F_\sigma$ set, thus Borel, thus measurable.
   - Note that $S\subseteq E^c$ since each $\OO_n \subseteq E^c$.
   - Note that
-  \begin{align*}
+  \[
   E^c\setminus S 
   &\definedas E^c \setminus \qty{\union_{n=1}^\infty \OO_n^c} \\
 &\definedas E^c \intersect \qty{\union_{n=1}^\infty \OO_n^c}^c  \quad\text{definition of set minus} \\ 
@@ -1039,14 +1028,13 @@ O\setminus E
   &= E^c \union \qty{\intersect_{n=1}^\infty \OO_n}  \\
   &\definedas \qty{ \intersect_{n=1}^\infty \OO_n} \setminus E \\
   & \subseteq \OO_N \setminus E \quad \text{for every } N\in \NN
-  .\end{align*}
+  .\]
   - Then by subadditivity,
     $$
     m_*(E^c\setminus S) \leq m_*(\OO_N \setminus E) \leq {1\over N} \quad \forall N \implies m_*(E^c\setminus S) = 0
     .$$
   - Thus $E^c\setminus S$ is measurable.
-
-**Solution**
+:::
   
 ### Indirect Proof
 
@@ -1054,20 +1042,18 @@ O\setminus E
 - Since $E^c$ is measurable exists an open $O\supseteq E^c$ such that $m(O\setminus E^c) = 0$.
 - Set $B \definedas O^c$, then $O\supseteq E^c \iff \OO^c \subseteq E \iff B\subseteq E$.
 - Computing measures yields 
-\begin{align*}
+\[
 E\setminus B \definedas E\setminus  \OO^c \definedas E\intersect (\OO^c)^c = E\intersect \OO = \OO \intersect(E^c)^c \definedas \OO \setminus E^c
-,\end{align*}
+,\]
   thus $m(E\setminus B) = m(\OO\setminus E^c) = 0$.
 - Since $\OO$ is open, $B$ is closed and thus Borel.
 
-
 ### Direct Proof (Todo)
 
-? \todo[inline]{Try to construct the set.}
+\todo[inline]{Try to construct the set.}
 :::
 
-
-## Spring 2018 # 1
+## Spring 2018 # 1 $\done$
 Define
 $$
 E:=\left\{x \in \mathbb{R}:\left|x-\frac{p}{q}\right|<q^{-3} \text { for infinitely many } p, q \in \mathbb{N}\right\}.
@@ -1076,49 +1062,49 @@ $$
 Prove that $m(E) = 0$.
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Borel-Cantelli: If $\theset{E_k}_{k\in\ZZ}\subset 2^\RR$ is a countable collection of Lebesgue measurable sets with $\sum_{k\in \ZZ} m(E_k) < \infty$, then almost every $x\in \RR$ is in *at most finitely* many $E_k$.
   - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \intersect_{k=1}^\infty \union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
-
-**Solution**:
+:::
 
 - Strategy: Borel-Cantelli.
 
 - We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
-\begin{align*}
+\[
 m(E) = m \qty{\union_{n\in \ZZ} E \intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \intersect [n, n+1]) = 0
-.\end{align*}
+.\]
 
 - By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
   - So WLOG, replace $E$ with $E\intersect [0, 1]$.
 
 - Define
-\begin{align*}
+\[
 E_j \definedas \theset{x\in [0, 1] \suchthat \
 \exists p\in \ZZ^{\geq 0} \text{ s.t. } \abs{x - \frac{p}{j} } < \frac 1 {j^3}} 
-.\end{align*}
+.\]
 
   - Note that $E_j \subseteq \disjoint_{p\in \ZZ^{\geq 0}} B_{j^{-3}}\qty{p\over j}$, i.e. a union over integers $p$ of intervals of radius $1/j^3$ around the points $p/j$.
     Since $1/j^3 < 1/j$, this union is in fact disjoint.
 
 - Importantly, note that 
-  \begin{align*}
+  \[
 \limsup_{j\to\infty} E_j \definedas \intersect_{n=1}^\infty \union_{j=n}^\infty E_j = E
-  \end{align*}
+  \]
   
   since 
   
-  \begin{align*}
+  \[
   x \in \limsup_j E_j 
   &\iff x \in E_j \text{ for infinitely many } j  \\
   &\iff \text{ there are infinitely many $j$ for which there exist a $p$ such that } \abs{x - {p\over j}} < j^{-3}  \\
   &\iff \text{ there are infinitely many such pairs $p, j$}  \\
   &\iff x\in E
-  .\end{align*}
+  .\]
 
 - Intersecting with $[0, 1]$, we can write $E_j$ as a union of intervals:
-\begin{align*}
+\[
 E_j =& \qty{0, {j^{-3}}} 
 \quad \disjoint \quad 
 B_{j^{-3}}\qty{1\over j} \disjoint
@@ -1127,7 +1113,7 @@ B_{j^{-3}}\qty{2\over j} \disjoint
 B_{j^{-3}}\qty{j-1\over j} 
 \quad \disjoint \quad 
 (1 - {j^{-3}}, 1)
-,\end{align*}
+,\]
   where we've separated out the "boundary" terms to emphasize that they are balls about $0$ and $1$ intersected with $[0, 1]$.
 
 
@@ -1145,35 +1131,31 @@ B_{j^{-3}}\qty{j-1\over j}
   $$
 
 - Note that 
-\begin{align*}
+\[
 \sum_{j\in \NN} m(E_j) =  2\sum_{j\in \NN} \frac 1 {j^2} < \infty
-,\end{align*}
+,\]
   which converges by the $p\dash$test for sums.
   
 - But then
-\begin{align*}
+\[
 m(E) 
 &= m(\limsup_j E_j) \\
 &= m(\intersect_{n\in \NN} \union_{j\geq n} E_j) \\
 &\leq m(\union_{j\geq N} E_j) \quad\text{for every } N \\
 &\leq \sum_{j\geq N} m(E_j) \\
 &\converges{N\to\infty}\to 0 \quad\text{}
-.\end{align*}
+.\]
 
 - Thus $E$ is measurable as a subset of a null set and $m(E) = 0$.
-
-
 :::
 
-
-
-## Fall 2017 # 2
+## Fall 2017 # 2 $\done$
 Let $f(x) = x^2$ and $E \subset [0, \infty) \definedas \RR^+$.
 
 1. Show that
-$$
+\[
 m^*(E) = 0 \iff m^*(f(E)) = 0.
-$$
+\]
 
 2. Deduce that the map
 
@@ -1183,13 +1165,14 @@ E &\mapsto f(E)
 \]
   is a bijection from the class of Lebesgue measurable sets of $[0, \infty)$ to itself.
 
+\todo[inline]{Walk through.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 ### a
 
@@ -1204,9 +1187,9 @@ Let $g = f$ or $f\inv$.
 Then $g\in C^1([0, M])$ for any $M$, so $g$ is differentiable and $g'$ is continuous.
 Since $g'$ is continuous on a compact interval, it is bounded, so $\abs{g'(x)} \leq L$ for all $x$.
 Applying the MVT,
-\begin{align*}
+\[
 \abs{f(x) - f(y)} = f'(c) \abs{x-y} \leq L \abs{x-y}
-.\end{align*}
+.\]
   
 **Lemma:** 
 If $g$ is Lipschitz on $\RR^n$, then $m(E) = 0 \implies m(g(E)) = 0$.
@@ -1224,14 +1207,14 @@ m^*(B_{Lr}(x)) \leq L^n \cdot m^*(B_{r}(x))
 Now choose $\theset{Q_j} \rightrightarrows E$; then $\theset{g(Q_j)} \rightrightarrows g(E)$.
 
 By the above observation,
-\begin{align*}
+\[
 \abs{g(Q_j)} \leq L^n \abs{Q_j}
-,\end{align*}
+,\]
 
 and so 
-\begin{align*}
+\[
 m^*(g(E)) \leq \sum_j \abs{g(Q_j)} \leq \sum_j L^n \abs{Q_j} = L^n \sum_j \abs{Q_j} \to 0 
-.\end{align*}
+.\]
 
 Now just take $g(x) = x^2$ for one direction, and $g(x) = f\inv(x) = \sqrt{x}$ for the other.
 $\qed$
@@ -1248,13 +1231,9 @@ Since $\phi\inv(N)$ is null by part (a) and $\phi\inv(K)$ is the preimage of a c
 
 So $\phi$ is a measurable function, and thus yields a well-defined map $\mathcal L(\RR) \to \mathcal L(\RR)$ since it preserves measurable sets.
 Restricting to $[0, \infty)$, $f$ is bijection, and thus so is $\phi$.
-
-
 :::
 
-
-
-## Spring 2017 # 2
+## Spring 2017 # 2 $\done$
 
 ### a 
 Let $\mu$ be a measure on a measurable space $(X, \mathcal M)$ and $f$ a positive measurable function.
@@ -1277,17 +1256,16 @@ Let $E \subset \RR$ be a measurable set such that
 Show that $m(E) = 0$.
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
 - Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
 - Chebyshev's inequality:
 \[  
 A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) \leq c^{-p} \int_{A_c} \abs{f}^p \,d\mu \quad \forall 0 < p < \infty
 .\]
-
-**Solutions**
+:::
 
 ### a
 
@@ -1344,14 +1322,9 @@ x\in E \iff gf\chi_E(x) > 0 \iff x\in A
   so $E = A$ and $\mu(E) = \mu(A)$.
 
 - But $m \ll \mu$ and $\mu(E) = 0$, so we can conclude that $m(E) = 0$.
-
-
-
 :::
 
-
-
-## Fall 2016 # 4
+## Fall 2016 # 4 $\done$
 Let $(X, \mathcal M, \mu)$ be a measure space and suppose $\theset{E_n} \subset \mathcal M$ satisfies
 \[
 \lim _{n \rightarrow \infty} \mu\left(X \backslash E_{n}\right)=0.
@@ -1364,13 +1337,14 @@ G \definedas \theset{x\in X \suchthat x\in E_n \text{ for only finitely many  } 
 
 Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Claim: $G\in \mcm$.
   - Claim:
@@ -1393,14 +1367,11 @@ Concepts used:
   &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
   .\]
-  \todo[inline]{Last step seems wrong!}
 
-
+\todo[inline]{Last step seems wrong!}
 :::
 
-
-
-## Spring 2016 # 3
+## Spring 2016 # 3 $\work$
 Let $f$ be Lebesgue measurable on $\RR$ and $E \subset \RR$ be measurable such that
 $$
 0<A=\int_{E} f(x) d x<\infty.
@@ -1411,7 +1382,7 @@ $$
 \int_{E_{t}} f(x) d x=t A.
 $$
 
-## Spring 2016 # 5
+## Spring 2016 # 5 $\work$
 Let $(X, \mathcal M, \mu)$ be a measure space. For $f\in L^1(\mu)$ and $\lambda > 0$, define
 $$
 \phi(\lambda)=\mu(\{x \in X | f(x)>\lambda\}) 
@@ -1424,13 +1395,13 @@ $$
 \int_{X}|f| ~d \mu=\int_{0}^{\infty}[\phi(\lambda)+\psi(\lambda)] ~d \lambda
 $$
 
-## Fall 2015 # 2
+## Fall 2015 # 2 $\work$
 Let $f: \RR \to \RR$ be Lebesgue measurable.
 
 1. Show that there is a sequence of simple functions $s_n(x)$ such that $s_n(x) \to f(x)$ for all $x\in \RR$.
 2. Show that there is a Borel measurable function $g$ such that $g = f$ almost everywhere.
 
-## Spring 2015 # 3 
+## Spring 2015 # 3 $\work$
 
 Let $\mu$ be a finite Borel measure on $\RR$ and $E \subset \RR$ Borel. 
 Prove that the following statements are equivalent:
@@ -1444,14 +1415,14 @@ $$
 H \subseteq E \subseteq V \quad \text{and}\quad \mu(V\setminus H) = 0
 $$
 
-## Spring 2014 # 3
+## Spring 2014 # 3 $\work$
 Let $f: \RR \to \RR$ and suppose
 $$
 \forall x\in \RR,\quad f(x) \geq \limsup _{y \rightarrow x} f(y)
 $$
 Prove that $f$ is Borel measurable.
 
-## Spring 2014 # 4
+## Spring 2014 # 4 $\work$
 Let $(X, \mathcal M, \mu)$ be a measure space and suppose $f$ is a measurable function on $X$.
 Show that
 $$
@@ -1463,7 +1434,7 @@ $$
 $$
 and characterize the collection of functions of each type.
 
-## Spring 2017 # 1
+## Spring 2017 # 1 $\done$
 
 Let $K$ be the set of numbers in $[0, 1]$ whose decimal expansions do not use the digit $4$.
 
@@ -1474,13 +1445,12 @@ Show that $K$ is a compact, nowhere dense set without isolated points, and find 
 Lebesgue measure $m(K)$.
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
   - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
-
-**Solution**:
+:::
 
 Claim: **$K$ is compact**.
 
@@ -1567,21 +1537,16 @@ Claim: **$K$ has no isolated points**:
 - Then there is an endpoint $x_n$ of some deleted interval $I_n$ satisfying \[\abs{x - x_n} \leq  \left( \frac 9 {10} \right)^n < \eps.\]
 
 - So every ball containing $x$ contains some endpoint of a removed interval, and thus an element of $K$.
-
-
-
 :::
 
-
-
-## Spring 2016 # 2
+## Spring 2016 # 2 $\work$
 Let $0 < \lambda < 1$ and construct a Cantor set $C_\lambda$ by successively removing middle intervals of length $\lambda$.
 
 Prove that $m(C_\lambda) = 0$.
 
 # Measure Theory: Functions
 
-## Fall 2016 # 2
+## Fall 2016 # 2 $\done$
 
 Let $f, g: [a, b] \to \RR$ be measurable with
 $$
@@ -1596,13 +1561,14 @@ Show that either
 \int _{E} f(x) \, dx > \int _{E} g(x) \, dx
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
 - Write 
@@ -1618,13 +1584,9 @@ A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
   \[  
   f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int_{E} g(x)\, dx 
   .\] 
-
-
 :::
 
-
-
-## Spring 2016 # 4
+## Spring 2016 # 4 $\work$
 Let $E \subset \RR$ be measurable with $m(E) < \infty$. 
 Define
 \[
@@ -1638,15 +1600,14 @@ Show that
 3. $\lim _{|x| \to \infty} f(x) = 0$.
 
 > Hint: 
-$$
+\[
 \chi_{E \cap(E+x)}(y)=\chi_{E}(y) \chi_{E}(y-x)
-$$
-
+\]
 
 
 # Integrals: Convergence
 
-## Fall 2019 # 2. 
+## Fall 2019 # 2 $\done$
 
 Prove that
 \[
@@ -1658,17 +1619,17 @@ for all $x \neq 0$ and positive integers $n$.
 > Hint: Consider $\displaystyle\int_0^1 \cos(tx) dt$
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - DCT
 - Bounding in the right place. 
   Don't evaluate the actual integral!
-
-**Solution**:
+:::
 
 - By induction on the number of limits we can pass through the integral.
 - For $n=1$ we first pass one derivative into the integral: let $x_n \to x$ be any sequence converging to $x$, then
-\begin{align*}
+\[
 \dd{}{x} {\sin(x) \over x} 
 &= \dd{}{x} \int_0^1 \cos(tx)\,dt  \\
 &= \lim_{x_n\to x} {1\over x_n - x} \qty{ \int_0^1 \cos(t x_n)\,dt  - \int_0^1 \cos(tx) \,dt} \\
@@ -1677,50 +1638,50 @@ Concepts used:
 &= \lim_{\xi_n\to x} \qty{ \int_0^1 t \sin(t \xi_n)  \,dt}  \\
 &=_{\text{DCT}}  \int_0^1 \lim_{\xi_n \to x} t \sin(t \xi_n)  \,dt \\
 &= \int_0^1 t\sin(tx) \,dt \\
-.\end{align*}
+.\]
 
 - Taking absolute values we obtain an upper bound 
-\begin{align*}
+\[
 \abs{ \dd{}{x} {\sin(x) \over x} } 
 &= \abs{ \int_0^1 t\sin(tx) \,dt } \\
 &\leq \int_0^1 \abs{t\sin(tx)} \,dt \\
 &\leq \int_0^1 1 \, dt = 1
-,\end{align*}
+,\]
   since $t\in [0, 1] \implies \abs{t} < 1$, and $\abs{\sin(xt)} \leq 1$ for any $x$ and $t$.
 
 - Note that this bound also justifies the DCT, since the functions $f_n(t) = t\sin(t \xi_n )$ are uniformly dominated by $g(t) = 1$ on $L^1([0, 1])$.
 
 > Note: integrating by parts here yields the actual formula:
-\begin{align*}
+\[
 \int_0^1 t\sin(tx) \,dt 
 &=_{\text{IBP}} \qty{-t\cos(tx) \over x}\mid_{t=0}^{t=1} - \int_0^1 {\cos(tx) \over x} \,dt \\
 &= {-\cos(x) \over x} - {\sin(x) \over x^2} \\
 &= {x\cos(x) - \sin(x) \over x^2}
-.\end{align*}
+.\]
 
 - For the inductive step, we assume that we can pass $n-1$ limits through the integral and show we can pass the $n$th through as well.
-\begin{align*}
+\[
 \dd{^n}{x^n} {\sin(x) \over x} 
 &= \dd{^n}{x^n} \int_0^1 \cos(tx)\,dt  \\
 &= \dd{}{x} \int_0^1 \dd{^{n-1}}{x^{n-1}} \cos(tx)\,dt  \\
 &= \dd{}{x} \int_0^1 t^{n-1} f_{n-1}(x, t) \,dt 
-\end{align*}
+\]
   - Note that $f_n(x, t) = \pm \sin(tx)$ when $n$ is odd and $f_n(x, t) = \pm \cos(tx)$ when $n$ is even, and a constant factor of $t$ is multiplied when each derivative is taken.
 
 - We continue as in the base case:
-\begin{align*}
+\[
 \dd{}{x} \int_0^1 t^{n-1} f_{n-1}(x, t) \,dt 
 &= \lim_{x_k\to x} \int_0^1 t^{n-1} \qty{ f_{n-1}(x_n, t) - f_{n-1}(x, t) \over x_n - x} \,dt \\
 &=_{\text{IVT}} \lim_{x_k\to x} \int_0^1 t^{n-1} \dd{f_{n-1}}{x}(\xi_k, t) \,dt \quad\text{where } \xi_k\in [x_k, x],\, \xi_k \to x \\
 &=_{\text{DCT}} \int_0^1 \lim_{x_k\to x} t^{n-1} \dd{f_{n-1}}{x}(\xi_k, t) \,dt \\
 &\definedas \int_0^1 \lim_{x_k\to x} t^{n} f_n(\xi_k, t) \,dt \\
 &\definedas \int_0^1 t^{n} f_n(x, t) \,dt 
-.\end{align*}
+.\]
   - We've used the fact that $f_0(x) = \cos(tx)$ is smooth as a function of $x$, and in particular continuous 
   - The DCT is justified because the functions $h_{n, k}(x, t) = t^n f_n(\xi_k, t)$ are again uniformly (in $k$) bounded by 1 since $t\leq 1 \implies t^n \leq 1$ and each $f_n$ is a sin or cosine.
 
 - Now take absolute values
-\begin{align*}
+\[
 \abs {\dd{^n}{x^n} {\sin(x) \over x}  }
 &= \abs{ \int_0^1 -t^n f_n(x, t) ~dt } \\ 
 &\leq \int_0^1 \abs{t^n f_n(x, t)} ~dt \\
@@ -1729,15 +1690,11 @@ Concepts used:
 &\leq \int_0^1 t^n ~dt \quad\text{since $t$ is positive} \\ 
 &= \frac{1}{n+1} \\
 &< \frac{1}{n}
-.\end{align*}
+.\]
   - We've again used the fact that $f_n(x, t)$ is of the form $\pm \cos(tx)$ or $\pm \sin(tx)$, both of which are bounded by 1.
-
-
 :::
 
-
-
-## Spring 2020 # 5
+## Spring 2020 # 5 $\done$
 
 Compute the following limit and justify your calculations:
 \[
@@ -1745,35 +1702,37 @@ Compute the following limit and justify your calculations:
 .\]
 
 \todo[inline]{Not finished, flesh out.}
-:::{.solution}
-Concepts used:
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - DCT
 - Passing limits through products and quotients
-
-**Solution**:
+:::
 
 Note that 
-\begin{align*}
+\[
 \lim_{n} \qty{1 + {x^2 \over n}}^{-(n+1)} 
 &= {1 \over \lim_{n} \qty{1 + {x^2 \over n}}^1 \qty{1 + {x^2 \over n}}^n } \\
 &= {1 \over 1 \cdot e^{x^2}} \\
 &= e^{-x^2}
-.\end{align*}
+.\]
 
 If passing the limit through the integral is justified, we will have
-\begin{align*}
+\[
 \lim_{n\to\infty} \int_0^n \qty{ 1 + {x^2\over n}}^{-(n+1)}\, dx 
 &= \lim_{n\to\infty} \int_\RR \chi_{[0, n]} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \\
 &= \int_\RR \lim_{n\to\infty} \chi_{[0, n]} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \qtext{by the DCT} \\
 &= \int_\RR \lim_{n\to\infty} \qty{ 1 + {x^2\over n}}^{-(n+1)} \, dx  \\
 &= \int_0^\infty e^{-x^2}  \\
 &= {\sqrt \pi \over 2}
-.\end{align*}
+.\]
 
 Computing the last integral:
 
-\begin{align*}
+\[
 \qty{\int_\RR e^{-x^2}\, dx}^2
 &= \qty{\int_\RR e^{-x^2}\,dx} \qty{\int_\RR e^{-y^2}\,dx} \\
 &= \int_\RR \int_\RR e^{-(x+y)^2}\, dx \\
@@ -1781,23 +1740,19 @@ Computing the last integral:
 &= {1\over 2} \int_0^{2\pi } \int_0^\infty e^{-u}\, du \, d\theta \\
 &= {1\over 2} \int_0^{2\pi} 1 \\
 &= \pi
-,\end{align*}
+,\]
 and now use the fact that the function is even so $\int_0^\infty f = {1\over 2} \int_\RR f$.
 
 Justifying the DCT:
 
 - Apply Bernoulli's inequality: 
-\begin{align*}
+\[
 {1 + {x^2\over n}}^{n+1} \geq {1 + {x^2\over n}}\qty{1 + x^2} \geq {1 + x^2}
-,\end{align*}
+,\]
   where the last inequality follows from the fact that $1 + {x^2 \over n} \geq 1$
-
-
 :::
 
-
-
-## Spring 2019 # 3 
+## Spring 2019 # 3 $\done$
 Let $\{f_k\}$ be any sequence of functions in $L^2([0, 1])$ satisfying $\norm{f_k}_2 ≤ M$ for all $k ∈ \NN$.
   
 Prove that if $f_k → f$ almost everywhere, then $f ∈ L^2([0, 1])$ with $\norm{f}_2 ≤ M$ and
@@ -1808,28 +1763,27 @@ $$
 > Hint: Try using Fatou’s Lemma to show that $\norm{f}_2 ≤ M$ and then try applying Egorov’s Theorem.
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Definition of $L^+$: space of measurable function $X\to [0, \infty]$.
 - Fatou: For any sequence of $L^+$ functions, $\int \liminf f_n \leq \liminf \int f_n$.
 - Egorov's Theorem: If $E\subseteq \RR^n$ is measurable, $m(E) > 0$, $f_k:E\to \RR$ a sequence of measurable functions where $\lim_{n\to\infty} f_n(x)$ exists and is finite a.e., then $f_n\to f$ *almost uniformly*: for every $\eps>0$ there exists a closed subset $F_\eps \subseteq E$ with $m(E\setminus F) < \eps$ and $f_n\to f$ uniformly on $F$.
-
-**Solution**:
+:::
 
 $L^2$ bound:
 
 - Since $f_k \to f$ almost everywhere, $\liminf_n f_n(x) = f(x)$ a.e.
 - $\norm{f_n}_2 < \infty$ implies each $f_n$ is measurable and thus $\abs{f_n}^2 \in L^+$, so we can apply Fatou:
 
-\begin{align*}
+\[
 \norm{f}_2^2
 &= \int \abs{f(x)}^2  \\
 &= \int \liminf_n \abs{f_n(x)}^2 \\
 &\underset{\text{Fatou}}\leq\liminf_n \int \abs{f_n(x)}^2 \\
 &\leq \liminf_n M \\
 &= M
-.\end{align*}
+.\]
 
 - Thus $\norm{f}_2 \leq \sqrt{M} < \infty$ implying $f\in L^2$.
 
@@ -1838,58 +1792,56 @@ Equality of Integrals:
 
 - Take the sequence $\eps_n = {1\over n}$
 - Apply Egorov's theorem: obtain a set $F_\eps$ such that $f_n \to f$ uniformly on $F_\eps$ and $m(I\setminus F_\eps) < \eps$. 
-\begin{align*}
+\[
 \lim_{n\to \infty} \abs{ \int_0^1 f_n - f }
 &\leq \lim_{n\to\infty} \int_0^1 \abs{f_n - f} \\
 &= \lim_{n\to\infty} \qty{ \int_{F_\eps} \abs{f_n - f} + \int_{I\setminus F_\eps} \abs{f_n - f} } \\
 &= \int_{F_\eps} \lim_{n\to\infty} \abs{f_n - f} + \lim_{n\to\infty} \int_{I\setminus F_\eps} \abs{f_n - f} \quad\text{by uniform convergence} \\ 
 &= 0 + \lim_{n\to\infty} \int_{I\setminus F_\eps} \abs{f_n - f}
-,\end{align*}
+,\]
 
   so it suffices to show $\int_{I\setminus F_\eps} \abs{f_n - f} \converges{n\to\infty}\to 0$.
 
 - We can obtain a bound using Holder's inequality with $p=q=2$:
-\begin{align*}
+\[
 \int_{I\setminus F_\eps} \abs{f_n - f} 
 &\leq \qty{ \int_{I\setminus F_\eps} \abs{f_n - f}^2 } \qty{ \int_{I\setminus F_\eps} \abs{1}^2  } \\
 &= \qty{ \int_{I\setminus F_\eps} \abs{f_n - f}^2 } \mu(F_\eps) \\
 &\leq \norm{f_n - f}_2 \mu(F_\eps) \\
 &\leq \qty{ \norm{f_n}_2 + \norm{f}_2 } \mu(F_\eps) \\
 &\leq 2M \cdot \mu(F_\eps)
-\end{align*}
+\]
   where $M$ is now a constant not depending on $\eps$ or $n$.
 
 - Now take a nested sequence of sets $F_{\eps}$ with $\mu(F_\eps) \to 0$ and applying continuity of measure yields the desired statement.
-
 :::
 
-
-## Fall 2018 # 6
+## Fall 2018 # 6 $\done$
 Compute the following limit and justify your calculations:
 \[
 \lim_{n \rightarrow \infty} \int_{1}^{n} \frac{d x}{\left(1+\frac{x}{n}\right)^{n} \sqrt[n]{x}}
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Note that $x^{1\over n} \converges{n\to\infty}\to 1$ for any $0 < x < \infty$.
 - Thus the integrand converges to ${1\over e^x}$, which is integrable on $(0, \infty)$ and integrates to 1.
 - Break the integrand up:
-\begin{align*}
+\[
 \int_0^\infty {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
 = \int_0^1 {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
 = \int_1^\infty {1 \over  \qty{ 1 + {x\over n} }^n x^{1\over n}} \,dx
-.\end{align*}
+.\]
 :::
 
-
-
-## Fall 2018 # 3
+## Fall 2018 # 3 $\done$
 Suppose $f(x)$ and $xf(x)$ are integrable on $\RR$.
 Define $F$ by
 \[
@@ -1900,20 +1852,21 @@ Show that
 F'(t)=-\int _{-\infty}^{\infty} x f(x) \sin (x t) dx
 .\]
 
+\todo[inline]{Walk through.}
+
 :::{.solution}
-Concepts used:
-
--  Mean Value Theorem
+\hfill
+:::{.concept}
+\hfill
+- Mean Value Theorem
 - DCT
-
-**Solution**:
-
-\begin{align*}
+:::
+\[
 \dd{}{t} F(t) 
 &= \dd{}{t} \int_\RR f(x) \cos(xt) ~dx \\
 &\overset{DCT}= \int_\RR f(x) \dd{}{t} \cos(xt) ~dx \\
 &= \int_\RR xf(x) \cos(xt)~dx
-,\end{align*}
+,\]
 so it only remains to justify the DCT.
 
 - Fix $t$, then let $t_n \to t$ be arbitrary.
@@ -1925,23 +1878,19 @@ $$
  since $\cos(tx)$ is differentiable in $t$ and this is the limit definition of differentiability.
 
 - Note that
-\begin{align*}
+\[
 \dd{}{t} \cos(tx) 
 &\definedas \lim_{t_n \to t} \frac{\cos(tx) - \cos(t_n x)}{t_n - t} \\
 &\overset{MVT} = \dd{}{t}\cos(tx)\mid_{t  = \xi_n} \hspace{6em} \text{for some } \xi_n \in [t, t_n] \text{ or } [t_n, t] \\
 &= x\sin(\xi_n x)
-\end{align*}
+\]
   where $\xi_n \converges{n\to\infty}\to t$ since wlog $t_n \leq \xi_n \leq t$ and $t_n \nearrow t$.
 
 - We then have $$\abs{h_n(x)} = \abs{f(x) x\sin(\xi_n x)} \leq \abs{xf(x)}\quad\text{since } \abs{\sin(\xi_n x)} \leq  1$$ for every $x$ and every $n$.
 - Since $xf(x) \in L^1(\RR)$ by assumption, the DCT applies. 
-
-
 :::
 
-
-
-## Spring 2018 # 5
+## Spring 2018 # 5 $\done$
 
 Suppose that
 
@@ -1952,40 +1901,40 @@ Suppose that
 Show that $\int f_{n} \rightarrow \int f$.
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - $\int \abs{f_n - f} \to \iff \int f_n = \int f$.
 - Fatou:
-\begin{align*}
+\[
 \int \liminf f_n \leq \liminf \int f_n \\
 \int \limsup f_n \geq \limsup \int f_n
-.\end{align*}
-
-**Solution**:
+.\]
+:::
 
 - Since $\int \abs{f_n} \converges{n\to\infty}\to \int \abs{f}$, define
-\begin{align*}
+\[
 h_n &= \abs{f_n - f} &\converges{n\to\infty}\to 0 ~a.e.\\
 g_n &= \abs{f_n} + \abs{f} &\converges{n\to\infty}\to 2\abs {f} ~a.e.
-\end{align*}
+\]
 
   - Note that $g_n - h_n \converges{n\to\infty}\to 2\abs{f} - 0 = 2\abs{f}$.
 
 - Then
-\begin{align*}
+\[
 \int 2 \abs {f} 
 &= \int \liminf_n (g_n - h_n) \\
 &= \int \liminf_n(g_n) + \int \liminf_n(-h_n) \\
 &= \int \liminf_n(g_n) - \int \limsup_n(h_n) \\
 &= \int 2 \abs{f} - \int \limsup_n(h_n) \\
 &\leq \int 2\abs{f} - \limsup_n \int h_n \quad\text{by Fatou}
-,\end{align*}
+,\]
 
 - Since $f\in L^1$, $\int 2\abs{f}  = 2\norm{f}_1 < \infty$ and it makes sense to subtract it from both sides, thus
-\begin{align*}
+\[
 0 &\leq - \limsup_n \int h_n \\
 &\definedas - \limsup_n \int \abs{f_n - f}
-.\end{align*}
+.\]
   which forces $\limsup_n \int \abs{f_n -f}  = 0$, since
     
     - The integral of a nonnegative function is nonnegative, so $\int \abs{f_n - f} \geq 0$.
@@ -1994,23 +1943,19 @@ g_n &= \abs{f_n} + \abs{f} &\converges{n\to\infty}\to 2\abs {f} ~a.e.
 - Since $\liminf_n \int h_n \leq \limsup_n \int h_n = 0$, $\lim_n \int h_n$ exists and is equal to zero.
 
 - But then 
-\begin{align*}
+\[
 \abs{\int f_n - \int f}
 &= \abs{\int f_n -f}
 \leq \int \abs{f_n - f}
-,\end{align*}
+,\]
   and taking $\lim_{n\to\infty}$ on both sides yields
-  \begin{align*}
+  \[
   \lim_{n\to\infty} \abs{\int f_n - \int f} \leq \lim_{n\to\infty} \int \abs{f_n - f} = 0
-  ,\end{align*}
+  ,\]
   so $\lim_{n\to\infty} \int f_n = \int f$.
-
-
 :::
 
-
-
-## Spring 2018 # 2
+## Spring 2018 # 2 $\done$
 Let
 \[
 f_{n}(x):=\frac{x}{1+x^{n}}, \quad x \geq 0.
@@ -2023,12 +1968,15 @@ b. Compute
 \lim _{n \rightarrow \infty} \int_{0}^{\infty} f_{n}(x) d x
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
-- ??
-
-**Solution**:
 
 ### a
 
@@ -2037,12 +1985,12 @@ Claim: $f_n$ does not converge uniformly to its limit.
 - Note each $f_n(x)$ is clearly continuous on $(0, \infty)$, since it is a quotient of continuous functions where the denominator is never zero.
 
 - Note 
-\begin{align*}
+\[
 x < 1 \implies x^n \converges{n\to\infty}\to 0\qtext{and} x>1 \implies x^n \converges{n\to\infty}\to \infty
-.\end{align*}
+.\]
 
 - Thus
-\begin{align*}
+\[
 f_n(x) = \frac{x}{1+ x^n}\converges{n\to\infty}\longrightarrow
 f(x) \definedas
 \begin{cases}
@@ -2050,7 +1998,7 @@ x, & 0 \leq x < 1 \\
 \frac 1 2, & x = 1 \\
 0, & x > 1 \\
 \end{cases}
-.\end{align*}
+.\]
 
 - If $f_n \to f$ uniformly on $[0, \infty)$, it would converge uniformly on every subset and thus uniformly on $(0, \infty)$.
   - Then $f$ would be a uniform limit of continuous functions on $(0, \infty)$ and thus continuous on $(0, \infty)$.
@@ -2059,45 +2007,41 @@ x, & 0 \leq x < 1 \\
 ### b
 
 - If the DCT applies, interchange the limit and integral:
-    \begin{align*}
+    \[
     \lim_{n\to\infty }\int_0^\infty f_n(x)\, dx 
 &= \int_0^\infty \lim_{n\to\infty}f_n(x) \, dx \quad\text{DCT}\\
     &=\int_0^\infty f(x) \,dx \\
     &= \int_0^1 x \,dx + \int_1^\infty 0\, dx \\
     &= {1\over 2}x^2 \evalfrom_0^1 \\
     &= {1\over 2}
-    .\end{align*}
+    .\]
 
 - To justify the DCT, write 
-\begin{align*}
+\[
 \int_0^\infty f_n(x)
 = \int_0^1 f_n(x) + \int_1^\infty f_n(x)
-.\end{align*}
+.\]
 
 - $f_n$ restricted to $(0, 1)$ is uniformly bounded by $g_0(x) = 1$ in the first integral, since
-  \begin{align*}
+  \[
   x \in [0, 1] \implies \frac{x}{1+x^n} < \frac{1}{1+x^n} < 1 \definedas g(x)
-  \end{align*}
+  \]
   so 
-  \begin{align*}
+  \[
   \int_0^1 f_n(x)\,dx \leq \int_0^1 1 \,dx = 1 < \infty
-  .\end{align*}
+  .\]
   Also note that $g_0\cdot \chi_{(0, 1)} \in L^1((0, \infty))$.
 
 - The $f_n$ restricted to $(1, \infty)$ are uniformly bounded by $g_1(x) = {1\over x^{2}}$ on $[1, \infty)$, since
-  \begin{align*}
+  \[
   x \in (1, \infty) \implies \frac{x}{1+x^n} \leq {x \over x^n} = {1 \over x^{n-1}} \leq {1\over x^2}\in L^1([1, \infty) \text{ when } n\geq 3
-  ,\end{align*}
+  ,\]
   by the $p\dash$test for integrals.
 
 - So set $$g \definedas g_0 \cdot \chi_{(0, 1)} + g_1 \cdot \chi_{[1, \infty)},$$ then by the above arguments $g \in L^1((0, \infty))$ and $f_n \leq g$ everywhere, so the DCT applies.
-
-
 :::
 
-
-
-## Fall 2016 # 3
+## Fall 2016 # 3 $\done$
 
 Let $f\in L^1(\RR)$.
 Show that
@@ -2105,14 +2049,14 @@ Show that
 \lim _{x \to 0} \int _{\RR} \abs{f(y-x)-f(y)} \, dy = 0
 \]
 \todo[inline]{Missing some stuff.}
+
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - $C_c^\infty \injects L^p$ is dense.
 - If $f$...?
-
-**Solution**:
+:::
 
 - Fixing notation, set $\tau_x f(y) \definedas f(y-x)$; we then want to show
 \[  
@@ -2155,35 +2099,28 @@ Concepts used:
   &= \int_E 0 \,dy \\
   &= 0
   .\]
-
 :::
 
-
-
-## Fall 2015 # 3
+## Fall 2015 # 3 $\work$
 Compute the following limit:
 \[
 \lim _{n \rightarrow \infty} \int_{1}^{n} \frac{n e^{-x}}{1+n x^{2}} \, \sin \left(\frac x n\right) \, dx
 \]
 
-## Fall 2015 # 4
+## Fall 2015 # 4 $\work$
 Let $f: [1, \infty) \to \RR$ such that $f(1) = 1$ and
-$$
+\[
 f^{\prime}(x)= \frac{1} {x^{2}+f(x)^{2}}
-$$
+\]
 
 Show that the following limit exists and satisfies the equality
-$$
+\[
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
-$$
-
-
-
-
+\]
 
 # Integrals: Approximation
 
-## Spring 2018 # 3
+## Spring 2018 # 3 $\done$
 Let $f$ be a non-negative measurable function on $[0, 1]$. 
 
 Show that
@@ -2192,17 +2129,16 @@ Show that
 \]
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - $\norm{f}_\infty \definedas \inf_t {\theset{ t\suchthat m\qty{\theset{x\in \RR^n \suchthat f(x) > t}} = 0 } }$, i.e. this is the lowest upper bound that holds almost everywhere.
-
-**Solution**:
+:::
 
 - $\norm{f}_p \leq \norm{f}_\infty$:
   - Note $\abs{f(x)} \leq \norm{f}_\infty$ almost everywhere and taking $p$th powers preserves this inequality.
   - Thus
-  \begin{align*}
+  \[
   \abs{f(x)} &\leq \norm{f}_\infty \quad\text{a.e. by definition} \\
   \implies 
   \abs{f(x)}^p &\leq \norm{f}_\infty^p \quad\text{for } p\geq 0 \\  
@@ -2213,7 +2149,7 @@ Concepts used:
   &= \norm{f}_\infty^p \int_X 1\,dx \\ 
   &= \norm{f}_\infty^p \cdot m(X) \quad\text{since the norm doesn't depend on }x \\
   &= \norm{f}_\infty^p \qquad \text{since } m(X) = 1
-  .\end{align*}
+  .\]
 
     - Thus $\norm{f}_p \leq \norm{f}_\infty$ for all $p$ and taking $\lim_{p\to\infty}$ preserves this inequality.
 
@@ -2221,9 +2157,9 @@ Concepts used:
   - Fix $\varepsilon > 0$.
 
   - Define 
-  \begin{align*}
+  \[
   S_\varepsilon \definedas \theset{x\in \RR^n \suchthat \abs{f(x)} \geq \norm{f}_\infty - \varepsilon}
-  .\end{align*}
+  .\]
 
     - Note that $m(S_\eps) > 0$; otherwise if $m(S_\eps) = 0$, then $t\definedas \norm{f}_\infty - \eps < \norm{f}_\eps$.
     But this produces a *smaller* upper bound almost everywhere than $\norm{f}_\eps$, contradicting the definition of $\norm{f}_\eps$ as an infimum over such bounds.
@@ -2231,21 +2167,21 @@ Concepts used:
 
 
   - Then
-  \begin{align*}
+  \[
   \norm{f}_p^p 
   &= \int_X \abs{f(x)}^p ~dx \\
   &\geq \int_{S_\varepsilon} \abs{f(x)}^p ~dx \quad\text{since } S_\eps \subseteq X \\
   &\geq \int_{S_\varepsilon} \abs{\norm{f}_\infty - \varepsilon}^p ~dx \quad\text{since on } S_\eps, \abs{f} \geq \norm{f}_\infty - \eps \\
   &= \abs{\norm{f}_\infty - \varepsilon}^p \cdot m(S_\varepsilon) \quad\text{since the integrand is independent of }x \\
   & \geq 0 \quad\text{since } m(S_\eps) > 0
-  \end{align*}
+  \]
   
   - Taking $p$th roots for $p\geq 1$ preserves the inequality, so
-  \begin{align*}
+  \[
   \implies \norm{f}_p &\geq \abs{\norm{f}_\infty - \varepsilon} \cdot m(S_\varepsilon)^{\frac 1 p} 
   \converges{p\to\infty}\to \abs{\norm{f}_\infty - \varepsilon} 
   \converges{\varepsilon \to 0}\to \norm{f}_\infty
-  \end{align*}
+  \]
   where we've used the fact that above arguments work 
 
   - Thus $\norm{f}_p \geq \norm{f}_\infty$.
@@ -2255,14 +2191,14 @@ Concepts used:
 
 
 
-## Spring 2018 # 4
+## Spring 2018 # 4 $\done$
 Let $f\in L^2([0, 1])$ and suppose
 $$
 \int _{[0,1]} f(x) x^{n} d x=0 \text { for all integers } n \geq 0.
 $$
 Show that $f = 0$ almost everywhere.
 
-## Spring 2015 # 2
+## Spring 2015 # 2 $\done$
 Let $f: \RR \to \CC$ be continuous with period 1. 
 Prove that
 \[
@@ -2271,15 +2207,21 @@ Prove that
 
 > Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 ### Proof 1: Using Fourier Transforms
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Weierstrass Approximation: A uniformly continuous function on a compact set can be uniformly approximated by polynomials.
-
-**Solution**:
+:::
 
 - Fix $k \in \ZZ$.
 - Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
@@ -2295,14 +2237,14 @@ $$
   for any polynomial $p(x)$, and in particular for $P_{\ell, k}(x)$ for every $\ell$ and every $k$.
 
 - But then  
-\begin{align*}
+\[
 \inner{f}{e_k} 
 &= \int_0^1 f(x) e^{-2\pi i k x} ~dx \\
 &= \int_0^1 f(x) \lim_{\ell \to \infty} P_\ell(x) \\
 &= \lim_{\ell \to \infty}  \int_0^1 f(x) P_\ell(x) \quad\quad \text{by uniform convergence on a compact interval} \\
 &= \lim_{\ell \to \infty} 0 \quad\text{by assumption}\\
 &= 0 \quad \forall k\in \ZZ
-,\end{align*}
+,\]
  so $f$ is orthogonal to every $e_k$. 
 
 - Thus $f\in S^\perp \definedas \spanof_\CC\theset{e_k}_{k\in \ZZ}^\perp \subseteq L^2([0, 1])$, but since this is a basis, $S$ is dense and thus $S^\perp = \theset{0}$ in $L^2([0, 1])$.
@@ -2312,40 +2254,39 @@ $$
 $\qed$
 
 ### Alternative Proof
-
-Concepts used
-
+\hfill
+:::{.concept}
+\hfill
 - $C^1([0, 1])$ is dense in $L^2([0, 1])$
 - Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
   - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
-
-**Solution**:
+:::
 
 - By density of polynomials, for $f\in L^2([0, 1])$ choose $p_\eps(x)$ such that $\norm{f - p_\eps} < \eps$ by Weierstrass approximation.
 - Then on one hand,
-\begin{align*}
+\[
 \norm{f(f-p_\eps)}_1 
 &= \norm{f^2}_1 - \norm{f\cdot p_\eps}_1 \\
 &= \norm{f^2}_1 - 0 \quad\text{by assumption} \\
 &= \norm{f}_2^2
-.\end{align*}
+.\]
 
   - Where we've used that $\norm{f^2}_1 = \int \abs{f^2} = \int \abs{f}^2 = \norm{f}_2^2$.
 
 - On the other hand
-\begin{align*}
+\[
 \norm{f(f-p_\eps)} 
 &\leq \norm{f}_1 \norm{f-p_\eps}_\infty \quad\text{by Holder} \\
 &\leq \eps \norm{f}_1  \\
 &\leq \eps \norm{f}_2 \sqrt{m(X)} \\ 
 &= \eps \norm{f}_2 \quad\text{since } m(X)= 1
-.\end{align*}
+.\]
   - Where we've used that $\norm{fg}_1 = \int \abs{fg} = \int \abs{f}\abs{g} \leq \int \norm{f}_\infty \abs{g} = \norm{f}_\infty \norm{g}_1$.
 
 - Combining these,
-\begin{align*}
+\[
 \norm{f}_2^2 \leq \norm{f}_2 \eps \implies \norm{f}_2 < \eps \to 0,
-.\end{align*}
+.\]
   so $\norm{f}_2 = 0$, which implies $f=0$ almost everywhere.
 
 
@@ -2365,7 +2306,7 @@ Prove that
 
 # $L^1$
 
-## Spring 2020 # 3
+## Spring 2020 # 3 $\done$
 
 a. Prove that if $g\in L^1(\RR)$ then
 \[
@@ -2378,14 +2319,14 @@ b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\inf
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Limits
 - Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
 - Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
-
-**Solution**:
+:::
 
 ### a
 
@@ -2395,7 +2336,7 @@ Stated integral equality:
 - $C_c(\RR^n) \injects L^1(\RR^n)$ is dense so choose $\theset{f_n} \to f$ with $\norm{f_n - f}_1 \to 0$.
 - Since $\theset{f_n}$ are compactly supported, choose $N_0\gg 1$ such that $f_n$ is zero outside of $B_{N_0}(\vector 0)$.
 - Then
-\begin{align*}
+\[
 N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n + f_n} \\
 &\leq \int_{\abs x > N} \abs{f-f_n} + \int_{\abs x > N} \abs{f_n} \\
 &= \int_{\abs x > N} \abs{f-f_n} \\ 
@@ -2404,7 +2345,7 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n +
 &\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} \\
 &= 0\\
 &\converges{N\to\infty}\to 0
-.\end{align*}
+.\]
 
 
 To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
@@ -2418,12 +2359,12 @@ To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 #### Solution 1 ("Trick")
 
 - Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
-\begin{align*}
+\[
 x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
-.\end{align*}
+.\]
 
 - Integrate over $[x, 2x]$, using monotonicity of the integral:
-\begin{align*}
+\[
 \int_x^{2x} f(x) \,dt \leq 
 \int_x^{2x} f(t) \,dt \leq 
 \int_x^{2x} f(x-n) \,dt \\ 
@@ -2432,7 +2373,7 @@ f(x) \int_x^{2x} \,dt \leq
 \int_x^{2x} f(t) \,dt \leq 
 f(x-n) \int_x^{2x} \,dt  \\
 \implies xf(x) \leq \int_x^{2x} f(t) \, dt \leq xf(x-n)
-.\end{align*}
+.\]
 
 - By the Cauchy Criterion for integrals, $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$.
 - So the LHS term $xf(x) \converges{x\to\infty}\to 0$.
@@ -2442,33 +2383,33 @@ f(x-n) \int_x^{2x} \,dt  \\
 #### Solution 2 (Variation on the Trick)
 
 - Use mean value theorem for integrals:
-\begin{align*}
+\[
 \int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
-.\end{align*}
+.\]
 
 - Since $f$ is decreasing, 
-\begin{align*}
+\[
 x\leq c_x \leq 2x 
 &\implies f(2x)\leq f(c_x) \leq f(x) \\
 &\implies 2xf(2x)\leq 2xf(c_x) \leq 2xf(x) \\
 &\implies 2xf(2x)\leq 2x\int_x^{2x} f(t)\, dt \leq 2xf(x) \\
-.\end{align*}
+.\]
 
 - By Cauchy Criterion, $\int_x^{2x} f \to 0$.
 - So $2x f(2x) \to 0$, which by a change of variables gives $uf(u) \to 0$.
 - Since $u\geq 1$, $f(u) \leq uf(u)$ so $f(u) \to 0$ as well.
 
 #### Solution 3 (Contradiction)
-\hfill
+
 Just showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
 - Since $f$ is decreasing, it can not diverge to $+\infty$
 - If $f(x) \to -\infty$, then $f\not\in L^1(\RR)$: choose $x_0 \gg 1$ so that $t\geq x_0 \implies f(t) < -1$, then 
 - Then $t\geq x_0 \implies \abs{f(t)} \geq 1$, so
- \begin{align*}
+ \[
 \int_1^\infty \abs{f} \geq \int_{x_0}^\infty \abs{f(t) } \, dt \geq \int_{x_0}^\infty 1 =\infty
- .\end{align*}
+ .\]
 
 - Otherwise $f(x) \to L\neq 0$, some finite limit.
 - If $L>0$:
@@ -2487,28 +2428,28 @@ Showing $xf(x) \converges{x\to \infty}\to 0$.
   - Choose a subsequence $\Gamma' = \theset{x_i}$ such that $x_if(x_i) \leq -1$ for all $i$ and $x_i \leq x_{i+1}$.
   - Choose a further subsequence $S = \theset{x_i \in \Gamma' \suchthat 2x_i  < x_{i+1}}$.
   - Then since $f$ is always decreasing, for $t\geq x_0$, $\abs f$ is increasing, and $\abs{f(x_i)} \leq \abs{f(2x_i)}$, so
-  \begin{align*}
+  \[
   \int_1^{\infty} \abs{f} \geq \int_{x_0}^\infty \abs{f} \geq \sum_{x_i \in S} \int_{x_i}^{2x_i} \abs{f(t)} \, dt \geq 
   \sum_{x_i \in S} \int_{x_i}^{2x_i} \abs{f(x_i)} &= \sum_{x_i \in S} x_i f(x_i) \to \infty
-  .\end{align*}
+  .\]
 
 - If $xf(x) \to L \neq 0$ for $0 < L< \infty$:
   - Fix $\eps> 0$, choose an infinite sequence $\theset{x_i}$ such that $L-\eps \leq x_i f(x_i) \leq L$ for all $i$.
-\begin{align*}
+\[
 \int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L-\eps} \to \infty
-.\end{align*}
+.\]
 - If $xf(x) \to L \neq 0$ for $-\infty < L < 0$:
   - Fix $\eps> 0$, choose an infinite sequence $\theset{x_i}$ such that $L \leq x_i f(x_i) \leq L + \eps$ for all $i$.
-\begin{align*}
+\[
 \int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L} \to \infty
-.\end{align*}
+.\]
 
 #### Solution 4 (Akos's Suggestion)
 
 For $x\geq 1$, 
-\begin{align*}
+\[
 \abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
-\end{align*}
+\]
   where we've used 
   
   - Since $f$ is decreasing and $\lim_{x\to\infty}f(x) =0$ from part (a), $f$ is non-negative.
@@ -2518,7 +2459,7 @@ For $x\geq 1$,
 #### Solution 5 (Peter's)
 
 - Toward a contradiction, produce a sequence $x_i\to\infty$ with $x_i f(x_i) \to \infty$ and $x_if(x_i) > \eps > 0$, then
-\begin{align*}
+\[
 \int f(x) \, dx 
 &\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x) \, dx \\
 &\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x_{i+1}) \, dx \\
@@ -2526,29 +2467,27 @@ For $x\geq 1$,
 &\geq \sum_{i=1}^\infty (x_{i+1} - x_i) f(x_{i+1}) \\
 &\geq \sum_{i=1}^\infty (x_{i+1} - x_i) {\eps \over x_{i+1}} \\
 &= \eps \sum_{i=1}^\infty \qty{ 1 - {x_{i-1} \over x_i}} \to \infty
-\end{align*}
+\]
   which can be ensured by passing to a subsequence where $\sum {x_{i-1} \over x_i} < \infty$.
 
 ### c
 
 - No: take $f(x) = {1\over x\ln x}$
 - Then by a $u\dash$substitution,
-  \begin{align*}
+  \[
   \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\to \infty
-  \end{align*}
+  \]
   is unbounded, so $f\not\in L^1([1, \infty))$.
 - But 
-  \begin{align*}
+  \[
   xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
-  .\end{align*}
+  .\]
 
 
 
 :::
 
-
-
-## Fall 2019 # 5.
+## Fall 2019 # 5. $\done$
 
 ### a
 Show that if $f$ is continuous with compact support on $\RR$, then 
@@ -2566,36 +2505,37 @@ i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 
 
 ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
 
-\todo[inline]{Fix up.}
-:::{.solution}
-Concepts used:
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
 - Lebesgue differentiation in 1-dimensional case. See HW 5.6.
+:::
 
-**Solution**:
-
-## a
+### a
 
 Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
 
 By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
 
 Write
-\begin{align*}
+\[
 \norm{\tau f - f}_1 
 &= \norm{\tau_h f - g + g - \tau_h g + \tau_h g - f}_1 \\
 &\leq \norm{\tau_h f - \tau_h g} + \norm{g - f} + \norm{\tau_h g - g} \\
 &\to \norm{\tau_h g - g}
-,\end{align*}
+,\]
 
 so it suffices to show that $\norm{\tau_h g - g} \to 0$ for $g\in C_c^0$.
 
 Fix $\varepsilon > 0$.
 Enlarge the support of $g$ to $K$ such that
-\begin{align*}
+\[
 \abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
-.\end{align*}
+.\]
 
 By uniform continuity of $g$, pick $\delta \leq 1$ small enough such that 
 $$
@@ -2603,40 +2543,37 @@ x\in K, ~\abs{h} \leq \delta \implies \abs{g(x-h) -g(x)} < \varepsilon
 ,$$
 
 then
-$$
+\[
 \int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
-$$
+\]
 
-
-## b
+### b
 
 We have
-\begin{align*}
+\[
 \int_\RR \abs{A_h(f)(x)} ~dx 
 &= \int_\RR \abs{\frac{1}{2h} \int_{x-h}^{x+h} f(y)~dy} ~dx \\
 &\leq \frac{1}{2h} \int_\RR \int_{x-h}^{x+h} \abs{f(y)} ~dy ~dx    \\
 &=_{FT} \frac{1}{2h} \int_\RR \int_{y-h}^{y+h} \abs{f(y)} ~\mathbf{dx} ~\mathbf{dy}    \\
 &= \int_\RR \abs{f(y)} ~{dy} \\
 &= \norm{f}_1
-.\end{align*}
+,\]
 
 and (rough sketch)
 
-\begin{align*}
+\[
 \int_\RR \abs{A_h(f)(x) - f(x)} ~dx 
 &= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - f(x)}~dx \\
 &= \int_\RR \abs{ \left(\frac{1}{2h} \int_{B(h, x)} f(y)~dy\right) - \frac{1}{2h}\int_{B(h, x)} f(x) ~dy}~dx \\
 &\leq_{FT} \frac{1}{2h} \int_\RR  \int_{B(h, x)}\abs{ f(y-x) - f(x)} ~\mathbf{dx} ~\mathbf{dy} \\
 &\leq \frac 1 {2h} \int_\RR \norm{\tau_x f - f}_1 ~dy \\
 &\to 0 \quad\text{by (a)}
-.\end{align*}
-
+.\]
 
 :::
 
 
-
-## Fall 2017 # 3
+## Fall 2017 # 3 $\done$
 Let 
 $$
 S = \spanof_\CC\theset{\chi_{(a, b)} \suchthat a, b \in \RR},
@@ -2644,17 +2581,18 @@ $$
 the complex linear span of characteristic functions of intervals of the form $(a, b)$.
 
 Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\theset{f_n} \subset S$ such that 
-$$
+\[
 \lim _{n \rightarrow \infty}\left\|f_{n}-f\right\|_{1}=0
-$$
+\]
+
+\todo[inline]{Walk through.}
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - From homework: $E$ is Lebesgue measurable iff there exists a finite union of closed cubes $A$ such that $m(E\Delta A) < \varepsilon$.
-
-**Solution**:
-
+:::
 
 It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
 
@@ -2666,19 +2604,17 @@ $O$ is an open subset of $\RR$, and thus $O = \disjoint_{j\in \NN} I_j$ is a dis
 Now choose $N$ large enough such that $m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n$ where we define $I_{N, n} \definedas \disjoint_{j=1}^N I_j$.
 
 Now define $f_n = \chi_{I_{N, n}}$, then
-\begin{align*}
+\[
 \norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\longrightarrow 0
-.\end{align*}
+.\]
 
 Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
 But simple functions are dense in $L^1$, so $S$ is dense in $L^1$.
-
-
 :::
 
 
 
-## Spring 2015 # 4
+## Spring 2015 # 4 $\work$
 Define
 $$
 f(x, y):=\left\{\begin{array}{ll}{\frac{x^{1 / 3}}{(1+x y)^{3 / 2}}} & {\text { if } 0 \leq x \leq y} \\ {0} & {\text { otherwise }}\end{array}\right.
@@ -2686,7 +2622,7 @@ $$
 
 Carefully show that $f \in L^1(\RR^2)$.
 
-## Fall 2014 # 3
+## Fall 2014 # 3 $\work$
 Let $f\in L^1(\RR)$. Show that
 \[
 \forall\varepsilon > 0 \exists \delta > 0 \text{ such that } \qquad 
@@ -2695,7 +2631,7 @@ m(E) < \delta
 \int _{E} |f(x)| \, dx < \varepsilon
 \]
 
-## Spring 2014 # 1
+## Spring 2014 # 1 $\work$
 
 1. Give an example of a continuous $f\in L^1(\RR)$ such that $f(x) \not\to 0$ as$\abs x \to \infty$.
 
@@ -2708,7 +2644,7 @@ m(E) < \delta
 
 # Fubini-Tonelli
 
-## Spring 2020 # 4
+## Spring 2020 # 4 $\done$
 
 Let $f, g\in L^1(\RR)$. 
 Argue that $H(x, y) \definedas f(y) g(x-y)$ defines a function in $L^1(\RR^2)$ and deduce from this fact that
@@ -2721,28 +2657,28 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 - Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
+:::
 
-**Solution**:
-
-\begin{align*}
+\[
 \norm{H(x)}_1 
-&= \int_\RR \abs{H(x, y)} \, dx \\
-&= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
-&\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
-&= \int_\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
-&\definedas \int_\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
-&= \norm{g}_1 \int_\RR \abs{f(y)} \,dy \\
+&= \int _\RR \abs{H(x, y)} \, dx \\
+&= \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
+&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
+&= \int _\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
+&\definedas \int _\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
+&= \norm{g}_1 \int _\RR \abs{f(y)} \,dy \\
 &\definedas \norm{g}_1 \norm{f}_1  \\
 &< \infty \qtext{by assumption}
-.\end{align*}
+.\]
 
 - $H$ is measurable on $\RR^2$:
   - If we can show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, then $H = \tilde f \cdot \tilde g$ is a product of measurable functions and thus measurable. 
@@ -2765,7 +2701,7 @@ Concepts used:
 
 
 
-## Spring 2019 # 4
+## Spring 2019 # 4 $\done$
 Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n × \RR : 0 ≤ t ≤ f (x)\}$.
 
 Prove the validity of the following two statements:
@@ -2777,12 +2713,14 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - See S&S p.82.
-
-**Solution**:
+:::
 
 ### a
 
@@ -2799,9 +2737,9 @@ $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
 - Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
-\begin{align*}
+\[
 \mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
-\end{align*}
+\]
 
 - But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
 
@@ -2809,21 +2747,21 @@ $\impliedby$:
 ### b
 
 - Note
-\begin{align*}
+\[
 \mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
 \\
 \mathcal{A}_t &= \theset{x
 \in \RR^n \suchthat t\leq f(x) }
-.\end{align*}
+.\]
 
 - Then
-\begin{align*}
+\[
 \int_{\RR^n} f(x) ~dx 
 &= \int_{\RR^n} \int_0^{f(x)} 1 ~dt~dx \\
 &= \int_{\RR^n} \int_{0}^\infty \chi_\mathcal{A} ~dt~dx \\
 &\overset{F.T.}= \int_{0}^\infty \int_{\RR^n} \chi_\mathcal{A} ~dx~dt\\
 &= \int_0^\infty m(\mathcal{A}_t) ~dt
-,\end{align*}
+,\]
   where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
 
 - By F.T., all of these integrals are equal. 
@@ -2831,9 +2769,7 @@ $\impliedby$:
 
 :::
 
-
-
-## Fall 2018 # 5
+## Fall 2018 # 5 $\done$
 Let $f \geq 0$ be a measurable function on $\RR$.
 Show that
 \[
@@ -2841,18 +2777,17 @@ Show that
 \]
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Claim: If $E\subseteq \RR^a \cross \RR^b$ is a measurable set, then for almost every $y\in \RR^b$, the slice $E^y$ is measurable and
-\begin{align*}
+\[
 m(E) = \int_{\RR^b} m(E^y) \,dy
-.\end{align*}
+.\]
   - Set $g = \chi_E$, which is non-negative and measurable, so apply Tonelli.
   - Conclude that $g^y = \chi_{E^y}$ is measurable, the function $y\mapsto \int g^y(x)\, dx$ is measurable, and $\int \int g^y(x)\,dx \,dy = \int g$.
   - But $\int g = m(E)$ and $\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy$.
-
-**Solution**
+:::
 
 > Note: $f$ is a function $\RR\to \RR$ in the original problem, but here I've assumed $f:\RR^n\to \RR$.
 
@@ -2865,10 +2800,10 @@ E\definedas \theset{(x, t) \in \RR^{n} \cross \RR \suchthat f(x) > t}
   - Since $f$ is measurable, $F(x, t) \definedas t - f(x)$ is measurable on $\RR^n \cross \RR$.
   - Then write $E = \theset{F < 0} \intersect \theset{t\geq 0}$ as an intersection of measurable sets.
 - We have slices 
-\begin{align*}
+\[
 E^t &\definedas \theset{x\in \RR^n \suchthat (x, t) \in E} = \theset{x\in \RR^n \suchthat 0 \leq t < f(x)} \\
 E^x &\definedas \theset{t\in \RR \suchthat (x, t) \in E} = \theset{t\in \RR \suchthat 0 \leq t \leq f(x)} = [0, f(x)]
-.\end{align*}
+.\]
   - $E_t$ is precisely the set that appears in the original RHS integrand.
   - $m(E^x) = f(x)$.
 - Claim: $\chi_E$ satisfies the conditions of Tonelli, and thus $m(E) = \int \chi_E$ is equal to any iterated integral.
@@ -2879,32 +2814,31 @@ E^x &\definedas \theset{t\in \RR \suchthat (x, t) \in E} = \theset{t\in \RR \suc
   1. For almost every $x$, $E^x$ is a measurable set, $x\mapsto m(E^x)$ is a measurable function, and $m(E) = \int_{\RR^n} m(E^x) \, dx$ 
   2. For almost every $t$, $E^t$ is a measurable set, $t\mapsto m(E^t)$ is a measurable function, and $m(E) = \int_{\RR} m(E^t) \, dt$ 
 - On one hand,
-\begin{align*}
+\[
 m(E) 
 &= \int_{\RR^{n+1}} \chi_E(x, t) \\
 &= \int_{\RR} \int_{\RR^n} \chi_E(x, t) \,dt \,dx \quad\text{by Tonelli}\\
 &= \int_{\RR^n} m(E^x) \,dx \quad\text{first conclusion}\\
 &= \int_{\RR^n} f(x) \,dx 
-.\end{align*}
+.\]
 - On the other hand,
-\begin{align*}
+\[
 m(E) 
 &= \int_{\RR^{n+1}} \chi_E(x, t) \\
 &= \int_\RR \int_{\RR^n} \chi_E(x, t) \, dx \,dt \quad\text{by Tonelli} \\
 &= \int_\RR m(E^t) \,dt \quad\text{second conclusion}
-.\end{align*}
+.\]
 
 - Thus
-\begin{align*}
+\[
 \int_{\RR^n} f \,dx = m(E) = \int_\RR m(E^t) \,dt = \int_\RR m\qty{\theset{x\suchthat f(x) > t}}
-.\end{align*}
-
+.\]
 
 :::
 
 
 
-## Fall 2015 # 5
+## Fall 2015 # 5 $\work$
 Let $f, g \in L^1(\RR)$ be Borel measurable.
 
 1. Show that 
@@ -2916,7 +2850,7 @@ Let $f, g \in L^1(\RR)$ be Borel measurable.
 \|f * g\|_{1} \leq \|f\|_{1} \|g\|_{1}
 \]
 
-## Spring 2014 # 5
+## Spring 2014 # 5 $\work$
 Let $f, g \in L^1([0, 1])$ and for all $x\in [0, 1]$ define
 \[
 F(x) \definedas \int _{0}^{x} f(y) \, dy 
@@ -2932,7 +2866,7 @@ F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 
 # $L^2$ and Fourier Analysis
 
-## Spring 2020 # 6
+## Spring 2020 # 6 $\done$
 
 ### a
 Show that
@@ -2955,17 +2889,17 @@ converges uniformly on $[0, 1]$ to a continuous function $g$ such that $g = f$ a
 > Hint: One approach is to argue that if $f\in L^1([0, 1])$ with $\theset{\hat f (n)} \in \ell^1(\ZZ)$ then $f\in L^2([0, 1])$.
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - For $e_n(x) \definedas e^{2\pi i n x}$, the set $\theset{e_n}$ is an orthonormal basis for $L^2([0, 1])$.
 - For any orthonormal sequence in a Hilbert space, we have Bessel's inequality:
-  \begin{align*}
+  \[
   \sum_{k=1}^{\infty}\left|\left\langle x, e_{k}\right\rangle\right|^{2} \leq\|x\|^{2}
-  .\end{align*}
+  .\]
 - When $\theset{e_n}$ is a basis, the above is an *equality* (Parseval)
 - Arguing uniform convergence: since $\theset{\hat f(n)} \in \ell^1(\ZZ)$, we should be able to apply the $M$ test.
-
-**Solution**:
+:::
 
 ### a
 
@@ -2979,7 +2913,7 @@ Claim: $\ell^1(\ZZ) \subseteq \ell^2(\ZZ)$.
   - If any $c_j = \infty$, then $\sum_{k\in \ZZ} \abs{c_k} \geq c_j = \infty$.
 - So $S^c$ is a finite set of finite integers, let $N = \max \theset{\abs{c_j}^2 \suchthat c_j \in S^c} < \infty$.
 - Rewrite the sum
-\begin{align*}
+\[
 \sum_{k\in \ZZ} \abs{c_k}^2 
 &= \sum_{c_k\in S} \abs{c_k}^2 + \sum_{c_k \in S^c} \abs{c_k}^2 \\
 &\leq \sum_{c_k\in S} \abs{c_k} + \sum_{c_k \in S^c} \abs{c_k}^2 \\
@@ -2987,7 +2921,7 @@ Claim: $\ell^1(\ZZ) \subseteq \ell^2(\ZZ)$.
 &= \norm{\vector c}_{\ell^1} + \sum_{c_k \in S^c} \abs{c_k}^2 \\
 &\leq \norm{\vector c}_{\ell^1} + \abs{S^c}\cdot N \\
 &< \infty
-.\end{align*}
+.\]
 
 Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 
@@ -2995,7 +2929,7 @@ Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 - Define $S = \theset{x\in [0, 1] \suchthat \abs{f(x)} \leq 1}$, then $x\in S^c \implies \abs{f(x)}^2 \geq \abs{f(x)}$.
 
 - Break up the integral:
-\begin{align*}
+\[
 \int_\RR \abs f 
 &= \int_S \abs f + \int_{S^c} \abs f \\
 &\leq \int_S \abs{f} + \int_{S^c} \abs{f}^2 \\
@@ -3005,14 +2939,14 @@ Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 &\leq 1 \cdot \mu([0, 1]) + \norm{f}_2 \quad\text{since } S\subseteq [0, 1] \\
 &= 1 + \norm{f}_2 \\
 &< \infty
-.\end{align*}
+.\]
 
 
 > Note: this proof shows $L^2(X) \subseteq L^1(X)$ whenever $\mu(X) < \infty$.
 :::
 
 
-## Fall 2017 # 5
+## Fall 2017 # 5 $\done$
 Let $\phi$ be a compactly supported smooth function that vanishes outside of an interval $[-N, N]$ such that $\int _{\RR} \phi(x) \, dx = 1$.
 
 For $f\in L^1(\RR)$, define
@@ -3035,12 +2969,14 @@ and prove the following:
 \lim _{y \to 0} \int _{\RR} |f(x-y)-f(x)| dy = 0
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 
 ### a
@@ -3050,7 +2986,7 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 
 *Silly Proof:*
 
-\begin{align*}
+\[
 \mathcal{F}(
 	(f \ast \phi)'
  )
@@ -3059,11 +2995,11 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 &= \mathcal{F}(f) \cdot \left( 2\pi i \xi ~\mathcal{F}(\phi)\right) \\
 &= \mathcal{F}(f) \cdot \mathcal{F}(\phi') \\
 &= \mathcal{F}(f\ast \phi')
-.\end{align*}
+.\]
 
 *Actual proof*:
 
-\begin{align*}
+\[
 (f\ast \phi)'(x)
 &= (\phi\ast f)'(x) \\
 &= \lim_{h\to 0} \frac{(\phi\ast f)'(x+h) - (\phi\ast f)'(x)}{h} \\
@@ -3072,23 +3008,23 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 &= \int \phi'(x-y) f(y) \\
 &= (\phi' \ast f)(x) \\
 &= (f \ast \phi')(x)
-.\end{align*}
+.\]
  
 
  To see that the DCT is justified, we can apply the MVT on the interval $[0, h]$ to $f$ to obtain
 
-\begin{align*}
+\[
 \frac{\phi(x + h - y) - \phi(x - y)}{h}
 &= \phi'(c) \quad c\in [0, h]
-,\end{align*}
+,\]
  
 and since $\phi'$ is continuous and compactly supported, $\phi'$ is bounded by some $M < \infty$ by the extreme value theorem and thus
-\begin{align*}
+\[
 \int \abs{\frac{\phi(x + h - y) - \phi(x - y)}{h} f(y)} 
 &= \int \abs{\phi'(c) f(y)} \\
 &\leq \int \abs{M}\abs{f} \\
 &= \abs{M} \int \abs{f} < \infty
-,\end{align*}
+,\]
 
 since $f\in L^1$ by assumption, so we can take $g\definedas \abs{M} \abs{f}$ as the dominating function.
 
@@ -3104,18 +3040,18 @@ $$
 $$
 
 and thus 
-\begin{align*}
+\[
 (h\ast \phi)(x) 
 &= \int_\RR \phi(x-y) h(y)~dy \\
 &= \int_{A_x} g_x(y) h(y) \\
 &= 0
-,\end{align*}
+,\]
 
 so $\theset{x \suchthat f\ast g(x) = 0}$ is open, and its complement is closed and bounded and thus compact.
 
 ### b
 
-\begin{align*}
+\[
 \norm{f\ast K_j - f}_1 
 &= \int \abs{\int f(x-y) K_j(y) ~dy  - f(x)}~dx \\
 &= \int \abs{\int f(x-y) K_j(y) ~dy  - \int f(x) K_j(y) ~ dy}~dx \\
@@ -3124,7 +3060,7 @@ so $\theset{x \suchthat f\ast g(x) = 0}$ is open, and its complement is closed a
 &\overset{FT}= \int \int \abs{(f(x-y) - f(x))} \cdot \abs{K_j(y)} \mathbf{~ dx~dy}\\
 &= \int \abs{K_j(y)} \left( \int \abs{(f(x-y) - f(x))}  ~ dx\right) ~dy \\
 &= \int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy
-.\end{align*}
+.\]
 
 We now split the integral up into pieces. 
 
@@ -3138,7 +3074,7 @@ j > J \implies \int_{\abs{y} \geq \delta} \abs{K_j(y)} ~dy
 $$
 
 Then
-\begin{align*}
+\[
 \norm{f\ast K_j - f}_1 
 &\leq 
 \int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
@@ -3146,14 +3082,14 @@ Then
 + \int_{\abs y \geq  \delta} \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
 &= \varepsilon \int_{\abs y \geq  \delta} \abs{K_j(y)} + 0 \\
 &\leq \varepsilon(1) \to 0
-.\end{align*}
+.\]
 
 
 :::
 
 
 
-## Spring 2017 # 5
+## Spring 2017 # 5 $\work$
 Let $f, g \in L^2(\RR)$. 
 Prove that the formula
 \[
@@ -3161,7 +3097,7 @@ h(x) \definedas \int _{-\infty}^{\infty} f(t) g(x-t) \, dt
 \]
 defines a uniformly continuous function $h$ on $\RR$.
 
-## Spring 2015 # 6
+## Spring 2015 # 6 $\work$
 Let $f \in L^1(\RR)$ and $g$ be a bounded measurable function on $\RR$.
 
 1. Show that the convolution $f\ast g$ is well-defined, bounded, and uniformly continuous on $\RR$.
@@ -3170,7 +3106,7 @@ Let $f \in L^1(\RR)$ and $g$ be a bounded measurable function on $\RR$.
 \frac{d}{d x}(f * g)=f *\left(\frac{d}{d x} g\right)
 \]
 
-## Fall 2014 # 5
+## Fall 2014 # 5 $\work$
 
 1. Let $f \in C_c^0(\RR^n)$, and show
 \[
@@ -3187,7 +3123,7 @@ f\in L^1(\RR^n), \quad g\in L^\infty(\RR^n) \quad
 
 # Functional Analysis: General
 
-## Fall 2019 # 4. 
+## Fall 2019 # 4 $\done$
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
 
 ### a 
@@ -3207,36 +3143,36 @@ and
 \]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Bessel's Inequality
 - Pythagoras
 - Surjectivity of the Riesz map
 - Parseval's Identity
 - Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
-
-**Solution**:
+:::
 
 ### a
 
 **Claim:**
-\begin{align*}
+\[
 0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
 &= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
 &\implies
 \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-.\end{align*}
+.\]
 
 *Proof:*
 Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
 Then
-\begin{align*}
+\[
 0 
 &\leq \norm{x - S_N}^2 \\ 
 &= \inner{x - S_n}{x - S_N} \\
 &= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
 &\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
-.\end{align*}
+.\]
 
 
 ### b
@@ -3267,9 +3203,7 @@ If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$
 
 :::
 
-
-
-## Spring 2019 # 5
+## Spring 2019 # 5 $\done$
 
 ### a  
 Show that $L^2([0, 1]) ⊆ L^1([0, 1])$ and argue that $L^2([0, 1])$ in fact forms a dense subset of $L^1([0, 1])$.
@@ -3296,37 +3230,37 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   \]
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Holders' inequality: $\norm{fg}_1 \leq \norm{f}_p \norm{f}_q$
 - Riesz Representation for $L^2$: If $\Lambda \in (L^2)\dual$ then there exists a unique $g\in L^2$ such that $\Lambda(f) = \int fg$.
 - $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
 - **Lemma**:  $m(X) < \infty \implies L^p(X) \subset L^2(X)$.
 
-:::{.proof}
-\hfill
-- Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
-\begin{align*}
-\norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
-.\end{align*}
+  :::{.proof}
+  \hfill
+  - Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
+  \[
+  \norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
+  .\]
 
-- Now take $a = \frac 2 p$ and this reduces to 
-\begin{align*}
-\norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
-\implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
-.\end{align*}
+  - Now take $a = \frac 2 p$ and this reduces to 
+  \[
+  \norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
+  \implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
+  .\]
+  :::
 :::
 
-**Solution**:
 
 ### a
 
 - Note $X = [0, 1] \implies m(X) = 1$.
 - By Holder's inequality with $p=q=2$, 
-\begin{align*}
+\[
 \norm{f}_1 = \norm{f\cdot 1}_1 \leq \norm{f}_2 \cdot \norm{1}_2 = \norm{f}_2 \cdot m(X)^{\frac 1 2} = \norm{f}_2,
-\end{align*}
+\]
 
 - Thus $L^2(X) \subseteq L^1(X)$ 
 - Since they share a common dense subset (simple functions) $L^2$ is dense in $L^1$ 
@@ -3336,47 +3270,47 @@ Concepts used:
 
 Let $\Lambda \in L^1(X)\dual$ be arbitrary.
 
-#### (i): Existence of $g$ Representing $\Lambda$.
+#### 1: Existence of $g$ Representing $\Lambda$.
 
-- Let $f\in L^2\subseteq L^1$ be arbitrary
+Let $f\in L^2\subseteq L^1$ be arbitrary.
 
-- Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
+Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
 
-  - Suffices to show that $\norm{\Gamma}_{L^2(X)\dual} \definedas \sup_{\norm{f}_2 = 1} \abs{\Gamma(f)} < \infty$, since bounded implies continuous.
+- Suffices to show that $\norm{\Gamma}_{L^2(X)\dual} \definedas \sup_{\norm{f}_2 = 1} \abs{\Gamma(f)} < \infty$, since bounded implies continuous.
 
-  - By the lemma, $\norm{f}_1 \leq C\norm{f}_2$ for some constant $C \approx m(X)$.
+- By the lemma, $\norm{f}_1 \leq C\norm{f}_2$ for some constant $C \approx m(X)$.
 
-  - Note $$\norm{\Lambda}_{L^1(X)\dual} \definedas \displaystyle\sup_{\norm{f}_1 = 1} \abs{\Lambda(f)}$$
+- Note $$\norm{\Lambda}_{L^1(X)\dual} \definedas \displaystyle\sup_{\norm{f}_1 = 1} \abs{\Lambda(f)}$$
 
-  - Define $\hat f = {f\over \norm{f}_1}$ so $\norm{\hat f}_1 = 1$
+- Define $\hat f = {f\over \norm{f}_1}$ so $\norm{\hat f}_1 = 1$
 
-  - Since $\norm{\Lambda}_{1\dual}$ is a supremum over *all* $f \in L^1(X)$ with $\norm{f}_1 =1$, 
-  \begin{align*}
-  \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{(L^1(X))\dual}
-  ,\end{align*}
+- Since $\norm{\Lambda}_{1\dual}$ is a supremum over *all* $f \in L^1(X)$ with $\norm{f}_1 =1$, 
+\[
+\abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{(L^1(X))\dual}
+,\]
 
-  - Then
-  \begin{align*}
+- Then
+\[
 \frac{\abs{\Lambda(f)}}{\norm{f}_1} &= \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{L^1(X)\dual} \\
-  \implies \abs{\Lambda(f)} 
-  &\leq \norm{\Lambda}_{1\dual} \cdot \norm{f}_1 \\
-  &\leq \norm{\Lambda}_{1\dual} \cdot C \norm{f}_2 < \infty \quad\text{by assumption}
-  ,\end{align*}
+\implies \abs{\Lambda(f)} 
+&\leq \norm{\Lambda}_{1\dual} \cdot \norm{f}_1 \\
+&\leq \norm{\Lambda}_{1\dual} \cdot C \norm{f}_2 < \infty \quad\text{by assumption}
+,\]
 
-  - So $\Lambda \in (L^2)\dual$.
+- So $\Lambda \in (L^2)\dual$.
 
-- Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
+Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
 
-#### (ii): $g$ is in $L^\infty$
+#### 2: $g$ is in $L^\infty$
 
 - It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
 - Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. 
   \todo[inline]{Is this assumed..? Or did we show it..?}
 
 - Claim: $\norm{\Lambda}_{L^1(X)\dual} =\norm{g}_{L^\infty(X)}$
-  - The result follows because $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.
+  - The result will follow since $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.
   - $\leq$: 
-  \begin{align*}
+  \[
   \norm{\Lambda}_{L^1(X)\dual} 
   &= \sup_{\norm{f}_1 = 1} \abs{\Lambda(f)} \\
 &= \sup_{\norm{f}_1 = 1} \abs{\int_X f \bar g} \quad\text{by (i)}\\
@@ -3384,7 +3318,7 @@ Let $\Lambda \in L^1(X)\dual$ be arbitrary.
   &\definedas \sup_{\norm{f}_1 = 1} \norm{fg}_1 \\
   &\leq \sup_{\norm{f}_1 = 1} \norm{f}_1 \norm{g}_\infty \quad\text{by Holder with } p=1,q=\infty\\
   &= \norm{g}_\infty
-  ,\end{align*}
+  ,\]
 
   - $\geq$:
 
@@ -3393,34 +3327,34 @@ Let $\Lambda \in L^1(X)\dual$ be arbitrary.
     - Then there exists some $E\subseteq X$ with $m(E) > 0$ such that $$x\in E \implies \abs{g(x)} > \norm{\Lambda}_{L^1(X)\dual}.$$
 
     - Define 
-    \begin{align*}
+    \[
     h = \frac{1}{m(E)} \frac{\overline{g}}{\abs g} \chi_E
-    .\end{align*}
+    .\]
   
     - Note $\norm{h}_{L^1(X)} = 1$.
     
     - Then
-    \begin{align*}
+    \[
     \Lambda(h) &= \int_X hg \\
     &\definedas \int_X \frac{1}{m(E)} \frac{g \overline g}{\abs g} \chi_E \\
     &= \frac{1}{m(E)} \int_E \abs{g} \\
     &\geq \frac{1}{m(E)} \norm{g}_\infty m(E) \\
     &= \norm{g}_\infty \\
     &> \norm{\Lambda}_{L^1(X)\dual}
-    ,\end{align*}
+    ,\]
       a contradiction since $\norm{\Lambda}_{L^1(X)\dual}$ is the supremum over all $h_\alpha$ with $\norm{h_\alpha}_{L^1(X)} = 1$.
 
 :::
 
 
 
-## Spring 2016 # 6
+## Spring 2016 # 6 $\work$
 Without using the Riesz Representation Theorem, compute
 \[
 \sup \left\{\left|\int_{0}^{1} f(x) e^{x} d x\right| \suchthat f \in L^{2}([0,1], m),~~ \|f\|_{2} \leq 1\right\}
 \]
 
-## Spring 2015 # 5
+## Spring 2015 # 5 $\work$
 Let $\mathcal H$ be a Hilbert space.
 
 1. Let $x\in \mathcal H$ and $\theset{u_n}_{n=1}^N$ be an orthonormal set.
@@ -3430,14 +3364,14 @@ Let $\mathcal H$ be a Hilbert space.
   $$
 2. Conclude that finite dimensional subspaces of $\mathcal H$ are always closed.
 
-## Fall 2015 # 6
+## Fall 2015 # 6 $\work$
 Let $f: [0, 1] \to \RR$ be continuous.
 Show that
 \[
 \sup \left\{\|f g\|_{1} \suchthat g \in L^{1}[0,1],~~ \|g\|_{1} \leq 1\right\}=\|f\|_{\infty}
 \]
 
-## Fall 2014 # 6
+## Fall 2014 # 6 $\work$
 Let $1 \leq p,q \leq \infty$ be conjugate exponents, and show that
 \[
 f \in L^p(\RR^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x) g(x) d x\right|
@@ -3445,19 +3379,21 @@ f \in L^p(\RR^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x) g(x) d 
 
 # Functional Analysis: Banach Spaces
 
-## Spring 2019 # 1
+## Spring 2019 # 1 $\done$
 Let $C([0, 1])$ denote the space of all continuous real-valued functions on $[0, 1]$.
   
 a. Prove that $C([0, 1])$ is complete under the uniform norm $\norm{f}_u := \displaystyle\sup_{x\in [0,1]} |f (x)|$.
 
 b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 = \displaystyle\int_0^1 |f (x)| ~dx$.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 
 ### a
@@ -3476,7 +3412,7 @@ $$
     - Fix an $x_0 \in I$. Since $f_n \to f$ pointwise, choose $N_1$ large enough so that $$n\geq N_1 \implies \abs{f_n(x_0) - f(x_0)} < \eps/2.$$
     - Since $\norm{f_n - f_m}_\infty \to 0$, choose and $N_2$ large enough so that $$n, m \geq N_2 \implies \norm{f_n - f_m}_\infty < \eps/2.$$
     - Then for $n, m \geq \max(N_1, N_2)$, we have
-  \begin{align*}
+  \[
         \abs{f_n(x_0) - f(x_0)} 
   &=    \abs{f_n(x_0) - f(x_0) + f_m(x_0) - f_m(x_0)} \\
   &=    \abs{f_n(x_0) - f_m(x_0) + f_m(x_0) - f(x_0)} \\
@@ -3488,7 +3424,7 @@ $$
   \implies \abs{f_n(x_0) - f(x_0)} &< \eps\\
   \implies \sup_{x\in I} \abs{f_n(x_0) - f(x_0)} &\leq \sup_{x\in I} \eps \quad\text{by order limit laws} \\
   \implies \norm{f_n - f} &\leq \eps\\
-  .\end{align*}
+  .\]
 
 - $f$ is the uniform limit of continuous functions and thus continuous, so $f\in C([0, 1])$.
 
@@ -3517,18 +3453,20 @@ $$
 
 
 
-## Spring 2017 # 6
+## Spring 2017 # 6 $\done$
 Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \[
 \|f\|:=\sup _{x \in[a, b]}|f(x)|+\sup _{x \in[a, b]}\left|f^{\prime}(x)\right|.
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
-
-**Solution**:
+:::
 
 - Denote this norm $\norm{\wait}_u$
 
@@ -3568,7 +3506,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 
 
-## Fall 2017 # 6
+## Fall 2017 # 6 $\done$
 Let $X$ be a complete metric space and define a norm
 $$
 \|f\|:=\max \{|f(x)|: x \in X\}.
@@ -3576,15 +3514,17 @@ $$
 
 Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\to \RR$) is complete.
 
+\todo[inline]{Add concepts.}
+\todo[inline]{Shouldn't this be a supremum? The max may not exist?}
+\todo[inline]{Review and clean up.}
+
 :::{.solution}
-Concepts used:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
-- ??
-
-**Solution**:
-
-
-> Should be supremum maybe..?
 
 Let $\theset{f_k}$ be a Cauchy sequence, so $\norm{f_k} < \infty$ for all $k$.
 Then for a fixed $x$, the sequence $f_k(x)$ is Cauchy in $\RR$ and thus converges to some $f(x)$, so define $f$ by $f(x) \definedas \lim_{k\to\infty} f_k(x)$.
@@ -3593,7 +3533,7 @@ Then $\norm{f_k - f} = \max_{x\in X}\abs{f_k(x) - f(x)} \converges{k\to\infty}\t
 
 Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm{f_N} \definedas M < \infty$
 
-\begin{align*}
+\[
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
-.\end{align*}
+.\]
 :::

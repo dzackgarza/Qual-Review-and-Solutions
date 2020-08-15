@@ -1,6 +1,6 @@
 # Several Variables (8155h)
 
-## 1
+## 1 $\work$
 Is the following function continuous, differentiable, continuously differentiable?
 \[  
 f: \RR^2 &\to \RR  \\
@@ -11,59 +11,59 @@ f(x, y) &=
 \end{cases}
 \]
 
-## 2
+## 2 $\work$
 
-### a 
+### a  $\work$
 Complete this definition: "$f: \RR^n\to \RR^m$ is real-differentiable a point $p\in \RR^n$ iff there exists a linear transformation..."
 
-### b
+### b $\work$
 Give an example of a function $f:\RR^2\to \RR$ whose first-order partial derivatives exist everywhere but $f$ is not differentiable at $(0, 0)$.
 
-### c
+### c $\work$
 Give an example of a function $f: \RR^2 \to \RR$ which is real-differentiable everywhere but nowhere complex-differentiable.
 
-## 3
+## 3 $\work$
 Let $f:\RR^2\to \RR$.
 
-### a
+### a $\work$
 Define in terms of linear transformations what it means for $f$ to be differentiable at a point $(a, b) \in \RR^2$.
 
-### b
+### b $\work$
 State a version of the inverse function theorem in this setting.
 
-### c
+### c $\work$
 Identify $\RR^2$ with $\CC$ and give a necessary and sufficient condition for a real-differentiable function at $(a, b)$ to be complex differentiable at the point $a+ib$.
 
-## 4
+## 4 $\work$
 Let $f = u+iv$ be complex-differentiable with continuous partial derivatives at a point $z = re^{i\theta}$ with $r\neq 0$.
 Show that
 \[  
 \dd{u}{r} = {1\over r}\dd{v}{\theta} \qquad \dd{v}{r} = -{1\over r}\dd{u}{\theta}
 .\]
 
-## 5
+## 5 $\work$
 Let $P = (1, 3) \in \RR^2$ and define
 \[  
 f(s, t) \definedas ps^3 -6st + t^2
 .\]
 
-### a
+### a $\work$
 State the conclusion of the implicit function theorem concerning $f(s, t) = 0$ when $f$ is considered a function $\RR^2\to\RR$.
 
-### b
+### b $\work$
 State the above conclusion when $f$ is considered a function $\CC^2\to \CC$.
 
-### c
+### c $\work$
 Use the implicit function theorem for a function $\RR\cross \RR^2 \to \RR^2$ to prove (b).
 
 > There are various approaches: using the definition of the complex derivative, the Cauchy-Riemann equations, considering total derivatives, etc.
 
-## 6
+## 6 $\work$
 Let $F:\RR^2\to \RR$ be continuously differentiable with $F(0, 0) = 0$ and $\norm{\nabla F(0, 0)} < 1$.
 
 Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenever $\norm{(x, y)} < r$.
 
-## 7
+## 7 $\work$
 State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
 
 

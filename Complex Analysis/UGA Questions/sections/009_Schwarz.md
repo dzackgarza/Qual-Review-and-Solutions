@@ -1,26 +1,26 @@
 # Schwarz Lemma and Reflection Principle (8155i)
 
-## 1
+## 1 $\work$
 Suppose $f:\DD\to\DD$ is analytic and admits a continuous extension $\tilde f: \bar \DD \to \bar \DD$ such that $\abs{z} = 1 \implies \abs{f(z)} = 1$.
 
-### a
+### a $\work$
 Prove that $f$ is a rational function.
 
-### b
+### b $\work$
 Suppose that $z=0$ is the unique zero of $f$.
 Show that
 \[  
 \exists n\in \NN, \lambda \in S^1 \qtext{ such that }f(z) = \lambda z^n
 .\]
 
-### c
+### c $\work$
 
 Suppose that $a_1, \cdots, a_n \in \DD$ are the zeros of $f$ and prove that
 \[  
 \exists \lambda \in S^1 \qtext{such that} f(z) = \lambda \prod_{j=1}^n {z - a_j \over 1 - \bar{a_j} z}
 .\]
 
-## 2
+## 2 $\work$
 Let $\bar B(a, r)$ denote the closed disc of radius $r$ about $a\in \CC$.
 Let $f$ be holomorphic on an open set containing $\bar B(a, r)$ and let 
 \[  
@@ -32,7 +32,7 @@ Prove that
 z\in \bar B\qty{a, {r\over 2}},\,z\neq a, \qquad {\abs{ f(z) - f(a)} \over \abs{z-a}} \leq {2M \over r}
 .\]
 
-## 3
+## 3 $\work$
 Define
 \[  
 G \definedas \theset{z\in \CC\suchthat \Re(z) > 0, \, \abs{z-1} > 1}
@@ -41,7 +41,7 @@ G \definedas \theset{z\in \CC\suchthat \Re(z) > 0, \, \abs{z-1} > 1}
 Find all of the injective conformal maps $G\to \DD$.
 These may be expressed as compositions of maps, but explain why this list is complete.
 
-## 4
+## 4 $\work$
 Suppose $f: \HH\union \RR\to \CC$ satisfies the following:
 
 - $f(i) = i$
@@ -51,31 +51,31 @@ Suppose $f: \HH\union \RR\to \CC$ satisfies the following:
 
 Show that $f(\HH)$ is a dense subset of $\HH$.
 
-## 5
+## 5 $\work$
 Suppose $f: \DD\to \HH$ is analytic and satisfies $f(0) = 2$.
 Find a sharp upper bound for $\abs{f'(0)}$, and prove it is sharp by example.
 
-## 6
+## 6 $\work$
 Suppose $f:\DD\to\DD$ is analytic, has a single zero of order $k$ at $z=0$, and satsifies $\lim_{\abs z \to 1} \abs{f(z)} = 1$.
 Give with proof a formula for $f(z)$.
 
-## 7
+## 7 $\work$
 
-### a
+### a $\work$
 State the standard Schwarz reflection principle involving reflection across the real axis.
 
-### b
+### b $\work$
 Give a linear fractional transformation $T$ mapping $\DD$ to $\HH$.
 Let $g(z) = \bar z$, and show
 \[  
 (T^{-1} \circ g \circ T)(z) = 1/\bar z
 .\]
 
-### c
+### c $\work$
 Suppose that $f$ is holomorphic on $\DD$, continuous on $\bar \DD$, and real on $S^1$.
 Show that $f$ must be constant.
 
-## 8
+## 8 $\work$
 Suppose $f, g: \DD\to \Omega$ are holomorphic with $f$ injective and $f(0) = g(0)$.
 
 Show that 
@@ -85,13 +85,13 @@ Show that
 
 > The first part of this problem asks for a statement of the Schwarz lemma.
 
-## 9
+## 9 $\work$
 Let $S\definedas \theset{z\in \DD\suchthat \Im(z) \geq 0}$.
 Suppose $f:S\to \CC$ is continuous on $S$, real on $S\intersect \RR$, and holomorphic on $S^\circ$.
 
 Prove that $f$ is the restriction of a holomorphic function on $\DD$.
 
-## 10
+## 10 $\work$
 Suppose $f:\DD\to \DD$ is analytic.
 Prove that 
 \[  

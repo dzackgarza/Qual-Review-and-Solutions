@@ -2004,65 +2004,14 @@ $$
 \end{array}\right]
 .\end{align*}
 
-Lemma
-: Every $a\in R$ for a finite ring is either a unit or a zero divisor.
-
-Proof
-: Let $a\in R$ and define $\phi(x) = ax$.
-  If $\phi$ is injective, then it is surjective, so $1 = ax$ for some $x \implies x\inv = a$.
-  Otherwise, $ax_1 = ax_2$ with $x_1 \neq x_2 \implies a(x_1 - x_2) = 0$ and $x_1 - x_2 \neq 0$, so $a$ is a zero divisor.
-
-Lemma
-: Maximal $\implies$ prime, but generally not the converse.
-
-Proof
-:   Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
-    Then there is a containment of ideals $\mm \subsetneq \mm + (b) \implies \mm + (b) = R$.
-
-    So
-    $$
-    1 = m + rb \implies a = am + r(ab)
-    ,$$
-    but $am\in \mm$ and $ab\in \mm \implies a\in \mm$.
-
-
-*Counterexample*: $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
-
-Lemma
-: The nilradical is the intersection of all prime ideals, i.e.
-  $$
-  \mathfrak{N}(R) = \intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
-  $$
-
-Proof
-:   $\mathfrak{N} \subseteq \intersect \mathfrak{p}$:
-    $x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
-
-    $\mathfrak{N}^c \subseteq \union \mathfrak{p}^c$:
-    Define $S = \theset{I\normal R \suchthat a^n\not\in I \text{ for any } n}$.
-    Then apply Zorn's lemma to get a maximal ideal $\mm$, and maximal $\implies$ prime.
-
-Lemma
-: $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
-
-Proof
-:   \hfill
-    \begin{align*}
-    a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
-    &\implies a^n \in \mathfrak N(R) \\
-    &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-    &\implies a\in \mathfrak N(R)
-    .\end{align*}
-
-Lemma
-: $\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)$.
-
-Proof
-: Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
-
-
-
 # Extra Problems
+
+## Commutative Algebra
+
+- Show that a finitely generated module over a Noetherian local ring is flat iff it is free using Nakayama and Tor.
+
+
+
 
 ## Group Theory
 
@@ -2311,6 +2260,8 @@ Generating Sets
 
   > So normality is not transitive, but strengthening one to "characteristic" gives a weak form of transitivity.
 
+#
+
 ## Ring Theory
 
 Basic Structure
@@ -2319,6 +2270,38 @@ Basic Structure
 - Show that $R\units$ need not be closed under addition.
 
 Ideals
+
+:::{.problem title="Units or Zero Divisors"}
+Every $a\in R$ for a finite ring is either a unit or a zero divisor.
+:::
+:::{.solution}
+\hfill
+- Let $a\in R$ and define $\phi(x) = ax$.
+- If $\phi$ is injective, then it is surjective, so $1 = ax$ for some $x \implies x\inv = a$.
+- Otherwise, $ax_1 = ax_2$ with $x_1 \neq x_2 \implies a(x_1 - x_2) = 0$ and $x_1 - x_2 \neq 0$
+- So $a$ is a zero divisor.
+:::
+
+:::{.problem title="Maximal implies prime"}
+Maximal $\implies$ prime, but generally not the converse.
+:::
+:::{.solution}
+
+- Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
+
+- Then there is a containment of ideals $\mm \subsetneq \mm + (b) \implies \mm + (b) = R$.
+
+- So
+\[
+1 = m + rb \implies a = am + r(ab)
+,\]
+  but $am\in \mm$ and $ab\in \mm \implies a\in \mm$.
+
+
+*Counterexample*: 
+$(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
+:::
+
 
 - Show that every proper ideal is contained in a maximal ideal
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
@@ -2329,10 +2312,7 @@ Ideals
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
-- Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
-- Show that if $R$ is a finite ring then every $a\in R$ is either a unit or a zero divisor.
-- Show that $R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
-- Show that the nilradical is contained in the Jacobson radical. 
+- $\star$ Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 - Show that every prime ideal is radical.
 - Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
@@ -2341,9 +2321,51 @@ Ideals
 
 Characterizing Certain Ideals
 
-- Show that the nilradical is the intersection of all prime ideals.
+- Show that the nilradical of a ring is the intersection of all prime ideals $I\normal R$.
 - Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
 - Show that $\rad(I)$ is the intersection of all prime ideals containing $I$.
+
+:::{.problem title="Jacobson radical is bigger than the nilradical"}
+The nilradical is contained in the Jacobson radical, i.e.
+\[
+\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)
+.\]
+:::
+:::{.solution}
+Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
+:::
+
+:::{.problem title="Mod by nilradical to kill nilpotents"}
+$R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
+:::
+:::{.solution}
+\hfill
+\[
+a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
+&\implies a^n \in \mathfrak N(R) \\
+&\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
+&\implies a\in \mathfrak N(R)
+.
+\]
+:::
+
+:::{.problem title="Nilradical is intersection of primes"}
+The nilradical is the intersection of all prime ideals, i.e.
+\[
+\mathfrak{N}(R) = \intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
+\]
+:::
+:::{.solution}
+- $\mathfrak{N} \subseteq \intersect \mathfrak{p}$:
+
+- $x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
+
+- $\mathfrak{N}^c \subseteq \union \mathfrak{p}^c$:
+
+- Define $S = \theset{I\normal R \suchthat a^n\not\in I \text{ for any } n}$.
+
+- Then apply Zorn's lemma to get a maximal ideal $\mm$, and maximal $\implies$ prime.
+:::
 
 Misc
 
@@ -2354,6 +2376,12 @@ Misc
 - Show that every prime ideal is primary.
 - Show that every prime ideal is irreducible.
 - Show that
+
+
+
+
+
+
 
 ## Field Theory
 
@@ -2385,6 +2413,8 @@ Special Polynomials
 - Prove that $x^{p^n}-x$ is the product of all monic irreducible polynomials in $\FF_p[x]$ with degree dividing $n$.
 - Prove that an irreducible $\pi(x)\in \FF_p[x]$ divides $x^{p^n}-x \iff \deg \pi(x)$ divides $n$.
 
+
+
 ## Galois Theory
 
 ### Theory
@@ -2412,6 +2442,8 @@ Special Polynomials
 - Show that $\gal(x^{15}+2)/\QQ \cong S_2 \semidirect \ZZ/15\ZZ$ for $S_2$ a Sylow $2\dash$subgroup.
 - Show that $\gal(x^3+4x+2)/\QQ \cong S_3$, a symmetric group.
 
+
+
 ## Modules and Linear Algebra
 
 - Prove the Cayley-Hamilton theorem.
@@ -2426,9 +2458,1183 @@ Special Polynomials
 - Show that if $\theset{\vector v_i}$ is a basis for $V$ where $\dim(V) = n$ and $T(\vector v_i) = \vector v_{i+1 \mod n}$ then $T$ is diagonalizable with minimal polynomial $x^n-1$.
 - Show that if the minimal polynomial of a linear map $T$ is irreducible, then every $T\dash$invariant subspace has a $T\dash$invariant complement.
 
-## Commutative Algebra
-
-- Show that a finitely generated module over a Noetherian local ring is flat iff it is free using Nakayama and Tor.
 
 
+## Linear Algebra
 
+\todo[inline]{Sort out from module section.}
+
+
+
+# Even More Algebra Question (In Progress)
+
+## Groups
+
+### Question 1.1
+What is a normal subgroup?
+Can you get some natural map from a normal subgroup?
+What topological objects can the original group, normal subgroup, and quotient group relate to?
+
+### Question 1.2
+Prove that a subgroup of index two is normal.
+
+### Question 1.3
+Find all normal subgroups of $A_4$.
+
+### Question 1.4
+Give an interesting example of a non-normal subgroup.
+Is SO(2) normal inside SL2(R)?
+
+### Question 1.5
+Is normality transitive?
+That is, is a normal subgroup of a normal subgroup normal in the biggest group?
+
+
+### Question 1.6. 
+Define a solvable group.
+Give an example of a solvable nonabelian group.
+
+Show \(A_4\) is solvable.
+Do the Sylow theorems tell you anything about whether this index 3 subgroup of \(A_4\) is normal?
+
+### Question 1.7
+Define lower central series, upper central series, nilpotent and solvable groups.
+
+### Question 1.8
+Define the derived series.
+Define the commutator.
+State and prove two nontrivial theorems about derived series.
+
+### Question 1.9
+Prove that SL2(Z) is not solvable.
+
+### Question 1.10
+What are all possible orders of elements of SL2(Z)?
+
+### Question 1.11
+Can you show that all groups of order $p^n$ for $p$ prime are solvable?
+Do you know how to do this for groups of order $p^r q^s$?
+
+### Question 1.12
+Suppose a p-group acts on a set whose cardinality is not divisible by p (p prime).
+Prove that there is a fixed point for the action.
+
+### Question 1.13
+Prove that the centre of a group of order pr (p prime) is not trivial.
+
+### Question 1.14
+Give examples of simple groups.
+Are there infinitely many?
+
+### Question 1.15
+State and prove the Jordan-Holder theorem for finite groups.
+
+### Question 1.16
+What's Cayley's theorem?
+Give an example of a group of order $n$ that embeds in $S_m$ for some $m$ smaller than $n$.
+
+Give an example of a group where you have to use $S_n$.
+
+### Question 1.17
+Is \(A_4\) a simple group?
+What are the conjugacy classes in $S_4$?
+What about in \(A_4\)?
+
+### Question 1.18
+Talk about conjugacy classes in the symmetric group $S_n$.
+
+### Question 1.19
+When do conjugacy classes in $S_n$ split in $A_n$?
+
+### Question 1.20
+What is the centre of $S_n$?
+Prove it.
+
+### Question 1.21
+Prove that the alternating group $A_n$ is simple for $n \geq 5$.
+
+### Question 1.22
+Prove the alternating group on $n$ letters is generated by the 3-cycles for $n \geq 3$.
+
+### Question 1.23
+Prove that for p prime, Sp is generated by a p-cycle and a transposition.
+
+### Question 1.24
+What is the symmetry group of a tetrahedron?
+Cube?
+Icosahedron?
+
+### Question 1.25
+How many ways can you color the tetrahedron with C colors if we identify symmetric colorings?
+
+
+### Question 1.26. 
+What is the symmetry group of an icosahedron?
+What's the stabiliser of an edge? 
+
+How many edges are there?
+How do you know the symmetry group of the icosahedron is the same as the symmetry group of the dodecahedron?
+
+Do you know the classification of higher-dimensional polyhedra?
+
+### Question 1.27
+Do you know what the quaternion group is?
+How many elements are there of each order?
+
+### Question 1.28
+What is the group of unit quaternions topologically?
+What does it have to do with SO(3)?
+
+### Question 1.29
+What's the stabiliser of a point in the unit disk under the group of conformal automorphisms?
+
+### Question 1.30
+What group-theoretic construct relates the stabiliser of two points?
+
+### Question 1.31
+Consider SL2(R) acting on $\RR^2$ by matrix multiplication.
+What is the stabiliser of a point?
+Does it depend which point?
+Do you know what sort of subgroup this is?
+What if SL2(R) acts by Möbius transformations instead?
+
+### Question 1.32
+What are the polynomials in two real variables that are invariant under the action of $D_4$, the symmetry group of a square, by rotations and reflections on the plane that the two variables form?
+
+### Question 1.33
+Give an interesting example of a subgroup of the additive group of the rationals.
+
+### Question 1.34
+Talk about the isomorphism classes of subgroups of Q.
+How many are there?
+Are the ones you've given involving denominators divisible only by certain primes distinct?
+So that gives you the cardinality.
+Are these all of them?
+
+### Question 1.35
+Is the additive group of the reals isomorphic to the multiplicative group of the positive reals?
+Is the same result true with reals replaced by rationals?
+
+### Question 1.36
+What groups have nontrivial automorphisms?
+
+### Question 1.37
+A subgroup $H$ of a group $G$ that meets every conjugacy class is in fact $G$.
+Why is that true?
+
+### Question 1.38
+Let $G$ be the group of invertible $3\times 3$ matrices over $\FF_p$, for $p$ prime.
+What does basic group theory tell us about $G$?
+
+How many conjugates does a Sylow p-subgroup have?
+Give a matrix form for the elements in this subgroup.
+
+Explain the conjugacy in terms of eigenvalues and eigenvectors. give a matrix form for the normaliser of the Sylow p-subgroup.
+
+### Question 1.39
+Let's look at $\SL_2(\FF_3)$.
+How many elements are in that group?
+What is its centre?
+Identify $\PSL_2(\FF_3)$ as a permutation group.
+
+### Question 1.40
+How many elements does $\gl_2(\FF_q)$ have?
+How would you construct representations?
+
+What can you say about the 1-dimensional representations?
+What can you say about simplicity of some related groups?
+
+### Question 1.41.
+A subgroup of a finitely-generated free abelian group is?
+
+A subgroup of a finitely-generated free group is..?
+Prove your answers.
+
+### Question 1.42
+What are the subgroups of \\todo[inline]{??}
+
+### Question 1.43
+What are the subgroups of the free group $F_2$?
+How many generators can you have?
+
+Can you find one with 3 generators? 4 generators? Countably many generators?
+
+Is the subgroup with 4 generators you found normal?
+Why?
+Can you find a normal one?
+
+### Question 1.44
+Talk about the possible subgroups of $Z\times Z \times Z$.
+Now suppose that you have a subgroup of $Z \times Z \times Z$.
+What theorem tells you something about the structure of the quotient group?
+
+## Classification of Finite groups
+
+### Question 2.1
+Given a finite abelian group with at most n elements of order divisible by n, prove it's cyclic.
+
+### Question 2.2
+Suppose I asked you to classify groups of order 4.
+Why isn't there anything else?
+Which of those could be realised as a galois group over Q?
+
+### Question 2.3
+State/prove the Sylow theorems.
+
+### Question 2.4
+Classify groups of order 35.
+
+### Question 2.5
+Classify groups of order 21.
+
+### Question 2.6
+Discuss groups of order 55.
+
+### Question 2.7
+Classify groups of order 14.
+Why is there a group of order 7?
+Are all index-2 subgroups normal?
+
+### Question 2.8
+How many groups are there of order 15?
+Prove it.
+
+### Question 2.9
+Classify all groups of order 8.
+
+### Question 2.10
+Classify all groups of order p3 for p prime.
+
+### Question 2.11
+What are the groups of order p2?
+What about pq?
+What if q is congruent to 1 (mod p)?
+
+### Question 2.12
+What are the groups of order 12?
+Can there be a group of order 12 with 2 nonisomorphic subgroups of the same order?
+
+### Question 2.13
+How would you start finding the groups of order 56?
+Is there in fact a way for Z/7Z to act on a group of order 8 nontrivially?
+
+### Question 2.14
+How many abelian groups are there of order 36?
+
+### Question 2.15
+What are the abelian groups of order 16?
+
+
+### Question 2.16. 
+What are the abelian groups of order 9?
+Prove that they are not isomorphic. groups of order 27?
+
+### Question 2.17
+How many abelian groups of order 200 are there?
+
+### Question 2.18
+Prove there is no simple group of order 132.
+
+### Question 2.19
+Prove that there is no simple group of order 160.
+What can you say about the structure of groups of that order?
+
+### Question 2.20
+Prove that there is no simple group of order 40.
+
+## Fields and galois Theory
+
+### Question 3.1
+What is the galois group of a finite field?
+What is a generator?
+How many elements does a finite field have?
+What can you say about the multiplicative group?
+Prove it.
+
+### Question 3.2
+Classify finite fields, their subfields, and their field extensions.
+What are the automorphisms of a finite field?
+
+### Question 3.3
+Take a finite field extension Fpn over Fp.
+What is Frobenius?
+What is its characteristic polynomial?
+
+### Question 3.4
+What are the characteristic and minimal polynomial of the Frobenius auto- morphism?
+
+### Question 3.5
+What's the field with 25 elements?
+
+### Question 3.6
+What is the multiplicative group of F9?
+
+### Question 3.7
+What is a separable extension?
+Can Q have a non-separable extension?
+How about Z/pZ?
+Why not?
+Are all extensions of characteristic 0 fields separable?
+Of finite fields?
+Prove it.
+
+Give an example of a field extension that's not separable.
+
+### Question 3.8
+Are there separable polynomials of any degree over any field?
+
+### Question 3.9
+What is a perfect field and why is this important?
+Give an example of a non-perfect field.
+
+### Question 3.10
+What is galois theory?
+State the main theorem.
+What is the splitting field of $x^5 - 2$ over Q?
+What are the intermediate extensions?
+Which extensions are normal, which are not, and why?
+What are the galois groups (over Q) of all intermediate extensions?
+
+### Question 3.11
+What is a galois extension?
+
+### Question 3.12
+Take a quadratic extension of a field of characteristic 0.
+Is it galois?
+Take a degree 2 extension on top of that.
+Does it have to be galois over the base field?
+What statement in group theory can you think of that reﬂects this?
+
+
+### Question 3.13. 
+Is abelian galois extension transitive?
+That is, if K has abelian galois group over E, E has abelian galois group over F , and K is a galois extension of F , is it necessarily true that gal(K/F ) is also abelian? give a counterexample involving number fields as well as one involving function fields.
+
+### Question 3.14
+What is a Kummer extension?
+
+### Question 3.15
+Say you have a field extension with only finitely many intermediate fields.
+Show that it is a simple extension.
+
+### Question 3.16
+Tell me a condition on the galois group which is implied by irreducibility of the polynomial.
+What happens when the polynomial has a root in the base field?
+
+### Question 3.17
+What is the discriminant of a polynomial?
+
+### Question 3.18
+If we think of the galois group of a polynomial as contained in $S_n$, when is it contained in $A_n$?
+
+### Question 3.19
+Is Q(21/3) normal?
+What is its splitting field?
+What is its galois group?
+Draw the lattice of subfields.
+
+### Question 3.20
+What's the galois group of $x^2 + 1$ over Q?
+What's the integral closure of
+Z in Q(i)?
+
+### Question 3.21
+What's the galois group of $x^2 + 9$?
+
+### Question 3.22
+What is the galois group of $x^2 - 2$?
+Why is $x^2 - 2$ irreducible?
+
+### Question 3.23
+What is the galois group of Q(
+
+### Question 3.24
+What is the galois group of 
+\todo[inline]{Missing} over Q?
+
+### Question 3.25
+What are the galois groups of irreducible cubics?
+\todo[inline]{Missing}
+
+### Question 3.26
+If an irreducible cubic polynomial has galois group NOT contained in A3, does it necessarily have to be all of $S_3$?
+
+### Question 3.27
+Compute the galois group of $x^3 - 2$ over the rationals.
+
+### Question 3.28
+How would you find the galois group of $x^3 + 2x + 1$?
+Adjoin a root to Q.
+Can you say something about the roots of $x^3 + 3x + 1$ in this extension?
+
+### Question 3.29
+Compute the galois group of $x^3 + 6x + 3$.
+
+### Question 3.30
+Find the galois group of $x^4 - 2$ over Q.
+
+### Question 3.31
+What's the galois group of $x^4 - 3$?
+
+### Question 3.32
+What is the galois group of $x^4 - 2x^2 + 9$?
+
+### Question 3.33
+Calculate the galois group of $x^5 - 2$.
+
+
+### Question 3.34. 
+Discuss suﬃcient conditions on a polynomial of degree 5 to have galois group $S_5$ over Q and prove your statements.
+
+### Question 3.35
+Show that if f is an irreducible quintic with precisely two nonreal roots, then its galois group is $S_5$.
+
+### Question 3.36
+Suppose you have a degree 5 polynomial over a field.
+What are necessary and suﬃcient conditions for its galois group to be of order divisible by 3?
+Can you give an example of an irreducible polynomial in which this is not the case?
+
+### Question 3.37
+What is the galois group of $x^7 - 1$ over the rationals?
+
+### Question 3.38
+What is the galois group of the polynomial xn - 1 over Q?
+
+### Question 3.39
+Describe the galois theory of cyclotomic extensions.
+
+### Question 3.40
+What is the maximal real field in a cyclotomic extension $\QQ(\zeta_n)/\QQ$?
+
+### Question 3.41
+Compute the galois group of $p(x) = x^7 - 3$.
+
+### Question 3.42
+What galois stuff can you say about $x^2n - 2$?
+
+### Question 3.43
+What are the cyclic extensions of (prime) order p?
+
+### Question 3.44
+Can you give me a polynomial whose galois group is Z/3Z?
+
+### Question 3.45
+Which groups of order 4 can be realised as a galois group over Q?
+
+### Question 3.46
+Give a polynomial with $S_3$ as its galois group.
+
+### Question 3.47
+Give an example of a cubic with galois group $S_3$.
+
+### Question 3.48
+How do you construct a polynomial over Q whose galois group is $S_n$?
+Do it for n = 7 in particular.
+
+### Question 3.49
+What's a galois group that's not $S_n$ or $A_n$?
+
+### Question 3.50
+Which finite groups are galois groups for some field extension?
+
+### Question 3.51
+What galois group would you expect a cubic to have?
+
+### Question 3.52
+Draw the subgroup lattice for $S_3$.
+
+### Question 3.53
+Do you know what the quaternion group is?
+How many elements are there of each order?
+Suppose I have a field extension of the rationals with galois group the quaternion group.
+How many quadratic extensions does it contain?
+Can any of them be imaginary?
+
+### Question 3.54
+Suppose you are given a finite galois extension K/Q by $f (x) \in \ZZ[x]$ such that deg(f ) = n and gal(K/Q) = $S_n$.
+What can you say about the roots?
+
+### Question 3.55
+How many automorphisms does the complex field have?
+How can you extend
+2) of an algebraic field into C?
+How can you extend a simple automorphism (e.g. a general subfield isomorphism?
+What feature of C allows you to?
+\todo[inline]{Missing}
+
+
+### Question 3.56. 
+Can it happen that a proper subfield of C is isomorphic to C?
+How?
+
+### Question 3.57
+Consider the minimal polynomial f (x) for a primitive mth root of unity.
+Prove that if p divides f (a) for some integer a and (p, m) = 1 then m divides p - 1.
+Use this fact to show that there are infinitely many primes congruent to 1 (mod m).
+
+### Question 3.58
+What is Dirichlet's theorem about primes in arithmetic progression?
+What can you say about the density of such primes?
+
+### Question 3.59
+How many irreducible polynomials of degree six are there over F2?
+
+### Question 3.60
+Can you have a degree 7 irreducible polynomial over Fp?
+How about a degree 14 irreducible polynomial?
+
+### Question 3.61
+How many irreducible polynomials are there of degree 4 over F2?
+
+### Question 3.62
+For each prime p, give a polynomial of degree p that is irreducible over Fp.
+You can do it in a “uniform” way.
+
+### Question 3.63
+Can we solve general quadratic equations by radicals?
+$A_n$d what about cubic and so on?
+Why can't you solve 5th degree equations by radicals?
+
+### Question 3.64
+Talk about solvability by radicals.
+Why is $S_5$ not solvable?
+Why is A5 simple?
+
+### Question 3.65
+For which n can a regular n-gon be constructed by ruler and compass?
+
+### Question 3.66
+How do you use galois theory (or just field theory) to prove the impossibility of trisecting an angle?
+Doubling a cube?
+Squaring a circle?
+
+### Question 3.67
+Which numbers are constructible?
+Give an example of a non-constructible number whose degree is nevertheless a power of 2.
+
+### Question 3.68
+State and prove Eisenstein's Criterion.
+### Question 3.69
+Why is (xp - 1)/(x - 1) irreducible over Q?
+
+### Question 3.70
+Can you prove the fundamental theorem of algebra using galois theory?
+What do you need from analysis to do so?
+
+### Question 3.71
+What are the symmetric polynomials?
+
+### Question 3.72
+State the fundamental theorem of symmetric polynomials.
+
+### Question 3.73
+Is the discriminant of a polynomial always a polynomial in the coefficients?
+What does this have to do with symmetric polynomials?
+
+### Question 3.74
+Find a non-symmetric polynomial whose square is symmetric.
+
+### Question 3.75
+Let f be a degree 4 polynomial with integer coefficients.
+What's the smallest finite field in which f necessarily has four roots?
+
+### Question 3.76
+Define p-adic numbers.
+What is a valuation?
+
+### Question 3.77
+What's Hilbert's theorem 90?
+
+### Question 3.78
+Consider a nonconstant function between two compact Riemann Surfaces.
+How is it related to galois theory?
+
+## Normal Forms
+
+### Question 4.1
+What is the connection between the structure theorem for modules over a
+PID and conjugacy classes in the general linear group over a field?
+
+### Question 4.2
+Explain how the structure theorem for finitely-generated modules over a PID applies to a linear operator on a finite dimensional vector space.
+
+### Question 4.3
+I give you two matrices over a field.
+How would you tell if they are conjugate or not?
+What theorem are you using?
+State it.
+How does it apply to this situation?
+Why is $\kk[T]$ a PID?
+If two matrices are conjugate over the algebraic closure of a field, does that mean that they are conjugate over the base field too?
+
+### Question 4.4
+If two real matrices are conjugate in Mn(C), are they necessarily conjugate in Mn(R) as well?
+
+### Question 4.5
+Give the $4 \times 4$ Jordan forms with minimal polynomial (x - 1)(x - 2)2.
+
+### Question 4.6
+Talk about Jordan canonical form.
+What happens when the field is not algebraically closed?
+
+### Question 4.7
+What are all the matrices that commute with a given Jordan block?
+
+### Question 4.8
+How do you determine the number and sizes of the blocks for Jordan canonical form?
+
+### Question 4.9
+For any matrix A over the complex numbers, can you solve B2 = A?
+
+### Question 4.10
+What is rational canonical form?
+
+### Question 4.11
+Describe all the conjugacy classes of $3 \times 3$ matrices with rational entries which satisfy the equation \(A^4 - A^3 - A + 1 = 0\).
+Give a representative in each class.
+
+### Question 4.12
+What $3 \times 3$ matrices over the rationals (up to similarity) satisfy f (A) = 0, where$f (x) = (x^2 + 2)(x - 1)^3$?
+List all possible rational forms.
+\todo[inline]{Check}
+
+### Question 4.13
+What can you say about matrices that satisfy a given polynomial (over an algebraically closed field)?
+How many of them are there?
+What about over a finite field?
+How many such matrices are there then?
+
+### Question 4.14
+What is a nilpotent matrix?
+
+### Question 4.15
+When do the powers of a matrix tend to zero?
+
+### Question 4.16
+If the traces of all powers of a matrix A are 0, what can you say about A?
+
+### Question 4.17
+When and how can we solve the matrix equation exp(A) = B?
+Do it over the complex numbers and over the real numbers. give a counterexample with real entries.
+
+### Question 4.18
+Say we can find a matrix A such that exp(A) = B for B in SLn(R).
+Does
+A also have to be in SLn(R)?
+Can you take A to be in SLn(R)?
+
+### Question 4.19
+Is a square matrix always similar to its transpose?
+
+### Question 4.20
+What are the conjugacy classes of SL2(R)?
+
+### Question 4.21
+What are the conjugacy classes in gL2(C)?
+
+## Matrices and Linear Algebra
+
+### Question 5.1
+What is a bilinear form on a vector space?
+When are two forms equivalent?
+What is an orthogonal matrix?
+What's special about them?
+
+### Question 5.2
+What are the possible images of the unit circle under a linear transformation of R2?
+
+### Question 5.3
+Explain geometrically how you diagonalise a quadratic form.
+
+### Question 5.4
+Do you know Witt's theorem on real quadratic forms?
+
+### Question 5.5
+Classify real division algebras.
+
+### Question 5.6
+Consider the simple operator on C given by multiplication by a complex number.
+It decomposes into a stretch and a rotation.
+What is the generalisation of this to operators on a Hilbert space?
+
+### Question 5.7
+Do you know about singular value decomposition?
+
+### Question 5.8
+What are the eigenvalues of a symmetric matrix?
+
+### Question 5.9
+What can you say about the eigenvalues of a skew-symmetric matrix?
+
+### Question 5.10
+Prove that the eigenvalues of a Hermitian matrix are real and those of a unitary matrix are unitary.
+
+### Question 5.11
+Prove that symmetric matrices have real eigenvalues and can be diagonalised by orthogonal matrices.
+
+### Question 5.12
+To which operators does the spectral theorem for symmetric matrices generalise?
+
+### Question 5.13
+Given a skew-symmetric/skew-Hermitian matrix S, show that 
+$U = (S + I)(S - I)-1$ 
+is orthogonal/unitary.
+Then find an expression for S in terms of U .
+
+### Question 5.14
+If a linear transformation preserves a nondegenerate alternating form and has k as an eigenvalue, prove that 1/k is also an eigenvalue.
+
+### Question 5.15
+State/prove the Cayley–Hamilton theorem.
+
+### Question 5.16
+Are diagonalisable $N \times N$ matrices over the complex numbers dense in the space of all $N \times N$ matrices over the complex numbers?
+How about over another algebraically closed field if we use the Zariski topology?
+
+### Question 5.17
+For a linear ODE with constant coefficients, how would you solve it using linear algebra?
+
+### Question 5.18
+What can you say about the eigenspaces of two matrices that commute with each other?
+
+### Question 5.19
+What is a Toeplitz operator?
+
+### Question 5.20
+What is the number of invertible matrices over Z/pZ?
+
+## Rings
+
+### Question 6.1
+State the Chinese remainder theorem in any form you like.
+Prove it.
+
+### Question 6.2
+What is a PID?
+What's an example of a UFD that is not a PID?
+Why?
+Is k[x] a PID?
+Why?
+
+### Question 6.3
+Is C[x, y] a PID?
+Is (cid:104)x, y(cid:105) a prime ideal in it?
+
+### Question 6.4
+Do polynomials in several variables form a PID?
+
+### Question 6.5
+Prove that the integers form a PID.
+
+### Question 6.6
+Give an example of a PID with a unique prime ideal.
+
+### Question 6.7
+What is the relation between Euclidean domains and PIDs?
+
+### Question 6.8
+Do you know a PID that's not Euclidean?
+
+### Question 6.9
+Give an example of a UFD which is not a Euclidean domain.
+
+### Question 6.10
+Is a ring of formal power series a UFD?
+
+### Question 6.11
+Is a polynomial ring over a UFD again a UFD?
+
+\todo[inline]{Check?}
+
+### Question 6.12
+What does factorisation over Q[x] say about factorisation over Z[x]?
+
+### Question 6.13
+Give an example of a ring where unique factorisation fails.
+
+### Question 6.14
+Factor 6 in two different ways in $Z[\sqrt{-5}]$ 
+Is there any way to explain the two factorisations?
+Factor the ideal generated by 6 into prime ideals.
+
+### Question 6.15
+What's the integral closure of Z in Q(i)?
+
+### Question 6.16
+Find all primes in the ring of Gaussian integers.
+
+### Question 6.17
+What is a ring of integers?
+What does “integral over Z” mean?
+
+### Question 6.18
+Let O be the ring of integers of Q(d), where d > 0.
+What can you say about the quotient of O by one of its prime ideals?
+
+
+### Question 6.19
+Do you know about Dedekind domains and class numbers?
+
+### Question 6.20
+Talk about factorisation and primes in a polynomial ring.
+What is irreducibility?
+For what rings R is it true that R[$x^1, · · · , xn] is a unique factorisation domain?
+What is wrong with unique factorisation if we don't have a domain?
+Now, PIDs are Noetherian, but are there UFDs which are not?
+
+### Question 6.21
+What is the radical of an ideal?
+What is special about elements in the nilradical?
+
+### Question 6.22
+Define “radical”.
+Prove it is an ideal.
+Prove that the ideal of all polynomials vanishing on the zero set of I is rad(I).
+
+
+### Question 6.23. 
+Do you know what the radical is?
+Use the fact that the intersection of all prime ideals is the set of all nilpotent elements to prove that F [x] has an infinite number of prime ideals, where F is a field.
+
+### Question 6.24
+What are the radical ideals in Z?
+
+### Question 6.25
+Give a prime ideal in $\kk[x, y]$.
+Why is it prime?
+What is the variety it defines?
+What is the Nullstellensatz?
+Can you make some maximal ideals?
+
+### Question 6.26
+State/describe Hilbert's Nullstellensatz.
+Sketch a proof.
+
+### Question 6.27
+What is an irreducible variety?
+Give an example of a non-irreducible one.
+
+### Question 6.28
+What are the prime ideals and maximal ideals of Z[x]?
+
+### Question 6.29
+Is the map 
+\todo[inline]{Missing}
+an isomorphism?
+
+### Question 6.30
+Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size.
+Now identify the matrix algebra Mn(K) with $EndK(V )$ where V is an $n$- dimensional K-vector space.
+Try to geometrically describe the simple left ideals and also the simple right ideals via that identification.
+
+### Question 6.31
+Give examples of maximal ideals in $K = R \times R \times R \times \cdots$, the product of countably many copies of R.
+What about for a product of countably many copies of an arbitrary commutative ring R?
+
+### Question 6.32
+Consider a commutative ring, R, and a maximal ideal, I, what can you say about the structure of R/I?
+What if I were prime?
+
+### Question 6.33
+Define “Noetherian ring”. give an example.
+
+### Question 6.34
+Prove the Hilbert basis theorem.
+
+### Question 6.35
+What is a Noetherian ring?
+If I is an ideal in a Noetherian ring with a unit, what is the intersection of $I^n$ over all positive integers $n$?
+
+### Question 6.36
+What is the Jacobson radical?
+If R is a finitely-generated algebra over a field what can you say about it?
+
+### Question 6.37
+Give an example of an Artinian ring.
+
+### Question 6.38
+State the structure theorem for semisimple Artinian rings.
+
+### Question 6.39
+What is a semisimple algebra?
+State the structure theorem for semisimple algebras.
+
+### Question 6.40
+What is a matrix algebra?
+
+### Question 6.41
+Does $L_1$ have a natural multiplication with which it becomes an algebra?
+
+### Question 6.42. 
+Consider a translation-invariant subspace of $L_1$.
+What can you say about its relation to $L_2$ as a convolution algebra?
+
+### Question 6.43
+State the structure theorem for simple rings.
+
+### Question 6.44
+Do you know an example of a local ring?
+Another one?
+What about completions?
+
+### Question 6.45
+Consider the space of functions from the natural numbers to C endowed with the usual law of addition and the following analogue of the convolution product:
+
+\todo[inline]{Missing}
+
+Show that this is a ring.
+What does this ring remind you of and what can you say about it?
+
+### Question 6.46
+Prove that any finite division ring is a field (that is, prove commutativity).
+Give an example of a (necessarily infinite) division ring which is NOT a field.
+
+### Question 6.47
+Prove that all finite integral domains are fields.
+
+### Question 6.48
+Can a polynomial over a division ring have more roots than its degree?
+
+### Question 6.49
+Classify (finite-dimensional) division algebras over R.
+
+### Question 6.50
+Give an example of a C-algebra which is not semisimple.
+
+### Question 6.51
+What is Wedderburn's theorem?
+What does the group ring generated by $\ZZ/5\ZZ$ over $\QQ$ look like?
+
+What if we take the noncyclic group of order 4 instead of Z/5Z?
+The quaternion group instead of Z/5Z?
+
+### Question 6.52
+Tell me about group rings.
+What do you know about them?
+
+## Modules
+
+### Question 7.1
+How does one prove the structure theorem for modules over PID?
+What is the module and what is the PID in the case of abelian groups?
+
+### Question 7.2
+If M is free abelian, how can I put quotients of M in some standard form?
+What was crucial about the integers here (abelian groups being modules over Z)?
+How does the procedure simplify if the ring is a Euclidean domain, not just a PID?
+
+### Question 7.3
+Suppose D is an integral domain and the fundamental theorem holds for finitely-generated modules over D (i.e. they are all direct sums of finitely many cyclic modules).
+
+Does D have to be a PID?
+
+### Question 7.4
+Classify finitely-generated modules over Z, over PID, and over Dedekind rings.
+
+### Question 7.5
+Prove a finitely-generated torsion-free abelian group is free abelian.
+
+### Question 7.6. 
+What is a tensor product?
+What is the universal property?
+What do the tensors look like in the case of vector spaces?
+
+### Question 7.7
+Now we'll take the tensor product of two abelian groups, that is, Z-modules.
+Take $\ZZ/p\ZZ$ and $\ZZ/q\ZZ$, where $p$ and $q$ are distinct primes.
+What is their tensor product?
+
+### Question 7.8
+What is a projective module?
+
+### Question 7.9
+What is an injective module?
+
+### Question 7.10
+Do you know an example of a flat module?
+
+## Representation Theory
+
+### Question 8.1
+Define “representation” of a group.
+Define “irreducible representation”.
+Why can you decompose representations of finite groups into irreducible ones?
+Construct an in- variant inner product.
+
+### Question 8.2
+State and prove Maschke's theorem.
+What can go wrong if you work over the real field?
+What can go wrong in characteristic p?
+
+### Question 8.3
+Do you know what a group representation is?
+Do you know what the trace of a group representation is?
+
+### Question 8.4
+State/prove/explain Schur's lemma.
+
+### Question 8.5
+What can you say about characters?
+What are the orthogonality relations?
+How do you use characters to determine if a given irreducible representation is a subspace of another given representation?
+
+### Question 8.6
+What's the relation between the number of conjugacy classes in a finite group and the number of irreducible representations?
+
+### Question 8.7
+What is the character table?
+What field do its entries lie in?
+
+### Question 8.8
+Why is the character table a square?
+
+### Question 8.9
+If $\chi(g)$ is real for every character $\chi$, what can you say about $g$?
+
+### Question 8.10
+What's the regular representation?
+
+### Question 8.11
+Give two definitions of "induced representation".
+Why are they equivalent?
+
+### Question 8.12
+If you have a representation of $H$, a subgroup of a group $G$, how can you induce a representation of $G$?
+
+### Question 8.13
+If you have an irreducible representation of a subgroup, is the induced representation of the whole group still irreducible?
+
+
+### Question 8.14. 
+What can you say about the kernel of an irreducible representation?
+How about kernels of direct sums of irreducibles?
+What kind of functor is induction?
+Left or right exact?
+
+### Question 8.15
+What is Frobenius reciprocity?
+
+### Question 8.16
+Given a normal subgroup H of a finite group $G$, we lift all the representations of $G/H$ to representations of $G$.
+
+Show that the intersection of the kernels of all these representations is precisely H.
+What can you say when H is the commutator subgroup of $G$?
+
+### Question 8.17
+If you have two linear representations $\pi_1$ and $\pi_2$ of a finite group $G$ such that $\pi_1(g)$ is conjugate to $\pi_2(g)$ for every g in $G$, is it true that the two representations are isomorphic?
+
+### Question 8.18
+Group representations: What's special about using C in the definition of group algebra?
+
+Is it possible to work over other fields?
+
+What goes wrong if the characteristic of the field divides the order of the group?
+
+### Question 8.19
+Suppose you have a finite p-group, and you have a representation of this group on a finite-dimensional vector space over a finite field of characteristic p.
+What can you say about it?
+
+### Question 8.20
+Let $(\pi, V)$ be a faithful finite-dimensional representation of $G$.
+Show that, given any irreducible representation of $G$, the nth tensor power of $\gl(V)$ will contain it for some large enough $n$.
+
+### Question 8.21
+What are the irreducible representations of finite abelian groups?
+
+### Question 8.22
+What are the group characters of the multiplicative group of a finite field?
+
+### Question 8.23
+Are there two nonisomorphic groups with the same representations?
+
+### Question 8.24
+If you have a Z/5Z action on a complex vector space, what does this action look like?
+What about an $S_3$ action?
+A dihedral group of any order?
+
+### Question 8.25
+What are the representations of $S_3$?
+How do they restrict to $S_2$?
+
+### Question 8.26
+Tell me about the representations of $D_4$.
+Write down the character table.
+What is the 2-dimensional representation?
+How can it be interpreted geometrically?
+
+### Question 8.27
+How would you work out the orders of the irreducible representations of the dihedral group $D_n$?
+
+Why is the sum of squares of dimensions equal to the order of the group?
+
+### Question 8.28
+Do you know any representation theory?
+What about representations of \(A_4\)?
+
+Give a nontrivial one.
+What else is there?
+How many irreducible representations do we have?
+What are their degrees?
+Write the character table of \(A_4\).
+
+### Question 8.29
+Write the character table for $S_4$.
+
+### Question 8.30
+Start constructing the character table for $S_5$.
+
+### Question 8.31. 
+How many irreducible representations does $S_n$ have?
+
+What classical function in mathematics does this number relate to?
+
+### Question 8.32
+Discuss representations of Z, the infinite cyclic group.
+What is the group algebra of Z?
+
+What is the connection
+\todo[inline]{Incomplete question}
+
+### Question 8.33
+What is a Lie group?
+Define a unitary representation.
+What is the Peter–
+Weyl theorem?
+What is the Lie algebra?
+The Jacobi identity?
+What is the adjoint representation of a Lie algebra?
+What is the commutator of two vector fields on a manifold?
+
+When is a representation of Z completely reducible?
+Why?
+
+Which are the indecomposable modules?
+
+### Question 8.34
+Talk about the representation theory of compact Lie groups.
+How do you know you have a finite-dimensional representation?
+
+### Question 8.35
+How do you prove that any finite-dimensional representation of a compact
+Lie group is equivalent to a unitary one?
+
+### Question 8.36
+Do you know a Lie group that has no faithful finite-dimensional representations?
+
+### Question 8.37
+What do you know about representations of $\SO(2)$? $\SO(3)$?
+
+## Categories and Functors
+
+### Question 9.1
+Which is the connection between Hom and tensor product?
+What is this called in representation theory?
+
+### Question 9.2
+Can you get a long exact sequence from a short exact sequence of abelian groups together with another abelian group?
+
+### Question 9.3
+Do you know what the Ext functor of an abelian group is?
+Do you know where it appears?
+What is $\ext(\ZZ/m\ZZ, \ZZ/n\ZZ)$?
+What is $\ext(\ZZ/m\ZZ, \ZZ)$?

@@ -1,1 +1,0 @@
-# Homology and Degree Theory

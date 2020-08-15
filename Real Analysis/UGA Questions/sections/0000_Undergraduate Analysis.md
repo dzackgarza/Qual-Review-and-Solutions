@@ -1,18 +1,18 @@
 # Undergraduate Analysis: Uniform Convergence
 
-## Fall 2018 # 1
+## Fall 2018 # 1 $\done$
 Let $f(x) = \frac 1 x$.
 Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Uniform continuity.
+:::
 
-**Solution**:
-
-
-Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
+- Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
 
 - Note that
 $$
@@ -22,14 +22,14 @@ $$
 - Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
  - Note that $\delta$ does not depend on $x, y$.
 - Then
-\begin{align*}
+\[
 \abs{f(x) - f(y)}
 &= \abs{\frac 1 x - \frac 1 y} \\
 &= \frac{\abs{x-y}}{xy} \\
 &\leq \frac{\delta}{xy} \\
 &< \frac{\delta}{c^2} \\
 &< \varepsilon
-,\end{align*}
+,\]
   which shows uniform continuity.
 
 To see that $f$ is not uniformly continuous when $c=0$:
@@ -41,17 +41,15 @@ To see that $f$ is not uniformly continuous when $c=0$:
 - Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
   - Why this can be done: by the archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
   - Then
-  \begin{align*}
+  \[
   {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
-  .\end{align*}
+  .\]
 - Note $f(x_n) = n$ and thus $$\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon.$$
-
 
 :::
 
 
-
-## Fall 2017 # 1
+## Fall 2017 # 1 $\done$
 Let 
 \[
 f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
@@ -59,13 +57,15 @@ f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
-\todo[inline]{Review and consolidate.}
+\todo[inline]{Walk through.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 Note that $f(x) = e^x$ is entire and thus equal to its power series.
 So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
@@ -74,7 +74,7 @@ Letting $f_N(x) = \sum_{j=1}^N \frac 1 {j!} x^j$, we have $f_N(x) \to f(x)$ poin
 
 For any compact interval $[-M, M]$, we have
 
-\begin{align*}
+\[
 \norm{f_N(x) - f(x)}_\infty
 &= \sup_{-M\leq x \leq M} ~\abs{\sum_{j=N+1}^\infty \frac 1 {j!} x^j} \\
 &\leq \sup_{-M\leq x \leq M} ~ \sum_{j=N+1}^\infty \frac 1 {j!} \abs{x}^j \\
@@ -82,23 +82,21 @@ For any compact interval $[-M, M]$, we have
 &\leq \sum_{j=0}^\infty \frac 1 {j!} M^j \\
 &= e^M \\
 &<\infty
-,\end{align*}
+,\]
 
 so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 Thus it converges on any bounded interval.
 
 It does not converge on $\RR$, since $x^N$ is unbounded.
-
-
 :::
 
 
-## Fall 2014 # 1
+## Fall 2014 # 1 $\work$
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
 
 Prove that $\sum f_n$ is also continuous.
 
-## Spring 2017 # 4
+## Spring 2017 # 4 $\done$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
 $$
 f(x, y) = \begin{cases}
@@ -109,24 +107,24 @@ $$
 Determine if $f$ is integrable.
 
 \todo[inline]{Redo, may just be wrong.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
-\begin{align*}
+\[
 \int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
-,\end{align*}
+,\]
 
 so $f$ is not integrable.
 :::
 
-
-
-## Spring 2015 # 1
+## Spring 2015 # 1 $\done$
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f: X\to Y$, and $x_0 \in X$.
 
 Prove that the following statements are equivalent:
@@ -134,7 +132,7 @@ Prove that the following statements are equivalent:
 1. For every $\varepsilon > 0 \quad \exists \delta > 0$ such that $\rho( f(x), f(x_0)  ) < \varepsilon$ whenever $d(x, x_0) < \delta$.
 2. The sequence $\theset{f(x_n)}_{n=1}^\infty \to f(x_0)$ for every sequence $\theset{x_n} \to x_0$ in $X$.
 
-## Fall 2014 # 2
+## Fall 2014 # 2  $\work$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
 1. Show that
@@ -150,7 +148,8 @@ $$
   Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
 
-## Spring 2014 # 2
+## Spring 2014 # 2  $\work$
+
 Let $\theset{a_n}$ be a sequence of real numbers such that
 $$
 \theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
@@ -163,7 +162,7 @@ Show that $\sum a_n^2 < \infty$.
 
 # General Analysis
 
-## Spring 2020 # 1
+## Spring 2020 # 1 $\done$
 
 Prove that if $f: [0, 1] \to \RR$ is continuous then
 \[
@@ -171,28 +170,28 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 .\]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - DCT
 - Weierstrass Approximation Theorem
-
-**Solution**:
+:::
 
 - Suppose $p$ is a polynomial, then
-\begin{align*}
+\[
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
 &= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx \right] \quad\text{integrating by parts}\\
 &= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
-,\end{align*}
+,\]
 
 - Thus it suffices to show that
-\begin{align*}
+\[
 \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx = 0
-.\end{align*}
+.\]
 
 - Integrating by parts a second time yields
-\begin{align*}
+\[
 \lim_{k\to\infty} 
 \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
 &= \lim_{k\to\infty} 
@@ -201,7 +200,7 @@ Concepts used:
 &= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
 &= - \int_0^1 0 \qty{ \dd{^2}{x^2}p(x)} \, dx \\
 &= 0
-.\end{align*}
+.\]
 
   - The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact, so $f''$ is bounded on $[0, 1]$ by a constant $M$ and 
   $$\int_0^1 \abs{x^k f''(x)} \leq \int_0^1 1\cdot M = M < \infty.$$
@@ -210,27 +209,23 @@ Concepts used:
   - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
 
 - Thus 
-\begin{align*}
+\[
 \abs{ \int_0^1 kx^{k-1} p_\eps(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } 
 &= \abs{ \int_0^1 kx^{k-1} \qty{p_\eps(x) - f(x)} \,dx  } \\
 &\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
 &= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
-\end{align*}
+\]
 
   and the integrals are equal. 
 
 - By the first argument, $$\int_0^1 kx^{k-1} p_\eps(x) \,dx = p_\eps(1) \text{ for each } \eps$$ 
 - Since uniform convergence implies pointwise convergence, $p_\eps(1) \converges{\eps\to 0}\to f(1)$.
 
-
-
 :::
 
-
-
-## Fall 2019 # 1. 
+## Fall 2019 # 1 $\done$
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
 ### a
@@ -246,10 +241,12 @@ Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then
 \]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Cesaro mean/summation. 
 - Break series apart into pieces that can be handled separately.
+:::
 
 ### a
 
@@ -269,7 +266,7 @@ k\geq M+1 \implies \abs{a_k - S} < \varepsilon
 
 
 Then
-\begin{align*}
+\[
 \left|\left(\frac{1}{N} \sum_{k=1}^{N} a_{k}\right)-S\right| 
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - NS  } \\
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - \sum_{k=1}^N S  } \\
@@ -280,7 +277,7 @@ Then
 &= {1\over N} \sum_{k=1}^M \abs{a_k - S} + (N - M){\eps \over 2} \\
 &\converges{\eps\to 0}\to {1\over N} \sum_{k=1}^M \abs{a_k - S} + 0 \\
 &\converges{N\to \infty}\to 0 + 0
-.\end{align*}
+.\]
   
 > Note: $M$ is fixed, so the last sum is some constant $c$, and $c/N \to 0$ as $N\to\infty$ for any constant.
 > To be more careful, choose $M$ first to get $\eps/2$ for the tail, then choose $N(M)>M$ for the remaining truncated part of the sum. 
@@ -288,20 +285,20 @@ Then
 ### b
 
 - Define
-\begin{align*}
+\[
 \Gamma_n \definedas \sum_{k=n}^\infty \frac{a_k}{k}
-.\end{align*}
+.\]
 
 - $\Gamma_1 = \sum_{k=1}^n \frac{ a_k } k$ is the original series and each $\Gamma_n$ is a tail of $\Gamma_1$, so by assumption $\Gamma_n \converges{n\to\infty}\to 0$.
 
 - Compute
-\begin{align*}
+\[
 \frac 1 n \sum_{k=1}^n a_k 
 &= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
-.\end{align*}
+.\]
 
 - This comes from consider the following summation:
-\begin{tikzcd}
+\begin{tikzcd}[row sep=small, column sep=small]
 \Gamma_1:&\arrow[dash, ddddd]   & a_1 & + \frac{a_2}{2} & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
 \Gamma_2:                                                       &               &     & \frac{a_2}{2}   & + \frac{a_3}{3} & + \cdots &     &                                    &          &  &  &  \\
 \Gamma_3:                                                       &               &     &                 & \frac{a_3}{3}   & + \cdots &     &                                    &          &  &  &  \\
@@ -313,18 +310,15 @@ Then
 - Use part (a): since $\Gamma_n \converges{n\to\infty}\to 0$, we have ${1\over n} \sum_{k=1}^n \Gamma_k \converges{n\to\infty}\to 0$.
 - Also a minor check: $\Gamma_n \to 0 \implies {1\over n}\Gamma_n \to 0$.
 - Then
-\begin{align*}
+\[
 \frac 1 n \sum_{k=1}^n a_k 
 &= \frac 1 n (\Gamma_1 + \Gamma_2 + \cdots + \Gamma_{n} \mathbf{- \Gamma_{n+1}}) \\
 &= \qty{ {1\over n } \sum_{k=0}^n \Gamma_k } - \qty{{1\over n}\Gamma_{n+1} } \\
 &\converges{n\to\infty}\to 0
-.\end{align*}
-
+.\]
 :::
 
-
-
-## Fall 2018 # 4
+## Fall 2018 # 4 $\done$
 Let $f\in L^1([0, 1])$.
 Prove that
 $$
@@ -332,13 +326,14 @@ $$
 $$
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - ?
-
-
-**Solution**:
+:::
 
 Case of characteristic function
 
@@ -346,17 +341,17 @@ Case of characteristic function
 - Note that $\sin(nx)$ has a period of $2\pi/n$, and thus $\floor{n\over 2\pi}$ full periods in $[0, 1]$.
 - Taking the absolute value yields a new function with half the period, so a period of $\pi/n$ and $\floor{\pi / n}$ full periods in $[0, 1]$.
 - We can compute the integral over one full period (which is independent of *which* period is chosen), and since $\sin(x)$ is positive and agrees with $\abs{\sin(nx)}$ on the first period, we have
-\begin{align*}
+\[
 \int_{\text{One Period}} \abs{\sin(nx)} \, dx 
 &= \int_0^{\pi/n} \sin(nx)\,dx \\
 &= {1\over n} \int_0^\pi \sin(u) \,du \quad u = nx \\
 &= {1\over n} -\cos(u)\mid_0^\pi \\
 &= {2 \over n}
-.\end{align*}
+.\]
 
 
 - Then break the integral up into integrals over periods $P_1, P_2, \cdots, P_N$ where $N \definedas \floor{n/\pi}$:
-\begin{align*}
+\[
 \int_0^1 \abs{\sin(nx)} \, dx 
 &= \qty{ \sum_{j=1}^{N} \int_{P_j} \abs{\sin(nx)} \, dx } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &= \qty{ \sum_{j=1}^{N} {2\over n} } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
@@ -364,7 +359,7 @@ Case of characteristic function
 &\definedas \floor{n \over \pi} {2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &= {2\over \pi} + \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
 &\definedas {2\over \pi} + R(n) 
-\end{align*}
+\]
   so it suffices to show that $R(n) \converges{n\to\infty}\to 0$. 
   \todo[inline]{Need to justify removing floor function and cancellation.}
 
@@ -375,9 +370,7 @@ General case
 \todo[inline]{Not sure. Approximate $f$ by simple functions...?}
 :::
 
-
-
-## Fall 2017 # 4
+## Fall 2017 # 4 $\done$
 Let
 \[
 f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
@@ -392,30 +385,36 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
 \]
 
-:::{.solution}
-Concepts used:
+\todo[inline]{Add concepts.}
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - ?
+:::
+
 
 ### a
 
 Let $G(x) = \sum_{n=1}^\infty nx(1-x)^n$. 
 Applying the ratio test, we have
-\begin{align*}
+\[
 \abs{\frac{(n+1)x(1-x)^{n+1}}{nx(1-x)^n}} = \frac{n+1}{n} \abs{1-x} \converges{n\to\infty}\to \abs{1-x} < 1 \iff 0 \leq x \leq 2
-,\end{align*}
+,\]
 
 and in particular, this series converges on $[0, 2]$. 
 Thus its terms go to zero, and $nx(1-x)^n \to 0$ on $[0, 1] \subset [0, 2]$.
 
 To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsilon > \frac 1 e$, then
-\begin{align*}
+\[
 \sup_{x\in [0, 1]}\abs{nx(1-x)^n - 0} 
 \geq \abs{nx_n (1-x_n)^n} 
 = \abs{\left( 1 - \frac 1 n\right)^n} 
 \converges{n\to\infty}\to e\inv
 > \varepsilon
-.\end{align*}
+.\]
 
 
 ### b
@@ -424,21 +423,17 @@ To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsil
 
 Noting that $\sin(x) \leq 1$, we have
 We have
-\begin{align*}
+\[
 \abs{\int_0^1  n(1-x)^{n} \sin(x)} 
 &\leq \int_0^1  \abs{n(1-x)^n \sin(x)} \\
 &\leq \int_0^1  \abs{n (1-x)^n}  \\
 &= n\int_0^1 (1-x)^n \\
 &= -\frac{n(1-x)^{n+1}}{n+1} \\
 &\converges{n\to\infty}\longrightarrow 0
-.\end{align*}
-
-
+.\]
 :::
 
-
-
-## Spring 2017 # 3
+## Spring 2017 # 3 $\done$
 
 Let
 \[
@@ -458,32 +453,33 @@ b.
 \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
 \]
 \todo[inline]{Not complete.}
-:::{.solution}
-Concepts used:
+\todo[inline]{Add concepts.}
+\todo[inline]{Walk through.}
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 - ?
+:::
 
 ### a
 
 Letting $x_n \definedas \frac 1 n$, we have
 
-\begin{align*}
+\[
 \sum_{k=1}^\infty \abs{f_k(x)} \geq \abs{f_n(x_n)} 
 =\abs{ae^{-ax} - be^{-bx}} \definedas M
-.\end{align*}
+.\]
 
 In particular, $\sup_{x} \abs{f_n(x)} \not\to 0$, so the terms do not go to zero and the sum can not converge.
 
 ### b
 
 ?
-
-
 :::
 
-
-
-## Fall 2016 # 1
+## Fall 2016 # 1 $\done$
 
 Define
 \[
@@ -500,12 +496,14 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \left(\frac{1}{n^{x}}\right)' = -\frac{1}{n^{x}} \ln n
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ? 
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Set $f_N(x) \definedas \sum_{n=1}^N n^{-x}$, so $f(x) = \lim_{N\to\infty} f_N(x)$.
 - If an interchange of limits is justified, we have
@@ -548,22 +546,23 @@ Concepts used:
 \todo[inline]{?}
 :::
 
-
-
-## Fall 2016 # 5
+## Fall 2016 # 5 $\done$
 
 Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies the equality
 \[
 \lim _{n \to \infty} \left(\int _{\mathbb{R}} \frac{|\phi(x)|^{n}}{1+x^{2}} \, dx \right) ^ {\frac{1}{n}} 
 = \norm{\phi}_\infty.
 \]
-\todo[inline]{Review and clean up.}
+\todo[inline]{Walk through.}
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
-- ??
-
-**Solution**:
 
 Let $L$ be the LHS and $R$ be the RHS.
 
@@ -605,28 +604,22 @@ S_\eps \definedas \theset{x\in \RR^n\suchthat \abs{\phi(x)} \geq \norm{\phi}_\in
 &\converges{\eps\to 0}\to \norm{\phi}_\infty
 ,\]
   where we've again used the fact that $c^{1\over n} \to 1$ for any constant.
-
-
-
-
 :::
 
-
-
-## Fall 2016 # 6
+## Fall 2016 # 6 $\done$
 
 Let $f, g \in L^2(\RR)$. Show that
 \[
 \lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
 \]
+\todo[inline]{Add concepts.}
 
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
-
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 - Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
@@ -642,14 +635,10 @@ Concepts used:
 &\leq \int_\RR \abs{f(x) g(x+n)}\,dx \\
 &\leq \int_\RR
 .\]
-
-
-
 :::
 
+## Spring 2016 # 1  $\work$
 
-
-## Spring 2016 # 1
 For $n\in \NN$, define
 \[]
 e_{n} = \left (1+ {1\over n} \right)^{n} 
@@ -669,12 +658,11 @@ Use this to show the following:
 3. $2 < e_n < E_n < 4$.
 4. $\lim _{n \to \infty} e_{n} = \lim _{n \to \infty} E_{n}$.
 
-## Fall 2015 # 1
+## Fall 2015 # 1  $\work$
+
 Define
-$$
+\[
 f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { even and } c_{n}>0.
-$$
+\]
 
 Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
-
-

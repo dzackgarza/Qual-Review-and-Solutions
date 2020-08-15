@@ -1,40 +1,75 @@
 # Liouville's Theorem, Power Series (8155e)
 
-## 1
+## 1 $\done$
 
 Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \subseteq \CC$ and $f(z) = \sum_{n=0}^\infty a_n z^n$ is a power series with radius of convergence exactly 1.
 
-### a
+### a $\work$
 Give an example of such an $f$ that converges at every point of $S^1$.
 
-### b 
+### b  $\work$
 Give an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
-### c 
+### c  $\work$
 Prove that $f$ can not be analytic at *every* point of $S^1$.
 
-## 2
+\todo[inline]{Missing part (c)}
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+
+### a  $\work$
+Take $\sum {z^n \over n^2}$; then $\abs{z}\leq 1 \implies \abs{z^n\over n^2} \leq {1\over n^2}$ which is summable, so the series converges for $\abs{z}\leq 1$.
+
+### b $\work$
+Take $\sum {z^n \over n}$; then $z=1$ yields the harmonic series, which diverges.
+
+- For $z\in S^1\setminus\theset{1}$, we have $z = e^{2\pi it}$ for $0<t<2\pi$. 
+- So fix $t$.
+
+- Toward applying the Dirichlet test, set $a_n = 1/n, b_n = z^n$.
+
+- Then for all $N$,
+\[
+\abs{\sum_{n=1}^N b_n}
+= \abs{\sum_{n=1}^N b_n}
+= \abs{\sum_{n=1}^N z^n}
+= \abs{  {z-z^{N+1} \over \abs{1 - z}} } 
+\leq {2 \over 1-z} < \infty
+.\]
+
+- Thus $\sum a_n b_n < \infty$ and $\sum z^n/n$ converges.
+
+c. ?
+
+:::
+
+## 2 $\work$
 
 Suppose $f$ is entire and has Taylor series $\sum a_n z^n$ about 0.
 
-### a 
+### a  $\work$
 Express $a_n$ as a contour integral along the circle $\abs{z} = R$.
 
-### b
+### b $\work$
 Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of $\CC$.
 
-### c
+### c $\work$
 Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
 
 
-## 3
+
+## 3 $\work$
 
 Suppose $D$ is a domain and $f, g$ are analytic on $D$.
 
 Prove that if $fg = 0$ on $D$, then either $f \equiv 0$ or $g\equiv 0$ on $D$.
 
 
-## 4
+## 4 $\work$
 
 Suppose $f$ is analytic on $\DD^\circ$.
 Determine with proof which of the following are possible:
@@ -48,28 +83,80 @@ c. $f\qty{1\over n^2} = {1\over n}$ for each integer $n>1$.
 d. $f\qty{1\over n} = {n-2 \over n-1}$ for each integer $n>1$.
 
 
-## 5
+## 5 $\done$
 
 Prove the Fundamental Theorem of Algebra (using complex analysis).
 
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
 
-## 6
+:::
+- Strategy: By contradiction with Liouville's Theorem
+- Suppose $p$ is non-constant and has no roots.
+- Claim: $1/p(z)$ is a bounded holomorphic function on $\CC$.
+  - Holomorphic: clear? Since $p$ has no roots.
+  - Bounded: for $z\neq 0$, write
+    \begin{align*}
+    \frac{P(z)}{z^{n}}=a_{n}+\left(\frac{a_{n-1}}{z}+\cdots+\frac{a_{0}}{z^{n}}\right)
+    .\end{align*}
+
+  - The term in parentheses goes to 0 as $\abs{z}\to \infty$
+  - Thus there exists an $R>0$ such that
+    \begin{align*}
+    \abs{z} > R \implies \abs{P(z) \over z^n} \geq c \definedas {\abs{a_n} \over 2}
+    .\end{align*}
+
+  - So $p$ is bounded below when $\abs{z} > R$
+  - Since $p$ is continuous and has no roots in $\abs{z} \leq R$, it is bounded below when $\abs{z} \leq R$.
+  - Thus $p$ is bounded below on $\CC$ and thus $1/p$ is bounded above on $\CC$.
+- By Liouville's theorem, $1/p$ is constant and thus $p$ is constant, a contradiction.
+:::
+
+
+
+## 6 $\done$
 Find all entire functions that satisfy
 \[
 \abs{f(z)} \geq \abs{z} \quad \forall z\in \CC
 .\]
 Prove this list is complete.
 
-## 7
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+- Suppose $f$ is entire and define $g(z) \definedas {z \over f(z)}$.
+- By the inequality, $\abs{g(z)} \leq 1$, so $g$ is bounded.
+- $g$ potentially has singularities at the zeros $Z_f \definedas f\inv(0)$, but since $f$ is entire, $g$ is holomorphic on $\CC\setminus Z_f$.
+- Claim: $Z_f = \theset{0}$.
+  - If $f(z) = 0$, then $\abs{z} \leq \abs{f(z)} = 0$ which forces $z=0$.
+- We can now apply Riemann's removable singularity theorem:
+  - Check $g$ is bounded on some open subset $D\smz$, clear since it's bounded everywhere
+  - Check $g$ is holomorphic on $D\smz$, clear since the only singularity of $g$ is $z=0$.
+- By Riemann's removable singularity theorem, the singularity $z = 0$ is removable and $g$ has an extension to an entire function $\tilde g$.
+- By continuity, we have $\abs{\tilde g(z)} \leq 1$ on all of $\CC$
+  - If not, then $\abs{\tilde g(0)} = 1+\eps > 1$, but then there would be a domain $\Omega \subseteq \CC\smz$ such that $1 < \abs{\tilde g(z)} \leq 1 +\eps$ on $\Omega$, a contradiction.
+- By Liouville, $\tilde g$ is constant, so $\tilde g(z) = c_0$ with $\abs {c_0} \leq 1$
+- Thus $f(z) = c_0\inv z \definedas cz$ where $\abs{c}\geq 1$
+
+Thus all such functions are of the form $f(z) = cz$ for some $c\in \CC$ with $\abs{c}\geq 1$.
+:::
+
+
+## 7 $\work$
 Suppose $\sum_{n=0}^\infty a_n z^n$ converges for some $z_0 \neq 0$.
 
-### a 
+### a  $\work$
 Prove that the series converges absolutely for each $z$ with $\abs z < \abs z_0$.
 
-### b 
+### b  $\work$
 Suppose $0 < r < \abs{z_0}$ and show that the series converges uniformly on $\abs{z} \leq r$.
 
-## 8
+## 8 $\work$
 
 Suppose $f$ is entire and suppose that for some integer $n\geq 1$,
 \[
@@ -79,7 +166,7 @@ Suppose $f$ is entire and suppose that for some integer $n\geq 1$,
 Prove that $f$ is a polynomial of degree at most $n-1$.
 
 
-## 9
+## 9 $\work$
 
 Find all entire functions satisfying
 \[
@@ -87,7 +174,7 @@ Find all entire functions satisfying
 .\]
 
 
-## 10
+## 10 $\work$
 
 Prove that the following series converges uniformly on the set $\theset{z \suchthat \Im(z) < \ln 2}$:
 \[

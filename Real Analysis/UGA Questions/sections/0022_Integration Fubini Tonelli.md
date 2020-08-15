@@ -1,6 +1,6 @@
 # Fubini-Tonelli
 
-## Spring 2020 # 4
+## Spring 2020 # 4 $\done$
 
 Let $f, g\in L^1(\RR)$. 
 Argue that $H(x, y) \definedas f(y) g(x-y)$ defines a function in $L^1(\RR^2)$ and deduce from this fact that
@@ -13,28 +13,28 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 - Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
+:::
 
-**Solution**:
-
-\begin{align*}
+\[
 \norm{H(x)}_1 
-&= \int_\RR \abs{H(x, y)} \, dx \\
-&= \int_\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
-&\leq \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
-&= \int_\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
-&= \int_\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
-&\definedas \int_\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
-&= \norm{g}_1 \int_\RR \abs{f(y)} \,dy \\
+&= \int _\RR \abs{H(x, y)} \, dx \\
+&= \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
+&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
+&= \int _\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
+&\definedas \int _\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
+&= \norm{g}_1 \int _\RR \abs{f(y)} \,dy \\
 &\definedas \norm{g}_1 \norm{f}_1  \\
 &< \infty \qtext{by assumption}
-.\end{align*}
+.\]
 
 - $H$ is measurable on $\RR^2$:
   - If we can show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, then $H = \tilde f \cdot \tilde g$ is a product of measurable functions and thus measurable. 
@@ -57,7 +57,7 @@ Concepts used:
 
 
 
-## Spring 2019 # 4
+## Spring 2019 # 4 $\done$
 Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n × \RR : 0 ≤ t ≤ f (x)\}$.
 
 Prove the validity of the following two statements:
@@ -69,12 +69,14 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - See S&S p.82.
-
-**Solution**:
+:::
 
 ### a
 
@@ -91,9 +93,9 @@ $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
 - Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
-\begin{align*}
+\[
 \mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
-\end{align*}
+\]
 
 - But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
 
@@ -101,21 +103,21 @@ $\impliedby$:
 ### b
 
 - Note
-\begin{align*}
+\[
 \mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
 \\
 \mathcal{A}_t &= \theset{x
 \in \RR^n \suchthat t\leq f(x) }
-.\end{align*}
+.\]
 
 - Then
-\begin{align*}
+\[
 \int_{\RR^n} f(x) ~dx 
 &= \int_{\RR^n} \int_0^{f(x)} 1 ~dt~dx \\
 &= \int_{\RR^n} \int_{0}^\infty \chi_\mathcal{A} ~dt~dx \\
 &\overset{F.T.}= \int_{0}^\infty \int_{\RR^n} \chi_\mathcal{A} ~dx~dt\\
 &= \int_0^\infty m(\mathcal{A}_t) ~dt
-,\end{align*}
+,\]
   where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
 
 - By F.T., all of these integrals are equal. 
@@ -123,9 +125,7 @@ $\impliedby$:
 
 :::
 
-
-
-## Fall 2018 # 5
+## Fall 2018 # 5 $\done$
 Let $f \geq 0$ be a measurable function on $\RR$.
 Show that
 \[
@@ -133,18 +133,17 @@ Show that
 \]
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Claim: If $E\subseteq \RR^a \cross \RR^b$ is a measurable set, then for almost every $y\in \RR^b$, the slice $E^y$ is measurable and
-\begin{align*}
+\[
 m(E) = \int_{\RR^b} m(E^y) \,dy
-.\end{align*}
+.\]
   - Set $g = \chi_E$, which is non-negative and measurable, so apply Tonelli.
   - Conclude that $g^y = \chi_{E^y}$ is measurable, the function $y\mapsto \int g^y(x)\, dx$ is measurable, and $\int \int g^y(x)\,dx \,dy = \int g$.
   - But $\int g = m(E)$ and $\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy$.
-
-**Solution**
+:::
 
 > Note: $f$ is a function $\RR\to \RR$ in the original problem, but here I've assumed $f:\RR^n\to \RR$.
 
@@ -157,10 +156,10 @@ E\definedas \theset{(x, t) \in \RR^{n} \cross \RR \suchthat f(x) > t}
   - Since $f$ is measurable, $F(x, t) \definedas t - f(x)$ is measurable on $\RR^n \cross \RR$.
   - Then write $E = \theset{F < 0} \intersect \theset{t\geq 0}$ as an intersection of measurable sets.
 - We have slices 
-\begin{align*}
+\[
 E^t &\definedas \theset{x\in \RR^n \suchthat (x, t) \in E} = \theset{x\in \RR^n \suchthat 0 \leq t < f(x)} \\
 E^x &\definedas \theset{t\in \RR \suchthat (x, t) \in E} = \theset{t\in \RR \suchthat 0 \leq t \leq f(x)} = [0, f(x)]
-.\end{align*}
+.\]
   - $E_t$ is precisely the set that appears in the original RHS integrand.
   - $m(E^x) = f(x)$.
 - Claim: $\chi_E$ satisfies the conditions of Tonelli, and thus $m(E) = \int \chi_E$ is equal to any iterated integral.
@@ -171,32 +170,31 @@ E^x &\definedas \theset{t\in \RR \suchthat (x, t) \in E} = \theset{t\in \RR \suc
   1. For almost every $x$, $E^x$ is a measurable set, $x\mapsto m(E^x)$ is a measurable function, and $m(E) = \int_{\RR^n} m(E^x) \, dx$ 
   2. For almost every $t$, $E^t$ is a measurable set, $t\mapsto m(E^t)$ is a measurable function, and $m(E) = \int_{\RR} m(E^t) \, dt$ 
 - On one hand,
-\begin{align*}
+\[
 m(E) 
 &= \int_{\RR^{n+1}} \chi_E(x, t) \\
 &= \int_{\RR} \int_{\RR^n} \chi_E(x, t) \,dt \,dx \quad\text{by Tonelli}\\
 &= \int_{\RR^n} m(E^x) \,dx \quad\text{first conclusion}\\
 &= \int_{\RR^n} f(x) \,dx 
-.\end{align*}
+.\]
 - On the other hand,
-\begin{align*}
+\[
 m(E) 
 &= \int_{\RR^{n+1}} \chi_E(x, t) \\
 &= \int_\RR \int_{\RR^n} \chi_E(x, t) \, dx \,dt \quad\text{by Tonelli} \\
 &= \int_\RR m(E^t) \,dt \quad\text{second conclusion}
-.\end{align*}
+.\]
 
 - Thus
-\begin{align*}
+\[
 \int_{\RR^n} f \,dx = m(E) = \int_\RR m(E^t) \,dt = \int_\RR m\qty{\theset{x\suchthat f(x) > t}}
-.\end{align*}
-
+.\]
 
 :::
 
 
 
-## Fall 2015 # 5
+## Fall 2015 # 5 $\work$
 Let $f, g \in L^1(\RR)$ be Borel measurable.
 
 1. Show that 
@@ -208,7 +206,7 @@ Let $f, g \in L^1(\RR)$ be Borel measurable.
 \|f * g\|_{1} \leq \|f\|_{1} \|g\|_{1}
 \]
 
-## Spring 2014 # 5
+## Spring 2014 # 5 $\work$
 Let $f, g \in L^1([0, 1])$ and for all $x\in [0, 1]$ define
 \[
 F(x) \definedas \int _{0}^{x} f(y) \, dy 

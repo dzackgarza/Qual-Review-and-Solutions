@@ -1,6 +1,6 @@
 # $L^2$ and Fourier Analysis
 
-## Spring 2020 # 6
+## Spring 2020 # 6 $\done$
 
 ### a
 Show that
@@ -23,17 +23,17 @@ converges uniformly on $[0, 1]$ to a continuous function $g$ such that $g = f$ a
 > Hint: One approach is to argue that if $f\in L^1([0, 1])$ with $\theset{\hat f (n)} \in \ell^1(\ZZ)$ then $f\in L^2([0, 1])$.
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - For $e_n(x) \definedas e^{2\pi i n x}$, the set $\theset{e_n}$ is an orthonormal basis for $L^2([0, 1])$.
 - For any orthonormal sequence in a Hilbert space, we have Bessel's inequality:
-  \begin{align*}
+  \[
   \sum_{k=1}^{\infty}\left|\left\langle x, e_{k}\right\rangle\right|^{2} \leq\|x\|^{2}
-  .\end{align*}
+  .\]
 - When $\theset{e_n}$ is a basis, the above is an *equality* (Parseval)
 - Arguing uniform convergence: since $\theset{\hat f(n)} \in \ell^1(\ZZ)$, we should be able to apply the $M$ test.
-
-**Solution**:
+:::
 
 ### a
 
@@ -47,7 +47,7 @@ Claim: $\ell^1(\ZZ) \subseteq \ell^2(\ZZ)$.
   - If any $c_j = \infty$, then $\sum_{k\in \ZZ} \abs{c_k} \geq c_j = \infty$.
 - So $S^c$ is a finite set of finite integers, let $N = \max \theset{\abs{c_j}^2 \suchthat c_j \in S^c} < \infty$.
 - Rewrite the sum
-\begin{align*}
+\[
 \sum_{k\in \ZZ} \abs{c_k}^2 
 &= \sum_{c_k\in S} \abs{c_k}^2 + \sum_{c_k \in S^c} \abs{c_k}^2 \\
 &\leq \sum_{c_k\in S} \abs{c_k} + \sum_{c_k \in S^c} \abs{c_k}^2 \\
@@ -55,7 +55,7 @@ Claim: $\ell^1(\ZZ) \subseteq \ell^2(\ZZ)$.
 &= \norm{\vector c}_{\ell^1} + \sum_{c_k \in S^c} \abs{c_k}^2 \\
 &\leq \norm{\vector c}_{\ell^1} + \abs{S^c}\cdot N \\
 &< \infty
-.\end{align*}
+.\]
 
 Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 
@@ -63,7 +63,7 @@ Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 - Define $S = \theset{x\in [0, 1] \suchthat \abs{f(x)} \leq 1}$, then $x\in S^c \implies \abs{f(x)}^2 \geq \abs{f(x)}$.
 
 - Break up the integral:
-\begin{align*}
+\[
 \int_\RR \abs f 
 &= \int_S \abs f + \int_{S^c} \abs f \\
 &\leq \int_S \abs{f} + \int_{S^c} \abs{f}^2 \\
@@ -73,14 +73,14 @@ Claim: $L^2([0, 1]) \subseteq L^1([0, 1])$.
 &\leq 1 \cdot \mu([0, 1]) + \norm{f}_2 \quad\text{since } S\subseteq [0, 1] \\
 &= 1 + \norm{f}_2 \\
 &< \infty
-.\end{align*}
+.\]
 
 
 > Note: this proof shows $L^2(X) \subseteq L^1(X)$ whenever $\mu(X) < \infty$.
 :::
 
 
-## Fall 2017 # 5
+## Fall 2017 # 5 $\done$
 Let $\phi$ be a compactly supported smooth function that vanishes outside of an interval $[-N, N]$ such that $\int _{\RR} \phi(x) \, dx = 1$.
 
 For $f\in L^1(\RR)$, define
@@ -103,12 +103,14 @@ and prove the following:
 \lim _{y \to 0} \int _{\RR} |f(x-y)-f(x)| dy = 0
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 
 ### a
@@ -118,7 +120,7 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 
 *Silly Proof:*
 
-\begin{align*}
+\[
 \mathcal{F}(
 	(f \ast \phi)'
  )
@@ -127,11 +129,11 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 &= \mathcal{F}(f) \cdot \left( 2\pi i \xi ~\mathcal{F}(\phi)\right) \\
 &= \mathcal{F}(f) \cdot \mathcal{F}(\phi') \\
 &= \mathcal{F}(f\ast \phi')
-.\end{align*}
+.\]
 
 *Actual proof*:
 
-\begin{align*}
+\[
 (f\ast \phi)'(x)
 &= (\phi\ast f)'(x) \\
 &= \lim_{h\to 0} \frac{(\phi\ast f)'(x+h) - (\phi\ast f)'(x)}{h} \\
@@ -140,23 +142,23 @@ $(f \ast \phi)' = f \ast \phi'$ almost everywhere.
 &= \int \phi'(x-y) f(y) \\
 &= (\phi' \ast f)(x) \\
 &= (f \ast \phi')(x)
-.\end{align*}
+.\]
  
 
  To see that the DCT is justified, we can apply the MVT on the interval $[0, h]$ to $f$ to obtain
 
-\begin{align*}
+\[
 \frac{\phi(x + h - y) - \phi(x - y)}{h}
 &= \phi'(c) \quad c\in [0, h]
-,\end{align*}
+,\]
  
 and since $\phi'$ is continuous and compactly supported, $\phi'$ is bounded by some $M < \infty$ by the extreme value theorem and thus
-\begin{align*}
+\[
 \int \abs{\frac{\phi(x + h - y) - \phi(x - y)}{h} f(y)} 
 &= \int \abs{\phi'(c) f(y)} \\
 &\leq \int \abs{M}\abs{f} \\
 &= \abs{M} \int \abs{f} < \infty
-,\end{align*}
+,\]
 
 since $f\in L^1$ by assumption, so we can take $g\definedas \abs{M} \abs{f}$ as the dominating function.
 
@@ -172,18 +174,18 @@ $$
 $$
 
 and thus 
-\begin{align*}
+\[
 (h\ast \phi)(x) 
 &= \int_\RR \phi(x-y) h(y)~dy \\
 &= \int_{A_x} g_x(y) h(y) \\
 &= 0
-,\end{align*}
+,\]
 
 so $\theset{x \suchthat f\ast g(x) = 0}$ is open, and its complement is closed and bounded and thus compact.
 
 ### b
 
-\begin{align*}
+\[
 \norm{f\ast K_j - f}_1 
 &= \int \abs{\int f(x-y) K_j(y) ~dy  - f(x)}~dx \\
 &= \int \abs{\int f(x-y) K_j(y) ~dy  - \int f(x) K_j(y) ~ dy}~dx \\
@@ -192,7 +194,7 @@ so $\theset{x \suchthat f\ast g(x) = 0}$ is open, and its complement is closed a
 &\overset{FT}= \int \int \abs{(f(x-y) - f(x))} \cdot \abs{K_j(y)} \mathbf{~ dx~dy}\\
 &= \int \abs{K_j(y)} \left( \int \abs{(f(x-y) - f(x))}  ~ dx\right) ~dy \\
 &= \int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy
-.\end{align*}
+.\]
 
 We now split the integral up into pieces. 
 
@@ -206,7 +208,7 @@ j > J \implies \int_{\abs{y} \geq \delta} \abs{K_j(y)} ~dy
 $$
 
 Then
-\begin{align*}
+\[
 \norm{f\ast K_j - f}_1 
 &\leq 
 \int \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
@@ -214,14 +216,14 @@ Then
 + \int_{\abs y \geq  \delta} \abs{K_j(y)} \cdot \norm{f - \tau_y f}_1 ~dy \\
 &= \varepsilon \int_{\abs y \geq  \delta} \abs{K_j(y)} + 0 \\
 &\leq \varepsilon(1) \to 0
-.\end{align*}
+.\]
 
 
 :::
 
 
 
-## Spring 2017 # 5
+## Spring 2017 # 5 $\work$
 Let $f, g \in L^2(\RR)$. 
 Prove that the formula
 \[
@@ -229,7 +231,7 @@ h(x) \definedas \int _{-\infty}^{\infty} f(t) g(x-t) \, dt
 \]
 defines a uniformly continuous function $h$ on $\RR$.
 
-## Spring 2015 # 6
+## Spring 2015 # 6 $\work$
 Let $f \in L^1(\RR)$ and $g$ be a bounded measurable function on $\RR$.
 
 1. Show that the convolution $f\ast g$ is well-defined, bounded, and uniformly continuous on $\RR$.
@@ -238,7 +240,7 @@ Let $f \in L^1(\RR)$ and $g$ be a bounded measurable function on $\RR$.
 \frac{d}{d x}(f * g)=f *\left(\frac{d}{d x} g\right)
 \]
 
-## Fall 2014 # 5
+## Fall 2014 # 5 $\work$
 
 1. Let $f \in C_c^0(\RR^n)$, and show
 \[

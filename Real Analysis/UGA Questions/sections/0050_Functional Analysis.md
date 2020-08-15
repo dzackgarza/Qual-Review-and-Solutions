@@ -1,6 +1,6 @@
 # Functional Analysis: General
 
-## Fall 2019 # 4. 
+## Fall 2019 # 4 $\done$
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
 
 ### a 
@@ -20,36 +20,36 @@ and
 \]
 
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Bessel's Inequality
 - Pythagoras
 - Surjectivity of the Riesz map
 - Parseval's Identity
 - Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
-
-**Solution**:
+:::
 
 ### a
 
 **Claim:**
-\begin{align*}
+\[
 0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
 &= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
 &\implies
 \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-.\end{align*}
+.\]
 
 *Proof:*
 Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
 Then
-\begin{align*}
+\[
 0 
 &\leq \norm{x - S_N}^2 \\ 
 &= \inner{x - S_n}{x - S_N} \\
 &= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
 &\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
-.\end{align*}
+.\]
 
 
 ### b
@@ -80,9 +80,7 @@ If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$
 
 :::
 
-
-
-## Spring 2019 # 5
+## Spring 2019 # 5 $\done$
 
 ### a  
 Show that $L^2([0, 1]) ⊆ L^1([0, 1])$ and argue that $L^2([0, 1])$ in fact forms a dense subset of $L^1([0, 1])$.
@@ -109,37 +107,37 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   \]
 
 :::{.solution}
-
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - Holders' inequality: $\norm{fg}_1 \leq \norm{f}_p \norm{f}_q$
 - Riesz Representation for $L^2$: If $\Lambda \in (L^2)\dual$ then there exists a unique $g\in L^2$ such that $\Lambda(f) = \int fg$.
 - $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
 - **Lemma**:  $m(X) < \infty \implies L^p(X) \subset L^2(X)$.
 
-:::{.proof}
-\hfill
-- Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
-\begin{align*}
-\norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
-.\end{align*}
+  :::{.proof}
+  \hfill
+  - Write Holder's inequality as $\norm{fg}_1 \leq \norm{f}_a \norm{g}_b$ where $\frac 1 a + \frac 1 b = 1$, then
+  \[
+  \norm{f}_p^p = \norm{\abs f^p}_1 \leq \norm{\abs f^p}_a ~\norm{1}_b
+  .\]
 
-- Now take $a = \frac 2 p$ and this reduces to 
-\begin{align*}
-\norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
-\implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
-.\end{align*}
+  - Now take $a = \frac 2 p$ and this reduces to 
+  \[
+  \norm{f}_p^p &\leq \norm{f}_2^p ~m(X)^{\frac 1 b} \\
+  \implies \norm{f}_p &\leq \norm{f}_2 \cdot O(m(X)) < \infty
+  .\]
+  :::
 :::
 
-**Solution**:
 
 ### a
 
 - Note $X = [0, 1] \implies m(X) = 1$.
 - By Holder's inequality with $p=q=2$, 
-\begin{align*}
+\[
 \norm{f}_1 = \norm{f\cdot 1}_1 \leq \norm{f}_2 \cdot \norm{1}_2 = \norm{f}_2 \cdot m(X)^{\frac 1 2} = \norm{f}_2,
-\end{align*}
+\]
 
 - Thus $L^2(X) \subseteq L^1(X)$ 
 - Since they share a common dense subset (simple functions) $L^2$ is dense in $L^1$ 
@@ -149,47 +147,47 @@ Concepts used:
 
 Let $\Lambda \in L^1(X)\dual$ be arbitrary.
 
-#### (i): Existence of $g$ Representing $\Lambda$.
+#### 1: Existence of $g$ Representing $\Lambda$.
 
-- Let $f\in L^2\subseteq L^1$ be arbitrary
+Let $f\in L^2\subseteq L^1$ be arbitrary.
 
-- Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
+Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
 
-  - Suffices to show that $\norm{\Gamma}_{L^2(X)\dual} \definedas \sup_{\norm{f}_2 = 1} \abs{\Gamma(f)} < \infty$, since bounded implies continuous.
+- Suffices to show that $\norm{\Gamma}_{L^2(X)\dual} \definedas \sup_{\norm{f}_2 = 1} \abs{\Gamma(f)} < \infty$, since bounded implies continuous.
 
-  - By the lemma, $\norm{f}_1 \leq C\norm{f}_2$ for some constant $C \approx m(X)$.
+- By the lemma, $\norm{f}_1 \leq C\norm{f}_2$ for some constant $C \approx m(X)$.
 
-  - Note $$\norm{\Lambda}_{L^1(X)\dual} \definedas \displaystyle\sup_{\norm{f}_1 = 1} \abs{\Lambda(f)}$$
+- Note $$\norm{\Lambda}_{L^1(X)\dual} \definedas \displaystyle\sup_{\norm{f}_1 = 1} \abs{\Lambda(f)}$$
 
-  - Define $\hat f = {f\over \norm{f}_1}$ so $\norm{\hat f}_1 = 1$
+- Define $\hat f = {f\over \norm{f}_1}$ so $\norm{\hat f}_1 = 1$
 
-  - Since $\norm{\Lambda}_{1\dual}$ is a supremum over *all* $f \in L^1(X)$ with $\norm{f}_1 =1$, 
-  \begin{align*}
-  \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{(L^1(X))\dual}
-  ,\end{align*}
+- Since $\norm{\Lambda}_{1\dual}$ is a supremum over *all* $f \in L^1(X)$ with $\norm{f}_1 =1$, 
+\[
+\abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{(L^1(X))\dual}
+,\]
 
-  - Then
-  \begin{align*}
+- Then
+\[
 \frac{\abs{\Lambda(f)}}{\norm{f}_1} &= \abs{\Lambda(\hat f)} \leq \norm{\Lambda}_{L^1(X)\dual} \\
-  \implies \abs{\Lambda(f)} 
-  &\leq \norm{\Lambda}_{1\dual} \cdot \norm{f}_1 \\
-  &\leq \norm{\Lambda}_{1\dual} \cdot C \norm{f}_2 < \infty \quad\text{by assumption}
-  ,\end{align*}
+\implies \abs{\Lambda(f)} 
+&\leq \norm{\Lambda}_{1\dual} \cdot \norm{f}_1 \\
+&\leq \norm{\Lambda}_{1\dual} \cdot C \norm{f}_2 < \infty \quad\text{by assumption}
+,\]
 
-  - So $\Lambda \in (L^2)\dual$.
+- So $\Lambda \in (L^2)\dual$.
 
-- Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
+Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
 
-#### (ii): $g$ is in $L^\infty$
+#### 2: $g$ is in $L^\infty$
 
 - It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
 - Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. 
   \todo[inline]{Is this assumed..? Or did we show it..?}
 
 - Claim: $\norm{\Lambda}_{L^1(X)\dual} =\norm{g}_{L^\infty(X)}$
-  - The result follows because $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.
+  - The result will follow since $\Lambda$ was assumed to be in $L^1(X)\dual$, so $\norm{\Lambda}_{L^1(X)\dual} < \infty$.
   - $\leq$: 
-  \begin{align*}
+  \[
   \norm{\Lambda}_{L^1(X)\dual} 
   &= \sup_{\norm{f}_1 = 1} \abs{\Lambda(f)} \\
 &= \sup_{\norm{f}_1 = 1} \abs{\int_X f \bar g} \quad\text{by (i)}\\
@@ -197,7 +195,7 @@ Let $\Lambda \in L^1(X)\dual$ be arbitrary.
   &\definedas \sup_{\norm{f}_1 = 1} \norm{fg}_1 \\
   &\leq \sup_{\norm{f}_1 = 1} \norm{f}_1 \norm{g}_\infty \quad\text{by Holder with } p=1,q=\infty\\
   &= \norm{g}_\infty
-  ,\end{align*}
+  ,\]
 
   - $\geq$:
 
@@ -206,34 +204,34 @@ Let $\Lambda \in L^1(X)\dual$ be arbitrary.
     - Then there exists some $E\subseteq X$ with $m(E) > 0$ such that $$x\in E \implies \abs{g(x)} > \norm{\Lambda}_{L^1(X)\dual}.$$
 
     - Define 
-    \begin{align*}
+    \[
     h = \frac{1}{m(E)} \frac{\overline{g}}{\abs g} \chi_E
-    .\end{align*}
+    .\]
   
     - Note $\norm{h}_{L^1(X)} = 1$.
     
     - Then
-    \begin{align*}
+    \[
     \Lambda(h) &= \int_X hg \\
     &\definedas \int_X \frac{1}{m(E)} \frac{g \overline g}{\abs g} \chi_E \\
     &= \frac{1}{m(E)} \int_E \abs{g} \\
     &\geq \frac{1}{m(E)} \norm{g}_\infty m(E) \\
     &= \norm{g}_\infty \\
     &> \norm{\Lambda}_{L^1(X)\dual}
-    ,\end{align*}
+    ,\]
       a contradiction since $\norm{\Lambda}_{L^1(X)\dual}$ is the supremum over all $h_\alpha$ with $\norm{h_\alpha}_{L^1(X)} = 1$.
 
 :::
 
 
 
-## Spring 2016 # 6
+## Spring 2016 # 6 $\work$
 Without using the Riesz Representation Theorem, compute
 \[
 \sup \left\{\left|\int_{0}^{1} f(x) e^{x} d x\right| \suchthat f \in L^{2}([0,1], m),~~ \|f\|_{2} \leq 1\right\}
 \]
 
-## Spring 2015 # 5
+## Spring 2015 # 5 $\work$
 Let $\mathcal H$ be a Hilbert space.
 
 1. Let $x\in \mathcal H$ and $\theset{u_n}_{n=1}^N$ be an orthonormal set.
@@ -243,14 +241,14 @@ Let $\mathcal H$ be a Hilbert space.
   $$
 2. Conclude that finite dimensional subspaces of $\mathcal H$ are always closed.
 
-## Fall 2015 # 6
+## Fall 2015 # 6 $\work$
 Let $f: [0, 1] \to \RR$ be continuous.
 Show that
 \[
 \sup \left\{\|f g\|_{1} \suchthat g \in L^{1}[0,1],~~ \|g\|_{1} \leq 1\right\}=\|f\|_{\infty}
 \]
 
-## Fall 2014 # 6
+## Fall 2014 # 6 $\work$
 Let $1 \leq p,q \leq \infty$ be conjugate exponents, and show that
 \[
 f \in L^p(\RR^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x) g(x) d x\right|
@@ -258,19 +256,21 @@ f \in L^p(\RR^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x) g(x) d 
 
 # Functional Analysis: Banach Spaces
 
-## Spring 2019 # 1
+## Spring 2019 # 1 $\done$
 Let $C([0, 1])$ denote the space of all continuous real-valued functions on $[0, 1]$.
   
 a. Prove that $C([0, 1])$ is complete under the uniform norm $\norm{f}_u := \displaystyle\sup_{x\in [0,1]} |f (x)|$.
 
 b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 = \displaystyle\int_0^1 |f (x)| ~dx$.
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
-- ??
-
-**Solution**:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
 
 ### a
@@ -289,7 +289,7 @@ $$
     - Fix an $x_0 \in I$. Since $f_n \to f$ pointwise, choose $N_1$ large enough so that $$n\geq N_1 \implies \abs{f_n(x_0) - f(x_0)} < \eps/2.$$
     - Since $\norm{f_n - f_m}_\infty \to 0$, choose and $N_2$ large enough so that $$n, m \geq N_2 \implies \norm{f_n - f_m}_\infty < \eps/2.$$
     - Then for $n, m \geq \max(N_1, N_2)$, we have
-  \begin{align*}
+  \[
         \abs{f_n(x_0) - f(x_0)} 
   &=    \abs{f_n(x_0) - f(x_0) + f_m(x_0) - f_m(x_0)} \\
   &=    \abs{f_n(x_0) - f_m(x_0) + f_m(x_0) - f(x_0)} \\
@@ -301,7 +301,7 @@ $$
   \implies \abs{f_n(x_0) - f(x_0)} &< \eps\\
   \implies \sup_{x\in I} \abs{f_n(x_0) - f(x_0)} &\leq \sup_{x\in I} \eps \quad\text{by order limit laws} \\
   \implies \norm{f_n - f} &\leq \eps\\
-  .\end{align*}
+  .\]
 
 - $f$ is the uniform limit of continuous functions and thus continuous, so $f\in C([0, 1])$.
 
@@ -330,18 +330,20 @@ $$
 
 
 
-## Spring 2017 # 6
+## Spring 2017 # 6 $\done$
 Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \[
 \|f\|:=\sup _{x \in[a, b]}|f(x)|+\sup _{x \in[a, b]}\left|f^{\prime}(x)\right|.
 \]
 
+\todo[inline]{Add concepts.}
+
 :::{.solution}
-Concepts used:
-
+\hfill
+:::{.concept}
+\hfill
 - See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
-
-**Solution**:
+:::
 
 - Denote this norm $\norm{\wait}_u$
 
@@ -381,7 +383,7 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 
 
 
-## Fall 2017 # 6
+## Fall 2017 # 6 $\done$
 Let $X$ be a complete metric space and define a norm
 $$
 \|f\|:=\max \{|f(x)|: x \in X\}.
@@ -389,15 +391,17 @@ $$
 
 Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\to \RR$) is complete.
 
+\todo[inline]{Add concepts.}
+\todo[inline]{Shouldn't this be a supremum? The max may not exist?}
+\todo[inline]{Review and clean up.}
+
 :::{.solution}
-Concepts used:
+\hfill
+:::{.concept}
+\hfill
+- ?
+:::
 
-- ??
-
-**Solution**:
-
-
-> Should be supremum maybe..?
 
 Let $\theset{f_k}$ be a Cauchy sequence, so $\norm{f_k} < \infty$ for all $k$.
 Then for a fixed $x$, the sequence $f_k(x)$ is Cauchy in $\RR$ and thus converges to some $f(x)$, so define $f$ by $f(x) \definedas \lim_{k\to\infty} f_k(x)$.
@@ -406,7 +410,7 @@ Then $\norm{f_k - f} = \max_{x\in X}\abs{f_k(x) - f(x)} \converges{k\to\infty}\t
 
 Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm{f_N} \definedas M < \infty$
 
-\begin{align*}
+\[
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
-.\end{align*}
+.\]
 :::

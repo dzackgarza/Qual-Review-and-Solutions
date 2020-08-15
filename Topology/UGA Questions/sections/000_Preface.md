@@ -1,11 +1,13 @@
 ---
-title: "Mike Usher's Giant Problem Compendium"
+title: UGA Topology Qualifying Exam Questions and Solutions
+hidesolutions: false
+todos: true
 ---
 
 **Preface**
 
-
-*Mike's Recommended Problems*:
+A great deal of credit for this document goes to Mike Usher, who created an initial PDF of past UGA qual questions organized by topic.
+Here is a list of problems that Mike recommended reviewing during our problem sessions in Spring 2020:
 
 - Section 1, Point-Set: 8, 10, 11, 14, 16, 19, 22, 23, 27 (Bolzano Weierstrass), 30 (Standard, see counterexamples), 31, 32, 38, 42, 44
 - Section 2, Fundamental Group: 1
@@ -17,4 +19,9 @@ title: "Mike Usher's Giant Problem Compendium"
 - Section 8, Misc Algebraic Topology: 1, 3, 6, 8
 
 
-> Note: usually 30% of the qual problems are from point-set.
+:::{.warning}
+Usually 30% of the problems on any given qual are related to point-set/general Topology.
+:::
+
+
+
