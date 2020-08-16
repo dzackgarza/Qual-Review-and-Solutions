@@ -65,9 +65,6 @@ f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
-\todo[inline]{Walk through.}
-\todo[inline]{Add concepts.}
-
 :::{.solution}
 \hfill
 :::{.concept}
