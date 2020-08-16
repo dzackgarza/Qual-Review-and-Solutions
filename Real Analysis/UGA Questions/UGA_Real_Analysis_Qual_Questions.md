@@ -142,7 +142,7 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 :::
 
 
-## Spring 2017 # 4 $\work$
+## Spring 2017 # 4 $\done$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
 $$
 f(x, y) = \begin{cases}
@@ -152,14 +152,11 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
-\todo[inline]{Redo, may just be wrong.}
-\todo[inline]{Add concepts.}
-
 :::{.solution}
 \hfill
 :::{.concept}
 \hfill
-- 
+- Just Calculus.
 :::
 
 Switching to polar coordinates and integrating over one quarter of the unit disc $D \subseteq I^2$, we have
