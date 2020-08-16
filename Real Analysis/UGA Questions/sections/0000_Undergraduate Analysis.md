@@ -41,7 +41,7 @@ $$
 
 **Claim**: $f$ is *not* uniformly continuous when $c=0$.
 
-- Let $\varepsilon < 1$.
+- Toward a contradiction, let $\varepsilon < 1$.
 - Let $x_n = \frac 1 n$ for $n\geq 1$.
 - Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
   - Why this can be done: by the archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
@@ -49,8 +49,11 @@ $$
   \[
   {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
   .\]
-- Note $f(x_n) = n$ and thus $$\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon.$$
-
+- Note $f(x_n) = n$ and thus 
+\[
+\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon
+,\]
+  a contradiction.
 :::
 
 

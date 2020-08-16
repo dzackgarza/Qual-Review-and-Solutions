@@ -61,8 +61,11 @@ $$
   \[
   {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
   .\]
-- Note $f(x_n) = n$ and thus $$\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon.$$
-
+- Note $f(x_n) = n$ and thus 
+\[
+\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon
+,\]
+  a contradiction.
 :::
 
 
