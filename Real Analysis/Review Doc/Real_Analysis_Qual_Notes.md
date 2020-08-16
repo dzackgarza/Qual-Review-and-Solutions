@@ -528,48 +528,53 @@ $$
 
 :::
 
-Theorem (Generalized DCT)
-:   If 
-    
-    - $f_n \in L^1$ with $f_n \to f$ a.e., 
-    - There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
-    - $g_n\to g$ a.e. with $g\in L^1$, and 
-    - $\lim \int g_n = \int g$, 
+:::{.theorem title="Generalized DCT"}
+If 
 
-    then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
+- $f_n \in L^1$ with $f_n \to f$ a.e., 
+- There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
+- $g_n\to g$ a.e. with $g\in L^1$, and 
+- $\lim \int g_n = \int g$, 
 
-    > Note that this is the DCT with $\abs{f_n} < \abs{g}$ relaxed to $\abs{f_n} < g_n \to g\in L^1$.
+then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
 
-Proof (Generalized DCT)
-:   Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
+> Note that this is the DCT with $\abs{f_n} < \abs{g}$ relaxed to $\abs{f_n} < g_n \to g\in L^1$.
 
-    - $\int f \geq \limsup \int f_n$:
-    \[
-    \int g - \int f 
-    &= \int \qty{g-f} \\
-    &\leq \liminf \int \qty{g_n - f_n} \quad \text{Fatou} \\
-    &= \lim \int g_n + \liminf \int (-f_n) \\
-    &= \lim \int g_n - \limsup \int f_n \\
-    &= \int g - \limsup \int f_n \\
-    \\
-    \implies \int f &\geq \limsup \int f_n
-    .\]
+:::
 
-      - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
 
-    - $\int f \leq \liminf \int f_n$:
-    \[
-    \int g + \int f 
-    &= \int(g+f) \\
-    &\leq \liminf \int \qty{g_n + f_n} \\
-    &= \lim \int g_n + \liminf \int f_n \\
-    &= \int g + \liminf f_n \\
-    \\
-    \int f &\leq \liminf \int f_n
-    .\]
+:::{.proof}
+Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 
-      - Here we use that $g_n + f_n \to g+f$ with $0 \leq \abs{f_n} + f_n \leq g_n + f_n$ so Fatou's lemma again applies.
-  
+- $\int f \geq \limsup \int f_n$:
+\[
+\int g - \int f 
+&= \int \qty{g-f} \\
+&\leq \liminf \int \qty{g_n - f_n} \quad \text{Fatou} \\
+&= \lim \int g_n + \liminf \int (-f_n) \\
+&= \lim \int g_n - \limsup \int f_n \\
+&= \int g - \limsup \int f_n \\
+\\
+\implies \int f &\geq \limsup \int f_n
+.\]
+
+  - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
+
+- $\int f \leq \liminf \int f_n$:
+\[
+\int g + \int f 
+&= \int(g+f) \\
+&\leq \liminf \int \qty{g_n + f_n} \\
+&= \lim \int g_n + \liminf \int f_n \\
+&= \int g + \liminf f_n \\
+\\
+\int f &\leq \liminf \int f_n
+.\]
+
+  - Here we use that $g_n + f_n \to g+f$ with $0 \leq \abs{f_n} + f_n \leq g_n + f_n$ so Fatou's lemma again applies.
+:::
+
+ 
 
 Lemma (Converges in \$L^1\$ implies convergence of \$L^1\$ norms)
 :   If $f\in L^1$, then
