@@ -114,18 +114,21 @@ Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ co
 Prove that $\sum f_n$ is also continuous.
 
 :::{.solution}
-
+\hfill
 **Claim:**
 If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 
-Then setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous, so this yields the desired result.
-
 - Follows from an $\varepsilon/3$ argument: 
-- From continuity of $F_N$, choose $\delta
-\[  
-\abs{F(x) - F(y} \leq 
-\abs{F(x) - F_n(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)}
-.\]
+  \[  
+  \abs{F(x) - F(y} \leq 
+  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
+  \leq \eps \to 0
+  .\]
+
+  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
+  - The middle $\eps/3$ comes from continuity of each $F_N$.
+
+- Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous, yielding the desired result.
 :::
 
 
