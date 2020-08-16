@@ -219,7 +219,7 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 
   - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
   - The middle $\eps/3$ comes from continuity of each $F_N$.
-- 
+- So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
 :::
 
 

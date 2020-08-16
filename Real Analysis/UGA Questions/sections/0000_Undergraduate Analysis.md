@@ -108,7 +108,7 @@ $f$ does not converge on $\RR$.
 :::
 
 
-## Fall 2014 # 1 $\work$
+## Fall 2014 # 1 $\done$
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
 
 Prove that $\sum f_n$ is also continuous.
