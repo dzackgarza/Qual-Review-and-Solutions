@@ -60,7 +60,7 @@ $$
 ## Fall 2017 # 1 $\done$
 Let 
 \[
-f(x) = s \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
+f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 \]
 
 Describe the intervals on which $f$ does and does not converge uniformly.
@@ -72,28 +72,26 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 \hfill
 :::{.concept}
 \hfill
-- ?
+- $f_N\to f$ uniformly $\iff$ $\norm{f_N - f} \to 0$.
+- $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$, i.e. an infinite sum is defined pointwise as the limit of its partial sums.
 :::
 
-Note that $f(x) = e^x$ is entire and thus equal to its power series.
-So $f(x) = \sum_{j=0}^\infty \frac 1 {j!}x^j$.
+- Set $f_N(x) = \sum_{n=1}^N {x^n \over n!}$.
+  - Then by definition, $f_N(x) \to f(x)$ pointwise on $\RR$.
 
-Letting $f_N(x) = \sum_{j=1}^N \frac 1 {j!} x^j$, we have $f_N(x) \to f(x)$ pointwise on $(-\infty ,\infty)$.
-
-For any compact interval $[-M, M]$, we have
-
+- For any compact interval $[-M, M]$, we have
 \[
 \norm{f_N(x) - f(x)}_\infty
-&= \sup_{-M\leq x \leq M} ~\abs{\sum_{j=N+1}^\infty \frac 1 {j!} x^j} \\
+&= \sup_{-M\leq x \leq M} ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
 &\leq \sup_{-M\leq x \leq M} ~ \sum_{j=N+1}^\infty \frac 1 {j!} \abs{x}^j \\
 &\leq \sum_{j=N+1}^\infty \frac 1 {j!} M^j \\
 &\leq \sum_{j=0}^\infty \frac 1 {j!} M^j \\
 &= e^M \\
 &<\infty
 ,\]
+  so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 
-so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
-Thus it converges on any bounded interval.
+- Thus $f$ converges on any bounded interval.
 
 It does not converge on $\RR$, since $x^N$ is unbounded.
 :::
