@@ -210,7 +210,7 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 
 
 :::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum 
 
 :::
 
