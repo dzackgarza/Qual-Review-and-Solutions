@@ -188,7 +188,7 @@ $1\implies 2$:
 
 $2\implies 1$:
 
-- 
+- Suppose $
 
 :::
 
