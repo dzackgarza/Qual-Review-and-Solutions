@@ -203,15 +203,12 @@ Theorem (Uniform Limits of Continuous Functions are Continuous)
 
 :::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
 $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
-
-> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
-
 :::
+> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
 
 
 :::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum 
-
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
 :::
 
 
