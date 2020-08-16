@@ -105,7 +105,7 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 
   > Here we've used that $e^x$ is equal to its power series expansion.
 
-- Thus $f$ converges on any bounded interval.
+- Thus $f$ converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
 
 It does not converge on $\RR$, since $x^N$ is unbounded.
 :::
