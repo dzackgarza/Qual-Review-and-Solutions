@@ -162,9 +162,10 @@ Determine if $f$ is integrable.
 - ?
 :::
 
-Switching to polar coordinates and integrating over a half-circle contained in $I^2$, we have
+Switching to polar coordinates and integrating over the unit disc $\DD \subseteq I^2$, we have
 \[
-\int_{I^2} f \geq \int_0^\pi \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^2} ~dr~d\theta = \infty
+\int_{I^2} f 
+&\geq \int_0^{2\pi} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta = \infty
 ,\]
 
 so $f$ is not integrable.
