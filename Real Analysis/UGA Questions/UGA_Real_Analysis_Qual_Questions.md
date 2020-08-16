@@ -111,7 +111,10 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 $f$ does not converge on $\RR$.
 
 - If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
-- Taking $A = \RR$ and $g_n(x) = {x^n \over n!}$, we have $\sup_{x\in \RR} \abs{g_n(x)} = \sup_{x\in \RR} {x^n \over n!} = \infty$
+- But taking $A = \RR$ and $g_n(x) = {x^n \over n!}$, we have 
+\[  
+\sup_{x\in \RR} \abs{g_n(x)} = \sup_{x\in \RR} {x^n \over n!} = \infty
+.\]
 
 :::
 
