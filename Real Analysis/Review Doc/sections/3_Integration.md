@@ -354,7 +354,7 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 :::
 
 :::{.proof}
-Apply
+- By Tonelli, if $f_n(x) \geq 0$ for all $n$ 
 :::
 
 
