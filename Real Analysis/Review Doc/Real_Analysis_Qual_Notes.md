@@ -205,10 +205,19 @@ Theorem (Uniform Limits of Continuous Functions are Continuous)
 :	A uniform limit of continuous functions is continuous.
 
 
-Lemma (Testing Uniform Convergence)
-:   $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
 
-    **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
+:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
+$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
+
+> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded below.
+
+:::
+
+
+:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
+
+:::
+
 
 Lemma (Uniform Limits Commute with Integrals)
 : If $f_n \to f$ uniformly, then $\int f_n = \int f$.
