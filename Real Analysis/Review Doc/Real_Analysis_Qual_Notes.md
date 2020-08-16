@@ -760,7 +760,7 @@ Proof
 
 
 :::{.theorem title="Commuting Sums with Integrals"}
-If $\theset{f_n}$ are positive and integrable with $f\definedas \sum_n f_n$
+If $\theset{f_n}$ integrable with $f_n(x) \geq 0$ 
 :::
 
 
