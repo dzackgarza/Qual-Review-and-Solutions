@@ -175,6 +175,7 @@ Prove that the following statements are equivalent:
 :::{.concept}
 \hfill
 - What it means for a sequence to converge.
+- ?
 :::
 
 $1\implies 2$:
