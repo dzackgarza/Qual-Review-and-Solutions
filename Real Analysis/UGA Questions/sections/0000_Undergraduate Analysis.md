@@ -95,7 +95,7 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 
 - Thus $f$ converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
 
-It does not converge on $\RR$, since $x^N$ is unbounded.
+- But $f$ does not converge on $\RR$, since $x^N$ is unbounded.
 :::
 
 
