@@ -196,11 +196,13 @@ $1\implies 2$:
   - We thus want to show that for every $\eps>0$, there exists an $N(\eps)$ such that \[n\geq N(\eps) \implies \rho(f(x_n),  f(x_0)) < \eps.\]
 - Let $\eps>0$ be arbitrary, then by (1) choose $\delta$ such that $\rho(f(x), f(x_0)) < \eps$ when $d(x, x_0) < \delta$.
 - Since $x_n\to x$, there is some $N$ such that $n\geq N \implies \abs{x_n - x_0} < \delta$
-- Then for $n\geq N$, $d(x_n, x_0) < \delta \implies \rho(f(x), f(x_0)) < \eps$ as desired.
+- Then for $n\geq N$, $d(x_n, x_0) < \delta \implies \rho(f(x), f(x_0)) < \eps$, so $f*
 
 $2\implies 1$:
 
+- Suppose $x_n\to x_0 \implies f(x_n)\to f(x_0)$ and let $\eps > 0$ be arbitrary.
 - 
+
 
 :::
 
