@@ -170,7 +170,8 @@ Switching to polar coordinates and integrating over half of the unit disc $\DD \
 &= \int_0^{\pi/2} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
 &= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{\pi/2} \cos(\theta)\sin(\theta)\,d\theta  }\\
 &= \qty{\int_0^1 {1\over r^3}\,dr} \qty{-{1\over 2}\cos^2(\theta)\evalfrom_0^{\pi/2}}  \\
-&= -{1\over 2r^2}\evalfrom_0^1 \qty{1\over 2}
+&= -{1\over 2r^2}\evalfrom_0^1 \qty{1\over 2} \\
+&= -1 + \qty{\lim_{r\to 0} {1\over } }
 = \infty
 ,\]
 
