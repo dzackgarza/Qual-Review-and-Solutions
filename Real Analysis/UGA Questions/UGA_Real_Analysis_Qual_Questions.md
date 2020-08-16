@@ -21,7 +21,10 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 \hfill
 :::{.concept}
 \hfill
-- Uniform continuity.
+- Uniform continuity:
+\[  
+\forall \varepsilon>0, \exists \delta(\eps)>0 \qtext{such that} \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \varepsilon
+.\]
 :::
 
 - Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
