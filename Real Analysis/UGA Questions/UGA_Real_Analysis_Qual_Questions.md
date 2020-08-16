@@ -77,9 +77,6 @@ f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
-\todo[inline]{Walk through.}
-\todo[inline]{Add concepts.}
-
 :::{.solution}
 \hfill
 :::{.concept}
@@ -185,9 +182,9 @@ Prove that the following statements are equivalent:
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
 1. Show that
-$$
+\[
 \sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
-$$
+\]
 
 2. Suppose $I = \QQ$ and $\sum_{q \in \mathbb{Q}} a(q)<\infty$.
   Define
