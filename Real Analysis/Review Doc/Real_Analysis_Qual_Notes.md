@@ -430,7 +430,6 @@ Notation:
   - Bounded
 
 
-
 ## Definitions
 
 Definition (\$L^+\$)
