@@ -202,7 +202,13 @@ Proof
         > Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 
 Theorem (Uniform Limits of Continuous Functions are Continuous)
-:	A uniform limit of continuous functions is continuous.
+
+:::{.theorem title="Uniform Limit Theorem"}
+If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous.
+
+> Slogan: "A uniform limit of continuous functions is continuous."
+:::
+
 
 
 
