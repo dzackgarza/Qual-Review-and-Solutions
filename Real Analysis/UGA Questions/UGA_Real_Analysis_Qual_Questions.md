@@ -103,6 +103,8 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 ,\]
   so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 
+  > Here we've used that $
+
 - Thus $f$ converges on any bounded interval.
 
 It does not converge on $\RR$, since $x^N$ is unbounded.
