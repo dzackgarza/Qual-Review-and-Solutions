@@ -84,8 +84,10 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 \hfill
 :::{.concept}
 \hfill
-- $f_N\to f$ uniformly $\iff$ $\norm{f_N - f} \to 0$.
-- $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$, i.e. an infinite sum is defined pointwise as the limit of its partial sums.
+- $f_N\to f$ uniformly $\iff$ $\norm{f_N - f}_\infty \to 0$.
+- $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
+  - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
+- If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
 :::
 
 - Set $f_N(x) = \sum_{n=1}^N {x^n \over n!}$.
@@ -115,7 +117,6 @@ $f$ does not converge on $\RR$.
 \[  
 \sup_{x\in \RR} \abs{g_n(x)} = \sup_{x\in \RR} {x^n \over n!} = \infty
 .\]
-
 :::
 
 
@@ -123,6 +124,15 @@ $f$ does not converge on $\RR$.
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
 
 Prove that $\sum f_n$ is also continuous.
+
+:::{.solution}
+
+**Claim:**
+If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
+
+
+:::
+
 
 ## Spring 2017 # 4 $\done$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
