@@ -122,7 +122,8 @@ Then setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous 
 
 - Follows from an $\varepsilon/3$ argument: 
 \[  
-bs{f(x}
+\abs{F(x) - F(y} \leq 
+\abs{F(x) - F_n(x)} + \abs{F_N(x) - F_N(y) }
 .\]
 :::
 
