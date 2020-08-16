@@ -130,7 +130,7 @@ Prove that $\sum f_n$ is also continuous.
 **Claim:**
 If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 
-- Then settubg $F_N\definedas \sum_{n=1}^N f_n$
+> Note that setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
 :::
 
 
