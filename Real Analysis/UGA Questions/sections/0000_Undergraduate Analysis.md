@@ -91,7 +91,7 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 ,\]
   so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 
-  > Here we've used that $
+  > Here we've used that $e^x$ is equal to its power series expansion, and 
 
 - Thus $f$ converges on any bounded interval.
 
