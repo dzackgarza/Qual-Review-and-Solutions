@@ -154,9 +154,9 @@ Switching to polar coordinates and integrating over half of the unit disc $\DD \
 \[
 \int_{I^2} f \, dA
 &\geq \int_\DD f \, dA \\
-&\geq \int_0^{2\pi} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta  \\
-&= \int_0^{2\pi} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{2\pi} \cos(\theta)\sin(\theta)\,d\theta  }
+&\geq \int_0^{\pi} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta  \\
+&= \int_0^{\pi} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
+&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{\pi} \cos(\theta)\sin(\theta)\,d\theta  }
 = \infty
 ,\]
 
