@@ -130,7 +130,7 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 :::
 
 
-## Spring 2017 # 4 $\done$
+## Spring 2017 # 4 $\work$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
 $$
 f(x, y) = \begin{cases}
