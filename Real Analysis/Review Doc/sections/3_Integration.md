@@ -354,7 +354,8 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 :::
 
 :::{.proof}
-- By Tonelli, if $f_n(x) \geq 0$ for all $n$ 
+- By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
+- By Fubini on $\abs{f_n}$
 :::
 
 
