@@ -215,7 +215,7 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 :::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
 If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
 :::
-Conversely, if $\sum f_n$ converges uniformly on
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
 
 
 Lemma (Uniform Limits Commute with Integrals)
