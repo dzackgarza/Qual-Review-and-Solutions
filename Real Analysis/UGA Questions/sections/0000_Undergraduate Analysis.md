@@ -51,7 +51,7 @@ $$
   .\]
 - Note $f(x_n) = n$ and thus 
 \[
-\abs{f(x_n) - f(x_{n+1})} = n - (n+1) = 1 > \varepsilon
+\abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
 ,\]
   a contradiction.
 :::
