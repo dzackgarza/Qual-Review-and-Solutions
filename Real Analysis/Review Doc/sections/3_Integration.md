@@ -27,9 +27,9 @@ Definition (Integrable)
 
 Definition (The Infinity Norm)
 :   \hfill
-    \begin{align*}
+    \[
     \norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
-    .\end{align*}
+    .\]
 
 
 Definition (Essentially Bounded Functions)
@@ -40,11 +40,11 @@ If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost eve
 Definition (L infty)
 :   \hfill
 
-    \begin{align*}
+    \[
     L^\infty(X) 
     \definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
     \definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
-    ,\end{align*}
+    ,\]
 
 Example:
 
@@ -62,10 +62,10 @@ Useful facts about $C_c$ functions:
 
 Theorem (p-Test for Integrals in \$\\RR\$)
 :   \hfill
-\begin{align*}
+\[
 \int_0^1 {1\over x^p} < \infty \iff  p < 1 \\
 \int_1^\infty {1\over x^p} < \infty \iff  p > 1 
-.\end{align*}
+.\]
 
 > Slogan: big powers of $x$ help us in neighborhoods of infinity and hurt around zero
 
@@ -131,7 +131,7 @@ Proof (Generalized DCT)
 :   Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 
     - $\int f \geq \limsup \int f_n$:
-    \begin{align*}
+    \[
     \int g - \int f 
     &= \int \qty{g-f} \\
     &\leq \liminf \int \qty{g_n - f_n} \quad \text{Fatou} \\
@@ -140,12 +140,12 @@ Proof (Generalized DCT)
     &= \int g - \limsup \int f_n \\
     \\
     \implies \int f &\geq \limsup \int f_n
-    .\end{align*}
+    .\]
 
       - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
 
     - $\int f \leq \liminf \int f_n$:
-    \begin{align*}
+    \[
     \int g + \int f 
     &= \int(g+f) \\
     &\leq \liminf \int \qty{g_n + f_n} \\
@@ -153,35 +153,35 @@ Proof (Generalized DCT)
     &= \int g + \liminf f_n \\
     \\
     \int f &\leq \liminf \int f_n
-    .\end{align*}
+    .\]
 
       - Here we use that $g_n + f_n \to g+f$ with $0 \leq \abs{f_n} + f_n \leq g_n + f_n$ so Fatou's lemma again applies.
   
 
 Lemma (Converges in \$L^1\$ implies convergence of \$L^1\$ norms)
 :   If $f\in L^1$, then
-    \begin{align*}
+    \[
     \int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \int \abs{f}
-    .\end{align*}
+    .\]
 
 Proof 
 :   Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
-    \begin{align*}
+    \[
     \abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
-    ,\end{align*}
+    ,\]
     so the DCT applies to $g_n$ and
-    \begin{align*}
+    \[
     \norm{f_n - f}_1 = \int \abs{f_n - f} + \abs{f_n} - \abs{f_n}
     = \int \abs{f_n} - g_n\\
     \to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
-    .\end{align*}
+    .\]
 
 Theorem (Fatou's Lemma)
 :   If $f_n$ is a sequence of nonnegative measurable functions, then
-    \begin{align*}
+    \[
     \int \liminf_n f_n &\leq \liminf_n \int f_n \\
     \limsup_n \int f_n &\leq \int \limsup_n f_n
-    .\end{align*}
+    .\]
 
 
 Theorem (Tonelli)
@@ -209,10 +209,10 @@ Corollary (Measurable Slices)
     - For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
     - The function
 
-    \begin{align*}
+    \[
     F: \RR^{n_1} &\to \RR \\
     x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
-    \end{align*}
+    \]
     is measurable and 
     $$
     m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
@@ -239,11 +239,11 @@ Proof (Measurable Slices)
 
 Proposition (Differentiating Under an Integral)
 :   If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
-    \begin{align*}
+    \[
     \dd{}{t} F(t)
     &\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
     &\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
-    .\end{align*}
+    .\]
 
     To justify passing the limit, let $h_k \to 0$ be any sequence and define
     $$
@@ -317,30 +317,30 @@ Proposition (Continuity in \$L^1\$)
 Proof
 :   Approximate with compactly supported functions.
     Take $g\converges{L_1}\to f$ with $g\in C_c$.
-    \begin{align*}
+    \[
     \int f(x+h) - f(x) 
     &\leq \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
     &\converges{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
     &= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x)\\
     &\converges{??}\to 0
-    ,\end{align*}
+    ,\]
     which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
 
 Proposition (Integration by Parts, Special Case)
-:   \begin{align*}
+:   \[
     F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
     \implies
     \int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
-    .\end{align*}
+    .\]
 
 Proof 
 : Fubini-Tonelli, and sketch region to change integration bounds.
 
 Theorem (Lebesgue Density)
-: \begin{align*}
+: \[
   A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
   \implies \norm{A_h(f) - f} \converges{h\to 0}\to 0
-  .\end{align*}
+  .\]
 
 Proof
 : Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
@@ -355,9 +355,8 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 
 :::{.proof}
 - By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
-- By Fubini on $\abs{f_n}$, if either "iterated integral" is finite
+- By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
 :::
-
 
 
 ## $L^p$ Spaces
@@ -372,9 +371,9 @@ Lemma
     - Smooth compactly supported functions $C_c^\infty$
 Theorem
 :
-\begin{align*}
+\[
 m(X) < \infty \implies \lim_{p\to\infty} \norm{f}_p = \norm{f}_\infty 
-.\end{align*}
+.\]
 
 Proof
 :   \hfill
@@ -382,22 +381,22 @@ Proof
     - For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
     - Then $m(S) > 0$ and
 
-    \begin{align*}
+    \[
     \pnorm{f}p 
     &= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
     &\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
     &\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
     &\implies \liminf_p \pnorm{f}p \geq M
-    .\end{align*}
+    .\]
 
     We also have
-    \begin{align*}
+    \[
     \pnorm{f}p 
     &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
     &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
     &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
     &\implies \limsup_p \pnorm{f}p \leq M \qed
-    .\end{align*}
+    .\]
 
 
 Theorem (Dual Lp Spaces)
