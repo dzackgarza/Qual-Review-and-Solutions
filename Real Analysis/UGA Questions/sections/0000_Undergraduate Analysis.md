@@ -95,7 +95,11 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 
 - Thus $f$ converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
 
-- But $f$ does not converge on $\RR$, since $x^N$ is unbounded.
+**Claim**: 
+$f$ does not converge on $\RR$.
+
+- If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $S$, then $\sup_{x\in S} \abs{f_n(x)} \to 0$.
+
 :::
 
 
