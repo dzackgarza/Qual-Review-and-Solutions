@@ -156,7 +156,7 @@ Switching to polar coordinates and integrating over the unit disc $\DD \subseteq
 &\geq \int_\DD f \, dA \\
 &\geq \int_0^{2\pi} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta  \\
 &= \int_0^{2\pi} \cos(\theta)\sin(\theta) \int_0^1 {r^3} ~dr~d\theta \\
-&= \int_0^{2\pi} \cos(\theta)\sin(\theta) \left[  
+&= \int_0^{2\pi} \cos(\theta)\sin(\theta) \left[ {1 \over r^4} 
 = \infty
 ,\]
 
