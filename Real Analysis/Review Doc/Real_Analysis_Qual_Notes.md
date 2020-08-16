@@ -209,6 +209,20 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 > Slogan: "A uniform limit of continuous functions is continuous."
 :::
 
+:::{.proof}
+- Follows from an $\varepsilon/3$ argument: 
+  \[  
+  \abs{F(x) - F(y} \leq 
+  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
+  \leq \eps \to 0
+  .\]
+
+  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
+  - The middle $\eps/3$ comes from continuity of each $F_N$.
+- 
+:::
+
+
 
 
 

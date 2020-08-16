@@ -140,7 +140,8 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
   - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
   - The middle $\eps/3$ comes from continuity of each $F_N$.
 
-- Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
+- Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous
+- Each $F_N$ is continuous and $F_N\to F$ uniformly, so applying t
 :::
 
 
