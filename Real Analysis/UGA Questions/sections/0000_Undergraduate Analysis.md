@@ -85,7 +85,7 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 &= \sup_{-M\leq x \leq M} ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
 &\leq \sup_{-M\leq x \leq M} ~\sum_{n=N+1}^\infty \abs{ {x^n \over {n!}} } \\
 &\leq \sup_{-M\leq x \leq M} ~\sum_{n=N+1}^\infty {M^n \over n!} \\
-&\leq \sum_{j=N+1}^\infty \frac 1 {j!} M^j \\
+&\leq \sum_{n=N+1}^\infty \\
 &\leq \sum_{j=0}^\infty \frac 1 {j!} M^j \\
 &= e^M \\
 &<\infty
