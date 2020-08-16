@@ -25,9 +25,12 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 \[  
 \forall \varepsilon>0, \exists \delta(\eps)>0 \qtext{such that} \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \varepsilon
 .\]
+- Negating uniform continuity:
+  $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
 :::
 
-- Show a stronger statement: $f(x) = \frac 1 x$ is uniformly continuous on any interval of the form $(c, \infty)$ where $c > 0$.
+**Claim**:
+$f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
 
 - Note that
 $$
@@ -35,7 +38,8 @@ $$
 .$$
 
 - Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
- - Note that $\delta$ does not depend on $x, y$.
+  - Note that $\delta$ does not depend on $x, y$.
+
 - Then
 \[
 \abs{f(x) - f(y)}
@@ -47,9 +51,7 @@ $$
 ,\]
   which shows uniform continuity.
 
-To see that $f$ is not uniformly continuous when $c=0$:
-
-> Note: negating uniform continuity says $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
+**Claim**: $f$ is *not* uniformly continuous when $c=0$.
 
 - Let $\varepsilon < 1$.
 - Let $x_n = \frac 1 n$ for $n\geq 1$.
