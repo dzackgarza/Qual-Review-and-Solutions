@@ -7,7 +7,7 @@ f_z &= f_x = i\inv f_y \\
 &=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
 .\]
 
-## Misc Prereq
+## Misc Prerequisites
 
 **Standard forms of conic sections:**
 
@@ -37,8 +37,9 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 
 - $\Re(z) = \frac 1 2 (z + \bar z)$ and $\Im(z) = \frac{1}{2i}(z - \bar z)$.
 - $z\bar z = \abs{z}^2$
-- $\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}}$
-- $\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}$.
+- Exponential forms of cosine and sine:
+  - $\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}}$
+  - $\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}$.
 
 **Useful Series**
 
@@ -50,5 +51,5 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 \dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
 \]
 
-
+The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
 

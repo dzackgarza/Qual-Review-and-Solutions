@@ -1,4 +1,4 @@
-# Linear Algebra
+\CC,\RR, # Linear Algebra
 
 
 Definition (Invariant Factor)
@@ -33,8 +33,8 @@ Theorem (Cayley-Hamilton)
 : The minimal polynomial divides the characteristic polynomial, and in particular $\chi_A(A) = 0$.
 
 Proof
-:   By Cayley-Hamilton, $\min_A$ divides $\chi_A$. 
-    Every $\lambda_i$ is a root of $\mu_M$: 
+:   By minimality, $\min_A$ divides $\chi_A$. 
+    Every $\lambda_i$ is a root of $\min_A(x)$: 
 
     Let $(\vector v_i, \lambda_i)$ be a nontrivial eigenpair. 
     Then by linearity,

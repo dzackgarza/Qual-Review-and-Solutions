@@ -78,29 +78,14 @@ $$
 $$
 Show that $f = 0$ almost everywhere.
 
-## Spring 2015 # 2 $\done$
-Let $f: \RR \to \CC$ be continuous with period 1. 
-Prove that
-\[
-\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{n=1}^{N} f(n \alpha)=\int_{0}^{1} f(t) d t \quad \forall \alpha \in \RR\setminus\QQ.
-\]
-
-> Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
-
-\todo[inline]{Add concepts.}
-
 :::{.solution}
 \hfill
-:::{.concept}
-\hfill
-- ?
-:::
 
 ### Proof 1: Using Fourier Transforms
 \hfill
 :::{.concept}
 \hfill
-- Weierstrass Approximation: A uniformly continuous function on a compact set can be uniformly approximated by polynomials.
+- Weierstrass Approximation: A continuous function on a compact set can be uniformly approximated by polynomials.
 :::
 
 - Fix $k \in \ZZ$.
@@ -172,9 +157,17 @@ $\qed$
 
 :::
 
+## Spring 2015 # 2 $\work$
+Let $f: \RR \to \CC$ be continuous with period 1. 
+Prove that
+\[
+\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{n=1}^{N} f(n \alpha)=\int_{0}^{1} f(t) d t \quad \forall \alpha \in \RR\setminus\QQ.
+\]
+
+> Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
 
 
-## Fall 2014 # 4
+## Fall 2014 # 4 $\work$
 Let $g\in L^\infty([0, 1])$
 Prove that
 \[

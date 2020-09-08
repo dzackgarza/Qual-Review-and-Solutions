@@ -45,6 +45,8 @@ title: Real Analysis Review Notes
 
 - Integrals
   - Break up $\RR^n = \theset{\abs{x} \leq 1} \coprod \theset{\abs{x} > 1}$.
+  - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
+  - Tail estimates!
 
 ## Definitions
 
@@ -159,49 +161,88 @@ Proposition
 
 ## Uniform Convergence
 
-Theorem (Weierstrass Approximation)
-: If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
+:::{.definition title="Uniform Convergence"}
+\[  
+(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
 
-Theorem (Egorov)
-:   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $$f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$$ exists almost everywhere.
+Negated:
+\[  
+(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\]
 
-    Then $f_k \to f$ *almost uniformly*, i.e.
-    \[
-    \forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-    m(E\setminus F) < \varepsilon ~\text{ and }~ f_k \mapsvia{u}  f ~\text{on}~ F
-    .\]
+> Slogan: to negate, find bad $x$s depending on $n_0$ that are larger than some $\eps$.
 
-Proposition 
-: The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+:::
+Compare this to the definition of pointwise convergence:
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
 
-Proof
-:   \hfill
-
-    1.  Let $\theset{f_k}$ be Cauchy in $X$.
-
-    2.  Define a candidate limit using pointwise convergence:
-
-        Fix an $x$; since
-        $$
-        \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
-        $$ 
-        the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
-        So define $f(x) \definedas \lim_k f_k(x)$.
+:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
+$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
+:::
+> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
 
 
-    3.  Show that $\norm{f_k - f} \to 0$:
-        $$
-        \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
-        $$
-        Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+:::
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
 
-    4.  Show that $f\in X$:
 
-        The uniform limit of continuous functions is continuous.
+:::{.theorem title="Weierstrass Approximation"}
+If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
 
-        > Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::
 
-Theorem (Uniform Limits of Continuous Functions are Continuous)
+
+:::{.theorem title="Egorov"}
+Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
+\[  
+f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
+\]
+exists almost everywhere.
+
+Then $f_k \to f$ *almost uniformly*, i.e.
+\[
+\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
+m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
+.\]
+:::
+
+:::{.proposition}
+The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+:::
+
+:::{.proof}
+
+1.  Let $\theset{f_k}$ be Cauchy in $X$.
+
+2.  Define a candidate limit using pointwise convergence:
+
+    Fix an $x$; since
+  \[
+  \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
+  \] 
+    the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
+    So define $f(x) \definedas \lim_k f_k(x)$.
+
+
+3.  Show that $\norm{f_k - f} \to 0$:
+  \[
+  \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
+  \]
+    Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+
+4.  Show that $f\in X$:
+
+    The uniform limit of continuous functions is continuous.
+
+> Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+
+:::
 
 :::{.theorem title="Uniform Limit Theorem"}
 If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous.
@@ -221,21 +262,6 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
   - The middle $\eps/3$ comes from continuity of each $F_N$.
 - So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
 :::
-
-
-
-
-
-:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
-$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
-:::
-> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
-
-
-:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-:::
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
 
 
 Lemma (Uniform Limits Commute with Integrals)
@@ -438,11 +464,11 @@ Definition (\$L^+\$)
 Definition (Integrable)
 :	A measurable function is integrable iff $\norm{f}_1 < \infty$.
 
-Definition (The Infinity Norm)
-:   \hfill
-    \[
-    \norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
-    .\]
+:::{.definition title="The Infinity Norm"}
+\[
+\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+.\]
+:::
 
 
 Definition (Essentially Bounded Functions)
@@ -450,14 +476,13 @@ Definition (Essentially Bounded Functions)
 
 If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
 
-Definition (L infty)
-:   \hfill
-
-    \[
-    L^\infty(X) 
-    \definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
-    \definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
-    ,\]
+:::{.definition title="$L^\infty$"}
+\[
+L^\infty(X) 
+\definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
+\definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
+,\]
+:::
 
 Example:
 
@@ -473,8 +498,7 @@ Useful facts about $C_c$ functions:
 - Uniformly continuous
 
 
-Theorem (p-Test for Integrals in \$\\RR\$)
-:   \hfill
+:::{.theorem title="p-Test for Integrals"}
 \[
 \int_0^1 {1\over x^p} < \infty \iff  p < 1 \\
 \int_1^\infty {1\over x^p} < \infty \iff  p > 1 
@@ -482,9 +506,11 @@ Theorem (p-Test for Integrals in \$\\RR\$)
 
 > Slogan: big powers of $x$ help us in neighborhoods of infinity and hurt around zero
 
-Some integrable functions:
+:::
 
-- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty} \pi/2 < \infty$
+### Some (Non)Integrable Functions
+
+- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty}\to \pi/2 < \infty$
 - Any bounded function (or continuous on a compact set, by EVT)
 - $\int_0^1 {1 \over \sqrt{x}} < \infty$
 - $\int_0^1 {1\over x^{1-\eps}} < \infty$
@@ -502,7 +528,7 @@ Some non-integrable functions:
 ###  Convergence Theorems
 
 :::{.theorem title="Monotone Convergence"}
-If $f_n \in L^+$ and $f_n \nearrow f$ a.e., then
+If $f_n \in L^+$ and $f_n \nearrow f$ almost everywhere, then
 $$
 \lim \int f_n
 = \int \lim f_n = \int f
@@ -514,7 +540,7 @@ $$
 :::
 
 :::{.theorem title="Dominated Convergence"}
-If $f_n \in L^1$ and $f_n \to f$ a.e. with $\abs {f_n} \leq g$ for some $g\in L^1$, then $f\in L^1$ and
+If $f_n \in L^1$ and $f_n \to f$ almost everywhere with $\abs {f_n} \leq g$ for some $g\in L^1$, then $f\in L^1$ and
 $$
 \lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f < \infty
 ,$$
@@ -531,9 +557,9 @@ $$
 :::{.theorem title="Generalized DCT"}
 If 
 
-- $f_n \in L^1$ with $f_n \to f$ a.e., 
+- $f_n \in L^1$ with $f_n \to f$ almost everywhere, 
 - There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
-- $g_n\to g$ a.e. with $g\in L^1$, and 
+- $g_n\to g$ almost everywhere with $g\in L^1$, and 
 - $\lim \int g_n = \int g$, 
 
 then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
@@ -576,107 +602,135 @@ Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 
  
 
-Lemma (Converges in \$L^1\$ implies convergence of \$L^1\$ norms)
-:   If $f\in L^1$, then
-    \[
-    \int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \int \abs{f}
-    .\]
+:::{.proposition title="Convergence in $L^1$ implies convergence of $L^1$ norm"}
+If $f\in L^1$, then
+\[
+\int\abs{f_n - f} \to 0 \iff \int \abs{f_n} \to \int \abs{f}
+.\]
+:::
 
-Proof 
-:   Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
-    \[
-    \abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
-    ,\]
-    so the DCT applies to $g_n$ and
-    \[
-    \norm{f_n - f}_1 = \int \abs{f_n - f} + \abs{f_n} - \abs{f_n}
-    = \int \abs{f_n} - g_n\\
-    \to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
-    .\]
-
-Theorem (Fatou's Lemma)
-:   If $f_n$ is a sequence of nonnegative measurable functions, then
-    \[
-    \int \liminf_n f_n &\leq \liminf_n \int f_n \\
-    \limsup_n \int f_n &\leq \int \limsup_n f_n
-    .\]
+:::{.proof}
+Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
+\[
+\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
+,\]
+so the DCT applies to $g_n$ and
+\[
+\norm{f_n - f}_1 = \int \abs{f_n - f} + \abs{f_n} - \abs{f_n}
+= \int \abs{f_n} - g_n\\
+\to_{DCT} \lim \int \abs{f_n} - \int \abs{f}
+.\]
+:::
 
 
-Theorem (Tonelli)
-:   For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
 
-    - $f_x(y)$ is a **measurable** function
-    - $F(x) = \int f(x, y) ~dy$ is a **measurable** function,
-    - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
-    - $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
+:::{.theorem title="Fatou"}
+If $f_n$ is a sequence of nonnegative measurable functions, then
+\[
+\int \liminf_n f_n &\leq \liminf_n \int f_n \\
+\limsup_n \int f_n &\leq \int \limsup_n f_n
+.\]
+:::
 
-Theorem (Fubini)
-:   For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
 
-    - $f_x(y)$ is an **integrable** function
-    - $F(x) \definedas \int f(x, y) ~dy$ is an **integrable** function,
-    - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
-    - $\int f = \int \int f(x,y)$, i.e. any iterated integral is equal to the original
+:::{.theorem title="Tonelli (Non-Negative, Measurable)"}
+For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
+
+- $f_x(y)$ is a **measurable** function
+- $F(x) = \int f(x, y) ~dy$ is a **measurable** function,
+- For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
+- $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
+:::
+
+
+:::{.theorem title="Fubini (Integrable)"}
+For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
+
+- $f_x(y)$ is an **integrable** function
+- $F(x) \definedas \int f(x, y) ~dy$ is an **integrable** function,
+- For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
+- $\int f = \int \int f(x,y)$, i.e. any iterated integral is equal to the original
+
+:::
 
 Theorem (Fubini/Tonelli)
 : If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
 
-Corollary (Measurable Slices)
-:   Let $E$ be a measurable subset of $\RR^n$. Then
+:::{.proposition title="Measurable Slices"}
+Let $E$ be a measurable subset of $\RR^n$. Then
 
-    - For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
-    - The function
+- For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
+- The function
 
-    \[
-    F: \RR^{n_1} &\to \RR \\
-    x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
-    \]
-    is measurable and 
-    $$
-    m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
-    = \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
-    $$
+\[
+F: \RR^{n_1} &\to \RR \\
+x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
+\]
+is measurable and 
+\[
+m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
+= \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
+.\]
+:::
 
-Proof (Measurable Slices)
-:   \hfill
+:::{.proof}
+\hfill
+$\implies$:
 
-    $\implies$:
-
-    - Let $f$ be measurable on $\RR^n$.
-    - Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
-    - Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
-
-
-    $\impliedby$:
-
-    - Let $A$ be measurable in $\RR^{n+1}$.
-    - Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
-    - By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
-    - Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
+- Let $f$ be measurable on $\RR^n$.
+- Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
+- Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
 
 
-Proposition (Differentiating Under an Integral)
-:   If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
-    \[
-    \dd{}{t} F(t)
-    &\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
-    &\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
-    .\]
+$\impliedby$:
 
-    To justify passing the limit, let $h_k \to 0$ be any sequence and define
-    $$
-    f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
-    ,$$
-    so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
-
-    Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
+- Let $A$ be measurable in $\RR^{n+1}$.
+- Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
+- By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
+- Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
+:::
 
 
-Proposition (Swapping Sum and Integral)
-: If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
+:::{.proposition title="Differentiating Under an Integral"}
+If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
+\[
+\dd{}{t} F(t)
+&\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
+&\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
+.\]
 
-Proof
-: MCT. Let $F_N = \sum^N f_n$ be a finite partial sum; then there are simple functions $\phi_n \nearrow f_n$ and so $\sum^N \phi_n \nearrow F_N$, so apply MCT.
+To justify passing the limit, let $h_k \to 0$ be any sequence and define
+$$
+f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
+,$$
+so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
+
+Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
+:::
+
+:::{.proposition title="Commuting Sums with Integrals (non-negative)"}
+If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
+:::
+
+
+:::{.proof}
+- Idea: MCT. 
+- Let $F_N = \sum^N f_n$ be a finite partial sum; 
+- Then there are simple functions $\phi_n \nearrow f_n$ 
+- So $\sum^N \phi_n \nearrow F_N$ and MCT applies
+:::
+
+:::{.theorem title="Commuting Sums with Integrals (integrable)"}
+If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int\sum \abs{f_n} < \infty$, then
+\[  
+\int\sum f_n = \sum \int f_n
+.\]
+:::
+
+:::{.proof}
+- By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
+- By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
+:::
 
 Lemma
 :   If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
@@ -687,17 +741,55 @@ Proof
 
 ## $L^1$ Facts
 
-Lemma (Translation Invariance)
-:   The Lebesgue integral is translation invariant, i.e. 
-    $\int f(x) ~dx = \int f(x + h) ~dx$ for any $h$.
+:::{.proposition title="Zero in $L^1$ iff zero almost everywhere"}
+For $f\in L^+$, 
+\[  
+\int f = 0 \quad\iff\quad f \equiv 0 \text{ almost everywhere}
+.\]
+:::
 
-Proof
-:   \hfill
-    - For characteristic functions, $\int_E f(x+h) = \int_{E + h} f(x) = m(E+h) = m(E) = \int_E f$ by translation invariance of measure.
-    - So this also holds for simple functions by linearity
-    - For $f\in L^+$, choose $\phi_n \nearrow f$ so $\int \phi_n \to \int f$.
-    - Similarly, $\tau_h \phi_n \nearrow \tau_h f$ so $\int \tau_h f \to \int f$
-    - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
+:::{.proof}
+\hfill
+- Obvious for simple functions:
+  - If $f(x) = \sum_{j=1}^n c_j \chi_{E_j}$, then $\int f = 0$ iff for each $j$, either $c_j=0$ or $m(E_j) = 0$.
+  - Since nonzero $c_j$ correspond to sets where $f\neq 0$, this says $m\qty{\theset{f\neq 0}} = 0$.
+- $\impliedby$:
+  - If $f= 0$ almost everywhere and $\phi \nearrow f$, then $\phi = 0$ almost everywhere since $\phi(x) \leq f(x)$
+  -Then
+  \[  
+  \int f = \sup_{\phi \leq f} \int \phi = \sup_{\phi \leq f} 0 = 0
+  .\]
+- $\implies$:
+  - Instead show negating "$f=0$ almost everywhere" implies $\int f \neq 0$.
+  - Write $\theset{f\neq 0} = \union_{n\in \NN} S_n$ where $S_n \definedas \theset{x\suchthat f(x) \geq {1\over n}}$.
+  - Since "not $f=0$ almost everywhere", there exists an $n$ such that $m(S_n) > 0$.
+  - Then
+  \[  
+  0 < {1\over n} \chi_{E_n} \leq f \implies 
+  0 < \int {1\over n} \chi_{E_n} \leq \int f
+  .\]
+:::
+
+
+:::{.proposition title="Translation Invariance"}
+The Lebesgue integral is translation invariant, i.e. 
+\[ \int f(x) ~dx = \int f(x + h) ~dx \qtext{for any} h .\]
+:::
+
+:::{.proof}
+\hfill
+- Let $E\subseteq X$; for characteristic functions, 
+\[
+\int_X \chi_E(x+h) 
+= \int_{X} \chi_{E+h}(x) = m(E+h) = m(E) = \int_X \chi_E(x)
+\] 
+  by translation invariance of measure.
+- So this also holds for simple functions by linearity.
+- For $f\in L^+$, choose $\phi_n \nearrow f$ so $\int \phi_n \to \int f$.
+- Similarly, $\tau_h \phi_n \nearrow \tau_h f$ so $\int \tau_h f \to \int f$
+- Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
+:::
+
 
 Lemma (Integrals Distribute Over Disjoint Sets)
 : If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
@@ -708,12 +800,18 @@ Lemma (Unif. Cts. L1 Functions Vanish at Infinity)
 
 > Doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
 
-Lemma (L1 Functions Have Small Tails)
-: If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
+:::{.theorem title="Small Tails in $L^1$"}
+If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
+:::
 
-Proof
-:   Approximate with compactly supported functions.
-    Take $g\converges{L_1}\to f$ with $g\in C_c$, then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)^c$, then $\int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}$.
+:::{.proof}
+\hfill
+- Approximate with compactly supported functions.
+- Take $g\converges{L_1}\to f$ with $g\in C_c$
+- Then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)$
+- Then \[ \int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}.\]
+:::
+
 
 Lemma (\$L^1\$ Functions Have Absolutely Continuity)
 : $m(E) \to 0 \implies \int_E f \to 0$.
@@ -729,20 +827,27 @@ Proof
 :   Idea: Split up domain
     Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
 
-Proposition (Continuity in \$L^1\$)
-: $$\norm{\tau_h f - f}_1 \converges{h\to 0}\to 0$$
+:::{.theorem title="Continuity in $L^1$"}
+\[ 
+\norm{\tau_h f - f}_1 \converges{h\to 0}\to 0
+\]
+:::
 
-Proof
-:   Approximate with compactly supported functions.
-    Take $g\converges{L_1}\to f$ with $g\in C_c$.
-    \[
-    \int f(x+h) - f(x) 
-    &\leq \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
-    &\converges{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
-    &= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x)\\
-    &\converges{??}\to 0
-    ,\]
-    which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
+
+:::{.proof}
+\hfill
+Approximate with compactly supported functions.
+Take $g\converges{L_1}\to f$ with $g\in C_c$.
+\[
+\int f(x+h) - f(x) 
+&\leq \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
+&\converges{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
+&= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x)\\
+&\converges{??}\to 0
+,\]
+which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
+:::
+
 
 Proposition (Integration by Parts, Special Case)
 :   \[
@@ -763,18 +868,6 @@ Theorem (Lebesgue Density)
 Proof
 : Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
 
-
-:::{.theorem title="Commuting Sums with Integrals"}
-If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int\sum \abs{f_n} < \infty$, then
-\[  
-\int\sum f_n = \sum \int f_n
-.\]
-:::
-
-:::{.proof}
-- By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
-- By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
-:::
 
 
 ## $L^p$ Spaces
@@ -1632,6 +1725,7 @@ Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation th
 
 # Inequalities and Equalities
 
+
 Proposition (Reverse Triangle Inequality)
 :	\hfill
   \[  
@@ -1806,5 +1900,19 @@ Proposition (Bernoulli's Inequality)
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
+
+
+:::{.proposition title="Exponential Inequality"}
+\[  
+\forall t\in \RR,\quad 1 + t \leq  e^t
+.\]
+:::
+
+:::{.proof}
+\hfill
+
+- It's an equality when $t=0$.
+- $\dd{}{t} 1+ t < \dd{t}e^t \iff t<0$
+:::
 
 

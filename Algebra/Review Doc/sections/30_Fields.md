@@ -146,7 +146,9 @@ If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separ
 :::
 
 :::{.definition title="Field Automorphisms"}
-$\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}$.
+\[ 
+\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}
+.\]
 :::
 
 :::{.proposition}
@@ -156,6 +158,16 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polyno
 :::{.proposition}
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
+
+:::{.definition title="Galois Extension"}
+An extension $L/K$ is *Galois* iff any of the following hold:
+
+1. $[L: K] = \abs{\mathrm{Aut}(K/F)}$.
+2. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
+3. The field fixed by $\mathrm{Aut}(K/F)$ is exactly $L$.
+4. $L$ is finite, normal, and separable.
+:::
+
 
 :::{.definition title="Galois Group"}
 If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
@@ -287,9 +299,11 @@ TFAE:
 :::
 
 :::{.theorem title="Splitting + Perfect implies Galois"}
+\hfill
+
 - If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
 
-- $k = \QQ, \FF_p$ are perfect, and any finite normal extension is Galois.
+- $k = \CC,\RR, \QQ, \FF_p$ are perfect, so any finite normal extension is Galois.
 
 - Every splitting field of a polynomial over a perfect field is Galois.
 :::

@@ -51,19 +51,12 @@ $p$ does not divide $n_p$.
 :::{.proposition}
 Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
 :::
-
-Something proof title="Something"
-
 :::{.proof}
 Let $H \leq G$ be a $p\dash$subgroup.
 If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
 
 Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
-:::
-
-:::{.theorem title="Fratini's Argument"}
-If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
 :::
 
 ## Products
@@ -94,7 +87,6 @@ We have $G = \prod_{i=1}^n H_i$ when
 
 :::
 
-
 :::{.theorem title="Recognizing Semidirect Products"}
 We have $G = N \semidirect_\psi H$ when
 
@@ -124,6 +116,7 @@ We have $G = N \semidirect_\psi H$ when
   - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
 
 - \[ \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\] where $\varphi$ is the totient function.
+
   - $\varphi(p^k) = p^{k-1}(p-1)$
 
 - If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.

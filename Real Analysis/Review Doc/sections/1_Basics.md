@@ -40,6 +40,8 @@
 
 - Integrals
   - Break up $\RR^n = \theset{\abs{x} \leq 1} \coprod \theset{\abs{x} > 1}$.
+  - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
+  - Tail estimates!
 
 ## Definitions
 
@@ -154,49 +156,88 @@ Proposition
 
 ## Uniform Convergence
 
-Theorem (Weierstrass Approximation)
-: If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
+:::{.definition title="Uniform Convergence"}
+\[  
+(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
 
-Theorem (Egorov)
-:   Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that $$f(x) \definedas \displaystyle\lim_{k\to\infty} f_k(x) < \infty$$ exists almost everywhere.
+Negated:
+\[  
+(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\]
 
-    Then $f_k \to f$ *almost uniformly*, i.e.
-    \[
-    \forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-    m(E\setminus F) < \varepsilon ~\text{ and }~ f_k \mapsvia{u}  f ~\text{on}~ F
-    .\]
+> Slogan: to negate, find bad $x$s depending on $n_0$ that are larger than some $\eps$.
 
-Proposition 
-: The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+:::
+Compare this to the definition of pointwise convergence:
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
 
-Proof
-:   \hfill
-
-    1.  Let $\theset{f_k}$ be Cauchy in $X$.
-
-    2.  Define a candidate limit using pointwise convergence:
-
-        Fix an $x$; since
-        $$
-        \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
-        $$ 
-        the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
-        So define $f(x) \definedas \lim_k f_k(x)$.
+:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
+$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
+:::
+> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
 
 
-    3.  Show that $\norm{f_k - f} \to 0$:
-        $$
-        \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
-        $$
-        Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+:::
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
 
-    4.  Show that $f\in X$:
 
-        The uniform limit of continuous functions is continuous.
+:::{.theorem title="Weierstrass Approximation"}
+If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
 
-        > Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::
 
-Theorem (Uniform Limits of Continuous Functions are Continuous)
+
+:::{.theorem title="Egorov"}
+Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
+\[  
+f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
+\]
+exists almost everywhere.
+
+Then $f_k \to f$ *almost uniformly*, i.e.
+\[
+\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
+m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
+.\]
+:::
+
+:::{.proposition}
+The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+:::
+
+:::{.proof}
+
+1.  Let $\theset{f_k}$ be Cauchy in $X$.
+
+2.  Define a candidate limit using pointwise convergence:
+
+    Fix an $x$; since
+  \[
+  \abs{f_k(x) - f_j(x)}  \leq \norm{f_k - f_k} \to 0
+  \] 
+    the sequence $\theset{f_k(x)}$ is Cauchy in $\RR$.
+    So define $f(x) \definedas \lim_k f_k(x)$.
+
+
+3.  Show that $\norm{f_k - f} \to 0$:
+  \[
+  \abs{f_k(x) - f_j(x)} < \varepsilon ~\forall x \implies \lim_{j} \abs{f_k(x) - f_j(x)} <\varepsilon ~\forall x
+  \]
+    Alternatively, $\norm{f_k-f} \leq \norm{f_k - f_N} + \norm{f_N - f_j}$, where $N, j$ can be chosen large enough to bound each term by $\varepsilon/2$.
+
+4.  Show that $f\in X$:
+
+    The uniform limit of continuous functions is continuous.
+
+> Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+
+:::
 
 :::{.theorem title="Uniform Limit Theorem"}
 If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous.
@@ -216,21 +257,6 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
   - The middle $\eps/3$ comes from continuity of each $F_N$.
 - So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
 :::
-
-
-
-
-
-:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
-$f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
-:::
-> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
-
-
-:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-:::
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
 
 
 Lemma (Uniform Limits Commute with Integrals)

@@ -67,3 +67,34 @@ Prove that there is some real number $r> 0$ such that $\abs{F(x, y)} < r$ whenev
 State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
 
 
+# Several Variables: Extra Questions
+
+
+## ?  
+Let $f=u+iv$ be differentiable (i.e. $f'(z)$ exists) with continuous partial derivatives at a point $z=re^{i\theta}$, $r\not= 0$. 
+
+Show that
+$$
+\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta},\quad
+\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}
+.$$
+
+## ?
+
+Give an example of a
+
+Show that $f(z) = z^2$ is uniformly continuous in any open disk
+$|z| < R$, where $R>0$ is fixed, but it is not uniformly continuous on
+$\mathbb C$.
+
+### 1 
+Show that the function $u=u(x,y)$ given by
+$$
+u(x,y)=\frac{e^{ny}-e^{-ny}}{2n^2}\sin nx\quad \text{for}\ n\in {\mathbf N}
+$$
+is the solution on $D=\{(x,y)\ | x^2+y^2<1\}$ of the Cauchy problem for the Laplace equation
+$$\frac{\partial ^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=0,\quad
+u(x,0)=0,\quad \frac{\partial u}{\partial y}(x,0)=\frac{\sin nx}{n}.$$
+
+### 2 
+Show that there exist points $(x,y)\in D$ such that $\displaystyle{\limsup_{n\to\infty} |u(x,y)|=\infty}$.

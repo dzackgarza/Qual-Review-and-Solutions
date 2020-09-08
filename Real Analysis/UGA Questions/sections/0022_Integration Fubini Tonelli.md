@@ -92,7 +92,7 @@ $\implies$:
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
-- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
+- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and
 \[
 \mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
 \]
@@ -120,8 +120,8 @@ $\impliedby$:
 ,\]
   where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
 
-- By F.T., all of these integrals are equal. 
-  \todo[inline]{Why is FT justified.}
+- By Tonelli, all of these integrals are equal. 
+  - This is justified because $f$ was assumed measurable on $\RR^n$, thus by (a) $\mathcal{A}$ is a measurable set and thus $\chi_A$ is a measurable function on $\RR^n\cross \RR$.
 
 :::
 

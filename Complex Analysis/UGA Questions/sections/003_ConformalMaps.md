@@ -47,3 +47,8 @@ a. $T$ maps $\RR\union \theset{\infty}$ to itself.
 b. It is possible to choose $a,b,c,d$ to be real numbers.
 c. $\bar{T(z)} = T(\bar z)$ for every $z\in \CP^1$.
 d. There exist $\alpha\in \RR, \beta \in \CC\setminus \RR$ such that $T(\alpha) = \alpha$ and $T(\bar \beta) = \bar{T(\beta)}$.
+
+# Extra Questions
+
+## 12. 
+Find a conformal map from $D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\}$ to the unit disk $\Delta=\{z: \ |z|<1\}$.

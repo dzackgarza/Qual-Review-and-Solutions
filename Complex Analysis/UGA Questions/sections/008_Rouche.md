@@ -121,3 +121,23 @@ Use Rouche's theorem to prove the Fundamental Theorem of Algebra.
 
 
 
+# Extras
+
+
+## ?
+Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: 
+
+If
+$$
+P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)
+$$
+is a polynomial of degree $n$, then it has $n$ zeros in $\mathbb{C}$.
+
+
+## ?
+Suppose $f$ is entire and there exist $A, R >0$ and natural number
+$N$ such that 
+$$|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.$$ 
+
+Show that (i) $f$ is a polynomial and (ii) the degree of $f$ is at least
+$N$.

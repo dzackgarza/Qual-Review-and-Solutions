@@ -8,7 +8,7 @@ todos: true
 **Preface**
 
 I'd like to extend my gratitude to Peter Woolfitt for supplying many solutions and checking many proofs of the rest in problem sessions.
-
+Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
 
 # Undergraduate Analysis: Uniform Convergence
 
@@ -175,7 +175,7 @@ Switching to polar coordinates and integrating over one quarter of the unit disc
 so $f$ is not integrable.
 :::
 
-## Spring 2015 # 1 $\work$
+## Spring 2015 # 1 $\done$
 Let $(X, d)$ and $(Y, \rho)$ be metric spaces, $f: X\to Y$, and $x_0 \in X$.
 
 Prove that the following statements are equivalent:
@@ -192,46 +192,96 @@ Prove that the following statements are equivalent:
 
 $1\implies 2$:
 
-- Let $\theset{x_n} \converges{n\to\infty}\to x_0$; we want to show $\theset{f(x_n)}\converges{n\to\infty}\to f(x_0)$.
+- Let $\theset{x_n} \converges{n\to\infty}\to x_0$ be arbitrary; we want to show $\theset{f(x_n)}\converges{n\to\infty}\to f(x_0)$.
   - We thus want to show that for every $\eps>0$, there exists an $N(\eps)$ such that \[n\geq N(\eps) \implies \rho(f(x_n),  f(x_0)) < \eps.\]
 - Let $\eps>0$ be arbitrary, then by (1) choose $\delta$ such that $\rho(f(x), f(x_0)) < \eps$ when $d(x, x_0) < \delta$.
-- Since $x_n\to x$, there is some $N$ such that $n\geq N \implies \abs{x_n - x_0} < \delta$
-- Then for $n\geq N$, $d(x_n, x_0) < \delta \implies \rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ as desired.
+- Since $x_n\to x$, there is some $N$ such that $n\geq N \implies d(x_n, x_0) < \delta$
+- Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ as desired.
 
 $2\implies 1$:
 
-- Suppose $x_n\to x_0 \implies f(x_n)\to f(x_0)$ and let $\eps > 0$ be arbitrary.
-- 
+> Note that we need a $\delta$ for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
 
-
+- By contrapositive, we will show that $\not 1\implies \not 2$. 
+- Thus we need to show that if $f$ is not $\eps\dash\delta$ continuous at $x_0$, then there exists a sequence $x_n\to x_0$ where $f(x_n)\not\to f(x_0)$.
+- Negating $1$, we have that there exists an $\eps>0$ such that for all $\delta$, there exists an $x$ with $d(x, x_0) < \delta$ but $\rho(f(x), f(x_0))>\eps$
+- So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < {1\over n}$ and $\rho(f(x_n), f(x_0)) > \eps$.
+- Then $x_n \to x_0$ but $f(x_n) \not\to f(x_0)$.
 :::
 
 
 ## Fall 2014 # 2  $\work$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
-1. Show that
+### 1
+Show that
 \[
 \sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
 \]
 
-2. Suppose $I = \QQ$ and $\sum_{q \in \mathbb{Q}} a(q)<\infty$.
-  Define
-  $$
-  f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
-  $$
-  Show that $f$ is continuous at $x \iff x\not\in \QQ$.
+### 2
+Suppose $I = \QQ$ and $\sum_{q \in \mathbb{Q}} a(q)<\infty$.
+Define
+\[
+f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
+\]
+Show that $f$ is continuous at $x \iff x\not\in \QQ$.
+
+\todo[inline]{Stuck on part b}
+:::{.solution}
+
+### 1
+
+- Set $S \definedas \sum_{i\in I} \alpha(i)$, we will show that $S<\infty \implies I$ is countable.
+- Write $I = \disjoint_{n\in \NN} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
+- We now have the inequality
+\[  
+S = \sum_{i\in I} \alpha(i) 
+\geq \sum_{i\in S_n} \alpha(i) 
+\geq \sum_{i\in S_n} {1\over n} 
+= {1\over n} \sum_{i\in S_n} 1 = \qty{1\over n} \abs{S_n} \\ \\
+\infty > \implies n S \geq \abs{S_n}
+,\]
+  so $S_n$ is a countable set.
+
+- But then $I$ is a countable union of countable sets and thus countable.
+
+### 2
+\\todo[inline]{Not sure.}
+:::
 
 
-## Spring 2014 # 2  $\work$
+
+## Spring 2014 # 2  $\done$
 
 Let $\theset{a_n}$ be a sequence of real numbers such that
-$$
+\[
 \theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
-$$
+\]
 Show that $\sum a_n^2 < \infty$.
 
 > Note: Assume $a_n, b_n$ are all non-negative.
+
+\todo[inline]{Have someone check!}
+:::{.solution}
+\hfill
+- Define a sequence of operators 
+\[  
+T_N: \ell^2 &\to \ell^1\\
+\theset{b_n} &\mapsto \sum_{n=1}^N a_n b_n
+.\]
+- By assumption, these are well defined: the image is $\ell^1$ since $\abs{T_N(\theset{b_n})} < \infty$ for all $N$ and all $\theset{b_n} \in \ell^2$.
+- So each $T_N \in \qty{\ell^2}\dual$ is a linear functional on $\ell^2$.
+- For each $x\in \ell^2$, we have $\norm{T_N(x)}_{\RR} = \sum_{n=1}^N a_n b_n < \infty$ by assumption, so each $T_N$ is pointwise bounded.
+- By the Uniform Boundedness Principle, $\sup_N \norm{T_N}_{\text{op}} < \infty$.
+- Define $T = \lim_{N \to\infty } T_N$, then $\norm{T}_{\text{op}} < \infty$.
+- By the Riesz Representation theorem,
+\[  
+\sqrt{\sum a_n^2} \definedas \norm{\theset{a_n}}_{\ell^2} = \norm{T}_{\qty{\ell^2}\dual} = \norm{T}_{\text{op}} < \infty
+.\]
+
+- So $\sum a_n^2 < \infty$.
+:::
 
 
 
@@ -256,29 +306,32 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 \[
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
-&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx \right] \quad\text{integrating by parts}\\
-&= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx \right] \quad\text{integrating by parts}\\
+&= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx
 ,\]
 
 - Thus it suffices to show that
 \[
-\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx = 0
+\lim_{k\to\infty} \int_0^1 x^k \qty{\dd{p}{x} (x) } \, dx = 0
 .\]
 
 - Integrating by parts a second time yields
 \[
 \lim_{k\to\infty} 
-\int_0^1 x^k \qty{\dd{}{x} p(x) } \, dx
+\int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx
 &= \lim_{k\to\infty} 
-{x^{k+1} \over k+1} p'(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
-&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \\
-&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2}{x^2}p(x)} \, dx \quad\text{by DCT} \\
-&= - \int_0^1 0 \qty{ \dd{^2}{x^2}p(x)} \, dx \\
+{x^{k+1} \over k+1} \dd{p}{x}(x) \evalfrom_0^1 - \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2 p}{x^2}(x)} \, dx \\
+&= \lim_{k\to\infty} {p'(1) \over k+1} - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2p}{x^2}(x)} \, dx \\
+&= - \lim_{k\to\infty} \int_0^1 {x^{k+1} \over k+1} \qty{ \dd{^2p}{x^2}(x)} \, dx \\
+&= - \int_0^1 \lim_{k\to\infty}  {x^{k+1} \over k+1} \qty{ \dd{^2p}{x^2}(x)} \, dx \quad\text{by DCT} \\
+&= - \int_0^1 0 \qty{ \dd{^2p}{x^2}(x)} \, dx \\
 &= 0
 .\]
 
-  - The DCT can be applied here because $f''$ is continuous and $[0, 1]$ is compact, so $f''$ is bounded on $[0, 1]$ by a constant $M$ and 
-  $$\int_0^1 \abs{x^k f''(x)} \leq \int_0^1 1\cdot M = M < \infty.$$
+  - The DCT can be applied here because polynomials are smooth and $[0, 1]$ is compact, so $\dd{^2 p}{x^2}$ is bounded on $[0, 1]$ by some constant $M$ and 
+  \[ \int_0^1 \abs{x^k \dd{^2 p}{x^2} (x)} \leq \int_0^1 1\cdot M = M < \infty.\]
+
+- So the result holds when $f$ is a polynomial.
 
 - Now use the Weierstrass approximation theorem: 
   - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
@@ -290,7 +343,8 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 &\leq \abs{ \int_0^1 kx^{k-1} \norm{p_\eps-f}_\infty \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot \abs{ \int_0^1 kx^{k-1} \,dx  } \\
 &= \norm{p_\eps-f}_\infty \cdot x^k \evalfrom_0^1 \\
-&= \norm{p_\eps-f}_\infty \converges{\eps\to 0}\to 0
+&= \norm{p_\eps-f}_\infty \\ \\
+&\converges{\eps\to 0}\to 0
 \]
 
   and the integrals are equal. 
@@ -321,41 +375,38 @@ Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then
 \hfill
 - Cesaro mean/summation. 
 - Break series apart into pieces that can be handled separately.
+- Idea: once $N$ is large enough, $a_k \approx S$, and all smaller terms will die off as $N\to \infty$.
+  - See [this MSE answer](https://math.stackexchange.com/questions/514802/convergence-of-series-implies-convergence-of-cesaro-mean).
 :::
 
 ### a
 
-Prove a stronger result: 
-$$
+- Prove a stronger result: 
+\[
 a_k \to S \implies S_N\definedas \frac 1 N \sum_{k=1}^N a_k \to S
-.$$
+.\]
 
-> Idea: once $N$ is large enough, $a_k \approx S$, and all smaller terms will die off as $N\to \infty$.
->
-> See [this MSE answer](https://math.stackexchange.com/questions/514802/convergence-of-series-implies-convergence-of-cesaro-mean).
-
-- Use convergence $a_k \to S$: choose $M$ large enough such that 
-$$
+- For any $\eps> 0$, use convergence $a_k \to S$: choose (and fix) $M = M(\eps)$ large enough such that 
+\[
 k\geq M+1 \implies \abs{a_k - S} < \varepsilon
-.$$
+.\]
 
+- With $M$ fixed, choose $N = N(M, \eps)$ large enough so that ${1\over N} \sum_{k=1}^{M} \abs{a_k - S} < \eps$.
 
-Then
+- Then
 \[
 \left|\left(\frac{1}{N} \sum_{k=1}^{N} a_{k}\right)-S\right| 
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - NS  } \\
 &= {1\over N} \abs{ \qty{\sum_{k=1}^N a_k} - \sum_{k=1}^N S  } \\
 &=\frac{1}{N}\left|\sum_{k=1}^{N}\left(a_{k}-S\right)\right| \\
 &\leq \frac{1}{N} \sum_{k=1}^{N}\left|a_{k}-S\right| \\
-&= {1\over N} \sum_{k=1}^M \abs{a_k - S} + \sum_{k=M+1}^N \abs{a_k - S} \\
-&\leq {1\over N} \sum_{k=1}^M \abs{a_k - S} + \sum_{k=M+1}^N {\eps \over 2} \\
-&= {1\over N} \sum_{k=1}^M \abs{a_k - S} + (N - M){\eps \over 2} \\
-&\converges{\eps\to 0}\to {1\over N} \sum_{k=1}^M \abs{a_k - S} + 0 \\
-&\converges{N\to \infty}\to 0 + 0
+&= {1\over N} \sum_{k=1}^{M} \abs{a_k - S} + \sum_{k=M+1}^N \abs{a_k - S} \\
+&\leq {1\over N} \sum_{k=1}^{M} \abs{a_k - S} + \sum_{k=M+1}^N {\eps } \quad \text{since } a_k \to S\\
+&= {1\over N} \sum_{k=1}^{M} \abs{a_k - S} + (N - M){\eps } \\
+&\leq \eps + (N(M, \eps) - M(\eps))\eps
 .\]
-  
-> Note: $M$ is fixed, so the last sum is some constant $c$, and $c/N \to 0$ as $N\to\infty$ for any constant.
-> To be more careful, choose $M$ first to get $\eps/2$ for the tail, then choose $N(M)>M$ for the remaining truncated part of the sum. 
+
+\todo[inline]{Revisit, not so clear that the last line can be made smaller than $\eps$, since $M, N$ both depend on $\eps$...}
 
 ### b
 
@@ -396,53 +447,113 @@ Then
 ## Fall 2018 # 4 $\done$
 Let $f\in L^1([0, 1])$.
 Prove that
-$$
+\[
 \lim_{n \to \infty} \int_{0}^{1} f(x) \abs{\sin n x} ~d x= \frac{2}{\pi} \int_{0}^{1} f(x) ~d x
-$$
+\]
+
 > Hint: Begin with the case that $f$ is the characteristic function of an interval.
 
-\todo[inline]{Add concepts.}
+\todo[inline]{Ask someone to check the last approximation part.}
 
 :::{.solution}
 \hfill
 :::{.concept}
 \hfill
-- ?
+- Converting floor/ceiling functions to inequalities: $x-1 \leq \floor{x} \leq x$.
 :::
 
-Case of characteristic function
+Case of a characteristic function of an interval $[a, b]$:
 
-- First suppose $f(x) = \chi_{[0, 1]}(x)$.
-- Note that $\sin(nx)$ has a period of $2\pi/n$, and thus $\floor{n\over 2\pi}$ full periods in $[0, 1]$.
-- Taking the absolute value yields a new function with half the period, so a period of $\pi/n$ and $\floor{\pi / n}$ full periods in $[0, 1]$.
-- We can compute the integral over one full period (which is independent of *which* period is chosen), and since $\sin(x)$ is positive and agrees with $\abs{\sin(nx)}$ on the first period, we have
+- First suppose $f(x) = \chi_{[a, b]}(x)$.
+- Note that $\sin(nx)$ has a period of $2\pi/n$, and thus $\floor{ (b-a) \over (2\pi / n)} = \floor{n(b-a)\over 2\pi}$ full periods in $[a, b]$.
+- Taking the absolute value yields a new function with half the period
+  - So $\abs{\sin(nx)}$ has a period of $\pi/n$ with $\floor{n(b-a) \over \pi}$ full periods in $[a, b]$.
+- We can compute the integral over one full period (which is independent of *which* period is chosen)
+  - We can use translation invariance of the integral to compute this over the period $0$ to $\pi/n$.
+  - Since $\sin(nx)$ is positive, it equals $\abs{\sin(nx)}$ on its first period, so we have
 \[
 \int_{\text{One Period}} \abs{\sin(nx)} \, dx 
 &= \int_0^{\pi/n} \sin(nx)\,dx \\
 &= {1\over n} \int_0^\pi \sin(u) \,du \quad u = nx \\
-&= {1\over n} -\cos(u)\mid_0^\pi \\
+&= {1\over n} \qty{-\cos(u)\mid_0^\pi} \\
 &= {2 \over n}
 .\]
 
 
-- Then break the integral up into integrals over periods $P_1, P_2, \cdots, P_N$ where $N \definedas \floor{n/\pi}$:
+- Then break the integral up into integrals over full periods $P_1, P_2, \cdots, P_N$ where $N \definedas \floor{n(b-a)/\pi}$
+- Noting that each period is of length $\pi\over n$, so letting $L_n$ be the regions falling *outside* of a full period, we have
+
+- Thus
 \[
-\int_0^1 \abs{\sin(nx)} \, dx 
-&= \qty{ \sum_{j=1}^{N} \int_{P_j} \abs{\sin(nx)} \, dx } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
-&= \qty{ \sum_{j=1}^{N} {2\over n} } +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
-&= N \qty{2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
-&\definedas \floor{n \over \pi} {2\over n} +  \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
-&= {2\over \pi} + \int_{N\floor{\pi/n}}^1 \abs{\sin(nx)}\,dx \\
-&\definedas {2\over \pi} + R(n) 
+\int_a^b \abs{\sin(nx)} \, dx 
+&= \qty{ \sum_{j=1}^{N} \int_{P_j} \abs{\sin(nx)} \, dx } +  \int_{L_n} \abs{\sin(nx)}\,dx \\
+&= \qty{ \sum_{j=1}^{N} {2\over n} } +  \int_{L_n} \abs{\sin(nx)}\,dx \\
+&= N \qty{2\over n} +  \int_{L_n} \abs{\sin(nx)}\,dx \\
+&\definedas \floor{(b-a) n \over \pi} {2\over n} +  R_n \\
+&\definedas (b-a)C_n + R_n 
 \]
-  so it suffices to show that $R(n) \converges{n\to\infty}\to 0$. 
-  \todo[inline]{Need to justify removing floor function and cancellation.}
+  where (claim) $C_n \converges{n\to\infty}\to {2\over \pi}$ and $R(n) \converges{n\to\infty}\to 0$. 
 
-- Showing this: ???????????? \todo[inline]{No clue how to show this.}
+- $C_n \to {2\over \pi}$:
+\[  
+{n-1 \over n} \qty{2\over \pi} = {n-1 \over \pi} \qty{2\over n} \leq \floor{n\over \pi}\qty{2\over n} \leq {n \over \pi}\qty{2\over n} = {2 \over \pi}
+,\]
+  then use the fact that ${n-1 \over n} \to 1$.
+  - Then equality follows by the Squeeze theorem.
 
-General case
+- $R_n \to 0$:
+  - We use the fact that $m(L_n) \to 0$, then $\int_{L_n} \abs{\sin(nx)} \leq \int_{L_n} 1 = m(L_n) \to 0$.
+  - This follows from the fact that $L_n$ is the complement of $\union_j P_j$, the set of full periods, so
+\[  
+m(L_n) 
+&= m(b-a) - \sum m(P_j) \\
+&= \qty{b-a} -  \floor{n(b-a) \over \pi}\qty{\pi \over n} \\
+&\converges{n\to \infty}\to (b-a) - (b-a) \\
+&= 0
+.\]
+  where we've used the fact that
+\[  
+\qty{\pi \over n} \qty{(b-a)n-1 \over \pi} 
+&\leq \floor{n(b-a) \over \pi}\qty{\pi \over n}  \\
+&\leq \qty{\pi \over n} \qty{(b-a)n\over \pi}  \\
+&= (b-a)
+,\]
+  then taking $n\to \infty$ sends the LHS to $b-a$, forcing the middle term to be $b-a$ by the Squeeze theorem.
 
-\todo[inline]{Not sure. Approximate $f$ by simple functions...?}
+
+General case:
+
+- By linearity of the integral, the result holds for simple functions:
+  - If $f = \sum c_j \chi_{E_j}$ where $E_j = [a_j, b_j]$, we have
+  \[  
+  \int_0^1 f(x) \abs{\sin(nx)}\,dx 
+  &= \int_0^1 \sum c_j \chi_{E_j}(x) \abs{\sin(nx)}\,dx  \\
+  &= \sum c_j \int_0^1 \chi_{E_j}(x) \abs{\sin(nx)}\,dx \\
+  &= \sum c_j (b_j - a_j) {2\over \pi} \\
+  &= {2\over \pi} \sum c_j (b_j - a_j) \\
+  &= {2\over \pi} \sum c_j m(E_j) \\
+  &\definedas {2\over \pi} \int_0^1 f
+  .\]
+- Since $f\in L^1$, where simple functions are dense, choose $s_n\nearrow f$ where $\norm{s_N - f}_1 < \eps$, then
+\[  
+\abs{ \int_0^1 f(x) \abs{\sin(nx)} \,dx - \int_0^1 s_N(x) \abs{\sin(nx)}\,dx } 
+&= \abs{ \int_0^1 \qty{f(x) - s_N(x)} \abs{\sin(nx)} \,dx } \\
+&\leq \int_0^1 \abs{ f(x) - s_N(x)} \abs{\sin(nx)} \,dx \\
+&= \norm{ \qty{f - s_N} \abs{\sin(nx)} }_1 \\
+&\leq \norm{f-s_N}_1 \cdot \norm{\abs{\sin(nx)}}_\infty \quad\text{by Holder}\\
+&\leq \eps \cdot 1
+,\]
+
+
+- So the integrals involving $s_N$ converge to the integral involving $f$, and
+\[
+\lim_{n\to\infty} \int f(x)\abs{\sin(nx)} 
+&= \lim_{n\to\infty} \lim_{N\to\infty} \int s_N(x) \abs{\sin(nx)} \\
+&= \lim_{N\to\infty} \lim_{n\to\infty} \int s_N(x) \abs{\sin(nx)} \quad\text{because ?}\\
+&= \lim_{N\to \infty} {2\over \pi} \int s_N(x) \\
+&= {2\over \pi} \int f
+,\]
+  which is the desired result.
 :::
 
 ## Fall 2017 # 4 $\done$
@@ -460,44 +571,51 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
 \]
 
-\todo[inline]{Add concepts.}
-\todo[inline]{Walk through.}
-
 :::{.solution}
 \hfill
 :::{.concept}
 \hfill
-- ?
+- $\sum f_n < \infty \iff \sup f_n \to 0$.
+- Negating uniform convergence: $f_n\not\to f$ uniformly iff $\exists \eps$ such that $\forall N(\eps)$ there exists an $x_N$ such that $\abs{f(x_N) - f(x)} > \eps$.
+- Exponential inequality: $1+y \leq e^y$ for all $y\in \RR$.
 :::
-
 
 ### a
 
-Let $G(x) = \sum_{n=1}^\infty nx(1-x)^n$. 
-Applying the ratio test, we have
-\[
-\abs{\frac{(n+1)x(1-x)^{n+1}}{nx(1-x)^n}} = \frac{n+1}{n} \abs{1-x} \converges{n\to\infty}\to \abs{1-x} < 1 \iff 0 \leq x \leq 2
-,\]
+$f_n\to 0$ pointwise:
 
-and in particular, this series converges on $[0, 2]$. 
-Thus its terms go to zero, and $nx(1-x)^n \to 0$ on $[0, 1] \subset [0, 2]$.
-
-To see that the convergence is not uniform, let $x_n = \frac 1 n$ and $\varepsilon > \frac 1 e$, then
-\[
-\sup_{x\in [0, 1]}\abs{nx(1-x)^n - 0} 
-\geq \abs{nx_n (1-x_n)^n} 
-= \abs{\left( 1 - \frac 1 n\right)^n} 
-\converges{n\to\infty}\to e\inv
-> \varepsilon
+- Finding the maximum: can check that $\dd{f_n}{x} = x(1-x)^{n-1} \qty{1 + (n^2-1)x}$
+- This has critical points $x=0, 1, {-1 \over n^2 + 1}$, and the latter is a global max on $[0, 1]$.
+- Set $x_n \definedas {-1 \over n^2 + 1}$
+- Compute
+\[  
+\lim f_n(x_n) = \lim_{n\to \infty } {-n \over n^2 + 1} \qty{1 + x_n}^n = 0\cdot 1 = 0
 .\]
+- So $\sup f_n \to 0$, forcing $f_n \to 0$ pointwise.
+
+
+The convergence is not uniform:
+
+- Let $x_n = \frac 1 n$ and $\varepsilon > e\inv$, then
+\[
+\norm{nx(1-x)^n - 0}_\infty
+&\geq \abs{nx_n (1-x_n)^n} \\
+&= \abs{\left( 1 - \frac 1 n\right)^n} \\
+&> e^{-1} \\
+&> \varepsilon
+.\]
+
+  - Here we've used that $(1 + {x\over n})^n \leq e^x$ for all $x\in \RR$ and all $n$.
+  - Follows from $1+y \leq e^y$ applied to $y = x/n$.
+
+- Thus $\norm{f_n - 0}_\infty = \norm{f_n}_\infty > e^{-1} > 0$.
 
 
 ### b
 
-> Note: could use the first part with $\sin(x) \leq x$, but then integral ends up more complicated.
+\todo[inline]{Possible to use part a with $\sin(x) \leq x$ on $[0, \pi/2]$?}
 
-Noting that $\sin(x) \leq 1$, we have
-We have
+- Noting that $\sin(x) \leq 1$, we have
 \[
 \abs{\int_0^1  n(1-x)^{n} \sin(x)} 
 &\leq \int_0^1  \abs{n(1-x)^n \sin(x)} \\
@@ -508,7 +626,7 @@ We have
 .\]
 :::
 
-## Spring 2017 # 3 $\done$
+## Spring 2017 # 3 $\work$
 
 Let
 \[
@@ -517,11 +635,13 @@ f_{n}(x) = a e^{-n a x} - b e^{-n b x} \quad \text{ where } 0 < a < b.
 
 Show that 
 
-a. $\sum_{n=1}^{\infty} \left|f_{n}\right|$ is not in $L^{1}([0, \infty), m)$
+### a 
+$\sum_{n=1}^{\infty} \left|f_{n}\right|$ is not in $L^{1}([0, \infty), m)$
 
-  > Hint: $f_n(x)$ has a root $x_n$.
+> Hint: $f_n(x)$ has a root $x_n$.
 
-b. 
+### b
+
 \[
 \sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
 \qtext{and}
@@ -535,19 +655,27 @@ b.
 \hfill
 :::{.concept}
 \hfill
-- ?
 :::
 
 ### a
 
-Letting $x_n \definedas \frac 1 n$, we have
-
-\[
-\sum_{k=1}^\infty \abs{f_k(x)} \geq \abs{f_n(x_n)} 
-=\abs{ae^{-ax} - be^{-bx}} \definedas M
+- $f_n$ has a root:
+\[  
+ae^{-nax} = be^{-nbx} 
+&\iff {1\over n} = e^{-nbx} e^{nax} = e^{n(b-a)x}
+\iff x = {\ln\qty{a\over b} \over n(a-b)} \definedas x_n
 .\]
 
-In particular, $\sup_{x} \abs{f_n(x)} \not\to 0$, so the terms do not go to zero and the sum can not converge.
+- Thus $f_n$ only changes sign at $x_n$, and is strictly positive on one side of $x_n$.
+- Then
+\[  
+\int_\RR \sum_n \abs{f_n(x)}\,dx 
+&= \sum_n \int_\RR \abs{f_n(x)} \,dx \\
+&\geq \sum_n \int_{x_n}^\infty f_n(x) \, dx \\
+&= \sum_n {1\over n} \qty{ e^{-bnx} - e^{-anx}\evalfrom_{x_n}^\infty } \\
+&= \sum_n {1\over n} \qty{ e^{-bnx_n} - e^{-anx_n} }
+.\]
+
 
 ### b
 
@@ -628,7 +756,6 @@ Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies 
 \lim _{n \to \infty} \left(\int _{\mathbb{R}} \frac{|\phi(x)|^{n}}{1+x^{2}} \, dx \right) ^ {\frac{1}{n}} 
 = \norm{\phi}_\infty.
 \]
-\todo[inline]{Walk through.}
 \todo[inline]{Add concepts.}
 
 :::{.solution}
@@ -687,35 +814,62 @@ Let $f, g \in L^2(\RR)$. Show that
 \[
 \lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
 \]
-\todo[inline]{Add concepts.}
+
 
 :::{.solution}
 \hfill
+
 :::{.concept}
 \hfill
-- ?
+- Cauchy Schwarz: $\norm{fg}_1 \leq \norm{f}_1 \norm{g}_1$.
+- Small tails.
 :::
 
 - Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
 \forall \eps,\, \exists N\in \NN \qst \int_{\abs{x} \geq {N}} \abs{h(x)}^2 \,dx < \eps
 .\]
-\todo[inline]{How to prove small tails in $L^p$?}
 
-- So choose $n$ large enough so the tails of both $f$ and $g$ are smaller than $\eps$.
-
-- Apply Cauchy-Schwarz:
+- So choose $N$ large enough so that
 \[  
-\abs{\int_\RR f(x) g(x+n) \,dx} 
-&\leq \int_\RR \abs{f(x) g(x+n)}\,dx \\
-&\leq \int_\RR
+\int_{\norm{x} \geq N}\abs{g(x)}^2 < \eps \\
+\int_{\norm{x} \geq N}\abs{f(x)}^2 < \eps \\
+.\]
+
+- Then write
+\[  
+\int_{\RR^d} f(x) g(x+n) \,dx = \int_{\norm{x} \leq N} f(x)g(x+n)\,dx + \int_{\norm{x} \geq N} f(x) g(x+n)\,dx
+.\]
+
+- Bounding the second term: apply Cauchy-Schwarz
+\[  
+\int_{\norm{x} \geq N} f(x) g(x+n)\,dx
+\leq 
+\qty{ \int_{\norm{x} \geq N} \abs{f(x)}^2}^{1\over 2} \cdot 
+\qty{ \int_{\norm{x} \geq N} \abs{g(x)}^2}^{1\over 2}
+\leq \eps^{1\over 2} \cdot \norm{g}_2
+.\]
+
+- Bounding the first term: also Cauchy-Schwarz, after variable changes
+\[  
+\int_{\norm{x} \leq N} f(x) g(x+n)\,dx 
+&= \int_{-N}^N f(x) g(x+n)\,dx \\
+&= \int_{-N+n}^{N+n} f(x-n) g(x)\,dx \\
+&\leq \int_{-N+n}^{\infty} f(x-n) g(x)\,dx \\
+&\leq \qty{\int_{-N+n}^{\infty} \abs{f(x-n)}^2}^{1\over 2}\cdot \qty{\int_{-N+n}^{\infty} \abs{g(x)}^2}^{1\over 2} \\
+&\leq \norm{f}_2 \cdot \eps^{1\over 2}
+.\]
+
+- Then as long as $n\geq 2N$, we have
+\[  
+\int \abs{f(x) g(x+n)} \leq \qty{\norm{f}_2 + \norm{g}_2} \cdot \eps^{1\over 2} 
 .\]
 :::
 
 ## Spring 2016 # 1  $\work$
 
 For $n\in \NN$, define
-\[]
+\[
 e_{n} = \left (1+ {1\over n} \right)^{n} 
 \qtext{and}
 E_{n} = \left( 1+ {1\over n} \right)^{n+1}
@@ -2266,29 +2420,14 @@ $$
 $$
 Show that $f = 0$ almost everywhere.
 
-## Spring 2015 # 2 $\done$
-Let $f: \RR \to \CC$ be continuous with period 1. 
-Prove that
-\[
-\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{n=1}^{N} f(n \alpha)=\int_{0}^{1} f(t) d t \quad \forall \alpha \in \RR\setminus\QQ.
-\]
-
-> Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
-
-\todo[inline]{Add concepts.}
-
 :::{.solution}
 \hfill
-:::{.concept}
-\hfill
-- ?
-:::
 
 ### Proof 1: Using Fourier Transforms
 \hfill
 :::{.concept}
 \hfill
-- Weierstrass Approximation: A uniformly continuous function on a compact set can be uniformly approximated by polynomials.
+- Weierstrass Approximation: A continuous function on a compact set can be uniformly approximated by polynomials.
 :::
 
 - Fix $k \in \ZZ$.
@@ -2360,9 +2499,17 @@ $\qed$
 
 :::
 
+## Spring 2015 # 2 $\work$
+Let $f: \RR \to \CC$ be continuous with period 1. 
+Prove that
+\[
+\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{n=1}^{N} f(n \alpha)=\int_{0}^{1} f(t) d t \quad \forall \alpha \in \RR\setminus\QQ.
+\]
+
+> Hint: show this first for the functions $f(t) = e^{2\pi i k t}$ for $k\in \ZZ$.
 
 
-## Fall 2014 # 4
+## Fall 2014 # 4 $\work$
 Let $g\in L^\infty([0, 1])$
 Prove that
 \[
@@ -2804,7 +2951,7 @@ $\implies$:
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
-- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and $
+- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and
 \[
 \mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
 \]
@@ -2832,8 +2979,8 @@ $\impliedby$:
 ,\]
   where we just use that $\int \int \chi_\mathcal{A} = m(\mathcal{A})$
 
-- By F.T., all of these integrals are equal. 
-  \todo[inline]{Why is FT justified.}
+- By Tonelli, all of these integrals are equal. 
+  - This is justified because $f$ was assumed measurable on $\RR^n$, thus by (a) $\mathcal{A}$ is a measurable set and thus $\chi_A$ is a measurable function on $\RR^n\cross \RR$.
 
 :::
 
@@ -3264,7 +3411,7 @@ since the $u_k$ are all orthogonal.
 $$
 \norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
 $$ 
-by Pythagoras since the $u_k$ are normal.
+by Pythagoras since the $u_k$ are orthogonal, where we've used normality in the last equality.
 
 > Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
 If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
@@ -3331,8 +3478,7 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
 \]
 
 - Thus $L^2(X) \subseteq L^1(X)$ 
-- Since they share a common dense subset (simple functions) $L^2$ is dense in $L^1$ 
-  \todo[inline]{What theorem is this using?}
+- Since they share a common dense subset (simple functions), $L^2$ is dense in $L^1$ 
 
 ### b
 
@@ -3533,7 +3679,8 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \hfill
 :::{.concept}
 \hfill
-- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
+- See 
+<https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 :::
 
 - Denote this norm $\norm{\wait}_u$

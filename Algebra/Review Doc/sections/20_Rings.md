@@ -11,6 +11,17 @@ r=ab \implies a \in R\units \txt{or} b\in R\units
 \]
 :::
 
+
+:::{.definition title="Divisibility of Elements"}
+\\todo[inline]{Todo}
+:::
+
+:::{.definition title="Semisimple"}
+?
+:::
+
+
+
 :::{.definition title="Prime Element"}
 An element $p\in R$ is **prime** iff 
 \[  
@@ -50,7 +61,7 @@ An ideal $I\normal R$ is *irreducible* if it can not be written as the intersect
 :::
 
 :::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff I \normalneq R \implies I \subseteq \mfm \iff R/I$ is a field.
+$\mfm$ is **maximal** $\iff \qty{ I \normalneq R \implies I \subseteq \mfm} \iff R/I$ is a field.
 :::
 
 :::{.example}
@@ -106,7 +117,7 @@ $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is th
 :::{.definition title="Jacobson Radical"}
 The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
 \[  
-\jacobsonrad(R) = \intersect {\mfm \suchthat \mfm \in \maxspec(R) }
+\jacobsonrad(R) = \intersect\theset{\mfm \suchthat \mfm \in \maxspec(R) }
 .\]
 :::
 
@@ -164,8 +175,10 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
 :::
 
+:::{.theorem title="Artin-Wedderburn?"}
 If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
 :::
+
 
 :::{.corollary}
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.

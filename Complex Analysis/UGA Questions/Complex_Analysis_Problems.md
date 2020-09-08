@@ -339,7 +339,7 @@ Use Cauchy's formula to prove that $f'\equiv 0$ and hence $f$ is constant.
 
 Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \subseteq \CC$ and $f(z) = \sum_{n=0}^\infty a_n z^n$ is a power series with radius of convergence exactly 1.
 
-### a $\work$
+### a $\done$
 Give an example of such an $f$ that converges at every point of $S^1$.
 
 ### b  $\work$
@@ -356,11 +356,15 @@ Prove that $f$ can not be analytic at *every* point of $S^1$.
 
 :::
 
-### a  $\work$
-Take $\sum {z^n \over n^2}$; then $\abs{z}\leq 1 \implies \abs{z^n\over n^2} \leq {1\over n^2}$ which is summable, so the series converges for $\abs{z}\leq 1$.
+### a  $\done$
+
+- Take $\sum {z^n \over n^2}$
+- Then \[\abs{z}\leq 1 \implies \abs{z^n\over n^2} \leq {1\over n^2}\] which is summable
+- So the series converges for $\abs{z}\leq 1$.
 
 ### b $\work$
-Take $\sum {z^n \over n}$; then $z=1$ yields the harmonic series, which diverges.
+- Take $\sum {z^n \over n}$; 
+- Then $z=1$ yields the harmonic series, which diverges.
 
 - For $z\in S^1\setminus\theset{1}$, we have $z = e^{2\pi it}$ for $0<t<2\pi$. 
 - So fix $t$.
@@ -394,6 +398,7 @@ Apply (a) to show that the above Taylor series converges uniformly on every boun
 
 ### c $\work$
 Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
+
 
 
 

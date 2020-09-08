@@ -73,7 +73,7 @@ since the $u_k$ are all orthogonal.
 $$
 \norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
 $$ 
-by Pythagoras since the $u_k$ are normal.
+by Pythagoras since the $u_k$ are orthogonal, where we've used normality in the last equality.
 
 > Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
 If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
@@ -140,8 +140,7 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
 \]
 
 - Thus $L^2(X) \subseteq L^1(X)$ 
-- Since they share a common dense subset (simple functions) $L^2$ is dense in $L^1$ 
-  \todo[inline]{What theorem is this using?}
+- Since they share a common dense subset (simple functions), $L^2$ is dense in $L^1$ 
 
 ### b
 
@@ -342,7 +341,8 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 \hfill
 :::{.concept}
 \hfill
-- See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
+- See 
+<https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 :::
 
 - Denote this norm $\norm{\wait}_u$

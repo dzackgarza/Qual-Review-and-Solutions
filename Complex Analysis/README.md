@@ -66,7 +66,7 @@ title: Complex Analysis Qualifying Exam
 
 - Residue theorem and applications
 
-- Singularities and meromorphic functions, including the
+- Singularities and meromorphic functions
 
 - Casorati-Weierstrass theorem
 

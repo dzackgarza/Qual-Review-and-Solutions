@@ -1,4 +1,4 @@
-# Stuff
+# Appendix: Proofs of the Fundamental Theorem of Algebra
 
 ### Fundamental Theorem of Algebra: Argument Principle 
 

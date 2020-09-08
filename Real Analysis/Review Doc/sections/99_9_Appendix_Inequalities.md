@@ -1,5 +1,6 @@
 # Inequalities and Equalities
 
+
 Proposition (Reverse Triangle Inequality)
 :	\hfill
   \[  
@@ -174,5 +175,19 @@ Proposition (Bernoulli's Inequality)
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
+
+
+:::{.proposition title="Exponential Inequality"}
+\[  
+\forall t\in \RR,\quad 1 + t \leq  e^t
+.\]
+:::
+
+:::{.proof}
+\hfill
+
+- It's an equality when $t=0$.
+- $\dd{}{t} 1+ t < \dd{t}e^t \iff t<0$
+:::
 
 
