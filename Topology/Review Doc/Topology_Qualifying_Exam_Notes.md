@@ -4,11 +4,23 @@ title: "Topology Qualifying Exam Notes"
 ---
 
 
-**Preface**
+# Preface
 
 Some fun resources:
 
 - [The Line with Two Origins](https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-line-with-2-origins/)
+
+## Notation
+
+- $A\cross B, \prod X_j$ are direct products.
+
+- $A\oplus B, \bigoplus_j X_j$ are direct sums, the subset of $A\cross B$ where only finitely many terms are nonzero.
+  - $\Bbb{Z}^n$ denotes the direct sum of $n$ copies of the group $\Bbb{Z}$.
+  - Note that $A \oplus B \injects A\cross B$.
+
+- $A\ast B, \bigast_j X_J$ are free products, $F_n \da \ZZ^{\ast n}$ is the free group on $n$ generators.
+
+  - Note that the abelianization yields $\qty{\bigast_j X_j} = \bigoplus_j X_j$.
 
 # Summary and Topics: Point-Set Topology 
 
@@ -161,7 +173,7 @@ Definition (Normal)
 
 ## Common Spaces and Operations
 
-Point-Set:
+### Point-Set
 
 - Finite discrete sets with the discrete topology 
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
@@ -531,10 +543,10 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_0$ is the same.
 :::
 
-- Colimit
 :::{.definition title="Colimit"}
 For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
+\begin{center}
 \begin{tikzcd}
                  &                            &  & Y \arrow[lldddd, "\psi_j"] \arrow[rrdddd, "\psi_i"] \arrow[dd, "\exists!", dashed] &  &               &        \\
                  &                            &  &                                                                                    &  &               &        \\
@@ -542,13 +554,16 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
                  &                            &  &                                                                                    &  &               &        \\
 \cdots \arrow[r] & X_j \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_i \arrow[r] & \cdots
 \end{tikzcd}
+\end{center}
 
-Examples:
-
+:::{.example}
 - Products
 - Pullbacks
 - Inverse/Projective limits
 - The $p\dash$adic integers $\ZZ_p$.
+
+:::
+
 :::
 
 
@@ -960,13 +975,16 @@ $$
 
 ## Facts About Low Dimensional and/or Standard Spaces
 
+
+- $S^{2n+1} \subset \CC^{n+1}$
 - $\RP^1 \cong S^1$
+- $\RP^n \cong S^n/S^0 \cong S^n / \ZZ/2\ZZ$.
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
-
-- $S^{2n+1} \subset \CC^{n+1}$
 - $\CP^n = S^{2n+1} / S^n$
+- $S^n/S^k \cong S^n \vee \Sigma S^k$.
+
 
 
 ## Table of Homotopy and Homology Structures
@@ -1070,6 +1088,16 @@ Conjugacy in $\pi_1$:
 
 To calculate $\pi_1(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_1(X) = G$ by uniqueness of universal covers.
 
+:::{.proposition title="?"}
+$\pi_0(X) = \ZZ$ iff $X$ is simply connected.
+:::
+
+- $H_1$ is the abelianization of $\pi_1$.
+
+- Homotopy commutes with products: $\pi_k \prod X_i = \prod \pi_k X_i$.
+
+- Homotopy splits wedge products: $\pi_1 \bigvee X_i = \bigast \pi_1 X_i$.
+
 ## Homotopy
 
 \todo{Merge Van Kampen theorems.}
@@ -1158,32 +1186,39 @@ Example (of pushing out with Van Kampen)
 
 
 
-Theorem (Whitehead)
-: A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
+:::{.theorem title="Whitehead's Theorem"}
+A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
+:::
 
-Warning
-: Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
+:::{.warning}
+Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
+:::
 
-Theorem (Hurewicz)
-:   The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
-    > I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+:::{.theorem title="Hurewicz"}
+The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
-Theorem (Cellular Approximation)
-: Any continuous map between CW complexes is homotopy equivalent to a cellular map.
+> I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+:::
+
+:::{.theorem title="Cellular Approximation"}
+Any continuous map between CW complexes is homotopy equivalent to a cellular map.
+:::
 
 **Applications**:
 
 - $\pi_{k\leq n}S^n = 0$
 - $\pi_n(X) \cong \pi_n(X^{(n)})$
 
-Theorem (Freudenthal Suspension)
-:   \todo[inline]{Todo}
+:::{.theorem title="Freudenthal Suspension"}
+\todo[inline]{Todo}
+:::
 
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
 * The ranks of $\pi_0$ and $H_0$ are the number of path components, and $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
+
 	* $X$ simply connected $\implies \pi_k(X) \cong H_k(X)$ up to and including the first nonvanishing $H_k$
   * $H_1(X) = \mathrm{Ab}(\pi_1 X)$, the abelianization.
 
@@ -1208,11 +1243,11 @@ In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibra
 
 Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
-Proposition (Contracting Spaces in Products)
-:   \hfill
-    \begin{align*}
-    X\cross \RR^n \homotopic X \cross \pt \cong X
-    .\end{align*}
+:::{.proposition title="Contracting Spaces in Products"}
+\[
+X\cross \RR^n \homotopic X \cross \pt \cong X
+.\]
+:::
 
 ---
 
@@ -1221,9 +1256,109 @@ Proposition (Contracting Spaces in Products)
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
 
+# The Fundamental Group (Unsorted)
+
+## Lemma: The fundamental group of a CW-complex only depends on the 1-skeleton, and $H^k(X)$ only depends on the $k$-skeleton.
+
+## Definition: Homotopy
+
+Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a *homotopy* from $f$ to $g$ is a continuous function
+
+$F: X \cross I \into Y$
+
+such that
+
+$F(x, 0) = f(x)$ and  $F(x,1) = g(x)$
+
+for all $x\in X$. If such a homotopy exists, we write $f\homotopic g$. This is an equivalence relation on $\text{Hom}(X,Y)$, and the set of such classes is denoted $[X,Y] \definedas \hom (X,Y)/\homotopic$.
+
+## Definition: Nullhomotopic
+
+If $f$ is homotopic to a constant map, say $f: x \mapsto y_0$ for some fixed $y_0 \in Y$, then $f$ is said to be *nullhomotopic*. In other words, if $f:X\into Y$ is nullhomotopic, then there exists a homotopy $H: X\cross I \into Y$ such that $H(x, 0) = f(x)$ and $H(x, 1) = y_0$.
+
+Note that constant maps (or anything homotopic) induce zero homomorphisms.
+
+# Theorem: Any two continuous functions into a convex set are homotopic.
+
+Proof: The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
+So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
+
+## Definition: Homotopy Equivalence
+
+Let $f: X \to Y$ be a continuous map, then $f$ is said to be a *homotopy equivalence* if there exists a continuous map $g: X \to Y$ such that
+
+$f\circ g \homotopic \id_Y$ and $g\circ f \homotopic \id_X$.
+
+Such a map $g$ is called a homotopy inverse of $f$, the pair of maps is a homotopy equivalence.
+
+If such an $f$ exists, we write $X \homotopic Y$ and say $X$ and $Y$ have the same homotopy type, or that they are homotopy equivalent.
+
+> Note that homotopy equivalence is strictly weaker than homeomorphic equivalence, i.e., $X\cong Y$ implies $X \homotopic Y$ but not necessarily the converse.
+
+## Definition: Contractible
+
+A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.
+
+This is a useful property, because it supplies you with a homotopy.
+
+# Definition: Deformation Retract
+
+Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
+
+Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+
+A *deformation retract* is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times. That is,
+$$
+H: X\cross I \to X \\
+H(x, 0) = \id_X \\
+H(x, 1) = \id_A \\
+x\in A \implies H(x, t) \in A \quad \forall t
+$$
+
+Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
+
+A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
+
+## Definition: The Fundamental Group / 1st Homotopy Group
+
+Given a pointed space $(X,x_0)$, we define the fundamental group $\pi_1(X)$ as follows:
+
+- Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_0}$.
+- Define an equivalence relation $\alpha \sim \beta$ iff there exists a homotopy $H: S^1 \cross I \into X$ such that $H(s, 0) = \alpha(s)$ and $H(s, 1) = \beta(s)$, i.e. if $f\homotopic g$ in $X$.
+  - Symmetric:
+  - Reflexive:
+  - Transitive:
+- Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_0}]$, the equivalence classes of loops after quotienting by this relation.
+- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
+  $(f\cdot g)(s) = \mathbb{1}[s \in \left[0, \frac{1}{2}]\right]f(2s) + \mathbb{1}[s \in \left[\frac{1}{2}, 1]\right]g(2s-1)$
+  - Continuous: by the pasting lemma and assumed continuity of $f, g$
+  - Well-defined:
+- Check that this is actually a group
+  - Identity element:
+  - Closure:
+  - Associativity:
+  - Inverses:
+- Summary:
+  - Elements of the fundamental group are *homotopy classes of loops*.
+  - Continuous maps between spaces induce *some* homomorphism on fundamental groups.
+    - Inclusions
+
+# Theorem: $X$ is simply connected iff it has trivial fundamental group.
+
+By definition, $X$ is simply connected iff $X$ is path connected and every loop contracts to a point.
+
+$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_0}]$, the identity element of $\pi_1(X)$. But then there is only one element in in this group.
+
+$\Leftarrow$: Suppose $\pi_1(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_0}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
+
 # Covering Spaces
 
 When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
+
+Picture to keep in mind ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)
+
+Path lifting: ![](http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/cover.png)
+
 
 
 ## Useful Covering Spaces
@@ -1247,6 +1382,190 @@ When covering spaces are involved in any way, try computing Euler characteristic
 If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$.
 :::
 
+
+## Useful Facts
+
+- Covering maps inject fundamental groups.
+	- If $\tilde X \surjects_p X$ is a covering space, then $\pi_1(\tilde X) \injects \pi_1 (X)$ as a subgroup.
+- The preimage of a boundary point under a covering map must also be a boundary point
+- An $n\dash$sheeted covering space $\tilde X \surjects X$ satisfies $\chi(\tilde X) = n\chi(X)$ when $\tilde X$ is compact.
+- For surfaces, covering spaces satisfy $\Sigma_{ij + 1} \surjects \Sigma_{i+1}$ for some $i, j$.
+- $\mathrm{Deck}(\tilde X) \definedas \theset{\varphi \in \hom_{\mathbf{Top}}(\tilde X, \tilde X): p\circ \varphi = p}  \cong \pi_1(X)$
+- $\tilde X \surjects_{\times k} X \implies [\pi_1(\tilde X) : \pi_1(X)] = k$ where $k =|p^{-1}(x_0)|$
+- Normal subgroups correspond to regular coverings (where automorphisms act freely/transitively, so highly symmetric)
+
+
+## Definition: Covering Maps
+
+A covering map of a space is a map $p: \tilde X \into X$ such that each open set $U\in X$ pulls back to a disjoint union of open sets (called sheets) in $\tilde X$ (referred to as the covering space). That is, $p^{-1}(U) = \coprod_i V_i \subseteq \tilde X$.
+
+If $\tilde X$is simply connected, it is the universal covering space - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
+We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
+
+Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
+
+The number of sheets of a covering space is equal to $[p^*(\pi_1(\tilde X)): \pi_1(X)]$.
+
+### Example: Covering spaces
+
+Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
+Note the induced map $p_n^*: \pi_1(S^1) \into \pi_1(S^1)$ is given by $[\omega_1] \mapsto [\omega_n] = n[\omega_1]$ and so $p_n^*(\pi_1(S^1)) = \ZZ_n = \text{Aut}(\tilde X_n)$. (This can also be seen the other way, by looking at deck transformations which are rotations of the circle by $2\pi/n$)
+
+The universal cover of $S^1​$ is $\RR​$; this is an infinitely sheeted cover. The fiber above $x_0​$ is equal to $\ZZ​$. $A:=B​$
+
+The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. The fiber above $x_0$ contains the two antipodal points.
+
+The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
+
+## Theorem: Homotopy Lifting
+
+The setup: given $p: \tilde X \surjects X$ a covering space of $X$, a map $f: Y \into X$, and a homotopy $H: Y\cross I \into X$ such that $f_0 \definedas H(y, 0)$ has a lift $\tilde f_0: Y\into \tilde X$.
+
+Then there is a unique homotopy $\tilde H: Y \cross I \into \tilde X$ satisfying $p\circ \tilde H = H$
+In other words, if the $t=0$ portion of a homotopy can be lifted to a cover, the entire homotopy can.
+
+## Theorem: Lifting Criterion
+
+Let $p:\tilde X \surjects X$ be a covering of $X$, and let $f:Y \into X$ be a map. Then there is an induced homomorphism $f^*: \pi_1(Y) \into \pi_1(X)$. There is also an induced map $p^*: \pi_1(\tilde X) \into \pi_1(X)$. We then have the following condition:
+
+There exists a lift $\tilde f: Y \into \tilde X$ satisfying $p\circ\tilde f = f$ iff $f^*(\pi_1(Y)) \subseteq p^*(\pi_1(\tilde X))$, i.e. when the fundamental group of $Y$ injects into the projected fundamental group of the cover.
+
+Note that if $Y$ is simply connected, then $\pi_1(Y) = 0$ and this holds automatically!
+
+Moreover, lifts are *unique* if they agree at a single point.
+
+(Technically you need the base space to be connected and "locally pathwise connected")
+
+
+## Theorem: Fundamental theorem of covering spaces
+For every subgroup $G \leq \pi_1(X)$, there is a corresponding covering space $X_G \surjects X$ such that $\pi_1(X_G) = G$. The universal cover is obtained by taking $G$ to be the trivial group.
+
+Alternative phrasing: there is a contravariant, inclusion-reversing map from subgroups of $\pi_1(X)$ to covering spaces of $X$.
+
+
+## Theorem: If $Y$ is contractible, every map $f: X \into Y$ is nullhomotopic.
+
+If $Y$ is contractible, then $Y$ has the homotopy type of a point. So there is a homotopy $H: Y\cross I \into Y$ between $\id_Y$ and a constant map $c: y \mapsto y_0$. So construct $H': X\cross I \into Y$ as $H'(x, t) = H(f(x), t)$; then $H'(x, 0) = H(f(x), 0) = (\id_x \circ f)(x) = f(x)$ and $H'(x, 1) = H(f(x), 1) = (c \circ f)(x) = c(y) = y_0$ for some $y$. So $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
+
+## Theorem: Any map that factors through a contractible space is nullhomotopic.
+
+Suppose we have the following commutative diagram:
+
+Then $f = p \circ \tilde f$. Every map into a contractible space is nullhomotopic, so if $Z$ is contractible, then there is a homotopy $\tilde H: X\cross I \into Z$ from $\tilde f$ to a constant map $c$. But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the constant map $p\circ c$.
+
+## Application: Showing when there is no covering map $f: X \into Y$
+
+This can be done by lifting $f$ to $\tilde f: X \into \tilde Y$, the universal cover. If the covering space happens to be contractible, you get that $\tilde f$ is nullhomotopic. So there is a homotopy $\tilde H: X\cross I \into \tilde Y$ - but then $p\circ\tilde H: X \into Y$ descends to a homotopy of $f$. If you leave $f$ arbitrary, this would force $\pi_1(Y) = 0$.
+
+# Definition: Monodromy Action
+
+Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\alpha$ a loop at $x\in X$, let $\tilde \alpha$ be its lift and $\tilde x\in p^{-1}(x)$ be the lifted point in the fiber above $x$. Then $\alpha$ acts on $\tilde x$ from the right, by the rule $\tilde x \curvearrowleft \alpha = \tilde\alpha(1)$.
+
+Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
+
+## Definition: Freely and Properly Discontinuous Group Actions
+Todo
+
+## Theorem: If $G$ induces a free and properly discontinuous group action on $X$, then $p: X \rightarrow X/G$ is a covering space
+
+Here $X/G$ denotes $X/\sim$  where $\forall x,y\in X, x\sim y \iff \exists g\in G \mid g.x = y$, i.e. all elements in a single orbit are identified.
+
+### Proof:
+
+Construct a map $\phi: G \rightarrow \pi_1(X/G, G.x_0)$ by $g \mapsto [p \circ \gamma_g]$
+
+where $\gamma_g(0) = x_0$ and $\gamma_g(1) = G.x_0$.
+
+- This is homomorphism:
+- This is well-defined:
+
+## Application: Fundamental group of the circle
+## Application: Fundamental group of the real projective plane
+
+## Constructing Covering Spaces
+For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a tree in which each $\tilde X_i$ is a vertex with one of $i$ colors denoting which space it covers. The neighborhood of each colored vertex has edges corresponding to $\pi_1(X_i)$.
+
+> If X and Y are two reasonable spaces with universal covers $\tilde X$ and $\tilde Y$, there is a nice picture of the universal cover $\widetilde{X\vee Y}$ which has the combinatorial pattern of an infinite tree. The tree is bipartite with vertices labeled by the symbols $X$ and $Y$. The edges from an $X$ vertex are bijective correspondence with the fundamental group $\pi_1(X)$, and likewise for $Y$ vertices and $\pi_1(Y)$. To make $\widetilde{X∨Y}$, replace each $X$ vertex by $\tilde X$ and each $Y$ vertex by $\tilde Y$. The base point of $X$ lifts to $\abs{\pi_1(X)}$ points in $\tilde X$, and likewise for $Y$. In $\widetilde{X∨Y}$, copies of $\tilde X$ are attached to copies of $\tilde Y$ at lifts of base points.
+
+**Example**: $S^1 \vee S^1 \to \ZZ \ast \ZZ$
+
+**Example**: $\RP^2 \vee \RP^2 \to \ZZ_2 \ast \ZZ_2$
+
+
+**Example**: $\RP^2 \vee T^2 \to \ZZ_2 \ast \ZZ$
+![](https://i.stack.imgur.com/XVkDn.png)
+
+## Application: Every subgroup of a free group is free
+Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+
+#  CW and Simplicial Complexes
+
+## Useful Facts
+- To build a Moore space $M(n, \ZZ_p)$, take $X = S^n$ and attach $e^{n+1}$ via a map $\Phi: S^n = \del B^{n+1}\to X^{(n)} = S^n$ of degree $p$.
+	- To obtain $M(n, \prod G_i)$ take the corresponding $\bigvee X_i$
+	- Can also use Mayer Veitoris to conclude $H_{n+1}(\Sigma X) = H_n(X)$, and just suspend spaces with known homology.
+
+## Theorem: Van Kampen's Theorem
+
+Claim: If $X = U \union V$ and $U \intersect V$ is nonempty and "nice", then $\pi_1(X) = \pi_1(U) ~\bigast_{\pi_1(U \intersect V)}~ \pi_1(V)$.
+
+### Proof
+
+- Construct a map going backwards
+- Show it is surjective
+  - "There and back" paths
+- Show it is injective
+  - Divide $I\times I$ into a grid
+
+## Definition: CW Complex
+
+### Examples
+
+- $\mathbb{RP}^n = e^1 \cup e^2 \cup \cdots \cup e^n$
+- $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
+- $S^\infty = \varinjlim S^n$
+
+# Definition: The Degree of  Map $S^n \into S^n$
+
+Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. But homomorphisms of this type are entirely determined by their action on generators. So if $f^*(1) = n$, define $n$ to be the degree of $f$.
+
+Properties and examples:
+
+- $\text{deg}~\id_{S^n} = 1$
+- $\text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g$
+- $\text{deg}~r = -1$ where $r$ is any rotation about a hyperplane, i.e. $r(\thevector{x_1 \cdots x_i \cdots x_n}) = \thevector{x_1 \cdots -x_i \cdots x_n}$.
+- The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
+
+# Definition: Simplicial Complex
+
+Given a simplex $\sigma = [v_1 \cdots v_n]$, define the face map $\del_i:\Delta^n \into \Delta^{n-1}$, where $\del_i\sigma = [v_1 \cdots \hat v_i \cdots v_n]$.
+
+A simplicial complex is a set $K​$ satisfying
+
+1. $\sigma \in K \implies \del_i\sigma \in K$
+2. $\sigma,\tau\in K \implies \sigma\intersect\tau = \emptyset,~ \del_i\sigma,~\text{or}~\del_i\tau$
+   1. This amounts to saying that any collection of $(n-1)$-simplices uniquely determines an $n$-simplex (or its lack thereof), or that that map $\Delta^k \into X$ is a continuous injection from the standard simplex in $\RR^n$.
+3. $\abs{K\intersect B_\varepsilon(\sigma)} < \infty$ for every $\sigma\in K$, identifying $\sigma \subseteq \RR^n$.
+
+To write down a simplicial complex, label the vertices with increasing integers. Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
+
+## Examples of Simplicial Complexes
+
+![Torus](../../assets/1513062466927.png)
+
+![Klein Bottle and $\RP^2$](../../assets/1513062526623.png)
+
+For counterexamples, note that this fails to be a triangulation of $T$:
+
+![Not a Torus](../../assets/1513062599096.png)
+
+This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
+
+## Templates for Triangulation
+
+You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
+
+![1513064067523](../../assets/1513064067523.png)
 
 # Homology
 
@@ -1316,6 +1635,7 @@ Theorem (Mayer Vietoris)
 
 Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
 
+\begin{center}
 \begin{tikzcd}
  &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
  &  &  &  &  \\
@@ -1327,6 +1647,7 @@ H_0 (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_0 A \oplus H_0 B \arrow[rr, "
  &  &  &  &  \\
 0 &  &  &  &
 \end{tikzcd}
+\end{center}
 
 
 This is sometimes written in the following compact form:
@@ -1355,8 +1676,11 @@ A\union B & & \large\longleftarrow &  & A \oplus B
 
 ### Application: Isomorphisms in the homology of spheres.
 
-Claim: $H^i(S^n) \cong H^{i-1}(S^{n-1})$.
+:::{.proposition title="?"}
+\[H^i(S^n) \cong H^{i-1}(S^{n-1}).\]
+:::
 
+:::{.proof}
 Write $X = A \cup B$, the northern and southern hemispheres, so that $A \cap B = S^{n-1}$, the equator. In the LES, we have:
 
 \begin{align*}
@@ -1369,84 +1693,94 @@ But $A, B$ are contractible, so $H^iA= H^iB = 0$, so we have
 H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0
 .\end{align*}
 
-And in particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
+In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
+
+:::
 
 
-Theorem (Eilenberg-Zilber)
-:   Given two spaces $X, Y$, there are chain maps
 
-    \begin{align*}
-    F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
-    G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
-    \end{align*}
+:::{.theorem title="Eilenber-Zilber"}
+Given two spaces $X, Y$, there are chain maps
 
-    such that $FG = \id$ and $GF \homotopic \id$.
-    In particular,
-    \begin{align*}
-    H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
-    .\end{align*}
+\begin{align*}
+F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
+G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
+\end{align*}
 
-Theorem (Kunneth)
-:   There exists a short exact sequence
-    $$
-    0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
-    $$
-    It has a non-canonical splitting given by
-    $$
-    H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
-    $$
+such that $FG = \id$ and $GF \homotopic \id$.
+In particular,
+\begin{align*}
+H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
+.\end{align*}
+:::
 
-
-Theorem (Universal Coefficients for Change of Group)
-:   For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
-    $$
-    0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
-    $$
-
-    $$
-    0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
-    $$
-
-    which split unnaturally:
-    $$
-    H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
-    $$
-
-    $$
-    H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
-    $$
-
-    When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
-    $$
-    H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
-    $$
+:::{.theorem title="Kunneth"}
+There exists a short exact sequence
+$$
+0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
+$$
+It has a non-canonical splitting given by
+$$
+H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
+$$
+:::
 
 
-### Useful long exact sequences
+:::{.theorem title="UCT for Change of Group"}
+For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
+$$
+0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
+$$
 
 $$
+0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
+$$
+
+which split unnaturally:
+$$
+H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
+$$
+
+$$
+H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
+$$
+
+When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
+$$
+H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
+$$
+
+:::
+
+
+
+### Useful Long Exact Sequences
+
+#### Mayer Vietoris
+\[
 \cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots
-$$
+\]
 
-$$
+#### LES of a Pair 
+\[
 \cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots
-$$
+\]
 
 ### Useful Short Exact Sequences
 
 > Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
 
-Homology to cohomology:
+#### Homology to Cohomology
 $$
 \displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
 .$$
 
-Cohomology to dual space:
+#### Cohomology to Dual of Homology
 $$
 0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
 .$$
 
-Product of spaces to tensor product of homology:
+#### Product of Spaces to Tensor Product in Homology
 $$
 0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
 $$
@@ -1513,6 +1847,13 @@ $$
 [^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
 
 
+# Homology
+
+## Useful Facts
+- $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
+- $H_n(X, A) \cong_? H_n(X/A, \pt)$
+- For CW complexes $X = \theset{X^{(i)}}$, we have 
+    $$H_n(X^{(k)},X^{(k−1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k$$
 
 # Fixed Points and Degree Theory
 
@@ -2093,6 +2434,59 @@ Let $G = <a, b>$ and $H \leq G$ where $H = <aba^{-1}b^{-1},~ a^2ba^{-2}b^{-1},~ 
 
 # Appendix: Homological Algebra
 
+
+## Exact Sequences
+
+The sequence $A \mapsvia{f_1} B \mapsvia{f_2} C$ is exact if and only if $\im f_i = \ker f_{i+1}$ and thus $f_2 \circ f_1 = 0$.
+
+Some useful results:
+
+- $0 \into A \injects_{f} B$ is exact iff $f$ is **injective**
+- $B\surjects_{f} C \into 0$ is exact iff $f$ is **surjective**
+- $0\into A \into B \into 0$ is exact iff $A \cong B$.
+- $A \injects B \to C \to D \surjects E$ iff $C = 0$
+- $0\to A \to B \mapsvia{\cong} C \to D\to 0$ iff $A = D = 0$.
+	- Todo: Proof
+- $0\to A\to B \to C \to 0$ splits iff $C$ is free.
+
+Can think of $C \cong \frac{B}{\im f_1}$.
+
+The sequences *splits* when a morphism $f_2^{-1}: C \into B$ exists. In $\textbf{Ab}$, this means $B \cong A \oplus C$, in $\mathbf{Grp}$ it's $B \cong A \semidirect_\phi C$.
+
+Examples:
+
+- $0 \into \ZZ \mapsvia{\times 2} \ZZ \mapsvia{\text{mod}~2} \frac{\ZZ}{2\ZZ} \into 0$
+- $1 \into N \mapsvia{\iota} G \mapsvia{p} \frac{G}{N} \into 1$
+  - Groups and normal subgroups
+- $1 \into \frac{\ZZ}{n\ZZ} \mapsvia{\iota} D_{2n} \mapsvia{?} \frac{\ZZ}{2\ZZ} \into 1$
+  - Dihedral group and cyclic groups
+- $0 \into I \intersect J \mapsvia{\Delta: x\mapsto(x,x)} I \oplus J \mapsvia{f:(x,y) \mapsto x-y} I + J \into 0$
+  - $R$-Modules
+- $0 \into \frac{R}{I \intersect J} \mapsvia{\Delta: x\mapsto(x,x)} \frac{R}{I} \oplus \frac{R}{J} \mapsvia{f:(x,y) \mapsto x-y} \frac{R}{I + J} \into 0$
+- $0 \into \mathbb{H}_1 \mapsvia{\nabla} \mathbb{H}_\text{curl} \mapsvia{\nabla \cross} \mathbb{H}_\text{div} \mapsvia{\nabla \cdot} \mathbb{L}_2 \into 0$
+  - Since $\nabla \cross \nabla F = \nabla \cdot\nabla\cross \bar{v} = 0$ in Hilbert spaces
+
+:::{.remark}
+Is $f_1\circ f_2 = 0$ equivalent to exactness..?
+Answer: yes, every exact sequence is a chain complex with trivial homology. 
+Therefore homology measures the failure of exactness.
+
+> Alternatively stated: Exact sequences are chain complexes with no cycles.
+:::
+
+
+Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES's; define $C_k = \ker (A_k \into A_{k+1}) \cong \im(A_{k-1} \into A_k)) \cong \coker(A_{k-2} \into A_{k-1})$, then all diagonals here are exact:
+
+![Long short exact sequences.png](https://upload.wikimedia.org/wikipedia/commons/b/b9/Long_short_exact_sequences.png)
+
+
+## Five Lemma
+
+If $m, p$ are isomorphisms, $l$ is an **surjection**, and $q$ is an **injection**, then $n$ is an **isomorphism**.
+
+![5 lemma.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5_lemma.svg/388px-5_lemma.svg.png)
+
+Proof: diagram chase two "four lemmas", one on each side. Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
 ## Free Resolutions
 
 The canonical example:
@@ -2295,3 +2689,65 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 .\end{align*}
 
 ![Barycentric Subdivision](figures/image_2020-06-01-00-35-21.png)
+
+## Tables
+
+![Higher homotopy groups of $\RP^n$](figures/image_2020-09-20-01-35-23.png)
+
+![Higher homotopy groups of $\CP^n$](figures/image_2020-09-20-01-35-51.png)
+
+![Homotopy groups of spheres.](figures/image_2020-09-20-01-39-16.png)
+
+![Homotopy groups of exceptional groups](figures/image_2020-09-20-01-40-22.png)
+
+## Homotopy Groups of Lie Groups
+
+- $O(n)$: $\pi_k O_n = ?$
+- $U(n): \pi_k U_n$ is $\ZZ$ in odd degrees and $\pi_1 U_n = 1$
+\todo[inline]{Check}
+- $SU(n): \pi_k U_n$ is $\ZZ$ in odd degrees and $\pi_1 U_n = 0$.
+- $U_n: \pi_k(U_n)$ is $\ZZ/2\ZZ$ in degrees?
+
+
+## Higher Homotopy
+
+* $n \geq 2 \implies \pi_n(X) \in \mathbf{Ab}$
+
+* $\Sigma S^n = S^{n+1}$
+
+* $[\Sigma^n X, Y] \cong [X, \Omega^n Y]$
+
+* $\pi*n(\Omega X) = \pi*{n+1}(X)$
+  * $\pi_n(X) \cong \pi_0(\Omega^n X)$
+* $n\geq 2 \implies \pi_n(S^1) = 0$
+
+* $k < n \implies \pi_k(S^n) = 0$
+
+* $\pi_n(X)$ is the obstruction to $f: S^n \into X$ being lifted to $\hat f: D^{n+1} \into X$
+
+* $\pi_n(X) \cong H_n(X)$ for the first $n$ such that $\pi_n(X) \neq 0$; $\forall k<n, ~H_k(X) = 0$.
+
+* $k+2 \leq 2n \implies \pi_k(S^n) \cong \pi_{k+1}(S^{n+1})​$
+
+* $\pi_k(S^n) = \pi_{k+1}S^{n+1} = \cdots =\pi_{k+i}S^{n+i}​$
+
+* $F\into E \into B$ a fibration yields $\cdots\pi_n(F) \into \pi_n(E) \into \pi_n(B) \into \pi*{n-1}(F) \cdots$
+
+- Freundenthal suspension, stable homotopy groups
+
+## Higher Homotopy Groups of the Sphere
+
+* $\pi_n(S^n) = \ZZ$
+* $\pi_{n+1}S^n = \ZZ_2$ for $n \geq 4$
+* $\pi_{n+2}(S^n) \cong \ZZ_2$
+* $\pi_{n+3}S^n = \ZZ_8$ for $n\geq 5$
+* $\pi_5 S^2 = \ZZ_2$
+* $\pi_6 S^3 = \ZZ_4$
+* $\pi_7 S^4 = \ZZ \oplus \ZZ_4$
+* $\pi_k S^2 \cong \pi_k S^3$
+* $\pi_3 S^2 \cong \ZZ$
+* $\pi_4 S^2 \cong \ZZ_2$
+
+## Misc
+
+* $\Omega(\wait)$ is an exact functor
