@@ -85,6 +85,7 @@ $$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 - $\CP^n = S^{2n+1} / S^n$
+- $S^n/S^k \cong S^n \vee \Sigma S^k$.
 
 
 
