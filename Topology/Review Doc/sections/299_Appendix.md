@@ -107,4 +107,7 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 
 ![Homotopy groups of exceptional groups](figures/image_2020-09-20-01-40-22.png)
 
+## Homotopy Groups of Lie Groups
 
+- $O(n)$: $\pi_k O_n = ?$
+- $
