@@ -2,7 +2,7 @@
 
 ## Common Spaces and Operations
 
-Point-Set:
+### Point-Set
 
 - Finite discrete sets with the discrete topology 
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.

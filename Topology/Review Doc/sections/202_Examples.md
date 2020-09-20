@@ -77,7 +77,9 @@ $$
 
 ## Facts About Low Dimensional and/or Standard Spaces
 
+
 - $\RP^1 \cong S^1$
+- $\RP^n \cong \SS^N/
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
