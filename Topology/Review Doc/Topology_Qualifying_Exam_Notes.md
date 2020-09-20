@@ -1556,13 +1556,13 @@ To write down a simplicial complex, label the vertices with increasing integers.
 
 ## Examples of Simplicial Complexes
 
-![Torus](/assets/1513062466927.png)
+![Torus](figures/1513062466927.png)
 
-![Klein Bottle and $\RP^2$](/assets/1513062526623.png)
+![Klein Bottle and $\RP^2$](figures/1513062526623.png)
 
 For counterexamples, note that this fails to be a triangulation of $T$:
 
-![Not a Torus](/assets/1513062599096.png)
+![Not a Torus](figures/1513062599096.png)
 
 This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
 
@@ -1570,7 +1570,9 @@ This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a tr
 
 You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
 
-![1513064067523](/assets/1513064067523.png)
+![1513064067523](figures/1513064067523.png)
+
+![Image](figures/image_2020-09-20-01-57-11.png)
 
 # Homology
 
