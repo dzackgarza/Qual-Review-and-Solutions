@@ -157,11 +157,11 @@ In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibra
 
 Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
-Proposition (Contracting Spaces in Products)
-:   \hfill
-    \begin{align*}
-    X\cross \RR^n \homotopic X \cross \pt \cong X
-    .\end{align*}
+:::{.proposition title="Contracting Spaces in Products"}
+\[
+X\cross \RR^n \homotopic X \cross \pt \cong X
+.\]
+:::
 
 ---
 
