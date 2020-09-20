@@ -104,3 +104,7 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 ![Higher homotopy groups of $\CP^n$](figures/image_2020-09-20-01-35-51.png)
 
 ![Homotopy groups of spheres.](figures/image_2020-09-20-01-39-16.png)
+
+![Homotopy groups of exceptional groups](figures/image_2020-09-20-01-40-22.png)
+
+
