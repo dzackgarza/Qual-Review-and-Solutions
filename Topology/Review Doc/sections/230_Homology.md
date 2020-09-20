@@ -66,6 +66,7 @@ Theorem (Mayer Vietoris)
 
 Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
 
+\begin{center}
 \begin{tikzcd}
  &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
  &  &  &  &  \\
@@ -77,6 +78,7 @@ H_0 (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_0 A \oplus H_0 B \arrow[rr, "
  &  &  &  &  \\
 0 &  &  &  &
 \end{tikzcd}
+\end{center}
 
 
 This is sometimes written in the following compact form:
