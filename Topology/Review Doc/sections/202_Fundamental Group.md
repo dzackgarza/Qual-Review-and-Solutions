@@ -21,7 +21,7 @@ $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
 
 - Homotopy commutes with products: $\pi_k \prod X_i = \prod \pi_k X_i$.
 
-- Homotopy splits wedge products: $\pi_k \bigvee X_i = 
+- Homotopy splits wedge products: $\pi_1 \bigvee X_i = \bigast \pi_1 X_i$.
 
 ## Homotopy
 
