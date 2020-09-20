@@ -101,24 +101,30 @@ Example (of pushing out with Van Kampen)
 
 
 
-Theorem (Whitehead)
-: A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
+:::{.theorem title="Whitehead's Theorem"}
+A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
+:::
 
-Warning
-: Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
+:::{.warning}
+Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
+:::
 
-Theorem (Hurewicz)
-:   The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
-    > I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+:::{.theorem title="Hurewicz"}
+The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
-Theorem (Cellular Approximation)
-: Any continuous map between CW complexes is homotopy equivalent to a cellular map.
+> I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+:::
+
+:::{.theorem title="Cellular Approximation"}
+Any continuous map between CW complexes is homotopy equivalent to a cellular map.
+:::
 
 **Applications**:
 
 - $\pi_{k\leq n}S^n = 0$
 - $\pi_n(X) \cong \pi_n(X^{(n)})$
+
 
 Theorem (Freudenthal Suspension)
 :   \todo[inline]{Todo}
