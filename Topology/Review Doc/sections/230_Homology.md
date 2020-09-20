@@ -105,8 +105,11 @@ A\union B & & \large\longleftarrow &  & A \oplus B
 
 ### Application: Isomorphisms in the homology of spheres.
 
-Claim: $H^i(S^n) \cong H^{i-1}(S^{n-1})$.
+:::{.proposition title="?"}
+\[H^i(S^n) \cong H^{i-1}(S^{n-1}).\]
+:::
 
+:::{.proof}
 Write $X = A \cup B$, the northern and southern hemispheres, so that $A \cap B = S^{n-1}$, the equator. In the LES, we have:
 
 \begin{align*}
@@ -119,57 +122,65 @@ But $A, B$ are contractible, so $H^iA= H^iB = 0$, so we have
 H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0
 .\end{align*}
 
-And in particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
+In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
+
+:::
 
 
-Theorem (Eilenberg-Zilber)
-:   Given two spaces $X, Y$, there are chain maps
 
-    \begin{align*}
-    F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
-    G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
-    \end{align*}
+:::{.theorem title="Eilenber-Zilber"}
+Given two spaces $X, Y$, there are chain maps
 
-    such that $FG = \id$ and $GF \homotopic \id$.
-    In particular,
-    \begin{align*}
-    H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
-    .\end{align*}
+\begin{align*}
+F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
+G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
+\end{align*}
 
-Theorem (Kunneth)
-:   There exists a short exact sequence
-    $$
-    0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
-    $$
-    It has a non-canonical splitting given by
-    $$
-    H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
-    $$
+such that $FG = \id$ and $GF \homotopic \id$.
+In particular,
+\begin{align*}
+H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
+.\end{align*}
+:::
+
+:::{.theorem title="Kunneth"}
+There exists a short exact sequence
+$$
+0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
+$$
+It has a non-canonical splitting given by
+$$
+H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
+$$
+:::
 
 
-Theorem (Universal Coefficients for Change of Group)
-:   For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
-    $$
-    0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
-    $$
+:::{.theorem title="UCT for Change of Group"}
+For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
+$$
+0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
+$$
 
-    $$
-    0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
-    $$
+$$
+0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
+$$
 
-    which split unnaturally:
-    $$
-    H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
-    $$
+which split unnaturally:
+$$
+H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
+$$
 
-    $$
-    H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
-    $$
+$$
+H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
+$$
 
-    When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
-    $$
-    H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
-    $$
+When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
+$$
+H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
+$$
+
+:::
+
 
 
 ### Useful long exact sequences
@@ -186,17 +197,17 @@ $$
 
 > Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
 
-Homology to cohomology:
+#### Homology to Cohomology
 $$
 \displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
 .$$
 
-Cohomology to dual space:
+#### Cohomology to Dual of Homology
 $$
 0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
 .$$
 
-Product of spaces to tensor product of homology:
+#### Product of Spaces to tensor product of homology:
 $$
 0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
 $$
