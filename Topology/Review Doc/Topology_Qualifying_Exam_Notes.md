@@ -1556,13 +1556,13 @@ To write down a simplicial complex, label the vertices with increasing integers.
 
 ## Examples of Simplicial Complexes
 
-![Torus](assets/1513062466927.png)
+![Torus](/assets/1513062466927.png)
 
-![Klein Bottle and $\RP^2$](assets/1513062526623.png)
+![Klein Bottle and $\RP^2$](/assets/1513062526623.png)
 
 For counterexamples, note that this fails to be a triangulation of $T$:
 
-![Not a Torus](assets/1513062599096.png)
+![Not a Torus](/assets/1513062599096.png)
 
 This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
 
@@ -1570,7 +1570,7 @@ This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a tr
 
 You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
 
-![1513064067523](assets/1513064067523.png)
+![1513064067523](/assets/1513064067523.png)
 
 # Homology
 
@@ -1858,7 +1858,9 @@ $$
 - $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
 - $H_n(X, A) \cong_? H_n(X/A, \pt)$
 - For CW complexes $X = \theset{X^{(i)}}$, we have 
-    $$H_n(X^{(k)},X^{(k−1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k$$
+\[
+H_n(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
+\]
 
 # Fixed Points and Degree Theory
 
