@@ -125,9 +125,9 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 - $\pi_{k\leq n}S^n = 0$
 - $\pi_n(X) \cong \pi_n(X^{(n)})$
 
-
-Theorem (Freudenthal Suspension)
-:   \todo[inline]{Todo}
+:::{.theorem title="Freudenthal Suspension"}
+\todo[inline]{Todo}
+:::
 
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
