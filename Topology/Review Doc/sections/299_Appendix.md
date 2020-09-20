@@ -110,4 +110,7 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 ## Homotopy Groups of Lie Groups
 
 - $O(n)$: $\pi_k O_n = ?$
-- $
+- $U(n): \pi_k U_n$ is $\ZZ$ in odd degrees and $\pi_1 U_n = 1$
+\todo[inline]{Check}
+- $SU(n): \pi_k U_n$ is $\ZZ$ in odd degrees and $\pi_1 U_n = 0$.
+- $U_n: \pi_k(U_n)$ is $\ZZ/2\ZZ$ in degrees?
