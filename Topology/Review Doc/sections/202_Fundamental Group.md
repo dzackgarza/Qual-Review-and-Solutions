@@ -13,6 +13,16 @@ Conjugacy in $\pi_1$:
 
 To calculate $\pi_1(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_1(X) = G$ by uniqueness of universal covers.
 
+:::{.proposition title="?"}
+$\pi_0(X) = \ZZ$ iff $X$ is simply connected.
+:::
+
+- $H_1$ is the abelianization of $\pi_1$.
+
+- Homotopy commutes with products: $\pi_k \prod X_i = \prod \pi_k X_i$.
+
+- Homotopy splits wedge products: $\pi_k \bigvee X_i = 
+
 ## Homotopy
 
 \todo{Merge Van Kampen theorems.}
@@ -133,6 +143,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
 * The ranks of $\pi_0$ and $H_0$ are the number of path components, and $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
+
 	* $X$ simply connected $\implies \pi_k(X) \cong H_k(X)$ up to and including the first nonvanishing $H_k$
   * $H_1(X) = \mathrm{Ab}(\pi_1 X)$, the abelianization.
 
