@@ -134,9 +134,9 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 
 * $\pi_n(X) \cong H_n(X)$ for the first $n$ such that $\pi_n(X) \neq 0$; $\forall k<n, ~H_k(X) = 0$.
 
-* $k+2 \leq 2n \implies \pi_k(S^n) \cong \pi_{k+1}(S^{n+1})​$
+* $k+2 \leq 2n \implies \pi_k(S^n) \cong \pi_{k+1}(S^{n+1})$
 
-* $\pi_k(S^n) = \pi_{k+1}S^{n+1} = \cdots =\pi_{k+i}S^{n+i}​$
+* $\pi_k(S^n) = \pi_{k+1}S^{n+1} = \cdots =\pi_{k+i}S^{n+i}$
 
 * $F\into E \into B$ a fibration yields $\cdots\pi_n(F) \into \pi_n(E) \into \pi_n(B) \into \pi*{n-1}(F) \cdots$
 
@@ -157,4 +157,4 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 
 ## Misc
 
-* $\Omega(\wait)$ is an exact functor
+* $\Omega(\wait)$ is an exact functor.
