@@ -40,7 +40,7 @@ Properties and examples:
 
 Given a simplex $\sigma = [v_1 \cdots v_n]$, define the face map $\del_i:\Delta^n \into \Delta^{n-1}$, where $\del_i\sigma = [v_1 \cdots \hat v_i \cdots v_n]$.
 
-A simplicial complex is a set $K​$ satisfying
+A simplicial complex is a set $K$ satisfying
 
 1. $\sigma \in K \implies \del_i\sigma \in K$
 2. $\sigma,\tau\in K \implies \sigma\intersect\tau = \emptyset,~ \del_i\sigma,~\text{or}~\del_i\tau$
@@ -51,13 +51,13 @@ To write down a simplicial complex, label the vertices with increasing integers.
 
 ## Examples of Simplicial Complexes
 
-![Torus](../../assets/1513062466927.png)
+![Torus](assets/1513062466927.png)
 
-![Klein Bottle and $\RP^2$](../../assets/1513062526623.png)
+![Klein Bottle and $\RP^2$](assets/1513062526623.png)
 
 For counterexamples, note that this fails to be a triangulation of $T$:
 
-![Not a Torus](../../assets/1513062599096.png)
+![Not a Torus](assets/1513062599096.png)
 
 This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
 
@@ -65,4 +65,4 @@ This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a tr
 
 You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
 
-![1513064067523](../../assets/1513064067523.png)
+![1513064067523](assets/1513064067523.png)
