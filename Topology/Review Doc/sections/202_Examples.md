@@ -78,14 +78,14 @@ $$
 ## Facts About Low Dimensional and/or Standard Spaces
 
 
+- $S^{2n+1} \subset \CC^{n+1}$
 - $\RP^1 \cong S^1$
-- $\RP^n \cong S^n/S
+- $\RP^n \cong S^n/S^0 \cong S^n / \ZZ/2\ZZ$.
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
-
-- $S^{2n+1} \subset \CC^{n+1}$
 - $\CP^n = S^{2n+1} / S^n$
+
 
 
 ## Table of Homotopy and Homology Structures
