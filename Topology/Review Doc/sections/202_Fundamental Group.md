@@ -180,3 +180,4 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+
