@@ -96,3 +96,9 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 .\end{align*}
 
 ![Barycentric Subdivision](figures/image_2020-06-01-00-35-21.png)
+
+## Tables
+
+![Higher homotopy groups of $\RP^n$](figures/image_2020-09-20-01-35-23.png)
+
+![Higher homotopy groups of $\CP^n$](figures/image_2020-09-20-01-35-51.png)
