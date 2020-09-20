@@ -67,10 +67,10 @@
 A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_0$ is the same.
 :::
 
-- Colimit
 :::{.definition title="Colimit"}
 For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
+\begin{center}
 \begin{tikzcd}
                  &                            &  & Y \arrow[lldddd, "\psi_j"] \arrow[rrdddd, "\psi_i"] \arrow[dd, "\exists!", dashed] &  &               &        \\
                  &                            &  &                                                                                    &  &               &        \\
@@ -78,13 +78,16 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
                  &                            &  &                                                                                    &  &               &        \\
 \cdots \arrow[r] & X_j \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_i \arrow[r] & \cdots
 \end{tikzcd}
+\end{center}
 
-Examples:
-
+:::{.example}
 - Products
 - Pullbacks
 - Inverse/Projective limits
 - The $p\dash$adic integers $\ZZ_p$.
+
+:::
+
 :::
 
 
