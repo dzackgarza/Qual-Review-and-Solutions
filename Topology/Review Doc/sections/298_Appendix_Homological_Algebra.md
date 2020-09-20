@@ -1,6 +1,5 @@
 # Appendix: Homological Algebra
 
-## Basics
 
 ## Exact Sequences
 
@@ -33,7 +32,14 @@ Examples:
 - $0 \into \mathbb{H}_1 \mapsvia{\nabla} \mathbb{H}_\text{curl} \mapsvia{\nabla \cross} \mathbb{H}_\text{div} \mapsvia{\nabla \cdot} \mathbb{L}_2 \into 0$
   - Since $\nabla \cross \nabla F = \nabla \cdot\nabla\cross \bar{v} = 0$ in Hilbert spaces
 
-*Note: is $f_1\circ f_2 = 0$ equivalent to exactness..?* Answer: yes, every exact sequence is a chain complex with trivial homology. (Alternatively stated: Exact sequences are chain complexes with no cycles.) Therefore homology measures the failure of exactness.
+:::{.remark}
+Is $f_1\circ f_2 = 0$ equivalent to exactness..?
+Answer: yes, every exact sequence is a chain complex with trivial homology. 
+Therefore homology measures the failure of exactness.
+
+> Alternatively stated: Exact sequences are chain complexes with no cycles.
+:::
+
 
 Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES's; define $C_k = \ker (A_k \into A_{k+1}) \cong \im(A_{k-1} \into A_k)) \cong \coker(A_{k-2} \into A_{k-1})$, then all diagonals here are exact:
 
