@@ -1,5 +1,11 @@
 # Basics
 
+
+Notation:
+
+- $\norm{f}_\infty \da \sup_{x\in \dom(f)} \abs{f(x)}$
+- $\norm{f}_{L^\infty} \da \inf\ts{M \geq 0 \st \abs{f(x)} \leq M \text{for a.e. }x }$. 
+
 ## Useful Techniques
 
 - General advice: try swapping the orders of limits, sums, integrals, etc.
@@ -43,6 +49,8 @@
   - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
   - Tail estimates!
 
+- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+
 ## Definitions
 
 :::{.definition title="Uniform Continuity"}
@@ -54,21 +62,25 @@ $f$ is uniformly continuous iff
 .\]
 :::
 
+:::{.definition title="Nowhere Dense Sets"}
+A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
+:::
 
-Definition (Nowhere Dense Sets)
-: A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
-
-Definition (Meager Sets)
-: A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::{.proposition title="Meager Sets"}
+A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::
 
 :::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
+
+[^Mnemonic_Ferme]: 
+Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
 :::
   
-> Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
-
-Theorem (Heine-Cantor)
-: Every continuous function on a compact space is uniformly continuous.
+:::{.theorem title="Heine-Cantor"}
+Every continuous function on a compact space is uniformly continuous.
+:::
 
 :::{.definition title="Limsup/Liminf"}
 \[  
@@ -77,81 +89,139 @@ Theorem (Heine-Cantor)
 .\]
 :::
 
+:::{.definition title="Topological Notions"}
+\envlist
+Let $X$ be a metric space and $A$ a subset.
+Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its closure.
+
+- A **neighborhood** of $p$ is an open set $U_p$ containing $p$.
+
+- An $\eps\dash$**neighborhood** of $p$ is an open ball $B_r(p) \da \ts{q \st d(p, q) < r}$ for some $r>0$.
+
+- A point $p\in X$ is an **accumulation point** of $A$ iff every neighborhood $U_p$ of $p$ contains a point $q\in Q$
+
+- A point $p\in X$ is a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$.
+
+- If $p\in A$ and $p$ is not a limit point of $A$, then $p$ is an **isolated point** of $A$.
+
+- $A$ is **closed**  iff $A' \subset A$, so $A$ contains all of its limit points.
+
+- A point $p\in A$ is **interior** iff there is a neighborhood $U_p \subset A$ that is strictly contained in $A$.
+
+- $A$ is **open** iff every point of $A$ is interior.
+
+- $A$ is **perfect** iff $A$ is closed and $A\subset A'$, so every point of $A$ is a limit point of $A$.
+
+- $A$ is **bounded** iff there is a real number $M$ and a point $q\in X$ such that $d(p, q) < M$ for all $p\in A$.
+
+- $A$ is **dense** in $X$ iff every point $x\in X$ is either a point of $A$, so $x\in A$, or a limit point of $A$, so $x\in A'$.
+  I.e., $X\subset A\union A'$.
+
+  - Alternatively, $\bar{A} = X$, so the closure of $A$ is $X$.
+
+:::
 
 ## Theorems
 
 ### Topology / Sets
 
 
-Lemma
-:	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::{.lemma title="?"}
+Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
 
-Proposition
-: The unit ball in $C([0, 1])$ with the sup norm is not compact.
+:::
 
-Proof 
-: Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
+:::{.proposition title="?"}
+The unit ball in $C([0, 1])$ with the sup norm is not compact.
+:::
+
+:::{.proof title="?"}
+Take $f_k(x) = x^n$, which converges to $\chi(x=1)$. 
+The limit is not continuous, so no subsequence can converge.
+:::
+
+:::{.proposition title="?"}
+A *finite* union of nowhere dense is again nowhere dense.
+:::
+
+:::{.proposition title="Convergent Sums Have Small Tails"}
+$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::
+
+:::{.theorem title="Heine-Borel"}
+$X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
+:::
+
+:::{.proposition title="Geometric Series"}
+\[
+\sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
+.\]
+:::
+:::{.corollary title="?"}
+\[
+\sum_{k=0}^\infty \frac 1 {2^k} = 1
+.\]
+:::
+
+:::{.lemma title="?"}
+The Cantor set is closed with empty interior.
+:::
 
 
-Proposition
-: A *finite* union of nowhere dense is again nowhere dense.
+:::{.proof title="?"}
+Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
+:::
 
-Lemma (Convergent Sums Have Small Tails)
-:   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::{.corollary title="?"}
+The Cantor set is nowhere dense.
+:::
 
-Theorem (Heine-Borel)
-: $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
+:::{.lemma title="?"}
+Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
+:::
 
-Lemma (Geometric Series)
-:   \[
-    \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
-    .\]
 
-    *Corollary:* 
-    $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
+:::{.theorem title="Baire"}
+$\RR$ is a **Baire space** (countable intersections of open, dense sets are still dense). 
+Thus $\RR$ can not be written as a countable union of nowhere dense sets.
+:::
 
-Lemma
-: The Cantor set is closed with empty interior.
-
-Proof
-:   Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
-
-Corollary
-: The Cantor set is nowhere dense.
-
-Lemma
-:	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
-
-Theorem (Baire)
-: $\RR$ is a **Baire space** (countable intersections of open, dense sets are still dense). 
-  Thus $\RR$ can not be written as a countable union of nowhere dense sets.
-
-Lemma
-:	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+:::{.lemma title="?"}
+Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+:::
 
 ### Functions
 
-Proposition (Existence of Smooth Compactly Supported Functions)
-: There exist smooth compactly supported functions, e.g. take 
-$$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$
+:::{.proposition title="Existence of Smooth Compactly Supported Functions"}
+There exist smooth compactly supported functions, e.g. take 
+\[
+f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
+.\]
+:::
 
-Lemma
-:	There is a function discontinuous precisely on $\QQ$.
+:::{.lemma title="?"}
+There is a function discontinuous precisely on $\QQ$.
+:::
 
-Proof
-: $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
-  The limit at every point is 0.
+:::{.proof title="?"}
+$f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
+The limit at every point is 0.
+:::
 
-Lemma
-:	There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
+:::{.proposition title="?"}
+There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
+:::
 
-Proof
-:   $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
-    $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+:::{.proof title="?"}
+$D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
+$\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+:::
 
-Proposition
-:   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
-    In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
+:::{.proposition title="?"}
+A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
+In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
+:::
+
 
 
 ## Uniform Convergence
@@ -161,57 +231,41 @@ Proposition
 (\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
 .\]
 
-Negated:
+Negated:[^Negated_uniform_convergence]
+
 \[  
 (\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
 .\]
 
-> Slogan: to negate, find bad $x$s depending on $n_0$ that are larger than some $\eps$.
+[^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
 
 :::
+
 Compare this to the definition of pointwise convergence:
+
+:::{.definition title="Pointwise Convergence"}
 \[  
 (\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
 .\]
+:::
 
 :::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
 $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
 :::
-> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
+
+**Negating**: find an $x$ which depends on $n$ for which $\norm{f_n}_\infty > \eps$ (negating small tails) or $\norm{f_n - f_m} > \eps$ (negating the Cauchy criterion).
 
 
-:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-:::
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
-
-
-:::{.theorem title="Weierstrass Approximation"}
-If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
-
-Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
-:::
-
-
-:::{.theorem title="Egorov"}
-Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
-\[  
-f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
-\]
-exists almost everywhere.
-
-Then $f_k \to f$ *almost uniformly*, i.e.
+:::{.proposition title="?"}
+The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
 \[
-\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
-.\]
-:::
-
-:::{.proposition}
-The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+\norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}
+\]
+is a **complete** metric space.
 :::
 
 :::{.proof}
+\envlist
 
 1.  Let $\theset{f_k}$ be Cauchy in $X$.
 
@@ -235,14 +289,15 @@ The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped wi
 
     The uniform limit of continuous functions is continuous.
 
-> Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
-
 :::
 
-:::{.theorem title="Uniform Limit Theorem"}
-If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous.
+Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 
-> Slogan: "A uniform limit of continuous functions is continuous."
+:::{.theorem title="Uniform Limit Theorem"}
+If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
+
+[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
+
 :::
 
 :::{.proof}
@@ -259,32 +314,132 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 :::
 
 
-Lemma (Uniform Limits Commute with Integrals)
-: If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+:::{.proposition title="Uniform Limits Commute with Integrals"}
+If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+:::
 
-Lemma (Uniform Convergence and Derivatives)
-: If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
 
 ### Series
 
-Lemma (Pointwise Convergence for a Series of Functions)
-: If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
+:::{.proposition title="p-tests"}
+Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
+\[
+\sum \frac 1 {n^p} < \infty &\iff p>1 \\
+\int_\varepsilon^\infty \frac 1 {x^p} < \infty 
+&\iff p>1 \\
+\int_0^1 \frac 1 {x^p} < \infty 
+&\iff p<1 \\
+\int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
+\int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
+.\]
+:::
 
-Lemma (Small Tails for Series of Functions)
-:	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
+:::{.proposition title="Comparison Test"}
+If $0\leq a_n \leq b_n$, then 
 
-Lemma (M-test for Series)
-: If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
+- $\sum b_n < \infty \implies \sum a_n < \infty$, and 
+- $\sum a_n = \infty \implies \sum b_n = \infty$.
 
-Lemma (p-tests)
-:   Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
-    \[
-    \sum \frac 1 {n^p} < \infty &\iff p>1 \\
-    \int_\varepsilon^\infty \frac 1 {x^p} < \infty 
-    &\iff p>1 \\
-    \int_0^1 \frac 1 {x^p} < \infty 
-    &\iff p<1 \\
-    \int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
-    \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
-    .\]
+:::
 
+:::{.proposition title="Small Tails for Series of Functions"}
+If $\sum f_n$ converges then $f_n \to 0$ uniformly.
+:::
+
+:::{.corollary title="Term by Term Continuity Theorem"}
+If $f_n$ are continuous and $\sum f_n \to f$ converges uniformly, then $f$ is continuous.
+:::
+
+:::{.proposition title="Weak $M\dash$Test"}
+If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges.[^note_about_pointwise_convergence]
+
+[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
+
+:::
+
+:::{.proposition title="The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+[^m_test_suffices]
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
+
+[^m_test_suffices]: 
+It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
+
+:::
+
+:::{.proposition title="Cauchy criterion for sums"}
+$f_n$ are uniformly Cauchy (so $\norm{f_n - f_m}_\infty < \eps$) iff $f_n$ is uniformly convergent.
+:::
+
+#### Derivatives
+
+:::{.theorem title="Term by Term Differentiability Theorem"}
+If $f_n$ are differentiable, $\sum f_n' \to g$ uniformly, and there exists one point[^pointwise_works_too] $x_0$ such that $\sum f_n(x)$ converges, then there exist an $f$ such that $\sum f_n \to f$ uniformly and $f' = g$.[^theorem_referfence_6.4.3_Abbott]
+
+[^theorem_referfence_6.4.3_Abbott]: See Abbott theorem 6.4.3, pp 168.
+
+[^pointwise_works_too]: So this implicitly holds if $f$ is the pointwise limit of $f_n$.
+
+:::
+
+## Commuting Limiting Operations
+
+:::{.proposition title="Limits of bounded functions need not be bounded"}
+\[  
+\lim_{n\to \infty}\sup_{x\in X} \abs{f_n(x) } \neq \sup_{x\in X} \abs{\lim_{n\to\infty} f_n(x) }
+.\]
+:::
+
+
+:::{.proposition title="Limits of continuous functions need not be continuous"}
+\[  
+\lim_{k\to \infty} \lim_{n\to\infty} f_n(x_k) \neq
+\lim_{n\to \infty} \lim_{k\to\infty} f_n(x_k)
+.\]
+:::
+
+:::{.proposition title="Limits of differentiable functions need not be differentiable"}
+\[  
+\lim_{n\to \infty} \dd{}{x} f_n \neq \dd{}{n} \qty{\lim_{n\to \infty} f_n}
+.\]
+:::
+
+:::{.proposition title="?"}
+\[  
+\lim_{n\to \infty} \int_a^b f_n(x) \,dx \neq \int_a^b \lim_{n\to \infty} \qty{ f_n(x) } \,dx
+.\]
+:::
+
+## Slightly Advanced Stuff
+
+:::{.theorem title="Weierstrass Approximation"}
+If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
+
+Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::
+
+:::{.theorem title="Egorov"}
+Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
+\[  
+f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
+\]
+exists almost everywhere.
+
+Then $f_k \to f$ *almost uniformly*, i.e.
+\[
+\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
+m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
+.\]
+:::
+
+
+## Examples
+
+:::{.example title="?"}
+A series of continuous functions that does *not* converge uniformly but is still continuous:
+\[  
+g(x) \da \sum {1 \over 1 + n^2 x}
+.\]
+
+Take $x = 1/n^2$.
+:::
