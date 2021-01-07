@@ -8,9 +8,9 @@ Galois group of a given polynomial**) of the topics mentioned."
 
 ## References
 
-- [1]  David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
+- David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003. [@dummit_foote_2004]  
 
-- [2]  Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
+- Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971. [@hoffman_kunze_1981]
 
 - [3]  Thomas W. Hungerford, Algebra, Springer, 1974.
 
