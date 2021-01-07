@@ -231,16 +231,16 @@ Equivalently, the action has a single orbit.
 Notation reminder:
 Reminder of notation: for a group $G$ acting on a set $X$,
 
-+---+---+
-|   |   | 
-+===+===+
-| \(G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  The orbit |
-+---+---+
-|   |   |
-+---+---+
++-----------------------------------------------------------------+------------+
+|  Notation                                                       |  Definition| 
++=================================================================+============+
+| \( G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  Orbit     |
++-----------------------------------------------------------------+------------+
+| \(G_x = \ts{ g \in G \st gx=x }\)                               | Stabilizer |
++-----------------------------------------------------------------+------------+
+| \( X/G \subseteq 2^X \)                                         | Set of Orbits |
++-----------------------------------------------------------------+------------+
 
-
-- $G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G$ is the stabilizer
 
 - $X/G \subset 2^X$ is the set of orbits
 
