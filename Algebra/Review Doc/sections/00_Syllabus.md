@@ -1,12 +1,15 @@
 # Topics and Remarks 2
 
-> Adapted from remark written by Roy Smith, August 2006
 
-> "As a general rule, students are responsible for knowing both the theory (proofs) and practical
-applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the
-Galois group of a given polynomial**) of the topics mentioned."
+:::{.remark}
+Adapted from remark written by Roy Smith, August 2006:
 
-## References
+As a general rule, students are responsible for knowing both the theory (proofs) and practical
+applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the Galois group of a given polynomial**) of the topics mentioned.
+
+:::
+
+## General References
 
 - David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003. [@dummit_foote_2004]  
 
@@ -19,12 +22,12 @@ Galois group of a given polynomial**) of the topics mentioned."
 
 ## Group Theory
 
-References: [@dummit_foote_2004], [@hungerford_2008], [@smith]
+> References: [@dummit_foote_2004], [@hungerford_2008], [@smith]
 
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
 
-**Key Topics:**
+### Key Topics
 
 - Sylow theorems
 
@@ -44,7 +47,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - The simple groups of order between 60 and 168 have prime order
 
-**Full List of Topics**
+### Full List of Topics
 
 - Chapters 1-9 of Dummit and Foote
 
@@ -107,7 +110,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 ## Linear Algebra
 
-References: [@dummit_foote_2004],[@hoffman_kunze_1981],[@smith]
+> References: [@dummit_foote_2004],[@hoffman_kunze_1981],[@smith]
+
+### Key Topics
 
 - Determinants
 
@@ -130,7 +135,9 @@ References: [@dummit_foote_2004],[@hoffman_kunze_1981],[@smith]
 
 ## Rings
 
-References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
+> References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
+
+### Key Topics
 
 - DF chapters 13,14 (about 145 pages).
 
@@ -139,7 +146,7 @@ References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
   - 844-1, sections 7-9 (20 pages)
   - 844-2, sections 10-16, (37 pages)
 
-**Full List of Topics**:
+### Full List of Topics
 
 - Properties of ideals and quotient rings
 - $I$ maximal iff $R/I$ is a field
@@ -222,7 +229,9 @@ References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
 
 ## Modules
 
-References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
+> References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
+
+### Key Topics
 
 - Fundamental homomorphism theorems for rings and modules
 
@@ -244,7 +253,9 @@ References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
 
 ## Field Theory
 
-References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
+### Key Topics
+
+> References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
 
 - Algebraic extensions of fields
 
