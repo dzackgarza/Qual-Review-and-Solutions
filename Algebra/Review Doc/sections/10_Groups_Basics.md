@@ -248,9 +248,11 @@ For a group $G$ acting on a set $X$,
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 
 :::{.theorem title="Orbit-Stabilizer"}
-$$
+
+\[
 \abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
-$$
+.\]
+
 :::
 
 > Mnemonic: $G/G_x \cong G\cdot x$.
