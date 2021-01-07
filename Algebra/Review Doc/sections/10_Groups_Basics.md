@@ -14,7 +14,7 @@
 | $C_G(x)$                             | Centralizer of an element \ |
 |                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1} \subseteq \Gamma \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
-| $C_G(H)$                             | Centralizer of an element \ |
+| $C_G(H)$                             | Centralizer of an subgroup \ |
 |                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 | $C(H)$                               | Conjugacy Class  \ |
@@ -26,19 +26,11 @@
 | \( N_G(H) \)                         | Normalizer \ |
 |                                      | \( \da \ts{ g\in G \st gHg ^{-1} = H } \subseteq G \)		|
 +--------------------------------------+---------------------------------------------------------------------------------------+
-
+| \( \mathrm{Inn}(G)  \)														| Inner Automorphisms				\ |
+|																				| \( \da \ts{ \varphi _g(x) \da gxg ^{-1} } \subseteq \Aut(G) \)		|
++--------------------------------------+---------------------------------------------------------------------------------------+
 
 \[
-C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
-\parbox{7em}{\small\centering Centralizer \\ (Element)} \\
-C_G(H) 			=                                               && \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h \in H} C_G(h) && \leq G            &&
-\parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
-C(h) 		=                                                   && \theset{ghg^{-1} \mid g\in G}                                                 && \subseteq G       &&
-\text{Conjugacy Class} \\
-Z(G) 			=                                                 && \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x}                            && \subseteq G       &&
-\text{Center} \\
-N_G(H) 			=                                               && \theset{g\in G \mid gHg^{-1} = H}                                             && \subseteq G       &&
-\text{Normalizer} \\
 \mathrm{Inn}(G) =                                           && \theset{\phi_g(x) = gxg^{-1} }                                                && \subseteq \Aut(G) &&
 \text{Inner Aut.} \\
 \mathrm{Out}(G) =                                           && \Aut(G) / \mathrm{Inn}(G)                                                     && \injects \Aut(G)  &&
