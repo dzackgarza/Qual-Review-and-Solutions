@@ -227,9 +227,8 @@ Equivalently, the action has a single orbit.
 :::
 
 
-:::{.remark}
-Notation reminder:
-Reminder of notation: for a group $G$ acting on a set $X$,
+:::{.remark title="Reminder of notation}
+For a group $G$ acting on a set $X$,
 
 +-----------------------------------------------------------------+------------+
 |  Notation                                                       |  Definition| 
@@ -240,12 +239,8 @@ Reminder of notation: for a group $G$ acting on a set $X$,
 +-----------------------------------------------------------------+------------+
 | \( X/G \subseteq 2^X \)                                         | Set of Orbits |
 +-----------------------------------------------------------------+------------+
-
-
-- $X/G \subset 2^X$ is the set of orbits
-
-- $X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X$ are the fixed points
-
+| \( X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X\)   | Fixed Points |
++-----------------------------------------------------------------+------------+
 
 :::
 
