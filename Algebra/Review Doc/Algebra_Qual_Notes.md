@@ -704,9 +704,11 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 | $C_G(H)$                             | Centralizer of an element \ |
 |                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
-| \( C(h) \)												   | Conjugacy Class					\ |
-|                                      | \( \da \ts{ ghg ^{-1} \st g\in G } \leq G  \)		\ |
+| $C(H)$                               | Conjugacy Class  \ |
+|                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
+
+<!--|                                      | \( \da \ts{ ghg ^{-1} \st g\in G} \leq G  \)		\ |-->
 
 \[
 C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
