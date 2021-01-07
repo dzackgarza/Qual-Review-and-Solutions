@@ -36,16 +36,12 @@
 |                                      |  \( \da ghg ^{-1} \in G \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 |  \( [G H] \)                          |  Commutator of Subgroups  \ |
-|                                      |  \( \da \gens \ts{ [gh] \st g \in G,\, h \in H } \leq G \)  |
+|                                      |  \( \da \gens{ \ts{ [gh] \st g \in G,\, h \in H } } \leq G \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 
 
 
 \[
-[g, h] =                                                    && ghgh\inv                                                                      && \in G             &&
-\parbox{7em}{\small\centering Commutator \\ (Element)} \\
-[G, H] =                                                    && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle            && \leq G            &&
-\parbox{7em}{\small\centering Commutator \\ (Subgroup)} \\
 \cline{1-6}
 \OO_x\txt{or} G\cdot x 			=                               && \theset{g.x \mid x\in X}                                                      && \subseteq X       &&
 \text{Orbit} \\
