@@ -1,6 +1,5 @@
 # Topics and Remarks 2
 
-
 :::{.remark}
 Adapted from remark written by Roy Smith, August 2006:
 
@@ -23,7 +22,6 @@ applications (e.g. **how to find the Jordan or rational canonical form** of a gi
 ## Group Theory
 
 > References: [@dummit_foote_2004], [@hungerford_2008], [@smith]
-
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
 
