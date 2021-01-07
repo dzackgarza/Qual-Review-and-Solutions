@@ -249,10 +249,8 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 :::{.theorem title="Orbit-Stabilizer"}
 
-\[
-\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
+\[\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
 .\]
-
 :::
 
 > Mnemonic: $G/G_x \cong G\cdot x$.
