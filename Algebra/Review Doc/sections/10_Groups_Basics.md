@@ -81,7 +81,9 @@ N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \no
 :::
 
 :::{.theorem title="The Fundamental Theorem of Cosets"}
+
 $aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
+
 :::
 
 :::{.theorem title="Counting Quotients"}
