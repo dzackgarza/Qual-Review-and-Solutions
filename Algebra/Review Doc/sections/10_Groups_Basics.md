@@ -184,7 +184,7 @@ The order of every element divides the size of $G$, i.e.
   .$$
 :::
 
-:::{.warning}
+:::{.warnings}
 There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
 Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
 :::
@@ -204,36 +204,50 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 An action of $G$ on $X$ is a group morphism
 \[
 \phi:G \times X &\rightarrow X \\ 
-(g,x) &\mapsto g\cdot x
+(g,x) &\mapsto g x
 \]
 or equivalently
 \[
 \phi: G &\to \Aut(X) \\
-g \mapsto (x \mapsto \phi_g (x) \definedas g\cdot x)
+g &\mapsto (x \mapsto \phi_g (x) \definedas g\cdot x)
 \]
 satisfying
 
 1. $e\cdot x = x$
 2. $g\cdot (h\cdot x) = (gh)\cdot x$
 :::
-  
-Useful fact:
+
+:::{.fact}
 $\ker \psi = \intersect_{x\in X} G_x$ is the intersection of all stabilizers.
+:::
 
 :::{.definition title="Transitive Group Action"}
 A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
 Equivalently, the action has a single orbit.
 :::
- 
-> Reminder of notation: for a group $G$ acting on a set $X$,
-> 
-> - $G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X$ is the orbit
->
-> - $G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G$ is the stabilizer
->
-> - $X/G \subset 2^X$ is the set of orbits
->
-> - $X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X$ are the fixed points
+
+
+:::{.remark}
+Notation reminder:
+Reminder of notation: for a group $G$ acting on a set $X$,
+
++---+---+
+|   |   | 
++===+===+
+| \(G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  The orbit |
++---+---+
+|   |   |
++---+---+
+
+
+- $G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G$ is the stabilizer
+
+- $X/G \subset 2^X$ is the set of orbits
+
+- $X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X$ are the fixed points
+
+
+:::
 
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
