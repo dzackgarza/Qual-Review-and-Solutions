@@ -27,15 +27,19 @@
 |                                      | \( \da \ts{ g\in G \st gHg ^{-1} = H } \subseteq G \)		|
 +--------------------------------------+---------------------------------------------------------------------------------------+
 | \( \mathrm{Inn}(G) \)                | Inner Automorphisms \ |
-| \( \mathrm{Inn}(G) \)                | Inner Automorphisms \ |
-|																			 | \( \da \ts{ \varphi _g(x) \da gxg ^{-1} } \subseteq \Aut(G) \)		|
+|                                      | \( \da \ts{ \varphi _g(x) \da gxg ^{-1} } \subseteq \Aut(G) \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
+| \( \mathrm{Out}(G) \)                | Outer Automorphisms \ |
+|                                      | \( \Aut(G) / \Inn(G) \mapsfrom \Aut(G) \) |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( [g h] \)  |  Commutator of Elements  \ |
+|               |  \( \da ghg ^{-1} \in G \)  |
++--------------+---------------------------------------------------------------------------------------+
+
+
+
 
 \[
-\mathrm{Inn}(G) =                                           && \theset{\phi_g(x) = gxg^{-1} }                                                && \subseteq \Aut(G) &&
-\text{Inner Aut.} \\
-\mathrm{Out}(G) =                                           && \Aut(G) / \mathrm{Inn}(G)                                                     && \injects \Aut(G)  &&
-\text{Outer Aut.} \\
 [g, h] =                                                    && ghgh\inv                                                                      && \in G             &&
 \parbox{7em}{\small\centering Commutator \\ (Element)} \\
 [G, H] =                                                    && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle            && \leq G            &&
