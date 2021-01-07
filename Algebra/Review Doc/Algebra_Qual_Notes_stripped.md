@@ -6,13 +6,15 @@
 
 ## References
 
--   \[1\] David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003.
+-   David Dummit and Richard Foote, Abstract Algebra, Wiley, 2003. [@dummit_foote_2004]
 
--   \[2\] Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971.
+-   Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971. [@hoffman_kunze_1981]
 
--   \[3\] Thomas W. Hungerford, Algebra, Springer, 1974.
+-   Thomas W. Hungerford, Algebra, Springer, 1974. [@hungerford_2008]
 
--   \[4\] Roy Smith, Algebra Course Notes (843-1 through 845-3), <http://www.math.uga.edu/~roy/>,
+-   Roy Smith, Algebra Course Notes (843-1 through 845-3). [@smith]
+
+    -   Note: scroll down the page to find links to his course notes.
 
 ## Group Theory
 

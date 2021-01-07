@@ -12,10 +12,10 @@ Galois group of a given polynomial**) of the topics mentioned."
 
 - Kenneth Hoffman and Ray Kunze, Linear Algebra, Prentice-Hall, 1971. [@hoffman_kunze_1981]
 
-- [3]  Thomas W. Hungerford, Algebra, Springer, 1974.
+- Thomas W. Hungerford, Algebra, Springer, 1974. [@hungerford_2008]
 
-- [4]  Roy Smith, Algebra Course Notes (843-1 through 845-3), [http://www.math.uga.edu/~roy/](http://www.math.uga.edu/~roy/),
-
+- Roy Smith, Algebra Course Notes (843-1 through 845-3). [@smith]
+  - Note: scroll down the page to find links to his course notes.
 
 ## Group Theory
 
