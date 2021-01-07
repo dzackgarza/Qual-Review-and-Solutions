@@ -35,16 +35,16 @@
 |  \( [g h] \)                         |  Commutator of Elements  \ |
 |                                      |  \( \da ghg ^{-1} \in G \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
-|  \( [G H] \)                          |  Commutator of Subgroups  \ |
+|  \( [G H] \)                         |  Commutator of Subgroups  \ |
 |                                      |  \( \da \gens{ \ts{ [gh] \st g \in G,\, h \in H } } \leq G \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( \OO_x,\, Gx \)                   |  Orbit of an Element  \ |
+|                                      |  \( \da \ts{ gx \st  x \in X} \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 
 
 
 \[
-\cline{1-6}
-\OO_x\txt{or} G\cdot x 			=                               && \theset{g.x \mid x\in X}                                                      && \subseteq X       &&
-\text{Orbit} \\
 \stab_G(x)\txt{or}  G_x 			=                             && \theset{g\in G \mid g.x = x}                                                  && \subseteq G       &&
 \text{Stabilizer} \\
 X/G =                                                       && \theset{G_x \suchthat x\in X}                                                 && \subseteq 2^X     &&
