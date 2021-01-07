@@ -438,7 +438,6 @@ applications (e.g. **how to find the Jordan or rational canonical form** of a gi
 ## Group Theory
 
 > References: [@dummit_foote_2004], [@hungerford_2008], [@smith]
-
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
 
@@ -450,11 +449,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - The first isomorphism theorem,
 
-- The Jordan Holder theorem,
+- The Jordan Holder theorem
 
-  > The last two (one easy, one hard) are left as exercises.
-
-  **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
+  - **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 - Fundamental theorem of finite abelian groups
 
@@ -695,6 +692,20 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 
 ## Big List of Notation
+
+
+
++--------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| Notation                             | Definition                                                                                                       |
++======================================+==================================================================================================================+
+| $C_G(x)$                             | Centralizer of an element \ |
+|                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1} \subseteq \Gamma \) \ |
++--------------------------------------+---------------------------------------------------------------------------------------+
+| $C_G(H)$                             | Centralizer of an element \ |
+|                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
++--------------------------------------+---------------------------------------------------------------------------------------+
+
+
 \[
 C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
 \parbox{7em}{\small\centering Centralizer \\ (Element)} \\

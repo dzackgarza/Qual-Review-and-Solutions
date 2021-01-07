@@ -20,9 +20,7 @@ As a general rule, students are responsible for knowing both the theory (proofs)
 
 ## Group Theory
 
-> References: [@dummit_foote_2004], [@hungerford_2008], [@smith]
-
-> "The first 6 chapters (220 pages) of Dummit and Foote are excellent. All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
+> References: [@dummit_foote_2004], [@hungerford_2008], [@smith] "The first 6 chapters (220 pages) of Dummit and Foote are excellent. All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
 
 ### Key Topics
 
@@ -32,11 +30,9 @@ As a general rule, students are responsible for knowing both the theory (proofs)
 
 -   The first isomorphism theorem,
 
--   The Jordan Holder theorem,
+-   The Jordan Holder theorem
 
-    > The last two (one easy, one hard) are left as exercises.
-
-    **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
+    -   **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 -   Fundamental theorem of finite abelian groups
 
@@ -321,6 +317,16 @@ As a general rule, students are responsible for knowing both the theory (proofs)
 -   For any \( p \) dividing the order of \( G \), \( \mathrm{Syl}_p(G) \) denotes the *set* of Sylow\( {\hbox{-}}p \) subgroups of \( G \).
 
 ## Big List of Notation
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------
+  Notation          Definition
+  ----------------- -------------------------------------------------------------------------------------------------------------------------------------
+  \( C_G(x) \)      Centralizer of an element\
+                    \( \coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1}\right\} \subseteq \Gamma \)\
+
+  \( C_G(H) \)      Centralizer of an element\
+                    \( \coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1\,\, \forall h\in H}\right\} = \bigcap_{h\in H} C_H(h) \subseteq G \)\
+  -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \[
 C_G(x)          =                                               && \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\}                                          && \subseteq G       &&
