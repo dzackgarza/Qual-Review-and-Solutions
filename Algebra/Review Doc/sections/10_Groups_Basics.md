@@ -41,17 +41,15 @@
 |  \( \OO_x,\, Gx \)                   |  Orbit of an Element  \ |
 |                                      |  \( \da \ts{ gx \st  x \in X} \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
-
-
-
-\[
-\stab_G(x)\txt{or}  G_x 			=                             && \theset{g\in G \mid g.x = x}                                                  && \subseteq G       &&
-\text{Stabilizer} \\
-X/G =                                                       && \theset{G_x \suchthat x\in X}                                                 && \subseteq 2^X     &&
-\text{Set of Orbits} \\
-X^{g} =                                                     && \theset{x\in X \suchthat \forall g\in G,~ g.x = x}                            && \subseteq X       &&
-\text{Fixed Points} \\
-\]
+|  \( \mathrm{Stab}_G(x),\, G_x \)     |  Stabilizer of an Element \ |
+|                                      |  \( \da \ts{ g \in G \st gx = x } \subseteq G \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( X/G \)                           |  Set of Orbits  \ |
+|                                      |  \( \da \ts{ G_x \st x \in X } \subseteq 2^X \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( X^g \)                           |  Fixed Points  \ |
+|                                      |  \( \ts{x \in X \st \forall g \in G,\, gx = x} \subseteq X \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
 
 Some useful facts:
 
