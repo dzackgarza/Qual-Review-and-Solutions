@@ -33,11 +33,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - The first isomorphism theorem,
 
-- The Jordan Holder theorem,
+- The Jordan Holder theorem
 
-  > The last two (one easy, one hard) are left as exercises.
-
-  **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
+  - **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 - Fundamental theorem of finite abelian groups
 
