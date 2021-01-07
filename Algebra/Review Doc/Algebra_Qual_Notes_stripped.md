@@ -327,7 +327,7 @@ As a general rule, students are responsible for knowing both the theory (proofs)
 | \( C_G(H) \)    | Centralizer of an element\                                                                                                          |
 |                 | \( \coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1\,\, \forall h\in H}\right\} = \bigcap_{h\in H} C_H(h) \subseteq G \)\ |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-| \( C(h) \)      |                     | Conjugacy Class                  \                                                                            |
+| \( C(h) \)      |                       | Conjugacy Class                    \                                                                        |
 |                 |                                                                                                                                     |
 |                 | \( \coloneqq\left\{{ ghg ^{-1} {~\mathrel{\Big|}~}g\in G }\right\} \leq G \)\                                                       |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
