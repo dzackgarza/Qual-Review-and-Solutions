@@ -316,9 +316,13 @@ all conjugacy classes of elements in $G$, provide a representative from
 each class, and prove that this list is complete.
 :::
 
-:::{.proof}
-*Proof.* **Claim 1**: Conjugacy classes in $S_n$ are completely
+:::{.solution}
+
+
+:::{.claim title="1"}
+Conjugacy classes in $S_n$ are completely
 determined by cycle type.
+:::
 
 This follows because of the result on homework 1, which says that for
 any two cycles $\tau,\sigma\in S_n$, we have
