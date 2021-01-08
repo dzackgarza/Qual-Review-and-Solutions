@@ -2657,7 +2657,11 @@ Special Polynomials
 ```{=tex}
 \todo[inline]{Sort out from module section.}
 ```
-# Even More Algebra Question (In Progress)
+# Even More Algebra Questions
+
+::: {.remark}
+(DZG): These all come from a random PDF I found, but I couldn't find the original author/source!
+:::
 
 ## Groups
 
@@ -2843,9 +2847,8 @@ A subgroup of a finitely-generated free group is..? Prove your answers.
 
 ### Question 1.42
 
-```{=tex}
-\todo[inline]{Missing.}
-```
+What are the subgroups of \( {\mathbb{Z}}^2 \)?
+
 ### Question 1.43
 
 What are the subgroups of the free group \( F_2 \)? How many generators can you have?
@@ -3034,17 +3037,21 @@ What is the Galois group of \( x^2 - 2 \)? Why is \( x^2 - 2 \) irreducible?
 
 ### Question 3.23
 
-```{=tex}
-\todo[inline]{Missing}
-```
+What is the Galois group of
+\[
+{\mathbb{Q}}(\sqrt 2, \sqrt 3)\, / \, {\mathbb{Q}}
+?\]
+
 ### Question 3.24
 
-```{=tex}
-\todo[inline]{Missing}
-```
+What is the Galois group of
+\[
+{\mathbb{Q}}\qty{ \sqrt{n_1}, \cdots, \sqrt{n_m} } \, / \, {\mathbb{Q}}(\sqrt{n_1} + \cdots + \sqrt{n_m})
+?\]
+
 ### Question 3.25
 
-What are the Galois groups of irreducible cubics? `\todo[inline]{Missing}`{=tex}
+What are the Galois groups of irreducible cubics?
 
 ### Question 3.26
 
@@ -3164,7 +3171,7 @@ Suppose you are given a finite Galois extension \( K/{\mathbb{Q}} \) by \( f(x) 
 
 ### Question 3.55
 
-How many automorphisms does the complex field have? How can you extend the automorphisms of an algebraic field into \( {\mathbb{C}} \)? How can you extend a simple automorphism (e.g. a general subfield isomorphism? What feature of \( {\mathbb{C}} \) allows you to? `\todo[inline]{Missing}`{=tex}
+How many automorphisms does the complex field have? How can you extend a simple automorphism \( \sqrt{2} \mapsto -\sqrt{2} \) of an algebraic field into \( {\mathbb{C}} \)? How can you extend a subfield automorphism? What feature of \( {\mathbb{C}} \) allows you to?
 
 ### Question 3.56.
 
@@ -3306,7 +3313,7 @@ Describe all the conjugacy classes of \( 3 \times 3 \) matrices with rational en
 
 ### Question 4.12
 
-What \( 3 \times 3 \) matrices over the rationals (up to similarity) satisfy \( f (A) = 0 \), where \( f (x) = (x^2 + 2)(x - 1)^3 \)? List all possible rational forms. `\todo[inline]{Check}`{=tex}
+What \( 3 \times 3 \) matrices over the rationals (up to similarity) satisfy \( f (A) = 0 \), where \( f (x) = (x^2 + 2)(x - 1)^3 \)? List all possible rational forms.
 
 ### Question 4.13
 
@@ -3438,7 +3445,7 @@ What is a PID? What's an example of a UFD that is not a PID? Why? Is \( k[x] \) 
 
 ### Question 6.3
 
-Is \( {\mathbb{C}}[x, y] \) a PID? What are the prime ideals in it? `\todo[inline]{Missing}`{=tex}
+Is \( {\mathbb{C}}[x, y] \) a PID? Is \( \left\langle{ x, y }\right\rangle \) a prime ideals in it?
 
 ### Question 6.4
 
@@ -3472,9 +3479,6 @@ Is a ring of formal power series a UFD?
 
 Is a polynomial ring over a UFD again a UFD?
 
-```{=tex}
-\todo[inline]{Check?}
-```
 ### Question 6.12
 
 What does factorisation over \( {\mathbb{Q}}[x] \) say about factorisation over \( {\mathbb{Z}}[x] \)?
@@ -3545,9 +3549,12 @@ What are the prime ideals and maximal ideals of \( {\mathbb{Z}}[x] \)?
 
 ### Question 6.29
 
-```{=tex}
-\todo[inline]{Missing}
-```
+Is the following map an isomorphism?
+\[
+{\mathbb{Z}}[t] / \left\langle{ t^p - 1 }\right\rangle  &\to {\mathbb{Z}}[w] \\
+t &\mapsto w \text{ where } w^p = 1
+.\]
+
 ### Question 6.30
 
 Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size. Now identify the matrix algebra \( \operatorname{Mat}(n \times n, K) \) with \( \operatorname{End}_K(V ) \) where \( V \) is an \( n{\hbox{-}} \)dimensional K-vector space. Try to geometrically describe the simple left ideals and also the simple right ideals via that identification.
@@ -3612,9 +3619,10 @@ Do you know an example of a local ring? Another one? What about completions?
 
 Consider the space of functions from the natural numbers to \( {\mathbb{C}} \) endowed with the usual law of addition and the following analogue of the convolution product:
 
-```{=tex}
-\todo[inline]{Missing}
-```
+\[
+(f\ast g)(n) = \sum_{d\divides n}^{}f(d) g\qty{n\over d}
+.\]
+
 Show that this is a ring. What does this ring remind you of and what can you say about it?
 
 ### Question 6.46
@@ -3833,11 +3841,9 @@ What classical function in mathematics does this number relate to?
 
 Discuss representations of \( {\mathbb{Z}} \), the infinite cyclic group. What is the group algebra of \( {\mathbb{Z}} \)?
 
-What is the connection `\todo[inline]{Incomplete question}`{=tex}
-
 ### Question 8.33
 
-What is a Lie group? Define a unitary representation. What is the Peter-- Weyl theorem? What is the Lie algebra? The Jacobi identity? What is the adjoint representation of a Lie algebra? What is the commutator of two vector fields on a manifold?
+What is a Lie group? Define a unitary representation. What is the Peter--Weyl theorem? What is the Lie algebra? The Jacobi identity? What is the adjoint representation of a Lie algebra? What is the commutator of two vector fields on a manifold?
 
 When is a representation of \( {\mathbb{Z}} \) completely reducible? Why?
 

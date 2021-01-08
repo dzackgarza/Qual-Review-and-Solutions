@@ -66,7 +66,12 @@ For $G$ a finite group, TFAE:
 - $G$ has a terminating *Upper* Central Series
 :::
 
-**Lemmas:**
+:::{.fact}
+\envlist
 
 - Nilpotent groups satisfy the 2 out of 3 property.\todo{Todo. Specify.}
 - $G$ has normal subgroups of order $d$ for *every* $d$ dividing $\abs{G}$
+
+:::
+
+

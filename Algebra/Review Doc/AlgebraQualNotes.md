@@ -3257,7 +3257,13 @@ Special Polynomials
 
 \todo[inline]{Sort out from module section.}
 
-# Even More Algebra Question (In Progress)
+# Even More Algebra Questions
+
+
+:::{.remark}
+(DZG): These all come from a random PDF I found, but I couldn't find the original author/source!
+:::
+
 
 ## Groups
 
@@ -3442,7 +3448,7 @@ A subgroup of a finitely-generated free group is..?
 Prove your answers.
 
 ### Question 1.42
-\todo[inline]{Missing.}
+What are the subgroups of \( \ZZ^2 \)?
 
 ### Question 1.43
 What are the subgroups of the free group $F_2$?
@@ -3637,14 +3643,21 @@ What is the Galois group of $x^2 - 2$?
 Why is $x^2 - 2$ irreducible?
 
 ### Question 3.23
-\todo[inline]{Missing}
+What is the Galois group of 
+\[
+\QQ(\sqrt 2, \sqrt 3)\, / \, \QQ
+?\]
+
 
 ### Question 3.24
-\todo[inline]{Missing} 
+What is the Galois group of 
+\[
+\QQ\qty{ \sqrt{n_1}, \cdots, \sqrt{n_m} } \, / \, \QQ(\sqrt{n_1} + \cdots + \sqrt{n_m})
+?\]
+
 
 ### Question 3.25
 What are the Galois groups of irreducible cubics?
-\todo[inline]{Missing}
 
 ### Question 3.26
 If an irreducible cubic polynomial has Galois group NOT contained in A3, does it necessarily have to be all of $S_3$?
@@ -3746,10 +3759,9 @@ What can you say about the roots?
 
 ### Question 3.55
 How many automorphisms does the complex field have?
-How can you extend the automorphisms of an algebraic field into $\CC$?
-How can you extend a simple automorphism (e.g. a general subfield isomorphism?
+How can you extend a simple automorphism $\sqrt{2} \mapsto -\sqrt{2}$ of an algebraic field into $\CC$?
+How can you extend a subfield automorphism?
 What feature of $\CC$ allows you to?
-\todo[inline]{Missing}
 
 
 ### Question 3.56. 
@@ -3886,7 +3898,6 @@ Give a representative in each class.
 ### Question 4.12
 What $3 \times 3$ matrices over the rationals (up to similarity) satisfy $f (A) = 0$, where $f (x) = (x^2 + 2)(x - 1)^3$?
 List all possible rational forms.
-\todo[inline]{Check}
 
 ### Question 4.13
 What can you say about matrices that satisfy a given polynomial (over an algebraically closed field)?
@@ -4007,8 +4018,7 @@ Why?
 
 ### Question 6.3
 Is $\CC[x, y]$ a PID?
-What are the prime ideals in it?
-\todo[inline]{Missing}
+Is \( \gens{ x, y }  \) a prime ideals in it?
 
 ### Question 6.4
 Do polynomials in several variables form a PID?
@@ -4033,8 +4043,6 @@ Is a ring of formal power series a UFD?
 
 ### Question 6.11
 Is a polynomial ring over a UFD again a UFD?
-
-\todo[inline]{Check?}
 
 ### Question 6.12
 What does factorisation over $\QQ[x]$ say about factorisation over $\ZZ[x]$?
@@ -4108,7 +4116,12 @@ Give an example of a non-irreducible one.
 What are the prime ideals and maximal ideals of $\ZZ[x]$?
 
 ### Question 6.29
-\todo[inline]{Missing}
+Is the following map an isomorphism?
+\[
+\ZZ[t] / \gens{ t^p - 1 }  &\to \ZZ[w] \\
+t &\mapsto w \text{ where } w^p = 1
+.\]
+
 
 ### Question 6.30
 Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size.
@@ -4168,7 +4181,10 @@ What about completions?
 ### Question 6.45
 Consider the space of functions from the natural numbers to $\CC$ endowed with the usual law of addition and the following analogue of the convolution product:
 
-\todo[inline]{Missing}
+\[
+(f\ast g)(n) = \sum_{d\divides n}^{}f(d) g\qty{n\over d}
+.\]
+ 
 
 Show that this is a ring.
 What does this ring remind you of and what can you say about it?
@@ -4380,14 +4396,11 @@ What classical function in mathematics does this number relate to?
 Discuss representations of $\ZZ$, the infinite cyclic group.
 What is the group algebra of $\ZZ$?
 
-What is the connection
-\todo[inline]{Incomplete question}
 
 ### Question 8.33
 What is a Lie group?
 Define a unitary representation.
-What is the Peter–
-Weyl theorem?
+What is the Peter–Weyl theorem?
 What is the Lie algebra?
 The Jacobi identity?
 What is the adjoint representation of a Lie algebra?

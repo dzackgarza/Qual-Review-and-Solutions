@@ -857,7 +857,12 @@ Give an example of a non-irreducible one.
 What are the prime ideals and maximal ideals of $\ZZ[x]$?
 
 ### Question 6.29
-\todo[inline]{Missing}
+Is the following map an isomorphism?
+\[
+\ZZ[t] / \gens{ t^p - 1 }  &\to \ZZ[w] \\
+t &\mapsto w \text{ where } w^p = 1
+.\]
+
 
 ### Question 6.30
 Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size.
@@ -917,7 +922,10 @@ What about completions?
 ### Question 6.45
 Consider the space of functions from the natural numbers to $\CC$ endowed with the usual law of addition and the following analogue of the convolution product:
 
-\todo[inline]{Missing}
+\[
+(f\ast g)(n) = \sum_{d\divides n}^{}f(d) g\qty{n\over d}
+.\]
+ 
 
 Show that this is a ring.
 What does this ring remind you of and what can you say about it?
@@ -1129,14 +1137,11 @@ What classical function in mathematics does this number relate to?
 Discuss representations of $\ZZ$, the infinite cyclic group.
 What is the group algebra of $\ZZ$?
 
-What is the connection
-\todo[inline]{Incomplete question}
 
 ### Question 8.33
 What is a Lie group?
 Define a unitary representation.
-What is the Peter–
-Weyl theorem?
+What is the Peter–Weyl theorem?
 What is the Lie algebra?
 The Jacobi identity?
 What is the adjoint representation of a Lie algebra?
