@@ -295,7 +295,6 @@ Let $G$ act on *itself* by conjugation.
 :::
 
 
-
 :::{.corollary}
 The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$, i.e.
 \[
@@ -311,12 +310,9 @@ The number of conjugates of an element (i.e. the size of its conjugacy class) is
 \]
 :::
 
-
 :::{.remark}
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-
 :::
-
 
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
@@ -330,18 +326,25 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 :::
 
 :::{.corollary}
-Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
+Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
+\[
+\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
+.\]
+
 :::
 
 
 :::{.example title="?"}
-For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
+For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
+Let $x \da gH$, then
 
-- $G\cdot gH = G/H$, i.e. this is a *transitive* action.
+- $Gx = G/H$, 
 
-- $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
+  - Note that this is a *transitive* action.
 
-- $(G/H)^G = \emptyset$
+- The orbit is $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+
+- $X^G = \emptyset$
 
 :::
 
