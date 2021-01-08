@@ -969,7 +969,7 @@ What is the universal property?
 What do the tensors look like in the case of vector spaces?
 
 ### Question 7.7
-Now we'll take the tensor product of two abelian groups, that is, Z-modules.
+Now we'll take the tensor product of two abelian groups, that is, $\ZZ\dash$modules.
 Take $\ZZ/p\ZZ$ and $\ZZ/q\ZZ$, where $p$ and $q$ are distinct primes.
 What is their tensor product?
 
