@@ -12,7 +12,7 @@ In this case, we sometimes write \( q\divides r \).
 :::{.definition title="Irreducible Element"}
 An element $r\in R$ is **irreducible** iff 
 \[
-r=ab \implies a \in R\units \txt{or} b\in R\units
+r=ab \implies a \in R\units \text{ or }  b\in R\units
 \]
 :::
 
