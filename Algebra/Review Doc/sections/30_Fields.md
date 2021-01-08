@@ -77,9 +77,6 @@ In this case, we define the **Galois group** as
 .\]
 :::
 
-
-
-
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
 $$
@@ -90,6 +87,9 @@ which is a product over primitive roots of unity.
 It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
 :::
 
+:::{.definition title="Simple Extension"}
+An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
+:::
 
 
 ## Facts
@@ -365,12 +365,12 @@ In this case,
 :::
 
 
-
-
-**Common Counterexamples**:
+### Common Counterexamples
 
 - $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
 
+
+## Fundamental Theorem of Galois Theory
 
 :::{.theorem title="Fundamental Theorem of Galois Theory"}
 Let $L/k$ be a Galois extension, then there is a correspondence:
@@ -493,9 +493,6 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
-:::{.definition title="Simple Extension"}
-An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
-:::
 
 :::{.theorem title="Primitive Element"}
 Every finite separable extension is simple.
