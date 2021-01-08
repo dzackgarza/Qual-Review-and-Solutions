@@ -1,7 +1,7 @@
 **Problem** [\[prob:1.9\]](#prob:1.9){reference-type="ref"
 reference="prob:1.9"}
 
-::: {.proof}
+:::{.proof}
 *Proof.*
 
 1.  Define the required group action by $$\begin{aligned}
