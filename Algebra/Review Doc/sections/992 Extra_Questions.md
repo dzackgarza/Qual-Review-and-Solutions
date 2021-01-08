@@ -948,14 +948,14 @@ How does one prove the structure theorem for modules over PID?
 What is the module and what is the PID in the case of abelian groups?
 
 ### Question 7.2
-If M is free abelian, how can I put quotients of M in some standard form?
-What was crucial about the integers here (abelian groups being modules over Z)?
+If $M$ is free abelian, how can I put quotients of M in some standard form?
+What was crucial about the integers here (abelian groups being modules over $\ZZ$)?
 How does the procedure simplify if the ring is a Euclidean domain, not just a PID?
 
 ### Question 7.3
-Suppose D is an integral domain and the fundamental theorem holds for finitely-generated modules over D (i.e. they are all direct sums of finitely many cyclic modules).
+Suppose $D$ is an integral domain and the fundamental theorem holds for finitely-generated modules over $D$ (i.e. they are all direct sums of finitely many cyclic modules).
 
-Does D have to be a PID?
+Does $D$ have to be a PID?
 
 ### Question 7.4
 Classify finitely-generated modules over Z, over PID, and over Dedekind rings.
