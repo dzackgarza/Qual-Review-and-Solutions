@@ -7,7 +7,7 @@ Let $k$ denote a field.
 \envlist
 - The characteristic of any field $k$ is either 0 or $p$ a prime.
 - All fields are simple rings (no proper nontrivial ideals).
-- If $L_{/k}$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
+- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 - Every field morphism is either zero or injective.
 :::
 
@@ -16,7 +16,7 @@ Every finite extension is algebraic.
 :::
 
 :::{.proof}
-If \( K_{/F} \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
+If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
 This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence \[
 f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
 .\]
@@ -181,14 +181,30 @@ If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
 
 ### Lemmas About Towers
 
-Let $L/F/k$ be a finite tower of field extensions
+Let $L/F/k$ be a finite tower of field extensions.
 
-- Multiplicativity: $[L : k] = [L: F][F: k]$
 
-- $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
-  - *Proof (normal):*
-  $\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then so does the former.
-  - *Corollary:* $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
+:::{.proposition title="Towers are multiplicative in degree"}
+\[
+[L : k] = [L: F][F: k]
+.\]
+:::
+
+
+:::{.proposition title="Normal/Algebraic/Galois in towers"}
+$L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
+:::
+
+
+:::{.proof title="for normality"}
+$\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then so does the former.
+:::
+
+
+:::{.corollary title="?"}
+$\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
+:::
+
   - *Corollary:* $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
 
 \begin{center}
