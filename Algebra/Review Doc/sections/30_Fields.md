@@ -277,7 +277,6 @@ If $L/k$ is algebraic, then $F/k$ separable:
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
 
-
 Moreover, $L/F$ is additionally separable $\iff L/k$ separable:
 
 \begin{tikzcd}
