@@ -136,14 +136,16 @@ If $H\normal G$, then
 
 :::
 
-## Cyclic Groups
+## Special Classes of Groups
+
+### Cyclic Groups
 
 :::{.theorem title="Subgroups of Cyclic Groups"}
 If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
 :::
 
 
-## The Symmetric Group
+### The Symmetric Group
 
 :::{.definition title="Parity of a Cycle"}
 
@@ -283,7 +285,6 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 ### Examples of Orbit-Stabilizer and the Class Equation
 
-
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
@@ -396,7 +397,4 @@ For $G$ a finite group acting on $X$,
 &= \abs{G} \abs{X/G}  
 .\]
 :::
-
-
-
 
