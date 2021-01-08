@@ -59,11 +59,17 @@ $\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \m
 :::
 
 :::{.definition title="Prime Spectrum"}
-$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
+\[
+\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}
+.\]
 :::
 
 :::{.definition title="Max Spectrum"}
-$\mspec(R) = \theset{\mfm \normal R \suchthat \mfm \text{ is maximal}}$ is the **max-spectrum** of $R$.
+The **max spectrum** of $R$ is defined as 
+\[
+\mspec(R) = \theset{\mfm \normal R \suchthat \mfm \text{ is maximal}}
+.\]
 :::
 
 
