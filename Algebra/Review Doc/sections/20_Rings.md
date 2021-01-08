@@ -112,7 +112,7 @@ with each \( M_j \) simple.
 :::
 
 :::{.definition title="Noetherian"}
-A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
+A ring $R$ is **Noetherian** if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
 
 
@@ -150,64 +150,8 @@ An ideal is **radical** iff $\rad(I) = I$.
 :::
 
 
-## Misc
 
-## Zorn's Lemma
-
-:::{.theorem title="Zorn's Lemma"}
-If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
-:::
-
-Some useful propositions used when *applying* Zorn's lemma:
-
-:::{.proposition}
-Fields are simple rings. 
-:::
-
-:::{.proposition}
-If $I\normal R$ is a proper ideal $\iff I$ contains no units.
-:::
-
-:::{.proof}
-$r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
-:::
-
-:::{.proposition}
-If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
-:::
-
-:::{.proposition}
-Every proper ideal is contained in a maximal ideal.
-:::
-
-:::{.proof}
-Let $0 < I < R$ be a proper ideal, and consider the set
-$$
-S = \theset{J \suchthat I   \subseteq J < R}
-.$$
-
-Note $I\in S$, so $S$ is nonempty.
-The claim is that $S$ contains a maximal element $M$.
-
-$S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
-
-Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat{C} = \union_i C_i$.
-
-**$\hat{C}$ is an upper bound for $C$:**
-This follows because every $C_i \subseteq \hat{C}$.
-
-**$\hat{C}$ is in $S$:**
-Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
-:::
-
-:::{.example title="An irreducible element that is not prime."}
-$3\in \ZZ[\sqrt{-5}]$. 
-Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
-:::
-
-:::{.example}
-Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
-:::
+## Structure Theorems
 
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
@@ -267,4 +211,61 @@ If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \
 :::{.corollary}
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 :::
+
+
+## Zorn's Lemma
+
+:::{.theorem title="Zorn's Lemma"}
+If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
+:::
+
+:::{.proposition}
+Fields are simple rings. 
+:::
+
+:::{.proposition}
+If $I\normal R$ is a proper ideal $\iff I$ contains no units.
+:::
+
+:::{.proof}
+$r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
+:::
+
+:::{.proposition}
+If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
+:::
+
+:::{.proposition}
+Every proper ideal is contained in a maximal ideal.
+:::
+
+:::{.proof}
+Let $0 < I < R$ be a proper ideal, and consider the set
+$$
+S = \theset{J \suchthat I   \subseteq J < R}
+.$$
+
+Note $I\in S$, so $S$ is nonempty.
+The claim is that $S$ contains a maximal element $M$.
+
+$S$ is a poset, ordered by set inclusion, so if we can show that every chain has an upper bound, we can apply Zorn's lemma to produce $M$.
+
+Let $C \subseteq S$ be a chain in $S$, so $C = \theset{C_1 \subseteq C_2 \subseteq \cdots}$ and define $\hat{C} = \union_i C_i$.
+
+**$\hat{C}$ is an upper bound for $C$:**
+This follows because every $C_i \subseteq \hat{C}$.
+
+**$\hat{C}$ is in $S$:**
+Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
+:::
+
+:::{.example title="An irreducible element that is not prime."}
+$3\in \ZZ[\sqrt{-5}]$. 
+Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::
+
+:::{.example}
+Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+:::
+
 
