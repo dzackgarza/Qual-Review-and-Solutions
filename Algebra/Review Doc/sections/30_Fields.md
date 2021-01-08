@@ -210,6 +210,7 @@ $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
 $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
 
 
+
 \begin{tikzcd}
 	&& {E_1 E_2} \\
 	\\
@@ -219,12 +220,12 @@ $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect
 	\\
 	&& {k}
 	\arrow["{\text{normal}}", from=3-5, to=7-3]
-	\arrow[from=4-3, to=7-3, dashed, no head]
+	\arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
 	\arrow["{\text{normal}}"', from=3-1, to=7-3]
 	\arrow[from=1-3, to=3-1, no head]
 	\arrow[from=1-3, to=3-5, no head]
 	\arrow[from=1-3, to=4-3, no head]
-	\arrow[from=1-3, to=7-3, curve={height=18pt}, dashed, no head]
+	\arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
 	\arrow[from=3-1, to=4-3, no head]
 	\arrow[from=4-3, to=3-5, no head]
 \end{tikzcd}
@@ -248,7 +249,8 @@ k
 :::{.proposition title="?"}
 If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
 \begin{tikzcd}
-L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
+L \arrow[d, dotted, bend right=49, "\text{separable}"'] 
+  \arrow[dd, bend left=49, "\text{algebraic}"] \\
 F \arrow[d, bend right=49]                                  \\
 k
 \end{tikzcd}
