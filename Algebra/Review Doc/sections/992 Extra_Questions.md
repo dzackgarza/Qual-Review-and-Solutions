@@ -846,12 +846,10 @@ What is an irreducible variety?
 Give an example of a non-irreducible one.
 
 ### Question 6.28
-What are the prime ideals and maximal ideals of Z[x]?
+What are the prime ideals and maximal ideals of $\ZZ[x]$?
 
 ### Question 6.29
-Is the map 
 \todo[inline]{Missing}
-an isomorphism?
 
 ### Question 6.30
 Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size.
