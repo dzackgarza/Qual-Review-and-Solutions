@@ -853,7 +853,7 @@ What are the prime ideals and maximal ideals of $\ZZ[x]$?
 
 ### Question 6.30
 Describe the left, right, and two-sided ideals in the ring of square matrices of a fixed size.
-Now identify the matrix algebra Mn(K) with $EndK(V )$ where V is an $n$- dimensional K-vector space.
+Now identify the matrix algebra $\Mat(n \cross n, K)$ with $\Endo_K(V )$ where $V$ is an $n\dash$dimensional K-vector space.
 Try to geometrically describe the simple left ideals and also the simple right ideals via that identification.
 
 ### Question 6.31
