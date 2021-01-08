@@ -115,8 +115,11 @@ with each \( M_j \) simple.
 A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
 
+
+### Commutative Algebra 
+
 :::{.definition title="Primary Ideal"}
-An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
+An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
 
 :::{.definition title="Nilradical"}
@@ -129,9 +132,6 @@ The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal id
 \jacobsonrad(R) = \intersect\theset{\mfm \suchthat \mfm \in \maxspec(R) }
 .\]
 :::
-
-
-### Toward Number Theory and Algebraic Geometry
 
 :::{.definition title="Reduced Ring"}
 A ring $R$ is **reduced** if $R$ contains no nonzero nilpotent elements. 
