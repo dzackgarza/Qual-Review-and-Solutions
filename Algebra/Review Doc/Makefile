@@ -77,6 +77,7 @@ reset: clean
 	@rm $(FILENAME).html -f || true;
 	@rm $(FILENAME).pdf -f || true;
 	@rm ./build.log ./sections/build.log -f || true;
+	echo "Cleaned";
 
 .PHONY: clean
 
