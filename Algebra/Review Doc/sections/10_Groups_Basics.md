@@ -55,12 +55,6 @@
 
 
 
-:::{.theorem title="Chinese Remainder Theorem"}
-\[
-\gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
-.\]
-:::
-
 
 
 ## Definitions
@@ -198,6 +192,7 @@ A_4 =
 - $A_{n\geq 5}$ is *simple*.
 
 :::
+
 
 
 ## Counting Theorems
