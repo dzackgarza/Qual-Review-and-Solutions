@@ -858,11 +858,11 @@ Try to geometrically describe the simple left ideals and also the simple right i
 
 ### Question 6.31
 Give examples of maximal ideals in $K = R \times R \times R \times \cdots$, the product of countably many copies of R.
-What about for a product of countably many copies of an arbitrary commutative ring R?
+What about for a product of countably many copies of an arbitrary commutative ring $R$?
 
 ### Question 6.32
-Consider a commutative ring, R, and a maximal ideal, I, what can you say about the structure of R/I?
-What if I were prime?
+Consider a commutative ring, $R$, and a maximal ideal $I$, what can you say about the structure of $R/I$?
+What if $I$ were prime?
 
 ### Question 6.33
 Define “Noetherian ring”. give an example.
