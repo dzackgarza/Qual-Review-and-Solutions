@@ -747,8 +747,8 @@ Is $k[x]$ a PID?
 Why?
 
 ### Question 6.3
-Is C[x, y] a PID?
-Is (cid:104)x, y(cid:105) a prime ideal in it?
+Is $\CC[x, y]$ a PID?
+What are the prime ideals in it?
 
 ### Question 6.4
 Do polynomials in several variables form a PID?
