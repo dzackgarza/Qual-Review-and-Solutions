@@ -30,10 +30,12 @@ on $A$ by conjugation and construct a homomorphism
 $\varphi: G/A \to \mathrm{Aut}(A)$.
 :::
 
-::: {.problem title="Hungerford 2.4.9). Let $Z(G"}
-be the center of $G$. Showthat if $G/Z(G)$ is cyclic, then $G$ is abelian.
+::: {.problem title="Hungerford 2.4.9)."} 
+Let $Z(G)$ be the center of $G$. 
+Show that if $G/Z(G)$ is cyclic, then $G$ is abelian.
 
-*Note that Hungerford uses the notation $C(G)$ for the center.*
+> *Note that Hungerford uses the notation $C(G)$ for the center.*
+
 :::
 
 ::: {.problem title="Hungerford 2.5.6"}
@@ -42,7 +44,7 @@ contained in every Sylow $p$-subgroup of $G$.
 :::
 
 ::: {.problem title="Hungerford 2.5.9"}
-Let $\left| G \right| = p^n q$ forsome primes $p > q$. Show that $G$ contains a unique normal subgroup of
+Let $\left| G \right| = p^n q$ for some primes $p > q$. Show that $G$ contains a unique normal subgroup of
 index $q$.
 :::
 
