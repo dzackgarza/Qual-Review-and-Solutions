@@ -21,45 +21,61 @@ Fix some notation:
 \chi_A(x): \quad & \text{The characteristic polynomial of } A
 .\end{align*}
 
-Definition
-: The *minimal polynomial* of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
 
-Definition
-: The **characteristic polynomial** of $A$ is given by
+
+:::{.definition title="?"}
+The **minimal polynomial** of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
+:::
+
+
+:::{.definition title="?"}
+The **characteristic polynomial** of $A$ is given by
 $$
 \chi_A(x) = \det(A - xI))= \det(SNF(A - xI))
 .$$
 
-Lemma
-: If $A$ is upper triangular, then $\det(A) = \prod_{i} a_{ii}$
+:::
+
+
+:::{.fact}
+If $A$ is upper triangular, then $\det(A) = \prod_{i} a_{ii}$
+:::
 
 
 
-Theorem (Cayley-Hamilton)
-: The minimal polynomial divides the characteristic polynomial, and in particular $\chi_A(A) = 0$.
+:::{.theorem title="Cayley-Hamilton"}
+The minimal polynomial divides the characteristic polynomial, and in particular $\chi_A(A) = 0$.
+:::
 
-Proof
-:   By minimality, $\min_A$ divides $\chi_A$. 
-    Every $\lambda_i$ is a root of $\min_A(x)$: 
 
-    Let $(\vector v_i, \lambda_i)$ be a nontrivial eigenpair. 
-    Then by linearity,
-    $$
-    \min_A(\lambda_i)\vector v_i = \min_A(A)\vector v_i = \vector 0
-    ,$$ 
-    which forces $\min_A(\lambda_i) = 0$.
+:::{.proof title="?"}
+By minimality, $\min_A$ divides $\chi_A$. 
+Every $\lambda_i$ is a root of $\min_A(x)$: 
+Let $(\vector v_i, \lambda_i)$ be a nontrivial eigenpair. 
+Then by linearity,
+$$
+\min_A(\lambda_i)\vector v_i = \min_A(A)\vector v_i = \vector 0
+,$$ 
+which forces $\min_A(\lambda_i) = 0$.
+:::
 
-Definition (Similar Matrices)
-: Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
 
-Definition (Equivalent Matrices)
-:   Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
+:::{.definition title="Similar Matrices"}
+Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
+:::
 
-    - They have the same rank,
 
-    - They have the same invariant factors, *and*
+:::{.definition title="Equivalent Matrices"}
+Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
 
-    - They have the same (JCF)
+- They have the same rank,
+
+- They have the same invariant factors, *and*
+
+- They have the same (JCF)
+
+:::
+
 
 ## Finding Minimal Polynomials
 
@@ -92,35 +108,41 @@ C_p \definedas
 
 Corresponds to the **Invariant Factor Decomposition** of $T$.
 
-Theorem (Structure Theorem)
-: For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
+
+:::{.theorem title="Structure Theorem"}
+For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
 \begin{align*}
 M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
 \end{align*}
 where each $a_i$ is an invariant factor.
+:::
 
-Proposition
-: Each $a_i$ corresponds
 
-Proposition (RCF Relates to Invariant Factors)
-: $RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
 
-Proof
-:   The derivation:
+:::{.proposition title="RCG Relates to Invariant Factors"}
+$RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
+:::
 
-    - Let $k[x] \actson V$ using $T$, makes $V$ into a $k[x]\dash$module. 
 
-    - $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain invariant factors $a_i$,
+:::{.proof title="?"}
+The derivation:
 
-    - Note that $T\actson V$ by multiplication by $x$
+- Let $k[x] \actson V$ using $T$, makes $V$ into a $k[x]\dash$module. 
 
-    - Write $\bar x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
+- $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain invariant factors $a_i$,
 
-    - Write $a_i(x) = \sum b_i x^i$, note that $V \to F[x]$ pushes $T\actson V$ to $T\actson k[x]$ by multiplication by $\overline x$
+- Note that $T\actson V$ by multiplication by $x$
 
-    - WRT the basis $\overline x$, $T$ then acts via the companion matrix on this summand.
+- Write $\bar x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
 
-    - Each invariant factor corresponds to a block of the RCF.
+- Write $a_i(x) = \sum b_i x^i$, note that $V \to F[x]$ pushes $T\actson V$ to $T\actson k[x]$ by multiplication by $\overline x$
+
+- WRT the basis $\overline x$, $T$ then acts via the companion matrix on this summand.
+
+- Each invariant factor corresponds to a block of the RCF.
+
+
+:::
 
 ### Jordan Canonical Form
 

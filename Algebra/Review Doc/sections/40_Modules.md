@@ -2,14 +2,25 @@
 
 ## General Modules
 
-Definition (Simple Module)
-: A module is **simple** iff it has no nontrivial proper submodules.
 
-Definition (Free Module)
-: A **free** module is a module with a basis (i.e. a spanning, linearly independent set).
+:::{.definition title="Simple Module"}
+A module is **simple** iff it has no nontrivial proper submodules.
+:::
 
-Example
-: $\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free.
+
+:::{.definition title="Free Module"}
+A **free** module is a module with a basis (i.e. a spanning, linearly independent set).
+:::
+
+
+:::{.example title="?"}
+$\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free.
+:::
+
+
+
+
+
 
 Definition (Projective Module)
 : A module $M$ is **projective** iff $M$ is a direct summand of a free module $F = M \oplus \cdots$.
