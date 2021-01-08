@@ -15,13 +15,12 @@ $S_n \cong \left\langle (12), (23\cdots n)\right\rangle$
 :::
 
 ::: {.problem title="Hungerford 2.2.1"}
-Let $G$ be a finite abelian group thatis not cyclic. Show that $G$ contains a subgroup isomorphic to
+Let $G$ be a finite abelian group that is not cyclic. Show that $G$ contains a subgroup isomorphic to
 $\mathbb{Z}_p \oplus \mathbb{Z}_p$ for some prime $p$.
 :::
 
-::: {.problem title="Hungerford 2.2.12.b.)} 
-Determine (up to isomorphism"}all
-abelian groups of order 64; do the same for order 96.
+::: {.problem title="Hungerford 2.2.12.b.)"} 
+Determine (up to isomorphism) all abelian groups of order 64; do the same for order 96.
 :::
 
 ::: {.problem title="Hungerford 2.4.1"}
@@ -51,7 +50,7 @@ index $q$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 9**. Let $G$ be a finite group and $p$ a prime number. Let
+Let $G$ be a finite group and $p$ a prime number. Let
 $X_p$ be the set of Sylow-$p$ subgroups of $G$ and $n_p$ be the
 cardinality of $X_p$. Let $\mathrm{Sym}(X)$ be the permutation group on
 the set $X_p$.
@@ -66,7 +65,7 @@ the set $X_p$.
 :::
 
 ::: {#prob:1.10 .problem}
-**Problem 10**. Let $G$ be a finite group and let $N \trianglelefteq G$,
+Let $G$ be a finite group and let $N \trianglelefteq G$,
 and let $p$ be a prime number and $Q$ a subgroup of $G$ such that
 $N \subset Q$ and $Q/N$ is a Sylow $p-$subgroup of $G/N$.
 
@@ -77,13 +76,13 @@ $N \subset Q$ and $Q/N$ is a Sylow $p-$subgroup of $G/N$.
 :::
 
 ::: {#prob:1.11 .problem}
-**Problem 11**. Let $G$ be a finite group and $H<G$ a subgroup. Let
+Let $G$ be a finite group and $H<G$ a subgroup. Let
 $n_H$ be the number of subgroups of $G$ that are conjugate to $H$. Show
 that $n_H$ divides the order of $G$.
 :::
 
 ::: {#prob:1.12 .problem}
-**Problem 12**. Let $G=S_5$, the symmetric group on 5 elements. Identify
+Let $G=S_5$, the symmetric group on 5 elements. Identify
 all conjugacy classes of elements in $G$, provide a representative from
 each class, and prove that this list is complete.
 :::
@@ -133,22 +132,22 @@ $\{ x^n \mid x \in F \}$. Show that $H_n \trianglelefteq F$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 20**. List all groups of order 14 up to isomorphism.
+List all groups of order 14 up to isomorphism.
 :::
 
 ::: {.problem}
-**Problem 21**. Let $G$ be a group of order $p^3$ for some prime $p$.
+Let $G$ be a group of order $p^3$ for some prime $p$.
 Show that either $G$ is abelian, or $\left| Z(G) \right| = p$.
 :::
 
 ::: {#prob:2.10 .problem}
-**Problem 22**. Let $p,q$ be distinct primes, and let $k$ denote the
+Let $p,q$ be distinct primes, and let $k$ denote the
 smallest positive integer such that $p$ divides $q^k - 1$. Show that no
 group of order $pq^k$ is simple.
 :::
 
 ::: {#prob:2.11 .problem}
-**Problem 23**. Show that $S_4$ is a solvable, nonabelian group.
+Show that $S_4$ is a solvable, nonabelian group.
 :::
 
 ## Problem Set Three
@@ -203,7 +202,7 @@ not as fields.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 31**. Let $R$ and $S$ be commutative rings with multiplicative
+Let $R$ and $S$ be commutative rings with multiplicative
 identity.
 
 1.  Prove that when $R$ is a field, every non-zero ring homomorphism
@@ -214,13 +213,13 @@ identity.
 :::
 
 ::: {.problem}
-**Problem 32**. Determine for which integers the ring
+Determine for which integers the ring
 $\mathbb{Z}/n\mathbb{Z}$ is a direct sum of fields. Carefully prove your
 answer.
 :::
 
 ::: {.problem}
-**Problem 33**. Suppose that $R$ is a commutative ring. Show that an
+Suppose that $R$ is a commutative ring. Show that an
 element $r\in R$ is not invertible iff it is contained in a maximal
 ideal.
 :::
@@ -232,7 +231,8 @@ ideal.
 
 2.  Show that every group $G$ of order 36 is solvable.
 
-    *Hint: You may assume that $S^4$ is solvable.*
+> Hint: You may assume that $S^4$ is solvable.
+
 :::
 
 ## Problem Set Four
@@ -247,8 +247,12 @@ $K$, then $E$ is an algebraic closure of $K$.
 ::: {.problem title="Hungerford 5.3.8"}
 Show that no finite field is algebraically closed.
 
-Hint: if $K = \{a_i\}_{i=0}^n$, consider
-$$f(x) = a_1 + \prod_{i=0}^n (x - a_i) \in K[x]$$ where $a_1 \neq 0$.
+> Hint: if $K = \{a_i\}_{i=0}^n$, consider
+\[ 
+f(x) = a_1 + \prod_{i=0}^n (x - a_i) \in K[x]
+\] 
+  where $a_1 \neq 0$.
+
 :::
 
 ::: {.problem title="Hungerford 5.5.2"}
@@ -277,7 +281,7 @@ $K$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 42**. Suppose that $\alpha$ is a root in $\mathbb C$ of
+Suppose that $\alpha$ is a root in $\mathbb C$ of
 $P(x) = x^{17} - 2$. How many field homomorphisms are there from
 $\mathbb Q (\alpha)$ to:
 
@@ -289,7 +293,7 @@ $\mathbb Q (\alpha)$ to:
 :::
 
 ::: {.problem}
-**Problem 43**. Let $C/F$ be an algebraic field extension. Prove that
+Let $C/F$ be an algebraic field extension. Prove that
 the following are equivalent:
 
 1.  Every non-constant polynomial $f\in F[x]$ factors into linear
@@ -299,11 +303,12 @@ the following are equivalent:
     is a ring homomorphism $\alpha: E \to C$ such that $\alpha \mid_F$
     is the identity on $F$.
 
-    Hint: use Zorn's Lemma.
+> Hint: use Zorn's Lemma.
+
 :::
 
 ::: {.problem}
-**Problem 44**. Let $R$ be a commutative ring containing a field $k$,
+Let $R$ be a commutative ring containing a field $k$,
 and suppose that $\dim_k R < \infty$. Let $\alpha \in R$.
 
 1.  Show that there exist $n\in \mathbb N$ and
@@ -380,13 +385,13 @@ separable.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 51**. Let $E/F$ be a Galois field extension, and let $K/F$ be
+Let $E/F$ be a Galois field extension, and let $K/F$ be
 an intermediate field of $E/F$. Show that $K$ is normal over $F$ iff
 $\mathrm{Gal}(E/K) \trianglelefteq \mathrm{Gal}(E/F)$.
 :::
 
 ::: {.problem}
-**Problem 52**. Let $F \subset L$ be fields such that $L/F$ is a Galois
+Let $F \subset L$ be fields such that $L/F$ is a Galois
 field extension with Galois group equal to
 $D_8 = \left< \sigma,\tau \mid \sigma^4 = \tau^2 = 1,~ \sigma\tau = \tau \sigma^3 \right>$.
 Show that there are fields $F \subset E \subset K \subset L$ such that
@@ -394,7 +399,7 @@ $E/F$ and $K/E$ are Galois field extensions, but $K/F$ is not Galois.
 :::
 
 ::: {.problem}
-**Problem 53**. Let $f(x) = x^3 - 7$.
+Let $f(x) = x^3 - 7$.
 
 1.  Let $K$ be the splitting field for $f$ over $\mathbb Q$. Describe
     the Galois group of $K / \mathbb Q$ and the intermediate fields
@@ -473,7 +478,7 @@ $f$ in $F$. Then,
 :::
 
 ::: {.problem}
-**Problem 61**. Let $F$ be a field and let $f(x)\in F[x]$.
+Let $F$ be a field and let $f(x)\in F[x]$.
 
 1.  Define what is a splitting field of $f(x)$ over $F$.
 
@@ -486,7 +491,7 @@ $f$ in $F$. Then,
 :::
 
 ::: {.problem}
-**Problem 62**. Let $K \subset L \subset M$ be a tower of finite degree
+Let $K \subset L \subset M$ be a tower of finite degree
 field extensions. In each of the following parts, either prove the
 assertion or give a counterexample (with justification).
 
@@ -587,7 +592,7 @@ $$\mathrm{rank}(F_1 \oplus F_2) = \mathrm{rank} F_1 + \mathrm{rank} F_2.$$
 ### Qual Problems
 
 ::: {.problem}
-**Problem 70**. Let $F$ be a field and let $f(x) \in F[x]$.
+Let $F$ be a field and let $f(x) \in F[x]$.
 
 1.  State the definition of a splitting field of $f(x)$ over $F$.
 
@@ -600,7 +605,7 @@ $$\mathrm{rank}(F_1 \oplus F_2) = \mathrm{rank} F_1 + \mathrm{rank} F_2.$$
 :::
 
 ::: {.problem}
-**Problem 71**. Let $R$ be a commutative ring and let $M$ be an
+Let $R$ be a commutative ring and let $M$ be an
 $R$-module. Recall that for $\mu \in M$, the *annihilator* of $\mu$ is
 the set $$\mathrm{Ann}(\mu) = \{ r\in R \mid r\mu = 0\}.$$
 
@@ -612,7 +617,7 @@ Prove that $I$ is a *prime* ideal in $R$.
 :::
 
 ::: {.problem}
-**Problem 72**. Suppose that $R$ is a principal ideal domain and
+Suppose that $R$ is a principal ideal domain and
 $I \trianglelefteq R$ is an ideal. If $a\in I$ is an irreducible
 element, show that $I = Ra$.
 :::
@@ -680,7 +685,7 @@ $\mathrm{gcd}(r, s)$ and $\mathrm{lcm}(r, s)$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 80**. Let $R$ be a PID. Let $n > 0$ and $A \in M_n(R)$ be a
+Let $R$ be a PID. Let $n > 0$ and $A \in M_n(R)$ be a
 square $n\times n$ matrix with coefficients in $R$.
 
 Consider the $R$-module $M \coloneqq R^n / \mathrm{im}(A)$.
@@ -709,7 +714,7 @@ Consider the $R$-module $M \coloneqq R^n / \mathrm{im}(A)$.
 :::
 
 ::: {.problem}
-**Problem 82**. Let $R$ be a commutative ring and $M$ an $R-$module.
+Let $R$ be a commutative ring and $M$ an $R-$module.
 
 1.  Define what a torsion element of $M$ is .
 
@@ -731,8 +736,7 @@ Consider the $R$-module $M \coloneqq R^n / \mathrm{im}(A)$.
 1.  Show that the center of the ring $M_n(R)$ consists of matrices of
     the form $rI_n$ where $r$ is in the center of $R$.
 
-    *Hint: Every such matrix must commute with $\epsilon_{ij}$, the
-    matrix with $1_R$ in the $i,j$ position and zeros elsewhere.*
+  > Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.
 
 2.  Show that $Z(M_n(R)) \cong Z(R)$.
 :::
@@ -810,7 +814,7 @@ of all $n\times m$ matrices over $R$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 89**. Let $R$ be a commutative ring.
+Let $R$ be a commutative ring.
 
 1.  Say what it means for $R$ to be a unique factorization domain (UFD).
 
@@ -821,7 +825,7 @@ of all $n\times m$ matrices over $R$.
 :::
 
 ::: {.problem}
-**Problem 90**. Let $A$ be an $n\times n$ matrix over a field $F$ such
+Let $A$ be an $n\times n$ matrix over a field $F$ such
 that $A$ is diagonalizable. Prove that the following are equivalent:
 
 1.  There is a vector $v\in F^n$ such that $v, Av, \cdots A^{n-1}v$ is a
@@ -831,7 +835,7 @@ that $A$ is diagonalizable. Prove that the following are equivalent:
 :::
 
 ::: {.problem}
-**Problem 91**. Let $x,y \in \mathbb{C}$ and consider the matrix
+Let $x,y \in \mathbb{C}$ and consider the matrix
 
 $$M =
 \left[\begin{array}{ccc}
@@ -912,7 +916,7 @@ $p_\phi(\phi) = 0$.
 ### Qual Problems
 
 ::: {.problem}
-**Problem 99**. Let $M \in M_5(R)$ be a $5\times 5$ square matrix with
+Let $M \in M_5(R)$ be a $5\times 5$ square matrix with
 real coefficients defining a linear map $L: \Bbb{R}^5 \to \Bbb R^5$.
 Assume that when considered as an element of $M_5(\Bbb C)$, then the
 scalars $0, 1+i, 1+2i$ are eigenvalues of $M$.
@@ -929,13 +933,13 @@ scalars $0, 1+i, 1+2i$ are eigenvalues of $M$.
 :::
 
 ::: {.problem}
-**Problem 100**. Let $n$ be a positive integer and let $B$ denote the
+Let $n$ be a positive integer and let $B$ denote the
 $n\times n$ matrix over $\Bbb C$ such that every entry is 1. Find the
 Jordan normal form of $B$.
 :::
 
 ::: {.problem}
-**Problem 101**. Suppose that $V$ is a 6-dimensional vector space and
+Suppose that $V$ is a 6-dimensional vector space and
 that $T$ is a linear transformation on $V$ such that $T^6 = 0$ and
 $T^5\neq 0$.
 
