@@ -1,5 +1,5 @@
 SHELL:=/bin/zsh
-FILENAME="Algebra_Qual_Notes"
+FILENAME="AlgebraQualNotes"
 
 ## WARNING: "reset" wipes out this directory!
 TEMP_DIR="/tmp/"
