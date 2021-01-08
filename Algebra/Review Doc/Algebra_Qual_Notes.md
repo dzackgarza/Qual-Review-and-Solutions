@@ -687,12 +687,9 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 # Group Theory
 
-- $2^X$ denotes the powerset of $X$.
-- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 
 ## Big List of Notation
-
 
 
 +--------------------------------------+------------------------------------------------------------------------------------------------------------------+
@@ -701,53 +698,53 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 | $C_G(x)$                             | Centralizer of an element \ |
 |                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1} \subseteq \Gamma \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
-| $C_G(H)$                             | Centralizer of an element \ |
+| $C_G(H)$                             | Centralizer of an subgroup \ |
 |                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 | $C(H)$                               | Conjugacy Class  \ |
-|                                      | \( \da \ts{g\in \Gamma \st [g, x] = 1\,\, \forall h\in H} = \Intersect_{h\in H} C_H(h) \subseteq G \) \ |
+|                                      | \( \da \ts{ ghg ^{-1} \st g\in G} \leq G \subseteq G \) \ |
++--------------------------------------+---------------------------------------------------------------------------------------+
+| \( Z(G) \)                           | Center \ |
+|                                      | \( \da \ts{ x\in G \st \forall g\in G,\, gxg ^{-1} = x } \subseteq G \)		|
++--------------------------------------+---------------------------------------------------------------------------------------+
+| \( N_G(H) \)                         | Normalizer \ |
+|                                      | \( \da \ts{ g\in G \st gHg ^{-1} = H } \subseteq G \)		|
++--------------------------------------+---------------------------------------------------------------------------------------+
+| \( \mathrm{Inn}(G) \)                | Inner Automorphisms \ |
+|                                      | \( \da \ts{ \varphi _g(x) \da gxg ^{-1} } \subseteq \Aut(G) \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+| \( \mathrm{Out}(G) \)                | Outer Automorphisms \ |
+|                                      | \( \Aut(G) / \Inn(G) \mapsfrom \Aut(G) \) |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( [g h] \)                         |  Commutator of Elements  \ |
+|                                      |  \( \da ghg ^{-1} \in G \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( [G H] \)                         |  Commutator of Subgroups  \ |
+|                                      |  \( \da \gens{ \ts{ [gh] \st g \in G,\, h \in H } } \leq G \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( \OO_x,\, Gx \)                   |  Orbit of an Element  \ |
+|                                      |  \( \da \ts{ gx \st  x \in X} \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( \mathrm{Stab}_G(x),\, G_x \)     |  Stabilizer of an Element \ |
+|                                      |  \( \da \ts{ g \in G \st gx = x } \subseteq G \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( X/G \)                           |  Set of Orbits  \ |
+|                                      |  \( \da \ts{ G_x \st x \in X } \subseteq 2^X \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( X^g \)                           |  Fixed Points  \ |
+|                                      |  \( \ts{x \in X \st \forall g \in G,\, gx = x} \subseteq X \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( 2^X \)                           |  The powerset of \( X \)   \ |
+|                                      |  \( \da \ts{ U \subseteq X }  \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 
-<!--|                                      | \( \da \ts{ ghg ^{-1} \st g\in G} \leq G  \)		\ |-->
+- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
-\[
-C_G(x) 			=                                               && \theset{g\in G \suchthat [g, x] = 1}                                          && \subseteq G       &&
-\parbox{7em}{\small\centering Centralizer \\ (Element)} \\
-C_G(H) 			=                                               && \theset{g\in G \mid [g, h] = 1 ~\forall h\in H} = \intersect_{h \in H} C_G(h) && \leq G            &&
-\parbox{7em}{\small\centering Centralizer \\ (Subgroup)} \\
-C(h) 		=                                                   && \theset{ghg^{-1} \mid g\in G}                                                 && \subseteq G       &&
-\text{Conjugacy Class} \\
-Z(G) 			=                                                 && \theset{x\in G \mid \forall g\in G,~ gxg^{-1} = x}                            && \subseteq G       &&
-\text{Center} \\
-N_G(H) 			=                                               && \theset{g\in G \mid gHg^{-1} = H}                                             && \subseteq G       &&
-\text{Normalizer} \\
-\mathrm{Inn}(G) =                                           && \theset{\phi_g(x) = gxg^{-1} }                                                && \subseteq \Aut(G) &&
-\text{Inner Aut.} \\
-\mathrm{Out}(G) =                                           && \Aut(G) / \mathrm{Inn}(G)                                                     && \injects \Aut(G)  &&
-\text{Outer Aut.} \\
-[g, h] =                                                    && ghgh\inv                                                                      && \in G             &&
-\parbox{7em}{\small\centering Commutator \\ (Element)} \\
-[G, H] =                                                    && \left\langle \theset{[g,h] \suchthat g\in G, h\in H} \right\rangle            && \leq G            &&
-\parbox{7em}{\small\centering Commutator \\ (Subgroup)} \\
-\cline{1-6}
-\OO_x\txt{or} G\cdot x 			=                               && \theset{g.x \mid x\in X}                                                      && \subseteq X       &&
-\text{Orbit} \\
-\stab_G(x)\txt{or}  G_x 			=                             && \theset{g\in G \mid g.x = x}                                                  && \subseteq G       &&
-\text{Stabilizer} \\
-X/G =                                                       && \theset{G_x \suchthat x\in X}                                                 && \subseteq 2^X     &&
-\text{Set of Orbits} \\
-X^{g} =                                                     && \theset{x\in X \suchthat \forall g\in G,~ g.x = x}                            && \subseteq X       &&
-\text{Fixed Points} \\
-\]
 
-Some useful facts:
 
-- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 
-- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
 
----
-
+## Definitions
 
 :::{.definition title="Subgroup Generated by a Subset"}
 If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
@@ -755,7 +752,6 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
 \]
 :::
-
 
 :::{.definition title="Centralizer"}
 \[
@@ -769,8 +765,46 @@ N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \no
 \]
 :::
 
+
+:::{.definition title="The Dihedral Group"}
+A **dihedral group** of order $2n$ is given by 
+\[
+D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
+\]
+
+
+:::{.definition title="Alternating Group"}
+The **alternating group** is the subgroup of **even** permutations, i.e.
+\[
+A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
+\] 
+where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
+:::
+
+:::{.definition title="The Quaternion Group"}
+The **Quaternion group** of order 8 is given by
+\[
+Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
+  &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
+\]
+:::
+
+:::{.definition title="Transitive Subgroup"}
+A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
+:::
+
+
+## Subgroups and Quotients
+
+
+:::{.fact }
+Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+:::
+
 :::{.theorem title="The Fundamental Theorem of Cosets"}
-$aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset$
+\[
+aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset
+.\]
 :::
 
 :::{.theorem title="Counting Quotients"}
@@ -786,22 +820,19 @@ If $H\normal G$, then
 .\]
 :::
 
-:::{.definition title="The Quaternion Group"}
-The *Quaternion group* of order 8 is given by
-\[
-Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
-  &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
-\]
+
 :::
 
-:::{.definition title="The Dihedral Group"}
-A *dihedral group* of order $2n$ is given by 
-\[
-D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
-\]
+## Special Classes of Groups
+
+### Cyclic Groups
+
+:::{.theorem title="Subgroups of Cyclic Groups"}
+If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
 :::
 
-## The Symmetric Group
+
+### The Symmetric Group
 
 :::{.definition title="Parity of a Cycle"}
 
@@ -815,14 +846,6 @@ D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 
 :::
 
-
-:::{.definition title="Alternating Group"}
-The **alternating group** is the subgroup of **even** permutations, i.e.
-\[
-A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
-\] 
-where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
-:::
 
 :::{.corollary title="Alternating Group"}
 Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
@@ -846,18 +869,20 @@ A_4 =
 \]
 :::
 
-:::{.definition title="Transitive Subgroup"}
-A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
-:::
 
 
-Useful Facts:
+:::{.fact title="Some useful facts"}
+\envlist
 
 - $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 - Conjugacy classes are determined by cycle type
 - The order of a cycle is its length.
 - The order of an element is the least common multiple of the sizes of its cycles.
 - $A_{n\geq 5}$ is *simple*.
+
+:::
+
+
 
 ## Counting Theorems
 
@@ -872,7 +897,7 @@ The order of every element divides the size of $G$, i.e.
   .$$
 :::
 
-:::{.warning}
+:::{.warnings}
 There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
 Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
 :::
@@ -892,97 +917,141 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 An action of $G$ on $X$ is a group morphism
 \[
 \phi:G \times X &\rightarrow X \\ 
-(g,x) &\mapsto g\cdot x
+(g,x) &\mapsto g x
 \]
 or equivalently
 \[
 \phi: G &\to \Aut(X) \\
-g \mapsto (x \mapsto \phi_g (x) \definedas g\cdot x)
+g &\mapsto (x \mapsto \phi_g (x) \definedas g\cdot x)
 \]
 satisfying
 
 1. $e\cdot x = x$
 2. $g\cdot (h\cdot x) = (gh)\cdot x$
 :::
-  
-Useful fact:
+
+:::{.fact}
 $\ker \psi = \intersect_{x\in X} G_x$ is the intersection of all stabilizers.
+:::
 
 :::{.definition title="Transitive Group Action"}
 A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
 Equivalently, the action has a single orbit.
 :::
- 
-> Reminder of notation: for a group $G$ acting on a set $X$,
-> 
-> - $G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X$ is the orbit
->
-> - $G_x = \theset{g\in G \suchthat g\cdot x = x} \subseteq G$ is the stabilizer
->
-> - $X/G \subset 2^X$ is the set of orbits
->
-> - $X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X$ are the fixed points
 
+
+:::{.remark title="Reminder of notation"}
+For a group $G$ acting on a set $X$,
+
++-----------------------------------------------------------------+---------------+
+|  Notation                                                       |  Definition   |
++=================================================================+===============+
+| \( G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  Orbit        |
++-----------------------------------------------------------------+---------------+
+| \(G_x = \ts{ g \in G \st gx=x } \leq G \)                       | Stabilizer    |
++-----------------------------------------------------------------+---------------+
+| \( X/G \subseteq 2^X \)                                         | Set of Orbits |
++-----------------------------------------------------------------+---------------+
+| \( X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X \)  | Fixed Points  |
++-----------------------------------------------------------------+---------------+
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
+:::
+
+
 
 :::{.theorem title="Orbit-Stabilizer"}
-$$
-\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
-$$
-:::
+
+\[\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
+.\]
 
 > Mnemonic: $G/G_x \cong G\cdot x$.
 
-### Examples of Orbit-Stabilizer
-
-1. Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
-  - The orbit $G\cdot x = G$ is the entire group
-  
-  - The stabilizer $G_x$ is only the identity.
-  
-  - The fixed points $X^g$ are only the identity.
-
-2. Let $G$ act on *itself* by conjugation.
-  - $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
-
-  - $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
-
-  - $G^g$ (the fixed points) is the **center** $Z(G)$.
-
-:::{.corollary}
-The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
 :::
 
-### The Class Equation
 
+### Examples of Orbit-Stabilizer and the Class Equation
+
+:::{.example title="Trivial"}
+Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
+
+- The orbit $\OO_x = Gx = G$ is the entire group
+
+- The stabilizer \( G_x = \ts{ e } \) is only the identity.
+
+- The set of fixed points \( X^g = \ts{ e } \) is only the identity.
+
+:::
+
+
+:::{.example title="Conjugation yields centers/centralizers"}
+Let $G$ act on *itself* by conjugation.
+
+- The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
+  - Note that this means this action is not necessarily transitive.
+
+- $G_x = Z(x) \definedas C_G(x) = \theset{g \in G\suchthat [g, x] = e}$, the **centralizer** of $x$.
+
+- The set of fixed points $X^g = Z(G)$ is the **center**.
+
+:::
+
+
+:::{.corollary}
+The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$, i.e.
+\[
+\abs{C(x)} = [G: C_G(x)]
+.\]
+
+:::
+
+
+:::{.corollary title="The Class Equation"}
 \[
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
 \]
-
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-
-**Examples**
-
-1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
-
-  - $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
-
-  - $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
-
-  - $X^g$ is the set of **normal subgroups** of $G$
-
-:::{.corollary}
-Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
 :::
 
-2. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
+:::{.remark}
+Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
+:::
 
-  - $G\cdot gH = G/H$, i.e. this is a *transitive* action.
+:::{.example title="?"}
+Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
+Let $x = H$ be a subgroup, then
 
-  - $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
+- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
 
-  - $(G/H)^G = \emptyset$
+- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
+
+- The fixed points $X^g$ is the set of **normal subgroups** of $G$
+
+:::
+
+:::{.corollary}
+Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
+\[
+\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
+.\]
+
+:::
+
+
+:::{.example title="?"}
+For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
+Let $x \da gH$, then
+
+- The orbit $Gx = G/H$, the entire set of cosets.
+
+  - Note that this is a *transitive* action.
+
+- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+
+- The fixed points are $X^G = \emptyset$
+
+:::
+
+
 
 :::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
@@ -992,141 +1061,29 @@ If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 :::
 
-:::{.theorem title="Burnside's Formula"}
-Slogan: the number of orbits is equal to the average number of fixed points, i.e.
+:::{.corollary title="Burnside's Formula"}
+For $G$ a finite group acting on $X$, 
 \[
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
+
+> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+
 :::
 
-:::{.theorem title="Subgroups of Cyclic Groups"}
-If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
-:::
 
-
-
-## Sylow Theorems
-
-:::{.definition}
-A $p\dash$group is a group $G$ such that every element is order $p^k$ for some $k$.
-  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
-:::
-
-Write
-
-
-- $\abs{G} = p^k m$ where $(p, m) = 1$,
-- $S_p$ a Sylow$\dash p$ subgroup, and
-- $n_p$ the number of Sylow$\dash p$ subgroups.
-
-
-
-### Sylow 1 (Cauchy for Prime Powers)
-
+:::{.proof title="?"}
 \[
-\forall p^n \text{ dividing } \abs{G} \text{ there exists a subgroup of size } p^n
-\]
-
-Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
-
-> If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
-> In particular, Sylow $p\dash$subgroups always exist.
-
-### Sylow 2 (Sylows are Conjugate)
-
-All sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
-\[
-S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
-\]
-
-:::{.corollary}
-$n_p = 1 \iff S_p \normal G$
-:::
-
-### Sylow 3 (Numerical Constraints)
-
- 1. $n_p \divides m~$ (in particular, $n_p \leq m$),
-
- 2. $n_p \equiv 1 \mod p$,
-
- 3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
-
-:::{.corollary}
-$p$ does not divide $n_p$.
-:::
-
-:::{.proposition}
-Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
-:::
-:::{.proof}
-Let $H \leq G$ be a $p\dash$subgroup.
-If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
-
-Otherwise, it is contained in some $p\dash$subgroup $H^1$.
-Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
-:::
-
-## Products
-
-:::{.theorem title="Recognizing Direct Products"}
-We have $G \cong H \times K$ when
-
-- $H, K \normal G$
-
-- $G = HK$.
-
-- $H\intersect K = \theset{e} \subset G$
-
-> Note: can relax to $[h,k] = 1$ for all $h, k$.
-
-:::
-
-:::{.theorem title="Recognizing Generalized Direct Products"}
-We have $G = \prod_{i=1}^n H_i$ when
-
-- $H_i \normal G$ for all $i$.
-
-- $G = H_1 \cdots H_n$
-
-- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
-
-> Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
-
-:::
-
-:::{.theorem title="Recognizing Semidirect Products"}
-We have $G = N \semidirect_\psi H$ when
-
-- $G =  NH$
-
-- $N \normal G$
-
-- $H \actson N$ by conjugation via a map
-  \[  
-  \psi: H \to \Aut(N) \\
-  h \mapsto h(\wait)h^{-1}
-  .\]
-
-> Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
-
-:::
-
-**Useful Facts**
-
--  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
-
-- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size 
-\[  
-\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+\sum_{g\in G} \abs{X^g}
+&= \ts{ (g,x) \in G \cross X \st gx = x } \\
+&= \sum_{x\in X} \abs{G_x} \\
+&= \sum_{x\in X} {\abs{G}\over \abs{Gx}  }  && \text{by Orbit-Stabilizer} \\
+&= \abs{G} \sum_{x\in X} {1 \over \abs{Gx}  }  \\
+&= \abs{G} \sum_{A\in X/G} \sum_{x\in A} {1\over \abs{A} } && \text{ since } X = \Disjoint_{A \in X/G} A \\
+&= \abs{G} \sum_{A\in X/G} 1 \\
+&= \abs{G} \abs{X/G}  
 .\]
-  
-  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
-
-- \[ \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\] where $\varphi$ is the totient function.
-
-  - $\varphi(p^k) = p^{k-1}(p-1)$
-
-- If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.
+:::
 
 
 ## Isomorphism Theorems
@@ -1144,9 +1101,6 @@ Note: for this to make sense, we also have
 If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
 :::
 
-:::{.proposition}
-If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
-:::
 
 :::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
 If $S \leq G$ and $N \normal G$, then
@@ -1154,16 +1108,18 @@ If $S \leq G$ and $N \normal G$, then
 \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
 .\]
 
-Note: for this to make sense, we also have
+![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png){width=350px}
+
+:::
+
+
+:::{.remark}
+For this to make sense, we also have
     
 - $SN \leq G$,
 - $S\intersect N \normal S$,
-:::
 
-![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png)
-
-:::{.corollary}
-If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the 2nd Isomorphism Theorem still holds.
 :::
 
 :::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
@@ -1187,7 +1143,7 @@ Suppose $N \normal G$, then there exists a correspondence:
 \left\{
 H < G \suchthat N \subseteq H
 \right\}
-\iff
+\mapstofrom
 \left\{
 H \suchthat H < \frac G N
 \right\}
@@ -1195,7 +1151,7 @@ H \suchthat H < \frac G N
 \correspond{
   \text{Subgroups of $G$} \\
   \text{containing $N$}
-} \iff
+} \mapstofrom
 \correspond{
   \text{Subgroups of the } \\
   \text{quotient $G/N$}
@@ -1205,8 +1161,172 @@ H \suchthat H < \frac G N
 In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
 :::
 
-Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 
+:::{.fact}
+$N \normal G$ and $N \subseteq H < G \implies N \normal H$.
+:::
+
+
+
+## Products
+
+:::{.theorem title="Chinese Remainder Theorem"}
+\[
+\gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
+.\]
+:::
+
+:::{.theorem title="Recognizing Direct Products"}
+We have $G \cong H \times K$ when
+
+- $H, K \normal G$
+
+- $G = HK$.
+
+- $H\intersect K = \theset{e} \subset G$
+
+> Note: can relax to $[h,k] = 1$ for all $h, k$.
+
+:::
+
+:::{.theorem title="Recognizing Generalized Direct Products"}
+We have $G \cong \prod_{i=1}^n H_i$ when
+
+- $H_i \normal G$ for all $i$.
+
+- $G = H_1 \cdots H_n$
+
+- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
+
+> Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
+
+:::
+
+:::{.theorem title="Recognizing Semidirect Products"}
+We have $G \cong N \semidirect_\psi H$ when
+
+- $N \normal G$
+
+- $G =  NH$
+
+- $H \actson N$ by conjugation via a map
+  \[  
+  \psi: H \to \Aut(N) \\
+  h \mapsto h(\wait)h^{-1}
+  .\]
+
+> Relaxed condition: $H, N \normal G$ for direct product, or just $H\leq G$ for a semidirect product.
+
+:::
+
+:::{.proposition}
+If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
+:::
+
+
+## Automorphism Groups
+
+:::{.fact}
+\envlist
+
+-  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
+
+- $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
+\[  
+\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+.\]
+  
+  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
+
+- $\Aut(\ZZ/n\ZZ) \cong \qty{\ZZ/n\ZZ}\units \cong \ZZ/\varphi(n)\ZZ$ where $\varphi$ is the totient function.
+
+  - $\varphi(p^k) = p^{k-1}(p-1)$
+
+- If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
+
+
+:::
+
+
+
+## Sylow Theorems
+
+
+:::{.definition}
+A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
+  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
+:::
+
+Write
+
+
+- $\abs{G} = p^k m$ where $(p, m) = 1$,
+- $S_p$ a Sylow$\dash p$ subgroup, and
+- $n_p$ the number of Sylow$\dash p$ subgroups.
+
+
+
+### Sylow 1 (Cauchy for Prime Powers)
+
+
+:::{.theorem title="Sylow 1"}
+\[
+\forall p^n \text{ dividing } \abs{G} \text{, there exists a subgroup of size } p^n
+.\]
+:::
+
+Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+
+If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
+In particular, Sylow $p\dash$subgroups always exist.
+
+### Sylow 2 (Sylows are Conjugate)
+
+
+:::{.theorem title="Sylow 2"}
+All Sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
+\[
+S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
+\]
+
+:::
+
+
+:::{.corollary}
+\[
+n_p = 1 \iff S_p \normal G
+.\]
+:::
+
+### Sylow 3 (Numerical Constraints)
+
+
+:::{.theorem title="Sylow 3"}
+\envlist
+
+1. $n_p \divides m~$ (in particular, $n_p \leq m$),
+
+2. $n_p \equiv 1 \mod p$,
+
+3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
+
+:::
+
+
+
+:::{.corollary}
+$p$ does not divide $n_p$.
+:::
+
+:::{.proposition}
+Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+:::
+:::{.proof}
+Let $H \leq G$ be a $p\dash$subgroup.
+If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
+Otherwise, it is contained in some $p\dash$subgroup $H^1$.
+Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
+:::
 
 ## Special Classes of Groups
 
@@ -1231,7 +1351,7 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 - Order $p^2q$: ?
 
 
-## Finitely Generated Abelian Groups
+### Finitely Generated Abelian Groups
 
 :::{.definition title="Invariant Factor Decomposition"}
 $$
@@ -1289,16 +1409,31 @@ G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 \]
 :::
 
-**Classifying Abelian Groups of a Given Order:**
+### Classifying Abelian Groups of a Given Order
 
 
 Let $p(x)$ be the integer partition function.
 
-> Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
+
+:::{.example title="?"}
+Example: $p(6) = 11$, given by
+\[
+&[6], \\
+&[5, 1], \\
+&[4, 2], \\
+&[4, 1, 1], \\
+&[3, 3], \\
+&[3, 2, 1], \\
+&[3, 1, 1, 1], \\
+&[2, 2, 2], \\
+&[2, 2, 1, 1], \\
+&[2, 1, 1, 1, 1], \\
+&[1, 1, 1, 1, 1, 1]
+.\]
+
+:::
 
 Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
-
-
 
 
 ## Series of Groups
@@ -1334,7 +1469,6 @@ Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *
 
 > Mnemonic: "lower" because the chain is descending.
 > Iterate the adjoint map $[\wait, G]$, if this terminates then the map is nilpotent, so call $G$ nilpotent!
-
 
 :::{.definition title="Upper Central Series"}
 Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.

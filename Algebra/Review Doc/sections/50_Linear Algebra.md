@@ -1,11 +1,15 @@
-\CC,\RR, # Linear Algebra
+# Linear Algebra
 
 
-Definition (Invariant Factor)
-: ?
 
-Definition (Elementary Divisor)
-: ?
+:::{.definition title="Invariant Factor"}
+  \todo[inline]{todo}
+:::
+
+
+:::{.definition title="Elementary Divisor"}
+\todo[inline]{todo}
+:::
 
 ## Minimal / Characteristic Polynomials
 
