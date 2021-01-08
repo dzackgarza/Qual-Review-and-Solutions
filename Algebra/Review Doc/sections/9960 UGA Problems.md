@@ -871,8 +871,8 @@ Show that if $q$ is the minimal polynomial of a linear transformation $\phi: E\t
 then $\deg q \leq n$.
 :::
 
-::: {.problem title="Hungerford 7.4.8). Show that $A\in M_n(K"}
-is similar to a diagonal matrix $\iff$ the elementary divisors of $A$ are all linear.
+::: {.problem title="Hungerford 7.4.8)."} 
+Show that $A\in M_n(K)$ is similar to a diagonal matrix $\iff$ the elementary divisors of $A$ are all linear.
 :::
 
 ::: {.problem title="Hungerford 7.4.10"}
