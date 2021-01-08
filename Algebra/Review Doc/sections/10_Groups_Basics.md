@@ -51,11 +51,17 @@
 |                                      |  \( \ts{x \in X \st \forall g \in G,\, gx = x} \subseteq X \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 
-Some useful facts:
+
+:::{.fact title="Some useful facts"}
+\envlist
 
 - Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 
 - The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
+
+:::
+
+
 
 ---
 
@@ -163,13 +169,17 @@ A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n
 :::
 
 
-Useful Facts:
+:::{.fact title="Some useful facts"}
+\envlist
 
 - $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 - Conjugacy classes are determined by cycle type
 - The order of a cycle is its length.
 - The order of an element is the least common multiple of the sizes of its cycles.
 - $A_{n\geq 5}$ is *simple*.
+
+:::
+
 
 ## Counting Theorems
 
@@ -251,9 +261,11 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 \[\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
 .\]
-:::
 
 > Mnemonic: $G/G_x \cong G\cdot x$.
+
+:::
+
 
 ### Examples of Orbit-Stabilizer
 
@@ -276,9 +288,9 @@ Let $G$ act on *itself* by conjugation.
 - The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
   - Note that this means this action is not necessarily transitive.
 
-- $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
+- $G_x = Z(x) \definedas C_G(x) = \theset{g \in G\suchthat [g, x] = e}$, the **centralizer** of $x$.
 
-- The set of fixed points $X^g$ is the **center** $Z(G)$.
+- The set of fixed points $X^g = Z(G)$ is the **center**.
 
 :::
 
