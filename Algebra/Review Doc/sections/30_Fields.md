@@ -285,21 +285,13 @@ Moreover, $L/F$ is additionally separable $\iff L/k$ separable:
 	{F} \\
 	\\
 	{k}
-	\arrow["{\text{algebraic} \\ \text{separable}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
+	\arrow["\substack{\text{algebraic,} \\ \text{separable}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
 	\arrow["{\text{sep}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
 	\arrow["{\text{separable}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSBcXFxcIFxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFx0ZXh0e3NlcH0iLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3NlcGFyYWJsZX0iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
 
 :::
-
-
-\begin{tikzcd}
-L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
-F                                                           \\
-k
-\end{tikzcd}
-
 
 
 - $F/k$ Galois and $L/K$ Galois $\implies F/k$  Galois **only if** $\Gal(L/F) \normal \Gal(L/k)$
