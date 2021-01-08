@@ -1134,7 +1134,7 @@ The Jacobi identity?
 What is the adjoint representation of a Lie algebra?
 What is the commutator of two vector fields on a manifold?
 
-When is a representation of Z completely reducible?
+When is a representation of $\ZZ$ completely reducible?
 Why?
 
 Which are the indecomposable modules?
