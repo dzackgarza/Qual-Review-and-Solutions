@@ -316,12 +316,13 @@ Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x
 
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
+Let $x = H$ be a subgroup, then
 
-- $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
 
-- $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
+- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
 
-- $X^g$ is the set of **normal subgroups** of $G$
+- The fixed points $X^g$ is the set of **normal subgroups** of $G$
 
 :::
 
@@ -338,13 +339,13 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
 Let $x \da gH$, then
 
-- $Gx = G/H$, 
+- The orbit $Gx = G/H$, the entire set of cosets.
 
   - Note that this is a *transitive* action.
 
-- The orbit is $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
 
-- $X^G = \emptyset$
+- The fixed points are $X^G = \emptyset$
 
 :::
 
