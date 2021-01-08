@@ -99,7 +99,7 @@ We have $G \cong H \times K$ when
 :::
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
-We have $G = \prod_{i=1}^n H_i$ when
+We have $G \cong \prod_{i=1}^n H_i$ when
 
 - $H_i \normal G$ for all $i$.
 
@@ -112,11 +112,11 @@ We have $G = \prod_{i=1}^n H_i$ when
 :::
 
 :::{.theorem title="Recognizing Semidirect Products"}
-We have $G = N \semidirect_\psi H$ when
-
-- $G =  NH$
+We have $G \cong N \semidirect_\psi H$ when
 
 - $N \normal G$
+
+- $G =  NH$
 
 - $H \actson N$ by conjugation via a map
   \[  
@@ -124,7 +124,7 @@ We have $G = N \semidirect_\psi H$ when
   h \mapsto h(\wait)h^{-1}
   .\]
 
-> Note relaxed conditions compared to direct product: $H\normal G$ and $K\leq G$ to get a semidirect product instead
+> Note the relaxed conditions compared to *direct* product: $H\normal G$ and $K\leq G$ to get a semidirect product instead.
 
 :::
 
