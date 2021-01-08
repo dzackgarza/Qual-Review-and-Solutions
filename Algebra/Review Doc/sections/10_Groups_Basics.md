@@ -242,10 +242,10 @@ For a group $G$ acting on a set $X$,
 | \( X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X \)  | Fixed Points  |
 +-----------------------------------------------------------------+---------------+
 
+Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 :::
 
 
-Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 
 :::{.theorem title="Orbit-Stabilizer"}
 
@@ -258,19 +258,19 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 ### Examples of Orbit-Stabilizer
 
 
-:::{.example title="?"}
+:::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
 - The orbit $G\cdot x = G$ is the entire group
 
-- The stabilizer $G_x$ is only the identity.
+- The stabilizer \( G_x = \ts{ e } \) is only the identity.
 
 - The fixed points $X^g$ are only the identity.
 
 :::
 
 
-:::{.example title="?"}
+:::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
 
 - $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
