@@ -13,11 +13,18 @@ r=ab \implies a \in R\units \txt{or} b\in R\units
 
 
 :::{.definition title="Divisibility of Elements"}
-\\todo[inline]{Todo}
+An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \).
+:::
+
+:::{.definition title="Simple Ring"}
+A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
 :::
 
 :::{.definition title="Semisimple"}
-?
+A ring \( R \) is **simple** if and only if it admits a decomposition \[
+R = \bigoplus R_i
+\]
+with each \( R_i \) simple.
 :::
 
 
@@ -106,9 +113,6 @@ A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 
 An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
 
-:::{.definition title="Simple Ring"}
-A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
-:::
 
 :::{.definition title="Nilradical"}
 $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
