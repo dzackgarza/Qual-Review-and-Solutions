@@ -20,16 +20,18 @@ If $S \leq G$ and $N \normal G$, then
 \frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
 .\]
 
-Note: for this to make sense, we also have
+![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png){width=350px}
+
+:::
+
+
+:::{.remark}
+For this to make sense, we also have
     
 - $SN \leq G$,
 - $S\intersect N \normal S$,
-:::
 
-![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png){width=350px}
-
-:::{.corollary}
-If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the 2nd Isomorphism Theorem still holds.
 :::
 
 :::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
@@ -53,7 +55,7 @@ Suppose $N \normal G$, then there exists a correspondence:
 \left\{
 H < G \suchthat N \subseteq H
 \right\}
-\iff
+\mapstofrom
 \left\{
 H \suchthat H < \frac G N
 \right\}
@@ -61,7 +63,7 @@ H \suchthat H < \frac G N
 \correspond{
   \text{Subgroups of $G$} \\
   \text{containing $N$}
-} \iff
+} \mapstofrom
 \correspond{
   \text{Subgroups of the } \\
   \text{quotient $G/N$}
