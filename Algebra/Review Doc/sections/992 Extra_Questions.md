@@ -825,10 +825,10 @@ Prove that the ideal of all polynomials vanishing on the zero set of $I$ is $\sq
 
 ### Question 6.23. 
 Do you know what the radical is?
-Use the fact that the intersection of all prime ideals is the set of all nilpotent elements to prove that F [x] has an infinite number of prime ideals, where F is a field.
+Use the fact that the intersection of all prime ideals is the set of all nilpotent elements to prove that $F [x]$ has an infinite number of prime ideals, where $F$ is a field.
 
 ### Question 6.24
-What are the radical ideals in Z?
+What are the radical ideals in $\ZZ$?
 
 ### Question 6.25
 Give a prime ideal in $\kk[x, y]$.
