@@ -67,18 +67,22 @@ Let $m(x)$ denote the minimal polynomial $A$.
 
 2. Pick any $\vector v$ and compute $T\vector v, T^2\vector v, \cdots T^k\vector v$ until a linear dependence is introduced. Write this as $p(T) = 0$; then $\min_A(x) \divides p(x)$.
 
-Definition (Companion Matrix)
-:   Given a monic $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n$, the **companion matrix** of $p$ is given by
-    \begin{align*}
-    C_p \definedas 
-    \begin{bmatrix}
-    0 & 0 & \dots & 0 &-a_0 \\ 
-    1 & 0 & \dots & 0 & -a_1 \\ 
-    0 & 1 & \dots & 0 & -a_2 \\ 
-    \vdots & & \ddots & & \vdots \\ 
-    0 & 0 & \dots & 1 & -a_{n-1} 
-    \end{bmatrix}
-    .\end{align*}
+
+:::{.definition title="Companion Matrix"}
+Given a monic $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n$, the **companion matrix** of $p$ is given by
+\begin{align*}
+C_p \definedas 
+\begin{bmatrix}
+0 & 0 & \dots & 0 &-a_0 \\ 
+1 & 0 & \dots & 0 & -a_1 \\ 
+0 & 1 & \dots & 0 & -a_2 \\ 
+\vdots & & \ddots & & \vdots \\ 
+0 & 0 & \dots & 1 & -a_{n-1} 
+\end{bmatrix}
+.\end{align*}
+:::
+
+
 
 ## Canonical Forms
 
@@ -120,124 +124,160 @@ Proof
 
 Corresponds to the **Elementary Divisor Decomposition** of $T$.
 
-Lemma
-: The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 
-Lemma (JCF from Minimal and Characteristic Polynomials)
-:   Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
-    \begin{align*}
-    \min_A(x) = \prod (x- \lambda_i)^{a_i} \\
-    \chi_A(x) = \prod (x- \lambda_i)^{b_i}
-    \end{align*}
+:::{.lemma title="?"}
+The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
+:::
 
-    - The roots both polynomials are precisely the eigenvalues of $A$
 
-    - The spectrum of $A$ corresponds precisely to the **characteristic** polynomial 
-    
-    - $a_i \leq b_i$
+:::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
+Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
+\begin{align*}
+\min_A(x) = \prod (x- \lambda_i)^{a_i} \\
+\chi_A(x) = \prod (x- \lambda_i)^{b_i}
+\end{align*}
 
-    - $a_i$ is the size of the **largest** Jordan block associated to $\lambda_i$,
+- The roots both polynomials are precisely the eigenvalues of $A$
 
-    - $b_i$ is the **sum of sizes** of all Jordan blocks associated to $\lambda_i$ and the number of times $\lambda_i$ appears on the diagonal of $JCF(A)$.
+- The spectrum of $A$ corresponds precisely to the **characteristic** polynomial 
 
-    - $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
+- $a_i \leq b_i$
+
+- $a_i$ is the size of the **largest** Jordan block associated to $\lambda_i$,
+
+- $b_i$ is the **sum of sizes** of all Jordan blocks associated to $\lambda_i$ and the number of times $\lambda_i$ appears on the diagonal of $JCF(A)$.
+
+- $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
+
+:::
+
+
 
 ## Using Canonical Forms
 
-Lemma
-:   The characteristic polynomial is the *product of the invariant factors*, i.e.
-    $$
-    \chi_A(x) = \prod_{j=1}^n f_j(x)
-    .$$
 
-Lemma
-:   The minimal polynomial of $A$ is the *invariant factor of highest degree*, i.e.
-    $$
-    \min_A(x) = f_n(x)
-    .$$
+:::{.lemma title="?"}
+The characteristic polynomial is the *product of the invariant factors*, i.e.
+$$
+\chi_A(x) = \prod_{j=1}^n f_j(x)
+.$$
+:::
 
-Lemma
-:   For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
-    - The minimal polynomial is equal to the characteristic polynomial.
+:::{.lemma title="?"}
+The minimal polynomial of $A$ is the *invariant factor of highest degree*, i.e.
+$$
+\min_A(x) = f_n(x)
+.$$
+:::
 
-    - The list of invariant factors has length one.
 
-    - The Rational Canonical Form has a single block.
+:::{.proposition title="?"}
+For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
-    - The operator has a matrix similar to a companion matrix.
+- The minimal polynomial is equal to the characteristic polynomial.
 
-    - There exists a *cyclic vector* $\vector v$ such that $\spanof_k\theset{T^j \vector v \suchthat j = 1, 2, \cdots} = V.$
+- The list of invariant factors has length one.
 
-    - $T$ has $\dim V$ distinct eigenvalues
+- The Rational Canonical Form has a single block.
+
+- The operator has a matrix similar to a companion matrix.
+
+- There exists a *cyclic vector* $\vector v$ such that $\spanof_k\theset{T^j \vector v \suchthat j = 1, 2, \cdots} = V.$
+
+- $T$ has $\dim V$ distinct eigenvalues
+
+:::
+
+
 
 ## Diagonalizability
 
 *Notation:*
 $A^*$ denotes the conjugate tranpose of $A$.
 
-Lemma
-:   Let $V$ be a vector space over $k$ an algebraically closed and $A \in \mathrm{End}(V)$.
-    Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$ has an eigenvector in $W$.
-
-Theorem (The Spectral Theorem)
-:   Statements:
-
-    1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
-    2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
-
-Proof
-:   \hfill
-
-    - Suppose $A$ is Hermitian.
-    - Since $V$ itself is an invariant subspace, $A$ has an eigenvector $\vector v_1 \in V$.
-    - Let $W_1 = \spanof_k\theset{\vector v_1}^\perp$.
-    - Then for any $\vector w_1 \in W_1$, 
-    $$
-    \inner{\vector v_1}{ A \vector w_1} =
-    \inner{A \vector v_1}{\vector w_1} =
-    \lambda \inner{\vector v_1}{\vector w_1} = 0,
-    $$
-    so $A(W_1) \subseteq W_1$ is an invariant subspace, etc.
-
-    - Suppose now that $A$ is symmetric.
-    - Then there is an eigenvector of norm 1, $\vector v \in V$.
-    \begin{align*}
-    \lambda = \lambda\inner{\vector v}{\vector v} = \inner{A\vector v}{\vector v} = \inner{\vector v}{A\vector v} = \overline{\lambda} \implies \lambda \in \RR
-    .\end{align*}
 
 
-Proposition (Simultaneous Diagonalizability)
-:   A set of operators $\theset{A_i}$ pairwise commute $\iff$ they are all simultaneously diagonalizable.
+:::{.lemma title="?"}
+Let $V$ be a vector space over $k$ an algebraically closed and $A \in \mathrm{End}(V)$.
+Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$ has an eigenvector in $W$.
+:::
 
 
-Proof
-:   By induction on number of operators
 
-    - $A_n$ is diagonalizable, so $V = \bigoplus E_i$ a sum of eigenspaces
-    - Restrict all $n-1$ operators $A$ to $E_n$.
-    - The commute in $V$ so they commute in $E_n$
-    - **(Lemma)** They were diagonalizable in $V$, so they're diagonalizable in $E_n$
-    - So they're simultaneously diagonalizable by I.H.
-    - But these eigenvectors for the $A_i$ are all in $E_n$, so they're eigenvectors for $A_n$ too.
-    - Can do this for each eigenspace.
+:::{.theorem title="The Spectral Theorem"}
+\envlist
+
+1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
+2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
+:::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Suppose $A$ is Hermitian.
+- Since $V$ itself is an invariant subspace, $A$ has an eigenvector $\vector v_1 \in V$.
+- Let $W_1 = \spanof_k\theset{\vector v_1}^\perp$.
+- Then for any $\vector w_1 \in W_1$, 
+$$
+\inner{\vector v_1}{ A \vector w_1} =
+\inner{A \vector v_1}{\vector w_1} =
+\lambda \inner{\vector v_1}{\vector w_1} = 0,
+$$
+so $A(W_1) \subseteq W_1$ is an invariant subspace, etc.
+
+- Suppose now that $A$ is symmetric.
+- Then there is an eigenvector of norm 1, $\vector v \in V$.
+\begin{align*}
+\lambda = \lambda\inner{\vector v}{\vector v} = \inner{A\vector v}{\vector v} = \inner{\vector v}{A\vector v} = \overline{\lambda} \implies \lambda \in \RR
+.\end{align*}
+
+:::
+
+
+:::{.proposition title="Simultaneous Diagonalizability"}
+A set of operators $\theset{A_i}$ pairwise commute $\iff$ they are all simultaneously diagonalizable.
+:::
+
+
+
+:::{.proof title="?"}
+By induction on number of operators
+
+- $A_n$ is diagonalizable, so $V = \bigoplus E_i$ a sum of eigenspaces
+- Restrict all $n-1$ operators $A$ to $E_n$.
+- The commute in $V$ so they commute in $E_n$
+- **(Lemma)** They were diagonalizable in $V$, so they're diagonalizable in $E_n$
+- So they're simultaneously diagonalizable by I.H.
+- But these eigenvectors for the $A_i$ are all in $E_n$, so they're eigenvectors for $A_n$ too.
+- Can do this for each eigenspace.
 
 > [Full details here](https://kconrad.math.uconn.edu/blurbs/linmultialg/minpolyandappns.pdf#page=9)
 
-Theorem (Characterizations of Diagonalizability)
-:  $M$ is diagonalizable over $\FF \iff \min_M(x, \FF)$ splits into distinct linear factors over $\FF$, or equivalently iff all of the roots of $\min_M$ lie in $\FF$.
+:::
 
-Proof
-:   $\implies$:
-    If $\min_A$ factors into linear factors, so does each invariant factor, so every elementary divisor is linear and $JCF(A)$ is diagonal.
 
-    $\impliedby$:
-    If $A$ is diagonalizable, every elementary divisor is linear, so every invariant factor factors into linear pieces. 
-    But the minimal polynomial is just the largest invariant factor.
+:::{.theorem title="Characterizations of Diagonalizability"}
+$M$ is diagonalizable over $\FF \iff \min_M(x, \FF)$ splits into distinct linear factors over $\FF$, or equivalently iff all of the roots of $\min_M$ lie in $\FF$.
+:::
+
+
+:::{.proof title="?"}
+$\implies$:
+If $\min_A$ factors into linear factors, so does each invariant factor, so every elementary divisor is linear and $JCF(A)$ is diagonal.
+
+$\impliedby$:
+If $A$ is diagonalizable, every elementary divisor is linear, so every invariant factor factors into linear pieces. 
+But the minimal polynomial is just the largest invariant factor.
+:::
+
 
 ## Matrix Counterexamples
 
-1. A matrix that:
+
+:::{.example title="?"}
+A matrix that:
 
 - Is not diagonalizable over $\RR$ but diagonalizable over $\CC$
 
@@ -245,7 +285,7 @@ Proof
 
 - $\min_M(x) = \chi_M(x) = x^2 + 1$
 
-\begin{align*}
+\[
 M = \left[\begin{array}{rr}
 0  & 1 \\
 -1 & 0
@@ -255,8 +295,8 @@ M = \left[\begin{array}{rr}
 \hline
 0 & 1 \sqrt{-1}
 \end{array}\right]
-.\end{align*}
-
+.\]
+:::
 
 2.
 \begin{align*}
@@ -282,12 +322,12 @@ $$
 \left[\begin{array}{ll}
 {1}  & {0} \\
 {0} & {1}
- \end{array}\right]
- \text { and }
- \left[\begin{array}{ll}
- {1} & {1} \\
- {0} & {1}
-  \end{array}\right]
+\end{array}\right]
+\text { and }
+\left[\begin{array}{ll}
+{1} & {1} \\
+{0} & {1}
+\end{array}\right]
 $$
 
 4. A full-rank matrix that is not diagonalizable:
