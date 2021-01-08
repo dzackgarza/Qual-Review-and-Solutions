@@ -375,7 +375,7 @@ For $G$ a finite group acting on $X$,
 
 :::{.proof title="?"}
 \[
-\sum_{g\in G} abs 
+\sum_{g\in G} \abs{<++>} 
 .\]
 :::
 
