@@ -293,7 +293,6 @@ Moreover, $L/F$ is additionally separable $\iff L/k$ separable:
 
 :::
 
-
 :::{.proposition title="?"}
 If $L/k$ is Galois, then $L/F$ is **always** Galois.
 Moreover, $F/k$ is Galois \( \iff \Gal(L/F) \normal \Gal(L/k) \)
