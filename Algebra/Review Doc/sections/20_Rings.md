@@ -38,6 +38,11 @@ $a, b\in R$ are **associates** iff there exists a $u\in R\units$ such that $a = 
 Equivalently, $a\divides b$ and $b\divides a$.
 :::
 
+
+:::{.definition title="Irreducible Ideal"}
+An ideal $I\normal R$ is *irreducible* if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
+:::
+
 :::{.definition title="Prime Ideal"}
 $\mfp$ is a **prime** ideal $\iff$
 \[ 
@@ -45,12 +50,8 @@ ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
 .\]
 :::
 
-:::{.definition title="Irreducible Ideal"}
-An ideal $I\normal R$ is *irreducible* if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
-:::
-
 :::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff \qty{ I \normalneq R \implies I \subseteq \mfm} \iff R/I$ is a field.
+$\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
 :::
 
 :::{.example}
