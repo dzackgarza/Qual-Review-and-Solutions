@@ -7,7 +7,7 @@ Let $k$ denote a field.
 \envlist
 - The characteristic of any field $k$ is either 0 or $p$ a prime.
 - All fields are simple rings (no proper nontrivial ideals).
-- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
+- If $L_{/k}$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 - Every field morphism is either zero or injective.
 :::
 
@@ -16,7 +16,11 @@ Every finite extension is algebraic.
 :::
 
 :::{.proof}
-Todo
+If \( K_{/F} \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
+This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence \[
+f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
+.\]
+But then \( \alpha \) is the root of the polynomial \( f \).
 :::
 
 :::{.theorem title="Gauss' Lemma"}
