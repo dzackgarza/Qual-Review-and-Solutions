@@ -2,12 +2,14 @@
 
 Let $k$ denote a field.
 
-**Lemmas:**
 
+:::{.fact}
+\envlist
 - The characteristic of any field $k$ is either 0 or $p$ a prime.
 - All fields are simple rings (no proper nontrivial ideals).
 - If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 - Every field morphism is either zero or injective.
+:::
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
