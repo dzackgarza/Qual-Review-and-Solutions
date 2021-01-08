@@ -40,7 +40,7 @@ Equivalently, $a\divides b$ and $b\divides a$.
 
 
 :::{.definition title="Irreducible Ideal"}
-An ideal $I\normal R$ is *irreducible* if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
+An ideal $I\normal R$ is **irreducible** if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
 :::
 
 :::{.definition title="Prime Ideal"}
@@ -52,10 +52,6 @@ ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
 
 :::{.definition title="Maximal Ideal"}
 $\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
-:::
-
-:::{.example}
-Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 :::{.definition title="Max Spectrum"}
@@ -80,14 +76,14 @@ with each \( M_j \) simple.
 
 
 :::{.definition title="Integral Domain"}
-Slogan: no nonzero zero divisors, i.e.
+A ring is an **integral domain** if and only if it has no nonzero zero divisors:
 \[  
 a, b\in R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
 .\]
 :::
 
 :::{.definition title="Principal Ideal"}
-$I \normal R$ *principal* when $\exists a\in R : I = \gens{a}$, i.e. whenever $I\normal R$, there is some single $a\in R$ such that $I = \gens{a}$.
+An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$.
 :::
 
 :::{.definition title="Principal Ideal Domain"}
@@ -263,3 +259,6 @@ $3\in \ZZ[\sqrt{-5}]$.
 Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
 :::
 
+:::{.example}
+Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+:::
