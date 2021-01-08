@@ -1044,10 +1044,10 @@ Left or right exact?
 What is Frobenius reciprocity?
 
 ### Question 8.16
-Given a normal subgroup H of a finite group $G$, we lift all the representations of $G/H$ to representations of $G$.
+Given a normal subgroup $H$ of a finite group $G$, we lift all the representations of $G/H$ to representations of $G$.
 
-Show that the intersection of the kernels of all these representations is precisely H.
-What can you say when H is the commutator subgroup of $G$?
+Show that the intersection of the kernels of all these representations is precisely $H$.
+What can you say when $H$ is the commutator subgroup of $G$?
 
 ### Question 8.17
 If you have two linear representations $\pi_1$ and $\pi_2$ of a finite group $G$ such that $\pi_1(g)$ is conjugate to $\pi_2(g)$ for every g in $G$, is it true that the two representations are isomorphic?
