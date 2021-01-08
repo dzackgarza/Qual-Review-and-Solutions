@@ -1,0 +1,139 @@
+\subsection{Exercises}
+
+\begin{problem}[Hungerford 4.1.3]
+\label{prob:1.1}
+Let $I$ be a left ideal of a ring $R$, and let $A$ be an $R-$module.
+
+\begin{enumerate}
+    \item Show that if $S$ is a nonempty subset of $A$, then
+    \[
+    IS \coloneqq \left\{ \sum_{i=1}^n r_i a_i \mid n\in \mathbb{N}^*; r_i \in I; a_i \in S \right\}
+    \]
+    is a submodule of $A$. 
+    
+    \textit{Note that if $S = \{a\}$, then $IS = Ia = \{ra \mid r\in I\}$.}
+    
+    \item If $I$ is a two-sided ideal, then $A/IA$ is an $R/I$ module with the action of $R/I$ given by
+    \[
+    (r+I)(a+IA) = ra + IA.
+    \]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 4.1.5]
+\label{prob:1.1}
+If $R$ has an identity, then a nonzero unitary $R-$module is \textbf{simple} if its only submodules are $0$ and $A$.
+\begin{enumerate}
+    \item Show that every simple $R-$module is cyclic.
+    \item If $A$ is simple, every $R-$module endomorphism is either the zero map or an isomorphism.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 4.1.7]
+\label{prob:1.1}
+\begin{enumerate}
+    \item Show that if $A,B$ are $R$-modules, then the set $\mathrm{Hom}_R(A, B)$ is all $R$-module homomorphisms $A \to B$ is an abelian group with $f+g$ given on $a\in A$ by
+    \[
+    (f+g)(a) \coloneqq f(a) + g(a) \in B.
+    \]
+    
+    Also show that the identity element is the zero map.
+    
+    \item Show that $\mathrm{Hom}_R(A, A)$ is a ring with identity, where multiplication is given by composition of functions.
+    
+    \textit{Note that $\mathrm{Hom}_R(A, A)$ is called the \textbf{endomorphism ring} of A.}
+    
+    \item Show that $A$ is a left $\mathrm{Hom}_R(A, A)$-module with an action defined by 
+    \[
+    a\in A, f\in \mathrm{Hom}_R(A, A) \implies f \curvearrowright a \coloneqq f(a).
+    \]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 4.1.12]
+\label{prob:1.1}
+Let the following be a commutative diagram of $R$-modules and $R$-module homomorphisms with exact rows:
+
+\begin{center}
+\begin{tikzcd}
+A_1 \arrow[dd, "\alpha_1"] \arrow[r] & A_2 \arrow[dd, "\alpha_2"] \arrow[r] & A_3 \arrow[dd, "\alpha_3"] \arrow[r] & A_4 \arrow[dd, "\alpha_4"] \arrow[r] & A_5 \arrow[dd, "\alpha_5"] \\
+& & & & \\
+B_1 \arrow[r] & B_2 \arrow[r] & B_3 \arrow[r] & B_4 \arrow[r] & B_5
+\end{tikzcd}
+\end{center}
+
+Prove the following:
+\begin{enumerate}
+    \item If $\alpha_1$ is an epimorphisms and $\alpha_2, \alpha_4$ are monomorphisms then $\alpha_3$ is a monomorphism.
+    \item If $\alpha_5$ is a monomorphism and $\alpha_2, \alpha_4$ are epimorphisms then $\alpha_3$ is an epimorphism.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 4.2.4]
+\label{prob:1.1}
+Let $R$ be a principal ideal domain, $A$ a unitary left $R$-module, and $p\in R$ a prime (and thus irreducible) element. Define
+\begin{align*}
+    pA &\coloneqq \{ pa \mid a\in A\} \\
+    A[p] &\coloneqq \{ a\in A \mid pa = 0\}.
+\end{align*}
+
+Show the following:
+\begin{enumerate}
+    \item $R/(p)$ is a field.
+    \item $pA$ and $A[p]$ are submodules of $A$.
+    \item $A/pA$ is a vector space over $R/(p)$, with 
+    \[(r + (p))(a + pA) = ra + pA.\]
+    \item $A[p]$ is a vector space over $R/(p)$ with 
+    \[(r + (p))a = ra.\]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 4.2.8]
+\label{prob:1.1}
+If $V$ is a finite dimensional vector space and
+\[
+V^m \coloneqq V \oplus V \oplus \cdots \oplus V \quad \text{($m$ summands)},
+\]
+then for each $m\geq 1$, $V^m$ is finite dimensional and $\dim V^m = m(\dim V)$.
+\end{problem}
+
+\begin{problem}[Hungerford 4.2.9]
+\label{prob:1.1}
+If $F_1, F_2$ are free modules of a ring with the invariant dimension proerty, then 
+\[
+\mathrm{rank}(F_1 \oplus F_2) = \mathrm{rank} F_1 + \mathrm{rank} F_2.
+\]
+\end{problem}
+
+\newpage
+\subsection{Qual Problems}
+
+\begin{problem}
+\label{prob:1.1}
+Let $F$ be a field and let $f(x) \in F[x]$.
+\begin{enumerate}
+    \item State the definition of a splitting field of $f(x)$ over $F$.
+    
+    \item Let $F$ be a finite field with $q$ elements. Let $E/F$ be a finite extension of degree $n>0$. Exhibit an explicit polynomial $g(x) \in F[x]$ such that $E/F$ is a splitting field of $g$ over $F$. Fully justify your answer.
+    
+    \item Show that the extension in $(b)$ is a Galois extension.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\label{prob:1.1}
+Let $R$ be a commutative ring and let $M$ be an $R$-module. Recall that for $\mu \in M$, the \textit{annihilator} of $\mu$ is the set 
+\[
+\mathrm{Ann}(\mu) = \{ r\in R \mid r\mu = 0\}.
+\]
+
+Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property there exists a nonzero element $\mu \in M$ such that $\I = \mathrm{Ann}(\mu)$.
+
+Prove that $I$ is a \textit{prime} ideal in $R$.
+
+\end{problem}
+
+\begin{problem}
+\label{prob:1.1}
+Suppose that $R$ is a principal ideal domain and $I \trianglelefteq R$ is an ideal. If $a\in I$ is an irreducible element, show that $I = Ra$.
+\end{problem}

@@ -1,0 +1,111 @@
+\subsection{Exercises}
+
+\begin{problem}[Hungerford 7.1.3]
+\label{prob:1.1}
+\hfill
+\begin{enumerate}
+    \item Show that the center of the ring $M_n(R)$ consists of matrices of the form $rI_n$ where $r$ is in the center of $R$.
+    
+    \textit{Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.}
+    
+    \item Show that $Z(M_n(R)) \cong Z(R)$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 7.1.5]
+\label{prob:1.1}
+\hfill
+\begin{enumerate}
+    \item Show that if $A, B$ are (skew)-symmetric then $A+B$ is (skew)-symmetric.
+    \item Let $R$ be commutative. 
+    Show that if $A,B$ are symmetric, then $AB$ is symmetric $\iff AB=BA$.
+    Also show that for any matrix $B \in M_n(R)$, both $BB^t$ and $B+B^t$ are always symmetric, and $B-B^t$ is always skew-symmetric.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Hungerford 7.1.7]
+\label{prob:1.1}
+Show that similarity is an equivalence relation on $M_n(R)$, and *equivalence* is an equivalence relation on $M_{m\times n}(R)$.
+\end{problem}
+
+\begin{problem}[Hungerford 7.2.2]
+\label{prob:1.1}
+Show that an $n\times m$ matrix $A$ over a division ring $D$ has an $m\times n$ left inverse $B$ (so $BA = I_m$) $\iff \mathrm{rank} A = m$. Similarly, show $A$ has a right $m\times n$ inverse $\iff \mathrm{rank} A = n$.
+\end{problem}
+
+\begin{problem}[Hungerford 7.2.4]
+\label{prob:1.1}
+\hfill
+\begin{enumerate}
+    \item Show that a system of linear equations
+$$
+\begin{array}{l}{a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1 m} x_{m}=b_{1}} \\ \vdots & \\ {a_{n 1} x_{1}+a_{n 2} x_{2}+\cdots+a_{n m} x_{m}=b_{n}}\end{array}
+$$
+
+has a simultaneous solution $\iff$ the corresponding matrix equation $AX = B$ has a solution, where $A = (a_{ij}), X = [x_1, \cdots, x_m]^t$, and $B = [b_1, \cdots , b_n]^t$.
+
+    \item If $A_1, B_1$ are matrices obtained from $A, B$ respectively by performing the same sequence of elementary \textbf{row} operations, then $X$ is a solution of $AX=B$ $\iff$ $X$ is a solution of $A_1 X = B_1$.
+    
+    \item Let $C$ be the $n \times (m+1)$ matrix given by 
+    $$
+    C = \left(\begin{array}{llll}{a_{11}} & {\cdots} & {a_{1 m}} & {b_{1}} \\ {} & {} & {} \\ {\cdot} & {} & {} \\ {a_{n 1}} & {\cdots} & {a_{n m}} & {b_{n}}\end{array}\right).
+    $$
+    Then $AX = B$ has a solution $\iff$ $\mathrm{rank} A = \mathrm{rank} C$ and the solution is unique $\iff \mathrm{rank}(A) = m$.
+    
+    \textit{Hint: use part 2.}
+    
+    \item If $B=0$, so the system $AX=B$ is homogeneous, then it has a nontrivial solution $\iff$ $\rank A < m$ and in particular $n<m$.
+\end{enumerate}
+
+\end{problem}
+
+\begin{problem}[Hungerford 7.2.5]
+\label{prob:1.1}
+Let $R$ be a PID. For each positive integer $r$ and sequence of nonzero ideals $I_1 \supset I_2 \supset \cdots \supset I_r$, choose a sequence $d_i \in R$ such that $(d_i) = I_i$ and $d_i \mid d_{i+1}$.
+
+For a given pair of positive integers $n, m$, let $S$ be the set of all $n\times m$ matrices of the form $\left(\begin{array}{ll}{L_{r}} & {0} \\ {0} & {0}\end{array}\right)$ where $r=1,2,\cdots,\min(m,n)$ and $L_r$ is a diagonal $r\times r$ matrix with main diagonal $d_i$.
+
+Show that $S$ is a set of canonical forms under equivalence for the set of all $n\times m$ matrices over $R$.
+\end{problem}
+
+\newpage
+\subsection{Qual Problems}
+
+\begin{problem}
+\label{prob:1.1}
+Let $R$ be a commutative ring.
+
+\begin{enumerate}
+    \item Say what it means for $R$ to be a unique factorization domain (UFD).
+    \item Say what it means for $R$ to be a principal ideal domain (PID)
+    \item Give an example of a UFD that is not a PID. Prove that it is not a PID.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\label{prob:1.1}
+Let $A$ be an $n\times n$ matrix over a field $F$ such that $A$ is diagonalizable. Prove that the following are equivalent:
+\begin{enumerate}
+    \item There is a vector $v\in F^n$ such that $v, Av, \cdots A^{n-1}v$ is a basis for $F^n$.
+    \item The eigenvalues of $A$ are distinct.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\label{prob:1.1}
+Let $x,y \in \mathbb{C}$ and consider the matrix
+
+$$ M =
+\left[\begin{array}{ccc}
+     1 & 0 & x \\
+     0 & 1 & 0 \\
+     y & 0 & 1
+\end{array}\right]
+$$
+
+\begin{enumerate}
+    \item Show that $[0, 1, 0]^t$ is an eigenvector of $M$.
+    \item Compute the rank of $M$ as a function of $x$ and $y$.
+    \item Find all values of $x$ and $y$ for which $M$ is diagonalizable.
+\end{enumerate}
+\end{problem}
