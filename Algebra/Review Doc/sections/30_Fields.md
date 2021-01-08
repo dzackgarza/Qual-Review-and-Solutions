@@ -36,8 +36,8 @@ Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \defineda
 TFAE:
 
 - $L/k$ is **separable**
-- $f$ has no repeated factors/roots
-- $\gcd(f, f') = 1$, i.e. $f$ is coprime to its derivative
+- $f$ has no repeated factors/roots.
+- $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
 :::
 
@@ -47,20 +47,22 @@ TFAE:
 .\]
 :::
 
-:::{.definition title="Galois Extension"}
+:::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
 This is a **Galois extension** iff any of the following hold:
 
 1. $\abs{\Aut(L/k)} = [L: k]$
-- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-2. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
+2. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
+3. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
 4. $L$ is finite, normal, and separable.
-:::
 
 
-:::{.definition title="Galois Group"}
-If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
+In this case, we define 
+\[
+\Gal(L/k) \definedas \Aut(L/k)
+.\]
 :::
+
 
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
