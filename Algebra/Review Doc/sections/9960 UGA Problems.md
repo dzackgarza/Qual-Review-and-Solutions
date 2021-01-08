@@ -34,7 +34,7 @@ $\varphi: G/A \to \mathrm{Aut}(A)$.
 Let $Z(G)$ be the center of $G$. 
 Show that if $G/Z(G)$ is cyclic, then $G$ is abelian.
 
-> Note that Hungerford uses the notation $C(G)$ for the center.
+> Note that Hungerford uses the notation $C(G)$ for the centerr.
 
 :::
 
