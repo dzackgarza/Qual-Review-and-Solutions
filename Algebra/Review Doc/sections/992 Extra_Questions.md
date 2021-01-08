@@ -749,6 +749,7 @@ Why?
 ### Question 6.3
 Is $\CC[x, y]$ a PID?
 What are the prime ideals in it?
+\todo[inline]{Missing}
 
 ### Question 6.4
 Do polynomials in several variables form a PID?
