@@ -65,7 +65,7 @@ the set $X_p$.
     group of order $ap^k$ is simple.
 :::
 
-::: {#prob:1.10 .problem}
+:::{#prob:1.10 .problem}
 Let $G$ be a finite group and let $N \trianglelefteq G$,
 and let $p$ be a prime number and $Q$ a subgroup of $G$ such that
 $N \subset Q$ and $Q/N$ is a Sylow $p-$subgroup of $G/N$.
@@ -98,6 +98,7 @@ $G$ is a free abelian group.
 :::
 
 ::: {.problem title="Hungerford 2.1.10"}
+\envlist
 
 1.  Show that the additive group of rationals $\mathbb Q$ is not
     finitely generated.
@@ -186,6 +187,8 @@ Show that if $u\in F$ is algebraic of odd degree over $K$, then so is $u^2$, and
 :::
 
 ::: {.problem title="Hungerford 5.1.14"}
+\envlist
+
 
 1.  If $F = \mathbb{Q}(\sqrt 2, \sqrt 3)$, compute $[F: \mathbb{Q}]$ and
     find a basis of $F/\mathbb{Q}$.
@@ -226,7 +229,8 @@ ideal.
 :::
 
 ::: {.problem}
-**Problem 34**.
+\envlist
+
 
 1.  Give the definition that a group $G$ must satisfy the be solvable.
 
@@ -432,6 +436,7 @@ $D_{4}$.
 
 ::: {.problem title="Hungerford 5.8.3"}
 Let $\phi$ be the Euler function.
+
 1.  $\phi(n)$ is even for $n>2$.
 
 2.  find all $n>0$ such that $\phi(n)=2$.
@@ -465,7 +470,7 @@ $f$ in $F$. Then,
 ### Qual Problems
 
 ::: {.problem}
-**Problem 60**.
+\envlist
 
 1.  Let $K$ be a field. State the main theorem of Galois theory for a
     finite field extension L/K
@@ -509,10 +514,12 @@ assertion or give a counterexample (with justification).
 Let $I$ be a left ideal of a ring$R$, and let $A$ be an $R-$module.
 
 1.  Show that if $S$ is a nonempty subset of $A$, then
-    $$IS \coloneqq \left\{ \sum_{i=1}^n r_i a_i \mid n\in \mathbb{N}^*; r_i \in I; a_i \in S \right\}$$
+  \[
+  IS \coloneqq \left\{ \sum_{i=1}^n r_i a_i \mid n\in \mathbb{N}^*; r_i \in I; a_i \in S \right\}
+  \]
     is a submodule of $A$.
 
-    *Note that if $S = \{a\}$, then $IS = Ia = \{ra \mid r\in I\}$.*
+  > Note that if $S = \{a\}$, then $IS = Ia = \{ra \mid r\in I\}$.
 
 2.  If $I$ is a two-sided ideal, then $A/IA$ is an $R/I$ module with the
     action of $R/I$ given by $$(r+I)(a+IA) = ra + IA.$$
@@ -529,6 +536,8 @@ and $A$.
 :::
 
 ::: {.problem title="Hungerford 4.1.7"}
+\envlist
+
 
 1.  Show that if $A,B$ are $R$-modules, then the set
     $\mathrm{Hom}_R(A, B)$ is all $R$-module homomorphisms $A \to B$ is
@@ -629,8 +638,11 @@ element, show that $I = Ra$.
 
 ::: {.problem title="Hungerford 4.4.1"}
 Show the following:
+
 1.  For any abelian group $A$ and any positive integer $m$,
-    $$\mathrm{Hom}(\mathbb{Z}_m, A) \cong A[m] \coloneqq \{ a\in A \mid ma = 0\}.$$
+  \[
+  \mathrm{Hom}(\mathbb{Z}_m, A) \cong A[m] \coloneqq \{ a\in A \mid ma = 0\}
+  .\]
 
 2.  $\mathrm{Hom}(\mathbb{Z}_m, \mathbb{Z}_n) \cong \mathbb{Z}_{\mathrm{gcd}(m,n)}$.
 
@@ -890,20 +902,21 @@ possible Jordan Canonical Forms over $\Bbb C$.
 Show that if $\phi$ is an endomorphism of a free $k$-module $E$ of finite rank, then
 $p_\phi(\phi) = 0$.
 
-> Hint:
-> If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then 
-  \[
-  B^a B = |B| I_n = p_\phi I_n \in M_n(k[x])
-  .\]
-> If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then 
-  \[ 
-  \psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0
-  \]
-  for all $u\in E$.
+**Hint**:
+If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then 
+\[
+B^a B = |B| I_n = p_\phi I_n \in M_n(k[x])
+.\]
+If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then 
+\[ 
+\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0
+\]
+for all $u\in E$.
 
 :::
 
 ::: {.problem title="Hungerford 7.5.7"}
+\envlist
 
 1.  Let $\phi,\psi$ be endomorphisms of a finite-dimensional vector
     space $E$ such that $\phi\psi = \psi \phi$. Show that if $E$ has a
