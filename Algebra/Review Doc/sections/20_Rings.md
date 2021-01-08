@@ -4,6 +4,11 @@
 
 ### Basics
 
+:::{.definition title="Divisibility of Elements"}
+An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \).
+In this case, we sometimes write \( q\divides r \).
+:::
+
 :::{.definition title="Irreducible Element"}
 An element $r\in R$ is **irreducible** iff 
 \[
@@ -12,22 +17,18 @@ r=ab \implies a \in R\units \txt{or} b\in R\units
 :::
 
 
-:::{.definition title="Divisibility of Elements"}
-An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \).
+:::{.definition title="Simple Modules"}
+A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
+A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
 :::
 
-:::{.definition title="Simple Ring"}
-A ring $R$ is **simple** iff every ideal $I \normal R$ is either $0$ or $R$.
-:::
-
-:::{.definition title="Semisimple"}
-A ring \( R \) is **simple** if and only if it admits a decomposition \[
-R = \bigoplus R_i
+:::{.definition title="Semisimple Modules"}
+A module \( M \) is **simple** if and only if it admits a decomposition 
+\[
+M = \bigoplus_{j\in J} M_j
 \]
-with each \( R_i \) simple.
+with each \( M_j \) simple.
 :::
-
-
 
 :::{.definition title="Prime Element"}
 An element $p\in R$ is **prime** iff 
@@ -188,7 +189,32 @@ If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 :::
 
-### Zorn's Lemma
+### Toward Number Theory and Algebraic Geometry
+
+:::{.definition title="Reduced Ring"}
+A ring $R$ is *reduced* if $R$ contains no nonzero nilpotent elements. 
+:::
+
+:::{.definition title="Local Ring"}
+A ring $R$ is *local* iff it contains a unique maximal ideal.
+:::
+
+:::{.definition title="Prime Spectrum"}
+$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
+:::
+
+:::{.definition title="Radical of an Ideal"}
+For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+:::
+
+:::{.definition title="Radical Ideal"}
+An ideal is *radical* iff $\rad(I) = I$. 
+:::
+
+
+## Misc
+
+## Zorn's Lemma
 
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
@@ -235,27 +261,4 @@ This follows because every $C_i \subseteq \hat{C}$.
 **$\hat{C}$ is in $S$:**
 Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
 :::
-
-### Toward Number Theory and Algebraic Geometry
-
-:::{.definition title="Reduced Ring"}
-A ring $R$ is *reduced* if $R$ contains no nonzero nilpotent elements. 
-:::
-
-:::{.definition title="Local Ring"}
-A ring $R$ is *local* iff it contains a unique maximal ideal.
-:::
-
-:::{.definition title="Prime Spectrum"}
-$\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}$ is the **spectrum** of $R$.
-:::
-
-:::{.definition title="Radical of an Ideal"}
-For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
-:::
-
-:::{.definition title="Radical Ideal"}
-An ideal is *radical* iff $\rad(I) = I$. 
-:::
-
 
