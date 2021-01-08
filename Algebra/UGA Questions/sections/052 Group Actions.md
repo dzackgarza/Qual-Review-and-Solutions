@@ -37,7 +37,7 @@ Assume this action is faithful (recall that this means that the kernel of the ho
 For $a \in A$, let $G_a$ denote the stabilizer of $a$ in $G$. 
 Prove that for any $a \in A$, 
 $$
-\intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
+\Intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
 .$$
 
 ### b
@@ -51,7 +51,7 @@ Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of element
 ### b
 Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
 \[
-\union_{g\in G} gHg\inv \subsetneq G
+\Union_{g\in G} gHg\inv \subsetneq G
 \]
 
 ### c
@@ -78,11 +78,11 @@ Concepts used:
 - Then
 \[
 h \in G\cdot x 
-&\iff h\cdot x = x \qtext{by being in the stabilizer} \\
-&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \qtext{using that $x, y$ are in the same orbit} \\
+&\iff h\cdot x = x && \text{by being in the stabilizer} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y && \text{using that $x, y$ are in the same orbit} \\
 &\iff (g h g\inv) \cdot y = y \\
-&\iff ghg\inv \in G_y \qtext{by the defn of the stabilizer}\\
-&\iff h\in g\inv G_y g
+&\iff ghg\inv \in G_y && \text{by the defn of the stabilizer}\\
+&\iff h\in g ^{-1}  G_y g
 ,\]
 
 so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
@@ -109,11 +109,12 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 
 - Now *strictly* bound the size of the union by overcounting their intersections at the identity:
 \[
-\abs{\union_{g\in G}gHg\inv} 
+\abs{\Union_{g\in G}gHg\inv} 
 &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
-&\qquad \qquad\textit{strictly overcounts since they intersect in at least the identity} \\
-& = [G: N_G(H)] \abs{H} \\
-&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \qtext{since $G$ is finite} \\
+& \text{strictly overcounts since they intersect in at least the identity} \\
+&= [G: N_G(H)] \abs{H} \\
+&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \\
+& \text{since $G$ is finite} \\
 &\leq {\abs G \over \abs H} \abs H \\
 &= \abs{G}
 .\]
