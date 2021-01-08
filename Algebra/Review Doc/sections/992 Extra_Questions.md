@@ -1053,7 +1053,7 @@ What can you say when $H$ is the commutator subgroup of $G$?
 If you have two linear representations $\pi_1$ and $\pi_2$ of a finite group $G$ such that $\pi_1(g)$ is conjugate to $\pi_2(g)$ for every g in $G$, is it true that the two representations are isomorphic?
 
 ### Question 8.18
-Group representations: What's special about using C in the definition of group algebra?
+Group representations: What's special about using $\CC$ in the definition of group algebra?
 
 Is it possible to work over other fields?
 
@@ -1065,7 +1065,7 @@ What can you say about it?
 
 ### Question 8.20
 Let $(\pi, V)$ be a faithful finite-dimensional representation of $G$.
-Show that, given any irreducible representation of $G$, the nth tensor power of $\gl(V)$ will contain it for some large enough $n$.
+Show that, given any irreducible representation of $G$, the nth tensor power of $\Gl(V)$ will contain it for some large enough $n$.
 
 ### Question 8.21
 What are the irreducible representations of finite abelian groups?
