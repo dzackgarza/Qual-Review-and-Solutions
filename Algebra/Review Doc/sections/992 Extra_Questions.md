@@ -818,9 +818,9 @@ What is the radical of an ideal?
 What is special about elements in the nilradical?
 
 ### Question 6.22
-Define "radical".
+Define the "radical" of an ideal.
 Prove it is an ideal.
-Prove that the ideal of all polynomials vanishing on the zero set of $I$ is $\qrt{I}$.
+Prove that the ideal of all polynomials vanishing on the zero set of $I$ is $\sqrt{I}$.
 
 
 ### Question 6.23. 
