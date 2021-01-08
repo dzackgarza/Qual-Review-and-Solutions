@@ -48,25 +48,14 @@ TFAE:
 :::
 
 :::{.definition title="Galois Extension"}
-An extension $L/K$ is *Galois* iff any of the following hold:
+Let $L/k$ be a finite field extension.
+This is a **Galois extension** iff any of the following hold:
 
-1. $[L: K] = \abs{\mathrm{Aut}(K/F)}$.
+1. $\abs{\Aut(L/k)} = [L: k]$
+- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 2. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-3. The field fixed by $\mathrm{Aut}(K/F)$ is exactly $L$.
 4. $L$ is finite, normal, and separable.
 :::
-
-:::{.definition title="Characterizations of Galois Extensions"}
-Let $L/k$ be a finite field extension.
-TFAE:
-
-- $L/k$ is **Galois**
-- $L/k$ is finite, normal, and separable.
-- $L/k$ is the splitting field of a separable polynomial
-- $\abs{\Aut(L/k)} = [L: k]$
-- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-:::
-
 
 
 :::{.definition title="Galois Group"}
