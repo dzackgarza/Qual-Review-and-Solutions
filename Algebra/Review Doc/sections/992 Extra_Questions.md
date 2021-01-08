@@ -339,8 +339,9 @@ What statement in group theory can you think of that reﬂects this?
 
 
 ### Question 3.13. 
-Is abelian Galois extension transitive?
-That is, if K has abelian Galois group over E, E has abelian Galois group over F , and K is a Galois extension of F , is it necessarily true that gal(K/F ) is also abelian? give a counterexample involving number fields as well as one involving function fields.
+Is Abelian Galois extension transitive?
+That is, if $K$ has abelian Galois group over $E$, $E$ has abelian Galois group over $F$ , and $K$ is a Galois extension of $F$, is it necessarily true that $\Gal(K/F)$ is also abelian? 
+Give a counterexample involving number fields as well as one involving function fields.
 
 ### Question 3.14
 What is a Kummer extension?
@@ -360,15 +361,14 @@ What is the discriminant of a polynomial?
 If we think of the Galois group of a polynomial as contained in $S_n$, when is it contained in $A_n$?
 
 ### Question 3.19
-Is Q(21/3) normal?
+Is $\QQ(\sqrt[3]{21})$ normal?
 What is its splitting field?
 What is its Galois group?
 Draw the lattice of subfields.
 
 ### Question 3.20
 What's the Galois group of $x^2 + 1$ over Q?
-What's the integral closure of
-Z in Q(i)?
+What's the integral closure of $\ZZ$ in $\QQ(i)$?
 
 ### Question 3.21
 What's the Galois group of $x^2 + 9$?
@@ -378,11 +378,10 @@ What is the Galois group of $x^2 - 2$?
 Why is $x^2 - 2$ irreducible?
 
 ### Question 3.23
-What is the Galois group of Q(
+\todo[inline]{Missing}
 
 ### Question 3.24
-What is the Galois group of 
-\todo[inline]{Missing} over Q?
+\todo[inline]{Missing} 
 
 ### Question 3.25
 What are the Galois groups of irreducible cubics?
@@ -396,7 +395,7 @@ Compute the Galois group of $x^3 - 2$ over the rationals.
 
 ### Question 3.28
 How would you find the Galois group of $x^3 + 2x + 1$?
-Adjoin a root to Q.
+Adjoin a root to $\QQ$.
 Can you say something about the roots of $x^3 + 3x + 1$ in this extension?
 
 ### Question 3.29
@@ -419,7 +418,7 @@ Calculate the Galois group of $x^5 - 2$.
 Discuss sufficient conditions on a polynomial of degree 5 to have Galois group $S_5$ over $\QQ$ and prove your statements.
 
 ### Question 3.35
-Show that if f is an irreducible quintic with precisely two nonreal roots, then its Galois group is $S_5$.
+Show that if $f$ is an irreducible quintic with precisely two non-real roots, then its Galois group is $S_5$.
 
 ### Question 3.36
 Suppose you have a degree 5 polynomial over a field.
@@ -430,7 +429,7 @@ Can you give an example of an irreducible polynomial in which this is not the ca
 What is the Galois group of $x^7 - 1$ over the rationals?
 
 ### Question 3.38
-What is the Galois group of the polynomial xn - 1 over Q?
+What is the Galois group of the polynomial $x^n - 1$ over $\QQ$?
 
 ### Question 3.39
 Describe the Galois theory of cyclotomic extensions.
@@ -442,16 +441,16 @@ What is the maximal real field in a cyclotomic extension $\QQ(\zeta_n)/\QQ$?
 Compute the Galois group of $p(x) = x^7 - 3$.
 
 ### Question 3.42
-What Galois stuff can you say about $x^2n - 2$?
+What Galois stuff can you say about $x^{2n} - 2$?
 
 ### Question 3.43
-What are the cyclic extensions of (prime) order p?
+What are the cyclic extensions of (prime) order $p$?
 
 ### Question 3.44
-Can you give me a polynomial whose Galois group is Z/3Z?
+Can you give me a polynomial whose Galois group is $\ZZ/3\ZZ$?
 
 ### Question 3.45
-Which groups of order 4 can be realised as a Galois group over Q?
+Which groups of order 4 can be realised as a Galois group over $\QQ$?
 
 ### Question 3.46
 Give a polynomial with $S_3$ as its Galois group.
@@ -461,7 +460,7 @@ Give an example of a cubic with Galois group $S_3$.
 
 ### Question 3.48
 How do you construct a polynomial over $\QQ$ whose Galois group is $S_n$?
-Do it for n = 7 in particular.
+Do it for $n = 7$ in particular.
 
 ### Question 3.49
 What's a Galois group that's not $S_n$ or $A_n$?
