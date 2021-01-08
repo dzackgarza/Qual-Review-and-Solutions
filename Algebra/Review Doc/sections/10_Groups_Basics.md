@@ -53,14 +53,14 @@
 
 - For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
-:::{.fact title="Some useful facts"}
-\envlist
 
-- Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 
-- The Chinese Remainder theorem: $(p, q) = 1 \implies \ZZ_p \times \ZZ_q \cong \ZZ_{pq}$
-
+:::{.theorem title="Chinese Remainder Theorem"}
+\[
+\gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
+.\]
 :::
+
 
 
 ## Definitions
@@ -116,6 +116,9 @@ A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n
 ## Subgroups and Quotients
 
 
+:::{.fact }
+Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+:::
 
 :::{.theorem title="The Fundamental Theorem of Cosets"}
 \[
