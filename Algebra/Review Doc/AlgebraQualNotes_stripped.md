@@ -3960,27 +3960,27 @@ For \( G \) a finite group, TFAE:
 
 ### Exercises
 
-::: {\#prob:1.1 .problem title="Hungerford 1.6.3"} If \( \sigma = (i_1 i_2 \cdots i_r) \in S_n \) and \( \tau \in S_n \), then show that \( \tau\sigma\tau^{-1} = (\tau(i_1) \tau(i_2) \cdots \tau(i_r)) \). :::
+::: {.problem title="Hungerford 1.6.3"} If \( \sigma = (i_1 i_2 \cdots i_r) \in S_n \) and \( \tau \in S_n \), then show that \( \tau\sigma\tau^{-1} = (\tau(i_1) \tau(i_2) \cdots \tau(i_r)) \). :::
 
-::: {\#prob:1.2 .problem title="Hungerford 1.6.4"} Show that \( S_n \cong \left\langle (12), (123\cdots n)\right\rangle \) and also that \( S_n \cong \left\langle (12), (23\cdots n)\right\rangle \) :::
+::: {.problem title="Hungerford 1.6.4"} Show that \( S_n \cong \left\langle (12), (123\cdots n)\right\rangle \) and also that \( S_n \cong \left\langle (12), (23\cdots n)\right\rangle \) :::
 
-::: {\#prob:1.3 .problem title="Hungerford 2.2.1"} Let \( G \) be a finite abelian group that is not cyclic. Show that \( G \) contains a subgroup isomorphic to \( \mathbb{Z}_p \oplus \mathbb{Z}_p \) for some prime \( p \). :::
+::: {.problem title="Hungerford 2.2.1"} Let \( G \) be a finite abelian group that is not cyclic. Show that \( G \) contains a subgroup isomorphic to \( \mathbb{Z}_p \oplus \mathbb{Z}_p \) for some prime \( p \). :::
 
-::: {\#prob:1.4 .problem title="Hungerford 2.2.12.b). Determine (up to isomorphism"}all abelian groups of order 64; do the same for order 96. :::
+::: {.problem title="Hungerford 2.2.12.b). Determine (up to isomorphism"}all abelian groups of order 64; do the same for order 96. :::
 
-::: {\#prob:1.5 .problem title="Hungerford 2.4.1"} Let \( G \) be a group and \( A \trianglelefteq G \) be a normal abelian subgroup. Show that \( G/A \) acts on \( A \) by conjugation and construct a homomorphism \( \varphi: G/A \to \mathrm{Aut}(A) \). :::
+::: {.problem title="Hungerford 2.4.1"} Let \( G \) be a group and \( A \trianglelefteq G \) be a normal abelian subgroup. Show that \( G/A \) acts on \( A \) by conjugation and construct a homomorphism \( \varphi: G/A \to \mathrm{Aut}(A) \). :::
 
-::: {\#prob:1.6 .problem title="Hungerford 2.4.9). Let \$Z(G"} be the center of \( G \). Show that if \( G/Z(G) \) is cyclic, then \( G \) is abelian.
+::: {.problem title="Hungerford 2.4.9). Let \$Z(G"} be the center of \( G \). Show that if \( G/Z(G) \) is cyclic, then \( G \) is abelian.
 
 *Note that Hungerford uses the notation \( C(G) \) for the center.* :::
 
-::: {\#prob:1.7 .problem title="Hungerford 2.5.6"} Let \( G \) be a finite group and \( H \trianglelefteq G \) a normal subgroup of order \( p^k \). Show that \( H \) is contained in every Sylow \( p \)-subgroup of \( G \). :::
+::: {.problem title="Hungerford 2.5.6"} Let \( G \) be a finite group and \( H \trianglelefteq G \) a normal subgroup of order \( p^k \). Show that \( H \) is contained in every Sylow \( p \)-subgroup of \( G \). :::
 
-::: {\#prob:1.8 .problem title="Hungerford 2.5.9"} Let \( \left| G \right| = p^n q \) for some primes \( p > q \). Show that \( G \) contains a unique normal subgroup of index \( q \). :::
+::: {.problem title="Hungerford 2.5.9"} Let \( \left| G \right| = p^n q \) for some primes \( p > q \). Show that \( G \) contains a unique normal subgroup of index \( q \). :::
 
 ### Qual Problems
 
-::: {#prob:1.9 .problem}
+::: {.problem}
 **Problem 9**. Let \( G \) be a finite group and \( p \) a prime number. Let \( X_p \) be the set of Sylow-\( p \) subgroups of \( G \) and \( n_p \) be the cardinality of \( X_p \). Let \( \mathrm{Sym}(X) \) be the permutation group on the set \( X_p \).
 
 1.  Construct a homomorphism \( \rho: G \to \mathrm{Sym}(X_p) \) with image a transitive subgroup (i.e. with a single orbit).
@@ -4010,9 +4010,9 @@ For \( G \) a finite group, TFAE:
 
 ### Exercises
 
-::: {\#prob:2.1 .problem title="Hungerford 2.1.9"} Let \( G \) be a finitely generated abelian group in which no element (except 0) has finite order. Show that \( G \) is a free abelian group. :::
+::: {.problem title="Hungerford 2.1.9"} Let \( G \) be a finitely generated abelian group in which no element (except 0) has finite order. Show that \( G \) is a free abelian group. :::
 
-::: {#prob:2.2 .problem title="Hungerford 2.1.10"}
+::: {.problem title="Hungerford 2.1.10"}
 1.  Show that the additive group of rationals \( \mathbb Q \) is not finitely generated.
 
 2.  Show that \( \mathbb Q \) is not free.
@@ -4020,23 +4020,23 @@ For \( G \) a finite group, TFAE:
 3.  Conclude that Exercise 9 is false if the hypothesis "finitely generated" is omitted.
 :::
 
-::: {\#prob:2.3 .problem title="Hungerford 2.5.8"} Show that if every Sylow \( p- \)subgroup of a finite group \( G \) is normal for every prime \( p \), then \( G \) is the direct product of its Sylow subgroups. :::
+::: {.problem title="Hungerford 2.5.8"} Show that if every Sylow \( p- \)subgroup of a finite group \( G \) is normal for every prime \( p \), then \( G \) is the direct product of its Sylow subgroups. :::
 
-::: {\#prob:2.4 .problem title="Hungerford 2.6.4"} What is the center of the quaternion group \( Q_8 \)? Show that \( Q_8/Z(Q_8) \) is abelian. :::
+::: {.problem title="Hungerford 2.6.4"} What is the center of the quaternion group \( Q_8 \)? Show that \( Q_8/Z(Q_8) \) is abelian. :::
 
-::: {\#prob:2.5 .problem title="Hungerford 2.6.9"} Classify up to isomorphism all groups of order 18. Do the same for orders 20 and 30. :::
+::: {.problem title="Hungerford 2.6.9"} Classify up to isomorphism all groups of order 18. Do the same for orders 20 and 30. :::
 
-::: {\#prob:2.6 .problem title="Hungerford 1.9.1"} Show that every non-identity element in a free group \( F \) has infinite order. :::
+::: {.problem title="Hungerford 1.9.1"} Show that every non-identity element in a free group \( F \) has infinite order. :::
 
-::: {\#prob:2.7 .problem title="Hungerford 1.9.3"} Let \( F \) be a free group and for a fixed integer \( n \), let \( H_n \) be the subgroup generated by the set \( \{ x^n \mathrel{\Big|}x \in F \} \). Show that \( H_n \trianglelefteq F \). :::
+::: {.problem title="Hungerford 1.9.3"} Let \( F \) be a free group and for a fixed integer \( n \), let \( H_n \) be the subgroup generated by the set \( \{ x^n \mathrel{\Big|}x \in F \} \). Show that \( H_n \trianglelefteq F \). :::
 
 ### Qual Problems
 
-::: {#prob:2.8 .problem}
+::: {.problem}
 **Problem 20**. List all groups of order 14 up to isomorphism.
 :::
 
-::: {#prob:2.9 .problem}
+::: {.problem}
 **Problem 21**. Let \( G \) be a group of order \( p^3 \) for some prime \( p \). Show that either \( G \) is abelian, or \( \left| Z(G) \right| = p \).
 :::
 
@@ -4052,11 +4052,11 @@ For \( G \) a finite group, TFAE:
 
 ### Exercises
 
-::: {\#prob:3.1 .problem title="Hungerford 2.7.10"} Show that \( S_n \) is solvable for \( n\leq 4 \) but \( S_3 \) and \( S_4 \) are not nilpotent. :::
+::: {.problem title="Hungerford 2.7.10"} Show that \( S_n \) is solvable for \( n\leq 4 \) but \( S_3 \) and \( S_4 \) are not nilpotent. :::
 
-::: {\#prob:3.2 .problem title="Hungerford 2.8.3"} Show that if \( N \) is a simple normal subgroup of a group \( G \) and \( G/N \) has a composition series, then \( G \) has a composition series. :::
+::: {.problem title="Hungerford 2.8.3"} Show that if \( N \) is a simple normal subgroup of a group \( G \) and \( G/N \) has a composition series, then \( G \) has a composition series. :::
 
-::: {\#prob:3.3 .problem title="Hungerford 2.8.9"} Show that any group of order \( p^2 q \) (for primes \( p,q \)) is solvable. :::
+::: {.problem title="Hungerford 2.8.9"} Show that any group of order \( p^2 q \) (for primes \( p,q \)) is solvable. :::
 
 ::: {.problem title="Hungerford 5.1.1"} Let \( F/K \) be a field extension. Show that
 
@@ -4066,25 +4066,17 @@ For \( G \) a finite group, TFAE:
 
 3.  If \( u\in F \) has degree \( n \) over \( K \), then \( n \) divides \( [F: K] \).
 
-[
-\[prob:3.4\]
-]{#prob:3.4 label="prob:3.4"} :::
+:::
 
-::: {\#prob:3.5 .problem title="Hungerford 5.1.8"} Show that if \( u\in F \) is algebraic of odd degree over \( K \), then so is \( u^2 \), and moreover \( K(u) = K(u^2) \). :::
+::: {.problem title="Hungerford 5.1.8"} Show that if \( u\in F \) is algebraic of odd degree over \( K \), then so is \( u^2 \), and moreover \( K(u) = K(u^2) \). :::
 
 ::: {.problem title="Hungerford 5.1.14"}
 1.  If \( F = \mathbb{Q}(\sqrt 2, \sqrt 3) \), compute \( [F: \mathbb{Q}] \) and find a basis of \( F/\mathbb{Q} \).
 
 2.  Do the same for \( \mathbb{Q}(i, \sqrt 3, \zeta_3) \) where \( \zeta_3 \) is a complex third root of 1.
-
-[
-\[prob:3.6\]
-]{#prob:3.6 label="prob:3.6"}
 :::
 
-::: {.problem title="Hungerford 5.1.16"} Show that in \( \mathbb{C} \), the fields \( \mathbb{Q}(i) \cong \mathbb{Q}(\sqrt 2) \) as vector spaces, but not as fields. [
-\[prob:3.7\]
-]{#prob:3.7 label="prob:3.7"} :::
+::: {.problem title="Hungerford 5.1.16"} Show that in \( \mathbb{C} \), the fields \( \mathbb{Q}(i) \cong \mathbb{Q}(\sqrt 2) \) as vector spaces, but not as fields. :::
 
 ### Qual Problems
 
