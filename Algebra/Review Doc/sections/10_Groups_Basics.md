@@ -227,7 +227,7 @@ Equivalently, the action has a single orbit.
 :::
 
 
-:::{.remark title="Reminder of notation}
+:::{.remark title="Reminder of notation"}
 For a group $G$ acting on a set $X$,
 
 +-----------------------------------------------------------------+---------------+
@@ -235,7 +235,7 @@ For a group $G$ acting on a set $X$,
 +=================================================================+===============+
 | \( G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  Orbit        |
 +-----------------------------------------------------------------+---------------+
-| \(G_x = \ts{ g \in G \st gx=x } \)                              | Stabilizer    |
+| \(G_x = \ts{ g \in G \st gx=x } \leq G \)                       | Stabilizer    |
 +-----------------------------------------------------------------+---------------+
 | \( X/G \subseteq 2^X \)                                         | Set of Orbits |
 +-----------------------------------------------------------------+---------------+
@@ -257,19 +257,31 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 ### Examples of Orbit-Stabilizer
 
-1. Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
-  - The orbit $G\cdot x = G$ is the entire group
-  
-  - The stabilizer $G_x$ is only the identity.
-  
-  - The fixed points $X^g$ are only the identity.
 
-2. Let $G$ act on *itself* by conjugation.
-  - $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
+:::{.example title="?"}
+Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
-  - $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
+- The orbit $G\cdot x = G$ is the entire group
 
-  - $G^g$ (the fixed points) is the **center** $Z(G)$.
+- The stabilizer $G_x$ is only the identity.
+
+- The fixed points $X^g$ are only the identity.
+
+:::
+
+
+:::{.example title="?"}
+Let $G$ act on *itself* by conjugation.
+
+- $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
+
+- $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
+
+- $G^g$ (the fixed points) is the **center** $Z(G)$.
+
+:::
+
+
 
 :::{.corollary}
 The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
