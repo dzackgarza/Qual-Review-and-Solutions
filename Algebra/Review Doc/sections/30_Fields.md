@@ -216,8 +216,9 @@ $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect
 :::{.proposition title="?"}
 $F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
 \begin{tikzcd}
-L \arrow[d, bend right=49] \arrow[dd, dashed, bend left=49] \\
-F \arrow[d, bend right=49]                                  \\
+L \arrow[d, bend right=49, "\text{alg}"'] 
+  \arrow[dd, dashed, bend left=49, "\text{alg}"] \\
+F \arrow[d, bend right=49, "\text{alg}"']                                  \\
 k
 \end{tikzcd}
 :::
