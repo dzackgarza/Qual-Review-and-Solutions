@@ -205,38 +205,38 @@ $\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then 
 $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
 :::
 
-  - *Corollary:* $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
 
-\begin{center}
+:::{.corollary title="?"}
+$E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
+
 \begin{tikzcd}
 L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
 F                                                           \\
 k
 \end{tikzcd}
-\end{center}
+
+:::
+
+
 
 - $F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
 
 - If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
 
-\begin{center}
 \begin{tikzcd}
 L \arrow[d, bend right=49] \arrow[dd, dashed, bend left=49] \\
 F \arrow[d, bend right=49]                                  \\
 k
 \end{tikzcd}
-\end{center}
 
 - $F/k$ Galois and $L/K$ Galois $\implies F/k$  Galois **only if** $\Gal(L/F) \normal \Gal(L/k)$
   - $\implies \Gal(F/k) \cong \frac{\Gal(L/k)}{\Gal(L/F)}$
 
-\begin{center}
 \begin{tikzcd}
 L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
 F \arrow[d, bend right=49]                                  \\
 k
 \end{tikzcd}
-\end{center}
 
 **Common Counterexamples**:
 
