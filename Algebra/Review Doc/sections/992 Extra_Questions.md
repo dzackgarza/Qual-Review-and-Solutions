@@ -799,7 +799,7 @@ What is a ring of integers?
 What does “integral over $\ZZ$” mean?
 
 ### Question 6.18
-Let O be the ring of integers of Q(d), where d > 0.
+Let $\OO$ be the ring of integers of $\QQ(d)$, where $d > 0$.
 What can you say about the quotient of O by one of its prime ideals?
 
 
@@ -809,7 +809,7 @@ Do you know about Dedekind domains and class numbers?
 ### Question 6.20
 Talk about factorisation and primes in a polynomial ring.
 What is irreducibility?
-For what rings R is it true that $R[x_1, · · · , x_n]$ is a unique factorisation domain?
+For what rings R is it true that $R[x_1, \cdots , x_n]$ is a unique factorisation domain?
 What is wrong with unique factorisation if we don't have a domain?
 Now, PIDs are Noetherian, but are there UFDs which are not?
 
