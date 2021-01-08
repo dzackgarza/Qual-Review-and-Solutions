@@ -182,6 +182,8 @@ A subgroup of a finitely-generated free abelian group is?
 A subgroup of a finitely-generated free group is..?
 Prove your answers.
 
+### Question 1.42
+\todo[inline]{Missing.}
 
 ### Question 1.43
 What are the subgroups of the free group $F_2$?
@@ -194,8 +196,8 @@ Why?
 Can you find a normal one?
 
 ### Question 1.44
-Talk about the possible subgroups of $Z\times Z \times Z$.
-Now suppose that you have a subgroup of $Z \times Z \times Z$.
+Talk about the possible subgroups of $\ZZ^3$.
+Now suppose that you have a subgroup of $\ZZ^3$.
 What theorem tells you something about the structure of the quotient group?
 
 ## Classification of Finite groups
@@ -206,7 +208,7 @@ Given a finite abelian group with at most n elements of order divisible by n, pr
 ### Question 2.2
 Suppose I asked you to classify groups of order 4.
 Why isn't there anything else?
-Which of those could be realised as a galois group over Q?
+Which of those could be realised as a Galois group over $\QQ$?
 
 ### Question 2.3
 State/prove the Sylow theorems.
@@ -233,12 +235,12 @@ Prove it.
 Classify all groups of order 8.
 
 ### Question 2.10
-Classify all groups of order p3 for p prime.
+Classify all groups of order $p^3$ for $p$ prime.
 
 ### Question 2.11
-What are the groups of order p2?
-What about pq?
-What if q is congruent to 1 (mod p)?
+What are the groups of order $p^2$?
+What about $pq$?
+What if $q$ is congruent to $1\mod p$?
 
 ### Question 2.12
 What are the groups of order 12?
@@ -246,7 +248,7 @@ Can there be a group of order 12 with 2 nonisomorphic subgroups of the same orde
 
 ### Question 2.13
 How would you start finding the groups of order 56?
-Is there in fact a way for Z/7Z to act on a group of order 8 nontrivially?
+Is there in fact a way for $\ZZ/7\ZZ$ to act on a group of order 8 nontrivially?
 
 ### Question 2.14
 How many abelian groups are there of order 36?
@@ -272,10 +274,10 @@ What can you say about the structure of groups of that order?
 ### Question 2.20
 Prove that there is no simple group of order 40.
 
-## Fields and galois Theory
+## Fields and Galois Theory
 
 ### Question 3.1
-What is the galois group of a finite field?
+What is the Galois group of a finite field?
 What is a generator?
 How many elements does a finite field have?
 What can you say about the multiplicative group?
@@ -286,23 +288,23 @@ Classify finite fields, their subfields, and their field extensions.
 What are the automorphisms of a finite field?
 
 ### Question 3.3
-Take a finite field extension Fpn over Fp.
+Take a finite field extension \( \FF_p^n \) over \( \FF_p \).
 What is Frobenius?
 What is its characteristic polynomial?
 
 ### Question 3.4
-What are the characteristic and minimal polynomial of the Frobenius auto- morphism?
+What are the characteristic and minimal polynomial of the Frobenius automorphism?
 
 ### Question 3.5
 What's the field with 25 elements?
 
 ### Question 3.6
-What is the multiplicative group of F9?
+What is the multiplicative group of $\FF_9$?
 
 ### Question 3.7
 What is a separable extension?
-Can Q have a non-separable extension?
-How about Z/pZ?
+Can $\QQ$ have a non-separable extension?
+How about $\ZZ/p\ZZ$?
 Why not?
 Are all extensions of characteristic 0 fields separable?
 Of finite fields?
@@ -318,27 +320,27 @@ What is a perfect field and why is this important?
 Give an example of a non-perfect field.
 
 ### Question 3.10
-What is galois theory?
+What is Galois theory?
 State the main theorem.
 What is the splitting field of $x^5 - 2$ over Q?
 What are the intermediate extensions?
 Which extensions are normal, which are not, and why?
-What are the galois groups (over Q) of all intermediate extensions?
+What are the Galois groups (over Q) of all intermediate extensions?
 
 ### Question 3.11
-What is a galois extension?
+What is a Galois extension?
 
 ### Question 3.12
 Take a quadratic extension of a field of characteristic 0.
-Is it galois?
+Is it Galois?
 Take a degree 2 extension on top of that.
-Does it have to be galois over the base field?
+Does it have to be Galois over the base field?
 What statement in group theory can you think of that reﬂects this?
 
 
 ### Question 3.13. 
-Is abelian galois extension transitive?
-That is, if K has abelian galois group over E, E has abelian galois group over F , and K is a galois extension of F , is it necessarily true that gal(K/F ) is also abelian? give a counterexample involving number fields as well as one involving function fields.
+Is abelian Galois extension transitive?
+That is, if K has abelian Galois group over E, E has abelian Galois group over F , and K is a Galois extension of F , is it necessarily true that gal(K/F ) is also abelian? give a counterexample involving number fields as well as one involving function fields.
 
 ### Question 3.14
 What is a Kummer extension?
@@ -348,127 +350,127 @@ Say you have a field extension with only finitely many intermediate fields.
 Show that it is a simple extension.
 
 ### Question 3.16
-Tell me a condition on the galois group which is implied by irreducibility of the polynomial.
+Tell me a condition on the Galois group which is implied by irreducibility of the polynomial.
 What happens when the polynomial has a root in the base field?
 
 ### Question 3.17
 What is the discriminant of a polynomial?
 
 ### Question 3.18
-If we think of the galois group of a polynomial as contained in $S_n$, when is it contained in $A_n$?
+If we think of the Galois group of a polynomial as contained in $S_n$, when is it contained in $A_n$?
 
 ### Question 3.19
 Is Q(21/3) normal?
 What is its splitting field?
-What is its galois group?
+What is its Galois group?
 Draw the lattice of subfields.
 
 ### Question 3.20
-What's the galois group of $x^2 + 1$ over Q?
+What's the Galois group of $x^2 + 1$ over Q?
 What's the integral closure of
 Z in Q(i)?
 
 ### Question 3.21
-What's the galois group of $x^2 + 9$?
+What's the Galois group of $x^2 + 9$?
 
 ### Question 3.22
-What is the galois group of $x^2 - 2$?
+What is the Galois group of $x^2 - 2$?
 Why is $x^2 - 2$ irreducible?
 
 ### Question 3.23
-What is the galois group of Q(
+What is the Galois group of Q(
 
 ### Question 3.24
-What is the galois group of 
+What is the Galois group of 
 \todo[inline]{Missing} over Q?
 
 ### Question 3.25
-What are the galois groups of irreducible cubics?
+What are the Galois groups of irreducible cubics?
 \todo[inline]{Missing}
 
 ### Question 3.26
-If an irreducible cubic polynomial has galois group NOT contained in A3, does it necessarily have to be all of $S_3$?
+If an irreducible cubic polynomial has Galois group NOT contained in A3, does it necessarily have to be all of $S_3$?
 
 ### Question 3.27
-Compute the galois group of $x^3 - 2$ over the rationals.
+Compute the Galois group of $x^3 - 2$ over the rationals.
 
 ### Question 3.28
-How would you find the galois group of $x^3 + 2x + 1$?
+How would you find the Galois group of $x^3 + 2x + 1$?
 Adjoin a root to Q.
 Can you say something about the roots of $x^3 + 3x + 1$ in this extension?
 
 ### Question 3.29
-Compute the galois group of $x^3 + 6x + 3$.
+Compute the Galois group of $x^3 + 6x + 3$.
 
 ### Question 3.30
-Find the galois group of $x^4 - 2$ over Q.
+Find the Galois group of $x^4 - 2$ over Q.
 
 ### Question 3.31
-What's the galois group of $x^4 - 3$?
+What's the Galois group of $x^4 - 3$?
 
 ### Question 3.32
-What is the galois group of $x^4 - 2x^2 + 9$?
+What is the Galois group of $x^4 - 2x^2 + 9$?
 
 ### Question 3.33
-Calculate the galois group of $x^5 - 2$.
+Calculate the Galois group of $x^5 - 2$.
 
 
 ### Question 3.34. 
-Discuss suﬃcient conditions on a polynomial of degree 5 to have galois group $S_5$ over Q and prove your statements.
+Discuss suﬃcient conditions on a polynomial of degree 5 to have Galois group $S_5$ over Q and prove your statements.
 
 ### Question 3.35
-Show that if f is an irreducible quintic with precisely two nonreal roots, then its galois group is $S_5$.
+Show that if f is an irreducible quintic with precisely two nonreal roots, then its Galois group is $S_5$.
 
 ### Question 3.36
 Suppose you have a degree 5 polynomial over a field.
-What are necessary and suﬃcient conditions for its galois group to be of order divisible by 3?
+What are necessary and suﬃcient conditions for its Galois group to be of order divisible by 3?
 Can you give an example of an irreducible polynomial in which this is not the case?
 
 ### Question 3.37
-What is the galois group of $x^7 - 1$ over the rationals?
+What is the Galois group of $x^7 - 1$ over the rationals?
 
 ### Question 3.38
-What is the galois group of the polynomial xn - 1 over Q?
+What is the Galois group of the polynomial xn - 1 over Q?
 
 ### Question 3.39
-Describe the galois theory of cyclotomic extensions.
+Describe the Galois theory of cyclotomic extensions.
 
 ### Question 3.40
 What is the maximal real field in a cyclotomic extension $\QQ(\zeta_n)/\QQ$?
 
 ### Question 3.41
-Compute the galois group of $p(x) = x^7 - 3$.
+Compute the Galois group of $p(x) = x^7 - 3$.
 
 ### Question 3.42
-What galois stuff can you say about $x^2n - 2$?
+What Galois stuff can you say about $x^2n - 2$?
 
 ### Question 3.43
 What are the cyclic extensions of (prime) order p?
 
 ### Question 3.44
-Can you give me a polynomial whose galois group is Z/3Z?
+Can you give me a polynomial whose Galois group is Z/3Z?
 
 ### Question 3.45
-Which groups of order 4 can be realised as a galois group over Q?
+Which groups of order 4 can be realised as a Galois group over Q?
 
 ### Question 3.46
-Give a polynomial with $S_3$ as its galois group.
+Give a polynomial with $S_3$ as its Galois group.
 
 ### Question 3.47
-Give an example of a cubic with galois group $S_3$.
+Give an example of a cubic with Galois group $S_3$.
 
 ### Question 3.48
-How do you construct a polynomial over Q whose galois group is $S_n$?
+How do you construct a polynomial over Q whose Galois group is $S_n$?
 Do it for n = 7 in particular.
 
 ### Question 3.49
-What's a galois group that's not $S_n$ or $A_n$?
+What's a Galois group that's not $S_n$ or $A_n$?
 
 ### Question 3.50
-Which finite groups are galois groups for some field extension?
+Which finite groups are Galois groups for some field extension?
 
 ### Question 3.51
-What galois group would you expect a cubic to have?
+What Galois group would you expect a cubic to have?
 
 ### Question 3.52
 Draw the subgroup lattice for $S_3$.
@@ -476,12 +478,12 @@ Draw the subgroup lattice for $S_3$.
 ### Question 3.53
 Do you know what the quaternion group is?
 How many elements are there of each order?
-Suppose I have a field extension of the rationals with galois group the quaternion group.
+Suppose I have a field extension of the rationals with Galois group the quaternion group.
 How many quadratic extensions does it contain?
 Can any of them be imaginary?
 
 ### Question 3.54
-Suppose you are given a finite galois extension K/Q by $f (x) \in \ZZ[x]$ such that deg(f ) = n and gal(K/Q) = $S_n$.
+Suppose you are given a finite Galois extension K/Q by $f (x) \in \ZZ[x]$ such that deg(f ) = n and gal(K/Q) = $S_n$.
 What can you say about the roots?
 
 ### Question 3.55
@@ -498,26 +500,26 @@ Can it happen that a proper subfield of C is isomorphic to C?
 How?
 
 ### Question 3.57
-Consider the minimal polynomial f (x) for a primitive mth root of unity.
-Prove that if p divides f (a) for some integer a and (p, m) = 1 then m divides p - 1.
-Use this fact to show that there are infinitely many primes congruent to 1 (mod m).
+Consider the minimal polynomial $f(x)$ for a primitive $m$th root of unity.
+Prove that if $p$ divides $f(a)$ for some integer $a$ and $\gcd(p, m) = 1$ then $m$ divides $p - 1$.
+Use this fact to show that there are infinitely many primes congruent to $1 \mod m$.
 
 ### Question 3.58
 What is Dirichlet's theorem about primes in arithmetic progression?
 What can you say about the density of such primes?
 
 ### Question 3.59
-How many irreducible polynomials of degree six are there over F2?
+How many irreducible polynomials of degree six are there over \( \FF_2 \)?
 
 ### Question 3.60
-Can you have a degree 7 irreducible polynomial over Fp?
+Can you have a degree 7 irreducible polynomial over \( \FF_p \)?
 How about a degree 14 irreducible polynomial?
 
 ### Question 3.61
-How many irreducible polynomials are there of degree 4 over F2?
+How many irreducible polynomials are there of degree 4 over \( \FF_2 \)?
 
 ### Question 3.62
-For each prime p, give a polynomial of degree p that is irreducible over Fp.
+For each prime p, give a polynomial of degree p that is irreducible over \( \FF_p \).
 You can do it in a “uniform” way.
 
 ### Question 3.63
@@ -534,7 +536,7 @@ Why is A5 simple?
 For which n can a regular n-gon be constructed by ruler and compass?
 
 ### Question 3.66
-How do you use galois theory (or just field theory) to prove the impossibility of trisecting an angle?
+How do you use Galois theory (or just field theory) to prove the impossibility of trisecting an angle?
 Doubling a cube?
 Squaring a circle?
 
@@ -548,7 +550,7 @@ State and prove Eisenstein's Criterion.
 Why is (xp - 1)/(x - 1) irreducible over Q?
 
 ### Question 3.70
-Can you prove the fundamental theorem of algebra using galois theory?
+Can you prove the fundamental theorem of algebra using Galois theory?
 What do you need from analysis to do so?
 
 ### Question 3.71
@@ -577,7 +579,7 @@ What's Hilbert's theorem 90?
 
 ### Question 3.78
 Consider a nonconstant function between two compact Riemann Surfaces.
-How is it related to galois theory?
+How is it related to Galois theory?
 
 ## Normal Forms
 
