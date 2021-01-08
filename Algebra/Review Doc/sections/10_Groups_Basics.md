@@ -381,6 +381,8 @@ For $G$ a finite group acting on $X$,
 &= \sum_{x\in X} {\abs{G}\over \abs{Gx}  }  && \text{by Orbit-Stabilizer} \\
 &= \abs{G} \sum_{x\in X} {1 \over \abs{Gx}  }  \\
 &= \abs{G} \sum_{A\in X/G} \sum_{x\in A} {1\over \abs{A} } && \text{ since } X = \Disjoint_{A \in X/G} A \\
+&= \abs{G} \sum_{A\in X/G} 1 \\
+&= \abs{G} \abs{X/G}  
 .\]
 :::
 
