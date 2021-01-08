@@ -327,7 +327,7 @@ and suppose that $\dim_k R < \infty$. Let $\alpha \in R$.
 ### Exercises
 
 ::: {.problem title="Hungerford 5.3.5"}
-Show that if $f\in K[x]$ has degree$n$ and $F$ is a splitting field of $f$ over $K$, the $[F: K]$ divides
+Show that if $f\in K[x]$ has degree $n$ and $F$ is a splitting field of $f$ over $K$, the $[F: K]$ divides
 $n!$.
 :::
 
@@ -861,7 +861,7 @@ $B^n\to R$ is alternating $\iff$ it is skew-symmetric.
 :::
 
 ::: {.problem title="Hungerford 7.3.5"}
-If $R$ is a field and$A, B \in M_n(R)$ are invertible then the matrix $A + rB$ is invertible
+If $R$ is a field and $A, B \in M_n(R)$ are invertible then the matrix $A + rB$ is invertible
 for all but a finite number of $r\in R$.
 :::
 
