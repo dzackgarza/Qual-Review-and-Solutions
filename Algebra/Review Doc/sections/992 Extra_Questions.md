@@ -925,10 +925,10 @@ Prove that all finite integral domains are fields.
 Can a polynomial over a division ring have more roots than its degree?
 
 ### Question 6.49
-Classify (finite-dimensional) division algebras over R.
+Classify (finite-dimensional) division algebras over $\RR$.
 
 ### Question 6.50
-Give an example of a C-algebra which is not semisimple.
+Give an example of a $\CC\dash$algebra which is not semisimple.
 
 ### Question 6.51
 What is Wedderburn's theorem?
