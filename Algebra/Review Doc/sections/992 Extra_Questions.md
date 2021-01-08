@@ -1077,7 +1077,7 @@ What are the group characters of the multiplicative group of a finite field?
 Are there two nonisomorphic groups with the same representations?
 
 ### Question 8.24
-If you have a Z/5Z action on a complex vector space, what does this action look like?
+If you have a $\ZZ/5\ZZ$ action on a complex vector space, what does this action look like?
 What about an $S_3$ action?
 A dihedral group of any order?
 
@@ -1118,8 +1118,8 @@ How many irreducible representations does $S_n$ have?
 What classical function in mathematics does this number relate to?
 
 ### Question 8.32
-Discuss representations of Z, the infinite cyclic group.
-What is the group algebra of Z?
+Discuss representations of $\ZZ$, the infinite cyclic group.
+What is the group algebra of $\ZZ$?
 
 What is the connection
 \todo[inline]{Incomplete question}
