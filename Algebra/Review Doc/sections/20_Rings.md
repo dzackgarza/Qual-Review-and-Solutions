@@ -72,23 +72,6 @@ The **max spectrum** of $R$ is defined as
 .\]
 :::
 
-
-### Types of Rings
-
-:::{.definition title="Simple Modules"}
-A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
-A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
-:::
-
-:::{.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition 
-\[
-M = \bigoplus_{j\in J} M_j
-\]
-with each \( M_j \) simple.
-:::
-
-
 :::{.definition title="Integral Domain"}
 A ring is an **integral domain** if and only if it has no nonzero zero divisors:
 \[  
@@ -112,6 +95,22 @@ r = u \prod_{i=1}^n p_i
 where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::
 
+
+### Types of Rings
+
+:::{.definition title="Simple Modules"}
+A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
+A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
+:::
+
+:::{.definition title="Semisimple Modules"}
+A module \( M \) is **simple** if and only if it admits a decomposition 
+\[
+M = \bigoplus_{j\in J} M_j
+\]
+with each \( M_j \) simple.
+:::
+
 :::{.definition title="Noetherian"}
 A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
@@ -119,7 +118,6 @@ A ring $R$ is Noetherian if the ACC holds: every ascending chain of ideals $I_1 
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is *primary* iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
-
 
 :::{.definition title="Nilradical"}
 $\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
@@ -132,86 +130,23 @@ The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal id
 .\]
 :::
 
-:::{.definition title="Semisimple"}
-A nonzero unital ring $R$ is **semisimple** iff $R \cong \bigoplus_{i=1}^n M_i$ with each $M_i$ a simple module.
-:::
-
-:::{.proposition title="Characterizations of Rings"}
-- $R$ a commutative division ring $\implies R$ is a field
-- $R$ a finite integral domain $\implies R$ is a field.
-- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
-- $\FF$ a field $\implies \FF[x]$ is a PID.
-- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
-- $R$ is a UFD $\iff R[x]$ is a UFD.
-- $R$ a PID $\implies R[x]$ is a UFD
-- $R$ a PID $\implies R$ Noetherian
-- $R[x]$ a PID $\implies R$ is a field.
-:::
-
-:::{.proposition}
-Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
-:::
-
-:::{.example}
-- A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
-  - *Proof*: Use previous lemma, and $x$ is not invertible
-
-- A PID that is not a Euclidean Domain: $\ZZ\left[\frac{1 + \sqrt{-19}}{2}\right]$.
-  - *Proof*: complicated.
-
-- A UFD that is not a PID: $\FF[x, y]$.
-  - *Proof*: $\gens{x, y}$ is not principal
-
--  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
-   - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
-
--  A ring that is not an integral domain: $\ZZ/(4)$
-   - *Proof*: $2 \mod 4$ is a zero divisor.
-:::
-
-:::{.proposition}
-In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
-:::
-
-Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
-
-$x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
-
-
-:::{.proposition}
-If $R$ is a PID, then every element in $R$ has a unique prime factorization.
-:::
-
-:::{.theorem title="Krull"}
-Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
-:::
-
-:::{.theorem title="Artin-Wedderburn?"}
-If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
-:::
-
-
-:::{.corollary}
-If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
-:::
 
 ### Toward Number Theory and Algebraic Geometry
 
 :::{.definition title="Reduced Ring"}
-A ring $R$ is *reduced* if $R$ contains no nonzero nilpotent elements. 
+A ring $R$ is **reduced** if $R$ contains no nonzero nilpotent elements. 
 :::
 
 :::{.definition title="Local Ring"}
-A ring $R$ is *local* iff it contains a unique maximal ideal.
+A ring $R$ is **local** iff it contains a unique maximal ideal.
 :::
 
-
 :::{.definition title="Radical of an Ideal"}
-For an ideal $I\normal R$, the radical $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+For an ideal $I\normal R$, the **radical** $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
 :::
 
 :::{.definition title="Radical Ideal"}
-An ideal is *radical* iff $\rad(I) = I$. 
+An ideal is **radical** iff $\rad(I) = I$. 
 :::
 
 
@@ -273,3 +208,63 @@ Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})
 :::{.example}
 Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
+
+:::{.proposition title="Characterizations of Rings"}
+- $R$ a commutative division ring $\implies R$ is a field
+- $R$ a finite integral domain $\implies R$ is a field.
+- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
+- $\FF$ a field $\implies \FF[x]$ is a PID.
+- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
+- $R$ is a UFD $\iff R[x]$ is a UFD.
+- $R$ a PID $\implies R[x]$ is a UFD
+- $R$ a PID $\implies R$ Noetherian
+- $R[x]$ a PID $\implies R$ is a field.
+:::
+
+:::{.proposition}
+Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
+:::
+
+:::{.example}
+- A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
+  - *Proof*: Use previous lemma, and $x$ is not invertible
+
+- A PID that is not a Euclidean Domain: $\ZZ\left[\frac{1 + \sqrt{-19}}{2}\right]$.
+  - *Proof*: complicated.
+
+- A UFD that is not a PID: $\FF[x, y]$.
+  - *Proof*: $\gens{x, y}$ is not principal
+
+-  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
+   - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
+
+-  A ring that is not an integral domain: $\ZZ/(4)$
+   - *Proof*: $2 \mod 4$ is a zero divisor.
+:::
+
+:::{.proposition}
+In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
+:::
+
+Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
+
+$x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
+
+
+:::{.proposition}
+If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+:::
+
+:::{.theorem title="Krull"}
+Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
+:::
+
+:::{.theorem title="Artin-Wedderburn?"}
+If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
+:::
+
+
+:::{.corollary}
+If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
+:::
+
