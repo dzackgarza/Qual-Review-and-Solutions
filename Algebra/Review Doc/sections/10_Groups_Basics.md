@@ -105,15 +105,18 @@ If $H\normal G$, then
 .\]
 :::
 
-The *Quaternion group* of order 8 is given by
+
+:::{.definition title="Quaternion"}
+The **Quaternion group** of order 8 is given by
 \[
 Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
   &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
 \]
 :::
 
+
 :::{.definition title="The Dihedral Group"}
-A *dihedral group* of order $2n$ is given by 
+A **dihedral group** of order $2n$ is given by 
 \[
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 \]
