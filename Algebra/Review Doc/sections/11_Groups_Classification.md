@@ -326,7 +326,24 @@ G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 
 Let $p(x)$ be the integer partition function.
 
-> Example: $p(6) = 11$, given by $6, 5+1, 4+2, \cdots$.
+
+:::{.example title="?"}
+Example: $p(6) = 11$, given by
+\[
+&[6], \\
+&[5, 1], \\
+&[4, 2], \\
+&[4, 1, 1], \\
+&[3, 3], \\
+&[3, 2, 1], \\
+&[3, 1, 1, 1], \\
+&[2, 2, 2], \\
+&[2, 2, 1, 1], \\
+&[2, 1, 1, 1, 1], \\
+&[1, 1, 1, 1, 1, 1]
+.\]
+
+:::
 
 Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
 

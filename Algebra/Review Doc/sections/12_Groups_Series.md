@@ -32,7 +32,6 @@ Set $G^0 = G$ and $G^{i+1} = [G, G^i]$, then $G^0 \geq G^1 \geq \cdots$ is the *
 > Mnemonic: "lower" because the chain is descending.
 > Iterate the adjoint map $[\wait, G]$, if this terminates then the map is nilpotent, so call $G$ nilpotent!
 
-
 :::{.definition title="Upper Central Series"}
 Set $Z_0 = 1$, $Z_1 = Z(G)$, and $Z_{i+1} \leq G$ to be the subgroup satisfying $Z_{i+1}/Z_i = Z(G/Z_i)$.
 Then $Z_0 \leq Z_1 \leq \cdots$ is the *upper central series* of $G$.
