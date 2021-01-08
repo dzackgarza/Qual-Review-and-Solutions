@@ -907,7 +907,7 @@ Another one?
 What about completions?
 
 ### Question 6.45
-Consider the space of functions from the natural numbers to C endowed with the usual law of addition and the following analogue of the convolution product:
+Consider the space of functions from the natural numbers to $\CC$ endowed with the usual law of addition and the following analogue of the convolution product:
 
 \todo[inline]{Missing}
 
