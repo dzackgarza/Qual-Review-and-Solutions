@@ -2,45 +2,62 @@
 
 ## Exercises
 
-[\[prob:1.1\]]{#prob:1.1 label="prob:1.1"} If
+::: {#prob:1.1 .problem*}
+**Problem 1** (Hungerford 1.6.3). If
 $\sigma = (i_1 i_2 \cdots i_r) \in S_n$ and $\tau \in S_n$, then show
 that $\tau\sigma\tau^{-1} = (\tau(i_1) \tau(i_2) \cdots \tau(i_r))$.
+:::
 
-[\[prob:1.2\]]{#prob:1.2 label="prob:1.2"} Show that
+::: {#prob:1.2 .problem*}
+**Problem 2** (Hungerford 1.6.4). Show that
 $S_n \cong \left\langle (12), (123\cdots n)\right\rangle$ and also that
 $S_n \cong \left\langle (12), (23\cdots n)\right\rangle$
+:::
 
-[\[prob:1.3\]]{#prob:1.3 label="prob:1.3"} Let $G$ be a finite abelian
-group that is not cyclic. Show that $G$ contains a subgroup isomorphic
-to $\mathbb{Z}_p \oplus \mathbb{Z}_p$ for some prime $p$.
+::: {#prob:1.3 .problem*}
+**Problem 3** (Hungerford 2.2.1). Let $G$ be a finite abelian group that
+is not cyclic. Show that $G$ contains a subgroup isomorphic to
+$\mathbb{Z}_p \oplus \mathbb{Z}_p$ for some prime $p$.
+:::
 
-[\[prob:1.4\]]{#prob:1.4 label="prob:1.4"} Determine (up to isomorphism)
-all abelian groups of order 64; do the same for order 96.
+::: {#prob:1.4 .problem*}
+**Problem 4** (Hungerford 2.2.12.b). Determine (up to isomorphism) all
+abelian groups of order 64; do the same for order 96.
+:::
 
-[\[prob:1.5\]]{#prob:1.5 label="prob:1.5"} Let $G$ be a group and
+::: {#prob:1.5 .problem*}
+**Problem 5** (Hungerford 2.4.1). Let $G$ be a group and
 $A \trianglelefteq G$ be a normal abelian subgroup. Show that $G/A$ acts
 on $A$ by conjugation and construct a homomorphism
 $\varphi: G/A \to \mathrm{Aut}(A)$.
+:::
 
-[\[prob:1.6\]]{#prob:1.6 label="prob:1.6"} Let $Z(G)$ be the center of
-$G$. Show that if $G/Z(G)$ is cyclic, then $G$ is abelian.
+::: {#prob:1.6 .problem*}
+**Problem 6** (Hungerford 2.4.9). Let $Z(G)$ be the center of $G$. Show
+that if $G/Z(G)$ is cyclic, then $G$ is abelian.
 
 *Note that Hungerford uses the notation $C(G)$ for the center.*
+:::
 
-[\[prob:1.7\]]{#prob:1.7 label="prob:1.7"} Let $G$ be a finite group and
+::: {#prob:1.7 .problem*}
+**Problem 7** (Hungerford 2.5.6). Let $G$ be a finite group and
 $H \trianglelefteq G$ a normal subgroup of order $p^k$. Show that $H$ is
 contained in every Sylow $p$-subgroup of $G$.
+:::
 
-[\[prob:1.8\]]{#prob:1.8 label="prob:1.8"} Let
-$\left| G \right| = p^n q$ for some primes $p > q$. Show that $G$
-contains a unique normal subgroup of index $q$.
+::: {#prob:1.8 .problem*}
+**Problem 8** (Hungerford 2.5.9). Let $\left| G \right| = p^n q$ for
+some primes $p > q$. Show that $G$ contains a unique normal subgroup of
+index $q$.
+:::
 
-## Qual Problems
+## Qual problem\*s
 
-[\[prob:1.9\]]{#prob:1.9 label="prob:1.9"} Let $G$ be a finite group and
-$p$ a prime number. Let $X_p$ be the set of Sylow-$p$ subgroups of $G$
-and $n_p$ be the cardinality of $X_p$. Let $\mathrm{Sym}(X)$ be the
-permutation group on the set $X_p$.
+::: {#prob:1.9 .problem*}
+**Problem 9**. Let $G$ be a finite group and $p$ a prime number. Let
+$X_p$ be the set of Sylow-$p$ subgroups of $G$ and $n_p$ be the
+cardinality of $X_p$. Let $\mathrm{Sym}(X)$ be the permutation group on
+the set $X_p$.
 
 1.  Construct a homomorphism $\rho: G \to \mathrm{Sym}(X_p)$ with image
     a transitive subgroup (i.e. with a single orbit).
@@ -49,26 +66,30 @@ permutation group on the set $X_p$.
 
 3.  Show that for any $1\leq a \leq 4$ and any prime power $p^k$, no
     group of order $ap^k$ is simple.
+:::
 
-[\[prob:1.10\]]{#prob:1.10 label="prob:1.10"}
-
-Let $G$ be a finite group and let $N \trianglelefteq G$, and let $p$ be
-a prime number and $Q$ a subgroup of $G$ such that $N \subset Q$ and
-$Q/N$ is a Sylow $p-$subgroup of $G/N$.
+::: {#prob:1.10 .problem*}
+**Problem 10**. Let $G$ be a finite group and let $N \trianglelefteq G$,
+and let $p$ be a prime number and $Q$ a subgroup of $G$ such that
+$N \subset Q$ and $Q/N$ is a Sylow $p-$subgroup of $G/N$.
 
 1.  Prove that $Q$ contains a Sylow $p-$subgroup of $G$.
 
 2.  Prove that every Sylow $p-$subgroup of $G/N$ is the image of a Sylow
     $p-$subgroup of $G$.
+:::
 
-[\[prob:1.11\]]{#prob:1.11 label="prob:1.11"} Let $G$ be a finite group
-and $H<G$ a subgroup. Let $n_H$ be the number of subgroups of $G$ that
-are conjugate to $H$. Show that $n_H$ divides the order of $G$.
+::: {#prob:1.11 .problem*}
+**Problem 11**. Let $G$ be a finite group and $H<G$ a subgroup. Let
+$n_H$ be the number of subgroups of $G$ that are conjugate to $H$. Show
+that $n_H$ divides the order of $G$.
+:::
 
-[\[prob:1.12\]]{#prob:1.12 label="prob:1.12"} Let $G=S_5$, the symmetric
-group on 5 elements. Identify all conjugacy classes of elements in $G$,
-provide a representative from each class, and prove that this list is
-complete.
+::: {#prob:1.12 .problem*}
+**Problem 12**. Let $G=S_5$, the symmetric group on 5 elements. Identify
+all conjugacy classes of elements in $G$, provide a representative from
+each class, and prove that this list is complete.
+:::
 
 # Problem Set Two
 
