@@ -182,15 +182,18 @@ $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i \in \FF_p[x]$ of de
 
 :::{.proof}
 $\impliedby$:
-Suppose $f$ is irreducible of degree $d$.
-Then $f \divides x^{p^d} - x$ (consider $F[x]/\gens{f}$) and $x^{p^d} - x \divides x^{p^n} - x \iff d\divides n$.
+
+- Suppose $f$ is irreducible of degree $d$.
+- Then $f \divides x^{p^d} - x$, by considering $F[x]/\gens{f}$.
+- Thus $x^{p^d} - x \divides x^{p^n} - x \iff d\divides n$.
 
 $\implies$:
 
 - $\alpha \in \GF(p^n) \iff \alpha^{p^n} - \alpha = 0$, so every element is a root of $\phi_n$ and $\deg \min(\alpha, \FF_p) \divides n$ since $\FF_p(\alpha)$ is an intermediate extension.
 
 - So if $f$ is an irreducible factor of $\phi_n$, $f$ is the minimal polynomial of some root $\alpha$ of $\phi_n$, so $\deg f \divides n$.
-$\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ has distinct roots and thus no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
+
+-  $\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ has distinct roots and thus no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
 :::
 
 :::{.proposition}
@@ -198,7 +201,11 @@ No finite field is algebraically closed.
 :::
 
 :::{.proof}
-Todo
+If \( k = \ts{ a_1, a_2, \cdots a_n } \)  then define the polynomial 
+\[
+f(x) \da 1 +\prod_{j=1}^n (x-a_j) \in k[x]
+.\]
+This has no roots in $k$.
 :::
 \todo{Proof}
 
