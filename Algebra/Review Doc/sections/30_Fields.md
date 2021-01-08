@@ -264,8 +264,6 @@ Take \( \QQ\qty{ \sqrt[4]{2} } / \QQ\qty{ \sqrt{2} } / \QQ \).
 :::
 
 
-
-
 :::{.proposition title="?"}
 If $L/k$ is algebraic, then $F/k$ separable:
 
