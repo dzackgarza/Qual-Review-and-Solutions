@@ -209,34 +209,42 @@ $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
 :::{.corollary title="?"}
 $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
 
+
+:::
+
+
+:::{.proposition title="?"}
+$F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
+\begin{tikzcd}
+L \arrow[d, bend right=49] \arrow[dd, dashed, bend left=49] \\
+F \arrow[d, bend right=49]                                  \\
+k
+\end{tikzcd}
+:::
+
+
+:::{.proposition title="?"}
+If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
 \begin{tikzcd}
 L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
-F                                                           \\
+F \arrow[d, bend right=49]                                  \\
 k
 \end{tikzcd}
 
 :::
 
 
-
-- $F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
-
-- If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
-
 \begin{tikzcd}
-L \arrow[d, bend right=49] \arrow[dd, dashed, bend left=49] \\
-F \arrow[d, bend right=49]                                  \\
+L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
+F                                                           \\
 k
 \end{tikzcd}
+
+
 
 - $F/k$ Galois and $L/K$ Galois $\implies F/k$  Galois **only if** $\Gal(L/F) \normal \Gal(L/k)$
   - $\implies \Gal(F/k) \cong \frac{\Gal(L/k)}{\Gal(L/F)}$
 
-\begin{tikzcd}
-L \arrow[d, dotted, bend right=49] \arrow[dd, bend left=49] \\
-F \arrow[d, bend right=49]                                  \\
-k
-\end{tikzcd}
 
 **Common Counterexamples**:
 
