@@ -56,6 +56,18 @@ An extension $L/K$ is *Galois* iff any of the following hold:
 4. $L$ is finite, normal, and separable.
 :::
 
+:::{.definition title="Characterizations of Galois Extensions"}
+Let $L/k$ be a finite field extension.
+TFAE:
+
+- $L/k$ is **Galois**
+- $L/k$ is finite, normal, and separable.
+- $L/k$ is the splitting field of a separable polynomial
+- $\abs{\Aut(L/k)} = [L: k]$
+- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
+:::
+
+
 
 :::{.definition title="Galois Group"}
 If $L/k$ is Galois, we define $\Gal(L/k) \definedas \Aut(L/k)$.
@@ -344,16 +356,6 @@ In this case,
 
 - $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
 
-:::{.definition title="Characterizations of Galois Extensions"}
-Let $L/k$ be a finite field extension.
-TFAE:
-
-- $L/k$ is **Galois**
-- $L/k$ is finite, normal, and separable.
-- $L/k$ is the splitting field of a separable polynomial
-- $\abs{\Aut(L/k)} = [L: k]$
-- The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-:::
 
 :::{.theorem title="Fundamental Theorem of Galois Theory"}
 Let $L/k$ be a Galois extension, then there is a correspondence:
