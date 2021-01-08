@@ -246,6 +246,19 @@ k
 :::
 
 
+:::{.proposition title="Separability in towers"}
+For $F/L/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
+\begin{tikzcd}
+L \arrow[d, bend right=49, "\text{sep}"'] 
+  \arrow[dd, dashed, bend left=49, "\text{sep}"] \\
+F \arrow[d, bend right=49, "\text{sep}"']                                  \\
+k
+\end{tikzcd}
+
+:::
+
+
+
 :::{.proposition title="?"}
 If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
 \begin{tikzcd}
