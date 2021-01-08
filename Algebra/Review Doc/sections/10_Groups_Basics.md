@@ -267,7 +267,7 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 :::
 
 
-### Examples of Orbit-Stabilizer
+### Examples of Orbit-Stabilizer and the Class Equation
 
 
 :::{.example title="Trivial"}
@@ -297,38 +297,55 @@ Let $G$ act on *itself* by conjugation.
 
 
 :::{.corollary}
-The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$.
+The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$, i.e.
+\[
+\abs{C(x)} = [G: C_G(x)]
+.\]
+
 :::
 
-### The Class Equation
 
+:::{.corollary title="The Class Equation"}
 \[
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
 \]
+:::
 
+
+:::{.remark}
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 
-**Examples**
+:::
 
-1. Let $G$ act on $X$, its set of *subgroups*, by conjugation.
 
-  - $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+:::{.example title="?"}
+Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
 
-  - $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
+- $G\cdot H = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
 
-  - $X^g$ is the set of **normal subgroups** of $G$
+- $G_H = N_G(H)$ is the **normalizer** of in $G$ of $H$
+
+- $X^g$ is the set of **normal subgroups** of $G$
+
+:::
 
 :::{.corollary}
 Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$.
 :::
 
-2. For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
 
-  - $G\cdot gH = G/H$, i.e. this is a *transitive* action.
+:::{.example title="?"}
+For a fixed proper subgroup $H< G$, let $G$ act on its cosets $G/H = \theset{gH\suchthat g\in G}$ by left translation.
 
-  - $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
+- $G\cdot gH = G/H$, i.e. this is a *transitive* action.
 
-  - $(G/H)^G = \emptyset$
+- $G_{gH} = gHg\inv$ is a *conjugate subgroup* of $H$
+
+- $(G/H)^G = \emptyset$
+
+:::
+
+
 
 :::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
