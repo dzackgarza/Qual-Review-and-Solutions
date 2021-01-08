@@ -261,11 +261,11 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
-- The orbit $G\cdot x = G$ is the entire group
+- The orbit $\OO_x = Gx = G$ is the entire group
 
 - The stabilizer \( G_x = \ts{ e } \) is only the identity.
 
-- The fixed points $X^g$ are only the identity.
+- The set of fixed points \( X^g = \ts{ e } \) is only the identity.
 
 :::
 
@@ -273,11 +273,12 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
 
-- $G \cdot x$ is the **conjugacy class** of $x$ (so not generally transitive)
+- The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
+  - Note that this means this action is not necessarily transitive.
 
 - $G_x = Z(x) \definedas C_G(x) = \theset{g \suchthat [g, x] = e}$, the **centralizer** of $x$.
 
-- $G^g$ (the fixed points) is the **center** $Z(G)$.
+- The set of fixed points $X^g$ is the **center** $Z(G)$.
 
 :::
 
