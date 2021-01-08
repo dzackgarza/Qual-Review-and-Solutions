@@ -257,7 +257,6 @@ k
 
 :::
 
-
 :::{.warnings}
 Being Galois is **not** transitive.
 Take \( \QQ\qty{ \sqrt[4]{2} } / \QQ\qty{ \sqrt{2} } / \QQ \).
