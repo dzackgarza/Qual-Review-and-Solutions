@@ -1,4 +1,10 @@
-# Even More Algebra Question (In Progress)
+# Even More Algebra Questions
+
+
+:::{.remark}
+(DZG): These all come from a random PDF I found, but I couldn't find the original author/source!
+:::
+
 
 ## Groups
 
@@ -183,7 +189,7 @@ A subgroup of a finitely-generated free group is..?
 Prove your answers.
 
 ### Question 1.42
-\todo[inline]{Missing.}
+What are the subgroups of \( \ZZ^2 \)?
 
 ### Question 1.43
 What are the subgroups of the free group $F_2$?
@@ -378,14 +384,21 @@ What is the Galois group of $x^2 - 2$?
 Why is $x^2 - 2$ irreducible?
 
 ### Question 3.23
-\todo[inline]{Missing}
+What is the Galois group of 
+\[
+\QQ(\sqrt 2, \sqrt 3)\, / \, \QQ
+?\]
+
 
 ### Question 3.24
-\todo[inline]{Missing} 
+What is the Galois group of 
+\[
+\QQ\qty{ \sqrt{n_1}, \cdots, \sqrt{n_m} } \, / \, \QQ(\sqrt{n_1} + \cdots + \sqrt{n_m})
+?\]
+
 
 ### Question 3.25
 What are the Galois groups of irreducible cubics?
-\todo[inline]{Missing}
 
 ### Question 3.26
 If an irreducible cubic polynomial has Galois group NOT contained in A3, does it necessarily have to be all of $S_3$?
