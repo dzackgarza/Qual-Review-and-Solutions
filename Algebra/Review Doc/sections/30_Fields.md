@@ -235,7 +235,7 @@ $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect
 :::
 
 
-:::{.proposition title="?"}
+:::{.proposition title="Algebraicity is transitive"}
 $F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
 \begin{tikzcd}
 L \arrow[d, bend right=49, "\text{alg}"'] 
@@ -246,7 +246,7 @@ k
 :::
 
 
-:::{.proposition title="Separability in towers"}
+:::{.proposition title="Separability is transitive"}
 For $F/L/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
 \begin{tikzcd}
 L \arrow[d, bend right=49, "\text{sep}"'] 
