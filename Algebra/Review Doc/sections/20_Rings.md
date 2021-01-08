@@ -2,7 +2,7 @@
 
 ## Definitions
 
-### Basics
+### Undergrad Review
 
 :::{.definition title="Divisibility of Elements"}
 An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \).
@@ -16,34 +16,15 @@ r=ab \implies a \in R\units \text{ or }  b\in R\units
 \]
 :::
 
-
-:::{.definition title="Simple Modules"}
-A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
-A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
-:::
-
-:::{.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition 
-\[
-M = \bigoplus_{j\in J} M_j
-\]
-with each \( M_j \) simple.
-:::
-
 :::{.definition title="Prime Element"}
 An element $p\in R$ is **prime** iff 
 \[  
-a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \txt{or} b\divides p
+a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divides p
 .\]
 :::
 
-:::{.example title="An irreducible element that is not prime."}
-$3\in \ZZ[\sqrt{-5}]$. 
-Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
-:::
-
 :::{.definition title="Zero Divisor"}
-An element $r\in R$ is a *zero-divisor* iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
+An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
 Equivalently, the map
 \[  
 r_\wait: R &\to R \\
@@ -53,7 +34,7 @@ fails to be injective.
 :::
 
 :::{.definition title="Associate Elements"}
-$a, b\in R$ are *associates* iff there exists a $u\in R\units$ such that $a = ub$. 
+$a, b\in R$ are **associates** iff there exists a $u\in R\units$ such that $a = ub$. 
 Equivalently, $a\divides b$ and $b\divides a$.
 :::
 
@@ -82,6 +63,20 @@ $\maxspec(R) = \theset{\mfm \normal R \suchthat \mfm \text{ is maximal}}$ is the
 
 
 ### Types of Rings
+
+:::{.definition title="Simple Modules"}
+A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
+A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
+:::
+
+:::{.definition title="Semisimple Modules"}
+A module \( M \) is **simple** if and only if it admits a decomposition 
+\[
+M = \bigoplus_{j\in J} M_j
+\]
+with each \( M_j \) simple.
+:::
+
 
 :::{.definition title="Integral Domain"}
 Slogan: no nonzero zero divisors, i.e.
@@ -260,5 +255,10 @@ This follows because every $C_i \subseteq \hat{C}$.
 
 **$\hat{C}$ is in $S$:**
 Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
+:::
+
+:::{.example title="An irreducible element that is not prime."}
+$3\in \ZZ[\sqrt{-5}]$. 
+Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
 :::
 
