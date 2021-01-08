@@ -487,10 +487,9 @@ What can you say about the roots?
 
 ### Question 3.55
 How many automorphisms does the complex field have?
-How can you extend
-2) of an algebraic field into C?
+How can you extend the automorphisms of an algebraic field into $\CC$?
 How can you extend a simple automorphism (e.g. a general subfield isomorphism?
-What feature of C allows you to?
+What feature of $\CC$ allows you to?
 \todo[inline]{Missing}
 
 
@@ -523,16 +522,16 @@ You can do it in a “uniform” way.
 
 ### Question 3.63
 Can we solve general quadratic equations by radicals?
-$A_n$d what about cubic and so on?
+And what about cubics and so on?
 Why can't you solve 5th degree equations by radicals?
 
 ### Question 3.64
 Talk about solvability by radicals.
 Why is $S_5$ not solvable?
-Why is A5 simple?
+Why is $A_5$ simple?
 
 ### Question 3.65
-For which n can a regular n-gon be constructed by ruler and compass?
+For which $n$ can a regular $n\dash$gon be constructed by ruler and compass?
 
 ### Question 3.66
 How do you use Galois theory (or just field theory) to prove the impossibility of trisecting an angle?
@@ -545,8 +544,9 @@ Give an example of a non-constructible number whose degree is nevertheless a pow
 
 ### Question 3.68
 State and prove Eisenstein's Criterion.
+
 ### Question 3.69
-Why is (xp - 1)/(x - 1) irreducible over Q?
+Why is $(x^p - 1)/(x - 1)$ irreducible over $\QQ$?
 
 ### Question 3.70
 Can you prove the fundamental theorem of algebra using Galois theory?
@@ -566,8 +566,8 @@ What does this have to do with symmetric polynomials?
 Find a non-symmetric polynomial whose square is symmetric.
 
 ### Question 3.75
-Let f be a degree 4 polynomial with integer coefficients.
-What's the smallest finite field in which f necessarily has four roots?
+Let $f$ be a degree 4 polynomial with integer coefficients.
+What's the smallest finite field in which $f$ necessarily has four roots?
 
 ### Question 3.76
 Define p-adic numbers.
@@ -595,14 +595,14 @@ How would you tell if they are conjugate or not?
 What theorem are you using?
 State it.
 How does it apply to this situation?
-Why is $\kk[T]$ a PID?
+Why is $k[x]$ a PID?
 If two matrices are conjugate over the algebraic closure of a field, does that mean that they are conjugate over the base field too?
 
 ### Question 4.4
-If two real matrices are conjugate in Mn(C), are they necessarily conjugate in Mn(R) as well?
+If two real matrices are conjugate in $\Mat(n\times n, \CC)$, are they necessarily conjugate in $\Mat(n \cross N, R)$ as well?
 
 ### Question 4.5
-Give the $4 \times 4$ Jordan forms with minimal polynomial (x - 1)(x - 2)2.
+Give the $4 \times 4$ Jordan forms with minimal polynomial $(x - 1)(x - 2)^2$.
 
 ### Question 4.6
 Talk about Jordan canonical form.
@@ -615,7 +615,7 @@ What are all the matrices that commute with a given Jordan block?
 How do you determine the number and sizes of the blocks for Jordan canonical form?
 
 ### Question 4.9
-For any matrix A over the complex numbers, can you solve B2 = A?
+For any matrix A over the complex numbers, can you solve $B^2 = A$?
 
 ### Question 4.10
 What is rational canonical form?
@@ -625,7 +625,7 @@ Describe all the conjugacy classes of $3 \times 3$ matrices with rational entrie
 Give a representative in each class.
 
 ### Question 4.12
-What $3 \times 3$ matrices over the rationals (up to similarity) satisfy f (A) = 0, where$f (x) = (x^2 + 2)(x - 1)^3$?
+What $3 \times 3$ matrices over the rationals (up to similarity) satisfy $f (A) = 0$, where $f (x) = (x^2 + 2)(x - 1)^3$?
 List all possible rational forms.
 \todo[inline]{Check}
 
@@ -645,23 +645,22 @@ When do the powers of a matrix tend to zero?
 If the traces of all powers of a matrix A are 0, what can you say about A?
 
 ### Question 4.17
-When and how can we solve the matrix equation exp(A) = B?
+When and how can we solve the matrix equation $\exp(A) = B$?
 Do it over the complex numbers and over the real numbers. give a counterexample with real entries.
 
 ### Question 4.18
-Say we can find a matrix A such that exp(A) = B for B in SLn(R).
-Does
-A also have to be in SLn(R)?
-Can you take A to be in SLn(R)?
+Say we can find a matrix $A$ such that $\exp(A) = B$ for $B$ in $SL_n(\RR)$.
+Does $A$ also have to be in $\SL_n(R)$?
+Does $A$ *need* to be in $SL_n(R)$?
 
 ### Question 4.19
 Is a square matrix always similar to its transpose?
 
 ### Question 4.20
-What are the conjugacy classes of SL2(R)?
+What are the conjugacy classes of $\SL_2(\RR)$?
 
 ### Question 4.21
-What are the conjugacy classes in gL2(C)?
+What are the conjugacy classes in $\GL_2(\CC)$?
 
 ## Matrices and Linear Algebra
 
@@ -672,7 +671,7 @@ What is an orthogonal matrix?
 What's special about them?
 
 ### Question 5.2
-What are the possible images of the unit circle under a linear transformation of R2?
+What are the possible images of the unit circle under a linear transformation of $\RR^2$?
 
 ### Question 5.3
 Explain geometrically how you diagonalise a quadratic form.
@@ -710,10 +709,10 @@ To which operators does the spectral theorem for symmetric matrices generalise?
 Given a skew-symmetric/skew-Hermitian matrix S, show that 
 $U = (S + I)(S - I)-1$ 
 is orthogonal/unitary.
-Then find an expression for S in terms of U .
+Then find an expression for $S$ in terms of $U$.
 
 ### Question 5.14
-If a linear transformation preserves a nondegenerate alternating form and has k as an eigenvalue, prove that 1/k is also an eigenvalue.
+If a linear transformation preserves a nondegenerate alternating form and has $k$ as an eigenvalue, prove that $1/k$ is also an eigenvalue.
 
 ### Question 5.15
 State/prove the Cayley–Hamilton theorem.
@@ -732,7 +731,7 @@ What can you say about the eigenspaces of two matrices that commute with each ot
 What is a Toeplitz operator?
 
 ### Question 5.20
-What is the number of invertible matrices over Z/pZ?
+What is the number of invertible matrices over $\ZZ/p\ZZ$?
 
 ## Rings
 
