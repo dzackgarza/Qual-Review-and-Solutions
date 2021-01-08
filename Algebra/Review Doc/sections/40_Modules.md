@@ -39,14 +39,20 @@ A module $M$ is **projective** iff $M$ is a direct summand of a free module $F =
 
 :::{.example title="?"}
 Free implies projective, but not the converse.
-Let \( R_1, R_2 \) be two nontrivial rings, then both are projective \( \qty{R_1 \oplus  R_2}\dash \)modules.
+Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
+Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
+setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
+Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
 
 
 
 
-Definition (Exact Sequences)
-: A sequence of module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
+:::{.definition title="Exact Sequences"}
+A sequence of \(R\dash\)module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
+:::
+
+
 
 Proposition (Splitting Exact Sequences)
 :   If $0 \to A \to B \to C \to 0$ is a short exact sequence, then
