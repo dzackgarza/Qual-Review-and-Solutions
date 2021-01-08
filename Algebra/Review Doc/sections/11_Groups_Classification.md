@@ -1,3 +1,158 @@
+## Isomorphism Theorems
+
+:::{.theorem title="1st Isomorphism Theorem"}
+If $\phi:G\to H$ is a group morphism then \[G/\ker \phi \cong \im \phi.\]
+
+Note: for this to make sense, we also have
+
+- $\ker \phi \normal G$
+- $\im \phi \leq G$
+:::
+
+:::{.corollary}
+If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
+:::
+
+
+:::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
+If $S \leq G$ and $N \normal G$, then
+\[
+\frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
+.\]
+
+Note: for this to make sense, we also have
+    
+- $SN \leq G$,
+- $S\intersect N \normal S$,
+:::
+
+![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png){width=350px}
+
+:::{.corollary}
+If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
+:::
+
+:::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
+Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
+
+1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
+2. If $K\normal G$ then $K/N \normal G/N$.
+3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
+3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
+4. If $K\normal G$, then we can cancel normal subgroups:
+\[  
+\frac{G/N}{K/N} \cong \frac{G}{K}
+.\]
+:::
+
+
+:::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
+Suppose $N \normal G$, then there exists a correspondence:
+
+\[  
+\left\{
+H < G \suchthat N \subseteq H
+\right\}
+\iff
+\left\{
+H \suchthat H < \frac G N
+\right\}
+\\
+\correspond{
+  \text{Subgroups of $G$} \\
+  \text{containing $N$}
+} \iff
+\correspond{
+  \text{Subgroups of the } \\
+  \text{quotient $G/N$}
+}
+.\]
+
+In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
+:::
+
+Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
+
+
+## Products
+
+:::{.theorem title="Chinese Remainder Theorem"}
+\[
+\gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
+.\]
+:::
+
+:::{.theorem title="Recognizing Direct Products"}
+We have $G \cong H \times K$ when
+
+- $H, K \normal G$
+
+- $G = HK$.
+
+- $H\intersect K = \theset{e} \subset G$
+
+> Note: can relax to $[h,k] = 1$ for all $h, k$.
+
+:::
+
+:::{.theorem title="Recognizing Generalized Direct Products"}
+We have $G \cong \prod_{i=1}^n H_i$ when
+
+- $H_i \normal G$ for all $i$.
+
+- $G = H_1 \cdots H_n$
+
+- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
+
+> Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
+
+:::
+
+:::{.theorem title="Recognizing Semidirect Products"}
+We have $G \cong N \semidirect_\psi H$ when
+
+- $N \normal G$
+
+- $G =  NH$
+
+- $H \actson N$ by conjugation via a map
+  \[  
+  \psi: H \to \Aut(N) \\
+  h \mapsto h(\wait)h^{-1}
+  .\]
+
+> Relaxed condition: $H, N \normal G$ for direct product, or just $H\leq G$ for a semidirect product.
+
+:::
+
+:::{.proposition}
+If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
+:::
+
+
+:::{.fact}
+\envlist
+
+-  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
+
+- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size 
+\[  
+\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+.\]
+  
+  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
+
+- \[ \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\] where $\varphi$ is the totient function.
+
+  - $\varphi(p^k) = p^{k-1}(p-1)$
+
+- If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.
+
+
+:::
+
+
+
 ## Sylow Theorems
 
 
@@ -76,154 +231,6 @@ If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow 
 Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 :::
-
-## Products
-
-:::{.theorem title="Chinese Remainder Theorem"}
-\[
-\gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
-.\]
-:::
-
-:::{.theorem title="Recognizing Direct Products"}
-We have $G \cong H \times K$ when
-
-- $H, K \normal G$
-
-- $G = HK$.
-
-- $H\intersect K = \theset{e} \subset G$
-
-> Note: can relax to $[h,k] = 1$ for all $h, k$.
-
-:::
-
-:::{.theorem title="Recognizing Generalized Direct Products"}
-We have $G \cong \prod_{i=1}^n H_i$ when
-
-- $H_i \normal G$ for all $i$.
-
-- $G = H_1 \cdots H_n$
-
-- $H_k \intersect H_1 \cdots \hat{H_k} \cdots H_n = \emptyset$
-
-> Note on notation: intersect $H_k$ with the amalgam *leaving out* $H_k$.
-
-:::
-
-:::{.theorem title="Recognizing Semidirect Products"}
-We have $G \cong N \semidirect_\psi H$ when
-
-- $N \normal G$
-
-- $G =  NH$
-
-- $H \actson N$ by conjugation via a map
-  \[  
-  \psi: H \to \Aut(N) \\
-  h \mapsto h(\wait)h^{-1}
-  .\]
-
-> Note the relaxed conditions compared to *direct* product: $H\normal G$ and $K\leq G$ to get a semidirect product instead.
-
-:::
-
-**Useful Facts**
-
--  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
-
-- $\Aut((\ZZ/(p)^n) \cong \GL(n, \FF_p)$, which has size 
-\[  
-\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
-.\]
-  
-  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
-
-- \[ \Aut(\ZZ/(n)) \cong \ZZ/(n)\units \cong \ZZ/({\varphi(n)})\] where $\varphi$ is the totient function.
-
-  - $\varphi(p^k) = p^{k-1}(p-1)$
-
-- If $G, H$ have coprime order then $\Aut(G\oplus H) \cong \Aut(G) \oplus \Aut(H)$.
-
-
-## Isomorphism Theorems
-
-:::{.theorem title="1st Isomorphism Theorem"}
-If $\phi:G\to H$ is a group morphism then \[G/\ker \phi \cong \im \phi.\]
-
-Note: for this to make sense, we also have
-
-- $\ker \phi \normal G$
-- $\im \phi \leq G$
-:::
-
-:::{.corollary}
-If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
-:::
-
-:::{.proposition}
-If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
-:::
-
-:::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
-If $S \leq G$ and $N \normal G$, then
-\[
-\frac{SN}{N} \cong \frac{S}{S\intersect N} \quad \text{ and }\quad \abs{SN} = \frac{\abs S \abs N}{\abs{S\intersect N}}
-.\]
-
-Note: for this to make sense, we also have
-    
-- $SN \leq G$,
-- $S\intersect N \normal S$,
-:::
-
-![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png)
-
-:::{.corollary}
-If we relax the conditions to $S, N \leq G$ with $S \in N_G(N)$, then $S\intersect N \normal S$ (but is not normal in $G$) and the theorem still applies.
-:::
-
-:::{.theorem title="Cancellation / 3rd Isomorphism Theorem"}
-Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
-
-1. If $K\leq G$ then $K/N \leq G/N$ is a subgroup
-2. If $K\normal G$ then $K/N \normal G/N$.
-3. Every subgroup of $G/N$ is of the form $K/N$ for some such $K \leq G$.
-3. Every *normal* subgroup of $G/N$ is of the form $K/N$ for some such $K \normal G$.
-4. If $K\normal G$, then we can cancel normal subgroups:
-\[  
-\frac{G/N}{K/N} \cong \frac{G}{K}
-.\]
-:::
-
-
-:::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
-Suppose $N \normal G$, then there exists a correspondence:
-
-\[  
-\left\{
-H < G \suchthat N \subseteq H
-\right\}
-\iff
-\left\{
-H \suchthat H < \frac G N
-\right\}
-\\
-\correspond{
-  \text{Subgroups of $G$} \\
-  \text{containing $N$}
-} \iff
-\correspond{
-  \text{Subgroups of the } \\
-  \text{quotient $G/N$}
-}
-.\]
-
-In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
-:::
-
-Note: $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
-
 
 ## Special Classes of Groups
 
