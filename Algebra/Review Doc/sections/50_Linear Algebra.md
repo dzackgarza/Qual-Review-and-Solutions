@@ -3,11 +3,13 @@
 
 
 :::{.definition title="Invariant Factor"}
-  \todo[inline]{todo}
+Todo
+\todo[inline]{todo}
 :::
 
 
 :::{.definition title="Elementary Divisor"}
+Todo
 \todo[inline]{todo}
 :::
 
@@ -298,7 +300,16 @@ M = \left[\begin{array}{rr}
 .\]
 :::
 
-2.
+
+:::{.example title="?"}
+A matrix that:
+
+- Is not diagonalizable over $\CC$,
+
+- Has eigenvalues $[1, 1]$ (repeated, multiplicity 2)
+
+- $\min_M(x) = \chi_M(x) = x^2-2x+1$
+
 \begin{align*}
 M = \left[\begin{array}{rr}
 1 & 1 \\
@@ -310,14 +321,11 @@ M = \left[\begin{array}{rr}
 \end{array}\right]
 .\end{align*}
 
-- Not diagonalizable over $\CC$
+:::
 
-- Eigenvalues $[1, 1]$ (repeated, multiplicity 2)
 
-- $\min_M(x) = \chi_M(x) = x^2-2x+1$
-
-3. Non-similar matrices with the same characteristic polynomial
-
+:::{.example title="?"}
+Non-similar matrices with the same characteristic polynomial
 $$
 \left[\begin{array}{ll}
 {1}  & {0} \\
@@ -329,8 +337,12 @@ $$
 {0} & {1}
 \end{array}\right]
 $$
+:::
 
-4. A full-rank matrix that is not diagonalizable:
+
+
+:::{.example title="?"}
+A full-rank matrix that is not diagonalizable:
 \begin{align*}
 \left[\begin{array}{ccc}
 1 & 1 & 0 \\
@@ -339,7 +351,12 @@ $$
 \end{array}\right]
 .\end{align*}
 
-1. Matrix roots of unity:
+:::
+
+
+
+:::{.example title="?"}
+Matrix roots of unity:
 \begin{align*} \sqrt{I_2} =
 \left[\begin{array}{cc}
 0 & 1\\
@@ -353,3 +370,7 @@ $$
 1 & 0
 \end{array}\right]
 .\end{align*}
+:::
+
+
+
