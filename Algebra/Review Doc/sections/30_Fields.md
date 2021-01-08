@@ -255,9 +255,13 @@ F \arrow[d, bend right=49, "\text{sep}"']                                  \\
 k
 \end{tikzcd}
 
-
-
 :::
+
+
+:::{.warnings}
+Being Galois is **not** transitive.
+:::
+
 
 
 
