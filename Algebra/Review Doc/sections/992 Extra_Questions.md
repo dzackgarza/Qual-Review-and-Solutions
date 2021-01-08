@@ -322,7 +322,7 @@ Give an example of a non-perfect field.
 ### Question 3.10
 What is Galois theory?
 State the main theorem.
-What is the splitting field of $x^5 - 2$ over Q?
+What is the splitting field of $x^5 - 2$ over $\QQ$?
 What are the intermediate extensions?
 Which extensions are normal, which are not, and why?
 What are the Galois groups (over Q) of all intermediate extensions?
@@ -416,7 +416,7 @@ Calculate the Galois group of $x^5 - 2$.
 
 
 ### Question 3.34. 
-Discuss suﬃcient conditions on a polynomial of degree 5 to have Galois group $S_5$ over Q and prove your statements.
+Discuss sufficient conditions on a polynomial of degree 5 to have Galois group $S_5$ over $\QQ$ and prove your statements.
 
 ### Question 3.35
 Show that if f is an irreducible quintic with precisely two nonreal roots, then its Galois group is $S_5$.
@@ -460,7 +460,7 @@ Give a polynomial with $S_3$ as its Galois group.
 Give an example of a cubic with Galois group $S_3$.
 
 ### Question 3.48
-How do you construct a polynomial over Q whose Galois group is $S_n$?
+How do you construct a polynomial over $\QQ$ whose Galois group is $S_n$?
 Do it for n = 7 in particular.
 
 ### Question 3.49
@@ -483,7 +483,7 @@ How many quadratic extensions does it contain?
 Can any of them be imaginary?
 
 ### Question 3.54
-Suppose you are given a finite Galois extension K/Q by $f (x) \in \ZZ[x]$ such that deg(f ) = n and gal(K/Q) = $S_n$.
+Suppose you are given a finite Galois extension $K/\QQ$ by $f(x) \in \ZZ[x]$ such that $\deg(f ) = n$ and $\Gal(K/Q) = S_n$.
 What can you say about the roots?
 
 ### Question 3.55
