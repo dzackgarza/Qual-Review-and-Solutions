@@ -359,12 +359,23 @@ If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 :::
 
-:::{.theorem title="Burnside's Formula"}
-Slogan: the number of orbits is equal to the average number of fixed points, i.e.
+:::{.corollary title="Burnside's Formula"}
+For $G$ a finite group acting on $X$, 
 \[
 \abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
 \]
+
+> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+
 :::
+
+
+:::{.proof title="?"}
+\[
+\sum_{g\in G} abs 
+.\]
+:::
+
 
 :::{.theorem title="Subgroups of Cyclic Groups"}
 If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
