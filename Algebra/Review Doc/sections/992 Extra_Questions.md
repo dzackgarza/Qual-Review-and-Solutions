@@ -958,7 +958,7 @@ Suppose $D$ is an integral domain and the fundamental theorem holds for finitely
 Does $D$ have to be a PID?
 
 ### Question 7.4
-Classify finitely-generated modules over Z, over PID, and over Dedekind rings.
+Classify finitely-generated modules over $\ZZ$, over PIDs, and over Dedekind rings.
 
 ### Question 7.5
 Prove a finitely-generated torsion-free abelian group is free abelian.
