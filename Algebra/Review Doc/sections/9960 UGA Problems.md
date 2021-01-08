@@ -20,7 +20,7 @@ Let $G$ be a finite abelian group that is not cyclic. Show that $G$ contains a s
 $\mathbb{Z}_p \oplus \mathbb{Z}_p$ for some prime $p$.
 :::
 
-::: {.problem title="Hungerford 2.2.12.b.)"} 
+::: {.problem title="Hungerford 2.2.12.b."} 
 Determine (up to isomorphism) all abelian groups of order 64; do the same for order 96.
 :::
 
