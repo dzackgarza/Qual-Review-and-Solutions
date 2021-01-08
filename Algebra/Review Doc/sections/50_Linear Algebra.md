@@ -242,7 +242,7 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 
 - Suppose $A$ is Hermitian.
 - Since $V$ itself is an invariant subspace, $A$ has an eigenvector $\vector v_1 \in V$.
-- Let $W_1 = \spanof_k\theset{\vector v_1}^\perp$.
+- Let $W_1 = \spanof_k\theset{\vector v_1}\perp$.
 - Then for any $\vector w_1 \in W_1$, 
 $$
 \inner{\vector v_1}{ A \vector w_1} =

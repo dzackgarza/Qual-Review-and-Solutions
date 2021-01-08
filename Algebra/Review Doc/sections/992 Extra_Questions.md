@@ -15,7 +15,7 @@ Find all normal subgroups of $A_4$.
 
 ### Question 1.4
 Give an interesting example of a non-normal subgroup.
-Is SO(2) normal inside SL2(R)?
+Is $\SO(2)$ normal inside $SL_2(R)$?
 
 ### Question 1.5
 Is normality transitive?
@@ -38,10 +38,10 @@ Define the commutator.
 State and prove two nontrivial theorems about derived series.
 
 ### Question 1.9
-Prove that SL2(Z) is not solvable.
+Prove that $SL_2(Z)$ is not solvable.
 
 ### Question 1.10
-What are all possible orders of elements of SL2(Z)?
+What are all possible orders of elements of $SL_2(Z)$?
 
 ### Question 1.11
 Can you show that all groups of order $p^n$ for $p$ prime are solvable?
@@ -52,7 +52,7 @@ Suppose a p-group acts on a set whose cardinality is not divisible by p (p prime
 Prove that there is a fixed point for the action.
 
 ### Question 1.13
-Prove that the centre of a group of order pr (p prime) is not trivial.
+Prove that the centre of a group of order $pr$ ($p$ prime) is not trivial.
 
 ### Question 1.14
 Give examples of simple groups.
@@ -745,7 +745,7 @@ Prove it.
 What is a PID?
 What's an example of a UFD that is not a PID?
 Why?
-Is k[x] a PID?
+Is $k[x]$ a PID?
 Why?
 
 ### Question 6.3
@@ -810,7 +810,7 @@ Do you know about Dedekind domains and class numbers?
 ### Question 6.20
 Talk about factorisation and primes in a polynomial ring.
 What is irreducibility?
-For what rings R is it true that R[$x^1, · · · , xn] is a unique factorisation domain?
+For what rings R is it true that $R[x_1, · · · , x_n]$ is a unique factorisation domain?
 What is wrong with unique factorisation if we don't have a domain?
 Now, PIDs are Noetherian, but are there UFDs which are not?
 
