@@ -67,6 +67,8 @@ clean_bib:
 clean:
 	@rm tex_tempfiles -rf || true;
 	@rm -rf latex.out || true;
+	@rm ./build.log ./sections/build.log -f || true;
+	echo "Cleaned";
 
 reset: clean
 	@rm -f /tmp/* 2>/dev/null || true;
@@ -76,8 +78,6 @@ reset: clean
 	@rm $(FILENAME).tex -f || true;
 	@rm $(FILENAME).html -f || true;
 	@rm $(FILENAME).pdf -f || true;
-	@rm ./build.log ./sections/build.log -f || true;
-	echo "Cleaned";
 
 .PHONY: clean
 
