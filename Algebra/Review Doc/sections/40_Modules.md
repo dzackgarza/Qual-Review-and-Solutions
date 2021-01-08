@@ -13,8 +13,20 @@ A **free** module is a module with a basis (i.e. a spanning, linearly independen
 :::
 
 
+:::{.definition title="Torsionfree"}
+A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \).
+I.e. the only torsion element of \( M \) is zero itself.
+:::
+
+
+:::{.fact}
+Free \( \implies \) torsionfree.
+:::
+
+
+
 :::{.example title="?"}
-$\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free.
+$\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
 :::
 
 
@@ -27,6 +39,7 @@ A module $M$ is **projective** iff $M$ is a direct summand of a free module $F =
 
 :::{.example title="?"}
 Free implies projective, but not the converse.
+Let \( R_1, R_2 \) be two nontrivial rings, then both are projective \( \qty{R_1 \oplus  R_2}\dash \)modules.
 :::
 
 
