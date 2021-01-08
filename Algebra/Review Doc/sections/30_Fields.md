@@ -247,7 +247,7 @@ k
 
 
 :::{.proposition title="Separability is transitive"}
-For $F/L/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
+For $L/F/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
 \begin{tikzcd}
 L \arrow[d, bend right=49, "\text{sep}"'] 
   \arrow[dd, dashed, bend left=49, "\text{sep}"] \\
@@ -262,13 +262,22 @@ k
 
 
 :::{.proposition title="?"}
-If $L/k$ is algebraic, then $F/k$ separable and $L/F$ separable $\iff L/k$ separable
+If $L/k$ is algebraic, then $F/k$ separable 
+
+
+% https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}
-L \arrow[d, dotted, bend right=49, "\text{separable}"'] 
-  \arrow[dd, bend left=49, "\text{algebraic}"] \\
-F \arrow[d, bend right=49]                                  \\
-k
+	{L} \\
+	\\
+	{F} \\
+	\\
+	{k}
+	\arrow["{\text{algebraic}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
+	\arrow["{\text{separable}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
 \end{tikzcd}
+
+
+Moreover, $L/F$ is additionally separable $\iff L/k$ separable
 
 :::
 
