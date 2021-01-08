@@ -34,10 +34,10 @@ $\varphi: G/A \to \mathrm{Aut}(A)$.
 Let $Z(G)$ be the center of $G$. 
 Show that if $G/Z(G)$ is cyclic, then $G$ is abelian.
 
+> Note that Hungerford uses the notation $C(G)$ for the center.
 
 :::
 
-> Note that Hungerford uses the notation $C(G)$ for the center.
 
 ::: {.problem title="Hungerford 2.5.6"}
 Let $G$ be a finite group and$H \trianglelefteq G$ a normal subgroup of order $p^k$. Show that $H$ is
@@ -309,9 +309,9 @@ the following are equivalent:
     is a ring homomorphism $\alpha: E \to C$ such that $\alpha \mid_F$
     is the identity on $F$.
 
-:::
-
 > Hint: use Zorn's Lemma.
+
+:::
 
 ::: {.problem}
 Let $R$ be a commutative ring containing a field $k$,
@@ -520,11 +520,11 @@ Let $I$ be a left ideal of a ring$R$, and let $A$ be an $R-$module.
   \]
     is a submodule of $A$.
 
+  > Note that if $S = \{a\}$, then $IS = Ia = \{ra \mid r\in I\}$.
+
 2.  If $I$ is a two-sided ideal, then $A/IA$ is an $R/I$ module with the
     action of $R/I$ given by $$(r+I)(a+IA) = ra + IA.$$
 :::
-
-  > Note that if $S = \{a\}$, then $IS = Ia = \{ra \mid r\in I\}$.
 
 ::: {.problem title="Hungerford 4.1.5"}
 If $R$ has an identity, then a nonzero unitary $R\dash$module is **simple** if its only submodules are $0$
@@ -753,11 +753,10 @@ Let $R$ be a commutative ring and $M$ an $R-$module.
 1.  Show that the center of the ring $M_n(R)$ consists of matrices of
     the form $rI_n$ where $r$ is in the center of $R$.
 
+  > Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.
 
 2.  Show that $Z(M_n(R)) \cong Z(R)$.
 :::
-
-> Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.
 
 ::: {.problem title="Hungerford 7.1.5"}
 \envlist
@@ -811,13 +810,12 @@ C = \left(\begin{array}{llll}{a_{11}} & {\cdots} & {a_{1 m}} & {b_{1}} \\ {} & {
   $\mathrm{rank} A = \mathrm{rank} C$ and the solution is unique
   $\iff \mathrm{rank}(A) = m$.
 
+  >Hint: use part 2.
 
 4.  If $B=0$, so the system $AX=B$ is homogeneous, then it has a
     nontrivial solution $\iff \mathrm{rank} A < m$ and in particular
     $n<m$.
 :::
-  
-> Hint: use part 2 for part 3.
 
 ::: {.problem title="Hungerford 7.2.5"}
 Let $R$ be a PID. For each positive integer $r$ and sequence of nonzero ideals
