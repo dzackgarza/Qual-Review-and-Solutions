@@ -5,6 +5,19 @@
 
 Let $k$ denote a field, and $L/k$ extensions.
 
+:::{.definition title="Characterizations of Perfect Fields"}
+The following are equivalent:
+
+- $k$ is a **perfect** field.
+
+- Every irreducible polynomial $p\in k[x]$ is separable
+
+- Every finite extension $F/k$ is separable.
+
+- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+:::
+
+
 :::{.definition title="Primitive Extension"}
 For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
@@ -33,7 +46,7 @@ Then TFAE:
 
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
-TFAE:
+The following are equivalent 
 
 - $L/k$ is **separable**
 - $f$ has no repeated factors/roots.
@@ -49,19 +62,22 @@ TFAE:
 
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
-This is a **Galois extension** iff any of the following hold:
+The following are equivalent:
 
-1. $\abs{\Aut(L/k)} = [L: k]$
-2. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-3. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-4. $L$ is finite, normal, and separable.
+1. \( L/k \) is a **Galois extension**.
+2. $\abs{\Aut(L/k)} = [L: k]$
+3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
+4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
+5. $L$ is finite, normal, and separable.
 
 
-In this case, we define 
+In this case, we define the **Galois group** as 
 \[
 \Gal(L/k) \definedas \Aut(L/k)
 .\]
 :::
+
+
 
 
 :::{.definition title="Cyclotomic Polynomials"}
@@ -73,6 +89,7 @@ $$
 which is a product over primitive roots of unity.
 It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
 :::
+
 
 
 ## Facts
@@ -410,17 +427,6 @@ If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $
 $n$ divides the order $\abs{ \Gal(K/\QQ)}$.
 :::
 
-:::{.theorem title="Characterization of Perfect Fields"}
-TFAE:
-
-- $k$ is a **perfect** field.
-
-- Every irreducible polynomial $p\in k[x]$ is separable
-
-- Every finite extension $F/k$ is separable.
-
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
-:::
 
 :::{.theorem title="Splitting + Perfect implies Galois"}
 \hfill
