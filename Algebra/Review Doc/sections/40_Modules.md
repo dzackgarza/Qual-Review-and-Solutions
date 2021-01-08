@@ -19,13 +19,18 @@ $\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free.
 
 
 
+:::{.definition title="Projective Modules"}
+A module $M$ is **projective** iff $M$ is a direct summand of a free module $F = M \oplus \cdots$.
+:::
 
 
 
-Definition (Projective Module)
-: A module $M$ is **projective** iff $M$ is a direct summand of a free module $F = M \oplus \cdots$.
-
+:::{.example title="?"}
 Free implies projective, but not the converse.
+:::
+
+
+
 
 Definition (Exact Sequences)
 : A sequence of module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
