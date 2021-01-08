@@ -262,10 +262,9 @@ k
 
 
 :::{.proposition title="?"}
-If $L/k$ is algebraic, then $F/k$ separable 
+If $L/k$ is algebraic, then $F/k$ separable:
 
 
-% https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}
 	{L} \\
 	\\
@@ -275,9 +274,22 @@ If $L/k$ is algebraic, then $F/k$ separable
 	\arrow["{\text{algebraic}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
 	\arrow["{\text{separable}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
 \end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
 
 
-Moreover, $L/F$ is additionally separable $\iff L/k$ separable
+Moreover, $L/F$ is additionally separable $\iff L/k$ separable:
+
+\begin{tikzcd}
+	{L} \\
+	\\
+	{F} \\
+	\\
+	{k}
+	\arrow["{\text{algebraic} \\ \text{separable}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
+	\arrow["{\text{sep}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
+	\arrow["{\text{separable}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSBcXFxcIFxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFx0ZXh0e3NlcH0iLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3NlcGFyYWJsZX0iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
 
 :::
 
