@@ -50,7 +50,7 @@ An ideal $I\normal R$ is **irreducible** if it can not be written as the interse
 :::{.definition title="Prime Ideal"}
 $\mfp$ is a **prime** ideal $\iff$
 \[ 
-ab\in \mfp \implies a\in \mfp \txt{or} b\in \mfp
+ab\in \mfp \implies a\in \mfp \txt{ or } b\in \mfp
 .\]
 :::
 
@@ -92,7 +92,7 @@ with each \( M_j \) simple.
 :::{.definition title="Integral Domain"}
 A ring is an **integral domain** if and only if it has no nonzero zero divisors:
 \[  
-a, b\in R\smz, ab = 0 \implies a = 0 \txt{or} b = 0
+a, b\in R\smz, ab = 0 \implies a = 0 \txt{ or } b = 0
 .\]
 :::
 
@@ -101,11 +101,11 @@ An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I
 :::
 
 :::{.definition title="Principal Ideal Domain"}
-A ring $R$ is *principal* iff every ideal is principal.
+A ring $R$ is a **principal ideal domain** iff every ideal is principal.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
-A ring $R$ is a *UFD* iff $R$ is an integral domain and every $r\in R\smz$ admits a decomposition
+A ring $R$ is a **unique factorization domain** iff $R$ is an integral domain and every $r\in R\smz$ admits a decomposition
 \[  
 r = u \prod_{i=1}^n p_i
 \]
