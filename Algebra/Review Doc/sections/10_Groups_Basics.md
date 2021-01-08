@@ -1,11 +1,8 @@
 # Group Theory
 
-- $2^X$ denotes the powerset of $X$.
-- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 
 ## Big List of Notation
-
 
 
 +--------------------------------------+------------------------------------------------------------------------------------------------------------------+
@@ -50,7 +47,11 @@
 |  \( X^g \)                           |  Fixed Points  \ |
 |                                      |  \( \ts{x \in X \st \forall g \in G,\, gx = x} \subseteq X \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
+|  \( 2^X \)                           |  The powerset of \( X \)   \ |
+|                                      |  \( \da \ts{ U \subseteq X }  \)  |
++--------------------------------------+---------------------------------------------------------------------------------------+
 
+- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
 :::{.fact title="Some useful facts"}
 \envlist
@@ -71,7 +72,6 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \]
 :::
 
-
 :::{.definition title="Centralizer"}
 \[
 C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
@@ -84,31 +84,12 @@ N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \no
 \]
 :::
 
-:::{.definition title="Quaternion"}
-The **Quaternion group** of order 8 is given by
-\[
-Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
-  &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
-\]
-:::
 
 :::{.definition title="The Dihedral Group"}
 A **dihedral group** of order $2n$ is given by 
 \[
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 \]
-
-:::{.definition title="Parity of a Cycle"}
-
-- A cycle is **even** $\iff$ product of an *even* number of transpositions.
-
-- A cycle of even *length* is **odd**
-
-- A cycle of odd *length* is **even**
-
-> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
-
-:::
 
 
 :::{.definition title="Alternating Group"}
@@ -117,6 +98,14 @@ The **alternating group** is the subgroup of **even** permutations, i.e.
 A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
 \] 
 where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
+:::
+
+:::{.definition title="The Quaternion Group"}
+The **Quaternion group** of order 8 is given by
+\[
+Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
+  &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
+\]
 :::
 
 :::{.definition title="Transitive Subgroup"}
@@ -158,6 +147,18 @@ If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $
 
 
 ## The Symmetric Group
+
+:::{.definition title="Parity of a Cycle"}
+
+- A cycle is **even** $\iff$ product of an *even* number of transpositions.
+
+- A cycle of even *length* is **odd**
+
+- A cycle of odd *length* is **even**
+
+> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
+
+:::
 
 
 :::{.corollary title="Alternating Group"}
