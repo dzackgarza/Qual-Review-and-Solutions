@@ -501,9 +501,8 @@ What can you say about the roots?
 ### Question 3.55
 How many automorphisms does the complex field have?
 How can you extend a simple automorphism $\sqrt{2} \mapsto -\sqrt{2}$ of an algebraic field into $\CC$?
-How can you extend a subfield automorphism (e.g. a general subfield isomorphism?
+How can you extend a subfield automorphism?
 What feature of $\CC$ allows you to?
-\todo[inline]{Missing}
 
 
 ### Question 3.56. 
@@ -640,7 +639,6 @@ Give a representative in each class.
 ### Question 4.12
 What $3 \times 3$ matrices over the rationals (up to similarity) satisfy $f (A) = 0$, where $f (x) = (x^2 + 2)(x - 1)^3$?
 List all possible rational forms.
-\todo[inline]{Check}
 
 ### Question 4.13
 What can you say about matrices that satisfy a given polynomial (over an algebraically closed field)?
@@ -761,8 +759,7 @@ Why?
 
 ### Question 6.3
 Is $\CC[x, y]$ a PID?
-What are the prime ideals in it?
-\todo[inline]{Missing}
+Is \( \gens{ x, y }  \) a prime ideals in it?
 
 ### Question 6.4
 Do polynomials in several variables form a PID?
@@ -787,8 +784,6 @@ Is a ring of formal power series a UFD?
 
 ### Question 6.11
 Is a polynomial ring over a UFD again a UFD?
-
-\todo[inline]{Check?}
 
 ### Question 6.12
 What does factorisation over $\QQ[x]$ say about factorisation over $\ZZ[x]$?
