@@ -346,7 +346,7 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
 ### a
-Prove that if $\displaystyle\lim_{n→∞} a_n = 0$, then 
+Prove that if $\displaystyle\lim_{n\to \infty } a_n = 0$, then 
 \[
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
@@ -701,7 +701,7 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \[  
 \dd{}{x} \lim_{N\to\infty} \sum_{n=1}^N n^{-x}
 &= \lim_{h\to 0} \lim_{N\to\infty} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
-&\equalsbecause{?} \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
+&\eq_{?} \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ \qty{\sum_{n=1}^N n^{-x}} - \qty{\sum_{n=1}^N n^{-(x+h)} }\right] \\
 &= \lim_{N\to\infty} \lim_{h\to 0} {1\over h} \left[ {\sum_{n=1}^N n^{-x}} - {n^{-(x+h)} }\right] \quad\text{(1)} \\
 &= \lim_{N\to\infty} \sum_{n=1}^N \lim_{h\to 0} {1\over h} \left[ n^{-x} - n^{-(x+h)} \right] \quad\text{since this is a finite sum} \\
 &\definedas \lim_{N\to\infty} \sum_{n=1}^N \dd{}{x}\qty{1 \over n^x} \\ 
@@ -715,7 +715,7 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
   - Use the fact that for any fixed $\eps>0$,
   \[  
   \lim_{n\to\infty} {\ln(n) \over n^\eps} 
-  \equalsbecause{L.H.} \lim_{n\to\infty}{1/n \over \eps n^{\eps-1}} 
+  \eq^{L.H.} \lim_{n\to\infty}{1/n \over \eps n^{\eps-1}} 
   = \lim_{n\to\infty} {1\over \eps n^\eps} = 0
   ,\]
   - This implies that for a fixed $\eps >0$ and for any constant $c>0$ there exists an $N$ large enough such that $n\geq N$ implies $\ln(n)/n^\eps < c$, i.e. $\ln(n) < c n^{\eps}$.

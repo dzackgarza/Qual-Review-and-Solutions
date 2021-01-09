@@ -72,23 +72,67 @@ Exercises from Folland:
 \hypertarget{basics}{%
 \section{Basics}\label{basics}}
 
-Notation:
-
-\begin{itemize}
-\tightlist
-\item
-  \({\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\)
-\item
-  \({\left\lVert {f} \right\rVert}_{L^\infty} \coloneqq\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{for a.e. }x }\right\}\).
-\item
-  ``\(f\) vanishes at infinity'' means
-  \(f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0\).
-\item
-  ``\(f\) has small tails'' means
-  \(\int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0\).
-\item
-  \(H\) denotes a Hilbert space.
-\end{itemize}
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+Notation\strut
+\end{minipage} &
+\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+Definition\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*}{\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+The Sup norm\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} {\left\lVert {f} \right\rVert}_{L^\infty} \coloneqq\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{ for a.e. } x }\right\} \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+The \(L^ \infty\) norm\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} f_n \overset{n \to \infty }\to f \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+Convergence of a sequence\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0 \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+Vanishing at infinity\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} \int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0 \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+Having small tails\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} H, \mathcal{H} \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+A Hilbert space\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+\begin{align*} X \end{align*}
+\strut
+\end{minipage} &
+\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
+A topological space\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{useful-techniques}{%
 \subsection{Useful Techniques}\label{useful-techniques}}
@@ -138,19 +182,22 @@ Notation:
   \item
     Split into upper and lower bounds:
     \begin{align*}  
-    a=b \iff a\leq b {\operatorname{ and }}a\geq b
+    a=b \iff a\leq b \text{ and }  a\geq b
     .\end{align*}
   \item
     Use an epsilon of room:
     \begin{align*}  
-    a < b + \varepsilon\,\forall \varepsilon\implies a\leq b 
+    \qty{ \forall \epsilon, \,\,a < b + \varepsilon} \implies a\leq b 
     .\end{align*}
   \item
     Showing something is zero:
     \begin{align*}  
-    {\left\lvert {a} \right\rvert} \leq \varepsilon\,\forall\varepsilon\implies a = 0
+    \qty{ \forall \epsilon, \,\, {\left\lVert {a} \right\rVert} < \varepsilon} \implies a = 0
     .\end{align*}
   \end{itemize}
+\item
+  Continuity / differentiability: show it holds on \([-M, M]\) for all
+  \(M\) to get it to hold on \({\mathbb{R}}\).
 \item
   Simplifications:
 
@@ -174,58 +221,53 @@ Notation:
   \begin{itemize}
   \tightlist
   \item
+    Calculus techniques: Taylor series, IVT, MVT, etc.
+  \item
     Break up
     \({\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} > 1}\right\}\).
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Or break integration region into disjoint annuli.
+    \end{itemize}
   \item
     Break up into
     \(\left\{{f>g}\right\} {\coprod}\left\{{f=g}\right\} {\coprod}\left\{{f< g}\right\}\).
   \item
     Tail estimates!
+  \item
+    Most of what works for integrals will work for sums.
   \end{itemize}
 \item
-  Continuity / differentiability: show it holds on \([-M, M]\) for all
-  \(M\) to get it to hold on \({\mathbb{R}}\).
-\item
-  \(F_\sigma\) sets are Borel, so establish something for Borel sets and
-  use this to extend it to Lebesgue.
-\item
-  \(s = \inf\left\{{x\in X}\right\} \implies\) for every \(\varepsilon\)
-  there is an \(x\in X\) such that \(x \leq s + \varepsilon\).
-\item
-  Always consider bounded sets, and if \(E\) is unbounded write
-  \(E = \cup_{n} B_{n}(0) \cap E\) and use countable subadditivity or
-  continuity of measure.
-\item
-  \(F_\sigma\) sets are Borel, so establish something for Borel sets and
-  use this to extend it to Lebesgue.
-\item
-  Break integration domain up into disjoint annuli.
-\item
-  Break integrals or sums into \(x < 1\) and \(x\geq 1\).
-\item
-  Calculus techniques: Taylor series, IVT, \ldots{}
+  Measure theory:
+
+  \begin{itemize}
+  \item
+    Always consider bounded sets, and if \(E\) is unbounded write
+    \(E = \cup_{n} B_{n}(0) \cap E\) and use countable subadditivity or
+    continuity of measure.
+  \item
+    \(F_\sigma\) sets are Borel, so establish something for Borel sets
+    and use this to extend it to Lebesgue.
+  \item
+    \(s = \inf\left\{{x\in X}\right\} \implies\) for every
+    \(\varepsilon\) there is an \(x\in X\) such that
+    \(x \leq s + \varepsilon\).
+  \end{itemize}
 \item
   Approximate by dense subsets of functions
 \item
-  Useful facts about compactly supported continuous functions:
+  Useful facts about compactly supported (\(C_c({\mathbb{R}})\))
+  continuous functions:
 
   \begin{itemize}
   \tightlist
   \item
     Uniformly continuous
   \item
-    Bounded
+    Bounded almost everywhere
   \end{itemize}
-\end{itemize}
-
-Useful facts about \(C_c\) functions:
-
-\begin{itemize}
-\tightlist
-\item
-  Bounded almost everywhere
-\item
-  Uniformly continuous
 \end{itemize}
 
 \hypertarget{definitions}{%

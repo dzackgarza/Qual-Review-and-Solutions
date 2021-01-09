@@ -186,14 +186,69 @@
 <li><p>Chapter 3: Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22</p></li>
 </ul>
 <h1 data-number="1" id="basics"><span class="header-section-number">1</span> Basics</h1>
-<p>Notation:</p>
-<ul>
-<li><span class="math inline">\({\left\lVert {f} \right\rVert}_\infty \mathrel{\vcenter{:}}=\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\)</span></li>
-<li><span class="math inline">\({\left\lVert {f} \right\rVert}_{L^\infty} \mathrel{\vcenter{:}}=\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{for a.e. }x }\right\}\)</span>.</li>
-<li>“<span class="math inline">\(f\)</span> vanishes at infinity” means <span class="math inline">\(f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0\)</span>.</li>
-<li>“<span class="math inline">\(f\)</span> has small tails” means <span class="math inline">\(\int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0\)</span>.</li>
-<li><span class="math inline">\(H\)</span> denotes a Hilbert space.</li>
-</ul>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 85%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Notation</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*}{\left\lVert {f} \right\rVert}_\infty \mathrel{\vcenter{:}}=\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\end{align*}
+<span></td>
+<td style="text-align: left;">The Sup norm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} {\left\lVert {f} \right\rVert}_{L^\infty} \mathrel{\vcenter{:}}=\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{ for a.e. } x }\right\} \end{align*}
+<span></td>
+<td style="text-align: left;">The <span class="math inline">\(L^ \infty\)</span> norm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} f_n \overset{n \to \infty }\to f \end{align*}
+<span></td>
+<td style="text-align: left;">Convergence of a sequence</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0 \end{align*}
+<span></td>
+<td style="text-align: left;">Vanishing at infinity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} \int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0 \end{align*}
+<span></td>
+<td style="text-align: left;">Having small tails</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} H, \mathcal{H} \end{align*}
+<span></td>
+<td style="text-align: left;">A Hilbert space</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+<span class="math display">
+\begin{align*} X \end{align*}
+<span></td>
+<td style="text-align: left;">A topological space</td>
+</tr>
+</tbody>
+</table>
 <h2 data-number="1.1" id="useful-techniques"><span class="header-section-number">1.1</span> Useful Techniques</h2>
 <ul>
 <li><p>General advice: try swapping the orders of limits, sums, integrals, etc.</p></li>
@@ -223,22 +278,23 @@ c \leq \liminf a_n \leq \limsup a_n \leq c
 <li>Split into upper and lower bounds: 
 <span class="math display">
 \begin{align*}  
-a=b \iff a\leq b {\operatorname{ and }}a\geq b
+a=b \iff a\leq b \text{ and }  a\geq b
 .\end{align*}
 <span></li>
 <li>Use an epsilon of room: 
 <span class="math display">
 \begin{align*}  
-a &lt; b + \varepsilon\,\forall \varepsilon\implies a\leq b 
+\qty{ \forall \epsilon, \,\,a &lt; b + \varepsilon} \implies a\leq b 
 .\end{align*}
 <span></li>
 <li>Showing something is zero: 
 <span class="math display">
 \begin{align*}  
-{\left\lvert {a} \right\rvert} \leq \varepsilon\,\forall\varepsilon\implies a = 0
+\qty{ \forall \epsilon, \,\, {\left\lVert {a} \right\rVert} &lt; \varepsilon} \implies a = 0
 .\end{align*}
 <span></li>
 </ul></li>
+<li><p>Continuity / differentiability: show it holds on <span class="math inline">\([-M, M]\)</span> for all <span class="math inline">\(M\)</span> to get it to hold on <span class="math inline">\({\mathbb{R}}\)</span>.</p></li>
 <li><p>Simplifications:</p>
 <ul>
 <li>To show something for a measurable set, show it for bounded/compact/elementary sets/</li>
@@ -248,29 +304,27 @@ a &lt; b + \varepsilon\,\forall \varepsilon\implies a\leq b
 </ul></li>
 <li><p>Integrals</p>
 <ul>
-<li>Break up <span class="math inline">\({\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} &gt; 1}\right\}\)</span>.</li>
+<li>Calculus techniques: Taylor series, IVT, MVT, etc.</li>
+<li>Break up <span class="math inline">\({\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} &gt; 1}\right\}\)</span>.
+<ul>
+<li>Or break integration region into disjoint annuli.</li>
+</ul></li>
 <li>Break up into <span class="math inline">\(\left\{{f&gt;g}\right\} {\coprod}\left\{{f=g}\right\} {\coprod}\left\{{f&lt; g}\right\}\)</span>.</li>
 <li>Tail estimates!</li>
+<li>Most of what works for integrals will work for sums.</li>
 </ul></li>
-<li><p>Continuity / differentiability: show it holds on <span class="math inline">\([-M, M]\)</span> for all <span class="math inline">\(M\)</span> to get it to hold on <span class="math inline">\({\mathbb{R}}\)</span>.</p></li>
-<li><p><span class="math inline">\(F_\sigma\)</span> sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.</p></li>
-<li><p><span class="math inline">\(s = \inf\left\{{x\in X}\right\} \implies\)</span> for every <span class="math inline">\(\varepsilon\)</span> there is an <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(x \leq s + \varepsilon\)</span>.</p></li>
+<li><p>Measure theory:</p>
+<ul>
 <li><p>Always consider bounded sets, and if <span class="math inline">\(E\)</span> is unbounded write <span class="math inline">\(E = \cup_{n} B_{n}(0) \cap E\)</span> and use countable subadditivity or continuity of measure.</p></li>
 <li><p><span class="math inline">\(F_\sigma\)</span> sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.</p></li>
-<li><p>Break integration domain up into disjoint annuli.</p></li>
-<li><p>Break integrals or sums into <span class="math inline">\(x &lt; 1\)</span> and <span class="math inline">\(x\geq 1\)</span>.</p></li>
-<li><p>Calculus techniques: Taylor series, IVT, …</p></li>
-<li><p>Approximate by dense subsets of functions</p></li>
-<li><p>Useful facts about compactly supported continuous functions:</p>
-<ul>
-<li>Uniformly continuous</li>
-<li>Bounded</li>
+<li><p><span class="math inline">\(s = \inf\left\{{x\in X}\right\} \implies\)</span> for every <span class="math inline">\(\varepsilon\)</span> there is an <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(x \leq s + \varepsilon\)</span>.</p></li>
 </ul></li>
-</ul>
-<p>Useful facts about <span class="math inline">\(C_c\)</span> functions:</p>
+<li><p>Approximate by dense subsets of functions</p></li>
+<li><p>Useful facts about compactly supported (<span class="math inline">\(C_c({\mathbb{R}})\)</span>) continuous functions:</p>
 <ul>
-<li>Bounded almost everywhere</li>
 <li>Uniformly continuous</li>
+<li>Bounded almost everywhere</li>
+</ul></li>
 </ul>
 <h2 data-number="1.2" id="definitions"><span class="header-section-number">1.2</span> Definitions</h2>
 <div class="definition proofenv" title="Uniform Continuity">

@@ -436,13 +436,23 @@ Exercises from Folland:
 
 # Basics
 
-Notation:
-
-- $\norm{f}_\infty \da \sup_{x\in \dom(f)} \abs{f(x)}$
-- $\norm{f}_{L^\infty} \da \inf\ts{M \geq 0 \st \abs{f(x)} \leq M \text{for a.e. }x }$. 
-- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
-- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
-- $H$ denotes a Hilbert space.
++--------------------------------------------------------------------------------------------------------------------+---------------------------+
+|                                            Notation                                                                | Definition                |
++====================================================================================================================+===========================+
+| \[\norm{f}_\infty \da \sup_{x\in \dom(f)} \abs{f(x)}\]                                                             | The Sup norm |
++--------------------------------------------------------------------------------------------------------------------+---------------------------+
+| \[ \norm{f}_{L^\infty} \da \inf\ts{M \geq 0 \st \abs{f(x)} \leq M \text{ for a.e. } x } \]                         | The \( L^ \infty \) norm  |
++--------------------------------------------------------------------------------------------------------------------+---------------------------+
+| \[ f_n \converges{n \to \infty }\to f \]                                                                           |  Convergence of a sequence |
++--------------------------------------------------------------------------------------------------------------------+----------------------------+
+| \[ f(x) \converges{\abs x \to \infty}\to 0 \]                                                                      | Vanishing at infinity      |
++--------------------------------------------------------------------------------------------------------------------+----------------------------+
+| \[ \int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0 \]                                                         | Having small tails         |
++--------------------------------------------------------------------------------------------------------------------+----------------------------+
+| \[ H, \mathcal{H} \]                                                                                               | A Hilbert space            |
++--------------------------------------------------------------------------------------------------------------------+----------------------------+
+| \[ X \]                                                                                                            | A topological space |
++--------------------------------------------------------------------------------------------------------------------+---------------------+
 
 
 ## Useful Techniques
@@ -466,16 +476,18 @@ Notation:
 - Equalities
   - Split into upper and lower bounds:
   \[  
-  a=b \iff a\leq b \txand a\geq b
+  a=b \iff a\leq b \text{ and }  a\geq b
   .\]
   - Use an epsilon of room:
   \[  
-  a < b + \eps \,\forall \eps \implies a\leq b 
+  \qty{ \forall \epsilon, \,\,a < b + \eps} \implies a\leq b 
   .\]
   - Showing something is zero:
   \[  
-  \abs{a} \leq \eps \,\forall\eps\implies a = 0
+  \qty{ \forall \epsilon, \,\, \norm{a} < \eps} \implies a = 0
   .\]
+
+- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
 
 - Simplifications:
   - To show something for a measurable set, show it for bounded/compact/elementary sets/
@@ -484,34 +496,29 @@ Notation:
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
 - Integrals
+  - Calculus techniques: Taylor series, IVT, MVT, etc.
   - Break up $\RR^n = \theset{\abs{x} \leq 1} \coprod \theset{\abs{x} > 1}$.
+    - Or break integration region into disjoint annuli.
   - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
   - Tail estimates!
+  - Most of what works for integrals will work for sums.
 
-- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+- Measure theory:
+
+  - Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
+
+  - $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+
+  - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
 
 
-- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
-- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
-
-- Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
-
-- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
-
-- Break integration domain up into disjoint annuli.
-- Break integrals or sums into $x < 1$ and $x\geq 1$.
-- Calculus techniques: Taylor series, IVT, ...
 - Approximate by dense subsets of functions
 
-- Useful facts about compactly supported continuous functions:
+- Useful facts about compactly supported ($C_c(\RR)$) continuous functions:
   - Uniformly continuous
-  - Bounded
+  - Bounded almost everywhere
 
-Useful facts about $C_c$ functions:
-
-- Bounded almost everywhere
-- Uniformly continuous
 
 
 ## Definitions

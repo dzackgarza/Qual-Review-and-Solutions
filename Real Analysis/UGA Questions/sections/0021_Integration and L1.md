@@ -376,7 +376,7 @@ Let $f\in L^1(\RR)$ and for each $h > 0$ let
 
 i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
 
-ii. Prove that $\mathcal{A}_h f → f$ in $L^1(\RR)$ as $h → 0^+$.
+ii. Prove that $\mathcal{A}_h f \to f$ in $L^1(\RR)$ as $h \to 0^+$.
 
 \todo[inline]{Walk through.}
 

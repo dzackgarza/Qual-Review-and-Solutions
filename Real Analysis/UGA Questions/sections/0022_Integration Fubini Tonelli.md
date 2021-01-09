@@ -58,7 +58,7 @@ defines a function in $L^1(\RR)$ that satisfies
 
 
 ## Spring 2019 # 4 $\done$
-Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n × \RR : 0 ≤ t ≤ f (x)\}$.
+Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n \times \RR : 0 ≤ t ≤ f (x)\}$.
 
 Prove the validity of the following two statements:
 

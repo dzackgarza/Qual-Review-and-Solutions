@@ -117,7 +117,7 @@ where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 
 :::
 
 ## Fall 2019 # 3. $\done$
-Let $(X, \mathcal B, µ)$ be a measure space with $µ(X) = 1$ and $\{B_n\}_{n=1}^\infty$ be a sequence of $\mathcal B$-measurable subsets of $X$, and
+Let $(X, \mathcal B, \mu)$ be a measure space with $\mu(X) = 1$ and $\{B_n\}_{n=1}^\infty$ be a sequence of $\mathcal B$-measurable subsets of $X$, and
 $$
 B \definedas \theset{x\in X \suchthat x\in B_n \text{ for infinitely many } n}.
 $$
@@ -130,7 +130,7 @@ c. Prove that if  $\sum_{n=1}^\infty \mu(B_n) = \infty$ **and** the sequence of 
 $$
 \mu\left(\bigcap_{n=k}^{K} B_{n}^{c}\right)=\prod_{n=k}^{K}\left(1-\mu\left(B_{n}\right)\right)
 $$
-for all positive integers $k$ and $K$ with $k < K$, then $µ(B) = 1$.
+for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
@@ -198,7 +198,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $µ(B) = 1$.
 :::
 
 ## Spring 2019 # 2 $\done$
-Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B → [0, \infty)$ denote a finite Borel measure on $\RR$.
+Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B \to [0, \infty)$ denote a finite Borel measure on $\RR$.
   
 ### a 
 Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
@@ -207,14 +207,15 @@ Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_
 \]
 
 ### b 
-Suppose $µ$ has the property that $µ(E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
+Suppose $\mu$ has the property that $\mu (E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
 
-Prove that for every $ε > 0$ there exists $δ > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $µ(E) < ε$.
+Prove that for every $\epsilon  > 0$ there exists $\delta > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $\mu(E) < ε$.
 
 \todo[inline]{Add concepts.}
 
 :::{.solution}
 \hfill
+
 :::{.concept}
 \hfill
 - ?

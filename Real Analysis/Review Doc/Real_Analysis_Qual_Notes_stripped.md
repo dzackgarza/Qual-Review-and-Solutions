@@ -8,13 +8,30 @@ Exercises from Folland:
 
 # Basics
 
-Notation:
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Notation                                                                                                                                                                  Definition
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------
+                                                                                                                                                                            The Sup norm
+  \[{\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\]                                                    
 
--   \( {\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert} \)
--   \( {\left\lVert {f} \right\rVert}_{L^\infty} \coloneqq\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{for a.e. }x }\right\} \).
--   "\( f \) vanishes at infinity" means \( f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0 \).
--   "\( f \) has small tails" means \( \int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0 \).
--   \( H \) denotes a Hilbert space.
+                                                                                                                                                                            The \( L^ \infty \) norm
+  \[ {\left\lVert {f} \right\rVert}_{L^\infty} \coloneqq\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{ for a.e. } x }\right\} \]   
+
+                                                                                                                                                                            Convergence of a sequence
+  \[ f_n \overset{n \to \infty }\to f \]                                                                                                                                    
+
+                                                                                                                                                                            Vanishing at infinity
+  \[ f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0 \]                                                                                                       
+
+                                                                                                                                                                            Having small tails
+  \[ \int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0 \]                                                                                           
+
+                                                                                                                                                                            A Hilbert space
+  \[ H, \mathcal{H} \]                                                                                                                                                      
+
+                                                                                                                                                                            A topological space
+  \[ X \]                                                                                                                                                                   
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Useful Techniques
 
@@ -41,16 +58,18 @@ Notation:
 
     -   Split into upper and lower bounds:
         \[  
-        a=b \iff a\leq b {\operatorname{ and }}a\geq b
+        a=b \iff a\leq b \text{ and }  a\geq b
         .\]
     -   Use an epsilon of room:
         \[  
-        a < b + \varepsilon\,\forall \varepsilon\implies a\leq b 
+        \qty{ \forall \epsilon, \,\,a < b + \varepsilon} \implies a\leq b 
         .\]
     -   Showing something is zero:
         \[  
-        {\left\lvert {a} \right\rvert} \leq \varepsilon\,\forall\varepsilon\implies a = 0
+        \qty{ \forall \epsilon, \,\, {\left\lVert {a} \right\rVert} < \varepsilon} \implies a = 0
         .\]
+
+-   Continuity / differentiability: show it holds on \( [-M, M] \) for all \( M \) to get it to hold on \( {\mathbb{R}} \).
 
 -   Simplifications:
 
@@ -61,37 +80,27 @@ Notation:
 
 -   Integrals
 
+    -   Calculus techniques: Taylor series, IVT, MVT, etc.
     -   Break up \( {\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} > 1}\right\} \).
+        -   Or break integration region into disjoint annuli.
     -   Break up into \( \left\{{f>g}\right\} {\coprod}\left\{{f=g}\right\} {\coprod}\left\{{f< g}\right\} \).
     -   Tail estimates!
+    -   Most of what works for integrals will work for sums.
 
--   Continuity / differentiability: show it holds on \( [-M, M] \) for all \( M \) to get it to hold on \( {\mathbb{R}} \).
+-   Measure theory:
 
--   \( F_\sigma \) sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+    -   Always consider bounded sets, and if \( E \) is unbounded write \( E = \cup_{n} B_{n}(0) \cap E \) and use countable subadditivity or continuity of measure.
 
--   \( s = \inf\left\{{x\in X}\right\} \implies \) for every \( \varepsilon \) there is an \( x\in X \) such that \( x \leq s + \varepsilon \).
+    -   \( F_\sigma \) sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
--   Always consider bounded sets, and if \( E \) is unbounded write \( E = \cup_{n} B_{n}(0) \cap E \) and use countable subadditivity or continuity of measure.
-
--   \( F_\sigma \) sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
-
--   Break integration domain up into disjoint annuli.
-
--   Break integrals or sums into \( x < 1 \) and \( x\geq 1 \).
-
--   Calculus techniques: Taylor series, IVT, ...
+    -   \( s = \inf\left\{{x\in X}\right\} \implies \) for every \( \varepsilon \) there is an \( x\in X \) such that \( x \leq s + \varepsilon \).
 
 -   Approximate by dense subsets of functions
 
--   Useful facts about compactly supported continuous functions:
+-   Useful facts about compactly supported (\( C_c({\mathbb{R}}) \)) continuous functions:
 
     -   Uniformly continuous
-    -   Bounded
-
-Useful facts about \( C_c \) functions:
-
--   Bounded almost everywhere
--   Uniformly continuous
+    -   Bounded almost everywhere
 
 ## Definitions
 

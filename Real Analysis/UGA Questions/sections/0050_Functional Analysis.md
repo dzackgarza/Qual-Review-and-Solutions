@@ -317,8 +317,6 @@ $$
   > Idea: take sequence starting points for the triangles: $0, 0 + {1\over 4}, 0 + {1 \over 4} + {1\over 8}, \cdots$ which converges to $1/2$ since $\sum_{k=1}^\infty{1\over 2^k} = -{1\over 2} + \sum_{k=0}^\infty  {1\over 2^k}$.
 
 
-![](figures/image_2020-06-29-20-40-22.png)
-
 - Then each $f_n$ is clearly integrable, since its graph is contained in the unit square.
 - $\theset{f_n}$ is Cauchy: geometrically subtracting areas yields a single triangle whose area tends to 0.
 - But $f_n$ converges to $\chi_{[{1\over 2}, 1]}$ which is discontinuous.
