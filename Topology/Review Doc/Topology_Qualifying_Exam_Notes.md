@@ -414,11 +414,6 @@
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
 
----
-title: "Topology Qualifying Exam Notes"
----
-
-
 # Preface
 
 Some fun resources:

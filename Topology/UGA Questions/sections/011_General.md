@@ -34,7 +34,6 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 
 :::
 
-
 ### 7 (Fall '06). $\done$
 A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
 
@@ -143,7 +142,6 @@ Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
 - No finite discrete sets occur, since the retract of a connected set is connected.
 :::
 
-
 ### 13 (Fall '06). $\work$
 
 #### a
@@ -158,7 +156,9 @@ Let $\theset{X_\alpha \mid \alpha \in A}$ be a family of connected subspaces of 
 Show that the union of the $X_\alpha$ is connected.
 
 \todo[inline]{Proof 2 not complete?}
+
 :::{.solution}
+
 \hfill
 :::{.concept}
 \hfill
@@ -282,8 +282,6 @@ Suppose $S$ is not connected, then choose $A$ as above.
 Then $B = S\setminus A$ yields a pair $A, B$ that disconnects $S$.
 Since $A$ is closed in $S$, $\bar A = A$ and thus $\bar A \cap B = A \cap B = \emptyset$.
 Similarly, since $A$ is open, $B$ is closed, and $\bar B = B \implies \bar B \cap A = B \cap A = \emptyset$.
-
-
 
 :::
 
@@ -411,7 +409,6 @@ Is $X$ compact?
 \hfill
 
 :::{.concept}
-\hfill
 See Munkres p.164, especially for (ii).
 :::
 
@@ -434,7 +431,6 @@ Direct proof:
 Todo: Need direct proof. 
 
 :::
-
 
 
 ### 3 (Spring '09) $\work$

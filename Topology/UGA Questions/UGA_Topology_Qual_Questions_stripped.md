@@ -436,9 +436,6 @@ Let \( X = (0, 1] \). Is \( X \) compact?
 \hfill
 ```
 ::: {.concept}
-```{=tex}
-\hfill
-```
 See Munkres p.164, especially for (ii).
 :::
 

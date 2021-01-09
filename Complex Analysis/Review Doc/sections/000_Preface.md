@@ -1,7 +1,3 @@
----
-title: "Complex Analysis Qualifying Exam Notes"
----
-
 # Useful Techniques
 
 **Showing a function is constant:**

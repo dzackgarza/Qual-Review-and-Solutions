@@ -1,8 +1,3 @@
----
-title: "Topology Qualifying Exam Notes"
----
-
-
 # Preface
 
 Some fun resources:
