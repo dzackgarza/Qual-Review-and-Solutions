@@ -90,8 +90,8 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 \begin{align*}
 \begin{matrix}
   && B & \\
-&\large\diagup &  & \large\diagdown \\
-(A,B) & & \large\longleftarrow &  & A
+&\diagup &  & \diagdown \\
+(A,B) & & \longleftarrow &  & A
 \end{matrix}
 .\end{align*}
 

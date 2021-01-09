@@ -42,7 +42,7 @@
 - Chain Homotopy
 	* Given two maps between chain complexes $(C_*, \del_C) \mapsvia{f, ~g} (D_*, \del_D)$, a chain homotopy is a family $h_i: C_i \to B_{i+1}$ satisfying $$f_i-g_i = \del_{B, i-1}\circ h_n + h_{i+1}\circ \del_{A, i}$$. 
  
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_homotopy_between_chain_complexes.svg/650px-Chain_homotopy_between_chain_complexes.svg.png)
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_homotopy_between_chain_complexes.svg/650px-Chain_homotopy_between_chain_complexes.svg.png)-->
 
 - Chain Map
 	* A map between chain complexes $(C_*, \del_C) \mapsvia{f} (D_*, \del_D)$ is a chain map iff each component $C_i \mapsvia{f_i} D_i$ satisfies 
@@ -51,7 +51,7 @@
 	$$ 
 	(i.e this forms a commuting ladder) 
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_map.svg/650px-Chain_map.svg.png)
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_map.svg/650px-Chain_map.svg.png)-->
 
 - Closed manifold
 	* A manifold that is compact, with or without boundary.
@@ -99,8 +99,12 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
 	\[  
 	CX = \frac{X\cross I} {X \cross \theset{0}}
 	.\]
-	Example: The cone on the circle $CS^1$ ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)
+	Example: The cone on the circle $CS^1$ 
+
+  <!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
+
 	Note that the cone embeds $X$ in a contractible space $CX$.
+
 
 - Contractible
 	* A space is contractible if its identity map is nullhomotopic.
@@ -137,7 +141,7 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
 - Deformation
 
 - Deformation Retract
-	- A map $r$ in $A\mathrel{\textstyle\substack{\Large\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_A$) **that also satisfies** $\iota \circ r \homotopic \id_X$.
+	- A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_A$) **that also satisfies** $\iota \circ r \homotopic \id_X$.
     
     > Note that this is equality in one direction, but only homotopy equivalence in the other.
 
@@ -368,7 +372,7 @@ F: X\cross I &\to Y \\
 - Relative homotopy groups
 
 - Retraction
-	* A map $r$ in $A\mathrel{\textstyle\substack{\Large\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_A.$$
+	* A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_A.$$
 	Equivalently $X \surjects_r A$ and $\restrictionof{r}{A} = \id_A$. If $X$ retracts onto $A$, then $i_*$ is injective.
 
 - Short exact sequence

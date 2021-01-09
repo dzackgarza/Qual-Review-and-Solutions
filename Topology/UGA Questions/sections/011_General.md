@@ -51,7 +51,7 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 :::
 
 
-Statement: show $X, Y \in \Top_{\cpt} \iff X\cross Y\in \Top_\cpt$
+Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
 
 
 ##### Proof 1
@@ -606,12 +606,12 @@ Give, with proof, an example of a space that is connected but not locally connec
 \hfill
 :::{.concept}
 \hfill
-| Space                  | Connected  | Locally Connected |
-| ------                 | ---------  | ----------------- |
-| $\RR$                  | \checkmark | \checkmark        |
-| $[0, 1] \union [2, 3]$ |            | \checkmark        |
-| Sine Curve             | \checkmark |                   |
-| $\QQ$                  |            |                   |
+| Space                  | Connected    | Locally Connected |
+| ------                 | ---------    | ----------------- |
+| $\RR$                  | $\checkmark$ | $\checkmark$      |
+| $[0, 1] \union [2, 3]$ |              | $\checkmark$      |
+| Sine Curve             | $\checkmark$ |                   |
+| $\QQ$                  |              |                   |
 
 :::
 
@@ -723,14 +723,18 @@ Complete and **totally** bounded $\implies$ compact.
 
 Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimenion is closed, bounded, and not compact.
 
-> Proof: Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
-> then choose $s = \vector x + A_1 \in B(1,0)/A_1$ such that $\norm{s} = \frac 1 2$ 
-> and then a representative $\vector x_2$ such that $\norm{\vector x_2} \leq 1$. 
-> Then $\norm{\vector x_2 - \vector x_1} \geq \frac 1 2$ 
->
-> Then, let $A_2 = \mathrm{span}(\vector x_1, \vector x_2)$, (which is closed) and repeat this for $s = \vector x + A_2 \in B(1, \vector 0)/ A_2$ to get an $\vector x_3$ such that $\norm{\vector x_3 - \vector x_{\leq 2}} \geq \frac 1 2$.
-> 
-> This produces a non-convergent sequence in the closed ball, so it can not be compact.
+
+:::{.proof title="?"}
+Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
+ then choose $s = \vector x + A_1 \in B(1,0)/A_1$ such that $\norm{s} = \frac 1 2$ 
+and then a representative $\vector x_2$ such that $\norm{\vector x_2} \leq 1$. 
+Then $\norm{\vector x_2 - \vector x_1} \geq \frac 1 2$ 
+
+Then, let $A_2 = \mathrm{span}(\vector x_1, \vector x_2)$, (which is closed) and repeat this for $s = \vector x + A_2 \in B(1, \vector 0)/ A_2$ to get an $\vector x_3$ such that $\norm{\vector x_3 - \vector x_{\leq 2}} \geq \frac 1 2$.
+ 
+This produces a non-convergent sequence in the closed ball, so it can not be compact.
+
+:::
 
 Second counterexample: $(\RR, (x,y) \mapsto \frac{\abs{x-y}}{1 + \abs{x-y}})$. 
 
@@ -872,11 +876,15 @@ Let $X = A \union B$ with $A = \theset{(0, y) \suchthat y\in [-1, 1] }$ and $B =
 Since $B$ is the graph of a continuous function, which is always connected.
 Moreover, $X = \bar{A}$, and the closure of a connected set is still connected.
 
-> Alternative direct argument: the subspace $X' = B \union \theset{\vector 0}$ is not connected. 
-> If it were, write $X' = U \disjoint V$, where wlog $\vector 0 \in U$.
-> Then there is an open such that $\vector 0 \in N_r(\vector 0) \subset U$.
-> But any neighborhood about zero intersects $B$, so we must have $V \subset B$ as a strict inclusion.
-> But then $U \intersect B$ and $V$ disconnects $B$, a connected set, which is a contradiction.
+
+:::{.proof title="?"}
+Alternative direct argument: the subspace $X' = B \union \theset{\vector 0}$ is not connected. 
+If it were, write $X' = U \disjoint V$, where wlog $\vector 0 \in U$.
+Then there is an open such that $\vector 0 \in N_r(\vector 0) \subset U$.
+But any neighborhood about zero intersects $B$, so we must have $V \subset B$ as a strict inclusion.
+But then $U \intersect B$ and $V$ disconnects $B$, a connected set, which is a contradiction.
+
+:::
 
 To see that $X$ is not path-connected, suppose toward a contradiction that there is a continuous function $f: I \to X \subset \RR^2$.
 In particular, $f$ is continuous at $\vector 0$, and so

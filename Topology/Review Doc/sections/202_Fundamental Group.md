@@ -21,7 +21,7 @@ $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
 
 - Homotopy commutes with products: $\pi_k \prod X_i = \prod \pi_k X_i$.
 
-- Homotopy splits wedge products: $\pi_1 \bigvee X_i = \bigast \pi_1 X_i$.
+- Homotopy splits wedge products: $\pi_1 \bigvee X_i = \ast \pi_1 X_i$.
 
 ## Homotopy
 
@@ -92,9 +92,9 @@ Theorem (Seifert-van Kampen Theorem)
     and letting $P = \pi_1(U), \pt$, there is a natural isomorphism
 
     $$
-    \pi_1(X, \pt) \cong \pi_1(U_1, \pt) ~\bigast_P~ \pi_1(U_2, \pt)
+    \pi_1(X, \pt) \cong \pi_1(U_1, \pt) ~\ast_P~ \pi_1(U_2, \pt)
     $$
-    where $\bigast_P$ is the amalgamated free product over $P$.
+    where $\ast_P$ is the amalgamated free product over $P$.
 
     \todo[inline]{Formulate in terms of pushouts.}
 
@@ -115,15 +115,15 @@ Example (of pushing out with Van Kampen)
 A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
 :::
 
-:::{.warning}
+:::{.warnings}
 Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ which have isomorphic homotopy but not homology.
 :::
-
 
 :::{.theorem title="Hurewicz"}
 The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
 > I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+
 :::
 
 :::{.theorem title="Cellular Approximation"}
@@ -139,7 +139,6 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 \todo[inline]{Todo}
 :::
 
-
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
 * The ranks of $\pi_0$ and $H_0$ are the number of path components, and $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
@@ -148,7 +147,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
   * $H_1(X) = \mathrm{Ab}(\pi_1 X)$, the abelianization.
 
 * $\pi_k \bigvee X \neq \prod \pi_k X$ (counterexample: $S^1 \vee S^2$)
-  * Nice case: $\pi_1\bigvee X = \bigast \pi_1 X$ by Van Kampen.
+  * Nice case: $\pi_1\bigvee X = \ast \pi_1 X$ by Van Kampen.
 
 * $\pi_i(\hat X) \cong \pi_i(X)$ for $i\geq 2$ whenever $\hat X \surjects X$ is a universal cover.
 

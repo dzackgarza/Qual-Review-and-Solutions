@@ -100,8 +100,8 @@ Handy mnemonic diagram:
 \begin{align*}
 \begin{matrix}
  && A\intersect B & \\
-&\large\diagup &  & \large\diagdown \\
-A\union B & & \large\longleftarrow &  & A \oplus B
+&\diagup &  & \diagdown \\
+A\union B & & \longleftarrow &  & A \oplus B
 \end{matrix}
 .\end{align*}
 

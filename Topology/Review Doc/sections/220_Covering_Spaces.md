@@ -2,10 +2,13 @@
 
 When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
 
-Picture to keep in mind ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)
+Picture to keep in mind 
 
-Path lifting: ![](http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/cover.png)
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)-->
 
+Path lifting: 
+
+![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
 
 
 ## Useful Covering Spaces
@@ -145,7 +148,9 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 
 
 **Example**: $\RP^2 \vee T^2 \to \ZZ_2 \ast \ZZ$
-![](https://i.stack.imgur.com/XVkDn.png)
+
+![Image](figures/tree_cover.png)
+
 
 ## Application: Every subgroup of a free group is free
 Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$

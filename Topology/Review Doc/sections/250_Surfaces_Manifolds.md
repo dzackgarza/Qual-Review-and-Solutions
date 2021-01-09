@@ -11,7 +11,7 @@ The most common spaces appearing in this theory:
 - $\TT^2 \definedas  S^1\cross S^1$, 
 - $\RP^2$
 - $\KK$ the Klein bottle
-- $\Sigma_n \definedas \connectsum_{i=1}^n \TT^2$.
+- $\Sigma_n \definedas \#_{i=1}^n \TT^2$.
 
 :::{.theorem title="Classification of Surfaces"}
 The set of surfaces under connect sum forms a monoid with the presentation
@@ -33,7 +33,6 @@ In each case, there is a formula
 \end{cases}
 \]
 :::
-
 
 
 | Orientable? | $-4$       | $-3$        | $-2$            | $-1$        | $0$                         | $1$         | $2$         |

@@ -7,7 +7,7 @@
 
 - Compute $\pi_1(X)$ where $X \definedas S^2/\sim$, where $x\sim -x$ only for $x$ on the equator $S^1 \injects S^2$.
   - Hint: try cellular homology. Should yield $[\ZZ, \ZZ/2\ZZ, \ZZ, 0, \cdots]$.
-- Show that if $X = S^2 \disjoint_\id S^2$ is a pushout along the equators, then $H_n(X) = [\ZZ, 0, \ZZ^3, 0, \cdots]$.
+- Show that if $X = S^2 \disjoint_{\id} S^2$ is a pushout along the equators, then $H_n(X) = [\ZZ, 0, \ZZ^3, 0, \cdots]$.
 
 ### Covering Spaces
 

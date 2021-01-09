@@ -43,16 +43,18 @@ Therefore homology measures the failure of exactness.
 
 Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES's; define $C_k = \ker (A_k \into A_{k+1}) \cong \im(A_{k-1} \into A_k)) \cong \coker(A_{k-2} \into A_{k-1})$, then all diagonals here are exact:
 
-![Long short exact sequences.png](https://upload.wikimedia.org/wikipedia/commons/b/b9/Long_short_exact_sequences.png)
+<!--![Long short exact sequences.png](https://upload.wikimedia.org/wikipedia/commons/b/b9/Long_short_exact_sequences.png)-->
 
 
 ## Five Lemma
 
 If $m, p$ are isomorphisms, $l$ is an **surjection**, and $q$ is an **injection**, then $n$ is an **isomorphism**.
 
-![5 lemma.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5_lemma.svg/388px-5_lemma.svg.png)
+<!--![5 lemma.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5_lemma.svg/388px-5_lemma.svg.png)-->
 
-Proof: diagram chase two "four lemmas", one on each side. Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
+Proof: diagram chase two "four lemmas", one on each side. 
+Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
+
 ## Free Resolutions
 
 The canonical example:

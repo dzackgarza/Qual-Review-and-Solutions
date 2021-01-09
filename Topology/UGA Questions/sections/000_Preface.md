@@ -19,7 +19,7 @@ Here is a list of problems that Mike recommended reviewing during our problem se
 - Section 8, Misc Algebraic Topology: 1, 3, 6, 8
 
 
-:::{.warning}
+:::{.warnings}
 Usually 30% of the problems on any given qual are related to point-set/general Topology.
 :::
 
