@@ -1,10 +1,13 @@
 # Basics
 
-
 Notation:
 
 - $\norm{f}_\infty \da \sup_{x\in \dom(f)} \abs{f(x)}$
 - $\norm{f}_{L^\infty} \da \inf\ts{M \geq 0 \st \abs{f(x)} \leq M \text{for a.e. }x }$. 
+- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
+- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
+- $H$ denotes a Hilbert space.
+
 
 ## Useful Techniques
 
@@ -51,6 +54,30 @@ Notation:
 
 - Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
 
+
+- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+
+- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
+
+- Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
+
+- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+
+- Break integration domain up into disjoint annuli.
+- Break integrals or sums into $x < 1$ and $x\geq 1$.
+- Calculus techniques: Taylor series, IVT, ...
+- Approximate by dense subsets of functions
+
+- Useful facts about compactly supported continuous functions:
+  - Uniformly continuous
+  - Bounded
+
+Useful facts about $C_c$ functions:
+
+- Bounded almost everywhere
+- Uniformly continuous
+
+
 ## Definitions
 
 :::{.definition title="Uniform Continuity"}
@@ -66,7 +93,7 @@ $f$ is uniformly continuous iff
 A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 :::
 
-:::{.proposition title="Meager Sets"}
+:::{.definition title="Meager Sets"}
 A set is **meager** if it is a *countable* union of nowhere dense sets.
 :::
 
@@ -77,10 +104,6 @@ An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersec
 Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
 :::
-  
-:::{.theorem title="Heine-Cantor"}
-Every continuous function on a compact space is uniformly continuous.
-:::
 
 :::{.definition title="Limsup/Liminf"}
 \[  
@@ -90,7 +113,6 @@ Every continuous function on a compact space is uniformly continuous.
 :::
 
 :::{.definition title="Topological Notions"}
-\envlist
 Let $X$ be a metric space and $A$ a subset.
 Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its closure.
 
@@ -121,17 +143,165 @@ Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its 
 
 :::
 
+:::{.definition title="Uniform Convergence"}
+\[
+(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+Negated:[^Negated_uniform_convergence]
+\[  
+(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\]
+
+[^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
+
+:::
+
+:::{.definition title="Pointwise Convergence"}
+A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+:::
+
+:::{.definition title="Outer Measure"}
+The **outer measure** of a set is given by
+\[
+m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
+.\]
+:::
+
+:::{.definition title="Limsup and Liminf of Sets"}
+\[
+\limsup_{n} A_{n} \da \intersect_{n} \union_{j\geq n} A_{j}&= \theset{x \suchthat x\in A_{n} \text{ for inf. many $n$}}  \\
+\liminf_{n} A_{n} \da \union_{n} \intersect_{j\geq n} A_{j} &= \theset{x \suchthat x\in A_{n} \text{ for all except fin. many $n$}}  \\
+.\]
+:::
+
+:::{.definition title="Lebesgue Measurable Sets"}
+A subset $E\subseteq \RR^n$ is **Lebesgue measurable** iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
+In this case, we define $m(E) \da m_*(E)$.
+:::
+
+:::{.definition title="$L^+$: Measurable non-negative functions."}
+$f\in L^+$ iff $f$ is measurable and non-negative.
+:::
+
+:::{.definition title="Integrability"}
+A measurable function is **integrable** iff $\norm{f}_1 < \infty$.
+:::
+
+:::{.definition title="The Infinity Norm"}
+\[
+\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+.\]
+:::
+
+:::{.definition title="Essentially Bounded Functions"}
+A function $f:X \to \CC$ is **essentially bounded** iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
+:::
+
+:::{.definition title="$L^\infty$"}
+\[
+L^\infty(X)
+\definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
+\definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
+.\]
+
+:::
+
+:::{.definition title="Dual Norm"}
+For $X$ a normed vector space and $\Lambda \in X\dual$, 
+\[
+\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
+.\]
+:::
+
+:::{.definition title="Convolution"}
+$$f * g(x)=\int f(x-y) g(y) d y .$$
+:::
+
+:::{.definition title="Fourier Transform"}
+\[
+\hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
+.\]
+
+:::
+
+:::{.definition title="Dilation"}
+\[
+\phi_{t}(x) = t^{-n} \phi\left(t^{-1} x\right)
+.\]
+:::
+
+:::{.definition title="Approximations to the identity"}
+For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an **approximate identity**. 
+:::
+
+:::{.definition title="Baire Space"}
+A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
+:::
+
+### Functional Analysis
+
+:::{.definition title="Orthonormal sequence "}
+A countable collection of elements \( \ts{ u_i } \)  is **orthonormal** if and only if 
+
+1. \( \inner{u_i}{u_j} = 0 \) for all \( j \neq k \) and
+2. \( \norm{u_j}^2 \da \inner{u_j}{u_j} = 1 \) for all \( j \).  
+
+:::
+
+:::{.definition title="Basis of a Hilbert space"}
+A set $\theset{u_{n}}$ is a **basis** for a Hilbert space $\mch$ iff it is dense in $\mch$.
+:::
+
+:::{.definition title="Completeness of a Hilbert space"}
+A collection of vectors $\theset{u_{n}}\subset H$ is **complete** iff $\inner{x}{u_{n}} = 0$ for all $n \iff x = 0$ in $H$.
+:::
+
+:::{.definition title="Dual of a Hilbert space"}
+The **dual** of a Hilbert space \( H \) is defined as 
+\[
+H\dual \da \theset{L: H\to \CC \suchthat L \text{ is continuous }}
+.\]
+
+:::
+
+:::{.definition title="Linear functionals"}
+A map $L: X \to \CC$ is a **linear functional** iff
+\[
+L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
+.\]
+:::
+
+:::{.definition title="Operator norm"}
+The **operator norm** of an operator \( L \) is defined as 
+\[
+\norm{L}_{X\dual} \da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
+.\]
+:::
+
+:::{.definition title="Banach Space"}
+A space is a **Banach space** if and only if it is a complete normed vector space.
+:::
+
+:::{.definition title="Hilbert Space"}
+A **Hilbert space** is an inner product space which is a Banach space under the induced norm.
+:::
+
 ## Theorems
 
 ### Topology / Sets
 
-
-:::{.lemma title="?"}
-Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
-
+:::{.theorem title="Heine-Cantor"}
+Every continuous function on a compact space is uniformly continuous.
 :::
 
-:::{.proposition title="?"}
+:::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
+Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::
+
+:::{.proposition title="A unit ball that is not compact"}
 The unit ball in $C([0, 1])$ with the sup norm is not compact.
 :::
 
@@ -157,16 +327,16 @@ $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
 \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
 .\]
 :::
+
 :::{.corollary title="?"}
 \[
 \sum_{k=0}^\infty \frac 1 {2^k} = 1
 .\]
 :::
 
-:::{.lemma title="?"}
+:::{.proposition title="?"}
 The Cantor set is closed with empty interior.
 :::
-
 
 :::{.proof title="?"}
 Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
@@ -176,13 +346,12 @@ Its complement is a union of open intervals, and can't contain an interval since
 The Cantor set is nowhere dense.
 :::
 
-:::{.lemma title="?"}
+:::{.proposition title="?"}
 Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
 :::
 
-
 :::{.theorem title="Baire"}
-$\RR$ is a **Baire space** (countable intersections of open, dense sets are still dense). 
+$\RR$ is a **Baire space** 
 Thus $\RR$ can not be written as a countable union of nowhere dense sets.
 :::
 
@@ -199,7 +368,7 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 .\]
 :::
 
-:::{.lemma title="?"}
+:::{.lemma title="Function discontinuous on the rationals"}
 There is a function discontinuous precisely on $\QQ$.
 :::
 
@@ -208,7 +377,7 @@ $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and 
 The limit at every point is 0.
 :::
 
-:::{.proposition title="?"}
+:::{.proposition title="No functions discontinuous on the irrationals"}
 There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
 :::
 
@@ -217,46 +386,24 @@ $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation 
 $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 :::
 
-:::{.proposition title="?"}
+:::{.proposition title="Lipschitz $\iff$ differentiable with bounded derivative."}
 A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
 In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
 :::
 
-
-
 ## Uniform Convergence
 
-:::{.definition title="Uniform Convergence"}
-\[  
-(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
-
-Negated:[^Negated_uniform_convergence]
-
-\[  
-(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
-.\]
-
-[^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
-
-:::
-
-Compare this to the definition of pointwise convergence:
-
-:::{.definition title="Pointwise Convergence"}
-\[  
-(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
-:::
-
-:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
+:::{.proposition title="Testing Uniform Convergence: The Sup Norm Test"}
 $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
 :::
 
+:::{.remark title="Negating the Sup Norm test"}
 **Negating**: find an $x$ which depends on $n$ for which $\norm{f_n}_\infty > \eps$ (negating small tails) or $\norm{f_n - f_m} > \eps$ (negating the Cauchy criterion).
+:::
 
+### Example: Completeness of a Normed Function Space
 
-:::{.proposition title="?"}
+:::{.proposition title=" \( C(I) \) is complete"}
 The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
 \[
 \norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}
@@ -291,7 +438,9 @@ is a **complete** metric space.
 
 :::
 
-Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+:::{.remark}
+In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+:::
 
 :::{.theorem title="Uniform Limit Theorem"}
 If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
@@ -301,6 +450,7 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 :::
 
 :::{.proof}
+\envlist
 - Follows from an $\varepsilon/3$ argument: 
   \[  
   \abs{F(x) - F(y} \leq 
@@ -313,11 +463,9 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 - So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
 :::
 
-
 :::{.proposition title="Uniform Limits Commute with Integrals"}
 If $f_n \to f$ uniformly, then $\int f_n = \int f$.
 :::
-
 
 ### Series
 
@@ -390,7 +538,6 @@ If $f_n$ are differentiable, $\sum f_n' \to g$ uniformly, and there exists one p
 .\]
 :::
 
-
 :::{.proposition title="Limits of continuous functions need not be continuous"}
 \[  
 \lim_{k\to \infty} \lim_{n\to\infty} f_n(x_k) \neq
@@ -431,7 +578,6 @@ Then $f_k \to f$ *almost uniformly*, i.e.
 m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
 .\]
 :::
-
 
 ## Examples
 

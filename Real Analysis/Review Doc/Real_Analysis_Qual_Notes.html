@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Algebra Qualifying Exam Review" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://dzackgarza.com/assets/dist.js" data-external="1">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config( window.mjconfig );
+</script>
+
+<script type="text/javascript" src="data:application/javascript;base64,KGZ1bmN0aW9uICgpIHsKICB2YXIgbmV3TWF0aEpheCA9ICdodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9tYXRoamF4LzIuNy4xL01hdGhKYXguanMnOwogIHZhciBvbGRNYXRoSmF4ID0gJ2Nkbi5tYXRoamF4Lm9yZy9tYXRoamF4L2xhdGVzdC9NYXRoSmF4LmpzJzsKCiAgdmFyIHJlcGxhY2VTY3JpcHQgPSBmdW5jdGlvbiAoc2NyaXB0LCBzcmMpIHsKICAgIC8vCiAgICAvLyAgTWFrZSByZWRpcmVjdGVkIHNjcmlwdAogICAgLy8KICAgIHZhciBuZXdTY3JpcHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsKICAgIG5ld1NjcmlwdC5zcmMgPSBuZXdNYXRoSmF4ICsgc3JjLnJlcGxhY2UoLy4qPyhcP3wkKS8sICckMScpOwogICAgLy8KICAgIC8vICBNb3ZlIG9ubG9hZCBhbmQgb25lcnJvciBoYW5kbGVycyB0byBuZXcgc2NyaXB0CiAgICAvLwogICAgbmV3U2NyaXB0Lm9ubG9hZCA9IHNjcmlwdC5vbmxvYWQ7IAogICAgbmV3U2NyaXB0Lm9uZXJyb3IgPSBzY3JpcHQub25lcnJvcjsKICAgIHNjcmlwdC5vbmxvYWQgPSBzY3JpcHQub25lcnJvciA9IG51bGw7CiAgICAvLwogICAgLy8gIE1vdmUgYW55IGNvbnRlbnQgKG9sZC1zdHlsZSBjb25maWd1cmF0aW9uIHNjcmlwdHMpCiAgICAvLwogICAgd2hpbGUgKHNjcmlwdC5maXJzdENoaWxkKSBuZXdTY3JpcHQuYXBwZW5kQ2hpbGQoc2NyaXB0LmZpcnN0Q2hpbGQpOwogICAgLy8KICAgIC8vICBDb3B5IHNjcmlwdCBpZAogICAgLy8KICAgIGlmIChzY3JpcHQuaWQgIT0gbnVsbCkgbmV3U2NyaXB0LmlkID0gc2NyaXB0LmlkOwogICAgLy8KICAgIC8vICBSZXBsYWNlIG9yaWdpbmFsIHNjcmlwdCB3aXRoIG5ldyBvbmUKICAgIC8vCiAgICBzY3JpcHQucGFyZW50Tm9kZS5yZXBsYWNlQ2hpbGQobmV3U2NyaXB0LCBzY3JpcHQpOwogICAgLy8KICAgIC8vICBJc3N1ZSBhIGNvbnNvbGUgd2FybmluZwogICAgLy8KICAgIGNvbnNvbGUud2FybignV0FSTklORzogY2RuLm1hdGhqYXgub3JnIGhhcyBiZWVuIHJldGlyZWQuIENoZWNrIGh0dHBzOi8vd3d3Lm1hdGhqYXgub3JnL2Nkbi1zaHV0dGluZy1kb3duLyBmb3IgbWlncmF0aW9uIHRpcHMuJykKICB9CgogIGlmIChkb2N1bWVudC5jdXJyZW50U2NyaXB0KSB7CiAgICB2YXIgc2NyaXB0ID0gZG9jdW1lbnQuY3VycmVudFNjcmlwdDsKICAgIHJlcGxhY2VTY3JpcHQoc2NyaXB0LCBzY3JpcHQuc3JjKTsKICB9IGVsc2UgewogICAgLy8KICAgIC8vIExvb2sgZm9yIGN1cnJlbnQgc2NyaXB0IGJ5IHNlYXJjaGluZyBmb3Igb25lIHdpdGggdGhlIHJpZ2h0IHNvdXJjZQogICAgLy8KICAgIHZhciBuID0gb2xkTWF0aEpheC5sZW5ndGg7CiAgICB2YXIgc2NyaXB0cyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKTsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgc2NyaXB0cy5sZW5ndGg7IGkrKykgewogICAgICB2YXIgc2NyaXB0ID0gc2NyaXB0c1tpXTsKICAgICAgdmFyIHNyYyA9IChzY3JpcHQuc3JjIHx8ICcnKS5yZXBsYWNlKC8uKj86XC9cLy8sJycpOwogICAgICBpZiAoc3JjLnN1YnN0cigwLCBuKSA9PT0gb2xkTWF0aEpheCkgewogICAgICAgIHJlcGxhY2VTY3JpcHQoc2NyaXB0LCBzcmMpOwogICAgICAgIGJyZWFrOwogICAgICB9CiAgICB9CiAgfQp9KSgpOw==">
+</script>
+
+<meta name="description" content="Algebra Qualifying Exam Review">
+
+<title>Algebra Qualifying Exam Review</title>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous" data-external="1"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.3.0/js/pushy.min.js" integrity="sha512-+YLFvWFpPgQOV1/PoGgIinfvZEsUpfO5YEoxH4MlBAW5lf2WAVK5F4HtWA1BvZEYqK+AWW0fb/C797ttp1fL7g==" crossorigin="anonymous" data-external="1"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pushy/1.3.0/css/pushy.min.css" integrity="sha512-qGokfFEnfziCnGfs9Dpy65qVsouyHwLFx2YUq/UScF4ojoI7P2sV1ETuV6HSqdOp5I9zIGi2S7YOJglhWE3chg==" crossorigin="anonymous" data-external="1" />
+
+
+<link rel="stylesheet" href="data:text/css,%0Adiv%2Esticky%20%7B%0Aposition%3A%20%2Dwebkit%2Dsticky%3B%20%0Aposition%3A%20sticky%3B%0Atop%3A%200%3B%0Az%2Dindex%3A%2099%3B%0A%7D%0Ahtml%20%7B%0Afont%2Dsize%3A%20100%25%3B%0A%7D%0Ahtml%2C%20button%2C%20input%2C%20select%2C%20textarea%20%7B%0Afont%2Dfamily%3A%20sans%2Dserif%3B%0A%7D%0Ahtml%2C%20body%2C%20button%2C%20input%2C%20select%2C%20textarea%20%7B%0Acolor%3A%20%2357534A%3B%0Afont%2Dfamily%3A%20%22PT%20Serif%22%2C%22Calluna%22%2C%22Arno%20Pro%22%2Cserif%3B%0Afont%2Dsize%3A%2018px%3B%0Afont%2Dweight%3A%20300%3B%0A%7D%0Abody%7B%0Amargin%3A%200%20auto%3B%0Abackground%2Dcolor%3A%20%23%23fffff8%3B%0Afont%2Dfamily%3A%20et%2Dbook%2C%20Palatino%2C%20%22Palatino%20Linotype%22%2C%20%22Palatino%20LT%20STD%22%2C%20%22Book%20Antiqua%22%2C%20Georgia%2C%20serif%3B%0A%7D%0Abody%2C%20textarea%20%7B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Abody%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20%7B%0Apadding%2Dleft%3A%204rem%3B%0Apadding%2Dright%3A%204rem%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0Amax%2Dwidth%3A%2044rem%3B%0Adisplay%3A%20block%3B%0A%7D%0A%40media%20screen%20and%20%28max%2Dwidth%3A1024px%29%20%7B%0Abody%20%7B%0Apadding%2Dleft%3A%200%2E5rem%3B%0Apadding%2Dright%3A%200%2E5rem%3B%0Amargin%2Dleft%3A%200%3B%0Amargin%2Dright%3A%200%3B%0Amax%2Dwidth%3A%2044rem%3B%0Adisplay%3A%20block%3B%0A%7D%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20dt%20%7B%0Acolor%3A%20%23423F37%3B%0Afont%2Dweight%3A%20700%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Ah1%3A%3Abefore%2C%0Ah1%3A%3Aafter%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Acontent%3A%20%22%22%3B%0Aborder%2Dtop%3A%20%2E3rem%20solid%20black%3B%0Awidth%3A%204rem%3B%0Amargin%3A%200%201rem%3B%0Atransform%3A%20translateY%280rem%29%3B%0A%7D%0Ah2%2C%20%2Earticle%2Dlist%20%2Earticle%2Dtitle%20%7B%0Apadding%2Dtop%3A%201em%3B%0Apadding%2Dbottom%3A%200em%3B%0Aborder%2Dbottom%3A%20none%3B%0Afont%2Dsize%3A%201%2E5em%3B%0Amargin%3A%200%2E83em%200%3B%0A%7D%0Ah3%2C%20dt%20%7B%0Apadding%2Dtop%3A%201em%3B%0Afont%2Dsize%3A%201%2E17em%3B%0Afont%2Dstyle%3A%20italic%3B%0Amargin%3A%201em%200%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201em%3B%0Amargin%3A%201%2E33em%200%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%200%2E83em%3B%0Amargin%3A%201%2E67em%200%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%200%2E75em%3B%0Amargin%3A%202%2E33em%200%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%238DB359%3B%0Acursor%3A%20pointer%3B%0Aoutline%3A%200%20none%3B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Aa%3Ahover%20%7B%0Aoutline%3A%200%20none%3B%0Acolor%3A%20%23739544%3B%0A%7D%0Ap%2C%20pre%20%7B%0Amargin%3A%201em%200%3B%0A%7D%0Acode%2C%20kbd%2C%20pre%2C%20samp%20%7B%0Afont%2Dfamily%3A%20monospace%2Cserif%3B%0Afont%2Dsize%3A%201em%3B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0A%7D%0Apre%20%7B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Apre%20%7B%0Abackground%2Dcolor%3A%20%23F8F5F0%3B%0Afont%2Dsize%3A%200%2E7rem%3B%0Aoverflow%2Dx%3A%20auto%3B%0Apadding%3A%201%2E3rem%3B%0Aposition%3A%20relative%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%2C%20code%2C%20kbd%2C%20samp%20%7B%0Amargin%3A%200%3B%0A%7D%0Acode%2C%20kbd%2C%20pre%2C%20samp%20%7B%0Afont%2Dfamily%3A%20monospace%2Cserif%3B%0A%7D%0Acode%20%7B%0Acolor%3A%20%23423F37%3B%0A%7D%0Aaside%20%7B%0Adisplay%3A%20block%3B%0Afloat%3A%20right%3B%0Awidth%3A%20390px%3B%0A%7D%0Ab%2C%20strong%20%7B%0Afont%2Dweight%3A%20bold%3B%0Acolor%3A%20%23423F37%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Ablockquote%20%7B%0Acolor%3A%20%23423F37%3B%0Amargin%3A%201em%2040px%3B%0Amargin%2Dbottom%3A%202em%3B%0Amargin%2Dtop%3A%202em%3B%0Abackground%2Dcolor%3A%20whitesmoke%3B%0Amargin%2Dleft%3A%200%3B%0Amargin%2Dright%3A%200%3B%0A%7D%0Afigure%20%7B%0Amargin%2Dbottom%3A%202em%3B%0Amargin%2Dtop%3A%202em%3B%0A%7D%0Ahr%20%7B%0A%2Dmoz%2Dborder%2Dbottom%2Dcolors%3A%20none%3B%0A%2Dmoz%2Dborder%2Dleft%2Dcolors%3A%20none%3B%0A%2Dmoz%2Dborder%2Dright%2Dcolors%3A%20none%3B%0A%2Dmoz%2Dborder%2Dtop%2Dcolors%3A%20none%3B%0Aborder%2Dcolor%3A%20%2Dmoz%2Duse%2Dtext%2Dcolor%20%2Dmoz%2Duse%2Dtext%2Dcolor%20%23ECE6DA%3B%0Aborder%2Dimage%3A%20none%3B%0Aborder%2Dstyle%3A%20none%20none%20solid%3B%0Aborder%2Dwidth%3A%20medium%20medium%201px%3B%0Amargin%3A%203em%206em%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Adisplay%3A%20block%3B%0Aborder%3A%200%20none%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0Awidth%3A%2080%25%3B%0A%7D%0Aol%20%3E%20li%3Abefore%20%7B%0Acolor%3A%20%23423F37%3B%0Acontent%3A%20counter%28ol%2C%20decimal%29%20%22%2E%22%3B%0Acounter%2Dincrement%3A%20ol%3B%0Afont%2Dweight%3A%20700%3B%0Amargin%2Dright%3A%200%2E333em%3B%0Aposition%3A%20absolute%3B%0Aright%3A%20100%25%3B%0A%7D%0Aul%20%3E%20li%3Abefore%20%7B%0Abackground%2Dcolor%3A%20%23423F37%3B%0Aborder%2Dradius%3A%2014px%2014px%2014px%2014px%3B%0Acontent%3A%20%22%22%3B%0Aheight%3A%206px%3B%0Amargin%2Dright%3A%200%2E333em%3B%0Amargin%2Dtop%3A%200%2E55em%3B%0Aposition%3A%20absolute%3B%0Aright%3A%20100%25%3B%0Awidth%3A%206px%3B%0A%7D%0Aol%2C%20ul%2C%20dl%20%7B%0Amargin%2Dleft%3A%202rem%3B%0Apadding%3A%200%3B%0A%7D%0Aol%20%7B%0Acounter%2Dreset%3A%20ol%3B%0A%7D%0Ali%20%2B%20li%2C%20dd%20%2B%20dt%20%7B%0Amargin%2Dtop%3A%200%2E5em%3B%0A%7D%0Aul%20%3E%20li%20%7B%0Aposition%3A%20relative%3B%0A%7D%0Aol%20%3E%20li%20%7B%0Aposition%3A%20relative%3B%0A%7D%0Ali%20%7B%0Alist%2Dstyle%3A%20none%20outside%20none%3B%0A%7D%0Afigure%20%3E%20figcaption%20%7B%0Amargin%2Dtop%3A%200%2E5em%3B%0A%7D%0Asmall%2C%20dd%2C%20figcaption%20%7B%0Acolor%3A%20%23A19C91%3B%0Adisplay%3A%20block%3B%0Afont%2Dsize%3A%200%2E8rem%3B%0Afont%2Dstyle%3A%20italic%3B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Atbody%7Bdisplay%3Atable%2Drow%2Dgroup%7D%0Atfoot%7Bdisplay%3Atable%2Dfooter%2Dgroup%7D%0Atable%7Bmargin%2Dbottom%3A2em%3Bfont%2Dsize%3A%200%2E8em%3Bpadding%3A0%3Bborder%2Dcollapse%3Acollapse%3B%2Dwebkit%2Dbox%2Dshadow%3A1px%201px%202px%20rgba%280%2C0%2C0%2C%2E35%29%3Bwidth%3A80%25%3Bmargin%3A0%20auto%202em%20auto%7D%0Atable%20th%2Ctable%20td%7Bpadding%3A10px%2010px%209px%3Bline%2Dheight%3A18px%3Btext%2Dalign%3Aleft%7D%0Atable%20th%7B%0Apadding%2Dtop%3A9px%3B%21important%3Btext%2Dtransform%3Auppercase%3Bvertical%2Dalign%3Amiddle%7D%0Atable%20td%7Bvertical%2Dalign%3Atop%3Bborder%2Dtop%3A1px%20solid%20%23ddd%3B%7D%0Atable%20tbody%20th%7Bborder%2Dtop%3A1px%20solid%20%23ddd%3Bvertical%2Dalign%3Atop%7D%0Atable%7Bborder%3A1px%20solid%20%23ddd%3Bborder%2Dcollapse%3Aseparate%3B%2Aborder%2Dcollapse%3Acollapse%3B%2Dwebkit%2Dborder%2Dradius%3A4px%3B%2Dmoz%2Dborder%2Dradius%3A4px%3Bborder%2Dradius%3A4px%7D%0Atable%20th%2Bth%2Ctable%20td%2Btd%2Ctable%20th%2Btd%7Bborder%2Dleft%3A1px%20solid%20%23ddd%7D%0Atable%20thead%20tr%3Afirst%2Dchild%20th%3Afirst%2Dchild%2Ctable%20tbody%20tr%3Afirst%2Dchild%20td%3Afirst%2Dchild%7B%2Dwebkit%2Dborder%2Dradius%3A4px%200%200%200%3B%2Dmoz%2Dborder%2Dradius%3A4px%200%200%200%3Bborder%2Dradius%3A4px%200%200%200%7D%0Atable%20thead%20tr%3Afirst%2Dchild%20th%3Alast%2Dchild%2Ctable%20tbody%20tr%3Afirst%2Dchild%20td%3Alast%2Dchild%7B%2Dwebkit%2Dborder%2Dradius%3A0%204px%200%200%3B%2Dmoz%2Dborder%2Dradius%3A0%204px%200%200%3Bborder%2Dradius%3A0%204px%200%200%7D%0Atable%20tbody%20tr%3Alast%2Dchild%20td%3Afirst%2Dchild%7B%2Dwebkit%2Dborder%2Dradius%3A0%200%200%204px%3B%2Dmoz%2Dborder%2Dradius%3A0%200%200%204px%3Bborder%2Dradius%3A0%200%200%204px%7D%0Atable%20tbody%20tr%3Alast%2Dchild%20td%3Alast%2Dchild%7B%2Dwebkit%2Dborder%2Dradius%3A0%200%204px%200%3B%2Dmoz%2Dborder%2Dradius%3A0%200%204px%200%3Bborder%2Dradius%3A0%200%204px%200%7D%0Atbody%20tr%3Anth%2Dchild%28odd%29%7Bbackground%2Dcolor%3Argba%280%2C0%2C0%2C0%2E03%29%7D%0Acaption%7Bdisplay%3Atable%2Dcaption%3Bfont%2Dweight%3A300%3Bfont%2Dsize%3A1%2E3em%3Btext%2Dtransform%3Auppercase%3Bletter%2Dspacing%3A2px%3Bword%2Dspacing%3A%2E2em%3Bbackground%3Argba%280%2C0%2C0%2C%2E75%29%3Bcolor%3A%23EEE%3Bpadding%3A4px%3B%2Dwebkit%2Dborder%2Dradius%3A4px%3Bmargin%3A4px%200%3B%2Dwebkit%2Dbox%2Dshadow%3A2px%202px%202px%20rgba%280%2C0%2C0%2C%2E35%29%7D%0A%0A%3A%2Dmoz%2Dplaceholder%20%7B%0Acolor%3A%20%23bfbfbf%3B%0A%7D%0A%3A%3A%2Dwebkit%2Dinput%2Dplaceholder%20%7B%0Acolor%3A%20%23bfbfbf%3B%0A%7D%0A%2Earticle%2Ddate%20%7B%0Acolor%3A%20%23C7C2B8%3B%0Adisplay%3A%20block%3B%0Afont%2Dsize%3A%200%2E8rem%3B%0A%7D%0A%2Etitle%7B%0Apadding%2Dbottom%3A%201em%3B%0A%7D%0A%2Eauthor%7B%0Apadding%2Dtop%3A%200%2E5em%3B%0Afont%2Dsize%3A1%2E24em%3B%0Aline%2Dheight%3A0%2E5em%3B%0Atext%2Dalign%3A%20left%3B%0A%7D%0A%2Edate%20%7B%0Acolor%3A%20%23C7C2B8%3B%0Adisplay%3A%20block%3B%0Afont%2Dsize%3A%200%2E8rem%3B%0A%7D%0A%2Ecaption%20%7B%0Adisplay%3A%20block%3B%0Afont%2Dsize%3A%200%2E8rem%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Esmall%7B%0Afont%2Dsize%3A0%2E8em%3B%0A%7D%0A%2Eaffiliation%7B%0Amargin%2Dtop%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Afont%2Dsize%3A0%2E9em%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Etheorem%2C%20%2Elemma%2C%20%2Eproposition%2C%20%2Ecorollary%20%7B%0Aborder%3A%201px%20solid%20black%3B%0Aborder%2Dleft%3A%205px%20solid%20%23%23955670%20%21important%3B%0Abackground%2Dcolor%3A%20%23%2395567075%3B%0Apadding%2Dleft%3A%205px%3B%0Amargin%2Dleft%3A%201%25%3B%0Apadding%2Dleft%3A%201%25%3B%0A%7D%0A%2Etheorem%20%3E%20%2Eproofenv%2Dheader%2C%0A%2Elemma%20%3E%20%2Eproofenv%2Dheader%2C%0A%2Eproposition%20%3E%20%2Eproofenv%2Dheader%2C%0A%2Edefinition%20%3E%20%2Eproofenv%2Dheader%2C%0A%2Ecorollary%20%3E%20%2Eproofenv%2Dheader%20%7B%0Afont%2Dstyle%3A%20normal%20%21important%3B%0Afont%2Dweight%3A%20bold%3B%0Aborder%2Dbottom%3A%202px%20solid%20black%3B%0Adisplay%3A%20block%3B%0A%7D%0A%2Etheorem%20%7B%0Aborder%3A%202px%20solid%20%2395567050%20%21important%3B%0Abackground%2Dcolor%3A%20%2395567050%3B%0Aborder%2Dleft%3A%205px%20solid%20%23955670%20%21important%3B%0Amargin%2Dleft%3A%201%25%3B%0Apadding%2Dleft%3A%201%25%3B%0A%7D%0A%2Eproof%20%7B%0Aborder%3A%201px%20dotted%3B%0Aborder%2Dcolor%3A%20%23000%3B%0Abackground%2Dcolor%3A%20%23F3E1C075%3B%0Amargin%2Dleft%3A%201%25%3B%0A%7D%0A%2Eproof%3Aafter%20%7B%0Acontent%3A%20%22%5C25FC%22%3B%0Afloat%3Aright%3B%0Amargin%2Dtop%3A%20%2D25px%3B%0Amargin%2Dright%3A%205px%3B%0A%7D%0A%2Ewarnings%20%7B%0Abackground%2Dcolor%3A%20%23f8d7da%3B%0Aborder%2Dcolor%3A%20%23f5c6cb%3B%0A%7D%0A%2Ewarnings%20%3E%20%2Eproofenv%2Dheader%20%7B%0Acolor%3A%20%23721c24%3B%0Afont%2Dweight%3A%20bold%20%21important%3B%0A%7D%0A%2Ewarnings%3Abefore%7B%0Acontent%3A%20%22%E2%9A%A0%EF%B8%8F%22%3B%0Amargin%2Dtop%3A%20%2D25px%3B%0Amargin%2Dright%3A%205px%3B%0A%7D%0A%2Edefinition%20%7B%0Aborder%3A%201px%20solid%3B%0Aborder%2Dcolor%3A%20%23000%3B%0Abackground%2Dcolor%3A%20%2327507054%3B%0Aborder%2Dleft%3A%205px%20solid%20%23275070%20%21important%3B%0Amargin%2Dleft%3A%201%25%3B%0Apadding%2Dleft%3A%201%25%3B%0A%7D%0A%2Eexercise%20%7B%0Aborder%3A%202px%20solid%20%23A0C4FF%20%21important%3B%0Abackground%2Dcolor%3A%20%23A0C4FF30%3B%0Aborder%2Dleft%3A%205px%20solid%20%23A0C4FF%20%21important%3B%0Amargin%2Dleft%3A%201%25%3B%0Apadding%2Dleft%3A%201%25%3B%0A%7D%0A%2Eproofenv%20%7B%0Adisplay%3A%20block%3B%0Amargin%3A%2012px%200%3B%0Afont%2Dstyle%3A%20normal%3B%0Aborder%2Dright%3A%201px%20dotted%20black%3B%0A%0Amargin%2Dright%3A%201%25%3B%0A%7D%0A%2Eproofenv%2Dheader%20%7B%0Atext%2Dtransform%3A%20capitalize%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Eremark%20%3E%20p%2C%20%2Efact%20%3E%20p%20%7B%0Amargin%2Dtop%3A%200em%3B%0A%7D%0Ablockquote%20%7B%0Atext%2Dalign%3A%20right%3B%0Afont%2Dstyle%3A%20italic%3B%0Abackground%2Dcolor%3A%20%23a2929554%3B%0Afont%2Dsize%3A%20small%3B%0A%7D%0A%2Epushy%7B%0Awidth%3A%20400px%3B%20%0A%7D%0A%2Epushy%2Dleft%7B%0Atransform%3A%20translate3d%28%2D400px%2C0%2C0%29%3B%20%0A%0A%7D%0A%2Epushy%2Dopen%2Dleft%20%23container%2C%0A%2Epushy%2Dopen%2Dleft%20%2Epush%20%7B%0Atransform%3A%20translate3d%28400px%2C%200%2C%200%29%3B%20%0A%7D%0A%2Epushy%2Dright%20%7B%0Atransform%3A%20translate3d%28400px%2C%200%2C%200%29%3B%20%0A%0A%7D%0A%2Epushy%2Dopen%2Dright%20%23container%2C%0A%2Epushy%2Dopen%2Dright%20%2Epush%20%7B%0Atransform%3A%20translate3d%28%2D400px%2C%200%2C%200%29%3B%20%0A%0A%7D%0Abutton%2Emenu%2Dbtn%20%7B%0Awidth%3A%20250px%3B%0Apadding%3A%2010px%3B%0Amargin%2Dbottom%3A%2030px%3B%0Abackground%3A%20%23000%3B%0Acolor%3A%20%23FFF%3B%0Atext%2Dalign%3A%20center%3B%0Aborder%3A%200%3B%0A%7D%0A%2Eintroquote%20%7B%0Awidth%3A%2030%25%3B%0A%7D%0Aimg%2Etikz%20%7B%0Amax%2Dwidth%3A%2070%25%3B%0Amax%2Dheight%3A%20300px%3B%0A%7D%0A" />
+
+
+</head>
+
+<body>
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- Your Content -->
+<div id="container" class="sticky">
+    <!-- Menu Button -->
+    <button class="menu-btn">☰ Table of Contents</button>
+</div>
+
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+    
+  
+    <h1 class="title">Algebra Qualifying Exam Review</h1>
+    </div>
+
+
+<hr>
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="#basics"><span class="toc-section-number">1</span> Basics</a>
+<ul>
+<li><a href="#useful-techniques"><span class="toc-section-number">1.1</span> Useful Techniques</a></li>
+<li><a href="#definitions"><span class="toc-section-number">1.2</span> Definitions</a>
+<ul>
+<li><a href="#functional-analysis"><span class="toc-section-number">1.2.1</span> Functional Analysis</a></li>
+</ul></li>
+<li><a href="#theorems"><span class="toc-section-number">1.3</span> Theorems</a>
+<ul>
+<li><a href="#topology-sets"><span class="toc-section-number">1.3.1</span> Topology / Sets</a></li>
+<li><a href="#functions"><span class="toc-section-number">1.3.2</span> Functions</a></li>
+</ul></li>
+<li><a href="#uniform-convergence"><span class="toc-section-number">1.4</span> Uniform Convergence</a>
+<ul>
+<li><a href="#example-completeness-of-a-normed-function-space"><span class="toc-section-number">1.4.1</span> Example: Completeness of a Normed Function Space</a></li>
+<li><a href="#series"><span class="toc-section-number">1.4.2</span> Series</a></li>
+</ul></li>
+<li><a href="#commuting-limiting-operations"><span class="toc-section-number">1.5</span> Commuting Limiting Operations</a></li>
+<li><a href="#slightly-advanced-stuff"><span class="toc-section-number">1.6</span> Slightly Advanced Stuff</a></li>
+<li><a href="#examples"><span class="toc-section-number">1.7</span> Examples</a></li>
+</ul></li>
+<li><a href="#measure-theory"><span class="toc-section-number">2</span> Measure Theory</a>
+<ul>
+<li><a href="#theorems-1"><span class="toc-section-number">2.1</span> Theorems</a></li>
+</ul></li>
+<li><a href="#integration"><span class="toc-section-number">3</span> Integration</a>
+<ul>
+<li><a href="#theorems-2"><span class="toc-section-number">3.1</span> Theorems</a>
+<ul>
+<li><a href="#convergence-theorems"><span class="toc-section-number">3.1.1</span> Convergence Theorems</a></li>
+</ul></li>
+<li><a href="#examples-of-nonintegrable-functions"><span class="toc-section-number">3.2</span> Examples of (Non)Integrable Functions</a></li>
+<li><a href="#l1-facts"><span class="toc-section-number">3.3</span> <span class="math inline">\(L^1\)</span> Facts</a></li>
+<li><a href="#lp-facts"><span class="toc-section-number">3.4</span> Lp Facts</a></li>
+</ul></li>
+<li><a href="#fourier-transform-and-convolution"><span class="toc-section-number">4</span> Fourier Transform and Convolution</a>
+<ul>
+<li><a href="#the-fourier-transform"><span class="toc-section-number">4.1</span> The Fourier Transform</a></li>
+<li><a href="#approximate-identities"><span class="toc-section-number">4.2</span> Approximate Identities</a></li>
+</ul></li>
+<li><a href="#functional-analysis-1"><span class="toc-section-number">5</span> Functional Analysis</a>
+<ul>
+<li><a href="#theorems-3"><span class="toc-section-number">5.1</span> Theorems</a></li>
+</ul></li>
+<li><a href="#extra-problems"><span class="toc-section-number">6</span> Extra Problems</a>
+<ul>
+<li><a href="#greatest-hits"><span class="toc-section-number">6.1</span> Greatest Hits</a></li>
+<li><a href="#by-topic"><span class="toc-section-number">6.2</span> By Topic</a>
+<ul>
+<li><a href="#topology"><span class="toc-section-number">6.2.1</span> Topology</a></li>
+<li><a href="#continuity"><span class="toc-section-number">6.2.2</span> Continuity</a></li>
+<li><a href="#differentiation"><span class="toc-section-number">6.2.3</span> Differentiation</a></li>
+<li><a href="#advanced-limitology"><span class="toc-section-number">6.2.4</span> Advanced Limitology</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#practice-exam-november-2014"><span class="toc-section-number">7</span> Practice Exam (November 2014)</a>
+<ul>
+<li><a href="#fubini-tonelli"><span class="toc-section-number">7.1</span> 1: Fubini-Tonelli</a>
+<ul>
+<li><a href="#a"><span class="toc-section-number">7.1.1</span> a</a></li>
+<li><a href="#b"><span class="toc-section-number">7.1.2</span> b</a></li>
+</ul></li>
+<li><a href="#convolutions-and-the-fourier-transform"><span class="toc-section-number">7.2</span> 2: Convolutions and the Fourier Transform</a>
+<ul>
+<li><a href="#a-1"><span class="toc-section-number">7.2.1</span> a</a></li>
+<li><a href="#b-1"><span class="toc-section-number">7.2.2</span> b</a></li>
+<li><a href="#c"><span class="toc-section-number">7.2.3</span> c</a></li>
+</ul></li>
+<li><a href="#hilbert-spaces"><span class="toc-section-number">7.3</span> 3: Hilbert Spaces</a>
+<ul>
+<li><a href="#a-2"><span class="toc-section-number">7.3.1</span> a</a></li>
+<li><a href="#b-2"><span class="toc-section-number">7.3.2</span> b</a></li>
+<li><a href="#c-1"><span class="toc-section-number">7.3.3</span> c</a></li>
+</ul></li>
+<li><a href="#lp-spaces"><span class="toc-section-number">7.4</span> 4: <span class="math inline">\(L^p\)</span> Spaces</a>
+<ul>
+<li><a href="#a-3"><span class="toc-section-number">7.4.1</span> a</a></li>
+<li><a href="#b-3"><span class="toc-section-number">7.4.2</span> b</a></li>
+<li><a href="#c-2"><span class="toc-section-number">7.4.3</span> c</a></li>
+</ul></li>
+<li><a href="#dual-spaces"><span class="toc-section-number">7.5</span> 5: Dual Spaces</a>
+<ul>
+<li><a href="#a-4"><span class="toc-section-number">7.5.1</span> a</a></li>
+<li><a href="#b-4"><span class="toc-section-number">7.5.2</span> b</a></li>
+<li><a href="#c-3"><span class="toc-section-number">7.5.3</span> c</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#midterm-exam-2-november-2018"><span class="toc-section-number">8</span> Midterm Exam 2 (November 2018)</a>
+<ul>
+<li><a href="#integration-by-parts"><span class="toc-section-number">8.1</span> 1 (Integration by Parts)</a></li>
+<li><a href="#section"><span class="toc-section-number">8.2</span> 2</a></li>
+<li><a href="#section-1"><span class="toc-section-number">8.3</span> 3</a></li>
+</ul></li>
+<li><a href="#midterm-exam-2-december-2014"><span class="toc-section-number">9</span> Midterm Exam 2 (December 2014)</a>
+<ul>
+<li><a href="#section-2"><span class="toc-section-number">9.1</span> 1</a></li>
+<li><a href="#section-3"><span class="toc-section-number">9.2</span> 2</a></li>
+<li><a href="#section-4"><span class="toc-section-number">9.3</span> 3</a></li>
+<li><a href="#weierstrass-approximation-theorem"><span class="toc-section-number">9.4</span> 4 (Weierstrass Approximation Theorem)</a></li>
+</ul></li>
+<li><a href="#common-inequalities"><span class="toc-section-number">10</span> Common Inequalities</a></li>
+<li><a href="#less-explicitly-used-inequalities"><span class="toc-section-number">11</span> Less Explicitly Used Inequalities</a></li>
+<li><a href="#bibliography"><span class="toc-section-number">12</span> Bibliography</a></li>
+</ul>
+</nav>
+
+
+
+
+<p>Exercises from Folland:</p>
+<ul>
+<li><p>Chapter 1: Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty) Exercises 15, 17, 18, 19, 22(a), 24, 28 Exercises 26, 30 (also check out 31)</p></li>
+<li><p>Chapter 2: Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof Exercises 10, 12, 13, 14, 16, 19 Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either) Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59</p></li>
+<li><p>Chapter 3: Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22</p></li>
+</ul>
+<h1 data-number="1" id="basics"><span class="header-section-number">1</span> Basics</h1>
+<p>Notation:</p>
+<ul>
+<li><span class="math inline">\({\left\lVert {f} \right\rVert}_\infty \mathrel{\vcenter{:}}=\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\)</span></li>
+<li><span class="math inline">\({\left\lVert {f} \right\rVert}_{L^\infty} \mathrel{\vcenter{:}}=\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{for a.e. }x }\right\}\)</span>.</li>
+<li>“<span class="math inline">\(f\)</span> vanishes at infinity” means <span class="math inline">\(f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0\)</span>.</li>
+<li>“<span class="math inline">\(f\)</span> has small tails” means <span class="math inline">\(\int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0\)</span>.</li>
+<li><span class="math inline">\(H\)</span> denotes a Hilbert space.</li>
+</ul>
+<h2 data-number="1.1" id="useful-techniques"><span class="header-section-number">1.1</span> Useful Techniques</h2>
+<ul>
+<li><p>General advice: try swapping the orders of limits, sums, integrals, etc.</p></li>
+<li><p>Limits:</p>
+<ul>
+<li>Take the <span class="math inline">\(\limsup\)</span> or <span class="math inline">\(\liminf\)</span>, which always exist, and aim for an inequality like 
+<span class="math display">
+\begin{align*}  
+c \leq \liminf a_n \leq \limsup a_n \leq c
+.\end{align*}
+<span></li>
+<li><span class="math inline">\(\lim f_n = \limsup f_n = \liminf f_n\)</span> iff the limit exists, so to show some <span class="math inline">\(g\)</span> is a limit, show 
+<span class="math display">
+\begin{align*}  
+\limsup f_n \leq g \leq \liminf f_n \qquad (\implies g = \lim f) 
+.\end{align*}
+<span></li>
+<li>A limit does <em>not</em> exist if <span class="math inline">\(\liminf a_n &gt; \limsup a_n\)</span>.</li>
+</ul></li>
+<li><p>Sequences and Series</p>
+<ul>
+<li>If <span class="math inline">\(f_n\)</span> has a global maximum (computed using <span class="math inline">\(f_n&#39;\)</span> and the first derivative test) <span class="math inline">\(M_n \to 0\)</span>, then <span class="math inline">\(f_n \to 0\)</span> uniformly.</li>
+<li>For a fixed <span class="math inline">\(x\)</span>, if <span class="math inline">\(f = \sum f_n\)</span> converges <em>uniformly</em> on some <span class="math inline">\(B_r(x)\)</span> and each <span class="math inline">\(f_n\)</span> is continuous at <span class="math inline">\(x\)</span>, then <span class="math inline">\(f\)</span> is also continuous at <span class="math inline">\(x\)</span> .</li>
+</ul></li>
+<li><p>Equalities</p>
+<ul>
+<li>Split into upper and lower bounds: 
+<span class="math display">
+\begin{align*}  
+a=b \iff a\leq b {\operatorname{ and }}a\geq b
+.\end{align*}
+<span></li>
+<li>Use an epsilon of room: 
+<span class="math display">
+\begin{align*}  
+a &lt; b + \varepsilon\,\forall \varepsilon\implies a\leq b 
+.\end{align*}
+<span></li>
+<li>Showing something is zero: 
+<span class="math display">
+\begin{align*}  
+{\left\lvert {a} \right\rvert} \leq \varepsilon\,\forall\varepsilon\implies a = 0
+.\end{align*}
+<span></li>
+</ul></li>
+<li><p>Simplifications:</p>
+<ul>
+<li>To show something for a measurable set, show it for bounded/compact/elementary sets/</li>
+<li>To show something for a function, show it for continuous, bounded, compactly supported, simple, indicator functions, <span class="math inline">\(L^1\)</span>, etc</li>
+<li>Replace a continuous sequence (<span class="math inline">\(\varepsilon\to 0\)</span>) with an arbitrary countable sequence (<span class="math inline">\(x_n \to 0\)</span>)</li>
+<li>Intersect with a ball <span class="math inline">\(B_r(\mathbf{0})\subset {\mathbb{R}}^n\)</span>.</li>
+</ul></li>
+<li><p>Integrals</p>
+<ul>
+<li>Break up <span class="math inline">\({\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} &gt; 1}\right\}\)</span>.</li>
+<li>Break up into <span class="math inline">\(\left\{{f&gt;g}\right\} {\coprod}\left\{{f=g}\right\} {\coprod}\left\{{f&lt; g}\right\}\)</span>.</li>
+<li>Tail estimates!</li>
+</ul></li>
+<li><p>Continuity / differentiability: show it holds on <span class="math inline">\([-M, M]\)</span> for all <span class="math inline">\(M\)</span> to get it to hold on <span class="math inline">\({\mathbb{R}}\)</span>.</p></li>
+<li><p><span class="math inline">\(F_\sigma\)</span> sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.</p></li>
+<li><p><span class="math inline">\(s = \inf\left\{{x\in X}\right\} \implies\)</span> for every <span class="math inline">\(\varepsilon\)</span> there is an <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(x \leq s + \varepsilon\)</span>.</p></li>
+<li><p>Always consider bounded sets, and if <span class="math inline">\(E\)</span> is unbounded write <span class="math inline">\(E = \cup_{n} B_{n}(0) \cap E\)</span> and use countable subadditivity or continuity of measure.</p></li>
+<li><p><span class="math inline">\(F_\sigma\)</span> sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.</p></li>
+<li><p>Break integration domain up into disjoint annuli.</p></li>
+<li><p>Break integrals or sums into <span class="math inline">\(x &lt; 1\)</span> and <span class="math inline">\(x\geq 1\)</span>.</p></li>
+<li><p>Calculus techniques: Taylor series, IVT, …</p></li>
+<li><p>Approximate by dense subsets of functions</p></li>
+<li><p>Useful facts about compactly supported continuous functions:</p>
+<ul>
+<li>Uniformly continuous</li>
+<li>Bounded</li>
+</ul></li>
+</ul>
+<p>Useful facts about <span class="math inline">\(C_c\)</span> functions:</p>
+<ul>
+<li>Bounded almost everywhere</li>
+<li>Uniformly continuous</li>
+</ul>
+<h2 data-number="1.2" id="definitions"><span class="header-section-number">1.2</span> Definitions</h2>
+<div class="definition proofenv" title="Uniform Continuity">
+<p><span class="math inline">\(f\)</span> is uniformly continuous iff</p>
+<p>
+<span class="math display">
+\begin{align*}
+    &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \mathrel{\Big|}\quad \forall x, y, \quad {\left\lvert {x - y} \right\rvert} &lt; \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} &lt; \varepsilon \\
+\iff &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \mathrel{\Big|}\quad \forall x, y, \quad {\left\lvert {y} \right\rvert} &lt; \delta \implies {\left\lvert {f(x-y) - f(y)} \right\rvert} &lt; \varepsilon
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Nowhere Dense Sets">
+<p>A set <span class="math inline">\(S\)</span> is <strong>nowhere dense</strong> iff the closure of <span class="math inline">\(S\)</span> has empty interior iff every interval contains a subinterval that does not intersect <span class="math inline">\(S\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Meager Sets">
+<p>A set is <strong>meager</strong> if it is a <em>countable</em> union of nowhere dense sets.</p>
+</div>
+<div class="definition proofenv" title="$F_\sigma$ and $G_\delta$ Sets">
+<p>An <span class="math inline">\(F_\sigma\)</span> set is a union of closed sets, and a <span class="math inline">\(G_\delta\)</span> set is an intersection of opens.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+<div class="definition proofenv" title="Limsup/Liminf">
+<p>
+<span class="math display">
+\begin{align*}  
+\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &amp;= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
+\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &amp;= \sup_{n\geq 0} \inf_{j\geq n} a_j
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Topological Notions">
+<p>Let <span class="math inline">\(X\)</span> be a metric space and <span class="math inline">\(A\)</span> a subset. Let <span class="math inline">\(A&#39;\)</span> denote the limit points of <span class="math inline">\(A\)</span>, and <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu \mathrel{\vcenter{:}}= A\cup A&#39;\)</span> to be its closure.</p>
+<ul>
+<li><p>A <strong>neighborhood</strong> of <span class="math inline">\(p\)</span> is an open set <span class="math inline">\(U_p\)</span> containing <span class="math inline">\(p\)</span>.</p></li>
+<li><p>An <span class="math inline">\(\varepsilon{\hbox{-}}\)</span><strong>neighborhood</strong> of <span class="math inline">\(p\)</span> is an open ball <span class="math inline">\(B_r(p) \mathrel{\vcenter{:}}=\left\{{q {~\mathrel{\Big|}~}d(p, q) &lt; r}\right\}\)</span> for some <span class="math inline">\(r&gt;0\)</span>.</p></li>
+<li><p>A point <span class="math inline">\(p\in X\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(A\)</span> iff every neighborhood <span class="math inline">\(U_p\)</span> of <span class="math inline">\(p\)</span> contains a point <span class="math inline">\(q\in Q\)</span></p></li>
+<li><p>A point <span class="math inline">\(p\in X\)</span> is a <strong>limit point</strong> of <span class="math inline">\(A\)</span> iff every <em>punctured</em> neighborhood <span class="math inline">\(U_p\setminus\left\{{p}\right\}\)</span> contains a point <span class="math inline">\(q\in A\)</span>.</p></li>
+<li><p>If <span class="math inline">\(p\in A\)</span> and <span class="math inline">\(p\)</span> is not a limit point of <span class="math inline">\(A\)</span>, then <span class="math inline">\(p\)</span> is an <strong>isolated point</strong> of <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\(A\)</span> is <strong>closed</strong> iff <span class="math inline">\(A&#39; \subset A\)</span>, so <span class="math inline">\(A\)</span> contains all of its limit points.</p></li>
+<li><p>A point <span class="math inline">\(p\in A\)</span> is <strong>interior</strong> iff there is a neighborhood <span class="math inline">\(U_p \subset A\)</span> that is strictly contained in <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\(A\)</span> is <strong>open</strong> iff every point of <span class="math inline">\(A\)</span> is interior.</p></li>
+<li><p><span class="math inline">\(A\)</span> is <strong>perfect</strong> iff <span class="math inline">\(A\)</span> is closed and <span class="math inline">\(A\subset A&#39;\)</span>, so every point of <span class="math inline">\(A\)</span> is a limit point of <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\(A\)</span> is <strong>bounded</strong> iff there is a real number <span class="math inline">\(M\)</span> and a point <span class="math inline">\(q\in X\)</span> such that <span class="math inline">\(d(p, q) &lt; M\)</span> for all <span class="math inline">\(p\in A\)</span>.</p></li>
+<li><p><span class="math inline">\(A\)</span> is <strong>dense</strong> in <span class="math inline">\(X\)</span> iff every point <span class="math inline">\(x\in X\)</span> is either a point of <span class="math inline">\(A\)</span>, so <span class="math inline">\(x\in A\)</span>, or a limit point of <span class="math inline">\(A\)</span>, so <span class="math inline">\(x\in A&#39;\)</span>. I.e., <span class="math inline">\(X\subset A\cup A&#39;\)</span>.</p>
+<ul>
+<li>Alternatively, <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu = X\)</span>, so the closure of <span class="math inline">\(A\)</span> is <span class="math inline">\(X\)</span>.</li>
+</ul></li>
+</ul>
+</div>
+<div class="definition proofenv" title="Uniform Convergence">
+<p>
+<span class="math display">
+\begin{align*}
+(\forall \varepsilon&gt;0)\left(\exists n_{0} = n_0(\varepsilon) \right)(\forall x \in S)\left(\forall n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|&lt;\varepsilon\right)
+.\end{align*}
+<span> Negated:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 
+<span class="math display">
+\begin{align*}  
+(\exists \varepsilon&gt;0)\left(\forall n_{0} = n_0 (\varepsilon) \right)(\exists x = x(n_0) \in S)\left(\exists n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Pointwise Convergence">
+<p>A sequence of functions <span class="math inline">\(\left\{{ f_j }\right\}\)</span> is said to <strong>converge pointwise</strong> to <span class="math inline">\(f\)</span> if and only if 
+<span class="math display">
+\begin{align*}  
+(\forall \varepsilon&gt;0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \varepsilon) \right)\left(\forall n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|&lt;\varepsilon\right)
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Outer Measure">
+<p>The <strong>outer measure</strong> of a set is given by 
+<span class="math display">
+\begin{align*}
+m_*(E) \mathrel{\vcenter{:}}=\inf_{\substack{\left\{{Q_{i}}\right\} \rightrightarrows E \\ \text{closed cubes}}} \sum {\left\lvert {Q_{i}} \right\rvert}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Limsup and Liminf of Sets">
+<p>
+<span class="math display">
+\begin{align*}
+\limsup_{n} A_{n} \mathrel{\vcenter{:}}=\cap_{n} \cup_{j\geq n} A_{j}&amp;= \left\{{x {~\mathrel{\Big|}~}x\in A_{n} \text{ for inf. many $n$}}\right\}  \\
+\liminf_{n} A_{n} \mathrel{\vcenter{:}}=\cup_{n} \cap_{j\geq n} A_{j} &amp;= \left\{{x {~\mathrel{\Big|}~}x\in A_{n} \text{ for all except fin. many $n$}}\right\}  \\
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Lebesgue Measurable Sets">
+<p>A subset <span class="math inline">\(E\subseteq {\mathbb{R}}^n\)</span> is <strong>Lebesgue measurable</strong> iff for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists an open set <span class="math inline">\(O \supseteq E\)</span> such that <span class="math inline">\(m_*(O\setminus E) &lt; \varepsilon\)</span>. In this case, we define <span class="math inline">\(m(E) \mathrel{\vcenter{:}}= m_*(E)\)</span>.</p>
+</div>
+<div class="definition proofenv" title="$L^+$: Measurable non-negative functions.">
+<p><span class="math inline">\(f\in L^+\)</span> iff <span class="math inline">\(f\)</span> is measurable and non-negative.</p>
+</div>
+<div class="definition proofenv" title="Integrability">
+<p>A measurable function is <strong>integrable</strong> iff <span class="math inline">\({\left\lVert {f} \right\rVert}_1 &lt; \infty\)</span>.</p>
+</div>
+<div class="definition proofenv" title="The Infinity Norm">
+<p>
+<span class="math display">
+\begin{align*}
+{\left\lVert {f} \right\rVert}_\infty &amp;\mathrel{\vcenter{:}}=\inf_{\alpha \geq 0} \left\{{\alpha {~\mathrel{\Big|}~}m\left\{{{\left\lvert {f} \right\rvert} \geq \alpha}\right\} = 0}\right\}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Essentially Bounded Functions">
+<p>A function <span class="math inline">\(f:X \to {\mathbb{C}}\)</span> is <strong>essentially bounded</strong> iff there exists a real number <span class="math inline">\(c\)</span> such that <span class="math inline">\(\mu(\left\{{{\left\lvert {f} \right\rvert} &gt; x}\right\}) = 0\)</span>, i.e. <span class="math inline">\({\left\lVert {f} \right\rVert}_\infty &lt; \infty\)</span>.</p>
+</div>
+<div class="definition proofenv" title="$L^\infty$">
+<p>
+<span class="math display">
+\begin{align*}
+L^\infty(X)
+\mathrel{\vcenter{:}}=\left\{{f: X\to {\mathbb{C}}{~\mathrel{\Big|}~}f \text{ is essentially bounded }}\right\}
+\mathrel{\vcenter{:}}=\left\{{f: X\to {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lVert {f} \right\rVert}_{\infty }&lt; \infty}\right\}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Dual Norm">
+<p>For <span class="math inline">\(X\)</span> a normed vector space and <span class="math inline">\(\Lambda \in X^\vee\)</span>, 
+<span class="math display">
+\begin{align*}
+{\left\lVert {\Lambda} \right\rVert}_{X^\vee} \mathrel{\vcenter{:}}=\sup_{\left\{{x\in X {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert}_X \leq 1}\right\}} {\left\lvert {f(x)} \right\rvert}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Convolution">
+<p>
+<span class="math display">
+\begin{align*}f * g(x)=\int f(x-y) g(y) d y .\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Fourier Transform">
+<p>
+<span class="math display">
+\begin{align*}
+\widehat{f}(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Dilation">
+<p>
+<span class="math display">
+\begin{align*}
+\phi_{t}(x) = t^{-n} \phi\left(t^{-1} x\right)
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Approximations to the identity">
+<p>For <span class="math inline">\(\phi\in L^1\)</span>, the dilations satisfy <span class="math inline">\(\int \phi_{t} = \int \phi\)</span>, and if <span class="math inline">\(\int \phi = 1\)</span> then <span class="math inline">\(\phi\)</span> is an <strong>approximate identity</strong>.</p>
+</div>
+<div class="definition proofenv" title="Baire Space">
+<p>A space <span class="math inline">\(X\)</span> is a <strong>Baire space</strong> if and only if every countable intersections of open, dense sets is still dense.</p>
+</div>
+<h3 data-number="1.2.1" id="functional-analysis"><span class="header-section-number">1.2.1</span> Functional Analysis</h3>
+<div class="definition proofenv" title="Orthonormal sequence ">
+<p>A countable collection of elements <span class="math inline">\(\left\{{ u_i }\right\}\)</span> is <strong>orthonormal</strong> if and only if</p>
+<ol type="1">
+<li><span class="math inline">\({\left\langle {u_i},~{u_j} \right\rangle} = 0\)</span> for all <span class="math inline">\(j \neq k\)</span> and</li>
+<li><span class="math inline">\({\left\lVert {u_j} \right\rVert}^2 \mathrel{\vcenter{:}}={\left\langle {u_j},~{u_j} \right\rangle} = 1\)</span> for all <span class="math inline">\(j\)</span>.</li>
+</ol>
+</div>
+<div class="definition proofenv" title="Basis of a Hilbert space">
+<p>A set <span class="math inline">\(\left\{{u_{n}}\right\}\)</span> is a <strong>basis</strong> for a Hilbert space <span class="math inline">\({\mathcal{H}}\)</span> iff it is dense in <span class="math inline">\({\mathcal{H}}\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Completeness of a Hilbert space">
+<p>A collection of vectors <span class="math inline">\(\left\{{u_{n}}\right\}\subset H\)</span> is <strong>complete</strong> iff <span class="math inline">\({\left\langle {x},~{u_{n}} \right\rangle} = 0\)</span> for all <span class="math inline">\(n \iff x = 0\)</span> in <span class="math inline">\(H\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Dual of a Hilbert space">
+<p>The <strong>dual</strong> of a Hilbert space <span class="math inline">\(H\)</span> is defined as 
+<span class="math display">
+\begin{align*}
+H^\vee\mathrel{\vcenter{:}}=\left\{{L: H\to {\mathbb{C}}{~\mathrel{\Big|}~}L \text{ is continuous }}\right\}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Linear functionals">
+<p>A map <span class="math inline">\(L: X \to {\mathbb{C}}\)</span> is a <strong>linear functional</strong> iff 
+<span class="math display">
+\begin{align*}
+L(\alpha\mathbf{x} + \mathbf{y}) = \alpha L(\mathbf{x}) + L(\mathbf{y}).
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Operator norm">
+<p>The <strong>operator norm</strong> of an operator <span class="math inline">\(L\)</span> is defined as 
+<span class="math display">
+\begin{align*}
+{\left\lVert {L} \right\rVert}_{X^\vee} \mathrel{\vcenter{:}}=\sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} = 1} } {\left\lvert {L(x)} \right\rvert}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Banach Space">
+<p>A space is a <strong>Banach space</strong> if and only if it is a complete normed vector space.</p>
+</div>
+<div class="definition proofenv" title="Hilbert Space">
+<p>A <strong>Hilbert space</strong> is an inner product space which is a Banach space under the induced norm.</p>
+</div>
+<h2 data-number="1.3" id="theorems"><span class="header-section-number">1.3</span> Theorems</h2>
+<h3 data-number="1.3.1" id="topology-sets"><span class="header-section-number">1.3.1</span> Topology / Sets</h3>
+<div class="theorem proofenv" title="Heine-Cantor">
+<p>Every continuous function on a compact space is uniformly continuous.</p>
+</div>
+<div class="proposition proofenv" title="Compact if and only if sequentially compact for metric spaces">
+<p>Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).</p>
+</div>
+<div class="proposition proofenv" title="A unit ball that is not compact">
+<p>The unit ball in <span class="math inline">\(C([0, 1])\)</span> with the sup norm is not compact.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Take <span class="math inline">\(f_k(x) = x^n\)</span>, which converges to <span class="math inline">\(\chi(x=1)\)</span>. The limit is not continuous, so no subsequence can converge.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="?">
+<p>A <em>finite</em> union of nowhere dense is again nowhere dense.</p>
+</div>
+<div class="proposition proofenv" title="Convergent Sums Have Small Tails">
+<p>
+<span class="math display">
+\begin{align*}\sum a_n &lt; \infty \implies a_n \to 0 {\quad \operatorname{and} \quad} \sum_{k=N}^\infty a_n \overset{N\to\infty}\to 0\end{align*}
+<span></p>
+</div>
+<div class="theorem proofenv" title="Heine-Borel">
+<p><span class="math inline">\(X\subseteq {\mathbb{R}}^n\)</span> is compact <span class="math inline">\(\iff X\)</span> is closed and bounded.</p>
+</div>
+<div class="proposition proofenv" title="Geometric Series">
+<p>
+<span class="math display">
+\begin{align*}
+\sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff {\left\lvert {x} \right\rvert} &lt; 1
+.\end{align*}
+<span></p>
+</div>
+<div class="corollary proofenv" title="?">
+<p>
+<span class="math display">
+\begin{align*}
+\sum_{k=0}^\infty \frac 1 {2^k} = 1
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="?">
+<p>The Cantor set is closed with empty interior.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Its complement is a union of open intervals, and can’t contain an interval since intervals have positive measure and <span class="math inline">\(m(C_n)\)</span> tends to zero.</p>
+</details>
+</div>
+<div class="corollary proofenv" title="?">
+<p>The Cantor set is nowhere dense.</p>
+</div>
+<div class="proposition proofenv" title="?">
+<p>Singleton sets in <span class="math inline">\({\mathbb{R}}\)</span> are closed, and thus <span class="math inline">\({\mathbb{Q}}\)</span> is an <span class="math inline">\(F_\sigma\)</span> set.</p>
+</div>
+<div class="theorem proofenv" title="Baire">
+<p><span class="math inline">\({\mathbb{R}}\)</span> is a <strong>Baire space</strong> Thus <span class="math inline">\({\mathbb{R}}\)</span> can not be written as a countable union of nowhere dense sets.</p>
+</div>
+<div class="lemma proofenv" title="?">
+<p>Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).</p>
+</div>
+<h3 data-number="1.3.2" id="functions"><span class="header-section-number">1.3.2</span> Functions</h3>
+<div class="proposition proofenv" title="Existence of Smooth Compactly Supported Functions">
+<p>There exist smooth compactly supported functions, e.g. take 
+<span class="math display">
+\begin{align*}
+f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
+.\end{align*}
+<span></p>
+</div>
+<div class="lemma proofenv" title="Function discontinuous on the rationals">
+<p>There is a function discontinuous precisely on <span class="math inline">\({\mathbb{Q}}\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p><span class="math inline">\(f(x) = \frac 1 n\)</span> if <span class="math inline">\(x = r_n \in {\mathbb{Q}}\)</span> is an enumeration of the rationals, and zero otherwise. The limit at every point is 0.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="No functions discontinuous on the irrationals">
+<p>There <em>do not</em> exist functions that are discontinuous precisely on <span class="math inline">\({\mathbb{R}}\setminus {\mathbb{Q}}\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p><span class="math inline">\(D_f\)</span> is always an <span class="math inline">\(F_\sigma\)</span> set, which follows by considering the oscillation <span class="math inline">\(\omega_f\)</span>. <span class="math inline">\(\omega_f(x) = 0 \iff f\)</span> is continuous at <span class="math inline">\(x\)</span>, and <span class="math inline">\(D_f = \cup_n A_{\frac 1 n}\)</span> where <span class="math inline">\(A_\varepsilon = \left\{{\omega_f \geq \varepsilon}\right\}\)</span> is closed.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="Lipschitz $\iff$ differentiable with bounded derivative.">
+<p>A function <span class="math inline">\(f: (a, b) \to {\mathbb{R}}\)</span> is Lipschitz <span class="math inline">\(\iff f\)</span> is differentiable and <span class="math inline">\(f&#39;\)</span> is bounded. In this case, <span class="math inline">\({\left\lvert {f&#39;(x)} \right\rvert} \leq C\)</span>, the Lipschitz constant.</p>
+</div>
+<h2 data-number="1.4" id="uniform-convergence"><span class="header-section-number">1.4</span> Uniform Convergence</h2>
+<div class="proposition proofenv" title="Testing Uniform Convergence: The Sup Norm Test">
+<p><span class="math inline">\(f_n \to f\)</span> uniformly iff there exists an <span class="math inline">\(M_n\)</span> such that <span class="math inline">\({\left\lVert {f_n - f} \right\rVert}_\infty \leq M_n \to 0\)</span>.</p>
+</div>
+<div class="remark proofenv" title="Negating the Sup Norm test">
+<p><strong>Negating</strong>: find an <span class="math inline">\(x\)</span> which depends on <span class="math inline">\(n\)</span> for which <span class="math inline">\({\left\lVert {f_n} \right\rVert}_\infty &gt; \varepsilon\)</span> (negating small tails) or <span class="math inline">\({\left\lVert {f_n - f_m} \right\rVert} &gt; \varepsilon\)</span> (negating the Cauchy criterion).</p>
+</div>
+<h3 data-number="1.4.1" id="example-completeness-of-a-normed-function-space"><span class="header-section-number">1.4.1</span> Example: Completeness of a Normed Function Space</h3>
+<p>:::{.proposition title=&quot; <span class="math inline">\(C(I)\)</span> is complete&quot;} The space <span class="math inline">\(X = C([0, 1])\)</span>, continuous functions <span class="math inline">\(f: [0, 1] \to {\mathbb{R}}\)</span>, equipped with the norm 
+<span class="math display">
+\begin{align*}
+{\left\lVert {f} \right\rVert}_\infty \mathrel{\vcenter{:}}=\sup_{x\in [0, 1]} {\left\lvert {f(x)} \right\rvert}
+\end{align*}
+<span> is a <strong>complete</strong> metric space. :::</p>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ol type="1">
+<li><p>Let <span class="math inline">\(\left\{{f_k}\right\}\)</span> be Cauchy in <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Define a candidate limit using pointwise convergence:</p>
+<p>Fix an <span class="math inline">\(x\)</span>; since 
+<span class="math display">
+\begin{align*}
+  {\left\lvert {f_k(x) - f_j(x)} \right\rvert}  \leq {\left\lVert {f_k - f_k} \right\rVert} \to 0
+  \end{align*}
+<span> the sequence <span class="math inline">\(\left\{{f_k(x)}\right\}\)</span> is Cauchy in <span class="math inline">\({\mathbb{R}}\)</span>. So define <span class="math inline">\(f(x) \mathrel{\vcenter{:}}=\lim_k f_k(x)\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\({\left\lVert {f_k - f} \right\rVert} \to 0\)</span>: 
+<span class="math display">
+\begin{align*}
+  {\left\lvert {f_k(x) - f_j(x)} \right\rvert} &lt; \varepsilon ~\forall x \implies \lim_{j} {\left\lvert {f_k(x) - f_j(x)} \right\rvert} &lt;\varepsilon ~\forall x
+  \end{align*}
+<span> Alternatively, <span class="math inline">\({\left\lVert {f_k-f} \right\rVert} \leq {\left\lVert {f_k - f_N} \right\rVert} + {\left\lVert {f_N - f_j} \right\rVert}\)</span>, where <span class="math inline">\(N, j\)</span> can be chosen large enough to bound each term by <span class="math inline">\(\varepsilon/2\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(f\in X\)</span>:</p>
+<p>The uniform limit of continuous functions is continuous.</p></li>
+</ol>
+</details>
+</div>
+<div class="remark proofenv">
+<p>In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="theorem proofenv" title="Uniform Limit Theorem">
+<p>If <span class="math inline">\(f_n\to f\)</span> pointwise and uniformly with each <span class="math inline">\(f_n\)</span> continuous, then <span class="math inline">\(f\)</span> is continuous.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>Follows from an <span class="math inline">\(\varepsilon/3\)</span> argument: 
+<span class="math display">
+\begin{align*}  
+{\left\lvert {F(x) - F(y} \right\rvert} \leq 
+{\left\lvert {F(x) - F_N(x)} \right\rvert} + {\left\lvert {F_N(x) - F_N(y)} \right\rvert} + {\left\lvert {F_N(y) - F(y)} \right\rvert} 
+\leq \varepsilon\to 0
+.\end{align*}
+<span></p>
+<ul>
+<li>The first and last <span class="math inline">\(\varepsilon/3\)</span> come from uniform convergence of <span class="math inline">\(F_N\to F\)</span>.</li>
+<li>The middle <span class="math inline">\(\varepsilon/3\)</span> comes from continuity of each <span class="math inline">\(F_N\)</span>.</li>
+</ul></li>
+<li><p>So just need to choose <span class="math inline">\(N\)</span> large enough and <span class="math inline">\(\delta\)</span> small enough to make all 3 <span class="math inline">\(\varepsilon\)</span> bounds hold.</p></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Uniform Limits Commute with Integrals">
+<p>If <span class="math inline">\(f_n \to f\)</span> uniformly, then <span class="math inline">\(\int f_n = \int f\)</span>.</p>
+</div>
+<h3 data-number="1.4.2" id="series"><span class="header-section-number">1.4.2</span> Series</h3>
+<div class="proposition proofenv" title="p-tests">
+<p>Let <span class="math inline">\(n\)</span> be a fixed dimension and set <span class="math inline">\(B = \left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert} \leq 1}\right\}\)</span>. 
+<span class="math display">
+\begin{align*}
+\sum \frac 1 {n^p} &lt; \infty &amp;\iff p&gt;1 \\
+\int_\varepsilon^\infty \frac 1 {x^p} &lt; \infty 
+&amp;\iff p&gt;1 \\
+\int_0^1 \frac 1 {x^p} &lt; \infty 
+&amp;\iff p&lt;1 \\
+\int_B \frac{1}{{\left\lvert {x} \right\rvert}^p} &lt; \infty &amp;\iff p &lt; n \\
+\int_{B^c} \frac{1}{{\left\lvert {x} \right\rvert}^p} &lt; \infty &amp;\iff p &gt; n \\
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Comparison Test">
+<p>If <span class="math inline">\(0\leq a_n \leq b_n\)</span>, then</p>
+<ul>
+<li><span class="math inline">\(\sum b_n &lt; \infty \implies \sum a_n &lt; \infty\)</span>, and</li>
+<li><span class="math inline">\(\sum a_n = \infty \implies \sum b_n = \infty\)</span>.</li>
+</ul>
+</div>
+<div class="proposition proofenv" title="Small Tails for Series of Functions">
+<p>If <span class="math inline">\(\sum f_n\)</span> converges then <span class="math inline">\(f_n \to 0\)</span> uniformly.</p>
+</div>
+<div class="corollary proofenv" title="Term by Term Continuity Theorem">
+<p>If <span class="math inline">\(f_n\)</span> are continuous and <span class="math inline">\(\sum f_n \to f\)</span> converges uniformly, then <span class="math inline">\(f\)</span> is continuous.</p>
+</div>
+<div class="proposition proofenv" title="Weak $M\dash$Test">
+<p>If <span class="math inline">\(f_n(x) \leq M_n\)</span> <strong>for a fixed <span class="math inline">\(x\)</span></strong> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then the series <span class="math inline">\(f(x) = \sum f_n(x)\)</span> converges.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</div>
+<div class="proposition proofenv" title="The Weierstrass $M\dash$Test">
+<p>If <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for each <span class="math inline">\(n\)</span> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then <span class="math inline">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly and absolutely on <span class="math inline">\(A\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Conversely, if <span class="math inline">\(\sum f_n\)</span> converges uniformly on <span class="math inline">\(A\)</span> then <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Cauchy criterion for sums">
+<p><span class="math inline">\(f_n\)</span> are uniformly Cauchy (so <span class="math inline">\({\left\lVert {f_n - f_m} \right\rVert}_\infty &lt; \varepsilon\)</span>) iff <span class="math inline">\(f_n\)</span> is uniformly convergent.</p>
+</div>
+<h4 data-number="1.4.2.1" id="derivatives"><span class="header-section-number">1.4.2.1</span> Derivatives</h4>
+<div class="theorem proofenv" title="Term by Term Differentiability Theorem">
+<p>If <span class="math inline">\(f_n\)</span> are differentiable, <span class="math inline">\(\sum f_n&#39; \to g\)</span> uniformly, and there exists one point<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="math inline">\(x_0\)</span> such that <span class="math inline">\(\sum f_n(x)\)</span> converges, then there exist an <span class="math inline">\(f\)</span> such that <span class="math inline">\(\sum f_n \to f\)</span> uniformly and <span class="math inline">\(f&#39; = g\)</span>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+</div>
+<h2 data-number="1.5" id="commuting-limiting-operations"><span class="header-section-number">1.5</span> Commuting Limiting Operations</h2>
+<div class="proposition proofenv" title="Limits of bounded functions need not be bounded">
+<p>
+<span class="math display">
+\begin{align*}  
+\lim_{n\to \infty}\sup_{x\in X} {\left\lvert {f_n(x) } \right\rvert} \neq \sup_{x\in X} {\left\lvert {\lim_{n\to\infty} f_n(x) } \right\rvert}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Limits of continuous functions need not be continuous">
+<p>
+<span class="math display">
+\begin{align*}  
+\lim_{k\to \infty} \lim_{n\to\infty} f_n(x_k) \neq
+\lim_{n\to \infty} \lim_{k\to\infty} f_n(x_k)
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Limits of differentiable functions need not be differentiable">
+<p>
+<span class="math display">
+\begin{align*}  
+\lim_{n\to \infty} {\frac{\partial }{\partial x}\,} f_n \neq {\frac{\partial }{\partial n}\,} \qty{\lim_{n\to \infty} f_n}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="?">
+<p>
+<span class="math display">
+\begin{align*}  
+\lim_{n\to \infty} \int_a^b f_n(x) \,dx \neq \int_a^b \lim_{n\to \infty} \qty{ f_n(x) } \,dx
+.\end{align*}
+<span></p>
+</div>
+<h2 data-number="1.6" id="slightly-advanced-stuff"><span class="header-section-number">1.6</span> Slightly Advanced Stuff</h2>
+<div class="theorem proofenv" title="Weierstrass Approximation">
+<p>If <span class="math inline">\([a, b] \subset {\mathbb{R}}\)</span> is a closed interval and <span class="math inline">\(f\)</span> is continuous, then for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists a polynomial <span class="math inline">\(p_\varepsilon\)</span> such that <span class="math inline">\({\left\lVert {f- p_\varepsilon} \right\rVert}_{L^\infty([a, b])} \overset{\varepsilon\to 0}\to 0\)</span>.</p>
+<p>Equivalently, polynomials are dense in the Banach space <span class="math inline">\(C([0, 1], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\)</span>.</p>
+</div>
+<div class="theorem proofenv" title="Egorov">
+<p>Let <span class="math inline">\(E \subseteq {\mathbb{R}}^n\)</span> be measurable with <span class="math inline">\(m(E) &gt; 0\)</span> and <span class="math inline">\(\left\{{f_k: E \to {\mathbb{R}}}\right\}\)</span> be measurable functions such that 
+<span class="math display">
+\begin{align*}  
+f(x) \mathrel{\vcenter{:}}=\lim_{k\to\infty} f_k(x) &lt; \infty 
+\end{align*}
+<span> exists almost everywhere.</p>
+<p>Then <span class="math inline">\(f_k \to f\)</span> <em>almost uniformly</em>, i.e. 
+<span class="math display">
+\begin{align*}
+\forall\varepsilon &gt; 0, ~\exists F \subseteq E ~\text{closed such that } &amp;
+m(E\setminus F) &lt; \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
+.\end{align*}
+<span></p>
+</div>
+<h2 data-number="1.7" id="examples"><span class="header-section-number">1.7</span> Examples</h2>
+<div class="example proofenv" title="?">
+<p>A series of continuous functions that does <em>not</em> converge uniformly but is still continuous: 
+<span class="math display">
+\begin{align*}  
+g(x) \mathrel{\vcenter{:}}=\sum {1 \over 1 + n^2 x}
+.\end{align*}
+<span></p>
+<p>Take <span class="math inline">\(x = 1/n^2\)</span>.</p>
+</div>
+<h1 data-number="2" id="measure-theory"><span class="header-section-number">2</span> Measure Theory</h1>
+<h2 data-number="2.1" id="theorems-1"><span class="header-section-number">2.1</span> Theorems</h2>
+<div class="proposition proofenv" title="Opens are unions of almost disjoint intervals.">
+<p>Every open subset of <span class="math inline">\({\mathbb{R}}\)</span> (resp <span class="math inline">\({\mathbb{R}}^n\)</span>) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).</p>
+</div>
+<div class="proposition proofenv" title="Properties of Outer Measure">
+<ol type="1">
+<li>Monotonicity: <span class="math inline">\(E\subseteq F \implies m_*(E) \leq m_*(F)\)</span>.</li>
+<li>Countable Subadditivity: <span class="math inline">\(m_*(\cup E_{i}) \leq \sum m_*(E_{i})\)</span>.</li>
+<li>Approximation: For all <span class="math inline">\(E\)</span> there exists a <span class="math inline">\(G \supseteq E\)</span> such that <span class="math inline">\(m_*(G) \leq m_*(E) + \varepsilon\)</span>.</li>
+<li>Disjoint<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Additivity: <span class="math inline">\(m_*(A {\coprod}B) = m_*(A) + m_*(B)\)</span>.</li>
+</ol>
+</div>
+<div class="proposition proofenv" title="Subtraction of Measures">
+<p>
+<span class="math display">
+\begin{align*}m(A) = m(B) + m(C) {\quad \operatorname{and} \quad} m(C) &lt; \infty \implies m(A) - m(C) = m(B).\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Continuity of Measure">
+<p>
+<span class="math display">
+\begin{align*}
+E_{i} \nearrow E &amp;\implies m(E_{i}) \to m(E) \\
+m(E_{1}) &lt; \infty \text{ and } E_{i} \searrow E &amp;\implies m(E_{i}) \to m(E)
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="of continuity of measure">
+<details><summary><i>(Click to expand)</i></summary>
+<ol type="1">
+<li><p>Break into disjoint annuli <span class="math inline">\(A_{2} = E_{2}\setminus E_{1}\)</span>, etc then apply countable disjoint additivity to <span class="math inline">\(E = {\coprod}A_{i}\)</span>.</p></li>
+<li><p>Use <span class="math inline">\(E_{1} = ({\coprod}E_{j}\setminus E_{j+1}) {\coprod}(\cap E_{j})\)</span>, taking measures yields a telescoping sum,and use countable disjoint additivity.</p></li>
+</ol>
+</details>
+</div>
+<div class="theorem proofenv" title="Measurable sets can be approximated by open/closed/compact sets.">
+<p>Suppose <span class="math inline">\(E\)</span> is measurable; then for every <span class="math inline">\(\varepsilon&gt;0\)</span>,</p>
+<ol type="1">
+<li>There exists an open <span class="math inline">\(O\supset E\)</span> with <span class="math inline">\(m(O\setminus E) &lt; \varepsilon\)</span></li>
+<li>There exists a closed <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; \varepsilon\)</span></li>
+<li>There exists a compact <span class="math inline">\(K\subset E\)</span> with <span class="math inline">\(m(E\setminus K) &lt; \varepsilon\)</span>.</li>
+</ol>
+</div>
+<div class="proof proofenv" title="that measurable sets can be approximated">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>(1): Take <span class="math inline">\(\left\{{Q_{i}}\right\} \rightrightarrows E\)</span> and set <span class="math inline">\(O = \cup Q_{i}\)</span>.</li>
+<li>(2): Since <span class="math inline">\(E^c\)</span> is measurable, produce <span class="math inline">\(O\supset E^c\)</span> with <span class="math inline">\(m(O\setminus E^c) &lt; \varepsilon\)</span>.
+<ul>
+<li>Set <span class="math inline">\(F = O^c\)</span>, so <span class="math inline">\(F\)</span> is closed.</li>
+<li>Then <span class="math inline">\(F\subset E\)</span> by taking complements of <span class="math inline">\(O\supset E^c\)</span></li>
+<li><span class="math inline">\(E\setminus F = O\setminus E^c\)</span> and taking measures yields <span class="math inline">\(m(E\setminus F) &lt; \varepsilon\)</span></li>
+</ul></li>
+<li>(3): Pick <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; \varepsilon/2\)</span>.
+<ul>
+<li>Set <span class="math inline">\(K_{n} = F\cap{\mathbb{D}}_{n}\)</span>, a ball of radius <span class="math inline">\(n\)</span> about <span class="math inline">\(0\)</span>.</li>
+<li>Then <span class="math inline">\(E\setminus K_{n} \searrow E\setminus F\)</span></li>
+<li>Since <span class="math inline">\(m(E) &lt; \infty\)</span>, there is an <span class="math inline">\(N\)</span> such that <span class="math inline">\(n\geq N \implies m(E\setminus K_{n}) &lt; \varepsilon\)</span>.</li>
+</ul></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Translation and Dilation Invariance">
+<p>Lebesgue measure is translation and dilation invariant.</p>
+</div>
+<div class="proof proofenv" title="(Todo) of translation/dilation invariance">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Obvious for cubes; if <span class="math inline">\(Q_{i} \rightrightarrows E\)</span> then <span class="math inline">\(Q_{i} + k \rightrightarrows E + k\)</span>, etc. <!--\todo{Flesh out this proof.}--></p>
+</details>
+</div>
+<div class="theorem proofenv" title="Non-measurable sets exist">
+<p>There is a non-measurable set.</p>
+</div>
+<div class="proof proofenv" title="Constructing a non-measurable set">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Use AOC to choose one representative from every coset of <span class="math inline">\({\mathbb{R}}/{\mathbb{Q}}\)</span> on <span class="math inline">\([0, 1)\)</span>, which is countable, and assemble them into a set <span class="math inline">\(N\)</span></li>
+<li>Enumerate the rationals in <span class="math inline">\([0, 1]\)</span> as <span class="math inline">\(q_{j}\)</span>, and define <span class="math inline">\(N_{j} = N + q_{j}\)</span>. These intersect trivially.</li>
+<li>Define <span class="math inline">\(M \mathrel{\vcenter{:}}={\coprod}N_{j}\)</span>, then <span class="math inline">\([0, 1) \subseteq M \subseteq [-1, 2)\)</span>, so the measure must be between 1 and 3.</li>
+<li>By translation invariance, <span class="math inline">\(m(N_{j}) = m(N)\)</span>, and disjoint additivity forces <span class="math inline">\(m(M) = 0\)</span>, a contradiction.</li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Borel Characterization of Measurable Sets">
+<p>If <span class="math inline">\(E\)</span> is Lebesgue measurable, then <span class="math inline">\(E = H {\coprod}N\)</span> where <span class="math inline">\(H \in F_\sigma\)</span> and <span class="math inline">\(N\)</span> is null.</p>
+</div>
+<div class="proof proofenv" title="of Borel characterization">
+<details><summary><i>(Click to expand)</i></summary>
+<p>For every <span class="math inline">\(\frac 1 n\)</span> there exists a closed set <span class="math inline">\(K_{n} \subset E\)</span> such that <span class="math inline">\(m(E\setminus K_{n}) \leq \frac 1 n\)</span>. Take <span class="math inline">\(K = \cup K_{n}\)</span>, wlog <span class="math inline">\(K_{n} \nearrow K\)</span> so <span class="math inline">\(m(K) = \lim m(K_{n}) = m(E)\)</span>. Take <span class="math inline">\(N\mathrel{\vcenter{:}}= E\setminus K\)</span>, then <span class="math inline">\(m(N) = 0\)</span>.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="Limsups/infs of measurable sets are measurable.">
+<p>If <span class="math inline">\(A_{n}\)</span> are all measurable, <span class="math inline">\(\limsup A_{n}\)</span> and <span class="math inline">\(\liminf A_{n}\)</span> are measurable.</p>
+</div>
+<div class="proof proofenv" title="That limsups/infs are measurable">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.</p>
+</details>
+</div>
+<div class="theorem proofenv" title="Borel-Cantelli">
+<p>Let <span class="math inline">\(\{E_{k}\}\)</span> be a countable collection of measurable sets. Then 
+<span class="math display">
+\begin{align*}
+\sum_{k} m(E_{k}) &lt; \infty \implies \text{ almost every } x\in {\mathbb{R}}\text{ is in at most finitely many } E_{k}
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="of Borel-Cantelli">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>If <span class="math inline">\(E = \limsup_{j} E_{j}\)</span> with <span class="math inline">\(\sum m(E_{j}) &lt; \infty\)</span> then <span class="math inline">\(m(E) = 0\)</span>.</li>
+<li>If <span class="math inline">\(E_{j}\)</span> are measurable, then <span class="math inline">\(\limsup_{j} E_{j}\)</span> is measurable.</li>
+<li>If <span class="math inline">\(\sum_{j} m(E_{j}) &lt; \infty\)</span>, then <span class="math inline">\(\sum_{j=N}^\infty m(E_{j}) \overset{N\to\infty}\to 0\)</span> as the tail of a convergent sequence.</li>
+<li><span class="math inline">\(E = \limsup_{j} E_{j} = \cap_{k=1}^\infty \cup_{j=k}^\infty E_{j} \implies E \subseteq \cup_{j=k}^\infty\)</span> for all <span class="math inline">\(k\)</span></li>
+<li><span class="math inline">\(E \subset \cup_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_{j}) \overset{k\to\infty}\to 0\)</span>.</li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Extending the class of measurable functions.">
+<ul>
+<li>Characteristic functions are measurable</li>
+<li>If <span class="math inline">\(f_{n}\)</span> are measurable, so are <span class="math inline">\({\left\lvert {f_{n}} \right\rvert}, \limsup f_{n}, \liminf f_{n}, \lim f_{n}\)</span>,</li>
+<li>Sums and differences of measurable functions are measurable,</li>
+<li>Cones <span class="math inline">\(F(x,y) = f(x)\)</span> are measurable,</li>
+<li>Compositions <span class="math inline">\(f\circ T\)</span> for <span class="math inline">\(T\)</span> a linear transformation are measurable,</li>
+<li>“Convolution-ish” transformations <span class="math inline">\((x,y) \mapsto f(x-y)\)</span> are measurable</li>
+</ul>
+</div>
+<div class="proof proofenv" title="Convolution">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Take the cone on <span class="math inline">\(f\)</span> to get <span class="math inline">\(F(x, y) = f(x)\)</span>, then compose <span class="math inline">\(F\)</span> with the linear transformation <span class="math inline">\(T = [1, -1; 1, 0]\)</span>.</p>
+</details>
+</div>
+<h1 data-number="3" id="integration"><span class="header-section-number">3</span> Integration</h1>
+<h2 data-number="3.1" id="theorems-2"><span class="header-section-number">3.1</span> Theorems</h2>
+<div class="remark proofenv">
+<p>If <span class="math inline">\(f\in L^\infty(X)\)</span>, then <span class="math inline">\(f\)</span> is equal to some bounded function <span class="math inline">\(g\)</span> almost everywhere.</p>
+</div>
+<div class="example proofenv" title="?">
+<p><span class="math inline">\(f(x) = x\chi_{\mathbb{Q}}(x)\)</span> is essentially bounded but not bounded.</p>
+</div>
+<div class="theorem proofenv" title="p-Test for Integrals">
+<p>
+<span class="math display">
+\begin{align*}
+\int_0^1 {1\over x^p} &lt; \infty \iff  p &lt; 1 \\
+\int_1^\infty {1\over x^p} &lt; \infty \iff  p &gt; 1 
+.\end{align*}
+<span></p>
+</div>
+<div class="slogan proofenv">
+<p>Large powers of <span class="math inline">\(x\)</span> help us in neighborhoods of infinity and hurt around zero</p>
+</div>
+<h3 data-number="3.1.1" id="convergence-theorems"><span class="header-section-number">3.1.1</span> Convergence Theorems</h3>
+<div class="theorem proofenv" title="Monotone Convergence">
+<p>If <span class="math inline">\(f_n \in L^+\)</span> and <span class="math inline">\(f_n \nearrow f\)</span> almost everywhere, then 
+<span class="math display">
+\begin{align*}
+\lim \int f_n
+= \int \lim f_n = \int f
+\quad \text{i.e.}~~ \int f_n \to \int f
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Needs to be positive and increasing.</p>
+</blockquote>
+</div>
+<div class="theorem proofenv" title="Dominated Convergence">
+<p>If <span class="math inline">\(f_n \in L^1\)</span> and <span class="math inline">\(f_n \to f\)</span> almost everywhere with <span class="math inline">\({\left\lvert {f_n} \right\rvert} \leq g\)</span> for some <span class="math inline">\(g\in L^1\)</span>, then <span class="math inline">\(f\in L^1\)</span> and 
+<span class="math display">
+\begin{align*}
+\lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f &lt; \infty
+,\end{align*}
+<span></p>
+<p>and more generally, 
+<span class="math display">
+\begin{align*}
+\int {\left\lvert {f_n - f} \right\rvert} \to 0
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Positivity <em>not</em> needed.</p>
+</blockquote>
+</div>
+<div class="theorem proofenv" title="Generalized DCT">
+<p>If</p>
+<ul>
+<li><span class="math inline">\(f_n \in L^1\)</span> with <span class="math inline">\(f_n \to f\)</span> almost everywhere,</li>
+<li>There exist <span class="math inline">\(g_n \in L^1\)</span> with <span class="math inline">\({\left\lvert {f_n} \right\rvert} \leq g_n\)</span>, <span class="math inline">\(g_n \geq 0\)</span>.</li>
+<li><span class="math inline">\(g_n\to g\)</span> almost everywhere with <span class="math inline">\(g\in L^1\)</span>, and</li>
+<li><span class="math inline">\(\lim \int g_n = \int g\)</span>,</li>
+</ul>
+<p>then <span class="math inline">\(f\in L^1\)</span> and <span class="math inline">\(\lim \int f_n = \int f &lt; \infty\)</span>.</p>
+<blockquote>
+<p>Note that this is the DCT with <span class="math inline">\({\left\lvert {f_n} \right\rvert} &lt; {\left\lvert {g} \right\rvert}\)</span> relaxed to <span class="math inline">\({\left\lvert {f_n} \right\rvert} &lt; g_n \to g\in L^1\)</span>.</p>
+</blockquote>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Proceed by showing <span class="math inline">\(\limsup \int f_n \leq \int f \leq \liminf \int f_n\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(\int f \geq \limsup \int f_n\)</span>: 
+<span class="math display">
+\begin{align*}
+\int g - \int f 
+&amp;= \int \qty{g-f} \\
+&amp;\leq \liminf \int \qty{g_n - f_n} \quad \text{Fatou} \\
+&amp;= \lim \int g_n + \liminf \int (-f_n) \\
+&amp;= \lim \int g_n - \limsup \int f_n \\
+&amp;= \int g - \limsup \int f_n \\
+\\
+\implies \int f &amp;\geq \limsup \int f_n
+.\end{align*}
+<span></p>
+<ul>
+<li>Here we use <span class="math inline">\(g_n - f_n \overset{n\to\infty} g-f\)</span> with <span class="math inline">\(0 \leq {\left\lvert {f_n} \right\rvert} - f_n \leq g_n - f_n\)</span>, so <span class="math inline">\(g_n - f_n\)</span> are nonnegative (and measurable) and Fatou’s lemma applies.</li>
+</ul></li>
+<li><p><span class="math inline">\(\int f \leq \liminf \int f_n\)</span>: 
+<span class="math display">
+\begin{align*}
+\int g + \int f 
+&amp;= \int(g+f) \\
+&amp;\leq \liminf \int \qty{g_n + f_n} \\
+&amp;= \lim \int g_n + \liminf \int f_n \\
+&amp;= \int g + \liminf f_n \\
+\\
+\int f &amp;\leq \liminf \int f_n
+.\end{align*}
+<span></p>
+<ul>
+<li>Here we use that <span class="math inline">\(g_n + f_n \to g+f\)</span> with <span class="math inline">\(0 \leq {\left\lvert {f_n} \right\rvert} + f_n \leq g_n + f_n\)</span> so Fatou’s lemma again applies.</li>
+</ul></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Convergence in $L^1$ implies convergence of $L^1$ norm">
+<p>If <span class="math inline">\(f\in L^1\)</span>, then 
+<span class="math display">
+\begin{align*}
+\int{\left\lvert {f_n - f} \right\rvert} \to 0 \iff \int {\left\lvert {f_n} \right\rvert} \to \int {\left\lvert {f} \right\rvert}
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Let <span class="math inline">\(g_n = {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n - f} \right\rvert}\)</span>, then <span class="math inline">\(g_n \to {\left\lvert {f} \right\rvert}\)</span> and 
+<span class="math display">
+\begin{align*}
+{\left\lvert {g_n} \right\rvert} = {\left\lvert { {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n - f} \right\rvert} } \right\rvert} \leq {\left\lvert {f_n - (f_n - f)} \right\rvert} = {\left\lvert {f} \right\rvert} \in L^1
+,\end{align*}
+<span> so the DCT applies to <span class="math inline">\(g_n\)</span> and 
+<span class="math display">
+\begin{align*}
+{\left\lVert {f_n - f} \right\rVert}_1 = \int {\left\lvert {f_n - f} \right\rvert} + {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n} \right\rvert}
+= \int {\left\lvert {f_n} \right\rvert} - g_n\\
+\to_{DCT} \lim \int {\left\lvert {f_n} \right\rvert} - \int {\left\lvert {f} \right\rvert}
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="theorem proofenv" title="Fatou">
+<p>If <span class="math inline">\(f_n\)</span> is a sequence of nonnegative measurable functions, then 
+<span class="math display">
+\begin{align*}
+\int \liminf_n f_n &amp;\leq \liminf_n \int f_n \\
+\limsup_n \int f_n &amp;\leq \int \limsup_n f_n
+.\end{align*}
+<span></p>
+</div>
+<div class="theorem proofenv" title="Tonelli (Non-Negative, Measurable)">
+<p>For <span class="math inline">\(f(x, y)\)</span> <strong>non-negative and measurable</strong>, for almost every <span class="math inline">\(x\in {\mathbb{R}}^n\)</span>,</p>
+<ul>
+<li><span class="math inline">\(f_x(y)\)</span> is a <strong>measurable</strong> function</li>
+<li><span class="math inline">\(F(x) = \int f(x, y) ~dy\)</span> is a <strong>measurable</strong> function,</li>
+<li>For <span class="math inline">\(E\)</span> measurable, the slices <span class="math inline">\(E_x \mathrel{\vcenter{:}}=\left\{{y {~\mathrel{\Big|}~}(x, y) \in E}\right\}\)</span> are measurable.</li>
+<li><span class="math inline">\(\int f = \int \int F\)</span>, i.e. any iterated integral is equal to the original.</li>
+</ul>
+</div>
+<div class="theorem proofenv" title="Fubini (Integrable)">
+<p>For <span class="math inline">\(f(x, y)\)</span> <strong>integrable</strong>, for almost every <span class="math inline">\(x\in {\mathbb{R}}^n\)</span>,</p>
+<ul>
+<li><span class="math inline">\(f_x(y)\)</span> is an <strong>integrable</strong> function</li>
+<li><span class="math inline">\(F(x) \mathrel{\vcenter{:}}=\int f(x, y) ~dy\)</span> is an <strong>integrable</strong> function,</li>
+<li>For <span class="math inline">\(E\)</span> measurable, the slices <span class="math inline">\(E_x \mathrel{\vcenter{:}}=\left\{{y {~\mathrel{\Big|}~}(x, y) \in E}\right\}\)</span> are measurable.</li>
+<li><span class="math inline">\(\int f = \int \int f(x,y)\)</span>, i.e. any iterated integral is equal to the original</li>
+</ul>
+</div>
+<div class="theorem proofenv" title="Fubini-Tonelli">
+<p>If any iterated integral is <strong>absolutely integrable</strong>, i.e. <span class="math inline">\(\int \int {\left\lvert {f(x, y)} \right\rvert} &lt; \infty\)</span>, then <span class="math inline">\(f\)</span> is integrable and <span class="math inline">\(\int f\)</span> equals any iterated integral.</p>
+</div>
+<div class="proposition proofenv" title="Measurable Slices">
+<p>Let <span class="math inline">\(E\)</span> be a measurable subset of <span class="math inline">\({\mathbb{R}}^n\)</span>. Then</p>
+<ul>
+<li>For almost every <span class="math inline">\(x\in {\mathbb{R}}^{n_1}\)</span>, the slice <span class="math inline">\(E_x \mathrel{\vcenter{:}}=\left\{{y \in {\mathbb{R}}^{n_2} \mathrel{\Big|}(x,y) \in E}\right\}\)</span> is measurable in <span class="math inline">\({\mathbb{R}}^{n_2}\)</span>.</li>
+<li>The function</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+F: {\mathbb{R}}^{n_1} &amp;\to {\mathbb{R}}\\
+x &amp;\mapsto m(E_x) = \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy
+\end{align*}
+<span> is measurable and 
+<span class="math display">
+\begin{align*}
+m(E) = \int_{{\mathbb{R}}^{n_1}} m(E_x) ~dx 
+= \int_{{\mathbb{R}}^{n_1}} \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy ~dx
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<p><span class="math inline">\(\implies\)</span>:</p>
+<ul>
+<li>Let <span class="math inline">\(f\)</span> be measurable on <span class="math inline">\({\mathbb{R}}^n\)</span>.</li>
+<li>Then the cylinders <span class="math inline">\(F(x, y) = f(x)\)</span> and <span class="math inline">\(G(x, y) = f(y)\)</span> are both measurable on <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
+<li>Write <span class="math inline">\(\mathcal{A} = \left\{{G \leq F}\right\} \cap\left\{{G \geq 0}\right\}\)</span>; both are measurable.</li>
+</ul>
+<p><span class="math inline">\(\impliedby\)</span>:</p>
+<ul>
+<li>Let <span class="math inline">\(A\)</span> be measurable in <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
+<li>Define <span class="math inline">\(A_x = \left\{{y\in {\mathbb{R}}\mathrel{\Big|}(x, y) \in \mathcal{A}}\right\}\)</span>, then <span class="math inline">\(m(A_x) = f(x)\)</span>.</li>
+<li>By the corollary, <span class="math inline">\(A_x\)</span> is measurable set, <span class="math inline">\(x \mapsto A_x\)</span> is a measurable function, and <span class="math inline">\(m(A) = \int f(x) ~dx\)</span>.</li>
+<li>Then explicitly, <span class="math inline">\(f(x) = \chi_{A}\)</span>, which makes <span class="math inline">\(f\)</span> a measurable function.</li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Differentiating Under an Integral">
+<p>If <span class="math inline">\({\left\lvert {{\frac{\partial }{\partial t}\,}f(x, t)} \right\rvert} \leq g(x) \in L^1\)</span>, then letting <span class="math inline">\(F(t) = \int f(x, t) ~dt\)</span>, 
+<span class="math display">
+\begin{align*}
+{\frac{\partial }{\partial t}\,} F(t)
+&amp;\mathrel{\vcenter{:}}=\lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
+&amp;\mathop{\mathrm{=}}^{\scriptstyle\text{DCT}} \int {\frac{\partial }{\partial t}\,} f(x, t) ~dx
+.\end{align*}
+<span></p>
+<p>To justify passing the limit, let <span class="math inline">\(h_k \to 0\)</span> be any sequence and define 
+<span class="math display">
+\begin{align*}
+f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
+,\end{align*}
+<span> so <span class="math inline">\(f_k \overset{\text{pointwise}}\to {\frac{\partial }{\partial t}\,}f\)</span>.</p>
+<p>Apply the MVT to <span class="math inline">\(f_k\)</span> to get <span class="math inline">\(f_k(x, t) = f_k(\xi, t)\)</span> for some <span class="math inline">\(\xi \in [0, h_k]\)</span>, and show that <span class="math inline">\(f_k(\xi, t) \in L_1\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Commuting Sums with Integrals (non-negative)">
+<p>If <span class="math inline">\(f_n\)</span> are non-negative and <span class="math inline">\(\sum \int {\left\lvert {f} \right\rvert}_n &lt; \infty\)</span>, then <span class="math inline">\(\sum \int f_n = \int \sum f_n\)</span>.</p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Idea: MCT.</li>
+<li>Let <span class="math inline">\(F_N = \sum^N f_n\)</span> be a finite partial sum;</li>
+<li>Then there are simple functions <span class="math inline">\(\phi_n \nearrow f_n\)</span></li>
+<li>So <span class="math inline">\(\sum^N \phi_n \nearrow F_N\)</span> and MCT applies</li>
+</ul>
+</details>
+</div>
+<div class="theorem proofenv" title="Commuting Sums with Integrals (integrable)">
+<p>If <span class="math inline">\(\left\{{f_n}\right\}\)</span> integrable with either <span class="math inline">\(\sum \int {\left\lvert {f_n} \right\rvert} &lt; \infty\)</span> or <span class="math inline">\(\int\sum {\left\lvert {f_n} \right\rvert} &lt; \infty\)</span>, then 
+<span class="math display">
+\begin{align*}  
+\int\sum f_n = \sum \int f_n
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>By Tonelli, if <span class="math inline">\(f_n(x) \geq 0\)</span> for all <span class="math inline">\(n\)</span>, taking the counting measure allows interchanging the order of “integration.”</li>
+<li>By Fubini on <span class="math inline">\({\left\lvert {f_n} \right\rvert}\)</span>, if either “iterated integral” is finite then the result follows.</li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="?">
+<p>If <span class="math inline">\(f_k \in L^1\)</span> and <span class="math inline">\(\sum {\left\lVert {f_k} \right\rVert}_1 &lt; \infty\)</span> then <span class="math inline">\(\sum f_k\)</span> converges almost everywhere and in <span class="math inline">\(L^1\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Define <span class="math inline">\(F_N = \sum^N f_k\)</span> and <span class="math inline">\(F = \lim_N F_N\)</span>, then <span class="math inline">\({\left\lVert {F_N} \right\rVert}_1 \leq \sum^N {\left\lVert {f_k} \right\rVert} &lt; \infty\)</span> so <span class="math inline">\(F\in L^1\)</span> and <span class="math inline">\({\left\lVert {F_N - F} \right\rVert}_1 \to 0\)</span> so the sum converges in <span class="math inline">\(L^1\)</span>. Almost everywhere convergence: ?</p>
+</details>
+</div>
+<h2 data-number="3.2" id="examples-of-nonintegrable-functions"><span class="header-section-number">3.2</span> Examples of (Non)Integrable Functions</h2>
+<div class="example proofenv" title="Examples of integrable functions">
+<ul>
+<li><p><span class="math inline">\(\int {1\over 1 + x^2} = \arctan(x) \overset{x\to\infty}\to \pi/2 &lt; \infty\)</span></p></li>
+<li><p>Any bounded function (or continuous on a compact set, by EVT)</p></li>
+<li><p><span class="math inline">\(\int_0^1 {1 \over \sqrt{x}} &lt; \infty\)</span></p></li>
+<li><p><span class="math inline">\(\int_0^1 {1\over x^{1-\varepsilon}} &lt; \infty\)</span></p></li>
+<li><p><span class="math inline">\(\int_1^\infty {1\over x^{1+\varepsilon}} &lt; \infty\)</span></p></li>
+</ul>
+</div>
+<div class="example proofenv" title="Examples of non-integrable functions">
+<ul>
+<li><span class="math inline">\(\int_0^1 {1\over x} = \infty\)</span>.</li>
+<li><span class="math inline">\(\int_1^\infty {1\over x} = \infty\)</span>.</li>
+<li><span class="math inline">\(\int_1^\infty {1 \over \sqrt{x}} = \infty\)</span></li>
+<li><span class="math inline">\(\int_1^\infty {1\over x^{1-\varepsilon}} = \infty\)</span></li>
+<li><span class="math inline">\(\int_0^1 {1\over x^{1+\varepsilon}} = \infty\)</span></li>
+</ul>
+</div>
+<h2 data-number="3.3" id="l1-facts"><span class="header-section-number">3.3</span> <span class="math inline">\(L^1\)</span> Facts</h2>
+<div class="proposition proofenv" title="Zero in $L^1$ iff zero almost everywhere">
+<p>For <span class="math inline">\(f\in L^+\)</span>, 
+<span class="math display">
+\begin{align*}  
+\int f = 0 \quad\iff\quad f \equiv 0 \text{ almost everywhere}
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Obvious for simple functions:
+<ul>
+<li>If <span class="math inline">\(f(x) = \sum_{j=1}^n c_j \chi_{E_j}\)</span>, then <span class="math inline">\(\int f = 0\)</span> iff for each <span class="math inline">\(j\)</span>, either <span class="math inline">\(c_j=0\)</span> or <span class="math inline">\(m(E_j) = 0\)</span>.</li>
+<li>Since nonzero <span class="math inline">\(c_j\)</span> correspond to sets where <span class="math inline">\(f\neq 0\)</span>, this says <span class="math inline">\(m\qty{\left\{{f\neq 0}\right\}} = 0\)</span>.</li>
+</ul></li>
+<li><span class="math inline">\(\impliedby\)</span>:
+<ul>
+<li>If <span class="math inline">\(f= 0\)</span> almost everywhere and <span class="math inline">\(\phi \nearrow f\)</span>, then <span class="math inline">\(\phi = 0\)</span> almost everywhere since <span class="math inline">\(\phi(x) \leq f(x)\)</span> -Then 
+<span class="math display">
+\begin{align*}  
+\int f = \sup_{\phi \leq f} \int \phi = \sup_{\phi \leq f} 0 = 0
+.\end{align*}
+<span></li>
+</ul></li>
+<li><span class="math inline">\(\implies\)</span>:
+<ul>
+<li>Instead show negating “<span class="math inline">\(f=0\)</span> almost everywhere” implies <span class="math inline">\(\int f \neq 0\)</span>.</li>
+<li>Write <span class="math inline">\(\left\{{f\neq 0}\right\} = \cup_{n\in {\mathbb{N}}} S_n\)</span> where <span class="math inline">\(S_n \mathrel{\vcenter{:}}=\left\{{x{~\mathrel{\Big|}~}f(x) \geq {1\over n}}\right\}\)</span>.</li>
+<li>Since “not <span class="math inline">\(f=0\)</span> almost everywhere,” there exists an <span class="math inline">\(n\)</span> such that <span class="math inline">\(m(S_n) &gt; 0\)</span>.</li>
+<li>Then 
+<span class="math display">
+\begin{align*}  
+0 &lt; {1\over n} \chi_{E_n} \leq f \implies 
+0 &lt; \int {1\over n} \chi_{E_n} \leq \int f
+.\end{align*}
+<span></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Translation Invariance">
+<p>The Lebesgue integral is translation invariant, i.e. 
+<span class="math display">
+\begin{align*}
+\int f(x) ~dx = \int f(x + h) ~dx &amp;&amp;\text{for any} h
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Let <span class="math inline">\(E\subseteq X\)</span>; for characteristic functions, 
+<span class="math display">
+\begin{align*}
+\int_X \chi_E(x+h) 
+= \int_{X} \chi_{E+h}(x) = m(E+h) = m(E) = \int_X \chi_E(x)
+\end{align*}
+<span> by translation invariance of measure.</li>
+<li>So this also holds for simple functions by linearity.</li>
+<li>For <span class="math inline">\(f\in L^+\)</span>, choose <span class="math inline">\(\phi_n \nearrow f\)</span> so <span class="math inline">\(\int \phi_n \to \int f\)</span>.</li>
+<li>Similarly, <span class="math inline">\(\tau_h \phi_n \nearrow \tau_h f\)</span> so <span class="math inline">\(\int \tau_h f \to \int f\)</span></li>
+<li>Finally <span class="math inline">\(\left\{{\int \tau_h \phi}\right\} = \left\{{\int \phi}\right\}\)</span> by step 1, and the suprema are equal by uniqueness of limits.</li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Integrals distribute over disjoint sets">
+<p>If <span class="math inline">\(X \subseteq A \cup B\)</span>, then <span class="math inline">\(\int_X f \leq \int_A f + \int_{A^c} f\)</span> with equality iff <span class="math inline">\(X = A{\coprod}B\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Uniformly continuous $L^1$ functions vanish at infinity.">
+<p>If <span class="math inline">\(f \in L^1\)</span> and <span class="math inline">\(f\)</span> is uniformly continuous, then <span class="math inline">\(f(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0\)</span>.</p>
+</div>
+<div class="warnings proofenv">
+<p>This doesn’t hold for general <span class="math inline">\(L^1\)</span> functions, take any train of triangles with height 1 and summable areas.</p>
+</div>
+<div class="theorem proofenv" title="Small Tails in $L^1$">
+<p>If <span class="math inline">\(f\in L^1\)</span>, then for every <span class="math inline">\(\varepsilon\)</span> there exists a radius <span class="math inline">\(R\)</span> such that if <span class="math inline">\(A = B_R(0)^c\)</span>, then <span class="math inline">\(\int_A {\left\lvert {f} \right\rvert} &lt; \varepsilon\)</span>.</p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Approximate with compactly supported functions.</li>
+<li>Take <span class="math inline">\(g\overset{L_1}\to f\)</span> with <span class="math inline">\(g\in C_c\)</span></li>
+<li>Then choose <span class="math inline">\(N\)</span> large enough so that <span class="math inline">\(g=0\)</span> on <span class="math inline">\(E\mathrel{\vcenter{:}}= B_N(0)\)</span></li>
+<li>Then 
+<span class="math display">
+\begin{align*} \int_E {\left\lvert {f} \right\rvert} \leq \int_E{\left\lvert {f-g} \right\rvert} + \int_E {\left\lvert {g} \right\rvert}.\end{align*}
+<span></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="$L^1$ functions are absolutely continuous.">
+<p><span class="math inline">\(m(E) \to 0 \implies \int_E f \to 0\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Approximate with compactly supported functions. Take <span class="math inline">\(g\overset{L_1}\to f\)</span>, then <span class="math inline">\(g \leq M\)</span> so <span class="math inline">\(\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0\)</span>.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="$L^1$ functions are finite almost everywhere.">
+<p>If <span class="math inline">\(f\in L^1\)</span>, then <span class="math inline">\(m(\left\{{f(x) = \infty}\right\}) = 0\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Idea: Split up domain Let <span class="math inline">\(A = \left\{{f(x) = \infty}\right\}\)</span>, then <span class="math inline">\(\infty &gt; \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0\)</span>.</p>
+</details>
+</div>
+<div class="theorem proofenv" title="Continuity in $L^1$">
+<p>
+<span class="math display">
+\begin{align*} 
+{\left\lVert {\tau_h f - f} \right\rVert}_1 \overset{h\to 0}\to 0
+\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Approximate with compactly supported functions. Take <span class="math inline">\(g\overset{L_1}\to f\)</span> with <span class="math inline">\(g\in C_c\)</span>. 
+<span class="math display">
+\begin{align*}
+\int f(x+h) - f(x) 
+&amp;\leq \int f(x+h) - g(x+h) + \int g(x+h) - g(x) + \int g(x) - f(x) \\
+&amp;\overset{?\to?}\to 2 \varepsilon + \int g(x+h) - g(x) \\
+&amp;= \int_K g(x+h) - g(x) + \int_{K^c} g(x+h) - g(x)\\
+&amp;\overset{??}\to 0
+,\end{align*}
+<span> which follows because we can enlarge the support of <span class="math inline">\(g\)</span> to <span class="math inline">\(K\)</span> where the integrand is zero on <span class="math inline">\(K^c\)</span>, then apply uniform continuity on <span class="math inline">\(K\)</span>.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="Integration by parts, special case">
+<p>
+<span class="math display">
+\begin{align*}
+F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
+\implies
+\int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Fubini-Tonelli, and sketch region to change integration bounds.</p>
+</details>
+</div>
+<div class="theorem proofenv" title="Lebesgue Density">
+<p>
+<span class="math display">
+\begin{align*}
+A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
+\implies {\left\lVert {A_h(f) - f} \right\rVert} \overset{h\to 0}\to 0
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Fubini-Tonelli, and sketch region to change integration bounds, and continuity in <span class="math inline">\(L^1\)</span>.</p>
+</details>
+</div>
+<h2 data-number="3.4" id="lp-facts"><span class="header-section-number">3.4</span> Lp Facts</h2>
+<div class="proposition proofenv" title="Dense subspaces of $L^2(I)$ ">
+<p>The following are dense subspaces of <span class="math inline">\(L^2([0, 1])\)</span>:</p>
+<ul>
+<li>Simple functions</li>
+<li>Step functions</li>
+<li><span class="math inline">\(C_0([0, 1])\)</span></li>
+<li>Smoothly differentiable functions <span class="math inline">\(C_0^\infty([0, 1])\)</span></li>
+<li>Smooth compactly supported functions <span class="math inline">\(C_c^\infty\)</span></li>
+</ul>
+</div>
+<div class="theorem proofenv" title="?">
+<p>
+<span class="math display">
+\begin{align*}
+m(X) &lt; \infty \implies \lim_{p\to\infty} {\left\lVert {f} \right\rVert}_p = {\left\lVert {f} \right\rVert}_\infty 
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Let <span class="math inline">\(M = {\left\lVert {f} \right\rVert}_\infty\)</span>.</p>
+<ul>
+<li>For any <span class="math inline">\(L &lt; M\)</span>, let <span class="math inline">\(S = \left\{{{\left\lvert {f} \right\rvert} \geq L}\right\}\)</span>.</li>
+<li>Then <span class="math inline">\(m(S) &gt; 0\)</span> and</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+{\left\lVert {f} \right\rVert}_{p} 
+&amp;= \left( \int_X {\left\lvert {f} \right\rvert}^p \right)^{\frac 1 p} \\
+&amp;\geq \left( \int_S {\left\lvert {f} \right\rvert}^p \right)^{\frac 1 p} \\
+&amp;\geq L ~m(S)^{\frac 1 p} \overset{p\to\infty}\to L \\
+&amp;\implies \liminf_p {\left\lVert {f} \right\rVert}_{p} \geq M
+.\end{align*}
+<span></p>
+<p>We also have 
+<span class="math display">
+\begin{align*}
+{\left\lVert {f} \right\rVert}_{p} 
+&amp;=  \left( \int_X {\left\lvert {f} \right\rvert}^p \right)^{\frac 1 p} \\
+&amp;\leq \left( \int_X M^p \right)^{\frac 1 p} \\
+&amp;= M ~m(X)^{\frac 1 p} \xrightarrow{p\to\infty} M \\
+&amp;\implies \limsup_p {\left\lVert {f} \right\rVert}_{p} \leq M \hfill\blacksquare
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="theorem proofenv" title="Duals for $L^p$ spaces">
+<p>For <span class="math inline">\(1\leq p&lt; \infty\)</span>, <span class="math inline">\((L^p)^\vee\cong L^q\)</span>.</p>
+</div>
+<div class="proof proofenv" title="$p=1$ case">
+<details><summary><i>(Click to expand)</i></summary>
+<p>?</p>
+</details>
+</div>
+<div class="proof proofenv" title="$p=2$ case">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Use Riesz Representation for Hilbert spaces.</p>
+</details>
+</div>
+<div class="proposition proofenv" title="$L^1$ is not quite the dual of $L^\infty$.">
+<p><span class="math inline">\(L^1 \subset (L^\infty)^\vee\)</span>, since the isometric mapping is always injective, but <em>never</em> surjective.</p>
+</div>
+<h1 data-number="4" id="fourier-transform-and-convolution"><span class="header-section-number">4</span> Fourier Transform and Convolution</h1>
+<h2 data-number="4.1" id="the-fourier-transform"><span class="header-section-number">4.1</span> The Fourier Transform</h2>
+<div class="proposition proofenv" title="?">
+<p>If <span class="math inline">\(\widehat{f} = \widehat{g}\)</span> then <span class="math inline">\(f=g\)</span> almost everywhere.</p>
+</div>
+<div class="proposition proofenv" title="Riemann-Lebesgue: Fourier transforms have small tails.">
+<p>
+<span class="math display">
+\begin{align*}
+f\in L^1 \implies
+\widehat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
+,\end{align*}
+<span></p>
+<p>if <span class="math inline">\(f \in L^1\)</span>, then <span class="math inline">\(\widehat{f}\)</span> is continuous and bounded.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>Boundedness: 
+<span class="math display">
+\begin{align*}
+{\left\lvert {\widehat{f}(\xi)} \right\rvert} 
+\leq \int {\left\lvert {f} \right\rvert}\cdot {\left\lvert {e^{2\pi i x\cdot \xi }} \right\rvert} 
+= {\left\lVert {f} \right\rVert}_{1}
+.\end{align*}
+<span></p></li>
+<li><p>Continuity:</p></li>
+<li><p><span class="math inline">\({\left\lvert {\widehat{f}(\xi_{n}) - \widehat{f} (\xi) } \right\rvert}\)</span></p></li>
+<li><p>Apply DCT to show <span class="math inline">\(a\overset{n\to\infty}\to 0\)</span>.</p></li>
+</ul>
+</details>
+</div>
+<div class="theorem proofenv" title="Fourier Inversion">
+<p>
+<span class="math display">
+\begin{align*}
+f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
+.\end{align*}
+<span></p>
+</div>
+<div class="warnings proofenv">
+<p>Fubini-Tonelli does not work here!</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Idea: Fubini-Tonelli doesn’t work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.</p>
+<ul>
+<li>Take the modified integral:</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+I_{t}(x)
+&amp;= \int \widehat{f}(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 {\left\lvert {\xi} \right\rvert}^2} \\
+&amp;= \int \widehat{f}(\xi) \phi(\xi) \\
+&amp;= \int f(\xi) \widehat{\phi}(\xi) \\
+&amp;= \int f(\xi) \widehat{\widehat{g}}(\xi - x) \\
+&amp;= \int f(\xi) g_{t}(x - \xi)  ~d\xi \\
+&amp;= \int f(y-x) g_{t}(y) ~dy  \quad (\xi = y-x)\\
+&amp;= (f \ast g_{t}) \\
+&amp;\to f \text{ in $L^1$ as }t \to 0
+.\end{align*}
+<span></p>
+<ul>
+<li><p>We also have 
+<span class="math display">
+\begin{align*}
+\lim_{t\to 0} I_{t}(x)
+&amp;= 
+\lim_{t\to 0} \int \widehat{f}(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 {\left\lvert {\xi} \right\rvert}^2} \\
+&amp;= 
+\lim_{t\to 0} \int \widehat{f}(\xi) \phi(\xi) \\
+&amp;=_{DCT} 
+\int \widehat{f}(\xi) \lim_{t\to 0} \phi(\xi) \\
+&amp;=
+\int \widehat{f}(\xi) ~e^{2\pi i x \cdot \xi} \\
+.\end{align*}
+<span></p></li>
+<li><p>So 
+<span class="math display">
+\begin{align*}
+I_{t}(x) \to \int \widehat{f}(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~{\left\lVert {I_{t}(x) - f(x)} \right\rVert}_{1} \to 0
+.\end{align*}
+<span></p></li>
+<li><p>So there is a subsequence <span class="math inline">\(I_{t_{n}}\)</span> such that <span class="math inline">\(I_{t_{n}}(x) \to f(x)\)</span> almost everywhere</p></li>
+<li><p>Thus <span class="math inline">\(f(x) = \int \widehat{f}(\xi) ~e^{2\pi i x \cdot \xi}\)</span> almost everywhere by uniqueness of limits.</p></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Eigenfunction of the Fourier transform">
+<p>
+<span class="math display">
+\begin{align*}
+g(x) \mathrel{\vcenter{:}}= e^{-\pi {\left\lvert {t} \right\rvert}^2} \implies \widehat{g}(\xi) = g(\xi) {\quad \operatorname{and} \quad}
+\widehat{g}_{t}(x) = g(tx) = e^{-\pi t^2 {\left\lvert {x} \right\rvert}^2}
+.\end{align*}
+<span></p>
+</div>
+<h2 data-number="4.2" id="approximate-identities"><span class="header-section-number">4.2</span> Approximate Identities</h2>
+<div class="example proofenv" title="of an approximation to the identity.">
+<p>
+<span class="math display">
+\begin{align*}
+\phi(x) \mathrel{\vcenter{:}}= e^{-\pi x^2}
+.\end{align*}
+<span></p>
+</div>
+<div class="theorem proofenv" title="Convolving against an approximate identity converges in $L^1$.">
+<p>
+<span class="math display">
+\begin{align*}
+{\left\lVert {f \ast \phi_{t} - f} \right\rVert}_{1} \overset{t\to 0}\to 0
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>
+<span class="math display">
+\begin{align*}
+{\left\lVert {f - f\ast \phi_{t}} \right\rVert}_1 
+&amp;= \int f(x) - \int f(x-y)\phi_{t}(y) ~dy dx \\
+&amp;= \int f(x)\int \phi_{t}(y) ~dy - \int f(x-y)\phi_{t}(y) ~dy dx \\
+&amp;= \int \int \phi_{t}(y)[f(x) - f(x-y)] ~dy dx \\
+&amp;=_{FT} \int \int \phi_{t}(y)[f(x) - f(x-y)] ~dx dy \\
+&amp;= \int \phi_{t}(y) \int f(x) - f(x-y) ~dx dy \\
+&amp;= \int \phi_{t}(y) {\left\lVert {f - \tau_{y} f} \right\rVert}_1 dy \\
+&amp;= \int_{y &lt; \delta} \phi_{t}(y) {\left\lVert {f - \tau_{y} f} \right\rVert}_1 dy  +
+\int_{y \geq \delta} \phi_{t}(y) {\left\lVert {f - \tau_{y} f} \right\rVert}_1 dy \\
+&amp;\leq \int_{y &lt; \delta} \phi_{t}(y) \varepsilon +
+\int_{y \geq \delta} \phi_{t}(y) \left( {\left\lVert {f} \right\rVert}_1 + {\left\lVert {\tau_{y} f} \right\rVert}_1 \right) dy \quad\text{by continuity in } L^1 \\
+&amp;\leq \varepsilon + 
+2{\left\lVert {f} \right\rVert}_1 \int_{y \geq \delta} \phi_{t}(y) dy \\
+&amp;\leq \varepsilon + 2{\left\lVert {f} \right\rVert}_1 \cdot \varepsilon \quad\text{since $\phi_{t}$ has small tails} \\
+&amp;\overset{\varepsilon\to 0}\to 0 
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="theorem proofenv" title="Convolutions vanish at infinity">
+<p>
+<span class="math display">
+\begin{align*}
+f,g \in L^1 \text{ and  bounded}  \implies \lim_{|x| \rightarrow \infty} (f * g)(x) = 0
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>Choose <span class="math inline">\(M \geq f,g\)</span>.</p></li>
+<li><p>By small tails, choose <span class="math inline">\(N\)</span> such that <span class="math inline">\(\int_{B_{N}^c} {\left\lvert {f} \right\rvert}, \int_{B_{n}^c} {\left\lvert {g} \right\rvert} &lt; \varepsilon\)</span></p></li>
+<li><p>Note 
+<span class="math display">
+\begin{align*}
+{\left\lvert {f \ast g} \right\rvert} \leq \displaystyle\int {\left\lvert {f(x-y)} \right\rvert} ~{\left\lvert {g(y)} \right\rvert} ~dy \mathrel{\vcenter{:}}= I
+.\end{align*}
+<span></p></li>
+<li><p>Use <span class="math inline">\({\left\lvert {x} \right\rvert} \leq {\left\lvert {x-y} \right\rvert} + {\left\lvert {y} \right\rvert}\)</span>, take <span class="math inline">\({\left\lvert {x} \right\rvert}\geq 2N\)</span> so either 
+<span class="math display">
+\begin{align*}
+{\left\lvert {x-y} \right\rvert} \geq N \implies I \leq \int_{\left\{{x-y \geq N}\right\}} {\left\lvert {f(x-y)} \right\rvert}M ~dy\leq \varepsilon M \to 0
+\end{align*}
+<span> then 
+<span class="math display">
+\begin{align*}
+{\left\lvert {y} \right\rvert} \geq N \implies I \leq \int_{\left\{{y \geq N}\right\}} M{\left\lvert {g(y)} \right\rvert} ~dy\leq  M \varepsilon \to 0
+.\end{align*}
+<span></p></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Corollary of Young&#39;s inequality">
+<p>Take <span class="math inline">\(q = 1\)</span> in Young’s inequality to obtain 
+<span class="math display">
+\begin{align*}
+{\left\lVert {f \ast g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}p {\left\lVert {g} \right\rVert}1
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="$L^1$ is closed under convolution.">
+<p>If <span class="math inline">\(f, g \in L^1\)</span> then <span class="math inline">\(f\ast g\in L^1\)</span>.</p>
+</div>
+<h1 data-number="5" id="functional-analysis-1"><span class="header-section-number">5</span> Functional Analysis</h1>
+<h2 data-number="5.1" id="theorems-3"><span class="header-section-number">5.1</span> Theorems</h2>
+<div class="theorem proofenv" title="Bessel&#39;s Inequality">
+<p>For any orthonormal set <span class="math inline">\(\left\{{u_{n}}\right\} \subseteq {\mathcal{H}}\)</span> a Hilbert space (not necessarily a basis), 
+<span class="math display">
+\begin{align*}
+\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+\end{align*}
+<span> and thus 
+<span class="math display">
+\begin{align*}
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="of Bessel&#39;s inequality">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>Let <span class="math inline">\(S_{N} = \sum_{n=1}^N {\left\langle {x},~{u_{n}} \right\rangle} u_{n}\)</span> 
+<span class="math display">
+\begin{align*}
+{\left\lVert {x - S_{N}} \right\rVert}^2 
+&amp;= {\left\langle {x - S_{n}},~{x - S_{N}} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_{N}} \right\rVert}^2 - 2\Re{\left\langle {x},~{S_{N}} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_{N}} \right\rVert}^2 - 2\Re {\left\langle {x},~{\sum_{n=1}^N {\left\langle {x},~{u_{n}} \right\rangle}u_{n}} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_{N}} \right\rVert}^2 - 2\Re \sum_{n=1}^N {\left\langle {x},~{ {\left\langle {x},~{u_{n}} \right\rangle}u_{n}} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_{N}} \right\rVert}^2 - 2\Re \sum_{n=1}^N \overline{{\left\langle {x},~{u_{n}} \right\rangle}}{\left\langle {x},~{u_{n}} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + \left\|\sum_{n=1}^N {\left\langle {x},~{u_{n}} \right\rangle} u_{n}\right\|^2 - 2 \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 - 2 \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2
+.\end{align*}
+<span></p></li>
+<li><p>By continuity of the norm and inner product, we have 
+<span class="math display">
+\begin{align*}
+\lim_{N\to\infty} {\left\lVert {x - S_{N}} \right\rVert}^2 
+&amp;= \lim_{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 \\
+\implies {\left\lVert {x - \lim_{N\to\infty} S_{N}} \right\rVert}^2 &amp;= {\left\lVert {x} \right\rVert}^2 - \lim_{N\to\infty}\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2\\
+\implies 
+{\left\lVert {x - \sum_{n=1}^\infty {\left\langle {x},~{u_{n}} \right\rangle} u_{n}} \right\rVert}^2 &amp;= {\left\lVert {x} \right\rVert}^2 - 
+\sum_{n=1}^\infty {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2
+.\end{align*}
+<span></p></li>
+<li><p>Then noting that <span class="math inline">\(0 \leq {\left\lVert {x - S_{N}} \right\rVert}^2\)</span>, 
+<span class="math display">
+\begin{align*}
+0 &amp;\leq 
+{\left\lVert {x} \right\rVert}^2 - 
+\sum_{n=1}^\infty {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 \\
+\implies 
+\sum_{n=1}^\infty {\left\lvert {{\left\langle {x},~{u_{n}} \right\rangle}} \right\rvert}^2 &amp;\leq 
+{\left\lVert {x} \right\rVert}^2 \hfill\blacksquare
+.\end{align*}
+<span></p></li>
+</ul>
+</details>
+</div>
+<div class="theorem proofenv" title="Riesz Representation for Hilbert Spaces">
+<p>If <span class="math inline">\(\Lambda\)</span> is a continuous linear functional on a Hilbert space <span class="math inline">\(H\)</span>, then there exists a unique <span class="math inline">\(y \in H\)</span> such that 
+<span class="math display">
+\begin{align*}
+\forall x\in H,\quad \Lambda(x) = {\left\langle {x},~{y} \right\rangle}.
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Define <span class="math inline">\(M \mathrel{\vcenter{:}}=\ker \Lambda\)</span>.</li>
+<li>Then <span class="math inline">\(M\)</span> is a closed subspace and so <span class="math inline">\(H = M \oplus M^\perp\)</span></li>
+<li>There is some <span class="math inline">\(z\in M^\perp\)</span> such that <span class="math inline">\({\left\lVert {z} \right\rVert} = 1\)</span>.</li>
+<li>Set <span class="math inline">\(u \mathrel{\vcenter{:}}=\Lambda(x) z - \Lambda(z) x\)</span></li>
+<li>Check</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M\end{align*}
+<span></p>
+<ul>
+<li>Compute</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+0 &amp;= {\left\langle {u},~{z} \right\rangle} \\ 
+&amp;= {\left\langle {\Lambda(x) z - \Lambda(z) x},~{z} \right\rangle} \\
+&amp;= {\left\langle {\Lambda(x) z},~{z} \right\rangle} - {\left\langle {\Lambda(z) x},~{z} \right\rangle} \\
+&amp;= \Lambda(x) {\left\langle {z},~{z} \right\rangle} - \Lambda(z) {\left\langle {x},~{z} \right\rangle} \\
+&amp;= \Lambda(x) {\left\lVert {z} \right\rVert}^2 - \Lambda(z) {\left\langle {x},~{z} \right\rangle} \\
+&amp;= \Lambda(x) - \Lambda(z) {\left\langle {x},~{z} \right\rangle} \\
+&amp;= \Lambda(x) -  {\left\langle {x},~{\overline{\Lambda(z)} z} \right\rangle}
+,\end{align*}
+<span></p>
+<ul>
+<li>Choose <span class="math inline">\(y \mathrel{\vcenter{:}}=\overline{\Lambda(z)} z\)</span>.</li>
+<li>Check uniqueness:</li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+{\left\langle {x},~{y} \right\rangle} &amp;= {\left\langle {x},~{y&#39;} \right\rangle} \quad\forall x \\
+\implies  {\left\langle {x},~{y-y&#39;} \right\rangle} &amp;= 0 \quad\forall x \\
+\implies {\left\langle {y-y&#39;},~{y-y&#39;} \right\rangle} &amp;= 0 \\
+\implies {\left\lVert {y-y&#39;} \right\rVert} &amp;= 0 \\
+\implies y-y&#39; &amp;= \mathbf{0} \implies y = y&#39;
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="theorem proofenv" title="Functionals are continuous if and only if bounded">
+<p>Let <span class="math inline">\(L:X \to {\mathbb{C}}\)</span> be a linear functional, then the following are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(L\)</span> is continuous</li>
+<li><span class="math inline">\(L\)</span> is continuous at zero</li>
+<li><span class="math inline">\(L\)</span> is bounded, i.e. <span class="math inline">\(\exists c\geq 0 {~\mathrel{\Big|}~}{\left\lvert {L(x)} \right\rvert} \leq c {\left\lVert {x} \right\rVert}\)</span> for all <span class="math inline">\(x\in H\)</span></li>
+</ol>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p><span class="math inline">\(2 \implies 3\)</span>: Choose <span class="math inline">\(\delta &lt; 1\)</span> such that 
+<span class="math display">
+\begin{align*}
+{\left\lVert {x} \right\rVert} \leq \delta \implies {\left\lvert {L(x)} \right\rvert} &lt; 1.
+\end{align*}
+<span> Then 
+<span class="math display">
+\begin{align*}
+{\left\lvert {L(x)} \right\rvert} 
+&amp;= {\left\lvert {L\left( \frac{{\left\lVert {x} \right\rVert}}{\delta} \frac{\delta }{{\left\lVert {x} \right\rVert}} x \right)} \right\rvert} \\
+&amp;= \frac{{\left\lVert {x} \right\rVert}}{\delta} ~{\left\lvert {L\left( \delta \frac{x }{{\left\lVert {x} \right\rVert}} \right)} \right\rvert} \\
+&amp;\leq \frac{{\left\lVert {x} \right\rVert}}{\delta} 1
+,\end{align*}
+<span> so we can take <span class="math inline">\(c = \frac 1 \delta\)</span>. <span class="math inline">\(\hfill\blacksquare\)</span></p>
+<p><span class="math inline">\(3 \implies 1\)</span>:</p>
+<p>We have <span class="math inline">\({\left\lvert {L(x-y)} \right\rvert} \leq c{\left\lVert {x-y} \right\rVert}\)</span>, so given <span class="math inline">\(\varepsilon \geq 0\)</span> simply choose <span class="math inline">\(\delta = \frac \varepsilon c\)</span>.</p>
+</details>
+</div>
+<div class="theorem proofenv" title="The operator norm is a norm">
+<p>If <span class="math inline">\(H\)</span> is a Hilbert space, then <span class="math inline">\((H^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{\text{op}})\)</span> is a normed space.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<p>The only nontrivial property is the triangle inequality, but 
+<span class="math display">
+\begin{align*}
+{\left\lVert {L_{1} + L_{2}} \right\rVert}_{^{\operatorname{op}}} = \sup {\left\lvert {L_{1}(x) + L_{2}(x)} \right\rvert} \leq \sup {\left\lvert {L_{1}(x)} \right\rvert} + {\left\lvert {\sup L_{2}(x)} \right\rvert} = {\left\lVert {L_{1}} \right\rVert}_{^{\operatorname{op}}}+ {\left\lVert {L_{2}} \right\rVert}_{^{\operatorname{op}}}
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="theorem proofenv" title="The operator norm on $X\dual$ yields a Banach space">
+<p>If <span class="math inline">\(X\)</span> is a normed vector space, then <span class="math inline">\((X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{\text{op}})\)</span> is a Banach space.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>Let <span class="math inline">\(\left\{{L_{n}}\right\}\)</span> be Cauchy in <span class="math inline">\(X^\vee\)</span>.</p></li>
+<li><p>Then for all <span class="math inline">\(x\in C\)</span>, <span class="math inline">\(\left\{{L_{n}(x)}\right\} \subset {\mathbb{C}}\)</span> is Cauchy and converges to something denoted <span class="math inline">\(L(x)\)</span>.</p></li>
+<li><p>Need to show <span class="math inline">\(L\)</span> is continuous and <span class="math inline">\({\left\lVert {L_{n} - L} \right\rVert} \to 0\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(\left\{{L_{n}}\right\}\)</span> is Cauchy in <span class="math inline">\(X^\vee\)</span>, choose <span class="math inline">\(N\)</span> large enough so that 
+<span class="math display">
+\begin{align*}
+n, m \geq N \implies {\left\lVert {L_{n} - L_{m}} \right\rVert} &lt; \varepsilon \implies {\left\lvert {L_{m}(x) - L_{n}(x)} \right\rvert} &lt; \varepsilon \quad \forall x {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert} = 1
+.\end{align*}
+<span></p></li>
+<li><p>Take <span class="math inline">\(n\to \infty\)</span> to obtain 
+<span class="math display">
+\begin{align*}m \geq N 
+&amp;\implies {\left\lvert {L_{m}(x) - L(x)} \right\rvert} &lt; \varepsilon \quad \forall x {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert} = 1\\
+&amp;\implies {\left\lVert {L_{m} - L} \right\rVert} &lt; \varepsilon \to 0
+.\end{align*}
+<span></p></li>
+<li><p>Continuity: 
+<span class="math display">
+\begin{align*}
+{\left\lvert {L(x)} \right\rvert} &amp;= {\left\lvert {L(x) - L_{n}(x) + L_{n}(x)} \right\rvert} \\
+&amp;\leq  {\left\lvert {L(x) - L_{n}(x)} \right\rvert} + {\left\lvert {L_{n}(x)} \right\rvert} \\
+&amp;\leq \varepsilon {\left\lVert {x} \right\rVert} + c{\left\lVert {x} \right\rVert} \\
+&amp;= (\varepsilon + c){\left\lVert {x} \right\rVert} \hfill\blacksquare
+.\end{align*}
+<span></p></li>
+</ul>
+</details>
+</div>
+<div class="theorem proofenv" title="Riesz-Fischer">
+<p>Let <span class="math inline">\(U = \left\{{u_{n}}\right\}_{n=1}^\infty\)</span> be an orthonormal set (not necessarily a basis), then</p>
+<ol type="1">
+<li>There is an isometric surjection</li>
+</ol>
+<p>
+<span class="math display">
+\begin{align*}
+\mathcal{H} &amp;\to \ell^2({\mathbb{N}}) \\
+\mathbf{x} &amp;\mapsto \left\{{{\left\langle {\mathbf{x}},~{\mathbf{u}_{n}} \right\rangle}}\right\}_{n=1}^\infty
+\end{align*}
+<span></p>
+<p>i.e. if <span class="math inline">\(\left\{{a_{n}}\right\} \in \ell^2({\mathbb{N}})\)</span>, so <span class="math inline">\(\sum {\left\lvert {a_{n}} \right\rvert}^2 &lt; \infty\)</span>, then there exists a <span class="math inline">\(\mathbf{x} \in \mathcal{H}\)</span> such that 
+<span class="math display">
+\begin{align*}
+a_{n} = {\left\langle {\mathbf{x}},~{\mathbf{u}_{n}} \right\rangle} \quad \forall n.
+\end{align*}
+<span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\mathbf{x}\)</span> can be chosen such that 
+<span class="math display">
+\begin{align*}
+{\left\lVert {\mathbf{x}} \right\rVert}^2 = \sum {\left\lvert {a_{n}} \right\rvert}^2
+\end{align*}
+<span></li>
+</ol>
+<blockquote>
+<p>Note: the choice of <span class="math inline">\(\mathbf{x}\)</span> is unique <span class="math inline">\(\iff\)</span> <span class="math inline">\(\left\{{u_{n}}\right\}\)</span> is <strong>complete</strong>, i.e. <span class="math inline">\({\left\langle {\mathbf{x}},~{\mathbf{u}_{n}} \right\rangle} = 0\)</span> for all <span class="math inline">\(n\)</span> implies <span class="math inline">\(\mathbf{x} = \mathbf{0}\)</span>.</p>
+</blockquote>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>Given <span class="math inline">\(\left\{{a_{n}}\right\}\)</span>, define <span class="math inline">\(S_{N} = \sum^N a_{n} \mathbf{u}_{n}\)</span>.</li>
+<li><span class="math inline">\(S_{N}\)</span> is Cauchy in <span class="math inline">\(\mathcal{H}\)</span> and so <span class="math inline">\(S_{N} \to \mathbf{x}\)</span> for some <span class="math inline">\(\mathbf{x} \in \mathcal{H}\)</span>.</li>
+<li><span class="math inline">\({\left\langle {x},~{u_{n}} \right\rangle} = {\left\langle {x - S_{N}},~{u_{n}} \right\rangle} + {\left\langle {S_{N}},~{u_{n}} \right\rangle} \to a_{n}\)</span></li>
+<li>By construction, <span class="math inline">\({\left\lVert {x-S_{N}} \right\rVert}^2 = {\left\lVert {x} \right\rVert}^2 - \sum^N {\left\lvert {a_{n}} \right\rvert}^2 \to 0\)</span>, so <span class="math inline">\({\left\lVert {x} \right\rVert}^2 = \sum^\infty {\left\lvert {a_{n}} \right\rvert}^2\)</span>.</li>
+</ul>
+</details>
+</div>
+<h1 data-number="6" id="extra-problems"><span class="header-section-number">6</span> Extra Problems</h1>
+<h2 data-number="6.1" id="greatest-hits"><span class="header-section-number">6.1</span> Greatest Hits</h2>
+<ul>
+<li><p><span class="math inline">\(\star\)</span>: Show that for <span class="math inline">\(E\subseteq {\mathbb{R}}^n\)</span>, TFAE:</p>
+<ol type="1">
+<li><span class="math inline">\(E\)</span> is measurable</li>
+<li><span class="math inline">\(E = H\cup Z\)</span> here <span class="math inline">\(H\)</span> is <span class="math inline">\(F_\sigma\)</span> and <span class="math inline">\(Z\)</span> is null</li>
+<li><span class="math inline">\(E = V\setminus Z&#39;\)</span> where <span class="math inline">\(V\in G_\delta\)</span> and <span class="math inline">\(Z&#39;\)</span> is null.</li>
+</ol></li>
+<li><p><span class="math inline">\(\star\)</span>: Show that if <span class="math inline">\(E\subseteq {\mathbb{R}}^n\)</span> is measurable then <span class="math inline">\(m(E) = \sup \left\{{ m(K) {~\mathrel{\Big|}~}K\subset E\text{ compact}}\right\}\)</span> iff for all <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists a compact <span class="math inline">\(K\subseteq E\)</span> such that <span class="math inline">\(m(K) \geq m(E) - \varepsilon\)</span>.</p></li>
+<li><p><span class="math inline">\(\star\)</span>: Show that cylinder functions are measurable, i.e. if <span class="math inline">\(f\)</span> is measurable on <span class="math inline">\({\mathbb{R}}^s\)</span>, then <span class="math inline">\(F(x, y) \mathrel{\vcenter{:}}= f(x)\)</span> is measurable on <span class="math inline">\({\mathbb{R}}^s\times{\mathbb{R}}^t\)</span> for any <span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(\star\)</span>: Prove that the Lebesgue integral is translation invariant, i.e. if <span class="math inline">\(\tau_h(x) = x+h\)</span> then <span class="math inline">\(\int \tau_h f = \int f\)</span>.</p></li>
+<li><p><span class="math inline">\(\star\)</span>: Prove that the Lebesgue integral is dilation invariant, i.e. if <span class="math inline">\(f_\delta(x) = {f({x\over \delta}) \over \delta^n}\)</span> then <span class="math inline">\(\int f_\delta = \int f\)</span>.</p></li>
+<li><p><span class="math inline">\(\star\)</span>: Prove continuity in <span class="math inline">\(L^1\)</span>, i.e. 
+<span class="math display">
+\begin{align*}
+f \in L^{1} \Longrightarrow \lim _{h \rightarrow 0} \int|f(x+h)-f(x)|=0
+.\end{align*}
+<span></p></li>
+<li><p><span class="math inline">\(\star\)</span>: Show that 
+<span class="math display">
+\begin{align*}f,g \in L^1 \implies f\ast g \in L^1 {\quad \operatorname{and} \quad} {\left\lVert {f\ast g} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1.\end{align*}
+<span></p></li>
+<li><p><span class="math inline">\(\star\)</span>: Show that if <span class="math inline">\(X\subseteq {\mathbb{R}}\)</span> with <span class="math inline">\(\mu(X) &lt; \infty\)</span> then 
+<span class="math display">
+\begin{align*}  
+{\left\lVert {f} \right\rVert}_p \overset{p\to\infty}\to {\left\lVert {f} \right\rVert}_\infty
+.\end{align*}
+<span></p></li>
+</ul>
+<h2 data-number="6.2" id="by-topic"><span class="header-section-number">6.2</span> By Topic</h2>
+<h3 data-number="6.2.1" id="topology"><span class="header-section-number">6.2.1</span> Topology</h3>
+<ul>
+<li>Show that every compact set is closed and bounded.</li>
+<li>Show that if a subset of a metric space is complete and totally bounded, then it is compact.</li>
+<li>Show that if <span class="math inline">\(K\)</span> is compact and <span class="math inline">\(F\)</span> is closed with <span class="math inline">\(K, F\)</span> disjoint then <span class="math inline">\(\operatorname{dist}(K, F) &gt; 0\)</span>.</li>
+</ul>
+<h3 data-number="6.2.2" id="continuity"><span class="header-section-number">6.2.2</span> Continuity</h3>
+<ul>
+<li>Show that a continuous function on a compact set is uniformly continuous.</li>
+</ul>
+<h3 data-number="6.2.3" id="differentiation"><span class="header-section-number">6.2.3</span> Differentiation</h3>
+<ul>
+<li>Show that if <span class="math inline">\(f\in C^1({\mathbb{R}})\)</span> and both <span class="math inline">\(\lim_{x\to \infty} f(x)\)</span> and <span class="math inline">\(\lim_{x\to \infty} f&#39;(x)\)</span> exist, then <span class="math inline">\(\lim_{x\to\infty} f&#39;(x)\)</span> must be zero.</li>
+</ul>
+<h3 data-number="6.2.4" id="advanced-limitology"><span class="header-section-number">6.2.4</span> Advanced Limitology</h3>
+<ul>
+<li>If <span class="math inline">\(f\)</span> is continuous, is it necessarily the case that <span class="math inline">\(f&#39;\)</span> is continuous?</li>
+<li>If <span class="math inline">\(f_n \to f\)</span>, is it necessarily the case that <span class="math inline">\(f_n&#39;\)</span> converges to <span class="math inline">\(f&#39;\)</span> (or at all)?</li>
+<li>Is it true that the sum of differentiable functions is differentiable?</li>
+<li>Is it true that the limit of integrals equals the integral of the limit?</li>
+<li>Is it true that a limit of continuous functions is continuous?</li>
+<li>Show that a subset of a metric space is closed iff it is complete.</li>
+<li>Show that if <span class="math inline">\(m(E) &lt; \infty\)</span> and <span class="math inline">\(f_n\to f\)</span> uniformly, then <span class="math inline">\(\lim \int_E f_n = \int_E f\)</span>.</li>
+</ul>
+<p>Uniform Convergence</p>
+<ul>
+<li>Show that a uniform limit of bounded functions is bounded.</li>
+<li>Show that a uniform limit of continuous function is continuous.
+<ul>
+<li>I.e. if <span class="math inline">\(f_n\to f\)</span> uniformly with each <span class="math inline">\(f_n\)</span> continuous then <span class="math inline">\(f\)</span> is continuous.</li>
+</ul></li>
+<li>Show that if <span class="math inline">\(f_n\to f\)</span> pointwise, <span class="math inline">\(f_n&#39; \to g\)</span> uniformly for some <span class="math inline">\(f, g\)</span>, then <span class="math inline">\(f\)</span> is differentiable and <span class="math inline">\(g = f&#39;\)</span>.</li>
+<li>Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.</li>
+<li>Show that <span class="math inline">\(\sum {x^n \over n!}\)</span> converges uniformly on any compact subset of <span class="math inline">\({\mathbb{R}}\)</span>.</li>
+</ul>
+<p>Measure Theory</p>
+<ul>
+<li><p>Show that continuity of measure from above/below holds for outer measures.</p></li>
+<li><p>Show that a countable union of null sets is null.</p></li>
+</ul>
+<p>Measurability</p>
+<ul>
+<li>Show that <span class="math inline">\(f=0\)</span> a.e. iff <span class="math inline">\(\int_E f = 0\)</span> for every measurable set <span class="math inline">\(E\)</span>.</li>
+</ul>
+<p>Integrability</p>
+<ul>
+<li>Show that if <span class="math inline">\(f\)</span> is a measurable function, then <span class="math inline">\(f=0\)</span> a.e. iff <span class="math inline">\(\int f = 0\)</span>.</li>
+<li>Show that a bounded function is Lebesgue integrable iff it is measurable.</li>
+<li>Show that simple functions are dense in <span class="math inline">\(L^1\)</span>.</li>
+<li>Show that step functions are dense in <span class="math inline">\(L^1\)</span>.</li>
+<li>Show that smooth compactly supported functions are dense in <span class="math inline">\(L^1\)</span>.</li>
+</ul>
+<p>Convergence</p>
+<ul>
+<li>Prove Fatou’s lemma using the Monotone Convergence Theorem.</li>
+<li>Show that if <span class="math inline">\(\left\{{f_n}\right\}\)</span> is in <span class="math inline">\(L^1\)</span> and <span class="math inline">\(\sum \int {\left\lvert {f_n} \right\rvert} &lt; \infty\)</span> then <span class="math inline">\(\sum f_n\)</span> converges to an <span class="math inline">\(L^1\)</span> function and 
+<span class="math display">
+\begin{align*}\int \sum f_n = \sum \int f_n.\end{align*}
+<span></li>
+</ul>
+<p>Convolution</p>
+<ul>
+<li>Show that if <span class="math inline">\(f\in L^1\)</span> and <span class="math inline">\(g\)</span> is bounded, then <span class="math inline">\(f\ast g\)</span> is bounded and uniformly continuous.</li>
+<li>If <span class="math inline">\(f, g\)</span> are compactly supported, is it necessarily the case that <span class="math inline">\(f\ast g\)</span> is compactly supported?</li>
+<li>Show that under any of the following assumptions, <span class="math inline">\(f\ast g\)</span> vanishes at infinity:
+<ul>
+<li><span class="math inline">\(f, g\in L^1\)</span> are both bounded.</li>
+<li><span class="math inline">\(f, g\in L^1\)</span> with just <span class="math inline">\(g\)</span> bounded.</li>
+<li><span class="math inline">\(f, g\)</span> smooth and compactly supported (and in fact <span class="math inline">\(f\ast g\)</span> is smooth)</li>
+<li><span class="math inline">\(f\in L^1\)</span> and <span class="math inline">\(g\)</span> smooth and compactly supported (and in fact <span class="math inline">\(f\ast g\)</span> is smooth)</li>
+</ul></li>
+<li>Show that if <span class="math inline">\(f\in L^1\)</span> and <span class="math inline">\(g&#39;\)</span> exists with <span class="math inline">\({\frac{\partial g}{\partial x_i}\,}\)</span> all bounded, then 
+<span class="math display">
+\begin{align*}{\frac{\partial }{\partial x_i}\,}(f\ast g) = f \ast {\frac{\partial g}{\partial x_i}\,}\end{align*}
+<span></li>
+</ul>
+<p>Fourier Analysis</p>
+<ul>
+<li>Show that if <span class="math inline">\(f\in L^1\)</span> then <span class="math inline">\(\widehat{f}\)</span> is bounded and uniformly continuous.</li>
+<li>Is it the case that <span class="math inline">\(f\in L^1\)</span> implies <span class="math inline">\(\widehat{f}\in L^1\)</span>?</li>
+<li>Show that if <span class="math inline">\(f, \widehat{f} \in L^1\)</span> then <span class="math inline">\(f\)</span> is bounded, uniformly continuous, and vanishes at infinity.
+<ul>
+<li>Show that this is not true for arbitrary <span class="math inline">\(L^1\)</span> functions.</li>
+</ul></li>
+<li>Show that if <span class="math inline">\(f\in L^1\)</span> and <span class="math inline">\(\widehat{f} = 0\)</span> almost everywhere then <span class="math inline">\(f = 0\)</span> almost everywhere.
+<ul>
+<li>Prove that <span class="math inline">\(\widehat{f} = \widehat{g}\)</span> implies that <span class="math inline">\(f=g\)</span> a.e.</li>
+</ul></li>
+<li>Show that if <span class="math inline">\(f, g \in L^1\)</span> then 
+<span class="math display">
+\begin{align*}\int \widehat{f} g = \int f\widehat{g}.\end{align*}
+<span>
+<ul>
+<li>Give an example showing that this fails if <span class="math inline">\(g\)</span> is not bounded.</li>
+</ul></li>
+<li>Show that if <span class="math inline">\(f\in C^1\)</span> then <span class="math inline">\(f\)</span> is equal to its Fourier <em>series</em>.</li>
+</ul>
+<p>Approximate Identities</p>
+<ul>
+<li>Show that if <span class="math inline">\(\phi\)</span> is an approximate identity, then 
+<span class="math display">
+\begin{align*}{\left\lVert {f\ast \phi_t - f} \right\rVert}_1 \overset{t\to 0}\to 0.\end{align*}
+<span>
+<ul>
+<li>Show that if additionally <span class="math inline">\({\left\lvert {\phi(x)} \right\rvert} \leq c(1 + {\left\lvert {x} \right\rvert})^{-n-\varepsilon}\)</span> for some <span class="math inline">\(c,\varepsilon&gt;0\)</span>, then this converges is almost everywhere.</li>
+</ul></li>
+<li>Show that is <span class="math inline">\(f\)</span> is bounded and uniformly continuous and <span class="math inline">\(\phi_t\)</span> is an approximation to the identity, then <span class="math inline">\(f\ast \phi_t\)</span> uniformly converges to <span class="math inline">\(f\)</span>.</li>
+</ul>
+<p><span class="math inline">\(L^p\)</span> Spaces</p>
+<ul>
+<li>Show that if <span class="math inline">\(E\subseteq {\mathbb{R}}^n\)</span> is measurable with <span class="math inline">\(\mu(E) &lt; \infty\)</span> and <span class="math inline">\(f\in L^p(X)\)</span> then 
+<span class="math display">
+\begin{align*}{\left\lVert {f} \right\rVert}_{L^p(X)} \overset{p\to\infty}\to {\left\lVert {f} \right\rVert}_\infty.\end{align*}
+<span></li>
+<li>Is it true that the converse to the DCT holds? I.e. if <span class="math inline">\(\int f_n \to \int f\)</span>, is there a <span class="math inline">\(g\in L^p\)</span> such that <span class="math inline">\(f_n &lt; g\)</span> a.e. for every <span class="math inline">\(n\)</span>?</li>
+<li>Prove continuity in <span class="math inline">\(L^p\)</span>: If <span class="math inline">\(f\)</span> is uniformly continuous then for all <span class="math inline">\(p\)</span>, 
+<span class="math display">
+\begin{align*}{\left\lVert {\tau_h f - f} \right\rVert}_p \overset{h\to 0}\to 0.\end{align*}
+<span></li>
+<li>Prove the following inclusions of <span class="math inline">\(L^p\)</span> spaces for <span class="math inline">\(m(X) &lt; \infty\)</span>: 
+<span class="math display">
+\begin{align*}
+L^\infty(X) &amp;\subset L^2(X) \subset L^1(X) \\
+\ell^2({\mathbb{Z}}) &amp;\subset \ell^1({\mathbb{Z}}) \subset \ell^\infty({\mathbb{Z}})
+.\end{align*}
+<span></li>
+</ul>
+<h1 data-number="7" id="practice-exam-november-2014"><span class="header-section-number">7</span> Practice Exam (November 2014)</h1>
+<h2 data-number="7.1" id="fubini-tonelli"><span class="header-section-number">7.1</span> 1: Fubini-Tonelli</h2>
+<h3 data-number="7.1.1" id="a"><span class="header-section-number">7.1.1</span> a</h3>
+<p>Carefully state Tonelli’s theorem for a nonnegative function <span class="math inline">\(F(x, t)\)</span> on <span class="math inline">\({\mathbb{R}}^n\times{\mathbb{R}}\)</span>.</p>
+<h3 data-number="7.1.2" id="b"><span class="header-section-number">7.1.2</span> b</h3>
+<p>Let <span class="math inline">\(f:{\mathbb{R}}^n\to [0, \infty]\)</span> and define <span class="math display">\[\begin{align*} {\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\} .\end{align*}\]</span></p>
+<p>Prove the validity of the following two statements:</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> is Lebesgue measurable on <span class="math inline">\({\mathbb{R}}^{n} \iff {\mathcal{A}}\)</span> is a Lebesgue measurable subset of <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
+<li>If <span class="math inline">\(f\)</span> is Lebesgue measurable on <span class="math inline">\({\mathbb{R}}^n\)</span> then <span class="math display">\[\begin{align*}     m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}{~\mathrel{\Big|}~}f(x) \geq t\right\}\right) d t     .\end{align*}\]</span></li>
+</ol>
+<h2 data-number="7.2" id="convolutions-and-the-fourier-transform"><span class="header-section-number">7.2</span> 2: Convolutions and the Fourier Transform</h2>
+<h3 data-number="7.2.1" id="a-1"><span class="header-section-number">7.2.1</span> a</h3>
+<p>Let <span class="math inline">\(f, g\in L^1({\mathbb{R}}^n)\)</span> and give a definition of <span class="math inline">\(f\ast g\)</span>.</p>
+<h3 data-number="7.2.2" id="b-1"><span class="header-section-number">7.2.2</span> b</h3>
+<p>Prove that if <span class="math inline">\(f, g\)</span> are integrable and bounded, then <span class="math display">\[\begin{align*} (f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0 .\end{align*}\]</span></p>
+<h3 data-number="7.2.3" id="c"><span class="header-section-number">7.2.3</span> c</h3>
+<ol type="1">
+<li>Define the <em>Fourier transform</em> of an integrable function <span class="math inline">\(f\)</span> on <span class="math inline">\({\mathbb{R}}^n\)</span>.</li>
+<li>Give an outline of the proof of the Fourier inversion formula.</li>
+<li>Give an example of a function <span class="math inline">\(f\in L^1({\mathbb{R}}^n)\)</span> such that <span class="math inline">\(\widehat{f}\)</span> is not in <span class="math inline">\(L^1({\mathbb{R}}^n)\)</span>.</li>
+</ol>
+<h2 data-number="7.3" id="hilbert-spaces"><span class="header-section-number">7.3</span> 3: Hilbert Spaces</h2>
+<p>Let <span class="math inline">\(\left\{{u_n}\right\}_{n=1}^\infty\)</span> be an orthonormal sequence in a Hilbert space <span class="math inline">\(H\)</span>.</p>
+<h3 data-number="7.3.1" id="a-2"><span class="header-section-number">7.3.1</span> a</h3>
+<p>Let <span class="math inline">\(x\in H\)</span> and verify that <span class="math display">\[\begin{align*} \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2} = \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} .\end{align*}\]</span> for any <span class="math inline">\(N\in {\mathbb{N}}\)</span> and deduce that <span class="math display">\[\begin{align*} \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2} .\end{align*}\]</span></p>
+<h3 data-number="7.3.2" id="b-2"><span class="header-section-number">7.3.2</span> b</h3>
+<p>Let <span class="math inline">\(\left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}})\)</span> and prove that there exists an <span class="math inline">\(x\in H\)</span> such that <span class="math inline">\(a_n = {\left\langle {x},~{u_n} \right\rangle}\)</span> for all <span class="math inline">\(n\in {\mathbb{N}}\)</span>, and moreover <span class="math inline">\(x\)</span> may be chosen such that <span class="math display">\[\begin{align*} {\left\lVert {x} \right\rVert}_H = \qty{ \sum_{n\in {\mathbb{N}}} {\left\lvert {a_n} \right\rvert}^2}^{1\over 2} .\end{align*}\]</span></p>
+<dl>
+<dt>Proof</dt>
+<dd><ul>
+<li><p>Take <span class="math inline">\(\left\{{a_n}\right\} \in \ell^2\)</span>, then note that <span class="math inline">\(\sum {\left\lvert {a_n} \right\rvert}^2 &lt; \infty \implies\)</span> the tails vanish.</p></li>
+<li><p>Define <span class="math inline">\(x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N\)</span> where <span class="math inline">\(S_N = \sum_{k=1}^N a_k u_k\)</span></p></li>
+<li><p><span class="math inline">\(\left\{{S_N}\right\}\)</span> is Cauchy and <span class="math inline">\(H\)</span> is complete, so <span class="math inline">\(x\in H\)</span>.</p></li>
+<li><p>By construction, <span class="math display">\[\begin{align*}     {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n      \end{align*}\]</span> since the <span class="math inline">\(u_k\)</span> are all orthogonal.</p></li>
+<li><p>By Pythagoras since the <span class="math inline">\(u_k\)</span> are normal, <span class="math display">\[\begin{align*}     {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2     .\end{align*}\]</span></p></li>
+</ul>
+</dd>
+</dl>
+<h3 data-number="7.3.3" id="c-1"><span class="header-section-number">7.3.3</span> c</h3>
+<p>Prove that if <span class="math inline">\(\left\{{u_n}\right\}\)</span> is <em>complete</em>, Bessel’s inequality becomes an equality.</p>
+<dl>
+<dt>Proof</dt>
+<dd><p>Let <span class="math inline">\(x\)</span> and <span class="math inline">\(u_n\)</span> be arbitrary.</p>
+<p><span class="math display">\[\begin{align*} {\left\langle {x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} &amp;= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {\sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\ &amp;= {\left\langle {x},~{u_n} \right\rangle} - \sum_{k=1}^\infty  {\left\langle {{\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\ &amp;= {\left\langle {x},~{u_n} \right\rangle} - \sum_{k=1}^\infty  {\left\langle {x},~{u_k} \right\rangle} {\left\langle {u_k },~{u_n} \right\rangle} \\ &amp;= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {x},~{u_n} \right\rangle} = 0 \\ \implies  x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k &amp;= 0 \quad\text{by completeness} .\end{align*}\]</span></p>
+<p>So <span class="math display">\[\begin{align*} x = \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle} u_k \implies {\left\lVert {x} \right\rVert}^2 = \sum_{k=1}^\infty {\left\lvert {{\left\langle {x},~{u_k} \right\rangle}} \right\rvert}^2. \hfill\blacksquare .\end{align*}\]</span></p>
+</dd>
+</dl>
+<h2 data-number="7.4" id="lp-spaces"><span class="header-section-number">7.4</span> 4: <span class="math inline">\(L^p\)</span> Spaces</h2>
+<h3 data-number="7.4.1" id="a-3"><span class="header-section-number">7.4.1</span> a</h3>
+<p>Prove Holder’s inequality: let <span class="math inline">\(f\in L^p, g\in L^q\)</span> with <span class="math inline">\(p, q\)</span> conjugate, and show that <span class="math display">\[\begin{align*} {\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q} .\end{align*}\]</span></p>
+<h3 data-number="7.4.2" id="b-3"><span class="header-section-number">7.4.2</span> b</h3>
+<p>Prove Minkowski’s Inequality: <span class="math display">\[\begin{align*} 1\leq p &lt; \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p} .\end{align*}\]</span> Conclude that if <span class="math inline">\(f, g\in L^p({\mathbb{R}}^n)\)</span> then so is <span class="math inline">\(f+g\)</span>.</p>
+<h3 data-number="7.4.3" id="c-2"><span class="header-section-number">7.4.3</span> c</h3>
+<p>Let <span class="math inline">\(X = [0, 1] \subset {\mathbb{R}}\)</span>.</p>
+<ol type="1">
+<li><p>Give a definition of the Banach space <span class="math inline">\(L^\infty(X)\)</span> of essentially bounded functions of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(f\)</span> be non-negative and measurable on <span class="math inline">\(X\)</span>, prove that <span class="math display">\[\begin{align*}     \int_X f(x)^p \,dx \overset{p\to\infty}\to     \begin{dcases}     \infty \quad\text{or} \\     m\qty{\left\{{f^{-1}(1)}\right\}}     \end{dcases}     ,\end{align*}\]</span> and characterize the functions of each type</p></li>
+</ol>
+<div class="solution proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<p><span class="math display">\[\begin{align*} \int f^p  &amp;= \int_{x &lt; 1} f^p + \int_{x=1}f^p + \int_{x &gt; 1} f^p\\ &amp;= \int_{x &lt; 1} f^p + \int_{x=1}1 + \int_{x &gt; 1} f^p \\ &amp;= \int_{x &lt; 1} f^p + m(\left\{{f = 1}\right\}) + \int_{x &gt; 1} f^p \\ &amp;\overset{p\to\infty}\to 0  + m(\left\{{f = 1}\right\}) +  \begin{cases}  0 &amp; m(\left\{{x\geq 1}\right\}) = 0 \\  \infty &amp; m(\left\{{x\geq 1}\right\}) &gt; 0. \end{cases} \end{align*}\]</span></p>
+</details>
+</div>
+<!--\todo{Justify passing limit into integrals.}-->
+<h2 data-number="7.5" id="dual-spaces"><span class="header-section-number">7.5</span> 5: Dual Spaces</h2>
+<p>Let <span class="math inline">\(X\)</span> be a normed vector space.</p>
+<h3 data-number="7.5.1" id="a-4"><span class="header-section-number">7.5.1</span> a</h3>
+<p>Give the definition of what it means for a map <span class="math inline">\(L:X\to {\mathbb{C}}\)</span> to be a <em>linear functional</em>.</p>
+<h3 data-number="7.5.2" id="b-4"><span class="header-section-number">7.5.2</span> b</h3>
+<p>Define what it means for <span class="math inline">\(L\)</span> to be <em>bounded</em> and show <span class="math inline">\(L\)</span> is bounded <span class="math inline">\(\iff L\)</span> is continuous.</p>
+<h3 data-number="7.5.3" id="c-3"><span class="header-section-number">7.5.3</span> c</h3>
+<p>Prove that <span class="math inline">\((X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}})\)</span> is a Banach space.</p>
+<h1 data-number="8" id="midterm-exam-2-november-2018"><span class="header-section-number">8</span> Midterm Exam 2 (November 2018)</h1>
+<h2 data-number="8.1" id="integration-by-parts"><span class="header-section-number">8.1</span> 1 (Integration by Parts)</h2>
+<p>Let <span class="math inline">\(f, g\in L^1([0, 1])\)</span>, define <span class="math inline">\(F(x) = \int_0^x f\)</span> and <span class="math inline">\(G(x) = \int_0^x g\)</span>, and show <span class="math display">\[\begin{align*} \int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx .\end{align*}\]</span></p>
+<h2 data-number="8.2" id="section"><span class="header-section-number">8.2</span> 2</h2>
+<p>Let <span class="math inline">\(\phi\in L^1({\mathbb{R}}^n)\)</span> such that <span class="math inline">\(\int \phi = 1\)</span> and define <span class="math inline">\(\phi_t(x) = t^{-n}\phi(t^{-1}x)\)</span>.</p>
+<p>Show that if <span class="math inline">\(f\)</span> is bounded and uniformly continuous then <span class="math inline">\(f\ast \phi_t \overset{t\to 0} f\)</span> uniformly.</p>
+<h2 data-number="8.3" id="section-1"><span class="header-section-number">8.3</span> 3</h2>
+<p>Let <span class="math inline">\(g\in L^\infty([0, 1])\)</span>.</p>
+<ol type="a">
+<li><p>Prove <span class="math display">\[\begin{align*}     {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}     .\end{align*}\]</span></p></li>
+<li><p>Prove that the map <span class="math display">\[\begin{align*}     \Lambda_g: L^1([0, 1]) &amp;\to {\mathbb{C}}\\     f &amp;\mapsto \int_0^1 fg     \end{align*}\]</span> defines an element of <span class="math inline">\(L^1([0, 1])^\vee\)</span> with <span class="math inline">\({\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}\)</span>.</p></li>
+</ol>
+<blockquote>
+<p>Note: 4 is a repeat.</p>
+</blockquote>
+<h1 data-number="9" id="midterm-exam-2-december-2014"><span class="header-section-number">9</span> Midterm Exam 2 (December 2014)</h1>
+<h2 data-number="9.1" id="section-2"><span class="header-section-number">9.1</span> 1</h2>
+<blockquote>
+<p>Note: (a) is a repeat.</p>
+</blockquote>
+<ul>
+<li>Let <span class="math inline">\(\Lambda\in L^2(X)^\vee\)</span>.
+<ul>
+<li>Show that <span class="math inline">\(M\mathrel{\vcenter{:}}=\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X)\)</span> is a closed subspace, and <span class="math inline">\(L^2(X) = M \oplus M\perp\)</span>.</li>
+<li>Prove that there exists a unique <span class="math inline">\(g\in L^2(X)\)</span> such that <span class="math inline">\(\Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\)</span>.</li>
+</ul></li>
+</ul>
+<h2 data-number="9.2" id="section-3"><span class="header-section-number">9.2</span> 2</h2>
+<ol type="a">
+<li>In parts:</li>
+</ol>
+<ul>
+<li>Given a definition of <span class="math inline">\(L^\infty({\mathbb{R}}^n)\)</span>.</li>
+<li>Verify that <span class="math inline">\({\left\lVert {{\,\cdot\,}} \right\rVert}_\infty\)</span> defines a norm on <span class="math inline">\(L^\infty({\mathbb{R}}^n)\)</span>.</li>
+<li>Carefully proved that <span class="math inline">\((L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\)</span> is a Banach space.</li>
+</ul>
+<ol start="2" type="a">
+<li>Prove that for any measurable <span class="math inline">\(f:{\mathbb{R}}^n \to {\mathbb{C}}\)</span>, <span class="math display">\[\begin{align*}     L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}     .\end{align*}\]</span></li>
+</ol>
+<h2 data-number="9.3" id="section-4"><span class="header-section-number">9.3</span> 3</h2>
+<ol type="a">
+<li><p>Prove that if <span class="math inline">\(f, g: {\mathbb{R}}^n\to {\mathbb{C}}\)</span> is both measurable then <span class="math inline">\(F(x, y) \mathrel{\vcenter{:}}= f(x)\)</span> and <span class="math inline">\(h(x, y)\mathrel{\vcenter{:}}= f(x-y) g(y)\)</span> is measurable on <span class="math inline">\({\mathbb{R}}^n\times{\mathbb{R}}^n\)</span>.</p></li>
+<li><p>Show that if <span class="math inline">\(f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\)</span> and <span class="math inline">\(g\in L^1({\mathbb{R}}^n)\)</span>, then <span class="math inline">\(f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\)</span> is well defined, and carefully show that it satisfies the following properties: <span class="math display">\[\begin{align*}     {\left\lVert {f\ast g} \right\rVert}_\infty &amp;\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty     {\left\lVert {f\ast g} \right\rVert}_1      &amp;\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1     {\left\lVert {f\ast g} \right\rVert}_2      &amp;\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2     .\end{align*}\]</span></p></li>
+</ol>
+<blockquote>
+<p>Hint: first show <span class="math inline">\({\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}}\)</span>.</p>
+</blockquote>
+<h2 data-number="9.4" id="weierstrass-approximation-theorem"><span class="header-section-number">9.4</span> 4 (Weierstrass Approximation Theorem)</h2>
+<blockquote>
+<p>Note: (a) is a repeat.</p>
+</blockquote>
+<p>Let <span class="math inline">\(f: [0, 1]\to {\mathbb{R}}\)</span> be continuous, and prove the Weierstrass approximation theorem: for any <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists a polynomial <span class="math inline">\(P\)</span> such that <span class="math inline">\({\left\lVert {f - P} \right\rVert}_{\infty} &lt; \varepsilon\)</span>.</p>
+<h1 data-number="10" id="common-inequalities"><span class="header-section-number">10</span> Common Inequalities</h1>
+<div class="proposition proofenv" title="Reverse Triangle Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+{\left\lvert {{\left\lVert {x} \right\rVert} - {\left\lVert {y} \right\rVert}} \right\rvert} \leq {\left\lVert {x - y} \right\rVert}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Chebyshev&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+\mu(\{x:|f(x)|&gt;\alpha\}) \leq\left(\frac{{\left\lVert {f} \right\rVert}_{p}}{\alpha}\right)^{p}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Holder&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+\frac 1 p + \frac 1 q = 1 \implies {\left\lVert {f g} \right\rVert}_{1} \leq {\left\lVert {f} \right\rVert}_{p} {\left\lVert {g} \right\rVert}_{q}
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="of Holder&#39;s inequality">
+<details><summary><i>(Click to expand)</i></summary>
+<p>It suffices to show this when <span class="math inline">\({\left\lVert {f} \right\rVert}_p = {\left\lVert {g} \right\rVert}_q = 1\)</span>, since 
+<span class="math display">
+\begin{align*}  
+\|f g\|_{1} \leq\|f\|_{p}\|f\|_{q} \Longleftrightarrow \int \frac{|f|}{\|f\|_{p}} \frac{|g|}{\|g\|_{q}} \leq 1
+.\end{align*}
+<span></p>
+<p>Using <span class="math inline">\(AB \leq \frac 1 p A^p + \frac 1 q B^q\)</span>, we have 
+<span class="math display">
+\begin{align*}  
+\int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="example proofenv" title="Application of Holder&#39;s inequality: containment of $L^p$ spaces">
+<p>For finite measure spaces, 
+<span class="math display">
+\begin{align*}
+1 \leq p &lt; q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv" title="of containment of $L^p$ spaces">
+<details><summary><i>(Click to expand)</i></summary>
+<p>Fix <span class="math inline">\(p, q\)</span>, let <span class="math inline">\(r = \frac q p\)</span> and <span class="math inline">\(s = \frac{r}{r-1}\)</span> so <span class="math inline">\(r^{-1}+ s^{-1}= 1\)</span>. Then let <span class="math inline">\(h = {\left\lvert {f} \right\rvert}^p\)</span>:</p>
+<p>
+<span class="math display">
+\begin{align*}  
+{\left\lVert {f} \right\rVert}_{p}^p 
+= {\left\lVert {h\cdot 1} \right\rVert}_{1} \leq {\left\lVert {1} \right\rVert}_{s} {\left\lVert {h} \right\rVert}_{r} 
+= \mu(X)^{\frac 1 s} {\left\lVert {f} \right\rVert}_{q}^{\frac q r}
+\implies {\left\lVert {f} \right\rVert}_{p} 
+\leq \mu(X)^{\frac 1 p - \frac 1 q} {\left\lVert {f} \right\rVert}_{q}
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Note: doesn’t work for <span class="math inline">\(\ell_p\)</span> spaces, but just note that <span class="math inline">\(\sum {\left\lvert {x_n} \right\rvert} &lt; \infty \implies x_n &lt; 1\)</span> for large enough <span class="math inline">\(n\)</span>, and thus <span class="math inline">\(p&lt;q \implies {\left\lvert {x_n} \right\rvert}^q \leq {\left\lvert {x_n} \right\rvert}^q\)</span>.</p>
+</blockquote>
+</details>
+</div>
+<div class="proposition proofenv" title="Cauchy-Schwarz Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+{\left\lvert {{\left\langle {f},~{g} \right\rangle}} \right\rvert} = {\left\lVert {fg} \right\rVert}_{1} \leq {\left\lVert {f} \right\rVert}_{2} {\left\lVert {g} \right\rVert}_{2}
+&amp;&amp; \text{with equality} \iff f = \lambda g
+.\end{align*}
+<span></p>
+</div>
+<div class="remark proofenv">
+<p>In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in <span class="math inline">\(L^1\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Minkowski&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+1\leq p &lt; \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p}
+.\end{align*}
+<span></p>
+</div>
+<div class="remark proofenv">
+<p>This does not handle <span class="math inline">\(p=\infty\)</span> case. Use to prove <span class="math inline">\(L^p\)</span> is a normed space.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li><p>We first note 
+<span class="math display">
+\begin{align*}  
+{\left\lvert {f+g} \right\rvert}^p = {\left\lvert {f+g} \right\rvert}{\left\lvert {f+g} \right\rvert}^{p-1} \leq \left( {\left\lvert {f} \right\rvert} + {\left\lvert {g} \right\rvert}\right) {\left\lvert {f+g} \right\rvert}^{p-1}
+.\end{align*}
+<span></p></li>
+<li><p>Note that if <span class="math inline">\(p,q\)</span> are conjugate exponents then 
+<span class="math display">
+\begin{align*}  
+\frac 1 q &amp;= 1 - \frac 1 p = \frac{p-1} p \\
+q &amp;= \frac p {p-1} 
+.\end{align*}
+<span></p></li>
+<li><p>Then taking integrals yields 
+<span class="math display">
+\begin{align*}  
+{\left\lVert {f+g} \right\rVert}_p^p &amp;=
+\int {\left\lvert {f+g} \right\rvert}^p \\
+&amp;\leq \int \left( {\left\lvert {f} \right\rvert} + {\left\lvert {g} \right\rvert}\right) {\left\lvert {f+g} \right\rvert}^{p-1} \\ 
+&amp;= \int {\left\lvert {f} \right\rvert} {\left\lvert {f+g} \right\rvert}^{p-1} + \int {\left\lvert {g} \right\rvert} {\left\lvert {f+g} \right\rvert}^{p-1} \\
+&amp;= {\left\lVert {f(f+g)^{p-1}} \right\rVert}_1 + {\left\lVert {g(f+g)^{p-1}} \right\rVert}_1 \\
+&amp;\leq {\left\lVert {f} \right\rVert}_p ~{\left\lVert {(f+g)^{p-1})} \right\rVert}_q + {\left\lVert {g} \right\rVert}_p ~{\left\lVert {(f+g)^{p-1})} \right\rVert}_q \\
+&amp;= \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right) {\left\lVert { (f+g)^{p-1})} \right\rVert}_q \\
+&amp;= \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right) \left( \int {\left\lvert {f+g} \right\rvert}^{(p-1)q} \right)^{\frac 1 q} \\
+&amp;= \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right) \left( \int {\left\lvert {f+g} \right\rvert}^{p} \right)^{1 - \frac 1 p} \\
+&amp;= \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right) \frac{\int {\left\lvert {f+g} \right\rvert}^{p} }{\left( \int {\left\lvert {f+g} \right\rvert}^{p} \right)^{\frac 1 p}} \\
+&amp;= \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right)  \frac{{\left\lVert {f+g} \right\rVert}_p^p}{{\left\lVert {f+g} \right\rVert}_p}
+.\end{align*}
+<span></p></li>
+<li><p>Cancelling common terms yields 
+<span class="math display">
+\begin{align*}  
+1 &amp;\leq \left( {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p \right) \frac{1}{{\left\lVert {f+g} \right\rVert}_p} \\
+&amp;\implies 
+{\left\lVert {f+g} \right\rVert}_p
+\leq {\left\lVert {f} \right\rVert}_p + {\left\lVert {g} \right\rVert}_p 
+.\end{align*}
+<span></p></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Young&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+\frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
+\|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
+\end{align*}
+<span></p>
+</div>
+<div class="remark proofenv" title="some useful special cases">
+<p>
+<span class="math display">
+\begin{align*}  
+{\left\lVert {f\ast g} \right\rVert}_1      &amp; \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1 \\
+\|f * g\|_{p}         &amp; \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}p, \\
+{\left\lVert {f\ast g} \right\rVert}_\infty &amp; \leq {\left\lVert {f} \right\rVert}_2 {\left\lVert {g} \right\rVert}_2 \\
+{\left\lVert {f\ast g} \right\rVert}_\infty &amp; \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {g} \right\rVert}_q
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Bessel&#39;s Inequality">
+<p>For <span class="math inline">\(x\in H\)</span> a Hilbert space and <span class="math inline">\(\left\{{e_k}\right\}\)</span> an orthonormal sequence, 
+<span class="math display">
+\begin{align*}  
+\sum_{k=1}^{\infty}\| {\left\langle {x},~{e_{k} } \right\rangle} \|^{2} \leq \|x\|^{2}
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Note that this does not need to be a basis.</p>
+</blockquote>
+</div>
+<div class="proposition proofenv" title="Parseval&#39;s Identity">
+<p>Equality in Bessel’s inequality, attained when <span class="math inline">\(\left\{{e_k}\right\}\)</span> is a <em>basis</em>, i.e. it is complete, i.e. the span of its closure is all of <span class="math inline">\(H\)</span>.</p>
+</div>
+<h1 data-number="11" id="less-explicitly-used-inequalities"><span class="header-section-number">11</span> Less Explicitly Used Inequalities</h1>
+<div class="proposition proofenv" title="AM-GM Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+\sqrt{ab} \leq \frac{a+b}{2}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Jensen&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Young&#39;s Product Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+AB \leq {A^p \over p} + {B^q \over q}
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="?">
+<p>
+<span class="math display">
+\begin{align*}
+(a+b)^p \leq 2^{p-1} (a^p + b^p)
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Bernoulli&#39;s Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+(1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2{\mathbb{Z}}\text{ and } \forall x
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="Exponential Inequality">
+<p>
+<span class="math display">
+\begin{align*}  
+\forall t\in {\mathbb{R}},\quad 1 + t \leq  e^t
+.\end{align*}
+<span></p>
+</div>
+<div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
+<ul>
+<li>It’s an equality when <span class="math inline">\(t=0\)</span>.</li>
+<li><span class="math inline">\({\frac{\partial }{\partial t}\,} 1+ t &lt; {\frac{\partial t}{\partial e}\,}^t \iff t&lt;0\)</span></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Young&#39;s Convolution Inequality">
+<p>
+<span class="math display">
+\begin{align*}
+{1\over r} \mathrel{\vcenter{:}}={1\over p} + {1\over q} - 1 \implies {\left\lVert {f \ast g} \right\rVert}_{r} \leq {\left\lVert {f} \right\rVert}_{p} {\left\lVert {g} \right\rVert}{q}
+.\end{align*}
+<span></p>
+</div>
+<h1 data-number="12" id="bibliography"><span class="header-section-number">12</span> Bibliography</h1>
+<div id="refs" class="proofenv" role="doc-bibliography">
+
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Mnemonic: “F” stands for <em>ferme</em>, which is “closed” in French, and <span class="math inline">\(\sigma\)</span> corresponds to a “sum,” i.e. a union.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Slogan: to negate, find a bad <span class="math inline">\(x\)</span> depending on <span class="math inline">\(n_0\)</span> that are larger than some <span class="math inline">\(\varepsilon\)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Slogan: a uniform limit of continuous functions is continuous.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Note that this is only pointwise convergence of <span class="math inline">\(f\)</span>, whereas the full <span class="math inline">\(M{\hbox{-}}\)</span>test gives uniform convergence.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>It suffices to show <span class="math inline">\({\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for some <span class="math inline">\(M_n\)</span> not depending on <span class="math inline">\(x\)</span>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>So this implicitly holds if <span class="math inline">\(f\)</span> is the pointwise limit of <span class="math inline">\(f_n\)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>See Abbott theorem 6.4.3, pp 168.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8" role="doc-endnote"><p>This holds for outer measure <strong>iff</strong> <span class="math inline">\(\mathrm{dist}(A, B) &gt; 0\)</span>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--bookdown:body:end-->
+
+
+
+
+<script src="data:application/javascript; charset=utf-8;base64,IWZ1bmN0aW9uKGEpe2Z1bmN0aW9uIGIoKXtnLmhhc0NsYXNzKGspP2gudG9nZ2xlQ2xhc3MobCk6aC50b2dnbGVDbGFzcyhtKSxvJiZnLm9uZSgidHJhbnNpdGlvbmVuZCIsZnVuY3Rpb24oKXtvLmZvY3VzKCl9KX1mdW5jdGlvbiBjKCl7Zy5oYXNDbGFzcyhrKT9oLnJlbW92ZUNsYXNzKGwpOmgucmVtb3ZlQ2xhc3MobSl9ZnVuY3Rpb24gZCgpe2cuaGFzQ2xhc3Moayk/KGguYWRkQ2xhc3MobCksZy5hbmltYXRlKHtsZWZ0OiIwcHgifSxwKSxpLmFuaW1hdGUoe2xlZnQ6cX0scCksai5hbmltYXRlKHtsZWZ0OnF9LHApKTooaC5hZGRDbGFzcyhtKSxnLmFuaW1hdGUoe3JpZ2h0OiIwcHgifSxwKSxpLmFuaW1hdGUoe3JpZ2h0OnF9LHApLGouYW5pbWF0ZSh7cmlnaHQ6cX0scCkpLG8mJm8uZm9jdXMoKX1mdW5jdGlvbiBlKCl7Zy5oYXNDbGFzcyhrKT8oaC5yZW1vdmVDbGFzcyhsKSxnLmFuaW1hdGUoe2xlZnQ6Ii0iK3F9LHApLGkuYW5pbWF0ZSh7bGVmdDoiMHB4In0scCksai5hbmltYXRlKHtsZWZ0OiIwcHgifSxwKSk6KGgucmVtb3ZlQ2xhc3MobSksZy5hbmltYXRlKHtyaWdodDoiLSIrcX0scCksaS5hbmltYXRlKHtyaWdodDoiMHB4In0scCksai5hbmltYXRlKHtyaWdodDoiMHB4In0scCkpfWZ1bmN0aW9uIGYoKXthKHIpLmFkZENsYXNzKHQpLGEocikub24oImNsaWNrIixmdW5jdGlvbihiKXt2YXIgYz1hKHRoaXMpO2MuaGFzQ2xhc3ModCk/KGMuc2libGluZ3MocikuYWRkQ2xhc3ModCkucmVtb3ZlQ2xhc3MocyksYy5yZW1vdmVDbGFzcyh0KS5hZGRDbGFzcyhzKSk6Yy5hZGRDbGFzcyh0KS5yZW1vdmVDbGFzcyhzKSxiLnN0b3BQcm9wYWdhdGlvbigpfSl9dmFyIGc9YSgiLnB1c2h5IiksaD1hKCJib2R5IiksaT1hKCIjY29udGFpbmVyIiksaj1hKCIucHVzaCIpLGs9InB1c2h5LWxlZnQiLGw9InB1c2h5LW9wZW4tbGVmdCIsbT0icHVzaHktb3Blbi1yaWdodCIsbj1hKCIuc2l0ZS1vdmVybGF5Iiksbz1hKGcuZGF0YSgiZm9jdXMiKSkscD0yMDAscT1nLndpZHRoKCkrInB4IixyPSIucHVzaHktc3VibWVudSIscz0icHVzaHktc3VibWVudS1vcGVuIix0PSJwdXNoeS1zdWJtZW51LWNsb3NlZCI7YShyKTtpZih2b2lkIDAhPT1nLmRhdGEoIm1lbnUtYnRuLWNsYXNzIikpdmFyIHU9Zy5kYXRhKCJtZW51LWJ0bi1jbGFzcyIpO2Vsc2UgdmFyIHU9Ii5tZW51LWJ0biI7dmFyIHY9YSh1KyIsIC5wdXNoeS1saW5rIiksdz1hKHUpO2EoZG9jdW1lbnQpLmtleXVwKGZ1bmN0aW9uKGEpezI3PT1hLmtleUNvZGUmJihoLmhhc0NsYXNzKGwpfHxoLmhhc0NsYXNzKG0pKSYmKHg/YygpOihlKCkseT0hMSksdyYmdy5mb2N1cygpKX0pO3ZhciB4PWZ1bmN0aW9uKCl7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgicCIpLGI9ITEsYz17d2Via2l0VHJhbnNmb3JtOiItd2Via2l0LXRyYW5zZm9ybSIsT1RyYW5zZm9ybToiLW8tdHJhbnNmb3JtIixtc1RyYW5zZm9ybToiLW1zLXRyYW5zZm9ybSIsTW96VHJhbnNmb3JtOiItbW96LXRyYW5zZm9ybSIsdHJhbnNmb3JtOiJ0cmFuc2Zvcm0ifTtpZihudWxsIT09ZG9jdW1lbnQuYm9keSl7ZG9jdW1lbnQuYm9keS5pbnNlcnRCZWZvcmUoYSxudWxsKTtmb3IodmFyIGQgaW4gYyl2b2lkIDAhPT1hLnN0eWxlW2RdJiYoYS5zdHlsZVtkXT0idHJhbnNsYXRlM2QoMXB4LDFweCwxcHgpIixiPXdpbmRvdy5nZXRDb21wdXRlZFN0eWxlKGEpLmdldFByb3BlcnR5VmFsdWUoY1tkXSkpO3JldHVybiBkb2N1bWVudC5ib2R5LnJlbW92ZUNoaWxkKGEpLHZvaWQgMCE9PWImJmIubGVuZ3RoPjAmJiJub25lIiE9PWJ9cmV0dXJuITF9KCk7aWYoeClmKCksdi5vbigiY2xpY2siLGZ1bmN0aW9uKCl7YigpfSksbi5vbigiY2xpY2siLGZ1bmN0aW9uKCl7YigpfSk7ZWxzZXtoLmFkZENsYXNzKCJuby1jc3N0cmFuc2Zvcm1zM2QiKSxnLmhhc0NsYXNzKGspP2cuY3NzKHtsZWZ0OiItIitxfSk6Zy5jc3Moe3JpZ2h0OiItIitxfSksaS5jc3MoeyJvdmVyZmxvdy14IjoiaGlkZGVuIn0pO3ZhciB5PSExO2YoKSx2Lm9uKCJjbGljayIsZnVuY3Rpb24oKXt5PyhlKCkseT0hMSk6KGQoKSx5PSEwKX0pLG4ub24oImNsaWNrIixmdW5jdGlvbigpe3k/KGUoKSx5PSExKTooZCgpLHk9ITApfSl9fShqUXVlcnkpOw==" integrity="sha512-+YLFvWFpPgQOV1/PoGgIinfvZEsUpfO5YEoxH4MlBAW5lf2WAVK5F4HtWA1BvZEYqK+AWW0fb/C797ttp1fL7g==" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+  $('.proofenv').each(function() {
+    t = $(this)[0];
+    if (t.classList[0] != "proofenv") {
+      tot_str = t.classList[0] + (t.title.length > 0 ? ` (${t.title})` : "") + ":";
+      sp = $('<span class="proofenv-header">').text(tot_str)
+      $(this).prepend( sp );
+    }
+  });
+});
+</script>
+
+</body>
+</html>

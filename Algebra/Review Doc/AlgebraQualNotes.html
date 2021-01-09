@@ -1213,7 +1213,9 @@ g &amp;\mapsto (x \mapsto \phi_g (x) \mathrel{\vcenter{:}}= g\cdot x)
 <p>If <span class="math inline">\(G\)</span> is simple, <span class="math inline">\(H &lt; G\)</span> proper, and <span class="math inline">\([G:H] = n\)</span>, then there exists an injective map <span class="math inline">\(\phi: G \hookrightarrow S_n\)</span>.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>This action induces <span class="math inline">\(\phi\)</span>; it is nontrivial since <span class="math inline">\(gH = H\)</span> for all <span class="math inline">\(g\)</span> implies <span class="math inline">\(H = G\)</span>; <span class="math inline">\(\ker \phi {~\trianglelefteq~}G\)</span> and <span class="math inline">\(G\)</span> simple implies <span class="math inline">\(\ker \phi = 1\)</span>.</p>
+</details>
 </div>
 <div class="corollary proofenv" title="Burnside&#39;s Formula">
 <p>For <span class="math inline">\(G\)</span> a finite group acting on <span class="math inline">\(X\)</span>, 
@@ -1227,6 +1229,7 @@ g &amp;\mapsto (x \mapsto \phi_g (x) \mathrel{\vcenter{:}}= g\cdot x)
 </blockquote>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p>
 <span class="math display">
 \begin{align*}
@@ -1240,6 +1243,7 @@ g &amp;\mapsto (x \mapsto \phi_g (x) \mathrel{\vcenter{:}}= g\cdot x)
 &amp;= {\left\lvert {G} \right\rvert} {\left\lvert {X/G} \right\rvert}  
 .\end{align*}
 <span></p>
+</details>
 </div>
 <h2 data-number="2.6" id="isomorphism-theorems"><span class="header-section-number">2.6</span> Isomorphism Theorems</h2>
 <div class="theorem proofenv" title="1st Isomorphism Theorem">
@@ -1442,7 +1446,9 @@ n_p = 1 \iff S_p {~\trianglelefteq~}G
 <p>Every <span class="math inline">\(p{\hbox{-}}\)</span>subgroup of <span class="math inline">\(G\)</span> is contained in a Sylow <span class="math inline">\(p{\hbox{-}}\)</span>subgroup.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>Let <span class="math inline">\(H \leq G\)</span> be a <span class="math inline">\(p{\hbox{-}}\)</span>subgroup. If <span class="math inline">\(H\)</span> is not <em>properly</em> contained in any other <span class="math inline">\(p{\hbox{-}}\)</span>subgroup, it is a Sylow <span class="math inline">\(p{\hbox{-}}\)</span>subgroup by definition. Otherwise, it is contained in some <span class="math inline">\(p{\hbox{-}}\)</span>subgroup <span class="math inline">\(H^1\)</span>. Inductively this yields a chain <span class="math inline">\(H \subsetneq H^1 \subsetneq \cdots\)</span>, and by Zorn’s lemma <span class="math inline">\(H\mathrel{\vcenter{:}}=\cup_i H^i\)</span> is maximal and thus a Sylow <span class="math inline">\(p{\hbox{-}}\)</span>subgroup.</p>
+</details>
 </div>
 <h2 data-number="2.10" id="special-classes-of-groups-1"><span class="header-section-number">2.10</span> Special Classes of Groups</h2>
 <div class="definition proofenv" title="2 out of 3 Property">
@@ -1835,7 +1841,9 @@ M = \bigoplus_{j\in J} M_j
 <p>If <span class="math inline">\(I{~\trianglelefteq~}R\)</span> is a proper ideal <span class="math inline">\(\iff I\)</span> contains no units.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(r\in R^{\times}\cap I \implies r^{-1}r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R\)</span>.</p>
+</details>
 </div>
 <div class="proposition proofenv">
 <p>If <span class="math inline">\(I_1 \subseteq I_2 \subseteq \cdots\)</span> are ideals then <span class="math inline">\(\cup_j I_j\)</span> is an ideal.</p>
@@ -1844,6 +1852,7 @@ M = \bigoplus_{j\in J} M_j
 <p>Every proper ideal is contained in a maximal ideal.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>Let <span class="math inline">\(0 &lt; I &lt; R\)</span> be a proper ideal, and consider the set 
 <span class="math display">
 \begin{align*}
@@ -1855,6 +1864,7 @@ S = \left\{{J {~\mathrel{\Big|}~}I   \subseteq J &lt; R}\right\}
 <p>Let <span class="math inline">\(C \subseteq S\)</span> be a chain in <span class="math inline">\(S\)</span>, so <span class="math inline">\(C = \left\{{C_1 \subseteq C_2 \subseteq \cdots}\right\}\)</span> and define <span class="math inline">\(\widehat{C} = \cup_i C_i\)</span>.</p>
 <p><strong><span class="math inline">\(\widehat{C}\)</span> is an upper bound for <span class="math inline">\(C\)</span>:</strong> This follows because every <span class="math inline">\(C_i \subseteq \widehat{C}\)</span>.</p>
 <p><strong><span class="math inline">\(\widehat{C}\)</span> is in <span class="math inline">\(S\)</span>:</strong> Use the fact that <span class="math inline">\(I \subseteq C_i &lt; R\)</span> for every <span class="math inline">\(C_i\)</span> and since no <span class="math inline">\(C_i\)</span> contains a unit, <span class="math inline">\(\widehat{C}\)</span> doesn’t contain a unit, and is thus proper.</p>
+</details>
 </div>
 <div class="example proofenv" title="An irreducible element that is not prime.">
 <p><span class="math inline">\(3\in {\mathbb{Z}}[\sqrt{-5}]\)</span>. Check norm to see irreducibility, but <span class="math inline">\(3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})\)</span> and doesn’t divide either factor.</p>
@@ -1953,12 +1963,14 @@ S = \left\{{J {~\mathrel{\Big|}~}I   \subseteq J &lt; R}\right\}
 <p>Every finite extension is algebraic.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>If <span class="math inline">\(K/F\)</span> and <span class="math inline">\([K:F] = n\)</span>, then pick any <span class="math inline">\(\alpha \in K\)</span> and consider <span class="math inline">\(1, \alpha , \alpha ^2, ...\)</span>. This yields <span class="math inline">\(n+1\)</span> elements in an <span class="math inline">\(n{\hbox{-}}\)</span>dimensional vector space, and thus there is a linear dependence 
 <span class="math display">
 \begin{align*}
 f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 .\end{align*}
 <span> But then <span class="math inline">\(\alpha\)</span> is the root of the polynomial <span class="math inline">\(f\)</span>.</p>
+</details>
 </div>
 <div class="theorem proofenv" title="Gauss&#39; Lemma">
 <p>Let <span class="math inline">\(R\)</span> be a UFD and <span class="math inline">\(F\)</span> its field of fractions. Then a primitive <span class="math inline">\(p\in R[x]\)</span> is irreducible in <span class="math inline">\(R[x] \iff p\)</span> is irreducible in <span class="math inline">\(F[x]\)</span>.</p>
@@ -1982,7 +1994,9 @@ f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 <p>If <span class="math inline">\(\operatorname{ch}k = p\)</span> then <span class="math inline">\((a+b)^p = a^p + b^p\)</span> and <span class="math inline">\((ab)^p = a^p b^p\)</span>.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>Todo</p>
+</details>
 </div>
 <div class="theorem proofenv" title="Construction of Finite Fields">
 <p><span class="math inline">\({\mathbb{GF}}(p^n)\cong \frac{{\mathbb{F}}_p}{(f)}\)</span> where <span class="math inline">\(f \in {\mathbb{F}}_p[x]\)</span> is any irreducible of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\({\mathbb{GF}}(p^n) \cong {\mathbb{F}}[\alpha] \cong {\operatorname{span}}_{\mathbb{F}}\left\{{1, \alpha, \cdots, \alpha^{n-1}}\right\}\)</span> for any root <span class="math inline">\(\alpha\)</span> of <span class="math inline">\(f\)</span>.</p>
@@ -1997,7 +2011,9 @@ f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 <p><span class="math inline">\({\mathbb{GF}}(p^n)\)</span> is the splitting field of <span class="math inline">\(\rho(x) = x^{p^n} - x\)</span>, and the elements are exactly the roots of <span class="math inline">\(\rho\)</span>.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>Todo. Every element is a root by Cauchy’s theorem, and the <span class="math inline">\(p^n\)</span> roots are distinct since its derivative is identically <span class="math inline">\(-1\)</span>.</p>
+</details>
 </div>
 <div class="proposition proofenv" title="Splits Product of Irreducibles">
 <p>Let <span class="math inline">\(\rho_n \mathrel{\vcenter{:}}= x^{p^n} - x\)</span>. Then <span class="math inline">\(f(x) \divides \rho_n(x) \iff \deg f \divides n\)</span> and <span class="math inline">\(f\)</span> is irreducible.</p>
@@ -2006,6 +2022,7 @@ f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 <p><span class="math inline">\(x^{p^n} - x = \prod f_i(x)\)</span> over all irreducible monic <span class="math inline">\(f_i \in {\mathbb{F}}_p[x]\)</span> of degree <span class="math inline">\(d\)</span> dividing <span class="math inline">\(n\)</span>.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(\impliedby\)</span>:</p>
 <ul>
 <li>Suppose <span class="math inline">\(f\)</span> is irreducible of degree <span class="math inline">\(d\)</span>.</li>
@@ -2018,17 +2035,20 @@ f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 <li><p>So if <span class="math inline">\(f\)</span> is an irreducible factor of <span class="math inline">\(\phi_n\)</span>, <span class="math inline">\(f\)</span> is the minimal polynomial of some root <span class="math inline">\(\alpha\)</span> of <span class="math inline">\(\phi_n\)</span>, so <span class="math inline">\(\deg f \divides n\)</span>.</p></li>
 <li><p><span class="math inline">\(\phi_n&#39;(x) = p^nx^{p^{n-1}} \neq 0\)</span>, so <span class="math inline">\(\phi_n\)</span> has distinct roots and thus no repeated factors. So <span class="math inline">\(\phi_n\)</span> is the product of all such irreducible <span class="math inline">\(f\)</span>.</p></li>
 </ul>
+</details>
 </div>
 <div class="proposition proofenv">
 <p>No finite field is algebraically closed.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p>If <span class="math inline">\(k = \left\{{ a_1, a_2, \cdots a_n }\right\}\)</span> then define the polynomial 
 <span class="math display">
 \begin{align*}
 f(x) \mathrel{\vcenter{:}}= 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 .\end{align*}
 <span> This has no roots in <span class="math inline">\(k\)</span>.</p>
+</details>
 </div>
 <h2 data-number="4.4" id="galois-theory"><span class="header-section-number">4.4</span> Galois Theory</h2>
 <div class="proposition proofenv">
@@ -2054,7 +2074,9 @@ f(x) \mathrel{\vcenter{:}}= 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 <p><span class="math inline">\(L/k\)</span> normal/algebraic/Galois <span class="math inline">\(\implies L/F\)</span> normal/algebraic/Galois.</p>
 </div>
 <div class="proof proofenv" title="for normality">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(\min(\alpha, F) \divides \min(\alpha, k)\)</span>, so if the latter splits in <span class="math inline">\(L\)</span> then so does the former.</p>
+</details>
 </div>
 <div class="corollary proofenv" title="?">
 <p><span class="math inline">\(\alpha \in L\)</span> algebraic over <span class="math inline">\(k \implies \alpha\)</span> algebraic over <span class="math inline">\(F\)</span>.</p>
@@ -2176,7 +2198,9 @@ x &amp;\mapsto x^p
 <p><span class="math inline">\(\deg \Phi_n(x) = \phi(n)\)</span> for <span class="math inline">\(\phi\)</span> the totient function.</p>
 </div>
 <div class="proof proofenv">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(\deg \Phi_n(x)\)</span> is the number of <span class="math inline">\(n\)</span>th primitive roots, which is the number of numbers less than and coprime to <span class="math inline">\(n\)</span>.</p>
+</details>
 </div>
 <p><strong>Computing <span class="math inline">\(\Phi_n\)</span>:</strong></p>
 <ol type="1">
@@ -2264,6 +2288,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <p><span class="math inline">\(I {~\trianglelefteq~}R\)</span> is a free <span class="math inline">\(R{\hbox{-}}\)</span>module iff <span class="math inline">\(I\)</span> is a principal ideal.</p>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(\implies\)</span>:</p>
 <p>Suppose <span class="math inline">\(I\)</span> is free as an <span class="math inline">\(R{\hbox{-}}\)</span>module, and let <span class="math inline">\(B = \left\{{\mathbf{m}_j}\right\}_{j\in J} \subseteq I\)</span> be a basis so we can write <span class="math inline">\(M = \left\langle{B}\right\rangle\)</span>. Suppose that <span class="math inline">\({\left\lvert {B} \right\rvert} \geq 2\)</span>, so we can pick at least 2 basis elements <span class="math inline">\(\mathbf{m}_1\neq \mathbf{m}_2\)</span>, and consider 
 <span class="math display">
@@ -2280,6 +2305,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <p>However, this exhibits a linear dependence between <span class="math inline">\(\mathbf{m}_1\)</span> and <span class="math inline">\(\mathbf{m}_2\)</span>, namely that there exist <span class="math inline">\(\alpha_1, \alpha_2 \neq 0_R\)</span> such that <span class="math inline">\(\alpha_1 \mathbf{m}_1 + \alpha_2 \mathbf{m}_2 = \mathbf{0}_M\)</span>; this follows because <span class="math inline">\(M \subset R\)</span> means that we can take <span class="math inline">\(\alpha_1 = -m_2, \alpha_2 = m_1\)</span>. This contradicts the assumption that <span class="math inline">\(B\)</span> was a basis, so we must have <span class="math inline">\({\left\lvert {B} \right\rvert} = 1\)</span> and so <span class="math inline">\(B = \left\{{\mathbf{m}}\right\}\)</span> for some <span class="math inline">\(\mathbf{m} \in I\)</span>. But then <span class="math inline">\(M = \left\langle{B}\right\rangle = \left\langle{\mathbf{m}}\right\rangle\)</span> is generated by a single element, so <span class="math inline">\(M\)</span> is principal.</p>
 <p><span class="math inline">\(\impliedby\)</span>: Suppose <span class="math inline">\(M{~\trianglelefteq~}R\)</span> is principal, so <span class="math inline">\(M = \left\langle{\mathbf{m}}\right\rangle\)</span> for some <span class="math inline">\(\mathbf{m} \neq \mathbf{0}_M \in M \subset R\)</span>.</p>
 <p>Then <span class="math inline">\(x\in M \implies x = \alpha\mathbf{m}\)</span> for some element <span class="math inline">\(\alpha\in R\)</span> and we just need to show that <span class="math inline">\(\alpha\mathbf{m} = \mathbf{0}_M \implies \alpha = 0_R\)</span> in order for <span class="math inline">\(\left\{{\mathbf{m}}\right\}\)</span> to be a basis for <span class="math inline">\(M\)</span>, making <span class="math inline">\(M\)</span> a free <span class="math inline">\(R{\hbox{-}}\)</span>module. But since <span class="math inline">\(M \subset R\)</span>, we have <span class="math inline">\(\alpha, m \in R\)</span> and <span class="math inline">\(\mathbf{0}_M = 0_R\)</span>, and since <span class="math inline">\(R\)</span> is an integral domain, we have <span class="math inline">\(\alpha m = 0_R \implies \alpha = 0_R\)</span> or <span class="math inline">\(m = 0_R\)</span>. Since <span class="math inline">\(m \neq 0_R\)</span>, this forces <span class="math inline">\(\alpha = 0_R\)</span>, which allows <span class="math inline">\(\left\{{m}\right\}\)</span> to be a linearly independent set and thus a basis for <span class="math inline">\(M\)</span> as an <span class="math inline">\(R{\hbox{-}}\)</span>module.</p>
+</details>
 </div>
 <h1 data-number="6" id="linear-algebra-1"><span class="header-section-number">6</span> Linear Algebra</h1>
 <div class="definition proofenv" title="Invariant Factor">
@@ -2308,12 +2334,14 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <p>The minimal polynomial divides the characteristic polynomial, and in particular <span class="math inline">\(\chi_A(A) = 0\)</span>.</p>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p>By minimality, <span class="math inline">\(\min_A\)</span> divides <span class="math inline">\(\chi_A\)</span>. Every <span class="math inline">\(\lambda_i\)</span> is a root of <span class="math inline">\(\min_A(x)\)</span>: Let <span class="math inline">\((\mathbf{v}_i, \lambda_i)\)</span> be a nontrivial eigenpair. Then by linearity, 
 <span class="math display">
 \begin{align*}
 \min_A(\lambda_i)\mathbf{v}_i = \min_A(A)\mathbf{v}_i = \mathbf{0}
 ,\end{align*}
 <span> which forces <span class="math inline">\(\min_A(\lambda_i) = 0\)</span>.</p>
+</details>
 </div>
 <div class="definition proofenv" title="Similar Matrices">
 <p>Two matrices <span class="math inline">\(A,B\)</span> are <strong>similar</strong> (i.e. <span class="math inline">\(A = PBP^{-1}\)</span>) <span class="math inline">\(\iff A,B\)</span> have the same Jordan Canonical Form (JCF).</p>
@@ -2345,6 +2373,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <p><span class="math inline">\(RCF(A)\)</span> is a block matrix where each block is the companion matrix of an invariant factor of <span class="math inline">\(A\)</span>.</p>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p>The derivation:</p>
 <ul>
 <li><p>Let <span class="math inline">\(k[x] \curvearrowright V\)</span> using <span class="math inline">\(T\)</span>, makes <span class="math inline">\(V\)</span> into a <span class="math inline">\(k[x]{\hbox{-}}\)</span>module.</p></li>
@@ -2355,6 +2384,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <li><p>WRT the basis <span class="math inline">\(\overline x\)</span>, <span class="math inline">\(T\)</span> then acts via the companion matrix on this summand.</p></li>
 <li><p>Each invariant factor corresponds to a block of the RCF.</p></li>
 </ul>
+</details>
 </div>
 <h3 data-number="6.3.2" id="jordan-canonical-form"><span class="header-section-number">6.3.2</span> Jordan Canonical Form</h3>
 <p>Corresponds to the <strong>Elementary Divisor Decomposition</strong> of <span class="math inline">\(T\)</span>.</p>
@@ -2412,6 +2442,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 </ol>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <ul>
 <li><p>Suppose <span class="math inline">\(A\)</span> is Hermitian.</p></li>
 <li><p>Since <span class="math inline">\(V\)</span> itself is an invariant subspace, <span class="math inline">\(A\)</span> has an eigenvector <span class="math inline">\(\mathbf{v}_1 \in V\)</span>.</p></li>
@@ -2427,11 +2458,13 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <li><p>Suppose now that <span class="math inline">\(A\)</span> is symmetric.</p></li>
 <li><p>Then there is an eigenvector of norm 1, <span class="math inline">\(\mathbf{v} \in V\)</span>. <span class="math display">\[\begin{align*}     \lambda = \lambda{\left\langle {\mathbf{v}},~{\mathbf{v}} \right\rangle} = {\left\langle {A\mathbf{v}},~{\mathbf{v}} \right\rangle} = {\left\langle {\mathbf{v}},~{A\mathbf{v}} \right\rangle} = \overline{\lambda} \implies \lambda \in {\mathbb{R}}     .\end{align*}\]</span></p></li>
 </ul>
+</details>
 </div>
 <div class="proposition proofenv" title="Simultaneous Diagonalizability">
 <p>A set of operators <span class="math inline">\(\left\{{A_i}\right\}\)</span> pairwise commute <span class="math inline">\(\iff\)</span> they are all simultaneously diagonalizable.</p>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p>By induction on number of operators</p>
 <ul>
 <li><span class="math inline">\(A_n\)</span> is diagonalizable, so <span class="math inline">\(V = \bigoplus E_i\)</span> a sum of eigenspaces</li>
@@ -2445,13 +2478,16 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 <blockquote>
 <p><a href="https://kconrad.math.uconn.edu/blurbs/linmultialg/minpolyandappns.pdf#page=9">Full details here</a></p>
 </blockquote>
+</details>
 </div>
 <div class="theorem proofenv" title="Characterizations of Diagonalizability">
 <p><span class="math inline">\(M\)</span> is diagonalizable over <span class="math inline">\({\mathbb{F}}\iff \min_M(x, {\mathbb{F}})\)</span> splits into distinct linear factors over <span class="math inline">\({\mathbb{F}}\)</span>, or equivalently iff all of the roots of <span class="math inline">\(\min_M\)</span> lie in <span class="math inline">\({\mathbb{F}}\)</span>.</p>
 </div>
 <div class="proof proofenv" title="?">
+<details><summary><i>(Click to expand)</i></summary>
 <p><span class="math inline">\(\implies\)</span>: If <span class="math inline">\(\min_A\)</span> factors into linear factors, so does each invariant factor, so every elementary divisor is linear and <span class="math inline">\(JCF(A)\)</span> is diagonal.</p>
 <p><span class="math inline">\(\impliedby\)</span>: If <span class="math inline">\(A\)</span> is diagonalizable, every elementary divisor is linear, so every invariant factor factors into linear pieces. But the minimal polynomial is just the largest invariant factor.</p>
+</details>
 </div>
 <h2 data-number="6.6" id="matrix-counterexamples"><span class="header-section-number">6.6</span> Matrix Counterexamples</h2>
 <div class="example proofenv" title="?">
@@ -2758,7 +2794,7 @@ M = \left[\begin{array}{rr}
 <div class="problem proofenv" title="Units or Zero Divisors">
 <p>Every <span class="math inline">\(a\in R\)</span> for a finite ring is either a unit or a zero divisor.</p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <ul>
 <li>Let <span class="math inline">\(a\in R\)</span> and define <span class="math inline">\(\phi(x) = ax\)</span>.</li>
@@ -2771,7 +2807,7 @@ M = \left[\begin{array}{rr}
 <div class="problem proofenv" title="Maximal implies prime">
 <p>Maximal <span class="math inline">\(\implies\)</span> prime, but generally not the converse.</p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <ul>
 <li><p>Suppose <span class="math inline">\({\mathfrak{m}}\)</span> is maximal, <span class="math inline">\(ab\in {\mathfrak{m}}\)</span>, and <span class="math inline">\(b\not\in {\mathfrak{m}}\)</span>.</p></li>
@@ -2817,7 +2853,7 @@ M = \left[\begin{array}{rr}
 .\end{align*}
 <span></p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <p>Maximal <span class="math inline">\(\implies\)</span> prime, and so if <span class="math inline">\(x\)</span> is in every prime ideal, it is necessarily in every maximal ideal as well.</p>
 </details>
@@ -2825,7 +2861,7 @@ M = \left[\begin{array}{rr}
 <div class="problem proofenv" title="Mod by nilradical to kill nilpotents">
 <p><span class="math inline">\(R/\mathfrak {\mathfrak{N}}(R)\)</span> has no nonzero nilpotent elements.</p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <p>
 <span class="math display">
@@ -2847,7 +2883,7 @@ a + \mathfrak N(R)\text{ nilpotent } &amp;\implies (a+ \mathfrak N(R))^n \mathre
 \end{align*}
 <span></p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <ul>
 <li><p><span class="math inline">\(\mathfrak{N} \subseteq \cap\mathfrak{p}\)</span>:</p></li>
@@ -3676,7 +3712,7 @@ g &amp;\mapsto (xH\mapsto gxH)
 <li><p>Show that for any <span class="math inline">\(1\leq a \leq 4\)</span> and any prime power <span class="math inline">\(p^k\)</span>, no group of order <span class="math inline">\(ap^k\)</span> is simple.</p></li>
 </ol>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <ol type="1">
 <li><p>Define the required group action by 
@@ -3730,7 +3766,7 @@ g &amp;\mapsto (xH\mapsto gxH)
 <li><p>Prove that every Sylow <span class="math inline">\(p-\)</span>subgroup of <span class="math inline">\(G/N\)</span> is the image of a Sylow <span class="math inline">\(p-\)</span>subgroup of <span class="math inline">\(G\)</span>.</p></li>
 </ol>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <p><em>Proof.</em></p>
 <ol type="1">
@@ -3771,7 +3807,7 @@ g &amp;\mapsto (xH\mapsto gxH)
 <div class="problem proofenv">
 <p>Let <span class="math inline">\(G\)</span> be a finite group and <span class="math inline">\(H&lt;G\)</span> a subgroup. Let <span class="math inline">\(n_H\)</span> be the number of subgroups of <span class="math inline">\(G\)</span> that are conjugate to <span class="math inline">\(H\)</span>. Show that <span class="math inline">\(n_H\)</span> divides the order of <span class="math inline">\(G\)</span>.</p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <p>.* Let 
 <span class="math display">
@@ -3860,7 +3896,7 @@ g_i &amp;= g_j,\end{aligned}\end{align*}
 <div class="problem proofenv">
 <p>Let <span class="math inline">\(G=S_5\)</span>, the symmetric group on 5 elements. Identify all conjugacy classes of elements in <span class="math inline">\(G\)</span>, provide a representative from each class, and prove that this list is complete.</p>
 </div>
-<div class="solution alert alert-info proofenv proofenv">
+<div class="solution proofenv">
 <details><summary><i>(Click to expand)</i></summary>
 <div class="claim proofenv" title="1">
 <p>Conjugacy classes in <span class="math inline">\(S_n\)</span> are completely determined by cycle type.</p>

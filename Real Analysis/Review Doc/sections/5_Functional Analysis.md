@@ -1,227 +1,209 @@
 # Functional Analysis
 
-## Definitions
-
-Notation: $H$ denotes a Hilbert space.
-
-Definition (Orthonormal Sequence)
-: ?
-
-Definition (Basis)
-: A set $\theset{u_n}$ is a *basis* for a Hilbert space $\mch$ iff it is dense in $\mch$.
-
-Definition (Complete)
-: A collection of vectors $\theset{u_n}\subset H$ is *complete* iff $\inner{x}{u_n} = 0$ for all $n \iff x = 0$ in $H$.
-
-Definition (Dual Space)
-: 
-\begin{align*}
-X\dual \definedas \theset{L :X\to \CC \suchthat L \text{ is continuous }}
-.\end{align*}
-
-Definition
-:   A map $L: X \to \CC$ is a linear functional iff
-    \begin{align*}
-    L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
-    .\end{align*}
-
-Definition (Operator Norm)
-: 
-\begin{align*}
-\norm{L}_{X\dual} \definedas \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
-.\end{align*}
-
-Definition (Banach Space)
-: A complete normed vector space.
-
-Definition (Hilbert Space)
-: An inner product space which is a Banach space under the induced norm.
-
 ## Theorems
 
-Theorem (Bessel's Inequality)
-:   For any orthonormal set $\theset{u_n} \subseteq \mch$ a Hilbert space (not necessarily a basis),
-    \begin{align*}
-    \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-    \end{align*}
-    and thus
-    \begin{align*}
-    \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-    .\end{align*}
+:::{.theorem title="Bessel's Inequality"}
+For any orthonormal set $\theset{u_{n}} \subseteq \mch$ a Hilbert space (not necessarily a basis),
+\[
+\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+\]
+and thus
+\[
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+.\]
+
+:::
+
+:::{.proof title="of Bessel's inequality"}
+\envlist
+
+- Let $S_{N} = \sum_{n=1}^N \inner{x}{u_{n}} u_{n}$
+\[
+\norm{x - S_{N}}^2 
+&= \inner{x - S_{n}}{x - S_{N}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re\inner{x}{S_{N}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \inner{x}{\sum_{n=1}^N \inner{x}{u_{n}}u_{n}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \sum_{n=1}^N \inner{x}{ \inner{x}{u_{n}}u_{n}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \sum_{n=1}^N \overline{\inner{x}{u_{n}}}\inner{x}{u_{n}} \\
+&= \norm{x}^2 + \left\|\sum_{n=1}^N \inner{x}{u_{n}} u_{n}\right\|^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+&= \norm{x}^2 + \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2
+.\]
+
+- By continuity of the norm and inner product, we have
+\[
+\lim_{N\to\infty} \norm{x - S_{N}}^2 
+&= \lim_{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+\implies \norm{x - \lim_{N\to\infty} S_{N}}^2 &= \norm{x}^2 - \lim_{N\to\infty}\sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2\\
+\implies 
+\norm{x - \sum_{n=1}^\infty \inner{x}{u_{n}} u_{n}}^2 &= \norm{x}^2 - 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2
+.\]
+
+- Then noting that $0 \leq \norm{x - S_{N}}^2$, 
+\[
+0 &\leq 
+\norm{x}^2 - 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2 \\
+\implies 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2 &\leq 
+\norm{x}^2 \qed
+.\]
 
 
-Proof
-:   \hfill 
+:::
 
-    - Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$
-    \begin{align*}
-    \norm{x - S_N}^2 
-    &= \inner{x - S_n}{x - S_N} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\inner{x}{S_N} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \inner{x}{\sum_{n=1}^N \inner{x}{u_n}u_n} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \inner{x}{ \inner{x}{u_n}u_n} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \overline{\inner{x}{u_n}}\inner{x}{u_n} \\
-    &= \norm{x}^2 + \left\|\sum_{n=1}^N \inner{x}{u_n} u_n\right\|^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    &= \norm{x}^2 + \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    &= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
-    .\end{align*}
+:::{.theorem title="Riesz Representation for Hilbert Spaces"}
+If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
+\[
+\forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
+.\]
+:::
 
-    - By continuity of the norm and inner product, we have
-    \begin{align*}
-    \lim_{N\to\infty} \norm{x - S_N}^2 
-    &= \lim_{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    \implies \norm{x - \lim_{N\to\infty} S_N}^2 &= \norm{x}^2 - \lim_{N\to\infty}\sum_{n=1}^N \abs{\inner{x}{u_n}}^2\\
-    \implies 
-    \norm{x - \sum_{n=1}^\infty \inner{x}{u_n} u_n}^2 &= \norm{x}^2 - 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2
-    .\end{align*}
+:::{.proof title="?"}
+\envlist
 
-    - Then noting that $0 \leq \norm{x - S_N}^2$, 
-    \begin{align*}
-    0 &\leq 
-    \norm{x}^2 - 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2 \\
-    \implies 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2 &\leq 
-    \norm{x}^2 \qed
-    .\end{align*}
+- Define $M \da \ker \Lambda$.
+- Then $M$ is a closed subspace and so $H = M \oplus M^\perp$
+- There is some $z\in M^\perp$ such that $\norm{z} = 1$.
+- Set $u \da \Lambda(x) z - \Lambda(z) x$
+- Check 
+
+$$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M$$
+
+- Compute
+
+\[
+0 &= \inner{u}{z} \\ 
+&= \inner{\Lambda(x) z - \Lambda(z) x}{z} \\
+&= \inner{\Lambda(x) z}{z} - \inner{\Lambda(z) x}{z} \\
+&= \Lambda(x) \inner{z}{z} - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) \norm{z}^2 - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) -  \inner{x}{\overline{\Lambda(z)} z}
+,\]
+
+- Choose $y \da \overline{\Lambda(z)} z$.
+- Check uniqueness:
+
+\[
+\inner{x}{y} &= \inner{x}{y'} \quad\forall x \\
+\implies  \inner{x}{y-y'} &= 0 \quad\forall x \\
+\implies \inner{y-y'}{y-y'} &= 0 \\
+\implies \norm{y-y'} &= 0 \\
+\implies y-y' &= \vector 0 \implies y = y'
+.\]
 
 
+:::
 
+:::{.theorem title="Functionals are continuous if and only if bounded"}
+Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
 
-Theorem (Riesz Representation for Hilbert Spaces)
-:   If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
-    \begin{align*}
-    \forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
-    .\end{align*}
+1. $L$ is continuous
+2. $L$ is continuous at zero
+3. $L$ is bounded, i.e. $\exists c\geq 0 \suchthat \abs{L(x)} \leq c \norm{x}$ for all $x\in H$
+:::
 
-Proof
-:   \hfill
-    - Define $M \definedas \ker \Lambda$.
-    - Then $M$ is a closed subspace and so $H = M \oplus M^\perp$
-    - There is some $z\in M^\perp$ such that $\norm{z} = 1$.
-    - Set $u \definedas \Lambda(x) z - \Lambda(z) x$
-    - Check 
+:::{.proof title="?"}
+$2 \implies 3$:
+Choose $\delta < 1$ such that 
+$$
+\norm{x} \leq \delta \implies \abs{L(x)} < 1.
+$$
+Then
+\[
+\abs{L(x)} 
+&= \abs{L\left( \frac{\norm x}{\delta} \frac{\delta }{\norm x} x \right)} \\
+&= \frac{\norm x}{\delta} ~\abs{L\left( \delta \frac{x }{\norm x} \right)} \\
+&\leq \frac{\norm x}{\delta} 1
+,\]
+so we can take $c = \frac 1 \delta$. $\qed$
 
-    $$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M$$
+$3 \implies 1$:
 
-    - Compute
+We have $\abs{L(x-y)} \leq c\norm{x-y}$, so given $\varepsilon \geq 0$ simply choose $\delta = \frac \varepsilon c$.
 
-    \begin{align*}
-    0 &= \inner{u}{z} \\ 
-    &= \inner{\Lambda(x) z - \Lambda(z) x}{z} \\
-    &= \inner{\Lambda(x) z}{z} - \inner{\Lambda(z) x}{z} \\
-    &= \Lambda(x) \inner{z}{z} - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) \norm{z}^2 - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) -  \inner{x}{\overline{\Lambda(z)} z}
-    ,\end{align*}
+:::
 
-    - Choose $y \definedas \overline{\Lambda(z)} z$.
-    - Check uniqueness:
+:::{.theorem title="The operator norm is a norm"}
+If $H$ is a Hilbert space, then $(H\dual, \norm{\wait}_{\text{op}})$ is a normed space.
+:::
 
-    \begin{align*}
-    \inner{x}{y} &= \inner{x}{y'} \quad\forall x \\
-    \implies  \inner{x}{y-y'} &= 0 \quad\forall x \\
-    \implies \inner{y-y'}{y-y'} &= 0 \\
-    \implies \norm{y-y'} &= 0 \\
-    \implies y-y' &= \vector 0 \implies y = y'
-    .\end{align*}
+:::{.proof title="?"}
+The only nontrivial property is the triangle inequality, but
+\[
+\pnorm{L_{1} + L_{2}}{\op} = \sup \abs{L_{1}(x) + L_{2}(x)} \leq \sup \abs{L_{1}(x)} + \abs{\sup L_{2}(x)} = \pnorm{L_{1}}\op + \pnorm{L_{2}}\op
+.\]
 
-Theorem (Continuous iff Bounded)
-:   Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
+:::
 
-    1. $L$ is continuous
-    2. $L$ is continuous at zero
-    3. $L$ is bounded, i.e. $\exists c\geq 0 \suchthat \abs{L(x)} \leq c \norm{x}$ for all $x\in H$
+:::{.theorem title="The operator norm on $X\dual$ yields a Banach space"}
+If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
+:::
 
-Proof
-:   \hfill
-    $2 \implies 3$:
-    Choose $\delta < 1$ such that 
-    $$
-    \norm{x} \leq \delta \implies \abs{L(x)} < 1.
-    $$
-    Then
-    \begin{align*}
-    \abs{L(x)} 
-    &= \abs{L\left( \frac{\norm x}{\delta} \frac{\delta }{\norm x} x \right)} \\
-    &= \frac{\norm x}{\delta} ~\abs{L\left( \delta \frac{x }{\norm x} \right)} \\
-    &\leq \frac{\norm x}{\delta} 1
-    ,\end{align*}
-    so we can take $c = \frac 1 \delta$. $\qed$
+:::{.proof title="?"}
+\envlist
 
-    $3 \implies 1$:
+- Let $\theset{L_{n}}$ be Cauchy in $X\dual$.
 
-    We have $\abs{L(x-y)} \leq c\norm{x-y}$, so given $\varepsilon \geq 0$ simply choose $\delta = \frac \varepsilon c$.
+- Then for all $x\in C$, $\theset{L_{n}(x)} \subset \CC$ is Cauchy and converges to something denoted $L(x)$.
 
-Theorem (Operator Norm is a Norm)
-: If $H$ is a Hilbert space, then $(H\dual, \norm{\wait}_{\text{op}})$ is a normed space.
+- Need to show $L$ is continuous and $\norm{L_{n} - L} \to 0$.
 
-Proof
-: The only nontrivial property is the triangle inequality, but
-  \begin{align*}
-  \pnorm{L_1 + L_2}{\op} = \sup \abs{L_1(x) + L_2(x)} \leq \sup \abs{L_1(x)} + \abs{\sup L_2(x)} = \pnorm{L_1}\op + \pnorm{L_2}\op
-  .\end{align*}
+- Since $\theset{L_{n}}$ is Cauchy in $X\dual$, choose $N$ large enough so that
+\[
+n, m \geq N \implies \norm{L_{n} - L_{m}} < \varepsilon \implies \abs{L_{m}(x) - L_{n}(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1
+.\]
 
-Theorem (Completeness in Operator Norm)
-: If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
+- Take $n\to \infty$ to obtain
+\[m \geq N 
+&\implies \abs{L_{m}(x) - L(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1\\
+&\implies \norm{L_{m} - L} < \varepsilon \to 0
+.\]
 
-Proof
-:   \hfill
-    - Let $\theset{L_n}$ be Cauchy in $X\dual$.
-    
-    - Then for all $x\in C$, $\theset{L_n(x)} \subset \CC$ is Cauchy and converges to something denoted $L(x)$.
-    
-    - Need to show $L$ is continuous and $\norm{L_n - L} \to 0$.
-    
-    - Since $\theset{L_n}$ is Cauchy in $X\dual$, choose $N$ large enough so that
-    \begin{align*}
-    n, m \geq N \implies \norm{L_n - L_m} < \varepsilon \implies \abs{L_m(x) - L_n(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1
-    .\end{align*}
-    
-    - Take $n\to \infty$ to obtain
-    \begin{align*}m \geq N 
-    &\implies \abs{L_m(x) - L(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1\\
-    &\implies \norm{L_m - L} < \varepsilon \to 0
-    .\end{align*}
-    
-    - Continuity:
-    \begin{align*}
-    \abs{L(x)} &= \abs{L(x) - L_n(x) + L_n(x)} \\
-    &\leq  \abs{L(x) - L_n(x)} + \abs{L_n(x)} \\
-    &\leq \varepsilon \norm{x} + c\norm{x} \\
-    &= (\varepsilon + c)\norm{x} \qed
-    .\end{align*}
+- Continuity:
+\[
+\abs{L(x)} &= \abs{L(x) - L_{n}(x) + L_{n}(x)} \\
+&\leq  \abs{L(x) - L_{n}(x)} + \abs{L_{n}(x)} \\
+&\leq \varepsilon \norm{x} + c\norm{x} \\
+&= (\varepsilon + c)\norm{x} \qed
+.\]
 
-Theorem (Riesz-Fischer)
-:   Let $U = \theset{u_n}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
+:::
 
-    1. There is an isometric surjection
+:::{.theorem title="Riesz-Fischer"}
+Let $U = \theset{u_{n}}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
 
-    \begin{align*}
-    \mathcal{H} &\to \ell^2(\NN) \\
-    \vector x &\mapsto \theset{\inner{\vector x}{\vector u_n}}_{n=1}^\infty
-    \end{align*}
+1. There is an isometric surjection
 
-    i.e. if $\theset{a_n} \in \ell^2(\NN)$, so $\sum \abs{a_n}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
-    $$
-    a_n = \inner{\vector x}{\vector u_n} \quad \forall n.
-    $$
+\[
+\mathcal{H} &\to \ell^2(\NN) \\
+\vector x &\mapsto \theset{\inner{\vector x}{\vector u_{n}}}_{n=1}^\infty
+\]
 
-    2. $\vector x$ can be chosen such that
-    $$
-    \norm{\vector x}^2 = \sum \abs{a_n}^2
-    $$
+i.e. if $\theset{a_{n}} \in \ell^2(\NN)$, so $\sum \abs{a_{n}}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
+$$
+a_{n} = \inner{\vector x}{\vector u_{n}} \quad \forall n.
+$$
 
-    > Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_n}$ is **complete**, i.e. $\inner{\vector x}{\vector u_n} = 0$ for all $n$ implies $\vector x = \vector 0$.
+2. $\vector x$ can be chosen such that
+$$
+\norm{\vector x}^2 = \sum \abs{a_{n}}^2
+$$
 
-Proof
-:   \hfill
-    
-    - Given $\theset{a_n}$, define $S_N = \sum^N a_n \vector u_n$.
-    - $S_N$ is Cauchy in $\mathcal{H}$ and so $S_N \to \vector x$ for some $\vector x \in \mathcal{H}$.
-    - $\inner{x}{u_n} = \inner{x - S_N}{u_n} + \inner{S_N}{u_n} \to a_n$
-    - By construction, $\norm{x-S_N}^2 = \norm{x}^2 - \sum^N \abs{a_n}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_n}^2$.
+> Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_{n}}$ is **complete**, i.e. $\inner{\vector x}{\vector u_{n}} = 0$ for all $n$ implies $\vector x = \vector 0$.
+
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Given $\theset{a_{n}}$, define $S_{N} = \sum^N a_{n} \vector u_{n}$.
+- $S_{N}$ is Cauchy in $\mathcal{H}$ and so $S_{N} \to \vector x$ for some $\vector x \in \mathcal{H}$.
+- $\inner{x}{u_{n}} = \inner{x - S_{N}}{u_{n}} + \inner{S_{N}}{u_{n}} \to a_{n}$
+- By construction, $\norm{x-S_{N}}^2 = \norm{x}^2 - \sum^N \abs{a_{n}}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_{n}}^2$.
+
+:::
 
 

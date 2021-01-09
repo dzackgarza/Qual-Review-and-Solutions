@@ -1,90 +1,25 @@
 # Integration
 
-Notation:
-
-- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
-- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
-
-## Useful Techniques
-
-- Break integration domain up into disjoint annuli.
-- Break integrals or sums into $x < 1$ and $x\geq 1$.
-- Calculus techniques: Taylor series, IVT, ...
-- Approximate by dense subsets of functions
-
-- Useful facts about compactly supported continuous functions:
-  - Uniformly continuous
-  - Bounded
-
-
-## Definitions
-
-Definition (\$L^+\$)
-:	$f\in L^+$ iff $f$ is measurable and non-negative.
-
-Definition (Integrable)
-:	A measurable function is integrable iff $\norm{f}_1 < \infty$.
-
-:::{.definition title="The Infinity Norm"}
-\[
-\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
-.\]
-:::
-
-
-Definition (Essentially Bounded Functions)
-: A function $f:X \to \CC$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
-
-If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
-
-:::{.definition title="$L^\infty$"}
-\[
-L^\infty(X) 
-\definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
-\definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
-,\]
-:::
-
-Example:
-
-- $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
-
-
-
 ## Theorems
 
-Useful facts about $C_c$ functions:
+:::{.remark}
+If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+:::
 
-- Bounded almost everywhere
-- Uniformly continuous
-
+:::{.example title="?"}
+$f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
+:::
 
 :::{.theorem title="p-Test for Integrals"}
 \[
 \int_0^1 {1\over x^p} < \infty \iff  p < 1 \\
 \int_1^\infty {1\over x^p} < \infty \iff  p > 1 
 .\]
-
-> Slogan: big powers of $x$ help us in neighborhoods of infinity and hurt around zero
-
 :::
 
-### Some (Non)Integrable Functions
-
-- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty}\to \pi/2 < \infty$
-- Any bounded function (or continuous on a compact set, by EVT)
-- $\int_0^1 {1 \over \sqrt{x}} < \infty$
-- $\int_0^1 {1\over x^{1-\eps}} < \infty$
-- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
-
-Some non-integrable functions:
-
-- $\int_0^1 {1\over x} = \infty$.
-- $\int_1^\infty {1\over x} = \infty$.
-- $\int_1^\infty {1 \over \sqrt{x}} = \infty$
-- $\int_1^\infty {1\over x^{1-\eps}} = \infty$
-- $\int_0^1 {1\over x^{1+\eps}} = \infty$
-
+:::{.slogan}
+Large powers of $x$ help us in neighborhoods of infinity and hurt around zero
+:::
 
 ###  Convergence Theorems
 
@@ -129,7 +64,6 @@ then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
 
 :::
 
-
 :::{.proof}
 Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 
@@ -161,8 +95,6 @@ Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
   - Here we use that $g_n + f_n \to g+f$ with $0 \leq \abs{f_n} + f_n \leq g_n + f_n$ so Fatou's lemma again applies.
 :::
 
- 
-
 :::{.proposition title="Convergence in $L^1$ implies convergence of $L^1$ norm"}
 If $f\in L^1$, then
 \[
@@ -183,8 +115,6 @@ so the DCT applies to $g_n$ and
 .\]
 :::
 
-
-
 :::{.theorem title="Fatou"}
 If $f_n$ is a sequence of nonnegative measurable functions, then
 \[
@@ -192,7 +122,6 @@ If $f_n$ is a sequence of nonnegative measurable functions, then
 \limsup_n \int f_n &\leq \int \limsup_n f_n
 .\]
 :::
-
 
 :::{.theorem title="Tonelli (Non-Negative, Measurable)"}
 For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
@@ -202,7 +131,6 @@ For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$,
 - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
 - $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
 :::
-
 
 :::{.theorem title="Fubini (Integrable)"}
 For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
@@ -214,8 +142,9 @@ For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$,
 
 :::
 
-Theorem (Fubini/Tonelli)
-: If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
+:::{.theorem title="Fubini-Tonelli"}
+If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
+:::
 
 :::{.proposition title="Measurable Slices"}
 Let $E$ be a measurable subset of $\RR^n$. Then
@@ -235,7 +164,8 @@ m(E) = \int_{\RR^{n_1}} m(E_x) ~dx
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 $\implies$:
 
 - Let $f$ be measurable on $\RR^n$.
@@ -251,13 +181,12 @@ $\impliedby$:
 - Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
 :::
 
-
 :::{.proposition title="Differentiating Under an Integral"}
 If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
 \[
 \dd{}{t} F(t)
 &\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
-&\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
+&\eq^{\scriptstyle\text{DCT}} \int \dd{}{t} f(x, t) ~dx
 .\]
 
 To justify passing the limit, let $h_k \to 0$ be any sequence and define
@@ -272,7 +201,6 @@ Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_
 :::{.proposition title="Commuting Sums with Integrals (non-negative)"}
 If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
 :::
-
 
 :::{.proof}
 - Idea: MCT. 
@@ -293,12 +221,39 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 - By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
 :::
 
-Lemma
-:   If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+:::{.proposition title="?"}
+If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+:::
 
-Proof
-:   Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
-    Almost everywhere convergence: ?
+:::{.proof title="?"}
+Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
+Almost everywhere convergence: ?
+:::
+
+## Examples of (Non)Integrable Functions
+
+:::{.example title="Examples of integrable functions"}
+\envlist
+- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty}\to \pi/2 < \infty$
+
+- Any bounded function (or continuous on a compact set, by EVT)
+- $\int_0^1 {1 \over \sqrt{x}} < \infty$
+- $\int_0^1 {1\over x^{1-\eps}} < \infty$
+- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
+
+:::
+
+:::{.example title="Examples of non-integrable functions"}
+\envlist
+
+- $\int_0^1 {1\over x} = \infty$.
+- $\int_1^\infty {1\over x} = \infty$.
+- $\int_1^\infty {1 \over \sqrt{x}} = \infty$
+- $\int_1^\infty {1\over x^{1-\eps}} = \infty$
+- $\int_0^1 {1\over x^{1+\eps}} = \infty$
+
+:::
+
 
 ## $L^1$ Facts
 
@@ -310,7 +265,8 @@ For $f\in L^+$,
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Obvious for simple functions:
   - If $f(x) = \sum_{j=1}^n c_j \chi_{E_j}$, then $\int f = 0$ iff for each $j$, either $c_j=0$ or $m(E_j) = 0$.
   - Since nonzero $c_j$ correspond to sets where $f\neq 0$, this says $m\qty{\theset{f\neq 0}} = 0$.
@@ -331,14 +287,17 @@ For $f\in L^+$,
   .\]
 :::
 
-
 :::{.proposition title="Translation Invariance"}
-The Lebesgue integral is translation invariant, i.e. 
-\[ \int f(x) ~dx = \int f(x + h) ~dx \qtext{for any} h .\]
+The Lebesgue integral is translation invariant, i.e.
+\[
+\int f(x) ~dx = \int f(x + h) ~dx &&\text{for any} h
+.\]
+
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Let $E\subseteq X$; for characteristic functions, 
 \[
 \int_X \chi_E(x+h) 
@@ -351,42 +310,48 @@ The Lebesgue integral is translation invariant, i.e.
 - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
 :::
 
+:::{.proposition title="Integrals distribute over disjoint sets"}
+If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
+:::
 
-Lemma (Integrals Distribute Over Disjoint Sets)
-: If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
+:::{.proposition title="Uniformly continuous $L^1$ functions vanish at infinity."}
+If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
+:::
 
-
-Lemma (Unif. Cts. L1 Functions Vanish at Infinity)
-: If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
-
-> Doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
+:::{.warnings}
+This doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
+:::
 
 :::{.theorem title="Small Tails in $L^1$"}
 If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Approximate with compactly supported functions.
 - Take $g\converges{L_1}\to f$ with $g\in C_c$
 - Then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)$
 - Then \[ \int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}.\]
 :::
 
+:::{.proposition title="$L^1$ functions are absolutely continuous."}
+$m(E) \to 0 \implies \int_E f \to 0$.
+:::
 
-Lemma (\$L^1\$ Functions Have Absolutely Continuity)
-: $m(E) \to 0 \implies \int_E f \to 0$.
+:::{.proof title="?"}
+Approximate with compactly supported functions.
+Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
+:::
 
-Proof
-:   Approximate with compactly supported functions.
-    Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
+:::{.proposition title="$L^1$ functions are finite almost everywhere."}
+If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
+:::
 
-Lemma (\$L^1\$ Functions Are Finite Almost Everywhere)
-: If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
-
-Proof 
-:   Idea: Split up domain
-    Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
+:::{.proof title="?"}
+Idea: Split up domain
+Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
+:::
 
 :::{.theorem title="Continuity in $L^1$"}
 \[ 
@@ -394,9 +359,9 @@ Proof
 \]
 :::
 
-
 :::{.proof}
-\hfill
+\envlist
+
 Approximate with compactly supported functions.
 Take $g\converges{L_1}\to f$ with $g\in C_c$.
 \[
@@ -409,84 +374,91 @@ Take $g\converges{L_1}\to f$ with $g\in C_c$.
 which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
 :::
 
+:::{.proposition title="Integration by parts, special case"}
+\[
+F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
+\implies
+\int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
+.\]
 
-Proposition (Integration by Parts, Special Case)
-:   \[
-    F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
-    \implies
-    \int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
-    .\]
+:::
 
-Proof 
-: Fubini-Tonelli, and sketch region to change integration bounds.
+:::{.proof title="?"}
+Fubini-Tonelli, and sketch region to change integration bounds.
+:::
 
-Theorem (Lebesgue Density)
-: \[
-  A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
-  \implies \norm{A_h(f) - f} \converges{h\to 0}\to 0
-  .\]
+:::{.theorem title="Lebesgue Density"}
+\[
+A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
+\implies \norm{A_h(f) - f} \converges{h\to 0}\to 0
+.\]
+:::
 
-Proof
-: Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
+:::{.proof title="?"}
+Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
+:::
 
+## Lp Facts
 
+:::{.proposition title="Dense subspaces of $L^2(I)$ "}
+The following are dense subspaces of $L^2([0, 1])$:
 
-## $L^p$ Spaces
+- Simple functions
+- Step functions
+- $C_0([0, 1])$
+- Smoothly differentiable functions $C_0^\infty([0, 1])$
+- Smooth compactly supported functions $C_c^\infty$
+:::
 
-Lemma
-:   The following are dense subspaces of $L^2([0, 1])$:
-
-    - Simple functions
-    - Step functions
-    - $C_0([0, 1])$
-    - Smoothly differentiable functions $C_0^\infty([0, 1])$
-    - Smooth compactly supported functions $C_c^\infty$
-Theorem
-:
+:::{.theorem title="?"}
 \[
 m(X) < \infty \implies \lim_{p\to\infty} \norm{f}_p = \norm{f}_\infty 
 .\]
+:::
 
-Proof
-:   \hfill
-    - Let $M = \norm{f}_\infty$.
-    - For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
-    - Then $m(S) > 0$ and
+:::{.proof title="?"}
+Let $M = \norm{f}_\infty$.
 
-    \[
-    \pnorm{f}p 
-    &= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
-    &\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
-    &\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
-    &\implies \liminf_p \pnorm{f}p \geq M
-    .\]
+- For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
+- Then $m(S) > 0$ and
 
-    We also have
-    \[
-    \pnorm{f}p 
-    &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
-    &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
-    &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
-    &\implies \limsup_p \pnorm{f}p \leq M \qed
-    .\]
-
-:::{.definition title="Dual Norm"}
-For $X$ a normed vector space and $\Lambda \in X\dual$, 
-\[  
-\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
+\[
+\pnorm{f}p 
+&= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+&\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
+&\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
+&\implies \liminf_p \pnorm{f}p \geq M
 .\]
+
+We also have
+\[
+\pnorm{f}p 
+&=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+&\leq \left( \int_X M^p \right)^{\frac 1 p} \\
+&= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
+&\implies \limsup_p \pnorm{f}p \leq M \qed
+.\]
+
+:::
+
+:::{.theorem title="Duals for $L^p$ spaces"}
+For $1\leq p< \infty$, $(L^p)\dual \cong L^q$.
+:::
+
+:::{.proof title="$p=1$ case"}
+?
+:::
+
+\todo[inline]{todo}
+
+:::{.proof title="$p=2$ case"}
+Use Riesz Representation for Hilbert spaces.
+:::
+
+:::{.proposition title="$L^1$ is not quite the dual of $L^\infty$."}
+$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective.
 :::
 
 
-Theorem (Dual Lp Spaces)
-:   For $1\leq p< \infty$, $(L^p)\dual \cong L^q$.
 
-Proof (p=1)
-: ?
 
-Proof (p=2)
-: Use Riesz Representation for Hilbert spaces.
- 
-:::{.proof}
-$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
-:::

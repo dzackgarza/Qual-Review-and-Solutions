@@ -1,142 +1,133 @@
 # Measure Theory
 
-## Useful Techniques
-
-- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
-
-- Always consider bounded sets, and if $E$ is unbounded write $E = \union_n B_n(0) \intersect E$ and use countable subadditivity or continuity of measure.
-
-## Definitions
-
-Definition (Outer Measure)
-:   The outer measure of a set is given by
-    \begin{align*}
-    m_*(E) \definedas \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
-    .\end{align*}
-
-Definition (Limsup and Liminf of Sets)
-:   \hfill	
-    \begin{align*}
-    \limsup_n A_n \definedas \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
-    \liminf_n A_n \definedas \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
-    .\end{align*}
-
-Definition (Lebesgue Measurable Set)
-: A subset $E\subseteq \RR^n$ is *Lebesgue measurable* iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
-In this case, we define $m(E) \definedas m_*(E)$.
-
-
 ## Theorems
 
-Lemma
-:	Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+:::{.proposition title="Opens are unions of almost disjoint intervals."}
+Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+:::
 
-Lemma (Properties of Outer Measure)
-:   \hfill
-    - Montonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
-    - Countable Subadditivity: $m_*(\union E_i) \leq \sum m_*(E_i)$.
-    - Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
-    - Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
-  
-    [^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
+:::{.proposition title="Properties of Outer Measure"}
+\envlist
 
-Lemma (Subtraction of Measure)
-: $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
+1. Monotonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
+2. Countable Subadditivity: $m_*(\union E_{i}) \leq \sum m_*(E_{i})$.
+3. Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
+4. Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
 
-Lemma (Continuity of Measure)
-:   \hfill
+[^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
-    \begin{align*}
-    E_i \nearrow E &\implies m(E_i) \to m(E) \\
-    m(E_1) < \infty \text{ and } E_i \searrow E &\implies m(E_i) \to m(E)
-    .\end{align*}
+:::
 
-Proof
-:   \hfill
-    1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
+:::{.proposition title="Subtraction of Measures"}
+$$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
+:::
 
-    2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+:::{.proposition title="Continuity of Measure"}
+\[
+E_{i} \nearrow E &\implies m(E_{i}) \to m(E) \\
+m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
+.\]
+:::
 
-Theorem
-:   Suppose $E$ is measurable; then for every $\eps>0$,
+:::{.proof title="of continuity of measure"}
+\envlist
 
-    1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
-    2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
-    3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
+1. Break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, etc then apply countable disjoint additivity to $E = \disjoint A_{i}$.
 
-Proof
-:   \hfill
+2. Use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+:::
 
-    - (1): Take $\theset{Q_i} \covers E$ and set $O = \union Q_i$.
-    - (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
-      - Set $F = O^c$, so $F$ is closed.
-      - Then $F\subset E$ by taking complements of $O\supset E^c$
-      - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
-    - (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
-      - Set $K_n = F\intersect \DD_n$, a ball of radius $n$ about $0$.
-      - Then $E\setminus K_n \searrow E\setminus F$
-      - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_n) < \eps$.
+:::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
+Suppose $E$ is measurable; then for every $\eps>0$,
 
-Lemma
-:	Lebesgue measure is translation and dilation invariant.
+1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
+2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
+3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
+:::
 
-Proof
-: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
+:::{.proof title="that measurable sets can be approximated"}
+\envlist
 
-\todo{Flesh out this proof.}
+- (1): Take $\theset{Q_{i}} \covers E$ and set $O = \union Q_{i}$.
+- (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
+  - Set $F = O^c$, so $F$ is closed.
+  - Then $F\subset E$ by taking complements of $O\supset E^c$
+  - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
+- (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
+  - Set $K_{n} = F\intersect \DD_{n}$, a ball of radius $n$ about $0$.
+  - Then $E\setminus K_{n} \searrow E\setminus F$
+  - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_{n}) < \eps$.
+:::
 
-Theorem (Non-Measurable Sets)
-: There is a non-measurable set.
+:::{.proposition title="Translation and Dilation Invariance"}
+Lebesgue measure is translation and dilation invariant.
+:::
 
-Proof
-:   \hfill
-    - Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
-    - Enumerate the rationals in $[0, 1]$ as $q_j$, and define $N_j = N + q_j$. These intersect trivially.
-    - Define $M \definedas \disjoint N_j$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
-    By translation invariance, $m(N_j) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
+:::{.proof title="(Todo) of translation/dilation invariance"}
+Obvious for cubes; if $Q_{i} \rightrightarrows E$ then $Q_{i} + k \rightrightarrows E + k$, etc.
+<!--\todo{Flesh out this proof.}-->
+:::
 
-Proposition (Borel Characterization of Measurable Sets)
-: If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::{.theorem title="Non-measurable sets exist"}
+There is a non-measurable set.
+:::
 
-> **Useful technique:** $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+:::{.proof title="Constructing a non-measurable set"}
+\envlist
 
-Proof 
-:   For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\setminus K_n) \leq \frac 1 n$.
-    Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
-    Take $N\definedas E\setminus K$, then $m(N) = 0$.
+- Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
+- Enumerate the rationals in $[0, 1]$ as $q_{j}$, and define $N_{j} = N + q_{j}$. These intersect trivially.
+- Define $M \da \disjoint N_{j}$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
+- By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
+:::
 
-Lemma
-:	If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
+:::{.proposition title="Borel Characterization of Measurable Sets"}
+If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::
 
-Proof
-: Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
+:::{.proof title="of Borel characterization"}
+For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
+Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
+Take $N\da E\setminus K$, then $m(N) = 0$.
+:::
 
-Theorem (Borel-Cantelli)
-:   Let $\{E_k\}$ be a countable collection of measurable sets.
-    Then
-    $$
-    \sum_k m(E_k) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_k
-    .$$
+:::{.proposition title="Limsups/infs of measurable sets are measurable."}
+If $A_{n}$ are all measurable, $\limsup A_{n}$ and $\liminf A_{n}$ are measurable.
+:::
 
-Proof
-:   \hfill
+:::{.proof title="That limsups/infs are measurable"}
+Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
+:::
 
-    - If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
-    - If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
-    - If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
-    - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
-    - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
+:::{.theorem title="Borel-Cantelli"}
+Let $\{E_{k}\}$ be a countable collection of measurable sets.
+Then
+$$
+\sum_{k} m(E_{k}) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_{k}
+.$$
+:::
 
-Lemma
-:	  \hfill
-    
-    - Characteristic functions are measurable
-    - If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
-    - Sums and differences of measurable functions are measurable, 
-    - Cones $F(x,y) = f(x)$ are measurable, 
-    - Compositions $f\circ T$ for $T$ a linear transformation are measurable,
-    - "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
+:::{.proof title="of Borel-Cantelli"}
+\envlist
 
-Proof (Convolution)
-: Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+- If $E = \limsup_{j} E_{j}$ with $\sum m(E_{j}) < \infty$ then $m(E) = 0$.
+- If $E_{j}$ are measurable, then $\limsup_{j} E_{j}$ is measurable.
+- If $\sum_{j} m(E_{j}) < \infty$, then $\sum_{j=N}^\infty m(E_{j}) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
+- $E = \limsup_{j} E_{j} = \intersect_{k=1}^\infty \union_{j=k}^\infty E_{j} \implies E \subseteq \union_{j=k}^\infty$ for all $k$
+- $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_{j}) \converges{k\to\infty}\to 0$.
+:::
+
+:::{.proposition title="Extending the class of measurable functions."}
+
+- Characteristic functions are measurable
+- If $f_{n}$ are measurable, so are $\abs{f_{n}}, \limsup f_{n}, \liminf f_{n}, \lim f_{n}$, 
+- Sums and differences of measurable functions are measurable, 
+- Cones $F(x,y) = f(x)$ are measurable, 
+- Compositions $f\circ T$ for $T$ a linear transformation are measurable,
+- "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
+:::
+
+:::{.proof title="Convolution"}
+Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+:::
 

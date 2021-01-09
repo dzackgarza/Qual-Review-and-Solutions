@@ -1,9 +1,449 @@
+\newcommand{\textoperatorname}[1]{
+  \operatorname{\textnormal{#1}}
+}
+\newcommand{\et}{\text{ét}}
+\newcommand{\Et}{\text{Ét}}
+\newcommand\stacksymbol[3]{
+  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
+  $\scriptscriptstyle#2$}}
+}
+\newcommand{\ext}{\operatorname{Ext}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Endo}{\operatorname{End}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\ind}{\operatorname{Ind}}
+\newcommand{\coind}{\operatorname{Coind}}
+\newcommand{\proj}{\operatorname{Proj}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\res}{\operatorname{Res}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\coh}{\operatorname{coh}}
+\newcommand{\colspace}{\operatorname{colspace}}
+\newcommand{\rowspace}{\operatorname{rowspace}}
+\newcommand{\codom}{\operatorname{codom}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\nullspace}{\operatorname{nullspace}}
+\newcommand{\nullity}{\operatorname{nullspace}}
+\newcommand{\projection}{\operatorname{Proj}}
+\newcommand{\Der}{\operatorname{Der}}
+\renewcommand{\AA}[0]{{\mathbb{A}}}
+\newcommand{\Af}[0]{{\mathbb{A}}}
+\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\CP}[0]{{\mathbb{CP}}}
+\newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
+\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\GF}[0]{{\mathbb{GF}}}
+\newcommand{\GG}[0]{{\mathbb{G}}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HP}[0]{{\mathbb{HP}}}
+\newcommand{\KK}[0]{{\mathbb{K}}}
+\newcommand{\kk}[0]{{\mathbb{k}}}
+\newcommand{\bbm}[0]{{\mathbb{M}}}
+\newcommand{\NN}[0]{{\mathbb{N}}}
+\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\PP}[0]{{\mathbb{P}}}
+\newcommand{\QQ}[0]{{\mathbb{Q}}}
+\newcommand{\RP}[0]{{\mathbb{RP}}}
+\newcommand{\RR}[0]{{\mathbb{R}}}
+\newcommand{\SpSp}[0]{{\mathbb{S}}}
+\renewcommand{\SS}[0]{{\mathbb{S}}}
+\newcommand{\TT}[0]{{\mathbb{T}}}
+\newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
+\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
+\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
+\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
+\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
+\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\Arg}[0]{\operatorname{Arg}}
+\newcommand{\PGL}[0]{\operatorname{PGL}}
+\newcommand{\GL}[0]{\operatorname{GL}}
+\newcommand{\Gl}[0]{\operatorname{GL}}
+\newcommand{\gl}[0]{\operatorname{GL}}
+\newcommand{\mat}[0]{\operatorname{Mat}}
+\newcommand{\Mat}[0]{\operatorname{Mat}}
+\newcommand{\Rat}[0]{\operatorname{Rat}}
+\newcommand{\Perv}[0]{\operatorname{Perv}}
+\newcommand{\Gal}[0]{\operatorname{Gal}}
+\newcommand{\Hilb}[0]{\operatorname{Hilb}}
+\newcommand{\Quot}[0]{\operatorname{Quot}}
+\newcommand{\Art}[0]{\operatorname{Art}}
+\newcommand{\red}[0]{\operatorname{red}}
+\newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
+\newcommand{\Tr}[0]{\operatorname{Tr}}
+\newcommand{\adj}[0]{\operatorname{adj}}
+\newcommand{\ad}[0]{\operatorname{ad}}
+\newcommand{\ann}[0]{\operatorname{Ann}}
+\newcommand{\Ann}[0]{\operatorname{Ann}}
+\newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\ch}[0]{\operatorname{ch}}
+\newcommand{\Sp}[0]{{\operatorname{Sp}}}
+\newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\ff}[0]{\operatorname{ff}}
+\newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
+\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\Zar}[0]{{\mathrm{Zar}}}
+\newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
+\newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
+\newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
+\newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\coim}[0]{\operatorname{coim}}
+\newcommand{\ssets}[0]{\operatorname{sSets}}
+\newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\txor}[0]{{\operatorname{ or }}}
+\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\gr}[0]{{\operatorname{gr}}}
+\newcommand{\dcoset}[3]{
+    {\textstyle #1}
+    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
+    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
+\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
+\newcommand{\Aut}[0]{{\operatorname{Aut}}}
+\newcommand{\aut}[0]{\operatorname{Aut}}
+\newcommand{\Inn}[0]{{\operatorname{Inn}}}
+\newcommand{\Out}[0]{{\operatorname{Out}}}
+\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\Fun}[0]{{\operatorname{Fun}}}
+\newcommand{\SL}[0]{{\operatorname{SL}}}
+\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\SO}[0]{{\operatorname{SO}}}
+\newcommand{\SU}[0]{{\operatorname{SU}}}
+\newcommand{\SP}[0]{{\operatorname{SP}}}
+\newcommand{\per}[0]{{\operatorname{Per}}}
+\newcommand{\loc}[0]{{\operatorname{loc}}}
+\newcommand{\Top}[0]{{\operatorname{Top}}}
+\newcommand{\Ab}[0]{{\operatorname{Ab}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
+\newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
+\newcommand{\Sch}[0]{{\operatorname{Sch}}}
+\newcommand{\sch}[0]{{\operatorname{Sch}}}
+\newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\alg}[0]{\mathrm{Alg}}
+\newcommand{\scalg}[0]{\mathrm{sCAlg}}
+\newcommand{\calg}[0]{\mathrm{CAlg}}
+\newcommand{\dR}[0]{\mathrm{dR}}
+\newcommand{\poly}[0]{\operatorname{poly}}
+\newcommand{\Vect}[0]{{\operatorname{Vect}}}
+\newcommand{\Sh}[0]{{\operatorname{Sh}}}
+\newcommand{\presh}[0]{{\operatorname{Presh}}}
+\newcommand{\Presh}[0]{{\operatorname{Presh}}}
+\newcommand{\ab}[0]{{\operatorname{ab}}}
+\newcommand{\op}[0]{^{\operatorname{op}}}
+\newcommand{\Op}[0]{{\operatorname{Op}}}
+\newcommand{\Ob}[0]{{\operatorname{Ob}}}
+\newcommand{\prim}[0]{{\operatorname{prim}}}
+\newcommand{\Set}[0]{{\operatorname{Set}}}
+\newcommand{\Sets}[0]{{\operatorname{Set}}}
+\newcommand{\Grp}[0]{{\operatorname{Grp}}}
+\newcommand{\Groups}[0]{{\operatorname{Groups}}}
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+\newcommand{\MCG}[0]{{\operatorname{MCG}}}
+\newcommand{\set}[0]{{\operatorname{Set}}}
+\newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\sets}[0]{{\operatorname{Set}}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\orr}[0]{{\operatorname{ or }}}
+\newcommand{\annd}[0]{{\operatorname{ and }}}
+\newcommand{\bung}[0]{\operatorname{Bun}_G}
+\newcommand{\const}[0]{{\operatorname{const.}}}
+\newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\im}[0]{\operatorname{im}}
+\newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\sep}[0]{^\operatorname{sep}}
+\newcommand{\tors}[0]{{\operatorname{tors}}}
+\newcommand{\tor}[0]{\operatorname{Tor}}
+\newcommand{\height}[0]{\operatorname{ht}}
+\newcommand{\cpt}[0]{\operatorname{compact}}
+\newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
+\newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
+\newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
+\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
+\newcommand{\actsonl}[0]{\curvearrowleft}
+\newcommand{\actson}[0]{\curvearrowright}
+\newcommand{\bd}[0]{{\del}}
+\newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\correspond}[1]{\theset{\substack{#1}}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\by}[0]{\times}
+\newcommand{\dash}[0]{{\hbox{-}}}
+\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\definedas}[0]{\coloneqq}
+\newcommand{\da}[0]{\coloneqq}
+\newcommand{\del}[0]{{\partial}}
+\newcommand{\directlim}[0]{\varinjlim}
+\newcommand{\inverselim}[0]{\varprojlim}
+\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\dual}[0]{^\vee}
+\newcommand{\sm}[0]{\setminus}
+\newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\eps}[0]{\varepsilon}
+\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
+\newcommand{\up}[0]{\uparrow}
+\newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\gs}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\homotopic}[0]{\simeq}
+\newcommand{\injectivelim}[0]{\varinjlim}
+\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\union}[0]{\cup}
+\newcommand{\Union}[0]{\bigcup}
+\newcommand{\intersect}[0]{\cap}
+\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\into}[0]{\to}
+\newcommand{\inv}[0]{^{-1}}
+\newcommand{\mfa}[0]{{\mathfrak{a}}}
+\newcommand{\mfb}[0]{{\mathfrak{b}}}
+\newcommand{\mfc}[0]{{\mathfrak{c}}}
+\newcommand{\mff}[0]{{\mathfrak{f}}}
+\newcommand{\mfi}[0]{{\mathfrak{I}}}
+\newcommand{\mfm}[0]{{\mathfrak{m}}}
+\newcommand{\mfn}[0]{{\mathfrak{n}}}
+\newcommand{\mfp}[0]{{\mathfrak{p}}}
+\newcommand{\mfq}[0]{{\mathfrak{q}}}
+\newcommand{\mfr}[0]{{\mathfrak{r}}}
+\newcommand{\lieb}[0]{{\mathfrak{b}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\lieg}[0]{{\mathfrak{g}}}
+\newcommand{\lieh}[0]{{\mathfrak{h}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\lieso}[0]{{\mathfrak{so}}}
+\newcommand{\liesp}[0]{{\mathfrak{sp}}}
+\newcommand{\lieu}[0]{{\mathfrak{u}}}
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\nilrad}[0]{{\mathfrak{N}}}
+\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
+\newcommand{\mm}[0]{{\mathfrak{m}}}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
+\newcommand{\fromvia}[1]{\xleftarrow{#1}}
+\newcommand{\mapstovia}[1]{\xmapsto{#1}}
+\newcommand{\ms}[0]{\xrightarrow{\sim}}
+\newcommand{\from}[0]{\leftarrow}
+\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
+\newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\surjectsvia}[2][]{
+  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+}
+\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
+\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
+\newcommand{\MM}[0]{{\mathcal{M}}}
+\newcommand{\OO}[0]{{\mathcal{O}}}
+\newcommand{\OX}[0]{{\mathcal{O}_X}}
+\newcommand{\imaginarypart}[1]{{\mathcal{Im}({#1})}}
+\newcommand{\mca}[0]{{\mathcal{A}}}
+\newcommand{\mcb}[0]{{\mathcal{B}}}
+\newcommand{\mcc}[0]{{\mathcal{C}}}
+\newcommand{\mcd}[0]{{\mathcal{D}}}
+\newcommand{\mce}[0]{{\mathcal{E}}}
+\newcommand{\mcf}[0]{{\mathcal{F}}}
+\newcommand{\mcg}[0]{{\mathcal{G}}}
+\newcommand{\mch}[0]{{\mathcal{H}}}
+\newcommand{\mci}[0]{{\mathcal{I}}}
+\newcommand{\mcj}[0]{{\mathcal{J}}}
+\newcommand{\mck}[0]{{\mathcal{K}}}
+\newcommand{\mcl}[0]{{\mathcal{L}}}
+\newcommand{\mcm}[0]{{\mathcal{M}}}
+\newcommand{\mcp}[0]{{\mathcal{P}}}
+\newcommand{\mcs}[0]{{\mathcal{S}}}
+\newcommand{\mct}[0]{{\mathcal{T}}}
+\newcommand{\mcu}[0]{{\mathcal{U}}}
+\newcommand{\mcv}[0]{{\mathcal{V}}}
+\newcommand{\mcx}[0]{{\mathcal{X}}}
+\newcommand{\mcz}[0]{{\mathcal{Z}}}
+\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
+\newcommand{\cl}[0]{\operatorname{cl}}
+\newcommand{\Cl}[0]{\operatorname{Cl}}
+\newcommand{\St}[0]{\operatorname{St}}
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\gal}[0]{\operatorname{Gal}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\soc}[0]{\operatorname{Soc}}
+\newcommand{\hd}[0]{\operatorname{Head}}
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\hilb}[0]{\operatorname{Hilb}}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Hom}[0]{{\operatorname{Hom}}}
+\newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
+\newcommand{\nil}[0]{{\operatorname{nil}}}
+\newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
+\newcommand{\normal}[0]{{~\trianglelefteq~}}
+\newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
+\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
+\newcommand{\notdivides}[0]{\nmid}
+\newcommand{\notimplies}[0]{\centernot\implies}
+\newcommand{\onto}[0]{\twoheadhthtarrow}
+\newcommand{\ord}[0]{{\operatorname{Ord}}}
+\newcommand{\pic}[0]{{\operatorname{Pic}}}
+\newcommand{\projectivelim}[0]{\varprojlim}
+\newcommand{\rad}[0]{{\operatorname{rad}}}
+\newcommand{\ralg}[0]{\operatorname{R-alg}}
+\newcommand{\kalg}[0]{k\dash\operatorname{alg}}
+\newcommand{\rank}[0]{\operatorname{rank}}
+\newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
+\newcommand{\Log}[0]{\operatorname{Log}}
+\newcommand{\reg}[0]{\operatorname{Reg}}
+\newcommand{\restrictionof}[2]{ {\left.{{#1}} \right|_{{#2}} } }
+\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
+\newcommand{\rk}[0]{{\operatorname{rank}}}
+\newcommand{\evalfrom}[0]{\Big|}
+\renewcommand{\mod}{\pmod}
+\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
+\newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
+\newcommand{\modr}[0]{{\operatorname{mod}}}
+\newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
+\newcommand{\Mod}[0]{{\operatorname{Mod}}}
+\newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
+\newcommand{\selfmap}[0]{{\circlearrowleft}}
+\newcommand{\semidirect}[0]{\rtimes}
+\newcommand{\sgn}[0]{\operatorname{sgn}}
+\newcommand{\sign}[0]{\operatorname{sign}}
+\newcommand{\spanof}[0]{{\operatorname{span}}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
+\newcommand{\Jac}[0]{\operatorname{Jac}}
+\newcommand{\stab}[0]{{\operatorname{Stab}}}
+\newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
+\newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\st}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\supp}[0]{{\operatorname{supp}}}
+\newcommand{\sym}[0]{\operatorname{Sym}}
+\newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\tensor}[0]{\otimes}
+\newcommand{\connectsum}[0]{\mathop{\Large \#}}
+\newcommand{\theset}[1]{\left\{{#1}\right\}}
+\newcommand{\ts}[1]{\left\{{#1}\right\}}
+\newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
+\newcommand{\gens}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\thevector}[1]{{\left[ {#1} \right]}}
+\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\too}[1]{{\xrightarrow{#1}}}
+\newcommand{\transverse}[0]{\pitchfork}
+\newcommand{\trianglerightneq}{\mathrel{\ooalign{\raisebox{-0.5ex}{\reflectbox{\rotatebox{90}{$\nshortmid$}}}\cr$\triangleright$\cr}\mkern-3mu}}
+\newcommand{\tr}[0]{\operatorname{Tr}}
+\newcommand{\uniformlyconverges}[0]{\rightrightarrows}
+\newcommand{\abuts}[0]{\Rightarrow}
+\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\units}[0]{^{\times}}
+\newcommand{\nonzero}[0]{^{\bullet}}
+\newcommand{\wait}[0]{{\,\cdot\,}}
+\newcommand{\wt}[0]{{\operatorname{wt}}}
+\renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\renewcommand{\div}[0]{\operatorname{Div}}
+\newcommand{\Div}[0]{\operatorname{Div}}
+\newcommand{\Prin}[0]{\operatorname{Prin}}
+\newcommand{\Frac}[0]{\operatorname{Frac}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\mid}[0]{\mathrel{\Big|}}
+\renewcommand{\qed}[0]{\hfill\blacksquare}
+\renewcommand{\too}[0]{\longrightarrow}
+\renewcommand{\vector}[1]{\mathbf{#1}}
+\newcommand*\dif{\mathop{}\!\operatorname{d}}
+\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
+\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
+\renewcommand{\labelitemiii}{$\diamondsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
+\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand\rref{\operatorname{RREF}}
+\newcommand{\interior}[0]{^\circ}
+\newcommand{\increasesto}[0]{\nearrow}
+\newcommand{\decreasesto}[0]{\searrow}
+\newcommand\jan{\operatorname{Jan}}
+\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator{\Exists}{\exists}
+\DeclareMathOperator{\Forall}{\forall}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\DeclareMathOperator*{\eq}{=}
+
+\newcommand{\contains}[0]{\supseteq}
+\newcommand{\containing}[0]{\supseteq}
+
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\thecat}[1]{\mathbf{#1}}
+\newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+
+\newcommand\rrarrows{\rightrightarrows}
+\newcommand\rrrarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
+
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+
+
+\newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\ul[1]{\underline{#1}}
+
+\newcommand\Hc[0]{{\check{H}}}
+\newcommand\Cc[0]{{\check{C}}}
 
 ---
 title: Real Analysis Review Notes
 ---
 
+Exercises from Folland:
+
+- Chapter 1:
+  Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty)
+  Exercises 15, 17, 18, 19, 22(a), 24, 28
+  Exercises 26, 30 (also check out 31)
+
+- Chapter 2:
+  Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof
+  Exercises 10, 12, 13, 14, 16, 19
+  Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either)
+  Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59
+
+- Chapter 3:
+  Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22
+
 # Basics
+
+Notation:
+
+- $\norm{f}_\infty \da \sup_{x\in \dom(f)} \abs{f(x)}$
+- $\norm{f}_{L^\infty} \da \inf\ts{M \geq 0 \st \abs{f(x)} \leq M \text{for a.e. }x }$. 
+- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
+- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
+- $H$ denotes a Hilbert space.
+
 
 ## Useful Techniques
 
@@ -48,6 +488,32 @@ title: Real Analysis Review Notes
   - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
   - Tail estimates!
 
+- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+
+
+- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+
+- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
+
+- Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
+
+- $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+
+- Break integration domain up into disjoint annuli.
+- Break integrals or sums into $x < 1$ and $x\geq 1$.
+- Calculus techniques: Taylor series, IVT, ...
+- Approximate by dense subsets of functions
+
+- Useful facts about compactly supported continuous functions:
+  - Uniformly continuous
+  - Bounded
+
+Useful facts about $C_c$ functions:
+
+- Bounded almost everywhere
+- Uniformly continuous
+
+
 ## Definitions
 
 :::{.definition title="Uniform Continuity"}
@@ -59,21 +525,21 @@ $f$ is uniformly continuous iff
 .\]
 :::
 
+:::{.definition title="Nowhere Dense Sets"}
+A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
+:::
 
-Definition (Nowhere Dense Sets)
-: A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
-
-Definition (Meager Sets)
-: A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::{.definition title="Meager Sets"}
+A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::
 
 :::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens.
-:::
-  
-> Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
 
-Theorem (Heine-Cantor)
-: Every continuous function on a compact space is uniformly continuous.
+[^Mnemonic_Ferme]: 
+Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
+:::
 
 :::{.definition title="Limsup/Liminf"}
 \[  
@@ -82,141 +548,307 @@ Theorem (Heine-Cantor)
 .\]
 :::
 
+:::{.definition title="Topological Notions"}
+Let $X$ be a metric space and $A$ a subset.
+Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its closure.
+
+- A **neighborhood** of $p$ is an open set $U_p$ containing $p$.
+
+- An $\eps\dash$**neighborhood** of $p$ is an open ball $B_r(p) \da \ts{q \st d(p, q) < r}$ for some $r>0$.
+
+- A point $p\in X$ is an **accumulation point** of $A$ iff every neighborhood $U_p$ of $p$ contains a point $q\in Q$
+
+- A point $p\in X$ is a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$.
+
+- If $p\in A$ and $p$ is not a limit point of $A$, then $p$ is an **isolated point** of $A$.
+
+- $A$ is **closed**  iff $A' \subset A$, so $A$ contains all of its limit points.
+
+- A point $p\in A$ is **interior** iff there is a neighborhood $U_p \subset A$ that is strictly contained in $A$.
+
+- $A$ is **open** iff every point of $A$ is interior.
+
+- $A$ is **perfect** iff $A$ is closed and $A\subset A'$, so every point of $A$ is a limit point of $A$.
+
+- $A$ is **bounded** iff there is a real number $M$ and a point $q\in X$ such that $d(p, q) < M$ for all $p\in A$.
+
+- $A$ is **dense** in $X$ iff every point $x\in X$ is either a point of $A$, so $x\in A$, or a limit point of $A$, so $x\in A'$.
+  I.e., $X\subset A\union A'$.
+
+  - Alternatively, $\bar{A} = X$, so the closure of $A$ is $X$.
+
+:::
+
+:::{.definition title="Uniform Convergence"}
+\[
+(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+Negated:[^Negated_uniform_convergence]
+\[  
+(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\]
+
+[^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
+
+:::
+
+:::{.definition title="Pointwise Convergence"}
+A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+:::
+
+:::{.definition title="Outer Measure"}
+The **outer measure** of a set is given by
+\[
+m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
+.\]
+:::
+
+:::{.definition title="Limsup and Liminf of Sets"}
+\[
+\limsup_{n} A_{n} \da \intersect_{n} \union_{j\geq n} A_{j}&= \theset{x \suchthat x\in A_{n} \text{ for inf. many $n$}}  \\
+\liminf_{n} A_{n} \da \union_{n} \intersect_{j\geq n} A_{j} &= \theset{x \suchthat x\in A_{n} \text{ for all except fin. many $n$}}  \\
+.\]
+:::
+
+:::{.definition title="Lebesgue Measurable Sets"}
+A subset $E\subseteq \RR^n$ is **Lebesgue measurable** iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
+In this case, we define $m(E) \da m_*(E)$.
+:::
+
+:::{.definition title="$L^+$: Measurable non-negative functions."}
+$f\in L^+$ iff $f$ is measurable and non-negative.
+:::
+
+:::{.definition title="Integrability"}
+A measurable function is **integrable** iff $\norm{f}_1 < \infty$.
+:::
+
+:::{.definition title="The Infinity Norm"}
+\[
+\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+.\]
+:::
+
+:::{.definition title="Essentially Bounded Functions"}
+A function $f:X \to \CC$ is **essentially bounded** iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
+:::
+
+:::{.definition title="$L^\infty$"}
+\[
+L^\infty(X)
+\definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
+\definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
+.\]
+
+:::
+
+:::{.definition title="Dual Norm"}
+For $X$ a normed vector space and $\Lambda \in X\dual$, 
+\[
+\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
+.\]
+:::
+
+:::{.definition title="Convolution"}
+$$f * g(x)=\int f(x-y) g(y) d y .$$
+:::
+
+:::{.definition title="Fourier Transform"}
+\[
+\hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
+.\]
+
+:::
+
+:::{.definition title="Dilation"}
+\[
+\phi_{t}(x) = t^{-n} \phi\left(t^{-1} x\right)
+.\]
+:::
+
+:::{.definition title="Approximations to the identity"}
+For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an **approximate identity**. 
+:::
+
+:::{.definition title="Baire Space"}
+A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
+:::
+
+### Functional Analysis
+
+:::{.definition title="Orthonormal sequence "}
+A countable collection of elements \( \ts{ u_i } \)  is **orthonormal** if and only if 
+
+1. \( \inner{u_i}{u_j} = 0 \) for all \( j \neq k \) and
+2. \( \norm{u_j}^2 \da \inner{u_j}{u_j} = 1 \) for all \( j \).  
+
+:::
+
+:::{.definition title="Basis of a Hilbert space"}
+A set $\theset{u_{n}}$ is a **basis** for a Hilbert space $\mch$ iff it is dense in $\mch$.
+:::
+
+:::{.definition title="Completeness of a Hilbert space"}
+A collection of vectors $\theset{u_{n}}\subset H$ is **complete** iff $\inner{x}{u_{n}} = 0$ for all $n \iff x = 0$ in $H$.
+:::
+
+:::{.definition title="Dual of a Hilbert space"}
+The **dual** of a Hilbert space \( H \) is defined as 
+\[
+H\dual \da \theset{L: H\to \CC \suchthat L \text{ is continuous }}
+.\]
+
+:::
+
+:::{.definition title="Linear functionals"}
+A map $L: X \to \CC$ is a **linear functional** iff
+\[
+L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
+.\]
+:::
+
+:::{.definition title="Operator norm"}
+The **operator norm** of an operator \( L \) is defined as 
+\[
+\norm{L}_{X\dual} \da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
+.\]
+:::
+
+:::{.definition title="Banach Space"}
+A space is a **Banach space** if and only if it is a complete normed vector space.
+:::
+
+:::{.definition title="Hilbert Space"}
+A **Hilbert space** is an inner product space which is a Banach space under the induced norm.
+:::
 
 ## Theorems
 
 ### Topology / Sets
 
+:::{.theorem title="Heine-Cantor"}
+Every continuous function on a compact space is uniformly continuous.
+:::
 
-Lemma
-:	Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
+Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::
 
-Proposition
-: The unit ball in $C([0, 1])$ with the sup norm is not compact.
+:::{.proposition title="A unit ball that is not compact"}
+The unit ball in $C([0, 1])$ with the sup norm is not compact.
+:::
 
-Proof 
-: Take $f_k(x) = x^n$, which converges to a dirac delta at 1. The limit is not continuous, so no subsequence can converge.
+:::{.proof title="?"}
+Take $f_k(x) = x^n$, which converges to $\chi(x=1)$. 
+The limit is not continuous, so no subsequence can converge.
+:::
 
+:::{.proposition title="?"}
+A *finite* union of nowhere dense is again nowhere dense.
+:::
 
-Proposition
-: A *finite* union of nowhere dense is again nowhere dense.
+:::{.proposition title="Convergent Sums Have Small Tails"}
+$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::
 
-Lemma (Convergent Sums Have Small Tails)
-:   $$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::{.theorem title="Heine-Borel"}
+$X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
+:::
 
-Theorem (Heine-Borel)
-: $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
+:::{.proposition title="Geometric Series"}
+\[
+\sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
+.\]
+:::
 
-Lemma (Geometric Series)
-:   \[
-    \sum_{k=0}^\infty x^k = \frac 1 {1-x} \iff \abs{x} < 1
-    .\]
+:::{.corollary title="?"}
+\[
+\sum_{k=0}^\infty \frac 1 {2^k} = 1
+.\]
+:::
 
-    *Corollary:* 
-    $\sum_{k=0}^\infty \frac 1 {2^k} = 1$.
+:::{.proposition title="?"}
+The Cantor set is closed with empty interior.
+:::
 
-Lemma
-: The Cantor set is closed with empty interior.
+:::{.proof title="?"}
+Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
+:::
 
-Proof
-:   Its complement is a union of open intervals, and can't contain an interval since intervals have positive measure and $m(C_n)$ tends to zero.
+:::{.corollary title="?"}
+The Cantor set is nowhere dense.
+:::
 
-Corollary
-: The Cantor set is nowhere dense.
+:::{.proposition title="?"}
+Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
+:::
 
-Lemma
-:	Singleton sets in $\RR$ are closed, and thus $\QQ$ is an $F_\sigma$ set.
+:::{.theorem title="Baire"}
+$\RR$ is a **Baire space** 
+Thus $\RR$ can not be written as a countable union of nowhere dense sets.
+:::
 
-Theorem (Baire)
-: $\RR$ is a **Baire space** (countable intersections of open, dense sets are still dense). 
-  Thus $\RR$ can not be written as a countable union of nowhere dense sets.
-
-Lemma
-:	Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+:::{.lemma title="?"}
+Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).
+:::
 
 ### Functions
 
-Proposition (Existence of Smooth Compactly Supported Functions)
-: There exist smooth compactly supported functions, e.g. take 
-$$f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x).$$
+:::{.proposition title="Existence of Smooth Compactly Supported Functions"}
+There exist smooth compactly supported functions, e.g. take 
+\[
+f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
+.\]
+:::
 
-Lemma
-:	There is a function discontinuous precisely on $\QQ$.
+:::{.lemma title="Function discontinuous on the rationals"}
+There is a function discontinuous precisely on $\QQ$.
+:::
 
-Proof
-: $f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
-  The limit at every point is 0.
+:::{.proof title="?"}
+$f(x) = \frac 1 n$ if $x = r_n \in \QQ$ is an enumeration of the rationals, and zero otherwise.
+The limit at every point is 0.
+:::
 
-Lemma
-:	There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
+:::{.proposition title="No functions discontinuous on the irrationals"}
+There *do not* exist functions that are discontinuous precisely on $\RR\setminus \QQ$.
+:::
 
-Proof
-:   $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
-    $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+:::{.proof title="?"}
+$D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
+$\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+:::
 
-Proposition
-:   A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
-    In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
-
+:::{.proposition title="Lipschitz $\iff$ differentiable with bounded derivative."}
+A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
+In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
+:::
 
 ## Uniform Convergence
 
-:::{.definition title="Uniform Convergence"}
-\[  
-(\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
-
-Negated:
-\[  
-(\exists \varepsilon>0)\left(\forall n_{0} = n_0 (\eps) \right)(\exists x = x(n_0) \in S)\left(\exists n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
-.\]
-
-> Slogan: to negate, find bad $x$s depending on $n_0$ that are larger than some $\eps$.
-
-:::
-Compare this to the definition of pointwise convergence:
-\[  
-(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
-
-:::{.proposition title="Testing Uniform Convergence: The Sup Norm"}
+:::{.proposition title="Testing Uniform Convergence: The Sup Norm Test"}
 $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty \leq M_n \to 0$.
 :::
-> **Negating**: find an $x$ which depends on $n$ for which the norm is bounded *below*.
 
-
-:::{.proposition title="Testing Uniform Convergence: The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-:::
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
-
-
-:::{.theorem title="Weierstrass Approximation"}
-If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
-
-Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::{.remark title="Negating the Sup Norm test"}
+**Negating**: find an $x$ which depends on $n$ for which $\norm{f_n}_\infty > \eps$ (negating small tails) or $\norm{f_n - f_m} > \eps$ (negating the Cauchy criterion).
 :::
 
+### Example: Completeness of a Normed Function Space
 
-:::{.theorem title="Egorov"}
-Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
-\[  
-f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
-\]
-exists almost everywhere.
-
-Then $f_k \to f$ *almost uniformly*, i.e.
+:::{.proposition title=" \( C(I) \) is complete"}
+The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
 \[
-\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
-.\]
-:::
-
-:::{.proposition}
-The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm $\norm{f} = \sup_{x\in [0, 1]} \abs{f(x)}$, is a **complete** metric space.
+\norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}
+\]
+is a **complete** metric space.
 :::
 
 :::{.proof}
+\envlist
 
 1.  Let $\theset{f_k}$ be Cauchy in $X$.
 
@@ -240,17 +872,21 @@ The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped wi
 
     The uniform limit of continuous functions is continuous.
 
-> Note: in other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
+:::
 
+:::{.remark}
+In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 :::
 
 :::{.theorem title="Uniform Limit Theorem"}
-If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous.
+If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
 
-> Slogan: "A uniform limit of continuous functions is continuous."
+[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
+
 :::
 
 :::{.proof}
+\envlist
 - Follows from an $\varepsilon/3$ argument: 
   \[  
   \abs{F(x) - F(y} \leq 
@@ -263,267 +899,289 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 - So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
 :::
 
-
-Lemma (Uniform Limits Commute with Integrals)
-: If $f_n \to f$ uniformly, then $\int f_n = \int f$.
-
-Lemma (Uniform Convergence and Derivatives)
-: If $f_n' \to g$ uniformly for some $g$ and $f_n \to f$ pointwise (or at least at one point), then $g = f'$.
+:::{.proposition title="Uniform Limits Commute with Integrals"}
+If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+:::
 
 ### Series
 
-Lemma (Pointwise Convergence for a Series of Functions)
-: If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.
+:::{.proposition title="p-tests"}
+Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
+\[
+\sum \frac 1 {n^p} < \infty &\iff p>1 \\
+\int_\varepsilon^\infty \frac 1 {x^p} < \infty 
+&\iff p>1 \\
+\int_0^1 \frac 1 {x^p} < \infty 
+&\iff p<1 \\
+\int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
+\int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
+.\]
+:::
 
-Lemma (Small Tails for Series of Functions)
-:	If $\sum f_n$ converges then $f_n \to 0$ uniformly.
+:::{.proposition title="Comparison Test"}
+If $0\leq a_n \leq b_n$, then 
 
-Lemma (M-test for Series)
-: If $\abs{f_n(x)} \leq M_n$ which does not depend on $x$, then $\sum f_n$ converges uniformly.
+- $\sum b_n < \infty \implies \sum a_n < \infty$, and 
+- $\sum a_n = \infty \implies \sum b_n = \infty$.
 
-Lemma (p-tests)
-:   Let $n$ be a fixed dimension and set $B = \theset{x\in \RR^n \suchthat \norm{x} \leq 1}$. 
-    \[
-    \sum \frac 1 {n^p} < \infty &\iff p>1 \\
-    \int_\varepsilon^\infty \frac 1 {x^p} < \infty 
-    &\iff p>1 \\
-    \int_0^1 \frac 1 {x^p} < \infty 
-    &\iff p<1 \\
-    \int_B \frac{1}{\abs{x}^p} < \infty &\iff p < n \\
-    \int_{B^c} \frac{1}{\abs{x}^p} < \infty &\iff p > n \\
-    .\]
+:::
 
+:::{.proposition title="Small Tails for Series of Functions"}
+If $\sum f_n$ converges then $f_n \to 0$ uniformly.
+:::
+
+:::{.corollary title="Term by Term Continuity Theorem"}
+If $f_n$ are continuous and $\sum f_n \to f$ converges uniformly, then $f$ is continuous.
+:::
+
+:::{.proposition title="Weak $M\dash$Test"}
+If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges.[^note_about_pointwise_convergence]
+
+[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
+
+:::
+
+:::{.proposition title="The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+[^m_test_suffices]
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
+
+[^m_test_suffices]: 
+It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
+
+:::
+
+:::{.proposition title="Cauchy criterion for sums"}
+$f_n$ are uniformly Cauchy (so $\norm{f_n - f_m}_\infty < \eps$) iff $f_n$ is uniformly convergent.
+:::
+
+#### Derivatives
+
+:::{.theorem title="Term by Term Differentiability Theorem"}
+If $f_n$ are differentiable, $\sum f_n' \to g$ uniformly, and there exists one point[^pointwise_works_too] $x_0$ such that $\sum f_n(x)$ converges, then there exist an $f$ such that $\sum f_n \to f$ uniformly and $f' = g$.[^theorem_referfence_6.4.3_Abbott]
+
+[^theorem_referfence_6.4.3_Abbott]: See Abbott theorem 6.4.3, pp 168.
+
+[^pointwise_works_too]: So this implicitly holds if $f$ is the pointwise limit of $f_n$.
+
+:::
+
+## Commuting Limiting Operations
+
+:::{.proposition title="Limits of bounded functions need not be bounded"}
+\[  
+\lim_{n\to \infty}\sup_{x\in X} \abs{f_n(x) } \neq \sup_{x\in X} \abs{\lim_{n\to\infty} f_n(x) }
+.\]
+:::
+
+:::{.proposition title="Limits of continuous functions need not be continuous"}
+\[  
+\lim_{k\to \infty} \lim_{n\to\infty} f_n(x_k) \neq
+\lim_{n\to \infty} \lim_{k\to\infty} f_n(x_k)
+.\]
+:::
+
+:::{.proposition title="Limits of differentiable functions need not be differentiable"}
+\[  
+\lim_{n\to \infty} \dd{}{x} f_n \neq \dd{}{n} \qty{\lim_{n\to \infty} f_n}
+.\]
+:::
+
+:::{.proposition title="?"}
+\[  
+\lim_{n\to \infty} \int_a^b f_n(x) \,dx \neq \int_a^b \lim_{n\to \infty} \qty{ f_n(x) } \,dx
+.\]
+:::
+
+## Slightly Advanced Stuff
+
+:::{.theorem title="Weierstrass Approximation"}
+If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
+
+Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::
+
+:::{.theorem title="Egorov"}
+Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
+\[  
+f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
+\]
+exists almost everywhere.
+
+Then $f_k \to f$ *almost uniformly*, i.e.
+\[
+\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
+m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
+.\]
+:::
+
+## Examples
+
+:::{.example title="?"}
+A series of continuous functions that does *not* converge uniformly but is still continuous:
+\[  
+g(x) \da \sum {1 \over 1 + n^2 x}
+.\]
+
+Take $x = 1/n^2$.
+:::
 
 # Measure Theory
 
-## Useful Techniques
-
-- $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
-
-- Always consider bounded sets, and if $E$ is unbounded write $E = \union_n B_n(0) \intersect E$ and use countable subadditivity or continuity of measure.
-
-## Definitions
-
-Definition (Outer Measure)
-:   The outer measure of a set is given by
-    \begin{align*}
-    m_*(E) \definedas \inf_{\substack{\theset{Q_i} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_i}
-    .\end{align*}
-
-Definition (Limsup and Liminf of Sets)
-:   \hfill	
-    \begin{align*}
-    \limsup_n A_n \definedas \intersect_n \union_{j\geq n} A_j&= \theset{x \suchthat x\in A_n \text{ for inf. many $n$}}  \\
-    \liminf_n A_n \definedas \union_n \intersect_{j\geq n} A_j &= \theset{x \suchthat x\in A_n \text{ for all except fin. many $n$}}  \\
-    .\end{align*}
-
-Definition (Lebesgue Measurable Set)
-: A subset $E\subseteq \RR^n$ is *Lebesgue measurable* iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
-In this case, we define $m(E) \definedas m_*(E)$.
-
-
 ## Theorems
 
-Lemma
-:	Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+:::{.proposition title="Opens are unions of almost disjoint intervals."}
+Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+:::
 
-Lemma (Properties of Outer Measure)
-:   \hfill
-    - Montonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
-    - Countable Subadditivity: $m_*(\union E_i) \leq \sum m_*(E_i)$.
-    - Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
-    - Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
-  
-    [^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
+:::{.proposition title="Properties of Outer Measure"}
+\envlist
 
-Lemma (Subtraction of Measure)
-: $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
+1. Monotonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
+2. Countable Subadditivity: $m_*(\union E_{i}) \leq \sum m_*(E_{i})$.
+3. Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
+4. Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
 
-Lemma (Continuity of Measure)
-:   \hfill
+[^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
 
-    \begin{align*}
-    E_i \nearrow E &\implies m(E_i) \to m(E) \\
-    m(E_1) < \infty \text{ and } E_i \searrow E &\implies m(E_i) \to m(E)
-    .\end{align*}
+:::
 
-Proof
-:   \hfill
-    1. Break into disjoint annuli $A_2 = E_2\setminus E_1$, etc then apply countable disjoint additivity to $E = \disjoint A_i$.
+:::{.proposition title="Subtraction of Measures"}
+$$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
+:::
 
-    2. Use $E_1 = (\disjoint E_j\setminus E_{j+1}) \disjoint (\intersect E_j)$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+:::{.proposition title="Continuity of Measure"}
+\[
+E_{i} \nearrow E &\implies m(E_{i}) \to m(E) \\
+m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
+.\]
+:::
 
-Theorem
-:   Suppose $E$ is measurable; then for every $\eps>0$,
+:::{.proof title="of continuity of measure"}
+\envlist
 
-    1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
-    2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
-    3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
+1. Break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, etc then apply countable disjoint additivity to $E = \disjoint A_{i}$.
 
-Proof
-:   \hfill
+2. Use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+:::
 
-    - (1): Take $\theset{Q_i} \covers E$ and set $O = \union Q_i$.
-    - (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
-      - Set $F = O^c$, so $F$ is closed.
-      - Then $F\subset E$ by taking complements of $O\supset E^c$
-      - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
-    - (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
-      - Set $K_n = F\intersect \DD_n$, a ball of radius $n$ about $0$.
-      - Then $E\setminus K_n \searrow E\setminus F$
-      - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_n) < \eps$.
+:::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
+Suppose $E$ is measurable; then for every $\eps>0$,
 
-Lemma
-:	Lebesgue measure is translation and dilation invariant.
+1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
+2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
+3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
+:::
 
-Proof
-: Obvious for cubes; if $Q_i \rightrightarrows E$ then $Q_i + k \rightrightarrows E + k$, etc.
+:::{.proof title="that measurable sets can be approximated"}
+\envlist
 
-\todo{Flesh out this proof.}
+- (1): Take $\theset{Q_{i}} \covers E$ and set $O = \union Q_{i}$.
+- (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
+  - Set $F = O^c$, so $F$ is closed.
+  - Then $F\subset E$ by taking complements of $O\supset E^c$
+  - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
+- (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
+  - Set $K_{n} = F\intersect \DD_{n}$, a ball of radius $n$ about $0$.
+  - Then $E\setminus K_{n} \searrow E\setminus F$
+  - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_{n}) < \eps$.
+:::
 
-Theorem (Non-Measurable Sets)
-: There is a non-measurable set.
+:::{.proposition title="Translation and Dilation Invariance"}
+Lebesgue measure is translation and dilation invariant.
+:::
 
-Proof
-:   \hfill
-    - Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
-    - Enumerate the rationals in $[0, 1]$ as $q_j$, and define $N_j = N + q_j$. These intersect trivially.
-    - Define $M \definedas \disjoint N_j$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
-    By translation invariance, $m(N_j) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
+:::{.proof title="(Todo) of translation/dilation invariance"}
+Obvious for cubes; if $Q_{i} \rightrightarrows E$ then $Q_{i} + k \rightrightarrows E + k$, etc.
+<!--\todo{Flesh out this proof.}-->
+:::
 
-Proposition (Borel Characterization of Measurable Sets)
-: If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::{.theorem title="Non-measurable sets exist"}
+There is a non-measurable set.
+:::
 
-> **Useful technique:** $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
+:::{.proof title="Constructing a non-measurable set"}
+\envlist
 
-Proof 
-:   For every $\frac 1 n$ there exists a closed set $K_n \subset E$ such that $m(E\setminus K_n) \leq \frac 1 n$.
-    Take $K = \union K_n$, wlog $K_n \nearrow K$ so $m(K) = \lim m(K_n) = m(E)$.
-    Take $N\definedas E\setminus K$, then $m(N) = 0$.
+- Use AOC to choose one representative from every coset of $\RR/\QQ$ on $[0, 1)$, which is countable, and assemble them into a set $N$
+- Enumerate the rationals in $[0, 1]$ as $q_{j}$, and define $N_{j} = N + q_{j}$. These intersect trivially.
+- Define $M \da \disjoint N_{j}$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
+- By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
+:::
 
-Lemma
-:	If $A_n$ are all measurable, $\limsup A_n$ and $\liminf A_n$ are measurable.
+:::{.proposition title="Borel Characterization of Measurable Sets"}
+If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::
 
-Proof
-: Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
+:::{.proof title="of Borel characterization"}
+For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
+Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
+Take $N\da E\setminus K$, then $m(N) = 0$.
+:::
 
-Theorem (Borel-Cantelli)
-:   Let $\{E_k\}$ be a countable collection of measurable sets.
-    Then
-    $$
-    \sum_k m(E_k) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_k
-    .$$
+:::{.proposition title="Limsups/infs of measurable sets are measurable."}
+If $A_{n}$ are all measurable, $\limsup A_{n}$ and $\liminf A_{n}$ are measurable.
+:::
 
-Proof
-:   \hfill
+:::{.proof title="That limsups/infs are measurable"}
+Measurable sets form a sigma algebra, and these are expressed as countable unions/intersections of measurable sets.
+:::
 
-    - If $E = \limsup_j E_j$ with $\sum m(E_j) < \infty$ then $m(E) = 0$.
-    - If $E_j$ are measurable, then $\limsup_j E_j$ is measurable.
-    - If $\sum_j m(E_j) < \infty$, then $\sum_{j=N}^\infty m(E_j) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
-    - $E = \limsup_j E_j = \intersect_{k=1}^\infty \union_{j=k}^\infty E_j \implies E \subseteq \union_{j=k}^\infty$ for all $k$
-    - $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_j) \converges{k\to\infty}\to 0$.
+:::{.theorem title="Borel-Cantelli"}
+Let $\{E_{k}\}$ be a countable collection of measurable sets.
+Then
+$$
+\sum_{k} m(E_{k}) < \infty \implies \text{ almost every } x\in \RR \text{ is in at most finitely many } E_{k}
+.$$
+:::
 
-Lemma
-:	  \hfill
-    
-    - Characteristic functions are measurable
-    - If $f_n$ are measurable, so are $\abs{f_n}, \limsup f_n, \liminf f_n, \lim f_n$, 
-    - Sums and differences of measurable functions are measurable, 
-    - Cones $F(x,y) = f(x)$ are measurable, 
-    - Compositions $f\circ T$ for $T$ a linear transformation are measurable,
-    - "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
+:::{.proof title="of Borel-Cantelli"}
+\envlist
 
-Proof (Convolution)
-: Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+- If $E = \limsup_{j} E_{j}$ with $\sum m(E_{j}) < \infty$ then $m(E) = 0$.
+- If $E_{j}$ are measurable, then $\limsup_{j} E_{j}$ is measurable.
+- If $\sum_{j} m(E_{j}) < \infty$, then $\sum_{j=N}^\infty m(E_{j}) \converges{N\to\infty}\to 0$ as the tail of a convergent sequence.
+- $E = \limsup_{j} E_{j} = \intersect_{k=1}^\infty \union_{j=k}^\infty E_{j} \implies E \subseteq \union_{j=k}^\infty$ for all $k$
+- $E \subset \union_{j=k}^\infty \implies m(E) \leq \sum_{j=k}^\infty m(E_{j}) \converges{k\to\infty}\to 0$.
+:::
+
+:::{.proposition title="Extending the class of measurable functions."}
+
+- Characteristic functions are measurable
+- If $f_{n}$ are measurable, so are $\abs{f_{n}}, \limsup f_{n}, \liminf f_{n}, \lim f_{n}$, 
+- Sums and differences of measurable functions are measurable, 
+- Cones $F(x,y) = f(x)$ are measurable, 
+- Compositions $f\circ T$ for $T$ a linear transformation are measurable,
+- "Convolution-ish" transformations $(x,y) \mapsto f(x-y)$ are measurable
+:::
+
+:::{.proof title="Convolution"}
+Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
+:::
 
 
 # Integration
 
-Notation:
-
-- "$f$ vanishes at infinity" means $f(x) \converges{\abs x \to \infty}\to 0$.
-- "$f$ has small tails" means $\int_{\abs{x} \geq N} f \converges{N\to \infty}\to 0$.
-
-## Useful Techniques
-
-- Break integration domain up into disjoint annuli.
-- Break integrals or sums into $x < 1$ and $x\geq 1$.
-- Calculus techniques: Taylor series, IVT, ...
-- Approximate by dense subsets of functions
-
-- Useful facts about compactly supported continuous functions:
-  - Uniformly continuous
-  - Bounded
-
-
-## Definitions
-
-Definition (\$L^+\$)
-:	$f\in L^+$ iff $f$ is measurable and non-negative.
-
-Definition (Integrable)
-:	A measurable function is integrable iff $\norm{f}_1 < \infty$.
-
-:::{.definition title="The Infinity Norm"}
-\[
-\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
-.\]
-:::
-
-
-Definition (Essentially Bounded Functions)
-: A function $f:X \to \CC$ is *essentially bounded* iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
-
-If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
-
-:::{.definition title="$L^\infty$"}
-\[
-L^\infty(X) 
-\definedas \theset{f: X\to \CC \suchthat f \text{ is essentially bounded }}
-\definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
-,\]
-:::
-
-Example:
-
-- $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
-
-
-
 ## Theorems
 
-Useful facts about $C_c$ functions:
+:::{.remark}
+If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+:::
 
-- Bounded almost everywhere
-- Uniformly continuous
-
+:::{.example title="?"}
+$f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
+:::
 
 :::{.theorem title="p-Test for Integrals"}
 \[
 \int_0^1 {1\over x^p} < \infty \iff  p < 1 \\
 \int_1^\infty {1\over x^p} < \infty \iff  p > 1 
 .\]
-
-> Slogan: big powers of $x$ help us in neighborhoods of infinity and hurt around zero
-
 :::
 
-### Some (Non)Integrable Functions
-
-- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty}\to \pi/2 < \infty$
-- Any bounded function (or continuous on a compact set, by EVT)
-- $\int_0^1 {1 \over \sqrt{x}} < \infty$
-- $\int_0^1 {1\over x^{1-\eps}} < \infty$
-- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
-
-Some non-integrable functions:
-
-- $\int_0^1 {1\over x} = \infty$.
-- $\int_1^\infty {1\over x} = \infty$.
-- $\int_1^\infty {1 \over \sqrt{x}} = \infty$
-- $\int_1^\infty {1\over x^{1-\eps}} = \infty$
-- $\int_0^1 {1\over x^{1+\eps}} = \infty$
-
+:::{.slogan}
+Large powers of $x$ help us in neighborhoods of infinity and hurt around zero
+:::
 
 ###  Convergence Theorems
 
@@ -568,7 +1226,6 @@ then $f\in L^1$ and $\lim \int f_n = \int f < \infty$.
 
 :::
 
-
 :::{.proof}
 Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 
@@ -600,8 +1257,6 @@ Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
   - Here we use that $g_n + f_n \to g+f$ with $0 \leq \abs{f_n} + f_n \leq g_n + f_n$ so Fatou's lemma again applies.
 :::
 
- 
-
 :::{.proposition title="Convergence in $L^1$ implies convergence of $L^1$ norm"}
 If $f\in L^1$, then
 \[
@@ -622,8 +1277,6 @@ so the DCT applies to $g_n$ and
 .\]
 :::
 
-
-
 :::{.theorem title="Fatou"}
 If $f_n$ is a sequence of nonnegative measurable functions, then
 \[
@@ -631,7 +1284,6 @@ If $f_n$ is a sequence of nonnegative measurable functions, then
 \limsup_n \int f_n &\leq \int \limsup_n f_n
 .\]
 :::
-
 
 :::{.theorem title="Tonelli (Non-Negative, Measurable)"}
 For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
@@ -641,7 +1293,6 @@ For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$,
 - For $E$ measurable, the slices $E_x \definedas \theset{y \suchthat (x, y) \in E}$ are measurable.
 - $\int f = \int \int F$, i.e. any iterated integral is equal to the original.
 :::
-
 
 :::{.theorem title="Fubini (Integrable)"}
 For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$, 
@@ -653,8 +1304,9 @@ For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$,
 
 :::
 
-Theorem (Fubini/Tonelli)
-: If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
+:::{.theorem title="Fubini-Tonelli"}
+If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
+:::
 
 :::{.proposition title="Measurable Slices"}
 Let $E$ be a measurable subset of $\RR^n$. Then
@@ -674,7 +1326,8 @@ m(E) = \int_{\RR^{n_1}} m(E_x) ~dx
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 $\implies$:
 
 - Let $f$ be measurable on $\RR^n$.
@@ -690,13 +1343,12 @@ $\impliedby$:
 - Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
 :::
 
-
 :::{.proposition title="Differentiating Under an Integral"}
 If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
 \[
 \dd{}{t} F(t)
 &\definedas \lim_{h \rightarrow 0} \int \frac{f(x, t+h)-f(x, t)}{h} d x \\
-&\equalsbecause{DCT} \int \dd{}{t} f(x, t) ~dx
+&\eq^{\scriptstyle\text{DCT}} \int \dd{}{t} f(x, t) ~dx
 .\]
 
 To justify passing the limit, let $h_k \to 0$ be any sequence and define
@@ -711,7 +1363,6 @@ Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_
 :::{.proposition title="Commuting Sums with Integrals (non-negative)"}
 If $f_n$ are non-negative and $\sum \int \abs f_n < \infty$, then $\sum \int f_n = \int \sum f_n$.
 :::
-
 
 :::{.proof}
 - Idea: MCT. 
@@ -732,12 +1383,39 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 - By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
 :::
 
-Lemma
-:   If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+:::{.proposition title="?"}
+If $f_k \in L^1$ and $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+:::
 
-Proof
-:   Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
-    Almost everywhere convergence: ?
+:::{.proof title="?"}
+Define $F_N = \sum^N f_k$ and $F = \lim_N F_N$, then $\norm{F_N}_1 \leq \sum^N \norm{f_k} < \infty$ so $F\in L^1$ and $\norm{F_N - F}_1 \to 0$ so the sum converges in $L^1$.
+Almost everywhere convergence: ?
+:::
+
+## Examples of (Non)Integrable Functions
+
+:::{.example title="Examples of integrable functions"}
+\envlist
+- $\int {1\over 1 + x^2} = \arctan(x) \converges{x\to\infty}\to \pi/2 < \infty$
+
+- Any bounded function (or continuous on a compact set, by EVT)
+- $\int_0^1 {1 \over \sqrt{x}} < \infty$
+- $\int_0^1 {1\over x^{1-\eps}} < \infty$
+- $\int_1^\infty {1\over x^{1+\eps}} < \infty$
+
+:::
+
+:::{.example title="Examples of non-integrable functions"}
+\envlist
+
+- $\int_0^1 {1\over x} = \infty$.
+- $\int_1^\infty {1\over x} = \infty$.
+- $\int_1^\infty {1 \over \sqrt{x}} = \infty$
+- $\int_1^\infty {1\over x^{1-\eps}} = \infty$
+- $\int_0^1 {1\over x^{1+\eps}} = \infty$
+
+:::
+
 
 ## $L^1$ Facts
 
@@ -749,7 +1427,8 @@ For $f\in L^+$,
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Obvious for simple functions:
   - If $f(x) = \sum_{j=1}^n c_j \chi_{E_j}$, then $\int f = 0$ iff for each $j$, either $c_j=0$ or $m(E_j) = 0$.
   - Since nonzero $c_j$ correspond to sets where $f\neq 0$, this says $m\qty{\theset{f\neq 0}} = 0$.
@@ -770,14 +1449,17 @@ For $f\in L^+$,
   .\]
 :::
 
-
 :::{.proposition title="Translation Invariance"}
-The Lebesgue integral is translation invariant, i.e. 
-\[ \int f(x) ~dx = \int f(x + h) ~dx \qtext{for any} h .\]
+The Lebesgue integral is translation invariant, i.e.
+\[
+\int f(x) ~dx = \int f(x + h) ~dx &&\text{for any} h
+.\]
+
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Let $E\subseteq X$; for characteristic functions, 
 \[
 \int_X \chi_E(x+h) 
@@ -790,42 +1472,48 @@ The Lebesgue integral is translation invariant, i.e.
 - Finally $\theset{\int \tau_h \phi} = \theset{\int \phi}$ by step 1, and the suprema are equal by uniqueness of limits.
 :::
 
+:::{.proposition title="Integrals distribute over disjoint sets"}
+If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
+:::
 
-Lemma (Integrals Distribute Over Disjoint Sets)
-: If $X \subseteq A \union B$, then $\int_X f \leq \int_A f + \int_{A^c} f$ with equality iff $X = A\disjoint B$.
+:::{.proposition title="Uniformly continuous $L^1$ functions vanish at infinity."}
+If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
+:::
 
-
-Lemma (Unif. Cts. L1 Functions Vanish at Infinity)
-: If $f \in L^1$ and $f$ is uniformly continuous, then $f(x) \converges{\abs{x}\to\infty}\to 0$.
-
-> Doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
+:::{.warnings}
+This doesn't hold for general $L^1$ functions, take any train of triangles with height 1 and summable areas.
+:::
 
 :::{.theorem title="Small Tails in $L^1$"}
 If $f\in L^1$, then for every $\varepsilon$ there exists a radius $R$ such that if $A = B_R(0)^c$, then $\int_A \abs f < \varepsilon$. 
 :::
 
 :::{.proof}
-\hfill
+\envlist
+
 - Approximate with compactly supported functions.
 - Take $g\converges{L_1}\to f$ with $g\in C_c$
 - Then choose $N$ large enough so that $g=0$ on $E\definedas B_N(0)$
 - Then \[ \int_E \abs{f} \leq \int_E\abs{f-g} + \int_E \abs{g}.\]
 :::
 
+:::{.proposition title="$L^1$ functions are absolutely continuous."}
+$m(E) \to 0 \implies \int_E f \to 0$.
+:::
 
-Lemma (\$L^1\$ Functions Have Absolutely Continuity)
-: $m(E) \to 0 \implies \int_E f \to 0$.
+:::{.proof title="?"}
+Approximate with compactly supported functions.
+Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
+:::
 
-Proof
-:   Approximate with compactly supported functions.
-    Take $g\converges{L_1}\to f$, then $g \leq M$ so $\int_E{f} \leq \int_E{f-g} + \int_E g \to 0 + M \cdot m(E) \to 0$.
+:::{.proposition title="$L^1$ functions are finite almost everywhere."}
+If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
+:::
 
-Lemma (\$L^1\$ Functions Are Finite Almost Everywhere)
-: If $f\in L^1$, then $m(\theset{f(x) = \infty}) = 0$.
-
-Proof 
-:   Idea: Split up domain
-    Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
+:::{.proof title="?"}
+Idea: Split up domain
+Let $A = \theset{f(x) = \infty}$, then $\infty > \int f = \int_A f + \int_{A^c} f = \infty \cdot m(A) + \int_{A^c} f \implies m(X) =0$.
+:::
 
 :::{.theorem title="Continuity in $L^1$"}
 \[ 
@@ -833,9 +1521,9 @@ Proof
 \]
 :::
 
-
 :::{.proof}
-\hfill
+\envlist
+
 Approximate with compactly supported functions.
 Take $g\converges{L_1}\to f$ with $g\in C_c$.
 \[
@@ -848,491 +1536,474 @@ Take $g\converges{L_1}\to f$ with $g\in C_c$.
 which follows because we can enlarge the support of $g$ to $K$ where the integrand is zero on $K^c$, then apply uniform continuity on $K$.
 :::
 
+:::{.proposition title="Integration by parts, special case"}
+\[
+F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
+\implies
+\int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
+.\]
 
-Proposition (Integration by Parts, Special Case)
-:   \[
-    F(x):=\int_{0}^{x} f(y) d y \quad \text { and } \quad G(x):=\int_{0}^{x} g(y) d y \\ 
-    \implies
-    \int_{0}^{1} F(x) g(x) d x=F(1) G(1)-\int_{0}^{1} f(x) G(x) d x
-    .\]
+:::
 
-Proof 
-: Fubini-Tonelli, and sketch region to change integration bounds.
+:::{.proof title="?"}
+Fubini-Tonelli, and sketch region to change integration bounds.
+:::
 
-Theorem (Lebesgue Density)
-: \[
-  A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
-  \implies \norm{A_h(f) - f} \converges{h\to 0}\to 0
-  .\]
+:::{.theorem title="Lebesgue Density"}
+\[
+A_{h}(f)(x):=\frac{1}{2 h} \int_{x-h}^{x+h} f(y) d y
+\implies \norm{A_h(f) - f} \converges{h\to 0}\to 0
+.\]
+:::
 
-Proof
-: Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
+:::{.proof title="?"}
+Fubini-Tonelli, and sketch region to change integration bounds, and continuity in $L^1$.
+:::
 
+## Lp Facts
 
+:::{.proposition title="Dense subspaces of $L^2(I)$ "}
+The following are dense subspaces of $L^2([0, 1])$:
 
-## $L^p$ Spaces
+- Simple functions
+- Step functions
+- $C_0([0, 1])$
+- Smoothly differentiable functions $C_0^\infty([0, 1])$
+- Smooth compactly supported functions $C_c^\infty$
+:::
 
-Lemma
-:   The following are dense subspaces of $L^2([0, 1])$:
-
-    - Simple functions
-    - Step functions
-    - $C_0([0, 1])$
-    - Smoothly differentiable functions $C_0^\infty([0, 1])$
-    - Smooth compactly supported functions $C_c^\infty$
-Theorem
-:
+:::{.theorem title="?"}
 \[
 m(X) < \infty \implies \lim_{p\to\infty} \norm{f}_p = \norm{f}_\infty 
 .\]
-
-Proof
-:   \hfill
-    - Let $M = \norm{f}_\infty$.
-    - For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
-    - Then $m(S) > 0$ and
-
-    \[
-    \pnorm{f}p 
-    &= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
-    &\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
-    &\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
-    &\implies \liminf_p \pnorm{f}p \geq M
-    .\]
-
-    We also have
-    \[
-    \pnorm{f}p 
-    &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
-    &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
-    &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
-    &\implies \limsup_p \pnorm{f}p \leq M \qed
-    .\]
-
-
-Theorem (Dual Lp Spaces)
-:   For $p\neq \infty$, $(L^p)\dual \cong L^q$.
-
-Proof (p=1)
-: ?
-
-Proof (p=2)
-: Use Riesz Representation for Hilbert spaces.
- 
-:::{.proof}
-$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective. 
 :::
+
+:::{.proof title="?"}
+Let $M = \norm{f}_\infty$.
+
+- For any $L < M$, let $S = \theset{\abs{f} \geq L}$. 
+- Then $m(S) > 0$ and
+
+\[
+\pnorm{f}p 
+&= \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+&\geq \left( \int_S \abs{f}^p \right)^{\frac 1 p} \\
+&\geq L ~m(S)^{\frac 1 p} \converges{p\to\infty}\to L \\
+&\implies \liminf_p \pnorm{f}p \geq M
+.\]
+
+We also have
+\[
+\pnorm{f}p 
+&=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
+&\leq \left( \int_X M^p \right)^{\frac 1 p} \\
+&= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
+&\implies \limsup_p \pnorm{f}p \leq M \qed
+.\]
+
+:::
+
+:::{.theorem title="Duals for $L^p$ spaces"}
+For $1\leq p< \infty$, $(L^p)\dual \cong L^q$.
+:::
+
+:::{.proof title="$p=1$ case"}
+?
+:::
+
+\todo[inline]{todo}
+
+:::{.proof title="$p=2$ case"}
+Use Riesz Representation for Hilbert spaces.
+:::
+
+:::{.proposition title="$L^1$ is not quite the dual of $L^\infty$."}
+$L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective.
+:::
+
+
+
+
 
 # Fourier Transform and Convolution
 
 ## The Fourier Transform
 
-Definition (Convolution)
-: $$f * g(x)=\int f(x-y) g(y) d y .$$
+:::{.proposition title="?"}
+If $\hat f = \hat g$ then $f=g$ almost everywhere.
+:::
 
+:::{.proposition title="Riemann-Lebesgue: Fourier transforms have small tails."}
+\[
+f\in L^1 \implies
+\hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
+,\]
 
-Definition (The Fourier Transform)
-:   \hfill
-    \begin{align*}
-    \hat f(\xi) = \int f(x) ~e^{2\pi i x \cdot \xi} ~dx
-    .\end{align*}
+if $f \in L^1$, then $\hat f$ is continuous and bounded.
+:::
 
-Lemma
-: If $\hat f = \hat g$ then $f=g$ almost everywhere.
+:::{.proof title="?"}
+\envlist
 
-Lemma (Riemann-Lebesgue\: Fourier transforms have small tails)
-:   \hfill
+- Boundedness:
+\[
+\abs{\hat f(\xi)} 
+\leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} 
+= \pnorm{f}{1}
+.\]
+
+- Continuity:
+- $\abs{\hat{f}(\xi_{n}) - \hat{f} (\xi) }$
+- Apply DCT to show $a\converges{n\to\infty}\to 0$.
+
+:::
+   
+:::{.theorem title="Fourier Inversion"}
+\[
+f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
+.\]
+
+:::
+
+:::{.warnings}
+Fubini-Tonelli does not work here!
+:::
     
-    \begin{align*}
-    f\in L^1 \implies
-    \hat{f}(\xi) \rightarrow 0 \text { as }|\xi| \rightarrow \infty
-    ,\end{align*}
+:::{.proof title="?"}
+Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
 
-    if $f \in L^1$, then $\hat f$ is continuous and bounded.
+- Take the modified integral:
 
-Proof
-:   \hfill 
-    - Boundedness:
-    \begin{align*}
-    \abs{\hat f(\xi)} 
-    \leq \int \abs{f}\cdot \abs{e^{2\pi i x\cdot \xi }} 
-    = \pnorm{f}{1}
-    .\end{align*}
+\[
+I_{t}(x)
+&= \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
+&= \int \hat f(\xi) \phi(\xi) \\
+&= \int f(\xi) \hat \phi(\xi) \\
+&= \int f(\xi) \widehat{\hat g}(\xi - x) \\
+&= \int f(\xi) g_{t}(x - \xi)  ~d\xi \\
+&= \int f(y-x) g_{t}(y) ~dy  \quad (\xi = y-x)\\
+&= (f \ast g_{t}) \\
+&\to f \text{ in $L^1$ as }t \to 0
+.\]
 
-    - Continuity:
-      - $\abs{\hat{f}(\xi_n) - \hat{f} (\xi) }$
-      - Apply DCT to show $a\converges{n\to\infty}\to 0$.
+- We also have
+\[
+\lim_{t\to 0} I_{t}(x)
+&= 
+\lim_{t\to 0} \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
+&= 
+\lim_{t\to 0} \int \hat f(\xi) \phi(\xi) \\
+&=_{DCT} 
+\int \hat f(\xi) \lim_{t\to 0} \phi(\xi) \\
+&=
+\int \hat f(\xi) ~e^{2\pi i x \cdot \xi} \\
+.\]
 
+- So 
+\[
+I_{t}(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\pnorm{I_{t}(x) - f(x)}{1} \to 0
+.\]
 
-Theorem (Fourier Inversion)
-:   \hfill
-    \begin{align*}
-    f(x)=\int_{\mathbb{R}^{n}} \widehat{f}(x) e^{2 \pi i x \cdot \xi} d \xi
-    .\end{align*}
+- So there is a subsequence $I_{t_{n}}$ such that $I_{t_{n}}(x) \to f(x)$ almost everywhere
+- Thus $f(x) = \int \hat f(\xi) ~e^{2\pi i x \cdot \xi}$ almost everywhere by uniqueness of limits. 
 
-Proof
-:   Idea: Fubini-Tonelli doesn't work directly, so introduce a convergence factor, take limits, and use uniqueness of limits.
+:::
 
-    - Take the modified integral:
-    
-    \begin{align*}
-    I_t(x)
-    &= \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
-    &= \int \hat f(\xi) \phi(\xi) \\
-    &= \int f(\xi) \hat \phi(\xi) \\
-    &= \int f(\xi) \widehat{\hat g}(\xi - x) \\
-    &= \int f(\xi) g_t(x - \xi)  ~d\xi \\
-    &= \int f(y-x) g_t(y) ~dy  \quad (\xi = y-x)\\
-    &= (f \ast g_t) \\
-    &\to f \text{ in $L^1$ as }t \to 0
-    .\end{align*}
-
-    - We also have
-    \begin{align*}
-    \lim_{t\to 0} I_t(x)
-    &= 
-    \lim_{t\to 0} \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~e^{-\pi t^2 \abs{\xi}^2} \\
-    &= 
-    \lim_{t\to 0} \int \hat f(\xi) \phi(\xi) \\
-    &=_{DCT} 
-    \int \hat f(\xi) \lim_{t\to 0} \phi(\xi) \\
-    &=
-    \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} \\
-    .\end{align*}
-
-    - So 
-    \begin{align*}
-    I_t(x) \to \int \hat f(\xi) ~e^{2\pi i x \cdot \xi} ~\text{ pointwise and }~\pnorm{I_t(x) - f(x)}{1} \to 0
-    .\end{align*}
-
-    - So there is a subsequence $I_{t_n}$ such that $I_{t_n}(x) \to f(x)$ almost everywhere
-    - Thus $f(x) = \int \hat f(\xi) ~e^{2\pi i x \cdot \xi}$ almost everywhere by uniqueness of limits. 
-
-
-Proposition (Eigenfunction of the Fourier Transform)
-: \hfill
-  \begin{align*}
-  g(x) \definedas e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi) \qtext{and}
-  \hat g_t(x) = g(tx) = e^{-\pi t^2 \abs{x}^2}
-  .\end{align*}
-
-Proposition (Properties of the Fourier Transform)
-: 
-\begin{align*}
-??? & ??
-.\end{align*}
+:::{.proposition title="Eigenfunction of the Fourier transform"}
+\[
+g(x) \da e^{-\pi \abs{t}^2} \implies \hat g(\xi) = g(\xi) \qtext{and}
+\hat g_{t}(x) = g(tx) = e^{-\pi t^2 \abs{x}^2}
+.\]
+:::
 
 ## Approximate Identities 
 
-Definition (Dilation)
-: 
-\begin{align*}
-\phi_{t}(x) = t^{-n} \phi\left(t^{-1} x\right)
-.\end{align*}
+:::{.example title="of an approximation to the identity."}
+\[
+\phi(x) \da e^{-\pi x^2}
+.\]
 
+:::
 
-Definition (Approximation to the Identity)
-:   For $\phi\in L^1$, the dilations satisfy $\int \phi_t = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an *approximate identity*. 
-    
-    Example: $\phi(x) = e^{-\pi x^2}$
+:::{.theorem title="Convolving against an approximate identity converges in $L^1$."}
+\[
+\pnorm{f \ast \phi_{t} - f}{1} \converges{t\to 0}\to 0
+.\]
 
+:::
 
-Theorem (Convolution Against Approximate Identities Converge in \$L^1\$)
-: 
-\begin{align*}
-\pnorm{f \ast \phi_t - f}{1} \converges{t\to 0}\to 0
-.\end{align*}
-
-
-Proof
-: 
-\begin{align*}
-\norm{f - f\ast \phi_t}_1 
-&= \int f(x) - \int f(x-y)\phi_t(y) ~dy dx \\
-&= \int f(x)\int \phi_t(y) ~dy - \int f(x-y)\phi_t(y) ~dy dx \\
-&= \int \int \phi_t(y)[f(x) - f(x-y)] ~dy dx \\
-&=_{FT} \int \int \phi_t(y)[f(x) - f(x-y)] ~dx dy \\
-&= \int \phi_t(y) \int f(x) - f(x-y) ~dx dy \\
-&= \int \phi_t(y) \norm{f - \tau_y f}_1 dy \\
-&= \int_{y < \delta} \phi_t(y) \norm{f - \tau_y f}_1 dy  +
-\int_{y \geq \delta} \phi_t(y) \norm{f - \tau_y f}_1 dy \\
-&\leq \int_{y < \delta} \phi_t(y) \varepsilon +
-\int_{y \geq \delta} \phi_t(y) \left( \norm{f}_1 + \norm{\tau_y f}_1 \right) dy \quad\text{by continuity in } L^1 \\
+:::{.proof title="?"}
+\[
+\norm{f - f\ast \phi_{t}}_1 
+&= \int f(x) - \int f(x-y)\phi_{t}(y) ~dy dx \\
+&= \int f(x)\int \phi_{t}(y) ~dy - \int f(x-y)\phi_{t}(y) ~dy dx \\
+&= \int \int \phi_{t}(y)[f(x) - f(x-y)] ~dy dx \\
+&=_{FT} \int \int \phi_{t}(y)[f(x) - f(x-y)] ~dx dy \\
+&= \int \phi_{t}(y) \int f(x) - f(x-y) ~dx dy \\
+&= \int \phi_{t}(y) \norm{f - \tau_{y} f}_1 dy \\
+&= \int_{y < \delta} \phi_{t}(y) \norm{f - \tau_{y} f}_1 dy  +
+\int_{y \geq \delta} \phi_{t}(y) \norm{f - \tau_{y} f}_1 dy \\
+&\leq \int_{y < \delta} \phi_{t}(y) \varepsilon +
+\int_{y \geq \delta} \phi_{t}(y) \left( \norm{f}_1 + \norm{\tau_{y} f}_1 \right) dy \quad\text{by continuity in } L^1 \\
 &\leq \varepsilon + 
-2\norm{f}_1 \int_{y \geq \delta} \phi_t(y) dy \\
-&\leq \varepsilon + 2\norm{f}_1 \cdot \varepsilon \quad\text{since $\phi_t$ has small tails} \\
+2\norm{f}_1 \int_{y \geq \delta} \phi_{t}(y) dy \\
+&\leq \varepsilon + 2\norm{f}_1 \cdot \varepsilon \quad\text{since $\phi_{t}$ has small tails} \\
 &\converges{\eps\to 0}\to 0 
-.\end{align*}
+.\]
 
-Theorem (Convolutions Vanish at Infinity)
-: 
-\begin{align*}
+:::
+
+:::{.theorem title="Convolutions vanish at infinity"}
+\[
 f,g \in L^1 \text{ and  bounded}  \implies \lim_{|x| \rightarrow \infty} (f * g)(x) = 0
-.\end{align*}
+.\]
 
-Proof
-:   \hfill
-    
-    - Choose $M \geq f,g$.
-    
-    - By small tails, choose $N$ such that $\int_{B_N^c} \abs{f}, \int_{B_n^c} \abs{g} < \varepsilon$
+:::
 
-    - Note 
-    \begin{align*}
-    \abs{f \ast g} \leq \displaystyle\int \abs{f(x-y)} ~\abs{g(y)} ~dy \definedas I
-    .\end{align*}
+:::{.proof title="?"}
 
-    - Use $\abs{x} \leq \abs{x-y} + \abs{y}$, take $\abs{x}\geq 2N$ so either
-    \begin{align*}
-    \abs{x-y} \geq N \implies I \leq \int_{\theset{x-y \geq N}} \abs{f(x-y)}M ~dy\leq \varepsilon M \to 0
-    \end{align*}
-      then
-    \begin{align*}
-      \abs{y} \geq N \implies I \leq \int_{\theset{y \geq N}} M\abs{g(y)} ~dy\leq  M \varepsilon \to 0
-    .\end{align*}
+- Choose $M \geq f,g$.
 
+- By small tails, choose $N$ such that $\int_{B_{N}^c} \abs{f}, \int_{B_{n}^c} \abs{g} < \varepsilon$
 
-Proposition (Young's Inequality?)
-:
-\begin{align*}
-{1\over r} \definedas {1\over p} + {1\over q} - 1 \implies \pnorm{f \ast g}{r} \leq \pnorm{f}{p} \norm{g}{q}
-.\end{align*}
+- Note 
+\[
+\abs{f \ast g} \leq \displaystyle\int \abs{f(x-y)} ~\abs{g(y)} ~dy \da I
+.\]
 
-Corollary
-: Take $q = 1$ to obtain
-\begin{align*}
+- Use $\abs{x} \leq \abs{x-y} + \abs{y}$, take $\abs{x}\geq 2N$ so either
+\[
+\abs{x-y} \geq N \implies I \leq \int_{\theset{x-y \geq N}} \abs{f(x-y)}M ~dy\leq \varepsilon M \to 0
+\]
+  then
+\[
+\abs{y} \geq N \implies I \leq \int_{\theset{y \geq N}} M\abs{g(y)} ~dy\leq  M \varepsilon \to 0
+.\]
+
+:::
+
+:::{.proposition title="Corollary of Young's inequality"}
+Take $q = 1$ in Young's inequality to obtain
+\[
 \pnorm{f \ast g}p \leq \norm{f}p \norm{g}1
-.\end{align*}
+.\]
 
-Corollary
-: If $f, g \in L^1$ then $f\ast g\in L^1$.
+:::
+
+:::{.proposition title="$L^1$ is closed under convolution."}
+If $f, g \in L^1$ then $f\ast g\in L^1$.
+:::
+
+
 
 
 # Functional Analysis
 
-## Definitions
-
-Notation: $H$ denotes a Hilbert space.
-
-Definition (Orthonormal Sequence)
-: ?
-
-Definition (Basis)
-: A set $\theset{u_n}$ is a *basis* for a Hilbert space $\mch$ iff it is dense in $\mch$.
-
-Definition (Complete)
-: A collection of vectors $\theset{u_n}\subset H$ is *complete* iff $\inner{x}{u_n} = 0$ for all $n \iff x = 0$ in $H$.
-
-Definition (Dual Space)
-: 
-\begin{align*}
-X\dual \definedas \theset{L :X\to \CC \suchthat L \text{ is continuous }}
-.\end{align*}
-
-Definition
-:   A map $L: X \to \CC$ is a linear functional iff
-    \begin{align*}
-    L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
-    .\end{align*}
-
-Definition (Operator Norm)
-: 
-\begin{align*}
-\norm{L}_{X\dual} \definedas \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
-.\end{align*}
-
-Definition (Banach Space)
-: A complete normed vector space.
-
-Definition (Hilbert Space)
-: An inner product space which is a Banach space under the induced norm.
-
 ## Theorems
 
-Theorem (Bessel's Inequality)
-:   For any orthonormal set $\theset{u_n} \subseteq \mch$ a Hilbert space (not necessarily a basis),
-    \begin{align*}
-    \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-    \end{align*}
-    and thus
-    \begin{align*}
-    \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-    .\end{align*}
+:::{.theorem title="Bessel's Inequality"}
+For any orthonormal set $\theset{u_{n}} \subseteq \mch$ a Hilbert space (not necessarily a basis),
+\[
+\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}=\|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+\]
+and thus
+\[
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+.\]
+
+:::
+
+:::{.proof title="of Bessel's inequality"}
+\envlist
+
+- Let $S_{N} = \sum_{n=1}^N \inner{x}{u_{n}} u_{n}$
+\[
+\norm{x - S_{N}}^2 
+&= \inner{x - S_{n}}{x - S_{N}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re\inner{x}{S_{N}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \inner{x}{\sum_{n=1}^N \inner{x}{u_{n}}u_{n}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \sum_{n=1}^N \inner{x}{ \inner{x}{u_{n}}u_{n}} \\
+&= \norm{x}^2 + \norm{S_{N}}^2 - 2\Re \sum_{n=1}^N \overline{\inner{x}{u_{n}}}\inner{x}{u_{n}} \\
+&= \norm{x}^2 + \left\|\sum_{n=1}^N \inner{x}{u_{n}} u_{n}\right\|^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+&= \norm{x}^2 + \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2
+.\]
+
+- By continuity of the norm and inner product, we have
+\[
+\lim_{N\to\infty} \norm{x - S_{N}}^2 
+&= \lim_{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2 \\
+\implies \norm{x - \lim_{N\to\infty} S_{N}}^2 &= \norm{x}^2 - \lim_{N\to\infty}\sum_{n=1}^N \abs{\inner{x}{u_{n}}}^2\\
+\implies 
+\norm{x - \sum_{n=1}^\infty \inner{x}{u_{n}} u_{n}}^2 &= \norm{x}^2 - 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2
+.\]
+
+- Then noting that $0 \leq \norm{x - S_{N}}^2$, 
+\[
+0 &\leq 
+\norm{x}^2 - 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2 \\
+\implies 
+\sum_{n=1}^\infty \abs{\inner{x}{u_{n}}}^2 &\leq 
+\norm{x}^2 \qed
+.\]
 
 
-Proof
-:   \hfill 
+:::
 
-    - Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$
-    \begin{align*}
-    \norm{x - S_N}^2 
-    &= \inner{x - S_n}{x - S_N} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\inner{x}{S_N} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \inner{x}{\sum_{n=1}^N \inner{x}{u_n}u_n} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \inner{x}{ \inner{x}{u_n}u_n} \\
-    &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \overline{\inner{x}{u_n}}\inner{x}{u_n} \\
-    &= \norm{x}^2 + \left\|\sum_{n=1}^N \inner{x}{u_n} u_n\right\|^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    &= \norm{x}^2 + \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 - 2 \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    &= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
-    .\end{align*}
+:::{.theorem title="Riesz Representation for Hilbert Spaces"}
+If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
+\[
+\forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
+.\]
+:::
 
-    - By continuity of the norm and inner product, we have
-    \begin{align*}
-    \lim_{N\to\infty} \norm{x - S_N}^2 
-    &= \lim_{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-    \implies \norm{x - \lim_{N\to\infty} S_N}^2 &= \norm{x}^2 - \lim_{N\to\infty}\sum_{n=1}^N \abs{\inner{x}{u_n}}^2\\
-    \implies 
-    \norm{x - \sum_{n=1}^\infty \inner{x}{u_n} u_n}^2 &= \norm{x}^2 - 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2
-    .\end{align*}
+:::{.proof title="?"}
+\envlist
 
-    - Then noting that $0 \leq \norm{x - S_N}^2$, 
-    \begin{align*}
-    0 &\leq 
-    \norm{x}^2 - 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2 \\
-    \implies 
-    \sum_{n=1}^\infty \abs{\inner{x}{u_n}}^2 &\leq 
-    \norm{x}^2 \qed
-    .\end{align*}
+- Define $M \da \ker \Lambda$.
+- Then $M$ is a closed subspace and so $H = M \oplus M^\perp$
+- There is some $z\in M^\perp$ such that $\norm{z} = 1$.
+- Set $u \da \Lambda(x) z - \Lambda(z) x$
+- Check 
+
+$$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M$$
+
+- Compute
+
+\[
+0 &= \inner{u}{z} \\ 
+&= \inner{\Lambda(x) z - \Lambda(z) x}{z} \\
+&= \inner{\Lambda(x) z}{z} - \inner{\Lambda(z) x}{z} \\
+&= \Lambda(x) \inner{z}{z} - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) \norm{z}^2 - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) - \Lambda(z) \inner{x}{z} \\
+&= \Lambda(x) -  \inner{x}{\overline{\Lambda(z)} z}
+,\]
+
+- Choose $y \da \overline{\Lambda(z)} z$.
+- Check uniqueness:
+
+\[
+\inner{x}{y} &= \inner{x}{y'} \quad\forall x \\
+\implies  \inner{x}{y-y'} &= 0 \quad\forall x \\
+\implies \inner{y-y'}{y-y'} &= 0 \\
+\implies \norm{y-y'} &= 0 \\
+\implies y-y' &= \vector 0 \implies y = y'
+.\]
 
 
+:::
 
+:::{.theorem title="Functionals are continuous if and only if bounded"}
+Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
 
-Theorem (Riesz Representation for Hilbert Spaces)
-:   If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
-    \begin{align*}
-    \forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
-    .\end{align*}
+1. $L$ is continuous
+2. $L$ is continuous at zero
+3. $L$ is bounded, i.e. $\exists c\geq 0 \suchthat \abs{L(x)} \leq c \norm{x}$ for all $x\in H$
+:::
 
-Proof
-:   \hfill
-    - Define $M \definedas \ker \Lambda$.
-    - Then $M$ is a closed subspace and so $H = M \oplus M^\perp$
-    - There is some $z\in M^\perp$ such that $\norm{z} = 1$.
-    - Set $u \definedas \Lambda(x) z - \Lambda(z) x$
-    - Check 
+:::{.proof title="?"}
+$2 \implies 3$:
+Choose $\delta < 1$ such that 
+$$
+\norm{x} \leq \delta \implies \abs{L(x)} < 1.
+$$
+Then
+\[
+\abs{L(x)} 
+&= \abs{L\left( \frac{\norm x}{\delta} \frac{\delta }{\norm x} x \right)} \\
+&= \frac{\norm x}{\delta} ~\abs{L\left( \delta \frac{x }{\norm x} \right)} \\
+&\leq \frac{\norm x}{\delta} 1
+,\]
+so we can take $c = \frac 1 \delta$. $\qed$
 
-    $$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \Lambda(z) \Lambda(x) = 0 \implies u\in M$$
+$3 \implies 1$:
 
-    - Compute
+We have $\abs{L(x-y)} \leq c\norm{x-y}$, so given $\varepsilon \geq 0$ simply choose $\delta = \frac \varepsilon c$.
 
-    \begin{align*}
-    0 &= \inner{u}{z} \\ 
-    &= \inner{\Lambda(x) z - \Lambda(z) x}{z} \\
-    &= \inner{\Lambda(x) z}{z} - \inner{\Lambda(z) x}{z} \\
-    &= \Lambda(x) \inner{z}{z} - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) \norm{z}^2 - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) - \Lambda(z) \inner{x}{z} \\
-    &= \Lambda(x) -  \inner{x}{\overline{\Lambda(z)} z}
-    ,\end{align*}
+:::
 
-    - Choose $y \definedas \overline{\Lambda(z)} z$.
-    - Check uniqueness:
+:::{.theorem title="The operator norm is a norm"}
+If $H$ is a Hilbert space, then $(H\dual, \norm{\wait}_{\text{op}})$ is a normed space.
+:::
 
-    \begin{align*}
-    \inner{x}{y} &= \inner{x}{y'} \quad\forall x \\
-    \implies  \inner{x}{y-y'} &= 0 \quad\forall x \\
-    \implies \inner{y-y'}{y-y'} &= 0 \\
-    \implies \norm{y-y'} &= 0 \\
-    \implies y-y' &= \vector 0 \implies y = y'
-    .\end{align*}
+:::{.proof title="?"}
+The only nontrivial property is the triangle inequality, but
+\[
+\pnorm{L_{1} + L_{2}}{\op} = \sup \abs{L_{1}(x) + L_{2}(x)} \leq \sup \abs{L_{1}(x)} + \abs{\sup L_{2}(x)} = \pnorm{L_{1}}\op + \pnorm{L_{2}}\op
+.\]
 
-Theorem (Continuous iff Bounded)
-:   Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
+:::
 
-    1. $L$ is continuous
-    2. $L$ is continuous at zero
-    3. $L$ is bounded, i.e. $\exists c\geq 0 \suchthat \abs{L(x)} \leq c \norm{x}$ for all $x\in H$
+:::{.theorem title="The operator norm on $X\dual$ yields a Banach space"}
+If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
+:::
 
-Proof
-:   \hfill
-    $2 \implies 3$:
-    Choose $\delta < 1$ such that 
-    $$
-    \norm{x} \leq \delta \implies \abs{L(x)} < 1.
-    $$
-    Then
-    \begin{align*}
-    \abs{L(x)} 
-    &= \abs{L\left( \frac{\norm x}{\delta} \frac{\delta }{\norm x} x \right)} \\
-    &= \frac{\norm x}{\delta} ~\abs{L\left( \delta \frac{x }{\norm x} \right)} \\
-    &\leq \frac{\norm x}{\delta} 1
-    ,\end{align*}
-    so we can take $c = \frac 1 \delta$. $\qed$
+:::{.proof title="?"}
+\envlist
 
-    $3 \implies 1$:
+- Let $\theset{L_{n}}$ be Cauchy in $X\dual$.
 
-    We have $\abs{L(x-y)} \leq c\norm{x-y}$, so given $\varepsilon \geq 0$ simply choose $\delta = \frac \varepsilon c$.
+- Then for all $x\in C$, $\theset{L_{n}(x)} \subset \CC$ is Cauchy and converges to something denoted $L(x)$.
 
-Theorem (Operator Norm is a Norm)
-: If $H$ is a Hilbert space, then $(H\dual, \norm{\wait}_{\text{op}})$ is a normed space.
+- Need to show $L$ is continuous and $\norm{L_{n} - L} \to 0$.
 
-Proof
-: The only nontrivial property is the triangle inequality, but
-  \begin{align*}
-  \pnorm{L_1 + L_2}{\op} = \sup \abs{L_1(x) + L_2(x)} \leq \sup \abs{L_1(x)} + \abs{\sup L_2(x)} = \pnorm{L_1}\op + \pnorm{L_2}\op
-  .\end{align*}
+- Since $\theset{L_{n}}$ is Cauchy in $X\dual$, choose $N$ large enough so that
+\[
+n, m \geq N \implies \norm{L_{n} - L_{m}} < \varepsilon \implies \abs{L_{m}(x) - L_{n}(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1
+.\]
 
-Theorem (Completeness in Operator Norm)
-: If $X$ is a normed vector space, then $(X\dual, \norm{\wait}_{\text{op}})$ is a Banach space.
+- Take $n\to \infty$ to obtain
+\[m \geq N 
+&\implies \abs{L_{m}(x) - L(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1\\
+&\implies \norm{L_{m} - L} < \varepsilon \to 0
+.\]
 
-Proof
-:   \hfill
-    - Let $\theset{L_n}$ be Cauchy in $X\dual$.
-    
-    - Then for all $x\in C$, $\theset{L_n(x)} \subset \CC$ is Cauchy and converges to something denoted $L(x)$.
-    
-    - Need to show $L$ is continuous and $\norm{L_n - L} \to 0$.
-    
-    - Since $\theset{L_n}$ is Cauchy in $X\dual$, choose $N$ large enough so that
-    \begin{align*}
-    n, m \geq N \implies \norm{L_n - L_m} < \varepsilon \implies \abs{L_m(x) - L_n(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1
-    .\end{align*}
-    
-    - Take $n\to \infty$ to obtain
-    \begin{align*}m \geq N 
-    &\implies \abs{L_m(x) - L(x)} < \varepsilon \quad \forall x \suchthat \norm{x} = 1\\
-    &\implies \norm{L_m - L} < \varepsilon \to 0
-    .\end{align*}
-    
-    - Continuity:
-    \begin{align*}
-    \abs{L(x)} &= \abs{L(x) - L_n(x) + L_n(x)} \\
-    &\leq  \abs{L(x) - L_n(x)} + \abs{L_n(x)} \\
-    &\leq \varepsilon \norm{x} + c\norm{x} \\
-    &= (\varepsilon + c)\norm{x} \qed
-    .\end{align*}
+- Continuity:
+\[
+\abs{L(x)} &= \abs{L(x) - L_{n}(x) + L_{n}(x)} \\
+&\leq  \abs{L(x) - L_{n}(x)} + \abs{L_{n}(x)} \\
+&\leq \varepsilon \norm{x} + c\norm{x} \\
+&= (\varepsilon + c)\norm{x} \qed
+.\]
 
-Theorem (Riesz-Fischer)
-:   Let $U = \theset{u_n}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
+:::
 
-    1. There is an isometric surjection
+:::{.theorem title="Riesz-Fischer"}
+Let $U = \theset{u_{n}}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
 
-    \begin{align*}
-    \mathcal{H} &\to \ell^2(\NN) \\
-    \vector x &\mapsto \theset{\inner{\vector x}{\vector u_n}}_{n=1}^\infty
-    \end{align*}
+1. There is an isometric surjection
 
-    i.e. if $\theset{a_n} \in \ell^2(\NN)$, so $\sum \abs{a_n}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
-    $$
-    a_n = \inner{\vector x}{\vector u_n} \quad \forall n.
-    $$
+\[
+\mathcal{H} &\to \ell^2(\NN) \\
+\vector x &\mapsto \theset{\inner{\vector x}{\vector u_{n}}}_{n=1}^\infty
+\]
 
-    2. $\vector x$ can be chosen such that
-    $$
-    \norm{\vector x}^2 = \sum \abs{a_n}^2
-    $$
+i.e. if $\theset{a_{n}} \in \ell^2(\NN)$, so $\sum \abs{a_{n}}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
+$$
+a_{n} = \inner{\vector x}{\vector u_{n}} \quad \forall n.
+$$
 
-    > Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_n}$ is **complete**, i.e. $\inner{\vector x}{\vector u_n} = 0$ for all $n$ implies $\vector x = \vector 0$.
+2. $\vector x$ can be chosen such that
+$$
+\norm{\vector x}^2 = \sum \abs{a_{n}}^2
+$$
 
-Proof
-:   \hfill
-    
-    - Given $\theset{a_n}$, define $S_N = \sum^N a_n \vector u_n$.
-    - $S_N$ is Cauchy in $\mathcal{H}$ and so $S_N \to \vector x$ for some $\vector x \in \mathcal{H}$.
-    - $\inner{x}{u_n} = \inner{x - S_N}{u_n} + \inner{S_N}{u_n} \to a_n$
-    - By construction, $\norm{x-S_N}^2 = \norm{x}^2 - \sum^N \abs{a_n}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_n}^2$.
+> Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_{n}}$ is **complete**, i.e. $\inner{\vector x}{\vector u_{n}} = 0$ for all $n$ implies $\vector x = \vector 0$.
+
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Given $\theset{a_{n}}$, define $S_{N} = \sum^N a_{n} \vector u_{n}$.
+- $S_{N}$ is Cauchy in $\mathcal{H}$ and so $S_{N} \to \vector x$ for some $\vector x \in \mathcal{H}$.
+- $\inner{x}{u_{n}} = \inner{x - S_{N}}{u_{n}} + \inner{S_{N}}{u_{n}} \to a_{n}$
+- By construction, $\norm{x-S_{N}}^2 = \norm{x}^2 - \sum^N \abs{a_{n}}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_{n}}^2$.
+
+:::
 
 
 
@@ -1617,21 +2288,23 @@ m\qty{\theset{f\inv(1)}}
 ,\end{align*}
 and characterize the functions of each type
 
-Proof
-:   \hfill
-    \begin{align*}
-    \int f^p 
-    &= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
-    &= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
-    &= \int_{x < 1} f^p + m(\theset{f = 1}) + \int_{x > 1} f^p \\
-    &\converges{p\to\infty}\to 0  + m(\theset{f = 1}) + 
-    \begin{cases} 
-    0 & m(\theset{x\geq 1}) = 0 \\ 
-    \infty & m(\theset{x\geq 1}) > 0.
-    \end{cases}
-    \end{align*} 
 
-\todo{Justify passing limit into integrals.}
+:::{.solution}
+\begin{align*}
+\int f^p 
+&= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
+&= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
+&= \int_{x < 1} f^p + m(\theset{f = 1}) + \int_{x > 1} f^p \\
+&\converges{p\to\infty}\to 0  + m(\theset{f = 1}) + 
+\begin{cases} 
+0 & m(\theset{x\geq 1}) = 0 \\ 
+\infty & m(\theset{x\geq 1}) > 0.
+\end{cases}
+\end{align*} 
+
+:::
+
+<!--\todo{Justify passing limit into integrals.}-->
 
 
 ## 5: Dual Spaces
@@ -1723,128 +2396,139 @@ b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n
 
 Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation theorem: for any $\eps> 0$ there exists a polynomial $P$ such that $\norm{f - P}_{\infty} < \eps$.
 
-# Inequalities and Equalities
+# Common Inequalities
 
+:::{.proposition title="Reverse Triangle Inequality"}
+\[  
+\abs{\norm{x} - \norm{y}} \leq \norm{x - y}
+.\]
 
-Proposition (Reverse Triangle Inequality)
-:	\hfill
-  \[  
-  \abs{\norm{x} - \norm{y}} \leq \norm{x - y}
-  .\]
+:::
 
-Proposition (Chebyshev's Inequality)
-:	\hfill
-  \[  
-  \mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
-  .\]
+:::{.proposition title="Chebyshev's Inequality"}
+\[  
+\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
+.\]
 
-Proposition (Holder's Inequality When Surjective)
-:	\hfill
-  \[  
-  \frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
-  .\]
+:::
 
-*Application:*
+:::{.proposition title="Holder's Inequality"}
+\[  
+\frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
+.\]
+
+:::
+
+:::{.proof title="of Holder's inequality"}
+It suffices to show this when $\norm{f}_p = \norm{g}_q = 1$, since
+\[  
+\|f g\|_{1} \leq\|f\|_{p}\|f\|_{q} \Longleftrightarrow \int \frac{|f|}{\|f\|_{p}} \frac{|g|}{\|g\|_{q}} \leq 1
+.\]
+
+Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
+\[  
+\int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
+.\]
+
+:::
+
+:::{.example title="Application of Holder's inequality: containment of $L^p$ spaces"}
 For finite measure spaces,
 \[
 1 \leq p < q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
 .\]
 
-Proof (Holder's Inequality) 
-: Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
-  Then let $h = \abs{f}^p$:
-  
-  \[  
-  \pnorm{f}{p}^p 
-  = \pnorm{h\cdot 1}1 \leq \pnorm{1}s \pnorm{h}r 
-  = \mu(X)^{\frac 1 s} \pnorm{f}q^{\frac q r}
-  \implies \pnorm{f}p 
-  \leq \mu(X)^{\frac 1 p - \frac 1 q} \pnorm{f}q
-  .\]
+:::
+
+:::{.proof title="of containment of $L^p$ spaces"}
+Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
+Then let $h = \abs{f}^p$:
+
+\[  
+\pnorm{f}{p}^p 
+= \pnorm{h\cdot 1}1 \leq \pnorm{1}s \pnorm{h}r 
+= \mu(X)^{\frac 1 s} \pnorm{f}q^{\frac q r}
+\implies \pnorm{f}p 
+\leq \mu(X)^{\frac 1 p - \frac 1 q} \pnorm{f}q
+.\]
 
 > Note: doesn't work for $\ell_p$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
 
-Proof (Holder's Inequality)
-:   It suffices to show this when $\norm{f}_p = \norm{g}_q = 1$, since
+:::
 
-    \[  
-    \|f g\|_{1} \leq\|f\|_{p}\|f\|_{q} \Longleftrightarrow \int \frac{|f|}{\|f\|_{p}} \frac{|g|}{\|g\|_{q}} \leq 1
-    .\]
+:::{.proposition title="Cauchy-Schwarz Inequality"}
+\[  
+\abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
+&& \text{with equality} \iff f = \lambda g
+.\]
 
-    Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
-    \[  
-    \int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
-    .\]
+:::
 
+:::{.remark}
+In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
+:::
 
-Proposition (Cauchy-Schwarz Inequality)
-:	\hfill
-  \[  
-  \abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
-  \qtext{with equality} \iff f = \lambda g
-  .\]
+:::{.proposition title="Minkowski's Inequality"}
+\[  
+1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
+.\]
 
-Note: Relates inner product to norm, and only happens to relate norms in $L^1$.
+:::
 
-Proof
-: ?
+:::{.remark}
+This does not handle $p=\infty$ case.
+Use to prove $L^p$ is a normed space.
+:::
 
-Proposition (Minkowski's Inequality:)
-:	\hfill
-  \[  
-  1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
-  .\]
+:::{.proof title="?"}
+\envlist
 
-> Note: does not handle $p=\infty$ case.
-> Use to prove $L^p$ is a normed space.
+- We first note
+\[  
+\abs{f+g}^p = \abs{f+g}\abs{f+g}^{p-1} \leq \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1}
+.\]
 
-Proof
-:   \hfill
+- Note that if $p,q$ are conjugate exponents then
+\[  
+\frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
+q &= \frac p {p-1} 
+.\]
 
-    - We first note
-    \[  
-    \abs{f+g}^p = \abs{f+g}\abs{f+g}^{p-1} \leq \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1}
-    .\]
+- Then taking integrals yields
+\[  
+\norm{f+g}_p^p &=
+\int \abs{f+g}^p \\
+&\leq \int \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1} \\ 
+&= \int \abs{f} \abs{f+g}^{p-1} + \int \abs{g} \abs{f+g}^{p-1} \\
+&= \norm{f(f+g)^{p-1}}_1 + \norm{g(f+g)^{p-1}}_1 \\
+&\leq \norm{f}_p ~\norm{(f+g)^{p-1})}_q + \norm{g}_p ~\norm{(f+g)^{p-1})}_q \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \norm{ (f+g)^{p-1})}_q \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{(p-1)q} \right)^{\frac 1 q} \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{p} \right)^{1 - \frac 1 p} \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \frac{\int \abs{f+g}^{p} }{\left( \int \abs{f+g}^{p} \right)^{\frac 1 p}} \\
+&= \left( \norm{f}_p + \norm{g}_p \right)  \frac{\norm{f+g}_p^p}{\norm{f+g}_p}
+.\]
 
-    - Note that if $p,q$ are conjugate exponents then
-    \[  
-    \frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
-    q &= \frac p {p-1} 
-    .\]
-
-    - Then taking integrals yields
-    \[  
-    \norm{f+g}_p^p &=
-    \int \abs{f+g}^p \\
-    &\leq \int \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1} \\ 
-    &= \int \abs{f} \abs{f+g}^{p-1} + \int \abs{g} \abs{f+g}^{p-1} \\
-    &= \norm{f(f+g)^{p-1}}_1 + \norm{g(f+g)^{p-1}}_1 \\
-    &\leq \norm{f}_p ~\norm{(f+g)^{p-1})}_q + \norm{g}_p ~\norm{(f+g)^{p-1})}_q \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \norm{ (f+g)^{p-1})}_q \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{(p-1)q} \right)^{\frac 1 q} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{p} \right)^{1 - \frac 1 p} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \frac{\int \abs{f+g}^{p} }{\left( \int \abs{f+g}^{p} \right)^{\frac 1 p}} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right)  \frac{\norm{f+g}_p^p}{\norm{f+g}_p}
-    .\]
-
-    - Cancelling common terms yields
-    \[  
-    1 &\leq \left( \norm{f}_p + \norm{g}_p \right) \frac{1}{\norm{f+g}_p} \\
-    &\implies 
-    \norm{f+g}_p
-    \leq \norm{f}_p + \norm{g}_p 
-    .\]
+- Cancelling common terms yields
+\[  
+1 &\leq \left( \norm{f}_p + \norm{g}_p \right) \frac{1}{\norm{f+g}_p} \\
+&\implies 
+\norm{f+g}_p
+\leq \norm{f}_p + \norm{g}_p 
+.\]
 
 
-Proposition (Young's Inequality*)
-:	  \hfill
-    \[
-    \frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
-    \|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
-    \]
+:::
+  
+:::{.proposition title="Young's Inequality"}
+\[
+\frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
+\|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
+\]
 
-**Application**:
-Some useful specific cases:
+:::
+
+:::{.remark title="some useful special cases"}
 \[  
 \norm{f\ast g}_1      & \leq \norm{f}_1 \norm{g}_1 \\
 \|f * g\|_{p}         & \leq \norm{f}_1 \norm{g}p, \\
@@ -1852,55 +2536,58 @@ Some useful specific cases:
 \norm{f\ast g}_\infty & \leq \norm{f}_p \norm{g}_q
 .\]
 
+:::
 
-Proposition (Bessel's Inequality:)
-:	\hfill
-
+:::{.proposition title="Bessel's Inequality"}
 For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 \[  
 \sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
 .\]
 
-> Note: this does not need to be a basis.
+> Note that this does not need to be a basis.
 
-Proposition (Parseval's Identity:)
-:	Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+:::
 
-## Less Explicitly Used Inequalities
+:::{.proposition title="Parseval's Identity"}
+Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+:::
 
-Proposition (AM-GM Inequality)
-:	\hfill
-  \[
-  \sqrt{ab} \leq \frac{a+b}{2}
-  .\]
+# Less Explicitly Used Inequalities
 
+:::{.proposition title="AM-GM Inequality"}
+\[
+\sqrt{ab} \leq \frac{a+b}{2}
+.\]
 
-Proposition (Jensen's Inequality)
-: \hfill
-  \[
-  f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
-  .\]
+:::
 
-Proposition (???)
-:
+:::{.proposition title="Jensen's Inequality"}
+\[
+f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
+.\]
+
+:::
+
+:::{.proposition title="Young's Product Inequality"}
 \[
 AB \leq {A^p \over p} + {B^q \over q}
 .\]
 
+:::
 
-Proposition (? Inequality)
-:	\hfill
+:::{.proposition title="?"}
 \[
-(a+b)^p \leq 2^p (a^p + b^p)
+(a+b)^p \leq 2^{p-1} (a^p + b^p)
 .\]
 
+:::
 
-Proposition (Bernoulli's Inequality)
-: 
+:::{.proposition title="Bernoulli's Inequality"}
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
 
+:::
 
 :::{.proposition title="Exponential Inequality"}
 \[  
@@ -1909,10 +2596,16 @@ Proposition (Bernoulli's Inequality)
 :::
 
 :::{.proof}
-\hfill
+\envlist
 
 - It's an equality when $t=0$.
 - $\dd{}{t} 1+ t < \dd{t}e^t \iff t<0$
 :::
 
+:::{.proposition title="Young's Convolution Inequality"}
+\[
+{1\over r} \da {1\over p} + {1\over q} - 1 \implies \pnorm{f \ast g}{r} \leq \pnorm{f}{p} \norm{g}{q}
+.\]
+
+:::
 

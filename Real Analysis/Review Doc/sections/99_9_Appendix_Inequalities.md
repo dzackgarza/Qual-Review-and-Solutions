@@ -1,125 +1,136 @@
-# Inequalities and Equalities
+# Common Inequalities
 
+:::{.proposition title="Reverse Triangle Inequality"}
+\[  
+\abs{\norm{x} - \norm{y}} \leq \norm{x - y}
+.\]
 
-Proposition (Reverse Triangle Inequality)
-:	\hfill
-  \[  
-  \abs{\norm{x} - \norm{y}} \leq \norm{x - y}
-  .\]
+:::
 
-Proposition (Chebyshev's Inequality)
-:	\hfill
-  \[  
-  \mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
-  .\]
+:::{.proposition title="Chebyshev's Inequality"}
+\[  
+\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
+.\]
 
-Proposition (Holder's Inequality When Surjective)
-:	\hfill
-  \[  
-  \frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
-  .\]
+:::
 
-*Application:*
+:::{.proposition title="Holder's Inequality"}
+\[  
+\frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
+.\]
+
+:::
+
+:::{.proof title="of Holder's inequality"}
+It suffices to show this when $\norm{f}_p = \norm{g}_q = 1$, since
+\[  
+\|f g\|_{1} \leq\|f\|_{p}\|f\|_{q} \Longleftrightarrow \int \frac{|f|}{\|f\|_{p}} \frac{|g|}{\|g\|_{q}} \leq 1
+.\]
+
+Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
+\[  
+\int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
+.\]
+
+:::
+
+:::{.example title="Application of Holder's inequality: containment of $L^p$ spaces"}
 For finite measure spaces,
 \[
 1 \leq p < q \leq \infty \implies L^q \subset L^p \quad (\text{ and } \ell^p \subset \ell^q)
 .\]
 
-Proof (Holder's Inequality) 
-: Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
-  Then let $h = \abs{f}^p$:
-  
-  \[  
-  \pnorm{f}{p}^p 
-  = \pnorm{h\cdot 1}1 \leq \pnorm{1}s \pnorm{h}r 
-  = \mu(X)^{\frac 1 s} \pnorm{f}q^{\frac q r}
-  \implies \pnorm{f}p 
-  \leq \mu(X)^{\frac 1 p - \frac 1 q} \pnorm{f}q
-  .\]
+:::
+
+:::{.proof title="of containment of $L^p$ spaces"}
+Fix $p, q$, let $r = \frac q p$ and $s = \frac{r}{r-1}$ so $r\inv + s\inv = 1$.
+Then let $h = \abs{f}^p$:
+
+\[  
+\pnorm{f}{p}^p 
+= \pnorm{h\cdot 1}1 \leq \pnorm{1}s \pnorm{h}r 
+= \mu(X)^{\frac 1 s} \pnorm{f}q^{\frac q r}
+\implies \pnorm{f}p 
+\leq \mu(X)^{\frac 1 p - \frac 1 q} \pnorm{f}q
+.\]
 
 > Note: doesn't work for $\ell_p$ spaces, but just note that $\sum \abs{x_n} < \infty \implies x_n < 1$ for large enough $n$, and thus $p<q \implies \abs{x_n}^q \leq \abs{x_n}^q$.
 
-Proof (Holder's Inequality)
-:   It suffices to show this when $\norm{f}_p = \norm{g}_q = 1$, since
+:::
 
-    \[  
-    \|f g\|_{1} \leq\|f\|_{p}\|f\|_{q} \Longleftrightarrow \int \frac{|f|}{\|f\|_{p}} \frac{|g|}{\|g\|_{q}} \leq 1
-    .\]
+:::{.proposition title="Cauchy-Schwarz Inequality"}
+\[  
+\abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
+&& \text{with equality} \iff f = \lambda g
+.\]
 
-    Using $AB \leq \frac 1 p A^p + \frac 1 q B^q$, we have
-    \[  
-    \int|f \| g| \leq \int \frac{|f|^{p}}{p} \frac{|g|^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1
-    .\]
+:::
 
+:::{.remark}
+In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
+:::
 
-Proposition (Cauchy-Schwarz Inequality)
-:	\hfill
-  \[  
-  \abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
-  \qtext{with equality} \iff f = \lambda g
-  .\]
+:::{.proposition title="Minkowski's Inequality"}
+\[  
+1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
+.\]
 
-Note: Relates inner product to norm, and only happens to relate norms in $L^1$.
+:::
 
-Proof
-: ?
+:::{.remark}
+This does not handle $p=\infty$ case.
+Use to prove $L^p$ is a normed space.
+:::
 
-Proposition (Minkowski's Inequality:)
-:	\hfill
-  \[  
-  1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
-  .\]
+:::{.proof title="?"}
+\envlist
 
-> Note: does not handle $p=\infty$ case.
-> Use to prove $L^p$ is a normed space.
+- We first note
+\[  
+\abs{f+g}^p = \abs{f+g}\abs{f+g}^{p-1} \leq \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1}
+.\]
 
-Proof
-:   \hfill
+- Note that if $p,q$ are conjugate exponents then
+\[  
+\frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
+q &= \frac p {p-1} 
+.\]
 
-    - We first note
-    \[  
-    \abs{f+g}^p = \abs{f+g}\abs{f+g}^{p-1} \leq \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1}
-    .\]
+- Then taking integrals yields
+\[  
+\norm{f+g}_p^p &=
+\int \abs{f+g}^p \\
+&\leq \int \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1} \\ 
+&= \int \abs{f} \abs{f+g}^{p-1} + \int \abs{g} \abs{f+g}^{p-1} \\
+&= \norm{f(f+g)^{p-1}}_1 + \norm{g(f+g)^{p-1}}_1 \\
+&\leq \norm{f}_p ~\norm{(f+g)^{p-1})}_q + \norm{g}_p ~\norm{(f+g)^{p-1})}_q \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \norm{ (f+g)^{p-1})}_q \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{(p-1)q} \right)^{\frac 1 q} \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{p} \right)^{1 - \frac 1 p} \\
+&= \left( \norm{f}_p + \norm{g}_p \right) \frac{\int \abs{f+g}^{p} }{\left( \int \abs{f+g}^{p} \right)^{\frac 1 p}} \\
+&= \left( \norm{f}_p + \norm{g}_p \right)  \frac{\norm{f+g}_p^p}{\norm{f+g}_p}
+.\]
 
-    - Note that if $p,q$ are conjugate exponents then
-    \[  
-    \frac 1 q &= 1 - \frac 1 p = \frac{p-1} p \\
-    q &= \frac p {p-1} 
-    .\]
-
-    - Then taking integrals yields
-    \[  
-    \norm{f+g}_p^p &=
-    \int \abs{f+g}^p \\
-    &\leq \int \left( \abs{f} + \abs{g}\right) \abs{f+g}^{p-1} \\ 
-    &= \int \abs{f} \abs{f+g}^{p-1} + \int \abs{g} \abs{f+g}^{p-1} \\
-    &= \norm{f(f+g)^{p-1}}_1 + \norm{g(f+g)^{p-1}}_1 \\
-    &\leq \norm{f}_p ~\norm{(f+g)^{p-1})}_q + \norm{g}_p ~\norm{(f+g)^{p-1})}_q \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \norm{ (f+g)^{p-1})}_q \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{(p-1)q} \right)^{\frac 1 q} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \left( \int \abs{f+g}^{p} \right)^{1 - \frac 1 p} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right) \frac{\int \abs{f+g}^{p} }{\left( \int \abs{f+g}^{p} \right)^{\frac 1 p}} \\
-    &= \left( \norm{f}_p + \norm{g}_p \right)  \frac{\norm{f+g}_p^p}{\norm{f+g}_p}
-    .\]
-
-    - Cancelling common terms yields
-    \[  
-    1 &\leq \left( \norm{f}_p + \norm{g}_p \right) \frac{1}{\norm{f+g}_p} \\
-    &\implies 
-    \norm{f+g}_p
-    \leq \norm{f}_p + \norm{g}_p 
-    .\]
+- Cancelling common terms yields
+\[  
+1 &\leq \left( \norm{f}_p + \norm{g}_p \right) \frac{1}{\norm{f+g}_p} \\
+&\implies 
+\norm{f+g}_p
+\leq \norm{f}_p + \norm{g}_p 
+.\]
 
 
-Proposition (Young's Inequality*)
-:	  \hfill
-    \[
-    \frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
-    \|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
-    \]
+:::
+  
+:::{.proposition title="Young's Inequality"}
+\[
+\frac 1 p + \frac 1 q = \frac 1 r + 1 \implies
+\|f \ast g\|_{r} \leq\|f\|_{p}\|g\|_{q}
+\]
 
-**Application**:
-Some useful specific cases:
+:::
+
+:::{.remark title="some useful special cases"}
 \[  
 \norm{f\ast g}_1      & \leq \norm{f}_1 \norm{g}_1 \\
 \|f * g\|_{p}         & \leq \norm{f}_1 \norm{g}p, \\
@@ -127,55 +138,58 @@ Some useful specific cases:
 \norm{f\ast g}_\infty & \leq \norm{f}_p \norm{g}_q
 .\]
 
+:::
 
-Proposition (Bessel's Inequality:)
-:	\hfill
-
+:::{.proposition title="Bessel's Inequality"}
 For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 \[  
 \sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
 .\]
 
-> Note: this does not need to be a basis.
+> Note that this does not need to be a basis.
 
-Proposition (Parseval's Identity:)
-:	Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+:::
 
-## Less Explicitly Used Inequalities
+:::{.proposition title="Parseval's Identity"}
+Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+:::
 
-Proposition (AM-GM Inequality)
-:	\hfill
-  \[
-  \sqrt{ab} \leq \frac{a+b}{2}
-  .\]
+# Less Explicitly Used Inequalities
 
+:::{.proposition title="AM-GM Inequality"}
+\[
+\sqrt{ab} \leq \frac{a+b}{2}
+.\]
 
-Proposition (Jensen's Inequality)
-: \hfill
-  \[
-  f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
-  .\]
+:::
 
-Proposition (???)
-:
+:::{.proposition title="Jensen's Inequality"}
+\[
+f(tx + (1-t)y) \leq tf(x) + (1-t)f(y)
+.\]
+
+:::
+
+:::{.proposition title="Young's Product Inequality"}
 \[
 AB \leq {A^p \over p} + {B^q \over q}
 .\]
 
+:::
 
-Proposition (? Inequality)
-:	\hfill
+:::{.proposition title="?"}
 \[
-(a+b)^p \leq 2^p (a^p + b^p)
+(a+b)^p \leq 2^{p-1} (a^p + b^p)
 .\]
 
+:::
 
-Proposition (Bernoulli's Inequality)
-: 
+:::{.proposition title="Bernoulli's Inequality"}
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
 
+:::
 
 :::{.proposition title="Exponential Inequality"}
 \[  
@@ -184,10 +198,16 @@ Proposition (Bernoulli's Inequality)
 :::
 
 :::{.proof}
-\hfill
+\envlist
 
 - It's an equality when $t=0$.
 - $\dd{}{t} 1+ t < \dd{t}e^t \iff t<0$
 :::
 
+:::{.proposition title="Young's Convolution Inequality"}
+\[
+{1\over r} \da {1\over p} + {1\over q} - 1 \implies \pnorm{f \ast g}{r} \leq \pnorm{f}{p} \norm{g}{q}
+.\]
+
+:::
 
