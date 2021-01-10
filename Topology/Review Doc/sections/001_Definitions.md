@@ -95,7 +95,7 @@ A space is *locally path-connected* if it admits a basis of path-connected open 
 A neighborhood of a point $x$ is *any* open set containing $x$.
 :::
 
-:::{.definition title="Normal covering space"}
+:::{.definition title="Normal covering space (a.k.a. 'regular')"}
 A covering space is **normal** if and only if for every $x\in X$ and every pair of lifts $\tilde x_1, \tilde x_2$, there is a deck transformation $f$ such that $f(\tilde x_1) = \tilde x_2$.
 :::
 
