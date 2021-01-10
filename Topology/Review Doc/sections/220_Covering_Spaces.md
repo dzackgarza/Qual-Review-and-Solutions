@@ -1,17 +1,17 @@
 # Covering Spaces
 
-When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
 
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)-->
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)
 
 Path lifting: 
 
 ![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
 
 
+## Useful Facts
 
-:::{.fact}
-Covering spaces of orientable manifolds are orientable.
+:::{.remark}
+When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
 :::
 
 :::{.fact title="Euler characteristics are multiplicative on covering spaces"}
@@ -23,25 +23,17 @@ For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 :::
 
 :::{.fact}
-The preimage of a boundary point under a covering map must also be a boundary point
+Covering spaces of orientable manifolds are orientable.
 :::
 
+:::{.fact}
+The preimage of a boundary point under a covering map must also be a boundary point
+:::
 
 :::{.fact}
 Normal subgroups correspond to *normal/regular* coverings, where automorphisms act freely/transitively.
 These are "maximally symmetric".
-  
 :::
-
-
-
-## Theorems
-
-
-
-## Useful Facts
-
-
 
 ## Universal Covers
 
