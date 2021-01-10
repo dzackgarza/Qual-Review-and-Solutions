@@ -1,13 +1,22 @@
 # Homology
 
-## Unsorted
+## Useful Facts
+
+
+
+:::{.fact title="Algebraic properties of homology"}
+\envlist
+
+
+- Homology commutes with wedge products: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
+:::
+
 
 - $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
 - $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 
 - Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 
-- Useful fact: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
 
 - $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 - $H_n(X, A) \cong H_n(X/A)$
@@ -40,6 +49,13 @@ A\to B \to C \implies
 & \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
 \end{align*}
 
+## Useful Facts
+- $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
+- $H_n(X, A) \cong_? H_n(X/A, \pt)$
+- For CW complexes $X = \theset{X^{(i)}}$, we have 
+\[
+H_n(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
+\]
 
 
 ## Constructing a CW Complex with Prescribed Homology
@@ -280,10 +296,5 @@ $$
 
 # Homology
 
-## Useful Facts
-- $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
-- $H_n(X, A) \cong_? H_n(X/A, \pt)$
-- For CW complexes $X = \theset{X^{(i)}}$, we have 
-\[
-H_n(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
-\]
+
+## Relative Homology
