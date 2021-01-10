@@ -102,7 +102,6 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_{0}$ for some $y_{0}\in Y$, i.e. for 
 :::{.definition title="Colimit"}
 For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_{i}:X\to X_{i}$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
-
 \begin{tikzcd}
                  &                            &  & Y \arrow[lldddd, "\psi_{j}"] \arrow[rrdddd, "\psi_{i}"] \arrow[dd, "\exists!", dashed] &  &               &        \\
                  &                            &  &                                                                                    &  &               &        \\
@@ -111,7 +110,6 @@ For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a se
 \cdots \arrow[r] & X_{j} \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_{i} \arrow[r] & \cdots
 \end{tikzcd}
 :::
-
 
 :::{.example title="of colimits"}
 \envlist
@@ -123,34 +121,26 @@ For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a se
 :::
 
 
-
 :::{.definition title="Compact"}
-
+A space $X$ is compact iff every open cover of $X$ has a finite subcover.
 :::
-	* A space $X$ is compact iff every open cover of $X$ has a finite subcover.
 
 :::{.definition title="Cone"}
+For a space $X$, defined as
+\[  
+CX = \frac{X\cross I} {X \cross \theset{0}}
+.\]
+Example: The cone on the circle $CS^1$ 
 
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
+
+Note that the cone embeds $X$ in a contractible space $CX$.
 :::
-	* For a space $X$, defined as
-	\[  
-	CX = \frac{X\cross I} {X \cross \theset{0}}
-	.\]
-	Example: The cone on the circle $CS^1$ 
-
-  <!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
-
-	Note that the cone embeds $X$ in a contractible space $CX$.
-
 
 :::{.definition title="Contractible"}
-
+A space is contractible if its identity map is nullhomotopic.
 :::
-	* A space is contractible if its identity map is nullhomotopic.
 
-:::{.definition title="Contractible"}
-
-:::
 
 :::{.definition title="Coproduct"}
 
@@ -161,19 +151,19 @@ For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a se
 :::
 
 :::{.definition title="Cup Product"}
+A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
+$$
+H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
+(a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
+$$
+where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
+$$
+I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
+$$
+is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
+On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
 
 :::
-	- A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
-	$$
-	H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
-	(a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
-	$$
-	where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
-	$$
-	I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
-	$$
-	is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
-	On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
 	* Applications
 		- $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
     \todo[inline]{Proof}
