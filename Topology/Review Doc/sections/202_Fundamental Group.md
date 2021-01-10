@@ -79,18 +79,18 @@ s \in [1/2, 1]
 
 :::
 
-
 :::{.remark title="a summary"}
 Elements of the fundamental group are *homotopy classes of loops*, and every continuous map between spaces induces a homomorphism on fundamental groups.
 :::
 
+### Facts
 
 :::{.fact}
 \envlist
 
 - $H_{1}$ is the abelianization of $\pi_{1}$.
 
-- Homotopy commutes with products: $\pi_{k} \prod X_{i} = \prod \pi_{k} X_{i}$.
+- Homotopy commutes with products: $\pi_{1} \prod X_{i} = \prod \pi_{1} X_{i}$.
 
 - Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
 
