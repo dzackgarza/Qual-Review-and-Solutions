@@ -162,35 +162,30 @@ In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, whi
 :::{.theorem title="Kunneth"}
 For $R$ a PID, there exists a short exact sequence
 $$
-0 \to \bigoplus_{i+j=k} H_{j}(X; R) \tensor_{R} H_{i}(Y; R) \to H_{k}(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_{R}^1(H_{i}(X; R), H_{j}(Y; R))
+0 \to \prod {i+j=k} H_{j}(X; R) \tensor_{R} H_{i}(Y; R) \to H_{k}(X\cross Y; R) \to \prod_{i+j=k-1} \tor_{R}^1(H_{i}(X; R), H_{j}(Y; R))
 $$
 It has a non-canonical splitting given by
-$$
-H_{k} (X\cross Y) = \left( \bigoplus_{i+j = k} H_{i} X \oplus H_{j} Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_{iX}, H_{j} Y)
-$$
+\[
+H_{k} (X\cross Y) = \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross \prod_{i+j = k-1}\tor(H_{iX}, H_{j} Y) \\
+\]
 :::
 
 
 :::{.theorem title="UCT for Change of Group"}
 For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
 $$
-0 \to H_{i} X \tensor G \to H_{i}(X; G) \to \tor(H_{i-1}X, G) \to 0
-$$
-
-$$
-0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_{i} X, G) \to 0
+0 \to H_{i} X \tensor G &\to H_{i}(X; G) \to \tor(H_{i-1}X, G) \to 0 \\
+0 \to \ext (H_{i-1} X, G) &\to H^i(X;G) \to \hom(H_{i} X, G) \to 0
 $$
 
 which split unnaturally:
-$$
-H_{i}(X;G) = (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G)
-$$
+\[
+H_{i}(X;G) &= (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G) \\
+H^i(X; G) &= \hom(H_{iX}, G) \oplus \ext(H_{i-1}X; G)
+\]
 
-$$
-H^i(X; G) = \hom(H_{iX}, G) \oplus \ext(H_{i-1}X; G)
-$$
-
-When $H_{iX}$ are all finitely generated, write $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$. Then
+When $H_{iX}$ are all finitely generated, write $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$. 
+Then
 $$
 H^i(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i-1}.
 $$
