@@ -17,6 +17,7 @@
 \tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
 H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
 \]
+See footnotes for categorical interpretation.[^wedge]
 :::
 
 :::{.proof title="?"}
@@ -40,10 +41,7 @@ Todo
 - $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
 
-- Useful tools:
-  - Mayer-Vietoris
 
-* $H_{k} \bigvee X = \prod H_{k} X$ by Mayer-Vietoris.[^wedge]
 * $H_{i}(S^n) = \indic{i \in \theset{0, n}}$
 * $H_{n}(\bigvee_{i} X_{i}) \cong \prod_{i} H_{n}(X_{i})$ for "good pairs"
   * Corollary: $H_{n}(\bigvee_{k} S^n) = \ZZ^k$
