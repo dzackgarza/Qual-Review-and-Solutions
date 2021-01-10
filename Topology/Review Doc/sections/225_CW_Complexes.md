@@ -1,21 +1,25 @@
 #  CW and Simplicial Complexes
 
 
-## Examples
+## Known CW Structures
 
-- $\mathbb{RP}^n = e^1 \cup e^2 \cup \cdots \cup e^n$
+- $S^n = e^0 \union e^n$: a point and an $n\dash$cell.
+- $\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
 - $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
 - $S^\infty = \varinjlim S^n$
 
-# Definition: The Degree of  Map $S^n \into S^n$
-
-
-Properties and examples:
+:::{.fact title="Useful properties of the degree of a map"}
+\envlist
 
 - $\text{deg}~\id_{S^n} = 1$
+
 - $\text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g$
+
 - $\text{deg}~r = -1$ where $r$ is any rotation about a hyperplane, i.e. $r(\thevector{x_1 \cdots x_i \cdots x_n}) = \thevector{x_1 \cdots -x_i \cdots x_n}$.
+
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
+:::
+
 
 # Definition: Simplicial Complex
 
