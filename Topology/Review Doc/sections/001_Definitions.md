@@ -140,33 +140,45 @@ A space is *second-countable* iff it admits a countable basis.
 :::
 
 
+\todo[inline]{Lots of definitions}
+
 :::{.definition title="Regular"}
 Todo
 :::
 
-\todo[inline]{todo}
-
-
 :::{.definition title="Normal"}
+Todo
+:::
+
+:::{.definition title="Saturated"}
 
 :::
 
-\todo[inline]{todo}
+:::{.definition title="Quotient Map"}
 
-## Misc
+:::
 
-Definition (Normal)
-:   \todo[inline]{Todo}
+:::{.definition title="Normal"}
+Todo
+:::
 
+:::{.definition title="The subspace topology"}
+Todo
+:::
 
+:::{.definition title="The product topology"}
+Todo
+:::
 
-## Todo
+:::{.definition title="Topological Embedding"}
+Todo
+:::
 
-- Saturated
-- Quotient Map
-- The subspace topology
-- The quotient topology
-- The product topology
-- Topological Embedding
-- Continuous map
-- Open and Closed maps
+:::{.definition title="Continuous Map"}
+Todo
+:::
+
+:::{.definition title="Open and Closed Maps"}
+Todo
+:::
+
