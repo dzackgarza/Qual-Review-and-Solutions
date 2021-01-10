@@ -23,6 +23,15 @@ $\pi_1 X$ for $X$ a CW-complex only depends on the 2-skeleton $X^{2}$, and in ge
 Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 :::
 
+
+:::{.theorem title="Seifert-van Kampen"}
+Suppose $X = U_{1} \union U_{2}$ where $U \da U_{1} \intersect U_{2} \neq \emptyset$ is path-connected, and let $\pt \in U$. 
+
+Then the maps $i_{1}: U_{1} \into X$ and $i_{2}: U_{2} \into X$ induce the following group homomorphisms:
+
+:::
+
+
 :::{.theorem title="Van Kampen 1"}
 The pushout is the northwest colimit of the following diagram
 
@@ -78,7 +87,6 @@ J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
 :::
 
 :::{.theorem title="Van Kampen 3"}
-Suppose $X = U_{1} \union U_{2}$ where $U \da U_{1} \intersect U_{2} \neq \emptyset$ is path-connected, and let $\pt \in U$. Then the maps $i_{1}: U_{1} \into X$ and $i_{2}: U_{2} \into X$ induce the following group homomorphisms:
 
 $$
 i_{1}^*: \pi_{1}(U_{1} ,\pt) \into \pi_{1}(X, \pt) \\
