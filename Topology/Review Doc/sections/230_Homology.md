@@ -7,7 +7,11 @@
 \tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
 H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
 \]
-See footnotes for categorical interpretation.[^wedge]
+See footnote for categorical interpretation.[^wedge]
+
+
+[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
+
 :::
 \todo[inline]{May need some good pair condition?}
 
@@ -207,57 +211,14 @@ H^i(X; \ZZ) &= F(H_{i}(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
 H_{i}(X; \ZZ) &= F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 \]
 :::
-
 \todo[inline]{Might need assumptions: finite CW complex?}
 
 
-## Cellular Homology
-
-* $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
-
-How to compute:
-
-1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
-2. Compute differentials $\del_{i}: C^i \to C^{i-1}$
-    3. *Note: if $C^0$ is a point, $\del_{1}$ is the zero map.*
-    4. *Note: $H_{n} X = 0 \iff C^n = \emptyset$.*
-    5. Compute degrees: Use $\del_{n}(e_{i}^n) = \sum_{i} d_{i} e_{i}^{n-1}$ where $$d_{i} = \deg(\text{Attach }e_{i}^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
-	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
-    6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
-    7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
-    e.g.
-    
-    \[
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} 
-    \to
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix}
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} \\
-    \ker = 
-    \begin{matrix}
-    2\\-1\\0\\0
-    \end{matrix} 
-    \begin{matrix}
-    3\\0\\-1\\-1
-    \end{matrix}\\
-    \im = \generators{a+2b+2d,c-d}
-    .\]
-     
-    6. Or look at elementary divisors, say $n_{i}$, then the image is isomorphic to $\bigoplus n_{i} \ZZ$
-
-
-[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
-
-
-# Homology
-
-
 ## Relative Homology
+
+
+:::{.fact title="Some assorted facts"}
+\envlist
 
 - $H_{n}(X/A) \cong \tilde H_{n}(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
 
@@ -270,7 +231,8 @@ H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{
 \]
 - $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
 
-## Cohomology
+:::
 
 
-- $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
+
+

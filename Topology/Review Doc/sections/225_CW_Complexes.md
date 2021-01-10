@@ -57,6 +57,54 @@ For counterexamples, note that this fails to be a triangulation of $T$:
 This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
 :::
 
+
+## Cellular Homology
+
+* $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
+
+How to compute:
+
+1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
+
+2. Compute differentials $\del_{i}: C^i \to C^{i-1}$
+
+3. *Note: if $C^0$ is a point, $\del_{1}$ is the zero map.*
+
+4. *Note: $H_{n} X = 0 \iff C^n = \emptyset$.*
+
+5. Compute degrees: Use $\del_{n}(e_{i}^n) = \sum_{i} d_{i} e_{i}^{n-1}$ where $$d_{i} = \deg(\text{Attach }e_{i}^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
+
+  Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
+
+6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
+
+7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
+
+  For example:
+\[
+\begin{matrix}
+\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix} 
+\to
+\begin{matrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix}
+\begin{matrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix} \\
+\ker = 
+\begin{matrix}
+2\\-1\\0\\0
+\end{matrix} 
+\begin{matrix}
+3\\0\\-1\\-1
+\end{matrix}\\
+\im = \generators{a+2b+2d,c-d}
+.\]
+  
+6. Or look at elementary divisors, say $n_{i}$, then the image is isomorphic to $\bigoplus n_{i} \ZZ$
+
+
 ## Constructing a CW Complex with Prescribed Homology
 
 Given $G = \bigoplus G_{i}$, and want a space such that $H_{i} X = G$? Construct $X = \bigvee X_{i}$ and then $H_{i} (\bigvee X_{i}) = \bigoplus H_{i} X_{i}$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_{n}(Y) = G$.
