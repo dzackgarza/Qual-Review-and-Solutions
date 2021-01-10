@@ -2,15 +2,9 @@
 
 \todo[inline]{Missing a lot on CW complexes}
 
+## Degrees 
 
-## Examples of CW Complexes/Structures 
-
-- $S^n = e^0 \union e^n$: a point and an $n\dash$cell.
-- $\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
-- $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
-- $S^\infty = \varinjlim S^n$
-
-:::{.fact title="Useful properties of the degree of a map"}
+:::{.fact title="Useful properties of the degree of a map between spheres"}
 \envlist
 
 - $\text{deg}~\id_{S^n} = 1$
@@ -22,11 +16,27 @@
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
 :::
 
+## Examples of CW Complexes/Structures 
+
+:::{.example title="Spheres"}
+$S^n = e^0 \union e^n$: a point and an $n\dash$cell.
+:::
+
+:::{.example title="Real Projective Space"}
+$\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
+:::
+
+:::{.example title="Complex Projective Space"}
+$\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
+:::
 
 ## Examples of Simplicial Complexes
 
-To write down a simplicial complex, label the vertices with increasing integers. Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
 
+:::{.remark}
+To write down a simplicial complex, label the vertices with increasing integers. 
+Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
+:::
 
 :::{.example title="Torus"}
 ![Torus](figures/1513062466927.png)
@@ -36,7 +46,6 @@ To write down a simplicial complex, label the vertices with increasing integers.
 ![Klein Bottle and $\RP^2$](figures/1513062526623.png)
 :::
 
-
 :::{.example title="Non-example"}
 For counterexamples, note that this fails to be a triangulation of $T$:
 
@@ -44,7 +53,6 @@ For counterexamples, note that this fails to be a triangulation of $T$:
 
 This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
 :::
-
 
 ## Templates for Triangulation
 
