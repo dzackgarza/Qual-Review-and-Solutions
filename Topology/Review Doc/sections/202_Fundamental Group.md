@@ -110,11 +110,6 @@ If $X, Y$ are path-connected, then
 :::
 
 
-:::{.proposition title="$\pi_1$ of a wedge"}
-\[
-\pi_1(X \vee Y) = \pi_1(X) \ast \pi_1(Y)
-.\]
-:::
 
 
 
@@ -242,6 +237,18 @@ Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_{A}(z) = x^2$ and 
 So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 
 :::
+
+:::{.proposition title="$\pi_1$ of a wedge"}
+\[
+\pi_1(X \vee Y) = \pi_1(X) \ast \pi_1(Y)
+.\]
+:::
+
+
+:::{.proof title="?"}
+By van Kampen, this is equivalent to the amalgamated product over $\pi_1(x_0) = 1$, which is just a free product.
+:::
+
 
 
 ## General Homotopy Theory
