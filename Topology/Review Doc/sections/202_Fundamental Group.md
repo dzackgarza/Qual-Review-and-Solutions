@@ -1,21 +1,21 @@
 # Theorems: Algebraic Topology
 
+:::{.proposition title="$\pi_0$ detects simply connectedness"}
+$\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
+:::
 
 ## Fundamental Group
 
-Conjugacy in $\pi_{1}$:
+### Conjugacy in $\pi_{1}$:
 
 - See Hatcher 1.19, p.28
 - See Hatcher's proof that $\pi_{1}$ is a group
 - See change of basepoint map
 
-- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
+### Calculating $\pi_1$ Using Universal Covers
 
 To calculate $\pi_{1}(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_{1}(X) = G$ by uniqueness of universal covers.
 
-:::{.proposition title="$\pi_0$ detects simply connectedness"}
-$\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
-:::
 
 - $H_{1}$ is the abelianization of $\pi_{1}$.
 
@@ -145,6 +145,9 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 \todo[inline]{Theorem}
 
 ## Unsorted Facts
+
+- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
+
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
