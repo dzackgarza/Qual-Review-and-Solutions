@@ -96,6 +96,16 @@ Elements of the fundamental group are *homotopy classes of loops*, and every con
 
 :::
 
+
+:::{.proposition title="Hatcher 1.12"}
+If $X, Y$ are path-connected, then 
+\[
+\pi_1 (X \cross Y) = \pi_1(X) \cross \pi_2(Y)
+.\]
+<++>
+:::
+
+
 :::{.proposition title="$\pi_1$ detects simply-connectedness"}
 $\pi_{1}(X) = 1$ iff $X$ is simply connected.
 :::
