@@ -142,6 +142,23 @@ The image consists of classes $[\gamma]$ whose lifts to $\tilde X$ are again loo
 :::
 
 
+:::{.theorem title="Fundamental theorem of covering spaces"}
+For $\tilde X \mapsvia{p} X$ a covering space with
+
+- $\tilde X$ path-connected,
+- $X$ path-connected and locally path-connected,
+
+letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
+
+1. $\tilde X$ is normal if and only if $H\normal \pi_1(X)$,
+
+2. $G(\tilde X) \cong \Aut_{\mathrm{Cov}(\tilde X) } N_{\pi_1(X)}(H)$, the normalizer of $H$ in $\pi_1(X)$.
+
+In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
+:::
+
+
+
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
 
 Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
