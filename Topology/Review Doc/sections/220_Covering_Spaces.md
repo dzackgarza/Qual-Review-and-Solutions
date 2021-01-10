@@ -246,10 +246,17 @@ The fiber above $x_0$ contains the two antipodal points.
 The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
+:::{.theorem title="Nullhomotopies from factoring through contractible spaces"}
+If $Y$ is contractible, every map $f: X \into Y$ is nullhomotopic.
+:::
 
-## Theorem: If $Y$ is contractible, every map $f: X \into Y$ is nullhomotopic.
+:::{.proof title="?"}
+If $Y$ is contractible, then $Y$ has the homotopy type of a point. 
+So there is a homotopy $H: Y\cross I \into Y$ between $\id_Y$ and a constant map $c: y \mapsto y_0$. 
+So construct $H': X\cross I \into Y$ as $H'(x, t) = H(f(x), t)$; then $H'(x, 0) = H(f(x), 0) = (\id_x \circ f)(x) = f(x)$ and $H'(x, 1) = H(f(x), 1) = (c \circ f)(x) = c(y) = y_0$ for some $y$. 
+So $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
+:::
 
-If $Y$ is contractible, then $Y$ has the homotopy type of a point. So there is a homotopy $H: Y\cross I \into Y$ between $\id_Y$ and a constant map $c: y \mapsto y_0$. So construct $H': X\cross I \into Y$ as $H'(x, t) = H(f(x), t)$; then $H'(x, 0) = H(f(x), 0) = (\id_x \circ f)(x) = f(x)$ and $H'(x, 1) = H(f(x), 1) = (c \circ f)(x) = c(y) = y_0$ for some $y$. So $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
 
 ## Theorem: Any map that factors through a contractible space is nullhomotopic.
 
