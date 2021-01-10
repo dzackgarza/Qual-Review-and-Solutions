@@ -188,11 +188,6 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 
 
 ## Definition: Nullhomotopic
-
-If $f$ is homotopic to a constant map, say $f: x \mapsto y_0$ for some fixed $y_0 \in Y$, then $f$ is said to be *nullhomotopic*. In other words, if $f:X\into Y$ is nullhomotopic, then there exists a homotopy $H: X\cross I \into Y$ such that $H(x, 0) = f(x)$ and $H(x, 1) = y_0$.
-
-Note that constant maps (or anything homotopic) induce zero homomorphisms.
-
 # Theorem: Any two continuous functions into a convex set are homotopic.
 
 Proof: The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
