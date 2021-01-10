@@ -197,9 +197,7 @@ Equivalently, a map $F:I\cross X\to X$ such that
 F_{0}(x) &= \id_{X}
 F_{t}(x)\mid_{A} &= \id_{A}
 F_{1}(X) &= A
-
 .\]
-
 :::
 
 :::{.definition title="Degree of a Map"}
@@ -207,14 +205,12 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Derived Functor"}
-
+For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
 :::
-	* For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
 
 :::{.definition title="Dimension of a manifold"}
-
+For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
 :::
-	* For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
 
 :::{.definition title="Direct Limit"}
 
@@ -237,20 +233,28 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Exact Functor"}
+A functor $T$ is *right exact* if a short exact sequence 
+
+\[0 \to A \to B \to C \to 0
+\]
+yields an exact sequence 
+
+\[\ldots TA \to TB \to TC \to 0
+\]
+and is *left exact* if it yields 
+
+\[0 \to TA \to TB \to TC \to \ldots
+\]
+Thus a functor is exact iff it is both left and right exact, yielding
+
+\[0 \to TA \to TB \to TC \to 0
+.\]
 
 :::
-	* A functor $T$ is *right exact* if a short exact sequence 
-	$$0 \to A \to B \to C \to 0$$ 
-	yields an exact sequence 
-	$$\ldots TA \to TB \to TC \to 0,$$ 
-	and is *left exact* if it yields 
-	$$0 \to TA \to TB \to TC \to \ldots$$
-	Thus a functor is exact iff it is both left and right exact, yielding
-	$$
-	0 \to TA \to TB \to TC \to 0
-	$$
-	* Examples:
-		* $\wait \tensor_{R} \wait$ is a right exact bifunctor.
+
+:::{.example title="?"}
+$\wait \tensor_{R} \wait$ is a right exact bifunctor.
+:::
 
 :::{.definition title="Exact Sequence"}
 
@@ -265,18 +269,16 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Flat"}
-
+An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
 :::
-	* An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
 
 :::{.definition title="Free and Properly Discontinuous"}
 
 :::
 
 :::{.definition title="Free module"}
-
+A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
 :::
-	* A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
 
 :::{.definition title="Free Product"}
 
@@ -287,9 +289,8 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Fundamental Class"}
-
+For a connected, closed, orientable manifold, $[M]$ is a generator of $H_{n}(M; \ZZ) = \ZZ$.
 :::
-	* For a connected, closed, orientable manifold, $[M]$ is a generator of $H_{n}(M; \ZZ) = \ZZ$.
 
 :::{.definition title="Fundamental classes"}
 
@@ -300,9 +301,8 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Generating Set"}
-
+$S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_{i} s_{i}$$ for some coefficients $r_{i} \in R$ (where this sum may be infinite).
 :::
-	* $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_{i} s_{i}$$ for some coefficients $r_{i} \in R$ (where this sum may be infinite).
 
 :::{.definition title="Gluing Along a Map"}
 
@@ -345,48 +345,50 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Injection"}
-
+A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
 :::
-	* A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
 
 :::{.definition title="Intersection Pairing"}
+For a manifold $M$, a map on homology defined by
+\[
+H_{\hat i}M \tensor H_{\hat j}M \to H_{\widehat{i+j}}X\\
+\alpha\tensor \beta \mapsto \left< \alpha, \beta \right>
+\]
+obtained by conjugating the cup product with Poincaré Duality, i.e. 
+
+\[\left< \alpha, \beta \right> = [M] \frown ([\alpha]\dual \smile [\beta]\dual)
+.\]
+
+Then, if $[A], [B]$ are transversely intersecting submanifolds representing $\alpha, \beta$, then $$\left<\alpha, \beta\right> = [A\intersect B]$$.
+If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_{0} M = \ZZ$ is the signed number of intersection points.
+
+Alt:
+The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_{i} M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
+Computed as an oriented intersection number between two homology classes (perturbed to be transverse).
+
 
 :::
-	For a manifold $M$, a map on homology defined by
-	$$
-	H_{\hat i}M \tensor H_{\hat j}M \to H_{\widehat{i+j}}X\\
-	\alpha\tensor \beta \mapsto \left< \alpha, \beta \right>
-	$$
-	obtained by conjugating the cup product with Poincare Duality, i.e. $$\left< \alpha, \beta \right> = [M] \frown ([\alpha]\dual \smile [\beta]\dual)$$
-
-	Then, if $[A], [B]$ are transversely intersecting submanifolds representing $\alpha, \beta$, then $$\left<\alpha, \beta\right> = [A\intersect B]$$.
-
-	If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_{0} M = \ZZ$ is the signed number of intersection points.
 
 :::{.definition title="Inverse Limit"}
 
 :::
 
-:::{.definition title="Intersection Pairing"}
-
-:::
-	- The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_{i} M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
-	Computed as an oriented intersection number between two homology classes (perturbed to be transverse).
-
 :::{.definition title="Intersection Form"}
+The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_{n}) \cross H^{n-k}(M^n) \to \ZZ$$
+where $n=2k$.
 
+- When $k$ is odd, $I$ is skew-symmetric and thus a *symplectic form.*
+- When $k$ is even (and thus $n \equiv 0 \mod 4$) this is a symmetric form.
+- Satisfies $I(x,y) = (-1)^{k(n-k)} I(y, x)$
 :::
-	- The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_{n}) \cross H^{n-k}(M^n) \to \ZZ$$
-	where $n=2k$.
-      - When $k$ is odd, $I$ is skew-symmetric and thus a *symplectic form.*
-      - When $k$ is even (and thus $n \equiv 0 \mod 4$) this is a symmetric form.
-      - Satisfies $I(x,y) = (-1)^{k(n-k)} I(y, x)$
-
+	
 :::{.definition title="Kronecker Pairing"}
-
+A map pairing a chain with a cochain, given by 
+\[
+H^n(X; R) \cross H_{n}(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)
+\]
+which is a nondegenerate bilinear form.
 :::
-	- A map pairing a chain with a cochain, given by $$H^n(X; R) \cross H_{n}(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)$$
-	which is a nondegenerate bilinear form.
 
 :::{.definition title="Kronecker Product"}
 
@@ -405,9 +407,8 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Local Degree"}
-
+At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
 :::
-	- At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
 
 :::{.definition title="Local Orientation"}
 
@@ -418,23 +419,17 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Linear Independence"}
-
+A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} = 0_M \implies \forall i,~r_{i} = 0$ where $s_{i}\in S, r_{i} \in R$.
 :::
-	* A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} = 0_M \implies \forall i,~r_{i} = 0$ where $s_{i}\in S, r_{i} \in R$.
 
 :::{.definition title="Local homology"}
-
+$H_{n}(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_{n}(X \mid A)$
 :::
-	* $H_{n}(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_{n}(X \mid A)$
 
-:::{.definition title="Local Homology"}
-
-:::
 
 :::{.definition title="Local orientation of a manifold"}
-
+At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \theset{x}) = \ZZ$.
 :::
-	* At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \theset{x}) = \ZZ$.
 
 :::{.definition title="Long exact sequence"}
 
@@ -445,14 +440,12 @@ F_{1}(X) &= A
 :::
 
 :::{.definition title="Manifold"}
-
+An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
 :::
-	* An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
 
 :::{.definition title="Manifold with boundary"}
-
+A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_{i} > 0}$.
 :::
-	* A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_{i} > 0}$.
 
 :::{.definition title="Mapping Cone"}
 
@@ -495,16 +488,16 @@ F: X\cross I &\to Y \\
 .\]
 :::
 
-
 :::{.definition title="Orientable manifold"}
-
+A manifold for which an orientation exists, see "Orientation of a Manifold".
 :::
-	* A manifold for which an orientation exists, see "Orientation of a Manifold".
 
 :::{.definition title="Orientation Cover"}
-
+For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as 
+\[
+\tilde M = \coprod_{x\in M}\theset{\mu_{x} \mid \mu_{x}~ \text{is a local orientation}}
+.\]
 :::
-	* For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as $$\tilde M = \coprod_{x\in M}\theset{\mu_{x} \mid \mu_{x}~ \text{is a local orientation}}$$
 
 :::{.definition title="Orientation of a manifold"}
 
