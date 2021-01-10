@@ -11,7 +11,6 @@ The ranks of $\pi_{0}$ and $H_{0}$ are the number of path components.
 :::
 
 
-
 ## Fundamental Group
 
 ### Definition
@@ -290,7 +289,6 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 	* $X$ simply connected $\implies \pi_{k}(X) \cong H_{k}(X)$ up to and including the first nonvanishing $H_{k}$
-  * $H_{1}(X) = \mathrm{Ab}(\pi_{1} X)$, the abelianization.
 
 * $\pi_{k} \bigvee X \neq \prod \pi_{k} X$ (counterexample: $S^1 \vee S^2$)
   * Nice case: $\pi_{1}\bigvee X = \ast \pi_{1} X$ by Van Kampen.
