@@ -143,7 +143,16 @@ Todo
 :::{.definition title="Retract"}
 A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
 Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
+
+Alt:
+Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
 :::
+
+
+:::{.remark}
+Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+:::
+
 
 :::{.definition title="Saturated"}
 
@@ -319,6 +328,13 @@ Note that the cone embeds $X$ in a contractible space $CX$.
 
 :::{.definition title="Contractible"}
 A space is contractible if its identity map is nullhomotopic.
+
+Alt:
+A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.[^contractible_is_useful]
+
+[^contractible_is_useful]: 
+This is a useful property because it supplies you with a homotopy.
+
 :::
 
 :::{.definition title="Coproduct"}
@@ -392,7 +408,27 @@ F_{0}(x) &= \id_{X}
 F_{t}(x)\mid_{A} &= \id_{A}
 F_{1}(X) &= A
 .\]
+
+Alt:
+
+A *deformation retract* is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times. That is,
+$$
+H: X\cross I \to X \\
+H(x, 0) = \id_X \\
+H(x, 1) = \id_A \\
+x\in A \implies H(x, t) \in A \quad \forall t
+$$
+
+Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
 :::
+
+
+:::{.remark}
+A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
+
+
+:::
+
 
 :::{.definition title="Degree of a Map"}
 

@@ -197,31 +197,8 @@ The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the
 So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
 :::
 
-## Definition: Homotopy Equivalence
-## Definition: Contractible
-
-A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.
-
-This is a useful property, because it supplies you with a homotopy.
 
 # Definition: Deformation Retract
-
-Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
-
-Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
-
-A *deformation retract* is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times. That is,
-$$
-H: X\cross I \to X \\
-H(x, 0) = \id_X \\
-H(x, 1) = \id_A \\
-x\in A \implies H(x, t) \in A \quad \forall t
-$$
-
-Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
-
-A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
-
 ## Definition: The Fundamental Group / 1st Homotopy Group
 
 Given a pointed space $(X,x_0)$, we define the fundamental group $\pi_1(X)$ as follows:
