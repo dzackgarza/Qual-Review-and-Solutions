@@ -312,21 +312,18 @@ Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\
 
 Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
 
-## Theorem: If $G$ induces a free and properly discontinuous group action on $X$, then $p: X \rightarrow X/G$ is a covering space
 
-Here $X/G$ denotes $X/\sim$  where $\forall x,y\in X, x\sim y \iff \exists g\in G \mid g.x = y$, i.e. all elements in a single orbit are identified.
+:::{.theorem title="When actions yield covering maps onto their quotients, Hatcher 1.40"}
+If $G\actson X$ is a free and properly discontinuous action, then 
 
-### Proof:
+1. The quotient map $p:X \to X/G$ given by $p(y) = Gy$ is a normal covering space,
 
-Construct a map $\phi: G \rightarrow \pi_1(X/G, G.x_0)$ by $g \mapsto [p \circ \gamma_g]$
+2. If $X$ is path-connected, then $G = \Aut_{\mathrm{Cov}} (X)$ is the group of deck transformations for the cover $p$,
 
-where $\gamma_g(0) = x_0$ and $\gamma_g(1) = G.x_0$.
+3. If $X$ is path-connected and locally path-connected, then $G\cong \pi_1(X/G) / p_*(\pi_1(X))$.
 
-- This is homomorphism:
-- This is well-defined:
+:::
 
-## Application: Fundamental group of the circle
-## Application: Fundamental group of the real projective plane
 
 ## Constructing Covering Spaces
 For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a tree in which each $\tilde X_i$ is a vertex with one of $i$ colors denoting which space it covers. The neighborhood of each colored vertex has edges corresponding to $\pi_1(X_i)$.
