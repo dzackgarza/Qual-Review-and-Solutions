@@ -188,7 +188,7 @@ and
 These split unnaturally:
 \[
 H_{i}(X;G) &= (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G) \\
-H^i(X; G) &= \hom(H_{iX}, G) \oplus \ext(H_{i-1}X; G)
+H^i(X; G) &= \hom(H_{i}X, G) \oplus \ext(H_{i-1}X; G)
 \]
 
 When all of the $H_{i}X$ are all finitely generated, writing $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$ we have
@@ -200,26 +200,13 @@ $$
 
 
 
-### Useful Short Exact Sequences
+:::{.remark}
+If $A$ is a field, then $$H^i(X; A) \cong \hom(H_{i}(X; A), A)$$
+:::
 
-> Note that $\ext_{R}^0 = \hom_{R}$ and $\tor_{R}^0 = \tensor_{R}$
-
-#### Homology to Cohomology
-
-
-
-#### Cohomology to Dual of Homology
-$$
-.$$
-
-#### Product of Spaces to Tensor Product in Homology
-$$
-0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
-$$
 
 ### Useful Shortcuts
 
-* Cohomology: If $A$ is a field, then $$H^i(X; A) \cong \hom(H_{i}(X; A), A)$$
 
 * Kunneth: If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
 $$ 
