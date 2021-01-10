@@ -99,7 +99,7 @@ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}
 \right\rangle \\ \\
 &= 
 \frac{
-  \pi_{1}(U) \ast \pi_{1}(B)
+  \pi_{1}(U_1) \ast \pi_{1}(U_2)
 } {
   \generators{
     \theset{\iota_1^*(w_{i}) \iota_2^*(w_{i})\inv \suchthat 1\leq i \leq p}
