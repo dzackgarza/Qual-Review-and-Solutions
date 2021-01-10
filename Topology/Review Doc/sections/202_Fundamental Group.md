@@ -17,12 +17,6 @@ $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 To calculate $\pi_{1}(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_{1}(X) = G$ by uniqueness of universal covers.
 
 
-- $H_{1}$ is the abelianization of $\pi_{1}$.
-
-- Homotopy commutes with products: $\pi_{k} \prod X_{i} = \prod \pi_{k} X_{i}$.
-
-- Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
-
 ## Homotopy
 
 \todo{Merge Van Kampen theorems.}
@@ -192,11 +186,22 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 
 # The Fundamental Group (Unsorted)
 
+- $H_{1}$ is the abelianization of $\pi_{1}$.
+
+- Homotopy commutes with products: $\pi_{k} \prod X_{i} = \prod \pi_{k} X_{i}$.
+
+- Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
+
 
 :::{.proposition title="?"}
-The fundamental group of a CW-complex only depends on the 1-skeleton, and $H^k(X)$ only depends on the $k$-skeleton.
-
+$\pi_1 X$ for $X$ a CW-complex only depends on the 1-skeleton $X^{1}$, and $H_k(X)$ only depends on the $k$-skeleton.
 :::
+
+
+:::{.remark}
+This is useful in practice: to compute $H_k$, you are free to attach $n\dash$cells for $n\geq k+1$.
+:::
+
 
 :::{.theorem title="?"}
 Any two continuous functions into a convex set are homotopic.
