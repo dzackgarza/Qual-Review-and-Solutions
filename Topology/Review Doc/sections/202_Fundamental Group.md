@@ -112,7 +112,7 @@ If $X, Y$ are path-connected, then
 
 :::{.proposition title="$\pi_1$ of a wedge"}
 \[
-\pi_1(X \wedge Y) = \pi_1(X) \ast \pi_1(Y)
+\pi_1(X \vee Y) = \pi_1(X) \ast \pi_1(Y)
 .\]
 :::
 
