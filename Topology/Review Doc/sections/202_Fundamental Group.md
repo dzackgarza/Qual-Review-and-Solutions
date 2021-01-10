@@ -12,6 +12,39 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 ## Fundamental Group
 
 
+:::{.definition title="The Fundamental Group"}
+Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
+
+- Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}$.
+- Define an equivalence relation $\alpha \sim \beta$ iff there exists a homotopy 
+\[
+H: &S^1 \cross I  \to X \\ 
+&\begin{cases}
+H(s, 0) = \alpha(s)\\
+H(s, 1) = \beta(s),
+\end{cases}
+\]
+i.e. if $f\homotopic g$ in $X$.
+  - Symmetric:
+  - Reflexive:
+  - Transitive:
+- Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
+- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
+  $(f\cdot g)(s) = \mathbb{1}[s \in \left[0, \frac{1}{2}]\right]f(2s) + \mathbb{1}[s \in \left[\frac{1}{2}, 1]\right]g(2s-1)$
+  - Continuous: by the pasting lemma and assumed continuity of $f, g$
+  - Well-defined:
+- Check that this is actually a group
+  - Identity element:
+  - Closure:
+  - Associativity:
+  - Inverses:
+- Summary:
+  - Elements of the fundamental group are *homotopy classes of loops*.
+  - Continuous maps between spaces induce *some* homomorphism on fundamental groups.
+
+:::
+
+
 :::{.fact}
 \envlist
 
@@ -28,8 +61,6 @@ $\pi_{1}(X) = 1$ iff $X$ is simply connected.
 :::
 
 :::{.proof title="?"}
-By definition, $X$ is simply connected iff $X$ is path connected and every loop contracts to a point.
-
 $\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
 
 $\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
@@ -235,26 +266,6 @@ So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z
 
 ## Definition: The Fundamental Group / 1st Homotopy Group
 
-Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
-
-- Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}$.
-- Define an equivalence relation $\alpha \sim \beta$ iff there exists a homotopy $H: S^1 \cross I \into X$ such that $H(s, 0) = \alpha(s)$ and $H(s, 1) = \beta(s)$, i.e. if $f\homotopic g$ in $X$.
-  - Symmetric:
-  - Reflexive:
-  - Transitive:
-- Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
-- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
-  $(f\cdot g)(s) = \mathbb{1}[s \in \left[0, \frac{1}{2}]\right]f(2s) + \mathbb{1}[s \in \left[\frac{1}{2}, 1]\right]g(2s-1)$
-  - Continuous: by the pasting lemma and assumed continuity of $f, g$
-  - Well-defined:
-- Check that this is actually a group
-  - Identity element:
-  - Closure:
-  - Associativity:
-  - Inverses:
-- Summary:
-  - Elements of the fundamental group are *homotopy classes of loops*.
-  - Continuous maps between spaces induce *some* homomorphism on fundamental groups.
 
 
 
