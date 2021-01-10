@@ -154,18 +154,30 @@ A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ 
 :::{.definition title="Separable "}
 A space $X$ is *separable* iff $X$ contains a countable dense subset.
 :::
+  
+  
+
+
+:::{.definition title="Hausdorff"}
+A topological space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
+:::
 
 
 
+:::{.definition title="First Countable"}
+A space is *first-countable* iff every point admits a countable neighborhood basis.
+:::
 
-Definition (Hausdorff)
-: A topo.ogical space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
 
-Definition (First Countable)
-: A space is *first-countable* iff every point admits a countable neighborhood basis.
+:::{.definition title="Second Countable"}
+A space is *second-countable* iff it admits a countable basis.
+:::
 
-Definition (Second Countable)
-: A space is *second-countable* iff it admits a countable basis.
+
+:::{.definition title="Regular"}
+
+:::
+
 
 Definition (Regular)
 : \todo[inline]{Todo}
