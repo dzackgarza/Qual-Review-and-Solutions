@@ -331,3 +331,4 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+
