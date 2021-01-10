@@ -182,29 +182,22 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 
 # The Fundamental Group (Unsorted)
 
-## Lemma: The fundamental group of a CW-complex only depends on the 1-skeleton, and $H^k(X)$ only depends on the $k$-skeleton.
 
-## Definition: Homotopy
+:::{.proposition title="?"}
+The fundamental group of a CW-complex only depends on the 1-skeleton, and $H^k(X)$ only depends on the $k$-skeleton.
 
+:::
 
-## Definition: Nullhomotopic
-# Theorem: Any two continuous functions into a convex set are homotopic.
+:::{.theorem title="?"}
+Any two continuous functions into a convex set are homotopic.
+:::
 
-Proof: The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
+:::{.proof title="?"}
+The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
 So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
+:::
 
 ## Definition: Homotopy Equivalence
-
-Let $f: X \to Y$ be a continuous map, then $f$ is said to be a *homotopy equivalence* if there exists a continuous map $g: X \to Y$ such that
-
-$f\circ g \homotopic \id_Y$ and $g\circ f \homotopic \id_X$.
-
-Such a map $g$ is called a homotopy inverse of $f$, the pair of maps is a homotopy equivalence.
-
-If such an $f$ exists, we write $X \homotopic Y$ and say $X$ and $Y$ have the same homotopy type, or that they are homotopy equivalent.
-
-> Note that homotopy equivalence is strictly weaker than homeomorphic equivalence, i.e., $X\cong Y$ implies $X \homotopic Y$ but not necessarily the converse.
-
 ## Definition: Contractible
 
 A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.
