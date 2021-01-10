@@ -158,3 +158,11 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 ## Misc
 
 * $\Omega(\wait)$ is an exact functor.
+
+## Building a Moore Space
+
+- To build a Moore space $M(n, \ZZ_p)$, take $X = S^n$ and attach $e^{n+1}$ via a map $\Phi: S^n = \del B^{n+1}\to X^{(n)} = S^n$ of degree $p$.
+	- To obtain $M(n, \prod G_i)$ take the corresponding $\bigvee X_i$
+	- Can also use Mayer Vietoris to conclude $H_{n+1}(\Sigma X) = H_n(X)$, and just suspend spaces with known homology.
+
+

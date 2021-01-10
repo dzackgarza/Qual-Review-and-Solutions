@@ -441,10 +441,12 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 
 :::
 
-:::{.definition title="Degree of a Map"}
-
+:::{.definition title="Degree of a Map of Spheres"}
+Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. 
+Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. 
+But homomorphisms of free groups are entirely determined by their action on generators. 
+So if $f^*(1) = n$, define $n$ to be the **degree** of $f$.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Derived Functor"}
 For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.

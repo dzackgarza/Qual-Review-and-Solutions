@@ -205,6 +205,16 @@ Note that the hypothesis that $U_1 \intersect U_2$ is path-connected is necessar
 
 :::
 
+:::{.proof title="Sketch"}
+\envlist
+
+- Construct a map going backwards
+- Show it is surjective
+  - "There and back" paths
+- Show it is injective
+  - Divide $I\times I$ into a grid
+:::
+
 :::{.example title="Pushing out with van Kampen"}
 $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
 Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_{A}(z) = x^2$ and $\iota_{B}(z) = y^3$.

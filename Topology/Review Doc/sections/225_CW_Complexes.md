@@ -1,25 +1,7 @@
 #  CW and Simplicial Complexes
 
-## Useful Facts
-- To build a Moore space $M(n, \ZZ_p)$, take $X = S^n$ and attach $e^{n+1}$ via a map $\Phi: S^n = \del B^{n+1}\to X^{(n)} = S^n$ of degree $p$.
-	- To obtain $M(n, \prod G_i)$ take the corresponding $\bigvee X_i$
-	- Can also use Mayer Veitoris to conclude $H_{n+1}(\Sigma X) = H_n(X)$, and just suspend spaces with known homology.
 
-## Theorem: Van Kampen's Theorem
-
-Claim: If $X = U \union V$ and $U \intersect V$ is nonempty and "nice", then $\pi_1(X) = \pi_1(U) ~\ast_{\pi_1(U \intersect V)}~ \pi_1(V)$.
-
-### Proof
-
-- Construct a map going backwards
-- Show it is surjective
-  - "There and back" paths
-- Show it is injective
-  - Divide $I\times I$ into a grid
-
-## Definition: CW Complex
-
-### Examples
+## Examples
 
 - $\mathbb{RP}^n = e^1 \cup e^2 \cup \cdots \cup e^n$
 - $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
@@ -27,7 +9,6 @@ Claim: If $X = U \union V$ and $U \intersect V$ is nonempty and "nice", then $\p
 
 # Definition: The Degree of  Map $S^n \into S^n$
 
-Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. But homomorphisms of this type are entirely determined by their action on generators. So if $f^*(1) = n$, define $n$ to be the degree of $f$.
 
 Properties and examples:
 
