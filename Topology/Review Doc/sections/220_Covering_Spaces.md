@@ -297,7 +297,6 @@ cor
 There is no covering map $p: \RP^2 \to \TT^2$.
 :::
 
-
 :::{.proof title="?"}
 \envlist
 
@@ -306,21 +305,10 @@ There is no covering map $p: \RP^2 \to \TT^2$.
 - Using the following two facts, $p_*$ is the trivial map:
   - By the previous results, $p$ is thus nullhomotopic.
   - Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
-- This implies
+- Since $p$ was supposed a cover, this can be used to imply that $\id_{\TT^2}$ is nullhomotopic.
+- This implies $\TT^2 \homotopic \pt$ is contractible, which is false.
 :::
-
-
-:::{.example title="Showing when one space can not cover another"}
-
-:::
-
-
-## Application: Showing when there is no covering map $f: Y \into X$
-
-This can be done by lifting $f$ to $\tilde f: Y \into \tilde X$, the universal cover. 
-If the covering space happens to be contractible, you get that $\tilde f$ is nullhomotopic. 
-So there is a homotopy $\tilde H: Y\cross I \into \tilde X$ -- but then $p\circ\tilde H: Y \into X$ descends to a homotopy of $f$. 
-If you leave $f$ arbitrary, this would force $\pi_1(X) = 0$.
+\todo[inline]{Could be more clear on the last two steps..}
 
 # Definition: Monodromy Action
 
