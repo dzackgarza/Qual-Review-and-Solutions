@@ -166,9 +166,18 @@ For $R$ a PID, there exists a short exact sequence
 .\]
 It has a non-canonical splitting given by
 \[
-H_{k} (X\cross Y) = \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross \prod_{i+j = k-1}\tor(H_{iX}, H_{j} Y) \\
+H_{k} (X\cross Y) \cong \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross \prod_{i+j = k-1}\tor(H_{i}X, H_{j} Y) \\
 \]
 :::
+
+:::{.corollary title="Nicest case of Kunneth"}
+If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
+$$ 
+H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_{i}(X), H_{j}(X))
+$$
+
+:::
+
 
 
 :::{.theorem title="UCT for Change of Group"}
@@ -208,10 +217,6 @@ If $A$ is a field, then $$H^i(X; A) \cong \hom(H_{i}(X; A), A)$$
 ### Useful Shortcuts
 
 
-* Kunneth: If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
-$$ 
-H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_{i}(X), H_{j}(X))
-$$
 
 * Universal Coefficients Theorem: If $X$ is a finite CW complex then
 $$
