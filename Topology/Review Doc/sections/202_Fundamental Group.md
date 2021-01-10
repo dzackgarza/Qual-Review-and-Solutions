@@ -1,5 +1,12 @@
 # Theorems: Algebraic Topology
 
+:::{.fact title="Contracting Spaces in Products"}
+\[
+X\cross \RR^n \homotopic X \cross \pt \cong X
+.\]
+:::
+
+
 :::{.proposition title="$\pi_0$ detects simply connectedness"}
 $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 :::
@@ -179,17 +186,11 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 * General mantra: homotopy plays nicely with products, homology with wedge products.[^pullbacks]
 * $\pi_{k}\prod X = \prod \pi_{k} X$ by LES.[^homotopyproduct]
 
-In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibrations and products), but not homotopy push-outs (e.g., cofibrations and wedges). Homology is the opposite.
+- In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibrations and products), but not homotopy push-outs (e.g., cofibrations and wedges). Homology is the opposite.
 
 
+- Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
-Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
-
-:::{.proposition title="Contracting Spaces in Products"}
-\[
-X\cross \RR^n \homotopic X \cross \pt \cong X
-.\]
-:::
 
 ---
 
