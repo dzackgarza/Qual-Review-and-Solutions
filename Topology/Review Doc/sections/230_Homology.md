@@ -119,18 +119,6 @@ H_{0} (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_{0} A \oplus H_{0} B \arrow
 
 The connecting homomorphisms $\delta_{n} :H_{n}(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_{n}(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_{i}$ where each $c_{i}$ is an $x+y$ chain. Then $\del(c_{i}) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
 
-:::
-
-:::{.example title="Application: computing the homology of a connect sum"}
-$H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
-:::
-
-
-
-
-
-This is sometimes written in the following compact form:
-
 Handy mnemonic diagram:
 \[
 \begin{matrix}
@@ -139,6 +127,13 @@ Handy mnemonic diagram:
 A\union B & & \longleftarrow &  & A \oplus B
 \end{matrix}
 .\]
+
+:::
+
+:::{.example title="Application: computing the homology of a connect sum"}
+$H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
+:::
+
 
 ### Application: Isomorphisms in the homology of spheres.
 
