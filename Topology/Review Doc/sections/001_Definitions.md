@@ -105,22 +105,34 @@ A space is *locally connected* at a point $x$ iff $\forall N_{x} \ni x$, there e
 A space is *locally path-connected* if it admits a basis of path-connected open subsets.
 :::
 
-def
+
+:::{.definition title="Components"}
+Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
+:::
 
 
 
-Definition (Components)
-: Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
+:::{.definition title="Path Components"}
+Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes.
+:::
 
-Definition (Path Components)
-: Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes.
+
 
 ## Compactness
 
-Definition (Compact)
-:   A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
-    
-    That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_{j}$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_{j}$.
+
+:::{.definition title="Compact"}
+A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
+
+That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_{j}$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_{j}$.
+:::
+
+
+:::{.definition title="Locally Compact"}
+
+:::
+
+
 
 Definition (Locally Compact)
 : A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
