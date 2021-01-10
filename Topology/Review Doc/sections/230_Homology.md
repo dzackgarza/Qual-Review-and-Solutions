@@ -24,6 +24,15 @@ Mayer-Vietoris.
 :::
 
 
+:::{.warnings}
+$H_{k} \prod X$ is **not** generally equal to $\prod H_{k} X$.
+The obstruction is due to torsion -- if all groups are torsion free, then the Kunneth theorem[^kunneth] yields 
+\[
+H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
+\]
+:::
+
+
 
 - $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
@@ -35,8 +44,6 @@ Mayer-Vietoris.
 	  - $(A \injects X) \mapsto (A, X, X/A)$
   - Excision
 
-* $H_{k} \prod X \neq \prod H_{k} X$ due to torsion.
-  * Nice case: $H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B$ by Kunneth when all groups are torsion-free.[^kunneth]
 * $H_{k} \bigvee X = \prod H_{k} X$ by Mayer-Vietoris.[^wedge]
 * $H_{i}(S^n) = \indic{i \in \theset{0, n}}$
 * $H_{n}(\bigvee_{i} X_{i}) \cong \prod_{i} H_{n}(X_{i})$ for "good pairs"
@@ -81,14 +88,11 @@ Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
 \[
 0 \to C_{n}(A\intersect B) \mapsvia{x\mapsto (x, -x)} C_{n}(A) \oplus C_{n}(B) \mapsvia{(x, y) \mapsto x+y} C_{n}(A + B) \to 0
 \]
-
 where $C_{n}(A+B)$ denotes the chains that are sums of chains in $A$ and chains in $B$.
 This yields a LES in homology:
-
 \[
 \cdots \to H_{n}(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_{n}(A) \oplus H_{n}(B) \mapsvia{(x, y) \mapsto x+y} H_{n}(X) \to \cdots
 .\]
-
 
 :::
  
