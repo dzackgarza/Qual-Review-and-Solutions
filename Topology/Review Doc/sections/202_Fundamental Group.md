@@ -106,7 +106,6 @@ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}
 \]
 
 where
-
 \[
 I: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(U, w) \\
 J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
