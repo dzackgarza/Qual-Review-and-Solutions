@@ -90,12 +90,8 @@ Elements of the fundamental group are *homotopy classes of loops*, and every con
 
 - $H_{1}$ is the abelianization of $\pi_{1}$.
 
-- Homotopy commutes with products: $\pi_{1} \prod X_{i} = \prod \pi_{1} X_{i}$.
-
-- Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
 
 :::
-
 
 :::{.proposition title="Hatcher 1.12"}
 If $X, Y$ are path-connected, then 
@@ -104,12 +100,20 @@ If $X, Y$ are path-connected, then
 .\]
 :::
 
-
 :::{.proof title="sketch"}
 \envlist
 
 - A loop in \( X \cross Y \) is a continuous map \( \gamma : I \mapsvia{} X \cross Y \) given by \( \gamma (t) = (f(t), g(t) \) in components.
 - $\gamma$ being continuous in the product topology is equivalent to $f, g$ being continuous maps to $X, Y$ respectively.
+- Similarly a homotopy $F: I^2 \to X \cross Y$ is equivalent to a pair of homotopies $f_t, g_t$ of the corresponding loops.
+- So the map $[ \gamma ] \mapsto ([f], [g])$ is the desired bijection.
+:::
+
+
+:::{.proposition title="$\pi_1$ of a wedge"}
+\[
+\pi_1(X \wedge Y) = \pi_1(X) \ast \pi_1(Y)
+.\]
 :::
 
 
