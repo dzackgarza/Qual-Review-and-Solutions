@@ -173,10 +173,18 @@ H_{k} (X\cross Y) = \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross 
 
 :::{.theorem title="UCT for Change of Group"}
 For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
-$$
-0 \to H_{i} X \tensor G &\to H_{i}(X; G) \to \tor(H_{i-1}X, G) \to 0 \\
+
+\[
+0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A) &\to H_{i}(X;A)\to \Tor_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0 \\
+& \quad \Downarrow \\ \\
+0 \to H_{i} X \tensor G &\to H_{i}(X; G) \to \tor_\ZZ^1(H_{i-1}X, G) \to 0 
+\]
+and 
+\[
+0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A) &\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0 \\
+&\quad \Downarrow \\ \\ 
 0 \to \ext (H_{i-1} X, G) &\to H^i(X;G) \to \hom(H_{i} X, G) \to 0
-$$
+\]
 
 which split unnaturally:
 \[
@@ -198,13 +206,11 @@ $$
 > Note that $\ext_{R}^0 = \hom_{R}$ and $\tor_{R}^0 = \tensor_{R}$
 
 #### Homology to Cohomology
-$$
-\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
-.$$
+
+
 
 #### Cohomology to Dual of Homology
 $$
-0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
 .$$
 
 #### Product of Spaces to Tensor Product in Homology
