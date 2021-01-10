@@ -23,8 +23,8 @@
 	* Fundamental theorem of algebra
 * Algebraic topology theorems:
 	* Brouwer fixed point theorem
-	* Poincare lemma
-	* Poincare duality
+	* Poincaré lemma
+	* Poincaré duality
 	* de Rham theorem
 	* Seifert-van Kampen theorem
 * Covering space theory topics:
