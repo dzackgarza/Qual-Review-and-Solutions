@@ -291,6 +291,28 @@ But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to th
 
 cor
 
+
+
+:::{.proposition title="Application: showing one space can not cover another"}
+There is no covering map $p: \RP^2 \to \TT^2$.
+:::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Use the fact that $\pi_1(\TT^2) \cong \ZZ^2$ and $\pi_1(\RP^2) = \ZZ/2\ZZ$ are known.
+- The universal cover of $\TT^2$ is $\RR^2$, which is contractible.
+- By the previous results, $p$ is thus nullhomotopic.
+- Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
+:::
+
+
+:::{.example title="Showing when one space can not cover another"}
+
+:::
+
+
 ## Application: Showing when there is no covering map $f: Y \into X$
 
 This can be done by lifting $f$ to $\tilde f: Y \into \tilde X$, the universal cover. 
