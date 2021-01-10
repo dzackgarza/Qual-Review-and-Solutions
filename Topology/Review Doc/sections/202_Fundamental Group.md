@@ -60,16 +60,17 @@ A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
 \]
 where $T$ is a set of relations given by 
 \[
-T = \theset{\iota_{1}^*(z) \qty{\iota_{2}^*} ^{-1} (z) \suchthat z\in Z}
+T = \theset{\iota_{1}^*(z) \qty{\iota_{2}^*} ^{-1} (z) \suchthat z\in \pi_1 (U_1 \intersect U_2)}
 .\]
 
 If we have presentations
 
 \[ 
-\pi_{1}(U, w) &=
+\pi_{1}(U, x_0) &=
 \left\langle u_{1}, \cdots, u_{k} \suchthat \alpha_{1}, \cdots, \alpha_{l}\right\rangle \\ 
 \pi_{1}(V, w) &=\left\langle v_{1}, \cdots, v_{m} \suchthat \beta_{1}, \cdots, \beta_{n}\right\rangle \\ 
-\pi_{1}(U \cap V, w) &=\left\langle w_{1}, \cdots, w_{p} \suchthat \gamma_{1}, \cdots, \gamma_{q}\right\rangle 
+\pi_{1}(U \cap V, x_0) 
+&=\left\langle w_{1}, \cdots, w_{p} \suchthat \gamma_{1}, \cdots, \gamma_{q}\right\rangle 
 \]
 
 then
