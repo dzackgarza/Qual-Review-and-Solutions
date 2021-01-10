@@ -2,22 +2,20 @@
 
 ## Useful Facts
 
-
-
-:::{.fact title="Algebraic properties of homology"}
-\envlist
-
-
-
-:::
-
-
 :::{.proposition title="Homology commutes with wedge products"}
 \[
 \tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
 H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
 \]
 See footnotes for categorical interpretation.[^wedge]
+:::
+\todo[inline]{May need some good pair condition?}
+?
+
+:::{.example title="Application"}
+\[
+H_{n}(\bigvee_{k} S^n) = \ZZ^k
+.\]
 :::
 
 :::{.proof title="?"}
@@ -42,9 +40,6 @@ Todo
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
 
 
-* $H_{n}(\bigvee_{i} X_{i}) \cong \prod_{i} H_{n}(X_{i})$ for "good pairs"
-  * Corollary: $H_{n}(\bigvee_{k} S^n) = \ZZ^k$
-
 ## Known Homology
 
 :::{.example title="Spheres"}
@@ -58,12 +53,6 @@ H_{i}(S^n) =
 \]
 :::
   
-- $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
-- $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
-- For CW complexes $X = \theset{X^{(i)}}$, we have 
-\[
-H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
-\]
 
 
 ## Constructing a CW Complex with Prescribed Homology
@@ -94,6 +83,10 @@ This yields a LES in homology:
 
 :::
  
+
+:::{.example title="Application: computing the homology of a connect sum"}
+$H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
+:::
 
 
 
@@ -321,6 +314,12 @@ $$
 
 - LES of a pair
   - $(A \injects X) \mapsto (A, X, X/A)$
+
+- For CW complexes $X = \theset{X^{(i)}}$, we have 
+\[
+H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
+\]
+- $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
 
 ## Cohomology
 
