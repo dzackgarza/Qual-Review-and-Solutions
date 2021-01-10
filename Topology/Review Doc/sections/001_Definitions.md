@@ -12,9 +12,9 @@ A neighborhood of a point $x$ is *any* open set containing $x$.
 :::
 
 :::{.definition title="Limit Point"}
-For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
+For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_{x}$ of $x$ satisfies $P_{x} \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
     
-Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
+Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_{X}(A\setminus\theset{x})$.
 :::
 
 :::{.definition title="Closed"}
@@ -22,13 +22,13 @@ Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$
 
 - A set is closed if and only if its complement is open.
 - A set is closed iff it contains all of its limit points.
-- A closet set in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
+- A closet set in a subspace: $Y\subset X \implies \cl_{Y}(A) \da \cl_{X}(A)\intersect Y$.
 
 :::
 
 
 :::{.definition title="Basis"}
-For $X$ a space and $\mcb$ a collection of subsets, $\mcb$ is a *basis* for $(X, \tau_X)$ iff every open $U\in \tau_X$ is a union of elements in $\mcb$.
+For $X$ a space and $\mcb$ a collection of subsets, $\mcb$ is a *basis* for $(X, \tau_{X})$ iff every open $U\in \tau_{X}$ is a union of elements in $\mcb$.
 :::
 
 
@@ -39,12 +39,7 @@ The set of unions of elements in $B$ is a topology and is denoted *the topology 
 
 
 :::{.definition title="Neighborhood Basis"}
-If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_p$ of neighborhoods of $p$ such that if $N_p$ is a neighborhood of $p$, then $N_p \supseteq B$ for at least one $B\in \mcb_p$.
-:::
-
-
-:::{.definition title="Cover"}
-
+If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
 :::
 
 
@@ -62,28 +57,29 @@ A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\i
 ## Analysis 
 
 
-:::{.definition title="?"}
-A subset $Q\subset X$ is dense iff $y\in N_y \subset X \implies N_y \intersect Q \neq \emptyset$ iff $\bar Q = X$.
+:::{.definition title="Dense"}
+A subset $Q\subset X$ is dense iff $y\in N_{y} \subset X \implies N_{y} \intersect Q \neq \emptyset$ iff $\bar Q = X$.
 :::
 
-def
+
+:::{.definition title="Bounded"}
+A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
+:::
 
 
+:::{.definition title="Uniform Continuity"}
+For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
+\[
+\forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_{X}(x_{1}, x_{2}) < \delta \implies d_{Y}(f(x_{1}), f(x_{2})) < \eps
+.\] 
+:::
 
-Definition (Bounded)
-: A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
-
-Definition (Uniform Continuity)
-:   For $f: (X, d_x) \to (Y, d_Y)$ metric spaces,
-    \begin{align*}
-    \forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_X(x_1, x_2) < \delta \implies d_Y(f(x_1), f(x_2)) < \eps
-    .\end{align*} 
 
 Definition (Lebesgue number)
-:   For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_L > 0$ such that 
-    \begin{align*}
-    A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
-    .\end{align*}
+:   For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_{L} > 0$ such that 
+    \[
+    A\subset X, ~ \diam(A) < \delta_{L} \implies A\subseteq U_\alpha \text{ for some } \alpha
+    .\]
 
 
 ## Connectedness
@@ -93,10 +89,10 @@ Definition (Connected)
   
   Equivalently, $X$ contains no proper nonempty clopen sets.
   
-  > Additional condition for a subspace $Y\subset X$: $\cl_Y(A) \intersect V = A \intersect \cl_Y(B) = \emptyset$.
+  > Additional condition for a subspace $Y\subset X$: $\cl_{Y}(A) \intersect V = A \intersect \cl_{Y}(B) = \emptyset$.
 
 Definition (Locally Connected)
-: A space is *locally connected* at a point $x$ iff $\forall N_x \ni x$, there exists a $U\subset N_x$ containing $x$ that is connected.
+: A space is *locally connected* at a point $x$ iff $\forall N_{x} \ni x$, there exists a $U\subset N_{x}$ containing $x$ that is connected.
 
 Definition (Locally Path-Connected)
 : A space is *locally path-connected* if it admits a basis of path-connected open subsets.
@@ -112,7 +108,7 @@ Definition (Path Components)
 Definition (Compact)
 :   A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
     
-    That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
+    That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_{j}$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_{j}$.
 
 Definition (Locally Compact)
 : A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
@@ -121,7 +117,7 @@ Definition (Paracompact)
 : A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
 
 Definition (Precompact)
-: A subset $A\subseteq X$ is *precompact* iff $\cl_X(A)$ is compact.
+: A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
 
 
 ## Separability
