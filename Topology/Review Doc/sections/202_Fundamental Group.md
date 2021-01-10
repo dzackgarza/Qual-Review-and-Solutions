@@ -76,7 +76,9 @@ If we have presentations
 then
 \[
 \pi_{1}(X, w) 
-&= \left\langle u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m} \suchthat 
+&= \left\langle 
+u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m} 
+\middle\vert
 \begin{cases}
 \alpha_{1}, 
 \cdots, 
@@ -91,7 +93,7 @@ then
   I\left(w_{p}\right) J\left(w_{p}\right)^{-1}
 \\ 
 \end{cases}
-\right\rangle \\
+\right\rangle \\ \\
 &= 
 \frac{
   \pi_{1}(U) \ast \pi_{1}(B)
