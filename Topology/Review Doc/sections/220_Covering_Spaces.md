@@ -157,6 +157,22 @@ In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and
 :::
 
 
+:::{.fact}
+There is a bijective correspondence
+\[
+\correspond{
+  \text{Connected covering spaces} \\
+  \tilde X \mapsvia{p} X
+}
+&\mapstofrom
+\correspond{
+  \text{Conjugacy classes of subgroups} \\
+  \text{of } \pi_1(X)
+}
+.\]
+:::
+
+
 Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
 
 The number of sheets of a covering space is equal to $[p^*(\pi_1(\tilde X)): \pi_1(X)]$.
