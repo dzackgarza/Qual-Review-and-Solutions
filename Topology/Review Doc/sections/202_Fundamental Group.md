@@ -16,7 +16,7 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
 
 - Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}$.
-- Define an equivalence relation $\alpha \sim \beta$ iff there exists a homotopy 
+- Define an equivalence relation $\alpha \sim \beta$ iff  $\alpha \homotopic \beta$ in $X$, so there exists a homotopy 
 \[
 H: &S^1 \cross I  \to X \\ 
 &\begin{cases}
@@ -24,10 +24,12 @@ H(s, 0) = \alpha(s)\\
 H(s, 1) = \beta(s),
 \end{cases}
 \]
-i.e. if $f\homotopic g$ in $X$.
+- Check that this relation is 
+
   - Symmetric:
   - Reflexive:
   - Transitive:
+
 - Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
 - Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
   $(f\cdot g)(s) = \mathbb{1}[s \in \left[0, \frac{1}{2}]\right]f(2s) + \mathbb{1}[s \in \left[\frac{1}{2}, 1]\right]g(2s-1)$
