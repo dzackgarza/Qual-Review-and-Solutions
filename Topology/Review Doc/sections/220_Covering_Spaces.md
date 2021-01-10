@@ -1,12 +1,10 @@
 # Covering Spaces
 
+Some pictures to keep in mind when it comes to covers and path lifting: 
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)
+![Picture to keep in mind](figures/image_2021-01-10-13-45-42.png)
 
-Path lifting: 
-
-![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
-
+![A more complicated situation](figures/image_2021-01-09-00-19-03.png)
 
 ## Useful Facts
 
