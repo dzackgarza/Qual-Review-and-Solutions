@@ -102,8 +102,16 @@ If $X, Y$ are path-connected, then
 \[
 \pi_1 (X \cross Y) = \pi_1(X) \cross \pi_2(Y)
 .\]
-<++>
 :::
+
+
+:::{.proof title="sketch"}
+\envlist
+
+- A loop in \( X \cross Y \) is a continuous map \( \gamma : I \mapsvia{} X \cross Y \) given by \( \gamma (t) = (f(t), g(t) \) in components.
+- $\gamma$ being continuous in the product topology is equivalent to $f, g$ being continuous maps to $X, Y$ respectively.
+:::
+
 
 
 :::{.proposition title="$\pi_1$ detects simply-connectedness"}
