@@ -62,7 +62,7 @@ An element $c \in C_{p}(X; R)$ can be represented as the singular $p$ simplex $\
 :::{.definition title="Chain Homotopy"}
 Given two maps between chain complexes $(C_*, \del_{C}) \mapsvia{f, ~g} (D_*, \del_{D})$, a chain homotopy is a family $h_{i}: C_{i} \to B_{i+1}$ satisfying $$f_{i}-g_{i} = \del_{B, i-1}\circ h_{n} + h_{i+1}\circ \del_{A, i}$$. 
 
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_{homotopy_between_chain_complexes}.svg/650px-Chain_{homotopy_between_chain_complexes}.svg.png)-->
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_{homotopy_{between_chain_complexes}}.svg/650px-Chain_{homotopy_{between_chain_complexes}}.svg.png)-->
 
 :::
  
@@ -152,10 +152,10 @@ A space is contractible if its identity map is nullhomotopic.
 
 :::{.definition title="Cup Product"}
 A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
-$$
+\[
 H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
 (a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
-$$
+\]
 where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
 $$
 I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
