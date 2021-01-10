@@ -160,11 +160,11 @@ In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, whi
 
 
 :::{.theorem title="Kunneth"}
-For $R$ a PID, there exists a short exact sequence
+There exists a short exact sequence
 \[
 0 \to \prod_{i+j=k} H_{j}(X; R) \tensor_{R} H_{i}(Y; R) \to H_{k}(X\cross Y; R) \to \prod_{i+j=k-1} \tor_{R}^1(H_{i}(X; R), H_{j}(Y; R))
 .\]
-It has a non-canonical splitting given by
+If $R$ is a free \(R\dash\)module, a PID, or a field, then there is a (non-canonical) splitting given by
 \[
 H_{k} (X\cross Y) \cong \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross \prod_{i+j = k-1}\tor(H_{i}X, H_{j} Y) \\
 \]
