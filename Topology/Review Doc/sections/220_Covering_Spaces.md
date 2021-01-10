@@ -302,9 +302,8 @@ There is no covering map $p: \RP^2 \to \TT^2$.
   - By the previous results, $p$ is thus nullhomotopic.
   - Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
 - Since $p$ was supposed a cover, this can be used to imply that $\id_{\TT^2}$ is nullhomotopic.
-- This implies $\TT^2 \homotopic \pt$ is contractible, which is false.
+- Covering maps induce injections on $\pi_1$, and the only way the trivial map can be injective is if $\pi_1(T^2) = 0$, a contradiction. 
 :::
-\todo[inline]{Could be more clear on the last two steps..}
 
 # Definition: Monodromy Action
 
