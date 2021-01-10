@@ -75,27 +75,39 @@ For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
 :::
 
 
-Definition (Lebesgue number)
-:   For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_{L} > 0$ such that 
-    \[
-    A\subset X, ~ \diam(A) < \delta_{L} \implies A\subseteq U_\alpha \text{ for some } \alpha
-    .\]
+:::{.definition title="Lebesgue Number"}
+For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_{L} > 0$ such that 
+\[
+A\subset X, ~ \diam(A) < \delta_{L} \implies A\subseteq U_\alpha \text{ for some } \alpha
+.\]
+:::
+
+
 
 
 ## Connectedness
 
-Definition (Connected) 
-: There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
-  
-  Equivalently, $X$ contains no proper nonempty clopen sets.
-  
-  > Additional condition for a subspace $Y\subset X$: $\cl_{Y}(A) \intersect V = A \intersect \cl_{Y}(B) = \emptyset$.
 
-Definition (Locally Connected)
-: A space is *locally connected* at a point $x$ iff $\forall N_{x} \ni x$, there exists a $U\subset N_{x}$ containing $x$ that is connected.
+:::{.definition title="Connected"}
+There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
+Additional condition for a subspace $Y\subset X$: $\cl_{Y}(A) \intersect V = A \intersect \cl_{Y}(B) = \emptyset$.
+  
+Equivalently, $X$ contains no proper nonempty clopen sets.
+:::
 
-Definition (Locally Path-Connected)
-: A space is *locally path-connected* if it admits a basis of path-connected open subsets.
+
+:::{.definition title="Locally Connected"}
+A space is *locally connected* at a point $x$ iff $\forall N_{x} \ni x$, there exists a $U\subset N_{x}$ containing $x$ that is connected.
+:::
+
+
+:::{.definition title="Locally Path-Connected"}
+A space is *locally path-connected* if it admits a basis of path-connected open subsets.
+:::
+
+def
+
+
 
 Definition (Components)
 : Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
