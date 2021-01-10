@@ -24,15 +24,10 @@ Mayer-Vietoris.
 :::
 
 
-
-
 - $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
 
 - Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 
-
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
-- $H_n(X, A) \cong H_n(X/A)$
 - $H_n(X) = 0 \iff X$ has no $n\dash$cells.
 - $C^0 X = \pt \implies d_1: C^1 \to C^0$ is the zero map.
 - $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
