@@ -119,6 +119,8 @@ So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 
 :::
 
+## General Homotopy Theory
+
 :::{.theorem title="Whitehead's Theorem"}
 A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
 :::
