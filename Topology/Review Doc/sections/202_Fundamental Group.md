@@ -60,7 +60,7 @@ A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
 \]
 where $T$ is a set of relations given by 
 \[
-T = \theset{\iota_{1}(z) \iota_{2}(z)\inv \suchthat z\in Z}
+T = \theset{\iota_{1}^*(z) \qty{\iota_{2}^*} ^{-1} (z) \suchthat z\in Z}
 .\]
 
 If we have presentations
