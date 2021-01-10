@@ -141,9 +141,7 @@ $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vieto
 :::
 
 
-### Application: Isomorphisms in the homology of spheres.
-
-:::{.proposition title="?"}
+:::{.proposition title="Application: isomorphisms in the homology of spheres"}
 \[H^i(S^n) \cong H^{i-1}(S^{n-1}).\]
 :::
 
@@ -164,6 +162,7 @@ In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, whi
 
 :::
 
+## More Exact Sequences
 
 :::{.theorem title="Kunneth"}
 There exists a short exact sequence
