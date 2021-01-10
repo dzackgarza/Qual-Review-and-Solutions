@@ -156,14 +156,13 @@ letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
 :::
 
-
 :::{.fact}
 There is a bijective correspondence
 \[
 \correspond{
   \text{Connected covering spaces} \\
   p: \tilde X \mapsvia{} X
-}
+}_{/\sim}
 &\mapstofrom
 \correspond{
   \text{Conjugacy classes of subgroups} \\
@@ -174,8 +173,8 @@ If one fixes $\tilde x_0$ as a basepoint for $\pi_1(\tilde X)$, this yields
 \[
 \correspond{
   \text{Connected covering spaces} \\
-  \tilde X \mapsvia{p} X
-}
+  p: \tilde X \mapsvia{} X
+}/\sim
 &\mapstofrom
 \correspond{
   \text{Subgroups of } \pi_1(X)
