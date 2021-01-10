@@ -153,6 +153,12 @@ If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there ex
 	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIlxcdGlsZGUgWCJdLFsyLDEsInAiXSxbMCwxLCJmIiwyXSxbMCwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+
+Moreover, lifts are *unique* if they agree at a single point.
+:::
+
+:::{.remark title="Automatic lifts"}
+Note that if $Y$ is simply connected, then $\pi_1(Y) = 0$ and this holds automatically!
 :::
 
 :::{.proposition title="Covering spaces induce injections on $\pi_1$, Hatcher 1.31"}
@@ -176,7 +182,7 @@ In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and
 :::
 
 :::{.fact}
-There is a bijective correspondence
+There is a contravariant bijective correspondence
 \[
 \correspond{
   \text{Connected covering spaces} \\
@@ -213,7 +219,6 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 
 :::
 
-
 ### Examples
 
 :::{.example title="The circle $S^1$"}
@@ -232,44 +237,14 @@ The universal cover of $S^1$ is $\RR$; this is an infinitely sheeted cover, and 
 
 :::
 
-
 :::{.example title="Projective $n\dash$space $\RP^n$"}
 The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. 
 The fiber above $x_0$ contains the two antipodal points.
 :::
 
-
 :::{.example title="The torus"}
 The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
-
-
-
-
-## Theorem: Homotopy Lifting
-
-The setup: given $p: \tilde X \surjects X$ a covering space of $X$, a map $f: Y \into X$, and a homotopy $H: Y\cross I \into X$ such that $f_0 \definedas H(y, 0)$ has a lift $\tilde f_0: Y\into \tilde X$.
-
-Then there is a unique homotopy $\tilde H: Y \cross I \into \tilde X$ satisfying $p\circ \tilde H = H$
-In other words, if the $t=0$ portion of a homotopy can be lifted to a cover, the entire homotopy can.
-
-## Theorem: Lifting Criterion
-
-Let $p:\tilde X \surjects X$ be a covering of $X$, and let $f:Y \into X$ be a map. Then there is an induced homomorphism $f^*: \pi_1(Y) \into \pi_1(X)$. There is also an induced map $p^*: \pi_1(\tilde X) \into \pi_1(X)$. We then have the following condition:
-
-There exists a lift $\tilde f: Y \into \tilde X$ satisfying $p\circ\tilde f = f$ iff $f^*(\pi_1(Y)) \subseteq p^*(\pi_1(\tilde X))$, i.e. when the fundamental group of $Y$ injects into the projected fundamental group of the cover.
-
-Note that if $Y$ is simply connected, then $\pi_1(Y) = 0$ and this holds automatically!
-
-Moreover, lifts are *unique* if they agree at a single point.
-
-(Technically you need the base space to be connected and "locally pathwise connected")
-
-
-## Theorem: Fundamental theorem of covering spaces
-For every subgroup $G \leq \pi_1(X)$, there is a corresponding covering space $X_G \surjects X$ such that $\pi_1(X_G) = G$. The universal cover is obtained by taking $G$ to be the trivial group.
-
-Alternative phrasing: there is a contravariant, inclusion-reversing map from subgroups of $\pi_1(X)$ to covering spaces of $X$.
 
 
 ## Theorem: If $Y$ is contractible, every map $f: X \into Y$ is nullhomotopic.
