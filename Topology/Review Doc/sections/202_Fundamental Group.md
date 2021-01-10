@@ -47,13 +47,12 @@ B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 \end{tikzcd}
 For groups, the pushout is realized by the amalgamated free product: if 
 \[
-
 \begin{cases}
 A = \generators{G_{A} \suchthat R_{A}} \\
 B = \generators{G_{B} \suchthat R_{B}}
 \end{cases}
 \implies 
-A \ast_{Z} B = \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
+A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
 \]
 where $T$ is a set of relations given by 
 \[
