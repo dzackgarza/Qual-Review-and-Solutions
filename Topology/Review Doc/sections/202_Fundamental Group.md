@@ -1,17 +1,47 @@
 # Theorems: Algebraic Topology
 
+
 :::{.fact title="Contracting Spaces in Products"}
 \[
 X\cross \RR^n \homotopic X \cross \pt \cong X
 .\]
 :::
 
-
 :::{.proposition title="$\pi_0$ detects simply connectedness"}
 $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 :::
 
+
+
 ## Fundamental Group
+
+
+:::{.fact}
+\envlist
+
+- $H_{1}$ is the abelianization of $\pi_{1}$.
+
+- Homotopy commutes with products: $\pi_{k} \prod X_{i} = \prod \pi_{k} X_{i}$.
+
+- Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
+
+:::
+
+
+
+:::{.proposition title="$\pi_0$ detects simply connectedness"}
+$X$ is simply connected iff it has trivial fundamental group.
+:::
+
+:::{.proof title="?"}
+By definition, $X$ is simply connected iff $X$ is path connected and every loop contracts to a point.
+
+$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
+
+$\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
+
+
+:::
 
 ### Conjugacy in $\pi_{1}$:
 
@@ -126,6 +156,7 @@ So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 
 :::
 
+
 ## General Homotopy Theory
 
 :::{.theorem title="Whitehead's Theorem"}
@@ -194,20 +225,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 ---
 
-[^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
-
-
-[^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
-
 # The Fundamental Group (Unsorted)
-
-- $H_{1}$ is the abelianization of $\pi_{1}$.
-
-- Homotopy commutes with products: $\pi_{k} \prod X_{i} = \prod \pi_{k} X_{i}$.
-
-- Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
-
-
 
 
 
@@ -244,10 +262,12 @@ Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ 
   - Elements of the fundamental group are *homotopy classes of loops*.
   - Continuous maps between spaces induce *some* homomorphism on fundamental groups.
 
-# Theorem: $X$ is simply connected iff it has trivial fundamental group.
 
-By definition, $X$ is simply connected iff $X$ is path connected and every loop contracts to a point.
 
-$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
 
-$\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
+[^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
+
+
+[^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+
+
