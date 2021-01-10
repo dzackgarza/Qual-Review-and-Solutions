@@ -305,12 +305,6 @@ There is no covering map $p: \RP^2 \to \TT^2$.
 - Covering maps induce injections on $\pi_1$, and the only way the trivial map can be injective is if $\pi_1(T^2) = 0$, a contradiction. 
 :::
 
-# Definition: Monodromy Action
-
-Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\alpha$ a loop at $x\in X$, let $\tilde \alpha$ be its lift and $\tilde x\in p^{-1}(x)$ be the lifted point in the fiber above $x$. Then $\alpha$ acts on $\tilde x$ from the right, by the rule $\tilde x \curvearrowleft \alpha = \tilde\alpha(1)$.
-
-Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
-
 
 :::{.theorem title="When actions yield covering maps onto their quotients, Hatcher 1.40"}
 If $G\actson X$ is a free and properly discontinuous action, then 
@@ -326,20 +320,14 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 ### How to Construct Universal Covers
 
-
 :::{.fact}
-For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a tree in which each $\tilde X_i$ is a vertex with one of $i$ colors denoting which space it covers. 
-The neighborhood of each colored vertex has edges corresponding to $\pi_1(X_i)$.
+For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
+
+- Each vertex corresponds to one of the universal covers $\tilde X_i$,
+- The color corresponds to which summand $\tilde X_i$ appears,
+- T
+The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
 :::
-
-
-
-If X and Y are two reasonable spaces with universal covers $\tilde X$ and $\tilde Y$, there is a nice picture of the universal cover $\widetilde{X\vee Y}$ which has the combinatorial pattern of an infinite tree.
-The tree is bipartite with vertices labeled by the symbols $X$ and $Y$. 
-The edges from an $X$ vertex are bijective correspondence with the fundamental group $\pi_1(X)$, and likewise for $Y$ vertices and $\pi_1(Y)$.
-To make $\widetilde{X\vee Y}$, replace each $X$ vertex by $\tilde X$ and each $Y$ vertex by $\tilde Y$. 
-The base point of $X$ lifts to $\abs{\pi_1(X)}$ points in $\tilde X$, and likewise for $Y$. 
-In $\widetilde{X\vee Y}$, copies of $\tilde X$ are attached to copies of $\tilde Y$ at lifts of base points.
 
 ### Examples of Universal Covers
 
@@ -371,4 +359,13 @@ Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 
 
 
 ## Application: Every subgroup of a free group is free
+
 Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+
+# Definition: Monodromy Action
+
+Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\alpha$ a loop at $x\in X$, let $\tilde \alpha$ be its lift and $\tilde x\in p^{-1}(x)$ be the lifted point in the fiber above $x$. Then $\alpha$ acts on $\tilde x$ from the right, by the rule $\tilde x \curvearrowleft \alpha = \tilde\alpha(1)$.
+
+Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
+
+
