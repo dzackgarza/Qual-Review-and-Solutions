@@ -282,8 +282,8 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 :::
 \todo[inline]{Theorem}
 
-## Unsorted Facts
-
+:::{.fact title="Unsorted facts about higher homotopy groups}
+\envlist
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
@@ -309,6 +309,12 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 - Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
+
+
+:::
+
+## Unsorted Facts
+
 
 
 ---
