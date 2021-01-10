@@ -289,12 +289,14 @@ Since every map into a contractible space is nullhomotopic, there is a homotopy 
 But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
 :::
 
+cor
 
+## Application: Showing when there is no covering map $f: Y \into X$
 
-
-## Application: Showing when there is no covering map $f: X \into Y$
-
-This can be done by lifting $f$ to $\tilde f: X \into \tilde Y$, the universal cover. If the covering space happens to be contractible, you get that $\tilde f$ is nullhomotopic. So there is a homotopy $\tilde H: X\cross I \into \tilde Y$ - but then $p\circ\tilde H: X \into Y$ descends to a homotopy of $f$. If you leave $f$ arbitrary, this would force $\pi_1(Y) = 0$.
+This can be done by lifting $f$ to $\tilde f: Y \into \tilde X$, the universal cover. 
+If the covering space happens to be contractible, you get that $\tilde f$ is nullhomotopic. 
+So there is a homotopy $\tilde H: Y\cross I \into \tilde X$ -- but then $p\circ\tilde H: Y \into X$ descends to a homotopy of $f$. 
+If you leave $f$ arbitrary, this would force $\pi_1(X) = 0$.
 
 # Definition: Monodromy Action
 
