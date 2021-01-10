@@ -42,10 +42,23 @@ where the amalgamated product can be computed as follows:
 The **pushout** is the colimit of the following diagram
 
 \begin{tikzcd}
-A \disjoint_{Z} B   & A \ar[d] \ar[l] \\
+A \Disjoint_{Z} B   & A \ar[d] \ar[l] \\
 B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 \end{tikzcd}
-For groups, the pushout is realized by the amalgamated free product: if $A = \generators{G_{A} \suchthat R_{A}}, B = \generators{G_{B} \suchthat R_{B}}$, then $$A \ast_{Z} B = \generators{G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}$$ where $T$ is a set of relations given by $$T = \theset{\iota_{A}(z) \iota_{B}(z)\inv \suchthat z\in Z}.$$
+For groups, the pushout is realized by the amalgamated free product: if 
+\[
+
+\begin{cases}
+A = \generators{G_{A} \suchthat R_{A}} \\
+B = \generators{G_{B} \suchthat R_{B}}
+\end{cases}
+\implies 
+A \ast_{Z} B = \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
+\]
+where $T$ is a set of relations given by 
+\[
+T = \theset{\iota_{A}(z) \iota_{B}(z)\inv \suchthat z\in Z}
+.\]
 
 :::
 
