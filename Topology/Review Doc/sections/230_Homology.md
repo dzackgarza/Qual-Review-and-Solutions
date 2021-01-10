@@ -55,21 +55,9 @@ H_{i}(S^n) =
 \\
 0 & \text{else}.
 \end{cases}
-.\]
+\]
 :::
   
-
-\[
-X = A\cup B \implies
-&A\cap B \to A \oplus B \to A \cup B \mapsvia{\delta} \cdots
-(X,A) \implies
-&A \to X \to X,A \mapsvia{\delta} \cdots\\
-A\to B \to C \implies
-& \tor(A, G) \to \tor(B, G) \to \tor(C, G) \mapsvia{\delta_\downarrow} \cdots \\
-A\to B \to C \implies
-& \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
-\]
-
 - $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
 - $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
 - For CW complexes $X = \theset{X^{(i)}}$, we have 
