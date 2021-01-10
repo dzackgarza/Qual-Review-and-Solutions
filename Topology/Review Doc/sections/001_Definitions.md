@@ -342,11 +342,10 @@ This is a useful property because it supplies you with a homotopy.
 \todo[inline]{Definitions}
 
 :::{.definition title="Covering Space"}
-A **covering space** of a space $X$ is the date $p: \tilde X \into X$ such that each open set $U \subseteq X$ pulls back to a disjoint union of open sets (**sheets**) in $\tilde X$. 
-That is, 
-\[
-p^{-1}(U) = \Disjoint V_i \subseteq \tilde X
-.\]
+A **covering space** of $X$ is the data $p: \tilde X \to X$ such that
+
+1. Each $x\in X$ admits a neighborhood $U$ such that $p ^{-1} (U)$ is a union of disjoint open sets in $\tilde V_i \subseteq X$ (the **sheets** of $\tilde X$ over $U$),
+2. $\ro{p}{V_i}: V_i \to U$ is a homeomorphism for each sheet.
 
 An **isomorphism** of covering spaces $\tilde X_1 \cong \tilde X_2$ is a commutative diagram
 
