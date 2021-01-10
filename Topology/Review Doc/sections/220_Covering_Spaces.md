@@ -13,7 +13,7 @@ When covering spaces are involved in any way, try computing Euler characteristic
 :::
 
 :::{.fact title="Euler characteristics are multiplicative on covering spaces"}
-For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
+For $p: A \mapsvia{} B$ an $n\dash$fold cover,
 \[
 \chi(A) = n\, \chi(B)
 .\]
