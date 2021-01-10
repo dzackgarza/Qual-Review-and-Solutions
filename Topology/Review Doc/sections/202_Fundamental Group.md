@@ -12,9 +12,15 @@ $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 - See Hatcher's proof that $\pi_{1}$ is a group
 - See change of basepoint map
 
-### Calculating $\pi_1$ Using Universal Covers
+### Calculating $\pi_1$ 
 
-To calculate $\pi_{1}(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_{1}(X) = G$ by uniqueness of universal covers.
+
+Using the universal cover: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_{1}(X) = G$ by uniqueness of universal covers.
+
+:::{.proposition title="?"}
+$\pi_1 X$ for $X$ a CW-complex only depends on the 2-skeleton $X^{2}$, and in general $\pi_k(X)$ only depends on the $k+2$-skeleton.
+Thus attaching $k+2$ or higher cells does not change $\pi_k$.
+:::
 
 
 ## Homotopy
@@ -193,14 +199,7 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 - Homotopy splits wedge products: $\pi_{1} \bigvee X_{i} = \ast \pi_{1} X_{i}$.
 
 
-:::{.proposition title="?"}
-$\pi_1 X$ for $X$ a CW-complex only depends on the 1-skeleton $X^{1}$, and $H_k(X)$ only depends on the $k$-skeleton.
-:::
 
-
-:::{.remark}
-This is useful in practice: to compute $H_k$, you are free to attach $n\dash$cells for $n\geq k+1$.
-:::
 
 
 :::{.theorem title="?"}
