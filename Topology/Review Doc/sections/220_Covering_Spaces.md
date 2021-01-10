@@ -11,9 +11,7 @@ Path lifting:
 ![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
 
 
-## Useful Covering Spaces
-
-
+:::{.fact title="Some common covering spaces"}
 \begin{tikzcd}
 \ZZ 
   \ar[r] 
@@ -67,8 +65,12 @@ given by the $n\dash$valent Cayley graph covering a wedge of circles.
 - $T^2 \mapsvia{\times 2} \KK$
 - $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
 - $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
-- Covering spaces of orientable manifolds are orientable.
 
+:::
+
+:::{.fact}
+Covering spaces of orientable manifolds are orientable.
+:::
 
 :::{.proposition title="Euler characteristics are multiplicative on covering spaces"}
 For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
@@ -77,8 +79,6 @@ For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 .\]
 
 :::
-
-
 
 ## Theorems
 
@@ -99,9 +99,8 @@ If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is
 - Normal subgroups correspond to regular coverings (where automorphisms act freely/transitively, so highly symmetric)
 
 
-## Definition: Covering Maps
+## Universal Covers
 
-A covering map of a space is a map $p: \tilde X \into X$ such that each open set $U\in X$ pulls back to a disjoint union of open sets (called sheets) in $\tilde X$ (referred to as the covering space). That is, $p^{-1}(U) = \coprod_i V_i \subseteq \tilde X$.
 
 If $\tilde X$is simply connected, it is the universal covering space - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.

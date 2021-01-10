@@ -343,7 +343,11 @@ This is a useful property because it supplies you with a homotopy.
 \todo[inline]{Definitions}
 
 :::{.definition title="Covering Space"}
-
+A **covering space** of a space $X$ is the date $p: \tilde X \into X$ such that each open set $U \subseteq X$ pulls back to a disjoint union of open sets (**sheets**) in $\tilde X$. 
+That is, 
+\[
+p^{-1}(U) = \Disjoint V_i \subseteq \tilde X
+.\]
 :::
 \todo[inline]{Definitions}
 
