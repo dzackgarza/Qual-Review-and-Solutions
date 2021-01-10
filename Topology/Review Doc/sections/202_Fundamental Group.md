@@ -31,11 +31,13 @@ H(s, 1) = \beta(s),
 - Check that this relation is 
 
   - Symmetric:
-    ?
+    Follows from considering $H(s, 1-t)$.
+
   - Reflexive:
-    ?
+    Take $H(s, t) = \alpha (s)$ for all $t$.
+
   - Transitive:
-    ?
+    Follows from reparameterizing.
 
 - Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
 
@@ -66,7 +68,7 @@ s \in [1/2, 1]
   - Closure:
     Clear.
   - Associativity:
-    True by reparameterizing.
+    Follows from reparameterizing.
 
 :::
 
