@@ -258,8 +258,8 @@ H': Y\cross I &\to X \\
 H'(y, t) 
 &\da 
 \begin{cases}
-H(f(y), 0) = (\id_y \circ f)(y) = f(y) & t=0 \\
-H(f(y), 1) = (c \circ f)(y) = c(y) = x_0 & t=1 \\
+H(f(y), 0) = (\id_Y \circ f)(y) = f(y) & t=0 \\
+H(f(y), 1) = (c \circ \id_X)(y) = c(y) = x_0 & t=1 \\
 H(f(y), t) & \text{else}.
 \end{cases}
 \]
