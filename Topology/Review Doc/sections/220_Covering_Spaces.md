@@ -339,9 +339,15 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 **Example**: $\RP^2 \vee \RP^2 \to \ZZ_2 \ast \ZZ_2$
 
 
-**Example**: $\RP^2 \vee T^2 \to \ZZ_2 \ast \ZZ$
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
+Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
 
-![Image](figures/tree_cover.png)
+![Universal cover of $\TT^2 \vee \RP^2$](figures/tree_cover.png)
+
+:::
+
+
 
 
 ## Application: Every subgroup of a free group is free
