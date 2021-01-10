@@ -1,7 +1,9 @@
 #  CW and Simplicial Complexes
 
+\todo[inline]{Missing a lot on CW complexes}
 
-## Known CW Structures
+
+## Examples of CW Complexes/Structures 
 
 - $S^n = e^0 \union e^n$: a point and an $n\dash$cell.
 - $\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
@@ -21,35 +23,32 @@
 :::
 
 
-# Definition: Simplicial Complex
-
-Given a simplex $\sigma = [v_1 \cdots v_n]$, define the face map $\del_i:\Delta^n \into \Delta^{n-1}$, where $\del_i\sigma = [v_1 \cdots \hat v_i \cdots v_n]$.
-
-A simplicial complex is a set $K$ satisfying
-
-1. $\sigma \in K \implies \del_i\sigma \in K$
-2. $\sigma,\tau\in K \implies \sigma\intersect\tau = \emptyset,~ \del_i\sigma,~\text{or}~\del_i\tau$
-   1. This amounts to saying that any collection of $(n-1)$-simplices uniquely determines an $n$-simplex (or its lack thereof), or that that map $\Delta^k \into X$ is a continuous injection from the standard simplex in $\RR^n$.
-3. $\abs{K\intersect B_\varepsilon(\sigma)} < \infty$ for every $\sigma\in K$, identifying $\sigma \subseteq \RR^n$.
+## Examples of Simplicial Complexes
 
 To write down a simplicial complex, label the vertices with increasing integers. Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
 
-## Examples of Simplicial Complexes
 
+:::{.example title="Torus"}
 ![Torus](figures/1513062466927.png)
+:::
 
+:::{.example title="Klein Bottle and $\RP^2$"}
 ![Klein Bottle and $\RP^2$](figures/1513062526623.png)
+:::
 
+
+:::{.example title="Non-example"}
 For counterexamples, note that this fails to be a triangulation of $T$:
 
 ![Not a Torus](figures/1513062599096.png)
 
-This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
+This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
+:::
+
 
 ## Templates for Triangulation
 
 You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
 
-![1513064067523](figures/1513064067523.png)
+![Fundamental domains](figures/1513064067523.png)
 
-![Image](figures/image_2020-09-20-01-57-11.png)
