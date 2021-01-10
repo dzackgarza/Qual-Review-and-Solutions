@@ -33,24 +33,27 @@ H(s, 1) = \beta(s),
 
 - Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
 
-- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
+- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on actual loops. 
+  Do this by reparameterizing:
 \[
-(f\cdot g)(s) 
-
+(\alpha \cdot \beta )(s) \da 
 \begin{cases}
-f(2s) &  s \in [0, 1/2]
+\alpha (2s) &  s \in [0, 1/2]
 \\
-g(2s-1) & 
-s \in [1/2, 1] 
+\beta (2s-1) & 
+s \in [1/2, 1]
 .
 \end{cases}
 \]
+- Check that this map is:
 
   - Continuous: by the pasting lemma and assumed continuity of $f, g$
-  - Well-defined:
+
+  - Well-defined: ?
 
 - Check that this is actually a group
-  - Identity element:
+
+  - Identity element: the constant loop $\id_{x_0}: I\to X$ where $\id_{x_0}(t) = x_0$ for all $t$.
   - Closure:
   - Associativity:
   - Inverses:
