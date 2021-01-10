@@ -266,16 +266,27 @@ H(f(y), t) & \text{else}.
 Then $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
 :::
 
-
 :::{.corollary title="Factoring through a contractible space implies nullhomotopic"}
-Any map that factors through a contractible space is nullhomotopic.
+Any map $f:X\to Y$ that factors through a contractible space $Z$ is nullhomotopic.
 :::
 
-
 :::{.proof title="?"}
-Then $f = p \circ \tilde f$. 
-Every map into a contractible space is nullhomotopic, so if $Z$ is contractible, then there is a homotopy $\tilde H: X\cross I \into Z$ from $\tilde f$ to a constant map $c$. 
-But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the constant map $p\circ c$.
+We have the following situation
+where $f = p \circ \tilde f$:
+
+\begin{tikzcd}
+	&& {Z} \\
+	\\
+	{Y} && {X}
+	\arrow["{p}", from=1-3, to=3-3]
+	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
+	\arrow["{f}"', from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIloiXSxbMiwxLCJwIl0sWzAsMiwiXFx0aWxkZSBmIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMSwiZiIsMl1d)
+
+Since every map into a contractible space is nullhomotopic, there is a homotopy $\tilde H: Y\cross I \into Z$ from $\tilde f$ to a constant map $c: Y\to Z$, say $c(y) = z_0$ for all $y$. 
+But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
 :::
 
 
