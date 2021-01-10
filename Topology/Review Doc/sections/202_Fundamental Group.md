@@ -102,6 +102,7 @@ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}
     \theset{I(w_{i}) J(w_{i})\inv \suchthat 1\leq i \leq p}
   }
 }
++ \endo{R}
 \]
 
 where
