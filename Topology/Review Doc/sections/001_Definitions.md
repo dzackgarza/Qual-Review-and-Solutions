@@ -38,8 +38,12 @@ The set of unions of elements in $B$ is a topology and is denoted *the topology 
 :::
 
 
-Definition (Neighborhood Basis)
-: If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_p$ of neighborhoods of $p$ such that if $N_p$ is a neighborhood of $p$, then $N_p \supseteq B$ for at least one $B\in \mcb_p$.
+:::{.definition title="Neighborhood Basis"}
+If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_p$ of neighborhoods of $p$ such that if $N_p$ is a neighborhood of $p$, then $N_p \supseteq B$ for at least one $B\in \mcb_p$.
+
+:::
+
+
 
 Definition (Cover)
 : A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
