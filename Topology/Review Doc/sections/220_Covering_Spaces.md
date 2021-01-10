@@ -174,7 +174,7 @@ If one fixes $\tilde x_0$ as a basepoint for $\pi_1(\tilde X)$, this yields
 \correspond{
   \text{Connected covering spaces} \\
   p: \tilde X \mapsvia{} X
-}/\sim
+}_{/\sim}
 &\mapstofrom
 \correspond{
   \text{Subgroups of } \pi_1(X)
@@ -183,10 +183,18 @@ If one fixes $\tilde x_0$ as a basepoint for $\pi_1(\tilde X)$, this yields
 
 :::
 
+:::{.proposition title="Number of sheets in a covering space, Hatcher 1.32"}
+For $X, \tilde X$ both path-connected, 
+the number of sheets of a covering space is equal to the index
+\[
+[p^*(\pi_1(\tilde X)): \pi_1(X)]
+.\]
 
-Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
+Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x_0)$.
 
-The number of sheets of a covering space is equal to $[p^*(\pi_1(\tilde X)): \pi_1(X)]$.
+:::
+
+
 
 ### Example: Covering spaces
 
