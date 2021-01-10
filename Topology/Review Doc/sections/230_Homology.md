@@ -44,8 +44,12 @@ Todo
 :::
 \todo[inline]{Excision.}
 
+:::{.fact title="Assorted facts}
+\envlist
+
 - $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
+:::
 
 ## Known Homology
 
@@ -59,7 +63,6 @@ H_{i}(S^n) =
 \end{cases}
 \]
 :::
-
 
 :::{.example title="Real Projective Spaces"}
 
@@ -144,7 +147,6 @@ A\union B & & \longleftarrow &  & A \oplus B
 $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
 :::
 
-
 :::{.proposition title="Application: isomorphisms in the homology of spheres"}
 \[H^i(S^n) \cong H^{i-1}(S^{n-1}).\]
 :::
@@ -213,9 +215,7 @@ H_{i}(X; \ZZ) &= F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 :::
 \todo[inline]{Might need assumptions: finite CW complex?}
 
-
 ## Relative Homology
-
 
 :::{.fact title="Some assorted facts"}
 \envlist
