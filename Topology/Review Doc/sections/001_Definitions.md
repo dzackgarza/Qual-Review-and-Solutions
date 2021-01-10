@@ -129,19 +129,20 @@ That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of op
 
 
 :::{.definition title="Locally Compact"}
-
+A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
 :::
 
 
+:::{.definition title="Paracompact"}
+A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
+:::
 
-Definition (Locally Compact)
-: A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
 
-Definition (Paracompact)
-: A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
+:::{.definition title="Precompact"}
+A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
+:::
 
-Definition (Precompact)
-: A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
+
 
 
 ## Separability
