@@ -120,7 +120,7 @@ then $X$ admits a universal cover, unique up to homeomorphism in the following s
 :::
 
 :::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
-If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$:
+If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there exists a unique lift $\tilde f: Y\to \tilde X$ if and only if $f_*(\pi_1(Y)) \subset \pi_*(\pi_1 (\tilde X))$:
 
 
 \begin{tikzcd}
