@@ -121,7 +121,13 @@ That is, any other cover $C$ of $X$ is itself covered by $\tilde X$.
 Note that by this universal property, $\tilde X$ is unique up to homeomorphism when it exists.
 :::
 
-:::{.theorem title="When maps lift to the universal cover (H. 1.33)"}
+
+:::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
+Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.
+Then there exists a unique homotopy $\tilde F:Y\to \tilde X$ of $\tilde F_0$ that lifts $F$.
+:::
+
+:::{.theorem title="Lifting criterion for covers, Hatcher 1.33"}
 If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there exists a unique lift $\tilde f: Y\to \tilde X$ if and only if $f_*(\pi_1(Y)) \subset \pi_*(\pi_1 (\tilde X))$:
 
 
