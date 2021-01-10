@@ -74,13 +74,29 @@ If we have presentations
 \]
 
 then
-
 \[
 \pi_{1}(X, w) 
-&= \left\langle u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}\right\rangle \\ 
-&\mod 
-\left\langle \alpha_{1}, \cdots, \alpha_{l}, \beta_{1}, \cdots, \beta_{n}, I\left(w_{1}\right) J\left(w_{1}\right)^{-1}, \cdots, I\left(w_{p}\right) J\left(w_{p}\right)^{-1}\right\rangle \\
-&= \frac{\pi_{1}(U) \ast \pi_{1}(B)} {\generators{\theset{I(w_{i}) J(w_{i})\inv \suchthat 1\leq i \leq p}}}
+&= \gens{ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}} \mathrm{mod} \\ 
+&
+\gens{ 
+  \alpha_{1}, 
+  \cdots, 
+  \alpha_{l}, 
+  \beta_{1}, 
+  \cdots, 
+  \beta_{n}, 
+  I\left(w_{1}\right) J\left(w_{1}\right)^{-1}, 
+  \cdots, 
+  I\left(w_{p}\right) J\left(w_{p}\right)^{-1}
+} \\ \\
+&= 
+\frac{
+  \pi_{1}(U) \ast \pi_{1}(B)
+} {
+  \generators{
+    \theset{I(w_{i}) J(w_{i})\inv \suchthat 1\leq i \leq p}
+  }
+}
 \]
 
 where
