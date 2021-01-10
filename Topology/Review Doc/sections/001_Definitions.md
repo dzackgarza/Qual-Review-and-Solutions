@@ -348,8 +348,20 @@ That is,
 \[
 p^{-1}(U) = \Disjoint V_i \subseteq \tilde X
 .\]
+
+An **isomorphism** of covering spaces $\tilde X_1 \cong \tilde X_2$ is a commutative diagram
+
+\begin{tikzcd}
+	{\tilde X_1} && {\tilde X_2} \\
+	\\
+	& {X}
+	\arrow["{p_1}"', from=1-1, to=3-2]
+	\arrow["{p_2}", from=1-3, to=3-2]
+	\arrow["{f}", from=1-1, to=1-3]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXHRpbGRlIFhfMSJdLFsxLDIsIlgiXSxbMiwwLCJcXHRpbGRlIFhfMiJdLFswLDEsInBfMSIsMl0sWzIsMSwicF8yIl0sWzAsMiwiZiJdXQ==)
+
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Cup Product"}
 A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
@@ -391,10 +403,9 @@ An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That
 :::
 \todo[inline]{Definitions}
 
-:::{.definition title="Deck Transformation"}
-
+:::{.definition title="Deck transformation"}
+For a covering space $\tilde X \mapsvia{p} X$, self-isomorphisms $f:\tilde X \to \tilde X$ of covering spaces are referred to as **deck transformations**.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Deformation"}
 
@@ -402,7 +413,7 @@ An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That
 \todo[inline]{Definitions}
 
 :::{.definition title="Deformation Retract"}
-A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) **that also satisfies** $\iota \circ r \homotopic \id_{X}$.
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) *that also satisfies* $\iota \circ r \homotopic \id_{X}$.
 
 > Note that this is equality in one direction, but only homotopy equivalence in the other.
 
@@ -415,7 +426,7 @@ F_{1}(X) &= A
 
 Alt:
 
-A *deformation retract* is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times. That is,
+A **deformation retract** is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times:
 $$
 H: X\cross I \to X \\
 H(x, 0) = \id_X \\
@@ -426,13 +437,11 @@ $$
 Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
 :::
 
-
 :::{.remark}
 A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
 
 
 :::
-
 
 :::{.definition title="Degree of a Map"}
 
@@ -442,6 +451,9 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 :::{.definition title="Derived Functor"}
 For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
 :::
+
+
+
 
 :::{.definition title="Dimension of a manifold"}
 For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
