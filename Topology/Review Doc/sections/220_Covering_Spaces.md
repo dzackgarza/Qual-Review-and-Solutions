@@ -101,8 +101,16 @@ If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is
 
 ## Universal Covers
 
+If $X$ is 
 
-If $\tilde X$is simply connected, it is the universal covering space - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
+- Connected,
+- Locally path-connect, and
+- Semilocally simply connected,
+
+then $X$ admits a universal cover.
+
+
+If $\tilde X \surjects X$ is a cover with $\tilde X$ simply connected, then $\tilde X$ is the **universal cover** of $\tilde X$ - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
 
 Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
