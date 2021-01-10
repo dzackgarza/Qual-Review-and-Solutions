@@ -883,7 +883,7 @@ For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial m
 :::
 
 :::{.definition title="Simply Connected"}
-
+A space $X$ is **simply connected** if and only if $X$ is path-connected and every loop \( \gamma : S^1 \mapsvia{} X \) can be contracted to a point.
 :::
 \todo[inline]{Definitions}
 

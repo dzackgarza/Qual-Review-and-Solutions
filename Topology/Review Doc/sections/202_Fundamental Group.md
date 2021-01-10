@@ -7,10 +7,6 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 .\]
 :::
 
-:::{.proposition title="$\pi_0$ detects simply connectedness"}
-$\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
-:::
-
 
 
 ## Fundamental Group
@@ -27,10 +23,8 @@ $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 
 :::
 
-
-
-:::{.proposition title="$\pi_0$ detects simply connectedness"}
-$X$ is simply connected iff it has trivial fundamental group.
+:::{.proposition title="$\pi_1$ detects simply-connectedness"}
+$\pi_{1}(X) = 1$ iff $X$ is simply connected.
 :::
 
 :::{.proof title="?"}
