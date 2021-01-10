@@ -38,10 +38,10 @@ H(s, 1) = \beta(s),
 (f\cdot g)(s) 
 
 \begin{cases}
-f(2s) &  s \in [0, {1\over 2}]
+f(2s) &  s \in [0, 1/2]
 \\
 g(2s-1) & 
-s \in [\frac{1}{2}, 1] 
+s \in [1/2, 1] 
 .
 \end{cases}
 \]
