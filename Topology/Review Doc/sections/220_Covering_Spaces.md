@@ -82,9 +82,6 @@ For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 
 ## Theorems
 
-:::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
-If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$.
-:::
 
 
 ## Useful Facts
@@ -100,7 +97,6 @@ If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is
 
 
 ## Universal Covers
-
 
 :::{.proposition title="Existence of universal covers"}
 If $X$ is 
@@ -123,6 +119,20 @@ then $X$ admits a universal cover, unique up to homeomorphism in the following s
 
 :::
 
+:::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
+If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$:
+
+
+\begin{tikzcd}
+	&& {\tilde X} \\
+	\\
+	{Y} && {X}
+	\arrow["{p}", from=1-3, to=3-3]
+	\arrow["{f}"', from=3-1, to=3-3]
+	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIlxcdGlsZGUgWCJdLFsyLDEsInAiXSxbMCwxLCJmIiwyXSxbMCwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+:::
 
 If $\tilde X \surjects X$ is a cover with $\tilde X$ simply connected, then $\tilde X$ is the **universal cover** of $\tilde X$ - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
