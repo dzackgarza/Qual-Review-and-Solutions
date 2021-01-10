@@ -244,7 +244,6 @@ So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 .\]
 :::
 
-
 :::{.proof title="?"}
 By van Kampen, this is equivalent to the amalgamated product over $\pi_1(x_0) = 1$, which is just a free product.
 :::
