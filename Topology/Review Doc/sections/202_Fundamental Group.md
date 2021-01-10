@@ -14,19 +14,14 @@ $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 
 ### Calculating $\pi_1$ 
 
+:::{.proposition title="Using universal covers"}
+If $\tilde X \to X$ the universal cover of $X$ and $G\actson \tilde X$ with $\tilde X/G = X$ then $\pi_1(X) = G$. 
+:::
 
-Using the universal cover: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_{1}(X) = G$ by uniqueness of universal covers.
-
-:::{.proposition title="?"}
+:::{.proposition title="Killing homotopy"}
 $\pi_1 X$ for $X$ a CW-complex only depends on the 2-skeleton $X^{2}$, and in general $\pi_k(X)$ only depends on the $k+2$-skeleton.
 Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 :::
-
-
-## Homotopy
-
-\todo{Merge Van Kampen theorems.}
-
 
 :::{.theorem title="Van Kampen 1"}
 The pushout is the northwest colimit of the following diagram
@@ -105,6 +100,7 @@ Note that the hypothesis that $U\cap V$ is path-connected is necessary: take $S^
 
 
 :::
+\todo{Merge Van Kampen theorems.}
 
 :::{.example title="Pushing out with van Kampen"}
 $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
