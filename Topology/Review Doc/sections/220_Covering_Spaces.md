@@ -162,7 +162,7 @@ There is a bijective correspondence
 \[
 \correspond{
   \text{Connected covering spaces} \\
-  \tilde X \mapsvia{p} X
+  p: \tilde X \mapsvia{} X
 }
 &\mapstofrom
 \correspond{
@@ -170,6 +170,18 @@ There is a bijective correspondence
   \text{of } \pi_1(X)
 }
 .\]
+If one fixes $\tilde x_0$ as a basepoint for $\pi_1(\tilde X)$, this yields
+\[
+\correspond{
+  \text{Connected covering spaces} \\
+  \tilde X \mapsvia{p} X
+}
+&\mapstofrom
+\correspond{
+  \text{Subgroups of } \pi_1(X)
+}
+.\]
+
 :::
 
 
