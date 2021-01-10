@@ -21,6 +21,7 @@ The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the
 So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
 :::
 
+
 ## Fundamental Group
 
 ### Definition
