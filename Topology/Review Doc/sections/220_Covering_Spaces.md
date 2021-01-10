@@ -289,10 +289,6 @@ Since every map into a contractible space is nullhomotopic, there is a homotopy 
 But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
 :::
 
-cor
-
-
-
 :::{.proposition title="Application: showing one space can not cover another"}
 There is no covering map $p: \RP^2 \to \TT^2$.
 :::

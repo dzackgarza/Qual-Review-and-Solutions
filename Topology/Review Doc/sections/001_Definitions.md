@@ -450,7 +450,6 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
 :::
 
-
 :::{.definition title="Dimension of a manifold"}
 For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
 :::
@@ -524,7 +523,10 @@ An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
 :::
 
 :::{.definition title="Free and Properly Discontinuous"}
+An action $G\actson X$ is **properly discontinuous** if each $x\in X$ has a neighborhood $U$ such that all of the images $g(U)$ for $g\in G$ are disjoint, i.e. $g_1(U) \intersect g_2(U) \neq \emptyset \implies g_1 = g_2$.
+The action is **free** if there are no fixed points.
 
+Sometimes a slightly weaker condition is used: every point $x\in X$ has a neighborhood $U$ such that $U \intersect G(U) \neq \emptyset$ for only finitely many $G$.
 :::
 \todo[inline]{Definitions}
 
