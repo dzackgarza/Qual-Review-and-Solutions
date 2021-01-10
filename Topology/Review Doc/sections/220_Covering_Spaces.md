@@ -336,7 +336,14 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 
 **Example**: $S^1 \vee S^1 \to \ZZ \ast \ZZ$
 
-**Example**: $\RP^2 \vee \RP^2 \to \ZZ_2 \ast \ZZ_2$
+
+
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinte string of copies of 2-valent $S^2$s:
+
+![image_2021-01-10-13-14-27](figures/image_2021-01-10-13-14-27.png)
+
+:::
 
 
 :::{.example title="of a universal covering space"}
