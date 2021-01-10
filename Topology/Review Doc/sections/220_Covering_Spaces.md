@@ -102,7 +102,7 @@ For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 If $X$ is 
 
 - Connected,
-- Locally path-connect, and
+- Locally path-connected, and
 - Semilocally simply connected,
 
 then $X$ admits a universal cover: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
@@ -134,6 +134,11 @@ If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there ex
 	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIlxcdGlsZGUgWCJdLFsyLDEsInAiXSxbMCwxLCJmIiwyXSxbMCwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+:::
+
+
+:::{.fact}
+
 :::
 
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
