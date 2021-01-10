@@ -170,16 +170,6 @@ H_{k} (X\cross Y) \cong \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cr
 \]
 :::
 
-:::{.corollary title="Nicest case of Kunneth"}
-If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
-$$ 
-H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_{i}(X), H_{j}(X))
-$$
-
-:::
-
-
-
 :::{.theorem title="UCT for Change of Group"}
 For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
 
@@ -200,17 +190,21 @@ H_{i}(X;G) &= (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G) \\
 H^i(X; G) &= \hom(H_{i}X, G) \oplus \ext(H_{i-1}X; G)
 \]
 
-When all of the $H_{i}X$ are all finitely generated, writing $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$ we have
-$$
-H^i(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i-1}.
-$$
+When all of the $H_{i}X$ are all finitely generated (e.g. if $G$ is a field), writing $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$ as the sum of a free and a torsionfree module, we have
+\[
+H^i(X; \ZZ) &\cong \ZZ^{\beta_{i}} \times T_{i-1} \\
+H^i(X; A) &\cong \qty{H_i(X; G)}\dual \da \hom_\ZZ(H_{i}(X; G), G)
+.\]
+
+In other words, letting $F(\wait)$ be the free part and $T(\wait)$ be the torsion part, we have
+\[
+H^i(X; \ZZ) &= F(H_{i}(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
+H_{i}(X; \ZZ) &= F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
+\]
 
 :::
 
-
-
 :::{.remark}
-If $A$ is a field, then $$H^i(X; A) \cong \hom(H_{i}(X; A), A)$$
 :::
 
 
@@ -219,10 +213,6 @@ If $A$ is a field, then $$H^i(X; A) \cong \hom(H_{i}(X; A), A)$$
 
 
 * Universal Coefficients Theorem: If $X$ is a finite CW complex then
-$$
-H^i(X; \ZZ) = F(H_{i}(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
-H_{i}(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
-$$
 
 ## Cellular Homology
 
