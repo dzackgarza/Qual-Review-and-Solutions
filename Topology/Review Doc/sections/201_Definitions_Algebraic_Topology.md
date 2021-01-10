@@ -157,17 +157,19 @@ H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
 (a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
 \]
 where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
-$$
-I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
-$$
-is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
-On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
 
+\[I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
+.\]
+
+is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
 :::
-	* Applications
-		- $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
-    \todo[inline]{Proof}
-  
+	
+
+:::{.example title="Applications of the cup product"}
+On a manifold, the cup product is Poincaré dual to the intersection of submanifolds.
+Also used to show $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
+:::
+
 
 :::{.definition title="CW Complex"}
 
@@ -186,16 +188,19 @@ On a manifold, the cup product is Poincare dual to the intersection of submanifo
 :::
 
 :::{.definition title="Deformation Retract"}
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) **that also satisfies** $\iota \circ r \homotopic \id_{X}$.
+
+> Note that this is equality in one direction, but only homotopy equivalence in the other.
+
+Equivalently, a map $F:I\cross X\to X$ such that 
+\[
+F_{0}(x) &= \id_{X}
+F_{t}(x)\mid_{A} &= \id_{A}
+F_{1}(X) &= A
+
+.\]
 
 :::
-	- A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) **that also satisfies** $\iota \circ r \homotopic \id_{X}$.
-    
-    > Note that this is equality in one direction, but only homotopy equivalence in the other.
-
-  - Equivalently, a map $F:I\cross X\to X$ such that 
-    - $F_{0}(x) = \id_{X}$
-    - $F_{t}(x)\mid_{A} = \id_{A}$
-    - $F_{1}(X) = A$
 
 :::{.definition title="Degree of a Map"}
 
