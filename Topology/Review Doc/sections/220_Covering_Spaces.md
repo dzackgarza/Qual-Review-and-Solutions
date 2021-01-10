@@ -71,9 +71,9 @@ given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
 
 :::{.proposition title="Euler characteristics are multiplicative on covering spaces"}
-For $A \mapsvia{\pi} B$ a $d\dash$fold cover,
+For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 \[
-\chi(A) = d\chi(B)
+\chi(A) = n\, \chi(B)
 .\]
 
 :::
