@@ -1,5 +1,7 @@
 # Theorems: Algebraic Topology
 
+## General Homotopies
+
 :::{.fact title="Contracting Spaces in Products"}
 \[
 X\cross \RR^n \homotopic X \cross \pt \cong X
@@ -10,6 +12,14 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 The ranks of $\pi_{0}$ and $H_{0}$ are the number of path components.
 :::
 
+:::{.theorem title="Convex sets admit homotopies"}
+Any two continuous functions into a convex set are homotopic.
+:::
+
+:::{.proof title="?"}
+The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
+So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
+:::
 
 ## Fundamental Group
 
@@ -87,11 +97,13 @@ Elements of the fundamental group are *homotopy classes of loops*, and every con
 
 
 
+
 ### Conjugacy in $\pi_{1}$:
 
 - See Hatcher 1.19, p.28
 - See Hatcher's proof that $\pi_{1}$ is a group
 - See change of basepoint map
+
 
 ### Calculating $\pi_1$ 
 
@@ -249,6 +261,7 @@ $\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fu
 
 :::
 
+
 ## General Homotopy Theory
 
 :::{.theorem title="Whitehead's Theorem"}
@@ -312,32 +325,6 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 :::
-
-## Unsorted Facts
-
-
-
----
-
-# The Fundamental Group (Unsorted)
-
-
-
-:::{.theorem title="?"}
-Any two continuous functions into a convex set are homotopic.
-:::
-
-:::{.proof title="?"}
-The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
-So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
-:::
-
-
-## Definition: The Fundamental Group / 1st Homotopy Group
-
-
-
-
 
 [^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
 
