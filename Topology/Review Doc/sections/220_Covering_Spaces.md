@@ -251,15 +251,15 @@ If $X$ is contractible, every map $f: Y \into X$ is nullhomotopic.
 :::
 
 :::{.proof title="?"}
-If $Y$ is contractible, there is a homotopy $H: Y\cross I \into Y$ between $\id_Y$ and a constant map $c: y \mapsto x_0$. 
+If $X$ is contractible, there is a homotopy $H: X\cross I \into X$ between $\id_X$ and a constant map $c: x \mapsto x_0$. 
 So construct 
 \[
 H': Y\cross I &\to X \\
 H'(y, t) 
 &\da 
 \begin{cases}
-H(f(y), 0) = (\id_Y \circ f)(y) = f(y) & t=0 \\
-H(f(y), 1) = (c \circ \id_X)(y) = c(y) = x_0 & t=1 \\
+H(f(y), 0) = (\id_X \circ f)(y) = f(y) & t=0 \\
+H(f(y), 1) = (c \circ \id_Y)(y) = c(y) = x_0 & t=1 \\
 H(f(y), t) & \text{else}.
 \end{cases}
 \]
