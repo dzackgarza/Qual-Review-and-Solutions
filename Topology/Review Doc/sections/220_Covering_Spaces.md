@@ -14,17 +14,70 @@ Path lifting:
 ## Useful Covering Spaces
 
 
-- $\RR \mapsvia{\pi} S^1 \leftarrow \ZZ$
-- $\RR^n \mapsvia{\pi} T^n \leftarrow \ZZ^n$
-- $\RP^n \mapsvia{\pi} S^n \leftarrow \ZZ_2$
-- $\vee_n S^1 \mapsvia{\pi} C^n \leftarrow \ZZ^{\ast n}$ where $C^n$ is the $n\dash$valent Cayley Graph
+\begin{tikzcd}
+\ZZ 
+  \ar[r] 
+& 
+\RR
+  \ar[d] 
+\\
+& 
+S^1 
+\end{tikzcd}
 
-- $M \mapsvia{\pi} \tilde M \leftarrow \ZZ_2$, the orientation double cover
+
+\begin{tikzcd}
+\ZZ^n 
+  \ar[r] 
+& 
+\RR^n
+  \ar[d] 
+\\
+& 
+\TT^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/2\ZZ 
+  \ar[r] 
+& 
+S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^{\ast n} 
+  \ar[r] 
+& 
+\mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+\bigvee_n S^1 
+\end{tikzcd}
+given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+
+
 - $T^2 \mapsvia{\times 2} \KK$
-- $L_{p/q} \mapsvia{\pi} S^3 \leftarrow \ZZ_q$
-- $\CC^* \mapsvia{z^n} \CC \leftarrow \ZZ_n$
-- For $A \mapsvia{\pi(\times d)} B$, we have $\chi(A) = d\chi(B)$
+- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
+- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
 - Covering spaces of orientable manifolds are orientable.
+
+
+:::{.proposition title="Euler characteristics are multiplicative on covering spaces"}
+For $A \mapsvia{\pi} B$ a $d\dash$fold cover,
+\[
+\chi(A) = d\chi(B)
+.\]
+
+:::
+
 
 
 ## Theorems
