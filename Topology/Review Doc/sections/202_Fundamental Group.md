@@ -39,19 +39,19 @@ There is a natural isomorphism
 ,\]
 
 where the amalgamated product can be computed as follows:
-
-:::
-
-
-:::{.theorem title="Van Kampen 1"}
-The pushout is the northwest colimit of the following diagram
+The **pushout** is the colimit of the following diagram
 
 \begin{tikzcd}
 A \disjoint_{Z} B   & A \ar[d] \ar[l] \\
 B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 \end{tikzcd}
+For groups, the pushout is realized by the amalgamated free product: if $A = \generators{G_{A} \suchthat R_{A}}, B = \generators{G_{B} \suchthat R_{B}}$, then $$A \ast_{Z} B = \generators{G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}$$ where $T$ is a set of relations given by $$T = \theset{\iota_{A}(z) \iota_{B}(z)\inv \suchthat z\in Z}.$$
 
-For groups, the pushout is given by the amalgamated free product: if $A = \generators{G_{A} \suchthat R_{A}}, B = \generators{G_{B} \suchthat R_{B}}$, then $$A \ast_{Z} B = \generators{G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}$$ where $T$ is a set of relations given by $$T = \theset{\iota_{A}(z) \iota_{B}(z)\inv \suchthat z\in Z}.$$
+:::
+
+
+:::{.theorem title="Van Kampen 1"}
+
 
 Suppose $X = U_{1} \union U_{2}$ such that $U_{1}\intersect U_{2} \neq \emptyset$ is **path connected** (necessary condition).
 Then taking $x_{0} \in U\da U_{1} \intersect U_{2}$ yields a pushout of fundamental groups
