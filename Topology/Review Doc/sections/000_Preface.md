@@ -15,3 +15,8 @@ Some fun resources:
 - $A\ast B, \ast_j X_J$ are free products, $F_n \da \ZZ^{\ast n}$ is the free group on $n$ generators.
 
   - Note that the abelianization yields $\qty{\ast_j X_j} = \bigoplus_j X_j$.
+
+
+# Definitions
+
+  

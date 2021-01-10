@@ -2,16 +2,24 @@
 
 ## Basics
 
-Definition (Topology)
-: Closed under arbitrary unions and finite intersections.
 
-Definition (Neighborhood)
-: A neighborhood of a point $x$ is *any* open set containing $x$.
+:::{.definition title="Topology"}
+Closed under arbitrary unions and finite intersections.
+:::
 
-Definition (Limit Point)
-:   For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
+
+:::{.definition title="Neighborhood"}
+A neighborhood of a point $x$ is *any* open set containing $x$.
+:::
+
+
+:::{.definition title="Limit Point"}
+For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
     
-    Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
+Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
+:::
+
+
 
 Definition (Closed)
 :   There are several characterizations of a closed set:
