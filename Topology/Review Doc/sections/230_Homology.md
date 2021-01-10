@@ -23,7 +23,6 @@ H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
 Mayer-Vietoris. 
 :::
 
-
 :::{.warnings}
 $H_{k} \prod X$ is **not** generally equal to $\prod H_{k} X$.
 The obstruction is due to torsion -- if all groups are torsion free, then the Kunneth theorem[^kunneth] yields 
@@ -32,6 +31,10 @@ H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
 \]
 :::
 
+:::{.theorem title="Excision"}
+Todo
+:::
+\todo[inline]{Excision.}
 
 
 - $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
@@ -39,10 +42,6 @@ H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
 
 - Useful tools:
   - Mayer-Vietoris
-    - $(X = A \union B) \mapsto (\intersect, \oplus, \union)$ in homology
-  - LES of a pair
-	  - $(A \injects X) \mapsto (A, X, X/A)$
-  - Excision
 
 * $H_{k} \bigvee X = \prod H_{k} X$ by Mayer-Vietoris.[^wedge]
 * $H_{i}(S^n) = \indic{i \in \theset{0, n}}$
@@ -94,6 +93,7 @@ This yields a LES in homology:
 \cdots \to H_{n}(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_{n}(A) \oplus H_{n}(B) \mapsvia{(x, y) \mapsto x+y} H_{n}(X) \to \cdots
 .\]
 
+> Mnemonic: $X = A \union B \leadsto (\intersect, \oplus, \union)$
 :::
  
 
@@ -320,6 +320,9 @@ $$
 ## Relative Homology
 
 - $H_{n}(X/A) \cong \tilde H_{n}(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
+
+- LES of a pair
+  - $(A \injects X) \mapsto (A, X, X/A)$
 
 ## Cohomology
 
