@@ -1,16 +1,18 @@
 # Theorems: Algebraic Topology
 
-
 :::{.fact title="Contracting Spaces in Products"}
 \[
 X\cross \RR^n \homotopic X \cross \pt \cong X
 .\]
 :::
 
+:::{.fact title="$\pi_0, H_0$ detect path components"}
+The ranks of $\pi_{0}$ and $H_{0}$ are the number of path components.
+:::
+
 
 
 ## Fundamental Group
-
 
 ### Definition
 
@@ -83,47 +85,8 @@ s \in [1/2, 1]
 Elements of the fundamental group are *homotopy classes of loops*, and every continuous map between spaces induces a homomorphism on fundamental groups.
 :::
 
-### Facts
-
-:::{.fact}
-\envlist
-
-- $H_{1}$ is the abelianization of $\pi_{1}$.
 
 
-:::
-
-:::{.proposition title="Hatcher 1.12"}
-If $X, Y$ are path-connected, then 
-\[
-\pi_1 (X \cross Y) = \pi_1(X) \cross \pi_2(Y)
-.\]
-:::
-
-:::{.proof title="sketch"}
-\envlist
-
-- A loop in \( X \cross Y \) is a continuous map \( \gamma : I \mapsvia{} X \cross Y \) given by \( \gamma (t) = (f(t), g(t) \) in components.
-- $\gamma$ being continuous in the product topology is equivalent to $f, g$ being continuous maps to $X, Y$ respectively.
-- Similarly a homotopy $F: I^2 \to X \cross Y$ is equivalent to a pair of homotopies $f_t, g_t$ of the corresponding loops.
-- So the map $[ \gamma ] \mapsto ([f], [g])$ is the desired bijection.
-:::
-
-
-
-
-
-:::{.proposition title="$\pi_1$ detects simply-connectedness"}
-$\pi_{1}(X) = 1$ iff $X$ is simply connected.
-:::
-
-:::{.proof title="?"}
-$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
-
-$\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
-
-
-:::
 
 ### Conjugacy in $\pi_{1}$:
 
@@ -141,7 +104,6 @@ If $\tilde X \to X$ the universal cover of $X$ and $G\actson \tilde X$ with $\ti
 $\pi_1 X$ for $X$ a CW-complex only depends on the 2-skeleton $X^{2}$, and in general $\pi_k(X)$ only depends on the $k+2$-skeleton.
 Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 :::
-
 
 :::{.theorem title="Seifert-van Kampen"}
 Suppose $X = U_{1} \union U_{2}$ where $U_1, U_2$, and $U \da U_{1} \intersect U_{2} \neq \emptyset$ are open and path-connected 
@@ -248,7 +210,45 @@ So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
 By van Kampen, this is equivalent to the amalgamated product over $\pi_1(x_0) = 1$, which is just a free product.
 :::
 
+### Facts
 
+:::{.fact}
+$H_{1}$ is the abelianization of $\pi_{1}$.
+:::
+
+:::{.proposition title="$\pi_1$ of a product, Hatcher 1.12"}
+If $X, Y$ are path-connected, then 
+\[
+\pi_1 (X \cross Y) = \pi_1(X) \cross \pi_2(Y)
+.\]
+:::
+
+:::{.proof title="sketch"}
+\envlist
+
+- A loop in \( X \cross Y \) is a continuous map \( \gamma : I \mapsvia{} X \cross Y \) given by \( \gamma (t) = (f(t), g(t) \) in components.
+- $\gamma$ being continuous in the product topology is equivalent to $f, g$ being continuous maps to $X, Y$ respectively.
+- Similarly a homotopy $F: I^2 \to X \cross Y$ is equivalent to a pair of homotopies $f_t, g_t$ of the corresponding loops.
+- So the map $[ \gamma ] \mapsto ([f], [g])$ is the desired bijection.
+:::
+
+:::{.proposition title="$\pi_1$ detects simply-connectedness"}
+$\pi_{1}(X) = 1$ iff $X$ is simply connected.
+:::
+
+:::{.proof title="?"}
+$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
+
+$\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
+:::
+
+
+:::{.fact "Unsorted facts"}
+\envlist
+
+- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
+
+:::
 
 ## General Homotopy Theory
 
@@ -285,12 +285,9 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 ## Unsorted Facts
 
-- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
-
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
-* The ranks of $\pi_{0}$ and $H_{0}$ are the number of path components, and $\pi_{0}(X) = \ZZ$ iff $X$ is simply connected.
 
 	* $X$ simply connected $\implies \pi_{k}(X) \cong H_{k}(X)$ up to and including the first nonvanishing $H_{k}$
   * $H_{1}(X) = \mathrm{Ab}(\pi_{1} X)$, the abelianization.
