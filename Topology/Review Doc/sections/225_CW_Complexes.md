@@ -30,8 +30,11 @@ $\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
 $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
 :::
 
-## Examples of Simplicial Complexes
+:::{.example title="Surfaces"}
+![Fundamental domains](figures/1513064067523.png)
+:::
 
+## Examples of Simplicial Complexes
 
 :::{.remark}
 To write down a simplicial complex, label the vertices with increasing integers. 
@@ -53,10 +56,4 @@ For counterexamples, note that this fails to be a triangulation of $T$:
 
 This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
 :::
-
-## Templates for Triangulation
-
-You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
-
-![Fundamental domains](figures/1513064067523.png)
 
