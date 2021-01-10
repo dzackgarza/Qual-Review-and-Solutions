@@ -121,7 +121,6 @@ That is, any other cover $C$ of $X$ is itself covered by $\tilde X$.
 Note that by this universal property, $\tilde X$ is unique up to homeomorphism when it exists.
 :::
 
-
 :::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
 Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.
 Then there exists a unique homotopy $\tilde F:Y\to \tilde X$ of $\tilde F_0$ that lifts $F$:
@@ -246,6 +245,46 @@ The fiber above $x_0$ contains the two antipodal points.
 The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
+:::{.fact}
+For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
+
+- Each vertex corresponds to one of the universal covers $\tilde X_i$,
+- The color corresponds to which summand $\tilde X_i$ appears,
+- T
+The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
+:::
+
+:::{.example title="Covering spaces of wedges of spheres"}
+The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$, and the universal cover is the following 4-valent Cayley graph:
+
+![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
+
+See Hatcher p.58 for other covers.
+
+:::
+
+:::{.corollary title="Every subgroup of a free group is free"}
+Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+
+:::
+
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinite string of copies of 2-valent $S^2$s:
+
+![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
+
+:::
+
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
+Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
+
+![Universal cover of $\TT^2 \vee \RP^2$](figures/tree_cover.png)
+
+:::
+
+### Applications 
+
 :::{.theorem title="Maps into contractible spaces are always nullhomotopic"}
 If $X$ is contractible, every map $f: Y \into X$ is nullhomotopic.
 :::
@@ -305,7 +344,6 @@ There is no covering map $p: \RP^2 \to \TT^2$.
 - Covering maps induce injections on $\pi_1$, and the only way the trivial map can be injective is if $\pi_1(T^2) = 0$, a contradiction. 
 :::
 
-
 :::{.theorem title="When actions yield covering maps onto their quotients, Hatcher 1.40"}
 If $G\actson X$ is a free and properly discontinuous action, then 
 
@@ -317,55 +355,5 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 :::
 
-
-### How to Construct Universal Covers
-
-:::{.fact}
-For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
-
-- Each vertex corresponds to one of the universal covers $\tilde X_i$,
-- The color corresponds to which summand $\tilde X_i$ appears,
-- T
-The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
-:::
-
-### Examples of Universal Covers
-
-:::{.example title="Covering spaces of wedges of spheres"}
-The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$, and the universal cover is the following 4-valent Cayley graph:
-
-![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
-
-See Hatcher p.58 for other covers.
-
-:::
-
-:::{.example title="of a universal covering space"}
-The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinte string of copies of 2-valent $S^2$s:
-
-![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
-
-:::
-
-:::{.example title="of a universal covering space"}
-The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
-Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
-
-![Universal cover of $\TT^2 \vee \RP^2$](figures/tree_cover.png)
-
-:::
-
-
-
-
-## Application: Every subgroup of a free group is free
-
-Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
-
-# Definition: Monodromy Action
-
-Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\alpha$ a loop at $x\in X$, let $\tilde \alpha$ be its lift and $\tilde x\in p^{-1}(x)$ be the lifted point in the fiber above $x$. Then $\alpha$ acts on $\tilde x$ from the right, by the rule $\tilde x \curvearrowleft \alpha = \tilde\alpha(1)$.
-
-Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
 
 
