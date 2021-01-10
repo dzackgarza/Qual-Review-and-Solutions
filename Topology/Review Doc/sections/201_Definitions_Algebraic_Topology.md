@@ -1,6 +1,5 @@
 # Definitions: Algebraic Topology
 
-
 :::{.definition title="Acyclic"}
 
 :::
@@ -65,7 +64,6 @@ Given two maps between chain complexes $(C_*, \del_{C}) \mapsvia{f, ~g} (D_*, \d
 <!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_{homotopy_{between_chain_complexes}}.svg/650px-Chain_{homotopy_{between_chain_complexes}}.svg.png)-->
 
 :::
- 
 
 :::{.definition title="Chain Map"}
 A map between chain complexes $(C_*, \del_{C}) \mapsvia{f} (D_*, \del_{D})$ is a chain map iff each component $C_{i} \mapsvia{f_{i}} D_{i}$ satisfies 
@@ -120,7 +118,6 @@ For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a se
 - The \( p\dash \)adic integers \( \ZZ_{p} \).
 :::
 
-
 :::{.definition title="Compact"}
 A space $X$ is compact iff every open cover of $X$ has a finite subcover.
 :::
@@ -140,7 +137,6 @@ Note that the cone embeds $X$ in a contractible space $CX$.
 :::{.definition title="Contractible"}
 A space is contractible if its identity map is nullhomotopic.
 :::
-
 
 :::{.definition title="Coproduct"}
 
@@ -164,12 +160,10 @@ where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
 is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
 :::
 	
-
 :::{.example title="Applications of the cup product"}
 On a manifold, the cup product is Poincaré dual to the intersection of submanifolds.
 Also used to show $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
 :::
-
 
 :::{.definition title="CW Complex"}
 
@@ -252,7 +246,7 @@ Thus a functor is exact iff it is both left and right exact, yielding
 
 :::
 
-:::{.example title="?"}
+:::{.example title="of an exact functor"}
 $\wait \tensor_{R} \wait$ is a right exact bifunctor.
 :::
 
@@ -426,7 +420,6 @@ A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} =
 $H_{n}(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_{n}(X \mid A)$
 :::
 
-
 :::{.definition title="Local orientation of a manifold"}
 At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \theset{x}) = \ZZ$.
 :::
@@ -500,16 +493,19 @@ For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M
 :::
 
 :::{.definition title="Orientation of a manifold"}
+A family of $\theset{\mu_{x}}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_{x}, \mu_{y}$ are related via a propagation.
+
+Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_{x}$$ such that $\forall x \exists N_{x}$ in which  $\forall y\in N_{x}$, the preimage of each $\mu_{y}$ under the map $H_{n}(M\mid N_{x}) \surjects H_{n}(M\mid y)$ is a single generator $\mu_{N_{x}}$.
+
+TFAE:
+
+- $M$ is orientable.
+- The map $W: (M, x) \to \ZZ_{2}$ is trivial.
+- $\tilde M_{o} = M \coprod \ZZ_{2}$ (two sheets).
+- $\tilde M_{o}$ is disconnected
+- The projection $\tilde M_{o} \to M$ admits a section.
 
 :::
-	* A family of $\theset{\mu_{x}}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_{x}, \mu_{y}$ are related via a propagation.
-		- Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_{x}$$ such that $\forall x \exists N_{x}$ in which  $\forall y\in N_{x}$, the preimage of each $\mu_{y}$ under the map $H_{n}(M\mid N_{x}) \surjects H_{n}(M\mid y)$ is a single generator $\mu_{N_{x}}$.
-	- TFAE:
-		- $M$ is orientable.
-		- The map $W: (M, x) \to \ZZ_{2}$ is trivial.
-		- $\tilde M_{o} = M \coprod \ZZ_{2}$ (two sheets).
-		- $\tilde M_{o}$ is disconnected
-		- The projection $\tilde M_{o} \to M$ admits a section.
 
 :::{.definition title="Oriented manifold"}
 
@@ -524,15 +520,12 @@ For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M
 :::
 
 :::{.definition title="Perfect Pairing"}
-
+A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_{R} N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_{R}(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
 :::
-	- A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_{R} N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_{R}(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
-		- Example: $\det_{M}: k^2 \cross k^2 \to k$
 
-:::{.definition title="Poincare Duality"}
-
+:::{.definition title="Poincaré Duality"}
+For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is an isomorphism: $$ D: H^k(M; R) \to H_{n-k}(M; R) \\ D(\alpha) = [M] \frown \alpha$$
 :::
-	* For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is an isomorphism: $$ D: H^k(M; R) \to H_{n-k}(M; R) \\ D(\alpha) = [M] \frown \alpha$$
 
 :::{.definition title="Projective Resolution"}
 
@@ -571,10 +564,9 @@ For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M
 :::
 
 :::{.definition title="Retraction"}
-
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
+Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
 :::
-	* A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
-	Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
 
 :::{.definition title="Short exact sequence"}
 
@@ -585,9 +577,8 @@ For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M
 :::
 
 :::{.definition title="Simplicial Map"}
-
+For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_{i}}$ spanning a simplex in $K$, the set $\theset{f(v_{i})}$ are the vertices of a simplex in $L$.
 :::
-	* For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_{i}}$ spanning a simplex in $K$, the set $\theset{f(v_{i})}$ are the vertices of a simplex in $L$.
 
 :::{.definition title="Simply Connected"}
 
@@ -595,55 +586,45 @@ For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M
 
 :::{.definition title="Singular Chain"}
 
+\[x \in C_{n}(x) \implies X = \sum_{i} n_{i} \sigma_{i} = \sum_{i} n_{i} (\Delta^n \mapsvia{\sigma_{i}} X)
+.\]
 :::
-$$
-x \in C_{n}(x) \implies X = \sum_{i} n_{i} \sigma_{i} = \sum_{i} n_{i} (\Delta^n \mapsvia{\sigma_{i}} X)$$
 
 :::{.definition title="Singular Cochain"}
 
+\[x \in C^n(x) \implies X = \sum_{i} n_{i} \psi_{i} = \sum_{i} n_{i} (\sigma_{i} \mapsvia{\psi_{i}} X)
+.\]
 :::
-$$
-x \in C^n(x) \implies X = \sum_{i} n_{i} \psi_{i} = \sum_{i} n_{i} (\sigma_{i} \mapsvia{\psi_{i}} X)
-$$
 
 :::{.definition title="Singular Homology"}
 
 :::
-
 
 :::{.definition title="Smash Product"}
 
 :::
 
 :::{.definition title="Surjection"}
-
+A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 :::
-	* A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 
 :::{.definition title="Suspension"}
+Compact represented as $\Sigma X = CX \coprod_{\id_{X}} CX$, two cones on $X$ glued along $X$.
+Explicitly given by
 
+\[\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_{0}} \cross I)}
+.\]
 :::
-Compact represented as $\Sigma X = CX \coprod_{\id_{X}} CX$, two cones on $X$ glued along $X$. Explicitly given by
-$$
-\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_{0}} \cross I)}
-$$
 
 :::{.definition title="Tor Group"}
-
+For an $R\dash$module
+\[
+\tor_{R}^n(\wait, B) = L_{n}(\wait \tensor_{R} B)
+,\]
+where $L_{n}$ denotes the $n$th left derived functor.
 :::
-	* For an $R\dash$module
-		$$\tor_{R}^n(\wait, B) = L_{n}(\wait \tensor_{R} B)$$
-		where $L_{n}$ denotes the $n$th left derived functor.
 
 :::{.definition title="Universal Cover"}
-
-:::
-
-:::{.definition title="Universal Coefficient Theorem for Cohomology"}
-
-:::
-
-:::{.definition title="Universal Coefficient Theorem for Change of Coefficient Ring"}
 
 :::
 
