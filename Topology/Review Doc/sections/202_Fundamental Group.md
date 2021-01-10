@@ -94,7 +94,7 @@ where $\ast_{P}$ is the amalgamated free product over $P$.
 
 \todo[inline]{Formulate in terms of pushouts.}
 
-![](figures/image_{2020}-06-01-00-07-39.png)
+![](figures/image_2020-06-01-00-07-39.png)
 
 Note that the hypothesis that $U\cap V$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
 
