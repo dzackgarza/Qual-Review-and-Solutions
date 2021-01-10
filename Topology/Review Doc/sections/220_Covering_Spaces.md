@@ -303,8 +303,10 @@ There is no covering map $p: \RP^2 \to \TT^2$.
 
 - Use the fact that $\pi_1(\TT^2) \cong \ZZ^2$ and $\pi_1(\RP^2) = \ZZ/2\ZZ$ are known.
 - The universal cover of $\TT^2$ is $\RR^2$, which is contractible.
-- By the previous results, $p$ is thus nullhomotopic.
-- Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
+- Using the following two facts, $p_*$ is the trivial map:
+  - By the previous results, $p$ is thus nullhomotopic.
+  - Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
+- This implies
 :::
 
 

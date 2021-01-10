@@ -326,10 +326,10 @@ Note that the cone embeds $X$ in a contractible space $CX$.
 :::
 
 :::{.definition title="Contractible"}
-A space is contractible if its identity map is nullhomotopic.
+A space $X$ is **contractible** if $\id_X$ is nullhomotopic. i.e. the identity is homotopic to a constant map $c(x) = x_0$.
 
-Alt:
-A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.[^contractible_is_useful]
+Equivalently, $X$ is contractible if $X \homotopic \theset{x_0}$ is homotopy equivalent to a point.
+This means that there exists a mutually inverse pair of maps $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g \homotopic \id_{\theset{x_0}}$ and $g\circ f \homotopic \id_X$.[^contractible_is_useful]
 
 [^contractible_is_useful]: 
 This is a useful property because it supplies you with a homotopy.
