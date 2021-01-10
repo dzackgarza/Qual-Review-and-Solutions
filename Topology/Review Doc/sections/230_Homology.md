@@ -15,7 +15,7 @@
 :::{.proposition title="Homology commutes with wedge products"}
 \[
 \tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
-H_n(\bigvee_\alpha X_\alpha) &\cong \bigoplus_\alpha H_n X_\alpha
+H_n\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_n X_\alpha
 \]
 :::
 
