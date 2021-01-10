@@ -105,7 +105,7 @@ If $X$ is
 - Locally path-connect, and
 - Semilocally simply connected,
 
-then $X$ admits a universal cover, unique up to homeomorphism in the following sense: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
+then $X$ admits a universal cover: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
 
 \begin{tikzcd}
 	{C} && {\tilde X} \\
@@ -117,9 +117,10 @@ then $X$ admits a universal cover, unique up to homeomorphism in the following s
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJYIl0sWzAsMCwiQyJdLFsyLDAsIlxcdGlsZGUgWCJdLFsxLDAsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiXFx0aWxkZSBwIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 
+Note that by this universal property, $\tilde X$ is unique up to homeomorphism when it exists.
 :::
 
-:::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
+:::{.theorem title="When maps lift to the universal cover (H. 1.33)"}
 If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there exists a unique lift $\tilde f: Y\to \tilde X$ if and only if $f_*(\pi_1(Y)) \subset \pi_*(\pi_1 (\tilde X))$:
 
 
