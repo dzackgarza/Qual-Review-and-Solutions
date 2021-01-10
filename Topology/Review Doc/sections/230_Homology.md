@@ -27,6 +27,12 @@ The obstruction is due to torsion -- if all groups are torsionfree, then the Kun
 \[
 H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
 \]
+
+[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbf{x} \in \mathcal{P}(n,k) \implies \mathbf{x} = (x_{1}, x_{2}, \ldots, x_{k})$ where $\sum x_{i}  = n$. Then
+$$
+H_{n}\qty{\prod_{j=1}^k X_{j}} = \bigoplus_{\mathbf{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_{i}}(X_{i}).
+$$
+
 :::
 
 :::{.theorem title="Excision"}
@@ -201,18 +207,10 @@ In other words, letting $F(\wait)$ be the free part and $T(\wait)$ be the torsio
 H^i(X; \ZZ) &= F(H_{i}(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
 H_{i}(X; \ZZ) &= F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
 \]
-
 :::
 
-:::{.remark}
-:::
+\todo[inline]{Might need assumptions: finite CW complex?}
 
-
-### Useful Shortcuts
-
-
-
-* Universal Coefficients Theorem: If $X$ is a finite CW complex then
 
 ## Cellular Homology
 
@@ -254,10 +252,6 @@ How to compute:
     6. Or look at elementary divisors, say $n_{i}$, then the image is isomorphic to $\bigoplus n_{i} \ZZ$
 
 
-[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbf{x} \in \mathcal{P}(n,k) \implies \mathbf{x} = (x_{1}, x_{2}, \ldots, x_{k})$ where $\sum x_{i}  = n$. Then
-$$
-H_{n}\qty{\prod_{j=1}^k X_{j}} = \bigoplus_{\mathbf{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_{i}}(X_{i}).
-$$
 [^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
 
 
