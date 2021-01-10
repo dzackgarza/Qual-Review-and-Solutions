@@ -1,100 +1,137 @@
 # Definitions: Algebraic Topology
 
 
-- Acyclic
+:::{.definition title="Acyclic"}
 
-- Alexander duality
+:::
 
-- Basis
-	* For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
+:::{.definition title="Alexander duality"}
 
-- Boundary
+:::
 
-- Boundary of a manifold
-	* Points $x\in M^n$ defined by 
-	$$
-	\del M = \theset{x\in M: H_n(M, M-\theset{x}; \ZZ) = 0}
-	$$
+:::{.definition title="Basis"}
+For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
+:::
 
-- Cap Product
-	* Denoting $\Delta^p \mapsvia{\sigma} X \in C_p(X; G)$, a map that sends pairs ($p\dash$chains, $q\dash$cochains) to $(p-q)\dash$chains $\Delta^{p-q} \to X$ by
-	$$
-	H_p(X; R)\cross H^q(X; R) \mapsvia{\frown} H_{p-q}(X; R)\\
-	\sigma \frown \psi = \psi(F_0^q(\sigma))F_q^p(\sigma)
-	$$
-	where $F_i^j$ is the face operator, which acts on a simplicial map $\sigma$ by restriction to the face spanned by $[v_i \ldots v_j]$, i.e. $F_i^j(\sigma) =\restrictionof{\sigma}{[v_i \ldots v_j]}$.
+:::{.definition title="Boundary"}
 
-- Cellular Homology
+:::
 
-- CW Cell
-	- An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_f X$ where $f: \del B^n \to X$.
-		- A $0\dash$cell is a point.
-		- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
-		- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
-		- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
+:::{.definition title="Boundary of a manifold"}
+Points $x\in M^n$ defined by 
+$$
+\del M = \theset{x\in M: H_{n}(M, M-\theset{x}; \ZZ) = 0}
+$$
 
-- Cellular Map
-	* A map $X \mapsvia{f} Y$ is said to be cellular if $f(X^{(n)}) \subseteq Y^{(n)}$ where $X^{(n)}$ denotes the $n\dash$ skeleton.
+:::
 
-- Chain
-	* An element $c \in C_p(X; R)$ can be represented as the singular $p$ simplex $\Delta^p \to X$.
+:::{.definition title="Cap Product"}
+Denoting $\Delta^p \mapsvia{\sigma} X \in C_{p}(X; G)$, a map that sends pairs ($p\dash$chains, $q\dash$cochains) to $(p-q)\dash$chains $\Delta^{p-q} \to X$ by
+$$
+H_{p}(X; R)\cross H^q(X; R) \mapsvia{\frown} H_{p-q}(X; R)\\
+\sigma \frown \psi = \psi(F_{0}^q(\sigma))F_{q}^p(\sigma)
+$$
+where $F_{i}^j$ is the face operator, which acts on a simplicial map $\sigma$ by restriction to the face spanned by $[v_{i} \ldots v_{j}]$, i.e. $F_{i}^j(\sigma) =\restrictionof{\sigma}{[v_{i} \ldots v_{j}]}$.
 
-- Chain Homotopy
-	* Given two maps between chain complexes $(C_*, \del_C) \mapsvia{f, ~g} (D_*, \del_D)$, a chain homotopy is a family $h_i: C_i \to B_{i+1}$ satisfying $$f_i-g_i = \del_{B, i-1}\circ h_n + h_{i+1}\circ \del_{A, i}$$. 
+
+:::
+
+:::{.definition title="Cellular Homology"}
+
+:::
+
+:::{.definition title="CW Cell"}
+An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_{f} X$ where $f: \del B^n \to X$.
+
+- A $0\dash$cell is a point.
+- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
+- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
+- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
+
+
+:::
+
+:::{.definition title="Cellular Map"}
+A map $X \mapsvia{f} Y$ is said to be cellular if $f(X^{(n)}) \subseteq Y^{(n)}$ where $X^{(n)}$ denotes the $n\dash$ skeleton.
+:::
+
+:::{.definition title="Chain"}
+An element $c \in C_{p}(X; R)$ can be represented as the singular $p$ simplex $\Delta^p \to X$.
+:::
+
+:::{.definition title="Chain Homotopy"}
+Given two maps between chain complexes $(C_*, \del_{C}) \mapsvia{f, ~g} (D_*, \del_{D})$, a chain homotopy is a family $h_{i}: C_{i} \to B_{i+1}$ satisfying $$f_{i}-g_{i} = \del_{B, i-1}\circ h_{n} + h_{i+1}\circ \del_{A, i}$$. 
+
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_{homotopy_between_chain_complexes}.svg/650px-Chain_{homotopy_between_chain_complexes}.svg.png)-->
+
+:::
  
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_homotopy_between_chain_complexes.svg/650px-Chain_homotopy_between_chain_complexes.svg.png)-->
 
-- Chain Map
-	* A map between chain complexes $(C_*, \del_C) \mapsvia{f} (D_*, \del_D)$ is a chain map iff each component $C_i \mapsvia{f_i} D_i$ satisfies 
-	$$
-	f_{i-1}\circ\del_{C, i} = \del_{D,i} \circ f_i
-	$$ 
-	(i.e this forms a commuting ladder) 
+:::{.definition title="Chain Map"}
+A map between chain complexes $(C_*, \del_{C}) \mapsvia{f} (D_*, \del_{D})$ is a chain map iff each component $C_{i} \mapsvia{f_{i}} D_{i}$ satisfies 
+$$
+f_{i-1}\circ\del_{C, i} = \del_{D,i} \circ f_{i}
+$$ 
+(i.e this forms a commuting ladder) 
 
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_map.svg/650px-Chain_map.svg.png)-->
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_{map}.svg/650px-Chain_{map}.svg.png)-->
 
-- Closed manifold
-	* A manifold that is compact, with or without boundary.
 
-- Coboundary
+:::
 
-- Cochain
-	* An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_p(X; R), R)$ on chains.
+:::{.definition title="Closed manifold"}
+A manifold that is compact, with or without boundary.
+:::
 
-- Cocycle
+:::{.definition title="Coboundary"}
+
+:::
+
+:::{.definition title="Cochain"}
+An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_{p}(X; R), R)$ on chains.
+:::
+
+:::{.definition title="Cocycle"}
+
+:::
 
 :::{.definition title="Constant Map"}
-A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_0$ is the same.
+A *constant map* $f: X\to Y$ iff $f(X) = y_{0}$ for some $y_{0}\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_{0}$ is the same.
 :::
 
 :::{.definition title="Colimit"}
-For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
+For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_{i}:X\to X_{i}$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
-\begin{center}
+
 \begin{tikzcd}
-                 &                            &  & Y \arrow[lldddd, "\psi_j"] \arrow[rrdddd, "\psi_i"] \arrow[dd, "\exists!", dashed] &  &               &        \\
+                 &                            &  & Y \arrow[lldddd, "\psi_{j}"] \arrow[rrdddd, "\psi_{i}"] \arrow[dd, "\exists!", dashed] &  &               &        \\
                  &                            &  &                                                                                    &  &               &        \\
-                 &                            &  & X \arrow[lldd, "\pi_j"] \arrow[rrdd, "\pi_i"]                                      &  &               &        \\
+                 &                            &  & X \arrow[lldd, "\pi_{j}"] \arrow[rrdd, "\pi_{i}"]                                      &  &               &        \\
                  &                            &  &                                                                                    &  &               &        \\
-\cdots \arrow[r] & X_j \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_i \arrow[r] & \cdots
+\cdots \arrow[r] & X_{j} \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_{i} \arrow[r] & \cdots
 \end{tikzcd}
-\end{center}
+:::
 
-:::{.example}
+
+:::{.example title="of colimits"}
+\envlist
+
 - Products
 - Pullbacks
-- Inverse/Projective limits
-- The $p\dash$adic integers $\ZZ_p$.
-
-:::
-
+- Inverse / projective limits
+- The \( p\dash \)adic integers \( \ZZ_{p} \).
 :::
 
 
-- Compact
+
+:::{.definition title="Compact"}
+
+:::
 	* A space $X$ is compact iff every open cover of $X$ has a finite subcover.
 
-- Cone
+:::{.definition title="Cone"}
+
+:::
 	* For a space $X$, defined as
 	\[  
 	CX = \frac{X\cross I} {X \cross \theset{0}}
@@ -106,24 +143,34 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
 	Note that the cone embeds $X$ in a contractible space $CX$.
 
 
-- Contractible
+:::{.definition title="Contractible"}
+
+:::
 	* A space is contractible if its identity map is nullhomotopic.
 
-- Contractible
+:::{.definition title="Contractible"}
 
-- Coproduct
+:::
 
-- Covering Space
+:::{.definition title="Coproduct"}
 
-- Cup Product
+:::
+
+:::{.definition title="Covering Space"}
+
+:::
+
+:::{.definition title="Cup Product"}
+
+:::
 	- A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
 	$$
 	H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
-	(a \cup b)(\sigma) = a(\sigma \circ I_0^p)~b(\sigma \circ I_p^{p+q})
+	(a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
 	$$
 	where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
 	$$
-	I_i^j: [i, \cdots, j] \injects\Delta^{p+q}
+	I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
 	$$
 	is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
 	On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
@@ -132,43 +179,71 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
     \todo[inline]{Proof}
   
 
-- CW Complex
+:::{.definition title="CW Complex"}
 
-- Cycle
+:::
 
-- Deck Transformation
+:::{.definition title="Cycle"}
 
-- Deformation
+:::
 
-- Deformation Retract
-	- A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_A$) **that also satisfies** $\iota \circ r \homotopic \id_X$.
+:::{.definition title="Deck Transformation"}
+
+:::
+
+:::{.definition title="Deformation"}
+
+:::
+
+:::{.definition title="Deformation Retract"}
+
+:::
+	- A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) **that also satisfies** $\iota \circ r \homotopic \id_{X}$.
     
     > Note that this is equality in one direction, but only homotopy equivalence in the other.
 
   - Equivalently, a map $F:I\cross X\to X$ such that 
-    - $F_0(x) = \id_X$
-    - $F_t(x)\mid_A = \id_A$
-    - $F_1(X) = A$
+    - $F_{0}(x) = \id_{X}$
+    - $F_{t}(x)\mid_{A} = \id_{A}$
+    - $F_{1}(X) = A$
 
-- Degree of a Map
+:::{.definition title="Degree of a Map"}
 
-- Derived Functor
-	* For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_nT)$ is defined as $h_n(TP_A)$, where $P_A$ is a projective resolution of $A$.
+:::
 
-- Dimension of a manifold
-	* For $x\in M$, the only nonvanishing homology group $H_i(M, M - \theset{x}; \ZZ)$
+:::{.definition title="Derived Functor"}
 
-- Direct Limit
+:::
+	* For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
 
-- Direct Product
+:::{.definition title="Dimension of a manifold"}
 
-- Direct Sum
+:::
+	* For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
 
-- Eilenberg-MacLane Space
+:::{.definition title="Direct Limit"}
 
-- Euler Characteristic
+:::
 
-- Exact Functor
+:::{.definition title="Direct Product"}
+
+:::
+
+:::{.definition title="Direct Sum"}
+
+:::
+
+:::{.definition title="Eilenberg-MacLane Space"}
+
+:::
+
+:::{.definition title="Euler Characteristic"}
+
+:::
+
+:::{.definition title="Exact Functor"}
+
+:::
 	* A functor $T$ is *right exact* if a short exact sequence 
 	$$0 \to A \to B \to C \to 0$$ 
 	yields an exact sequence 
@@ -180,60 +255,108 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
 	0 \to TA \to TB \to TC \to 0
 	$$
 	* Examples:
-		* $\wait \tensor_R \wait$ is a right exact bifunctor.
+		* $\wait \tensor_{R} \wait$ is a right exact bifunctor.
 
-- Exact Sequence
+:::{.definition title="Exact Sequence"}
 
-- Excision
+:::
 
-- Ext Group
+:::{.definition title="Excision"}
 
-- Flat
-	* An $R\dash$module is flat if $A\tensor_R \wait$ is an exact functor.
+:::
 
-- Free and Properly Discontinuous
+:::{.definition title="Ext Group"}
 
-- Free module
-	* A $\dash$module $M$ with a basis $S = \theset{s_i}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
+:::
 
-- Free Product
+:::{.definition title="Flat"}
 
-- Free product with amalgamation
+:::
+	* An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
 
-- Fundamental Class
-	* For a connected, closed, orientable manifold, $[M]$ is a generator of $H_n(M; \ZZ) = \ZZ$.
+:::{.definition title="Free and Properly Discontinuous"}
 
-- Fundamental classes
+:::
 
-- Fundamental Group
+:::{.definition title="Free module"}
 
-- Generating Set
-	* $S = \theset{s_i}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_i s_i$$ for some coefficients $r_i \in R$ (where this sum may be infinite).
+:::
+	* A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
 
-- Gluing Along a Map
+:::{.definition title="Free Product"}
 
-- Group Ring
+:::
 
-- Homologous
+:::{.definition title="Free product with amalgamation"}
 
-- Homotopic
+:::
 
-- Homotopy
+:::{.definition title="Fundamental Class"}
 
-- Homotopy Class
+:::
+	* For a connected, closed, orientable manifold, $[M]$ is a generator of $H_{n}(M; \ZZ) = \ZZ$.
 
-- Homotopy Equivalence
+:::{.definition title="Fundamental classes"}
 
-- Homotopy Extension Property
+:::
 
-- Homotopy Groups
+:::{.definition title="Fundamental Group"}
 
-- Homotopy Lifting Property
+:::
 
-- Injection
+:::{.definition title="Generating Set"}
+
+:::
+	* $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_{i} s_{i}$$ for some coefficients $r_{i} \in R$ (where this sum may be infinite).
+
+:::{.definition title="Gluing Along a Map"}
+
+:::
+
+:::{.definition title="Group Ring"}
+
+:::
+
+:::{.definition title="Homologous"}
+
+:::
+
+:::{.definition title="Homotopic"}
+
+:::
+
+:::{.definition title="Homotopy"}
+
+:::
+
+:::{.definition title="Homotopy Class"}
+
+:::
+
+:::{.definition title="Homotopy Equivalence"}
+
+:::
+
+:::{.definition title="Homotopy Extension Property"}
+
+:::
+
+:::{.definition title="Homotopy Groups"}
+
+:::
+
+:::{.definition title="Homotopy Lifting Property"}
+
+:::
+
+:::{.definition title="Injection"}
+
+:::
 	* A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
 
-- Intersection Pairing
+:::{.definition title="Intersection Pairing"}
+
+:::
 	For a manifold $M$, a map on homology defined by
 	$$
 	H_{\hat i}M \tensor H_{\hat j}M \to H_{\widehat{i+j}}X\\
@@ -243,183 +366,307 @@ For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequ
 
 	Then, if $[A], [B]$ are transversely intersecting submanifolds representing $\alpha, \beta$, then $$\left<\alpha, \beta\right> = [A\intersect B]$$.
 
-	If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_0 M = \ZZ$ is the signed number of intersection points.
+	If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_{0} M = \ZZ$ is the signed number of intersection points.
 
-- Inverse Limit
+:::{.definition title="Inverse Limit"}
 
-- Intersection Pairing
-	- The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_i M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
+:::
+
+:::{.definition title="Intersection Pairing"}
+
+:::
+	- The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_{i} M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
 	Computed as an oriented intersection number between two homology classes (perturbed to be transverse).
 
-- Intersection Form
-	- The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_n) \cross H^{n-k}(M^n) \to \ZZ$$
+:::{.definition title="Intersection Form"}
+
+:::
+	- The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_{n}) \cross H^{n-k}(M^n) \to \ZZ$$
 	where $n=2k$.
       - When $k$ is odd, $I$ is skew-symmetric and thus a *symplectic form.*
       - When $k$ is even (and thus $n \equiv 0 \mod 4$) this is a symmetric form.
       - Satisfies $I(x,y) = (-1)^{k(n-k)} I(y, x)$
 
-- Kronecker Pairing
-	- A map pairing a chain with a cochain, given by $$H^n(X; R) \cross H_n(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)$$
+:::{.definition title="Kronecker Pairing"}
+
+:::
+	- A map pairing a chain with a cochain, given by $$H^n(X; R) \cross H_{n}(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)$$
 	which is a nondegenerate bilinear form.
 
-- Kronecker Product
+:::{.definition title="Kronecker Product"}
 
-- Lefschetz duality
+:::
 
-- Lefschetz Number
+:::{.definition title="Lefschetz duality"}
 
-- Lens Space
+:::
 
-- Local Degree
-	- At a point $x \in V \subset M$, a generator of $H_n(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
+:::{.definition title="Lefschetz Number"}
 
-- Local Orientation
+:::
 
-- Limit
+:::{.definition title="Lens Space"}
 
-- Linear Independence
-	* A generating $S$ for a module $M$ is linearly independent if $\sum r_i s_i = 0_M \implies \forall i,~r_i = 0$ where $s_i\in S, r_i \in R$.
+:::
 
-- Local homology
-	* $H_n(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_n(X \mid A)$
+:::{.definition title="Local Degree"}
 
-- Local Homology
+:::
+	- At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
 
-- Local orientation of a manifold
-	* At a point $x\in M^n$, a choice of a generator $\mu_x$ of $H_n(M, M - \theset{x}) = \ZZ$.
+:::{.definition title="Local Orientation"}
 
-- Long exact sequence
+:::
 
-- Loop Space
+:::{.definition title="Limit"}
 
-- Manifold
+:::
+
+:::{.definition title="Linear Independence"}
+
+:::
+	* A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} = 0_M \implies \forall i,~r_{i} = 0$ where $s_{i}\in S, r_{i} \in R$.
+
+:::{.definition title="Local homology"}
+
+:::
+	* $H_{n}(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_{n}(X \mid A)$
+
+:::{.definition title="Local Homology"}
+
+:::
+
+:::{.definition title="Local orientation of a manifold"}
+
+:::
+	* At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \theset{x}) = \ZZ$.
+
+:::{.definition title="Long exact sequence"}
+
+:::
+
+:::{.definition title="Loop Space"}
+
+:::
+
+:::{.definition title="Manifold"}
+
+:::
 	* An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
 
-- Manifold with boundary
-	* A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_i > 0}$.
+:::{.definition title="Manifold with boundary"}
 
-- Mapping Cone
+:::
+	* A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_{i} > 0}$.
 
-- Mapping Cylinder
+:::{.definition title="Mapping Cone"}
 
-- Mapping Path Space
+:::
 
-- Mayer-Vietoris Sequence
+:::{.definition title="Mapping Cylinder"}
 
-- Monodromy
+:::
 
-- Moore Space
+:::{.definition title="Mapping Path Space"}
 
-- N-cell
+:::
 
-- N-connected
+:::{.definition title="Mayer-Vietoris Sequence"}
+
+:::
+
+:::{.definition title="Monodromy"}
+
+:::
+
+:::{.definition title="Moore Space"}
+
+:::
+
+:::{.definition title="N-cell"}
+
+:::
+
+:::{.definition title="N-connected"}
+
+:::
 
 :::{.definition title="Nullhomotopic"}
-A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_0}$; that is, there exists a homotopy 
+A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_{0}}$; that is, there exists a homotopy 
 \[  
 F: X\cross I &\to Y \\
 \restrictionof{F}{X\cross\theset{0}} &= f \quad F(x, 0) = f(x) \\
-\restrictionof{F}{X\cross\theset{1}} &= g  \quad F(x, 1) = g(x) = y_0\\
+\restrictionof{F}{X\cross\theset{1}} &= g  \quad F(x, 1) = g(x) = y_{0}\\
 .\]
 :::
 
 
-- Orientable manifold
+:::{.definition title="Orientable manifold"}
+
+:::
 	* A manifold for which an orientation exists, see "Orientation of a Manifold".
 
-- Orientation Cover
-	* For any manifold $M$, a two sheeted orientable covering space $\tilde M_o$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as $$\tilde M = \coprod_{x\in M}\theset{\mu_x \mid \mu_x~ \text{is a local orientation}}$$
+:::{.definition title="Orientation Cover"}
 
-- Orientation of a manifold
-	* A family of $\theset{\mu_x}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_x, \mu_y$ are related via a propagation.
-		- Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_x$$ such that $\forall x \exists N_x$ in which  $\forall y\in N_x$, the preimage of each $\mu_y$ under the map $H_n(M\mid N_x) \surjects H_n(M\mid y)$ is a single generator $\mu_{N_x}$.
+:::
+	* For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as $$\tilde M = \coprod_{x\in M}\theset{\mu_{x} \mid \mu_{x}~ \text{is a local orientation}}$$
+
+:::{.definition title="Orientation of a manifold"}
+
+:::
+	* A family of $\theset{\mu_{x}}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_{x}, \mu_{y}$ are related via a propagation.
+		- Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_{x}$$ such that $\forall x \exists N_{x}$ in which  $\forall y\in N_{x}$, the preimage of each $\mu_{y}$ under the map $H_{n}(M\mid N_{x}) \surjects H_{n}(M\mid y)$ is a single generator $\mu_{N_{x}}$.
 	- TFAE:
 		- $M$ is orientable.
-		- The map $W: (M, x) \to \ZZ_2$ is trivial.
-		- $\tilde M_o = M \coprod \ZZ_2$ (two sheets).
-		- $\tilde M_o$ is disconnected
-		- The projection $\tilde M_o \to M$ admits a section.
+		- The map $W: (M, x) \to \ZZ_{2}$ is trivial.
+		- $\tilde M_{o} = M \coprod \ZZ_{2}$ (two sheets).
+		- $\tilde M_{o}$ is disconnected
+		- The projection $\tilde M_{o} \to M$ admits a section.
 
-- Oriented manifold
+:::{.definition title="Oriented manifold"}
 
-- Path
+:::
 
-- Path Lifting Property
+:::{.definition title="Path"}
 
-- Perfect Pairing
-	- A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_R N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_R(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
-		- Example: $\det_M: k^2 \cross k^2 \to k$
+:::
 
-- Poincare Duality
+:::{.definition title="Path Lifting Property"}
+
+:::
+
+:::{.definition title="Perfect Pairing"}
+
+:::
+	- A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_{R} N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_{R}(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
+		- Example: $\det_{M}: k^2 \cross k^2 \to k$
+
+:::{.definition title="Poincare Duality"}
+
+:::
 	* For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is an isomorphism: $$ D: H^k(M; R) \to H_{n-k}(M; R) \\ D(\alpha) = [M] \frown \alpha$$
 
-- Projective Resolution
+:::{.definition title="Projective Resolution"}
 
-- Properly Discontinuous
+:::
 
-- Pullback
+:::{.definition title="Properly Discontinuous"}
 
-- Pushout
+:::
 
-- Quasi-isomorphism
+:::{.definition title="Pullback"}
 
-- R-orientability
+:::
 
-- Relative boundaries
+:::{.definition title="Pushout"}
 
-- Relative cycles
+:::
 
-- Relative homotopy groups
+:::{.definition title="Quasi-isomorphism"}
 
-- Retraction
-	* A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_A.$$
-	Equivalently $X \surjects_r A$ and $\restrictionof{r}{A} = \id_A$. If $X$ retracts onto $A$, then $i_*$ is injective.
+:::
 
-- Short exact sequence
+:::{.definition title="R-orientability"}
 
-- Simplicial Complex
+:::
 
-- Simplicial Map
-	* For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_i}$ spanning a simplex in $K$, the set $\theset{f(v_i)}$ are the vertices of a simplex in $L$.
+:::{.definition title="Relative boundaries"}
 
-- Simply Connected
+:::
 
-- Singular Chain
+:::{.definition title="Relative cycles"}
+
+:::
+
+:::{.definition title="Relative homotopy groups"}
+
+:::
+
+:::{.definition title="Retraction"}
+
+:::
+	* A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
+	Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
+
+:::{.definition title="Short exact sequence"}
+
+:::
+
+:::{.definition title="Simplicial Complex"}
+
+:::
+
+:::{.definition title="Simplicial Map"}
+
+:::
+	* For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_{i}}$ spanning a simplex in $K$, the set $\theset{f(v_{i})}$ are the vertices of a simplex in $L$.
+
+:::{.definition title="Simply Connected"}
+
+:::
+
+:::{.definition title="Singular Chain"}
+
+:::
 $$
-x \in C_n(x) \implies X = \sum_i n_i \sigma_i = \sum_i n_i (\Delta^n \mapsvia{\sigma_i} X)$$
+x \in C_{n}(x) \implies X = \sum_{i} n_{i} \sigma_{i} = \sum_{i} n_{i} (\Delta^n \mapsvia{\sigma_{i}} X)$$
 
-- Singular Cochain
+:::{.definition title="Singular Cochain"}
+
+:::
 $$
-x \in C^n(x) \implies X = \sum_i n_i \psi_i = \sum_i n_i (\sigma_i \mapsvia{\psi_i} X)
+x \in C^n(x) \implies X = \sum_{i} n_{i} \psi_{i} = \sum_{i} n_{i} (\sigma_{i} \mapsvia{\psi_{i}} X)
 $$
 
-- Singular Homology
+:::{.definition title="Singular Homology"}
+
+:::
 
 
-- Smash Product
+:::{.definition title="Smash Product"}
 
-- Surjection
+:::
+
+:::{.definition title="Surjection"}
+
+:::
 	* A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 
-- Suspension
-Compact represented as $\Sigma X = CX \coprod_{\id_X} CX$, two cones on $X$ glued along $X$. Explicitly given by
+:::{.definition title="Suspension"}
+
+:::
+Compact represented as $\Sigma X = CX \coprod_{\id_{X}} CX$, two cones on $X$ glued along $X$. Explicitly given by
 $$
-\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_0} \cross I)}
+\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_{0}} \cross I)}
 $$
 
-- Tor Group
+:::{.definition title="Tor Group"}
+
+:::
 	* For an $R\dash$module
-		$$\tor_R^n(\wait, B) = L_n(\wait \tensor_R B)$$
-		where $L_n$ denotes the $n$th left derived functor.
+		$$\tor_{R}^n(\wait, B) = L_{n}(\wait \tensor_{R} B)$$
+		where $L_{n}$ denotes the $n$th left derived functor.
 
-- Universal Cover
+:::{.definition title="Universal Cover"}
 
-- Universal Coefficient Theorem for Cohomology
+:::
 
-- Universal Coefficient Theorem for Change of Coefficient Ring
+:::{.definition title="Universal Coefficient Theorem for Cohomology"}
 
-- Weak Homotopy Equivalence
+:::
 
-- Weak Topology
+:::{.definition title="Universal Coefficient Theorem for Change of Coefficient Ring"}
 
-- Wedge Product
+:::
+
+:::{.definition title="Weak Homotopy Equivalence"}
+
+:::
+
+:::{.definition title="Weak Topology"}
+
+:::
+
+:::{.definition title="Wedge Product"}
+
+:::
