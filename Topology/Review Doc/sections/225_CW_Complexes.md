@@ -57,3 +57,13 @@ For counterexamples, note that this fails to be a triangulation of $T$:
 This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
 :::
 
+## Constructing a CW Complex with Prescribed Homology
+
+Given $G = \bigoplus G_{i}$, and want a space such that $H_{i} X = G$? Construct $X = \bigvee X_{i}$ and then $H_{i} (\bigvee X_{i}) = \bigoplus H_{i} X_{i}$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_{n}(Y) = G$.
+By the structure theorem of finitely generated abelian groups, it suffices to know how to do this for $\ZZ$ and $\ZZ/n\ZZ$, since their powers are just obtained by wedging (previous remark).
+Recipe:
+
+1. Attach an $e^n$ to a point to get $H_{n} = \ZZ$
+
+2. Attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_{n} = \ZZ_{d}$
+

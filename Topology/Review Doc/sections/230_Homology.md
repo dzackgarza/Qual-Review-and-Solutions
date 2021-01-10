@@ -10,7 +10,6 @@ H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
 See footnotes for categorical interpretation.[^wedge]
 :::
 \todo[inline]{May need some good pair condition?}
-?
 
 :::{.example title="Application"}
 \[
@@ -35,10 +34,8 @@ Todo
 :::
 \todo[inline]{Excision.}
 
-
 - $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
-
 
 ## Known Homology
 
@@ -52,19 +49,25 @@ H_{i}(S^n) =
 \end{cases}
 \]
 :::
-  
 
 
-## Constructing a CW Complex with Prescribed Homology
+:::{.example title="Real Projective Spaces"}
 
-- Given $G = \bigoplus G_{i}$, and want a space such that $H_{i} X = G$? Construct $X = \bigvee X_{i}$ and then $H_{i} (\bigvee X_{i}) = \bigoplus H_{i} X_{i}$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_{n}(Y) = G$.
-  - Attach an $e^n$ to a point to get $H_{n} = \ZZ$
-  - Then attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_{n} = \ZZ_{d}$
+:::
+
+:::{.example title="Complex Projective Spaces"}
+
+:::
+
+:::{.example title="Surfaces"}
+
+:::
+
+\todo[inline]{Homology examples.}
 
 ## Mayer-Vietoris
 
-
-:::{.fact}
+:::{.fact title="Useful algebra fact"}
 Since $\ZZ$ is free and thus projective, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 :::
 
@@ -82,7 +85,6 @@ This yields a LES in homology:
 > Mnemonic: $X = A \union B \leadsto (\intersect, \oplus, \union)$
 
 :::
- 
 
 :::{.example title="Application: computing the homology of a connect sum"}
 $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
