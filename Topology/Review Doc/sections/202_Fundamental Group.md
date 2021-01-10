@@ -48,30 +48,19 @@ B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 For groups, the pushout is realized by the amalgamated free product: if 
 \[
 \begin{cases}
-A = \generators{G_{A} \suchthat R_{A}} \\
-B = \generators{G_{B} \suchthat R_{B}}
+\pi_1 U_1 = A = \generators{G_{A} \suchthat R_{A}} \\
+\pi_1 U_2 = B = \generators{G_{B} \suchthat R_{B}}
 \end{cases}
 \implies 
 A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
 \]
 where $T$ is a set of relations given by 
 \[
-T = \theset{\iota_{A}(z) \iota_{B}(z)\inv \suchthat z\in Z}
+T = \theset{\iota_{1}(z) \iota_{2}(z)\inv \suchthat z\in Z}
 .\]
 
 :::
 
-
-:::{.theorem title="Van Kampen 1"}
-
-
-Suppose $X = U_{1} \union U_{2}$ such that $U_{1}\intersect U_{2} \neq \emptyset$ is **path connected** (necessary condition).
-Then taking $x_{0} \in U\da U_{1} \intersect U_{2}$ yields a pushout of fundamental groups
-\[
-\pi_{1}(X; x_{0}) = \pi_{1}(U_{1};x_{0}) \ast_{\pi_{1}(U; x_{0})} \pi_{1}(U_{2}; x_{0})
-.\]
-
-:::
 
 :::{.theorem title="Van Kampen 2"}
 If $X = U \union V$ where $U, V, U\intersect V$ are all path-connected then
