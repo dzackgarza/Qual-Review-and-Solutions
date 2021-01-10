@@ -25,9 +25,20 @@ Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 
 
 :::{.theorem title="Seifert-van Kampen"}
-Suppose $X = U_{1} \union U_{2}$ where $U \da U_{1} \intersect U_{2} \neq \emptyset$ is path-connected, and let $\pt \in U$. 
+Suppose $X = U_{1} \union U_{2}$ where $U \da U_{1} \intersect U_{2} \neq \emptyset$ is path-connected, and let $x_0 \in U$. 
 
 Then the maps $i_{1}: U_{1} \into X$ and $i_{2}: U_{2} \into X$ induce the following group homomorphisms:
+\[
+i_{1}^*: \pi_{1}(U_{1}, x_0) \into \pi_{1}(X, x_0) \\
+i_{2}^*: \pi_{1}(U_{2}, x_0) \into \pi_{1}(X, x_0)
+\]
+
+There is a natural isomorphism
+\[
+\pi_{1}(X) \cong \pi_{1} U \ast_{\pi_{1}(U \intersect V)} \pi_{1} V
+,\]
+
+where the amalgamated product can be computed as follows: 
 
 :::
 
@@ -53,11 +64,6 @@ Then taking $x_{0} \in U\da U_{1} \intersect U_{2}$ yields a pushout of fundamen
 :::{.theorem title="Van Kampen 2"}
 If $X = U \union V$ where $U, V, U\intersect V$ are all path-connected then
 
-\[
-\pi_{1}(X) = \pi_{1} U \ast_{\pi_{1}(U \intersect V)} \pi_{1} V
-,\]
-
-where the amalgamated product can be computed as follows: 
 If we have presentations
 
 \[ 
@@ -87,13 +93,6 @@ J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
 :::
 
 :::{.theorem title="Van Kampen 3"}
-
-$$
-i_{1}^*: \pi_{1}(U_{1} ,\pt) \into \pi_{1}(X, \pt) \\
-i_{2}^*: \pi_{1}(U_{2} ,\pt) \into \pi_{1}(X, \pt)
-$$
-
-and letting $P = \pi_{1}(U), \pt$, there is a natural isomorphism
 
 $$
 \pi_{1}(X, \pt) \cong \pi_{1}(U_{1}, \pt) ~\ast_{P}~ \pi_{1}(U_{2}, \pt)
