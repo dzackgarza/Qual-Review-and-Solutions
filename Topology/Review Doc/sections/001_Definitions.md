@@ -21,11 +21,16 @@ Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$
 
 
 
-Definition (Closed)
-:   There are several characterizations of a closed set:
- 
-    - Closure of a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
-    - A set is closed iff it contains all of its limit points.
+:::{.definition title="Closed"}
+\envlist
+
+- A set is closed if and only if its complement is open.
+- A set is closed iff it contains all of its limit points.
+- A closet set in a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
+
+:::
+
+
 
 Definition (Basis)
 : For $X$ a space and $\mcb$ a collection of subsets, $\mcb$ is a *basis* for $(X, \tau_X)$ iff every open $U\in \tau_X$ is a union of elements in $\mcb$.
