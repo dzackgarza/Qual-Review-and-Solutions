@@ -143,15 +143,20 @@ A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
 :::
 
 
-
-
 ## Separability
 
-Definition (Locally Finite)
-: A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
 
-Definition (Separable)
-: A space $X$ is *separable* iff $X$ contains a countable dense subset.
+:::{.definition title="Locally Finite"}
+A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
+:::
+
+
+:::{.definition title="Separable "}
+A space $X$ is *separable* iff $X$ contains a countable dense subset.
+:::
+
+
+
 
 Definition (Hausdorff)
 : A topo.ogical space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
