@@ -42,9 +42,22 @@ Todo
 - $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
 
 
-* $H_{i}(S^n) = \indic{i \in \theset{0, n}}$
 * $H_{n}(\bigvee_{i} X_{i}) \cong \prod_{i} H_{n}(X_{i})$ for "good pairs"
   * Corollary: $H_{n}(\bigvee_{k} S^n) = \ZZ^k$
+
+## Known Homology
+
+:::{.example title="Spheres"}
+\[
+H_{i}(S^n) = 
+\begin{cases}
+\ZZ & i = 0, n
+\\
+0 & \text{else}.
+\end{cases}
+.\]
+:::
+  
 
 \[
 X = A\cup B \implies
@@ -57,7 +70,6 @@ A\to B \to C \implies
 & \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
 \]
 
-## Useful Facts
 - $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
 - $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
 - For CW complexes $X = \theset{X^{(i)}}$, we have 
