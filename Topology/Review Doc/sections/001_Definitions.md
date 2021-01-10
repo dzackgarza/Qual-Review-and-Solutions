@@ -58,6 +58,10 @@ A space is *first-countable* iff every point admits a countable neighborhood bas
 A topological space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
 :::
 
+:::{.definition title="Injection"}
+A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
+:::
+
 :::{.definition title="Lebesgue Number"}
 For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_{L} > 0$ such that 
 \[
@@ -136,6 +140,11 @@ Todo
 :::
 \todo[inline]{Definitions}
 
+:::{.definition title="Retract"}
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
+Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
+:::
+
 :::{.definition title="Saturated"}
 
 :::
@@ -153,6 +162,10 @@ A space is *second-countable* iff it admits a countable basis.
 Todo
 :::
 \todo[inline]{Definitions}
+
+:::{.definition title="Surjection"}
+A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
+:::
 
 :::{.definition title="Topology"}
 Closed under arbitrary unions and finite intersections.
@@ -218,18 +231,6 @@ where $F_{i}^j$ is the face operator, which acts on a simplicial map $\sigma$ by
 :::
 
 :::{.definition title="Cellular Homology"}
-
-:::
-\todo[inline]{Definitions}
-
-:::{.definition title="CW Cell"}
-An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_{f} X$ where $f: \del B^n \to X$.
-
-- A $0\dash$cell is a point.
-- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
-- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
-- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
-
 
 :::
 \todo[inline]{Definitions}
@@ -304,10 +305,6 @@ For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a se
 - The \( p\dash \)adic integers \( \ZZ_{p} \).
 :::
 
-:::{.definition title="Compact"}
-A space $X$ is compact iff every open cover of $X$ has a finite subcover.
-:::
-
 :::{.definition title="Cone"}
 For a space $X$, defined as
 \[  
@@ -357,6 +354,17 @@ Also used to show $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$.
 
 :::
 \todo[inline]{Definitions}
+
+:::{.definition title="CW Cell"}
+An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_{f} X$ where $f: \del B^n \to X$.
+
+- A $0\dash$cell is a point.
+- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
+- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
+- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
+
+
+:::
 
 :::{.definition title="Cycle"}
 
@@ -520,9 +528,17 @@ $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M
 \todo[inline]{Definitions}
 
 :::{.definition title="Homotopy"}
+Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a *homotopy* from $f$ to $g$ is a continuous function
+
+$F: X \cross I \into Y$
+
+such that
+
+$F(x, 0) = f(x)$ and  $F(x,1) = g(x)$
+
+for all $x\in X$. If such a homotopy exists, we write $f\homotopic g$. This is an equivalence relation on $\text{Hom}(X,Y)$, and the set of such classes is denoted $[X,Y] \definedas \hom (X,Y)/\homotopic$.
 
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Class"}
 
@@ -548,10 +564,6 @@ $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M
 
 :::
 \todo[inline]{Definitions}
-
-:::{.definition title="Injection"}
-A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
-:::
 
 :::{.definition title="Intersection Pairing"}
 For a manifold $M$, a map on homology defined by
@@ -713,7 +725,7 @@ F: X\cross I &\to Y \\
 A manifold for which an orientation exists, see "Orientation of a Manifold".
 :::
 
-:::{.definition title="Orientation Cover"}
+:::{.definition title="Orientation cover"}
 For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as 
 \[
 \tilde M = \coprod_{x\in M}\theset{\mu_{x} \mid \mu_{x}~ \text{is a local orientation}}
@@ -803,11 +815,6 @@ For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is a
 :::
 \todo[inline]{Definitions}
 
-:::{.definition title="Retraction"}
-A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
-Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
-:::
-
 :::{.definition title="Short exact sequence"}
 
 :::
@@ -848,10 +855,6 @@ For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial m
 
 :::
 \todo[inline]{Definitions}
-
-:::{.definition title="Surjection"}
-A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
-:::
 
 :::{.definition title="Suspension"}
 Compact represented as $\Sigma X = CX \coprod_{\id_{X}} CX$, two cones on $X$ glued along $X$.
