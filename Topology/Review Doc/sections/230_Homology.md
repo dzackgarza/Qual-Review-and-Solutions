@@ -184,9 +184,8 @@ and
 0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A) &\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0 \\
 &\quad \Downarrow \\ \\ 
 0 \to \ext (H_{i-1} X, G) &\to H^i(X;G) \to \hom(H_{i} X, G) \to 0
-\]
-
-which split unnaturally:
+.\]
+These split unnaturally:
 \[
 H_{i}(X;G) &= (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G) \\
 H^i(X; G) &= \hom(H_{iX}, G) \oplus \ext(H_{i-1}X; G)
