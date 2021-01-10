@@ -8,12 +8,25 @@
 \envlist
 
 
-- Homology commutes with wedge products: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
+
 :::
 
 
+:::{.proposition title="Homology commutes with wedge products"}
+\[
+\tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
+H_n(\bigvee_\alpha X_\alpha) &\cong \bigoplus_\alpha H_n X_\alpha
+\]
+:::
+
+:::{.proof title="?"}
+Mayer-Vietoris. 
+:::
+
+
+
+
 - $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
 
 - Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 
