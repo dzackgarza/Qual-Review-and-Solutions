@@ -195,21 +195,37 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 :::
 
 
+### Examples
 
 :::{.example title="The circle $S^1$"}
 Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
-Note the induced map $p_n^*: \pi_1(S^1) \into \pi_1(S^1)$ is given by $[\omega_1] \mapsto [\omega_n] = n[\omega_1]$ and so $p_n^*(\pi_1(S^1)) = \ZZ_n = \text{Aut}(\tilde X_n)$. (This can also be seen the other way, by looking at deck transformations which are rotations of the circle by $2\pi/n$)
-
-The universal cover of $S^1$ is $\RR$; this is an infinitely sheeted cover. The fiber above $x_0$ is equal to $\ZZ$. $A:=B$
+The induced map can be described on generators as
+\[
+p_n^*: \pi_1(S^1) &\to \pi_1(S^1) \\
+[\omega_1] &\mapsto [\omega_n] = n[\omega_1]
+\]
+and so the image is isomorphic to $n\ZZ$ and thus
+\[
+p_n^*(\pi_1(S^1)) = \Aut_{\mathrm{Cov} }(\tilde X_n) = \ZZ/n\ZZ
+.\]
+where the deck transformations are rotations of the circle by $2\pi/n$.
+The universal cover of $S^1$ is $\RR$; this is an infinitely sheeted cover, and the fiber above $x_0$ has cardinality $\abs{\ZZ}$. 
 
 :::
 
-### Example: Covering spaces
+
+:::{.example title="Projective $n\dash$space $\RP^n$"}
+The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. 
+The fiber above $x_0$ contains the two antipodal points.
+:::
 
 
-The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. The fiber above $x_0$ contains the two antipodal points.
-
+:::{.example title="The torus"}
 The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
+:::
+
+
+
 
 ## Theorem: Homotopy Lifting
 
