@@ -107,8 +107,17 @@ If $X$ is
 - Locally path-connect, and
 - Semilocally simply connected,
 
-then $X$ admits a universal cover.
+then $X$ admits a universal cover, unique up to homeomorphism in the following sense: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
 
+\begin{tikzcd}
+	{C} && {\tilde X} \\
+	\\
+	{X}
+	\arrow["{q}", from=1-1, to=3-1, two heads]
+	\arrow["{p}", from=1-3, to=3-1, two heads]
+	\arrow["{\tilde p}"', from=1-3, to=1-1, dashed, two heads]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJYIl0sWzAsMCwiQyJdLFsyLDAsIlxcdGlsZGUgWCJdLFsxLDAsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiXFx0aWxkZSBwIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 
 If $\tilde X \surjects X$ is a cover with $\tilde X$ simply connected, then $\tilde X$ is the **universal cover** of $\tilde X$ - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
 We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
