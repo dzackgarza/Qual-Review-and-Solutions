@@ -139,8 +139,8 @@ where the amalgamated product can be computed as follows:
 A **pushout** is the colimit of the following diagram
 
 \begin{tikzcd}
-A \Disjoint_{Z} B   & A \ar[d] \ar[l] \\
-B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
+A \Disjoint_{Z} B   & A\ar[l] \\
+B \ar[u]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 \end{tikzcd}
 
 ![Example of a pushout of spaces](figures/image_2020-06-01-00-07-39.png)
@@ -331,4 +331,5 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
+
 
