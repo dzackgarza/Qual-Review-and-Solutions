@@ -81,8 +81,20 @@ Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
 where $C_{n}(A+B)$ denotes the chains that are sums of chains in $A$ and chains in $B$.
 This yields a LES in homology:
 \[
-\cdots \to H_{n}(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_{n}(A) \oplus H_{n}(B) \mapsvia{(x, y) \mapsto x+y} H_{n}(X) \to \cdots
+\cdots  H_{n}(A \cap B) \xrightarrow{(i^*,~ j^*)} H_{n}(A) \oplus H_{n}(B) \xrightarrow{l^* - r^*}  H_{n}(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots
 \]
+where
+
+- $i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
+
+- $j: A\cap B \hookrightarrow B$ induces $j^*: H_*(A\cap B) \to H_*(B)$
+
+- $l: A \hookrightarrow A\cup B$ induces $l^*: H_*(A) \to H_*(X)$
+
+- $r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
+
+
+
 More explicitly, 
 
 \begin{tikzcd}
@@ -105,7 +117,7 @@ H_{0} (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_{0} A \oplus H_{0} B \arrow
 0 &  &  &  &
 \end{tikzcd}
 
-
+The connecting homomorphisms $\delta_{n} :H_{n}(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_{n}(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_{i}$ where each $c_{i}$ is an $x+y$ chain. Then $\del(c_{i}) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
 
 :::
 
@@ -115,26 +127,9 @@ $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vieto
 
 
 
-Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
-
-
-
 
 
 This is sometimes written in the following compact form:
-$$ \cdots  H_{n}(A \cap B) \xrightarrow{(i^*,~ j^*)} H_{n}(A) \oplus H_{n}(B) \xrightarrow{l^* - r^*}  H_{n}(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots$$
-
-Where
-
-- $i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
-
-- $j: A\cap B \hookrightarrow B$ induces $j^*: H_*(A\cap B) \to H_*(B)$
-
-- $l: A \hookrightarrow A\cup B$ induces $l^*: H_*(A) \to H_*(X)$
-
-- $r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
-
-The connecting homomorphisms $\delta_{n} :H_{n}(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_{n}(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_{i}$ where each $c_{i}$ is an $x+y$ chain. Then $\del(c_{i}) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
 
 Handy mnemonic diagram:
 \[
