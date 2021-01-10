@@ -24,8 +24,8 @@ Mayer-Vietoris.
 :::
 
 :::{.warnings}
-$H_{k} \prod X$ is **not** generally equal to $\prod H_{k} X$.
-The obstruction is due to torsion -- if all groups are torsion free, then the Kunneth theorem[^kunneth] yields 
+$H_{k} \qty{ \prod_ \alpha X_ \alpha}$ is **not** generally equal to $\prod_ \alpha \qty{ H_{k} X_ \alpha }$.
+The obstruction is due to torsion -- if all groups are torsionfree, then the Kunneth theorem[^kunneth] yields 
 \[
 H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
 \]
@@ -81,7 +81,6 @@ H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{
 Since $\ZZ$ is free and thus projective, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
 :::
 
-
 :::{.theorem title="Mayer-Vietoris"}
 Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
 \[
@@ -94,6 +93,7 @@ This yields a LES in homology:
 .\]
 
 > Mnemonic: $X = A \union B \leadsto (\intersect, \oplus, \union)$
+
 :::
  
 
