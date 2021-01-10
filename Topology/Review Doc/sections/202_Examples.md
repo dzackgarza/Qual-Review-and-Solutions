@@ -148,10 +148,10 @@ Facts used to compute the above table:
 
 - $S^n \cong B^n / \del B^n$ and employs an attaching map 
 
-  \begin{align*}
-  \phi: (D^n, \del D^n) &\to S^n \\ 
-  (D^n, \del D^n) &\mapsto (e^n, e^0)
-  .\end{align*}
+\begin{align*}
+\phi: (D^n, \del D^n) &\to S^n \\ 
+(D^n, \del D^n) &\mapsto (e^n, e^0)
+.\end{align*}
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
