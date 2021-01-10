@@ -25,9 +25,9 @@ Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 
 
 :::{.theorem title="Seifert-van Kampen"}
-Suppose $X = U_{1} \union U_{2}$ where $U \da U_{1} \intersect U_{2} \neq \emptyset$ is path-connected, and let $x_0 \in U$. 
+Suppose $X = U_{1} \union U_{2}$ where $U_1, U_2$, and $U \da U_{1} \intersect U_{2} \neq \emptyset$ are open and path-connected, and let $x_0 \in U$. 
 
-Then the maps $i_{1}: U_{1} \into X$ and $i_{2}: U_{2} \into X$ induce the following group homomorphisms:
+Then the inclusion maps $i_{1}: U_{1} \injects X$ and $i_{2}: U_{2} \injects X$ induce the following group homomorphisms:
 \[
 i_{1}^*: \pi_{1}(U_{1}, x_0) \into \pi_{1}(X, x_0) \\
 i_{2}^*: \pi_{1}(U_{2}, x_0) \into \pi_{1}(X, x_0)
@@ -38,7 +38,7 @@ There is a natural isomorphism
 \pi_{1}(X) \cong \pi_{1} U \ast_{\pi_{1}(U \intersect V)} \pi_{1} V
 ,\]
 
-where the amalgamated product can be computed as follows: 
+where the amalgamated product can be computed as follows:
 
 :::
 
