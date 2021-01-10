@@ -12,6 +12,8 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 ## Fundamental Group
 
 
+### Definition
+
 :::{.definition title="The Fundamental Group"}
 Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
 
@@ -23,7 +25,8 @@ L \da \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}
 - Define an equivalence relation $\alpha \sim \beta$ iff  $\alpha \homotopic \beta$ in $X$, so there exists a homotopy 
 \[
 H: &S^1 \cross I  \to X \\ 
-&\begin{cases}
+&
+\begin{cases}
 H(s, 0) = \alpha(s)\\
 H(s, 1) = \beta(s),
 \end{cases}
@@ -63,10 +66,13 @@ s \in [1/2, 1]
 
   - Identity element: 
     The constant loop $\id_{x_0}: I\to X$ where $\id_{x_0}(t) = x_0$ for all $t$.
+
   - Inverses: 
     The reverse loop $\bar \alpha(t) \da \alpha(1-t)$.
+
   - Closure:
-    Clear.
+    Follows from the fact that start/end points match after composing loops, and reparameterizing.
+
   - Associativity:
     Follows from reparameterizing.
 
