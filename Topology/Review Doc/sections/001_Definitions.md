@@ -40,23 +40,34 @@ The set of unions of elements in $B$ is a topology and is denoted *the topology 
 
 :::{.definition title="Neighborhood Basis"}
 If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_p$ of neighborhoods of $p$ such that if $N_p$ is a neighborhood of $p$, then $N_p \supseteq B$ for at least one $B\in \mcb_p$.
+:::
+
+
+:::{.definition title="Cover"}
 
 :::
 
 
+:::{.definition title="Cover"}
+A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
+If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$.
+:::
 
-Definition (Cover)
-: A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
-  If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$
 
-Definition (Refinement)
-: A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
+:::{.definition title="Refinement"}
+A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
+:::
 
 
 ## Analysis 
 
-Definition (Dense)
-: A subset $Q\subset X$ is dense iff $y\in N_y \subset X \implies N_y \intersect Q \neq \emptyset$ iff $\bar Q = X$.
+
+:::{.definition title="?"}
+A subset $Q\subset X$ is dense iff $y\in N_y \subset X \implies N_y \intersect Q \neq \emptyset$ iff $\bar Q = X$.
+:::
+
+def
+
 
 
 Definition (Bounded)
