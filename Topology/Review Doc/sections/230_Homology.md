@@ -159,24 +159,8 @@ In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, whi
 :::
 
 
-
-:::{.theorem title="Eilenber-Zilber"}
-Given two spaces $X, Y$, there are chain maps
-
-\[
-F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_{R} C_*(Y; R) \\
-G: C_*(X; R) \tensor_{R} C_*(Y; R)  &\to C_*(X\cross Y; R) 
-\]
-
-such that $FG = \id$ and $GF \homotopic \id$.
-In particular,
-\[
-H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_{R} H_*(Y; R)
-.\]
-:::
-
 :::{.theorem title="Kunneth"}
-There exists a short exact sequence
+For $R$ a PID, there exists a short exact sequence
 $$
 0 \to \bigoplus_{i+j=k} H_{j}(X; R) \tensor_{R} H_{i}(Y; R) \to H_{k}(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_{R}^1(H_{i}(X; R), H_{j}(Y; R))
 $$
