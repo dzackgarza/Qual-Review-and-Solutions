@@ -60,7 +60,7 @@ A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
 \]
 where $T$ is a set of relations given by 
 \[
-T = \theset{\iota_{1}^*(z) \qty{\iota_{2}^*} ^{-1} (z) \suchthat z\in \pi_1 (U_1 \intersect U_2)}
+T = \theset{\iota_{1}^*(z) \iota_{2}^*  (z) ^{-1}   \suchthat z\in \pi_1 (U_1 \intersect U_2)}
 .\]
 
 If we have presentations
@@ -99,18 +99,10 @@ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}
   \pi_{1}(U) \ast \pi_{1}(B)
 } {
   \generators{
-    \theset{I(w_{i}) J(w_{i})\inv \suchthat 1\leq i \leq p}
+    \theset{\iota_1^*(w_{i}) \opta_2^*(w_{i})\inv \suchthat 1\leq i \leq p}
   }
 }
-+ \endo{R}
 \]
-
-where
-\[
-I: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(U, w) \\
-J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
-.\]
-
 
 
 [^path_connected_necessary]: 
