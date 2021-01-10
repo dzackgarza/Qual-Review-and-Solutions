@@ -15,7 +15,10 @@ X\cross \RR^n \homotopic X \cross \pt \cong X
 :::{.definition title="The Fundamental Group"}
 Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
 
-- Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}$.
+- Take the set 
+\[
+L \da \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}
+.\]
 
 - Define an equivalence relation $\alpha \sim \beta$ iff  $\alpha \homotopic \beta$ in $X$, so there exists a homotopy 
 \[
@@ -28,8 +31,11 @@ H(s, 1) = \beta(s),
 - Check that this relation is 
 
   - Symmetric:
+    ?
   - Reflexive:
+    ?
   - Transitive:
+    ?
 
 - Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
 
@@ -58,7 +64,9 @@ s \in [1/2, 1]
   - Inverses: 
     The reverse loop $\bar \alpha(t) \da \alpha(1-t)$.
   - Closure:
+    Clear.
   - Associativity:
+    True by reparameterizing.
 
 :::
 
