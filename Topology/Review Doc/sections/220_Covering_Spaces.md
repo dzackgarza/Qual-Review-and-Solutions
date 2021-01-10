@@ -246,7 +246,7 @@ The fiber above $x_0$ contains the two antipodal points.
 The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
-:::{.theorem title="Maps into contractible spaces are nullhomotopic"}
+:::{.theorem title="Maps into contractible spaces are always nullhomotopic"}
 If $X$ is contractible, every map $f: Y \into X$ is nullhomotopic.
 :::
 
@@ -259,17 +259,27 @@ H'(y, t)
 &\da 
 \begin{cases}
 H(f(y), 0) = (\id_X \circ f)(y) = f(y) & t=0 \\
-H(f(y), 1) = (c \circ \id_Y)(y) = c(y) = x_0 & t=1 \\
+H(f(y), 1) = (c \circ f)(y) = c(y) = x_0 & t=1 \\
 H(f(y), t) & \text{else}.
 \end{cases}
 \]
-So $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
+Then $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
 :::
 
-## Theorem: Any map that factors through a contractible space is nullhomotopic.
+
+:::{.corollary title="Factoring through a contractible space implies nullhomotopic"}
+Any map that factors through a contractible space is nullhomotopic.
+:::
 
 
-Then $f = p \circ \tilde f$. Every map into a contractible space is nullhomotopic, so if $Z$ is contractible, then there is a homotopy $\tilde H: X\cross I \into Z$ from $\tilde f$ to a constant map $c$. But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the constant map $p\circ c$.
+:::{.proof title="?"}
+Then $f = p \circ \tilde f$. 
+Every map into a contractible space is nullhomotopic, so if $Z$ is contractible, then there is a homotopy $\tilde H: X\cross I \into Z$ from $\tilde f$ to a constant map $c$. 
+But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the constant map $p\circ c$.
+:::
+
+
+
 
 ## Application: Showing when there is no covering map $f: X \into Y$
 
