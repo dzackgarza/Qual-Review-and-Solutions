@@ -23,12 +23,13 @@ L \da \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}
 .\]
 
 - Define an equivalence relation $\alpha \sim \beta$ iff  $\alpha \homotopic \beta$ in $X$, so there exists a homotopy 
+
 \[
 H: &S^1 \cross I  \to X \\ 
 &
 \begin{cases}
 H(s, 0) = \alpha(s)\\
-H(s, 1) = \beta(s),
+H(s, 1) = \beta(s) ,
 \end{cases}
 \]
 - Check that this relation is 
