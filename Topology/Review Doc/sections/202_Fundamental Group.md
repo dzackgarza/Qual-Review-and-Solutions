@@ -25,7 +25,11 @@ Thus attaching $k+2$ or higher cells does not change $\pi_k$.
 
 
 :::{.theorem title="Seifert-van Kampen"}
-Suppose $X = U_{1} \union U_{2}$ where $U_1, U_2$, and $U \da U_{1} \intersect U_{2} \neq \emptyset$ are open and path-connected, and let $x_0 \in U$. 
+Suppose $X = U_{1} \union U_{2}$ where $U_1, U_2$, and $U \da U_{1} \intersect U_{2} \neq \emptyset$ are open and path-connected 
+[^path_connected_necessary]
+
+
+, and let $x_0 \in U$. 
 
 Then the inclusion maps $i_{1}: U_{1} \injects X$ and $i_{2}: U_{2} \injects X$ induce the following group homomorphisms:
 \[
@@ -59,12 +63,6 @@ where $T$ is a set of relations given by
 T = \theset{\iota_{1}(z) \iota_{2}(z)\inv \suchthat z\in Z}
 .\]
 
-:::
-
-
-:::{.theorem title="Van Kampen 2"}
-If $X = U \union V$ where $U, V, U\intersect V$ are all path-connected then
-
 If we have presentations
 
 \[ 
@@ -90,6 +88,16 @@ where
 I: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(U, w) \\
 J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
 .\]
+
+
+
+[^path_connected_necessary]: 
+This is a necessary condition:
+
+:::
+
+
+:::{.theorem title="Van Kampen 2"}
 
 :::
 
