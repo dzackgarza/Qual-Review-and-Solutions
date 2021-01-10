@@ -141,8 +141,7 @@ Given a covering space $\tilde X \mapsvia{p} X$, the induced map $p^*: \pi_1(\ti
 The image consists of classes $[\gamma]$ whose lifts to $\tilde X$ are again loops.
 :::
 
-
-:::{.theorem title="Fundamental theorem of covering spaces"}
+:::{.theorem title="Fundamental theorem of covering spaces, Hatcher 1.39"}
 For $\tilde X \mapsvia{p} X$ a covering space with
 
 - $\tilde X$ path-connected,
@@ -157,9 +156,6 @@ letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
 :::
 
-
-
-We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
 
 Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
 
