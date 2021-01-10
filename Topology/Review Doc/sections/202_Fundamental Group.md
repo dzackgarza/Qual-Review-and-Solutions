@@ -47,16 +47,18 @@ s \in [1/2, 1]
 \]
 - Check that this map is:
 
-  - Continuous: by the pasting lemma and assumed continuity of $f, g$
+  - Continuous: by the pasting lemma and assumed continuity of $f, g$.
 
   - Well-defined: ?
 
 - Check that this is actually a group
 
-  - Identity element: the constant loop $\id_{x_0}: I\to X$ where $\id_{x_0}(t) = x_0$ for all $t$.
+  - Identity element: 
+    The constant loop $\id_{x_0}: I\to X$ where $\id_{x_0}(t) = x_0$ for all $t$.
+  - Inverses: 
+    The reverse loop $\bar \alpha(t) \da \alpha(1-t)$.
   - Closure:
   - Associativity:
-  - Inverses:
 
 :::
 
