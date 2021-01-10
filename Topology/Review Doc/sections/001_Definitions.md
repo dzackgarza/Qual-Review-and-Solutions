@@ -177,19 +177,17 @@ For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
 
 
 
-
-
-
-
 ## Algebraic Topology
 
 :::{.definition title="Acyclic"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Alexander duality"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Basis"}
 For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
@@ -198,6 +196,7 @@ For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
 :::{.definition title="Boundary"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Boundary of a manifold"}
 Points $x\in M^n$ defined by 
@@ -221,6 +220,7 @@ where $F_{i}^j$ is the face operator, which acts on a simplicial map $\sigma$ by
 :::{.definition title="Cellular Homology"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="CW Cell"}
 An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_{f} X$ where $f: \del B^n \to X$.
@@ -232,6 +232,7 @@ An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That
 
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Cellular Map"}
 A map $X \mapsvia{f} Y$ is said to be cellular if $f(X^{(n)}) \subseteq Y^{(n)}$ where $X^{(n)}$ denotes the $n\dash$ skeleton.
@@ -267,6 +268,7 @@ A manifold that is compact, with or without boundary.
 :::{.definition title="Coboundary"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Cochain"}
 An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_{p}(X; R), R)$ on chains.
@@ -275,6 +277,7 @@ An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_{p}(X; R), R)$ on chains.
 :::{.definition title="Cocycle"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Constant Map"}
 A *constant map* $f: X\to Y$ iff $f(X) = y_{0}$ for some $y_{0}\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_{0}$ is the same.
@@ -324,10 +327,12 @@ A space is contractible if its identity map is nullhomotopic.
 :::{.definition title="Coproduct"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Covering Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Cup Product"}
 A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
@@ -351,18 +356,22 @@ Also used to show $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$.
 :::{.definition title="CW Complex"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Cycle"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Deck Transformation"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Deformation"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Deformation Retract"}
 A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) **that also satisfies** $\iota \circ r \homotopic \id_{X}$.
@@ -380,6 +389,7 @@ F_{1}(X) &= A
 :::{.definition title="Degree of a Map"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Derived Functor"}
 For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
@@ -392,22 +402,27 @@ For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ
 :::{.definition title="Direct Limit"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Direct Product"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Direct Sum"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Eilenberg-MacLane Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Euler Characteristic"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Exact Functor"}
 A functor $T$ is *right exact* if a short exact sequence 
@@ -436,14 +451,17 @@ $\wait \tensor_{R} \wait$ is a right exact bifunctor.
 :::{.definition title="Exact Sequence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Excision"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Ext Group"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Flat"}
 An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
@@ -452,6 +470,7 @@ An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
 :::{.definition title="Free and Properly Discontinuous"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Free module"}
 A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
@@ -460,22 +479,21 @@ A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Ev
 :::{.definition title="Free Product"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Free product with amalgamation"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Fundamental Class"}
 For a connected, closed, orientable manifold, $[M]$ is a generator of $H_{n}(M; \ZZ) = \ZZ$.
 :::
 
-:::{.definition title="Fundamental classes"}
-
-:::
-
 :::{.definition title="Fundamental Group"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Generating Set"}
 $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_{i} s_{i}$$ for some coefficients $r_{i} \in R$ (where this sum may be infinite).
@@ -484,42 +502,52 @@ $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M
 :::{.definition title="Gluing Along a Map"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Group Ring"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homologous"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopic"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Class"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Equivalence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Extension Property"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Groups"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Homotopy Lifting Property"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Injection"}
 A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
@@ -549,6 +577,7 @@ Computed as an oriented intersection number between two homology classes (pertur
 :::{.definition title="Inverse Limit"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Intersection Form"}
 The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_{n}) \cross H^{n-k}(M^n) \to \ZZ$$
@@ -570,18 +599,22 @@ which is a nondegenerate bilinear form.
 :::{.definition title="Kronecker Product"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Lefschetz duality"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Lefschetz Number"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Lens Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Local Degree"}
 At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
@@ -590,10 +623,12 @@ At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The deg
 :::{.definition title="Local Orientation"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Limit"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Linear Independence"}
 A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} = 0_M \implies \forall i,~r_{i} = 0$ where $s_{i}\in S, r_{i} \in R$.
@@ -610,10 +645,12 @@ At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \these
 :::{.definition title="Long exact sequence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Loop Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Manifold"}
 An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
@@ -626,34 +663,42 @@ A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a 
 :::{.definition title="Mapping Cone"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Mapping Cylinder"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Mapping Path Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Mayer-Vietoris Sequence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Monodromy"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Moore Space"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="N-cell"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="N-connected"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Nullhomotopic"}
 A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_{0}}$; that is, there exists a homotopy 
@@ -693,14 +738,17 @@ TFAE:
 :::{.definition title="Oriented manifold"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Path"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Path Lifting Property"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Perfect Pairing"}
 A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_{R} N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_{R}(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
@@ -713,38 +761,47 @@ For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is a
 :::{.definition title="Projective Resolution"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Properly Discontinuous"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Pullback"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Pushout"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Quasi-isomorphism"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="R-orientability"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Relative boundaries"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Relative cycles"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Relative homotopy groups"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Retraction"}
 A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
@@ -754,10 +811,12 @@ Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ re
 :::{.definition title="Short exact sequence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Simplicial Complex"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Simplicial Map"}
 For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_{i}}$ spanning a simplex in $K$, the set $\theset{f(v_{i})}$ are the vertices of a simplex in $L$.
@@ -766,6 +825,7 @@ For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial m
 :::{.definition title="Simply Connected"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Singular Chain"}
 
@@ -782,10 +842,12 @@ For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial m
 :::{.definition title="Singular Homology"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Smash Product"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Surjection"}
 A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
@@ -810,15 +872,19 @@ where $L_{n}$ denotes the $n$th left derived functor.
 :::{.definition title="Universal Cover"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Weak Homotopy Equivalence"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Weak Topology"}
 
 :::
+\todo[inline]{Definitions}
 
 :::{.definition title="Wedge Product"}
 
 :::
+\todo[inline]{Definitions}
