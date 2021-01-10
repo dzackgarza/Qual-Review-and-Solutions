@@ -120,7 +120,6 @@ Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equival
 
 ## Compactness
 
-
 :::{.definition title="Compact"}
 A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
 
@@ -149,7 +148,6 @@ A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
 :::{.definition title="Locally Finite"}
 A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
 :::
-
 
 :::{.definition title="Separable "}
 A space $X$ is *separable* iff $X$ contains a countable dense subset.
