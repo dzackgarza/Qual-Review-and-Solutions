@@ -2,8 +2,6 @@
 
 When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
 
-Picture to keep in mind 
-
 <!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)-->
 
 Path lifting: 
@@ -11,68 +9,12 @@ Path lifting:
 ![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
 
 
-:::{.fact title="Some common covering spaces"}
-\begin{tikzcd}
-\ZZ 
-  \ar[r] 
-& 
-\RR
-  \ar[d] 
-\\
-& 
-S^1 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ^n 
-  \ar[r] 
-& 
-\RR^n
-  \ar[d] 
-\\
-& 
-\TT^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ/2\ZZ 
-  \ar[r] 
-& 
-S^n
-  \ar[d] 
-\\
-& 
-\RP^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ^{\ast n} 
-  \ar[r] 
-& 
-\mathrm{Cayley}(n)
-  \ar[d] 
-\\
-& 
-\bigvee_n S^1 
-\end{tikzcd}
-given by the $n\dash$valent Cayley graph covering a wedge of circles.
-
-
-
-- $T^2 \mapsvia{\times 2} \KK$
-- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
-- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
-
-:::
 
 :::{.fact}
 Covering spaces of orientable manifolds are orientable.
 :::
 
-:::{.proposition title="Euler characteristics are multiplicative on covering spaces"}
+:::{.fact title="Euler characteristics are multiplicative on covering spaces"}
 For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 \[
 \chi(A) = n\, \chi(B)
@@ -80,20 +22,25 @@ For $A \mapsvia{\pi} B$ an $n\dash$fold cover,
 
 :::
 
+:::{.fact}
+The preimage of a boundary point under a covering map must also be a boundary point
+:::
+
+
+:::{.fact}
+Normal subgroups correspond to *normal/regular* coverings, where automorphisms act freely/transitively.
+These are "maximally symmetric".
+  
+:::
+
+
+
 ## Theorems
 
 
 
 ## Useful Facts
 
-- Covering maps inject fundamental groups.
-	- If $\tilde X \surjects_p X$ is a covering space, then $\pi_1(\tilde X) \injects \pi_1 (X)$ as a subgroup.
-- The preimage of a boundary point under a covering map must also be a boundary point
-- An $n\dash$sheeted covering space $\tilde X \surjects X$ satisfies $\chi(\tilde X) = n\chi(X)$ when $\tilde X$ is compact.
-- For surfaces, covering spaces satisfy $\Sigma_{ij + 1} \surjects \Sigma_{i+1}$ for some $i, j$.
-- $\mathrm{Deck}(\tilde X) \definedas \theset{\varphi \in \hom_{\mathbf{Top}}(\tilde X, \tilde X): p\circ \varphi = p}  \cong \pi_1(X)$
-- $\tilde X \surjects_{\times k} X \implies [\pi_1(\tilde X) : \pi_1(X)] = k$ where $k =|p^{-1}(x_0)|$
-- Normal subgroups correspond to regular coverings (where automorphisms act freely/transitively, so highly symmetric)
 
 
 ## Universal Covers
@@ -355,5 +302,59 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 :::
 
+:::{.fact title="Some common covering spaces"}
+\begin{tikzcd}
+\ZZ 
+  \ar[r] 
+& 
+\RR
+  \ar[d] 
+\\
+& 
+S^1 
+\end{tikzcd}
 
 
+\begin{tikzcd}
+\ZZ^n 
+  \ar[r] 
+& 
+\RR^n
+  \ar[d] 
+\\
+& 
+\TT^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/2\ZZ 
+  \ar[r] 
+& 
+S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^{\ast n} 
+  \ar[r] 
+& 
+\mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+\bigvee_n S^1 
+\end{tikzcd}
+given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+
+
+- $T^2 \mapsvia{\times 2} \KK$
+- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
+- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
+
+:::
