@@ -43,12 +43,15 @@ There is a natural isomorphism
 ,\]
 
 where the amalgamated product can be computed as follows:
-The **pushout** is the colimit of the following diagram
+A **pushout** is the colimit of the following diagram
 
 \begin{tikzcd}
 A \Disjoint_{Z} B   & A \ar[d] \ar[l] \\
 B \ar[u]\ar[r]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
 \end{tikzcd}
+
+![Example of a pushout of spaces](figures/image_2020-06-01-00-07-39.png)
+
 For groups, the pushout is realized by the amalgamated free product: if 
 \[
 \begin{cases}
@@ -99,38 +102,15 @@ u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}
   \pi_{1}(U) \ast \pi_{1}(B)
 } {
   \generators{
-    \theset{\iota_1^*(w_{i}) \opta_2^*(w_{i})\inv \suchthat 1\leq i \leq p}
+    \theset{\iota_1^*(w_{i}) \iota_2^*(w_{i})\inv \suchthat 1\leq i \leq p}
   }
 }
 \]
 
-
 [^path_connected_necessary]: 
-This is a necessary condition:
+Note that the hypothesis that $U_1 \intersect U_2$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
 
 :::
-
-
-:::{.theorem title="Van Kampen 2"}
-
-:::
-
-:::{.theorem title="Van Kampen 3"}
-
-$$
-\pi_{1}(X, \pt) \cong \pi_{1}(U_{1}, \pt) ~\ast_{P}~ \pi_{1}(U_{2}, \pt)
-$$
-where $\ast_{P}$ is the amalgamated free product over $P$.
-
-\todo[inline]{Formulate in terms of pushouts.}
-
-![](figures/image_2020-06-01-00-07-39.png)
-
-Note that the hypothesis that $U\cap V$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
-
-
-:::
-\todo{Merge Van Kampen theorems.}
 
 :::{.example title="Pushing out with van Kampen"}
 $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
