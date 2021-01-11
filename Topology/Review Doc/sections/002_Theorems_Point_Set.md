@@ -66,8 +66,7 @@ If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of
 :::
 
 
-## Connectedness
-
+## The Tube Lemma
 
 :::{.theorem title="The Tube Lemma"}
 Let $X, Y$ be spaces with $Y$ compact.
@@ -78,37 +77,53 @@ For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, 
 
 :::
 
-:::{.proof title="?"}
+:::{.proof title="Sketch"}
+\envlist
+
+- For each $y\in Y$ choose neighborhoods $A_y, B_y \subseteq Y$ such that 
+\[
+(x, y) \in A_y \cross B_y \subseteq U
+.\]
+- By compactness of $Y$, reduce this to finitely many $B_y \covers Y$ so $Y = \Union_{j=1}^n B_{y_j}$
+- Set $O\da \intersect_{j=1}^n B_{y_j}$; this works.
 
 :::
 
 
 ## Compactness
 
-Theorem
-: $U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+:::{.theorem title="Closed if and only if compact in Hausdorff spaces"}
+$U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+:::
 
-Theorem
-: A closed subset $A$ of a compact set $B$ is compact.
+:::{.theorem title="Closed subset of compact is compact"}
+A closed subset $A$ of a compact set $B$ is compact.
+:::
 
-Proof
-:   \hfill
+:::{.proof title="?"}
+\envlist
 
-    - Let $\theset{A_i} \rightrightarrows A$ be a covering of $A$ by sets open in $A$.
-    - Each $A_i = B_i \intersect A$ for some $B_i$ open in $B$ (definition of subspace topology)
-    - Define $V = \theset{B_i}$, then $V \rightrightarrows A$ is an open cover.
-    - Since $A$ is closed, $W\definedas B\setminus A$ is open
-    - Then $V\union W$ is an open cover of $B$, and has a finite subcover $\theset{V_i}$
-    - Then $\theset{V_i \intersect A}$ is a finite open cover of $A$.
+- Let $\theset{A_i} \rightrightarrows A$ be a covering of $A$ by sets open in $A$.
+- Each $A_i = B_i \intersect A$ for some $B_i$ open in $B$ (definition of subspace topology)
+- Define $V = \theset{B_i}$, then $V \rightrightarrows A$ is an open cover.
+- Since $A$ is closed, $W\definedas B\setminus A$ is open
+- Then $V\union W$ is an open cover of $B$, and has a finite subcover $\theset{V_i}$
+- Then $\theset{V_i \intersect A}$ is a finite open cover of $A$.
+:::
 
-Theorem
-: The continuous image of a compact set is compact.
+:::{.theorem title="Continuous image of compact is compact"}
+The continuous image of a compact set is compact.
+:::
 
-Theorem
-: A closed subset of a Hausdorff space is compact.
+:::{.theorem title="Closed in Hausdorff $\implies$ compact"}
+A closed subset of a Hausdorff space is compact.
+:::
 
-Theorem
-: A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+:::{.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
+A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+:::
+
+
 
 ## Separability
 
