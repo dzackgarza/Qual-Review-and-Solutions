@@ -26,7 +26,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 ### Key Theorems
 
-:::{.theorem title="Cauchy's Theorem \label{CauchyTheorem}"}
+:::{.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
 If $f$ is holomorphic on $\Omega$, then 
 \[  
 \int_{\bd \Omega} f(z) \, dz = 0
@@ -36,18 +36,18 @@ If $f$ is holomorphic on $\Omega$, then
 
 :::
 
-:::{.theorem title="Morera's Theorem \label{Morera}  "}
+:::{.theorem title="Morera's Theorem" ref="Morera"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
 
 > Slogan: if every integral along a triangle vanishes, implies holomorphic.
 
 :::
 
-:::{.theorem title="Liouville's Theorem \label{Liouville}  "}
+:::{.theorem title="Liouville's Theorem" ref="Liouville"}
 If $f$ is entire and bounded, $f$ is constant.
 :::
 
-:::{.theorem title="Cauchy Integral Formula \label{CauchyIntegral}"}
+:::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 \[
 f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(\xi) \over \xi-z}\,d\xi
@@ -141,7 +141,7 @@ Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
 
-:::{.theorem title="Maximum Modulus \label{MaximumModulus}  "}
+:::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
 If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
 
 If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
@@ -151,7 +151,7 @@ Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is cons
 
 ## Others
 
-:::{.theorem title="Casorati-Weierstrass \label{Casorati}  "}
+:::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
 
 > The image of a disc punctured at an essential singularity is dense in $\CC$.
@@ -186,7 +186,6 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 :::{.proof}
 ?
 :::
-
 
 :::{.proposition title="Bounded Complex Analytic Functions form a Banach Space"}
 For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC \st f\text{ is bounded}}$ is a Banach space.
