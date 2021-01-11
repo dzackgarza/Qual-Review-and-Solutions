@@ -131,9 +131,12 @@ A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
 :::
 
 :::{.definition title="The product topology"}
-Todo
+For $(X, \tau_X)$ and $(Y, \tau_Y)$ topological spaces, defining 
+\[
+\tau_{X \cross Y} \da \ts{U \cross V \st U\in \tau_X,\, V\in \tau_Y}
+\]
+yields the **product topology** on $X \cross Y$.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Refinement"}
 A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
@@ -159,7 +162,6 @@ Note that this definition isn't very useful, as every space has at least one ret
 A subset $U \subseteq X$ is **saturated** with respect to a surjective map $p: X\surjects Y$ if and only if whenever $U \intersect p ^{-1} (y) = V \neq \emptyset$, we have $V \subseteq U$, i.e. $U$ contains every set $p ^{-1} (y)$ that it intersects.
 Equivalently, $U$ is the complete inverse image of a subset of $Y$.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Separable spaces"}
 A space $X$ is *separable* iff $X$ contains a countable dense subset.
@@ -170,9 +172,11 @@ A space is *second-countable* iff it admits a countable basis.
 :::
 
 :::{.definition title="The subspace topology"}
-Todo
+For $(X, \tau)$ a topological space and $U \subseteq X$ an arbitrary subset, the space $(U, \tau_U)$ is a topological space with a **subspace topology** defined by
+\[
+\tau_U \da \ts {Y \intersect U \st U \in \tau}
+.\]
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Surjection"}
 A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
