@@ -195,10 +195,6 @@ Possible modifications to a space $X$:
 
 :::
 
-
-
-## Table of Homotopy and Homology Structures
-
 # Low Dimensional Homology Examples
 
 \[
@@ -217,6 +213,12 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \end{array}
 .\]
 
+
+# Table of Homotopy and Homology Structures
+
+
+:::{.remark}
+The following is a giant list of known homology/homotopy.
 
 \scriptsize
 
@@ -247,8 +249,12 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 
 \normalsize
 
+:::
 
-Facts used to compute the above table:
+
+
+:::{.fact title="used to fill out the above table"}
+\envlist
 
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
 
@@ -280,5 +286,9 @@ Facts used to compute the above table:
 - $M \homotopic S^1$ by deformation-retracting onto the center circle.
 
 - $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
+
+:::
+
+
 
 
