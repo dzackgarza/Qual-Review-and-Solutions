@@ -101,14 +101,19 @@ Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; t
 
 :::{.proposition title="?"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
+:::
+
+
+:::{.proposition title="Homology of 3-manifolds"}
+Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
+
+- Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
+
+- Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
 
 :::
 
 
-
-- 3-manifolds:
-  - Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
-  - Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
 
 
 * $H^n(M^n) = \ZZ$ if $M^n$ is orientable and zero if $M^n$ is nonorientable.
