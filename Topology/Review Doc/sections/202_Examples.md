@@ -63,21 +63,51 @@ Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ e
 
 :::
 
-
 :::{.example title="Real Projective Space"}
 Constructed in one of several equivalent ways:
 
 - $S^n/\sim$ where $\vector x \sim -\vector x$, i.e. antipodal points are identified.
-- Other ways?
+- The space of lines in $\RR^{n+1}$.
 
-One can also define $\RP^ \infty \da \directlim_{n} \RP^n$$
+One can also define $\RP^ \infty \da \directlim_{n} \RP^n$.
+Fits into a fiber bundle of the form
+
+
+\begin{tikzcd}
+S^0 
+  \ar[r] 
+& 
+S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
 
 :::
 
+:::{.example title="Complex Projective Space"}
+Defined in a similar ways, 
 
-* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
+- Taking the unit sphere in $\CC^n$ and identifying $\vector z \sim -\vector z$.
+- The space of lines in $\CC^{n+1}$
 
-* $\mathbb{CP}^n = S^{2n+1} / S^1$
+Can similarly define $\CP^ \infty \da \directlim_n \CP^n$.
+Fits into a fiber bundle of the form
+
+\begin{tikzcd}
+S^1 
+  \ar[r] 
+& 
+S^{2n+1}
+  \ar[d] 
+\\
+& 
+\CP^n 
+\end{tikzcd}
+
+:::
+
 
 * $T^n = \prod_{n} S^1$ is the $n\dash$torus
 
