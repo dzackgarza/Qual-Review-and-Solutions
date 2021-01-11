@@ -2,41 +2,6 @@
 
 ## Standard Spaces and Modifications
 
-:::{.example title="Eilenberg-MacLane Spaces"}
-$K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
-\[
-\pi_{k}(K(G, n)) = 
-\begin{cases}
-G & k=n, \\ 
-0 & \text{else}
-\end{cases}
-\]
-
-Some known examples:
-
-- $K(\ZZ, 1) = S^1$
-- $K(\ZZ, 2) = \CP^\infty$
-- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
-
-:::
-
-:::{.example title="Moore Spaces"}
-$M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
-\[
-H_{k}(M(G, n); G) = 
-\begin{cases}
-G & k=n, \\ 
-0 & k\neq n.
-\end{cases}
-\]
-
-Some known examples:
-
-- $M(\ZZ, n) = S^n$
-- $M(\ZZ/2\ZZ, 1) = \RP^2$
-- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
-
-:::
 
 :::{.example title="Spheres and Balls"}
 \[
@@ -65,7 +30,6 @@ Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ e
 
 :::
 \todo[inline]{Describe how to obtain by gluing two discs.}
-
 
 :::{.example title="Real Projective Space"}
 Constructed in one of several equivalent ways:
@@ -130,7 +94,6 @@ Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
 The Stiefel manifold $V_{n}(k)_{\RR}$, the space of orthonormal $k\dash$frames in $\RR^n$?
 :::
 
-
 :::{.example title="Lie Groups"}
 Lie Groups:
 
@@ -153,6 +116,61 @@ Some other spaces that show up, but don't usually have great algebraic topologic
 * The projective special linear group over a ring $R$, $PSL_{n}(R)$
 * The modular groups $PSL_{n}(\ZZ)$
   * Specifically $PSL_{2}(\ZZ)$
+:::
+
+:::{.example title="Eilenberg-MacLane Spaces"}
+$K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
+\[
+\pi_{k}(K(G, n)) = 
+\begin{cases}
+G & k=n, \\ 
+0 & \text{else}
+\end{cases}
+\]
+
+Some known examples:
+
+- $K(\ZZ, 1) = S^1$
+- $K(\ZZ, 2) = \CP^\infty$
+- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
+
+:::
+
+:::{.example title="Moore Spaces"}
+$M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
+\[
+H_{k}(M(G, n); G) = 
+\begin{cases}
+G & k=n, \\ 
+0 & k\neq n.
+\end{cases}
+\]
+
+Some known examples:
+
+- $M(\ZZ, n) = S^n$
+- $M(\ZZ/2\ZZ, 1) = \RP^2$
+- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
+
+:::
+
+:::{.fact title="about standard low-dimensional spaces"}
+\envlist
+
+- $\MM \homotopic S^1$
+- $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
+- $\CP^n = S^{2n+1} / S^n$
+- $S^n_{/S}^k \cong S^n \vee \Sigma S^k$.
+
+:::
+
+:::{.remark title="Accidental isomorphisms"}
+In low dimensions, there are some "accidental" homeomorphisms:
+
+- $\RP^1 \cong S^1$
+- $\CP^1 \cong S^2$
+- $\SO(3) \cong \RP^2$?
+
 :::
 
 ## Modifying Known Spaces
@@ -179,25 +197,6 @@ Possible modifications to a space $X$:
 :::
 
 
-:::{.remark title="Accidental isomorphism"}
-In low dimensions, there are some "accidental" homeomorphisms:
-
-- $\RP^1 \cong S^1$
-- $\CP^1 \cong S^2$
-- $\SO(3) \cong \RP^2$?
-
-:::
-
-
-:::{.fact title="about standard low-dimensional spaces"}
-\envlist
-
-- $\MM \homotopic S^1$
-- $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
-- $\CP^n = S^{2n+1} / S^n$
-- $S^n_{/S}^k \cong S^n \vee \Sigma S^k$.
-
-:::
 
 
 ## Table of Homotopy and Homology Structures
