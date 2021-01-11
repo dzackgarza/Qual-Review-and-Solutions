@@ -115,8 +115,9 @@ More generally,
 :::
 
 :::{.proposition title="Poincaré Duality for manifolds"}
+For $M^n$ a closed orientable manifold without boundary and $\FF$ a field,
 \[
-H_k M^n \cong H^{n-k} M^n
+H_k(M^n; \FF) \cong H^{n-k}(M^n; \FF)
 \iff
 M^n \text{ is closed and orientable}
 .\]
@@ -124,13 +125,20 @@ M^n \text{ is closed and orientable}
 :::
 
 
-### Special Classes of Manifolds
+:::{.proposition title="Relative Poincaré Duality for manifolds"}
+If $M^n$ is a closed orientable manifold with boundary then 
+\[
+H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)
+.\]
+:::
 
+
+
+### Special Classes of Manifolds
 
 :::{.fact}
 Every $\CC\dash$manifold is canonically orientable.
 :::
-
 
 #### 3-manifolds and Knots
 
@@ -170,10 +178,7 @@ Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
 :::
 
 
-- If $M^n$ is a **closed orientable manifold without boundary**, then $H^k(M^n; F) \cong H_{n-k}(M^n; F)$ for a field $F$.
-- This is a strict implication, so failure of the RHS implies missing conditions on the LHS.
 - The intersection pairing is nondegenerate modulo torsion.
-- If $M^n$ is a **closed orientable manifold with boundary** then  $H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)$
 - $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
 - $M^n$ closed and $n$ odd implies $\chi(M^n) = 0$.
 - Any map $X \to Y$ with $X$ factors through the orientation cover $\tilde Y_o$.
