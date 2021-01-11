@@ -5,6 +5,14 @@
 ### Point-Set
 
 
+:::{.example title="Nice spaces"}
+The following are some standard "nice" spaces:
+\[
+S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_{g}, \RP^\infty, \CP^\infty
+.\]
+:::
+
+
 :::{.example title="A bank of counterexamples"}
 The following are useful spaces to keep in mind to furnish counterexamples:
 
@@ -15,22 +23,25 @@ The following are useful spaces to keep in mind to furnish counterexamples:
 - The topologist's sine curve
 - One-point compactifications
 - $\RR^\omega$ for \( \omega \) the least uncountable ordinal (?)
-- Hawaiian earring
-- Cantor set
-
+- The Hawaiian earring
+- The Cantor set
 :::
+\todo[inline]{Break these into separate examples and explain properties.}
 
 
-Non-Hausdorff spaces:
+:::{.example title="Non-Hausdorff spaces"}
+The following spaces are non-Hausdorff:
 
 - The cofinite topology on any infinite set.
 - $\RR/\QQ$
 - The line with two origins.
+- Any variety $V(J) \subseteq \AA^n_{/k}$ for $k$ a field and $J\normal \kx{n}$.
+
+:::
+
+
 
 General Spaces:
-\begin{align*}
-S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP^\infty
-.\end{align*}
 
 "Constructed" Spaces
 
@@ -46,7 +57,7 @@ S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP
 - Simplicial Complexes
   - Nice minimal example:
   
-![](figures/image_2020-05-22-18-58-03.png) 
+![](figures/image_{2020}-05-22-18-58-03.png) 
 
 Exotic/Pathological Spaces
 
@@ -60,7 +71,7 @@ Operations
 - Wedge product $A \vee B$
 - Connect Sum $A \# B$
 - Quotienting $A/B$
-- Puncturing $A\setminus \theset{a_i}$
+- Puncturing $A\setminus \theset{a_{i}}$
 - Smash product
 - Join
 - Cones
