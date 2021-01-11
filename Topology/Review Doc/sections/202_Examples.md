@@ -40,8 +40,8 @@ Some known examples:
 
 :::{.example title="Spheres and Balls"}
 \[
-\SS^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} \\
 \DD^n = \mathbb{B}^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
+\SS^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} = \bd \DD^n \\
 .\]
 Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
 
@@ -61,7 +61,11 @@ Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ e
 
 ![Low Dimensional Discs/Balls vs Spheres](figures/image_2021-01-10-23-20-27.png)
 
+> Note: I'll immediately drop the blackboard notation for spheres and balls.
+
 :::
+\todo[inline]{Describe how to obtain by gluing two discs.}
+
 
 :::{.example title="Real Projective Space"}
 Constructed in one of several equivalent ways:
@@ -115,28 +119,28 @@ T^n \da \prod_{j=1}^n S^1 = S^1 \times S^1 \times \cdots
 .\]
 :::
 
-
 ## Modifying Known Spaces
-
 
 :::{.example title="Deleting points"}
 Write $D(k, X)$ for the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_{1}, x_{2}, \ldots x_{k}}$ where each $x_{i} \in X$.
+:::
+
+:::{.example title="Bouquets of Spheres"}
+The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$.
+There's no standard name for this, but it's an interesting enough object to consider!
+:::
+
+
+:::{.example title="Grassmannians"}
+The real Grassmannian, $\Gr(n, k)_{/\RR}$, i.e. the set of $k$ dimensional subspaces of $\RR^n$.
+One can similar define $\Gr(n, k)_{\CC}$ for complex subspaces.
+Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
 
 :::
 
 
 
 
-
-
-* $B^n = \theset{\vector{v} \in \RR^n \mid \norm{\vector{v}} \leq 1} \subset \RR^n$
-
-* $S^{n-1} = \del B^{n} = \theset{\vector{v} \in \RR^{n} \mid \norm{\vector{v}} = 1} \subset \RR^n$
-
-
-* The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$
-
-* The real Grassmannian, $Gr(n, k, \RR)$, i.e. the set of $k$ dimensional subspaces of $\RR^n$
 
 * The Stiefel manifold $V_{n}(k)$
 
