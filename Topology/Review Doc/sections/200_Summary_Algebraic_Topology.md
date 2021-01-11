@@ -1,5 +1,28 @@
 # Broadly Applicable Facts 
 
+
+## Algebra Facts
+
+
+
+:::{.fact}
+A group morphism $f:X \to Y$ can not be injective if $Y$ is trivial unless $X$ is also trivial.
+:::
+
+
+:::{.proposition title="Morphisms between groups"}
+There are no nontrivial homomorphisms from finite groups into free groups.
+In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
+:::
+
+
+
+Proof
+:   Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
+
+This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
+
+
 ## Different Types of Product/Sum Structures
 
 - Cartesian Product $X\cross Y, \prod_i X_i$
@@ -30,16 +53,6 @@
 
 	- $x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>$ implies that $x$ is a finite word in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
 	- Example: $x = a_1^2 a_2^4 a_1 a_2^{-2}$
-
-Proposition
-:   There are no nontrivial homomorphisms from finite groups into free groups.
-
-    In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
-
-Proof
-:   Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
-
-This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
 
 
 
