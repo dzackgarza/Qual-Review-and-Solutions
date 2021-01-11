@@ -60,11 +60,11 @@ and
 
 ### Others
 
-:::{.theorem title="Holomorphic functions have harmonic components"}
-If $f(z) = u(x, y) + iv(x, y)$, then $u, v$ are harmonic.
+:::{.proposition title="Holomorphic functions have harmonic components"}
+If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
 :::
 
-:::{.theorem title="Holomorphic functions are continuous."}
+:::{.proposition title="Holomorphic functions are continuous."}
 $f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
 \[  
 f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \converges{h\to 0}\to 0
@@ -143,9 +143,7 @@ Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 
 :::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
 If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
-
 If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
-  
 Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
 :::
 
