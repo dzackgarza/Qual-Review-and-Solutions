@@ -142,19 +142,27 @@ Points are closed in $T_1$ spaces.
 
 ## Maps and Homeomorphism
 
-Theorem
-: A continuous bijective open map is a homeomorphism.
+:::{.theorem title="When open maps are homeomorphisms"}
+A continuous bijective open map is a homeomorphism.
+:::
 
-Theorem (Munkres 18.1)
-:   For $f:X\to Y$, TFAE:
 
-    - $f$ is continuous
-    - $A\subset X \implies f(\cl_X(A)) \subset \cl_X(f(A))$
-    - $B$ closed in $Y \implies f\inv(B)$ closed in $X$.
-    - For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
+:::{.theorem title="Characterizations of continuous maps, Munkres 18.1"}
+For $f:X\to Y$, TFAE:
 
-Proof
-: \todo[inline]{Todo, see Munkres page 104}
+- $f$ is continuous
+- $A\subset X \implies f(\cl_X(A)) \subset \cl_X(f(A))$
+- $B$ closed in $Y \implies f\inv(B)$ closed in $X$.
+- For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
+:::
+
+
+:::{.proof title="?"}
+See Munkres page 104.
+:::
+
+
+
 
 Theorem (Lee A.52)
 :   If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
