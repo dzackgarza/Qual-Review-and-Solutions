@@ -1,7 +1,5 @@
 # Theorems
 
-Properties preserved and not preserved by continuous functions: [Link](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
-
 :::{.proposition title="The continuous image of a..."}
 The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
 
@@ -15,6 +13,8 @@ The following are **not preserved**:
 
 - Openness
 - Closedness
+
+> [See more here.](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
 
 :::
 
@@ -66,30 +66,6 @@ If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of
 :::
 
 
-## The Tube Lemma
-
-:::{.theorem title="The Tube Lemma"}
-Let $X, Y$ be spaces with $Y$ compact.
-For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, there is an open $O \subseteq X$ such that
-\[
-\ts{x} \cross Y \subseteq O \cross Y \subseteq U
-.\]
-
-:::
-
-:::{.proof title="Sketch"}
-\envlist
-
-- For each $y\in Y$ choose neighborhoods $A_y, B_y \subseteq Y$ such that 
-\[
-(x, y) \in A_y \cross B_y \subseteq U
-.\]
-- By compactness of $Y$, reduce this to finitely many $B_y \covers Y$ so $Y = \Union_{j=1}^n B_{y_j}$
-- Set $O\da \intersect_{j=1}^n B_{y_j}$; this works.
-
-:::
-
-
 ## Compactness
 
 :::{.theorem title="Closed if and only if compact in Hausdorff spaces"}
@@ -119,28 +95,25 @@ The continuous image of a compact set is compact.
 A closed subset of a Hausdorff space is compact.
 :::
 
-:::{.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
-A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
-:::
-
-
 ## Separability
-
 
 :::{.proposition title="Properties preserved under retracts"}
 A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
 :::
 
-
 :::{.proposition title="?"}
 Points are closed in $T_1$ spaces.
 :::
 
-
-
-
-
 ## Maps and Homeomorphism
+
+:::{.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
+A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+:::
+
+:::{.remark title="On retractions"}
+Every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+:::
 
 :::{.theorem title="When open maps are homeomorphisms"}
 A continuous bijective open map is a homeomorphism.
@@ -156,23 +129,40 @@ For $f:X\to Y$, TFAE:
 - For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
 :::
 
-
 :::{.proof title="?"}
 See Munkres page 104.
 :::
 
 
+:::{.theorem title="Maps from compact to Hausdorff spaces, Lee A.52"}
+If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
 
-
-Theorem (Lee A.52)
-:   If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
-
-    - $f$ is a closed map.
-    - If $f$ is surjective, $f$ is a quotient map.
-    - If $f$ is injective, $f$ is a topological embedding.
-    - If $f$ is bijective, it is a homeomorphism.
-
-
-:::{.remark title="On retractions"}
-Every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+- $f$ is a closed map.
+- If $f$ is surjective, $f$ is a quotient map.
+- If $f$ is injective, $f$ is a topological embedding.
+- If $f$ is bijective, it is a homeomorphism.
 :::
+
+## The Tube Lemma
+
+:::{.theorem title="The Tube Lemma"}
+Let $X, Y$ be spaces with $Y$ compact.
+For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, there is an open $O \subseteq X$ such that
+\[
+\ts{x} \cross Y \subseteq O \cross Y \subseteq U
+.\]
+
+:::
+
+:::{.proof title="Sketch"}
+\envlist
+
+- For each $y\in Y$ choose neighborhoods $A_y, B_y \subseteq Y$ such that 
+\[
+(x, y) \in A_y \cross B_y \subseteq U
+.\]
+- By compactness of $Y$, reduce this to finitely many $B_y \covers Y$ so $Y = \Union_{j=1}^n B_{y_j}$
+- Set $O\da \intersect_{j=1}^n B_{y_j}$; this works.
+
+:::
+

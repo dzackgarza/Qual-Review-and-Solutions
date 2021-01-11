@@ -1,4 +1,4 @@
-# AT Summary
+# Broadly Applicable Facts 
 
 ## Different Types of Product/Sum Structures
 
