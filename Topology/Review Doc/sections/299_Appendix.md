@@ -1,4 +1,4 @@
-# Appendix: ?
+# Appendix: Unsorted Stuff
 
 * Assorted info about other Lie Groups:
  * $O_n, U_n, SO_n, SU_n, Sp_n$

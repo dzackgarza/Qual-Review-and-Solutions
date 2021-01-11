@@ -7,27 +7,6 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
@@ -151,6 +130,8 @@
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
 \newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
@@ -334,7 +315,6 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
@@ -390,6 +370,28 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\coind}{Coind}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -432,6 +434,86 @@ Some fun resources:
 
   - Note that the abelianization yields $\qty{\ast_j X_j} = \bigoplus_j X_j$.
 
+| Notation                                             | Definition                          |
+|------------------------------------------------------|-------------------------------------|
+| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Products                            |
+| $X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}$    | Direct sums                         |
+| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                       |
+| $X\tensor Y, \bigotimes_{j\in J} X_j, X^{\tensor n}$ | Tensor products                     |
+| $\ZZ^n$                                              | The free abelian group of rank $n$  |
+| $\ZZ^{\ast n}$                                       | The free group on $n$ generators    |
+| $\pi_0(X)$                                           | The *set* of path components of $X$ |
+| $G=1$                                                | The trivial abelian group           |
+| $G=0$                                                | The trivial nonabelian group        |
+
+
+:::{.remark}
+Both the product and direct sum have coordinate-wise operations.
+For finite index sets $\abs{J}< \infty$, the direct sum and product coincide, but in general there is only an injection $\bigoplus_j X_i \injects \prod_j X_j$.
+In the direct sum $\bigoplus_j X_j$ have only finitely many nonzero entries, while the product allows *infinitely* many nonzero entries.
+So in general, I always use the product notation.
+:::
+
+:::{.remark}
+The free group on $n$ generators is the free product of $n$ free abelian groups, but is not generally abelian!
+So we use multiplicative notation, and elements 
+\[
+x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>
+\]
+are finite words in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
+E.g. an element may look like 
+\[
+x = a_1^2 a_2^4 a_1 a_2^{-2}
+.\]
+:::
+
+:::{.remark}
+The free abelian group of rank $n$ is the abelianization of $\ZZ^{\ast n}$,
+and its elements are characterized by
+\[
+x\in \ZZ^{\ast n} = \gens{ a_1, \cdots, a_n } \implies x = \sum_n c_i a_i \text{ for some } c_i \in \ZZ
+\]
+where the $a_i$ are some generating set of $n$ elements and we used additive notation since the group is abelian.
+E.g. such an element may look like 
+\[
+x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
+.\]
+:::
+
+## Conventions
+
+- Spaces are assumed to be connected and path connected, so $\pi_0(X) = H_0(X) = \ZZ$.
+
+- Graded objects like $\pi_*, H_*, H^*$ are sometimes represented as lists.
+  In this case, all list entries start indexing at 1.
+  Examples: 
+  \[
+	\pi_*(X) &= [\pi_1(X), \pi_2(X), \pi_3(X), \cdots] \\
+	H_*(X) &= [H_1(X), H_2(X), H_3(X), \cdots]
+  .\]
+
+## Some Prerequisite Algebra Facts
+
+:::{.fact}
+A group morphism $f:X \to Y$ can not be injective if $Y$ is trivial unless $X$ is also trivial.
+:::
+
+:::{.proposition title="Morphisms between groups"}
+There are no nontrivial homomorphisms from finite groups into free groups.
+In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
+:::
+
+:::{.proof title="?"}
+Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
+:::
+
+:::{.remark title="How to use this fact"}
+This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
+
+:::
+
+ 
+
 # Summary and Topics: Point-Set Topology 
 
 - Connectedness
@@ -439,174 +521,1072 @@ Some fun resources:
 - Hausdorff Spaces
 - Path-Connectedness
 
-# Definitions: Point-Set Topology
+# Definitions
 
-## Basics
+## Point-Set Topology
 
-Definition (Topology)
-: Closed under arbitrary unions and finite intersections.
+:::{.definition title="Bounded"}
+A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
+:::
 
-Definition (Neighborhood)
-: A neighborhood of a point $x$ is *any* open set containing $x$.
-
-Definition (Limit Point)
-:   For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_x$ of $x$ satisfies $P_x \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
-    
-    Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_X(A\setminus\theset{x})$.
-
-Definition (Closed)
-:   There are several characterizations of a closed set:
- 
-    - Closure of a subspace: $Y\subset X \implies \cl_Y(A) \definedas \cl_X(A)\intersect Y$.
-    - A set is closed iff it contains all of its limit points.
-
-Definition (Basis)
-: For $X$ a space and $\mcb$ a collection of subsets, $\mcb$ is a *basis* for $(X, \tau_X)$ iff every open $U\in \tau_X$ is a union of elements in $\mcb$.
-
-Definition (Topology Generated by a Basis)
-:   For $X$ an arbitrary set, a collection of subsets $\mcb$ is a *basis for $X$* iff $\mcb$ is closed under intersections, and every intersection of basis elements contains another basis element.
-    The set of unions of elements in $B$ is a topology and is denoted *the topology generated by $\mcb$*.
-
-Definition (Neighborhood Basis)
-: If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_p$ of neighborhoods of $p$ such that if $N_p$ is a neighborhood of $p$, then $N_p \supseteq B$ for at least one $B\in \mcb_p$.
-
-Definition (Cover)
-: A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
-  If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$
-
-Definition (Refinement)
-: A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
-
-
-## Analysis 
-
-Definition (Dense)
-: A subset $Q\subset X$ is dense iff $y\in N_y \subset X \implies N_y \intersect Q \neq \emptyset$ iff $\bar Q = X$.
-
-
-Definition (Bounded)
-: A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
-
-Definition (Uniform Continuity)
-:   For $f: (X, d_x) \to (Y, d_Y)$ metric spaces,
-    \begin{align*}
-    \forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_X(x_1, x_2) < \delta \implies d_Y(f(x_1), f(x_2)) < \eps
-    .\end{align*} 
-
-Definition (Lebesgue number)
-:   For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_L > 0$ such that 
-    \begin{align*}
-    A\subset X, ~ \diam(A) < \delta_L \implies A\subseteq U_\alpha \text{ for some } \alpha
-    .\end{align*}
-
-
-## Connectedness
-
-Definition (Connected) 
-: There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
+:::{.definition title="Connected"}
+There does not exist a disconnecting set $X = A\disjoint B$ such that $\emptyset \neq A, B \subsetneq$, i.e. $X$ is the union of two proper disjoint nonempty sets.
+Additional condition for a subspace $Y\subset X$: $\cl_{Y}(A) \intersect V = A \intersect \cl_{Y}(B) = \emptyset$.
   
-  Equivalently, $X$ contains no proper nonempty clopen sets.
-  
-  > Additional condition for a subspace $Y\subset X$: $\cl_Y(A) \intersect V = A \intersect \cl_Y(B) = \emptyset$.
+Equivalently, $X$ contains no proper nonempty clopen sets.
+:::
 
-Definition (Locally Connected)
-: A space is *locally connected* at a point $x$ iff $\forall N_x \ni x$, there exists a $U\subset N_x$ containing $x$ that is connected.
+:::{.definition title="Connected Components"}
+Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
+:::
 
-Definition (Locally Path-Connected)
-: A space is *locally path-connected* if it admits a basis of path-connected open subsets.
+:::{.definition title="Closed Sets"}
+\envlist
 
-Definition (Components)
-: Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
+- A set is closed if and only if its complement is open.
+- A set is closed iff it contains all of its limit points.
+- A closet set in a subspace: $Y\subset X \implies \cl_{Y}(A) \da \cl_{X}(A)\intersect Y$.
 
-Definition (Path Components)
-: Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes.
+:::
 
-## Compactness
+:::{.definition title="Closed Maps"}
+See [@def:open_closed_maps].
+:::
 
-Definition (Compact)
-:   A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
+:::{.definition title="Compact"}
+A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
+
+That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_{j}$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_{j}$.
+:::
+
+:::{.definition title="Continuous Map"}
+A map $f:X\to Y$ between topological spaces is **continuous** if and only if whenever $U \subseteq Y$ is open, $f ^{-1} (U) \subseteq X$ is open.
+:::
+
+:::{.definition title="Cover"}
+A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
+If $A\subseteq X$ is a subspace, then this collection *covers $A$* iff $A\subseteq \union_{\alpha} U_\alpha$.
+:::
+
+:::{.definition title="Dense"}
+A subset $Q\subset X$ is dense iff $y\in N_{y} \subset X \implies N_{y} \intersect Q \neq \emptyset$ iff $\bar Q = X$.
+:::
+
+:::{.definition title="First Countable"}
+A space is *first-countable* iff every point admits a countable neighborhood basis.
+:::
+
+:::{.definition title="Hausdorff"}
+A topological space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
+:::
+
+:::{.definition title="Injection"}
+A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
+:::
+
+:::{.definition title="Lebesgue Number"}
+For $(X, d)$ a compact metric space and $\theset{U_\alpha}\covers X$, there exist $\delta_{L} > 0$ such that 
+\[
+A\subset X, ~ \diam(A) < \delta_{L} \implies A\subseteq U_\alpha \text{ for some } \alpha
+.\]
+:::
+
+:::{.definition title="Limit Point"}
+For $A\subset X$, $x$ is a limit point of $A$ if every punctured neighborhood $P_{x}$ of $x$ satisfies $P_{x} \intersect A \neq \emptyset$, i.e. every neighborhood of $x$ intersects $A$ in some point other than $x$ itself.
     
-    That is, if $\theset{U_j \suchthat j\in J} \subset \tau$ is a collection of open sets such that $X = \union_{j\in J} U_j$, then there exists a *finite* subset $J' \subset J$ such that $X \subseteq \union_{j\in J'} U_j$.
+Equivalently, $x$ is a limit point of $A$ iff $x\in \cl_{X}(A\setminus\theset{x})$.
+:::
 
-Definition (Locally Compact)
-: A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
+:::{.definition title="Locally Connected"}
+A space is *locally connected* at a point $x$ iff $\forall N_{x} \ni x$, there exists a $U\subset N_{x}$ containing $x$ that is connected.
+:::
 
-Definition (Paracompact)
-: A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
+:::{.definition title="Locally Compact"}
+A space $X$ is *locally compact* iff every $x\in X$ has a neighborhood contained in a compact subset of $X$.
+:::
 
-Definition (Precompact)
-: A subset $A\subseteq X$ is *precompact* iff $\cl_X(A)$ is compact.
+:::{.definition title="Locally Finite"}
+A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
+:::
+
+:::{.definition title="Locally Path-Connected"}
+A space is **locally path-connected** if it admits a basis of path-connected open subsets.
+:::
+
+:::{.definition title="Neighborhood"}
+A **neighborhood** of a point $x$ is *any* open set containing $x$.
+:::
+
+:::{.definition title="Normal"}
+A space is **normal** if any two disjoint closed subsets can be separated by neighborhoods.
+:::
+
+:::{.definition title="Neighborhood Basis"}
+If $p\in X$, a **neighborhood basis** at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
+:::
+
+:::{.definition title="Open and Closed Maps" ref="def:open_closed_maps"}
+A map $f:X\to Y$ is an **open map** (respectively a **closed map**) if and only if whenever $U \subseteq X$ is open (resp. closed), $f(U)$ is again open (resp. closed)>
+:::
+
+:::{.definition title="Paracompact"}
+A topological space $X$ is **paracompact** iff every open cover of $X$ admits an open locally finite refinement.
+:::
+
+:::{.definition title="Quotient Map"}
+A map $q:X\to Y$ is a **quotient map** if and only if 
+
+1. $q$ is surjective, and
+2. $U \subseteq Y$ is open if and only if $q ^{-1} (U)$ is open.
+
+:::
+
+:::{.definition title="Path Connected"}
+A space $X$ is **path connected** if and only if for every pair of points $x\neq y$ there exists a continuous map $f:I \to X$ such that $f(0) = x$ and $f(1) = y$.
+:::
+
+:::{.definition title="Path Components"}
+Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equivalence classes.
+:::
+
+:::{.definition title="Precompact"}
+A subset $A\subseteq X$ is **precompact** iff $\cl_{X}(A)$ is compact.
+:::
+
+:::{.definition title="The product topology"}
+For $(X, \tau_X)$ and $(Y, \tau_Y)$ topological spaces, defining 
+\[
+\tau_{X \cross Y} \da \ts{U \cross V \st U\in \tau_X,\, V\in \tau_Y}
+\]
+yields the **product topology** on $X \cross Y$.
+:::
+
+:::{.definition title="Refinement"}
+A cover $\mcv \covers X$ is a **refinement** of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
+:::
+
+:::{.definition title="Regular"}
+A space $X$ is **regular** if whenever $x\in X$ and $F\not\ni x$ is closed, $F$ and $x$ are separated by neighborhoods.
+:::
+
+:::{.definition title="Retract"}
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
+Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
+
+Alt:
+Let $X$ be a topological space and $A \subset X$ be a subspace, then a **retraction** of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
+:::
 
 
-## Separability
+:::{.definition title="Saturated"}
+A subset $U \subseteq X$ is **saturated** with respect to a surjective map $p: X\surjects Y$ if and only if whenever $U \intersect p ^{-1} (y) = V \neq \emptyset$, we have $V \subseteq U$, i.e. $U$ contains every set $p ^{-1} (y)$ that it intersects.
+Equivalently, $U$ is the complete inverse image of a subset of $Y$.
+:::
 
-Definition (Locally Finite)
-: A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ has a neighborhood that intersects at most finitely many elements of $\mcs$.
+:::{.definition title="Separable spaces"}
+A space $X$ is **separable** iff $X$ contains a countable dense subset.
+:::
 
-Definition (Separable)
-: A space $X$ is *separable* iff $X$ contains a countable dense subset.
+:::{.definition title="Second Countable"}
+A space is *second-countable* iff it admits a countable basis.
+:::
 
-Definition (Hausdorff)
-: A topo.ogical space $X$ is *Hausdorff* iff for every $p\neq q \in X$ there exist disjoint open sets $U\ni p$ and $V\ni q$. 
+:::{.definition title="The subspace topology"}
+For $(X, \tau)$ a topological space and $U \subseteq X$ an arbitrary subset, the space $(U, \tau_U)$ is a topological space with a **subspace topology** defined by
+\[
+\tau_U \da \ts {Y \intersect U \st U \in \tau}
+.\]
+:::
 
-Definition (First Countable)
-: A space is *first-countable* iff every point admits a countable neighborhood basis.
+:::{.definition title="Surjection"}
+A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
+:::
 
-Definition (Second Countable)
-: A space is *second-countable* iff it admits a countable basis.
+:::{.definition title="$T_n$ Spaces (Separation Axioms)"}
+\envlist
 
-Definition (Regular)
-: \todo[inline]{Todo}
+- $T_0$: For any 2 points $x_1\neq x_2$, at least one $x_i$ (say $x_1$) admits a neighborhood not containing $x_2$.
 
-Definition (Normal)
-: \todo[inline]{Todo}
+- $T_1$: For any 2 points, *both* admit neighborhoods not containing the other.
 
-## Misc
+- $T_2$: For any 2 points, both admit *disjoint* separating neighborhoods.
 
-Definition (Normal)
-:   \todo[inline]{Todo}
+- $T_{2.5}$: For any 2 points, both admit *disjoint closed* separating neighborhoods.
+
+- $T_3$: $T_0$ & *regular*. 
+  Given any point $x$ and any closed $F\not\ni x$, there are neighborhoods separating $F$ and $x$.
+
+- $T_{3.5}$: $T_0$ & completely regular.
+  Any point $x$ and closed $F\not\ni x$ can be separated by a continuous function.
+
+- $T_4$: $T_1$ & normal.
+  Any two disjoint closed subsets can be separated by neighborhoods.
+
+:::
+
+:::{.definition title="Topology"}
+Closed under arbitrary unions and finite intersections.
+:::
+
+:::{.definition title="Topology generated by a basis"}
+For $X$ an arbitrary set, a collection of subsets $\mcb$ is a *basis for $X$* iff $\mcb$ is closed under intersections, and every intersection of basis elements contains another basis element.
+The set of unions of elements in $B$ is a topology and is denoted *the topology generated by $\mcb$*.
+:::
+
+:::{.definition title="Topological Embedding"}
+A continuous map $f:X \to Y$ for which $X\cong f(X)$ are homeomorphic is called a **topological embedding**.
+:::
+
+:::{.definition title="Uniform Continuity"}
+For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
+\[
+\forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_{X}(x_{1}, x_{2}) < \delta \implies d_{Y}(f(x_{1}), f(x_{2})) < \eps
+.\] 
+:::
 
 
+## Algebraic Topology
 
-## Todo
+:::{.definition title="Acyclic"}
 
-- Saturated
-- Quotient Map
-- The subspace topology
-- The quotient topology
-- The product topology
-- Topological Embedding
-- Continuous map
-- Open and Closed maps
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Alexander duality"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Basis"}
+For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
+:::
+
+:::{.definition title="Boundary"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Boundary of a manifold"}
+Points $x\in M^n$ defined by 
+$$
+\del M = \theset{x\in M: H_{n}(M, M-\theset{x}; \ZZ) = 0}
+$$
+
+:::
+
+:::{.definition title="Cap Product"}
+Denoting $\Delta^p \mapsvia{\sigma} X \in C_{p}(X; G)$, a map that sends pairs ($p\dash$chains, $q\dash$cochains) to $(p-q)\dash$chains $\Delta^{p-q} \to X$ by
+$$
+H_{p}(X; R)\cross H^q(X; R) \mapsvia{\frown} H_{p-q}(X; R)\\
+\sigma \frown \psi = \psi(F_{0}^q(\sigma))F_{q}^p(\sigma)
+$$
+where $F_{i}^j$ is the face operator, which acts on a simplicial map $\sigma$ by restriction to the face spanned by $[v_{i} \ldots v_{j}]$, i.e. $F_{i}^j(\sigma) =\restrictionof{\sigma}{[v_{i} \ldots v_{j}]}$.
+
+
+:::
+
+:::{.definition title="Cellular Homology"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Cellular Map"}
+A map $X \mapsvia{f} Y$ is said to be cellular if $f(X^{(n)}) \subseteq Y^{(n)}$ where $X^{(n)}$ denotes the $n\dash$ skeleton.
+:::
+
+:::{.definition title="Chain"}
+An element $c \in C_{p}(X; R)$ can be represented as the singular $p$ simplex $\Delta^p \to X$.
+:::
+
+:::{.definition title="Chain Homotopy"}
+Given two maps between chain complexes $(C_*, \del_{C}) \mapsvia{f, ~g} (D_*, \del_{D})$, a chain homotopy is a family $h_{i}: C_{i} \to B_{i+1}$ satisfying $$f_{i}-g_{i} = \del_{B, i-1}\circ h_{n} + h_{i+1}\circ \del_{A, i}$$. 
+
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_{homotopy_{between_chain_complexes}}.svg/650px-Chain_{homotopy_{between_chain_complexes}}.svg.png)-->
+
+:::
+
+:::{.definition title="Chain Map"}
+A map between chain complexes $(C_*, \del_{C}) \mapsvia{f} (D_*, \del_{D})$ is a chain map iff each component $C_{i} \mapsvia{f_{i}} D_{i}$ satisfies 
+$$
+f_{i-1}\circ\del_{C, i} = \del_{D,i} \circ f_{i}
+$$ 
+(i.e this forms a commuting ladder) 
+
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_{map}.svg/650px-Chain_{map}.svg.png)-->
+
+
+:::
+
+:::{.definition title="Closed manifold"}
+A manifold that is compact, with or without boundary.
+:::
+
+:::{.definition title="Coboundary"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Cochain"}
+An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_{p}(X; R), R)$ on chains.
+:::
+
+:::{.definition title="Cocycle"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Constant Map"}
+A *constant map* $f: X\to Y$ iff $f(X) = y_{0}$ for some $y_{0}\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_{0}$ is the same.
+:::
+
+:::{.definition title="Colimit"}
+For a directed system $(X_{i}, f_{ij}$, the **colimit** is an object $X$ with a sequence of projections $\pi_{i}:X\to X_{i}$ such that for any $Y$ mapping into the system, the following diagram commutes:
+
+\begin{tikzcd}
+                 &                            &  & Y \arrow[lldddd, "\psi_{j}"] \arrow[rrdddd, "\psi_{i}"] \arrow[dd, "\exists!", dashed] &  &               &        \\
+                 &                            &  &                                                                                    &  &               &        \\
+                 &                            &  & X \arrow[lldd, "\pi_{j}"] \arrow[rrdd, "\pi_{i}"]                                      &  &               &        \\
+                 &                            &  &                                                                                    &  &               &        \\
+\cdots \arrow[r] & X_{j} \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_{i} \arrow[r] & \cdots
+\end{tikzcd}
+:::
+
+:::{.example title="of colimits"}
+\envlist
+
+- Products
+- Pullbacks
+- Inverse / projective limits
+- The \( p\dash \)adic integers \( \ZZ_{p} \).
+:::
+
+:::{.definition title="Cone"}
+For a space $X$, defined as
+\[  
+CX = \frac{X\cross I} {X \cross \theset{0}}
+.\]
+Example: The cone on the circle $CS^1$ 
+
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
+
+Note that the cone embeds $X$ in a contractible space $CX$.
+:::
+
+:::{.definition title="Contractible"}
+A space $X$ is **contractible** if $\id_X$ is nullhomotopic. i.e. the identity is homotopic to a constant map $c(x) = x_0$.
+
+Equivalently, $X$ is contractible if $X \homotopic \theset{x_0}$ is homotopy equivalent to a point.
+This means that there exists a mutually inverse pair of maps $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g \homotopic \id_{\theset{x_0}}$ and $g\circ f \homotopic \id_X$.[^contractible_is_useful]
+
+[^contractible_is_useful]: 
+This is a useful property because it supplies you with a homotopy.
+
+:::
+
+:::{.definition title="Coproduct"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Covering Space"}
+A **covering space** of $X$ is the data $p: \tilde X \to X$ such that
+
+1. Each $x\in X$ admits a neighborhood $U$ such that $p ^{-1} (U)$ is a union of disjoint open sets in $\tilde V_i \subseteq X$ (the **sheets** of $\tilde X$ over $U$),
+2. $\ro{p}{V_i}: V_i \to U$ is a homeomorphism for each sheet.
+
+An **isomorphism** of covering spaces $\tilde X_1 \cong \tilde X_2$ is a commutative diagram
+
+\begin{tikzcd}
+	{\tilde X_1} && {\tilde X_2} \\
+	\\
+	& {X}
+	\arrow["{p_1}"', from=1-1, to=3-2]
+	\arrow["{p_2}", from=1-3, to=3-2]
+	\arrow["{f}", from=1-1, to=1-3]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXHRpbGRlIFhfMSJdLFsxLDIsIlgiXSxbMiwwLCJcXHRpbGRlIFhfMiJdLFswLDEsInBfMSIsMl0sWzIsMSwicF8yIl0sWzAsMiwiZiJdXQ==)
+
+:::
+
+:::{.definition title="Cup Product"}
+A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
+\[
+H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
+(a \cup b)(\sigma) = a(\sigma \circ I_{0}^p)~b(\sigma \circ I_{p}^{p+q})
+\]
+where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
+
+\[I_{i}^j: [i, \cdots, j] \injects\Delta^{p+q}
+.\]
+
+is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
+:::
+	
+:::{.example title="Applications of the cup product"}
+On a manifold, the cup product is Poincaré dual to the intersection of submanifolds.
+Also used to show $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
+:::
+
+:::{.definition title="CW Complex"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="CW Cell"}
+An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_{f} X$ where $f: \del B^n \to X$.
+
+- A $0\dash$cell is a point.
+- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
+- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
+- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
+
+
+:::
+
+:::{.definition title="Cycle"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Deck transformation"}
+For a covering space $\tilde X \mapsvia{p} X$, self-isomorphisms $f:\tilde X \to \tilde X$ of covering spaces are referred to as **deck transformations**.
+:::
+
+:::{.definition title="Deformation"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Deformation Retract"}
+A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_{A}$) *that also satisfies* $\iota \circ r \homotopic \id_{X}$.
+
+> Note that this is equality in one direction, but only homotopy equivalence in the other.
+
+Equivalently, a map $F:I\cross X\to X$ such that 
+\[
+F_{0}(x) &= \id_{X}
+F_{t}(x)\mid_{A} &= \id_{A}
+F_{1}(X) &= A
+.\]
+
+Alt:
+
+A **deformation retract** is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times:
+$$
+H: X\cross I \to X \\
+H(x, 0) = \id_X \\
+H(x, 1) = \id_A \\
+x\in A \implies H(x, t) \in A \quad \forall t
+$$
+
+Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
+:::
+
+:::{.remark}
+A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
+
+
+:::
+
+:::{.definition title="Degree of a Map of Spheres"}
+Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. 
+Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. 
+But homomorphisms of free groups are entirely determined by their action on generators. 
+So if $f^*(1) = n$, define $n$ to be the **degree** of $f$.
+:::
+
+:::{.definition title="Derived Functor"}
+For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_{nT})$ is defined as $h_{n}(TP_{A})$, where $P_{A}$ is a projective resolution of $A$.
+:::
+
+:::{.definition title="Dimension of a manifold"}
+For $x\in M$, the only nonvanishing homology group $H_{i}(M, M - \theset{x}; \ZZ)$
+:::
+
+:::{.definition title="Direct Limit"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Direct Product"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Direct Sum"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Eilenberg-MacLane Space"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Euler Characteristic"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Exact Functor"}
+A functor $T$ is *right exact* if a short exact sequence 
+
+\[0 \to A \to B \to C \to 0
+\]
+yields an exact sequence 
+
+\[\ldots TA \to TB \to TC \to 0
+\]
+and is *left exact* if it yields 
+
+\[0 \to TA \to TB \to TC \to \ldots
+\]
+Thus a functor is exact iff it is both left and right exact, yielding
+
+\[0 \to TA \to TB \to TC \to 0
+.\]
+
+:::
+
+:::{.example title="of an exact functor"}
+$\wait \tensor_{R} \wait$ is a right exact bifunctor.
+:::
+
+:::{.definition title="Exact Sequence"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Excision"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Ext Group"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Flat"}
+An $R\dash$module is flat if $A\tensor_{R} \wait$ is an exact functor.
+:::
+
+:::{.definition title="Free and Properly Discontinuous"}
+An action $G\actson X$ is **properly discontinuous** if each $x\in X$ has a neighborhood $U$ such that all of the images $g(U)$ for $g\in G$ are disjoint, i.e. $g_1(U) \intersect g_2(U) \neq \emptyset \implies g_1 = g_2$.
+The action is **free** if there are no fixed points.
+
+Sometimes a slightly weaker condition is used: every point $x\in X$ has a neighborhood $U$ such that $U \intersect G(U) \neq \emptyset$ for only finitely many $G$.
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Free module"}
+A $\dash$module $M$ with a basis $S = \theset{s_{i}}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
+:::
+
+:::{.definition title="Free Product"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Free product with amalgamation"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Fundamental Class"}
+For a connected, closed, orientable manifold, $[M]$ is a generator of $H_{n}(M; \ZZ) = \ZZ$.
+:::
+
+:::{.definition title="Fundamental Group"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Generating Set"}
+$S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_{i} s_{i}$$ for some coefficients $r_{i} \in R$ (where this sum may be infinite).
+:::
+
+:::{.definition title="Gluing Along a Map"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Group Ring"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homologous"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homotopic"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homotopy"}
+Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a **homotopy** from $f$ to $g$ is a continuous function
+
+$F: X \cross I \into Y$
+
+such that
+
+$F(x, 0) = f(x)$ and  $F(x,1) = g(x)$
+
+for all $x\in X$. If such a homotopy exists, we write $f\homotopic g$. This is an equivalence relation on $\text{Hom}(X,Y)$, and the set of such classes is denoted $[X,Y] \definedas \hom (X,Y)/\homotopic$.
+
+:::
+
+:::{.definition title="Homotopy Class"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homotopy Equivalence"}
+Let $f: X \to Y$ be a continuous map, then $f$ is said to be a *homotopy equivalence* if there exists a continuous map $g: X \to Y$ such that
+
+$f\circ g \homotopic \id_Y$ and $g\circ f \homotopic \id_X$.
+
+Such a map $g$ is called a homotopy inverse of $f$, the pair of maps is a homotopy equivalence.
+
+If such an $f$ exists, we write $X \homotopic Y$ and say $X$ and $Y$ have the same homotopy type, or that they are homotopy equivalent.
+
+> Note that homotopy equivalence is strictly weaker than homeomorphic equivalence, i.e., $X\cong Y$ implies $X \homotopic Y$ but not necessarily the converse.
+
+
+:::
+
+:::{.definition title="Homotopy Extension Property"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homotopy Groups"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Homotopy Lifting Property"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Intersection Pairing"}
+For a manifold $M$, a map on homology defined by
+\[
+H_{\hat i}M \tensor H_{\hat j}M \to H_{\widehat{i+j}}X\\
+\alpha\tensor \beta \mapsto \left< \alpha, \beta \right>
+\]
+obtained by conjugating the cup product with Poincaré Duality, i.e. 
+
+\[\left< \alpha, \beta \right> = [M] \frown ([\alpha]\dual \smile [\beta]\dual)
+.\]
+
+Then, if $[A], [B]$ are transversely intersecting submanifolds representing $\alpha, \beta$, then $$\left<\alpha, \beta\right> = [A\intersect B]$$.
+If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_{0} M = \ZZ$ is the signed number of intersection points.
+
+Alt:
+The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_{i} M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
+Computed as an oriented intersection number between two homology classes (perturbed to be transverse).
+
+
+:::
+
+:::{.definition title="Inverse Limit"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Intersection Form"}
+The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_{n}) \cross H^{n-k}(M^n) \to \ZZ$$
+where $n=2k$.
+
+- When $k$ is odd, $I$ is skew-symmetric and thus a *symplectic form.*
+- When $k$ is even (and thus $n \equiv 0 \mod 4$) this is a symmetric form.
+- Satisfies $I(x,y) = (-1)^{k(n-k)} I(y, x)$
+:::
+	
+:::{.definition title="Kronecker Pairing"}
+A map pairing a chain with a cochain, given by 
+\[
+H^n(X; R) \cross H_{n}(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)
+\]
+which is a nondegenerate bilinear form.
+:::
+
+:::{.definition title="Kronecker Product"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Lefschetz duality"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Lefschetz Number"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Lens Space"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Local Degree"}
+At a point $x \in V \subset M$, a generator of $H_{n}(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
+:::
+
+:::{.definition title="Local Orientation"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Limit"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Linear Independence"}
+A generating $S$ for a module $M$ is linearly independent if $\sum r_{i} s_{i} = 0_M \implies \forall i,~r_{i} = 0$ where $s_{i}\in S, r_{i} \in R$.
+:::
+
+:::{.definition title="Local homology"}
+$H_{n}(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_{n}(X \mid A)$
+:::
+
+:::{.definition title="Local orientation of a manifold"}
+At a point $x\in M^n$, a choice of a generator $\mu_{x}$ of $H_{n}(M, M - \theset{x}) = \ZZ$.
+:::
+
+:::{.definition title="Long exact sequence"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Loop Space"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Manifold"}
+An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
+:::
+
+:::{.definition title="Manifold with boundary"}
+A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_{i} > 0}$.
+:::
+
+:::{.definition title="Mapping Cone"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Mapping Cylinder"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Mapping Path Space"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Mayer-Vietoris Sequence"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Monodromy"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Moore Space"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="N-cell"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="N-connected"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Normal covering space (a.k.a. 'regular')"}
+A covering space is **normal** if and only if for every $x\in X$ and every pair of lifts $\tilde x_1, \tilde x_2$, there is a deck transformation $f$ such that $f(\tilde x_1) = \tilde x_2$.
+:::
+
+:::{.definition title="Nullhomotopic"}
+A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_{0}}$; that is, there exists a homotopy 
+\[  
+F: X\cross I &\to Y \\
+\restrictionof{F}{X\cross\theset{0}} &= f \quad F(x, 0) = f(x) \\
+\restrictionof{F}{X\cross\theset{1}} &= g  \quad F(x, 1) = g(x) = y_{0}\\
+.\]
+
+Alt:
+
+If $f$ is homotopic to a constant map, say $f: x \mapsto y_0$ for some fixed $y_0 \in Y$, then $f$ is said to be *nullhomotopic*. In other words, if $f:X\into Y$ is nullhomotopic, then there exists a homotopy $H: X\cross I \into Y$ such that $H(x, 0) = f(x)$ and $H(x, 1) = y_0$.
+
+Note that constant maps (or anything homotopic) induce zero homomorphisms.
+
+
+:::
+
+:::{.definition title="Orbit space"}
+For a group action $G\actson X$, the **orbit space** $X/G$ is defined as $X/\sim$  where $\forall x,y\in X, x\sim y \iff \exists g\in G \mid g.x = y$.
+:::
+
+:::{.definition title="Orientable manifold"}
+A manifold for which an orientation exists, see "Orientation of a Manifold".
+:::
+
+:::{.definition title="Orientation cover"}
+For any manifold $M$, a two sheeted orientable covering space $\tilde M_{o}$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as 
+\[
+\tilde M = \coprod_{x\in M}\theset{\mu_{x} \mid \mu_{x}~ \text{is a local orientation}}
+.\]
+:::
+
+:::{.definition title="Orientation of a manifold"}
+A family of $\theset{\mu_{x}}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_{x}, \mu_{y}$ are related via a propagation.
+
+Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_{x}$$ such that $\forall x \exists N_{x}$ in which  $\forall y\in N_{x}$, the preimage of each $\mu_{y}$ under the map $H_{n}(M\mid N_{x}) \surjects H_{n}(M\mid y)$ is a single generator $\mu_{N_{x}}$.
+
+TFAE:
+
+- $M$ is orientable.
+- The map $W: (M, x) \to \ZZ_{2}$ is trivial.
+- $\tilde M_{o} = M \coprod \ZZ_{2}$ (two sheets).
+- $\tilde M_{o}$ is disconnected
+- The projection $\tilde M_{o} \to M$ admits a section.
+
+:::
+
+:::{.definition title="Oriented manifold"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Path"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Path Lifting Property"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Perfect Pairing"}
+A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_{R} N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_{R}(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
+:::
+
+:::{.definition title="Poincaré Duality"}
+For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is an isomorphism: $$ D: H^k(M; R) \to H_{n-k}(M; R) \\ D(\alpha) = [M] \frown \alpha$$
+:::
+
+:::{.definition title="Projective Resolution"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Properly Discontinuous"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Pullback"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Pushout"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Quasi-isomorphism"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="R-orientability"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Relative boundaries"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Relative cycles"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Relative homotopy groups"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Semilocally Simply Connected"}
+A space $X$ is **semilocally simply connected** if every $x\in X$ has a neighborhood $U$ such that $U\injects X$ induces the trivial map $\pi_1(U;x) \to \pi_1(X, x)$.
+:::
+
+:::{.definition title="Short exact sequence"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Simplicial Complex"}
+Given a simplex $\sigma = [v_1 \cdots v_n]$, define the **face map** 
+\[
+\del_i:\Delta^n &\to \Delta^{n-1} \\ 
+\sigma &\mapsto  [v_1 \cdots \hat v_i \cdots v_n]
+\]
+
+A **simplicial complex** is a set $K$ satisfying
+
+1. $\sigma \in K \implies \del_i\sigma \in K$.
+
+2. $\sigma,\tau\in K \implies \sigma\intersect\tau = \emptyset,~ \del_i\sigma,~\text{or}~\del_i\tau$.
+
+  This amounts to saying that any collection of $(n-1)$-simplices uniquely determines an $n$-simplex (or its lack thereof), or that that map $\Delta^k \into X$ is a continuous injection from the standard simplex in $\RR^n$.
+
+3. $\abs{K\intersect B_\varepsilon(\sigma)} < \infty$ for every $\sigma\in K$, identifying $\sigma \subseteq \RR^n$.
+
+:::
+
+:::{.definition title="Simplicial Map"}
+For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_{i}}$ spanning a simplex in $K$, the set $\theset{f(v_{i})}$ are the vertices of a simplex in $L$.
+:::
+
+:::{.definition title="Simply Connected"}
+A space $X$ is **simply connected** if and only if $X$ is path-connected and every loop \( \gamma : S^1 \mapsvia{} X \) can be contracted to a point.
+
+Equivalently, there exists a lift \( \hat \gamma : D^2 \mapsvia{} X \) such that \( \ro{\hat \gamma}{\bd D^2} = \gamma  \).
+
+Equivalently, for any two paths \( p_1, p_2: I \mapsvia{} X \) such that \( p_1(0) = p_2(0) \) and \( p_1(1) = p_2(1) \), there exists a homotopy \( F: I^2 \mapsvia{} X \) such that \( \ro{F}{0} = p_1,\, \ro{F}{0} = p_2 \).
+
+Equivalently, \( \pi _1 X = 1 \) is trivial.
+:::
+
+:::{.definition title="Singular Chain"}
+
+\[x \in C_{n}(x) \implies X = \sum_{i} n_{i} \sigma_{i} = \sum_{i} n_{i} (\Delta^n \mapsvia{\sigma_{i}} X)
+.\]
+:::
+
+:::{.definition title="Singular Cochain"}
+
+\[x \in C^n(x) \implies X = \sum_{i} n_{i} \psi_{i} = \sum_{i} n_{i} (\sigma_{i} \mapsvia{\psi_{i}} X)
+.\]
+:::
+
+:::{.definition title="Singular Homology"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Smash Product"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Suspension"}
+Compact represented as $\Sigma X = CX \coprod_{\id_{X}} CX$, two cones on $X$ glued along $X$.
+Explicitly given by
+
+\[\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_{0}} \cross I)}
+.\]
+:::
+
+:::{.definition title="Tor Group"}
+For an $R\dash$module
+\[
+\tor_{R}^n(\wait, B) = L_{n}(\wait \tensor_{R} B)
+,\]
+where $L_{n}$ denotes the $n$th left derived functor.
+:::
+
+:::{.definition title="Universal Cover"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Weak Homotopy Equivalence"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Weak Topology"}
+
+:::
+\todo[inline]{Definitions}
+
+:::{.definition title="Wedge Product"}
+
+:::
+\todo[inline]{Definitions}
 
 # Examples
 
-## Common Spaces and Operations
+## Point-Set
 
-### Point-Set
+### Common Spaces and Operations
 
-- Finite discrete sets with the discrete topology 
+:::{.example title="Nice spaces"}
+The following are some standard "nice" spaces:
+\[
+S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_{g}, \RP^\infty, \CP^\infty
+.\]
+:::
+
+:::{.example title="A bank of counterexamples"}
+The following are useful spaces to keep in mind to furnish counterexamples:
+
+- Finite discrete sets with the discrete topology.
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
-  - $\ts{0} \union \ts{{1 \over n}\suchthat n\in \ZZ^{\geq 1}}$
+  - Sets given by real sequences, such as $\ts{0} \union \ts{{1 \over n}\suchthat n\in \ZZ^{\geq 1}}$
 - $\QQ$
 - The topologist's sine curve
 - One-point compactifications
-- $\RR^\omega$
-- Hawaiian earring
-- Cantor set
+- $\RR^\omega$ for \( \omega \) the least uncountable ordinal (?)
+- The Hawaiian earring
+- The Cantor set
 
-Non-Hausdorff spaces:
+Examples of some more exotic spaces that show up less frequently:
+
+- $\HP^n$, quaternionic projective space
+- The Dunce Cap
+- The Alexander Horned sphere
+
+:::
+\todo[inline]{Break these into separate examples and explain properties.}
+
+:::{.example title="Non-Hausdorff spaces"}
+The following spaces are non-Hausdorff:
 
 - The cofinite topology on any infinite set.
 - $\RR/\QQ$
 - The line with two origins.
+- Any variety $V(J) \subseteq \AA^n_{/k}$ for $k$ a field and $J\normal \kx{n}$.
 
-General Spaces:
-\begin{align*}
-S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP^\infty
-.\end{align*}
+:::
 
-"Constructed" Spaces
+
+:::{.example title="Constructed spaces"}
+The following are some examples of ways to construct specific spaces for examples or counterexamples:
 
 - Knot complements in $S^3$
 - Covering spaces (hyperbolic geometry)
@@ -622,11 +1602,9 @@ S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_g, \RP^\infty, \CP
   
 ![](figures/image_2020-05-22-18-58-03.png) 
 
-Exotic/Pathological Spaces
+:::
 
-- $\HP^n$
-- Dunce Cap
-- Horned sphere
+
 
 Operations
 
@@ -634,7 +1612,7 @@ Operations
 - Wedge product $A \vee B$
 - Connect Sum $A \# B$
 - Quotienting $A/B$
-- Puncturing $A\setminus \theset{a_i}$
+- Puncturing $A\setminus \theset{a_{i}}$
 - Smash product
 - Join
 - Cones
@@ -643,149 +1621,230 @@ Operations
 -  Identifying a finite number of points
 
 
-## Alternative Topologies
+
+### Alternative Topologies
+
+:::{.example title="Nonstandard topologies"}
+The following are some nice examples of topologies to put on familiar spaces to produce counterexamples:
 
 - Discrete
 - Cofinite
 - Discrete and Indiscrete
 - Uniform
+:::
 
-The cofinite topology:
+:::{.example title="The cofinite topology"}
+The cofinite topology on any space $X$ is always
 
 - Non-Hausdorff
 - Compact
+:::
 
-The discrete topology:
+:::{.proposition title="Topology is discrete if and only if points are open"}
+A topology $(X, \tau)$ is the discrete topology iff points $x\in X$ are open.
+:::
 
-- Discrete iff points are open
+:::{.proof title="?"}
+If $\ts x_i$ is open for each $x_i \in X$, then 
+
+- Any set $U$ can be written as $U = \union_{i\in I} x_I$ (for some $I$ depending on $U$), and 
+- Unions of open sets are open.
+
+Thus $U$ is open.
+:::
+
+:::{.example title="The discrete topology"}
+Some facts about the discrete topology:
+
+- Definition: every subset is open.
 - Always Hausdorff
 - Compact iff finite
 - Totally disconnected
-- If the domain, every map is continuous
+- If $X$ is discrete, every map $f:X\to Y$ for any $Y$ is continuous (obvious!)
+:::
 
-The indiscrete topology:
+:::{.example title="The indiscrete topology"}
+Some facts about the indiscrete topology:
 
-- Only open sets are $\emptyset, X$
-- Non-Hausdorff
-- If the codomain, every map is continuous
-- Compact
+- Definition: the only open sets are $\emptyset, X$
+- Never Hausdorff
+- If $Y$ is indiscrete, every map $f:X\to Y$ is continuous (obvious!)
+- Always compact
+:::
+
+
+
 
 # Theorems
 
-Properties preserved and not preserved by continuous functions: [Link](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
+:::{.proposition title="The continuous image of a..."}
+The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
 
-- Properties pushed forward through continuous maps:
-  - Compactness?
-  - Connectedness (when surjective)
-  - Separability
-  - Density **only when** $f$ is surjective
-  - **Not** openness
-  - **Not** closedness
+- Compactness
+- Separability
+- If $f$ is surjective:
+  - Connectedness 
+  - Density 
 
+The following are **not preserved**:
+
+- Openness
+- Closedness
+
+> [See more here.](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
+
+:::
 
 ## Metric Spaces and Analysis
 
-Theorem (Cantor's Intersection Theorem)
-: A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
+:::{.theorem title="Cantor's Intersection Theorem"}
+A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
+:::
 
-Theorem (Cantor's Nested Intervals Theorem)
-: If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
-  If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
+:::{.theorem title="Cantor's Nested Intervals Theorem"}
+If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
+If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
+:::
 
-Proposition
-: A continuous function on a compact set is uniformly continuous.
+:::{.proposition title="Continuous on compact $\implies$ uniformly continuous"}
+A continuous function on a compact set is uniformly continuous.
+:::
 
-Proof
-: Take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
+:::{.proof title="?"}
+Take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
+:::
 
-Corollary
-: Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+:::{.corollary title="Lipschitz implies uniformly continuous"}
+Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+:::
 
+:::{.remark}
 Counterexample to the converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+:::
 
-Theorem (Extreme Value Theorem)
-: For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
+:::{.theorem title="Extreme Value Theorem"}
+For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
+:::
 
-Theorem
-: A metric space $X$ is sequentially compact iff it is complete and totally bounded.
+:::{.theorem title="Sequentially compact if and only if complete and totally bounded"}
+A metric space $X$ is sequentially compact iff it is complete and totally bounded.
+:::
 
-Theorem
-: A metric space is totally bounded iff every sequence has a Cauchy subsequence.
+:::{.theorem title="Totally bounded if and only if Cauchy subsequences exist"}
+A metric space is totally bounded iff every sequence has a Cauchy subsequence.
+:::
 
-Theorem
-: A metric space is compact iff it is complete and totally bounded.
+:::{.theorem title="Compact if and only if complete and totally bounded"}
+A metric space is compact iff it is complete and totally bounded.
+:::
 
-Theorem (Baire)
-: If $X$ is a complete metric space, then the intersection of countably many dense open sets is dense in $X$.
+:::{.theorem title="Baire"}
+If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of countably many dense open sets in $X$ is again dense in $X$.
+:::
 
-
-
-## Connectedness
-
-Theorem (Tube Lemma)
-:   \todo[inline]{Todo}
 
 ## Compactness
 
-Theorem
-: $U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+:::{.theorem title="Closed if and only if compact in Hausdorff spaces"}
+$U\subset X$ a Hausdorff spaces is closed $\iff$ it is compact. 
+:::
 
-Theorem
-: A closed subset $A$ of a compact set $B$ is compact.
+:::{.theorem title="Closed subset of compact is compact"}
+A closed subset $A$ of a compact set $B$ is compact.
+:::
 
-Proof
-:   \hfill
+:::{.proof title="?"}
+\envlist
 
-    - Let $\theset{A_i} \rightrightarrows A$ be a covering of $A$ by sets open in $A$.
-    - Each $A_i = B_i \intersect A$ for some $B_i$ open in $B$ (definition of subspace topology)
-    - Define $V = \theset{B_i}$, then $V \rightrightarrows A$ is an open cover.
-    - Since $A$ is closed, $W\definedas B\setminus A$ is open
-    - Then $V\union W$ is an open cover of $B$, and has a finite subcover $\theset{V_i}$
-    - Then $\theset{V_i \intersect A}$ is a finite open cover of $A$.
+- Let $\theset{A_i} \rightrightarrows A$ be a covering of $A$ by sets open in $A$.
+- Each $A_i = B_i \intersect A$ for some $B_i$ open in $B$ (definition of subspace topology)
+- Define $V = \theset{B_i}$, then $V \rightrightarrows A$ is an open cover.
+- Since $A$ is closed, $W\definedas B\setminus A$ is open
+- Then $V\union W$ is an open cover of $B$, and has a finite subcover $\theset{V_i}$
+- Then $\theset{V_i \intersect A}$ is a finite open cover of $A$.
+:::
 
-Theorem
-: The continuous image of a compact set is compact.
+:::{.theorem title="Continuous image of compact is compact"}
+The continuous image of a compact set is compact.
+:::
 
-Theorem
-: A closed subset of a Hausdorff space is compact.
-
-Theorem
-: A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+:::{.theorem title="Closed in Hausdorff $\implies$ compact"}
+A closed subset of a Hausdorff space is compact.
+:::
 
 ## Separability
 
-Proposition 
-: A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
+:::{.proposition title="Properties preserved under retracts"}
+A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
+:::
 
-Theorem
-: Points are closed in $T_1$ spaces.
-
+:::{.proposition title="?"}
+Points are closed in $T_1$ spaces.
+:::
 
 ## Maps and Homeomorphism
 
-Theorem
-: A continuous bijective open map is a homeomorphism.
+:::{.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
+A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+:::
 
-Theorem (Munkres 18.1)
-:   For $f:X\to Y$, TFAE:
+:::{.remark title="On retractions"}
+Every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+:::
 
-    - $f$ is continuous
-    - $A\subset X \implies f(\cl_X(A)) \subset \cl_X(f(A))$
-    - $B$ closed in $Y \implies f\inv(B)$ closed in $X$.
-    - For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
+:::{.theorem title="When open maps are homeomorphisms"}
+A continuous bijective open map is a homeomorphism.
+:::
 
-Proof
-: \todo[inline]{Todo, see Munkres page 104}
 
-Theorem (Lee A.52)
-:   If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
+:::{.theorem title="Characterizations of continuous maps, Munkres 18.1"}
+For $f:X\to Y$, TFAE:
 
-    - $f$ is a closed map.
-    - If $f$ is surjective, $f$ is a quotient map.
-    - If $f$ is injective, $f$ is a topological embedding.
-    - If $f$ is bijective, it is a homeomorphism.
+- $f$ is continuous
+- $A\subset X \implies f(\cl_X(A)) \subset \cl_X(f(A))$
+- $B$ closed in $Y \implies f\inv(B)$ closed in $X$.
+- For each $x\in X$ and each neighborhood $V \ni f(x)$, there is a neighborhood $U\ni x$ such that $f(U) \subset V$.
+:::
 
-# Topics 
+:::{.proof title="?"}
+See Munkres page 104.
+:::
+
+
+:::{.theorem title="Maps from compact to Hausdorff spaces, Lee A.52"}
+If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
+
+- $f$ is a closed map.
+- If $f$ is surjective, $f$ is a quotient map.
+- If $f$ is injective, $f$ is a topological embedding.
+- If $f$ is bijective, it is a homeomorphism.
+:::
+
+## The Tube Lemma
+
+:::{.theorem title="The Tube Lemma"}
+Let $X, Y$ be spaces with $Y$ compact.
+For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, there is an open $O \subseteq X$ such that
+\[
+\ts{x} \cross Y \subseteq O \cross Y \subseteq U
+.\]
+
+:::
+
+:::{.proof title="Sketch"}
+\envlist
+
+- For each $y\in Y$ choose neighborhoods $A_y, B_y \subseteq Y$ such that 
+\[
+(x, y) \in A_y \cross B_y \subseteq U
+.\]
+- By compactness of $Y$, reduce this to finitely many $B_y \covers Y$ so $Y = \Union_{j=1}^n B_{y_j}$
+- Set $O\da \intersect_{j=1}^n B_{y_j}$; this works.
+
+:::
+
+
+# Summary of Standard Topics 
 
 * Algebraic topology topics:
 	* Classification of compact surfaces
@@ -808,12 +1867,14 @@ Theorem (Lee A.52)
 	* Kunneth formula
 	* Factoring maps
 	* Fundamental theorem of algebra
+
 * Algebraic topology theorems:
 	* Brouwer fixed point theorem
-	* Poincare lemma
-	* Poincare duality
+	* Poincaré lemma
+	* Poincaré duality
 	* de Rham theorem
 	* Seifert-van Kampen theorem
+
 * Covering space theory topics:
 	* Covering maps
 	* Free actions
@@ -826,601 +1887,235 @@ Theorem (Lee A.52)
 	* The action of the fundamental group
 	* Normal/regular cover
 
-# AT Summary
-
-## Different Types of Product/Sum Structures
-
-- Cartesian Product $X\cross Y, \prod_i X_i$
-- Direct Sum $X \oplus Y, \bigoplus_i X_i$
-- Direct Product $X \ast Y, \ast_i X_i$
-  - Element-wise multiplication, allows infinitely many entries
-  - $\ast_i X_i= \oplus_i X_i$ for $i < \infty$
-- Tensor Product $X \tensor Y, \bigotimes_i X_i, X^{\otimes_i}$
-
-*   For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
-
-    Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
-
-    In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
-
-* The free abelian group of rank $n$: 
-  $$
-  \ZZ^n \definedas \prod_{i=1}^n \ZZ = \ZZ \times \ZZ \times \ldots \ZZ
-  .$$ 
-	- $x \in \ZZ^n = \left< a_1, \cdots, a_n\right> \implies x = \sum_n c_i a_i$ for some $c_i \in \ZZ$ , i.e. $a_i$ form a basis.
-	- Example: $x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2$.
-
-* The **free product** of $n$ free abelian groups:
-  $$
-  \ZZ^{\ast n} \definedas \Conv_{i=1}^n \ZZ = \ZZ \ast \ZZ \ast \ldots \ZZ
-  $$ 
-  This is a free *nonabelian* group on $n$ generators.
-
-	- $x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>$ implies that $x$ is a finite word in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
-	- Example: $x = a_1^2 a_2^4 a_1 a_2^{-2}$
-
-Proposition
-:   There are no nontrivial homomorphisms from finite groups into free groups.
-
-    In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
-
-Proof
-:   Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
-
-This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
-
-
-
-## Conventions
-
-- Generally assume spaces are connected.
-
-* $\pi_0(X)$ is the set of path components of $X$, and I write $\pi_0(X) = \ZZ$ if $X$ is path-connected (although it is not a group). 
-  Similarly, $H_0(X)$ is a free abelian group on the set of path components of $X$.
-
-* Lists start at entry 1, since all spaces are connected here and thus $\pi_0 = H_0 = \ZZ$. That is,
-	* $\pi_*(X) = [\pi_1(X), \pi_2(X), \pi_3(X), \cdots]$
-	* $H_*(X) = [H_1(X), H_2(X), H_3(X), \cdots]$
-
-
-
-# Definitions: Algebraic Topology
-
-
-- Acyclic
-
-- Alexander duality
-
-- Basis
-	* For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
-
-- Boundary
-
-- Boundary of a manifold
-	* Points $x\in M^n$ defined by 
-	$$
-	\del M = \theset{x\in M: H_n(M, M-\theset{x}; \ZZ) = 0}
-	$$
-
-- Cap Product
-	* Denoting $\Delta^p \mapsvia{\sigma} X \in C_p(X; G)$, a map that sends pairs ($p\dash$chains, $q\dash$cochains) to $(p-q)\dash$chains $\Delta^{p-q} \to X$ by
-	$$
-	H_p(X; R)\cross H^q(X; R) \mapsvia{\frown} H_{p-q}(X; R)\\
-	\sigma \frown \psi = \psi(F_0^q(\sigma))F_q^p(\sigma)
-	$$
-	where $F_i^j$ is the face operator, which acts on a simplicial map $\sigma$ by restriction to the face spanned by $[v_i \ldots v_j]$, i.e. $F_i^j(\sigma) =\restrictionof{\sigma}{[v_i \ldots v_j]}$.
-
-- Cellular Homology
-
-- CW Cell
-	- An $n\dash$cell of $X$, say $e^n$, is the image of a map $\Phi: B^n \to X$. That is, $e^n = \Phi(B^n)$. Attaching an $n\dash$cell to $X$ is equivalent to forming the space $B^n \coprod_f X$ where $f: \del B^n \to X$.
-		- A $0\dash$cell is a point.
-		- A $1\dash$cell is an interval $[-1, 1] = B^1 \subset \RR^1$. Attaching requires a map from $S^0 =\theset{-1, +1} \to X$
-		- A $2\dash$cell is a solid disk $B^2 \subset \RR^2$ in the plane. Attaching requires a map $S^1 \to X$.
-		- A $3\dash$cell is a solid ball $B^3 \subset \RR^3$. Attaching requires a map from the sphere $S^2 \to X$.
-
-- Cellular Map
-	* A map $X \mapsvia{f} Y$ is said to be cellular if $f(X^{(n)}) \subseteq Y^{(n)}$ where $X^{(n)}$ denotes the $n\dash$ skeleton.
-
-- Chain
-	* An element $c \in C_p(X; R)$ can be represented as the singular $p$ simplex $\Delta^p \to X$.
-
-- Chain Homotopy
-	* Given two maps between chain complexes $(C_*, \del_C) \mapsvia{f, ~g} (D_*, \del_D)$, a chain homotopy is a family $h_i: C_i \to B_{i+1}$ satisfying $$f_i-g_i = \del_{B, i-1}\circ h_n + h_{i+1}\circ \del_{A, i}$$. 
- 
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Chain_homotopy_between_chain_complexes.svg/650px-Chain_homotopy_between_chain_complexes.svg.png)-->
-
-- Chain Map
-	* A map between chain complexes $(C_*, \del_C) \mapsvia{f} (D_*, \del_D)$ is a chain map iff each component $C_i \mapsvia{f_i} D_i$ satisfies 
-	$$
-	f_{i-1}\circ\del_{C, i} = \del_{D,i} \circ f_i
-	$$ 
-	(i.e this forms a commuting ladder) 
-
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chain_map.svg/650px-Chain_map.svg.png)-->
-
-- Closed manifold
-	* A manifold that is compact, with or without boundary.
-
-- Coboundary
-
-- Cochain
-	* An cochain $c \in C^p(X; R)$ is a map $c \in \hom(C_p(X; R), R)$ on chains.
-
-- Cocycle
-
-:::{.definition title="Constant Map"}
-A *constant map* $f: X\to Y$ iff $f(X) = y_0$ for some $y_0\in Y$, i.e. for every $x\in X$ the output value $f(x) = y_0$ is the same.
-:::
-
-:::{.definition title="Colimit"}
-For a directed system $(X_i, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_i:X\to X_i$ such that for any $Y$ mapping into the system, the following diagram commutes:
-
-\begin{center}
-\begin{tikzcd}
-                 &                            &  & Y \arrow[lldddd, "\psi_j"] \arrow[rrdddd, "\psi_i"] \arrow[dd, "\exists!", dashed] &  &               &        \\
-                 &                            &  &                                                                                    &  &               &        \\
-                 &                            &  & X \arrow[lldd, "\pi_j"] \arrow[rrdd, "\pi_i"]                                      &  &               &        \\
-                 &                            &  &                                                                                    &  &               &        \\
-\cdots \arrow[r] & X_j \arrow[rrrr, "f_{ij}"] &  &                                                                                    &  & X_i \arrow[r] & \cdots
-\end{tikzcd}
-\end{center}
-
-:::{.example}
-- Products
-- Pullbacks
-- Inverse/Projective limits
-- The $p\dash$adic integers $\ZZ_p$.
-
-:::
-
-:::
-
-
-- Compact
-	* A space $X$ is compact iff every open cover of $X$ has a finite subcover.
-
-- Cone
-	* For a space $X$, defined as
-	\[  
-	CX = \frac{X\cross I} {X \cross \theset{0}}
-	.\]
-	Example: The cone on the circle $CS^1$ 
-
-  <!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
-
-	Note that the cone embeds $X$ in a contractible space $CX$.
-
-
-- Contractible
-	* A space is contractible if its identity map is nullhomotopic.
-
-- Contractible
-
-- Coproduct
-
-- Covering Space
-
-- Cup Product
-	- A map taking pairs ($p\dash$cocycles, $q\dash$cocycles) to $(p+q)\dash$cocyles by
-	$$
-	H^p(X; R) \cross H^q(X; R) \mapsvia{\smile} H^{p+q}(X; R)\\
-	(a \cup b)(\sigma) = a(\sigma \circ I_0^p)~b(\sigma \circ I_p^{p+q})
-	$$
-	where $\Delta^{p+q} \mapsvia{\sigma} X$ is a singular $p+q$ simplex and
-	$$
-	I_i^j: [i, \cdots, j] \injects\Delta^{p+q}
-	$$
-	is an embedding of the $(j-i)\dash$simplex into a $(p+q)\dash$simplex.
-	On a manifold, the cup product is Poincare dual to the intersection of submanifolds.
-	* Applications
-		- $T^2 \not\homotopic S^2 \vee S^1 \vee S^1$. 
-    \todo[inline]{Proof}
-  
-
-- CW Complex
-
-- Cycle
-
-- Deck Transformation
-
-- Deformation
-
-- Deformation Retract
-	- A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ that is a retraction (so $r\circ \iota = \id_A$) **that also satisfies** $\iota \circ r \homotopic \id_X$.
-    
-    > Note that this is equality in one direction, but only homotopy equivalence in the other.
-
-  - Equivalently, a map $F:I\cross X\to X$ such that 
-    - $F_0(x) = \id_X$
-    - $F_t(x)\mid_A = \id_A$
-    - $F_1(X) = A$
-
-- Degree of a Map
-
-- Derived Functor
-	* For a functor $T$ and an $R\dash$module $A$, a *left derived functor* $(L_nT)$ is defined as $h_n(TP_A)$, where $P_A$ is a projective resolution of $A$.
-
-- Dimension of a manifold
-	* For $x\in M$, the only nonvanishing homology group $H_i(M, M - \theset{x}; \ZZ)$
-
-- Direct Limit
-
-- Direct Product
-
-- Direct Sum
-
-- Eilenberg-MacLane Space
-
-- Euler Characteristic
-
-- Exact Functor
-	* A functor $T$ is *right exact* if a short exact sequence 
-	$$0 \to A \to B \to C \to 0$$ 
-	yields an exact sequence 
-	$$\ldots TA \to TB \to TC \to 0,$$ 
-	and is *left exact* if it yields 
-	$$0 \to TA \to TB \to TC \to \ldots$$
-	Thus a functor is exact iff it is both left and right exact, yielding
-	$$
-	0 \to TA \to TB \to TC \to 0
-	$$
-	* Examples:
-		* $\wait \tensor_R \wait$ is a right exact bifunctor.
-
-- Exact Sequence
-
-- Excision
-
-- Ext Group
-
-- Flat
-	* An $R\dash$module is flat if $A\tensor_R \wait$ is an exact functor.
-
-- Free and Properly Discontinuous
-
-- Free module
-	* A $\dash$module $M$ with a basis $S = \theset{s_i}$ of generating elements. Every such module is the image of a unique map $\mathcal{F}(S) = R^S \surjects M$, and if $M = \left< S \mid \mathcal{R} \right>$  for some set of relations $\mathcal{R}$, then $M \cong R^S / \mathcal{R}$.
-
-- Free Product
-
-- Free product with amalgamation
-
-- Fundamental Class
-	* For a connected, closed, orientable manifold, $[M]$ is a generator of $H_n(M; \ZZ) = \ZZ$.
-
-- Fundamental classes
-
-- Fundamental Group
-
-- Generating Set
-	* $S = \theset{s_i}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M \implies x = \sum r_i s_i$$ for some coefficients $r_i \in R$ (where this sum may be infinite).
-
-- Gluing Along a Map
-
-- Group Ring
-
-- Homologous
-
-- Homotopic
-
-- Homotopy
-
-- Homotopy Class
-
-- Homotopy Equivalence
-
-- Homotopy Extension Property
-
-- Homotopy Groups
-
-- Homotopy Lifting Property
-
-- Injection
-	* A map $\iota$ with a **left** inverse $f$ satisfying $f\circ \iota = \id$
-
-- Intersection Pairing
-	For a manifold $M$, a map on homology defined by
-	$$
-	H_{\hat i}M \tensor H_{\hat j}M \to H_{\widehat{i+j}}X\\
-	\alpha\tensor \beta \mapsto \left< \alpha, \beta \right>
-	$$
-	obtained by conjugating the cup product with Poincare Duality, i.e. $$\left< \alpha, \beta \right> = [M] \frown ([\alpha]\dual \smile [\beta]\dual)$$
-
-	Then, if $[A], [B]$ are transversely intersecting submanifolds representing $\alpha, \beta$, then $$\left<\alpha, \beta\right> = [A\intersect B]$$.
-
-	If $\hat i = j$ then $\left< \alpha, \beta \right> \in H_0 M = \ZZ$ is the signed number of intersection points.
-
-- Inverse Limit
-
-- Intersection Pairing
-	- The pairing obtained from dualizing Poincare Duality to obtain $$\mathrm{F}(H_i M) \tensor \mathrm{F}(H_{n-i}M) \to \ZZ$$
-	Computed as an oriented intersection number between two homology classes (perturbed to be transverse).
-
-- Intersection Form
-	- The nondegenerate bilinear form cohomology induced by the Kronecker Pairing: $$I: H^k(M_n) \cross H^{n-k}(M^n) \to \ZZ$$
-	where $n=2k$.
-      - When $k$ is odd, $I$ is skew-symmetric and thus a *symplectic form.*
-      - When $k$ is even (and thus $n \equiv 0 \mod 4$) this is a symmetric form.
-      - Satisfies $I(x,y) = (-1)^{k(n-k)} I(y, x)$
-
-- Kronecker Pairing
-	- A map pairing a chain with a cochain, given by $$H^n(X; R) \cross H_n(X; R) \to R \\ ([\psi, \alpha]) \mapsto \psi(\alpha)$$
-	which is a nondegenerate bilinear form.
-
-- Kronecker Product
-
-- Lefschetz duality
-
-- Lefschetz Number
-
-- Lens Space
-
-- Local Degree
-	- At a point $x \in V \subset M$, a generator of $H_n(V, V-\theset{x})$. The degree of a map $S^n \to S^n$ is the sum of its local degrees.
-
-- Local Orientation
-
-- Limit
-
-- Linear Independence
-	* A generating $S$ for a module $M$ is linearly independent if $\sum r_i s_i = 0_M \implies \forall i,~r_i = 0$ where $s_i\in S, r_i \in R$.
-
-- Local homology
-	* $H_n(X, X-A; \ZZ)$ is the local homology at $A$, also denoted $H_n(X \mid A)$
-
-- Local Homology
-
-- Local orientation of a manifold
-	* At a point $x\in M^n$, a choice of a generator $\mu_x$ of $H_n(M, M - \theset{x}) = \ZZ$.
-
-- Long exact sequence
-
-- Loop Space
-
-- Manifold
-	* An $n\dash$manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to $\RR^n$.
-
-- Manifold with boundary
-	* A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a half-space $\theset{\mathbf{x} \in \RR^n \mid x_i > 0}$.
-
-- Mapping Cone
-
-- Mapping Cylinder
-
-- Mapping Path Space
-
-- Mayer-Vietoris Sequence
-
-- Monodromy
-
-- Moore Space
-
-- N-cell
-
-- N-connected
-
-:::{.definition title="Nullhomotopic"}
-A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_0}$; that is, there exists a homotopy 
-\[  
-F: X\cross I &\to Y \\
-\restrictionof{F}{X\cross\theset{0}} &= f \quad F(x, 0) = f(x) \\
-\restrictionof{F}{X\cross\theset{1}} &= g  \quad F(x, 1) = g(x) = y_0\\
-.\]
-:::
-
-
-- Orientable manifold
-	* A manifold for which an orientation exists, see "Orientation of a Manifold".
-
-- Orientation Cover
-	* For any manifold $M$, a two sheeted orientable covering space $\tilde M_o$. $M$ is orientable iff $\tilde M$ is disconnected. Constructed as $$\tilde M = \coprod_{x\in M}\theset{\mu_x \mid \mu_x~ \text{is a local orientation}}$$
-
-- Orientation of a manifold
-	* A family of $\theset{\mu_x}_{x\in M}$ with local consistency: if $x,y \in U$ then $\mu_x, \mu_y$ are related via a propagation.
-		- Formally, a function $$M^n \to \coprod_{x\in M} H(X \mid \theset{x})\\ x \mapsto \mu_x$$ such that $\forall x \exists N_x$ in which  $\forall y\in N_x$, the preimage of each $\mu_y$ under the map $H_n(M\mid N_x) \surjects H_n(M\mid y)$ is a single generator $\mu_{N_x}$.
-	- TFAE:
-		- $M$ is orientable.
-		- The map $W: (M, x) \to \ZZ_2$ is trivial.
-		- $\tilde M_o = M \coprod \ZZ_2$ (two sheets).
-		- $\tilde M_o$ is disconnected
-		- The projection $\tilde M_o \to M$ admits a section.
-
-- Oriented manifold
-
-- Path
-
-- Path Lifting Property
-
-- Perfect Pairing
-	- A pairing alone is an $R\dash$bilinear module map, or equivalently a map out of a tensor product since $p: M\tensor_R N \to L$ can be partially applied to yield $\phi: M \to L^N = \hom_R(N, L)$. A pairing is **perfect** when $\phi$ is an isomorphism.
-		- Example: $\det_M: k^2 \cross k^2 \to k$
-
-- Poincare Duality
-	* For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is an isomorphism: $$ D: H^k(M; R) \to H_{n-k}(M; R) \\ D(\alpha) = [M] \frown \alpha$$
-
-- Projective Resolution
-
-- Properly Discontinuous
-
-- Pullback
-
-- Pushout
-
-- Quasi-isomorphism
-
-- R-orientability
-
-- Relative boundaries
-
-- Relative cycles
-
-- Relative homotopy groups
-
-- Retraction
-	* A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_A.$$
-	Equivalently $X \surjects_r A$ and $\restrictionof{r}{A} = \id_A$. If $X$ retracts onto $A$, then $i_*$ is injective.
-
-- Short exact sequence
-
-- Simplicial Complex
-
-- Simplicial Map
-	* For a map $$K\mapsvia{f} L$$ between simplicial complexes, $f$ is a simplicial map if for any set of vertices $\theset{v_i}$ spanning a simplex in $K$, the set $\theset{f(v_i)}$ are the vertices of a simplex in $L$.
-
-- Simply Connected
-
-- Singular Chain
-$$
-x \in C_n(x) \implies X = \sum_i n_i \sigma_i = \sum_i n_i (\Delta^n \mapsvia{\sigma_i} X)$$
-
-- Singular Cochain
-$$
-x \in C^n(x) \implies X = \sum_i n_i \psi_i = \sum_i n_i (\sigma_i \mapsvia{\psi_i} X)
-$$
-
-- Singular Homology
-
-
-- Smash Product
-
-- Surjection
-	* A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
-
-- Suspension
-Compact represented as $\Sigma X = CX \coprod_{\id_X} CX$, two cones on $X$ glued along $X$. Explicitly given by
-$$
-\Sigma X = \frac{X\cross I}{(X\cross \theset{0}) \union (X\cross \theset{1}) \union (\theset{x_0} \cross I)}
-$$
-
-- Tor Group
-	* For an $R\dash$module
-		$$\tor_R^n(\wait, B) = L_n(\wait \tensor_R B)$$
-		where $L_n$ denotes the $n$th left derived functor.
-
-- Universal Cover
-
-- Universal Coefficient Theorem for Cohomology
-
-- Universal Coefficient Theorem for Change of Coefficient Ring
-
-- Weak Homotopy Equivalence
-
-- Weak Topology
-
-- Wedge Product
-
 # Examples: Algebraic Topology
 
 ## Standard Spaces and Modifications
 
-* $K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
-$$
-\pi_k(K(G, n)) = 
+:::{.example title="Spheres and Balls"}
+\[
+\DD^n = \mathbb{B}^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
+\SS^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} = \bd \DD^n \\
+.\]
+
+> Note: I'll immediately drop the blackboard notation, this is just to emphasize that they're "canonical" objects.
+
+The sphere can be constructed in several equivalent ways:
+
+- $S^n \cong D^n / \bd D^n$: collapsing the boundary of a disc is homeomorphic to a sphere.
+- $S^n \cong D^n \Disjoint_{\bd D^n} D^n$: gluing two discs along their boundary.
+
+
+Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
+
+<!--\begin{tikzpicture}-->
+<!--\node (node_one) at (0,0) {-->
+<!--\includegraphics{/home/zack/SparkleShare/github.com/Qual-Review-and-Solutions/Topology/Review\ Doc/sections/figures/spheres_and_balls}-->
+<!--};-->
+
+<!--\node at (-5.6, 1) {$\DD^1$};-->
+<!--\node at (-0.2, 1) {$\DD^2$};-->
+<!--\node at (5.9, 1) {$\DD^3$};-->
+
+<!--\node at (-5.6, -5.5) {$\SS^0$};-->
+<!--\node at (-0.2, -5.5) {$\SS^1$};-->
+<!--\node at (5.9, -5.5) {$\SS^2$};-->
+<!--\end{tikzpicture}-->
+
+![Low Dimensional Discs/Balls vs Spheres](figures/image_2021-01-10-23-20-27.png)
+
+
+:::
+
+:::{.example title="Real Projective Space"}
+Constructed in one of several equivalent ways:
+
+- $S^n/\sim$ where $\vector x \sim -\vector x$, i.e. antipodal points are identified.
+- The space of lines in $\RR^{n+1}$.
+
+One can also define $\RP^ \infty \da \directlim_{n} \RP^n$.
+Fits into a fiber bundle of the form
+
+
+\begin{tikzcd}
+S^0 
+  \ar[r] 
+& 
+S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+:::
+
+:::{.example title="Complex Projective Space"}
+Defined in a similar ways, 
+
+- Taking the unit sphere in $\CC^n$ and identifying $\vector z \sim -\vector z$.
+- The space of lines in $\CC^{n+1}$
+
+Can similarly define $\CP^ \infty \da \directlim_n \CP^n$.
+Fits into a fiber bundle of the form
+
+\begin{tikzcd}
+S^1 
+  \ar[r] 
+& 
+S^{2n+1}
+  \ar[d] 
+\\
+& 
+\CP^n 
+\end{tikzcd}
+
+:::
+
+:::{.example title="Torii"}
+The $n\dash$torus, defined as 
+\[
+T^n \da \prod_{j=1}^n S^1 = S^1 \times S^1 \times \cdots
+.\]
+:::
+
+:::{.example title="Grassmannians"}
+The real Grassmannian, $\Gr(n, k)_{/\RR}$, i.e. the set of $k$ dimensional subspaces of $\RR^n$.
+One can similar define $\Gr(n, k)_{\CC}$ for complex subspaces.
+Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
+
+:::
+
+:::{.example title="Stiefel Manifolds"}
+The Stiefel manifold $V_{n}(k)_{\RR}$, the space of orthonormal $k\dash$frames in $\RR^n$?
+:::
+
+:::{.example title="Lie Groups"}
+Lie Groups:
+
+* The general linear group, $\GL_{n}(\RR)$
+  * The special linear group $SL_{n}(\RR)$
+* The orthogonal group, $O_{n}(\RR)$
+  * The special orthogonal group, $SO_{n}(\RR)$
+* The real unitary group, $U_{n}(\CC)$
+  * The special unitary group, $SU_{n}(\RR)$
+* The symplectic group $Sp(2n)$
+
+:::
+
+:::{.example title="More random geometric examples"}
+Some other spaces that show up, but don't usually have great algebraic topological properties:
+
+* Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_{n}(k)$
+* The projective space $\PP^n(k)$
+* The projective linear group over a ring $R$, $PGL_{n}(R)$
+* The projective special linear group over a ring $R$, $PSL_{n}(R)$
+* The modular groups $PSL_{n}(\ZZ)$
+  * Specifically $PSL_{2}(\ZZ)$
+:::
+
+:::{.example title="Eilenberg-MacLane Spaces"}
+$K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
+\[
+\pi_{k}(K(G, n)) = 
+\begin{cases}
+G & k=n, \\ 
+0 & \text{else}
+\end{cases}
+\]
+
+Some known examples:
+
+- $K(\ZZ, 1) = S^1$
+- $K(\ZZ, 2) = \CP^\infty$
+- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
+
+:::
+
+:::{.example title="Moore Spaces"}
+$M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
+\[
+H_{k}(M(G, n); G) = 
 \begin{cases}
 G & k=n, \\ 
 0 & k\neq n.
 \end{cases}
-$$
-	- $K(\ZZ, 1) = S^1$
-	- $K(\ZZ, 2) = \CP^\infty$
-	- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
+\]
 
-* $M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
-$$
-H_k(M(G, n); G) = 
-\begin{cases}
-G & k=n, \\ 
-0 & k\neq n.
-\end{cases}
-$$
-	- $M(\ZZ, n) = S^n$
-	- $M(\ZZ/2\ZZ, 1) = \RP^2$
-	- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
+Some known examples:
 
+- $M(\ZZ, n) = S^n$
+- $M(\ZZ/2\ZZ, 1) = \RP^2$
+- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
 
-* $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
+:::
 
-* $\mathbb{CP}^n = S^{2n+1} / S^1$
+:::{.fact title="about standard low-dimensional spaces"}
+\envlist
 
-* $T^n = \prod_n S^1$ is the $n\dash$torus
-
-* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_1, x_2, \ldots x_k}$ where each $x_i \in X$.
-
-
-
-* $B^n = \theset{\vector{v} \in \RR^n \mid \norm{\vector{v}} \leq 1} \subset \RR^n$
-
-* $S^{n-1} = \del B^{n} = \theset{\vector{v} \in \RR^{n} \mid \norm{\vector{v}} = 1} \subset \RR^n$
-
-![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
-
-* The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$
-
-* The real Grassmannian, $Gr(n, k, \RR)$, i.e. the set of $k$ dimensional subspaces of $\RR^n$
-
-* The Stiefel manifold $V_n(k)$
-
-* Possible modifications to a space $X$:
-	* Remove $k$ points by taking $D(k, X)$
-	* Remove a line segment
-	* Remove an entire line/axis
-	* Remove a hole
-	* Quotient by a group action (e.g. antipodal map, or rotation)
-	* Remove a knot
-	* Take complement in ambient space
-
-* Lie Groups
-  * The real general linear group, $\GL_n(\RR)$
-    * The real special linear group $SL_n(\RR)$
-    * The real orthogonal group, $O_n(\RR)$
-      * The real special orthogonal group, $SO_n(\RR)$
-    * The real unitary group, $U_n(\RR)$
-      * The real special unitary group, $SU_n(\RR)$
-    * The real symplectic group $Sp(n)$
-
-* "Geometric" Stuff
-  * Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_n(k)$
-  * The projective space $\PP^n(k)$
-    * The projective linear group over a ring $R$, $PGL_n(R)$
-    * The projective special linear group over a ring $R$, $PSL_n(R)$
-    * The modular groups $PSL_n(\ZZ)$
-      * Specifically $PSL_2(\ZZ)$
-
-## Facts About Low Dimensional and/or Standard Spaces
-
-
-- $S^{2n+1} \subset \CC^{n+1}$
-- $\RP^1 \cong S^1$
-- $\RP^n \cong S^n/S^0 \cong S^n / \ZZ/2\ZZ$.
-- $\CP^1 \cong S^2$
-- $\MM \homotopic S^1$
+- $\MM \homotopic S^1$ where $\MM$ is the Mobius band.
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 - $\CP^n = S^{2n+1} / S^n$
-- $S^n/S^k \cong S^n \vee \Sigma S^k$.
+- $S^n / S^k \homotopic S^n \vee \Sigma S^k$.
 
+:::
 
+:::{.remark title="Accidental isomorphisms"}
+In low dimensions, there are some "accidental" homeomorphisms:
 
-## Table of Homotopy and Homology Structures
+- $\RP^1 \cong S^1$
+- $\CP^1 \cong S^2$
+- $\SO(3) \cong \RP^2$?
+
+:::
+
+## Modifying Known Spaces
+
+:::{.example title="Deleting points"}
+Write $D(k, X)$ for the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_{1}, x_{2}, \ldots x_{k}}$ where each $x_{i} \in X$.
+:::
+
+:::{.example title="Bouquets of Spheres"}
+The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$.
+There's no standard name for this, but it's an interesting enough object to consider!
+:::
+
+:::{.example title="Other ways to modify a known space"}
+Possible modifications to a space $X$:
+
+* Remove a line segment
+* Remove an entire line/axis
+* Remove a hole
+* Quotient by a group action (e.g. antipodal map, or rotation)
+* Remove a knot
+* Take complement in ambient space
+
+:::
 
 # Low Dimensional Homology Examples
 
-\begin{align*}
+:::{.fact title="Table of low-dimensional homology"}
+\[
 \begin{array}{cccccccccc}
 S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \MM   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \RP^1 &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
-\RP^2 &=  &[&\ZZ, &\ZZ_2,             &0,    &0,      &0,    &0\rightarrow & ]\\
-\RP^3 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ,    &0,    &0\rightarrow & ]\\
-\RP^4 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ_2,  &0,    &0\rightarrow & ]\\
+\RP^2 &=  &[&\ZZ, &\ZZ_{2},             &0,    &0,      &0,    &0\rightarrow & ]\\
+\RP^3 &=  &[&\ZZ, &\ZZ_{2},             &0,    &\ZZ,    &0,    &0\rightarrow & ]\\
+\RP^4 &=  &[&\ZZ, &\ZZ_{2},             &0,    &\ZZ_{2},  &0,    &0\rightarrow & ]\\
  S^2  &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
 \TT^2 &=  &[&\ZZ, &\ZZ^2,             &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
-\KK   &=  &[&\ZZ, &\ZZ \oplus \ZZ_2,  &0,    &0,      &0,    &0\rightarrow & ]\\
+\KK   &=  &[&\ZZ, &\ZZ \oplus \ZZ_{2},  &0,    &0,      &0,    &0\rightarrow & ]\\
 \CP^1 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
 \CP^2 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &\ZZ,  &0\rightarrow & ]\\
 \end{array}
-.\end{align*}
+.\]
 
+:::
+
+# Table of Homotopy and Homology Structures
+
+:::{.remark}
+The following is a giant list of known homology/homotopy.
 
 \scriptsize
 
@@ -1428,12 +2123,12 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 | ----------------------------- | ---------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------            |
 | $\RR^1$                       | $0$                                            | $0$                                                                | $\ZZ\cdot 1 + \ZZ \cdot x$                         | 0                                                  |
 | $\RR^n$                       | $0$                                            | $0$                                                                | $(\ZZ \cdot 1 + \ZZ \cdot x)^n$                    | 0                                                  |
-| $D(k, \RR^n)$                 | $\pi_*\bigvee^k S^1$                           | $\bigoplus_k H_* M(\ZZ, 1)$                                        | $1 + kx$                                           | ?                                                  |
+| $D(k, \RR^n)$                 | $\pi_*\bigvee^k S^1$                           | $\bigoplus_{k} H_* M(\ZZ, 1)$                                        | $1 + kx$                                           | ?                                                  |
 | $B^n$                         | $\pi_*(\RR^n)$                                 | $H_*(\RR^n)$                                                       | $1 + x^n + x^{n+1}$                                | 0                                                  |
 | $S^n$                         | $[0 \ldots , \ZZ, ? \ldots]$                   | $H_*M(\ZZ, n)$                                                     | $1 + x^n$ or $\sum_{i=0}^n 2x^i$                   | $\ZZ[{}_{n}x]/(x^2)$                               |
 | $D(k, S^n)$                   | $\pi_*\bigvee^{k-1}S^1$                        | $\bigoplus_{k-1}H_*M(\ZZ, 1)$                                      | $1 + (k-1)x^1$                                     | ?                                                  |
-| $T^2$                         | $\pi_*S^1 \times \pi_* S^1$                    | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                          | $1 + 2x + x^2$                                     | $\Lambda({}_{1}x_1, {}_{1}x_2)$                    |
-| $T^n$                         | $\prod^n \pi_* S^1$                            | $\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$                       | $(1 + x)^n$                                        | $\Lambda({}_{1}x_1, {}_{1}x_2, \ldots {}_{1}x_n)$  |
+| $T^2$                         | $\pi_*S^1 \times \pi_* S^1$                    | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                          | $1 + 2x + x^2$                                     | $\Lambda({}_{1}x_{1}, {}_{1}x_{2})$                    |
+| $T^n$                         | $\prod^n \pi_* S^1$                            | $\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$                       | $(1 + x)^n$                                        | $\Lambda({}_{1}x_{1}, {}_{1}x_{2}, \ldots {}_{1}x_{n})$  |
 | $D(k, T^n)$                   | $[0, 0, 0, 0, \ldots]$?                        | $[0, 0, 0, 0, \ldots]$?                                            | $1 + x$                                            | ?                                                  |
 | $S^1 \vee S^1$                | $\pi_*S^1 \ast \pi_* S^1$                      | $(H_*M(\ZZ, 1))^2$                                                 | $1 + 2x$                                           | ?                                                  |
 | $\bigvee^n S^1$               | $\ast^n \pi_* S^1$                          | $\prod H_* M(\ZZ, 1)$                                              | $1 + x$                                            | ?                                                  |
@@ -1451,19 +2146,21 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 
 \normalsize
 
+:::
 
-Facts used to compute the above table:
+:::{.fact title="used to fill out the above table"}
+\envlist
 
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
 
-- $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
+- $D(k, \RR^n) = \RR^n - \theset{x_{1} \ldots x_{k}} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
 - $S^n \cong B^n / \del B^n$ and employs an attaching map 
 
-  \begin{align*}
-  \phi: (D^n, \del D^n) &\to S^n \\ 
-  (D^n, \del D^n) &\mapsto (e^n, e^0)
-  .\end{align*}
+\[
+\phi: (D^n, \del D^n) &\to S^n \\ 
+(D^n, \del D^n) &\mapsto (e^n, e^0)
+.\]
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
@@ -1473,7 +2170,7 @@ Facts used to compute the above table:
 
 - $\RP^1 \cong S^1$.
 
-- Use $\left[ \pi_1, \prod \right]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+- Use $\left[ \pi_{1}, \prod \right]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
 
 - Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
 
@@ -1485,120 +2182,287 @@ Facts used to compute the above table:
 
 - $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 
+:::
+
+
 
 
 # Theorems: Algebraic Topology
 
+## General Homotopies
+
+:::{.fact title="Contracting Spaces in Products"}
+\[
+X\cross \RR^n \homotopic X \cross \pt \cong X
+.\]
+:::
+
+:::{.fact title="$\pi_0, H_0$ detect path components"}
+The ranks of $\pi_{0}$ and $H_{0}$ are the number of path components.
+:::
+
+:::{.theorem title="Convex sets admit homotopies"}
+Any two continuous functions into a convex set are homotopic.
+:::
+
+:::{.proof title="?"}
+The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
+So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
+:::
+
 
 ## Fundamental Group
 
-Conjugacy in $\pi_1$:
+### Definition
 
-- See Hatcher 1.19, p.28
-- See Hatcher's proof that $\pi_1$ is a group
-- See change of basepoint map
+:::{.definition title="The Fundamental Group"}
+Given a pointed space $(X,x_{0})$, we define the fundamental group $\pi_{1}(X)$ as follows:
 
-- For a graph $G$, we always have $\pi_1(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
+- Take the set 
+\[
+L \da \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_{0}}
+.\]
 
-To calculate $\pi_1(X)$: construct a universal cover $\tilde X$, then find a group $G \actson \tilde X$ such that $\tilde X/G = X$; then $\pi_1(X) = G$ by uniqueness of universal covers.
+- Define an equivalence relation $\alpha \sim \beta$ iff  $\alpha \homotopic \beta$ in $X$, so there exists a homotopy 
 
-:::{.proposition title="?"}
-$\pi_0(X) = \ZZ$ iff $X$ is simply connected.
+\[
+H: &S^1 \cross I  \to X \\ 
+&
+\begin{cases}
+H(s, 0) = \alpha(s)\\
+H(s, 1) = \beta(s) ,
+\end{cases}
+\]
+- Check that this relation is 
+
+  - Symmetric:
+    Follows from considering $H(s, 1-t)$.
+
+  - Reflexive:
+    Take $H(s, t) = \alpha (s)$ for all $t$.
+
+  - Transitive:
+    Follows from reparameterizing.
+
+- Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_{0}}]$, the equivalence classes of loops after quotienting by this relation.
+
+- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on actual loops. 
+  Do this by reparameterizing:
+\[
+(\alpha \cdot \beta )(s) \da 
+\begin{cases}
+\alpha (2s) &  s \in [0, 1/2]
+\\
+\beta (2s-1) & 
+s \in [1/2, 1]
+.
+\end{cases}
+\]
+- Check that this map is:
+
+  - Continuous: by the pasting lemma and assumed continuity of $f, g$.
+
+  - Well-defined: ?
+
+- Check that this is actually a group
+
+  - Identity element: 
+    The constant loop $\id_{x_0}: I\to X$ where $\id_{x_0}(t) = x_0$ for all $t$.
+
+  - Inverses: 
+    The reverse loop $\bar \alpha(t) \da \alpha(1-t)$.
+
+  - Closure:
+    Follows from the fact that start/end points match after composing loops, and reparameterizing.
+
+  - Associativity:
+    Follows from reparameterizing.
+
 :::
 
-- $H_1$ is the abelianization of $\pi_1$.
-
-- Homotopy commutes with products: $\pi_k \prod X_i = \prod \pi_k X_i$.
-
-- Homotopy splits wedge products: $\pi_1 \bigvee X_i = \ast \pi_1 X_i$.
-
-## Homotopy
-
-\todo{Merge Van Kampen theorems.}
-
-Theorem (Van Kampen)
-:   The pushout is the northwest colimit of the following diagram
-    \begin{center}
-    \begin{tikzcd}
-    A \disjoint_Z B   & A \ar[d] \ar[l] \\
-    B \ar[u]\ar[r]          & Z \ar[l, "\iota_B"] \ar[u, "\iota_A"]
-    \end{tikzcd}
-    \end{center}
-
-    For groups, the pushout is given by the amalgamated free product: if $A = \generators{G_A \suchthat R_A}, B = \generators{G_B \suchthat R_B}$, then $$A \ast_Z B = \generators{G_A, G_B \suchthat R_A, R_B, T}$$ where $T$ is a set of relations given by $$T = \theset{\iota_A(z) \iota_B(z)\inv \suchthat z\in Z}.$$
+:::{.remark title="a summary"}
+Elements of the fundamental group are *homotopy classes of loops*, and every continuous map between spaces induces a homomorphism on fundamental groups.
+:::
 
 
-    Suppose $X = U_1 \union U_2$ such that $U_1\intersect U_2 \neq \emptyset$ is **path connected** (necessary condition).
-    Then taking $x_0 \in U\definedas U_1 \intersect U_2$ yields a pushout of fundamental groups
-
-    \begin{align*}
-    \pi_1(X; x_0) = \pi_1(U_1;x_0) \ast_{\pi_1(U; x_0)} \pi_1(U_2; x_0)
-    .\end{align*}
 
 
-Theorem (Van Kampen)
-:   If $X = U \union V$ where $U, V, U\intersect V$ are all path-connected then
 
-    \begin{align*}
-    \pi_1(X) = \pi_1 U \ast_{\pi_1(U \intersect V)} \pi_1 V
-    ,\end{align*}
+### Conjugacy in $\pi_{1}$:
 
-    where the amalgamated product can be computed as follows: 
-    If we have presentations
-
-    \begin{align*} 
-    \pi_{1}(U, w) &=
-    \left\langle u_{1}, \cdots, u_{k} \suchthat \alpha_{1}, \cdots, \alpha_{l}\right\rangle \\ 
-    \pi_{1}(V, w) &=\left\langle v_{1}, \cdots, v_{m} \suchthat \beta_{1}, \cdots, \beta_{n}\right\rangle \\ 
-    \pi_{1}(U \cap V, w) &=\left\langle w_{1}, \cdots, w_{p} \suchthat \gamma_{1}, \cdots, \gamma_{q}\right\rangle 
-    \end{align*}
-
-    then
-
-    \begin{align*}
-    \pi_{1}(X, w) 
-    &= \left\langle u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m}\right\rangle \\ 
-    &\mod 
-    \left\langle \alpha_{1}, \cdots, \alpha_{l}, \beta_{1}, \cdots, \beta_{n}, I\left(w_{1}\right) J\left(w_{1}\right)^{-1}, \cdots, I\left(w_{p}\right) J\left(w_{p}\right)^{-1}\right\rangle \\
-    &= \frac{\pi_1(U) \ast \pi_1(B)} {\generators{\theset{I(w_i) J(w_i)\inv \suchthat 1\leq i \leq p}}}
-    \end{align*}
-
-    where
-
-    \begin{align*}
-    I: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(U, w) \\
-    J: \pi_{1}(U \cap V, w) &\rightarrow \pi_{1}(V, w)
-    .\end{align*}
-
-Theorem (Seifert-van Kampen Theorem)
-:   Suppose $X = U_1 \union U_2$ where $U \definedas U_1 \intersect U_2 \neq \emptyset$ is path-connected, and let $\pt \in U$. Then the maps $i_1: U_1 \into X$ and $i_2: U_2 \into X$ induce the following group homomorphisms:
-
-    $$
-    i_1^*: \pi_1(U_1 ,\pt) \into \pi_1(X, \pt) \\
-    i_2^*: \pi_1(U_2 ,\pt) \into \pi_1(X, \pt)
-    $$
-
-    and letting $P = \pi_1(U), \pt$, there is a natural isomorphism
-
-    $$
-    \pi_1(X, \pt) \cong \pi_1(U_1, \pt) ~\ast_P~ \pi_1(U_2, \pt)
-    $$
-    where $\ast_P$ is the amalgamated free product over $P$.
-
-    \todo[inline]{Formulate in terms of pushouts.}
-
-    ![](figures/image_2020-06-01-00-07-39.png)
-
-Note that the hypothesis that $U\cap V$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
-
-Example (of pushing out with Van Kampen)
-:   $A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
-  
-  Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_A(z) = x^2$ and $\iota_B(z) = y^3$.
-  
-  So $$A\ast_Z B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
+- See Hatcher 1.19, p.28
+- See Hatcher's proof that $\pi_{1}$ is a group
+- See change of basepoint map
 
 
+### Calculating $\pi_1$ 
+
+:::{.proposition title="Using universal covers"}
+If $\tilde X \to X$ the universal cover of $X$ and $G\actson \tilde X$ with $\tilde X/G = X$ then $\pi_1(X) = G$. 
+:::
+
+:::{.proposition title="Killing homotopy"}
+$\pi_1 X$ for $X$ a CW-complex only depends on the 2-skeleton $X^{2}$, and in general $\pi_k(X)$ only depends on the $k+2$-skeleton.
+Thus attaching $k+2$ or higher cells does not change $\pi_k$.
+:::
+
+:::{.theorem title="Seifert-van Kampen"}
+Suppose $X = U_{1} \union U_{2}$ where $U_1, U_2$, and $U \da U_{1} \intersect U_{2} \neq \emptyset$ are open and path-connected 
+[^path_connected_necessary]
+
+
+, and let $x_0 \in U$. 
+
+Then the inclusion maps $i_{1}: U_{1} \injects X$ and $i_{2}: U_{2} \injects X$ induce the following group homomorphisms:
+\[
+i_{1}^*: \pi_{1}(U_{1}, x_0) \into \pi_{1}(X, x_0) \\
+i_{2}^*: \pi_{1}(U_{2}, x_0) \into \pi_{1}(X, x_0)
+\]
+
+There is a natural isomorphism
+\[
+\pi_{1}(X) \cong \pi_{1} U \ast_{\pi_{1}(U \intersect V)} \pi_{1} V
+,\]
+
+where the amalgamated product can be computed as follows:
+A **pushout** is the colimit of the following diagram
+
+\begin{tikzcd}
+A \Disjoint_{Z} B   & A\ar[l] \\
+B \ar[u]          & Z \ar[l, "\iota_{B}"] \ar[u, "\iota_{A}"]
+\end{tikzcd}
+
+![Example of a pushout of spaces](figures/image_2020-06-01-00-07-39.png)
+
+For groups, the pushout is realized by the amalgamated free product: if 
+\[
+\begin{cases}
+\pi_1 U_1 = A = \generators{G_{A} \suchthat R_{A}} \\
+\pi_1 U_2 = B = \generators{G_{B} \suchthat R_{B}}
+\end{cases}
+\implies 
+A \ast_{Z} B \da \gens{ G_{A}, G_{B} \suchthat R_{A}, R_{B}, T}
+\]
+where $T$ is a set of relations given by 
+\[
+T = \theset{\iota_{1}^*(z) \iota_{2}^*  (z) ^{-1}   \suchthat z\in \pi_1 (U_1 \intersect U_2)}
+,\]
+where $\iota_2^*(z) ^{-1}$ denotes the inverse group element.
+If we have presentations
+
+\[ 
+\pi_{1}(U, x_0) &=
+\left\langle u_{1}, \cdots, u_{k} \suchthat \alpha_{1}, \cdots, \alpha_{l}\right\rangle \\ 
+\pi_{1}(V, w) &=\left\langle v_{1}, \cdots, v_{m} \suchthat \beta_{1}, \cdots, \beta_{n}\right\rangle \\ 
+\pi_{1}(U \cap V, x_0) 
+&=\left\langle w_{1}, \cdots, w_{p} \suchthat \gamma_{1}, \cdots, \gamma_{q}\right\rangle 
+\]
+
+then
+\[
+\pi_{1}(X, w) 
+&= \left\langle 
+u_{1}, \cdots, u_{k}, v_{1}, \cdots, v_{m} 
+\middle\vert
+\begin{cases}
+\alpha_{1}, 
+\cdots, 
+\alpha_{l}
+\\
+\beta_{1}, 
+\cdots, 
+\beta_{n}
+\\
+  I\left(w_{1}\right) J\left(w_{1}\right)^{-1}, 
+  \cdots, 
+  I\left(w_{p}\right) J\left(w_{p}\right)^{-1}
+\\ 
+\end{cases}
+\right\rangle \\ \\
+&= 
+\frac{
+  \pi_{1}(U_1) \ast \pi_{1}(U_2)
+} {
+  \generators{
+    \theset{\iota_1^*(w_{i}) \iota_2^*(w_{i})\inv \suchthat 1\leq i \leq p}
+  }
+}
+\]
+
+[^path_connected_necessary]: 
+Note that the hypothesis that $U_1 \intersect U_2$ is path-connected is necessary: take $S^1$ with $U,V$ neighborhoods of the poles, whose intersection is two disjoint components.
+
+:::
+
+:::{.proof title="Sketch"}
+\envlist
+
+- Construct a map going backwards
+- Show it is surjective
+  - "There and back" paths
+- Show it is injective
+  - Divide $I\times I$ into a grid
+:::
+
+:::{.example title="Pushing out with van Kampen"}
+$A = \ZZ/4\ZZ = \gens{x \suchthat x^4}, B = \ZZ/6\ZZ = \gens{y \suchthat x^6}, Z = \ZZ/2\ZZ = \gens{z \suchthat z^2}$.
+Then we can identify $Z$ as a subgroup of $A, B$ using $\iota_{A}(z) = x^2$ and $\iota_{B}(z) = y^3$.
+So $$A\ast_{Z} B = \gens{x, y \suchthat x^4, y^6, x^2y^{-3}}$$.
+
+:::
+
+:::{.proposition title="$\pi_1$ of a wedge"}
+\[
+\pi_1(X \vee Y) = \pi_1(X) \ast \pi_1(Y)
+.\]
+:::
+
+:::{.proof title="?"}
+By van Kampen, this is equivalent to the amalgamated product over $\pi_1(x_0) = 1$, which is just a free product.
+:::
+
+### Facts
+
+:::{.fact}
+$H_{1}$ is the abelianization of $\pi_{1}$.
+:::
+
+:::{.proposition title="$\pi_1$ of a product, Hatcher 1.12"}
+If $X, Y$ are path-connected, then 
+\[
+\pi_1 (X \cross Y) = \pi_1(X) \cross \pi_2(Y)
+.\]
+:::
+
+:::{.proof title="sketch"}
+\envlist
+
+- A loop in \( X \cross Y \) is a continuous map \( \gamma : I \mapsvia{} X \cross Y \) given by \( \gamma (t) = (f(t), g(t) \) in components.
+- $\gamma$ being continuous in the product topology is equivalent to $f, g$ being continuous maps to $X, Y$ respectively.
+- Similarly a homotopy $F: I^2 \to X \cross Y$ is equivalent to a pair of homotopies $f_t, g_t$ of the corresponding loops.
+- So the map $[ \gamma ] \mapsto ([f], [g])$ is the desired bijection.
+:::
+
+:::{.proposition title="$\pi_1$ detects simply-connectedness"}
+$\pi_{1}(X) = 1$ iff $X$ is simply connected.
+:::
+
+:::{.proof title="?"}
+$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_{0}}]$, the identity element of $\pi_{1}(X)$. But then there is only one element in in this group.
+
+$\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_{0}}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
+:::
+
+
+:::{.fact "Unsorted facts"}
+\envlist
+
+- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
+
+:::
+
+
+## General Homotopy Theory
 
 :::{.theorem title="Whitehead's Theorem"}
 A map $X \mapsvia{f} Y$ on CW complexes that is a weak homotopy equivalence (inducing isomorphisms in homotopy) is in fact a homotopy equivalence.
@@ -1611,7 +2475,7 @@ Individual maps may not work: take $S^2 \cross \RP^3$ and $S^3 \cross \RP^2$ whi
 :::{.theorem title="Hurewicz"}
 The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\leq n}X \to H_{k\leq n} X$.
 
-> I.e. for the minimal $i\geq 2$ for which $\pi_iX \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_iX \cong H_iX$.
+> I.e. for the minimal $i\geq 2$ for which $\pi_{iX} \neq 0$ but $\pi_{\leq i-1}X = 0$, $\pi_{iX} \cong H_{iX}$.
 
 :::
 
@@ -1619,466 +2483,630 @@ The Hurewicz map on an $n-1\dash$connected space $X$ is an isomorphism $\pi_{k\l
 Any continuous map between CW complexes is homotopy equivalent to a cellular map.
 :::
 
-**Applications**:
+:::{.example title="Applications of cellular approximation"}
+\envlist
 
 - $\pi_{k\leq n}S^n = 0$
-- $\pi_n(X) \cong \pi_n(X^{(n)})$
+- $\pi_{n}(X) \cong \pi_{n}(X^{(n)})$
+:::
 
 :::{.theorem title="Freudenthal Suspension"}
-\todo[inline]{Todo}
+
 :::
+\todo[inline]{Theorem}
+
+:::{.fact title="Unsorted facts about higher homotopy groups}
+\envlist
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
 
-* The ranks of $\pi_0$ and $H_0$ are the number of path components, and $\pi_0(X) = \ZZ$ iff $X$ is simply connected.
 
-	* $X$ simply connected $\implies \pi_k(X) \cong H_k(X)$ up to and including the first nonvanishing $H_k$
-  * $H_1(X) = \mathrm{Ab}(\pi_1 X)$, the abelianization.
+	* $X$ simply connected $\implies \pi_{k}(X) \cong H_{k}(X)$ up to and including the first nonvanishing $H_{k}$
 
-* $\pi_k \bigvee X \neq \prod \pi_k X$ (counterexample: $S^1 \vee S^2$)
-  * Nice case: $\pi_1\bigvee X = \ast \pi_1 X$ by Van Kampen.
+* $\pi_{k} \bigvee X \neq \prod \pi_{k} X$ (counterexample: $S^1 \vee S^2$)
+  * Nice case: $\pi_{1}\bigvee X = \ast \pi_{1} X$ by Van Kampen.
 
-* $\pi_i(\hat X) \cong \pi_i(X)$ for $i\geq 2$ whenever $\hat X \surjects X$ is a universal cover.
+* $\pi_{i}(\hat X) \cong \pi_{i}(X)$ for $i\geq 2$ whenever $\hat X \surjects X$ is a universal cover.
 
-* $\pi_i(S^n) = 0$ for $i < n$, $\pi_n(S^n) = \ZZ$
-  * Not necessarily true that $\pi_i(S^n) = 0$ when $i > n$!!!
-    * E.g. $\pi_3(S^2) = \ZZ$ by Hopf fibration
+* $\pi_{i}(S^n) = 0$ for $i < n$, $\pi_{n}(S^n) = \ZZ$
+  * Not necessarily true that $\pi_{i}(S^n) = 0$ when $i > n$!!!
+    * E.g. $\pi_{3}(S^2) = \ZZ$ by Hopf fibration
 
 * $S^n / S^k \homotopic S^n \vee \Sigma S^{k}$
   * $\Sigma S^n = S^{n+1}$
 
 * General mantra: homotopy plays nicely with products, homology with wedge products.[^pullbacks]
-* $\pi_k\prod X = \prod \pi_k X$ by LES.[^homotopyproduct]
+* $\pi_{k}\prod X = \prod \pi_{k} X$ by LES.[^homotopyproduct]
 
-In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibrations and products), but not homotopy push-outs (e.g., cofibrations and wedges). Homology is the opposite.
+- In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibrations and products), but not homotopy push-outs (e.g., cofibrations and wedges). Homology is the opposite.
 
 
+- Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
-Constructing a $K(\pi, 1)$: since $\pi = \left< S \mid R\right> = F(S)/R$, take $\bigvee^{|S|} S^1 \union_{|R|} e^2$. In English, wedge a circle for each generator and attach spheres for relations.
 
-:::{.proposition title="Contracting Spaces in Products"}
-\[
-X\cross \RR^n \homotopic X \cross \pt \cong X
-.\]
 :::
-
----
 
 [^pullbacks]: More generally, in $\mathbf{Top}$, we can look at $A \from \pt \to B$ -- then $A\cross B$ is the pullback and $A \vee B$ is the pushout. In this case, homology $h: \mathbf{Top} \to \mathbf{Grp}$ takes pushouts to pullbacks but doesn't behave well with pullbacks. Similarly, while $\pi$ takes pullbacks to pullbacks, it doesn't behave nicely with pushouts.
 
 
 [^homotopyproduct]: This follows because $X\cross Y \surjects X$ is a fiber bundle, so use LES in homotopy and the fact that $\pi_{i\geq 2} \in \mathbf{Ab}$.
 
-# The Fundamental Group (Unsorted)
 
-## Lemma: The fundamental group of a CW-complex only depends on the 1-skeleton, and $H^k(X)$ only depends on the $k$-skeleton.
-
-## Definition: Homotopy
-
-Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a *homotopy* from $f$ to $g$ is a continuous function
-
-$F: X \cross I \into Y$
-
-such that
-
-$F(x, 0) = f(x)$ and  $F(x,1) = g(x)$
-
-for all $x\in X$. If such a homotopy exists, we write $f\homotopic g$. This is an equivalence relation on $\text{Hom}(X,Y)$, and the set of such classes is denoted $[X,Y] \definedas \hom (X,Y)/\homotopic$.
-
-## Definition: Nullhomotopic
-
-If $f$ is homotopic to a constant map, say $f: x \mapsto y_0$ for some fixed $y_0 \in Y$, then $f$ is said to be *nullhomotopic*. In other words, if $f:X\into Y$ is nullhomotopic, then there exists a homotopy $H: X\cross I \into Y$ such that $H(x, 0) = f(x)$ and $H(x, 1) = y_0$.
-
-Note that constant maps (or anything homotopic) induce zero homomorphisms.
-
-# Theorem: Any two continuous functions into a convex set are homotopic.
-
-Proof: The linear homotopy. Supposing $X$ is convex, for any two points $x,y\in X$, the line $tx + (1-t)y$ is contained in $X$ for every $t\in[0,1]$.
-So let $f, g: Z \into X$ be any continuous functions into $X$. Then define $H: Z \cross I \into X$ by $H(z,t) = tf(z) + (1-t)g(z)$, the linear homotopy between $f,g$. By convexity, the image is contained in $X$ for every $t,z$, so this is a homotopy between $f,g$.
-
-## Definition: Homotopy Equivalence
-
-Let $f: X \to Y$ be a continuous map, then $f$ is said to be a *homotopy equivalence* if there exists a continuous map $g: X \to Y$ such that
-
-$f\circ g \homotopic \id_Y$ and $g\circ f \homotopic \id_X$.
-
-Such a map $g$ is called a homotopy inverse of $f$, the pair of maps is a homotopy equivalence.
-
-If such an $f$ exists, we write $X \homotopic Y$ and say $X$ and $Y$ have the same homotopy type, or that they are homotopy equivalent.
-
-> Note that homotopy equivalence is strictly weaker than homeomorphic equivalence, i.e., $X\cong Y$ implies $X \homotopic Y$ but not necessarily the converse.
-
-## Definition: Contractible
-
-A topological space $X$ is *contractible* if $X$ is homotopy equivalent to a point, i.e. $X \homotopic \theset{x_0}$. This means that there exists a pair of homotopy inverses $f: X \into \theset{x_0}$ and $g:\theset{x_0} \into X$ such that $f\circ g = \id_{\theset{x_0}}$ and $g\circ f = \id_X$.
-
-This is a useful property, because it supplies you with a homotopy.
-
-# Definition: Deformation Retract
-
-Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
-
-Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
-
-A *deformation retract* is a homotopy $H:X\cross I \into X$ from the identity on $X$ to the identity on $A$ that fixes $A$ at all times. That is,
-$$
-H: X\cross I \to X \\
-H(x, 0) = \id_X \\
-H(x, 1) = \id_A \\
-x\in A \implies H(x, t) \in A \quad \forall t
-$$
-
-Equivalently, this requires that $\restrictionof{H}{A} = \id_A$
-
-A deformation retract between a space and a subspace is a homotopy equivalence, and further $X\homotopic Y$ iff there is a $Z$ such that both $X$ and $Y$ are deformation retracts of $Z$. Moreover, if $A$ and $B$ both have deformation retracts onto a common space $X$, then $A \homotopic B$.
-
-## Definition: The Fundamental Group / 1st Homotopy Group
-
-Given a pointed space $(X,x_0)$, we define the fundamental group $\pi_1(X)$ as follows:
-
-- Take the set $L = \theset{\alpha: S^1\into X \mid \alpha(0) = \alpha(1) = x_0}$.
-- Define an equivalence relation $\alpha \sim \beta$ iff there exists a homotopy $H: S^1 \cross I \into X$ such that $H(s, 0) = \alpha(s)$ and $H(s, 1) = \beta(s)$, i.e. if $f\homotopic g$ in $X$.
-  - Symmetric:
-  - Reflexive:
-  - Transitive:
-- Define $L/\sim$, which contains elements like $[\alpha]$ and $[\id_{x_0}]$, the equivalence classes of loops after quotienting by this relation.
-- Define a product structure: for $[\alpha], [\beta] \in L/\sim$, define $[\alpha][\beta] = [\alpha \cdot \beta]$, where we just need to define a product structure on bona fide loops. Just do this by reparameterizing:
-  $(f\cdot g)(s) = \mathbb{1}[s \in \left[0, \frac{1}{2}]\right]f(2s) + \mathbb{1}[s \in \left[\frac{1}{2}, 1]\right]g(2s-1)$
-  - Continuous: by the pasting lemma and assumed continuity of $f, g$
-  - Well-defined:
-- Check that this is actually a group
-  - Identity element:
-  - Closure:
-  - Associativity:
-  - Inverses:
-- Summary:
-  - Elements of the fundamental group are *homotopy classes of loops*.
-  - Continuous maps between spaces induce *some* homomorphism on fundamental groups.
-    - Inclusions
-
-# Theorem: $X$ is simply connected iff it has trivial fundamental group.
-
-By definition, $X$ is simply connected iff $X$ is path connected and every loop contracts to a point.
-
-$\Rightarrow$: Suppose $X$ is simply connected. Then every loop in $X$ contracts to a point, so if $\alpha$ is a loop in $X$, $[\alpha] = [\id_{x_0}]$, the identity element of $\pi_1(X)$. But then there is only one element in in this group.
-
-$\Leftarrow$: Suppose $\pi_1(X) = 0$. Then there is just one element in the fundamental group, the identity element, so if $\alpha$ is a loop in $X$ then $[\alpha] = [\id_{x_0}]$. So there is a homotopy taking $\alpha$ to the constant map, which is a contraction of $\alpha$ to a point.
 
 # Covering Spaces
 
+Some pictures to keep in mind when it comes to covers and path lifting: 
+
+![Picture to keep in mind](figures/image_2021-01-10-13-45-42.png)
+
+![A more complicated situation](figures/image_2021-01-09-00-19-03.png)
+
+## Useful Facts
+
+:::{.remark}
 When covering spaces are involved in any way, try computing Euler characteristics - this sometimes yields nice numerical constraints.
-
-Picture to keep in mind 
-
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Covering_space_diagram.svg/1200px-Covering_space_diagram.svg.png)-->
-
-Path lifting: 
-
-![image_2021-01-09-00-19-03](figures/image_2021-01-09-00-19-03.png)
-
-
-## Useful Covering Spaces
-
-- $\RR \mapsvia{\pi} S^1 \leftarrow \ZZ$
-- $\RR^n \mapsvia{\pi} T^n \leftarrow \ZZ^n$
-- $\RP^n \mapsvia{\pi} S^n \leftarrow \ZZ_2$
-- $\vee_n S^1 \mapsvia{\pi} C^n \leftarrow \ZZ^{\ast n}$ where $C^n$ is the $n\dash$valent Cayley Graph
-
-- $M \mapsvia{\pi} \tilde M \leftarrow \ZZ_2$, the orientation double cover
-- $T^2 \mapsvia{\times 2} \KK$
-- $L_{p/q} \mapsvia{\pi} S^3 \leftarrow \ZZ_q$
-- $\CC^* \mapsvia{z^n} \CC \leftarrow \ZZ_n$
-- For $A \mapsvia{\pi(\times d)} B$, we have $\chi(A) = d\chi(B)$
-- Covering spaces of orientable manifolds are orientable.
-
-
-## Theorems
-
-:::{.theorem title="Lifts to Universal Cover (H. 1.33)"}
-If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there is a unique lift $\hat f: Y\to \hat X \iff f_*(\pi_1 Y) \subset \pi_*(\pi_1 \hat X)$.
 :::
 
+:::{.fact title="Euler characteristics are multiplicative on covering spaces"}
+For $p: A \mapsvia{} B$ an $n\dash$fold cover,
+\[
+\chi(A) = n\, \chi(B)
+.\]
 
-## Useful Facts
+:::
 
-- Covering maps inject fundamental groups.
-	- If $\tilde X \surjects_p X$ is a covering space, then $\pi_1(\tilde X) \injects \pi_1 (X)$ as a subgroup.
-- The preimage of a boundary point under a covering map must also be a boundary point
-- An $n\dash$sheeted covering space $\tilde X \surjects X$ satisfies $\chi(\tilde X) = n\chi(X)$ when $\tilde X$ is compact.
-- For surfaces, covering spaces satisfy $\Sigma_{ij + 1} \surjects \Sigma_{i+1}$ for some $i, j$.
-- $\mathrm{Deck}(\tilde X) \definedas \theset{\varphi \in \hom_{\mathbf{Top}}(\tilde X, \tilde X): p\circ \varphi = p}  \cong \pi_1(X)$
-- $\tilde X \surjects_{\times k} X \implies [\pi_1(\tilde X) : \pi_1(X)] = k$ where $k =|p^{-1}(x_0)|$
-- Normal subgroups correspond to regular coverings (where automorphisms act freely/transitively, so highly symmetric)
+:::{.fact}
+Covering spaces of orientable manifolds are orientable.
+:::
+
+:::{.fact}
+The preimage of a boundary point under a covering map must also be a boundary point
+:::
+
+:::{.fact}
+Normal subgroups correspond to *normal/regular* coverings, where automorphisms act freely/transitively.
+These are "maximally symmetric".
+:::
+
+## Universal Covers
+
+:::{.proposition title="Existence of universal covers"}
+If $X$ is 
+
+- Connected,
+- Locally path-connected, and
+- Semilocally simply connected,
+
+then $X$ admits a universal cover: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
+
+\begin{tikzcd}
+	{C} && {\tilde X} \\
+	\\
+	{X}
+	\arrow["{q}", from=1-1, to=3-1, two heads]
+	\arrow["{p}", from=1-3, to=3-1, two heads]
+	\arrow["{\tilde p}"', from=1-3, to=1-1, dashed, two heads]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJYIl0sWzAsMCwiQyJdLFsyLDAsIlxcdGlsZGUgWCJdLFsxLDAsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiXFx0aWxkZSBwIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
+
+That is, any other cover $C$ of $X$ is itself covered by $\tilde X$.
+Note that by this universal property, $\tilde X$ is unique up to homeomorphism when it exists.
+:::
+
+:::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
+Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.
+Then there exists a unique homotopy $\tilde F:Y\to \tilde X$ of $\tilde F_0$ that lifts $F$:
+
+\begin{tikzcd}
+	{Y} && {\tilde X} \\
+	\\
+	{Y\cross I} && {X}
+	\arrow["{p}", from=1-3, to=3-3]
+	\arrow["{F}"', from=3-1, to=3-3]
+	\arrow["{\tilde F_0}", from=1-1, to=1-3]
+	\arrow["{\exists \tilde F}", from=3-1, to=1-3, dashed]
+	\arrow["{y \mapsto (y, 0)}"', from=1-1, to=3-1, hook]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJcXHRpbGRlIFgiXSxbMiwyLCJYIl0sWzAsMiwiWVxcY3Jvc3MgSSJdLFswLDAsIlkiXSxbMCwxLCJwIl0sWzIsMSwiRiIsMl0sWzMsMCwiXFx0aWxkZSBGXzAiXSxbMiwwLCJcXGV4aXN0cyBcXHRpbGRlIEYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMywyLCJ5IFxcbWFwc3RvICh5LCAwKSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+:::
+
+:::{.theorem title="Lifting criterion for covers, Hatcher 1.33"}
+If $f: Y\to X$ with $Y$ path-connected and locally path-connected, then there exists a unique lift $\tilde f: Y\to \tilde X$ if and only if $f_*(\pi_1(Y)) \subset \pi_*(\pi_1 (\tilde X))$:
 
 
-## Definition: Covering Maps
-
-A covering map of a space is a map $p: \tilde X \into X$ such that each open set $U\in X$ pulls back to a disjoint union of open sets (called sheets) in $\tilde X$ (referred to as the covering space). That is, $p^{-1}(U) = \coprod_i V_i \subseteq \tilde X$.
-
-If $\tilde X$is simply connected, it is the universal covering space - that is, for any other covering space $Y$ of $X$, $\tilde X$ is also a cover of $Y$. 
-We also have $\text{Aut}(\tilde X) \cong \pi_1(X)$ for universal covers - for other covers, $\text{Aut}(\tilde X) \cong N(\Gamma) / \Gamma$ where $N(\cdot)$ is the normalizer and $\Gamma$ is the set of homotopy classes of loops in $\tilde X$ that are lifted from loops in $X$.
-
-Covering spaces of $X$ are in (contravariant) galois correspondence with subgroups of $\pi_1(X)$, i.e. the covering map induces an injective map on fundamental groups.
-
-The number of sheets of a covering space is equal to $[p^*(\pi_1(\tilde X)): \pi_1(X)]$.
-
-### Example: Covering spaces
-
-Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
-Note the induced map $p_n^*: \pi_1(S^1) \into \pi_1(S^1)$ is given by $[\omega_1] \mapsto [\omega_n] = n[\omega_1]$ and so $p_n^*(\pi_1(S^1)) = \ZZ_n = \text{Aut}(\tilde X_n)$. (This can also be seen the other way, by looking at deck transformations which are rotations of the circle by $2\pi/n$)
-
-The universal cover of $S^1$ is $\RR$; this is an infinitely sheeted cover. The fiber above $x_0$ is equal to $\ZZ$. $A:=B$
-
-The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. The fiber above $x_0$ contains the two antipodal points.
-
-The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
-
-## Theorem: Homotopy Lifting
-
-The setup: given $p: \tilde X \surjects X$ a covering space of $X$, a map $f: Y \into X$, and a homotopy $H: Y\cross I \into X$ such that $f_0 \definedas H(y, 0)$ has a lift $\tilde f_0: Y\into \tilde X$.
-
-Then there is a unique homotopy $\tilde H: Y \cross I \into \tilde X$ satisfying $p\circ \tilde H = H$
-In other words, if the $t=0$ portion of a homotopy can be lifted to a cover, the entire homotopy can.
-
-## Theorem: Lifting Criterion
-
-Let $p:\tilde X \surjects X$ be a covering of $X$, and let $f:Y \into X$ be a map. Then there is an induced homomorphism $f^*: \pi_1(Y) \into \pi_1(X)$. There is also an induced map $p^*: \pi_1(\tilde X) \into \pi_1(X)$. We then have the following condition:
-
-There exists a lift $\tilde f: Y \into \tilde X$ satisfying $p\circ\tilde f = f$ iff $f^*(\pi_1(Y)) \subseteq p^*(\pi_1(\tilde X))$, i.e. when the fundamental group of $Y$ injects into the projected fundamental group of the cover.
-
-Note that if $Y$ is simply connected, then $\pi_1(Y) = 0$ and this holds automatically!
+\begin{tikzcd}
+	&& {\tilde X} \\
+	\\
+	{Y} && {X}
+	\arrow["{p}", from=1-3, to=3-3]
+	\arrow["{f}"', from=3-1, to=3-3]
+	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
+\end{tikzcd}
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIlxcdGlsZGUgWCJdLFsyLDEsInAiXSxbMCwxLCJmIiwyXSxbMCwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
 
 Moreover, lifts are *unique* if they agree at a single point.
+:::
 
-(Technically you need the base space to be connected and "locally pathwise connected")
+:::{.remark title="Automatic lifts"}
+Note that if $Y$ is simply connected, then $\pi_1(Y) = 0$ and this holds automatically!
+:::
 
+:::{.proposition title="Covering spaces induce injections on $\pi_1$, Hatcher 1.31"}
+Given a covering space $\tilde X \mapsvia{p} X$, the induced map $p^*: \pi_1(\tilde X) \to \pi_1(X)$ is injective.
+The image consists of classes $[\gamma]$ whose lifts to $\tilde X$ are again loops.
+:::
 
-## Theorem: Fundamental theorem of covering spaces
-For every subgroup $G \leq \pi_1(X)$, there is a corresponding covering space $X_G \surjects X$ such that $\pi_1(X_G) = G$. The universal cover is obtained by taking $G$ to be the trivial group.
+:::{.theorem title="Fundamental theorem of covering spaces, Hatcher 1.39"}
+For $\tilde X \mapsvia{p} X$ a covering space with
 
-Alternative phrasing: there is a contravariant, inclusion-reversing map from subgroups of $\pi_1(X)$ to covering spaces of $X$.
+- $\tilde X$ path-connected,
+- $X$ path-connected and locally path-connected,
 
+letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 
-## Theorem: If $Y$ is contractible, every map $f: X \into Y$ is nullhomotopic.
+1. $\tilde X$ is normal if and only if $H\normal \pi_1(X)$,
 
-If $Y$ is contractible, then $Y$ has the homotopy type of a point. So there is a homotopy $H: Y\cross I \into Y$ between $\id_Y$ and a constant map $c: y \mapsto y_0$. So construct $H': X\cross I \into Y$ as $H'(x, t) = H(f(x), t)$; then $H'(x, 0) = H(f(x), 0) = (\id_x \circ f)(x) = f(x)$ and $H'(x, 1) = H(f(x), 1) = (c \circ f)(x) = c(y) = y_0$ for some $y$. So $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
+2. $G(\tilde X) \cong \Aut_{\mathrm{Cov}(\tilde X) } N_{\pi_1(X)}(H)$, the normalizer of $H$ in $\pi_1(X)$.
 
-## Theorem: Any map that factors through a contractible space is nullhomotopic.
+In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
+:::
 
-Suppose we have the following commutative diagram:
+:::{.fact}
+There is a contravariant bijective correspondence
+\[
+\correspond{
+  \text{Connected covering spaces} \\
+  p: \tilde X \mapsvia{} X
+}_{/\sim}
+&\mapstofrom
+\correspond{
+  \text{Conjugacy classes of subgroups} \\
+  \text{of } \pi_1(X)
+}
+.\]
+If one fixes $\tilde x_0$ as a basepoint for $\pi_1(\tilde X)$, this yields
+\[
+\correspond{
+  \text{Connected covering spaces} \\
+  p: \tilde X \mapsvia{} X
+}_{/\sim}
+&\mapstofrom
+\correspond{
+  \text{Subgroups of } \pi_1(X)
+}
+.\]
 
-Then $f = p \circ \tilde f$. Every map into a contractible space is nullhomotopic, so if $Z$ is contractible, then there is a homotopy $\tilde H: X\cross I \into Z$ from $\tilde f$ to a constant map $c$. But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the constant map $p\circ c$.
+:::
 
-## Application: Showing when there is no covering map $f: X \into Y$
+:::{.proposition title="Number of sheets in a covering space, Hatcher 1.32"}
+For $X, \tilde X$ both path-connected, 
+the number of sheets of a covering space is equal to the index
+\[
+[p^*(\pi_1(\tilde X)): \pi_1(X)]
+.\]
 
-This can be done by lifting $f$ to $\tilde f: X \into \tilde Y$, the universal cover. If the covering space happens to be contractible, you get that $\tilde f$ is nullhomotopic. So there is a homotopy $\tilde H: X\cross I \into \tilde Y$ - but then $p\circ\tilde H: X \into Y$ descends to a homotopy of $f$. If you leave $f$ arbitrary, this would force $\pi_1(Y) = 0$.
+Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x_0)$.
 
-# Definition: Monodromy Action
-
-Given $X$ connected and locally connected, $p:\tilde X \to X$ a covering, and $\alpha$ a loop at $x\in X$, let $\tilde \alpha$ be its lift and $\tilde x\in p^{-1}(x)$ be the lifted point in the fiber above $x$. Then $\alpha$ acts on $\tilde x$ from the right, by the rule $\tilde x \curvearrowleft \alpha = \tilde\alpha(1)$.
-
-Then $\text{stab}(\tilde x) = p_*(\pi_1(\tilde X, \tilde x)) \subseteq \pi_1(X, x)$, and this induces a homomorphism $\pi_1(X, x) \into \text{Aut}(p^{-1}(x))$ which is a permutation of elements in the fiber above $x$.
-
-## Definition: Freely and Properly Discontinuous Group Actions
-Todo
-
-## Theorem: If $G$ induces a free and properly discontinuous group action on $X$, then $p: X \rightarrow X/G$ is a covering space
-
-Here $X/G$ denotes $X/\sim$  where $\forall x,y\in X, x\sim y \iff \exists g\in G \mid g.x = y$, i.e. all elements in a single orbit are identified.
-
-### Proof:
-
-Construct a map $\phi: G \rightarrow \pi_1(X/G, G.x_0)$ by $g \mapsto [p \circ \gamma_g]$
-
-where $\gamma_g(0) = x_0$ and $\gamma_g(1) = G.x_0$.
-
-- This is homomorphism:
-- This is well-defined:
-
-## Application: Fundamental group of the circle
-## Application: Fundamental group of the real projective plane
-
-## Constructing Covering Spaces
-For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a tree in which each $\tilde X_i$ is a vertex with one of $i$ colors denoting which space it covers. The neighborhood of each colored vertex has edges corresponding to $\pi_1(X_i)$.
-
-> If X and Y are two reasonable spaces with universal covers $\tilde X$ and $\tilde Y$, there is a nice picture of the universal cover $\widetilde{X\vee Y}$ which has the combinatorial pattern of an infinite tree.
-> The tree is bipartite with vertices labeled by the symbols $X$ and $Y$. 
-> The edges from an $X$ vertex are bijective correspondence with the fundamental group $\pi_1(X)$, and likewise for $Y$ vertices and $\pi_1(Y)$.
-> To make $\widetilde{X\vee Y}$, replace each $X$ vertex by $\tilde X$ and each $Y$ vertex by $\tilde Y$. 
-> The base point of $X$ lifts to $\abs{\pi_1(X)}$ points in $\tilde X$, and likewise for $Y$. 
-> In $\widetilde{X\vee Y}$, copies of $\tilde X$ are attached to copies of $\tilde Y$ at lifts of base points.
-
-**Example**: $S^1 \vee S^1 \to \ZZ \ast \ZZ$
-
-**Example**: $\RP^2 \vee \RP^2 \to \ZZ_2 \ast \ZZ_2$
-
-
-**Example**: $\RP^2 \vee T^2 \to \ZZ_2 \ast \ZZ$
-
-![Image](figures/tree_cover.png)
-
-
-## Application: Every subgroup of a free group is free
-Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
-
-#  CW and Simplicial Complexes
-
-## Useful Facts
-- To build a Moore space $M(n, \ZZ_p)$, take $X = S^n$ and attach $e^{n+1}$ via a map $\Phi: S^n = \del B^{n+1}\to X^{(n)} = S^n$ of degree $p$.
-	- To obtain $M(n, \prod G_i)$ take the corresponding $\bigvee X_i$
-	- Can also use Mayer Veitoris to conclude $H_{n+1}(\Sigma X) = H_n(X)$, and just suspend spaces with known homology.
-
-## Theorem: Van Kampen's Theorem
-
-Claim: If $X = U \union V$ and $U \intersect V$ is nonempty and "nice", then $\pi_1(X) = \pi_1(U) ~\ast_{\pi_1(U \intersect V)}~ \pi_1(V)$.
-
-### Proof
-
-- Construct a map going backwards
-- Show it is surjective
-  - "There and back" paths
-- Show it is injective
-  - Divide $I\times I$ into a grid
-
-## Definition: CW Complex
+:::
 
 ### Examples
 
-- $\mathbb{RP}^n = e^1 \cup e^2 \cup \cdots \cup e^n$
-- $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
-- $S^\infty = \varinjlim S^n$
+:::{.example title="The circle $S^1$"}
+Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
+The induced map can be described on generators as
+\[
+p_n^*: \pi_1(S^1) &\to \pi_1(S^1) \\
+[\omega_1] &\mapsto [\omega_n] = n[\omega_1]
+\]
+and so the image is isomorphic to $n\ZZ$ and thus
+\[
+p_n^*(\pi_1(S^1)) = \Aut_{\mathrm{Cov} }(\tilde X_n) = \ZZ/n\ZZ
+.\]
+where the deck transformations are rotations of the circle by $2\pi/n$.
+The universal cover of $S^1$ is $\RR$; this is an infinitely sheeted cover, and the fiber above $x_0$ has cardinality $\abs{\ZZ}$. 
 
-# Definition: The Degree of  Map $S^n \into S^n$
+:::
 
-Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. But homomorphisms of this type are entirely determined by their action on generators. So if $f^*(1) = n$, define $n$ to be the degree of $f$.
+:::{.example title="Projective $n\dash$space $\RP^n$"}
+The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover. 
+The fiber above $x_0$ contains the two antipodal points.
+:::
 
-Properties and examples:
+:::{.example title="The torus"}
+The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
+:::
+
+:::{.fact}
+For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
+
+- Each vertex corresponds to one of the universal covers $\tilde X_i$,
+- The color corresponds to which summand $\tilde X_i$ appears,
+- T
+The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
+:::
+
+:::{.example title="Covering spaces of wedges of spheres"}
+The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$, and the universal cover is the following 4-valent Cayley graph:
+
+![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
+
+See Hatcher p.58 for other covers.
+
+:::
+
+:::{.corollary title="Every subgroup of a free group is free"}
+Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+
+:::
+
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinite string of copies of 2-valent $S^2$s:
+
+![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
+
+:::
+
+:::{.example title="of a universal covering space"}
+The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
+Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
+
+![Universal cover of $\TT^2 \vee \RP^2$](figures/tree_cover.png)
+
+:::
+
+### Applications 
+
+:::{.theorem title="Maps into contractible spaces are always nullhomotopic"}
+If $X$ is contractible, every map $f: Y \into X$ is nullhomotopic.
+:::
+
+:::{.proof title="?"}
+If $X$ is contractible, there is a homotopy $H: X\cross I \into X$ between $\id_X$ and a constant map $c: x \mapsto x_0$. 
+So construct 
+\[
+H': Y\cross I &\to X \\
+H'(y, t) 
+&\da 
+\begin{cases}
+H(f(y), 0) = (\id_X \circ f)(y) = f(y) & t=0 \\
+H(f(y), 1) = (c \circ f)(y) = c(y) = x_0 & t=1 \\
+H(f(y), t) & \text{else}.
+\end{cases}
+\]
+Then $H'$ is a homotopy between $f$ and a constant map, and $f$ is nullhomotopic.
+:::
+
+:::{.corollary title="Factoring through a contractible space implies nullhomotopic"}
+Any map $f:X\to Y$ that factors through a contractible space $Z$ is nullhomotopic.
+:::
+
+:::{.proof title="?"}
+We have the following situation
+where $f = p \circ \tilde f$:
+
+\begin{tikzcd}
+	&& {Z} \\
+	\\
+	{Y} && {X}
+	\arrow["{p}", from=1-3, to=3-3]
+	\arrow["{\tilde f}", from=3-1, to=1-3, dashed]
+	\arrow["{f}"', from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJZIl0sWzIsMiwiWCJdLFsyLDAsIloiXSxbMiwxLCJwIl0sWzAsMiwiXFx0aWxkZSBmIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMSwiZiIsMl1d)
+
+Since every map into a contractible space is nullhomotopic, there is a homotopy $\tilde H: Y\cross I \into Z$ from $\tilde f$ to a constant map $c: Y\to Z$, say $c(y) = z_0$ for all $y$. 
+But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
+:::
+
+:::{.proposition title="Application: showing one space can not cover another"}
+There is no covering map $p: \RP^2 \to \TT^2$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Use the fact that $\pi_1(\TT^2) \cong \ZZ^2$ and $\pi_1(\RP^2) = \ZZ/2\ZZ$ are known.
+- The universal cover of $\TT^2$ is $\RR^2$, which is contractible.
+- Using the following two facts, $p_*$ is the trivial map:
+  - By the previous results, $p$ is thus nullhomotopic.
+  - Since $p$ is a covering map, $p_*: \ZZ/2\ZZ \injects \ZZ^2$ is injective.
+- Since $p$ was supposed a cover, this can be used to imply that $\id_{\TT^2}$ is nullhomotopic.
+- Covering maps induce injections on $\pi_1$, and the only way the trivial map can be injective is if $\pi_1(T^2) = 0$, a contradiction. 
+:::
+
+:::{.theorem title="When actions yield covering maps onto their quotients, Hatcher 1.40"}
+If $G\actson X$ is a free and properly discontinuous action, then 
+
+1. The quotient map $p:X \to X/G$ given by $p(y) = Gy$ is a normal covering space,
+
+2. If $X$ is path-connected, then $G = \Aut_{\mathrm{Cov}} (X)$ is the group of deck transformations for the cover $p$,
+
+3. If $X$ is path-connected and locally path-connected, then $G\cong \pi_1(X/G) / p_*(\pi_1(X))$.
+
+:::
+
+:::{.fact title="Some common covering spaces"}
+\begin{tikzcd}
+\ZZ 
+  \ar[r] 
+& 
+\RR
+  \ar[d] 
+\\
+& 
+S^1 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^n 
+  \ar[r] 
+& 
+\RR^n
+  \ar[d] 
+\\
+& 
+\TT^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/2\ZZ 
+  \ar[r] 
+& 
+S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^{\ast n} 
+  \ar[r] 
+& 
+\mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+\bigvee_n S^1 
+\end{tikzcd}
+given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+
+
+- $T^2 \mapsvia{\times 2} \KK$
+- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
+- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
+
+:::
+
+#  CW and Simplicial Complexes
+
+\todo[inline]{Missing a lot on CW complexes}
+
+## Degrees 
+
+:::{.fact title="Useful properties of the degree of a map between spheres"}
+\envlist
 
 - $\text{deg}~\id_{S^n} = 1$
+
 - $\text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g$
+
 - $\text{deg}~r = -1$ where $r$ is any rotation about a hyperplane, i.e. $r(\thevector{x_1 \cdots x_i \cdots x_n}) = \thevector{x_1 \cdots -x_i \cdots x_n}$.
+
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
+:::
 
-# Definition: Simplicial Complex
+## Examples of CW Complexes/Structures 
 
-Given a simplex $\sigma = [v_1 \cdots v_n]$, define the face map $\del_i:\Delta^n \into \Delta^{n-1}$, where $\del_i\sigma = [v_1 \cdots \hat v_i \cdots v_n]$.
+:::{.example title="Spheres"}
+$S^n = e^0 \union e^n$: a point and an $n\dash$cell.
+:::
 
-A simplicial complex is a set $K$ satisfying
+:::{.example title="Real Projective Space"}
+$\RP^n = e^1 \cup e^2 \cup \cdots \cup e^n$: one cell in each dimension.
+:::
 
-1. $\sigma \in K \implies \del_i\sigma \in K$
-2. $\sigma,\tau\in K \implies \sigma\intersect\tau = \emptyset,~ \del_i\sigma,~\text{or}~\del_i\tau$
-   1. This amounts to saying that any collection of $(n-1)$-simplices uniquely determines an $n$-simplex (or its lack thereof), or that that map $\Delta^k \into X$ is a continuous injection from the standard simplex in $\RR^n$.
-3. $\abs{K\intersect B_\varepsilon(\sigma)} < \infty$ for every $\sigma\in K$, identifying $\sigma \subseteq \RR^n$.
+:::{.example title="Complex Projective Space"}
+$\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
+:::
 
-To write down a simplicial complex, label the vertices with increasing integers. Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
+:::{.example title="Surfaces"}
+![Fundamental domains](figures/1513064067523.png)
+:::
 
 ## Examples of Simplicial Complexes
 
+:::{.remark}
+To write down a simplicial complex, label the vertices with increasing integers. 
+Then each $n$-cell will correspond to a set of $n+1$ of these integers - throw them in a list.
+:::
+
+:::{.example title="Torus"}
 ![Torus](figures/1513062466927.png)
+:::
 
+:::{.example title="Klein Bottle and $\RP^2$"}
 ![Klein Bottle and $\RP^2$](figures/1513062526623.png)
+:::
 
+:::{.example title="Non-example"}
 For counterexamples, note that this fails to be a triangulation of $T$:
 
 ![Not a Torus](figures/1513062599096.png)
 
-This fails - for example, the simplex $[1,2,1]$ does not uniquely determine a triangle in the above picture.
+This fails - for example, the specification of a simplex $[1,2,1]$ does not uniquely determine a triangle in the this picture.
+:::
 
-## Templates for Triangulation
 
-You can always triangulate a space by triangulating something homeomorphic, so for common spaces you can work with these fundamental domains:
+## Cellular Homology
 
-![1513064067523](figures/1513064067523.png)
+* $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
 
-![Image](figures/image_2020-09-20-01-57-11.png)
+How to compute:
 
-# Homology
+1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
 
-## Unsorted
+2. Compute differentials $\del_{i}: C^i \to C^{i-1}$
 
-- $H_n(X/A) \cong \tilde H_n(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
+3. *Note: if $C^0$ is a point, $\del_{1}$ is the zero map.*
 
-- Useful fact: since $\ZZ$ is free, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
+4. *Note: $H_{n} X = 0 \iff C^n = \emptyset$.*
 
-- Useful fact: $\tilde H_*(A\vee B) \cong H_*(A) \times H_*(B)$.
+5. Compute degrees: Use $\del_{n}(e_{i}^n) = \sum_{i} d_{i} e_{i}^{n-1}$ where $$d_{i} = \deg(\text{Attach }e_{i}^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
 
-- $H_n(\bigvee_\alpha X_\alpha) = \bigoplus_\alpha H_n X_\alpha$
-- $H_n(X, A) \cong H_n(X/A)$
-- $H_n(X) = 0 \iff X$ has no $n\dash$cells.
-- $C^0 X = \pt \implies d_1: C^1 \to C^0$ is the zero map.
-- $H^*(X; \FF) = \hom(H_*(X; \FF),\FF)$ for a field.
+  Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
 
-- Useful tools:
-  - Mayer-Vietoris
-    - $(X = A \union B) \mapsto (\intersect, \oplus, \union)$ in homology
-  - LES of a pair
-	  - $(A \injects X) \mapsto (A, X, X/A)$
-  - Excision
+6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
 
-* $H_k \prod X \neq \prod H_k X$ due to torsion.
-  * Nice case: $H_k (A\cross B) = \prod_{i+j=k} H_i A \tensor H_j B$ by Kunneth when all groups are torsion-free.[^kunneth]
-* $H_k \bigvee X = \prod H_k X$ by Mayer-Vietoris.[^wedge]
-* $H_i(S^n) = \indic{i \in \theset{0, n}}$
-* $H_n(\bigvee_i X_i) \cong \prod_i H_n(X_i)$ for "good pairs"
-  * Corollary: $H_n(\bigvee_k S^n) = \ZZ^k$
+7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
 
-\begin{align*}
-X = A\cup B \implies
-&A\cap B \to A \oplus B \to A \cup B \mapsvia{\delta} \cdots
-(X,A) \implies
-&A \to X \to X,A \mapsvia{\delta} \cdots\\
-A\to B \to C \implies
-& \tor(A, G) \to \tor(B, G) \to \tor(C, G) \mapsvia{\delta_\downarrow} \cdots \\
-A\to B \to C \implies
-& \ext(A, G) \to \ext(B, G) \to \ext(C, G) \mapsvia{\delta_\uparrow} \cdots
-\end{align*}
-
+  For example:
+\[
+\begin{matrix}
+\mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix} 
+\to
+\begin{matrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix}
+\begin{matrix}
+\mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
+\end{matrix} \\
+\ker = 
+\begin{matrix}
+2\\-1\\0\\0
+\end{matrix} 
+\begin{matrix}
+3\\0\\-1\\-1
+\end{matrix}\\
+\im = \generators{a+2b+2d,c-d}
+.\]
+  
+6. Or look at elementary divisors, say $n_{i}$, then the image is isomorphic to $\bigoplus n_{i} \ZZ$
 
 
 ## Constructing a CW Complex with Prescribed Homology
 
-- Given $G = \bigoplus G_i$, and want a space such that $H_i X = G$? Construct $X = \bigvee X_i$ and then $H_i (\bigvee X_i) = \bigoplus H_i X_i$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_n(Y) = G$.
-  - Attach an $e^n$ to a point to get $H_n = \ZZ$
-  - Then attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_n = \ZZ_d$
+Given $G = \bigoplus G_{i}$, and want a space such that $H_{i} X = G$? Construct $X = \bigvee X_{i}$ and then $H_{i} (\bigvee X_{i}) = \bigoplus H_{i} X_{i}$. Reduces problem to: given a group $H$, find a space $Y$ such that $H_{n}(Y) = G$.
+By the structure theorem of finitely generated abelian groups, it suffices to know how to do this for $\ZZ$ and $\ZZ/n\ZZ$, since their powers are just obtained by wedging (previous remark).
+Recipe:
+
+1. Attach an $e^n$ to a point to get $H_{n} = \ZZ$
+
+2. Attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_{n} = \ZZ_{d}$
+
+
+# Homology
+
+## Useful Facts
+
+:::{.fact}
+$H_0(X)$ is a free abelian group on the set of path components of $X$.
+Thus if $X$ is path connected, $H_0(X) \cong \ZZ$.
+In general, $H_0(X) \cong \ZZ^{\abs{\pi_0(X)}}$, where $\abs{\pi_0(X)}$ is the number of path components of $X$.
+:::
+
+:::{.proposition title="Homology commutes with wedge products"}
+\[
+\tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
+H_{n}\qty{\bigvee_\alpha X_\alpha} &\cong \prod_\alpha H_{n} X_\alpha
+\]
+See footnote for categorical interpretation.[^wedge]
+
+
+[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
+
+:::
+\todo[inline]{May need some good pair condition?}
+
+:::{.example title="Application"}
+\[
+H_{n}(\bigvee_{k} S^n) = \ZZ^k
+.\]
+:::
+
+:::{.proof title="?"}
+Mayer-Vietoris. 
+:::
+
+:::{.warnings}
+$H_{k} \qty{ \prod_ \alpha X_ \alpha}$ is **not** generally equal to $\prod_ \alpha \qty{ H_{k} X_ \alpha }$.
+The obstruction is due to torsion -- if all groups are torsionfree, then the Kunneth theorem[^kunneth] yields 
+\[
+H_{k} (A\cross B) = \prod_{i+j=k} H_{i} A \tensor H_{j} B
+\]
+
+[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbf{x} \in \mathcal{P}(n,k) \implies \mathbf{x} = (x_{1}, x_{2}, \ldots, x_{k})$ where $\sum x_{i}  = n$. Then
+\[
+H_{n}\qty{\prod_{j=1}^k X_{j}} = \bigoplus_{\mathbf{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_{i}}(X_{i}).
+\]
+
+:::
+
+:::{.theorem title="Excision"}
+Todo
+:::
+\todo[inline]{Excision.}
+
+:::{.fact title="Assorted facts}
+\envlist
+
+- $H_{n}(X) = 0 \iff X$ has no $n\dash$cells.
+- $C^0 X = \pt \implies d_{1}: C^1 \to C^0$ is the zero map.
+:::
+
+## Known Homology
+
+:::{.example title="Spheres"}
+\[
+H_{i}(S^n) = 
+\begin{cases}
+\ZZ & i = 0, n
+\\
+0 & \text{else}.
+\end{cases}
+\]
+:::
+
+:::{.example title="Real Projective Spaces"}
+
+:::
+
+:::{.example title="Complex Projective Spaces"}
+
+:::
+
+:::{.example title="Surfaces"}
+
+:::
+
+\todo[inline]{Homology examples.}
 
 ## Mayer-Vietoris
 
-Theorem (Mayer Vietoris)
-:   Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
-    \begin{align*}
-    0 \to C_n(A\intersect B) \mapsvia{x\mapsto (x, -x)} C_n(A) \oplus C_n(B) \mapsvia{(x, y) \mapsto x+y} C_n(A + B) \to 0
-    \end{align*}
-    
-    where $C_n(A+B)$ denotes the chains that are sums of chains in $A$ and chains in $B$.
-    This yields a LES in homology:
+:::{.fact title="Useful algebra fact"}
+Since $\ZZ$ is free and thus projective, any exact sequence of the form $0 \to \ZZ^n \to A \to \ZZ^m \to 0$ splits and $A\cong \ZZ^{n}\cross \ZZ^m$.
+:::
 
-    \begin{align*}
-    \cdots \to H_n(A\intersect B) \mapsvia{x\mapsto (x, -x)} H_n(A) \oplus H_n(B) \mapsvia{(x, y) \mapsto x+y} H_n(X) \to \cdots
-    .\end{align*}
+:::{.theorem title="Mayer-Vietoris"}
+> Mnemonic: $X = A \union B \leadsto (\intersect, \oplus, \union)$
 
-
-Given $A,B \subset X$ such that $A^\circ \cup B^\circ = X$, there is a long exact sequence in homology:
-
-\begin{center}
-\begin{tikzcd}
- &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_3"'] \\
- &  &  &  &  \\
-H_2(A\cap B) \arrow[rr] \arrow[rr, "{(i^*, -j^*)_2}"] &  & H_2 A \oplus H_2 B \arrow[rr, "(l^* - r^*)_2"] &  & H_2 (A\cup B) \arrow[lllldd, "\delta_2"', out=0, in=-180] \\
- &  &  &  &  \\
-H_1(A\cap B) \arrow[rr, "{(i^*, -j^*)_1}"] &  & H_1 A \oplus H_1 B \arrow[rr, "(l^*-r^*)_1"] &  & H_1 (A\cup B) \arrow[lllldd, "\delta_1"', out=0, in=-180] \\
- &  &  &  &  \\
-H_0 (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_0 A \oplus H_0 B \arrow[rr, "(l^* - r^*)_0"] &  & H_0 (A\cup B) \arrow[lllldd, "\delta_0"', out=0, in=-180] \\
- &  &  &  &  \\
-0 &  &  &  &
-\end{tikzcd}
-\end{center}
-
-
-This is sometimes written in the following compact form:
-$$ \cdots  H_n(A \cap B) \xrightarrow{(i^*,~ j^*)} H_n(A) \oplus H_n(B) \xrightarrow{l^* - r^*}  H_n(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots$$
-
-Where
+Let $X = A^\circ \union B^\circ$; then there is a SES of chain complexes
+\[
+0 \to C_{n}(A\intersect B) \mapsvia{x\mapsto (x, -x)} C_{n}(A) \oplus C_{n}(B) \mapsvia{(x, y) \mapsto x+y} C_{n}(A + B) \to 0
+\]
+where $C_{n}(A+B)$ denotes the chains that are sums of chains in $A$ and chains in $B$.
+This yields a LES in homology:
+\[
+\cdots  H_{n}(A \cap B) \xrightarrow{(i^*,~ j^*)} H_{n}(A) \oplus H_{n}(B) \xrightarrow{l^* - r^*}  H_{n}(X) \xrightarrow{\delta} H_{n-1}(A\cap B)\cdots
+\]
+where
 
 - $i: A\cap B \hookrightarrow A$ induces $i^*: H_*(A\cap B) \to H_*(A)$
 
@@ -2088,233 +3116,184 @@ Where
 
 - $r: B \hookrightarrow A\cup B$ induces $r^*: H_*(B) \to H_*(X)$
 
-The connecting homomorphisms $\delta_n :H_n(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_n(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_i$ where each $c_i$ is an $x+y$ chain. Then $\del(c_i) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
+
+
+More explicitly, 
+
+\begin{tikzcd}
+ &  &  &  & \cdots \arrow[lllldd, out=0, in=-180, "\delta_{3}"'] 
+ \\
+ &  &  &  &  
+ \\
+H_{2}(A\cap B) \arrow[rr] \arrow[rr, "{(i^*, -j^*)_2}"] &  & H_{2} A \oplus H_{2} B \arrow[rr, "(l^* - r^*)_2"] &  & H_{2} (A\cup B) \arrow[lllldd, "\delta_{2}"', out=0, in=-180] 
+\\
+ &  &  &  &  
+ \\
+H_{1}(A\cap B) \arrow[rr, "{(i^*, -j^*)_1}"] &  & H_{1} A \oplus H_{1} B \arrow[rr, "(l^*-r^*)_1"] &  & H_{1} (A\cup B) \arrow[lllldd, "\delta_{1}"', out=0, in=-180] 
+\\
+ &  &  &  &  
+ \\
+H_{0} (A\cap B) \arrow[rr, "{(i^*, -j^*)_0}"] &  & H_{0} A \oplus H_{0} B \arrow[rr, "(l^* - r^*)_0"] &  & H_{0} (A\cup B) \arrow[lllldd, "\delta_{0}"', out=0, in=-180] 
+\\
+ &  &  &  &  
+ \\
+0 &  &  &  &
+\end{tikzcd}
+
+The connecting homomorphisms $\delta_{n} :H_{n}(X) \to H_{n-1}(X)$ are defined by taking a class $[\alpha] \in H_{n}(X)$, writing it as an $n$-cycle $z$, then decomposing $z = \sum c_{i}$ where each $c_{i}$ is an $x+y$ chain. Then $\del(c_{i}) = \del(x+y) = 0$, since the boundary of a cycle is zero, so $\del(x) = -\del(y)$. So then just define $\delta([\alpha]) = [\del x] = [-\del y]$.
 
 Handy mnemonic diagram:
-\begin{align*}
+\[
 \begin{matrix}
  && A\intersect B & \\
 &\diagup &  & \diagdown \\
 A\union B & & \longleftarrow &  & A \oplus B
 \end{matrix}
-.\end{align*}
+.\]
 
-### Application: Isomorphisms in the homology of spheres.
+:::
 
-:::{.proposition title="?"}
+:::{.example title="Application: computing the homology of a connect sum"}
+$H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
+:::
+
+:::{.proposition title="Application: isomorphisms in the homology of spheres"}
 \[H^i(S^n) \cong H^{i-1}(S^{n-1}).\]
 :::
 
 :::{.proof}
 Write $X = A \cup B$, the northern and southern hemispheres, so that $A \cap B = S^{n-1}$, the equator. In the LES, we have:
 
-\begin{align*}
+\[
 H^{i+1}(S^n) \xrightarrow{} H^i(S^{n-1}) \xrightarrow{} H^iA \oplus H^i B \xrightarrow{} H^i S^n \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} H^{i-1}A \oplus H^{i-1}B
-.\end{align*}
+.\]
 
 But $A, B$ are contractible, so $H^iA= H^iB = 0$, so we have
 
-\begin{align*}
+\[
 H^{i+1}(S^n) \xrightarrow{} H^{i}(S^{n-1}) \xrightarrow{} 0 \oplus 0 \xrightarrow{}H^i(S^n) \xrightarrow{} H^{i-1}(S^{n-1}) \xrightarrow{} 0
-.\end{align*}
+.\]
 
 In particular, we have the shape $0 \to A \to B \to 0$ in an exact sequence, which is always an isomorphism.
 
 :::
 
-
-
-:::{.theorem title="Eilenber-Zilber"}
-Given two spaces $X, Y$, there are chain maps
-
-\begin{align*}
-F: C_*(X\cross Y; R)              &\to C_*(X; R) \tensor_R C_*(Y; R) \\
-G: C_*(X; R) \tensor_R C_*(Y; R)  &\to C_*(X\cross Y; R) 
-\end{align*}
-
-such that $FG = \id$ and $GF \homotopic \id$.
-In particular,
-\begin{align*}
-H_*(X\cross Y; R) &\cong H_*(X; R) \tensor_R H_*(Y; R)
-.\end{align*}
-:::
+## More Exact Sequences
 
 :::{.theorem title="Kunneth"}
 There exists a short exact sequence
-$$
-0 \to \bigoplus_{i+j=k} H_j(X; R) \tensor_R H_{i}(Y; R) \to H_k(X\cross Y; R) \to \bigoplus_{i+j=k-1} \tor_R^1(H_i(X; R), H_{j}(Y; R))
-$$
-It has a non-canonical splitting given by
-$$
-H_k (X\cross Y) = \left( \bigoplus_{i+j = k} H_i X \oplus H_j Y\right) \oplus \bigoplus_{i+j = k-1}\tor(H_iX, H_j Y)
-$$
+\[
+0 \to \prod_{i+j=k} H_{j}(X; R) \tensor_{R} H_{i}(Y; R) \to H_{k}(X\cross Y; R) \to \prod_{i+j=k-1} \tor_{R}^1(H_{i}(X; R), H_{j}(Y; R))
+.\]
+If $R$ is a free \(R\dash\)module, a PID, or a field, then there is a (non-canonical) splitting given by
+\[
+H_{k} (X\cross Y) \cong \left( \prod_{i+j = k} H_{i} X \oplus H_{j} Y\right) \cross \prod_{i+j = k-1}\tor(H_{i}X, H_{j} Y) \\
+\]
 :::
-
 
 :::{.theorem title="UCT for Change of Group"}
 For changing coefficients from $\ZZ$ to $G$ an arbitrary group, there are short exact sequences
-$$
-0 \to H_i X \tensor G \to H_i(X; G) \to \tor(H_{i-1}X, G) \to 0
-$$
 
-$$
-0 \to \ext (H_{i-1} X, G) \to H^i(X;G) \to \hom(H_i X, G) \to 0
-$$
+\[
+0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A) &\to H_{i}(X;A)\to \Tor_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0 \\
+& \quad \Downarrow \\ \\
+0 \to H_{i} X \tensor G &\to H_{i}(X; G) \to \tor_\ZZ^1(H_{i-1}X, G) \to 0 
+\]
+and 
+\[
+0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A) &\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0 \\
+&\quad \Downarrow \\ \\ 
+0 \to \ext (H_{i-1} X, G) &\to H^i(X;G) \to \hom(H_{i} X, G) \to 0
+.\]
+These split unnaturally:
+\[
+H_{i}(X;G) &= (H_{iX}\tensor G) \oplus \tor(H_{i-1}X; G) \\
+H^i(X; G) &= \hom(H_{i}X, G) \oplus \ext(H_{i-1}X; G)
+\]
 
-which split unnaturally:
-$$
-H_i(X;G) = (H_iX\tensor G) \oplus \tor(H_{i-1}X; G)
-$$
+When all of the $H_{i}X$ are all finitely generated (e.g. if $G$ is a field), writing $H_{i}(X; \ZZ) = \ZZ^{\beta_{i}} \oplus T_{i}$ as the sum of a free and a torsionfree module, we have
+\[
+H^i(X; \ZZ) &\cong \ZZ^{\beta_{i}} \times T_{i-1} \\
+H^i(X; A) &\cong \qty{H_i(X; G)}\dual \da \hom_\ZZ(H_{i}(X; G), G)
+.\]
 
-$$
-H^i(X; G) = \hom(H_iX, G) \oplus \ext(H_{i-1}X; G)
-$$
+In other words, letting $F(\wait)$ be the free part and $T(\wait)$ be the torsion part, we have
+\[
+H^i(X; \ZZ) &= F(H_{i}(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
+H_{i}(X; \ZZ) &= F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
+\]
+:::
+\todo[inline]{Might need assumptions: finite CW complex?}
 
-When $H_iX$ are all finitely generated, write $H_i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_i$. Then
-$$
-H^i(X; \ZZ) = \ZZ^{\beta_i} \oplus T_{i-1}.
-$$
+## Relative Homology
+
+:::{.fact title="Some assorted facts"}
+\envlist
+
+- $H_{n}(X/A) \cong \tilde H_{n}(X, A)$ when $A\subset X$ has a neighborhood that deformation retracts onto it.
+
+- LES of a pair
+  - $(A \injects X) \mapsto (A, X, X/A)$
+
+- For CW complexes $X = \theset{X^{(i)}}$, we have 
+\[
+H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
+\]
+- $H_{n}(X, A) \cong_? H_{n}(X/A, \pt)$
 
 :::
 
 
 
-### Useful Long Exact Sequences
 
-#### Mayer Vietoris
-\[
-\cdots \to H^{i}(X)\to H^{i}(U)\oplus H^{i}(V)\to H^{i}(U\cap V)\mapsvia{\delta} H^{i+1}(X)\to \cdots
-\]
-
-#### LES of a Pair 
-\[
-\cdots \to H_{i}(A)\to H_{i}(X)\to H_{i}(X,A){\stackrel{\delta }{\to }}H_{{i-1}}(A)\to \cdots
-\]
-
-### Useful Short Exact Sequences
-
-> Note that $\ext_R^0 = \hom_R$ and $\tor_R^0 = \tensor_R$
-
-#### Homology to Cohomology
-$$
-\displaystyle 0\to \tor_\ZZ^0 (H_{i}(X;\ZZ), A)\,{\to }\,H_{i}(X;A)\to \operatorname {Tor}_\ZZ^1 (H_{i-1}(X;\ZZ ),A)\to 0
-.$$
-
-#### Cohomology to Dual of Homology
-$$
-0\to \ext_{\ZZ}^{1}(H_{i-1}(X; \ZZ),A)\to H^{i}(X; A)\to \ext_{\ZZ}^{0}(H_{i}(X; \ZZ),A) \to 0
-.$$
-
-#### Product of Spaces to Tensor Product in Homology
-$$
-0\to \bigoplus _{{i+j=k}}H_{i}(X;R)\otimes _{R}H_{j}(Y;R)\to H_{k}(X\times Y;R)\to \bigoplus _{{i+j=k-1}}{\mathrm  {Tor}}_{1}^{R}(H_{i}(X;R),H_{j}(Y;R))\to 0
-$$
-
-### Useful Shortcuts
-
-* Cohomology: If $A$ is a field, then $$H^i(X; A) \cong \hom(H_i(X; A), A)$$
-
-* Kunneth: If $R$ is a freely generated free $R\dash$module (or a PID or a field), then
-$$ 
-H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(X))
-$$
-
-* Universal Coefficients Theorem: If $X$ is a finite CW complex then
-$$
-H^i(X; \ZZ) = F(H_i(X; \ZZ)) \times T(H_{i-1}(X; \ZZ))\\
-H_i(X; \ZZ) = F(H^i(X; \ZZ)) \times T(H^{i+1}(X; \ZZ))
-$$
-
-## Cellular Homology
-
-* $S^n$ has the CW complex structure of 2 $k$-cells for each $0\leq k \leq n$.
-
-How to compute:
-
-1. Write cellular complex $$0 \to C^n \to C^{n-1} \to \cdots C^2 \to C^1 \to C^0 \to 0$$
-2. Compute differentials $\del_i: C^i \to C^{i-1}$
-    3. *Note: if $C^0$ is a point, $\del_1$ is the zero map.*
-    4. *Note: $H_n X = 0 \iff C^n = \emptyset$.*
-    5. Compute degrees: Use $\del_n(e_i^n) = \sum_i d_i e_i^{n-1}$ where $$d_i = \deg(\text{Attach }e_i^n \to \text{Collapse } X^{n-1}\dash\text{skeleton}),$$ which is a map $S^{n-1} \to S^{n-1}$.
-	    1. Alternatively, choose orientations for both spheres. Then pick a point in the target, and look at points in the fiber. Sum them up with a weight of +1 if the orientations match and -1 otherwise.
-    6. Note that $\ZZ^m \mapsvia{f} \ZZ^n$ has an $n\times m$ matrix
-    7. Row reduce, image is span of rows with pivots. Kernel can be easily found by taking RREF, padding with zeros so matrix is square and has all diagonals, then reading down diagonal - if a zero is encountered on $n$th element, take that column vector as a basis element with $-1$ substituted in for the $n$th entry.
-    e.g.
-    
-    \begin{align*}
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} 
-    \to
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix}
-    \begin{matrix}
-    \mathbf1&2&0&2\\0&\mathbf0&0&0\\0&0&\mathbf1&-1\\0&0&0&\mathbf0
-    \end{matrix} \\
-    \ker = 
-    \begin{matrix}
-    2\\-1\\0\\0
-    \end{matrix} 
-    \begin{matrix}
-    3\\0\\-1\\-1
-    \end{matrix}\\
-    \im = \generators{a+2b+2d,c-d}
-    .\end{align*}
-     
-    6. Or look at elementary divisors, say $n_i$, then the image is isomorphic to $\bigoplus n_i \ZZ$
-
-
-[^kunneth]: The generalization of Kunneth is as follows: write $\mathcal{P}(n, k)$ be the set of partitions of $n$ into $k$ parts, i.e. $\mathbf{x} \in \mathcal{P}(n,k) \implies \mathbf{x} = (x_1, x_2, \ldots, x_k)$ where $\sum x_i  = n$. Then
-$$
-H_n\qty{\prod_{j=1}^k X_j} = \bigoplus_{\mathbf{x} \in \mathcal{P}(n,k)} \bigotimes_{i=1}^{k} H_{x_i}(X_i).
-$$
-[^wedge]: $\bigvee$ is the coproduct in the category $\mathbf{Top}_0$ of pointed topological spaces, and alternatively, $X\vee Y$ is the pushout in $\mathbf{Top}$ of $X \from \pt \to Y$
-
-
-# Homology
-
-## Useful Facts
-- $H_*(A \# B)$: Use the fact that $A\# B = A \union_{S^n} B$ to apply Mayer-Vietoris.
-- $H_n(X, A) \cong_? H_n(X/A, \pt)$
-- For CW complexes $X = \theset{X^{(i)}}$, we have 
-\[
-H_n(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{otherwise}\end{cases} \qquad\text{ since } X^k/X^{k-1} \cong \bigvee S^k
-\]
 
 # Fixed Points and Degree Theory
 
-Theorem (Lefschetz Fixed Point)
-: If $\Lambda_f \neq 0$ then $f$ has a fixed point, where $X\selfmap_f$ and $\Lambda_f = \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(H_k(X; \QQ) \selfmap_{f_*})$.
+:::{.theorem title="Lefschetz Fixed Point"}
+For $f:X\to X$, define the **trace** of $f$ to be
+\[
+\Lambda_f \da \sum_{k \geq 0} (-1)^k ~\mathrm{Tr}(f_* \mid H_k(X; \QQ))
+\]
+where $f_*: H_k(X; \QQ) \to H_k(X; \QQ)$ is the induced map on homology.
+If $\Lambda_f \neq 0$ then $f$ has a fixed point.
+:::
 
-Theorem: (Brouwer Fixed Point)
-: Every $B^n \selfmap_f$ has a fixed point.
+:::{.theorem title="?"}
+Every $f: B^n \to B^n$ has a fixed point.
+:::
 
-Theorem (Hairy Ball)
-: There is no non-vanishing tangent vector field on even dimensional spheres.
+:::{.proof title="?"}
 
-Theorem (Borsuk-Ulam)
-: For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
+:::
+\todo[inline]{Proof}
 
-Theorem (Ham Sandwich)
-:   \todo[inline]{Todo}
+:::{.theorem title="Hairy Ball"}
+There is no non-vanishing tangent vector field on even dimensional spheres $S^{2n}$.
+:::
 
-\todo{Review and collect notes from Hatcher.}
+:::{.theorem title="Borsuk-Ulam"}
+For every $S^n \mapsvia{f} \RR^n \exists x\in S^n$ such that $f(x) = f(-x)$.
+:::
 
 # Surfaces and Manifolds
 
-## Classification of Surfaces
-
-![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
-
+:::{.remark}
 The most common spaces appearing in this theory:
 
-- $\bbm$ the Möbius Strip
 - $\SS ^2$, 
 - $\TT^2 \definedas  S^1\cross S^1$, 
 - $\RP^2$
 - $\KK$ the Klein bottle
+- $\bbm$ the Möbius Strip
 - $\Sigma_n \definedas \#_{i=1}^n \TT^2$.
+
+The first 4 can be obtained from the following pasting diagrams:
+
+![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
+
+:::
+
+## Classification of Surfaces
 
 :::{.theorem title="Classification of Surfaces"}
 The set of surfaces under connect sum forms a monoid with the presentation
@@ -2337,12 +3316,14 @@ In each case, there is a formula
 \]
 :::
 
+:::{.fact table="Table of surfaces possible for a given Euler characteristic"}
 
-| Orientable? | $-4$       | $-3$        | $-2$            | $-1$        | $0$                         | $1$         | $2$         |
-| ------------  | ---        | ----        | ----            | ---         | ---                         | ---         | ---         |
-| Yes           | $\Sigma_3$ | $\emptyset$ | $\Sigma_2$ | $\emptyset$ | $\TT^2, S^1\cross I$ | $\DD^2$ | $\SS^2$     |
-| No            | ?          | ?           | ?               | ?           | $\KK, \bbm$                  | $\RP^2$     | $\emptyset$ |
+| Orientable?  | $-4$       | $-3$        | $-2$       | $-1$        | $0$                  | $1$     | $2$         |
+| ------------ | ---        | ----        | ----       | ---         | ---                  | ---     | ---         |
+| Yes          | $\Sigma_3$ | $\emptyset$ | $\Sigma_2$ | $\emptyset$ | $\TT^2, S^1\cross I$ | $\DD^2$ | $\SS^2$     |
+| No           | ?          | ?           | ?          | ?           | $\KK, \bbm$          | $\RP^2$ | $\emptyset$ |
 
+:::
 
 :::{.proposition title="Inclusion-Exclusion"}
 \[  
@@ -2354,7 +3335,6 @@ Todo
 :::
 \todo{Proof.}
 
-
 :::{.corollary title="Euler for Connect Sums"}
 \[  
 \chi(A \# B) = \chi(A) + \chi(B) - 2
@@ -2364,13 +3344,11 @@ Todo
 Set $U= A, B=V$, then by definition of the connect sum, $A\cap B = \SS^2$ where $\chi(\SS^2) = 2$
 :::
 
-
 :::{.proposition title="Decomposing $\RP^2$"}
 \[  
 \RP^2 = \bbm \disjoint_{\id_{\bd \bbm}} \bbm
 .\]
 :::
-
 
 :::{.proposition title="Decomposing a Klein Bottle"}
 \[  
@@ -2382,7 +3360,6 @@ Todo
 :::
 \todo{Proof.}
 
-
 :::{.proposition title="Rewriting a Klein Bottle"}
 \[  
 \RP^2 \# \KK \cong \RP^2 \# \TT^2
@@ -2393,60 +3370,110 @@ Todo
 :::
 \todo{Proof.}
 
-
 ## Manifolds
 
-> To show something is not a manifold, try looking at local homology. Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
-
-- $M^n$ closed/connected $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
-- 3-manifolds:
-  - Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
-  - Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
-
-
-* $H^n(M^n) = \ZZ$ if $M^n$ is orientable and zero if $M^n$ is nonorientable.
-* Poincaré Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
-
-On the complements of spaces in $\RR^3$:
-
-> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
-> Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
-
-If $M$ is a closed 3-manifold and $K$ is a nullhomologous knot in $M$, then $H_1(X -n(K)) \cong H_1(X) \times \ZZ$ where $n(K)$ is a tubular neighborhood.
-
-:::{.proposition title="Homology of Sphere minus a knot"}
-For $M = S^3 \setminus K$, $H_*(M) = [\ZZ, \ZZ, 0, 0, \cdots]$.
-:::
-:::{.proof}
-Apply Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. 
-Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
-
+:::{.remark}
+To show something is not a manifold, try looking at local homology. 
+Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
 :::
 
+:::{.proposition title="Dimension vanishing for homology of manifolds"}
+If $M^n$ is a closed and connected $n\dash$manifold, then $H^{\geq n} X = 0$.
+:::
 
+:::{.proposition title="Top homology for manifolds"}
+If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
+More generally, 
+\[
+\begin{cases}
+\ZZ & M^n \text{ is orientable } 
+\\
+0 & \text{else}.
+\end{cases}
+\]
+:::
 
-- Every $\CC\dash$manifold is canonically orientable.
-- If $M^n$ is **closed and connected**, then $H_{\geq n}(X) = 0$ and $M^n$ is orientable iff $H_n(X) = \ZZ$.
-- If $M^n$ is a **closed orientable manifold without boundary**, then $H^k(M^n; F) \cong H_{n-k}(M^n; F)$ for a field $F$.
-- This is a strict implication, so failure of the RHS implies missing conditions on the LHS.
-- The intersection pairing is nondegenerate modulo torsion.
-- If $M^n$ is a **closed orientable manifold with boundary** then  $H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)$
-- $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
-- $M^n$ closed and $n$ odd implies $\chi(M^n) = 0$.
-- Any map $X \to Y$ with $X$ factors through the orientation cover $\tilde Y_o$.
-  - If $Y$ is non-orientable, this is a double cover.
-- If $n$ is odd, $\chi(M^n) = 0$ by Poincaré Duality.
+:::{.proposition title="Poincaré Duality for manifolds"}
+For $M^n$ a closed orientable manifold without boundary and $\FF$ a field,
+\[
+H_k(M^n; \FF) \cong H^{n-k}(M^n; \FF)
+\iff
+M^n \text{ is closed and orientable}
+.\]
 
+:::
 
+:::{.proposition title="Relative Poincaré Duality for manifolds"}
+If $M^n$ is a closed orientable manifold with boundary then 
+\[
+H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)
+.\]
+:::
 
-:::{.theorem title="Poincare Duality"}
-Todo
+:::{.proposition title="Known Euler characteristics"}
+If $M^n$ is closed and $n$ is odd, then $\chi(M^n) = 0$.
+:::
+
+:::{.proof title="?"}
+Todo.
+Uses Poincaré duality?
+:::
+\todo[inline]{Proof!}
+
+:::{.proposition title="Nondegenerate intersection pairings"}
+For $M^n$ closed and orientable, the intersection pairing is nondegenerate modulo torsion.
+:::
+
+:::{.proposition title="Orientation covers"}
+For any manifold $X$ there exists a covering space $p: \tilde X_o\to X$, the **orientation cover**, where any map $Y\to X$ factors through $\tilde X_o$.
+If $X$ is nonorientable, then $p$ is a double cover.
 :::
 
 :::{.theorem title="Lefschetz Duality"}
 Todo
 :::
+\todo[inline]{Statement of Lefschetz duality.}
 
+### 3-Manifolds, and Knot Complements
+
+:::{.fact}
+Every $\CC\dash$manifold is canonically orientable.
+:::
+
+:::{.proposition title="Homology of 3-manifolds"}
+Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
+
+- Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
+
+- Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
+
+:::
+
+:::{.proposition title="Homotopy type of knot complements"}
+For $K$ a knot, $S^3\sm K$ is a $K(\pi, 1)$, and $\RR^3 \sm K \homotopic S^2 \vee \qty{S^3 \sm K}$.
+Moreover, if $K$ is nullhomologous and $X$ is any 3-manifold, 
+\[
+H_1\qty{X\sm \nu(K)} \cong H_1 X \cross \ZZ
+\]
+where $\nu(K)$ is a tubular neighborhood of $K$.
+:::
+
+:::{.proof title="?"}
+Todo
+:::
+\todo[inline]{todo}
+
+:::{.proposition title="Homology of knot complements in $S^3$"}
+For $K$ a knot,
+\[
+H_*(S^3 \sm K) = [\ZZ, \ZZ, 0, 0, \cdots]
+.\]
+:::
+
+:::{.proof}
+Apply Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. 
+Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
+:::
 
 
 # Extra Problems: Algebraic Topology
@@ -2470,19 +3497,24 @@ Todo
 
 Let $X = \RR^3 - \Delta^{(1)}$, the complement of the skeleton of regular tetrahedron, and compute $\pi_1(X)$ and $H_*(X)$.
 
+:::{.solution}
 Lay the graph out flat in the plane, then take a maximal tree - these leaves 3 edges, and so $\pi_1(X) = \ZZ^{\ast 3}$.
 
 Moreover $X \homotopic S^1\vee S^1 \vee S^1$ which has only a 1-skeleton, thus $H_*(X) = [\ZZ, \ZZ^3, 0\rightarrow]$.
 
+
+:::
+
 ## 2 
 
 Let $X = S^1 \cross B^2 - L$ where $L$ is two linked solid torii inside a larger solid torus. Compute $H_*(X)$.
-?
+\todo[inline]{Solution}
 
 ## 3 
 
 Let $L$ be a 3-manifold with homology $[\ZZ, \ZZ_3, 0, \ZZ, \ldots]$ and let $X = L \cross \Sigma L$. Compute $H_*(X), H^*(X)$.
 
+:::{.solution}
 Useful facts:
 
 - $H_{k}(X\times Y) \cong \bigoplus _{{i+j=k}}H_{i}(X)\otimes H_{j}(Y) \bigoplus_{i+j=k-1}\tor(H_i(X), H_j(Y))$
@@ -2507,12 +3539,14 @@ $$H_*(X) = [\ZZ, \ZZ\times \ZZ_3, \ZZ_3, \ZZ \times \ZZ_3, \ZZ^2 \times \ZZ_3, \
 
 and $$H^*(X)= [\ZZ, \ZZ, 0,\ZZ,\ZZ^2,0,0,\ZZ] \times [0, 0,\ZZ_3,\ZZ_3,\ZZ_3,\ZZ_3,\ZZ_3^2,0] \\ = [\ZZ, \ZZ, \ZZ_3,\ZZ\times \ZZ_3,\ZZ^2\times \ZZ_3,\ZZ_3,\ZZ_3^2,\ZZ].$$
 
-$\qed$
+
+:::
 
 ## 4 
 
 Let $M$ be a closed, connected, oriented 4-manifold such that $H_2(M; \ZZ)$ has rank 1. Show that there is not a free $\ZZ_2$ action on $M$.
 
+:::{.solution}
 Useful facts:
 
 - $X \surjects_{\times p} Y$ induces $\chi(X) = p\chi(Y)$
@@ -2520,12 +3554,16 @@ Useful facts:
 
 We know that $H_*(M) = [\ZZ, A, \ZZ \times G, A, \ZZ]$ for some group $A$ and some torsion group $G$. Letting $n=\mathrm{rank}(A)$ and taking the Euler characteristic, we have $\chi(M) = (1)1 + (-1)n + (1)1 + (-1)n + (1)1 = 3-2n$. Note that this is odd for any $n$.
 
-However, a free action of $\ZZ_2 \actson M$ would produce a double covering $M \surjects_{\times 2} M/\ZZ_2$, and multiplicativity of Euler characteristics would force $\chi(M) = 2 \chi(M/\ZZ_2)$ and thus $3-2n = 2k$ for some integer $k$. This would require $3-2n$ to be even, so we have a contradiction. $\qed$
+However, a free action of $\ZZ_2 \actson M$ would produce a double covering $M \surjects_{\times 2} M/\ZZ_2$, and multiplicativity of Euler characteristics would force $\chi(M) = 2 \chi(M/\ZZ_2)$ and thus $3-2n = 2k$ for some integer $k$. This would require $3-2n$ to be even, so we have a contradiction. 
+
+
+:::
 
 ## 5 
 
 Let $X$ be $T^2$ with a 2-cell attached to the interior along a longitude. Compute $\pi_2(X)$.
 
+:::{.solution}
 Useful facts:
 
 - $T^2 = e^0 + e^1_1 + e^1_2 + e^2$ as a CW complex.
@@ -2535,6 +3573,8 @@ Useful facts:
 Write $T^2 = e^0 + e^1_1 + e^1_2 + e^2$, where the first and second 1-cells denote the longitude and meridian respectively. By symmetry, we could have equivalently attached a disk to the meridian instead of the longitude, filling the center hole in the torus. Contract this disk to a point, then pull it vertically in both directions to obtain $S^2$ with two points identified, which is homotopy-equivalent to $S^2 \vee S_1$.
 
 Take the universal cover, which is $\RR^1 \union_{\ZZ} S^2$ and has the same $\pi_2$. This is homotopy-equivalent to $\bigvee_{i\in \ZZ}S^2$ and so $\pi_2(X) = \prod_{i\in \ZZ} \ZZ$ generated by each distinct copy of $S^2$. (Alternatively written as $\ZZ[t, t^{-1}]$).
+:::
+
 
 # Summer 2003
 
@@ -2542,6 +3582,7 @@ Take the universal cover, which is $\RR^1 \union_{\ZZ} S^2$ and has the same $\p
 
 Describe all possible covering maps between $S^2, T^2, K$
 
+:::{.solution}
 Useful facts:
 
 1. $\tilde X \surjects X$ induces $\pi_1(\tilde X) \injects \pi_1(X)$
@@ -2569,12 +3610,13 @@ Spaces
 - $T^2 \surjects K$
   - ?
 
-$\qed$
+:::
 
 ## 2
 
 Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n$.
 
+:::{.solution}
 Facts Used
 1. $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$
 2. $\tilde X \surjects X \implies \pi_1(\tilde X) \injects \pi_1(X)$
@@ -2585,12 +3627,15 @@ It is easier to prove the stronger claim that $\ZZ^\NN \leq \ZZ^{\ast 2}$ (i.e. 
 
 Just take the covering space $\tilde X \surjects S^1 \vee S^1$ defined via the gluing map $\RR \union_{\ZZ} S^1$ which attaches a circle to each integer point, taking 0 as the base point. Then let $a$ denote a translation and $b$ denote traversing a circle, so we have $\pi_1(\tilde X) = \left<\union_{n\in\ZZ}a^nba^{-n}\right>$ which is a free group on countably many generators. Since $\tilde X$ is a covering space, $\pi_1(\tilde X) \injects \pi_1(S^1 \vee S^1) = \ZZ^{\ast 2}$. By 4, we can restrict this to $n$ generators for any $n$ to get a subgroup, and $A\leq B \leq C \implies A \leq C$ as groups.
 
-$\qed$
+
+:::
+
 
 ## 3
 
 Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$.
 
+:::{.solution}
 Facts used:
 - Construction of Moore Spaces
 - $\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)$, using $\Sigma X = C_X \union_X C_X$ and Mayer-Vietoris.
@@ -2601,12 +3646,16 @@ Take $X = e^0 \union_{\Phi_1} e^5 \union_{\Phi_2} e^6$, where
 \Phi_2: \del B^6 = S^5 \mapsvia{z~\mapsto z^4} e^5
 .\end{align*}
 
-where $\deg \Phi_2 = 4$.$\qed$
+where $\deg \Phi_2 = 4$.
+
+:::
+
 
 ## 4 
 
 Compute the complement of a knotted solid torus in $S^3$.
 
+:::{.solution}
 Facts used:
 
 - $H_*(T^2) = [\ZZ, \ZZ^2, \ZZ, 0\rightarrow]$
@@ -2658,12 +3707,14 @@ We then deduce:
   $$
  	Since $\del_3$ must be an isomorphism, this forces the edge terms to be zero.
 
-$\qed$
+
+:::
 
 ## 5 
 
 Compute the homology and cohomology of a closed, connected, oriented 3-manifold $M$ with $\pi_1(M) = \ZZ^{\ast 2}$.
 
+:::{.solution}
 Facts used:
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
 - $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
@@ -2673,20 +3724,23 @@ Facts used:
 
 - Since $M$ is connected, $H_0 = \ZZ$
 - Since $\pi_1(M) = \ZZ^{\ast 2}$, $H_1$ is the abelianization and $H_1(X) = \ZZ^2$
-- Since $M$ is closed/connected/oriented, Poincare Duality holds and $H_2 = H^{3-2} = H^1 = \mathbf{F} H_1 + \mathbf{T}H_0$ by UCT. Since $H_0=\ZZ$ is torsion-free, we have $H_2(M) = H_1(M) =  \ZZ^2$.
+- Since $M$ is closed/connected/oriented, Poincaré Duality holds and $H_2 = H^{3-2} = H^1 = \mathbf{F} H_1 + \mathbf{T}H_0$ by UCT. Since $H_0=\ZZ$ is torsion-free, we have $H_2(M) = H_1(M) =  \ZZ^2$.
 - Since $M$ is an orientable manifold, $H_3(M) = \ZZ$
 - So $H_*(M) = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$
 
 **Cohomology**
 
-- By Poincare Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
+- By Poincaré Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
 
-$\qed$
+
+:::
+
 
 ## 6
 
 Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
 
+:::{.solution}
 Facts Used:
 
 1. $\ext(\ZZ, \ZZ_m) = \ZZ_m$
@@ -2702,12 +3756,15 @@ $\ZZ_3$                         | $\ZZ_3$ | 0       | 0
 
 So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
 
-$\qed$
+
+:::
+
 
 ## 7 
 
 Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
 
+:::{.solution}
 Facts used:
 
 1. Every homeomorphism induces isomorphisms on homotopy/homology/cohomology.
@@ -2725,23 +3782,30 @@ is the induced map on cohomology.
 
 Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\CP^1]) = 0$.
 
-We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. $\qed$
+We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. 
+
+
+:::
 
 ## 8 
 
 Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi_2(X)$.
 
+:::{.solution}
 Facts used:
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
 - $\RR^2 \surjects_p T^2 = S^1 \cross S^1$
 
-$\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.$\qed$
+$\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.
+
+:::
 
 ## 9
 
 Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
+:::{.solution}
 Facts used:
 - Homotopy LES
 - Hurewicz
@@ -2773,7 +3837,8 @@ where rows 3 and 4 force $\pi_3(E) \cong \ZZ$, rows 0 and 1 force $\pi_0(E) = \Z
 
 By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
 
-$\qed$
+  
+:::
 
 # Fall 2017 Final
 
@@ -2781,14 +3846,11 @@ $\qed$
 
 Let $X$ be the subspace of the unit cube $I^3$ consisting of the union of the 6 faces and the 4 internal diagonals. Compute $\pi_1(X)$.
 
-**Solution**:
-
 ## 2
 
 Let $X$ be an arbitrary topological space, and compute $\pi_1(\Sigma X)$.
 
-**Solution**:
-
+:::{.solution}
 Write $\Sigma X = U \union V$ where $U = \Sigma X - (X\cross[0,1/2])$ and $U = \Sigma X - X\cross[1/2, 1])$. Then $U\intersect V = X \cross \{1/2\} \cong X$, so $\pi_1(U\intersect V) =\pi_1(X)$.
 
 But both $U$ and $V$ can be identified by the cone on $X$, given by 
@@ -2806,12 +3868,13 @@ So $\pi_1(U) = \pi_1(V) = 0$.
 
 By Van Kampen, we have $\pi_1(X) = 0 \ast_{\pi_1(X)} 0 = 0.$
 
+:::
+
 ## 3
 
 Let $X = S^1 \cross S^1$ and $A\subset X$ be a subspace with $A \cong S^1 \vee S^1$. Show that there is no retraction from $X$ to $A$.
 
-**Solution**: 
-
+:::{.solution}
 We have $\pi_1(S^1 \cross S^1) = \pi_1(S^1) \cross \pi_1(S^1)$ since $S^1$ is path-connected (by a lemma from the problem sets), and this equals $\ZZ \cross \ZZ$.
 
 We also have $\pi_1(S^1 \vee S^1) = \pi_1(S^1) \ast_{\theset{pt}} \pi_1(S^1)$, which by Van-Kampen is $\ZZ\ast \ZZ$.
@@ -2820,12 +3883,14 @@ Suppose $X$ retracts onto $A$, we can then look at the inclusion $\iota: A \inje
 
 This is a contradiction, because no such injection can exists. In particular, the commutator $[a,b]$ is nontrivial in the source. But $f(aba^{-1}b^{-1}) = f(a)f(b)f(a)^{-1}f(b)^{-1}$ since $f$ is a homomorphism, but since the target is a commutative group, this has to equal $f(a)f(a)^{-1} f(b)f(b)^{-1} = e$. So there is a non-trivial element in the kernel of $f$, and $f$ can not be injective - a contradiction.
 
+
+:::
+
 ## 4
 
 Show that for every map $f: S^2 \to S^1$, there is a point $x\in S^2$ such that $f(x) = f(-x)$.
 
-**Solution**:
-
+:::{.solution}
 Suppose towards a contradiction that $f$ does not possess this property, so there is no $x\in S^2$ such that $f(x) = f(-x)$. 
 
 Then define $g: S^2 \into S^1$ by $g(x) = {f(x) - f(-x)}$; by assumption, this is a nontrivial map, i.e. $g(x) \neq 0$ for *any* $x\in S^2$.
@@ -2839,32 +3904,35 @@ Since $g$ was nontrivial, $\tilde g$ is nontrivial, and by functoriality of $\pi
 But $\pi_1(\RP 2) = \ZZ_2$ and $\pi_1(\RP 1) = \ZZ$, and $\tilde g_*: \ZZ^2 \into \ZZ$ can only be the trivial homomorphism - a contradiction.
 
 
+:::
 
+:::{.remark}
 **Alternate Solution**
-
 Use covering space $\RR \surjects S^1$?
+:::
 
 ## 5
 
 How many path-connected 2-fold covering spaces does $S^1 \vee \RP 2$ have? What are the total spaces?
 
-**Solution**:
-
+:::{.solution}
 First note that $\pi_1(X) = \pi_1(S^1) \ast_{\pt} \pi_1(\RP 2)$ by Van-Kampen, and this is equal to $\ZZ \ast \ZZ_2$.
+:::
 
 ## 6
 
 Let $G = <a, b>$ and $H \leq G$ where $H = <aba^{-1}b^{-1},~ a^2ba^{-2}b^{-1},~ a^{-1}bab^{-1},~ aba^{-2}b^{-1}a>$. To what well-known group is $H$ isomorphic?
-
-**Solution**:
 
 # Appendix: Homological Algebra
 
 
 ## Exact Sequences
 
+:::{.proposition title="?"}
 The sequence $A \mapsvia{f_1} B \mapsvia{f_2} C$ is exact if and only if $\im f_i = \ker f_{i+1}$ and thus $f_2 \circ f_1 = 0$.
+:::
 
+:::{.fact}
 Some useful results:
 
 - $0 \into A \injects_{f} B$ is exact iff $f$ is **injective**
@@ -2874,12 +3942,16 @@ Some useful results:
 - $0\to A \to B \mapsvia{\cong} C \to D\to 0$ iff $A = D = 0$.
 	- Todo: Proof
 - $0\to A\to B \to C \to 0$ splits iff $C$ is free.
+- Can think of $C \cong \frac{B}{\im f_1}$.
 
-Can think of $C \cong \frac{B}{\im f_1}$.
+:::
 
+:::{.definition title="Splitting an exact sequence"}
 The sequences *splits* when a morphism $f_2^{-1}: C \into B$ exists. In $\textbf{Ab}$, this means $B \cong A \oplus C$, in $\mathbf{Grp}$ it's $B \cong A \semidirect_\phi C$.
+:::
 
-Examples:
+:::{.example title="of exact sequences"}
+\envlist
 
 - $0 \into \ZZ \mapsvia{\times 2} \ZZ \mapsvia{\text{mod}~2} \frac{\ZZ}{2\ZZ} \into 0$
 - $1 \into N \mapsvia{\iota} G \mapsvia{p} \frac{G}{N} \into 1$
@@ -2892,6 +3964,10 @@ Examples:
 - $0 \into \mathbb{H}_1 \mapsvia{\nabla} \mathbb{H}_\text{curl} \mapsvia{\nabla \cross} \mathbb{H}_\text{div} \mapsvia{\nabla \cdot} \mathbb{L}_2 \into 0$
   - Since $\nabla \cross \nabla F = \nabla \cdot\nabla\cross \bar{v} = 0$ in Hilbert spaces
 
+
+:::
+
+
 :::{.remark}
 Is $f_1\circ f_2 = 0$ equivalent to exactness..?
 Answer: yes, every exact sequence is a chain complex with trivial homology. 
@@ -2901,22 +3977,27 @@ Therefore homology measures the failure of exactness.
 :::
 
 
+:::{.remark}
 Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES's; define $C_k = \ker (A_k \into A_{k+1}) \cong \im(A_{k-1} \into A_k)) \cong \coker(A_{k-2} \into A_{k-1})$, then all diagonals here are exact:
-
 <!--![Long short exact sequences.png](https://upload.wikimedia.org/wikipedia/commons/b/b9/Long_short_exact_sequences.png)-->
 
+:::
 
 ## Five Lemma
 
+:::{.theorem title="?"}
 If $m, p$ are isomorphisms, $l$ is an **surjection**, and $q$ is an **injection**, then $n$ is an **isomorphism**.
 
 <!--![5 lemma.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5_lemma.svg/388px-5_lemma.svg.png)-->
 
 Proof: diagram chase two "four lemmas", one on each side. 
 Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
+:::
+
 
 ## Free Resolutions
 
+:::{.example title="?"}
 The canonical example:
 $$
 0 \to \ZZ \mapsvia{\times m} \ZZ \mapsvia{\mod m} \ZZ_m \to 0
@@ -2930,28 +4011,7 @@ where $F$ denotes taking the free group.
 
 Every abelian groups has a resolution of this form and length 2.
 
-## Computing Tor
-
-$$
-\tor(A, B) = h[\cdots \to A_n \tensor B \to A_{n-1}\tensor B \to \cdots A_1\tensor B \to 0]
-$$ 
-where $A_*$ is any free resolution of $A$.
-
-Shorthand/mnemonic: 
-$$
-\tor: \mathcal{F}(A) \to (\wait \tensor B) \to H_*
-$$
-
-## Computing Ext
-$$
-\ext(A, B) = h[\cdots \hom(A, B_n) \to \hom(A, B_{n-1}) \to \cdots \to \hom(A, B_1) \to 0 ]
-$$ 
-where $B_*$ is a any free resolution of $B$.
-
-Shorthand/mnemonic: 
-$$
-\ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
-$$
+:::
 
 ## Properties of Tensor Products
 
@@ -2980,6 +4040,28 @@ $$
 - $\ext(\bigoplus_i A_i, \prod_j B_j) = \bigoplus_i \prod_j \ext(\mathbf{T}A_i, B_j)$
 - $\ext(F, G) = 0$ if $F$ is free
 - $\ext(\ZZ_n, G) \cong G/nG$
+
+## Computing Tor
+$$
+\tor(A, B) = h[\cdots \to A_n \tensor B \to A_{n-1}\tensor B \to \cdots A_1\tensor B \to 0]
+$$ 
+where $A_*$ is any free resolution of $A$.
+
+Shorthand/mnemonic: 
+$$
+\tor: \mathcal{F}(A) \to (\wait \tensor B) \to H_*
+$$
+
+## Computing Ext
+$$
+\ext(A, B) = h[\cdots \hom(A, B_n) \to \hom(A, B_{n-1}) \to \cdots \to \hom(A, B_1) \to 0 ]
+$$ 
+where $B_*$ is a any free resolution of $B$.
+
+Shorthand/mnemonic: 
+$$
+\ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
+$$
 
 ## Hom/Ext/Tor Tables
 
@@ -3019,7 +4101,7 @@ This is a certain ring of adeles.
 
 
 
-# Appendix: ?
+# Appendix: Unsorted Stuff
 
 * Assorted info about other Lie Groups:
  * $O_n, U_n, SO_n, SU_n, Sp_n$
@@ -3179,3 +4261,11 @@ LES of pair $(A,B) \implies \cdots H_n(B) \into H_n(A) \into H_n(A,B) \into H_{n
 ## Misc
 
 * $\Omega(\wait)$ is an exact functor.
+
+## Building a Moore Space
+
+- To build a Moore space $M(n, \ZZ_p)$, take $X = S^n$ and attach $e^{n+1}$ via a map $\Phi: S^n = \del B^{n+1}\to X^{(n)} = S^n$ of degree $p$.
+	- To obtain $M(n, \prod G_i)$ take the corresponding $\bigvee X_i$
+	- Can also use Mayer Vietoris to conclude $H_{n+1}(\Sigma X) = H_n(X)$, and just suspend spaces with known homology.
+
+

@@ -3,11 +3,9 @@
 
 ## Exact Sequences
 
-
 :::{.proposition title="?"}
 The sequence $A \mapsvia{f_1} B \mapsvia{f_2} C$ is exact if and only if $\im f_i = \ker f_{i+1}$ and thus $f_2 \circ f_1 = 0$.
 :::
-
 
 :::{.fact}
 Some useful results:
@@ -22,10 +20,6 @@ Some useful results:
 - Can think of $C \cong \frac{B}{\im f_1}$.
 
 :::
-
-
-
-
 
 :::{.definition title="Splitting an exact sequence"}
 The sequences *splits* when a morphism $f_2^{-1}: C \into B$ exists. In $\textbf{Ab}$, this means $B \cong A \oplus C$, in $\mathbf{Grp}$ it's $B \cong A \semidirect_\phi C$.
@@ -66,7 +60,6 @@ Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES
 
 ## Five Lemma
 
-
 :::{.theorem title="?"}
 If $m, p$ are isomorphisms, $l$ is an **surjection**, and $q$ is an **injection**, then $n$ is an **isomorphism**.
 
@@ -77,10 +70,9 @@ Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
 :::
 
 
-
-
 ## Free Resolutions
 
+:::{.example title="?"}
 The canonical example:
 $$
 0 \to \ZZ \mapsvia{\times m} \ZZ \mapsvia{\mod m} \ZZ_m \to 0
@@ -94,28 +86,7 @@ where $F$ denotes taking the free group.
 
 Every abelian groups has a resolution of this form and length 2.
 
-## Computing Tor
-
-$$
-\tor(A, B) = h[\cdots \to A_n \tensor B \to A_{n-1}\tensor B \to \cdots A_1\tensor B \to 0]
-$$ 
-where $A_*$ is any free resolution of $A$.
-
-Shorthand/mnemonic: 
-$$
-\tor: \mathcal{F}(A) \to (\wait \tensor B) \to H_*
-$$
-
-## Computing Ext
-$$
-\ext(A, B) = h[\cdots \hom(A, B_n) \to \hom(A, B_{n-1}) \to \cdots \to \hom(A, B_1) \to 0 ]
-$$ 
-where $B_*$ is a any free resolution of $B$.
-
-Shorthand/mnemonic: 
-$$
-\ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
-$$
+:::
 
 ## Properties of Tensor Products
 
@@ -144,6 +115,28 @@ $$
 - $\ext(\bigoplus_i A_i, \prod_j B_j) = \bigoplus_i \prod_j \ext(\mathbf{T}A_i, B_j)$
 - $\ext(F, G) = 0$ if $F$ is free
 - $\ext(\ZZ_n, G) \cong G/nG$
+
+## Computing Tor
+$$
+\tor(A, B) = h[\cdots \to A_n \tensor B \to A_{n-1}\tensor B \to \cdots A_1\tensor B \to 0]
+$$ 
+where $A_*$ is any free resolution of $A$.
+
+Shorthand/mnemonic: 
+$$
+\tor: \mathcal{F}(A) \to (\wait \tensor B) \to H_*
+$$
+
+## Computing Ext
+$$
+\ext(A, B) = h[\cdots \hom(A, B_n) \to \hom(A, B_{n-1}) \to \cdots \to \hom(A, B_1) \to 0 ]
+$$ 
+where $B_*$ is a any free resolution of $B$.
+
+Shorthand/mnemonic: 
+$$
+\ext: \mathcal{F}(B) \to \hom(A, \wait) \to H_*
+$$
 
 ## Hom/Ext/Tor Tables
 

@@ -59,7 +59,7 @@ The following are some examples of ways to construct specific spaces for example
 - Simplicial Complexes
   - Nice minimal example:
   
-![](figures/image_{2020}-05-22-18-58-03.png) 
+![](figures/image_2020-05-22-18-58-03.png) 
 
 :::
 
