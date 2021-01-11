@@ -189,15 +189,15 @@ In low dimensions, there are some "accidental" homeomorphisms:
 :::
 
 
-
-## Facts About Low Dimensional and/or Standard Spaces
-
+:::{.fact title="about standard low-dimensional spaces"}
+\envlist
 
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 - $\CP^n = S^{2n+1} / S^n$
 - $S^n_{/S}^k \cong S^n \vee \Sigma S^k$.
 
+:::
 
 
 ## Table of Homotopy and Homology Structures
