@@ -102,7 +102,6 @@ Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; t
 If $M^n$ is a closed and connected $n\dash$manifold, then $H^{\geq n} X = 0$.
 :::
 
-
 :::{.proposition title="Top homology for manifolds"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
 More generally, 
@@ -126,6 +125,12 @@ M^n \text{ is closed and orientable}
 
 
 ### Special Classes of Manifolds
+
+
+:::{.fact}
+Every $\CC\dash$manifold is canonically orientable.
+:::
+
 
 #### 3-manifolds and Knots
 
@@ -165,8 +170,6 @@ Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
 :::
 
 
-- Every $\CC\dash$manifold is canonically orientable.
-- If $M^n$ is **closed and connected**, then $H_{\geq n}(X) = 0$ and $M^n$ is orientable iff $H_n(X) = \ZZ$.
 - If $M^n$ is a **closed orientable manifold without boundary**, then $H^k(M^n; F) \cong H_{n-k}(M^n; F)$ for a field $F$.
 - This is a strict implication, so failure of the RHS implies missing conditions on the LHS.
 - The intersection pairing is nondegenerate modulo torsion.
