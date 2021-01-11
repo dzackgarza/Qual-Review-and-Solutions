@@ -147,11 +147,9 @@ Alt:
 Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
 :::
 
-
 :::{.remark}
 Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
 :::
-
 
 :::{.definition title="Saturated"}
 
@@ -174,6 +172,12 @@ Todo
 :::{.definition title="Surjection"}
 A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 :::
+
+
+:::{.definition title="$T_n$ Spaces (Separability Axioms)"}
+
+:::
+
 
 :::{.definition title="Topology"}
 Closed under arbitrary unions and finite intersections.

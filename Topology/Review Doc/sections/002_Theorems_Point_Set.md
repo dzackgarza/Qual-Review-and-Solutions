@@ -124,14 +124,20 @@ A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is 
 :::
 
 
-
 ## Separability
 
-Proposition 
-: A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
 
-Theorem
-: Points are closed in $T_1$ spaces.
+:::{.proposition title="Properties preserved under retracts"}
+A retract of a Hausdorff/connected/compact space is closed/connected/compact respectively.
+:::
+
+
+:::{.proposition title="?"}
+Points are closed in $T_1$ spaces.
+:::
+
+
+
 
 
 ## Maps and Homeomorphism
