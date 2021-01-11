@@ -47,6 +47,13 @@ Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ e
 
 ![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
 
+\begin{tikzpicture}
+\node (node_one) at (0,0) {
+  \includegraphics{/home/zack/SparkleShare/github.com/Qual-Review-and-Solutions/Topology/Review\ Doc/sections/figures/spheres_and_balls}
+  };
+  \end{tikzpicture}
+
+
 :::
 
 
