@@ -7,6 +7,15 @@
 \DD^n = \mathbb{B}^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
 \SS^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} = \bd \DD^n \\
 .\]
+
+> Note: I'll immediately drop the blackboard notation, this is just to emphasize that they're "canonical" objects.
+
+The sphere can be constructed in several equivalent ways:
+
+- $S^n \cong D^n / \bd D^n$: collapsing the boundary of a disc is homeomorphic to a sphere.
+- $S^n \cong D^n \Disjoint_{\bd D^n} D^n$: gluing two discs along their boundary.
+
+
 Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
 
 <!--\begin{tikzpicture}-->
@@ -25,10 +34,8 @@ Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ e
 
 ![Low Dimensional Discs/Balls vs Spheres](figures/image_2021-01-10-23-20-27.png)
 
-> Note: I'll immediately drop the blackboard notation for spheres and balls.
 
 :::
-\todo[inline]{Describe how to obtain by gluing two discs.}
 
 :::{.example title="Real Projective Space"}
 Constructed in one of several equivalent ways:
@@ -197,6 +204,7 @@ Possible modifications to a space $X$:
 
 # Low Dimensional Homology Examples
 
+:::{.fact title="Table of low-dimensional homology"}
 \[
 \begin{array}{cccccccccc}
 S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
@@ -213,9 +221,9 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \end{array}
 .\]
 
+:::
 
 # Table of Homotopy and Homology Structures
-
 
 :::{.remark}
 The following is a giant list of known homology/homotopy.
@@ -250,8 +258,6 @@ The following is a giant list of known homology/homotopy.
 \normalsize
 
 :::
-
-
 
 :::{.fact title="used to fill out the above table"}
 \envlist
@@ -288,7 +294,6 @@ The following is a giant list of known homology/homotopy.
 - $D(1, S^n) \cong \RR^n$ and thus $D(k, S^n) \cong D(k-1, \RR^n) \cong \bigvee^{k-1} S^1$
 
 :::
-
 
 
 
