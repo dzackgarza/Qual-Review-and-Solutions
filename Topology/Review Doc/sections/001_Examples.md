@@ -1,9 +1,8 @@
 # Examples
 
-## Common Spaces and Operations
+## Point-Set
 
-### Point-Set
-
+### Common Spaces and Operations
 
 :::{.example title="Nice spaces"}
 The following are some standard "nice" spaces:
@@ -81,7 +80,8 @@ Operations
 -  Identifying a finite number of points
 
 
-## Alternative Topologies
+
+### Alternative Topologies
 
 :::{.example title="Nonstandard topologies"}
 The following are some nice examples of topologies to put on familiar spaces to produce counterexamples:
@@ -92,7 +92,6 @@ The following are some nice examples of topologies to put on familiar spaces to 
 - Uniform
 :::
 
-
 :::{.example title="The cofinite topology"}
 The cofinite topology on any space $X$ is always
 
@@ -100,11 +99,9 @@ The cofinite topology on any space $X$ is always
 - Compact
 :::
 
-
 :::{.proposition title="Topology is discrete if and only if points are open"}
 A topology $(X, \tau)$ is the discrete topology iff points $x\in X$ are open.
 :::
-
 
 :::{.proof title="?"}
 If $\ts x_i$ is open for each $x_i \in X$, then 
@@ -115,23 +112,24 @@ If $\ts x_i$ is open for each $x_i \in X$, then
 Thus $U$ is open.
 :::
 
-
 :::{.example title="The discrete topology"}
 Some facts about the discrete topology:
 
+- Definition: every subset is open.
 - Always Hausdorff
 - Compact iff finite
 - Totally disconnected
 - If $X$ is discrete, every map $f:X\to Y$ for any $Y$ is continuous (obvious!)
 :::
 
+:::{.example title="The indiscrete topology"}
+Some facts about the indiscrete topology:
+
+- Definition: the only open sets are $\emptyset, X$
+- Never Hausdorff
+- If $Y$ is indiscrete, every map $f:X\to Y$ is continuous (obvious!)
+- Always compact
+:::
 
 
 
-
-The indiscrete topology:
-
-- Only open sets are $\emptyset, X$
-- Non-Hausdorff
-- If the codomain, every map is continuous
-- Compact
