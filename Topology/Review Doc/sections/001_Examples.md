@@ -4,15 +4,22 @@
 
 ### Point-Set
 
-- Finite discrete sets with the discrete topology 
+
+:::{.example title="A bank of counterexamples"}
+The following are useful spaces to keep in mind to furnish counterexamples:
+
+- Finite discrete sets with the discrete topology.
 - Subspaces of $\RR$: $(a, b), (a, b], (a, \infty)$, etc.
-  - $\ts{0} \union \ts{{1 \over n}\suchthat n\in \ZZ^{\geq 1}}$
+  - Sets given by real sequences, such as $\ts{0} \union \ts{{1 \over n}\suchthat n\in \ZZ^{\geq 1}}$
 - $\QQ$
 - The topologist's sine curve
 - One-point compactifications
-- $\RR^\omega$
+- $\RR^\omega$ for \( \omega \) the least uncountable ordinal (?)
 - Hawaiian earring
 - Cantor set
+
+:::
+
 
 Non-Hausdorff spaces:
 
