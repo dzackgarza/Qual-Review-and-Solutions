@@ -174,7 +174,14 @@ A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 :::
 
 
-:::{.definition title="$T_n$ Spaces (Separability Axioms)"}
+:::{.definition title="$T_n$ Spaces (Separation Axioms)"}
+\envlist
+
+- $T_0$: For any 2 points $x, y$ there exists a neighborhood of $x$ not containing $y$.
+- $T_1$: 
+- $T_2$: 
+- $T_4$: 
+- $T_4$: 
 
 :::
 
