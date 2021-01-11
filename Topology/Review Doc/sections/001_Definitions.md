@@ -173,7 +173,6 @@ Todo
 A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 :::
 
-
 :::{.definition title="$T_n$ Spaces (Separation Axioms)"}
 \envlist
 
@@ -191,10 +190,10 @@ A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 - $T_{3.5}$: $T_0$ & completely regular.
   Any point $x$ and closed $F\not\ni x$ can be separated by a continuous function.
 
-- $T_4$: 
+- $T_4$: $T_1$ & normal.
+  Any two disjoint closed subsets can be separated by neighborhoods.
 
 :::
-
 
 :::{.definition title="Topology"}
 Closed under arbitrary unions and finite intersections.
