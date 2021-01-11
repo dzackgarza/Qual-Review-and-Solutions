@@ -108,15 +108,16 @@ A topology $(X, \tau)$ is the discrete topology iff points $x\in X$ are open.
 
 :::{.example title="The discrete topology"}
 
-:::
-
-
-The discrete topology:
+Some facts about the discrete topology:
 
 - Always Hausdorff
 - Compact iff finite
 - Totally disconnected
-- If the domain, every map is continuous
+- If $X$ is additionally Hausdorff, every map $f:X\to Y$ is continuous
+:::
+
+
+
 
 The indiscrete topology:
 
