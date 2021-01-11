@@ -13,34 +13,38 @@ Properties preserved and not preserved by continuous functions: [Link](https://p
 
 ## Metric Spaces and Analysis
 
-
 :::{.theorem title="Cantor's Intersection Theorem"}
 A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
 :::
-
 
 :::{.theorem title="Cantor's Nested Intervals Theorem"}
 If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
 If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
 :::
 
-
 :::{.proposition title="Continuous on compact $\implies$ uniformly continuous"}
 A continuous function on a compact set is uniformly continuous.
 :::
-
 
 :::{.proof title="?"}
 Take $\theset{B_{\eps \over 2}(y) \suchthat y\in Y}\covers Y$, pull back to an open cover of $X$, has Lebesgue number $\delta_L > 0$, then $x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\eps \over 2}(y)$ for some $y$. 
 :::
 
-Corollary
-: Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+:::{.corollary title="Lipschitz implies uniformly continuous"}
+Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
+:::
 
+:::{.remark}
 Counterexample to the converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
+:::
 
-Theorem (Extreme Value Theorem)
-: For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
+
+:::{.theorem title="Extreme Value Theorem"}
+For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
+:::
+
+
+
 
 Theorem
 : A metric space $X$ is sequentially compact iff it is complete and totally bounded.
