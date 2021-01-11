@@ -72,7 +72,7 @@ x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
 
 ## Conventions
 
-- Generally assume spaces are connected.
+- Spaces are assumed to be connected. 
 
 
 * Lists start at entry 1, since all spaces are connected here and thus $\pi_0 = H_0 = \ZZ$. That is,
