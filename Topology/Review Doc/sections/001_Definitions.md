@@ -87,11 +87,11 @@ A collection of subsets $\mcs$ of $X$ is *locally finite* iff each point of $M$ 
 :::
 
 :::{.definition title="Locally Path-Connected"}
-A space is *locally path-connected* if it admits a basis of path-connected open subsets.
+A space is **locally path-connected** if it admits a basis of path-connected open subsets.
 :::
 
 :::{.definition title="Neighborhood"}
-A neighborhood of a point $x$ is *any* open set containing $x$.
+A **neighborhood** of a point $x$ is *any* open set containing $x$.
 :::
 
 :::{.definition title="Normal"}
@@ -99,7 +99,7 @@ A space is **normal** if any two disjoint closed subsets can be separated by nei
 :::
 
 :::{.definition title="Neighborhood Basis"}
-If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
+If $p\in X$, a **neighborhood basis** at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
 :::
 
 :::{.definition title="Open and Closed Maps" ref="def:open_closed_maps"}
@@ -107,7 +107,7 @@ A map $f:X\to Y$ is an **open map** (respectively a **closed map**) if and only 
 :::
 
 :::{.definition title="Paracompact"}
-A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
+A topological space $X$ is **paracompact** iff every open cover of $X$ admits an open locally finite refinement.
 :::
 
 :::{.definition title="Quotient Map"}
@@ -214,9 +214,8 @@ The set of unions of elements in $B$ is a topology and is denoted *the topology 
 :::
 
 :::{.definition title="Topological Embedding"}
-Todo
+A continuous map $f:X \to Y$ for which $X\cong f(X)$ are homeomorphic is called a **topological embedding**.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Uniform Continuity"}
 For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
