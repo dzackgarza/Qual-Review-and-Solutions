@@ -97,6 +97,12 @@ To show something is not a manifold, try looking at local homology.
 Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
 :::
 
+
+:::{.proposition title="Dimension vanishing for homology of manifolds"}
+If $M^n$ is a closed and connected $n\dash$manifold, then $H^{\geq n} X = 0$.
+:::
+
+
 :::{.proposition title="Top homology for manifolds"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
 More generally, 
