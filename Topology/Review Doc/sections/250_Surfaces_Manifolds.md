@@ -92,14 +92,12 @@ Todo
 
 ## Manifolds
 
-
 :::{.remark}
 To show something is not a manifold, try looking at local homology. 
 Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
 :::
 
-
-:::{.proposition title="Homology for manifolds"}
+:::{.proposition title="Top homology for manifolds"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
 More generally, 
 \[
@@ -111,17 +109,6 @@ More generally,
 \]
 :::
 
-:::{.proposition title="Homology of 3-manifolds"}
-Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
-
-- Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
-
-- Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
-
-:::
-
-
-
 :::{.proposition title="Poincaré Duality for manifolds"}
 \[
 H_k M^n \cong H^{n-k} M^n
@@ -131,7 +118,19 @@ M^n \text{ is closed and orientable}
 
 :::
 
-## Knots
+
+### Special Classes of Manifolds
+
+#### 3-manifolds and Knots
+
+:::{.proposition title="Homology of 3-manifolds"}
+Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
+
+- Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
+
+- Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
+
+:::
 
 :::{.proposition title="Homotopy type of knot complements"}
 For $K$ a knot, $S^3\sm K$ is a $K(\pi, 1)$, and $\RR^3 \sm K \homotopic S^2 \vee \qty{S^3 \sm K}$.
