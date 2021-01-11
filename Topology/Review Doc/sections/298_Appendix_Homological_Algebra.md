@@ -3,8 +3,13 @@
 
 ## Exact Sequences
 
-The sequence $A \mapsvia{f_1} B \mapsvia{f_2} C$ is exact if and only if $\im f_i = \ker f_{i+1}$ and thus $f_2 \circ f_1 = 0$.
 
+:::{.proposition title="?"}
+The sequence $A \mapsvia{f_1} B \mapsvia{f_2} C$ is exact if and only if $\im f_i = \ker f_{i+1}$ and thus $f_2 \circ f_1 = 0$.
+:::
+
+
+:::{.fact}
 Some useful results:
 
 - $0 \into A \injects_{f} B$ is exact iff $f$ is **injective**
@@ -14,12 +19,20 @@ Some useful results:
 - $0\to A \to B \mapsvia{\cong} C \to D\to 0$ iff $A = D = 0$.
 	- Todo: Proof
 - $0\to A\to B \to C \to 0$ splits iff $C$ is free.
+- Can think of $C \cong \frac{B}{\im f_1}$.
 
-Can think of $C \cong \frac{B}{\im f_1}$.
+:::
 
+
+
+
+
+:::{.definition title="Splitting an exact sequence"}
 The sequences *splits* when a morphism $f_2^{-1}: C \into B$ exists. In $\textbf{Ab}$, this means $B \cong A \oplus C$, in $\mathbf{Grp}$ it's $B \cong A \semidirect_\phi C$.
+:::
 
-Examples:
+:::{.example title="of exact sequences"}
+\envlist
 
 - $0 \into \ZZ \mapsvia{\times 2} \ZZ \mapsvia{\text{mod}~2} \frac{\ZZ}{2\ZZ} \into 0$
 - $1 \into N \mapsvia{\iota} G \mapsvia{p} \frac{G}{N} \into 1$
@@ -32,6 +45,10 @@ Examples:
 - $0 \into \mathbb{H}_1 \mapsvia{\nabla} \mathbb{H}_\text{curl} \mapsvia{\nabla \cross} \mathbb{H}_\text{div} \mapsvia{\nabla \cdot} \mathbb{L}_2 \into 0$
   - Since $\nabla \cross \nabla F = \nabla \cdot\nabla\cross \bar{v} = 0$ in Hilbert spaces
 
+
+:::
+
+
 :::{.remark}
 Is $f_1\circ f_2 = 0$ equivalent to exactness..?
 Answer: yes, every exact sequence is a chain complex with trivial homology. 
@@ -41,19 +58,26 @@ Therefore homology measures the failure of exactness.
 :::
 
 
+:::{.remark}
 Any LES $A_1 \into \cdots \into A_6$ decomposes into a twisted collection of SES's; define $C_k = \ker (A_k \into A_{k+1}) \cong \im(A_{k-1} \into A_k)) \cong \coker(A_{k-2} \into A_{k-1})$, then all diagonals here are exact:
-
 <!--![Long short exact sequences.png](https://upload.wikimedia.org/wikipedia/commons/b/b9/Long_short_exact_sequences.png)-->
 
+:::
 
 ## Five Lemma
 
+
+:::{.theorem title="?"}
 If $m, p$ are isomorphisms, $l$ is an **surjection**, and $q$ is an **injection**, then $n$ is an **isomorphism**.
 
 <!--![5 lemma.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5_lemma.svg/388px-5_lemma.svg.png)-->
 
 Proof: diagram chase two "four lemmas", one on each side. 
 Full proof [here](https://en.wikipedia.org/wiki/Five_lemma).
+:::
+
+
+
 
 ## Free Resolutions
 
