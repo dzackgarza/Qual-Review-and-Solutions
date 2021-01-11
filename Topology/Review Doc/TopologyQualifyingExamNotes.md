@@ -418,6 +418,11 @@
 
 # Preface
 
+References:
+
+- Munkres [@munkres_2018]
+- Hatcher [@hatcher_2002]
+
 Some fun resources:
 
 - [The Line with Two Origins](https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-line-with-2-origins/)
