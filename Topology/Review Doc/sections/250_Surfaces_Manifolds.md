@@ -111,7 +111,6 @@ More generally,
 \]
 :::
 
-
 :::{.proposition title="Homology of 3-manifolds"}
 Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
 
@@ -123,8 +122,16 @@ Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases
 
 
 
+:::{.proposition title="Poincaré Duality for manifolds"}
+\[
+H_k M^n \cong H^{n-k} M^n
+\iff
+M^n \text{ is closed and orientable}
+.\]
 
-* Poincaré Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
+:::
+
+
 
 On the complements of spaces in $\RR^3$:
 
