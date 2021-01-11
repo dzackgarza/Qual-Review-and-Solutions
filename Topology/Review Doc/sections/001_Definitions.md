@@ -127,7 +127,7 @@ Set $x\sim y$ iff there exists a path-connected set $U\ni x, y$ and take equival
 :::
 
 :::{.definition title="Precompact"}
-A subset $A\subseteq X$ is *precompact* iff $\cl_{X}(A)$ is compact.
+A subset $A\subseteq X$ is **precompact** iff $\cl_{X}(A)$ is compact.
 :::
 
 :::{.definition title="The product topology"}
@@ -139,7 +139,7 @@ yields the **product topology** on $X \cross Y$.
 :::
 
 :::{.definition title="Refinement"}
-A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
+A cover $\mcv \covers X$ is a **refinement** of $\mcu \covers X$ iff for each $V\in \mcv$ there exists a $U\in\mcu$ such that $V\subseteq U$.
 :::
 
 :::{.definition title="Regular"}
@@ -151,12 +151,9 @@ A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashlef
 Equivalently $X \surjects_{r} A$ and $\restrictionof{r}{A} = \id_{A}$. If $X$ retracts onto $A$, then $i_*$ is injective.
 
 Alt:
-Let $X$ be a topological space and $A \subset X$ be a subspace, then a *retraction* of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
+Let $X$ be a topological space and $A \subset X$ be a subspace, then a **retraction** of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity map on $A$.
 :::
 
-:::{.remark}
-Note that this definition isn't very useful, as every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
-:::
 
 :::{.definition title="Saturated"}
 A subset $U \subseteq X$ is **saturated** with respect to a surjective map $p: X\surjects Y$ if and only if whenever $U \intersect p ^{-1} (y) = V \neq \emptyset$, we have $V \subseteq U$, i.e. $U$ contains every set $p ^{-1} (y)$ that it intersects.
@@ -164,7 +161,7 @@ Equivalently, $U$ is the complete inverse image of a subset of $Y$.
 :::
 
 :::{.definition title="Separable spaces"}
-A space $X$ is *separable* iff $X$ contains a countable dense subset.
+A space $X$ is **separable** iff $X$ contains a countable dense subset.
 :::
 
 :::{.definition title="Second Countable"}
@@ -320,7 +317,7 @@ A *constant map* $f: X\to Y$ iff $f(X) = y_{0}$ for some $y_{0}\in Y$, i.e. for 
 :::
 
 :::{.definition title="Colimit"}
-For a directed system $(X_{i}, f_{ij}$, the *colimit* is an object $X$ with a sequence of projections $\pi_{i}:X\to X_{i}$ such that for any $Y$ mapping into the system, the following diagram commutes:
+For a directed system $(X_{i}, f_{ij}$, the **colimit** is an object $X$ with a sequence of projections $\pi_{i}:X\to X_{i}$ such that for any $Y$ mapping into the system, the following diagram commutes:
 
 \begin{tikzcd}
                  &                            &  & Y \arrow[lldddd, "\psi_{j}"] \arrow[rrdddd, "\psi_{i}"] \arrow[dd, "\exists!", dashed] &  &               &        \\
@@ -607,7 +604,7 @@ $S = \theset{s_{i}}$ is a generating set for an $R\dash$ module $M$ iff $$x\in M
 \todo[inline]{Definitions}
 
 :::{.definition title="Homotopy"}
-Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a *homotopy* from $f$ to $g$ is a continuous function
+Let $X, Y$ be topological spaces and $f,g: X \to Y$ continuous maps. Then a **homotopy** from $f$ to $g$ is a continuous function
 
 $F: X \cross I \into Y$
 

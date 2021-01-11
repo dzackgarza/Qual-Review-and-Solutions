@@ -163,3 +163,8 @@ Theorem (Lee A.52)
     - If $f$ is surjective, $f$ is a quotient map.
     - If $f$ is injective, $f$ is a topological embedding.
     - If $f$ is bijective, it is a homeomorphism.
+
+
+:::{.remark title="On retractions"}
+Every space has at least one retraction - for example, the constant map $r:X \into \theset{x_0}$ for any $x\_0 \in X$.
+:::
