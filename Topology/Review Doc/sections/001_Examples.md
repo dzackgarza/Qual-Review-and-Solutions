@@ -106,6 +106,17 @@ A topology $(X, \tau)$ is the discrete topology iff points $x\in X$ are open.
 :::
 
 
+:::{.proof title="?"}
+If $\ts x_i$ is open for each $x_i \in X$, then 
+
+- Any set $U$ can be written as $U = \union_{i\in I} x_I$ (for some $I$ depending on $U$), and 
+- Unions of open sets are open.
+
+Thus $U$ is open.
+:::
+
+
+
 :::{.example title="The discrete topology"}
 
 Some facts about the discrete topology:
