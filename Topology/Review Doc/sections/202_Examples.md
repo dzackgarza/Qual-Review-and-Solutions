@@ -126,11 +126,22 @@ Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
 
 :::
 
-
-
-
 :::{.example title="Stiefel Manifolds"}
 The Stiefel manifold $V_{n}(k)_{\RR}$, the space of orthonormal $k\dash$frames in $\RR^n$?
+:::
+
+
+:::{.example title="Lie Groups"}
+Lie Groups:
+
+* The general linear group, $\GL_{n}(\RR)$
+  * The special linear group $SL_{n}(\RR)$
+* The orthogonal group, $O_{n}(\RR)$
+  * The special orthogonal group, $SO_{n}(\RR)$
+* The real unitary group, $U_{n}(\CC)$
+  * The special unitary group, $SU_{n}(\RR)$
+* The symplectic group $Sp(2n)$
+
 :::
 
 
@@ -149,9 +160,6 @@ There's no standard name for this, but it's an interesting enough object to cons
 
 
 
-
-
-
 * Possible modifications to a space $X$:
 	* Remove $k$ points by taking $D(k, X)$
 	* Remove a line segment
@@ -161,14 +169,6 @@ There's no standard name for this, but it's an interesting enough object to cons
 	* Remove a knot
 	* Take complement in ambient space
 
-* Lie Groups
-  * The real general linear group, $\GL_{n}(\RR)$
-    * The real special linear group $SL_{n}(\RR)$
-    * The real orthogonal group, $O_{n}(\RR)$
-      * The real special orthogonal group, $SO_{n}(\RR)$
-    * The real unitary group, $U_{n}(\RR)$
-      * The real special unitary group, $SU_{n}(\RR)$
-    * The real symplectic group $Sp(n)$
 
 * "Geometric" Stuff
   * Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_{n}(k)$
