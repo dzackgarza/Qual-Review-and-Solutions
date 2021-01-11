@@ -40,19 +40,26 @@ Some known examples:
 
 :::{.example title="Spheres and Balls"}
 \[
-S^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} \\
-B^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
+\SS^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} \\
+\DD^n = \mathbb{B}^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
 .\]
 Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
 
-![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
+<!--\begin{tikzpicture}-->
+<!--\node (node_one) at (0,0) {-->
+<!--\includegraphics{/home/zack/SparkleShare/github.com/Qual-Review-and-Solutions/Topology/Review\ Doc/sections/figures/spheres_and_balls}-->
+<!--};-->
 
-\begin{tikzpicture}
-\node (node_one) at (0,0) {
-  \includegraphics{/home/zack/SparkleShare/github.com/Qual-Review-and-Solutions/Topology/Review\ Doc/sections/figures/spheres_and_balls}
-  };
-  \end{tikzpicture}
+<!--\node at (-5.6, 1) {$\DD^1$};-->
+<!--\node at (-0.2, 1) {$\DD^2$};-->
+<!--\node at (5.9, 1) {$\DD^3$};-->
 
+<!--\node at (-5.6, -5.5) {$\SS^0$};-->
+<!--\node at (-0.2, -5.5) {$\SS^1$};-->
+<!--\node at (5.9, -5.5) {$\SS^2$};-->
+<!--\end{tikzpicture}-->
+
+![Low Dimensional Discs/Balls vs Spheres](figures/image_2021-01-10-23-20-27.png)
 
 :::
 
