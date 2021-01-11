@@ -4,6 +4,8 @@
 
 :::{.fact}
 $H_0(X)$ is a free abelian group on the set of path components of $X$.
+Thus if $X$ is path connected, $H_0(X) \cong \ZZ$.
+In general, $H_0(X) \cong \ZZ^{\abs{\pi_0(X)}}$, where $\abs{\pi_0(X)}$ is the number of path components of $X$.
 :::
 
 :::{.proposition title="Homology commutes with wedge products"}

@@ -72,11 +72,14 @@ x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
 
 ## Conventions
 
-- Spaces are assumed to be connected. 
+- Spaces are assumed to be connected and path connected, so $\pi_0(X) = H_0(X) = \ZZ$.
 
-
-* Lists start at entry 1, since all spaces are connected here and thus $\pi_0 = H_0 = \ZZ$. That is,
-	* $\pi_*(X) = [\pi_1(X), \pi_2(X), \pi_3(X), \cdots]$
-	* $H_*(X) = [H_1(X), H_2(X), H_3(X), \cdots]$
+- Graded objects like $\pi_*, H_*, H^*$ are sometimes represented as lists.
+  In this case, all list entries start indexing at 1.
+  Examples: 
+  \[
+	\pi_*(X) &= [\pi_1(X), \pi_2(X), \pi_3(X), \cdots] \\
+	H_*(X) &= [H_1(X), H_2(X), H_3(X), \cdots]
+  .\]
 
 
