@@ -2,13 +2,19 @@
 
 Properties preserved and not preserved by continuous functions: [Link](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
 
-- Properties pushed forward through continuous maps:
+
+:::{.proposition title="The continuous image of a..."}
+The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
+
   - Compactness?
   - Connectedness (when surjective)
   - Separability
   - Density **only when** $f$ is surjective
   - **Not** openness
   - **Not** closedness
+
+:::
+
 
 
 ## Metric Spaces and Analysis
@@ -38,12 +44,9 @@ Lipschitz continuity implies uniform continuity (take $\delta = \eps/C$)
 Counterexample to the converse: $f(x) = \sqrt x$ on $[0, 1]$ has unbounded derivative.
 :::
 
-
 :::{.theorem title="Extreme Value Theorem"}
 For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topology, there exist points $c, d\in X$ such that $f(x) \in [f(c), f(d)]$ for every $x$.
 :::
-
-
 
 :::{.theorem title="Sequentially compact if and only if complete and totally bounded"}
 A metric space $X$ is sequentially compact iff it is complete and totally bounded.
