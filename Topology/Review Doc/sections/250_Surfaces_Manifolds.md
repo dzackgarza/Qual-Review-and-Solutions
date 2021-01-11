@@ -124,12 +124,16 @@ M^n \text{ is closed and orientable}
 
 :::
 
-
 :::{.proposition title="Relative Poincaré Duality for manifolds"}
 If $M^n$ is a closed orientable manifold with boundary then 
 \[
 H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)
 .\]
+:::
+
+
+:::{.proposition title="Nondegenerate intersection pairings"}
+For $M^n$ closed and orientable, the intersection pairing is nondegenerate modulo torsion.
 :::
 
 
@@ -178,7 +182,6 @@ Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
 :::
 
 
-- The intersection pairing is nondegenerate modulo torsion.
 - $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
 - $M^n$ closed and $n$ odd implies $\chi(M^n) = 0$.
 - Any map $X \to Y$ with $X$ factors through the orientation cover $\tilde Y_o$.
