@@ -2,7 +2,6 @@
 
 ## Standard Spaces and Modifications
 
-
 :::{.example title="Spheres and Balls"}
 \[
 \DD^n = \mathbb{B}^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
@@ -157,10 +156,10 @@ Some known examples:
 :::{.fact title="about standard low-dimensional spaces"}
 \envlist
 
-- $\MM \homotopic S^1$
+- $\MM \homotopic S^1$ where $\MM$ is the Mobius band.
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 - $\CP^n = S^{2n+1} / S^n$
-- $S^n_{/S}^k \cong S^n \vee \Sigma S^k$.
+- $S^n / S^k \homotopic S^n \vee \Sigma S^k$.
 
 :::
 
@@ -195,7 +194,6 @@ Possible modifications to a space $X$:
 * Take complement in ambient space
 
 :::
-
 
 
 
