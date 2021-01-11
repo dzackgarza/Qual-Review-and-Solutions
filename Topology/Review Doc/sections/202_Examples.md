@@ -8,7 +8,7 @@ $K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying
 \pi_{k}(K(G, n)) = 
 \begin{cases}
 G & k=n, \\ 
-0 & k\neq n.
+0 & \text{else}
 \end{cases}
 \]
 
@@ -19,7 +19,6 @@ Some known examples:
 - $K(\ZZ/2\ZZ, 1) = \RP^\infty$
 
 :::
-
 
 :::{.example title="Moore Spaces"}
 $M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
@@ -39,7 +38,24 @@ Some known examples:
 
 :::
 
+:::{.example title="Spheres and Balls"}
+\[
+S^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1}
+B^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
+.\]
+Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
+:::
 
+
+:::{.example title="Real Projective Space"}
+Constructed in one of several equivalent ways:
+
+- $S^n/\sim$ where $\vector x \sim -\vector x$, i.e. antipodal points are identified.
+- Other ways?
+
+One can also define $\RP^ \infty \da \directlim_{n} \RP^n$$
+
+:::
 
 
 * $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
