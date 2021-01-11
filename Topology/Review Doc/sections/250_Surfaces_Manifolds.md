@@ -99,7 +99,7 @@ Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; t
 :::
 
 
-:::{.proposition title="Topology homology for manifolds"}
+:::{.proposition title="Homology for manifolds"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
 More generally, 
 \[
@@ -131,24 +131,33 @@ M^n \text{ is closed and orientable}
 
 :::
 
+## Knots
 
-
-On the complements of spaces in $\RR^3$:
-
-> My personal crutch is to just think about complements in $S^3$, which are usually easier since knot complements in $S^3$ are always $K(\pi, 1)$s. 
-> Now if $K$ is a knot and $X$ is its complement in $S^3$, then you can prove that its complement in $\RR^3$ is homotopy equivalent to $S^2\vee X$
-
-If $M$ is a closed 3-manifold and $K$ is a nullhomologous knot in $M$, then $H_1(X -n(K)) \cong H_1(X) \times \ZZ$ where $n(K)$ is a tubular neighborhood.
-
-:::{.proposition title="Homology of Sphere minus a knot"}
-For $M = S^3 \setminus K$, $H_*(M) = [\ZZ, \ZZ, 0, 0, \cdots]$.
+:::{.proposition title="Homotopy type of knot complements"}
+For $K$ a knot, $S^3\sm K$ is a $K(\pi, 1)$, and $\RR^3 \sm K \homotopic S^2 \vee \qty{S^3 \sm K}$.
+Moreover, if $K$ is nullhomologous and $X$ is any 3-manifold, 
+\[
+H_1\qty{X\sm \nu(K)} \cong H_1 X \cross \ZZ
+\]
+where $\nu(K)$ is a tubular neighborhood of $K$.
 :::
+
+:::{.proof title="?"}
+Todo
+:::
+\todo[inline]{todo}
+
+:::{.proposition title="Homology of knot complements in $S^3$"}
+For $K$ a knot,
+\[
+H_*(S^3 \sm K) = [\ZZ, \ZZ, 0, 0, \cdots]
+.\]
+:::
+
 :::{.proof}
 Apply Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. 
 Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
-
 :::
-
 
 
 - Every $\CC\dash$manifold is canonically orientable.
