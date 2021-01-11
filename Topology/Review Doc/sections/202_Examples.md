@@ -119,6 +119,21 @@ T^n \da \prod_{j=1}^n S^1 = S^1 \times S^1 \times \cdots
 .\]
 :::
 
+:::{.example title="Grassmannians"}
+The real Grassmannian, $\Gr(n, k)_{/\RR}$, i.e. the set of $k$ dimensional subspaces of $\RR^n$.
+One can similar define $\Gr(n, k)_{\CC}$ for complex subspaces.
+Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
+
+:::
+
+
+
+
+:::{.example title="Stiefel Manifolds"}
+The Stiefel manifold $V_{n}(k)_{\RR}$, the space of orthonormal $k\dash$frames in $\RR^n$?
+:::
+
+
 ## Modifying Known Spaces
 
 :::{.example title="Deleting points"}
@@ -131,18 +146,11 @@ There's no standard name for this, but it's an interesting enough object to cons
 :::
 
 
-:::{.example title="Grassmannians"}
-The real Grassmannian, $\Gr(n, k)_{/\RR}$, i.e. the set of $k$ dimensional subspaces of $\RR^n$.
-One can similar define $\Gr(n, k)_{\CC}$ for complex subspaces.
-Note that $\RP^n = \Gr(n, 1)_{\RR}$ and $\CP^n = \Gr(n, 1)_{/\CC}$.
-
-:::
 
 
 
 
 
-* The Stiefel manifold $V_{n}(k)$
 
 * Possible modifications to a space $X$:
 	* Remove $k$ points by taking $D(k, X)$
