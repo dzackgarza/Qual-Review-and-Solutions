@@ -1,5 +1,6 @@
 # Surfaces and Manifolds
 
+:::{.remark}
 The most common spaces appearing in this theory:
 
 - $\SS ^2$, 
@@ -12,6 +13,8 @@ The most common spaces appearing in this theory:
 The first 4 can be obtained from the following pasting diagrams:
 
 ![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
+
+:::
 
 ## Classification of Surfaces
 
@@ -97,7 +100,6 @@ To show something is not a manifold, try looking at local homology.
 Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
 :::
 
-
 :::{.proposition title="Dimension vanishing for homology of manifolds"}
 If $M^n$ is a closed and connected $n\dash$manifold, then $H^{\geq n} X = 0$.
 :::
@@ -131,20 +133,35 @@ H_k(M^n; \ZZ) \cong H^{n-k}(M^n, \del M^n; \ZZ)
 .\]
 :::
 
+:::{.proposition title="Known Euler characteristics"}
+If $M^n$ is closed and $n$ is odd, then $\chi(M^n) = 0$.
+:::
+
+:::{.proof title="?"}
+Todo.
+Uses Poincaré duality?
+:::
+\todo[inline]{Proof!}
 
 :::{.proposition title="Nondegenerate intersection pairings"}
 For $M^n$ closed and orientable, the intersection pairing is nondegenerate modulo torsion.
 :::
 
+:::{.proposition title="Orientation covers"}
+For any manifold $X$ there exists a covering space $p: \tilde X_o\to X$, the **orientation cover**, where any map $Y\to X$ factors through $\tilde X_o$.
+If $X$ is nonorientable, then $p$ is a double cover.
+:::
 
+:::{.theorem title="Lefschetz Duality"}
+Todo
+:::
+\todo[inline]{Statement of Lefschetz duality.}
 
-### Special Classes of Manifolds
+### 3-Manifolds, and Knot Complements
 
 :::{.fact}
 Every $\CC\dash$manifold is canonically orientable.
 :::
-
-#### 3-manifolds and Knots
 
 :::{.proposition title="Homology of 3-manifolds"}
 Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases):
@@ -180,22 +197,4 @@ H_*(S^3 \sm K) = [\ZZ, \ZZ, 0, 0, \cdots]
 Apply Mayer-Vietoris, taking $S^3 = n(K) \cup (S^3-K)$, where $n(K) \homotopic S^1$ and $S^3-K \cap n(K) \homotopic T^2$. 
 Use the fact that $S^3-K$ is a connected, open 3-manifold, so $H^3(S^3-K) =0$.
 :::
-
-
-- $M^n$ closed, connected, and orientable $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
-- $M^n$ closed and $n$ odd implies $\chi(M^n) = 0$.
-- Any map $X \to Y$ with $X$ factors through the orientation cover $\tilde Y_o$.
-  - If $Y$ is non-orientable, this is a double cover.
-- If $n$ is odd, $\chi(M^n) = 0$ by Poincaré Duality.
-
-
-
-:::{.theorem title="Poincare Duality"}
-Todo
-:::
-
-:::{.theorem title="Lefschetz Duality"}
-Todo
-:::
-
 
