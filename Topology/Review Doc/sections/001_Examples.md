@@ -12,7 +12,6 @@ S^n, \DD^n, T^n, \RP^n, \CP^n, \mathbb{M}, \mathbb{K}, \Sigma_{g}, \RP^\infty, \
 .\]
 :::
 
-
 :::{.example title="A bank of counterexamples"}
 The following are useful spaces to keep in mind to furnish counterexamples:
 
@@ -25,9 +24,15 @@ The following are useful spaces to keep in mind to furnish counterexamples:
 - $\RR^\omega$ for \( \omega \) the least uncountable ordinal (?)
 - The Hawaiian earring
 - The Cantor set
+
+Examples of some more exotic spaces that show up less frequently:
+
+- $\HP^n$, quaternionic projective space
+- The Dunce Cap
+- The Alexander Horned sphere
+
 :::
 \todo[inline]{Break these into separate examples and explain properties.}
-
 
 :::{.example title="Non-Hausdorff spaces"}
 The following spaces are non-Hausdorff:
@@ -40,10 +45,8 @@ The following spaces are non-Hausdorff:
 :::
 
 
-
-General Spaces:
-
-"Constructed" Spaces
+:::{.example title="Constructed spaces"}
+The following are some examples of ways to construct specific spaces for examples or counterexamples:
 
 - Knot complements in $S^3$
 - Covering spaces (hyperbolic geometry)
@@ -59,11 +62,15 @@ General Spaces:
   
 ![](figures/image_{2020}-05-22-18-58-03.png) 
 
+:::
+
+
+
+
+
+
 Exotic/Pathological Spaces
 
-- $\HP^n$
-- Dunce Cap
-- Horned sphere
 
 Operations
 
