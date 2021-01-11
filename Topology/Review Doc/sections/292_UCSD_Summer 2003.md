@@ -4,6 +4,7 @@
 
 Describe all possible covering maps between $S^2, T^2, K$
 
+:::{.solution}
 Useful facts:
 
 1. $\tilde X \surjects X$ induces $\pi_1(\tilde X) \injects \pi_1(X)$
@@ -31,12 +32,13 @@ Spaces
 - $T^2 \surjects K$
   - ?
 
-$\qed$
+:::
 
 ## 2
 
 Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n$.
 
+:::{.solution}
 Facts Used
 1. $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$
 2. $\tilde X \surjects X \implies \pi_1(\tilde X) \injects \pi_1(X)$
@@ -47,12 +49,15 @@ It is easier to prove the stronger claim that $\ZZ^\NN \leq \ZZ^{\ast 2}$ (i.e. 
 
 Just take the covering space $\tilde X \surjects S^1 \vee S^1$ defined via the gluing map $\RR \union_{\ZZ} S^1$ which attaches a circle to each integer point, taking 0 as the base point. Then let $a$ denote a translation and $b$ denote traversing a circle, so we have $\pi_1(\tilde X) = \left<\union_{n\in\ZZ}a^nba^{-n}\right>$ which is a free group on countably many generators. Since $\tilde X$ is a covering space, $\pi_1(\tilde X) \injects \pi_1(S^1 \vee S^1) = \ZZ^{\ast 2}$. By 4, we can restrict this to $n$ generators for any $n$ to get a subgroup, and $A\leq B \leq C \implies A \leq C$ as groups.
 
-$\qed$
+
+:::
+
 
 ## 3
 
 Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$.
 
+:::{.solution}
 Facts used:
 - Construction of Moore Spaces
 - $\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)$, using $\Sigma X = C_X \union_X C_X$ and Mayer-Vietoris.
@@ -63,12 +68,16 @@ Take $X = e^0 \union_{\Phi_1} e^5 \union_{\Phi_2} e^6$, where
 \Phi_2: \del B^6 = S^5 \mapsvia{z~\mapsto z^4} e^5
 .\end{align*}
 
-where $\deg \Phi_2 = 4$.$\qed$
+where $\deg \Phi_2 = 4$.
+
+:::
+
 
 ## 4 
 
 Compute the complement of a knotted solid torus in $S^3$.
 
+:::{.solution}
 Facts used:
 
 - $H_*(T^2) = [\ZZ, \ZZ^2, \ZZ, 0\rightarrow]$
@@ -120,7 +129,9 @@ We then deduce:
   $$
  	Since $\del_3$ must be an isomorphism, this forces the edge terms to be zero.
 
-$\qed$
+
+:::
+
 
 ## 5 
 
@@ -143,7 +154,7 @@ Facts used:
 
 - By Poincare Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
 
-$\qed$
+
 
 ## 6
 
@@ -164,7 +175,7 @@ $\ZZ_3$                         | $\ZZ_3$ | 0       | 0
 
 So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
 
-$\qed$
+
 
 ## 7 
 
@@ -187,7 +198,7 @@ is the induced map on cohomology.
 
 Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\CP^1]) = 0$.
 
-We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. $\qed$
+We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. 
 
 ## 8 
 
@@ -198,7 +209,7 @@ Facts used:
 - Structure of the universal cover of a wedge product
 - $\RR^2 \surjects_p T^2 = S^1 \cross S^1$
 
-$\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.$\qed$
+$\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.
 
 ## 9
 
@@ -235,4 +246,4 @@ where rows 3 and 4 force $\pi_3(E) \cong \ZZ$, rows 0 and 1 force $\pi_0(E) = \Z
 
 By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
 
-$\qed$
+
