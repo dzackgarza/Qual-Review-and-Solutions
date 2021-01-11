@@ -39,23 +39,24 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 :::{.remark}
 Both the product and direct sum have coordinate-wise operations.
 For finite index sets $\abs{J}< \infty$, the direct sum and product coincide, but in general there is only an injection $\bigoplus_j X_i \injects \prod_j X_j$.
-In the direct sum $\Bigoplus_j X_j$ have only finitely many nonzero entries, while the product allows *infinitely* many nonzero entries.
+In the direct sum $\bigoplus_j X_j$ have only finitely many nonzero entries, while the product allows *infinitely* many nonzero entries.
+So in general, I always use the product notation.
 :::
 
 
+:::{.remark}
+Elements in the free abelian group of rank $n$ are characterized by
+\[
+x\in \ZZ^{\ast n} = \gens{ a_1, \cdots, a_n } \implies x = \sum_n c_i a_i \text{ for some } c_i \in \ZZ
+\]
+where the $a_i$ are some generating set of $n$ elements.
+E.g. such an element may look like 
+\[
+x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
+.\]
+:::
 
-*   For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
 
-    Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
-
-    In other words, there is an injective map $$$$ which is an isomorphism when $\abs{I} < \infty$
-
-* The free abelian group of rank $n$: 
-  $$
-  \ZZ^n \definedas \prod_{i=1}^n \ZZ = \ZZ \times \ZZ \times \ldots \ZZ
-  .$$ 
-	- $x \in \ZZ^n = \left< a_1, \cdots, a_n\right> \implies x = \sum_n c_i a_i$ for some $c_i \in \ZZ$ , i.e. $a_i$ form a basis.
-	- Example: $x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2$.
 
 * The **free product** of $n$ free abelian groups:
   $$
