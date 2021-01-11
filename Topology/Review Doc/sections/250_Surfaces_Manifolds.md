@@ -99,8 +99,16 @@ Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; t
 :::
 
 
-:::{.proposition title="?"}
+:::{.proposition title="Topology homology for manifolds"}
 If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
+More generally, 
+\[
+\begin{cases}
+\ZZ & M^n \text{ is orientable } 
+\\
+0 & \text{else}.
+\end{cases}
+\]
 :::
 
 
@@ -116,7 +124,6 @@ Let $M^3$ be a 3-manifold, then its homology is given by the following (by cases
 
 
 
-* $H^n(M^n) = \ZZ$ if $M^n$ is orientable and zero if $M^n$ is nonorientable.
 * Poincaré Duality: $H_i M^n =\cong H^{n-i} M^n$ iff $M^n$ is closed and orientable.
 
 On the complements of spaces in $\RR^3$:
