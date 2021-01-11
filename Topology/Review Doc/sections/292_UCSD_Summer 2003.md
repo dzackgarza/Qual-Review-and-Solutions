@@ -132,11 +132,11 @@ We then deduce:
 
 :::
 
-
 ## 5 
 
 Compute the homology and cohomology of a closed, connected, oriented 3-manifold $M$ with $\pi_1(M) = \ZZ^{\ast 2}$.
 
+:::{.solution}
 Facts used:
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
 - $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
@@ -146,20 +146,23 @@ Facts used:
 
 - Since $M$ is connected, $H_0 = \ZZ$
 - Since $\pi_1(M) = \ZZ^{\ast 2}$, $H_1$ is the abelianization and $H_1(X) = \ZZ^2$
-- Since $M$ is closed/connected/oriented, Poincare Duality holds and $H_2 = H^{3-2} = H^1 = \mathbf{F} H_1 + \mathbf{T}H_0$ by UCT. Since $H_0=\ZZ$ is torsion-free, we have $H_2(M) = H_1(M) =  \ZZ^2$.
+- Since $M$ is closed/connected/oriented, Poincaré Duality holds and $H_2 = H^{3-2} = H^1 = \mathbf{F} H_1 + \mathbf{T}H_0$ by UCT. Since $H_0=\ZZ$ is torsion-free, we have $H_2(M) = H_1(M) =  \ZZ^2$.
 - Since $M$ is an orientable manifold, $H_3(M) = \ZZ$
 - So $H_*(M) = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$
 
 **Cohomology**
 
-- By Poincare Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
+- By Poincaré Duality, $H^*(M) = \widehat{H_*(M)} = [\ZZ, \ZZ^2, \ZZ^2, \ZZ, 0\rightarrow]$. (Where the hat denotes reversing the list.)
 
+
+:::
 
 
 ## 6
 
 Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
 
+:::{.solution}
 Facts Used:
 
 1. $\ext(\ZZ, \ZZ_m) = \ZZ_m$
@@ -176,11 +179,14 @@ $\ZZ_3$                         | $\ZZ_3$ | 0       | 0
 So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
 
 
+:::
+
 
 ## 7 
 
 Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
 
+:::{.solution}
 Facts used:
 
 1. Every homeomorphism induces isomorphisms on homotopy/homology/cohomology.
@@ -200,10 +206,14 @@ Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\
 
 We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. 
 
+
+:::
+
 ## 8 
 
 Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi_2(X)$.
 
+:::{.solution}
 Facts used:
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
@@ -211,10 +221,13 @@ Facts used:
 
 $\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.
 
+:::
+
 ## 9
 
 Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
+:::{.solution}
 Facts used:
 - Homotopy LES
 - Hurewicz
@@ -246,4 +259,5 @@ where rows 3 and 4 force $\pi_3(E) \cong \ZZ$, rows 0 and 1 force $\pi_0(E) = \Z
 
 By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
 
-
+  
+:::
