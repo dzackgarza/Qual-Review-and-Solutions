@@ -33,24 +33,22 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 | $\ZZ^{\ast n}$                                       | The free group on $n$ generators   |
 |                                                      |                                    |
 |                                                      |                                    |
-|                                                      |                                    |
-|                                                      |                                    |
-|                                                      |                                    |
-|                                                      |                                    |
-|                                                      |                                    |
 
-- Cartesian Product $X\cross Y, \prod_i X_i$
-- Direct Sum $X \oplus Y, \bigoplus_i X_i$
-- Direct Product $X \ast Y, \ast_i X_i$
-  - Element-wise multiplication, allows infinitely many entries
-  - $\ast_i X_i= \oplus_i X_i$ for $i < \infty$
-- Tensor Product $X \tensor Y, \bigotimes_i X_i, X^{\otimes_i}$
+
+
+:::{.remark}
+Both the product and direct sum have coordinate-wise operations.
+For finite index sets $\abs{J}< \infty$, the direct sum and product coincide, but in general there is only an injection $\bigoplus_j X_i \injects \prod_j X_j$.
+In the direct sum $\Bigoplus_j X_j$ have only finitely many nonzero entries, while the product allows *infinitely* many nonzero entries.
+:::
+
+
 
 *   For a finite index set $I$, $\prod_I G = \bigoplus_I G$ in $\mathbf{Grp}$, i.e. the finite direct product and finite direct sum coincide. 
 
     Otherwise, if $I$ is infinite, the direct sum requires cofinitely many zero entries (i.e. finitely many nonzero entries), so here we always use $\prod$. 
 
-    In other words, there is an injective map $$\bigoplus_I G \injects \prod_I G$$ which is an isomorphism when $\abs{I} < \infty$
+    In other words, there is an injective map $$$$ which is an isomorphism when $\abs{I} < \infty$
 
 * The free abelian group of rank $n$: 
   $$
