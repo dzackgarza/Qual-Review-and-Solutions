@@ -555,7 +555,7 @@ Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence 
 :::
 
 :::{.definition title="Closed Maps"}
-See [@def:open_closed_maps].
+See \cref{def:open_closed_maps}.
 :::
 
 :::{.definition title="Compact"}
