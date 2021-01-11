@@ -2,6 +2,12 @@
 
 ## Basics
 
+:::{.example title="holomorphic vs non-holomorphic"}
+\envlist
+- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
+- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
+:::
+
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
@@ -75,6 +81,7 @@ If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
 .\]
 :::
+
 :::{.proof}
 \hfill
 :::{.concept}
@@ -112,6 +119,7 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 :::{.proposition title="Exponential is uniformly convergent in discs"}
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
+
 :::{.proof}
 Apply the estimate
 \[  
@@ -166,10 +174,10 @@ If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a 
 The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
 :::
 
-\todo[inline]{Find the proof!}
 :::{.proof}
 ???
 :::
+\todo[inline]{Find the proof!}
 
 :::{.proposition title="Injectivity Relates to Derivatives"}
 If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
