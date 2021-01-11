@@ -23,6 +23,22 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 ## Different Types of Product/Sum Structures
 
 
+| Notation                                             | Definition                         |
+|------------------------------------------------------|------------------------------------|
+| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Products                           |
+| $X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}$    | Direct sums                        |
+| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                      |
+| $X\tensor Y, \bigotimes_{j\in J} X_j, X^{\tensor n}$ | Tensor products                    |
+| $\ZZ^n$                                              | The free abelian group of rank $n$ |
+| $\ZZ^{\ast n}$                                       | The free group on $n$ generators   |
+|                                                      |                                    |
+|                                                      |                                    |
+|                                                      |                                    |
+|                                                      |                                    |
+|                                                      |                                    |
+|                                                      |                                    |
+|                                                      |                                    |
+
 - Cartesian Product $X\cross Y, \prod_i X_i$
 - Direct Sum $X \oplus Y, \bigoplus_i X_i$
 - Direct Product $X \ast Y, \ast_i X_i$
