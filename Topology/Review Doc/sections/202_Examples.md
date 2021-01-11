@@ -40,10 +40,13 @@ Some known examples:
 
 :::{.example title="Spheres and Balls"}
 \[
-S^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1}
+S^n &\da \ts{ \vector x \in \RR^{n+1} \st \norm{\vector x} = 1} \\
 B^n &\da \ts{ \vector x \in \RR^{n} \st \norm{\vector x} \leq 1}
 .\]
 Note the subtle differences in dimension: $S^n$ is a manifold of dimension $n$ embedded in a space of dimension $n+1$.
+
+![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
+
 :::
 
 
@@ -72,7 +75,6 @@ One can also define $\RP^ \infty \da \directlim_{n} \RP^n$$
 
 * $S^{n-1} = \del B^{n} = \theset{\vector{v} \in \RR^{n} \mid \norm{\vector{v}} = 1} \subset \RR^n$
 
-![Low-Dimensional Spheres/Discs/Balls](figures/sphere-v-ball-correct.png)
 
 * The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$
 
