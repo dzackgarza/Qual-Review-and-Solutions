@@ -111,12 +111,15 @@ A topological space $X$ is *paracompact* iff every open cover of $X$ admits an o
 :::
 
 :::{.definition title="Quotient Map"}
-A map $f:X\to Y$ is a **quotient map** if and only if 
+A map $q:X\to Y$ is a **quotient map** if and only if 
 
-1. $f$ is surjective, and
-2. $U \subseteq Y$ is open if and only if $f ^{-1} (U)$ is open.
+1. $q$ is surjective, and
+2. $U \subseteq Y$ is open if and only if $q ^{-1} (U)$ is open.
+
+They satisfy the following universal property:
+if $f:Y\to Z$ is any continuous map, then $f$ is continuous if and only if $f\circ q$ is continuous:
+
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Path Connected"}
 A space $X$ is **path connected** if and only if for every pair of points $x\neq y$ there exists a continuous map $f:I \to X$ such that $f(0) = x$ and $f(1) = y$.
