@@ -23,16 +23,17 @@ This is especially useful if you have some $f: A\into B$ and you look at the ind
 ## Different Types of Product/Sum Structures
 
 
-| Notation                                             | Definition                         |
-|------------------------------------------------------|------------------------------------|
-| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Products                           |
-| $X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}$    | Direct sums                        |
-| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                      |
-| $X\tensor Y, \bigotimes_{j\in J} X_j, X^{\tensor n}$ | Tensor products                    |
-| $\ZZ^n$                                              | The free abelian group of rank $n$ |
-| $\ZZ^{\ast n}$                                       | The free group on $n$ generators   |
-|                                                      |                                    |
-|                                                      |                                    |
+| Notation                                             | Definition                          |
+|------------------------------------------------------|-------------------------------------|
+| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Products                            |
+| $X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}$    | Direct sums                         |
+| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                       |
+| $X\tensor Y, \bigotimes_{j\in J} X_j, X^{\tensor n}$ | Tensor products                     |
+| $\ZZ^n$                                              | The free abelian group of rank $n$  |
+| $\ZZ^{\ast n}$                                       | The free group on $n$ generators    |
+| $\pi_0(X)$                                           | The *set* of path components of $X$ |
+| $G=1$                                                | The trivial abelian group           |
+| $G=0$                                                | The trivial nonabelian group        |
 
 
 
@@ -43,38 +44,36 @@ In the direct sum $\bigoplus_j X_j$ have only finitely many nonzero entries, whi
 So in general, I always use the product notation.
 :::
 
+:::{.remark}
+The free group on $n$ generators is the free product of $n$ free abelian groups, but is not generally abelian!
+So we use multiplicative notation, and elements 
+\[
+x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>
+\]
+are finite words in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
+E.g. an element may look like 
+\[
+x = a_1^2 a_2^4 a_1 a_2^{-2}
+.\]
+:::
 
 :::{.remark}
-Elements in the free abelian group of rank $n$ are characterized by
+The free abelian group of rank $n$ is the abelianization of $\ZZ^{\ast n}$,
+and its elements are characterized by
 \[
 x\in \ZZ^{\ast n} = \gens{ a_1, \cdots, a_n } \implies x = \sum_n c_i a_i \text{ for some } c_i \in \ZZ
 \]
-where the $a_i$ are some generating set of $n$ elements.
+where the $a_i$ are some generating set of $n$ elements and we used additive notation since the group is abelian.
 E.g. such an element may look like 
 \[
 x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
 .\]
 :::
 
-
-
-* The **free product** of $n$ free abelian groups:
-  $$
-  \ZZ^{\ast n} \definedas \Conv_{i=1}^n \ZZ = \ZZ \ast \ZZ \ast \ldots \ZZ
-  $$ 
-  This is a free *nonabelian* group on $n$ generators.
-
-	- $x \in \ZZ^{\ast n} = \left< a_1, \ldots, a_n\right>$ implies that $x$ is a finite word in the noncommuting symbols $a_i^k$ for $k\in \ZZ$.
-	- Example: $x = a_1^2 a_2^4 a_1 a_2^{-2}$
-
-
-
 ## Conventions
 
 - Generally assume spaces are connected.
 
-* $\pi_0(X)$ is the set of path components of $X$, and I write $\pi_0(X) = \ZZ$ if $X$ is path-connected (although it is not a group). 
-  Similarly, $H_0(X)$ is a free abelian group on the set of path components of $X$.
 
 * Lists start at entry 1, since all spaces are connected here and thus $\pi_0 = H_0 = \ZZ$. That is,
 	* $\pi_*(X) = [\pi_1(X), \pi_2(X), \pi_3(X), \cdots]$

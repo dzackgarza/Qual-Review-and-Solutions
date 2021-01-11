@@ -2,6 +2,10 @@
 
 ## Useful Facts
 
+:::{.fact}
+$H_0(X)$ is a free abelian group on the set of path components of $X$.
+:::
+
 :::{.proposition title="Homology commutes with wedge products"}
 \[
 \tilde H_*(A\vee B) &\cong H_*(A) \times H_*(B) \\
