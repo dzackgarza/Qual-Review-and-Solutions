@@ -1,5 +1,5 @@
 SHELL:=/bin/zsh
-FILENAME="Topology_Qualifying_Exam_Notes"
+FILENAME="TopologyQualifyingExamNotes"
 
 ## WARNING: "reset" wipes out this directory!
 TEMP_DIR="/tmp/"
