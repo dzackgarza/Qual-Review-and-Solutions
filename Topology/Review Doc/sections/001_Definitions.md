@@ -116,9 +116,6 @@ A map $q:X\to Y$ is a **quotient map** if and only if
 1. $q$ is surjective, and
 2. $U \subseteq Y$ is open if and only if $q ^{-1} (U)$ is open.
 
-They satisfy the following universal property:
-if $f:Y\to Z$ is any continuous map, then $f$ is continuous if and only if $f\circ q$ is continuous:
-
 :::
 
 :::{.definition title="Path Connected"}
