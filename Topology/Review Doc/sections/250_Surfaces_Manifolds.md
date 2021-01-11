@@ -1,17 +1,21 @@
 # Surfaces and Manifolds
 
-## Classification of Surfaces
-
-![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
 
 The most common spaces appearing in this theory:
 
-- $\bbm$ the Möbius Strip
 - $\SS ^2$, 
 - $\TT^2 \definedas  S^1\cross S^1$, 
 - $\RP^2$
 - $\KK$ the Klein bottle
+- $\bbm$ the Möbius Strip
 - $\Sigma_n \definedas \#_{i=1}^n \TT^2$.
+
+The first 4 can be obtained from the following pasting diagrams:
+
+![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
+
+## Classification of Surfaces
+
 
 :::{.theorem title="Classification of Surfaces"}
 The set of surfaces under connect sum forms a monoid with the presentation
