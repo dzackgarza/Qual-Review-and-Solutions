@@ -66,12 +66,6 @@ The following are some examples of ways to construct specific spaces for example
 
 
 
-
-
-
-Exotic/Pathological Spaces
-
-
 Operations
 
 - Cartesian product $A\cross B$
@@ -89,19 +83,36 @@ Operations
 
 ## Alternative Topologies
 
+:::{.example title="Nonstandard topologies"}
+The following are some nice examples of topologies to put on familiar spaces to produce counterexamples:
+
 - Discrete
 - Cofinite
 - Discrete and Indiscrete
 - Uniform
+:::
 
-The cofinite topology:
+
+:::{.example title="The cofinite topology"}
+The cofinite topology on any space $X$ is always
 
 - Non-Hausdorff
 - Compact
+:::
+
+
+:::{.proposition title="Topology is discrete if and only if points are open"}
+A topology $(X, \tau)$ is the discrete topology iff points $x\in X$ are open.
+:::
+
+
+:::{.example title="The discrete topology"}
+
+:::
+
 
 The discrete topology:
 
-- Discrete iff points are open
 - Always Hausdorff
 - Compact iff finite
 - Totally disconnected
