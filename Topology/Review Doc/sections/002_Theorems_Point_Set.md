@@ -45,18 +45,23 @@ For $f:X \to Y$ continuous with $X$ compact and $Y$ ordered in the order topolog
 
 
 
+:::{.theorem title="Sequentially compact if and only if complete and totally bounded"}
+A metric space $X$ is sequentially compact iff it is complete and totally bounded.
+:::
 
-Theorem
-: A metric space $X$ is sequentially compact iff it is complete and totally bounded.
+:::{.theorem title="Totally bounded if and only if Cauchy subsequences exist"}
+A metric space is totally bounded iff every sequence has a Cauchy subsequence.
+:::
 
-Theorem
-: A metric space is totally bounded iff every sequence has a Cauchy subsequence.
+:::{.theorem title="Compact if and only if complete and totally bounded"}
+A metric space is compact iff it is complete and totally bounded.
+:::
 
-Theorem
-: A metric space is compact iff it is complete and totally bounded.
+:::{.theorem title="Baire"}
+If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of countably many dense open sets in $X$ is again dense in $X$.
+:::
 
-Theorem (Baire)
-: If $X$ is a complete metric space, then the intersection of countably many dense open sets is dense in $X$.
+
 
 
 
