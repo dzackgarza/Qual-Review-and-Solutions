@@ -144,6 +144,16 @@ Lie Groups:
 
 :::
 
+:::{.example title="More random geometric examples"}
+Some other spaces that show up, but don't usually have great algebraic topological properties:
+
+* Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_{n}(k)$
+* The projective space $\PP^n(k)$
+* The projective linear group over a ring $R$, $PGL_{n}(R)$
+* The projective special linear group over a ring $R$, $PSL_{n}(R)$
+* The modular groups $PSL_{n}(\ZZ)$
+  * Specifically $PSL_{2}(\ZZ)$
+:::
 
 ## Modifying Known Spaces
 
@@ -156,27 +166,20 @@ The "generalized uniform bouquet"? $\mathcal{B}^n(m) = \bigvee_{i=1}^n S^m$.
 There's no standard name for this, but it's an interesting enough object to consider!
 :::
 
+:::{.example title="Other ways to modify a known space"}
+Possible modifications to a space $X$:
+
+* Remove a line segment
+* Remove an entire line/axis
+* Remove a hole
+* Quotient by a group action (e.g. antipodal map, or rotation)
+* Remove a knot
+* Take complement in ambient space
+
+:::
 
 
 
-
-* Possible modifications to a space $X$:
-	* Remove $k$ points by taking $D(k, X)$
-	* Remove a line segment
-	* Remove an entire line/axis
-	* Remove a hole
-	* Quotient by a group action (e.g. antipodal map, or rotation)
-	* Remove a knot
-	* Take complement in ambient space
-
-
-* "Geometric" Stuff
-  * Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_{n}(k)$
-  * The projective space $\PP^n(k)$
-    * The projective linear group over a ring $R$, $PGL_{n}(R)$
-    * The projective special linear group over a ring $R$, $PSL_{n}(R)$
-    * The modular groups $PSL_{n}(\ZZ)$
-      * Specifically $PSL_{2}(\ZZ)$
 
 ## Facts About Low Dimensional and/or Standard Spaces
 
