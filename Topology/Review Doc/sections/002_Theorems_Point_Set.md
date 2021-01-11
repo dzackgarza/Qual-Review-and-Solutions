@@ -2,20 +2,21 @@
 
 Properties preserved and not preserved by continuous functions: [Link](https://people.clas.ufl.edu/groisser/files/cont_img_preimg.pdf)
 
-
 :::{.proposition title="The continuous image of a..."}
 The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
 
-  - Compactness?
-  - Connectedness (when surjective)
-  - Separability
-  - Density **only when** $f$ is surjective
-  - **Not** openness
-  - **Not** closedness
+- Compactness
+- Separability
+- If $f$ is surjective:
+  - Connectedness 
+  - Density 
+
+The following are **not preserved**:
+
+- Openness
+- Closedness
 
 :::
-
-
 
 ## Metric Spaces and Analysis
 
@@ -65,13 +66,13 @@ If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of
 :::
 
 
-
-
-
 ## Connectedness
 
-Theorem (Tube Lemma)
-:   \todo[inline]{Todo}
+
+:::{.lemma title="The Tube Lemma"}
+
+:::
+
 
 ## Compactness
 
