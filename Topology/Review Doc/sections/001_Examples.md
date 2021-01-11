@@ -116,16 +116,15 @@ Thus $U$ is open.
 :::
 
 
-
 :::{.example title="The discrete topology"}
-
 Some facts about the discrete topology:
 
 - Always Hausdorff
 - Compact iff finite
 - Totally disconnected
-- If $X$ is additionally Hausdorff, every map $f:X\to Y$ is continuous
+- If $X$ is discrete, every map $f:X\to Y$ for any $Y$ is continuous (obvious!)
 :::
+
 
 
 
