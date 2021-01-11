@@ -37,9 +37,8 @@ That is, if $\theset{U_{j} \suchthat j\in J} \subset \tau$ is a collection of op
 :::
 
 :::{.definition title="Continuous Map"}
-Todo
+A map $f:X\to Y$ between topological spaces is **continuous** if and only if whenever $U \subseteq Y$ is open, $f ^{-1} (U) \subseteq X$ is open.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Cover"}
 A collection of subsets $\theset{U_\alpha}$ of $X$ is said to *cover $X$* iff $X = \union_{\alpha} U_\alpha$.
@@ -95,11 +94,9 @@ A space is *locally path-connected* if it admits a basis of path-connected open 
 A neighborhood of a point $x$ is *any* open set containing $x$.
 :::
 
-
 :::{.definition title="Normal"}
 A space is **normal** if any two disjoint closed subsets can be separated by neighborhoods.
 :::
-
 
 :::{.definition title="Neighborhood Basis"}
 If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
