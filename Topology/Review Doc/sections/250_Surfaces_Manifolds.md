@@ -1,6 +1,5 @@
 # Surfaces and Manifolds
 
-
 The most common spaces appearing in this theory:
 
 - $\SS ^2$, 
@@ -15,7 +14,6 @@ The first 4 can be obtained from the following pasting diagrams:
 ![Pasting Diagrams for Surfaces](figures/PastingDiagrams.png)
 
 ## Classification of Surfaces
-
 
 :::{.theorem title="Classification of Surfaces"}
 The set of surfaces under connect sum forms a monoid with the presentation
@@ -38,12 +36,14 @@ In each case, there is a formula
 \]
 :::
 
+:::{.fact table="Table of surfaces possible for a given Euler characteristic"}
 
-| Orientable? | $-4$       | $-3$        | $-2$            | $-1$        | $0$                         | $1$         | $2$         |
-| ------------  | ---        | ----        | ----            | ---         | ---                         | ---         | ---         |
-| Yes           | $\Sigma_3$ | $\emptyset$ | $\Sigma_2$ | $\emptyset$ | $\TT^2, S^1\cross I$ | $\DD^2$ | $\SS^2$     |
-| No            | ?          | ?           | ?               | ?           | $\KK, \bbm$                  | $\RP^2$     | $\emptyset$ |
+| Orientable?  | $-4$       | $-3$        | $-2$       | $-1$        | $0$                  | $1$     | $2$         |
+| ------------ | ---        | ----        | ----       | ---         | ---                  | ---     | ---         |
+| Yes          | $\Sigma_3$ | $\emptyset$ | $\Sigma_2$ | $\emptyset$ | $\TT^2, S^1\cross I$ | $\DD^2$ | $\SS^2$     |
+| No           | ?          | ?           | ?          | ?           | $\KK, \bbm$          | $\RP^2$ | $\emptyset$ |
 
+:::
 
 :::{.proposition title="Inclusion-Exclusion"}
 \[  
@@ -55,7 +55,6 @@ Todo
 :::
 \todo{Proof.}
 
-
 :::{.corollary title="Euler for Connect Sums"}
 \[  
 \chi(A \# B) = \chi(A) + \chi(B) - 2
@@ -65,13 +64,11 @@ Todo
 Set $U= A, B=V$, then by definition of the connect sum, $A\cap B = \SS^2$ where $\chi(\SS^2) = 2$
 :::
 
-
 :::{.proposition title="Decomposing $\RP^2$"}
 \[  
 \RP^2 = \bbm \disjoint_{\id_{\bd \bbm}} \bbm
 .\]
 :::
-
 
 :::{.proposition title="Decomposing a Klein Bottle"}
 \[  
@@ -83,7 +80,6 @@ Todo
 :::
 \todo{Proof.}
 
-
 :::{.proposition title="Rewriting a Klein Bottle"}
 \[  
 \RP^2 \# \KK \cong \RP^2 \# \TT^2
@@ -94,12 +90,22 @@ Todo
 :::
 \todo{Proof.}
 
-
 ## Manifolds
 
-> To show something is not a manifold, try looking at local homology. Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
 
-- $M^n$ closed/connected $\implies H_n = \ZZ$ and $\tor(H_{n-1}) = 0$
+:::{.remark}
+To show something is not a manifold, try looking at local homology. 
+Can use point-set style techniques like removing points, i.e. $H_1(X, X-\pt)$; this should essentially always yield $\ZZ$ by excision arguments.
+:::
+
+
+:::{.proposition title="?"}
+If $M^n$ is a closed connected manifold, then $H_n = \ZZ$ and $\tor(H_{n-1}) = 0$.
+
+:::
+
+
+
 - 3-manifolds:
   - Orientable: $H_* = (\ZZ, \ZZ^r, \ZZ^r, \ZZ)$
   - Nonorientable: $H_* = (\ZZ, \ZZ^r, \ZZ^{r-1} \oplus \ZZ_2, \ZZ)$
