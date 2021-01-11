@@ -95,9 +95,11 @@ A space is *locally path-connected* if it admits a basis of path-connected open 
 A neighborhood of a point $x$ is *any* open set containing $x$.
 :::
 
-:::{.definition title="Normal covering space (a.k.a. 'regular')"}
-A covering space is **normal** if and only if for every $x\in X$ and every pair of lifts $\tilde x_1, \tilde x_2$, there is a deck transformation $f$ such that $f(\tilde x_1) = \tilde x_2$.
+
+:::{.definition title="Normal"}
+A space is **normal** if any two disjoint closed subsets can be separated by neighborhoods.
 :::
+
 
 :::{.definition title="Neighborhood Basis"}
 If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_{p}$ of neighborhoods of $p$ such that if $N_{p}$ is a neighborhood of $p$, then $N_{p} \supseteq B$ for at least one $B\in \mcb_{p}$.
@@ -135,9 +137,8 @@ A cover $\mcv \covers X$ is a *refinement* of $\mcu \covers X$ iff for each $V\i
 :::
 
 :::{.definition title="Regular"}
-Todo
+A space $X$ is **regular** if whenever $x\in X$ and $F\not\ni x$ is closed, $F$ and $x$ are separated by neighborhoods.
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Retract"}
 A map $r$ in $A\mathrel{\textstyle\substack{\injects^{\iota}\\\textstyle\dashleftarrow_{r}}} X$ satisfying $$r\circ\iota = \id_{A}.$$
@@ -792,6 +793,10 @@ A manifold in which open neighborhoods may be isomorphic to either $\RR^n$ or a 
 
 :::
 \todo[inline]{Definitions}
+
+:::{.definition title="Normal covering space (a.k.a. 'regular')"}
+A covering space is **normal** if and only if for every $x\in X$ and every pair of lifts $\tilde x_1, \tilde x_2$, there is a deck transformation $f$ such that $f(\tilde x_1) = \tilde x_2$.
+:::
 
 :::{.definition title="Nullhomotopic"}
 A map $X\mapsvia{f} Y$ is *nullhomotopic* if it is homotopic to a constant map $X \mapsvia{g} \theset{y_{0}}$; that is, there exists a homotopy 
