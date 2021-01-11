@@ -69,7 +69,16 @@ If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of
 ## Connectedness
 
 
-:::{.lemma title="The Tube Lemma"}
+:::{.theorem title="The Tube Lemma"}
+Let $X, Y$ be spaces with $Y$ compact.
+For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, there is an open $O \subseteq X$ such that
+\[
+\ts{x} \cross Y \subseteq O \cross Y \subseteq U
+.\]
+
+:::
+
+:::{.proof title="?"}
 
 :::
 
