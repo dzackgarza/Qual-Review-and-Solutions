@@ -1,29 +1,27 @@
 # Broadly Applicable Facts 
 
-
 ## Algebra Facts
-
-
 
 :::{.fact}
 A group morphism $f:X \to Y$ can not be injective if $Y$ is trivial unless $X$ is also trivial.
 :::
-
 
 :::{.proposition title="Morphisms between groups"}
 There are no nontrivial homomorphisms from finite groups into free groups.
 In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
 :::
 
+:::{.proof title="?"}
+Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
+:::
 
-
-Proof
-:   Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
-
+:::{.remark title="How to use this fact"}
 This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
 
+:::
 
 ## Different Types of Product/Sum Structures
+
 
 - Cartesian Product $X\cross Y, \prod_i X_i$
 - Direct Sum $X \oplus Y, \bigoplus_i X_i$
