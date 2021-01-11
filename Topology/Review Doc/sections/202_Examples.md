@@ -2,38 +2,53 @@
 
 ## Standard Spaces and Modifications
 
-* $K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
-$$
-\pi_k(K(G, n)) = 
+:::{.example title="Eilenberg-MacLane Spaces"}
+$K(G, n)$ is an Eilenberg-MacLane space, the homotopy-unique space satisfying 
+\[
+\pi_{k}(K(G, n)) = 
 \begin{cases}
 G & k=n, \\ 
 0 & k\neq n.
 \end{cases}
-$$
-	- $K(\ZZ, 1) = S^1$
-	- $K(\ZZ, 2) = \CP^\infty$
-	- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
+\]
 
-* $M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
-$$
-H_k(M(G, n); G) = 
+Some known examples:
+
+- $K(\ZZ, 1) = S^1$
+- $K(\ZZ, 2) = \CP^\infty$
+- $K(\ZZ/2\ZZ, 1) = \RP^\infty$
+
+:::
+
+
+:::{.example title="Moore Spaces"}
+$M(G, n)$ is a Moore space, the homotopy-unique space satisfying 
+\[
+H_{k}(M(G, n); G) = 
 \begin{cases}
 G & k=n, \\ 
 0 & k\neq n.
 \end{cases}
-$$
-	- $M(\ZZ, n) = S^n$
-	- $M(\ZZ/2\ZZ, 1) = \RP^2$
-	- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
+\]
+
+Some known examples:
+
+- $M(\ZZ, n) = S^n$
+- $M(\ZZ/2\ZZ, 1) = \RP^2$
+- $M(\ZZ/p\ZZ, n)$ is made by attaching $e^{n+1}$ to $S^n$ via a degree $p$ map.
+
+:::
+
+
 
 
 * $\mathbb{RP}^n = S^n /S^0 = S^n / \ZZ/2\ZZ$
 
 * $\mathbb{CP}^n = S^{2n+1} / S^1$
 
-* $T^n = \prod_n S^1$ is the $n\dash$torus
+* $T^n = \prod_{n} S^1$ is the $n\dash$torus
 
-* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_1, x_2, \ldots x_k}$ where each $x_i \in X$.
+* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_{1}, x_{2}, \ldots x_{k}}$ where each $x_{i} \in X$.
 
 
 
@@ -47,7 +62,7 @@ $$
 
 * The real Grassmannian, $Gr(n, k, \RR)$, i.e. the set of $k$ dimensional subspaces of $\RR^n$
 
-* The Stiefel manifold $V_n(k)$
+* The Stiefel manifold $V_{n}(k)$
 
 * Possible modifications to a space $X$:
 	* Remove $k$ points by taking $D(k, X)$
@@ -59,33 +74,33 @@ $$
 	* Take complement in ambient space
 
 * Lie Groups
-  * The real general linear group, $\GL_n(\RR)$
-    * The real special linear group $SL_n(\RR)$
-    * The real orthogonal group, $O_n(\RR)$
-      * The real special orthogonal group, $SO_n(\RR)$
-    * The real unitary group, $U_n(\RR)$
-      * The real special unitary group, $SU_n(\RR)$
+  * The real general linear group, $\GL_{n}(\RR)$
+    * The real special linear group $SL_{n}(\RR)$
+    * The real orthogonal group, $O_{n}(\RR)$
+      * The real special orthogonal group, $SO_{n}(\RR)$
+    * The real unitary group, $U_{n}(\RR)$
+      * The real special unitary group, $SU_{n}(\RR)$
     * The real symplectic group $Sp(n)$
 
 * "Geometric" Stuff
-  * Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_n(k)$
+  * Affine $n$-space over a field $\Af^n(k) = k^n \semidirect GL_{n}(k)$
   * The projective space $\PP^n(k)$
-    * The projective linear group over a ring $R$, $PGL_n(R)$
-    * The projective special linear group over a ring $R$, $PSL_n(R)$
-    * The modular groups $PSL_n(\ZZ)$
-      * Specifically $PSL_2(\ZZ)$
+    * The projective linear group over a ring $R$, $PGL_{n}(R)$
+    * The projective special linear group over a ring $R$, $PSL_{n}(R)$
+    * The modular groups $PSL_{n}(\ZZ)$
+      * Specifically $PSL_{2}(\ZZ)$
 
 ## Facts About Low Dimensional and/or Standard Spaces
 
 
 - $S^{2n+1} \subset \CC^{n+1}$
 - $\RP^1 \cong S^1$
-- $\RP^n \cong S^n/S^0 \cong S^n / \ZZ/2\ZZ$.
+- $\RP^n \cong S^n_{/S}^0 \cong S^n / \ZZ/2\ZZ$.
 - $\CP^1 \cong S^2$
 - $\MM \homotopic S^1$
 - $\CP^n = \CC^n \coprod \CP^{n-1} = \coprod_{i=0}^n \CC^i$
 - $\CP^n = S^{2n+1} / S^n$
-- $S^n/S^k \cong S^n \vee \Sigma S^k$.
+- $S^n_{/S}^k \cong S^n \vee \Sigma S^k$.
 
 
 
@@ -93,21 +108,21 @@ $$
 
 # Low Dimensional Homology Examples
 
-\begin{align*}
+\[
 \begin{array}{cccccccccc}
 S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \MM   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 \RP^1 &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
-\RP^2 &=  &[&\ZZ, &\ZZ_2,             &0,    &0,      &0,    &0\rightarrow & ]\\
-\RP^3 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ,    &0,    &0\rightarrow & ]\\
-\RP^4 &=  &[&\ZZ, &\ZZ_2,             &0,    &\ZZ_2,  &0,    &0\rightarrow & ]\\
+\RP^2 &=  &[&\ZZ, &\ZZ_{2},             &0,    &0,      &0,    &0\rightarrow & ]\\
+\RP^3 &=  &[&\ZZ, &\ZZ_{2},             &0,    &\ZZ,    &0,    &0\rightarrow & ]\\
+\RP^4 &=  &[&\ZZ, &\ZZ_{2},             &0,    &\ZZ_{2},  &0,    &0\rightarrow & ]\\
  S^2  &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
 \TT^2 &=  &[&\ZZ, &\ZZ^2,             &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
-\KK   &=  &[&\ZZ, &\ZZ \oplus \ZZ_2,  &0,    &0,      &0,    &0\rightarrow & ]\\
+\KK   &=  &[&\ZZ, &\ZZ \oplus \ZZ_{2},  &0,    &0,      &0,    &0\rightarrow & ]\\
 \CP^1 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &0,    &0\rightarrow & ]\\
 \CP^2 &=  &[&\ZZ, &0,                 &\ZZ,  &0,      &\ZZ,  &0\rightarrow & ]\\
 \end{array}
-.\end{align*}
+.\]
 
 
 \scriptsize
@@ -116,12 +131,12 @@ S^1   &=  &[&\ZZ, &\ZZ,               &0,    &0,      &0,    &0\rightarrow & ]\\
 | ----------------------------- | ---------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------            |
 | $\RR^1$                       | $0$                                            | $0$                                                                | $\ZZ\cdot 1 + \ZZ \cdot x$                         | 0                                                  |
 | $\RR^n$                       | $0$                                            | $0$                                                                | $(\ZZ \cdot 1 + \ZZ \cdot x)^n$                    | 0                                                  |
-| $D(k, \RR^n)$                 | $\pi_*\bigvee^k S^1$                           | $\bigoplus_k H_* M(\ZZ, 1)$                                        | $1 + kx$                                           | ?                                                  |
+| $D(k, \RR^n)$                 | $\pi_*\bigvee^k S^1$                           | $\bigoplus_{k} H_* M(\ZZ, 1)$                                        | $1 + kx$                                           | ?                                                  |
 | $B^n$                         | $\pi_*(\RR^n)$                                 | $H_*(\RR^n)$                                                       | $1 + x^n + x^{n+1}$                                | 0                                                  |
 | $S^n$                         | $[0 \ldots , \ZZ, ? \ldots]$                   | $H_*M(\ZZ, n)$                                                     | $1 + x^n$ or $\sum_{i=0}^n 2x^i$                   | $\ZZ[{}_{n}x]/(x^2)$                               |
 | $D(k, S^n)$                   | $\pi_*\bigvee^{k-1}S^1$                        | $\bigoplus_{k-1}H_*M(\ZZ, 1)$                                      | $1 + (k-1)x^1$                                     | ?                                                  |
-| $T^2$                         | $\pi_*S^1 \times \pi_* S^1$                    | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                          | $1 + 2x + x^2$                                     | $\Lambda({}_{1}x_1, {}_{1}x_2)$                    |
-| $T^n$                         | $\prod^n \pi_* S^1$                            | $\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$                       | $(1 + x)^n$                                        | $\Lambda({}_{1}x_1, {}_{1}x_2, \ldots {}_{1}x_n)$  |
+| $T^2$                         | $\pi_*S^1 \times \pi_* S^1$                    | $(H_* M(\ZZ, 1))^2  \times H_* M(\ZZ, 2)$                          | $1 + 2x + x^2$                                     | $\Lambda({}_{1}x_{1}, {}_{1}x_{2})$                    |
+| $T^n$                         | $\prod^n \pi_* S^1$                            | $\prod_{i=1}^n (H_* M(\ZZ, i))^{n\choose i}$                       | $(1 + x)^n$                                        | $\Lambda({}_{1}x_{1}, {}_{1}x_{2}, \ldots {}_{1}x_{n})$  |
 | $D(k, T^n)$                   | $[0, 0, 0, 0, \ldots]$?                        | $[0, 0, 0, 0, \ldots]$?                                            | $1 + x$                                            | ?                                                  |
 | $S^1 \vee S^1$                | $\pi_*S^1 \ast \pi_* S^1$                      | $(H_*M(\ZZ, 1))^2$                                                 | $1 + 2x$                                           | ?                                                  |
 | $\bigvee^n S^1$               | $\ast^n \pi_* S^1$                          | $\prod H_* M(\ZZ, 1)$                                              | $1 + x$                                            | ?                                                  |
@@ -144,14 +159,14 @@ Facts used to compute the above table:
 
 - $\RR^n$ is a contractible space, and so $[S^m, \RR^n] = 0$ for all $n, m$ which makes its homotopy groups all zero.
 
-- $D(k, \RR^n) = \RR^n - \theset{x_1 \ldots x_k} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
+- $D(k, \RR^n) = \RR^n - \theset{x_{1} \ldots x_{k}} \homotopic \bigvee_{i=1}^k S^1$ by a deformation retract.
 
 - $S^n \cong B^n / \del B^n$ and employs an attaching map 
 
-\begin{align*}
+\[
 \phi: (D^n, \del D^n) &\to S^n \\ 
 (D^n, \del D^n) &\mapsto (e^n, e^0)
-.\end{align*}
+.\]
 
 - $B^n \homotopic \RR^n$ by normalizing vectors.
 
@@ -161,7 +176,7 @@ Facts used to compute the above table:
 
 - $\RP^1 \cong S^1$.
 
-- Use $\left[ \pi_1, \prod \right]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
+- Use $\left[ \pi_{1}, \prod \right]= 0$ and the universal cover $\RR^1 \surjects S^1$ to yield the cover $\RR^n \surjects T^n$.
 
 - Take the universal double cover $S^n \surjects^{\times 2} \RP^n$ to get equality in $\pi_{i\geq 2}$.
 
