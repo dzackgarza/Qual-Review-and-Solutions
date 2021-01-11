@@ -13,7 +13,11 @@ Additional condition for a subspace $Y\subset X$: $\cl_{Y}(A) \intersect V = A \
 Equivalently, $X$ contains no proper nonempty clopen sets.
 :::
 
-:::{.definition title="Closed"}
+:::{.definition title="Connected Components"}
+Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
+:::
+
+:::{.definition title="Closed Sets"}
 \envlist
 
 - A set is closed if and only if its complement is open.
@@ -22,12 +26,8 @@ Equivalently, $X$ contains no proper nonempty clopen sets.
 
 :::
 
-:::{.definition title="Closed map"}
+:::{.definition title="Closed Maps"}
 See [@def:open_closed_maps].
-:::
-
-:::{.definition title="Components"}
-Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence classes.
 :::
 
 :::{.definition title="Compact"}
@@ -103,9 +103,8 @@ If $p\in X$, a *neighborhood basis* at $p$ is a collection $\mcb_{p}$ of neighbo
 :::
 
 :::{.definition title="Open and Closed Maps" ref="def:open_closed_maps"}
-Todo
+A map $f:X\to Y$ is an **open map** (respectively a **closed map**) if and only if whenever $U \subseteq X$ is open (resp. closed), $f(U)$ is again open (resp. closed)>
 :::
-\todo[inline]{Definitions}
 
 :::{.definition title="Paracompact"}
 A topological space $X$ is *paracompact* iff every open cover of $X$ admits an open locally finite refinement.
@@ -154,7 +153,7 @@ Note that this definition isn't very useful, as every space has at least one ret
 :::
 \todo[inline]{Definitions}
 
-:::{.definition title="Separable "}
+:::{.definition title="Separable spaces"}
 A space $X$ is *separable* iff $X$ contains a countable dense subset.
 :::
 
@@ -213,7 +212,6 @@ For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
 \forall \eps > 0, ~\exists \delta > 0 \text{ such that } \quad d_{X}(x_{1}, x_{2}) < \delta \implies d_{Y}(f(x_{1}), f(x_{2})) < \eps
 .\] 
 :::
-
 
 
 ## Algebraic Topology
