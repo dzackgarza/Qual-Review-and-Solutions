@@ -108,10 +108,24 @@ S^{2n+1}
 
 :::
 
+:::{.example title="Torii"}
+The $n\dash$torus, defined as 
+\[
+T^n \da \prod_{j=1}^n S^1 = S^1 \times S^1 \times \cdots
+.\]
+:::
 
-* $T^n = \prod_{n} S^1$ is the $n\dash$torus
 
-* $D(k, X)$ is the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_{1}, x_{2}, \ldots x_{k}}$ where each $x_{i} \in X$.
+## Modifying Known Spaces
+
+
+:::{.example title="Deleting points"}
+Write $D(k, X)$ for the space $X$ with $k\in \NN$ distinct points deleted, i.e. the punctured space $X - \theset{x_{1}, x_{2}, \ldots x_{k}}$ where each $x_{i} \in X$.
+
+:::
+
+
+
 
 
 
