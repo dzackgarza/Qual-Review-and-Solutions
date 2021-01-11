@@ -1,4 +1,4 @@
-# Topics 
+# Summary of Standard Topics 
 
 * Algebraic topology topics:
 	* Classification of compact surfaces
@@ -21,12 +21,14 @@
 	* Kunneth formula
 	* Factoring maps
 	* Fundamental theorem of algebra
+
 * Algebraic topology theorems:
 	* Brouwer fixed point theorem
 	* Poincaré lemma
 	* Poincaré duality
 	* de Rham theorem
 	* Seifert-van Kampen theorem
+
 * Covering space theory topics:
 	* Covering maps
 	* Free actions
