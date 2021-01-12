@@ -1,5 +1,16 @@
 # Residues
 
+
+:::{.remark}
+Check: do you need residues? 
+You may be able to just compute an integral directly:
+\[
+\int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
+.\]
+
+:::
+
+
 :::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
 For $z_0 \in D_R(z_0) \subset \Omega$, we have
 \[
