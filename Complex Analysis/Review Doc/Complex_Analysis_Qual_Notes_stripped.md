@@ -246,6 +246,10 @@ If \( f \) is continuous on a domain \( \Omega \) and \( \int_T f = 0 \) for eve
 > Slogan: if every integral along a triangle vanishes, implies holomorphic.
 :::
 
+::: {.theorem title="Maximum Modulus" ref="MaximumModulus"}
+If \( f \) is holomorphic and nonconstant on an open connected region \( \Omega \), then \( {\left\lvert {f} \right\rvert} \) can not attain a maximum on \( \Omega \). If \( \Omega \) is bounded and \( f \) is continuous on \( \mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu \), then \( \max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert} \) occurs on \( {{\partial}}\Omega \). Conversely, if \( f \) attains a local supremum at \( z_0 \in \Omega \), then \( f \) is constant on \( \Omega \).
+:::
+
 ::: {.theorem title="Liouville's Theorem" ref="Liouville"}
 If \( f \) is entire and bounded, \( f \) is constant.
 :::
@@ -261,14 +265,18 @@ and
 .\]
 :::
 
-::: {.theorem title="Riemann Mapping"}
-If \( \Omega \) is simply connected, nonempty, and not \( {\mathbb{C}} \), then for every \( z_{0}\in \Omega \) there exists a unique conformal map \( F:\Omega \to {\mathbb{D}} \) such that \( F(z_{0}) = 0 \) and \( F'(z_{0}) > 0 \).
+::: {.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
+For \( z_0 \in D_R(z_0) \subset \Omega \), we have
+\[
+{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
+\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
+= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
+,\]
+where \( {\left\lVert {f} \right\rVert}_{\infty}\coloneqq\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert} \).
 
-Thus any two such sets \( \Omega_{1}, \Omega_{2} \) are conformally equivalent.
+::: {.slogan}
+The \( n \)th Taylor coefficient of an analytic function is at most \( \sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n \).
 :::
-
-::: {.theorem title="Riemann's Removable Singularity Theorem"}
-If \( f \) is holomorphic on \( \Omega \) except possibly at \( z_0 \) and \( f \) is bounded on \( \Omega\setminus\left\{{z_0}\right\} \), then \( z_0 \) is a removable singularity.
 :::
 
 ::: {.theorem title="Argument Principle"}
@@ -286,6 +294,13 @@ Alternatively:
 
 Suppose \( f = g + h \) with \( g \neq 0, \infty \) on \( \gamma \) with \( {\left\lvert {g} \right\rvert} > {\left\lvert {h} \right\rvert} \) on \( \gamma \). Then
 \[\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.\]
+:::
+
+::: {.theorem title="The Residue Theorem"}
+If \( f \) is holomorphic on an open set \( \Omega \) containing a curve \( \gamma \) and its interior \( \gamma^\circ \), except for finitely many poles \( \left\{{z_k}\right\}_{k=1}^N \subset \gamma^\circ \). Then
+\[  
+\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \mathop{\mathrm{Res}}_{z_k} f
+.\]
 :::
 
 ::: {.theorem title="Cayley Transform"}
@@ -307,7 +322,21 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 .\]
 :::
 
+::: {.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
+If \( f \) is continuous and holomorphic on \( {\mathbb{H}}^+ \) and real-valued on \( {\mathbb{R}} \), then the extension defined by \( F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) for \( z\in {\mathbb{H}}^- \) is a well-defined holomorphic function on \( {\mathbb{C}} \).
+:::
+
 ### Others
+
+::: {.theorem title="Riemann Mapping"}
+If \( \Omega \) is simply connected, nonempty, and not \( {\mathbb{C}} \), then for every \( z_{0}\in \Omega \) there exists a unique conformal map \( F:\Omega \to {\mathbb{D}} \) such that \( F(z_{0}) = 0 \) and \( F'(z_{0}) > 0 \).
+
+Thus any two such sets \( \Omega_{1}, \Omega_{2} \) are conformally equivalent.
+:::
+
+::: {.theorem title="Riemann's Removable Singularity Theorem"}
+If \( f \) is holomorphic on \( \Omega \) except possibly at \( z_0 \) and \( f \) is bounded on \( \Omega\setminus\left\{{z_0}\right\} \), then \( z_0 \) is a removable singularity.
+:::
 
 ::: {.proposition title="Holomorphic functions have harmonic components"}
 If \( f(z) = u(x, y) + iv(x, y) \) is holomorphic, then \( u, v \) are harmonic.
@@ -394,10 +423,6 @@ For a power series \( f(z) = \sum a_n z^n \), define \( R \) by
 Then \( f \) converges absolutely on \( {\left\lvert {z} \right\rvert} < R \) and diverges on \( {\left\lvert {z} \right\rvert} > R \).
 :::
 
-::: {.theorem title="Maximum Modulus" ref="MaximumModulus"}
-If \( f \) is holomorphic and nonconstant on an open connected region \( \Omega \), then \( {\left\lvert {f} \right\rvert} \) can not attain a maximum on \( \Omega \). If \( \Omega \) is bounded and \( f \) is continuous on \( \mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu \), then \( \max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert} \) occurs on \( {{\partial}}\Omega \). Conversely, if \( f \) attains a local supremum at \( z_0 \in \Omega \), then \( f \) is constant on \( \Omega \).
-:::
-
 ## Others
 
 ::: {.theorem title="Casorati-Weierstrass" ref="Casorati"}
@@ -463,33 +488,12 @@ Check: do you need residues? You may be able to just compute an integral
 -   Writing \( z= z_0 + re^{i \theta } \)
 :::
 
-::: {.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
-For \( z_0 \in D_R(z_0) \subset \Omega \), we have
-\[
-{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
-\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
-= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
-,\]
-where \( {\left\lVert {f} \right\rVert}_{\infty}\coloneqq\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert} \).
-
-::: {.slogan}
-The \( n \)th Taylor coefficient of an analytic function is at most \( \sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n \).
-:::
-:::
-
-::: {.proof}
+::: {.proof title="of Cauchy's inequality"}
 ```{=tex}
 \envlist
 ```
 -   Given \( z_0\in \Omega \), pick the largest disc \( D_R(z_0) \subset \Omega \) and let \( C_R = {{\partial}}D_R \).
 -   Then apply the integral formula.
-:::
-
-::: {.theorem title="The Residue Theorem"}
-If \( f \) is holomorphic on an open set \( \Omega \) containing a curve \( \gamma \) and its interior \( \gamma^\circ \), except for finitely many poles \( \left\{{z_k}\right\}_{k=1}^N \subset \gamma^\circ \). Then
-\[  
-\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \mathop{\mathrm{Res}}_{z_k} f
-.\]
 :::
 
 ::: {.proposition title="Residues for simple poles (order 1)"}
@@ -578,10 +582,6 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 -   Map \( {\mathbb{H}}\to{\mathbb{D}} \).
 
 # Schwarz Reflection
-
-::: {.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
-If \( f \) is continuous and holomorphic on \( {\mathbb{H}}^+ \) and real-valued on \( {\mathbb{R}} \), then the extension defined by \( F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) for \( z\in {\mathbb{H}}^- \) is a well-defined holomorphic function on \( {\mathbb{C}} \).
-:::
 
 ::: {.remark}
 \( {\mathbb{H}}^+, {\mathbb{H}}^- \) can be replaced with any region symmetric about a line segment \( L\subseteq {\mathbb{R}} \).

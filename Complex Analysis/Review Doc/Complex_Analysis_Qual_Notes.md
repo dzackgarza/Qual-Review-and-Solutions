@@ -653,6 +653,12 @@ If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle 
 
 :::
 
+:::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
+If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
+If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
+Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
+:::
+
 :::{.theorem title="Liouville's Theorem" ref="Liouville"}
 If $f$ is entire and bounded, $f$ is constant.
 :::
@@ -668,14 +674,20 @@ and
 .\]
 :::
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
+:::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
+For $z_0 \in D_R(z_0) \subset \Omega$, we have
+\[
+\abs{ f^{(n)} (z_0) } 
+\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ \norm{f}_{\infty} } {R^{n+1}} R \,d\theta
+= \frac{n !\norm{f}_{\infty}}{R^n} 
+,\]
+where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
 
-Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::{.slogan}
+The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
 :::
 
-:::{.theorem title="Riemann's Removable Singularity Theorem"}
-If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
+
 :::
 
 :::{.theorem title="Argument Principle"}
@@ -695,6 +707,14 @@ Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ o
 Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
 :::
 
+:::{.theorem title="The Residue Theorem"}
+If $f$ is holomorphic on an open set $\Omega$ containing a curve $\gamma$ and its interior $\gamma^\circ$, except for finitely many poles $\theset{z_k}_{k=1}^N \subset \gamma^\circ$.
+Then
+\[  
+\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \res_{z_k} f
+.\]
+:::
+
 :::{.theorem title="Cayley Transform"}
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
@@ -708,7 +728,6 @@ If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
 Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
 :::
 
-
 :::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
 \[
 f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
@@ -716,8 +735,22 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 
 :::
 
+:::{.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
+If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
+:::
+
 
 ### Others
+
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
+
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::
+
+:::{.theorem title="Riemann's Removable Singularity Theorem"}
+If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
+:::
 
 :::{.proposition title="Holomorphic functions have harmonic components"}
 If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
@@ -799,11 +832,6 @@ For a power series $f(z) = \sum a_n z^n$, define $R$ by
 Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
-:::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
-If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
-If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
-Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
-:::
 
 ## Others
 
@@ -857,8 +885,6 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 
 
 # Residues
-
-
 :::{.remark}
 Check: do you need residues? 
 You may be able to just compute an integral 
@@ -875,36 +901,12 @@ You may be able to just compute an integral
 
 :::
 
-
-:::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
-For $z_0 \in D_R(z_0) \subset \Omega$, we have
-\[
-\abs{ f^{(n)} (z_0) } 
-\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ \norm{f}_{\infty} } {R^{n+1}} R \,d\theta
-= \frac{n !\norm{f}_{\infty}}{R^n} 
-,\]
-where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
-
-:::{.slogan}
-The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
-:::
-
-
-:::
-
-:::{.proof}
+:::{.proof title="of Cauchy's inequality"}
 \envlist
 - Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 - Then apply the integral formula.
 :::
 
-:::{.theorem title="The Residue Theorem"}
-If $f$ is holomorphic on an open set $\Omega$ containing a curve $\gamma$ and its interior $\gamma^\circ$, except for finitely many poles $\theset{z_k}_{k=1}^N \subset \gamma^\circ$.
-Then
-\[  
-\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \res_{z_k} f
-.\]
-:::
 
 :::{.proposition title="Residues for simple poles (order 1)"}
 If $z_0$ is a simple pole of $f$, then
@@ -993,9 +995,6 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 
 # Schwarz Reflection
 
-:::{.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
-If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
-:::
 
 :::{.remark}
 $\HH^+, \HH^-$ can be replaced with any region symmetric about a line segment $L\subseteq \RR$.

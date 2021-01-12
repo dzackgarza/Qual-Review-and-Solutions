@@ -371,6 +371,9 @@ T^{-1}(w) = {dw-b \over -cw + a}
 <p>Slogan: if every integral along a triangle vanishes, implies holomorphic.</p>
 </blockquote>
 </div>
+<div class="theorem proofenv" title="Maximum Modulus" data-ref="MaximumModulus">
+<p>If <span class="math inline">\(f\)</span> is holomorphic and nonconstant on an open connected region <span class="math inline">\(\Omega\)</span>, then <span class="math inline">\({\left\lvert {f} \right\rvert}\)</span> can not attain a maximum on <span class="math inline">\(\Omega\)</span>. If <span class="math inline">\(\Omega\)</span> is bounded and <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\)</span>, then <span class="math inline">\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)</span> occurs on <span class="math inline">\({{\partial}}\Omega\)</span>. Conversely, if <span class="math inline">\(f\)</span> attains a local supremum at <span class="math inline">\(z_0 \in \Omega\)</span>, then <span class="math inline">\(f\)</span> is constant on <span class="math inline">\(\Omega\)</span>.</p>
+</div>
 <div class="theorem proofenv" title="Liouville&#39;s Theorem" data-ref="Liouville">
 <p>If <span class="math inline">\(f\)</span> is entire and bounded, <span class="math inline">\(f\)</span> is constant.</p>
 </div>
@@ -387,12 +390,18 @@ f(z) = {1 \over 2\pi i} \oint_{{{\partial}}\Omega} {f(\xi) \over \xi-z}\,d\xi
 .\end{align*}
 <span></p>
 </div>
-<div class="theorem proofenv" title="Riemann Mapping">
-<p>If <span class="math inline">\(\Omega\)</span> is simply connected, nonempty, and not <span class="math inline">\({\mathbb{C}}\)</span>, then for every <span class="math inline">\(z_{0}\in \Omega\)</span> there exists a unique conformal map <span class="math inline">\(F:\Omega \to {\mathbb{D}}\)</span> such that <span class="math inline">\(F(z_{0}) = 0\)</span> and <span class="math inline">\(F&#39;(z_{0}) &gt; 0\)</span>.</p>
-<p>Thus any two such sets <span class="math inline">\(\Omega_{1}, \Omega_{2}\)</span> are conformally equivalent.</p>
+<div class="theorem proofenv" title="Cauchy&#39;s Inequality" data-ref="CauchyInequality">
+<p>For <span class="math inline">\(z_0 \in D_R(z_0) \subset \Omega\)</span>, we have 
+<span class="math display">
+\begin{align*}
+{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
+\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
+= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
+,\end{align*}
+<span> where <span class="math inline">\({\left\lVert {f} \right\rVert}_{\infty}\mathrel{\vcenter{:}}=\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert}\)</span>.</p>
+<div class="slogan proofenv">
+<p>The <span class="math inline">\(n\)</span>th Taylor coefficient of an analytic function is at most <span class="math inline">\(\sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n\)</span>.</p>
 </div>
-<div class="theorem proofenv" title="Riemann&#39;s Removable Singularity Theorem">
-<p>If <span class="math inline">\(f\)</span> is holomorphic on <span class="math inline">\(\Omega\)</span> except possibly at <span class="math inline">\(z_0\)</span> and <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\(\Omega\setminus\left\{{z_0}\right\}\)</span>, then <span class="math inline">\(z_0\)</span> is a removable singularity.</p>
 </div>
 <div class="theorem proofenv" title="Argument Principle">
 <p>For <span class="math inline">\(f\)</span> meromorphic in <span class="math inline">\(\gamma^\circ\)</span>, if <span class="math inline">\(f\)</span> has no poles and is nonvanishing on <span class="math inline">\(\gamma\)</span> then 
@@ -408,6 +417,14 @@ f(z) = {1 \over 2\pi i} \oint_{{{\partial}}\Omega} {f(\xi) \over \xi-z}\,d\xi
 <p>Suppose <span class="math inline">\(f = g + h\)</span> with <span class="math inline">\(g \neq 0, \infty\)</span> on <span class="math inline">\(\gamma\)</span> with <span class="math inline">\({\left\lvert {g} \right\rvert} &gt; {\left\lvert {h} \right\rvert}\)</span> on <span class="math inline">\(\gamma\)</span>. Then 
 <span class="math display">
 \begin{align*}\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.\end{align*}
+<span></p>
+</div>
+<div class="theorem proofenv" title="The Residue Theorem">
+<p>If <span class="math inline">\(f\)</span> is holomorphic on an open set <span class="math inline">\(\Omega\)</span> containing a curve <span class="math inline">\(\gamma\)</span> and its interior <span class="math inline">\(\gamma^\circ\)</span>, except for finitely many poles <span class="math inline">\(\left\{{z_k}\right\}_{k=1}^N \subset \gamma^\circ\)</span>. Then 
+<span class="math display">
+\begin{align*}  
+\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \mathop{\mathrm{Res}}_{z_k} f
+.\end{align*}
 <span></p>
 </div>
 <div class="theorem proofenv" title="Cayley Transform">
@@ -429,7 +446,17 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 .\end{align*}
 <span></p>
 </div>
+<div class="theorem proofenv" title="Schwarz Reflection " data-ref="SchwarzReflection">
+<p>If <span class="math inline">\(f\)</span> is continuous and holomorphic on <span class="math inline">\({\mathbb{H}}^+\)</span> and real-valued on <span class="math inline">\({\mathbb{R}}\)</span>, then the extension defined by <span class="math inline">\(F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu\)</span> for <span class="math inline">\(z\in {\mathbb{H}}^-\)</span> is a well-defined holomorphic function on <span class="math inline">\({\mathbb{C}}\)</span>.</p>
+</div>
 <h3 data-number="3.2.2" id="others"><span class="header-section-number">3.2.2</span> Others</h3>
+<div class="theorem proofenv" title="Riemann Mapping">
+<p>If <span class="math inline">\(\Omega\)</span> is simply connected, nonempty, and not <span class="math inline">\({\mathbb{C}}\)</span>, then for every <span class="math inline">\(z_{0}\in \Omega\)</span> there exists a unique conformal map <span class="math inline">\(F:\Omega \to {\mathbb{D}}\)</span> such that <span class="math inline">\(F(z_{0}) = 0\)</span> and <span class="math inline">\(F&#39;(z_{0}) &gt; 0\)</span>.</p>
+<p>Thus any two such sets <span class="math inline">\(\Omega_{1}, \Omega_{2}\)</span> are conformally equivalent.</p>
+</div>
+<div class="theorem proofenv" title="Riemann&#39;s Removable Singularity Theorem">
+<p>If <span class="math inline">\(f\)</span> is holomorphic on <span class="math inline">\(\Omega\)</span> except possibly at <span class="math inline">\(z_0\)</span> and <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\(\Omega\setminus\left\{{z_0}\right\}\)</span>, then <span class="math inline">\(z_0\)</span> is a removable singularity.</p>
+</div>
 <div class="proposition proofenv" title="Holomorphic functions have harmonic components">
 <p>If <span class="math inline">\(f(z) = u(x, y) + iv(x, y)\)</span> is holomorphic, then <span class="math inline">\(u, v\)</span> are harmonic.</p>
 </div>
@@ -512,9 +539,6 @@ f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
 <span></p>
 <p>Then <span class="math inline">\(f\)</span> converges absolutely on <span class="math inline">\({\left\lvert {z} \right\rvert} &lt; R\)</span> and diverges on <span class="math inline">\({\left\lvert {z} \right\rvert} &gt; R\)</span>.</p>
 </div>
-<div class="theorem proofenv" title="Maximum Modulus" data-ref="MaximumModulus">
-<p>If <span class="math inline">\(f\)</span> is holomorphic and nonconstant on an open connected region <span class="math inline">\(\Omega\)</span>, then <span class="math inline">\({\left\lvert {f} \right\rvert}\)</span> can not attain a maximum on <span class="math inline">\(\Omega\)</span>. If <span class="math inline">\(\Omega\)</span> is bounded and <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\)</span>, then <span class="math inline">\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)</span> occurs on <span class="math inline">\({{\partial}}\Omega\)</span>. Conversely, if <span class="math inline">\(f\)</span> attains a local supremum at <span class="math inline">\(z_0 \in \Omega\)</span>, then <span class="math inline">\(f\)</span> is constant on <span class="math inline">\(\Omega\)</span>.</p>
-</div>
 <h2 data-number="3.4" id="others-1"><span class="header-section-number">3.4</span> Others</h2>
 <div class="theorem proofenv" title="Casorati-Weierstrass" data-ref="Casorati">
 <p>If <span class="math inline">\(f\)</span> is holomorphic on <span class="math inline">\(\Omega\setminus\left\{{z_0}\right\}\)</span> where <span class="math inline">\(z_0\)</span> is an essential singularity, then for every <span class="math inline">\(V\subset \Omega\setminus\left\{{z_0}\right\}\)</span>, <span class="math inline">\(f(V)\)</span> is dense in <span class="math inline">\({\mathbb{C}}\)</span>.</p>
@@ -572,34 +596,13 @@ f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
 <li><p>Writing <span class="math inline">\(z= z_0 + re^{i \theta }\)</span></p></li>
 </ul>
 </div>
-<div class="theorem proofenv" title="Cauchy&#39;s Inequality" data-ref="CauchyInequality">
-<p>For <span class="math inline">\(z_0 \in D_R(z_0) \subset \Omega\)</span>, we have 
-<span class="math display">
-\begin{align*}
-{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
-\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
-= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
-,\end{align*}
-<span> where <span class="math inline">\({\left\lVert {f} \right\rVert}_{\infty}\mathrel{\vcenter{:}}=\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert}\)</span>.</p>
-<div class="slogan proofenv">
-<p>The <span class="math inline">\(n\)</span>th Taylor coefficient of an analytic function is at most <span class="math inline">\(\sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n\)</span>.</p>
-</div>
-</div>
-<div class="proof proofenv">
+<div class="proof proofenv" title="of Cauchy&#39;s inequality">
 <details><summary><i>(Click to expand)</i></summary>
 <ul>
 <li>Given <span class="math inline">\(z_0\in \Omega\)</span>, pick the largest disc <span class="math inline">\(D_R(z_0) \subset \Omega\)</span> and let <span class="math inline">\(C_R = {{\partial}}D_R\)</span>.</li>
 <li>Then apply the integral formula.</li>
 </ul>
 </details>
-</div>
-<div class="theorem proofenv" title="The Residue Theorem">
-<p>If <span class="math inline">\(f\)</span> is holomorphic on an open set <span class="math inline">\(\Omega\)</span> containing a curve <span class="math inline">\(\gamma\)</span> and its interior <span class="math inline">\(\gamma^\circ\)</span>, except for finitely many poles <span class="math inline">\(\left\{{z_k}\right\}_{k=1}^N \subset \gamma^\circ\)</span>. Then 
-<span class="math display">
-\begin{align*}  
-\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \mathop{\mathrm{Res}}_{z_k} f
-.\end{align*}
-<span></p>
 </div>
 <div class="proposition proofenv" title="Residues for simple poles (order 1)">
 <p>If <span class="math inline">\(z_0\)</span> is a simple pole of <span class="math inline">\(f\)</span>, then 
@@ -713,9 +716,6 @@ f(z) &amp;= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha
 <li>Map <span class="math inline">\({\mathbb{H}}\to{\mathbb{D}}\)</span>.</li>
 </ul>
 <h1 data-number="6" id="schwarz-reflection"><span class="header-section-number">6</span> Schwarz Reflection</h1>
-<div class="theorem proofenv" title="Schwarz Reflection " data-ref="SchwarzReflection">
-<p>If <span class="math inline">\(f\)</span> is continuous and holomorphic on <span class="math inline">\({\mathbb{H}}^+\)</span> and real-valued on <span class="math inline">\({\mathbb{R}}\)</span>, then the extension defined by <span class="math inline">\(F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu\)</span> for <span class="math inline">\(z\in {\mathbb{H}}^-\)</span> is a well-defined holomorphic function on <span class="math inline">\({\mathbb{C}}\)</span>.</p>
-</div>
 <div class="remark proofenv">
 <p><span class="math inline">\({\mathbb{H}}^+, {\mathbb{H}}^-\)</span> can be replaced with any region symmetric about a line segment <span class="math inline">\(L\subseteq {\mathbb{R}}\)</span>.</p>
 </div>
