@@ -3,10 +3,11 @@
 
 :::{.remark}
 Check: do you need residues? 
-You may be able to just compute an integral directly:
+You may be able to just compute an integral directly by parameterization:
 \[
 \int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
-.\]
+,\]
+or finding a primitive $F$.
 
 :::
 
