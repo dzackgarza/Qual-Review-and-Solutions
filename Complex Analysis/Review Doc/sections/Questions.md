@@ -28,6 +28,9 @@ w &\mapsto i{1-w \over 1 + w}
 .\]
 
 > Mnemonic: any point in $\HH$ is closer to $i$ than $-i$, so $\abs{F(z)} < 1$.
+
+- Maps $\RR\to S^1\sm\ts{-1}$.
+
 :::
 
 :::
