@@ -7,27 +7,6 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
@@ -151,6 +130,8 @@
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
 \newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
@@ -334,7 +315,6 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
@@ -390,6 +370,28 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\coind}{Coind}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -416,40 +418,123 @@
 
 # Useful Techniques
 
-**Showing a function is constant:**
+## Notation
+| Notation                                                     | Definition                                             |
+|--------------------------------------------------------------|--------------------------------------------------------|
+| $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
+| $\HH \da \ts{x+iy \st y > 0}$                                | The upper half-plane                                   |
+| $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
+| $\HH_{1\over 2}$                                             | The first quadrant                                     |
+| $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
+| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizonta strip |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+
+:::{.remark title="Showing a function is constant"}
+If you want to show that a function $f$ is constant, try one of the following:
 
 - Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.
 - Show that $f$ is entire and bounded.
 
-**Showing a function is zero**:
-Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
+If you additionally want to show $f$ is zero, try one of these:
+
+- Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
+:::
+
+## Greatest Hits
 
 Things to know well:
 
 - Estimates for derivatives, mean value theorem
-- \hyperref[CauchyTheorem]{Cauchy's Theorem}
-- \hyperref[CauchyIntegral]{Cauchy's Integral Formula}
-- \hyperref[CauchyInequality]{Cauchy's Inequality}
-- \hyperref[Morera]{Morera's Theorem}
-- \hyperref[SchwarzReflection]{The Schwarz Reflection Principle}
-- \hyperref[MaximumModulus]{Maximum Modulus Principle}
-- \hyperref[SchwarzLemma]{The Schwarz Lemma}
-- \hyperref[Liouville]{Liouville's Theorem}
-- \hyperref[Casorati]{Casorati-Weierstrass Theorem}
-- \hyperref[Rouche]{Rouché's Theorem}
+- \cref[CauchyTheorem]{Cauchy's Theorem}
+- \cref[CauchyIntegral]{Cauchy's Integral Formula}
+- \cref[CauchyInequality]{Cauchy's Inequality}
+- \cref[Morera]{Morera's Theorem}
+- \cref[SchwarzReflection]{The Schwarz Reflection Principle}
+- \cref[MaximumModulus]{Maximum Modulus Principle}
+- \cref[SchwarzLemma]{The Schwarz Lemma}
+- \cref[Liouville]{Liouville's Theorem}
+- \cref[Casorati]{Casorati-Weierstrass Theorem}
+- \cref[Rouche]{Rouché's Theorem}
 - Properties of linear fractional transformations
 - Automorphisms of $\DD, \CC, \CP^1$.
 
+## Basic but Useful Facts
 
-**Computing Arguments:**
-$\Arg(z/w) = \Arg(z) - \Arg(w)$.
+:::{.fact title="Some useful facts about basic complex algebra"}
+\envlist
 
+- $z\bar z = \abs{z}^2$
+\[
+\Re(z) = { z + \bar z \over 2} && && 
+\Im(z) = {z - \bar{z} \over 2i}
+.\]
+
+- $\Arg(z/w) = \Arg(z) - \Arg(w)$.
+- Exponential forms of cosine and sine:
+\[
+\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}} && &&
+\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}
+.\]
+- Various differentials:
+\[
+dz &= dx + i~dy \\
+d\bar z &= dx - i~dy \\ \\
+f_z &= f_x = f_y / i
+.\]
+- Integral of a complex exponential:
+\[
+\int_{0}^{2 \pi} e^{i \ell x} d x
+&=\left\{\begin{array}{ll}
+{2 \pi} & {\ell=0} \\ 
+{0} & \text{else}
+\end{array}\right.
+.\]
+
+:::
+
+:::{.fact title="Some useful series"}
+\[
+\sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
+\sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
+\sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\log(z) &= \sum_{n=0}^\infty { (-1)^n \over n} \qty{z-a}^n \\
+\dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
+\]
+:::
+
+
+## Advice
+
+- Consider $1/f(z)$ and $f(1/z)$.
 
 
 # Definitions
 
 :::{.definition title="Analytic"}
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
+:::
+
+:::{.definition title="Cauchy-Riemann Equations"}
+\[
+u_x = v_y \quad\text{and}\quad u_y = -v_x \\
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
+.\]
+:::
+
+:::{.definition title="Entire"}
+A function that is holomorphic on $\CC$ is said to be *entire*.
+:::
+
+:::{.definition title="Essential Singularity"}
+A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
+
+Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
 :::
 
 :::{.definition title="Holomorphic"}
@@ -459,14 +544,11 @@ A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit conve
 .\]
 :::
 
-Examples:
-
-- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
-- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
-
-
-:::{.definition title="Entire"}
-A function that is holomorphic on $\CC$ is said to be *entire*.
+:::{.definition title="Harmonic"}
+A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanishes:
+\[  
+\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
+.\]
 :::
 
 :::{.definition title="Meromorphic"}
@@ -479,18 +561,16 @@ A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\these
 If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
 :::
 
-:::{.definition title="Harmonic"}
-A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanishes:
+:::{.definition title="Poles (and associated terminology)"}
+A *pole* $z_0$ of a meromorphic function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
+If there exists an $n$ such that
 \[  
-\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
-.\]
-:::
+\lim_{z\to z_0}\qty{z-z_0}^nf(z)
+\]
+is holomorphic and nonzero in a neighborhood of $z_0$, then the minimal such $n$ is the *order* of the pole.
+A pole of order 1 is said to be a *simple pole*.
 
-:::{.definition title="Cauchy-Riemann Equations"}
-\[
-u_x = v_y \quad\text{and}\quad u_y = -v_x \\
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
-.\]
+The pole $z_0$ is *isolated* iff there exists a neighborhood of $z_0$ containing no other poles of $f$.
 :::
 
 :::{.definition title="Principal Part and Residue"}
@@ -506,26 +586,24 @@ The *residue* of $f$ at $z_0$ is the coefficient $c_{-1}$.
 If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
 :::
 
-
-:::{.definition title="Pole Terminology"}
-A *pole* $z_0$ of a meromorphic function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
-If there exists an $n$ such that
+:::{.definition title="Linear Fractional Transformation"}
+A map of the following form is a *linear fractional transformation*:
 \[  
-\lim_{z\to z_0}\qty{z-z_0}^nf(z)
-\]
-is holomorphic and nonzero in a neighborhood of $z_0$, then the minimal such $n$ is the *order* of the pole.
-A pole of order 1 is said to be a *simple pole*.
+T(z) = {az + b \over cz + d}
+,\]
+where the denominator is assumed to not be a multiple of the numerator.
 
-The pole $z_0$ is *isolated* iff there exists a neighborhood of $z_0$ containing no other poles of $f$.
+These have inverses given by
+\[  
+T^{-1}(w) = {dw-b \over -cw + a}
+.\]
 :::
 
-:::{.definition title="Essential Singularity"}
-A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
+:::{.definition title="Conformal Map / Biholomorphism"}
+A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a. a **biholomorphism**.
 
-Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
+Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
 :::
-
-
 
 
 
@@ -533,6 +611,12 @@ Equivalently, a Laurent series expansion about $z_0$ has a principal part with i
 # Theorems
 
 ## Basics
+
+:::{.example title="holomorphic vs non-holomorphic"}
+\envlist
+- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
+- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
+:::
 
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
@@ -552,7 +636,7 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 ### Key Theorems
 
-:::{.theorem title="Cauchy's Theorem \label{CauchyTheorem}"}
+:::{.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
 If $f$ is holomorphic on $\Omega$, then 
 \[  
 \int_{\bd \Omega} f(z) \, dz = 0
@@ -562,18 +646,18 @@ If $f$ is holomorphic on $\Omega$, then
 
 :::
 
-:::{.theorem title="Morera's Theorem \label{Morera}  "}
+:::{.theorem title="Morera's Theorem" ref="Morera"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
 
 > Slogan: if every integral along a triangle vanishes, implies holomorphic.
 
 :::
 
-:::{.theorem title="Liouville's Theorem \label{Liouville}  "}
+:::{.theorem title="Liouville's Theorem" ref="Liouville"}
 If $f$ is entire and bounded, $f$ is constant.
 :::
 
-:::{.theorem title="Cauchy Integral Formula \label{CauchyIntegral}"}
+:::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose $f$ is holomorphic on $\Omega$, then 
 \[
 f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(\xi) \over \xi-z}\,d\xi
@@ -584,13 +668,62 @@ and
 .\]
 :::
 
-### Others
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
 
-:::{.theorem title="Holomorphic functions have harmonic components"}
-If $f(z) = u(x, y) + iv(x, y)$, then $u, v$ are harmonic.
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
 :::
 
-:::{.theorem title="Holomorphic functions are continuous."}
+:::{.theorem title="Riemann's Removable Singularity Theorem"}
+If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
+:::
+
+:::{.theorem title="Argument Principle"}
+For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then
+\[  
+\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
+,\]
+where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
+:::
+
+:::{.theorem title="Rouché's Theorem" ref="Rouche"}
+If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
+
+Alternatively:
+
+Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
+Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
+:::
+
+:::{.theorem title="Cayley Transform"}
+The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
+:::
+
+:::{.theorem title="Schwarz Lemma" ref="SchwarzLemma"}
+If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
+
+1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
+2. $\abs{f'(0)} \leq 1$.
+
+Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+:::
+
+
+:::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
+\[
+f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
+.\]
+
+:::
+
+
+### Others
+
+:::{.proposition title="Holomorphic functions have harmonic components"}
+If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
+:::
+
+:::{.proposition title="Holomorphic functions are continuous."}
 $f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
 \[  
 f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \converges{h\to 0}\to 0
@@ -607,6 +740,7 @@ If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
 .\]
 :::
+
 :::{.proof}
 \hfill
 :::{.concept}
@@ -644,6 +778,7 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 :::{.proposition title="Exponential is uniformly convergent in discs"}
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
+
 :::{.proof}
 Apply the estimate
 \[  
@@ -664,18 +799,15 @@ For a power series $f(z) = \sum a_n z^n$, define $R$ by
 Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
-
-:::{.theorem title="Maximum Modulus \label{MaximumModulus}  "}
-If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
-
+:::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
+If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
 If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
-  
-Conversely, if $f$ attains a local maximum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
+Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
 :::
 
 ## Others
 
-:::{.theorem title="Casorati-Weierstrass \label{Casorati}  "}
+:::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
 
 > The image of a disc punctured at an essential singularity is dense in $\CC$.
@@ -683,7 +815,7 @@ If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essenti
 :::
 
 :::{.theorem title="Little Picard"}
-Todo
+If $f:\CC\to \CC$ is entire and nonconstant, then $\im(f)$ is either $\CC$ or $\CC\sm\ts{z_0}$ for some point $z_0$.
 :::
 \todo{???}
 
@@ -698,10 +830,10 @@ If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a 
 The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
 :::
 
-\todo[inline]{Find the proof!}
 :::{.proof}
 ???
 :::
+\todo[inline]{Find the proof!}
 
 :::{.proposition title="Injectivity Relates to Derivatives"}
 If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
@@ -710,7 +842,6 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 :::{.proof}
 ?
 :::
-
 
 :::{.proposition title="Bounded Complex Analytic Functions form a Banach Space"}
 For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC \st f\text{ is bounded}}$ is a Banach space.
@@ -727,8 +858,26 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 
 # Residues
 
-:::{.theorem title="Cauchy's Inequality\label{CauchyInequality}"}
-For $z_o \in D_R(z_0) \subset \Omega$, we have
+
+:::{.remark}
+Check: do you need residues? 
+You may be able to just compute an integral 
+
+- Directly by parameterization:
+\[
+\int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
+,\]
+
+- Finding a primitive $F$,
+
+- Writing $z= z_0 + re^{i \theta }$
+
+
+:::
+
+
+:::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
+For $z_0 \in D_R(z_0) \subset \Omega$, we have
 \[
 \abs{ f^{(n)} (z_0) } 
 \leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ \norm{f}_{\infty} } {R^{n+1}} R \,d\theta
@@ -736,12 +885,15 @@ For $z_o \in D_R(z_0) \subset \Omega$, we have
 ,\]
 where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
 
-> Slogan: the $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
+:::{.slogan}
+The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
+:::
+
 
 :::
 
 :::{.proof}
-\hfill
+\envlist
 - Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 - Then apply the integral formula.
 :::
@@ -754,16 +906,16 @@ Then
 .\]
 :::
 
-
-:::{.proposition title="For simple poles"}
+:::{.proposition title="Residues for simple poles (order 1)"}
 If $z_0$ is a simple pole of $f$, then
 \[  
 \res_{z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
 .\]
 :::
 
-Example: 
+:::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
+:::
 
 :::{.proposition title="For higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
@@ -773,57 +925,59 @@ If $f$ has a pole $z_0$ of order $n$, then
 :::
 
 
-
 # Conformal Maps
 
-Notation: 
 
-- $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$.
-- $\DD$ the disc
-- $\HH$ the upper half plane
-- $X_{1\over 2}$: a "half" version of $X$.
+:::{.fact}
+A bijective holomorphic map automatically has a holomorphic inverse.
+This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
+:::
+
 
 :::{.theorem title="Classification of Conformal Maps"}
 There are 8 major types of conformal maps:
 
-| Type/Domains | Formula | 
-| ------------ | ------- |
-| Translation/Dilation/Rotation | $z\mapsto e^{i\theta}(cz + h)$ |
-| Sectors to sectors | $z\mapsto z^n$ |
-| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$ |
-| $\HH\to S$ | $z\mapsto \log(z)$ | 
-| $\DD_{1\over 2} \to S_{1\over 2}$ | $z\mapsto \log(z)$ |
-| $S_{1\over 2} \to \DD_{1\over 2}$ | $z\mapsto e^{iz}$ |
-| $\DD_{1\over 2} \to \HH$ |  $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
-| $S_{1\over 2} \to \HH$ | $z\mapsto \sin(z)$ |
+| Type/Domains                                            | Formula                                   |
+| ------------                                            | -------                                   |
+| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
+| Sectors to sectors                                      | $z\mapsto z^n$                            |
+| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
+| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
+| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
+| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
+| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
+| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
 
 :::
 
+
+:::{.theorem title="Characterization of conformal maps"}
 Conformal maps $\DD\to\DD$ have the form
-\begin{align*}
+\[
 g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
-.\end{align*}
+.\]
+:::
 
 ## Plane to Disc
 
-\begin{align*}
+\[
 \phi: \HH &\to \DD \\
 \phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
-.\end{align*}
+.\]
 
 ## Sector to Disc
 
-For $S_\alpha \definedas \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
-\begin{align*}
+For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
+\[
 g: S_\alpha &\to \HH \\
 g(z) &= z^{\pi \over \alpha}
-.\end{align*}
+.\]
 
 Then compose with a map $\HH\to\DD$:
-\begin{align*}
+\[
 f: S_\alpha &\to \DD \\
 f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\end{align*}
+.\]
 
 ![](figures/image_2020-07-22-13-22-46.png)
 
@@ -835,16 +989,11 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 - Map $\HH\to\DD$.
 
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_0\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_0) = 0$ and $F'(z_0) > 0$.
-
-Thus any two such sets $\Omega_1, \Omega_2$ are conformally equivalent.
-:::
 
 
 # Schwarz Reflection
 
-:::{.theorem title="Schwarz Reflection \label{SchwarzReflection}  "}
+:::{.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
 If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
 :::
 
@@ -854,30 +1003,7 @@ $\HH^+, \HH^-$ can be replaced with any region symmetric about a line segment $L
 
 # Zeros and Poles
 
-## Singularities
-
-:::{.theorem title="Riemann's Removable Singularity Theorem"}
-If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
-:::
-
 ## Counting Zeros 
-
-:::{.theorem title="Argument Principle"}
-For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then
-\[  
-\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
-,\]
-where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
-:::
-
-:::{.theorem title="Rouché's Theorem \label{Rouche}"}
-If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
-
-Alternatively:
-
-Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
-:::
 
 :::{.example}
 - Take $P(z) = z^4 + 6z + 3$.
@@ -897,34 +1023,9 @@ Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f 
 - $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
 :::
 
-
 # Linear Fractional Transformations
 
-:::{.definition title="Linear Fractional Transformation"}
-A map of the following form is a *linear fractional transformation*:
-\[  
-T(z) = {az + b \over cz + d}
-,\]
-where the denominator is assumed to not be a multiple of the numerator.
 
-These have inverses given by
-\[  
-T^{-1}(w) = {dw-b \over -cw + a}
-.\]
-:::
-
-:::{.theorem title="Cayley Transform"}
-The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
-:::
-
-:::{.theorem title="Schwarz Lemma \label{SchwarzLemma}  "}
-If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
-
-1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
-2. $\abs{f'(0)} \leq 1$.
-
-Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
-:::
 
 
 # Appendix: Proofs of the Fundamental Theorem of Algebra
@@ -967,17 +1068,18 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 
 ### Fundamental Theorem of Algebra: Liouville's Theorem
 
-- Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire
-- Write $g(z) \definedas \frac{p(z)}{z^{n}}=a_{n}\left(\frac{a_{n-1}}{z}+\dots+\frac{a_{0}}{z^{n}}\right)$
+
+- Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire.
+  We will show it is also bounded and thus constant, a contradiction.
+- Write $p(z) = z^n \left(a_n + \frac{a_{n-1}}{z}+\dots+\frac{a_{0}}{z^{n}}\right)$
 - Outside a disc:
-  - Note $\lim_{z\to \infty} = 0$ for the parenthesized terms, so there exists an $R$ large enough such that $\abs{g(z)} \geq {1\over 2} \abs{a_n}$
-  - Then $\abs{p(z)} \geq {R^n\over 2} \abs{a_n}$ implies ${1\over p}$ is bounded in $\abs{z} > R$
+  - Note that $p(z) \converges{z\to \infty }\to \infty$. so there exists an $R$ large enough such that $\abs{p(z)} \geq {1\over A}$ for any fixed chosen constant $A$.
+  - Then $\abs{ 1/p(z)} \leq A$ outside of $\abs{z} >R$, i.e. $1/p(z)$ is bounded there.
 - Inside a disc:
-  - $p$ is continuous with no roots so $p$ is bounded below on $\abs{z} < R$.
-  - $p$ is continuous on a compact set and thus achieves a min $A$
-  - Set $B = \min(A, {R^n \over 2} \abs{a_n})$, then $p \geq B$ on $\abs{z} < R$.
-- Thus $p$ is bounded below everywhere and thus ${1\over p}$ is bounded above everywhere, thus bounded.
-- Thus ${1\over p}$ is constant, forcing $p$ to be constant.
+  - $p$ is continuous with no roots and thus must be bounded below on $\abs{z} < R$.
+  - $p$ is entire and thus continuous, and since $\bar{D}_r(0)$ is a compact set, $p$ achieves a min $A$ there
+  - Set $C \da \min(A, B)$, then $\abs{p(z)} \geq C$ on all of $\CC$ and thus $\abs{1/p(z)} \leq C$ everywhere. 
+  - So $1/p(z)$ is bounded an entire and thus constant by Liouville's theorem -- but this forces $p$ to be constant. $\contradiction$
 
 ### Fundamental Theorem of Algebra: Open Mapping Theorem
 
@@ -993,17 +1095,12 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - So $p$ has a root.
 
 # Appendix
-\[
-dz &= dx + i~dy \\
-d\bar z &= dx - i~dy \\
-f_z &= f_x = i\inv f_y \\
-\int_{0}^{2 \pi} e^{i \ell x} d x
-&=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
-.\]
 
-## Misc Prerequisites
+## Misc Basic Algebra
 
-**Standard forms of conic sections:**
+
+:::{.fact title="Standard forms of conic sections"}
+\envlist
 
 - Circle: $x^2 + y^2 = r^2$
 - Ellipse: $\qty{\frac x a}^2  + \qty{\frac y b}^2 = 1$
@@ -1011,41 +1108,26 @@ f_z &= f_x = i\inv f_y \\
   - Rectangular Hyperbola: $xy = \frac{c^2}{2}$.
 - Parabola: $-4ax + y^2 = 0$.
 
-> Mnemonic:
-> Write $f(x, y) = Ax^2 + Bxy + Cy^2 + \cdots$, then consider the discriminant $\Delta = B^2 - 4AC$:
->
-> - $\Delta < 0 \iff$ ellipse
->   - $\Delta < 0$ and $A=C, B=0 \iff$ circle
-> - $\Delta = 0 \iff$ parabola
-> - $\Delta > 0 \iff$ hyperbola
+Mnemonic:
+Write $f(x, y) = Ax^2 + Bxy + Cy^2 + \cdots$, then consider the discriminant $\Delta = B^2 - 4AC$:
 
-**Completing the square:**
+- $\Delta < 0 \iff$ ellipse
+  - $\Delta < 0$ and $A=C, B=0 \iff$ circle
+- $\Delta = 0 \iff$ parabola
+- $\Delta > 0 \iff$ hyperbola
+:::
 
+:::{.fact title="Completing the square"}
 \[
 x^2 - bx = (x - s)^2 - s^2 \quad\text{where} s = \frac{b}{2} \\
 x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 .\]
+:::
 
-
-**Useful Properties**
-
-- $\Re(z) = \frac 1 2 (z + \bar z)$ and $\Im(z) = \frac{1}{2i}(z - \bar z)$.
-- $z\bar z = \abs{z}^2$
-- Exponential forms of cosine and sine:
-  - $\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}}$
-  - $\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}$.
-
-**Useful Series**
-
-\[
-\sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
-\sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
-\sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
-\log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
-\dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
-\]
-
+:::{.fact}
 The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
+:::
+
 
 
 Basics
@@ -1064,4 +1146,58 @@ Basics
 - Show that if $\theset{f_n}$ is a sequence of holomorphic functions converging uniformly to a function $f$ on every compact subset of $\Omega$, then $f$ is holomorphic on $\Omega$ and $\theset{f_n'}$ converges uniformly to $f'$ on every such compact subset.
 - Show that if each $f_n$ is holomorphic on $\Omega$ and $F \definedas \sum f_n$ converges uniformly on every compact subset of $\Omega$, then $F$ is holomorphic.
 - Show that if $f$ is once complex differentiable at each point of $\Omega$, then $f$ is holomorphic.
+
+
+# Draft of Problem Book
+
+
+
+- Prove the triangle inequality
+- Prove the reverse triangle inequality
+- Show that $\sum z^{k-1}/k$ converges for all $z\in S^1$ except $z=1$.
+- What is an example of a noncontinuous limit of continuous functions?
+- Show that the uniform limit of continuous functions is continuous.
+- Show that $f$ is holomorphic if and only if $\bar\del f = 0$.
+- Show $n^{1\over n} \converges{n\to \infty } \to 1$.
+- Show that if $f$ is holomorphic with $f'=0$ on $\Omega$ then $f$ is constant.
+- Show that holomorphic implies analytic.
+- Use Cauchy's inequality to prove Liouville's theorem
+
+
+:::{.problem title="?"}
+What is a pair of conformal equivalences between $\HH$ and $\DD$?
+
+:::{.solution}
+\[
+F: HH &\to \DD \\
+z & \mapsto {i-z \over i+z}
+\\
+\\
+G: \DD &\to \HH \\
+w &\mapsto i{1-w \over 1 + w}
+.\]
+
+> Mnemonic: any point in $\HH$ is closer to $i$ than $-i$, so $\abs{F(z)} < 1$.
+
+- Maps $\RR\to S^1\sm\ts{-1}$.
+
+:::
+
+:::
+
+:::{.problem title="?"}
+What is conformal equivalence $\HH \mapstofrom S \da \ts{w\in \CC \st 0 < \arg(w) < \alpha \pi}$?
+
+
+:::{.solution}
+\[
+f(z) = z^ \alpha
+.\]
+
+:::
+
+:::
+
+
+
 

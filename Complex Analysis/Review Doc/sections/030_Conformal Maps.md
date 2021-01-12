@@ -52,7 +52,7 @@ f: S_\alpha &\to \DD \\
 f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 .\]
 
-![](figures/image_{2020}-07-22-13-22-46.png)
+![](figures/image_2020-07-22-13-22-46.png)
 
 ## Strip to Disc
 
