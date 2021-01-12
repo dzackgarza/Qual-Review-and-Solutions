@@ -78,7 +78,6 @@ f_z &= f_x = f_y / i
 \end{array}\right.
 .\]
 
-
 :::
 
 :::{.fact title="Some useful series"}
@@ -91,4 +90,8 @@ f_z &= f_x = f_y / i
 \]
 :::
 
+
+## Advice
+
+- Consider $1/f(z)$ and $f(1/z)$.
 
