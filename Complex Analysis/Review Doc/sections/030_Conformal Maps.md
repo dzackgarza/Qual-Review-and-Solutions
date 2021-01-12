@@ -7,29 +7,6 @@ This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and 
 :::
 
 
-:::{.theorem title="Classification of Conformal Maps"}
-There are 8 major types of conformal maps:
-
-| Type/Domains                                            | Formula                                   |
-| ------------                                            | -------                                   |
-| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
-| Sectors to sectors                                      | $z\mapsto z^n$                            |
-| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
-| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
-| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
-| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
-| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
-| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
-
-:::
-
-
-:::{.theorem title="Characterization of conformal maps"}
-Conformal maps $\DD\to\DD$ have the form
-\[
-g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
-.\]
-:::
 
 ## Plane to Disc
 

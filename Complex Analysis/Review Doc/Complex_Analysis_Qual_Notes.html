@@ -449,6 +449,63 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 <div class="theorem proofenv" title="Schwarz Reflection " data-ref="SchwarzReflection">
 <p>If <span class="math inline">\(f\)</span> is continuous and holomorphic on <span class="math inline">\({\mathbb{H}}^+\)</span> and real-valued on <span class="math inline">\({\mathbb{R}}\)</span>, then the extension defined by <span class="math inline">\(F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu\)</span> for <span class="math inline">\(z\in {\mathbb{H}}^-\)</span> is a well-defined holomorphic function on <span class="math inline">\({\mathbb{C}}\)</span>.</p>
 </div>
+<div class="theorem proofenv" title="Classification of Conformal Maps">
+<p>There are 8 major types of conformal maps:</p>
+<table style="width:98%;">
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type/Domains</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Translation/Dilation/Rotation</td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto e^{i\theta}(cz + h)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sectors to sectors</td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto z^n\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2}\)</span>, the first quadrant</td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto {1+z \over 1-z}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\({\mathbb{H}}\to S\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto \log(z)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to S_{1\over 2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto \log(z)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(S_{1\over 2} \to {\mathbb{D}}_{1\over 2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto e^{iz}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto {1\over 2}\qty{z + {1\over z}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(S_{1\over 2} \to {\mathbb{H}}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(z\mapsto \sin(z)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="theorem proofenv" title="Characterization of conformal maps">
+<p>Conformal maps <span class="math inline">\({\mathbb{D}}\to{\mathbb{D}}\)</span> have the form 
+<span class="math display">
+\begin{align*}
+g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} &lt; 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
+.\end{align*}
+<span></p>
+</div>
 <h3 data-number="3.2.2" id="others"><span class="header-section-number">3.2.2</span> Others</h3>
 <div class="theorem proofenv" title="Riemann Mapping">
 <p>If <span class="math inline">\(\Omega\)</span> is simply connected, nonempty, and not <span class="math inline">\({\mathbb{C}}\)</span>, then for every <span class="math inline">\(z_{0}\in \Omega\)</span> there exists a unique conformal map <span class="math inline">\(F:\Omega \to {\mathbb{D}}\)</span> such that <span class="math inline">\(F(z_{0}) = 0\)</span> and <span class="math inline">\(F&#39;(z_{0}) &gt; 0\)</span>.</p>
@@ -626,63 +683,6 @@ f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
 <h1 data-number="5" id="conformal-maps"><span class="header-section-number">5</span> Conformal Maps</h1>
 <div class="fact proofenv">
 <p>A bijective holomorphic map automatically has a holomorphic inverse. This can be weakened: an injective holomorphic map satisfies <span class="math inline">\(f&#39;(z) \neq 0\)</span> and <span class="math inline">\(f ^{-1}\)</span> is well-defined on its range and holomorphic.</p>
-</div>
-<div class="theorem proofenv" title="Classification of Conformal Maps">
-<p>There are 8 major types of conformal maps:</p>
-<table style="width:98%;">
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 36%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type/Domains</th>
-<th style="text-align: left;">Formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Translation/Dilation/Rotation</td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto e^{i\theta}(cz + h)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sectors to sectors</td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto z^n\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2}\)</span>, the first quadrant</td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto {1+z \over 1-z}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\({\mathbb{H}}\to S\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto \log(z)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to S_{1\over 2}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto \log(z)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(S_{1\over 2} \to {\mathbb{D}}_{1\over 2}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto e^{iz}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto {1\over 2}\qty{z + {1\over z}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(S_{1\over 2} \to {\mathbb{H}}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(z\mapsto \sin(z)\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="theorem proofenv" title="Characterization of conformal maps">
-<p>Conformal maps <span class="math inline">\({\mathbb{D}}\to{\mathbb{D}}\)</span> have the form 
-<span class="math display">
-\begin{align*}
-g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} &lt; 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
-.\end{align*}
-<span></p>
 </div>
 <h2 data-number="5.1" id="plane-to-disc"><span class="header-section-number">5.1</span> Plane to Disc</h2>
 <p>

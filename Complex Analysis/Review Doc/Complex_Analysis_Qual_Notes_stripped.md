@@ -326,6 +326,37 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 If \( f \) is continuous and holomorphic on \( {\mathbb{H}}^+ \) and real-valued on \( {\mathbb{R}} \), then the extension defined by \( F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) for \( z\in {\mathbb{H}}^- \) is a well-defined holomorphic function on \( {\mathbb{C}} \).
 :::
 
+::: {.theorem title="Classification of Conformal Maps"}
+There are 8 major types of conformal maps:
+
+  -------------------------------------------------------------------------------------------------------------------------------
+  Type/Domains                                                                    Formula
+  ------------------------------------------------------------------------------- -----------------------------------------------
+  Translation/Dilation/Rotation                                                   \( z\mapsto e^{i\theta}(cz + h) \)
+
+  Sectors to sectors                                                              \( z\mapsto z^n \)
+
+  \( {\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2} \), the first quadrant   \( z\mapsto {1+z \over 1-z} \)
+
+  \( {\mathbb{H}}\to S \)                                                         \( z\mapsto \log(z) \)
+
+  \( {\mathbb{D}}_{1\over 2} \to S_{1\over 2} \)                                  \( z\mapsto \log(z) \)
+
+  \( S_{1\over 2} \to {\mathbb{D}}_{1\over 2} \)                                  \( z\mapsto e^{iz} \)
+
+  \( {\mathbb{D}}_{1\over 2} \to {\mathbb{H}} \)                                  \( z\mapsto {1\over 2}\qty{z + {1\over z}} \)
+
+  \( S_{1\over 2} \to {\mathbb{H}} \)                                             \( z\mapsto \sin(z) \)
+  -------------------------------------------------------------------------------------------------------------------------------
+:::
+
+::: {.theorem title="Characterization of conformal maps"}
+Conformal maps \( {\mathbb{D}}\to{\mathbb{D}} \) have the form
+\[
+g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
+.\]
+:::
+
 ### Others
 
 ::: {.theorem title="Riemann Mapping"}
@@ -518,37 +549,6 @@ If \( f \) has a pole \( z_0 \) of order \( n \), then
 
 ::: {.fact}
 A bijective holomorphic map automatically has a holomorphic inverse. This can be weakened: an injective holomorphic map satisfies \( f'(z) \neq 0 \) and \( f ^{-1} \) is well-defined on its range and holomorphic.
-:::
-
-::: {.theorem title="Classification of Conformal Maps"}
-There are 8 major types of conformal maps:
-
-  -------------------------------------------------------------------------------------------------------------------------------
-  Type/Domains                                                                    Formula
-  ------------------------------------------------------------------------------- -----------------------------------------------
-  Translation/Dilation/Rotation                                                   \( z\mapsto e^{i\theta}(cz + h) \)
-
-  Sectors to sectors                                                              \( z\mapsto z^n \)
-
-  \( {\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2} \), the first quadrant   \( z\mapsto {1+z \over 1-z} \)
-
-  \( {\mathbb{H}}\to S \)                                                         \( z\mapsto \log(z) \)
-
-  \( {\mathbb{D}}_{1\over 2} \to S_{1\over 2} \)                                  \( z\mapsto \log(z) \)
-
-  \( S_{1\over 2} \to {\mathbb{D}}_{1\over 2} \)                                  \( z\mapsto e^{iz} \)
-
-  \( {\mathbb{D}}_{1\over 2} \to {\mathbb{H}} \)                                  \( z\mapsto {1\over 2}\qty{z + {1\over z}} \)
-
-  \( S_{1\over 2} \to {\mathbb{H}} \)                                             \( z\mapsto \sin(z) \)
-  -------------------------------------------------------------------------------------------------------------------------------
-:::
-
-::: {.theorem title="Characterization of conformal maps"}
-Conformal maps \( {\mathbb{D}}\to{\mathbb{D}} \) have the form
-\[
-g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
-.\]
 :::
 
 ## Plane to Disc
