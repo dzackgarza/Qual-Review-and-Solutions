@@ -86,7 +86,7 @@ T^{-1}(w) = {dw-b \over -cw + a}
 :::{.definition title="Conformal Map / Biholomorphism"}
 A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a. a **biholomorphism**.
 
-Note that some authors just require that $f'(z) \neq 0$ for any point.
+Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
 :::
 
 
