@@ -415,6 +415,7 @@
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\contradiction[0]{{\unicode{x21af}}}
 
 # Useful Techniques
 
