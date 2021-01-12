@@ -13,4 +13,24 @@
 - Show that holomorphic implies analytic.
 - Use Cauchy's inequality to prove Liouville's theorem
 
-- What is a conformal map between $\HH$ and $\DD$?
+
+:::{.problem title="?"}
+What is a pair of conformal equivalences between $\HH$ and $\DD$?
+
+:::{.solution}
+\[
+F: HH &\to \DD \\
+z & \mapsto {i-z \over i+z}
+\\
+\\
+G: \DD &\to \HH \\
+w &\mapsto i{1-w \over 1 + w}
+.\]
+
+> Mnemonic: any point in $\HH$ is closer to $i$ than $-i$, so $\abs{F(z)} < 1$.
+:::
+
+:::
+
+
+
