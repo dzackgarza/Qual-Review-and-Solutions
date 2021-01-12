@@ -10,3 +10,6 @@
 - Show that $f$ is holomorphic if and only if $\bar\del f = 0$.
 - Show $n^{1\over n} \converges{n\to \infty } \to 1$.
 - Show that if $f$ is holomorphic with $f'=0$ on $\Omega$ then $f$ is constant.
+- Show that holomorphic implies analytic.
+- Use Cauchy's inequality to prove Liouville's theorem
+
