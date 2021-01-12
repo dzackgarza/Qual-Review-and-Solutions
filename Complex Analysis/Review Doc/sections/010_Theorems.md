@@ -140,7 +140,6 @@ For a power series $f(z) = \sum a_n z^n$, define $R$ by
 Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
-
 :::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
 If $f$ is holomorphic and nonconstant on an open region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
 If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
@@ -157,7 +156,7 @@ If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essenti
 :::
 
 :::{.theorem title="Little Picard"}
-Todo
+If $f:\CC\to \CC$ is entire and nonconstant, then $\im(f)$ is either $\CC$ or $\CC\sm\ts{z_0}$ for some point $z_0$.
 :::
 \todo{???}
 

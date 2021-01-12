@@ -1,7 +1,7 @@
 # Residues
 
-:::{.theorem title="Cauchy's Inequality\label{CauchyInequality}"}
-For $z_o \in D_R(z_0) \subset \Omega$, we have
+:::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
+For $z_0 \in D_R(z_0) \subset \Omega$, we have
 \[
 \abs{ f^{(n)} (z_0) } 
 \leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ \norm{f}_{\infty} } {R^{n+1}} R \,d\theta
