@@ -37,3 +37,8 @@ w &\mapsto i{1-w \over 1 + w}
 
 
 
+:::{.problem title="?"}
+What is conformal equivalence $\HH \mapstofrom S \da \ts{w\in \CC 0 < \arg(w) < \alpha \pi$?
+:::
+
+
