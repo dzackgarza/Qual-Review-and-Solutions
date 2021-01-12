@@ -1,12 +1,21 @@
 # Useful Techniques
 
 ## Notation
-
-- $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$.
-- $\DD$ the disc
-- $\HH$ the upper half plane
-- $X_{1\over 2}$: a "half" version of $X$.
-
+| Notation                                                     | Definition                                             |
+|--------------------------------------------------------------|--------------------------------------------------------|
+| $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
+| $\HH \da \ts{x+iy \st y > 0}$                                | The upper half-plane                                   |
+| $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
+| $\HH_{1\over 2}$                                             | The first quadrant                                     |
+| $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
+| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizonta strip |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
+|                                                              |                                                        |
 
 :::{.remark title="Showing a function is constant"}
 If you want to show that a function $f$ is constant, try one of the following:
@@ -42,19 +51,33 @@ Things to know well:
 :::{.fact title="Some useful facts about basic complex algebra"}
 \envlist
 
-- $\Re(z) = \frac 1 2 (z + \bar z)$ and $\Im(z) = \frac{1}{2i}(z - \bar z)$.
 - $z\bar z = \abs{z}^2$
-- Exponential forms of cosine and sine:
-  - $\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}}$
-  - $\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}$.
+\[
+\Re(z) = { z + \bar z \over 2} && && 
+\Im(z) = {z - \bar{z} \over 2i}
+.\]
+
 - $\Arg(z/w) = \Arg(z) - \Arg(w)$.
+- Exponential forms of cosine and sine:
+\[
+\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}} && &&
+\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}
+.\]
+- Various differentials:
 \[
 dz &= dx + i~dy \\
-d\bar z &= dx - i~dy \\
-f_z &= f_x = i\inv f_y \\
-\int_{0}^{2 \pi} e^{i \ell x} d x
-&=\left\{\begin{array}{ll}{2 \pi} & {(\ell=0)} \\ {0} & {(\ell \neq 0)}\end{array}\right.
+d\bar z &= dx - i~dy \\ \\
+f_z &= f_x = f_y / i
 .\]
+- Integral of a complex exponential:
+\[
+\int_{0}^{2 \pi} e^{i \ell x} d x
+&=\left\{\begin{array}{ll}
+{2 \pi} & {\ell=0} \\ 
+{0} & \text{else}
+\end{array}\right.
+.\]
+
 
 :::
 
@@ -63,7 +86,7 @@ f_z &= f_x = i\inv f_y \\
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
-\log(z) &= \sum_{j=0}^\infty (-1)^j \frac{\qty{z-a}^j}{j}
+\log(z) &= \sum_{n=0}^\infty { (-1)^n \over n} \qty{z-a}^n \\
 \dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
 \]
 :::
