@@ -98,6 +98,15 @@ If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
 Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
 :::
 
+
+:::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
+\[
+f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
+.\]
+
+:::
+
+
 ### Others
 
 :::{.proposition title="Holomorphic functions have harmonic components"}

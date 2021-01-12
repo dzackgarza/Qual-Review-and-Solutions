@@ -3,11 +3,17 @@
 
 :::{.remark}
 Check: do you need residues? 
-You may be able to just compute an integral directly by parameterization:
+You may be able to just compute an integral 
+
+- Directly by parameterization:
 \[
 \int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
 ,\]
-or finding a primitive $F$.
+
+- Finding a primitive $F$,
+
+- Writing $z= z_0 + re^{i \theta }$
+
 
 :::
 
