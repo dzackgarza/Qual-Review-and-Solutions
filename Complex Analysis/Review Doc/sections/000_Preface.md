@@ -1,5 +1,13 @@
 # Useful Techniques
 
+## Notation
+
+- $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$.
+- $\DD$ the disc
+- $\HH$ the upper half plane
+- $X_{1\over 2}$: a "half" version of $X$.
+
+
 **Showing a function is constant:**
 
 - Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.

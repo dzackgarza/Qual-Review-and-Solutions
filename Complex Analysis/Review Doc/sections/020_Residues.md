@@ -30,18 +30,16 @@ Then
 .\]
 :::
 
-:::{.proposition title="Residues for simple poles"}
+:::{.proposition title="Residues for simple poles (order 1)"}
 If $z_0$ is a simple pole of $f$, then
 \[  
 \res_{z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
 .\]
 :::
 
-
-:::{.example title="?"}
+:::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
 :::
-
 
 :::{.proposition title="For higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
@@ -49,5 +47,4 @@ If $f$ has a pole $z_0$ of order $n$, then
 \res_{z=z_0} f = \lim_{z\to z_0} {1 \over (n-1)!} \qty{\dd{}{z}}^{n-1} (z-z_0)^n f(z)
 .\]
 :::
-
 

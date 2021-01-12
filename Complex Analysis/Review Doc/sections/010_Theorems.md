@@ -58,6 +58,46 @@ and
 .\]
 :::
 
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
+
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::
+
+:::{.theorem title="Riemann's Removable Singularity Theorem"}
+If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
+:::
+
+:::{.theorem title="Argument Principle"}
+For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then
+\[  
+\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
+,\]
+where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
+:::
+
+:::{.theorem title="Rouché's Theorem" ref="Rouche"}
+If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
+
+Alternatively:
+
+Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
+Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
+:::
+
+:::{.theorem title="Cayley Transform"}
+The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
+:::
+
+:::{.theorem title="Schwarz Lemma" ref="SchwarzLemma"}
+If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
+
+1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
+2. $\abs{f'(0)} \leq 1$.
+
+Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+:::
+
 ### Others
 
 :::{.proposition title="Holomorphic functions have harmonic components"}
