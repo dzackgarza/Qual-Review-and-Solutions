@@ -38,8 +38,10 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 
 ### Fundamental Theorem of Algebra: Liouville's Theorem
 
-- Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire
-- Write $g(z) \definedas \frac{p(z)}{z^{n}} = z^n \left(a_n + \frac{a_{n-1}}{z}+\dots+\frac{a_{0}}{z^{n}}\right)$
+
+- Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire.
+  We will show it is also bounded and thus constant, a contradiction.
+- Write $p(z) = z^n \left(a_n + \frac{a_{n-1}}{z}+\dots+\frac{a_{0}}{z^{n}}\right)$
   - Note that $g(z) \converges{z\to \infty }\to \infty$.
 - Outside a disc:
   - Note $\lim_{z\to \infty} = 0$ for the parenthesized terms, so there exists an $R$ large enough such that $\abs{g(z)} \geq {1\over 2} \abs{a_n}$
