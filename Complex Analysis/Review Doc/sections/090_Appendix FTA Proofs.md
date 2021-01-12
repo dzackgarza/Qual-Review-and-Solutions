@@ -43,11 +43,12 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
   We will show it is also bounded and thus constant, a contradiction.
 - Write $p(z) = z^n \left(a_n + \frac{a_{n-1}}{z}+\dots+\frac{a_{0}}{z^{n}}\right)$
 - Outside a disc:
-  - Note that $p(z) \converges{z\to \infty }\to \infty$. so there exists an $R$ large enough such that $\abs{p(z)} \geq c$ for any fixed chosen constant $c$.
-  - Then $\abs{ 1/p(z)} \leq {1\over c}$ outside of $\abs{z} >R$, i.e. $1/p(z)$ is bounded there.
+  - Note that $p(z) \converges{z\to \infty }\to \infty$. so there exists an $R$ large enough such that $\abs{p(z)} \geq {1\over A}$ for any fixed chosen constant $A$.
+  - Then $\abs{ 1/p(z)} \leq A$ outside of $\abs{z} >R$, i.e. $1/p(z)$ is bounded there.
 - Inside a disc:
   - $p$ is continuous with no roots and thus must be bounded below on $\abs{z} < R$.
-  - $p$ is continuous on a compact set and thus achieves a min $A$
+  - $p$ is entire and thus continuous, and since $\bar{D}_r(0)$ is a compact set, $p$ achieves a min $A$ there
+  - Set $C \da \min(A, B)$, then $\abs{p(z)} \geq C$ on all of $\CC$ and thus $\abs{1/p(z)} \leq C$ everywhere. 
   - Set $B = \min(A, {R^n \over 2} \abs{a_n})$, then $p \geq B$ on $\abs{z} < R$.
 - Thus $p$ is bounded below everywhere and thus ${1\over p}$ is bounded above everywhere, thus bounded.
 - Thus ${1\over p}$ is constant, forcing $p$ to be constant.
