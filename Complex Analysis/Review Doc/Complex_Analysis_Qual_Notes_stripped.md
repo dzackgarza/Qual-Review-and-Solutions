@@ -1,3 +1,13 @@
+```{=tex}
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+```
 # Useful Techniques
 
 ## Notation
@@ -657,7 +667,7 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
     -   \( p \) is continuous with no roots and thus must be bounded below on \( {\left\lvert {z} \right\rvert} < R \).
     -   \( p \) is entire and thus continuous, and since \( \mkern 1.5mu\overline{\mkern-1.5muD\mkern-1.5mu}\mkern 1.5mu_r(0) \) is a compact set, \( p \) achieves a min \( A \) there
     -   Set \( C \coloneqq\min(A, B) \), then \( {\left\lvert {p(z)} \right\rvert} \geq C \) on all of \( {\mathbb{C}} \) and thus \( {\left\lvert {1/p(z)} \right\rvert} \leq C \) everywhere.
-    -   So \( 1/p(z) \) is bounded an entire and thus constant by Liouville's theorem -- but this forces \( p \) to be constant. \( {\unicode{x21af}} \)
+    -   So \( 1/p(z) \) is bounded an entire and thus constant by Liouville's theorem -- but this forces \( p \) to be constant. \( \contradiction \)
 
 ### Fundamental Theorem of Algebra: Open Mapping Theorem
 
