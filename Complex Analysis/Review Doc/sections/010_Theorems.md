@@ -244,7 +244,6 @@ For a power series $f(z) = \sum a_n z^n$, define $R$ by
 Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
-
 ## Others
 
 :::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
@@ -293,5 +292,4 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 > Apply Morera's Theorem and Cauchy's Theorem
 
 :::
-
 
