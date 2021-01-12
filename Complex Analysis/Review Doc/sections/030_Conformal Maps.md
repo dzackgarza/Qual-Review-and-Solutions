@@ -1,5 +1,12 @@
 # Conformal Maps
 
+
+:::{.fact}
+A bijective holomorphic map automatically has a holomorphic inverse.
+This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
+:::
+
+
 :::{.theorem title="Classification of Conformal Maps"}
 There are 8 major types of conformal maps:
 

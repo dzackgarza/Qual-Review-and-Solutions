@@ -70,7 +70,6 @@ The *residue* of $f$ at $z_0$ is the coefficient $c_{-1}$.
 If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
 :::
 
-
 :::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
@@ -82,6 +81,12 @@ These have inverses given by
 \[  
 T^{-1}(w) = {dw-b \over -cw + a}
 .\]
+:::
+
+:::{.definition title="Conformal Map / Biholomorphism"}
+A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a. a **biholomorphism**.
+
+Note that some authors just require that $f'(z) \neq 0$ for any point.
 :::
 
 
