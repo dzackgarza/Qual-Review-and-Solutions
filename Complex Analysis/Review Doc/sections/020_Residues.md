@@ -9,12 +9,15 @@ For $z_0 \in D_R(z_0) \subset \Omega$, we have
 ,\]
 where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
 
-> Slogan: the $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
+:::{.slogan}
+The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
+:::
+
 
 :::
 
 :::{.proof}
-\hfill
+\envlist
 - Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
 - Then apply the integral formula.
 :::
@@ -27,16 +30,18 @@ Then
 .\]
 :::
 
-
-:::{.proposition title="For simple poles"}
+:::{.proposition title="Residues for simple poles"}
 If $z_0$ is a simple pole of $f$, then
 \[  
 \res_{z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
 .\]
 :::
 
-Example: 
+
+:::{.example title="?"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
+:::
+
 
 :::{.proposition title="For higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
