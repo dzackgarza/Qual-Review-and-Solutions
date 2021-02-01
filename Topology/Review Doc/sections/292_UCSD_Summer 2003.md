@@ -241,15 +241,15 @@ Facts used:
 
 From the LES in homotopy we have
 
-% https://q.uiver.app/?q=WzAsNixbMCwwLCJcXHBpXzQoU14zKSJdLFsyLDAsIlxccGlfNChFKSJdLFs0LDAsIlxccGlfNChTXjUpIl0sWzAsMiwiXFxwaV8zKFNeMykiXSxbMiwyLCJcXHBpXzMoRSkiXSxbNCwyLCJcXHBpXzMoU141KSJdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFs0LDVdXQ==
+% https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCJcXHBpXzQoU141KSJdLFswLDIsIlxccGlfMyhTXjMpIl0sWzIsMiwiXFxwaV8zKEUpIl0sWzQsMiwiXFxwaV8zKFNeNSkiXSxbMyw0XSxbMCw0LCJcXHBpXzIoU14zKSJdLFswLDYsIlxccGlfMShTXjMpIl0sWzAsOCwiXFxwaV8wKFNeMykiXSxbMiw0LCJcXHBpXzIoRSkiXSxbNCw0LCJcXHBpXzIoU141KSJdLFsyLDYsIlxccGlfMShFKSJdLFs0LDYsIlxccGlfMShTXjUpIl0sWzIsOCwiXFxwaV8wKEUpIl0sWzQsOCwiXFxwaV8wKFNeNSkiXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw3XSxbNywxMF0sWzEwLDExXSxbMTEsOF0sWzgsMTJdLFsxMiwxM10sWzEzLDldLFs5LDE0XSxbMTQsMTVdXQ==
 \begin{tikzcd}
 	{\pi_4(S^3)} && {\pi_4(E)} && {\pi_4(S^5)} \\
 	\\
-	{\pi_3(S^3)} && {\pi_3(E)} && {\pi_3(S^5)}
+	{\pi_3(S^3)} && {\pi_3(E)} && {\pi_3(S^5)} \\
 	\\
-	{\pi_2(S^3)} && {\pi_2(E)} && {\pi_2(S^5)}
+	{\pi_2(S^3)} && {\pi_2(E)} & {} & {\pi_2(S^5)} \\
 	\\
-	{\pi_1(S^3)} && {\pi_1(E)} && {\pi_1(S^5)}
+	{\pi_1(S^3)} && {\pi_1(E)} && {\pi_1(S^5)} \\
 	\\
 	{\pi_0(S^3)} && {\pi_0(E)} && {\pi_0(S^5)}
 	\arrow[from=1-1, to=1-3]
@@ -257,6 +257,15 @@ From the LES in homotopy we have
 	\arrow[from=1-5, to=3-1]
 	\arrow[from=3-1, to=3-3]
 	\arrow[from=3-3, to=3-5]
+	\arrow[from=3-5, to=5-1]
+	\arrow[from=5-1, to=5-3]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=5-5, to=7-1]
+	\arrow[from=7-1, to=7-3]
+	\arrow[from=7-3, to=7-5]
+	\arrow[from=7-5, to=9-1]
+	\arrow[from=9-1, to=9-3]
+	\arrow[from=9-3, to=9-5]
 \end{tikzcd}
 
 \begin{align}
