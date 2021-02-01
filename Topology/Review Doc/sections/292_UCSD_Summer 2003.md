@@ -173,6 +173,7 @@ Facts Used:
 3. $\ext(\prod_i A_i, \prod_j B_j) = \prod_i \prod_j \ext(A_i, B_j)$
 
 Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
+
 $\ext(\downarrow, \rightarrow)$ | $\ZZ$   | $\ZZ_4$ | $\ZZ_5$
 --------------------------------|---------|---------|--------
 $\ZZ$                           | 0       | 0       | 0
@@ -239,6 +240,24 @@ Facts used:
 - $0\to A\to B \to 0$ exact iff $A\cong B$
 
 From the LES in homotopy we have
+
+% https://q.uiver.app/?q=WzAsNixbMCwwLCJcXHBpXzQoU14zKSJdLFsyLDAsIlxccGlfNChFKSJdLFs0LDAsIlxccGlfNChTXjUpIl0sWzAsMiwiXFxwaV8zKFNeMykiXSxbMiwyLCJcXHBpXzMoRSkiXSxbNCwyLCJcXHBpXzMoU141KSJdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFs0LDVdXQ==
+\begin{tikzcd}
+	{\pi_4(S^3)} && {\pi_4(E)} && {\pi_4(S^5)} \\
+	\\
+	{\pi_3(S^3)} && {\pi_3(E)} && {\pi_3(S^5)}
+	\\
+	{\pi_2(S^3)} && {\pi_2(E)} && {\pi_2(S^5)}
+	\\
+	{\pi_1(S^3)} && {\pi_1(E)} && {\pi_1(S^5)}
+	\\
+	{\pi_0(S^3)} && {\pi_0(E)} && {\pi_0(S^5)}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-3, to=1-5]
+	\arrow[from=1-5, to=3-1]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+\end{tikzcd}
 
 \begin{align}
 4\qquad \pi_4(S^3) \to \pi_4(E) \to \pi_4(S^5) \\
