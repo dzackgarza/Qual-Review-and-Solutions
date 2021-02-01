@@ -268,16 +268,35 @@ From the LES in homotopy we have
 	\arrow[from=9-3, to=9-5]
 \end{tikzcd}
 
-\begin{align}
-4\qquad \pi_4(S^3) \to \pi_4(E) \to \pi_4(S^5) \\
-3\qquad \pi_3(S^3) \to \pi_3(E) \to \pi_3(S^5) \\
-2\qquad \pi_2(S^3) \to \pi_2(E) \to \pi_2(S^5) \\
-1\qquad \pi_1(S^3) \to \pi_1(E) \to \pi_1(S^5) \\
-0\qquad \pi_0(S^3) \to \pi_0(E) \to \pi_0(S^5) \\
-\end{align}
-
 
 and plugging in known information yields
+
+% https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCIwIl0sWzAsMiwiXFxaWiIsWzI0MCw2MCw2MCwxXV0sWzIsMiwiXFxwaV8zKEUpIixbMjQwLDYwLDYwLDFdXSxbNCwyLCIwIl0sWzMsNF0sWzAsNCwiMCJdLFswLDYsIjAiXSxbMCw4LCJcXFpaIl0sWzIsNCwiXFxwaV8yKEUpID0gMCIsWzAsNjAsNjAsMV1dLFs0LDQsIjAiXSxbMiw2LCJcXHBpXzEoRSk9MCIsWzAsNjAsNjAsMV1dLFs0LDYsIjAiXSxbMiw4LCJcXHBpXzAoRSkiXSxbNCw4LCJcXFpaIl0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNCwiXFxjb25nIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMjQwLDYwLDYwLDFdXSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsN10sWzcsMTBdLFsxMCwxMV0sWzExLDhdLFs4LDEyXSxbMTIsMTNdLFsxMyw5XSxbOSwxNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTQsMTUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
+\begin{tikzcd}
+	{\pi_4(S^3)} && {\pi_4(E)} && 0 \\
+	\\
+	\textcolor{rgb,255:red,92;green,92;blue,214}{\ZZ} && \textcolor{rgb,255:red,92;green,92;blue,214}{\pi_3(E)} && 0 \\
+	\\
+	0 && \textcolor{rgb,255:red,214;green,92;blue,92}{\pi_2(E) = 0} & {} & 0 \\
+	\\
+	0 && \textcolor{rgb,255:red,214;green,92;blue,92}{\pi_1(E)=0} && 0 \\
+	\\
+	\ZZ && {\pi_0(E)} && \ZZ
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-3, to=1-5]
+	\arrow[from=1-5, to=3-1]
+	\arrow["\cong"{description}, color={rgb,255:red,92;green,92;blue,214}, hook, two heads, from=3-1, to=3-3]
+	\arrow[no head, from=3-3, to=3-5]
+	\arrow[from=3-5, to=5-1]
+	\arrow[from=5-1, to=5-3]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=5-5, to=7-1]
+	\arrow[from=7-1, to=7-3]
+	\arrow[from=7-3, to=7-5]
+	\arrow[from=7-5, to=9-1]
+	\arrow[hook, from=9-1, to=9-3]
+	\arrow[two heads, from=9-3, to=9-5]
+\end{tikzcd}
 
 \begin{align}
 4\qquad &\pi_4(S^3) \to &\pi_4(E) \quad \to 0 \\
