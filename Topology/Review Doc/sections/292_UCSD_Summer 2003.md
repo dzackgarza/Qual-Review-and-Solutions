@@ -40,6 +40,7 @@ Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n
 
 :::{.solution}
 Facts Used
+
 1. $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$
 2. $\tilde X \surjects X \implies \pi_1(\tilde X) \injects \pi_1(X)$
 3. Every subgroup $G \leq \pi_1(X)$ corresponds to a covering space $X_G \surjects X$
@@ -59,6 +60,7 @@ Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$.
 
 :::{.solution}
 Facts used:
+
 - Construction of Moore Spaces
 - $\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)$, using $\Sigma X = C_X \union_X C_X$ and Mayer-Vietoris.
 
@@ -138,6 +140,7 @@ Compute the homology and cohomology of a closed, connected, oriented 3-manifold 
 
 :::{.solution}
 Facts used:
+
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
 - $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
 - For orientable manifolds $H_n(M^n) = \ZZ$
@@ -215,6 +218,7 @@ Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi
 
 :::{.solution}
 Facts used:
+
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
 - $\RR^2 \surjects_p T^2 = S^1 \cross S^1$
@@ -229,6 +233,7 @@ Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
 :::{.solution}
 Facts used:
+
 - Homotopy LES
 - Hurewicz
 - $0\to A\to B \to 0$ exact iff $A\cong B$

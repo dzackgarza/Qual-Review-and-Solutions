@@ -51,6 +51,15 @@
 \tableofcontents
 \newpage
 
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
 \hypertarget{preface}{%
 \section{Preface}\label{preface}}
 
@@ -106,23 +115,25 @@ Some fun resources:
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Notation & Definition\tabularnewline
+Notation & Definition \\ \addlinespace
 \midrule
 \endhead
 \(X\times Y, \prod_{j\in J} X_j, X^{\times n}\) &
-Products\tabularnewline
+Products \\ \addlinespace
 \(X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}\) & Direct
-sums\tabularnewline
+sums \\ \addlinespace
 \(X\ast Y, \ast_{j\in J} X_j, X^{\ast n}\) & Free
-products\tabularnewline
+products \\ \addlinespace
 \(X\otimes Y, \bigotimes_{j\in J} X_j, X^{\otimes n}\) & Tensor
-products\tabularnewline
-\({\mathbb{Z}}^n\) & The free abelian group of rank \(n\)\tabularnewline
+products \\ \addlinespace
+\({\mathbb{Z}}^n\) & The free abelian group of rank
+\(n\) \\ \addlinespace
 \({\mathbb{Z}}^{\ast n}\) & The free group on \(n\)
-generators\tabularnewline
-\(\pi_0(X)\) & The \emph{set} of path components of \(X\)\tabularnewline
-\(G=1\) & The trivial abelian group\tabularnewline
-\(G=0\) & The trivial nonabelian group\tabularnewline
+generators \\ \addlinespace
+\(\pi_0(X)\) & The \emph{set} of path components of
+\(X\) \\ \addlinespace
+\(G=1\) & The trivial abelian group \\ \addlinespace
+\(G=0\) & The trivial nonabelian group \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -2798,355 +2809,88 @@ The following is a giant list of known homology/homotopy.
 
 \scriptsize
 
-\begin{longtable}[]{@{}lllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.12}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.27}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.16}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.27}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(X\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*(X)\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*(X)\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-CW Structure\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H^*(X)\)\strut
-\end{minipage}\tabularnewline
+\(X\) & \(\pi_*(X)\) & \(H_*(X)\) & CW Structure &
+\(H^*(X)\) \\ \addlinespace
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{R}}^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(0\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(0\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\({\mathbb{Z}}\cdot 1 + {\mathbb{Z}}\cdot x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{R}}^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(0\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(0\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(({\mathbb{Z}}\cdot 1 + {\mathbb{Z}}\cdot x)^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(D(k, {\mathbb{R}}^n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*\bigvee^k S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\bigoplus_{k} H_* M({\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + kx\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(B^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*({\mathbb{R}}^n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*({\mathbb{R}}^n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x^n + x^{n+1}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(S^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\([0 \ldots , {\mathbb{Z}}, ? \ldots]\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*M({\mathbb{Z}}, n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x^n\) or \(\sum_{i=0}^n 2x^i\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({\mathbb{Z}}[{}_{n}x]/(x^2)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(D(k, S^n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*\bigvee^{k-1}S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\bigoplus_{k-1}H_*M({\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + (k-1)x^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(T^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*S^1 \times \pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\((H_* M({\mathbb{Z}}, 1))^2 \times H_* M({\mathbb{Z}}, 2)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + 2x + x^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\Lambda({}_{1}x_{1}, {}_{1}x_{2})\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(T^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\prod^n \pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\prod_{i=1}^n (H_* M({\mathbb{Z}}, i))^{n\choose i}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\((1 + x)^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\Lambda({}_{1}x_{1}, {}_{1}x_{2}, \ldots {}_{1}x_{n})\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(D(k, T^n)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\([0, 0, 0, 0, \ldots]\)?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\([0, 0, 0, 0, \ldots]\)?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(S^1 \vee S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*S^1 \ast \pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\((H_*M({\mathbb{Z}}, 1))^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + 2x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\(\bigvee^n S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\ast^n \pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\prod H_* M({\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_* M({\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({}_{0}{\mathbb{Z}}\times {}_{1}{\mathbb{Z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x + x^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({}_{0}{\mathbb{Z}}\times {}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^3\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^3\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1) + H_*M({\mathbb{Z}}, 3)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x + x^2 + x^3\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({}_{0}{\mathbb{Z}}\times {}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\times {}_{3}{\mathbb{Z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^4\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^4\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1) + H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 3)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x + x^2 + x^3 + x^4\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({}_{0}{\mathbb{Z}}\times ({}_{2}{\mathbb{Z}}/2{\mathbb{Z}})^2\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^n, n \geq 4\) even\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_*S^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\prod_{\text{odd}~i < n} H_*M({\mathbb{Z}}/2{\mathbb{Z}}, i)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(\sum_{i=1}^n x^i\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({}_{0}{\mathbb{Z}}\times \prod_{i=1}^{n/2}{}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{RP}}^n, n \geq 4\) odd\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_*S^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\prod_{\text{odd}~ i \leq n-2} H_*M({\mathbb{Z}}/2{\mathbb{Z}}, i) \times H_* S^n\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(\sum_{i=1}^n x^i\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H^*({\mathbb{RP}}^{n-1}) \times {}_{n}{\mathbb{Z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{CP}}^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}, 2) + \pi_* S^3\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_* S^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(x^0 + x^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({\mathbb{Z}}[{}_{2}x]/({}_2x^{2})\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{CP}}^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}, 2) + \pi_* S^5\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*S^2 \times H_* S^4\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(x^0 + x^2 + x^4\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({\mathbb{Z}}[{}_{2}x]/({}_2x^{3})\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-\({\mathbb{CP}}^n, n \geq 2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_*K({\mathbb{Z}}, 2) + \pi_*S^{2n+1}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(\prod_{i=1}^n H_* S^{2i}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(\sum_{i=1}^n x^{2i}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\({\mathbb{Z}}[{}_{2}x]/({}_2x^{n+1})\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-Mobius Band\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(\pi_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_* S^1\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.12}}\raggedright
-Klein Bottle\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.17}}\raggedright
-\(K({\mathbb{Z}}\rtimes_{-1} {\mathbb{Z}}, 1)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-\(H_*S^1 \times H_* {\mathbb{RP}}^\infty\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.16}}\raggedright
-\(1 + 2x + x^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 4\tabcolsep) * \real{0.27}}\raggedright
-?\strut
-\end{minipage}\tabularnewline
+\({\mathbb{R}}^1\) & \(0\) & \(0\) &
+\({\mathbb{Z}}\cdot 1 + {\mathbb{Z}}\cdot x\) & 0 \\ \addlinespace
+\({\mathbb{R}}^n\) & \(0\) & \(0\) &
+\(({\mathbb{Z}}\cdot 1 + {\mathbb{Z}}\cdot x)^n\) & 0 \\ \addlinespace
+\(D(k, {\mathbb{R}}^n)\) & \(\pi_*\bigvee^k S^1\) &
+\(\bigoplus_{k} H_* M({\mathbb{Z}}, 1)\) & \(1 + kx\) &
+? \\ \addlinespace
+\(B^n\) & \(\pi_*({\mathbb{R}}^n)\) & \(H_*({\mathbb{R}}^n)\) &
+\(1 + x^n + x^{n+1}\) & 0 \\ \addlinespace
+\(S^n\) & \([0 \ldots , {\mathbb{Z}}, ? \ldots]\) &
+\(H_*M({\mathbb{Z}}, n)\) & \(1 + x^n\) or \(\sum_{i=0}^n 2x^i\) &
+\({\mathbb{Z}}[{}_{n}x]/(x^2)\) \\ \addlinespace
+\(D(k, S^n)\) & \(\pi_*\bigvee^{k-1}S^1\) &
+\(\bigoplus_{k-1}H_*M({\mathbb{Z}}, 1)\) & \(1 + (k-1)x^1\) &
+? \\ \addlinespace
+\(T^2\) & \(\pi_*S^1 \times \pi_* S^1\) &
+\((H_* M({\mathbb{Z}}, 1))^2 \times H_* M({\mathbb{Z}}, 2)\) &
+\(1 + 2x + x^2\) &
+\(\Lambda({}_{1}x_{1}, {}_{1}x_{2})\) \\ \addlinespace
+\(T^n\) & \(\prod^n \pi_* S^1\) &
+\(\prod_{i=1}^n (H_* M({\mathbb{Z}}, i))^{n\choose i}\) & \((1 + x)^n\)
+&
+\(\Lambda({}_{1}x_{1}, {}_{1}x_{2}, \ldots {}_{1}x_{n})\) \\ \addlinespace
+\(D(k, T^n)\) & \([0, 0, 0, 0, \ldots]\)? & \([0, 0, 0, 0, \ldots]\)? &
+\(1 + x\) & ? \\ \addlinespace
+\(S^1 \vee S^1\) & \(\pi_*S^1 \ast \pi_* S^1\) &
+\((H_*M({\mathbb{Z}}, 1))^2\) & \(1 + 2x\) & ? \\ \addlinespace
+\(\bigvee^n S^1\) & \(\ast^n \pi_* S^1\) &
+\(\prod H_* M({\mathbb{Z}}, 1)\) & \(1 + x\) & ? \\ \addlinespace
+\({\mathbb{RP}}^1\) & \(\pi_* S^1\) & \(H_* M({\mathbb{Z}}, 1)\) &
+\(1 + x\) &
+\({}_{0}{\mathbb{Z}}\times {}_{1}{\mathbb{Z}}\) \\ \addlinespace
+\({\mathbb{RP}}^2\) &
+\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^2\) &
+\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1)\) & \(1 + x + x^2\) &
+\({}_{0}{\mathbb{Z}}\times {}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\) \\ \addlinespace
+\({\mathbb{RP}}^3\) &
+\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^3\) &
+\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1) + H_*M({\mathbb{Z}}, 3)\) &
+\(1 + x + x^2 + x^3\) &
+\({}_{0}{\mathbb{Z}}\times {}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\times {}_{3}{\mathbb{Z}}\) \\ \addlinespace
+\({\mathbb{RP}}^4\) &
+\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_* S^4\) &
+\(H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 1) + H_*M({\mathbb{Z}}/2{\mathbb{Z}}, 3)\)
+& \(1 + x + x^2 + x^3 + x^4\) &
+\({}_{0}{\mathbb{Z}}\times ({}_{2}{\mathbb{Z}}/2{\mathbb{Z}})^2\) \\ \addlinespace
+\({\mathbb{RP}}^n, n \geq 4\) even &
+\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_*S^n\) &
+\(\prod_{\text{odd}~i < n} H_*M({\mathbb{Z}}/2{\mathbb{Z}}, i)\) &
+\(\sum_{i=1}^n x^i\) &
+\({}_{0}{\mathbb{Z}}\times \prod_{i=1}^{n/2}{}_{2}{\mathbb{Z}}/2{\mathbb{Z}}\) \\ \addlinespace
+\({\mathbb{RP}}^n, n \geq 4\) odd &
+\(\pi_*K({\mathbb{Z}}/2{\mathbb{Z}}, 1)+ \pi_*S^n\) &
+\(\prod_{\text{odd}~ i \leq n-2} H_*M({\mathbb{Z}}/2{\mathbb{Z}}, i) \times H_* S^n\)
+& \(\sum_{i=1}^n x^i\) &
+\(H^*({\mathbb{RP}}^{n-1}) \times {}_{n}{\mathbb{Z}}\) \\ \addlinespace
+\({\mathbb{CP}}^1\) & \(\pi_*K({\mathbb{Z}}, 2) + \pi_* S^3\) &
+\(H_* S^2\) & \(x^0 + x^2\) &
+\({\mathbb{Z}}[{}_{2}x]/({}_2x^{2})\) \\ \addlinespace
+\({\mathbb{CP}}^2\) & \(\pi_*K({\mathbb{Z}}, 2) + \pi_* S^5\) &
+\(H_*S^2 \times H_* S^4\) & \(x^0 + x^2 + x^4\) &
+\({\mathbb{Z}}[{}_{2}x]/({}_2x^{3})\) \\ \addlinespace
+\({\mathbb{CP}}^n, n \geq 2\) &
+\(\pi_*K({\mathbb{Z}}, 2) + \pi_*S^{2n+1}\) &
+\(\prod_{i=1}^n H_* S^{2i}\) & \(\sum_{i=1}^n x^{2i}\) &
+\({\mathbb{Z}}[{}_{2}x]/({}_2x^{n+1})\) \\ \addlinespace
+Mobius Band & \(\pi_* S^1\) & \(H_* S^1\) & \(1 + x\) &
+? \\ \addlinespace
+Klein Bottle & \(K({\mathbb{Z}}\rtimes_{-1} {\mathbb{Z}}, 1)\) &
+\(H_*S^1 \times H_* {\mathbb{RP}}^\infty\) & \(1 + 2x + x^2\) &
+? \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -4936,82 +4680,25 @@ In each case, there is a formula
 
 \begin{fact}
 
-\begin{longtable}[]{@{}llllllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.14}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.09}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.10}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.09}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.10}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.20}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.13}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.13}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.14}}\raggedright
-Orientable?\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-\(-4\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-\(-3\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-\(-2\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-\(-1\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.20}}\raggedright
-\(0\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\(1\)\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\(2\)\strut
-\end{minipage}\tabularnewline
+Orientable? & \(-4\) & \(-3\) & \(-2\) & \(-1\) & \(0\) & \(1\) &
+\(2\) \\ \addlinespace
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.14}}\raggedright
-Yes\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-\(\Sigma_3\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-\(\emptyset\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-\(\Sigma_2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-\(\emptyset\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.20}}\raggedright
-\({\mathbb{T}}^2, S^1\times I\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\({\mathbb{D}}^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\({\mathbb{S}}^2\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.14}}\raggedright
-No\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.09}}\raggedright
-?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.10}}\raggedright
-?\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.20}}\raggedright
-\({\mathbb{K}}, {\mathbb{M}}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\({\mathbb{RP}}^2\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 7\tabcolsep) * \real{0.13}}\raggedright
-\(\emptyset\)\strut
-\end{minipage}\tabularnewline
+Yes & \(\Sigma_3\) & \(\emptyset\) & \(\Sigma_2\) & \(\emptyset\) &
+\({\mathbb{T}}^2, S^1\times I\) & \({\mathbb{D}}^2\) &
+\({\mathbb{S}}^2\) \\ \addlinespace
+No & ? & ? & ? & ? & \({\mathbb{K}}, {\mathbb{M}}\) &
+\({\mathbb{RP}}^2\) & \(\emptyset\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -5521,11 +5208,21 @@ Show that \({\mathbb{Z}}^{\ast 2}\) has subgroups isomorphic to
 
 \begin{solution}
 
-Facts Used 1. \(\pi_1(\bigvee^k S^1) = {\mathbb{Z}}^{\ast k}\) 2.
-\(\tilde X \twoheadrightarrow X \implies \pi_1(\tilde X) \hookrightarrow\pi_1(X)\)
-3. Every subgroup \(G \leq \pi_1(X)\) corresponds to a covering space
-\(X_G \twoheadrightarrow X\) 4.
-\(A \subseteq B \implies F(A) \leq F(B)\) for free groups.
+Facts Used
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\pi_1(\bigvee^k S^1) = {\mathbb{Z}}^{\ast k}\)
+\item
+  \(\tilde X \twoheadrightarrow X \implies \pi_1(\tilde X) \hookrightarrow\pi_1(X)\)
+\item
+  Every subgroup \(G \leq \pi_1(X)\) corresponds to a covering space
+  \(X_G \twoheadrightarrow X\)
+\item
+  \(A \subseteq B \implies F(A) \leq F(B)\) for free groups.
+\end{enumerate}
 
 It is easier to prove the stronger claim that
 \({\mathbb{Z}}^{\mathbb{N}}\leq {\mathbb{Z}}^{\ast 2}\) (i.e.~the free
@@ -5553,9 +5250,16 @@ Construct a space having
 
 \begin{solution}
 
-Facts used: - Construction of Moore Spaces -
-\(\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)\), using
-\(\Sigma X = C_X \cup_X C_X\) and Mayer-Vietoris.
+Facts used:
+
+\begin{itemize}
+\tightlist
+\item
+  Construction of Moore Spaces
+\item
+  \(\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)\), using
+  \(\Sigma X = C_X \cup_X C_X\) and Mayer-Vietoris.
+\end{itemize}
 
 Take \(X = e^0 \cup_{\Phi_1} e^5 \cup_{\Phi_2} e^6\), where
 \begin{align*} \Phi_1: {\partial}B^5 = S^4 \xrightarrow{z~\mapsto z^0} e^0 \\ \Phi_2: {\partial}B^6 = S^5 \xrightarrow{z~\mapsto z^4} e^5 .\end{align*}
@@ -5633,10 +5337,17 @@ Compute the homology and cohomology of a closed, connected, oriented
 
 \begin{solution}
 
-Facts used: - \(M\) closed, connected, oriented
-\(\implies H_i(M)\cong H^{n-i}(M)\) -
-\(H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]\) - For orientable manifolds
-\(H_n(M^n) = {\mathbb{Z}}\)
+Facts used:
+
+\begin{itemize}
+\tightlist
+\item
+  \(M\) closed, connected, oriented \(\implies H_i(M)\cong H^{n-i}(M)\)
+\item
+  \(H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]\)
+\item
+  For orientable manifolds \(H_n(M^n) = {\mathbb{Z}}\)
+\end{itemize}
 
 \textbf{Homology}
 
@@ -5764,9 +5475,17 @@ compute \(\pi_2(X)\).
 
 \begin{solution}
 
-Facts used: - \(\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)\) -
-Structure of the universal cover of a wedge product -
-\({\mathbb{R}}^2 \twoheadrightarrow_p T^2 = S^1 \times S^1\)
+Facts used:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)\)
+\item
+  Structure of the universal cover of a wedge product
+\item
+  \({\mathbb{R}}^2 \twoheadrightarrow_p T^2 = S^1 \times S^1\)
+\end{itemize}
 
 \(\tilde X = {\mathbb{R}}^2 \cup_{{\mathbb{Z}}^2} S^2\), so
 \(\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in {\mathbb{Z}}^2} {\mathbb{Z}}= {\mathbb{Z}}^{{\mathbb{Z}}^2} = {\mathbb{Z}}^{\aleph_0}\).
@@ -5780,8 +5499,17 @@ Let \(S^3 \to E \to S^5\) be a fiber bundle and compute \(H_3(E)\).
 
 \begin{solution}
 
-Facts used: - Homotopy LES - Hurewicz - \(0\to A\to B \to 0\) exact iff
-\(A\cong B\)
+Facts used:
+
+\begin{itemize}
+\tightlist
+\item
+  Homotopy LES
+\item
+  Hurewicz
+\item
+  \(0\to A\to B \to 0\) exact iff \(A\cong B\)
+\end{itemize}
 
 From the LES in homotopy we have
 
@@ -6190,39 +5918,39 @@ Shorthand/mnemonic:
 \begin{longtable}[]{@{}llll@{}}
 \toprule
 \(\hom\) & \({\mathbb{Z}}_m\) & \({\mathbb{Z}}\) &
-\({\mathbb{Q}}\)\tabularnewline
+\({\mathbb{Q}}\) \\ \addlinespace
 \midrule
 \endhead
-\({\mathbb{Z}}_n\) & \({\mathbb{Z}}_d\) & \(0\) & \(0\)\tabularnewline
+\({\mathbb{Z}}_n\) & \({\mathbb{Z}}_d\) & \(0\) & \(0\) \\ \addlinespace
 \({\mathbb{Z}}\) & \({\mathbb{Z}}_m\) & \({\mathbb{Z}}\) &
-\({\mathbb{Q}}\)\tabularnewline
-\({\mathbb{Q}}\) & \(0\) & \(0\) & \({\mathbb{Q}}\)\tabularnewline
+\({\mathbb{Q}}\) \\ \addlinespace
+\({\mathbb{Q}}\) & \(0\) & \(0\) & \({\mathbb{Q}}\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule
 \(\operatorname{Tor}\) & \({\mathbb{Z}}_m\) & \({\mathbb{Z}}\) &
-\({\mathbb{Q}}\)\tabularnewline
+\({\mathbb{Q}}\) \\ \addlinespace
 \midrule
 \endhead
-\({\mathbb{Z}}_n\) & \({\mathbb{Z}}_d\) & \(0\) & \(0\)\tabularnewline
-\({\mathbb{Z}}\) & \(0\) & \(0\) & \(0\)\tabularnewline
-\({\mathbb{Q}}\) & \(0\) & \(0\) & \(0\)\tabularnewline
+\({\mathbb{Z}}_n\) & \({\mathbb{Z}}_d\) & \(0\) & \(0\) \\ \addlinespace
+\({\mathbb{Z}}\) & \(0\) & \(0\) & \(0\) \\ \addlinespace
+\({\mathbb{Q}}\) & \(0\) & \(0\) & \(0\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule
 \(\operatorname{Ext}\) & \({\mathbb{Z}}_m\) & \({\mathbb{Z}}\) &
-\({\mathbb{Q}}\)\tabularnewline
+\({\mathbb{Q}}\) \\ \addlinespace
 \midrule
 \endhead
 \({\mathbb{Z}}_n\) & \({\mathbb{Z}}_d\) & \({\mathbb{Z}}_n\) &
-\(0\)\tabularnewline
-\({\mathbb{Z}}\) & \(0\) & \(0\) & \(0\)\tabularnewline
+\(0\) \\ \addlinespace
+\({\mathbb{Z}}\) & \(0\) & \(0\) & \(0\) \\ \addlinespace
 \({\mathbb{Q}}\) & \(0\) & \(\mathcal{A_p}/{\mathbb{Q}}\) &
-\(0\)\tabularnewline
+\(0\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 

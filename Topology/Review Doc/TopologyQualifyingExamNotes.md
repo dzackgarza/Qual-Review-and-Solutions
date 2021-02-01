@@ -38,6 +38,9 @@
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\Cx}[0]{\operatorname{Cx}}
+\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\ks}[0]{\operatorname{ks}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
@@ -67,6 +70,7 @@
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
@@ -82,6 +86,7 @@
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
 \newcommand{\gr}[0]{{\operatorname{gr}}}
+\newcommand{\grMod}[0]{{\operatorname{grMod}}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -101,12 +106,15 @@
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Top}[0]{{\operatorname{Top}}}
+\newcommand{\Mfd}[0]{{\operatorname{Mfd}}}
 \newcommand{\Ab}[0]{{\operatorname{Ab}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
 \newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
 \newcommand{\Sch}[0]{{\operatorname{Sch}}}
 \newcommand{\sch}[0]{{\operatorname{Sch}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\alg}[0]{\mathrm{Alg}}
 \newcommand{\scalg}[0]{\mathrm{sCAlg}}
 \newcommand{\calg}[0]{\mathrm{CAlg}}
@@ -133,13 +141,15 @@
 \newcommand{\ext}{\operatorname{Ext} }
 \newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
-\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
 \newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
 \newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
 \newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
@@ -156,6 +166,8 @@
 \newcommand{\bd}[0]{{\del}}
 \newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
 \newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
@@ -174,6 +186,7 @@
 \newcommand{\dual}[0]{^\vee}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\eps}[0]{\varepsilon}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
@@ -270,8 +283,13 @@
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\hilb}[0]{\operatorname{Hilb}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Frame}[0]{{\operatorname{Frame}}}
+\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
+\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\Hom}[0]{{\operatorname{Hom}}}
 \newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
@@ -297,9 +315,10 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
+\newcommand{\rmod}[0]{{R\dash\mathrm{mod}}}
+\newcommand{\modr}[0]{{\mathrm{mod}\dash R}}
+\newcommand{\mmod}[0]{{\dash\operatorname{mod}}}
 \newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\modr}[0]{{\operatorname{mod}}}
 \newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
 \newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
@@ -391,6 +410,7 @@
 \DeclareMathOperator{\Der}{Der}
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\delbar}[0]{\bar{\del}}
 
 
 \newcommand{\contains}[0]{\supseteq}
@@ -415,6 +435,18 @@
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\cupp[0]{\smile}
+\newcommand\capp[0]{\frown}
+\newcommand\sig[0]{\operatorname{sig}}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
 
 # Preface
 
@@ -3623,6 +3655,7 @@ Show that $\ZZ^{\ast 2}$ has subgroups isomorphic to $\ZZ^{\ast n}$ for every $n
 
 :::{.solution}
 Facts Used
+
 1. $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$
 2. $\tilde X \surjects X \implies \pi_1(\tilde X) \injects \pi_1(X)$
 3. Every subgroup $G \leq \pi_1(X)$ corresponds to a covering space $X_G \surjects X$
@@ -3642,6 +3675,7 @@ Construct a space having $H_*(X) = [\ZZ, 0, 0, 0, 0, \ZZ_4, 0\rightarrow]$.
 
 :::{.solution}
 Facts used:
+
 - Construction of Moore Spaces
 - $\tilde H_n(\Sigma X) = \tilde H_{n-1}(X)$, using $\Sigma X = C_X \union_X C_X$ and Mayer-Vietoris.
 
@@ -3721,6 +3755,7 @@ Compute the homology and cohomology of a closed, connected, oriented 3-manifold 
 
 :::{.solution}
 Facts used:
+
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
 - $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
 - For orientable manifolds $H_n(M^n) = \ZZ$
@@ -3798,6 +3833,7 @@ Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi
 
 :::{.solution}
 Facts used:
+
 - $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
 - $\RR^2 \surjects_p T^2 = S^1 \cross S^1$
@@ -3812,6 +3848,7 @@ Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
 :::{.solution}
 Facts used:
+
 - Homotopy LES
 - Hurewicz
 - $0\to A\to B \to 0$ exact iff $A\cong B$

@@ -1,3 +1,13 @@
+```{=tex}
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+```
 # Preface
 
 References:
@@ -3187,7 +3197,12 @@ Spaces
 Show that \( {\mathbb{Z}}^{\ast 2} \) has subgroups isomorphic to \( {\mathbb{Z}}^{\ast n} \) for every \( n \).
 
 ::: {.solution}
-Facts Used 1. \( \pi_1(\bigvee^k S^1) = {\mathbb{Z}}^{\ast k} \) 2. \( \tilde X \twoheadrightarrow X \implies \pi_1(\tilde X) \hookrightarrow\pi_1(X) \) 3. Every subgroup \( G \leq \pi_1(X) \) corresponds to a covering space \( X_G \twoheadrightarrow X \) 4. \( A \subseteq B \implies F(A) \leq F(B) \) for free groups.
+Facts Used
+
+1.  \( \pi_1(\bigvee^k S^1) = {\mathbb{Z}}^{\ast k} \)
+2.  \( \tilde X \twoheadrightarrow X \implies \pi_1(\tilde X) \hookrightarrow\pi_1(X) \)
+3.  Every subgroup \( G \leq \pi_1(X) \) corresponds to a covering space \( X_G \twoheadrightarrow X \)
+4.  \( A \subseteq B \implies F(A) \leq F(B) \) for free groups.
 
 It is easier to prove the stronger claim that \( {\mathbb{Z}}^{\mathbb{N}}\leq {\mathbb{Z}}^{\ast 2} \) (i.e. the free group on countably many generators) and use fact 4 above.
 
@@ -3199,7 +3214,10 @@ Just take the covering space \( \tilde X \twoheadrightarrow S^1 \vee S^1 \) defi
 Construct a space having \( H_*(X) = [{\mathbb{Z}}, 0, 0, 0, 0, {\mathbb{Z}}_4, 0\rightarrow] \).
 
 ::: {.solution}
-Facts used: - Construction of Moore Spaces - \( \tilde H_n(\Sigma X) = \tilde H_{n-1}(X) \), using \( \Sigma X = C_X \cup_X C_X \) and Mayer-Vietoris.
+Facts used:
+
+-   Construction of Moore Spaces
+-   \( \tilde H_n(\Sigma X) = \tilde H_{n-1}(X) \), using \( \Sigma X = C_X \cup_X C_X \) and Mayer-Vietoris.
 
 Take \( X = e^0 \cup_{\Phi_1} e^5 \cup_{\Phi_2} e^6 \), where `\begin{align*}
 \Phi_1: {\partial}B^5 = S^4 \xrightarrow{z~\mapsto z^0} e^0 \\
@@ -3266,7 +3284,11 @@ Since \( {\partial}_3 \) must be an isomorphism, this forces the edge terms to b
 Compute the homology and cohomology of a closed, connected, oriented 3-manifold \( M \) with \( \pi_1(M) = {\mathbb{Z}}^{\ast 2} \).
 
 ::: {.solution}
-Facts used: - \( M \) closed, connected, oriented \( \implies H_i(M)\cong H^{n-i}(M) \) - \( H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)] \) - For orientable manifolds \( H_n(M^n) = {\mathbb{Z}} \)
+Facts used:
+
+-   \( M \) closed, connected, oriented \( \implies H_i(M)\cong H^{n-i}(M) \)
+-   \( H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)] \)
+-   For orientable manifolds \( H_n(M^n) = {\mathbb{Z}} \)
 
 **Homology**
 
@@ -3327,7 +3349,11 @@ We know that \( H^*({\mathbb{CP}}^2) = {\mathbb{Z}}[\alpha] / \alpha^2 \) where 
 Describe the universal cover of \( X = (S^1 \times S^1) \vee S^2 \) and compute \( \pi_2(X) \).
 
 ::: {.solution}
-Facts used: - \( \pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X) \) - Structure of the universal cover of a wedge product - \( {\mathbb{R}}^2 \twoheadrightarrow_p T^2 = S^1 \times S^1 \)
+Facts used:
+
+-   \( \pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X) \)
+-   Structure of the universal cover of a wedge product
+-   \( {\mathbb{R}}^2 \twoheadrightarrow_p T^2 = S^1 \times S^1 \)
 
 \( \tilde X = {\mathbb{R}}^2 \cup_{{\mathbb{Z}}^2} S^2 \), so \( \pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in {\mathbb{Z}}^2} {\mathbb{Z}}= {\mathbb{Z}}^{{\mathbb{Z}}^2} = {\mathbb{Z}}^{\aleph_0} \).
 :::
@@ -3337,7 +3363,11 @@ Facts used: - \( \pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X) \) - Structure of 
 Let \( S^3 \to E \to S^5 \) be a fiber bundle and compute \( H_3(E) \).
 
 ::: {.solution}
-Facts used: - Homotopy LES - Hurewicz - \( 0\to A\to B \to 0 \) exact iff \( A\cong B \)
+Facts used:
+
+-   Homotopy LES
+-   Hurewicz
+-   \( 0\to A\to B \to 0 \) exact iff \( A\cong B \)
 
 From the LES in homotopy we have
 
