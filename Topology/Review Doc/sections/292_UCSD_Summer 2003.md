@@ -284,30 +284,25 @@ and plugging in known information yields
 	\ZZ && {\pi_0(E)} && \ZZ
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-3, to=1-5]
-	\arrow[from=1-5, to=3-1]
-	\arrow["\cong"{description}, color={rgb,255:red,92;green,92;blue,214}, hook, two heads, from=3-1, to=3-3]
+	\arrow[from=1-5, to=3-1, in=180, out=360]
+	\arrow["\sim", color={rgb,255:red,92;green,92;blue,214}, hook, two heads, from=3-1, to=3-3]
 	\arrow[no head, from=3-3, to=3-5]
-	\arrow[from=3-5, to=5-1]
+	\arrow[from=3-5, to=5-1, in=180, out=360]
 	\arrow[from=5-1, to=5-3]
 	\arrow[from=5-3, to=5-5]
-	\arrow[from=5-5, to=7-1]
+	\arrow[from=5-5, to=7-1, in=180, out=360]
 	\arrow[from=7-1, to=7-3]
 	\arrow[from=7-3, to=7-5]
-	\arrow[from=7-5, to=9-1]
+	\arrow[from=7-5, to=9-1, in=180, out=360]
 	\arrow[hook, from=9-1, to=9-3]
 	\arrow[two heads, from=9-3, to=9-5]
 \end{tikzcd}
 
-\begin{align}
-4\qquad &\pi_4(S^3) \to &\pi_4(E) \quad \to 0 \\
-3\qquad &\ZZ \to &\pi_3(E) \quad\to 0 \\
-2\qquad &0 \to &\pi_2(E) \quad\to 0 \\
-1\qquad &0 \to &\pi_1(E) \quad\to 0 \\
-0\qquad &\ZZ \to &\pi_0(E) \quad\to \ZZ \\
-\end{align}
+where
 
-
-where rows 3 and 4 force $\pi_3(E) \cong \ZZ$, rows 0 and 1 force $\pi_0(E) = \ZZ$, and the remaining rows force $\pi_1(E) = \pi_2(E) = 0$.
+- Rows 3 and 4 force $\pi_3(E) \cong \ZZ$, 
+- Rows 0 and 1 force $\pi_0(E) = \ZZ$ (todo: not clear if this is true... is it even needed here?)
+- The remaining rows force $\pi_1(E) = \pi_2(E) = 0$.
 
 By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
 
