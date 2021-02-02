@@ -436,6 +436,8 @@
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\capprod{\frown}
+\newcommand\Path{\mathcal{P}}
+\newcommand\gradient{\nabla}
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
@@ -3708,7 +3710,7 @@ where $\deg \Phi_2 = 4$.
 
 ## 4 
 
-Compute the complement of a knotted solid torus in $S^3$.
+Compute $H_*$ of the complement of a knotted solid torus in $S^3$.
 
 :::{.solution}
 

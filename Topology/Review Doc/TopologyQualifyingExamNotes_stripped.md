@@ -3250,7 +3250,7 @@ where \( \deg \Phi_2 = 4 \).
 
 ## 4 {#section-8}
 
-Compute the complement of a knotted solid torus in \( S^3 \).
+Compute \( H_* \) of the complement of a knotted solid torus in \( S^3 \).
 
 ::: {.solution}
 ```{=tex}
