@@ -276,26 +276,26 @@ Thanks to Oskar Henriksson for some fixes/clarifications and further explanation
 Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
 
 :::{.solution}
-Facts used:
+
+\envlist
+:::{.concept}
+\envlist
 
 1. Every homeomorphism induces isomorphisms on homotopy/homology/cohomology.
 2. $H^*(\CP^2) = \ZZ[\alpha] / (\alpha^2)$ where $\deg \alpha = 2$.
 3. $[f(X)] = f_*([X])$
 4. $a\dot{} b = 0 \implies a=0~\text{or}~b=0$ (nondegeneracy).
 
+:::
+
 Supposing such a homeomorphism exists, we would have $[\CP^1] \dot{} [f(\CP^1)] = 0$ by the definition of these submanifolds being disjoint.
-
 But $[\CP^1]\dot{}[f(\CP^1)] = [\CP^1]\dot{} f_*([\CP^1])$, where
-$$
+\[
 f_*: H^*(\CP^2) \to H^*(\CP^2)
-$$
+\]
 is the induced map on cohomology.
-
 Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\CP^1]) = 0$.
-
 We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. 
-
-
 :::
 
 ## 8 
@@ -303,12 +303,16 @@ We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, how
 Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi_2(X)$.
 
 :::{.solution}
-Facts used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - $\pi_{\geq 2}(\univcover{X} ) \cong \pi_{\geq 2}(X)$ for $\univcover{X}$ the universal cover of $X$
 - Structure of the universal cover of a wedges
 - $\univcover{T^2} = \RR^2$ and $\univcover{S^2} = S^2$
 - By Mayer-Vietoris, $H_n(\Vee X_i) = \bigoplus H_n(X_i)$.
+:::
 
 The universal cover can be identified as
 \[
@@ -350,10 +354,8 @@ Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 - $0\to A\to B \to 0$ exact iff $A\cong B$
 :::
 
-
 From the LES in homotopy we have
 
-% https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCJcXHBpXzQoU141KSJdLFswLDIsIlxccGlfMyhTXjMpIl0sWzIsMiwiXFxwaV8zKEUpIl0sWzQsMiwiXFxwaV8zKFNeNSkiXSxbMyw0XSxbMCw0LCJcXHBpXzIoU14zKSJdLFswLDYsIlxccGlfMShTXjMpIl0sWzAsOCwiXFxwaV8wKFNeMykiXSxbMiw0LCJcXHBpXzIoRSkiXSxbNCw0LCJcXHBpXzIoU141KSJdLFsyLDYsIlxccGlfMShFKSJdLFs0LDYsIlxccGlfMShTXjUpIl0sWzIsOCwiXFxwaV8wKEUpIl0sWzQsOCwiXFxwaV8wKFNeNSkiXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw3XSxbNywxMF0sWzEwLDExXSxbMTEsOF0sWzgsMTJdLFsxMiwxM10sWzEzLDldLFs5LDE0XSxbMTQsMTVdXQ==
 \begin{tikzcd}
 	{\pi_4(S^3)} && {\pi_4(E)} && {\pi_4(S^5)} \\
 	\\
@@ -380,9 +382,10 @@ From the LES in homotopy we have
 	\arrow[from=9-3, to=9-5]
 \end{tikzcd}
 
+> [Link to Diagram] (https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCJcXHBpXzQoU141KSJdLFswLDIsIlxccGlfMyhTXjMpIl0sWzIsMiwiXFxwaV8zKEUpIl0sWzQsMiwiXFxwaV8zKFNeNSkiXSxbMyw0XSxbMCw0LCJcXHBpXzIoU14zKSJdLFswLDYsIlxccGlfMShTXjMpIl0sWzAsOCwiXFxwaV8wKFNeMykiXSxbMiw0LCJcXHBpXzIoRSkiXSxbNCw0LCJcXHBpXzIoU141KSJdLFsyLDYsIlxccGlfMShFKSJdLFs0LDYsIlxccGlfMShTXjUpIl0sWzIsOCwiXFxwaV8wKEUpIl0sWzQsOCwiXFxwaV8wKFNeNSkiXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw3XSxbNywxMF0sWzEwLDExXSxbMTEsOF0sWzgsMTJdLFsxMiwxM10sWzEzLDldLFs5LDE0XSxbMTQsMTVdXQ==)
+
 and plugging in known information yields
 
-% https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCIwIl0sWzAsMiwiXFxaWiIsWzI0MCw2MCw2MCwxXV0sWzIsMiwiXFxwaV8zKEUpIixbMjQwLDYwLDYwLDFdXSxbNCwyLCIwIl0sWzMsNF0sWzAsNCwiMCJdLFswLDYsIjAiXSxbMCw4LCJcXFpaIl0sWzIsNCwiXFxwaV8yKEUpID0gMCIsWzAsNjAsNjAsMV1dLFs0LDQsIjAiXSxbMiw2LCJcXHBpXzEoRSk9MCIsWzAsNjAsNjAsMV1dLFs0LDYsIjAiXSxbMiw4LCJcXHBpXzAoRSkiXSxbNCw4LCJcXFpaIl0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNCwiXFxjb25nIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMjQwLDYwLDYwLDFdXSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsN10sWzcsMTBdLFsxMCwxMV0sWzExLDhdLFs4LDEyXSxbMTIsMTNdLFsxMyw5XSxbOSwxNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTQsMTUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
 \begin{tikzcd}
 	{\pi_4(S^3)} && {\pi_4(E)} && 0 \\
 	\\
@@ -408,6 +411,8 @@ and plugging in known information yields
 	\arrow[hook, from=9-1, to=9-3]
 	\arrow[two heads, from=9-3, to=9-5]
 \end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMTYsWzAsMCwiXFxwaV80KFNeMykiXSxbMiwwLCJcXHBpXzQoRSkiXSxbNCwwLCIwIl0sWzAsMiwiXFxaWiIsWzI0MCw2MCw2MCwxXV0sWzIsMiwiXFxwaV8zKEUpIixbMjQwLDYwLDYwLDFdXSxbNCwyLCIwIl0sWzMsNF0sWzAsNCwiMCJdLFswLDYsIjAiXSxbMCw4LCJcXFpaIl0sWzIsNCwiXFxwaV8yKEUpID0gMCIsWzAsNjAsNjAsMV1dLFs0LDQsIjAiXSxbMiw2LCJcXHBpXzEoRSk9MCIsWzAsNjAsNjAsMV1dLFs0LDYsIjAiXSxbMiw4LCJcXHBpXzAoRSkiXSxbNCw4LCJcXFpaIl0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNCwiXFxjb25nIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMjQwLDYwLDYwLDFdXSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsN10sWzcsMTBdLFsxMCwxMV0sWzExLDhdLFs4LDEyXSxbMTIsMTNdLFsxMyw5XSxbOSwxNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTQsMTUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 
 where
 
