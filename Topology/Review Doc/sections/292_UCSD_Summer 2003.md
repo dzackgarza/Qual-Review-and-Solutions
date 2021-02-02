@@ -311,12 +311,15 @@ Facts used:
 
 The universal cover can be identified as
 \[
-\ol{X} = \RR^2 \Vee_{i, j \in \ZZ^2} S^2
+\univcover{X} = \RR^2 \Vee_{i, j \in \ZZ^2} S^2
 ,\]
 i.e. the plane with a sphere wedged onto every integer lattice point.
 We then have
 \[
-\pi_2(X) \cong \pi_2(\univcover{X} ) = \prod_{i,j \in \ZZ^2} \ZZ 
+\pi_2(X) 
+&\cong \pi_2(\univcover{X} ) \\
+&= \pi_2( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
+&= \prod_{i,j \in \ZZ^2} \ZZ 
 .\]
 
 :::
