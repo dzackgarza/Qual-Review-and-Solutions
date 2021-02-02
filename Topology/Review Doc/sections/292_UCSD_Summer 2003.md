@@ -305,11 +305,9 @@ Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi
 :::{.solution}
 Facts used:
 
-- $\pi_{\geq 2}(\ol{X} ) \cong \pi_{\geq 2}(X)$
+- $\pi_{\geq 2}(\ol{X} ) \cong \pi_{\geq 2}(X)$ for $\ol{X}$ the universal cover of $X$
 - Structure of the universal cover of a wedge product
 - $\ol{T^2} = \RR^2$ and $\ol{S^2} = S^2$
-
-- $\RR^2 \surjects_p T^2 = S^1 \cross S^1$ and $\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so 
 
 The universal cover can be identified as
 \[
