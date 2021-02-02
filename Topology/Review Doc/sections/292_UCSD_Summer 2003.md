@@ -171,7 +171,37 @@ Facts Used:
 
 1. $\ext(\ZZ, \ZZ/m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
 2. $\ext(\ZZ/n, \ZZ) = \ZZ/n$ using the usual projective resolution $0 \to \ZZ \to \ZZ \to \ZZ/n \to 0$
-2. $\ext(\ZZ/n, \ZZ/m) = \ZZ/d$ where $d \da \gcd(m, n)$. 
+2. $\ext(\ZZ/n, \ZZ/m) = (\ZZ/m) / (n \cdot \ZZ/m) \cong (\ZZ/m) / (d \cdot \ZZ/m)$ where $d \da \gcd(m, n)$.
+  General principle: $\Ext(\ZZ/n, G) = G/nG$ by applying $\Hom_\ZZ(\wait, G)$ to the above resolution: 
+
+% https://q.uiver.app/?q=WzAsNyxbMiwwLCIwIl0sWzAsMiwiXFxIb21fXFxaWihcXFpaLCBHKSJdLFsyLDIsIlxcSG9tX1xcWlooXFxaWiwgRykiXSxbNCwyLCJcXEhvbV9cXFpaKFxcWlovbiwgRykiXSxbNCwwLCJcXEV4dF4xX1xcWlooXFxaWi9uLCBHKSJdLFs2LDIsIjAiXSxbNCwzXSxbMywyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDEsIlxcY2RvdCBuIiwyXSxbMSw0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwwXSxbNSwzXV0=
+\begin{tikzcd}
+	&& 0 && {\Ext^1_\ZZ(\ZZ/n, G)} \\
+	\\
+	{\Hom_\ZZ(\ZZ, G)} && {\Hom_\ZZ(\ZZ, G)} && {\Hom_\ZZ(\ZZ/n, G)} && 0 \\
+	&&&& {}
+	\arrow[hook', from=3-5, to=3-3]
+	\arrow["{\cdot n}"', from=3-3, to=3-1]
+	\arrow[two heads, from=3-1, to=1-5, out=180, in=360]
+	\arrow[from=1-5, to=1-3]
+	\arrow[from=3-7, to=3-5]
+\end{tikzcd}
+
+which can be identified with:
+
+% https://q.uiver.app/?q=WzAsNyxbMiwwLCIwIl0sWzAsMiwiRyJdLFsyLDIsIkciXSxbNCwyLCJcXEhvbV9cXFpaKFxcWlovbiwgRykiXSxbNCwwLCJHL25HIl0sWzYsMiwiMCJdLFs0LDNdLFszLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwiXFxjZG90IG4iLDJdLFsxLDQsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDBdLFs1LDNdXQ==
+\begin{tikzcd}
+	&& 0 && {G/nG} \\
+	\\
+	G && G && {\Hom_\ZZ(\ZZ/n, G)} && 0 \\
+	&&&& {}
+	\arrow[hook', from=3-5, to=3-3]
+	\arrow["{\cdot n}"', from=3-3, to=3-1]
+	\arrow[two heads, from=3-1, to=1-5, out=180, in=360]
+	\arrow[from=1-5, to=1-3]
+	\arrow[from=3-7, to=3-5]
+\end{tikzcd}
+
 3. Contravariant Hom takes coproducts to products:
 \[
 \ext(\bigoplus_{i\in I} A_i, \prod_{k\in K} B_k) = \prod_{i\in I} \prod_{k\in K} \ext(A_i, B_k)
