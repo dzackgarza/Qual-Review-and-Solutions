@@ -308,7 +308,7 @@ Facts used:
 - $\pi_{\geq 2}(\univcover{X} ) \cong \pi_{\geq 2}(X)$ for $\univcover{X}$ the universal cover of $X$
 - Structure of the universal cover of a wedges
 - $\univcover{T^2} = \RR^2$ and $\univcover{S^2} = S^2$
-- By Mayer-Vietoris, homology commutes with wedges
+- By Mayer-Vietoris, $H_n(\Vee X_i) = \bigoplus H_n(X_i)$.
 
 The universal cover can be identified as
 \[
@@ -325,8 +325,14 @@ We can then check
 &= 0
 ,\]
 using that $\pi_1(S^2) = 0$.
-Then by Hurewicz, $\pi_2(X) \cong H_2(X)$
-We can now use 
+Then by Hurewicz, $\pi_2(X) \cong H_2(X)$, so we can compute
+\[
+H_2(X) 
+&= H_2( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
+&= \bigoplus_{i,j \in \ZZ^2} H_2(\RR^2) \oplus H_2(S^2) \\
+&= \bigoplus_{i,j \in \ZZ^2} \ZZ \\
+.\]
+
 
 
 
