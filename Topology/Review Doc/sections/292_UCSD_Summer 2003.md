@@ -178,9 +178,11 @@ Facts Used:
 
 Write 
 \[
-A_* &\da A_1 \oplus A_2 \oplus A_3 \da \ZZ \oplus  \ZZ/2 \oplus  \ZZ/3 \\
-B_* &\da B_1 \oplus B_2 \oplus B_3 \da \ZZ \oplus \ZZ/4 \oplus  \ZZ/5
+A_\wait &\da A_1 \oplus A_2 \oplus A_3 \da \ZZ \oplus  \ZZ/2 \oplus  \ZZ/3 \\
+B_\wait &\da B_1 \oplus B_2 \oplus B_3 \da \ZZ \oplus \ZZ/4 \oplus  \ZZ/5
 .\]
+
+We then have $\Ext(A_\wait, B_\wait) = \bigoplus_{0 \leq i, k \leq 3} \Ext(A_i, B_k)$
 
 
 Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
