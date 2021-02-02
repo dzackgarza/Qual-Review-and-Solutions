@@ -163,14 +163,25 @@ Facts used:
 
 ## 6
 
-Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
+Compute $\ext(\ZZ \oplus \ZZ/2 \oplus  \ZZ/3, \ZZ \oplus  \ZZ/4 \oplus  \ZZ/5)$
 
 :::{.solution}
 Facts Used:
+[^fix_facts_on_ext_oskar]
 
-1. $\ext(\ZZ, \ZZ_m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
-2. $\ext(\ZZ_m, \ZZ) = 0$
-3. $\ext(\prod_i A_i, \prod_j B_j) = \prod_i \prod_j \ext(A_i, B_j)$
+1. $\ext(\ZZ, \ZZ/m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
+2. $\ext(\ZZ/n, \ZZ) = \ZZ/n$ using the usual projective resolution $0 \to \ZZ \to \ZZ \to \ZZ/n \to 0$
+3. Contravariant Hom takes coproducts to products:
+\[
+\ext(\bigoplus_{i\in I} A_i, \prod_{k\in K} B_k) = \prod_{i\in I} \prod_{k\in K} \ext(A_i, B_k)
+.\]
+
+Write 
+\[
+A_* &\da A_1 \oplus A_2 \oplus A_3 \da \ZZ \oplus  \ZZ/2 \oplus  \ZZ/3 \\
+B_* &\da B_1 \oplus B_2 \oplus B_3 \da \ZZ \oplus \ZZ/4 \oplus  \ZZ/5
+.\]
+
 
 Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
 
@@ -182,6 +193,8 @@ $\ZZ_3$                         | $\ZZ_3$ | 0       | 0
 
 So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
 
+[^fix_facts_on_ext_oskar]: 
+Thanks to Oskar Henriksson for some fixes/clarifications and further explanations here!
 
 :::
 
