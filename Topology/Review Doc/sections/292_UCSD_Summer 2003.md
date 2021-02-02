@@ -171,11 +171,13 @@ We then deduce:
   which is thus an isomorphism.
 
 - $H_2(X) = H_3(X) = 0$ by examining the SES spanning lines 3 and 2: 
-  $$
+  \[
   0 \injects H_3(X) \injects \ZZ \mapsvia{\cong_{\del_3}} \ZZ \surjects H_2(X) \surjects 0
-  $$
- 	Since $\del_3$ must be an isomorphism, this forces the edge terms to be zero.
+  \]
+  Claim: \( \bd_3 \) must be an isomorphism.
+  If this is true, $H_3(X) \cong \ker \bd_3 = 0$ and $H_2(X) \cong \coker(\bd_3) \da \ZZ/\im(\bd_3) \cong \ZZ/\ZZ = 0$.
 
+  \todo[inline]{Why is this true?}
 
 :::
 
@@ -187,7 +189,7 @@ Compute the homology and cohomology of a closed, connected, oriented 3-manifold 
 Facts used:
 
 - $M$ closed, connected, oriented $\implies H_i(M)\cong H^{n-i}(M)$
-- $H_1(X) = \pi_1(X) / [\pi_1(X), \pi_1(X)]$
+- $H_1(X) = \Ab(\pi_1(X))$.
 - For orientable manifolds $H_n(M^n) = \ZZ$
 
 **Homology**
