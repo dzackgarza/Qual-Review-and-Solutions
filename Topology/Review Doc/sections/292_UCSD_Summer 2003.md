@@ -311,10 +311,6 @@ is the induced map on cohomology.
 Since the intersection pairing is nondegenerate, either $[\CP^1] = 0$ or $f_*([\CP^1]) = 0$.
 We know that $H^*(\CP^2) = \ZZ[\alpha] / \alpha^2$ where $\alpha = [\CP^1]$, however, so this forces $f_*([\CP^1]) = 0$. But since this was a generator of $H^*$, we have $f_*(H^*(\CP^2)) = 0$, so $f$ is not an isomorphism on cohomology. 
 
-\[
-[\CP^1] \capprod [\CP^1]
-.\]
-
 :::
 
 ## 8 
