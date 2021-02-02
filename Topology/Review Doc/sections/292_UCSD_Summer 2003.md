@@ -345,10 +345,9 @@ Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 :::{.concept}
 \envlist
 
-- Homotopy LES
-- Hurewicz
+- Homotopy LES: $F\to E\to B \leadsto \pi_*F() \to \pi_*(E) \to \pi_*(B)$.
+- Hurewicz: $\pi_{\leq n}(X) = 0 \implies \pi_n(X) \cong H_n(X)$.
 - $0\to A\to B \to 0$ exact iff $A\cong B$
-
 :::
 
 
