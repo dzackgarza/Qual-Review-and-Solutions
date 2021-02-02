@@ -340,8 +340,8 @@ H_2(X)
 Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
 :::{.solution title="Using the LES in Homotopy"}
-\envlist
 
+\envlist
 :::{.concept}
 \envlist
 
