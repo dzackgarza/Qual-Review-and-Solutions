@@ -110,7 +110,29 @@ Let $N$ be the knotted solid torus, so that $\del N = T^2$, and let $X = S^3 - N
 - $S^3 = N \union_{T^2} X$
 - $N \cap X = T^2$
 
-and we apply Mayer-Vietoris to $S^3$:
+and we apply Mayer-Vietoris to the reduced homology of $S^3$:
+
+% https://q.uiver.app/?q=WzAsMTIsWzAsMCwiSF80KFReMikiXSxbMiwwLCJIXzQoTikgXFxvcGx1cyBIXzQoWCkiXSxbNCwwLCJIXzQoU14zKSJdLFswLDIsIkhfNChUXjIpIl0sWzAsNCwiSF80KFReMikiXSxbMiw0LCJIXzQoTikgXFxvcGx1cyBIXzQoWCkiXSxbMiwyLCJIXzQoTikgXFxvcGx1cyBIXzQoWCkiXSxbNCwyLCJIXzQoU14zKSJdLFs0LDQsIkhfNChTXjMpIl0sWzAsNiwiSF80KFNeMykiXSxbMiw2LCJIXzQoTikgXFxvcGx1cyBIXzQoWCkiXSxbNCw2LCJIXzQoU14zKSJdLFs0LDVdLFs4LDldLFs5LDEwXSxbMTAsMTFdLFs1LDhdLFszLDZdLFs2LDddLFs3LDRdLFsyLDNdLFswLDFdLFsxLDJdXQ==
+\begin{tikzcd}
+	{H_4(T^2)} && {H_4(N) \oplus H_4(X)} && {H_4(S^3)} \\
+	\\
+	{H_3(T^2)} && {H_3(N) \oplus H_3(X)} && {H_3(S^3)} \\
+	\\
+	{H_2(T^2)} && {H_2(N) \oplus H_2(X)} && {H_2(S^3)} \\
+	\\
+	{H_1(S^3)} && {H_1(N) \oplus H_1(X)} && {H_1(S^3)}
+	\arrow[from=5-1, to=5-3]
+	\arrow[from=5-5, to=7-1]
+	\arrow[from=7-1, to=7-3]
+	\arrow[from=7-3, to=7-5]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+	\arrow[from=3-5, to=5-1]
+	\arrow[from=1-5, to=3-1]
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-3, to=1-5]
+\end{tikzcd}
 
 \[
 4\qquad H_4(T^2) \to H_4(N) \times H_4(X) \to H_4(S^3) \\
