@@ -330,11 +330,8 @@ Then by Hurewicz, $\pi_2(X) \cong H_2(X)$, so we can compute
 H_2(X) 
 &= H_2( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
 &= \bigoplus_{i,j \in \ZZ^2} H_2(\RR^2) \oplus H_2(S^2) \\
-&= \bigoplus_{i,j \in \ZZ^2} \ZZ \\
+&= \bigoplus_{i,j \in \ZZ^2} \ZZ
 .\]
-
-
-
 
 :::
 
@@ -343,11 +340,16 @@ H_2(X)
 Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
 :::{.solution title="Using the LES in Homotopy"}
-Facts used:
+
+
+:::{.concept}
+\envlist
 
 - Homotopy LES
 - Hurewicz
 - $0\to A\to B \to 0$ exact iff $A\cong B$
+:::
+
 
 From the LES in homotopy we have
 
@@ -377,7 +379,6 @@ From the LES in homotopy we have
 	\arrow[from=9-1, to=9-3]
 	\arrow[from=9-3, to=9-5]
 \end{tikzcd}
-
 
 and plugging in known information yields
 
@@ -415,6 +416,12 @@ where
 - The remaining rows force $\pi_1(E) = \pi_2(E) = 0$.
 
 By Hurewicz, we thus have $H_3(E) = \pi_3(E) = \ZZ$. 
-
-  
 :::
+
+
+:::{.solution title="Using the Serre spectral sequence"}
+
+\todo[inline]{Four-corner spectral sequences, only homology in degrees 1,3,5,8. No differentials hit anything!}
+
+:::
+
