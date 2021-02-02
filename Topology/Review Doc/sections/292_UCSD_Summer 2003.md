@@ -122,28 +122,20 @@ and we apply Mayer-Vietoris to the reduced homology of $S^3$:
 	\\
 	{H_1(S^3)} && {H_1(N) \oplus H_1(X)} && {H_1(S^3)}
 	\arrow[from=5-1, to=5-3]
-	\arrow[from=5-5, to=7-1]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=5-5, to=7-1, out=360, in=180]
 	\arrow[from=7-1, to=7-3]
 	\arrow[from=7-3, to=7-5]
-	\arrow[from=5-3, to=5-5]
 	\arrow[from=3-1, to=3-3]
 	\arrow[from=3-3, to=3-5]
-	\arrow[from=3-5, to=5-1]
-	\arrow[from=1-5, to=3-1]
+	\arrow[from=3-5, to=5-1, out=360, in=180]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=1-5, to=3-1, out=360, in=180]
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-3, to=1-5]
 \end{tikzcd}
 
-\[
-4\qquad H_4(T^2) \to H_4(N) \times H_4(X) \to H_4(S^3) \\
-3\qquad H_3(T^2) \to H_3(N) \times H_3(X) \to H_3(S^3) \\
-2\qquad H_2(T^2) \to H_2(N) \times H_2(X) \to H_2(S^3) \\
-1\qquad H_1(T^2) \to H_1(N) \times H_1(X) \to H_1(S^3) \\
-0\qquad H_0(T^2) \to H_0(N) \times H_0(X) \to H_0(S^3) \\
-.\]
-
-where we can plug in known information and deduce some maps:
-
+We can plug in known information and deduce some maps:
 
 % https://q.uiver.app/?q=WzAsMTIsWzAsMCwiMCJdLFs0LDAsIjAiXSxbMCwyLCIwIixbMjQwLDYwLDYwLDFdXSxbMCw0LCJcXFpaIixbMjQwLDYwLDYwLDFdXSxbMiw0LCJIXzIoWCkiLFsyNDAsNjAsNjAsMV1dLFsyLDIsIkhfMyhYKSIsWzI0MCw2MCw2MCwxXV0sWzQsMiwiXFxaWiIsWzI0MCw2MCw2MCwxXV0sWzQsNCwiMCIsWzI0MCw2MCw2MCwxXV0sWzAsNiwiXFxaWl57XFxvcGx1cyAyfSJdLFsyLDYsIlxcWlogXFxvcGx1cyBIXzEoWCkgIl0sWzQsNiwiMCJdLFsyLDAsIjAiXSxbMyw0LCIiLDAseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzcsOF0sWzgsOSwiXFxzaW0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOSwxMF0sWzQsNywiIiwwLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsyLDUsIiIsMCx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbNSw2LCIiLDAseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzYsMywiIiwwLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxLDJdLFswLDExXSxbMTEsMV1d
 \begin{tikzcd}
@@ -155,14 +147,14 @@ where we can plug in known information and deduce some maps:
 	\\
 	{\ZZ^{\oplus 2}} && {\ZZ \oplus H_1(X) } && 0
 	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=5-3]
-	\arrow[from=5-5, to=7-1]
+	\arrow[from=5-5, to=7-1, out=360, in=180]
 	\arrow["\sim", hook, two heads, from=7-1, to=7-3]
 	\arrow[from=7-3, to=7-5]
 	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-3, to=5-5]
 	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=3-1, to=3-3]
 	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=3-3, to=3-5]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=3-5, to=5-1]
-	\arrow[from=1-5, to=3-1]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=3-5, to=5-1, out=360, in=180]
+	\arrow[from=1-5, to=3-1, out=360, in=180]
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-3, to=1-5]
 \end{tikzcd}
