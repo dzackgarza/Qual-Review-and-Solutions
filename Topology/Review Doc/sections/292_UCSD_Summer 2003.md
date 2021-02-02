@@ -304,7 +304,7 @@ Thanks to Oskar Henriksson for some fixes/clarifications and further explanation
 
 ## 7 
 
-Show there is no homeomorphism $\CP^2\selfmap_f$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
+Show there is no homeomorphism $\CP^2 \mapsvia{f} \CP^2$ such that $f(\CP^1)$ is disjoint from $\CP_1 \subset \CP_2$.
 
 :::{.solution}
 
