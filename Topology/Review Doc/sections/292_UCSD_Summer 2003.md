@@ -263,15 +263,7 @@ Which simplifies to:
 	{\ZZ/3} && {0} && {0}
 \end{tikzcd}
 
-Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
-
-$\ext(\downarrow, \rightarrow)$ | $\ZZ$   | $\ZZ_4$ | $\ZZ_5$
---------------------------------|---------|---------|--------
-$\ZZ$                           | 0       | 0       | 0
-$\ZZ_2$                         | $\ZZ_2$ | $\ZZ_2$ | 0
-$\ZZ_3$                         | $\ZZ_3$ | 0       | 0
-
-So the answer is $\ZZ_2 \times \ZZ_2 \times \ZZ_3 = \ZZ_{12}$. 
+So the answer is $\ZZ/2 \oplus \ZZ/2 \oplus \ZZ/3 \cong \ZZ/2 \oplus \ZZ/6$. 
 
 [^fix_facts_on_ext_oskar]: 
 Thanks to Oskar Henriksson for some fixes/clarifications and further explanations here!
