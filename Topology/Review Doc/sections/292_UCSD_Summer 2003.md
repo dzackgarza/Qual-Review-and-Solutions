@@ -171,6 +171,7 @@ Facts Used:
 
 1. $\ext(\ZZ, \ZZ/m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
 2. $\ext(\ZZ/n, \ZZ) = \ZZ/n$ using the usual projective resolution $0 \to \ZZ \to \ZZ \to \ZZ/n \to 0$
+2. $\ext(\ZZ/n, \ZZ/m) = \ZZ/d$ where $d \da \gcd(m, n)$. 
 3. Contravariant Hom takes coproducts to products:
 \[
 \ext(\bigoplus_{i\in I} A_i, \prod_{k\in K} B_k) = \prod_{i\in I} \prod_{k\in K} \ext(A_i, B_k)
@@ -194,6 +195,29 @@ i.e. $C_{i, k} \da \Ext(A_i, B_k)$, which can be organized into the following di
 	{\Ext(A_2, B_1)} && {\Ext(A_2, B_2)} && {\Ext(A_2, B_3)} \\
 	\\
 	{\Ext(A_3, B_1)} && {\Ext(A_3, B_2)} && {\Ext(A_3, B_3)}
+\end{tikzcd}
+
+This equals the following:
+
+% https://q.uiver.app/?q=WzAsOSxbMCwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzEpIl0sWzAsMiwiXFxFeHRfMV5cXFpaKEFfMiwgQl8xKSJdLFswLDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMSkiXSxbMiwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzIpIl0sWzQsMCwiXFxFeHRfMV5cXFpaKEFfMSwgQl8zKSJdLFsyLDIsIlxcRXh0XzFeXFxaWihBXzIsIEJfMikiXSxbNCwyLCJcXEV4dF8xXlxcWlooQV8yLCBCXzMpIl0sWzIsNCwiXFxFeHRfMV5cXFpaKEFfMywgQl8yKSJdLFs0LDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMykiXV0=
+\begin{tikzcd}
+	{\Ext(\ZZ, \ZZ)} && {\Ext(\ZZ, \ZZ/4)} && {\Ext(\ZZ, \ZZ/5)} \\
+	\\
+	{\Ext(\ZZ/2, \ZZ)} && {\Ext(\ZZ/2, \ZZ/4)} && {\Ext(\ZZ/2, \ZZ/5)} \\
+	\\
+	{\Ext(\ZZ/3, \ZZ)} && {\Ext(\ZZ/3, \ZZ/4)} && {\Ext(\ZZ/3, \ZZ/5)}
+\end{tikzcd}
+
+
+Which simplifies to:
+
+% https://q.uiver.app/?q=WzAsOSxbMCwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzEpIl0sWzAsMiwiXFxFeHRfMV5cXFpaKEFfMiwgQl8xKSJdLFswLDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMSkiXSxbMiwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzIpIl0sWzQsMCwiXFxFeHRfMV5cXFpaKEFfMSwgQl8zKSJdLFsyLDIsIlxcRXh0XzFeXFxaWihBXzIsIEJfMikiXSxbNCwyLCJcXEV4dF8xXlxcWlooQV8yLCBCXzMpIl0sWzIsNCwiXFxFeHRfMV5cXFpaKEFfMywgQl8yKSJdLFs0LDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMykiXV0=
+\begin{tikzcd}
+	0 && 0 && 0 \\
+	\\
+	{\ZZ/2} && {\ZZ/2} && 0 \\
+	\\
+	{\ZZ/3} && {0} && {0}
 \end{tikzcd}
 
 Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
