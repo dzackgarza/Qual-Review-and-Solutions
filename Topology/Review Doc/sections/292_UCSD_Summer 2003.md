@@ -168,7 +168,7 @@ Compute $\ext(\ZZ \times \ZZ_2 \times \ZZ_3, \ZZ \times \ZZ_4 \times \ZZ_5)$
 :::{.solution}
 Facts Used:
 
-1. $\ext(\ZZ, \ZZ_m) = \ZZ_m$
+1. $\ext(\ZZ, \ZZ_m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
 2. $\ext(\ZZ_m, \ZZ) = 0$
 3. $\ext(\prod_i A_i, \prod_j B_j) = \prod_i \prod_j \ext(A_i, B_j)$
 
