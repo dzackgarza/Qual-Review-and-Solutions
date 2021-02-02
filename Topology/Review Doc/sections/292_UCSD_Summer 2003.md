@@ -158,26 +158,18 @@ We can plug in known information and deduce some maps:
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-3, to=1-5]
 \end{tikzcd}
-\[
-4\qquad &0 \to &0 \qquad\to &0 \mapsvia{\del_4} \\
-3\qquad &0 \to &H_3(X) \qquad\to &\ZZ \mapsvia{\del_3}\\
-2\qquad &\ZZ \to &H_2(X) \qquad\to &0 \mapsvia{\del_2}\\
-1\qquad &\ZZ^2 \cong &\ZZ \times H_1(X) \qquad\to &0 \mapsvia{\del_1}\\
-0\qquad &\ZZ \to &\ZZ \times H_0(X) \qquad\to &\ZZ \to 0 \\
-\]
 
 
 We then deduce:
-- $H_0(X) = \ZZ$ by the splitting of the line 0 SES 
-  $$
-  0 \to \ZZ \to \ZZ \cross H_0(X) \to \ZZ \to 0
-  $$ 
-  yielding $Z\cross H_0(X) \cong \ZZ \times \ZZ$.
-- $H_1(X) = \ZZ$ by the line 1 SES 
-  $$
-  0 \to \ZZ^2 \to \ZZ \cross H_1(X) \to 0
-  $$ 
-  which yields an isomorphism.
+
+- $H_0(X) = \ZZ$: ? (Appeal to some path-connectedness argument?)
+
+- $H_1(X) = \ZZ$ using the SES appearing on the first row:
+  \[
+  0 \to \ZZ^{ \oplus 2} \to \ZZ \oplus H_1(X) \to 0
+  \]
+  which is thus an isomorphism.
+
 - $H_2(X) = H_3(X) = 0$ by examining the SES spanning lines 3 and 2: 
   $$
   0 \injects H_3(X) \injects \ZZ \mapsvia{\cong_{\del_3}} \ZZ \surjects H_2(X) \surjects 0
