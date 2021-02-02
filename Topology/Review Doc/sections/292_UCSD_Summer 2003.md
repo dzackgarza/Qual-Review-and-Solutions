@@ -166,13 +166,26 @@ Facts used:
 Compute $\ext(\ZZ \oplus \ZZ/2 \oplus  \ZZ/3, \ZZ \oplus  \ZZ/4 \oplus  \ZZ/5)$
 
 :::{.solution}
-Facts Used:
-[^fix_facts_on_ext_oskar]
+Facts Used:[^fix_facts_on_ext_oskar]
 
-1. $\ext(\ZZ, \ZZ/m) = 0$ since $\ZZ$ is a free $\ZZ\dash$module.
-2. $\ext(\ZZ/n, \ZZ) = \ZZ/n$ using the usual projective resolution $0 \to \ZZ \to \ZZ \to \ZZ/n \to 0$
-2. $\ext(\ZZ/n, \ZZ/m) = (\ZZ/m) / (n \cdot \ZZ/m) \cong (\ZZ/m) / (d \cdot \ZZ/m)$ where $d \da \gcd(m, n)$.
-  General principle: $\Ext(\ZZ/n, G) = G/nG$ by applying $\Hom_\ZZ(\wait, G)$ to the above resolution: 
+1. Since $\ZZ$ is a free $\ZZ\dash$module,
+\[
+\ext(\ZZ, \ZZ/m) = 0
+\]
+
+2. Using the usual projective resolution $0 \to \ZZ \to \ZZ \to \ZZ/n \to 0$, 
+\[
+\ext(\ZZ/n, \ZZ) = \ZZ/n
+.\]
+
+2. 
+\[
+\ext(\ZZ/n, \ZZ/m) = (\ZZ/m) / (n \cdot \ZZ/m) \cong (\ZZ/m) / (d \cdot \ZZ/m) && 
+\text{where } d \da \gcd(m, n)
+.\]
+  General principle: $\Ext(\ZZ/n, G) = G/nG$ 
+
+  By applying $\Hom_\ZZ(\wait, G)$ to the above resolution: 
 
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCIwIl0sWzAsMiwiXFxIb21fXFxaWihcXFpaLCBHKSJdLFsyLDIsIlxcSG9tX1xcWlooXFxaWiwgRykiXSxbNCwyLCJcXEhvbV9cXFpaKFxcWlovbiwgRykiXSxbNCwwLCJcXEV4dF4xX1xcWlooXFxaWi9uLCBHKSJdLFs2LDIsIjAiXSxbNCwzXSxbMywyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDEsIlxcY2RvdCBuIiwyXSxbMSw0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwwXSxbNSwzXV0=
 \begin{tikzcd}
