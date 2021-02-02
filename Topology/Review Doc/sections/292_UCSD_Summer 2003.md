@@ -176,15 +176,15 @@ Facts Used:
 
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCIwIl0sWzAsMiwiXFxIb21fXFxaWihcXFpaLCBHKSJdLFsyLDIsIlxcSG9tX1xcWlooXFxaWiwgRykiXSxbNCwyLCJcXEhvbV9cXFpaKFxcWlovbiwgRykiXSxbNCwwLCJcXEV4dF4xX1xcWlooXFxaWi9uLCBHKSJdLFs2LDIsIjAiXSxbNCwzXSxbMywyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDEsIlxcY2RvdCBuIiwyXSxbMSw0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwwXSxbNSwzXV0=
 \begin{tikzcd}
-	&& 0 && {\Ext^1_\ZZ(\ZZ/n, G)} \\
+	& 0 & {\Ext^1_\ZZ(\ZZ/n, G)} \\
 	\\
-	{\Hom_\ZZ(\ZZ, G)} && {\Hom_\ZZ(\ZZ, G)} && {\Hom_\ZZ(\ZZ/n, G)} && 0 \\
-	&&&& {}
-	\arrow[hook', from=3-5, to=3-3]
-	\arrow["{\cdot n}"', from=3-3, to=3-1]
-	\arrow[two heads, from=3-1, to=1-5, out=180, in=360]
-	\arrow[from=1-5, to=1-3]
-	\arrow[from=3-7, to=3-5]
+	{\Hom_\ZZ(\ZZ, G)} & {\Hom_\ZZ(\ZZ, G)} & {\Hom_\ZZ(\ZZ/n, G)} & 0 \\
+	&&& {}
+	\arrow[hook', from=3-3, to=3-2]
+	\arrow["{\cdot n}"', from=3-2, to=3-1]
+	\arrow[two heads, from=3-1, to=1-3, out=180, in=360]
+	\arrow[from=1-3, to=1-2]
+	\arrow[from=3-4, to=3-3]
 \end{tikzcd}
 
 which can be identified with:
