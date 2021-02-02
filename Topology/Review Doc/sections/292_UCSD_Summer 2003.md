@@ -305,11 +305,12 @@ Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi
 :::{.solution}
 Facts used:
 
-- $\pi_{\geq 2}(\tilde X) \cong \pi_{\geq 2}(X)$
+- $\pi_{\geq 2}(\ol{X} ) \cong \pi_{\geq 2}(X)$
 - Structure of the universal cover of a wedge product
-- $\RR^2 \surjects_p T^2 = S^1 \cross S^1$
-
-$\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}$.
+- $\RR^2 \surjects_p T^2 = S^1 \cross S^1$ and $\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so 
+\[
+\pi_2(X) \cong \pi_2(\tilde X) = \prod_{i,j \in \ZZ^2} \ZZ = \ZZ^{\ZZ^2} = \ZZ^{\aleph_0}
+.\]
 
 :::
 
@@ -317,7 +318,7 @@ $\tilde X = \RR^2 \union_{\ZZ^2} S^2$, so $\pi_2(X) \cong \pi_2(\tilde X) = \pro
 
 Let $S^3 \to E \to S^5$ be a fiber bundle and compute $H_3(E)$.
 
-:::{.solution}
+:::{.solution title="Using the LES in Homotopy"}
 Facts used:
 
 - Homotopy LES
