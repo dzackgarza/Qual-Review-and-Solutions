@@ -182,8 +182,19 @@ A_\wait &\da A_1 \oplus A_2 \oplus A_3 \da \ZZ \oplus  \ZZ/2 \oplus  \ZZ/3 \\
 B_\wait &\da B_1 \oplus B_2 \oplus B_3 \da \ZZ \oplus \ZZ/4 \oplus  \ZZ/5
 .\]
 
-We then have $\Ext(A_\wait, B_\wait) = \bigoplus_{0 \leq i, k \leq 3} \Ext(A_i, B_k)$
+We can then define the bicomplex \[
+C_{\wait, \wait} \da \Ext(A_\wait, B_\wait) = \bigoplus_{0 \leq i, k \leq 3} \Ext(A_i, B_k)
+,\]
+i.e. $C_{i, k} \da \Ext(A_i, B_k)$, which can be organized into the following diagram where we take the Ext at each position and sum them all together:
 
+% https://q.uiver.app/?q=WzAsOSxbMCwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzEpIl0sWzAsMiwiXFxFeHRfMV5cXFpaKEFfMiwgQl8xKSJdLFswLDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMSkiXSxbMiwwLCJcXEV4dF8xXlxcWlooQV8xLCBCXzIpIl0sWzQsMCwiXFxFeHRfMV5cXFpaKEFfMSwgQl8zKSJdLFsyLDIsIlxcRXh0XzFeXFxaWihBXzIsIEJfMikiXSxbNCwyLCJcXEV4dF8xXlxcWlooQV8yLCBCXzMpIl0sWzIsNCwiXFxFeHRfMV5cXFpaKEFfMywgQl8yKSJdLFs0LDQsIlxcRXh0XzFeXFxaWihBXzMsIEJfMykiXV0=
+\begin{tikzcd}
+	{\Ext(A_1, B_1)} && {\Ext(A_1, B_2)} && {\Ext(A_1, B_3)} \\
+	\\
+	{\Ext(A_2, B_1)} && {\Ext(A_2, B_2)} && {\Ext(A_2, B_3)} \\
+	\\
+	{\Ext(A_3, B_1)} && {\Ext(A_3, B_2)} && {\Ext(A_3, B_3)}
+\end{tikzcd}
 
 Break it up into a bigraded complex, take Ext of the pieces, and sum over the complex:
 
