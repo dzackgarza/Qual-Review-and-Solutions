@@ -1,3 +1,13 @@
+```{=tex}
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+```
 Exercises from Folland:
 
 -   Chapter 1: Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty) Exercises 15, 17, 18, 19, 22(a), 24, 28 Exercises 26, 30 (also check out 31)
@@ -1662,6 +1672,148 @@ Approximate Identities
     \ell^2({\mathbb{Z}}) &\subset \ell^1({\mathbb{Z}}) \subset \ell^\infty({\mathbb{Z}})
     .\]
 
+# Midterm Exam 2 (December 2014)
+
+## 1
+
+> Note: (a) is a repeat.
+
+-   Let \( \Lambda\in L^2(X)^\vee \).
+    -   Show that \( M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X) \) is a closed subspace, and \( L^2(X) = M \oplus M\perp \).
+    -   Prove that there exists a unique \( g\in L^2(X) \) such that \( \Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu \).
+
+## 2
+
+a.  In parts:
+
+-   Given a definition of \( L^\infty({\mathbb{R}}^n) \).
+-   Verify that \( {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
+-   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \) is a Banach space.
+
+b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \), `\begin{align*}
+    L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}
+    .\end{align*}`{=tex}
+
+## 3
+
+a.  Prove that if \( f, g: {\mathbb{R}}^n\to {\mathbb{C}} \) is both measurable then \( F(x, y) \coloneqq f(x) \) and \( h(x, y)\coloneqq f(x-y) g(y) \) is measurable on \( {\mathbb{R}}^n\times{\mathbb{R}}^n \).
+
+b.  Show that if \( f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) and \( g\in L^1({\mathbb{R}}^n) \), then \( f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) is well defined, and carefully show that it satisfies the following properties: `\begin{align*}
+    {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty
+    {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
+    {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2
+    .\end{align*}`{=tex}
+
+> Hint: first show \( {\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}} \).
+
+## 4 (Weierstrass Approximation Theorem)
+
+> Note: (a) is a repeat.
+
+Let \( f: [0, 1]\to {\mathbb{R}} \) be continuous, and prove the Weierstrass approximation theorem: for any \( \varepsilon> 0 \) there exists a polynomial \( P \) such that \( {\left\lVert {f - P} \right\rVert}_{\infty} < \varepsilon \).
+
+# Midterm Exam 1 (October 2018)
+
+## Problem 1
+
+Let \( E \subseteq {\mathbb{R}}^n \) be bounded. Prove the following are equivalent:
+
+1.  For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that
+    \[
+    F \subseteq E \subseteq G && m(G\setminus F) < \epsilon
+    .\]
+
+2.  There exists a \( G_ \delta \) set \( V \) and an \( F_ \sigma \) set \( H \) such that
+    \[
+    m(V\setminus H) = 0
+    .\]
+
+## Problem 2
+
+Let \( \left\{{ f_k }\right\} _{k=1}^{\infty } \) be a sequence of extended real-valued Lebesgue measurable functions.
+
+a.  Prove that \( \sup_k f_k \) is a Lebesgue measurable function.
+
+b.  Prove that if \( \lim_{k \to \infty } f_k(x) \) exists for every \( x \in {\mathbb{R}}^n \) then \( \lim_{k\to \infty } f_k \) is also a measurable function.
+
+## Problem 3
+
+### a
+
+Prove that if \( E \subseteq {\mathbb{R}}^n \) is a Lebesgue measurable set, then for any \( h \in {\mathbb{R}} \) the set
+\[
+E+h \coloneqq\left\{{x + h {~\mathrel{\Big|}~}x\in E }\right\}
+\]
+is also Lebesgue measurable and satisfies \( m(E + h) = m(E) \).
+
+### b
+
+Prove that if \( f \) is a non-negative measurable function on \( {\mathbb{R}}^n \) and \( h\in {\mathbb{R}}^n \) then the function
+\[
+\tau_h d(x) \coloneqq f(x-h)
+\]
+is a non-negative measurable function and
+\[
+\int f(x) \,dx= \int f(x-h) \,dx
+.\]
+
+## Problem 4
+
+Let \( f: {\mathbb{R}}^n\to {\mathbb{R}} \) be a Lebesgue measurable function.
+
+a.  Prove that for all \( \alpha> 0 \) ,
+    \[
+    A_ \alpha  \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert { f(x) } \right\rvert} > \alpha}\right\} \implies m(A_ \alpha) \leq {1\over \alpha} \int {\left\lvert {f (x)} \right\rvert} \,dx
+    .\]
+
+b.  Prove that
+    \[
+    \int {\left\lvert { f(x) } \right\rvert} \,dx= 0 \iff f = 0 \text{ almost everywhere}
+    .\]
+
+## Problem 5
+
+Let \( \left\{{ f_k }\right\}_{k=1}^{\infty } \subseteq L^2([0, 1]) \) be a sequence which *converges in \( L^1 \)* to a function \( f \).
+
+a.  Prove that \( f\in L^1([0, 1]) \).
+
+b.  Give an example illustrating that \( f_k \) may not converge to \( f \) almost everywhere.
+
+c.  Prove that \( \left\{{f_k}\right\} \) must contain a subsequence that converges to \( f \) almost everywhere.
+
+# Midterm Exam 2 (November 2018)
+
+## Problem 1
+
+Let \( f, g\in L^1([0, 1]) \), define \( F(x) = \int_0^x f(y)\,dy \) and \( G(x) = \int_0^x g(y)\,dy \), and show
+\[
+\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
+.\]
+
+## Problem 2
+
+Let \( \phi\in L^1({\mathbb{R}}^n) \) such that \( \int \phi = 1 \) and define \( \phi_t(x) = t^{-n}\phi(t^{-1}x) \). Show that if \( f \) is bounded and uniformly continuous then \( f\ast \phi_t \overset{t\to 0}\to f \) uniformly.
+
+## Problem 3
+
+Let \( g\in L^\infty([0, 1]) \).
+
+a.  Prove
+    \[
+    {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}
+    .\]
+
+b.  Prove that the map
+    \[
+    \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
+    f &\mapsto \int_0^1 fg
+    \]
+    defines an element of \( L^1([0, 1])^\vee \) with \( {\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])} \).
+
+## Problem 4
+
+See `\cref{hilbert_space_exam_question}`{=tex}
+
 # Practice Exam (November 2014)
 
 ## 1: Fubini-Tonelli
@@ -1702,6 +1854,8 @@ Prove that if \( f, g \) are integrable and bounded, then `\begin{align*}
 3.  Give an example of a function \( f\in L^1({\mathbb{R}}^n) \) such that \( \widehat{f} \) is not in \( L^1({\mathbb{R}}^n) \).
 
 ## 3: Hilbert Spaces
+
+`\label{hilbert_space_exam_question}`{=tex}
 
 Let \( \left\{{u_n}\right\}_{n=1}^\infty \) be an orthonormal sequence in a Hilbert space \( H \).
 
@@ -1833,75 +1987,6 @@ Define what it means for \( L \) to be *bounded* and show \( L \) is bounded \( 
 ### c
 
 Prove that \( (X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
-
-# Midterm Exam 2 (November 2018)
-
-## 1 (Integration by Parts)
-
-Let \( f, g\in L^1([0, 1]) \), define \( F(x) = \int_0^x f \) and \( G(x) = \int_0^x g \), and show `\begin{align*}
-\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
-.\end{align*}`{=tex}
-
-## 2
-
-Let \( \phi\in L^1({\mathbb{R}}^n) \) such that \( \int \phi = 1 \) and define \( \phi_t(x) = t^{-n}\phi(t^{-1}x) \).
-
-Show that if \( f \) is bounded and uniformly continuous then \( f\ast \phi_t \overset{t\to 0} f \) uniformly.
-
-## 3
-
-Let \( g\in L^\infty([0, 1]) \).
-
-a.  Prove `\begin{align*}
-    {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}
-    .\end{align*}`{=tex}
-
-b.  Prove that the map `\begin{align*}
-    \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
-    f &\mapsto \int_0^1 fg
-    \end{align*}`{=tex} defines an element of \( L^1([0, 1])^\vee \) with \( {\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])} \).
-
-> Note: 4 is a repeat.
-
-# Midterm Exam 2 (December 2014)
-
-## 1
-
-> Note: (a) is a repeat.
-
--   Let \( \Lambda\in L^2(X)^\vee \).
-    -   Show that \( M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X) \) is a closed subspace, and \( L^2(X) = M \oplus M\perp \).
-    -   Prove that there exists a unique \( g\in L^2(X) \) such that \( \Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu \).
-
-## 2
-
-a.  In parts:
-
--   Given a definition of \( L^\infty({\mathbb{R}}^n) \).
--   Verify that \( {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
--   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \) is a Banach space.
-
-b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \), `\begin{align*}
-    L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}
-    .\end{align*}`{=tex}
-
-## 3
-
-a.  Prove that if \( f, g: {\mathbb{R}}^n\to {\mathbb{C}} \) is both measurable then \( F(x, y) \coloneqq f(x) \) and \( h(x, y)\coloneqq f(x-y) g(y) \) is measurable on \( {\mathbb{R}}^n\times{\mathbb{R}}^n \).
-
-b.  Show that if \( f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) and \( g\in L^1({\mathbb{R}}^n) \), then \( f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) is well defined, and carefully show that it satisfies the following properties: `\begin{align*}
-    {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty
-    {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
-    {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2
-    .\end{align*}`{=tex}
-
-> Hint: first show \( {\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}} \).
-
-## 4 (Weierstrass Approximation Theorem)
-
-> Note: (a) is a repeat.
-
-Let \( f: [0, 1]\to {\mathbb{R}} \) be continuous, and prove the Weierstrass approximation theorem: for any \( \varepsilon> 0 \) there exists a polynomial \( P \) such that \( {\left\lVert {f - P} \right\rVert}_{\infty} < \varepsilon \).
 
 # Common Inequalities
 

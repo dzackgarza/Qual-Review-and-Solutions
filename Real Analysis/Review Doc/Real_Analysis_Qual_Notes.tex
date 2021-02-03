@@ -27,7 +27,7 @@
 
 \title{
 \textbf{
-    Algebra Qualifying Exam Review
+    Real Analysis Qualifying Exam Review
   }
   }
 
@@ -51,6 +51,15 @@
 \tableofcontents
 \newpage
 
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
 Exercises from Folland:
 
 \begin{itemize}
@@ -72,65 +81,27 @@ Exercises from Folland:
 \hypertarget{basics}{%
 \section{Basics}\label{basics}}
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.85}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.14}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
-Notation\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-Definition\strut
-\end{minipage}\tabularnewline
+Notation & Definition \\ \addlinespace
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
 \begin{align*}{\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in \operatorname{dom}(f)} {\left\lvert {f(x)} \right\rvert}\end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-The Sup norm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& The Sup norm \\ \addlinespace
 \begin{align*} {\left\lVert {f} \right\rVert}_{L^\infty} \coloneqq\inf\left\{{M \geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq M \text{ for a.e. } x }\right\} \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-The \(L^ \infty\) norm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& The \(L^ \infty\) norm \\ \addlinespace
 \begin{align*} f_n \overset{n \to \infty }\to f \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-Convergence of a sequence\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& Convergence of a sequence \\ \addlinespace
 \begin{align*} f(x) \overset{{\left\lvert {x} \right\rvert} \to \infty}\to 0 \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-Vanishing at infinity\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& Vanishing at infinity \\ \addlinespace
 \begin{align*} \int_{{\left\lvert {x} \right\rvert} \geq N} f \overset{N\to \infty}\to 0 \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-Having small tails\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& Having small tails \\ \addlinespace
 \begin{align*} H, \mathcal{H} \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-A Hilbert space\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.85}}\raggedright
+& A Hilbert space \\ \addlinespace
 \begin{align*} X \end{align*}
-\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.14}}\raggedright
-A topological space\strut
-\end{minipage}\tabularnewline
+& A topological space \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -2898,6 +2869,258 @@ Approximate Identities
   .\end{align*}
 \end{itemize}
 
+\hypertarget{midterm-exam-2-december-2014}{%
+\section{Midterm Exam 2 (December
+2014)}\label{midterm-exam-2-december-2014}}
+
+\hypertarget{section}{%
+\subsection{1}\label{section}}
+
+\begin{quote}
+Note: (a) is a repeat.
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(\Lambda\in L^2(X)^\vee\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Show that
+    \(M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X)\)
+    is a closed subspace, and \(L^2(X) = M \oplus M\perp\).
+  \item
+    Prove that there exists a unique \(g\in L^2(X)\) such that
+    \(\Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\).
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{section-1}{%
+\subsection{2}\label{section-1}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  In parts:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Given a definition of \(L^\infty({\mathbb{R}}^n)\).
+\item
+  Verify that \({\left\lVert {{\,\cdot\,}} \right\rVert}_\infty\)
+  defines a norm on \(L^\infty({\mathbb{R}}^n)\).
+\item
+  Carefully proved that
+  \((L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\)
+  is a Banach space.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Prove that for any measurable \(f:{\mathbb{R}}^n \to {\mathbb{C}}\),
+  \begin{align*}     L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}     .\end{align*}
+\end{enumerate}
+
+\hypertarget{section-2}{%
+\subsection{3}\label{section-2}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(f, g: {\mathbb{R}}^n\to {\mathbb{C}}\) is both
+  measurable then \(F(x, y) \coloneqq f(x)\) and
+  \(h(x, y)\coloneqq f(x-y) g(y)\) is measurable on
+  \({\mathbb{R}}^n\times{\mathbb{R}}^n\).
+\item
+  Show that if
+  \(f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) and
+  \(g\in L^1({\mathbb{R}}^n)\), then
+  \(f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) is
+  well defined, and carefully show that it satisfies the following
+  properties:
+  \begin{align*}     {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty     {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1     {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2     .\end{align*}
+\end{enumerate}
+
+\begin{quote}
+Hint: first show
+\({\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}}\).
+\end{quote}
+
+\hypertarget{weierstrass-approximation-theorem}{%
+\subsection{4 (Weierstrass Approximation
+Theorem)}\label{weierstrass-approximation-theorem}}
+
+\begin{quote}
+Note: (a) is a repeat.
+\end{quote}
+
+Let \(f: [0, 1]\to {\mathbb{R}}\) be continuous, and prove the
+Weierstrass approximation theorem: for any \(\varepsilon> 0\) there
+exists a polynomial \(P\) such that
+\({\left\lVert {f - P} \right\rVert}_{\infty} < \varepsilon\).
+
+\hypertarget{midterm-exam-1-october-2018}{%
+\section{Midterm Exam 1 (October
+2018)}\label{midterm-exam-1-october-2018}}
+
+\hypertarget{problem-1}{%
+\subsection{Problem 1}\label{problem-1}}
+
+Let \(E \subseteq {\mathbb{R}}^n\) be bounded. Prove the following are
+equivalent:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  For any \(\epsilon>0\) there exists and open set \(G\) and a closed
+  set \(F\) such that
+  \begin{align*}
+  F \subseteq E \subseteq G && m(G\setminus F) < \epsilon
+  .\end{align*}
+\item
+  There exists a \(G_ \delta\) set \(V\) and an \(F_ \sigma\) set \(H\)
+  such that
+  \begin{align*}
+  m(V\setminus H) = 0
+  .\end{align*}
+\end{enumerate}
+
+\hypertarget{problem-2}{%
+\subsection{Problem 2}\label{problem-2}}
+
+Let \(\left\{{ f_k }\right\} _{k=1}^{\infty }\) be a sequence of
+extended real-valued Lebesgue measurable functions.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(\sup_k f_k\) is a Lebesgue measurable function.
+\item
+  Prove that if \(\lim_{k \to \infty } f_k(x)\) exists for every
+  \(x \in {\mathbb{R}}^n\) then \(\lim_{k\to \infty } f_k\) is also a
+  measurable function.
+\end{enumerate}
+
+\hypertarget{problem-3}{%
+\subsection{Problem 3}\label{problem-3}}
+
+\hypertarget{a}{%
+\subsubsection{a}\label{a}}
+
+Prove that if \(E \subseteq {\mathbb{R}}^n\) is a Lebesgue measurable
+set, then for any \(h \in {\mathbb{R}}\) the set
+\begin{align*}
+E+h \coloneqq\left\{{x + h {~\mathrel{\Big|}~}x\in E }\right\}
+\end{align*}
+is also Lebesgue measurable and satisfies \(m(E + h) = m(E)\).
+
+\hypertarget{b}{%
+\subsubsection{b}\label{b}}
+
+Prove that if \(f\) is a non-negative measurable function on
+\({\mathbb{R}}^n\) and \(h\in {\mathbb{R}}^n\) then the function
+\begin{align*}
+\tau_h d(x) \coloneqq f(x-h)
+\end{align*}
+is a non-negative measurable function and
+\begin{align*}
+\int f(x) \,dx= \int f(x-h) \,dx
+.\end{align*}
+
+\hypertarget{problem-4}{%
+\subsection{Problem 4}\label{problem-4}}
+
+Let \(f: {\mathbb{R}}^n\to {\mathbb{R}}\) be a Lebesgue measurable
+function.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that for all \(\alpha> 0\) ,
+  \begin{align*}
+  A_ \alpha  \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert { f(x) } \right\rvert} > \alpha}\right\} \implies m(A_ \alpha) \leq {1\over \alpha} \int {\left\lvert {f (x)} \right\rvert} \,dx
+  .\end{align*}
+\item
+  Prove that
+  \begin{align*}
+  \int {\left\lvert { f(x) } \right\rvert} \,dx= 0 \iff f = 0 \text{ almost everywhere}
+  .\end{align*}
+\end{enumerate}
+
+\hypertarget{problem-5}{%
+\subsection{Problem 5}\label{problem-5}}
+
+Let \(\left\{{ f_k }\right\}_{k=1}^{\infty } \subseteq L^2([0, 1])\) be
+a sequence which \emph{converges in \(L^1\)} to a function \(f\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(f\in L^1([0, 1])\).
+\item
+  Give an example illustrating that \(f_k\) may not converge to \(f\)
+  almost everywhere.
+\item
+  Prove that \(\left\{{f_k}\right\}\) must contain a subsequence that
+  converges to \(f\) almost everywhere.
+\end{enumerate}
+
+\hypertarget{midterm-exam-2-november-2018}{%
+\section{Midterm Exam 2 (November
+2018)}\label{midterm-exam-2-november-2018}}
+
+\hypertarget{problem-1-1}{%
+\subsection{Problem 1}\label{problem-1-1}}
+
+Let \(f, g\in L^1([0, 1])\), define \(F(x) = \int_0^x f(y)\,dy\) and
+\(G(x) = \int_0^x g(y)\,dy\), and show
+\begin{align*}
+\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
+.\end{align*}
+
+\hypertarget{problem-2-1}{%
+\subsection{Problem 2}\label{problem-2-1}}
+
+Let \(\phi\in L^1({\mathbb{R}}^n)\) such that \(\int \phi = 1\) and
+define \(\phi_t(x) = t^{-n}\phi(t^{-1}x)\). Show that if \(f\) is
+bounded and uniformly continuous then
+\(f\ast \phi_t \overset{t\to 0}\to f\) uniformly.
+
+\hypertarget{problem-3-1}{%
+\subsection{Problem 3}\label{problem-3-1}}
+
+Let \(g\in L^\infty([0, 1])\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove
+  \begin{align*}
+  {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}
+  .\end{align*}
+\item
+  Prove that the map
+  \begin{align*}
+  \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
+  f &\mapsto \int_0^1 fg
+  \end{align*}
+  defines an element of \(L^1([0, 1])^\vee\) with
+  \({\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}\).
+\end{enumerate}
+
+\hypertarget{problem-4-1}{%
+\subsection{Problem 4}\label{problem-4-1}}
+
+See \cref{hilbert_space_exam_question}
+
 \hypertarget{practice-exam-november-2014}{%
 \section{Practice Exam (November
 2014)}\label{practice-exam-november-2014}}
@@ -2905,14 +3128,14 @@ Approximate Identities
 \hypertarget{fubini-tonelli}{%
 \subsection{1: Fubini-Tonelli}\label{fubini-tonelli}}
 
-\hypertarget{a}{%
-\subsubsection{a}\label{a}}
+\hypertarget{a-1}{%
+\subsubsection{a}\label{a-1}}
 
 Carefully state Tonelli's theorem for a nonnegative function \(F(x, t)\)
 on \({\mathbb{R}}^n\times{\mathbb{R}}\).
 
-\hypertarget{b}{%
-\subsubsection{b}\label{b}}
+\hypertarget{b-1}{%
+\subsubsection{b}\label{b-1}}
 
 Let \(f:{\mathbb{R}}^n\to [0, \infty]\) and define
 \begin{align*} {\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\} .\end{align*}
@@ -2935,14 +3158,14 @@ Prove the validity of the following two statements:
 \subsection{2: Convolutions and the Fourier
 Transform}\label{convolutions-and-the-fourier-transform}}
 
-\hypertarget{a-1}{%
-\subsubsection{a}\label{a-1}}
+\hypertarget{a-2}{%
+\subsubsection{a}\label{a-2}}
 
 Let \(f, g\in L^1({\mathbb{R}}^n)\) and give a definition of
 \(f\ast g\).
 
-\hypertarget{b-1}{%
-\subsubsection{b}\label{b-1}}
+\hypertarget{b-2}{%
+\subsubsection{b}\label{b-2}}
 
 Prove that if \(f, g\) are integrable and bounded, then
 \begin{align*} (f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0 .\end{align*}
@@ -2966,19 +3189,21 @@ Prove that if \(f, g\) are integrable and bounded, then
 \hypertarget{hilbert-spaces}{%
 \subsection{3: Hilbert Spaces}\label{hilbert-spaces}}
 
+\label{hilbert_space_exam_question}
+
 Let \(\left\{{u_n}\right\}_{n=1}^\infty\) be an orthonormal sequence in
 a Hilbert space \(H\).
 
-\hypertarget{a-2}{%
-\subsubsection{a}\label{a-2}}
+\hypertarget{a-3}{%
+\subsubsection{a}\label{a-3}}
 
 Let \(x\in H\) and verify that
 \begin{align*} \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2} = \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} .\end{align*}
 for any \(N\in {\mathbb{N}}\) and deduce that
 \begin{align*} \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2} .\end{align*}
 
-\hypertarget{b-2}{%
-\subsubsection{b}\label{b-2}}
+\hypertarget{b-3}{%
+\subsubsection{b}\label{b-3}}
 
 Let
 \(\left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}})\)
@@ -3032,15 +3257,15 @@ So
 \subsection{\texorpdfstring{4: \(L^p\)
 Spaces}{4: L\^{}p Spaces}}\label{lp-spaces}}
 
-\hypertarget{a-3}{%
-\subsubsection{a}\label{a-3}}
+\hypertarget{a-4}{%
+\subsubsection{a}\label{a-4}}
 
 Prove Holder's inequality: let \(f\in L^p, g\in L^q\) with \(p, q\)
 conjugate, and show that
 \begin{align*} {\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q} .\end{align*}
 
-\hypertarget{b-3}{%
-\subsubsection{b}\label{b-3}}
+\hypertarget{b-4}{%
+\subsubsection{b}\label{b-4}}
 
 Prove Minkowski's Inequality:
 \begin{align*} 1\leq p < \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p} .\end{align*}
@@ -3073,14 +3298,14 @@ Let \(X = [0, 1] \subset {\mathbb{R}}\).
 
 Let \(X\) be a normed vector space.
 
-\hypertarget{a-4}{%
-\subsubsection{a}\label{a-4}}
+\hypertarget{a-5}{%
+\subsubsection{a}\label{a-5}}
 
 Give the definition of what it means for a map \(L:X\to {\mathbb{C}}\)
 to be a \emph{linear functional}.
 
-\hypertarget{b-4}{%
-\subsubsection{b}\label{b-4}}
+\hypertarget{b-5}{%
+\subsubsection{b}\label{b-5}}
 
 Define what it means for \(L\) to be \emph{bounded} and show \(L\) is
 bounded \(\iff L\) is continuous.
@@ -3091,145 +3316,6 @@ bounded \(\iff L\) is continuous.
 Prove that
 \((X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}})\)
 is a Banach space.
-
-\hypertarget{midterm-exam-2-november-2018}{%
-\section{Midterm Exam 2 (November
-2018)}\label{midterm-exam-2-november-2018}}
-
-\hypertarget{integration-by-parts}{%
-\subsection{1 (Integration by Parts)}\label{integration-by-parts}}
-
-Let \(f, g\in L^1([0, 1])\), define \(F(x) = \int_0^x f\) and
-\(G(x) = \int_0^x g\), and show
-\begin{align*} \int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx .\end{align*}
-
-\hypertarget{section}{%
-\subsection{2}\label{section}}
-
-Let \(\phi\in L^1({\mathbb{R}}^n)\) such that \(\int \phi = 1\) and
-define \(\phi_t(x) = t^{-n}\phi(t^{-1}x)\).
-
-Show that if \(f\) is bounded and uniformly continuous then
-\(f\ast \phi_t \overset{t\to 0} f\) uniformly.
-
-\hypertarget{section-1}{%
-\subsection{3}\label{section-1}}
-
-Let \(g\in L^\infty([0, 1])\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove
-  \begin{align*}     {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}     .\end{align*}
-\item
-  Prove that the map
-  \begin{align*}     \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\     f &\mapsto \int_0^1 fg     \end{align*}
-  defines an element of \(L^1([0, 1])^\vee\) with
-  \({\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}\).
-\end{enumerate}
-
-\begin{quote}
-Note: 4 is a repeat.
-\end{quote}
-
-\hypertarget{midterm-exam-2-december-2014}{%
-\section{Midterm Exam 2 (December
-2014)}\label{midterm-exam-2-december-2014}}
-
-\hypertarget{section-2}{%
-\subsection{1}\label{section-2}}
-
-\begin{quote}
-Note: (a) is a repeat.
-\end{quote}
-
-\begin{itemize}
-\tightlist
-\item
-  Let \(\Lambda\in L^2(X)^\vee\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Show that
-    \(M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X)\)
-    is a closed subspace, and \(L^2(X) = M \oplus M\perp\).
-  \item
-    Prove that there exists a unique \(g\in L^2(X)\) such that
-    \(\Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\).
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{section-3}{%
-\subsection{2}\label{section-3}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  In parts:
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Given a definition of \(L^\infty({\mathbb{R}}^n)\).
-\item
-  Verify that \({\left\lVert {{\,\cdot\,}} \right\rVert}_\infty\)
-  defines a norm on \(L^\infty({\mathbb{R}}^n)\).
-\item
-  Carefully proved that
-  \((L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\)
-  is a Banach space.
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Prove that for any measurable \(f:{\mathbb{R}}^n \to {\mathbb{C}}\),
-  \begin{align*}     L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}     .\end{align*}
-\end{enumerate}
-
-\hypertarget{section-4}{%
-\subsection{3}\label{section-4}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that if \(f, g: {\mathbb{R}}^n\to {\mathbb{C}}\) is both
-  measurable then \(F(x, y) \coloneqq f(x)\) and
-  \(h(x, y)\coloneqq f(x-y) g(y)\) is measurable on
-  \({\mathbb{R}}^n\times{\mathbb{R}}^n\).
-\item
-  Show that if
-  \(f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) and
-  \(g\in L^1({\mathbb{R}}^n)\), then
-  \(f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) is
-  well defined, and carefully show that it satisfies the following
-  properties:
-  \begin{align*}     {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty     {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1     {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2     .\end{align*}
-\end{enumerate}
-
-\begin{quote}
-Hint: first show
-\({\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}}\).
-\end{quote}
-
-\hypertarget{weierstrass-approximation-theorem}{%
-\subsection{4 (Weierstrass Approximation
-Theorem)}\label{weierstrass-approximation-theorem}}
-
-\begin{quote}
-Note: (a) is a repeat.
-\end{quote}
-
-Let \(f: [0, 1]\to {\mathbb{R}}\) be continuous, and prove the
-Weierstrass approximation theorem: for any \(\varepsilon> 0\) there
-exists a polynomial \(P\) such that
-\({\left\lVert {f - P} \right\rVert}_{\infty} < \varepsilon\).
 
 \hypertarget{common-inequalities}{%
 \section{Common Inequalities}\label{common-inequalities}}

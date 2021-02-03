@@ -1,3 +1,6 @@
+\newcommand{\dx}{\,dx}
+\newcommand{\dt}{\,dt}
+\newcommand{\dy}{\,dy}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -7,27 +10,6 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
@@ -59,6 +41,9 @@
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\Cx}[0]{\operatorname{Cx}}
+\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\ks}[0]{\operatorname{ks}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
@@ -88,6 +73,7 @@
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
@@ -103,6 +89,7 @@
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
 \newcommand{\gr}[0]{{\operatorname{gr}}}
+\newcommand{\grMod}[0]{{\operatorname{grMod}}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -122,12 +109,15 @@
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Top}[0]{{\operatorname{Top}}}
+\newcommand{\Mfd}[0]{{\operatorname{Mfd}}}
 \newcommand{\Ab}[0]{{\operatorname{Ab}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
 \newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
 \newcommand{\Sch}[0]{{\operatorname{Sch}}}
 \newcommand{\sch}[0]{{\operatorname{Sch}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\alg}[0]{\mathrm{Alg}}
 \newcommand{\scalg}[0]{\mathrm{sCAlg}}
 \newcommand{\calg}[0]{\mathrm{CAlg}}
@@ -151,14 +141,18 @@
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
-\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
 \newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
 \newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
 \newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
@@ -175,6 +169,8 @@
 \newcommand{\bd}[0]{{\del}}
 \newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
 \newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
@@ -193,6 +189,7 @@
 \newcommand{\dual}[0]{^\vee}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\eps}[0]{\varepsilon}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
@@ -289,8 +286,13 @@
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\hilb}[0]{\operatorname{Hilb}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Frame}[0]{{\operatorname{Frame}}}
+\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
+\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\Hom}[0]{{\operatorname{Hom}}}
 \newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
@@ -316,9 +318,10 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
+\newcommand{\rmod}[0]{{R\dash\mathrm{mod}}}
+\newcommand{\modr}[0]{{\mathrm{mod}\dash R}}
+\newcommand{\mmod}[0]{{\dash\operatorname{mod}}}
 \newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\modr}[0]{{\operatorname{mod}}}
 \newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
 \newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
@@ -334,12 +337,12 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
 \newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
 \newcommand{\connectsum}[0]{\mathop{\Large \#}}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
@@ -390,6 +393,29 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\coind}{Coind}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\delbar}[0]{\bar{\del}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -410,9 +436,26 @@
 
 \newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\ol[1]{\overline{#1}}
+\newcommand\univcover[1]{\overline{#1}}
+\newcommand\capprod{\frown}
+\newcommand\Path{\mathcal{P}}
+\newcommand\gradient{\nabla}
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\cupp[0]{\smile}
+\newcommand\capp[0]{\frown}
+\newcommand\sig[0]{\operatorname{sig}}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
 
 ---
 title: Real Analysis Review Notes
@@ -2140,6 +2183,155 @@ L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
 .\]
 
 
+# Midterm Exam 2 (December 2014)
+
+## 1
+
+> Note: (a) is a repeat.
+
+- Let $\Lambda\in L^2(X)\dual$.
+  - Show that $M\definedas \theset{f\in L^2(X) \suchthat \Lambda(f) = 0} \subseteq L^2(X)$ is a closed subspace, and $L^2(X) = M \oplus M\perp$.
+  - Prove that there exists a unique $g\in L^2(X)$ such that $\Lambda(f) = \int_X g \bar f$.
+
+## 2
+
+a. In parts:
+  - Given a definition of $L^\infty(\RR^n)$.
+  - Verify that $\norm{\wait}_\infty$ defines a norm on $L^\infty(\RR^n)$.
+  - Carefully proved that $(L^\infty(\RR^n), \norm{\wait}_\infty)$ is a Banach space.
+
+b. Prove that for any measurable $f:\RR^n \to \CC$,
+\begin{align*}
+L^1(\RR^n) \intersect L^\infty(\RR^n) \subset L^2(\RR^n) \qtext{and} \norm{f}_2 \leq \norm{f}_1^{1\over 2} \cdot \norm{f}_\infty^{1\over 2}
+.\end{align*}
+
+## 3
+
+a. Prove that if $f, g: \RR^n\to \CC$ is both measurable then $F(x, y) \definedas f(x)$ and $h(x, y)\definedas f(x-y) g(y)$ is measurable on $\RR^n\cross \RR^n$.
+
+b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n)$, then $f\ast g \in L^1(\RR^n) \intersect L^\infty(\RR^n)$ is well defined, and carefully show that it satisfies the following properties:
+\begin{align*}
+\norm{f\ast g}_\infty &\leq \norm{g}_1 \norm{f}_\infty
+\norm{f\ast g}_1      &\leq \norm{g}_1 \norm{f}_1
+\norm{f\ast g}_2      &\leq \norm{g}_1 \norm{f}_2
+.\end{align*}
+
+> Hint: first show $\abs{f\ast g}^2 \leq \norm{g}_1 \qty{ \abs{f}^2 \ast \abs{g}}$.
+
+## 4 (Weierstrass Approximation Theorem)
+
+> Note: (a) is a repeat.
+
+Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation theorem: for any $\eps> 0$ there exists a polynomial $P$ such that $\norm{f - P}_{\infty} < \eps$.
+
+# Midterm Exam 1 (October 2018)
+
+## Problem 1
+
+Let $E \subseteq \RR^n$ be bounded.
+Prove the following are equivalent: 
+
+1. For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that 
+\[
+F \subseteq E \subseteq G && m(G\sm F) < \epsilon
+.\]
+
+2. There exists a \( G_ \delta \) set $V$ and an \( F_ \sigma \) set $H$ such that 
+\[
+m(V\sm H) = 0
+.\]
+
+## Problem 2
+
+Let \( \ts{ f_k } _{k=1}^{\infty } \) be a sequence of extended real-valued Lebesgue measurable functions.
+
+a. Prove that \( \sup_k f_k \) is a Lebesgue measurable function.
+
+b. Prove that if \( \lim_{k \to \infty } f_k(x) \) exists for every \( x \in \RR^n \) then \( \lim_{k\to \infty } f_k \) is also a measurable function.
+
+
+## Problem 3
+
+### a
+
+Prove that if \( E \subseteq \RR^n \) is a Lebesgue measurable set, then for any \( h \in \RR \) the set
+\[
+E+h \da \ts{x + h \st x\in E }
+\]
+is also Lebesgue measurable and satisfies \( m(E + h) = m(E) \).
+
+### b
+
+Prove that if $f$ is a non-negative measurable function on $\RR^n$ and $h\in \RR^n$ then the function
+\[
+\tau_h d(x) \da f(x-h)
+\]
+is a non-negative measurable function and
+\[
+\int f(x) \dx = \int f(x-h) \dx
+.\]
+
+
+## Problem 4
+
+Let $f: \RR^n\to \RR$ be a Lebesgue measurable function.
+
+a. Prove that for all \( \alpha> 0 \) ,
+\[
+A_ \alpha  \da \ts{x\in \RR^n \st \abs{ f(x) } > \alpha} \implies m(A_ \alpha) \leq {1\over \alpha} \int \abs{f (x)} \dx
+.\]
+
+b. Prove that 
+\[
+\int \abs{ f(x) } \dx = 0 \iff f = 0 \text{ almost everywhere}
+.\]
+
+
+## Problem 5
+
+Let \( \ts{ f_k }_{k=1}^{\infty } \subseteq L^2([0, 1]) \) be a sequence which *converges in $L^1$* to a function $f$.
+
+a. Prove that $f\in L^1([0, 1])$.
+
+b. Give an example illustrating that $f_k$ may not converge to $f$ almost everywhere.
+
+c. Prove that $\ts{f_k}$ must contain a subsequence that converges to $f$ almost everywhere.
+
+# Midterm Exam 2 (November 2018)
+
+## Problem 1 
+
+Let $f, g\in L^1([0, 1])$, define $F(x) = \int_0^x f(y)\dy$ and $G(x) = \int_0^x g(y)\dy$, and show
+\[
+\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
+.\]
+
+## Problem 2
+Let $\phi\in L^1(\RR^n)$ such that $\int \phi = 1$ and define $\phi_t(x) = t^{-n}\phi(t\inv x)$.
+Show that if $f$ is bounded and uniformly continuous then $f\ast \phi_t \converges{t\to 0}\to f$ uniformly.
+
+## Problem 3
+
+Let $g\in L^\infty([0, 1])$.
+
+a. Prove
+\[
+\norm{g}_{L^p([0, 1])}  \converges{p\to\infty}\to \norm{g}_{L^\infty([0, 1])}
+.\]
+
+b. Prove that the map
+\[
+\Lambda_g: L^1([0, 1]) &\to \CC \\
+f &\mapsto \int_0^1 fg
+\]
+  defines an element of $L^1([0, 1])\dual$ with $\norm{\Lambda_g}_{L^1([0, 1])\dual}= \norm{g}_{L^\infty([0, 1])}$.
+
+
+## Problem 4
+
+See
+\cref{hilbert_space_exam_question}
+
 # Practice Exam (November 2014)
 
 ## 1: Fubini-Tonelli
@@ -2186,6 +2378,7 @@ Prove that if $f, g$ are integrable and bounded, then
 
 
 ## 3: Hilbert Spaces
+\label{hilbert_space_exam_question}
 
 Let $\theset{u_n}_{n=1}^\infty$ be an orthonormal sequence in a Hilbert space $H$.
 
@@ -2329,79 +2522,6 @@ Define what it means for $L$ to be *bounded* and show $L$ is bounded $\iff L$ is
 Prove that $(X\dual, \norm{\wait}_{\op})$ is a Banach space.
 
 
-
-# Midterm Exam 2 (November 2018)
-
-## 1 (Integration by Parts)
-
-Let $f, g\in L^1([0, 1])$, define $F(x) = \int_0^x f$ and $G(x) = \int_0^x g$, and show
-\begin{align*}
-\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
-.\end{align*}
-
-## 2
-Let $\phi\in L^1(\RR^n)$ such that $\int \phi = 1$ and define $\phi_t(x) = t^{-n}\phi(t\inv x)$.
-
-Show that if $f$ is bounded and uniformly continuous then $f\ast \phi_t \converges{t\to 0} f$ uniformly.
-
-## 3
-
-Let $g\in L^\infty([0, 1])$.
-
-a. Prove
-\begin{align*}
-\norm{g}_{L^p([0, 1])}  \converges{p\to\infty}\to \norm{g}_{L^\infty([0, 1])}
-.\end{align*}
-
-b. Prove that the map
-\begin{align*}
-\Lambda_g: L^1([0, 1]) &\to \CC \\
-f &\mapsto \int_0^1 fg
-\end{align*}
-  defines an element of $L^1([0, 1])\dual$ with $\norm{\Lambda_g}_{L^1([0, 1])\dual}= \norm{g}_{L^\infty([0, 1])}$.
-
-> Note: 4 is a repeat.
-
-# Midterm Exam 2 (December 2014)
-
-## 1
-
-> Note: (a) is a repeat.
-
-- Let $\Lambda\in L^2(X)\dual$.
-  - Show that $M\definedas \theset{f\in L^2(X) \suchthat \Lambda(f) = 0} \subseteq L^2(X)$ is a closed subspace, and $L^2(X) = M \oplus M\perp$.
-  - Prove that there exists a unique $g\in L^2(X)$ such that $\Lambda(f) = \int_X g \bar f$.
-
-## 2
-
-a. In parts:
-  - Given a definition of $L^\infty(\RR^n)$.
-  - Verify that $\norm{\wait}_\infty$ defines a norm on $L^\infty(\RR^n)$.
-  - Carefully proved that $(L^\infty(\RR^n), \norm{\wait}_\infty)$ is a Banach space.
-
-b. Prove that for any measurable $f:\RR^n \to \CC$,
-\begin{align*}
-L^1(\RR^n) \intersect L^\infty(\RR^n) \subset L^2(\RR^n) \qtext{and} \norm{f}_2 \leq \norm{f}_1^{1\over 2} \cdot \norm{f}_\infty^{1\over 2}
-.\end{align*}
-
-## 3
-
-a. Prove that if $f, g: \RR^n\to \CC$ is both measurable then $F(x, y) \definedas f(x)$ and $h(x, y)\definedas f(x-y) g(y)$ is measurable on $\RR^n\cross \RR^n$.
-
-b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n)$, then $f\ast g \in L^1(\RR^n) \intersect L^\infty(\RR^n)$ is well defined, and carefully show that it satisfies the following properties:
-\begin{align*}
-\norm{f\ast g}_\infty &\leq \norm{g}_1 \norm{f}_\infty
-\norm{f\ast g}_1      &\leq \norm{g}_1 \norm{f}_1
-\norm{f\ast g}_2      &\leq \norm{g}_1 \norm{f}_2
-.\end{align*}
-
-> Hint: first show $\abs{f\ast g}^2 \leq \norm{g}_1 \qty{ \abs{f}^2 \ast \abs{g}}$.
-
-## 4 (Weierstrass Approximation Theorem)
-
-> Note: (a) is a repeat.
-
-Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation theorem: for any $\eps> 0$ there exists a polynomial $P$ such that $\norm{f - P}_{\infty} < \eps$.
 
 # Common Inequalities
 
