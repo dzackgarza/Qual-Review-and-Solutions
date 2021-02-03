@@ -5,8 +5,16 @@
 Show that 
 \[
 \int_{\BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p < n \\
-\int_{\RR^n\sm \BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p > n \\
+\int_{\RR^n\sm \BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p > n 
 .\]
+
+## 2010 6.2
+
+Show that 
+\[
+\int_{\RR^n} \abs{ f} = \int_0^{\infty } m(A_t)\dt && A_t \da \ts{x\in \RR^n \st \abs{f(x)} > t}
+.\]
+
 
 
 ## 2010 7.1
