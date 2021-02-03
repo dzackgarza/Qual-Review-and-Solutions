@@ -77,7 +77,19 @@ c. Give an example of a function $g\not \in L^1(\RR)$ which is the Fourier trans
 H(\xi) \da e^{2\pi i \xi} \int_0^1 y e^{2\pi i y \xi }\dy 
 .\]
 
+## 2010 7.7
 
+Show that for each \( \epsilon>0 \) the following function is the Fourier transform of an $L^1(\RR^n)$ function:
+\[
+F(\xi) \da \qty{1 \over 1 + \abs{\xi}^2}^{\epsilon}
+.\]
+
+
+Hint: use
+
+\[
+K_\delta(x) \da \delta^{-n/2} e^{-\pi \abs{x}^2 \over \delta}
+\]
 
 
 
