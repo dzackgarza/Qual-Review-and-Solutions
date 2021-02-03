@@ -28,6 +28,16 @@ A &\da \int_0^{\infty } f(y) y^{-1/2} \dy < \infty \\
 B &\da \qty{ \int_0^{\infty } \abs{ g(y) } }^2 \dy < \infty  
 .\]
 
+Show that
+\[
+\int_0^{\infty } \qty{ \int_0^{\infty } f(y) \dy } {g(x) \over x} \dx \leq AB
+.\]
+
+## 2010 7.4
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space and $0 < p < q< \infty$.
+Prove that if $L^q(X) \subseteq L^p(X)$, then $X$ does not contain sets of arbitrarily large finite measure.
+
 
 
 ## 2010 9.1
