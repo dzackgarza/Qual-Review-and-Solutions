@@ -85,13 +85,28 @@ F(\xi) \da \qty{1 \over 1 + \abs{\xi}^2}^{\epsilon}
 .\]
 
 
-Hint: use
+*Hint: show that*
 
 \[
 K_\delta(x) &\da \delta^{-n/2} e^{-\pi \abs{x}^2 \over \delta} \\
 f(x) &\da \int_0^{\infty } K_{\delta}(x) e^{-\pi \delta} \delta^{\epsilon - 1} \,d \delta \\
-\fourier{f}(\xi) &= \int_0^{\infty } e^{- \pi \delta \abs{\xi}^2} e^{ -\pi \delta} \delta^{\epsilon - 1}
-\]
+\Gamma(s) &\da \int_0^{\infty } e^{-t} t^{s-1} \dt \\
+\implies \fourier{f}(\xi) &= \int_0^{\infty } e^{- \pi \delta \abs{\xi}^2} e^{ -\pi \delta} \delta^{\epsilon - 1}
+= \pi^{-s} \Gamma(\epsilon) F(\xi)
+.\]
+
+
+## 2010 7 Challenge 1: Generalized Holder
+
+Suppose that
+\[
+1\leq p_j \leq \infty, && \sum_{j=1}^n {1\over p_j} = {1\over r} \leq 1
+.\]
+
+Show that if $f_j \in L^{p_j}$ for each $1\leq j \leq n$, then
+\[
+\prod f_j \in L^r, && \norm{ \prod f_j }_r \leq \prod \norm{f_j}_{p_j}
+.\]
 
 
 
