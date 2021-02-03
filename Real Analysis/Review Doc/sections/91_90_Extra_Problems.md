@@ -18,7 +18,16 @@ Let $(X, \mathcal{M}, \mu)$ be a measure space and prove the following propertie
 
 ## 2010 7.2
 
-Show that for $0 < p < q \leq \infty$, $\norm{a}_{\ell^q} \leq \norm{a}_{\ell^p}$ over $\CC$.
+Show that for $0 < p < q \leq \infty$, $\norm{a}_{\ell^q} \leq \norm{a}_{\ell^p}$ over $\CC$, where $\norm{a}_{\infty } \da \sup_j \abs{a_j}$.
+
+## 2010 7.3
+
+Let $f, g$ be non-negative measurable functions on $[0, \infty)$ with
+\[
+A &\da \int_0^{\infty } f(y) y^{-1/2} \dy < \infty \\
+B &\da \qty{ \int_0^{\infty } \abs{ g(y) } }^2 \dy < \infty  
+.\]
+
 
 
 ## 2010 9.1
