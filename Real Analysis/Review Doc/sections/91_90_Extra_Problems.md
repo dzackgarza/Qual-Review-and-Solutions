@@ -102,7 +102,13 @@ u(x, y) \da f \convolve P_y(x) && \text{where } P_y(x) \da {1\over \pi}\qty{y \o
 
 *Hint: write the following and try to estimate each term:*
 \[
-u(x, y) = 
+u(x, y) = \int_{\abs t < y} f(x - t) P_y(t) \dt + \sum_{k=0}^{\infty } \int_{A_k} f(x-t) P_y(t)\dt && A_k \da \ts{2^ky \leq \abs t < 2^{k+1}y}
 .\]
+
+Following the proof of the Lebesgue differentiation theorem, show that for $f\in L^1(\RR)$ and for almost everywhere $x\in \RR$,
+\[
+u(x, y) \converges{y\to 0} \to f(x)
+.\]
+
 
 
