@@ -1,8 +1,6 @@
-# Extra Problems: Integration 
+# Extra Problems: Differentiation and Misc
 
-## The Lebesgue Integral
+## ?
 
-## $L^1$ as a Banach Space
 
-## Fubini and Tonelli
 
