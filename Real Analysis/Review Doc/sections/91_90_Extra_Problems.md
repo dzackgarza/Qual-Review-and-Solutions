@@ -88,7 +88,9 @@ F(\xi) \da \qty{1 \over 1 + \abs{\xi}^2}^{\epsilon}
 Hint: use
 
 \[
-K_\delta(x) \da \delta^{-n/2} e^{-\pi \abs{x}^2 \over \delta}
+K_\delta(x) &\da \delta^{-n/2} e^{-\pi \abs{x}^2 \over \delta} \\
+f(x) &\da \int_0^{\infty } K_{\delta}(x) e^{-\pi \delta} \delta^{\epsilon - 1} \,d \delta \\
+\fourier{f}(\xi) &= \int_0^{\infty } e^{- \pi \delta \abs{\xi}^2} e^{ -\pi \delta} \delta^{\epsilon - 1}
 \]
 
 
