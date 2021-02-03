@@ -22,6 +22,7 @@
 .\]
 
 
+
 ## By Topic
 
 ### Topology
@@ -123,4 +124,24 @@ $L^p$ Spaces
 L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
 \ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
 .\]
+
+
+### Unsorted
+
+
+:::{.proposition title="Volumes of Rectangles"}
+If $\ts{R_j} \covers R$ is a covering of $R$ by rectangles,
+\[
+R = \overset{\circ}{\Disjoint_{j}} R_j &\implies \abs R = \sum \abs R_j \\
+R \subseteq \Union_j R_j &\implies \abs R \leq \sum \abs R_j
+.\]
+
+:::
+
+- Show that any disjoint intervals is countable.
+
+- Show that every open $U \subseteq \RR$ is a countable union of disjoint open intervals.
+- Show that every open $U \subseteq \RR^n$ is a countable union of *almost* disjoint closed cubes.
+- Show that that Cantor middle-thirds set is compact, totally disconnected, and perfect, with outer measure zero.
+- Prove the Borel-Cantelli lemma.
 
