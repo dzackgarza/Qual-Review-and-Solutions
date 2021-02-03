@@ -1,5 +1,26 @@
 # Extra Problems 
 
+## 2010 7.1
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space and prove the following properties of $L^ \infty (X, \mathcal{M}, \mu)$:
+
+- If $f, g$ are measurable on $X$ then 
+\[
+\norm{fg}_1 \leq \norm{f}_1 \norm{g}_{\infty }
+.\]
+
+- $\norm{\wait}_{\infty }$ is a norm on $L^{\infty }$ making it a Banach space.
+
+- $\norm{f_n - f}_{\infty } \converges{n\to \infty }\to 0 \iff$ there exists an $E\in \mathcal{M}$ such that $\mu(X\sm E) = 0$ and $f_n \to f$ uniformly on $E$. 
+
+- Simple functions are dense in $L^{\infty }$.
+
+
+## 2010 7.2
+
+Show that for $0 < p < q \leq \infty$, $\norm{a}_{\ell^q} \leq \norm{a}_{\ell^p}$ over $\CC$.
+
+
 ## 2010 9.1
 
 Show that the set \( \ts{ u_k(j) \da \delta_{ij} } \subseteq \ell^2(\ZZ) \) and forms an orthonormal system.
