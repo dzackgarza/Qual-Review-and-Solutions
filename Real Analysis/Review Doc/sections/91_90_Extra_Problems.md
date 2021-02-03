@@ -31,7 +31,43 @@ a. Show that $E\perp \subseteq H$ is a closed subspace.
 
 b. Show that $(E^\perp)^\perp = \cl_H(E)$.
 
+## 2010 9.5b
+
+Let $f\in L^1((0, 2\pi))$.
+
+i. Show that for an \( \epsilon>0 \) one can write $f = g+h$ where $g\in L^2((0, 2\pi))$ and $\norm{H}_1 < \epsilon$.
+
  
 ## 2010 9.6
 
 Prove that every closed convex $K \subset H$ a Hilbert space has a unique element of minimal norm.
+
+## 2010 9 Challenge 
+
+Let $U$ be a unitary operator on $H$ a Hilbert space, let $M \da \ts{x\in H \st Ux = x}$, let $P$ be the orthogonal projection onto $M$, and define
+\[
+S_N \da {1\over N} \sum_{n=0}^{N-1} U^n
+.\]
+Show that for all $x\in H$,
+\[
+\norm{ S_N x - Px}_H \converges{N\to \infty } \to 0
+.\]
+
+
+## 2010 10.1
+
+Let $\nu, \mu$ be signed measures, and show that
+\[
+\nu \perp \mu \text{ and } \nu \ll \abs{ \mu} \implies \nu = 0
+.\]
+
+
+## 2010 10.2
+
+Let $f\in L^1(\RR^n)$ with $f\neq 0$.
+
+a. Prove that there exists a $c>0$ such that
+\[
+Hf(x) \geq {c \over (1 + \abs x)^n }
+.\]
+
