@@ -1,4 +1,4 @@
-# Extra Problems 
+# Extra Problems from Problem Sets
 
 ## 2010 6.1
 
@@ -14,6 +14,20 @@ Show that
 \[
 \int_{\RR^n} \abs{ f} = \int_0^{\infty } m(A_t)\dt && A_t \da \ts{x\in \RR^n \st \abs{f(x)} > t}
 .\]
+
+## 2010 6.5
+
+Suppose $F \subseteq \RR$ with $m(F^c) < \infty$ and let \( \delta(x) \da d(x, F) \) and
+\[
+I_F(x) \da \int_\RR { \delta(y) \over \abs{x-y}^2 } \dy
+.\]
+
+a. Show that \( \delta \) is continuous.
+
+b. Show that if $x\in F^c$ then $I_F(x) = \infty$.
+
+c. Show that $I_F(x) < \infty$ for almost every $x$
+
 
 
 
