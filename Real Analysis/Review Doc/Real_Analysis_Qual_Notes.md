@@ -13,6 +13,7 @@
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
@@ -168,6 +169,7 @@
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
 \newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\convolve}[0]{\ast}
 \newcommand{\coker}[0]{\operatorname{coker}}
 \newcommand{\Mor}[0]{\operatorname{Mor}}
 \newcommand{\cone}[0]{\operatorname{cone}}
@@ -368,6 +370,7 @@
 \newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
@@ -456,6 +459,7 @@
     (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
     (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
 }
+
 
 ---
 title: Real Analysis Review Notes
@@ -2080,6 +2084,7 @@ $$
 \norm{f}_p \converges{p\to\infty}\to \norm{f}_\infty
 .\]
 
+
 ## By Topic
 
 ### Topology
@@ -2201,20 +2206,20 @@ a. In parts:
   - Carefully proved that $(L^\infty(\RR^n), \norm{\wait}_\infty)$ is a Banach space.
 
 b. Prove that for any measurable $f:\RR^n \to \CC$,
-\begin{align*}
+\[
 L^1(\RR^n) \intersect L^\infty(\RR^n) \subset L^2(\RR^n) \qtext{and} \norm{f}_2 \leq \norm{f}_1^{1\over 2} \cdot \norm{f}_\infty^{1\over 2}
-.\end{align*}
+.\]
 
 ## 3
 
 a. Prove that if $f, g: \RR^n\to \CC$ is both measurable then $F(x, y) \definedas f(x)$ and $h(x, y)\definedas f(x-y) g(y)$ is measurable on $\RR^n\cross \RR^n$.
 
 b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n)$, then $f\ast g \in L^1(\RR^n) \intersect L^\infty(\RR^n)$ is well defined, and carefully show that it satisfies the following properties:
-\begin{align*}
+\[
 \norm{f\ast g}_\infty &\leq \norm{g}_1 \norm{f}_\infty
 \norm{f\ast g}_1      &\leq \norm{g}_1 \norm{f}_1
 \norm{f\ast g}_2      &\leq \norm{g}_1 \norm{f}_2
-.\end{align*}
+.\]
 
 > Hint: first show $\abs{f\ast g}^2 \leq \norm{g}_1 \qty{ \abs{f}^2 \ast \abs{g}}$.
 
@@ -2227,7 +2232,7 @@ Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation th
 # Midterm Exam 1 (October 2018)
 
 ## Problem 1
-
+\label{equivalence_of_approximating_measures}
 Let $E \subseteq \RR^n$ be bounded.
 Prove the following are equivalent: 
 
@@ -2334,47 +2339,107 @@ See
 
 # Practice Exam (November 2014)
 
+## Problem 1
+
+Let $m_*(E)$ denote the Lebesgue outer measure of a set \( E \subseteq \RR^n \).
+
+a. Prove using the definition of Lebesgue outer measure that
+\[
+m \qty{ \Union_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
+.\]
+
+b. Prove that for any \( E \subseteq \RR^n \) and any \( \epsilon> 0 \) there exists an open set $G$ with $E \subseteq G$ and
+\[
+m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
+.\]
+
+## Problem 2
+
+a. See \cref{equivalence_of_approximating_measures}
+
+b. Let $f_k$ be a sequence of extended real-valued Lebesgue measurable function.
+
+    i. Prove that $\inf_k f_k, \sup_k f_k$ are both Lebesgue measurable function.
+    
+        *Hint: argue that*
+\[
+\ts{x \st \inf_k f_k(x) < a} = \Union_k \ts{x \st f_k(x) < a}
+.\]
+
+    ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
+
+
+## Problem 3
+
+a. Prove that if $f, g\in L^+(\RR)$ then 
+\[
+\int(f +g) = \int f + \int g
+.\]
+  Extend this to establish that if $\ts{ f_k} \subseteq L^+(\RR^n)$ then
+  \[
+  \int \sum_k f_k = \sum_k \int f_k
+  .\]
+
+
+b. Let $\ts{E_j}_{j\in \NN} \subseteq \mathcal{M}(\RR^n)$ with $E_j \nearrow E$. 
+  Use the countable additivity of $\mu_f$ on \( \mathcal{M}(\RR^n)  \) established above to show that
+  \[
+  \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
+  .\]
+
+## Problem 4
+
+a. Show that $f\in L^1(\RR^n) \implies \abs{f(x)} < \infty$ almost everywhere.
+
+b. Show that if $\ts{f_k} \subseteq L^1(\RR^n)$ with $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+
+c. Use the Dominated Convergence Theorem to evaluate
+\[
+\lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \dx
+.\]
+
+
+
+
+# Practice Exam (November 2014)
+
 ## 1: Fubini-Tonelli
 
-### a
-
+a.
 Carefully state Tonelli's theorem for a nonnegative function $F(x, t)$ on $\RR^n\cross \RR$.
 
-### b
-
-Let $f:\RR^n\to [0, \infty]$ and define
-\begin{align*}
+b.
+  Let $f:\RR^n\to [0, \infty]$ and define
+\[
 \mca \definedas \theset{(x, t) \in \RR^n\cross \RR \suchthat 0\leq t \leq f(x)}
-.\end{align*}
+.\]
 
-Prove the validity of the following two statements:
+  Prove the validity of the following two statements:
 
-1. $f$ is Lebesgue measurable on $\RR^{n} \iff \mca$ is a Lebesgue measurable subset of $\RR^{n+1}$.
-2. If $f$ is Lebesgue measurable on $\RR^n$ then
-\begin{align*}
-m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}\suchthat f(x) \geq t\right\}\right) d t
-.\end{align*}
+  1. $f$ is Lebesgue measurable on $\RR^{n} \iff \mca$ is a Lebesgue measurable subset of $\RR^{n+1}$.
+  2. If $f$ is Lebesgue measurable on $\RR^n$ then
+  \[
+  m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}\suchthat f(x) \geq t\right\}\right) d t
+  .\]
 
 
 ## 2: Convolutions and the Fourier Transform
 
-### a
-
+a.
 Let $f, g\in L^1(\RR^n)$ and give a definition of $f\ast g$.
 
-### b
-
+b.
 Prove that if $f, g$ are integrable and bounded, then
-\begin{align*}
+\[
 (f\ast g)(x) \converges{\abs x\to\infty}\to 0
-.\end{align*}
+.\]
 
 
-### c
+c. In parts:
 
-1. Define the *Fourier transform* of an integrable function $f$ on $\RR^n$.
-2. Give an outline of the proof of the Fourier inversion formula.
-3. Give an example of a function $f\in L^1(\RR^n)$ such that $\hat{f}$ is not in $L^1(\RR^n)$.
+    1. Define the *Fourier transform* of an integrable function $f$ on $\RR^n$.
+    2. Give an outline of the proof of the Fourier inversion formula.
+    3. Give an example of a function $f\in L^1(\RR^n)$ such that $\hat{f}$ is not in $L^1(\RR^n)$.
 
 
 ## 3: Hilbert Spaces
@@ -2382,115 +2447,110 @@ Prove that if $f, g$ are integrable and bounded, then
 
 Let $\theset{u_n}_{n=1}^\infty$ be an orthonormal sequence in a Hilbert space $H$.
 
-### a
-
-Let $x\in H$ and verify that 
-\begin{align*}
+a. Let $x\in H$ and verify that 
+\[
 \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
 =
 \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-.\end{align*}
+.\]
 for any $N\in \NN$ and deduce that
-\begin{align*}
+\[
 \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
-.\end{align*}
+.\]
 
-
-### b
-
-Let $\theset{a_n}_{n\in \NN} \in \ell^2(\NN)$ and prove that there exists an $x\in H$ such that $a_n = \inner{x}{u_n}$ for all $n\in \NN$, and moreover $x$ may be chosen such that 
-\begin{align*}
+b. Let $\theset{a_n}_{n\in \NN} \in \ell^2(\NN)$ and prove that there exists an $x\in H$ such that $a_n = \inner{x}{u_n}$ for all $n\in \NN$, and moreover $x$ may be chosen such that 
+\[
 \norm{x}_H = \qty{ \sum_{n\in \NN} \abs{a_n}^2}^{1\over 2}
-.\end{align*}
+.\]
 
-Proof
-:   \hfill
+c. Prove that if $\theset{u_n}$ is *complete*, Bessel's inequality becomes an equality.
 
-    - Take $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
+:::{.solution title="part b"}
+\envlist
 
-    - Define $x \definedas \displaystyle\lim_{N\to\infty} S_N$ where $S_N = \sum_{k=1}^N a_k u_k$
+- Take $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
 
-    - $\theset{S_N}$ is Cauchy and $H$ is complete, so $x\in H$.
+- Define $x \definedas \displaystyle\lim_{N\to\infty} S_N$ where $S_N = \sum_{k=1}^N a_k u_k$
 
-    - By construction, 
-    \begin{align*}
-    \inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n 
-    \end{align*}
-    since the $u_k$ are all orthogonal.
-    
-    - By Pythagoras since the $u_k$ are normal,
-    \begin{align*}
-    \norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
-    .\end{align*}
+- $\theset{S_N}$ is Cauchy and $H$ is complete, so $x\in H$.
 
-### c
-Prove that if $\theset{u_n}$ is *complete*, Bessel's inequality becomes an equality.
+- By construction, 
+\[
+\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n 
+\]
+since the $u_k$ are all orthogonal.
 
-Proof
-:   Let $x$ and $u_n$ be arbitrary. 
+- By Pythagoras since the $u_k$ are normal,
+\[
+\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
+.\]
 
-    \begin{align*}
-    \inner{x - \sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n}
-    &=
-    \inner{x}{u_n}
-    -
-    \inner{\sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n} \\
-    &=
-    \inner{x}{u_n}
-    -
-    \sum_{k=1}^\infty  \inner{\inner{x}{u_k}u_k }{u_n} \\
-    &=
-    \inner{x}{u_n}
-    -
-    \sum_{k=1}^\infty  \inner{x}{u_k} \inner{u_k }{u_n} \\
-    &= \inner{x}{u_n} - \inner{x}{u_n} = 0 \\
-    \implies 
-    x - \sum_{k=1}^\infty \inner{x}{u_k}u_k &= 0 \quad\text{by completeness}
-    .\end{align*}
+:::
 
-    So 
-    \begin{align*}
-    x = \sum_{k=1}^\infty \inner{x}{u_k} u_k
-    \implies
-    \norm{x}^2 = \sum_{k=1}^\infty \abs{\inner{x}{u_k}}^2. \qed
-    .\end{align*}
+:::{.solution title="part c"}
+Let $x$ and $u_n$ be arbitrary. 
 
+\[
+\inner{x - \sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n}
+&=
+\inner{x}{u_n}
+-
+\inner{\sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n} \\
+&=
+\inner{x}{u_n}
+-
+\sum_{k=1}^\infty  \inner{\inner{x}{u_k}u_k }{u_n} \\
+&=
+\inner{x}{u_n}
+-
+\sum_{k=1}^\infty  \inner{x}{u_k} \inner{u_k }{u_n} \\
+&= \inner{x}{u_n} - \inner{x}{u_n} = 0 \\
+\implies 
+x - \sum_{k=1}^\infty \inner{x}{u_k}u_k &= 0 \quad\text{by completeness}
+.\]
+
+So 
+\[
+x = \sum_{k=1}^\infty \inner{x}{u_k} u_k
+\implies
+\norm{x}^2 = \sum_{k=1}^\infty \abs{\inner{x}{u_k}}^2. \qed
+.\]
+
+
+:::
 
 ## 4: $L^p$ Spaces
 
 
-### a
-Prove Holder's inequality:
-let $f\in L^p, g\in L^q$ with $p, q$ conjugate, and show that
-\begin{align*}
+a. Prove Holder's inequality:
+  let $f\in L^p, g\in L^q$ with $p, q$ conjugate, and show that
+\[
 \pnorm{fg}p \leq \pnorm{f}p \cdot \pnorm{g}q
-.\end{align*}
+.\]
 
-### b
-Prove Minkowski's Inequality:
-\begin{align*}
+b. Prove Minkowski's Inequality:
+\[
 1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
-.\end{align*}
+.\]
 Conclude that if $f, g\in L^p(\RR^n)$ then so is $f+g$.
 
-### c
-Let $X = [0, 1] \subset \RR$.
+c. Let $X = [0, 1] \subset \RR$.
 
-1. Give a definition of the Banach space $L^\infty(X)$ of essentially bounded functions of $X$.
+    1. Give a definition of the Banach space $L^\infty(X)$ of essentially bounded functions of $X$.
 
-2. Let $f$ be non-negative and measurable on $X$, prove that
-\begin{align*}
-\int_X f(x)^p \,dx \converges{p\to\infty}\to
-\begin{dcases}
-\infty \quad\text{or} \\
-m\qty{\theset{f\inv(1)}}
-\end{dcases}
-,\end{align*}
-and characterize the functions of each type
+    2. Let $f$ be non-negative and measurable on $X$, prove that
+    \[
+    \int_X f(x)^p \,dx \converges{p\to\infty}\to
+    \begin{dcases}
+    \infty \quad\text{or} \\
+    m\qty{\theset{f\inv(1)}}
+    \end{dcases}
+    ,\]
+    and characterize the functions of each type
 
 
 :::{.solution}
-\begin{align*}
+\[
 \int f^p 
 &= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
 &= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
@@ -2500,27 +2560,294 @@ and characterize the functions of each type
 0 & m(\theset{x\geq 1}) = 0 \\ 
 \infty & m(\theset{x\geq 1}) > 0.
 \end{cases}
-\end{align*} 
+\] 
 
 :::
-
-<!--\todo{Justify passing limit into integrals.}-->
-
 
 ## 5: Dual Spaces
 
 Let $X$ be a normed vector space.
 
-### a
-Give the definition of what it means for a map $L:X\to \CC$ to be a *linear functional*.
+a. Give the definition of what it means for a map $L:X\to \CC$ to be a *linear functional*.
 
-### b
-Define what it means for $L$ to be *bounded* and show $L$ is bounded $\iff L$ is continuous.
+b. Define what it means for $L$ to be *bounded* and show $L$ is bounded $\iff L$ is continuous.
+
+c. Prove that $(X\dual, \norm{\wait}_{\op})$ is a Banach space.
 
 
-### c
-Prove that $(X\dual, \norm{\wait}_{\op})$ is a Banach space.
+# Extra Problems from Problem Sets
 
+## 2010 6.1
+
+Show that 
+\[
+\int_{\BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p < n \\
+\int_{\RR^n\sm \BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p > n 
+.\]
+
+## 2010 6.2
+
+Show that 
+\[
+\int_{\RR^n} \abs{ f} = \int_0^{\infty } m(A_t)\dt && A_t \da \ts{x\in \RR^n \st \abs{f(x)} > t}
+.\]
+
+## 2010 6.5
+
+Suppose $F \subseteq \RR$ with $m(F^c) < \infty$ and let \( \delta(x) \da d(x, F) \) and
+\[
+I_F(x) \da \int_\RR { \delta(y) \over \abs{x-y}^2 } \dy
+.\]
+
+a. Show that \( \delta \) is continuous.
+
+b. Show that if $x\in F^c$ then $I_F(x) = \infty$.
+
+c. Show that $I_F(x) < \infty$ for almost every $x$
+
+
+
+
+## 2010 7.1
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space and prove the following properties of $L^ \infty (X, \mathcal{M}, \mu)$:
+
+- If $f, g$ are measurable on $X$ then 
+\[
+\norm{fg}_1 \leq \norm{f}_1 \norm{g}_{\infty }
+.\]
+
+- $\norm{\wait}_{\infty }$ is a norm on $L^{\infty }$ making it a Banach space.
+
+- $\norm{f_n - f}_{\infty } \converges{n\to \infty }\to 0 \iff$ there exists an $E\in \mathcal{M}$ such that $\mu(X\sm E) = 0$ and $f_n \to f$ uniformly on $E$. 
+
+- Simple functions are dense in $L^{\infty }$.
+
+
+## 2010 7.2
+
+Show that for $0 < p < q \leq \infty$, $\norm{a}_{\ell^q} \leq \norm{a}_{\ell^p}$ over $\CC$, where $\norm{a}_{\infty } \da \sup_j \abs{a_j}$.
+
+## 2010 7.3
+
+Let $f, g$ be non-negative measurable functions on $[0, \infty)$ with
+\[
+A &\da \int_0^{\infty } f(y) y^{-1/2} \dy < \infty \\
+B &\da \qty{ \int_0^{\infty } \abs{ g(y) } }^2 \dy < \infty  
+.\]
+
+Show that
+\[
+\int_0^{\infty } \qty{ \int_0^{\infty } f(y) \dy } {g(x) \over x} \dx \leq AB
+.\]
+
+## 2010 7.4
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space and $0 < p < q< \infty$.
+Prove that if $L^q(X) \subseteq L^p(X)$, then $X$ does not contain sets of arbitrarily large finite measure.
+
+## 2010 7.5
+
+Suppose $0 < a < b \leq \infty$, and find examples of functions $f \in L^p((0, \infty ))$ if and only if:
+
+- $a < p < b$
+
+- $a \leq p \leq b$
+
+- $p = a$
+
+*Hint: consider functions of the following form:*
+\[
+f(x) \da x^{- \alpha} \abs{ \log(x) }^{ \beta}
+.\]
+
+## 2010 7.6
+
+Define
+\[
+F(x) &\da \qty{ \sin(\pi x) \over \pi x}^2 \\
+G(x) &\da 
+\begin{cases}
+1 - \abs{x} & \abs{x} \leq 1
+\\
+0 & \text{else}.
+\end{cases}
+\]
+
+a. Show that $\fourier{G}(\xi) = F(\xi)$
+
+b. Compute $\fourier{F}$.
+
+c. Give an example of a function $g\not \in L^1(\RR)$ which is the Fourier transform of an $L^1$ function.
+
+*Hint: write \( \fourier{G}(\xi) = H(\xi) + H(-\xi) \)  where*
+\[
+H(\xi) \da e^{2\pi i \xi} \int_0^1 y e^{2\pi i y \xi }\dy 
+.\]
+
+## 2010 7.7
+
+Show that for each \( \epsilon>0 \) the following function is the Fourier transform of an $L^1(\RR^n)$ function:
+\[
+F(\xi) \da \qty{1 \over 1 + \abs{\xi}^2}^{\epsilon}
+.\]
+
+
+*Hint: show that*
+
+\[
+K_\delta(x) &\da \delta^{-n/2} e^{-\pi \abs{x}^2 \over \delta} \\
+f(x) &\da \int_0^{\infty } K_{\delta}(x) e^{-\pi \delta} \delta^{\epsilon - 1} \,d \delta \\
+\Gamma(s) &\da \int_0^{\infty } e^{-t} t^{s-1} \dt \\
+\implies \fourier{f}(\xi) &= \int_0^{\infty } e^{- \pi \delta \abs{\xi}^2} e^{ -\pi \delta} \delta^{\epsilon - 1}
+= \pi^{-s} \Gamma(\epsilon) F(\xi)
+.\]
+
+
+## 2010 7 Challenge 1: Generalized Holder
+
+Suppose that
+\[
+1\leq p_j \leq \infty, && \sum_{j=1}^n {1\over p_j} = {1\over r} \leq 1
+.\]
+
+Show that if $f_j \in L^{p_j}$ for each $1\leq j \leq n$, then
+\[
+\prod f_j \in L^r, && \norm{ \prod f_j }_r \leq \prod \norm{f_j}_{p_j}
+.\]
+
+
+## 2010 7 Challenge 2: Young's Inequality
+
+Suppose $1\leq p,q,r \leq \infty$ with
+\[
+{1\over p } + {1 \over q} = 1 + {1 \over r}
+.\]
+
+Prove that
+\[
+f \in L^p, g\in L^q \implies f \convolve g \in L^r \text{ and } \norm{f \convolve g}_r \leq \norm{f}_p \norm{g}_q
+.\]
+
+
+
+
+
+## 2010 9.1
+
+Show that the set \( \ts{ u_k(j) \da \delta_{ij} } \subseteq \ell^2(\ZZ) \) and forms an orthonormal system.
+
+
+## 2010 9.2
+
+Consider $L^2([0, 1])$ and define
+\[
+e_0(x) &= 1 \\
+e_1(x) &= \sqrt{3}(2x-1)
+.\]
+
+a. Show that $\ts{e_0, e_1}$ is an orthonormal system.
+
+b. Show that the polynomial $p(x)$ where $\deg(p) = 1$ which is closest to $f(x) = x^2$ in $L^2([0, 1])$ is given by
+\[
+h(x) = x - {1\over 6}
+.\]
+
+Compute $\norm{f - g}_2$.
+
+
+## 2010 9.3
+
+Let $E \subseteq H$ a Hilbert space.
+
+a. Show that $E\perp \subseteq H$ is a closed subspace.
+
+b. Show that $(E^\perp)^\perp = \cl_H(E)$.
+
+## 2010 9.5b
+
+Let $f\in L^1((0, 2\pi))$.
+
+i. Show that for an \( \epsilon>0 \) one can write $f = g+h$ where $g\in L^2((0, 2\pi))$ and $\norm{H}_1 < \epsilon$.
+
+ 
+## 2010 9.6
+
+Prove that every closed convex $K \subset H$ a Hilbert space has a unique element of minimal norm.
+
+## 2010 9 Challenge 
+
+Let $U$ be a unitary operator on $H$ a Hilbert space, let $M \da \ts{x\in H \st Ux = x}$, let $P$ be the orthogonal projection onto $M$, and define
+\[
+S_N \da {1\over N} \sum_{n=0}^{N-1} U^n
+.\]
+Show that for all $x\in H$,
+\[
+\norm{ S_N x - Px}_H \converges{N\to \infty } \to 0
+.\]
+
+
+## 2010 10.1
+
+Let $\nu, \mu$ be signed measures, and show that
+\[
+\nu \perp \mu \text{ and } \nu \ll \abs{ \mu} \implies \nu = 0
+.\]
+
+
+## 2010 10.2
+
+Let $f\in L^1(\RR^n)$ with $f\neq 0$.
+
+a. Prove that there exists a $c>0$ such that
+\[
+Hf(x) \geq {c \over (1 + \abs x)^n }
+.\]
+
+## 2010 10.3
+
+Consider the function
+\[
+f(x) \da 
+\begin{cases}
+{1\over \abs{x} \qty{ \log\qty{1\over x}}^2 } &  \abs{x} \leq {1\over 2}
+\\
+0 & \text{else}.
+\end{cases}
+\]
+
+a. Show that $f \in L^1(\RR)$.
+
+b. Show that there exists a $c>0$ such that for all $\abs{x} \leq 1/2$,
+\[
+Hf(x) \geq {c \over \abs{x} \log\qty{1\over \abs x} }
+.\]
+Conclude that $Hf$ is not locally integrable.
+
+
+## 2010 10.4
+
+Let $f\in L^1(\RR)$ and let \( \mathcal{U}\da \ts{(x, y) \in \RR^2 \st y > 0}  \) denote the upper half plane.
+For $(x, y) \in \mathcal{U}$ define 
+\[
+u(x, y) \da f \convolve P_y(x) && \text{where } P_y(x) \da {1\over \pi}\qty{y \over t^2 + y^2}
+.\]
+
+a. Prove that there exists a constant $C$ independent of $f$ such that for all $x\in \RR$, 
+\[
+\sup_{y > 0} \abs{ u(x, y) } \leq C\cdot Hf(x)
+.\]
+
+
+    *Hint: write the following and try to estimate each term:*
+\[
+u(x, y) = \int_{\abs t < y} f(x - t) P_y(t) \dt + \sum_{k=0}^{\infty } \int_{A_k} f(x-t) P_y(t)\dt && A_k \da \ts{2^ky \leq \abs t < 2^{k+1}y}
+.\]
+
+b. Following the proof of the Lebesgue differentiation theorem, show that for $f\in L^1(\RR)$ and for almost every $x\in \RR$,
+\[
+u(x, y) \converges{y\to 0} \to f(x)
+.\]
 
 
 # Common Inequalities

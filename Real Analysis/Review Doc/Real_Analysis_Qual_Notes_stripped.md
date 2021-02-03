@@ -1690,19 +1690,21 @@ a.  In parts:
 -   Verify that \( {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
 -   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \) is a Banach space.
 
-b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \), `\begin{align*}
+b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \),
+    \[
     L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}
-    .\end{align*}`{=tex}
+    .\]
 
 ## 3
 
 a.  Prove that if \( f, g: {\mathbb{R}}^n\to {\mathbb{C}} \) is both measurable then \( F(x, y) \coloneqq f(x) \) and \( h(x, y)\coloneqq f(x-y) g(y) \) is measurable on \( {\mathbb{R}}^n\times{\mathbb{R}}^n \).
 
-b.  Show that if \( f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) and \( g\in L^1({\mathbb{R}}^n) \), then \( f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) is well defined, and carefully show that it satisfies the following properties: `\begin{align*}
+b.  Show that if \( f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) and \( g\in L^1({\mathbb{R}}^n) \), then \( f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) is well defined, and carefully show that it satisfies the following properties:
+    \[
     {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty
     {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
     {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2
-    .\end{align*}`{=tex}
+    .\]
 
 > Hint: first show \( {\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}} \).
 
@@ -1716,7 +1718,7 @@ Let \( f: [0, 1]\to {\mathbb{R}} \) be continuous, and prove the Weierstrass app
 
 ## Problem 1
 
-Let \( E \subseteq {\mathbb{R}}^n \) be bounded. Prove the following are equivalent:
+`\label{equivalence_of_approximating_measures}`{=tex} Let \( E \subseteq {\mathbb{R}}^n \) be bounded. Prove the following are equivalent:
 
 1.  For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that
     \[
@@ -1816,42 +1818,95 @@ See `\cref{hilbert_space_exam_question}`{=tex}
 
 # Practice Exam (November 2014)
 
+## Problem 1
+
+Let \( m_*(E) \) denote the Lebesgue outer measure of a set \( E \subseteq {\mathbb{R}}^n \).
+
+a.  Prove using the definition of Lebesgue outer measure that
+    \[
+    m \qty{ \bigcup_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
+    .\]
+
+b.  Prove that for any \( E \subseteq {\mathbb{R}}^n \) and any \( \epsilon> 0 \) there exists an open set \( G \) with \( E \subseteq G \) and
+    \[
+    m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
+    .\]
+
+## Problem 2
+
+a.  See `\cref{equivalence_of_approximating_measures}`{=tex}
+
+b.  Let \( f_k \) be a sequence of extended real-valued Lebesgue measurable function.
+
+    i.  Prove that \( \inf_k f_k, \sup_k f_k \) are both Lebesgue measurable function.
+
+        *Hint: argue that*
+        \[
+        \left\{{x {~\mathrel{\Big|}~}\inf_k f_k(x) < a}\right\} = \bigcup_k \left\{{x {~\mathrel{\Big|}~}f_k(x) < a}\right\}
+        .\]
+
+    ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
+
+## Problem 3
+
+a.  Prove that if \( f, g\in L^+({\mathbb{R}}) \) then
+    \[
+    \int(f +g) = \int f + \int g
+    .\]
+    Extend this to establish that if \( \left\{{ f_k}\right\} \subseteq L^+({\mathbb{R}}^n) \) then
+    \[
+      \int \sum_k f_k = \sum_k \int f_k
+      .\]
+
+b.  Let \( \left\{{E_j}\right\}_{j\in {\mathbb{N}}} \subseteq \mathcal{M}({\mathbb{R}}^n) \) with \( E_j \nearrow E \). Use the countable additivity of \( \mu_f \) on \( \mathcal{M}({\mathbb{R}}^n) \) established above to show that
+    \[
+      \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
+      .\]
+
+## Problem 4
+
+a.  Show that \( f\in L^1({\mathbb{R}}^n) \implies {\left\lvert {f(x)} \right\rvert} < \infty \) almost everywhere.
+
+b.  Show that if \( \left\{{f_k}\right\} \subseteq L^1({\mathbb{R}}^n) \) with \( \sum {\left\lVert {f_k} \right\rVert}_1 < \infty \) then \( \sum f_k \) converges almost everywhere and in \( L^1 \).
+
+c.  Use the Dominated Convergence Theorem to evaluate
+    \[
+    \lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \,dx
+    .\]
+
+# Practice Exam (November 2014)
+
 ## 1: Fubini-Tonelli
 
-### a
+a.  Carefully state Tonelli's theorem for a nonnegative function \( F(x, t) \) on \( {\mathbb{R}}^n\times{\mathbb{R}} \).
 
-Carefully state Tonelli's theorem for a nonnegative function \( F(x, t) \) on \( {\mathbb{R}}^n\times{\mathbb{R}} \).
+b.  Let \( f:{\mathbb{R}}^n\to [0, \infty] \) and define
+    \[
+    {\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\}
+    .\]
 
-### b
+    Prove the validity of the following two statements:
 
-Let \( f:{\mathbb{R}}^n\to [0, \infty] \) and define `\begin{align*}
-{\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\}
-.\end{align*}`{=tex}
-
-Prove the validity of the following two statements:
-
-1.  \( f \) is Lebesgue measurable on \( {\mathbb{R}}^{n} \iff {\mathcal{A}} \) is a Lebesgue measurable subset of \( {\mathbb{R}}^{n+1} \).
-2.  If \( f \) is Lebesgue measurable on \( {\mathbb{R}}^n \) then `\begin{align*}
-    m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}{~\mathrel{\Big|}~}f(x) \geq t\right\}\right) d t
-    .\end{align*}`{=tex}
+    1.  \( f \) is Lebesgue measurable on \( {\mathbb{R}}^{n} \iff {\mathcal{A}} \) is a Lebesgue measurable subset of \( {\mathbb{R}}^{n+1} \).
+    2.  If \( f \) is Lebesgue measurable on \( {\mathbb{R}}^n \) then
+        \[
+        m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}{~\mathrel{\Big|}~}f(x) \geq t\right\}\right) d t
+        .\]
 
 ## 2: Convolutions and the Fourier Transform
 
-### a
+a.  Let \( f, g\in L^1({\mathbb{R}}^n) \) and give a definition of \( f\ast g \).
 
-Let \( f, g\in L^1({\mathbb{R}}^n) \) and give a definition of \( f\ast g \).
+b.  Prove that if \( f, g \) are integrable and bounded, then
+    \[
+    (f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0
+    .\]
 
-### b
+c.  In parts:
 
-Prove that if \( f, g \) are integrable and bounded, then `\begin{align*}
-(f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0
-.\end{align*}`{=tex}
-
-### c
-
-1.  Define the *Fourier transform* of an integrable function \( f \) on \( {\mathbb{R}}^n \).
-2.  Give an outline of the proof of the Fourier inversion formula.
-3.  Give an example of a function \( f\in L^1({\mathbb{R}}^n) \) such that \( \widehat{f} \) is not in \( L^1({\mathbb{R}}^n) \).
+    1.  Define the *Fourier transform* of an integrable function \( f \) on \( {\mathbb{R}}^n \).
+    2.  Give an outline of the proof of the Fourier inversion formula.
+    3.  Give an example of a function \( f\in L^1({\mathbb{R}}^n) \) such that \( \widehat{f} \) is not in \( L^1({\mathbb{R}}^n) \).
 
 ## 3: Hilbert Spaces
 
@@ -1859,104 +1914,105 @@ Prove that if \( f, g \) are integrable and bounded, then `\begin{align*}
 
 Let \( \left\{{u_n}\right\}_{n=1}^\infty \) be an orthonormal sequence in a Hilbert space \( H \).
 
-### a
+a.  Let \( x\in H \) and verify that
+    \[
+    \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
+    =
+    \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+    .\]
+    for any \( N\in {\mathbb{N}} \) and deduce that
+    \[
+    \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
+    .\]
 
-Let \( x\in H \) and verify that `\begin{align*}
-\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
-=
-\|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-.\end{align*}`{=tex} for any \( N\in {\mathbb{N}} \) and deduce that `\begin{align*}
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
-.\end{align*}`{=tex}
+b.  Let \( \left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}}) \) and prove that there exists an \( x\in H \) such that \( a_n = {\left\langle {x},~{u_n} \right\rangle} \) for all \( n\in {\mathbb{N}} \), and moreover \( x \) may be chosen such that
+    \[
+    {\left\lVert {x} \right\rVert}_H = \qty{ \sum_{n\in {\mathbb{N}}} {\left\lvert {a_n} \right\rvert}^2}^{1\over 2}
+    .\]
 
-### b
+c.  Prove that if \( \left\{{u_n}\right\} \) is *complete*, Bessel's inequality becomes an equality.
 
-Let \( \left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}}) \) and prove that there exists an \( x\in H \) such that \( a_n = {\left\langle {x},~{u_n} \right\rangle} \) for all \( n\in {\mathbb{N}} \), and moreover \( x \) may be chosen such that `\begin{align*}
-{\left\lVert {x} \right\rVert}_H = \qty{ \sum_{n\in {\mathbb{N}}} {\left\lvert {a_n} \right\rvert}^2}^{1\over 2}
-.\end{align*}`{=tex}
+::: {.solution title="part b"}
+```{=tex}
+\envlist
+```
+-   Take \( \left\{{a_n}\right\} \in \ell^2 \), then note that \( \sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies \) the tails vanish.
 
-Proof
+-   Define \( x \coloneqq\displaystyle\lim_{N\to\infty} S_N \) where \( S_N = \sum_{k=1}^N a_k u_k \)
 
-:   ```{=tex}
-    \hfill
-    ```
-    -   Take \( \left\{{a_n}\right\} \in \ell^2 \), then note that \( \sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies \) the tails vanish.
+-   \( \left\{{S_N}\right\} \) is Cauchy and \( H \) is complete, so \( x\in H \).
 
-    -   Define \( x \coloneqq\displaystyle\lim_{N\to\infty} S_N \) where \( S_N = \sum_{k=1}^N a_k u_k \)
+-   By construction,
+    \[
+    {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n 
+    \]
+    since the \( u_k \) are all orthogonal.
 
-    -   \( \left\{{S_N}\right\} \) is Cauchy and \( H \) is complete, so \( x\in H \).
+-   By Pythagoras since the \( u_k \) are normal,
+    \[
+    {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
+    .\]
+:::
 
-    -   By construction, `\begin{align*}
-        {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n 
-        \end{align*}`{=tex} since the \( u_k \) are all orthogonal.
+::: {.solution title="part c"}
+Let \( x \) and \( u_n \) be arbitrary.
 
-    -   By Pythagoras since the \( u_k \) are normal, `\begin{align*}
-        {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
-        .\end{align*}`{=tex}
+\[
+{\left\langle {x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle}
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+{\left\langle {\sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+\sum_{k=1}^\infty  {\left\langle {{\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+\sum_{k=1}^\infty  {\left\langle {x},~{u_k} \right\rangle} {\left\langle {u_k },~{u_n} \right\rangle} \\
+&= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {x},~{u_n} \right\rangle} = 0 \\
+\implies 
+x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k &= 0 \quad\text{by completeness}
+.\]
 
-### c
-
-Prove that if \( \left\{{u_n}\right\} \) is *complete*, Bessel's inequality becomes an equality.
-
-Proof
-
-:   Let \( x \) and \( u_n \) be arbitrary.
-
-    `\begin{align*}
-    {\left\langle {x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle}
-    &=
-    {\left\langle {x},~{u_n} \right\rangle}
-    -
-    {\left\langle {\sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
-    &=
-    {\left\langle {x},~{u_n} \right\rangle}
-    -
-    \sum_{k=1}^\infty  {\left\langle {{\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
-    &=
-    {\left\langle {x},~{u_n} \right\rangle}
-    -
-    \sum_{k=1}^\infty  {\left\langle {x},~{u_k} \right\rangle} {\left\langle {u_k },~{u_n} \right\rangle} \\
-    &= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {x},~{u_n} \right\rangle} = 0 \\
-    \implies 
-    x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k &= 0 \quad\text{by completeness}
-    .\end{align*}`{=tex}
-
-    So `\begin{align*}
-    x = \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle} u_k
-    \implies
-    {\left\lVert {x} \right\rVert}^2 = \sum_{k=1}^\infty {\left\lvert {{\left\langle {x},~{u_k} \right\rangle}} \right\rvert}^2. \hfill\blacksquare
-    .\end{align*}`{=tex}
+So
+\[
+x = \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle} u_k
+\implies
+{\left\lVert {x} \right\rVert}^2 = \sum_{k=1}^\infty {\left\lvert {{\left\langle {x},~{u_k} \right\rangle}} \right\rvert}^2. \hfill\blacksquare
+.\]
+:::
 
 ## 4: \( L^p \) Spaces {#lp-spaces}
 
-### a
+a.  Prove Holder's inequality: let \( f\in L^p, g\in L^q \) with \( p, q \) conjugate, and show that
+    \[
+    {\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q}
+    .\]
 
-Prove Holder's inequality: let \( f\in L^p, g\in L^q \) with \( p, q \) conjugate, and show that `\begin{align*}
-{\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q}
-.\end{align*}`{=tex}
+b.  Prove Minkowski's Inequality:
+    \[
+    1\leq p < \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p}
+    .\]
+    Conclude that if \( f, g\in L^p({\mathbb{R}}^n) \) then so is \( f+g \).
 
-### b
+c.  Let \( X = [0, 1] \subset {\mathbb{R}} \).
 
-Prove Minkowski's Inequality: `\begin{align*}
-1\leq p < \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p}
-.\end{align*}`{=tex} Conclude that if \( f, g\in L^p({\mathbb{R}}^n) \) then so is \( f+g \).
+    1.  Give a definition of the Banach space \( L^\infty(X) \) of essentially bounded functions of \( X \).
 
-### c
-
-Let \( X = [0, 1] \subset {\mathbb{R}} \).
-
-1.  Give a definition of the Banach space \( L^\infty(X) \) of essentially bounded functions of \( X \).
-
-2.  Let \( f \) be non-negative and measurable on \( X \), prove that `\begin{align*}
-    \int_X f(x)^p \,dx \overset{p\to\infty}\to
-    \begin{dcases}
-    \infty \quad\text{or} \\
-    m\qty{\left\{{f^{-1}(1)}\right\}}
-    \end{dcases}
-    ,\end{align*}`{=tex} and characterize the functions of each type
+    2.  Let \( f \) be non-negative and measurable on \( X \), prove that
+        \[
+         \int_X f(x)^p \,dx \overset{p\to\infty}\to
+         \begin{dcases}
+         \infty \quad\text{or} \\
+         m\qty{\left\{{f^{-1}(1)}\right\}}
+         \end{dcases}
+         ,\]
+        and characterize the functions of each type
 
 ::: {.solution}
-`\begin{align*}
+\[
 \int f^p 
 &= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
 &= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
@@ -1966,27 +2022,272 @@ Let \( X = [0, 1] \subset {\mathbb{R}} \).
 0 & m(\left\{{x\geq 1}\right\}) = 0 \\ 
 \infty & m(\left\{{x\geq 1}\right\}) > 0.
 \end{cases}
-\end{align*}`{=tex}
+\]
 :::
 
-```{=html}
-<!--\todo{Justify passing limit into integrals.}-->
-```
 ## 5: Dual Spaces
 
 Let \( X \) be a normed vector space.
 
-### a
+a.  Give the definition of what it means for a map \( L:X\to {\mathbb{C}} \) to be a *linear functional*.
 
-Give the definition of what it means for a map \( L:X\to {\mathbb{C}} \) to be a *linear functional*.
+b.  Define what it means for \( L \) to be *bounded* and show \( L \) is bounded \( \iff L \) is continuous.
 
-### b
+c.  Prove that \( (X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
 
-Define what it means for \( L \) to be *bounded* and show \( L \) is bounded \( \iff L \) is continuous.
+# Extra Problems from Problem Sets
 
-### c
+## 2010 6.1
 
-Prove that \( (X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
+Show that
+\[
+\int_{{\mathbb{B}}^n} {1 \over {\left\lvert {x} \right\rvert}^p } \,dx&< \infty \iff p < n \\
+\int_{{\mathbb{R}}^n\setminus{\mathbb{B}}^n} {1 \over {\left\lvert {x} \right\rvert}^p } \,dx&< \infty \iff p > n 
+.\]
+
+## 2010 6.2
+
+Show that
+\[
+\int_{{\mathbb{R}}^n} {\left\lvert { f} \right\rvert} = \int_0^{\infty } m(A_t)\,dt&& A_t \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} > t}\right\}
+.\]
+
+## 2010 6.5
+
+Suppose \( F \subseteq {\mathbb{R}} \) with \( m(F^c) < \infty \) and let \( \delta(x) \coloneqq d(x, F) \) and
+\[
+I_F(x) \coloneqq\int_{\mathbb{R}}{ \delta(y) \over {\left\lvert {x-y} \right\rvert}^2 } \,dy
+.\]
+
+a.  Show that \( \delta \) is continuous.
+
+b.  Show that if \( x\in F^c \) then \( I_F(x) = \infty \).
+
+c.  Show that \( I_F(x) < \infty \) for almost every \( x \)
+
+## 2010 7.1
+
+Let \( (X, \mathcal{M}, \mu) \) be a measure space and prove the following properties of \( L^ \infty (X, \mathcal{M}, \mu) \):
+
+-   If \( f, g \) are measurable on \( X \) then
+    \[
+    {\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_{\infty }
+    .\]
+
+-   \( {\left\lVert {{\,\cdot\,}} \right\rVert}_{\infty } \) is a norm on \( L^{\infty } \) making it a Banach space.
+
+-   \( {\left\lVert {f_n - f} \right\rVert}_{\infty } \overset{n\to \infty }\to 0 \iff \) there exists an \( E\in \mathcal{M} \) such that \( \mu(X\setminus E) = 0 \) and \( f_n \to f \) uniformly on \( E \).
+
+-   Simple functions are dense in \( L^{\infty } \).
+
+## 2010 7.2
+
+Show that for \( 0 < p < q \leq \infty \), \( {\left\lVert {a} \right\rVert}_{\ell^q} \leq {\left\lVert {a} \right\rVert}_{\ell^p} \) over \( {\mathbb{C}} \), where \( {\left\lVert {a} \right\rVert}_{\infty } \coloneqq\sup_j {\left\lvert {a_j} \right\rvert} \).
+
+## 2010 7.3
+
+Let \( f, g \) be non-negative measurable functions on \( [0, \infty) \) with
+\[
+A &\coloneqq\int_0^{\infty } f(y) y^{-1/2} \,dy< \infty \\
+B &\coloneqq\qty{ \int_0^{\infty } {\left\lvert { g(y) } \right\rvert} }^2 \,dy< \infty  
+.\]
+
+Show that
+\[
+\int_0^{\infty } \qty{ \int_0^{\infty } f(y) \,dy} {g(x) \over x} \,dx\leq AB
+.\]
+
+## 2010 7.4
+
+Let \( (X, \mathcal{M}, \mu) \) be a measure space and \( 0 < p < q< \infty \). Prove that if \( L^q(X) \subseteq L^p(X) \), then \( X \) does not contain sets of arbitrarily large finite measure.
+
+## 2010 7.5
+
+Suppose \( 0 < a < b \leq \infty \), and find examples of functions \( f \in L^p((0, \infty )) \) if and only if:
+
+-   \( a < p < b \)
+
+-   \( a \leq p \leq b \)
+
+-   \( p = a \)
+
+*Hint: consider functions of the following form:*
+\[
+f(x) \coloneqq x^{- \alpha} {\left\lvert { \log(x) } \right\rvert}^{ \beta}
+.\]
+
+## 2010 7.6
+
+Define
+\[
+F(x) &\coloneqq\qty{ \sin(\pi x) \over \pi x}^2 \\
+G(x) &\coloneqq
+\begin{cases}
+1 - {\left\lvert {x} \right\rvert} & {\left\lvert {x} \right\rvert} \leq 1
+\\
+0 & \text{else}.
+\end{cases}
+\]
+
+a.  Show that \( \widehat{G}(\xi) = F(\xi) \)
+
+b.  Compute \( \widehat{F} \).
+
+c.  Give an example of a function \( g\not \in L^1({\mathbb{R}}) \) which is the Fourier transform of an \( L^1 \) function.
+
+*Hint: write \( \widehat{G}(\xi) = H(\xi) + H(-\xi) \) where*
+\[
+H(\xi) \coloneqq e^{2\pi i \xi} \int_0^1 y e^{2\pi i y \xi }\,dy
+.\]
+
+## 2010 7.7
+
+Show that for each \( \epsilon>0 \) the following function is the Fourier transform of an \( L^1({\mathbb{R}}^n) \) function:
+\[
+F(\xi) \coloneqq\qty{1 \over 1 + {\left\lvert {\xi} \right\rvert}^2}^{\epsilon}
+.\]
+
+*Hint: show that*
+
+\[
+K_\delta(x) &\coloneqq\delta^{-n/2} e^{-\pi {\left\lvert {x} \right\rvert}^2 \over \delta} \\
+f(x) &\coloneqq\int_0^{\infty } K_{\delta}(x) e^{-\pi \delta} \delta^{\epsilon - 1} \,d \delta \\
+\Gamma(s) &\coloneqq\int_0^{\infty } e^{-t} t^{s-1} \,dt\\
+\implies \widehat{f}(\xi) &= \int_0^{\infty } e^{- \pi \delta {\left\lvert {\xi} \right\rvert}^2} e^{ -\pi \delta} \delta^{\epsilon - 1}
+= \pi^{-s} \Gamma(\epsilon) F(\xi)
+.\]
+
+## 2010 7 Challenge 1: Generalized Holder
+
+Suppose that
+\[
+1\leq p_j \leq \infty, && \sum_{j=1}^n {1\over p_j} = {1\over r} \leq 1
+.\]
+
+Show that if \( f_j \in L^{p_j} \) for each \( 1\leq j \leq n \), then
+\[
+\prod f_j \in L^r, && {\left\lVert { \prod f_j } \right\rVert}_r \leq \prod {\left\lVert {f_j} \right\rVert}_{p_j}
+.\]
+
+## 2010 7 Challenge 2: Young's Inequality
+
+Suppose \( 1\leq p,q,r \leq \infty \) with
+\[
+{1\over p } + {1 \over q} = 1 + {1 \over r}
+.\]
+
+Prove that
+\[
+f \in L^p, g\in L^q \implies f \ast g \in L^r \text{ and } {\left\lVert {f \ast g} \right\rVert}_r \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {g} \right\rVert}_q
+.\]
+
+## 2010 9.1
+
+Show that the set \( \left\{{ u_k(j) \coloneqq\delta_{ij} }\right\} \subseteq \ell^2({\mathbb{Z}}) \) and forms an orthonormal system.
+
+## 2010 9.2
+
+Consider \( L^2([0, 1]) \) and define
+\[
+e_0(x) &= 1 \\
+e_1(x) &= \sqrt{3}(2x-1)
+.\]
+
+a.  Show that \( \left\{{e_0, e_1}\right\} \) is an orthonormal system.
+
+b.  Show that the polynomial \( p(x) \) where \( \deg(p) = 1 \) which is closest to \( f(x) = x^2 \) in \( L^2([0, 1]) \) is given by
+    \[
+    h(x) = x - {1\over 6}
+    .\]
+
+Compute \( {\left\lVert {f - g} \right\rVert}_2 \).
+
+## 2010 9.3
+
+Let \( E \subseteq H \) a Hilbert space.
+
+a.  Show that \( E\perp \subseteq H \) is a closed subspace.
+
+b.  Show that \( (E^\perp)^\perp = \operatorname{cl}_H(E) \).
+
+## 2010 9.5b
+
+Let \( f\in L^1((0, 2\pi)) \).
+
+i.  Show that for an \( \epsilon>0 \) one can write \( f = g+h \) where \( g\in L^2((0, 2\pi)) \) and \( {\left\lVert {H} \right\rVert}_1 < \epsilon \).
+
+## 2010 9.6
+
+Prove that every closed convex \( K \subset H \) a Hilbert space has a unique element of minimal norm.
+
+## 2010 9 Challenge
+
+Let \( U \) be a unitary operator on \( H \) a Hilbert space, let \( M \coloneqq\left\{{x\in H {~\mathrel{\Big|}~}Ux = x}\right\} \), let \( P \) be the orthogonal projection onto \( M \), and define
+\[
+S_N \coloneqq{1\over N} \sum_{n=0}^{N-1} U^n
+.\]
+Show that for all \( x\in H \),
+\[
+{\left\lVert { S_N x - Px} \right\rVert}_H \overset{N\to \infty } \to 0
+.\]
+
+## 2010 10.1
+
+Let \( \nu, \mu \) be signed measures, and show that
+\[
+\nu \perp \mu \text{ and } \nu \ll {\left\lvert { \mu} \right\rvert} \implies \nu = 0
+.\]
+
+## 2010 10.2
+
+Let \( f\in L^1({\mathbb{R}}^n) \) with \( f\neq 0 \).
+
+a.  Prove that there exists a \( c>0 \) such that
+    \[
+    Hf(x) \geq {c \over (1 + {\left\lvert {x} \right\rvert})^n }
+    .\]
+
+## 2010 10.3
+
+Consider the function
+\[
+f(x) \coloneqq
+\begin{cases}
+{1\over {\left\lvert {x} \right\rvert} \qty{ \log\qty{1\over x}}^2 } &  {\left\lvert {x} \right\rvert} \leq {1\over 2}
+\\
+0 & \text{else}.
+\end{cases}
+\]
+
+a.  Show that \( f \in L^1({\mathbb{R}}) \).
+
+b.  Show that there exists a \( c>0 \) such that for all \( {\left\lvert {x} \right\rvert} \leq 1/2 \),
+    \[
+    Hf(x) \geq {c \over {\left\lvert {x} \right\rvert} \log\qty{1\over {\left\lvert {x} \right\rvert}} }
+    .\]
+    Conclude that \( Hf \) is not locally integrable.
+
+## 2010 10.4
+
+Let \( f\in L^1({\mathbb{R}}) \) and let \( \mathcal{U}\coloneqq\left\{{(x, y) \in {\mathbb{R}}^2 {~\mathrel{\Big|}~}y > 0}\right\} \) denote the upper half plane. For \( (x, y) \in \mathcal{U} \) define
+\[
+u(x, y) \coloneqq f \ast P_y(x) && \text{where } P_y(x) \coloneqq{1\over \pi}\qty{y \over t^2 + y^2}
+.\]
+
+a.  Prove that there exists a constant \( C \) independent of \( f \) such that for all \( x\in {\mathbb{R}} \),
+    \[
+    \sup_{y > 0} {\left\lvert { u(x, y) } \right\rvert} \leq C\cdot Hf(x)
+    .\]
+
+    *Hint: write the following and try to estimate each term:*
+    \[
+    u(x, y) = \int_{{\left\lvert {t} \right\rvert} < y} f(x - t) P_y(t) \,dt+ \sum_{k=0}^{\infty } \int_{A_k} f(x-t) P_y(t)\,dt&& A_k \coloneqq\left\{{2^ky \leq {\left\lvert {t} \right\rvert} < 2^{k+1}y}\right\}
+    .\]
+
+b.  Following the proof of the Lebesgue differentiation theorem, show that for \( f\in L^1({\mathbb{R}}) \) and for almost every \( x\in {\mathbb{R}} \),
+    \[
+    u(x, y) \overset{y\to 0} \to f(x)
+    .\]
 
 # Common Inequalities
 
