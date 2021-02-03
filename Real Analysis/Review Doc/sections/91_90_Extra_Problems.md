@@ -92,3 +92,17 @@ Hf(x) \geq {c \over \abs{x} \log\qty{1\over \abs x} }
 Conclude that $Hf$ is not locally integrable.
 
 
+## 2010 10.4
+
+Let $f\in L^1(\RR)$ and let \( \mathcal{U}\da \ts{(x, y) \in \RR^2 \st y > 0}  \) denote the upper half plane.
+For $(x, y) \in \mathcal{U}$ define 
+\[
+u(x, y) \da f \convolve P_y(x) && \text{where } P_y(x) \da {1\over \pi}\qty{y \over t^2 + y^2}
+.\]
+
+*Hint: write the following and try to estimate each term:*
+\[
+u(x, y) = 
+.\]
+
+
