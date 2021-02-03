@@ -181,8 +181,8 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 :::{.proposition title="Volumes of Rectangles"}
 If $\ts{R_j} \covers R$ is a covering of $R$ by rectangles,
 \[
-R = \dot{\disjoint_{j}} R_j \implies \abs R = \sum \abs R_j \\
-R \subseteq \Union R_j \implies \abs R \leq \sum \abs R_j
+R = \overset{\circ}{\Disjoint_{j}} R_j \implies \abs R = \sum \abs R_j \\
+R \subseteq \Union_j R_j \implies \abs R \leq \sum \abs R_j
 .\]
 
 :::
