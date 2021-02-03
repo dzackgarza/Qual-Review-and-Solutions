@@ -177,6 +177,17 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 .\]
 :::
 
+
+:::{.proposition title="Volumes of Rectangles"}
+If $\ts{R_j} \covers R$ is a covering of $R$ by rectangles,
+\[
+R = \dot{\disjoint_{j}} R_j \implies \abs R = \sum \abs R_j \\
+R \subseteq \Union R_j \implies \abs R \leq \sum \abs R_j
+.\]
+
+:::
+
+
 :::{.definition title="Limsup and Liminf of Sets"}
 \[
 \limsup_{n} A_{n} \da \intersect_{n} \union_{j\geq n} A_{j}&= \theset{x \suchthat x\in A_{n} \text{ for inf. many $n$}}  \\
@@ -306,6 +317,11 @@ Every continuous function on a compact space is uniformly continuous.
 
 :::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
 Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::
+
+:::{.proof title="?"}
+Todo.
+\todo[inline]{Proof.}
 :::
 
 :::{.proposition title="A unit ball that is not compact"}
