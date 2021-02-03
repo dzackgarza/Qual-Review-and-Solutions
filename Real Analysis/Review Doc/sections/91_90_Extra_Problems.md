@@ -38,6 +38,22 @@ Show that
 Let $(X, \mathcal{M}, \mu)$ be a measure space and $0 < p < q< \infty$.
 Prove that if $L^q(X) \subseteq L^p(X)$, then $X$ does not contain sets of arbitrarily large finite measure.
 
+## 2010 7.5
+
+Suppose $0 < a < b \leq \infty$, and find examples of functions $f \in L^p((0, \infty ))$ if and only if:
+
+- $a < p < b$
+
+- $a \leq p \leq b$
+
+- $p = a$
+
+*Hint: consider functions of the following form:*
+\[
+f(x) \da x^{- \alpha} \abs{ \log(x) }^{ \beta}
+.\]
+
+
 
 
 ## 2010 9.1
