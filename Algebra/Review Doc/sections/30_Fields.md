@@ -361,8 +361,12 @@ In this case,
 :::{.example title="?"}
 \envlist
 
+- Every quadratic extension is Galois.
 - $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
-- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1).
+- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
+  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
+  Slogan: "Being Galois is not transitive in towers."
 :::
 
 
