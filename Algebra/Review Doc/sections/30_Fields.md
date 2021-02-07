@@ -363,19 +363,6 @@ In this case,
 
 :::
 
-### Common Counterexamples
-
-:::{.example title="?"}
-\envlist
-
-- Every quadratic extension is Galois.
-- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
-- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
-- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
-  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
-  Slogan: "Being Galois is not transitive in towers."
-:::
-
 ### Fundamental Theorem of Galois Theory
 
 :::{.theorem title="Fundamental Theorem of Galois Theory"}
@@ -425,9 +412,13 @@ x &\mapsto x^p
 
 :::
 
-:::{.proposition}
-Every quadratic extension is Galois.
+
+:::{.example title="Quadratic Fields"}
+Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: if \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ since \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
+So $L$ is a splitting field.
+If $\ch(k) \neq 2$, then $\dd{}{x} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0$, making $L$ separable.
 :::
+
 
 :::{.proposition}
 If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
@@ -453,6 +444,22 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 \Gal(FL/L) = \Gal(F / F\intersect L) \subset \Gal(F/k)
 .\]
 :::
+
+
+### Counterexamples
+
+:::{.example title="?"}
+\envlist
+
+- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
+- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
+  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
+  Slogan: "Being Galois is not transitive in towers."
+- A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
+:::
+
+
 
 ## Cyclotomic Polynomials
 
