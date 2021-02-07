@@ -40,6 +40,7 @@ The following are equivalent
 
 - Irreducible $\implies$ separable.
 - The minimal polynomial of an algebraic element is always irreducible.
+- Every irreducible polynomial over a perfect field is separable.
 - Every finite extension of a perfect field is separable. 
 :::
 
