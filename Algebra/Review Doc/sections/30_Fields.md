@@ -52,7 +52,7 @@ Let $L/k$ be a finite field extension.
 The following are equivalent:
 
 1. \( L/k \) is a **Galois extension**.
-2. $\abs{\Aut(L/k)} = [L: k]$
+2. $\abs{\Aut(L/k)} = [L: k]$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
 5. $L$ is finite, normal, and separable.
@@ -458,7 +458,6 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
   Slogan: "Being Galois is not transitive in towers."
 - A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
 :::
-
 
 
 ## Cyclotomic Polynomials
