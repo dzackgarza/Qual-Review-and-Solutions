@@ -27,6 +27,13 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divi
 .\]
 :::
 
+
+:::{.fact}
+If $R$ is an integral domain, prime $\implies$ irreducible.
+If $R$ is a UFD, then prime $\iff$ irreducible.
+:::
+
+
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
 Equivalently, the map
