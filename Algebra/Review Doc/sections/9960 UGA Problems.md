@@ -529,11 +529,11 @@ $K$, then $E$ is an algebraic closure of $K$.
 :::{.problem title="Hungerford 5.3.8"}
 Show that no finite field is algebraically closed.
 
-> Hint: if $K = \{a_i\}_{i=0}^n$, consider
+*Hint: if $K = \{a_i\}_{i=0}^n$, consider*
 \[ 
 f(x) = a_1 + \prod_{i=0}^n (x - a_i) \in K[x]
 \] 
-  where $a_1 \neq 0$.
+*where $a_1 \neq 0$.*
 
 :::
 
@@ -551,12 +551,12 @@ Show that every element in a finite field can be written as the sum of two squar
 :::
 
 :::{.problem title="Hungerford 5.6.1"}
-Let $F/K$ be a field extension. Let$\mathrm{char} K = p \neq 0$ and let $n\geq 1$ be an integer such that
+Let $F/K$ be a field extension. Let $\mathrm{char} K = p \neq 0$ and let $n\geq 1$ be an integer such that
 $(p, n) = 1$. If $v\in F$ and $nv \in K$, then $v\in K$.
 :::
 
-:::{.problem title="Hungerford 5.6.8"} If $\mathrm{char}
-K = p \neq 0$ and$[F: K]$ is finite and not divisible by $p$, then $F$ is separable over
+:::{.problem title="Hungerford 5.6.8"} 
+If $\mathrm{char} K = p \neq 0$ and$[F: K]$ is finite and not divisible by $p$, then $F$ is separable over
 $K$.
 :::
 
@@ -585,7 +585,7 @@ the following are equivalent:
     is a ring homomorphism $\alpha: E \to C$ such that $\alpha \mid_F$
     is the identity on $F$.
 
-> Hint: use Zorn's Lemma.
+*Hint: use Zorn's Lemma.*
 
 :::
 
@@ -1029,7 +1029,7 @@ Let $R$ be a commutative ring and $M$ an $R-$module.
 1.  Show that the center of the ring $M_n(R)$ consists of matrices of
     the form $rI_n$ where $r$ is in the center of $R$.
 
-  > Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.
+    *Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.*
 
 2.  Show that $Z(M_n(R)) \cong Z(R)$.
 :::
@@ -1086,7 +1086,7 @@ C = \left(\begin{array}{llll}{a_{11}} & {\cdots} & {a_{1 m}} & {b_{1}} \\ {} & {
   $\mathrm{rank} A = \mathrm{rank} C$ and the solution is unique
   $\iff \mathrm{rank}(A) = m$.
 
-  >Hint: use part 2.
+  *Hint: use part 2.*
 
 4.  If $B=0$, so the system $AX=B$ is homogeneous, then it has a
     nontrivial solution $\iff \mathrm{rank} A < m$ and in particular
@@ -1186,16 +1186,14 @@ possible Jordan Canonical Forms over $\Bbb C$.
 Show that if $\phi$ is an endomorphism of a free $k$-module $E$ of finite rank, then
 $p_\phi(\phi) = 0$.
 
-**Hint**:
-If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then 
+*Hint: If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then*
 \[
 B^a B = |B| I_n = p_\phi I_n \in M_n(k[x])
 .\]
-If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then 
+*If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then*
 \[ 
-\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0
-\]
-for all $u\in E$.
+\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0 && \forall u\in E
+.\]
 
 :::
 
