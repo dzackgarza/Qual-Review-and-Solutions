@@ -67,7 +67,7 @@ The following are equivalent:
 2. $\abs{\Aut(L/k)} = [L: k]$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-5. $L$ is finite, normal, and separable.
+5. $L$ is finite, normal, and separable (most general definition?)
 
 
 In this case, we define the **Galois group** as 
