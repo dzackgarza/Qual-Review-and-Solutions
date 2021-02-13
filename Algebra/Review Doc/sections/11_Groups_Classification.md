@@ -91,15 +91,33 @@ $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 :::{.theorem title="Recognizing Direct Products"}
 We have $G \cong H \times K$ when
 
-- $H, K \normal G$
+1. $H, K \normal G$
 
-- $G = HK$.
+2. $G = HK$.
 
-- $H\intersect K = \theset{e} \subset G$
+3. $H\intersect K = \theset{e} \subset G$
 
 > Note: can relax to $[h,k] = 1$ for all $h, k$.
 
 :::
+
+
+:::{.proof title="?"}
+This follows from the fact that with these conditions, the following map is an isomorphism:
+\[
+\Gamma: H\cross K &\to G \\
+(h, k) &\mapsto hk
+.\]
+
+- This is surjective by condition (2)
+- This is injective by checking the kernel:
+\[
+\ker \Gamma = \ts{ (h,k) \st hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \intersect H = \ts{1_G}
+.\]
+
+
+:::
+
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
 We have $G \cong \prod_{i=1}^n H_i$ when
