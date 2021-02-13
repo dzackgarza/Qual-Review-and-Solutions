@@ -101,20 +101,22 @@ We have $G \cong H \times K$ when
 
 :::
 
-
 :::{.proof title="?"}
-This follows from the fact that with these conditions, the following map is an isomorphism:
+With these conditions, the following map is an isomorphism:
 \[
 \Gamma: H\cross K &\to G \\
 (h, k) &\mapsto hk
 .\]
 
+- This is a group morphism by condition (1):
+\[
+\Gamma(h_1, k_1) \Gamma(h_2, k_2) \da (h_1 k_1) (h_2 k_2) = h_1 ({ \color{red} k_1 h_2 } ) k_2 = h_1 ( { \color{red} h_2 k_1 } ) k_2 = (h_1 h_2) ( k_1 k_2) \da \Gamma( (h_1, k_1)(h_2, k_2) )
+.\]
 - This is surjective by condition (2)
-- This is injective by checking the kernel:
+- This is injective by condition(3) and checking the kernel:
 \[
 \ker \Gamma = \ts{ (h,k) \st hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \intersect H = \ts{1_G}
 .\]
-
 
 :::
 
