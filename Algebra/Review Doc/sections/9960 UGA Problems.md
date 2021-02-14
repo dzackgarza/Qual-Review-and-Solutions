@@ -555,9 +555,8 @@ Let $F/K$ be a field extension. Let $\mathrm{char} K = p \neq 0$ and let $n\geq 
 $(p, n) = 1$. If $v\in F$ and $nv \in K$, then $v\in K$.
 :::
 
-:::{.problem title="Hungerford 5.6.8"} 
-If $\mathrm{char} K = p \neq 0$ and$[F: K]$ is finite and not divisible by $p$, then $F$ is separable over
-$K$.
+:::{.problem title="Hungerford 5.6.8"}
+If $\mathrm{char} K = p \neq 0$ and $[F: K]$ is finite and not divisible by $p$, then $F$ is separable over $K$.
 :::
 
 ### Qual Problems

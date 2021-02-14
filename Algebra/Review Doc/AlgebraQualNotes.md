@@ -1,3 +1,6 @@
+\newcommand{\dx}{\,dx}
+\newcommand{\dt}{\,dt}
+\newcommand{\dy}{\,dy}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -7,30 +10,10 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
@@ -59,6 +42,9 @@
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\Cx}[0]{\operatorname{Cx}}
+\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\ks}[0]{\operatorname{ks}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
@@ -88,6 +74,7 @@
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
@@ -103,6 +90,7 @@
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
 \newcommand{\gr}[0]{{\operatorname{gr}}}
+\newcommand{\grMod}[0]{{\operatorname{grMod}}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -122,12 +110,15 @@
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Top}[0]{{\operatorname{Top}}}
+\newcommand{\Mfd}[0]{{\operatorname{Mfd}}}
 \newcommand{\Ab}[0]{{\operatorname{Ab}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
 \newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
 \newcommand{\Sch}[0]{{\operatorname{Sch}}}
 \newcommand{\sch}[0]{{\operatorname{Sch}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\alg}[0]{\mathrm{Alg}}
 \newcommand{\scalg}[0]{\mathrm{sCAlg}}
 \newcommand{\calg}[0]{\mathrm{CAlg}}
@@ -151,14 +142,18 @@
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
-\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
 \newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
 \newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
 \newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
@@ -174,7 +169,10 @@
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
 \newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\convolve}[0]{\ast}
 \newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
@@ -193,6 +191,7 @@
 \newcommand{\dual}[0]{^\vee}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\eps}[0]{\varepsilon}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
@@ -289,8 +288,13 @@
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\hilb}[0]{\operatorname{Hilb}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Frame}[0]{{\operatorname{Frame}}}
+\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
+\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\Hom}[0]{{\operatorname{Hom}}}
 \newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
@@ -316,9 +320,10 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
+\newcommand{\rmod}[0]{{R\dash\mathrm{mod}}}
+\newcommand{\modr}[0]{{\mathrm{mod}\dash R}}
+\newcommand{\mmod}[0]{{\dash\operatorname{mod}}}
 \newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\modr}[0]{{\operatorname{mod}}}
 \newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
 \newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
@@ -334,12 +339,12 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
 \newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
 \newcommand{\connectsum}[0]{\mathop{\Large \#}}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
@@ -365,6 +370,7 @@
 \newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
@@ -390,6 +396,29 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\coind}{Coind}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\delbar}[0]{\bar{\del}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -410,9 +439,31 @@
 
 \newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\ol[1]{\overline{#1}}
+\newcommand\univcover[1]{\overline{#1}}
+\newcommand\capprod{\frown}
+\newcommand\cupprod{\smile}
+\newcommand\Path{\mathcal{P}}
+\newcommand\gradient{\nabla}
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\cupp[0]{\smile}
+\newcommand\capp[0]{\frown}
+\newcommand\sig[0]{\operatorname{sig}}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
 
 # Topics and Remarks 2
 
@@ -1179,15 +1230,35 @@ $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 :::{.theorem title="Recognizing Direct Products"}
 We have $G \cong H \times K$ when
 
-- $H, K \normal G$
+1. $H, K \normal G$
 
-- $G = HK$.
+2. $G = HK$.
 
-- $H\intersect K = \theset{e} \subset G$
+3. $H\intersect K = \theset{e} \subset G$
 
 > Note: can relax to $[h,k] = 1$ for all $h, k$.
 
 :::
+
+:::{.proof title="?"}
+With these conditions, the following map is an isomorphism:
+\[
+\Gamma: H\cross K &\to G \\
+(h, k) &\mapsto hk
+.\]
+
+- This is a group morphism by condition (1):
+\[
+\Gamma(h_1, k_1) \Gamma(h_2, k_2) \da (h_1 k_1) (h_2 k_2) = h_1 ({ \color{red} k_1 h_2 } ) k_2 = h_1 ( { \color{red} h_2 k_1 } ) k_2 = (h_1 h_2) ( k_1 k_2) \da \Gamma( (h_1, k_1)(h_2, k_2) )
+.\]
+- This is surjective by condition (2)
+- This is injective by condition(3) and checking the kernel:
+\[
+\ker \Gamma = \ts{ (h,k) \st hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \intersect H = \ts{1_G}
+.\]
+
+:::
+
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
 We have $G \cong \prod_{i=1}^n H_i$ when
@@ -1537,6 +1608,13 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divi
 .\]
 :::
 
+
+:::{.fact}
+If $R$ is an integral domain, prime $\implies$ irreducible.
+If $R$ is a UFD, then prime $\iff$ irreducible.
+:::
+
+
 :::{.definition title="Zero Divisor"}
 An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
 Equivalently, the map
@@ -1787,27 +1865,6 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 
 Let $k$ denote a field, and $L/k$ extensions.
 
-:::{.definition title="Characterizations of Perfect Fields"}
-The following are equivalent:
-
-- $k$ is a **perfect** field.
-
-- Every irreducible polynomial $p\in k[x]$ is separable
-
-- Every finite extension $F/k$ is separable.
-
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
-:::
-
-
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
-:::
-
-:::{.definition title="Prime Subfield"}
-The **prime subfield** of a field $F$ is the subfield generated by $1$.
-:::
-
 :::{.definition title="Algebraic Field Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
@@ -1831,10 +1888,22 @@ Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \defineda
 The following are equivalent 
 
 - $L/k$ is **separable**
+- Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
 - $f$ has no repeated factors/roots.
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
 :::
+
+
+:::{.fact}
+\envlist
+
+- Irreducible $\implies$ separable.
+- The minimal polynomial of an algebraic element is always irreducible.
+- Every irreducible polynomial over a perfect field is separable.
+- Every finite extension of a perfect field is separable. 
+:::
+
 
 :::{.definition title="Field Automorphisms"}
 \[ 
@@ -1842,15 +1911,23 @@ The following are equivalent
 .\]
 :::
 
+:::{.remark}
+Note that in general, 
+\[
+\abs{ \Aut(L/k) } \leq [L: K]
+.\]
+
+:::
+
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
 The following are equivalent:
 
 1. \( L/k \) is a **Galois extension**.
-2. $\abs{\Aut(L/k)} = [L: k]$
+2. $\abs{\Aut(L/k)} = [L: k]$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-5. $L$ is finite, normal, and separable.
+5. $L$ is finite, normal, and separable (most general definition?)
 
 
 In this case, we define the **Galois group** as 
@@ -1873,8 +1950,28 @@ It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not
 An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
 :::
 
+:::{.definition title="Primitive Extension"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+:::
+
+:::{.definition title="Prime Subfield"}
+The **prime subfield** of a field $F$ is the subfield generated by $1$.
+:::
+
 
 ## Facts
+
+:::{.definition title="Characterizations of Perfect Fields"}
+The following are equivalent:
+
+- $k$ is a **perfect** field.
+
+- Every irreducible polynomial $p\in k[x]$ is separable
+
+- Every finite extension $F/k$ is separable.
+
+- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+:::
 
 :::{.fact}
 \envlist
@@ -1890,10 +1987,12 @@ Every finite extension is algebraic.
 
 :::{.proof}
 If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
-This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence \[
+This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
+\[
 f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
 .\]
 But then \( \alpha \) is the root of the polynomial \( f \).
+
 :::
 
 :::{.theorem title="Gauss' Lemma"}
@@ -1915,9 +2014,7 @@ then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
 
-
 ## Finite Fields
-
 
 :::{.theorem title="Characterization of Prime Subfields"}
 The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for some $p$.
@@ -1975,7 +2072,7 @@ $\implies$:
 
 - So if $f$ is an irreducible factor of $\phi_n$, $f$ is the minimal polynomial of some root $\alpha$ of $\phi_n$, so $\deg f \divides n$.
 
--  $\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ has distinct roots and thus no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
+-  $\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ is squarefree and thus has no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
 :::
 
 :::{.proposition}
@@ -1998,7 +2095,6 @@ This has no roots in $k$.
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::
 
-
 :::{.proposition}
 If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
 :::
@@ -2006,7 +2102,6 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polyno
 :::{.proposition}
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
-
 
 ### Lemmas About Towers
 
@@ -2019,21 +2114,17 @@ Let $L/F/k$ be a finite tower of field extensions.
 .\]
 :::
 
-
 :::{.proposition title="Normal/Algebraic/Galois in towers"}
 $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
 :::
-
 
 :::{.proof title="for normality"}
 $\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then so does the former.
 :::
 
-
 :::{.corollary title="?"}
 $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
 :::
-
 
 :::{.corollary title="?"}
 $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
@@ -2063,7 +2154,6 @@ $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect
 
 :::
 
-
 :::{.proposition title="Algebraicity is transitive"}
 $F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
 \begin{tikzcd}
@@ -2073,7 +2163,6 @@ F \arrow[d, bend right=49, "\text{alg}"']                                  \\
 k
 \end{tikzcd}
 :::
-
 
 :::{.proposition title="Separability is transitive"}
 For $L/F/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
@@ -2146,13 +2235,7 @@ In this case,
 
 :::
 
-
-### Common Counterexamples
-
-- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
-
-
-## Fundamental Theorem of Galois Theory
+### Fundamental Theorem of Galois Theory
 
 :::{.theorem title="Fundamental Theorem of Galois Theory"}
 Let $L/k$ be a Galois extension, then there is a correspondence:
@@ -2179,11 +2262,9 @@ H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
 - The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
 :::
 
-
 ### Examples
 
-
-:::{.example title="?"}
+:::{.example title="Cyclotomic Fields"}
 $\Gal(\QQ(\zeta_n)/\QQ) \cong \ZZ/(n)\units$ and is generated by maps of the form $\zeta_n \mapsto \zeta_n^j$ where $(j, n) = 1$.
 I.e., the following map is an isomorphism:
 \[
@@ -2192,21 +2273,24 @@ r \mod n &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
 \]
 :::
 
-
-:::{.example title="?"}
-$\Gal(\GF(p^n)/\FF_p) \cong \ZZ/(n)$, a cyclic group generated by powers of the Frobenius automorphism:
+:::{.example title="Finite Fields"}
+$\Gal(\FF_{p^n}/\FF_p) \cong \ZZ/ \gens{ n }$, a cyclic group generated by powers of the Frobenius automorphism:
 \[
-\varphi_p: \GF(p^n) &\to \GF(p^n) \\
+\varphi_p: \FF_{p^n} \to \FF_{p^n} \\
 x &\mapsto x^p
 \]
 
+> See D&F p.566 example 7.
+
 :::
 
 
-
-:::{.proposition}
-Every quadratic extension is Galois.
+:::{.example title="Quadratic Fields"}
+Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: if \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ since \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
+So $L$ is a splitting field.
+If $\ch(k) \neq 2$, then $\dd{}{x} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0$, making $L$ separable.
 :::
+
 
 :::{.proposition}
 If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
@@ -2215,7 +2299,6 @@ If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $
 :::{.corollary}
 $n$ divides the order $\abs{ \Gal(K/\QQ)}$.
 :::
-
 
 :::{.theorem title="Splitting + Perfect implies Galois"}
 \hfill
@@ -2234,8 +2317,22 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 .\]
 :::
 
-## Cyclotomic Polynomials
 
+### Counterexamples
+
+:::{.example title="?"}
+\envlist
+
+- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
+- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
+  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
+  Slogan: "Being Galois is not transitive in towers."
+- A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
+:::
+
+
+## Cyclotomic Polynomials
 
 :::{.proposition}
 $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
@@ -2245,6 +2342,7 @@ $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 $\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
 :::
 
+:::{.proposition title="Computing Totient Functions"}
 **Computing $\Phi_n$:**
 
 1.
@@ -2262,6 +2360,8 @@ x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n
 \]
 so just use polynomial long division.
 
+:::
+
 :::{.proposition}
 \[
 \Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
@@ -2275,8 +2375,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
-
-:::{.theorem title="Primitive Element"}
+:::{.theorem title="Primitive Element Theorem"}
 Every finite separable extension is simple.
 :::
 
@@ -4530,7 +4629,7 @@ that $\tau\sigma\tau^{-1} = (\tau(i_1) \tau(i_2) \cdots \tau(i_r))$.
 :::
 
 :::{.problem title="Hungerford 1.6.4"}
-Show that$S_n \cong \left\langle (12), (123\cdots n)\right\rangle$ and also that
+Show that $S_n \cong \left\langle (12), (123\cdots n)\right\rangle$ and also that
 $S_n \cong \left\langle (12), (23\cdots n)\right\rangle$
 :::
 
@@ -4544,7 +4643,7 @@ Determine (up to isomorphism) all abelian groups of order 64; do the same for or
 :::
 
 :::{.problem title="Hungerford 2.4.1"}
-Let $G$ be a group and$A \trianglelefteq G$ be a normal abelian subgroup. Show that $G/A$ acts
+Let $G$ be a group and $A \trianglelefteq G$ be a normal abelian subgroup. Show that $G/A$ acts
 on $A$ by conjugation and construct a homomorphism
 $\varphi: G/A \to \mathrm{Aut}(A)$.
 :::
@@ -5049,11 +5148,11 @@ $K$, then $E$ is an algebraic closure of $K$.
 :::{.problem title="Hungerford 5.3.8"}
 Show that no finite field is algebraically closed.
 
-> Hint: if $K = \{a_i\}_{i=0}^n$, consider
+*Hint: if $K = \{a_i\}_{i=0}^n$, consider*
 \[ 
 f(x) = a_1 + \prod_{i=0}^n (x - a_i) \in K[x]
 \] 
-  where $a_1 \neq 0$.
+*where $a_1 \neq 0$.*
 
 :::
 
@@ -5071,13 +5170,12 @@ Show that every element in a finite field can be written as the sum of two squar
 :::
 
 :::{.problem title="Hungerford 5.6.1"}
-Let $F/K$ be a field extension. Let$\mathrm{char} K = p \neq 0$ and let $n\geq 1$ be an integer such that
+Let $F/K$ be a field extension. Let $\mathrm{char} K = p \neq 0$ and let $n\geq 1$ be an integer such that
 $(p, n) = 1$. If $v\in F$ and $nv \in K$, then $v\in K$.
 :::
 
-:::{.problem title="Hungerford 5.6.8"} If $\mathrm{char}
-K = p \neq 0$ and$[F: K]$ is finite and not divisible by $p$, then $F$ is separable over
-$K$.
+:::{.problem title="Hungerford 5.6.8"}
+If $\mathrm{char} K = p \neq 0$ and $[F: K]$ is finite and not divisible by $p$, then $F$ is separable over $K$.
 :::
 
 ### Qual Problems
@@ -5105,7 +5203,7 @@ the following are equivalent:
     is a ring homomorphism $\alpha: E \to C$ such that $\alpha \mid_F$
     is the identity on $F$.
 
-> Hint: use Zorn's Lemma.
+*Hint: use Zorn's Lemma.*
 
 :::
 
@@ -5549,7 +5647,7 @@ Let $R$ be a commutative ring and $M$ an $R-$module.
 1.  Show that the center of the ring $M_n(R)$ consists of matrices of
     the form $rI_n$ where $r$ is in the center of $R$.
 
-  > Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.
+    *Hint: Every such matrix must commute with $\epsilon_{ij}$, the matrix with $1_R$ in the $i,j$ position and zeros elsewhere.*
 
 2.  Show that $Z(M_n(R)) \cong Z(R)$.
 :::
@@ -5606,7 +5704,7 @@ C = \left(\begin{array}{llll}{a_{11}} & {\cdots} & {a_{1 m}} & {b_{1}} \\ {} & {
   $\mathrm{rank} A = \mathrm{rank} C$ and the solution is unique
   $\iff \mathrm{rank}(A) = m$.
 
-  >Hint: use part 2.
+  *Hint: use part 2.*
 
 4.  If $B=0$, so the system $AX=B$ is homogeneous, then it has a
     nontrivial solution $\iff \mathrm{rank} A < m$ and in particular
@@ -5706,16 +5804,14 @@ possible Jordan Canonical Forms over $\Bbb C$.
 Show that if $\phi$ is an endomorphism of a free $k$-module $E$ of finite rank, then
 $p_\phi(\phi) = 0$.
 
-**Hint**:
-If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then 
+*Hint: If $A$ is the matrix of $\phi$ and $B = x I_n - A$ then*
 \[
 B^a B = |B| I_n = p_\phi I_n \in M_n(k[x])
 .\]
-If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then 
+*If $E$ is a $k[x]$-module with structure induced by $\phi$, and $\psi$ is the $k[x]$-module endomorphism $E\to E$ with matrix given by $B$, then*
 \[ 
-\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0
-\]
-for all $u\in E$.
+\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0 && \forall u\in E
+.\]
 
 :::
 

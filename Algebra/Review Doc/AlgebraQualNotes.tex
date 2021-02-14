@@ -51,6 +51,24 @@
 \tableofcontents
 \newpage
 
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
 \hypertarget{topics-and-remarks-2}{%
 \section{Topics and Remarks 2}\label{topics-and-remarks-2}}
 
@@ -556,117 +574,41 @@ References:
 \hypertarget{big-list-of-notation}{%
 \subsection{Big List of Notation}\label{big-list-of-notation}}
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.20}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.79}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-Notation\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Definition\strut
-\end{minipage}\tabularnewline
+Notation & Definition \\ \addlinespace
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(C_G(x)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Centralizer of an element\\
-\(\coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1}\right\} \subseteq \Gamma\)\\
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(C_G(H)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Centralizer of an subgroup\\
-\(\coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1\,\, \forall h\in H}\right\} = \bigcap_{h\in H} C_H(h) \subseteq G\)\\
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(C(H)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Conjugacy Class\\
-\(\coloneqq\left\{{ ghg ^{-1} {~\mathrel{\Big|}~}g\in G}\right\} \leq G \subseteq G\)\\
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(Z(G)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Center\\
-\(\coloneqq\left\{{ x\in G {~\mathrel{\Big|}~}\forall g\in G,\, gxg ^{-1} = x }\right\} \subseteq G\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(N_G(H)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Normalizer\\
-\(\coloneqq\left\{{ g\in G {~\mathrel{\Big|}~}gHg ^{-1} = H }\right\} \subseteq G\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(\mathrm{Inn}(G)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Inner Automorphisms\\
-\(\coloneqq\left\{{ \varphi _g(x) \coloneqq gxg ^{-1} }\right\} \subseteq {\operatorname{Aut}}(G)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(\mathrm{Out}(G)\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Outer Automorphisms\\
-\({\operatorname{Aut}}(G) / {\operatorname{Inn}}(G) \mapsfrom {\operatorname{Aut}}(G)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\([g h]\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Commutator of Elements\\
-\(\coloneqq ghg ^{-1} \in G\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\([G H]\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Commutator of Subgroups\\
-\(\coloneqq\left\langle{ \left\{{ [gh] {~\mathrel{\Big|}~}g \in G,\, h \in H }\right\} }\right\rangle \leq G\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\({\mathcal{O}}_x,\, Gx\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Orbit of an Element\\
-\(\coloneqq\left\{{ gx {~\mathrel{\Big|}~}x \in X}\right\}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(\mathrm{Stab}_G(x),\, G_x\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Stabilizer of an Element\\
-\(\coloneqq\left\{{ g \in G {~\mathrel{\Big|}~}gx = x }\right\} \subseteq G\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(X/G\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Set of Orbits\\
-\(\coloneqq\left\{{ G_x {~\mathrel{\Big|}~}x \in X }\right\} \subseteq 2^X\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(X^g\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-Fixed Points\\
-\(\left\{{x \in X {~\mathrel{\Big|}~}\forall g \in G,\, gx = x}\right\} \subseteq X\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.20}}\raggedright
-\(2^X\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.79}}\raggedright
-The powerset of \(X\)\\
-\(\coloneqq\left\{{ U \subseteq X }\right\}\)\strut
-\end{minipage}\tabularnewline
+\(C_G(x)\) & \vtop{\hbox{\strut Centralizer of an
+element}\hbox{\strut \(\coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1}\right\} \subseteq \Gamma\)}} \\ \addlinespace
+\(C_G(H)\) & \vtop{\hbox{\strut Centralizer of an
+subgroup}\hbox{\strut \(\coloneqq\left\{{g\in \Gamma {~\mathrel{\Big|}~}[g, x] = 1\,\, \forall h\in H}\right\} = \bigcap_{h\in H} C_H(h) \subseteq G\)}} \\ \addlinespace
+\(C(H)\) & \vtop{\hbox{\strut Conjugacy
+Class}\hbox{\strut \(\coloneqq\left\{{ ghg ^{-1} {~\mathrel{\Big|}~}g\in G}\right\} \leq G \subseteq G\)}} \\ \addlinespace
+\(Z(G)\) &
+\vtop{\hbox{\strut Center}\hbox{\strut \(\coloneqq\left\{{ x\in G {~\mathrel{\Big|}~}\forall g\in G,\, gxg ^{-1} = x }\right\} \subseteq G\)}} \\ \addlinespace
+\(N_G(H)\) &
+\vtop{\hbox{\strut Normalizer}\hbox{\strut \(\coloneqq\left\{{ g\in G {~\mathrel{\Big|}~}gHg ^{-1} = H }\right\} \subseteq G\)}} \\ \addlinespace
+\(\mathrm{Inn}(G)\) & \vtop{\hbox{\strut Inner
+Automorphisms}\hbox{\strut \(\coloneqq\left\{{ \varphi _g(x) \coloneqq gxg ^{-1} }\right\} \subseteq {\operatorname{Aut}}(G)\)}} \\ \addlinespace
+\(\mathrm{Out}(G)\) & \vtop{\hbox{\strut Outer
+Automorphisms}\hbox{\strut \({\operatorname{Aut}}(G) / {\operatorname{Inn}}(G) \mapsfrom {\operatorname{Aut}}(G)\)}} \\ \addlinespace
+\([g h]\) & \vtop{\hbox{\strut Commutator of
+Elements}\hbox{\strut \(\coloneqq ghg ^{-1} \in G\)}} \\ \addlinespace
+\([G H]\) & \vtop{\hbox{\strut Commutator of
+Subgroups}\hbox{\strut \(\coloneqq\left\langle{ \left\{{ [gh] {~\mathrel{\Big|}~}g \in G,\, h \in H }\right\} }\right\rangle \leq G\)}} \\ \addlinespace
+\({\mathcal{O}}_x,\, Gx\) & \vtop{\hbox{\strut Orbit of an
+Element}\hbox{\strut \(\coloneqq\left\{{ gx {~\mathrel{\Big|}~}x \in X}\right\}\)}} \\ \addlinespace
+\(\mathrm{Stab}_G(x),\, G_x\) & \vtop{\hbox{\strut Stabilizer of an
+Element}\hbox{\strut \(\coloneqq\left\{{ g \in G {~\mathrel{\Big|}~}gx = x }\right\} \subseteq G\)}} \\ \addlinespace
+\(X/G\) & \vtop{\hbox{\strut Set of
+Orbits}\hbox{\strut \(\coloneqq\left\{{ G_x {~\mathrel{\Big|}~}x \in X }\right\} \subseteq 2^X\)}} \\ \addlinespace
+\(X^g\) & \vtop{\hbox{\strut Fixed
+Points}\hbox{\strut \(\left\{{x \in X {~\mathrel{\Big|}~}\forall g \in G,\, gx = x}\right\} \subseteq X\)}} \\ \addlinespace
+\(2^X\) & \vtop{\hbox{\strut The powerset of
+\(X\)}\hbox{\strut \(\coloneqq\left\{{ U \subseteq X }\right\}\)}} \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -948,40 +890,20 @@ Equivalently, the action has a single orbit.
 
 For a group \(G\) acting on a set \(X\),
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.82}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.16}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.82}}\raggedright
-Notation\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.16}}\raggedright
-Definition\strut
-\end{minipage}\tabularnewline
+Notation & Definition \\ \addlinespace
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.82}}\raggedright
-\(G\cdot x = \left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.16}}\raggedright
-Orbit\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.82}}\raggedright
-\(G_x = \left\{{ g \in G {~\mathrel{\Big|}~}gx=x }\right\} \leq G\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.16}}\raggedright
-Stabilizer\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.82}}\raggedright
-\(X/G \subseteq 2^X\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.16}}\raggedright
-Set of Orbits\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.82}}\raggedright
-\(X^g = \left\{{x\in X {~\mathrel{\Big|}~}g\cdot x = x}\right\} \subseteq X\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.16}}\raggedright
-Fixed Points\strut
-\end{minipage}\tabularnewline
+\(G\cdot x = \left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X\)
+& Orbit \\ \addlinespace
+\(G_x = \left\{{ g \in G {~\mathrel{\Big|}~}gx=x }\right\} \leq G\) &
+Stabilizer \\ \addlinespace
+\(X/G \subseteq 2^X\) & Set of Orbits \\ \addlinespace
+\(X^g = \left\{{x\in X {~\mathrel{\Big|}~}g\cdot x = x}\right\} \subseteq X\)
+& Fixed Points \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -1306,20 +1228,47 @@ the quotient group \(G/N\). This is given by the map \(H \mapsto H/N\).
 
 We have \(G \cong H \times K\) when
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \(H, K {~\trianglelefteq~}G\)
 \item
   \(G = HK\).
 \item
   \(H\cap K = \left\{{e}\right\} \subset G\)
-\end{itemize}
+\end{enumerate}
 
 \begin{quote}
 Note: can relax to \([h,k] = 1\) for all \(h, k\).
 \end{quote}
 
 \end{theorem}
+
+\begin{proof}[?]
+
+With these conditions, the following map is an isomorphism:
+\begin{align*}
+\Gamma: H\times K &\to G \\
+(h, k) &\mapsto hk
+.\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  This is a group morphism by condition (1):
+  \begin{align*}
+  \Gamma(h_1, k_1) \Gamma(h_2, k_2) \coloneqq(h_1 k_1) (h_2 k_2) = h_1 ({ \color{red} k_1 h_2 } ) k_2 = h_1 ( { \color{red} h_2 k_1 } ) k_2 = (h_1 h_2) ( k_1 k_2) \coloneqq\Gamma( (h_1, k_1)(h_2, k_2) )
+  .\end{align*}
+\item
+  This is surjective by condition (2)
+\item
+  This is injective by condition(3) and checking the kernel:
+  \begin{align*}
+  \ker \Gamma = \ts{ (h,k) {~\mathrel{\Big|}~}hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \cap H = \left\{{1_G}\right\}
+  .\end{align*}
+\end{itemize}
+
+\end{proof}
 
 \begin{theorem}[Recognizing Generalized Direct Products]
 
@@ -1621,10 +1570,10 @@ G = {{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
-\(p = 2\) & \(p= 3\) & \(p =5\)\tabularnewline
+\(p = 2\) & \(p= 3\) & \(p =5\) \\ \addlinespace
 \midrule
 \endhead
-\(2,2,2\) & \(3,3\) & \(5^2\)\tabularnewline
+\(2,2,2\) & \(3,3\) & \(5^2\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -1632,10 +1581,10 @@ G = {{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
-\(p = 2\) & \(p= 3\) & \(p =5\)\tabularnewline
+\(p = 2\) & \(p= 3\) & \(p =5\) \\ \addlinespace
 \midrule
 \endhead
-\(2,2\) & \(3\) & \(\emptyset\)\tabularnewline
+\(2,2\) & \(3\) & \(\emptyset\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -1643,10 +1592,10 @@ G = {{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{Z}}_{2}\times{\mathbb{
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
-\(p = 2\) & \(p= 3\) & \(p =5\)\tabularnewline
+\(p = 2\) & \(p= 3\) & \(p =5\) \\ \addlinespace
 \midrule
 \endhead
-\(2\) & \(\emptyset\) & \(\emptyset\)\tabularnewline
+\(2\) & \(\emptyset\) & \(\emptyset\) \\ \addlinespace
 \bottomrule
 \end{longtable}
 
@@ -1857,6 +1806,13 @@ a,b \in R^{\times}\setminus\left\{{0}\right\}, \quad ab\divides p \implies a\div
 .\end{align*}
 
 \end{definition}
+
+\begin{fact}
+
+If \(R\) is an integral domain, prime \(\implies\) irreducible. If \(R\)
+is a UFD, then prime \(\iff\) irreducible.
+
+\end{fact}
 
 \begin{definition}[Zero Divisor]
 
@@ -2267,38 +2223,6 @@ Maximal ideals of \(R[x]\) are of the form \(I = (x - a_i)\) for some
 
 Let \(k\) denote a field, and \(L/k\) extensions.
 
-\begin{definition}[Characterizations of Perfect Fields]
-
-The following are equivalent:
-
-\begin{itemize}
-\item
-  \(k\) is a \textbf{perfect} field.
-\item
-  Every irreducible polynomial \(p\in k[x]\) is separable
-\item
-  Every finite extension \(F/k\) is separable.
-\item
-  If \(\operatorname{ch}k > 0\), the Frobenius is an automorphism of
-  \(k\).
-\end{itemize}
-
-\end{definition}
-
-\begin{definition}[Primitive Extension]
-
-For \(R\) a UFD, a polynomial \(p\in R[x]\) is \textbf{primitive} iff
-the greatest common divisors of its coefficients is a unit.
-
-\end{definition}
-
-\begin{definition}[Prime Subfield]
-
-The \textbf{prime subfield} of a field \(F\) is the subfield generated
-by \(1\).
-
-\end{definition}
-
 \begin{definition}[Algebraic Field Extension]
 
 A field extension \(L/k\) is \textbf{algebraic} iff every
@@ -2343,6 +2267,10 @@ Let \(L/k\) be a field extension, \(\alpha \in L\) be arbitrary, and
 \item
   \(L/k\) is \textbf{separable}
 \item
+  Every element \({\alpha} \in L\) has separable minimal polynomial
+  \(\min_{\alpha, L}(x) \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu[x]\)
+  (D\&F's definition, p.~551).
+\item
   \(f\) has no repeated factors/roots.
 \item
   \(\gcd(f, f') = 1\).
@@ -2352,6 +2280,24 @@ Let \(L/k\) be a field extension, \(\alpha \in L\) be arbitrary, and
 
 \end{definition}
 
+\begin{fact}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Irreducible \(\implies\) separable.
+\item
+  The minimal polynomial of an algebraic element is always irreducible.
+\item
+  Every irreducible polynomial over a perfect field is separable.
+\item
+  Every finite extension of a perfect field is separable.
+\end{itemize}
+
+\end{fact}
+
 \begin{definition}[Field Automorphisms]
 
 \begin{align*} 
@@ -2359,6 +2305,15 @@ Let \(L/k\) be a field extension, \(\alpha \in L\) be arbitrary, and
 .\end{align*}
 
 \end{definition}
+
+\begin{remark}
+
+Note that in general,
+\begin{align*}
+{\left\lvert { {\operatorname{Aut}}(L/k) } \right\rvert} \leq [L: K]
+.\end{align*}
+
+\end{remark}
 
 \begin{definition}[Galois Extension and Galois Group]
 
@@ -2371,12 +2326,13 @@ Let \(L/k\) be a finite field extension. The following are equivalent:
   \(L/k\) is a \textbf{Galois extension}.
 \item
   \({\left\lvert {{\operatorname{Aut}}(L/k)} \right\rvert} = [L: k]\)
+  (D\&F's definition).
 \item
   The fixed field of \(\mathrm{Aut}(L/k)\) is exactly \(k\).
 \item
   \(L\) is the splitting field of a separable polynomial \(p\in K[x]\).
 \item
-  \(L\) is finite, normal, and separable.
+  \(L\) is finite, normal, and separable (most general definition?)
 \end{enumerate}
 
 In this case, we define the \textbf{Galois group} as
@@ -2407,8 +2363,40 @@ single element \(\alpha\).
 
 \end{definition}
 
+\begin{definition}[Primitive Extension]
+
+For \(R\) a UFD, a polynomial \(p\in R[x]\) is \textbf{primitive} iff
+the greatest common divisors of its coefficients is a unit.
+
+\end{definition}
+
+\begin{definition}[Prime Subfield]
+
+The \textbf{prime subfield} of a field \(F\) is the subfield generated
+by \(1\).
+
+\end{definition}
+
 \hypertarget{facts}{%
 \subsection{Facts}\label{facts}}
+
+\begin{definition}[Characterizations of Perfect Fields]
+
+The following are equivalent:
+
+\begin{itemize}
+\item
+  \(k\) is a \textbf{perfect} field.
+\item
+  Every irreducible polynomial \(p\in k[x]\) is separable
+\item
+  Every finite extension \(F/k\) is separable.
+\item
+  If \(\operatorname{ch}k > 0\), the Frobenius is an automorphism of
+  \(k\).
+\end{itemize}
+
+\end{definition}
 
 \begin{fact}
 
@@ -2588,9 +2576,9 @@ irreducible.
   minimal polynomial of some root \(\alpha\) of \(\phi_n\), so
   \(\deg f \divides n\).
 \item
-  \(\phi_n'(x) = p^nx^{p^{n-1}} \neq 0\), so \(\phi_n\) has distinct
-  roots and thus no repeated factors. So \(\phi_n\) is the product of
-  all such irreducible \(f\).
+  \(\phi_n'(x) = p^nx^{p^{n-1}} \neq 0\), so \(\phi_n\) is squarefree
+  and thus has no repeated factors. So \(\phi_n\) is the product of all
+  such irreducible \(f\).
 \end{itemize}
 
 \end{proof}
@@ -2817,19 +2805,8 @@ In this case,
 
 \end{proposition}
 
-\hypertarget{common-counterexamples}{%
-\subsubsection{Common Counterexamples}\label{common-counterexamples}}
-
-\begin{itemize}
-\tightlist
-\item
-  \({\mathbb{Q}}(\zeta_3, 2^{1/3})\) is normal but
-  \({\mathbb{Q}}(2^{1/3})\) is not since the irreducible polynomial
-  \(x^3 - 2\) has only one root in it.
-\end{itemize}
-
 \hypertarget{fundamental-theorem-of-galois-theory}{%
-\subsection{Fundamental Theorem of Galois
+\subsubsection{Fundamental Theorem of Galois
 Theory}\label{fundamental-theorem-of-galois-theory}}
 
 \begin{theorem}[Fundamental Theorem of Galois Theory]
@@ -2867,7 +2844,7 @@ H &\rightarrow \left\{{\substack{E^H \coloneqq~\text{The fixed field of $H$}}}\r
 \hypertarget{examples}{%
 \subsubsection{Examples}\label{examples}}
 
-\begin{example}[?]
+\begin{example}[Cyclotomic Fields]
 
 \(\operatorname{Gal}({\mathbb{Q}}(\zeta_n)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times}\)
 and is generated by maps of the form \(\zeta_n \mapsto \zeta_n^j\) where
@@ -2879,22 +2856,33 @@ r \pmod n &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
 
 \end{example}
 
-\begin{example}[?]
+\begin{example}[Finite Fields]
 
-\(\operatorname{Gal}({\mathbb{GF}}(p^n)/{\mathbb{F}}_p) \cong {\mathbb{Z}}/(n)\),
+\(\operatorname{Gal}({\mathbb{F}}_{p^n}/{\mathbb{F}}_p) \cong {\mathbb{Z}}/ \left\langle{ n }\right\rangle\),
 a cyclic group generated by powers of the Frobenius automorphism:
 \begin{align*}
-\varphi_p: {\mathbb{GF}}(p^n) &\to {\mathbb{GF}}(p^n) \\
+\varphi_p: {\mathbb{F}}_{p^n} \to {\mathbb{F}}_{p^n} \\
 x &\mapsto x^p
 \end{align*}
 
+\begin{quote}
+See D\&F p.566 example 7.
+\end{quote}
+
 \end{example}
 
-\begin{proposition}
+\begin{example}[Quadratic Fields]
 
-Every quadratic extension is Galois.
+Every degree 2 extension \(L/k\) is Galois, except possibly in
+characteristic 2: if \(\alpha\in L \setminus k\) then
+\(\min_{\alpha}(x) \in L[x]\) must split in \(L[x]\) since
+\(\alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x)\) which forces
+\(\deg(g) = 1\). So \(L\) is a splitting field. If
+\(\operatorname{ch}(k) \neq 2\), then
+\({\frac{\partial }{\partial x}\,} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0\),
+making \(L\) separable.
 
-\end{proposition}
+\end{example}
 
 \begin{proposition}
 
@@ -2938,6 +2926,36 @@ is Galois and
 
 \end{proposition}
 
+\hypertarget{counterexamples}{%
+\subsubsection{Counterexamples}\label{counterexamples}}
+
+\begin{example}[?]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \({\mathbb{Q}}(\zeta_3, 2^{1/3})\) is normal but
+  \({\mathbb{Q}}(2^{1/3})\) is not since the irreducible polynomial
+  \(x^3 - 2\) has only one root in it.
+\item
+  \({\mathbb{Q}}(2^{1/3})\) is not Galois since its automorphism group
+  is too small (only of size 1 instead of 3?).
+\item
+  \({\mathbb{Q}}(2^{1/4})\) is not Galois since its automorphism group
+  is too small (only of size 2 instead of 4). However, the intermediate
+  extensions \({\mathbb{Q}}(2^{1/4}) / {\mathbb{Q}}(2^{1/2})\) and
+  \({\mathbb{Q}}(\sqrt 2) / {\mathbb{Q}}\) are Galois since they are
+  quadratic. Slogan: ``Being Galois is not transitive in towers.''
+\item
+  A quadratic extension that is not Galois:
+  \(\SF(x^2 + y) \in {\mathbb{F}}_2(y)[x]\), which factors as
+  \((x - \sqrt{y})^2\), making the extension not separable.
+\end{itemize}
+
+\end{example}
+
 \hypertarget{cyclotomic-polynomials}{%
 \subsection{Cyclotomic Polynomials}\label{cyclotomic-polynomials}}
 
@@ -2953,6 +2971,8 @@ is Galois and
 the number of numbers less than and coprime to \(n\).
 
 \end{proof}
+
+\begin{proposition}[Computing Totient Functions]
 
 \textbf{Computing \(\Phi_n\):}
 
@@ -2975,6 +2995,8 @@ the number of numbers less than and coprime to \(n\).
   so just use polynomial long division.
 \end{enumerate}
 
+\end{proposition}
+
 \begin{proposition}
 
 \begin{align*}
@@ -2992,7 +3014,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 
 \end{proposition}
 
-\begin{theorem}[Primitive Element]
+\begin{theorem}[Primitive Element Theorem]
 
 Every finite separable extension is simple.
 
@@ -5879,10 +5901,11 @@ t &\mapsto w \text{ where } w^p = 1
 
 Describe the left, right, and two-sided ideals in the ring of square
 matrices of a fixed size. Now identify the matrix algebra
-\(\operatorname{Mat}(n \times n, K)\) with \(\operatorname{End}_K(V )\)
-where \(V\) is an \(n{\hbox{-}}\)dimensional K-vector space. Try to
-geometrically describe the simple left ideals and also the simple right
-ideals via that identification.
+\(\operatorname{Mat}(n \times n, K)\) with
+\(\mathop{\mathrm{End}}_K(V )\) where \(V\) is an
+\(n{\hbox{-}}\)dimensional K-vector space. Try to geometrically describe
+the simple left ideals and also the simple right ideals via that
+identification.
 
 \hypertarget{question-6.31}{%
 \subsubsection{Question 6.31}\label{question-6.31}}
@@ -6356,9 +6379,9 @@ groups together with another abelian group?
 
 Do you know what the Ext functor of an abelian group is? Do you know
 where it appears? What is
-\(\operatorname{Ext}({\mathbb{Z}}/m{\mathbb{Z}}, {\mathbb{Z}}/n{\mathbb{Z}})\)?
+\(\operatorname{Ext} ({\mathbb{Z}}/m{\mathbb{Z}}, {\mathbb{Z}}/n{\mathbb{Z}})\)?
 What is
-\(\operatorname{Ext}({\mathbb{Z}}/m{\mathbb{Z}}, {\mathbb{Z}})\)?
+\(\operatorname{Ext} ({\mathbb{Z}}/m{\mathbb{Z}}, {\mathbb{Z}})\)?
 
 \hypertarget{appendix-extra-topics}{%
 \section{Appendix: Extra Topics}\label{appendix-extra-topics}}
@@ -6503,8 +6526,8 @@ show that
 
 \begin{problem}[Hungerford 1.6.4]
 
-Show that\(S_n \cong \left\langle (12), (123\cdots n)\right\rangle\) and
-also that \(S_n \cong \left\langle (12), (23\cdots n)\right\rangle\)
+Show that \(S_n \cong \left\langle (12), (123\cdots n)\right\rangle\)
+and also that \(S_n \cong \left\langle (12), (23\cdots n)\right\rangle\)
 
 \end{problem}
 
@@ -6525,7 +6548,7 @@ same for order 96.
 
 \begin{problem}[Hungerford 2.4.1]
 
-Let \(G\) be a group and\(A \trianglelefteq G\) be a normal abelian
+Let \(G\) be a group and \(A \trianglelefteq G\) be a normal abelian
 subgroup. Show that \(G/A\) acts on \(A\) by conjugation and construct a
 homomorphism \(\varphi: G/A \to \mathrm{Aut}(A)\).
 
@@ -7178,13 +7201,11 @@ closure of \(K\).
 
 Show that no finite field is algebraically closed.
 
-\begin{quote}
-Hint: if \(K = \{a_i\}_{i=0}^n\), consider
+\emph{Hint: if \(K = \{a_i\}_{i=0}^n\), consider}
 \begin{align*} 
 f(x) = a_1 + \prod_{i=0}^n (x - a_i) \in K[x]
 \end{align*}
-where \(a_1 \neq 0\).
-\end{quote}
+\emph{where \(a_1 \neq 0\).}
 
 \end{problem}
 
@@ -7212,15 +7233,18 @@ two squares.
 
 \begin{problem}[Hungerford 5.6.1]
 
-Let \(F/K\) be a field extension. Let\(\mathrm{char} K = p \neq 0\) and
+Let \(F/K\) be a field extension. Let \(\mathrm{char} K = p \neq 0\) and
 let \(n\geq 1\) be an integer such that \((p, n) = 1\). If \(v\in F\)
 and \(nv \in K\), then \(v\in K\).
 
 \end{problem}
 
-:::\{.problem title=``Hungerford 5.6.8''\} If
-\(\mathrm{char} K = p \neq 0\) and\([F: K]\) is finite and not divisible
-by \(p\), then \(F\) is separable over \(K\). :::
+\begin{problem}[Hungerford 5.6.8]
+
+If \(\mathrm{char} K = p \neq 0\) and \([F: K]\) is finite and not
+divisible by \(p\), then \(F\) is separable over \(K\).
+
+\end{problem}
 
 \hypertarget{qual-problems-3}{%
 \subsubsection{Qual Problems}\label{qual-problems-3}}
@@ -7259,9 +7283,7 @@ are equivalent:
   \(\alpha \mathrel{\Big|}_F\) is the identity on \(F\).
 \end{enumerate}
 
-\begin{quote}
-Hint: use Zorn's Lemma.
-\end{quote}
+\emph{Hint: use Zorn's Lemma.}
 
 \end{problem}
 
@@ -7909,21 +7931,12 @@ Let \(R\) be a commutative ring and \(M\) an \(R-\)module.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Show that the center of the ring \(M_n(R)\) consists of matrices of
   the form \(rI_n\) where \(r\) is in the center of \(R\).
-\end{enumerate}
 
-\begin{quote}
-Hint: Every such matrix must commute with \(\epsilon_{ij}\), the matrix
-with \(1_R\) in the \(i,j\) position and zeros elsewhere.
-\end{quote}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+  \emph{Hint: Every such matrix must commute with \(\epsilon_{ij}\), the
+  matrix with \(1_R\) in the \(i,j\) position and zeros elsewhere.}
 \item
   Show that \(Z(M_n(R)) \cong Z(R)\).
 \end{enumerate}
@@ -7996,9 +8009,7 @@ Show that an \(n\times m\) matrix \(A\)over a division ring \(D\) has an
   \(\iff \mathrm{rank}(A) = m\).
 \end{enumerate}
 
-\begin{quote}
-Hint: use part 2.
-\end{quote}
+\emph{Hint: use part 2.}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8149,18 +8160,17 @@ all possible Jordan Canonical Forms over \(\Bbb C\).
 Show that if \(\phi\) is an endomorphism of a free \(k\)-module \(E\) of
 finite rank, then \(p_\phi(\phi) = 0\).
 
-\textbf{Hint}: If \(A\) is the matrix of \(\phi\) and \(B = x I_n - A\)
-then
+\emph{Hint: If \(A\) is the matrix of \(\phi\) and \(B = x I_n - A\)
+then}
 \begin{align*}
 B^a B = |B| I_n = p_\phi I_n \in M_n(k[x])
 .\end{align*}
-If \(E\) is a \(k[x]\)-module with structure induced by \(\phi\), and
-\(\psi\) is the \(k[x]\)-module endomorphism \(E\to E\) with matrix
-given by \(B\), then
+\emph{If \(E\) is a \(k[x]\)-module with structure induced by \(\phi\),
+and \(\psi\) is the \(k[x]\)-module endomorphism \(E\to E\) with matrix
+given by \(B\), then}
 \begin{align*} 
-\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0
-\end{align*}
-for all \(u\in E\).
+\psi(u) = x u -\phi(u) = \phi(u) - \phi(u) = 0 && \forall u\in E
+.\end{align*}
 
 \end{problem}
 
