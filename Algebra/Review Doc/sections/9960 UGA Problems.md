@@ -10,7 +10,7 @@ that $\tau\sigma\tau^{-1} = (\tau(i_1) \tau(i_2) \cdots \tau(i_r))$.
 :::
 
 :::{.problem title="Hungerford 1.6.4"}
-Show that$S_n \cong \left\langle (12), (123\cdots n)\right\rangle$ and also that
+Show that $S_n \cong \left\langle (12), (123\cdots n)\right\rangle$ and also that
 $S_n \cong \left\langle (12), (23\cdots n)\right\rangle$
 :::
 
@@ -24,7 +24,7 @@ Determine (up to isomorphism) all abelian groups of order 64; do the same for or
 :::
 
 :::{.problem title="Hungerford 2.4.1"}
-Let $G$ be a group and$A \trianglelefteq G$ be a normal abelian subgroup. Show that $G/A$ acts
+Let $G$ be a group and $A \trianglelefteq G$ be a normal abelian subgroup. Show that $G/A$ acts
 on $A$ by conjugation and construct a homomorphism
 $\varphi: G/A \to \mathrm{Aut}(A)$.
 :::
