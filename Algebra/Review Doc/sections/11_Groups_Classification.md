@@ -260,6 +260,11 @@ Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 :::
 
+### Proof of Sylow Theorems
+
+\todo[inline]{Proof of Sylows}
+
+
 ## Special Classes of Groups
 
 :::{.definition title="2 out of 3 Property"}
@@ -280,6 +285,8 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 - [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
 - Order $p$: cyclic.
+- Order $pq$: cases, letting $q<p$ and checking $q\divides p-1$.
+- Order $pqr$: ?
 - Order $p^2q$: ?
 
 
@@ -305,7 +312,7 @@ G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
 \]
 :::
 
-**Going from elementary divisors to invariant factors:**
+**Elementary divisors $\to$ invariant factors:**
 
 - Bin up by primes occurring (keeping exponents)
 - Take highest power from each prime as *last* invariant factor
@@ -343,11 +350,9 @@ G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 
 ### Classifying Abelian Groups of a Given Order
 
-
 Let $p(x)$ be the integer partition function.
 
-
-:::{.example title="?"}
+:::{.example title="of an integer partition"}
 Example: $p(6) = 11$, given by
 \[
 &[6], \\
@@ -366,4 +371,6 @@ Example: $p(6) = 11$, given by
 :::
 
 Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
+
+\todo[inline]{Add example}
 

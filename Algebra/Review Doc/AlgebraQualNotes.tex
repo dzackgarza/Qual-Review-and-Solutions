@@ -1264,7 +1264,7 @@ With these conditions, the following map is an isomorphism:
 \item
   This is injective by condition(3) and checking the kernel:
   \begin{align*}
-  \ker \Gamma = \ts{ (h,k) {~\mathrel{\Big|}~}hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \cap H = \left\{{1_G}\right\}
+  \ker \Gamma = \left\{{ (h,k) {~\mathrel{\Big|}~}hk = 1_G,\, hk = 1_G}\right\} \implies h = k ^{-1} \implies hk \in K \cap H = \left\{{1_G}\right\}
   .\end{align*}
 \end{itemize}
 
@@ -1330,8 +1330,9 @@ then \(HK \leq G\) is a subgroup.
 
 \begin{itemize}
 \item
-  If \(\sigma \in {\operatorname{Aut}}(H)\), then
-  \(N \rtimes_\psi H \cong N \rtimes_{\psi \circ \sigma} H\).
+  If \(\sigma \in {\operatorname{Aut}}(H)\) and
+  \(\tau \in {\operatorname{Aut}}(N)\), then
+  \(N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H\).
 \item
   \({\operatorname{Aut}}\qty{ \qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n } \cong \operatorname{GL}(n, {\mathbb{F}}_p)\),
   which has size
@@ -1473,6 +1474,11 @@ in some \(p{\hbox{-}}\)subgroup \(H^1\). Inductively this yields a chain
 
 \end{proof}
 
+\hypertarget{proof-of-sylow-theorems}{%
+\subsubsection{Proof of Sylow Theorems}\label{proof-of-sylow-theorems}}
+
+\todo[inline]{Proof of Sylows}
+
 \hypertarget{special-classes-of-groups-1}{%
 \subsection{Special Classes of
 Groups}\label{special-classes-of-groups-1}}
@@ -1513,6 +1519,11 @@ recognition of semidirect products.
 \item
   Order \(p\): cyclic.
 \item
+  Order \(pq\): cases, letting \(q<p\) and checking
+  \(q\mathrel{\Big|}p-1\).
+\item
+  Order \(pqr\): ?
+\item
   Order \(p^2q\): ?
 \end{itemize}
 
@@ -1549,7 +1560,7 @@ G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
 
 \end{example}
 
-\textbf{Going from elementary divisors to invariant factors:}
+\textbf{Elementary divisors \(\to\) invariant factors:}
 
 \begin{itemize}
 \tightlist
@@ -1614,7 +1625,7 @@ Order}\label{classifying-abelian-groups-of-a-given-order}}
 
 Let \(p(x)\) be the integer partition function.
 
-\begin{example}[?]
+\begin{example}[of an integer partition]
 
 Example: \(p(6) = 11\), given by
 \begin{align*}
@@ -1635,6 +1646,8 @@ Example: \(p(6) = 11\), given by
 
 Write \(G = p_1^{k_1} p_2^{k_2} \cdots\); then there are
 \(p(k_1) p(k_2) \cdots\) choices, each yielding a distinct group.
+
+\todo[inline]{Add example}
 
 \hypertarget{series-of-groups}{%
 \subsection{Series of Groups}\label{series-of-groups}}
