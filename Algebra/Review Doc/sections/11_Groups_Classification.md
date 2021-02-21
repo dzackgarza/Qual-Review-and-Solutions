@@ -115,7 +115,7 @@ With these conditions, the following map is an isomorphism:
 - This is surjective by condition (2)
 - This is injective by condition(3) and checking the kernel:
 \[
-\ker \Gamma = \ts{ (h,k) \st hk = 1_G,\, hk = 1_G \implies h = k ^{-1} \implies hk \in K \intersect H = \ts{1_G}
+\ker \Gamma = \ts{ (h,k) \st hk = 1_G,\, hk = 1_G} \implies h = k ^{-1} \implies hk \in K \intersect H = \ts{1_G}
 .\]
 
 :::
@@ -161,7 +161,7 @@ If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a sub
 :::{.fact}
 \envlist
 
--  If $\sigma \in \Aut(H)$, then \(N \semidirect_\psi H \cong N \semidirect_{\psi \circ \sigma} H\).
+-  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
 
 - $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
 \[  
