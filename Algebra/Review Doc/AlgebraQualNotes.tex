@@ -808,7 +808,7 @@ A_4 =
 
 \begin{theorem}[Lagrange's Theorem]
 
-\begin{align*}H \leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert}.\end{align*}
+\begin{align*}H \leq G \implies {\left\lvert {H} \right\rvert} \mathrel{\Big|}{\left\lvert {G} \right\rvert}.\end{align*}
 
 \end{theorem}
 
@@ -816,7 +816,7 @@ A_4 =
 
 The order of every element divides the size of \(G\), i.e.
 \begin{align*}
-  g\in G \implies o(g) \divides o(G) \implies g^{{\left\lvert {G} \right\rvert}} = e
+  g\in G \implies o(g) \mathrel{\Big|}o(G) \implies g^{{\left\lvert {G} \right\rvert}} = e
   .\end{align*}
 
 \end{corollary}
@@ -825,7 +825,7 @@ The order of every element divides the size of \(G\), i.e.
 
 There does \textbf{not} necessarily exist \(H \leq G\) with
 \({\left\lvert {H} \right\rvert} = n\) for every
-\(n \divides {\left\lvert {G} \right\rvert}\). Counterexample:
+\(n \mathrel{\Big|}{\left\lvert {G} \right\rvert}\). Counterexample:
 \({\left\lvert {A_4} \right\rvert} = 12\) but has no subgroup of order
 6.
 
@@ -1439,7 +1439,7 @@ Constraints)}\label{sylow-3-numerical-constraints}}
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \(n_p \divides m~\) (in particular, \(n_p \leq m\)),
+  \(n_p \mathrel{\Big|}m~\) (in particular, \(n_p \leq m\)),
 \item
   \(n_p \equiv 1 \pmod p\),
 \item
@@ -1524,7 +1524,7 @@ Groups}\label{finitely-generated-abelian-groups}}
 
 \begin{align*}
 G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
-\quad \text{ where } n_1 \divides \cdots \divides n_m
+\quad \text{ where } n_1 \mathrel{\Big|}\cdots \mathrel{\Big|}n_m
 .\end{align*}
 
 \end{definition}
@@ -1785,7 +1785,7 @@ Notation:
 
 An element \(r\in R\) is \textbf{divisible} by \(q \in R\) if and only
 if there exists some \(c \in R\) such that \(r = qc\). In this case, we
-sometimes write \(q\divides r\).
+sometimes write \(q\mathrel{\Big|}r\).
 
 \end{definition}
 
@@ -1802,7 +1802,7 @@ r=ab \implies a \in R^{\times}\text{ or }  b\in R^{\times}
 
 An element \(p\in R\) is \textbf{prime} iff
 \begin{align*}  
-a,b \in R^{\times}\setminus\left\{{0}\right\}, \quad ab\divides p \implies a\divides p \text{ or }  b\divides p
+a,b \in R^{\times}\setminus\left\{{0}\right\}, \quad ab\mathrel{\Big|}p \implies a\mathrel{\Big|}p \text{ or }  b\mathrel{\Big|}p
 .\end{align*}
 
 \end{definition}
@@ -1830,8 +1830,8 @@ fails to be injective.
 \begin{definition}[Associate Elements]
 
 \(a, b\in R\) are \textbf{associates} iff there exists a
-\(u\in R^{\times}\) such that \(a = ub\). Equivalently, \(a\divides b\)
-and \(b\divides a\).
+\(u\in R^{\times}\) such that \(a = ub\). Equivalently,
+\(a\mathrel{\Big|}b\) and \(b\mathrel{\Big|}a\).
 
 \end{definition}
 
@@ -2203,8 +2203,8 @@ a unit, \(\widehat{C}\) doesn't contain a unit, and is thus proper.
 \begin{example}[An irreducible element that is not prime.]
 
 \(3\in {\mathbb{Z}}[\sqrt{-5}]\). Check norm to see irreducibility, but
-\(3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})\) and doesn't divide either
-factor.
+\(3 \mathrel{\Big|}9 = (2+\sqrt{-5})(2-\sqrt{-5})\) and doesn't divide
+either factor.
 
 \end{example}
 
@@ -2536,8 +2536,8 @@ are distinct since its derivative is identically \(-1\).
 \begin{proposition}[Splits Product of Irreducibles]
 
 Let \(\rho_n \coloneqq x^{p^n} - x\). Then
-\(f(x) \divides \rho_n(x) \iff \deg f \divides n\) and \(f\) is
-irreducible.
+\(f(x) \mathrel{\Big|}\rho_n(x) \iff \deg f \mathrel{\Big|}n\) and \(f\)
+is irreducible.
 
 \end{proposition}
 
@@ -2557,10 +2557,11 @@ irreducible.
 \item
   Suppose \(f\) is irreducible of degree \(d\).
 \item
-  Then \(f \divides x^{p^d} - x\), by considering
+  Then \(f \mathrel{\Big|}x^{p^d} - x\), by considering
   \(F[x]/\left\langle{f}\right\rangle\).
 \item
-  Thus \(x^{p^d} - x \divides x^{p^n} - x \iff d\divides n\).
+  Thus
+  \(x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d\mathrel{\Big|}n\).
 \end{itemize}
 
 \(\implies\):
@@ -2569,12 +2570,12 @@ irreducible.
 \item
   \(\alpha \in {\mathbb{GF}}(p^n) \iff \alpha^{p^n} - \alpha = 0\), so
   every element is a root of \(\phi_n\) and
-  \(\deg \min(\alpha, {\mathbb{F}}_p) \divides n\) since
+  \(\deg \min(\alpha, {\mathbb{F}}_p) \mathrel{\Big|}n\) since
   \({\mathbb{F}}_p(\alpha)\) is an intermediate extension.
 \item
   So if \(f\) is an irreducible factor of \(\phi_n\), \(f\) is the
   minimal polynomial of some root \(\alpha\) of \(\phi_n\), so
-  \(\deg f \divides n\).
+  \(\deg f \mathrel{\Big|}n\).
 \item
   \(\phi_n'(x) = p^nx^{p^{n-1}} \neq 0\), so \(\phi_n\) is squarefree
   and thus has no repeated factors. So \(\phi_n\) is the product of all
@@ -2648,8 +2649,8 @@ normal/algebraic/Galois.
 
 \begin{proof}[for normality]
 
-\(\min(\alpha, F) \divides \min(\alpha, k)\), so if the latter splits in
-\(L\) then so does the former.
+\(\min(\alpha, F) \mathrel{\Big|}\min(\alpha, k)\), so if the latter
+splits in \(L\) then so does the former.
 
 \end{proof}
 
@@ -2950,8 +2951,8 @@ is Galois and
   quadratic. Slogan: ``Being Galois is not transitive in towers.''
 \item
   A quadratic extension that is not Galois:
-  \(\SF(x^2 + y) \in {\mathbb{F}}_2(y)[x]\), which factors as
-  \((x - \sqrt{y})^2\), making the extension not separable.
+  \(\operatorname{SF}(x^2 + y) \in {\mathbb{F}}_2(y)[x]\), which factors
+  as \((x - \sqrt{y})^2\), making the extension not separable.
 \end{itemize}
 
 \end{example}
@@ -3009,7 +3010,7 @@ the number of numbers less than and coprime to \(n\).
 \begin{proposition}
 
 \begin{align*}
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
+k\mathrel{\Big|}n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \end{align*}
 
 \end{proposition}
@@ -3119,7 +3120,7 @@ PID}\label{classification-of-modules-over-a-pid}}
 Let \(M\) be a finitely generated modules over a PID \(R\). Then there
 is an invariant factor decomposition
 
-\begin{align*} M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots \end{align*}
+\begin{align*} M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \mathrel{\Big|}r_2 \mathrel{\Big|}\cdots \end{align*}
 
 and similarly an elementary divisor decomposition.
 
@@ -3275,13 +3276,13 @@ Let \(m(x)\) denote the minimal polynomial \(A\).
 \def\labelenumi{\arabic{enumi}.}
 \item
   Find the characteristic polynomial \(\chi(x)\); this annihilates \(A\)
-  by Cayley-Hamilton. Then \(m(x) \divides \chi(x)\), so just test the
-  finitely many products of irreducible factors.
+  by Cayley-Hamilton. Then \(m(x) \mathrel{\Big|}\chi(x)\), so just test
+  the finitely many products of irreducible factors.
 \item
   Pick any \(\mathbf{v}\) and compute
   \(T\mathbf{v}, T^2\mathbf{v}, \cdots T^k\mathbf{v}\) until a linear
   dependence is introduced. Write this as \(p(T) = 0\); then
-  \(\min_A(x) \divides p(x)\).
+  \(\min_A(x) \mathrel{\Big|}p(x)\).
 \end{enumerate}
 
 \begin{definition}[Companion Matrix]
@@ -3305,7 +3306,7 @@ Corresponds to the \textbf{Invariant Factor Decomposition} of \(T\).
 
 For \(R\) a PID and \(M\) a finitely-generated \(R{\hbox{-}}\)module,
 there exists an invariant factor decomposition
-\begin{align*} M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell \end{align*}
+\begin{align*} M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \mathrel{\Big|}a_2 \mathrel{\Big|}\cdots \mathrel{\Big|}a_\ell \end{align*}
 where each \(a_i\) is an invariant factor.
 
 \end{theorem}
@@ -4448,7 +4449,8 @@ Special Polynomials
   Show that \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic
   \(f_i\) of degree \(d\) dividing \(n\).
 \item
-  Show that \(x^{p^d} - x \divides x^{p^n} - x \iff d \divides n\)
+  Show that
+  \(x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d \mathrel{\Big|}n\)
 \item
   Prove that \(x^{p^n}-x\) is the product of all monic irreducible
   polynomials in \({\mathbb{F}}_p[x]\) with degree dividing \(n\).
@@ -4525,7 +4527,7 @@ Special Polynomials
   \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
 \item
   Show that
-  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n\)
+  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\mathrel{\Big|}n\)
 \item
   Compute the Galois group of \(x^n - 1 \in {\mathbb{Q}}[x]\) as a
   function of \(n\).
@@ -5996,7 +5998,7 @@ Consider the space of functions from the natural numbers to
 following analogue of the convolution product:
 
 \begin{align*}
-(f\ast g)(n) = \sum_{d\divides n}^{}f(d) g\qty{n\over d}
+(f\ast g)(n) = \sum_{d\mathrel{\Big|}n}^{}f(d) g\qty{n\over d}
 .\end{align*}
 
 Show that this is a ring. What does this ring remind you of and what can
@@ -6680,8 +6682,8 @@ set of Sylow-\(p\) subgroups of \(G\) and \(n_p\) be the cardinality of
   \(ap^k = 2 (3^k), 4 (3^k)\), or \(3 (2^k)\) for \(k\geq 1\).
 
   If \(ap^k = 2(3^k)\), we have \(n_3 = 1 \pmod 3\) and
-  \(n_3 \divides 2\), which forces \(n_3 = 1\), so this can not be a
-  simple group.
+  \(n_3 \mathrel{\Big|}2\), which forces \(n_3 = 1\), so this can not be
+  a simple group.
 
   Similarly, if \(ap^k = 4(3^k)\), then \(n_3 = 1 \pmod 3\) and \(n_3\)
   divides 4, which forces \(n_3 = 1\) and thus \(G\) can't be simple.

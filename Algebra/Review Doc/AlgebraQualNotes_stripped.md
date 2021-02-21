@@ -503,18 +503,18 @@ A_4 =
 ## Counting Theorems
 
 ::: {.theorem title="Lagrange's Theorem"}
-\[H \leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert}.\]
+\[H \leq G \implies {\left\lvert {H} \right\rvert} \mathrel{\Big|}{\left\lvert {G} \right\rvert}.\]
 :::
 
 ::: {.corollary}
 The order of every element divides the size of \( G \), i.e.
 \[
-  g\in G \implies o(g) \divides o(G) \implies g^{{\left\lvert {G} \right\rvert}} = e
+  g\in G \implies o(g) \mathrel{\Big|}o(G) \implies g^{{\left\lvert {G} \right\rvert}} = e
   .\]
 :::
 
 ::: {.warnings}
-There does **not** necessarily exist \( H \leq G \) with \( {\left\lvert {H} \right\rvert} = n \) for every \( n \divides {\left\lvert {G} \right\rvert} \). Counterexample: \( {\left\lvert {A_4} \right\rvert} = 12 \) but has no subgroup of order 6.
+There does **not** necessarily exist \( H \leq G \) with \( {\left\lvert {H} \right\rvert} = n \) for every \( n \mathrel{\Big|}{\left\lvert {G} \right\rvert} \). Counterexample: \( {\left\lvert {A_4} \right\rvert} = 12 \) but has no subgroup of order 6.
 :::
 
 ::: {.theorem title="Cauchy's Theorem"}
@@ -888,7 +888,7 @@ n_p = 1 \iff S_p {~\trianglelefteq~}G
 ```{=tex}
 \envlist
 ```
-1.  \( n_p \divides m~ \) (in particular, \( n_p \leq m \)),
+1.  \( n_p \mathrel{\Big|}m~ \) (in particular, \( n_p \leq m \)),
 
 2.  \( n_p \equiv 1 \pmod p \),
 
@@ -934,7 +934,7 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 ::: {.definition title="Invariant Factor Decomposition"}
 \[
 G \cong {\mathbb{Z}}^r \times \prod_{j=1}^m {\mathbb{Z}}/n_j{\mathbb{Z}}
-\quad \text{ where } n_1 \divides \cdots \divides n_m
+\quad \text{ where } n_1 \mathrel{\Big|}\cdots \mathrel{\Big|}n_m
 .\]
 :::
 
@@ -1087,7 +1087,7 @@ Notation:
 ### Undergrad Review
 
 ::: {.definition title="Divisibility of Elements"}
-An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \). In this case, we sometimes write \( q\divides r \).
+An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \). In this case, we sometimes write \( q\mathrel{\Big|}r \).
 :::
 
 ::: {.definition title="Irreducible Element"}
@@ -1100,7 +1100,7 @@ r=ab \implies a \in R^{\times}\text{ or }  b\in R^{\times}
 ::: {.definition title="Prime Element"}
 An element \( p\in R \) is **prime** iff
 \[  
-a,b \in R^{\times}\setminus\left\{{0}\right\}, \quad ab\divides p \implies a\divides p \text{ or }  b\divides p
+a,b \in R^{\times}\setminus\left\{{0}\right\}, \quad ab\mathrel{\Big|}p \implies a\mathrel{\Big|}p \text{ or }  b\mathrel{\Big|}p
 .\]
 :::
 
@@ -1118,7 +1118,7 @@ fails to be injective.
 :::
 
 ::: {.definition title="Associate Elements"}
-\( a, b\in R \) are **associates** iff there exists a \( u\in R^{\times} \) such that \( a = ub \). Equivalently, \( a\divides b \) and \( b\divides a \).
+\( a, b\in R \) are **associates** iff there exists a \( u\in R^{\times} \) such that \( a = ub \). Equivalently, \( a\mathrel{\Big|}b \) and \( b\mathrel{\Big|}a \).
 :::
 
 ::: {.definition title="Irreducible Ideal"}
@@ -1323,7 +1323,7 @@ Let \( C \subseteq S \) be a chain in \( S \), so \( C = \left\{{C_1 \subseteq C
 :::
 
 ::: {.example title="An irreducible element that is not prime."}
-\( 3\in {\mathbb{Z}}[\sqrt{-5}] \). Check norm to see irreducibility, but \( 3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5}) \) and doesn't divide either factor.
+\( 3\in {\mathbb{Z}}[\sqrt{-5}] \). Check norm to see irreducibility, but \( 3 \mathrel{\Big|}9 = (2+\sqrt{-5})(2-\sqrt{-5}) \) and doesn't divide either factor.
 :::
 
 ::: {.example}
@@ -1514,7 +1514,7 @@ Todo. Every element is a root by Cauchy's theorem, and the \( p^n \) roots are d
 :::
 
 ::: {.proposition title="Splits Product of Irreducibles"}
-Let \( \rho_n \coloneqq x^{p^n} - x \). Then \( f(x) \divides \rho_n(x) \iff \deg f \divides n \) and \( f \) is irreducible.
+Let \( \rho_n \coloneqq x^{p^n} - x \). Then \( f(x) \mathrel{\Big|}\rho_n(x) \iff \deg f \mathrel{\Big|}n \) and \( f \) is irreducible.
 :::
 
 ::: {.corollary}
@@ -1525,14 +1525,14 @@ Let \( \rho_n \coloneqq x^{p^n} - x \). Then \( f(x) \divides \rho_n(x) \iff \de
 \( \impliedby \):
 
 -   Suppose \( f \) is irreducible of degree \( d \).
--   Then \( f \divides x^{p^d} - x \), by considering \( F[x]/\left\langle{f}\right\rangle \).
--   Thus \( x^{p^d} - x \divides x^{p^n} - x \iff d\divides n \).
+-   Then \( f \mathrel{\Big|}x^{p^d} - x \), by considering \( F[x]/\left\langle{f}\right\rangle \).
+-   Thus \( x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d\mathrel{\Big|}n \).
 
 \( \implies \):
 
--   \( \alpha \in {\mathbb{GF}}(p^n) \iff \alpha^{p^n} - \alpha = 0 \), so every element is a root of \( \phi_n \) and \( \deg \min(\alpha, {\mathbb{F}}_p) \divides n \) since \( {\mathbb{F}}_p(\alpha) \) is an intermediate extension.
+-   \( \alpha \in {\mathbb{GF}}(p^n) \iff \alpha^{p^n} - \alpha = 0 \), so every element is a root of \( \phi_n \) and \( \deg \min(\alpha, {\mathbb{F}}_p) \mathrel{\Big|}n \) since \( {\mathbb{F}}_p(\alpha) \) is an intermediate extension.
 
--   So if \( f \) is an irreducible factor of \( \phi_n \), \( f \) is the minimal polynomial of some root \( \alpha \) of \( \phi_n \), so \( \deg f \divides n \).
+-   So if \( f \) is an irreducible factor of \( \phi_n \), \( f \) is the minimal polynomial of some root \( \alpha \) of \( \phi_n \), so \( \deg f \mathrel{\Big|}n \).
 
 -   \( \phi_n'(x) = p^nx^{p^{n-1}} \neq 0 \), so \( \phi_n \) is squarefree and thus has no repeated factors. So \( \phi_n \) is the product of all such irreducible \( f \).
 :::
@@ -1581,7 +1581,7 @@ Let \( L/F/k \) be a finite tower of field extensions.
 :::
 
 ::: {.proof title="for normality"}
-\( \min(\alpha, F) \divides \min(\alpha, k) \), so if the latter splits in \( L \) then so does the former.
+\( \min(\alpha, F) \mathrel{\Big|}\min(\alpha, k) \), so if the latter splits in \( L \) then so does the former.
 :::
 
 ::: {.corollary title="?"}
@@ -1784,7 +1784,7 @@ If \( F/k \) is finite and Galois and \( L/k \) is arbitrary, then \( FL/L \) is
 -   \( {\mathbb{Q}}(\zeta_3, 2^{1/3}) \) is normal but \( {\mathbb{Q}}(2^{1/3}) \) is not since the irreducible polynomial \( x^3 - 2 \) has only one root in it.
 -   \( {\mathbb{Q}}(2^{1/3}) \) is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
 -   \( {\mathbb{Q}}(2^{1/4}) \) is not Galois since its automorphism group is too small (only of size 2 instead of 4). However, the intermediate extensions \( {\mathbb{Q}}(2^{1/4}) / {\mathbb{Q}}(2^{1/2}) \) and \( {\mathbb{Q}}(\sqrt 2) / {\mathbb{Q}} \) are Galois since they are quadratic. Slogan: "Being Galois is not transitive in towers."
--   A quadratic extension that is not Galois: \( \SF(x^2 + y) \in {\mathbb{F}}_2(y)[x] \), which factors as \( (x - \sqrt{y})^2 \), making the extension not separable.
+-   A quadratic extension that is not Galois: \( \operatorname{SF}(x^2 + y) \in {\mathbb{F}}_2(y)[x] \), which factors as \( (x - \sqrt{y})^2 \), making the extension not separable.
 :::
 
 ## Cyclotomic Polynomials
@@ -1825,7 +1825,7 @@ If \( F/k \) is finite and Galois and \( L/k \) is arbitrary, then \( FL/L \) is
 
 ::: {.proposition}
 \[
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
+k\mathrel{\Big|}n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
@@ -1888,7 +1888,7 @@ Moreover, if this sequence splits, then \( B \cong A \oplus C \).
 Let \( M \) be a finitely generated modules over a PID \( R \). Then there is an invariant factor decomposition
 
 `\begin{align*}
-M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
+M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \mathrel{\Big|}r_2 \mathrel{\Big|}\cdots
 \end{align*}`{=tex}
 
 and similarly an elementary divisor decomposition.
@@ -1979,9 +1979,9 @@ Two matrices \( A, B \) are **equivalent** (i.e. \( A = PBQ \)) \( \iff \)
 
 Let \( m(x) \) denote the minimal polynomial \( A \).
 
-1.  Find the characteristic polynomial \( \chi(x) \); this annihilates \( A \) by Cayley-Hamilton. Then \( m(x) \divides \chi(x) \), so just test the finitely many products of irreducible factors.
+1.  Find the characteristic polynomial \( \chi(x) \); this annihilates \( A \) by Cayley-Hamilton. Then \( m(x) \mathrel{\Big|}\chi(x) \), so just test the finitely many products of irreducible factors.
 
-2.  Pick any \( \mathbf{v} \) and compute \( T\mathbf{v}, T^2\mathbf{v}, \cdots T^k\mathbf{v} \) until a linear dependence is introduced. Write this as \( p(T) = 0 \); then \( \min_A(x) \divides p(x) \).
+2.  Pick any \( \mathbf{v} \) and compute \( T\mathbf{v}, T^2\mathbf{v}, \cdots T^k\mathbf{v} \) until a linear dependence is introduced. Write this as \( p(T) = 0 \); then \( \min_A(x) \mathrel{\Big|}p(x) \).
 
 ::: {.definition title="Companion Matrix"}
 Given a monic \( p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n \), the **companion matrix** of \( p \) is given by `\begin{align*}
@@ -2004,7 +2004,7 @@ Corresponds to the **Invariant Factor Decomposition** of \( T \).
 
 ::: {.theorem title="Structure Theorem"}
 For \( R \) a PID and \( M \) a finitely-generated \( R{\hbox{-}} \)module, there exists an invariant factor decomposition `\begin{align*}
-M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
+M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \mathrel{\Big|}a_2 \mathrel{\Big|}\cdots \mathrel{\Big|}a_\ell
 \end{align*}`{=tex} where each \( a_i \) is an invariant factor.
 :::
 
@@ -2668,7 +2668,7 @@ Special Polynomials
 
 -   Show that a field with \( p^n \) elements has exactly one subfield of size \( p^d \) for every \( d \) dividing \( n \).
 -   Show that \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \).
--   Show that \( x^{p^d} - x \divides x^{p^n} - x \iff d \divides n \)
+-   Show that \( x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d \mathrel{\Big|}n \)
 -   Prove that \( x^{p^n}-x \) is the product of all monic irreducible polynomials in \( {\mathbb{F}}_p[x] \) with degree dividing \( n \).
 -   Prove that an irreducible \( \pi(x)\in {\mathbb{F}}_p[x] \) divides \( x^{p^n}-x \iff \deg \pi(x) \) divides \( n \).
 
@@ -2695,7 +2695,7 @@ Special Polynomials
 -   Show that if \( L/K \) is separable, then \( L \) is normal \( \iff \) there exists a polynomial \( p(x) = \prod_{i=1}^n x- \alpha_i\in K[x] \) such that \( L = K(\alpha_1, \cdots, \alpha_n) \) (so \( L \) is the splitting field of \( p \)).
 -   Is \( {\mathbb{Q}}(2^{1\over 3})/{\mathbb{Q}} \) normal?
 -   Show that \( {\mathbb{GF}}(p^n) \) is the splitting field of \( x^{p^n} - x \in {\mathbb{F}}_p[x] \).
--   Show that \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n \)
+-   Show that \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\mathrel{\Big|}n \)
 -   Compute the Galois group of \( x^n - 1 \in {\mathbb{Q}}[x] \) as a function of \( n \).
 -   Identify all of the elements of the Galois group of \( x^p-2 \) for \( p \) an odd prime (note: this has a complicated presentation).
 -   Show that \( \operatorname{Gal}(x^{15}+2)/{\mathbb{Q}}\cong S_2 \rtimes{\mathbb{Z}}/15{\mathbb{Z}} \) for \( S_2 \) a Sylow \( 2{\hbox{-}} \)subgroup.
@@ -3683,7 +3683,7 @@ Do you know an example of a local ring? Another one? What about completions?
 Consider the space of functions from the natural numbers to \( {\mathbb{C}} \) endowed with the usual law of addition and the following analogue of the convolution product:
 
 \[
-(f\ast g)(n) = \sum_{d\divides n}^{}f(d) g\qty{n\over d}
+(f\ast g)(n) = \sum_{d\mathrel{\Big|}n}^{}f(d) g\qty{n\over d}
 .\]
 
 Show that this is a ring. What does this ring remind you of and what can you say about it?
@@ -4117,7 +4117,7 @@ Let \( G \) be a finite group and \( p \) a prime number. Let \( X_p \) be the s
 
     So we can restrict our attention to \( 2 \leq a \leq 4 \) and \( p = 2, 3 \), which reduces to checking the cases \( ap^k = 2 (3^k), 4 (3^k) \), or \( 3 (2^k) \) for \( k\geq 1 \).
 
-    If \( ap^k = 2(3^k) \), we have \( n_3 = 1 \pmod 3 \) and \( n_3 \divides 2 \), which forces \( n_3 = 1 \), so this can not be a simple group.
+    If \( ap^k = 2(3^k) \), we have \( n_3 = 1 \pmod 3 \) and \( n_3 \mathrel{\Big|}2 \), which forces \( n_3 = 1 \), so this can not be a simple group.
 
     Similarly, if \( ap^k = 4(3^k) \), then \( n_3 = 1 \pmod 3 \) and \( n_3 \) divides 4, which forces \( n_3 = 1 \) and thus \( G \) can't be simple.
 

@@ -1,6 +1,7 @@
 \newcommand{\dx}{\,dx}
 \newcommand{\dt}{\,dt}
 \newcommand{\dy}{\,dy}
+\newcommand{\ds}{\,ds}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -42,6 +43,7 @@
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\Cx}[0]{\operatorname{Cx}}
 \newcommand{\Ch}[0]{\operatorname{Ch}}
 \newcommand{\ks}[0]{\operatorname{ks}}
@@ -82,15 +84,18 @@
 \newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
+\newcommand{\ssets}[0]{\operatorname{sSets}}
+\newcommand{\Ring}[0]{\mathbf{Ring}}
+\newcommand{\Cat}[0]{\mathbf{Cat}}
 \newcommand{\codim}[0]{\operatorname{codim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\ssets}[0]{\operatorname{sSets}}
 \newcommand{\dom}[0]{\operatorname{dom}}
 \newcommand{\txor}[0]{{\operatorname{ or }}}
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
 \newcommand{\gr}[0]{{\operatorname{gr}}}
 \newcommand{\grMod}[0]{{\operatorname{grMod}}}
+\newcommand{\bimod}[2]{({#1}, {#2})\dash\mathbf{biMod}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -109,14 +114,8 @@
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Top}[0]{{\operatorname{Top}}}
-\newcommand{\Mfd}[0]{{\operatorname{Mfd}}}
-\newcommand{\Ab}[0]{{\operatorname{Ab}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
-\newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
-\newcommand{\Sch}[0]{{\operatorname{Sch}}}
-\newcommand{\sch}[0]{{\operatorname{Sch}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\alg}[0]{\mathrm{Alg}}
@@ -168,7 +167,7 @@
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
 \newcommand{\convolve}[0]{\ast}
 \newcommand{\coker}[0]{\operatorname{coker}}
 \newcommand{\Mor}[0]{\operatorname{Mor}}
@@ -176,6 +175,8 @@
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
 \newcommand{\cross}[0]{\times}
 \newcommand{\by}[0]{\times}
@@ -239,6 +240,8 @@
 \newcommand{\mapstofrom}[0]{\rightleftharpoons}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
 \newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\diagonal}[0]{\Delta}
+\newcommand{\embeds}[0]{\hookrightarrow}
 \newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
 \newcommand{\surjectsvia}[2][]{
@@ -279,6 +282,7 @@
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\Dist}[0]{\operatorname{Dist}}
 \newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\diam}[0]{{\operatorname{diam}}}
 \newcommand{\gal}[0]{\operatorname{Gal}}
 \newcommand{\diff}[0]{\operatorname{Diff}}
@@ -302,7 +306,6 @@
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
 \newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
-\newcommand{\notdivides}[0]{\nmid}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
@@ -320,11 +323,19 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\mathrm{mod}}}
-\newcommand{\modr}[0]{{\mathrm{mod}\dash R}}
-\newcommand{\mmod}[0]{{\dash\operatorname{mod}}}
-\newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
+\newcommand{\Top}[0]{{\mathbf{Top}}}
+\newcommand{\Mfd}[0]{{\mathbf{Mfd}}}
+\newcommand{\Ab}[0]{{\mathbf{Ab}}}
+\newcommand{\hoTop}[0]{{\mathbf{hoTop}}}
+\newcommand{\Sch}[0]{{\mathbf{Sch}}}
+\newcommand{\sch}[0]{{\mathbf{Sch}}}
+\newcommand{\rmod}[0]{{R\dash\mathbf{Mod}}}
+\newcommand{\modr}[0]{{\mathbf{Mod}\dash R}}
+\newcommand{\mmod}[0]{{\dash\operatorname{Mod}}}
+\newcommand{\mods}[1]{{{#1}\dash\mathbf{Mod}}}
+\newcommand{\modsright}[1]{\mathbf{Mod}\dash{#1}}
+\newcommand{\modsleft}[1]{{#1}\dash\mathbf{<od}}
+\newcommand{\kmod}[0]{{k\dash\mathbf{Mod}}}
 \newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
@@ -343,10 +354,12 @@
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\wedgeprod}[0]{\vee}
+\newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand{\connectsum}[0]{\mathop{\Large \#}}
+\newcommand{\connectsum}[0]{\mathop{ \text{\Large \#} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
 \newcommand{\ts}[1]{\left\{{#1}\right\}}
 \newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
@@ -434,13 +447,18 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\constantsheaf[1]{\underline{#1}}
+\newcommand\holomorphic[0]{\text{holo}}
+\newcommand\Mero[0]{\operatorname{Mero}}
+\newcommand\compact[0]{\text{cpt}}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
+\newcommand\closure[1]{\overline{#1}}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
@@ -464,6 +482,9 @@
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
+\newcommand{\divides}{\mid}
+\newcommand{\notdivides}{\nmid}
+\newcommand{\fractional}[1]{\theset{#1}}
 
 # Topics and Remarks 2
 
