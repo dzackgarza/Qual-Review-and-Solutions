@@ -51,6 +51,24 @@
 \tableofcontents
 \newpage
 
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
 \hypertarget{preface}{%
 \section{Preface}\label{preface}}
 
@@ -3053,6 +3071,38 @@ Hint:
 \end{align*}
 \end{quote}
 
+\hypertarget{spring-2021-1}{%
+\subsection{Spring 2021 \# 1}\label{spring-2021-1}}
+
+Let \((X, \mathcal{M},\mu)\) be a measure space and let
+\(E_n \in \mathcal{M}\) be a measurable set for \(n\geq 1\). Let
+\(f_n \coloneqq\chi_{E_n}\) be the indicator function of the set \(E\)
+and show that
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(f_n \overset{n\to\infty}\to 1\) uniformly \(\iff\) there exists
+  \(N\in |NN\) such that \(E_n = X\) for all \(n\geq N\).
+\item
+  \(f_n(x) \overset{n\to\infty}\to 1\) for almost every \(x\) \(\iff\)
+  \begin{align*}
+  \mu \qty{ \bigcap_{n \geq 0} \bigcup_{k \geq n} (X \setminus E_k) } = 0
+  .\end{align*}
+\end{enumerate}
+
+\hypertarget{spring-2021-3}{%
+\subsection{Spring 2021 \# 3}\label{spring-2021-3}}
+
+Let \((X, \mathcal{M}, \mu)\) be a finite measure space and let
+\(\left\{{ f_n}\right\}_{n=1}^{\infty } \subseteq L^1(X, \mu)\). Suppose
+\(f\in L^1(X, \mu)\) such that \(f_n(x) \overset{n\to \infty }\to f(x)\)
+for almost every \(x \in X\). Prove that for every \(\varepsilon> 0\)
+there exists \(M>0\) and a set \(E\subseteq X\) such that
+\(\mu(E) \leq \varepsilon\) and
+\({\left\lvert {f_n(x)} \right\rvert}\leq M\) for all
+\(x\in X\setminus E\) and all \(n\in {\mathbb{N}}\).
+
 \hypertarget{integrals-convergence}{%
 \section{Integrals: Convergence}\label{integrals-convergence}}
 
@@ -3870,6 +3920,38 @@ Show that the following limit exists and satisfies the equality
 \begin{align*}
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \end{align*}
+
+\hypertarget{spring-2021-2}{%
+\subsection{Spring 2021 \# 2}\label{spring-2021-2}}
+
+Calculate the following limit, justifying each step of your calculation:
+
+\begin{align*}
+L \coloneqq\lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\,dx
+.\end{align*}
+
+\hypertarget{spring-2021-5}{%
+\subsection{Spring 2021 \# 5}\label{spring-2021-5}}
+
+Let \(f_n \in L^2([0, 1])\) for \(n\in {\mathbb{N}}\), and assume that
+
+\begin{itemize}
+\item
+  \({\left\lVert {f_n} \right\rVert}_2 \leq n^{-51 \over 100}\) for all
+  \(n\in {\mathbb{N}}\),
+\item
+  \(hat{f}_n\) is supported in the interval \([2^n, 2^{n+1}]\), so
+  \begin{align*}
+  \widehat{f}_n(\xi) \coloneqq\int_0^1 f_n(x) e^{2\pi i \xi \cdot x} \,dx= 0 && \text{for } \xi \not\in [2^n, 2^{n+1}]
+  .\end{align*}
+\end{itemize}
+
+Prove that \(\sum_{n\in {\mathbb{N}}} f_n\) converges in the Hilbert
+space \(L^2([0, 1])\).
+
+\begin{quote}
+Hint: Plancherel's identity may be helpful.
+\end{quote}
 
 \hypertarget{integrals-approximation}{%
 \section{Integrals: Approximation}\label{integrals-approximation}}
@@ -4719,6 +4801,15 @@ m(E) < \delta
   \end{align*}
 \end{enumerate}
 
+\hypertarget{spring-2021-4}{%
+\subsection{Spring 2021 \# 4}\label{spring-2021-4}}
+
+Let \(f, g\) be Lebesgue integrable on \({\mathbb{R}}\) and let
+\(g_n(x) \coloneqq g(x- n)\). Prove that
+\begin{align*}
+\lim_{n\to \infty } {\left\lVert {f + g_n} \right\rVert}_1 = {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1
+.\end{align*}
+
 \hypertarget{fubini-tonelli}{%
 \section{Fubini-Tonelli}\label{fubini-tonelli}}
 
@@ -5147,6 +5238,25 @@ Prove that
 \int _{0}^{1} F(x) g(x) \, dx = 
 F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 \end{align*}
+
+\hypertarget{spring-2021-6}{%
+\subsection{Spring 2021 \# 6}\label{spring-2021-6}}
+
+Let \(f: {\mathbb{R}}\times{\mathbb{R}}\to {\mathbb{R}}\) be a
+measurable function and for \(x\in {\mathbb{R}}\) define the set
+\begin{align*}
+E_x \coloneqq\left\{{ y\in {\mathbb{R}}{~\mathrel{\Big|}~}\mu\qty{ z\in {\mathbb{R}}{~\mathrel{\Big|}~}f(x,z) = f(x, y) } > 0 }\right\} 
+.\end{align*}
+Show that the following set is a measurable subset of
+\({\mathbb{R}}\times{\mathbb{R}}\):
+\begin{align*}
+E \coloneqq\bigcup_{x\in {\mathbb{R}}} \left\{{ x }\right\} \times E_x
+.\end{align*}
+
+\begin{quote}
+Hint: consider the measurable function
+\(h(x,y,z) \coloneqq f(x, y) - f(x, z)\).
+\end{quote}
 
 \hypertarget{l2-and-fourier-analysis}{%
 \section{\texorpdfstring{\(L^2\) and Fourier

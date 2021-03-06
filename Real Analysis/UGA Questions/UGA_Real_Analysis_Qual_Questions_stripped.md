@@ -1,3 +1,14 @@
+```{=tex}
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+```
+
 # Preface
 
 I'd like to extend my gratitude to Peter Woolfitt for supplying many solutions and checking many proofs of the rest in problem sessions. Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
@@ -1976,6 +1987,21 @@ Show that
 > \chi_{E \cap(E+x)}(y)=\chi_{E}(y) \chi_{E}(y-x)
 > \]
 
+## Spring 2021 \# 1
+
+Let \( (X, \mathcal{M},\mu) \) be a measure space and let \( E_n \in \mathcal{M} \) be a measurable set for \( n\geq 1 \). Let \( f_n \coloneqq\chi_{E_n} \) be the indicator function of the set \( E \) and show that
+
+a.  \( f_n \overset{n\to\infty}\to 1 \) uniformly \( \iff \) there exists \( N\in |NN \) such that \( E_n = X \) for all \( n\geq N \).
+
+b.  \( f_n(x) \overset{n\to\infty}\to 1 \) for almost every \( x \) \( \iff \)
+    \[
+    \mu \qty{ \bigcap_{n \geq 0} \bigcup_{k \geq n} (X \setminus E_k) } = 0
+    .\]
+
+## Spring 2021 \# 3
+
+Let \( (X, \mathcal{M}, \mu) \) be a finite measure space and let \( \left\{{ f_n}\right\}_{n=1}^{\infty } \subseteq L^1(X, \mu) \). Suppose \( f\in L^1(X, \mu) \) such that \( f_n(x) \overset{n\to \infty }\to f(x) \) for almost every \( x \in X \). Prove that for every \( \varepsilon> 0 \) there exists \( M>0 \) and a set \( E\subseteq X \) such that \( \mu(E) \leq \varepsilon \) and \( {\left\lvert {f_n(x)} \right\rvert}\leq M \) for all \( x\in X\setminus E \) and all \( n\in {\mathbb{N}} \).
+
 # Integrals: Convergence
 
 ## Fall 2019 \# 2 \( \done \) {#fall-2019-2-done}
@@ -2538,6 +2564,29 @@ Show that the following limit exists and satisfies the equality
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \]
 
+## Spring 2021 \# 2
+
+Calculate the following limit, justifying each step of your calculation:
+
+\[
+L \coloneqq\lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\,dx
+.\]
+
+## Spring 2021 \# 5
+
+Let \( f_n \in L^2([0, 1]) \) for \( n\in {\mathbb{N}} \), and assume that
+
+-   \( {\left\lVert {f_n} \right\rVert}_2 \leq n^{-51 \over 100} \) for all \( n\in {\mathbb{N}} \),
+
+-   \( hat{f}_n \) is supported in the interval \( [2^n, 2^{n+1}] \), so
+    \[
+    \widehat{f}_n(\xi) \coloneqq\int_0^1 f_n(x) e^{2\pi i \xi \cdot x} \,dx= 0 && \text{for } \xi \not\in [2^n, 2^{n+1}]
+    .\]
+
+Prove that \( \sum_{n\in {\mathbb{N}}} f_n \) converges in the Hilbert space \( L^2([0, 1]) \).
+
+> Hint: Plancherel's identity may be helpful.
+
 # Integrals: Approximation
 
 ## Spring 2018 \# 3 \( \done \) {#spring-2018-3-done}
@@ -3086,6 +3135,13 @@ m(E) < \delta
     \lim_{{\left\lvert {x} \right\rvert} \to \infty} f(x) = 0.
     \]
 
+## Spring 2021 \# 4
+
+Let \( f, g \) be Lebesgue integrable on \( {\mathbb{R}} \) and let \( g_n(x) \coloneqq g(x- n) \). Prove that
+\[
+\lim_{n\to \infty } {\left\lVert {f + g_n} \right\rVert}_1 = {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1
+.\]
+
 # Fubini-Tonelli
 
 ## Spring 2020 \# 4 \( \done \) {#spring-2020-4-done}
@@ -3327,6 +3383,19 @@ Prove that
 \int _{0}^{1} F(x) g(x) \, dx = 
 F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 \]
+
+## Spring 2021 \# 6
+
+Let \( f: {\mathbb{R}}\times{\mathbb{R}}\to {\mathbb{R}} \) be a measurable function and for \( x\in {\mathbb{R}} \) define the set
+\[
+E_x \coloneqq\left\{{ y\in {\mathbb{R}}{~\mathrel{\Big|}~}\mu\qty{ z\in {\mathbb{R}}{~\mathrel{\Big|}~}f(x,z) = f(x, y) } > 0 }\right\} 
+.\]
+Show that the following set is a measurable subset of \( {\mathbb{R}}\times{\mathbb{R}} \):
+\[
+E \coloneqq\bigcup_{x\in {\mathbb{R}}} \left\{{ x }\right\} \times E_x
+.\]
+
+> Hint: consider the measurable function \( h(x,y,z) \coloneqq f(x, y) - f(x, z) \).
 
 # \( L^2 \) and Fourier Analysis {#l2-and-fourier-analysis}
 

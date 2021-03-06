@@ -219,3 +219,18 @@ Prove that
 \int _{0}^{1} F(x) g(x) \, dx = 
 F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 \]
+
+## Spring 2021 # 6
+
+Let $f: \RR \cross \RR \to \RR$ be a measurable function and for $x\in \RR$ define the set
+\[
+E_x \da \ts{ y\in \RR \st \mu\qty{ z\in \RR \st f(x,z) = f(x, y) } > 0 } 
+.\]
+Show that the following set is a measurable subset of $\RR \cross \RR$:
+\[
+E \da \Union_{x\in \RR} \ts{ x } \cross E_x
+.\]
+
+> Hint: consider the measurable function $h(x,y,z) \da f(x, y) - f(x, z)$.
+
+

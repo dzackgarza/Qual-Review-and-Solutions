@@ -939,7 +939,7 @@ a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in |NN
 
 b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \) 
 \[
-\mu \qty{ \Intersection_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
+\mu \qty{ \Intersect_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
 .\]
 
 
