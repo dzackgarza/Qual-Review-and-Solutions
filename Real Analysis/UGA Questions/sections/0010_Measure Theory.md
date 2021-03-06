@@ -929,3 +929,16 @@ Show that
 \chi_{E \cap(E+x)}(y)=\chi_{E}(y) \chi_{E}(y-x)
 \]
 
+
+## Spring 2021 # 1
+
+Let \( (X, \mathcal{M},\mu)  \) be a measure space and let $E_n \in \mathcal{M}$ be a measurable set for $n\geq 1$.
+Let $f_n \da \chi_{E_n}$ be the indicator function of the set $E$ and show that 
+
+a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in |NN$ such that $E_n = X$ for all $n\geq N$.
+
+b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \) 
+\[
+\mu \qty{ \Intersection_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
+.\]
+

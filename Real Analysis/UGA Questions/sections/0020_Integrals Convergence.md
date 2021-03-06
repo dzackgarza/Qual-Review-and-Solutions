@@ -510,3 +510,12 @@ Show that the following limit exists and satisfies the equality
 \[
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \]
+
+## Spring 2021 # 2
+
+Calculate the following limit, justifying each step of your calculation:
+
+\[
+L \da \lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\dx
+.\]
+
