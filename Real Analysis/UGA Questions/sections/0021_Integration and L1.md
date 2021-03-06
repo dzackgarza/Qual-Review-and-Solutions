@@ -514,3 +514,11 @@ m(E) < \delta
 \]
 
 
+## Spring 2021 # 4
+
+Let $f, g$ be Lebesgue integrable on $\RR$ and let $g_n(x) \da g(x- n)$.
+Prove that
+\[
+\lim_{n\to \infty } \norm{f + g_n}_1 = \norm{f}_1 + \norm{g}_1
+.\]
+

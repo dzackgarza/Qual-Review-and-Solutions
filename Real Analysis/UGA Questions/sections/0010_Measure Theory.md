@@ -942,3 +942,9 @@ b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \)
 \mu \qty{ \Intersection_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
 .\]
 
+
+## Spring 2021 # 3
+
+Let \( (X, \mathcal{M}, \mu)  \) be a finite measure space and let \( \ts{ f_n}_{n=1}^{\infty } \subseteq L^1(X, \mu) \).
+Suppose $f\in L^1(X, \mu)$ such that $f_n(x) \converges{n\to \infty }\to f(x)$ for almost every $x \in X$.
+Prove that for every \( \eps > 0 \) there exists $M>0$ and a set $E\subseteq X$ such that \( \mu(E) \leq \eps \) and \( \abs{f_n(x)}\leq M  \) for all $x\in X\sm E$ and all $n\in \NN$.
