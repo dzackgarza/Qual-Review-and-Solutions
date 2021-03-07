@@ -2986,13 +2986,13 @@ Show that the eigenvalues of a Hermitian matrix \( A \) are real and that \( A =
 Let \( A \in \operatorname{Mat}(n\times n, {\mathbb{R}}) \) be arbitrary. Make \( {\mathbb{R}}^n \) into an \( {\mathbb{R}}[x]{\hbox{-}} \)module by letting \( f(x).\mathbf{v} \coloneqq f(A)(\mathbf{v}) \) for \( f(\mathbf{v})\in {\mathbb{R}}[x] \) and \( \mathbf{v} \in {\mathbb{R}}^n \). Suppose that this induces the following direct sum decomposition:
 \[
 {\mathbb{R}}^n \cong
-{ {\mathbb{R}}[x] \over \left\langle{ (x-1)^3 }\right\rangle 
+{ {\mathbb{R}}[x] \over \left\langle{ (x-1)^3 }\right\rangle }
 \oplus
-{ {\mathbb{R}}[x] \over \left\langle{ (x^2+1)^2 }\right\rangle 
+{ {\mathbb{R}}[x] \over \left\langle{ (x^2+1)^2 }\right\rangle }
 \oplus
-{ {\mathbb{R}}[x] \over \left\langle{ (x-1)(x^2-1)(x^2+1)^4 }\right\rangle 
+{ {\mathbb{R}}[x] \over \left\langle{ (x-1)(x^2-1)(x^2+1)^4 }\right\rangle }
 \oplus
-{ {\mathbb{R}}[x] \over \left\langle{ (x+2)(x^2+1)^2 }\right\rangle 
+{ {\mathbb{R}}[x] \over \left\langle{ (x+2)(x^2+1)^2 }\right\rangle }
 .\]
 
 a.  Determine the elementary divisors and invariant factors of \( A \).
