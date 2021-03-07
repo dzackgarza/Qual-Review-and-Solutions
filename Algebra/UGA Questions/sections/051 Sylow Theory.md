@@ -352,3 +352,13 @@ a. Using Sylow theory, show that every group of order $2p$ where $p$ is prime is
 
 b. Classify all groups of order $2p$ and justify your answer.
   For the nonabelian group(s), give a presentation by generators and relations.
+
+## Fall 2020 #2 $\work$
+
+Let $G$ be a group of order 60 whose Sylow 3-subgroup is normal.
+
+a. Prove that $G$ is solvable.
+
+b. Prove that the Sylow 5-subgroup is also normal.
+
+
