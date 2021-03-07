@@ -1,3 +1,10 @@
+\newcommand{\dx}{\,dx}
+\newcommand{\dt}{\,dt}
+\newcommand{\dy}{\,dy}
+\newcommand{\ds}{\,ds}
+\newcommand{\dz}{\,dz}
+\newcommand{\du}{\,du}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -7,30 +14,10 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
@@ -38,8 +25,6 @@
 \newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HP}[0]{{\mathbb{HP}}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\kk}[0]{{\mathbb{k}}}
 \newcommand{\bbm}[0]{{\mathbb{M}}}
@@ -59,6 +44,19 @@
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\SF}[0]{\operatorname{SF}}
+\newcommand{\vol}[0]{\operatorname{vol}}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\Cx}[0]{\operatorname{Cx}}
+\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\CF}[0]{\operatorname{HF}}
+\newcommand{\ZHS}[0]{\operatorname{ZHS}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\ks}[0]{\operatorname{ks}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
@@ -88,21 +86,35 @@
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\Fp}[0]{{\FF_p}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HH}[0]{{\operatorname{HH}}}
+\newcommand{\THH}[0]{{\operatorname{THH}}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
 \newcommand{\Zar}[0]{{\mathrm{Zar}}}
 \newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
+\newcommand{\ssets}[0]{\operatorname{sSets}}
+\newcommand{\Ring}[0]{\mathbf{Ring}}
+\newcommand{\Cat}[0]{\mathbf{Cat}}
 \newcommand{\codim}[0]{\operatorname{codim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\ssets}[0]{\operatorname{sSets}}
 \newcommand{\dom}[0]{\operatorname{dom}}
 \newcommand{\txor}[0]{{\operatorname{ or }}}
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
 \newcommand{\gr}[0]{{\operatorname{gr}}}
+\newcommand{\grMod}[0]{{\operatorname{grMod}}}
+\newcommand{\bimod}[2]{({#1}, {#2})\dash\mathbf{biMod}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -121,13 +133,10 @@
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Top}[0]{{\operatorname{Top}}}
-\newcommand{\Ab}[0]{{\operatorname{Ab}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
-\newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
-\newcommand{\Sch}[0]{{\operatorname{Sch}}}
-\newcommand{\sch}[0]{{\operatorname{Sch}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\alg}[0]{\mathrm{Alg}}
 \newcommand{\scalg}[0]{\mathrm{sCAlg}}
 \newcommand{\calg}[0]{\mathrm{CAlg}}
@@ -151,14 +160,19 @@
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\sets}[0]{{\operatorname{Set}}}
-\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
 \newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\discriminant}[0]{{\Delta}}
 \newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
 \newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
@@ -173,11 +187,17 @@
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
+\newcommand{\convolve}[0]{\ast}
 \newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
 \newcommand{\cross}[0]{\times}
 \newcommand{\by}[0]{\times}
@@ -193,6 +213,7 @@
 \newcommand{\dual}[0]{^\vee}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\eps}[0]{\varepsilon}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
@@ -240,7 +261,9 @@
 \newcommand{\mapstofrom}[0]{\rightleftharpoons}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
 \newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\diagonal}[0]{\Delta}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\injectsvia}[1]{\overset{#1}\injects}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
 \newcommand{\surjectsvia}[2][]{
   \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
@@ -280,6 +303,7 @@
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\Dist}[0]{\operatorname{Dist}}
 \newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\diam}[0]{{\operatorname{diam}}}
 \newcommand{\gal}[0]{\operatorname{Gal}}
 \newcommand{\diff}[0]{\operatorname{Diff}}
@@ -289,8 +313,14 @@
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\hilb}[0]{\operatorname{Hilb}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Frame}[0]{{\operatorname{Frame}}}
+\newcommand{\Taut}[0]{{\operatorname{Taut}}}
+\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
+\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\Hom}[0]{{\operatorname{Hom}}}
 \newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
@@ -298,7 +328,6 @@
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
 \newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
-\newcommand{\notdivides}[0]{\nmid}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
@@ -316,10 +345,19 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
-\newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\modr}[0]{{\operatorname{mod}}}
-\newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
+\newcommand{\Top}[0]{{\mathbf{Top}}}
+\newcommand{\Mfd}[0]{{\mathbf{Mfd}}}
+\newcommand{\Ab}[0]{{\mathbf{Ab}}}
+\newcommand{\hoTop}[0]{{\mathbf{hoTop}}}
+\newcommand{\Sch}[0]{{\mathbf{Sch}}}
+\newcommand{\sch}[0]{{\mathbf{Sch}}}
+\newcommand{\rmod}[0]{{R\dash\mathbf{Mod}}}
+\newcommand{\modr}[0]{{\mathbf{Mod}\dash R}}
+\newcommand{\mmod}[0]{{\dash\operatorname{Mod}}}
+\newcommand{\mods}[1]{{{#1}\dash\mathbf{Mod}}}
+\newcommand{\modsright}[1]{\mathbf{Mod}\dash{#1}}
+\newcommand{\modsleft}[1]{{#1}\dash\mathbf{<od}}
+\newcommand{\kmod}[0]{{k\dash\mathbf{Mod}}}
 \newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
@@ -334,14 +372,16 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\wedgeprod}[0]{\vee}
+\newcommand{\Wedgeprod}[0]{\bigvee}
+\newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand{\connectsum}[0]{\mathop{\Large \#}}
+\newcommand{\connectsum}[0]{\mathop{ \text{\Large \#} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
 \newcommand{\ts}[1]{\left\{{#1}\right\}}
 \newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
@@ -365,10 +405,12 @@
 \newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
+\newcommand{\complex}[1]{\mathbf{#1}}
 \newcommand*\dif{\mathop{}\!\operatorname{d}}
 \newcommand{\ddt}{\tfrac{\dif}{\dif t}}
 \newcommand{\ddx}{\tfrac{\dif}{\dif x}}
@@ -390,6 +432,29 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\coind}{Coind}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\delbar}[0]{\bar{\del}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -405,14 +470,51 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\constantsheaf[1]{\underline{#1}}
+\newcommand\holomorphic[0]{\text{holo}}
+\newcommand\Mero[0]{\operatorname{Mero}}
+\newcommand\compact[0]{\text{cpt}}
+\newcommand\ol[1]{\overline{#1}}
+\newcommand\univcover[1]{\overline{#1}}
+\newcommand\closure[1]{\overline{#1}}
+\newcommand\capprod{\frown}
+\newcommand\cupprod{\smile}
+\newcommand\Path{\mathcal{P}}
+\newcommand\gradient{\nabla}
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\cupp[0]{\smile}
+\newcommand\capp[0]{\frown}
+\newcommand\sig[0]{\operatorname{sig}}
+
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\newcommand{\divides}{\mid}
+\newcommand{\notdivides}{\nmid}
+\newcommand{\fractional}[1]{\theset{#1}}
+\newcommand{\fractionalpart}[1]{\theset{#1}}
+\newcommand{\integerpart}[1]{\left[ {#1}\right] }
+\newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
+\newcommand{\Bl}[0]{\operatorname{Bl}}
+\def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+\newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
 
 ---
 title: "UGA Algebra Qualifying Exam Questions and Solutions"
@@ -612,6 +714,12 @@ Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a tran
 
 ## Fall 2019 Midterm #5 $\work$
 Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$
+
+## Spring 2021 #2 $\work$
+
+Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
+Prove that $H$ is contained in the center of $G$.
+
 
 
 # Groups: Sylow Theory
@@ -951,6 +1059,16 @@ by the Chinese Remainder Theorem, which is cyclic.
 
 
 :::
+
+## Spring 2021 #3 $\work$
+
+a. Show that every group of order $p^2$ with $p$ prime is abelian.
+
+b. State the 3 Sylow theorems.
+
+c. Show that any group of order $4225 = 5^2 13^2$ is abelian.
+
+d. Write down one representative from each isomorphism class of abelian groups of order 4225.
 
 
 # Groups: Group Actions
@@ -2652,6 +2770,24 @@ Let $L/K$ be a finite normal extension.
 - Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
 
 
+## Spring 2021 #4 $\work$
+
+Define
+\[
+f(x) \da x^4 + 4x^2 + 64 \in \QQ[x]
+.\]
+
+a. Find the splitting field $K$ of $f$ over $\QQ$.
+
+b. Find the Galois group $G$ of $f$.
+
+c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+
+## Spring 2021 #7 $\work$
+
+Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
+Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
 
 # Modules
 
@@ -3149,6 +3285,29 @@ Let $A\in M_n(\CC)$ with $A^2 = A$. Show that $A$ is similar to a diagonal matri
 
 ### Fall 2019 Final #10 $\work$
 Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.
+
+
+# Ring Theory
+
+## Spring 2021 #5 $\work$
+
+Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
+Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+
+## Spring 2021 #6
+
+a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
+
+b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
+\[
+f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
+\]
+such that $a_k$ is even for $1\leq k \leq n$.
+Show that $R$ is a subring of $\ZZ[x]$.
+
+c. Show that $R$ is not Noetherian.
+
+  *Hint: consider the ideal generated by \( \ts{ 2x^k \st 1\leq k \in \ZZ } \).*
 
 
 # Linear Algebra: Diagonalizability
@@ -3949,3 +4108,27 @@ Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there
 
 ### b
 Give all of the possible Jordan canonical forms of $T$.
+
+## Spring 2021 #1 $\work$
+
+Let m
+\[
+A \da 
+\begin{bmatrix}
+r & 1 & -1 \\
+-6 & -1 & 2 \\
+2 & 1 & 1
+\end{bmatrix}
+\in \Mat(3\times 3, \CC)
+.\]
+
+a. Find the Jordan canonical form $J$ of $A$.
+
+b. Find an invertible matrix $P$ such that $J = P \inv A P$.
+
+  *(You should not need to compute $P\inv$)*
+
+c. Write down the minimal polynomial of $A$.
+
+
+

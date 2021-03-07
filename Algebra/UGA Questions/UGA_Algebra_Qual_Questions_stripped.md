@@ -1,3 +1,14 @@
+```{=tex}
+\def\contradiction
+{
+\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
+\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
+    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
+    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
+    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+}
+```
+
 # Group Theory: General
 
 ## Spring 2020 \#2 \( \work \) {#spring-2020-2-work}
@@ -200,6 +211,10 @@ Let \( p \) be a prime. Show that \( S_p = \left\langle{\tau, \sigma}\right\rang
 ## Fall 2019 Midterm \#5 \( \work \) {#fall-2019-midterm-5-work}
 
 Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show that \( Z(G) = [G, G] \)
+
+## Spring 2021 \#2 \( \work \) {#spring-2021-2-work}
+
+Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \), where the order of \( H \) is the smallest prime \( p \) dividing \( {\left\lvert {G} \right\rvert} \). Prove that \( H \) is contained in the center of \( G \).
 
 # Groups: Sylow Theory
 
@@ -416,7 +431,7 @@ Concepts Used:
 
 -   Sylow 2: All Sylow \( p{\hbox{-}} \)subgroups are conjugate.
 -   \( {\left\lvert {HK} \right\rvert} = {\left\lvert {H} \right\rvert} {\left\lvert {K} \right\rvert} / {\left\lvert {H\cap K} \right\rvert} \).
--   Lagrange's Theorem: \( H\leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert} \)
+-   Lagrange's Theorem: \( H\leq G \implies {\left\lvert {H} \right\rvert} \mathrel{\Big|}{\left\lvert {G} \right\rvert} \)
 
 **Solution**
 
@@ -478,7 +493,7 @@ Relevant Concepts:
 
 -   The \( pqr \) theorem.
 
--   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \pmod p \).
+-   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \mathrel{\Big|}m \) and \( n_p \cong 1 \pmod p \).
 
 -   **Theorem**: If \( H, K \leq G \) and any of the following conditions hold, \( HK \) is a subgroup:
 
@@ -503,9 +518,9 @@ Relevant Concepts:
 
 We have
 
--   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
--   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
--   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
+-   \( n_3 \mathrel{\Big|}5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
+-   \( n_5 \mathrel{\Big|}3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
+-   \( n_7 \mathrel{\Big|}3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
 
 Thus
 \[
@@ -576,6 +591,16 @@ G \cong P\times Q \times R \cong {\mathbb{Z}}_3 \times{\mathbb{Z}}_5 \times{\mat
 .\]
 by the Chinese Remainder Theorem, which is cyclic.
 :::
+
+## Spring 2021 \#3 \( \work \) {#spring-2021-3-work}
+
+a.  Show that every group of order \( p^2 \) with \( p \) prime is abelian.
+
+b.  State the 3 Sylow theorems.
+
+c.  Show that any group of order \( 4225 = 5^2 13^2 \) is abelian.
+
+d.  Write down one representative from each isomorphism class of abelian groups of order 4225.
 
 # Groups: Group Actions
 
@@ -748,7 +773,7 @@ Concepts used:
 
 -   Sylow theorems:
 -   \( n_p \cong 1 \pmod p \)
--   \( n_p \divides m \).
+-   \( n_p \mathrel{\Big|}m \).
 
 **Solution**
 
@@ -863,8 +888,8 @@ Strategy: examine \( {\left\lvert {G/Z(G)} \right\rvert} \) by cases.
 
 -   By Sylow
 
-    -   \( n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
-    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
+    -   \( n_5 \mathrel{\Big|}7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
+    -   \( n_7 \mathrel{\Big|}5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
 
 -   By recognition of direct products, \( G = S_5 \times S_7 \)
 
@@ -1315,7 +1340,7 @@ Let \( k \) be a field. Show the ring \( M_n (k) \), \( n \times n \) matrices w
 
 For a ring \( R \), let \( U(R) \) denote the multiplicative group of units in \( R \). Recall that in an integral domain \( R \), \( r \in R \) is called *irreducible* if \( r \) is not a unit in R, and the only divisors of \( r \) have the form \( ru \) with \( u \) a unit in \( R \).
 
-We call a non-zero, non-unit \( r \in R \) *prime* in \( R \) if \( r \divides ab \implies r \divides a \) or \( r \divides b \). Consider the ring \( R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\} \).
+We call a non-zero, non-unit \( r \in R \) *prime* in \( R \) if \( r \mathrel{\Big|}ab \implies r \mathrel{\Big|}a \) or \( r \mathrel{\Big|}b \). Consider the ring \( R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\} \).
 
 ### a
 
@@ -1558,21 +1583,21 @@ Concepts used:
 
 -   Since \( {\left\lvert {F} \right\rvert} = q \) and \( [E:F] = k \), we have \( {\left\lvert {E} \right\rvert} = q^k \) and \( {\left\lvert {E^{\times}} \right\rvert} = q^k-1 \).
 
--   Noting that \( \zeta \in E^{\times} \) we must have \( n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1 \) by Lagrange's theorem.
+-   Noting that \( \zeta \in E^{\times} \) we must have \( n = o(\zeta) \mathrel{\Big|}{\left\lvert {E^{\times}} \right\rvert} = q^k-1 \) by Lagrange's theorem.
 
 ### b
 
 -   Rephrasing (a), we have
     \[
-    n \divides q^k-1 
+    n \mathrel{\Big|}q^k-1 
     &\iff q^k-1 \cong 0 \pmod n \\
     &\iff q^k \cong 1 \pmod n \\
-    &\iff m \coloneqq o(q) \divides k
+    &\iff m \coloneqq o(q) \mathrel{\Big|}k
     .\]
 
 ### c
 
--   Since \( m\divides k \iff k = \ell m \), (**claim**) there is an intermediate subfield \( M \) such that
+-   Since \( m\mathrel{\Big|}k \iff k = \ell m \), (**claim**) there is an intermediate subfield \( M \) such that
     \[
     E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
     ,\]
@@ -1702,7 +1727,7 @@ Since \( \rho \) is a ring morphism, we have
 &= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
+&\iff \pi(x) \mathrel{\Big|}q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
 .\]
 
 \( \hfill\blacksquare \)
@@ -1712,13 +1737,13 @@ Since \( \rho \) is a ring morphism, we have
 > Some potentially useful facts:
 >
 > -   \( {\mathbb{GF}}(p^n) \) is the splitting field of \( x^{p^n} - x \in {\mathbb{F}}_p[x] \).
-> -   \( x^{p^d} - x \divides x^{p^n} - x \iff d \divides n \)
-> -   \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n \)
+> -   \( x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d \mathrel{\Big|}n \)
+> -   \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\mathrel{\Big|}n \)
 > -   \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \).
 
 Claim: \( \pi(x) \) divides \( x^{p^n}-x \iff \deg \pi \) divides \( n \).
 
-\( \implies \): Let \( L \cong {\mathbb{GF}}(p^n) \) be the splitting field of \( \phi_n(x) \coloneqq x^{p^n}-x \); then since \( \pi \divides \phi_n \) by assumption, \( \pi \) splits in \( L \). Let \( \alpha \in L \) be any root of \( \pi \); then there is a tower of extensions \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \).
+\( \implies \): Let \( L \cong {\mathbb{GF}}(p^n) \) be the splitting field of \( \phi_n(x) \coloneqq x^{p^n}-x \); then since \( \pi \mathrel{\Big|}\phi_n \) by assumption, \( \pi \) splits in \( L \). Let \( \alpha \in L \) be any root of \( \pi \); then there is a tower of extensions \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \).
 
 Then \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \), and so
 \[
@@ -1729,7 +1754,7 @@ n &= [L: {\mathbb{F}}_p] \\
 
 for some \( \ell \in {\mathbb{Z}}^{\geq 1} \), so \( d \) divides \( n \).
 
-\( \impliedby \): If \( d\divides n \), use the fact (claim) that \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \). So \( f = f_i \) for some \( i \).
+\( \impliedby \): If \( d\mathrel{\Big|}n \), use the fact (claim) that \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \). So \( f = f_i \) for some \( i \).
 :::
 
 ## Spring 2019 \#8 \( \done \) {#spring-2019-8-done}
@@ -2360,6 +2385,23 @@ Let \( L/K \) be a finite normal extension.
 
 -   Show that if \( L/K \) is cyclic then there exists exactly one extension \( E/K \) of degree \( n \) with \( L/E/K \) for each divisor \( n \) of \( [L:K] \).
 
+## Spring 2021 \#4 \( \work \) {#spring-2021-4-work}
+
+Define
+\[
+f(x) \coloneqq x^4 + 4x^2 + 64 \in {\mathbb{Q}}[x]
+.\]
+
+a.  Find the splitting field \( K \) of \( f \) over \( {\mathbb{Q}} \).
+
+b.  Find the Galois group \( G \) of \( f \).
+
+c.  Exhibit explicitly the correspondence between subgroups of \( G \) and intermediate fields between \( {\mathbb{Q}} \) and \( K \).
+
+## Spring 2021 \#7 \( \work \) {#spring-2021-7-work}
+
+Let \( p \) be a prime number and let \( F \) be a field of characteristic \( p \). Show that if \( a\in F \) is not a \( p \)th power in \( F \), then \( x^p-a \in F[x] \) is irreducible.
+
 # Modules
 
 ## General Questions
@@ -2399,7 +2441,7 @@ b
 
 Identify \( {\mathbb{Z}}{\hbox{-}} \)modules with abelian groups, then by (a), \( N \) is maximal \( \iff \) \( M/N \) is simple \( \iff \) \( M/N \) has no nontrivial proper subgroups.
 
-By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composite number, then \( a\divides ab \implies \) there is an element (and thus a subgroup) of order \( a \). In this case, \( M/N \) contains a nontrivial proper cyclic subgroup, so \( M/N \) is not simple. So \( {\left\lvert {M/N} \right\rvert} \) can not be composite, and therefore must be prime.
+By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composite number, then \( a\mathrel{\Big|}ab \implies \) there is an element (and thus a subgroup) of order \( a \). In this case, \( M/N \) contains a nontrivial proper cyclic subgroup, so \( M/N \) is not simple. So \( {\left\lvert {M/N} \right\rvert} \) can not be composite, and therefore must be prime.
 
 c
 
@@ -2424,7 +2466,7 @@ M = \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\ma
 and
 
 \[
-N = \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)\}
+N = \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\mathrel{\Big|}(w - x),~ 4\mathrel{\Big|}(x - y),~ 4\mathrel{\Big|}( y - z)\}
 .\]
 
 #### a
@@ -2901,6 +2943,26 @@ Let \( A\in M_n({\mathbb{C}}) \) with \( A^2 = A \). Show that \( A \) is simila
 
 Show that the eigenvalues of a Hermitian matrix \( A \) are real and that \( A = PDP^{-1} \) where \( P \) is an invertible matrix with orthogonal columns.
 
+# Ring Theory
+
+## Spring 2021 \#5 \( \work \) {#spring-2021-5-work}
+
+Suppose that \( f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x] \) is a zero divisor. Show that there is a nonzero \( a\in {\mathbb{Z}}/n{\mathbb{Z}} \) with \( af(x) = 0 \).
+
+## Spring 2021 \#6
+
+a.  Carefully state the definition of **Noetherian** for a commutative ring \( R \).
+
+b.  Let \( R \) be a subset of \( {\mathbb{Z}}[x] \) consisting of all polynomials
+    \[
+    f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
+    \]
+    such that \( a_k \) is even for \( 1\leq k \leq n \). Show that \( R \) is a subring of \( {\mathbb{Z}}[x] \).
+
+c.  Show that \( R \) is not Noetherian.
+
+*Hint: consider the ideal generated by \( \left\{{ 2x^k {~\mathrel{\Big|}~}1\leq k \in {\mathbb{Z}}}\right\} \).*
+
 # Linear Algebra: Diagonalizability
 
 ## Fall 2017 \#7 \( \work \) {#fall-2017-7-work}
@@ -2967,7 +3029,7 @@ We can now construct a polynomial that annihilates \( A \), namely
 q_A(x) \coloneqq\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}[x],
 \]
 
-where we can note that \( q_A(A) = \min_{A^n}(A^n) = 0 \), and so \( \min_A(x) \divides q_A(x) \) by minimality.
+where we can note that \( q_A(A) = \min_{A^n}(A^n) = 0 \), and so \( \min_A(x) \mathrel{\Big|}q_A(x) \) by minimality.
 
 We now claim that \( q_A(x) \) has exactly \( n\cdot m \) distinct linear factors in \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x] \), which reduces to showing that no pair \( x^n-\lambda_i, x^n-\lambda_j \) share a root. and that \( x^n-\lambda_i \) does not have multiple roots.
 
@@ -2979,7 +3041,7 @@ We now claim that \( q_A(x) \) has exactly \( n\cdot m \) distinct linear factor
 
 -   For the second claim, we can check that \( {\frac{\partial }{\partial x}\,}\qty{x^n - \lambda_i} = nx^{n-1}\neq 0\in {\mathbb{F}} \), and \( \gcd(x^n-\lambda_i, nx^{n-1}) = 1 \) since the latter term has only the roots \( x=0 \) with multiplicity \( n-1 \), whereas \( \lambda_i\neq 0 \implies \) zero is not a root of \( x^n-\lambda_i \).
 
-But now since \( q_A(x) \) has exactly distinct linear factors in \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x] \) and \( \min_A(x) \divides q_A(x) \), \( \min_A(x) \in {\mathbb{F}}[x] \) can only have distinct linear factors, and \( A \) is thus diagonalizable over \( {\mathbb{F}} \).
+But now since \( q_A(x) \) has exactly distinct linear factors in \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x] \) and \( \min_A(x) \mathrel{\Big|}q_A(x) \), \( \min_A(x) \in {\mathbb{F}}[x] \) can only have distinct linear factors, and \( A \) is thus diagonalizable over \( {\mathbb{F}} \).
 
 \( \hfill\blacksquare \)
 :::
@@ -3372,7 +3434,7 @@ Characterization of diagonalizability: \( T \) is diagonalizable over \( F \iff 
 -   Replace \( F \) with its algebraic closure, then \( \min_{T, F} \) splits.
 -   Claim: in characteristic zero, every irreducible polynomial is separable
     -   Proof: it must be the case that either \( \gcd(f, f') = 1 \) or \( f' \equiv 0 \), where the second case only happens in characteristic \( p>0 \).
-    -   The first case is true because \( \deg f' < \deg f \), and if \( \gcd(f, f') = p \), then \( \deg p < \deg f \) and \( p\divides f \) forces \( p=1 \) since \( f \) is irreducible.
+    -   The first case is true because \( \deg f' < \deg f \), and if \( \gcd(f, f') = p \), then \( \deg p < \deg f \) and \( p\mathrel{\Big|}f \) forces \( p=1 \) since \( f \) is irreducible.
 -   So \( \min_{T, F} \) splits into distinct linear factors
 -   Thus \( T \) is diagonalizable.
 :::
@@ -3721,3 +3783,24 @@ Show that there does not exist any vector \( v\in V \) such that \( Tv = v \), b
 ### b
 
 Give all of the possible Jordan canonical forms of \( T \).
+
+## Spring 2021 \#1 \( \work \) {#spring-2021-1-work}
+
+Let m
+\[
+A \coloneqq
+\begin{bmatrix}
+r & 1 & -1 \\
+-6 & -1 & 2 \\
+2 & 1 & 1
+\end{bmatrix}
+\in \operatorname{Mat}(3\times 3, {\mathbb{C}})
+.\]
+
+a.  Find the Jordan canonical form \( J \) of \( A \).
+
+b.  Find an invertible matrix \( P \) such that \( J = P ^{-1}A P \).
+
+*(You should not need to compute \( P^{-1} \))*
+
+c.  Write down the minimal polynomial of \( A \).
