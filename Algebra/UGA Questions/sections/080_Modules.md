@@ -136,6 +136,20 @@ Prove that for every Noetherian module $M$, any proper submodule $N\subsetneq M$
 ### Fall 2019 Final #1  $\work$
 Let $A$ be an abelian group, and show $A$ is a $\ZZ\dash$module in a unique way.
 
+### Fall 2020 #6 $\work$
+Let $R$ be a ring with $1$ and let $M$ be a left \(R\dash\)module.
+If $I$ is a left ideal of $R$, define 
+\[
+IM \da \ts{ \sum_{i=1}^{N < \infty} a_i m_i \st a_i \in I, m_i \in M, n\in \NN}
+,\]
+i.e. the set of finite sums of of elements of the form $am$ where \( a\in I, m\in M \).
+
+a. Prove that $IM \leq M$ is a submodule.
+
+b. Let $M, N$ be left \(R\dash\)modules, $I$ a nilpotent left ideal of $R$, and $f: M\to N$ an \(R\dash\)module morphism.
+Prove that if the induced morphism \( \bar{f}: M/IM \to N/IN \) is surjective, then $f$ is surjective.
+
+
 ## Torsion and the Structure Theorem
 
 ### $\star$ Fall 2019 #5 $\done$
@@ -494,4 +508,6 @@ Let $A\in M_n(\CC)$ with $A^2 = A$. Show that $A$ is similar to a diagonal matri
 
 ### Fall 2019 Final #10 $\work$
 Show that the eigenvalues of a Hermitian matrix $A$ are real and that $A = PDP\inv$ where $P$ is an invertible matrix with orthogonal columns.
+
+
 
