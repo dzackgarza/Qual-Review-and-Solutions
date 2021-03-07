@@ -190,3 +190,9 @@ Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a tran
 ## Fall 2019 Midterm #5 $\work$
 Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$
 
+## Spring 2021 #2 $\work$
+
+Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
+Prove that $H$ is contained in the center of $G$.
+
+

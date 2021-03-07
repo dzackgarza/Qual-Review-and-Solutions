@@ -323,3 +323,27 @@ Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there
 
 ### b
 Give all of the possible Jordan canonical forms of $T$.
+
+## Spring 2021 #1 $\work$
+
+Let m
+\[
+A \da 
+\begin{bmatrix}
+r & 1 & -1 \\
+-6 & -1 & 2 \\
+2 & 1 & 1
+\end{bmatrix}
+\in \Mat(3\times 3, \CC)
+.\]
+
+a. Find the Jordan canonical form $J$ of $A$.
+
+b. Find an invertible matrix $P$ such that $J = P \inv A P$.
+
+  *(You should not need to compute $P\inv$)*
+
+c. Write down the minimal polynomial of $A$.
+
+
+
