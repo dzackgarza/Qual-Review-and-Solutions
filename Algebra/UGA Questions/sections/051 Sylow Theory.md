@@ -346,3 +346,9 @@ c. Show that any group of order $4225 = 5^2 13^2$ is abelian.
 
 d. Write down one representative from each isomorphism class of abelian groups of order 4225.
 
+## Fall 2020 #1 $\work$
+
+a. Using Sylow theory, show that every group of order $2p$ where $p$ is prime is not simple.
+
+b. Classify all groups of order $2p$ and justify your answer.
+  For the nonabelian group(s), give a presentation by generators and relations.
