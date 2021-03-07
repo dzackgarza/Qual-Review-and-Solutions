@@ -828,3 +828,9 @@ a. Define what it means for a finite extension of fields $E$ over $F$ to be a *G
 b. Determine the Galois group of $f(x) = x^3 - 7$ over $\QQ$, and justify your answer carefully.
 
 c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
+
+## Fall 2020 #4 $\work$
+
+Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
+Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
+Prove that \( [E: F] \equiv 1 \mod p \).
