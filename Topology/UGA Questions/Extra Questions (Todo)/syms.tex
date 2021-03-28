@@ -1,0 +1,363 @@
+\newcommand*{\bra}[1]{\langle #1 \mid}
+\newcommand*{\ket}[1]{\mid #1 \rangle}
+\newcommand*{\braket}[2]{\langle #1 \mid #2 \rangle}
+\newcommand*{\braCket}[3]{\langle #1 \mid #2 \mid #3 \rangle}
+
+\newcommand{\psitilde}{\tilde\psi}
+
+\newcommand{\Dn}{\mathcal{D}_n}
+\newcommand{\Sn}{\mathcal{S}_n}
+\newcommand{\An}{\mathcal{A}_n}
+\newcommand{\Vf}{\mathcal{V}_4}
+\newcommand{\Qe}{\mathcal{Q}_8}
+\newcommand{\veps}{\varepsilon}
+\newcommand*{\pig}[1]{\langle #1 \rangle}
+
+\newcommand*{\bfidx}[1]{\index{#1}\textbf{#1}}
+\newcommand*{\bfidxtwo}[2]{\textbf{#1}\index{#2}}
+\newcommand*{\bfidxaux}[2]{\index{#1}\index{#2}\textbf{#1}}
+\newcommand*{\emphidx}[1]{\index{#1}\emph{#1}}
+\newcommand*{\plainidx}[1]{\index{#1}#1}
+
+\newcommand{\cle}{\preccurlyeq}
+\newcommand{\vecA}{\mathbf{A}}
+\newcommand{\vecB}{\mathbf{B}}
+\newcommand{\vecE}{\mathbf{E}}
+\newcommand{\vecF}{\mathbf{F}}
+\newcommand{\vecV}{\mathbf{V}}
+\newcommand{\veca}{\mathbf{a}}
+\newcommand{\vecb}{\mathbf{b}}
+\newcommand{\vecc}{\mathbf{c}}
+\newcommand{\vecd}{\mathbf{d}}
+\newcommand{\vece}{\mathbf{e}}
+\newcommand{\vecf}{\mathbf{f}}
+\newcommand{\vecg}{\mathbf{g}}
+\newcommand{\veci}{\mathbf{i}}
+\newcommand{\vecj}{\mathbf{j}}
+\newcommand{\veck}{\mathbf{k}}
+\newcommand{\vecn}{\mathbf{n}}
+\newcommand{\vecnhat}{\mathbf{\hat{n}}}
+\newcommand{\vecp}{\mathbf{p}}
+\newcommand{\vecq}{\mathbf{q}}
+\newcommand{\vecr}{\mathbf{r}}
+\newcommand{\vecs}{\mathbf{s}}
+\newcommand{\vecu}{\mathbf{u}}
+\newcommand{\vecv}{\mathbf{v}}
+\newcommand{\vecw}{\mathbf{w}}
+\newcommand{\vecx}{\mathbf{x}}
+\newcommand{\vecy}{\mathbf{y}}
+\newcommand{\vecz}{\mathbf{z}}
+
+\newcommand{\ehat}{\hat{\vece}}
+\newcommand{\nhat}{\hat{\vecn}}
+\newcommand{\xhat}{\hat{\vecx}}
+\newcommand{\yhat}{\hat{\vecy}}
+\newcommand{\zhat}{\hat{\vecz}}
+
+%\newcommand{\ihat}{\veci}
+%\newcommand{\jhat}{\vecj}
+%\newcommand{\khat}{\hat\veck}
+
+\newcommand{\ihat}{\boldsymbol{\hat{\mathrm{\imath}}}}
+\newcommand{\jhat}{\boldsymbol{\hat{\mathrm{\jmath}}}}
+\newcommand{\khat}{\hat\veck}
+
+\newcommand{\omegabar}{\overline{\omega}}
+\newcommand{\etabar}{\overline{\eta}}
+
+\newcommand{\xdot}{\dot{x}}
+\newcommand{\ydot}{\dot{y}}
+\newcommand{\zdot}{\dot{z}}
+
+\newcommand{\xddot}{\ddot{x}}
+\newcommand{\yddot}{\ddot{y}}
+\newcommand{\zddot}{\ddot{z}}
+
+\newcommand{\myvecx}{\mathbf{x}}
+\newcommand{\veclambda}{\mathbf{\lambda}}
+
+\newcommand{\adju}{\mathrm{adju}}
+\newcommand{\curl}{\mathrm{curl}}
+\newcommand{\ord}{\mathrm{ord}}
+\newcommand{\rGL}{\mathrm{GL}}
+\newcommand{\rSL}{\mathrm{SL}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\sgn}{\mathrm{sgn}}
+
+\newcommand{\vecnq}{\mathbf{n}_\mathbf{q}}
+\newcommand{\vecuq}{\mathbf{u}_\mathbf{q}}
+\newcommand{\vecvq}{\mathbf{v}_\mathbf{q}}
+
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcH}{\mathcal{H}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcS}{\mathcal{S}}
+\newcommand{\mcT}{\mathcal{T}}
+
+\newcommand{\msC}{\mathscr{C}}
+\newcommand{\msD}{\mathscr{D}}
+
+\newcommand{\D}{\partial}
+\newcommand{\DA}{\partial A}
+\newcommand{\DB}{\partial B}
+\newcommand{\DC}{\partial C}
+\newcommand{\DX}{\partial X}
+\newcommand{\Dc}{\partial c}
+\newcommand{\Df}{\partial f}
+\newcommand{\Dg}{\partial g}
+\newcommand{\DG}{\partial G}
+\newcommand{\Dh}{\partial h}
+\newcommand{\DM}{\partial M}
+\newcommand{\Dr}{\partial r}
+\newcommand{\Dx}{\partial x}
+\newcommand{\Dy}{\partial y}
+\newcommand{\Dz}{\partial z}
+\newcommand{\Ds}{\partial s}
+\newcommand{\Dt}{\partial t}
+
+\newcommand{\grad}{\nabla}
+\newcommand{\tensor}{\otimes}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\longto}{\longrightarrow}
+
+\newcommand{\from}{\leftarrow}
+\newcommand{\longfrom}{\longleftarrow}
+
+% Contraction operator.  I don't know the "right" way to declare this as a
+% binary operator so that LaTeX will get the intersymbol spacing right for me.
+% Hence, I am just using \, as a hack.
+\newcommand{\ctt}{\,\lrcorner\,}
+
+\newcommand*{\slashD}[1]{\partial/\partial #1}
+\newcommand*{\fracD}[1]{\frac{\partial}{\partial #1}}
+\newcommand*{\slashDtwo}[2]{\partial #1/\partial #2}
+\newcommand*{\fracDtwo}[2]{\frac{\partial #1}{\partial #2}}
+
+\newcommand{\slashDw}{\partial/\partial w}
+\newcommand{\slashDx}{\partial/\partial x}
+\newcommand{\slashDy}{\partial/\partial y}
+\newcommand{\slashDz}{\partial/\partial z}
+\newcommand{\slashDp}{\partial/\partial p}
+\newcommand{\slashDq}{\partial/\partial q}
+\newcommand{\slashDr}{\partial/\partial r}
+\newcommand{\slashDtheta}{\partial/\partial \theta}
+\newcommand{\slashdtheta}{d/d\theta}
+\newcommand{\slashDphi}{\partial/\partial \phi}
+\newcommand{\slashdphi}{d/d\phi}
+
+\newcommand{\fracDw}{\frac{\partial}{\partial w}}
+\newcommand{\fracDx}{\frac{\partial}{\partial x}}
+\newcommand{\fracDy}{\frac{\partial}{\partial y}}
+\newcommand{\fracDz}{\frac{\partial}{\partial z}}
+\newcommand{\fracDp}{\frac{\partial}{\partial p}}
+\newcommand{\fracDq}{\frac{\partial}{\partial q}}
+\newcommand{\fracDr}{\frac{\partial}{\partial r}}
+\newcommand{\fracDtheta}{\frac{\partial}{\partial \theta}}
+\newcommand{\fracdtheta}{\frac{d}{d\theta}}
+\newcommand{\fracDphi}{\frac{\partial}{\partial \phi}}
+\newcommand{\fracdphi}{\frac{d}{d\phi}}
+
+\newcommand{\fracDew}{\frac{\partial e}{\partial w}}
+\newcommand{\eracDex}{\frac{\partial e}{\partial x}}
+\newcommand{\fracDey}{\frac{\partial e}{\partial y}}
+\newcommand{\fracDez}{\frac{\partial e}{\partial z}}
+
+\newcommand{\fracDfw}{\frac{\partial f}{\partial w}}
+\newcommand{\fracDfx}{\frac{\partial f}{\partial x}}
+\newcommand{\fracDfy}{\frac{\partial f}{\partial y}}
+\newcommand{\fracDfz}{\frac{\partial f}{\partial z}}
+
+\newcommand{\fracDgw}{\frac{\partial g}{\partial w}}
+\newcommand{\fracDgx}{\frac{\partial g}{\partial x}}
+\newcommand{\fracDgy}{\frac{\partial g}{\partial y}}
+\newcommand{\fracDgz}{\frac{\partial g}{\partial z}}
+
+\newcommand{\fracDhw}{\frac{\partial h}{\partial w}}
+\newcommand{\fracDhx}{\frac{\partial h}{\partial x}}
+\newcommand{\fracDhy}{\frac{\partial h}{\partial y}}
+\newcommand{\fracDhz}{\frac{\partial h}{\partial z}}
+
+\newcommand{\fracDGw}{\frac{\partial G}{\partial w}}
+\newcommand{\fracDGx}{\frac{\partial G}{\partial x}}
+\newcommand{\fracDGy}{\frac{\partial G}{\partial y}}
+\newcommand{\fracDGz}{\frac{\partial G}{\partial z}}
+
+\newcommand{\fracDxs}{\frac{\partial x}{\partial s}}
+\newcommand{\fracDxt}{\frac{\partial x}{\partial t}}
+\newcommand{\fracDys}{\frac{\partial y}{\partial s}}
+\newcommand{\fracDyt}{\frac{\partial y}{\partial t}}
+
+\newcommand{\HdR}{H_{dR}}
+
+
+\newcommand*{\slashd}[1]{d/d #1}
+\newcommand*{\fracd}[1]{\frac{d}{d #1}}
+\newcommand*{\slashdtwo}[2]{d #1/d #2}
+\newcommand*{\fracdtwo}[2]{\frac{d #1}{d #2}}
+
+\newcommand*{\vvectwo}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand*{\vvecthree}[3]{\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}}
+\newcommand*{\pickpipess}[1]{\bigg|_{\scriptsize{#1}}}
+\newcommand*{\pickpipet}[1]{\bigg|_{\tiny{#1}}}
+\newcommand*{\pickpipe}[1]{\pickpipet{#1}}
+
+\newcommand*{\rowvectwo}[2]{\begin{pmatrix}#1 & #2 \end{pmatrix}}
+\newcommand*{\rowvecthree}[3]{\begin{pmatrix}#1 & #2 & #3\end{pmatrix}}
+%\newcommand*{\colvectwo}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+%\newcommand*{\colvecthree}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+
+\newcommand*{\colvecone}[1]{\left(\begin{array}{r} #1 \end{array}\right)}
+\newcommand*{\colvectwo}[2]{\left(\begin{array}{r} #1 \\ #2 \end{array}\right)}
+\newcommand*{\colvecthree}[3]{\left(\begin{array}{r} #1 \\ #2 \\ #3\end{array}\right)}
+\newcommand*{\colvecfour}[4]{\left(\begin{array}{r} #1 \\ #2 \\ #3 \\ #4\end{array}\right)}
+
+\newcommand*{\collvecone}[1]{\left(\begin{array}{l} #1 \end{array}\right)}
+\newcommand*{\collvectwo}[2]{\left(\begin{array}{l} #1 \\ #2 \end{array}\right)}
+\newcommand*{\collvecthree}[3]{\left(\begin{array}{l} #1 \\ #2 \\ #3\end{array}\right)}
+\newcommand*{\collvecfour}[4]{\left(\begin{array}{l} #1 \\ #2 \\ #3 \\ #4\end{array}\right)}
+
+\newcommand*{\colcvecone}[1]{\left(\begin{array}{c} #1 \end{array}\right)}
+\newcommand*{\colcvectwo}[2]{\left(\begin{array}{c} #1 \\ #2 \end{array}\right)}
+\newcommand*{\colcvecthree}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3\end{array}\right)}
+\newcommand*{\colcvecfour}[4]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \\ #4\end{array}\right)}
+
+\newcommand*{\colrvecone}[1]{\left(\begin{array}{r} #1 \end{array}\right)}
+\newcommand*{\colrvectwo}[2]{\left(\begin{array}{r} #1 \\ #2 \end{array}\right)}
+\newcommand*{\colrvecthree}[3]{\left(\begin{array}{r} #1 \\ #2 \\ #3\end{array}\right)}
+\newcommand*{\colrvecfour}[4]{\left(\begin{array}{r} #1 \\ #2 \\ #3 \\ #4\end{array}\right)}
+
+% pmatrix and bmatrix are nice but they don't right-flush.
+
+\newcommand*{\mxlsqtwo}[4]{\left(\begin{array}{ll}
+	#1 & #2 \\
+	#3 & #4 \\
+	\end{array}\right)}
+\newcommand*{\mxcsqtwo}[4]{\left(\begin{array}{cc}
+	#1 & #2 \\
+	#3 & #4 \\
+	\end{array}\right)}
+\newcommand*{\mxrsqtwo}[4]{\left(\begin{array}{rr}
+	#1 & #2 \\
+	#3 & #4 \\
+	\end{array}\right)}
+
+\newcommand*{\mxlsqthree}[9]{\left(\begin{array}{lll}
+	#1 & #2 & #3 \\
+	#4 & #5 & #6 \\
+	#7 & #8 & #9 \\
+	\end{array}\right)}
+\newcommand*{\mxcsqthree}[9]{\left(\begin{array}{ccc}
+	#1 & #2 & #3 \\
+	#4 & #5 & #6 \\
+	#7 & #8 & #9 \\
+	\end{array}\right)}
+\newcommand*{\mxrsqthree}[9]{\left(\begin{array}{rrr}
+	#1 & #2 & #3 \\
+	#4 & #5 & #6 \\
+	#7 & #8 & #9 \\
+	\end{array}\right)}
+
+% Parenthesized matrix with specified alignment.
+\newcommand*{\psamatrix}[2]{
+	\left(\begin{array}{#1}
+		#2
+	\end{array}\right)
+}
+
+% Bracketed matrix with specified alignment.
+\newcommand*{\bsamatrix}[2]{
+	\left[\begin{array}{#1}
+		#2
+	\end{array}\right]
+}
+
+% Unparenthesized matrix with specified alignment.
+\newcommand*{\usamatrix}[2]{
+	\begin{array}{#1}
+		#2
+	\end{array}
+}
+
+% Parenthesized matrix with left alignment.
+\newcommand*{\plmatrix}[1]{
+	\left(\begin{array}{llllllllllll}
+		#1
+	\end{array}\right)
+}
+
+% Bracketed matrix with left alignment.
+\newcommand*{\blmatrix}[1]{
+	\left[\begin{array}{llllllllllll}
+		#1
+	\end{array}\right]
+}
+
+% Unparenthesized matrix with left alignment.
+\newcommand*{\ulmatrix}[1]{
+	\begin{array}{llllllllllll}
+		#1
+	\end{array}
+}
+
+% Parenthesized matrix with centered alignment.
+\newcommand*{\pcmatrix}[1]{
+	\left(\begin{array}{cccccccccccc}
+		#1
+	\end{array}\right)
+}
+
+% Bracketed matrix with centered alignment.
+\newcommand*{\bcmatrix}[1]{
+	\left[\begin{array}{cccccccccccc}
+		#1
+	\end{array}\right]
+}
+
+% Unparenthesized matrix with centered alignment.
+\newcommand*{\ucmatrix}[1]{
+	\begin{array}{cccccccccccc}
+		#1
+	\end{array}
+}
+
+% Parenthesized matrix with right alignment.
+\newcommand*{\prmatrix}[1]{
+	\left(\begin{array}{rrrrrrrrrrrr}
+		#1
+	\end{array}\right)
+}
+
+% Bracketed matrix with right alignment.
+\newcommand*{\brmatrix}[1]{
+	\left[\begin{array}{rrrrrrrrrrrr}
+		#1
+	\end{array}\right]
+}
+
+% Unparenthesized matrix with right alignment.
+\newcommand*{\urmatrix}[1]{
+	\begin{array}{rrrrrrrrrrrr}
+		#1
+	\end{array}
+}
+
+%\newcommand{\uscore}{\textunderscore}
+\newcommand{\uscore}{\_}
+\newcommand{\cupprod}{\smallsmile}
+
+\newcommand{\qand}{\quad\textrm{and}\quad}
+\newcommand{\qqand}{\qquad\textrm{and}\qquad}
+\newcommand{\qor}{\quad\textrm{or}\quad}
+\newcommand{\qqor}{\qquad\textrm{or}\qquad}
+\newcommand{\qie}{\quad\textrm{i.e.}\quad}
+\newcommand{\qqie}{\qquad\textrm{i.e.}\qquad}
+
+\newcommand{\TqM}{T_\vecq M}
+\newcommand{\TqsM}{T^*_\vecq M}
+
+\newcommand{\tat}{{\textasciitilde}}
