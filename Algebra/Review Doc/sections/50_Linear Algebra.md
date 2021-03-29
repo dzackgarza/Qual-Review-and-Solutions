@@ -183,7 +183,6 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 \todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
 
 
-
 ## Using Canonical Forms
 
 :::{.lemma title="?"}
