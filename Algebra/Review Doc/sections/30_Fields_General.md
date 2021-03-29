@@ -69,6 +69,12 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
+
+:::{.definition title="Elementary Symmetric Functions"}
+Todo
+:::
+
+
 ## Extensions
 
 :::{.definition title="Algebraic Field Extension"}
@@ -155,10 +161,6 @@ Every finite separable extension is simple.
 :::{.corollary}
 $\GF(p^n)$ is a simple extension over $\FF_p$.
 :::
-
-
-
-
 
 ## Finite Fields
 
@@ -298,6 +300,10 @@ It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not
 
 :::{.proposition title="Galois Groups of Cyclotomic Fields"}
 For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units$.
+:::
+
+:::{.theorem title="Kronecker-Weber"}
+If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some $m$.
 :::
 
 
