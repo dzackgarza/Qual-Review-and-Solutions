@@ -19,10 +19,16 @@ I.e. the only torsion element of \( M \) is zero itself.
 :::
 
 
-:::{.fact}
-Free \( \implies \) torsionfree.
+
+
+:::{.proposition title="Free implies torsionfree"}
+A free module is torsionfree.
 :::
 
+
+:::{.proof title=""}
+Todo
+:::
 
 
 :::{.example title="?"}
@@ -32,8 +38,14 @@ $\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) 
 
 
 :::{.definition title="Projective Modules"}
-A module $M$ is **projective** iff $M$ is a direct summand of a free module $F = M \oplus \cdots$.
+A module $M$ is **projective** if and only if  
 :::
+
+
+:::{.proposition title="?"}
+$P$ is projective if and only if $p$ is a direct summand of a free module.
+:::
+
 
 
 

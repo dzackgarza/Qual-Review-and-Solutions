@@ -27,6 +27,8 @@ Todo
 
 
 :::{.definition title="Gram Matrix"}
+\todo[inline]{todo}
+
 
 :::
 
