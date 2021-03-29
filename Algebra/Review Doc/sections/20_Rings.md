@@ -276,3 +276,11 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 
+## Unsorted
+
+
+:::{.proposition title="Correspondence Theorem"}
+\todo[inline]{todo}
+
+:::
+
