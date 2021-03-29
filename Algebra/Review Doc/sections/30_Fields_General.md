@@ -157,7 +157,6 @@ $\GF(p^n)$ is a simple extension over $\FF_p$.
 :::
 
 
-## Cyclotomic Fields
 
 
 
@@ -238,7 +237,6 @@ This has no roots in $k$.
 
 ## Cyclotomic Polynomials
 
-
 :::{.proposition}
 $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 :::
@@ -280,7 +278,6 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
-
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
 $$
@@ -294,4 +291,12 @@ It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not
 :::{.proposition title="Table of cyclotomic polynomials"}
 \todo[inline]{todo}
 :::
+
+## Splitting Fields
+
+
+:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
+
+:::
+
 
