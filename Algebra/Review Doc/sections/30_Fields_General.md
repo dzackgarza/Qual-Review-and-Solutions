@@ -237,6 +237,11 @@ This has no roots in $k$.
 
 ## Cyclotomic Polynomials
 
+:::{.definition title="Cyclotomic Field"}
+Any subfield of the splitting field $E$ of $f(x) = x^m-1$ is a **cyclotomic field**.
+:::
+
+
 :::{.proposition}
 $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 :::
@@ -291,6 +296,12 @@ It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not
 :::{.proposition title="Table of cyclotomic polynomials"}
 \todo[inline]{todo}
 :::
+
+
+:::{.proposition title="Galois Groups of Cyclotomic Fields"}
+
+:::
+
 
 ## Splitting Fields
 
