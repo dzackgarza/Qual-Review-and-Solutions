@@ -19,6 +19,18 @@ $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
 
 
+:::{.definition title="Constructible"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.theorem title="Constructibility of Regular $n\dash$gons"}
+
+:::
+
+
+
 ### Lemmas About Towers
 
 Let $L/F/k$ be a finite tower of field extensions.
