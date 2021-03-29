@@ -223,7 +223,7 @@ $\implies$:
 :::
 
 :::{.proposition title="Finite fields are not algebraically closed"}
-No finite field is algebraically closed.
+If $\FF$ is a finite field then $F\neq \bar{F}$.
 :::
 
 :::{.proof}
