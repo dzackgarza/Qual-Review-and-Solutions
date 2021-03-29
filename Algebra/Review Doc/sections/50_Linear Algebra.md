@@ -397,7 +397,45 @@ Matrix roots of unity:
 :::
 
 
-## Counting in Matrix Groups
+## Matrix Groups
+
+:::{.definition title="General Linear Group"}
+
+:::
+
+
+:::{.definition title="Special Linear Group"}
+
+:::
+
+
+:::{.definition title="Orthogonal Group"}
+
+:::
+
+
+:::{.definition title="Special Orthogonal Group"}
+
+:::
+
+
+:::{.definition title="Unitary Group"}
+
+:::
+
+
+:::{.definition title="Symplectic Group"}
+
+:::
+
+\todo[inline]{Matrix group definitions.}
+
+
+
+
+
+
+
 
 
 :::{.proposition title="Order of $\GL_n$"}
