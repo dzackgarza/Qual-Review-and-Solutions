@@ -69,11 +69,9 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
-
 :::{.definition title="Elementary Symmetric Functions"}
 Todo
 :::
-
 
 ## Extensions
 
@@ -139,6 +137,12 @@ If $\FF$ is a field with $\char(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extensi
 :::{.corollary title="Quadratic extensions of rationals"}
 If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
 :::
+
+
+:::{.proposition title="?"}
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
+:::
+
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
