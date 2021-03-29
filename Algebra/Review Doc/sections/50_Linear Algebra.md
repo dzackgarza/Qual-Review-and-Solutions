@@ -437,7 +437,6 @@ Matrix roots of unity:
 
 
 
-
 :::{.proposition title="Order of $\GL_n$"}
 \todo[inline]{todo}
 :::
