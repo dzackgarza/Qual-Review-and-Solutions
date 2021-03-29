@@ -304,3 +304,9 @@ Division algorithm for Euclidean domains.
 :::
 
 
+
+:::{.theorem title="Hilbert Basis Theorem"}
+\todo[inline]{todo}
+
+:::
+
