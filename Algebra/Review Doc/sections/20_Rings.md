@@ -292,3 +292,16 @@ Division algorithm for polynomials:
 
 :::
 
+
+:::{.definition title="Localization"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Fraction Field"}
+\todo[inline]{todo}
+
+:::
+
+

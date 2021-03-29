@@ -12,6 +12,13 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polyno
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
 
+
+:::{.theorem title="Dirichlet's Theorem on Arithmetic Progressions"}
+\todo[inline]{todo}
+
+:::
+
+
 ### Lemmas About Towers
 
 Let $L/F/k$ be a finite tower of field extensions.
