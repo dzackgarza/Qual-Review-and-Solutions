@@ -9,7 +9,15 @@ A module is **simple** iff it has no nontrivial proper submodules.
 
 
 :::{.definition title="Free Module"}
-A **free** module is a module with a basis (i.e. a spanning, linearly independent set).
+A **free** module is a module satisfying the following universal property:
+
+\todo[inline]{todo}
+
+:::
+
+
+:::{.proposition title="?"}
+Every free \(R\dash\)module admits a basis (spanning $R\dash$linearly independent set).
 :::
 
 
@@ -38,12 +46,15 @@ $\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) 
 
 
 :::{.definition title="Projective Modules"}
-A module $M$ is **projective** if and only if  
+A module $M$ is **projective** if and only if it satisfies the following universal property:
+
+\todo[inline]{todo}
+
 :::
 
 
 :::{.proposition title="?"}
-$P$ is projective if and only if $p$ is a direct summand of a free module.
+$P$ is projective if and only if $P$ is a direct summand of a free module.
 :::
 
 
