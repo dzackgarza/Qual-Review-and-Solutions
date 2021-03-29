@@ -13,6 +13,26 @@ Todo
 \todo[inline]{todo}
 :::
 
+
+:::{.definition title="Nondegenerate Bilinear Form"}
+\todo[inline]{todo}
+:::
+
+
+
+:::{.definition title="Quadratic Form"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Gram Matrix"}
+
+:::
+
+
+
+
 ## Minimal / Characteristic Polynomials
 
 Fix some notation:
@@ -226,8 +246,6 @@ $A^*$ denotes the conjugate tranpose of $A$.
 Let $V$ be a vector space over $k$ an algebraically closed and $A \in \mathrm{End}(V)$.
 Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$ has an eigenvector in $W$.
 :::
-
-
 
 :::{.theorem title="The Spectral Theorem"}
 \envlist
