@@ -290,6 +290,11 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 - Order $p^2q$: ?
 
 
+:::{.proposition title="PQR Theorem"}
+If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
+:::
+
+
 ### Finitely Generated Abelian Groups
 
 :::{.definition title="Invariant Factor Decomposition"}

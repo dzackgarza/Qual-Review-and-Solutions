@@ -284,3 +284,11 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 
 :::
 
+
+:::{.fact}
+Division algorithm for polynomials:
+
+\todo[inline]{todo}
+
+:::
+

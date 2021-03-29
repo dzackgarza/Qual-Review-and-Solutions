@@ -79,7 +79,7 @@ Todo
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
-:::{.definition title="Normal Field Extension"}
+:::{.proposition title="Normal Field Extension"}
 Let $L/k$ be a finite extension.
 Then TFAE:
 
@@ -91,6 +91,10 @@ Then TFAE:
 - Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
 - If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
+:::
+
+:::{.proof title="?"}
+\todo[inline]{todo}
 :::
 
 :::{.definition title="Separable Field Extension"}
