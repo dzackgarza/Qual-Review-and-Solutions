@@ -1,30 +1,23 @@
 # Linear Algebra
 
-
-
 :::{.definition title="Invariant Factor"}
 Todo
 \todo[inline]{todo}
 :::
-
 
 :::{.definition title="Elementary Divisor"}
 Todo
 \todo[inline]{todo}
 :::
 
-
 :::{.definition title="Nondegenerate Bilinear Form"}
 \todo[inline]{todo}
 :::
-
-
 
 :::{.definition title="Quadratic Form"}
 \todo[inline]{todo}
 
 :::
-
 
 :::{.definition title="Gram Matrix"}
 \todo[inline]{todo}
@@ -32,22 +25,20 @@ Todo
 
 :::
 
-
-
 ## Minimal / Characteristic Polynomials
 
+:::{.remark}
 Fix some notation:
-\begin{align*}
+\[
 \min_A(x): \quad & \text{The minimal polynomial of } A \\
 \chi_A(x): \quad & \text{The characteristic polynomial of } A
-.\end{align*}
+.\]
 
-
+:::
 
 :::{.definition title="?"}
 The **minimal polynomial** of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
 :::
-
 
 :::{.definition title="?"}
 The **characteristic polynomial** of $A$ is given by
@@ -57,17 +48,13 @@ $$
 
 :::
 
-
 :::{.fact}
 If $A$ is upper triangular, then $\det(A) = \prod_{i} a_{ii}$
 :::
 
-
-
 :::{.theorem title="Cayley-Hamilton"}
 The minimal polynomial divides the characteristic polynomial, and in particular $\chi_A(A) = 0$.
 :::
-
 
 :::{.proof title="?"}
 By minimality, $\min_A$ divides $\chi_A$. 
@@ -80,11 +67,9 @@ $$
 which forces $\min_A(\lambda_i) = 0$.
 :::
 
-
 :::{.definition title="Similar Matrices"}
 Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
 :::
-
 
 :::{.definition title="Equivalent Matrices"}
 Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
@@ -96,7 +81,6 @@ Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
 - They have the same (JCF)
 
 :::
-
 
 ## Finding Minimal Polynomials
 
@@ -111,7 +95,7 @@ Let $m(x)$ denote the minimal polynomial $A$.
 
 :::{.definition title="Companion Matrix"}
 Given a monic $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n$, the **companion matrix** of $p$ is given by
-\begin{align*}
+\[
 C_p \definedas 
 \begin{bmatrix}
 0 & 0 & \dots & 0 &-a_0 \\ 
@@ -120,7 +104,7 @@ C_p \definedas
 \vdots & & \ddots & & \vdots \\ 
 0 & 0 & \dots & 1 & -a_{n-1} 
 \end{bmatrix}
-.\end{align*}
+.\]
 :::
 
 ## Canonical Forms
@@ -132,9 +116,9 @@ Corresponds to the **Invariant Factor Decomposition** of $T$.
 
 :::{.theorem title="Structure Theorem"}
 For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
-\begin{align*}
+\[
 M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
-\end{align*}
+\]
 where each $a_i$ is an invariant factor.
 :::
 
@@ -177,10 +161,10 @@ The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
-\begin{align*}
+\[
 \min_A(x) = \prod (x- \lambda_i)^{a_i} \\
 \chi_A(x) = \prod (x- \lambda_i)^{b_i}
-\end{align*}
+\]
 
 - The roots both polynomials are precisely the eigenvalues of $A$
 
@@ -195,6 +179,7 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 - $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
 
 :::
+
 
 
 
@@ -268,9 +253,9 @@ so $A(W_1) \subseteq W_1$ is an invariant subspace, etc.
 
 - Suppose now that $A$ is symmetric.
 - Then there is an eigenvector of norm 1, $\vector v \in V$.
-\begin{align*}
+\[
 \lambda = \lambda\inner{\vector v}{\vector v} = \inner{A\vector v}{\vector v} = \inner{\vector v}{A\vector v} = \overline{\lambda} \implies \lambda \in \RR
-.\end{align*}
+.\]
 
 :::
 
@@ -308,7 +293,6 @@ But the minimal polynomial is just the largest invariant factor.
 
 ## Matrix Counterexamples
 
-
 :::{.example title="?"}
 A matrix that:
 
@@ -319,19 +303,19 @@ A matrix that:
 - $\min_M(x) = \chi_M(x) = x^2 + 1$
 
 \[
-M = \left[\begin{array}{rr}
+M = \left(\begin{array}{rr}
 0  & 1 \\
 -1 & 0
-\end{array}\right] \sim
-\left[\begin{array}{r|r}
+\end{array}\right) \sim
+\left(\begin{array}{r|r}
 -1 \sqrt{-1} & 0 \\
 \hline
 0 & 1 \sqrt{-1}
 \end{array}
-\right].\]
+\right)
+.\]
 
 :::
-
 
 :::{.example title="?"}
 A matrix that:
@@ -342,67 +326,82 @@ A matrix that:
 
 - $\min_M(x) = \chi_M(x) = x^2-2x+1$
 
-\begin{align*}
-M = \left[\begin{array}{rr}
+\[
+M = \left(\begin{array}{rr}
 1 & 1 \\
 0 & 1
-\end{array}\right] \sim
-\left[\begin{array}{rr}
+\end{array}\right) 
+\sim
+\left(
+\begin{array}{rr}
 1 & 1 \\
 0 & 1
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+.\]
 
 :::
-
 
 :::{.example title="?"}
 Non-similar matrices with the same characteristic polynomial
 $$
-\left[\begin{array}{ll}
+\left(\begin{array}{ll}
 {1}  & {0} \\
 {0} & {1}
-\end{array}\right]
+\end{array}\right)
 \text { and }
-\left[\begin{array}{ll}
+\left(\begin{array}{ll}
 {1} & {1} \\
 {0} & {1}
-\end{array}\right]
+\end{array}\right)
 $$
 :::
 
-
-
 :::{.example title="?"}
 A full-rank matrix that is not diagonalizable:
-\begin{align*}
-\left[\begin{array}{ccc}
+\[
+\left(
+\begin{array}{ccc}
 1 & 1 & 0 \\
 0 & 1 & 1 \\
 0 & 0 & 1 \\
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+
+.\]
 
 :::
-
-
 
 :::{.example title="?"}
 Matrix roots of unity:
-\begin{align*} \sqrt{I_2} =
-\left[\begin{array}{cc}
+
+\[
+\sqrt{I_2} =
+\left(
+\begin{array}{cc}
 0 & 1\\
 1 & 0
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+.\]
 
-\begin{align*} \sqrt{-I_2} =
-\left[\begin{array}{cc}
+\[
+\sqrt{-I_2} =
+\left(
+\begin{array}{cc}
 0 & -1\\
 1 & 0
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+.\]
+
 :::
 
 
+## Counting in Matrix Groups
+
+
+:::{.proposition title="Order of $\GL_n$"}
+\todo[inline]{todo}
+:::
 
