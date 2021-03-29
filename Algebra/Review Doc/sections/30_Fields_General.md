@@ -241,7 +241,6 @@ This has no roots in $k$.
 Any subfield of the splitting field $E$ of $f(x) = x^m-1$ is a **cyclotomic field**.
 :::
 
-
 :::{.proposition}
 $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 :::
@@ -286,7 +285,7 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
 $$
-\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
+\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right) \in \ZZ[x]
 ,$$
 
 which is a product over primitive roots of unity.
@@ -297,17 +296,15 @@ It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not
 \todo[inline]{todo}
 :::
 
-
 :::{.proposition title="Galois Groups of Cyclotomic Fields"}
-
+For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units$.
 :::
 
 
 ## Splitting Fields
 
-
 :::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
-
+The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
 :::
 
 
