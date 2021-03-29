@@ -2,7 +2,6 @@
 
 ## Facts and Definitions
 
-
 Let $k$ denote a field, and $L/k$ extensions.
 
 :::{.definition title="Prime Subfield"}
@@ -31,7 +30,6 @@ Note that in general,
 .\]
 
 :::
-
 
 :::{.definition title="Characterizations of Perfect Fields"}
 The following are equivalent:
@@ -71,8 +69,7 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
-
-### Extensions
+## Extensions
 
 :::{.definition title="Algebraic Field Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
@@ -151,22 +148,16 @@ But then \( \alpha \) is the root of the polynomial \( f \).
 
 :::
 
+:::{.theorem title="Primitive Element Theorem"}
+Every finite separable extension is simple.
+:::
+
+:::{.corollary}
+$\GF(p^n)$ is a simple extension over $\FF_p$.
+:::
+
+
 ## Cyclotomic Fields
-
-:::{.definition title="Cyclotomic Polynomials"}
-Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
-$$
-\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
-,$$
-
-which is a product over primitive roots of unity.
-It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
-:::
-
-:::{.proposition title="Table of cyclotomic polynomials"}
-\todo[inline]{todo}
-:::
-
 
 
 
@@ -231,7 +222,7 @@ $\implies$:
 -  $\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ is squarefree and thus has no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
 :::
 
-:::{.proposition}
+:::{.proposition title="Finite fields are not algebraically closed"}
 No finite field is algebraically closed.
 :::
 
@@ -245,7 +236,6 @@ This has no roots in $k$.
 \todo{Proof}
 
 ## Galois Theory
-
 
 :::{.proposition}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
@@ -488,7 +478,9 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 :::
 
 
+
 ## Cyclotomic Polynomials
+
 
 :::{.proposition}
 $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
@@ -531,10 +523,18 @@ k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
 \]
 :::
 
-:::{.theorem title="Primitive Element Theorem"}
-Every finite separable extension is simple.
+
+:::{.definition title="Cyclotomic Polynomials"}
+Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
+$$
+\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
+,$$
+
+which is a product over primitive roots of unity.
+It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
 :::
 
-:::{.corollary}
-$\GF(p^n)$ is a simple extension over $\FF_p$.
+:::{.proposition title="Table of cyclotomic polynomials"}
+\todo[inline]{todo}
 :::
+
