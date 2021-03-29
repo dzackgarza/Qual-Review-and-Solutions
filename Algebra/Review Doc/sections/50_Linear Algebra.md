@@ -153,11 +153,9 @@ The derivation:
 
 Corresponds to the **Elementary Divisor Decomposition** of $T$.
 
-
 :::{.lemma title="?"}
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
-
 
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
@@ -180,7 +178,9 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 
 :::
 
+### Finding Possible Canonical Forms
 
+\todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
 
 
 
