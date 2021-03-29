@@ -34,7 +34,6 @@ Todo
 
 
 
-
 ## Minimal / Characteristic Polynomials
 
 Fix some notation:
@@ -101,12 +100,14 @@ Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
 
 ## Finding Minimal Polynomials
 
+:::{.proposition title="How to find the minimal polynomial"}
 Let $m(x)$ denote the minimal polynomial $A$.
 
 1. Find the characteristic polynomial $\chi(x)$; this annihilates $A$ by Cayley-Hamilton. Then $m(x) \divides \chi(x)$, so just test the finitely many products of irreducible factors.
 
 2. Pick any $\vector v$ and compute $T\vector v, T^2\vector v, \cdots T^k\vector v$ until a linear dependence is introduced. Write this as $p(T) = 0$; then $\min_A(x) \divides p(x)$.
 
+:::
 
 :::{.definition title="Companion Matrix"}
 Given a monic $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n$, the **companion matrix** of $p$ is given by
@@ -121,8 +122,6 @@ C_p \definedas
 \end{bmatrix}
 .\end{align*}
 :::
-
-
 
 ## Canonical Forms
 
@@ -199,8 +198,8 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 
 
 
-## Using Canonical Forms
 
+## Using Canonical Forms
 
 :::{.lemma title="?"}
 The characteristic polynomial is the *product of the invariant factors*, i.e.
@@ -209,14 +208,12 @@ $$
 .$$
 :::
 
-
 :::{.lemma title="?"}
 The minimal polynomial of $A$ is the *invariant factor of highest degree*, i.e.
 $$
 \min_A(x) = f_n(x)
 .$$
 :::
-
 
 :::{.proposition title="?"}
 For a linear operator on a vector space of nonzero finite dimension, TFAE:
@@ -235,14 +232,13 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::
 
-
-
 ## Diagonalizability
 
+:::{.remark}
 *Notation:*
-$A^*$ denotes the conjugate tranpose of $A$.
+$A^*$ denotes the conjugate transpose of $A$.
 
-
+:::
 
 :::{.lemma title="?"}
 Let $V$ be a vector space over $k$ an algebraically closed and $A \in \mathrm{End}(V)$.
@@ -255,7 +251,6 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
 2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
 :::
-
 
 :::{.proof title="?"}
 \envlist
@@ -279,12 +274,9 @@ so $A(W_1) \subseteq W_1$ is an invariant subspace, etc.
 
 :::
 
-
 :::{.proposition title="Simultaneous Diagonalizability"}
 A set of operators $\theset{A_i}$ pairwise commute $\iff$ they are all simultaneously diagonalizable.
 :::
-
-
 
 :::{.proof title="?"}
 By induction on number of operators
@@ -301,11 +293,9 @@ By induction on number of operators
 
 :::
 
-
 :::{.theorem title="Characterizations of Diagonalizability"}
 $M$ is diagonalizable over $\FF \iff \min_M(x, \FF)$ splits into distinct linear factors over $\FF$, or equivalently iff all of the roots of $\min_M$ lie in $\FF$.
 :::
-
 
 :::{.proof title="?"}
 $\implies$:
@@ -315,7 +305,6 @@ $\impliedby$:
 If $A$ is diagonalizable, every elementary divisor is linear, so every invariant factor factors into linear pieces. 
 But the minimal polynomial is just the largest invariant factor.
 :::
-
 
 ## Matrix Counterexamples
 
@@ -338,8 +327,9 @@ M = \left[\begin{array}{rr}
 -1 \sqrt{-1} & 0 \\
 \hline
 0 & 1 \sqrt{-1}
-\end{array}\right]
-.\]
+\end{array}
+\right].\]
+
 :::
 
 
