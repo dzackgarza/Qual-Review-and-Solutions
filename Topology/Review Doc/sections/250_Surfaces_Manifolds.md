@@ -21,8 +21,9 @@ The first 4 can be obtained from the following pasting diagrams:
 :::{.theorem title="Classification of Surfaces"}
 The set of surfaces under connect sum forms a monoid with the presentation
 \[  
-\gens{ \SS^2, \RP^2, \TT \suchthat \SS^2 = 0, 3\RP^2 = \RP^2 + \TT^2}
+\gens{ \SS^2, \RP^2, \TT \suchthat \SS^2 = 0, 3\RP^2 = \RP^2 + \TT^2} = \ts{ \Sigma_{g, n} \st g, n \in \ZZ^{\geq 0} } 
 .\]
+where $\Sigma_{g, n}$ is a surface of genus $g$ with $n$ discs removed to form boundary components.
 
 Surfaces are classified up to homeomorphism by orientability and $\chi$, or equivalently "genus" 
 
@@ -38,6 +39,17 @@ In each case, there is a formula
 \end{cases}
 \]
 :::
+
+
+:::{.proposition title="Polygon Models for Surfaces"}
+Every surface can be obtained as the identification space of a polygon labeled with sides \( \alpha_i, \beta_i, \rho_i \).
+
+![$\Sigma_{3, 3}$](figures/image_2021-04-08-19-40-14.png)?
+![image_2021-04-08-19-40-31](figures/image_2021-04-08-19-40-31.png)
+![image_2021-04-08-19-40-41](figures/image_2021-04-08-19-40-41.png)
+
+:::
+
 
 :::{.fact table="Table of surfaces possible for a given Euler characteristic"}
 
