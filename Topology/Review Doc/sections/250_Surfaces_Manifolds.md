@@ -40,7 +40,6 @@ In each case, there is a formula
 \]
 :::
 
-
 :::{.proposition title="Polygon Models for Surfaces"}
 Every surface can be obtained as the identification space of a polygon labeled with sides \( \alpha_i, \beta_i, \rho_i \).
 
@@ -50,6 +49,7 @@ Every surface can be obtained as the identification space of a polygon labeled w
 
 :::
 
+\todo[inline]{Examples, general procedure?}
 
 :::{.fact table="Table of surfaces possible for a given Euler characteristic"}
 
