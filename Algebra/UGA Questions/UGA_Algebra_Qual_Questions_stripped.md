@@ -1,14 +1,3 @@
-```{=tex}
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
-```
-
 # Group Theory: General
 
 ## Spring 2020 \#2 \( \work \) {#spring-2020-2-work}
