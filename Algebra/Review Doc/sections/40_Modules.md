@@ -3,14 +3,32 @@
 ## General Modules
 
 
-:::{.proposition title="Module Morphisms"}
+:::{.definition title="Module Morphisms"}
 A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
 :::
+
+
+:::{.proposition title="Recognizing direct sums"}
+If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following conditions hold:
+
+- $M_1 + M_2 = M$
+- $M_1 \intersect M_2 = 0$
+:::
+
+
+
 
 
 :::{.definition title="Simple Module"}
 A module is **simple** iff it has no nontrivial proper submodules.
 :::
+
+
+:::{.definition title="Indecomposable modules"}
+A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
+An **indecomposable** module is defined in the obvious way.
+:::
+
 
 
 :::{.definition title="Free Module"}
