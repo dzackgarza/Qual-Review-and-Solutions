@@ -7,7 +7,6 @@
 A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
 :::
 
-
 :::{.proposition title="Recognizing direct sums"}
 If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following conditions hold:
 
@@ -15,20 +14,20 @@ If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following 
 - $M_1 \intersect M_2 = 0$
 :::
 
-
-
-
-
-:::{.definition title="Simple Module"}
+:::{.definition title="Simple modules"}
 A module is **simple** iff it has no nontrivial proper submodules.
 :::
-
 
 :::{.definition title="Indecomposable modules"}
 A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
 An **indecomposable** module is defined in the obvious way.
 :::
 
+
+
+:::{.definition title="Cyclic modules"}
+A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
+:::
 
 
 :::{.definition title="Free Module"}
