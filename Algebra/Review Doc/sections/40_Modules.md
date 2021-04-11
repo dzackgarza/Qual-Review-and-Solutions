@@ -11,7 +11,7 @@ A module is **simple** iff it has no nontrivial proper submodules.
 :::{.definition title="Free Module"}
 A **free** module is a module satisfying the following universal property:
 
-\todo[inline]{todo}
+\todo[inline]{Todo: universal property.}
 
 :::
 
@@ -27,28 +27,26 @@ I.e. the only torsion element of \( M \) is zero itself.
 :::
 
 
-
-
 :::{.proposition title="Free implies torsionfree"}
-A free module is torsionfree.
+For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
 :::
-
 
 :::{.proof title=""}
 Todo
 :::
 
-
-:::{.example title="?"}
-$\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
+:::{.example title="of a module that is not free"}
+$\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
 :::
+
+\todo[inline]{Example of torsionfree module that is not free.}
 
 
 
 :::{.definition title="Projective Modules"}
 A module $M$ is **projective** if and only if it satisfies the following universal property:
 
-\todo[inline]{todo}
+\todo[inline]{Universal property}
 
 :::
 
