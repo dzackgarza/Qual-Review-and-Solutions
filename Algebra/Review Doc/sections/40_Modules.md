@@ -114,16 +114,23 @@ $\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \c
 :::
 
 
+:::{.proposition title="Classifying split SESs"}
+Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
+
+- $\xi$ admits a right-splitting.
+- $\xi$ admits a left-splitting.
+- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
+:::
+
+
+
 :::{.proposition title="Splitting Exact Sequences"}
-If $0 \to A \to B \to C \to 0$ is a short exact sequence, then this sequence splits if any of the following conditions hold:
+A SES $\xi$ splits if any of the following conditions hold:
 
-- $C$ is free (yielding a right-splitting)
+- $C$ is free.
+- $C$ is projective.
+- $A$ is injective.
 
-- $C$ free $\implies$ the sequence splits
-- $C$ projective $\implies$ the sequence splits
-- $A$ injective $\implies$ the sequence splits
-
-Moreover, if this sequence splits, then $B \cong A \oplus C$.
 :::
 
 
