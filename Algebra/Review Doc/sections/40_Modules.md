@@ -37,15 +37,21 @@ A **free** module is a module satisfying the following universal property:
 
 :::
 
+:::{.definition title="Free rank"}
+If a module $M$ is free, the **free rank** of $M$ is the cardinality of any basis.
+:::
+
 
 :::{.proposition title="?"}
 Every free \(R\dash\)module admits a basis (spanning $R\dash$linearly independent set).
 :::
 
 
-:::{.definition title="Torsionfree"}
-A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \).
-I.e. the only torsion element of \( M \) is zero itself.
+:::{.definition title="Torsion and torsionfree"}
+An element $m\in M$ is a **torsion element** if there exists a nonzero $r\in R$ such that $rm = 0_M$.
+A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \), i.e. $M$ has no nonzero torsion elements.
+Equivalently, defining $M_t \da \ts{ m\in M \st \exists r\in R, rm = 0_M }$ as the set of all torsion elements, $M$ is torsion free iff $M_t = 0$.
+If $M_t = M$, we say $M$ is a **torsion module**.
 :::
 
 
@@ -129,7 +135,10 @@ Then there is an invariant factor decomposition
 M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
 \end{align*}
 
-and similarly an elementary divisor decomposition.
+and similarly an elementary divisor decomposition:
+
+\todo[inline]{Elementary divisor decomposition}
+
 
 
 :::{.proposition title="Principal Ideals are Free"}
