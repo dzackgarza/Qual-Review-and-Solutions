@@ -3,6 +3,11 @@
 ## General Modules
 
 
+:::{.proposition title="Module Morphisms"}
+A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
+:::
+
+
 :::{.definition title="Simple Module"}
 A module is **simple** iff it has no nontrivial proper submodules.
 :::
@@ -68,13 +73,27 @@ Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 
 
 :::{.definition title="Exact Sequences"}
-A sequence of \(R\dash\)module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
+A sequence of \(R\dash\)module morphisms 
+\[
+0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\]
+is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
 
 
+:::{.definition title="Split Exact Sequences"}
+A short exact sequence 
+\[
+0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\]
+has a **right-splitting** iff there exists a map $s: C\to B$ such that
+:::
+
 
 :::{.proposition title="Splitting Exact Sequences"}
-If $0 \to A \to B \to C \to 0$ is a short exact sequence, then
+If $0 \to A \to B \to C \to 0$ is a short exact sequence, then this sequence splits if any of the following conditions hold:
+
+- $C$ is free (yielding a right-splitting)
 
 - $C$ free $\implies$ the sequence splits
 - $C$ projective $\implies$ the sequence splits
