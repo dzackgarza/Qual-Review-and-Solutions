@@ -107,9 +107,10 @@ is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::{.definition title="Split Exact Sequences"}
 A short exact sequence 
 \[
-0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
 \]
-has a **right-splitting** iff there exists a map $s: C\to B$ such that
+has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
+$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
 :::
 
 
@@ -132,7 +133,7 @@ Let $M$ be a finitely generated modules over a PID $R$.
 Then there is an invariant factor decomposition
 
 \begin{align*}
-M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
+M \cong F \bigoplus_{i=1}^m R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
 \end{align*}
 
 and similarly an elementary divisor decomposition:
