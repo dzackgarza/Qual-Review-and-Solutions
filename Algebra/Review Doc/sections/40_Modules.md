@@ -50,15 +50,15 @@ A module $M$ is **projective** if and only if it satisfies the following univers
 
 :::
 
-
-:::{.proposition title="?"}
-$P$ is projective if and only if $P$ is a direct summand of a free module.
+:::{.proposition title="Projective iff direct summand of free"}
+$P$ is a projective \(R\dash\)module if and only if $P$ is a direct summand of a free module.
 :::
 
+:::{.proposition title="Free implies projective"}
+Any free $M\in \rmod$ is projective.
+:::
 
-
-
-:::{.example title="?"}
+:::{.example title="of a projective but not free module"}
 Free implies projective, but not the converse.
 Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
 Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
@@ -67,15 +67,13 @@ Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
 
 
-
-
 :::{.definition title="Exact Sequences"}
 A sequence of \(R\dash\)module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
 
 
 
-:::{.proposition title="Splitting Exact Seueqnces"}
+:::{.proposition title="Splitting Exact Sequences"}
 If $0 \to A \to B \to C \to 0$ is a short exact sequence, then
 
 - $C$ free $\implies$ the sequence splits
