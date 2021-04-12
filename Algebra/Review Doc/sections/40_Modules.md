@@ -111,6 +111,9 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiTSJdLFswLDIsIk4iXSxbNCwyLCIwIl0sWzIsMSwiZyIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDNdLFswLDEsImYiXSxbMCwyLCJcXGV4aXN0cyBcXHRpbGRlIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
 
+- Direct summand:
+
+  $P$ is a direct summand of a free module $F$, so $F = P \oplus T$ for some module $T\leq F$.
 :::
 
 :::{.proposition title="Projective iff direct summand of free"}
