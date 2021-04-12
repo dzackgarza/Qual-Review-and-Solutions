@@ -29,6 +29,8 @@ An **indecomposable** module is defined in the obvious way.
 A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
 :::
 
+### Free and Projective Modules
+
 :::{.definition title="Free Module"}
 A **free** module $M$ is a module satisfying any of the following conditions:
 
@@ -114,24 +116,27 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
 - Direct summand:
 
   $P$ is a direct summand of a free module $F$, so $F = P \oplus T$ for some module $T\leq F$.
-:::
 
-:::{.proposition title="Projective iff direct summand of free"}
-$P$ is a projective \(R\dash\)module if and only if $P$ is a direct summand of a free module.
 :::
 
 :::{.proposition title="Free implies projective"}
 Any free $M\in \rmod$ is projective.
 :::
 
-:::{.example title="of a projective but not free module"}
-Free implies projective, but not the converse.
+:::{.proof title="?"}
+\todo[inline]{Todo: proof.}
+
+:::
+
+:::{.example title="Projective $\not\implies$ free"}
 Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
 Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
 setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
 Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
 
+
+### Exact Sequences
 
 :::{.definition title="Exact Sequences"}
 A sequence of \(R\dash\)module morphisms 
