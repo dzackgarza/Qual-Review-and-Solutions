@@ -19,6 +19,7 @@ defines a function in $L^1(\RR)$ that satisfies
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 - Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
+- See Folland's Real Analysis II, p. 68 for a discussion of using Fubini *and* Tonelli.
 :::
 
 Note that $\norm{f\ast g(x)}_1 \da \norm{ \int_\RR f(y) g(x-y)\dy}_1$
@@ -39,7 +40,8 @@ We first check a preliminary computation, the validity of which we will show aft
 .\]
 
 - $H$ is measurable on $\RR^2$:
-  - If we can show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, then $H = \tilde f \cdot \tilde g$ is a product of measurable functions and thus measurable. 
+  It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
+  
   - $f \in L^1$, and $L^1$ functions are measurable by definition.
   - The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
     - Let $g$ be measurable on $\RR$, then the cylinder function $G(x, y) = g(x)$ on $\RR^2$ is always measurable
