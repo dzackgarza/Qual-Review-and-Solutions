@@ -51,6 +51,10 @@ A **free** module $M$ is a module satisfying any of the following conditions:
 
   There is linearly independent (so $\sum r_i \beta_i = 0 \implies r_i = 0$) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \ta \ts{ \beta_i }_{i\in I} \), 
 
+- Direct sum decomposition:
+
+  $M$ decomposes as $M \cong \bigoplus_{i\in I} \beta_i R$, a sum of cyclic submodules.
+
 :::
 
 
