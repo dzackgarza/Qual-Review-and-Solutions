@@ -55,12 +55,17 @@ If $M_t = M$, we say $M$ is a **torsion module**.
 :::
 
 
-:::{.proposition title="Free implies torsionfree"}
+:::{.proposition title="Free implies torsionfree (generally)"}
 For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
 :::
 
 :::{.proof title=""}
 Todo
+:::
+
+
+:::{.example title="A torsionfree module that is not free"}
+$\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module 
 :::
 
 :::{.example title="of a module that is not free"}
