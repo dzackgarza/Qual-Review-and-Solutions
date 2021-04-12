@@ -1,7 +1,6 @@
 # Modules
 
-## General Modules
-
+## General Theory
 
 :::{.definition title="Module Morphisms"}
 A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
@@ -23,13 +22,11 @@ A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \co
 An **indecomposable** module is defined in the obvious way.
 :::
 
-
-
 :::{.definition title="Cyclic modules"}
 A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
 :::
 
-### Free and Projective Modules
+## Free and Projective Modules
 
 :::{.definition title="Free Module"}
 A **free** module $M$ is a module satisfying any of the following conditions:
@@ -66,7 +63,6 @@ This uses the fact that free modules over a PID are torsionfree.
 :::{.definition title="Free rank"}
 If a module $M$ is free, the **free rank** of $M$ is the cardinality of any basis.
 :::
-
 
 :::{.proposition title="?"}
 Every free \(R\dash\)module admits a basis (spanning $R\dash$linearly independent set).
@@ -136,7 +132,8 @@ Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
 
 
-### Exact Sequences
+
+## Exact Sequences
 
 :::{.definition title="Exact Sequences"}
 A sequence of \(R\dash\)module morphisms 
@@ -145,7 +142,6 @@ A sequence of \(R\dash\)module morphisms
 \]
 is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
-
 
 :::{.definition title="Split Exact Sequences"}
 A short exact sequence 
@@ -156,7 +152,6 @@ has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \cir
 $\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
 :::
 
-
 :::{.proposition title="Classifying split SESs"}
 Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
 
@@ -164,8 +159,6 @@ Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
 - $\xi$ admits a left-splitting.
 - $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
 :::
-
-
 
 :::{.proposition title="Splitting Exact Sequences"}
 A SES $\xi$ splits if any of the following conditions hold:
@@ -176,9 +169,9 @@ A SES $\xi$ splits if any of the following conditions hold:
 
 :::
 
-
 ## Classification of Modules over a PID
 
+:::{.proposition title="STFGMPID"}
 Let $M$ be a finitely generated modules over a PID $R$.
 Then there is an invariant factor decomposition
 
@@ -190,12 +183,11 @@ and similarly an elementary divisor decomposition:
 
 \todo[inline]{Elementary divisor decomposition}
 
-
-
-:::{.proposition title="Principal Ideals are Free"}
-$I \normal R$ is a free $R\dash$module iff $I$ is a principal ideal.
 :::
 
+:::{.proposition title="Principal Ideals are Free"}
+If $I \normal R$ is an ideal of $R$, then $I$ is a free $R\dash$module iff $I$ is a principal ideal.
+:::
 
 :::{.proof title="?"}
 $\implies$:
@@ -222,7 +214,4 @@ But since $M \subset R$, we have $\alpha, m \in R$ and $\vector 0_M = 0_R$, and 
 Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be a linearly independent set and thus a basis for $M$ as an $R\dash$module.
 
 :::
-
-
-
 
