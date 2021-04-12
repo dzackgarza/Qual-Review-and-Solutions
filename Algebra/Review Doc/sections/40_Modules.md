@@ -49,7 +49,7 @@ A **free** module $M$ is a module satisfying any of the following conditions:
 
 - Existence of a basis:
 
-  There is linearly independent spanning set \( \mathcal{B}  \).
+  There is linearly independent (so $\sum r_i \beta_i = 0 \implies r_i = 0$) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \ta \ts{ \beta_i }_{i\in I} \), 
 
 :::
 
