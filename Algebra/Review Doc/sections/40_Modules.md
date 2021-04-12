@@ -29,7 +29,6 @@ An **indecomposable** module is defined in the obvious way.
 A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
 :::
 
-
 :::{.definition title="Free Module"}
 A **free** module $M$ is a module satisfying any of the following conditions:
 
@@ -56,7 +55,6 @@ A **free** module $M$ is a module satisfying any of the following conditions:
   $M$ decomposes as $M \cong \bigoplus_{i\in I} \beta_i R$, a sum of cyclic submodules.
 
 :::
-
 
 :::{.example title="A non-free module"}
 $\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
@@ -96,11 +94,10 @@ So any basis has size one, which would mean $\QQ = \ts{ \pm 1/d, \pm 2/d, \cdots
 :::
 
 
-\todo[inline]{Example of torsionfree module that is not free.}
-
-
 :::{.definition title="Projective Modules"}
-A module $P$ is **projective** if and only if it satisfies the following universal property: for every surjective $N \mapsvia{g} M$ and $P \mapsvia{f} M$, the following lift exists:
+A module $P$ is **projective** iff it satisfies any of the following conditions:
+
+- A universal property: for every surjective $N \mapsvia{g} M$ and $P \mapsvia{f} M$, the following lift exists:
 
 \begin{tikzcd}
 	&& P \\
