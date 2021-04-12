@@ -72,9 +72,19 @@ $\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is
 
 
 :::{.definition title="Projective Modules"}
-A module $M$ is **projective** if and only if it satisfies the following universal property:
+A module $P$ is **projective** if and only if it satisfies the following universal property: for every surjective $N \mapsvia{g} M$ and $P \mapsvia{f} M$, the following lift exists:
 
-\todo[inline]{Universal property}
+\begin{tikzcd}
+	&& P \\
+	\\
+	N && M && 0
+	\arrow["g", two heads, from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+	\arrow["f", from=1-3, to=3-3]
+	\arrow["{\exists \tilde f}"', dashed, from=1-3, to=3-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiTSJdLFswLDIsIk4iXSxbNCwyLCIwIl0sWzIsMSwiZyIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDNdLFswLDEsImYiXSxbMCwyLCJcXGV4aXN0cyBcXHRpbGRlIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
 
 :::
 
