@@ -21,19 +21,21 @@ defines a function in $L^1(\RR)$ that satisfies
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
 :::
 
+Note that $\norm{f\ast g(x)}_1 \da \norm{ \int_\RR f(y) g(x-y)\dy}_1$
+We first check a preliminary computation, the validity of which we will show afterward:
 \[
 \norm{H(x)}_1 
-&= \int _\RR \abs{H(x, y)} \, dx \\
-&= \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
-&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\
-&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
+&\da \int _\RR \abs{H(x, y)} \, dx \\
+&\da \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
+&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{triangle inequality}\\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{by Tonelli} \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
 &= \int _\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
 &\definedas \int _\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
 &= \norm{g}_1 \int _\RR \abs{f(y)} \,dy \\
 &\definedas \norm{g}_1 \norm{f}_1  \\
-&< \infty \qtext{by assumption}
+&< \infty && \text{by assumption}
 .\]
 
 - $H$ is measurable on $\RR^2$:
