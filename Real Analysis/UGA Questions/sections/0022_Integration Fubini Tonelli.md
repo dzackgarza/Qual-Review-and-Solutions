@@ -226,6 +226,13 @@ F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 
 ## Spring 2021 # 6
 
+
+:::{.warnings}
+This problem may be much harder than expected.
+Recommended skip.
+:::
+
+
 Let $f: \RR \cross \RR \to \RR$ be a measurable function and for $x\in \RR$ define the set
 \[
 E_x \da \ts{ y\in \RR \st \mu\qty{ z\in \RR \st f(x,z) = f(x, y) } > 0 } 
