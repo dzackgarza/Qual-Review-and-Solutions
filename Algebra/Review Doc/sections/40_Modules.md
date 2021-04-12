@@ -65,10 +65,10 @@ Todo
 
 :::{.example title="of a module that is not free"}
 $\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
+This uses the fact that free modules over a PID are torsionfree.
 :::
 
 \todo[inline]{Example of torsionfree module that is not free.}
-
 
 
 :::{.definition title="Projective Modules"}
