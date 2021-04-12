@@ -31,10 +31,32 @@ A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that
 
 
 :::{.definition title="Free Module"}
-A **free** module is a module satisfying the following universal property:
+A **free** module $M$ is a module satisfying any of the following conditions:
 
-\todo[inline]{Todo: universal property.}
+- A universal property:
+  There is a set \( \mathcal{B}  \) and a set map \( M \mapsvia{\iota} \mathcal{B}  \) such that every set map \( \mathcal{B} \mapsvia{N} \) lifts:
 
+\begin{tikzcd}
+	M \\
+	\\
+	{\mathcal{B}} && N
+	\arrow["f", from=3-1, to=3-3]
+	\arrow["{\tilde f}", dashed, from=1-1, to=3-3]
+	\arrow["\iota", hook, from=3-1, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJcXG1hdGhjYWx7Qn0iXSxbMCwwLCJNIl0sWzIsMiwiTiJdLFswLDIsImYiXSxbMSwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXGlvdGEiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==)
+
+- Existence of a basis:
+
+  There is linearly independent spanning set \( \mathcal{B}  \).
+
+:::
+
+
+:::{.example title="A non-free module"}
+$\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
+This uses the fact that free modules over a PID are torsionfree.
 :::
 
 :::{.definition title="Free rank"}
@@ -63,17 +85,12 @@ For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
 Todo
 :::
 
-
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
 This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
 So any basis has size one, which would mean $\QQ = \ts{ \pm 1/d, \pm 2/d, \cdots }$ which in particular doesn't include the average of the first two terms.
 :::
 
-:::{.example title="of a module that is not free"}
-$\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
-This uses the fact that free modules over a PID are torsionfree.
-:::
 
 \todo[inline]{Example of torsionfree module that is not free.}
 
