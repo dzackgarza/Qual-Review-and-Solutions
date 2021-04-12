@@ -65,7 +65,9 @@ Todo
 
 
 :::{.example title="A torsionfree module that is not free"}
-$\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module 
+$\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
+This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
+So any basis has size one, which would mean $\QQ = \ts{ \pm 1/d, \pm 2/d, \cdots }$ which in particular doesn't include the average of the first two terms.
 :::
 
 :::{.example title="of a module that is not free"}
