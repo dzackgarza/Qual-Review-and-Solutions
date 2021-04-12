@@ -68,14 +68,12 @@ If a module $M$ is free, the **free rank** of $M$ is the cardinality of any basi
 Every free \(R\dash\)module admits a basis (spanning $R\dash$linearly independent set).
 :::
 
-
 :::{.definition title="Torsion and torsionfree"}
 An element $m\in M$ is a **torsion element** if there exists a nonzero $r\in R$ such that $rm = 0_M$.
 A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \), i.e. $M$ has no nonzero torsion elements.
 Equivalently, defining $M_t \da \ts{ m\in M \st \exists r\in R, rm = 0_M }$ as the set of all torsion elements, $M$ is torsion free iff $M_t = 0$.
 If $M_t = M$, we say $M$ is a **torsion module**.
 :::
-
 
 :::{.proposition title="Free implies torsionfree (generally)"}
 For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
@@ -90,7 +88,6 @@ $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
 This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
 So any basis has size one, which would mean $\QQ = \ts{ \pm 1/d, \pm 2/d, \cdots }$ which in particular doesn't include the average of the first two terms.
 :::
-
 
 :::{.definition title="Projective Modules"}
 A module $P$ is **projective** iff it satisfies any of the following conditions:
@@ -130,8 +127,6 @@ Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each
 setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
 Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
-
-
 
 ## Exact Sequences
 
