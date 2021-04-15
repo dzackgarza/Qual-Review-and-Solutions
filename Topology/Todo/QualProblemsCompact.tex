@@ -1,0 +1,124 @@
+\documentclass[psamsfonts, 11pt, reqno]{amsart}
+\setlength{\topmargin}{0pt}
+\setlength{\footskip}{10pt}
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}
+\setlength{\textwidth}{329pt}
+\addtolength{\textheight}{50pt}
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, amscd, epsfig, pdfsync}
+\usepackage[all]{xy}
+\usepackage[mathscr]{eucal}
+%\usepackage{layout}
+%\addtolength{\topmargin}{-90pt}
+%\addtolength{\textheight}{140pt}
+\addtolength{\textwidth}{120pt}
+\addtolength{\hoffset}{-60pt}
+\everymath={\displaystyle}
+
+\newcommand{\seriesk}{\sum\limits_{k=1}^{\infty}}
+\newcommand{\seriesn}{\sum\limits_{n=1}^{\infty}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\x}{\underline{\underline{x}}}
+\renewcommand{\r}{\underline{\underline{r}}}
+\renewcommand{\t}{\mathcal{T}}
+\renewcommand{\d}{\mathcal{D}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\pic}{\mathbb{P}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\oplus}{\bigoplus}
+\renewcommand{\Sigma}{\sum}
+\renewcommand{\Pi}{\prod}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{definition}{Definition}
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{theorem}[definition]{Theorem}
+%\theoremstyle{definition}
+%\newtheorem{fact}[defn]{Fact}
+%\newtheorem{note}[defn]{Note}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{cor}[defn]{Corollary}
+%\newtheorem{conjecture}[defn]{Conjecture}
+%\newtheorem{problem}[defn]{Problem}
+%\newtheorem{notation}[defn]{Notation}
+%\newtheorem*{question}{Question}
+\newtheorem{ex}[definition]{Example}
+\newtheorem{example}[definition]{Example}
+%\newtheorem*{results}{Known Results}
+
+\title{QualProblems}
+%\author(,\\
+%}
+
+\begin{document}
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 1: Compactness.
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+\item (Jan '02 \# A1) Let $X$ be a compact space, and let
+$$A_1 \supseteq A_2 \supseteq \cdots \supseteq A_n \supseteq \cdots$$
+be a descending chain of non-empty closed subsets of $X$.  Show that their
+intersection $\cap_{n=1}^{\infty} A_n$ is non-empty.
+\vfill
+
+\item (June '04 \# A1) A topological space $X$ is \emph{locally compact} if every point in $X$ has an open
+neighborhood whose closure is compact.  Show that the Cartesian product of two locally compact spaces,
+with the product topology, is also locally compact.
+\vfill
+
+\item (June '05 \# A2) Let $X$ be the set of integers, let $\mathcal{C}_1 := \{ A \subseteq X | X \setminus A \mbox{ is finite }\}$,
+and let $\mathcal{C}_2 := \{ A \subseteq X | 0 \notin A \}.$  Show that the union $\mathcal{T}:=\mathcal{C}_1 \cup \mathcal{C}_2$ is
+a topology on $X$, and show that this topological space is compact.
+\vfill
+
+\item (Jan '06 \# A4) Let $\mathcal{T}, \mathcal{T}'$ be two topologies on $X$.  Show that if $(X, \mathcal{T})$ is compact and
+Hausdorff, $\mathcal{T} \subseteq \mathcal{T}'$, and $\mathcal{T} \neq \mathcal{T}'$, then $(X, \mathcal{T}')$ is
+Hausdorff but \emph{not} compact.
+
+\vfill
+
+\item (June '07 \# A4) A space $(X, \mathcal{T})$ is called \emph{locally compact} if, for every $x \in X$ and $x \in \mathcal{U} \in 
+\mathcal{T}$, there is a compact set $C \subseteq \mathcal{U}$ containing an open neighborhood of $x$.  Show that
+the Cartesian product of two locally compact spaces is locally compact.
+\vfill
+
+\item (June '11 \# A1) Prove that if $f: X\rightarrow Y$ is a continuous map between topological spaces and $C$
+is a compact subset of $X$, then $f(C)$ is a compact subset of $Y$.
+\vfill
+
+\item (June '11 \# A4) Suppose $A, B$ are disjoint, compact subspaces of the Hausdorff topological space $X$.  Prove that
+there are open subsets $U, V$ of $X$ such that $A \subseteq U, B \subseteq V$ and $U \cap V = \emptyset$.
+\vfill
+
+\item Suppose that $X$ is compact and $Y$ is Hausdorff.  Prove that every one-to-one, onto, continuous map
+$f: X \rightarrow Y$ is a homeomorphism.
+\vfill
+
+\item (Purdue '11) Let $X$ be a set with two elements $\{ a, b \}$.  Give $X$ the indiscrete topology.  Give $X \times \mathbb{R}$ the
+product topology.  Let $A \subset X \times \mathbb{R}$ be $( \{ a \} \times [0,1]) \cup (\{ b \} \times (0,1))$.  Prove that
+$A$ is compact.
+\vfill
+
+\item (Purdue '11) Let $X$ be a compact space and let $\{ C_{\alpha} \}_{\alpha \in A}$ be a collection of closed sets in $X$.
+Let $C = \cap_{\alpha \in A} C_{\alpha}$ and let $U$ be an open set containing $C$.  Prove there is a finite set $\alpha_1, ... \alpha_n$
+in $A$ with $C_{\alpha_1} \cap \cdots \cap C_{\alpha_n} \subset U$.
+\vfill
+
+\end{enumerate}
+
+
+\end{document}

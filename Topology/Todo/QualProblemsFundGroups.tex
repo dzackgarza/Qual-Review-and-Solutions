@@ -1,0 +1,124 @@
+\documentclass[psamsfonts, 11pt, reqno]{amsart}
+\setlength{\topmargin}{0pt}
+\setlength{\footskip}{10pt}
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}
+\setlength{\textwidth}{329pt}
+\addtolength{\textheight}{50pt}
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, amscd, epsfig, pdfsync}
+\usepackage[all]{xy}
+\usepackage[mathscr]{eucal}
+%\usepackage{layout}
+%\addtolength{\topmargin}{-90pt}
+%\addtolength{\textheight}{140pt}
+\addtolength{\textwidth}{120pt}
+\addtolength{\hoffset}{-60pt}
+\everymath={\displaystyle}
+
+\newcommand{\seriesk}{\sum\limits_{k=1}^{\infty}}
+\newcommand{\seriesn}{\sum\limits_{n=1}^{\infty}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\x}{\underline{\underline{x}}}
+\renewcommand{\r}{\underline{\underline{r}}}
+\renewcommand{\t}{\mathcal{T}}
+\renewcommand{\d}{\mathcal{D}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\pic}{\mathbb{P}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\oplus}{\bigoplus}
+\renewcommand{\Sigma}{\sum}
+\renewcommand{\Pi}{\prod}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{definition}{Definition}
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{theorem}[definition]{Theorem}
+%\theoremstyle{definition}
+%\newtheorem{fact}[defn]{Fact}
+%\newtheorem{note}[defn]{Note}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{cor}[defn]{Corollary}
+%\newtheorem{conjecture}[defn]{Conjecture}
+%\newtheorem{problem}[defn]{Problem}
+%\newtheorem{notation}[defn]{Notation}
+%\newtheorem*{question}{Question}
+\newtheorem{ex}[definition]{Example}
+\newtheorem{example}[definition]{Example}
+%\newtheorem*{results}{Known Results}
+
+\title{QualProblems}
+%\author(,\\
+%}
+
+\begin{document}
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 7: Fundamental Groups
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+
+\item (Michigan May '09) Let $X$ be the space obtained from $S^1 \times \mathbb{R}$ by removing the interior
+of $k$ disjoint 2-disks.
+\begin{enumerate}
+\item Compute the fundamental group $\pi_1 (X)$.
+\item What would be your answer to part (a) if $S^1 \times \mathbb{R}$ is replaced by $S^2 \times \mathbb{R}$ and
+2-disks are replaced by 3-balls?
+\item Let $Y$ be the union of two copies of the real projective plane $\mathbb{R}P^2$ having exactly one point $y$
+in common.  Compute $\pi_1(Y, y)$.
+\end{enumerate}
+
+\vfill
+
+\item State the Seifert-van Kampen Theorem and use it to show that $\pi_1 (S^n) = 0$ for $n >1$.  Why doesn't this argument work for $n=1$?
+
+\vfill
+
+\item (Wisconsin Aug '10) The graph $K$ has six vertices $a_1, a_2, a_3, b_1, b_2, b_3$ and nine edges $a_i b_j$ for $i, j = 1,2,3$.  The
+space $X$ obtained from $K$ by attaching a 2-cell along each loop formed by a cycle of four edges in $K$.  Find $\pi_1(X)$.
+
+
+\vfill
+
+\item (Jan '02) Find the fundamental group of the space $X$ consisting of $\mathbb{R}^3$ with the three coordinate axes
+removed.
+
+\vfill
+
+\item (June '05) Find a cell structure for the quotient space obtained by identifying two distinct points $a,b$ in
+a 2-torus to a third point $c$ in a 2-sphere, and compute a presentation for the fundamental group of this space.
+
+\vfill
+
+\item (June '08) Let $X$ be the triangle parachute formed from the standard 2-simplex $\Delta ^2$ by identifying
+the three vertices with one another.  Compute a presentation for $\pi_1(X)$ and show that $\pi_1(X)$ is isomorphic
+to a free group $F_n$ (and identify which $n$!).
+
+\vfill
+
+
+
+\item ***(Wisconsin Jan '08) By definition, a topological group is a set $G$ with both a topology and a group structure
+such that the map $G \rightarrow G$ sending $x$ to $x^{-1}$ and the map $G \times G \rightarrow G$ sending
+$(x,y)$ to $xy$ are both continuous.  Let $1 \in G$ denote the identity of this topological group $G$.  Show that
+$\pi_1(G,1)$ is abelian.
+
+\vfill
+
+*** Possibly not appropriate.  Try if you have time.
+\end{enumerate}
+
+
+\end{document}

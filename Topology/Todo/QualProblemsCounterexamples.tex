@@ -1,0 +1,182 @@
+\documentclass[psamsfonts, 11pt, reqno]{amsart}
+\setlength{\topmargin}{0pt}
+\setlength{\footskip}{10pt}
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}
+\setlength{\textwidth}{329pt}
+\addtolength{\textheight}{50pt}
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, amscd, epsfig, pdfsync}
+\usepackage[all]{xy}
+\usepackage[mathscr]{eucal}
+%\usepackage{layout}
+%\addtolength{\topmargin}{-90pt}
+%\addtolength{\textheight}{140pt}
+\addtolength{\textwidth}{120pt}
+\addtolength{\hoffset}{-60pt}
+\everymath={\displaystyle}
+
+\newcommand{\seriesk}{\sum\limits_{k=1}^{\infty}}
+\newcommand{\seriesn}{\sum\limits_{n=1}^{\infty}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\x}{\underline{\underline{x}}}
+\renewcommand{\r}{\underline{\underline{r}}}
+\renewcommand{\t}{\mathcal{T}}
+\renewcommand{\d}{\mathcal{D}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\pic}{\mathbb{P}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\oplus}{\bigoplus}
+\renewcommand{\Sigma}{\sum}
+\renewcommand{\Pi}{\prod}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{definition}{Definition}
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{theorem}[definition]{Theorem}
+%\theoremstyle{definition}
+%\newtheorem{fact}[defn]{Fact}
+%\newtheorem{note}[defn]{Note}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{cor}[defn]{Corollary}
+%\newtheorem{conjecture}[defn]{Conjecture}
+%\newtheorem{problem}[defn]{Problem}
+%\newtheorem{notation}[defn]{Notation}
+%\newtheorem*{question}{Question}
+\newtheorem{ex}[definition]{Example}
+\newtheorem{example}[definition]{Example}
+%\newtheorem*{results}{Known Results}
+
+\title{QualProblems}
+%\author(,\\
+%}
+
+\begin{document}
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 4: Counterexamples
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+\item (June '09 \# 2A) For a topological space $X$ and $y \in X$, the \emph{path component} $P_y$ of $X$ containing
+$y$ is the largest path-connected subset with $y \in P_y \subseteq X$.
+\begin{enumerate}
+\item Show that this concept is well defined (that is, show that every point $y$ is contained in a largest path-connected
+subset).
+\item Give an example of a space and a point $y \in X$ so that $P_y$ is neither an open nor a closed subset of $X$.
+\end{enumerate}
+\vfill
+
+
+\item (June '08 \# A1) Let $A$ be a subset of a topological space $X$, and let $B$ be a subset of a topological space $Y$.
+Let $X\times Y$ be the product space, and let int$_Z(C)$ denote the interior of the set $C$ in the space $Z$.  Prove
+or give a counterexample to int$_{X \times Y}(A \times B) = $int$_X(A) \times$int$_Y(B)$.
+
+\vfill
+
+\item (Jan '04 \# A3) Let $(X, \tau)$ be a Hausdorff space and let $\tau ' = \{ U \subseteq X : X \setminus U \subseteq X
+\mbox{ is compact} \} \cup \{ \emptyset \}$.  Show that $\tau '$ is a topology on $X$  and is coarser than $\tau$.
+Show that, in general, they need not be equal.
+
+\vfill
+
+\item Let $X$ be a compact space.  If $X = A \cup B$ with both $A$ and $B$ Hausdorff, must $X$ be Hausdorff?
+
+\vfill
+\end{enumerate}
+\textbf{Tips}: The following are common places to look for counterexamples: 
+\begin{itemize}
+\item Flea and Comb (Differentiates Connected and Path Connected)
+\item Comb (Sans the flea) (Differentiates Path Connected and Locally Path Connected)
+\item Topologists Sine Curve (Differentiates Connected and Path Connected)
+\item 2 or 3 point sets (Especially useful if you assume your space must be compact)
+\item Any space with the Discrete Topology
+\item Any space with the Indiscrete Topology
+\end{itemize}
+
+
+\newpage
+
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 4: Assorted Problems
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+
+\item (Jan '12 \# A1) Recall that a continuous function $f: X \rightarrow Y$ between two topological spaces is called
+a \emph{closed mapping} if for every closed subset $C$ of $X$, $f(C)$ is a closed subset of $Y$.  Prove that if
+$f: X \rightarrow Y$ is continuous, $X$ is compact and $Y$ is Hausdorff, then $f$ is a closed mapping.
+
+\vfill
+
+\item (June '10 \# A1) Let $X$ be a topological space and let $f, g: X \rightarrow \mathbb{R}$ be continuous functions.
+\begin{enumerate}
+\item Show that the set $L = \{ p \in X: f(p) \leq g(p) \}$ is a closed subset of $X$.
+\item Show that the function $h: X \rightarrow \mathbb{R}$ given by $h = \min \{f(p), g(p) \}$ is continuous.
+\end{enumerate}
+\vfill
+
+\item (June '08 \# A3) 
+\begin{enumerate}
+\item Prove that a map $f: X \rightarrow Y$ between topological spaces is continuous if and only if $f(\overline{A})
+\subseteq \overline{f(A)}$ for all $A \subseteq X$.
+\item Prove that if $f$ is continuous and $f(\overline{A})$ closed for some $A \subseteq X$, then $f(\overline{A})
+= \overline{f(A)}$ 
+\end{enumerate}
+
+\vfill
+
+\item (Jan '08 \# B8) Suppose that $X$ is an arbitrary topological space and $Y$ is a compact space.  Consider
+the projection map $\pi: X \times Y \rightarrow X$ defined by $\pi (x, y ) = x$.  Prove that if $X \times Y$ has
+the product topology, then $\pi$ is a closed map.
+
+\vfill
+
+\item (June '07 \# A1) A space $(X, \tau)$ is called \emph{extremally disconnected} if the closure of every open
+set is open; that is, whenever $U \in \tau$ we have $cl(U) \in \tau$.  Show that in an extremally disconnected space, if
+$U, V \in \tau$ and $U \cap V = \emptyset$, then $cl(U) \cap cl(V) = \emptyset$. (Hint: first show that
+$U \cap cl(V) = \emptyset$.)
+
+\vfill
+
+\item (Jan '06 \# A2) A topological space $(X, \tau)$ is called \emph{limit-point compact} if every infinite
+subset $A$ of $X$ has a limit point. Show that every closed subset of a limit-point compact space is limit-point compact.
+
+\vfill
+
+\item (June '05 \# A4) A topological space $X$ is called \emph{metacompact} if for every open cover $\mathcal{C}$ of $X$,
+there is a subcover $\mathcal{C}'$ satisfying the property that for every point $p \in X$, there are only finintely many open
+sets in $\mathcal{C}'$ containing $p$.
+
+\begin{enumerate}
+\item Show that metacompactness is a homeomorphism invariant.
+\item Let $X$ be the integers with the topology $\tau := \{ U \subseteq X | 0 \in U \} \cup \{ \emptyset \}$.  Show
+that this space is not metacompact.
+\end{enumerate}
+
+\vfill
+
+\item (June '04 \# A2) Let $X$ be the unit sphere in $\mathbb{R}^3$ and define an equivalence relation on $X$ by 
+$$(x, y, z) \sim (x', y', z') \Leftrightarrow z = z'$$
+Let $Z = X / \sim$ be the quotient space under this equivalence relation, with the quotient topology.  Show that $Z$
+is homeomorphic to the interval $[-1,1]$.
+
+\vfill
+
+\end{enumerate}
+
+\end{document}

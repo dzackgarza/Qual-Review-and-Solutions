@@ -1,0 +1,129 @@
+\documentclass[psamsfonts, 11pt, reqno]{amsart}
+\setlength{\topmargin}{0pt}
+\setlength{\footskip}{10pt}
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}
+\setlength{\textwidth}{329pt}
+\addtolength{\textheight}{50pt}
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, amscd, epsfig, pdfsync}
+\usepackage[all]{xy}
+\usepackage[mathscr]{eucal}
+%\usepackage{layout}
+%\addtolength{\topmargin}{-90pt}
+%\addtolength{\textheight}{140pt}
+\addtolength{\textwidth}{120pt}
+\addtolength{\hoffset}{-60pt}
+\everymath={\displaystyle}
+
+\newcommand{\seriesk}{\sum\limits_{k=1}^{\infty}}
+\newcommand{\seriesn}{\sum\limits_{n=1}^{\infty}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\x}{\underline{\underline{x}}}
+\renewcommand{\r}{\underline{\underline{r}}}
+\renewcommand{\t}{\mathcal{T}}
+\renewcommand{\d}{\mathcal{D}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\pic}{\mathbb{P}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\oplus}{\bigoplus}
+\renewcommand{\Sigma}{\sum}
+\renewcommand{\Pi}{\prod}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{definition}{Definition}
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{theorem}[definition]{Theorem}
+%\theoremstyle{definition}
+%\newtheorem{fact}[defn]{Fact}
+%\newtheorem{note}[defn]{Note}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{cor}[defn]{Corollary}
+%\newtheorem{conjecture}[defn]{Conjecture}
+%\newtheorem{problem}[defn]{Problem}
+%\newtheorem{notation}[defn]{Notation}
+%\newtheorem*{question}{Question}
+\newtheorem{ex}[definition]{Example}
+\newtheorem{example}[definition]{Example}
+%\newtheorem*{results}{Known Results}
+
+\title{QualProblems}
+%\author(,\\
+%}
+
+\begin{document}
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 3: Separation Axioms
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+\item (Jan '08 \# B9) Let $X = \mathbb{R}^2$ and define an equivalence relation on $X$ by $(x_1, x_2) \sim (y_1,y_2)$  iff
+they are qual or $x_1 = y_1 = 0$.  Set $Y = X/ \sim$.  Show that $Y$ is Hausdorff but does not have a countable basis
+for its topology.
+
+\vfill
+
+\item (June '06 \# A5) 
+\begin{enumerate}
+\item Recall that a topological space is called \emph{separable} if it contains a countable dense subset.  Prove that
+a countable product of separable spaces (with the product topology is separable).
+
+\item Prove that the result in the first part is false if the product is given the box topology.
+\end{enumerate}
+\vfill
+
+\item (June '04 \# A3) Show that for a topological space $X$, if every $x \in X$ has a neighborhood whose closure
+is a regular space, then $X$ is regular.
+\vfill
+
+
+\item (Jan '04 \# A2) Show that if the metric space $(X, d)$ is separable, then the metric topology on $X$ is second countable.
+\vfill
+
+\item (Jan '04 \# A4) Two subsets $A, B \subseteq X$ of the space $(X, \tau)$ are called \emph{separated} if
+there are $U,V \in \tau$ with $A \subseteq U \subseteq X \setminus B$ and $B \subseteq V \subseteq X \setminus A$.  We
+say that $X$ is \emph{completely normal} if $X$ is $T_1$ and if for every pair of separated subsets $A,B$ there are
+$U,V \in \tau$ so that $A \subseteq U, B \subseteq V$ and $U \cap V = \emptyset$.  Show that a space $(X, \tau)$ is
+completely normal $\Leftrightarrow$ every subset of $X$ is normal.
+\vfill
+
+\item (Jan '12 \# A2) Let $X$ and $Y$ be two topological spaces and let $X \times Y$ be endowed with the product topology.
+Prove that if $X$ and $Y$ each have a countable dense subset, then so does $X \times Y$.
+
+\vfill
+
+\item (Jan '12 \# A4)
+\begin{enumerate}
+\item State the definition of a what it means for a topological space to be regular.
+\item Prove that a subspace of a regular space is also regular.
+\item Prove that a product of two regular spaces (equipped with the product topology) is also regular.
+
+\end{enumerate}
+\vfill 
+
+\item (June '11 \# A3) Prove that every metrizable space is normal Hausdorff (aka $T_4$).
+
+\vfill
+
+\item (June '09 \# A4) Let $(X, \tau)$ and $(X, \tau ')$ be topological spaces with $\tau \subseteq \tau '$.
+\begin{enumerate}
+\item If $(X, \tau ')$ is normal, must $(X, \tau)$ also be normal?
+\item If $(X, \tau ')$ is compact, must $(X, \tau)$ also be compact?
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}

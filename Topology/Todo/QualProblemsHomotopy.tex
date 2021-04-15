@@ -1,0 +1,119 @@
+\documentclass[psamsfonts, 11pt, reqno]{amsart}
+\setlength{\topmargin}{0pt}
+\setlength{\footskip}{10pt}
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}
+\setlength{\textwidth}{329pt}
+\addtolength{\textheight}{50pt}
+\usepackage{amsfonts,amsmath, amsthm, amssymb, latexsym, amscd, epsfig, pdfsync}
+\usepackage[all]{xy}
+\usepackage[mathscr]{eucal}
+%\usepackage{layout}
+%\addtolength{\topmargin}{-90pt}
+%\addtolength{\textheight}{140pt}
+\addtolength{\textwidth}{120pt}
+\addtolength{\hoffset}{-60pt}
+\everymath={\displaystyle}
+
+\newcommand{\seriesk}{\sum\limits_{k=1}^{\infty}}
+\newcommand{\seriesn}{\sum\limits_{n=1}^{\infty}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\x}{\underline{\underline{x}}}
+\renewcommand{\r}{\underline{\underline{r}}}
+\renewcommand{\t}{\mathcal{T}}
+\renewcommand{\d}{\mathcal{D}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\pic}{\mathbb{P}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\oplus}{\bigoplus}
+\renewcommand{\Sigma}{\sum}
+\renewcommand{\Pi}{\prod}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{definition}{Definition}
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{theorem}[definition]{Theorem}
+%\theoremstyle{definition}
+%\newtheorem{fact}[defn]{Fact}
+%\newtheorem{note}[defn]{Note}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{cor}[defn]{Corollary}
+%\newtheorem{conjecture}[defn]{Conjecture}
+%\newtheorem{problem}[defn]{Problem}
+%\newtheorem{notation}[defn]{Notation}
+%\newtheorem*{question}{Question}
+\newtheorem{ex}[definition]{Example}
+\newtheorem{example}[definition]{Example}
+%\newtheorem*{results}{Known Results}
+
+\title{QualProblems}
+%\author(,\\
+%}
+
+\begin{document}
+\begin{center}
+\begin{large}
+Topology Qual Workshop Day 6: Homotopy \& Retractions
+\end{large}
+\end{center}
+\vspace{.25in}
+
+\begin{enumerate}
+
+\item (Michigan May '10) Let $\mathbb{R}P^2$ and $T$ denote, in this order,
+the real projective plane and the torus $S^1 \times S^1$.  Prove that any map
+$$f:\mathbb{R}P^2 \rightarrow T,$$
+is homotopic to a constant map.
+
+\vspace{.2in}
+\noindent
+Variration: Let $X$ be a path connected, locally path connected space with 
+$\pi_1 (X)$ finite.  Show that every continuous map $f: X \rightarrow S^1$
+is homotopic to a constant map. 
+
+\vfill
+
+\item (Michigan Jan '10) Let $D^2$ be a closed 2-disk, $S^1$ its boundary.  Is
+the space $X = S^1 \times S^1$ a retract of the space $Y = D^2 \times S^1$? (i.e.
+does there exist a continuous map $Y \rightarrow X$ which is the identity on $X \subset Y?)$
+
+\vfill
+
+\item (Arizona Winter '05) Suppose $\phi : S^1 \rightarrow S^1$ and
+$\psi : S^1 \rightarrow S^1$ are continuous maps.  Show that the compositions
+$\phi \circ \psi$ and $\psi \circ \phi$ are homotopic. (Hint: is
+this true for $f(z) = z^n$ where $n \in \mathbb{Z}?$)
+
+\vfill
+\item (Arizona Fall '05) Let $f: D^2 \rightarrow D^2$ be a homeomorphism (where
+$D^2$ is the closed unit disk in $\mathbb{R}^2$).  Show that $f$
+must map boundary points $x \in \partial D^2$ to points $f(x) \in \partial D^2$
+on the boundary.
+
+\vfill
+
+\item (Arizona Spring '05) Let $f: S^1 \vee S^1 \rightarrow T$ be a continuous map, where $T$ is the torus.  Show that there is no continuous map
+$g: T \rightarrow S^1 \vee S^1$ such that
+$f\circ g$ is the identity map on $T$.
+
+\vfill
+
+\item Prove that $S^{n-1}$ is not a retract of $B^n$.
+
+\vfill
+
+
+\end{enumerate}
+
+
+\end{document}
