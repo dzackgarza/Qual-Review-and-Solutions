@@ -389,4 +389,3 @@ a. Prove that $G$ is solvable.
 
 b. Prove that the Sylow 5-subgroup is also normal.
 
-
