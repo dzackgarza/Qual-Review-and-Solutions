@@ -7,7 +7,12 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 :::{.solution}
 
-Concepts used:
+\envlist
+
+
+\envlist
+:::{.concept}
+\envlist
 
 - Centralizer: 
   \[
@@ -26,11 +31,20 @@ Concepts used:
   N_G(H) &= \theset{g\in G \suchthat H^g = H} \supseteq H \quad\text{Normalizer}
   .\]
 
-**Solution**:
+:::
 
-**Claim 1**: $\abs{h^G} = [G: Z(h)]$
 
-**Claim 2**: $\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
+
+:::{.claim}
+$\abs{h^G} = [G: Z(h)]$
+:::
+
+
+:::{.claim}
+$\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
+:::
+
+
 
 - *Proof:* Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
 - Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
