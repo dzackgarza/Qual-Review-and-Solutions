@@ -35,24 +35,33 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 
 
-:::{.claim}
+:::{.claim title="1"}
 $\abs{h^G} = [G: Z(h)]$
 :::
 
-
-:::{.claim}
+:::{.claim title="2"}
 $\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
 :::
 
 
+:::{.proof title="?"}
+\envlist
 
-- *Proof:* Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
+- Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
 - Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
 - So Orbit-Stabilizer says $\mathcal O_h \cong G/\mathrm{Stab}(H)$; then just take sizes.
 
-**Claim 3:** $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
+:::
 
-- *Proof:* By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
+
+:::{.claim title="3"}
+$\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
+:::
+
+
+
+:::{.proof title="?"}
+- By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
   \[
   \abs{\union_{g\in G} H^g} 
   &= \qty{ \abs{H} - 1} [G: N_G(H)] + 1\\
@@ -81,6 +90,12 @@ $\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
 - But $Z(g_i) = G \iff g_i \in Z(G)$, and so each conjugacy class is size one.
 - So for every $g\in G$, we have $g = g_j$ for some $j$, and thus $g = g_j \in Z(g_j) = Z(G)$, so $g$ is central.
 - Then $G\subseteq Z(G)$ and $G$ is abelian.
+
+:::
+
+
+
+
 
 :::
 
