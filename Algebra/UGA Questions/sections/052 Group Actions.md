@@ -3,11 +3,11 @@
 ## Fall 2012 #1 $\work$
 Let $G$ be a finite group and $X$ a set on which $G$ acts.
 
-### a
+a.
 Let $x\in X$ and $G_x \definedas \theset{g\in G \suchthat g\cdot x = x}$. 
 Show that $G_x$ is a subgroup of $G$.
 
-### b
+b.
 Let $x\in X$ and $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G}$.
 Prove that there is a bijection between elements in $G\cdot x$ and the left cosets of $G_x$ in $G$.
 
@@ -23,42 +23,45 @@ Prove that $xP$ is an orbit of length 1 $\iff H$ is contained in $xPx\inv$.
 Let $G$ be a finite group acting on a set $X$.
 For $x\in X$, let $G_x$ be the stabilizer of $x$ and $G\cdot x$ be the orbit of $x$.
 
-### a
+a.
 Prove that there is a bijection between the left cosets $G/G_x$ and $G\cdot x$.
 
-### b
+b.
 Prove that the center of every finite $p\dash$group $G$ is nontrivial by considering that action of $G$ on $X=G$ by conjugation.
 
 ## Fall 2017 #1 $\work$
 Suppose the group $G$ acts on the set $A$. 
 Assume this action is faithful (recall that this means that the kernel of the homomorphism from $G$ to $\sym(A)$ which gives the action is trivial) and transitive (for all $a, b$ in $A$, there exists $g$ in $G$ such that $g \cdot a = b$.)
 
-### a
+a.
 For $a \in A$, let $G_a$ denote the stabilizer of $a$ in $G$. 
 Prove that for any $a \in A$, 
 $$
 \Intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
 .$$
 
-### b
+b.
 Suppose that $G$ is abelian. Prove that $|G| = |A|$. Deduce that every abelian transitive subgroup of $S_n$ has order $n$.
 
 ## Fall 2018 #2 $\done$
 
-### a
+a.
 Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
 
-### b
+b.
 Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
 \[
 \Union_{g\in G} gHg\inv \subsetneq G
 \]
 
-### c
+c.
 Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
 
 :::{.solution}
-Concepts used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
 - Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
@@ -69,9 +72,10 @@ Concepts used:
 - Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
   - Number of orbits equals average number of fixed points.
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
 - Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
@@ -87,8 +91,9 @@ h \in G\cdot x
 
 so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 Let $G$ act on its subgroups by conjugation, 
 
 - The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
@@ -119,7 +124,10 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 &= \abs{G}
 .\]
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
 
 - Let $G\actson X$ transitively where $\abs{X} \geq 2$
 - An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
@@ -131,6 +139,8 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 - Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
 - Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
 
+
+:::
 
 :::
 

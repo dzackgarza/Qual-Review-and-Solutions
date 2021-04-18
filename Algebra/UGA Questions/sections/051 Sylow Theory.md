@@ -9,8 +9,6 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 \envlist
 
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -33,16 +31,17 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 :::
 
-
-
 :::{.claim title="1"}
-$\abs{h^G} = [G: Z(h)]$
+\[
+\abs{h^G} = [G: Z(h)]
+.\]
 :::
 
 :::{.claim title="2"}
-$\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
+\[
+\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]
+.\]
 :::
-
 
 :::{.proof title="?"}
 \envlist
@@ -53,12 +52,9 @@ $\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
 
 :::
 
-
 :::{.claim title="3"}
 $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
 :::
-
-
 
 :::{.proof title="?"}
 - By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
@@ -105,97 +101,96 @@ Let $G$ be a finite group and let $P$ be a sylow $p\dash$subgroup for $p$ prime.
 ## Fall 2013 #2 $\work$
 Let $G$ be a group of order 30.
 
-### a
+
+a.
 Show that $G$ has a subgroup of order 15.
 
-### b
+b.
 Show that every group of order 15 is cyclic.
 
-### c
+c.
 Show that $G$ is isomorphic to some semidirect product $\ZZ_{15} \semidirect \ZZ_2$.
 
-### d
+d.
 Exhibit three nonisomorphic groups of order 30 and prove that they are not isomorphic.
 You are not required to use your answer to (c).
 
 ## Spring 2014 #2 $\work$
 Let $G\subset S_9$ be a Sylow-3 subgroup of the symmetric group on 9 letters.
 
-### a
+a.
 Show that $G$ contains a subgroup $H$ isomorphic to $\ZZ_3 \cross \ZZ_3 \cross \ZZ_3$ by exhibiting an appropriate set of cycles.
 
-### b
+b.
 Show that $H$ is normal in $G$.
 
-### c
+c.
 Give generators and relations for $G$ as an abstract group, such that all generators have order 3.
-
 Also exhibit elements of $S_9$ in cycle notation corresponding to these generators.
 
-### d
+d.
 Without appealing to the previous parts of the problem, show that $G$ contains an element of order 9.
 
 ## Fall 2014 #2 $\work$
 Let $G$ be a group of order 96.
 
-### a
+a.
 Show that $G$ has either one or three 2-Sylow subgroups.
 
-### b
+b.
 Show that either $G$ has a normal subgroup of order 32, or a normal subgroup of order 16.
 
 ## Spring 2016 #3 $\work$
 
-### a
+a.
 State the three Sylow theorems.
 
-### b
+b.
 Prove that any group of order 1225 is abelian.
 
-### c
+c.
 Write down exactly one representative in each isomorphism class of abelian groups of order 1225.
 
 ## Spring 2017 #2 $\work$
 
-### a
+a.
 How many isomorphism classes of abelian groups of order 56 are there?
 Give a representative for one of each class.
 
-### b
+b.
 Prove that if $G$ is a group of order 56, then either the Sylow-2 subgroup or the Sylow-7 subgroup is normal.
 
-### c
+c.
 Give two non-isomorphic groups of order 56 where the Sylow-7 subgroup is normal and the Sylow-2 subgroup is *not* normal.
 Justify that these two groups are not isomorphic.
 
 ## Fall 2017 #2 $\work$
 
-### a
+a.
 Classify the abelian groups of order 36.
 
-For the rest of the problem, assume that $G$ is a non-abelian group of order 36. 
+  > For the rest of the problem, assume that $G$ is a non-abelian group of order 36. 
+  > You may assume that the only subgroup of order 12 in $S_4$ is $A_4$ and that $A_4$ has no subgroup of order 6.
 
-> You may assume that the only subgroup of order 12 in $S_4$ is $A_4$ and that $A_4$ has no subgroup of order 6.
-
-### b
+b.
 Prove that if the 2-Sylow subgroup of $G$ is normal, $G$ has a normal subgroup $N$ such that $G/N$ is isomorphic to $A_4$.
 
-### c
+c.
 Show that if $G$ has a normal subgroup $N$ such that $G/N$ is isomorphic to $A_4$ and a subgroup $H$ isomorphic to $A_4$ it must be the direct product of $N$ and $H$.
 
-### d
+d.
 Show that the dihedral group of order 36 is a non-abelian group of order 36 whose Sylow-2 subgroup is not normal.
 
 ## Fall 2012 #2 $\work$
 Let $G$ be a group of order 30.
 
-### a
+a.
 Show that $G$ contains normal subgroups of orders 3, 5, and 15.
 
-### b
+b.
 Give all possible presentations and relations for $G$.
 
-### c
+c.
 Determine how many groups of order 30 there are up to isomorphism.
 
 ## Fall 2018 #1 $\done$ 
@@ -203,22 +198,26 @@ Let $G$ be a finite group whose order is divisible by a prime number $p$.
 Let $P$ be a normal $p\dash$subgroup of $G$
 (so $\abs P = p^c$ for some $c$).
 
-### a
+a.
 Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
 
-### b
+b.
 Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
 
 :::{.solution}
-Concepts Used:
+\envlist
+
+:::{.concept}
+\envlist
 
 - Sylow 2: All Sylow $p\dash$subgroups are conjugate.
 - $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
 - Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
 
@@ -232,7 +231,10 @@ Concepts Used:
 P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 .\]
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 - If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
 - By maximality of $M$, $MP = G$
@@ -248,23 +250,28 @@ P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 
 :::
 
+:::
+
 ## Fall 2019 #2  $\done$
 Let $G$ be a group of order 105 and let $P, Q, R$ be Sylow 3, 5, 7 subgroups respectively.
 
-### a
+a.
 Prove that at least one of $Q$ and $R$ is normal in $G$.
 
-### b
+b.
 Prove that $G$ has a cyclic subgroup of order 35.
 
-### c
+c.
 Prove that both $Q$ and $R$ are normal in $G$.
 
-### d
+d.
 Prove that if $P$ is normal in $G$ then $G$ is cyclic.
 
 :::{.solution}
-Relevant Concepts:
+\envlist
+
+:::{.concept}
+\envlist
 
 - The $pqr$ theorem.
 - Sylow 3: $\abs{G} = p^n m$ implies $n_p \divides m$ and $n_p \cong 1 \mod p$.
@@ -285,9 +292,9 @@ A_i\normal G, \quad G = A_1 \cdots A_k,\quad A_k \intersect \prod_{i\neq k} A_i 
 - The intersection of subgroups is a again a subgroup.
 - Any subgroups of coprime order intersect trivially?
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of 1"}
 We have 
 
 - $n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \mod 3 \implies n_3 \in \theset{1, 5, 7, 35} \setminus \theset{5, 35}$
@@ -306,15 +313,19 @@ Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then
 \]
 using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
 
-### b 
-\todo[inline]{Not finished!}
+:::
 
+:::{.proof title="of 2"}
 By (a), either $Q$ or $R$ is normal.
 Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
 
 By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
 
-### c
+:::
+
+\todo[inline]{Part (b) not finished!}
+
+:::{.proof title="of 3"}
 We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
 
 Note that we can write
@@ -345,8 +356,9 @@ Now both cases lead to contradictions:
 &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = \abs{G}
 .\]
 
-### d
+:::
 
+:::{.proof title="of 4"}
 Suppose $P$ is normal and recall $\abs{P} = 3, \abs{Q} = 5, \abs{R} = 7$.
 
 - $P\intersect QR = \theset{e}$ since $(3, 35) = 1$ 
@@ -361,6 +373,7 @@ G \cong P\cross Q \cross R \cong \ZZ_3 \cross \ZZ_5 \cross \ZZ_7 \cong \ZZ_{105}
 .\]
 by the Chinese Remainder Theorem, which is cyclic.
 
+:::
 
 :::
 

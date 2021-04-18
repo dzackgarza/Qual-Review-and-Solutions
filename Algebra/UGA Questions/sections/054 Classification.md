@@ -2,13 +2,13 @@
 
 ## Spring 2020 #1 $\work$
 
-### a
+a.
 Show that any group of order 2020 is solvable.
 
-### a
+a.
 Give (without proof) a classification of all abelian groups of order 2020.
 
-### c
+c.
 Describe one nonabelian group of order 2020.
 
 \todo[inline]{Work this problem.}
@@ -19,35 +19,42 @@ How many isomorphism classes are there of groups of order 45?
 Describe a representative from each class.
 
 :::{.solution}
-Concepts used:
+
+
+\envlist
+:::{.concept}
+\envlist
 
 - Sylow theorems:
 - $n_p \cong 1 \mod p$
 - $n_p \divides m$.
 
-**Solution**
+:::
 
-It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
-There is only one possibility for $S_5$, namely $S_5\cong \ZZ/(5)$.
+- It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
-There are two possibilities for $S_3$, namely $S_3 \cong \ZZ/(3^2)$ and $\ZZ/(3)^2$.
+- There is only one possibility for $S_5$, namely $S_5\cong \ZZ/(5)$.
 
-Thus
+- There are two possibilities for $S_3$, namely $S_3 \cong \ZZ/(3^2)$ and $\ZZ/(3)^2$.
+
+- Thus
 
 - $G \cong \ZZ/(9) \cross \ZZ/(5)$, or
 - $G \cong \ZZ/(3)^2 \cross \ZZ/(5)$.
 
-\todo[inline]{Revisit, seems short.}
 :::
+
+
+\todo[inline]{Revisit, seems short.}
 
 ## Spring 2012 #3 $\work$
 Let $G$ be a group of order 70.
 
-### a
+a.
 Show that $G$ is not simple.
 
-### a
+a.
 Exhibit 3 nonisomorphic groups of order 70 and prove that they are not isomorphic.
 
 ## Fall 2016 #3 $\work$
@@ -55,20 +62,24 @@ How many groups are there up to isomorphism of order $pq$ where $p<q$ are prime 
 
 ## Spring 2018 #1 $\done$
 
-### a
+a.
 Use the Class Equation (equivalently, the conjugation action of a group on itself) to prove that any $p\dash$group (a group whose order is a positive power of a prime integer $p$) has a nontrivial center.
 
-### b
+b.
 Prove that any group of order $p^2$ (where $p$ is prime) is abelian.
 
-### c
+c.
 Prove that any group of order $5^2 \cdot 7^2$ is abelian.
 
-### d
+d.
 Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
 
 :::{.solution}
-Concepts Used:
+
+
+\envlist
+:::{.concept}
+\envlist
 
 - Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
 - Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
@@ -86,8 +97,9 @@ Concepts Used:
 - Every group of order $p^2$ is abelian.
 - Classification of finite abelian groups.
 
-### a
+:::
 
+:::{.proof title="of a"}
 Strategy: get $p$ to divide $\abs{Z(G)}$.
 
 - Apply the class equation:
@@ -110,15 +122,19 @@ Strategy: get $p$ to divide $\abs{Z(G)}$.
 - $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
 
 
-### b
+:::
 
+:::{.proof title="of b"}
 Strategy: examine $\abs{G/Z(G)}$ by cases.
 
 - $1$: Then $G = Z(G)$ and $G$ is abelian.
 - $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
 - $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist 
 
 - By Sylow
 
@@ -133,13 +149,15 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
 - The direct product of abelian groups is abelian.
 
-### d
+d.
 
 1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
 1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
 1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
 1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
 
+
+:::
 
 :::
 

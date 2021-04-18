@@ -8,10 +8,10 @@ Justify your answer.
 ## $\star$ Fall 2013 #7 $\work$
 Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
 
-### a
+a.
 Show that $\bar F$ is not a finite extension of $F$.
 
-### b
+b.
 Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
 Show that $F(\alpha)/F$ has degree 8.
 
@@ -22,33 +22,40 @@ Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a prim
 
 Let $E = F [\omega]$ and let $k = [E : F]$.
 
-### a
+a.
 Prove that $n$ divides $q^{k}-1$.
 
-### b 
+b. 
 Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
 Prove that $m$ divides $k$.
 
-### c
+c.
 Prove that $m = k$.
 
 \todo[inline]{Revisit, tricky!}
 
 :::{.solution}
 
-Concepts used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - Theorem: $F\units$ is always cyclic for $F$ a field
 
-**Solution**:
+:::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
 
 - Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 - Rephrasing (a), we have 
 \[
@@ -58,7 +65,10 @@ n \divides q^k-1
 &\iff m \definedas o(q) \divides k
 .\]
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
 
 - Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
 \[
@@ -77,6 +87,9 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 - But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
 
 - Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
+
+:::
+
 :::
 
 ## Fall 2019 #7 $\done$
@@ -89,7 +102,10 @@ How many subfields are there of $\QQ(\zeta_{20} )$?
 
 :::{.solution}
 
-Concepts Used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - **Galois** = normal + separable.
 
@@ -103,9 +119,9 @@ Concepts Used:
 
 - The lattice: 
 
-![](figures/2019-12-24-13-19-15.png)
+  ![image_2021-04-17-02-44-48](figures/image_2021-04-17-02-44-48.png)
 
-**Solution**:
+:::
 
 Let $K = \QQ(\zeta)$. 
 Then $K$ is the splitting field of $f(x) = x^n - 1$, which is irreducible over $\QQ$, so $K/\QQ$ is normal.
@@ -120,7 +136,6 @@ We can now define maps
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
 \]
-
 and if we restrict to $j$ such that $\gcd(n, j) = 1$, this yields $\phi(n)$ maps.
 Noting that if $\zeta$ is a primitive root, then $(n, j) = 1$ implies that that $\zeta^j$ is also a primitive root, and hence another root of $\min(\zeta, \QQ)$, and so these are in fact automorphisms of $K$ that fix $\QQ$ and thus elements of $\Gal(K/\QQ)$.
 
@@ -134,8 +149,7 @@ from the *multiplicative* group of units to the Galois group.
 
 The claim is that this is a surjective homomorphism, and since both groups are the same size, an isomorphism.
 
-**Surjectivity:**
-
+:::{.proof title="of surjectivity"}
 Letting $\sigma \in K$ be arbitrary, noting that $[K: \QQ]$ has a basis $\theset{1, \zeta, \zeta^2, \cdots, \zeta^{n-1}}$, it suffices to specify $\sigma(\zeta)$ to fully determine the automorphism.
 (Since $\sigma(\zeta^k) = \sigma(\zeta)^k$.)
 
@@ -145,15 +159,17 @@ Moreover, since $o(\zeta) = n \in K\units$, we must have $o(\zeta^k) = n \in K\u
 
 Thus $\theta$ is surjective.
 
-**Homomorphism:**
+:::
 
+:::{.proof title="of being a homomorphism"}
 \[
 \tau_j \circ \tau_k (\zeta) =\tau_j(\zeta^k) = \zeta^{jk} \implies
 \tau_{jk} = \theta(jk) = \tau_j \circ \tau_k
 .\]
 
-**Part 2:**
+:::
 
+:::{.proof title="of part 2"}
 We have $K \cong \ZZ_{20}\units$ and $\phi(20) = 8$, so $K \cong \ZZ_8$, so we have the following subgroups and corresponding intermediate fields:
 
 - $0 \sim \QQ(\zeta_{20})$
@@ -162,27 +178,36 @@ We have $K \cong \ZZ_{20}\units$ and $\phi(20) = 8$, so $K \cong \ZZ_8$, so we h
 - $\ZZ_8 \sim \QQ$
 
 For some elements $\omega_i$ which exist by the primitive element theorem.
-
-
+:::
 
 :::
 
 ## Spring 2019 #2 $\done$
 Let $F = \FF_p$ , where $p$ is a prime number.
 
-### a
+a.
 Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
 
-### b
+b.
 Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
 
 :::{.solution}
 
-### a
 
-> Go to a field extension.
-> Orders of multiplicative groups for finite fields are known.
+\envlist
+:::{.concept}
+\envlist
 
+- Go to a field extension.
+  - Orders of multiplicative groups for finite fields are known.
+- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+
+:::
+
+:::{.proof title="of a"}
 We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
 
 Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
@@ -199,18 +224,15 @@ Since $\rho$ is a ring morphism, we have
 &\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
 .\]
 
-$\qed$
 
-### b
+:::
 
-> Some potentially useful facts:
->
-> - $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
-> - $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
-> - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
-> - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+:::{.proof title="of b"}
 
-Claim: $\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+
+:::{.claim}
+$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+:::
 
 $\implies$:
 Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
@@ -225,30 +247,33 @@ n &= [L: \FF_p] \\
 
 for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
+\
 
 $\impliedby$:
 If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
 So $f = f_i$ for some $i$.
-
+:::
 
 :::
 
 ## Spring 2019 #8 $\done$
 Let $\zeta = e^{2\pi i/8}$.
 
-### a
+a.
 What is the degree of $\QQ(\zeta)/\QQ$?
 
-### b
+b.
 How many quadratic subfields of $\QQ(\zeta)$ are there?
 
-### c
+c.
 What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 
 
 :::{.solution}
 
-Concepts used:
+\envlist
+:::{.concept}
+\envlist
 
 - $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
   - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
@@ -256,11 +281,12 @@ Concepts used:
 - $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
-**Solution**:
+:::
 
-Let $K = \QQ(\zeta)$
+Let $K = \QQ(\zeta)$.
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
 - The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
@@ -270,12 +296,20 @@ Let $K = \QQ(\zeta)$
 .\]
 - So $[\QQ(\zeta): \QQ] = 4$.
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
+
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
 - $\ZZ/(4)$ has exactly one subgroup of index 2.
 - Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
+
 - Let $L = \QQ(\zeta, \sqrt[4] 2)$.
 
 - Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
@@ -296,24 +330,27 @@ Let $K = \QQ(\zeta)$
 
 :::
 
+
+:::
+
 ## Fall 2018 #3 $\done$
 Let $F \subset K \subset L$ be finite degree field extensions.
 For each of the following assertions, give a proof or a counterexample.
 
-### a
+a.
 If $L/F$ is Galois, then so is $K/F$.
 
-### b
+b.
 If $L/F$ is Galois, then so is $L/K$.
 
-### c
+c.
 If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
 :::{.solution}
 
 Let $L/K/F$.
 
-### a
+a.
 
 **False**: 
 Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
@@ -322,7 +359,7 @@ Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has
 
 But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
 
-### b
+b.
 
 **True**: 
 If $L/F$ is Galois, then $L/K$ is normal and separable:
@@ -331,7 +368,7 @@ If $L/F$ is Galois, then $L/K$ is normal and separable:
 
 - $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
 
-### c
+c.
 
 **False**: 
 Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
@@ -344,21 +381,20 @@ Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ 
 ## Spring 2018 #2 $\done$
 Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
 
-### a
+a.
 Find the splitting field $K$ of $f$, and compute $[K: \QQ]$.
 
-### b
+b.
 Find the Galois group $G$ of $f$, both as an explicit group of automorphisms, and as a familiar abstract group to which it is isomorphic.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
 :::{.solution}
 
-### a
-
+:::{.proof title="of a"}
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
 \[
 \alpha_1 &= \sqrt{2 + \sqrt 2} \\
@@ -369,8 +405,9 @@ Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ h
 
 and splitting field $K = \QQ(\theset{\alpha_i})$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 $K$ is the splitting field of a separable polynomial and thus Galois over $\QQ$.
 Moreover, Since $f$ is irreducible by Eisenstein with $p=2$, the Galois group is a transitive subgroup of $S^4$, so the possibilities are:
 
@@ -422,11 +459,14 @@ and thus
 
 and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
 
-### c
 
+:::
 
+:::{.proof title="of c"}
 ?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
+:::
 
+\todo[inline]{Finish (c)}
 
 :::
 
@@ -437,13 +477,13 @@ Let $E = E_1 E_2 \subset K$.
 
 Let $H_i = \Gal(K/E_i)$ and $H = \Gal(K/E)$.
 
-### a
+a.
 Show that $H = H_1 \cap H_2$.
 
-### b
+b.
 Show that $H_1 H_2$ is a subgroup of $G$.
 
-### c
+c.
 Show that 
 $$
 \Gal(K/(E_1 \cap E_2 )) = H_1 H_2
@@ -451,10 +491,15 @@ $$
 
 :::{.solution}
 
-> Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
 
-### a
+\envlist
+:::{.concept}
+\envlist
 
+Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
+:::
+
+:::{.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of $H_1 \intersect H_2$ is $E_1 E_2$.
 
 Let $\sigma \in H_1 \intersect H_2$; then $\sigma \in \Aut(K)$ fixes both $E_1$ and $E_2$.
@@ -468,8 +513,9 @@ $$
 
 so $\sigma$ fixes $E_1 E_2$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 That $H_1 H_2 \subseteq G$ is clear, since if $\sigma = \tau_1 \tau_2 \in H_1 H_2$, then each $\tau_i$ is an automorphism of $K$ that fixes $E_i \supseteq \QQ$, so each $\tau_i$ fixes $\QQ$ and thus $\sigma$ fixes $\QQ$.
 
 That it is a subgroup follows from the fact that elements commute. (?)
@@ -492,42 +538,46 @@ and substituting $e = \sigma_1(e)$ on the RHS yields
 where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
 
 
-### c
+:::
 
+:::{.proof title="of c"}
 By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an intermediate field $E$ such that $K/E/\QQ$ and $E$ is the fixed field of $H_1 H_2$.
 
 But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so $\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \intersect E_2$.
+
+:::
+
 :::
 
 ## Spring 2020 #4 $\work$
 Let $f(x) = x^4-2 \in \QQ[x]$.
 
-### a
+a.
 Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
 
-### b
+b.
 Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
 
-### c
+c.
 Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
 
 ## Spring 2020 #3 $\work$
 Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
 
-### a
+a.
 Show that $F(\alpha) = F(\alpha^2)$.
 
-### b
+b.
 Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
 
 ## Fall 2017 #4 $\work$
 
-### a
+a.
 Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
 
-Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
+  Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
 
-### b
+b.
 Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
 
 ## Fall 2017 #3 $\work$
@@ -539,21 +589,21 @@ Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is
 ## Spring 2017 #7 $\work$
 Let $F$ be a field and let $f(x) \in F[x]$.
 
-### a
+a.
 Define what a splitting field of $f(x)$ over $F$ is.
 
-### b
+b.
 Let $F$ now be a finite field with $q$ elements.
 Let $E/F$ be a finite extension of degree $n>0$.
 Exhibit an explicit polynomial $g(x) \in F[x]$ such that $E/F$ is a splitting field of $g(x)$ over $F$.
 Fully justify your answer.
 
-### c
+c.
 Show that the extension $E/F$ in (b) is a Galois extension.
 
 ## Spring 2017 #8 $\work$
 
-### a
+a.
 Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
 Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
 \[
@@ -564,31 +614,31 @@ a & b \\
 \qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
 .\]
 
-### b
+b.
 Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
 
 ## Fall 2016 #4 $\work$
 Set $f(x) = x^3 - 5 \in \QQ[x]$.
 
-### a
+a.
 Find the splitting field $K$ of $f(x)$ over $\QQ$.
 
-### b
+b.
 Find the Galois group $G$ of $K$ over $\QQ$.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 ## Spring 2016 #2 $\work$
 Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
 
-### a
+a.
 Find $[K: \QQ]$.
 
-### b
+b.
 Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 ## Spring 2016 #6 $\work$
@@ -599,156 +649,156 @@ Prove that $K$ is an extension by radicals of the field $F$.
 ## Fall 2015 #5 $\work$
 Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
 
-### a
+a.
 Find (with justification) the minimal polynomial $f(x)$ of $u$ over $\QQ$.
 
-### b
+b.
 Show $v\in E$, and show that $E$ is a splitting field of $f(x)$ over $\QQ$.
 
-### c
+c.
 Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
 
 
 ## Fall 2015 #6 $\work$
 
-### a
+a.
 Let $G$ be a finite group.
 Show that there exists a field extension $K/F$ with $\gal(K/F) = G$.
 
 > You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
 
-### b
+b.
 Let $K$ be a Galois extension of $F$ with $\abs{\gal(K/F)} = 12$.
 Prove that there exists an intermediate field $E$ of $K/F$ with $[E: F] = 3$.
 
-### c
+c.
 With $K/F$ as in (b), does an intermediate field $L$ necessarily exist satisfying $[L: F] = 2$?
 Give a proof or counterexample.
 
 ## Spring 2015 #2 $\work$
 Let $\FF$ be a finite field.
 
-### a
+a.
 Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
 
-### b
+b.
 The *exponent* of a finite group is the least common multiple of the orders of its elements.
 Prove that a finite abelian group has an element of order equal to its exponent.
 
-### c
+c.
 Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
 
 ## Spring 2015 #5 $\work$
 Let $f(x) = x^4 - 5 \in \QQ[x]$.
 
-### a
+a.
 Compute the Galois group of $f$ over $\QQ$.
 
-### b
+b.
 Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
 
 ## Fall 2014 #1 $\work$
 Let $f\in \QQ[x]$ be an irreducible polynomial and $L$ a finite Galois extension of $\QQ$.
 Let $f(x) = g_1(x)g_2(x)\cdots g_r(x)$ be a factorization of $f$ into irreducibles in $L[x]$.
 
-### a
+a.
 Prove that each of the factors $g_i(x)$ has the same degree.
 
-### b
+b.
 Give an example showing that if $L$ is not Galois over $\QQ$, the conclusion of part (a) need not hold.
 
 ## Fall 2014 #3 $\work$
 Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
 
-### a
+a.
 What is the structure of the Galois group of $E/\QQ$?
 
-### b
+b.
 Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
 Describe the corresponding subgroups of the Galois group.
 
 ## Spring 2014 #3 $\work$
 Let $F\subset C$ be a field extension with $C$ algebraically closed.
 
-### a
+a.
 Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
 
-### b
+b.
 Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
 
 ## Spring 2014 #4 $\work$
 Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
 
-### a
+a.
 Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
 
 > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
 
-### b
+b.
 Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
 
-### c
+c.
 Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
 
 ## Fall 2013 #5 $\work$
 Let $L/K$ be a finite extension of fields.
 
-### a
+a.
 Define what it means for $L/K$ to be *separable*.
 
-### b
+b.
 Show that if $K$ is a finite field, then $L/K$ is always separable.
 
-### c
+c.
 Give an example of a finite extension $L/K$ that is not separable.
 
 ## Fall 2013 #6 $\work$
 Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
 
-### a
+a.
 Show that $K/\QQ$ contains both $\QQ(i)$ and $\QQ(\sqrt[4]{2})$ and has degree 8 over $\QQ$/
 
-### b
+b.
 Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
 Show that $N$ is normal in $G$ and $NH = G$.
 
 > Hint: what field is fixed by $NH$?
 
-### c
+c.
 Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
 
 > Equivalently, show it is the dihedral group of order 8.
 
-### d
+d.
 How many distinct quartic subfields of $K$ are there? 
 Justify your answer.
 
 ## Spring 2013 #7 $\work$
 Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
 
-### a
+a.
 Prove that $\gal(E/B)$ and $\gal(E/C)$ are normal subgroups of $\gal(E/\QQ)$.
 
-### b
+b.
 Prove that $\gal(E/B) \intersect \gal(E/C) = \theset{1}$.
 
-### c
+c.
 If $B\intersect C = \QQ$, show that $\gal(E/B) \gal(E/C) = \gal(E/\QQ)$.
 
-### d
+d.
 Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(E/C)$.
 
-### e
+e.
 Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
 
 ## Spring 2013 #8 $\work$
 Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
 You may assume that $f$ is irreducible over $F$.
 
-### a
+a.
 Show that if $r$ is a root of $f$ in $K$, then $r^9 = 1$ but $r^3\neq 1$.
 
-### b
+b.
 Find $\gal(K/F)$ and express each intermediate field between $F$ and $K$ as $F(\beta)$ for an appropriate $\beta \in K$.
 
 ## Fall 2012 #3 $\work$
@@ -763,20 +813,20 @@ Assume that $[K:\QQ] = 1225$ and show that $f(x)$ is solvable by radicals.
 ## Spring 2012 #1 $\work$
 Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
 
-### a
+a.
 Show that there exists a unique intermediate field $K$ with $F\subset K \subset E$ such that $[K: F] = 2$.
 
-### b
+b.
 Assume that there are at least two distinct intermediate subfields $F \subset L_1, L_2 \subset E$ with $[L_i: F]= 7$.
 Prove that $\gal(E/F)$ is nonabelian.
 
 ## Spring 2012 #4 $\work$
 Let $f(x) = x^7 - 3\in \QQ[x]$ and $E/\QQ$ be a splitting field of $f$ with $\alpha \in E$ a root of $f$.
 
-### a
+a.
 Show that $E$ contains a primitive 7th root of unity.
 
-### b
+b.
 Show that $E\neq \QQ(\alpha)$.
 
 ## Fall 2019 Midterm #6  $\work$

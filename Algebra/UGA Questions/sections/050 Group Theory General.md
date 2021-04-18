@@ -9,16 +9,16 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
-### a
+a.
 Prove that if two elements of $G$ are chosen uniformly at random,then the probability they commute is precisely
 $$
 \frac{c(G)}{\abs G}
 .$$
 
-### b
+b.
 State the class equation for a finite group.
 
-### c
+c.
 Using the class equation (or otherwise) show that the probability in part (a) is at most $$
 \frac 1 2 + \frac 1 {2[G : Z(G)]}
 .$$
@@ -38,10 +38,8 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 :::
 
-**Solution**
 
-### a
-
+:::{.proof title="Part a"}
 Strategy: Burnside.
 
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
@@ -94,21 +92,18 @@ P(A)
 = \frac n {\abs G}
 .\]
 
-$\qed$
+:::
 
-### b
-
-Class equation:
+:::{.proof title="Part b"}
+Statement of the class equation:
 \[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-
 where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+:::
 
-### c
 
-> Todo: revisit.
-
+:::{.proof title="Part c"}
 As shown in part 1,
 $$
 \mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
@@ -137,6 +132,15 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 &= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
 .\]
 
+:::
+
+
+\todo[inline]{Redo part c}
+
+
+
+
+
 
 :::
 
@@ -144,10 +148,10 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 ## Spring 2012 #2 $\work$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
 
-### a
+a.
 Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 
-### b
+b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
 ## Spring 2017 #1 $\work$
@@ -198,6 +202,3 @@ Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G
 
 Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
 Prove that $H$ is contained in the center of $G$.
-
-
-

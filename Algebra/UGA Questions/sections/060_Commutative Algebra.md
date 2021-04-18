@@ -7,10 +7,10 @@ Show that $N \cong \im f \oplus \ker g$.
 ## Fall 2019 #3 $\work$
 Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
 
-### a
+a.
 Prove that $R$ has characteristic 2.
 
-### b
+b.
 Prove that $R$ is commutative.
 
 :::{.solution}
@@ -18,14 +18,13 @@ Prove that $R$ is commutative.
 > Just fiddling with computations.
 > Context hints that we should be considering things like $x^2$ and $a+b$.
 
-### a
+a.
 \[
 2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
 .\]
-
 Note that this implies $x = -x$ for all $x\in R$.
 
-### b
+b.
 \[
 a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 &\implies ab + ba = 0 \\
@@ -38,62 +37,89 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 ## Fall 2019 #6 $\done$
 Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
 
-### a
+a.
 Show that
 $$
 N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
 $$
 is an ideal which is contained in any prime ideal.
 
-### b
+b.
 Let $r$ be an element of $R$ not in $N$.
 Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
 there is a prime ideal in $S$.
 
-### c
+c.
 Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
 
 :::{.solution}
 
-> Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
-> Silly fact: 0 is in every ideal!
-> 
-> **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
-> 
-> **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
-> (TODO: PROVE)
->
-> **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
-> (TODO: PROVE)
->
-> **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
+\envlist
+:::{.concept}
+\envlist
 
-### a
+- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
+- Silly fact: 0 is in every ideal!
+ 
+- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
+ 
+- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
 
-Let $\mathfrak{p}$ be prime and $x\in N$.
-Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
-Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+  \todo[inline]{Prove this}
 
-### b
+- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
 
-Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
-Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+  \todo[inline]{Prove this}
 
-By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
 
-Since $R$ is commutative, $\mathfrak{p}$ is prime.
+:::
 
-### c
 
-Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
 
-Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
 
-Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+:::{.proof title="of a"}
+\envlist
 
-Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
+- Let $\mathfrak{p}$ be prime and $x\in N$.
+- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
+- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
+
+- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+
+- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+
+- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
+
+- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
+
+- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+
+- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
 Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
-But then $r\not\in \mathfrak{p}$, a contradiction.
+  But then $r\not\in \mathfrak{p}$, a contradiction.
+
+:::
+
+
+
+
+
+
+
 
 
 :::
@@ -104,22 +130,32 @@ Let $R$ be a commutative ring with 1.
 > Recall that $x \in R$ is nilpotent iff $xn = 0$ for
 some positive integer $n$.
 
-### a
+a.
 Show that every proper ideal of $R$ is contained within a maximal ideal.
 
-### b
+b.
 Let $J(R)$ denote the intersection of all maximal ideals of $R$.
 
 Show that $x \in J(R) \iff 1 + rx$ is a unit for all $r \in R$.
 
-### c
+c.
 Suppose now that $R$ is finite. Show that in this case $J(R)$ consists precisely
 of the nilpotent elements in R.
 
 :::{.solution}
 
-### a
 
+\envlist
+:::{.concept}
+\envlist
+
+- $\mathfrak N(R) = \theset{x\in R \suchthat x^n = 0 \text{ for some } n}$.
+- $J(R) = \spec_{\text{max}}(R) = \displaystyle\intersect_{\mm \text{ maximal}} \mm$.
+:::
+
+
+
+:::{.proof title="of a"}
 Define the set of proper ideals
 $$
 S = \theset{J \suchthat I   \subseteq J < R}
@@ -129,74 +165,81 @@ which is a poset under set inclusion.
 
 Given a chain $J_1 \subseteq \cdots$, there is an upper bound $J \definedas \union J_i$, so Zorn's lemma applies.
 
-### b
+
+:::
+
+
+:::{.proof title="of b"}
 $\implies$:
 
-We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
+- We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
 
-Let $x\in J(R)$, so it is in every maximal ideal, and suppose toward a contradiction that $1+x$ is **not** a unit.
+- Let $x\in J(R)$, so it is in every maximal ideal, and suppose toward a contradiction that $1+x$ is **not** a unit.
 
-Then consider $I = \generators{1+x} \normal R$. 
+- Then consider $I = \generators{1+x} \normal R$. 
 Since $1+x$ is not a unit, we can't write $s(1+x) = 1$ for any $s\in R$, and so $1 \not\in I$ and $I\neq R$
 
-So $I < R$ is proper and thus contained in some maximal proper ideal $\mathfrak{m} < R$ by part (1), and so we have $1+x \in \mathfrak{m}$.
+- So $I < R$ is proper and thus contained in some maximal proper ideal $\mathfrak{m} < R$ by part (1), and so we have $1+x \in \mathfrak{m}$.
 Since $x\in J(R)$, $x\in \mathfrak{m}$ as well.
 
-But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
+- But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
+
+\
 
 $\impliedby$
 
-Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
+- Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
 
  
-Suppose towards a contradiction that there is a maximal ideal $\mathfrak{m}$ such that $x\not \in \mathfrak{m}$ and thus $x\not\in J(R)$.
+- Suppose towards a contradiction that there is a maximal ideal $\mathfrak{m}$ such that $x\not \in \mathfrak{m}$ and thus $x\not\in J(R)$.
 
-Consider 
-$$
+- Consider 
+\[
 M' \definedas \theset{rx + m \suchthat r\in R,~ m\in M}
-.$$
+.\]
 
-Since $\mathfrak{m}$ was maximal, $\mathfrak{m} \subsetneq M'$ and so $M' = R$.
+- Since $\mathfrak{m}$ was maximal, $\mathfrak{m} \subsetneq M'$ and so $M' = R$.
 
-So every element in $R$ can be written as $rx + m$ for some $r\in R, m\in M$.
+- So every element in $R$ can be written as $rx + m$ for some $r\in R, m\in M$.
 But $1\in R$, so we have 
-$$
+\[
 1 = rx + m
-.$$ 
+.\] 
 
-So let $s = -r$ and write $1 = sx - m$, and so $m = 1 + sx$.
+- So let $s = -r$ and write $1 = sx - m$, and so $m = 1 + sx$.
 
-Since $s\in R$ by assumption $1+sx$ is a unit and thus $m \in \mathfrak{m}$ is a unit, a contradiction.
+- Since $s\in R$ by assumption $1+sx$ is a unit and thus $m \in \mathfrak{m}$ is a unit, a contradiction.
 
-So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
+- So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
 
-### c
+:::
 
-> - $\mathfrak N(R) = \theset{x\in R \suchthat x^n = 0 \text{ for some } n}$.
-> - $J(R) = \spec_{\text{max}}(R) = \displaystyle\intersect_{\mm \text{ maximal}} \mm$.
 
-We want to show $J(R) = \mathfrak N(R)$.
+
+:::{.proof title="of c"}
+- We want to show $J(R) = \mathfrak N(R)$.
 
 $\mathfrak N(R) \subseteq J(R)$:
 
-We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
+- We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
 $$
 \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)\inv
 .$$
 
-$J(R) \subseteq \mathfrak N(R)$:
+- $J(R) \subseteq \mathfrak N(R)$:
 
-Let $x \in J(R) \setminus \mathfrak N(R)$.
+- Let $x \in J(R) \setminus \mathfrak N(R)$.
 
-Since $R$ is finite, $x^m = x$ for some $m > 0$.
-Without loss of generality, we can suppose $x^2 = x$ by replacing $x^m$ with $x^{2m}$.
+- Since $R$ is finite, $x^m = x$ for some $m > 0$.
 
-If $1-x$ is not a unit, then $\generators{1-x}$ is a nontrivial proper ideal, which by (a) is contained in some maximal ideal $\mm$. 
+- Without loss of generality, we can suppose $x^2 = x$ by replacing $x^m$ with $x^{2m}$.
+
+- If $1-x$ is not a unit, then $\generators{1-x}$ is a nontrivial proper ideal, which by (a) is contained in some maximal ideal $\mm$. 
 But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradiction.
 
-So $1-x$ is a unit, so let $u = (1-x)\inv$.
+- So $1-x$ is a unit, so let $u = (1-x)\inv$.
 
-Then
+- Then
 \[
 (1-x)x &= x - x^2 = x - x = 0 \\
 &\implies u (1-x)x = x = 0 \\
@@ -205,10 +248,12 @@ Then
 
 :::
 
+:::
+
 ## Fall 2018 #7 $\done$
 Let $R$ be a commutative ring.
 
-### a
+a.
 Let $r \in R$. Show that the map
 \[
 r\bullet : R &\to R \\
@@ -216,14 +261,14 @@ x &\mapsto r x
 .\]
 is an $R\dash$module endomorphism of $R$.
 
-### b
+b.
 We say that $r$ is a **zero-divisor** if r$\bullet$ is not injective.
 Show that if $r$ is a zero-divisor and $r \neq 0$, then the kernel and image of $R$ each consist of zero-divisors.
 
-### c
+c.
 Let $n \geq 2$ be an integer. Show: if $R$ has exactly $n$ zero-divisors, then $\#R \leq n^2$ .
 
-### d
+d.
 Show that up to isomorphism there are exactly two commutative rings $R$ with precisely 2 zero-divisors.
 
 > You may use without proof the following fact: every ring of order 4 is isomorphic to exactly one of the
@@ -237,8 +282,9 @@ following:
 
 :::{.solution}
 
-### a
 
+
+:::{.proof title="of a"}
 Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
 
 \[
@@ -248,48 +294,52 @@ Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\das
 &= s(r\vector x) + (r\vector y) \\
 &= s\phi(\vector x) + \phi(\vector y)
 .\]
+:::
 
-### b
+:::{.proof title="of b"}
+\envlist
 
-We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
+- We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
 
-Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
-So let $y\in \im \phi$.
-Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+- Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
+  So let $y\in \im \phi$.
 
-But then 
-$$
+- Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+
+- But then 
+\[
 yz = rxz = xrz = x\cdot 0 = 0
-$$ 
+\]
 since $R$ is commutative, so $y$ is a zero divisor.
+:::
 
+:::{.proof title="of c"}
+\envlist
 
-### c
+- Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
+- Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
+- Fix an $i$.
+- By (b), $K_i$ consists of zero divisors, so 
+\[
+\abs{K_i} \leq n < \infty \quad \text{for each } i
+.\]
+
+- Now consider $R/K_i \definedas \theset{r + K_i}$.
+- By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
+\[
+[R: K_i] = \abs{R/K_i} = \abs{\im \phi_i} \leq n 
+.\]
+
+- But then 
+\[
+\abs{R} = [R:K_i]\cdot \abs{K_i} \leq n\cdot n = n^2 
+.\]
+
+:::
 
 > See 1964 Annals "Properties of rings with a finite number of zero divisors"
 
-Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
-Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
-
-Fix an $i$.
-By (b), $K_i$ consists of zero divisors, so 
-$$
-\abs{K_i} \leq n < \infty \quad \text{for each } i
-.$$
-
-Now consider $R/K_i \definedas \theset{r + K_i}$.
-By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
-$$
-[R: K_i] = \abs{R/K_i} = \abs{\im \phi_i} \leq n 
-.$$
-
-But then 
-$$
-\abs{R} = [R:K_i]\cdot \abs{K_i} \leq n\cdot n = n^2 
-.$$
-
-### d
-
+:::{.proof title="of d"}
 By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
 Since every element in a finite ring is either a unit or a zero divisor, and $\abs{R\units} \geq 2$ since $\pm 1$ are always units, we must have $\abs{R} = 4$.
 
@@ -333,6 +383,7 @@ R &\cong \ZZ/(4) \\
 R &\cong \ZZ/(2)[t] / (t^2)
 .\]
 
+:::
 
 :::
 
@@ -354,22 +405,22 @@ M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
 ## Spring 2018 #8 $\work$
 Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
 
-### a
+a.
 Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
 
-### b
+b.
 If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
 
-### c
+c.
 Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
 
 ## Fall 2017 #5 $\work$
 A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
 
-### a
+a.
 Suppose $R$ is a commutative ring with 1. Prove $R$ is simple if and only if $R$ is a field.
 
-### b
+b.
 Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries in $k$, is a simple ring.
 
 ## Fall 2017 #6 $\work$
@@ -378,48 +429,48 @@ For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Reca
 We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
 Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
 
-### a
+a.
 Prove $R$ is an integral domain.
 
-### b
+b.
 Show $U(R) = \{\pm1\}$.
 
-### c
+c.
 Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
 
-### d
+d.
 Show 3 is not prime in $R$.
 
-### e
+e.
 Conclude $R$ is not a PID.
 
 ## Spring 2017 #3 $\work$
 Let $R$ be a commutative ring with 1.
 Suppose that $M$ is a free $R\dash$module with a finite basis $X$.
 
-### a
+a.
 Let $I \normal R$ be a proper ideal.
 Prove that $M/IM$ is a free $R/I\dash$module with basis $X'$, where $X'$ is the image of $X$ under the canonical map $M\to M/IM$.
 
-### b
+b.
 Prove that any two bases of $M$ have the same number of elements.
 You may assume that the result is true when $R$ is a field.
 
 
 ## Spring 2017 #4 $\work$
 
-### a
+a.
 Let $R$ be an integral domain with quotient field $F$.
 Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
 
-Prove that $R$ is not a UFD.
+  Prove that $R$ is not a UFD.
 
-> (You may assume Gauss' lemma)
+  > (You may assume Gauss' lemma)
 
-### b
+b.
 Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
-> Hint: let $p(x) = x^2-2$.
+  > Hint: let $p(x) = x^2-2$.
 
 ## Spring 2016 #8 $\work$
 Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
@@ -429,10 +480,10 @@ ii. If $x\in R$ with $x\neq 0$ then $2x\neq 0$, where $2x\definedas x+x$.
 
 Prove the following:
 
-### a
+a.
 For each $x\in R$ there is one and only one element $y\in R$ such that $x = 2y$.
 
-### b
+b.
 Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
 
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
@@ -474,31 +525,31 @@ Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a
 ## Spring 2014 #6 $\work$
 Let $R$ be a commutative ring with identity and let $n$ be a positive integer.
 
-### a
+a.
 Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
 
-### b
+b.
 Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
 
 ## Fall 2013 #3 $\work$
 
-### a
+a.
 Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
 
-### b
+b.
 Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
 
 ## Fall 2013 #4 $\work$
 Let $R$ be a commutative ring with $1\neq 0$.
 Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
 
-### a
+a.
 Show that the collection of nilpotent elements in $R$ forms an ideal.
 
-### b
+b.
 Show that if $x$ is nilpotent, then $x$ is contained in every prime ideal of $R$.
 
-### c
+c.
 Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
 There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
 
@@ -507,19 +558,19 @@ In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $
 
 Show that $I$ is a prime ideal.
 
-### d 
+d. 
 Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
 
 ## Spring 2013 #1 $\work$
 Let $R$ be a commutative ring.
 
-### a
+a.
 Define a *maximal ideal* and prove that $R$ has a maximal ideal.
 
-### b
+b.
 Show than an element $r\in R$ is not invertible $\iff r$ is contained in a maximal ideal.
 
-### c
+c.
 Let $M$ be an $R\dash$module, and recall that for $0\neq \mu \in M$, the *annihilator* of $\mu$ is the set
 \[
 \ann(\mu) = \theset{r\in R \suchthat r\mu = 0}
@@ -531,17 +582,17 @@ Prove that $I$ is a prime ideal.
 
 ## Spring 2013 #2 $\work$
 
-### a
+a.
 Define a *Euclidean domain*.
 
-### b
+b.
 Define a *unique factorization domain*.
 
-### c
+c.
 Is a Euclidean domain an UFD? 
 Give either a proof or a counterexample with justification.
 
-### d
+d.
 Is a UFD a Euclidean domain?
 Give either a proof or a counterexample with justification.
 
