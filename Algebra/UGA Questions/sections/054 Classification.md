@@ -84,15 +84,13 @@ Write down exactly one representative in each isomorphism class of groups of ord
 - Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
 - Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
 - $G/Z(G)$ cyclic $\iff G$ is abelian.
-  
-  > *Proof:*
-    \[
-    G/Z(G) = \generators{xZ} 
-    &\iff g\in G \implies gZ = x^mZ \\
-    &\iff g(x^m)\inv \in Z \\
-    &\iff g = x^m z \qtext{for some}z\in Z\\
-    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
-    .\]
+  \[
+  G/Z(G) = \generators{xZ} 
+  &\iff g\in G \implies gZ = x^mZ \\
+  &\iff g(x^m)\inv \in Z \\
+  &\iff g = x^m z \qtext{for some}z\in Z\\
+  &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
+  .\]
 
 - Every group of order $p^2$ is abelian.
 - Classification of finite abelian groups.
@@ -149,15 +147,18 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
 - The direct product of abelian groups is abelian.
 
-d.
+:::
 
-1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
-1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
-1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
-1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
+:::{.proof title="of d"}
+\envlist
 
+- $\ZZ_{5^2} \cross \ZZ_{7^2}$
+- $\ZZ_{5}^2 \cross \ZZ_{7^2}$
+- $\ZZ_{5^2} \cross \ZZ_{7}^2$
+- $\ZZ_{5}^2 \cross \ZZ_{7}^2$
 
 :::
+
 
 :::
 

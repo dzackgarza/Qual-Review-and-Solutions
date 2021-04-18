@@ -7,16 +7,16 @@ Make $V$ and $W$ into $F[x]\dash$modules via linear operators $T$ on $V$ and $S$
 
 Denote the resulting $F[x]\dash$modules by $V_T$ and $W_S$ respectively.
 
-### a
+a.
 Show that an $F[x]\dash$module homomorphism from $V_T$ to $W_S$ consists of an $F\dash$linear transformation $R : V \to W$ such that $RT = SR$.
 
-### b
+b.
 Show that $VT \cong WS$ as $F[x]\dash$modules $\iff$ there is an $F\dash$linear isomorphism $P : V \to W$ such that $T = P\inv SP$.
 
-### c
+c.
 Recall that a module $M$ is *simple* if $M \neq 0$ and any proper submodule of $M$ must be zero. Suppose that $V$ has dimension 2. Give an example of $F$, $T$ with $V_T$ simple.
 
-### d
+d.
 Assume $F$ is algebraically closed. Prove that if $V$ has dimension 2, then any $V_T$ is not simple.
 
 ## Spring 2015 #3 $\work$
@@ -40,11 +40,18 @@ Show that $A$ is also diagonalizable over $\CC$.
 
 :::{.solution}
 
-> $A$ is diagonalizable iff $\min_A(x)$ is separable.
-> See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
+\envlist
+:::{.concept}
+\envlist
 
-Claim: If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
+- $A$ is diagonalizable iff $\min_A(x)$ is separable.
+  - See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
 
+:::
+
+:::{.claim}
+If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
+:::
 
 Let $A \in \Gl(m, \FF)$. 
 Since $A^n$ is diagonalizable, $\min_{A^n}(x) \in \FF[x]$ is separable and thus factors as a product of $m$ **distinct** linear factors:
@@ -83,9 +90,6 @@ and that $x^n-\lambda_i$ does not have multiple roots.
 
 But now since $q_A(x)$ has exactly distinct linear factors in $\bar \FF[x]$ and $\min_A(x) \divides q_A(x)$, $\min_A(x) \in \FF[x]$ can only have distinct linear factors, and $A$ is thus diagonalizable over $\FF$.
 
-$\qed$
-
-
 :::
 
 # Linear Algebra: Misc
@@ -97,25 +101,25 @@ Let $k$ be a field and let the group $G = \GL(m, k) \cross \GL(n, k)$ acts on th
 \]
 where $(A, B) \in G$ and $X\in M_{m, n}(k)$.
 
-### a
+a.
 State what it means for a group to act on a set.
 Prove that the above definition yields a group action.
 
-### b
+b.
 Exhibit with justification a subset $S$ of $M_{m, n}(k)$ which contains precisely one element of each orbit under this action.
 
 ## $\star$ Spring 2014 #7 $\work$
 Let $G = \GL(3, \QQ[x])$ be the group of invertible $3\times 3$ matrices over $\QQ[x]$.
 For each $f\in \QQ[x]$, let $S_f$ be the set of $3\times 3$ matrices $A$ over $\QQ[x]$ such that $\det(A) = c f(x)$ for some nonzero constant $c\in \QQ$.
 
-### a
+a.
 Show that for $(P, Q) \in G\cross G$ and $A\in S_f$, the formula
 \[
 (P, Q)\cdot A \definedas PAQ\inv
 \]
 gives a well defined map $G\cross G \cross S_f \to S_f$ and show that this map gives a group action of $G\cross G$ on $S_f$.
 
-### b
+b.
 For $f(x) = x^3(x^2+1)^2$, give one representative from each orbit of the group action in (a), and justify your assertion.
 
 ## Fall 2012 #7 $\work$
@@ -139,10 +143,10 @@ Moreover, prove that for any other decomposition $U \cong V' \oplus W'$, one has
 
 ## Fall 2015 #7 $\work$
 
-### a
+a.
 Show that two $3\times 3$ matrices over $\CC$ are similar $\iff$ their characteristic polynomials are equal and their minimal polynomials are equal.
 
-### b
+b.
 Does the conclusion in (a) hold for $4\times 4$ matrices?
 Justify your answer with a proof or counterexample.
 
@@ -171,10 +175,10 @@ If $W$ is a subspace of $V$, define
 W\perp \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
 .\]
 
-### a
+a.
 Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X\perp \subseteq Y\perp$.
 
-### b
+b.
 Define an injective linear map 
 \[
 \psi: Y\perp/X\perp \injects (X/Y)\dual
@@ -209,17 +213,36 @@ We can now note that $\restrictionof{\phi}{U}$ is nilpotent because it has chara
 ## Fall 2018 #5 $\done$
 Let $A$ be an $n \times n$ matrix.
 
-### a
+a.
 Suppose that $v$ is a column vector such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent. Show that any matrix $B$ that commutes with $A$ is a polynomial in $A$.
 
-### b
-Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of A equals the minimal polynomial of A.
+b.
+Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of $A$ equals the minimal polynomial of A.
 
 :::{.solution}
 
-### a
 
-Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have 
+\envlist
+:::{.concept}
+\envlist
+
+- Powers of $A$ commute with polynomials in $A$.
+- The image of a linear map is determined by the image of a basis
+:::
+
+
+:::{.strategy}
+\envlist
+
+- Use Cayley-Hamilton to relate the minimal polynomial to a linear dependence.
+- Get a lower bound on the degree of the minimal polynomial.
+- Use $A\actson k[x]$ to decompose into cyclic $k[x]\dash$modules, and use special form of denominators in the invariant factors.
+- Reduce to monomials.
+:::
+
+
+:::{.proof title="of a"}
+Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have A
 \[
 B\vector v = \sum_{j=0}^{n-1}c_j A^j \vector v
 .\]
@@ -237,14 +260,19 @@ BA^k \vector v
 
 so $B = p(A)$ as operators since their actions agree on every basis vector in $V$.
 
-### b
+:::
 
+:::{.proof title="of b, $\implies$"}
 $\implies$:
 
 If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
 
 So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
 
+
+:::
+
+:::{.proof title="of b, $\impliedby$"}
 $\impliedby$:
 
 Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
@@ -255,11 +283,9 @@ V\cong \frac{k[x]}{(\chi_A(x))}
 $$
 as an isomorphism of $k[x]\dash$modules.
 
-So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$.
+So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$, i.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
 
-> I.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
-
-But then noting that monomials span $k[x]$, we can write
+But then noting that monomials span $k[x]$ as a $k\dash$module, we can write
 \[
 V &\cong
 k[x] \actson \vector v \\
@@ -268,12 +294,13 @@ k[x] \actson \vector v \\
 &\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
 .\]
 
-Moreover, we can note that if $k \geq \deg \chi_A(x)$, then $A^k$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
+Moreover, we can note that if $\ell \geq \deg \chi_A(x)$, then $A^\ell$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
 \[
-V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
-&= \spanof_k \theset{A^k\vector v \suchthat 1 \leq k \leq n-1}
+V &\cong \spanof_k \theset{A^\ell\vector v \suchthat \ell \geq 0} \\
+&= \spanof_k \theset{A^\ell \vector v \suchthat 1 \leq \ell \leq n-1}
 .\]
 
+:::
 
 :::
 
@@ -291,20 +318,21 @@ Define the dual of $\Lambda$ to be
 \}
 .\]
 
-### a
+a.
 Show that $\Lambda \subset \Lambda \dual$.
 
-### b
+b.
 Prove that $\det M \neq 0$ and that the rows of $M\inv$ span $\Lambda\dual$.
 
-### c
+c.
 Prove that $\det M = |\Lambda\dual /\Lambda|$.
 
 \todo[inline]{Todo, missing part (c).}
 
 :::{.solution}
+\envlist
 
-### a
+:::{.proof title="of a"}
 Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
 
 Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
@@ -316,8 +344,10 @@ Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we 
 
 since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
 
-### b
-**$\det M \neq 0$**:
+:::
+
+:::{.proof title="of b"}
+**The determinant is nonzero**:
 
 Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
 
@@ -338,10 +368,20 @@ v_1 \\ v_2 \\ \vdots
 .\]
 
 We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
+:::
 
+:::{.proof title="of c"}
+\envlist
 
-#### Alternative Proof
+??? 
 
+\todo[inline]{Missing work!}
+
+:::
+
+:::
+
+:::{.solution title="Alternative"}
 Write $M = A^tA$ where $A$ has the $\vector e_i$ as columns. Then
 \[
 M\vector x = 0 
@@ -382,18 +422,15 @@ B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \im B \subseteq \spanof~ \Lambda\dual
 .\]
 
-### c.
-
-?
 :::
 
 ## Spring 2013 #6 $\done$
 Let $V$ be a finite dimensional vector space over a field $F$ and let $T: V\to V$ be a linear operator with characteristic polynomial $f(x) \in F[x]$.
 
-### a
+a.
 Show that $f(x)$ is irreducible in $F[x] \iff$ there are no proper nonzero subspaces $W< V$ with $T(W) \subseteq W$.
 
-### b
+b.
 If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that $T$ is diagonalizable when we extend the field to its algebraic closure.
 
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
@@ -401,24 +438,31 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 
 :::{.solution}
 
-Lemma: every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
 
-- $\implies$: Same as argument below.
-- $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
-- 
+\envlist
+:::{.concept}
+\envlist
 
-### a
+- Every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
+  - $\implies$: Same as argument below.
+  - $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
+
+- Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
+
+:::
 
 Let $f$ be the characteristic polynomial of $T$.
 
+:::{.proof title="of a, $\implies$. Matrix-dependent"}
 $\implies$:
 
 - By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
 - Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
 
-Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
 
-> Matrix-dependent proof
+:::{.claim}
+$g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
+:::
 
 - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
 - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.
@@ -446,15 +490,19 @@ B & C \\
 
 - Thus $f$ is reducible.
 
+:::
+
+:::{.proof title="of a, $\impliedby$"}
 $\impliedby$
 
 - Suppose $f$ is reducible, then we will produce a proper $T\dash$invariant subspace.
 - Claim: if $f$ is reducible, there exists a nonzero, noncyclic vector $\vector v$.
 - Then $\spanof_k\theset{T^j\vector v}_{j=1}^d$ is a $T\dash$invariant subspace that is nonzero, and not the entire space since $\vector v$ is not cyclic.
 
-### b
+:::
 
-Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
+:::{.proof title="of b"}
+\envlist
 
 - Let $\min_{T, F}(x)$ be the minimal polynomial of $T$ and $\chi_{T, F}(x)$ be its characteristic polynomial.
 - By Cayley-Hamilton, $\min_{T, F}(x)$ divides $\chi_{T, F}$
@@ -466,6 +514,9 @@ Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{
   - The first case is true because $\deg f' < \deg f$, and if $\gcd(f, f') = p$, then $\deg p < \deg f$ and $p\divides f$ forces $p=1$ since $f$ is irreducible.
 - So $\min_{T, F}$ splits into distinct linear factors
 - Thus $T$ is diagonalizable.
+
+:::
+
 :::
 
 
@@ -476,5 +527,6 @@ Show that
 \[
 \Tr(A\inv) =\conj{\Tr(A) }
 ,\]
-where $\conj{\wait}$ denotes taking the complex conjugate and $\Tr(\wait)$ is the trace.
+where $\conj{(\wait)}$ denotes taking the complex conjugate and $\Tr(\wait)$ is the trace.
+
 

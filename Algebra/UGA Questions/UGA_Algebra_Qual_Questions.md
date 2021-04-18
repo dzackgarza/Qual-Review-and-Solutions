@@ -72,7 +72,6 @@
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
 \newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\gl}[0]{\operatorname{GL}}
 \newcommand{\mat}[0]{\operatorname{Mat}}
 \newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
@@ -139,47 +138,58 @@
 \newcommand{\Cat}[0]{\mathsf{Cat}}
 \newcommand{\Fun}[0]{{\mathsf{Fun}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
-\newcommand{\alg}[0]{\mathsf{Alg}}
-\newcommand{\scalg}[0]{\mathsf{sCAlg}}
-\newcommand{\calg}[0]{\mathsf{CAlg}}
 \newcommand{\poly}[0]{\mathsf{poly}}
 \newcommand{\Vect}[0]{{\mathsf{Vect}}}
 \newcommand{\Sh}[0]{{\mathsf{Sh}}}
 \newcommand{\Ch}[0]{\mathsf{Ch}}
-\newcommand{\Perv}[0]{\mathsf{Perv}}
-\newcommand{\presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Presh}[0]{{\mathsf{Presh}}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\sets}[0]{{\mathsf{Set}}}
 \newcommand{\Grp}[0]{{\mathsf{Grp}}}
 \newcommand{\Groups}[0]{{\mathsf{Groups}}}
-\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
-\newcommand{\qcoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\Qcoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\ssets}[0]{\mathsf{sSets}}
-\newcommand{\Ring}[0]{\mathsf{Ring}}
-\newcommand{\grMod}[0]{{\mathsf{grMod}}}
-\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
-\newcommand{\Top}[0]{{\mathsf{Top}}}
-\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
 \newcommand{\Ab}[0]{{\mathsf{Ab}}}
-\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
-\newcommand{\Sch}[0]{{\mathsf{Sch}}}
-\newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\Ring}[0]{\mathsf{Ring}}
+\newcommand{\CRing}[0]{\mathsf{CRing}}
 \newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
-\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
-\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
+\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
 \newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
 \newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
 \newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
-\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
-\newcommand{\Mod}[0]{{\mathsf{Mod}}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\gr}[0]{{\mathsf{gr}}}
+\newcommand{\grMod}[0]{{\mathsf{grMod}}}
+\newcommand{\Mod}[0]{{\mathsf{Mod}}}
+\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
+\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
+\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
+\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
+\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
+\newcommand{\alg}[0]{\mathsf{Alg}}
+\newcommand{\scalg}[0]{\mathsf{sCAlg}}
+\newcommand{\calg}[0]{\mathsf{CAlg}}
+\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
+\newcommand{\ssets}[0]{\mathsf{sSets}}
+\newcommand{\Assoc}[0]{\mathsf{Assoc}}
+\newcommand{\Unital}[0]{\mathsf{Unital}}
+\newcommand{\Riem}[0]{\mathsf{Riem}}
+\newcommand{\Comm}[0]{\mathsf{Comm}}
+\newcommand{\Top}[0]{{\mathsf{Top}}}
+\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
+\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\sch}[0]{{\mathsf{Sch}}}
+\newcommand{\qcoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\Qcoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\Perv}[0]{\mathsf{Perv}}
+\newcommand{\presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Presh}[0]{{\mathsf{Presh}}}
+
+\newcommand{\Forget}[0]{{\operatorname{Forget}}}
 \newcommand{\eul}[0]{{\operatorname{eul}}}
-\newcommand{\gr}[0]{{\operatorname{gr}}}
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\Op}[0]{{\operatorname{Op}}}
@@ -240,6 +250,7 @@
 \newcommand{\by}[0]{\times}
 \newcommand{\dash}[0]{{\hbox{-}}}
 \newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
 \newcommand{\definedas}[0]{\coloneqq}
 \newcommand{\da}[0]{\coloneqq}
 \newcommand{\del}[0]{{\partial}}
@@ -277,12 +288,18 @@
 \newcommand{\mfq}[0]{{\mathfrak{q}}}
 \newcommand{\mfr}[0]{{\mathfrak{r}}}
 \newcommand{\mfs}[0]{{\mathfrak{s}}}
-\newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
 \newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\lieh}[0]{{\mathfrak{h}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
+\newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\lieb}[0]{{\mathfrak{b}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieh}[0]{{\mathfrak{h}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
@@ -359,7 +376,6 @@
 \newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
 \newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
 \newcommand{\smooth}[0]{{\operatorname{sm}}}
-\newcommand{\Hom}[0]{{\operatorname{Hom}}}
 \newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\CY}{{ \text{CY} }}
@@ -378,8 +394,6 @@
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
 \newcommand{\rad}[0]{{\operatorname{rad}}}
-\newcommand{\ralg}[0]{\operatorname{R-alg}}
-\newcommand{\kalg}[0]{k\dash\operatorname{alg}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
 \newcommand{\Log}[0]{\operatorname{Log}}
@@ -428,7 +442,7 @@
 \newcommand{\covers}[0]{\rightrightarrows}
 \newcommand{\units}[0]{^{\times}}
 \newcommand{\nonzero}[0]{^{\bullet}}
-\newcommand{\wait}[0]{{\,\cdot\,}}
+\newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \renewcommand{\div}[0]{\operatorname{Div}}
@@ -464,6 +478,7 @@
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\proj}{Proj}
 \DeclareMathOperator{\Proj}{Proj}
 \DeclareMathOperator{\Hol}{Hol}
@@ -531,8 +546,13 @@
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
-\newcommand{\divides}{\mid}
-\newcommand{\notdivides}{\nmid}
+\newcommand{\divides}{\bigm|}
+\newcommand{\notdivides}{%
+  \mathrel{\mkern.5mu % small adjustment
+    % superimpose \nmid to \big|
+    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+  }%
+}
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
@@ -551,6 +571,7 @@
 \newcommand{\ideal}[1]{\mathcal{#1}}
 \newcommand{\forget}[0]{\mathrm{Forget}}
 \newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\xpn}[0]{ { x^{p^n} } }
 
 
 \newcommand{\cores}[0]{\operatorname{cores}}
@@ -567,13 +588,6 @@
 \newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
 \newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 
----
-title: "UGA Algebra Qualifying Exam Questions and Solutions"
-hidesolutions: true
-todos: false
----
-
-
 # Group Theory: General
 
 ## Spring 2020 #2 $\work$
@@ -585,16 +599,16 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
-### a
+a.
 Prove that if two elements of $G$ are chosen uniformly at random,then the probability they commute is precisely
 $$
 \frac{c(G)}{\abs G}
 .$$
 
-### b
+b.
 State the class equation for a finite group.
 
-### c
+c.
 Using the class equation (or otherwise) show that the probability in part (a) is at most $$
 \frac 1 2 + \frac 1 {2[G : Z(G)]}
 .$$
@@ -602,18 +616,20 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
 :::{.solution}
+\envlist
 
-Concepts Used:
+\envlist
+:::{.concept}
+\envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
 - Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
 - Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
 
-**Solution**
-
-### a
+:::
 
 
+:::{.proof title="Part a"}
 Strategy: Burnside.
 
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
@@ -666,21 +682,18 @@ P(A)
 = \frac n {\abs G}
 .\]
 
-$\qed$
+:::
 
-### b
-
-Class equation:
+:::{.proof title="Part b"}
+Statement of the class equation:
 \[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-
 where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+:::
 
-### c
 
-> Todo: revisit.
-
+:::{.proof title="Part c"}
 As shown in part 1,
 $$
 \mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
@@ -709,6 +722,12 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 &= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
 .\]
 
+:::
+
+
+\todo[inline]{Redo part c}
+
+
 
 :::
 
@@ -716,10 +735,10 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 ## Spring 2012 #2 $\work$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
 
-### a
+a.
 Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 
-### b
+b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
 ## Spring 2017 #1 $\work$
@@ -764,26 +783,26 @@ Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontriv
 Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
 
 ## Fall 2019 Midterm #5 $\work$
-Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$
+Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
 
 ## Spring 2021 #2 $\work$
 
 Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
 Prove that $H$ is contained in the center of $G$.
 
-
-
 # Groups: Sylow Theory
 
 ## Fall 2019 #1 $\done$
 Let $G$ be a finite group with $n$ distinct conjugacy classes.
 Let $g_1 \cdots g_n$ be representatives of the conjugacy classes of $G$.
-
 Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 :::{.solution}
 
-Concepts used:
+\envlist
+
+:::{.concept}
+\envlist
 
 - Centralizer: 
   \[
@@ -802,19 +821,35 @@ Concepts used:
   N_G(H) &= \theset{g\in G \suchthat H^g = H} \supseteq H \quad\text{Normalizer}
   .\]
 
-**Solution**:
+:::
 
-**Claim 1**: $\abs{h^G} = [G: Z(h)]$
+:::{.claim title="1"}
+\[
+\abs{h^G} = [G: Z(h)]
+.\]
+:::
 
-**Claim 2**: $\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]$
+:::{.claim title="2"}
+\[
+\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]
+.\]
+:::
 
-- *Proof:* Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
+:::{.proof title="?"}
+\envlist
+
+- Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
 - Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
 - So Orbit-Stabilizer says $\mathcal O_h \cong G/\mathrm{Stab}(H)$; then just take sizes.
 
-**Claim 3:** $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
+:::
 
-- *Proof:* By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
+:::{.claim title="3"}
+$\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
+:::
+
+:::{.proof title="?"}
+- By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
   \[
   \abs{\union_{g\in G} H^g} 
   &= \qty{ \abs{H} - 1} [G: N_G(H)] + 1\\
@@ -846,103 +881,108 @@ Concepts used:
 
 :::
 
+
+
+
+
+:::
+
 ## Fall 2019 Midterm #2 $\work$
 Let $G$ be a finite group and let $P$ be a sylow $p\dash$subgroup for $p$ prime. Show that $N(N(P)) = N(P)$ where $N$ is the normalizer in $G$.
 
 ## Fall 2013 #2 $\work$
 Let $G$ be a group of order 30.
 
-### a
+
+a.
 Show that $G$ has a subgroup of order 15.
 
-### b
+b.
 Show that every group of order 15 is cyclic.
 
-### c
+c.
 Show that $G$ is isomorphic to some semidirect product $\ZZ_{15} \semidirect \ZZ_2$.
 
-### d
+d.
 Exhibit three nonisomorphic groups of order 30 and prove that they are not isomorphic.
 You are not required to use your answer to (c).
 
 ## Spring 2014 #2 $\work$
 Let $G\subset S_9$ be a Sylow-3 subgroup of the symmetric group on 9 letters.
 
-### a
+a.
 Show that $G$ contains a subgroup $H$ isomorphic to $\ZZ_3 \cross \ZZ_3 \cross \ZZ_3$ by exhibiting an appropriate set of cycles.
 
-### b
+b.
 Show that $H$ is normal in $G$.
 
-### c
+c.
 Give generators and relations for $G$ as an abstract group, such that all generators have order 3.
-
 Also exhibit elements of $S_9$ in cycle notation corresponding to these generators.
 
-### d
+d.
 Without appealing to the previous parts of the problem, show that $G$ contains an element of order 9.
 
 ## Fall 2014 #2 $\work$
 Let $G$ be a group of order 96.
 
-### a
+a.
 Show that $G$ has either one or three 2-Sylow subgroups.
 
-### b
+b.
 Show that either $G$ has a normal subgroup of order 32, or a normal subgroup of order 16.
 
 ## Spring 2016 #3 $\work$
 
-### a
+a.
 State the three Sylow theorems.
 
-### b
+b.
 Prove that any group of order 1225 is abelian.
 
-### c
+c.
 Write down exactly one representative in each isomorphism class of abelian groups of order 1225.
 
 ## Spring 2017 #2 $\work$
 
-### a
+a.
 How many isomorphism classes of abelian groups of order 56 are there?
 Give a representative for one of each class.
 
-### b
+b.
 Prove that if $G$ is a group of order 56, then either the Sylow-2 subgroup or the Sylow-7 subgroup is normal.
 
-### c
+c.
 Give two non-isomorphic groups of order 56 where the Sylow-7 subgroup is normal and the Sylow-2 subgroup is *not* normal.
 Justify that these two groups are not isomorphic.
 
 ## Fall 2017 #2 $\work$
 
-### a
+a.
 Classify the abelian groups of order 36.
 
-For the rest of the problem, assume that $G$ is a non-abelian group of order 36. 
+  > For the rest of the problem, assume that $G$ is a non-abelian group of order 36. 
+  > You may assume that the only subgroup of order 12 in $S_4$ is $A_4$ and that $A_4$ has no subgroup of order 6.
 
-> You may assume that the only subgroup of order 12 in $S_4$ is $A_4$ and that $A_4$ has no subgroup of order 6.
-
-### b
+b.
 Prove that if the 2-Sylow subgroup of $G$ is normal, $G$ has a normal subgroup $N$ such that $G/N$ is isomorphic to $A_4$.
 
-### c
+c.
 Show that if $G$ has a normal subgroup $N$ such that $G/N$ is isomorphic to $A_4$ and a subgroup $H$ isomorphic to $A_4$ it must be the direct product of $N$ and $H$.
 
-### d
+d.
 Show that the dihedral group of order 36 is a non-abelian group of order 36 whose Sylow-2 subgroup is not normal.
 
 ## Fall 2012 #2 $\work$
 Let $G$ be a group of order 30.
 
-### a
+a.
 Show that $G$ contains normal subgroups of orders 3, 5, and 15.
 
-### b
+b.
 Give all possible presentations and relations for $G$.
 
-### c
+c.
 Determine how many groups of order 30 there are up to isomorphism.
 
 ## Fall 2018 #1 $\done$ 
@@ -950,22 +990,26 @@ Let $G$ be a finite group whose order is divisible by a prime number $p$.
 Let $P$ be a normal $p\dash$subgroup of $G$
 (so $\abs P = p^c$ for some $c$).
 
-### a
+a.
 Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
 
-### b
+b.
 Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
 
 :::{.solution}
-Concepts Used:
+\envlist
+
+:::{.concept}
+\envlist
 
 - Sylow 2: All Sylow $p\dash$subgroups are conjugate.
 - $\abs{HK} = \abs{H} \abs{K} / \abs{H\intersect K}$.
 - Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Every $p\dash$subgroup is contained in some Sylow $p\dash$subgroup, so $P \subseteq S_p^i$ for some $S_p^i \in \mathrm{Syl}_p(G)$.
 
@@ -979,7 +1023,10 @@ Concepts Used:
 P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 .\]
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 - If $P$ is not contained in $M$, then $M < MP$ is a proper subgroup
 - By maximality of $M$, $MP = G$
@@ -995,23 +1042,28 @@ P = gPg\inv \subseteq gS_p^i g\inv = S_p^j
 
 :::
 
+:::
+
 ## Fall 2019 #2  $\done$
 Let $G$ be a group of order 105 and let $P, Q, R$ be Sylow 3, 5, 7 subgroups respectively.
 
-### a
+a.
 Prove that at least one of $Q$ and $R$ is normal in $G$.
 
-### b
+b.
 Prove that $G$ has a cyclic subgroup of order 35.
 
-### c
+c.
 Prove that both $Q$ and $R$ are normal in $G$.
 
-### d
+d.
 Prove that if $P$ is normal in $G$ then $G$ is cyclic.
 
 :::{.solution}
-Relevant Concepts:
+\envlist
+
+:::{.concept}
+\envlist
 
 - The $pqr$ theorem.
 - Sylow 3: $\abs{G} = p^n m$ implies $n_p \divides m$ and $n_p \cong 1 \mod p$.
@@ -1032,9 +1084,9 @@ A_i\normal G, \quad G = A_1 \cdots A_k,\quad A_k \intersect \prod_{i\neq k} A_i 
 - The intersection of subgroups is a again a subgroup.
 - Any subgroups of coprime order intersect trivially?
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of 1"}
 We have 
 
 - $n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \mod 3 \implies n_3 \in \theset{1, 5, 7, 35} \setminus \theset{5, 35}$
@@ -1053,15 +1105,19 @@ Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then
 \]
 using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
 
-### b 
-\todo[inline]{Not finished!}
+:::
 
+:::{.proof title="of 2"}
 By (a), either $Q$ or $R$ is normal.
 Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
 
 By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
 
-### c
+:::
+
+\todo[inline]{Part (b) not finished!}
+
+:::{.proof title="of 3"}
 We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
 
 Note that we can write
@@ -1092,8 +1148,9 @@ Now both cases lead to contradictions:
 &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = \abs{G}
 .\]
 
-### d
+:::
 
+:::{.proof title="of 4"}
 Suppose $P$ is normal and recall $\abs{P} = 3, \abs{Q} = 5, \abs{R} = 7$.
 
 - $P\intersect QR = \theset{e}$ since $(3, 35) = 1$ 
@@ -1108,6 +1165,7 @@ G \cong P\cross Q \cross R \cong \ZZ_3 \cross \ZZ_5 \cross \ZZ_7 \cong \ZZ_{105}
 .\]
 by the Chinese Remainder Theorem, which is cyclic.
 
+:::
 
 :::
 
@@ -1137,17 +1195,16 @@ a. Prove that $G$ is solvable.
 b. Prove that the Sylow 5-subgroup is also normal.
 
 
-
 # Groups: Group Actions
 
 ## Fall 2012 #1 $\work$
 Let $G$ be a finite group and $X$ a set on which $G$ acts.
 
-### a
+a.
 Let $x\in X$ and $G_x \definedas \theset{g\in G \suchthat g\cdot x = x}$. 
 Show that $G_x$ is a subgroup of $G$.
 
-### b
+b.
 Let $x\in X$ and $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G}$.
 Prove that there is a bijection between elements in $G\cdot x$ and the left cosets of $G_x$ in $G$.
 
@@ -1163,42 +1220,45 @@ Prove that $xP$ is an orbit of length 1 $\iff H$ is contained in $xPx\inv$.
 Let $G$ be a finite group acting on a set $X$.
 For $x\in X$, let $G_x$ be the stabilizer of $x$ and $G\cdot x$ be the orbit of $x$.
 
-### a
+a.
 Prove that there is a bijection between the left cosets $G/G_x$ and $G\cdot x$.
 
-### b
+b.
 Prove that the center of every finite $p\dash$group $G$ is nontrivial by considering that action of $G$ on $X=G$ by conjugation.
 
 ## Fall 2017 #1 $\work$
 Suppose the group $G$ acts on the set $A$. 
 Assume this action is faithful (recall that this means that the kernel of the homomorphism from $G$ to $\sym(A)$ which gives the action is trivial) and transitive (for all $a, b$ in $A$, there exists $g$ in $G$ such that $g \cdot a = b$.)
 
-### a
+a.
 For $a \in A$, let $G_a$ denote the stabilizer of $a$ in $G$. 
 Prove that for any $a \in A$, 
 $$
 \Intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
 .$$
 
-### b
+b.
 Suppose that $G$ is abelian. Prove that $|G| = |A|$. Deduce that every abelian transitive subgroup of $S_n$ has order $n$.
 
 ## Fall 2018 #2 $\done$
 
-### a
+a.
 Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
 
-### b
+b.
 Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
 \[
 \Union_{g\in G} gHg\inv \subsetneq G
 \]
 
-### c
+c.
 Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
 
 :::{.solution}
-Concepts used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
 - Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
@@ -1209,9 +1269,10 @@ Concepts used:
 - Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
   - Number of orbits equals average number of fixed points.
 
-**Solution**
+:::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
 - Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
@@ -1227,8 +1288,9 @@ h \in G\cdot x
 
 so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 Let $G$ act on its subgroups by conjugation, 
 
 - The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
@@ -1259,7 +1321,10 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 &= \abs{G}
 .\]
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
 
 - Let $G\actson X$ transitively where $\abs{X} \geq 2$
 - An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
@@ -1274,18 +1339,20 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 
 :::
 
+:::
+
 
 # Groups: Classification
 
 ## Spring 2020 #1 $\work$
 
-### a
+a.
 Show that any group of order 2020 is solvable.
 
-### a
+a.
 Give (without proof) a classification of all abelian groups of order 2020.
 
-### c
+c.
 Describe one nonabelian group of order 2020.
 
 \todo[inline]{Work this problem.}
@@ -1296,35 +1363,42 @@ How many isomorphism classes are there of groups of order 45?
 Describe a representative from each class.
 
 :::{.solution}
-Concepts used:
+
+
+\envlist
+:::{.concept}
+\envlist
 
 - Sylow theorems:
 - $n_p \cong 1 \mod p$
 - $n_p \divides m$.
 
-**Solution**
+:::
 
-It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
-There is only one possibility for $S_5$, namely $S_5\cong \ZZ/(5)$.
+- It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
-There are two possibilities for $S_3$, namely $S_3 \cong \ZZ/(3^2)$ and $\ZZ/(3)^2$.
+- There is only one possibility for $S_5$, namely $S_5\cong \ZZ/(5)$.
 
-Thus
+- There are two possibilities for $S_3$, namely $S_3 \cong \ZZ/(3^2)$ and $\ZZ/(3)^2$.
+
+- Thus
 
 - $G \cong \ZZ/(9) \cross \ZZ/(5)$, or
 - $G \cong \ZZ/(3)^2 \cross \ZZ/(5)$.
 
-\todo[inline]{Revisit, seems short.}
 :::
+
+
+\todo[inline]{Revisit, seems short.}
 
 ## Spring 2012 #3 $\work$
 Let $G$ be a group of order 70.
 
-### a
+a.
 Show that $G$ is not simple.
 
-### a
+a.
 Exhibit 3 nonisomorphic groups of order 70 and prove that they are not isomorphic.
 
 ## Fall 2016 #3 $\work$
@@ -1332,39 +1406,42 @@ How many groups are there up to isomorphism of order $pq$ where $p<q$ are prime 
 
 ## Spring 2018 #1 $\done$
 
-### a
+a.
 Use the Class Equation (equivalently, the conjugation action of a group on itself) to prove that any $p\dash$group (a group whose order is a positive power of a prime integer $p$) has a nontrivial center.
 
-### b
+b.
 Prove that any group of order $p^2$ (where $p$ is prime) is abelian.
 
-### c
+c.
 Prove that any group of order $5^2 \cdot 7^2$ is abelian.
 
-### d
+d.
 Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
 
 :::{.solution}
-Concepts Used:
+
+
+\envlist
+:::{.concept}
+\envlist
 
 - Centralizer: $C_G(x) = \theset{g\in G \suchthat [gx] = 1}$.
 - Class Equation: $\abs{G} = \abs{Z(G)} + \sum [G: C_G(x_i)]$
 - $G/Z(G)$ cyclic $\iff G$ is abelian.
-  
-  > *Proof:*
-    \[
-    G/Z(G) = \generators{xZ} 
-    &\iff g\in G \implies gZ = x^mZ \\
-    &\iff g(x^m)\inv \in Z \\
-    &\iff g = x^m z \qtext{for some}z\in Z\\
-    &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
-    .\]
+  \[
+  G/Z(G) = \generators{xZ} 
+  &\iff g\in G \implies gZ = x^mZ \\
+  &\iff g(x^m)\inv \in Z \\
+  &\iff g = x^m z \qtext{for some}z\in Z\\
+  &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
+  .\]
 
 - Every group of order $p^2$ is abelian.
 - Classification of finite abelian groups.
 
-### a
+:::
 
+:::{.proof title="of a"}
 Strategy: get $p$ to divide $\abs{Z(G)}$.
 
 - Apply the class equation:
@@ -1387,15 +1464,19 @@ Strategy: get $p$ to divide $\abs{Z(G)}$.
 - $p$ divides both terms on the LHS, so must divide the RHS, so $\abs{Z(G)} \geq p$.
 
 
-### b
+:::
 
+:::{.proof title="of b"}
 Strategy: examine $\abs{G/Z(G)}$ by cases.
 
 - $1$: Then $G = Z(G)$ and $G$ is abelian.
 - $p$: Then $G/Z(G)$ is cyclic so $G$ is abelian
 - $p^2$: Not possible, since $\abs {Z(G)} > 1$ by (a).
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist 
 
 - By Sylow
 
@@ -1410,12 +1491,17 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - By (b), $S_5, S_7$ are abelian since they are groups of order $p^2$
 - The direct product of abelian groups is abelian.
 
-### d
+:::
 
-1. $\ZZ_{5^2} \cross \ZZ_{7^2}$
-1. $\ZZ_{5}^2 \cross \ZZ_{7^2}$
-1. $\ZZ_{5^2} \cross \ZZ_{7}^2$
-1. $\ZZ_{5}^2 \cross \ZZ_{7}^2$
+:::{.proof title="of d"}
+\envlist
+
+- $\ZZ_{5^2} \cross \ZZ_{7^2}$
+- $\ZZ_{5}^2 \cross \ZZ_{7^2}$
+- $\ZZ_{5^2} \cross \ZZ_{7}^2$
+- $\ZZ_{5}^2 \cross \ZZ_{7}^2$
+
+:::
 
 
 :::
@@ -1426,10 +1512,10 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 
 ## $\star$ Fall 2016 #7 $\work$
 
-### a
+a.
 Define what it means for a group $G$ to be *solvable*.
 
-### a
+a.
 Show that every group $G$ of order 36 is solvable.
 
 > Hint: you can use that $S_4$ is solvable.
@@ -1437,7 +1523,7 @@ Show that every group $G$ of order 36 is solvable.
 ## Spring 2015 #4 $\work$
 Let $N$ be a positive integer, and let $G$ be a finite group of order $N$.
 
-### a
+a.
 Let $\sym G$ be the set of all bijections from $G\to G$ viewed as a group under composition.
 Note that $\sym G \cong S_N$.
 Prove that the Cayley map 
@@ -1447,13 +1533,13 @@ g &\mapsto (x\mapsto gx)
 \]
 is an injective homomorphism.
 
-### a
+b.
 Let $\Phi: \sym G\to S_N$ be an isomorphism.
 For $a\in G$ define $\eps(a) \in \theset{\pm 1}$ to be the sign of the permutation $\Phi(C(a))$.
 Suppose that $a$ has order $d$.
 Prove that $\eps(a) = -1 \iff d$ is even and $N/d$ is odd.
 
-### c
+c.
 Suppose $N> 2$ and $n\equiv 2 \mod 4$.
 Prove that $G$ is not simple.
 
@@ -1467,17 +1553,15 @@ Find a real number $k = k (p, n)$ such that for every integer $m\geq k$, every g
 ## Fall 2013 #1 $\work$
 Let $p, q$ be distinct primes.
 
-### a
+a.
 Let $\bar q \in \ZZ_p$ be the class of $q\mod p$ and let $k$ denote the order of $\bar q$ as an element of $\ZZ_p\units$.
-
 Prove that no group of order $pq^k$ is simple.
 
-### a
+b.
 Let $G$ be a group of order $pq$, and prove that $G$ is not simple.
 
 ## Spring 2013 #4  $\work$
 Define a *simple group*.
-
 Prove that a group of order 56 can not be simple.
 
 ## Fall 2019 Midterm #3 $\work$
@@ -1493,25 +1577,40 @@ Show that $N \cong \im f \oplus \ker g$.
 ## Fall 2019 #3 $\work$
 Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
 
-### a
+a.
 Prove that $R$ has characteristic 2.
 
-### b
+b.
 Prove that $R$ is commutative.
 
 :::{.solution}
+\envlist
 
-> Just fiddling with computations.
-> Context hints that we should be considering things like $x^2$ and $a+b$.
 
-### a
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+:::
+
+
+:::{.strategy}
+\envlist
+
+- Just fiddle with direct computations.
+- Context hint: that we should be considering things like $x^2$ and $a+b$.
+
+:::
+
+:::{.proof title="of a"}
 \[
 2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
 .\]
-
 Note that this implies $x = -x$ for all $x\in R$.
+:::
 
-### b
+:::{.proof title="of b"}
 \[
 a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 &\implies ab + ba = 0 \\
@@ -1521,65 +1620,94 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 
 :::
 
+:::
+
 ## Fall 2019 #6 $\done$
 Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
 
-### a
+a.
 Show that
 $$
 N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
 $$
 is an ideal which is contained in any prime ideal.
 
-### b
+b.
 Let $r$ be an element of $R$ not in $N$.
 Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
 there is a prime ideal in $S$.
 
-### c
+c.
 Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
 
 :::{.solution}
 
-> Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
-> Silly fact: 0 is in every ideal!
-> 
-> **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
-> 
-> **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
-> (TODO: PROVE)
->
-> **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
-> (TODO: PROVE)
->
-> **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
+\envlist
+:::{.concept}
+\envlist
 
-### a
+- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
+- Silly fact: 0 is in every ideal!
+ 
+- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
+ 
+- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
 
-Let $\mathfrak{p}$ be prime and $x\in N$.
-Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
-Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+  \todo[inline]{Prove this}
 
-### b
+- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
 
-Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
-Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+  \todo[inline]{Prove this}
 
-By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
 
-Since $R$ is commutative, $\mathfrak{p}$ is prime.
+:::
 
-### c
 
-Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
 
-Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
 
-Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+:::{.proof title="of a"}
+\envlist
 
-Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
+- Let $\mathfrak{p}$ be prime and $x\in N$.
+- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
+- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
+
+- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+
+- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+
+- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
+
+- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
+
+- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+
+- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
 Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
-But then $r\not\in \mathfrak{p}$, a contradiction.
+  But then $r\not\in \mathfrak{p}$, a contradiction.
+
+:::
+
+
+
+
+
+
+
 
 
 :::
@@ -1590,22 +1718,36 @@ Let $R$ be a commutative ring with 1.
 > Recall that $x \in R$ is nilpotent iff $xn = 0$ for
 some positive integer $n$.
 
-### a
+a.
 Show that every proper ideal of $R$ is contained within a maximal ideal.
 
-### b
+b.
 Let $J(R)$ denote the intersection of all maximal ideals of $R$.
-
 Show that $x \in J(R) \iff 1 + rx$ is a unit for all $r \in R$.
 
-### c
+c.
 Suppose now that $R$ is finite. Show that in this case $J(R)$ consists precisely
 of the nilpotent elements in R.
 
 :::{.solution}
 
-### a
 
+\envlist
+:::{.concept}
+\envlist
+
+- Definitions:
+\[
+N(R) &\da \theset{x\in R \suchthat x^n = 0 \text{ for some } n} \\
+J(R) &\da \intersect _{\mfm \in \mspec} \mfm
+.\]
+
+- Zorn's lemma: if $P$ is a poset in which every chain has an upper bound, $P$ contains a maximal element.
+
+
+:::
+
+:::{.proof title="of a"}
 Define the set of proper ideals
 $$
 S = \theset{J \suchthat I   \subseteq J < R}
@@ -1615,74 +1757,79 @@ which is a poset under set inclusion.
 
 Given a chain $J_1 \subseteq \cdots$, there is an upper bound $J \definedas \union J_i$, so Zorn's lemma applies.
 
-### b
+
+:::
+
+:::{.proof title="of b, $\implies$"}
 $\implies$:
 
-We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
+- We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
 
-Let $x\in J(R)$, so it is in every maximal ideal, and suppose toward a contradiction that $1+x$ is **not** a unit.
+- Let $x\in J(R)$, so it is in every maximal ideal, and suppose toward a contradiction that $1+x$ is **not** a unit.
 
-Then consider $I = \generators{1+x} \normal R$. 
+- Then consider $I = \generators{1+x} \normal R$. 
 Since $1+x$ is not a unit, we can't write $s(1+x) = 1$ for any $s\in R$, and so $1 \not\in I$ and $I\neq R$
 
-So $I < R$ is proper and thus contained in some maximal proper ideal $\mathfrak{m} < R$ by part (1), and so we have $1+x \in \mathfrak{m}$.
+- So $I < R$ is proper and thus contained in some maximal proper ideal $\mathfrak{m} < R$ by part (1), and so we have $1+x \in \mathfrak{m}$.
 Since $x\in J(R)$, $x\in \mathfrak{m}$ as well.
 
-But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
+- But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
 
+:::
+
+:::{.proof title="of b, $\impliedby$"}
 $\impliedby$
 
-Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
+- Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
 
  
-Suppose towards a contradiction that there is a maximal ideal $\mathfrak{m}$ such that $x\not \in \mathfrak{m}$ and thus $x\not\in J(R)$.
+- Suppose towards a contradiction that there is a maximal ideal $\mathfrak{m}$ such that $x\not \in \mathfrak{m}$ and thus $x\not\in J(R)$.
 
-Consider 
-$$
+- Consider 
+\[
 M' \definedas \theset{rx + m \suchthat r\in R,~ m\in M}
-.$$
+.\]
 
-Since $\mathfrak{m}$ was maximal, $\mathfrak{m} \subsetneq M'$ and so $M' = R$.
+- Since $\mathfrak{m}$ was maximal, $\mathfrak{m} \subsetneq M'$ and so $M' = R$.
 
-So every element in $R$ can be written as $rx + m$ for some $r\in R, m\in M$.
+- So every element in $R$ can be written as $rx + m$ for some $r\in R, m\in M$.
 But $1\in R$, so we have 
-$$
+\[
 1 = rx + m
-.$$ 
+.\] 
 
-So let $s = -r$ and write $1 = sx - m$, and so $m = 1 + sx$.
+- So let $s = -r$ and write $1 = sx - m$, and so $m = 1 + sx$.
 
-Since $s\in R$ by assumption $1+sx$ is a unit and thus $m \in \mathfrak{m}$ is a unit, a contradiction.
+- Since $s\in R$ by assumption $1+sx$ is a unit and thus $m \in \mathfrak{m}$ is a unit, a contradiction.
 
-So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
+- So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
 
-### c
+:::
 
-> - $\mathfrak N(R) = \theset{x\in R \suchthat x^n = 0 \text{ for some } n}$.
-> - $J(R) = \spec_{\text{max}}(R) = \displaystyle\intersect_{\mm \text{ maximal}} \mm$.
-
-We want to show $J(R) = \mathfrak N(R)$.
+:::{.proof title="of c"}
+- We want to show $J(R) = \mathfrak N(R)$.
 
 $\mathfrak N(R) \subseteq J(R)$:
 
-We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
+- We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
 $$
 \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)\inv
 .$$
 
-$J(R) \subseteq \mathfrak N(R)$:
+- $J(R) \subseteq \mathfrak N(R)$:
 
-Let $x \in J(R) \setminus \mathfrak N(R)$.
+- Let $x \in J(R) \setminus \mathfrak N(R)$.
 
-Since $R$ is finite, $x^m = x$ for some $m > 0$.
-Without loss of generality, we can suppose $x^2 = x$ by replacing $x^m$ with $x^{2m}$.
+- Since $R$ is finite, $x^m = x$ for some $m > 0$.
 
-If $1-x$ is not a unit, then $\generators{1-x}$ is a nontrivial proper ideal, which by (a) is contained in some maximal ideal $\mm$. 
+- Without loss of generality, we can suppose $x^2 = x$ by replacing $x^m$ with $x^{2m}$.
+
+- If $1-x$ is not a unit, then $\generators{1-x}$ is a nontrivial proper ideal, which by (a) is contained in some maximal ideal $\mm$. 
 But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradiction.
 
-So $1-x$ is a unit, so let $u = (1-x)\inv$.
+- So $1-x$ is a unit, so let $u = (1-x)\inv$.
 
-Then
+- Then
 \[
 (1-x)x &= x - x^2 = x - x = 0 \\
 &\implies u (1-x)x = x = 0 \\
@@ -1691,10 +1838,12 @@ Then
 
 :::
 
+:::
+
 ## Fall 2018 #7 $\done$
 Let $R$ be a commutative ring.
 
-### a
+a.
 Let $r \in R$. Show that the map
 \[
 r\bullet : R &\to R \\
@@ -1702,14 +1851,14 @@ x &\mapsto r x
 .\]
 is an $R\dash$module endomorphism of $R$.
 
-### b
-We say that $r$ is a **zero-divisor** if r$\bullet$ is not injective.
+b.
+We say that $r$ is a **zero-divisor** if $r\bullet$ is not injective.
 Show that if $r$ is a zero-divisor and $r \neq 0$, then the kernel and image of $R$ each consist of zero-divisors.
 
-### c
+c.
 Let $n \geq 2$ be an integer. Show: if $R$ has exactly $n$ zero-divisors, then $\#R \leq n^2$ .
 
-### d
+d.
 Show that up to isomorphism there are exactly two commutative rings $R$ with precisely 2 zero-divisors.
 
 > You may use without proof the following fact: every ring of order 4 is isomorphic to exactly one of the
@@ -1723,8 +1872,18 @@ following:
 
 :::{.solution}
 
-### a
 
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+- See 1964 Annals "Properties of rings with a finite number of zero divisors"
+:::
+
+
+:::{.proof title="of a"}
 Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
 
 \[
@@ -1734,59 +1893,62 @@ Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\das
 &= s(r\vector x) + (r\vector y) \\
 &= s\phi(\vector x) + \phi(\vector y)
 .\]
+:::
 
-### b
+:::{.proof title="of b"}
+\envlist
 
-We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
+- We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
 
-Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
-So let $y\in \im \phi$.
-Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+- Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
+  So let $y\in \im \phi$.
 
-But then 
-$$
+- Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+
+- But then 
+\[
 yz = rxz = xrz = x\cdot 0 = 0
-$$ 
+\]
 since $R$ is commutative, so $y$ is a zero divisor.
+:::
 
+:::{.proof title="of c"}
+\envlist
 
-### c
-
-> See 1964 Annals "Properties of rings with a finite number of zero divisors"
-
-Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
-Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
-
-Fix an $i$.
-By (b), $K_i$ consists of zero divisors, so 
-$$
+- Let $Z \definedas \theset{z_i}_{i=1}^n$ be the set of $n$ zero divisors in $R$.
+- Let $\phi_i$ be the $n$ maps $x \mapsto z_i x$, and let $K_i = \ker \phi_i$ be the corresponding kernels.
+- Fix an $i$.
+- By (b), $K_i$ consists of zero divisors, so 
+\[
 \abs{K_i} \leq n < \infty \quad \text{for each } i
-.$$
+.\]
 
-Now consider $R/K_i \definedas \theset{r + K_i}$.
-By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
-$$
+- Now consider $R/K_i \definedas \theset{r + K_i}$.
+- By the first isomorphism theorem, $R/K_i \cong \im \phi$, and by (b) every element in the image is a zero divisor, so 
+\[
 [R: K_i] = \abs{R/K_i} = \abs{\im \phi_i} \leq n 
-.$$
+.\]
 
-But then 
-$$
+- But then 
+\[
 \abs{R} = [R:K_i]\cdot \abs{K_i} \leq n\cdot n = n^2 
-.$$
+.\]
 
-### d
+:::
 
-By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
+:::{.proof title="of d"}
+\envlist
+
+- By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
 Since every element in a finite ring is either a unit or a zero divisor, and $\abs{R\units} \geq 2$ since $\pm 1$ are always units, we must have $\abs{R} = 4$.
 
-Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
+- Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
 
-Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
+- Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
 
-If $R$ has characteristic 2, we can check the other 3 possibilities.
+- If $R$ has characteristic 2, we can check the other 3 possibilities.
 
-We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
-
+- We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
 \[
 \begin{array}{c|cccc}
 			& 0 & 1 	& t & 1+t 	\\ \hline
@@ -1797,11 +1959,11 @@ t 		& 0 & t 	& \mathbf{0} & t   	\\
 \end{array}
 ,\]
 
-and so we find that $t, 0$ are the zero divisors.
+  and so we find that $t, 0$ are the zero divisors.
 
-In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
+- In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
 
-Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
+- Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
 \[
 \left[\begin{array}{c|cc}
 	& t 	& 1 +t \\ \hline
@@ -1810,15 +1972,15 @@ t & 1 	& t \\
 \end{array}\right]
 ,\]
 
-and so this ring only has one zero divisor.
+  and so this ring only has one zero divisor.
 
-Thus the only possibilities are:
-
+- Thus the only possibilities are:
 \[
 R &\cong \ZZ/(4) \\
 R &\cong \ZZ/(2)[t] / (t^2)
 .\]
 
+:::
 
 :::
 
@@ -1840,22 +2002,22 @@ M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
 ## Spring 2018 #8 $\work$
 Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
 
-### a
+a.
 Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
 
-### b
+b.
 If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
 
-### c
+c.
 Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
 
 ## Fall 2017 #5 $\work$
 A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
 
-### a
+a.
 Suppose $R$ is a commutative ring with 1. Prove $R$ is simple if and only if $R$ is a field.
 
-### b
+b.
 Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries in $k$, is a simple ring.
 
 ## Fall 2017 #6 $\work$
@@ -1864,48 +2026,48 @@ For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Reca
 We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
 Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
 
-### a
+a.
 Prove $R$ is an integral domain.
 
-### b
+b.
 Show $U(R) = \{\pm1\}$.
 
-### c
+c.
 Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
 
-### d
+d.
 Show 3 is not prime in $R$.
 
-### e
+e.
 Conclude $R$ is not a PID.
 
 ## Spring 2017 #3 $\work$
 Let $R$ be a commutative ring with 1.
 Suppose that $M$ is a free $R\dash$module with a finite basis $X$.
 
-### a
+a.
 Let $I \normal R$ be a proper ideal.
 Prove that $M/IM$ is a free $R/I\dash$module with basis $X'$, where $X'$ is the image of $X$ under the canonical map $M\to M/IM$.
 
-### b
+b.
 Prove that any two bases of $M$ have the same number of elements.
 You may assume that the result is true when $R$ is a field.
 
 
 ## Spring 2017 #4 $\work$
 
-### a
+a.
 Let $R$ be an integral domain with quotient field $F$.
 Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
 
-Prove that $R$ is not a UFD.
+  Prove that $R$ is not a UFD.
 
-> (You may assume Gauss' lemma)
+  > (You may assume Gauss' lemma)
 
-### b
+b.
 Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
-> Hint: let $p(x) = x^2-2$.
+  > Hint: let $p(x) = x^2-2$.
 
 ## Spring 2016 #8 $\work$
 Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
@@ -1915,10 +2077,10 @@ ii. If $x\in R$ with $x\neq 0$ then $2x\neq 0$, where $2x\definedas x+x$.
 
 Prove the following:
 
-### a
+a.
 For each $x\in R$ there is one and only one element $y\in R$ such that $x = 2y$.
 
-### b
+b.
 Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
 
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
@@ -1960,31 +2122,31 @@ Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a
 ## Spring 2014 #6 $\work$
 Let $R$ be a commutative ring with identity and let $n$ be a positive integer.
 
-### a
+a.
 Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
 
-### b
+b.
 Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
 
 ## Fall 2013 #3 $\work$
 
-### a
+a.
 Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
 
-### b
+b.
 Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
 
 ## Fall 2013 #4 $\work$
 Let $R$ be a commutative ring with $1\neq 0$.
 Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
 
-### a
+a.
 Show that the collection of nilpotent elements in $R$ forms an ideal.
 
-### b
+b.
 Show that if $x$ is nilpotent, then $x$ is contained in every prime ideal of $R$.
 
-### c
+c.
 Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
 There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
 
@@ -1993,19 +2155,19 @@ In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $
 
 Show that $I$ is a prime ideal.
 
-### d 
+d. 
 Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
 
 ## Spring 2013 #1 $\work$
 Let $R$ be a commutative ring.
 
-### a
+a.
 Define a *maximal ideal* and prove that $R$ has a maximal ideal.
 
-### b
+b.
 Show than an element $r\in R$ is not invertible $\iff r$ is contained in a maximal ideal.
 
-### c
+c.
 Let $M$ be an $R\dash$module, and recall that for $0\neq \mu \in M$, the *annihilator* of $\mu$ is the set
 \[
 \ann(\mu) = \theset{r\in R \suchthat r\mu = 0}
@@ -2017,20 +2179,39 @@ Prove that $I$ is a prime ideal.
 
 ## Spring 2013 #2 $\work$
 
-### a
+a.
 Define a *Euclidean domain*.
 
-### b
+b.
 Define a *unique factorization domain*.
 
-### c
+c.
 Is a Euclidean domain an UFD? 
 Give either a proof or a counterexample with justification.
 
-### d
+d.
 Is a UFD a Euclidean domain?
 Give either a proof or a counterexample with justification.
 
+## Spring 2021 #5 $\work$
+
+Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
+Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+
+## Spring 2021 #6
+
+a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
+
+b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
+\[
+f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
+\]
+such that $a_k$ is even for $1\leq k \leq n$.
+Show that $R$ is a subring of $\ZZ[x]$.
+
+c. Show that $R$ is not Noetherian.
+
+  > *Hint: consider the ideal generated by \( \ts{ 2x^k \st 1\leq k \in \ZZ } \).*
 
 
 # Fields and Galois Theory
@@ -2043,10 +2224,10 @@ Justify your answer.
 ## $\star$ Fall 2013 #7 $\work$
 Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
 
-### a
+a.
 Show that $\bar F$ is not a finite extension of $F$.
 
-### b
+b.
 Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
 Show that $F(\alpha)/F$ has degree 8.
 
@@ -2057,33 +2238,40 @@ Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a prim
 
 Let $E = F [\omega]$ and let $k = [E : F]$.
 
-### a
+a.
 Prove that $n$ divides $q^{k}-1$.
 
-### b 
+b. 
 Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
 Prove that $m$ divides $k$.
 
-### c
+c.
 Prove that $m = k$.
 
 \todo[inline]{Revisit, tricky!}
 
 :::{.solution}
 
-Concepts used:
 
-- Theorem: $F\units$ is always cyclic for $F$ a field
+\envlist
+:::{.concept}
+\envlist
 
-**Solution**:
+- Theorem: $F\units$ is always cyclic for $F$ a field.
 
-### a
+:::
+
+:::{.proof title="of a"}
+\envlist
 
 - Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
 
 - Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 - Rephrasing (a), we have 
 \[
@@ -2093,7 +2281,10 @@ n \divides q^k-1
 &\iff m \definedas o(q) \divides k
 .\]
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
 
 - Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
 \[
@@ -2112,6 +2303,9 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 - But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
 
 - Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
+
+:::
+
 :::
 
 ## Fall 2019 #7 $\done$
@@ -2124,7 +2318,10 @@ How many subfields are there of $\QQ(\zeta_{20} )$?
 
 :::{.solution}
 
-Concepts Used:
+
+\envlist
+:::{.concept}
+\envlist
 
 - **Galois** = normal + separable.
 
@@ -2132,15 +2329,15 @@ Concepts Used:
 
 - **Normal (if separable)**: Splitting field of an irreducible polynomial.
 
-- Definition: $\zeta$ is a primitive root of unity iff $o(\zeta) = n$ in $F\units$.
+- $\zeta$ is a primitive root of unity $\iff o(\zeta) = n$ in $\FF\units$.
  
 - $\phi(p^k) = p^{k-1}(p-1)$
 
 - The lattice: 
 
-![](figures/2019-12-24-13-19-15.png)
+  ![image_2021-04-17-02-44-48](figures/image_2021-04-17-02-44-48.png)
 
-**Solution**:
+:::
 
 Let $K = \QQ(\zeta)$. 
 Then $K$ is the splitting field of $f(x) = x^n - 1$, which is irreducible over $\QQ$, so $K/\QQ$ is normal.
@@ -2155,7 +2352,6 @@ We can now define maps
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
 \]
-
 and if we restrict to $j$ such that $\gcd(n, j) = 1$, this yields $\phi(n)$ maps.
 Noting that if $\zeta$ is a primitive root, then $(n, j) = 1$ implies that that $\zeta^j$ is also a primitive root, and hence another root of $\min(\zeta, \QQ)$, and so these are in fact automorphisms of $K$ that fix $\QQ$ and thus elements of $\Gal(K/\QQ)$.
 
@@ -2169,8 +2365,7 @@ from the *multiplicative* group of units to the Galois group.
 
 The claim is that this is a surjective homomorphism, and since both groups are the same size, an isomorphism.
 
-**Surjectivity:**
-
+:::{.proof title="of surjectivity"}
 Letting $\sigma \in K$ be arbitrary, noting that $[K: \QQ]$ has a basis $\theset{1, \zeta, \zeta^2, \cdots, \zeta^{n-1}}$, it suffices to specify $\sigma(\zeta)$ to fully determine the automorphism.
 (Since $\sigma(\zeta^k) = \sigma(\zeta)^k$.)
 
@@ -2180,15 +2375,17 @@ Moreover, since $o(\zeta) = n \in K\units$, we must have $o(\zeta^k) = n \in K\u
 
 Thus $\theta$ is surjective.
 
-**Homomorphism:**
+:::
 
+:::{.proof title="of being a homomorphism"}
 \[
 \tau_j \circ \tau_k (\zeta) =\tau_j(\zeta^k) = \zeta^{jk} \implies
 \tau_{jk} = \theta(jk) = \tau_j \circ \tau_k
 .\]
 
-**Part 2:**
+:::
 
+:::{.proof title="of part 2"}
 We have $K \cong \ZZ_{20}\units$ and $\phi(20) = 8$, so $K \cong \ZZ_8$, so we have the following subgroups and corresponding intermediate fields:
 
 - $0 \sim \QQ(\zeta_{20})$
@@ -2197,27 +2394,36 @@ We have $K \cong \ZZ_{20}\units$ and $\phi(20) = 8$, so $K \cong \ZZ_8$, so we h
 - $\ZZ_8 \sim \QQ$
 
 For some elements $\omega_i$ which exist by the primitive element theorem.
-
-
+:::
 
 :::
 
 ## Spring 2019 #2 $\done$
 Let $F = \FF_p$ , where $p$ is a prime number.
 
-### a
+a.
 Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
 
-### b
+b.
 Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
 
 :::{.solution}
 
-### a
 
-> Go to a field extension.
-> Orders of multiplicative groups for finite fields are known.
+\envlist
+:::{.concept}
+\envlist
 
+- Go to a field extension.
+  - Orders of multiplicative groups for finite fields are known.
+- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+
+:::
+
+:::{.proof title="of a"}
 We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
 
 Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
@@ -2234,20 +2440,16 @@ Since $\rho$ is a ring morphism, we have
 &\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
 .\]
 
-$\qed$
 
-### b
+:::
 
-> Some potentially useful facts:
->
-> - $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
-> - $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
-> - $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
-> - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+:::{.proof title="of b"}
 
-Claim: $\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+:::{.claim}
+$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+:::
 
-$\implies$:
+:::{.proof title="of claim, $\implies$"}
 Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
 Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
 
@@ -2260,42 +2462,55 @@ n &= [L: \FF_p] \\
 
 for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
+:::
 
+:::{.proof title="of claim, $\impliedby$"}
 $\impliedby$:
 If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
 So $f = f_i$ for some $i$.
 
+:::
+
+:::
 
 :::
 
 ## Spring 2019 #8 $\done$
 Let $\zeta = e^{2\pi i/8}$.
 
-### a
+a.
 What is the degree of $\QQ(\zeta)/\QQ$?
 
-### b
+b.
 How many quadratic subfields of $\QQ(\zeta)$ are there?
 
-### c
+c.
 What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 
 
 :::{.solution}
 
-Concepts used:
+\envlist
+:::{.concept}
+\envlist
 
 - $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
   - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
 - $\deg \Phi_n(x) = \phi(n)$
-- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
+  - Proof: for a nontrivial gcd, the possibilities are 
+  \[
+  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+  .\]
+
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
-**Solution**:
+:::
 
-Let $K = \QQ(\zeta)$
+Let $K = \QQ(\zeta)$.
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
 - The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
@@ -2305,12 +2520,20 @@ Let $K = \QQ(\zeta)$
 .\]
 - So $[\QQ(\zeta): \QQ] = 4$.
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
+
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
 - $\ZZ/(4)$ has exactly one subgroup of index 2.
 - Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
 
-### c
+:::
+
+:::{.proof title="of c"}
+\envlist
+
 - Let $L = \QQ(\zeta, \sqrt[4] 2)$.
 
 - Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
@@ -2331,34 +2554,45 @@ Let $K = \QQ(\zeta)$
 
 :::
 
+
+:::
+
 ## Fall 2018 #3 $\done$
 Let $F \subset K \subset L$ be finite degree field extensions.
 For each of the following assertions, give a proof or a counterexample.
 
-### a
+a.
 If $L/F$ is Galois, then so is $K/F$.
 
-### b
+b.
 If $L/F$ is Galois, then so is $L/K$.
 
-### c
+c.
 If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
 :::{.solution}
 
+
+\envlist
+:::{.concept}
+\envlist
+
+- Every quadratic extension over $\QQ$ is Galois.
+:::
+
+
 Let $L/K/F$.
 
-### a
-
+:::{.proof title="of a"}
 **False**: 
 Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
 
 Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
 
 But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
+:::
 
-### b
-
+:::{.proof title="of b"}
 **True**: 
 If $L/F$ is Galois, then $L/K$ is normal and separable:
 
@@ -2366,8 +2600,10 @@ If $L/F$ is Galois, then $L/K$ is normal and separable:
 
 - $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
 
-### c
 
+:::
+
+:::{.proof title="of c"}
 **False**: 
 Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
 
@@ -2376,24 +2612,34 @@ Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ 
 
 :::
 
+:::
+
 ## Spring 2018 #2 $\done$
 Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
 
-### a
+a.
 Find the splitting field $K$ of $f$, and compute $[K: \QQ]$.
 
-### b
+b.
 Find the Galois group $G$ of $f$, both as an explicit group of automorphisms, and as a familiar abstract group to which it is isomorphic.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
 :::{.solution}
 
-### a
+\envlist
+:::{.concept}
+\envlist
 
+- Todo
+
+:::
+
+
+:::{.proof title="of a"}
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
 \[
 \alpha_1 &= \sqrt{2 + \sqrt 2} \\
@@ -2404,8 +2650,9 @@ Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ h
 
 and splitting field $K = \QQ(\theset{\alpha_i})$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 $K$ is the splitting field of a separable polynomial and thus Galois over $\QQ$.
 Moreover, Since $f$ is irreducible by Eisenstein with $p=2$, the Galois group is a transitive subgroup of $S^4$, so the possibilities are:
 
@@ -2457,11 +2704,14 @@ and thus
 
 and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
 
-### c
 
+:::
 
+:::{.proof title="of c"}
 ?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
+:::
 
+\todo[inline]{Finish (c)}
 
 :::
 
@@ -2472,13 +2722,13 @@ Let $E = E_1 E_2 \subset K$.
 
 Let $H_i = \Gal(K/E_i)$ and $H = \Gal(K/E)$.
 
-### a
+a.
 Show that $H = H_1 \cap H_2$.
 
-### b
+b.
 Show that $H_1 H_2$ is a subgroup of $G$.
 
-### c
+c.
 Show that 
 $$
 \Gal(K/(E_1 \cap E_2 )) = H_1 H_2
@@ -2486,10 +2736,17 @@ $$
 
 :::{.solution}
 
-> Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
 
-### a
+\envlist
+:::{.concept}
+\envlist
 
+- The rough correspondence:
+  - $H_1 \intersect H_2 \mapstofrom E_1 E_2$, 
+  - $H_1 H_2 \mapstofrom E_1 \intersect E_2$.
+:::
+
+:::{.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of $H_1 \intersect H_2$ is $E_1 E_2$.
 
 Let $\sigma \in H_1 \intersect H_2$; then $\sigma \in \Aut(K)$ fixes both $E_1$ and $E_2$.
@@ -2503,66 +2760,76 @@ $$
 
 so $\sigma$ fixes $E_1 E_2$.
 
-### b
+:::
 
+:::{.proof title="of b"}
 That $H_1 H_2 \subseteq G$ is clear, since if $\sigma = \tau_1 \tau_2 \in H_1 H_2$, then each $\tau_i$ is an automorphism of $K$ that fixes $E_i \supseteq \QQ$, so each $\tau_i$ fixes $\QQ$ and thus $\sigma$ fixes $\QQ$.
 
-That it is a subgroup follows from the fact that elements commute. (?)
+:::{.claim}
+All elements in this subset commute.
+:::
+
+:::{.proof title="of claim"}
+\envlist
+
+- Let $\sigma = \sigma_1 \sigma_2 \in H_1 H_2$.
+
+- Note that $\sigma_1(e) = e$ for all $e\in E_1$ by definition, since $H_1$ fixes $E_1$, and $\sigma_2(e) \in E_1$ (?).
+
+- Then 
+  \[
+  \sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
+  \]
+  and substituting $e = \sigma_1(e)$ on the RHS yields
+  \[
+  \sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
+  ,\]
+  where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
+
+:::
  
-To see this, let $\sigma = \sigma_1 \sigma_2 \in H_1 H_2$.
-
-Note that $\sigma_1(e) = e$ for all $e\in E_1$ by definition, since $H_1$ fixes $E_1$, and $\sigma_2(e) \in E_1$ (?).
-
-Then 
-$$
-\sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
-$$  
-
-and substituting $e = \sigma_1(e)$ on the RHS yields
-
-\[
-\sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
-,\]
-
-where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
 
 
-### c
+:::
 
+:::{.proof title="of c"}
 By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an intermediate field $E$ such that $K/E/\QQ$ and $E$ is the fixed field of $H_1 H_2$.
 
 But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so $\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \intersect E_2$.
+
+:::
+
 :::
 
 ## Spring 2020 #4 $\work$
 Let $f(x) = x^4-2 \in \QQ[x]$.
 
-### a
+a.
 Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
 
-### b
+b.
 Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
 
-### c
+c.
 Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
 
 ## Spring 2020 #3 $\work$
 Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
 
-### a
+a.
 Show that $F(\alpha) = F(\alpha^2)$.
 
-### b
+b.
 Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
 
 ## Fall 2017 #4 $\work$
 
-### a
+a.
 Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
 
-Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
+  Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
 
-### b
+b.
 Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
 
 ## Fall 2017 #3 $\work$
@@ -2574,21 +2841,21 @@ Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is
 ## Spring 2017 #7 $\work$
 Let $F$ be a field and let $f(x) \in F[x]$.
 
-### a
+a.
 Define what a splitting field of $f(x)$ over $F$ is.
 
-### b
+b.
 Let $F$ now be a finite field with $q$ elements.
 Let $E/F$ be a finite extension of degree $n>0$.
 Exhibit an explicit polynomial $g(x) \in F[x]$ such that $E/F$ is a splitting field of $g(x)$ over $F$.
 Fully justify your answer.
 
-### c
+c.
 Show that the extension $E/F$ in (b) is a Galois extension.
 
 ## Spring 2017 #8 $\work$
 
-### a
+a.
 Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
 Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
 \[
@@ -2599,31 +2866,31 @@ a & b \\
 \qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
 .\]
 
-### b
+b.
 Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
 
 ## Fall 2016 #4 $\work$
 Set $f(x) = x^3 - 5 \in \QQ[x]$.
 
-### a
+a.
 Find the splitting field $K$ of $f(x)$ over $\QQ$.
 
-### b
+b.
 Find the Galois group $G$ of $K$ over $\QQ$.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 ## Spring 2016 #2 $\work$
 Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
 
-### a
+a.
 Find $[K: \QQ]$.
 
-### b
+b.
 Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
 
-### c
+c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 ## Spring 2016 #6 $\work$
@@ -2634,156 +2901,156 @@ Prove that $K$ is an extension by radicals of the field $F$.
 ## Fall 2015 #5 $\work$
 Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
 
-### a
+a.
 Find (with justification) the minimal polynomial $f(x)$ of $u$ over $\QQ$.
 
-### b
+b.
 Show $v\in E$, and show that $E$ is a splitting field of $f(x)$ over $\QQ$.
 
-### c
+c.
 Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
 
 
 ## Fall 2015 #6 $\work$
 
-### a
+a.
 Let $G$ be a finite group.
 Show that there exists a field extension $K/F$ with $\gal(K/F) = G$.
 
-> You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
+  > You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
 
-### b
+b.
 Let $K$ be a Galois extension of $F$ with $\abs{\gal(K/F)} = 12$.
 Prove that there exists an intermediate field $E$ of $K/F$ with $[E: F] = 3$.
 
-### c
+c.
 With $K/F$ as in (b), does an intermediate field $L$ necessarily exist satisfying $[L: F] = 2$?
 Give a proof or counterexample.
 
 ## Spring 2015 #2 $\work$
 Let $\FF$ be a finite field.
 
-### a
+a.
 Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
 
-### b
+b.
 The *exponent* of a finite group is the least common multiple of the orders of its elements.
 Prove that a finite abelian group has an element of order equal to its exponent.
 
-### c
+c.
 Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
 
 ## Spring 2015 #5 $\work$
 Let $f(x) = x^4 - 5 \in \QQ[x]$.
 
-### a
+a.
 Compute the Galois group of $f$ over $\QQ$.
 
-### b
+b.
 Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
 
 ## Fall 2014 #1 $\work$
 Let $f\in \QQ[x]$ be an irreducible polynomial and $L$ a finite Galois extension of $\QQ$.
 Let $f(x) = g_1(x)g_2(x)\cdots g_r(x)$ be a factorization of $f$ into irreducibles in $L[x]$.
 
-### a
+a.
 Prove that each of the factors $g_i(x)$ has the same degree.
 
-### b
+b.
 Give an example showing that if $L$ is not Galois over $\QQ$, the conclusion of part (a) need not hold.
 
 ## Fall 2014 #3 $\work$
 Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
 
-### a
+a.
 What is the structure of the Galois group of $E/\QQ$?
 
-### b
+b.
 Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
 Describe the corresponding subgroups of the Galois group.
 
 ## Spring 2014 #3 $\work$
 Let $F\subset C$ be a field extension with $C$ algebraically closed.
 
-### a
+a.
 Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
 
-### b
+b.
 Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
 
 ## Spring 2014 #4 $\work$
 Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
 
-### a
+a.
 Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
 
-> Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
+  > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
 
-### b
+b.
 Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
 
-### c
+c.
 Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
 
 ## Fall 2013 #5 $\work$
 Let $L/K$ be a finite extension of fields.
 
-### a
+a.
 Define what it means for $L/K$ to be *separable*.
 
-### b
+b.
 Show that if $K$ is a finite field, then $L/K$ is always separable.
 
-### c
+c.
 Give an example of a finite extension $L/K$ that is not separable.
 
 ## Fall 2013 #6 $\work$
 Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
 
-### a
+a.
 Show that $K/\QQ$ contains both $\QQ(i)$ and $\QQ(\sqrt[4]{2})$ and has degree 8 over $\QQ$/
 
-### b
+b.
 Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
 Show that $N$ is normal in $G$ and $NH = G$.
 
-> Hint: what field is fixed by $NH$?
+  > Hint: what field is fixed by $NH$?
 
-### c
+c.
 Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
 
-> Equivalently, show it is the dihedral group of order 8.
+  > Equivalently, show it is the dihedral group of order 8.
 
-### d
+d.
 How many distinct quartic subfields of $K$ are there? 
 Justify your answer.
 
 ## Spring 2013 #7 $\work$
 Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
 
-### a
+a.
 Prove that $\gal(E/B)$ and $\gal(E/C)$ are normal subgroups of $\gal(E/\QQ)$.
 
-### b
+b.
 Prove that $\gal(E/B) \intersect \gal(E/C) = \theset{1}$.
 
-### c
+c.
 If $B\intersect C = \QQ$, show that $\gal(E/B) \gal(E/C) = \gal(E/\QQ)$.
 
-### d
+d.
 Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(E/C)$.
 
-### e
+e.
 Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
 
 ## Spring 2013 #8 $\work$
 Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
 You may assume that $f$ is irreducible over $F$.
 
-### a
+a.
 Show that if $r$ is a root of $f$ in $K$, then $r^9 = 1$ but $r^3\neq 1$.
 
-### b
+b.
 Find $\gal(K/F)$ and express each intermediate field between $F$ and $K$ as $F(\beta)$ for an appropriate $\beta \in K$.
 
 ## Fall 2012 #3 $\work$
@@ -2798,20 +3065,20 @@ Assume that $[K:\QQ] = 1225$ and show that $f(x)$ is solvable by radicals.
 ## Spring 2012 #1 $\work$
 Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
 
-### a
+a.
 Show that there exists a unique intermediate field $K$ with $F\subset K \subset E$ such that $[K: F] = 2$.
 
-### b
+b.
 Assume that there are at least two distinct intermediate subfields $F \subset L_1, L_2 \subset E$ with $[L_i: F]= 7$.
 Prove that $\gal(E/F)$ is nonabelian.
 
 ## Spring 2012 #4 $\work$
 Let $f(x) = x^7 - 3\in \QQ[x]$ and $E/\QQ$ be a splitting field of $f$ with $\alpha \in E$ a root of $f$.
 
-### a
+a.
 Show that $E$ contains a primitive 7th root of unity.
 
-### b
+b.
 Show that $E\neq \QQ(\alpha)$.
 
 ## Fall 2019 Midterm #6  $\work$
@@ -2832,10 +3099,11 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 
 Let $L/K$ be a finite normal extension.
 
-- Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
+a.
+Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
 
-- Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
-
+b.
+Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
 
 ## Spring 2021 #4 $\work$
 
@@ -2878,19 +3146,28 @@ Prove that \( [E: F] \equiv 1 \mod p \).
 Let $R$ be a commutative ring, and let $M$ be an $R\dash$module. 
 An $R\dash$submodule $N$ of $M$ is maximal if there is no $R\dash$module $P$ with $N \subsetneq P \subsetneq M$.
 
-#### a
+a.
 Show that an $R\dash$submodule $N$ of $M$ is maximal $\iff M /N$ is a simple $R\dash$module: i.e., $M /N$ is nonzero and has no proper, nonzero $R\dash$submodules.
 
-#### b
+b.
 Let $M$ be a $\ZZ\dash$module. Show that a $\ZZ\dash$submodule $N$ of $M$ is maximal $\iff \#M /N$ is a prime number.
 
-#### c
+c.
 Let $M$ be the $\ZZ\dash$module of all roots of unity in $\CC$ under multiplication.
 Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
 :::{.solution}
-a
 
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+:::
+
+
+:::{.proof title="of a"}
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
 
 So 
@@ -2903,16 +3180,19 @@ So
 
 - $\iff M/N$ is simple.
 
-b
+:::
 
+:::{.proof title="of b"}
 Identify $\ZZ\dash$modules with abelian groups, then by (a), $N$ is maximal $\iff$ $M/N$ is simple $\iff$ $M/N$ has no nontrivial proper subgroups.
+\
 
 By Cauchy's theorem, if $\abs{M/N} = ab$ is a composite number, then $a\divides ab \implies$ there is an element (and thus a subgroup) of order $a$.
 In this case, $M/N$ contains a nontrivial proper cyclic subgroup, so $M/N$ is not simple.
 So $\abs{M/N}$ can not be composite, and therefore must be prime.
 
-c
+:::
 
+:::{.proof title="of c"}
 Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
 
 Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
@@ -2923,46 +3203,55 @@ Thus by (b), $H$ can not be maximal, a contradiction.
 
 :::
 
+:::
+
 ### Fall 2019 Final #2  $\work$
-Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by $f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]$. Find a basis for $N$ and describe $\ZZ^3/N$.
+Consider the $\ZZ\dash$submodule $N$ of $\ZZ^3$ spanned by 
+\[
+f_1 &= [-1, 0, 1], \\
+f_2 &= [2,-3,1], \\
+f_3 &= [0, 3, 1], \\
+f_4 &= [3,1,5]
+.\] 
+Find a basis for $N$ and describe $\ZZ^3/N$.
 
 ### Spring 2018 #6 $\work$
 Let
-$$
-M = \{(w, x, y, z) \in \ZZ^4 \suchthat w + x + y + z \in 2\ZZ\}
-,$$
+\[
+M &= \{(w, x, y, z) \in \ZZ^4 \suchthat w + x + y + z \in 2\ZZ\} \\
+N &= \ts{
+(w, x, y, z) \in \ZZ^4 \suchthat 4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)
+}
+.\]
 
-and
-
-$$
-N = \{(w, x, y, z) \in \ZZ^4 \suchthat 4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)\}
-.$$
-
-#### a
+a.
 Show that $N$ is a $\ZZ\dash$submodule of $M$ .
 
-#### b
+b.
 Find vectors $u_1 , u_2 , u_3 , u_4 \in \ZZ^4$ and integers $d_1 , d_2 , d_3 , d_4$ such that
-$$
-\{u_1 , u_2 , u_3 , u_4 \}
-$$
-is a free basis for $M$, and
-$$
-\{d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 \}
-$$
-is a free basis for $N$ .
+\[
+\{
+u_1 , u_2 , u_3 , u_4 
+\} 
+&& \text{is a free basis for }M
+\\
+\{
+d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 
+\}
+&& \text{is a free basis for }N
+\]
 
-#### c
+c.
 Use the previous part to describe $M/N$ as a direct sum of cyclic $\ZZ\dash$modules.
 
 ### Spring 2018 #7 $\work$
 Let $R$ be a PID and $M$ be an $R\dash$module. Let $p$ be a prime element of $R$. The module $M$ is called *$\generators{p}\dash$primary* if for every $m \in M$ there exists $k > 0$ such that $p^k m = 0$.
 
-#### a
+a.
 Suppose M is $\generators{p}\dash$primary. Show that if $m \in M$ and $t \in R, ~t \not\in \generators{p}$, then there exists $a \in R$ such that
 $atm = m$.
 
-#### b
+b.
 A submodule $S$ of $M$ is said to be *pure* if $S \cap r M = rS$ for all $r \in R$. Show that if $M$ is $\generators{p}\dash$primary, then $S$ is pure if and only if $S \cap p^k M = p^k S$ for all $k \geq 0$.
 
 
@@ -2973,26 +3262,24 @@ Show that $N\cong \im f \oplus \ker g$.
 ### Spring 2016 #4 $\work$
 Let $R$ be a ring with the following commutative diagram of $R\dash$modules, where each row represents a short exact sequence of $R\dash$modules:
 
-\begin{center}
 \begin{tikzcd}
 0 \ar[r] & A \ar[d, "\alpha"] \ar[r, "f"] & B \ar[d, "\beta"] \ar[r, "g"] & C \ar[r] \ar[d, "\gamma"] & 0 \\
 0 \ar[r] & A' \ar[r, "f'"] & B'\ar[r, "g'"] & C' \ar[r] & 0 
 \end{tikzcd}
-\end{center}
 
 Prove that if $\alpha$ and $\gamma$ are isomorphisms then $\beta$ is an isomorphism.
 
 ### Spring 2015 #8 $\work$
 Let $R$ be a PID and $M$ a finitely generated $R\dash$module.
 
-#### a
+a.
 Prove that there are $R\dash$submodules 
 \[
 0 = M_0 \subset M_1 \subset \cdots \subset M_n = M
 \]
 such that for all $0\leq i \leq n-1$, the module $M_{i+1}/M_i$ is cyclic.
 
-#### b
+b.
 Is the integer $n$ in part (a) uniquely determined by $M$? 
 Prove your answer.
 
@@ -3032,21 +3319,26 @@ Let $R$ be a ring and $M$ an $R\dash$module.
 \tor(M) = \{m \in M \suchthat \exists r \in R, ~r \neq 0, ~rm = 0\}
 .\]
 
-#### a
+a.
 Prove that if $R$ is an integral domain, then $\Tor(M )$ is a submodule of $M$ .
 
-#### b
+b.
 Give an example where $\Tor(M )$ is not a submodule of $M$.
 
-#### c
+c.
 If $R$ has zero-divisors, prove that every non-zero $R\dash$module has non-zero torsion elements.
 
 :::{.solution}
 
-> One-step submodule test.
 
-##### a
+\envlist
+:::{.concept}
+\envlist
 
+- One-step submodule test.
+:::
+
+:::{.proof title="of a"}
 It suffices to show that 
 $$
 r\in R, ~t_1, t_2\in \Tor(M) \implies rt_1 + t_2 \in \Tor(M)
@@ -3068,16 +3360,18 @@ s_1 s_2(rt_1 + t_2)
 &= 0
 .\]
 
-##### b
+:::
 
+:::{.proof title="of b"}
 Let $R = \ZZ/6\ZZ$ as a $\ZZ/6\ZZ \dash$module, which is not an integral domain as a ring.
 
 Then $[3]_6\actson [2]_6 = [0]_6$ and $[2]_6\actson [3]_6 = [0]_6$, but $[2]_6 + [3]_6 = [5]_6$, where 5 is coprime to 6, and thus $[n]_6\actson [5]_6 = [0] \implies [n]_6 = [0]_6$. So $[5]_6$ is *not* a torsion element.
 
 So the set of torsion elements are not closed under addition, and thus not a submodule.
 
-##### c
+:::
 
+:::{.proof title="of c"}
 Suppose $R$ has zero divisors $a,b \neq 0$ where $ab = 0$.
 Then for any $m\in M$, we have $b\actson m \definedas bm \in M$ as well, but then 
 $$
@@ -3085,6 +3379,7 @@ a\actson bm = (ab)\actson m = 0\actson m = 0_M
 ,$$ 
 so $m$ is a torsion element for any $m$.
 
+:::
 
 :::
 
@@ -3092,20 +3387,29 @@ so $m$ is a torsion element for any $m$.
 Let $R$ be an integral domain. Recall that if $M$ is an $R\dash$module, the *rank* of $M$ is
 defined to be the maximum number of $R\dash$linearly independent elements of $M$ .
 
-#### a
+a.
 Prove that for any $R\dash$module $M$, the rank of $\tor(M )$ is 0.
 
-#### b
+b.
 Prove that the rank of $M$ is equal to the rank of of $M/\tor(M )$.
 
-#### c
+c.
 Suppose that M is a non-principal ideal of $R$.
 
 Prove that $M$ is torsion-free of rank 1 but not free.
 
 :::{.solution}
 
-**Part a**
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+:::
+
+:::{.proof title="of a"}
+\envlist
 
 - Suppose toward a contradiction $\tor(M)$ has rank $n \geq 1$.
 - Then $\tor(M)$ has a linearly independent generating set $B = \theset{\vector r_1, \cdots, \vector r_n}$, so in particular
@@ -3116,61 +3420,75 @@ Prove that $M$ is torsion-free of rank 1 but not free.
 - Since $\vector r\in \tor(M)$, there exists an $s\in R\setminus 0_R$ such that $s\vector r = 0_M$.
 - Then $s\vector r = 0$ with $s\neq 0$, so $\theset{\vector r} \subseteq B$ is *not* a linearly independent set, a contradiction.
 
-**Part b**
+:::
 
+:::{.proof title="of b"}
+\envlist
 
 - Let $n = \rank M$, and let $\mathcal B = \theset{\vector r_i}_{i=1}^n \subseteq R$ be a generating set.
 - Let $\tilde M \definedas M/\tor(M)$ and $\pi: M \to M'$ be the canonical quotient map.
 
-**Claim:** 
+:::{.claim}
 \[
 \tilde \mcb \definedas \pi(\mathcal B) = \theset{\vector r_i + \tor(M)}
 \]
 is a basis for $\tilde M$.
+:::
 
-- **Linearly Independent:**
+Note that the proof follows immediately.
 
-  - Suppose that
-  \[
-  \sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
-  .\]
+:::
 
-  - Then using the definition of coset addition/multiplication, we can write this as
-  \[  
-  \sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
-  \qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
-  .\]
-  
-  - Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
+:::{.proof title="of claim: linearly independent"}
+\envlist
 
-  - Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
+- Suppose that
+\[
+\sum_{i=1}^n s_i (\vector r_i + \tor(M)) = \vector 0_{\tilde M}
+.\]
 
-  - Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
+- Then using the definition of coset addition/multiplication, we can write this as
+\[  
+\sum_{i=1}^n \qty { s_i \vector r_i + \tor(M)} = 
+\qty{ \sum_{i=1}^n  s_i \vector r_i} + \tor(M)  = 0_{\tilde M}
+.\]
 
-  - Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
+- Since $\tilde{\vector x} = 0 \in \tilde M \iff \tilde{\vector x} = \vector x + \tor(M)$ where $\vector x \in \tor(M)$, this forces $\sum s_i \vector r_i \in \tor(M)$.
 
-- **Spanning:**
+- Then there exists a scalar $\alpha\in R\nonzero$ such that $\alpha \sum s_i \vector r_i = 0_M$.
 
-  - Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
+- Since $R$ is an integral domain and $\alpha \neq 0$, we must have $\sum s_i \vector r_i = 0_M$.
 
-  - Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
+- Since $\theset{\vector r_i}$ was linearly independent in $M$, we must have $s_i = 0_R$ for all $i$.
 
-  - Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
-  \[
-  \vector x
-  &= \pi(\vector m) \\
-  &\definedas \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
-  &= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
-  &\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
-  ,\]
-    which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
 
-**Part c**
+:::
+
+:::{.proof title="of claim: spanning"}
+\envlist
+
+- Write $\pi(\mathcal B) = \theset{\vector r_i + \Tor(M)}_{i=1}^n$ as a set of cosets.
+
+- Letting $\vector x \in M'$ be arbitrary, we can write $\vector x = \vector m + \tor(M)$ for some $\vector m \in M$ where $\pi(\vector m) = \vector x$ by surjectivity of $\pi$.
+
+- Since $\mathcal B$ is a basis for $M$, we have $\vector m = \sum_{i=1}^n s_i \vector r_i$, and so
+\[
+\vector x
+&= \pi(\vector m) \\
+&\definedas \pi\qty{ \sum_{i=1}^n s_i \vector r_i} \\
+&= \sum_{i=1}^n s_i \pi(\vector r_i) \quad\text{since $\pi$ is an $R\dash$module morphism}\\
+&\definedas \sum_{i=1}^n s_i \vector (\vector r_i + \tor(M))
+,\]
+  which expresses $\vector{x}$ as a linear combination of elements in $\mathcal B'$.
+
+:::
+
+:::{.proof title="of c"}
 
 > Notation: Let $0_R$ denote $0\in R$ regarded as a ring element, and $\vector 0 \in R$ denoted $0_R$ regarded as a module element (where $R$ is regarded as an $R\dash$module over itself)
 
-**$M$ is not free:**
-
+:::{.proof title="that $M$ is not free"}
+\envlist
 - **Claim**: If $I\subseteq R$ is an ideal *and* a free $R\dash$module, then $I$ is principal .
 
   - Suppose $I$ is free and let $I = \generators{B}$ for some basis, we will show $\abs{B} = 1$>
@@ -3185,7 +3503,11 @@ is a basis for $\tilde M$.
 
   - Now since $M$ was assumed to *not* be principal, $M$ is not free (using the contrapositive of the claim).
 
-**$M$ is rank 1**:
+
+:::
+
+:::{.proof title="that $M$ is rank 1"}
+\envlist
 
 - For any module, we can take an element $\vector m\in M\nonzero$ and consider the cyclic submodule $R\vector m$.
 
@@ -3210,25 +3532,28 @@ is a basis for $\tilde M$.
 - But $\vector x\in R$ as well and $R$ is an integral domain, so $\vector x=0_R$, and thus $\tor(M) = \theset{0_R}$.
 
 
+:::
+
 
 :::
+
 
 ### $\star$ Spring 2020 #6 $\done$
 Let $R$ be a ring with unity.
 
-#### a
+a.
 Give a definition for a free module over $R$.
 
-#### b
+b.
 Define what it means for an $R\dash$module to be torsion free.
 
-#### c
+c.
 Prove that if $F$ is a free module, then any short exact sequence of $R\dash$modules of the following form splits:
 \[
 0 \to N \to M \to F \to 0
 .\]
 
-#### d
+d.
 Let $R$ be a PID. 
 Show that any finitely generated $R\dash$module $M$ can be expressed as a direct sum of a torsion module and a free module.
   
@@ -3237,23 +3562,27 @@ Show that any finitely generated $R\dash$module $M$ can be expressed as a direct
 :::{.solution}
 Let $R$ be a ring with 1.
 
-#### a
+
+:::{.proof title="of a"}
 An $R\dash$module $M$ is **free** if any of the following conditions hold:
 
 - $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
 - $M \cong \bigoplus_{\alpha} R$ are isomorphic as $R\dash$modules.
 - There is a nonempty set $X$ and an inclusion $X\injects M$ such that for every $R\dash$modules $N$, every map $X\to N$ lifts to a unique map $M\to N$, so the following diagram commutes:
-\begin{center}
+
 \begin{tikzcd}
 M \ar[rd, dotted, "\exists ! \tilde f"] & \\
 X \ar[u, hook] \ar[r, "f"] & N
 \end{tikzcd}
-\end{center}
 
-#### b
+:::
+
+:::{.proof title="of b"}
 $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
+:::
 
-#### c
+:::{.proof title="of c"}
+\envlist
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
 \[
@@ -3261,20 +3590,18 @@ $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq
 .\]
 
 - Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
-- If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
-- Note $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $$\pi(y_\alpha) = \iota(x_\alpha).$$
-- Define a map
+  If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
+- $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $\pi(y_\alpha) = \iota(x_\alpha)$ and define
 \[
 f: X&\to M \\
 x_\alpha &\mapsto y_\alpha
 .\]
-- By the universal property, this yields a map $h: F\to M$, commutativity forces $(h\circ \iota)(x_\alpha) = y_\alpha$, i.e. we have a diagram
-\begin{center}
+- The universal property yields $h: F\to M$:
+
 \begin{tikzcd}
 & & & X=\theset{x_\alpha} \ar[dd, hook, "\iota"]\ar[ddl, "f"'] &  \\ \\
 0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
 \end{tikzcd}
-\end{center}
 
 - It remains to check that it's a section:
 \[
@@ -3287,32 +3614,35 @@ f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 &= \sum_\alpha r_\alpha \iota(x_\alpha) \\
 &\definedas f
 \]
-
-- Checking $(h\circ \pi)(m) = m$: seems to be hard! 
 - Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
 
 
-##### Short Proof
+:::
+
+:::{.proof title="of c, shorter proof"}
+\envlist
 
 - Free implies projective
 
 - Universal property of projective modules: for every surjective $\pi:M\to N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
-\begin{center}
+
 \begin{tikzcd}
  & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
 M \ar[r, "\pi"] & N
 \end{tikzcd}
-\end{center}
 
 - Take the identity map:
-\begin{center}
+
 \begin{tikzcd}
  & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
 0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
 \end{tikzcd}
-\end{center}
 
-#### d
+:::
+
+
+:::{.proof title="of d"}
+\envlist
 
 - Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
 - Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
@@ -3323,34 +3653,40 @@ M \ar[r, "\pi"] & N
   - Then $(sr)m = 0_M$ which forces $m\in M_t$
   - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
 - There is a SES
-\begin{center}
+
 \begin{tikzcd}
 0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
 \end{tikzcd}
-\end{center}
+
   and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
+
+:::
+
+
+
+
 
 :::
 
 ### Spring 2012 #5 $\work$
 Let $M$ be a finitely generated module over a PID $R$.
 
-#### a
+a.
 $M_t$ be the set of torsion elements of $M$, and show that $M_t$ is a submodule of $M$.
 
-#### b
+b.
 Show that $M/M_t$ is torsion free.
 
-#### c
+c.
 Prove that $M \cong M_t \oplus F$ where $F$ is a free module.
 
 ### Spring 2017 #5 $\work$
 Let $R$ be an integral domain and let $M$ be a nonzero torsion $R\dash$module.
 
-#### a
+a.
 Prove that if $M$ is finitely generated then the annihilator in $R$ of $M$ is nonzero.
 
-#### b
+b.
 Give an example of a non-finitely generated torsion $R\dash$module whose annihilator is $(0)$, and justify your answer.
 
 ### Fall 2019 Final #3 $\work$
@@ -3366,10 +3702,10 @@ Let $I = (2, x)$ be an ideal in $R = \ZZ[x]$, and show that $I$ is not a direct 
 ### Fall 2019 Final #5 $\work$
 Let $R$ be a PID. 
 
-#### a
+a.
 Classify irreducible $R\dash$modules up to isomorphism.
 
-#### b
+b.
 Classify indecomposable $R\dash$modules up to isomorphism.
 
 ### Fall 2019 Final #6 $\work$
@@ -3407,28 +3743,6 @@ b. Determine the minimal polynomial of $A$.
 c. Determine the characteristic polynomial of $A$.
 
 
-# Ring Theory
-
-## Spring 2021 #5 $\work$
-
-Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
-Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
-
-## Spring 2021 #6
-
-a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
-
-b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
-\[
-f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
-\]
-such that $a_k$ is even for $1\leq k \leq n$.
-Show that $R$ is a subring of $\ZZ[x]$.
-
-c. Show that $R$ is not Noetherian.
-
-  *Hint: consider the ideal generated by \( \ts{ 2x^k \st 1\leq k \in \ZZ } \).*
-
 
 # Linear Algebra: Diagonalizability
 
@@ -3439,16 +3753,16 @@ Make $V$ and $W$ into $F[x]\dash$modules via linear operators $T$ on $V$ and $S$
 
 Denote the resulting $F[x]\dash$modules by $V_T$ and $W_S$ respectively.
 
-### a
+a.
 Show that an $F[x]\dash$module homomorphism from $V_T$ to $W_S$ consists of an $F\dash$linear transformation $R : V \to W$ such that $RT = SR$.
 
-### b
+b.
 Show that $VT \cong WS$ as $F[x]\dash$modules $\iff$ there is an $F\dash$linear isomorphism $P : V \to W$ such that $T = P\inv SP$.
 
-### c
+c.
 Recall that a module $M$ is *simple* if $M \neq 0$ and any proper submodule of $M$ must be zero. Suppose that $V$ has dimension 2. Give an example of $F$, $T$ with $V_T$ simple.
 
-### d
+d.
 Assume $F$ is algebraically closed. Prove that if $V$ has dimension 2, then any $V_T$ is not simple.
 
 ## Spring 2015 #3 $\work$
@@ -3472,11 +3786,18 @@ Show that $A$ is also diagonalizable over $\CC$.
 
 :::{.solution}
 
-> $A$ is diagonalizable iff $\min_A(x)$ is separable.
-> See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
+\envlist
+:::{.concept}
+\envlist
 
-Claim: If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
+- $A$ is diagonalizable iff $\min_A(x)$ is separable.
+  - See [further discussion here](https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable).
 
+:::
+
+:::{.claim}
+If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
+:::
 
 Let $A \in \Gl(m, \FF)$. 
 Since $A^n$ is diagonalizable, $\min_{A^n}(x) \in \FF[x]$ is separable and thus factors as a product of $m$ **distinct** linear factors:
@@ -3515,9 +3836,6 @@ and that $x^n-\lambda_i$ does not have multiple roots.
 
 But now since $q_A(x)$ has exactly distinct linear factors in $\bar \FF[x]$ and $\min_A(x) \divides q_A(x)$, $\min_A(x) \in \FF[x]$ can only have distinct linear factors, and $A$ is thus diagonalizable over $\FF$.
 
-$\qed$
-
-
 :::
 
 # Linear Algebra: Misc
@@ -3529,25 +3847,25 @@ Let $k$ be a field and let the group $G = \GL(m, k) \cross \GL(n, k)$ acts on th
 \]
 where $(A, B) \in G$ and $X\in M_{m, n}(k)$.
 
-### a
+a.
 State what it means for a group to act on a set.
 Prove that the above definition yields a group action.
 
-### b
+b.
 Exhibit with justification a subset $S$ of $M_{m, n}(k)$ which contains precisely one element of each orbit under this action.
 
 ## $\star$ Spring 2014 #7 $\work$
 Let $G = \GL(3, \QQ[x])$ be the group of invertible $3\times 3$ matrices over $\QQ[x]$.
 For each $f\in \QQ[x]$, let $S_f$ be the set of $3\times 3$ matrices $A$ over $\QQ[x]$ such that $\det(A) = c f(x)$ for some nonzero constant $c\in \QQ$.
 
-### a
+a.
 Show that for $(P, Q) \in G\cross G$ and $A\in S_f$, the formula
 \[
 (P, Q)\cdot A \definedas PAQ\inv
 \]
 gives a well defined map $G\cross G \cross S_f \to S_f$ and show that this map gives a group action of $G\cross G$ on $S_f$.
 
-### b
+b.
 For $f(x) = x^3(x^2+1)^2$, give one representative from each orbit of the group action in (a), and justify your assertion.
 
 ## Fall 2012 #7 $\work$
@@ -3571,10 +3889,10 @@ Moreover, prove that for any other decomposition $U \cong V' \oplus W'$, one has
 
 ## Fall 2015 #7 $\work$
 
-### a
+a.
 Show that two $3\times 3$ matrices over $\CC$ are similar $\iff$ their characteristic polynomials are equal and their minimal polynomials are equal.
 
-### b
+b.
 Does the conclusion in (a) hold for $4\times 4$ matrices?
 Justify your answer with a proof or counterexample.
 
@@ -3603,10 +3921,10 @@ If $W$ is a subspace of $V$, define
 W\perp \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
 .\]
 
-### a
+a.
 Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X\perp \subseteq Y\perp$.
 
-### b
+b.
 Define an injective linear map 
 \[
 \psi: Y\perp/X\perp \injects (X/Y)\dual
@@ -3641,17 +3959,36 @@ We can now note that $\restrictionof{\phi}{U}$ is nilpotent because it has chara
 ## Fall 2018 #5 $\done$
 Let $A$ be an $n \times n$ matrix.
 
-### a
+a.
 Suppose that $v$ is a column vector such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent. Show that any matrix $B$ that commutes with $A$ is a polynomial in $A$.
 
-### b
-Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of A equals the minimal polynomial of A.
+b.
+Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of $A$ equals the minimal polynomial of A.
 
 :::{.solution}
 
-### a
 
-Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have 
+\envlist
+:::{.concept}
+\envlist
+
+- Powers of $A$ commute with polynomials in $A$.
+- The image of a linear map is determined by the image of a basis
+:::
+
+
+:::{.strategy}
+\envlist
+
+- Use Cayley-Hamilton to relate the minimal polynomial to a linear dependence.
+- Get a lower bound on the degree of the minimal polynomial.
+- Use $A\actson k[x]$ to decompose into cyclic $k[x]\dash$modules, and use special form of denominators in the invariant factors.
+- Reduce to monomials.
+:::
+
+
+:::{.proof title="of a"}
+Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have A
 \[
 B\vector v = \sum_{j=0}^{n-1}c_j A^j \vector v
 .\]
@@ -3669,14 +4006,19 @@ BA^k \vector v
 
 so $B = p(A)$ as operators since their actions agree on every basis vector in $V$.
 
-### b
+:::
 
+:::{.proof title="of b, $\implies$"}
 $\implies$:
 
 If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
 
 So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
 
+
+:::
+
+:::{.proof title="of b, $\impliedby$"}
 $\impliedby$:
 
 Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
@@ -3687,11 +4029,9 @@ V\cong \frac{k[x]}{(\chi_A(x))}
 $$
 as an isomorphism of $k[x]\dash$modules.
 
-So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$.
+So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$, i.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
 
-> I.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
-
-But then noting that monomials span $k[x]$, we can write
+But then noting that monomials span $k[x]$ as a $k\dash$module, we can write
 \[
 V &\cong
 k[x] \actson \vector v \\
@@ -3700,12 +4040,13 @@ k[x] \actson \vector v \\
 &\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
 .\]
 
-Moreover, we can note that if $k \geq \deg \chi_A(x)$, then $A^k$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
+Moreover, we can note that if $\ell \geq \deg \chi_A(x)$, then $A^\ell$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
 \[
-V &\cong \spanof_k \theset{A^k\vector v \suchthat k \geq 0} \\
-&= \spanof_k \theset{A^k\vector v \suchthat 1 \leq k \leq n-1}
+V &\cong \spanof_k \theset{A^\ell\vector v \suchthat \ell \geq 0} \\
+&= \spanof_k \theset{A^\ell \vector v \suchthat 1 \leq \ell \leq n-1}
 .\]
 
+:::
 
 :::
 
@@ -3723,20 +4064,21 @@ Define the dual of $\Lambda$ to be
 \}
 .\]
 
-### a
+a.
 Show that $\Lambda \subset \Lambda \dual$.
 
-### b
+b.
 Prove that $\det M \neq 0$ and that the rows of $M\inv$ span $\Lambda\dual$.
 
-### c
+c.
 Prove that $\det M = |\Lambda\dual /\Lambda|$.
 
 \todo[inline]{Todo, missing part (c).}
 
 :::{.solution}
+\envlist
 
-### a
+:::{.proof title="of a"}
 Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
 
 Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
@@ -3748,8 +4090,10 @@ Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we 
 
 since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
 
-### b
-**$\det M \neq 0$**:
+:::
+
+:::{.proof title="of b"}
+**The determinant is nonzero**:
 
 Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
 
@@ -3770,10 +4114,20 @@ v_1 \\ v_2 \\ \vdots
 .\]
 
 We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
+:::
 
+:::{.proof title="of c"}
+\envlist
 
-#### Alternative Proof
+??? 
 
+\todo[inline]{Missing work!}
+
+:::
+
+:::
+
+:::{.solution title="Alternative"}
 Write $M = A^tA$ where $A$ has the $\vector e_i$ as columns. Then
 \[
 M\vector x = 0 
@@ -3814,18 +4168,15 @@ B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \im B \subseteq \spanof~ \Lambda\dual
 .\]
 
-### c.
-
-?
 :::
 
 ## Spring 2013 #6 $\done$
 Let $V$ be a finite dimensional vector space over a field $F$ and let $T: V\to V$ be a linear operator with characteristic polynomial $f(x) \in F[x]$.
 
-### a
+a.
 Show that $f(x)$ is irreducible in $F[x] \iff$ there are no proper nonzero subspaces $W< V$ with $T(W) \subseteq W$.
 
-### b
+b.
 If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that $T$ is diagonalizable when we extend the field to its algebraic closure.
 
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
@@ -3833,24 +4184,31 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 
 :::{.solution}
 
-Lemma: every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
 
-- $\implies$: Same as argument below.
-- $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
-- 
+\envlist
+:::{.concept}
+\envlist
 
-### a
+- Every $\vector v\in V$ is $T\dash$cyclic $\iff \chi_T(x)/\kk$ is irreducible.
+  - $\implies$: Same as argument below.
+  - $\impliedby$: Suppose $f$ is irreducible, then $f$ is equal to the minimal polynomial of $T$.
+
+- Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
+
+:::
 
 Let $f$ be the characteristic polynomial of $T$.
 
+:::{.proof title="of a, $\implies$. Matrix-dependent"}
 $\implies$:
 
 - By contrapositive, suppose there is a proper nonzero invariant subspace $W<V$ with $T(W) \subseteq W$, we will show the characteristic polynomial $f \definedas \chi_{V, T}(x)$ is reducible.
 - Since $T(W)\subseteq W$, the restriction $g\definedas \chi_{V, T}(x) \mid_W: W\to W$ is a linear operator on $W$.
 
-Claim: $g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
 
-> Matrix-dependent proof
+:::{.claim}
+$g$ divides $f$ in $\FF[x]$ and $\deg(g) < \deg(f)$.
+:::
 
 - Choose an ordered basis for $W$, say $\mcb_W \definedas \theset{\vector w_1, \cdots, \vector w_k}$ where $k=\dim_F(W)$
 - Claim: this can be extended to a basis of $V$, say $\mcb_V \definedas \theset{\vector w_1, \cdots, \vector w_k, \vector v_1, \cdots, \vector v_j}$ where $k+j = \dim_F(V)$.
@@ -3878,15 +4236,19 @@ B & C \\
 
 - Thus $f$ is reducible.
 
+:::
+
+:::{.proof title="of a, $\impliedby$"}
 $\impliedby$
 
 - Suppose $f$ is reducible, then we will produce a proper $T\dash$invariant subspace.
 - Claim: if $f$ is reducible, there exists a nonzero, noncyclic vector $\vector v$.
 - Then $\spanof_k\theset{T^j\vector v}_{j=1}^d$ is a $T\dash$invariant subspace that is nonzero, and not the entire space since $\vector v$ is not cyclic.
 
-### b
+:::
 
-Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
+:::{.proof title="of b"}
+\envlist
 
 - Let $\min_{T, F}(x)$ be the minimal polynomial of $T$ and $\chi_{T, F}(x)$ be its characteristic polynomial.
 - By Cayley-Hamilton, $\min_{T, F}(x)$ divides $\chi_{T, F}$
@@ -3898,6 +4260,9 @@ Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{
   - The first case is true because $\deg f' < \deg f$, and if $\gcd(f, f') = p$, then $\deg p < \deg f$ and $p\divides f$ forces $p=1$ since $f$ is irreducible.
 - So $\min_{T, F}$ splits into distinct linear factors
 - Thus $T$ is diagonalizable.
+
+:::
+
 :::
 
 
@@ -3908,7 +4273,8 @@ Show that
 \[
 \Tr(A\inv) =\conj{\Tr(A) }
 ,\]
-where $\conj{\wait}$ denotes taking the complex conjugate and $\Tr(\wait)$ is the trace.
+where $\conj{(\wait)}$ denotes taking the complex conjugate and $\Tr(\wait)$ is the trace.
+
 
 
 # Linear Algebra: Canonical Forms
@@ -3916,13 +4282,13 @@ where $\conj{\wait}$ denotes taking the complex conjugate and $\Tr(\wait)$ is th
 ## $\star$ Spring 2012 #8 $\work$
 Let $V$ be a finite-dimensional vector space over a field $k$ and $T:V\to V$ a linear transformation.
 
-### a
+a.
 Provide a definition for the *minimal polynomial* in $k[x]$ for $T$.
 
-### b 
+b. 
 Define the *characteristic polynomial* for $T$.
 
-### c 
+c. 
 Prove the Cayley-Hamilton theorem: the linear transformation $T$ satisfies its characteristic polynomial.
 
 ## $\star$ Spring 2020 #8 $\work$
@@ -3942,13 +4308,13 @@ A=\left(\begin{array}{ccccc}
 \end{array}\right)
 .\]
 
-### a 
+a. 
 Find the invariant factors of $A$.
 
-### b 
+b. 
 Express $V$ in terms of a direct sum of indecomposable $\CC[x]\dash$modules.
 
-### c
+c.
 Find the Jordan canonical form of $A$.
 
 
@@ -3987,14 +4353,14 @@ A=\left[\begin{array}{ccc}
 \end{array}\right] \in M_{3}(\mathrm{C})
 .\]
 
-### a
+a.
 Find the Jordan canonical form $J$ of $A$.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
 You should not need to compute $P\inv$.
 
-### c
+c.
 Write down the minimal polynomial of $A$.
 
 ## Spring 2019 #7 $\done$ 
@@ -4004,25 +4370,43 @@ entries except 0 on the main diagonal.
 
 Determine the Jordan canonical form (JCF) of $A$
 
-### a 
+a. 
 When $F = \QQ$,
 
-### b
+b.
 When $F = \FF_p$.
 
 > Hint: In both cases, all eigenvalues lie in the ground field. In each case find a
 matrix $P$ such that $P\inv AP$ is in JCF.
 
 
+:::{.strategy}
+\envlist
+
+- Work with matrix of all ones instead.
+- Eyeball eigenvectors.
+- Coefficients in minimal polynomial: size of largest Jordan block
+- Dimension of eigenspace: number of Jordan blocks
+:::
+
+
 :::{.solution}
 
-> Work with matrix of all ones instead.
-> Eyeball eigenvectors.
-> Coefficients in minimal polynomial: size of largest Jordan block
-> Dimension of eigenspace: number of Jordan blocks
 
-### a
+\envlist
+:::{.concept}
+\envlist
 
+- Todo
+:::
+
+
+:::{.strategy}
+We can always read off the *characteristic* polynomial from the spectrum.
+:::
+
+
+:::{.proof title="of a"}
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
 
 - Noting that $B = A+I$, we have
@@ -4037,47 +4421,19 @@ Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in e
 
 - We proceed by finding $p$ eigenvectors and eigenvalues, since the JCF and minimal polynomials will involve eigenvalues and the transformation matrix will involve (generalized) eigenvectors.
 
-- Claim: each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
-  - Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
-  - So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
-  - Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
-  - These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
-  \[
-  \det 
-\begin{bmatrix}
-1 & 1 & 1 & \cdots & 1\\
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
-= (1) \cdot \det 
-\begin{bmatrix}
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
- = (-1)^{p-2} \neq 0
-.\]
+:::{.claim title="1"}
+Each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
+:::
 
-  where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
-
-- Claim: $\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
-  - Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
-  - $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
-
+:::{.claim title="2"}
+$\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
+:::
 
 - Using that the eigenvalues of $A$ are $1+\lambda_i$ for $\lambda_i$ the above eigenvalues for $B$,
 \[
 \spec(B) \definedas \theset{(\lambda_i, m_i)} &=  \theset{(p, 1), (0, p-1)}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
 \implies \spec(A) &= \theset{(p-1,1), (-1, p-1) }  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
 \]
-
-> Note: we can always read off the *characteristic* polynomial from the spectrum.
-
 
 - The dimensions of eigenspaces are preserved, thus
 \[
@@ -4109,8 +4465,50 @@ P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 \end{array}\right]
 .\]
 
-### b
+:::
 
+:::{.proof title="of claim 1"}
+\envlist
+
+- Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
+- So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
+- Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
+- These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
+\[
+\det 
+\begin{bmatrix}
+1 & 1 & 1 & \cdots & 1\\
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+&= (1) \cdot \det 
+\begin{bmatrix}
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+\\
+&= (-1)^{p-2} \neq 0
+.\]
+
+where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
+
+:::
+
+:::{.proof title="of claim 2"}
+\envlist
+
+- Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
+- $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
+
+:::
+
+:::{.proof title="of b"}
 For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
 
 - A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
@@ -4166,7 +4564,7 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 \end{array}\right]
 .\]
 
-
+:::
 
 :::
 
@@ -4176,10 +4574,10 @@ Let
 A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-4}\end{array}\right] \in M_{3}(\mathbb{C})
 \]
 
-### a 
+a. 
 Find the Jordan canonical form J of A.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
 > You should not need to compute $P\inv$.
@@ -4187,10 +4585,10 @@ Find an invertible matrix $P$ such that $P\inv AP = J$.
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
 
-### a
+a.
 What is the Jordan canonical form of $A$, viewed as a matrix in $M_n(\CC)$?
 
-### b
+b.
 Find a nonzero matrix $P\in M_n(\CC)$ such that $P\inv A P$ is in Jordan canonical form.
 
 ## Spring 2016 #1 $\work$
@@ -4203,10 +4601,10 @@ A=\left(\begin{array}{ccc}
 \end{array}\right) \in M_{3}(\mathrm{C})
 .\]
 
-### a
+a.
 Find the Jordan canonical form $J$ of $A$.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv A P = J$.
 You do not need to compute $P\inv$.
 
@@ -4231,10 +4629,10 @@ Determine all possible Jordan forms of $T$.
 ## Spring 2013 #5 $\work$
 Let $T: V\to V$ be a linear map from a 5-dimensional $\CC\dash$vector space to itself and suppose $f(T) = 0$ where $f(x) = x^2 + 2x + 1$.
 
-### a
+a.
 Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there *does* exist a vector $w\in V$ such that $T^2 w= w$.
 
-### b
+b.
 Give all of the possible Jordan canonical forms of $T$.
 
 ## Spring 2021 #1 $\work$

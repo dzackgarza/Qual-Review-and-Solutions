@@ -41,7 +41,7 @@ Prove that $m = k$.
 :::{.concept}
 \envlist
 
-- Theorem: $F\units$ is always cyclic for $F$ a field
+- Theorem: $F\units$ is always cyclic for $F$ a field.
 
 :::
 
@@ -113,7 +113,7 @@ How many subfields are there of $\QQ(\zeta_{20} )$?
 
 - **Normal (if separable)**: Splitting field of an irreducible polynomial.
 
-- Definition: $\zeta$ is a primitive root of unity iff $o(\zeta) = n$ in $F\units$.
+- $\zeta$ is a primitive root of unity $\iff o(\zeta) = n$ in $\FF\units$.
  
 - $\phi(p^k) = p^{k-1}(p-1)$
 
@@ -229,12 +229,11 @@ Since $\rho$ is a ring morphism, we have
 
 :::{.proof title="of b"}
 
-
 :::{.claim}
 $\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
 :::
 
-$\implies$:
+:::{.proof title="of claim, $\implies$"}
 Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
 Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
 
@@ -247,11 +246,15 @@ n &= [L: \FF_p] \\
 
 for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
 
-\
+:::
 
+:::{.proof title="of claim, $\impliedby$"}
 $\impliedby$:
 If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
 So $f = f_i$ for some $i$.
+
+:::
+
 :::
 
 :::
@@ -278,7 +281,12 @@ What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 - $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
   - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
 - $\deg \Phi_n(x) = \phi(n)$
-- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ (proof: for a nontrivial gcd, the possibilities are $p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p$.)
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
+  - Proof: for a nontrivial gcd, the possibilities are 
+  \[
+  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+  .\]
+
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
 :::
@@ -348,19 +356,27 @@ If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
 :::{.solution}
 
+
+\envlist
+:::{.concept}
+\envlist
+
+- Every quadratic extension over $\QQ$ is Galois.
+:::
+
+
 Let $L/K/F$.
 
-a.
-
+:::{.proof title="of a"}
 **False**: 
 Take $L/K/F = \QQ(\zeta_2, \sqrt[3] 2) \to \QQ(\sqrt[3] 2) \to \QQ$.
 
 Then $L/F$ is Galois, since it is the splitting field of $x^3 - 2$ and $\QQ$ has characteristic zero.
 
 But $K/F$ is not Galois, since it is not the splitting field of any irreducible polynomial.
+:::
 
-b.
-
+:::{.proof title="of b"}
 **True**: 
 If $L/F$ is Galois, then $L/K$ is normal and separable:
 
@@ -368,13 +384,17 @@ If $L/F$ is Galois, then $L/K$ is normal and separable:
 
 - $L/K$ is separable, since $F[x] \subseteq K[x]$, and so if $\alpha \in L$ where $f(x) \definedas \min(\alpha, F)$ has no repeated factors, then $f'(x) \definedas \min(\alpha, K)$ divides $f$ and thus can not have repeated factors.
 
-c.
 
+:::
+
+:::{.proof title="of c"}
 **False**: 
 Use the fact that every quadratic extension is Galois, and take $L/K/F = \QQ(\sqrt[4] 2) \to \QQ(\sqrt 2) \to \QQ$.
 
 Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ is not the splitting field of any polynomial (noting that it does not split $x^4 - 2$ completely.)
 
+
+:::
 
 :::
 
@@ -393,6 +413,15 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
 :::{.solution}
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+
+:::
+
 
 :::{.proof title="of a"}
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
@@ -496,7 +525,9 @@ $$
 :::{.concept}
 \envlist
 
-Moral: $H_1 \intersect H_2 \iff E_1 E_2$, $H_1 H_2 \iff E_1 \intersect E_2$.
+- The rough correspondence:
+  - $H_1 \intersect H_2 \mapstofrom E_1 E_2$, 
+  - $H_1 H_2 \mapstofrom E_1 \intersect E_2$.
 :::
 
 :::{.proof title="of a"}
@@ -518,24 +549,29 @@ so $\sigma$ fixes $E_1 E_2$.
 :::{.proof title="of b"}
 That $H_1 H_2 \subseteq G$ is clear, since if $\sigma = \tau_1 \tau_2 \in H_1 H_2$, then each $\tau_i$ is an automorphism of $K$ that fixes $E_i \supseteq \QQ$, so each $\tau_i$ fixes $\QQ$ and thus $\sigma$ fixes $\QQ$.
 
-That it is a subgroup follows from the fact that elements commute. (?)
+:::{.claim}
+All elements in this subset commute.
+:::
+
+:::{.proof title="of claim"}
+\envlist
+
+- Let $\sigma = \sigma_1 \sigma_2 \in H_1 H_2$.
+
+- Note that $\sigma_1(e) = e$ for all $e\in E_1$ by definition, since $H_1$ fixes $E_1$, and $\sigma_2(e) \in E_1$ (?).
+
+- Then 
+  \[
+  \sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
+  \]
+  and substituting $e = \sigma_1(e)$ on the RHS yields
+  \[
+  \sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
+  ,\]
+  where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
+
+:::
  
-To see this, let $\sigma = \sigma_1 \sigma_2 \in H_1 H_2$.
-
-Note that $\sigma_1(e) = e$ for all $e\in E_1$ by definition, since $H_1$ fixes $E_1$, and $\sigma_2(e) \in E_1$ (?).
-
-Then 
-$$
-\sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
-$$  
-
-and substituting $e = \sigma_1(e)$ on the RHS yields
-
-\[
-\sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
-,\]
-
-where a similar proof holds for $e\in E_2$ and thus for arbitrary $x\in E_1 E_2$.
 
 
 :::
@@ -665,7 +701,7 @@ a.
 Let $G$ be a finite group.
 Show that there exists a field extension $K/F$ with $\gal(K/F) = G$.
 
-> You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
+  > You may assume that for any natural number $n$ there is a field extension with Galois group $S_n$.
 
 b.
 Let $K$ be a Galois extension of $F$ with $\abs{\gal(K/F)} = 12$.
@@ -732,7 +768,7 @@ Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 
 a.
 Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
 
-> Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
+  > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
 
 b.
 Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
@@ -762,12 +798,12 @@ b.
 Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
 Show that $N$ is normal in $G$ and $NH = G$.
 
-> Hint: what field is fixed by $NH$?
+  > Hint: what field is fixed by $NH$?
 
 c.
 Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
 
-> Equivalently, show it is the dihedral group of order 8.
+  > Equivalently, show it is the dihedral group of order 8.
 
 d.
 How many distinct quartic subfields of $K$ are there? 
@@ -847,10 +883,11 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 
 Let $L/K$ be a finite normal extension.
 
-- Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
+a.
+Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
 
-- Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
-
+b.
+Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
 
 ## Spring 2021 #4 $\work$
 

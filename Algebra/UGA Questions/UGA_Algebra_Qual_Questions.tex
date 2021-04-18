@@ -35,7 +35,6 @@
 
 
 
-\RenewEnviron{solution}{}% or \RenewEnviron{solution*}{\par}
 
 
 \begin{document}
@@ -72,28 +71,23 @@ that no other subgroup of \(G\) has the same order as \(H\).
 For a finite group \(G\), let \(c(G)\) denote the number of conjugacy
 classes of \(G\).
 
-\hypertarget{a}{%
-\subsubsection{a}\label{a}}
-
-Prove that if two elements of \(G\) are chosen uniformly at random,then
-the probability they commute is precisely
-\begin{align*}
-\frac{c(G)}{{\left\lvert {G} \right\rvert}}
-.\end{align*}
-
-\hypertarget{b}{%
-\subsubsection{b}\label{b}}
-
-State the class equation for a finite group.
-
-\hypertarget{c}{%
-\subsubsection{c}\label{c}}
-
-Using the class equation (or otherwise) show that the probability in
-part (a) is at most
-\begin{align*}
-\frac 1 2 + \frac 1 {2[G : Z(G)]}
-.\end{align*}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if two elements of \(G\) are chosen uniformly at
+  random,then the probability they commute is precisely
+  \begin{align*}
+  \frac{c(G)}{{\left\lvert {G} \right\rvert}}
+  .\end{align*}
+\item
+  State the class equation for a finite group.
+\item
+  Using the class equation (or otherwise) show that the probability in
+  part (a) is at most
+  \begin{align*}
+  \frac 1 2 + \frac 1 {2[G : Z(G)]}
+  .\end{align*}
+\end{enumerate}
 
 \begin{quote}
 Here, as usual, \(Z(G)\) denotes the center of \(G\).
@@ -101,7 +95,13 @@ Here, as usual, \(Z(G)\) denotes the center of \(G\).
 
 \begin{solution}
 
-Concepts Used:
+\envlist
+
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -115,10 +115,9 @@ Concepts Used:
   \({\left\lvert {G} \right\rvert} {\left\lvert {X/G} \right\rvert} = \sum {\left\lvert {X^g} \right\rvert}\).
 \end{itemize}
 
-\textbf{Solution}
+\end{concept}
 
-\hypertarget{a-1}{%
-\subsubsection{a}\label{a-1}}
+\begin{proof}[Part a]
 
 Strategy: Burnside.
 
@@ -190,24 +189,19 @@ Strategy: Burnside.
   .\end{align*}
 \end{itemize}
 
-\(\hfill\blacksquare\)
+\end{proof}
 
-\hypertarget{b-1}{%
-\subsubsection{b}\label{b-1}}
+\begin{proof}[Part b]
 
-Class equation:
+Statement of the class equation:
 \begin{align*}
 {\left\lvert {G} \right\rvert} = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \end{align*}
-
 where \(Z(x) = \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\}\).
 
-\hypertarget{c-1}{%
-\subsubsection{c}\label{c-1}}
+\end{proof}
 
-\begin{quote}
-Todo: revisit.
-\end{quote}
+\begin{proof}[Part c]
 
 As shown in part 1,
 \begin{align*}
@@ -248,6 +242,10 @@ n &\leq {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G \setminus Z
 &= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
 .\end{align*}
 
+\end{proof}
+
+\todo[inline]{Redo part c}
+
 \end{solution}
 
 \hypertarget{spring-2012-2-work}{%
@@ -258,17 +256,15 @@ Let \(G\) be a finite group and \(p\) a prime number such that there is
 a normal subgroup \(H{~\trianglelefteq~}G\) with
 \({\left\lvert {H} \right\rvert} = p^i > 1\).
 
-\hypertarget{a-2}{%
-\subsubsection{a}\label{a-2}}
-
-Show that \(H\) is a subgroup of any Sylow \(p{\hbox{-}}\)subgroup of
-\(G\).
-
-\hypertarget{b-2}{%
-\subsubsection{b}\label{b-2}}
-
-Show that \(G\) contains a nonzero abelian normal subgroup of order
-divisible by \(p\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(H\) is a subgroup of any Sylow \(p{\hbox{-}}\)subgroup of
+  \(G\).
+\item
+  Show that \(G\) contains a nonzero abelian normal subgroup of order
+  divisible by \(p\).
+\end{enumerate}
 
 \hypertarget{spring-2017-1-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#1
@@ -356,7 +352,7 @@ transposition and \(\sigma\) is a \(p{\hbox{-}}\)cycle.
 \(\work\)}{Fall 2019 Midterm \#5 \textbackslash work}}\label{fall-2019-midterm-5-work}}
 
 Let \(G\) be a nonabelian group of order \(p^3\) for \(p\) prime. Show
-that \(Z(G) = [G, G]\)
+that \(Z(G) = [G, G]\).
 
 \hypertarget{spring-2021-2-work}{%
 \subsection{\texorpdfstring{Spring 2021 \#2
@@ -376,13 +372,16 @@ center of \(G\).
 
 Let \(G\) be a finite group with \(n\) distinct conjugacy classes. Let
 \(g_1 \cdots g_n\) be representatives of the conjugacy classes of \(G\).
-
 Prove that if \(g_i g_j = g_j g_i\) for all \(i, j\) then \(G\) is
 abelian.
 
 \begin{solution}
 
-Concepts used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -407,17 +406,32 @@ Concepts used:
   .\end{align*}
 \end{itemize}
 
-\textbf{Solution}:
+\end{concept}
 
-\textbf{Claim 1}: \({\left\lvert {h^G} \right\rvert} = [G: Z(h)]\)
+\begin{claim}[1]
 
-\textbf{Claim 2}:
-\({\left\lvert {\left\{{H^g {~\mathrel{\Big|}~}g\in G}\right\}} \right\rvert} = [G: N_G(H)]\)
+\begin{align*}
+{\left\lvert {h^G} \right\rvert} = [G: Z(h)]
+.\end{align*}
+
+\end{claim}
+
+\begin{claim}[2]
+
+\begin{align*}
+{\left\lvert {\left\{{H^g {~\mathrel{\Big|}~}g\in G}\right\}} \right\rvert} = [G: N_G(H)]
+.\end{align*}
+
+\end{claim}
+
+\begin{proof}[?]
+
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
-  \emph{Proof:} Let
+  Let
   \(G\curvearrowright\left\{{H {~\mathrel{\Big|}~}H \leq G}\right\}\) by
   \(H \mapsto gHg^{-1}\).
 \item
@@ -428,13 +442,20 @@ Concepts used:
   then just take sizes.
 \end{itemize}
 
-\textbf{Claim 3:}
+\end{proof}
+
+\begin{claim}[3]
+
 \(\cup_{g\in G} H^g = \cup_{g\in G} gHg^{-1}\subsetneq G\) for any
 proper \(H \leq G\).
 
+\end{claim}
+
+\begin{proof}[?]
+
 \begin{itemize}
 \item
-  \emph{Proof:} By theorem 2, since each coset is of size
+  By theorem 2, since each coset is of size
   \({\left\lvert {H} \right\rvert}\), which only intersect at the
   identity, and there are exactly \([G: N_G(H)]\) of them
   \begin{align*}
@@ -477,6 +498,8 @@ proper \(H \leq G\).
   Then \(G\subseteq Z(G)\) and \(G\) is abelian.
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2019-midterm-2-work}{%
@@ -493,27 +516,19 @@ where \(N\) is the normalizer in \(G\).
 
 Let \(G\) be a group of order 30.
 
-\hypertarget{a-3}{%
-\subsubsection{a}\label{a-3}}
-
-Show that \(G\) has a subgroup of order 15.
-
-\hypertarget{b-3}{%
-\subsubsection{b}\label{b-3}}
-
-Show that every group of order 15 is cyclic.
-
-\hypertarget{c-2}{%
-\subsubsection{c}\label{c-2}}
-
-Show that \(G\) is isomorphic to some semidirect product
-\({\mathbb{Z}}_{15} \rtimes{\mathbb{Z}}_2\).
-
-\hypertarget{d}{%
-\subsubsection{d}\label{d}}
-
-Exhibit three nonisomorphic groups of order 30 and prove that they are
-not isomorphic. You are not required to use your answer to (c).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(G\) has a subgroup of order 15.
+\item
+  Show that every group of order 15 is cyclic.
+\item
+  Show that \(G\) is isomorphic to some semidirect product
+  \({\mathbb{Z}}_{15} \rtimes{\mathbb{Z}}_2\).
+\item
+  Exhibit three nonisomorphic groups of order 30 and prove that they are
+  not isomorphic. You are not required to use your answer to (c).
+\end{enumerate}
 
 \hypertarget{spring-2014-2-work}{%
 \subsection{\texorpdfstring{Spring 2014 \#2
@@ -522,32 +537,22 @@ not isomorphic. You are not required to use your answer to (c).
 Let \(G\subset S_9\) be a Sylow-3 subgroup of the symmetric group on 9
 letters.
 
-\hypertarget{a-4}{%
-\subsubsection{a}\label{a-4}}
-
-Show that \(G\) contains a subgroup \(H\) isomorphic to
-\({\mathbb{Z}}_3 \times{\mathbb{Z}}_3 \times{\mathbb{Z}}_3\) by
-exhibiting an appropriate set of cycles.
-
-\hypertarget{b-4}{%
-\subsubsection{b}\label{b-4}}
-
-Show that \(H\) is normal in \(G\).
-
-\hypertarget{c-3}{%
-\subsubsection{c}\label{c-3}}
-
-Give generators and relations for \(G\) as an abstract group, such that
-all generators have order 3.
-
-Also exhibit elements of \(S_9\) in cycle notation corresponding to
-these generators.
-
-\hypertarget{d-1}{%
-\subsubsection{d}\label{d-1}}
-
-Without appealing to the previous parts of the problem, show that \(G\)
-contains an element of order 9.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(G\) contains a subgroup \(H\) isomorphic to
+  \({\mathbb{Z}}_3 \times{\mathbb{Z}}_3 \times{\mathbb{Z}}_3\) by
+  exhibiting an appropriate set of cycles.
+\item
+  Show that \(H\) is normal in \(G\).
+\item
+  Give generators and relations for \(G\) as an abstract group, such
+  that all generators have order 3. Also exhibit elements of \(S_9\) in
+  cycle notation corresponding to these generators.
+\item
+  Without appealing to the previous parts of the problem, show that
+  \(G\) contains an element of order 9.
+\end{enumerate}
 
 \hypertarget{fall-2014-2-work}{%
 \subsection{\texorpdfstring{Fall 2014 \#2
@@ -555,95 +560,73 @@ contains an element of order 9.
 
 Let \(G\) be a group of order 96.
 
-\hypertarget{a-5}{%
-\subsubsection{a}\label{a-5}}
-
-Show that \(G\) has either one or three 2-Sylow subgroups.
-
-\hypertarget{b-5}{%
-\subsubsection{b}\label{b-5}}
-
-Show that either \(G\) has a normal subgroup of order 32, or a normal
-subgroup of order 16.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(G\) has either one or three 2-Sylow subgroups.
+\item
+  Show that either \(G\) has a normal subgroup of order 32, or a normal
+  subgroup of order 16.
+\end{enumerate}
 
 \hypertarget{spring-2016-3-work}{%
 \subsection{\texorpdfstring{Spring 2016 \#3
 \(\work\)}{Spring 2016 \#3 \textbackslash work}}\label{spring-2016-3-work}}
 
-\hypertarget{a-6}{%
-\subsubsection{a}\label{a-6}}
-
-State the three Sylow theorems.
-
-\hypertarget{b-6}{%
-\subsubsection{b}\label{b-6}}
-
-Prove that any group of order 1225 is abelian.
-
-\hypertarget{c-4}{%
-\subsubsection{c}\label{c-4}}
-
-Write down exactly one representative in each isomorphism class of
-abelian groups of order 1225.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  State the three Sylow theorems.
+\item
+  Prove that any group of order 1225 is abelian.
+\item
+  Write down exactly one representative in each isomorphism class of
+  abelian groups of order 1225.
+\end{enumerate}
 
 \hypertarget{spring-2017-2-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#2
 \(\work\)}{Spring 2017 \#2 \textbackslash work}}\label{spring-2017-2-work}}
 
-\hypertarget{a-7}{%
-\subsubsection{a}\label{a-7}}
-
-How many isomorphism classes of abelian groups of order 56 are there?
-Give a representative for one of each class.
-
-\hypertarget{b-7}{%
-\subsubsection{b}\label{b-7}}
-
-Prove that if \(G\) is a group of order 56, then either the Sylow-2
-subgroup or the Sylow-7 subgroup is normal.
-
-\hypertarget{c-5}{%
-\subsubsection{c}\label{c-5}}
-
-Give two non-isomorphic groups of order 56 where the Sylow-7 subgroup is
-normal and the Sylow-2 subgroup is \emph{not} normal. Justify that these
-two groups are not isomorphic.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  How many isomorphism classes of abelian groups of order 56 are there?
+  Give a representative for one of each class.
+\item
+  Prove that if \(G\) is a group of order 56, then either the Sylow-2
+  subgroup or the Sylow-7 subgroup is normal.
+\item
+  Give two non-isomorphic groups of order 56 where the Sylow-7 subgroup
+  is normal and the Sylow-2 subgroup is \emph{not} normal. Justify that
+  these two groups are not isomorphic.
+\end{enumerate}
 
 \hypertarget{fall-2017-2-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#2
 \(\work\)}{Fall 2017 \#2 \textbackslash work}}\label{fall-2017-2-work}}
 
-\hypertarget{a-8}{%
-\subsubsection{a}\label{a-8}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Classify the abelian groups of order 36.
 
-Classify the abelian groups of order 36.
-
-For the rest of the problem, assume that \(G\) is a non-abelian group of
-order 36.
-
-\begin{quote}
-You may assume that the only subgroup of order 12 in \(S_4\) is \(A_4\)
-and that \(A_4\) has no subgroup of order 6.
-\end{quote}
-
-\hypertarget{b-8}{%
-\subsubsection{b}\label{b-8}}
-
-Prove that if the 2-Sylow subgroup of \(G\) is normal, \(G\) has a
-normal subgroup \(N\) such that \(G/N\) is isomorphic to \(A_4\).
-
-\hypertarget{c-6}{%
-\subsubsection{c}\label{c-6}}
-
-Show that if \(G\) has a normal subgroup \(N\) such that \(G/N\) is
-isomorphic to \(A_4\) and a subgroup \(H\) isomorphic to \(A_4\) it must
-be the direct product of \(N\) and \(H\).
-
-\hypertarget{d-2}{%
-\subsubsection{d}\label{d-2}}
-
-Show that the dihedral group of order 36 is a non-abelian group of order
-36 whose Sylow-2 subgroup is not normal.
+  \begin{quote}
+  For the rest of the problem, assume that \(G\) is a non-abelian group
+  of order 36. You may assume that the only subgroup of order 12 in
+  \(S_4\) is \(A_4\) and that \(A_4\) has no subgroup of order 6.
+  \end{quote}
+\item
+  Prove that if the 2-Sylow subgroup of \(G\) is normal, \(G\) has a
+  normal subgroup \(N\) such that \(G/N\) is isomorphic to \(A_4\).
+\item
+  Show that if \(G\) has a normal subgroup \(N\) such that \(G/N\) is
+  isomorphic to \(A_4\) and a subgroup \(H\) isomorphic to \(A_4\) it
+  must be the direct product of \(N\) and \(H\).
+\item
+  Show that the dihedral group of order 36 is a non-abelian group of
+  order 36 whose Sylow-2 subgroup is not normal.
+\end{enumerate}
 
 \hypertarget{fall-2012-2-work}{%
 \subsection{\texorpdfstring{Fall 2012 \#2
@@ -651,20 +634,15 @@ Show that the dihedral group of order 36 is a non-abelian group of order
 
 Let \(G\) be a group of order 30.
 
-\hypertarget{a-9}{%
-\subsubsection{a}\label{a-9}}
-
-Show that \(G\) contains normal subgroups of orders 3, 5, and 15.
-
-\hypertarget{b-9}{%
-\subsubsection{b}\label{b-9}}
-
-Give all possible presentations and relations for \(G\).
-
-\hypertarget{c-7}{%
-\subsubsection{c}\label{c-7}}
-
-Determine how many groups of order 30 there are up to isomorphism.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(G\) contains normal subgroups of orders 3, 5, and 15.
+\item
+  Give all possible presentations and relations for \(G\).
+\item
+  Determine how many groups of order 30 there are up to isomorphism.
+\end{enumerate}
 
 \hypertarget{fall-2018-1-done}{%
 \subsection{\texorpdfstring{Fall 2018 \#1
@@ -674,21 +652,23 @@ Let \(G\) be a finite group whose order is divisible by a prime number
 \(p\). Let \(P\) be a normal \(p{\hbox{-}}\)subgroup of \(G\) (so
 \({\left\lvert {P} \right\rvert} = p^c\) for some \(c\)).
 
-\hypertarget{a-10}{%
-\subsubsection{a}\label{a-10}}
-
-Show that \(P\) is contained in every Sylow \(p{\hbox{-}}\)subgroup of
-\(G\).
-
-\hypertarget{b-10}{%
-\subsubsection{b}\label{b-10}}
-
-Let \(M\) be a maximal proper subgroup of \(G\). Show that either
-\(P \subseteq M\) or \(|G/M | = p^b\) for some \(b \leq c\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(P\) is contained in every Sylow \(p{\hbox{-}}\)subgroup of
+  \(G\).
+\item
+  Let \(M\) be a maximal proper subgroup of \(G\). Show that either
+  \(P \subseteq M\) or \(|G/M | = p^b\) for some \(b \leq c\).
+\end{enumerate}
 
 \begin{solution}
 
-Concepts Used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -698,13 +678,14 @@ Concepts Used:
   \({\left\lvert {HK} \right\rvert} = {\left\lvert {H} \right\rvert} {\left\lvert {K} \right\rvert} / {\left\lvert {H\cap K} \right\rvert}\).
 \item
   Lagrange's Theorem:
-  \(H\leq G \implies {\left\lvert {H} \right\rvert} \mathrel{\Big|}{\left\lvert {G} \right\rvert}\)
+  \(H\leq G \implies {\left\lvert {H} \right\rvert} \bigm|{\left\lvert {G} \right\rvert}\)
 \end{itemize}
 
-\textbf{Solution}
+\end{concept}
 
-\hypertarget{a-11}{%
-\subsubsection{a}\label{a-11}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -725,8 +706,11 @@ Concepts Used:
   .\end{align*}
 \end{itemize}
 
-\hypertarget{b-11}{%
-\subsubsection{b}\label{b-11}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -750,6 +734,8 @@ Concepts Used:
   where \(a\leq c \implies 0 \leq c-b \leq c\) so \(0\leq b \leq c\).
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2019-2-done}{%
@@ -759,36 +745,32 @@ Concepts Used:
 Let \(G\) be a group of order 105 and let \(P, Q, R\) be Sylow 3, 5, 7
 subgroups respectively.
 
-\hypertarget{a-12}{%
-\subsubsection{a}\label{a-12}}
-
-Prove that at least one of \(Q\) and \(R\) is normal in \(G\).
-
-\hypertarget{b-12}{%
-\subsubsection{b}\label{b-12}}
-
-Prove that \(G\) has a cyclic subgroup of order 35.
-
-\hypertarget{c-8}{%
-\subsubsection{c}\label{c-8}}
-
-Prove that both \(Q\) and \(R\) are normal in \(G\).
-
-\hypertarget{d-3}{%
-\subsubsection{d}\label{d-3}}
-
-Prove that if \(P\) is normal in \(G\) then \(G\) is cyclic.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that at least one of \(Q\) and \(R\) is normal in \(G\).
+\item
+  Prove that \(G\) has a cyclic subgroup of order 35.
+\item
+  Prove that both \(Q\) and \(R\) are normal in \(G\).
+\item
+  Prove that if \(P\) is normal in \(G\) then \(G\) is cyclic.
+\end{enumerate}
 
 \begin{solution}
 
-Relevant Concepts:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \item
   The \(pqr\) theorem.
 \item
   Sylow 3: \({\left\lvert {G} \right\rvert} = p^n m\) implies
-  \(n_p \mathrel{\Big|}m\) and \(n_p \cong 1 \pmod p\).
+  \(n_p \bigm|m\) and \(n_p \cong 1 \pmod p\).
 \item
   \textbf{Theorem}: If \(H, K \leq G\) and any of the following
   conditions hold, \(HK\) is a subgroup:
@@ -818,21 +800,20 @@ Relevant Concepts:
   Any subgroups of coprime order intersect trivially?
 \end{itemize}
 
-\textbf{Solution}
+\end{concept}
 
-\hypertarget{a-13}{%
-\subsubsection{a}\label{a-13}}
+\begin{proof}[of 1]
 
 We have
 
 \begin{itemize}
 \tightlist
 \item
-  \(n_3 \mathrel{\Big|}5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)
+  \(n_3 \bigm|5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)
 \item
-  \(n_5 \mathrel{\Big|}3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)
+  \(n_5 \bigm|3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)
 \item
-  \(n_7 \mathrel{\Big|}3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)
+  \(n_7 \bigm|3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)
 \end{itemize}
 
 Thus
@@ -848,10 +829,9 @@ Toward a contradiction, if \(n_5\neq 1\) and \(n_7 \neq 1\), then
 using the fact that Sylow \(p{\hbox{-}}\)subgroups for distinct primes
 \(p\) intersect trivially (?).
 
-\hypertarget{b-13}{%
-\subsubsection{b}\label{b-13}}
+\end{proof}
 
-\todo[inline]{Not finished!}
+\begin{proof}[of 2]
 
 By (a), either \(Q\) or \(R\) is normal. Thus \(QR \leq G\) is a
 subgroup, and it has order
@@ -860,8 +840,11 @@ subgroup, and it has order
 By the \(pqr\) theorem, since \(5\) does not divide \(7-1=6\), \(QR\) is
 cyclic.
 
-\hypertarget{c-9}{%
-\subsubsection{c}\label{c-9}}
+\end{proof}
+
+\todo[inline]{Part (b) not finished!}
+
+\begin{proof}[of 3]
 
 We want to show \(Q, R{~\trianglelefteq~}G\), so we proceed by showing
 \(\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}\), which is
@@ -911,8 +894,9 @@ Now both cases lead to contradictions:
   .\end{align*}
 \end{itemize}
 
-\hypertarget{d-4}{%
-\subsubsection{d}\label{d-4}}
+\end{proof}
+
+\begin{proof}[of 4]
 
 Suppose \(P\) is normal and recall
 \({\left\lvert {P} \right\rvert} = 3, {\left\lvert {Q} \right\rvert} = 5, {\left\lvert {R} \right\rvert} = 7\).
@@ -936,6 +920,8 @@ We thus have an internal direct product
 G \cong P\times Q \times R \cong {\mathbb{Z}}_3 \times{\mathbb{Z}}_5 \times{\mathbb{Z}}_7 \cong {\mathbb{Z}}_{105}
 .\end{align*}
 by the Chinese Remainder Theorem, which is cyclic.
+
+\end{proof}
 
 \end{solution}
 
@@ -993,20 +979,18 @@ Let \(G\) be a group of order 60 whose Sylow 3-subgroup is normal.
 
 Let \(G\) be a finite group and \(X\) a set on which \(G\) acts.
 
-\hypertarget{a-14}{%
-\subsubsection{a}\label{a-14}}
-
-Let \(x\in X\) and
-\(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
-Show that \(G_x\) is a subgroup of \(G\).
-
-\hypertarget{b-14}{%
-\subsubsection{b}\label{b-14}}
-
-Let \(x\in X\) and
-\(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
-Prove that there is a bijection between elements in \(G\cdot x\) and the
-left cosets of \(G_x\) in \(G\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(x\in X\) and
+  \(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
+  Show that \(G_x\) is a subgroup of \(G\).
+\item
+  Let \(x\in X\) and
+  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
+  Prove that there is a bijection between elements in \(G\cdot x\) and
+  the left cosets of \(G_x\) in \(G\).
+\end{enumerate}
 
 \hypertarget{fall-2015-2-work}{%
 \subsection{\texorpdfstring{Fall 2015 \#2
@@ -1029,18 +1013,16 @@ Let \(G\) be a finite group acting on a set \(X\). For \(x\in X\), let
 \(G_x\) be the stabilizer of \(x\) and \(G\cdot x\) be the orbit of
 \(x\).
 
-\hypertarget{a-15}{%
-\subsubsection{a}\label{a-15}}
-
-Prove that there is a bijection between the left cosets \(G/G_x\) and
-\(G\cdot x\).
-
-\hypertarget{b-15}{%
-\subsubsection{b}\label{b-15}}
-
-Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
-nontrivial by considering that action of \(G\) on \(X=G\) by
-conjugation.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that there is a bijection between the left cosets \(G/G_x\) and
+  \(G\cdot x\).
+\item
+  Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
+  nontrivial by considering that action of \(G\) on \(X=G\) by
+  conjugation.
+\end{enumerate}
 
 \hypertarget{fall-2017-1-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#1
@@ -1052,51 +1034,48 @@ from \(G\) to \(\operatorname{Sym}(A)\) which gives the action is
 trivial) and transitive (for all \(a, b\) in \(A\), there exists \(g\)
 in \(G\) such that \(g \cdot a = b\).)
 
-\hypertarget{a-16}{%
-\subsubsection{a}\label{a-16}}
-
-For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
-Prove that for any \(a \in A\),
-\begin{align*}
-\bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
-.\end{align*}
-
-\hypertarget{b-16}{%
-\subsubsection{b}\label{b-16}}
-
-Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
-every abelian transitive subgroup of \(S_n\) has order \(n\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
+  Prove that for any \(a \in A\),
+  \begin{align*}
+  \bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
+  .\end{align*}
+\item
+  Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
+  every abelian transitive subgroup of \(S_n\) has order \(n\).
+\end{enumerate}
 
 \hypertarget{fall-2018-2-done}{%
 \subsection{\texorpdfstring{Fall 2018 \#2
 \(\done\)}{Fall 2018 \#2 \textbackslash done}}\label{fall-2018-2-done}}
 
-\hypertarget{a-17}{%
-\subsubsection{a}\label{a-17}}
-
-Suppose the group \(G\) acts on the set \(X\) . Show that the
-stabilizers of elements in the same orbit are conjugate.
-
-\hypertarget{b-17}{%
-\subsubsection{b}\label{b-17}}
-
-Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
-that the union of the conjugates of \(H\) is strictly smaller than
-\(G\), i.e.
-\begin{align*}
-\bigcup_{g\in G} gHg^{-1}\subsetneq G
-\end{align*}
-
-\hypertarget{c-10}{%
-\subsubsection{c}\label{c-10}}
-
-Suppose \(G\) is a finite group acting transitively on a set \(S\) with
-at least 2 elements. Show that there is an element of \(G\) with no
-fixed points in \(S\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose the group \(G\) acts on the set \(X\) . Show that the
+  stabilizers of elements in the same orbit are conjugate.
+\item
+  Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
+  that the union of the conjugates of \(H\) is strictly smaller than
+  \(G\), i.e.
+  \begin{align*}
+  \bigcup_{g\in G} gHg^{-1}\subsetneq G
+  \end{align*}
+\item
+  Suppose \(G\) is a finite group acting transitively on a set \(S\)
+  with at least 2 elements. Show that there is an element of \(G\) with
+  no fixed points in \(S\).
+\end{enumerate}
 
 \begin{solution}
 
-Concepts used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1125,10 +1104,11 @@ Concepts used:
   \end{itemize}
 \end{itemize}
 
-\textbf{Solution}
+\end{concept}
 
-\hypertarget{a-18}{%
-\subsubsection{a}\label{a-18}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1152,8 +1132,9 @@ Concepts used:
 
 so every \(h\in G\cdot x\) is conjugate to some element in \(G_y\).
 
-\hypertarget{b-18}{%
-\subsubsection{b}\label{b-18}}
+\end{proof}
+
+\begin{proof}[of b]
 
 Let \(G\) act on its subgroups by conjugation,
 
@@ -1191,8 +1172,11 @@ Let \(G\) act on its subgroups by conjugation,
   .\end{align*}
 \end{itemize}
 
-\hypertarget{c-11}{%
-\subsubsection{c}\label{c-11}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1218,6 +1202,8 @@ Let \(G\) act on its subgroups by conjugation,
   \(g\in G\), i.e.~\(g\) has no fixed points in \(X\).
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{groups-classification}{%
@@ -1227,21 +1213,16 @@ Let \(G\) act on its subgroups by conjugation,
 \subsection{\texorpdfstring{Spring 2020 \#1
 \(\work\)}{Spring 2020 \#1 \textbackslash work}}\label{spring-2020-1-work}}
 
-\hypertarget{a-19}{%
-\subsubsection{a}\label{a-19}}
-
-Show that any group of order 2020 is solvable.
-
-\hypertarget{a-20}{%
-\subsubsection{a}\label{a-20}}
-
-Give (without proof) a classification of all abelian groups of order
-2020.
-
-\hypertarget{c-12}{%
-\subsubsection{c}\label{c-12}}
-
-Describe one nonabelian group of order 2020.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that any group of order 2020 is solvable.
+\item
+  Give (without proof) a classification of all abelian groups of order
+  2020.
+\item
+  Describe one nonabelian group of order 2020.
+\end{enumerate}
 
 \todo[inline]{Work this problem.}
 
@@ -1255,7 +1236,11 @@ Describe a representative from each class.
 
 \begin{solution}
 
-Concepts used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1264,33 +1249,32 @@ Concepts used:
 \item
   \(n_p \cong 1 \pmod p\)
 \item
-  \(n_p \mathrel{\Big|}m\).
+  \(n_p \bigm|m\).
 \end{itemize}
 
-\textbf{Solution}
-
-It turns out that \(n_3 = 1\) and \(n_5 = 1\), so
-\(G \cong S_3 \times S_5\) since both subgroups are normal.
-
-There is only one possibility for \(S_5\), namely
-\(S_5\cong {\mathbb{Z}}/(5)\).
-
-There are two possibilities for \(S_3\), namely
-\(S_3 \cong {\mathbb{Z}}/(3^2)\) and \({\mathbb{Z}}/(3)^2\).
-
-Thus
+\end{concept}
 
 \begin{itemize}
-\tightlist
+\item
+  It turns out that \(n_3 = 1\) and \(n_5 = 1\), so
+  \(G \cong S_3 \times S_5\) since both subgroups are normal.
+\item
+  There is only one possibility for \(S_5\), namely
+  \(S_5\cong {\mathbb{Z}}/(5)\).
+\item
+  There are two possibilities for \(S_3\), namely
+  \(S_3 \cong {\mathbb{Z}}/(3^2)\) and \({\mathbb{Z}}/(3)^2\).
+\item
+  Thus
 \item
   \(G \cong {\mathbb{Z}}/(9) \times{\mathbb{Z}}/(5)\), or
 \item
   \(G \cong {\mathbb{Z}}/(3)^2 \times{\mathbb{Z}}/(5)\).
 \end{itemize}
 
-\todo[inline]{Revisit, seems short.}
-
 \end{solution}
+
+\todo[inline]{Revisit, seems short.}
 
 \hypertarget{spring-2012-3-work}{%
 \subsection{\texorpdfstring{Spring 2012 \#3
@@ -1298,16 +1282,14 @@ Thus
 
 Let \(G\) be a group of order 70.
 
-\hypertarget{a-21}{%
-\subsubsection{a}\label{a-21}}
-
-Show that \(G\) is not simple.
-
-\hypertarget{a-22}{%
-\subsubsection{a}\label{a-22}}
-
-Exhibit 3 nonisomorphic groups of order 70 and prove that they are not
-isomorphic.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(G\) is not simple.
+\item
+  Exhibit 3 nonisomorphic groups of order 70 and prove that they are not
+  isomorphic.
+\end{enumerate}
 
 \hypertarget{fall-2016-3-work}{%
 \subsection{\texorpdfstring{Fall 2016 \#3
@@ -1320,32 +1302,30 @@ How many groups are there up to isomorphism of order \(pq\) where
 \subsection{\texorpdfstring{Spring 2018 \#1
 \(\done\)}{Spring 2018 \#1 \textbackslash done}}\label{spring-2018-1-done}}
 
-\hypertarget{a-23}{%
-\subsubsection{a}\label{a-23}}
-
-Use the Class Equation (equivalently, the conjugation action of a group
-on itself) to prove that any \(p{\hbox{-}}\)group (a group whose order
-is a positive power of a prime integer \(p\)) has a nontrivial center.
-
-\hypertarget{b-19}{%
-\subsubsection{b}\label{b-19}}
-
-Prove that any group of order \(p^2\) (where \(p\) is prime) is abelian.
-
-\hypertarget{c-13}{%
-\subsubsection{c}\label{c-13}}
-
-Prove that any group of order \(5^2 \cdot 7^2\) is abelian.
-
-\hypertarget{d-5}{%
-\subsubsection{d}\label{d-5}}
-
-Write down exactly one representative in each isomorphism class of
-groups of order \(5^2 \cdot 7^2\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Use the Class Equation (equivalently, the conjugation action of a
+  group on itself) to prove that any \(p{\hbox{-}}\)group (a group whose
+  order is a positive power of a prime integer \(p\)) has a nontrivial
+  center.
+\item
+  Prove that any group of order \(p^2\) (where \(p\) is prime) is
+  abelian.
+\item
+  Prove that any group of order \(5^2 \cdot 7^2\) is abelian.
+\item
+  Write down exactly one representative in each isomorphism class of
+  groups of order \(5^2 \cdot 7^2\).
+\end{enumerate}
 
 \begin{solution}
 
-Concepts Used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -1356,9 +1336,6 @@ Concepts Used:
   \({\left\lvert {G} \right\rvert} = {\left\lvert {Z(G)} \right\rvert} + \sum [G: C_G(x_i)]\)
 \item
   \(G/Z(G)\) cyclic \(\iff G\) is abelian.
-
-  \begin{quote}
-  \emph{Proof:}
   \begin{align*}
   G/Z(G) = \left\langle{xZ}\right\rangle 
   &\iff g\in G \implies gZ = x^mZ \\
@@ -1366,15 +1343,15 @@ Concepts Used:
   &\iff g = x^m z {\quad \operatorname{for some} \quad}z\in Z\\
   &\implies gh = x^mz_1 x^n z_2 = x^n z_2 x^m z_1 = hg
   .\end{align*}
-  \end{quote}
 \item
   Every group of order \(p^2\) is abelian.
 \item
   Classification of finite abelian groups.
 \end{itemize}
 
-\hypertarget{a-24}{%
-\subsubsection{a}\label{a-24}}
+\end{concept}
+
+\begin{proof}[of a]
 
 Strategy: get \(p\) to divide \({\left\lvert {Z(G)} \right\rvert}\).
 
@@ -1416,8 +1393,9 @@ Strategy: get \(p\) to divide \({\left\lvert {Z(G)} \right\rvert}\).
   \({\left\lvert {Z(G)} \right\rvert} \geq p\).
 \end{itemize}
 
-\hypertarget{b-20}{%
-\subsubsection{b}\label{b-20}}
+\end{proof}
+
+\begin{proof}[of b]
 
 Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
 
@@ -1432,8 +1410,11 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
   by (a).
 \end{itemize}
 
-\hypertarget{c-14}{%
-\subsubsection{c}\label{c-14}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -1442,9 +1423,9 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
   \begin{itemize}
   \tightlist
   \item
-    \(n_5 \mathrel{\Big|}7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)
+    \(n_5 \bigm|7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)
   \item
-    \(n_7 \mathrel{\Big|}5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)
+    \(n_7 \bigm|5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)
   \end{itemize}
 \item
   By recognition of direct products, \(G = S_5 \times S_7\)
@@ -1467,11 +1448,13 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
   The direct product of abelian groups is abelian.
 \end{itemize}
 
-\hypertarget{d-6}{%
-\subsubsection{d}\label{d-6}}
+\end{proof}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\begin{proof}[of d]
+
+\envlist
+
+\begin{itemize}
 \tightlist
 \item
   \({\mathbb{Z}}_{5^2} \times{\mathbb{Z}}_{7^2}\)
@@ -1481,7 +1464,9 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
   \({\mathbb{Z}}_{5^2} \times{\mathbb{Z}}_{7}^2\)
 \item
   \({\mathbb{Z}}_{5}^2 \times{\mathbb{Z}}_{7}^2\)
-\end{enumerate}
+\end{itemize}
+
+\end{proof}
 
 \end{solution}
 
@@ -1492,15 +1477,13 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
 \subsection{\texorpdfstring{\(\star\) Fall 2016 \#7
 \(\work\)}{\textbackslash star Fall 2016 \#7 \textbackslash work}}\label{star-fall-2016-7-work}}
 
-\hypertarget{a-25}{%
-\subsubsection{a}\label{a-25}}
-
-Define what it means for a group \(G\) to be \emph{solvable}.
-
-\hypertarget{a-26}{%
-\subsubsection{a}\label{a-26}}
-
-Show that every group \(G\) of order 36 is solvable.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for a group \(G\) to be \emph{solvable}.
+\item
+  Show that every group \(G\) of order 36 is solvable.
+\end{enumerate}
 
 \begin{quote}
 Hint: you can use that \(S_4\) is solvable.
@@ -1513,32 +1496,27 @@ Hint: you can use that \(S_4\) is solvable.
 Let \(N\) be a positive integer, and let \(G\) be a finite group of
 order \(N\).
 
-\hypertarget{a-27}{%
-\subsubsection{a}\label{a-27}}
-
-Let \(\operatorname{Sym}G\) be the set of all bijections from \(G\to G\)
-viewed as a group under composition. Note that
-\(\operatorname{Sym}G \cong S_N\). Prove that the Cayley map
-\begin{align*}
-C: G&\to \operatorname{Sym}G\\
-g &\mapsto (x\mapsto gx)
-\end{align*}
-is an injective homomorphism.
-
-\hypertarget{a-28}{%
-\subsubsection{a}\label{a-28}}
-
-Let \(\Phi: \operatorname{Sym}G\to S_N\) be an isomorphism. For
-\(a\in G\) define \(\varepsilon(a) \in \left\{{\pm 1}\right\}\) to be
-the sign of the permutation \(\Phi(C(a))\). Suppose that \(a\) has order
-\(d\). Prove that \(\varepsilon(a) = -1 \iff d\) is even and \(N/d\) is
-odd.
-
-\hypertarget{c-15}{%
-\subsubsection{c}\label{c-15}}
-
-Suppose \(N> 2\) and \(n\equiv 2 \pmod 4\). Prove that \(G\) is not
-simple.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(\operatorname{Sym}G\) be the set of all bijections from
+  \(G\to G\) viewed as a group under composition. Note that
+  \(\operatorname{Sym}G \cong S_N\). Prove that the Cayley map
+  \begin{align*}
+  C: G&\to \operatorname{Sym}G\\
+  g &\mapsto (x\mapsto gx)
+  \end{align*}
+  is an injective homomorphism.
+\item
+  Let \(\Phi: \operatorname{Sym}G\to S_N\) be an isomorphism. For
+  \(a\in G\) define \(\varepsilon(a) \in \left\{{\pm 1}\right\}\) to be
+  the sign of the permutation \(\Phi(C(a))\). Suppose that \(a\) has
+  order \(d\). Prove that \(\varepsilon(a) = -1 \iff d\) is even and
+  \(N/d\) is odd.
+\item
+  Suppose \(N> 2\) and \(n\equiv 2 \pmod 4\). Prove that \(G\) is not
+  simple.
+\end{enumerate}
 
 \begin{quote}
 Hint: use part (b).
@@ -1558,30 +1536,26 @@ integer \(m\geq k\), every group of order \(p^m n\) is not simple.
 
 Let \(p, q\) be distinct primes.
 
-\hypertarget{a-29}{%
-\subsubsection{a}\label{a-29}}
-
-Let
-\(\mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p\)
-be the class of \(q\pmod p\) and let \(k\) denote the order of
-\(\mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu\) as an
-element of \({\mathbb{Z}}_p^{\times}\).
-
-Prove that no group of order \(pq^k\) is simple.
-
-\hypertarget{a-30}{%
-\subsubsection{a}\label{a-30}}
-
-Let \(G\) be a group of order \(pq\), and prove that \(G\) is not
-simple.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let
+  \(\mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p\)
+  be the class of \(q\pmod p\) and let \(k\) denote the order of
+  \(\mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu\) as an
+  element of \({\mathbb{Z}}_p^{\times}\). Prove that no group of order
+  \(pq^k\) is simple.
+\item
+  Let \(G\) be a group of order \(pq\), and prove that \(G\) is not
+  simple.
+\end{enumerate}
 
 \hypertarget{spring-2013-4-work}{%
 \subsection{\texorpdfstring{Spring 2013 \#4
 \(\work\)}{Spring 2013 \#4 \textbackslash work}}\label{spring-2013-4-work}}
 
-Define a \emph{simple group}.
-
-Prove that a group of order 56 can not be simple.
+Define a \emph{simple group}. Prove that a group of order 56 can not be
+simple.
 
 \hypertarget{fall-2019-midterm-3-work}{%
 \subsection{\texorpdfstring{Fall 2019 Midterm \#3
@@ -1608,34 +1582,57 @@ Let \(R\) be a ring and \(f: M\to N\) and \(g: N\to M\) be
 Let \(R\) be a ring with the property that for every
 \(a \in R, a^2 = a\).
 
-\hypertarget{a-31}{%
-\subsubsection{a}\label{a-31}}
-
-Prove that \(R\) has characteristic 2.
-
-\hypertarget{b-21}{%
-\subsubsection{b}\label{b-21}}
-
-Prove that \(R\) is commutative.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(R\) has characteristic 2.
+\item
+  Prove that \(R\) is commutative.
+\end{enumerate}
 
 \begin{solution}
 
-\begin{quote}
-Just fiddling with computations. Context hints that we should be
-considering things like \(x^2\) and \(a+b\).
-\end{quote}
+\envlist
 
-\hypertarget{a-32}{%
-\subsubsection{a}\label{a-32}}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
+\begin{strategy}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Just fiddle with direct computations.
+\item
+  Context hint: that we should be considering things like \(x^2\) and
+  \(a+b\).
+\end{itemize}
+
+\end{strategy}
+
+\begin{proof}[of a]
 
 \begin{align*}
 2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
 .\end{align*}
-
 Note that this implies \(x = -x\) for all \(x\in R\).
 
-\hypertarget{b-22}{%
-\subsubsection{b}\label{b-22}}
+\end{proof}
+
+\begin{proof}[of b]
 
 \begin{align*}
 a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
@@ -1643,6 +1640,8 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 &\implies ab = -ba \\
 &\implies ab = ba \quad\text{by (a)}
 .\end{align*}
+
+\end{proof}
 
 \end{solution}
 
@@ -1653,87 +1652,123 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 Let \(R\) be a commutative ring with multiplicative identity. Assume
 Zorn's Lemma.
 
-\hypertarget{a-33}{%
-\subsubsection{a}\label{a-33}}
-
-Show that
-\begin{align*}
-N = \{r \in R \mathrel{\Big|}r^n = 0 \text{ for some } n > 0\}
-\end{align*}
-is an ideal which is contained in any prime ideal.
-
-\hypertarget{b-23}{%
-\subsubsection{b}\label{b-23}}
-
-Let \(r\) be an element of \(R\) not in \(N\). Let \(S\) be the
-collection of all proper ideals of \(R\) not containing any positive
-power of \(r\). Use Zorn's Lemma to prove that there is a prime ideal in
-\(S\).
-
-\hypertarget{c-16}{%
-\subsubsection{c}\label{c-16}}
-
-Suppose that \(R\) has exactly one prime ideal \(P\) . Prove that every
-element \(r\) of \(R\) is either nilpotent or a unit.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that
+  \begin{align*}
+  N = \{r \in R \mathrel{\Big|}r^n = 0 \text{ for some } n > 0\}
+  \end{align*}
+  is an ideal which is contained in any prime ideal.
+\item
+  Let \(r\) be an element of \(R\) not in \(N\). Let \(S\) be the
+  collection of all proper ideals of \(R\) not containing any positive
+  power of \(r\). Use Zorn's Lemma to prove that there is a prime ideal
+  in \(S\).
+\item
+  Suppose that \(R\) has exactly one prime ideal \(P\) . Prove that
+  every element \(r\) of \(R\) is either nilpotent or a unit.
+\end{enumerate}
 
 \begin{solution}
 
-\begin{quote}
-Prime ideal: \(\mathfrak{p}\) is prime iff
-\(ab \in \mathfrak{p} \implies a\in \mathfrak{p}\) or
-\(b\in \mathfrak{p}\). Silly fact: 0 is in every ideal!
+\envlist
 
-\textbf{Zorn's Lemma:} Given a poset, if every chain has an upper bound,
-then there is a maximal element. (Chain: totally ordered subset.)
+\begin{concept}
 
-\textbf{Corollary:} If \(S\subset R\) is multiplicatively closed with
-\(0\not\in S\) then
-\(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}J\cap S = \emptyset}\right\}\)
-has a maximal element. (TODO: PROVE)
+\envlist
 
-\textbf{Theorem:} If \(R\) is commutative, maximal \(\implies\) prime
-for ideals. (TODO: PROVE)
+\begin{itemize}
+\item
+  Prime ideal: \(\mathfrak{p}\) is prime iff
+  \(ab \in \mathfrak{p} \implies a\in \mathfrak{p}\) or
+  \(b\in \mathfrak{p}\).
+\item
+  Silly fact: 0 is in every ideal!
+\item
+  \textbf{Zorn's Lemma:} Given a poset, if every chain has an upper
+  bound, then there is a maximal element. (Chain: totally ordered
+  subset.)
+\item
+  \textbf{Corollary:} If \(S\subset R\) is multiplicatively closed with
+  \(0\not\in S\) then
+  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}J\cap S = \emptyset}\right\}\)
+  has a maximal element.
 
-\textbf{Theorem:} Non-units are contained in a maximal ideal. (See HW?)
-\end{quote}
+  \todo[inline]{Prove this}
+\item
+  \textbf{Theorem:} If \(R\) is commutative, maximal \(\implies\) prime
+  for ideals.
 
-\hypertarget{a-34}{%
-\subsubsection{a}\label{a-34}}
+  \todo[inline]{Prove this}
+\item
+  \textbf{Theorem:} Non-units are contained in a maximal ideal. (See
+  HW?)
+\end{itemize}
 
-Let \(\mathfrak{p}\) be prime and \(x\in N\). Then
-\(x^k = 0 \in \mathfrak{p}\) for some \(k\), and thus
-\(x^k = x x^{k-1} \in \mathfrak p\). Since \(\mathfrak p\) is prime,
-inductively we obtain \(x\in\mathfrak p\).
+\end{concept}
 
-\hypertarget{b-24}{%
-\subsubsection{b}\label{b-24}}
+\begin{proof}[of a]
 
-Let \(S = \left\{{r^k \mathrel{\Big|}k\in {\mathbb{N}}}\right\}\) be the
-set of positive powers of \(r\). Then \(S^2 \subseteq S\), since
-\(r^{k_1}r^{k_2} = r^{k_1+k_2}\) is also a positive power of \(r\), and
-\(0\not\in S\) since \(r\neq 0\) and \(r\not\in N\).
+\envlist
 
-By the corollary,
-\(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}I\cap S = \emptyset}\right\}\)
-has a maximal element \(\mathfrak{p}\).
+\begin{itemize}
+\tightlist
+\item
+  Let \(\mathfrak{p}\) be prime and \(x\in N\).
+\item
+  Then \(x^k = 0 \in \mathfrak{p}\) for some \(k\), and thus
+  \(x^k = x x^{k-1} \in \mathfrak p\).
+\item
+  Since \(\mathfrak p\) is prime, inductively we obtain
+  \(x\in\mathfrak p\).
+\end{itemize}
 
-Since \(R\) is commutative, \(\mathfrak{p}\) is prime.
+\end{proof}
 
-\hypertarget{c-17}{%
-\subsubsection{c}\label{c-17}}
+\begin{proof}[of b]
 
-Suppose \(R\) has a unique prime ideal \(\mathfrak{p}\).
+\envlist
 
-Suppose \(r\in R\) is not a unit, and toward a contradiction, suppose
-that \(r\) is also not nilpotent.
+\begin{itemize}
+\item
+  Let \(S = \left\{{r^k \mathrel{\Big|}k\in {\mathbb{N}}}\right\}\) be
+  the set of positive powers of \(r\).
+\item
+  Then \(S^2 \subseteq S\), since \(r^{k_1}r^{k_2} = r^{k_1+k_2}\) is
+  also a positive power of \(r\), and \(0\not\in S\) since \(r\neq 0\)
+  and \(r\not\in N\).
+\item
+  By the corollary,
+  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}I\cap S = \emptyset}\right\}\)
+  has a maximal element \(\mathfrak{p}\).
+\item
+  Since \(R\) is commutative, \(\mathfrak{p}\) is prime.
+\end{itemize}
 
-Since \(r\) is not a unit, \(r\) is contained in some maximal (and thus
-prime) ideal, and thus \(r \in \mathfrak{p}\).
+\end{proof}
 
-Since \(r\not\in N\), by (b) there is a maximal ideal \(\mathfrak{m}\)
-that avoids all positive powers of \(r\). Since \(\mathfrak{m}\) is
-prime, we must have \(\mathfrak{m} = \mathfrak{p}\). But then
-\(r\not\in \mathfrak{p}\), a contradiction.
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\item
+  Suppose \(R\) has a unique prime ideal \(\mathfrak{p}\).
+\item
+  Suppose \(r\in R\) is not a unit, and toward a contradiction, suppose
+  that \(r\) is also not nilpotent.
+\item
+  Since \(r\) is not a unit, \(r\) is contained in some maximal (and
+  thus prime) ideal, and thus \(r \in \mathfrak{p}\).
+\item
+  Since \(r\not\in N\), by (b) there is a maximal ideal \(\mathfrak{m}\)
+  that avoids all positive powers of \(r\). Since \(\mathfrak{m}\) is
+  prime, we must have \(\mathfrak{m} = \mathfrak{p}\). But then
+  \(r\not\in \mathfrak{p}\), a contradiction.
+\end{itemize}
+
+\end{proof}
 
 \end{solution}
 
@@ -1748,29 +1783,42 @@ Recall that \(x \in R\) is nilpotent iff \(xn = 0\) for some positive
 integer \(n\).
 \end{quote}
 
-\hypertarget{a-35}{%
-\subsubsection{a}\label{a-35}}
-
-Show that every proper ideal of \(R\) is contained within a maximal
-ideal.
-
-\hypertarget{b-25}{%
-\subsubsection{b}\label{b-25}}
-
-Let \(J(R)\) denote the intersection of all maximal ideals of \(R\).
-
-Show that \(x \in J(R) \iff 1 + rx\) is a unit for all \(r \in R\).
-
-\hypertarget{c-18}{%
-\subsubsection{c}\label{c-18}}
-
-Suppose now that \(R\) is finite. Show that in this case \(J(R)\)
-consists precisely of the nilpotent elements in R.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that every proper ideal of \(R\) is contained within a maximal
+  ideal.
+\item
+  Let \(J(R)\) denote the intersection of all maximal ideals of \(R\).
+  Show that \(x \in J(R) \iff 1 + rx\) is a unit for all \(r \in R\).
+\item
+  Suppose now that \(R\) is finite. Show that in this case \(J(R)\)
+  consists precisely of the nilpotent elements in R.
+\end{enumerate}
 
 \begin{solution}
 
-\hypertarget{a-36}{%
-\subsubsection{a}\label{a-36}}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\item
+  Definitions:
+  \begin{align*}
+  N(R) &\coloneqq\left\{{x\in R {~\mathrel{\Big|}~}x^n = 0 \text{ for some } n}\right\} \\
+  J(R) &\coloneqq\cap_{{\mathfrak{m}}\in \operatorname{mSpec}} {\mathfrak{m}}
+  .\end{align*}
+\item
+  Zorn's lemma: if \(P\) is a poset in which every chain has an upper
+  bound, \(P\) contains a maximal element.
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 Define the set of proper ideals
 \begin{align*}
@@ -1782,106 +1830,118 @@ which is a poset under set inclusion.
 Given a chain \(J_1 \subseteq \cdots\), there is an upper bound
 \(J \coloneqq\cup J_i\), so Zorn's lemma applies.
 
-\hypertarget{b-26}{%
-\subsubsection{b}\label{b-26}}
+\end{proof}
+
+\begin{proof}[of b, $\implies$]
 
 \(\implies\):
 
-We will show that \(x\in J(R) \implies 1+x \in R^{\times}\), from which
-the result follows by letting \(x=rx\).
+\begin{itemize}
+\item
+  We will show that \(x\in J(R) \implies 1+x \in R^{\times}\), from
+  which the result follows by letting \(x=rx\).
+\item
+  Let \(x\in J(R)\), so it is in every maximal ideal, and suppose toward
+  a contradiction that \(1+x\) is \textbf{not} a unit.
+\item
+  Then consider
+  \(I = \left\langle{1+x}\right\rangle {~\trianglelefteq~}R\). Since
+  \(1+x\) is not a unit, we can't write \(s(1+x) = 1\) for any
+  \(s\in R\), and so \(1 \not\in I\) and \(I\neq R\)
+\item
+  So \(I < R\) is proper and thus contained in some maximal proper ideal
+  \(\mathfrak{m} < R\) by part (1), and so we have
+  \(1+x \in \mathfrak{m}\). Since \(x\in J(R)\), \(x\in \mathfrak{m}\)
+  as well.
+\item
+  But then \((1+x) - x = 1 \in \mathfrak{m}\) which forces
+  \(\mathfrak{m} = R\).
+\end{itemize}
 
-Let \(x\in J(R)\), so it is in every maximal ideal, and suppose toward a
-contradiction that \(1+x\) is \textbf{not} a unit.
+\end{proof}
 
-Then consider
-\(I = \left\langle{1+x}\right\rangle {~\trianglelefteq~}R\). Since
-\(1+x\) is not a unit, we can't write \(s(1+x) = 1\) for any \(s\in R\),
-and so \(1 \not\in I\) and \(I\neq R\)
-
-So \(I < R\) is proper and thus contained in some maximal proper ideal
-\(\mathfrak{m} < R\) by part (1), and so we have
-\(1+x \in \mathfrak{m}\). Since \(x\in J(R)\), \(x\in \mathfrak{m}\) as
-well.
-
-But then \((1+x) - x = 1 \in \mathfrak{m}\) which forces
-\(\mathfrak{m} = R\).
+\begin{proof}[of b, $\impliedby$]
 
 \(\impliedby\)
 
-Fix \(x\in R\), and suppose \(1+rx\) is a unit for all \(r\in R\).
+\begin{itemize}
+\item
+  Fix \(x\in R\), and suppose \(1+rx\) is a unit for all \(r\in R\).
+\item
+  Suppose towards a contradiction that there is a maximal ideal
+  \(\mathfrak{m}\) such that \(x\not \in \mathfrak{m}\) and thus
+  \(x\not\in J(R)\).
+\item
+  Consider
+  \begin{align*}
+  M' \coloneqq\left\{{rx + m {~\mathrel{\Big|}~}r\in R,~ m\in M}\right\}
+  .\end{align*}
+\item
+  Since \(\mathfrak{m}\) was maximal, \(\mathfrak{m} \subsetneq M'\) and
+  so \(M' = R\).
+\item
+  So every element in \(R\) can be written as \(rx + m\) for some
+  \(r\in R, m\in M\). But \(1\in R\), so we have
+  \begin{align*}
+  1 = rx + m
+  .\end{align*}
+\item
+  So let \(s = -r\) and write \(1 = sx - m\), and so \(m = 1 + sx\).
+\item
+  Since \(s\in R\) by assumption \(1+sx\) is a unit and thus
+  \(m \in \mathfrak{m}\) is a unit, a contradiction.
+\item
+  So \(x\in \mathfrak{m}\) for every \(\mathfrak{m}\) and thus
+  \(x\in J(R)\).
+\end{itemize}
 
-Suppose towards a contradiction that there is a maximal ideal
-\(\mathfrak{m}\) such that \(x\not \in \mathfrak{m}\) and thus
-\(x\not\in J(R)\).
+\end{proof}
 
-Consider
-\begin{align*}
-M' \coloneqq\left\{{rx + m {~\mathrel{\Big|}~}r\in R,~ m\in M}\right\}
-.\end{align*}
+\begin{proof}[of c]
 
-Since \(\mathfrak{m}\) was maximal, \(\mathfrak{m} \subsetneq M'\) and
-so \(M' = R\).
-
-So every element in \(R\) can be written as \(rx + m\) for some
-\(r\in R, m\in M\). But \(1\in R\), so we have
-\begin{align*}
-1 = rx + m
-.\end{align*}
-
-So let \(s = -r\) and write \(1 = sx - m\), and so \(m = 1 + sx\).
-
-Since \(s\in R\) by assumption \(1+sx\) is a unit and thus
-\(m \in \mathfrak{m}\) is a unit, a contradiction.
-
-So \(x\in \mathfrak{m}\) for every \(\mathfrak{m}\) and thus
-\(x\in J(R)\).
-
-\hypertarget{c-19}{%
-\subsubsection{c}\label{c-19}}
-
-\begin{quote}
 \begin{itemize}
 \tightlist
 \item
-  \(\mathfrak N(R) = \left\{{x\in R {~\mathrel{\Big|}~}x^n = 0 \text{ for some } n}\right\}\).
-\item
-  \(J(R) = \operatorname{Spec}_{\text{max}}(R) = \displaystyle\cap_{{\mathfrak{m}}\text{ maximal}} {\mathfrak{m}}\).
+  We want to show \(J(R) = \mathfrak N(R)\).
 \end{itemize}
-\end{quote}
-
-We want to show \(J(R) = \mathfrak N(R)\).
 
 \(\mathfrak N(R) \subseteq J(R)\):
 
-We'll use the fact
-\(x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx\) is a unit
-\(\iff x\in J(R)\) by (b):
-\begin{align*}
-\sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)^{-1}
-.\end{align*}
+\begin{itemize}
+\item
+  We'll use the fact
+  \(x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx\) is a unit
+  \(\iff x\in J(R)\) by (b):
+  \begin{align*}
+  \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)^{-1}
+  .\end{align*}
+\item
+  \(J(R) \subseteq \mathfrak N(R)\):
+\item
+  Let \(x \in J(R) \setminus \mathfrak N(R)\).
+\item
+  Since \(R\) is finite, \(x^m = x\) for some \(m > 0\).
+\item
+  Without loss of generality, we can suppose \(x^2 = x\) by replacing
+  \(x^m\) with \(x^{2m}\).
+\item
+  If \(1-x\) is not a unit, then \(\left\langle{1-x}\right\rangle\) is a
+  nontrivial proper ideal, which by (a) is contained in some maximal
+  ideal \({\mathfrak{m}}\). But then \(x\in {\mathfrak{m}}\) and
+  \(1-x \in {\mathfrak{m}}\implies x + (1-x) = 1 \in {\mathfrak{m}}\), a
+  contradiction.
+\item
+  So \(1-x\) is a unit, so let \(u = (1-x)^{-1}\).
+\item
+  Then
+  \begin{align*}
+  (1-x)x &= x - x^2 = x - x = 0 \\
+  &\implies u (1-x)x = x = 0 \\
+  &\implies x=0
+  .\end{align*}
+\end{itemize}
 
-\(J(R) \subseteq \mathfrak N(R)\):
-
-Let \(x \in J(R) \setminus \mathfrak N(R)\).
-
-Since \(R\) is finite, \(x^m = x\) for some \(m > 0\). Without loss of
-generality, we can suppose \(x^2 = x\) by replacing \(x^m\) with
-\(x^{2m}\).
-
-If \(1-x\) is not a unit, then \(\left\langle{1-x}\right\rangle\) is a
-nontrivial proper ideal, which by (a) is contained in some maximal ideal
-\({\mathfrak{m}}\). But then \(x\in {\mathfrak{m}}\) and
-\(1-x \in {\mathfrak{m}}\implies x + (1-x) = 1 \in {\mathfrak{m}}\), a
-contradiction.
-
-So \(1-x\) is a unit, so let \(u = (1-x)^{-1}\).
-
-Then
-\begin{align*}
-(1-x)x &= x - x^2 = x - x = 0 \\
-&\implies u (1-x)x = x = 0 \\
-&\implies x=0
-.\end{align*}
+\end{proof}
 
 \end{solution}
 
@@ -1891,34 +1951,26 @@ Then
 
 Let \(R\) be a commutative ring.
 
-\hypertarget{a-37}{%
-\subsubsection{a}\label{a-37}}
-
-Let \(r \in R\). Show that the map
-\begin{align*}
-r\bullet : R &\to R \\
-x &\mapsto r x
-.\end{align*}
-is an \(R{\hbox{-}}\)module endomorphism of \(R\).
-
-\hypertarget{b-27}{%
-\subsubsection{b}\label{b-27}}
-
-We say that \(r\) is a \textbf{zero-divisor} if r\(\bullet\) is not
-injective. Show that if \(r\) is a zero-divisor and \(r \neq 0\), then
-the kernel and image of \(R\) each consist of zero-divisors.
-
-\hypertarget{c-20}{%
-\subsubsection{c}\label{c-20}}
-
-Let \(n \geq 2\) be an integer. Show: if \(R\) has exactly \(n\)
-zero-divisors, then \(\#R \leq n^2\) .
-
-\hypertarget{d-7}{%
-\subsubsection{d}\label{d-7}}
-
-Show that up to isomorphism there are exactly two commutative rings
-\(R\) with precisely 2 zero-divisors.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(r \in R\). Show that the map
+  \begin{align*}
+  r\bullet : R &\to R \\
+  x &\mapsto r x
+  .\end{align*}
+  is an \(R{\hbox{-}}\)module endomorphism of \(R\).
+\item
+  We say that \(r\) is a \textbf{zero-divisor} if \(r\bullet\) is not
+  injective. Show that if \(r\) is a zero-divisor and \(r \neq 0\), then
+  the kernel and image of \(R\) each consist of zero-divisors.
+\item
+  Let \(n \geq 2\) be an integer. Show: if \(R\) has exactly \(n\)
+  zero-divisors, then \(\#R \leq n^2\) .
+\item
+  Show that up to isomorphism there are exactly two commutative rings
+  \(R\) with precisely 2 zero-divisors.
+\end{enumerate}
 
 \begin{quote}
 You may use without proof the following fact: every ring of order 4 is
@@ -1933,8 +1985,24 @@ isomorphic to exactly one of the following:
 
 \begin{solution}
 
-\hypertarget{a-38}{%
-\subsubsection{a}\label{a-38}}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\item
+  See 1964 Annals ``Properties of rings with a finite number of zero
+  divisors''
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 Let \(\phi\) denote the map in question, it suffices to show that
 \(\phi\) is \(R{\hbox{-}}\)linear,
@@ -1948,110 +2016,133 @@ i.e.~\(\phi(s\mathbf{x} + \mathbf{y}) = s\phi(\mathbf{x}) + \phi(\mathbf{y})\):
 &= s\phi(\mathbf{x}) + \phi(\mathbf{y})
 .\end{align*}
 
-\hypertarget{b-28}{%
-\subsubsection{b}\label{b-28}}
+\end{proof}
 
-We identify
-\(\ker \phi = \left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\}\), and
-since \(r\neq 0\) by assumption, this implies each such \(x\) is a zero
-divisor by definition (and \(\ker \phi\) is nonempty by assumption).
+\begin{proof}[of b]
 
-Similarly, we identify
-\(\operatorname{im}\phi = \left\{{y = rx {~\mathrel{\Big|}~}x\in R}\right\}\).
-So let \(y\in \operatorname{im}\phi\). Since \(r\) is a zero divisor,
-there exists some \(z\in R\) such that \(rz = 0\).
+\envlist
 
-But then
-\begin{align*}
-yz = rxz = xrz = x\cdot 0 = 0
-\end{align*}
-since \(R\) is commutative, so \(y\) is a zero divisor.
+\begin{itemize}
+\item
+  We identify
+  \(\ker \phi = \left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\}\), and
+  since \(r\neq 0\) by assumption, this implies each such \(x\) is a
+  zero divisor by definition (and \(\ker \phi\) is nonempty by
+  assumption).
+\item
+  Similarly, we identify
+  \(\operatorname{im}\phi = \left\{{y = rx {~\mathrel{\Big|}~}x\in R}\right\}\).
+  So let \(y\in \operatorname{im}\phi\).
+\item
+  Since \(r\) is a zero divisor, there exists some \(z\in R\) such that
+  \(rz = 0\).
+\item
+  But then
+  \begin{align*}
+  yz = rxz = xrz = x\cdot 0 = 0
+  \end{align*}
+  since \(R\) is commutative, so \(y\) is a zero divisor.
+\end{itemize}
 
-\hypertarget{c-21}{%
-\subsubsection{c}\label{c-21}}
+\end{proof}
 
-\begin{quote}
-See 1964 Annals ``Properties of rings with a finite number of zero
-divisors''
-\end{quote}
+\begin{proof}[of c]
 
-Let \(Z \coloneqq\left\{{z_i}\right\}_{i=1}^n\) be the set of \(n\) zero
-divisors in \(R\). Let \(\phi_i\) be the \(n\) maps \(x \mapsto z_i x\),
-and let \(K_i = \ker \phi_i\) be the corresponding kernels.
+\envlist
 
-Fix an \(i\). By (b), \(K_i\) consists of zero divisors, so
-\begin{align*}
-{\left\lvert {K_i} \right\rvert} \leq n < \infty \quad \text{for each } i
-.\end{align*}
+\begin{itemize}
+\item
+  Let \(Z \coloneqq\left\{{z_i}\right\}_{i=1}^n\) be the set of \(n\)
+  zero divisors in \(R\).
+\item
+  Let \(\phi_i\) be the \(n\) maps \(x \mapsto z_i x\), and let
+  \(K_i = \ker \phi_i\) be the corresponding kernels.
+\item
+  Fix an \(i\).
+\item
+  By (b), \(K_i\) consists of zero divisors, so
+  \begin{align*}
+  {\left\lvert {K_i} \right\rvert} \leq n < \infty \quad \text{for each } i
+  .\end{align*}
+\item
+  Now consider \(R/K_i \coloneqq\left\{{r + K_i}\right\}\).
+\item
+  By the first isomorphism theorem,
+  \(R/K_i \cong \operatorname{im}\phi\), and by (b) every element in the
+  image is a zero divisor, so
+  \begin{align*}
+  [R: K_i] = {\left\lvert {R/K_i} \right\rvert} = {\left\lvert {\operatorname{im}\phi_i} \right\rvert} \leq n 
+  .\end{align*}
+\item
+  But then
+  \begin{align*}
+  {\left\lvert {R} \right\rvert} = [R:K_i]\cdot {\left\lvert {K_i} \right\rvert} \leq n\cdot n = n^2 
+  .\end{align*}
+\end{itemize}
 
-Now consider \(R/K_i \coloneqq\left\{{r + K_i}\right\}\). By the first
-isomorphism theorem, \(R/K_i \cong \operatorname{im}\phi\), and by (b)
-every element in the image is a zero divisor, so
-\begin{align*}
-[R: K_i] = {\left\lvert {R/K_i} \right\rvert} = {\left\lvert {\operatorname{im}\phi_i} \right\rvert} \leq n 
-.\end{align*}
+\end{proof}
 
-But then
-\begin{align*}
-{\left\lvert {R} \right\rvert} = [R:K_i]\cdot {\left\lvert {K_i} \right\rvert} \leq n\cdot n = n^2 
-.\end{align*}
+\begin{proof}[of d]
 
-\hypertarget{d-8}{%
-\subsubsection{d}\label{d-8}}
+\envlist
 
-By (c), if there are exactly 2 zero divisors then
-\({\left\lvert {R} \right\rvert} \leq 4\). Since every element in a
-finite ring is either a unit or a zero divisor, and
-\({\left\lvert {R^{\times}} \right\rvert} \geq 2\) since \(\pm 1\) are
-always units, we must have \({\left\lvert {R} \right\rvert} = 4\).
-
-Since the characteristic of a ring must divide its size, we have
-\(\operatorname{ch}R = 2\) or \(4\).
-
-Using the hint, we see that only \({\mathbb{Z}}/(4)\) has characteristic
-4, which has exactly 2 zero divisors given by \([0]_4\) and \([2]_4\).
-
-If \(R\) has characteristic 2, we can check the other 3 possibilities.
-
-We can write
-\({\mathbb{Z}}/(2)[t]/(t^2) = \left\{{a + bt {~\mathrel{\Big|}~}a,b\in {\mathbb{Z}}/(2)}\right\}\),
-and checking the multiplication table we have
-
-\begin{align*}
-\begin{array}{c|cccc}
+\begin{itemize}
+\item
+  By (c), if there are exactly 2 zero divisors then
+  \({\left\lvert {R} \right\rvert} \leq 4\). Since every element in a
+  finite ring is either a unit or a zero divisor, and
+  \({\left\lvert {R^{\times}} \right\rvert} \geq 2\) since \(\pm 1\) are
+  always units, we must have \({\left\lvert {R} \right\rvert} = 4\).
+\item
+  Since the characteristic of a ring must divide its size, we have
+  \(\operatorname{ch}R = 2\) or \(4\).
+\item
+  Using the hint, we see that only \({\mathbb{Z}}/(4)\) has
+  characteristic 4, which has exactly 2 zero divisors given by \([0]_4\)
+  and \([2]_4\).
+\item
+  If \(R\) has characteristic 2, we can check the other 3 possibilities.
+\item
+  We can write
+  \({\mathbb{Z}}/(2)[t]/(t^2) = \left\{{a + bt {~\mathrel{\Big|}~}a,b\in {\mathbb{Z}}/(2)}\right\}\),
+  and checking the multiplication table we have
+  \begin{align*}
+  \begin{array}{c|cccc}
             & 0 & 1     & t & 1+t   \\ \hline
-0       & 0 & 0     & 0 & 0     \\ 
-1       & 0 & 1     & t & 1+t   \\ 
-t       & 0 & t     & \mathbf{0} & t    \\ 
-1 + t & 0 & 1+t & t & 1     \\ 
-\end{array}
-,\end{align*}
+  0       & 0 & 0     & 0 & 0     \\ 
+  1       & 0 & 1     & t & 1+t   \\ 
+  t       & 0 & t     & \mathbf{0} & t    \\ 
+  1 + t & 0 & 1+t & t & 1     \\ 
+  \end{array}
+  ,\end{align*}
 
-and so we find that \(t, 0\) are the zero divisors.
-
-In \({\mathbb{Z}}/(2)[t]/(t^2 - t)\), we can check that
-\(t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0\),
-so both \(t\) and \(t+1\) are zero divisors, along with zero, so this is
-not a possibility.
-
-Similarly, in \({\mathbb{Z}}/(2)[t]/(t^2 + t + 1)\), we can check the
-bottom-right corner of the multiplication table to find
-\begin{align*}
-\left[\begin{array}{c|cc}
+  and so we find that \(t, 0\) are the zero divisors.
+\item
+  In \({\mathbb{Z}}/(2)[t]/(t^2 - t)\), we can check that
+  \(t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0\),
+  so both \(t\) and \(t+1\) are zero divisors, along with zero, so this
+  is not a possibility.
+\item
+  Similarly, in \({\mathbb{Z}}/(2)[t]/(t^2 + t + 1)\), we can check the
+  bottom-right corner of the multiplication table to find
+  \begin{align*}
+  \left[\begin{array}{c|cc}
     & t     & 1 +t \\ \hline
-t & 1+t & 1 \\
-t & 1   & t \\
-\end{array}\right]
-,\end{align*}
+  t & 1+t & 1 \\
+  t & 1   & t \\
+  \end{array}\right]
+  ,\end{align*}
 
-and so this ring only has one zero divisor.
+  and so this ring only has one zero divisor.
+\item
+  Thus the only possibilities are:
+  \begin{align*}
+  R &\cong {\mathbb{Z}}/(4) \\
+  R &\cong {\mathbb{Z}}/(2)[t] / (t^2)
+  .\end{align*}
+\end{itemize}
 
-Thus the only possibilities are:
-
-\begin{align*}
-R &\cong {\mathbb{Z}}/(4) \\
-R &\cong {\mathbb{Z}}/(2)[t] / (t^2)
-.\end{align*}
+\end{proof}
 
 \end{solution}
 
@@ -2080,26 +2171,21 @@ M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
 Let \(R = C[0, 1]\) be the ring of continuous real-valued functions on
 the interval \([0, 1]\). Let I be an ideal of \(R\).
 
-\hypertarget{a-39}{%
-\subsubsection{a}\label{a-39}}
-
-Show that if \(f \in I, a \in [0, 1]\) are such that \(f (a) \neq 0\),
-then there exists \(g \in I\) such that \(g(x) \geq 0\) for all
-\(x \in [0, 1]\), and \(g(x) > 0\) for all \(x\) in some open
-neighborhood of \(a\).
-
-\hypertarget{b-29}{%
-\subsubsection{b}\label{b-29}}
-
-If \(I \neq R\), show that the set
-\(Z(I) = \{x \in [0, 1] {~\mathrel{\Big|}~}f(x) = 0 \text{ for all } f \in I\}\)
-is nonempty.
-
-\hypertarget{c-22}{%
-\subsubsection{c}\label{c-22}}
-
-Show that if \(I\) is maximal, then there exists \(x_0 \in [0, 1]\) such
-that \(I = \{ f \in R {~\mathrel{\Big|}~}f (x_0 ) = 0\}\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(f \in I, a \in [0, 1]\) are such that \(f (a) \neq 0\),
+  then there exists \(g \in I\) such that \(g(x) \geq 0\) for all
+  \(x \in [0, 1]\), and \(g(x) > 0\) for all \(x\) in some open
+  neighborhood of \(a\).
+\item
+  If \(I \neq R\), show that the set
+  \(Z(I) = \{x \in [0, 1] {~\mathrel{\Big|}~}f(x) = 0 \text{ for all } f \in I\}\)
+  is nonempty.
+\item
+  Show that if \(I\) is maximal, then there exists \(x_0 \in [0, 1]\)
+  such that \(I = \{ f \in R {~\mathrel{\Big|}~}f (x_0 ) = 0\}\).
+\end{enumerate}
 
 \hypertarget{fall-2017-5-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#5
@@ -2108,17 +2194,15 @@ that \(I = \{ f \in R {~\mathrel{\Big|}~}f (x_0 ) = 0\}\).
 A ring \(R\) is called \emph{simple} if its only two-sided ideals are
 \(0\) and \(R\).
 
-\hypertarget{a-40}{%
-\subsubsection{a}\label{a-40}}
-
-Suppose \(R\) is a commutative ring with 1. Prove \(R\) is simple if and
-only if \(R\) is a field.
-
-\hypertarget{b-30}{%
-\subsubsection{b}\label{b-30}}
-
-Let \(k\) be a field. Show the ring \(M_n (k)\), \(n \times n\) matrices
-with entries in \(k\), is a simple ring.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose \(R\) is a commutative ring with 1. Prove \(R\) is simple if
+  and only if \(R\) is a field.
+\item
+  Let \(k\) be a field. Show the ring \(M_n (k)\), \(n \times n\)
+  matrices with entries in \(k\), is a simple ring.
+\end{enumerate}
 
 \hypertarget{fall-2017-6-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#6
@@ -2130,35 +2214,23 @@ in \(R\). Recall that in an integral domain \(R\), \(r \in R\) is called
 \(r\) have the form \(ru\) with \(u\) a unit in \(R\).
 
 We call a non-zero, non-unit \(r \in R\) \emph{prime} in \(R\) if
-\(r \mathrel{\Big|}ab \implies r \mathrel{\Big|}a\) or
-\(r \mathrel{\Big|}b\). Consider the ring
+\(r \bigm|ab \implies r \bigm|a\) or \(r \bigm|b\). Consider the ring
 \(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
 
-\hypertarget{a-41}{%
-\subsubsection{a}\label{a-41}}
-
-Prove \(R\) is an integral domain.
-
-\hypertarget{b-31}{%
-\subsubsection{b}\label{b-31}}
-
-Show \(U(R) = \{\pm1\}\).
-
-\hypertarget{c-23}{%
-\subsubsection{c}\label{c-23}}
-
-Show \(3, 2 + \sqrt{-5}\), and \(2 - \sqrt{-5}\) are irreducible in
-\(R\).
-
-\hypertarget{d-9}{%
-\subsubsection{d}\label{d-9}}
-
-Show 3 is not prime in \(R\).
-
-\hypertarget{e}{%
-\subsubsection{e}\label{e}}
-
-Conclude \(R\) is not a PID.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove \(R\) is an integral domain.
+\item
+  Show \(U(R) = \{\pm1\}\).
+\item
+  Show \(3, 2 + \sqrt{-5}\), and \(2 - \sqrt{-5}\) are irreducible in
+  \(R\).
+\item
+  Show 3 is not prime in \(R\).
+\item
+  Conclude \(R\) is not a PID.
+\end{enumerate}
 
 \hypertarget{spring-2017-3-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#3
@@ -2167,45 +2239,41 @@ Conclude \(R\) is not a PID.
 Let \(R\) be a commutative ring with 1. Suppose that \(M\) is a free
 \(R{\hbox{-}}\)module with a finite basis \(X\).
 
-\hypertarget{a-42}{%
-\subsubsection{a}\label{a-42}}
-
-Let \(I {~\trianglelefteq~}R\) be a proper ideal. Prove that \(M/IM\) is
-a free \(R/I{\hbox{-}}\)module with basis \(X'\), where \(X'\) is the
-image of \(X\) under the canonical map \(M\to M/IM\).
-
-\hypertarget{b-32}{%
-\subsubsection{b}\label{b-32}}
-
-Prove that any two bases of \(M\) have the same number of elements. You
-may assume that the result is true when \(R\) is a field.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(I {~\trianglelefteq~}R\) be a proper ideal. Prove that \(M/IM\)
+  is a free \(R/I{\hbox{-}}\)module with basis \(X'\), where \(X'\) is
+  the image of \(X\) under the canonical map \(M\to M/IM\).
+\item
+  Prove that any two bases of \(M\) have the same number of elements.
+  You may assume that the result is true when \(R\) is a field.
+\end{enumerate}
 
 \hypertarget{spring-2017-4-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#4
 \(\work\)}{Spring 2017 \#4 \textbackslash work}}\label{spring-2017-4-work}}
 
-\hypertarget{a-43}{%
-\subsubsection{a}\label{a-43}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(R\) be an integral domain with quotient field \(F\). Suppose
+  that \(p(x), a(x), b(x)\) are monic polynomials in \(F[x]\) with
+  \(p(x) = a(x) b(x)\) and with \(p(x) \in R[x]\), \(a(x)\) not in
+  \(R[x]\), and both \(a(x), b(x)\) not constant.
 
-Let \(R\) be an integral domain with quotient field \(F\). Suppose that
-\(p(x), a(x), b(x)\) are monic polynomials in \(F[x]\) with
-\(p(x) = a(x) b(x)\) and with \(p(x) \in R[x]\), \(a(x)\) not in
-\(R[x]\), and both \(a(x), b(x)\) not constant.
+  Prove that \(R\) is not a UFD.
 
-Prove that \(R\) is not a UFD.
+  \begin{quote}
+  (You may assume Gauss' lemma)
+  \end{quote}
+\item
+  Prove that \({\mathbb{Z}}[2\sqrt{2}]\) is not a UFD.
 
-\begin{quote}
-(You may assume Gauss' lemma)
-\end{quote}
-
-\hypertarget{b-33}{%
-\subsubsection{b}\label{b-33}}
-
-Prove that \({\mathbb{Z}}[2\sqrt{2}]\) is not a UFD.
-
-\begin{quote}
-Hint: let \(p(x) = x^2-2\).
-\end{quote}
+  \begin{quote}
+  Hint: let \(p(x) = x^2-2\).
+  \end{quote}
+\end{enumerate}
 
 \hypertarget{spring-2016-8-work}{%
 \subsection{\texorpdfstring{Spring 2016 \#8
@@ -2227,17 +2295,15 @@ following two conditions:
 
 Prove the following:
 
-\hypertarget{a-44}{%
-\subsubsection{a}\label{a-44}}
-
-For each \(x\in R\) there is one and only one element \(y\in R\) such
-that \(x = 2y\).
-
-\hypertarget{b-34}{%
-\subsubsection{b}\label{b-34}}
-
-Suppose \(x,y\in R\) such that \(x\neq 0\) and \(2(xy) = x\), then
-\(yz = zy\) for all \(z\in R\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For each \(x\in R\) there is one and only one element \(y\in R\) such
+  that \(x = 2y\).
+\item
+  Suppose \(x,y\in R\) such that \(x\neq 0\) and \(2(xy) = x\), then
+  \(yz = zy\) for all \(z\in R\).
+\end{enumerate}
 
 \begin{quote}
 You can get partial credit for (b) by showing it in the case \(R\) has a
@@ -2320,33 +2386,30 @@ number \(n\) such that \(a^n = 0\).
 Let \(R\) be a commutative ring with identity and let \(n\) be a
 positive integer.
 
-\hypertarget{a-45}{%
-\subsubsection{a}\label{a-45}}
-
-Prove that every surjective \(R{\hbox{-}}\)linear endomorphism
-\(T: R^n \to R^n\) is injective.
-
-\hypertarget{b-35}{%
-\subsubsection{b}\label{b-35}}
-
-Show that an injective \(R{\hbox{-}}\)linear endomorphism of \(R^n\)
-need not be surjective.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that every surjective \(R{\hbox{-}}\)linear endomorphism
+  \(T: R^n \to R^n\) is injective.
+\item
+  Show that an injective \(R{\hbox{-}}\)linear endomorphism of \(R^n\)
+  need not be surjective.
+\end{enumerate}
 
 \hypertarget{fall-2013-3-work}{%
 \subsection{\texorpdfstring{Fall 2013 \#3
 \(\work\)}{Fall 2013 \#3 \textbackslash work}}\label{fall-2013-3-work}}
 
-\hypertarget{a-46}{%
-\subsubsection{a}\label{a-46}}
-
-Define \emph{prime ideal}, give an example of a nontrivial ideal in the
-ring \({\mathbb{Z}}\) that is not prime, and prove that it is not prime.
-
-\hypertarget{b-36}{%
-\subsubsection{b}\label{b-36}}
-
-Define \emph{maximal ideal}, give an example of a nontrivial maximal
-ideal in \({\mathbb{Z}}\) and prove that it is maximal.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define \emph{prime ideal}, give an example of a nontrivial ideal in
+  the ring \({\mathbb{Z}}\) that is not prime, and prove that it is not
+  prime.
+\item
+  Define \emph{maximal ideal}, give an example of a nontrivial maximal
+  ideal in \({\mathbb{Z}}\) and prove that it is maximal.
+\end{enumerate}
 
 \hypertarget{fall-2013-4-work}{%
 \subsection{\texorpdfstring{Fall 2013 \#4
@@ -2355,23 +2418,20 @@ ideal in \({\mathbb{Z}}\) and prove that it is maximal.
 Let \(R\) be a commutative ring with \(1\neq 0\). Recall that \(x\in R\)
 is \emph{nilpotent} iff \(x^n = 0\) for some positive integer \(n\).
 
-\hypertarget{a-47}{%
-\subsubsection{a}\label{a-47}}
-
-Show that the collection of nilpotent elements in \(R\) forms an ideal.
-
-\hypertarget{b-37}{%
-\subsubsection{b}\label{b-37}}
-
-Show that if \(x\) is nilpotent, then \(x\) is contained in every prime
-ideal of \(R\).
-
-\hypertarget{c-24}{%
-\subsubsection{c}\label{c-24}}
-
-Suppose \(x\in R\) is not nilpotent and let
-\(S = \left\{{x^n {~\mathrel{\Big|}~}n\in {\mathbb{N}}}\right\}\). There
-is at least on ideal of \(R\) disjoint from \(S\), namely \((0)\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that the collection of nilpotent elements in \(R\) forms an
+  ideal.
+\item
+  Show that if \(x\) is nilpotent, then \(x\) is contained in every
+  prime ideal of \(R\).
+\item
+  Suppose \(x\in R\) is not nilpotent and let
+  \(S = \left\{{x^n {~\mathrel{\Big|}~}n\in {\mathbb{N}}}\right\}\).
+  There is at least on ideal of \(R\) disjoint from \(S\), namely
+  \((0)\).
+\end{enumerate}
 
 By Zorn's lemma the set of ideals disjoint from \(S\) has a maximal
 element with respect to inclusion, say \(I\). In other words, \(I\) is
@@ -2380,11 +2440,14 @@ disjoint from \(S\) and if \(J\) is any ideal disjoint from \(S\) with
 
 Show that \(I\) is a prime ideal.
 
-\hypertarget{d-10}{%
-\subsubsection{d}\label{d-10}}
-
-Deduce from (a) and (b) that the set of nilpotent elements of \(R\) is
-the intersection of all prime ideals of \(R\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Deduce from (a) and (b) that the set of nilpotent elements of \(R\) is
+  the intersection of all prime ideals of \(R\).
+\end{enumerate}
 
 \hypertarget{spring-2013-1-work}{%
 \subsection{\texorpdfstring{Spring 2013 \#1
@@ -2392,31 +2455,27 @@ the intersection of all prime ideals of \(R\).
 
 Let \(R\) be a commutative ring.
 
-\hypertarget{a-48}{%
-\subsubsection{a}\label{a-48}}
-
-Define a \emph{maximal ideal} and prove that \(R\) has a maximal ideal.
-
-\hypertarget{b-38}{%
-\subsubsection{b}\label{b-38}}
-
-Show than an element \(r\in R\) is not invertible \(\iff r\) is
-contained in a maximal ideal.
-
-\hypertarget{c-25}{%
-\subsubsection{c}\label{c-25}}
-
-Let \(M\) be an \(R{\hbox{-}}\)module, and recall that for
-\(0\neq \mu \in M\), the \emph{annihilator} of \(\mu\) is the set
-\begin{align*}
-\operatorname{Ann}(\mu) = \left\{{r\in R {~\mathrel{\Big|}~}r\mu = 0}\right\}
-.\end{align*}
-Suppose that \(I\) is an ideal in \(R\) which is maximal with respect to
-the property that there exists an element \(\mu \in M\) such that
-\(I = \operatorname{Ann}(\mu)\) for some \(\mu \in M\). In other words,
-\(I = \operatorname{Ann}(\mu)\) but there does not exist \(\nu\in M\)
-with \(J = \operatorname{Ann}(\nu) \subsetneq R\) such that
-\(I\subsetneq J\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define a \emph{maximal ideal} and prove that \(R\) has a maximal
+  ideal.
+\item
+  Show than an element \(r\in R\) is not invertible \(\iff r\) is
+  contained in a maximal ideal.
+\item
+  Let \(M\) be an \(R{\hbox{-}}\)module, and recall that for
+  \(0\neq \mu \in M\), the \emph{annihilator} of \(\mu\) is the set
+  \begin{align*}
+  \operatorname{Ann}(\mu) = \left\{{r\in R {~\mathrel{\Big|}~}r\mu = 0}\right\}
+  .\end{align*}
+  Suppose that \(I\) is an ideal in \(R\) which is maximal with respect
+  to the property that there exists an element \(\mu \in M\) such that
+  \(I = \operatorname{Ann}(\mu)\) for some \(\mu \in M\). In other
+  words, \(I = \operatorname{Ann}(\mu)\) but there does not exist
+  \(\nu\in M\) with \(J = \operatorname{Ann}(\nu) \subsetneq R\) such
+  that \(I\subsetneq J\).
+\end{enumerate}
 
 Prove that \(I\) is a prime ideal.
 
@@ -2424,27 +2483,52 @@ Prove that \(I\) is a prime ideal.
 \subsection{\texorpdfstring{Spring 2013 \#2
 \(\work\)}{Spring 2013 \#2 \textbackslash work}}\label{spring-2013-2-work}}
 
-\hypertarget{a-49}{%
-\subsubsection{a}\label{a-49}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define a \emph{Euclidean domain}.
+\item
+  Define a \emph{unique factorization domain}.
+\item
+  Is a Euclidean domain an UFD? Give either a proof or a counterexample
+  with justification.
+\item
+  Is a UFD a Euclidean domain? Give either a proof or a counterexample
+  with justification.
+\end{enumerate}
 
-Define a \emph{Euclidean domain}.
+\hypertarget{spring-2021-5-work}{%
+\subsection{\texorpdfstring{Spring 2021 \#5
+\(\work\)}{Spring 2021 \#5 \textbackslash work}}\label{spring-2021-5-work}}
 
-\hypertarget{b-39}{%
-\subsubsection{b}\label{b-39}}
+Suppose that \(f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x]\) is a zero
+divisor. Show that there is a nonzero
+\(a\in {\mathbb{Z}}/n{\mathbb{Z}}\) with \(af(x) = 0\).
 
-Define a \emph{unique factorization domain}.
+\hypertarget{spring-2021-6}{%
+\subsection{Spring 2021 \#6}\label{spring-2021-6}}
 
-\hypertarget{c-26}{%
-\subsubsection{c}\label{c-26}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Carefully state the definition of \textbf{Noetherian} for a
+  commutative ring \(R\).
+\item
+  Let \(R\) be a subset of \({\mathbb{Z}}[x]\) consisting of all
+  polynomials
+  \begin{align*}
+  f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
+  \end{align*}
+  such that \(a_k\) is even for \(1\leq k \leq n\). Show that \(R\) is a
+  subring of \({\mathbb{Z}}[x]\).
+\item
+  Show that \(R\) is not Noetherian.
+\end{enumerate}
 
-Is a Euclidean domain an UFD? Give either a proof or a counterexample
-with justification.
-
-\hypertarget{d-11}{%
-\subsubsection{d}\label{d-11}}
-
-Is a UFD a Euclidean domain? Give either a proof or a counterexample
-with justification.
+\begin{quote}
+\emph{Hint: consider the ideal generated by
+\(\left\{{ 2x^k {~\mathrel{\Big|}~}1\leq k \in {\mathbb{Z}}}\right\}\).}
+\end{quote}
 
 \hypertarget{fields-and-galois-theory}{%
 \section{Fields and Galois Theory}\label{fields-and-galois-theory}}
@@ -2464,20 +2548,18 @@ Let \(F = {\mathbb{F}}_2\) and let
 \(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) denote
 its algebraic closure.
 
-\hypertarget{a-50}{%
-\subsubsection{a}\label{a-50}}
-
-Show that
-\(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) is not
-a finite extension of \(F\).
-
-\hypertarget{b-40}{%
-\subsubsection{b}\label{b-40}}
-
-Suppose that
-\(\alpha \in \mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\)
-satisfies \(\alpha^{17} = 1\) and \(\alpha\neq 1\). Show that
-\(F(\alpha)/F\) has degree 8.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that
+  \(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) is
+  not a finite extension of \(F\).
+\item
+  Suppose that
+  \(\alpha \in \mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\)
+  satisfies \(\alpha^{17} = 1\) and \(\alpha\neq 1\). Show that
+  \(F(\alpha)/F\) has degree 8.
+\end{enumerate}
 
 \hypertarget{fall-2019-4-done}{%
 \subsection{\texorpdfstring{Fall 2019 \#4
@@ -2491,38 +2573,39 @@ Let \(n\) be a positive integer relatively prime to \(q\) and let
 
 Let \(E = F [\omega]\) and let \(k = [E : F]\).
 
-\hypertarget{a-51}{%
-\subsubsection{a}\label{a-51}}
-
-Prove that \(n\) divides \(q^{k}-1\).
-
-\hypertarget{b-41}{%
-\subsubsection{b}\label{b-41}}
-
-Let \(m\) be the order of \(q\) in
-\({\mathbb{Z}}/n{\mathbb{Z}}^{\times}\). Prove that \(m\) divides \(k\).
-
-\hypertarget{c-27}{%
-\subsubsection{c}\label{c-27}}
-
-Prove that \(m = k\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(n\) divides \(q^{k}-1\).
+\item
+  Let \(m\) be the order of \(q\) in
+  \({\mathbb{Z}}/n{\mathbb{Z}}^{\times}\). Prove that \(m\) divides
+  \(k\).
+\item
+  Prove that \(m = k\).
+\end{enumerate}
 
 \todo[inline]{Revisit, tricky!}
 
 \begin{solution}
 
-Concepts used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
-  Theorem: \(F^{\times}\) is always cyclic for \(F\) a field
+  Theorem: \(F^{\times}\) is always cyclic for \(F\) a field.
 \end{itemize}
 
-\textbf{Solution}:
+\end{concept}
 
-\hypertarget{a-52}{%
-\subsubsection{a}\label{a-52}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -2531,32 +2614,38 @@ Concepts used:
   \({\left\lvert {E^{\times}} \right\rvert} = q^k-1\).
 \item
   Noting that \(\zeta \in E^{\times}\) we must have
-  \(n = o(\zeta) \mathrel{\Big|}{\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
+  \(n = o(\zeta) \bigm|{\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
   by Lagrange's theorem.
 \end{itemize}
 
-\hypertarget{b-42}{%
-\subsubsection{b}\label{b-42}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
   Rephrasing (a), we have
   \begin{align*}
-  n \mathrel{\Big|}q^k-1 
+  n \bigm|q^k-1 
   &\iff q^k-1 \cong 0 \pmod n \\
   &\iff q^k \cong 1 \pmod n \\
-  &\iff m \coloneqq o(q) \mathrel{\Big|}k
+  &\iff m \coloneqq o(q) \bigm|k
   .\end{align*}
 \end{itemize}
 
-\hypertarget{c-28}{%
-\subsubsection{c}\label{c-28}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
 
 \begin{itemize}
 \item
-  Since \(m\mathrel{\Big|}k \iff k = \ell m\), (\textbf{claim}) there is
-  an intermediate subfield \(M\) such that
+  Since \(m\bigm|k \iff k = \ell m\), (\textbf{claim}) there is an
+  intermediate subfield \(M\) such that
   \begin{align*}
   E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
   ,\end{align*}
@@ -2583,6 +2672,8 @@ Concepts used:
   \(\zeta\), we must have \(F = M\), so \(\ell = 1\), and \(k = m\).
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2019-7-done}{%
@@ -2601,7 +2692,11 @@ How many subfields are there of \({\mathbb{Q}}(\zeta_{20} )\)?
 
 \begin{solution}
 
-Concepts Used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -2613,17 +2708,21 @@ Concepts Used:
   \textbf{Normal (if separable)}: Splitting field of an irreducible
   polynomial.
 \item
-  Definition: \(\zeta\) is a primitive root of unity iff
-  \(o(\zeta) = n\) in \(F^{\times}\).
+  \(\zeta\) is a primitive root of unity \(\iff o(\zeta) = n\) in
+  \({\mathbb{F}}^{\times}\).
 \item
   \(\phi(p^k) = p^{k-1}(p-1)\)
 \item
   The lattice:
+
+  \begin{figure}
+  \centering
+  \includegraphics{figures/image_2021-04-17-02-44-48.png}
+  \caption{image\_2021-04-17-02-44-48}
+  \end{figure}
 \end{itemize}
 
-\includegraphics{figures/2019-12-24-13-19-15.png}
-
-\textbf{Solution}:
+\end{concept}
 
 Let \(K = {\mathbb{Q}}(\zeta)\). Then \(K\) is the splitting field of
 \(f(x) = x^n - 1\), which is irreducible over \({\mathbb{Q}}\), so
@@ -2644,7 +2743,6 @@ We can now define maps
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
 \end{align*}
-
 and if we restrict to \(j\) such that \(\gcd(n, j) = 1\), this yields
 \(\phi(n)\) maps. Noting that if \(\zeta\) is a primitive root, then
 \((n, j) = 1\) implies that that \(\zeta^j\) is also a primitive root,
@@ -2663,7 +2761,7 @@ from the \emph{multiplicative} group of units to the Galois group.
 The claim is that this is a surjective homomorphism, and since both
 groups are the same size, an isomorphism.
 
-\textbf{Surjectivity:}
+\begin{proof}[of surjectivity]
 
 Letting \(\sigma \in K\) be arbitrary, noting that \([K: {\mathbb{Q}}]\)
 has a basis \(\left\{{1, \zeta, \zeta^2, \cdots, \zeta^{n-1}}\right\}\),
@@ -2683,14 +2781,18 @@ general theory of cyclic groups).
 
 Thus \(\theta\) is surjective.
 
-\textbf{Homomorphism:}
+\end{proof}
+
+\begin{proof}[of being a homomorphism]
 
 \begin{align*}
 \tau_j \circ \tau_k (\zeta) =\tau_j(\zeta^k) = \zeta^{jk} \implies
 \tau_{jk} = \theta(jk) = \tau_j \circ \tau_k
 .\end{align*}
 
-\textbf{Part 2:}
+\end{proof}
+
+\begin{proof}[of part 2]
 
 We have \(K \cong {\mathbb{Z}}_{20}^{\times}\) and \(\phi(20) = 8\), so
 \(K \cong {\mathbb{Z}}_8\), so we have the following subgroups and
@@ -2711,6 +2813,8 @@ corresponding intermediate fields:
 For some elements \(\omega_i\) which exist by the primitive element
 theorem.
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2019-2-done}{%
@@ -2719,27 +2823,49 @@ theorem.
 
 Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
 
-\hypertarget{a-53}{%
-\subsubsection{a}\label{a-53}}
-
-Show that if \(\pi(x) \in F[x]\) is irreducible of degree \(d\), then
-\(\pi(x)\) divides \(x^{p^d} - x\).
-
-\hypertarget{b-43}{%
-\subsubsection{b}\label{b-43}}
-
-Show that if \(\pi(x) \in F[x]\) is an irreducible polynomial that
-divides \(x^{p^n} - x\), then \(\deg \pi(x)\) divides \(n\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(\pi(x) \in F[x]\) is irreducible of degree \(d\), then
+  \(\pi(x)\) divides \(x^{p^d} - x\).
+\item
+  Show that if \(\pi(x) \in F[x]\) is an irreducible polynomial that
+  divides \(x^{p^n} - x\), then \(\deg \pi(x)\) divides \(n\).
+\end{enumerate}
 
 \begin{solution}
 
-\hypertarget{a-54}{%
-\subsubsection{a}\label{a-54}}
+\envlist
 
-\begin{quote}
-Go to a field extension. Orders of multiplicative groups for finite
-fields are known.
-\end{quote}
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Go to a field extension.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Orders of multiplicative groups for finite fields are known.
+  \end{itemize}
+\item
+  \({\mathbb{GF}}(p^n)\) is the splitting field of
+  \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
+\item
+  \(x^{p^d} - x \bigm|x^{p^n} - x \iff d \bigm|n\)
+\item
+  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\bigm|n\)
+\item
+  \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
+  degree \(d\) dividing \(n\).
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 We can consider the quotient
 \(K = \displaystyle{\frac{{\mathbb{F}}_p[x]}{\left\langle{\pi(x)}\right\rangle}}\),
@@ -2760,39 +2886,26 @@ Since \(\rho\) is a ring morphism, we have
 &= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \mathrel{\Big|}q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
+&\iff \pi(x) \bigm|q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
 .\end{align*}
 
-\(\hfill\blacksquare\)
+\end{proof}
 
-\hypertarget{b-44}{%
-\subsubsection{b}\label{b-44}}
+\begin{proof}[of b]
 
-\begin{quote}
-Some potentially useful facts:
+\begin{claim}
 
-\begin{itemize}
-\tightlist
-\item
-  \({\mathbb{GF}}(p^n)\) is the splitting field of
-  \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
-\item
-  \(x^{p^d} - x \mathrel{\Big|}x^{p^n} - x \iff d \mathrel{\Big|}n\)
-\item
-  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\mathrel{\Big|}n\)
-\item
-  \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
-  degree \(d\) dividing \(n\).
-\end{itemize}
-\end{quote}
+\(\pi(x)\) divides \(x^{p^n}-x \iff \deg \pi\) divides \(n\).
 
-Claim: \(\pi(x)\) divides \(x^{p^n}-x \iff \deg \pi\) divides \(n\).
+\end{claim}
 
-\(\implies\): Let \(L \cong {\mathbb{GF}}(p^n)\) be the splitting field
-of \(\phi_n(x) \coloneqq x^{p^n}-x\); then since
-\(\pi \mathrel{\Big|}\phi_n\) by assumption, \(\pi\) splits in \(L\).
-Let \(\alpha \in L\) be any root of \(\pi\); then there is a tower of
-extensions \({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\).
+\begin{proof}[of claim, $\implies$]
+
+Let \(L \cong {\mathbb{GF}}(p^n)\) be the splitting field of
+\(\phi_n(x) \coloneqq x^{p^n}-x\); then since \(\pi \bigm|\phi_n\) by
+assumption, \(\pi\) splits in \(L\). Let \(\alpha \in L\) be any root of
+\(\pi\); then there is a tower of extensions
+\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\).
 
 Then \({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\), and so
 \begin{align*}
@@ -2803,9 +2916,17 @@ n &= [L: {\mathbb{F}}_p] \\
 
 for some \(\ell \in {\mathbb{Z}}^{\geq 1}\), so \(d\) divides \(n\).
 
-\(\impliedby\): If \(d\mathrel{\Big|}n\), use the fact (claim) that
+\end{proof}
+
+\begin{proof}[of claim, $\impliedby$]
+
+\(\impliedby\): If \(d\bigm|n\), use the fact (claim) that
 \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
 degree \(d\) dividing \(n\). So \(f = f_i\) for some \(i\).
+
+\end{proof}
+
+\end{proof}
 
 \end{solution}
 
@@ -2815,25 +2936,24 @@ degree \(d\) dividing \(n\). So \(f = f_i\) for some \(i\).
 
 Let \(\zeta = e^{2\pi i/8}\).
 
-\hypertarget{a-55}{%
-\subsubsection{a}\label{a-55}}
-
-What is the degree of \({\mathbb{Q}}(\zeta)/{\mathbb{Q}}\)?
-
-\hypertarget{b-45}{%
-\subsubsection{b}\label{b-45}}
-
-How many quadratic subfields of \({\mathbb{Q}}(\zeta)\) are there?
-
-\hypertarget{c-29}{%
-\subsubsection{c}\label{c-29}}
-
-What is the degree of \({\mathbb{Q}}(\zeta, \sqrt[4] 2)\) over
-\({\mathbb{Q}}\)?
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the degree of \({\mathbb{Q}}(\zeta)/{\mathbb{Q}}\)?
+\item
+  How many quadratic subfields of \({\mathbb{Q}}(\zeta)\) are there?
+\item
+  What is the degree of \({\mathbb{Q}}(\zeta, \sqrt[4] 2)\) over
+  \({\mathbb{Q}}\)?
+\end{enumerate}
 
 \begin{solution}
 
-Concepts used:
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2850,19 +2970,27 @@ Concepts used:
 \item
   \(\deg \Phi_n(x) = \phi(n)\)
 \item
-  \(\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)\) (proof: for a nontrivial
-  gcd, the possibilities are
-  \(p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p\).)
+  \(\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Proof: for a nontrivial gcd, the possibilities are
+    \begin{align*}
+    p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+    .\end{align*}
+  \end{itemize}
 \item
   \(\operatorname{Gal}({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times}\)
 \end{itemize}
 
-\textbf{Solution}:
+\end{concept}
 
-Let \(K = {\mathbb{Q}}(\zeta)\)
+Let \(K = {\mathbb{Q}}(\zeta)\).
 
-\hypertarget{a-56}{%
-\subsubsection{a}\label{a-56}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2882,8 +3010,11 @@ Let \(K = {\mathbb{Q}}(\zeta)\)
   So \([{\mathbb{Q}}(\zeta): {\mathbb{Q}}] = 4\).
 \end{itemize}
 
-\hypertarget{b-46}{%
-\subsubsection{b}\label{b-46}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2897,8 +3028,11 @@ Let \(K = {\mathbb{Q}}(\zeta)\)
   quadratic extension).
 \end{itemize}
 
-\hypertarget{c-30}{%
-\subsubsection{c}\label{c-30}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -2947,6 +3081,8 @@ Let \(K = {\mathbb{Q}}(\zeta)\)
   \(\min_{{\mathbb{Q}}(\sqrt[4] 2)}(i) = x^2 + 1\) which is degree 2.
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2018-3-done}{%
@@ -2956,27 +3092,35 @@ Let \(K = {\mathbb{Q}}(\zeta)\)
 Let \(F \subset K \subset L\) be finite degree field extensions. For
 each of the following assertions, give a proof or a counterexample.
 
-\hypertarget{a-57}{%
-\subsubsection{a}\label{a-57}}
-
-If \(L/F\) is Galois, then so is \(K/F\).
-
-\hypertarget{b-47}{%
-\subsubsection{b}\label{b-47}}
-
-If \(L/F\) is Galois, then so is \(L/K\).
-
-\hypertarget{c-31}{%
-\subsubsection{c}\label{c-31}}
-
-If \(K/F\) and \(L/K\) are both Galois, then so is \(L/F\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  If \(L/F\) is Galois, then so is \(K/F\).
+\item
+  If \(L/F\) is Galois, then so is \(L/K\).
+\item
+  If \(K/F\) and \(L/K\) are both Galois, then so is \(L/F\).
+\end{enumerate}
 
 \begin{solution}
 
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Every quadratic extension over \({\mathbb{Q}}\) is Galois.
+\end{itemize}
+
+\end{concept}
+
 Let \(L/K/F\).
 
-\hypertarget{a-58}{%
-\subsubsection{a}\label{a-58}}
+\begin{proof}[of a]
 
 \textbf{False}: Take
 \(L/K/F = {\mathbb{Q}}(\zeta_2, \sqrt[3] 2) \to {\mathbb{Q}}(\sqrt[3] 2) \to {\mathbb{Q}}\).
@@ -2987,8 +3131,9 @@ and \({\mathbb{Q}}\) has characteristic zero.
 But \(K/F\) is not Galois, since it is not the splitting field of any
 irreducible polynomial.
 
-\hypertarget{b-48}{%
-\subsubsection{b}\label{b-48}}
+\end{proof}
+
+\begin{proof}[of b]
 
 \textbf{True}: If \(L/F\) is Galois, then \(L/K\) is normal and
 separable:
@@ -3005,8 +3150,9 @@ separable:
   \(f\) and thus can not have repeated factors.
 \end{itemize}
 
-\hypertarget{c-32}{%
-\subsubsection{c}\label{c-32}}
+\end{proof}
+
+\begin{proof}[of c]
 
 \textbf{False}: Use the fact that every quadratic extension is Galois,
 and take
@@ -3016,6 +3162,8 @@ Then each successive extension is quadratic (thus Galois) but
 \({\mathbb{Q}}(\sqrt[4] 2)\) is not the splitting field of any
 polynomial (noting that it does not split \(x^4 - 2\) completely.)
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2018-2-done}{%
@@ -3024,31 +3172,39 @@ polynomial (noting that it does not split \(x^4 - 2\) completely.)
 
 Let \(f(x) = x^4 - 4x^2 + 2 \in {\mathbb{Q}}[x]\).
 
-\hypertarget{a-59}{%
-\subsubsection{a}\label{a-59}}
-
-Find the splitting field \(K\) of \(f\), and compute
-\([K: {\mathbb{Q}}]\).
-
-\hypertarget{b-49}{%
-\subsubsection{b}\label{b-49}}
-
-Find the Galois group \(G\) of \(f\), both as an explicit group of
-automorphisms, and as a familiar abstract group to which it is
-isomorphic.
-
-\hypertarget{c-33}{%
-\subsubsection{c}\label{c-33}}
-
-Exhibit explicitly the correspondence between subgroups of \(G\) and
-intermediate fields between \({\mathbb{Q}}\) and \(k\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the splitting field \(K\) of \(f\), and compute
+  \([K: {\mathbb{Q}}]\).
+\item
+  Find the Galois group \(G\) of \(f\), both as an explicit group of
+  automorphisms, and as a familiar abstract group to which it is
+  isomorphic.
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(k\).
+\end{enumerate}
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
 \begin{solution}
 
-\hypertarget{a-60}{%
-\subsubsection{a}\label{a-60}}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 Note that \(g(x) = x^2 - 4x + 2\) has roots \(\beta = 2 \pm \sqrt{2}\),
 and so \(f\) has roots
@@ -3061,8 +3217,9 @@ and so \(f\) has roots
 
 and splitting field \(K = {\mathbb{Q}}(\left\{{\alpha_i}\right\})\).
 
-\hypertarget{b-50}{%
-\subsubsection{b}\label{b-50}}
+\end{proof}
+
+\begin{proof}[of b]
 
 \(K\) is the splitting field of a separable polynomial and thus Galois
 over \({\mathbb{Q}}\). Moreover, Since \(f\) is irreducible by
@@ -3139,11 +3296,16 @@ and so the order of \(\sigma\) is strictly greater than 2, and thus 4,
 and thus
 \(\operatorname{Gal}(K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4)\).
 
-\hypertarget{c-34}{%
-\subsubsection{c}\label{c-34}}
+\end{proof}
+
+\begin{proof}[of c]
 
 ?? The subgroup of index 2 \(\left\langle{\sigma^2}\right\rangle\)
 corresponds to the field extension \(Q(\sqrt 2) / {\mathbb{Q}}\).
+
+\end{proof}
+
+\todo[inline]{Finish (c)}
 
 \end{solution}
 
@@ -3160,32 +3322,44 @@ Let \(E = E_1 E_2 \subset K\).
 Let \(H_i = \operatorname{Gal}(K/E_i)\) and
 \(H = \operatorname{Gal}(K/E)\).
 
-\hypertarget{a-61}{%
-\subsubsection{a}\label{a-61}}
-
-Show that \(H = H_1 \cap H_2\).
-
-\hypertarget{b-51}{%
-\subsubsection{b}\label{b-51}}
-
-Show that \(H_1 H_2\) is a subgroup of \(G\).
-
-\hypertarget{c-35}{%
-\subsubsection{c}\label{c-35}}
-
-Show that
-\begin{align*}
-\operatorname{Gal}(K/(E_1 \cap E_2 )) = H_1 H_2
-.\end{align*}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(H = H_1 \cap H_2\).
+\item
+  Show that \(H_1 H_2\) is a subgroup of \(G\).
+\item
+  Show that
+  \begin{align*}
+  \operatorname{Gal}(K/(E_1 \cap E_2 )) = H_1 H_2
+  .\end{align*}
+\end{enumerate}
 
 \begin{solution}
 
-\begin{quote}
-Moral: \(H_1 \cap H_2 \iff E_1 E_2\), \(H_1 H_2 \iff E_1 \cap E_2\).
-\end{quote}
+\envlist
 
-\hypertarget{a-62}{%
-\subsubsection{a}\label{a-62}}
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  The rough correspondence:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(H_1 \cap H_2 \rightleftharpoons E_1 E_2\),
+  \item
+    \(H_1 H_2 \rightleftharpoons E_1 \cap E_2\).
+  \end{itemize}
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 By the Galois correspondence, it suffices to show that the fixed field
 of \(H_1 \cap H_2\) is \(E_1 E_2\).
@@ -3204,8 +3378,9 @@ Writing \(x \in E_1E_2\) as \(x=e_1 e_2\), we have
 
 so \(\sigma\) fixes \(E_1 E_2\).
 
-\hypertarget{b-52}{%
-\subsubsection{b}\label{b-52}}
+\end{proof}
+
+\begin{proof}[of b]
 
 That \(H_1 H_2 \subseteq G\) is clear, since if
 \(\sigma = \tau_1 \tau_2 \in H_1 H_2\), then each \(\tau_i\) is an
@@ -3213,29 +3388,40 @@ automorphism of \(K\) that fixes \(E_i \supseteq {\mathbb{Q}}\), so each
 \(\tau_i\) fixes \({\mathbb{Q}}\) and thus \(\sigma\) fixes
 \({\mathbb{Q}}\).
 
-That it is a subgroup follows from the fact that elements commute. (?)
+\begin{claim}
 
-To see this, let \(\sigma = \sigma_1 \sigma_2 \in H_1 H_2\).
+All elements in this subset commute.
 
-Note that \(\sigma_1(e) = e\) for all \(e\in E_1\) by definition, since
-\(H_1\) fixes \(E_1\), and \(\sigma_2(e) \in E_1\) (?).
+\end{claim}
 
-Then
-\begin{align*}
-\sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
-\end{align*}
+\begin{proof}[of claim]
 
-and substituting \(e = \sigma_1(e)\) on the RHS yields
+\envlist
 
-\begin{align*}
-\sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
-,\end{align*}
+\begin{itemize}
+\item
+  Let \(\sigma = \sigma_1 \sigma_2 \in H_1 H_2\).
+\item
+  Note that \(\sigma_1(e) = e\) for all \(e\in E_1\) by definition,
+  since \(H_1\) fixes \(E_1\), and \(\sigma_2(e) \in E_1\) (?).
+\item
+  Then
+  \begin{align*}
+  \sigma_1(e) = e \quad \forall e \in E_1 \implies \sigma_1(\sigma_2(e)) = \sigma_2(e) 
+  \end{align*}
+  and substituting \(e = \sigma_1(e)\) on the RHS yields
+  \begin{align*}
+  \sigma_1 \sigma_2(e) = \sigma_2 \sigma_1(e)
+  ,\end{align*}
+  where a similar proof holds for \(e\in E_2\) and thus for arbitrary
+  \(x\in E_1 E_2\).
+\end{itemize}
 
-where a similar proof holds for \(e\in E_2\) and thus for arbitrary
-\(x\in E_1 E_2\).
+\end{proof}
 
-\hypertarget{c-36}{%
-\subsubsection{c}\label{c-36}}
+\end{proof}
+
+\begin{proof}[of c]
 
 By the Galois correspondence, the subgroup \(H_1H_2 \leq G\) will
 correspond to an intermediate field \(E\) such that \(K/E/{\mathbb{Q}}\)
@@ -3245,6 +3431,8 @@ But if \(\sigma \in H_1 H_2\), then \(\sigma = \tau_1 \tau_2\) where
 \(\tau_i\) is an automorphism of \(K\) that fixes \(E_i\), and so
 \(\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \cap E_2\).
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2020-4-work}{%
@@ -3253,24 +3441,19 @@ But if \(\sigma \in H_1 H_2\), then \(\sigma = \tau_1 \tau_2\) where
 
 Let \(f(x) = x^4-2 \in {\mathbb{Q}}[x]\).
 
-\hypertarget{a-63}{%
-\subsubsection{a}\label{a-63}}
-
-Define what it means for a finite extension field \(E\) of a field \(F\)
-to be a Galois extension.
-
-\hypertarget{b-53}{%
-\subsubsection{b}\label{b-53}}
-
-Determine the Galois group \(\operatorname{Gal}(E/{\mathbb{Q}})\) for
-the polynomial \(f(x)\), and justify your answer carefully.
-
-\hypertarget{c-37}{%
-\subsubsection{c}\label{c-37}}
-
-Exhibit a subfield \(K\) in \((b)\) such that
-\({\mathbb{Q}}\leq K \leq E\) with \(K\) not a Galois extension over
-\({\mathbb{Q}}\). Explain.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for a finite extension field \(E\) of a field
+  \(F\) to be a Galois extension.
+\item
+  Determine the Galois group \(\operatorname{Gal}(E/{\mathbb{Q}})\) for
+  the polynomial \(f(x)\), and justify your answer carefully.
+\item
+  Exhibit a subfield \(K\) in \((b)\) such that
+  \({\mathbb{Q}}\leq K \leq E\) with \(K\) not a Galois extension over
+  \({\mathbb{Q}}\). Explain.
+\end{enumerate}
 
 \hypertarget{spring-2020-3-work}{%
 \subsection{\texorpdfstring{Spring 2020 \#3
@@ -3279,38 +3462,34 @@ Exhibit a subfield \(K\) in \((b)\) such that
 Let \(E\) be an extension field of \(F\) and \(\alpha\in E\) be
 algebraic of odd degree over \(F\).
 
-\hypertarget{a-64}{%
-\subsubsection{a}\label{a-64}}
-
-Show that \(F(\alpha) = F(\alpha^2)\).
-
-\hypertarget{b-54}{%
-\subsubsection{b}\label{b-54}}
-
-Prove that \(\alpha^{2020}\) is algebraic of odd degree over \(F\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(F(\alpha) = F(\alpha^2)\).
+\item
+  Prove that \(\alpha^{2020}\) is algebraic of odd degree over \(F\).
+\end{enumerate}
 
 \hypertarget{fall-2017-4-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#4
 \(\work\)}{Fall 2017 \#4 \textbackslash work}}\label{fall-2017-4-work}}
 
-\hypertarget{a-65}{%
-\subsubsection{a}\label{a-65}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(f (x)\) be an irreducible polynomial of degree 4 in
+  \({\mathbb{Q}}[x]\) whose splitting field \(K\) over \({\mathbb{Q}}\)
+  has Galois group \(G = S_4\).
 
-Let \(f (x)\) be an irreducible polynomial of degree 4 in
-\({\mathbb{Q}}[x]\) whose splitting field \(K\) over \({\mathbb{Q}}\)
-has Galois group \(G = S_4\).
-
-Let \(\theta\) be a root of \(f(x)\). Prove that
-\({\mathbb{Q}}[\theta]\) is an extension of \({\mathbb{Q}}\) of degree 4
-and that there are no intermediate fields between \({\mathbb{Q}}\) and
-\({\mathbb{Q}}[\theta]\).
-
-\hypertarget{b-55}{%
-\subsubsection{b}\label{b-55}}
-
-Prove that if \(K\) is a Galois extension of \({\mathbb{Q}}\) of degree
-4, then there is an intermediate subfield between \(K\) and
-\({\mathbb{Q}}\).
+  Let \(\theta\) be a root of \(f(x)\). Prove that
+  \({\mathbb{Q}}[\theta]\) is an extension of \({\mathbb{Q}}\) of degree
+  4 and that there are no intermediate fields between \({\mathbb{Q}}\)
+  and \({\mathbb{Q}}[\theta]\).
+\item
+  Prove that if \(K\) is a Galois extension of \({\mathbb{Q}}\) of
+  degree 4, then there is an intermediate subfield between \(K\) and
+  \({\mathbb{Q}}\).
+\end{enumerate}
 
 \hypertarget{fall-2017-3-work}{%
 \subsection{\texorpdfstring{Fall 2017 \#3
@@ -3332,47 +3511,40 @@ has even degree.
 
 Let \(F\) be a field and let \(f(x) \in F[x]\).
 
-\hypertarget{a-66}{%
-\subsubsection{a}\label{a-66}}
-
-Define what a splitting field of \(f(x)\) over \(F\) is.
-
-\hypertarget{b-56}{%
-\subsubsection{b}\label{b-56}}
-
-Let \(F\) now be a finite field with \(q\) elements. Let \(E/F\) be a
-finite extension of degree \(n>0\). Exhibit an explicit polynomial
-\(g(x) \in F[x]\) such that \(E/F\) is a splitting field of \(g(x)\)
-over \(F\). Fully justify your answer.
-
-\hypertarget{c-38}{%
-\subsubsection{c}\label{c-38}}
-
-Show that the extension \(E/F\) in (b) is a Galois extension.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what a splitting field of \(f(x)\) over \(F\) is.
+\item
+  Let \(F\) now be a finite field with \(q\) elements. Let \(E/F\) be a
+  finite extension of degree \(n>0\). Exhibit an explicit polynomial
+  \(g(x) \in F[x]\) such that \(E/F\) is a splitting field of \(g(x)\)
+  over \(F\). Fully justify your answer.
+\item
+  Show that the extension \(E/F\) in (b) is a Galois extension.
+\end{enumerate}
 
 \hypertarget{spring-2017-8-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#8
 \(\work\)}{Spring 2017 \#8 \textbackslash work}}\label{spring-2017-8-work}}
 
-\hypertarget{a-67}{%
-\subsubsection{a}\label{a-67}}
-
-Let \(K\) denote the splitting field of \(x^5 - 2\) over
-\({\mathbb{Q}}\). Show that the Galois group of \(K/{\mathbb{Q}}\) is
-isomorphic to the group of invertible matrices
-\begin{align*}
-\left(\begin{array}{ll}
-a & b \\
-0 & 1
-\end{array}\right) 
-{\quad \operatorname{where} \quad} a\in {\mathbb{F}}_5^{\times}\text{ and } b\in {\mathbb{F}}_5
-.\end{align*}
-
-\hypertarget{b-57}{%
-\subsubsection{b}\label{b-57}}
-
-Determine all intermediate fields between \(K\) and \({\mathbb{Q}}\)
-which are Galois over \({\mathbb{Q}}\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(K\) denote the splitting field of \(x^5 - 2\) over
+  \({\mathbb{Q}}\). Show that the Galois group of \(K/{\mathbb{Q}}\) is
+  isomorphic to the group of invertible matrices
+  \begin{align*}
+  \left(\begin{array}{ll}
+  a & b \\
+  0 & 1
+  \end{array}\right) 
+  {\quad \operatorname{where} \quad} a\in {\mathbb{F}}_5^{\times}\text{ and } b\in {\mathbb{F}}_5
+  .\end{align*}
+\item
+  Determine all intermediate fields between \(K\) and \({\mathbb{Q}}\)
+  which are Galois over \({\mathbb{Q}}\).
+\end{enumerate}
 
 \hypertarget{fall-2016-4-work}{%
 \subsection{\texorpdfstring{Fall 2016 \#4
@@ -3380,21 +3552,16 @@ which are Galois over \({\mathbb{Q}}\).
 
 Set \(f(x) = x^3 - 5 \in {\mathbb{Q}}[x]\).
 
-\hypertarget{a-68}{%
-\subsubsection{a}\label{a-68}}
-
-Find the splitting field \(K\) of \(f(x)\) over \({\mathbb{Q}}\).
-
-\hypertarget{b-58}{%
-\subsubsection{b}\label{b-58}}
-
-Find the Galois group \(G\) of \(K\) over \({\mathbb{Q}}\).
-
-\hypertarget{c-39}{%
-\subsubsection{c}\label{c-39}}
-
-Exhibit explicitly the correspondence between subgroups of \(G\) and
-intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the splitting field \(K\) of \(f(x)\) over \({\mathbb{Q}}\).
+\item
+  Find the Galois group \(G\) of \(K\) over \({\mathbb{Q}}\).
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\end{enumerate}
 
 \hypertarget{spring-2016-2-work}{%
 \subsection{\texorpdfstring{Spring 2016 \#2
@@ -3402,22 +3569,17 @@ intermediate fields between \({\mathbb{Q}}\) and \(K\).
 
 Let \(K = {\mathbb{Q}}[\sqrt 2 + \sqrt 5]\).
 
-\hypertarget{a-69}{%
-\subsubsection{a}\label{a-69}}
-
-Find \([K: {\mathbb{Q}}]\).
-
-\hypertarget{b-59}{%
-\subsubsection{b}\label{b-59}}
-
-Show that \(K/{\mathbb{Q}}\) is Galois, and find the Galois group \(G\)
-of \(K/{\mathbb{Q}}\).
-
-\hypertarget{c-40}{%
-\subsubsection{c}\label{c-40}}
-
-Exhibit explicitly the correspondence between subgroups of \(G\) and
-intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find \([K: {\mathbb{Q}}]\).
+\item
+  Show that \(K/{\mathbb{Q}}\) is Galois, and find the Galois group
+  \(G\) of \(K/{\mathbb{Q}}\).
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\end{enumerate}
 
 \hypertarget{spring-2016-6-work}{%
 \subsection{\texorpdfstring{Spring 2016 \#6
@@ -3433,53 +3595,43 @@ Prove that \(K\) is an extension by radicals of the field \(F\).
 Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
 \(E = {\mathbb{Q}}(u)\).
 
-\hypertarget{a-70}{%
-\subsubsection{a}\label{a-70}}
-
-Find (with justification) the minimal polynomial \(f(x)\) of \(u\) over
-\({\mathbb{Q}}\).
-
-\hypertarget{b-60}{%
-\subsubsection{b}\label{b-60}}
-
-Show \(v\in E\), and show that \(E\) is a splitting field of \(f(x)\)
-over \({\mathbb{Q}}\).
-
-\hypertarget{c-41}{%
-\subsubsection{c}\label{c-41}}
-
-Determine the Galois group of \(E\) over \({\mathbb{Q}}\) and determine
-all of the intermediate fields \(F\) such that
-\({\mathbb{Q}}\subset F \subset E\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find (with justification) the minimal polynomial \(f(x)\) of \(u\)
+  over \({\mathbb{Q}}\).
+\item
+  Show \(v\in E\), and show that \(E\) is a splitting field of \(f(x)\)
+  over \({\mathbb{Q}}\).
+\item
+  Determine the Galois group of \(E\) over \({\mathbb{Q}}\) and
+  determine all of the intermediate fields \(F\) such that
+  \({\mathbb{Q}}\subset F \subset E\).
+\end{enumerate}
 
 \hypertarget{fall-2015-6-work}{%
 \subsection{\texorpdfstring{Fall 2015 \#6
 \(\work\)}{Fall 2015 \#6 \textbackslash work}}\label{fall-2015-6-work}}
 
-\hypertarget{a-71}{%
-\subsubsection{a}\label{a-71}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(G\) be a finite group. Show that there exists a field extension
+  \(K/F\) with \(\operatorname{Gal}(K/F) = G\).
 
-Let \(G\) be a finite group. Show that there exists a field extension
-\(K/F\) with \(\operatorname{Gal}(K/F) = G\).
-
-\begin{quote}
-You may assume that for any natural number \(n\) there is a field
-extension with Galois group \(S_n\).
-\end{quote}
-
-\hypertarget{b-61}{%
-\subsubsection{b}\label{b-61}}
-
-Let \(K\) be a Galois extension of \(F\) with
-\({\left\lvert {\operatorname{Gal}(K/F)} \right\rvert} = 12\). Prove
-that there exists an intermediate field \(E\) of \(K/F\) with
-\([E: F] = 3\).
-
-\hypertarget{c-42}{%
-\subsubsection{c}\label{c-42}}
-
-With \(K/F\) as in (b), does an intermediate field \(L\) necessarily
-exist satisfying \([L: F] = 2\)? Give a proof or counterexample.
+  \begin{quote}
+  You may assume that for any natural number \(n\) there is a field
+  extension with Galois group \(S_n\).
+  \end{quote}
+\item
+  Let \(K\) be a Galois extension of \(F\) with
+  \({\left\lvert {\operatorname{Gal}(K/F)} \right\rvert} = 12\). Prove
+  that there exists an intermediate field \(E\) of \(K/F\) with
+  \([E: F] = 3\).
+\item
+  With \(K/F\) as in (b), does an intermediate field \(L\) necessarily
+  exist satisfying \([L: F] = 2\)? Give a proof or counterexample.
+\end{enumerate}
 
 \hypertarget{spring-2015-2-work}{%
 \subsection{\texorpdfstring{Spring 2015 \#2
@@ -3487,24 +3639,19 @@ exist satisfying \([L: F] = 2\)? Give a proof or counterexample.
 
 Let \({\mathbb{F}}\) be a finite field.
 
-\hypertarget{a-72}{%
-\subsubsection{a}\label{a-72}}
-
-Give (with proof) the decomposition of the additive group
-\(({\mathbb{F}}, +)\) into a direct sum of cyclic groups.
-
-\hypertarget{b-62}{%
-\subsubsection{b}\label{b-62}}
-
-The \emph{exponent} of a finite group is the least common multiple of
-the orders of its elements. Prove that a finite abelian group has an
-element of order equal to its exponent.
-
-\hypertarget{c-43}{%
-\subsubsection{c}\label{c-43}}
-
-Prove that the multiplicative group \(({\mathbb{F}}^{\times}, \cdot)\)
-is cyclic.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Give (with proof) the decomposition of the additive group
+  \(({\mathbb{F}}, +)\) into a direct sum of cyclic groups.
+\item
+  The \emph{exponent} of a finite group is the least common multiple of
+  the orders of its elements. Prove that a finite abelian group has an
+  element of order equal to its exponent.
+\item
+  Prove that the multiplicative group \(({\mathbb{F}}^{\times}, \cdot)\)
+  is cyclic.
+\end{enumerate}
 
 \hypertarget{spring-2015-5-work}{%
 \subsection{\texorpdfstring{Spring 2015 \#5
@@ -3512,15 +3659,13 @@ is cyclic.
 
 Let \(f(x) = x^4 - 5 \in {\mathbb{Q}}[x]\).
 
-\hypertarget{a-73}{%
-\subsubsection{a}\label{a-73}}
-
-Compute the Galois group of \(f\) over \({\mathbb{Q}}\).
-
-\hypertarget{b-63}{%
-\subsubsection{b}\label{b-63}}
-
-Compute the Galois group of \(f\) over \({\mathbb{Q}}(\sqrt{5})\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Compute the Galois group of \(f\) over \({\mathbb{Q}}\).
+\item
+  Compute the Galois group of \(f\) over \({\mathbb{Q}}(\sqrt{5})\).
+\end{enumerate}
 
 \hypertarget{fall-2014-1-work}{%
 \subsection{\texorpdfstring{Fall 2014 \#1
@@ -3531,16 +3676,14 @@ finite Galois extension of \({\mathbb{Q}}\). Let
 \(f(x) = g_1(x)g_2(x)\cdots g_r(x)\) be a factorization of \(f\) into
 irreducibles in \(L[x]\).
 
-\hypertarget{a-74}{%
-\subsubsection{a}\label{a-74}}
-
-Prove that each of the factors \(g_i(x)\) has the same degree.
-
-\hypertarget{b-64}{%
-\subsubsection{b}\label{b-64}}
-
-Give an example showing that if \(L\) is not Galois over
-\({\mathbb{Q}}\), the conclusion of part (a) need not hold.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that each of the factors \(g_i(x)\) has the same degree.
+\item
+  Give an example showing that if \(L\) is not Galois over
+  \({\mathbb{Q}}\), the conclusion of part (a) need not hold.
+\end{enumerate}
 
 \hypertarget{fall-2014-3-work}{%
 \subsection{\texorpdfstring{Fall 2014 \#3
@@ -3549,19 +3692,17 @@ Give an example showing that if \(L\) is not Galois over
 Consider the polynomial \(f(x) = x^4 - 7 \in {\mathbb{Q}}[x]\) and let
 \(E/{\mathbb{Q}}\) be the splitting field of \(f\).
 
-\hypertarget{a-75}{%
-\subsubsection{a}\label{a-75}}
-
-What is the structure of the Galois group of \(E/{\mathbb{Q}}\)?
-
-\hypertarget{b-65}{%
-\subsubsection{b}\label{b-65}}
-
-Give an explicit description of all of the intermediate subfields
-\({\mathbb{Q}}\subset K \subset E\) in the form
-\(K = {\mathbb{Q}}(\alpha), {\mathbb{Q}}(\alpha, \beta), \cdots\) where
-\(\alpha, \beta\), etc are complex numbers. Describe the corresponding
-subgroups of the Galois group.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the structure of the Galois group of \(E/{\mathbb{Q}}\)?
+\item
+  Give an explicit description of all of the intermediate subfields
+  \({\mathbb{Q}}\subset K \subset E\) in the form
+  \(K = {\mathbb{Q}}(\alpha), {\mathbb{Q}}(\alpha, \beta), \cdots\)
+  where \(\alpha, \beta\), etc are complex numbers. Describe the
+  corresponding subgroups of the Galois group.
+\end{enumerate}
 
 \hypertarget{spring-2014-3-work}{%
 \subsection{\texorpdfstring{Spring 2014 \#3
@@ -3569,17 +3710,15 @@ subgroups of the Galois group.
 
 Let \(F\subset C\) be a field extension with \(C\) algebraically closed.
 
-\hypertarget{a-76}{%
-\subsubsection{a}\label{a-76}}
-
-Prove that the intermediate field \(C_{\text{alg}} \subset C\)
-consisting of elements algebraic over \(F\) is algebraically closed.
-
-\hypertarget{b-66}{%
-\subsubsection{b}\label{b-66}}
-
-Prove that if \(F\to E\) is an algebraic extension, there exists a
-homomorphism \(E\to C\) that is the identity on \(F\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that the intermediate field \(C_{\text{alg}} \subset C\)
+  consisting of elements algebraic over \(F\) is algebraically closed.
+\item
+  Prove that if \(F\to E\) is an algebraic extension, there exists a
+  homomorphism \(E\to C\) that is the identity on \(F\).
+\end{enumerate}
 
 \hypertarget{spring-2014-4-work}{%
 \subsection{\texorpdfstring{Spring 2014 \#4
@@ -3588,27 +3727,23 @@ homomorphism \(E\to C\) that is the identity on \(F\).
 Let \(E\subset {\mathbb{C}}\) denote the splitting field over
 \({\mathbb{Q}}\) of the polynomial \(x^3 - 11\).
 
-\hypertarget{a-77}{%
-\subsubsection{a}\label{a-77}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(n\) is a squarefree positive integer, then
+  \(\sqrt{n}\not\in E\).
 
-Prove that if \(n\) is a squarefree positive integer, then
-\(\sqrt{n}\not\in E\).
-
-\begin{quote}
-Hint: you can describe all quadratic extensions of \({\mathbb{Q}}\)
-contained in \(E\).
-\end{quote}
-
-\hypertarget{b-67}{%
-\subsubsection{b}\label{b-67}}
-
-Find the Galois group of \((x^3 - 11)(x^2 - 2)\) over \({\mathbb{Q}}\).
-
-\hypertarget{c-44}{%
-\subsubsection{c}\label{c-44}}
-
-Prove that the minimal polynomial of \(11^{1/3} + 2^{1/2}\) over
-\({\mathbb{Q}}\) has degree 6.
+  \begin{quote}
+  Hint: you can describe all quadratic extensions of \({\mathbb{Q}}\)
+  contained in \(E\).
+  \end{quote}
+\item
+  Find the Galois group of \((x^3 - 11)(x^2 - 2)\) over
+  \({\mathbb{Q}}\).
+\item
+  Prove that the minimal polynomial of \(11^{1/3} + 2^{1/2}\) over
+  \({\mathbb{Q}}\) has degree 6.
+\end{enumerate}
 
 \hypertarget{fall-2013-5-work}{%
 \subsection{\texorpdfstring{Fall 2013 \#5
@@ -3616,20 +3751,16 @@ Prove that the minimal polynomial of \(11^{1/3} + 2^{1/2}\) over
 
 Let \(L/K\) be a finite extension of fields.
 
-\hypertarget{a-78}{%
-\subsubsection{a}\label{a-78}}
-
-Define what it means for \(L/K\) to be \emph{separable}.
-
-\hypertarget{b-68}{%
-\subsubsection{b}\label{b-68}}
-
-Show that if \(K\) is a finite field, then \(L/K\) is always separable.
-
-\hypertarget{c-45}{%
-\subsubsection{c}\label{c-45}}
-
-Give an example of a finite extension \(L/K\) that is not separable.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for \(L/K\) to be \emph{separable}.
+\item
+  Show that if \(K\) is a finite field, then \(L/K\) is always
+  separable.
+\item
+  Give an example of a finite extension \(L/K\) that is not separable.
+\end{enumerate}
 
 \hypertarget{fall-2013-6-work}{%
 \subsection{\texorpdfstring{Fall 2013 \#6
@@ -3638,39 +3769,31 @@ Give an example of a finite extension \(L/K\) that is not separable.
 Let \(K\) be the splitting field of \(x^4-2\) over \({\mathbb{Q}}\) and
 set \(G = \operatorname{Gal}(K/{\mathbb{Q}})\).
 
-\hypertarget{a-79}{%
-\subsubsection{a}\label{a-79}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(K/{\mathbb{Q}}\) contains both \({\mathbb{Q}}(i)\) and
+  \({\mathbb{Q}}(\sqrt[4]{2})\) and has degree 8 over \({\mathbb{Q}}\)/
+\item
+  Let \(N = \operatorname{Gal}(K/{\mathbb{Q}}(i))\) and
+  \(H = \operatorname{Gal}(K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that
+  \(N\) is normal in \(G\) and \(NH = G\).
 
-Show that \(K/{\mathbb{Q}}\) contains both \({\mathbb{Q}}(i)\) and
-\({\mathbb{Q}}(\sqrt[4]{2})\) and has degree 8 over \({\mathbb{Q}}\)/
+  \begin{quote}
+  Hint: what field is fixed by \(NH\)?
+  \end{quote}
+\item
+  Show that \(\operatorname{Gal}(K/{\mathbb{Q}})\) is generated by
+  elements \(\sigma, \tau\), of orders 4 and 2 respectively, with
+  \(\tau \sigma\tau^{-1}= \sigma^{-1}\).
 
-\hypertarget{b-69}{%
-\subsubsection{b}\label{b-69}}
-
-Let \(N = \operatorname{Gal}(K/{\mathbb{Q}}(i))\) and
-\(H = \operatorname{Gal}(K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that \(N\)
-is normal in \(G\) and \(NH = G\).
-
-\begin{quote}
-Hint: what field is fixed by \(NH\)?
-\end{quote}
-
-\hypertarget{c-46}{%
-\subsubsection{c}\label{c-46}}
-
-Show that \(\operatorname{Gal}(K/{\mathbb{Q}})\) is generated by
-elements \(\sigma, \tau\), of orders 4 and 2 respectively, with
-\(\tau \sigma\tau^{-1}= \sigma^{-1}\).
-
-\begin{quote}
-Equivalently, show it is the dihedral group of order 8.
-\end{quote}
-
-\hypertarget{d-12}{%
-\subsubsection{d}\label{d-12}}
-
-How many distinct quartic subfields of \(K\) are there? Justify your
-answer.
+  \begin{quote}
+  Equivalently, show it is the dihedral group of order 8.
+  \end{quote}
+\item
+  How many distinct quartic subfields of \(K\) are there? Justify your
+  answer.
+\end{enumerate}
 
 \hypertarget{spring-2013-7-work}{%
 \subsection{\texorpdfstring{Spring 2013 \#7
@@ -3679,36 +3802,25 @@ answer.
 Let \(f(x) = g(x) h(x) \in {\mathbb{Q}}[x]\) and \(E,B,C/{\mathbb{Q}}\)
 be the splitting fields of \(f,g,h\) respectively.
 
-\hypertarget{a-80}{%
-\subsubsection{a}\label{a-80}}
-
-Prove that \(\operatorname{Gal}(E/B)\) and \(\operatorname{Gal}(E/C)\)
-are normal subgroups of \(\operatorname{Gal}(E/{\mathbb{Q}})\).
-
-\hypertarget{b-70}{%
-\subsubsection{b}\label{b-70}}
-
-Prove that
-\(\operatorname{Gal}(E/B) \cap\operatorname{Gal}(E/C) = \left\{{1}\right\}\).
-
-\hypertarget{c-47}{%
-\subsubsection{c}\label{c-47}}
-
-If \(B\cap C = {\mathbb{Q}}\), show that
-\(\operatorname{Gal}(E/B) \operatorname{Gal}(E/C) = \operatorname{Gal}(E/{\mathbb{Q}})\).
-
-\hypertarget{d-13}{%
-\subsubsection{d}\label{d-13}}
-
-Under the hypothesis of (c), show that
-\(\operatorname{Gal}(E/{\mathbb{Q}}) \cong \operatorname{Gal}(E/B) \times \operatorname{Gal}(E/C)\).
-
-\hypertarget{e-1}{%
-\subsubsection{e}\label{e-1}}
-
-Use (d) to describe
-\(\operatorname{Gal}({\mathbb{Q}}[\alpha]/{\mathbb{Q}})\) where
-\(\alpha = \sqrt 2 + \sqrt 3\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(\operatorname{Gal}(E/B)\) and \(\operatorname{Gal}(E/C)\)
+  are normal subgroups of \(\operatorname{Gal}(E/{\mathbb{Q}})\).
+\item
+  Prove that
+  \(\operatorname{Gal}(E/B) \cap\operatorname{Gal}(E/C) = \left\{{1}\right\}\).
+\item
+  If \(B\cap C = {\mathbb{Q}}\), show that
+  \(\operatorname{Gal}(E/B) \operatorname{Gal}(E/C) = \operatorname{Gal}(E/{\mathbb{Q}})\).
+\item
+  Under the hypothesis of (c), show that
+  \(\operatorname{Gal}(E/{\mathbb{Q}}) \cong \operatorname{Gal}(E/B) \times \operatorname{Gal}(E/C)\).
+\item
+  Use (d) to describe
+  \(\operatorname{Gal}({\mathbb{Q}}[\alpha]/{\mathbb{Q}})\) where
+  \(\alpha = \sqrt 2 + \sqrt 3\).
+\end{enumerate}
 
 \hypertarget{spring-2013-8-work}{%
 \subsection{\texorpdfstring{Spring 2013 \#8
@@ -3718,18 +3830,16 @@ Let \(F\) be the field with 2 elements and \(K\) a splitting field of
 \(f(x) = x^6 + x^3 + 1\) over \(F\). You may assume that \(f\) is
 irreducible over \(F\).
 
-\hypertarget{a-81}{%
-\subsubsection{a}\label{a-81}}
-
-Show that if \(r\) is a root of \(f\) in \(K\), then \(r^9 = 1\) but
-\(r^3\neq 1\).
-
-\hypertarget{b-71}{%
-\subsubsection{b}\label{b-71}}
-
-Find \(\operatorname{Gal}(K/F)\) and express each intermediate field
-between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
-\(\beta \in K\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(r\) is a root of \(f\) in \(K\), then \(r^9 = 1\) but
+  \(r^3\neq 1\).
+\item
+  Find \(\operatorname{Gal}(K/F)\) and express each intermediate field
+  between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
+  \(\beta \in K\).
+\end{enumerate}
 
 \hypertarget{fall-2012-3-work}{%
 \subsection{\texorpdfstring{Fall 2012 \#3
@@ -3756,18 +3866,16 @@ radicals.
 Suppose that \(F\subset E\) are fields such that \(E/F\) is Galois and
 \({\left\lvert {\operatorname{Gal}(E/F)} \right\rvert} = 14\).
 
-\hypertarget{a-82}{%
-\subsubsection{a}\label{a-82}}
-
-Show that there exists a unique intermediate field \(K\) with
-\(F\subset K \subset E\) such that \([K: F] = 2\).
-
-\hypertarget{b-72}{%
-\subsubsection{b}\label{b-72}}
-
-Assume that there are at least two distinct intermediate subfields
-\(F \subset L_1, L_2 \subset E\) with \([L_i: F]= 7\). Prove that
-\(\operatorname{Gal}(E/F)\) is nonabelian.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that there exists a unique intermediate field \(K\) with
+  \(F\subset K \subset E\) such that \([K: F] = 2\).
+\item
+  Assume that there are at least two distinct intermediate subfields
+  \(F \subset L_1, L_2 \subset E\) with \([L_i: F]= 7\). Prove that
+  \(\operatorname{Gal}(E/F)\) is nonabelian.
+\end{enumerate}
 
 \hypertarget{spring-2012-4-work}{%
 \subsection{\texorpdfstring{Spring 2012 \#4
@@ -3776,15 +3884,13 @@ Assume that there are at least two distinct intermediate subfields
 Let \(f(x) = x^7 - 3\in {\mathbb{Q}}[x]\) and \(E/{\mathbb{Q}}\) be a
 splitting field of \(f\) with \(\alpha \in E\) a root of \(f\).
 
-\hypertarget{a-83}{%
-\subsubsection{a}\label{a-83}}
-
-Show that \(E\) contains a primitive 7th root of unity.
-
-\hypertarget{b-73}{%
-\subsubsection{b}\label{b-73}}
-
-Show that \(E\neq {\mathbb{Q}}(\alpha)\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(E\) contains a primitive 7th root of unity.
+\item
+  Show that \(E\neq {\mathbb{Q}}(\alpha)\).
+\end{enumerate}
 
 \hypertarget{fall-2019-midterm-6-work}{%
 \subsection{\texorpdfstring{Fall 2019 Midterm \#6
@@ -3823,7 +3929,8 @@ Show that
 
 Let \(L/K\) be a finite normal extension.
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
 \item
   Show that if \(L/K\) is cyclic and \(E/K\) is normal with \(L/E/K\)
   then \(L/E\) and \(E/K\) are cyclic.
@@ -3831,7 +3938,7 @@ Let \(L/K\) be a finite normal extension.
   Show that if \(L/K\) is cyclic then there exists exactly one extension
   \(E/K\) of degree \(n\) with \(L/E/K\) for each divisor \(n\) of
   \([L:K]\).
-\end{itemize}
+\end{enumerate}
 
 \hypertarget{spring-2021-4-work}{%
 \subsection{\texorpdfstring{Spring 2021 \#4
@@ -3904,30 +4011,39 @@ Let \(R\) be a commutative ring, and let \(M\) be an
 maximal if there is no \(R{\hbox{-}}\)module \(P\) with
 \(N \subsetneq P \subsetneq M\).
 
-\hypertarget{a-84}{%
-\paragraph{a}\label{a-84}}
-
-Show that an \(R{\hbox{-}}\)submodule \(N\) of \(M\) is maximal
-\(\iff M /N\) is a simple \(R{\hbox{-}}\)module: i.e., \(M /N\) is
-nonzero and has no proper, nonzero \(R{\hbox{-}}\)submodules.
-
-\hypertarget{b-74}{%
-\paragraph{b}\label{b-74}}
-
-Let \(M\) be a \({\mathbb{Z}}{\hbox{-}}\)module. Show that a
-\({\mathbb{Z}}{\hbox{-}}\)submodule \(N\) of \(M\) is maximal
-\(\iff \#M /N\) is a prime number.
-
-\hypertarget{c-48}{%
-\paragraph{c}\label{c-48}}
-
-Let \(M\) be the \({\mathbb{Z}}{\hbox{-}}\)module of all roots of unity
-in \({\mathbb{C}}\) under multiplication. Show that there is no maximal
-\({\mathbb{Z}}{\hbox{-}}\)submodule of \(M\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that an \(R{\hbox{-}}\)submodule \(N\) of \(M\) is maximal
+  \(\iff M /N\) is a simple \(R{\hbox{-}}\)module: i.e., \(M /N\) is
+  nonzero and has no proper, nonzero \(R{\hbox{-}}\)submodules.
+\item
+  Let \(M\) be a \({\mathbb{Z}}{\hbox{-}}\)module. Show that a
+  \({\mathbb{Z}}{\hbox{-}}\)submodule \(N\) of \(M\) is maximal
+  \(\iff \#M /N\) is a prime number.
+\item
+  Let \(M\) be the \({\mathbb{Z}}{\hbox{-}}\)module of all roots of
+  unity in \({\mathbb{C}}\) under multiplication. Show that there is no
+  maximal \({\mathbb{Z}}{\hbox{-}}\)submodule of \(M\).
+\end{enumerate}
 
 \begin{solution}
 
-a
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 By the correspondence theorem, submodules of \(M/N\) biject with
 submodules \(A\) of \(M\) containing \(N\).
@@ -3945,20 +4061,24 @@ So
   \(\iff M/N\) is simple.
 \end{itemize}
 
-b
+\end{proof}
+
+\begin{proof}[of b]
 
 Identify \({\mathbb{Z}}{\hbox{-}}\)modules with abelian groups, then by
 (a), \(N\) is maximal \(\iff\) \(M/N\) is simple \(\iff\) \(M/N\) has no
-nontrivial proper subgroups.
+nontrivial proper subgroups.\\
 
 By Cauchy's theorem, if \({\left\lvert {M/N} \right\rvert} = ab\) is a
-composite number, then \(a\mathrel{\Big|}ab \implies\) there is an
-element (and thus a subgroup) of order \(a\). In this case, \(M/N\)
-contains a nontrivial proper cyclic subgroup, so \(M/N\) is not simple.
-So \({\left\lvert {M/N} \right\rvert}\) can not be composite, and
-therefore must be prime.
+composite number, then \(a\bigm|ab \implies\) there is an element (and
+thus a subgroup) of order \(a\). In this case, \(M/N\) contains a
+nontrivial proper cyclic subgroup, so \(M/N\) is not simple. So
+\({\left\lvert {M/N} \right\rvert}\) can not be composite, and therefore
+must be prime.
 
-c
+\end{proof}
+
+\begin{proof}[of c]
 
 Let
 \(G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\}\),
@@ -3974,6 +4094,8 @@ But this means there are infinitely many elements in \(G\setminus H\),
 and so \(\infty = [G: H] = {\left\lvert {G/H} \right\rvert}\) is not a
 prime. Thus by (b), \(H\) can not be maximal, a contradiction.
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2019-final-2-work}{%
@@ -3982,7 +4104,12 @@ prime. Thus by (b), \(H\) can not be maximal, a contradiction.
 
 Consider the \({\mathbb{Z}}{\hbox{-}}\)submodule \(N\) of
 \({\mathbb{Z}}^3\) spanned by
-\(f_1 = [-1, 0, 1], f_2 = [2,-3,1], f_3 = [0, 3, 1], f_4 = [3,1,5]\).
+\begin{align*}
+f_1 &= [-1, 0, 1], \\
+f_2 &= [2,-3,1], \\
+f_3 &= [0, 3, 1], \\
+f_4 &= [3,1,5]
+.\end{align*}
 Find a basis for \(N\) and describe \({\mathbb{Z}}^3/N\).
 
 \hypertarget{spring-2018-6-work}{%
@@ -3991,39 +4118,34 @@ Find a basis for \(N\) and describe \({\mathbb{Z}}^3/N\).
 
 Let
 \begin{align*}
-M = \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\}
-,\end{align*}
-
-and
-
-\begin{align*}
-N = \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\mathrel{\Big|}(w - x),~ 4\mathrel{\Big|}(x - y),~ 4\mathrel{\Big|}( y - z)\}
+M &= \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\} \\
+N &= \left\{{
+(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\bigm|(w - x),~ 4\bigm|(x - y),~ 4\bigm|( y - z)
+}\right\}
 .\end{align*}
 
-\hypertarget{a-85}{%
-\paragraph{a}\label{a-85}}
-
-Show that \(N\) is a \({\mathbb{Z}}{\hbox{-}}\)submodule of \(M\) .
-
-\hypertarget{b-75}{%
-\paragraph{b}\label{b-75}}
-
-Find vectors \(u_1 , u_2 , u_3 , u_4 \in {\mathbb{Z}}^4\) and integers
-\(d_1 , d_2 , d_3 , d_4\) such that
-\begin{align*}
-\{u_1 , u_2 , u_3 , u_4 \}
-\end{align*}
-is a free basis for \(M\), and
-\begin{align*}
-\{d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 \}
-\end{align*}
-is a free basis for \(N\) .
-
-\hypertarget{c-49}{%
-\paragraph{c}\label{c-49}}
-
-Use the previous part to describe \(M/N\) as a direct sum of cyclic
-\({\mathbb{Z}}{\hbox{-}}\)modules.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(N\) is a \({\mathbb{Z}}{\hbox{-}}\)submodule of \(M\) .
+\item
+  Find vectors \(u_1 , u_2 , u_3 , u_4 \in {\mathbb{Z}}^4\) and integers
+  \(d_1 , d_2 , d_3 , d_4\) such that
+  \begin{align*}
+  \{
+  u_1 , u_2 , u_3 , u_4 
+  \} 
+  && \text{is a free basis for }M
+  \\
+  \{
+  d_1 u_1,~ d_2 u_2,~ d_3 u_3,~ d_4 u_4 
+  \}
+  && \text{is a free basis for }N
+  \end{align*}
+\item
+  Use the previous part to describe \(M/N\) as a direct sum of cyclic
+  \({\mathbb{Z}}{\hbox{-}}\)modules.
+\end{enumerate}
 
 \hypertarget{spring-2018-7-work}{%
 \subsubsection{\texorpdfstring{Spring 2018 \#7
@@ -4034,21 +4156,19 @@ prime element of \(R\). The module \(M\) is called
 \emph{\(\left\langle{p}\right\rangle{\hbox{-}}\)primary} if for every
 \(m \in M\) there exists \(k > 0\) such that \(p^k m = 0\).
 
-\hypertarget{a-86}{%
-\paragraph{a}\label{a-86}}
-
-Suppose M is \(\left\langle{p}\right\rangle{\hbox{-}}\)primary. Show
-that if \(m \in M\) and
-\(t \in R, ~t \not\in \left\langle{p}\right\rangle\), then there exists
-\(a \in R\) such that \(atm = m\).
-
-\hypertarget{b-76}{%
-\paragraph{b}\label{b-76}}
-
-A submodule \(S\) of \(M\) is said to be \emph{pure} if
-\(S \cap r M = rS\) for all \(r \in R\). Show that if \(M\) is
-\(\left\langle{p}\right\rangle{\hbox{-}}\)primary, then \(S\) is pure if
-and only if \(S \cap p^k M = p^k S\) for all \(k \geq 0\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose M is \(\left\langle{p}\right\rangle{\hbox{-}}\)primary. Show
+  that if \(m \in M\) and
+  \(t \in R, ~t \not\in \left\langle{p}\right\rangle\), then there
+  exists \(a \in R\) such that \(atm = m\).
+\item
+  A submodule \(S\) of \(M\) is said to be \emph{pure} if
+  \(S \cap r M = rS\) for all \(r \in R\). Show that if \(M\) is
+  \(\left\langle{p}\right\rangle{\hbox{-}}\)primary, then \(S\) is pure
+  if and only if \(S \cap p^k M = p^k S\) for all \(k \geq 0\).
+\end{enumerate}
 
 \hypertarget{fall-2016-6-work}{%
 \subsubsection{\texorpdfstring{Fall 2016 \#6
@@ -4083,21 +4203,19 @@ is an isomorphism.
 
 Let \(R\) be a PID and \(M\) a finitely generated \(R{\hbox{-}}\)module.
 
-\hypertarget{a-87}{%
-\paragraph{a}\label{a-87}}
-
-Prove that there are \(R{\hbox{-}}\)submodules
-\begin{align*}
-0 = M_0 \subset M_1 \subset \cdots \subset M_n = M
-\end{align*}
-such that for all \(0\leq i \leq n-1\), the module \(M_{i+1}/M_i\) is
-cyclic.
-
-\hypertarget{b-77}{%
-\paragraph{b}\label{b-77}}
-
-Is the integer \(n\) in part (a) uniquely determined by \(M\)? Prove
-your answer.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that there are \(R{\hbox{-}}\)submodules
+  \begin{align*}
+  0 = M_0 \subset M_1 \subset \cdots \subset M_n = M
+  \end{align*}
+  such that for all \(0\leq i \leq n-1\), the module \(M_{i+1}/M_i\) is
+  cyclic.
+\item
+  Is the integer \(n\) in part (a) uniquely determined by \(M\)? Prove
+  your answer.
+\end{enumerate}
 
 \hypertarget{fall-2012-6-work}{%
 \subsubsection{\texorpdfstring{Fall 2012 \#6
@@ -4162,32 +4280,36 @@ Recall that the set of torsion elements in M is defined by
 .\end{align*}
 \end{quote}
 
-\hypertarget{a-88}{%
-\paragraph{a}\label{a-88}}
-
-Prove that if \(R\) is an integral domain, then
-\(\operatorname{Tor}(M )\) is a submodule of \(M\) .
-
-\hypertarget{b-78}{%
-\paragraph{b}\label{b-78}}
-
-Give an example where \(\operatorname{Tor}(M )\) is not a submodule of
-\(M\).
-
-\hypertarget{c-50}{%
-\paragraph{c}\label{c-50}}
-
-If \(R\) has zero-divisors, prove that every non-zero
-\(R{\hbox{-}}\)module has non-zero torsion elements.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(R\) is an integral domain, then
+  \(\operatorname{Tor}(M )\) is a submodule of \(M\) .
+\item
+  Give an example where \(\operatorname{Tor}(M )\) is not a submodule of
+  \(M\).
+\item
+  If \(R\) has zero-divisors, prove that every non-zero
+  \(R{\hbox{-}}\)module has non-zero torsion elements.
+\end{enumerate}
 
 \begin{solution}
 
-\begin{quote}
-One-step submodule test.
-\end{quote}
+\envlist
 
-\hypertarget{a-89}{%
-\subparagraph{a}\label{a-89}}
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  One-step submodule test.
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
 
 It suffices to show that
 \begin{align*}
@@ -4209,8 +4331,9 @@ s_1 s_2(rt_1 + t_2)
 &= 0
 .\end{align*}
 
-\hypertarget{b-79}{%
-\subparagraph{b}\label{b-79}}
+\end{proof}
+
+\begin{proof}[of b]
 
 Let \(R = {\mathbb{Z}}/6{\mathbb{Z}}\) as a
 \({\mathbb{Z}}/6{\mathbb{Z}}{\hbox{-}}\)module, which is not an integral
@@ -4225,8 +4348,9 @@ where 5 is coprime to 6, and thus
 So the set of torsion elements are not closed under addition, and thus
 not a submodule.
 
-\hypertarget{c-51}{%
-\subparagraph{c}\label{c-51}}
+\end{proof}
+
+\begin{proof}[of c]
 
 Suppose \(R\) has zero divisors \(a,b \neq 0\) where \(ab = 0\). Then
 for any \(m\in M\), we have \(b\curvearrowright m \coloneqq bm \in M\)
@@ -4235,6 +4359,8 @@ as well, but then
 a\curvearrowright bm = (ab)\curvearrowright m = 0\curvearrowright m = 0_M
 ,\end{align*}
 so \(m\) is a torsion element for any \(m\).
+
+\end{proof}
 
 \end{solution}
 
@@ -4247,28 +4373,39 @@ Let \(R\) be an integral domain. Recall that if \(M\) is an
 maximum number of \(R{\hbox{-}}\)linearly independent elements of \(M\)
 .
 
-\hypertarget{a-90}{%
-\paragraph{a}\label{a-90}}
-
-Prove that for any \(R{\hbox{-}}\)module \(M\), the rank of
-\(\operatorname{Tor}(M )\) is 0.
-
-\hypertarget{b-80}{%
-\paragraph{b}\label{b-80}}
-
-Prove that the rank of \(M\) is equal to the rank of of
-\(M/\operatorname{Tor}(M )\).
-
-\hypertarget{c-52}{%
-\paragraph{c}\label{c-52}}
-
-Suppose that M is a non-principal ideal of \(R\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that for any \(R{\hbox{-}}\)module \(M\), the rank of
+  \(\operatorname{Tor}(M )\) is 0.
+\item
+  Prove that the rank of \(M\) is equal to the rank of of
+  \(M/\operatorname{Tor}(M )\).
+\item
+  Suppose that M is a non-principal ideal of \(R\).
+\end{enumerate}
 
 Prove that \(M\) is torsion-free of rank 1 but not free.
 
-\begin{solution}
+:::\{.solution\}
 
-\textbf{Part a}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -4293,7 +4430,11 @@ Prove that \(M\) is torsion-free of rank 1 but not free.
   independent set, a contradiction.
 \end{itemize}
 
-\textbf{Part b}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -4306,73 +4447,85 @@ Prove that \(M\) is torsion-free of rank 1 but not free.
   \(\pi: M \to M'\) be the canonical quotient map.
 \end{itemize}
 
-\textbf{Claim:}
+\begin{claim}
+
 \begin{align*}
 \tilde {\mathcal{B}}\coloneqq\pi(\mathcal B) = \left\{{\mathbf{r}_i + \operatorname{Tor}(M)}\right\}
 \end{align*}
 is a basis for \(\tilde M\).
 
+\end{claim}
+
+Note that the proof follows immediately.
+
+\end{proof}
+
+\begin{proof}[of claim: linearly independent]
+
+\envlist
+
 \begin{itemize}
 \item
-  \textbf{Linearly Independent:}
-
-  \begin{itemize}
-  \item
-    Suppose that
-    \begin{align*}
-    \sum_{i=1}^n s_i (\mathbf{r}_i + \operatorname{Tor}(M)) = \mathbf{0}_{\tilde M}
-    .\end{align*}
-  \item
-    Then using the definition of coset addition/multiplication, we can
-    write this as
-    \begin{align*}  
-    \sum_{i=1}^n \qty { s_i \mathbf{r}_i + \operatorname{Tor}(M)} = 
-    \qty{ \sum_{i=1}^n  s_i \mathbf{r}_i} + \operatorname{Tor}(M)  = 0_{\tilde M}
-    .\end{align*}
-  \item
-    Since
-    \(\tilde{\mathbf{x}} = 0 \in \tilde M \iff \tilde{\mathbf{x}} = \mathbf{x} + \operatorname{Tor}(M)\)
-    where \(\mathbf{x} \in \operatorname{Tor}(M)\), this forces
-    \(\sum s_i \mathbf{r}_i \in \operatorname{Tor}(M)\).
-  \item
-    Then there exists a scalar \(\alpha\in R^{\bullet}\) such that
-    \(\alpha \sum s_i \mathbf{r}_i = 0_M\).
-  \item
-    Since \(R\) is an integral domain and \(\alpha \neq 0\), we must
-    have \(\sum s_i \mathbf{r}_i = 0_M\).
-  \item
-    Since \(\left\{{\mathbf{r}_i}\right\}\) was linearly independent in
-    \(M\), we must have \(s_i = 0_R\) for all \(i\).
-  \end{itemize}
+  Suppose that
+  \begin{align*}
+  \sum_{i=1}^n s_i (\mathbf{r}_i + \operatorname{Tor}(M)) = \mathbf{0}_{\tilde M}
+  .\end{align*}
 \item
-  \textbf{Spanning:}
-
-  \begin{itemize}
-  \item
-    Write
-    \(\pi(\mathcal B) = \left\{{\mathbf{r}_i + \operatorname{Tor}(M)}\right\}_{i=1}^n\)
-    as a set of cosets.
-  \item
-    Letting \(\mathbf{x} \in M'\) be arbitrary, we can write
-    \(\mathbf{x} = \mathbf{m} + \operatorname{Tor}(M)\) for some
-    \(\mathbf{m} \in M\) where \(\pi(\mathbf{m}) = \mathbf{x}\) by
-    surjectivity of \(\pi\).
-  \item
-    Since \(\mathcal B\) is a basis for \(M\), we have
-    \(\mathbf{m} = \sum_{i=1}^n s_i \mathbf{r}_i\), and so
-    \begin{align*}
-    \mathbf{x}
-    &= \pi(\mathbf{m}) \\
-    &\coloneqq\pi\qty{ \sum_{i=1}^n s_i \mathbf{r}_i} \\
-    &= \sum_{i=1}^n s_i \pi(\mathbf{r}_i) \quad\text{since $\pi$ is an $R{\hbox{-}}$module morphism}\\
-    &\coloneqq\sum_{i=1}^n s_i \mathbf{(}\mathbf{r}_i + \operatorname{Tor}(M))
-    ,\end{align*}
-    which expresses \(\mathbf{x}\) as a linear combination of elements
-    in \(\mathcal B'\).
-  \end{itemize}
+  Then using the definition of coset addition/multiplication, we can
+  write this as
+  \begin{align*}  
+  \sum_{i=1}^n \qty { s_i \mathbf{r}_i + \operatorname{Tor}(M)} = 
+  \qty{ \sum_{i=1}^n  s_i \mathbf{r}_i} + \operatorname{Tor}(M)  = 0_{\tilde M}
+  .\end{align*}
+\item
+  Since
+  \(\tilde{\mathbf{x}} = 0 \in \tilde M \iff \tilde{\mathbf{x}} = \mathbf{x} + \operatorname{Tor}(M)\)
+  where \(\mathbf{x} \in \operatorname{Tor}(M)\), this forces
+  \(\sum s_i \mathbf{r}_i \in \operatorname{Tor}(M)\).
+\item
+  Then there exists a scalar \(\alpha\in R^{\bullet}\) such that
+  \(\alpha \sum s_i \mathbf{r}_i = 0_M\).
+\item
+  Since \(R\) is an integral domain and \(\alpha \neq 0\), we must have
+  \(\sum s_i \mathbf{r}_i = 0_M\).
+\item
+  Since \(\left\{{\mathbf{r}_i}\right\}\) was linearly independent in
+  \(M\), we must have \(s_i = 0_R\) for all \(i\).
 \end{itemize}
 
-\textbf{Part c}
+\end{proof}
+
+\begin{proof}[of claim: spanning]
+
+\envlist
+
+\begin{itemize}
+\item
+  Write
+  \(\pi(\mathcal B) = \left\{{\mathbf{r}_i + \operatorname{Tor}(M)}\right\}_{i=1}^n\)
+  as a set of cosets.
+\item
+  Letting \(\mathbf{x} \in M'\) be arbitrary, we can write
+  \(\mathbf{x} = \mathbf{m} + \operatorname{Tor}(M)\) for some
+  \(\mathbf{m} \in M\) where \(\pi(\mathbf{m}) = \mathbf{x}\) by
+  surjectivity of \(\pi\).
+\item
+  Since \(\mathcal B\) is a basis for \(M\), we have
+  \(\mathbf{m} = \sum_{i=1}^n s_i \mathbf{r}_i\), and so
+  \begin{align*}
+  \mathbf{x}
+  &= \pi(\mathbf{m}) \\
+  &\coloneqq\pi\qty{ \sum_{i=1}^n s_i \mathbf{r}_i} \\
+  &= \sum_{i=1}^n s_i \pi(\mathbf{r}_i) \quad\text{since $\pi$ is an $R{\hbox{-}}$module morphism}\\
+  &\coloneqq\sum_{i=1}^n s_i \mathbf{(}\mathbf{r}_i + \operatorname{Tor}(M))
+  ,\end{align*}
+  which expresses \(\mathbf{x}\) as a linear combination of elements in
+  \(\mathcal B'\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
 
 \begin{quote}
 Notation: Let \(0_R\) denote \(0\in R\) regarded as a ring element, and
@@ -4380,7 +4533,9 @@ Notation: Let \(0_R\) denote \(0\in R\) regarded as a ring element, and
 \(R\) is regarded as an \(R{\hbox{-}}\)module over itself)
 \end{quote}
 
-\textbf{\(M\) is not free:}
+\begin{proof}[that $M$ is not free]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -4409,7 +4564,11 @@ Notation: Let \(0_R\) denote \(0\in R\) regarded as a ring element, and
   \end{itemize}
 \end{itemize}
 
-\textbf{\(M\) is rank 1}:
+\end{proof}
+
+\begin{proof}[that $M$ is rank 1]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -4455,7 +4614,9 @@ Notation: Let \(0_R\) denote \(0\in R\) regarded as a ring element, and
   \(\operatorname{Tor}(M) = \left\{{0_R}\right\}\).
 \end{itemize}
 
-\end{solution}
+\end{proof}
+
+\end{proof}
 
 \hypertarget{star-spring-2020-6-done}{%
 \subsubsection{\texorpdfstring{\(\star\) Spring 2020 \#6
@@ -4463,31 +4624,23 @@ Notation: Let \(0_R\) denote \(0\in R\) regarded as a ring element, and
 
 Let \(R\) be a ring with unity.
 
-\hypertarget{a-91}{%
-\paragraph{a}\label{a-91}}
-
-Give a definition for a free module over \(R\).
-
-\hypertarget{b-81}{%
-\paragraph{b}\label{b-81}}
-
-Define what it means for an \(R{\hbox{-}}\)module to be torsion free.
-
-\hypertarget{c-53}{%
-\paragraph{c}\label{c-53}}
-
-Prove that if \(F\) is a free module, then any short exact sequence of
-\(R{\hbox{-}}\)modules of the following form splits:
-\begin{align*}
-0 \to N \to M \to F \to 0
-.\end{align*}
-
-\hypertarget{d-14}{%
-\paragraph{d}\label{d-14}}
-
-Let \(R\) be a PID. Show that any finitely generated
-\(R{\hbox{-}}\)module \(M\) can be expressed as a direct sum of a
-torsion module and a free module.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Give a definition for a free module over \(R\).
+\item
+  Define what it means for an \(R{\hbox{-}}\)module to be torsion free.
+\item
+  Prove that if \(F\) is a free module, then any short exact sequence of
+  \(R{\hbox{-}}\)modules of the following form splits:
+  \begin{align*}
+  0 \to N \to M \to F \to 0
+  .\end{align*}
+\item
+  Let \(R\) be a PID. Show that any finitely generated
+  \(R{\hbox{-}}\)module \(M\) can be expressed as a direct sum of a
+  torsion module and a free module.
+\end{enumerate}
 
 \begin{quote}
 You may assume that a finitely generated torsionfree module over a PID
@@ -4498,8 +4651,7 @@ is free.
 
 Let \(R\) be a ring with 1.
 
-\hypertarget{a-92}{%
-\paragraph{a}\label{a-92}}
+\begin{proof}[of a]
 
 An \(R{\hbox{-}}\)module \(M\) is \textbf{free} if any of the following
 conditions hold:
@@ -4520,19 +4672,29 @@ conditions hold:
   There is a nonempty set \(X\) and an inclusion \(X\hookrightarrow M\)
   such that for every \(R{\hbox{-}}\)modules \(N\), every map \(X\to N\)
   lifts to a unique map \(M\to N\), so the following diagram commutes:
-  \texttt{\{=tex\}\ \ \ \ \ \textbackslash{}begin\{center\}\ \ \ \ \ \textbackslash{}begin\{tikzcd\}\ \ \ \ \ M\ \textbackslash{}ar{[}rd,\ dotted,\ "\textbackslash{}exists\ !\ \textbackslash{}tilde\ f"{]}\ \&\ \textbackslash{}\textbackslash{}\ \ \ \ \ X\ \textbackslash{}ar{[}u,\ hook{]}\ \textbackslash{}ar{[}r,\ "f"{]}\ \&\ N\ \ \ \ \ \textbackslash{}end\{tikzcd\}\ \ \ \ \ \textbackslash{}end\{center\}}
 \end{itemize}
 
-\hypertarget{b-82}{%
-\paragraph{b}\label{b-82}}
+\begin{center}
+\begin{tikzcd}
+M \ar[rd, dotted, "\exists ! \tilde f"] & \\
+X \ar[u, hook] \ar[r, "f"] & N
+\end{tikzcd}
+\end{center}
+
+\end{proof}
+
+\begin{proof}[of b]
 
 \(M\) is \textbf{torsionfree} iff
 \(M_t \coloneqq\left\{{m\in M {~\mathrel{\Big|}~}\operatorname{Ann}(m) \neq 0}\right\} \leq M\)
 is the trivial submodule, where
 \(\operatorname{Ann}(m) \coloneqq\left\{{r\in R {~\mathrel{\Big|}~}r\cdot m = 0_M}\right\} {~\trianglelefteq~}R\).
 
-\hypertarget{c-54}{%
-\paragraph{c}\label{c-54}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -4544,32 +4706,30 @@ is the trivial submodule, where
 \item
   Since \(F\) is free, there is a generating set
   \(X = \left\{{x_\alpha}\right\}\) and a map
-  \(\iota:X\hookrightarrow M\) satisfying the 3rd property from (a).
+  \(\iota:X\hookrightarrow M\) satisfying the 3rd property from (a). If
+  we construct a map \(f: X\to M\), then the universal property of free
+  modules will give a lift \(\tilde f: F\to M\)
 \item
-  If we construct a map \(f: X\to M\), then the universal property of
-  free modules will give a lift \(\tilde f: F\to M\)
-\item
-  Note \(\left\{{\iota(x_\alpha)}\right\} \subseteq F\) and \(\pi\) is
+  \(\left\{{\iota(x_\alpha)}\right\} \subseteq F\) and \(\pi\) is
   surjective, so choose fibers \(\left\{{y_\alpha}\right\} \subseteq M\)
-  such that
-  \begin{align*}\pi(y_\alpha) = \iota(x_\alpha).\end{align*}
-\item
-  Define a map
+  such that \(\pi(y_\alpha) = \iota(x_\alpha)\) and define
   \begin{align*}
   f: X&\to M \\
   x_\alpha &\mapsto y_\alpha
   .\end{align*}
 \item
-  By the universal property, this yields a map \(h: F\to M\),
-  commutativity forces \((h\circ \iota)(x_\alpha) = y_\alpha\), i.e.~we
-  have a diagram
+  The universal property yields \(h: F\to M\):
+\end{itemize}
 
-  \begin{center}
-  \begin{tikzcd}
-  & & & X=\left\{{x_\alpha}\right\} \ar[dd, hook, "\iota"]\ar[ddl, "f"'] &  \\ \\
-  0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
-  \end{tikzcd}
-  \end{center}
+\begin{center}
+\begin{tikzcd}
+& & & X=\left\{{x_\alpha}\right\} \ar[dd, hook, "\iota"]\ar[ddl, "f"'] &  \\ \\
+0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
+\end{tikzcd}
+\end{center}
+
+\begin{itemize}
+\tightlist
 \item
   It remains to check that it's a section:
   \begin{align*}
@@ -4583,15 +4743,16 @@ is the trivial submodule, where
   &\coloneqq f
   \end{align*}
 \item
-  Checking \((h\circ \pi)(m) = m\): seems to be hard!
-\item
   Both \(\pi\circ h\) and \(\operatorname{id}_F\) are two maps that
   agree on the spanning set \(\left\{{\iota(x_\alpha)}\right\}\), so in
   fact they are \emph{equal}.
 \end{itemize}
 
-\hypertarget{short-proof}{%
-\subparagraph{Short Proof}\label{short-proof}}
+\end{proof}
+
+\begin{proof}[of c, shorter proof]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -4600,26 +4761,33 @@ is the trivial submodule, where
   Universal property of projective modules: for every surjective
   \(\pi:M\to N\) and every \(f:P\to N\) there exists a unique lift
   \(\tilde f: P\to M\):
-
-  \begin{center}
-  \begin{tikzcd}
-   & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
-  M \ar[r, "\pi"] & N
-  \end{tikzcd}
-  \end{center}
-\item
-  Take the identity map:
-
-  \begin{center}
-  \begin{tikzcd}
-   & & & F\ar[d, "\operatorname{id}_F"]\ar[dl, "\exists ! h"'] & \\
-  0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
-  \end{tikzcd}
-  \end{center}
 \end{itemize}
 
-\hypertarget{d-15}{%
-\paragraph{d}\label{d-15}}
+\begin{center}
+\begin{tikzcd}
+ & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
+M \ar[r, "\pi"] & N
+\end{tikzcd}
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Take the identity map:
+\end{itemize}
+
+\begin{center}
+\begin{tikzcd}
+ & & & F\ar[d, "\operatorname{id}_F"]\ar[dl, "\exists ! h"'] & \\
+0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
+\end{tikzcd}
+\end{center}
+
+\end{proof}
+
+\begin{proof}[of d]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -4650,10 +4818,18 @@ is the trivial submodule, where
   \end{itemize}
 \item
   There is a SES
-  \texttt{\{=tex\}\ \ \ \ \ \textbackslash{}begin\{center\}\ \ \ \ \ \textbackslash{}begin\{tikzcd\}\ \ \ \ \ 0\ \textbackslash{}ar{[}r{]}\ \&\ M\_t\ \textbackslash{}ar{[}r{]}\ \&\ M\ \textbackslash{}ar{[}r{]}\ \&\ M/M\_t\ \textbackslash{}ar{[}r{]}\ \&\ 0\ \ \ \ \ \textbackslash{}end\{tikzcd\}\ \ \ \ \ \textbackslash{}end\{center\}}
-  and since \(M/M_t\) is free, by (c) this sequence splits and
-  \(M \cong M \oplus M/M_t\).
 \end{itemize}
+
+\begin{center}
+\begin{tikzcd}
+0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
+\end{tikzcd}
+\end{center}
+
+and since \(M/M_t\) is free, by (c) this sequence splits and
+\(M \cong M \oplus M/M_t\).
+
+\end{proof}
 
 \end{solution}
 
@@ -4663,21 +4839,16 @@ is the trivial submodule, where
 
 Let \(M\) be a finitely generated module over a PID \(R\).
 
-\hypertarget{a-93}{%
-\paragraph{a}\label{a-93}}
-
-\(M_t\) be the set of torsion elements of \(M\), and show that \(M_t\)
-is a submodule of \(M\).
-
-\hypertarget{b-83}{%
-\paragraph{b}\label{b-83}}
-
-Show that \(M/M_t\) is torsion free.
-
-\hypertarget{c-55}{%
-\paragraph{c}\label{c-55}}
-
-Prove that \(M \cong M_t \oplus F\) where \(F\) is a free module.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(M_t\) be the set of torsion elements of \(M\), and show that \(M_t\)
+  is a submodule of \(M\).
+\item
+  Show that \(M/M_t\) is torsion free.
+\item
+  Prove that \(M \cong M_t \oplus F\) where \(F\) is a free module.
+\end{enumerate}
 
 \hypertarget{spring-2017-5-work}{%
 \subsubsection{\texorpdfstring{Spring 2017 \#5
@@ -4686,18 +4857,16 @@ Prove that \(M \cong M_t \oplus F\) where \(F\) is a free module.
 Let \(R\) be an integral domain and let \(M\) be a nonzero torsion
 \(R{\hbox{-}}\)module.
 
-\hypertarget{a-94}{%
-\paragraph{a}\label{a-94}}
-
-Prove that if \(M\) is finitely generated then the annihilator in \(R\)
-of \(M\) is nonzero.
-
-\hypertarget{b-84}{%
-\paragraph{b}\label{b-84}}
-
-Give an example of a non-finitely generated torsion
-\(R{\hbox{-}}\)module whose annihilator is \((0)\), and justify your
-answer.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(M\) is finitely generated then the annihilator in
+  \(R\) of \(M\) is nonzero.
+\item
+  Give an example of a non-finitely generated torsion
+  \(R{\hbox{-}}\)module whose annihilator is \((0)\), and justify your
+  answer.
+\end{enumerate}
 
 \hypertarget{fall-2019-final-3-work}{%
 \subsubsection{\texorpdfstring{Fall 2019 Final \#3
@@ -4723,15 +4892,13 @@ Let \(I = (2, x)\) be an ideal in \(R = {\mathbb{Z}}[x]\), and show that
 
 Let \(R\) be a PID.
 
-\hypertarget{a-95}{%
-\paragraph{a}\label{a-95}}
-
-Classify irreducible \(R{\hbox{-}}\)modules up to isomorphism.
-
-\hypertarget{b-85}{%
-\paragraph{b}\label{b-85}}
-
-Classify indecomposable \(R{\hbox{-}}\)modules up to isomorphism.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Classify irreducible \(R{\hbox{-}}\)modules up to isomorphism.
+\item
+  Classify indecomposable \(R{\hbox{-}}\)modules up to isomorphism.
+\end{enumerate}
 
 \hypertarget{fall-2019-final-6-work}{%
 \subsubsection{\texorpdfstring{Fall 2019 Final \#6
@@ -4789,40 +4956,6 @@ following direct sum decomposition:
   Determine the characteristic polynomial of \(A\).
 \end{enumerate}
 
-\hypertarget{ring-theory}{%
-\section{Ring Theory}\label{ring-theory}}
-
-\hypertarget{spring-2021-5-work}{%
-\subsection{\texorpdfstring{Spring 2021 \#5
-\(\work\)}{Spring 2021 \#5 \textbackslash work}}\label{spring-2021-5-work}}
-
-Suppose that \(f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x]\) is a zero
-divisor. Show that there is a nonzero
-\(a\in {\mathbb{Z}}/n{\mathbb{Z}}\) with \(af(x) = 0\).
-
-\hypertarget{spring-2021-6}{%
-\subsection{Spring 2021 \#6}\label{spring-2021-6}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Carefully state the definition of \textbf{Noetherian} for a
-  commutative ring \(R\).
-\item
-  Let \(R\) be a subset of \({\mathbb{Z}}[x]\) consisting of all
-  polynomials
-  \begin{align*}
-  f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
-  \end{align*}
-  such that \(a_k\) is even for \(1\leq k \leq n\). Show that \(R\) is a
-  subring of \({\mathbb{Z}}[x]\).
-\item
-  Show that \(R\) is not Noetherian.
-\end{enumerate}
-
-\emph{Hint: consider the ideal generated by
-\(\left\{{ 2x^k {~\mathrel{\Big|}~}1\leq k \in {\mathbb{Z}}}\right\}\).}
-
 \hypertarget{linear-algebra-diagonalizability}{%
 \section{Linear Algebra:
 Diagonalizability}\label{linear-algebra-diagonalizability}}
@@ -4841,32 +4974,24 @@ all \(v \in V\) and \(X \cdot w = S(w)\) for all w \(\in\) W .
 Denote the resulting \(F[x]{\hbox{-}}\)modules by \(V_T\) and \(W_S\)
 respectively.
 
-\hypertarget{a-96}{%
-\subsubsection{a}\label{a-96}}
-
-Show that an \(F[x]{\hbox{-}}\)module homomorphism from \(V_T\) to
-\(W_S\) consists of an \(F{\hbox{-}}\)linear transformation
-\(R : V \to W\) such that \(RT = SR\).
-
-\hypertarget{b-86}{%
-\subsubsection{b}\label{b-86}}
-
-Show that \(VT \cong WS\) as \(F[x]{\hbox{-}}\)modules \(\iff\) there is
-an \(F{\hbox{-}}\)linear isomorphism \(P : V \to W\) such that
-\(T = P^{-1}SP\).
-
-\hypertarget{c-56}{%
-\subsubsection{c}\label{c-56}}
-
-Recall that a module \(M\) is \emph{simple} if \(M \neq 0\) and any
-proper submodule of \(M\) must be zero. Suppose that \(V\) has dimension
-2. Give an example of \(F\), \(T\) with \(V_T\) simple.
-
-\hypertarget{d-16}{%
-\subsubsection{d}\label{d-16}}
-
-Assume \(F\) is algebraically closed. Prove that if \(V\) has dimension
-2, then any \(V_T\) is not simple.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that an \(F[x]{\hbox{-}}\)module homomorphism from \(V_T\) to
+  \(W_S\) consists of an \(F{\hbox{-}}\)linear transformation
+  \(R : V \to W\) such that \(RT = SR\).
+\item
+  Show that \(VT \cong WS\) as \(F[x]{\hbox{-}}\)modules \(\iff\) there
+  is an \(F{\hbox{-}}\)linear isomorphism \(P : V \to W\) such that
+  \(T = P^{-1}SP\).
+\item
+  Recall that a module \(M\) is \emph{simple} if \(M \neq 0\) and any
+  proper submodule of \(M\) must be zero. Suppose that \(V\) has
+  dimension 2. Give an example of \(F\), \(T\) with \(V_T\) simple.
+\item
+  Assume \(F\) is algebraically closed. Prove that if \(V\) has
+  dimension 2, then any \(V_T\) is not simple.
+\end{enumerate}
 
 \hypertarget{spring-2015-3-work}{%
 \subsection{\texorpdfstring{Spring 2015 \#3
@@ -4901,15 +5026,35 @@ Show that \(A\) is also diagonalizable over \({\mathbb{C}}\).
 
 \begin{solution}
 
-\begin{quote}
-\(A\) is diagonalizable iff \(\min_A(x)\) is separable. See
-\href{https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable}{further
-discussion here}.
-\end{quote}
+\envlist
 
-Claim: If \(A \in \operatorname{GL}(m, {\mathbb{F}})\) is invertible and
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(A\) is diagonalizable iff \(\min_A(x)\) is separable.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    See
+    \href{https://math.stackexchange.com/questions/3027664/if-a-is-invertible-and-an-is-diagonalizable-then-a-is-diagonalizable}{further
+    discussion here}.
+  \end{itemize}
+\end{itemize}
+
+\end{concept}
+
+\begin{claim}
+
+If \(A \in \operatorname{GL}(m, {\mathbb{F}})\) is invertible and
 \(A^n/{\mathbb{F}}\) is diagonalizable, then \(A/{\mathbb{F}}\) is
 diagonalizable.
+
+\end{claim}
 
 Let \(A \in \operatorname{GL}(m, {\mathbb{F}})\). Since \(A^n\) is
 diagonalizable, \(\min_{A^n}(x) \in {\mathbb{F}}[x]\) is separable and
@@ -4944,7 +5089,7 @@ q_A(x) \coloneqq\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}
 \end{align*}
 
 where we can note that \(q_A(A) = \min_{A^n}(A^n) = 0\), and so
-\(\min_A(x) \mathrel{\Big|}q_A(x)\) by minimality.
+\(\min_A(x) \bigm|q_A(x)\) by minimality.
 
 We now claim that \(q_A(x)\) has exactly \(n\cdot m\) distinct linear
 factors in
@@ -4972,11 +5117,9 @@ share a root. and that \(x^n-\lambda_i\) does not have multiple roots.
 
 But now since \(q_A(x)\) has exactly distinct linear factors in
 \(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x]\)
-and \(\min_A(x) \mathrel{\Big|}q_A(x)\),
-\(\min_A(x) \in {\mathbb{F}}[x]\) can only have distinct linear factors,
-and \(A\) is thus diagonalizable over \({\mathbb{F}}\).
-
-\(\hfill\blacksquare\)
+and \(\min_A(x) \bigm|q_A(x)\), \(\min_A(x) \in {\mathbb{F}}[x]\) can
+only have distinct linear factors, and \(A\) is thus diagonalizable over
+\({\mathbb{F}}\).
 
 \end{solution}
 
@@ -4995,17 +5138,15 @@ the set of \(m\times n\) matrices \(M_{m, n}(k)\) as follows:
 \end{align*}
 where \((A, B) \in G\) and \(X\in M_{m, n}(k)\).
 
-\hypertarget{a-97}{%
-\subsubsection{a}\label{a-97}}
-
-State what it means for a group to act on a set. Prove that the above
-definition yields a group action.
-
-\hypertarget{b-87}{%
-\subsubsection{b}\label{b-87}}
-
-Exhibit with justification a subset \(S\) of \(M_{m, n}(k)\) which
-contains precisely one element of each orbit under this action.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  State what it means for a group to act on a set. Prove that the above
+  definition yields a group action.
+\item
+  Exhibit with justification a subset \(S\) of \(M_{m, n}(k)\) which
+  contains precisely one element of each orbit under this action.
+\end{enumerate}
 
 \hypertarget{star-spring-2014-7-work}{%
 \subsection{\texorpdfstring{\(\star\) Spring 2014 \#7
@@ -5017,21 +5158,19 @@ invertible \(3\times 3\) matrices over \({\mathbb{Q}}[x]\). For each
 matrices \(A\) over \({\mathbb{Q}}[x]\) such that \(\det(A) = c f(x)\)
 for some nonzero constant \(c\in {\mathbb{Q}}\).
 
-\hypertarget{a-98}{%
-\subsubsection{a}\label{a-98}}
-
-Show that for \((P, Q) \in G\times G\) and \(A\in S_f\), the formula
-\begin{align*}
-(P, Q)\cdot A \coloneqq PAQ^{-1}
-\end{align*}
-gives a well defined map \(G\times G \times S_f \to S_f\) and show that
-this map gives a group action of \(G\times G\) on \(S_f\).
-
-\hypertarget{b-88}{%
-\subsubsection{b}\label{b-88}}
-
-For \(f(x) = x^3(x^2+1)^2\), give one representative from each orbit of
-the group action in (a), and justify your assertion.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that for \((P, Q) \in G\times G\) and \(A\in S_f\), the formula
+  \begin{align*}
+  (P, Q)\cdot A \coloneqq PAQ^{-1}
+  \end{align*}
+  gives a well defined map \(G\times G \times S_f \to S_f\) and show
+  that this map gives a group action of \(G\times G\) on \(S_f\).
+\item
+  For \(f(x) = x^3(x^2+1)^2\), give one representative from each orbit
+  of the group action in (a), and justify your assertion.
+\end{enumerate}
 
 \hypertarget{fall-2012-7-work}{%
 \subsection{\texorpdfstring{Fall 2012 \#7
@@ -5084,18 +5223,16 @@ Moreover, prove that for any other decomposition
 \subsection{\texorpdfstring{Fall 2015 \#7
 \(\work\)}{Fall 2015 \#7 \textbackslash work}}\label{fall-2015-7-work}}
 
-\hypertarget{a-99}{%
-\subsubsection{a}\label{a-99}}
-
-Show that two \(3\times 3\) matrices over \({\mathbb{C}}\) are similar
-\(\iff\) their characteristic polynomials are equal and their minimal
-polynomials are equal.
-
-\hypertarget{b-89}{%
-\subsubsection{b}\label{b-89}}
-
-Does the conclusion in (a) hold for \(4\times 4\) matrices? Justify your
-answer with a proof or counterexample.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that two \(3\times 3\) matrices over \({\mathbb{C}}\) are similar
+  \(\iff\) their characteristic polynomials are equal and their minimal
+  polynomials are equal.
+\item
+  Does the conclusion in (a) hold for \(4\times 4\) matrices? Justify
+  your answer with a proof or counterexample.
+\end{enumerate}
 
 \hypertarget{fall-2014-4-work}{%
 \subsection{\texorpdfstring{Fall 2014 \#4
@@ -5122,8 +5259,8 @@ Show that the following statements are equivalent about a polynomial
 \(\work\)}{Fall 2015 \#8 \textbackslash work}}\label{fall-2015-8-work}}
 
 Let \(V\) be a vector space over a field \(F\) and \(V^\vee\) its dual.
-A \emph{symmetric bilinear form} \(({\,\cdot\,}, {\,\cdot\,})\) on \(V\)
-is a map \(V\times V\to F\) satisfying
+A \emph{symmetric bilinear form} \(({-}, {-})\) on \(V\) is a map
+\(V\times V\to F\) satisfying
 \begin{align*}
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) {\quad \operatorname{and} \quad} (v_1, v_2) = (v_2, v_1)
 \end{align*}
@@ -5131,26 +5268,24 @@ for all \(a, b\in F\) and \(v_1, v_2 \in V\). The form is
 \emph{nondegenerate} if the only element \(w\in V\) satisfying
 \((v, w) = 0\) for all \(v\in V\) is \(w=0\).
 
-Suppose \(({\,\cdot\,}, {\,\cdot\,})\) is a nondegenerate symmetric
-bilinear form on \(V\). If \(W\) is a subspace of \(V\), define
+Suppose \(({-}, {-})\) is a nondegenerate symmetric bilinear form on
+\(V\). If \(W\) is a subspace of \(V\), define
 \begin{align*}
 W\perp \coloneqq\left\{{v\in V {~\mathrel{\Big|}~}(v, w) = 0 \text{ for all } w\in W}\right\}
 .\end{align*}
 
-\hypertarget{a-100}{%
-\subsubsection{a}\label{a-100}}
-
-Show that if \(X, Y\) are subspaces of \(V\) with \(Y\subset X\), then
-\(X\perp \subseteq Y\perp\).
-
-\hypertarget{b-90}{%
-\subsubsection{b}\label{b-90}}
-
-Define an injective linear map
-\begin{align*}
-\psi: Y\perp/X\perp \hookrightarrow(X/Y)^\vee
-\end{align*}
-which is an isomorphism if \(V\) is finite dimensional.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(X, Y\) are subspaces of \(V\) with \(Y\subset X\), then
+  \(X\perp \subseteq Y\perp\).
+\item
+  Define an injective linear map
+  \begin{align*}
+  \psi: Y\perp/X\perp \hookrightarrow(X/Y)^\vee
+  \end{align*}
+  which is an isomorphism if \(V\) is finite dimensional.
+\end{enumerate}
 
 \hypertarget{fall-2018-4-done}{%
 \subsection{\texorpdfstring{Fall 2018 \#4
@@ -5197,27 +5332,61 @@ is not an eigenvalue by construction.
 
 Let \(A\) be an \(n \times n\) matrix.
 
-\hypertarget{a-101}{%
-\subsubsection{a}\label{a-101}}
-
-Suppose that \(v\) is a column vector such that the set
-\(\{v, Av, . . . , A^{n-1} v\}\) is linearly independent. Show that any
-matrix \(B\) that commutes with \(A\) is a polynomial in \(A\).
-
-\hypertarget{b-91}{%
-\subsubsection{b}\label{b-91}}
-
-Show that there exists a column vector \(v\) such that the set
-\(\{v, Av, . . . , A^{n-1} v\}\) is linearly independent \(\iff\) the
-characteristic polynomial of A equals the minimal polynomial of A.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose that \(v\) is a column vector such that the set
+  \(\{v, Av, . . . , A^{n-1} v\}\) is linearly independent. Show that
+  any matrix \(B\) that commutes with \(A\) is a polynomial in \(A\).
+\item
+  Show that there exists a column vector \(v\) such that the set
+  \(\{v, Av, . . . , A^{n-1} v\}\) is linearly independent \(\iff\) the
+  characteristic polynomial of \(A\) equals the minimal polynomial of A.
+\end{enumerate}
 
 \begin{solution}
 
-\hypertarget{a-102}{%
-\subsubsection{a}\label{a-102}}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Powers of \(A\) commute with polynomials in \(A\).
+\item
+  The image of a linear map is determined by the image of a basis
+\end{itemize}
+
+\end{concept}
+
+\begin{strategy}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Use Cayley-Hamilton to relate the minimal polynomial to a linear
+  dependence.
+\item
+  Get a lower bound on the degree of the minimal polynomial.
+\item
+  Use \(A\curvearrowright k[x]\) to decompose into cyclic
+  \(k[x]{\hbox{-}}\)modules, and use special form of denominators in the
+  invariant factors.
+\item
+  Reduce to monomials.
+\end{itemize}
+
+\end{strategy}
+
+\begin{proof}[of a]
 
 Letting \(\mathbf{v}\) be fixed, since
-\(\left\{{A^j \mathbf{v}}\right\}\) spans \(V\) we have
+\(\left\{{A^j \mathbf{v}}\right\}\) spans \(V\) we have A
 \begin{align*}
 B\mathbf{v} = \sum_{j=0}^{n-1}c_j A^j \mathbf{v}
 .\end{align*}
@@ -5236,8 +5405,9 @@ BA^k \mathbf{v}
 so \(B = p(A)\) as operators since their actions agree on every basis
 vector in \(V\).
 
-\hypertarget{b-92}{%
-\subsubsection{b}\label{b-92}}
+\end{proof}
+
+\begin{proof}[of b, $\implies$]
 
 \(\implies\):
 
@@ -5248,6 +5418,10 @@ polynomial of degree \(d < n\).
 
 So \(\deg m_A(x) = n\), and since \(m_A(x)\) divides \(\chi_A(x)\) and
 both are monic degree polynomials of degree \(n\), they must be equal.
+
+\end{proof}
+
+\begin{proof}[of b, $\impliedby$]
 
 \(\impliedby\):
 
@@ -5265,14 +5439,11 @@ as an isomorphism of \(k[x]{\hbox{-}}\)modules.
 
 So \(V\) is a cyclic \(k[x]\) module, which means that
 \(V = k[x]\curvearrowright\mathbf{v}\) for some \(\mathbf{v}\in V\) such
-that \(\operatorname{Ann}(\mathbf{v}) = \chi_A(x)\).
+that \(\operatorname{Ann}(\mathbf{v}) = \chi_A(x)\), i.e.~there is some
+element \(\mathbf{v}\in V\) whose orbit is all of \(V\).
 
-\begin{quote}
-I.e. there is some element \(\mathbf{v}\in V\) whose orbit is all of
-\(V\).
-\end{quote}
-
-But then noting that monomials span \(k[x]\), we can write
+But then noting that monomials span \(k[x]\) as a \(k{\hbox{-}}\)module,
+we can write
 \begin{align*}
 V &\cong
 k[x] \curvearrowright\mathbf{v} \\
@@ -5281,13 +5452,15 @@ k[x] \curvearrowright\mathbf{v} \\
 &\coloneqq{\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\}
 .\end{align*}
 
-Moreover, we can note that if \(k \geq \deg \chi_A(x)\), then \(A^k\) is
-a linear combination of
+Moreover, we can note that if \(\ell \geq \deg \chi_A(x)\), then
+\(A^\ell\) is a linear combination of
 \(\left\{{A^j \mathrel{\Big|}0 \leq j \leq n-1}\right\}\), and so
 \begin{align*}
-V &\cong {\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\} \\
-&= {\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}1 \leq k \leq n-1}\right\}
+V &\cong {\operatorname{span}}_k \left\{{A^\ell\mathbf{v} {~\mathrel{\Big|}~}\ell \geq 0}\right\} \\
+&= {\operatorname{span}}_k \left\{{A^\ell \mathbf{v} {~\mathrel{\Big|}~}1 \leq \ell \leq n-1}\right\}
 .\end{align*}
+
+\end{proof}
 
 \end{solution}
 
@@ -5311,28 +5484,24 @@ Define the dual of \(\Lambda\) to be
 \}
 .\end{align*}
 
-\hypertarget{a-103}{%
-\subsubsection{a}\label{a-103}}
-
-Show that \(\Lambda \subset \Lambda ^\vee\).
-
-\hypertarget{b-93}{%
-\subsubsection{b}\label{b-93}}
-
-Prove that \(\det M \neq 0\) and that the rows of \(M^{-1}\) span
-\(\Lambda^\vee\).
-
-\hypertarget{c-57}{%
-\subsubsection{c}\label{c-57}}
-
-Prove that \(\det M = |\Lambda^\vee/\Lambda|\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(\Lambda \subset \Lambda ^\vee\).
+\item
+  Prove that \(\det M \neq 0\) and that the rows of \(M^{-1}\) span
+  \(\Lambda^\vee\).
+\item
+  Prove that \(\det M = |\Lambda^\vee/\Lambda|\).
+\end{enumerate}
 
 \todo[inline]{Todo, missing part (c).}
 
 \begin{solution}
 
-\hypertarget{a-104}{%
-\subsubsection{a}\label{a-104}}
+\envlist
+
+\begin{proof}[of a]
 
 Let \(\mathbf{v} \in \Lambda\), so
 \(\mathbf{v} = \sum_{i=1}^n r_i \mathbf{e}_i\) where
@@ -5351,10 +5520,11 @@ since this is a sum of products of integers (since
 for each \(i, j\) pair by assumption) so \(\mathbf{v} \in \Lambda^\vee\)
 by definition.
 
-\hypertarget{b-94}{%
-\subsubsection{b}\label{b-94}}
+\end{proof}
 
-\textbf{\(\det M \neq 0\)}:
+\begin{proof}[of b]
+
+\textbf{The determinant is nonzero}:
 
 Suppose \(\det M = 0\). Then \(\ker M \neq \mathbf{0}\), so let
 \(\mathbf{v} \in \ker M\) be given by
@@ -5380,11 +5550,23 @@ We can now note that
 \({\left\langle {\mathbf{e}_k},~{\mathbf{v}} \right\rangle} = \sum_{j=1}^n v_j {\left\langle {\mathbf{e}_k},~{\mathbf{e}_j} \right\rangle} = 0\)
 for every \(k\) by the above observation, which forces
 \(\mathbf{v} = 0\) by non-degeneracy of
-\({\left\langle {{\,\cdot\,}},~{{\,\cdot\,}} \right\rangle}\), a
-contradiction.
+\({\left\langle {{-}},~{{-}} \right\rangle}\), a contradiction.
 
-\hypertarget{alternative-proof}{%
-\paragraph{Alternative Proof}\label{alternative-proof}}
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+???
+
+\todo[inline]{Missing work!}
+
+\end{proof}
+
+\end{solution}
+
+\begin{solution}[Alternative]
 
 Write \(M = A^tA\) where \(A\) has the \(\mathbf{e}_i\) as columns. Then
 \begin{align*}
@@ -5430,11 +5612,6 @@ B^t A = (A^{-t})^t A = A^{-1}A = I \\
 \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda^\vee
 .\end{align*}
 
-\hypertarget{c.}{%
-\subsubsection{c.}\label{c.}}
-
-?
-
 \end{solution}
 
 \hypertarget{spring-2013-6-done}{%
@@ -5445,41 +5622,53 @@ Let \(V\) be a finite dimensional vector space over a field \(F\) and
 let \(T: V\to V\) be a linear operator with characteristic polynomial
 \(f(x) \in F[x]\).
 
-\hypertarget{a-105}{%
-\subsubsection{a}\label{a-105}}
-
-Show that \(f(x)\) is irreducible in \(F[x] \iff\) there are no proper
-nonzero subspaces \(W< V\) with \(T(W) \subseteq W\).
-
-\hypertarget{b-95}{%
-\subsubsection{b}\label{b-95}}
-
-If \(f(x)\) is irreducible in \(F[x]\) and the characteristic of \(F\)
-is 0, show that \(T\) is diagonalizable when we extend the field to its
-algebraic closure.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(f(x)\) is irreducible in \(F[x] \iff\) there are no proper
+  nonzero subspaces \(W< V\) with \(T(W) \subseteq W\).
+\item
+  If \(f(x)\) is irreducible in \(F[x]\) and the characteristic of \(F\)
+  is 0, show that \(T\) is diagonalizable when we extend the field to
+  its algebraic closure.
+\end{enumerate}
 
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
 \todo[inline]{How to extend basis?}
 
 \begin{solution}
 
-Lemma: every \(\mathbf{v}\in V\) is \(T{\hbox{-}}\)cyclic
-\(\iff \chi_T(x)/{\mathbb{k}}\) is irreducible.
+\envlist
+
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
-  \(\implies\): Same as argument below.
+  Every \(\mathbf{v}\in V\) is \(T{\hbox{-}}\)cyclic
+  \(\iff \chi_T(x)/{\mathbb{k}}\) is irreducible.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\implies\): Same as argument below.
+  \item
+    \(\impliedby\): Suppose \(f\) is irreducible, then \(f\) is equal to
+    the minimal polynomial of \(T\).
+  \end{itemize}
 \item
-  \(\impliedby\): Suppose \(f\) is irreducible, then \(f\) is equal to
-  the minimal polynomial of \(T\).
-\item
+  Characterization of diagonalizability: \(T\) is diagonalizable over
+  \(F \iff \min_{T, F}\) is squarefree in
+  \(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu[x]\)?
 \end{itemize}
 
-\hypertarget{a-106}{%
-\subsubsection{a}\label{a-106}}
+\end{concept}
 
 Let \(f\) be the characteristic polynomial of \(T\).
+
+\begin{proof}[of a, $\implies$. Matrix-dependent]
 
 \(\implies\):
 
@@ -5495,12 +5684,11 @@ Let \(f\) be the characteristic polynomial of \(T\).
   operator on \(W\).
 \end{itemize}
 
-Claim: \(g\) divides \(f\) in \({\mathbb{F}}[x]\) and
-\(\deg(g) < \deg(f)\).
+\begin{claim}
 
-\begin{quote}
-Matrix-dependent proof
-\end{quote}
+\(g\) divides \(f\) in \({\mathbb{F}}[x]\) and \(\deg(g) < \deg(f)\).
+
+\end{claim}
 
 \begin{itemize}
 \item
@@ -5548,6 +5736,10 @@ Matrix-dependent proof
   Thus \(f\) is reducible.
 \end{itemize}
 
+\end{proof}
+
+\begin{proof}[of a, $\impliedby$]
+
 \(\impliedby\)
 
 \begin{itemize}
@@ -5564,12 +5756,11 @@ Matrix-dependent proof
   entire space since \(\mathbf{v}\) is not cyclic.
 \end{itemize}
 
-\hypertarget{b-96}{%
-\subsubsection{b}\label{b-96}}
+\end{proof}
 
-Characterization of diagonalizability: \(T\) is diagonalizable over
-\(F \iff \min_{T, F}\) is squarefree in
-\(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu[x]\)?
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -5597,14 +5788,16 @@ Characterization of diagonalizability: \(T\) is diagonalizable over
     characteristic \(p>0\).
   \item
     The first case is true because \(\deg f' < \deg f\), and if
-    \(\gcd(f, f') = p\), then \(\deg p < \deg f\) and
-    \(p\mathrel{\Big|}f\) forces \(p=1\) since \(f\) is irreducible.
+    \(\gcd(f, f') = p\), then \(\deg p < \deg f\) and \(p\bigm|f\)
+    forces \(p=1\) since \(f\) is irreducible.
   \end{itemize}
 \item
   So \(\min_{T, F}\) splits into distinct linear factors
 \item
   Thus \(T\) is diagonalizable.
 \end{itemize}
+
+\end{proof}
 
 \end{solution}
 
@@ -5617,8 +5810,8 @@ group generated by \(A\) under multiplication is finite. Show that
 \begin{align*}
 \operatorname{Tr}(A^{-1}) ={\overline{{\operatorname{Tr}(A) }}}
 ,\end{align*}
-where \({\overline{{{\,\cdot\,}}}}\) denotes taking the complex
-conjugate and \(\operatorname{Tr}({\,\cdot\,})\) is the trace.
+where \({\overline{{({-})}}}\) denotes taking the complex conjugate and
+\(\operatorname{Tr}({-})\) is the trace.
 
 \hypertarget{linear-algebra-canonical-forms}{%
 \section{Linear Algebra: Canonical
@@ -5631,22 +5824,17 @@ Forms}\label{linear-algebra-canonical-forms}}
 Let \(V\) be a finite-dimensional vector space over a field \(k\) and
 \(T:V\to V\) a linear transformation.
 
-\hypertarget{a-107}{%
-\subsubsection{a}\label{a-107}}
-
-Provide a definition for the \emph{minimal polynomial} in \(k[x]\) for
-\(T\).
-
-\hypertarget{b-97}{%
-\subsubsection{b}\label{b-97}}
-
-Define the \emph{characteristic polynomial} for \(T\).
-
-\hypertarget{c-58}{%
-\subsubsection{c}\label{c-58}}
-
-Prove the Cayley-Hamilton theorem: the linear transformation \(T\)
-satisfies its characteristic polynomial.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Provide a definition for the \emph{minimal polynomial} in \(k[x]\) for
+  \(T\).
+\item
+  Define the \emph{characteristic polynomial} for \(T\).
+\item
+  Prove the Cayley-Hamilton theorem: the linear transformation \(T\)
+  satisfies its characteristic polynomial.
+\end{enumerate}
 
 \hypertarget{star-spring-2020-8-work}{%
 \subsection{\texorpdfstring{\(\star\) Spring 2020 \#8
@@ -5673,21 +5861,16 @@ A=\left(\begin{array}{ccccc}
 \end{array}\right)
 .\end{align*}
 
-\hypertarget{a-108}{%
-\subsubsection{a}\label{a-108}}
-
-Find the invariant factors of \(A\).
-
-\hypertarget{b-98}{%
-\subsubsection{b}\label{b-98}}
-
-Express \(V\) in terms of a direct sum of indecomposable
-\({\mathbb{C}}[x]{\hbox{-}}\)modules.
-
-\hypertarget{c-59}{%
-\subsubsection{c}\label{c-59}}
-
-Find the Jordan canonical form of \(A\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the invariant factors of \(A\).
+\item
+  Express \(V\) in terms of a direct sum of indecomposable
+  \({\mathbb{C}}[x]{\hbox{-}}\)modules.
+\item
+  Find the Jordan canonical form of \(A\).
+\end{enumerate}
 
 \hypertarget{fall-2019-final-8-work}{%
 \subsection{\texorpdfstring{Fall 2019 Final \#8
@@ -5745,21 +5928,16 @@ A=\left[\begin{array}{ccc}
 \end{array}\right] \in M_{3}(\mathrm{C})
 .\end{align*}
 
-\hypertarget{a-109}{%
-\subsubsection{a}\label{a-109}}
-
-Find the Jordan canonical form \(J\) of \(A\).
-
-\hypertarget{b-99}{%
-\subsubsection{b}\label{b-99}}
-
-Find an invertible matrix \(P\) such that \(P^{-1}A P = J\). You should
-not need to compute \(P^{-1}\).
-
-\hypertarget{c-60}{%
-\subsubsection{c}\label{c-60}}
-
-Write down the minimal polynomial of \(A\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the Jordan canonical form \(J\) of \(A\).
+\item
+  Find an invertible matrix \(P\) such that \(P^{-1}A P = J\). You
+  should not need to compute \(P^{-1}\).
+\item
+  Write down the minimal polynomial of \(A\).
+\end{enumerate}
 
 \hypertarget{spring-2019-7-done}{%
 \subsection{\texorpdfstring{Spring 2019 \#7
@@ -5770,31 +5948,61 @@ field \(F\) with 1 in all entries except 0 on the main diagonal.
 
 Determine the Jordan canonical form (JCF) of \(A\)
 
-\hypertarget{a-110}{%
-\subsubsection{a}\label{a-110}}
-
-When \(F = {\mathbb{Q}}\),
-
-\hypertarget{b-100}{%
-\subsubsection{b}\label{b-100}}
-
-When \(F = {\mathbb{F}}_p\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  When \(F = {\mathbb{Q}}\),
+\item
+  When \(F = {\mathbb{F}}_p\).
+\end{enumerate}
 
 \begin{quote}
 Hint: In both cases, all eigenvalues lie in the ground field. In each
 case find a matrix \(P\) such that \(P^{-1}AP\) is in JCF.
 \end{quote}
 
+\begin{strategy}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Work with matrix of all ones instead.
+\item
+  Eyeball eigenvectors.
+\item
+  Coefficients in minimal polynomial: size of largest Jordan block
+\item
+  Dimension of eigenspace: number of Jordan blocks
+\end{itemize}
+
+\end{strategy}
+
 \begin{solution}
 
-\begin{quote}
-Work with matrix of all ones instead. Eyeball eigenvectors. Coefficients
-in minimal polynomial: size of largest Jordan block Dimension of
-eigenspace: number of Jordan blocks
-\end{quote}
+\envlist
 
-\hypertarget{a-111}{%
-\subsubsection{a}\label{a-111}}
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
+\begin{strategy}
+
+We can always read off the \emph{characteristic} polynomial from the
+spectrum.
+
+\end{strategy}
+
+\begin{proof}[of a]
 
 Let \(A\) be the matrix in the question, and \(B\) be the matrix
 containing 1's in every entry.
@@ -5817,71 +6025,26 @@ containing 1's in every entry.
   We proceed by finding \(p\) eigenvectors and eigenvalues, since the
   JCF and minimal polynomials will involve eigenvalues and the
   transformation matrix will involve (generalized) eigenvectors.
-\item
-  Claim: each vector of the form
-  \(\mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1} = {\left[ {1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 } \right]}\)
-  where \(i\neq j\) is also an eigenvector with eigenvalues
-  \(\lambda_0 = 0\), and this gives \(p-1\) linearly independent vectors
-  spanning the eigenspace \(E_{\lambda_0}\)
+\end{itemize}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Compute
-    \begin{align*}B \mathbf{p}_i = {\left[ { 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} \right]} = {\left[ {0, 0, \cdots, 0} \right]}\end{align*}
-  \item
-    So every \(\mathbf{p}_i \in \ker(B)\), so they are eigenvectors with
-    eigenvalue 0.
-  \item
-    Since the first component is fixed and we have \(p-1\) choices for
-    where to place a \(-1\), this yields \(p-1\) possibilities for
-    \(\mathbf{p}_i\)
-  \item
-    These are linearly independent since the \((p-1)\times (p-1)\)
-    matrix
-    \({\left[ { \mathbf{p}_1^t, \cdots, \mathbf{p}_{p-1}^t} \right]}\)
-    satisfies
-    \begin{align*}
-    \det 
-    \begin{bmatrix}
-    1 & 1 & 1 & \cdots & 1\\
-    -1 & 0  & 0 & \cdots & 0\\
-    0 & -1  & 0 & \cdots & 0\\
-    0 & 0 & -1 & \cdots & 0\\
-    \vdots & \vdots  & \vdots & \ddots & \vdots \\
-    0 & 0  & 0 & \cdots & -1\\
-    \end{bmatrix}
-    = (1) \cdot \det 
-    \begin{bmatrix}
-    -1 & 0  & 0 & \cdots & 0\\
-    0 & -1  & 0 & \cdots & 0\\
-    0 & 0 & -1 & \cdots & 0\\
-    \vdots & \vdots  & \vdots & \ddots & \vdots \\
-    0 & 0  & 0 & \cdots & -1\\
-    \end{bmatrix}
-     = (-1)^{p-2} \neq 0
-    .\end{align*}
-  \end{itemize}
+\begin{claim}[1]
 
-  where the first equality follows from expanding along the first row
-  and noting this is the first minor, and every other minor contains a
-  row of zeros.
-\item
-  Claim: \(\mathbf{v}_1 = {\left[ {1, 1, \cdots, 1} \right]}\) is an
-  eigenvector with eigenvalue \(\lambda_1 = p\).
+Each vector of the form
+\(\mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1} = {\left[ {1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 } \right]}\)
+where \(i\neq j\) is also an eigenvector with eigenvalues
+\(\lambda_0 = 0\), and this gives \(p-1\) linearly independent vectors
+spanning the eigenspace \(E_{\lambda_0}\)
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Compute
-    \begin{align*}B\mathbf{v} = {\left[ {\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} \right]} = {\left[ {p, p, \cdots, p} \right]} = p {\left[ {1, 1, \cdots, 1} \right]} = p\mathbf{v}_1,\end{align*}
-    thus \(\lambda_1 = p\)
-  \item
-    \(\dim E_{\lambda_1} = 1\) since the eigenspaces are orthogonal and
-    \(E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p\) is a subspace, so
-    \(p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}\)
-    and it isn't zero dimensional.
-  \end{itemize}
+\end{claim}
+
+\begin{claim}[2]
+
+\(\mathbf{v}_1 = {\left[ {1, 1, \cdots, 1} \right]}\) is an eigenvector
+with eigenvalue \(\lambda_1 = p\).
+
+\end{claim}
+
+\begin{itemize}
 \item
   Using that the eigenvalues of \(A\) are \(1+\lambda_i\) for
   \(\lambda_i\) the above eigenvalues for \(B\),
@@ -5889,14 +6052,6 @@ containing 1's in every entry.
   \operatorname{Spec}(B) \coloneqq\left\{{(\lambda_i, m_i)}\right\} &=  \left\{{(p, 1), (0, p-1)}\right\}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
   \implies \operatorname{Spec}(A) &= \left\{{(p-1,1), (-1, p-1) }\right\}  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
   \end{align*}
-\end{itemize}
-
-\begin{quote}
-Note: we can always read off the \emph{characteristic} polynomial from
-the spectrum.
-\end{quote}
-
-\begin{itemize}
 \item
   The dimensions of eigenspaces are preserved, thus
   \begin{align*}
@@ -5932,8 +6087,77 @@ the spectrum.
   .\end{align*}
 \end{itemize}
 
-\hypertarget{b-101}{%
-\subsubsection{b}\label{b-101}}
+\end{proof}
+
+\begin{proof}[of claim 1]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Compute
+  \begin{align*}B \mathbf{p}_i = {\left[ { 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} \right]} = {\left[ {0, 0, \cdots, 0} \right]}\end{align*}
+\item
+  So every \(\mathbf{p}_i \in \ker(B)\), so they are eigenvectors with
+  eigenvalue 0.
+\item
+  Since the first component is fixed and we have \(p-1\) choices for
+  where to place a \(-1\), this yields \(p-1\) possibilities for
+  \(\mathbf{p}_i\)
+\item
+  These are linearly independent since the \((p-1)\times (p-1)\) matrix
+  \({\left[ { \mathbf{p}_1^t, \cdots, \mathbf{p}_{p-1}^t} \right]}\)
+  satisfies
+  \begin{align*}
+  \det 
+  \begin{bmatrix}
+  1 & 1 & 1 & \cdots & 1\\
+  -1 & 0  & 0 & \cdots & 0\\
+  0 & -1  & 0 & \cdots & 0\\
+  0 & 0 & -1 & \cdots & 0\\
+  \vdots & \vdots  & \vdots & \ddots & \vdots \\
+  0 & 0  & 0 & \cdots & -1\\
+  \end{bmatrix}
+  &= (1) \cdot \det 
+  \begin{bmatrix}
+  -1 & 0  & 0 & \cdots & 0\\
+  0 & -1  & 0 & \cdots & 0\\
+  0 & 0 & -1 & \cdots & 0\\
+  \vdots & \vdots  & \vdots & \ddots & \vdots \\
+  0 & 0  & 0 & \cdots & -1\\
+  \end{bmatrix}
+  \\
+  &= (-1)^{p-2} \neq 0
+  .\end{align*}
+\end{itemize}
+
+where the first equality follows from expanding along the first row and
+noting this is the first minor, and every other minor contains a row of
+zeros.
+
+\end{proof}
+
+\begin{proof}[of claim 2]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Compute
+  \begin{align*}B\mathbf{v} = {\left[ {\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} \right]} = {\left[ {p, p, \cdots, p} \right]} = p {\left[ {1, 1, \cdots, 1} \right]} = p\mathbf{v}_1,\end{align*}
+  thus \(\lambda_1 = p\)
+\item
+  \(\dim E_{\lambda_1} = 1\) since the eigenspaces are orthogonal and
+  \(E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p\) is a subspace, so
+  \(p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}\)
+  and it isn't zero dimensional.
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
 
 For \(F = {\mathbb{F}}_p\), all eigenvalues/vectors still lie in
 \({\mathbb{F}}_p\), but now \(-1 = p-1\), making
@@ -6019,6 +6243,8 @@ P = [\mathbf{v}_1, \mathbf{x}, \mathbf{p}_1, \cdots, \mathbf{p}_{p-2}] =
 \end{array}\right]
 .\end{align*}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2018-4-work}{%
@@ -6030,15 +6256,13 @@ Let
 A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-4}\end{array}\right] \in M_{3}(\mathbb{C})
 \end{align*}
 
-\hypertarget{a-112}{%
-\subsubsection{a}\label{a-112}}
-
-Find the Jordan canonical form J of A.
-
-\hypertarget{b-102}{%
-\subsubsection{b}\label{b-102}}
-
-Find an invertible matrix \(P\) such that \(P^{-1}AP = J\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the Jordan canonical form J of A.
+\item
+  Find an invertible matrix \(P\) such that \(P^{-1}AP = J\).
+\end{enumerate}
 
 \begin{quote}
 You should not need to compute \(P^{-1}\).
@@ -6051,17 +6275,15 @@ You should not need to compute \(P^{-1}\).
 Let \(A\) be an \(n\times n\) matrix with all entries equal to \(0\)
 except for the \(n-1\) entries just above the diagonal being equal to 2.
 
-\hypertarget{a-113}{%
-\subsubsection{a}\label{a-113}}
-
-What is the Jordan canonical form of \(A\), viewed as a matrix in
-\(M_n({\mathbb{C}})\)?
-
-\hypertarget{b-103}{%
-\subsubsection{b}\label{b-103}}
-
-Find a nonzero matrix \(P\in M_n({\mathbb{C}})\) such that \(P^{-1}A P\)
-is in Jordan canonical form.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the Jordan canonical form of \(A\), viewed as a matrix in
+  \(M_n({\mathbb{C}})\)?
+\item
+  Find a nonzero matrix \(P\in M_n({\mathbb{C}})\) such that
+  \(P^{-1}A P\) is in Jordan canonical form.
+\end{enumerate}
 
 \hypertarget{spring-2016-1-work}{%
 \subsection{\texorpdfstring{Spring 2016 \#1
@@ -6076,16 +6298,14 @@ A=\left(\begin{array}{ccc}
 \end{array}\right) \in M_{3}(\mathrm{C})
 .\end{align*}
 
-\hypertarget{a-114}{%
-\subsubsection{a}\label{a-114}}
-
-Find the Jordan canonical form \(J\) of \(A\).
-
-\hypertarget{b-104}{%
-\subsubsection{b}\label{b-104}}
-
-Find an invertible matrix \(P\) such that \(P^{-1}A P = J\). You do not
-need to compute \(P^{-1}\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the Jordan canonical form \(J\) of \(A\).
+\item
+  Find an invertible matrix \(P\) such that \(P^{-1}A P = J\). You do
+  not need to compute \(P^{-1}\).
+\end{enumerate}
 
 \hypertarget{spring-2015-6-work}{%
 \subsection{\texorpdfstring{Spring 2015 \#6
@@ -6123,17 +6343,15 @@ Let \(T: V\to V\) be a linear map from a 5-dimensional
 \({\mathbb{C}}{\hbox{-}}\)vector space to itself and suppose
 \(f(T) = 0\) where \(f(x) = x^2 + 2x + 1\).
 
-\hypertarget{a-115}{%
-\subsubsection{a}\label{a-115}}
-
-Show that there does not exist any vector \(v\in V\) such that
-\(Tv = v\), but there \emph{does} exist a vector \(w\in V\) such that
-\(T^2 w= w\).
-
-\hypertarget{b-105}{%
-\subsubsection{b}\label{b-105}}
-
-Give all of the possible Jordan canonical forms of \(T\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that there does not exist any vector \(v\in V\) such that
+  \(Tv = v\), but there \emph{does} exist a vector \(w\in V\) such that
+  \(T^2 w= w\).
+\item
+  Give all of the possible Jordan canonical forms of \(T\).
+\end{enumerate}
 
 \hypertarget{spring-2021-1-work}{%
 \subsection{\texorpdfstring{Spring 2021 \#1

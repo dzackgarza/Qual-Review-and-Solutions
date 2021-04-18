@@ -14,23 +14,41 @@ b.
 Prove that $R$ is commutative.
 
 :::{.solution}
+\envlist
 
-> Just fiddling with computations.
-> Context hints that we should be considering things like $x^2$ and $a+b$.
 
-a.
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+:::
+
+
+:::{.strategy}
+\envlist
+
+- Just fiddle with direct computations.
+- Context hint: that we should be considering things like $x^2$ and $a+b$.
+
+:::
+
+:::{.proof title="of a"}
 \[
 2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
 .\]
 Note that this implies $x = -x$ for all $x\in R$.
+:::
 
-b.
+:::{.proof title="of b"}
 \[
 a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 &\implies ab + ba = 0 \\
 &\implies ab = -ba \\
 &\implies ab = ba \quad\text{by (a)}
 .\]
+
+:::
 
 :::
 
@@ -135,7 +153,6 @@ Show that every proper ideal of $R$ is contained within a maximal ideal.
 
 b.
 Let $J(R)$ denote the intersection of all maximal ideals of $R$.
-
 Show that $x \in J(R) \iff 1 + rx$ is a unit for all $r \in R$.
 
 c.
@@ -149,11 +166,16 @@ of the nilpotent elements in R.
 :::{.concept}
 \envlist
 
-- $\mathfrak N(R) = \theset{x\in R \suchthat x^n = 0 \text{ for some } n}$.
-- $J(R) = \spec_{\text{max}}(R) = \displaystyle\intersect_{\mm \text{ maximal}} \mm$.
+- Definitions:
+\[
+N(R) &\da \theset{x\in R \suchthat x^n = 0 \text{ for some } n} \\
+J(R) &\da \intersect _{\mfm \in \mspec} \mfm
+.\]
+
+- Zorn's lemma: if $P$ is a poset in which every chain has an upper bound, $P$ contains a maximal element.
+
+
 :::
-
-
 
 :::{.proof title="of a"}
 Define the set of proper ideals
@@ -168,8 +190,7 @@ Given a chain $J_1 \subseteq \cdots$, there is an upper bound $J \definedas \uni
 
 :::
 
-
-:::{.proof title="of b"}
+:::{.proof title="of b, $\implies$"}
 $\implies$:
 
 - We will show that $x\in J(R) \implies 1+x \in R\units$, from which the result follows by letting $x=rx$.
@@ -184,8 +205,9 @@ Since $x\in J(R)$, $x\in \mathfrak{m}$ as well.
 
 - But then $(1+x) - x = 1 \in \mathfrak{m}$ which forces $\mathfrak{m} = R$.
 
-\
+:::
 
+:::{.proof title="of b, $\impliedby$"}
 $\impliedby$
 
 - Fix $x\in R$, and suppose $1+rx$ is a unit for all $r\in R$.
@@ -213,8 +235,6 @@ But $1\in R$, so we have
 - So $x\in \mathfrak{m}$ for every $\mathfrak{m}$ and thus $x\in J(R)$.
 
 :::
-
-
 
 :::{.proof title="of c"}
 - We want to show $J(R) = \mathfrak N(R)$.
@@ -262,7 +282,7 @@ x &\mapsto r x
 is an $R\dash$module endomorphism of $R$.
 
 b.
-We say that $r$ is a **zero-divisor** if r$\bullet$ is not injective.
+We say that $r$ is a **zero-divisor** if $r\bullet$ is not injective.
 Show that if $r$ is a zero-divisor and $r \neq 0$, then the kernel and image of $R$ each consist of zero-divisors.
 
 c.
@@ -282,6 +302,15 @@ following:
 
 :::{.solution}
 
+
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+- See 1964 Annals "Properties of rings with a finite number of zero divisors"
+:::
 
 
 :::{.proof title="of a"}
@@ -337,20 +366,19 @@ since $R$ is commutative, so $y$ is a zero divisor.
 
 :::
 
-> See 1964 Annals "Properties of rings with a finite number of zero divisors"
-
 :::{.proof title="of d"}
-By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
+\envlist
+
+- By (c), if there are exactly 2 zero divisors then $\abs{R} \leq 4$.
 Since every element in a finite ring is either a unit or a zero divisor, and $\abs{R\units} \geq 2$ since $\pm 1$ are always units, we must have $\abs{R} = 4$.
 
-Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
+- Since the characteristic of a ring must divide its size, we have $\ch R = 2$ or $4$.
 
-Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
+- Using the hint, we see that only $\ZZ/(4)$ has characteristic 4, which has exactly 2 zero divisors given by $[0]_4$ and $[2]_4$.
 
-If $R$ has characteristic 2, we can check the other 3 possibilities.
+- If $R$ has characteristic 2, we can check the other 3 possibilities.
 
-We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
-
+- We can write $\ZZ/(2)[t]/(t^2) = \theset{a + bt \suchthat a,b\in \ZZ/(2)}$, and checking the multiplication table we have
 \[
 \begin{array}{c|cccc}
 			& 0 & 1 	& t & 1+t 	\\ \hline
@@ -361,11 +389,11 @@ t 		& 0 & t 	& \mathbf{0} & t   	\\
 \end{array}
 ,\]
 
-and so we find that $t, 0$ are the zero divisors.
+  and so we find that $t, 0$ are the zero divisors.
 
-In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
+- In $\ZZ/(2)[t]/(t^2 - t)$, we can check that $t^2 = t \implies t t^2 = t^2 \implies t(t^2 + 1) = 0 \implies t(t+1) = 0$, so both $t$ and $t+1$ are zero divisors, along with zero, so this is not a possibility.
 
-Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
+- Similarly, in $\ZZ/(2)[t]/(t^2 + t + 1)$, we can check the bottom-right corner of the multiplication table to find
 \[
 \left[\begin{array}{c|cc}
 	& t 	& 1 +t \\ \hline
@@ -374,10 +402,9 @@ t & 1 	& t \\
 \end{array}\right]
 ,\]
 
-and so this ring only has one zero divisor.
+  and so this ring only has one zero divisor.
 
-Thus the only possibilities are:
-
+- Thus the only possibilities are:
 \[
 R &\cong \ZZ/(4) \\
 R &\cong \ZZ/(2)[t] / (t^2)
@@ -596,4 +623,23 @@ d.
 Is a UFD a Euclidean domain?
 Give either a proof or a counterexample with justification.
 
+## Spring 2021 #5 $\work$
+
+Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
+Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+
+## Spring 2021 #6
+
+a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
+
+b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
+\[
+f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
+\]
+such that $a_k$ is even for $1\leq k \leq n$.
+Show that $R$ is a subring of $\ZZ[x]$.
+
+c. Show that $R$ is not Noetherian.
+
+  > *Hint: consider the ideal generated by \( \ts{ 2x^k \st 1\leq k \in \ZZ } \).*
 

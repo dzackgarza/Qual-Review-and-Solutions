@@ -3,13 +3,13 @@
 ## $\star$ Spring 2012 #8 $\work$
 Let $V$ be a finite-dimensional vector space over a field $k$ and $T:V\to V$ a linear transformation.
 
-### a
+a.
 Provide a definition for the *minimal polynomial* in $k[x]$ for $T$.
 
-### b 
+b. 
 Define the *characteristic polynomial* for $T$.
 
-### c 
+c. 
 Prove the Cayley-Hamilton theorem: the linear transformation $T$ satisfies its characteristic polynomial.
 
 ## $\star$ Spring 2020 #8 $\work$
@@ -29,13 +29,13 @@ A=\left(\begin{array}{ccccc}
 \end{array}\right)
 .\]
 
-### a 
+a. 
 Find the invariant factors of $A$.
 
-### b 
+b. 
 Express $V$ in terms of a direct sum of indecomposable $\CC[x]\dash$modules.
 
-### c
+c.
 Find the Jordan canonical form of $A$.
 
 
@@ -74,14 +74,14 @@ A=\left[\begin{array}{ccc}
 \end{array}\right] \in M_{3}(\mathrm{C})
 .\]
 
-### a
+a.
 Find the Jordan canonical form $J$ of $A$.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
 You should not need to compute $P\inv$.
 
-### c
+c.
 Write down the minimal polynomial of $A$.
 
 ## Spring 2019 #7 $\done$ 
@@ -91,25 +91,43 @@ entries except 0 on the main diagonal.
 
 Determine the Jordan canonical form (JCF) of $A$
 
-### a 
+a. 
 When $F = \QQ$,
 
-### b
+b.
 When $F = \FF_p$.
 
 > Hint: In both cases, all eigenvalues lie in the ground field. In each case find a
 matrix $P$ such that $P\inv AP$ is in JCF.
 
 
+:::{.strategy}
+\envlist
+
+- Work with matrix of all ones instead.
+- Eyeball eigenvectors.
+- Coefficients in minimal polynomial: size of largest Jordan block
+- Dimension of eigenspace: number of Jordan blocks
+:::
+
+
 :::{.solution}
 
-> Work with matrix of all ones instead.
-> Eyeball eigenvectors.
-> Coefficients in minimal polynomial: size of largest Jordan block
-> Dimension of eigenspace: number of Jordan blocks
 
-### a
+\envlist
+:::{.concept}
+\envlist
 
+- Todo
+:::
+
+
+:::{.strategy}
+We can always read off the *characteristic* polynomial from the spectrum.
+:::
+
+
+:::{.proof title="of a"}
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
 
 - Noting that $B = A+I$, we have
@@ -124,47 +142,19 @@ Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in e
 
 - We proceed by finding $p$ eigenvectors and eigenvalues, since the JCF and minimal polynomials will involve eigenvalues and the transformation matrix will involve (generalized) eigenvectors.
 
-- Claim: each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
-  - Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
-  - So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
-  - Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
-  - These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
-  \[
-  \det 
-\begin{bmatrix}
-1 & 1 & 1 & \cdots & 1\\
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
-= (1) \cdot \det 
-\begin{bmatrix}
--1 & 0  & 0 & \cdots & 0\\
-0 & -1  & 0 & \cdots & 0\\
-0 & 0 & -1 & \cdots & 0\\
-\vdots & \vdots  & \vdots & \ddots & \vdots \\
-0 & 0  & 0 & \cdots & -1\\
-\end{bmatrix}
- = (-1)^{p-2} \neq 0
-.\]
+:::{.claim title="1"}
+Each vector of the form $\vector p_i \definedas \vector e_1 - \vector e_{i+1} = \thevector{1, 0, 0,\cdots, 0 -1, 0, \cdots, 0 }$ where $i\neq j$ is also an eigenvector with eigenvalues $\lambda_0 = 0$, and this gives $p-1$ linearly independent vectors spanning the eigenspace $E_{\lambda_0}$
+:::
 
-  where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
-
-- Claim: $\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
-  - Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
-  - $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
-
+:::{.claim title="2"}
+$\vector v_1 = \thevector{1, 1, \cdots, 1}$ is an eigenvector with eigenvalue $\lambda_1 = p$.
+:::
 
 - Using that the eigenvalues of $A$ are $1+\lambda_i$ for $\lambda_i$ the above eigenvalues for $B$,
 \[
 \spec(B) \definedas \theset{(\lambda_i, m_i)} &=  \theset{(p, 1), (0, p-1)}  \implies \chi_{B}(x) = (x-p)x^{p-1} \\ 
 \implies \spec(A) &= \theset{(p-1,1), (-1, p-1) }  \implies \chi_{A}(x) = (x- p+1)(x+1)^{p-1} \\
 \]
-
-> Note: we can always read off the *characteristic* polynomial from the spectrum.
-
 
 - The dimensions of eigenspaces are preserved, thus
 \[
@@ -196,8 +186,50 @@ P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 \end{array}\right]
 .\]
 
-### b
+:::
 
+:::{.proof title="of claim 1"}
+\envlist
+
+- Compute $$B \vector p_i = \thevector{ 1 + 0 + \cdots + 0 + (-1) + 0 + \cdots + 0} = \thevector{0, 0, \cdots, 0}$$
+- So every $\vector p_i \in \ker(B)$, so they are eigenvectors with eigenvalue 0.
+- Since the first component is fixed and we have $p-1$ choices for where to place a $-1$, this yields $p-1$ possibilities for $\vector p_i$
+- These are linearly independent since the $(p-1)\times (p-1)$ matrix $\thevector{ \vector p_1^t, \cdots, \vector p_{p-1}^t}$ satisfies
+\[
+\det 
+\begin{bmatrix}
+1 & 1 & 1 & \cdots & 1\\
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+&= (1) \cdot \det 
+\begin{bmatrix}
+-1 & 0  & 0 & \cdots & 0\\
+0 & -1  & 0 & \cdots & 0\\
+0 & 0 & -1 & \cdots & 0\\
+\vdots & \vdots  & \vdots & \ddots & \vdots \\
+0 & 0  & 0 & \cdots & -1\\
+\end{bmatrix}
+\\
+&= (-1)^{p-2} \neq 0
+.\]
+
+where the first equality follows from expanding along the first row and noting this is the first minor, and every other minor contains a row of zeros.
+
+:::
+
+:::{.proof title="of claim 2"}
+\envlist
+
+- Compute $$B\vector v = \thevector{\sum_{i=1}^p 1, \sum_{i=1}^p 1, \cdots, \sum_{i=1}^p 1} = \thevector{p, p, \cdots, p} = p \thevector{1, 1, \cdots, 1} = p\vector{v}_1,$$ thus $\lambda_1 = p$
+- $\dim E_{\lambda_1} = 1$ since the eigenspaces are orthogonal and $E_{\lambda_0} \oplus E_{\lambda_1} \leq F^p$ is a subspace, so $p > \dim(E_{\lambda_0}) + \dim E_{\lambda_1} = p-1 + \dim E_{\lambda_1}$ and it isn't zero dimensional.
+
+:::
+
+:::{.proof title="of b"}
 For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
 
 - A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
@@ -253,7 +285,7 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 \end{array}\right]
 .\]
 
-
+:::
 
 :::
 
@@ -263,10 +295,10 @@ Let
 A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-4}\end{array}\right] \in M_{3}(\mathbb{C})
 \]
 
-### a 
+a. 
 Find the Jordan canonical form J of A.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
 > You should not need to compute $P\inv$.
@@ -274,10 +306,10 @@ Find an invertible matrix $P$ such that $P\inv AP = J$.
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
 
-### a
+a.
 What is the Jordan canonical form of $A$, viewed as a matrix in $M_n(\CC)$?
 
-### b
+b.
 Find a nonzero matrix $P\in M_n(\CC)$ such that $P\inv A P$ is in Jordan canonical form.
 
 ## Spring 2016 #1 $\work$
@@ -290,10 +322,10 @@ A=\left(\begin{array}{ccc}
 \end{array}\right) \in M_{3}(\mathrm{C})
 .\]
 
-### a
+a.
 Find the Jordan canonical form $J$ of $A$.
 
-### b
+b.
 Find an invertible matrix $P$ such that $P\inv A P = J$.
 You do not need to compute $P\inv$.
 
@@ -318,10 +350,10 @@ Determine all possible Jordan forms of $T$.
 ## Spring 2013 #5 $\work$
 Let $T: V\to V$ be a linear map from a 5-dimensional $\CC\dash$vector space to itself and suppose $f(T) = 0$ where $f(x) = x^2 + 2x + 1$.
 
-### a
+a.
 Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there *does* exist a vector $w\in V$ such that $T^2 w= w$.
 
-### b
+b.
 Give all of the possible Jordan canonical forms of $T$.
 
 ## Spring 2021 #1 $\work$
