@@ -8,6 +8,9 @@ General Algebra
 - Show that if $L/F$ and $\alpha$ is algebraic over both $F$ and $L$, then the minimal polynomial of $\alpha$ over $L$ divides the minimal polynomial over $F$.
 - Prove that if $R$ is an integral domain, then $R[t]$ is again an integral domain.
 - Show that $ff(R[t]) = ff(R)(t)$.
+- Show that $[\QQ(\sqrt 2 + \sqrt 3) : \QQ] = 4$.
+  - Show that $\QQ(\sqrt 2 + \sqrt 3) = \QQ(\sqrt 2 - \sqrt 3) = \QQ(\sqrt 2, \sqrt 3)$.
+- Show that the splitting field of $f(x) = x^3-2$ is $\QQ(\sqrt[3]{2}, \zeta_2)$.
 
 Extensions?
 
