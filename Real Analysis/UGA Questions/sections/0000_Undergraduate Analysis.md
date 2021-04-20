@@ -4,11 +4,8 @@
 Let $f(x) = \frac 1 x$.
 Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 
-
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Uniform continuity:
 \[  
 \forall \varepsilon>0, \exists \delta(\eps)>0 \qtext{such that} \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \varepsilon
@@ -17,8 +14,14 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
   $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
 :::
 
-**Claim**:
+:::{.solution}
+
+:::{.claim}
 $f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
+:::
+
+:::{.proof title="of claim"}
+\envlist
 
 - Note that
 $$
@@ -39,7 +42,14 @@ $$
 ,\]
   which shows uniform continuity.
 
-**Claim**: $f$ is *not* uniformly continuous when $c=0$.
+:::
+
+:::{.claim}
+$f$ is *not* uniformly continuous when $c=0$.
+:::
+
+:::{.proof title="of claim"}
+\envlist
 
 - Toward a contradiction, let $\varepsilon < 1$.
 - Let $x_n = \frac 1 n$ for $n\geq 1$.
@@ -54,6 +64,10 @@ $$
 \abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
 ,\]
   a contradiction.
+
+:::
+
+
 :::
 
 
@@ -65,15 +79,16 @@ f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which $f$ does and does not converge uniformly.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - $f_N\to f$ uniformly $\iff$ $\norm{f_N - f}_\infty \to 0$.
 - $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
   - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
 - If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
 :::
+
+:::{.solution}
+\envlist
 
 - Set $f_N(x) = \sum_{n=1}^N {x^n \over n!}$.
   - Then by definition, $f_N(x) \to f(x)$ pointwise on $\RR$.
@@ -104,16 +119,29 @@ $f$ does not converge on $\RR$.
 .\]
 :::
 
-
 ## Fall 2014 # 1 $\done$
 Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ converges uniformly.
 
 Prove that $\sum f_n$ is also continuous.
 
+
+\envlist
+:::{.concept}
+\envlist
+
+- Todo
+:::
+
+
 :::{.solution}
-\hfill
-**Claim:**
+\envlist
+
+:::{.claim}
 If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
+:::
+
+:::{.proof title="of claim"}
+\envlist
 
 - Follows from an $\varepsilon/3$ argument: 
   \[  
@@ -125,10 +153,14 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
   - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
   - The middle $\eps/3$ comes from continuity of each $F_N$.
 
-- Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
-- Each $F_N$ is continuous and $F_N\to F$ uniformly, so applying the claim yields the desired result.
 :::
 
+- Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
+- Each $F_N$ is continuous and $F_N\to F$ uniformly, so applying the claim yields the desired result.
+
+
+
+:::
 
 ## Spring 2017 # 4 $\done$
 Let $f(x, y)$ on $[-1, 1]^2$ be defined by 
@@ -140,13 +172,12 @@ f(x, y) = \begin{cases}
 $$
 Determine if $f$ is integrable.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Just Calculus.
 :::
 
+:::{.solution}
 Switching to polar coordinates and integrating over one quarter of the unit disc $D \subseteq I^2$, we have
 \[
 \int_{I^2} f \, dA
@@ -171,14 +202,15 @@ Prove that the following statements are equivalent:
 1. For every $\varepsilon > 0 \quad \exists \delta > 0$ such that $\rho( f(x), f(x_0)  ) < \varepsilon$ whenever $d(x, x_0) < \delta$.
 2. The sequence $\theset{f(x_n)}_{n=1}^\infty \to f(x_0)$ for every sequence $\theset{x_n} \to x_0$ in $X$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - What it means for a sequence to converge.
 :::
 
-$1\implies 2$:
+:::{.solution}
+
+:::{.proof title="$1\implies 2$"}
+\envlist
 
 - Let $\theset{x_n} \converges{n\to\infty}\to x_0$ be arbitrary; we want to show $\theset{f(x_n)}\converges{n\to\infty}\to f(x_0)$.
   - We thus want to show that for every $\eps>0$, there exists an $N(\eps)$ such that \[n\geq N(\eps) \implies \rho(f(x_n),  f(x_0)) < \eps.\]
@@ -186,7 +218,10 @@ $1\implies 2$:
 - Since $x_n\to x$, there is some $N$ such that $n\geq N \implies d(x_n, x_0) < \delta$
 - Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ as desired.
 
-$2\implies 1$:
+
+:::
+
+:::{.proof title="$2\implies 1$"}
 
 > Note that we need a $\delta$ for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
 
@@ -195,19 +230,22 @@ $2\implies 1$:
 - Negating $1$, we have that there exists an $\eps>0$ such that for all $\delta$, there exists an $x$ with $d(x, x_0) < \delta$ but $\rho(f(x), f(x_0))>\eps$
 - So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < {1\over n}$ and $\rho(f(x_n), f(x_0)) > \eps$.
 - Then $x_n \to x_0$ but $f(x_n) \not\to f(x_0)$.
+
+:::
+
 :::
 
 
 ## Fall 2014 # 2  $\work$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
-### 1
+a.
 Show that
 \[
 \sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
 \]
 
-### 2
+b.
 Suppose $I = \QQ$ and $\sum_{q \in \mathbb{Q}} a(q)<\infty$.
 Define
 \[
@@ -216,9 +254,12 @@ f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
 Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
 \todo[inline]{Stuck on part b}
+
 :::{.solution}
 
-### 1
+
+:::{.proof title="of a"}
+\envlist
 
 - Set $S \definedas \sum_{i\in I} \alpha(i)$, we will show that $S<\infty \implies I$ is countable.
 - Write $I = \disjoint_{n\in \NN} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
@@ -234,8 +275,9 @@ S = \sum_{i\in I} \alpha(i)
 
 - But then $I$ is a countable union of countable sets and thus countable.
 
-### 2
-\\todo[inline]{Not sure.}
+:::
+
+\todo[inline]{(b): not sure.}
 :::
 
 
@@ -252,7 +294,7 @@ Show that $\sum a_n^2 < \infty$.
 
 \todo[inline]{Have someone check!}
 :::{.solution}
-\hfill
+\envlist
 - Define a sequence of operators 
 \[  
 T_N: \ell^2 &\to \ell^1\\
@@ -282,13 +324,15 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \,dx = f(1)
 .\]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
+
 - DCT
 - Weierstrass Approximation Theorem
 :::
+
+:::{.solution}
+\envlist
 
 - Suppose $p$ is a polynomial, then
 \[
@@ -345,29 +389,30 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 ## Fall 2019 # 1 $\done$
 Let $\{a_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-### a
+a.
 Prove that if $\displaystyle\lim_{n\to \infty } a_n = 0$, then 
 \[
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
-### b
+b.
 Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then 
 \[
 \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
 \]
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Cesaro mean/summation. 
 - Break series apart into pieces that can be handled separately.
 - Idea: once $N$ is large enough, $a_k \approx S$, and all smaller terms will die off as $N\to \infty$.
   - See [this MSE answer](https://math.stackexchange.com/questions/514802/convergence-of-series-implies-convergence-of-cesaro-mean).
 :::
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Prove a stronger result: 
 \[
@@ -394,9 +439,12 @@ k\geq M+1 \implies \abs{a_k - S} < \varepsilon
 &\leq \eps + (N(M, \eps) - M(\eps))\eps
 .\]
 
+:::
+
 \todo[inline]{Revisit, not so clear that the last line can be made smaller than $\eps$, since $M, N$ both depend on $\eps$...}
 
-### b
+:::{.proof title="of b"}
+\envlist
 
 - Define
 \[
@@ -430,6 +478,9 @@ k\geq M+1 \implies \abs{a_k - S} < \varepsilon
 &= \qty{ {1\over n } \sum_{k=0}^n \Gamma_k } - \qty{{1\over n}\Gamma_{n+1} } \\
 &\converges{n\to\infty}\to 0
 .\]
+
+:::
+
 :::
 
 ## Fall 2018 # 4 $\done$
@@ -444,9 +495,9 @@ Prove that
 \todo[inline]{Ask someone to check the last approximation part.}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Converting floor/ceiling functions to inequalities: $x-1 \leq \floor{x} \leq x$.
 :::
 
@@ -550,25 +601,27 @@ Let
 f_{n}(x) = n x(1-x)^{n}, \quad n \in \NN.
 \]
 
-1. Show that $f_n \to 0$ pointwise but not uniformly on $[0, 1]$.
-    
-  > Hint: Consider the maximum of $f_n$.
+a. 
+Show that $f_n \to 0$ pointwise but not uniformly on $[0, 1]$.
 
-2. 
+b. 
+Show that
 \[
 \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
 \]
 
+> Hint for (a): Consider the maximum of $f_n$.
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - $\sum f_n < \infty \iff \sup f_n \to 0$.
 - Negating uniform convergence: $f_n\not\to f$ uniformly iff $\exists \eps$ such that $\forall N(\eps)$ there exists an $x_N$ such that $\abs{f(x_N) - f(x)} > \eps$.
 - Exponential inequality: $1+y \leq e^y$ for all $y\in \RR$.
 :::
 
-### a
+a.
 
 $f_n\to 0$ pointwise:
 
@@ -599,7 +652,7 @@ The convergence is not uniform:
 - Thus $\norm{f_n - 0}_\infty = \norm{f_n}_\infty > e^{-1} > 0$.
 
 
-### b
+b.
 
 \todo[inline]{Possible to use part a with $\sin(x) \leq x$ on $[0, \pi/2]$?}
 
@@ -623,13 +676,12 @@ f_{n}(x) = a e^{-n a x} - b e^{-n b x} \quad \text{ where } 0 < a < b.
 
 Show that 
 
-### a 
+a. 
 $\sum_{n=1}^{\infty} \left|f_{n}\right|$ is not in $L^{1}([0, \infty), m)$
 
 > Hint: $f_n(x)$ has a root $x_n$.
 
-### b
-
+b.
 \[
 \sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
 \qtext{and}
@@ -640,12 +692,12 @@ $\sum_{n=1}^{\infty} \left|f_{n}\right|$ is not in $L^{1}([0, \infty), m)$
 \todo[inline]{Walk through.}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 :::
 
-### a
+a.
 
 - $f_n$ has a root:
 \[  
@@ -665,7 +717,7 @@ ae^{-nax} = be^{-nbx}
 .\]
 
 
-### b
+b.
 
 ?
 :::
@@ -676,7 +728,6 @@ Define
 \[
 f(x) = \sum_{n=1}^{\infty} \frac{1}{n^{x}}.
 \] 
-
 Show that $f$ converges to a differentiable function on $(1, \infty)$ and that
 \[
 f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
@@ -690,9 +741,9 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 \todo[inline]{Add concepts.}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - ?
 :::
 
@@ -747,9 +798,9 @@ Let $\phi\in L^\infty(\RR)$. Show that the following limit exists and satisfies 
 \todo[inline]{Add concepts.}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - ?
 :::
 
@@ -803,15 +854,17 @@ Let $f, g \in L^2(\RR)$. Show that
 \lim _{n \to \infty} \int _{\RR} f(x) g(x+n) \,dx = 0
 \]
 
-
-:::{.solution}
-\hfill
+\todo[inline]{Rewrite solution.}
 
 :::{.concept}
-\hfill
+\envlist
 - Cauchy Schwarz: $\norm{fg}_1 \leq \norm{f}_1 \norm{g}_1$.
-- Small tails.
+- Small tails in $L^p$.
 :::
+
+
+:::{.solution}
+\envlist
 
 - Use the fact that $L^p$ has small tails: if $h\in L^2(\RR)$, then for any $\eps > 0$, 
 \[  
@@ -865,8 +918,9 @@ E_{n} = \left( 1+ {1\over n} \right)^{n+1}
 
 Show that $e_n < E_n$, and prove Bernoulli's inequality:
 \[
-(1+x)^{n} \geq 1+n x \text { for }-1<x<\infty \text { and } n \in \mathbb{N}
-\]
+(1+x)^n \geq 1+nx && -1 < x < \infty  ,\,\, n\in \NN
+.\]
+
 
 Use this to show the following:
 

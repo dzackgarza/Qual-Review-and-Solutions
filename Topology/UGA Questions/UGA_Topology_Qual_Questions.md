@@ -1,3 +1,16 @@
+\newcommand{\dx}{\,dx}
+\newcommand{\dt}{\,dt}
+\newcommand{\dy}{\,dy}
+\newcommand{\ds}{\,ds}
+\newcommand{\dz}{\,dz}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dV}{\,dV}
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -7,30 +20,10 @@
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
 }
-\newcommand{\ext}{\operatorname{Ext}}
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\Endo}{\operatorname{End}}
-\newcommand{\Ind}{\operatorname{Ind}}
-\newcommand{\ind}{\operatorname{Ind}}
-\newcommand{\coind}{\operatorname{Coind}}
-\newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Proj}{\operatorname{Proj}}
-\newcommand{\res}{\operatorname{Res}}
-\newcommand{\Res}{\operatorname{Res}}
-\newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\Br}{\operatorname{Br}}
-\newcommand{\coh}{\operatorname{coh}}
-\newcommand{\colspace}{\operatorname{colspace}}
-\newcommand{\rowspace}{\operatorname{rowspace}}
-\newcommand{\codom}{\operatorname{codom}}
-\newcommand{\range}{\operatorname{range}}
-\newcommand{\nullspace}{\operatorname{nullspace}}
-\newcommand{\nullity}{\operatorname{nullspace}}
-\newcommand{\projection}{\operatorname{Proj}}
-\newcommand{\Der}{\operatorname{Der}}
 \renewcommand{\AA}[0]{{\mathbb{A}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
@@ -38,13 +31,12 @@
 \newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HP}[0]{{\mathbb{HP}}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\kk}[0]{{\mathbb{k}}}
 \newcommand{\bbm}[0]{{\mathbb{M}}}
 \newcommand{\NN}[0]{{\mathbb{N}}}
 \newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\LL}[0]{{\mathbb{L}}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
@@ -53,26 +45,41 @@
 \renewcommand{\SS}[0]{{\mathbb{S}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\kG}[0]{{kG}}
 \newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
 \newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
 \newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\SF}[0]{\operatorname{SF}}
+\newcommand{\vol}[0]{\operatorname{vol}}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\Cx}[0]{\operatorname{Cx}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\CF}[0]{\operatorname{HF}}
+\newcommand{\ZHS}[0]{\operatorname{ZHS}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
 \newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\gl}[0]{\operatorname{GL}}
 \newcommand{\mat}[0]{\operatorname{Mat}}
 \newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Perv}[0]{\operatorname{Perv}}
 \newcommand{\Gal}[0]{\operatorname{Gal}}
 \newcommand{\Hilb}[0]{\operatorname{Hilb}}
 \newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{\operatorname{red}}
+\newcommand{\red}[0]{{ \text{red} }}
 \newcommand{\Pic}[0]{{\operatorname{Pic}}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
@@ -83,6 +90,9 @@
 \newcommand{\ann}[0]{\operatorname{Ann}}
 \newcommand{\Ann}[0]{\operatorname{Ann}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
 \newcommand{\Sp}[0]{{\operatorname{Sp}}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
@@ -91,18 +101,23 @@
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\Fp}[0]{{\FF_p}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
 \newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\codim}[0]{\operatorname{codim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\ssets}[0]{\operatorname{sSets}}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dR}[0]{\mathrm{dR}}
 \newcommand{\txor}[0]{{\operatorname{ or }}}
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\operatorname{gr}}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -113,7 +128,6 @@
 \newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
-\newcommand{\Fun}[0]{{\operatorname{Fun}}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
 \newcommand{\PSL}[0]{{\operatorname{PSL}}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
@@ -121,51 +135,98 @@
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Top}[0]{{\operatorname{Top}}}
-\newcommand{\Ab}[0]{{\operatorname{Ab}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
-\newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
-\newcommand{\Sch}[0]{{\operatorname{Sch}}}
-\newcommand{\sch}[0]{{\operatorname{Sch}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
-\newcommand{\alg}[0]{\mathrm{Alg}}
-\newcommand{\scalg}[0]{\mathrm{sCAlg}}
-\newcommand{\calg}[0]{\mathrm{CAlg}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\poly}[0]{\operatorname{poly}}
-\newcommand{\Vect}[0]{{\operatorname{Vect}}}
-\newcommand{\Sh}[0]{{\operatorname{Sh}}}
-\newcommand{\presh}[0]{{\operatorname{Presh}}}
-\newcommand{\Presh}[0]{{\operatorname{Presh}}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Fun}[0]{{\mathsf{Fun}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
+\newcommand{\poly}[0]{\mathsf{poly}}
+\newcommand{\Vect}[0]{{\mathsf{Vect}}}
+\newcommand{\Sh}[0]{{\mathsf{Sh}}}
+\newcommand{\Ch}[0]{\mathsf{Ch}}
+\newcommand{\Set}[0]{{\mathsf{Set}}}
+\newcommand{\Sets}[0]{{\mathsf{Set}}}
+\newcommand{\sets}[0]{{\mathsf{Set}}}
+\newcommand{\Grp}[0]{{\mathsf{Grp}}}
+\newcommand{\Groups}[0]{{\mathsf{Groups}}}
+\newcommand{\Ab}[0]{{\mathsf{Ab}}}
+\newcommand{\Ring}[0]{\mathsf{Ring}}
+\newcommand{\CRing}[0]{\mathsf{CRing}}
+\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
+\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
+\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
+\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
+\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\gr}[0]{{\mathsf{gr}}}
+\newcommand{\grMod}[0]{{\mathsf{grMod}}}
+\newcommand{\Mod}[0]{{\mathsf{Mod}}}
+\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
+\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
+\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
+\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
+\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
+\newcommand{\alg}[0]{\mathsf{Alg}}
+\newcommand{\scalg}[0]{\mathsf{sCAlg}}
+\newcommand{\calg}[0]{\mathsf{CAlg}}
+\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
+\newcommand{\ssets}[0]{\mathsf{sSets}}
+\newcommand{\Assoc}[0]{\mathsf{Assoc}}
+\newcommand{\Unital}[0]{\mathsf{Unital}}
+\newcommand{\Riem}[0]{\mathsf{Riem}}
+\newcommand{\Comm}[0]{\mathsf{Comm}}
+\newcommand{\Top}[0]{{\mathsf{Top}}}
+\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
+\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\sch}[0]{{\mathsf{Sch}}}
+\newcommand{\qcoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\Qcoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\Perv}[0]{\mathsf{Perv}}
+\newcommand{\presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Presh}[0]{{\mathsf{Presh}}}
+
+\newcommand{\Forget}[0]{{\operatorname{Forget}}}
+\newcommand{\eul}[0]{{\operatorname{eul}}}
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Ob}[0]{{\operatorname{Ob}}}
 \newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\Set}[0]{{\operatorname{Set}}}
-\newcommand{\Sets}[0]{{\operatorname{Set}}}
-\newcommand{\Grp}[0]{{\operatorname{Grp}}}
-\newcommand{\Groups}[0]{{\operatorname{Groups}}}
 \newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
 \newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
 \newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
-\newcommand{\sets}[0]{{\operatorname{Set}}}
-\newcommand{\Sm}[0]{{\operatorname{Sm}_k}}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
 \newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\discriminant}[0]{{\Delta}}
 \newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
 \newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
 \newcommand{\tors}[0]{{\operatorname{tors}}}
 \newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{\operatorname{compact}}
+\newcommand{\cpt}[0]{{ \text{compact} } }
+\newcommand{\Kah}[0]{{ \text{Kähler} } }
+\newcommand{\oriented}[0]{{ \text{oriented} } }
+\newcommand\compact[0]{\text{cpt}}
+\newcommand\Kahler[0]{\text{Kähler}}
+\newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
@@ -173,16 +234,26 @@
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
+\newcommand{\convolve}[0]{\ast}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\Spinc}[0]{\mathrm{Spin}^{\mathbb{C} }}
 \newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
 \newcommand{\cross}[0]{\times}
 \newcommand{\by}[0]{\times}
 \newcommand{\dash}[0]{{\hbox{-}}}
 \newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
 \newcommand{\definedas}[0]{\coloneqq}
 \newcommand{\da}[0]{\coloneqq}
 \newcommand{\del}[0]{{\partial}}
@@ -193,6 +264,7 @@
 \newcommand{\dual}[0]{^\vee}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\eps}[0]{\varepsilon}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
@@ -218,12 +290,19 @@
 \newcommand{\mfp}[0]{{\mathfrak{p}}}
 \newcommand{\mfq}[0]{{\mathfrak{q}}}
 \newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
 \newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\lieh}[0]{{\mathfrak{h}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
+\newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\lieb}[0]{{\mathfrak{b}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieh}[0]{{\mathfrak{h}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
@@ -238,9 +317,12 @@
 \newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\from}[0]{\leftarrow}
 \newcommand{\mapstofrom}[0]{\rightleftharpoons}
-\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
+\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
 \newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\diagonal}[0]{\Delta}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\overset{#1}\injects}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
 \newcommand{\surjectsvia}[2][]{
   \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
@@ -280,6 +362,7 @@
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\Dist}[0]{\operatorname{Dist}}
 \newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\diam}[0]{{\operatorname{diam}}}
 \newcommand{\gal}[0]{\operatorname{Gal}}
 \newcommand{\diff}[0]{\operatorname{Diff}}
@@ -289,8 +372,18 @@
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\hilb}[0]{\operatorname{Hilb}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Hom}[0]{{\operatorname{Hom}}}
-\newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\Frame}[0]{{\operatorname{Frame}}}
+\newcommand{\Fr}[0]{{\operatorname{Fr}}}
+\newcommand{\prin}[0]{{\operatorname{Prin}}}
+\newcommand{\Taut}[0]{{\operatorname{Taut}}}
+\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
+\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\FS}{{ \text{FS} }}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
@@ -298,15 +391,13 @@
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
 \newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
-\newcommand{\notdivides}[0]{\nmid}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
 \newcommand{\rad}[0]{{\operatorname{rad}}}
-\newcommand{\ralg}[0]{\operatorname{R-alg}}
-\newcommand{\kalg}[0]{k\dash\operatorname{alg}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
 \newcommand{\Log}[0]{\operatorname{Log}}
@@ -316,11 +407,6 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\operatorname{mod}}}
-\newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\modr}[0]{{\operatorname{mod}}}
-\newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
-\newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
@@ -334,14 +420,17 @@
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 \newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
-\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\wedgeprod}[0]{\vee}
+\newcommand{\Wedgeprod}[0]{\bigvee}
+\newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand{\connectsum}[0]{\mathop{\Large \#}}
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
 \newcommand{\ts}[1]{\left\{{#1}\right\}}
 \newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
@@ -357,7 +446,7 @@
 \newcommand{\covers}[0]{\rightrightarrows}
 \newcommand{\units}[0]{^{\times}}
 \newcommand{\nonzero}[0]{^{\bullet}}
-\newcommand{\wait}[0]{{\,\cdot\,}}
+\newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \renewcommand{\div}[0]{\operatorname{Div}}
@@ -365,10 +454,13 @@
 \newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
+\newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
+\newcommand{\complex}[1]{{#1}_{*}}
 \newcommand*\dif{\mathop{}\!\operatorname{d}}
 \newcommand{\ddt}{\tfrac{\dif}{\dif t}}
 \newcommand{\ddx}{\tfrac{\dif}{\dif x}}
@@ -390,6 +482,28 @@
 \DeclareMathOperator*{\hocolim}{hocolim}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator{\Endo}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\BiHol}{BiHol}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\len}{len}
+\newcommand{\Suchthat}[0]{\middle\vert}
+\newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\delbar}[0]{\bar{\del}}
+
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
@@ -405,14 +519,79 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\constantsheaf[1]{\underline{#1}}
+\newcommand\holomorphic[0]{\text{holo}}
+\newcommand\std[0]{\text{std}}
+\newcommand\Mero[0]{\operatorname{Mero}}
+\newcommand\even[0]{\text{even}}
+\newcommand\odd[0]{\text{odd}}
+\newcommand\hodgestar[0]{\star}
+\newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
+\newcommand\covariant[0]{\nabla}
+\newcommand\ol[1]{\overline{#1}}
+\newcommand\univcover[1]{\overline{#1}}
+\newcommand\closure[1]{\overline{#1}}
+\newcommand\capprod{\frown}
+\newcommand\cupprod{\smile}
+\newcommand\Path{\mathcal{P}}
+\newcommand\gradient{\nabla}
 
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
+\newcommand\cupp[0]{\smile}
+\newcommand\capp[0]{\frown}
+\newcommand\sig[0]{\operatorname{sig}}
+\newcommand\ev[0]{\operatorname{ev}}
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\newcommand{\divides}{\bigm|}
+\newcommand{\notdivides}{%
+  \mathrel{\mkern.5mu % small adjustment
+    % superimpose \nmid to \big|
+    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+  }%
+}
+\newcommand{\fractional}[1]{\theset{#1}}
+\newcommand{\fractionalpart}[1]{\theset{#1}}
+\newcommand{\integerpart}[1]{\left[ {#1}\right] }
+\newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
+\newcommand{\Bl}[0]{\operatorname{Bl}}
+\newcommand{\Triv}[0]{{ \operatorname{Triv}}}
+\def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+\newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
+
+\newcommand{\Tot}[0]{\operatorname{Tot}}
+\newcommand{\Totsum}[0]{\Tot^{\oplus}}
+\newcommand{\Totprod}[0]{\Tot^{\Pi}}
+\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
+\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
+\newcommand{\ideal}[1]{\mathcal{#1}}
+\newcommand{\forget}[0]{\mathrm{Forget}}
+\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\xpn}[0]{ { x^{p^n} } }
+
+
+\newcommand{\cores}[0]{\operatorname{cores}}
+\newcommand{\res}[0]{\operatorname{res}}
+\newcommand{\Res}[0]{\operatorname{Res}}
+\newcommand{\infl}[0]{\operatorname{inf}}
+\newcommand{\coinfl}[0]{\operatorname{coinf}}
+\newcommand{\ind}[0]{\operatorname{ind}}
+\newcommand{\Ind}[0]{\operatorname{Ind}}
+\newcommand{\Coind}[0]{\operatorname{coInd}}
+
+\newcommand{\submfds}{\operatorname{SubMfds}}
+
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 
 ---
 title: UGA Topology Qualifying Exam Questions and Solutions
@@ -437,6 +616,7 @@ Here is a list of problems that Mike recommended reviewing during our problem se
 
 :::{.warnings}
 Usually 30% of the problems on any given qual are related to point-set/general Topology.
+Note that this material is not covered in the course!
 :::
 
 
@@ -446,7 +626,9 @@ Usually 30% of the problems on any given qual are related to point-set/general T
 
 ## Topologies, Subspaces, Closures, and Maps
 
-### 5 (Fall '11) $\work$
+### Fall '11 $\work$
+
+:::{.problem title="Fall 2011"}
 Let $X$ be a topological space, and $B \subset A \subset X$. 
 Equip $A$ with the subspace topology, and write $\cl_X (B)$ or $\cl_A (B)$ for the closure of $B$ as a subset of, respectively, $X$ or $A$. 
 
@@ -454,13 +636,20 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 > I.e., are they always equal? Is one always contained in the other but not conversely? Neither?
 
+:::
+
 ### 6 (Fall '05) $\done$
+
+:::{.problem title="Fall 2005"}
 Prove that the unit interval $I$ is compact. Be sure to explicitly state any properties of $\RR$ that you use.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Cantor's Intersection Theorem
 - Bases for standard topology on $\RR$.
 - Definition of compactness
@@ -479,26 +668,31 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 :::
 
 ### 7 (Fall '06). $\done$
+
+:::{.problem title="Fall 2006, 7"}
 A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
 
 Prove that every compact metric space is sequentially compact.
 
+:::
+
 ### 8 (Fall '10). $\done$
+
+:::{.problem title="Fall 2010, 8"}
 Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact if and only if both $X$ and $Y$ are compact.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Proof of the tube lemma.
 :::
 
-
 Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
 
-
-##### Proof 1
-
+:::{.proof title="Variant 1"}
 $\impliedby$:
 
 - By universal properties, the product $X\cross Y$ is equipped with continuous projections
@@ -523,8 +717,9 @@ Shorter mnemonic:
 
 ![](figures/image_2020-05-22-11-39-10.png)
 
-##### Proof 2
+:::
 
+:::{.proof title="Variant 2"}
 Let $\pi_X, \pi_Y$ denote the canonical projections, which we can note are continuous and preserve open sets.
 
 $\implies$:
@@ -545,40 +740,24 @@ By the Tube Lemma, there is an open set $W_x$ such that $\theset{x} \cross Y \su
 Then $\theset{W_x} \rightrightarrows X$ as $x$ varies is an open cover of $X$, and by compactness of $X$, there are finitely many $x_j \in X$ such that $W_{x_j} \rightrightarrows X$.
 But then $X \cross Y = \union_{j} W_{x_j} \cross Y = \union_j \union_i W_{x_j} \cross V_{x_j, i} \subset \union_\alpha U_\alpha$ is a finite cover.
 
-
-##### Proof of Tube Lemma 
-
-\todo[inline]{Check this proof!}
-
-Proof of Tube Lemma:
-
-- Let $\theset{U_j\cross V_j \suchthat j\in J} \covers X\cross Y$. 
-- Fix a point $x_0\in X$, then $\theset{x_0}\cross Y \subset N$ for some open set $N$.
-- By the tube lemma, there is a $U^x \subset X$ such that the tube $U^x \cross Y \subset N$.
-- Since $\theset{x_0}\cross Y \cong Y$ which is compact, there is a finite subcover $\theset{U_j \cross V_j \suchthat j\leq n} \covers \theset{x_0}\cross Y$. 
--   "Integrate the $X$": write 
-    $$W = \intersect_{j=1}^n U_j,$$ 
-    then $x_0 \in W$ and $W$ is a finite intersection of open sets and thus open.
-- Claim: $\theset{U_j \cross V_j \suchthat j\leq n}\covers W\cross Y$
-  - Let $(x, y) \in W\cross Y$; want to show $(x, y)\in U_j \cross V_j$ for some $j\leq n$.
-  - Then $(x_0, y) \in \theset{x_0}\cross Y$ is on the same horizontal line
-  - $(x_0, y)\in U_j \cross V_j$ for some $j$ by construction
-  - So $y\in V_j$ for this $j$
-  - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
-  - So $(x, y) \in U_j \cross V_j$
+:::
 
 :::
 
-### 12 (Spring '06). $\done$
+### 12 (Spring '06). $\work$
+
+:::{.problem title="Spring 2006, 12"}
 Write $Y$ for the interval $[0, \infty)$, equipped with the usual topology. 
 
 Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
+:::
 
 \todo[inline]{Not finished.}
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
@@ -588,28 +767,37 @@ Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
 
 ### 13 (Fall '06). $\work$
 
-#### a
+:::{.problem title="Fall 2006, 13"}
+\envlist
+
+a.
 Prove that if the space $X$ is connected and locally path connected then $X$ is path connected.
 
-#### b
+b.
 Is the converse true? Prove or give a counterexample.
 
-### 14 (Fall '07) $\done$
+:::
+
+### 14 (Fall '07) $\work$
+
+:::{.problem title="?"}
 Let $\theset{X_\alpha \mid \alpha \in A}$ be a family of connected subspaces of a space $X$ such that there is a point $p \in X$ which is in each of the $X_\alpha$.
 
 Show that the union of the $X_\alpha$ is connected.
+
+:::
 
 \todo[inline]{Proof 2 not complete?}
 
 :::{.solution}
 
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
-##### Proof 1
+:::{.proof title="Variant 1"}
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Toward a contradiction: write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
@@ -624,7 +812,10 @@ Show that the union of the $X_\alpha$ is connected.
 - Since $A\subset X\union Y$, $A\intersect \qty{X\union Y} = A$
 - Thus $A = X\union Y$, forcing $B = \emptyset$.
 
-##### Proof 2?
+
+:::
+
+:::{.proof title="Variant 2"}
 
 Let $X \definedas \union_\alpha X_\alpha$, and let $p\in \intersect X_\alpha$.
 Suppose toward a contradiction that $X = A \disjoint B$ with $A,B$ nonempty, disjoint, and relatively open as subspaces of $X$.
@@ -634,25 +825,36 @@ Then $q\in X_\alpha$ for some $\alpha$, so $q\in B \intersect X_\alpha$.
 We also have $p\in A \intersect X_\alpha$.
 
 But then these two sets disconnect $X_\alpha$, which was assumed to be connected --  a contradiction.
+
 :::
 
+:::
 
-#### 15 (Fall '04). $\work$
+### 5 (Fall '04). $\work$
+
+:::{.problem title="?"}
 Let $X$ be a topological space.
 
-a.  Prove that $X$ is connected if and only if there is no continuous
-    nonconstant map to the discrete two-point space $\theset{0, 1}$.
+a.  
+Prove that $X$ is connected if and only if there is no continuous
+nonconstant map to the discrete two-point space $\theset{0, 1}$.
 
-b.  Suppose in addition that $X$ is compact and $Y$ is a connected Hausdorff space. 
-    Suppose further that there is a continuous map $f : X \to Y$ such that 
-    every preimage $f\inv (y)$ for $y \in Y$, is a connected subset of $X$. 
+b.
+Suppose in addition that $X$ is compact and $Y$ is a connected Hausdorff space. 
+Suppose further that there is a continuous map $f : X \to Y$ such that 
+every preimage $f\inv (y)$ for $y \in Y$, is a connected subset of $X$. 
 
-    Show that $X$ is connected.
+Show that $X$ is connected.
 
-c.  Give an example showing that the conclusion of (b) may be false if
-    $X$ is not compact.
+c.  
+Give an example showing that the conclusion of (b) may be false if
+$X$ is not compact.
 
-#### 16 (Spring '10). $\done$
+:::
+
+### (Spring '10) $\done$
+
+:::{.problem title="?"}
 If $X$ is a topological space and $S \subset X$, define in terms of
 open subsets of $X$ what it means for $S$ **not** to be connected. 
 
@@ -664,17 +866,26 @@ $$
 
 > Here $\bar A$ and $\bar B$ denote closure with respect to the topology on the ambient space $X$.
 
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
 
 :::
 
-##### Proof 1
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
 
-> Topic: closure and connectedness in the subspace topology.
-> See Munkres p.148
+:::
+
+
+:::{.proof title="Variant 1"}
+
+\envlist
+:::{.concept}
+\envlist
+- Topic: closure and connectedness in the subspace topology.
+    - See Munkres p.148
+:::
+\envlist
 
 - $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
   - I.e. there exist $A, B \subset S$ such that 
@@ -712,13 +923,19 @@ $\impliedby$:
   .\end{align*}
 - But $A = Y\setminus B$ where $B$ is closed, so $A$ is open and thus a nontrivial clopen subset.
 
-$\qed$
-
 ![](figures/image_2020-05-26-20-08-04.png)
 
-##### Proof 2
+:::
 
-> Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
+
+
+:::{.proof title="Variant 2"}
+
+\envlist
+:::{.concept}
+\envlist
+- Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
+:::
 
 If $S\subset X$ is not connected, then there exists a subset $A\subset S$ that is both open and closed in the subspace topology, where $A\neq \emptyset, S$.
 
@@ -727,17 +944,26 @@ Then $B = S\setminus A$ yields a pair $A, B$ that disconnects $S$.
 Since $A$ is closed in $S$, $\bar A = A$ and thus $\bar A \cap B = A \cap B = \emptyset$.
 Similarly, since $A$ is open, $B$ is closed, and $\bar B = B \implies \bar B \cap A = B \cap A = \emptyset$.
 
+
 :::
 
 
-#### 17 (Spring '11) $\work$
+:::
+
+### Spring '11 $\work$
+
+:::{.problem title="?"}
 A topological space is **totally disconnected** if its only connected subsets are one-point sets. 
 
 Is it true that if $X$ has the discrete topology, it is totally disconnected? 
 
 Is the converse true? Justify your answers.
 
+:::
+
 ### 21 (Fall '14) $\work$
+
+:::{.problem title="?"}
 Let $X$ and $Y$ be topological spaces and let $f : X \to Y$ be a function. 
 
 Suppose that $X = A \cup B$ where $A$ and $B$ are closed subsets, and that
@@ -745,15 +971,22 @@ the restrictions $f \mid_A$ and $f \mid_B$ are continuous (where $A$ and $B$ hav
 
 Prove that $f$ is continuous.
 
+:::
+
 ### 23 (Spring '15) $\done$
+
+:::{.problem title="?"}
 Define a family $\mct$ of subsets of $\RR$ by saying that $A \in T$ is $\iff A = \emptyset$ or $\RR \setminus A$ is a finite set. 
 
 Prove that $\mct$ is a topology on $\RR$, and that $\RR$ is compact with respect to this topology.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -774,21 +1007,28 @@ So pick $U_1 \ni p_1, \cdots, U_n \ni p_n$; then $\RR \subset U_\alpha \union_{i
 :::
 
 ### 25 (Fall '16) $\work$
+
+:::{.problem title="?"}
 Let $\mcs, \mct$ be topologies on a set $X$.
 Show that $\mcs \cap \mct$ is a topology on $X$. 
 
 Give an example to show that $\mcs \cup \mct$ need not be a topology.
+:::
 
 ### 42 (Spring '10) $\done$
+
+:::{.problem title="?"}
 Define an equivalence relation $\sim$ on $\RR$ by $x \sim y$ if and only if $x - y \in Q$. 
 Let $X$ be the set of equivalence classes, endowed with the quotient topology induced by the canonical projection $\pi : \RR \to X$.
 
 Describe, with proof, all open subsets of $X$ with respect to this topology.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Proof that $\RR/\QQ$ has the indiscrete topology:
@@ -802,17 +1042,21 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 :::
 
-
 ### 43 (Fall '12) $\work$
+
+:::{.problem title="?"}
 Let $A$ denote a subset of points of $S^2$ that looks exactly like the capital letter A. 
 Let $Q$ be the quotient of $S^2$ given by identifying all points of $A$ to a single point. 
 
 Show that $Q$ is homeomorphic to a familiar topological space and identify that space.
 
+:::
 
 ## Compactness and Metric Spaces
 
 ### 1 (Spring '06) $\work$
+
+:::{.problem title="?"}
 Suppose $(X, d)$ is a metric space. State criteria for continuity of a function $f : X \to X$ in terms of:
 
 i. open sets;
@@ -823,7 +1067,11 @@ iii. convergent sequences.
 
 Then prove that (iii) implies (i).
 
+:::
+
 ### 26 (Fall '17) $\work$
+
+:::{.problem title="?"}
 Let $f : X \to Y$ be a continuous function between topological spaces. 
 
 Let $A$ be a subset of $X$ and let $f (A)$ be its image in $Y$ . 
@@ -835,31 +1083,37 @@ Decide which is which, prove the true statement, and provide a counterexample to
 
 2. If $A$ is compact then $f (A)$ is compact.
 
-### 2 (Spring '12) $\done$
+:::
+
+### 2 (Spring '12) $\work$
+
+:::{.problem title="?"}
 Let $X$ be a topological space.
 
-#### 1
+a.
 State what it means for $X$ to be compact.
 
-#### 2 
+b. 
 Let $X = \theset{0} \cup \theset{{1\over n} \mid n \in \ZZ^+ }$. Is $X$ compact?
 
-#### 3
+c.
 Let $X = (0, 1]$. 
 Is $X$ compact?
 
+:::
+
 \todo[inline]{Incomplete proof for part 3.}
 :::{.solution}
-\hfill
+\envlist
 
 :::{.concept}
 See Munkres p.164, especially for (ii).
 :::
 
-#### 1
+a.
 See definitions in review doc.
 
-#### 2
+b.
 Direct proof: 
 
 - Let $\theset{U_i \suchthat j\in J}\covers X$; then $0\in U_j$ for some $j\in J$.
@@ -871,28 +1125,36 @@ Direct proof:
 - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
 - So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
 
-#### 3
+c.
 Todo: Need direct proof. 
 
 :::
 
-
 ### 3 (Spring '09) $\work$
+
+:::{.problem title="?"}
 Let $(X, d)$ be a compact metric space, and let $f : X \to X$ be an isometry: 
 \[
 \forall~ x, y \in X, \qquad d(f (x), f (y)) = d(x, y)
 .\]
 Prove that $f$ is a bijection.
 
+:::
+
 ### 4 (Spring '05) $\done$
+
+:::{.problem title="?"}
 Suppose $(X, d)$ is a compact metric space and $U$ is an open covering of $X$. 
 
 Prove that there is a number $\delta > 0$ such that for every $x \in X$, the ball of radius $\delta$ centered at $x$ is contained in some element of $U$.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -930,19 +1192,21 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 
 :::
 
-
 ### 44 (Spring '15) $\done$
 
-#### a
+:::{.problem title="?"}
+a.
 Prove that a topological space that has a countable base for its topology also contains a countable dense subset.
 
-#### b
+b.
 Prove that the converse to (a) holds if the space is a metric space.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Proof that $\RR/\QQ$ has the indiscrete topology:
@@ -956,8 +1220,9 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 :::
 
-
 ### 18 (Fall '07) $\done$
+
+:::{.problem title="?"}
 Prove that if $(X, d)$ is a compact metric space, $f : X \to X$ is a
 continuous map, and $C$ is a constant with $0 < C < 1$ such that 
 $$
@@ -965,10 +1230,12 @@ d(f (x), f (y)) \leq C \cdot d(x, y) \quad \forall x, y
 ,$$ 
 then $f$ has a fixed point.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 - Define a new function
@@ -1005,14 +1272,16 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 
 :::
 
-
 ### 19 (Spring '15) $\done$
+
+:::{.problem title="?"}
 Prove that the product of two connected topological spaces is connected.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -1026,10 +1295,10 @@ Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ 
 
 :::
 
-
 ### 20 (Fall '14) $\done$
 
-#### a
+:::{.problem title="?"}
+a.
 
 Define what it means for a topological space to be:
 
@@ -1037,80 +1306,90 @@ i. **Connected**
 
 ii. **Locally connected**
 
-#### b
+b.
 Give, with proof, an example of a space that is connected but not locally connected.
+
+:::
 
 \todo[inline]{What's the picture?}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
-| Space                  | Connected    | Locally Connected |
-| ------                 | ---------    | ----------------- |
-| $\RR$                  | $\checkmark$ | $\checkmark$      |
-| $[0, 1] \union [2, 3]$ |              | $\checkmark$      |
-| Sine Curve             | $\checkmark$ |                   |
-| $\QQ$                  |              |                   |
-
+\envlist
+- Consider $\RR$, unions of intervals, $\QQ$, and the topologists sine curve.
 :::
 
-#### a
-See definitions in intro.
+:::{.proof title="of a"}
+See definitions in review doc.
+:::
 
-#### b
-**Claim**: 
-the Topologist's sine curve $X$ suffices.
+:::{.proof title="of b"}
 
-Proof:
+:::{.claim}
+$X\da$ the Topologist's sine curve suffices.
+:::
 
 - Claim 1: $X$ is connected.
   - Intervals and graphs of cts functions are connected, so the only problem point is $0$.
 - Claim 2: $X$ is **not** locally connected.
     - Take any $B_\eps(0) \in \RR^2$; then projecting onto the subspace $\pi_X(B_\eps(0))$ yields infinitely many arcs, each intersecting the graph at two points on $\bd B_\eps(0)$.
     - These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
+
+:::
+
 :::
 
 
 ### 22 (Fall '18) $\work$
+
+:::{.problem title="?"}
 Let $X$ be a compact space and let $f : X \times R \to R$ be a continuous function such that $f (x, 0) > 0$ for all $x \in X$. 
 
 Prove that there is $\eps > 0$ such  that $f (x, t) > 0$ whenever $\abs t < \eps$. 
 
 Moreover give an example showing that this conclusion may not hold if $X$ is not assumed compact.
 
-### 24 (Spring '16) $\work$
-In each part of this problem $X$ is a compact topological space.
 
+:::
+
+### 24 (Spring '16) $\work$
+
+:::{.problem title="?"}
+In each part of this problem $X$ is a compact topological space.
 Give a proof or a counterexample for each statement.
 
-#### a
+a.
 If $\theset{F_n }_{n=1}^\infty$ is a sequence of nonempty *closed* subsets of $X$ such that $F_{n+1} \subset F_{n}$ for all $n$ then $$\intersect^\infty_{n=1} F_n\neq \emptyset.$$
 
-#### b
+b.
 If $\theset{O_n}_{n=1}^\infty$ is a sequence of nonempty *open* subsets of $X$ such that $O_{n+1} \subset O_n$ for all $n$ then $$\intersect_{n=1}^\infty O_{n}\neq \emptyset.$$
 
+:::
+
 ### 27 (Fall '17) $\work$
+
+:::{.problem title="?"}
 A metric space is said to be **totally bounded** if for every $\eps > 0$ there exists a finite cover of $X$ by open balls of radius $\eps$.
 
-#### a
+a.
 Show: a metric space $X$ is totally bounded iff every sequence in $X$ has a Cauchy subsequence.
 
-#### b
+b.
 Exhibit a complete metric space $X$ and a closed subset $A$ of $X$ that is bounded but not totally bounded. 
 
 > You are not required to prove that your example has the stated properties.
 
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
 :::
-> Notes: use diagonal trick to construct the Cauchy sequence.
 
-#### a
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
+- Use diagonal trick to construct the Cauchy sequence.
+:::
 
+:::{.proof title="of a"}
 $\implies$:
 
 If $X$ is totally bounded, let $\varepsilon  = \frac 1 n$ for each $n$, and let $\theset{x_i}$ be an arbitrary sequence.
@@ -1132,37 +1411,47 @@ Continue by picking $x_{n+1} \in S_n^c$ (Since $X$ is not totally bounded, this 
 
 Then $\theset{x_n}$ is not Cauchy, because $d(x_i, x_j) > \varepsilon$ for every $i\neq j$.
 
-#### b
+:::
 
+:::{.proof title="of b"}
 Take $X = C^0([0, 1])$ with the sup-norm, then $f_n(x) = x^n$ are all bounded by 1, but $\norm{f_i - f_j} = 1$ for every $i, j$, so no subsequence can be Cauchy, so $X$ can not be totally bounded.
 
 Moreover, $\theset{f_n}$ is closed. (Why?)
 
 :::
 
+:::
 
 ### Spring '19 #1  $\done$
-Is every complete bounded metric space compact? 
 
+:::{.problem title="?"}
+Is every complete bounded metric space compact? 
 If so, give a proof; if not, give a counterexample.
+:::
 
 \todo[inline]{Review, from last year.}
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
 
-:::
-Complete and **totally** bounded $\implies$ compact.
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
+
+- Complete and **totally** bounded $\implies$ compact.
 -  Definition: A space $X$ is *totally bounded* if for every $\varepsilon >0$, there is a finite cover $X \subseteq \union_\alpha B_\alpha(\varepsilon)$ such that the radius of each ball is less than $\varepsilon$.
 - Definition: A subset of a space $S \subset X$ is *bounded* if there exists a $B(r)$ such that $r<\infty$ and $S \subseteq B(r)$ 
 - Totally bounded $\implies$ bounded 
     - Counterexample to converse: $\NN$ with the discrete metric.
     - Equivalent for Euclidean metric
 - Compact $\implies$ totally bounded.
+- Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimension is closed, bounded, and not compact.
 
-Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimenion is closed, bounded, and not compact.
+- Second counterexample: $(\RR, (x,y) \mapsto \frac{\abs{x-y}}{1 + \abs{x-y}})$. 
 
+- Best counterexample: $X = \left(\ZZ, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)$. This metric makes $X$ complete for any $X$, then take $\NN \subset X$. All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover $U_i = B(1, i)$.
+
+- Useful tool: $(X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}$ where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
+
+:::
 
 :::{.proof title="?"}
 Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
@@ -1176,16 +1465,12 @@ This produces a non-convergent sequence in the closed ball, so it can not be com
 
 :::
 
-Second counterexample: $(\RR, (x,y) \mapsto \frac{\abs{x-y}}{1 + \abs{x-y}})$. 
-
-Best counterexample: $X = \left(\ZZ, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)$. This metric makes $X$ complete for any $X$, then take $\NN \subset X$. All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover $U_i = B(1, i)$.
-
-Useful tool: $(X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}$ where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
 
 :::
 
-
 ### Spring 2019 #2 $\done$
+
+:::{.problem title="?"}
 Let $X$ be Hausdorff, and recall that the *one-point compactification* $\tilde X$ is given by the following:
 
 - As a set, $\tilde X \definedas X\disjoint \theset{\infty}$.
@@ -1194,10 +1479,12 @@ Let $X$ be Hausdorff, and recall that the *one-point compactification* $\tilde X
 
 Prove that this description defines a topology on $\tilde X$ making $\tilde X$ compact.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological space* iff
 
 - $\emptyset, X \in \tau$
@@ -1213,38 +1500,44 @@ We can write $\overline{(X, \tau)} = (X \disjoint \pt , \tau \union \tau')$ wher
 
 :::
 
-
 ## Connectedness
 
 ### 9 (Spring '13) $\work$
+
+:::{.problem title="?"}
 Recall that a topological space is said to be **connected** if there
 does not exist a pair $U, V$ of disjoint nonempty subsets whose union is $X$.
 
-#### i
+a.
 Prove that $X$ is connected if and only if the only subsets of $X$ that are both open and closed are $X$ and the empty set.
 
-#### ii
+b.
 Suppose that $X$ is connected and let $f : X \to \RR$ be a continuous map. 
-
 If $a$ and $b$ are two points of $X$ and $r$ is a point of $\RR$ lying between $f (a)$ and $f (b)$ show that there exists a point $c$ of $X$ such that $f (c) = r$.
 
+:::
+
 ### 10 (Fall '05) $\done$
+
+:::{.problem title="?"}
 Let 
 $$
 X = \theset{(0, y) \mid - 1 \leq y \leq 1} \cup \theset{\qty{x, s = \sin\qty{1 \over x}} \mid 0 < x \leq 1}
 .$$
 
 Prove that $X$ is connected but not path connected.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\todo[inline]{???}
+
+\envlist
 
 :::
 
-#### Proof 1
-
+:::{.proof title="Variant 1"}
 $X$ is connected:
 
 - Write $X = L\disjoint G$ where $L = \theset{0} \cross [-1, 1]$ and $G = \theset{\Gamma(\sin(x)) \suchthat x\in (0, 1]}$ is the graph of $\sin(x)$.
@@ -1310,12 +1603,13 @@ $X$ is connected:
       ,$$
       contradicting continuity of $f$.
 
-#### Proof 2?
 
+:::
+
+:::{.proof title="Variant 2"}
 Let $X = A \union B$ with $A = \theset{(0, y) \suchthat y\in [-1, 1] }$ and $B = \theset{(x, \sin(1/x)) \suchthat x\in (0, 1]}$.
 Since $B$ is the graph of a continuous function, which is always connected.
 Moreover, $X = \bar{A}$, and the closure of a connected set is still connected.
-
 
 :::{.proof title="?"}
 Alternative direct argument: the subspace $X' = B \union \theset{\vector 0}$ is not connected. 
@@ -1339,11 +1633,13 @@ However, we can pick $\varepsilon < 1$, say, and consider points of the form $\v
 In particular, we can pick $n$ large enough such that $\norm{\vector x_n}$ is as small as we like, whereas $\norm{f(\vector x_n)} = 1 > \varepsilon$ for all $n$, a contradiction.
 
 
+:::
 
 :::
 
+### 11 (Fall '18) $\work$
 
-### 11 (Fall '18) $\done$
+:::{.problem title="?"}
 Let
 \begin{align*}
 X=\left\{(x, y) \in \mathbb{R}^{2} | x>0, y \geq 0, \text { and } \frac{y}{x} \text { is rational }\right\}
@@ -1352,11 +1648,14 @@ and equip $X$ with the subspace topology induced by the usual topology on $\RR^2
 
 Prove or disprove that $X$ is connected.
 
+:::
+
 \todo[inline]{Not convincing..}
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
@@ -1368,23 +1667,38 @@ If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subs
 If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
 :::
 
+### Spring 2021 #2
+
+:::{.problem title="Spring 2021, 2"}
+Let $X \da \prod_{==1}^{\infty} \ts{ 0, 1 }$ endowed with the product topology.
+
+a. 
+Show that for all points $x,y\in X$ with $x\neq y$, there are open subsets $U_x, U_y \subset X$ such that $x\in U_x, y\in U_y$, with $U_x \union U_y = X$ and $U_x \intersect U_y = \emptyset$.
+
+b.
+Show that $X$ is totally disconnected, i.e. the only nonempty connected subsets of $X$ are singletons.
+:::
 
 ## Hausdorff Spaces and Separation
 
 ### 29 (Fall '14) $\work$
-Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
 
+:::{.problem title="?"}
+Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
 If yes, prove it. If no, give a counterexample.
+:::
 
 ### 30 (Spring '18) $\done$
-Suppose that $X$ is a Hausdorff topological space and that $A \subset X$. 
 
+:::{.problem title="?"}
+Suppose that $X$ is a Hausdorff topological space and that $A \subset X$. 
 Prove that if $A$ is compact in the subspace topology then $A$ is closed as a subset of X.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
@@ -1398,27 +1712,30 @@ But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setm
 
 :::
 
-
 ### 31 (Spring '09) $\done$
 
-#### a
+:::{.problem title="Spring 2009, 31"}
+\envlist
 
+a.
 Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
 
-#### b
+b.
 Give an example that shows that the "Hausdorff" hypothesis in part (a) is necessary.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Continuous bijection + open map (or closed map) $\implies$ homeomorphism.
 - **Closed** subsets of compact sets are compact.
 - The continuous image of a compact set is compact.
 - Closed subsets of Hausdorff spaces are compact.
 :::
 
-#### a
+:::{.proof title="of a"}
 We'll show that $f$ is a closed map.
 
 Let $U \in X$ be closed. 
@@ -1427,8 +1744,9 @@ Let $U \in X$ be closed.
 - Since $f$ is continuous, $f(U)$ is compact
 - Since $Y$ is Hausdorff, $f(U)$ is closed.
 
-#### b
+:::
 
+:::{.proof title="of b"}
 Note that any finite space is clearly compact.
 
 Take $f: ([2], \tau_1) \to ([2], \tau_2)$ to be the identity map, where $\tau_1$ is the discrete topology and $\tau_2$ is the indiscrete topology.
@@ -1436,12 +1754,14 @@ Any map into an indiscrete topology is continuous, and $f$ is clearly a bijectio
 
 Let $g$ be the inverse map; then note that $1 \in \tau_1$ but $g\inv(1) = 1$ is not in $\tau_2$, so $g$ is not continuous.
 
-$\qed$
 
 :::
 
+:::
 
 ### 32 (Fall '14) $\done$
+
+:::{.problem title="?"}
 Let $X$ be a topological space and let
 $$
 \Delta = \theset{(x, y) \in X \times X \mid x = y}
@@ -1449,10 +1769,13 @@ $$
 
 Show that $X$ is a Hausdorff space if and only if $\Delta$ is closed in $X \times X$.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\todo[inline]{todo}
+\envlist
 
 :::
 $\implies$:
@@ -1477,58 +1800,79 @@ $\impliedby$:
 
 :::
 
-
 ### 33 (Fall '06) $\work$
+
+:::{.problem title="?"}
 If $f$ is a function from $X$ to $Y$ , consider the graph 
 $$
 G = \theset{(x, y) \in X \times Y \mid f (x) = y}
 .$$
 
-#### a 
+a. 
 Prove that if $f$ is continuous and $Y$ is Hausdorff, then $G$ is a closed subset of $X \times Y$.
 
-#### b
+b.
 Prove that if $G$ is closed and $Y$ is compact, then $f$ is continuous.
 
+:::
+
 ### 34 (Fall '04) $\work$
+
+:::{.problem title="?"}
 Let X be a noncompact locally compact Hausdorff space, with topology $\mct$. 
 Let $\tilde X = X \cup \theset{\infty}$ ($X$ with one point adjoined), and consider the family $\mcb$ of subsets of $\tilde X$ defined by
 $$
 \mcb = T \cup \theset{S \cup \theset{\infty}\mid S \subset X,~~ X \backslash S \text{ is compact}}
 .$$
 
-#### a
+a.
 Prove that $\mcb$ is a topology on $\tilde X$, that the resulting space is compact, and that $X$ is dense in $\tilde X$.
 
-#### b
+b.
 Prove that if $Y \supset X$ is a compact space such that $X$ is dense in $Y$ and $Y \backslash X$ is a singleton,  then Y is homeomorphic to $\tilde X$. 
 
 > The space $\tilde X$ is called the **one-point compactification** of $X$.
 
-#### c
+c.
 Find familiar spaces that are homeomorphic to the one point compactifications of 
 
 i. $X = (0, 1)$ and 
 
 ii. $X = \RR^2$.
 
+
+:::
+
 ### 35 (Fall '16) $\work$
+
+:::{.problem title="?"}
 Prove that a metric space $X$ is **normal**, i.e. if $A, B \subset X$ are closed and disjoint then there exist open sets $A \subset U \subset X, ~B \subset V \subset X$ such that
 $U \cap V = \emptyset$.
 
+:::
+
 ### 36 (Spring '06) $\work$
+
+:::{.problem title="?"}
 Prove that every compact, Hausdorff topological space is normal.
+:::
 
 ### 37 (Spring '09) $\work$
+
+:::{.problem title="?"}
 Show that a connected, normal topological space with more than a single point is uncountable.
+:::
 
 ### 38 (Spring '08) $\done$
+
+:::{.problem title="?"}
 Give an example of a quotient map in which the domain is Hausdorff, but the quotient is not.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
@@ -1542,33 +1886,68 @@ Direct proof that $\RR/\QQ$ isn't Hausdorff:
 - Then $[p] = [q] \in U\intersect V$.
 :::
 
-
 ### 39 (Fall '04) $\work$
-Let $X$ be a compact Hausdorff space and suppose $R \subset X \times X$ is a closed equivalence relation. 
 
+:::{.problem title="?"}
+Let $X$ be a compact Hausdorff space and suppose $R \subset X \times X$ is a closed equivalence relation. 
 Show that the quotient space $X/R$ is Hausdorff.
+:::
 
 ### 40 (Spring '18) $\work$
-Let $U \subset \RR^n$ be an open set which is bounded in the standard Euclidean metric. 
 
+:::{.problem title="?"}
+Let $U \subset \RR^n$ be an open set which is bounded in the standard Euclidean metric. 
 Prove that the quotient space $\RR^n / U$ is not Hausdorff.
+:::
 
 ### 41 (Fall '09) $\work$
-Let $A$ be a closed subset of a normal topological space $X$.
 
+:::{.problem title="?"}
+Let $A$ be a closed subset of a normal topological space $X$.
 Show that both $A$ and the quotient $X/A$ are normal.
+:::
 
 ### 45 (Spring '11) $\work$
+
+:::{.problem title="?"}
 Recall that a topological space is **regular** if for every point $p \in X$ and for every closed subset $F \subset X$ not containing $p$, there exist disjoint open sets $U, V \subset X$ with $p \in U$ and $F \subset V$. 
 
 Let $X$ be a regular space that has a countable basis for its topology, and let $U$ be an open subset of $X$.
 
-#### a 
+a. 
 Show that $U$ is a countable union of closed subsets of $X$.
 
-#### b
+b.
 Show that there is a continuous function $f : X \to [0,1]$ such that $f (x) > 0$ for $x \in U$ and $f (x) = 0$ for $x \in U$.
 
+
+:::
+
+## Analysis and Metric Spaces
+
+### Spring 2021 #3
+
+:::{.problem title="Spring 2021, 3"}
+For nonempty subsets $A, B$ of a metric space $(X, d)$, define the **setwise distance** as 
+\[
+d(A, B) \da \inf \ts{ d(a, b) \st a\in A,\, b\in B } 
+.\]
+
+a. 
+Suppose that $A$ and $B$ are compact.
+Show that there is an $a\in A$ and $b\in B$ such that $d(A, B) = d(a, b)$.
+
+b.
+Suppose that $A$ is closed and $B$ is compact.
+Show that if $d(A, B) = 0$ then $A \intersect B = \emptyset$.
+
+c. 
+Give an example in which $A$ is closed, $B$ is compact, and $d(a, b) > d(A, B)$ for all $a\in A$ and $b\in B$.
+
+> Hint: take $X = \ts{ 0 } \union (1, 2] \subset \RR$.
+> Throughout this problem, you may use without proof that the map $d:X\cross X\to \RR$ is continuous.
+
+:::
 
 
 # The Fundamental Group
@@ -1612,19 +1991,19 @@ Counterexample where homotopic loops are not equal in $\pi_1$, but just conjugat
 
 ## 2 (Spring '09/Spring '07/Fall '07/Fall '06) $\work$
 
-### a. 
+a. 
 State van Kampen's theorem.
 
-### b. 
+b. 
 Calculate the fundamental group of the space obtained by taking two copies of the torus $T = S^1 \times S^1$ and gluing them along a circle $S^1 \times {p}$ where $p$ is a point in $S^1$.
 
-### c. 
+c. 
 Calculate the fundamental group of the Klein bottle.
 
-### d. 
+d. 
 Calculate the fundamental group of the one-point union of $S^1 \times S^1$ and $S^1$.
 
-### e. 
+e.
 Calculate the fundamental group of the one-point union of $S^1 \times S^1$ and $\RP^2$.
 
 > **Note: multiple appearances!!**
@@ -1692,18 +2071,27 @@ Use van Kampen's theorem to calculate $\pi_1 (X_k)$ for each $k > 0$ and identif
 
 ## 12 (Spring '13) $\work$
 
-### 1
+a.
 Let $A$ be a subspace of a topological space $X$. 
-
 Define what it means for $A$ to be a **deformation retract** of $X$.
 
-### 2 
+b. 
 Consider $X_1$ the "planar figure eight" and $$X_2 = S^1 \cup ({0} \times [-1, 1])$$ (the "theta space"). 
-
 Show that $X_1$ and $X_2$ have isomorphic fundamental groups.
 
-### 3
+c.
 Prove that the fundamental group of $X_2$ is a free group on two generators.
+
+## Spring 2021 #4
+
+:::{.problem title="Spring 2021, 4"}
+Suppose that $X$ is a topological space and $x_0\in X$, and suppose that every continuous map $\gamma: S^1 \to X$ is freely homotopic to the constant map to $x_0$.
+Prove that $\pi_1(X, x_0) = \ts{ e }$.
+
+> Note that "freely" means there are no conditions on basepoints.
+
+:::
+
 
 
 
@@ -1711,11 +2099,11 @@ Prove that the fundamental group of $X_2$ is a free group on two generators.
 
 ## 1 (Spring 11/Spring '14) $\done$
 
-### a  
+a.  
 Give the definition of a **covering space** $\hat{X}$
 (and **covering map** $p : \hat{X} \to X$) for a topological space $X$.
 
-### b  
+b.  
 State the homotopy lifting property of covering spaces. 
 Use it to show that a covering map $p : \hat{X} \to X$ induces an injection 
 $$
@@ -1723,7 +2111,7 @@ p^\ast : \pi_1 (\hat{X}, \hat{x}) \to \pi_1 (X, p(\hat{x}))
 $$ 
 on fundamental groups.
 
-### c
+c.
 Let $p : \hat{X} \to X$ be a covering map with $Y$ and $X$ path-connected. 
 Suppose that the induced map $p^\ast$ on $\pi_1$ is an isomorphism. 
 
@@ -1737,10 +2125,10 @@ Prove that $p$ is a homeomorphism.
 
 :::
 
-### a 
+a. 
 \todo[inline]{Todo}.
 
-### b
+b.
 
 Homotopy lifting property:
 
@@ -1761,7 +2149,7 @@ Since $\alpha = [e]$, $\alpha \homotopic \const$ and thus there is a homotopy $H
 By the HLP, this lifts to $\tilde H: I\cross S^1 \to \tilde X$.
 Noting that $\pi\inv(\const(x_0))$ is still a constant loop, this says that $\gamma$ is homotopic to a constant loop and thus nullhomotopic. 
 
-### c
+c.
 
 Since both spaces are path-connected, the degree o the covering map $\pi$ is precisely the index of the included fundamental group.
 This forces $\pi$ to be a degree 1 covering and hence a homeomorphism.
@@ -1770,27 +2158,34 @@ This forces $\pi$ to be a degree 1 covering and hence a homeomorphism.
 
 ## 2 (Fall '06/Fall '09/Fall '15) $\work$
 
-### a 
+a. 
 Give the definitions of **covering space** and **deck transformation** (or covering transformation).
 
-### b 
+b. 
 Describe the universal cover of the Klein bottle and its group of deck transformations.
 
-### c 
+c. 
 Explicitly give a collection of deck transformations on $$\theset{(x, y) \mid -1 \leq x \leq 1, -\infty < y < \infty}$$ such that the quotient is a Möbius band.
 
-### d
+d.
 Find the universal cover of $\RP^2 \times S^1$ and explicitly describe its group of deck transformations.
+
+## Spring 2021 #5
+
+:::{.problem title="Spring 2021, 5"}
+Identify five mutually non-homeomorphic connected spaces $X$ for which there is a covering map $p:X\to K$ where $K$ is the Klein bottle.
+Give an example of the covering in each case.
+:::
 
 ## 3 (Spring '06/Spring '07/Spring '12) $\work$
 
-### a
+a.
 What is the definition of a **regular** (or Galois) covering space?
 
-### b
+b.
 State, without proof, a criterion in terms of the fundamental group for a covering map $p : \tilde X \to X$ to be regular.
 
-### c  
+c.  
 Let $\Theta$ be the topological space formed as the union of a circle and its diameter (so this space looks exactly like the letter $\Theta$). 
 Give an example of a covering space of $\Theta$ that is not regular.
 
@@ -1912,11 +2307,11 @@ Use covering space theory to show that $\ZZ_2 \ast \ZZ$  (that is, the free prod
 
 ## 15 (Spring '17) $\work$
 
-### a
+a.
 Show that any finite index subgroup of a finitely generated free group is free. 
 State clearly any facts you use about the fundamental groups of graphs.
 
-### b  
+b.  
 Prove that if $N$ is a nontrivial normal subgroup of infinite index in a finitely generated free group $F$ , then $N$ is not finitely generated.
 
 ## 16 (Spring '19) $\work$
@@ -2107,10 +2502,10 @@ Compute the homology of the one-point union of $S^1 \times S^1$ and $S^1$.
 
 ## 2 (Fall '06) $\work$
 
-### a
+a.
 State the **Mayer-Vietoris theorem**.
 
-### b
+b.
 Use it to compute the homology of the space $X$ obtained by gluing two solid tori along their boundary as follows. 
 Let $\DD^2$ be the unit disk and let $S^1$ be the unit circle in the complex plane $\CC$. 
 Let $A = S^1 \times \DD^2$ and $B = \DD^2 \times S^1$. 
@@ -2162,7 +2557,7 @@ Calculate the fundamental group and the homology groups of $X$.
 
 ## 12 (Spring '19) $\work$
 
-### a
+a.
 Consider the quotient space 
 \[
 T^2 = \RR^2 / \sim \qtext{where} (x, y) \sim (x + m, y + n) \text{ for } m, n \in \ZZ
@@ -2171,7 +2566,7 @@ and let $A$ be any $2 \times 2$ matrix whose entries are integers such that $\de
 
 Prove that the action of $A$ on $\RR^2$ descends via the quotient $\RR^2 \to T^2$ to induce a homeomorphism $T^2 \to T^2$.
 
-### b
+b.
 Using this homeomorphism of $T^2$, we define a new quotient space 
 \[
 T_A^3 \definedas {T^2\cross \RR \over \sim} \qtext{where} ((x, y), t) \sim (A(x, y), t + 1)
@@ -2217,15 +2612,15 @@ For which $n$ must any such map have a fixed point?
 
 ## 20 (Spring '09) $\work$
 
-### a
+a.
 What is the degree of the antipodal map on the $n$-sphere? 
 
 (No justification required)
 
-### b  
+b.  
 Define a CW complex homeomorphic to the real projective $n\dash$space $\RP^n$.
 
-### c
+c.
 Let $\pi : \RP^n \to X$ be a covering map. Show that if $n$ is even, $\pi$ is a homeomorphism.
 
 ## 21 (Fall '17) $\work$
@@ -2250,6 +2645,34 @@ Find, with proof, a general formula relating the Euler characteristics of $X, U,
 > You may assume that the homologies of $U, V, U \cap V, X$ are finite-dimensional so that their Euler characteristics are well defined.
 
 
+## Spring 2021 #6
+
+:::{.problem title="Spring 2021, 6"}
+For each of the following spaces, compute the fundamental group and the homology groups.
+
+a. 
+The graph $\Theta$ consisting of two edges and three vertices connecting them.
+
+b.
+The 2-dimensional cell complex $\Theta_2$ consisting of a closed circle and three 2-dimensional disks each having boundary running once around that circle.
+
+:::
+
+## Spring 2021 #7
+
+:::{.problem title="Spring 2021, 7"}
+Prove directly from the definition that the 0th singular homology of a nonempty path-connected space is isomorphic to $\ZZ$.
+:::
+
+## Spring 2021 #9
+
+
+:::{.problem title="Spring 2021, 9"}
+Prove that for every continuous map $f: S^{2n} \to S^{2n}$ there is a point $x\in S^{2n}$ such that either $f(x) = x$ or $f(x) = -x$.
+
+> You may use standard facts about degrees of maps of spheres, including that the antipodal map on $S^{2n}$ has degree $d=-1$.
+
+:::
 
 
 # Surfaces
@@ -2364,6 +2787,18 @@ Can all surface with nonempty boundary and with this Euler characteristic be obt
 Let $\Sigma$ be a compact connected surface and let  $p_1, \cdots , p_k \in \Sigma$.
 
 Prove that $H_2 \qty{\Sigma \setminus \union_{i=1}^k {p_i} } = 0$.
+
+## Spring 2021 #8
+
+:::{.problem title="Spring 2021, 8"}
+Let $\Sigma_{g, n}$ denote the compact oriented surface of genus $g$ with $n$ boundary components.
+
+a.
+Show that $\Sigma_{0, 3}$ and $\Sigma_{1, 1}$ are both homotopy equivalent to $S_1 \vee S^1$.
+
+b.
+Give a complete classification of pairs $(g, n)$ and $(g', n')$ for which $\Sigma_{g, n}$ is homotopy equivalent to $\Sigma_{g', n'}$.
+:::
 
 
 # Fixed Points

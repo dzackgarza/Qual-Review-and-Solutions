@@ -31,6 +31,7 @@ Examples of some more exotic spaces that show up less frequently:
 - The Alexander Horned sphere
 
 :::
+
 \todo[inline]{Break these into separate examples and explain properties.}
 
 :::{.example title="Non-Hausdorff spaces"}
@@ -42,7 +43,6 @@ The following spaces are non-Hausdorff:
 - Any variety $V(J) \subseteq \AA^n_{/k}$ for $k$ a field and $J\normal \kx{n}$.
 
 :::
-
 
 :::{.example title="Constructed spaces"}
 The following are some examples of ways to construct specific spaces for examples or counterexamples:
@@ -63,9 +63,8 @@ The following are some examples of ways to construct specific spaces for example
 
 :::
 
-
-
-Operations
+:::{.fact title="Operations"}
+Some common operations that combine spaces:\
 
 - Cartesian product $A\cross B$
 - Wedge product $A \vee B$
@@ -79,6 +78,7 @@ Operations
 - Loop space
 -  Identifying a finite number of points
 
+:::
 
 
 ### Alternative Topologies
@@ -131,5 +131,11 @@ Some facts about the indiscrete topology:
 - Always compact
 :::
 
+### Connectedness
 
-
+| Space                  | Connected    | Locally Connected |
+| ------                 | ---------    | ----------------- |
+| $\RR$                  | $\checkmark$ | $\checkmark$      |
+| $[0, 1] \union [2, 3]$ |              | $\checkmark$      |
+| Sine Curve             | $\checkmark$ |                   |
+| $\QQ$                  |              |                   |

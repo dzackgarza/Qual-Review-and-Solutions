@@ -21,6 +21,7 @@ Here is a list of problems that Mike recommended reviewing during our problem se
 
 :::{.warnings}
 Usually 30% of the problems on any given qual are related to point-set/general Topology.
+Note that this material is not covered in the course!
 :::
 
 

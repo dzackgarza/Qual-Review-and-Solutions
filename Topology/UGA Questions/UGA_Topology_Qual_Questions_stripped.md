@@ -12,32 +12,36 @@ A great deal of credit for this document goes to Mike Usher, who created an init
 -   Section 8, Misc Algebraic Topology: 1, 3, 6, 8
 
 ::: {.warnings}
-Usually 30% of the problems on any given qual are related to point-set/general Topology.
+Usually 30% of the problems on any given qual are related to point-set/general Topology. Note that this material is not covered in the course!
 :::
 
 # General Topology
 
 ## Topologies, Subspaces, Closures, and Maps
 
-### 5 (Fall '11) \( \work \) {#fall-11-work}
+### Fall '11 \( \work \) {#fall-11-work}
 
+::: {.problem title="Fall 2011"}
 Let \( X \) be a topological space, and \( B \subset A \subset X \). Equip \( A \) with the subspace topology, and write \( \operatorname{cl}_X (B) \) or \( \operatorname{cl}_A (B) \) for the closure of \( B \) as a subset of, respectively, \( X \) or \( A \).
 
 Determine, with proof, the general relationship between \( \operatorname{cl}_X (B) \cap A \) and \( \operatorname{cl}_A (B) \)
 
 > I.e., are they always equal? Is one always contained in the other but not conversely? Neither?
+:::
 
 ### 6 (Fall '05) \( \done \) {#fall-05-done}
 
+::: {.problem title="Fall 2005"}
 Prove that the unit interval \( I \) is compact. Be sure to explicitly state any properties of \( {\mathbb{R}} \) that you use.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Cantor's Intersection Theorem
 -   Bases for standard topology on \( {\mathbb{R}} \).
@@ -57,29 +61,32 @@ Prove that the unit interval \( I \) is compact. Be sure to explicitly state any
 
 ### 7 (Fall '06). \( \done \) {#fall-06.-done}
 
+::: {.problem title="Fall 2006, 7"}
 A topological space is **sequentially compact** if every infinite sequence in \( X \) has a convergent subsequence.
 
 Prove that every compact metric space is sequentially compact.
+:::
 
 ### 8 (Fall '10). \( \done \) {#fall-10.-done}
 
+::: {.problem title="Fall 2010, 8"}
 Show that for any two topological spaces \( X \) and \( Y \) , \( X \times Y \) is compact if and only if both \( X \) and \( Y \) are compact.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Proof of the tube lemma.
 :::
 
-Statement: show \( X, Y \in {\operatorname{Top}}_{\mathrm{compact}} \iff X\times Y\in {\operatorname{Top}}_{\mathrm{compact}} \).
+Statement: show \( X, Y \in {\mathsf{Top}}_{\mathrm{compact}} \iff X\times Y\in {\mathsf{Top}}_{\mathrm{compact}} \).
 
-##### Proof 1
-
+::: {.proof title="Variant 1"}
 \( \impliedby \):
 
 -   By universal properties, the product \( X\times Y \) is equipped with continuous projections
@@ -103,9 +110,9 @@ Statement: show \( X, Y \in {\operatorname{Top}}_{\mathrm{compact}} \iff X\times
 Shorter mnemonic:
 
 ![](figures/image_2020-05-22-11-39-10.png)
+:::
 
-##### Proof 2
-
+::: {.proof title="Variant 2"}
 Let \( \pi_X, \pi_Y \) denote the canonical projections, which we can note are continuous and preserve open sets.
 
 \( \implies \): Suppose \( X\times Y \) is compact, and let \( \left\{{U_\alpha}\right\}, \left\{{V_\beta}\right\} \) be open covers of \( X \) and \( Y \) respectively.
@@ -117,46 +124,27 @@ Let \( T_{\alpha\beta} = U_\alpha \times V_\beta \); then \( \left\{{T_{\alpha\b
 So if we fix an \( x\in X \), we can let \( V_{x, i} \rightrightarrows \left\{{x}\right\} \times Y \) be any finite subcollection covering this slice. By the Tube Lemma, there is an open set \( W_x \) such that \( \left\{{x}\right\} \times Y \subset W_x \times Y \subset \cup V_{x, i} = \left\{{x}\right\} \times Y \).
 
 Then \( \left\{{W_x}\right\} \rightrightarrows X \) as \( x \) varies is an open cover of \( X \), and by compactness of \( X \), there are finitely many \( x_j \in X \) such that \( W_{x_j} \rightrightarrows X \). But then \( X \times Y = \cup_{j} W_{x_j} \times Y = \cup_j \cup_i W_{x_j} \times V_{x_j, i} \subset \cup_\alpha U_\alpha \) is a finite cover.
-
-##### Proof of Tube Lemma
-
-```{=tex}
-\todo[inline]{Check this proof!}
-```
-Proof of Tube Lemma:
-
--   Let \( \left\{{U_j\times V_j {~\mathrel{\Big|}~}j\in J}\right\} \rightrightarrows X\times Y \).
--   Fix a point \( x_0\in X \), then \( \left\{{x_0}\right\}\times Y \subset N \) for some open set \( N \).
--   By the tube lemma, there is a \( U^x \subset X \) such that the tube \( U^x \times Y \subset N \).
--   Since \( \left\{{x_0}\right\}\times Y \cong Y \) which is compact, there is a finite subcover \( \left\{{U_j \times V_j {~\mathrel{\Big|}~}j\leq n}\right\} \rightrightarrows\left\{{x_0}\right\}\times Y \).
--   "Integrate the \( X \)": write
-    \[W = \cap_{j=1}^n U_j,\]
-    then \( x_0 \in W \) and \( W \) is a finite intersection of open sets and thus open.
--   Claim: \( \left\{{U_j \times V_j {~\mathrel{\Big|}~}j\leq n}\right\}\rightrightarrows W\times Y \)
-    -   Let \( (x, y) \in W\times Y \); want to show \( (x, y)\in U_j \times V_j \) for some \( j\leq n \).
-    -   Then \( (x_0, y) \in \left\{{x_0}\right\}\times Y \) is on the same horizontal line
-    -   \( (x_0, y)\in U_j \times V_j \) for some \( j \) by construction
-    -   So \( y\in V_j \) for this \( j \)
-    -   Since \( x\in W \), \( x\in U_j \) for *every* \( j \), thus \( x\in U_j \).
-    -   So \( (x, y) \in U_j \times V_j \)
+:::
 :::
 
-### 12 (Spring '06). \( \done \) {#spring-06.-done}
+### 12 (Spring '06). \( \work \) {#spring-06.-work}
 
+::: {.problem title="Spring 2006, 12"}
 Write \( Y \) for the interval \( [0, \infty) \), equipped with the usual topology.
 
 Find, with proof, all subspaces \( Z \) of \( Y \) which are retracts of \( Y \).
+:::
 
 ```{=tex}
 \todo[inline]{Not finished.}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -167,35 +155,37 @@ Find, with proof, all subspaces \( Z \) of \( Y \) which are retracts of \( Y \)
 
 ### 13 (Fall '06). \( \work \) {#fall-06.-work}
 
-#### a
+::: {.problem title="Fall 2006, 13"}
+```{=tex}
+\envlist
+```
+a.  Prove that if the space \( X \) is connected and locally path connected then \( X \) is path connected.
 
-Prove that if the space \( X \) is connected and locally path connected then \( X \) is path connected.
+b.  Is the converse true? Prove or give a counterexample.
+:::
 
-#### b
+### 14 (Fall '07) \( \work \) {#fall-07-work}
 
-Is the converse true? Prove or give a counterexample.
-
-### 14 (Fall '07) \( \done \) {#fall-07-done}
-
+::: {.problem title="?"}
 Let \( \left\{{X_\alpha \mathrel{\Big|}\alpha \in A}\right\} \) be a family of connected subspaces of a space \( X \) such that there is a point \( p \in X \) which is in each of the \( X_\alpha \).
 
 Show that the union of the \( X_\alpha \) is connected.
+:::
 
 ```{=tex}
 \todo[inline]{Proof 2 not complete?}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
-##### Proof 1
-
+::: {.proof title="Variant 1"}
 -   Take two connected sets \( X, Y \); then there exists \( p\in X\cap Y \).
 -   Toward a contradiction: write \( X\cup Y = A {\coprod}B \) with both \( A, B \subset A{\coprod}B \) open.
 -   Since \( p\in X \cup Y = A{\coprod}B \), WLOG \( p\in A \). We will show \( B \) must be empty.
@@ -207,30 +197,34 @@ Show that the union of the \( X_\alpha \) is connected.
 -   So \( A\cap\qty{X\cup Y} = \qty{A\cap X} \cup\qty{A\cap Y} = X\cup Y \)
 -   Since \( A\subset X\cup Y \), \( A\cap\qty{X\cup Y} = A \)
 -   Thus \( A = X\cup Y \), forcing \( B = \emptyset \).
+:::
 
-##### Proof 2?
-
+::: {.proof title="Variant 2"}
 Let \( X \coloneqq\cup_\alpha X_\alpha \), and let \( p\in \cap X_\alpha \). Suppose toward a contradiction that \( X = A {\coprod}B \) with \( A,B \) nonempty, disjoint, and relatively open as subspaces of \( X \). Wlog, suppose \( p\in A \), so let \( q\in B \) be arbitrary.
 
 Then \( q\in X_\alpha \) for some \( \alpha \), so \( q\in B \cap X_\alpha \). We also have \( p\in A \cap X_\alpha \).
 
 But then these two sets disconnect \( X_\alpha \), which was assumed to be connected -- a contradiction.
 :::
+:::
 
-#### 15 (Fall '04). \( \work \) {#fall-04.-work}
+### 5 (Fall '04). \( \work \) {#fall-04.-work}
 
+::: {.problem title="?"}
 Let \( X \) be a topological space.
 
 a.  Prove that \( X \) is connected if and only if there is no continuous nonconstant map to the discrete two-point space \( \left\{{0, 1}\right\} \).
 
 b.  Suppose in addition that \( X \) is compact and \( Y \) is a connected Hausdorff space. Suppose further that there is a continuous map \( f : X \to Y \) such that every preimage \( f^{-1}(y) \) for \( y \in Y \), is a connected subset of \( X \).
 
-    Show that \( X \) is connected.
+Show that \( X \) is connected.
 
 c.  Give an example showing that the conclusion of (b) may be false if \( X \) is not compact.
+:::
 
-#### 16 (Spring '10). \( \done \) {#spring-10.-done}
+### (Spring '10) \( \done \) {#spring-10-done}
 
+::: {.problem title="?"}
 If \( X \) is a topological space and \( S \subset X \), define in terms of open subsets of \( X \) what it means for \( S \) **not** to be connected.
 
 Show that if \( S \) is not connected there are nonempty subsets \( A, B \subset X \) such that
@@ -239,21 +233,33 @@ A \cup B = S {\quad \operatorname{and} \quad} A \cap \mkern 1.5mu\overline{\mker
 \]
 
 > Here \( \mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu \) and \( \mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu \) denote closure with respect to the topology on the ambient space \( X \).
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
-##### Proof 1
+::: {.proof title="Variant 1"}
+```{=tex}
+\envlist
+```
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Topic: closure and connectedness in the subspace topology.
+    -   See Munkres p.148
+:::
 
-> Topic: closure and connectedness in the subspace topology. See Munkres p.148
-
+```{=tex}
+\envlist
+```
 -   \( S\subset X \) is **not ** connected if \( S \) with the subspace topology is not connected.
     -   I.e. there exist \( A, B \subset S \) such that
         -   \( A, B \neq \emptyset \),
@@ -289,48 +295,61 @@ Show stronger statement: this is an iff.
         .\end{align*}`{=tex}
 -   But \( A = Y\setminus B \) where \( B \) is closed, so \( A \) is open and thus a nontrivial clopen subset.
 
-\( \hfill\blacksquare \)
-
 ![](figures/image_2020-05-26-20-08-04.png)
+:::
 
-##### Proof 2
-
-> Lemma: \( X \) is connected iff the only subsets of \( X \) that are closed and open are \( \emptyset, X \).
+::: {.proof title="Variant 2"}
+```{=tex}
+\envlist
+```
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Lemma: \( X \) is connected iff the only subsets of \( X \) that are closed and open are \( \emptyset, X \).
+:::
 
 If \( S\subset X \) is not connected, then there exists a subset \( A\subset S \) that is both open and closed in the subspace topology, where \( A\neq \emptyset, S \).
 
 Suppose \( S \) is not connected, then choose \( A \) as above. Then \( B = S\setminus A \) yields a pair \( A, B \) that disconnects \( S \). Since \( A \) is closed in \( S \), \( \mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu = A \) and thus \( \mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu \cap B = A \cap B = \emptyset \). Similarly, since \( A \) is open, \( B \) is closed, and \( \mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu = B \implies \mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu \cap A = B \cap A = \emptyset \).
 :::
+:::
 
-#### 17 (Spring '11) \( \work \) {#spring-11-work}
+### Spring '11 \( \work \) {#spring-11-work}
 
+::: {.problem title="?"}
 A topological space is **totally disconnected** if its only connected subsets are one-point sets.
 
 Is it true that if \( X \) has the discrete topology, it is totally disconnected?
 
 Is the converse true? Justify your answers.
+:::
 
 ### 21 (Fall '14) \( \work \) {#fall-14-work}
 
+::: {.problem title="?"}
 Let \( X \) and \( Y \) be topological spaces and let \( f : X \to Y \) be a function.
 
 Suppose that \( X = A \cup B \) where \( A \) and \( B \) are closed subsets, and that the restrictions \( f \mathrel{\Big|}_A \) and \( f \mathrel{\Big|}_B \) are continuous (where \( A \) and \( B \) have the subspace topology).
 
 Prove that \( f \) is continuous.
+:::
 
 ### 23 (Spring '15) \( \done \) {#spring-15-done}
 
+::: {.problem title="?"}
 Define a family \( {\mathcal{T}} \) of subsets of \( {\mathbb{R}} \) by saying that \( A \in T \) is \( \iff A = \emptyset \) or \( {\mathbb{R}}\setminus A \) is a finite set.
 
 Prove that \( {\mathcal{T}} \) is a topology on \( {\mathbb{R}} \), and that \( {\mathbb{R}} \) is compact with respect to this topology.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -349,23 +368,27 @@ Fix any \( U_\alpha \), then \( U_\alpha^c = \left\{{p_1, \cdots, p_n}\right\} \
 
 ### 25 (Fall '16) \( \work \) {#fall-16-work}
 
+::: {.problem title="?"}
 Let \( {\mathcal{S}}, {\mathcal{T}} \) be topologies on a set \( X \). Show that \( {\mathcal{S}}\cap {\mathcal{T}} \) is a topology on \( X \).
 
 Give an example to show that \( {\mathcal{S}}\cup {\mathcal{T}} \) need not be a topology.
+:::
 
-### 42 (Spring '10) \( \done \) {#spring-10-done}
+### 42 (Spring '10) \( \done \) {#spring-10-done-1}
 
+::: {.problem title="?"}
 Define an equivalence relation \( \sim \) on \( {\mathbb{R}} \) by \( x \sim y \) if and only if \( x - y \in Q \). Let \( X \) be the set of equivalence classes, endowed with the quotient topology induced by the canonical projection \( \pi : {\mathbb{R}}\to X \).
 
 Describe, with proof, all open subsets of \( X \) with respect to this topology.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -382,14 +405,17 @@ Proof that \( {\mathbb{R}}/{\mathbb{Q}} \) has the indiscrete topology:
 
 ### 43 (Fall '12) \( \work \) {#fall-12-work}
 
+::: {.problem title="?"}
 Let \( A \) denote a subset of points of \( S^2 \) that looks exactly like the capital letter A. Let \( Q \) be the quotient of \( S^2 \) given by identifying all points of \( A \) to a single point.
 
 Show that \( Q \) is homeomorphic to a familiar topological space and identify that space.
+:::
 
 ## Compactness and Metric Spaces
 
 ### 1 (Spring '06) \( \work \) {#spring-06-work}
 
+::: {.problem title="?"}
 Suppose \( (X, d) \) is a metric space. State criteria for continuity of a function \( f : X \to X \) in terms of:
 
 i.  open sets;
@@ -399,9 +425,11 @@ ii. \( \varepsilon \)'s and \( \delta \)'s; and
 iii. convergent sequences.
 
 Then prove that (iii) implies (i).
+:::
 
 ### 26 (Fall '17) \( \work \) {#fall-17-work}
 
+::: {.problem title="?"}
 Let \( f : X \to Y \) be a continuous function between topological spaces.
 
 Let \( A \) be a subset of \( X \) and let \( f (A) \) be its image in \( Y \) .
@@ -411,41 +439,34 @@ One of the following statements is true and one is false. Decide which is which,
 1.  If \( A \) is closed then \( f (A) \) is closed.
 
 2.  If \( A \) is compact then \( f (A) \) is compact.
+:::
 
-### 2 (Spring '12) \( \done \) {#spring-12-done}
+### 2 (Spring '12) \( \work \) {#spring-12-work}
 
+::: {.problem title="?"}
 Let \( X \) be a topological space.
 
-#### 1
+a.  State what it means for \( X \) to be compact.
 
-State what it means for \( X \) to be compact.
+b.  Let \( X = \left\{{0}\right\} \cup \left\{{{1\over n} \mathrel{\Big|}n \in {\mathbb{Z}}^+ }\right\} \). Is \( X \) compact?
 
-#### 2
-
-Let \( X = \left\{{0}\right\} \cup \left\{{{1\over n} \mathrel{\Big|}n \in {\mathbb{Z}}^+ }\right\} \). Is \( X \) compact?
-
-#### 3
-
-Let \( X = (0, 1] \). Is \( X \) compact?
+c.  Let \( X = (0, 1] \). Is \( X \) compact?
+:::
 
 ```{=tex}
 \todo[inline]{Incomplete proof for part 3.}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 See Munkres p.164, especially for (ii).
 :::
 
-#### 1
+a.  See definitions in review doc.
 
-See definitions in review doc.
-
-#### 2
-
-Direct proof:
+b.  Direct proof:
 
 -   Let \( \left\{{U_i {~\mathrel{\Big|}~}j\in J}\right\}\rightrightarrows X \); then \( 0\in U_j \) for some \( j\in J \).
 -   In the subspace topology, \( U_i \) is given by some \( V\in \tau({\mathbb{R}}) \) such that \( V\cap X = U_i \)
@@ -456,32 +477,34 @@ Direct proof:
 -   So there are only *finitely* many points in \( X\setminus U_j \), each of which is in \( U_{j(n)} \) for some \( j(n) \in J \) depending on \( n \).
 -   So \( U_j \) and the *finitely* many \( U_{j(n)} \) form a finite subcover of \( X \). \( \hfill\blacksquare \)
 
-#### 3
-
-Todo: Need direct proof.
+c.  Todo: Need direct proof.
 :::
 
 ### 3 (Spring '09) \( \work \) {#spring-09-work}
 
+::: {.problem title="?"}
 Let \( (X, d) \) be a compact metric space, and let \( f : X \to X \) be an isometry:
 \[
 \forall~ x, y \in X, \qquad d(f (x), f (y)) = d(x, y)
 .\]
 Prove that \( f \) is a bijection.
+:::
 
 ### 4 (Spring '05) \( \done \) {#spring-05-done}
 
+::: {.problem title="?"}
 Suppose \( (X, d) \) is a compact metric space and \( U \) is an open covering of \( X \).
 
 Prove that there is a number \( \delta > 0 \) such that for every \( x \in X \), the ball of radius \( \delta \) centered at \( x \) is contained in some element of \( U \).
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -492,7 +515,7 @@ Statement: show that the *Lebesgue number* is well-defined for compact metric sp
 -   Write \( U = \left\{{U_i {~\mathrel{\Big|}~}i\in I}\right\} \), then \( X \subseteq \cup_{i\in I} U_i \). Need to construct a \( \delta > 0 \).
 -   By compactness of \( X \), choose a finite subcover \( U_1, \cdots, U_n \).
 -   Define the distance between a point \( x \) and a set \( Y\subset X \): \( d(x, Y) = \inf_{y\in Y} d(x, y) \).
-    -   **Claim**: the function \( d({\,\cdot\,}, Y): X\to {\mathbb{R}} \) is continuous for a fixed set.
+    -   **Claim**: the function \( d({-}, Y): X\to {\mathbb{R}} \) is continuous for a fixed set.
     -   Proof: Todo, not obvious.
 
 ![](figures/image_2020-05-22-00-24-45.png)
@@ -519,21 +542,19 @@ Statement: show that the *Lebesgue number* is well-defined for compact metric sp
 
 ### 44 (Spring '15) \( \done \) {#spring-15-done-1}
 
-#### a
+::: {.problem title="?"}
+a.  Prove that a topological space that has a countable base for its topology also contains a countable dense subset.
 
-Prove that a topological space that has a countable base for its topology also contains a countable dense subset.
-
-#### b
-
-Prove that the converse to (a) holds if the space is a metric space.
+b.  Prove that the converse to (a) holds if the space is a metric space.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -548,21 +569,23 @@ Proof that \( {\mathbb{R}}/{\mathbb{Q}} \) has the indiscrete topology:
 -   So \( \pi(V) = {\mathbb{R}}/{\mathbb{Q}}= U \), and thus the only open sets are the entire space and the empty set.
 :::
 
-### 18 (Fall '07) \( \done \) {#fall-07-done-1}
+### 18 (Fall '07) \( \done \) {#fall-07-done}
 
+::: {.problem title="?"}
 Prove that if \( (X, d) \) is a compact metric space, \( f : X \to X \) is a continuous map, and \( C \) is a constant with \( 0 < C < 1 \) such that
 \[
 d(f (x), f (y)) \leq C \cdot d(x, y) \quad \forall x, y
 ,\]
 then \( f \) has a fixed point.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -599,15 +622,17 @@ then \( f \) has a fixed point.
 
 ### 19 (Spring '15) \( \done \) {#spring-15-done-2}
 
+::: {.problem title="?"}
 Prove that the product of two connected topological spaces is connected.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -620,7 +645,8 @@ Note that \( (a, b) \in T_x \) for every \( x \), so \( \cup_{x\in X} T_x = X \t
 
 ### 20 (Fall '14) \( \done \) {#fall-14-done}
 
-#### a
+::: {.problem title="?"}
+a.  
 
 Define what it means for a topological space to be:
 
@@ -628,38 +654,34 @@ i.  **Connected**
 
 ii. **Locally connected**
 
-#### b
-
-Give, with proof, an example of a space that is connected but not locally connected.
+```{=html}
+<!-- -->
+```
+b.  Give, with proof, an example of a space that is connected but not locally connected.
+:::
 
 ```{=tex}
 \todo[inline]{What's the picture?}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
-  Space                     Connected          Locally Connected
-  ------------------------- ------------------ -------------------
-  \( {\mathbb{R}} \)        \( \checkmark \)   \( \checkmark \)
-  \( [0, 1] \cup[2, 3] \)                      \( \checkmark \)
-  Sine Curve                \( \checkmark \)   
-  \( {\mathbb{Q}} \)                           
+-   Consider \( {\mathbb{R}} \), unions of intervals, \( {\mathbb{Q}} \), and the topologists sine curve.
 :::
 
-#### a
+::: {.proof title="of a"}
+See definitions in review doc.
+:::
 
-See definitions in intro.
-
-#### b
-
-**Claim**: the Topologist's sine curve \( X \) suffices.
-
-Proof:
+::: {.proof title="of b"}
+::: {.claim}
+\( X\coloneqq \) the Topologist's sine curve suffices.
+:::
 
 -   Claim 1: \( X \) is connected.
     -   Intervals and graphs of cts functions are connected, so the only problem point is \( 0 \).
@@ -667,59 +689,54 @@ Proof:
     -   Take any \( B_\varepsilon(0) \in {\mathbb{R}}^2 \); then projecting onto the subspace \( \pi_X(B_\varepsilon(0)) \) yields infinitely many arcs, each intersecting the graph at two points on \( {{\partial}}B_\varepsilon(0) \).
     -   These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
 :::
+:::
 
 ### 22 (Fall '18) \( \work \) {#fall-18-work}
 
+::: {.problem title="?"}
 Let \( X \) be a compact space and let \( f : X \times R \to R \) be a continuous function such that \( f (x, 0) > 0 \) for all \( x \in X \).
 
 Prove that there is \( \varepsilon> 0 \) such that \( f (x, t) > 0 \) whenever \( {\left\lvert {t} \right\rvert} < \varepsilon \).
 
 Moreover give an example showing that this conclusion may not hold if \( X \) is not assumed compact.
+:::
 
 ### 24 (Spring '16) \( \work \) {#spring-16-work}
 
-In each part of this problem \( X \) is a compact topological space.
+::: {.problem title="?"}
+In each part of this problem \( X \) is a compact topological space. Give a proof or a counterexample for each statement.
 
-Give a proof or a counterexample for each statement.
+a.  If \( \left\{{F_n }\right\}_{n=1}^\infty \) is a sequence of nonempty *closed* subsets of \( X \) such that \( F_{n+1} \subset F_{n} \) for all \( n \) then
+    \[\cap^\infty_{n=1} F_n\neq \emptyset.\]
 
-#### a
-
-If \( \left\{{F_n }\right\}_{n=1}^\infty \) is a sequence of nonempty *closed* subsets of \( X \) such that \( F_{n+1} \subset F_{n} \) for all \( n \) then
-\[\cap^\infty_{n=1} F_n\neq \emptyset.\]
-
-#### b
-
-If \( \left\{{O_n}\right\}_{n=1}^\infty \) is a sequence of nonempty *open* subsets of \( X \) such that \( O_{n+1} \subset O_n \) for all \( n \) then
-\[\cap_{n=1}^\infty O_{n}\neq \emptyset.\]
+b.  If \( \left\{{O_n}\right\}_{n=1}^\infty \) is a sequence of nonempty *open* subsets of \( X \) such that \( O_{n+1} \subset O_n \) for all \( n \) then
+    \[\cap_{n=1}^\infty O_{n}\neq \emptyset.\]
+:::
 
 ### 27 (Fall '17) \( \work \) {#fall-17-work-1}
 
+::: {.problem title="?"}
 A metric space is said to be **totally bounded** if for every \( \varepsilon> 0 \) there exists a finite cover of \( X \) by open balls of radius \( \varepsilon \).
 
-#### a
+a.  Show: a metric space \( X \) is totally bounded iff every sequence in \( X \) has a Cauchy subsequence.
 
-Show: a metric space \( X \) is totally bounded iff every sequence in \( X \) has a Cauchy subsequence.
-
-#### b
-
-Exhibit a complete metric space \( X \) and a closed subset \( A \) of \( X \) that is bounded but not totally bounded.
+b.  Exhibit a complete metric space \( X \) and a closed subset \( A \) of \( X \) that is bounded but not totally bounded.
 
 > You are not required to prove that your example has the stated properties.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
+-   Use diagonal trick to construct the Cauchy sequence.
 :::
 
-> Notes: use diagonal trick to construct the Cauchy sequence.
-
-#### a
-
+::: {.proof title="of a"}
 \( \implies \):
 
 If \( X \) is totally bounded, let \( \varepsilon = \frac 1 n \) for each \( n \), and let \( \left\{{x_i}\right\} \) be an arbitrary sequence. For \( n=1 \), pick a finite open cover \( \left\{{U_i}\right\}_n \) such that \( {\operatorname{diam}}{U_i} < \frac 1 n \) for every \( i \).
@@ -735,36 +752,53 @@ This yields a nested family of sets \( V_1 \supseteq V_2 \supseteq \cdots \) and
 Then fix \( \varepsilon > 0 \) and pick \( x_1 \) arbitrarily and define \( S_1 = B(\varepsilon, x_1) \). Then pick \( x_2 \in S_1^c \) and define \( S_2 = S_1 \cup B(\varepsilon, x_2) \), and so on. Continue by picking \( x_{n+1} \in S_n^c \) (Since \( X \) is not totally bounded, this can always be done) and defining \( S_{n+1} = S_n \cup B(\varepsilon, x_{n+1}) \).
 
 Then \( \left\{{x_n}\right\} \) is not Cauchy, because \( d(x_i, x_j) > \varepsilon \) for every \( i\neq j \).
+:::
 
-#### b
-
+::: {.proof title="of b"}
 Take \( X = C^0([0, 1]) \) with the sup-norm, then \( f_n(x) = x^n \) are all bounded by 1, but \( {\left\lVert {f_i - f_j} \right\rVert} = 1 \) for every \( i, j \), so no subsequence can be Cauchy, so \( X \) can not be totally bounded.
 
 Moreover, \( \left\{{f_n}\right\} \) is closed. (Why?)
 :::
+:::
 
 ### Spring '19 \#1 \( \done \) {#spring-19-1-done}
 
-Is every complete bounded metric space compact?
-
-If so, give a proof; if not, give a counterexample.
+::: {.problem title="?"}
+Is every complete bounded metric space compact? If so, give a proof; if not, give a counterexample.
+:::
 
 ```{=tex}
 \todo[inline]{Review, from last year.}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
+-   Complete and **totally** bounded \( \implies \) compact.
+
+-   Definition: A space \( X \) is *totally bounded* if for every \( \varepsilon >0 \), there is a finite cover \( X \subseteq \cup_\alpha B_\alpha(\varepsilon) \) such that the radius of each ball is less than \( \varepsilon \).
+
+-   Definition: A subset of a space \( S \subset X \) is *bounded* if there exists a \( B(r) \) such that \( r<\infty \) and \( S \subseteq B(r) \)
+
+-   Totally bounded \( \implies \) bounded
+
+    -   Counterexample to converse: \( {\mathbb{N}} \) with the discrete metric.
+    -   Equivalent for Euclidean metric
+
+-   Compact \( \implies \) totally bounded.
+
+-   Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimension is closed, bounded, and not compact.
+
+-   Second counterexample: \( ({\mathbb{R}}, (x,y) \mapsto \frac{{\left\lvert {x-y} \right\rvert}}{1 + {\left\lvert {x-y} \right\rvert}}) \).
+
+-   Best counterexample: \( X = \left({\mathbb{Z}}, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right) \). This metric makes \( X \) complete for any \( X \), then take \( {\mathbb{N}}\subset X \). All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover \( U_i = B(1, i) \).
+
+-   Useful tool: \( (X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)} \) where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
 :::
-
-Complete and **totally** bounded \( \implies \) compact. - Definition: A space \( X \) is *totally bounded* if for every \( \varepsilon >0 \), there is a finite cover \( X \subseteq \cup_\alpha B_\alpha(\varepsilon) \) such that the radius of each ball is less than \( \varepsilon \). - Definition: A subset of a space \( S \subset X \) is *bounded* if there exists a \( B(r) \) such that \( r<\infty \) and \( S \subseteq B(r) \) - Totally bounded \( \implies \) bounded - Counterexample to converse: \( {\mathbb{N}} \) with the discrete metric. - Equivalent for Euclidean metric - Compact \( \implies \) totally bounded.
-
-Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimenion is closed, bounded, and not compact.
 
 ::: {.proof title="?"}
 Inductively, let \( \mathbf{x}_1 \in B(1, \mathbf{0}) \) and \( A_1 = {\operatorname{span}}{(\mathbf{x}_1)} \), then choose \( s = \mathbf{x} + A_1 \in B(1,0)/A_1 \) such that \( {\left\lVert {s} \right\rVert} = \frac 1 2 \) and then a representative \( \mathbf{x}_2 \) such that \( {\left\lVert {\mathbf{x}_2} \right\rVert} \leq 1 \). Then \( {\left\lVert {\mathbf{x}_2 - \mathbf{x}_1} \right\rVert} \geq \frac 1 2 \)
@@ -773,16 +807,11 @@ Then, let \( A_2 = \mathrm{span}(\mathbf{x}_1, \mathbf{x}_2) \), (which is close
 
 This produces a non-convergent sequence in the closed ball, so it can not be compact.
 :::
-
-Second counterexample: \( ({\mathbb{R}}, (x,y) \mapsto \frac{{\left\lvert {x-y} \right\rvert}}{1 + {\left\lvert {x-y} \right\rvert}}) \).
-
-Best counterexample: \( X = \left({\mathbb{Z}}, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right) \). This metric makes \( X \) complete for any \( X \), then take \( {\mathbb{N}}\subset X \). All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover \( U_i = B(1, i) \).
-
-Useful tool: \( (X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)} \) where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
 :::
 
 ### Spring 2019 \#2 \( \done \) {#spring-2019-2-done}
 
+::: {.problem title="?"}
 Let \( X \) be Hausdorff, and recall that the *one-point compactification* \( \tilde X \) is given by the following:
 
 -   As a set, \( \tilde X \coloneqq X{\coprod}\left\{{\infty}\right\} \).
@@ -790,14 +819,15 @@ Let \( X \) be Hausdorff, and recall that the *one-point compactification* \( \t
 -   A subset \( U\subseteq \tilde X \) is open iff either \( U \) is open in \( X \) or is of the form \( U = V{\coprod}\left\{{\infty}\right\} \) where \( V\subset X \) is arbitrary and \( X\setminus V \) is compact.
 
 Prove that this description defines a topology on \( \tilde X \) making \( \tilde X \) compact.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 Definition: \( (X, \tau) \) where \( \tau \subseteq \mathcal P(X) \) is a *topological space* iff
 
@@ -816,39 +846,39 @@ We can write \( \overline{(X, \tau)} = (X {\coprod}{\{\operatorname{pt}\}}, \tau
 
 ### 9 (Spring '13) \( \work \) {#spring-13-work}
 
+::: {.problem title="?"}
 Recall that a topological space is said to be **connected** if there does not exist a pair \( U, V \) of disjoint nonempty subsets whose union is \( X \).
 
-#### i
+a.  Prove that \( X \) is connected if and only if the only subsets of \( X \) that are both open and closed are \( X \) and the empty set.
 
-Prove that \( X \) is connected if and only if the only subsets of \( X \) that are both open and closed are \( X \) and the empty set.
-
-#### ii
-
-Suppose that \( X \) is connected and let \( f : X \to {\mathbb{R}} \) be a continuous map.
-
-If \( a \) and \( b \) are two points of \( X \) and \( r \) is a point of \( {\mathbb{R}} \) lying between \( f (a) \) and \( f (b) \) show that there exists a point \( c \) of \( X \) such that \( f (c) = r \).
+b.  Suppose that \( X \) is connected and let \( f : X \to {\mathbb{R}} \) be a continuous map. If \( a \) and \( b \) are two points of \( X \) and \( r \) is a point of \( {\mathbb{R}} \) lying between \( f (a) \) and \( f (b) \) show that there exists a point \( c \) of \( X \) such that \( f (c) = r \).
+:::
 
 ### 10 (Fall '05) \( \done \) {#fall-05-done-1}
 
+::: {.problem title="?"}
 Let
 \[
 X = \left\{{(0, y) \mathrel{\Big|}- 1 \leq y \leq 1}\right\} \cup \left\{{\qty{x, s = \sin\qty{1 \over x}} \mathrel{\Big|}0 < x \leq 1}\right\}
 .\]
 
 Prove that \( X \) is connected but not path connected.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\todo[inline]{???}
+```
+```{=tex}
+\envlist
 ```
 :::
 
-#### Proof 1
-
+::: {.proof title="Variant 1"}
 \( X \) is connected:
 
 -   Write \( X = L{\coprod}G \) where \( L = \left\{{0}\right\} \times[-1, 1] \) and \( G = \left\{{\Gamma(\sin(x)) {~\mathrel{\Big|}~}x\in (0, 1]}\right\} \) is the graph of \( \sin(x) \).
@@ -921,9 +951,9 @@ Prove that \( X \) is connected but not path connected.
             {\left\lVert {f(t) - f(x)} \right\rVert} = {\left\lVert {(x, -1) - (0, 1)} \right\rVert} = {\left\lVert {(x, 2)} \right\rVert} > {1\over 2}
             ,\]
             contradicting continuity of \( f \).
+:::
 
-#### Proof 2?
-
+::: {.proof title="Variant 2"}
 Let \( X = A \cup B \) with \( A = \left\{{(0, y) {~\mathrel{\Big|}~}y\in [-1, 1] }\right\} \) and \( B = \left\{{(x, \sin(1/x)) {~\mathrel{\Big|}~}x\in (0, 1]}\right\} \). Since \( B \) is the graph of a continuous function, which is always connected. Moreover, \( X = \mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu \), and the closure of a connected set is still connected.
 
 ::: {.proof title="?"}
@@ -940,25 +970,28 @@ where the norm is the standard Euclidean norm.
 
 However, we can pick \( \varepsilon < 1 \), say, and consider points of the form \( \mathbf{x}_n = (\frac{1}{2n\pi}, 0) \). In particular, we can pick \( n \) large enough such that \( {\left\lVert {\mathbf{x}_n} \right\rVert} \) is as small as we like, whereas \( {\left\lVert {f(\mathbf{x}_n)} \right\rVert} = 1 > \varepsilon \) for all \( n \), a contradiction.
 :::
+:::
 
-### 11 (Fall '18) \( \done \) {#fall-18-done}
+### 11 (Fall '18) \( \work \) {#fall-18-work-1}
 
+::: {.problem title="?"}
 Let `\begin{align*}
 X=\left\{(x, y) \in \mathbb{R}^{2} | x>0, y \geq 0, \text { and } \frac{y}{x} \text { is rational }\right\}
 \end{align*}`{=tex} and equip \( X \) with the subspace topology induced by the usual topology on \( {\mathbb{R}}^2 \).
 
 Prove or disprove that \( X \) is connected.
+:::
 
 ```{=tex}
 \todo[inline]{Not convincing..}
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -969,27 +1002,37 @@ Note that the image of \( \pi \) is \( {\mathbb{RP}}^1\setminus\left\{{\infty}\r
 If we now define \( f =  {\left.{{\pi}} \right|_{{X}} }  \), we have \( f(X) \twoheadrightarrow{\mathbb{Q}}\subset {\mathbb{R}} \). If \( X \) were connected, then \( f(X) \) would also be connected, but \( {\mathbb{Q}}\subset {\mathbb{R}} \) is disconnected, a contradiction.
 :::
 
+### Spring 2021 \#2
+
+::: {.problem title="Spring 2021, 2"}
+Let \( X \coloneqq\prod_{==1}^{\infty} \left\{{ 0, 1 }\right\} \) endowed with the product topology.
+
+a.  Show that for all points \( x,y\in X \) with \( x\neq y \), there are open subsets \( U_x, U_y \subset X \) such that \( x\in U_x, y\in U_y \), with \( U_x \cup U_y = X \) and \( U_x \cap U_y = \emptyset \).
+
+b.  Show that \( X \) is totally disconnected, i.e. the only nonempty connected subsets of \( X \) are singletons.
+:::
+
 ## Hausdorff Spaces and Separation
 
 ### 29 (Fall '14) \( \work \) {#fall-14-work-1}
 
-Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
-
-If yes, prove it. If no, give a counterexample.
+::: {.problem title="?"}
+Is every product (finite or infinite) of Hausdorff spaces Hausdorff? If yes, prove it. If no, give a counterexample.
+:::
 
 ### 30 (Spring '18) \( \done \) {#spring-18-done}
 
-Suppose that \( X \) is a Hausdorff topological space and that \( A \subset X \).
-
-Prove that if \( A \) is compact in the subspace topology then \( A \) is closed as a subset of X.
+::: {.problem title="?"}
+Suppose that \( X \) is a Hausdorff topological space and that \( A \subset X \). Prove that if \( A \) is compact in the subspace topology then \( A \) is closed as a subset of X.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -1002,21 +1045,22 @@ But then defining \( V \coloneqq\cup_{x\in X\setminus A} V_x \), we have \( X\se
 
 ### 31 (Spring '09) \( \done \) {#spring-09-done}
 
-#### a
+::: {.problem title="Spring 2009, 31"}
+```{=tex}
+\envlist
+```
+a.  Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
 
-Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-
-#### b
-
-Give an example that shows that the "Hausdorff" hypothesis in part (a) is necessary.
+b.  Give an example that shows that the "Hausdorff" hypothesis in part (a) is necessary.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Continuous bijection + open map (or closed map) \( \implies \) homeomorphism.
 -   **Closed** subsets of compact sets are compact.
@@ -1024,8 +1068,7 @@ Give an example that shows that the "Hausdorff" hypothesis in part (a) is necess
 -   Closed subsets of Hausdorff spaces are compact.
 :::
 
-#### a
-
+::: {.proof title="of a"}
 We'll show that \( f \) is a closed map.
 
 Let \( U \in X \) be closed.
@@ -1033,34 +1076,36 @@ Let \( U \in X \) be closed.
 -   Since \( X \) is compact, \( U \) is compact
 -   Since \( f \) is continuous, \( f(U) \) is compact
 -   Since \( Y \) is Hausdorff, \( f(U) \) is closed.
+:::
 
-#### b
-
+::: {.proof title="of b"}
 Note that any finite space is clearly compact.
 
 Take \( f: ([2], \tau_1) \to ([2], \tau_2) \) to be the identity map, where \( \tau_1 \) is the discrete topology and \( \tau_2 \) is the indiscrete topology. Any map into an indiscrete topology is continuous, and \( f \) is clearly a bijection.
 
 Let \( g \) be the inverse map; then note that \( 1 \in \tau_1 \) but \( g^{-1}(1) = 1 \) is not in \( \tau_2 \), so \( g \) is not continuous.
-
-\( \hfill\blacksquare \)
+:::
 :::
 
 ### 32 (Fall '14) \( \done \) {#fall-14-done-1}
 
+::: {.problem title="?"}
 Let \( X \) be a topological space and let
 \[
 \Delta = \left\{{(x, y) \in X \times X \mathrel{\Big|}x = y}\right\}
 .\]
 
 Show that \( X \) is a Hausdorff space if and only if \( \Delta \) is closed in \( X \times X \).
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\todo[inline]{todo}
+\envlist
 ```
 :::
 
@@ -1086,67 +1131,72 @@ Show that \( X \) is a Hausdorff space if and only if \( \Delta \) is closed in 
 
 ### 33 (Fall '06) \( \work \) {#fall-06-work}
 
+::: {.problem title="?"}
 If \( f \) is a function from \( X \) to \( Y \) , consider the graph
 \[
 G = \left\{{(x, y) \in X \times Y \mathrel{\Big|}f (x) = y}\right\}
 .\]
 
-#### a
+a.  Prove that if \( f \) is continuous and \( Y \) is Hausdorff, then \( G \) is a closed subset of \( X \times Y \).
 
-Prove that if \( f \) is continuous and \( Y \) is Hausdorff, then \( G \) is a closed subset of \( X \times Y \).
-
-#### b
-
-Prove that if \( G \) is closed and \( Y \) is compact, then \( f \) is continuous.
+b.  Prove that if \( G \) is closed and \( Y \) is compact, then \( f \) is continuous.
+:::
 
 ### 34 (Fall '04) \( \work \) {#fall-04-work}
 
+::: {.problem title="?"}
 Let X be a noncompact locally compact Hausdorff space, with topology \( {\mathcal{T}} \). Let \( \tilde X = X \cup \left\{{\infty}\right\} \) (\( X \) with one point adjoined), and consider the family \( {\mathcal{B}} \) of subsets of \( \tilde X \) defined by
 \[
 {\mathcal{B}}= T \cup \left\{{S \cup \left\{{\infty}\right\}\mathrel{\Big|}S \subset X,~~ X \backslash S \text{ is compact}}\right\}
 .\]
 
-#### a
+a.  Prove that \( {\mathcal{B}} \) is a topology on \( \tilde X \), that the resulting space is compact, and that \( X \) is dense in \( \tilde X \).
 
-Prove that \( {\mathcal{B}} \) is a topology on \( \tilde X \), that the resulting space is compact, and that \( X \) is dense in \( \tilde X \).
-
-#### b
-
-Prove that if \( Y \supset X \) is a compact space such that \( X \) is dense in \( Y \) and \( Y \backslash X \) is a singleton, then Y is homeomorphic to \( \tilde X \).
+b.  Prove that if \( Y \supset X \) is a compact space such that \( X \) is dense in \( Y \) and \( Y \backslash X \) is a singleton, then Y is homeomorphic to \( \tilde X \).
 
 > The space \( \tilde X \) is called the **one-point compactification** of \( X \).
 
-#### c
+c.  Find familiar spaces that are homeomorphic to the one point compactifications of
 
-Find familiar spaces that are homeomorphic to the one point compactifications of
+d.  \( X = (0, 1) \) and
 
-i.  \( X = (0, 1) \) and
-
+```{=html}
+<!-- -->
+```
 ii. \( X = {\mathbb{R}}^2 \).
+:::
 
 ### 35 (Fall '16) \( \work \) {#fall-16-work-1}
 
+::: {.problem title="?"}
 Prove that a metric space \( X \) is **normal**, i.e. if \( A, B \subset X \) are closed and disjoint then there exist open sets \( A \subset U \subset X, ~B \subset V \subset X \) such that \( U \cap V = \emptyset \).
+:::
 
 ### 36 (Spring '06) \( \work \) {#spring-06-work-1}
 
+::: {.problem title="?"}
 Prove that every compact, Hausdorff topological space is normal.
+:::
 
 ### 37 (Spring '09) \( \work \) {#spring-09-work-1}
 
+::: {.problem title="?"}
 Show that a connected, normal topological space with more than a single point is uncountable.
+:::
 
 ### 38 (Spring '08) \( \done \) {#spring-08-done}
 
+::: {.problem title="?"}
 Give an example of a quotient map in which the domain is Hausdorff, but the quotient is not.
+:::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
@@ -1162,35 +1212,52 @@ Direct proof that \( {\mathbb{R}}/{\mathbb{Q}} \) isn't Hausdorff:
 
 ### 39 (Fall '04) \( \work \) {#fall-04-work-1}
 
-Let \( X \) be a compact Hausdorff space and suppose \( R \subset X \times X \) is a closed equivalence relation.
-
-Show that the quotient space \( X/R \) is Hausdorff.
+::: {.problem title="?"}
+Let \( X \) be a compact Hausdorff space and suppose \( R \subset X \times X \) is a closed equivalence relation. Show that the quotient space \( X/R \) is Hausdorff.
+:::
 
 ### 40 (Spring '18) \( \work \) {#spring-18-work}
 
-Let \( U \subset {\mathbb{R}}^n \) be an open set which is bounded in the standard Euclidean metric.
-
-Prove that the quotient space \( {\mathbb{R}}^n / U \) is not Hausdorff.
+::: {.problem title="?"}
+Let \( U \subset {\mathbb{R}}^n \) be an open set which is bounded in the standard Euclidean metric. Prove that the quotient space \( {\mathbb{R}}^n / U \) is not Hausdorff.
+:::
 
 ### 41 (Fall '09) \( \work \) {#fall-09-work}
 
-Let \( A \) be a closed subset of a normal topological space \( X \).
-
-Show that both \( A \) and the quotient \( X/A \) are normal.
+::: {.problem title="?"}
+Let \( A \) be a closed subset of a normal topological space \( X \). Show that both \( A \) and the quotient \( X/A \) are normal.
+:::
 
 ### 45 (Spring '11) \( \work \) {#spring-11-work-1}
 
+::: {.problem title="?"}
 Recall that a topological space is **regular** if for every point \( p \in X \) and for every closed subset \( F \subset X \) not containing \( p \), there exist disjoint open sets \( U, V \subset X \) with \( p \in U \) and \( F \subset V \).
 
 Let \( X \) be a regular space that has a countable basis for its topology, and let \( U \) be an open subset of \( X \).
 
-#### a
+a.  Show that \( U \) is a countable union of closed subsets of \( X \).
 
-Show that \( U \) is a countable union of closed subsets of \( X \).
+b.  Show that there is a continuous function \( f : X \to [0,1] \) such that \( f (x) > 0 \) for \( x \in U \) and \( f (x) = 0 \) for \( x \in U \).
+:::
 
-#### b
+## Analysis and Metric Spaces
 
-Show that there is a continuous function \( f : X \to [0,1] \) such that \( f (x) > 0 \) for \( x \in U \) and \( f (x) = 0 \) for \( x \in U \).
+### Spring 2021 \#3
+
+::: {.problem title="Spring 2021, 3"}
+For nonempty subsets \( A, B \) of a metric space \( (X, d) \), define the **setwise distance** as
+\[
+d(A, B) \coloneqq\inf \left\{{ d(a, b) {~\mathrel{\Big|}~}a\in A,\, b\in B }\right\} 
+.\]
+
+a.  Suppose that \( A \) and \( B \) are compact. Show that there is an \( a\in A \) and \( b\in B \) such that \( d(A, B) = d(a, b) \).
+
+b.  Suppose that \( A \) is closed and \( B \) is compact. Show that if \( d(A, B) = 0 \) then \( A \cap B = \emptyset \).
+
+c.  Give an example in which \( A \) is closed, \( B \) is compact, and \( d(a, b) > d(A, B) \) for all \( a\in A \) and \( b\in B \).
+
+> Hint: take \( X = \left\{{ 0 }\right\} \cup(1, 2] \subset {\mathbb{R}} \). Throughout this problem, you may use without proof that the map \( d:X\times X\to {\mathbb{R}} \) is continuous.
+:::
 
 # The Fundamental Group
 
@@ -1234,29 +1301,19 @@ Counterexample where homotopic loops are not equal in \( \pi_1 \), but just conj
 
 ## 2 (Spring '09/Spring '07/Fall '07/Fall '06) \( \work \) {#spring-09spring-07fall-07fall-06-work}
 
-### a.
+a.  State van Kampen's theorem.
 
-State van Kampen's theorem.
+b.  Calculate the fundamental group of the space obtained by taking two copies of the torus \( T = S^1 \times S^1 \) and gluing them along a circle \( S^1 \times {p} \) where \( p \) is a point in \( S^1 \).
 
-### b.
+c.  Calculate the fundamental group of the Klein bottle.
 
-Calculate the fundamental group of the space obtained by taking two copies of the torus \( T = S^1 \times S^1 \) and gluing them along a circle \( S^1 \times {p} \) where \( p \) is a point in \( S^1 \).
+d.  Calculate the fundamental group of the one-point union of \( S^1 \times S^1 \) and \( S^1 \).
 
-### c. 
-
-Calculate the fundamental group of the Klein bottle.
-
-### d. 
-
-Calculate the fundamental group of the one-point union of \( S^1 \times S^1 \) and \( S^1 \).
-
-### e.
-
-Calculate the fundamental group of the one-point union of \( S^1 \times S^1 \) and \( {\mathbb{RP}}^2 \).
+e.  Calculate the fundamental group of the one-point union of \( S^1 \times S^1 \) and \( {\mathbb{RP}}^2 \).
 
 > **Note: multiple appearances!!**
 
-## 3 (Fall '18) \( \work \) {#fall-18-work-1}
+## 3 (Fall '18) \( \work \) {#fall-18-work-2}
 
 Prove the following portion of van Kampen's theorem. If \( X = A\cup B \) and \( A \), \( B \), and \( A \cap B \) are nonempty and path connected with \( {\{\operatorname{pt}\}}\in A \cap B \), then there is a surjection
 \[
@@ -1322,43 +1379,35 @@ Use van Kampen's theorem to calculate \( \pi_1 (X_k) \) for each \( k > 0 \) and
 
 ## 12 (Spring '13) \( \work \) {#spring-13-work-2}
 
-### 1
+a.  Let \( A \) be a subspace of a topological space \( X \). Define what it means for \( A \) to be a **deformation retract** of \( X \).
 
-Let \( A \) be a subspace of a topological space \( X \).
+b.  Consider \( X_1 \) the "planar figure eight" and
+    \[X_2 = S^1 \cup ({0} \times [-1, 1])\]
+    (the "theta space"). Show that \( X_1 \) and \( X_2 \) have isomorphic fundamental groups.
 
-Define what it means for \( A \) to be a **deformation retract** of \( X \).
+c.  Prove that the fundamental group of \( X_2 \) is a free group on two generators.
 
-### 2
+## Spring 2021 \#4
 
-Consider \( X_1 \) the "planar figure eight" and
-\[X_2 = S^1 \cup ({0} \times [-1, 1])\]
-(the "theta space").
+::: {.problem title="Spring 2021, 4"}
+Suppose that \( X \) is a topological space and \( x_0\in X \), and suppose that every continuous map \( \gamma: S^1 \to X \) is freely homotopic to the constant map to \( x_0 \). Prove that \( \pi_1(X, x_0) = \left\{{ e }\right\} \).
 
-Show that \( X_1 \) and \( X_2 \) have isomorphic fundamental groups.
-
-### 3
-
-Prove that the fundamental group of \( X_2 \) is a free group on two generators.
+> Note that "freely" means there are no conditions on basepoints.
+:::
 
 # Covering Spaces
 
 ## 1 (Spring 11/Spring '14) \( \done \) {#spring-11spring-14-done}
 
-### a
+a.  Give the definition of a **covering space** \( \widehat{X} \) (and **covering map** \( p : \widehat{X} \to X \)) for a topological space \( X \).
 
-Give the definition of a **covering space** \( \widehat{X} \) (and **covering map** \( p : \widehat{X} \to X \)) for a topological space \( X \).
+b.  State the homotopy lifting property of covering spaces. Use it to show that a covering map \( p : \widehat{X} \to X \) induces an injection
+    \[
+    p^\ast : \pi_1 (\widehat{X}, \widehat{x}) \to \pi_1 (X, p(\widehat{x}))
+    \]
+    on fundamental groups.
 
-### b
-
-State the homotopy lifting property of covering spaces. Use it to show that a covering map \( p : \widehat{X} \to X \) induces an injection
-\[
-p^\ast : \pi_1 (\widehat{X}, \widehat{x}) \to \pi_1 (X, p(\widehat{x}))
-\]
-on fundamental groups.
-
-### c
-
-Let \( p : \widehat{X} \to X \) be a covering map with \( Y \) and \( X \) path-connected. Suppose that the induced map \( p^\ast \) on \( \pi_1 \) is an isomorphism.
+c.  Let \( p : \widehat{X} \to X \) be a covering map with \( Y \) and \( X \) path-connected. Suppose that the induced map \( p^\ast \) on \( \pi_1 \) is an isomorphism.
 
 Prove that \( p \) is a homeomorphism.
 
@@ -1375,11 +1424,9 @@ Prove that \( p \) is a homeomorphism.
 ```
 :::
 
-### a
+a.  `\todo[inline]{Todo}`{=tex}.
 
-`\todo[inline]{Todo}`{=tex}.
-
-### b
+b.  
 
 Homotopy lifting property:
 
@@ -1396,44 +1443,36 @@ Y\times I \arrow[rr, "H"] \arrow[rruu, "\exists \tilde H", dashed] &  & X
 
 Since \( \alpha = [e] \), \( \alpha \simeq{\operatorname{const.}} \) and thus there is a homotopy \( H: I\times S^1 \to X \) such that \( H_0 = {\operatorname{const.}}(x_0) \) and \( H_1 = \gamma \). By the HLP, this lifts to \( \tilde H: I\times S^1 \to \tilde X \). Noting that \( \pi^{-1}({\operatorname{const.}}(x_0)) \) is still a constant loop, this says that \( \gamma \) is homotopic to a constant loop and thus nullhomotopic.
 
-### c
+c.  
 
 Since both spaces are path-connected, the degree o the covering map \( \pi \) is precisely the index of the included fundamental group. This forces \( \pi \) to be a degree 1 covering and hence a homeomorphism.
 :::
 
 ## 2 (Fall '06/Fall '09/Fall '15) \( \work \) {#fall-06fall-09fall-15-work}
 
-### a
+a.  Give the definitions of **covering space** and **deck transformation** (or covering transformation).
 
-Give the definitions of **covering space** and **deck transformation** (or covering transformation).
+b.  Describe the universal cover of the Klein bottle and its group of deck transformations.
 
-### b
+c.  Explicitly give a collection of deck transformations on
+    \[\left\{{(x, y) \mathrel{\Big|}-1 \leq x \leq 1, -\infty < y < \infty}\right\}\]
+    such that the quotient is a Möbius band.
 
-Describe the universal cover of the Klein bottle and its group of deck transformations.
+d.  Find the universal cover of \( {\mathbb{RP}}^2 \times S^1 \) and explicitly describe its group of deck transformations.
 
-### c
+## Spring 2021 \#5
 
-Explicitly give a collection of deck transformations on
-\[\left\{{(x, y) \mathrel{\Big|}-1 \leq x \leq 1, -\infty < y < \infty}\right\}\]
-such that the quotient is a Möbius band.
-
-### d
-
-Find the universal cover of \( {\mathbb{RP}}^2 \times S^1 \) and explicitly describe its group of deck transformations.
+::: {.problem title="Spring 2021, 5"}
+Identify five mutually non-homeomorphic connected spaces \( X \) for which there is a covering map \( p:X\to K \) where \( K \) is the Klein bottle. Give an example of the covering in each case.
+:::
 
 ## 3 (Spring '06/Spring '07/Spring '12) \( \work \) {#spring-06spring-07spring-12-work}
 
-### a
+a.  What is the definition of a **regular** (or Galois) covering space?
 
-What is the definition of a **regular** (or Galois) covering space?
+b.  State, without proof, a criterion in terms of the fundamental group for a covering map \( p : \tilde X \to X \) to be regular.
 
-### b
-
-State, without proof, a criterion in terms of the fundamental group for a covering map \( p : \tilde X \to X \) to be regular.
-
-### c
-
-Let \( \Theta \) be the topological space formed as the union of a circle and its diameter (so this space looks exactly like the letter \( \Theta \)). Give an example of a covering space of \( \Theta \) that is not regular.
+c.  Let \( \Theta \) be the topological space formed as the union of a circle and its diameter (so this space looks exactly like the letter \( \Theta \)). Give an example of a covering space of \( \Theta \) that is not regular.
 
 ## 4 (Spring '08) \( \work \) {#spring-08-work-1}
 
@@ -1561,13 +1600,9 @@ Use covering space theory to show that \( {\mathbb{Z}}_2 \ast {\mathbb{Z}} \) (t
 
 ## 15 (Spring '17) \( \work \) {#spring-17-work}
 
-### a
+a.  Show that any finite index subgroup of a finitely generated free group is free. State clearly any facts you use about the fundamental groups of graphs.
 
-Show that any finite index subgroup of a finitely generated free group is free. State clearly any facts you use about the fundamental groups of graphs.
-
-### b
-
-Prove that if \( N \) is a nontrivial normal subgroup of infinite index in a finitely generated free group \( F \) , then \( N \) is not finitely generated.
+b.  Prove that if \( N \) is a nontrivial normal subgroup of infinite index in a finitely generated free group \( F \) , then \( N \) is not finitely generated.
 
 ## 16 (Spring '19) \( \work \) {#spring-19-work}
 
@@ -1577,7 +1612,7 @@ Prove that for each \( x \in X \) the set \( p^{-1}(\left\{{p(x)}\right\}) \) is
 
 # Cell Complexes and Adjunction Spaces
 
-## 1 (Fall '07) \( \work \) {#fall-07-work}
+## 1 (Fall '07) \( \work \) {#fall-07-work-1}
 
 Describe a cell complex structure on the torus \( T = S^1 \times S^1 \) and use this to compute the homology groups of \( T \).
 
@@ -1605,7 +1640,7 @@ Draw an embedding of \( X \) in \( {\mathbb{R}}^3 \) and calculate its fundament
 
 Calculate the homology groups of \( X \).
 
-## 5 (Fall '07) \( \work \) {#fall-07-work-1}
+## 5 (Fall '07) \( \work \) {#fall-07-work-2}
 
 Let \( X \) be the space obtained as the quotient of a disjoint union of a 2-sphere \( S^2 \) and a torus \( T = S^1 \times S^1 \) by identifying the equator in \( S^2 \) with a circle \( S^1 \times \left\{{p}\right\} \) in \( T \).
 
@@ -1687,7 +1722,7 @@ Let \( X \) be a topological space obtained by attaching a 2-cell to \( {\mathbb
 
 What are the possibilities for the homology \( H_* (X; Z) \)?
 
-## 16 (Spring '12) \( \work \) {#spring-12-work}
+## 16 (Spring '12) \( \work \) {#spring-12-work-1}
 
 For any integer \( n \geq 2 \) let \( X_n \) denote the space formed by attaching a 2-cell to the circle \( S^1 \) via the attaching map
 \[  
@@ -1765,7 +1800,7 @@ Let \( f: S^1 \xrightarrow{\times k} S^1 \).
 -   But then \( \pi_1(S^1) \cong {\mathbb{Z}} \) and \( H \cong k{\mathbb{Z}} \), so \( \pi_1(C_\phi) \cong {\mathbb{Z}}/m{\mathbb{Z}} \).
 :::
 
-## 19 (Fall '18) \( \work \) {#fall-18-work-2}
+## 19 (Fall '18) \( \work \) {#fall-18-work-3}
 
 Prove that a finite CW complex must be Hausdorff.
 
@@ -1777,13 +1812,9 @@ Compute the homology of the one-point union of \( S^1 \times S^1 \) and \( S^1 \
 
 ## 2 (Fall '06) \( \work \) {#fall-06-work-1}
 
-### a
+a.  State the **Mayer-Vietoris theorem**.
 
-State the **Mayer-Vietoris theorem**.
-
-### b
-
-Use it to compute the homology of the space \( X \) obtained by gluing two solid tori along their boundary as follows. Let \( {\mathbb{D}}^2 \) be the unit disk and let \( S^1 \) be the unit circle in the complex plane \( {\mathbb{C}} \). Let \( A = S^1 \times {\mathbb{D}}^2 \) and \( B = {\mathbb{D}}^2 \times S^1 \).
+b.  Use it to compute the homology of the space \( X \) obtained by gluing two solid tori along their boundary as follows. Let \( {\mathbb{D}}^2 \) be the unit disk and let \( S^1 \) be the unit circle in the complex plane \( {\mathbb{C}} \). Let \( A = S^1 \times {\mathbb{D}}^2 \) and \( B = {\mathbb{D}}^2 \times S^1 \).
 
 Then \( X \) is the quotient space of the disjoint union \( A {\coprod}B \) obtained by identifying \( (z, w) \in A \) with \( (zw^3 , w) \in B \) for all \( (z, w) \in S^1 \times S^1 \).
 
@@ -1826,7 +1857,7 @@ Let \( X \) be the topological space obtained by identifying three distinct poin
 
 Compute \( H_0 \) and \( H_1 \) of the complete graph \( K_5 \) formed by taking five points and joining each pair with an edge.
 
-## 10 (Fall '18) \( \work \) {#fall-18-work-3}
+## 10 (Fall '18) \( \work \) {#fall-18-work-4}
 
 Compute the homology of the subset \( X \subset {\mathbb{R}}^3 \) formed as the union of the unit sphere, the \( z{\hbox{-}} \)axis, and the \( xy{\hbox{-}} \)plane.
 
@@ -1838,30 +1869,26 @@ Calculate the fundamental group and the homology groups of \( X \).
 
 ## 12 (Spring '19) \( \work \) {#spring-19-work-1}
 
-### a
-
-Consider the quotient space
-\[
-T^2 = {\mathbb{R}}^2 / \sim {\quad \operatorname{where} \quad} (x, y) \sim (x + m, y + n) \text{ for } m, n \in {\mathbb{Z}}
-,\]
-and let \( A \) be any \( 2 \times 2 \) matrix whose entries are integers such that \( \det A = 1 \).
+a.  Consider the quotient space
+    \[
+    T^2 = {\mathbb{R}}^2 / \sim {\quad \operatorname{where} \quad} (x, y) \sim (x + m, y + n) \text{ for } m, n \in {\mathbb{Z}}
+    ,\]
+    and let \( A \) be any \( 2 \times 2 \) matrix whose entries are integers such that \( \det A = 1 \).
 
 Prove that the action of \( A \) on \( {\mathbb{R}}^2 \) descends via the quotient \( {\mathbb{R}}^2 \to T^2 \) to induce a homeomorphism \( T^2 \to T^2 \).
 
-### b
-
-Using this homeomorphism of \( T^2 \), we define a new quotient space
-\[
-T_A^3 \coloneqq{T^2\times{\mathbb{R}}\over \sim} {\quad \operatorname{where} \quad} ((x, y), t) \sim (A(x, y), t + 1)
-\]
+b.  Using this homeomorphism of \( T^2 \), we define a new quotient space
+    \[
+    T_A^3 \coloneqq{T^2\times{\mathbb{R}}\over \sim} {\quad \operatorname{where} \quad} ((x, y), t) \sim (A(x, y), t + 1)
+    \]
 
 Compute \( H_1 (T_A^3 ) \) if \( A=\left(\begin{array}{ll} 1 & 1 \\ 0 & 1 \end{array}\right). \)
 
-## 13 (Spring '12) \( \work \) {#spring-12-work-1}
+## 13 (Spring '12) \( \work \) {#spring-12-work-2}
 
 Give a self-contained proof that the zeroth homology \( H_0 (X) \) is isomorphic to \( {\mathbb{Z}} \) for every path-connected space \( X \).
 
-## 14 (Fall '18) \( \work \) {#fall-18-work-4}
+## 14 (Fall '18) \( \work \) {#fall-18-work-5}
 
 It is a fact that if \( X \) is a single point then \( H_1 (X) = \left\{{0}\right\} \).
 
@@ -1893,7 +1920,7 @@ Prove that if \( A \) is a retract of the topological space \( X \), then for al
 
 Does there exist a map of degree 2013 from \( S^2 \to S^2 \).
 
-## 19 (Fall '18) \( \work \) {#fall-18-work-5}
+## 19 (Fall '18) \( \work \) {#fall-18-work-6}
 
 For each \( n \in {\mathbb{Z}} \) give an example of a map \( f_n : S^2 \to S^2 \).
 
@@ -1901,25 +1928,19 @@ For which \( n \) must any such map have a fixed point?
 
 ## 20 (Spring '09) \( \work \) {#spring-09-work-5}
 
-### a
-
-What is the degree of the antipodal map on the \( n \)-sphere?
+a.  What is the degree of the antipodal map on the \( n \)-sphere?
 
 (No justification required)
 
-### b
+b.  Define a CW complex homeomorphic to the real projective \( n{\hbox{-}} \)space \( {\mathbb{RP}}^n \).
 
-Define a CW complex homeomorphic to the real projective \( n{\hbox{-}} \)space \( {\mathbb{RP}}^n \).
-
-### c
-
-Let \( \pi : {\mathbb{RP}}^n \to X \) be a covering map. Show that if \( n \) is even, \( \pi \) is a homeomorphism.
+c.  Let \( \pi : {\mathbb{RP}}^n \to X \) be a covering map. Show that if \( n \) is even, \( \pi \) is a homeomorphism.
 
 ## 21 (Fall '17) \( \work \) {#fall-17-work-3}
 
 Let \( A \subset X \). Prove that the relative homology group \( H_0 (X, A) \) is trivial if and only if \( A \) intersects every path component of \( X \).
 
-## 22 (Fall '18) \( \work \) {#fall-18-work-6}
+## 22 (Fall '18) \( \work \) {#fall-18-work-7}
 
 Let \( {\mathbb{D}} \) be a closed disk embedded in the torus \( T = S^1 \times S^1 \) and let \( X \) be the result of removing the interior of \( {\mathbb{D}} \) from \( T \) . Let \( B \) be the boundary of \( X \), i.e. the circle boundary of the original closed disk \( {\mathbb{D}} \).
 
@@ -1938,6 +1959,30 @@ Find, for all \( k \), the relative homology \( H_k (S^n , E) \).
 Suppose that \( U \) and \( V \) are open subsets of a space \( X \), with \( X = U \cup V \). Find, with proof, a general formula relating the Euler characteristics of \( X, U, V \), and \( U \cap V \).
 
 > You may assume that the homologies of \( U, V, U \cap V, X \) are finite-dimensional so that their Euler characteristics are well defined.
+
+## Spring 2021 \#6
+
+::: {.problem title="Spring 2021, 6"}
+For each of the following spaces, compute the fundamental group and the homology groups.
+
+a.  The graph \( \Theta \) consisting of two edges and three vertices connecting them.
+
+b.  The 2-dimensional cell complex \( \Theta_2 \) consisting of a closed circle and three 2-dimensional disks each having boundary running once around that circle.
+:::
+
+## Spring 2021 \#7
+
+::: {.problem title="Spring 2021, 7"}
+Prove directly from the definition that the 0th singular homology of a nonempty path-connected space is isomorphic to \( {\mathbb{Z}} \).
+:::
+
+## Spring 2021 \#9
+
+::: {.problem title="Spring 2021, 9"}
+Prove that for every continuous map \( f: S^{2n} \to S^{2n} \) there is a point \( x\in S^{2n} \) such that either \( f(x) = x \) or \( f(x) = -x \).
+
+> You may use standard facts about degrees of maps of spheres, including that the antipodal map on \( S^{2n} \) has degree \( d=-1 \).
+:::
 
 # Surfaces
 
@@ -2057,7 +2102,7 @@ but such that there is no such map \( \Gamma \) with the additional property tha
 
 (You are not required to prove that your example satisfies the stated property.)
 
-## 17 (Fall '18) \( \work \) {#fall-18-work-7}
+## 17 (Fall '18) \( \work \) {#fall-18-work-8}
 
 Let \( C \) be cylinder. Let \( I \) and \( J \) be disjoint closed intervals contained in \( \partial C \).
 
@@ -2070,6 +2115,16 @@ Can all surface with nonempty boundary and with this Euler characteristic be obt
 Let \( \Sigma \) be a compact connected surface and let \( p_1, \cdots , p_k \in \Sigma \).
 
 Prove that \( H_2 \qty{\Sigma \setminus \cup_{i=1}^k {p_i} } = 0 \).
+
+## Spring 2021 \#8
+
+::: {.problem title="Spring 2021, 8"}
+Let \( \Sigma_{g, n} \) denote the compact oriented surface of genus \( g \) with \( n \) boundary components.
+
+a.  Show that \( \Sigma_{0, 3} \) and \( \Sigma_{1, 1} \) are both homotopy equivalent to \( S_1 \vee S^1 \).
+
+b.  Give a complete classification of pairs \( (g, n) \) and \( (g', n') \) for which \( \Sigma_{g, n} \) is homotopy equivalent to \( \Sigma_{g', n'} \).
+:::
 
 # Fixed Points
 
@@ -2091,7 +2146,7 @@ a.  State the **Lefschetz Fixed Point Theorem** for a finite simplicial complex 
 
 b.  Use degree theory to prove this theorem in case \( X = S^n \).
 
-## 4 (Spring '12) \( \work \) {#spring-12-work-2}
+## 4 (Spring '12) \( \work \) {#spring-12-work-3}
 
 ### a
 
@@ -2187,7 +2242,7 @@ Use the Brouwer fixed point theorem to show that an \( n \times n \) matrix with
 
 Prove that \( {\mathbb{R}}^2 \) is not homeomorphic to \( {\mathbb{R}}^n \) for \( n > 2 \).
 
-## 2 (Spring '12) \( \work \) {#spring-12-work-3}
+## 2 (Spring '12) \( \work \) {#spring-12-work-4}
 
 Prove that any finite tree is contractible, where a **tree** is a connected graph that contains no closed edge paths.
 

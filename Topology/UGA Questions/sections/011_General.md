@@ -2,7 +2,9 @@
 
 ## Topologies, Subspaces, Closures, and Maps
 
-### 5 (Fall '11) $\work$
+### Fall '11 $\work$
+
+:::{.problem title="Fall 2011"}
 Let $X$ be a topological space, and $B \subset A \subset X$. 
 Equip $A$ with the subspace topology, and write $\cl_X (B)$ or $\cl_A (B)$ for the closure of $B$ as a subset of, respectively, $X$ or $A$. 
 
@@ -10,13 +12,20 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 > I.e., are they always equal? Is one always contained in the other but not conversely? Neither?
 
+:::
+
 ### 6 (Fall '05) $\done$
+
+:::{.problem title="Fall 2005"}
 Prove that the unit interval $I$ is compact. Be sure to explicitly state any properties of $\RR$ that you use.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Cantor's Intersection Theorem
 - Bases for standard topology on $\RR$.
 - Definition of compactness
@@ -35,26 +44,31 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 :::
 
 ### 7 (Fall '06). $\done$
+
+:::{.problem title="Fall 2006, 7"}
 A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
 
 Prove that every compact metric space is sequentially compact.
 
+:::
+
 ### 8 (Fall '10). $\done$
+
+:::{.problem title="Fall 2010, 8"}
 Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact if and only if both $X$ and $Y$ are compact.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Proof of the tube lemma.
 :::
 
-
 Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
 
-
-##### Proof 1
-
+:::{.proof title="Variant 1"}
 $\impliedby$:
 
 - By universal properties, the product $X\cross Y$ is equipped with continuous projections
@@ -79,8 +93,9 @@ Shorter mnemonic:
 
 ![](figures/image_2020-05-22-11-39-10.png)
 
-##### Proof 2
+:::
 
+:::{.proof title="Variant 2"}
 Let $\pi_X, \pi_Y$ denote the canonical projections, which we can note are continuous and preserve open sets.
 
 $\implies$:
@@ -101,40 +116,24 @@ By the Tube Lemma, there is an open set $W_x$ such that $\theset{x} \cross Y \su
 Then $\theset{W_x} \rightrightarrows X$ as $x$ varies is an open cover of $X$, and by compactness of $X$, there are finitely many $x_j \in X$ such that $W_{x_j} \rightrightarrows X$.
 But then $X \cross Y = \union_{j} W_{x_j} \cross Y = \union_j \union_i W_{x_j} \cross V_{x_j, i} \subset \union_\alpha U_\alpha$ is a finite cover.
 
-
-##### Proof of Tube Lemma 
-
-\todo[inline]{Check this proof!}
-
-Proof of Tube Lemma:
-
-- Let $\theset{U_j\cross V_j \suchthat j\in J} \covers X\cross Y$. 
-- Fix a point $x_0\in X$, then $\theset{x_0}\cross Y \subset N$ for some open set $N$.
-- By the tube lemma, there is a $U^x \subset X$ such that the tube $U^x \cross Y \subset N$.
-- Since $\theset{x_0}\cross Y \cong Y$ which is compact, there is a finite subcover $\theset{U_j \cross V_j \suchthat j\leq n} \covers \theset{x_0}\cross Y$. 
--   "Integrate the $X$": write 
-    $$W = \intersect_{j=1}^n U_j,$$ 
-    then $x_0 \in W$ and $W$ is a finite intersection of open sets and thus open.
-- Claim: $\theset{U_j \cross V_j \suchthat j\leq n}\covers W\cross Y$
-  - Let $(x, y) \in W\cross Y$; want to show $(x, y)\in U_j \cross V_j$ for some $j\leq n$.
-  - Then $(x_0, y) \in \theset{x_0}\cross Y$ is on the same horizontal line
-  - $(x_0, y)\in U_j \cross V_j$ for some $j$ by construction
-  - So $y\in V_j$ for this $j$
-  - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
-  - So $(x, y) \in U_j \cross V_j$
+:::
 
 :::
 
-### 12 (Spring '06). $\done$
+### 12 (Spring '06). $\work$
+
+:::{.problem title="Spring 2006, 12"}
 Write $Y$ for the interval $[0, \infty)$, equipped with the usual topology. 
 
 Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
+:::
 
 \todo[inline]{Not finished.}
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
@@ -144,28 +143,37 @@ Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
 
 ### 13 (Fall '06). $\work$
 
-#### a
+:::{.problem title="Fall 2006, 13"}
+\envlist
+
+a.
 Prove that if the space $X$ is connected and locally path connected then $X$ is path connected.
 
-#### b
+b.
 Is the converse true? Prove or give a counterexample.
 
-### 14 (Fall '07) $\done$
+:::
+
+### 14 (Fall '07) $\work$
+
+:::{.problem title="?"}
 Let $\theset{X_\alpha \mid \alpha \in A}$ be a family of connected subspaces of a space $X$ such that there is a point $p \in X$ which is in each of the $X_\alpha$.
 
 Show that the union of the $X_\alpha$ is connected.
+
+:::
 
 \todo[inline]{Proof 2 not complete?}
 
 :::{.solution}
 
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
-##### Proof 1
+:::{.proof title="Variant 1"}
 
 - Take two connected sets $X, Y$; then there exists $p\in X\intersect Y$.
 - Toward a contradiction: write $X\union Y = A \disjoint B$ with both $A, B \subset A\disjoint B$ open.
@@ -180,7 +188,10 @@ Show that the union of the $X_\alpha$ is connected.
 - Since $A\subset X\union Y$, $A\intersect \qty{X\union Y} = A$
 - Thus $A = X\union Y$, forcing $B = \emptyset$.
 
-##### Proof 2?
+
+:::
+
+:::{.proof title="Variant 2"}
 
 Let $X \definedas \union_\alpha X_\alpha$, and let $p\in \intersect X_\alpha$.
 Suppose toward a contradiction that $X = A \disjoint B$ with $A,B$ nonempty, disjoint, and relatively open as subspaces of $X$.
@@ -190,25 +201,36 @@ Then $q\in X_\alpha$ for some $\alpha$, so $q\in B \intersect X_\alpha$.
 We also have $p\in A \intersect X_\alpha$.
 
 But then these two sets disconnect $X_\alpha$, which was assumed to be connected --  a contradiction.
+
 :::
 
+:::
 
-#### 15 (Fall '04). $\work$
+### 5 (Fall '04). $\work$
+
+:::{.problem title="?"}
 Let $X$ be a topological space.
 
-a.  Prove that $X$ is connected if and only if there is no continuous
-    nonconstant map to the discrete two-point space $\theset{0, 1}$.
+a.  
+Prove that $X$ is connected if and only if there is no continuous
+nonconstant map to the discrete two-point space $\theset{0, 1}$.
 
-b.  Suppose in addition that $X$ is compact and $Y$ is a connected Hausdorff space. 
-    Suppose further that there is a continuous map $f : X \to Y$ such that 
-    every preimage $f\inv (y)$ for $y \in Y$, is a connected subset of $X$. 
+b.
+Suppose in addition that $X$ is compact and $Y$ is a connected Hausdorff space. 
+Suppose further that there is a continuous map $f : X \to Y$ such that 
+every preimage $f\inv (y)$ for $y \in Y$, is a connected subset of $X$. 
 
-    Show that $X$ is connected.
+Show that $X$ is connected.
 
-c.  Give an example showing that the conclusion of (b) may be false if
-    $X$ is not compact.
+c.  
+Give an example showing that the conclusion of (b) may be false if
+$X$ is not compact.
 
-#### 16 (Spring '10). $\done$
+:::
+
+### (Spring '10) $\done$
+
+:::{.problem title="?"}
 If $X$ is a topological space and $S \subset X$, define in terms of
 open subsets of $X$ what it means for $S$ **not** to be connected. 
 
@@ -220,17 +242,26 @@ $$
 
 > Here $\bar A$ and $\bar B$ denote closure with respect to the topology on the ambient space $X$.
 
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
 
 :::
 
-##### Proof 1
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
 
-> Topic: closure and connectedness in the subspace topology.
-> See Munkres p.148
+:::
+
+
+:::{.proof title="Variant 1"}
+
+\envlist
+:::{.concept}
+\envlist
+- Topic: closure and connectedness in the subspace topology.
+    - See Munkres p.148
+:::
+\envlist
 
 - $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
   - I.e. there exist $A, B \subset S$ such that 
@@ -268,13 +299,19 @@ $\impliedby$:
   .\end{align*}
 - But $A = Y\setminus B$ where $B$ is closed, so $A$ is open and thus a nontrivial clopen subset.
 
-$\qed$
-
 ![](figures/image_2020-05-26-20-08-04.png)
 
-##### Proof 2
+:::
 
-> Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
+
+
+:::{.proof title="Variant 2"}
+
+\envlist
+:::{.concept}
+\envlist
+- Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
+:::
 
 If $S\subset X$ is not connected, then there exists a subset $A\subset S$ that is both open and closed in the subspace topology, where $A\neq \emptyset, S$.
 
@@ -283,17 +320,26 @@ Then $B = S\setminus A$ yields a pair $A, B$ that disconnects $S$.
 Since $A$ is closed in $S$, $\bar A = A$ and thus $\bar A \cap B = A \cap B = \emptyset$.
 Similarly, since $A$ is open, $B$ is closed, and $\bar B = B \implies \bar B \cap A = B \cap A = \emptyset$.
 
+
 :::
 
 
-#### 17 (Spring '11) $\work$
+:::
+
+### Spring '11 $\work$
+
+:::{.problem title="?"}
 A topological space is **totally disconnected** if its only connected subsets are one-point sets. 
 
 Is it true that if $X$ has the discrete topology, it is totally disconnected? 
 
 Is the converse true? Justify your answers.
 
+:::
+
 ### 21 (Fall '14) $\work$
+
+:::{.problem title="?"}
 Let $X$ and $Y$ be topological spaces and let $f : X \to Y$ be a function. 
 
 Suppose that $X = A \cup B$ where $A$ and $B$ are closed subsets, and that
@@ -301,15 +347,22 @@ the restrictions $f \mid_A$ and $f \mid_B$ are continuous (where $A$ and $B$ hav
 
 Prove that $f$ is continuous.
 
+:::
+
 ### 23 (Spring '15) $\done$
+
+:::{.problem title="?"}
 Define a family $\mct$ of subsets of $\RR$ by saying that $A \in T$ is $\iff A = \emptyset$ or $\RR \setminus A$ is a finite set. 
 
 Prove that $\mct$ is a topology on $\RR$, and that $\RR$ is compact with respect to this topology.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -330,21 +383,28 @@ So pick $U_1 \ni p_1, \cdots, U_n \ni p_n$; then $\RR \subset U_\alpha \union_{i
 :::
 
 ### 25 (Fall '16) $\work$
+
+:::{.problem title="?"}
 Let $\mcs, \mct$ be topologies on a set $X$.
 Show that $\mcs \cap \mct$ is a topology on $X$. 
 
 Give an example to show that $\mcs \cup \mct$ need not be a topology.
+:::
 
 ### 42 (Spring '10) $\done$
+
+:::{.problem title="?"}
 Define an equivalence relation $\sim$ on $\RR$ by $x \sim y$ if and only if $x - y \in Q$. 
 Let $X$ be the set of equivalence classes, endowed with the quotient topology induced by the canonical projection $\pi : \RR \to X$.
 
 Describe, with proof, all open subsets of $X$ with respect to this topology.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Proof that $\RR/\QQ$ has the indiscrete topology:
@@ -358,17 +418,21 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 :::
 
-
 ### 43 (Fall '12) $\work$
+
+:::{.problem title="?"}
 Let $A$ denote a subset of points of $S^2$ that looks exactly like the capital letter A. 
 Let $Q$ be the quotient of $S^2$ given by identifying all points of $A$ to a single point. 
 
 Show that $Q$ is homeomorphic to a familiar topological space and identify that space.
 
+:::
 
 ## Compactness and Metric Spaces
 
 ### 1 (Spring '06) $\work$
+
+:::{.problem title="?"}
 Suppose $(X, d)$ is a metric space. State criteria for continuity of a function $f : X \to X$ in terms of:
 
 i. open sets;
@@ -379,7 +443,11 @@ iii. convergent sequences.
 
 Then prove that (iii) implies (i).
 
+:::
+
 ### 26 (Fall '17) $\work$
+
+:::{.problem title="?"}
 Let $f : X \to Y$ be a continuous function between topological spaces. 
 
 Let $A$ be a subset of $X$ and let $f (A)$ be its image in $Y$ . 
@@ -391,31 +459,37 @@ Decide which is which, prove the true statement, and provide a counterexample to
 
 2. If $A$ is compact then $f (A)$ is compact.
 
-### 2 (Spring '12) $\done$
+:::
+
+### 2 (Spring '12) $\work$
+
+:::{.problem title="?"}
 Let $X$ be a topological space.
 
-#### 1
+a.
 State what it means for $X$ to be compact.
 
-#### 2 
+b. 
 Let $X = \theset{0} \cup \theset{{1\over n} \mid n \in \ZZ^+ }$. Is $X$ compact?
 
-#### 3
+c.
 Let $X = (0, 1]$. 
 Is $X$ compact?
 
+:::
+
 \todo[inline]{Incomplete proof for part 3.}
 :::{.solution}
-\hfill
+\envlist
 
 :::{.concept}
 See Munkres p.164, especially for (ii).
 :::
 
-#### 1
+a.
 See definitions in review doc.
 
-#### 2
+b.
 Direct proof: 
 
 - Let $\theset{U_i \suchthat j\in J}\covers X$; then $0\in U_j$ for some $j\in J$.
@@ -427,28 +501,36 @@ Direct proof:
 - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
 - So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
 
-#### 3
+c.
 Todo: Need direct proof. 
 
 :::
 
-
 ### 3 (Spring '09) $\work$
+
+:::{.problem title="?"}
 Let $(X, d)$ be a compact metric space, and let $f : X \to X$ be an isometry: 
 \[
 \forall~ x, y \in X, \qquad d(f (x), f (y)) = d(x, y)
 .\]
 Prove that $f$ is a bijection.
 
+:::
+
 ### 4 (Spring '05) $\done$
+
+:::{.problem title="?"}
 Suppose $(X, d)$ is a compact metric space and $U$ is an open covering of $X$. 
 
 Prove that there is a number $\delta > 0$ such that for every $x \in X$, the ball of radius $\delta$ centered at $x$ is contained in some element of $U$.
 
+
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -486,19 +568,21 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 
 :::
 
-
 ### 44 (Spring '15) $\done$
 
-#### a
+:::{.problem title="?"}
+a.
 Prove that a topological space that has a countable base for its topology also contains a countable dense subset.
 
-#### b
+b.
 Prove that the converse to (a) holds if the space is a metric space.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Proof that $\RR/\QQ$ has the indiscrete topology:
@@ -512,8 +596,9 @@ Proof that $\RR/\QQ$ has the indiscrete topology:
 - So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 :::
 
-
 ### 18 (Fall '07) $\done$
+
+:::{.problem title="?"}
 Prove that if $(X, d)$ is a compact metric space, $f : X \to X$ is a
 continuous map, and $C$ is a constant with $0 < C < 1$ such that 
 $$
@@ -521,10 +606,12 @@ d(f (x), f (y)) \leq C \cdot d(x, y) \quad \forall x, y
 ,$$ 
 then $f$ has a fixed point.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 - Define a new function
@@ -561,14 +648,16 @@ d(x, f(x)) &\leq d(x, y) + d(y, f(y)) + d(f(x), f(y)) \\
 
 :::
 
-
 ### 19 (Spring '15) $\done$
+
+:::{.problem title="?"}
 Prove that the product of two connected topological spaces is connected.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 
@@ -582,10 +671,10 @@ Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ 
 
 :::
 
-
 ### 20 (Fall '14) $\done$
 
-#### a
+:::{.problem title="?"}
+a.
 
 Define what it means for a topological space to be:
 
@@ -593,80 +682,90 @@ i. **Connected**
 
 ii. **Locally connected**
 
-#### b
+b.
 Give, with proof, an example of a space that is connected but not locally connected.
+
+:::
 
 \todo[inline]{What's the picture?}
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
-| Space                  | Connected    | Locally Connected |
-| ------                 | ---------    | ----------------- |
-| $\RR$                  | $\checkmark$ | $\checkmark$      |
-| $[0, 1] \union [2, 3]$ |              | $\checkmark$      |
-| Sine Curve             | $\checkmark$ |                   |
-| $\QQ$                  |              |                   |
-
+\envlist
+- Consider $\RR$, unions of intervals, $\QQ$, and the topologists sine curve.
 :::
 
-#### a
-See definitions in intro.
+:::{.proof title="of a"}
+See definitions in review doc.
+:::
 
-#### b
-**Claim**: 
-the Topologist's sine curve $X$ suffices.
+:::{.proof title="of b"}
 
-Proof:
+:::{.claim}
+$X\da$ the Topologist's sine curve suffices.
+:::
 
 - Claim 1: $X$ is connected.
   - Intervals and graphs of cts functions are connected, so the only problem point is $0$.
 - Claim 2: $X$ is **not** locally connected.
     - Take any $B_\eps(0) \in \RR^2$; then projecting onto the subspace $\pi_X(B_\eps(0))$ yields infinitely many arcs, each intersecting the graph at two points on $\bd B_\eps(0)$.
     - These are homeomorphic to a collection of disjoint embedded open intervals, and any disjoint union of intervals is clearly not connected.
+
+:::
+
 :::
 
 
 ### 22 (Fall '18) $\work$
+
+:::{.problem title="?"}
 Let $X$ be a compact space and let $f : X \times R \to R$ be a continuous function such that $f (x, 0) > 0$ for all $x \in X$. 
 
 Prove that there is $\eps > 0$ such  that $f (x, t) > 0$ whenever $\abs t < \eps$. 
 
 Moreover give an example showing that this conclusion may not hold if $X$ is not assumed compact.
 
-### 24 (Spring '16) $\work$
-In each part of this problem $X$ is a compact topological space.
 
+:::
+
+### 24 (Spring '16) $\work$
+
+:::{.problem title="?"}
+In each part of this problem $X$ is a compact topological space.
 Give a proof or a counterexample for each statement.
 
-#### a
+a.
 If $\theset{F_n }_{n=1}^\infty$ is a sequence of nonempty *closed* subsets of $X$ such that $F_{n+1} \subset F_{n}$ for all $n$ then $$\intersect^\infty_{n=1} F_n\neq \emptyset.$$
 
-#### b
+b.
 If $\theset{O_n}_{n=1}^\infty$ is a sequence of nonempty *open* subsets of $X$ such that $O_{n+1} \subset O_n$ for all $n$ then $$\intersect_{n=1}^\infty O_{n}\neq \emptyset.$$
 
+:::
+
 ### 27 (Fall '17) $\work$
+
+:::{.problem title="?"}
 A metric space is said to be **totally bounded** if for every $\eps > 0$ there exists a finite cover of $X$ by open balls of radius $\eps$.
 
-#### a
+a.
 Show: a metric space $X$ is totally bounded iff every sequence in $X$ has a Cauchy subsequence.
 
-#### b
+b.
 Exhibit a complete metric space $X$ and a closed subset $A$ of $X$ that is bounded but not totally bounded. 
 
 > You are not required to prove that your example has the stated properties.
 
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
 :::
-> Notes: use diagonal trick to construct the Cauchy sequence.
 
-#### a
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
+- Use diagonal trick to construct the Cauchy sequence.
+:::
 
+:::{.proof title="of a"}
 $\implies$:
 
 If $X$ is totally bounded, let $\varepsilon  = \frac 1 n$ for each $n$, and let $\theset{x_i}$ be an arbitrary sequence.
@@ -688,37 +787,47 @@ Continue by picking $x_{n+1} \in S_n^c$ (Since $X$ is not totally bounded, this 
 
 Then $\theset{x_n}$ is not Cauchy, because $d(x_i, x_j) > \varepsilon$ for every $i\neq j$.
 
-#### b
+:::
 
+:::{.proof title="of b"}
 Take $X = C^0([0, 1])$ with the sup-norm, then $f_n(x) = x^n$ are all bounded by 1, but $\norm{f_i - f_j} = 1$ for every $i, j$, so no subsequence can be Cauchy, so $X$ can not be totally bounded.
 
 Moreover, $\theset{f_n}$ is closed. (Why?)
 
 :::
 
+:::
 
 ### Spring '19 #1  $\done$
-Is every complete bounded metric space compact? 
 
+:::{.problem title="?"}
+Is every complete bounded metric space compact? 
 If so, give a proof; if not, give a counterexample.
+:::
 
 \todo[inline]{Review, from last year.}
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
 
-:::
-Complete and **totally** bounded $\implies$ compact.
+:::{.solution}
+\envlist
+:::{.concept}
+\envlist
+
+- Complete and **totally** bounded $\implies$ compact.
 -  Definition: A space $X$ is *totally bounded* if for every $\varepsilon >0$, there is a finite cover $X \subseteq \union_\alpha B_\alpha(\varepsilon)$ such that the radius of each ball is less than $\varepsilon$.
 - Definition: A subset of a space $S \subset X$ is *bounded* if there exists a $B(r)$ such that $r<\infty$ and $S \subseteq B(r)$ 
 - Totally bounded $\implies$ bounded 
     - Counterexample to converse: $\NN$ with the discrete metric.
     - Equivalent for Euclidean metric
 - Compact $\implies$ totally bounded.
+- Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimension is closed, bounded, and not compact.
 
-Counterexample for problem: the unit ball in any Hilbert (or Banach) space of infinite dimenion is closed, bounded, and not compact.
+- Second counterexample: $(\RR, (x,y) \mapsto \frac{\abs{x-y}}{1 + \abs{x-y}})$. 
 
+- Best counterexample: $X = \left(\ZZ, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)$. This metric makes $X$ complete for any $X$, then take $\NN \subset X$. All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover $U_i = B(1, i)$.
+
+- Useful tool: $(X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}$ where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
+
+:::
 
 :::{.proof title="?"}
 Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
@@ -732,16 +841,12 @@ This produces a non-convergent sequence in the closed ball, so it can not be com
 
 :::
 
-Second counterexample: $(\RR, (x,y) \mapsto \frac{\abs{x-y}}{1 + \abs{x-y}})$. 
-
-Best counterexample: $X = \left(\ZZ, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)$. This metric makes $X$ complete for any $X$, then take $\NN \subset X$. All sets are closed, and bounded, so we have a complete, closed, bounded set that is not compact -- take that cover $U_i = B(1, i)$.
-
-Useful tool: $(X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}$ where the RHS is now a bounded space. This preserves all topological properties (e.g. compactness).
 
 :::
 
-
 ### Spring 2019 #2 $\done$
+
+:::{.problem title="?"}
 Let $X$ be Hausdorff, and recall that the *one-point compactification* $\tilde X$ is given by the following:
 
 - As a set, $\tilde X \definedas X\disjoint \theset{\infty}$.
@@ -750,10 +855,12 @@ Let $X$ be Hausdorff, and recall that the *one-point compactification* $\tilde X
 
 Prove that this description defines a topology on $\tilde X$ making $\tilde X$ compact.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological space* iff
 
 - $\emptyset, X \in \tau$
@@ -769,38 +876,44 @@ We can write $\overline{(X, \tau)} = (X \disjoint \pt , \tau \union \tau')$ wher
 
 :::
 
-
 ## Connectedness
 
 ### 9 (Spring '13) $\work$
+
+:::{.problem title="?"}
 Recall that a topological space is said to be **connected** if there
 does not exist a pair $U, V$ of disjoint nonempty subsets whose union is $X$.
 
-#### i
+a.
 Prove that $X$ is connected if and only if the only subsets of $X$ that are both open and closed are $X$ and the empty set.
 
-#### ii
+b.
 Suppose that $X$ is connected and let $f : X \to \RR$ be a continuous map. 
-
 If $a$ and $b$ are two points of $X$ and $r$ is a point of $\RR$ lying between $f (a)$ and $f (b)$ show that there exists a point $c$ of $X$ such that $f (c) = r$.
 
+:::
+
 ### 10 (Fall '05) $\done$
+
+:::{.problem title="?"}
 Let 
 $$
 X = \theset{(0, y) \mid - 1 \leq y \leq 1} \cup \theset{\qty{x, s = \sin\qty{1 \over x}} \mid 0 < x \leq 1}
 .$$
 
 Prove that $X$ is connected but not path connected.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\todo[inline]{???}
+
+\envlist
 
 :::
 
-#### Proof 1
-
+:::{.proof title="Variant 1"}
 $X$ is connected:
 
 - Write $X = L\disjoint G$ where $L = \theset{0} \cross [-1, 1]$ and $G = \theset{\Gamma(\sin(x)) \suchthat x\in (0, 1]}$ is the graph of $\sin(x)$.
@@ -866,12 +979,13 @@ $X$ is connected:
       ,$$
       contradicting continuity of $f$.
 
-#### Proof 2?
 
+:::
+
+:::{.proof title="Variant 2"}
 Let $X = A \union B$ with $A = \theset{(0, y) \suchthat y\in [-1, 1] }$ and $B = \theset{(x, \sin(1/x)) \suchthat x\in (0, 1]}$.
 Since $B$ is the graph of a continuous function, which is always connected.
 Moreover, $X = \bar{A}$, and the closure of a connected set is still connected.
-
 
 :::{.proof title="?"}
 Alternative direct argument: the subspace $X' = B \union \theset{\vector 0}$ is not connected. 
@@ -895,11 +1009,13 @@ However, we can pick $\varepsilon < 1$, say, and consider points of the form $\v
 In particular, we can pick $n$ large enough such that $\norm{\vector x_n}$ is as small as we like, whereas $\norm{f(\vector x_n)} = 1 > \varepsilon$ for all $n$, a contradiction.
 
 
+:::
 
 :::
 
+### 11 (Fall '18) $\work$
 
-### 11 (Fall '18) $\done$
+:::{.problem title="?"}
 Let
 \begin{align*}
 X=\left\{(x, y) \in \mathbb{R}^{2} | x>0, y \geq 0, \text { and } \frac{y}{x} \text { is rational }\right\}
@@ -908,11 +1024,14 @@ and equip $X$ with the subspace topology induced by the usual topology on $\RR^2
 
 Prove or disprove that $X$ is connected.
 
+:::
+
 \todo[inline]{Not convincing..}
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
@@ -924,23 +1043,38 @@ If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subs
 If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
 :::
 
+### Spring 2021 #2
+
+:::{.problem title="Spring 2021, 2"}
+Let $X \da \prod_{==1}^{\infty} \ts{ 0, 1 }$ endowed with the product topology.
+
+a. 
+Show that for all points $x,y\in X$ with $x\neq y$, there are open subsets $U_x, U_y \subset X$ such that $x\in U_x, y\in U_y$, with $U_x \union U_y = X$ and $U_x \intersect U_y = \emptyset$.
+
+b.
+Show that $X$ is totally disconnected, i.e. the only nonempty connected subsets of $X$ are singletons.
+:::
 
 ## Hausdorff Spaces and Separation
 
 ### 29 (Fall '14) $\work$
-Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
 
+:::{.problem title="?"}
+Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
 If yes, prove it. If no, give a counterexample.
+:::
 
 ### 30 (Spring '18) $\done$
-Suppose that $X$ is a Hausdorff topological space and that $A \subset X$. 
 
+:::{.problem title="?"}
+Suppose that $X$ is a Hausdorff topological space and that $A \subset X$. 
 Prove that if $A$ is compact in the subspace topology then $A$ is closed as a subset of X.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
@@ -954,27 +1088,30 @@ But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setm
 
 :::
 
-
 ### 31 (Spring '09) $\done$
 
-#### a
+:::{.problem title="Spring 2009, 31"}
+\envlist
 
+a.
 Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
 
-#### b
+b.
 Give an example that shows that the "Hausdorff" hypothesis in part (a) is necessary.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 - Continuous bijection + open map (or closed map) $\implies$ homeomorphism.
 - **Closed** subsets of compact sets are compact.
 - The continuous image of a compact set is compact.
 - Closed subsets of Hausdorff spaces are compact.
 :::
 
-#### a
+:::{.proof title="of a"}
 We'll show that $f$ is a closed map.
 
 Let $U \in X$ be closed. 
@@ -983,8 +1120,9 @@ Let $U \in X$ be closed.
 - Since $f$ is continuous, $f(U)$ is compact
 - Since $Y$ is Hausdorff, $f(U)$ is closed.
 
-#### b
+:::
 
+:::{.proof title="of b"}
 Note that any finite space is clearly compact.
 
 Take $f: ([2], \tau_1) \to ([2], \tau_2)$ to be the identity map, where $\tau_1$ is the discrete topology and $\tau_2$ is the indiscrete topology.
@@ -992,12 +1130,14 @@ Any map into an indiscrete topology is continuous, and $f$ is clearly a bijectio
 
 Let $g$ be the inverse map; then note that $1 \in \tau_1$ but $g\inv(1) = 1$ is not in $\tau_2$, so $g$ is not continuous.
 
-$\qed$
 
 :::
 
+:::
 
 ### 32 (Fall '14) $\done$
+
+:::{.problem title="?"}
 Let $X$ be a topological space and let
 $$
 \Delta = \theset{(x, y) \in X \times X \mid x = y}
@@ -1005,10 +1145,13 @@ $$
 
 Show that $X$ is a Hausdorff space if and only if $\Delta$ is closed in $X \times X$.
 
+:::
+
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\todo[inline]{todo}
+\envlist
 
 :::
 $\implies$:
@@ -1033,58 +1176,79 @@ $\impliedby$:
 
 :::
 
-
 ### 33 (Fall '06) $\work$
+
+:::{.problem title="?"}
 If $f$ is a function from $X$ to $Y$ , consider the graph 
 $$
 G = \theset{(x, y) \in X \times Y \mid f (x) = y}
 .$$
 
-#### a 
+a. 
 Prove that if $f$ is continuous and $Y$ is Hausdorff, then $G$ is a closed subset of $X \times Y$.
 
-#### b
+b.
 Prove that if $G$ is closed and $Y$ is compact, then $f$ is continuous.
 
+:::
+
 ### 34 (Fall '04) $\work$
+
+:::{.problem title="?"}
 Let X be a noncompact locally compact Hausdorff space, with topology $\mct$. 
 Let $\tilde X = X \cup \theset{\infty}$ ($X$ with one point adjoined), and consider the family $\mcb$ of subsets of $\tilde X$ defined by
 $$
 \mcb = T \cup \theset{S \cup \theset{\infty}\mid S \subset X,~~ X \backslash S \text{ is compact}}
 .$$
 
-#### a
+a.
 Prove that $\mcb$ is a topology on $\tilde X$, that the resulting space is compact, and that $X$ is dense in $\tilde X$.
 
-#### b
+b.
 Prove that if $Y \supset X$ is a compact space such that $X$ is dense in $Y$ and $Y \backslash X$ is a singleton,  then Y is homeomorphic to $\tilde X$. 
 
 > The space $\tilde X$ is called the **one-point compactification** of $X$.
 
-#### c
+c.
 Find familiar spaces that are homeomorphic to the one point compactifications of 
 
 i. $X = (0, 1)$ and 
 
 ii. $X = \RR^2$.
 
+
+:::
+
 ### 35 (Fall '16) $\work$
+
+:::{.problem title="?"}
 Prove that a metric space $X$ is **normal**, i.e. if $A, B \subset X$ are closed and disjoint then there exist open sets $A \subset U \subset X, ~B \subset V \subset X$ such that
 $U \cap V = \emptyset$.
 
+:::
+
 ### 36 (Spring '06) $\work$
+
+:::{.problem title="?"}
 Prove that every compact, Hausdorff topological space is normal.
+:::
 
 ### 37 (Spring '09) $\work$
+
+:::{.problem title="?"}
 Show that a connected, normal topological space with more than a single point is uncountable.
+:::
 
 ### 38 (Spring '08) $\done$
+
+:::{.problem title="?"}
 Give an example of a quotient map in which the domain is Hausdorff, but the quotient is not.
+:::
 
 :::{.solution}
-\hfill
+\envlist
 :::{.concept}
-\hfill
+\envlist
 
 :::
 $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
@@ -1098,31 +1262,66 @@ Direct proof that $\RR/\QQ$ isn't Hausdorff:
 - Then $[p] = [q] \in U\intersect V$.
 :::
 
-
 ### 39 (Fall '04) $\work$
-Let $X$ be a compact Hausdorff space and suppose $R \subset X \times X$ is a closed equivalence relation. 
 
+:::{.problem title="?"}
+Let $X$ be a compact Hausdorff space and suppose $R \subset X \times X$ is a closed equivalence relation. 
 Show that the quotient space $X/R$ is Hausdorff.
+:::
 
 ### 40 (Spring '18) $\work$
-Let $U \subset \RR^n$ be an open set which is bounded in the standard Euclidean metric. 
 
+:::{.problem title="?"}
+Let $U \subset \RR^n$ be an open set which is bounded in the standard Euclidean metric. 
 Prove that the quotient space $\RR^n / U$ is not Hausdorff.
+:::
 
 ### 41 (Fall '09) $\work$
-Let $A$ be a closed subset of a normal topological space $X$.
 
+:::{.problem title="?"}
+Let $A$ be a closed subset of a normal topological space $X$.
 Show that both $A$ and the quotient $X/A$ are normal.
+:::
 
 ### 45 (Spring '11) $\work$
+
+:::{.problem title="?"}
 Recall that a topological space is **regular** if for every point $p \in X$ and for every closed subset $F \subset X$ not containing $p$, there exist disjoint open sets $U, V \subset X$ with $p \in U$ and $F \subset V$. 
 
 Let $X$ be a regular space that has a countable basis for its topology, and let $U$ be an open subset of $X$.
 
-#### a 
+a. 
 Show that $U$ is a countable union of closed subsets of $X$.
 
-#### b
+b.
 Show that there is a continuous function $f : X \to [0,1]$ such that $f (x) > 0$ for $x \in U$ and $f (x) = 0$ for $x \in U$.
 
+
+:::
+
+## Analysis and Metric Spaces
+
+### Spring 2021 #3
+
+:::{.problem title="Spring 2021, 3"}
+For nonempty subsets $A, B$ of a metric space $(X, d)$, define the **setwise distance** as 
+\[
+d(A, B) \da \inf \ts{ d(a, b) \st a\in A,\, b\in B } 
+.\]
+
+a. 
+Suppose that $A$ and $B$ are compact.
+Show that there is an $a\in A$ and $b\in B$ such that $d(A, B) = d(a, b)$.
+
+b.
+Suppose that $A$ is closed and $B$ is compact.
+Show that if $d(A, B) = 0$ then $A \intersect B = \emptyset$.
+
+c. 
+Give an example in which $A$ is closed, $B$ is compact, and $d(a, b) > d(A, B)$ for all $a\in A$ and $b\in B$.
+
+> Hint: take $X = \ts{ 0 } \union (1, 2] \subset \RR$.
+> Throughout this problem, you may use without proof that the map $d:X\cross X\to \RR$ is continuous.
+
+:::
 

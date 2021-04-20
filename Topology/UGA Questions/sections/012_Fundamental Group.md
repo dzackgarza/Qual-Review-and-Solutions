@@ -39,19 +39,19 @@ Counterexample where homotopic loops are not equal in $\pi_1$, but just conjugat
 
 ## 2 (Spring '09/Spring '07/Fall '07/Fall '06) $\work$
 
-### a. 
+a. 
 State van Kampen's theorem.
 
-### b. 
+b. 
 Calculate the fundamental group of the space obtained by taking two copies of the torus $T = S^1 \times S^1$ and gluing them along a circle $S^1 \times {p}$ where $p$ is a point in $S^1$.
 
-### c. 
+c. 
 Calculate the fundamental group of the Klein bottle.
 
-### d. 
+d. 
 Calculate the fundamental group of the one-point union of $S^1 \times S^1$ and $S^1$.
 
-### e. 
+e.
 Calculate the fundamental group of the one-point union of $S^1 \times S^1$ and $\RP^2$.
 
 > **Note: multiple appearances!!**
@@ -119,17 +119,26 @@ Use van Kampen's theorem to calculate $\pi_1 (X_k)$ for each $k > 0$ and identif
 
 ## 12 (Spring '13) $\work$
 
-### 1
+a.
 Let $A$ be a subspace of a topological space $X$. 
-
 Define what it means for $A$ to be a **deformation retract** of $X$.
 
-### 2 
+b. 
 Consider $X_1$ the "planar figure eight" and $$X_2 = S^1 \cup ({0} \times [-1, 1])$$ (the "theta space"). 
-
 Show that $X_1$ and $X_2$ have isomorphic fundamental groups.
 
-### 3
+c.
 Prove that the fundamental group of $X_2$ is a free group on two generators.
+
+## Spring 2021 #4
+
+:::{.problem title="Spring 2021, 4"}
+Suppose that $X$ is a topological space and $x_0\in X$, and suppose that every continuous map $\gamma: S^1 \to X$ is freely homotopic to the constant map to $x_0$.
+Prove that $\pi_1(X, x_0) = \ts{ e }$.
+
+> Note that "freely" means there are no conditions on basepoints.
+
+:::
+
 
 

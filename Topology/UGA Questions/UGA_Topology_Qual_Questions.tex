@@ -83,7 +83,8 @@ sessions in Spring 2020:
 \begin{warnings}
 
 Usually 30\% of the problems on any given qual are related to
-point-set/general Topology.
+point-set/general Topology. Note that this material is not covered in
+the course!
 
 \end{warnings}
 
@@ -95,8 +96,10 @@ point-set/general Topology.
 Maps}\label{topologies-subspaces-closures-and-maps}}
 
 \hypertarget{fall-11-work}{%
-\subsubsection{\texorpdfstring{5 (Fall '11)
-\(\work\)}{5 (Fall '11) \textbackslash work}}\label{fall-11-work}}
+\subsubsection{\texorpdfstring{Fall '11
+\(\work\)}{Fall '11 \textbackslash work}}\label{fall-11-work}}
+
+\begin{problem}[Fall 2011]
 
 Let \(X\) be a topological space, and \(B \subset A \subset X\). Equip
 \(A\) with the subspace topology, and write \(\operatorname{cl}_X (B)\)
@@ -111,20 +114,26 @@ I.e., are they always equal? Is one always contained in the other but
 not conversely? Neither?
 \end{quote}
 
+\end{problem}
+
 \hypertarget{fall-05-done}{%
 \subsubsection{\texorpdfstring{6 (Fall '05)
 \(\done\)}{6 (Fall '05) \textbackslash done}}\label{fall-05-done}}
 
+\begin{problem}[Fall 2005]
+
 Prove that the unit interval \(I\) is compact. Be sure to explicitly
 state any properties of \({\mathbb{R}}\) that you use.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -176,26 +185,34 @@ state any properties of \({\mathbb{R}}\) that you use.
 \subsubsection{\texorpdfstring{7 (Fall '06).
 \(\done\)}{7 (Fall '06). \textbackslash done}}\label{fall-06.-done}}
 
+\begin{problem}[Fall 2006, 7]
+
 A topological space is \textbf{sequentially compact} if every infinite
 sequence in \(X\) has a convergent subsequence.
 
 Prove that every compact metric space is sequentially compact.
 
+\end{problem}
+
 \hypertarget{fall-10.-done}{%
 \subsubsection{\texorpdfstring{8 (Fall '10).
 \(\done\)}{8 (Fall '10). \textbackslash done}}\label{fall-10.-done}}
+
+\begin{problem}[Fall 2010, 8]
 
 Show that for any two topological spaces \(X\) and \(Y\) ,
 \(X \times Y\) is compact if and only if both \(X\) and \(Y\) are
 compact.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -206,10 +223,9 @@ compact.
 \end{concept}
 
 Statement: show
-\(X, Y \in {\operatorname{Top}}_{\mathrm{compact}} \iff X\times Y\in {\operatorname{Top}}_{\mathrm{compact}}\).
+\(X, Y \in {\mathsf{Top}}_{\mathrm{compact}} \iff X\times Y\in {\mathsf{Top}}_{\mathrm{compact}}\).
 
-\hypertarget{proof-1}{%
-\subparagraph{Proof 1}\label{proof-1}}
+\begin{proof}[Variant 1]
 
 \(\impliedby\):
 
@@ -284,8 +300,9 @@ Shorter mnemonic:
 
 \includegraphics{figures/image_2020-05-22-11-39-10.png}
 
-\hypertarget{proof-2}{%
-\subparagraph{Proof 2}\label{proof-2}}
+\end{proof}
+
+\begin{proof}[Variant 2]
 
 Let \(\pi_X, \pi_Y\) denote the canonical projections, which we can note
 are continuous and preserve open sets.
@@ -321,62 +338,15 @@ many \(x_j \in X\) such that \(W_{x_j} \rightrightarrows X\). But then
 \(X \times Y = \cup_{j} W_{x_j} \times Y = \cup_j \cup_i W_{x_j} \times V_{x_j, i} \subset \cup_\alpha U_\alpha\)
 is a finite cover.
 
-\hypertarget{proof-of-tube-lemma}{%
-\subparagraph{Proof of Tube Lemma}\label{proof-of-tube-lemma}}
-
-\todo[inline]{Check this proof!}
-
-Proof of Tube Lemma:
-
-\begin{itemize}
-\tightlist
-\item
-  Let
-  \(\left\{{U_j\times V_j {~\mathrel{\Big|}~}j\in J}\right\} \rightrightarrows X\times Y\).
-\item
-  Fix a point \(x_0\in X\), then
-  \(\left\{{x_0}\right\}\times Y \subset N\) for some open set \(N\).
-\item
-  By the tube lemma, there is a \(U^x \subset X\) such that the tube
-  \(U^x \times Y \subset N\).
-\item
-  Since \(\left\{{x_0}\right\}\times Y \cong Y\) which is compact, there
-  is a finite subcover
-  \(\left\{{U_j \times V_j {~\mathrel{\Big|}~}j\leq n}\right\} \rightrightarrows\left\{{x_0}\right\}\times Y\).
-\item
-  ``Integrate the \(X\)'': write
-  \begin{align*}W = \cap_{j=1}^n U_j,\end{align*}
-  then \(x_0 \in W\) and \(W\) is a finite intersection of open sets and
-  thus open.
-\item
-  Claim:
-  \(\left\{{U_j \times V_j {~\mathrel{\Big|}~}j\leq n}\right\}\rightrightarrows W\times Y\)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Let \((x, y) \in W\times Y\); want to show
-    \((x, y)\in U_j \times V_j\) for some \(j\leq n\).
-  \item
-    Then \((x_0, y) \in \left\{{x_0}\right\}\times Y\) is on the same
-    horizontal line
-  \item
-    \((x_0, y)\in U_j \times V_j\) for some \(j\) by construction
-  \item
-    So \(y\in V_j\) for this \(j\)
-  \item
-    Since \(x\in W\), \(x\in U_j\) for \emph{every} \(j\), thus
-    \(x\in U_j\).
-  \item
-    So \((x, y) \in U_j \times V_j\)
-  \end{itemize}
-\end{itemize}
+\end{proof}
 
 \end{solution}
 
-\hypertarget{spring-06.-done}{%
+\hypertarget{spring-06.-work}{%
 \subsubsection{\texorpdfstring{12 (Spring '06).
-\(\done\)}{12 (Spring '06). \textbackslash done}}\label{spring-06.-done}}
+\(\work\)}{12 (Spring '06). \textbackslash work}}\label{spring-06.-work}}
+
+\begin{problem}[Spring 2006, 12]
 
 Write \(Y\) for the interval \([0, \infty)\), equipped with the usual
 topology.
@@ -384,15 +354,17 @@ topology.
 Find, with proof, all subspaces \(Z\) of \(Y\) which are retracts of
 \(Y\).
 
+\end{problem}
+
 \todo[inline]{Not finished.}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -420,20 +392,26 @@ Find, with proof, all subspaces \(Z\) of \(Y\) which are retracts of
 \subsubsection{\texorpdfstring{13 (Fall '06).
 \(\work\)}{13 (Fall '06). \textbackslash work}}\label{fall-06.-work}}
 
-\hypertarget{a}{%
-\paragraph{a}\label{a}}
+\begin{problem}[Fall 2006, 13]
 
-Prove that if the space \(X\) is connected and locally path connected
-then \(X\) is path connected.
+\envlist
 
-\hypertarget{b}{%
-\paragraph{b}\label{b}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if the space \(X\) is connected and locally path connected
+  then \(X\) is path connected.
+\item
+  Is the converse true? Prove or give a counterexample.
+\end{enumerate}
 
-Is the converse true? Prove or give a counterexample.
+\end{problem}
 
-\hypertarget{fall-07-done}{%
+\hypertarget{fall-07-work}{%
 \subsubsection{\texorpdfstring{14 (Fall '07)
-\(\done\)}{14 (Fall '07) \textbackslash done}}\label{fall-07-done}}
+\(\work\)}{14 (Fall '07) \textbackslash work}}\label{fall-07-work}}
+
+\begin{problem}[?]
 
 Let \(\left\{{X_\alpha \mathrel{\Big|}\alpha \in A}\right\}\) be a
 family of connected subspaces of a space \(X\) such that there is a
@@ -441,20 +419,21 @@ point \(p \in X\) which is in each of the \(X_\alpha\).
 
 Show that the union of the \(X_\alpha\) is connected.
 
+\end{problem}
+
 \todo[inline]{Proof 2 not complete?}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
-\hypertarget{proof-1-1}{%
-\subparagraph{Proof 1}\label{proof-1-1}}
+\begin{proof}[Variant 1]
 
 \begin{itemize}
 \tightlist
@@ -489,8 +468,9 @@ Show that the union of the \(X_\alpha\) is connected.
   Thus \(A = X\cup Y\), forcing \(B = \emptyset\).
 \end{itemize}
 
-\hypertarget{proof-2-1}{%
-\subparagraph{Proof 2?}\label{proof-2-1}}
+\end{proof}
+
+\begin{proof}[Variant 2]
 
 Let \(X \coloneqq\cup_\alpha X_\alpha\), and let \(p\in \cap X_\alpha\).
 Suppose toward a contradiction that \(X = A {\coprod}B\) with \(A,B\)
@@ -503,11 +483,15 @@ We also have \(p\in A \cap X_\alpha\).
 But then these two sets disconnect \(X_\alpha\), which was assumed to be
 connected -- a contradiction.
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-04.-work}{%
-\paragraph{\texorpdfstring{15 (Fall '04).
-\(\work\)}{15 (Fall '04). \textbackslash work}}\label{fall-04.-work}}
+\subsubsection{\texorpdfstring{5 (Fall '04).
+\(\work\)}{5 (Fall '04). \textbackslash work}}\label{fall-04.-work}}
+
+\begin{problem}[?]
 
 Let \(X\) be a topological space.
 
@@ -522,16 +506,26 @@ Let \(X\) be a topological space.
   Hausdorff space. Suppose further that there is a continuous map
   \(f : X \to Y\) such that every preimage \(f^{-1}(y)\) for
   \(y \in Y\), is a connected subset of \(X\).
+\end{enumerate}
 
-  Show that \(X\) is connected.
+Show that \(X\) is connected.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
 \item
   Give an example showing that the conclusion of (b) may be false if
   \(X\) is not compact.
 \end{enumerate}
 
-\hypertarget{spring-10.-done}{%
-\paragraph{\texorpdfstring{16 (Spring '10).
-\(\done\)}{16 (Spring '10). \textbackslash done}}\label{spring-10.-done}}
+\end{problem}
+
+\hypertarget{spring-10-done}{%
+\subsubsection{\texorpdfstring{(Spring '10)
+\(\done\)}{(Spring '10) \textbackslash done}}\label{spring-10-done}}
+
+\begin{problem}[?]
 
 If \(X\) is a topological space and \(S \subset X\), define in terms of
 open subsets of \(X\) what it means for \(S\) \textbf{not} to be
@@ -549,23 +543,41 @@ and \(\mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu\)
 denote closure with respect to the topology on the ambient space \(X\).
 \end{quote}
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
-\hypertarget{proof-1-2}{%
-\subparagraph{Proof 1}\label{proof-1-2}}
+\begin{proof}[Variant 1]
 
-\begin{quote}
-Topic: closure and connectedness in the subspace topology. See Munkres
-p.148
-\end{quote}
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Topic: closure and connectedness in the subspace topology.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    See Munkres p.148
+  \end{itemize}
+\end{itemize}
+
+\end{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -643,17 +655,26 @@ Show stronger statement: this is an iff.
   thus a nontrivial clopen subset.
 \end{itemize}
 
-\(\hfill\blacksquare\)
-
 \includegraphics{figures/image_2020-05-26-20-08-04.png}
 
-\hypertarget{proof-2-2}{%
-\subparagraph{Proof 2}\label{proof-2-2}}
+\end{proof}
 
-\begin{quote}
-Lemma: \(X\) is connected iff the only subsets of \(X\) that are closed
-and open are \(\emptyset, X\).
-\end{quote}
+\begin{proof}[Variant 2]
+
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Lemma: \(X\) is connected iff the only subsets of \(X\) that are
+  closed and open are \(\emptyset, X\).
+\end{itemize}
+
+\end{concept}
 
 If \(S\subset X\) is not connected, then there exists a subset
 \(A\subset S\) that is both open and closed in the subspace topology,
@@ -668,11 +689,15 @@ thus
 Similarly, since \(A\) is open, \(B\) is closed, and
 \(\mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu = B \implies \mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu \cap A = B \cap A = \emptyset\).
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-11-work}{%
-\paragraph{\texorpdfstring{17 (Spring '11)
-\(\work\)}{17 (Spring '11) \textbackslash work}}\label{spring-11-work}}
+\subsubsection{\texorpdfstring{Spring '11
+\(\work\)}{Spring '11 \textbackslash work}}\label{spring-11-work}}
+
+\begin{problem}[?]
 
 A topological space is \textbf{totally disconnected} if its only
 connected subsets are one-point sets.
@@ -682,9 +707,13 @@ disconnected?
 
 Is the converse true? Justify your answers.
 
+\end{problem}
+
 \hypertarget{fall-14-work}{%
 \subsubsection{\texorpdfstring{21 (Fall '14)
 \(\work\)}{21 (Fall '14) \textbackslash work}}\label{fall-14-work}}
+
+\begin{problem}[?]
 
 Let \(X\) and \(Y\) be topological spaces and let \(f : X \to Y\) be a
 function.
@@ -696,9 +725,13 @@ subspace topology).
 
 Prove that \(f\) is continuous.
 
+\end{problem}
+
 \hypertarget{spring-15-done}{%
 \subsubsection{\texorpdfstring{23 (Spring '15)
 \(\done\)}{23 (Spring '15) \textbackslash done}}\label{spring-15-done}}
+
+\begin{problem}[?]
 
 Define a family \({\mathcal{T}}\) of subsets of \({\mathbb{R}}\) by
 saying that \(A \in T\) is \(\iff A = \emptyset\) or
@@ -707,13 +740,15 @@ saying that \(A \in T\) is \(\iff A = \emptyset\) or
 Prove that \({\mathcal{T}}\) is a topology on \({\mathbb{R}}\), and that
 \({\mathbb{R}}\) is compact with respect to this topology.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -755,15 +790,21 @@ size \(n\). So pick \(U_1 \ni p_1, \cdots, U_n \ni p_n\); then
 \subsubsection{\texorpdfstring{25 (Fall '16)
 \(\work\)}{25 (Fall '16) \textbackslash work}}\label{fall-16-work}}
 
+\begin{problem}[?]
+
 Let \({\mathcal{S}}, {\mathcal{T}}\) be topologies on a set \(X\). Show
 that \({\mathcal{S}}\cap {\mathcal{T}}\) is a topology on \(X\).
 
 Give an example to show that \({\mathcal{S}}\cup {\mathcal{T}}\) need
 not be a topology.
 
-\hypertarget{spring-10-done}{%
+\end{problem}
+
+\hypertarget{spring-10-done-1}{%
 \subsubsection{\texorpdfstring{42 (Spring '10)
-\(\done\)}{42 (Spring '10) \textbackslash done}}\label{spring-10-done}}
+\(\done\)}{42 (Spring '10) \textbackslash done}}\label{spring-10-done-1}}
+
+\begin{problem}[?]
 
 Define an equivalence relation \(\sim\) on \({\mathbb{R}}\) by
 \(x \sim y\) if and only if \(x - y \in Q\). Let \(X\) be the set of
@@ -773,13 +814,15 @@ canonical projection \(\pi : {\mathbb{R}}\to X\).
 Describe, with proof, all open subsets of \(X\) with respect to this
 topology.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -815,12 +858,16 @@ Proof that \({\mathbb{R}}/{\mathbb{Q}}\) has the indiscrete topology:
 \subsubsection{\texorpdfstring{43 (Fall '12)
 \(\work\)}{43 (Fall '12) \textbackslash work}}\label{fall-12-work}}
 
+\begin{problem}[?]
+
 Let \(A\) denote a subset of points of \(S^2\) that looks exactly like
 the capital letter A. Let \(Q\) be the quotient of \(S^2\) given by
 identifying all points of \(A\) to a single point.
 
 Show that \(Q\) is homeomorphic to a familiar topological space and
 identify that space.
+
+\end{problem}
 
 \hypertarget{compactness-and-metric-spaces}{%
 \subsection{Compactness and Metric
@@ -829,6 +876,8 @@ Spaces}\label{compactness-and-metric-spaces}}
 \hypertarget{spring-06-work}{%
 \subsubsection{\texorpdfstring{1 (Spring '06)
 \(\work\)}{1 (Spring '06) \textbackslash work}}\label{spring-06-work}}
+
+\begin{problem}[?]
 
 Suppose \((X, d)\) is a metric space. State criteria for continuity of a
 function \(f : X \to X\) in terms of:
@@ -845,9 +894,13 @@ function \(f : X \to X\) in terms of:
 
 Then prove that (iii) implies (i).
 
+\end{problem}
+
 \hypertarget{fall-17-work}{%
 \subsubsection{\texorpdfstring{26 (Fall '17)
 \(\work\)}{26 (Fall '17) \textbackslash work}}\label{fall-17-work}}
+
+\begin{problem}[?]
 
 Let \(f : X \to Y\) be a continuous function between topological spaces.
 
@@ -865,34 +918,35 @@ false statement:
   If \(A\) is compact then \(f (A)\) is compact.
 \end{enumerate}
 
-\hypertarget{spring-12-done}{%
+\end{problem}
+
+\hypertarget{spring-12-work}{%
 \subsubsection{\texorpdfstring{2 (Spring '12)
-\(\done\)}{2 (Spring '12) \textbackslash done}}\label{spring-12-done}}
+\(\work\)}{2 (Spring '12) \textbackslash work}}\label{spring-12-work}}
+
+\begin{problem}[?]
 
 Let \(X\) be a topological space.
 
-\hypertarget{section}{%
-\paragraph{1}\label{section}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  State what it means for \(X\) to be compact.
+\item
+  Let
+  \(X = \left\{{0}\right\} \cup \left\{{{1\over n} \mathrel{\Big|}n \in {\mathbb{Z}}^+ }\right\}\).
+  Is \(X\) compact?
+\item
+  Let \(X = (0, 1]\). Is \(X\) compact?
+\end{enumerate}
 
-State what it means for \(X\) to be compact.
-
-\hypertarget{section-1}{%
-\paragraph{2}\label{section-1}}
-
-Let
-\(X = \left\{{0}\right\} \cup \left\{{{1\over n} \mathrel{\Big|}n \in {\mathbb{Z}}^+ }\right\}\).
-Is \(X\) compact?
-
-\hypertarget{section-2}{%
-\paragraph{3}\label{section-2}}
-
-Let \(X = (0, 1]\). Is \(X\) compact?
+\end{problem}
 
 \todo[inline]{Incomplete proof for part 3.}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
@@ -900,15 +954,13 @@ See Munkres p.164, especially for (ii).
 
 \end{concept}
 
-\hypertarget{section-3}{%
-\paragraph{1}\label{section-3}}
-
-See definitions in review doc.
-
-\hypertarget{section-4}{%
-\paragraph{2}\label{section-4}}
-
-Direct proof:
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  See definitions in review doc.
+\item
+  Direct proof:
+\end{enumerate}
 
 \begin{itemize}
 \tightlist
@@ -943,16 +995,21 @@ Direct proof:
   subcover of \(X\). \(\hfill\blacksquare\)
 \end{itemize}
 
-\hypertarget{section-5}{%
-\paragraph{3}\label{section-5}}
-
-Todo: Need direct proof.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Todo: Need direct proof.
+\end{enumerate}
 
 \end{solution}
 
 \hypertarget{spring-09-work}{%
 \subsubsection{\texorpdfstring{3 (Spring '09)
 \(\work\)}{3 (Spring '09) \textbackslash work}}\label{spring-09-work}}
+
+\begin{problem}[?]
 
 Let \((X, d)\) be a compact metric space, and let \(f : X \to X\) be an
 isometry:
@@ -961,9 +1018,13 @@ isometry:
 .\end{align*}
 Prove that \(f\) is a bijection.
 
+\end{problem}
+
 \hypertarget{spring-05-done}{%
 \subsubsection{\texorpdfstring{4 (Spring '05)
 \(\done\)}{4 (Spring '05) \textbackslash done}}\label{spring-05-done}}
+
+\begin{problem}[?]
 
 Suppose \((X, d)\) is a compact metric space and \(U\) is an open
 covering of \(X\).
@@ -972,13 +1033,15 @@ Prove that there is a number \(\delta > 0\) such that for every
 \(x \in X\), the ball of radius \(\delta\) centered at \(x\) is
 contained in some element of \(U\).
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1005,9 +1068,8 @@ for detailed proof.
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Claim}: the function
-    \(d({\,\cdot\,}, Y): X\to {\mathbb{R}}\) is continuous for a fixed
-    set.
+    \textbf{Claim}: the function \(d({-}, Y): X\to {\mathbb{R}}\) is
+    continuous for a fixed set.
   \item
     Proof: Todo, not obvious.
   \end{itemize}
@@ -1076,24 +1138,26 @@ for detailed proof.
 \subsubsection{\texorpdfstring{44 (Spring '15)
 \(\done\)}{44 (Spring '15) \textbackslash done}}\label{spring-15-done-1}}
 
-\hypertarget{a-1}{%
-\paragraph{a}\label{a-1}}
+\begin{problem}[?]
 
-Prove that a topological space that has a countable base for its
-topology also contains a countable dense subset.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that a topological space that has a countable base for its
+  topology also contains a countable dense subset.
+\item
+  Prove that the converse to (a) holds if the space is a metric space.
+\end{enumerate}
 
-\hypertarget{b-1}{%
-\paragraph{b}\label{b-1}}
-
-Prove that the converse to (a) holds if the space is a metric space.
+\end{problem}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1125,9 +1189,11 @@ Proof that \({\mathbb{R}}/{\mathbb{Q}}\) has the indiscrete topology:
 
 \end{solution}
 
-\hypertarget{fall-07-done-1}{%
+\hypertarget{fall-07-done}{%
 \subsubsection{\texorpdfstring{18 (Fall '07)
-\(\done\)}{18 (Fall '07) \textbackslash done}}\label{fall-07-done-1}}
+\(\done\)}{18 (Fall '07) \textbackslash done}}\label{fall-07-done}}
+
+\begin{problem}[?]
 
 Prove that if \((X, d)\) is a compact metric space, \(f : X \to X\) is a
 continuous map, and \(C\) is a constant with \(0 < C < 1\) such that
@@ -1136,13 +1202,15 @@ d(f (x), f (y)) \leq C \cdot d(x, y) \quad \forall x, y
 ,\end{align*}
 then \(f\) has a fixed point.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1183,15 +1251,19 @@ then \(f\) has a fixed point.
 \subsubsection{\texorpdfstring{19 (Spring '15)
 \(\done\)}{19 (Spring '15) \textbackslash done}}\label{spring-15-done-2}}
 
+\begin{problem}[?]
+
 Prove that the product of two connected topological spaces is connected.
+
+\end{problem}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1214,8 +1286,13 @@ Note that \((a, b) \in T_x\) for every \(x\), so
 \subsubsection{\texorpdfstring{20 (Fall '14)
 \(\done\)}{20 (Fall '14) \textbackslash done}}\label{fall-14-done}}
 
-\hypertarget{a-2}{%
-\paragraph{a}\label{a-2}}
+\begin{problem}[?]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+\end{enumerate}
 
 Define what it means for a topological space to be:
 
@@ -1227,47 +1304,49 @@ Define what it means for a topological space to be:
   \textbf{Locally connected}
 \end{enumerate}
 
-\hypertarget{b-2}{%
-\paragraph{b}\label{b-2}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Give, with proof, an example of a space that is connected but not
+  locally connected.
+\end{enumerate}
 
-Give, with proof, an example of a space that is connected but not
-locally connected.
+\end{problem}
 
 \todo[inline]{What's the picture?}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-Space & Connected & Locally Connected\tabularnewline
-\midrule
-\endhead
-\({\mathbb{R}}\) & \(\checkmark\) & \(\checkmark\)\tabularnewline
-\([0, 1] \cup[2, 3]\) & & \(\checkmark\)\tabularnewline
-Sine Curve & \(\checkmark\) &\tabularnewline
-\({\mathbb{Q}}\) & &\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{itemize}
+\tightlist
+\item
+  Consider \({\mathbb{R}}\), unions of intervals, \({\mathbb{Q}}\), and
+  the topologists sine curve.
+\end{itemize}
 
 \end{concept}
 
-\hypertarget{a-3}{%
-\paragraph{a}\label{a-3}}
+\begin{proof}[of a]
 
-See definitions in intro.
+See definitions in review doc.
 
-\hypertarget{b-3}{%
-\paragraph{b}\label{b-3}}
+\end{proof}
 
-\textbf{Claim}: the Topologist's sine curve \(X\) suffices.
+\begin{proof}[of b]
 
-Proof:
+\begin{claim}
+
+\(X\coloneqq\) the Topologist's sine curve suffices.
+
+\end{claim}
 
 \begin{itemize}
 \tightlist
@@ -1297,11 +1376,15 @@ Proof:
   \end{itemize}
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-18-work}{%
 \subsubsection{\texorpdfstring{22 (Fall '18)
 \(\work\)}{22 (Fall '18) \textbackslash work}}\label{fall-18-work}}
+
+\begin{problem}[?]
 
 Let \(X\) be a compact space and let \(f : X \times R \to R\) be a
 continuous function such that \(f (x, 0) > 0\) for all \(x \in X\).
@@ -1312,71 +1395,77 @@ whenever \({\left\lvert {t} \right\rvert} < \varepsilon\).
 Moreover give an example showing that this conclusion may not hold if
 \(X\) is not assumed compact.
 
+\end{problem}
+
 \hypertarget{spring-16-work}{%
 \subsubsection{\texorpdfstring{24 (Spring '16)
 \(\work\)}{24 (Spring '16) \textbackslash work}}\label{spring-16-work}}
 
-In each part of this problem \(X\) is a compact topological space.
+\begin{problem}[?]
 
-Give a proof or a counterexample for each statement.
+In each part of this problem \(X\) is a compact topological space. Give
+a proof or a counterexample for each statement.
 
-\hypertarget{a-4}{%
-\paragraph{a}\label{a-4}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  If \(\left\{{F_n }\right\}_{n=1}^\infty\) is a sequence of nonempty
+  \emph{closed} subsets of \(X\) such that \(F_{n+1} \subset F_{n}\) for
+  all \(n\) then
+  \begin{align*}\cap^\infty_{n=1} F_n\neq \emptyset.\end{align*}
+\item
+  If \(\left\{{O_n}\right\}_{n=1}^\infty\) is a sequence of nonempty
+  \emph{open} subsets of \(X\) such that \(O_{n+1} \subset O_n\) for all
+  \(n\) then
+  \begin{align*}\cap_{n=1}^\infty O_{n}\neq \emptyset.\end{align*}
+\end{enumerate}
 
-If \(\left\{{F_n }\right\}_{n=1}^\infty\) is a sequence of nonempty
-\emph{closed} subsets of \(X\) such that \(F_{n+1} \subset F_{n}\) for
-all \(n\) then
-\begin{align*}\cap^\infty_{n=1} F_n\neq \emptyset.\end{align*}
-
-\hypertarget{b-4}{%
-\paragraph{b}\label{b-4}}
-
-If \(\left\{{O_n}\right\}_{n=1}^\infty\) is a sequence of nonempty
-\emph{open} subsets of \(X\) such that \(O_{n+1} \subset O_n\) for all
-\(n\) then
-\begin{align*}\cap_{n=1}^\infty O_{n}\neq \emptyset.\end{align*}
+\end{problem}
 
 \hypertarget{fall-17-work-1}{%
 \subsubsection{\texorpdfstring{27 (Fall '17)
 \(\work\)}{27 (Fall '17) \textbackslash work}}\label{fall-17-work-1}}
 
+\begin{problem}[?]
+
 A metric space is said to be \textbf{totally bounded} if for every
 \(\varepsilon> 0\) there exists a finite cover of \(X\) by open balls of
 radius \(\varepsilon\).
 
-\hypertarget{a-5}{%
-\paragraph{a}\label{a-5}}
-
-Show: a metric space \(X\) is totally bounded iff every sequence in
-\(X\) has a Cauchy subsequence.
-
-\hypertarget{b-5}{%
-\paragraph{b}\label{b-5}}
-
-Exhibit a complete metric space \(X\) and a closed subset \(A\) of \(X\)
-that is bounded but not totally bounded.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show: a metric space \(X\) is totally bounded iff every sequence in
+  \(X\) has a Cauchy subsequence.
+\item
+  Exhibit a complete metric space \(X\) and a closed subset \(A\) of
+  \(X\) that is bounded but not totally bounded.
+\end{enumerate}
 
 \begin{quote}
 You are not required to prove that your example has the stated
 properties.
 \end{quote}
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Use diagonal trick to construct the Cauchy sequence.
+\end{itemize}
 
 \end{concept}
 
-\begin{quote}
-Notes: use diagonal trick to construct the Cauchy sequence.
-\end{quote}
-
-\hypertarget{a-6}{%
-\paragraph{a}\label{a-6}}
+\begin{proof}[of a]
 
 \(\implies\):
 
@@ -1411,8 +1500,9 @@ always be done) and defining
 Then \(\left\{{x_n}\right\}\) is not Cauchy, because
 \(d(x_i, x_j) > \varepsilon\) for every \(i\neq j\).
 
-\hypertarget{b-6}{%
-\paragraph{b}\label{b-6}}
+\end{proof}
+
+\begin{proof}[of b]
 
 Take \(X = C^0([0, 1])\) with the sup-norm, then \(f_n(x) = x^n\) are
 all bounded by 1, but \({\left\lVert {f_i - f_j} \right\rVert} = 1\) for
@@ -1421,41 +1511,76 @@ totally bounded.
 
 Moreover, \(\left\{{f_n}\right\}\) is closed. (Why?)
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-19-1-done}{%
 \subsubsection{\texorpdfstring{Spring '19 \#1
 \(\done\)}{Spring '19 \#1 \textbackslash done}}\label{spring-19-1-done}}
 
-Is every complete bounded metric space compact?
+\begin{problem}[?]
 
-If so, give a proof; if not, give a counterexample.
+Is every complete bounded metric space compact? If so, give a proof; if
+not, give a counterexample.
+
+\end{problem}
 
 \todo[inline]{Review, from last year.}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
+
+\begin{itemize}
+\item
+  Complete and \textbf{totally} bounded \(\implies\) compact.
+\item
+  Definition: A space \(X\) is \emph{totally bounded} if for every
+  \(\varepsilon >0\), there is a finite cover
+  \(X \subseteq \cup_\alpha B_\alpha(\varepsilon)\) such that the radius
+  of each ball is less than \(\varepsilon\).
+\item
+  Definition: A subset of a space \(S \subset X\) is \emph{bounded} if
+  there exists a \(B(r)\) such that \(r<\infty\) and
+  \(S \subseteq B(r)\)
+\item
+  Totally bounded \(\implies\) bounded
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Counterexample to converse: \({\mathbb{N}}\) with the discrete
+    metric.
+  \item
+    Equivalent for Euclidean metric
+  \end{itemize}
+\item
+  Compact \(\implies\) totally bounded.
+\item
+  Counterexample for problem: the unit ball in any Hilbert (or Banach)
+  space of infinite dimension is closed, bounded, and not compact.
+\item
+  Second counterexample:
+  \(({\mathbb{R}}, (x,y) \mapsto \frac{{\left\lvert {x-y} \right\rvert}}{1 + {\left\lvert {x-y} \right\rvert}})\).
+\item
+  Best counterexample:
+  \(X = \left({\mathbb{Z}}, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)\).
+  This metric makes \(X\) complete for any \(X\), then take
+  \({\mathbb{N}}\subset X\). All sets are closed, and bounded, so we
+  have a complete, closed, bounded set that is not compact -- take that
+  cover \(U_i = B(1, i)\).
+\item
+  Useful tool: \((X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}\) where
+  the RHS is now a bounded space. This preserves all topological
+  properties (e.g.~compactness).
+\end{itemize}
 
 \end{concept}
-
-Complete and \textbf{totally} bounded \(\implies\) compact. -
-Definition: A space \(X\) is \emph{totally bounded} if for every
-\(\varepsilon >0\), there is a finite cover
-\(X \subseteq \cup_\alpha B_\alpha(\varepsilon)\) such that the radius
-of each ball is less than \(\varepsilon\). - Definition: A subset of a
-space \(S \subset X\) is \emph{bounded} if there exists a \(B(r)\) such
-that \(r<\infty\) and \(S \subseteq B(r)\) - Totally bounded
-\(\implies\) bounded - Counterexample to converse: \({\mathbb{N}}\) with
-the discrete metric. - Equivalent for Euclidean metric - Compact
-\(\implies\) totally bounded.
-
-Counterexample for problem: the unit ball in any Hilbert (or Banach)
-space of infinite dimenion is closed, bounded, and not compact.
 
 \begin{proof}[?]
 
@@ -1478,25 +1603,13 @@ not be compact.
 
 \end{proof}
 
-Second counterexample:
-\(({\mathbb{R}}, (x,y) \mapsto \frac{{\left\lvert {x-y} \right\rvert}}{1 + {\left\lvert {x-y} \right\rvert}})\).
-
-Best counterexample:
-\(X = \left({\mathbb{Z}}, ~\rho ( x , y ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } x \neq y } \\ { 0 } & { \text { if } x = y } \end{array} \right.\right)\).
-This metric makes \(X\) complete for any \(X\), then take
-\({\mathbb{N}}\subset X\). All sets are closed, and bounded, so we have
-a complete, closed, bounded set that is not compact -- take that cover
-\(U_i = B(1, i)\).
-
-Useful tool: \((X, d) \cong_{\text{Top}} (X, \min{(d(x,y), 1)}\) where
-the RHS is now a bounded space. This preserves all topological
-properties (e.g.~compactness).
-
 \end{solution}
 
 \hypertarget{spring-2019-2-done}{%
 \subsubsection{\texorpdfstring{Spring 2019 \#2
 \(\done\)}{Spring 2019 \#2 \textbackslash done}}\label{spring-2019-2-done}}
+
+\begin{problem}[?]
 
 Let \(X\) be Hausdorff, and recall that the \emph{one-point
 compactification} \(\tilde X\) is given by the following:
@@ -1513,13 +1626,15 @@ compactification} \(\tilde X\) is given by the following:
 Prove that this description defines a topology on \(\tilde X\) making
 \(\tilde X\) compact.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 Definition: \((X, \tau)\) where \(\tau \subseteq \mathcal P(X)\) is a
 \emph{topological space} iff
@@ -1563,29 +1678,31 @@ We need to show that \(T \coloneqq\tau \cup\tau'\) forms a topology.
 \subsubsection{\texorpdfstring{9 (Spring '13)
 \(\work\)}{9 (Spring '13) \textbackslash work}}\label{spring-13-work}}
 
+\begin{problem}[?]
+
 Recall that a topological space is said to be \textbf{connected} if
 there does not exist a pair \(U, V\) of disjoint nonempty subsets whose
 union is \(X\).
 
-\hypertarget{i}{%
-\paragraph{i}\label{i}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(X\) is connected if and only if the only subsets of \(X\)
+  that are both open and closed are \(X\) and the empty set.
+\item
+  Suppose that \(X\) is connected and let \(f : X \to {\mathbb{R}}\) be
+  a continuous map. If \(a\) and \(b\) are two points of \(X\) and \(r\)
+  is a point of \({\mathbb{R}}\) lying between \(f (a)\) and \(f (b)\)
+  show that there exists a point \(c\) of \(X\) such that \(f (c) = r\).
+\end{enumerate}
 
-Prove that \(X\) is connected if and only if the only subsets of \(X\)
-that are both open and closed are \(X\) and the empty set.
-
-\hypertarget{ii}{%
-\paragraph{ii}\label{ii}}
-
-Suppose that \(X\) is connected and let \(f : X \to {\mathbb{R}}\) be a
-continuous map.
-
-If \(a\) and \(b\) are two points of \(X\) and \(r\) is a point of
-\({\mathbb{R}}\) lying between \(f (a)\) and \(f (b)\) show that there
-exists a point \(c\) of \(X\) such that \(f (c) = r\).
+\end{problem}
 
 \hypertarget{fall-05-done-1}{%
 \subsubsection{\texorpdfstring{10 (Fall '05)
 \(\done\)}{10 (Fall '05) \textbackslash done}}\label{fall-05-done-1}}
+
+\begin{problem}[?]
 
 Let
 \begin{align*}
@@ -1594,18 +1711,21 @@ X = \left\{{(0, y) \mathrel{\Big|}- 1 \leq y \leq 1}\right\} \cup \left\{{\qty{x
 
 Prove that \(X\) is connected but not path connected.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\todo[inline]{???}
+
+\envlist
 
 \end{concept}
 
-\hypertarget{proof-1-3}{%
-\paragraph{Proof 1}\label{proof-1-3}}
+\begin{proof}[Variant 1]
 
 \(X\) is connected:
 
@@ -1774,8 +1894,9 @@ Prove that \(X\) is connected but not path connected.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{proof-2-3}{%
-\paragraph{Proof 2?}\label{proof-2-3}}
+\end{proof}
+
+\begin{proof}[Variant 2]
 
 Let \(X = A \cup B\) with
 \(A = \left\{{(0, y) {~\mathrel{\Big|}~}y\in [-1, 1] }\right\}\) and
@@ -1814,11 +1935,15 @@ whereas
 \({\left\lVert {f(\mathbf{x}_n)} \right\rVert} = 1 > \varepsilon\) for
 all \(n\), a contradiction.
 
+\end{proof}
+
 \end{solution}
 
-\hypertarget{fall-18-done}{%
+\hypertarget{fall-18-work-1}{%
 \subsubsection{\texorpdfstring{11 (Fall '18)
-\(\done\)}{11 (Fall '18) \textbackslash done}}\label{fall-18-done}}
+\(\work\)}{11 (Fall '18) \textbackslash work}}\label{fall-18-work-1}}
+
+\begin{problem}[?]
 
 Let
 \begin{align*} X=\left\{(x, y) \in \mathbb{R}^{2} | x>0, y \geq 0, \text { and } \frac{y}{x} \text { is rational }\right\} \end{align*}
@@ -1827,15 +1952,17 @@ on \({\mathbb{R}}^2\).
 
 Prove or disprove that \(X\) is connected.
 
+\end{problem}
+
 \todo[inline]{Not convincing..}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1855,6 +1982,27 @@ were connected, then \(f(X)\) would also be connected, but
 
 \end{solution}
 
+\hypertarget{spring-2021-2}{%
+\subsubsection{Spring 2021 \#2}\label{spring-2021-2}}
+
+\begin{problem}[Spring 2021, 2]
+
+Let \(X \coloneqq\prod_{==1}^{\infty} \left\{{ 0, 1 }\right\}\) endowed
+with the product topology.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that for all points \(x,y\in X\) with \(x\neq y\), there are open
+  subsets \(U_x, U_y \subset X\) such that \(x\in U_x, y\in U_y\), with
+  \(U_x \cup U_y = X\) and \(U_x \cap U_y = \emptyset\).
+\item
+  Show that \(X\) is totally disconnected, i.e.~the only nonempty
+  connected subsets of \(X\) are singletons.
+\end{enumerate}
+
+\end{problem}
+
 \hypertarget{hausdorff-spaces-and-separation}{%
 \subsection{Hausdorff Spaces and
 Separation}\label{hausdorff-spaces-and-separation}}
@@ -1863,27 +2011,32 @@ Separation}\label{hausdorff-spaces-and-separation}}
 \subsubsection{\texorpdfstring{29 (Fall '14)
 \(\work\)}{29 (Fall '14) \textbackslash work}}\label{fall-14-work-1}}
 
-Is every product (finite or infinite) of Hausdorff spaces Hausdorff?
+\begin{problem}[?]
 
-If yes, prove it. If no, give a counterexample.
+Is every product (finite or infinite) of Hausdorff spaces Hausdorff? If
+yes, prove it. If no, give a counterexample.
+
+\end{problem}
 
 \hypertarget{spring-18-done}{%
 \subsubsection{\texorpdfstring{30 (Spring '18)
 \(\done\)}{30 (Spring '18) \textbackslash done}}\label{spring-18-done}}
 
-Suppose that \(X\) is a Hausdorff topological space and that
-\(A \subset X\).
+\begin{problem}[?]
 
-Prove that if \(A\) is compact in the subspace topology then \(A\) is
-closed as a subset of X.
+Suppose that \(X\) is a Hausdorff topological space and that
+\(A \subset X\). Prove that if \(A\) is compact in the subspace topology
+then \(A\) is closed as a subset of X.
+
+\end{problem}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -1908,25 +2061,29 @@ But then defining \(V \coloneqq\cup_{x\in X\setminus A} V_x\), we have
 \subsubsection{\texorpdfstring{31 (Spring '09)
 \(\done\)}{31 (Spring '09) \textbackslash done}}\label{spring-09-done}}
 
-\hypertarget{a-7}{%
-\paragraph{a}\label{a-7}}
+\begin{problem}[Spring 2009, 31]
 
-Show that a continuous bijection from a compact space to a Hausdorff
-space is a homeomorphism.
+\envlist
 
-\hypertarget{b-7}{%
-\paragraph{b}\label{b-7}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that a continuous bijection from a compact space to a Hausdorff
+  space is a homeomorphism.
+\item
+  Give an example that shows that the ``Hausdorff'' hypothesis in part
+  (a) is necessary.
+\end{enumerate}
 
-Give an example that shows that the ``Hausdorff'' hypothesis in part (a)
-is necessary.
+\end{problem}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1943,8 +2100,7 @@ is necessary.
 
 \end{concept}
 
-\hypertarget{a-8}{%
-\paragraph{a}\label{a-8}}
+\begin{proof}[of a]
 
 We'll show that \(f\) is a closed map.
 
@@ -1960,8 +2116,9 @@ Let \(U \in X\) be closed.
   Since \(Y\) is Hausdorff, \(f(U)\) is closed.
 \end{itemize}
 
-\hypertarget{b-8}{%
-\paragraph{b}\label{b-8}}
+\end{proof}
+
+\begin{proof}[of b]
 
 Note that any finite space is clearly compact.
 
@@ -1973,13 +2130,15 @@ and \(f\) is clearly a bijection.
 Let \(g\) be the inverse map; then note that \(1 \in \tau_1\) but
 \(g^{-1}(1) = 1\) is not in \(\tau_2\), so \(g\) is not continuous.
 
-\(\hfill\blacksquare\)
+\end{proof}
 
 \end{solution}
 
 \hypertarget{fall-14-done-1}{%
 \subsubsection{\texorpdfstring{32 (Fall '14)
 \(\done\)}{32 (Fall '14) \textbackslash done}}\label{fall-14-done-1}}
+
+\begin{problem}[?]
 
 Let \(X\) be a topological space and let
 \begin{align*}
@@ -1989,13 +2148,16 @@ Let \(X\) be a topological space and let
 Show that \(X\) is a Hausdorff space if and only if \(\Delta\) is closed
 in \(X \times X\).
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\todo[inline]{todo}
+\envlist
 
 \end{concept}
 
@@ -2057,26 +2219,30 @@ in \(X \times X\).
 \subsubsection{\texorpdfstring{33 (Fall '06)
 \(\work\)}{33 (Fall '06) \textbackslash work}}\label{fall-06-work}}
 
+\begin{problem}[?]
+
 If \(f\) is a function from \(X\) to \(Y\) , consider the graph
 \begin{align*}
 G = \left\{{(x, y) \in X \times Y \mathrel{\Big|}f (x) = y}\right\}
 .\end{align*}
 
-\hypertarget{a-9}{%
-\paragraph{a}\label{a-9}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(f\) is continuous and \(Y\) is Hausdorff, then \(G\)
+  is a closed subset of \(X \times Y\).
+\item
+  Prove that if \(G\) is closed and \(Y\) is compact, then \(f\) is
+  continuous.
+\end{enumerate}
 
-Prove that if \(f\) is continuous and \(Y\) is Hausdorff, then \(G\) is
-a closed subset of \(X \times Y\).
-
-\hypertarget{b-9}{%
-\paragraph{b}\label{b-9}}
-
-Prove that if \(G\) is closed and \(Y\) is compact, then \(f\) is
-continuous.
+\end{problem}
 
 \hypertarget{fall-04-work}{%
 \subsubsection{\texorpdfstring{34 (Fall '04)
 \(\work\)}{34 (Fall '04) \textbackslash work}}\label{fall-04-work}}
+
+\begin{problem}[?]
 
 Let X be a noncompact locally compact Hausdorff space, with topology
 \({\mathcal{T}}\). Let \(\tilde X = X \cup \left\{{\infty}\right\}\)
@@ -2086,74 +2252,94 @@ Let X be a noncompact locally compact Hausdorff space, with topology
 {\mathcal{B}}= T \cup \left\{{S \cup \left\{{\infty}\right\}\mathrel{\Big|}S \subset X,~~ X \backslash S \text{ is compact}}\right\}
 .\end{align*}
 
-\hypertarget{a-10}{%
-\paragraph{a}\label{a-10}}
-
-Prove that \({\mathcal{B}}\) is a topology on \(\tilde X\), that the
-resulting space is compact, and that \(X\) is dense in \(\tilde X\).
-
-\hypertarget{b-10}{%
-\paragraph{b}\label{b-10}}
-
-Prove that if \(Y \supset X\) is a compact space such that \(X\) is
-dense in \(Y\) and \(Y \backslash X\) is a singleton, then Y is
-homeomorphic to \(\tilde X\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \({\mathcal{B}}\) is a topology on \(\tilde X\), that the
+  resulting space is compact, and that \(X\) is dense in \(\tilde X\).
+\item
+  Prove that if \(Y \supset X\) is a compact space such that \(X\) is
+  dense in \(Y\) and \(Y \backslash X\) is a singleton, then Y is
+  homeomorphic to \(\tilde X\).
+\end{enumerate}
 
 \begin{quote}
 The space \(\tilde X\) is called the \textbf{one-point compactification}
 of \(X\).
 \end{quote}
 
-\hypertarget{c}{%
-\paragraph{c}\label{c}}
-
-Find familiar spaces that are homeomorphic to the one point
-compactifications of
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Find familiar spaces that are homeomorphic to the one point
+  compactifications of
+\item
+  \(X = (0, 1)\) and
+\end{enumerate}
 
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
-\item
-  \(X = (0, 1)\) and
+\setcounter{enumi}{1}
+\tightlist
 \item
   \(X = {\mathbb{R}}^2\).
 \end{enumerate}
 
+\end{problem}
+
 \hypertarget{fall-16-work-1}{%
 \subsubsection{\texorpdfstring{35 (Fall '16)
 \(\work\)}{35 (Fall '16) \textbackslash work}}\label{fall-16-work-1}}
+
+\begin{problem}[?]
 
 Prove that a metric space \(X\) is \textbf{normal}, i.e.~if
 \(A, B \subset X\) are closed and disjoint then there exist open sets
 \(A \subset U \subset X, ~B \subset V \subset X\) such that
 \(U \cap V = \emptyset\).
 
+\end{problem}
+
 \hypertarget{spring-06-work-1}{%
 \subsubsection{\texorpdfstring{36 (Spring '06)
 \(\work\)}{36 (Spring '06) \textbackslash work}}\label{spring-06-work-1}}
 
+\begin{problem}[?]
+
 Prove that every compact, Hausdorff topological space is normal.
+
+\end{problem}
 
 \hypertarget{spring-09-work-1}{%
 \subsubsection{\texorpdfstring{37 (Spring '09)
 \(\work\)}{37 (Spring '09) \textbackslash work}}\label{spring-09-work-1}}
 
+\begin{problem}[?]
+
 Show that a connected, normal topological space with more than a single
 point is uncountable.
+
+\end{problem}
 
 \hypertarget{spring-08-done}{%
 \subsubsection{\texorpdfstring{38 (Spring '08)
 \(\done\)}{38 (Spring '08) \textbackslash done}}\label{spring-08-done}}
 
+\begin{problem}[?]
+
 Give an example of a quotient map in which the domain is Hausdorff, but
 the quotient is not.
 
+\end{problem}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
@@ -2184,31 +2370,42 @@ Direct proof that \({\mathbb{R}}/{\mathbb{Q}}\) isn't Hausdorff:
 \subsubsection{\texorpdfstring{39 (Fall '04)
 \(\work\)}{39 (Fall '04) \textbackslash work}}\label{fall-04-work-1}}
 
-Let \(X\) be a compact Hausdorff space and suppose
-\(R \subset X \times X\) is a closed equivalence relation.
+\begin{problem}[?]
 
-Show that the quotient space \(X/R\) is Hausdorff.
+Let \(X\) be a compact Hausdorff space and suppose
+\(R \subset X \times X\) is a closed equivalence relation. Show that the
+quotient space \(X/R\) is Hausdorff.
+
+\end{problem}
 
 \hypertarget{spring-18-work}{%
 \subsubsection{\texorpdfstring{40 (Spring '18)
 \(\work\)}{40 (Spring '18) \textbackslash work}}\label{spring-18-work}}
 
-Let \(U \subset {\mathbb{R}}^n\) be an open set which is bounded in the
-standard Euclidean metric.
+\begin{problem}[?]
 
-Prove that the quotient space \({\mathbb{R}}^n / U\) is not Hausdorff.
+Let \(U \subset {\mathbb{R}}^n\) be an open set which is bounded in the
+standard Euclidean metric. Prove that the quotient space
+\({\mathbb{R}}^n / U\) is not Hausdorff.
+
+\end{problem}
 
 \hypertarget{fall-09-work}{%
 \subsubsection{\texorpdfstring{41 (Fall '09)
 \(\work\)}{41 (Fall '09) \textbackslash work}}\label{fall-09-work}}
 
-Let \(A\) be a closed subset of a normal topological space \(X\).
+\begin{problem}[?]
 
-Show that both \(A\) and the quotient \(X/A\) are normal.
+Let \(A\) be a closed subset of a normal topological space \(X\). Show
+that both \(A\) and the quotient \(X/A\) are normal.
+
+\end{problem}
 
 \hypertarget{spring-11-work-1}{%
 \subsubsection{\texorpdfstring{45 (Spring '11)
 \(\work\)}{45 (Spring '11) \textbackslash work}}\label{spring-11-work-1}}
+
+\begin{problem}[?]
 
 Recall that a topological space is \textbf{regular} if for every point
 \(p \in X\) and for every closed subset \(F \subset X\) not containing
@@ -2218,16 +2415,52 @@ Recall that a topological space is \textbf{regular} if for every point
 Let \(X\) be a regular space that has a countable basis for its
 topology, and let \(U\) be an open subset of \(X\).
 
-\hypertarget{a-11}{%
-\paragraph{a}\label{a-11}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(U\) is a countable union of closed subsets of \(X\).
+\item
+  Show that there is a continuous function \(f : X \to [0,1]\) such that
+  \(f (x) > 0\) for \(x \in U\) and \(f (x) = 0\) for \(x \in U\).
+\end{enumerate}
 
-Show that \(U\) is a countable union of closed subsets of \(X\).
+\end{problem}
 
-\hypertarget{b-11}{%
-\paragraph{b}\label{b-11}}
+\hypertarget{analysis-and-metric-spaces}{%
+\subsection{Analysis and Metric
+Spaces}\label{analysis-and-metric-spaces}}
 
-Show that there is a continuous function \(f : X \to [0,1]\) such that
-\(f (x) > 0\) for \(x \in U\) and \(f (x) = 0\) for \(x \in U\).
+\hypertarget{spring-2021-3}{%
+\subsubsection{Spring 2021 \#3}\label{spring-2021-3}}
+
+\begin{problem}[Spring 2021, 3]
+
+For nonempty subsets \(A, B\) of a metric space \((X, d)\), define the
+\textbf{setwise distance} as
+\begin{align*}
+d(A, B) \coloneqq\inf \left\{{ d(a, b) {~\mathrel{\Big|}~}a\in A,\, b\in B }\right\} 
+.\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose that \(A\) and \(B\) are compact. Show that there is an
+  \(a\in A\) and \(b\in B\) such that \(d(A, B) = d(a, b)\).
+\item
+  Suppose that \(A\) is closed and \(B\) is compact. Show that if
+  \(d(A, B) = 0\) then \(A \cap B = \emptyset\).
+\item
+  Give an example in which \(A\) is closed, \(B\) is compact, and
+  \(d(a, b) > d(A, B)\) for all \(a\in A\) and \(b\in B\).
+\end{enumerate}
+
+\begin{quote}
+Hint: take \(X = \left\{{ 0 }\right\} \cup(1, 2] \subset {\mathbb{R}}\).
+Throughout this problem, you may use without proof that the map
+\(d:X\times X\to {\mathbb{R}}\) is continuous.
+\end{quote}
+
+\end{problem}
 
 \hypertarget{the-fundamental-group}{%
 \section{The Fundamental Group}\label{the-fundamental-group}}
@@ -2284,42 +2517,31 @@ just conjugate:
 \subsection{\texorpdfstring{2 (Spring '09/Spring '07/Fall '07/Fall '06)
 \(\work\)}{2 (Spring '09/Spring '07/Fall '07/Fall '06) \textbackslash work}}\label{spring-09spring-07fall-07fall-06-work}}
 
-\hypertarget{a.}{%
-\subsubsection{a.}\label{a.}}
-
-State van Kampen's theorem.
-
-\hypertarget{b.}{%
-\subsubsection{b.}\label{b.}}
-
-Calculate the fundamental group of the space obtained by taking two
-copies of the torus \(T = S^1 \times S^1\) and gluing them along a
-circle \(S^1 \times {p}\) where \(p\) is a point in \(S^1\).
-
-\hypertarget{c.}{%
-\subsubsection{c.~}\label{c.}}
-
-Calculate the fundamental group of the Klein bottle.
-
-\hypertarget{d.}{%
-\subsubsection{d.~}\label{d.}}
-
-Calculate the fundamental group of the one-point union of
-\(S^1 \times S^1\) and \(S^1\).
-
-\hypertarget{e.}{%
-\subsubsection{e.}\label{e.}}
-
-Calculate the fundamental group of the one-point union of
-\(S^1 \times S^1\) and \({\mathbb{RP}}^2\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  State van Kampen's theorem.
+\item
+  Calculate the fundamental group of the space obtained by taking two
+  copies of the torus \(T = S^1 \times S^1\) and gluing them along a
+  circle \(S^1 \times {p}\) where \(p\) is a point in \(S^1\).
+\item
+  Calculate the fundamental group of the Klein bottle.
+\item
+  Calculate the fundamental group of the one-point union of
+  \(S^1 \times S^1\) and \(S^1\).
+\item
+  Calculate the fundamental group of the one-point union of
+  \(S^1 \times S^1\) and \({\mathbb{RP}}^2\).
+\end{enumerate}
 
 \begin{quote}
 \textbf{Note: multiple appearances!!}
 \end{quote}
 
-\hypertarget{fall-18-work-1}{%
+\hypertarget{fall-18-work-2}{%
 \subsection{\texorpdfstring{3 (Fall '18)
-\(\work\)}{3 (Fall '18) \textbackslash work}}\label{fall-18-work-1}}
+\(\work\)}{3 (Fall '18) \textbackslash work}}\label{fall-18-work-2}}
 
 Prove the following portion of van Kampen's theorem. If \(X = A\cup B\)
 and \(A\), \(B\), and \(A \cap B\) are nonempty and path connected with
@@ -2427,28 +2649,36 @@ and identify \(X_k\) in terms of the classification of surfaces.
 \subsection{\texorpdfstring{12 (Spring '13)
 \(\work\)}{12 (Spring '13) \textbackslash work}}\label{spring-13-work-2}}
 
-\hypertarget{section-6}{%
-\subsubsection{1}\label{section-6}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(A\) be a subspace of a topological space \(X\). Define what it
+  means for \(A\) to be a \textbf{deformation retract} of \(X\).
+\item
+  Consider \(X_1\) the ``planar figure eight'' and
+  \begin{align*}X_2 = S^1 \cup ({0} \times [-1, 1])\end{align*}
+  (the ``theta space''). Show that \(X_1\) and \(X_2\) have isomorphic
+  fundamental groups.
+\item
+  Prove that the fundamental group of \(X_2\) is a free group on two
+  generators.
+\end{enumerate}
 
-Let \(A\) be a subspace of a topological space \(X\).
+\hypertarget{spring-2021-4}{%
+\subsection{Spring 2021 \#4}\label{spring-2021-4}}
 
-Define what it means for \(A\) to be a \textbf{deformation retract} of
-\(X\).
+\begin{problem}[Spring 2021, 4]
 
-\hypertarget{section-7}{%
-\subsubsection{2}\label{section-7}}
+Suppose that \(X\) is a topological space and \(x_0\in X\), and suppose
+that every continuous map \(\gamma: S^1 \to X\) is freely homotopic to
+the constant map to \(x_0\). Prove that
+\(\pi_1(X, x_0) = \left\{{ e }\right\}\).
 
-Consider \(X_1\) the ``planar figure eight'' and
-\begin{align*}X_2 = S^1 \cup ({0} \times [-1, 1])\end{align*}
-(the ``theta space'').
+\begin{quote}
+Note that ``freely'' means there are no conditions on basepoints.
+\end{quote}
 
-Show that \(X_1\) and \(X_2\) have isomorphic fundamental groups.
-
-\hypertarget{section-8}{%
-\subsubsection{3}\label{section-8}}
-
-Prove that the fundamental group of \(X_2\) is a free group on two
-generators.
+\end{problem}
 
 \hypertarget{covering-spaces}{%
 \section{Covering Spaces}\label{covering-spaces}}
@@ -2457,29 +2687,24 @@ generators.
 \subsection{\texorpdfstring{1 (Spring 11/Spring '14)
 \(\done\)}{1 (Spring 11/Spring '14) \textbackslash done}}\label{spring-11spring-14-done}}
 
-\hypertarget{a-12}{%
-\subsubsection{a}\label{a-12}}
-
-Give the definition of a \textbf{covering space} \(\widehat{X}\) (and
-\textbf{covering map} \(p : \widehat{X} \to X\)) for a topological space
-\(X\).
-
-\hypertarget{b-12}{%
-\subsubsection{b}\label{b-12}}
-
-State the homotopy lifting property of covering spaces. Use it to show
-that a covering map \(p : \widehat{X} \to X\) induces an injection
-\begin{align*}
-p^\ast : \pi_1 (\widehat{X}, \widehat{x}) \to \pi_1 (X, p(\widehat{x}))
-\end{align*}
-on fundamental groups.
-
-\hypertarget{c-1}{%
-\subsubsection{c}\label{c-1}}
-
-Let \(p : \widehat{X} \to X\) be a covering map with \(Y\) and \(X\)
-path-connected. Suppose that the induced map \(p^\ast\) on \(\pi_1\) is
-an isomorphism.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Give the definition of a \textbf{covering space} \(\widehat{X}\) (and
+  \textbf{covering map} \(p : \widehat{X} \to X\)) for a topological
+  space \(X\).
+\item
+  State the homotopy lifting property of covering spaces. Use it to show
+  that a covering map \(p : \widehat{X} \to X\) induces an injection
+  \begin{align*}
+  p^\ast : \pi_1 (\widehat{X}, \widehat{x}) \to \pi_1 (X, p(\widehat{x}))
+  \end{align*}
+  on fundamental groups.
+\item
+  Let \(p : \widehat{X} \to X\) be a covering map with \(Y\) and \(X\)
+  path-connected. Suppose that the induced map \(p^\ast\) on \(\pi_1\)
+  is an isomorphism.
+\end{enumerate}
 
 Prove that \(p\) is a homeomorphism.
 
@@ -2495,13 +2720,12 @@ Prove that \(p\) is a homeomorphism.
 
 \end{concept}
 
-\hypertarget{a-13}{%
-\subsubsection{a}\label{a-13}}
-
-\todo[inline]{Todo}.
-
-\hypertarget{b-13}{%
-\subsubsection{b}\label{b-13}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \todo[inline]{Todo}.
+\item
+\end{enumerate}
 
 Homotopy lifting property:
 
@@ -2527,8 +2751,12 @@ this lifts to \(\tilde H: I\times S^1 \to \tilde X\). Noting that
 this says that \(\gamma\) is homotopic to a constant loop and thus
 nullhomotopic.
 
-\hypertarget{c-2}{%
-\subsubsection{c}\label{c-2}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+\end{enumerate}
 
 Since both spaces are path-connected, the degree o the covering map
 \(\pi\) is precisely the index of the included fundamental group. This
@@ -2540,53 +2768,52 @@ forces \(\pi\) to be a degree 1 covering and hence a homeomorphism.
 \subsection{\texorpdfstring{2 (Fall '06/Fall '09/Fall '15)
 \(\work\)}{2 (Fall '06/Fall '09/Fall '15) \textbackslash work}}\label{fall-06fall-09fall-15-work}}
 
-\hypertarget{a-14}{%
-\subsubsection{a}\label{a-14}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Give the definitions of \textbf{covering space} and \textbf{deck
+  transformation} (or covering transformation).
+\item
+  Describe the universal cover of the Klein bottle and its group of deck
+  transformations.
+\item
+  Explicitly give a collection of deck transformations on
+  \begin{align*}\left\{{(x, y) \mathrel{\Big|}-1 \leq x \leq 1, -\infty < y < \infty}\right\}\end{align*}
+  such that the quotient is a Möbius band.
+\item
+  Find the universal cover of \({\mathbb{RP}}^2 \times S^1\) and
+  explicitly describe its group of deck transformations.
+\end{enumerate}
 
-Give the definitions of \textbf{covering space} and \textbf{deck
-transformation} (or covering transformation).
+\hypertarget{spring-2021-5}{%
+\subsection{Spring 2021 \#5}\label{spring-2021-5}}
 
-\hypertarget{b-14}{%
-\subsubsection{b}\label{b-14}}
+\begin{problem}[Spring 2021, 5]
 
-Describe the universal cover of the Klein bottle and its group of deck
-transformations.
+Identify five mutually non-homeomorphic connected spaces \(X\) for which
+there is a covering map \(p:X\to K\) where \(K\) is the Klein bottle.
+Give an example of the covering in each case.
 
-\hypertarget{c-3}{%
-\subsubsection{c}\label{c-3}}
-
-Explicitly give a collection of deck transformations on
-\begin{align*}\left\{{(x, y) \mathrel{\Big|}-1 \leq x \leq 1, -\infty < y < \infty}\right\}\end{align*}
-such that the quotient is a Möbius band.
-
-\hypertarget{d}{%
-\subsubsection{d}\label{d}}
-
-Find the universal cover of \({\mathbb{RP}}^2 \times S^1\) and
-explicitly describe its group of deck transformations.
+\end{problem}
 
 \hypertarget{spring-06spring-07spring-12-work}{%
 \subsection{\texorpdfstring{3 (Spring '06/Spring '07/Spring '12)
 \(\work\)}{3 (Spring '06/Spring '07/Spring '12) \textbackslash work}}\label{spring-06spring-07spring-12-work}}
 
-\hypertarget{a-15}{%
-\subsubsection{a}\label{a-15}}
-
-What is the definition of a \textbf{regular} (or Galois) covering space?
-
-\hypertarget{b-15}{%
-\subsubsection{b}\label{b-15}}
-
-State, without proof, a criterion in terms of the fundamental group for
-a covering map \(p : \tilde X \to X\) to be regular.
-
-\hypertarget{c-4}{%
-\subsubsection{c}\label{c-4}}
-
-Let \(\Theta\) be the topological space formed as the union of a circle
-and its diameter (so this space looks exactly like the letter
-\(\Theta\)). Give an example of a covering space of \(\Theta\) that is
-not regular.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the definition of a \textbf{regular} (or Galois) covering
+  space?
+\item
+  State, without proof, a criterion in terms of the fundamental group
+  for a covering map \(p : \tilde X \to X\) to be regular.
+\item
+  Let \(\Theta\) be the topological space formed as the union of a
+  circle and its diameter (so this space looks exactly like the letter
+  \(\Theta\)). Give an example of a covering space of \(\Theta\) that is
+  not regular.
+\end{enumerate}
 
 \hypertarget{spring-08-work-1}{%
 \subsection{\texorpdfstring{4 (Spring '08)
@@ -2806,19 +3033,17 @@ which are not isomorphic to each other.
 \subsection{\texorpdfstring{15 (Spring '17)
 \(\work\)}{15 (Spring '17) \textbackslash work}}\label{spring-17-work}}
 
-\hypertarget{a-16}{%
-\subsubsection{a}\label{a-16}}
-
-Show that any finite index subgroup of a finitely generated free group
-is free. State clearly any facts you use about the fundamental groups of
-graphs.
-
-\hypertarget{b-16}{%
-\subsubsection{b}\label{b-16}}
-
-Prove that if \(N\) is a nontrivial normal subgroup of infinite index in
-a finitely generated free group \(F\) , then \(N\) is not finitely
-generated.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that any finite index subgroup of a finitely generated free group
+  is free. State clearly any facts you use about the fundamental groups
+  of graphs.
+\item
+  Prove that if \(N\) is a nontrivial normal subgroup of infinite index
+  in a finitely generated free group \(F\) , then \(N\) is not finitely
+  generated.
+\end{enumerate}
 
 \hypertarget{spring-19-work}{%
 \subsection{\texorpdfstring{16 (Spring '19)
@@ -2835,9 +3060,9 @@ to the index of \(p_* (\pi_1 (X, x))\) in \(\pi_1 (Y, p(x))\).
 \section{Cell Complexes and Adjunction
 Spaces}\label{cell-complexes-and-adjunction-spaces}}
 
-\hypertarget{fall-07-work}{%
+\hypertarget{fall-07-work-1}{%
 \subsection{\texorpdfstring{1 (Fall '07)
-\(\work\)}{1 (Fall '07) \textbackslash work}}\label{fall-07-work}}
+\(\work\)}{1 (Fall '07) \textbackslash work}}\label{fall-07-work-1}}
 
 Describe a cell complex structure on the torus \(T = S^1 \times S^1\)
 and use this to compute the homology groups of \(T\).
@@ -2874,20 +3099,20 @@ Let \(X\) be a space obtained by attaching two 2-cells to the torus
 \(\left\{{y}\right\} \times S^1\) for two points \(x \neq y\) in \(S^1\)
 .
 
-\hypertarget{a-17}{%
-\subsubsection{a}\label{a-17}}
+\hypertarget{a}{%
+\subsubsection{a}\label{a}}
 
 Draw an embedding of \(X\) in \({\mathbb{R}}^3\) and calculate its
 fundamental group.
 
-\hypertarget{b-17}{%
-\subsubsection{b}\label{b-17}}
+\hypertarget{b}{%
+\subsubsection{b}\label{b}}
 
 Calculate the homology groups of \(X\).
 
-\hypertarget{fall-07-work-1}{%
+\hypertarget{fall-07-work-2}{%
 \subsection{\texorpdfstring{5 (Fall '07)
-\(\work\)}{5 (Fall '07) \textbackslash work}}\label{fall-07-work-1}}
+\(\work\)}{5 (Fall '07) \textbackslash work}}\label{fall-07-work-2}}
 
 Let \(X\) be the space obtained as the quotient of a disjoint union of a
 2-sphere \(S^2\) and a torus \(T = S^1 \times S^1\) by identifying the
@@ -3036,9 +3261,9 @@ Let \(X\) be a topological space obtained by attaching a 2-cell to
 
 What are the possibilities for the homology \(H_* (X; Z)\)?
 
-\hypertarget{spring-12-work}{%
+\hypertarget{spring-12-work-1}{%
 \subsection{\texorpdfstring{16 (Spring '12)
-\(\work\)}{16 (Spring '12) \textbackslash work}}\label{spring-12-work}}
+\(\work\)}{16 (Spring '12) \textbackslash work}}\label{spring-12-work-1}}
 
 For any integer \(n \geq 2\) let \(X_n\) denote the space formed by
 attaching a 2-cell to the circle \(S^1\) via the attaching map
@@ -3047,13 +3272,13 @@ a_n: S^1 &\to S^1 \\
 e^{i\theta} &\mapsto e^{in\theta}
 .\end{align*}
 
-\hypertarget{a-18}{%
-\subsubsection{a}\label{a-18}}
+\hypertarget{a-1}{%
+\subsubsection{a}\label{a-1}}
 
 Compute the fundamental group and the homology of \(X_n\).
 
-\hypertarget{b-18}{%
-\subsubsection{b}\label{b-18}}
+\hypertarget{b-1}{%
+\subsubsection{b}\label{b-1}}
 
 Exactly one of the \(X_n\) (for \(n \geq 2\)) is homeomorphic to a
 surface. Identify, with proof, both this value of \(n\) and the surface
@@ -3066,20 +3291,20 @@ homeomorphism).
 
 Let \(X\) be a CW complex and let \(\pi : Y \to X\) be a covering space.
 
-\hypertarget{a-19}{%
-\subsubsection{a}\label{a-19}}
+\hypertarget{a-2}{%
+\subsubsection{a}\label{a-2}}
 
 Show that \(Y\) is compact iff \(X\) is compact and \(\pi\) has finite
 degree.
 
-\hypertarget{b-19}{%
-\subsubsection{b}\label{b-19}}
+\hypertarget{b-2}{%
+\subsubsection{b}\label{b-2}}
 
 Assume that \(\pi\) has finite degree \(d\). Show show that
 \(\chi (Y ) = d \chi (X)\).
 
-\hypertarget{c-5}{%
-\subsubsection{c}\label{c-5}}
+\hypertarget{c}{%
+\subsubsection{c}\label{c}}
 
 Let \(\pi :{\mathbb{RP}}^N \to X\) be a covering map. Show that if \(N\)
 is even, \(\pi\) is a homeomorphism.
@@ -3147,9 +3372,9 @@ subgroup generated by the induced map \(f^* \pi_1(S^1) \to \pi_1(S^1)\).
 
 \end{solution}
 
-\hypertarget{fall-18-work-2}{%
+\hypertarget{fall-18-work-3}{%
 \subsection{\texorpdfstring{19 (Fall '18)
-\(\work\)}{19 (Fall '18) \textbackslash work}}\label{fall-18-work-2}}
+\(\work\)}{19 (Fall '18) \textbackslash work}}\label{fall-18-work-3}}
 
 Prove that a finite CW complex must be Hausdorff.
 
@@ -3167,19 +3392,17 @@ Compute the homology of the one-point union of \(S^1 \times S^1\) and
 \subsection{\texorpdfstring{2 (Fall '06)
 \(\work\)}{2 (Fall '06) \textbackslash work}}\label{fall-06-work-1}}
 
-\hypertarget{a-20}{%
-\subsubsection{a}\label{a-20}}
-
-State the \textbf{Mayer-Vietoris theorem}.
-
-\hypertarget{b-20}{%
-\subsubsection{b}\label{b-20}}
-
-Use it to compute the homology of the space \(X\) obtained by gluing two
-solid tori along their boundary as follows. Let \({\mathbb{D}}^2\) be
-the unit disk and let \(S^1\) be the unit circle in the complex plane
-\({\mathbb{C}}\). Let \(A = S^1 \times {\mathbb{D}}^2\) and
-\(B = {\mathbb{D}}^2 \times S^1\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  State the \textbf{Mayer-Vietoris theorem}.
+\item
+  Use it to compute the homology of the space \(X\) obtained by gluing
+  two solid tori along their boundary as follows. Let \({\mathbb{D}}^2\)
+  be the unit disk and let \(S^1\) be the unit circle in the complex
+  plane \({\mathbb{C}}\). Let \(A = S^1 \times {\mathbb{D}}^2\) and
+  \(B = {\mathbb{D}}^2 \times S^1\).
+\end{enumerate}
 
 Then \(X\) is the quotient space of the disjoint union \(A {\coprod}B\)
 obtained by identifying \((z, w) \in A\) with \((zw^3 , w) \in B\) for
@@ -3251,9 +3474,9 @@ distinct points on \(S^2\). Calculate \(H_* (X; Z)\).
 Compute \(H_0\) and \(H_1\) of the complete graph \(K_5\) formed by
 taking five points and joining each pair with an edge.
 
-\hypertarget{fall-18-work-3}{%
+\hypertarget{fall-18-work-4}{%
 \subsection{\texorpdfstring{10 (Fall '18)
-\(\work\)}{10 (Fall '18) \textbackslash work}}\label{fall-18-work-3}}
+\(\work\)}{10 (Fall '18) \textbackslash work}}\label{fall-18-work-4}}
 
 Compute the homology of the subset \(X \subset {\mathbb{R}}^3\) formed
 as the union of the unit sphere, the \(z{\hbox{-}}\)axis, and the
@@ -3274,41 +3497,46 @@ Calculate the fundamental group and the homology groups of \(X\).
 \subsection{\texorpdfstring{12 (Spring '19)
 \(\work\)}{12 (Spring '19) \textbackslash work}}\label{spring-19-work-1}}
 
-\hypertarget{a-21}{%
-\subsubsection{a}\label{a-21}}
-
-Consider the quotient space
-\begin{align*}
-T^2 = {\mathbb{R}}^2 / \sim {\quad \operatorname{where} \quad} (x, y) \sim (x + m, y + n) \text{ for } m, n \in {\mathbb{Z}}
-,\end{align*}
-and let \(A\) be any \(2 \times 2\) matrix whose entries are integers
-such that \(\det A = 1\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Consider the quotient space
+  \begin{align*}
+  T^2 = {\mathbb{R}}^2 / \sim {\quad \operatorname{where} \quad} (x, y) \sim (x + m, y + n) \text{ for } m, n \in {\mathbb{Z}}
+  ,\end{align*}
+  and let \(A\) be any \(2 \times 2\) matrix whose entries are integers
+  such that \(\det A = 1\).
+\end{enumerate}
 
 Prove that the action of \(A\) on \({\mathbb{R}}^2\) descends via the
 quotient \({\mathbb{R}}^2 \to T^2\) to induce a homeomorphism
 \(T^2 \to T^2\).
 
-\hypertarget{b-21}{%
-\subsubsection{b}\label{b-21}}
-
-Using this homeomorphism of \(T^2\), we define a new quotient space
-\begin{align*}
-T_A^3 \coloneqq{T^2\times{\mathbb{R}}\over \sim} {\quad \operatorname{where} \quad} ((x, y), t) \sim (A(x, y), t + 1)
-\end{align*}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Using this homeomorphism of \(T^2\), we define a new quotient space
+  \begin{align*}
+  T_A^3 \coloneqq{T^2\times{\mathbb{R}}\over \sim} {\quad \operatorname{where} \quad} ((x, y), t) \sim (A(x, y), t + 1)
+  \end{align*}
+\end{enumerate}
 
 Compute \(H_1 (T_A^3 )\) if
 \(A=\left(\begin{array}{ll} 1 & 1 \\ 0 & 1 \end{array}\right).\)
 
-\hypertarget{spring-12-work-1}{%
+\hypertarget{spring-12-work-2}{%
 \subsection{\texorpdfstring{13 (Spring '12)
-\(\work\)}{13 (Spring '12) \textbackslash work}}\label{spring-12-work-1}}
+\(\work\)}{13 (Spring '12) \textbackslash work}}\label{spring-12-work-2}}
 
 Give a self-contained proof that the zeroth homology \(H_0 (X)\) is
 isomorphic to \({\mathbb{Z}}\) for every path-connected space \(X\).
 
-\hypertarget{fall-18-work-4}{%
+\hypertarget{fall-18-work-5}{%
 \subsection{\texorpdfstring{14 (Fall '18)
-\(\work\)}{14 (Fall '18) \textbackslash work}}\label{fall-18-work-4}}
+\(\work\)}{14 (Fall '18) \textbackslash work}}\label{fall-18-work-5}}
 
 It is a fact that if \(X\) is a single point then
 \(H_1 (X) = \left\{{0}\right\}\).
@@ -3363,9 +3591,9 @@ coefficients.
 
 Does there exist a map of degree 2013 from \(S^2 \to S^2\).
 
-\hypertarget{fall-18-work-5}{%
+\hypertarget{fall-18-work-6}{%
 \subsection{\texorpdfstring{19 (Fall '18)
-\(\work\)}{19 (Fall '18) \textbackslash work}}\label{fall-18-work-5}}
+\(\work\)}{19 (Fall '18) \textbackslash work}}\label{fall-18-work-6}}
 
 For each \(n \in {\mathbb{Z}}\) give an example of a map
 \(f_n : S^2 \to S^2\).
@@ -3376,24 +3604,25 @@ For which \(n\) must any such map have a fixed point?
 \subsection{\texorpdfstring{20 (Spring '09)
 \(\work\)}{20 (Spring '09) \textbackslash work}}\label{spring-09-work-5}}
 
-\hypertarget{a-22}{%
-\subsubsection{a}\label{a-22}}
-
-What is the degree of the antipodal map on the \(n\)-sphere?
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  What is the degree of the antipodal map on the \(n\)-sphere?
+\end{enumerate}
 
 (No justification required)
 
-\hypertarget{b-22}{%
-\subsubsection{b}\label{b-22}}
-
-Define a CW complex homeomorphic to the real projective
-\(n{\hbox{-}}\)space \({\mathbb{RP}}^n\).
-
-\hypertarget{c-6}{%
-\subsubsection{c}\label{c-6}}
-
-Let \(\pi : {\mathbb{RP}}^n \to X\) be a covering map. Show that if
-\(n\) is even, \(\pi\) is a homeomorphism.
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Define a CW complex homeomorphic to the real projective
+  \(n{\hbox{-}}\)space \({\mathbb{RP}}^n\).
+\item
+  Let \(\pi : {\mathbb{RP}}^n \to X\) be a covering map. Show that if
+  \(n\) is even, \(\pi\) is a homeomorphism.
+\end{enumerate}
 
 \hypertarget{fall-17-work-3}{%
 \subsection{\texorpdfstring{21 (Fall '17)
@@ -3403,9 +3632,9 @@ Let \(A \subset X\). Prove that the relative homology group
 \(H_0 (X, A)\) is trivial if and only if \(A\) intersects every path
 component of \(X\).
 
-\hypertarget{fall-18-work-6}{%
+\hypertarget{fall-18-work-7}{%
 \subsection{\texorpdfstring{22 (Fall '18)
-\(\work\)}{22 (Fall '18) \textbackslash work}}\label{fall-18-work-6}}
+\(\work\)}{22 (Fall '18) \textbackslash work}}\label{fall-18-work-7}}
 
 Let \({\mathbb{D}}\) be a closed disk embedded in the torus
 \(T = S^1 \times S^1\) and let \(X\) be the result of removing the
@@ -3439,6 +3668,52 @@ characteristics of \(X, U, V\), and \(U \cap V\).
 You may assume that the homologies of \(U, V, U \cap V, X\) are
 finite-dimensional so that their Euler characteristics are well defined.
 \end{quote}
+
+\hypertarget{spring-2021-6}{%
+\subsection{Spring 2021 \#6}\label{spring-2021-6}}
+
+\begin{problem}[Spring 2021, 6]
+
+For each of the following spaces, compute the fundamental group and the
+homology groups.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  The graph \(\Theta\) consisting of two edges and three vertices
+  connecting them.
+\item
+  The 2-dimensional cell complex \(\Theta_2\) consisting of a closed
+  circle and three 2-dimensional disks each having boundary running once
+  around that circle.
+\end{enumerate}
+
+\end{problem}
+
+\hypertarget{spring-2021-7}{%
+\subsection{Spring 2021 \#7}\label{spring-2021-7}}
+
+\begin{problem}[Spring 2021, 7]
+
+Prove directly from the definition that the 0th singular homology of a
+nonempty path-connected space is isomorphic to \({\mathbb{Z}}\).
+
+\end{problem}
+
+\hypertarget{spring-2021-9}{%
+\subsection{Spring 2021 \#9}\label{spring-2021-9}}
+
+\begin{problem}[Spring 2021, 9]
+
+Prove that for every continuous map \(f: S^{2n} \to S^{2n}\) there is a
+point \(x\in S^{2n}\) such that either \(f(x) = x\) or \(f(x) = -x\).
+
+\begin{quote}
+You may use standard facts about degrees of maps of spheres, including
+that the antipodal map on \(S^{2n}\) has degree \(d=-1\).
+\end{quote}
+
+\end{problem}
 
 \hypertarget{surfaces}{%
 \section{Surfaces}\label{surfaces}}
@@ -3526,8 +3801,8 @@ then identify its genus as a function of \(n\).
 \subsection{\texorpdfstring{8 (Fall '10)
 \(\work\)}{8 (Fall '10) \textbackslash work}}\label{fall-10-work-2}}
 
-\hypertarget{a-23}{%
-\subsubsection{a}\label{a-23}}
+\hypertarget{a-3}{%
+\subsubsection{a}\label{a-3}}
 
 Show that any compact connected surface with nonempty boundary is
 homotopy equivalent to a wedge of circles
@@ -3537,8 +3812,8 @@ Hint: you may assume that any compact connected surface without boundary
 is given by identifying edges of a polygon in pairs.
 \end{quote}
 
-\hypertarget{b-23}{%
-\subsubsection{b}\label{b-23}}
+\hypertarget{b-3}{%
+\subsubsection{b}\label{b-3}}
 
 For each surface appearing in the classification of compact surfaces
 with nonempty boundary, say how many circles are needed in the wedge
@@ -3598,21 +3873,21 @@ covered by a closed surface (i.e.~compact with empty boundary) of genus
 \subsection{\texorpdfstring{14 (Spring '18)
 \(\work\)}{14 (Spring '18) \textbackslash work}}\label{spring-18-work-2}}
 
-\hypertarget{a-24}{%
-\subsubsection{a}\label{a-24}}
+\hypertarget{a-4}{%
+\subsubsection{a}\label{a-4}}
 
 Write down (without proof) a presentation for \(\pi_1 (\Sigma_2 , p)\)
 where \(\Sigma_2\) is a closed, connected, orientable genus 2 surface
 and \(p\) is any point on \(\Sigma_2\) .
 
-\hypertarget{b-24}{%
-\subsubsection{b}\label{b-24}}
+\hypertarget{b-4}{%
+\subsubsection{b}\label{b-4}}
 
 Show that \(\pi_1 (\Sigma_2 , p)\) is not abelian by showing that it
 surjects onto a free group of rank 2.
 
-\hypertarget{c-7}{%
-\subsubsection{c}\label{c-7}}
+\hypertarget{c-1}{%
+\subsubsection{c}\label{c-1}}
 
 Show that there is no covering space map from \(\Sigma_2\) to
 \(S^1 \times S^1\) . You may use the fact that
@@ -3646,9 +3921,9 @@ property that \(\Gamma_s (1) = \gamma_0 (1)\) for all \(s \in [0, 1]\).
 (You are not required to prove that your example satisfies the stated
 property.)
 
-\hypertarget{fall-18-work-7}{%
+\hypertarget{fall-18-work-8}{%
 \subsection{\texorpdfstring{17 (Fall '18)
-\(\work\)}{17 (Fall '18) \textbackslash work}}\label{fall-18-work-7}}
+\(\work\)}{17 (Fall '18) \textbackslash work}}\label{fall-18-work-8}}
 
 Let \(C\) be cylinder. Let \(I\) and \(J\) be disjoint closed intervals
 contained in \(\partial C\).
@@ -3667,6 +3942,27 @@ Let \(\Sigma\) be a compact connected surface and let
 \(p_1, \cdots , p_k \in \Sigma\).
 
 Prove that \(H_2 \qty{\Sigma \setminus \cup_{i=1}^k {p_i} } = 0\).
+
+\hypertarget{spring-2021-8}{%
+\subsection{Spring 2021 \#8}\label{spring-2021-8}}
+
+\begin{problem}[Spring 2021, 8]
+
+Let \(\Sigma_{g, n}\) denote the compact oriented surface of genus \(g\)
+with \(n\) boundary components.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(\Sigma_{0, 3}\) and \(\Sigma_{1, 1}\) are both homotopy
+  equivalent to \(S_1 \vee S^1\).
+\item
+  Give a complete classification of pairs \((g, n)\) and \((g', n')\)
+  for which \(\Sigma_{g, n}\) is homotopy equivalent to
+  \(\Sigma_{g', n'}\).
+\end{enumerate}
+
+\end{problem}
 
 \hypertarget{fixed-points}{%
 \section{Fixed Points}\label{fixed-points}}
@@ -3705,12 +4001,12 @@ Every continuous map from \(S^2\) to \(S^2\) has a fixed point.
   Use degree theory to prove this theorem in case \(X = S^n\).
 \end{enumerate}
 
-\hypertarget{spring-12-work-2}{%
+\hypertarget{spring-12-work-3}{%
 \subsection{\texorpdfstring{4 (Spring '12)
-\(\work\)}{4 (Spring '12) \textbackslash work}}\label{spring-12-work-2}}
+\(\work\)}{4 (Spring '12) \textbackslash work}}\label{spring-12-work-3}}
 
-\hypertarget{a-25}{%
-\subsubsection{a}\label{a-25}}
+\hypertarget{a-5}{%
+\subsubsection{a}\label{a-5}}
 
 Prove that for every continuous map \(f : S^2 \to S^2\) there is some
 \(x\) such that either \(f (x) = x\) or \(f (x) = -x\).
@@ -3720,8 +4016,8 @@ Hint: Where \(A : S^2 \to S^2\) is the antipodal map, you are being
 asked to prove that either \(f\) or \(A \circ f\) has a fixed point.
 \end{quote}
 
-\hypertarget{b-25}{%
-\subsubsection{b}\label{b-25}}
+\hypertarget{b-5}{%
+\subsubsection{b}\label{b-5}}
 
 Exhibit a continuous map \(f : S^3 \to S^3\) such that for every
 \(x \in S^3\), \(f (x)\) is equal to neither \(x\) nor \(-x\).
@@ -3794,27 +4090,27 @@ View the torus \(T\) as the quotient space
 
 Let \(A\) be a \(2 \times 2\) matrix with \({\mathbb{Z}}\) coefficients.
 
-\hypertarget{a-26}{%
-\subsubsection{a}\label{a-26}}
+\hypertarget{a-6}{%
+\subsubsection{a}\label{a-6}}
 
 Show that the linear map \(A : {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
 descends to a continuous map \({\mathcal{A}}: T \to T\).
 
-\hypertarget{b-26}{%
-\subsubsection{b}\label{b-26}}
+\hypertarget{b-6}{%
+\subsubsection{b}\label{b-6}}
 
 Show that, with respect to a suitable basis for
 \(H_1 (T ; {\mathbb{Z}})\), the matrix \(A\) represents the map induced
 on \(H_1\) by \({\mathcal{A}}\).
 
-\hypertarget{c-8}{%
-\subsubsection{c}\label{c-8}}
+\hypertarget{c-2}{%
+\subsubsection{c}\label{c-2}}
 
 Find a necessary and sufficient condition on \(A\) for \({\mathcal{A}}\)
 to be homotopic to the identity.
 
-\hypertarget{d-1}{%
-\subsubsection{d}\label{d-1}}
+\hypertarget{d}{%
+\subsubsection{d}\label{d}}
 
 Find a necessary and sufficient condition on \(A\) for \({\mathcal{A}}\)
 to be homotopic to a map with no fixed points.
@@ -3823,20 +4119,20 @@ to be homotopic to a map with no fixed points.
 \subsection{\texorpdfstring{12 (Spring '19)
 \(\work\)}{12 (Spring '19) \textbackslash work}}\label{spring-19-work-3}}
 
-\hypertarget{a-27}{%
-\subsubsection{a}\label{a-27}}
+\hypertarget{a-7}{%
+\subsubsection{a}\label{a-7}}
 
 Use the Lefschetz fixed point theorem to show that any degree-one map
 \(f : S^2 \to S^2\) has at least one fixed point.
 
-\hypertarget{b-27}{%
-\subsubsection{b}\label{b-27}}
+\hypertarget{b-7}{%
+\subsubsection{b}\label{b-7}}
 
 Give an example of a map \(f : {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
 having no fixed points.
 
-\hypertarget{c-9}{%
-\subsubsection{c}\label{c-9}}
+\hypertarget{c-3}{%
+\subsubsection{c}\label{c-3}}
 
 Give an example of a degree-one map \(f : S^2 \to S^2\) having exactly
 one fixed point.
@@ -3869,9 +4165,9 @@ Topology}\label{miscellaneous-algebraic-topology}}
 Prove that \({\mathbb{R}}^2\) is not homeomorphic to \({\mathbb{R}}^n\)
 for \(n > 2\).
 
-\hypertarget{spring-12-work-3}{%
+\hypertarget{spring-12-work-4}{%
 \subsection{\texorpdfstring{2 (Spring '12)
-\(\work\)}{2 (Spring '12) \textbackslash work}}\label{spring-12-work-3}}
+\(\work\)}{2 (Spring '12) \textbackslash work}}\label{spring-12-work-4}}
 
 Prove that any finite tree is contractible, where a \textbf{tree} is a
 connected graph that contains no closed edge paths.

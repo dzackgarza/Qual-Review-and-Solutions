@@ -1,5 +1,7 @@
 # Basics
 
+## Table of Notation
+
 +--------------------------------------------------------------------------------------------------------------------+---------------------------+
 |                                            Notation                                                                | Definition                |
 +====================================================================================================================+===========================+
@@ -418,7 +420,7 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 
 ### Example: Completeness of a Normed Function Space
 
-:::{.proposition title=" \( C(I) \) is complete"}
+:::{.proposition title="$C(I)$ is complete"}
 The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
 \[
 \norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}

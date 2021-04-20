@@ -2,11 +2,11 @@
 
 ## 1 (Spring 11/Spring '14) $\done$
 
-### a  
+a.  
 Give the definition of a **covering space** $\hat{X}$
 (and **covering map** $p : \hat{X} \to X$) for a topological space $X$.
 
-### b  
+b.  
 State the homotopy lifting property of covering spaces. 
 Use it to show that a covering map $p : \hat{X} \to X$ induces an injection 
 $$
@@ -14,7 +14,7 @@ p^\ast : \pi_1 (\hat{X}, \hat{x}) \to \pi_1 (X, p(\hat{x}))
 $$ 
 on fundamental groups.
 
-### c
+c.
 Let $p : \hat{X} \to X$ be a covering map with $Y$ and $X$ path-connected. 
 Suppose that the induced map $p^\ast$ on $\pi_1$ is an isomorphism. 
 
@@ -28,10 +28,10 @@ Prove that $p$ is a homeomorphism.
 
 :::
 
-### a 
+a. 
 \todo[inline]{Todo}.
 
-### b
+b.
 
 Homotopy lifting property:
 
@@ -52,7 +52,7 @@ Since $\alpha = [e]$, $\alpha \homotopic \const$ and thus there is a homotopy $H
 By the HLP, this lifts to $\tilde H: I\cross S^1 \to \tilde X$.
 Noting that $\pi\inv(\const(x_0))$ is still a constant loop, this says that $\gamma$ is homotopic to a constant loop and thus nullhomotopic. 
 
-### c
+c.
 
 Since both spaces are path-connected, the degree o the covering map $\pi$ is precisely the index of the included fundamental group.
 This forces $\pi$ to be a degree 1 covering and hence a homeomorphism.
@@ -61,27 +61,34 @@ This forces $\pi$ to be a degree 1 covering and hence a homeomorphism.
 
 ## 2 (Fall '06/Fall '09/Fall '15) $\work$
 
-### a 
+a. 
 Give the definitions of **covering space** and **deck transformation** (or covering transformation).
 
-### b 
+b. 
 Describe the universal cover of the Klein bottle and its group of deck transformations.
 
-### c 
+c. 
 Explicitly give a collection of deck transformations on $$\theset{(x, y) \mid -1 \leq x \leq 1, -\infty < y < \infty}$$ such that the quotient is a Möbius band.
 
-### d
+d.
 Find the universal cover of $\RP^2 \times S^1$ and explicitly describe its group of deck transformations.
+
+## Spring 2021 #5
+
+:::{.problem title="Spring 2021, 5"}
+Identify five mutually non-homeomorphic connected spaces $X$ for which there is a covering map $p:X\to K$ where $K$ is the Klein bottle.
+Give an example of the covering in each case.
+:::
 
 ## 3 (Spring '06/Spring '07/Spring '12) $\work$
 
-### a
+a.
 What is the definition of a **regular** (or Galois) covering space?
 
-### b
+b.
 State, without proof, a criterion in terms of the fundamental group for a covering map $p : \tilde X \to X$ to be regular.
 
-### c  
+c.  
 Let $\Theta$ be the topological space formed as the union of a circle and its diameter (so this space looks exactly like the letter $\Theta$). 
 Give an example of a covering space of $\Theta$ that is not regular.
 
@@ -203,11 +210,11 @@ Use covering space theory to show that $\ZZ_2 \ast \ZZ$  (that is, the free prod
 
 ## 15 (Spring '17) $\work$
 
-### a
+a.
 Show that any finite index subgroup of a finitely generated free group is free. 
 State clearly any facts you use about the fundamental groups of graphs.
 
-### b  
+b.  
 Prove that if $N$ is a nontrivial normal subgroup of infinite index in a finitely generated free group $F$ , then $N$ is not finitely generated.
 
 ## 16 (Spring '19) $\work$

@@ -5,10 +5,10 @@ Compute the homology of the one-point union of $S^1 \times S^1$ and $S^1$.
 
 ## 2 (Fall '06) $\work$
 
-### a
+a.
 State the **Mayer-Vietoris theorem**.
 
-### b
+b.
 Use it to compute the homology of the space $X$ obtained by gluing two solid tori along their boundary as follows. 
 Let $\DD^2$ be the unit disk and let $S^1$ be the unit circle in the complex plane $\CC$. 
 Let $A = S^1 \times \DD^2$ and $B = \DD^2 \times S^1$. 
@@ -60,7 +60,7 @@ Calculate the fundamental group and the homology groups of $X$.
 
 ## 12 (Spring '19) $\work$
 
-### a
+a.
 Consider the quotient space 
 \[
 T^2 = \RR^2 / \sim \qtext{where} (x, y) \sim (x + m, y + n) \text{ for } m, n \in \ZZ
@@ -69,7 +69,7 @@ and let $A$ be any $2 \times 2$ matrix whose entries are integers such that $\de
 
 Prove that the action of $A$ on $\RR^2$ descends via the quotient $\RR^2 \to T^2$ to induce a homeomorphism $T^2 \to T^2$.
 
-### b
+b.
 Using this homeomorphism of $T^2$, we define a new quotient space 
 \[
 T_A^3 \definedas {T^2\cross \RR \over \sim} \qtext{where} ((x, y), t) \sim (A(x, y), t + 1)
@@ -115,15 +115,15 @@ For which $n$ must any such map have a fixed point?
 
 ## 20 (Spring '09) $\work$
 
-### a
+a.
 What is the degree of the antipodal map on the $n$-sphere? 
 
 (No justification required)
 
-### b  
+b.  
 Define a CW complex homeomorphic to the real projective $n\dash$space $\RP^n$.
 
-### c
+c.
 Let $\pi : \RP^n \to X$ be a covering map. Show that if $n$ is even, $\pi$ is a homeomorphism.
 
 ## 21 (Fall '17) $\work$
@@ -148,4 +148,32 @@ Find, with proof, a general formula relating the Euler characteristics of $X, U,
 > You may assume that the homologies of $U, V, U \cap V, X$ are finite-dimensional so that their Euler characteristics are well defined.
 
 
+## Spring 2021 #6
+
+:::{.problem title="Spring 2021, 6"}
+For each of the following spaces, compute the fundamental group and the homology groups.
+
+a. 
+The graph $\Theta$ consisting of two edges and three vertices connecting them.
+
+b.
+The 2-dimensional cell complex $\Theta_2$ consisting of a closed circle and three 2-dimensional disks each having boundary running once around that circle.
+
+:::
+
+## Spring 2021 #7
+
+:::{.problem title="Spring 2021, 7"}
+Prove directly from the definition that the 0th singular homology of a nonempty path-connected space is isomorphic to $\ZZ$.
+:::
+
+## Spring 2021 #9
+
+
+:::{.problem title="Spring 2021, 9"}
+Prove that for every continuous map $f: S^{2n} \to S^{2n}$ there is a point $x\in S^{2n}$ such that either $f(x) = x$ or $f(x) = -x$.
+
+> You may use standard facts about degrees of maps of spheres, including that the antipodal map on $S^{2n}$ has degree $d=-1$.
+
+:::
 

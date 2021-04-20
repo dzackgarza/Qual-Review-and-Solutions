@@ -133,7 +133,6 @@ For $f:X\to Y$, TFAE:
 See Munkres page 104.
 :::
 
-
 :::{.theorem title="Maps from compact to Hausdorff spaces, Lee A.52"}
 If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then 
 
@@ -165,4 +164,25 @@ For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, 
 - Set $O\da \intersect_{j=1}^n B_{y_j}$; this works.
 
 :::
+
+:::{.proof title="Detailed proof of the Tube Lemma"}
+
+\todo[inline]{Check this proof!}
+
+- Let $\theset{U_j\cross V_j \suchthat j\in J} \covers X\cross Y$. 
+- Fix a point $x_0\in X$, then $\theset{x_0}\cross Y \subset N$ for some open set $N$.
+- By the tube lemma, there is a $U^x \subset X$ such that the tube $U^x \cross Y \subset N$.
+- Since $\theset{x_0}\cross Y \cong Y$ which is compact, there is a finite subcover $\theset{U_j \cross V_j \suchthat j\leq n} \covers \theset{x_0}\cross Y$. 
+-   "Integrate the $X$": write 
+    $$W = \intersect_{j=1}^n U_j,$$ 
+    then $x_0 \in W$ and $W$ is a finite intersection of open sets and thus open.
+- Claim: $\theset{U_j \cross V_j \suchthat j\leq n}\covers W\cross Y$
+  - Let $(x, y) \in W\cross Y$; want to show $(x, y)\in U_j \cross V_j$ for some $j\leq n$.
+  - Then $(x_0, y) \in \theset{x_0}\cross Y$ is on the same horizontal line
+  - $(x_0, y)\in U_j \cross V_j$ for some $j$ by construction
+  - So $y\in V_j$ for this $j$
+  - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
+  - So $(x, y) \in U_j \cross V_j$
+:::
+
 
