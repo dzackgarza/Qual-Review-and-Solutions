@@ -505,14 +505,34 @@ x_\alpha &\mapsto y_\alpha
 
 - Free implies projective
 
-- Universal property of **projective** objects: for every epimorphism $\pi:M\surjects N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+  - Universal property of **projective** objects: for every epimorphism $\pi:M\surjects N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+
+  \begin{tikzcd}
+  & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
+  M \ar[r, "\pi"] & N
+  \end{tikzcd}
+
+  - Construct $\phi$ in the following diagram using the same method as above (surjectivity to pick elements in preimage):
 
 \begin{tikzcd}
- & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
-M \ar[r, "\pi"] & N
+	&& X \\
+	\\
+	&& F \\
+	\\
+	M && N && 0
+	\arrow["\iota", hook, from=1-3, to=3-3]
+	\arrow["f", from=3-3, to=5-3]
+	\arrow["\pi"', two heads, from=5-1, to=5-3]
+	\arrow[from=5-3, to=5-5]
+	\arrow["{\exists \tilde \phi}"', dashed, from=3-3, to=5-1]
+	\arrow["\phi"', curve={height=24pt}, from=1-3, to=5-1]
 \end{tikzcd}
 
-- Take the identity map:
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMCw0LCJNIl0sWzIsNCwiTiJdLFs0LDQsIjAiXSxbMiwyLCJGIl0sWzIsMCwiWCJdLFs0LDMsIlxcaW90YSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMSwiZiJdLFswLDEsIlxccGkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwyXSxbMywwLCJcXGV4aXN0cyBcXHRpbGRlIFxccGhpIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsMCwiXFxwaGkiLDIseyJjdXJ2ZSI6NH1dXQ==)
+
+
+
+- Take the identity map, then commutativity is equivalent to being a section.
 
 \begin{tikzcd}
  & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
