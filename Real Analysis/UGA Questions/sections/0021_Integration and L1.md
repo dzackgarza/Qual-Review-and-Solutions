@@ -548,7 +548,7 @@ Prove that
 - Choose $N\gg 0$ to produce an $R$ so that
 \[
 \int_R^{\infty } \abs{f} &< \eps \\
-\int_{-\infty}^{R} \abs{g_N} &< \eps \\
+\int_{-\infty}^{R} \abs{g_N} &< \eps
 .\]
 
 - Split the integral up:
@@ -562,6 +562,16 @@ Prove that
 \norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R} \abs{f -g_N} \leq \norm{f}_1 + 2\eps \\
 \norm{g}_1 - 2\eps &\leq \int^{\infty}_{R} \abs{f -g_N} \leq \norm{g}_1 + 2\eps 
 .\]
+
+\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
+
+- Add these to obtain
+\[
+\norm{f}_1 + \norm{g}_1 - 4\eps \leq \int_\RR \abs{f - g_N} \leq \norm{f} + \norm{g}_1 + 4\eps
+.\]
+
+- Check that $N\to \infty$ as $\eps\to 0$ to yield the result.
+
 
 
 
