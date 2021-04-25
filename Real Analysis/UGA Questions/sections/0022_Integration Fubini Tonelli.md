@@ -30,14 +30,15 @@ defines a function in $L^1(\RR)$ that satisfies
 &\leq \int_\RR \int_\RR \abs{f(y) g(x-y)} \dx \dy \\
 &\da \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy \\
 &\da \int_{\RR^2} \abs{H} \dmu_{\RR^2} \\
-&\da \norm{H}_{L^1(\RR^2)} \\
+&\da \norm{H}_{L^1(\RR^2)}
 .\]
+  So it suffices to show $\norm{H}_1 < \infty$.
 
 - A preliminary computation, the validity of which we will show afterward:
 \[
-\norm{f\ast g}_1
-&\da \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
-&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{"triangle inequality"}\\
+\norm{H}_1
+&\da \norm{H}_{L^1(\RR^2)} \\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\ 
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{Tonelli} \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
