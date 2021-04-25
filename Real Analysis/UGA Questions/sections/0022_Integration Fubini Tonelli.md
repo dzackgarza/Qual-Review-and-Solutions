@@ -44,7 +44,7 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
   - This shows that $H\in L^1(\RR^2)$, since
   \[
-  \norm{H}_{L^1(\RR^2} \da \int_{\RR^2} \abs{H} \dmu
+  \norm{H}_{L^1(\RR^2} \da \int_{\RR^2} \abs{H} \dmu_{\RR^2} &= \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy
   .\]
 
 - $H$ is measurable on $\RR^2$:
