@@ -543,16 +543,26 @@ Prove that
 :::{.solution}
 \envlist
 
-- Choose $N\gg 0$ so that
+- Fix $\eps$.
+
+- Choose $N\gg 0$ to produce an $R$ so that
 \[
-\int_M^{\infty } \abs{f} &< \eps \\
-\int_{-\infty}^{M} \abs{g_N} &< \eps \\
+\int_R^{\infty } \abs{f} &< \eps \\
+\int_{-\infty}^{R} \abs{g_N} &< \eps \\
 .\]
 
 - Split the integral up:
 \[
-\norm{f - g_N}_1 = \int_{-\infty}^m \abs{f - g_N} + \int_M^{\infty }\abs{f - g_N}
+\norm{f - g_N}_1 = \int_{-\infty}^R \abs{f - g_N} + \int_R^{\infty }\abs{f - g_N}
+,\]
+  where $g_N$ is small in the first term and $f$ is small in the second.
+
+- Note that we have two inequalities:
+\[
+\norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R} \abs{f -g_N} \leq \norm{f}_1 + 2\eps \\
+\norm{g}_1 - 2\eps &\leq \int^{\infty}_{R} \abs{f -g_N} \leq \norm{g}_1 + 2\eps 
 .\]
+
 
 
 
