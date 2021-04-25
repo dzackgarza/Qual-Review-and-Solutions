@@ -488,23 +488,14 @@ x_\alpha &\mapsto y_\alpha
 \end{tikzcd}
 
 - It remains to check that it's a section.
-  - Write $f= \sum r_i x_i$.
+  - Write $f= \sum r_i x_i$, then since both maps are $R\dash$module morphism, by $R\dash$linearity we can write
   \[
-  (\pi \circ h)(f) = (\pi \circ h)\qty{ \sum r_i x_i } \\
+  (\pi \circ h)(f) 
+  &= (\pi \circ h)\qty{ \sum r_i x_i } \\
   &= \sum r_i (\pi \circ h)(x_i)
-  .\]
-
-\[
-f\in F \implies f = \sum_i r_i { x_i } \\
-\implies (\pi \circ h)(f) 
-&= \pi \qty{h\qty{\sum_i r_i x_i }}  \\
-&= \pi\qty{\sum_i r_i h(x_i) } \\
-&= \pi\qty{ \sum_i r_i y_i} \\
-&= \sum_i r_i \pi(y_i) \\
-&= \sum_i r_i x_i \\
-&\definedas f
-\]
-- Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
+  ,\]
+  but since $h(x_i) \in \pi\inv(x_i)$, we have $(\pi \circ h)(x_i) = x_i$.
+  So this recovers $f$.
 
 
 :::
