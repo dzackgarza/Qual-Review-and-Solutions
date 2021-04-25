@@ -492,7 +492,7 @@ x_\alpha &\mapsto y_\alpha
 f\in F \implies f = \sum_i r_i { x_i } \\
 \implies (\pi \circ h)(f) 
 &= \pi \qty{h\qty{\sum_i r_i x_i }}  \\
-&= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
+&= \pi\qty{\sum_i r_i h((x_i)) } \\
 &= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
 &= \sum_\alpha r_\alpha \pi(y_\alpha) \\
 &= \sum_\alpha r_\alpha \iota(x_\alpha) \\
