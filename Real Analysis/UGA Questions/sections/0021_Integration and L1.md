@@ -543,11 +543,17 @@ Prove that
 :::{.solution}
 \envlist
 
-- Choose $n\gg 0$ so that
+- Choose $N\gg 0$ so that
 \[
 \int_M^{\infty } \abs{f} &< \eps \\
-\int_{-\infty}^{M} \abs{f} &< \eps \\
+\int_{-\infty}^{M} \abs{g_N} &< \eps \\
 .\]
+
+- Split the integral up:
+\[
+\norm{f - g_N}_1 = \int_{-\infty}^m \abs{f - g_N} + \int_M^{\infty }\abs{f - g_N}
+.\]
+
 
 
 :::
