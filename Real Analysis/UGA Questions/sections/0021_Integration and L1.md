@@ -573,6 +573,11 @@ Prove that
 - Check that $N\to \infty$ as $\eps\to 0$ to yield the result.
 
 
+- Seeing where the inequalities come from: 
+\[
+\int_{-\infty}^R \abs{f - g_N} 
+&\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} 
+.\]
 
 
 
