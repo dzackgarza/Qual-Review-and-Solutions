@@ -950,7 +950,19 @@ R_\ell^p
 ,\]
   so $R_\ell^p = a^\ell$.
 
-- Use Bezout
+- Use Bezout: $\gcd(\ell, p) = 1$ since $p$ is prime, so write $tp + s\ell = 1$ for some $t,s\in \ZZ$
+
+- Use this to build a root of $f$ that's in $\FF$: write
+\[
+a &= a^1\\
+&= a^{tp + s\ell} \\
+&= a^{tp} a^{s\ell} \\
+&=a^{tp} (a^\ell)^s\\
+&= a^{tp} (R_\ell^p)^s \\
+&= (a^t R_\ell^s)^p \\
+&\da \beta ^p
+.\]
+
 
 
 
