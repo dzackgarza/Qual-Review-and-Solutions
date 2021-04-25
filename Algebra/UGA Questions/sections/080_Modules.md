@@ -487,7 +487,13 @@ x_\alpha &\mapsto y_\alpha
 0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
 \end{tikzcd}
 
-- It remains to check that it's a section:
+- It remains to check that it's a section.
+  - Write $f= \sum r_i x_i$.
+  \[
+  (\pi \circ h)(f) = (\pi \circ h)\qty{ \sum r_i x_i } \\
+  &= \sum r_i (\pi \circ h)(x_i)
+  .\]
+
 \[
 f\in F \implies f = \sum_i r_i { x_i } \\
 \implies (\pi \circ h)(f) 
