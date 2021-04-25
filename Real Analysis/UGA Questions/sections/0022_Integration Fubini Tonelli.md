@@ -12,8 +12,6 @@ defines a function in $L^1(\RR)$ that satisfies
 \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1
 .\]
 
-:::{.solution}
-\hfill
 :::{.concept}
 \hfill
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
@@ -22,11 +20,17 @@ defines a function in $L^1(\RR)$ that satisfies
 - See Folland's Real Analysis II, p. 68 for a discussion of using Fubini *and* Tonelli.
 :::
 
-Note that $\norm{f\ast g(x)}_1 \da \norm{ \int_\RR f(y) g(x-y)\dy}_1$
+:::{.solution}
+Note that
+\[
+\norm{f\ast g}_1 
+&\da \int_\RR \abs{(f\ast g)(x)} \dx \\
+&\da \int_\RR \abs{\int_\RR H(x, y) \dy} \dx \\
+&\da \int_\RR \abs{\int_\RR f(y)g(x-y) \dy} \dx 
+.\]
 We first check a preliminary computation, the validity of which we will show afterward:
 \[
-\norm{H(x)}_1 
-&\da \int _\RR \abs{H(x, y)} \, dx \\
+\norm{f\ast g}_1
 &\da \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
 &\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{triangle inequality}\\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{by Tonelli} \\
