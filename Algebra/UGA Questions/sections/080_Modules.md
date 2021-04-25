@@ -473,7 +473,7 @@ M_t \definedas \theset{m\in M \suchthat \Ann(m) \neq 0} \leq M
   - If we construct any map $f: X\to M$, the universal property modules will give a lift $\tilde f: F\to M$
 
 - Identify $X$ with $\iota(X) \subseteq F$. 
-- For every $x\in X$, the preimage $\pi\inv(x)$ is nonempty.
+- For every $x\in X$, the preimage $\pi\inv(x)$ is nonempty by surjectivity.
   So arbitrarily pick any preimage.
 - $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $\pi(y_\alpha) = \iota(x_\alpha)$ and define
 \[
@@ -489,9 +489,9 @@ x_\alpha &\mapsto y_\alpha
 
 - It remains to check that it's a section:
 \[
-f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
+f\in F \implies f = \sum_i r_i { x_i } \\
 \implies (\pi \circ h)(f) 
-&= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
+&= \pi \qty{h\qty{\sum_i r_i x_i }}  \\
 &= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
 &= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
 &= \sum_\alpha r_\alpha \pi(y_\alpha) \\
