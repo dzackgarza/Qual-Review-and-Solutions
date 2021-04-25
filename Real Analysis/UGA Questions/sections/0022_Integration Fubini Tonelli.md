@@ -38,7 +38,7 @@ defines a function in $L^1(\RR)$ that satisfies
 \[
 \norm{H}_1
 &\da \norm{H}_{L^1(\RR^2)} \\
-&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx \\ 
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{Tonelli} \\ 
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{Tonelli} \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
@@ -49,14 +49,20 @@ defines a function in $L^1(\RR)$ that satisfies
 &< \infty && \text{by assumption}
 .\]
 
-- $H$ is measurable on $\RR^2$:
-  It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
+- We've used Tonelli twice: to equate the integral to the iterated integral, and to switch the order of integration, so it remains to show the hypothesis of Tonelli are fulfilled.
+
+
+:::{.claim}
+$H$ is measurable on $\RR^2$:
+:::
+
+- It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
   
-  - $f \in L^1$, and $L^1$ functions are measurable by definition.
-  - The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
-    - Let $g$ be measurable on $\RR$, then the cylinder function $G(x, y) = g(x)$ on $\RR^2$ is always measurable
-    - Define a linear transformation $T \definedas \thevector{1, -1; 0, 1}$ which sends $(x,y) \to (x-y, y)$, then $T\in \GL(2, \RR)$ is linear and thus measurable.
-    - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
+- $f \in L^1$, and $L^1$ functions are measurable by definition.
+- The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
+  - Let $g$ be measurable on $\RR$, then the cylinder function $G(x, y) = g(x)$ on $\RR^2$ is always measurable
+  - Define a linear transformation $T \definedas \thevector{1, -1; 0, 1}$ which sends $(x,y) \to (x-y, y)$, then $T\in \GL(2, \RR)$ is linear and thus measurable.
+  - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
 
 - Apply **Tonelli** to $\abs{H}$
   - $H$ measurable implies $\abs{H}$ is measurable
