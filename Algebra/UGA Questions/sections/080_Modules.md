@@ -456,15 +456,14 @@ is the trivial submodule, where
 :::
 
 :::{.proof title="of c"}
-\envlist
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
 \[
 0 \to N \to M \mapsvia{\pi} F \to 0
 .\]
 
-- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
-  If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
+- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects F$ satisfying the 3rd property from (a).
+  - If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
 - $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $\pi(y_\alpha) = \iota(x_\alpha)$ and define
 \[
 f: X&\to M \\
