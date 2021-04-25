@@ -12,6 +12,13 @@ defines a function in $L^1(\RR)$ that satisfies
 \norm{f\ast g}_1 \leq \norm{f}_1 \norm{g}_1
 .\]
 
+
+:::{.strategy}
+Just do it! 
+Sort out the justification afterward.
+Use Tonelli.
+:::
+
 :::{.concept}
 \envlist
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
@@ -21,7 +28,7 @@ defines a function in $L^1(\RR)$ that satisfies
 :::
 
 :::{.solution}
-- Note that if these norms can be computed via iterated integrals, we have
+- If these norms can be computed via iterated integrals, we have
 \[
 \norm{f\ast g}_1 
 &\da \int_\RR \abs{(f\ast g)(x)} \dx \\
@@ -130,6 +137,7 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 :::{.concept}
 \envlist
 - See Stein and Shakarchi p.82.
+- Tonelli
 :::
 
 :::{.solution}
