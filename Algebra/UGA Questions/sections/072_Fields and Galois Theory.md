@@ -903,7 +903,7 @@ b. Find the Galois group $G$ of $f$.
 c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 
-## Spring 2021 #7 $\work$
+## Spring 2021 #7 $\done$
 
 Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
 Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
