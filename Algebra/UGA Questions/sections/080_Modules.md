@@ -419,6 +419,8 @@ Show that any finitely generated $R\dash$module $M$ can be expressed as a direct
   
 > You may assume that a finitely generated torsionfree module over a PID is free.
 
+
+
 :::{.solution}
 Let $R$ be a ring with 1.
 
@@ -427,18 +429,30 @@ Let $R$ be a ring with 1.
 An $R\dash$module $M$ is **free** if any of the following conditions hold:
 
 - $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
-- $M \cong \bigoplus_{\alpha} R$ are isomorphic as $R\dash$modules.
-- There is a nonempty set $X$ and an inclusion $X\injects M$ such that for every $R\dash$modules $N$, every map $X\to N$ lifts to a unique map $M\to N$, so the following diagram commutes:
+- $M$ admits a decomposition $M \cong \bigoplus_{\alpha} R$ as a direct sum of $R\dash$submodules.
+- There is a nonempty set $X$ an monomorphism $X\injects M$ of sets such that for every $R\dash$module $N$, every set map $X\to N$ lifts to a unique $R\dash$module morphism $M\to N$, so the following diagram commutes:
 
 \begin{tikzcd}
 M \ar[rd, dotted, "\exists ! \tilde f"] & \\
 X \ar[u, hook] \ar[r, "f"] & N
 \end{tikzcd}
 
+Equivalently,
+\[
+\Hom_\Set(X, \Forget(N)) \mapsvia{\sim} \Hom_{\rmod}(M, N)
+.\]
+
+
 :::
 
 :::{.proof title="of b"}
-$M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
+$M$ is **torsionfree** iff \[
+M_t \definedas \theset{m\in M \suchthat \Ann(m) \neq 0} \leq M
+\]
+is the trivial submodule, where 
+\[
+\Ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R
+.\]
 :::
 
 :::{.proof title="of c"}
