@@ -21,27 +21,31 @@ defines a function in $L^1(\RR)$ that satisfies
 :::
 
 :::{.solution}
-Note that
+- Note that
 \[
 \norm{f\ast g}_1 
 &\da \int_\RR \abs{(f\ast g)(x)} \dx \\
 &\da \int_\RR \abs{\int_\RR H(x, y) \dy} \dx \\
 &\da \int_\RR \abs{\int_\RR f(y)g(x-y) \dy} \dx 
 .\]
-We first check a preliminary computation, the validity of which we will show afterward:
+- A preliminary computation, the validity of which we will show afterward:
 \[
 \norm{f\ast g}_1
 &\da \int _\RR \abs{ \int_\RR f(y)g(x-y) \,dy } \, dx \\
-&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{triangle inequality}\\
-&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{by Tonelli} \\
+&\leq \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dy } \, dx && \text{"triangle inequality"}\\
+&= \int _\RR \qty{ \int_\RR \abs{f(y)g(x-y)}  \, dx} \, dy && \text{Tonelli} \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)g(t)}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
 &= \int _\RR \qty{ \int_\RR \abs{f(y)}\cdot \abs{g(t)}  \, dt}\, dy \\
 &= \int _\RR \abs{f(y)} \cdot \qty{ \int_\RR \abs{g(t)}  \, dt}\, dy \\
 &\definedas \int _\RR \abs{f(y)} \cdot \norm{g}_1 \,dy \\
-&= \norm{g}_1 \int _\RR \abs{f(y)} \,dy \\
+&= \norm{g}_1 \int _\RR \abs{f(y)} \,dy &&\text{the norm is a constant} \\
 &\definedas \norm{g}_1 \norm{f}_1  \\
 &< \infty && \text{by assumption}
 .\]
+  - This shows that $H\in L^1(\RR^2)$, since
+  \[
+  \norm{H}_{L^1(\RR^2} \da \int_{\RR^2} \abs{H} \dmu
+  .\]
 
 - $H$ is measurable on $\RR^2$:
   It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
