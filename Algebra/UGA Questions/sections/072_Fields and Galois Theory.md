@@ -915,10 +915,6 @@ Eventually show $a^\ell = b^p$ for some $\ell\in \NN$ and some $b\in \FF$, then 
 Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
 :::
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -931,6 +927,9 @@ sp + tq = d
 .\]
 
 :::
+
+:::{.solution}
+\envlist
 
 - WTS: $f(x) \da x^p - a\in \FF[x]$ reducible $\implies f$ has a root in the *base field* $\FF$.
 - Write $f(x) = g(x) h(x)$ and factor $f(x) = \prod_{i=1}^p (x- r_i) \in \SF(f)[x]$ where the $r_i$ are not necessarily distinct roots.
@@ -966,8 +965,6 @@ a &= a^1\\
   so $a = \beta^p$.
 
   - Check $\beta\in \FF$: use that $R_\ell \in \FF$ since it was a constant term of a polynomial in $\FF[x]$, $a\in \FF$ by assumption, and fields are closed under taking powers and products.
-
-
 
 
 
