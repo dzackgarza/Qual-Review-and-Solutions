@@ -537,6 +537,8 @@ Prove that
 
 ![image_2021-04-24-21-27-21](figures/image_2021-04-24-21-27-21.png)
 
+- Any integral $\int_a^b f$ can be written as $\norm{f}_1 - O(\text{err})$.
+
 :::
 
 
@@ -573,12 +575,22 @@ Prove that
 - Check that $N\to \infty$ as $\eps\to 0$ to yield the result.
 
 
-- Seeing where the inequalities come from: 
+- Seeing where the inequalities come from: for the first, we'll generally have $f$ big and $g$ small, which motivates:
 \[
 \int_{-\infty}^R \abs{f - g_N} 
 &\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} \\
-&= \norm{f}_1 - \int_M^{\infty } \abs{f} + \int_{- \infty }^M \abs{g_N}
+&= \norm{f}_1 - \int_R^{\infty } \abs{f} + \int_{- \infty }^R \abs{g_N} \\
+&\approx \norm{f}_1 + O(\eps) + O(\eps)
+,\]
+and similarly 
+\[
+\int_{- \infty }^R \abs{ f- g_N} 
+&\geq \int_{- \infty }^R \abs{f} - \abs{g_N} \\
+&= \int_{- \infty }^R \abs{f} - \int_{- \infty }^R \abs{g_N} \\
+&= \norm{f}_1 - \int_R^{\infty } \abs{f} - \int_{- \infty }^R \abs{g_N} \\
+&\geq \norm{f}_1 - O(\eps) - O(\eps)
 .\]
+
 
 
 
