@@ -13,7 +13,7 @@ defines a function in $L^1(\RR)$ that satisfies
 .\]
 
 :::{.concept}
-\hfill
+\envlist
 - Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 - Fubini: $f(x, y) \in L^1$ yields *integrable* slices and equality of iterated integrals
 - F/T: apply Tonelli to $\abs{f}$; if finite, $f\in L^1$ and apply Fubini to $f$
@@ -101,10 +101,10 @@ $H$ is measurable on $\RR^2$:
 
 
 - Apply **Tonelli** to $\abs{H}$
-  - $H$ measurable implies $\abs{H}$ is measurable
-  - $\abs{H}$ is non-negative
+  - $H$ measurable implies $\abs{H}$ is measurable.
+  - $\abs{H}$ is non-negative.
   - So the iterated integrals are equal in the extended sense
-  - The calculation shows the iterated integral is finite, to $\int \abs{H}$ is finite and $H$ is thus integrable on $\RR^2$.
+  - The calculation shows the iterated integral is finite, so $\int \abs{H}$ is finite and $H$ is thus integrable on $\RR^2$.
 
 > Note: Fubini is not needed, since we're not calculating the actual integral, just showing $H$ is integrable.
 
@@ -127,15 +127,15 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 
 \todo[inline]{Add concepts.}
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
-- See S&S p.82.
+\envlist
+- See Stein and Shakarchi p.82.
 :::
 
-### a
+:::{.solution}
+\envlist
 
+:::{.proof title="of a"}
 $\implies$:
 
 - Suppose $f$ is a measurable function.
@@ -156,8 +156,10 @@ $\impliedby$:
 - But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
 
 
-### b
+:::
 
+:::{.proof title="of b"}
+\envlist
 - Note
 \[
 \mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
@@ -179,6 +181,9 @@ $\impliedby$:
 - By Tonelli, all of these integrals are equal. 
   - This is justified because $f$ was assumed measurable on $\RR^n$, thus by (a) $\mathcal{A}$ is a measurable set and thus $\chi_A$ is a measurable function on $\RR^n\cross \RR$.
 
+
+:::
+
 :::
 
 ## Fall 2018 # 5 $\done$
@@ -187,11 +192,8 @@ Show that
 \[
 \int _{\RR} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
 \]
-
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Claim: If $E\subseteq \RR^a \cross \RR^b$ is a measurable set, then for almost every $y\in \RR^b$, the slice $E^y$ is measurable and
 \[
 m(E) = \int_{\RR^b} m(E^y) \,dy
@@ -200,6 +202,9 @@ m(E) = \int_{\RR^b} m(E^y) \,dy
   - Conclude that $g^y = \chi_{E^y}$ is measurable, the function $y\mapsto \int g^y(x)\, dx$ is measurable, and $\int \int g^y(x)\,dx \,dy = \int g$.
   - But $\int g = m(E)$ and $\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy$.
 :::
+
+:::{.solution}
+\envlist
 
 > Note: $f$ is a function $\RR\to \RR$ in the original problem, but here I've assumed $f:\RR^n\to \RR$.
 
