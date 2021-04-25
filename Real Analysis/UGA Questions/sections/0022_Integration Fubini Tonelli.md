@@ -21,19 +21,17 @@ defines a function in $L^1(\RR)$ that satisfies
 :::
 
 :::{.solution}
-- Note that
+- Note that if these norms can be computed via iterated integrals, we have
 \[
 \norm{f\ast g}_1 
 &\da \int_\RR \abs{(f\ast g)(x)} \dx \\
 &\da \int_\RR \abs{\int_\RR H(x, y) \dy} \dx \\
-&\da \int_\RR \abs{\int_\RR f(y)g(x-y) \dy} \dx 
+&\da \int_\RR \abs{\int_\RR f(y)g(x-y) \dy} \dx \\
+&\leq \int_\RR \int_\RR \abs{f(y) g(x-y)} \dx \dy \\
+&\da \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy \\
+&\da \int_{\RR^2} \abs{H} \dmu_{\RR^2} \\
+&\da \norm{H}_{L^1(\RR^2)} \\
 .\]
-- If this is finite, this will show that $H\in L^1(\RR^2)$ since
-  \[
-  \norm{H}_{L^1(\RR^2)} \da \int_{\RR^2} \abs{H} \dmu_{\RR^2} &= \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy
-  \\ 
-  &\da \int_\RR \int_\RR \abs{f(y) g(x-y)} \dx \dy
-  .\]
 
 - A preliminary computation, the validity of which we will show afterward:
 \[
