@@ -532,10 +532,10 @@ x_\alpha &\mapsto y_\alpha
 
 
 
-- Take the identity map, then commutativity is equivalent to being a section.
+- Now take the identity map, then commutativity is equivalent to being a section.
 
 \begin{tikzcd}
- & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
+ & & & F\ar[d, "\one_F"]\ar[dl, "\exists ! h"'] & \\
 0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
 \end{tikzcd}
 
