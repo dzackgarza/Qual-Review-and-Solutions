@@ -602,4 +602,3 @@ b. Determine the minimal polynomial of $A$.
 
 c. Determine the characteristic polynomial of $A$.
 
-
