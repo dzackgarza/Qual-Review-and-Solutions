@@ -551,15 +551,20 @@ There is a SES
 :::{.claim}
 $M/M_t$ is a free \(R\dash\)module, so this sequence splits and
 $M\cong M_t \oplus {M\over M_t}$, where $M_t$ is a torsion $R\dash$module.
+
+> Note that by the hint, since $R$ is a PID, it suffices to show that $M/M_t$ is torsionfree.
+
 :::
 
-- By the hint, since $R$ is a PID, it suffices to show that $M/M_t$ is torsionfree.
-  - Let $m+M_t \in M/M_t$ and suppose it is torsion, we will show that is must be the zero coset.
-  - Then there exists an $r\in R$ such that $r(m + M_t) = M_t$
-  - Then $rm + M_t = M_t$, so $rm\in M_t$.
-  - By definition of $M_t$, every element is torsion, so there exists some $s\in R$ such $s(rm) = 0_M$.
-  - Then $(sr)m = 0_M$ which forces $m\in M_t$
-  - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
+- Let $m+M_t \in M/M_t$ be arbitrary.
+  Suppose this is a torsion element, the claim is that it must be the trivial coset.
+  This will follow if $m\in M_t$
+- Since this is torsion, there exists $r\in R$ such that
+\[
+M_t = r(m + M_t) \da (rm) + M_t \implies rm\in M_t
+.\]
+- Then $rm$ is torsion in $M$, so there exists some $s\in R$ such $s(rm) = 0_M$.
+- Then $(sr)m = 0_M$ which forces $m\in M_t$
 
 :::
 
