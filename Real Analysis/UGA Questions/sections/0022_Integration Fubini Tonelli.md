@@ -56,13 +56,43 @@ defines a function in $L^1(\RR)$ that satisfies
 $H$ is measurable on $\RR^2$:
 :::
 
+
+:::{.proof title="?"}
+\envlist
+
 - It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
   
-- $f \in L^1$, and $L^1$ functions are measurable by definition.
+-  \in L^1$, and ^1$ functions are measurable by definition.
 - The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
-  - Let $g$ be measurable on $\RR$, then the cylinder function $G(x, y) = g(x)$ on $\RR^2$ is always measurable
-  - Define a linear transformation $T \definedas \thevector{1, -1; 0, 1}$ which sends $(x,y) \to (x-y, y)$, then $T\in \GL(2, \RR)$ is linear and thus measurable.
+  - Let $ be measurable on $\RR$, then the cylinder function (x, y) = g(x)$ on $\RR^2$ is measurable (result from course).
+  - Define a linear transformation 
+  \[
+  T \da 
+  \begin{bmatrix}
+  1 & -1 
+  \\
+  0 & 1
+  \end{bmatrix}
+  && 
+  T
+  \begin{bmatrix}
+   x 
+  \\
+   y 
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  x-y   
+  \\
+  y  
+  \end{bmatrix}
+  .\]
+  which sends $(x,y) \to (x-y, y)$, then \in \GL(2, \RR)$ is linear and thus measurable.
   - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
+
+:::
+
+
 
 - Apply **Tonelli** to $\abs{H}$
   - $H$ measurable implies $\abs{H}$ is measurable
