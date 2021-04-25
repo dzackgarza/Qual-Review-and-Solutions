@@ -528,6 +528,12 @@ Prove that
 
 - For $f\in L^1(X)$, $\norm{f}_1 \da \int_X \abs{f(x)} \dx < \infty$.
 
+- Small tails in $L_1$: if $f\in L^1(\RR^n)$, then for every $\eps>0$ exists some $R$ such that
+\[
+\norm{f}_{L^1(B_R^c)} < \eps
+.\]
+
+
 :::
 
 
