@@ -60,11 +60,12 @@ $H$ is measurable on $\RR^2$:
 :::{.proof title="?"}
 \envlist
 
-- It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
+- It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$. 
+  - Then use that products of measurable functions are measurable.
   
--  \in L^1$, and ^1$ functions are measurable by definition.
+-  $f \in L^1$ by assumption, and $L^1$ functions are measurable by definition.
 - The function $(x, y) \mapsto g(x-y)$ is measurable on $\RR^2$:
-  - Let $ be measurable on $\RR$, then the cylinder function (x, y) = g(x)$ on $\RR^2$ is measurable (result from course).
+  - $g$ is measurable on $\RR$ by assumption, so the cylinder function $G(x, y) \da g(x)$ on $\RR^2$ is measurable (result from course).
   - Define a linear transformation 
   \[
   T \da 
@@ -87,9 +88,13 @@ $H$ is measurable on $\RR^2$:
   \\
   y  
   \end{bmatrix}
-  .\]
-  - Linear functions are measurable (result from course).
-  - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
+  ,\]
+  and linear functions are measurable.
+  - Write
+  \[
+  \tilde g(x-y) \da G(x-y, y) \da (G\circ T)(x, y)
+  ,\]
+  and compositions of measurable functions are measurable.
 
 :::
 
