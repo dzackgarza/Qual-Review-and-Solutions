@@ -419,11 +419,8 @@ Show that any finitely generated $R\dash$module $M$ can be expressed as a direct
   
 > You may assume that a finitely generated torsionfree module over a PID is free.
 
-
-
 :::{.solution}
 Let $R$ be a ring with 1.
-
 
 :::{.proof title="of a"}
 An $R\dash$module $M$ is **free** if any of the following conditions hold:
@@ -541,25 +538,28 @@ x_\alpha &\mapsto y_\alpha
 
 :::
 
-
 :::{.proof title="of d"}
 \envlist
 
-- Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
-- Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
+There is a SES
+
+\begin{tikzcd}
+0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
+\end{tikzcd}
+
+
+:::{.claim}
+$M/M_t$ is a free \(R\dash\)module, so this sequence splits and
+$M\cong M_t \oplus {M\over M_t}$, where $M_t$ is a torsion $R\dash$module.
+:::
+
+- By the hint, since $R$ is a PID, it suffices to show that $M/M_t$ is torsionfree.
   - Let $m+M_t \in M/M_t$ and suppose it is torsion, we will show that is must be the zero coset.
   - Then there exists an $r\in R$ such that $r(m + M_t) = M_t$
   - Then $rm + M_t = M_t$, so $rm\in M_t$.
   - By definition of $M_t$, every element is torsion, so there exists some $s\in R$ such $s(rm) = 0_M$.
   - Then $(sr)m = 0_M$ which forces $m\in M_t$
   - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
-- There is a SES
-
-\begin{tikzcd}
-0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
-\end{tikzcd}
-
-  and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
 
 :::
 
