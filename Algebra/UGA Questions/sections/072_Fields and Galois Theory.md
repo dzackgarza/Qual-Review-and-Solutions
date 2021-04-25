@@ -34,16 +34,15 @@ Prove that $m = k$.
 
 \todo[inline]{Revisit, tricky!}
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
-- Theorem: $F\units$ is always cyclic for $F$ a field.
+- Theorem: $\FF\units$ is always cyclic for $\FF$ a field.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -100,10 +99,6 @@ Show that the field extension $\QQ(\zeta_n )$ over $\QQ$ is Galois and prove its
 
 How many subfields are there of $\QQ(\zeta_{20} )$?
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -122,6 +117,9 @@ How many subfields are there of $\QQ(\zeta_{20} )$?
   ![image_2021-04-17-02-44-48](figures/image_2021-04-17-02-44-48.png)
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $K = \QQ(\zeta)$. 
 Then $K$ is the splitting field of $f(x) = x^n - 1$, which is irreducible over $\QQ$, so $K/\QQ$ is normal.
@@ -191,10 +189,6 @@ Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divid
 b.
 Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -206,6 +200,9 @@ Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n
 - $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
@@ -271,10 +268,6 @@ How many quadratic subfields of $\QQ(\zeta)$ are there?
 c.
 What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 
-
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -290,6 +283,9 @@ What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $K = \QQ(\zeta)$.
 
@@ -354,17 +350,13 @@ If $L/F$ is Galois, then so is $L/K$.
 c.
 If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Every quadratic extension over $\QQ$ is Galois.
 :::
 
-
+:::{.solution}
 Let $L/K/F$.
 
 :::{.proof title="of a"}
@@ -412,9 +404,6 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -422,6 +411,8 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
@@ -518,10 +509,6 @@ $$
 \Gal(K/(E_1 \cap E_2 )) = H_1 H_2
 .$$
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -529,6 +516,9 @@ $$
   - $H_1 \intersect H_2 \mapstofrom E_1 E_2$, 
   - $H_1 H_2 \mapstofrom E_1 \intersect E_2$.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of $H_1 \intersect H_2$ is $E_1 E_2$.
@@ -983,5 +973,4 @@ c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
 Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
 Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
 Prove that \( [E: F] \equiv 1 \mod p \).
-
 
