@@ -912,6 +912,7 @@ Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irre
 :::{.strategy}
 By contrapositive, show that $f(x) \da x^p-a \in \FF[x]$ reducible $\implies a$ is a $p$th power in $\FF$.
 Eventually show $a^\ell = b^p$ for some $\ell\in \NN$ and some $b\in \FF$, then $\gcd(\ell, p) = 1$ forces $b=a$ and $\ell=p$.
+Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
 :::
 
 :::{.solution}
@@ -960,8 +961,11 @@ a &= a^1\\
 &=a^{tp} (a^\ell)^s\\
 &= a^{tp} (R_\ell^p)^s \\
 &= (a^t R_\ell^s)^p \\
-&\da \beta ^p
-.\]
+&\da \beta^p
+,\]
+  so $a = \beta^p$.
+
+  - Check $\beta\in \FF$: use that $R_\ell \in \FF$ since it was a constant term of a polynomial in $\FF[x]$, $a\in \FF$ by assumption, and fields are closed under taking powers and products.
 
 
 
