@@ -505,7 +505,7 @@ x_\alpha &\mapsto y_\alpha
 
 - Free implies projective
 
-- Universal property of projective modules: for every surjective $\pi:M\to N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+- Universal property of **projective** objects: for every epimorphism $\pi:M\surjects N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
 
 \begin{tikzcd}
  & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
