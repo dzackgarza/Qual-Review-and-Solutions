@@ -522,3 +522,16 @@ Prove that
 \lim_{n\to \infty } \norm{f + g_n}_1 = \norm{f}_1 + \norm{g}_1
 .\]
 
+
+:::{.concept}
+\envlist
+
+- For $f\in L^1(X)$, $\norm{f}_1 \da \int_X \abs{f(x)} \dx < \infty$.
+
+:::
+
+
+:::{.solution}
+
+:::
+

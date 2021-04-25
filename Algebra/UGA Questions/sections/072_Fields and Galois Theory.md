@@ -571,8 +571,8 @@ By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an
 
 But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so 
 \[
-\sigma(x) = x &\iff \tau_1\tau_2(x) = x
-\iff \tau_2(x) = x 
+\sigma(x) = x \iff \tau_1\tau_2(x) = x
+&\iff \tau_2(x) = x 
 \\
 &~\&~ 
 \\
@@ -907,9 +907,11 @@ Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
 Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
 
 :::{.strategy}
-By contrapositive, show that $f(x) \da x^p-a \in \FF[x]$ reducible $\implies a$ is a $p$th power in $\FF$.
-Eventually show $a^\ell = b^p$ for some $\ell\in \NN$ and some $b\in \FF$, then $\gcd(\ell, p) = 1$ forces $b=a$ and $\ell=p$.
-Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
+\envlist
+
+- By contrapositive, show that $f(x) \da x^p-a \in \FF[x]$ reducible $\implies a$ is a $p$th power in $\FF$.
+- Eventually show $a^\ell = b^p$ for some $\ell\in \NN$ and some $b\in \FF$, then $\gcd(\ell, p) = 1$ forces $b=a$ and $\ell=p$.
+- Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
 :::
 
 :::{.concept}
@@ -918,7 +920,7 @@ Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
 - Reducible: $f\in \FF[x]$ is reducible iff there exists $g, h\in \FF[x]$ nonconstant with $f = g h$. 
   - Importantly, this factorization needs to happen in $\FF[x]$, since we can *always* find such factorizations in the splitting field $\SF(f)[x]$.
 
-- Bezout (?): $\gcd(p, q) = d \implies$ there exist $s,t\in \ZZ$ such that 
+- Bezout's identity: $\gcd(p, q) = d \implies$ there exist $s,t\in \ZZ$ such that 
 \[
 sp + tq = d
 .\]
