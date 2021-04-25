@@ -528,16 +528,27 @@ Prove that
 
 - For $f\in L^1(X)$, $\norm{f}_1 \da \int_X \abs{f(x)} \dx < \infty$.
 
-- Small tails in $L_1$: if $f\in L^1(\RR^n)$, then for every $\eps>0$ exists some $R$ such that
+- Small tails in $L_1$: if $f\in L^1(\RR^n)$, then for every $\eps>0$ exists some radius $R$ such that
 \[
 \norm{f}_{L^1(B_R^c)} < \eps
 .\]
 
+- Shift $g$ off so most of its density occurs where $f$ has a small tail, and vice versa:
+
+![image_2021-04-24-21-27-21](figures/image_2021-04-24-21-27-21.png)
 
 :::
 
 
 :::{.solution}
+\envlist
+
+- Choose $n\gg 0$ so that
+\[
+\int_M^{\infty } \abs{f} &< \eps \\
+\int_{-\infty}^{M} \abs{f} &< \eps \\
+.\]
+
 
 :::
 
