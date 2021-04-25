@@ -28,6 +28,13 @@ defines a function in $L^1(\RR)$ that satisfies
 &\da \int_\RR \abs{\int_\RR H(x, y) \dy} \dx \\
 &\da \int_\RR \abs{\int_\RR f(y)g(x-y) \dy} \dx 
 .\]
+- If this is finite, this will show that $H\in L^1(\RR^2)$ since
+  \[
+  \norm{H}_{L^1(\RR^2)} \da \int_{\RR^2} \abs{H} \dmu_{\RR^2} &= \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy
+  \\ 
+  &\da \int_\RR \int_\RR \abs{f(y) g(x-y)} \dx \dy
+  .\]
+
 - A preliminary computation, the validity of which we will show afterward:
 \[
 \norm{f\ast g}_1
@@ -42,10 +49,6 @@ defines a function in $L^1(\RR)$ that satisfies
 &\definedas \norm{g}_1 \norm{f}_1  \\
 &< \infty && \text{by assumption}
 .\]
-  - This shows that $H\in L^1(\RR^2)$, since
-  \[
-  \norm{H}_{L^1(\RR^2} \da \int_{\RR^2} \abs{H} \dmu_{\RR^2} &= \int_\RR \int_\RR \abs{H(x ,y)}\dx \dy
-  .\]
 
 - $H$ is measurable on $\RR^2$:
   It suffices to show $\tilde f(x, y) \definedas f(y)$ and $\tilde g(x, y) \definedas g(x-y)$ are both measurable on $\RR^2$, products of measurable functions are measurable. 
