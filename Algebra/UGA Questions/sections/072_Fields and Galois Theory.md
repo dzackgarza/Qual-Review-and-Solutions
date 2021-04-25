@@ -17,9 +17,7 @@ Show that $F(\alpha)/F$ has degree 8.
 
 ## Fall 2019 #4 $\done$
 Let $F$ be a finite field with $q$ elements.
-
 Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
-
 Let $E = F [\omega]$ and let $k = [E : F]$.
 
 a.
@@ -37,7 +35,8 @@ Prove that $m = k$.
 :::{.concept}
 \envlist
 
-- Theorem: $\FF\units$ is always cyclic for $\FF$ a field.
+- $\FF\units$ is always cyclic for $\FF$ a field.
+- Lagrange: $H\leq G \implies \#H \divides \# G$.
 
 :::
 
@@ -214,12 +213,13 @@ So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
 Since $\rho$ is a ring morphism, we have
 
 \[
-\rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
-&= 0 \in K \\
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \generators{\pi(x)} \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
-.\]
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
+,\]
+  where we've used that "to contain is to divide" in the last step.
 
 
 :::
@@ -512,7 +512,7 @@ $$
 :::{.concept}
 \envlist
 
-- The rough correspondence:
+- The Galois correspondence:
   - $H_1 \intersect H_2 \mapstofrom E_1 E_2$, 
   - $H_1 H_2 \mapstofrom E_1 \intersect E_2$.
 :::
