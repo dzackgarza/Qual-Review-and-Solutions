@@ -73,7 +73,8 @@ $H$ is measurable on $\RR^2$:
   \\
   0 & 1
   \end{bmatrix}
-  && 
+  \in \GL_2(\RR)
+  && \implies \,\,\,
   T
   \begin{bmatrix}
    x 
@@ -87,7 +88,7 @@ $H$ is measurable on $\RR^2$:
   y  
   \end{bmatrix}
   .\]
-  which sends $(x,y) \to (x-y, y)$, then \in \GL(2, \RR)$ is linear and thus measurable.
+  - Linear functions are measurable (result from course).
   - Then $(G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)$, so $\tilde g$ is a composition of measurable functions and thus measurable.
 
 :::
