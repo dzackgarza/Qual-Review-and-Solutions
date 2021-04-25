@@ -446,16 +446,23 @@ Equivalently,
 :::
 
 :::{.proof title="of b"}
-$M$ is **torsionfree** iff \[
-M_t \definedas \theset{m\in M \suchthat \Ann(m) \neq 0} \leq M
-\]
-is the trivial submodule, where 
+\envlist
+
+- Define the annihilator:
 \[
 \Ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R
 .\]
+  - Note that $mR \cong R/\Ann(m)$.
+- Define the torsion submodule:
+\[
+M_t \definedas \theset{m\in M \suchthat \Ann(m) \neq 0} \leq M
+\]
+- $M$ is **torsionfree** iff $M_t = 0$ is the trivial submodule.
+
 :::
 
 :::{.proof title="of c"}
+\envlist
 
 - Let the following be an SES where $F$ is a free $R\dash$module:
 \[
@@ -463,7 +470,11 @@ is the trivial submodule, where
 .\]
 
 - Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects F$ satisfying the 3rd property from (a).
-  - If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
+  - If we construct any map $f: X\to M$, the universal property modules will give a lift $\tilde f: F\to M$
+
+- Identify $X$ with $\iota(X) \subseteq F$. 
+- For every $x\in X$, the preimage $\pi\inv(x)$ is nonempty.
+  So arbitrarily pick any preimage.
 - $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $\pi(y_\alpha) = \iota(x_\alpha)$ and define
 \[
 f: X&\to M \\
