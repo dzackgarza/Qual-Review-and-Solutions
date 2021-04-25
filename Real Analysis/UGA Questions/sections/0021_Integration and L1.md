@@ -576,7 +576,8 @@ Prove that
 - Seeing where the inequalities come from: 
 \[
 \int_{-\infty}^R \abs{f - g_N} 
-&\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} 
+&\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} \\
+&= \norm{f}_1 - \int_M^{\infty } \abs{f} + \int_{- \infty }^M \abs{g_N}
 .\]
 
 
