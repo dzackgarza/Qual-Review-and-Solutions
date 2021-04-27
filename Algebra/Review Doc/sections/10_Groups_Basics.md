@@ -253,14 +253,22 @@ Equivalently, the action has a single orbit.
 :::
 
 
-:::{.proposition title="?"}
+:::{.proposition title="Orbit Stabilizer Isomorphism"}
 If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets:
 \[
-G/G_x \mapsvia{\sim} X \\
-[1] &\mapsto x_0
+G/G_{x_0} \mapsvia{\sim} X \\
+\bar{g} &\mapsto g\actson x_0
 .\]
-
 :::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Injectivity: check that $\phi(\bar{g}) = \phi(\bar{h}) \iff g\actson x_0 = h\actson x_0 \iff gh\inv \in G_{x_0}$.
+- Surjectivity: follows from transitivity.
+:::
+
 
 
 
