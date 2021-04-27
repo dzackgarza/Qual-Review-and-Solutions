@@ -109,6 +109,23 @@ C_p \definedas
 
 ## Canonical Forms
 
+
+:::{.proposition title="?"}
+Let $T:V\to V$ be a linear map.
+TFAE:
+
+- There exists a basis \( \ts{ e_i } \) of $V$ such that 
+\[
+T(e_i) = 
+\begin{cases}
+e_{i-1} &  i \geq 2
+\\
+0 & i=1.
+\end{cases}
+\]
+:::
+
+
 ### Rational Canonical Form
 
 Corresponds to the **Invariant Factor Decomposition** of $T$.
@@ -183,7 +200,7 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 \todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
 
 
-## Using Canonical Forms
+### Using Canonical Forms
 
 :::{.lemma title="?"}
 The characteristic polynomial is the *product of the invariant factors*, i.e.
