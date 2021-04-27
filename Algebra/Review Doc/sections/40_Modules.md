@@ -210,3 +210,39 @@ Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be 
 
 :::
 
+
+## Algebraic Properties
+
+
+
+:::{.definition title="Module structure on tensor products"}
+\[
+r\actson (m\tensor n) \da (r\actson m)\tensor n
+.\]
+
+:::
+
+
+:::{.example title="Computing tensor products"}
+$\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
+
+\begin{tikzcd}
+	0 && {\ZZ \tensor_\ZZ \ZZ/3} && {\ZZ \tensor_\ZZ \ZZ/3} && {\ZZ/3 \tensor_\ZZ \ZZ/2} \\
+	\\
+	0 && {\ZZ/3} && {\ZZ/3} && 0
+	\arrow["{(\wait \times 2)}", from=3-3, to=3-5]
+	\arrow["{(\wait \times 2) \cross \one}", from=1-3, to=1-5]
+	\arrow[from=3-5, to=3-7]
+	\arrow[from=1-5, to=1-7]
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=3-1, to=3-3]
+	\arrow["{\proj_2}"{description}, from=1-3, to=3-3]
+	\arrow["{\proj_2}"{description}, from=1-5, to=3-5]
+	\arrow["\cong", dashed, from=1-7, to=3-7]
+\end{tikzcd}
+
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXFpaIFxcdGVuc29yX1xcWlogXFxaWi8zIl0sWzQsMCwiXFxaWiBcXHRlbnNvcl9cXFpaIFxcWlovMyJdLFsyLDIsIlxcWlovMyJdLFs0LDIsIlxcWlovMyJdLFs2LDIsIjAiXSxbNiwwLCJcXFpaLzMgXFx0ZW5zb3JfXFxaWiBcXFpaLzIiXSxbMCwyLCIwIl0sWzAsMCwiMCJdLFsyLDMsIihcXHdhaXQgXFx0aW1lcyAyKSJdLFswLDEsIihcXHdhaXQgXFx0aW1lcyAyKSBcXGNyb3NzIFxcb25lIl0sWzMsNF0sWzEsNV0sWzcsMF0sWzYsMl0sWzAsMiwiXFxwcm9qXzIiLDFdLFsxLDMsIlxccHJval8yIiwxXSxbNSw0LCJcXGNvbmciLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+
+:::
+
