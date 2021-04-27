@@ -253,6 +253,17 @@ Equivalently, the action has a single orbit.
 :::
 
 
+:::{.proposition title="?"}
+If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets:
+\[
+G/G_x \mapsvia{\sim} X \\
+[1] &\mapsto x_0
+.\]
+
+:::
+
+
+
 :::{.remark title="Reminder of notation"}
 For a group $G$ acting on a set $X$,
 
