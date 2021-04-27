@@ -244,10 +244,14 @@ v\tensor w &\mapsto (x \tensor y \mapsto v(x) w(y))
 :::{.proposition title="?"}
 \[
 \Hom_{\kmod}(V, W) \mapsvia{\sim} \Hom_{\kmod}(W, V)\dual \\
-T &\mapsto \Tr(\wait \circ S)
+T &\mapsto \Tr(T \circ \wait )
 .\]
+:::
 
 
+:::{.proposition title="?"}
+If $T:V \injects W$ is injective, then $T\tensor \one_X: V\tensor X \injects W\tensor X$ is also injective for any $X$.
+Thus $F(\wait) = (\wait \tensor X)$ is right-exact for any $X$.
 :::
 
 
