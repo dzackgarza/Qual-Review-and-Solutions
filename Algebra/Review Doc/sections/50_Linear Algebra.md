@@ -24,8 +24,13 @@ Todo
 :::{.definition title="Gram Matrix"}
 \todo[inline]{todo}
 
-
 :::
+
+
+:::{.definition title="Normal Matrix"}
+A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
+:::
+
 
 
 :::{.proposition title="?"}
