@@ -46,7 +46,6 @@ Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpo
 :::
 
 
-
 ## Minimal / Characteristic Polynomials
 
 :::{.remark}
