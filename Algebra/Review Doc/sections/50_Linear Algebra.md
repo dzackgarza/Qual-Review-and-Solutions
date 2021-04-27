@@ -38,6 +38,15 @@ Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpo
 :::
 
 
+:::{.proposition title="?"}
+\[
+\sum( W_i)^\perp = \int W_i^\perp
+.\]
+
+:::
+
+
+
 ## Minimal / Characteristic Polynomials
 
 :::{.remark}
