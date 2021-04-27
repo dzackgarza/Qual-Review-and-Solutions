@@ -60,7 +60,7 @@ Then let $h = \abs{f}^p$:
 
 :::{.proposition title="Cauchy-Schwarz Inequality"}
 \[  
-\abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
+\abs{\inner{f}{g}} = \leq \pnorm{f}2 \pnorm{g}2
 && \text{with equality} \iff f = \lambda g
 .\]
 

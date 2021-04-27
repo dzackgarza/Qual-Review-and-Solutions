@@ -2,6 +2,14 @@
 
 ## Theorems
 
+
+:::{.fact title="Pythagoras"}
+\[
+\inner{v}{w} = 0 \implies \norm{v+w} = \norm{v} + \norm{w}
+.\]
+:::
+
+
 :::{.theorem title="Bessel's Inequality"}
 For any orthonormal set $\theset{u_{n}} \subseteq \mch$ a Hilbert space (not necessarily a basis),
 \[
