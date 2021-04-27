@@ -1,5 +1,7 @@
 # Linear Algebra
 
+## Definitions
+
 :::{.definition title="Invariant Factor"}
 Todo
 \todo[inline]{todo}
@@ -24,6 +26,12 @@ Todo
 
 
 :::
+
+
+:::{.proposition title="?"}
+Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpotent, and $[DN] = 0$.
+:::
+
 
 ## Minimal / Characteristic Polynomials
 

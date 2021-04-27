@@ -219,6 +219,15 @@ Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be 
 \[
 r\actson (m\tensor n) \da (r\actson m)\tensor n
 .\]
+:::
+
+
+:::{.proposition title="?"}
+If $\dim_k V, \dim_k W < \infty$ then there is an isomorphism
+\[
+V\dual \tensor_k W \mapsvia{\sim} \Hom_{\kmod}(V, W) \\
+\tilde v \tensor w &\mapsto \tilde v(\wait) w
+.\]
 
 :::
 
