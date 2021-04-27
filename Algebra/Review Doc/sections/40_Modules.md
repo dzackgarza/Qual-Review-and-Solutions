@@ -228,8 +228,29 @@ If $\dim_k V, \dim_k W < \infty$ then there is an isomorphism
 V\dual \tensor_k W \mapsvia{\sim} \Hom_{\kmod}(V, W) \\
 \tilde v \tensor w &\mapsto \tilde v(\wait) w
 .\]
+:::
+
+
+:::{.proposition title="?"}
+If either of $\dim_k V, \dim_k W$ is finite, then
+\[
+V\dual \tensor_k W\dual \mapsvia{\sim} (V\tensor W)\dual \\
+v\tensor w &\mapsto (x \tensor y \mapsto v(x) w(y))
+.\]
 
 :::
+
+
+:::{.proposition title="?"}
+\[
+\Hom_{\kmod}(V, W) \mapsvia{\sim} \Hom_{\kmod}(W, V)\dual \\
+T &\mapsto \Tr(\wait \circ S)
+.\]
+
+
+:::
+
+
 
 
 :::{.example title="Computing tensor products"}
