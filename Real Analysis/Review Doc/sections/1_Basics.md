@@ -614,3 +614,16 @@ g(x) \da \sum {1 \over 1 + n^2 x}
 
 Take $x = 1/n^2$.
 :::
+
+## Unsorted
+
+
+:::{.proposition title="Implications of convergence"}
+Uniform $\implies$ pointwise $\implies$ almost everywhere $\implies$ (roughly) $L^1$ convergence.
+Why these can't be reversed:
+
+- Pointwise but not uniform???: ${1\over n}\one_{[0, n]}$
+- Almost everywhere but not pointwise???: $n \one_{[0, {1\over n} ] }$
+- $n \chi_{[n, n+1]}$????
+:::
+
