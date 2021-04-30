@@ -145,7 +145,7 @@ Let $L/k$ be a finite field extension.
 The following are equivalent:
 
 1. \( L/k \) is a **Galois extension**.
-2. $\abs{\Aut(L/k)} = [L: k]$ (D&F's definition).
+2. $\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
 5. $L$ is finite, normal, and separable (most general definition?)
@@ -153,7 +153,7 @@ The following are equivalent:
 
 In this case, we define the **Galois group** as 
 \[
-\Gal(L/k) \definedas \Aut(L/k)
+\Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L)
 .\]
 :::
 
@@ -210,7 +210,6 @@ If $L/k$ is a splitting field, then
 \[
 [L:K] = \# \Aut_{\Fieldsover{k}}(L) \da \# \Gal(L/k)
 .\]
-
 
 :::
 
