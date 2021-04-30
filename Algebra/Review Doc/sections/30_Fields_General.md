@@ -9,14 +9,14 @@ Let $k$ denote a field, and $L/k$ extensions.
 \envlist
 
 - $[L: K] = \dim_{\Vect_K} L$, the dimension of $L$ as a $K\dash$vector space
-- \( \Aut(L/K) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K } \), the lifts of the identity on $K$.
-- \( \ts{ L: K } \da \# \Aut(L/K) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
+- \( \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K } \), the lifts of the identity on $K$.
+- \( \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
 - $\Gal(E/F) \da \Aut_{\Fieldsover{k} }$ if $E$ is finite, normal, and separable.
 :::
 
 
 :::{.definition title="Simple Extensions"}
-An extension $L/K$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
+An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
 
@@ -131,6 +131,10 @@ The following are equivalent
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
 - $[E: F] = \ts{ E: F }$
+
+If $L/k$ is a finite extension, then, TFAE:
+
+- $L/k$
 :::
 
 :::{.definition title="Galois Extension and Galois Group"}
