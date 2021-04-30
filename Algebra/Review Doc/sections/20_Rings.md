@@ -65,6 +65,16 @@ ab\in \mfp \implies a\in \mfp \txt{ or } b\in \mfp
 $\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
 :::
 
+
+:::{.remark}
+\envlist
+
+- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
+- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
+- A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+:::
+
+
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
