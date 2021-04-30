@@ -89,19 +89,13 @@
 
 ## Definitions
 
-
 :::{.definition title="Completeness"}
 A metric space is **complete** if every Cauchy sequence converges.
 :::
 
-
-
 :::{.fact}
 If $X$ is complete, then absolutely convergent implies convergent.
 :::
-
-
-
 
 :::{.definition title="Uniform Continuity"}
 $f$ is uniformly continuous iff
