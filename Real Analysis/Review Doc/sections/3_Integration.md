@@ -1,5 +1,15 @@
 # Integration
 
+
+:::{.definition title="Simple Function"}
+A **simple function** $s: \CC\to X$ is a finite linear combination of indicator functions of measurable sets, i.e. 
+\[
+s(x) = \sum_{j=1}^n c_j \one_{E_j}(x)
+.\]
+
+:::
+
+
 ## Theorems
 
 :::{.remark}
