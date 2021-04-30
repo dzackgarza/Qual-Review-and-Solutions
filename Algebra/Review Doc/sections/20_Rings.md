@@ -75,6 +75,15 @@ $\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \m
 :::
 
 
+:::{.proposition title="?"}
+\envlist
+
+- $R/\mfm$ is an integral domain $\iff \mfm \in \mspec(R)$ is maximal.
+- $R/\mfp \in \Field \iff \mfp \in \spec(R)$ is prime.
+:::
+
+
+
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
