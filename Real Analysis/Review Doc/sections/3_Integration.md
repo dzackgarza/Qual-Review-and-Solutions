@@ -32,6 +32,16 @@ Common proof technique:
 :::
 
 
+:::{.remark}
+A useful fact: for $(X, \mathcal{M})$ a measure space,
+\[
+\int_X f = \int_{X\sm A} f + \int_A f && \forall\, A \in \mathcal{M} 
+.\]
+
+:::
+
+
+
 
 ## Theorems
 
