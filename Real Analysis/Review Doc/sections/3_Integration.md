@@ -1,6 +1,15 @@
 # Integration
 
 
+:::{.remark}
+Notation:
+
+ $L^+$: measurable functions
+- $L^1$: Lebesgue integral functions
+:::
+
+
+
 :::{.definition title="Simple Function"}
 A **simple function** $s: \CC\to X$ is a finite linear combination of indicator functions of measurable sets, i.e. 
 \[
@@ -161,7 +170,8 @@ so the DCT applies to $g_n$ and
 :::{.theorem title="Fatou"}
 If $f_n$ is a sequence of nonnegative measurable functions, then
 \[
-\int \liminf_n f_n &\leq \liminf_n \int f_n \\
+\liminf_n \int f_n 
+&\geq \int \liminf_n f_n \\
 \limsup_n \int f_n &\leq \int \limsup_n f_n
 .\]
 :::
