@@ -11,6 +11,12 @@ Four properties:
 :::
 
 
+:::{.proposition title="The one-step submodule test"}
+$M\in \rmod$ iff for every $r\in R$ and $x, y\ \in M$, we have $rx+y\in M$.
+:::
+
+
+
 ## General Theory
 
 :::{.definition title="Module Morphisms"}
