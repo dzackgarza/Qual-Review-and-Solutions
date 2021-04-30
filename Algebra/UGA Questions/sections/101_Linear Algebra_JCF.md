@@ -296,7 +296,7 @@ A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-
 \]
 
 a. 
-Find the Jordan canonical form J of A.
+Find the Jordan canonical form $J$ of $A$.
 
 b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
@@ -369,13 +369,16 @@ r & 1 & -1 \\
 \in \Mat(3\times 3, \CC)
 .\]
 
-a. Find the Jordan canonical form $J$ of $A$.
+a. 
+Find the Jordan canonical form $J$ of $A$.
 
-b. Find an invertible matrix $P$ such that $J = P \inv A P$.
+b. 
+Find an invertible matrix $P$ such that $J = P \inv A P$.
 
-  *(You should not need to compute $P\inv$)*
+*(You should not need to compute $P\inv$)*
 
-c. Write down the minimal polynomial of $A$.
+c. 
+Write down the minimal polynomial of $A$.
 
 
 ## Fall 2020 #5 $\work$
