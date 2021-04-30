@@ -6,8 +6,26 @@ A **simple function** $s: \CC\to X$ is a finite linear combination of indicator 
 \[
 s(x) = \sum_{j=1}^n c_j \one_{E_j}(x)
 .\]
+:::
+
+
+:::{.definition title="Lebesgue Integral"}
+\[
+\int_X f \da \sup \ts{ \int s(x) \dmu \st 0\leq s \leq f, s\text{ simple } } 
+.\]
 
 :::
+
+
+
+:::{.remark}
+Common proof technique:
+
+- Show something holds for indicator functions.
+- Show it holds for simple functions by linearity.
+- Use $s_k \increasesto f$ and apply MCT to show it holds for $f$.
+:::
+
 
 
 ## Theorems
