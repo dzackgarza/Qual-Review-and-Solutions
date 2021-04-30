@@ -91,8 +91,10 @@ Then TFAE:
 
 - $L/k$ is **normal**.
 
-- Every irreducible $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
+- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
   - i.e. every polynomial splits into linear factors
+
+- Either $f$ splits in $L$ or $f$ has no roots in $L$.
 
 - Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
@@ -109,9 +111,10 @@ The following are equivalent
 
 - $L/k$ is **separable**
 - Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots.
+- $f$ has no repeated factors/roots, i.e. $f$ has distinct roots in $L$.
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
+- $[E: F] = \ts{ E: F }$
 :::
 
 :::{.definition title="Galois Extension and Galois Group"}
