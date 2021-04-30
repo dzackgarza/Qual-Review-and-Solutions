@@ -174,11 +174,9 @@ If $\FF$ is a field with $\char(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extensi
 If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
 :::
 
-
 :::{.proposition title="?"}
 For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
 :::
-
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -201,6 +199,21 @@ Every finite separable extension is simple.
 :::{.corollary}
 $\GF(p^n)$ is a simple extension over $\FF_p$.
 :::
+
+
+:::{.proposition title="?"}
+If $L/k$ is separable, then
+\[
+[L: k] = \ts{ L: k } 
+.\]
+If $L/k$ is a splitting field, then
+\[
+[L:K] = \# \Aut_{\Fieldsover{k}}(L) \da \# \Gal(L/k)
+.\]
+
+
+:::
+
 
 ## Finite Fields
 
