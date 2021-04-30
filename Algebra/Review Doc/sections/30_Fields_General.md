@@ -9,7 +9,9 @@ Let $k$ denote a field, and $L/k$ extensions.
 \envlist
 
 - $[L: K] = \dim_{\Vect_K} L$, the dimension of $L$ as a $K\dash$vector space
-- \( \ts{ L: K } \da \sigma: L \to L' \st \ro{\sigma}{K} = \one_K \), the number of lifts of the identity on $K$.
+- \( \Aut(L/K) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K } \), the lifts of the identity on $K$.
+- \( \ts{ L: K } \da \# \Aut(L/K) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
+- $\Gal(E/F) \da \Aut_{\Fieldsk}$ if $E$ is finite, normal, and separable.
 :::
 
 
