@@ -130,11 +130,14 @@ The following are equivalent
 - $f$ has no repeated factors/roots, i.e. $f$ has distinct roots in $L$.
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
-- $[E: F] = \ts{ E: F }$
 
 If $L/k$ is a finite extension, then, TFAE:
 
-- $L/k$
+- $L/k$ is separable.
+- \( L = k( \alpha) \) for \( \alpha \)  a separable element.
+- \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
+- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$
+
 :::
 
 :::{.definition title="Galois Extension and Galois Group"}
