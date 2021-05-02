@@ -337,6 +337,18 @@ x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{
 
 
 
+
+:::{.proposition title="Sufficient condition for Taylor convergence"}
+Given a point $c$ and some $\varepsilon>0$, if $f \in C^\infty(I)$ and there exists an $M$ such that 
+$$
+x \in N_\varepsilon(c) \implies \abs{f^{(n)}(x)} \leq M^n
+$$
+then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
+:::
+
+
+
+
 ### Topology / Sets
 
 :::{.theorem title="Heine-Cantor"}
