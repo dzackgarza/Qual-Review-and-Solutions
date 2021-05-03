@@ -3226,7 +3226,7 @@ Let \( f, g \) be Lebesgue integrable on \( {\mathbb{R}} \) and let \( g_n(x) \c
 
 -   Shift \( g \) off so most of its density occurs where \( f \) has a small tail, and vice versa:
 
-![image_2021-04-24-21-27-21](figures/image_2021-04-24-21-27-21.png)
+![Shifting density](figures/image_2021-04-24-21-27-21.png)
 
 -   Any integral \( \int_a^b f \) can be written as \( {\left\lVert {f} \right\rVert}_1 - O(\text{err}) \).
 :::
@@ -4340,5 +4340,3 @@ Choose \( N \) large enough so that \( {\left\lVert {f - f_N} \right\rVert} < \v
 {\left\lVert {f} \right\rVert} \leq {\left\lVert {f - f_N} \right\rVert} + {\left\lVert {f_N} \right\rVert} < \varepsilon + M < \infty
 .\]
 :::
-
-# Fall 2020

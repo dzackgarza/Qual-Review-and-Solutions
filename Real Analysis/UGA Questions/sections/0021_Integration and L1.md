@@ -535,7 +535,7 @@ Prove that
 
 - Shift $g$ off so most of its density occurs where $f$ has a small tail, and vice versa:
 
-![image_2021-04-24-21-27-21](figures/image_2021-04-24-21-27-21.png)
+![Shifting density](figures/image_2021-04-24-21-27-21.png)
 
 - Any integral $\int_a^b f$ can be written as $\norm{f}_1 - O(\text{err})$.
 
