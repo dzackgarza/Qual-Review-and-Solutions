@@ -872,8 +872,9 @@ Prove that the following statements are equivalent:
 :::
 
 :::{.solution}
+\envlist
 
-:::{.proof title="$1\implies 2$"}
+:::{.proof title="1 $\implies$ 2"}
 \envlist
 
 - Let $\theset{x_n} \converges{n\to\infty}\to x_0$ be arbitrary; we want to show $\theset{f(x_n)}\converges{n\to\infty}\to f(x_0)$.
