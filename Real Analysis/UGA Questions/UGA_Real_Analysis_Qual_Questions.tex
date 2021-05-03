@@ -51,24 +51,6 @@
 \tableofcontents
 \newpage
 
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
-
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
-
 \hypertarget{preface}{%
 \section{Preface}\label{preface}}
 
@@ -89,13 +71,9 @@ Convergence}\label{undergraduate-analysis-uniform-convergence}}
 Let \(f(x) = \frac 1 x\). Show that \(f\) is uniformly continuous on
 \((1, \infty)\) but not on \((0,\infty)\).
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -113,8 +91,18 @@ Let \(f(x) = \frac 1 x\). Show that \(f\) is uniformly continuous on
 
 \end{concept}
 
-\textbf{Claim}: \(f(x) = \frac 1 x\) is uniformly continuous on
-\((c, \infty)\) for any \(c > 0\).
+\begin{solution}
+
+\begin{claim}
+
+\(f(x) = \frac 1 x\) is uniformly continuous on \((c, \infty)\) for any
+\(c > 0\).
+
+\end{claim}
+
+\begin{proof}[of claim]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -144,7 +132,17 @@ Let \(f(x) = \frac 1 x\). Show that \(f\) is uniformly continuous on
   which shows uniform continuity.
 \end{itemize}
 
-\textbf{Claim}: \(f\) is \emph{not} uniformly continuous when \(c=0\).
+\end{proof}
+
+\begin{claim}
+
+\(f\) is \emph{not} uniformly continuous when \(c=0\).
+
+\end{claim}
+
+\begin{proof}[of claim]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -176,6 +174,8 @@ Let \(f(x) = \frac 1 x\). Show that \(f\) is uniformly continuous on
   a contradiction.
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2017-1-done}{%
@@ -190,13 +190,9 @@ f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 Describe the intervals on which \(f\) does and does not converge
 uniformly.
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -218,6 +214,10 @@ uniformly.
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -276,12 +276,34 @@ that \(\sum f_n\) converges uniformly.
 
 Prove that \(\sum f_n\) is also continuous.
 
+\envlist
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Todo
+\end{itemize}
+
+\end{concept}
+
 \begin{solution}
 
-\hfill
+\envlist
 
-\textbf{Claim:} If \(F_N\to F\) uniformly with each \(F_N\) continuous,
-then \(F\) is continuous.
+\begin{claim}
+
+If \(F_N\to F\) uniformly with each \(F_N\) continuous, then \(F\) is
+continuous.
+
+\end{claim}
+
+\begin{proof}[of claim]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -300,6 +322,12 @@ then \(F\) is continuous.
   \item
     The middle \(\varepsilon/3\) comes from continuity of each \(F_N\).
   \end{itemize}
+\end{itemize}
+
+\end{proof}
+
+\begin{itemize}
+\tightlist
 \item
   Now setting \(F_N\coloneqq\sum_{n=1}^N f_n\) yields a finite sum of
   continuous functions, which is continuous.
@@ -323,13 +351,9 @@ f(x, y) = \begin{cases}
 \end{align*}
 Determine if \(f\) is integrable.
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -338,6 +362,8 @@ Determine if \(f\) is integrable.
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
 
 Switching to polar coordinates and integrating over one quarter of the
 unit disc \(D \subseteq I^2\), we have
@@ -378,13 +404,9 @@ Prove that the following statements are equivalent:
   every sequence \(\left\{{x_n}\right\} \to x_0\) in \(X\).
 \end{enumerate}
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -394,7 +416,11 @@ Prove that the following statements are equivalent:
 
 \end{concept}
 
-\(1\implies 2\):
+\begin{solution}
+
+\begin{proof}[$1\implies 2$]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -422,7 +448,9 @@ Prove that the following statements are equivalent:
   desired.
 \end{itemize}
 
-\(2\implies 1\):
+\end{proof}
+
+\begin{proof}[$2\implies 1$]
 
 \begin{quote}
 Note that we need a \(\delta\) for \emph{every} sequence, so picking a
@@ -449,6 +477,8 @@ sequence for the forward implication is not a good idea here.
   Then \(x_n \to x_0\) but \(f(x_n) \not\to f(x_0)\).
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2014-2-work}{%
@@ -457,30 +487,29 @@ sequence for the forward implication is not a good idea here.
 
 Let \(I\) be an index set and \(\alpha: I \to (0, \infty)\).
 
-\hypertarget{section}{%
-\subsubsection{1}\label{section}}
-
-Show that
-\begin{align*}
-\sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
-\end{align*}
-
-\hypertarget{section-1}{%
-\subsubsection{2}\label{section-1}}
-
-Suppose \(I = {\mathbb{Q}}\) and
-\(\sum_{q \in \mathbb{Q}} a(q)<\infty\). Define
-\begin{align*}
-f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
-\end{align*}
-Show that \(f\) is continuous at \(x \iff x\not\in {\mathbb{Q}}\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that
+  \begin{align*}
+  \sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
+  \end{align*}
+\item
+  Suppose \(I = {\mathbb{Q}}\) and
+  \(\sum_{q \in \mathbb{Q}} a(q)<\infty\). Define
+  \begin{align*}
+  f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
+  \end{align*}
+  Show that \(f\) is continuous at \(x \iff x\not\in {\mathbb{Q}}\).
+\end{enumerate}
 
 \todo[inline]{Stuck on part b}
 
 \begin{solution}
 
-\hypertarget{section-2}{%
-\subsubsection{1}\label{section-2}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -504,12 +533,9 @@ Show that \(f\) is continuous at \(x \iff x\not\in {\mathbb{Q}}\).
   countable.
 \end{itemize}
 
-\hypertarget{section-3}{%
-\subsubsection{2}\label{section-3}}
+\end{proof}
 
-\textbackslash todo
-\begin{align*}inline\end{align*}
-\{Not sure.\}
+\todo[inline]{(b): not sure.}
 
 \end{solution}
 
@@ -531,7 +557,7 @@ Note: Assume \(a_n, b_n\) are all non-negative.
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \item
@@ -580,13 +606,9 @@ Prove that if \(f: [0, 1] \to {\mathbb{R}}\) is continuous then
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \,dx = f(1)
 .\end{align*}
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -597,6 +619,10 @@ Prove that if \(f: [0, 1] \to {\mathbb{R}}\) is continuous then
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -676,30 +702,28 @@ Prove that if \(f: [0, 1] \to {\mathbb{R}}\) is continuous then
 
 Let \(\{a_n\}_{n=1}^\infty\) be a sequence of real numbers.
 
-\hypertarget{a}{%
-\subsubsection{a}\label{a}}
-
-Prove that if \(\displaystyle\lim_{n\to \infty } a_n = 0\), then
-\begin{align*}
-\lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
-\end{align*}
-
-\hypertarget{b}{%
-\subsubsection{b}\label{b}}
-
-Prove that if \(\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}\)
-converges, then
-\begin{align*}
-\lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
-\end{align*}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(\displaystyle\lim_{n\to \infty } a_n = 0\), then
+  \begin{align*}
+  \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
+  \end{align*}
+\item
+  Prove that if \(\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}\)
+  converges, then
+  \begin{align*}
+  \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
+  \end{align*}
+\end{enumerate}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -722,8 +746,9 @@ converges, then
 
 \end{concept}
 
-\hypertarget{a-1}{%
-\subsubsection{a}\label{a-1}}
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -756,10 +781,13 @@ converges, then
   .\end{align*}
 \end{itemize}
 
+\end{proof}
+
 \todo[inline]{Revisit, not so clear that the last line can be made smaller than $\varepsilon$, since $M, N$ both depend on $\varepsilon$...}
 
-\hypertarget{b-1}{%
-\subsubsection{b}\label{b-1}}
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -806,6 +834,8 @@ converges, then
   .\end{align*}
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2018-4-done}{%
@@ -826,11 +856,11 @@ an interval.
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1000,34 +1030,27 @@ f_{n}(x) = n x(1-x)^{n}, \quad n \in {\mathbb{N}}.
 \end{align*}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
+\def\labelenumi{\alph{enumi}.}
 \item
   Show that \(f_n \to 0\) pointwise but not uniformly on \([0, 1]\).
-\end{enumerate}
-
-\begin{quote}
-Hint: Consider the maximum of \(f_n\).
-\end{quote}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
 \item
-
+  Show that
   \begin{align*}
   \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
   \end{align*}
 \end{enumerate}
 
+\begin{quote}
+Hint for (a): Consider the maximum of \(f_n\).
+\end{quote}
+
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1045,8 +1068,11 @@ Hint: Consider the maximum of \(f_n\).
 
 \end{concept}
 
-\hypertarget{a-2}{%
-\subsubsection{a}\label{a-2}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+\end{enumerate}
 
 \(f_n\to 0\) pointwise:
 
@@ -1095,8 +1121,12 @@ The convergence is not uniform:
   \({\left\lVert {f_n - 0} \right\rVert}_\infty = {\left\lVert {f_n} \right\rVert}_\infty > e^{-1} > 0\).
 \end{itemize}
 
-\hypertarget{b-2}{%
-\subsubsection{b}\label{b-2}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+\end{enumerate}
 
 \todo[inline]{Possible to use part a with $\sin(x) \leq x$ on $[0, \pi/2]$?}
 
@@ -1127,39 +1157,48 @@ f_{n}(x) = a e^{-n a x} - b e^{-n b x} \quad \text{ where } 0 < a < b.
 
 Show that
 
-\hypertarget{a-3}{%
-\subsubsection{a}\label{a-3}}
-
-\(\sum_{n=1}^{\infty} \left|f_{n}\right|\) is not in
-\(L^{1}([0, \infty), m)\)
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\sum_{n=1}^{\infty} \left|f_{n}\right|\) is not in
+  \(L^{1}([0, \infty), m)\)
+\end{enumerate}
 
 \begin{quote}
 Hint: \(f_n(x)\) has a root \(x_n\).
 \end{quote}
 
-\hypertarget{b-3}{%
-\subsubsection{b}\label{b-3}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
 
-\begin{align*}
-\sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
-{\quad \operatorname{and} \quad}
-\int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
-\end{align*}
-\todo[inline]{Not complete.} \todo[inline]{Add concepts.}
-\todo[inline]{Walk through.}
+  \begin{align*}
+  \sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
+  {\quad \operatorname{and} \quad}
+  \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
+  \end{align*}
+  \todo[inline]{Not complete.} \todo[inline]{Add concepts.}
+  \todo[inline]{Walk through.}
+\end{enumerate}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \end{concept}
 
-\hypertarget{a-4}{%
-\subsubsection{a}\label{a-4}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+\end{enumerate}
 
 \begin{itemize}
 \item
@@ -1183,8 +1222,12 @@ Hint: \(f_n(x)\) has a root \(x_n\).
   .\end{align*}
 \end{itemize}
 
-\hypertarget{b-4}{%
-\subsubsection{b}\label{b-4}}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+\end{enumerate}
 
 ?
 
@@ -1198,7 +1241,6 @@ Define
 \begin{align*}
 f(x) = \sum_{n=1}^{\infty} \frac{1}{n^{x}}.
 \end{align*}
-
 Show that \(f\) converges to a differentiable function on
 \((1, \infty)\) and that
 \begin{align*}
@@ -1216,11 +1258,11 @@ Hint:
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1304,11 +1346,11 @@ exists and satisfies the equality
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1381,13 +1423,11 @@ Let \(f, g \in L^2({\mathbb{R}})\). Show that
 \lim _{n \to \infty} \int _{{\mathbb{R}}} f(x) g(x+n) \,dx = 0
 \end{align*}
 
-\begin{solution}
-
-\hfill
+\todo[inline]{Rewrite solution.}
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -1395,10 +1435,14 @@ Let \(f, g \in L^2({\mathbb{R}})\). Show that
   Cauchy Schwarz:
   \({\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1\).
 \item
-  Small tails.
+  Small tails in \(L^p\).
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -1459,8 +1503,8 @@ E_{n} = \left( 1+ {1\over n} \right)^{n+1}
 
 Show that \(e_n < E_n\), and prove Bernoulli's inequality:
 \begin{align*}
-(1+x)^{n} \geq 1+n x \text { for }-1<x<\infty \text { and } n \in \mathbb{N}
-\end{align*}
+(1+x)^n \geq 1+nx && -1 < x < \infty  ,\,\, n\in {\mathbb{N}}
+.\end{align*}
 
 Use this to show the following:
 
@@ -1488,6 +1532,51 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 
 Show that there is a number \(x_m\) such that \(f(x_m) \leq f(x)\) for
 all \(x\in {\mathbb{R}}\).
+
+\hypertarget{fall-2020-1}{%
+\subsection{Fall 2020 \# 1}\label{fall-2020-1}}
+
+Show that if \(x_n\) is a decreasing sequence of positive real numbers
+such that \(\sum_{n=1}^\infty x_n\) converges, then
+\begin{align*}
+\lim_{n\to\infty} n x_n = 0.
+\end{align*}
+
+\hypertarget{fall-2020-3}{%
+\subsection{Fall 2020 \# 3}\label{fall-2020-3}}
+
+Let \(f\) be a non-negative Lebesgue measurable function on
+\([1, \infty)\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that
+  \begin{align*}  
+  1 \leq \qty{
+  {1 \over b-a} \int_a^b f(x) \,dx
+  }\qty{
+  {1\over b-a} \int_a^b {1 \over f(x)}\, dx
+  }
+  \end{align*}
+  for any \(1\leq a < b <\infty\).
+\item
+  Prove that if \(f\) satisfies
+  \begin{align*}  
+  \int_1^t f(x) \, dx \leq t^2 \log(t)
+  \end{align*}
+  for all \(t\in [1, \infty)\), then
+  \begin{align*}  
+  \int_1^\infty {1\over f(x) \,dx} = \infty
+  .\end{align*}
+\end{enumerate}
+
+\begin{quote}
+Hint: write
+\begin{align*}  
+\int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
+.\end{align*}
+\end{quote}
 
 \hypertarget{measure-theory-sets}{%
 \section{Measure Theory: Sets}\label{measure-theory-sets}}
@@ -1587,8 +1676,8 @@ Be sure to address the case when \(m_*(E) = \infty\).
 
 \end{proof}
 
-\hypertarget{a-5}{%
-\subsubsection{a}\label{a-5}}
+\hypertarget{a}{%
+\subsubsection{a}\label{a}}
 
 \begin{itemize}
 \item
@@ -1636,8 +1725,8 @@ Be sure to address the case when \(m_*(E) = \infty\).
   This forces \(m_*(E) = m_*(B)\).
 \end{itemize}
 
-\hypertarget{b-5}{%
-\subsubsection{b}\label{b-5}}
+\hypertarget{b}{%
+\subsubsection{b}\label{b}}
 
 Suppose \(m_*(E) < \infty\).
 
@@ -1769,8 +1858,8 @@ Hint: Use the fact that \(1 - x ≤ e^{-x}\) for all \(x\).
 
 \end{concept}
 
-\hypertarget{a-6}{%
-\subsubsection{a}\label{a-6}}
+\hypertarget{a-1}{%
+\subsubsection{a}\label{a-1}}
 
 \begin{itemize}
 \tightlist
@@ -1781,8 +1870,8 @@ Hint: Use the fact that \(1 - x ≤ e^{-x}\) for all \(x\).
   \(B = \limsup_n B_n\) is an intersection of unions of measurable sets.
 \end{itemize}
 
-\hypertarget{b-6}{%
-\subsubsection{b}\label{b-6}}
+\hypertarget{b-1}{%
+\subsubsection{b}\label{b-1}}
 
 \begin{itemize}
 \tightlist
@@ -1843,8 +1932,8 @@ Let \(\mathcal B\) denote the set of all Borel subsets of
 \({\mathbb{R}}\) and \(\mu : \mathcal B \to [0, \infty)\) denote a
 finite Borel measure on \({\mathbb{R}}\).
 
-\hypertarget{a-7}{%
-\subsubsection{a}\label{a-7}}
+\hypertarget{a-2}{%
+\subsubsection{a}\label{a-2}}
 
 Prove that if \(\{F_k\}\) is a sequence of Borel sets for which
 \(F_k \supseteq F_{k+1}\) for all \(k\), then
@@ -1852,8 +1941,8 @@ Prove that if \(\{F_k\}\) is a sequence of Borel sets for which
 \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
 \end{align*}
 
-\hypertarget{b-7}{%
-\subsubsection{b}\label{b-7}}
+\hypertarget{b-2}{%
+\subsubsection{b}\label{b-2}}
 
 Suppose \(\mu\) has the property that \(\mu (E) = 0\) for every
 \(E \in \mathcal B\) with Lebesgue measure \(m(E) = 0\).
@@ -1879,8 +1968,8 @@ that if \(E \in \mathcal B\) with \(m(E) < δ\), then \(\mu(E) < ε\).
 
 \end{concept}
 
-\hypertarget{a-8}{%
-\subsubsection{a}\label{a-8}}
+\hypertarget{a-3}{%
+\subsubsection{a}\label{a-3}}
 
 \begin{quote}
 See Folland p.26
@@ -1927,8 +2016,8 @@ See Folland p.26
   .\end{align*}
 \end{itemize}
 
-\hypertarget{b-8}{%
-\subsubsection{b}\label{b-8}}
+\hypertarget{b-3}{%
+\subsubsection{b}\label{b-3}}
 
 \begin{itemize}
 \item
@@ -2362,8 +2451,8 @@ is a bijection from the class of Lebesgue measurable sets of
 
 \end{concept}
 
-\hypertarget{a-9}{%
-\subsubsection{a}\label{a-9}}
+\hypertarget{a-4}{%
+\subsubsection{a}\label{a-4}}
 
 It suffices to consider the bounded case, i.e.~\(E \subseteq B_M(0)\)
 for some \(M\). Then write \(E_n = B_n(0) \cap E\) and apply the theorem
@@ -2410,8 +2499,8 @@ m^*(g(E)) \leq \sum_j {\left\lvert {g(Q_j)} \right\rvert} \leq \sum_j L^n {\left
 Now just take \(g(x) = x^2\) for one direction, and
 \(g(x) = f^{-1}(x) = \sqrt{x}\) for the other. \(\hfill\blacksquare\)
 
-\hypertarget{b-9}{%
-\subsubsection{b}\label{b-9}}
+\hypertarget{b-4}{%
+\subsubsection{b}\label{b-4}}
 
 \begin{quote}
 Lemma: \(E\) is measurable iff \(E = K {\coprod}N\) for some \(K\)
@@ -2439,8 +2528,8 @@ bijection, and thus so is \(\phi\).
 \subsection{\texorpdfstring{Spring 2017 \# 2
 \(\done\)}{Spring 2017 \# 2 \textbackslash done}}\label{spring-2017-2-done}}
 
-\hypertarget{a-10}{%
-\subsubsection{a}\label{a-10}}
+\hypertarget{a-5}{%
+\subsubsection{a}\label{a-5}}
 
 Let \(\mu\) be a measure on a measurable space \((X, \mathcal M)\) and
 \(f\) a positive measurable function.
@@ -2455,8 +2544,8 @@ Show that for \(g\) any positive measurable function,
 \int_{X} g ~d \lambda=\int_{X} f g ~d \mu
 \end{align*}
 
-\hypertarget{b-10}{%
-\subsubsection{b}\label{b-10}}
+\hypertarget{b-5}{%
+\subsubsection{b}\label{b-5}}
 
 Let \(E \subset {\mathbb{R}}\) be a measurable set such that
 \begin{align*}
@@ -2490,8 +2579,8 @@ Show that \(m(E) = 0\).
 
 \end{concept}
 
-\hypertarget{a-11}{%
-\subsubsection{a}\label{a-11}}
+\hypertarget{a-6}{%
+\subsubsection{a}\label{a-6}}
 
 \begin{itemize}
 \item
@@ -2528,8 +2617,8 @@ Show that \(m(E) = 0\).
 
 \todo[inline]{What is the final step in this approximation?}
 
-\hypertarget{b-11}{%
-\subsubsection{b}\label{b-11}}
+\hypertarget{b-6}{%
+\subsubsection{b}\label{b-6}}
 
 \begin{itemize}
 \item
@@ -3102,6 +3191,33 @@ there exists \(M>0\) and a set \(E\subseteq X\) such that
 \(\mu(E) \leq \varepsilon\) and
 \({\left\lvert {f_n(x)} \right\rvert}\leq M\) for all
 \(x\in X\setminus E\) and all \(n\in {\mathbb{N}}\).
+
+\hypertarget{fall-2020-2}{%
+\subsection{Fall 2020 \# 2}\label{fall-2020-2}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(f: {\mathbb{R}}\to {\mathbb{R}}\). Prove that
+  \begin{align*}
+  f(x) \leq \liminf_{y\to x} f(y)~ \text{for each}~ x\in {{\mathbb{R}}} \iff \{ x\in {{\mathbb{R}}} \mathrel{\Big|}f(x) > a \}~\text{is open for all}~ a\in {{\mathbb{R}}}
+  \end{align*}
+\item
+  Recall that a function \(f: {{\mathbb{R}}} \to {{\mathbb{R}}}\) is
+  called \emph{lower semi-continuous} iff it satisfies either condition
+  in part (a) above.
+\end{enumerate}
+
+Prove that if \(\mathcal{F}\) is an y family of lower semi-continuous
+functions, then
+\begin{align*}
+g(x) = \sup\{ f(x) \mathrel{\Big|}f\in \mathcal{F}\}
+\end{align*}
+is Borel measurable.
+
+\begin{quote}
+Note that \(\mathcal{F}\) need not be a countable family.
+\end{quote}
 
 \hypertarget{integrals-convergence}{%
 \section{Integrals: Convergence}\label{integrals-convergence}}
@@ -3708,8 +3824,8 @@ f_{n}(x):=\frac{x}{1+x^{n}}, \quad x \geq 0.
 
 \end{concept}
 
-\hypertarget{a-12}{%
-\subsubsection{a}\label{a-12}}
+\hypertarget{a-7}{%
+\subsubsection{a}\label{a-7}}
 
 Claim: \(f_n\) does not converge uniformly to its limit.
 
@@ -3750,8 +3866,8 @@ Claim: \(f_n\) does not converge uniformly to its limit.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{b-12}{%
-\subsubsection{b}\label{b-12}}
+\hypertarget{b-7}{%
+\subsubsection{b}\label{b-7}}
 
 \begin{itemize}
 \item
@@ -4299,8 +4415,8 @@ Let \(g\in L^\infty([0, 1])\) Prove that
 
 \end{concept}
 
-\hypertarget{a-13}{%
-\subsubsection{a}\label{a-13}}
+\hypertarget{a-8}{%
+\subsubsection{a}\label{a-8}}
 
 Stated integral equality:
 
@@ -4347,8 +4463,8 @@ To see that this doesn't force \(f(x)\to 0\) as
   \(f(x) \not\to 0\) as \({\left\lvert {x} \right\rvert}\to\infty\).
 \end{itemize}
 
-\hypertarget{b-13}{%
-\subsubsection{b}\label{b-13}}
+\hypertarget{b-8}{%
+\subsubsection{b}\label{b-8}}
 
 \hypertarget{solution-1-trick}{%
 \paragraph{Solution 1 (``Trick'')}\label{solution-1-trick}}
@@ -4588,8 +4704,8 @@ where we've used
 \subsection{\texorpdfstring{Fall 2019 \# 5.
 \(\done\)}{Fall 2019 \# 5. \textbackslash done}}\label{fall-2019-5.-done}}
 
-\hypertarget{a-14}{%
-\subsubsection{a}\label{a-14}}
+\hypertarget{a-9}{%
+\subsubsection{a}\label{a-9}}
 
 Show that if \(f\) is continuous with compact support on
 \({\mathbb{R}}\), then
@@ -4597,8 +4713,8 @@ Show that if \(f\) is continuous with compact support on
 \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
 \end{align*}
 
-\hypertarget{b-14}{%
-\subsubsection{b}\label{b-14}}
+\hypertarget{b-9}{%
+\subsubsection{b}\label{b-9}}
 
 Let \(f\in L^1({\mathbb{R}})\) and for each \(h > 0\) let
 \begin{align*}
@@ -4636,8 +4752,8 @@ Let \(f\in L^1({\mathbb{R}})\) and for each \(h > 0\) let
 
 \end{concept}
 
-\hypertarget{a-15}{%
-\subsubsection{a}\label{a-15}}
+\hypertarget{a-10}{%
+\subsubsection{a}\label{a-10}}
 
 Choose \(g\in C_c^0\) such that
 \({\left\lVert {f- g} \right\rVert}_1 \to 0\).
@@ -4672,8 +4788,8 @@ then
 \int_K {\left\lvert {g(x-h) - g(x)} \right\rvert} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
 \end{align*}
 
-\hypertarget{b-15}{%
-\subsubsection{b}\label{b-15}}
+\hypertarget{b-10}{%
+\subsubsection{b}\label{b-10}}
 
 We have
 \begin{align*}
@@ -4810,6 +4926,109 @@ Let \(f, g\) be Lebesgue integrable on \({\mathbb{R}}\) and let
 \lim_{n\to \infty } {\left\lVert {f + g_n} \right\rVert}_1 = {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1
 .\end{align*}
 
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\item
+  For \(f\in L^1(X)\),
+  \({\left\lVert {f} \right\rVert}_1 \coloneqq\int_X {\left\lvert {f(x)} \right\rvert} \,dx< \infty\).
+\item
+  Small tails in \(L_1\): if \(f\in L^1({\mathbb{R}}^n)\), then for
+  every \(\varepsilon>0\) exists some radius \(R\) such that
+  \begin{align*}
+  {\left\lVert {f} \right\rVert}_{L^1(B_R^c)} < \varepsilon
+  .\end{align*}
+\item
+  Shift \(g\) off so most of its density occurs where \(f\) has a small
+  tail, and vice versa:
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{figures/image_2021-04-24-21-27-21.png}
+\caption{image\_2021-04-24-21-27-21}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Any integral \(\int_a^b f\) can be written as
+  \({\left\lVert {f} \right\rVert}_1 - O(\text{err})\).
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Fix \(\varepsilon\).
+\item
+  Choose \(N\gg 0\) to produce an \(R\) so that
+  \begin{align*}
+  \int_R^{\infty } {\left\lvert {f} \right\rvert} &< \varepsilon\\
+  \int_{-\infty}^{R} {\left\lvert {g_N} \right\rvert} &< \varepsilon
+  .\end{align*}
+\item
+  Split the integral up:
+  \begin{align*}
+  {\left\lVert {f - g_N} \right\rVert}_1 = \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} + \int_R^{\infty }{\left\lvert {f - g_N} \right\rvert}
+  ,\end{align*}
+  where \(g_N\) is small in the first term and \(f\) is small in the
+  second.
+\item
+  Note that we have two inequalities:
+  \begin{align*}
+  {\left\lVert {f} \right\rVert}_1 - 2\varepsilon&\leq \int_{-\infty}^{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert}_1 + 2\varepsilon\\
+  {\left\lVert {g} \right\rVert}_1 - 2\varepsilon&\leq \int^{\infty}_{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {g} \right\rVert}_1 + 2\varepsilon
+  .\end{align*}
+\end{itemize}
+
+\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
+
+\begin{itemize}
+\item
+  Add these to obtain
+  \begin{align*}
+  {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1 - 4\varepsilon\leq \int_{\mathbb{R}}{\left\lvert {f - g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert} + {\left\lVert {g} \right\rVert}_1 + 4\varepsilon
+  .\end{align*}
+\item
+  Check that \(N\to \infty\) as \(\varepsilon\to 0\) to yield the
+  result.
+\item
+  Seeing where the inequalities come from: for the first, we'll
+  generally have \(f\) big and \(g\) small, which motivates:
+  \begin{align*}
+  \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} 
+  &\leq \int_{- \infty }^R {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+  &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+  &\approx {\left\lVert {f} \right\rVert}_1 + O(\varepsilon) + O(\varepsilon)
+  ,\end{align*}
+  and similarly
+  \begin{align*}
+  \int_{- \infty }^R {\left\lvert { f- g_N} \right\rvert} 
+  &\geq \int_{- \infty }^R {\left\lvert {f} \right\rvert} - {\left\lvert {g_N} \right\rvert} \\
+  &= \int_{- \infty }^R {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+  &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+  &\geq {\left\lVert {f} \right\rVert}_1 - O(\varepsilon) - O(\varepsilon)
+  .\end{align*}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2020-4}{%
+\subsection{Fall 2020 \# 4}\label{fall-2020-4}}
+
+Prove that if \(xf(x) \in L^1({\mathbb{R}})\), then
+\begin{align*}  
+F(y) \coloneqq\int f(x) \cos(yx)\,  dx
+\end{align*}
+defines a \(C^1\) function.
+
 \hypertarget{fubini-tonelli}{%
 \section{Fubini-Tonelli}\label{fubini-tonelli}}
 
@@ -4828,13 +5047,15 @@ defines a function in \(L^1({\mathbb{R}})\) that satisfies
 {\left\lVert {f\ast g} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1
 .\end{align*}
 
-\begin{solution}
+\begin{strategy}
 
-\hfill
+Just do it! Sort out the justification afterward. Use Tonelli.
+
+\end{strategy}
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -4847,61 +5068,124 @@ defines a function in \(L^1({\mathbb{R}})\) that satisfies
 \item
   F/T: apply Tonelli to \({\left\lvert {f} \right\rvert}\); if finite,
   \(f\in L^1\) and apply Fubini to \(f\)
+\item
+  See Folland's Real Analysis II, p.~68 for a discussion of using Fubini
+  \emph{and} Tonelli.
 \end{itemize}
 
 \end{concept}
 
-\begin{align*}
-{\left\lVert {H(x)} \right\rVert}_1 
-&= \int _{\mathbb{R}}{\left\lvert {H(x, y)} \right\rvert} \, dx \\
-&= \int _{\mathbb{R}}{\left\lvert { \int_{\mathbb{R}}f(y)g(x-y) \,dy } \right\rvert} \, dx \\
-&\leq \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dy } \, dx \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(t)} \right\rvert}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)} \right\rvert}\cdot {\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
-&= \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot \qty{ \int_{\mathbb{R}}{\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
-&\coloneqq\int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot {\left\lVert {g} \right\rVert}_1 \,dy \\
-&= {\left\lVert {g} \right\rVert}_1 \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \,dy \\
-&\coloneqq{\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1  \\
-&< \infty {\quad \operatorname{by assumption} \quad}
-.\end{align*}
+\begin{solution}
+
+\begin{itemize}
+\item
+  If these norms can be computed via iterated integrals, we have
+  \begin{align*}
+  {\left\lVert {f\ast g} \right\rVert}_1 
+  &\coloneqq\int_{\mathbb{R}}{\left\lvert {(f\ast g)(x)} \right\rvert} \,dx\\
+  &\coloneqq\int_{\mathbb{R}}{\left\lvert {\int_{\mathbb{R}}H(x, y) \,dy} \right\rvert} \,dx\\
+  &\coloneqq\int_{\mathbb{R}}{\left\lvert {\int_{\mathbb{R}}f(y)g(x-y) \,dy} \right\rvert} \,dx\\
+  &\leq \int_{\mathbb{R}}\int_{\mathbb{R}}{\left\lvert {f(y) g(x-y)} \right\rvert} \,dx\,dy\\
+  &\coloneqq\int_{\mathbb{R}}\int_{\mathbb{R}}{\left\lvert {H(x ,y)} \right\rvert}\,dx\,dy\\
+  &\coloneqq\int_{{\mathbb{R}}^2} {\left\lvert {H} \right\rvert} \,d\mu_{{\mathbb{R}}^2} \\
+  &\coloneqq{\left\lVert {H} \right\rVert}_{L^1({\mathbb{R}}^2)}
+  .\end{align*}
+  So it suffices to show \({\left\lVert {H} \right\rVert}_1 < \infty\).
+\item
+  A preliminary computation, the validity of which we will show
+  afterward:
+  \begin{align*}
+  {\left\lVert {H} \right\rVert}_1
+  &\coloneqq{\left\lVert {H} \right\rVert}_{L^1({\mathbb{R}}^2)} \\
+  &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dy } \, dx && \text{Tonelli} \\ 
+  &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dx} \, dy && \text{Tonelli} \\
+  &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(t)} \right\rvert}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
+  &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)} \right\rvert}\cdot {\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
+  &= \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot \qty{ \int_{\mathbb{R}}{\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
+  &\coloneqq\int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot {\left\lVert {g} \right\rVert}_1 \,dy \\
+  &= {\left\lVert {g} \right\rVert}_1 \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \,dy &&\text{the norm is a constant} \\
+  &\coloneqq{\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1  \\
+  &< \infty && \text{by assumption}
+  .\end{align*}
+\item
+  We've used Tonelli twice: to equate the integral to the iterated
+  integral, and to switch the order of integration, so it remains to
+  show the hypothesis of Tonelli are fulfilled.
+\end{itemize}
+
+\begin{claim}
+
+\(H\) is measurable on \({\mathbb{R}}^2\):
+
+\end{claim}
+
+\begin{proof}[?]
+
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
-  \(H\) is measurable on \({\mathbb{R}}^2\):
+  It suffices to show \(\tilde f(x, y) \coloneqq f(y)\) and
+  \(\tilde g(x, y) \coloneqq g(x-y)\) are both measurable on
+  \({\mathbb{R}}^2\).
 
   \begin{itemize}
   \tightlist
   \item
-    If we can show \(\tilde f(x, y) \coloneqq f(y)\) and
-    \(\tilde g(x, y) \coloneqq g(x-y)\) are both measurable on
-    \({\mathbb{R}}^2\), then \(H = \tilde f \cdot \tilde g\) is a
-    product of measurable functions and thus measurable.
-  \item
-    \(f \in L^1\), and \(L^1\) functions are measurable by definition.
-  \item
-    The function \((x, y) \mapsto g(x-y)\) is measurable on
-    \({\mathbb{R}}^2\):
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Let \(g\) be measurable on \({\mathbb{R}}\), then the cylinder
-      function \(G(x, y) = g(x)\) on \({\mathbb{R}}^2\) is always
-      measurable
-    \item
-      Define a linear transformation
-      \(T \coloneqq{\left[ {1, -1; 0, 1} \right]}\) which sends
-      \((x,y) \to (x-y, y)\), then
-      \(T\in \operatorname{GL}(2, {\mathbb{R}})\) is linear and thus
-      measurable.
-    \item
-      Then \((G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y)\), so
-      \(\tilde g\) is a composition of measurable functions and thus
-      measurable.
-    \end{itemize}
+    Then use that products of measurable functions are measurable.
   \end{itemize}
+\item
+  \(f \in L^1\) by assumption, and \(L^1\) functions are measurable by
+  definition.
+\item
+  The function \((x, y) \mapsto g(x-y)\) is measurable on
+  \({\mathbb{R}}^2\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(g\) is measurable on \({\mathbb{R}}\) by assumption, so the
+    cylinder function \(G(x, y) \coloneqq g(x)\) on \({\mathbb{R}}^2\)
+    is measurable (result from course).
+  \item
+    Define a linear transformation
+    \begin{align*}
+    T \coloneqq
+    \begin{bmatrix}
+    1 & -1 
+    \\
+    0 & 1
+    \end{bmatrix}
+    \in \operatorname{GL}_2({\mathbb{R}})
+    && \implies \,\,\,
+    T
+    \begin{bmatrix}
+     x 
+    \\
+     y 
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    x-y   
+    \\
+    y  
+    \end{bmatrix}
+    ,\end{align*}
+    and linear functions are measurable.
+  \item
+    Write
+    \begin{align*}
+    \tilde g(x-y) \coloneqq G(x-y, y) \coloneqq(G\circ T)(x, y)
+    ,\end{align*}
+    and compositions of measurable functions are measurable.
+  \end{itemize}
+\end{itemize}
+
+\end{proof}
+
+\begin{itemize}
+\tightlist
 \item
   Apply \textbf{Tonelli} to \({\left\lvert {H} \right\rvert}\)
 
@@ -4909,13 +5193,13 @@ defines a function in \(L^1({\mathbb{R}})\) that satisfies
   \tightlist
   \item
     \(H\) measurable implies \({\left\lvert {H} \right\rvert}\) is
-    measurable
+    measurable.
   \item
-    \({\left\lvert {H} \right\rvert}\) is non-negative
+    \({\left\lvert {H} \right\rvert}\) is non-negative.
   \item
     So the iterated integrals are equal in the extended sense
   \item
-    The calculation shows the iterated integral is finite, to
+    The calculation shows the iterated integral is finite, so
     \(\int {\left\lvert {H} \right\rvert}\) is finite and \(H\) is thus
     integrable on \({\mathbb{R}}^2\).
   \end{itemize}
@@ -4952,24 +5236,25 @@ Prove the validity of the following two statements:
 
 \todo[inline]{Add concepts.}
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
 \item
-  See S\&S p.82.
+  See Stein and Shakarchi p.82.
+\item
+  Tonelli
 \end{itemize}
 
 \end{concept}
 
-\hypertarget{a-16}{%
-\subsubsection{a}\label{a-16}}
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
 
 \(\implies\):
 
@@ -5010,8 +5295,11 @@ Prove the validity of the following two statements:
   exactly the function \(x \mapsto f(x)\), so \(f\) is measurable.
 \end{itemize}
 
-\hypertarget{b-16}{%
-\subsubsection{b}\label{b-16}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -5045,6 +5333,8 @@ Prove the validity of the following two statements:
   \end{itemize}
 \end{itemize}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{fall-2018-5-done}{%
@@ -5055,41 +5345,22 @@ Let \(f \geq 0\) be a measurable function on \({\mathbb{R}}\). Show that
 \begin{align*}
 \int _{{\mathbb{R}}} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
 \end{align*}
+:::\{.concept\} \envlist - Claim: If
+\(E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b\) is a measurable set,
+then for almost every \(y\in {\mathbb{R}}^b\), the slice \(E^y\) is
+measurable and
+\begin{align*}
+m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
+.\end{align*}
+- Set \(g = \chi_E\), which is non-negative and measurable, so apply
+Tonelli. - Conclude that \(g^y = \chi_{E^y}\) is measurable, the
+function \(y\mapsto \int g^y(x)\, dx\) is measurable, and
+\(\int \int g^y(x)\,dx \,dy = \int g\). - But \(\int g = m(E)\) and
+\(\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy\). :::
 
 \begin{solution}
 
-\hfill
-
-\begin{concept}
-
-\hfill
-
-\begin{itemize}
-\tightlist
-\item
-  Claim: If \(E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b\) is a
-  measurable set, then for almost every \(y\in {\mathbb{R}}^b\), the
-  slice \(E^y\) is measurable and
-  \begin{align*}
-  m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
-  .\end{align*}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Set \(g = \chi_E\), which is non-negative and measurable, so apply
-    Tonelli.
-  \item
-    Conclude that \(g^y = \chi_{E^y}\) is measurable, the function
-    \(y\mapsto \int g^y(x)\, dx\) is measurable, and
-    \(\int \int g^y(x)\,dx \,dy = \int g\).
-  \item
-    But \(\int g = m(E)\) and
-    \(\int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy\).
-  \end{itemize}
-\end{itemize}
-
-\end{concept}
+\envlist
 
 \begin{quote}
 Note: \(f\) is a function \({\mathbb{R}}\to {\mathbb{R}}\) in the
@@ -5242,6 +5513,12 @@ F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 \hypertarget{spring-2021-6}{%
 \subsection{Spring 2021 \# 6}\label{spring-2021-6}}
 
+\begin{warnings}
+
+This problem may be much harder than expected. Recommended skip.
+
+\end{warnings}
+
 Let \(f: {\mathbb{R}}\times{\mathbb{R}}\to {\mathbb{R}}\) be a
 measurable function and for \(x\in {\mathbb{R}}\) define the set
 \begin{align*}
@@ -5266,16 +5543,16 @@ Analysis}{L\^{}2 and Fourier Analysis}}\label{l2-and-fourier-analysis}}
 \subsection{\texorpdfstring{Spring 2020 \# 6
 \(\done\)}{Spring 2020 \# 6 \textbackslash done}}\label{spring-2020-6-done}}
 
-\hypertarget{a-17}{%
-\subsubsection{a}\label{a-17}}
+\hypertarget{a-11}{%
+\subsubsection{a}\label{a-11}}
 
 Show that
 \begin{align*}
 L^2([0, 1]) \subseteq L^1([0, 1]) {\quad \operatorname{and} \quad} \ell^1({\mathbb{Z}}) \subseteq \ell^2({\mathbb{Z}})
 .\end{align*}
 
-\hypertarget{b-17}{%
-\subsubsection{b}\label{b-17}}
+\hypertarget{b-11}{%
+\subsubsection{b}\label{b-11}}
 
 For \(f\in L^1([0, 1])\) define
 \begin{align*}
@@ -5326,8 +5603,8 @@ Hint: One approach is to argue that if \(f\in L^1([0, 1])\) with
 
 \end{concept}
 
-\hypertarget{a-18}{%
-\subsubsection{a}\label{a-18}}
+\hypertarget{a-12}{%
+\subsubsection{a}\label{a-12}}
 
 Claim: \(\ell^1({\mathbb{Z}}) \subseteq \ell^2({\mathbb{Z}})\).
 
@@ -5462,8 +5739,8 @@ Hint:
 
 \end{concept}
 
-\hypertarget{a-19}{%
-\subsubsection{a}\label{a-19}}
+\hypertarget{a-13}{%
+\subsubsection{a}\label{a-13}}
 
 \textbf{Lemma:} If \(\phi \in C_c^1\), then
 \((f \ast \phi)' = f \ast \phi'\) almost everywhere.
@@ -5541,8 +5818,8 @@ and thus
 so \(\left\{{x {~\mathrel{\Big|}~}f\ast g(x) = 0}\right\}\) is open, and
 its complement is closed and bounded and thus compact.
 
-\hypertarget{b-18}{%
-\subsubsection{b}\label{b-18}}
+\hypertarget{b-12}{%
+\subsubsection{b}\label{b-12}}
 
 \begin{align*}
 {\left\lVert {f\ast K_j - f} \right\rVert}_1 
@@ -5635,6 +5912,40 @@ function on \({\mathbb{R}}\).
   \end{align*}
 \end{enumerate}
 
+\hypertarget{fall-2020-5}{%
+\subsection{Fall 2020 \# 5}\label{fall-2020-5}}
+
+Suppose \(\phi\in L^1({\mathbb{R}})\) with
+\begin{align*}  
+\int \phi(x) \, dx = \alpha
+.\end{align*}
+For each \(\delta > 0\) and \(f\in L^1({\mathbb{R}})\), define
+\begin{align*}  
+A_\delta f(x) \coloneqq\int f(x-y) \delta^{-1} \phi\qty{\delta^{-1} y}\, dy
+.\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that for all \(\delta > 0\),
+  \begin{align*}  
+  {\left\lVert {A_\delta f} \right\rVert}_1 \leq {\left\lVert {\phi} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
+  .\end{align*}
+\item
+  Prove that
+  \begin{align*}  
+  A_\delta f \to \alpha f \text{ in } L^1({\mathbb{R}}) {\quad \operatorname{as} \quad} \delta\to 0^+
+  .\end{align*}
+\end{enumerate}
+
+\begin{quote}
+Hint: you may use without proof the fact that for all
+\(f\in L^1({\mathbb{R}})\),
+\begin{align*}  
+\lim_{y\to 0} \int_{\mathbb{R}}{\left\lvert {f(x-y) - f(x)} \right\rvert}\, dx = 0
+.\end{align*}
+\end{quote}
+
 \hypertarget{functional-analysis-general}{%
 \section{Functional Analysis:
 General}\label{functional-analysis-general}}
@@ -5646,16 +5957,16 @@ General}\label{functional-analysis-general}}
 Let \(\{u_n\}_{n=1}^∞\) be an orthonormal sequence in a Hilbert space
 \(\mathcal{H}\).
 
-\hypertarget{a-20}{%
-\subsubsection{a}\label{a-20}}
+\hypertarget{a-14}{%
+\subsubsection{a}\label{a-14}}
 
 Prove that for every \(x ∈ \mathcal H\) one has
 \begin{align*}
 \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
 \end{align*}
 
-\hypertarget{b-19}{%
-\subsubsection{b}\label{b-19}}
+\hypertarget{b-13}{%
+\subsubsection{b}\label{b-13}}
 
 Prove that for any sequence
 \(\{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})\) there exists an
@@ -5693,8 +6004,8 @@ and
 
 \end{concept}
 
-\hypertarget{a-21}{%
-\subsubsection{a}\label{a-21}}
+\hypertarget{a-15}{%
+\subsubsection{a}\label{a-15}}
 
 \textbf{Claim:}
 \begin{align*}
@@ -5714,8 +6025,8 @@ and
 &\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
 .\end{align*}
 
-\hypertarget{b-20}{%
-\subsubsection{b}\label{b-20}}
+\hypertarget{b-14}{%
+\subsubsection{b}\label{b-14}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5762,14 +6073,14 @@ for all \(x \in H\).
 \subsection{\texorpdfstring{Spring 2019 \# 5
 \(\done\)}{Spring 2019 \# 5 \textbackslash done}}\label{spring-2019-5-done}}
 
-\hypertarget{a-22}{%
-\subsubsection{a}\label{a-22}}
+\hypertarget{a-16}{%
+\subsubsection{a}\label{a-16}}
 
 Show that \(L^2([0, 1]) ⊆ L^1([0, 1])\) and argue that \(L^2([0, 1])\)
 in fact forms a dense subset of \(L^1([0, 1])\).
 
-\hypertarget{b-21}{%
-\subsubsection{b}\label{b-21}}
+\hypertarget{b-15}{%
+\subsubsection{b}\label{b-15}}
 
 Let \(Λ\) be a continuous linear functional on \(L^1([0, 1])\).
 
@@ -5853,8 +6164,8 @@ Hint: You may use, without proof, the Riesz Representation Theorem for
 
 \end{concept}
 
-\hypertarget{a-23}{%
-\subsubsection{a}\label{a-23}}
+\hypertarget{a-17}{%
+\subsubsection{a}\label{a-17}}
 
 \begin{itemize}
 \item
@@ -5871,8 +6182,8 @@ Hint: You may use, without proof, the Riesz Representation Theorem for
   dense in \(L^1\)
 \end{itemize}
 
-\hypertarget{b-22}{%
-\subsubsection{b}\label{b-22}}
+\hypertarget{b-16}{%
+\subsubsection{b}\label{b-16}}
 
 Let \(\Lambda \in L^1(X)^\vee\) be arbitrary.
 
@@ -6082,13 +6393,13 @@ functions on \([0, 1]\).
 
 \end{concept}
 
-\hypertarget{a-24}{%
-\subsubsection{a}\label{a-24}}
+\hypertarget{a-18}{%
+\subsubsection{a}\label{a-18}}
 
 \begin{itemize}
 \item
   Let \(\left\{{f_n}\right\}\) be a Cauchy sequence in
-  \(C(I, {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\), so
+  \(C(I, {\left\lVert {{-}} \right\rVert}_\infty)\), so
   \(\lim_n\lim_m {\left\lVert {f_m - f_n} \right\rVert}_\infty = 0\), we
   will show it converges to some \(f\) in this space.
 \item
@@ -6106,7 +6417,7 @@ functions on \([0, 1]\).
   Claim:
   \({\left\lVert {f - f_n} \right\rVert} \overset{n\to\infty}\to 0\), so
   \(f_n\) converges to \(f\) in
-  \(C([0, 1], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\).
+  \(C([0, 1], {\left\lVert {{-}} \right\rVert}_\infty)\).
 
   \begin{itemize}
   \tightlist
@@ -6149,8 +6460,8 @@ functions on \([0, 1]\).
   continuous, so \(f\in C([0, 1])\).
 \end{itemize}
 
-\hypertarget{b-23}{%
-\subsubsection{b}\label{b-23}}
+\hypertarget{b-17}{%
+\subsubsection{b}\label{b-17}}
 
 \begin{itemize}
 \item
@@ -6227,7 +6538,7 @@ the norm
 
 \begin{itemize}
 \item
-  Denote this norm \({\left\lVert {{\,\cdot\,}} \right\rVert}_u\)
+  Denote this norm \({\left\lVert {{-}} \right\rVert}_u\)
 \item
   Let \(f_n\) be a Cauchy sequence in this space, so
   \({\left\lVert {f_n} \right\rVert}_u < \infty\) for every \(n\) and
@@ -6249,8 +6560,8 @@ and define a candidate limit: for each \(x\in I\), set
   \tightlist
   \item
     Thus both \(f_n, f_n'\) are Cauchy sequences in
-    \(C^0([a, b], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty)\),
-    which is a Banach space, so they converge.
+    \(C^0([a, b], {\left\lVert {{-}} \right\rVert}_\infty)\), which is a
+    Banach space, so they converge.
   \end{itemize}
 \item
   So
@@ -6309,9 +6620,9 @@ Let \(X\) be a complete metric space and define a norm
 \|f\|:=\max \{|f(x)|: x \in X\}.
 \end{align*}
 
-Show that
-\((C^0({\mathbb{R}}), {\left\lVert {{\,\cdot\,}} \right\rVert} )\) (the
-space of continuous functions \(f: X\to {\mathbb{R}}\)) is complete.
+Show that \((C^0({\mathbb{R}}), {\left\lVert {{-}} \right\rVert} )\)
+(the space of continuous functions \(f: X\to {\mathbb{R}}\)) is
+complete.
 
 \todo[inline]{Add concepts.}
 \todo[inline]{Shouldn't this be a supremum? The max may not exist?}
@@ -6353,130 +6664,6 @@ Choose \(N\) large enough so that
 .\end{align*}
 
 \end{solution}
-
-\hypertarget{fall-2020}{%
-\section{Fall 2020}\label{fall-2020}}
-
-\hypertarget{section-4}{%
-\subsection{1}\label{section-4}}
-
-Show that if \(x_n\) is a decreasing sequence of positive real numbers
-such that \(\sum_{n=1}^\infty x_n\) converges, then
-\begin{align*}
-\lim_{n\to\infty} n x_n = 0.
-\end{align*}
-
-\hypertarget{section-5}{%
-\subsection{2}\label{section-5}}
-
-\hypertarget{a-25}{%
-\subsubsection{a}\label{a-25}}
-
-Let \(f: {\mathbb{R}}\to {\mathbb{R}}\). Prove that
-\begin{align*}
-f(x) \leq \liminf_{y\to x} f(y)~ \text{for each}~ x\in {{\mathbb{R}}} \iff \{ x\in {{\mathbb{R}}} \mathrel{\Big|}f(x) > a \}~\text{is open for all}~ a\in {{\mathbb{R}}}
-\end{align*}
-
-\hypertarget{b-24}{%
-\subsubsection{b}\label{b-24}}
-
-Recall that a function \(f: {{\mathbb{R}}} \to {{\mathbb{R}}}\) is
-called \emph{lower semi-continuous} iff it satisfies either condition in
-part (a) above.
-
-Prove that if \(\mathcal{F}\) is an y family of lower semi-continuous
-functions, then
-\begin{align*}
-g(x) = \sup\{ f(x) \mathrel{\Big|}f\in \mathcal{F}\}
-\end{align*}
-is Borel measurable.
-
-\begin{quote}
-Note that \(\mathcal{F}\) need not be a countable family.
-\end{quote}
-
-\hypertarget{section-6}{%
-\subsection{3}\label{section-6}}
-
-Let \(f\) be a non-negative Lebesgue measurable function on
-\([1, \infty)\).
-
-\hypertarget{a-26}{%
-\subsubsection{a}\label{a-26}}
-
-Prove that
-\begin{align*}  
-1 \leq \qty{
-{1 \over b-a} \int_a^b f(x) \,dx
-}\qty{
-{1\over b-a} \int_a^b {1 \over f(x)}\, dx
-}
-\end{align*}
-for any \(1\leq a < b <\infty\).
-
-\hypertarget{b-25}{%
-\subsubsection{b}\label{b-25}}
-
-Prove that if \(f\) satisfies
-\begin{align*}  
-\int_1^t f(x) \, dx \leq t^2 \log(t)
-\end{align*}
-for all \(t\in [1, \infty)\), then
-\begin{align*}  
-\int_1^\infty {1\over f(x) \,dx} = \infty
-.\end{align*}
-
-\begin{quote}
-Hint: write
-\begin{align*}  
-\int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
-.\end{align*}
-\end{quote}
-
-\hypertarget{section-7}{%
-\subsection{4}\label{section-7}}
-
-Prove that if \(xf(x) \in L^1({\mathbb{R}})\), then
-\begin{align*}  
-F(y) \coloneqq\int f(x) \cos(yx)\,  dx
-\end{align*}
-defines a \(C^1\) function.
-
-\hypertarget{section-8}{%
-\subsection{5}\label{section-8}}
-
-Suppose \(\phi\in L^1({\mathbb{R}})\) with
-\begin{align*}  
-\int \phi(x) \, dx = \alpha
-.\end{align*}
-For each \(\delta > 0\) and \(f\in L^1({\mathbb{R}})\), define
-\begin{align*}  
-A_\delta f(x) \coloneqq\int f(x-y) \delta^{-1} \phi\qty{\delta^{-1} y}\, dy
-.\end{align*}
-
-\hypertarget{a-27}{%
-\subsection{a}\label{a-27}}
-
-Prove that for all \(\delta > 0\),
-\begin{align*}  
-{\left\lVert {A_\delta f} \right\rVert}_1 \leq {\left\lVert {\phi} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
-.\end{align*}
-
-\hypertarget{b-26}{%
-\subsubsection{b}\label{b-26}}
-
-Prove that
-\begin{align*}  
-A_\delta f \to \alpha f \text{ in } L^1({\mathbb{R}}) {\quad \operatorname{as} \quad} \delta\to 0^+
-.\end{align*}
-
-\begin{quote}
-Hint: you may use without proof the fact that for all
-\(f\in L^1({\mathbb{R}})\),
-\begin{align*}  
-\lim_{y\to 0} \int_{\mathbb{R}}{\left\lvert {f(x-y) - f(x)} \right\rvert}\, dx = 0
-.\end{align*}
-\end{quote}
 
 
 \printbibliography[title=Bibliography]

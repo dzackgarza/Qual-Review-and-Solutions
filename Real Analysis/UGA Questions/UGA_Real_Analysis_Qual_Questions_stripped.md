@@ -1,14 +1,3 @@
-```{=tex}
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
-```
-
 # Preface
 
 I'd like to extend my gratitude to Peter Woolfitt for supplying many solutions and checking many proofs of the rest in problem sessions. Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
@@ -19,13 +8,9 @@ I'd like to extend my gratitude to Peter Woolfitt for supplying many solutions a
 
 Let \( f(x) = \frac 1 x \). Show that \( f \) is uniformly continuous on \( (1, \infty) \) but not on \( (0,\infty) \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Uniform continuity:
     \[  
@@ -34,8 +19,15 @@ Let \( f(x) = \frac 1 x \). Show that \( f \) is uniformly continuous on \( (1, 
 -   Negating uniform continuity: \( \exists \varepsilon> 0 \) such that \( \forall \delta(\varepsilon) \) there exist \( x, y \) such that \( {\left\lvert {x-y} \right\rvert} < \delta \) *and* \( {\left\lvert {f(x) - f(y)} \right\rvert} > \varepsilon \).
 :::
 
-**Claim**: \( f(x) = \frac 1 x \) is uniformly continuous on \( (c, \infty) \) for any \( c > 0 \).
+::: {.solution}
+::: {.claim}
+\( f(x) = \frac 1 x \) is uniformly continuous on \( (c, \infty) \) for any \( c > 0 \).
+:::
 
+::: {.proof title="of claim"}
+```{=tex}
+\envlist
+```
 -   Note that
     \[
     {\left\lvert {x} \right\rvert}, {\left\lvert {y} \right\rvert} > c > 0 \implies {\left\lvert {xy} \right\rvert} = {\left\lvert {x} \right\rvert}{\left\lvert {y} \right\rvert} > c^2 \implies \frac{1}{{\left\lvert {xy} \right\rvert}} < \frac 1 {c^{2}}
@@ -55,9 +47,16 @@ Let \( f(x) = \frac 1 x \). Show that \( f \) is uniformly continuous on \( (1, 
     &< \varepsilon
     ,\]
     which shows uniform continuity.
+:::
 
-**Claim**: \( f \) is *not* uniformly continuous when \( c=0 \).
+::: {.claim}
+\( f \) is *not* uniformly continuous when \( c=0 \).
+:::
 
+::: {.proof title="of claim"}
+```{=tex}
+\envlist
+```
 -   Toward a contradiction, let \( \varepsilon < 1 \).
 -   Let \( x_n = \frac 1 n \) for \( n\geq 1 \).
 -   Choose \( n \) large enough such that \( {\left\lvert {x_n - x_{n+1}} \right\rvert} = \frac 1 n - \frac 1 {n+1} < \delta \).
@@ -72,6 +71,7 @@ Let \( f(x) = \frac 1 x \). Show that \( f \) is uniformly continuous on \( (1, 
     ,\]
     a contradiction.
 :::
+:::
 
 ## Fall 2017 \# 1 \( \done \) {#fall-2017-1-done}
 
@@ -82,13 +82,9 @@ f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 
 Describe the intervals on which \( f \) does and does not converge uniformly.
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   \( f_N\to f \) uniformly \( \iff \) \( {\left\lVert {f_N - f} \right\rVert}_\infty \to 0 \).
 -   \( \sum_{n=0}^\infty c_n x^n \coloneqq\lim_{N\to \infty} \sum_{n=0}^N c_n x^n \)
@@ -96,6 +92,10 @@ Describe the intervals on which \( f \) does and does not converge uniformly.
 -   If \( \sum_{n=0}^\infty g_n(x) \) converges uniformly on a set \( A \), then \( \sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0 \).
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Set \( f_N(x) = \sum_{n=1}^N {x^n \over n!} \).
 
     -   Then by definition, \( f_N(x) \to f(x) \) pointwise on \( {\mathbb{R}} \).
@@ -131,12 +131,28 @@ Let \( \left\{{f_n}\right\} \) be a sequence of continuous functions such that \
 
 Prove that \( \sum f_n \) is also continuous.
 
+```{=tex}
+\envlist
+```
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Todo
+:::
+
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
-**Claim:** If \( F_N\to F \) uniformly with each \( F_N \) continuous, then \( F \) is continuous.
+::: {.claim}
+If \( F_N\to F \) uniformly with each \( F_N \) continuous, then \( F \) is continuous.
+:::
 
+::: {.proof title="of claim"}
+```{=tex}
+\envlist
+```
 -   Follows from an \( \varepsilon/3 \) argument:
     \[  
     {\left\lvert {F(x) - F(y} \right\rvert} \leq 
@@ -146,9 +162,9 @@ Prove that \( \sum f_n \) is also continuous.
 
     -   The first and last \( \varepsilon/3 \) come from uniform convergence of \( F_N\to F \).
     -   The middle \( \varepsilon/3 \) comes from continuity of each \( F_N \).
+:::
 
 -   Now setting \( F_N\coloneqq\sum_{n=1}^N f_n \) yields a finite sum of continuous functions, which is continuous.
-
 -   Each \( F_N \) is continuous and \( F_N\to F \) uniformly, so applying the claim yields the desired result.
 :::
 
@@ -163,17 +179,14 @@ f(x, y) = \begin{cases}
 \]
 Determine if \( f \) is integrable.
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Just Calculus.
 :::
 
+::: {.solution}
 Switching to polar coordinates and integrating over one quarter of the unit disc \( D \subseteq I^2 \), we have
 \[
 \int_{I^2} f \, dA
@@ -199,28 +212,27 @@ Prove that the following statements are equivalent:
 1.  For every \( \varepsilon > 0 \quad \exists \delta > 0 \) such that \( \rho( f(x), f(x_0) ) < \varepsilon \) whenever \( d(x, x_0) < \delta \).
 2.  The sequence \( \left\{{f(x_n)}\right\}_{n=1}^\infty \to f(x_0) \) for every sequence \( \left\{{x_n}\right\} \to x_0 \) in \( X \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   What it means for a sequence to converge.
 :::
 
-\( 1\implies 2 \):
-
+::: {.solution}
+::: {.proof title="$1\\implies 2$"}
+```{=tex}
+\envlist
+```
 -   Let \( \left\{{x_n}\right\} \overset{n\to\infty}\to x_0 \) be arbitrary; we want to show \( \left\{{f(x_n)}\right\}\overset{n\to\infty}\to f(x_0) \).
     -   We thus want to show that for every \( \varepsilon>0 \), there exists an \( N(\varepsilon) \) such that
         \[n\geq N(\varepsilon) \implies \rho(f(x_n),  f(x_0)) < \varepsilon.\]
 -   Let \( \varepsilon>0 \) be arbitrary, then by (1) choose \( \delta \) such that \( \rho(f(x), f(x_0)) < \varepsilon \) when \( d(x, x_0) < \delta \).
 -   Since \( x_n\to x \), there is some \( N \) such that \( n\geq N \implies d(x_n, x_0) < \delta \)
 -   Then for \( n\geq N \), \( d(x_n, x_0) < \delta \) and thus \( \rho(f(x_n), f(x_0)) < \varepsilon \), so \( f(x_n)\to f(x_0) \) as desired.
+:::
 
-\( 2\implies 1 \):
-
+::: {.proof title="$2\\implies 1$"}
 > Note that we need a \( \delta \) for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
 
 -   By contrapositive, we will show that \( \not 1\implies \not 2 \).
@@ -229,32 +241,31 @@ Prove that the following statements are equivalent:
 -   So take a sequence of deltas \( \delta_n = {1\over n} \), apply this to produce a sequence \( x_n \) with \( d(x_n, x_0) < {1\over n} \) and \( \rho(f(x_n), f(x_0)) > \varepsilon \).
 -   Then \( x_n \to x_0 \) but \( f(x_n) \not\to f(x_0) \).
 :::
+:::
 
 ## Fall 2014 \# 2 \( \work \) {#fall-2014-2-work}
 
 Let \( I \) be an index set and \( \alpha: I \to (0, \infty) \).
 
-### 1
+a.  Show that
+    \[
+    \sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
+    \]
 
-Show that
-\[
-\sum_{i \in I} a(i):=\sup _{\substack{ J \subset I \\ J \text { finite }}} \sum_{i \in J} a(i)<\infty \implies I \text{ is countable.}
-\]
-
-### 2
-
-Suppose \( I = {\mathbb{Q}} \) and \( \sum_{q \in \mathbb{Q}} a(q)<\infty \). Define
-\[
-f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
-\]
-Show that \( f \) is continuous at \( x \iff x\not\in {\mathbb{Q}} \).
+b.  Suppose \( I = {\mathbb{Q}} \) and \( \sum_{q \in \mathbb{Q}} a(q)<\infty \). Define
+    \[
+    f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
+    \]
+    Show that \( f \) is continuous at \( x \iff x\not\in {\mathbb{Q}} \).
 
 ```{=tex}
 \todo[inline]{Stuck on part b}
 ```
 ::: {.solution}
-### 1
-
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
 -   Set \( S \coloneqq\sum_{i\in I} \alpha(i) \), we will show that \( S<\infty \implies I \) is countable.
 
 -   Write \( I = {\coprod}_{n\in {\mathbb{N}}} S_n \) where \( S_n \coloneqq\left\{{i\in I {~\mathrel{\Big|}~}\alpha(i) \geq {1\over n}}\right\} \).
@@ -270,10 +281,11 @@ Show that \( f \) is continuous at \( x \iff x\not\in {\mathbb{Q}} \).
     so \( S_n \) is a countable set.
 
 -   But then \( I \) is a countable union of countable sets and thus countable.
+:::
 
-### 2
-
-\\todo\[inline\]{Not sure.}
+```{=tex}
+\todo[inline]{(b): not sure.}
+```
 :::
 
 ## Spring 2014 \# 2 \( \done \) {#spring-2014-2-done}
@@ -291,7 +303,7 @@ Show that \( \sum a_n^2 < \infty \).
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Define a sequence of operators
     \[  
@@ -326,18 +338,18 @@ Prove that if \( f: [0, 1] \to {\mathbb{R}} \) is continuous then
 \lim_{k\to\infty} \int_0^1 kx^{k-1} f(x) \,dx = f(1)
 .\]
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   DCT
 -   Weierstrass Approximation Theorem
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Suppose \( p \) is a polynomial, then
     \[
     \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
@@ -396,27 +408,23 @@ Prove that if \( f: [0, 1] \to {\mathbb{R}} \) is continuous then
 
 Let \( \{a_n\}_{n=1}^\infty \) be a sequence of real numbers.
 
-### a
+a.  Prove that if \( \displaystyle\lim_{n\to \infty } a_n = 0 \), then
+    \[
+    \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
+    \]
 
-Prove that if \( \displaystyle\lim_{n\to \infty } a_n = 0 \), then
-\[
-\lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
-\]
-
-### b
-
-Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converges, then
-\[
-\lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
-\]
+b.  Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converges, then
+    \[
+    \lim _{n \rightarrow \infty} \frac{a_{1}+\cdots+a_{n}}{n}=0
+    \]
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Cesaro mean/summation.
 -   Break series apart into pieces that can be handled separately.
@@ -424,8 +432,10 @@ Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converges, 
     -   See [this MSE answer](https://math.stackexchange.com/questions/514802/convergence-of-series-implies-convergence-of-cesaro-mean).
 :::
 
-### a
-
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
 -   Prove a stronger result:
     \[
     a_k \to S \implies S_N\coloneqq\frac 1 N \sum_{k=1}^N a_k \to S
@@ -450,12 +460,15 @@ Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converges, 
     &= {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + (N - M){\varepsilon} \\
     &\leq \varepsilon+ (N(M, \varepsilon) - M(\varepsilon))\varepsilon
     .\]
+:::
 
 ```{=tex}
 \todo[inline]{Revisit, not so clear that the last line can be made smaller than $\varepsilon$, since $M, N$ both depend on $\varepsilon$...}
 ```
-### b
-
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
 -   Define
     \[
     \Gamma_n \coloneqq\sum_{k=n}^\infty \frac{a_k}{k}
@@ -494,6 +507,7 @@ Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converges, 
     &\overset{n\to\infty}\to 0
     .\]
 :::
+:::
 
 ## Fall 2018 \# 4 \( \done \) {#fall-2018-4-done}
 
@@ -509,11 +523,11 @@ Let \( f\in L^1([0, 1]) \). Prove that
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Converting floor/ceiling functions to inequalities: \( x-1 \leq {\left\lfloor x \right\rfloor} \leq x \).
 :::
@@ -626,29 +640,29 @@ Let
 f_{n}(x) = n x(1-x)^{n}, \quad n \in {\mathbb{N}}.
 \]
 
-1.  Show that \( f_n \to 0 \) pointwise but not uniformly on \( [0, 1] \).
+a.  Show that \( f_n \to 0 \) pointwise but not uniformly on \( [0, 1] \).
 
-> Hint: Consider the maximum of \( f_n \).
-
-2.  
+b.  Show that
     \[
     \lim _{n \to \infty} \int _{0}^{1} n(1-x)^{n} \sin x \, dx = 0
     \]
 
+> Hint for (a): Consider the maximum of \( f_n \).
+
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   \( \sum f_n < \infty \iff \sup f_n \to 0 \).
 -   Negating uniform convergence: \( f_n\not\to f \) uniformly iff \( \exists \varepsilon \) such that \( \forall N(\varepsilon) \) there exists an \( x_N \) such that \( {\left\lvert {f(x_N) - f(x)} \right\rvert} > \varepsilon \).
 -   Exponential inequality: \( 1+y \leq e^y \) for all \( y\in {\mathbb{R}} \).
 :::
 
-### a
+a.  
 
 \( f_n\to 0 \) pointwise:
 
@@ -677,7 +691,7 @@ The convergence is not uniform:
 
 -   Thus \( {\left\lVert {f_n - 0} \right\rVert}_\infty = {\left\lVert {f_n} \right\rVert}_\infty > e^{-1} > 0 \).
 
-### b
+b.  
 
 ```{=tex}
 \todo[inline]{Possible to use part a with $\sin(x) \leq x$ on $[0, \pi/2]$?}
@@ -702,32 +716,29 @@ f_{n}(x) = a e^{-n a x} - b e^{-n b x} \quad \text{ where } 0 < a < b.
 
 Show that
 
-### a
-
-\( \sum_{n=1}^{\infty} \left|f_{n}\right| \) is not in \( L^{1}([0, \infty), m) \)
+a.  \( \sum_{n=1}^{\infty} \left|f_{n}\right| \) is not in \( L^{1}([0, \infty), m) \)
 
 > Hint: \( f_n(x) \) has a root \( x_n \).
 
-### b
-
-\[
-\sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
-{\quad \operatorname{and} \quad}
-\int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
-\]
-`\todo[inline]{Not complete.}`{=tex} `\todo[inline]{Add concepts.}`{=tex} `\todo[inline]{Walk through.}`{=tex}
+b.  
+    \[
+    \sum_{n=1}^{\infty} f_{n} \text { is in } L^{1}([0, \infty), m) 
+    {\quad \operatorname{and} \quad}
+    \int _{0}^{\infty} \sum _{n=1}^{\infty} f_{n}(x) \,dm = \ln \frac{b}{a}
+    \]
+    `\todo[inline]{Not complete.}`{=tex} `\todo[inline]{Add concepts.}`{=tex} `\todo[inline]{Walk through.}`{=tex}
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 :::
 
-### a
+a.  
 
 -   \( f_n \) has a root:
     \[  
@@ -747,7 +758,7 @@ Show that
     &= \sum_n {1\over n} \qty{ e^{-bnx_n} - e^{-anx_n} }
     .\]
 
-### b
+b.  
 
 ?
 :::
@@ -758,7 +769,6 @@ Define
 \[
 f(x) = \sum_{n=1}^{\infty} \frac{1}{n^{x}}.
 \]
-
 Show that \( f \) converges to a differentiable function on \( (1, \infty) \) and that
 \[
 f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
@@ -774,11 +784,11 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   ?
 :::
@@ -838,11 +848,11 @@ Let \( \phi\in L^\infty({\mathbb{R}}) \). Show that the following limit exists a
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   ?
 :::
@@ -895,18 +905,21 @@ Let \( f, g \in L^2({\mathbb{R}}) \). Show that
 \lim _{n \to \infty} \int _{{\mathbb{R}}} f(x) g(x+n) \,dx = 0
 \]
 
-::: {.solution}
 ```{=tex}
-\hfill
+\todo[inline]{Rewrite solution.}
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Cauchy Schwarz: \( {\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1 \).
--   Small tails.
+-   Small tails in \( L^p \).
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Use the fact that \( L^p \) has small tails: if \( h\in L^2({\mathbb{R}}) \), then for any \( \varepsilon> 0 \),
     \[  
     \forall \varepsilon,\, \exists N\in {\mathbb{N}}{\quad \operatorname{such that} \quad}\int_{{\left\lvert {x} \right\rvert} \geq {N}} {\left\lvert {h(x)} \right\rvert}^2 \,dx < \varepsilon
@@ -959,8 +972,8 @@ E_{n} = \left( 1+ {1\over n} \right)^{n+1}
 
 Show that \( e_n < E_n \), and prove Bernoulli's inequality:
 \[
-(1+x)^{n} \geq 1+n x \text { for }-1<x<\infty \text { and } n \in \mathbb{N}
-\]
+(1+x)^n \geq 1+nx && -1 < x < \infty  ,\,\, n\in {\mathbb{N}}
+.\]
 
 Use this to show the following:
 
@@ -977,6 +990,41 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 \]
 
 Show that there is a number \( x_m \) such that \( f(x_m) \leq f(x) \) for all \( x\in {\mathbb{R}} \).
+
+## Fall 2020 \# 1
+
+Show that if \( x_n \) is a decreasing sequence of positive real numbers such that \( \sum_{n=1}^\infty x_n \) converges, then
+\[
+\lim_{n\to\infty} n x_n = 0.
+\]
+
+## Fall 2020 \# 3
+
+Let \( f \) be a non-negative Lebesgue measurable function on \( [1, \infty) \).
+
+a.  Prove that
+    \[  
+    1 \leq \qty{
+    {1 \over b-a} \int_a^b f(x) \,dx
+    }\qty{
+    {1\over b-a} \int_a^b {1 \over f(x)}\, dx
+    }
+    \]
+    for any \( 1\leq a < b <\infty \).
+
+b.  Prove that if \( f \) satisfies
+    \[  
+    \int_1^t f(x) \, dx \leq t^2 \log(t)
+    \]
+    for all \( t\in [1, \infty) \), then
+    \[  
+    \int_1^\infty {1\over f(x) \,dx} = \infty
+    .\]
+
+> Hint: write
+> \[  
+> \int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
+> .\]
 
 # Measure Theory: Sets
 
@@ -2001,6 +2049,23 @@ b.  \( f_n(x) \overset{n\to\infty}\to 1 \) for almost every \( x \) \( \iff \)
 ## Spring 2021 \# 3
 
 Let \( (X, \mathcal{M}, \mu) \) be a finite measure space and let \( \left\{{ f_n}\right\}_{n=1}^{\infty } \subseteq L^1(X, \mu) \). Suppose \( f\in L^1(X, \mu) \) such that \( f_n(x) \overset{n\to \infty }\to f(x) \) for almost every \( x \in X \). Prove that for every \( \varepsilon> 0 \) there exists \( M>0 \) and a set \( E\subseteq X \) such that \( \mu(E) \leq \varepsilon \) and \( {\left\lvert {f_n(x)} \right\rvert}\leq M \) for all \( x\in X\setminus E \) and all \( n\in {\mathbb{N}} \).
+
+## Fall 2020 \# 2
+
+a.  Let \( f: {\mathbb{R}}\to {\mathbb{R}} \). Prove that
+    \[
+    f(x) \leq \liminf_{y\to x} f(y)~ \text{for each}~ x\in {{\mathbb{R}}} \iff \{ x\in {{\mathbb{R}}} \mathrel{\Big|}f(x) > a \}~\text{is open for all}~ a\in {{\mathbb{R}}}
+    \]
+
+b.  Recall that a function \( f: {{\mathbb{R}}} \to {{\mathbb{R}}} \) is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
+
+Prove that if \( \mathcal{F} \) is an y family of lower semi-continuous functions, then
+\[
+g(x) = \sup\{ f(x) \mathrel{\Big|}f\in \mathcal{F}\}
+\]
+is Borel measurable.
+
+> Note that \( \mathcal{F} \) need not be a countable family.
 
 # Integrals: Convergence
 
@@ -3142,6 +3207,83 @@ Let \( f, g \) be Lebesgue integrable on \( {\mathbb{R}} \) and let \( g_n(x) \c
 \lim_{n\to \infty } {\left\lVert {f + g_n} \right\rVert}_1 = {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1
 .\]
 
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   For \( f\in L^1(X) \), \( {\left\lVert {f} \right\rVert}_1 \coloneqq\int_X {\left\lvert {f(x)} \right\rvert} \,dx< \infty \).
+
+-   Small tails in \( L_1 \): if \( f\in L^1({\mathbb{R}}^n) \), then for every \( \varepsilon>0 \) exists some radius \( R \) such that
+    \[
+    {\left\lVert {f} \right\rVert}_{L^1(B_R^c)} < \varepsilon
+    .\]
+
+-   Shift \( g \) off so most of its density occurs where \( f \) has a small tail, and vice versa:
+
+![image_2021-04-24-21-27-21](figures/image_2021-04-24-21-27-21.png)
+
+-   Any integral \( \int_a^b f \) can be written as \( {\left\lVert {f} \right\rVert}_1 - O(\text{err}) \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Fix \( \varepsilon \).
+
+-   Choose \( N\gg 0 \) to produce an \( R \) so that
+    \[
+    \int_R^{\infty } {\left\lvert {f} \right\rvert} &< \varepsilon\\
+    \int_{-\infty}^{R} {\left\lvert {g_N} \right\rvert} &< \varepsilon
+    .\]
+
+-   Split the integral up:
+    \[
+    {\left\lVert {f - g_N} \right\rVert}_1 = \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} + \int_R^{\infty }{\left\lvert {f - g_N} \right\rvert}
+    ,\]
+    where \( g_N \) is small in the first term and \( f \) is small in the second.
+
+-   Note that we have two inequalities:
+    \[
+    {\left\lVert {f} \right\rVert}_1 - 2\varepsilon&\leq \int_{-\infty}^{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert}_1 + 2\varepsilon\\
+    {\left\lVert {g} \right\rVert}_1 - 2\varepsilon&\leq \int^{\infty}_{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {g} \right\rVert}_1 + 2\varepsilon
+    .\]
+
+```{=tex}
+\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
+```
+-   Add these to obtain
+    \[
+    {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1 - 4\varepsilon\leq \int_{\mathbb{R}}{\left\lvert {f - g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert} + {\left\lVert {g} \right\rVert}_1 + 4\varepsilon
+    .\]
+
+-   Check that \( N\to \infty \) as \( \varepsilon\to 0 \) to yield the result.
+
+-   Seeing where the inequalities come from: for the first, we'll generally have \( f \) big and \( g \) small, which motivates:
+    \[
+    \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} 
+    &\leq \int_{- \infty }^R {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+    &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+    &\approx {\left\lVert {f} \right\rVert}_1 + O(\varepsilon) + O(\varepsilon)
+    ,\]
+    and similarly
+    \[
+    \int_{- \infty }^R {\left\lvert { f- g_N} \right\rvert} 
+    &\geq \int_{- \infty }^R {\left\lvert {f} \right\rvert} - {\left\lvert {g_N} \right\rvert} \\
+    &= \int_{- \infty }^R {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+    &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
+    &\geq {\left\lVert {f} \right\rVert}_1 - O(\varepsilon) - O(\varepsilon)
+    .\]
+:::
+
+## Fall 2020 \# 4
+
+Prove that if \( xf(x) \in L^1({\mathbb{R}}) \), then
+\[  
+F(y) \coloneqq\int f(x) \cos(yx)\,  dx
+\]
+defines a \( C^1 \) function.
+
 # Fubini-Tonelli
 
 ## Spring 2020 \# 4 \( \done \) {#spring-2020-4-done}
@@ -3155,46 +3297,100 @@ defines a function in \( L^1({\mathbb{R}}) \) that satisfies
 {\left\lVert {f\ast g} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_1
 .\]
 
-::: {.solution}
-```{=tex}
-\hfill
-```
+::: {.strategy}
+Just do it! Sort out the justification afterward. Use Tonelli.
+:::
+
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Tonelli: non-negative and measurable yields measurability of slices and equality of iterated integrals
 -   Fubini: \( f(x, y) \in L^1 \) yields *integrable* slices and equality of iterated integrals
 -   F/T: apply Tonelli to \( {\left\lvert {f} \right\rvert} \); if finite, \( f\in L^1 \) and apply Fubini to \( f \)
+-   See Folland's Real Analysis II, p. 68 for a discussion of using Fubini *and* Tonelli.
 :::
 
-\[
-{\left\lVert {H(x)} \right\rVert}_1 
-&= \int _{\mathbb{R}}{\left\lvert {H(x, y)} \right\rvert} \, dx \\
-&= \int _{\mathbb{R}}{\left\lvert { \int_{\mathbb{R}}f(y)g(x-y) \,dy } \right\rvert} \, dx \\
-&\leq \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dy } \, dx \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dx} \, dy \quad\text{by Tonelli} \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(t)} \right\rvert}  \, dt} \, dy \quad\text{setting } t=x-y, \,dt = - dx \\
-&= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)} \right\rvert}\cdot {\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
-&= \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot \qty{ \int_{\mathbb{R}}{\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
-&\coloneqq\int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot {\left\lVert {g} \right\rVert}_1 \,dy \\
-&= {\left\lVert {g} \right\rVert}_1 \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \,dy \\
-&\coloneqq{\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1  \\
-&< \infty {\quad \operatorname{by assumption} \quad}
-.\]
+::: {.solution}
+-   If these norms can be computed via iterated integrals, we have
+    \[
+    {\left\lVert {f\ast g} \right\rVert}_1 
+    &\coloneqq\int_{\mathbb{R}}{\left\lvert {(f\ast g)(x)} \right\rvert} \,dx\\
+    &\coloneqq\int_{\mathbb{R}}{\left\lvert {\int_{\mathbb{R}}H(x, y) \,dy} \right\rvert} \,dx\\
+    &\coloneqq\int_{\mathbb{R}}{\left\lvert {\int_{\mathbb{R}}f(y)g(x-y) \,dy} \right\rvert} \,dx\\
+    &\leq \int_{\mathbb{R}}\int_{\mathbb{R}}{\left\lvert {f(y) g(x-y)} \right\rvert} \,dx\,dy\\
+    &\coloneqq\int_{\mathbb{R}}\int_{\mathbb{R}}{\left\lvert {H(x ,y)} \right\rvert}\,dx\,dy\\
+    &\coloneqq\int_{{\mathbb{R}}^2} {\left\lvert {H} \right\rvert} \,d\mu_{{\mathbb{R}}^2} \\
+    &\coloneqq{\left\lVert {H} \right\rVert}_{L^1({\mathbb{R}}^2)}
+    .\]
+    So it suffices to show \( {\left\lVert {H} \right\rVert}_1 < \infty \).
 
--   \( H \) is measurable on \( {\mathbb{R}}^2 \):
-    -   If we can show \( \tilde f(x, y) \coloneqq f(y) \) and \( \tilde g(x, y) \coloneqq g(x-y) \) are both measurable on \( {\mathbb{R}}^2 \), then \( H = \tilde f \cdot \tilde g \) is a product of measurable functions and thus measurable.
-    -   \( f \in L^1 \), and \( L^1 \) functions are measurable by definition.
-    -   The function \( (x, y) \mapsto g(x-y) \) is measurable on \( {\mathbb{R}}^2 \):
-        -   Let \( g \) be measurable on \( {\mathbb{R}} \), then the cylinder function \( G(x, y) = g(x) \) on \( {\mathbb{R}}^2 \) is always measurable
-        -   Define a linear transformation \( T \coloneqq{\left[ {1, -1; 0, 1} \right]} \) which sends \( (x,y) \to (x-y, y) \), then \( T\in \operatorname{GL}(2, {\mathbb{R}}) \) is linear and thus measurable.
-        -   Then \( (G\circ T)(x, y) = G(x-y, y) = \tilde g(x-y) \), so \( \tilde g \) is a composition of measurable functions and thus measurable.
+-   A preliminary computation, the validity of which we will show afterward:
+    \[
+    {\left\lVert {H} \right\rVert}_1
+    &\coloneqq{\left\lVert {H} \right\rVert}_{L^1({\mathbb{R}}^2)} \\
+    &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dy } \, dx && \text{Tonelli} \\ 
+    &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(x-y)} \right\rvert}  \, dx} \, dy && \text{Tonelli} \\
+    &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)g(t)} \right\rvert}  \, dt} \, dy && \text{setting } t=x-y, \,dt = - dx \\
+    &= \int _{\mathbb{R}}\qty{ \int_{\mathbb{R}}{\left\lvert {f(y)} \right\rvert}\cdot {\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
+    &= \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot \qty{ \int_{\mathbb{R}}{\left\lvert {g(t)} \right\rvert}  \, dt}\, dy \\
+    &\coloneqq\int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \cdot {\left\lVert {g} \right\rVert}_1 \,dy \\
+    &= {\left\lVert {g} \right\rVert}_1 \int _{\mathbb{R}}{\left\lvert {f(y)} \right\rvert} \,dy &&\text{the norm is a constant} \\
+    &\coloneqq{\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1  \\
+    &< \infty && \text{by assumption}
+    .\]
+
+-   We've used Tonelli twice: to equate the integral to the iterated integral, and to switch the order of integration, so it remains to show the hypothesis of Tonelli are fulfilled.
+
+::: {.claim}
+\( H \) is measurable on \( {\mathbb{R}}^2 \):
+:::
+
+::: {.proof title="?"}
+```{=tex}
+\envlist
+```
+-   It suffices to show \( \tilde f(x, y) \coloneqq f(y) \) and \( \tilde g(x, y) \coloneqq g(x-y) \) are both measurable on \( {\mathbb{R}}^2 \).
+    -   Then use that products of measurable functions are measurable.
+-   \( f \in L^1 \) by assumption, and \( L^1 \) functions are measurable by definition.
+-   The function \( (x, y) \mapsto g(x-y) \) is measurable on \( {\mathbb{R}}^2 \):
+    -   \( g \) is measurable on \( {\mathbb{R}} \) by assumption, so the cylinder function \( G(x, y) \coloneqq g(x) \) on \( {\mathbb{R}}^2 \) is measurable (result from course).
+    -   Define a linear transformation
+        \[
+        T \coloneqq
+        \begin{bmatrix}
+        1 & -1 
+        \\
+        0 & 1
+        \end{bmatrix}
+        \in \operatorname{GL}_2({\mathbb{R}})
+        && \implies \,\,\,
+        T
+        \begin{bmatrix}
+         x 
+        \\
+         y 
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        x-y   
+        \\
+        y  
+        \end{bmatrix}
+        ,\]
+        and linear functions are measurable.
+    -   Write
+        \[
+        \tilde g(x-y) \coloneqq G(x-y, y) \coloneqq(G\circ T)(x, y)
+        ,\]
+        and compositions of measurable functions are measurable.
+:::
+
 -   Apply **Tonelli** to \( {\left\lvert {H} \right\rvert} \)
-    -   \( H \) measurable implies \( {\left\lvert {H} \right\rvert} \) is measurable
-    -   \( {\left\lvert {H} \right\rvert} \) is non-negative
+    -   \( H \) measurable implies \( {\left\lvert {H} \right\rvert} \) is measurable.
+    -   \( {\left\lvert {H} \right\rvert} \) is non-negative.
     -   So the iterated integrals are equal in the extended sense
-    -   The calculation shows the iterated integral is finite, to \( \int {\left\lvert {H} \right\rvert} \) is finite and \( H \) is thus integrable on \( {\mathbb{R}}^2 \).
+    -   The calculation shows the iterated integral is finite, so \( \int {\left\lvert {H} \right\rvert} \) is finite and \( H \) is thus integrable on \( {\mathbb{R}}^2 \).
 
 > Note: Fubini is not needed, since we're not calculating the actual integral, just showing \( H \) is integrable.
 :::
@@ -3215,19 +3411,19 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
 ```{=tex}
 \todo[inline]{Add concepts.}
 ```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
--   See S&S p.82.
+-   See Stein and Shakarchi p.82.
+-   Tonelli
 :::
 
-### a
-
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
 \( \implies \):
 
 -   Suppose \( f \) is a measurable function.
@@ -3246,9 +3442,12 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
     \]
 
 -   But \( x \mapsto m(\mathcal A_x) \) is a measurable function, and is exactly the function \( x \mapsto f(x) \), so \( f \) is measurable.
+:::
 
-### b
-
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
 -   Note
     \[
     \mathcal{A} &= \left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0 \leq t \leq f(x)}\right\} 
@@ -3271,6 +3470,7 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
 
     -   This is justified because \( f \) was assumed measurable on \( {\mathbb{R}}^n \), thus by (a) \( \mathcal{A} \) is a measurable set and thus \( \chi_A \) is a measurable function on \( {\mathbb{R}}^n\times{\mathbb{R}} \).
 :::
+:::
 
 ## Fall 2018 \# 5 \( \done \) {#fall-2018-5-done}
 
@@ -3278,24 +3478,16 @@ Let \( f \geq 0 \) be a measurable function on \( {\mathbb{R}} \). Show that
 \[
 \int _{{\mathbb{R}}} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
 \]
+:::{.concept} `\envlist`{=tex} - Claim: If \( E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b \) is a measurable set, then for almost every \( y\in {\mathbb{R}}^b \), the slice \( E^y \) is measurable and
+\[
+m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
+.\]
+- Set \( g = \chi_E \), which is non-negative and measurable, so apply Tonelli. - Conclude that \( g^y = \chi_{E^y} \) is measurable, the function \( y\mapsto \int g^y(x)\, dx \) is measurable, and \( \int \int g^y(x)\,dx \,dy = \int g \). - But \( \int g = m(E) \) and \( \int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy \). :::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
-::: {.concept}
-```{=tex}
-\hfill
-```
--   Claim: If \( E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b \) is a measurable set, then for almost every \( y\in {\mathbb{R}}^b \), the slice \( E^y \) is measurable and
-    \[
-    m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
-    .\]
-    -   Set \( g = \chi_E \), which is non-negative and measurable, so apply Tonelli.
-    -   Conclude that \( g^y = \chi_{E^y} \) is measurable, the function \( y\mapsto \int g^y(x)\, dx \) is measurable, and \( \int \int g^y(x)\,dx \,dy = \int g \).
-    -   But \( \int g = m(E) \) and \( \int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy \).
-:::
-
 > Note: \( f \) is a function \( {\mathbb{R}}\to {\mathbb{R}} \) in the original problem, but here I've assumed \( f:{\mathbb{R}}^n\to {\mathbb{R}} \).
 
 -   Since \( f\geq 0 \), set
@@ -3385,6 +3577,10 @@ F(1) G(1) - \int _{0}^{1} f(x) G(x) \, dx
 \]
 
 ## Spring 2021 \# 6
+
+::: {.warnings}
+This problem may be much harder than expected. Recommended skip.
+:::
 
 Let \( f: {\mathbb{R}}\times{\mathbb{R}}\to {\mathbb{R}} \) be a measurable function and for \( x\in {\mathbb{R}} \) define the set
 \[
@@ -3656,6 +3852,32 @@ Let \( f \in L^1({\mathbb{R}}) \) and \( g \) be a bounded measurable function o
     f\in L^1({\mathbb{R}}^n), \quad g\in L^\infty({\mathbb{R}}^n) \quad
     \implies f \ast g \text{ is bounded and uniformly continuous. }
     \]
+
+## Fall 2020 \# 5
+
+Suppose \( \phi\in L^1({\mathbb{R}}) \) with
+\[  
+\int \phi(x) \, dx = \alpha
+.\]
+For each \( \delta > 0 \) and \( f\in L^1({\mathbb{R}}) \), define
+\[  
+A_\delta f(x) \coloneqq\int f(x-y) \delta^{-1} \phi\qty{\delta^{-1} y}\, dy
+.\]
+
+a.  Prove that for all \( \delta > 0 \),
+    \[  
+    {\left\lVert {A_\delta f} \right\rVert}_1 \leq {\left\lVert {\phi} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
+    .\]
+
+b.  Prove that
+    \[  
+    A_\delta f \to \alpha f \text{ in } L^1({\mathbb{R}}) {\quad \operatorname{as} \quad} \delta\to 0^+
+    .\]
+
+> Hint: you may use without proof the fact that for all \( f\in L^1({\mathbb{R}}) \),
+> \[  
+> \lim_{y\to 0} \int_{\mathbb{R}}{\left\lvert {f(x-y) - f(x)} \right\rvert}\, dx = 0
+> .\]
 
 # Functional Analysis: General
 
@@ -3956,7 +4178,7 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
 
 ### a
 
--   Let \( \left\{{f_n}\right\} \) be a Cauchy sequence in \( C(I, {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \), so \( \lim_n\lim_m {\left\lVert {f_m - f_n} \right\rVert}_\infty = 0 \), we will show it converges to some \( f \) in this space.
+-   Let \( \left\{{f_n}\right\} \) be a Cauchy sequence in \( C(I, {\left\lVert {{-}} \right\rVert}_\infty) \), so \( \lim_n\lim_m {\left\lVert {f_m - f_n} \right\rVert}_\infty = 0 \), we will show it converges to some \( f \) in this space.
 
 -   For each fixed \( x_0 \in [0, 1] \), the sequence of real numbers \( \left\{{f_n(x_0)}\right\} \) is Cauchy in \( {\mathbb{R}} \) since
     \[
@@ -3967,7 +4189,7 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
 
 -   Thus \( f_n\to f \) pointwise by construction
 
--   Claim: \( {\left\lVert {f - f_n} \right\rVert} \overset{n\to\infty}\to 0 \), so \( f_n \) converges to \( f \) in \( C([0, 1], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \).
+-   Claim: \( {\left\lVert {f - f_n} \right\rVert} \overset{n\to\infty}\to 0 \), so \( f_n \) converges to \( f \) in \( C([0, 1], {\left\lVert {{-}} \right\rVert}_\infty) \).
 
     -   Proof:
         -   Fix \( \varepsilon> 0 \); we will show there exists an \( N \) such that \( n\geq N \implies {\left\lVert {f_n - f} \right\rVert} < \varepsilon \)
@@ -4037,7 +4259,7 @@ Show that the space \( C^1([a, b]) \) is a Banach space when equipped with the n
 -   See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 :::
 
--   Denote this norm \( {\left\lVert {{\,\cdot\,}} \right\rVert}_u \)
+-   Denote this norm \( {\left\lVert {{-}} \right\rVert}_u \)
 
 -   Let \( f_n \) be a Cauchy sequence in this space, so \( {\left\lVert {f_n} \right\rVert}_u < \infty \) for every \( n \) and \( {\left\lVert {f_j - f_k} \right\rVert}_u \overset{j, k\to\infty}\to 0 \).
 
@@ -4050,7 +4272,7 @@ and define a candidate limit: for each \( x\in I \), set
     {\left\lVert {f_n'} \right\rVert}_\infty &\leq {\left\lVert {f_n} \right\rVert}_u < \infty
     .\]
 
-    -   Thus both \( f_n, f_n' \) are Cauchy sequences in \( C^0([a, b], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \), which is a Banach space, so they converge.
+    -   Thus both \( f_n, f_n' \) are Cauchy sequences in \( C^0([a, b], {\left\lVert {{-}} \right\rVert}_\infty) \), which is a Banach space, so they converge.
 
 -   So
 
@@ -4084,7 +4306,7 @@ Let \( X \) be a complete metric space and define a norm
 \|f\|:=\max \{|f(x)|: x \in X\}.
 \]
 
-Show that \( (C^0({\mathbb{R}}), {\left\lVert {{\,\cdot\,}} \right\rVert} ) \) (the space of continuous functions \( f: X\to {\mathbb{R}} \)) is complete.
+Show that \( (C^0({\mathbb{R}}), {\left\lVert {{-}} \right\rVert} ) \) (the space of continuous functions \( f: X\to {\mathbb{R}} \)) is complete.
 
 ```{=tex}
 \todo[inline]{Add concepts.}
@@ -4114,101 +4336,3 @@ Choose \( N \) large enough so that \( {\left\lVert {f - f_N} \right\rVert} < \v
 :::
 
 # Fall 2020
-
-## 1 {#section-4}
-
-Show that if \( x_n \) is a decreasing sequence of positive real numbers such that \( \sum_{n=1}^\infty x_n \) converges, then
-\[
-\lim_{n\to\infty} n x_n = 0.
-\]
-
-## 2 {#section-5}
-
-### a
-
-Let \( f: {\mathbb{R}}\to {\mathbb{R}} \). Prove that
-\[
-f(x) \leq \liminf_{y\to x} f(y)~ \text{for each}~ x\in {{\mathbb{R}}} \iff \{ x\in {{\mathbb{R}}} \mathrel{\Big|}f(x) > a \}~\text{is open for all}~ a\in {{\mathbb{R}}}
-\]
-
-### b
-
-Recall that a function \( f: {{\mathbb{R}}} \to {{\mathbb{R}}} \) is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
-
-Prove that if \( \mathcal{F} \) is an y family of lower semi-continuous functions, then
-\[
-g(x) = \sup\{ f(x) \mathrel{\Big|}f\in \mathcal{F}\}
-\]
-is Borel measurable.
-
-> Note that \( \mathcal{F} \) need not be a countable family.
-
-## 3 {#section-6}
-
-Let \( f \) be a non-negative Lebesgue measurable function on \( [1, \infty) \).
-
-### a
-
-Prove that
-\[  
-1 \leq \qty{
-{1 \over b-a} \int_a^b f(x) \,dx
-}\qty{
-{1\over b-a} \int_a^b {1 \over f(x)}\, dx
-}
-\]
-for any \( 1\leq a < b <\infty \).
-
-### b
-
-Prove that if \( f \) satisfies
-\[  
-\int_1^t f(x) \, dx \leq t^2 \log(t)
-\]
-for all \( t\in [1, \infty) \), then
-\[  
-\int_1^\infty {1\over f(x) \,dx} = \infty
-.\]
-
-> Hint: write
-> \[  
-> \int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
-> .\]
-
-## 4 {#section-7}
-
-Prove that if \( xf(x) \in L^1({\mathbb{R}}) \), then
-\[  
-F(y) \coloneqq\int f(x) \cos(yx)\,  dx
-\]
-defines a \( C^1 \) function.
-
-## 5 {#section-8}
-
-Suppose \( \phi\in L^1({\mathbb{R}}) \) with
-\[  
-\int \phi(x) \, dx = \alpha
-.\]
-For each \( \delta > 0 \) and \( f\in L^1({\mathbb{R}}) \), define
-\[  
-A_\delta f(x) \coloneqq\int f(x-y) \delta^{-1} \phi\qty{\delta^{-1} y}\, dy
-.\]
-
-## a
-
-Prove that for all \( \delta > 0 \),
-\[  
-{\left\lVert {A_\delta f} \right\rVert}_1 \leq {\left\lVert {\phi} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
-.\]
-
-### b
-
-Prove that
-\[  
-A_\delta f \to \alpha f \text{ in } L^1({\mathbb{R}}) {\quad \operatorname{as} \quad} \delta\to 0^+
-.\]
-
-> Hint: you may use without proof the fact that for all \( f\in L^1({\mathbb{R}}) \),
-> \[  
-> \lim_{y\to 0} \int_{\mathbb{R}}{\left\lvert {f(x-y) - f(x)} \right\rvert}\, dx = 0
-> .\]
