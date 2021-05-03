@@ -922,6 +922,7 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
 :::{.solution}
 
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -1068,6 +1069,7 @@ Prove that if $\displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n}$ converges, then
 
 :::{.solution}
 \envlist
+
 :::{.concept}
 \envlist
 - Cesaro mean/summation. 
