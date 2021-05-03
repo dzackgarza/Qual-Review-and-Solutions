@@ -937,3 +937,10 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 \]
 
 Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
+
+## Fall 2020 \# 1
+Show that if $x_n$ is a decreasing sequence of positive real numbers such that $\sum_{n=1}^\infty x_n$ converges, then
+$$
+\lim_{n\to\infty} n x_n = 0.
+$$
+

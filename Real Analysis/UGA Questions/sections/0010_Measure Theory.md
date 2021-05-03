@@ -948,3 +948,25 @@ b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \)
 Let \( (X, \mathcal{M}, \mu)  \) be a finite measure space and let \( \ts{ f_n}_{n=1}^{\infty } \subseteq L^1(X, \mu) \).
 Suppose $f\in L^1(X, \mu)$ such that $f_n(x) \converges{n\to \infty }\to f(x)$ for almost every $x \in X$.
 Prove that for every \( \eps > 0 \) there exists $M>0$ and a set $E\subseteq X$ such that \( \mu(E) \leq \eps \) and \( \abs{f_n(x)}\leq M  \) for all $x\in X\sm E$ and all $n\in \NN$.
+
+## Fall 2020 \# 2
+
+a.
+Let $f: \RR \to \RR$. Prove that
+$$
+f(x) \leq \liminf_{y\to x} f(y)~ \text{for each}~ x\in {\RR} \iff \{ x\in {\RR} \mid f(x) > a \}~\text{is open for all}~ a\in {\RR}
+$$
+
+
+b.
+Recall that a function $f: {\RR} \to {\RR}$ is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
+
+Prove that if $\mathcal{F}$ is an y family of lower semi-continuous functions, then 
+$$
+g(x) = \sup\{ f(x) \mid f\in \mathcal{F}\}
+$$
+is Borel measurable.
+
+> Note that $\mathcal{F}$ need not be a countable family.
+
+
