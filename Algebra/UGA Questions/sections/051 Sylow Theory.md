@@ -208,7 +208,6 @@ Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or
 
 :::
 
-
 :::{.solution}
 \envlist
 
@@ -263,9 +262,6 @@ Prove that both $Q$ and $R$ are normal in $G$.
 d.
 Prove that if $P$ is normal in $G$ then $G$ is cyclic.
 
-:::{.solution}
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -290,63 +286,70 @@ A_i\normal G, \quad G = A_1 \cdots A_k,\quad A_k \intersect \prod_{i\neq k} A_i 
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.proof title="of 1"}
-We have 
+\envlist
+
+- We have 
 
 - $n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \mod 3 \implies n_3 \in \theset{1, 5, 7, 35} \setminus \theset{5, 35}$
 - $n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \mod 5 \implies n_5 \in \theset{1, 3, 7, 21}\setminus \theset{3, 7}$
 - $n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 3, 5, 15}\setminus\theset{3, 5}$
 
-Thus
+- Thus
 \[
 n_3 \in \theset{1, 7} \quad n_5 \in \theset{1, 21} \quad n_7 \in \theset{1, 15}
 .\]
 
-Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then 
+- Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then 
 \[
 \abs{\syl(5) \union \syl(7)} = (5-1)n_5 + (7-1)n_7 + 1 
 &= 4(21) + 6(15) = 174 > 105 \text{ elements}
 \]
-using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
+  using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
 
 :::
 
 :::{.proof title="of 2"}
-By (a), either $Q$ or $R$ is normal.
-Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
-
-By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
+\envlist
+- By (a), either $Q$ or $R$ is normal.
+- Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
+- By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
 
 :::
 
 \todo[inline]{Part (b) not finished!}
 
 :::{.proof title="of 3"}
-We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
+\envlist
 
-Note that we can write
+- We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
+
+- Note that we can write
 \[
 G = \theset{\text{elements of order } n} \disjoint \theset{\text{elements of order not } n}
 .\]
-for any $n$, so we count for $n=5, 7$:
+  for any $n$, so we count for $n=5, 7$:
 
-- Elements in $QR$ of order **not** equal to 5: $\abs{QR - Q\theset{\id} + \theset{\id}} = 35 - 5 + 1 = 31$
-- Elements in $QR$ of order **not** equal to 7: $\abs{QR - \theset{\id}R + \theset{\id}} = 35 - 7 + 1 = 29$
+  - Elements in $QR$ of order **not** equal to 5: $\abs{QR - Q\theset{\id} + \theset{\id}} = 35 - 5 + 1 = 31$
+  - Elements in $QR$ of order **not** equal to 7: $\abs{QR - \theset{\id}R + \theset{\id}} = 35 - 7 + 1 = 29$
 
-Since $QR \leq G$, we have
+- Since $QR \leq G$, we have
 
-- Elements in $G$ of order **not** equal to 5 $\geq 31$.
-- Elements in $G$ of order **not** equal to 7 $\geq 29$.
+  - Elements in $G$ of order **not** equal to 5 $\geq 31$.
+  - Elements in $G$ of order **not** equal to 7 $\geq 29$.
 
-Now both cases lead to contradictions:
+- Now both cases lead to contradictions:
 
-- $n_5 = 21$:
+  - $n_5 = 21$:
 \[
 \abs{G}  &= \abs{\theset{\text{elements of order } 5} \disjoint \theset{\text{elements of order not } 5}} \\
 &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = \abs{G}
 .\]
 
-- $n_7 = 15$:
+  - $n_7 = 15$:
 \[
 \abs{G}  &= \abs{\theset{\text{elements of order } 7} \disjoint \theset{\text{elements of order not } 7}} \\
 &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = \abs{G}

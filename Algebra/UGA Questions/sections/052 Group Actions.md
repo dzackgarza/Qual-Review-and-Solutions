@@ -57,9 +57,6 @@ Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union 
 c.
 Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -73,6 +70,9 @@ Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 e
   - Number of orbits equals average number of fixed points.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist

@@ -18,10 +18,6 @@ How many isomorphism classes are there of groups of order 45?
 
 Describe a representative from each class.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -31,6 +27,8 @@ Describe a representative from each class.
 
 :::
 
+:::{.solution}
+\envlist
 
 - It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
@@ -44,7 +42,6 @@ Describe a representative from each class.
 - $G \cong \ZZ/(3)^2 \cross \ZZ/(5)$.
 
 :::
-
 
 \todo[inline]{Revisit, seems short.}
 
@@ -74,10 +71,6 @@ Prove that any group of order $5^2 \cdot 7^2$ is abelian.
 d.
 Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -96,6 +89,9 @@ Write down exactly one representative in each isomorphism class of groups of ord
 - Classification of finite abelian groups.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Strategy: get $p$ to divide $\abs{Z(G)}$.
@@ -158,7 +154,6 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - $\ZZ_{5}^2 \cross \ZZ_{7}^2$
 
 :::
-
 
 :::
 
