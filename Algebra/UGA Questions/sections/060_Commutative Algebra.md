@@ -13,17 +13,11 @@ Prove that $R$ has characteristic 2.
 b.
 Prove that $R$ is commutative.
 
-:::{.solution}
-\envlist
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
-
 
 :::{.strategy}
 \envlist
@@ -32,6 +26,9 @@ Prove that $R$ is commutative.
 - Context hint: that we should be considering things like $x^2$ and $a+b$.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \[
@@ -70,9 +67,6 @@ there is a prime ideal in $S$.
 c.
 Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -93,8 +87,8 @@ Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ 
 
 :::
 
-
-
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -132,14 +126,6 @@ Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
 
 :::
 
-
-
-
-
-
-
-
-
 :::
 
 ## Spring 2019 #6 $\done$
@@ -159,10 +145,6 @@ c.
 Suppose now that $R$ is finite. Show that in this case $J(R)$ consists precisely
 of the nilpotent elements in R.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -176,6 +158,9 @@ J(R) &\da \intersect _{\mfm \in \mspec} \mfm
 
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Define the set of proper ideals
@@ -300,11 +285,6 @@ following:
 \frac{ \frac{ \ZZ}{2\ZZ}[t]}{(t^2 )}
 .\]
 
-:::{.solution}
-
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -312,10 +292,13 @@ following:
 - See 1964 Annals "Properties of rings with a finite number of zero divisors"
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
-Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
+\envlist
 
+- Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
 \[
 \phi(s\vector x + \vector y) 
 &= r(s\vector x + \vector y) \\
@@ -416,7 +399,7 @@ R &\cong \ZZ/(2)[t] / (t^2)
 
 ## Spring 2018 #5 $\work$
 Let 
-$\[
+\[
 M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
 \quad \text{and} \quad 
 N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
@@ -550,7 +533,7 @@ Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a
 > Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
 
 ## Spring 2014 #6 $\work$
-Let $R$ be a commutative ring with identity and let $n$ be a positive integer.
+ $R$ be a commutative ring with identity and let $n$ be a positive integer.
 
 a.
 Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
@@ -630,9 +613,11 @@ Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
 
 ## Spring 2021 #6
 
-a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
+a. 
+Carefully state the definition of **Noetherian** for a commutative ring $R$.
 
-b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
+b. 
+Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
 \[
 f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
 \]
