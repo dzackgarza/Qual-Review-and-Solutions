@@ -341,25 +341,30 @@ Prove that $\det M = |\Lambda\dual /\Lambda|$.
 \envlist
 
 :::{.proof title="of a"}
-Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
+\envlist
 
-Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
+- Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
+
+- Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
 \[
 \inner{\vector v}{\vector x} 
 &= \inner{\sum_{i=1}^n r_i \vector e_i}{\sum_{j=1}^n s_j \vector e_j } \\
 &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j \inner{\vector e_i}{\vector e_j }  \in \ZZ
 \]
-
-since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
+  since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
 
 :::
 
 :::{.proof title="of b"}
-**The determinant is nonzero**:
 
-Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
 
-Note that 
+:::{.claim}
+The determinant is nonzero.
+:::
+
+- Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
+
+- Note that 
 \[
 M\vector v = 0 &\implies
 \left[
@@ -375,7 +380,7 @@ v_1 \\ v_2 \\ \vdots
 &\implies \sum_{j=1}^n v_j\inner{\vector e_k}{\vector e_j} = 0 \qtext{for each fixed} k
 .\]
 
-We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
+- We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
 :::
 
 :::{.proof title="of c"}
@@ -404,15 +409,15 @@ since $A$ has full rank because the $\vector e_i$ are linearly independent.
 
 Let $A = [\vector e_1^t, \cdots, \vector e_n^t]$ be the matrix with $\vector e_i$ in the $i$th column.
 
-**The rows of $A\inv$ span $\Lambda\dual$**:
 
+:::{.claim}
+The rows of $A\inv$ span $\Lambda\dual$.
 Equivalently, the columns of $A^{-t}$ span $\Lambda\dual$.
+:::
 
-Let $B = A^{-t}$ and let $\vector b_i$ denote the columns of $B$, so $\im B = \spanof{\theset{\vector b_i}}$.
+- Let $B = A^{-t}$ and let $\vector b_i$ denote the columns of $B$, so $\im B = \spanof{\theset{\vector b_i}}$.
 
-
-Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
-
+- Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
 \[
 \vector v \in \Lambda\dual 
 &\implies \inner{\vector e_i}{\vector v} = z_i \in \ZZ \quad \forall i \\
@@ -421,9 +426,7 @@ Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
 &\implies \vector v \in \im B \\
 &\implies \Lambda\dual \subseteq \im B
 ,\]
-
 and
-
 \[
 B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \vector b_i \cdot \vector e_j = \delta_{ij} \in \ZZ \\
