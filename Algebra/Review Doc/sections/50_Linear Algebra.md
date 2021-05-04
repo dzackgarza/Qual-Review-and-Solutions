@@ -448,7 +448,7 @@ M_2
 
 :::{.definition title="Orthogonal Group"}
 \[
-O_n(\CC) \da \ts{ A \st A A^t = I} 
+O_n(\CC) \da \ts{ A \st A^tA = A A^t = I} 
 .\]
 
 Dimension: $n(n-1) / 2$.
@@ -457,7 +457,7 @@ Dimension: $n(n-1) / 2$.
 
 :::{.definition title="Special Orthogonal Group"}
 \[
-\SO_n(\RR) = \ts{ A \st  } <++>
+\SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
 .\]
 
 :::
