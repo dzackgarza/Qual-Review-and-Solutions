@@ -435,6 +435,9 @@ M_2
 ## Matrix Groups
 
 :::{.definition title="General Linear Group"}
+\[
+\GL_n(\RR) = \ts{ A \st A = \bar{A} } 
+.\]
 
 :::
 
@@ -464,10 +467,6 @@ M_2
 :::
 
 \todo[inline]{Matrix group definitions.}
-
-
-
-
 
 
 
