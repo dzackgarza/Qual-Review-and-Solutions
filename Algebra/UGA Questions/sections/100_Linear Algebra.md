@@ -183,16 +183,16 @@ The form is *nondegenerate* if the only element $w\in V$ satisfying $(v, w) = 0$
 Suppose $(\wait, \wait)$ is a nondegenerate symmetric bilinear form on $V$.
 If $W$ is a subspace of $V$, define
 \[
-W\perp \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
+W^{\perp} \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
 .\]
 
 a.
-Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X\perp \subseteq Y\perp$.
+Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X^^{\perp} \subseteq Y^^{\perp}$.
 
 b.
 Define an injective linear map 
 \[
-\psi: Y\perp/X\perp \injects (X/Y)\dual
+\psi: Y^{\perp}/X^{\perp} \injects (X/Y)\dual
 \]
 which is an isomorphism if $V$ is finite dimensional.
 
