@@ -187,7 +187,7 @@ W^{\perp} \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W
 .\]
 
 a.
-Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X^^{\perp} \subseteq Y^^{\perp}$.
+Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X^{\perp} \subseteq Y^{\perp}$.
 
 b.
 Define an injective linear map 
@@ -230,17 +230,12 @@ Suppose that $v$ is a column vector such that the set $\{v, Av, . . . , A^{n-1} 
 b.
 Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of $A$ equals the minimal polynomial of A.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Powers of $A$ commute with polynomials in $A$.
 - The image of a linear map is determined by the image of a basis
 :::
-
 
 :::{.strategy}
 \envlist
@@ -251,6 +246,8 @@ Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A
 - Reduce to monomials.
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have A
@@ -447,10 +444,6 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
 \todo[inline]{How to extend basis?}
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -461,6 +454,9 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 - Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $f$ be the characteristic polynomial of $T$.
 
