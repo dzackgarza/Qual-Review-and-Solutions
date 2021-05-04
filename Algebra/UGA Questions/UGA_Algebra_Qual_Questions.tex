@@ -93,12 +93,6 @@ classes of \(G\).
 Here, as usual, \(Z(G)\) denotes the center of \(G\).
 \end{quote}
 
-\begin{solution}
-
-\envlist
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -116,6 +110,16 @@ Here, as usual, \(Z(G)\) denotes the center of \(G\).
 \end{itemize}
 
 \end{concept}
+
+\begin{strategy}
+
+Burnside.
+
+\end{strategy}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[Part a]
 
@@ -375,10 +379,6 @@ Let \(G\) be a finite group with \(n\) distinct conjugacy classes. Let
 Prove that if \(g_i g_j = g_j g_i\) for all \(i, j\) then \(G\) is
 abelian.
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -408,6 +408,10 @@ abelian.
 
 \end{concept}
 
+\begin{solution}
+
+\envlist
+
 \begin{claim}[1]
 
 \begin{align*}
@@ -424,7 +428,7 @@ abelian.
 
 \end{claim}
 
-\begin{proof}[?]
+\begin{proof}[of claim 2]
 
 \envlist
 
@@ -451,7 +455,7 @@ proper \(H \leq G\).
 
 \end{claim}
 
-\begin{proof}[?]
+\begin{proof}[of claim 3]
 
 \begin{itemize}
 \item
@@ -662,10 +666,6 @@ Let \(G\) be a finite group whose order is divisible by a prime number
   \(P \subseteq M\) or \(|G/M | = p^b\) for some \(b \leq c\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -682,6 +682,10 @@ Let \(G\) be a finite group whose order is divisible by a prime number
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -757,10 +761,6 @@ subgroups respectively.
   Prove that if \(P\) is normal in \(G\) then \(G\) is cyclic.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -802,43 +802,55 @@ subgroups respectively.
 
 \end{concept}
 
+\begin{solution}
+
+\envlist
+
 \begin{proof}[of 1]
 
-We have
+\envlist
 
 \begin{itemize}
-\tightlist
+\item
+  We have
 \item
   \(n_3 \bigm|5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)
 \item
   \(n_5 \bigm|3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)
 \item
   \(n_7 \bigm|3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)
+\item
+  Thus
+  \begin{align*}
+  n_3 \in \left\{{1, 7}\right\} \quad n_5 \in \left\{{1, 21}\right\} \quad n_7 \in \left\{{1, 15}\right\}
+  .\end{align*}
+\item
+  Toward a contradiction, if \(n_5\neq 1\) and \(n_7 \neq 1\), then
+  \begin{align*}
+  {\left\lvert {{\operatorname{Syl}}(5) \cup{\operatorname{Syl}}(7)} \right\rvert} = (5-1)n_5 + (7-1)n_7 + 1 
+  &= 4(21) + 6(15) = 174 > 105 \text{ elements}
+  \end{align*}
+  using the fact that Sylow \(p{\hbox{-}}\)subgroups for distinct primes
+  \(p\) intersect trivially (?).
 \end{itemize}
-
-Thus
-\begin{align*}
-n_3 \in \left\{{1, 7}\right\} \quad n_5 \in \left\{{1, 21}\right\} \quad n_7 \in \left\{{1, 15}\right\}
-.\end{align*}
-
-Toward a contradiction, if \(n_5\neq 1\) and \(n_7 \neq 1\), then
-\begin{align*}
-{\left\lvert {{\operatorname{Syl}}(5) \cup{\operatorname{Syl}}(7)} \right\rvert} = (5-1)n_5 + (7-1)n_7 + 1 
-&= 4(21) + 6(15) = 174 > 105 \text{ elements}
-\end{align*}
-using the fact that Sylow \(p{\hbox{-}}\)subgroups for distinct primes
-\(p\) intersect trivially (?).
 
 \end{proof}
 
 \begin{proof}[of 2]
 
-By (a), either \(Q\) or \(R\) is normal. Thus \(QR \leq G\) is a
-subgroup, and it has order
-\({\left\lvert {Q} \right\rvert} \cdot {\left\lvert {R} \right\rvert} = 5\cdot 7 = 35\).
+\envlist
 
-By the \(pqr\) theorem, since \(5\) does not divide \(7-1=6\), \(QR\) is
-cyclic.
+\begin{itemize}
+\tightlist
+\item
+  By (a), either \(Q\) or \(R\) is normal.
+\item
+  Thus \(QR \leq G\) is a subgroup, and it has order
+  \({\left\lvert {Q} \right\rvert} \cdot {\left\lvert {R} \right\rvert} = 5\cdot 7 = 35\).
+\item
+  By the \(pqr\) theorem, since \(5\) does not divide \(7-1=6\), \(QR\)
+  is cyclic.
+\end{itemize}
 
 \end{proof}
 
@@ -846,52 +858,57 @@ cyclic.
 
 \begin{proof}[of 3]
 
-We want to show \(Q, R{~\trianglelefteq~}G\), so we proceed by showing
-\(\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}\), which is
-equivalent to \(\qty{n_5 = 1 \text{ and } n_7 = 1}\) by the previous
-restrictions.
-
-Note that we can write
-\begin{align*}
-G = \left\{{\text{elements of order } n}\right\} {\coprod}\left\{{\text{elements of order not } n}\right\}
-.\end{align*}
-for any \(n\), so we count for \(n=5, 7\):
-
-\begin{itemize}
-\tightlist
-\item
-  Elements in \(QR\) of order \textbf{not} equal to 5:
-  \({\left\lvert {QR - Q\left\{{\operatorname{id}}\right\} + \left\{{\operatorname{id}}\right\}} \right\rvert} = 35 - 5 + 1 = 31\)
-\item
-  Elements in \(QR\) of order \textbf{not} equal to 7:
-  \({\left\lvert {QR - \left\{{\operatorname{id}}\right\}R + \left\{{\operatorname{id}}\right\}} \right\rvert} = 35 - 7 + 1 = 29\)
-\end{itemize}
-
-Since \(QR \leq G\), we have
-
-\begin{itemize}
-\tightlist
-\item
-  Elements in \(G\) of order \textbf{not} equal to 5 \(\geq 31\).
-\item
-  Elements in \(G\) of order \textbf{not} equal to 7 \(\geq 29\).
-\end{itemize}
-
-Now both cases lead to contradictions:
+\envlist
 
 \begin{itemize}
 \item
-  \(n_5 = 21\):
+  We want to show \(Q, R{~\trianglelefteq~}G\), so we proceed by showing
+  \(\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}\), which is
+  equivalent to \(\qty{n_5 = 1 \text{ and } n_7 = 1}\) by the previous
+  restrictions.
+\item
+  Note that we can write
   \begin{align*}
-  {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
-  &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = {\left\lvert {G} \right\rvert}
+  G = \left\{{\text{elements of order } n}\right\} {\coprod}\left\{{\text{elements of order not } n}\right\}
   .\end{align*}
+  for any \(n\), so we count for \(n=5, 7\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Elements in \(QR\) of order \textbf{not} equal to 5:
+    \({\left\lvert {QR - Q\left\{{\operatorname{id}}\right\} + \left\{{\operatorname{id}}\right\}} \right\rvert} = 35 - 5 + 1 = 31\)
+  \item
+    Elements in \(QR\) of order \textbf{not} equal to 7:
+    \({\left\lvert {QR - \left\{{\operatorname{id}}\right\}R + \left\{{\operatorname{id}}\right\}} \right\rvert} = 35 - 7 + 1 = 29\)
+  \end{itemize}
 \item
-  \(n_7 = 15\):
-  \begin{align*}
-  {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
-  &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = {\left\lvert {G} \right\rvert}
-  .\end{align*}
+  Since \(QR \leq G\), we have
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Elements in \(G\) of order \textbf{not} equal to 5 \(\geq 31\).
+  \item
+    Elements in \(G\) of order \textbf{not} equal to 7 \(\geq 29\).
+  \end{itemize}
+\item
+  Now both cases lead to contradictions:
+
+  \begin{itemize}
+  \item
+    \(n_5 = 21\):
+    \begin{align*}
+    {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
+    &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = {\left\lvert {G} \right\rvert}
+    .\end{align*}
+  \item
+    \(n_7 = 15\):
+    \begin{align*}
+    {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
+    &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = {\left\lvert {G} \right\rvert}
+    .\end{align*}
+  \end{itemize}
 \end{itemize}
 
 \end{proof}
@@ -1069,10 +1086,6 @@ in \(G\) such that \(g \cdot a = b\).)
   no fixed points in \(S\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1105,6 +1118,10 @@ in \(G\) such that \(g \cdot a = b\).)
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -1234,10 +1251,6 @@ How many isomorphism classes are there of groups of order 45?
 
 Describe a representative from each class.
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1253,6 +1266,10 @@ Describe a representative from each class.
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -1319,10 +1336,6 @@ How many groups are there up to isomorphism of order \(pq\) where
   groups of order \(5^2 \cdot 7^2\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1350,6 +1363,10 @@ How many groups are there up to isomorphism of order \(pq\) where
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -1590,12 +1607,6 @@ Let \(R\) be a ring with the property that for every
   Prove that \(R\) is commutative.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1622,6 +1633,10 @@ Let \(R\) be a ring with the property that for every
 \end{itemize}
 
 \end{strategy}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -1670,10 +1685,6 @@ Zorn's Lemma.
   every element \(r\) of \(R\) is either nilpotent or a unit.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1707,6 +1718,10 @@ Zorn's Lemma.
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -1796,10 +1811,6 @@ integer \(n\).
   consists precisely of the nilpotent elements in R.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -1817,6 +1828,10 @@ integer \(n\).
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -1983,10 +1998,6 @@ isomorphic to exactly one of the following:
 .\end{align*}
 \end{quote}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -2002,19 +2013,28 @@ isomorphic to exactly one of the following:
 
 \end{concept}
 
+\begin{solution}
+
+\envlist
+
 \begin{proof}[of a]
 
-Let \(\phi\) denote the map in question, it suffices to show that
-\(\phi\) is \(R{\hbox{-}}\)linear,
-i.e.~\(\phi(s\mathbf{x} + \mathbf{y}) = s\phi(\mathbf{x}) + \phi(\mathbf{y})\):
+\envlist
 
-\begin{align*}
-\phi(s\mathbf{x} + \mathbf{y}) 
-&= r(s\mathbf{x} + \mathbf{y}) \\
-&= rs\mathbf{x} + r\mathbf{y} \\
-&= s(r\mathbf{x}) + (r\mathbf{y}) \\
-&= s\phi(\mathbf{x}) + \phi(\mathbf{y})
-.\end{align*}
+\begin{itemize}
+\tightlist
+\item
+  Let \(\phi\) denote the map in question, it suffices to show that
+  \(\phi\) is \(R{\hbox{-}}\)linear,
+  i.e.~\(\phi(s\mathbf{x} + \mathbf{y}) = s\phi(\mathbf{x}) + \phi(\mathbf{y})\):
+  \begin{align*}
+  \phi(s\mathbf{x} + \mathbf{y}) 
+  &= r(s\mathbf{x} + \mathbf{y}) \\
+  &= rs\mathbf{x} + r\mathbf{y} \\
+  &= s(r\mathbf{x}) + (r\mathbf{y}) \\
+  &= s\phi(\mathbf{x}) + \phi(\mathbf{y})
+  .\end{align*}
+\end{itemize}
 
 \end{proof}
 
@@ -2150,7 +2170,7 @@ i.e.~\(\phi(s\mathbf{x} + \mathbf{y}) = s\phi(\mathbf{x}) + \phi(\mathbf{y})\):
 \subsection{\texorpdfstring{Spring 2018 \#5
 \(\work\)}{Spring 2018 \#5 \textbackslash work}}\label{spring-2018-5-work}}
 
-Let \$
+Let
 \begin{align*}
 M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
 \quad \text{and} \quad 
@@ -2383,8 +2403,8 @@ number \(n\) such that \(a^n = 0\).
 \subsection{\texorpdfstring{Spring 2014 \#6
 \(\work\)}{Spring 2014 \#6 \textbackslash work}}\label{spring-2014-6-work}}
 
-Let \(R\) be a commutative ring with identity and let \(n\) be a
-positive integer.
+\(R\) be a commutative ring with identity and let \(n\) be a positive
+integer.
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2565,13 +2585,10 @@ its algebraic closure.
 \subsection{\texorpdfstring{Fall 2019 \#4
 \(\done\)}{Fall 2019 \#4 \textbackslash done}}\label{fall-2019-4-done}}
 
-Let \(F\) be a finite field with \(q\) elements.
-
-Let \(n\) be a positive integer relatively prime to \(q\) and let
-\(\omega\) be a primitive \(n\)th root of unity in an extension field of
-\(F\).
-
-Let \(E = F [\omega]\) and let \(k = [E : F]\).
+Let \(F\) be a finite field with \(q\) elements. Let \(n\) be a positive
+integer relatively prime to \(q\) and let \(\omega\) be a primitive
+\(n\)th root of unity in an extension field of \(F\). Let
+\(E = F [\omega]\) and let \(k = [E : F]\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2587,10 +2604,6 @@ Let \(E = F [\omega]\) and let \(k = [E : F]\).
 
 \todo[inline]{Revisit, tricky!}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -2598,10 +2611,17 @@ Let \(E = F [\omega]\) and let \(k = [E : F]\).
 \begin{itemize}
 \tightlist
 \item
-  Theorem: \(F^{\times}\) is always cyclic for \(F\) a field.
+  \({\mathbb{F}}^{\times}\) is always cyclic for \({\mathbb{F}}\) a
+  field.
+\item
+  Lagrange: \(H\leq G \implies \#H \bigm|\# G\).
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -2690,10 +2710,6 @@ Show that the field extension \({\mathbb{Q}}(\zeta_n )\) over
 
 How many subfields are there of \({\mathbb{Q}}(\zeta_{20} )\)?
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -2723,6 +2739,10 @@ How many subfields are there of \({\mathbb{Q}}(\zeta_{20} )\)?
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 Let \(K = {\mathbb{Q}}(\zeta)\). Then \(K\) is the splitting field of
 \(f(x) = x^n - 1\), which is irreducible over \({\mathbb{Q}}\), so
@@ -2833,10 +2853,6 @@ Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
   divides \(x^{p^n} - x\), then \(\deg \pi(x)\) divides \(n\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -2865,6 +2881,10 @@ Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
 
 \end{concept}
 
+\begin{solution}
+
+\envlist
+
 \begin{proof}[of a]
 
 We can consider the quotient
@@ -2882,12 +2902,13 @@ So every element in \(K\) is a root of \(q(x) = x^{p^d}-x\).
 Since \(\rho\) is a ring morphism, we have
 
 \begin{align*}
-\rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
-&= 0 \in K \\
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \bigm|q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
-.\end{align*}
+&\iff \pi(x) \bigm|q(x) = x^{p^d}-x
+,\end{align*}
+where we've used that ``to contain is to divide'' in the last step.
 
 \end{proof}
 
@@ -2947,10 +2968,6 @@ Let \(\zeta = e^{2\pi i/8}\).
   \({\mathbb{Q}}\)?
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -2985,6 +3002,10 @@ Let \(\zeta = e^{2\pi i/8}\).
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 Let \(K = {\mathbb{Q}}(\zeta)\).
 
@@ -3102,10 +3123,6 @@ each of the following assertions, give a proof or a counterexample.
   If \(K/F\) and \(L/K\) are both Galois, then so is \(L/F\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -3117,6 +3134,8 @@ each of the following assertions, give a proof or a counterexample.
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
 
 Let \(L/K/F\).
 
@@ -3188,10 +3207,6 @@ Let \(f(x) = x^4 - 4x^2 + 2 \in {\mathbb{Q}}[x]\).
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -3203,6 +3218,10 @@ Let \(f(x) = x^4 - 4x^2 + 2 \in {\mathbb{Q}}[x]\).
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -3335,10 +3354,6 @@ Let \(H_i = \operatorname{Gal}(K/E_i)\) and
   .\end{align*}
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -3346,7 +3361,7 @@ Let \(H_i = \operatorname{Gal}(K/E_i)\) and
 \begin{itemize}
 \tightlist
 \item
-  The rough correspondence:
+  The Galois correspondence:
 
   \begin{itemize}
   \tightlist
@@ -3358,6 +3373,10 @@ Let \(H_i = \operatorname{Gal}(K/E_i)\) and
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -3429,7 +3448,15 @@ and \(E\) is the fixed field of \(H_1 H_2\).
 
 But if \(\sigma \in H_1 H_2\), then \(\sigma = \tau_1 \tau_2\) where
 \(\tau_i\) is an automorphism of \(K\) that fixes \(E_i\), and so
-\(\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \cap E_2\).
+\begin{align*}
+\sigma(x) = x \iff \tau_1\tau_2(x) = x
+&\iff \tau_2(x) = x 
+\\
+&~\&~ 
+\\
+\tau_1(x) = x &\iff x \in E_1 \cap E_2
+.\end{align*}
+.
 
 \end{proof}
 
@@ -3960,13 +3987,129 @@ f(x) \coloneqq x^4 + 4x^2 + 64 \in {\mathbb{Q}}[x]
   intermediate fields between \({\mathbb{Q}}\) and \(K\).
 \end{enumerate}
 
-\hypertarget{spring-2021-7-work}{%
+\hypertarget{spring-2021-7-done}{%
 \subsection{\texorpdfstring{Spring 2021 \#7
-\(\work\)}{Spring 2021 \#7 \textbackslash work}}\label{spring-2021-7-work}}
+\(\done\)}{Spring 2021 \#7 \textbackslash done}}\label{spring-2021-7-done}}
 
 Let \(p\) be a prime number and let \(F\) be a field of characteristic
 \(p\). Show that if \(a\in F\) is not a \(p\)th power in \(F\), then
 \(x^p-a \in F[x]\) is irreducible.
+
+\begin{strategy}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  By contrapositive, show that
+  \(f(x) \coloneqq x^p-a \in {\mathbb{F}}[x]\) reducible \(\implies a\)
+  is a \(p\)th power in \({\mathbb{F}}\).
+\item
+  Eventually show \(a^\ell = b^p\) for some \(\ell\in {\mathbb{N}}\) and
+  some \(b\in {\mathbb{F}}\), then \(\gcd(\ell, p) = 1\) forces \(b=a\)
+  and \(\ell=p\).
+\item
+  Use the fact that the constant term of any \(g\in {\mathbb{F}}[x]\) is
+  actually in \({\mathbb{F}}\).
+\end{itemize}
+
+\end{strategy}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Reducible: \(f\in {\mathbb{F}}[x]\) is reducible iff there exists
+  \(g, h\in {\mathbb{F}}[x]\) nonconstant with \(f = g h\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Importantly, this factorization needs to happen in
+    \({\mathbb{F}}[x]\), since we can \emph{always} find such
+    factorizations in the splitting field \(\operatorname{SF}(f)[x]\).
+  \end{itemize}
+\item
+  Bezout's identity: \(\gcd(p, q) = d \implies\) there exist
+  \(s,t\in {\mathbb{Z}}\) such that
+  \begin{align*}
+  sp + tq = d
+  .\end{align*}
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  WTS: \(f(x) \coloneqq x^p - a\in {\mathbb{F}}[x]\) reducible
+  \(\implies f\) has a root in the \emph{base field} \({\mathbb{F}}\).
+\item
+  Write \(f(x) = g(x) h(x)\) and factor
+  \(f(x) = \prod_{i=1}^p (x- r_i) \in \operatorname{SF}(f)[x]\) where
+  the \(r_i\) are not necessarily distinct roots.
+\item
+  WLOG, \(g(x) = \prod_{i=1}^\ell (x-r_i)\) for some
+  \(1\leq \ell \leq p-1\), i.e.~rearrange the factors so that \(g\) is
+  the first \(\ell\) of them.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\ell \neq 1, p\) since \(f\) is reducible, making \(g, h\)
+    nonconstant.
+  \end{itemize}
+\item
+  Set \(R_\ell \coloneqq\prod_{i=1}^\ell r_i\), which is the constant
+  term in \(g\), so \(R_\ell \in {\mathbb{F}}\) since
+  \(g\in {\mathbb{F}}[x]\).
+\item
+  Each \(r_i\) is a root of \(f\), so \(r_i^p - a = 0\) for all \(i\),
+  so \(r_i^p = a\).
+\item
+  Trick: what is the \(p\)th power of \(R_\ell\)?
+  \begin{align*}
+  R_\ell^p 
+  &\coloneqq\qty{ \prod_{i=1}^\ell}^p \\
+  &= \prod_{i=1}^\ell r_i^p \\
+  &= \prod_{i=1}^\ell a \\
+  &= a^\ell
+  ,\end{align*}
+  so \(R_\ell^p = a^\ell\).
+\item
+  Use Bezout: \(\gcd(\ell, p) = 1\) since \(p\) is prime, so write
+  \(tp + s\ell = 1\) for some \(t,s\in {\mathbb{Z}}\)
+\item
+  Use this to build a root of \(f\) that's in \({\mathbb{F}}\): write
+  \begin{align*}
+  a &= a^1\\
+  &= a^{tp + s\ell} \\
+  &= a^{tp} a^{s\ell} \\
+  &=a^{tp} (a^\ell)^s\\
+  &= a^{tp} (R_\ell^p)^s \\
+  &= (a^t R_\ell^s)^p \\
+  &\coloneqq\beta^p
+  ,\end{align*}
+  so \(a = \beta^p\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Check \(\beta\in {\mathbb{F}}\): use that
+    \(R_\ell \in {\mathbb{F}}\) since it was a constant term of a
+    polynomial in \({\mathbb{F}}[x]\), \(a\in {\mathbb{F}}\) by
+    assumption, and fields are closed under taking powers and products.
+  \end{itemize}
+\end{itemize}
+
+\end{solution}
 
 \hypertarget{fall-2020-3-work}{%
 \subsection{\texorpdfstring{Fall 2020 \#3
@@ -4027,10 +4170,6 @@ maximal if there is no \(R{\hbox{-}}\)module \(P\) with
   maximal \({\mathbb{Z}}{\hbox{-}}\)submodule of \(M\).
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -4042,6 +4181,10 @@ maximal if there is no \(R{\hbox{-}}\)module \(P\) with
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -4293,10 +4436,6 @@ Recall that the set of torsion elements in M is defined by
   \(R{\hbox{-}}\)module has non-zero torsion elements.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -4308,6 +4447,10 @@ Recall that the set of torsion elements in M is defined by
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -4387,10 +4530,6 @@ maximum number of \(R{\hbox{-}}\)linearly independent elements of \(M\)
 
 Prove that \(M\) is torsion-free of rank 1 but not free.
 
-:::\{.solution\}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -4402,6 +4541,8 @@ Prove that \(M\) is torsion-free of rank 1 but not free.
 \end{itemize}
 
 \end{concept}
+
+:::\{.solution\} \envlist
 
 \begin{proof}[of a]
 
@@ -4666,12 +4807,13 @@ conditions hold:
   \begin{align*}\sum_\alpha r_\alpha \mathbf{b}_\alpha = 0_M \implies r_\alpha = 0_R\end{align*}
   for all \(\alpha\).
 \item
-  \(M \cong \bigoplus_{\alpha} R\) are isomorphic as
-  \(R{\hbox{-}}\)modules.
+  \(M\) admits a decomposition \(M \cong \bigoplus_{\alpha} R\) as a
+  direct sum of \(R{\hbox{-}}\)submodules.
 \item
-  There is a nonempty set \(X\) and an inclusion \(X\hookrightarrow M\)
-  such that for every \(R{\hbox{-}}\)modules \(N\), every map \(X\to N\)
-  lifts to a unique map \(M\to N\), so the following diagram commutes:
+  There is a nonempty set \(X\) an monomorphism \(X\hookrightarrow M\)
+  of sets such that for every \(R{\hbox{-}}\)module \(N\), every set map
+  \(X\to N\) lifts to a unique \(R{\hbox{-}}\)module morphism
+  \(M\to N\), so the following diagram commutes:
 \end{itemize}
 
 \begin{center}
@@ -4681,14 +4823,39 @@ X \ar[u, hook] \ar[r, "f"] & N
 \end{tikzcd}
 \end{center}
 
+Equivalently,
+\begin{align*}
+\mathop{\mathrm{Hom}}_{\mathsf{Set}}(X, {\operatorname{Forget}}(N)) \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{R}{\hbox{-}}\mathsf{Mod}}}(M, N)
+.\end{align*}
+
 \end{proof}
 
 \begin{proof}[of b]
 
-\(M\) is \textbf{torsionfree} iff
-\(M_t \coloneqq\left\{{m\in M {~\mathrel{\Big|}~}\operatorname{Ann}(m) \neq 0}\right\} \leq M\)
-is the trivial submodule, where
-\(\operatorname{Ann}(m) \coloneqq\left\{{r\in R {~\mathrel{\Big|}~}r\cdot m = 0_M}\right\} {~\trianglelefteq~}R\).
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Define the annihilator:
+  \begin{align*}
+  \operatorname{Ann}(m) \coloneqq\left\{{r\in R {~\mathrel{\Big|}~}r\cdot m = 0_M}\right\} {~\trianglelefteq~}R
+  .\end{align*}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Note that \(mR \cong R/\operatorname{Ann}(m)\).
+  \end{itemize}
+\item
+  Define the torsion submodule:
+  \begin{align*}
+  M_t \coloneqq\left\{{m\in M {~\mathrel{\Big|}~}\operatorname{Ann}(m) \neq 0}\right\} \leq M
+  \end{align*}
+\item
+  \(M\) is \textbf{torsionfree} iff \(M_t = 0\) is the trivial
+  submodule.
+\end{itemize}
 
 \end{proof}
 
@@ -4706,9 +4873,19 @@ is the trivial submodule, where
 \item
   Since \(F\) is free, there is a generating set
   \(X = \left\{{x_\alpha}\right\}\) and a map
-  \(\iota:X\hookrightarrow M\) satisfying the 3rd property from (a). If
-  we construct a map \(f: X\to M\), then the universal property of free
-  modules will give a lift \(\tilde f: F\to M\)
+  \(\iota:X\hookrightarrow F\) satisfying the 3rd property from (a).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If we construct any map \(f: X\to M\), the universal property
+    modules will give a lift \(\tilde f: F\to M\)
+  \end{itemize}
+\item
+  Identify \(X\) with \(\iota(X) \subseteq F\).
+\item
+  For every \(x\in X\), the preimage \(\pi^{-1}(x)\) is nonempty by
+  surjectivity. So arbitrarily pick any preimage.
 \item
   \(\left\{{\iota(x_\alpha)}\right\} \subseteq F\) and \(\pi\) is
   surjective, so choose fibers \(\left\{{y_\alpha}\right\} \subseteq M\)
@@ -4731,21 +4908,22 @@ is the trivial submodule, where
 \begin{itemize}
 \tightlist
 \item
-  It remains to check that it's a section:
-  \begin{align*}
-  f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
-  \implies (\pi \circ h)(f) 
-  &= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
-  &= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
-  &= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
-  &= \sum_\alpha r_\alpha \pi(y_\alpha) \\
-  &= \sum_\alpha r_\alpha \iota(x_\alpha) \\
-  &\coloneqq f
-  \end{align*}
-\item
-  Both \(\pi\circ h\) and \(\operatorname{id}_F\) are two maps that
-  agree on the spanning set \(\left\{{\iota(x_\alpha)}\right\}\), so in
-  fact they are \emph{equal}.
+  It remains to check that it's a section.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Write \(f= \sum r_i x_i\), then since both maps are
+    \(R{\hbox{-}}\)module morphism, by \(R{\hbox{-}}\)linearity we can
+    write
+    \begin{align*}
+    (\pi \circ h)(f) 
+    &= (\pi \circ h)\qty{ \sum r_i x_i } \\
+    &= \sum r_i (\pi \circ h)(x_i)
+    ,\end{align*}
+    but since \(h(x_i) \in \pi^{-1}(x_i)\), we have
+    \((\pi \circ h)(x_i) = x_i\). So this recovers \(f\).
+  \end{itemize}
 \end{itemize}
 
 \end{proof}
@@ -4757,28 +4935,61 @@ is the trivial submodule, where
 \begin{itemize}
 \item
   Free implies projective
-\item
-  Universal property of projective modules: for every surjective
-  \(\pi:M\to N\) and every \(f:P\to N\) there exists a unique lift
-  \(\tilde f: P\to M\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Universal property of \textbf{projective} objects: for every
+    epimorphism \(\pi:M\twoheadrightarrow N\) and every \(f:P\to N\)
+    there exists a unique lift \(\tilde f: P\to M\):
+  \end{itemize}
+
+  \begin{center}
+  \begin{tikzcd}
+  & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
+  M \ar[r, "\pi"] & N
+  \end{tikzcd}
+  \end{center}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Construct \(\phi\) in the following diagram using the same method as
+    above (surjectivity to pick elements in preimage):
+  \end{itemize}
 \end{itemize}
 
 \begin{center}
 \begin{tikzcd}
- & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
-M \ar[r, "\pi"] & N
+    && X \\
+    \\
+    && F \\
+    \\
+    M && N && 0
+    \arrow["\iota", hook, from=1-3, to=3-3]
+    \arrow["f", from=3-3, to=5-3]
+    \arrow["\pi"', two heads, from=5-1, to=5-3]
+    \arrow[from=5-3, to=5-5]
+    \arrow["{\exists \tilde \phi}"', dashed, from=3-3, to=5-1]
+    \arrow["\phi"', curve={height=24pt}, from=1-3, to=5-1]
 \end{tikzcd}
 \end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsNSxbMCw0LCJNIl0sWzIsNCwiTiJdLFs0LDQsIjAiXSxbMiwyLCJGIl0sWzIsMCwiWCJdLFs0LDMsIlxcaW90YSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMSwiZiJdLFswLDEsIlxccGkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwyXSxbMywwLCJcXGV4aXN0cyBcXHRpbGRlIFxccGhpIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsMCwiXFxwaGkiLDIseyJjdXJ2ZSI6NH1dXQ==}{Link
+to Diagram}
+\end{quote}
 
 \begin{itemize}
 \tightlist
 \item
-  Take the identity map:
+  Now take the identity map, then commutativity is equivalent to being a
+  section.
 \end{itemize}
 
 \begin{center}
 \begin{tikzcd}
- & & & F\ar[d, "\operatorname{id}_F"]\ar[dl, "\exists ! h"'] & \\
+ & & & F\ar[d, "\one_F"]\ar[dl, "\exists ! h"'] & \\
 0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
 \end{tikzcd}
 \end{center}
@@ -4789,36 +5000,7 @@ M \ar[r, "\pi"] & N
 
 \envlist
 
-\begin{itemize}
-\tightlist
-\item
-  Claim: if \(R\) is a PID and \(M\) is a finitely generated
-  \(R{\hbox{-}}\)module, then \(M \cong M_t \oplus M/M_t\) where
-  \(M_t \leq M\) is the torsion submodule.
-\item
-  Claim: \(M/M_t\) is torsionfree, and since a f.g. torsion free module
-  over a PID is free, \(M/M_t\) is free.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Let \(m+M_t \in M/M_t\) and suppose it is torsion, we will show that
-    is must be the zero coset.
-  \item
-    Then there exists an \(r\in R\) such that \(r(m + M_t) = M_t\)
-  \item
-    Then \(rm + M_t = M_t\), so \(rm\in M_t\).
-  \item
-    By definition of \(M_t\), every element is torsion, so there exists
-    some \(s\in R\) such \(s(rm) = 0_M\).
-  \item
-    Then \((sr)m = 0_M\) which forces \(m\in M_t\)
-  \item
-    Then \(m + M_t = M_t\), so \(m+ M_t\) is the zero coset.
-  \end{itemize}
-\item
-  There is a SES
-\end{itemize}
+There is a SES
 
 \begin{center}
 \begin{tikzcd}
@@ -4826,8 +5008,36 @@ M \ar[r, "\pi"] & N
 \end{tikzcd}
 \end{center}
 
-and since \(M/M_t\) is free, by (c) this sequence splits and
-\(M \cong M \oplus M/M_t\).
+\begin{claim}
+
+\(M/M_t\) is a free \(R{\hbox{-}}\)module, so this sequence splits and
+\(M\cong M_t \oplus {M\over M_t}\), where \(M_t\) is a torsion
+\(R{\hbox{-}}\)module.
+
+\begin{quote}
+Note that by the hint, since \(R\) is a PID, it suffices to show that
+\(M/M_t\) is torsionfree.
+\end{quote}
+
+\end{claim}
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(m+M_t \in M/M_t\) be arbitrary. Suppose this is a torsion
+  element, the claim is that it must be the trivial coset. This will
+  follow if \(m\in M_t\)
+\item
+  Since this is torsion, there exists \(r\in R\) such that
+  \begin{align*}
+  M_t = r(m + M_t) \coloneqq(rm) + M_t \implies rm\in M_t
+  .\end{align*}
+\item
+  Then \(rm\) is torsion in \(M\), so there exists some \(s\in R\) such
+  \(s(rm) = 0_M\).
+\item
+  Then \((sr)m = 0_M\) which forces \(m\in M_t\)
+\end{itemize}
 
 \end{proof}
 
@@ -5024,10 +5234,6 @@ Let \(A\) be a square matrix over the complex numbers. Suppose that
 
 Show that \(A\) is also diagonalizable over \({\mathbb{C}}\).
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -5048,6 +5254,10 @@ Show that \(A\) is also diagonalizable over \({\mathbb{C}}\).
 
 \end{concept}
 
+\begin{solution}
+
+\envlist
+
 \begin{claim}
 
 If \(A \in \operatorname{GL}(m, {\mathbb{F}})\) is invertible and
@@ -5056,48 +5266,58 @@ diagonalizable.
 
 \end{claim}
 
-Let \(A \in \operatorname{GL}(m, {\mathbb{F}})\). Since \(A^n\) is
-diagonalizable, \(\min_{A^n}(x) \in {\mathbb{F}}[x]\) is separable and
-thus factors as a product of \(m\) \textbf{distinct} linear factors:
-
-\begin{align*}
-\min_{A^n}(x) = \prod_{i=1}^m (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
-\end{align*}
-
-where \(\left\{{\lambda_i}\right\}_{i=1}^m \subset {\mathbb{F}}\) are
-the \textbf{distinct} eigenvalues of \(A^n\).
-
-Moreover
-\(A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}})\):
-\(A\) is invertible \(\iff \det(A) = d \in {\mathbb{F}}^{\times}\), and
-so \(\det(A^n) = \det(A)^n = d^n \in {\mathbb{F}}^{\times}\) using the
-fact that the determinant is a ring morphism
-\(\det: \operatorname{Mat}(m\times m) \to{\mathbb{F}}\) and
-\({\mathbb{F}}^{\times}\) is closed under multiplication.
-
-So \(A^n\) is invertible, and thus has trivial kernel, and thus zero is
-not an eigenvalue, so \(\lambda_i \neq 0\) for any \(i\).
-
-Since the \(\lambda_i\) are distinct and nonzero, this implies \(x^k\)
-is not a factor of \(\mu_{A^n}(x)\) for any \(k\geq 0\). Thus the \(m\)
-terms in the product correspond to precisely \(m\) \textbf{distinct
-linear} factors.
-
-We can now construct a polynomial that annihilates \(A\), namely
-\begin{align*}
-q_A(x) \coloneqq\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}[x],
-\end{align*}
-
-where we can note that \(q_A(A) = \min_{A^n}(A^n) = 0\), and so
-\(\min_A(x) \bigm|q_A(x)\) by minimality.
-
-We now claim that \(q_A(x)\) has exactly \(n\cdot m\) distinct linear
-factors in
-\(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x]\),
-which reduces to showing that no pair \(x^n-\lambda_i, x^n-\lambda_j\)
-share a root. and that \(x^n-\lambda_i\) does not have multiple roots.
+\begin{proof}[of claim]
 
 \begin{itemize}
+\item
+  Let \(A \in \operatorname{GL}(m, {\mathbb{F}})\).
+\item
+  Since \(A^n\) is diagonalizable, \(\min_{A^n}(x) \in {\mathbb{F}}[x]\)
+  is separable and thus factors as a product of \(m\) \textbf{distinct}
+  linear factors:
+  \begin{align*}
+  \min_{A^n}(x) = \prod_{i=1}^m (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
+  \end{align*}
+
+  where \(\left\{{\lambda_i}\right\}_{i=1}^m \subset {\mathbb{F}}\) are
+  the \textbf{distinct} eigenvalues of \(A^n\).
+\item
+  Moreover
+  \(A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}})\):
+  \(A\) is invertible \(\iff \det(A) = d \in {\mathbb{F}}^{\times}\),
+  and so \(\det(A^n) = \det(A)^n = d^n \in {\mathbb{F}}^{\times}\) using
+  the fact that the determinant is a ring morphism
+  \(\det: \operatorname{Mat}(m\times m) \to{\mathbb{F}}\) and
+  \({\mathbb{F}}^{\times}\) is closed under multiplication.
+\item
+  So \(A^n\) is invertible, and thus has trivial kernel, and thus zero
+  is not an eigenvalue, so \(\lambda_i \neq 0\) for any \(i\).
+\item
+  Since the \(\lambda_i\) are distinct and nonzero, this implies \(x^k\)
+  is not a factor of \(\mu_{A^n}(x)\) for any \(k\geq 0\). Thus the
+  \(m\) terms in the product correspond to precisely \(m\)
+  \textbf{distinct linear} factors.
+\item
+  We can now construct a polynomial that annihilates \(A\), namely
+  \begin{align*}
+  q_A(x) \coloneqq\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}[x],
+  \end{align*}
+
+  where we can note that \(q_A(A) = \min_{A^n}(A^n) = 0\), and so
+  \(\min_A(x) \bigm|q_A(x)\) by minimality.
+\end{itemize}
+
+\begin{claim}
+
+\(q_A(x)\) has exactly \(nm\) distinct linear factors in
+\({ \mkern 1.5mu\overline{\mkern-1.5mu \mathbb{F}\mkern-1.5mu}\mkern 1.5mu }[x]\)
+
+\end{claim}
+
+\begin{itemize}
+\item
+  This reduces to showing that no pair \(x^n-\lambda_i, x^n-\lambda_j\)
+  share a root. and that \(x^n-\lambda_i\) does not have multiple roots.
 \item
   For the first claim, we can factor
   \begin{align*}
@@ -5120,6 +5340,8 @@ But now since \(q_A(x)\) has exactly distinct linear factors in
 and \(\min_A(x) \bigm|q_A(x)\), \(\min_A(x) \in {\mathbb{F}}[x]\) can
 only have distinct linear factors, and \(A\) is thus diagonalizable over
 \({\mathbb{F}}\).
+
+\end{proof}
 
 \end{solution}
 
@@ -5271,18 +5493,18 @@ for all \(a, b\in F\) and \(v_1, v_2 \in V\). The form is
 Suppose \(({-}, {-})\) is a nondegenerate symmetric bilinear form on
 \(V\). If \(W\) is a subspace of \(V\), define
 \begin{align*}
-W\perp \coloneqq\left\{{v\in V {~\mathrel{\Big|}~}(v, w) = 0 \text{ for all } w\in W}\right\}
+W^{\perp} \coloneqq\left\{{v\in V {~\mathrel{\Big|}~}(v, w) = 0 \text{ for all } w\in W}\right\}
 .\end{align*}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
   Show that if \(X, Y\) are subspaces of \(V\) with \(Y\subset X\), then
-  \(X\perp \subseteq Y\perp\).
+  \(X^{\perp} \subseteq Y^{\perp}\).
 \item
   Define an injective linear map
   \begin{align*}
-  \psi: Y\perp/X\perp \hookrightarrow(X/Y)^\vee
+  \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y)^\vee
   \end{align*}
   which is an isomorphism if \(V\) is finite dimensional.
 \end{enumerate}
@@ -5344,10 +5566,6 @@ Let \(A\) be an \(n \times n\) matrix.
   characteristic polynomial of \(A\) equals the minimal polynomial of A.
 \end{enumerate}
 
-\begin{solution}
-
-\envlist
-
 \begin{concept}
 
 \envlist
@@ -5382,6 +5600,10 @@ Let \(A\) be an \(n \times n\) matrix.
 \end{itemize}
 
 \end{strategy}
+
+\begin{solution}
+
+\envlist
 
 \begin{proof}[of a]
 
@@ -5503,54 +5725,65 @@ Define the dual of \(\Lambda\) to be
 
 \begin{proof}[of a]
 
-Let \(\mathbf{v} \in \Lambda\), so
-\(\mathbf{v} = \sum_{i=1}^n r_i \mathbf{e}_i\) where
-\(r_i \in {\mathbb{Z}}\) for all \(i\).
+\envlist
 
-Then if \(\mathbf{x} = \sum_{j=1}^n s_j \mathbf{e}_j \in \Lambda\) is
-arbitrary, we have \(s_j \in {\mathbb{Z}}\) for all \(j\) and
-\begin{align*}
-{\left\langle {\mathbf{v}},~{\mathbf{x}} \right\rangle} 
-&= {\left\langle {\sum_{i=1}^n r_i \mathbf{e}_i},~{\sum_{j=1}^n s_j \mathbf{e}_j } \right\rangle} \\
-&= \sum_{i=1}^n \sum_{j=1}^n r_i s_j {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j } \right\rangle}  \in {\mathbb{Z}}
-\end{align*}
-
-since this is a sum of products of integers (since
-\({\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}}\)
-for each \(i, j\) pair by assumption) so \(\mathbf{v} \in \Lambda^\vee\)
-by definition.
+\begin{itemize}
+\item
+  Let \(\mathbf{v} \in \Lambda\), so
+  \(\mathbf{v} = \sum_{i=1}^n r_i \mathbf{e}_i\) where
+  \(r_i \in {\mathbb{Z}}\) for all \(i\).
+\item
+  Then if \(\mathbf{x} = \sum_{j=1}^n s_j \mathbf{e}_j \in \Lambda\) is
+  arbitrary, we have \(s_j \in {\mathbb{Z}}\) for all \(j\) and
+  \begin{align*}
+  {\left\langle {\mathbf{v}},~{\mathbf{x}} \right\rangle} 
+  &= {\left\langle {\sum_{i=1}^n r_i \mathbf{e}_i},~{\sum_{j=1}^n s_j \mathbf{e}_j } \right\rangle} \\
+  &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j } \right\rangle}  \in {\mathbb{Z}}
+  \end{align*}
+  since this is a sum of products of integers (since
+  \({\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}}\)
+  for each \(i, j\) pair by assumption) so
+  \(\mathbf{v} \in \Lambda^\vee\) by definition.
+\end{itemize}
 
 \end{proof}
 
 \begin{proof}[of b]
 
-\textbf{The determinant is nonzero}:
+\begin{claim}
 
-Suppose \(\det M = 0\). Then \(\ker M \neq \mathbf{0}\), so let
-\(\mathbf{v} \in \ker M\) be given by
-\(\mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0}\).
+The determinant is nonzero.
 
-Note that
-\begin{align*}
-M\mathbf{v} = 0 &\implies
-\left[
-\begin{array}{ccc}
-\mathbf{e}_1 \cdot \mathbf{e}_1 & \mathbf{e}_1 \cdot \mathbf{e}_2 & \cdots \\
-\mathbf{e}_2 \cdot \mathbf{e}_1 & \mathbf{e}_2 \cdot \mathbf{e}_2 & \cdots \\
-\vdots & \vdots & \ddots
-\end{array}
-\right]
-\left[\begin{array}{c}
-v_1 \\ v_2 \\ \vdots
-\end{array}\right] = \mathbf{0} \\ \\
-&\implies \sum_{j=1}^n v_j{\left\langle {\mathbf{e}_k},~{\mathbf{e}_j} \right\rangle} = 0 {\quad \operatorname{for each fixed} \quad} k
-.\end{align*}
+\end{claim}
 
-We can now note that
-\({\left\langle {\mathbf{e}_k},~{\mathbf{v}} \right\rangle} = \sum_{j=1}^n v_j {\left\langle {\mathbf{e}_k},~{\mathbf{e}_j} \right\rangle} = 0\)
-for every \(k\) by the above observation, which forces
-\(\mathbf{v} = 0\) by non-degeneracy of
-\({\left\langle {{-}},~{{-}} \right\rangle}\), a contradiction.
+\begin{itemize}
+\item
+  Suppose \(\det M = 0\). Then \(\ker M \neq \mathbf{0}\), so let
+  \(\mathbf{v} \in \ker M\) be given by
+  \(\mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0}\).
+\item
+  Note that
+  \begin{align*}
+  M\mathbf{v} = 0 &\implies
+  \left[
+  \begin{array}{ccc}
+  \mathbf{e}_1 \cdot \mathbf{e}_1 & \mathbf{e}_1 \cdot \mathbf{e}_2 & \cdots \\
+  \mathbf{e}_2 \cdot \mathbf{e}_1 & \mathbf{e}_2 \cdot \mathbf{e}_2 & \cdots \\
+  \vdots & \vdots & \ddots
+  \end{array}
+  \right]
+  \left[\begin{array}{c}
+  v_1 \\ v_2 \\ \vdots
+  \end{array}\right] = \mathbf{0} \\ \\
+  &\implies \sum_{j=1}^n v_j{\left\langle {\mathbf{e}_k},~{\mathbf{e}_j} \right\rangle} = 0 {\quad \operatorname{for each fixed} \quad} k
+  .\end{align*}
+\item
+  We can now note that
+  \({\left\langle {\mathbf{e}_k},~{\mathbf{v}} \right\rangle} = \sum_{j=1}^n v_j {\left\langle {\mathbf{e}_k},~{\mathbf{e}_j} \right\rangle} = 0\)
+  for every \(k\) by the above observation, which forces
+  \(\mathbf{v} = 0\) by non-degeneracy of
+  \({\left\langle {{-}},~{{-}} \right\rangle}\), a contradiction.
+\end{itemize}
 
 \end{proof}
 
@@ -5584,33 +5817,37 @@ independent.
 Let \(A = [\mathbf{e}_1^t, \cdots, \mathbf{e}_n^t]\) be the matrix with
 \(\mathbf{e}_i\) in the \(i\)th column.
 
-\textbf{The rows of \(A^{-1}\) span \(\Lambda^\vee\)}:
+\begin{claim}
 
-Equivalently, the columns of \(A^{-t}\) span \(\Lambda^\vee\).
+The rows of \(A^{-1}\) span \(\Lambda^\vee\). Equivalently, the columns
+of \(A^{-t}\) span \(\Lambda^\vee\).
 
-Let \(B = A^{-t}\) and let \(\mathbf{b}_i\) denote the columns of \(B\),
-so
-\(\operatorname{im}B = {\operatorname{span}}{\left\{{\mathbf{b}_i}\right\}}\).
+\end{claim}
 
-Since \(A \in \operatorname{GL}(n, {\mathbb{Z}})\),
-\(A^{-1}, A^t, A^{-t} \in \operatorname{GL}(n, {\mathbb{Z}})\) as well.
-
-\begin{align*}
-\mathbf{v} \in \Lambda^\vee
-&\implies {\left\langle {\mathbf{e}_i},~{\mathbf{v}} \right\rangle} = z_i \in {\mathbb{Z}}\quad \forall i \\
-&\implies A^t \mathbf{v} = \mathbf{z} \coloneqq[z_1, \cdots, z_n] \in {\mathbb{Z}}^n \\
-&\implies \mathbf{v} = A^{-t} \mathbf{z} \coloneqq B\mathbf{z} \in \operatorname{im}B \\
-&\implies \mathbf{v} \in \operatorname{im}B \\
-&\implies \Lambda^\vee\subseteq \operatorname{im}B
-,\end{align*}
-
-and
-
-\begin{align*}
-B^t A = (A^{-t})^t A = A^{-1}A = I \\
-\implies \mathbf{b}_i \cdot \mathbf{e}_j = \delta_{ij} \in {\mathbb{Z}}\\
-\implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda^\vee
-.\end{align*}
+\begin{itemize}
+\item
+  Let \(B = A^{-t}\) and let \(\mathbf{b}_i\) denote the columns of
+  \(B\), so
+  \(\operatorname{im}B = {\operatorname{span}}{\left\{{\mathbf{b}_i}\right\}}\).
+\item
+  Since \(A \in \operatorname{GL}(n, {\mathbb{Z}})\),
+  \(A^{-1}, A^t, A^{-t} \in \operatorname{GL}(n, {\mathbb{Z}})\) as
+  well.
+  \begin{align*}
+  \mathbf{v} \in \Lambda^\vee
+  &\implies {\left\langle {\mathbf{e}_i},~{\mathbf{v}} \right\rangle} = z_i \in {\mathbb{Z}}\quad \forall i \\
+  &\implies A^t \mathbf{v} = \mathbf{z} \coloneqq[z_1, \cdots, z_n] \in {\mathbb{Z}}^n \\
+  &\implies \mathbf{v} = A^{-t} \mathbf{z} \coloneqq B\mathbf{z} \in \operatorname{im}B \\
+  &\implies \mathbf{v} \in \operatorname{im}B \\
+  &\implies \Lambda^\vee\subseteq \operatorname{im}B
+  ,\end{align*}
+  and
+  \begin{align*}
+  B^t A = (A^{-t})^t A = A^{-1}A = I \\
+  \implies \mathbf{b}_i \cdot \mathbf{e}_j = \delta_{ij} \in {\mathbb{Z}}\\
+  \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda^\vee
+  .\end{align*}
+\end{itemize}
 
 \end{solution}
 
@@ -5635,10 +5872,6 @@ let \(T: V\to V\) be a linear operator with characteristic polynomial
 
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
 \todo[inline]{How to extend basis?}
-
-\begin{solution}
-
-\envlist
 
 \begin{concept}
 
@@ -5665,6 +5898,10 @@ let \(T: V\to V\) be a linear operator with characteristic polynomial
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 Let \(f\) be the characteristic polynomial of \(T\).
 
@@ -5933,8 +6170,11 @@ A=\left[\begin{array}{ccc}
 \item
   Find the Jordan canonical form \(J\) of \(A\).
 \item
-  Find an invertible matrix \(P\) such that \(P^{-1}A P = J\). You
-  should not need to compute \(P^{-1}\).
+  Find an invertible matrix \(P\) such that \(P^{-1}A P = J\).
+
+  \begin{quote}
+  You should not need to compute \(P^{-1}\).
+  \end{quote}
 \item
   Write down the minimal polynomial of \(A\).
 \end{enumerate}
@@ -5975,13 +6215,12 @@ case find a matrix \(P\) such that \(P^{-1}AP\) is in JCF.
   Coefficients in minimal polynomial: size of largest Jordan block
 \item
   Dimension of eigenspace: number of Jordan blocks
+\item
+  We can always read off the \emph{characteristic} polynomial from the
+  spectrum.
 \end{itemize}
 
 \end{strategy}
-
-\begin{solution}
-
-\envlist
 
 \begin{concept}
 
@@ -5995,12 +6234,9 @@ case find a matrix \(P\) such that \(P^{-1}AP\) is in JCF.
 
 \end{concept}
 
-\begin{strategy}
+\begin{solution}
 
-We can always read off the \emph{characteristic} polynomial from the
-spectrum.
-
-\end{strategy}
+\envlist
 
 \begin{proof}[of a]
 
@@ -6259,14 +6495,14 @@ A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Find the Jordan canonical form J of A.
+  Find the Jordan canonical form \(J\) of \(A\).
 \item
   Find an invertible matrix \(P\) such that \(P^{-1}AP = J\).
-\end{enumerate}
 
-\begin{quote}
-You should not need to compute \(P^{-1}\).
-\end{quote}
+  \begin{quote}
+  You should not need to compute \(P^{-1}\).
+  \end{quote}
+\end{enumerate}
 
 \hypertarget{spring-2017-6-work}{%
 \subsection{\texorpdfstring{Spring 2017 \#6
@@ -6376,7 +6612,9 @@ r & 1 & -1 \\
   Find an invertible matrix \(P\) such that \(J = P ^{-1}A P\).
 \end{enumerate}
 
-\emph{(You should not need to compute \(P^{-1}\))}
+\begin{quote}
+You should not need to compute \(P^{-1}\)
+\end{quote}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}

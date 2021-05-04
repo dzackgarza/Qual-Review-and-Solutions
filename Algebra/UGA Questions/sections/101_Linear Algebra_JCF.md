@@ -79,7 +79,8 @@ Find the Jordan canonical form $J$ of $A$.
 
 b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
-You should not need to compute $P\inv$.
+
+  > You should not need to compute $P\inv$.
 
 c.
 Write down the minimal polynomial of $A$.
@@ -108,24 +109,17 @@ matrix $P$ such that $P\inv AP$ is in JCF.
 - Eyeball eigenvectors.
 - Coefficients in minimal polynomial: size of largest Jordan block
 - Dimension of eigenspace: number of Jordan blocks
+- We can always read off the *characteristic* polynomial from the spectrum.
 :::
 
-
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
 
-
-:::{.strategy}
-We can always read off the *characteristic* polynomial from the spectrum.
-:::
-
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
@@ -301,7 +295,7 @@ Find the Jordan canonical form $J$ of $A$.
 b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
-> You should not need to compute $P\inv$.
+  > You should not need to compute $P\inv$.
 
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
@@ -375,7 +369,7 @@ Find the Jordan canonical form $J$ of $A$.
 b. 
 Find an invertible matrix $P$ such that $J = P \inv A P$.
 
-*(You should not need to compute $P\inv$)*
+  > You should not need to compute $P\inv$
 
 c. 
 Write down the minimal polynomial of $A$.

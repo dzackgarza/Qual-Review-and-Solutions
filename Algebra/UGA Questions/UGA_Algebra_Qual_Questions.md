@@ -9,6 +9,7 @@
 \newcommand{\du}{\,du}
 \newcommand{\dw}{\,dw}
 \newcommand{\dV}{\,dV}
+\newcommand{\dmu}{\,d\mu}
 \newcommand{\T}{\mathrm{T}}
 \newcommand{\open}[1]{\overset{\circ}{#1}}
 \newcommand{\textoperatorname}[1]{
@@ -26,7 +27,12 @@
 \newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
+\newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\fq}[0]{{\mathbb{F}_{q}}}
 \newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
@@ -55,6 +61,12 @@
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
 \newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\covol}[0]{\operatorname{covol}}
@@ -81,8 +93,11 @@
 \newcommand{\Art}[0]{\operatorname{Art}}
 \newcommand{\red}[0]{{ \text{red} }}
 \newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
 \newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\adj}[0]{\operatorname{adj}}
@@ -90,26 +105,33 @@
 \newcommand{\ann}[0]{\operatorname{Ann}}
 \newcommand{\Ann}[0]{\operatorname{Ann}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
 \newcommand{\Sp}[0]{{\operatorname{Sp}}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
-\newcommand{\Fp}[0]{{\FF_p}}
 \newcommand{\HP}[0]{{\operatorname{HP}}}
 \newcommand{\TP}[0]{{\operatorname{TP}}}
 \newcommand{\HC}[0]{{\operatorname{HC}}}
 \newcommand{\HH}[0]{{\mathbb{H}}}
 \newcommand{\HoH}[0]{{\operatorname{HH}}}
 \newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
 \newcommand{\GW}[0]{{\operatorname{GW}}}
 \newcommand{\TCH}[0]{{\operatorname{TCH}}}
 \newcommand{\Zar}[0]{{\mathrm{Zar}}}
 \newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
 \newcommand{\dom}[0]{\operatorname{dom}}
 \newcommand{\dR}[0]{\mathrm{dR}}
@@ -128,65 +150,84 @@
 \newcommand{\SL}[0]{{\operatorname{SL}}}
 \newcommand{\PSL}[0]{{\operatorname{PSL}}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
+\newcommand{\MO}[0]{{\operatorname{MO}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\Cat}[0]{\mathsf{Cat}}
 \newcommand{\Fun}[0]{{\mathsf{Fun}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
 \newcommand{\poly}[0]{\mathsf{poly}}
 \newcommand{\Vect}[0]{{\mathsf{Vect}}}
 \newcommand{\Sh}[0]{{\mathsf{Sh}}}
+\newcommand{\Var}[0]{{\mathsf{Var}}}
+\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
+\newcommand{\Alg}[0]{{\mathsf{Alg}}}
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\sets}[0]{{\mathsf{Set}}}
 \newcommand{\Grp}[0]{{\mathsf{Grp}}}
+\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
+\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
 \newcommand{\Groups}[0]{{\mathsf{Groups}}}
 \newcommand{\Ab}[0]{{\mathsf{Ab}}}
 \newcommand{\Ring}[0]{\mathsf{Ring}}
 \newcommand{\CRing}[0]{\mathsf{CRing}}
+\newcommand{\Field}[0]{\mathsf{Field}}
+\newcommand{\Perf}[0]{\mathsf{Perf}}
 \newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
 \newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
 \newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
 \newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
 \newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
 \newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
 \newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\mathsf{gr}}}
+\newcommand{\gr}[0]{{\mathsf{gr}\,}}
 \newcommand{\grMod}[0]{{\mathsf{grMod}}}
 \newcommand{\Mod}[0]{{\mathsf{Mod}}}
 \newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
 \newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
 \newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
 \newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
+\newcommand{\cdga}[0]{{\mathsf{cdga} }}
 \newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
 \newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
 \newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\alg}[0]{\mathsf{Alg}}
 \newcommand{\scalg}[0]{\mathsf{sCAlg}}
 \newcommand{\calg}[0]{\mathsf{CAlg}}
+\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
 \newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
 \newcommand{\ssets}[0]{\mathsf{sSets}}
 \newcommand{\Assoc}[0]{\mathsf{Assoc}}
+\newcommand{\Free}[0]{\mathsf{Free}}
 \newcommand{\Unital}[0]{\mathsf{Unital}}
 \newcommand{\Riem}[0]{\mathsf{Riem}}
 \newcommand{\Comm}[0]{\mathsf{Comm}}
 \newcommand{\Top}[0]{{\mathsf{Top}}}
 \newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
+\newcommand{\ho}[0]{{\mathsf{ho}}}
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\Aff}[0]{{\mathsf{Aff}}}
+\newcommand{\Schf}[0]{{\mathsf{Schf}}}
+\newcommand{\Rep}[0]{{\mathsf{Rep}}}
 \newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\qcoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\Qcoh}[0]{{\mathsf{QCoh}}}
 \newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
 \newcommand{\Perv}[0]{\mathsf{Perv}}
 \newcommand{\presh}[0]{{\mathsf{Presh}}}
 \newcommand{\Presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
 
 \newcommand{\Forget}[0]{{\operatorname{Forget}}}
 \newcommand{\eul}[0]{{\operatorname{eul}}}
@@ -213,7 +254,8 @@
 \newcommand{\id}[0]{\operatorname{id}}
 \newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
 \newcommand{\tors}[0]{{\operatorname{tors}}}
 \newcommand{\tor}[0]{\operatorname{Tor}}
@@ -235,6 +277,7 @@
 \newcommand{\convolve}[0]{\ast}
 \newcommand{\freeprod}[0]{\ast}
 \newcommand{\Spinc}[0]{\mathrm{Spin}^{\mathbb{C} }}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
 \newcommand{\coker}[0]{\operatorname{coker}}
 \newcommand{\Mor}[0]{\operatorname{Mor}}
 \newcommand{\cone}[0]{\operatorname{cone}}
@@ -289,9 +332,12 @@
 \newcommand{\mfr}[0]{{\mathfrak{r}}}
 \newcommand{\mfs}[0]{{\mathfrak{s}}}
 \newcommand{\lieg}[0]{{\mathfrak{g}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
 \newcommand{\liet}[0]{{\mathfrak{t}}}
 \newcommand{\lieo}[0]{{\mathfrak{o}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
 \newcommand{\liegl}[0]{{\mathfrak{gl}}}
 \newcommand{\gl}[0]{{\mathfrak{gl}}}
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
@@ -321,8 +367,12 @@
 \newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
 \newcommand{\injectsvia}[1]{\overset{#1}\injects}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\Prism}[0]{\mathsf{Prism}}
+\newcommand{\Spf}[0]{\mathsf{Spf}}
+\newcommand{\WCart}[0]{\mathsf{WCart}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
 }
 \newcommand{\adjoint}[0]{\leftrightarrows}
 \newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
@@ -352,9 +402,10 @@
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
 \newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\cl}[0]{\operatorname{cl}}
-\newcommand{\Cl}[0]{\operatorname{Cl}}
-\newcommand{\St}[0]{\operatorname{St}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\St}[0]{{ \operatorname{St} }}
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
 \newcommand{\trdeg}[0]{\operatorname{trdeg}}
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\Dist}[0]{\operatorname{Dist}}
@@ -376,6 +427,8 @@
 \newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
 \newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
 \newcommand{\smooth}[0]{{\operatorname{sm}}}
+\newcommand{\fd}[0]{{\operatorname{fd}}}
+\newcommand{\semisimple}[0]{{\operatorname{ss}}}
 \newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\CY}{{ \text{CY} }}
@@ -391,9 +444,9 @@
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
-\newcommand{\rad}[0]{{\operatorname{rad}}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
 \newcommand{\Log}[0]{\operatorname{Log}}
@@ -409,8 +462,6 @@
 \newcommand{\sgn}[0]{\operatorname{sgn}}
 \newcommand{\sign}[0]{\operatorname{sign}}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
@@ -421,6 +472,7 @@
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
 \newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Extalg}[0]{\bigwedge}
 \newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
@@ -449,7 +501,9 @@
 \newcommand{\Div}[0]{\operatorname{Div}}
 \newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
@@ -470,6 +524,8 @@
 \newcommand{\increasesto}[0]{\nearrow}
 \newcommand{\decreasesto}[0]{\searrow}
 \newcommand\jan{\operatorname{Jan}}
+\DeclareMathOperator{\crys}{crys}
+\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
@@ -479,7 +535,7 @@
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator{\Endo}{End}
 \DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\proj}{proj}
 \DeclareMathOperator{\Proj}{Proj}
 \DeclareMathOperator{\Hol}{Hol}
 \DeclareMathOperator{\Bun}{Bun}
@@ -517,7 +573,6 @@
 \newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
-\newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
 \newcommand\constantsheaf[1]{\underline{#1}}
 \newcommand\holomorphic[0]{\text{holo}}
@@ -526,6 +581,8 @@
 \newcommand\even[0]{\text{even}}
 \newcommand\odd[0]{\text{odd}}
 \newcommand\hodgestar[0]{\star}
+\newcommand\dirac[0]{\strike{ \partial} }
+\newcommand\laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
@@ -582,11 +639,28 @@
 \newcommand{\ind}[0]{\operatorname{ind}}
 \newcommand{\Ind}[0]{\operatorname{Ind}}
 \newcommand{\Coind}[0]{\operatorname{coInd}}
+\newcommand{\Frob}[0]{\operatorname{Frob}}
 
 \newcommand{\submfds}{\operatorname{SubMfds}}
 
 \newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
 \newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\B}[0]{{ \mathsf{B}}}
+\newcommand{\D}[0]{{ \mathsf{D}}}
+\newcommand{\Rd}[0]{{ \mathsf{R}}}
+\newcommand{\Ld}[0]{{ \mathsf{R}}}
+\newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
+
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+#1 & #2 
+\\
+#3 & #4
+\end{bmatrix}
+}}
 
 # Group Theory: General
 
@@ -615,19 +689,22 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
-:::{.solution}
-\envlist
-
-\envlist
 :::{.concept}
 \envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
 - Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
 - Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+:::
+
+:::{.strategy}
+Burnside.
 
 :::
 
+
+:::{.solution}
+\envlist
 
 :::{.proof title="Part a"}
 Strategy: Burnside.
@@ -797,10 +874,6 @@ Let $G$ be a finite group with $n$ distinct conjugacy classes.
 Let $g_1 \cdots g_n$ be representatives of the conjugacy classes of $G$.
 Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
-:::{.solution}
-
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -823,6 +896,9 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.claim title="1"}
 \[
 \abs{h^G} = [G: Z(h)]
@@ -835,7 +911,7 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 .\]
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of claim 2"}
 \envlist
 
 - Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
@@ -848,7 +924,7 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of claim 3"}
 - By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
   \[
   \abs{\union_{g\in G} H^g} 
@@ -880,10 +956,6 @@ $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \
 - Then $G\subseteq Z(G)$ and $G$ is abelian.
 
 :::
-
-
-
-
 
 :::
 
@@ -996,9 +1068,6 @@ Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
 b.
 Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
 
-:::{.solution}
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -1007,6 +1076,9 @@ Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or
 - Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -1059,9 +1131,6 @@ Prove that both $Q$ and $R$ are normal in $G$.
 d.
 Prove that if $P$ is normal in $G$ then $G$ is cyclic.
 
-:::{.solution}
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -1086,63 +1155,70 @@ A_i\normal G, \quad G = A_1 \cdots A_k,\quad A_k \intersect \prod_{i\neq k} A_i 
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.proof title="of 1"}
-We have 
+\envlist
+
+- We have 
 
 - $n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \mod 3 \implies n_3 \in \theset{1, 5, 7, 35} \setminus \theset{5, 35}$
 - $n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \mod 5 \implies n_5 \in \theset{1, 3, 7, 21}\setminus \theset{3, 7}$
 - $n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \mod 7 \implies n_7 \in \theset{1, 3, 5, 15}\setminus\theset{3, 5}$
 
-Thus
+- Thus
 \[
 n_3 \in \theset{1, 7} \quad n_5 \in \theset{1, 21} \quad n_7 \in \theset{1, 15}
 .\]
 
-Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then 
+- Toward a contradiction, if $n_5\neq 1$ and $n_7 \neq 1$, then 
 \[
 \abs{\syl(5) \union \syl(7)} = (5-1)n_5 + (7-1)n_7 + 1 
 &= 4(21) + 6(15) = 174 > 105 \text{ elements}
 \]
-using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
+  using the fact that Sylow $p\dash$subgroups for distinct primes $p$ intersect trivially (?).
 
 :::
 
 :::{.proof title="of 2"}
-By (a), either $Q$ or $R$ is normal.
-Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
-
-By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
+\envlist
+- By (a), either $Q$ or $R$ is normal.
+- Thus $QR \leq G$ is a subgroup, and it has order $\abs{Q} \cdot \abs{R} = 5\cdot 7 = 35$.
+- By the $pqr$ theorem, since $5$ does not divide $7-1=6$, $QR$ is cyclic.
 
 :::
 
 \todo[inline]{Part (b) not finished!}
 
 :::{.proof title="of 3"}
-We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
+\envlist
 
-Note that we can write
+- We want to show $Q, R\normal G$, so we proceed by showing $\textbf{not }\qty{n_5 = 21 \text{ or } n_7 = 15}$, which is equivalent to $\qty{n_5 = 1 \text{ and } n_7 = 1}$ by the previous restrictions.
+
+- Note that we can write
 \[
 G = \theset{\text{elements of order } n} \disjoint \theset{\text{elements of order not } n}
 .\]
-for any $n$, so we count for $n=5, 7$:
+  for any $n$, so we count for $n=5, 7$:
 
-- Elements in $QR$ of order **not** equal to 5: $\abs{QR - Q\theset{\id} + \theset{\id}} = 35 - 5 + 1 = 31$
-- Elements in $QR$ of order **not** equal to 7: $\abs{QR - \theset{\id}R + \theset{\id}} = 35 - 7 + 1 = 29$
+  - Elements in $QR$ of order **not** equal to 5: $\abs{QR - Q\theset{\id} + \theset{\id}} = 35 - 5 + 1 = 31$
+  - Elements in $QR$ of order **not** equal to 7: $\abs{QR - \theset{\id}R + \theset{\id}} = 35 - 7 + 1 = 29$
 
-Since $QR \leq G$, we have
+- Since $QR \leq G$, we have
 
-- Elements in $G$ of order **not** equal to 5 $\geq 31$.
-- Elements in $G$ of order **not** equal to 7 $\geq 29$.
+  - Elements in $G$ of order **not** equal to 5 $\geq 31$.
+  - Elements in $G$ of order **not** equal to 7 $\geq 29$.
 
-Now both cases lead to contradictions:
+- Now both cases lead to contradictions:
 
-- $n_5 = 21$:
+  - $n_5 = 21$:
 \[
 \abs{G}  &= \abs{\theset{\text{elements of order } 5} \disjoint \theset{\text{elements of order not } 5}} \\
 &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = \abs{G}
 .\]
 
-- $n_7 = 15$:
+  - $n_7 = 15$:
 \[
 \abs{G}  &= \abs{\theset{\text{elements of order } 7} \disjoint \theset{\text{elements of order not } 7}} \\
 &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = \abs{G}
@@ -1254,9 +1330,6 @@ Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union 
 c.
 Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1270,6 +1343,9 @@ Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 e
   - Number of orbits equals average number of fixed points.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -1362,10 +1438,6 @@ How many isomorphism classes are there of groups of order 45?
 
 Describe a representative from each class.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1375,6 +1447,8 @@ Describe a representative from each class.
 
 :::
 
+:::{.solution}
+\envlist
 
 - It turns out that $n_3 = 1$ and $n_5 = 1$, so $G \cong S_3 \cross S_5$ since both subgroups are normal.
 
@@ -1388,7 +1462,6 @@ Describe a representative from each class.
 - $G \cong \ZZ/(3)^2 \cross \ZZ/(5)$.
 
 :::
-
 
 \todo[inline]{Revisit, seems short.}
 
@@ -1418,10 +1491,6 @@ Prove that any group of order $5^2 \cdot 7^2$ is abelian.
 d.
 Write down exactly one representative in each isomorphism class of groups of order $5^2 \cdot 7^2$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1440,6 +1509,9 @@ Write down exactly one representative in each isomorphism class of groups of ord
 - Classification of finite abelian groups.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Strategy: get $p$ to divide $\abs{Z(G)}$.
@@ -1502,7 +1574,6 @@ Strategy: examine $\abs{G/Z(G)}$ by cases.
 - $\ZZ_{5}^2 \cross \ZZ_{7}^2$
 
 :::
-
 
 :::
 
@@ -1583,17 +1654,11 @@ Prove that $R$ has characteristic 2.
 b.
 Prove that $R$ is commutative.
 
-:::{.solution}
-\envlist
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
-
 
 :::{.strategy}
 \envlist
@@ -1602,6 +1667,9 @@ Prove that $R$ is commutative.
 - Context hint: that we should be considering things like $x^2$ and $a+b$.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \[
@@ -1640,9 +1708,6 @@ there is a prime ideal in $S$.
 c.
 Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1663,8 +1728,8 @@ Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ 
 
 :::
 
-
-
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -1702,14 +1767,6 @@ Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
 
 :::
 
-
-
-
-
-
-
-
-
 :::
 
 ## Spring 2019 #6 $\done$
@@ -1729,10 +1786,6 @@ c.
 Suppose now that $R$ is finite. Show that in this case $J(R)$ consists precisely
 of the nilpotent elements in R.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1746,6 +1799,9 @@ J(R) &\da \intersect _{\mfm \in \mspec} \mfm
 
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Define the set of proper ideals
@@ -1870,11 +1926,6 @@ following:
 \frac{ \frac{ \ZZ}{2\ZZ}[t]}{(t^2 )}
 .\]
 
-:::{.solution}
-
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -1882,10 +1933,13 @@ following:
 - See 1964 Annals "Properties of rings with a finite number of zero divisors"
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
-Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
+\envlist
 
+- Let $\phi$ denote the map in question, it suffices to show that $\phi$ is $R\dash$linear, i.e. $\phi(s\vector x + \vector y) = s\phi(\vector x) + \phi(\vector y)$:
 \[
 \phi(s\vector x + \vector y) 
 &= r(s\vector x + \vector y) \\
@@ -1986,7 +2040,7 @@ R &\cong \ZZ/(2)[t] / (t^2)
 
 ## Spring 2018 #5 $\work$
 Let 
-$\[
+\[
 M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
 \quad \text{and} \quad 
 N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
@@ -2120,7 +2174,7 @@ Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a
 > Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
 
 ## Spring 2014 #6 $\work$
-Let $R$ be a commutative ring with identity and let $n$ be a positive integer.
+ $R$ be a commutative ring with identity and let $n$ be a positive integer.
 
 a.
 Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
@@ -2200,9 +2254,11 @@ Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
 
 ## Spring 2021 #6
 
-a. Carefully state the definition of **Noetherian** for a commutative ring $R$.
+a. 
+Carefully state the definition of **Noetherian** for a commutative ring $R$.
 
-b. Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
+b. 
+Let $R$ be a subset of $\ZZ[x]$ consisting of all polynomials 
 \[
 f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
 \]
@@ -2233,9 +2289,7 @@ Show that $F(\alpha)/F$ has degree 8.
 
 ## Fall 2019 #4 $\done$
 Let $F$ be a finite field with $q$ elements.
-
 Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
-
 Let $E = F [\omega]$ and let $k = [E : F]$.
 
 a.
@@ -2250,16 +2304,16 @@ Prove that $m = k$.
 
 \todo[inline]{Revisit, tricky!}
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
-- Theorem: $F\units$ is always cyclic for $F$ a field.
+- $\FF\units$ is always cyclic for $\FF$ a field.
+- Lagrange: $H\leq G \implies \#H \divides \# G$.
 
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -2316,10 +2370,6 @@ Show that the field extension $\QQ(\zeta_n )$ over $\QQ$ is Galois and prove its
 
 How many subfields are there of $\QQ(\zeta_{20} )$?
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -2338,6 +2388,9 @@ How many subfields are there of $\QQ(\zeta_{20} )$?
   ![image_2021-04-17-02-44-48](figures/image_2021-04-17-02-44-48.png)
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $K = \QQ(\zeta)$. 
 Then $K$ is the splitting field of $f(x) = x^n - 1$, which is irreducible over $\QQ$, so $K/\QQ$ is normal.
@@ -2407,10 +2460,6 @@ Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divid
 b.
 Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -2423,6 +2472,9 @@ Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.proof title="of a"}
 We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
 
@@ -2433,12 +2485,13 @@ So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
 Since $\rho$ is a ring morphism, we have
 
 \[
-\rho(q(x)) = \rho(x^{p^d} - x) = \rho(x)^{p^d} - \rho(x)
-&= 0 \in K \\
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \generators{\pi(x)} \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x \quad\text{"to contain is to divide"}
-.\]
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
+,\]
+  where we've used that "to contain is to divide" in the last step.
 
 
 :::
@@ -2487,10 +2540,6 @@ How many quadratic subfields of $\QQ(\zeta)$ are there?
 c.
 What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 
-
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -2506,6 +2555,9 @@ What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
 - $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $K = \QQ(\zeta)$.
 
@@ -2570,17 +2622,13 @@ If $L/F$ is Galois, then so is $L/K$.
 c.
 If $K/F$ and $L/K$ are both Galois, then so is $L/F$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Every quadratic extension over $\QQ$ is Galois.
 :::
 
-
+:::{.solution}
 Let $L/K/F$.
 
 :::{.proof title="of a"}
@@ -2628,9 +2676,6 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -2638,6 +2683,8 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
@@ -2734,17 +2781,16 @@ $$
 \Gal(K/(E_1 \cap E_2 )) = H_1 H_2
 .$$
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
-- The rough correspondence:
+- The Galois correspondence:
   - $H_1 \intersect H_2 \mapstofrom E_1 E_2$, 
   - $H_1 H_2 \mapstofrom E_1 \intersect E_2$.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of $H_1 \intersect H_2$ is $E_1 E_2$.
@@ -2795,7 +2841,15 @@ All elements in this subset commute.
 :::{.proof title="of c"}
 By the Galois correspondence, the subgroup $H_1H_2 \leq G$ will correspond to an intermediate field $E$ such that $K/E/\QQ$ and $E$ is the fixed field of $H_1 H_2$.
 
-But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so $\sigma(x) = x \iff \tau_1\tau_2(x) = x \iff \tau_2(x) = x ~\&~ \tau_1(x) = x \iff x \in E_1 \intersect E_2$.
+But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an automorphism of $K$ that fixes $E_i$, and so 
+\[
+\sigma(x) = x \iff \tau_1\tau_2(x) = x
+&\iff \tau_2(x) = x 
+\\
+&~\&~ 
+\\
+\tau_1(x) = x &\iff x \in E_1 \intersect E_2
+.\].
 
 :::
 
@@ -3119,10 +3173,74 @@ b. Find the Galois group $G$ of $f$.
 c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 
-## Spring 2021 #7 $\work$
+## Spring 2021 #7 $\done$
 
 Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
 Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
+
+:::{.strategy}
+\envlist
+
+- By contrapositive, show that $f(x) \da x^p-a \in \FF[x]$ reducible $\implies a$ is a $p$th power in $\FF$.
+- Eventually show $a^\ell = b^p$ for some $\ell\in \NN$ and some $b\in \FF$, then $\gcd(\ell, p) = 1$ forces $b=a$ and $\ell=p$.
+- Use the fact that the constant term of any $g\in \FF[x]$ is actually in $\FF$.
+:::
+
+:::{.concept}
+\envlist
+
+- Reducible: $f\in \FF[x]$ is reducible iff there exists $g, h\in \FF[x]$ nonconstant with $f = g h$. 
+  - Importantly, this factorization needs to happen in $\FF[x]$, since we can *always* find such factorizations in the splitting field $\SF(f)[x]$.
+
+- Bezout's identity: $\gcd(p, q) = d \implies$ there exist $s,t\in \ZZ$ such that 
+\[
+sp + tq = d
+.\]
+
+:::
+
+:::{.solution}
+\envlist
+
+- WTS: $f(x) \da x^p - a\in \FF[x]$ reducible $\implies f$ has a root in the *base field* $\FF$.
+- Write $f(x) = g(x) h(x)$ and factor $f(x) = \prod_{i=1}^p (x- r_i) \in \SF(f)[x]$ where the $r_i$ are not necessarily distinct roots.
+- WLOG, $g(x) = \prod_{i=1}^\ell (x-r_i)$ for some $1\leq \ell \leq p-1$, i.e. rearrange the factors so that $g$ is the first $\ell$ of them.
+  - $\ell \neq 1, p$ since $f$ is reducible, making $g, h$ nonconstant.
+
+- Set $R_\ell \da \prod_{i=1}^\ell r_i$, which is the constant term in $g$, so $R_\ell \in \FF$ since $g\in \FF[x]$.
+
+- Each $r_i$ is a root of $f$, so $r_i^p - a = 0$ for all $i$, so $r_i^p = a$.
+
+- Trick: what is the $p$th power of $R_\ell$?
+\[
+R_\ell^p 
+&\da \qty{ \prod_{i=1}^\ell}^p \\
+&= \prod_{i=1}^\ell r_i^p \\
+&= \prod_{i=1}^\ell a \\
+&= a^\ell
+,\]
+  so $R_\ell^p = a^\ell$.
+
+- Use Bezout: $\gcd(\ell, p) = 1$ since $p$ is prime, so write $tp + s\ell = 1$ for some $t,s\in \ZZ$
+
+- Use this to build a root of $f$ that's in $\FF$: write
+\[
+a &= a^1\\
+&= a^{tp + s\ell} \\
+&= a^{tp} a^{s\ell} \\
+&=a^{tp} (a^\ell)^s\\
+&= a^{tp} (R_\ell^p)^s \\
+&= (a^t R_\ell^s)^p \\
+&\da \beta^p
+,\]
+  so $a = \beta^p$.
+
+  - Check $\beta\in \FF$: use that $R_\ell \in \FF$ since it was a constant term of a polynomial in $\FF[x]$, $a\in \FF$ by assumption, and fields are closed under taking powers and products.
+
+
+
+:::
+
 
 ## Fall 2020 #3 $\work$
 
@@ -3137,6 +3255,7 @@ c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
 Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
 Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
 Prove that \( [E: F] \equiv 1 \mod p \).
+
 
 # Modules
 
@@ -3156,16 +3275,14 @@ c.
 Let $M$ be the $\ZZ\dash$module of all roots of unity in $\CC$ under multiplication.
 Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
@@ -3328,15 +3445,14 @@ Give an example where $\Tor(M )$ is not a submodule of $M$.
 c.
 If $R$ has zero-divisors, prove that every non-zero $R\dash$module has non-zero torsion elements.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - One-step submodule test.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 It suffices to show that 
@@ -3398,15 +3514,14 @@ Suppose that M is a non-principal ideal of $R$.
 
 Prove that $M$ is torsion-free of rank 1 but not free.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
@@ -3562,23 +3677,40 @@ Show that any finitely generated $R\dash$module $M$ can be expressed as a direct
 :::{.solution}
 Let $R$ be a ring with 1.
 
-
 :::{.proof title="of a"}
 An $R\dash$module $M$ is **free** if any of the following conditions hold:
 
 - $M$ admits an $R\dash$linearly independent spanning set $\theset{\vector b_\alpha}$, so $$m\in M \implies m = \sum_\alpha r_\alpha \vector b_\alpha$$ and $$\sum_\alpha r_\alpha \vector b_\alpha = 0_M \implies r_\alpha = 0_R$$ for all $\alpha$.
-- $M \cong \bigoplus_{\alpha} R$ are isomorphic as $R\dash$modules.
-- There is a nonempty set $X$ and an inclusion $X\injects M$ such that for every $R\dash$modules $N$, every map $X\to N$ lifts to a unique map $M\to N$, so the following diagram commutes:
+- $M$ admits a decomposition $M \cong \bigoplus_{\alpha} R$ as a direct sum of $R\dash$submodules.
+- There is a nonempty set $X$ an monomorphism $X\injects M$ of sets such that for every $R\dash$module $N$, every set map $X\to N$ lifts to a unique $R\dash$module morphism $M\to N$, so the following diagram commutes:
 
 \begin{tikzcd}
 M \ar[rd, dotted, "\exists ! \tilde f"] & \\
 X \ar[u, hook] \ar[r, "f"] & N
 \end{tikzcd}
 
+Equivalently,
+\[
+\Hom_\Set(X, \Forget(N)) \mapsvia{\sim} \Hom_{\rmod}(M, N)
+.\]
+
+
 :::
 
 :::{.proof title="of b"}
-$M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq 0} \leq M$ is the trivial submodule, where $\ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R$.
+\envlist
+
+- Define the annihilator:
+\[
+\Ann(m) \definedas \theset{r\in R \suchthat r\cdot m = 0_M} \normal R
+.\]
+  - Note that $mR \cong R/\Ann(m)$.
+- Define the torsion submodule:
+\[
+M_t \definedas \theset{m\in M \suchthat \Ann(m) \neq 0} \leq M
+\]
+- $M$ is **torsionfree** iff $M_t = 0$ is the trivial submodule.
+
 :::
 
 :::{.proof title="of c"}
@@ -3589,8 +3721,12 @@ $M$ is **torsionfree** iff $M_t \definedas \theset{m\in M \suchthat \ann(m) \neq
 0 \to N \to M \mapsvia{\pi} F \to 0
 .\]
 
-- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects M$ satisfying the 3rd property from (a).
-  If we construct a map $f: X\to M$, then the universal property of free modules will give a lift $\tilde f: F\to M$
+- Since $F$ is free, there is a generating set $X = \theset{x_\alpha}$ and a map $\iota:X\injects F$ satisfying the 3rd property from (a).
+  - If we construct any map $f: X\to M$, the universal property modules will give a lift $\tilde f: F\to M$
+
+- Identify $X$ with $\iota(X) \subseteq F$. 
+- For every $x\in X$, the preimage $\pi\inv(x)$ is nonempty by surjectivity.
+  So arbitrarily pick any preimage.
 - $\theset{\iota(x_\alpha)} \subseteq F$ and $\pi$ is surjective, so choose fibers $\theset{y_\alpha} \subseteq M$ such that $\pi(y_\alpha) = \iota(x_\alpha)$ and define
 \[
 f: X&\to M \\
@@ -3603,18 +3739,15 @@ x_\alpha &\mapsto y_\alpha
 0 \ar[r]& N \ar[r] & M\ar[r, "\pi"'] & \ar[l, bend right, dotted ,"\exists ! h"'] F \ar[r] & 0
 \end{tikzcd}
 
-- It remains to check that it's a section:
-\[
-f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
-\implies (\pi \circ h)(f) 
-&= \pi \qty{h\qty{\sum_\alpha r_\alpha \iota(x_\alpha) }}  \\
-&= \pi\qty{\sum_\alpha r_\alpha h(\iota(x_\alpha))} \\
-&= \pi\qty{ \sum_\alpha r_\alpha y_\alpha} \\
-&= \sum_\alpha r_\alpha \pi(y_\alpha) \\
-&= \sum_\alpha r_\alpha \iota(x_\alpha) \\
-&\definedas f
-\]
-- Both $\pi\circ h$ and $\id_F$ are two maps that agree on the spanning set $\theset{\iota(x_\alpha)}$, so in fact they are *equal*.
+- It remains to check that it's a section.
+  - Write $f= \sum r_i x_i$, then since both maps are $R\dash$module morphism, by $R\dash$linearity we can write
+  \[
+  (\pi \circ h)(f) 
+  &= (\pi \circ h)\qty{ \sum r_i x_i } \\
+  &= \sum r_i (\pi \circ h)(x_i)
+  ,\]
+  but since $h(x_i) \in \pi\inv(x_i)$, we have $(\pi \circ h)(x_i) = x_i$.
+  So this recovers $f$.
 
 
 :::
@@ -3624,41 +3757,69 @@ f\in F \implies f = \sum_\alpha r_\alpha { \iota(x_\alpha) } \\
 
 - Free implies projective
 
-- Universal property of projective modules: for every surjective $\pi:M\to N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+  - Universal property of **projective** objects: for every epimorphism $\pi:M\surjects N$ and every $f:P\to N$ there exists a unique lift $\tilde f: P\to M$:
+
+  \begin{tikzcd}
+  & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
+  M \ar[r, "\pi"] & N
+  \end{tikzcd}
+
+  - Construct $\phi$ in the following diagram using the same method as above (surjectivity to pick elements in preimage):
 
 \begin{tikzcd}
- & P\ar[d, "f"] \ar[dl, dotted, "\exists ! \tilde f"'] \\
-M \ar[r, "\pi"] & N
+	&& X \\
+	\\
+	&& F \\
+	\\
+	M && N && 0
+	\arrow["\iota", hook, from=1-3, to=3-3]
+	\arrow["f", from=3-3, to=5-3]
+	\arrow["\pi"', two heads, from=5-1, to=5-3]
+	\arrow[from=5-3, to=5-5]
+	\arrow["{\exists \tilde \phi}"', dashed, from=3-3, to=5-1]
+	\arrow["\phi"', curve={height=24pt}, from=1-3, to=5-1]
 \end{tikzcd}
 
-- Take the identity map:
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMCw0LCJNIl0sWzIsNCwiTiJdLFs0LDQsIjAiXSxbMiwyLCJGIl0sWzIsMCwiWCJdLFs0LDMsIlxcaW90YSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMSwiZiJdLFswLDEsIlxccGkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwyXSxbMywwLCJcXGV4aXN0cyBcXHRpbGRlIFxccGhpIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsMCwiXFxwaGkiLDIseyJjdXJ2ZSI6NH1dXQ==)
+
+
+
+- Now take the identity map, then commutativity is equivalent to being a section.
 
 \begin{tikzcd}
- & & & F\ar[d, "\id_F"]\ar[dl, "\exists ! h"'] & \\
+ & & & F\ar[d, "\one_F"]\ar[dl, "\exists ! h"'] & \\
 0 \ar[r] & N\ar[r] & M\ar[r] & F \ar[r] & 0
 \end{tikzcd}
 
 :::
 
-
 :::{.proof title="of d"}
 \envlist
 
-- Claim: if $R$ is a PID and $M$ is a finitely generated $R\dash$module, then $M \cong M_t \oplus M/M_t$ where $M_t \leq M$ is the torsion submodule.
-- Claim: $M/M_t$ is torsionfree, and since a f.g. torsion free module over a PID is free, $M/M_t$ is free.
-  - Let $m+M_t \in M/M_t$ and suppose it is torsion, we will show that is must be the zero coset.
-  - Then there exists an $r\in R$ such that $r(m + M_t) = M_t$
-  - Then $rm + M_t = M_t$, so $rm\in M_t$.
-  - By definition of $M_t$, every element is torsion, so there exists some $s\in R$ such $s(rm) = 0_M$.
-  - Then $(sr)m = 0_M$ which forces $m\in M_t$
-  - Then $m + M_t = M_t$, so $m+ M_t$ is the zero coset.
-- There is a SES
+There is a SES
 
 \begin{tikzcd}
 0 \ar[r] & M_t \ar[r] & M \ar[r] & M/M_t \ar[r] & 0
 \end{tikzcd}
 
-  and since $M/M_t$ is free, by (c) this sequence splits and $M \cong M \oplus M/M_t$.
+
+:::{.claim}
+$M/M_t$ is a free \(R\dash\)module, so this sequence splits and
+$M\cong M_t \oplus {M\over M_t}$, where $M_t$ is a torsion $R\dash$module.
+
+> Note that by the hint, since $R$ is a PID, it suffices to show that $M/M_t$ is torsionfree.
+
+:::
+
+- Let $m+M_t \in M/M_t$ be arbitrary.
+  Suppose this is a torsion element, the claim is that it must be the trivial coset.
+  This will follow if $m\in M_t$
+- Since this is torsion, there exists $r\in R$ such that
+\[
+M_t = r(m + M_t) \da (rm) + M_t \implies rm\in M_t
+.\]
+- Then $rm$ is torsion in $M$, so there exists some $s\in R$ such $s(rm) = 0_M$.
+- Then $(sr)m = 0_M$ which forces $m\in M_t$
 
 :::
 
@@ -3743,7 +3904,6 @@ b. Determine the minimal polynomial of $A$.
 c. Determine the characteristic polynomial of $A$.
 
 
-
 # Linear Algebra: Diagonalizability
 
 ## Fall 2017 #7 $\work$
@@ -3784,9 +3944,6 @@ and that $A^{2019}$ is diagonalizable over $\CC$.
 
 Show that $A$ is also diagonalizable over $\CC$.
 
-:::{.solution}
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -3795,34 +3952,44 @@ Show that $A$ is also diagonalizable over $\CC$.
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.claim}
 If $A \in \Gl(m, \FF)$ is invertible and $A^n/\FF$ is diagonalizable, then $A/\FF$ is diagonalizable.
 :::
 
-Let $A \in \Gl(m, \FF)$. 
-Since $A^n$ is diagonalizable, $\min_{A^n}(x) \in \FF[x]$ is separable and thus factors as a product of $m$ **distinct** linear factors:
 
-$$
+:::{.proof title="of claim"}
+- Let $A \in \Gl(m, \FF)$. 
+- Since $A^n$ is diagonalizable, $\min_{A^n}(x) \in \FF[x]$ is separable and thus factors as a product of $m$ **distinct** linear factors:
+\[
 \min_{A^n}(x) = \prod_{i=1}^m (x-\lambda_i), \quad \min_{A^n}(A^n) = 0
-$$
+\]
 
-where $\theset{\lambda_i}_{i=1}^m \subset \FF$ are the **distinct** eigenvalues of $A^n$.
+  where $\theset{\lambda_i}_{i=1}^m \subset \FF$ are the **distinct** eigenvalues of $A^n$.
 
-Moreover $A\in \GL(m,\FF) \implies A^n \in \GL(m,\FF)$: $A$ is invertible $\iff \det(A) = d \in \FF\units$, and so $\det(A^n) = \det(A)^n = d^n \in \FF\units$ using the fact that the determinant is a ring morphism $\det: \mat (m\times m) \to\FF$ and $\FF\units$ is closed under multiplication.
+- Moreover $A\in \GL(m,\FF) \implies A^n \in \GL(m,\FF)$: $A$ is invertible $\iff \det(A) = d \in \FF\units$, and so $\det(A^n) = \det(A)^n = d^n \in \FF\units$ using the fact that the determinant is a ring morphism $\det: \mat (m\times m) \to\FF$ and $\FF\units$ is closed under multiplication.
 
-So $A^n$ is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so $\lambda_i \neq 0$ for any $i$.
+- So $A^n$ is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so $\lambda_i \neq 0$ for any $i$.
 
-Since the $\lambda_i$ are distinct and nonzero, this implies $x^k$ is not a factor of $\mu_{A^n}(x)$ for any $k\geq 0$. 
+- Since the $\lambda_i$ are distinct and nonzero, this implies $x^k$ is not a factor of $\mu_{A^n}(x)$ for any $k\geq 0$. 
 Thus the $m$ terms in the product correspond to precisely $m$ **distinct linear** factors.
 
-We can now construct a polynomial that annihilates $A$, namely
+- We can now construct a polynomial that annihilates $A$, namely
 $$
 q_A(x) \definedas \min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in \FF[x],
 $$
 
-where we can note that $q_A(A) = \min_{A^n}(A^n) = 0$, and so $\min_A(x) \divides q_A(x)$ by minimality.
+  where we can note that $q_A(A) = \min_{A^n}(A^n) = 0$, and so $\min_A(x) \divides q_A(x)$ by minimality.
 
-We now claim that $q_A(x)$ has exactly $n\cdot m$ distinct linear factors in $\bar \FF[x]$, which reduces to showing that no pair $x^n-\lambda_i, x^n-\lambda_j$ share a root.
+
+:::{.claim}
+$q_A(x)$ has exactly $nm$ distinct linear factors in $\FFbar[x]$
+:::
+
+
+- This reduces to showing that no pair $x^n-\lambda_i, x^n-\lambda_j$ share a root.
 and that $x^n-\lambda_i$ does not have multiple roots.
 
 - For the first claim, we can factor
@@ -3835,6 +4002,10 @@ and that $x^n-\lambda_i$ does not have multiple roots.
 - For the second claim, we can check that $\dd{}{x}\qty{x^n - \lambda_i} = nx^{n-1}\neq 0\in \FF$, and $\gcd(x^n-\lambda_i, nx^{n-1}) = 1$ since the latter term has only the roots $x=0$ with multiplicity $n-1$, whereas $\lambda_i\neq 0 \implies$ zero is not a root of $x^n-\lambda_i$.
 
 But now since $q_A(x)$ has exactly distinct linear factors in $\bar \FF[x]$ and $\min_A(x) \divides q_A(x)$, $\min_A(x) \in \FF[x]$ can only have distinct linear factors, and $A$ is thus diagonalizable over $\FF$.
+
+:::
+
+
 
 :::
 
@@ -3918,16 +4089,16 @@ The form is *nondegenerate* if the only element $w\in V$ satisfying $(v, w) = 0$
 Suppose $(\wait, \wait)$ is a nondegenerate symmetric bilinear form on $V$.
 If $W$ is a subspace of $V$, define
 \[
-W\perp \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
+W^{\perp} \definedas \theset{v\in V \suchthat (v, w) = 0 \text{ for all } w\in W}
 .\]
 
 a.
-Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X\perp \subseteq Y\perp$.
+Show that if $X, Y$ are subspaces of $V$ with $Y\subset X$, then $X^{\perp} \subseteq Y^{\perp}$.
 
 b.
 Define an injective linear map 
 \[
-\psi: Y\perp/X\perp \injects (X/Y)\dual
+\psi: Y^{\perp}/X^{\perp} \injects (X/Y)\dual
 \]
 which is an isomorphism if $V$ is finite dimensional.
 
@@ -3965,17 +4136,12 @@ Suppose that $v$ is a column vector such that the set $\{v, Av, . . . , A^{n-1} 
 b.
 Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A^{n-1} v\}$ is linearly independent $\iff$ the characteristic polynomial of $A$ equals the minimal polynomial of A.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Powers of $A$ commute with polynomials in $A$.
 - The image of a linear map is determined by the image of a basis
 :::
-
 
 :::{.strategy}
 \envlist
@@ -3986,6 +4152,8 @@ Show that there exists a column vector $v$ such that the set $\{v, Av, . . . , A
 - Reduce to monomials.
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Letting $\vector v$ be fixed, since $\theset{A^j \vector v}$ spans $V$ we have A
@@ -4079,25 +4247,30 @@ Prove that $\det M = |\Lambda\dual /\Lambda|$.
 \envlist
 
 :::{.proof title="of a"}
-Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
+\envlist
 
-Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
+- Let $\vector v \in \Lambda$, so $\vector v = \sum_{i=1}^n r_i \vector e_i$ where $r_i \in \ZZ$ for all $i$.
+
+- Then if $\vector x = \sum_{j=1}^n s_j \vector e_j \in \Lambda$ is arbitrary, we have $s_j \in \ZZ$ for all $j$ and 
 \[
 \inner{\vector v}{\vector x} 
 &= \inner{\sum_{i=1}^n r_i \vector e_i}{\sum_{j=1}^n s_j \vector e_j } \\
 &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j \inner{\vector e_i}{\vector e_j }  \in \ZZ
 \]
-
-since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
+  since this is a sum of products of integers (since $\inner{\vector e_i}{\vector e_j} \in \ZZ$ for each $i, j$ pair by assumption) so $\vector v \in \Lambda\dual$ by definition.
 
 :::
 
 :::{.proof title="of b"}
-**The determinant is nonzero**:
 
-Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
 
-Note that 
+:::{.claim}
+The determinant is nonzero.
+:::
+
+- Suppose $\det M = 0$. Then $\ker M \neq \vector 0$, so let $\vector v \in \ker M$ be given by $\vector v = \sum_{i=1}^n v_i \vector e_i \neq \vector 0$. 
+
+- Note that 
 \[
 M\vector v = 0 &\implies
 \left[
@@ -4113,7 +4286,7 @@ v_1 \\ v_2 \\ \vdots
 &\implies \sum_{j=1}^n v_j\inner{\vector e_k}{\vector e_j} = 0 \qtext{for each fixed} k
 .\]
 
-We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
+- We can now note that $\inner{\vector e_k}{\vector v} = \sum_{j=1}^n v_j \inner{\vector e_k}{\vector e_j} = 0$ for every $k$ by the above observation, which forces $\vector v = 0$ by non-degeneracy of $\inner{\wait}{\wait}$, a contradiction. 
 :::
 
 :::{.proof title="of c"}
@@ -4142,15 +4315,15 @@ since $A$ has full rank because the $\vector e_i$ are linearly independent.
 
 Let $A = [\vector e_1^t, \cdots, \vector e_n^t]$ be the matrix with $\vector e_i$ in the $i$th column.
 
-**The rows of $A\inv$ span $\Lambda\dual$**:
 
+:::{.claim}
+The rows of $A\inv$ span $\Lambda\dual$.
 Equivalently, the columns of $A^{-t}$ span $\Lambda\dual$.
+:::
 
-Let $B = A^{-t}$ and let $\vector b_i$ denote the columns of $B$, so $\im B = \spanof{\theset{\vector b_i}}$.
+- Let $B = A^{-t}$ and let $\vector b_i$ denote the columns of $B$, so $\im B = \spanof{\theset{\vector b_i}}$.
 
-
-Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
-
+- Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
 \[
 \vector v \in \Lambda\dual 
 &\implies \inner{\vector e_i}{\vector v} = z_i \in \ZZ \quad \forall i \\
@@ -4159,9 +4332,7 @@ Since $A \in \GL(n, \ZZ)$, $A\inv, A^t, A^{-t} \in \GL(n, \ZZ)$ as well.
 &\implies \vector v \in \im B \\
 &\implies \Lambda\dual \subseteq \im B
 ,\]
-
 and
-
 \[
 B^t A = (A^{-t})^t A = A\inv A = I \\
 \implies \vector b_i \cdot \vector e_j = \delta_{ij} \in \ZZ \\
@@ -4182,10 +4353,6 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 \todo[inline]{Is there a proof without matrices? What if $V$ is infinite dimensional?}
 \todo[inline]{How to extend basis?}
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
@@ -4196,6 +4363,9 @@ If $f(x)$ is irreducible in $F[x]$ and the characteristic of $F$ is 0, show that
 - Characterization of diagonalizability: $T$ is diagonalizable over $F \iff \min_{T, F}$ is squarefree in $\bar{F}[x]$?
 
 :::
+
+:::{.solution}
+\envlist
 
 Let $f$ be the characteristic polynomial of $T$.
 
@@ -4358,7 +4528,8 @@ Find the Jordan canonical form $J$ of $A$.
 
 b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
-You should not need to compute $P\inv$.
+
+  > You should not need to compute $P\inv$.
 
 c.
 Write down the minimal polynomial of $A$.
@@ -4387,24 +4558,17 @@ matrix $P$ such that $P\inv AP$ is in JCF.
 - Eyeball eigenvectors.
 - Coefficients in minimal polynomial: size of largest Jordan block
 - Dimension of eigenspace: number of Jordan blocks
+- We can always read off the *characteristic* polynomial from the spectrum.
 :::
 
-
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
 
-
-:::{.strategy}
-We can always read off the *characteristic* polynomial from the spectrum.
-:::
-
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
@@ -4575,12 +4739,12 @@ A=\left[\begin{array}{lll}{0} & {1} & {-2} \\ {1} & {1} & {-3} \\ {1} & {2} & {-
 \]
 
 a. 
-Find the Jordan canonical form J of A.
+Find the Jordan canonical form $J$ of $A$.
 
 b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
-> You should not need to compute $P\inv$.
+  > You should not need to compute $P\inv$.
 
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
@@ -4648,13 +4812,16 @@ r & 1 & -1 \\
 \in \Mat(3\times 3, \CC)
 .\]
 
-a. Find the Jordan canonical form $J$ of $A$.
+a. 
+Find the Jordan canonical form $J$ of $A$.
 
-b. Find an invertible matrix $P$ such that $J = P \inv A P$.
+b. 
+Find an invertible matrix $P$ such that $J = P \inv A P$.
 
-  *(You should not need to compute $P\inv$)*
+  > You should not need to compute $P\inv$
 
-c. Write down the minimal polynomial of $A$.
+c. 
+Write down the minimal polynomial of $A$.
 
 
 ## Fall 2020 #5 $\work$
