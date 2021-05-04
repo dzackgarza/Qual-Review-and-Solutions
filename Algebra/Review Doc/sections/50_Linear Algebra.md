@@ -336,6 +336,10 @@ But the minimal polynomial is just the largest invariant factor.
 
 ## Matrix Counterexamples
 
+
+:::{.example title="?"}
+:::
+
 :::{.example title="?"}
 A matrix that:
 
@@ -416,28 +420,15 @@ A full-rank matrix that is not diagonalizable:
 :::
 
 :::{.example title="?"}
-Matrix roots of unity:
-
+Matrix roots of unity, i.e. representations of $i$:
 \[
-\sqrt{I_2} =
-\left(
-\begin{array}{cc}
-0 & 1\\
-1 & 0
-\end{array}
-\right)
+M_1 
+\da
+\matt 0 {-1} 1 0 \quad
+M_2
+\da 
+\matt 0 1 {-1} 0
 .\]
-
-\[
-\sqrt{-I_2} =
-\left(
-\begin{array}{cc}
-0 & -1\\
-1 & 0
-\end{array}
-\right)
-.\]
-
 :::
 
 
