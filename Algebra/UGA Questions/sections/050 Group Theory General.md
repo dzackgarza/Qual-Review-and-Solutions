@@ -25,19 +25,22 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
-:::{.solution}
-\envlist
-
-\envlist
 :::{.concept}
 \envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
 - Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
 - Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+:::
+
+:::{.strategy}
+Burnside.
 
 :::
 
+
+:::{.solution}
+\envlist
 
 :::{.proof title="Part a"}
 Strategy: Burnside.

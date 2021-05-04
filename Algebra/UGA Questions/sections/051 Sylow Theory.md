@@ -5,10 +5,6 @@ Let $G$ be a finite group with $n$ distinct conjugacy classes.
 Let $g_1 \cdots g_n$ be representatives of the conjugacy classes of $G$.
 Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
-:::{.solution}
-
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -31,6 +27,9 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.claim title="1"}
 \[
 \abs{h^G} = [G: Z(h)]
@@ -43,7 +42,7 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 .\]
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of claim 2"}
 \envlist
 
 - Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
@@ -56,7 +55,7 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of claim 3"}
 - By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
   \[
   \abs{\union_{g\in G} H^g} 
@@ -88,10 +87,6 @@ $\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \
 - Then $G\subseteq Z(G)$ and $G$ is abelian.
 
 :::
-
-
-
-
 
 :::
 
@@ -204,9 +199,6 @@ Show that $P$ is contained in every Sylow $p\dash$subgroup of $G$.
 b.
 Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or $|G/M | = p^b$ for some $b \leq c$.
 
-:::{.solution}
-\envlist
-
 :::{.concept}
 \envlist
 
@@ -215,6 +207,10 @@ Let $M$ be a maximal proper subgroup of $G$. Show that either $P \subseteq M$ or
 - Lagrange's Theorem: $H\leq G \implies \abs{H} \divides \abs{G}$
 
 :::
+
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
