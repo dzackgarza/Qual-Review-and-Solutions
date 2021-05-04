@@ -438,21 +438,27 @@ M_2
 \[
 \GL_n(\RR) = \ts{ A \st A = \bar{A} } 
 .\]
-
 :::
-
 
 :::{.definition title="Special Linear Group"}
-
-:::
-
+\[
+\SL_n(\CC) \da \ts{ A \st \det A = 1 } 
+.\]
+::
 
 :::{.definition title="Orthogonal Group"}
+\[
+O_n(\CC) \da \ts{ A \st A A^t = I} 
+.\]
 
+Dimension: $n(n-1) / 2$.
 :::
 
 
 :::{.definition title="Special Orthogonal Group"}
+\[
+\SO_n(\RR) = \ts{ A \st  } <++>
+.\]
 
 :::
 
