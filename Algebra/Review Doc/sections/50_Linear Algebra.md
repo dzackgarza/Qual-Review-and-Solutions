@@ -464,8 +464,19 @@ Dimension: $n(n-1) / 2$.
 
 
 :::{.definition title="Unitary Group"}
+\[
+U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
+.\]
+:::
+
+
+:::{.definition title="Special Unitary Group"}
+\[
+\SU_n(\CC) \da \ts{ A \in U_n(\CC) \st \det A = 1  } 
+.\]
 
 :::
+
 
 
 :::{.definition title="Symplectic Group"}
