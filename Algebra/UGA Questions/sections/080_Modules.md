@@ -16,16 +16,14 @@ c.
 Let $M$ be the $\ZZ\dash$module of all roots of unity in $\CC$ under multiplication.
 Show that there is no maximal $\ZZ\dash$submodule of $M$.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 By the correspondence theorem, submodules of $M/N$ biject with submodules $A$ of $M$ containing $N$.
@@ -188,15 +186,14 @@ Give an example where $\Tor(M )$ is not a submodule of $M$.
 c.
 If $R$ has zero-divisors, prove that every non-zero $R\dash$module has non-zero torsion elements.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - One-step submodule test.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 It suffices to show that 
@@ -258,15 +255,14 @@ Suppose that M is a non-principal ideal of $R$.
 
 Prove that $M$ is torsion-free of rank 1 but not free.
 
-:::{.solution}
-
-
-\envlist
 :::{.concept}
 \envlist
 
 - Todo
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 \envlist
