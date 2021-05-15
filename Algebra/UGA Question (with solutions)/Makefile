@@ -1,5 +1,5 @@
 SHELL:=/bin/zsh
-FILENAME="UGA_Algebra_Qual_Questions"
+FILENAME="UGA_Algebra_Qual_Solutions"
 
 ## WARNING: "reset" wipes out this directory!
 TEMP_DIR="/tmp/"
