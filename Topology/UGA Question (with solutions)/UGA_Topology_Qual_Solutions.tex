@@ -1,6 +1,6 @@
 \input{"preamble.tex"}
 
-\addbibresource{UGA\_Topology\_Qual\_Questions.bib}
+\addbibresource{UGA\_Topology\_Qual\_Solutions.bib}
 
 \let\Begin\begin
 \let\End\end
@@ -27,7 +27,7 @@
 
 \title{
 \textbf{
-    Topology Qualifying Exam Questions
+    Topology Qualifying Exam Solutions
   }
   }
 
@@ -102,12 +102,13 @@ Maps}\label{topologies-subspaces-closures-and-maps}}
 \begin{problem}[Fall 2011]
 
 Let \(X\) be a topological space, and \(B \subset A \subset X\). Equip
-\(A\) with the subspace topology, and write \(\operatorname{cl}_X (B)\)
-or \(\operatorname{cl}_A (B)\) for the closure of \(B\) as a subset of,
-respectively, \(X\) or \(A\).
+\(A\) with the subspace topology, and write
+\({ \operatorname{cl}} _X (B)\) or \({ \operatorname{cl}} _A (B)\) for
+the closure of \(B\) as a subset of, respectively, \(X\) or \(A\).
 
 Determine, with proof, the general relationship between
-\(\operatorname{cl}_X (B) \cap A\) and \(\operatorname{cl}_A (B)\)
+\({ \operatorname{cl}} _X (B) \cap A\) and
+\({ \operatorname{cl}} _A (B)\)
 
 \begin{quote}
 I.e., are they always equal? Is one always contained in the other but
@@ -614,23 +615,23 @@ Show stronger statement: this is an iff.
 \item
   Suppose \(S\) is not connected; we then have sets \(A \cup B = S\)
   from above and it suffices to show
-  \(\operatorname{cl}_Y(A) \cap B = A \cap\operatorname{cl}_X(B) = \emptyset\).
+  \({ \operatorname{cl}} _Y(A) \cap B = A \cap{ \operatorname{cl}} _X(B) = \emptyset\).
 \item
   \(A\) is open by assumption and \(Y\setminus A = B\) is closed in
   \(Y\), so \(A\) is clopen.
 \item
   Write
-  \(\operatorname{cl}_Y(A) \coloneqq\operatorname{cl}_X(A) \cap Y\).
+  \({ \operatorname{cl}} _Y(A) \coloneqq{ \operatorname{cl}} _X(A) \cap Y\).
 \item
-  Since \(A\) is closed in \(Y\), \(A = \operatorname{cl}_Y(A)\) by
+  Since \(A\) is closed in \(Y\), \(A = { \operatorname{cl}} _Y(A)\) by
   definition, so
-  \(A = \operatorname{cl}_Y(A) = \operatorname{cl}_X(A) \cap Y\).
+  \(A = { \operatorname{cl}} _Y(A) = { \operatorname{cl}} _X(A) \cap Y\).
 \item
   Since \(A\cap B = \emptyset\), we then have
-  \(\operatorname{cl}_Y(A) \cap B = \emptyset\).
+  \({ \operatorname{cl}} _Y(A) \cap B = \emptyset\).
 \item
   The same argument applies to \(B\), so
-  \(\operatorname{cl}_Y(B) \cap A = \emptyset\).
+  \({ \operatorname{cl}} _Y(B) \cap A = \emptyset\).
 \end{itemize}
 
 \(\impliedby\):
@@ -641,14 +642,15 @@ Show stronger statement: this is an iff.
   Suppose displayed condition holds; given such \(A, B\) we will show
   they are clopen in \(Y\).
 \item
-  Since \(\operatorname{cl}_Y(A) \cap B = \emptyset\), (claim) we have
-  \(\operatorname{cl}_Y(A) = A\) and thus \(A\) is closed in \(Y\).
+  Since \({ \operatorname{cl}} _Y(A) \cap B = \emptyset\), (claim) we
+  have \({ \operatorname{cl}} _Y(A) = A\) and thus \(A\) is closed in
+  \(Y\).
 
   \begin{itemize}
   \tightlist
   \item
     Why?
-    \begin{align*}     \operatorname{cl}_Y(A) &\coloneqq\operatorname{cl}_X(A) \cap Y \\      &= \operatorname{cl}_X(A) \cap\qty{A{\coprod}B} \\      &= \qty{\operatorname{cl}_X(A) \cap A} {\coprod}\qty{\operatorname{cl}_X(A) \cap B} \\     &= A  {\coprod}\qty{\operatorname{cl}_X(A) \cap B}      \quad\text{since } A \subset \operatorname{cl}_Y(A) \\     &= A {\coprod}\qty{\operatorname{cl}_Y(A) \cap B}      \quad \text{since } B \subset Y \\     &= A {\coprod}\emptyset \quad\text{using the assumption} \\     &= A     .\end{align*}
+    \begin{align*}     { \operatorname{cl}} _Y(A) &\coloneqq{ \operatorname{cl}} _X(A) \cap Y \\      &= { \operatorname{cl}} _X(A) \cap\qty{A{\coprod}B} \\      &= \qty{{ \operatorname{cl}} _X(A) \cap A} {\coprod}\qty{{ \operatorname{cl}} _X(A) \cap B} \\     &= A  {\coprod}\qty{{ \operatorname{cl}} _X(A) \cap B}      \quad\text{since } A \subset { \operatorname{cl}} _Y(A) \\     &= A {\coprod}\qty{{ \operatorname{cl}} _Y(A) \cap B}      \quad \text{since } B \subset Y \\     &= A {\coprod}\emptyset \quad\text{using the assumption} \\     &= A     .\end{align*}
   \end{itemize}
 \item
   But \(A = Y\setminus B\) where \(B\) is closed, so \(A\) is open and
@@ -1652,9 +1654,9 @@ Definition: \((X, \tau)\) where \(\tau \subseteq \mathcal P(X)\) is a
 \end{concept}
 
 We can write
-\(\overline{(X, \tau)} = (X {\coprod}{\{\operatorname{pt}\}}, \tau \cup\tau')\)
+\(\overline{(X, \tau)} = (X {\coprod}{\operatorname{pt}}, \tau \cup\tau')\)
 where
-\(\tau' = \left\{{U{\coprod}{\{\operatorname{pt}\}}{~\mathrel{\Big|}~}X-U ~\text{is compact}}\right\}\).
+\(\tau' = \left\{{U{\coprod}{\operatorname{pt}}{~\mathrel{\Big|}~}X-U ~\text{is compact}}\right\}\).
 We need to show that \(T \coloneqq\tau \cup\tau'\) forms a topology.
 
 \begin{itemize}
@@ -2545,9 +2547,9 @@ just conjugate:
 
 Prove the following portion of van Kampen's theorem. If \(X = A\cup B\)
 and \(A\), \(B\), and \(A \cap B\) are nonempty and path connected with
-\({\{\operatorname{pt}\}}\in A \cap B\), then there is a surjection
+\({\operatorname{pt}}\in A \cap B\), then there is a surjection
 \begin{align*}
-\pi_1 (A, {\{\operatorname{pt}\}}) \ast \pi_1 (B, {\{\operatorname{pt}\}}) \to \pi_1 (X, {\{\operatorname{pt}\}})
+\pi_1 (A, {\operatorname{pt}}) \ast \pi_1 (B, {\operatorname{pt}}) \to \pi_1 (X, {\operatorname{pt}})
 .\end{align*}
 
 \hypertarget{spring-15-work-1}{%
@@ -4388,7 +4390,7 @@ identifying \((x, -1)\) with \((y, -1)\) for all \(x, y \in X\).
 \subsubsection{\texorpdfstring{Exercise
 \(\work\)}{Exercise \textbackslash work}}\label{exercise-work}}
 
-Show that for \(A\subseteq X\), \(\operatorname{cl}_X(A)\) is the
+Show that for \(A\subseteq X\), \({ \operatorname{cl}} _X(A)\) is the
 smallest closed subset containing \(A\).
 
 \hypertarget{exercise-done}{%
@@ -4427,7 +4429,7 @@ Show that the diagonal map \(\Delta(x) = (x, x)\) is continuous.
 \(\work\)}{Exercise \textbackslash work}}\label{exercise-work-2}}
 
 Show that if \(A_i \subseteq X\), then
-\(\operatorname{cl}_X(\cup_i A_i) = \cup_i \operatorname{cl}_X(A_i)\).
+\({ \operatorname{cl}} _X(\cup_i A_i) = \cup_i { \operatorname{cl}} _X(A_i)\).
 
 \hypertarget{exercise-work-3}{%
 \subsubsection{\texorpdfstring{Exercise
@@ -4521,15 +4523,15 @@ potentially shorter proof}
 
 Let \(I = [0, 1] = A\cup B\) be a disconnection, so -
 \(A, B \neq \emptyset\) - \(A {\coprod}B = I\) -
-\(\operatorname{cl}_I(A) \cap B = A \cap\operatorname{cl}_I(B) = \emptyset\).
+\({ \operatorname{cl}} _I(A) \cap B = A \cap{ \operatorname{cl}} _I(B) = \emptyset\).
 Let \(a\in A\) and \(b\in B\) where WLOG \(a<b\) - (since either \(a<b\)
 or \(b<a\), and \(a\neq b\) since \(A, B\) are disjoint) Let
 \(K = [a, b]\) and define \(A_K \coloneqq A\cap K\) and
 \(B_K \coloneqq B\cap K\). Now \(A_K, B_K\) is a disconnection of \(K\).
 Let \(s = \sup(A_K)\), which exists since \({\mathbb{R}}\) is complete
-and has the LUB property Claim: \(s \in \operatorname{cl}_I(A_K)\).
+and has the LUB property Claim: \(s \in { \operatorname{cl}} _I(A_K)\).
 Proof: - If \(s\in A_K\) there's nothing to show since
-\(A_K \subset \operatorname{cl}_I(A_K)\), so assume
+\(A_K \subset { \operatorname{cl}} _I(A_K)\), so assume
 \(s\in I\setminus A_K\). - Now let \(N_s\) be an arbitrary neighborhood
 of \(s\), then using ??? we can find an \(\varepsilon>0\) such that
 \(B_\varepsilon(s) \subset N_s\) - Since \(s\) is a supremum, there
@@ -4537,12 +4539,12 @@ exists an \(a\in A_K\) such that \(s-\varepsilon< a\). - But then
 \(a \in B_\varepsilon(s)\) and \(a\in N_s\) with \(a\neq s\). - Since
 \(N_s\) was arbitrary, every \(N_s\) contains a point of \(A_K\) not
 equal to \(s\), so \(s\) is a limit point by definition. Since
-\(s\in \operatorname{cl}_I(A_K)\) and
-\(\operatorname{cl}_I(A_K)\cap B_K = \emptyset\), we have
+\(s\in { \operatorname{cl}} _I(A_K)\) and
+\({ \operatorname{cl}} _I(A_K)\cap B_K = \emptyset\), we have
 \(s\not \in B_K\). Then the subinterval \((x, b] \cap A_K = \emptyset\)
 for every \(x>c\) since \(c \coloneqq\sup A_K\). But since
 \(A_K {\coprod}B_K = K\), we must have \((x, b] \subset B_K\), and thus
-\(s\in \operatorname{cl}_I(B_K)\). Since \(A_K, B_K\) were assumed
+\(s\in { \operatorname{cl}} _I(B_K)\). Since \(A_K, B_K\) were assumed
 disconnecting, \(s\not \in A_K\) But then \(s\in K\) but
 \(s\not\in A_K {\coprod}B_K = K\), a contradiction.
 

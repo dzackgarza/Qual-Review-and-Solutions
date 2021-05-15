@@ -1,3 +1,4 @@
+
 **Preface**
 
 A great deal of credit for this document goes to Mike Usher, who created an initial PDF of past UGA qual questions organized by topic. Here is a list of problems that Mike recommended reviewing during our problem sessions in Spring 2020:
@@ -22,9 +23,9 @@ Usually 30% of the problems on any given qual are related to point-set/general T
 ### Fall '11 \( \work \) {#fall-11-work}
 
 ::: {.problem title="Fall 2011"}
-Let \( X \) be a topological space, and \( B \subset A \subset X \). Equip \( A \) with the subspace topology, and write \( \operatorname{cl}_X (B) \) or \( \operatorname{cl}_A (B) \) for the closure of \( B \) as a subset of, respectively, \( X \) or \( A \).
+Let \( X \) be a topological space, and \( B \subset A \subset X \). Equip \( A \) with the subspace topology, and write \( { \operatorname{cl}} _X (B) \) or \( { \operatorname{cl}} _A (B) \) for the closure of \( B \) as a subset of, respectively, \( X \) or \( A \).
 
-Determine, with proof, the general relationship between \( \operatorname{cl}_X (B) \cap A \) and \( \operatorname{cl}_A (B) \)
+Determine, with proof, the general relationship between \( { \operatorname{cl}} _X (B) \cap A \) and \( { \operatorname{cl}} _A (B) \)
 
 > I.e., are they always equal? Is one always contained in the other but not conversely? Neither?
 :::
@@ -271,24 +272,24 @@ Show stronger statement: this is an iff.
 
 \( \implies \):
 
--   Suppose \( S \) is not connected; we then have sets \( A \cup B = S \) from above and it suffices to show \( \operatorname{cl}_Y(A) \cap B = A \cap\operatorname{cl}_X(B) = \emptyset \).
+-   Suppose \( S \) is not connected; we then have sets \( A \cup B = S \) from above and it suffices to show \( { \operatorname{cl}} _Y(A) \cap B = A \cap{ \operatorname{cl}} _X(B) = \emptyset \).
 -   \( A \) is open by assumption and \( Y\setminus A = B \) is closed in \( Y \), so \( A \) is clopen.
--   Write \( \operatorname{cl}_Y(A) \coloneqq\operatorname{cl}_X(A) \cap Y \).
--   Since \( A \) is closed in \( Y \), \( A = \operatorname{cl}_Y(A) \) by definition, so \( A = \operatorname{cl}_Y(A) = \operatorname{cl}_X(A) \cap Y \).
--   Since \( A\cap B = \emptyset \), we then have \( \operatorname{cl}_Y(A) \cap B = \emptyset \).
--   The same argument applies to \( B \), so \( \operatorname{cl}_Y(B) \cap A = \emptyset \).
+-   Write \( { \operatorname{cl}} _Y(A) \coloneqq{ \operatorname{cl}} _X(A) \cap Y \).
+-   Since \( A \) is closed in \( Y \), \( A = { \operatorname{cl}} _Y(A) \) by definition, so \( A = { \operatorname{cl}} _Y(A) = { \operatorname{cl}} _X(A) \cap Y \).
+-   Since \( A\cap B = \emptyset \), we then have \( { \operatorname{cl}} _Y(A) \cap B = \emptyset \).
+-   The same argument applies to \( B \), so \( { \operatorname{cl}} _Y(B) \cap A = \emptyset \).
 
 \( \impliedby \):
 
 -   Suppose displayed condition holds; given such \( A, B \) we will show they are clopen in \( Y \).
--   Since \( \operatorname{cl}_Y(A) \cap B = \emptyset \), (claim) we have \( \operatorname{cl}_Y(A) = A \) and thus \( A \) is closed in \( Y \).
+-   Since \( { \operatorname{cl}} _Y(A) \cap B = \emptyset \), (claim) we have \( { \operatorname{cl}} _Y(A) = A \) and thus \( A \) is closed in \( Y \).
     -   Why? `\begin{align*}
-        \operatorname{cl}_Y(A) &\coloneqq\operatorname{cl}_X(A) \cap Y \\ 
-        &= \operatorname{cl}_X(A) \cap\qty{A{\coprod}B} \\ 
-        &= \qty{\operatorname{cl}_X(A) \cap A} {\coprod}\qty{\operatorname{cl}_X(A) \cap B} \\
-        &= A  {\coprod}\qty{\operatorname{cl}_X(A) \cap B} 
-        \quad\text{since } A \subset \operatorname{cl}_Y(A) \\
-        &= A {\coprod}\qty{\operatorname{cl}_Y(A) \cap B} 
+        { \operatorname{cl}} _Y(A) &\coloneqq{ \operatorname{cl}} _X(A) \cap Y \\ 
+        &= { \operatorname{cl}} _X(A) \cap\qty{A{\coprod}B} \\ 
+        &= \qty{{ \operatorname{cl}} _X(A) \cap A} {\coprod}\qty{{ \operatorname{cl}} _X(A) \cap B} \\
+        &= A  {\coprod}\qty{{ \operatorname{cl}} _X(A) \cap B} 
+        \quad\text{since } A \subset { \operatorname{cl}} _Y(A) \\
+        &= A {\coprod}\qty{{ \operatorname{cl}} _Y(A) \cap B} 
         \quad \text{since } B \subset Y \\
         &= A {\coprod}\emptyset \quad\text{using the assumption} \\
         &= A
@@ -836,7 +837,7 @@ Definition: \( (X, \tau) \) where \( \tau \subseteq \mathcal P(X) \) is a *topol
 -   \( \left\{{U_i}\right\}_{i\in {\mathbb{N}}} \subseteq \tau \implies \cap_{i\in {\mathbb{N}}} U_i \in \tau \)
 :::
 
-We can write \( \overline{(X, \tau)} = (X {\coprod}{\{\operatorname{pt}\}}, \tau \cup\tau') \) where \( \tau' = \left\{{U{\coprod}{\{\operatorname{pt}\}}{~\mathrel{\Big|}~}X-U ~\text{is compact}}\right\} \). We need to show that \( T \coloneqq\tau \cup\tau' \) forms a topology.
+We can write \( \overline{(X, \tau)} = (X {\coprod}{\operatorname{pt}}, \tau \cup\tau') \) where \( \tau' = \left\{{U{\coprod}{\operatorname{pt}}{~\mathrel{\Big|}~}X-U ~\text{is compact}}\right\} \). We need to show that \( T \coloneqq\tau \cup\tau' \) forms a topology.
 
 -   We have \( \emptyset,X \in \tau \implies \emptyset, X \in \tau \cup\tau' \).
 -   We just need to check that \( \tau' \) is closed under arbitrary unions. Let \( \left\{{U_i}\right\} \subset \tau' \), so \( X-U_i = K_i \) a compact set for each \( i \). Then \( \cup_{i} U_i = \cup_i X- (X-U_i)= \cup_i X - K_i = X - \cup_i K_i \)
@@ -1315,9 +1316,9 @@ e.  Calculate the fundamental group of the one-point union of \( S^1 \times S^1 
 
 ## 3 (Fall '18) \( \work \) {#fall-18-work-2}
 
-Prove the following portion of van Kampen's theorem. If \( X = A\cup B \) and \( A \), \( B \), and \( A \cap B \) are nonempty and path connected with \( {\{\operatorname{pt}\}}\in A \cap B \), then there is a surjection
+Prove the following portion of van Kampen's theorem. If \( X = A\cup B \) and \( A \), \( B \), and \( A \cap B \) are nonempty and path connected with \( {\operatorname{pt}}\in A \cap B \), then there is a surjection
 \[
-\pi_1 (A, {\{\operatorname{pt}\}}) \ast \pi_1 (B, {\{\operatorname{pt}\}}) \to \pi_1 (X, {\{\operatorname{pt}\}})
+\pi_1 (A, {\operatorname{pt}}) \ast \pi_1 (B, {\operatorname{pt}}) \to \pi_1 (X, {\operatorname{pt}})
 .\]
 
 ## 4 (Spring '15) \( \work \) {#spring-15-work-1}
@@ -2372,7 +2373,7 @@ c.  For all \( n \geq 1 \), prove that \( H_{n} (X) \cong H_{n+1} (SX) \).
 
 ### Exercise \( \work \) {#exercise-work}
 
-Show that for \( A\subseteq X \), \( \operatorname{cl}_X(A) \) is the smallest closed subset containing \( A \).
+Show that for \( A\subseteq X \), \( { \operatorname{cl}} _X(A) \) is the smallest closed subset containing \( A \).
 
 ### Exercise \( \done \) {#exercise-done}
 
@@ -2397,7 +2398,7 @@ Show that the diagonal map \( \Delta(x) = (x, x) \) is continuous.
 
 ### Exercise \( \work \) {#exercise-work-2}
 
-Show that if \( A_i \subseteq X \), then \( \operatorname{cl}_X(\cup_i A_i) = \cup_i \operatorname{cl}_X(A_i) \).
+Show that if \( A_i \subseteq X \), then \( { \operatorname{cl}} _X(\cup_i A_i) = \cup_i { \operatorname{cl}} _X(A_i) \).
 
 ### Exercise \( \work \) {#exercise-work-3}
 
@@ -2453,7 +2454,7 @@ Show that \( [0, 1] \) is connected.
 [Reference]`{=tex}(https://sites.math.washington.edu/\~morrow/334_16/connected.pdf) [A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
 :::
 
-Let \( I = [0, 1] = A\cup B \) be a disconnection, so - \( A, B \neq \emptyset \) - \( A {\coprod}B = I \) - \( \operatorname{cl}_I(A) \cap B = A \cap\operatorname{cl}_I(B) = \emptyset \). Let \( a\in A \) and \( b\in B \) where WLOG \( a<b \) - (since either \( a<b \) or \( b<a \), and \( a\neq b \) since \( A, B \) are disjoint) Let \( K = [a, b] \) and define \( A_K \coloneqq A\cap K \) and \( B_K \coloneqq B\cap K \). Now \( A_K, B_K \) is a disconnection of \( K \). Let \( s = \sup(A_K) \), which exists since \( {\mathbb{R}} \) is complete and has the LUB property Claim: \( s \in \operatorname{cl}_I(A_K) \). Proof: - If \( s\in A_K \) there's nothing to show since \( A_K \subset \operatorname{cl}_I(A_K) \), so assume \( s\in I\setminus A_K \). - Now let \( N_s \) be an arbitrary neighborhood of \( s \), then using ??? we can find an \( \varepsilon>0 \) such that \( B_\varepsilon(s) \subset N_s \) - Since \( s \) is a supremum, there exists an \( a\in A_K \) such that \( s-\varepsilon< a \). - But then \( a \in B_\varepsilon(s) \) and \( a\in N_s \) with \( a\neq s \). - Since \( N_s \) was arbitrary, every \( N_s \) contains a point of \( A_K \) not equal to \( s \), so \( s \) is a limit point by definition. Since \( s\in \operatorname{cl}_I(A_K) \) and \( \operatorname{cl}_I(A_K)\cap B_K = \emptyset \), we have \( s\not \in B_K \). Then the subinterval \( (x, b] \cap A_K = \emptyset \) for every \( x>c \) since \( c \coloneqq\sup A_K \). But since \( A_K {\coprod}B_K = K \), we must have \( (x, b] \subset B_K \), and thus \( s\in \operatorname{cl}_I(B_K) \). Since \( A_K, B_K \) were assumed disconnecting, \( s\not \in A_K \) But then \( s\in K \) but \( s\not\in A_K {\coprod}B_K = K \), a contradiction.
+Let \( I = [0, 1] = A\cup B \) be a disconnection, so - \( A, B \neq \emptyset \) - \( A {\coprod}B = I \) - \( { \operatorname{cl}} _I(A) \cap B = A \cap{ \operatorname{cl}} _I(B) = \emptyset \). Let \( a\in A \) and \( b\in B \) where WLOG \( a<b \) - (since either \( a<b \) or \( b<a \), and \( a\neq b \) since \( A, B \) are disjoint) Let \( K = [a, b] \) and define \( A_K \coloneqq A\cap K \) and \( B_K \coloneqq B\cap K \). Now \( A_K, B_K \) is a disconnection of \( K \). Let \( s = \sup(A_K) \), which exists since \( {\mathbb{R}} \) is complete and has the LUB property Claim: \( s \in { \operatorname{cl}} _I(A_K) \). Proof: - If \( s\in A_K \) there's nothing to show since \( A_K \subset { \operatorname{cl}} _I(A_K) \), so assume \( s\in I\setminus A_K \). - Now let \( N_s \) be an arbitrary neighborhood of \( s \), then using ??? we can find an \( \varepsilon>0 \) such that \( B_\varepsilon(s) \subset N_s \) - Since \( s \) is a supremum, there exists an \( a\in A_K \) such that \( s-\varepsilon< a \). - But then \( a \in B_\varepsilon(s) \) and \( a\in N_s \) with \( a\neq s \). - Since \( N_s \) was arbitrary, every \( N_s \) contains a point of \( A_K \) not equal to \( s \), so \( s \) is a limit point by definition. Since \( s\in { \operatorname{cl}} _I(A_K) \) and \( { \operatorname{cl}} _I(A_K)\cap B_K = \emptyset \), we have \( s\not \in B_K \). Then the subinterval \( (x, b] \cap A_K = \emptyset \) for every \( x>c \) since \( c \coloneqq\sup A_K \). But since \( A_K {\coprod}B_K = K \), we must have \( (x, b] \subset B_K \), and thus \( s\in { \operatorname{cl}} _I(B_K) \). Since \( A_K, B_K \) were assumed disconnecting, \( s\not \in A_K \) But then \( s\in K \) but \( s\not\in A_K {\coprod}B_K = K \), a contradiction.
 :::
 
 ## Compactness
