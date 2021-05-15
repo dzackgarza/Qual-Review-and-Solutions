@@ -1,3 +1,4 @@
+
 # Group Theory: General
 
 ## Spring 2020 \#2 \( \work \) {#spring-2020-2-work}
@@ -2785,7 +2786,7 @@ X \ar[u, hook] \ar[r, "f"] & N
 ```
 Equivalently,
 \[
-\mathop{\mathrm{Hom}}_{\mathsf{Set}}(X, {\operatorname{Forget}}(N)) \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{R}{\hbox{-}}\mathsf{Mod}}}(M, N)
+\mathop{\mathrm{Hom}}_{\mathsf{Set}}(X, \mathop{\mathrm{Forget}}(N)) \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{R}{\hbox{-}}\mathsf{Mod}}}(M, N)
 .\]
 :::
 
@@ -3142,7 +3143,7 @@ b.  If \( k\in F[x] \) is nonzero and of degree strictly less than \( g \), then
 
 ## Fall 2015 \#8 \( \work \) {#fall-2015-8-work}
 
-Let \( V \) be a vector space over a field \( F \) and \( V^\vee \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
+Let \( V \) be a vector space over a field \( F \) and \( V {}^{ \check{} } \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
 \[
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) {\quad \operatorname{and} \quad} (v_1, v_2) = (v_2, v_1)
 \]
@@ -3157,7 +3158,7 @@ a.  Show that if \( X, Y \) are subspaces of \( V \) with \( Y\subset X \), then
 
 b.  Define an injective linear map
     \[
-    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y)^\vee
+    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \check{} }
     \]
     which is an isomorphism if \( V \) is finite dimensional.
 
@@ -3281,15 +3282,15 @@ Let \( \cdot \) be a non-degenerate (\( v \cdot w = 0 \) for all \( w \in V \iff
 
 Define the dual of \( \Lambda \) to be
 \[
-\Lambda ^\vee\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
+\Lambda  {}^{ \check{} }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
 \}
 .\]
 
-a.  Show that \( \Lambda \subset \Lambda ^\vee \).
+a.  Show that \( \Lambda \subset \Lambda  {}^{ \check{} } \).
 
-b.  Prove that \( \det M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda^\vee \).
+b.  Prove that \( \det M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda {}^{ \check{} } \).
 
-c.  Prove that \( \det M = |\Lambda^\vee/\Lambda| \).
+c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
 
 ```{=tex}
 \todo[inline]{Todo, missing part (c).}
@@ -3310,7 +3311,7 @@ c.  Prove that \( \det M = |\Lambda^\vee/\Lambda| \).
     &= {\left\langle {\sum_{i=1}^n r_i \mathbf{e}_i},~{\sum_{j=1}^n s_j \mathbf{e}_j } \right\rangle} \\
     &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j } \right\rangle}  \in {\mathbb{Z}}
     \]
-    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda^\vee \) by definition.
+    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda {}^{ \check{} } \) by definition.
 :::
 
 ::: {.proof title="of b"}
@@ -3367,25 +3368,25 @@ since \( A \) has full rank because the \( \mathbf{e}_i \) are linearly independ
 Let \( A = [\mathbf{e}_1^t, \cdots, \mathbf{e}_n^t] \) be the matrix with \( \mathbf{e}_i \) in the \( i \)th column.
 
 ::: {.claim}
-The rows of \( A^{-1} \) span \( \Lambda^\vee \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda^\vee \).
+The rows of \( A^{-1} \) span \( \Lambda {}^{ \check{} } \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda {}^{ \check{} } \).
 :::
 
 -   Let \( B = A^{-t} \) and let \( \mathbf{b}_i \) denote the columns of \( B \), so \( \operatorname{im}B = {\operatorname{span}}{\left\{{\mathbf{b}_i}\right\}} \).
 
 -   Since \( A \in \operatorname{GL}(n, {\mathbb{Z}}) \), \( A^{-1}, A^t, A^{-t} \in \operatorname{GL}(n, {\mathbb{Z}}) \) as well.
     \[
-    \mathbf{v} \in \Lambda^\vee
+    \mathbf{v} \in \Lambda {}^{ \check{} }
     &\implies {\left\langle {\mathbf{e}_i},~{\mathbf{v}} \right\rangle} = z_i \in {\mathbb{Z}}\quad \forall i \\
     &\implies A^t \mathbf{v} = \mathbf{z} \coloneqq[z_1, \cdots, z_n] \in {\mathbb{Z}}^n \\
     &\implies \mathbf{v} = A^{-t} \mathbf{z} \coloneqq B\mathbf{z} \in \operatorname{im}B \\
     &\implies \mathbf{v} \in \operatorname{im}B \\
-    &\implies \Lambda^\vee\subseteq \operatorname{im}B
+    &\implies \Lambda {}^{ \check{} }\subseteq \operatorname{im}B
     ,\]
     and
     \[
     B^t A = (A^{-t})^t A = A^{-1}A = I \\
     \implies \mathbf{b}_i \cdot \mathbf{e}_j = \delta_{ij} \in {\mathbb{Z}}\\
-    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda^\vee
+    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda {}^{ \check{} }
     .\]
 :::
 
