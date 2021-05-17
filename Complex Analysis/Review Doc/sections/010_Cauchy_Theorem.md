@@ -35,27 +35,23 @@ If $f$ is holomorphic on a simply-connected region $\Omega$, then for any closed
 \[  
 \int_{\gamma} f(z) \dz = 0
 .\]
-
-
 :::
-
 
 :::{.slogan}
 Closed path integrals of holomorphic functions vanish.
 :::
 
 
-
 ## Applications of Cauchy's Theorem
 
 :::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
-Suppose $f$ is holomorphic on $\Omega$, then 
+Suppose $f$ is holomorphic on $\Omega$, then for any $z_0 \in \Omega$ and any open disc $\closure{D_R(z_0)}$ such that $\gamma \da \bd \closure{D_R(z_0)} \subseteq \Omega$,
 \[
-f(z) = {1 \over 2\pi i} \oint_{\bd \Omega} {f(\xi) \over \xi-z}\,d\xi
+f(z) = {1 \over 2\pi i} \oint_{\gamma} {f(\xi) \over \xi-z}\,d\xi
 \]
 and
 \[
-\dd{^nf }{z^n}(z) = {n! \over 2\pi i} \int_{\bd \Omega} {f(\xi) \over (\xi - z)^{n+1}} \,d\xi
+\dd{^nf }{z^n}(z) = {n! \over 2\pi i} \int_{\gamma} {f(\xi) \over (\xi - z)^{n+1}} \,d\xi
 .\]
 :::
 
