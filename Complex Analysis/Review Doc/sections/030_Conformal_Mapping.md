@@ -76,6 +76,20 @@ Apply the maximum modulus principle to $f(z)/z$.
 :::
 
 
+:::{.exercise title="?"}
+Show that $\Aut_\CC(\CC) = \ts{ z \mapsto az+b\st a\in \CC\units, b\in \CC }$.
+:::
+
+
+:::{.theorem title="Biholomorphisms of the disc"}
+\[
+\Aut_\CC(\DD) = \ts{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \bar{\alpha} z} }
+.\]
+
+:::
+
+
+
 :::{.theorem title="Cayley Transform"}
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
