@@ -104,53 +104,12 @@ Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
 If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
 :::
 
-
 :::{.theorem title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
 :::
 
 ## Series and Analytic Functions
 
-:::{.proposition title="Power Series are Smooth"}
-Any power series is smooth and its derivatives can be obtained using term-by-term differentiation.
-:::
-
-:::{.proposition title="Uniform Convergence of Series"}
-A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff 
-\[  
-\lim_{n\to \infty} \norm{ \sum_{k\geq n} f_k }_\infty = 0
-.\]
-:::
-
-:::{.theorem title="Weierstrass $M\dash$Test"}
-If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\theset{M_n}$ with $\norm{f_n}_\infty \leq M_n$ and $\sum_{n\in \NN} M_n < \infty$, then $f(x) \definedas \sum_{n\in \NN} f_n(x)$ converges absolutely and uniformly on $\Omega$.
-
-Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
-:::
-
-:::{.proposition title="Exponential is uniformly convergent in discs"}
-$f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
-:::
-
-:::{.proof}
-Apply the estimate
-\[  
-\abs{e^z} \leq \sum {\abs {z}^n \over n!} = e^{\abs{z}}
-.\]
-Now by the $M\dash$test, 
-\[  
-\abs{z} \leq R < \infty \implies \abs{\sum {z^n \over n!}} \leq e^R < \infty
-.\]
-:::
-
-:::{.proposition title="Checking radius of convergence"}
-For a power series $f(z) = \sum a_n z^n$, define $R$ by
-\[  
-{1\over R}\definedas \limsup \abs{a_n}^{1\over n}
-.\]
-
-Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
-:::
 
 ## Others
 
