@@ -1,14 +1,5 @@
 # Unsorted Theorems
 
-:::{.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
-If $f$ is holomorphic on $\Omega$, then 
-\[  
-\int_{\bd \Omega} f(z) \, dz = 0
-.\]
-
-> Slogan: closed path integrals of holomorphic functions vanish.
-
-:::
 
 :::{.theorem title="Morera's Theorem" ref="Morera"}
 If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.

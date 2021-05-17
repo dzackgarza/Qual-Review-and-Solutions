@@ -8,8 +8,6 @@
 .\]
 :::
 
-
-
 :::{.proposition title="Crude integral estimate"}
 Define the *length* of a curve by
 \[
@@ -23,10 +21,25 @@ Then there is an estimate of the following form:
 
 :::
 
-
-:::{.exercise title="?"}
+:::{.exercise title="Primitives imply vanishing integral"}
 Show that if $f$ has a primitive $F$ on $\Omega$ then $\int_\gamma f = 0$ for every closed curve $\gamma \subseteq \Omega$.
 :::
+
+
+:::{.theorem title="Goursat"}
+If $f$ is analytic on a rectangle $R$ with horizontal and vertical sides, then $\int_{\bd R} f = 0$.
+:::
+
+:::{.theorem title="Cauchy's Theorem (Holomorphicity)" ref="CauchyTheorem"}
+If $f$ is holomorphic on $\Omega$, then 
+\[  
+\int_{\bd \Omega} f(z) \, dz = 0
+.\]
+
+> Slogan: closed path integrals of holomorphic functions vanish.
+
+:::
+
 
 
 
