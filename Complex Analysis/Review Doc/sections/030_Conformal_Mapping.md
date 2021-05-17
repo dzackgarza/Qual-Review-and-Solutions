@@ -18,18 +18,30 @@ A bijective holomorphic map automatically has a holomorphic inverse.
 This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
 :::
 
-:::{.definition title="Linear Fractional Transformation"}
+:::{.definition title="Linear fractional transformation / Mobius transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
 T(z) = {az + b \over cz + d}
 ,\]
 where the denominator is assumed to not be a multiple of the numerator.
-
 These have inverses given by
 \[  
 T^{-1}(w) = {dw-b \over -cw + a}
 .\]
 :::
+
+
+
+:::{.proposition title="?"}
+Given any three points $z_1, z_2, z_3$, the following Mobius transformation sends them to $1, 0, \infty$ respectively:
+\[
+f(z) \da { (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
+.\]
+
+:::
+
+
+
 
 
 :::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
