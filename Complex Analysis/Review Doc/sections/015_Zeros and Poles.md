@@ -67,15 +67,13 @@ If $f$ is analytic and not identically zero on $\Omega$ with $f(z_0) = 0$, then 
 f(z) = (z-z_0)^n g(z)
 .\]
 We refer to $z_0$ as a **zero of order $n$**.
-
 :::
 
 
 
-
-
 :::{.definition title="Poles (and associated terminology)"}
-A *pole* $z_0$ of a meromorphic function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
+A *pole* $z_0$ of a function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
+Equivalently, $\lim_{z\to z_0} f(z) = \infty$.
 If there exists an $n$ such that
 \[  
 \lim_{z\to z_0}\qty{z-z_0}^nf(z)
