@@ -119,3 +119,13 @@ Then there exists a branch of $F(z) \da \Log(z)$ such that
 - $F(x) = \log(x)$ for $x\in \RR$ in a neighborhood of $1$.
 :::
 
+
+:::{.example title="?"}
+Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
+\[
+\Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
+.\]
+
+:::
+
+
