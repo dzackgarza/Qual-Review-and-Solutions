@@ -68,6 +68,16 @@ If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, 
 
 ## Power Series
 
+
+:::{.proposition title="Radius of Convergence of Power Series"}
+For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
+\[
+{1\over R} \da \limsup_{k} \abs{a_k}^{1\over k}
+,\]
+then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverges for $\abs{z} > R$.
+Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
+:::
+
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 \[
