@@ -66,10 +66,11 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
 
+
 ## Power Series
 
 
-:::{.proposition title="Radius of Convergence of Power Series"}
+:::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 \[
 {1\over R} \da \limsup_{k} \abs{a_k}^{1\over k}
@@ -77,6 +78,14 @@ For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverges for $\abs{z} > R$.
 Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
 :::
+
+:::{.proposition title="Ratio test"}
+
+:::
+
+\todo[inline]{todo}
+
+
 
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
@@ -88,3 +97,8 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 :::
 
+## Exercises
+
+![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
+
+![](figures/image_2021-05-17-10-27-21.png)
