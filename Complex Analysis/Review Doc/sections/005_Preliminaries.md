@@ -123,7 +123,6 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-
 :::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 \[
@@ -158,11 +157,11 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 :::
 
 
-:::{.theorem title="Taylor's Theorem"}
+:::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
 \[
-f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad$ where $a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
-
+f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
+= {1 \over 2\pi r^n}\int_0^{2\pi} f(z_0 + re^{i\theta})e^{-in\theta} \dtheta
 .\]
 
 :::
