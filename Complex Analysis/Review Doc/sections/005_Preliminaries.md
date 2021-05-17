@@ -66,8 +66,42 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
 
-## Power Series
+### Exercises
 
+:::{.proposition title="Holomorphic functions have harmonic components"}
+If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
+:::
+
+:::{.proposition title="Holomorphic functions are continuous."}
+$f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
+\[  
+f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \converges{h\to 0}\to 0
+.\]
+In this case, $a = f'(z_0)$.
+:::
+
+:::{.proposition title="Cauchy-Riemann implies holomorphic"}
+If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z) = \dd{f}{z} = {1 \over 2} \qty{\dd{}{x} + {1\over i} \dd{}{y}}f$.
+:::
+
+:::{.proposition title="Polar Cauchy-Riemann equations"}
+\[  
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
+.\]
+:::
+
+:::{.proof}
+\hfill
+:::{.concept}
+\hfill
+- See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
+- See problem set 1.
+:::
+- Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
+- Then equate real and imaginary parts.
+:::
+
+## Power Series
 
 :::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
@@ -102,7 +136,7 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 
 :::
 
-## Exercises
+### Exercises
 
 - ![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
 - ![](figures/image_2021-05-17-10-27-21.png)

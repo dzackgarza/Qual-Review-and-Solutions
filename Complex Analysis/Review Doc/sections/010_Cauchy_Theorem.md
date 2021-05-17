@@ -83,19 +83,6 @@ Then
 .\]
 :::
 
-:::{.theorem title="Cayley Transform"}
-The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
-:::
-
-:::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
-If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
-
-1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
-2. $\abs{f'(0)} \leq 1$.
-
-Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
-:::
-
 :::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
 \[
 f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
@@ -117,38 +104,6 @@ Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
 If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
 :::
 
-:::{.proposition title="Holomorphic functions have harmonic components"}
-If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
-:::
-
-:::{.proposition title="Holomorphic functions are continuous."}
-$f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
-\[  
-f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \converges{h\to 0}\to 0
-.\]
-In this case, $a = f'(z_0)$.
-:::
-
-:::{.proposition title="Cauchy-Riemann implies holomorphic"}
-If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z) = \dd{f}{z} = {1 \over 2} \qty{\dd{}{x} + {1\over i} \dd{}{y}}f$.
-:::
-
-:::{.proposition title="Polar Cauchy-Riemann equations"}
-\[  
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
-.\]
-:::
-
-:::{.proof}
-\hfill
-:::{.concept}
-\hfill
-- See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
-- See problem set 1.
-:::
-- Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
-- Then equate real and imaginary parts.
-:::
 
 :::{.theorem title="Open Mapping"}
 Any holomorphic non-constant map is an open map.

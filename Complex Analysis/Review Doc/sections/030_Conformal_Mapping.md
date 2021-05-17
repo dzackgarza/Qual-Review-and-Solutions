@@ -24,6 +24,19 @@ A bijective holomorphic map automatically has a holomorphic inverse.
 This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
 :::
 
+:::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
+If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
+
+1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
+2. $\abs{f'(0)} \leq 1$.
+
+Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+:::
+
+:::{.theorem title="Cayley Transform"}
+The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
+:::
+
 :::{.theorem title="Classification of Conformal Maps"}
 There are 8 major types of conformal maps:
 
