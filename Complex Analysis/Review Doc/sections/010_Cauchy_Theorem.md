@@ -66,6 +66,13 @@ For $z_0 \in D_R(z_0) \subset \Omega$, we have
 where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
 :::
 
+:::{.proof title="of Cauchy's inequality"}
+\envlist
+- Given $z_0\in \Omega$, pick the largest disc $D_R(z_0) \subset \Omega$ and let $C_R = \bd D_R$.
+- Then apply the integral formula.
+:::
+
+
 :::{.slogan}
 The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
 :::
