@@ -34,3 +34,8 @@ As a special case, if $z_0$ is a simple pole of $f$, then
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
 :::
 
+
+:::{.theorem title="The Residue Theorem"}
+Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
+:::
+
