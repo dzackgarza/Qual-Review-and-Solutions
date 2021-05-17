@@ -360,63 +360,56 @@ solutions to any problems, you should attempt the problem on your own.
 
 # Sequences and Series
 
-1.  (June 2013 \#1a) Let
-    $a_n =\sqrt{n}\left(\sqrt{n+1}-\sqrt{n}\right)$. Prove that
-    $\lim_{n\to\infty}a_n=1/2$.
+## (June 2013 \#1a) 
+Let
+$a_n =\sqrt{n}\left(\sqrt{n+1}-\sqrt{n}\right)$. Prove that
+$\lim_{n\to\infty}a_n=1/2$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+## (January 2014 \#2) 
 
-2.  (January 2014 \#2) (a) Produce sequences $\{a_n\},\,\{b_n\}$ of
-    positive real numbers such that
-    $$\liminf_{n\to\infty}(a_nb_n)>\left(\liminf_{n\to\infty} a_n\right) \left(\liminf_{n\to\infty} b_n\right).$$ (b)
-    If $\{a_n\},\,\{b_n\}$ are sequences of positive real numbers and
-    $\{a_n\}$ converges, prove that
-    $$\liminf_{n\to\infty}(a_nb_n)=\left(\lim_{n\to\infty}a_n\right)\left(\liminf_{n\to\infty}b_n\right).$$
+(a) 
+Produce sequences $\{a_n\},\,\{b_n\}$ of
+positive real numbers such that
+$$\liminf_{n\to\infty}(a_nb_n)>\left(\liminf_{n\to\infty} a_n\right) \left(\liminf_{n\to\infty} b_n\right).$$ 
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+(b)
+If $\{a_n\},\,\{b_n\}$ are sequences of positive real numbers and
+$\{a_n\}$ converges, prove that
+$$\liminf_{n\to\infty}(a_nb_n)=\left(\lim_{n\to\infty}a_n\right)\left(\liminf_{n\to\infty}b_n\right).$$
 
-3.  (May 2011 \#4a) Determine the values of $x\in\mathbb{R}$ for which
-    $\displaystyle\sum_{n=1}^\infty \frac{x^n}{1+n|x|^n}$ converges,
-    justifying your answer carefully.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+##  (May 2011 \#4a) 
+Determine the values of $x\in\mathbb{R}$ for which
+$\displaystyle\sum_{n=1}^\infty \frac{x^n}{1+n|x|^n}$ converges,
+justifying your answer carefully.
 
-4.  (June 2005 \#3b) If the series $\sum_{n=0}^\infty a_n$ converges
-    conditionally, show that the radius of convergence of the power
-    series $\sum_{n=0}^\infty a_nx^n$ is 1.
+## (June 2005 \#3b) 
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+If the series $\sum_{n=0}^\infty a_n$ converges
+conditionally, show that the radius of convergence of the power
+series $\sum_{n=0}^\infty a_nx^n$ is 1.
 
-5.  (January 2011 \#5) Suppose $\{a_n\}$ is a sequence of positive real
-    numbers such that $\lim_{n\to\infty}a_n=0$ and $\sum a_n$ diverges.
-    Prove that for all $x>0$ there exist integers $n(1)<n(2)<\ldots$
-    such that $\sum_{k=1}^\infty a_{n(k)}=x$.\
-    
-    > (Note: Many variations on this problem are possible including more
-    general rearrangements. You may also wish to show that if $\sum a_n$
-    converges conditionally then given any $x\in\mathbb{R}$ there is a
-    rearrangement of $\{b_n\}$ of $\{a_n\}$ such that $\sum b_n=r$. See
-    Rudin Thm. 3.54 for a further generalization.)
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+## (January 2011 \#5) 
 
-6.  (June 2008 \# 4b) Assume $\beta >0$, $a_n>0$, $n=1,2,\ldots$, and
-    the series $\sum a_n$ is divergent. Show that
-    $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
+Suppose $\{a_n\}$ is a sequence of positive real
+numbers such that $\lim_{n\to\infty}a_n=0$ and $\sum a_n$ diverges.
+Prove that for all $x>0$ there exist integers $n(1)<n(2)<\ldots$
+such that $\sum_{k=1}^\infty a_{n(k)}=x$.\
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+> (Note: Many variations on this problem are possible including more
+general rearrangements. You may also wish to show that if $\sum a_n$
+converges conditionally then given any $x\in\mathbb{R}$ there is a
+rearrangement of $\{b_n\}$ of $\{a_n\}$ such that $\sum b_n=r$. See
+Rudin Thm. 3.54 for a further generalization.)
+
+
+## (June 2008 \# 4b) 
+
+Assume $\beta >0$, $a_n>0$, $n=1,2,\ldots$, and
+the series $\sum a_n$ is divergent. Show that
+$\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
+
 
 # Continuity of Functions
 
