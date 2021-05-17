@@ -1,5 +1,7 @@
 # Residues
 
+## Computing Residues
+
 :::{.definition title="Toy contour"}
 A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
 :::
@@ -59,6 +61,16 @@ If $\gamma$ is a toy contour, then
 {1\over 2\pi i}\int_\gamma f\dz = \sum_{j=1}^N \Res_{z=z_j}f
 .\]
 
-
 :::
+
+## Argument Principle
+
+:::{.theorem title="Argument Principle"}
+For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then
+\[  
+\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
+,\]
+where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
+:::
+
 

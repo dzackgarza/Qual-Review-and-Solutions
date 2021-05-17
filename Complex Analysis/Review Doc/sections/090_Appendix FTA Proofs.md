@@ -7,13 +7,6 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 :::
 
 
-:::{.theorem title="Argument Principle"}
-For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then
-\[  
-\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
-,\]
-where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
-:::
 
 :::{.theorem title="Rouché's Theorem" ref="Rouche"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
