@@ -57,7 +57,7 @@
 
 - Simplifications:
   - To show something for a measurable set, show it for bounded/compact/elementary sets/
-  - To show something for a function, show it for continuous, bounded, compactly supported, simple, indicator functions, $L^1$, etc
+  - To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, $L^1$, etc
   - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
@@ -472,6 +472,7 @@ The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped wi
 \norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}
 \]
 is a **complete** metric space.
+
 :::
 
 :::{.proof}
@@ -656,13 +657,14 @@ Take $x = 1/n^2$.
 Let all of the following integrals to be over a compact interval $[a, b]$ with $0 \leq a < b$.
 
 Questions to ask:
+
 - Where is/isn't $f$ continuous?
 - Where is/isn't $f$ differentiable?
 - Is $f$ Riemann integrable?
 
 ### The Dirichlet function
 $$
-f ( x ) = b + (a-b)~\indicator{x\in \QQ} = \begin{cases}
+f ( x ) = b + (a-b)~\chi(x\in \QQ) = \begin{cases}
 a, & x\in \QQ \\
 b, & \text{else}
 \end{cases}
@@ -676,7 +678,8 @@ $$
 
 ### Dirichlet with a Continuous Point
 $$
-f ( x ) = x~\indicator{\QQ} = \begin{cases}
+f ( x ) = x~\chi(\QQ) = 
+\begin{cases}
 x, & x\in \QQ \\
 0, & \text{else}
 \end{cases}
@@ -690,7 +693,7 @@ $$
 
 ### Dirichlet with a Differentiable Point
 $$
-f ( x ) = x^2~\indicator{\QQ} = \begin{cases}
+f ( x ) = x^2~\chi(\QQ) = \begin{cases}
 x^2, & x\in \QQ \\
 0, & \text{else}
 \end{cases}
@@ -703,7 +706,7 @@ $$
 
 ### Dirichlet with Two Functions
 $$
-f ( x ) = x~\indicator{\QQ} + (-x)\indicator{\RR-\QQ} = \begin{cases}
+f ( x ) = x~\chi{\QQ} + (-x)\chi(\RR-\QQ) = \begin{cases}
 x, & x\in \QQ \\
 -x, & \text{else}
 \end{cases}
@@ -716,23 +719,26 @@ $$
 
 
 :::{.proof title="of non-integrability"}
-Restrict attention to $[\frac 1 2, 1]$
+Restrict attention to $\tv{\frac 1 2, 1}$
 \[
-\overline{\int_0^1} f &= \inf \theset{ \sum \sup f(x) (x_i - x_{i-1}) } \\
-\sup f(x) = x_i \implies \sum \sup f(x) (x_i - x_{i-1}) &= \sum x_i (x_i - x_{i-1}) \\
+\overline{\int_0^1} f 
+&= \inf \theset{ \sum \sup f(x) (x_i - x_{i-1}) } \\
+\sup f(x) = x_i \implies 
+\sum \sup f(x) (x_i - x_{i-1}) &= \sum x_i (x_i - x_{i-1}) \\
 &> \sum \frac 1 2 (x_i - x_{i-1}) \\
 &= \frac 1 2 \left(\frac 1 2\right) = \frac 1 4 \\
 \implies \overline{\int_0^1} f &\geq \frac 1 4
-\end{align*}
 \]
 and 
 \[
-\underline{\int_0^1} f &= \sup \theset{ \sum \inf f(x) (x_i - x_{i-1})} \\
-\inf f(x) = -x_i \implies \sum \inf f(x) (x_i - x_{i-1}) &= \sum -x_i (x_i - x_{i-1}) \\
+\underline{\int_0^1} f 
+&= \sup \theset{ \sum \inf f(x) (x_i - x_{i-1})} \\
+\inf f(x)= -x_i \implies 
+\sum \inf f(x) (x_i - x_{i-1}) 
+&= \sum -x_i (x_i - x_{i-1}) \\
 &< -\sum \frac 1 2 (x_i - x_{i-1}) \\
 &= -\frac 1 2 \left( \frac 1 2 \right) = -\frac 1 4 \\
 \implies \underline{\int_0^1} f &\leq -\frac 1 4
-\end{align*}
 \]
 So we have $\underline{\int_0^1} f \lneq 0 \lneq \overline{\int_0^1} f$.
 :::
