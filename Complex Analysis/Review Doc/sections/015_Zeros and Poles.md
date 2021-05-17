@@ -118,6 +118,10 @@ and use that it's bounded to conclude that $z_0$ is either removable or a pole f
 :::
 
 
+:::{.definition title="Singularities at infinity"}
+For any $f$ holomorphic on an unbounded region, we say $\infty$ is a singularity (of any of the above types) of $f$ if $z=0$ is a corresponding type of singularity of $g(z) \da f(1/z)$.
+:::
+
 
 
 
