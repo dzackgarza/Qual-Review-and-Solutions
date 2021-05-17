@@ -37,8 +37,18 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 .\]
 :::
 
-:
-::{.definition title="Linear Fractional Transformation"}
+:::{.definition title="Meromorphic"}
+A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
+
+- $\theset{z_n}$ has no limit points in $\Omega$.
+- $f$ is holomorphic in $\Omega\setminus\theset{z_n}$.
+- $f$ has poles at the points $\theset{z_n}$.
+
+If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
+:::
+
+
+:::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
 T(z) = {az + b \over cz + d}
