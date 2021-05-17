@@ -1,4 +1,4 @@
-# Zeros and Poles
+# Zeros and Singularities
 
 :::{.definition title="Meromorphic"}
 A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
@@ -8,6 +8,16 @@ A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\these
 - $f$ has poles at the points $\theset{z_n}$.
 
 If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
+:::
+
+
+:::{.definition title="Isolated singularity"}
+A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$ is defined in a punctured neighborhood $D(z_0)\sm\ts{z_0}$ of $z_0$.
+:::
+
+
+:::{.definition title="Removable Singularities"}
+If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
 :::
 
 :::{.definition title="Poles (and associated terminology)"}
@@ -31,9 +41,6 @@ P_f(z) \definedas \sum_{n=1}^\infty c_{-n}(z-z_0)^{-n}
 The *residue* of $f$ at $z_0$ is the coefficient $c_{-1}$.
 :::
 
-:::{.definition title="Removable Singularities"}
-If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
-:::
 
 :::{.definition title="Essential Singularity"}
 A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
