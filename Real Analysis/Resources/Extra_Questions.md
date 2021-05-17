@@ -22,7 +22,7 @@ limits).
 2.  
 Is $f$ uniformly continuous on $(0,1)$? Justify your answer.
 
-::: {.proof}
+:::{.proof}
 Fix $x\in (0,1)$ and let $\epsilon > 0$. Then we have
 $$\left |f(x) - f(y) \right| 
 = \left|\frac{x}{1-x^2} - \frac{y}{1-y^2}\right| 
@@ -46,7 +46,7 @@ $f$ is continuous on all of $(0,1)$. ◻
 :::
 
 
-::: {.proof}
+:::{.proof}
 *Proof.* We will show that the function $f$ is not uniformly
 continuous. Consider the sequence $(x_n)_{n=1}^\infty$ in
 $(0,1)$ defined by $x_n = \frac{n}{n+1}$. Observe that
@@ -73,13 +73,14 @@ $f(x_n) - f(x_{n+1}) | \not < \epsilon$. Therefore $f(x)$ is not
 uniformly continuous. ◻
 :::
 
-2.  
+##  (May 2016, \#2) 
+
 Let $\{a_k\}_{k=1}^\infty$ be a bounded sequence of real numbers and
 $E$ given by:
 $$E:= \bigg\{s \in \mathbb{R}\, \colon \, \text{ the set } \{k \in \mathbb{N}\, \colon \, a_k \geq s\} \text{ has at most finitely many elements}\bigg\}.$$
 Prove that $\limsup_{k \to \infty} a_k = \inf E$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* Let $e \in E$. As there are only finitely many
 $a_k \geq s$, there exists some $N \in \mathbb{N}$ such that
 $a_k < e$ for all $k \geq N$. Define $T_k := \{a_k : k \geq n\}$. It
@@ -97,13 +98,11 @@ $$\inf E \leq \lim (\sup T_k) = \limsup a_k.$$ We have both
 inequalities, therefore $\limsup a_k = \inf E$. ◻
 :::
 
-3.  
+##  (May 2016, \#3) 
 Assume $(X,d)$ is a compact metric space.
 
 1.  
 Prove that $X$ is both complete and separable.
-
-
 
 2.  
 Suppose $\{x_k\}_{k=1}^\infty \subseteq X$ is a sequence such
@@ -111,14 +110,13 @@ that the series $\sum_{k=1}^\infty d(x_k, x_{k+1})$ converges.
 Prove that the sequence $\{x_k\}_{k=1}^\infty$ converges in $X$.
 
 
-
-4.  
+##  (May 2016, \#4) 
 Suppose that $f \colon [0,2] \to \mathbb{R}$ is continuous on
 $[0,2]$ , differentiable on $(0,2)$, and such that
 $f(0) = f(2) = 0$, $f(c) = 1$ for some $c \in (0,2)$. Prove that
 there exists $x \in (0,2)$ such that $|f'(x)| >1.$
 
-::: {.proof}
+:::{.proof}
 *Proof.* We will consider three cases. First, suppose $c<1$. Then,
 by the mean value theorem, there exists $x\in (0,c)$ such that
 $f'(x)(c-0)=f(c)-f(0)$ so $f'(x)=\frac{f(c)}{c}=\frac{1}{c}>1$ since
@@ -173,7 +171,7 @@ $f \in \mathcal{R}(\alpha)[-1,1]$, i.e., $f$ is Riemann
 integrable with respect to $\alpha$ on $[-1,1]$, and
 $\int_{-1}^1 f d\alpha = 2f(0)$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* Let $\epsilon>0$. Choose $\delta >0$ so that if
 $|x|<\delta$, then $|f(x)-f(0)|<\epsilon$. Let $P$ be a
 partition of $[-1,1]$ with $0 \in P$ and
@@ -191,7 +189,7 @@ such that $\int_0^1 g(x)x^{3k+2} dx = 0$ for all
 $k = 0, 1, 2, \ldots$. Prove that $g(x) =0$ for all
 $x \in [0,1]$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* Since $g(x)$ is continuous, so is $g(x^{1/3})$. Thus by
 the Weierstrauss Approximation Theorem, we can find a sequence
 of polynomials $(p_n(x))\to g(x^{1/3})$ uniformly. Since this
@@ -217,7 +215,7 @@ $$d_{M \times N}((x_1, y_1), (x_2, y_2)) := d_M(x_1, x_2) + d_N(y_1, y_2).$$
 1.  
 Prove that $(M \times N, d_{M \times N})$ is a metric space.
 
-::: {.proof}
+:::{.proof}
 *Proof.* To prove that $(M \times N, d_{M \times N})$ is a
 metric space we must prove that $d_{M\times N}$ is a metric on
 $M \times N$.
@@ -289,7 +287,7 @@ Let $S \subseteq M$ and $T \subseteq N$ be compact sets in
 $(M, d_M)$ and $(N, d_N)$, respectively. Prove that $S \times T$
 is a compact set in $(M \times N, d_{M \times N})$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* By part a we showed that $(M \times N, d_{M \times N})$
 is a metric space. Let $\{s_n,t_n\}$ be a sequence in
 $S \times T.$ Since $\{s_n\}$ is a sequence on a compact set $S$
@@ -346,7 +344,7 @@ compact, and $F\subset X$ be closed. If $K\cap F=\emptyset$, prove
 that there exists an $\epsilon>0$ so that $d(k,f)\geq \epsilon$ for
 all $k\in K$ and $f\in F$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* We prove this by contrapositive. Suppose for all
 $\epsilon >0$, there exists $k \in K$, $f \in F$ such that
 $d(k,f)< \epsilon$. Then for all $n \in \mathbb{N}$, we can choose
@@ -512,7 +510,7 @@ Let $f$ be a continuous real-valued function on
 $[0,1]$. Prove that there exists at least one point $\xi\in[0,1]$
 such that $\int_0^1 x^4 f(x)\,dx=\frac{1}{5}f(\xi)$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* Assume that $f$ is a continuous real-valued function on
 $[0,1]$. Then, by the Intermediate Value Theorem we have that $f$
 attains its maximum and minimum on $[0,1]$. That is, for some
@@ -811,7 +809,7 @@ $f(0) = 0$. Assume that there is a $k > 0$ such that
 $$|f'(x)| \leq k|f(x)|$$ for all $x\in [0,1]$. Prove that $f(x) = 0$
 for all $x\in [0,1]$.
 
-::: {.proof}
+:::{.proof}
 *Proof.* Let $0<\delta_1<1$, and fix $x_1 \in (0, \delta_1]$. Since
 $f(x)$ is differentiable on all of $[0,1]$, $f(x)$ is differentiable
 on all of $(0, \delta_1)$. So by the Mean Value Theorem, there
