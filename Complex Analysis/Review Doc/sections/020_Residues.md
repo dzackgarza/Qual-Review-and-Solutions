@@ -1,8 +1,5 @@
-# Singularities
-
-
-
 # Residues
+
 :::{.remark}
 Check: do you need residues? 
 You may be able to just compute an integral 
@@ -15,7 +12,6 @@ You may be able to just compute an integral
 - Finding a primitive $F$,
 
 - Writing $z= z_0 + re^{i \theta }$
-
 
 :::
 
