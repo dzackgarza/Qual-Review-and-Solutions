@@ -41,7 +41,6 @@ If $f$ is holomorphic on a simply-connected region $\Omega$, then for any closed
 Closed path integrals of holomorphic functions vanish.
 :::
 
-
 ## Applications of Cauchy's Theorem
 
 :::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
@@ -77,10 +76,12 @@ If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle 
 If every integral along a triangle vanishes, implies holomorphic.
 :::
 
-
 :::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
+If $f$ is holomorphic on $D_r(z_0)$ 
 \[
-f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
+f(z_0) 
+= {1\over 2\pi} \int_0^{2\pi} f(z_0 + re^{i\theta}) \dtheta
+= {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 .\]
 
 :::
