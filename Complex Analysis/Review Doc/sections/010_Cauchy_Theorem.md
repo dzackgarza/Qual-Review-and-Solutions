@@ -44,7 +44,6 @@ Closed path integrals of holomorphic functions vanish.
 
 
 
-
 ## Applications of Cauchy's Theorem
 
 ### Integral Formulas and Estimates
