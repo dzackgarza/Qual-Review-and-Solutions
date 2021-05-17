@@ -11,7 +11,7 @@ If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorph
 :::
 
 
-:::{.definition title="Isolated singularity"}
+:::{.definition title="Singularity"}
 A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$ is defined in a punctured neighborhood $D(z_0)\sm\ts{z_0}$ of $z_0$.
 
 There are three types of isolated singularities:
@@ -23,8 +23,35 @@ There are three types of isolated singularities:
 
 
 :::{.definition title="Removable Singularities"}
-If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
+If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
+there exists a holomorphic function $g$ such that $f(z) = g(z)$ in a punctured neighborhood of $z_0$.
+Equivalently,
+\[
+\lim_{z\to \z_0}(z-z_0) f(z) = 0
+.\]
+Equivalently, $f$ is bounded on a neighborhood of $z_0$.
 :::
+
+
+:::{.theorem title="Extension over removable singularities"}
+If $f$ is holomorphic on $\Omega\sm\ts{z_0}$ where $z_0$ is a removable singularity, then there is a unique holomorphic extension of $f$ to all of $\Omega$.
+:::
+
+
+:::{.proof title="?"}
+Take $\gamma$ to be a circle centered at $z_0$ and use
+\[
+f(z) \da \int_\gamma { f(\xi) \over \xi - z} \dxii
+.\]
+This is valid for $z\neq z_0$, but the right-hand side is analytic. (?)
+:::
+
+\todo[inline]{Revisit}
+
+
+
+
+
 
 :::{.definition title="Poles (and associated terminology)"}
 A *pole* $z_0$ of a meromorphic function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
