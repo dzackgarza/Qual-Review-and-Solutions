@@ -31,14 +31,19 @@ If $f$ is analytic on a rectangle $R$ with horizontal and vertical sides, then $
 :::
 
 :::{.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
-If $f$ is holomorphic on $\Omega$, then 
+If $f$ is holomorphic on a simply-connected region $\Omega$, then for any closed path $\gamma \subseteq \Omega$,
 \[  
-\int_{\bd \Omega} f(z) \, dz = 0
+\int_{\gamma} f(z) \dz = 0
 .\]
 
-> Slogan: closed path integrals of holomorphic functions vanish.
 
 :::
+
+
+:::{.slogan}
+Closed path integrals of holomorphic functions vanish.
+:::
+
 
 
 ## Applications of Cauchy's Theorem
