@@ -125,9 +125,12 @@ Commute limit with integral and apply Morera's theorem.
 This can be applied to series of the form $\sum_k f_k(z)$.
 :::
 
+### Symmetric Regions
+
+In this section, take $\Omega$ to be a region symmetric about the real axis, so $z\in \Omega \iff \bar{z} \in \Omega$
 
 :::{.theorem title="Symmetry Principle"}
-
+If $f^+$ is holomorphic on $\Omega^+$ and $f^-$ is holomorphic on $\Omega^-$
 :::
 
 
