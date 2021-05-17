@@ -58,8 +58,18 @@ f(z)
 R_{n}(z)\left(z-z_{0}\right)^{n}
 ,\]
 where $R_n$ is analytic.
+:::
+
+
+:::{.definition title="Zeros"}
+If $f$ is analytic and not identically zero on $\Omega$ with $f(z_0) = 0$, then there exists a nonvanishing holomorphic function $g$ such that 
+\[
+f(z) = (z-z_0)^n g(z)
+.\]
+We refer to $z_0$ as a **zero of order $n$**.
 
 :::
+
 
 
 
