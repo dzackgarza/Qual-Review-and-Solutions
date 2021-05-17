@@ -90,6 +90,7 @@ Convergence
 
 Convolution
 
+- Show that if $f, g$ are continuous and compactly supported, then so is $f\ast g$.
 - Show that if $f\in L^1$ and $g$ is bounded, then  $f\ast g$ is bounded and uniformly continuous.
 - If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 - Show that under any of the following assumptions, $f\ast g$ vanishes at infinity:
