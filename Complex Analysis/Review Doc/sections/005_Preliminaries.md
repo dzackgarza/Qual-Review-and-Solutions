@@ -151,6 +151,16 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 
 :::
 
+
+:::{.theorem title="Taylor's Theorem"}
+\[
+f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad$ where $a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
+
+.\]
+
+:::
+
+
 ### Exercises
 
 :::{.proposition title="Power Series are Smooth"}
