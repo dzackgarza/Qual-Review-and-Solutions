@@ -47,14 +47,17 @@ g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} 
 .\]
 :::
 
-## Plane to Disc
+## By Type
+
+### Plane to Disc
 
 \[
 \phi: \HH &\to \DD \\
 \phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
 .\]
 
-## Sector to Disc
+
+### Sector to Disc
 
 For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
 \[
@@ -70,7 +73,8 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 
 ![](figures/image_2020-07-22-13-22-46.png)
 
-## Strip to Disc
+
+### Strip to Disc
 
 - Map to horizontal strip by rotation $z\mapsto \lambda z$.
 - Map horizontal strip to sector by $z \mapsto e^z$
