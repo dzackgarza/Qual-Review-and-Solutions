@@ -8,7 +8,7 @@ A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists 
 :::{.definition title="Complex Differentiable"}
 A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the following limit exists:
 \[
-{ f(z_0) - f(z) \over z- z_) }
+\lim_{h\to 0} { f(z_0 + h) - f(h) \over h  } 
 .\]
 
 :::
