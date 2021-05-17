@@ -63,6 +63,13 @@ If $\gamma$ is a toy contour, then
 
 :::
 
+### Exercises
+
+![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
+![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
+![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
+![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
+
 ## Argument Principle
 
 :::{.theorem title="Argument Principle"}
@@ -105,12 +112,10 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 
 \todo[inline]{Prove}
 
-### Exercises
 
-![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
-![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
-![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
-![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
+
+### Exercises
+![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
 
 ## Complex Log
 
