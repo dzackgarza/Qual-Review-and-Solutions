@@ -847,4 +847,3 @@ solutions to any problems, you should attempt the problem on your own.
     Otherwise, we set $\delta_1< \frac{1}{k}$ so that $kx_1< 1$. ◻
     :::
 
-
