@@ -91,7 +91,6 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 :::
 
 
-
 ### Others
 
 :::{.theorem title="Riemann Mapping"}
@@ -107,8 +106,6 @@ If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on
 :::{.theorem title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
 :::
-
-## Series and Analytic Functions
 
 
 ## Others
