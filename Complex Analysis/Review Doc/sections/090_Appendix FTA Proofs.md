@@ -1,13 +1,5 @@
 # Unsorted Theorems
 
-
-:::{.theorem title="Morera's Theorem" ref="Morera"}
-If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
-
-> Slogan: if every integral along a triangle vanishes, implies holomorphic.
-
-:::
-
 :::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
 If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
 If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
@@ -18,8 +10,6 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 If $f$ is entire and bounded, $f$ is constant.
 :::
 
-
-:::
 
 :::{.theorem title="Argument Principle"}
 For $f$ meromorphic in $\gamma^\circ$, if $f$ has no poles and is nonvanishing on $\gamma$ then

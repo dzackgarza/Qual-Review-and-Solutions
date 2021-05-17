@@ -65,9 +65,16 @@ For $z_0 \in D_R(z_0) \subset \Omega$, we have
 where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
 :::
 
-
 :::{.slogan}
 The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
+:::
+
+:::{.theorem title="Morera's Theorem" ref="Morera"}
+If $f$ is continuous on a domain $\Omega$ and $\int_T f = 0$ for every triangle $T\subset \Omega$, then $f$ is holomorphic.
+:::
+
+:::{.slogan}
+If every integral along a triangle vanishes, implies holomorphic.
 :::
 
 
