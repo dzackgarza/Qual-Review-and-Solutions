@@ -19,8 +19,11 @@ prove that $f$ is continuous on $(0,1)$. (Note: You are not
 allowed to trivialize the problem by using properties of
 limits).
 
+2.  
+Is $f$ uniformly continuous on $(0,1)$? Justify your answer.
+
 ::: {.proof}
-*Proof.* Fix $x\in (0,1)$ and let $\epsilon > 0$. Then we have
+Fix $x\in (0,1)$ and let $\epsilon > 0$. Then we have
 $$\left |f(x) - f(y) \right| 
 = \left|\frac{x}{1-x^2} - \frac{y}{1-y^2}\right| 
 = \left| \frac{x(1-y^2) - y(1-x^2)}{(1-x^2)(1-y^2)} \right|
@@ -39,10 +42,9 @@ When $x - \delta < y < x + \delta$, $$\begin{aligned}
 
 As our choice of $x\in (0,1)$ was arbitrary, we conclude that
 $f$ is continuous on all of $(0,1)$. ◻
+
 :::
 
-2.  
-Is $f$ uniformly continuous on $(0,1)$? Justify your answer.
 
 ::: {.proof}
 *Proof.* We will show that the function $f$ is not uniformly
