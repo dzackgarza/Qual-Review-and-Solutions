@@ -1,29 +1,6 @@
 # Unsorted Theorems
 
-:::{.theorem title="Maximum Modulus" ref="MaximumModulus"}
-If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
-If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
-Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
-:::
 
-
-
-:::{.theorem title="Rouché's Theorem" ref="Rouche"}
-If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
-
-Alternatively:
-
-Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
-:::
-
-:::{.theorem title="The Residue Theorem"}
-If $f$ is holomorphic on an open set $\Omega$ containing a curve $\gamma$ and its interior $\gamma^\circ$, except for finitely many poles $\theset{z_k}_{k=1}^N \subset \gamma^\circ$.
-Then
-\[  
-\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \res_{z_k} f
-.\]
-:::
 
 
 :::{.theorem title="Riemann Mapping"}
@@ -36,9 +13,6 @@ Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
 If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
 :::
 
-:::{.theorem title="Open Mapping"}
-Any holomorphic non-constant map is an open map.
-:::
 
 
 :::{.theorem title="Little Picard"}
