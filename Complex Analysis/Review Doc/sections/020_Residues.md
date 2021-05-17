@@ -37,5 +37,10 @@ Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
 
 :::{.theorem title="The Residue Theorem"}
 Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
+Then for any $\gamma \in \Omega\sm \ts{ \elts{z}{N} }$, 
+\[
+{1 \over 2\pi i } \int_\gamma f(z) \dz = \sum_{j=1}^N n_\gamma(z_j) \Res_{z=z_j} f
+.\]
+
 :::
 
