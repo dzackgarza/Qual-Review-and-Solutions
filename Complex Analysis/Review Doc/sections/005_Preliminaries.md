@@ -97,8 +97,18 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 :::
 
+
+:::{.theorem title="Abel's Theorem"}
+If $\sum_{k=1}^\infty c_k$ converges, then 
+\[
+\lim_{z\to 1^-} \sum_{k\in \NN} c_k z^k = \sum_{k\in \NN} c_k
+.\]
+
+:::
+
+
 ## Exercises
 
-![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
-
-![](figures/image_2021-05-17-10-27-21.png)
+- ![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
+- ![](figures/image_2021-05-17-10-27-21.png)
+- ![image_2021-05-17-10-29-25](figures/image_2021-05-17-10-29-25.png)
