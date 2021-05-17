@@ -1,4 +1,4 @@
-# Rouche and the Argument Principle
+# Rouche 
 
 ## Counting Zeros 
 
