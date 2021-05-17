@@ -399,7 +399,8 @@ solutions to any problems, you should attempt the problem on your own.
     numbers such that $\lim_{n\to\infty}a_n=0$ and $\sum a_n$ diverges.
     Prove that for all $x>0$ there exist integers $n(1)<n(2)<\ldots$
     such that $\sum_{k=1}^\infty a_{n(k)}=x$.\
-    (Note: Many variations on this problem are possible including more
+    
+    > (Note: Many variations on this problem are possible including more
     general rearrangements. You may also wish to show that if $\sum a_n$
     converges conditionally then given any $x\in\mathbb{R}$ there is a
     rearrangement of $\{b_n\}$ of $\{a_n\}$ such that $\sum b_n=r$. See
@@ -593,7 +594,8 @@ solutions to any problems, you should attempt the problem on your own.
 5.  (June 2005 \#5) Suppose that $f\in C([0,1])$ and that
     $\displaystyle \int_0^1 f(x)x^n\,dx=0$ for all
     $n=99,100,101,\ldots$. Show that $f\equiv 0$.\
-    Note: Many variations on this problem exist. See June 2012 \#6b and
+    
+    > Note: Many variations on this problem exist. See June 2012 \#6b and
     others.
 
     ::: {.proof}
