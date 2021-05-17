@@ -60,12 +60,6 @@ If $f:\CC\to \CC$ is entire and nonconstant, then $\im(f)$ is either $\CC$ or $\
 :::
 \todo{???}
 
-:::{.theorem title="Continuation Principle / Identity Theorem"}
-If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
-
-> Two functions agreeing on a set with a limit point are equal on a domain.
-
-:::
 
 :::{.corollary}
 The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
