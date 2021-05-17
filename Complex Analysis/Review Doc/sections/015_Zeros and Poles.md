@@ -1,7 +1,5 @@
 # Zeros and Singularities
 
-
-
 :::{.definition title="Singularity"}
 A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$ is defined in a punctured neighborhood $D(z_0)\sm\ts{z_0}$ of $z_0$.
 
@@ -73,9 +71,6 @@ Such an $n$ is the *order* of the pole.
 A pole of order 1 is said to be a *simple pole*.
 :::
 
-
-
-
 :::{.definition title="Principal Part and Residue"}
 If $f$ has a pole of order $n$ at $z_0$, then there exist a holomorphic $G$ in a neighborhood of $z_0$ such that
 \[
@@ -132,8 +127,6 @@ Meromorphic functions on $\CC$ are rational functions.
 :::{.proof title="?"}
 Consider $f(z) - P(z)$, subtracting off the principal part at each pole $z_0$, to get a bounded entire function and apply Liouville.
 :::
-
-
 
 
 
