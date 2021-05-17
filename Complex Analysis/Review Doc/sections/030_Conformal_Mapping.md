@@ -14,9 +14,17 @@ T^{-1}(w) = {dw-b \over -cw + a}
 :::
 
 :::{.definition title="Conformal Map / Biholomorphism"}
-A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a. a **biholomorphism**.
-Equivalently, $f'(z) \neq 0$ for any point.
+A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles.
+Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse.
+A bijective conformal map is a **biholomorphism**.
 :::
+
+:::{.remark}
+There is an oft-used weaker condition that $f'(z) \neq 0$ for any point.
+Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may be nonzero derivative.
+For example, take $f(z) = \bar{z}$, so $f(x+iy) = x-iy$ -- this does not satisfy the Cauchy-Riemann equations.
+:::
+
 
 :::{.fact}
 A bijective holomorphic map automatically has a holomorphic inverse.
