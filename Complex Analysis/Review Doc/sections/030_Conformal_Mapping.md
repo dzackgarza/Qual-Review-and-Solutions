@@ -1,10 +1,13 @@
 # Conformal Maps
 
 
+## Linear Fractional Transformations
+
 :::{.definition title="Conformal Map / Biholomorphism"}
 A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles (so $f$ is orientation-preserving).
 Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse.
 A bijective conformal map $f:U\to V$ is called a **biholomorphism**, and we say $U$ and $V$ are **biholomorphic**.
+Self-biholomorphisms of a domain $\Omega$ form a group $\Aut_\CC(\Omega)$.
 :::
 
 :::{.remark}
@@ -37,12 +40,21 @@ Given any three points $z_1, z_2, z_3$, the following Mobius transformation send
 \[
 f(z) \da { (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
 .\]
+Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 
 :::
 
 
+:::{.example title="?"}
+\envlist
+
+- $(z, i, 1, -1): \DD\to \HH$
+- $(z, 0, -1, 1): \DD \intersect \HH \to Q_1$.
+
+:::
 
 
+## Schwarz
 
 :::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
 If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
@@ -50,8 +62,19 @@ If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
 1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
 2. $\abs{f'(0)} \leq 1$.
 
-Moreover, if $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$ or $\abs{f'(0)} = 1$, then $f$ is a rotation
+Moreover, if 
+
+- $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$, or 
+- $\abs{f'(0)} = 1$, 
+
+then $f$ is a rotation.
 :::
+
+
+:::{.proof title="?"}
+Apply the maximum modulus principle to $f(z)/z$.
+:::
+
 
 :::{.theorem title="Cayley Transform"}
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
