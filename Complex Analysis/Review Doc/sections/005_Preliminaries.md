@@ -28,7 +28,7 @@ A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit conve
 .\]
 :::
 
-:::{.example title="holomorphic vs non-holomorphic"}
+:::{.example title="Holomorphic vs non-holomorphic"}
 \envlist
 - $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
 - $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
@@ -66,7 +66,6 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
 
-
 ## Power Series
 
 
@@ -85,8 +84,6 @@ Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f
 
 \todo[inline]{todo}
 
-
-
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 \[
@@ -97,7 +94,6 @@ Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 
 :::
 
-
 :::{.theorem title="Abel's Theorem"}
 If $\sum_{k=1}^\infty c_k$ converges, then 
 \[
@@ -105,7 +101,6 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 .\]
 
 :::
-
 
 ## Exercises
 
