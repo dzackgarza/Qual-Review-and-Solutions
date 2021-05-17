@@ -4,7 +4,6 @@
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
 :::
 
-
 :::{.definition title="Complex Differentiable"}
 A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the following limit exists:
 \[
@@ -13,10 +12,6 @@ A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the follow
 
 :::
 
-\todo[inline]{Check}
-
-
-
 :::{.definition title="Cauchy-Riemann Equations"}
 \[
 u_x = v_y \quad\text{and}\quad u_y = -v_x \\
@@ -24,16 +19,15 @@ u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 .\]
 :::
 
-:::{.definition title="Entire"}
-A function that is holomorphic on $\CC$ is said to be *entire*.
-:::
-
-
 :::{.definition title="Holomorphic"}
 A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit converges:
 \[  
 \lim_{h\to 0} {1\over h} \qty{f(z_0 + h) - f(z_0)} \definedas f'(z_0)
 .\]
+:::
+
+:::{.definition title="Entire"}
+A function that is holomorphic on $\CC$ is said to be *entire*.
 :::
 
 :::{.definition title="Laplacian and Harmonic Functions"}
