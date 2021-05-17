@@ -41,6 +41,12 @@ If $f$ is holomorphic on a simply-connected region $\Omega$, then for any closed
 Closed path integrals of holomorphic functions vanish.
 :::
 
+
+:::{.definition title="Toy contour"}
+
+:::
+
+
 ## Applications of Cauchy's Theorem
 
 ### Integral Formulas and Estimates
