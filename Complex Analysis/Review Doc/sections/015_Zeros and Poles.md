@@ -124,6 +124,18 @@ Equivalently, $f$ is holomorphic on $\Omega$ with a discrete set of points delet
 :::
 
 
+:::{.theorem title="Meromorphic implies rational"}
+Meromorphic functions on $\CC$ are rational functions.
+:::
+
+
+:::{.proof title="?"}
+Consider $f(z) - P(z)$, subtracting off the principal part at each pole $z_0$, to get a bounded entire function and apply Liouville.
+:::
+
+
+
+
 
 
 ## Counting Zeros 
