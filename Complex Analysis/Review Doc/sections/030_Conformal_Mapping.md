@@ -1,5 +1,23 @@
 # Conformal Maps
 
+
+:::{.definition title="Conformal Map / Biholomorphism"}
+A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles (so $f$ is orientation-preserving).
+Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse.
+A bijective conformal map $f:U\to V$ is called a **biholomorphism**, and we say $U$ and $V$ are **biholomorphic**.
+:::
+
+:::{.remark}
+There is an oft-used weaker condition that $f'(z) \neq 0$ for any point.
+Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may be nonzero derivative.
+For example, take $f(z) = \bar{z}$, so $f(x+iy) = x-iy$ -- this does not satisfy the Cauchy-Riemann equations.
+:::
+
+:::{.remark}
+A bijective holomorphic map automatically has a holomorphic inverse.
+This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
+:::
+
 :::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
@@ -13,23 +31,6 @@ T^{-1}(w) = {dw-b \over -cw + a}
 .\]
 :::
 
-:::{.definition title="Conformal Map / Biholomorphism"}
-A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles.
-Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse.
-A bijective conformal map is a **biholomorphism**.
-:::
-
-:::{.remark}
-There is an oft-used weaker condition that $f'(z) \neq 0$ for any point.
-Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may be nonzero derivative.
-For example, take $f(z) = \bar{z}$, so $f(x+iy) = x-iy$ -- this does not satisfy the Cauchy-Riemann equations.
-:::
-
-
-:::{.fact}
-A bijective holomorphic map automatically has a holomorphic inverse.
-This can be weakened: an injective holomorphic map satisfies $f'(z) \neq 0$ and $f ^{-1}$ is well-defined on its range and holomorphic.
-:::
 
 :::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
 If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
