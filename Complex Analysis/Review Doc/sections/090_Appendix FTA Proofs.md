@@ -47,12 +47,6 @@ If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on
 Any holomorphic non-constant map is an open map.
 :::
 
-:::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
-If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
-
-> The image of a disc punctured at an essential singularity is dense in $\CC$.
-
-:::
 
 :::{.theorem title="Little Picard"}
 If $f:\CC\to \CC$ is entire and nonconstant, then $\im(f)$ is either $\CC$ or $\CC\sm\ts{z_0}$ for some point $z_0$.

@@ -100,6 +100,17 @@ A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
 Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
 :::
 
+:::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
+If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
+:::
+
+
+:::{.slogan}
+The image of a punctured disc at an essential singularity is dense in $\CC$.
+:::
+
+
+
 ## Counting Zeros 
 
 :::{.example}
