@@ -5,6 +5,7 @@ Find the Laurent expansion of
 \[
 f(z) = {z + 1 \over z(z-1)}
 \]
+about $z=0$ and $z=1$ respectively.
 
 :::{.solution}
 \hfill
@@ -39,13 +40,12 @@ f(z)
 :::
 
 
-about $z=0$ and $z=1$ respectively.
 
 ## 2 $\done$
 
 Find the Laurent expansions about $z=0$ of the following functions:
 \[
-\exp{1\over z} \hspace{8em} \cos \qty{1\over z}
+e^{1\over z} \hspace{8em} \cos \qty{1\over z}
 .\]
 
 :::{.solution}

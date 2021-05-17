@@ -17,7 +17,7 @@ where $L$ is the part of the circle $|z|=R'$ which lies in the
 region $D$.
 
 
-### 3
+## 3
 If $z\in K$, prove that the function
 $\displaystyle{\frac{1}{F(z)}}$ can be represented as a convergent
 series with respect to $q$: 
