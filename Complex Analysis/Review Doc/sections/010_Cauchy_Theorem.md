@@ -2,25 +2,6 @@
 
 ## Basics
 
-:::{.example title="holomorphic vs non-holomorphic"}
-\envlist
-- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
-- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
-:::
-
-:::{.theorem title="Green's Theorem"}
-If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
-:::
-
-:::{.theorem title="Summation by Parts"}
-Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
-\[
-\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-\]
-
-> Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
-
-:::
 
 ## Holomorphic and Entire Functions
 
