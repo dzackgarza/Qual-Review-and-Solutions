@@ -106,3 +106,16 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 \todo[inline]{Prove}
 
 
+
+## Complex Log
+
+
+:::{.proposition title="Existence of complex log"}
+Suppose $\Omega$ is a simply-connected region such that $1\in \Omega, 0\not\in\Omega$.
+Then there exists a branch of $F(z) \da \Log(z)$ such that
+
+- $F$ is holomorphic on $\Omega$,
+- $e^{F(z)} = z$ for all $z\in \Omega$
+- $F(x) = \log(x)$ for $x\in \RR$ in a neighborhood of $1$.
+:::
+
