@@ -90,16 +90,44 @@ If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on
 .\]
 :::
 
-:::{.proof}
-\hfill
 :::{.concept}
 \hfill
 - See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
 - See problem set 1.
 :::
+
+:::{.proof}
+\envlist
+
 - Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
 - Then equate real and imaginary parts.
 :::
+
+\todo[inline]{proof}
+
+
+:::{.proposition title="Injectivity Relates to Derivatives"}
+If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
+:::
+
+:::{.proof}
+?
+:::
+
+\todo[inline]{proof}
+
+
+:::{.proposition title="Bounded Complex Analytic Functions form a Banach Space"}
+For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC \st f\text{ is bounded}}$ is a Banach space.
+:::
+
+:::{.proof}
+?
+
+> Apply Morera's Theorem and Cauchy's Theorem
+
+:::
+
 
 ## Power Series
 

@@ -2,8 +2,6 @@
 
 ## Holomorphic and Entire Functions
 
-### Key Theorems
-
 :::{.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
 If $f$ is holomorphic on $\Omega$, then 
 \[  
@@ -90,9 +88,6 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 
 :::
 
-
-### Others
-
 :::{.theorem title="Riemann Mapping"}
 If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
 
@@ -107,8 +102,6 @@ If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on
 Any holomorphic non-constant map is an open map.
 :::
 
-
-## Others
 
 :::{.theorem title="Casorati-Weierstrass" ref="Casorati"}
 If $f$ is holomorphic on $\Omega\setminus\theset{z_0}$ where $z_0$ is an essential singularity, then for every $V\subset \Omega\setminus\theset{z_0}$, $f(V)$ is dense in $\CC$.
@@ -138,22 +131,4 @@ The ring of holomorphic functions on a domain in $\CC$ has no zero divisors.
 :::
 \todo[inline]{Find the proof!}
 
-:::{.proposition title="Injectivity Relates to Derivatives"}
-If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
-:::
-
-:::{.proof}
-?
-:::
-
-:::{.proposition title="Bounded Complex Analytic Functions form a Banach Space"}
-For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC \st f\text{ is bounded}}$ is a Banach space.
-:::
-
-:::{.proof}
-?
-
-> Apply Morera's Theorem and Cauchy's Theorem
-
-:::
 
