@@ -86,3 +86,13 @@ f(z_0)
 
 :::
 
+:::{.theorem title="Liouville's Theorem" ref="Liouville"}
+If $f$ is entire and bounded, $f$ is constant.
+:::
+
+
+:::{.proof title="?"}
+Use Cauchy's inequality to show $f'\equiv 0$.
+:::
+
+

@@ -6,9 +6,6 @@ If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar 
 Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
 :::
 
-:::{.theorem title="Liouville's Theorem" ref="Liouville"}
-If $f$ is entire and bounded, $f$ is constant.
-:::
 
 
 :::{.theorem title="Argument Principle"}
