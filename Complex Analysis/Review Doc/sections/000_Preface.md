@@ -1,3 +1,5 @@
+> A great deal of content borrowed from the following: <https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf>
+
 # Useful Techniques
 
 ## Notation
