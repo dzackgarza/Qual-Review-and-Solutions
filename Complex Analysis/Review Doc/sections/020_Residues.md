@@ -1,5 +1,18 @@
 # Residues
 
+:::{.definition title="Toy contour"}
+A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
+:::
+
+
+:::{.definition title="Winding Number"}
+For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
+\[
+n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+.\]
+
+:::
+
 :::{.remark}
 Check: do you need residues? 
 You may be able to just compute an integral 
