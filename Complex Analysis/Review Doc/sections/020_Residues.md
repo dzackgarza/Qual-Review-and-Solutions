@@ -120,12 +120,18 @@ Then there exists a branch of $F(z) \da \Log(z)$ such that
 :::
 
 
-:::{.example title="?"}
+:::{.definition title="Principal branch and exponential"}
 Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
 \[
 \Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
 .\]
-
+Similarly define
+\[
+z^{\alpha} \da e^{\alpha \Log(z)}
+.\]
 :::
+
+
+
 
 
