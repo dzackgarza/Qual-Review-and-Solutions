@@ -94,17 +94,13 @@ solutions to any problems, you should attempt the problem on your own.
 
     1.  Prove that $X$ is both complete and separable.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     2.  Suppose $\{x_k\}_{k=1}^\infty \subseteq X$ is a sequence such
         that the series $\sum_{k=1}^\infty d(x_k, x_{k+1})$ converges.
         Prove that the sequence $\{x_k\}_{k=1}^\infty$ converges in $X$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
 4.  Suppose that $f \colon [0,2] \to \mathbb{R}$ is continuous on
     $[0,2]$ , differentiable on $(0,2)$, and such that
@@ -147,17 +143,13 @@ solutions to any problems, you should attempt the problem on your own.
     1.  Prove that $\{f_n\}_{n=1}^\infty$ converges pointwise on $[0,1]$
         for every $\beta \in \mathbb{R}$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     2.  Show that the convergence in part (a) is uniform for all
         $\beta < \frac{1}{2}$, but not uniform for any
         $\beta \geq \frac{1}{2}$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
 6.  1.  Suppose $f \colon [-1,1] \to \mathbb{R}$ is a bounded function
         that is continuous at $0$. Let $\alpha(x) = -1$ for
@@ -314,18 +306,14 @@ solutions to any problems, you should attempt the problem on your own.
     $d(x_0,K)=\inf_{y\in K} d(x_0,y)$. Prove that there exists a point
     $y_0\in K$ such that $d(x_0,K)=d(x_0,y_0)$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (January 2009, \#4a) Consider the metric space $(\mathbb{Q},d)$
     where $\mathbb{Q}$ denotes the rational numbers and $d(x,y)=|x-y|$.
     Let $E=\{x\in\mathbb{Q}:x>0,\,2<x^2<3\}$. Is $E$ closed and bounded
     in $\mathbb{Q}$? Is $E$ compact in $\mathbb{Q}$?
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  (January 2011 \#3a) Let $(X,d)$ be a metric space, $K\subset X$ be
     compact, and $F\subset X$ be closed. If $K\cap F=\emptyset$, prove
@@ -354,9 +342,7 @@ solutions to any problems, you should attempt the problem on your own.
     for each $x_0 \in X$, the set
     $\{x \in X \, \colon \,  d(x,x_0) = r\}$ is nonempty.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 # Sequences and Series
 
@@ -419,32 +405,24 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     if $f$ and $g$ are differentiable at $x$, then $fg$ is
     differentiable at $x$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (January 2006 \#2b) Assume that $f$ is differentiable at $a$.
     Evaluate
     $$\lim_{x\to a}\frac{a^nf(x)-x^nf(a)}{x-a},\quad n\in\mathbb{N}.$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (June 2007 \#3a) Suppose that $f,g:\mathbb{R}\to\mathbb{R}$ are
     differentiable, that $f(x)\leq g(x)$ for all $x\in\mathbb{R}$, and
     that $f(x_0)=g(x_0)$ for some $x_0$. Prove that $f'(x_0)=g'(x_0)$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  (June 2008 \#3a) Prove that if $f'$ exists and is bounded on
     $(a,b]$, then $\lim_{x\to a^+}f(x)$ exists.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 5.  (January 2012 \#4b, extended) Let $f:\mathbb{R}\to\mathbb{R}$ be a
     differentiable function with $f'\in C(\mathbb{R})$. Assume that
@@ -453,45 +431,35 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     counterexample to show that the assumption $\lim_{x\to\infty}f'(x)$
     exists is necessary.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 6.  (June 2012 \#1a) Suppose that $f:\mathbb{R}\to\mathbb{R}$ satisfies
     $f(0)=0$. Prove that $f$ is differentiable at $x=0$ if and only if
     there is a function $g:\mathbb{R}\to\mathbb{R}$ which is continuous
     at $x=0$ and satisfies $f(x)=xg(x)$ for all $x\in\mathbb{R}$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 # Integral Calculus
 
 1.  (January 2006 \#4b) Suppose that $f$ is continuous and $f(x)\geq 0$
     on $[0,1]$. If $f(0)>0$, prove that $\int_0^1 f(x)dx>0$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (June 2005 \#1b) Use the definition of the Riemann integral to prove
     that if $f$ is bounded on $[a,b]$ and is continuous everywhere
     except for finitely many points in $(a,b)$, then $f\in\mathscr{R}$
     on $[a,b]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (January 2010 \#5) Suppose that $f:[a,b]\to\mathbb{R}$ is
     continuous, $f\geq 0$ on $[a,b]$, and put
     $M=\sup\{f(x):x\in[a,b]\}$. Prove that
     $$\lim_{p\to\infty}\left(\int_a^b f(x)^p\,dx\right)^{1/p}=M.$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  (January 2009 \#4b) Let $f$ be a continuous real-valued function on
     $[0,1]$. Prove that there exists at least one point $\xi\in[0,1]$
@@ -534,27 +502,23 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     where $||\phi''||_\infty = \sup_{[0,1]}|\phi''(x)|.$ Note that $3/2$
     may not be the smallest possible constant.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 6.  (Essentialy June 2013 \#7) Prove
     Theorem [\[thm:d5-alpha\]](#thm:d5-alpha){reference-type="ref"
     reference="thm:d5-alpha"}.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 # Sequences and Series of Functions
 
-1.  (June 2010 \#6a) Let $f:[0,1]\to\mathbb{R}$ be continuous with
+## (June 2010 \#6a) 
+
+Let $f:[0,1]\to\mathbb{R}$ be continuous with
     $f(0)\neq f(1)$ and define $f_n(x)=f(x^n)$. Prove that $f_n$ does
     not converge uniformly on $[0,1]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (January 2008 5a) Let $f_n(x) = \frac{x}{1+nx^2}$ for
     $n \in \mathbb{N}$. Let
@@ -562,17 +526,13 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $[a,b]$ be any compact subset of $\mathbb{R}$. Is $\mathcal{F}$
     equicontinuous? Justify your answer.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (January 2005 \#4, June 2010 \#6b) If $f:[0,1]\to\mathbb{R}$ is
     continuous, prove that
     $$\displaystyle\lim_{n\to\infty}\int_0^1 f(x^n)\,dx=f(0).$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  (January 2020 4a) Let $M<\infty$ and $\mathcal{F} \subseteq C[a,b]$.
     Assume that each $f \in \mathcal{F}$ is differentiable on $(a,b)$
@@ -580,9 +540,7 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $x \in (a,b)$. Prove that $\mathcal{F}$ is equicontinuous on
     $[a,b]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 5.  (June 2005 \#5) Suppose that $f\in C([0,1])$ and that
     $\displaystyle \int_0^1 f(x)x^n\,dx=0$ for all
@@ -591,9 +549,7 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     > Note: Many variations on this problem exist. See June 2012 \#6b and
     others.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 6.  (January 2005 \#3b) Suppose $f_n:[0,1]\to\mathbb{R}$ are continuous
     functions converging uniformly to $f:[0,1]\to\mathbb{R}$. Either
@@ -601,9 +557,7 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $\displaystyle\lim_{n\to\infty}\int_{1/n}^1 f_n(x)\,dx=\int_0^1 f(x)\,dx$
     or give a counterexample.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 # Miscellaneous Topics
 
@@ -613,27 +567,21 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $f \in \text{BV}[a,b]$. Prove $f$ is the difference of two
     increasing functions.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (January 2007, 6a) Let $f$ be a function of bounded variation on
     $[a,b]$. Furthermore, assume that for some $c>0$, $|f(x)| \geq c$ on
     $[a,b]$. Show that $g(x) = 1/f(x)$ is of bounded variation on
     $[a,b]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (January 2017, 2a) Define $f \colon [0,1] \to [-1,1]$ by
     $$f(x):= \begin{cases} x\sin\big({\frac{1}{x}}\big) & 0 < x \leq 1 \\ 0 & x = 0 \end{cases}$$
     Determine, with justification, whether $f$ is if bounded variation
     on the interval $[0,1]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  (January 2020, 6a) Let $\{a_n\}_{n=1}^\infty \subseteq \mathbb{R}$
     and a strictly increasing sequence
@@ -643,18 +591,14 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $$\alpha(x):= \begin{cases} a_n &  x=x_n \\ 0 & \text{otherwise} \end{cases}.$$
     Prove or disprove: $\alpha$ has bounded variation on $[0,1]$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 ## Metric Spaces and Topology {#metric-spaces-and-topology-1 .unnumbered}
 
 1.  Find an example of a metric space $X$ and a subset $E \subseteq X$
     such that $E$ is closed and bounded but not compact.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (May 2017 6) Let $(X,d)$ be a metric space. A function
     $f \colon X \to \mathbb{R}$ is said to be lower semi-continuous
@@ -664,24 +608,18 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $f^{-1}(-\infty, b) = \{x \in X \, \colon \,  f(x)<b\}$ is open in
     $X$ for every $b \in \mathbb{R}$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
     1.  Prove that a function $f \colon X \to \mathbb{R}$ is continuous
         if and only if $f$ is both l.s.c. and u.s.c.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     2.  Prove that $f$ is lower semi-continuous if and only if
         $\liminf_{n \to \infty} f(x_n) \geq f(x)$ whenever
         $\{x_n\}_{n=1}^\infty \subseteq X$ such that $x_n \to x$ in $X$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
 3.  (January 2017 3) Let $(X,d)$ be a compact metric space. Suppose that
     $f_n \colon X \to [0,\infty)$ is a sequence of continuous functions
@@ -689,9 +627,7 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $x \in X$, and such that $f_n \to 0$ pointwise on $X$. Prove that
     $\{f_n\}_{n=1}^\infty$ converges uniformly on $X$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 ## Integral Calculus {#integral-calculus-1 .unnumbered}
 
@@ -703,27 +639,21 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     integrable with respect to $\alpha$ over $[-1,1]$ and that
     $$\int_{-1}^1 f(x)d\alpha(x) = 2f(0).$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 2.  (June 2017 2) Prove : $f \in \mathcal{R}(\alpha)$ on $[a,b]$ if and
     only if for any $a <c<b$, $f \in \mathcal{R}(\alpha)$ on $[a,c]$ and
     on $[c,b]$. In addition, if either condition holds, then we have
     that $$\int_a^c fd\alpha + \int_c^b fd\alpha = \int_a^b fd\alpha.$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (Spring 2017 7) Prove that if $f \in \mathcal{R}$ on $[a,b]$ and
     $\alpha \in C^1[a,b]$, then the Riemann integral
     $\int_a^b f(x)\alpha'(x)dx$ exists and
     $$\int_a^b f(x) d\alpha(x)= \int_a^b f(x)\alpha'(x)dx.$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 ## Sequences and Series (and of Functions) {#sequences-and-series-and-of-functions .unnumbered}
 
@@ -731,74 +661,54 @@ $\displaystyle \sum \frac{a_n}{\beta + a_n}$ is also divergent.
     $\sum_{n=0}^\infty a_nx^n$ and $\sum_{n=0}^\infty b_nx^n$ have radii
     of convergence $R_1$ and $R_2$, respectively.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
     1.  If $R_1 \neq R_2$, prove that the radius of convergence, $R$, of
         the power series $\sum_{n=0}^\infty (a_n+b_n)x^n$ is
         $\min\{R_1, R_2\}$. What can be said about $R$ when $R_1 = R_2$?
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     2.  Prove that the radius of convergence, $R$, of
         $\sum_{n=0}^\infty a_nb_nx^n$ satisfies $R \geq R_1R_2$. Show by
         means of example that this inequality can be strict.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
 2.  Show that the infinite series $\sum_{n=0}^\infty x^n2^{-nx}$
     converges uniformly on $[0,B]$ for any $B > 0$. Does this series
     converge uniformly on $[0,\infty)$?
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 3.  (January 2006 4a) Let
     $$f_n(x) = \begin{cases} \frac{1}{n}  & x \in (\frac{1}{2^{n+1}}, \frac{1}{2^n}] \\ 0 & \text{ otherwise}.\end{cases}$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
     Show that $\sum_{n=1}^\infty f_n$ does not satisfy the Weierstrass
     M-test but that it nevertheless converges uniformly on $\mathbb{R}$.
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
 4.  Let $f_n \colon [0,1) \to \mathbb{R}$ be the function defined by
     $$f_n(x):= \sum_{k=1}^n \frac{x^k}{1+x^k}.$$
 
-    ::: {.proof}
-    *Proof.* ◻
-    :::
+    
 
     1.  Prove that $f_n$ converges to a function
         $f \colon [0,1) \to \mathbb{R}$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     2.  Prove that for every $0 < a < 1$ the convergence is uniform on
         $[0,a]$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
     3.  Prove that $f$ is differentiable on $(0,1)$.
 
-        ::: {.proof}
-        *Proof.* ◻
-        :::
+        
 
 ## January 2019 Qualifying Exam {#january-2019-qualifying-exam .unnumbered}
 
