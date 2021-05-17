@@ -80,23 +80,23 @@ f(z) = \qty{z-z_0}^{-n} h(z)
 .\]
 Such an $n$ is the *order* of the pole.
 A pole of order 1 is said to be a *simple pole*.
-
-The pole $z_0$ is *isolated* iff there exists a neighborhood of $z_0$ containing no other poles of $f$.
 :::
 
+
+
+
 :::{.definition title="Principal Part and Residue"}
-In a Laurent series $f(z) \definedas \sum_{n\in \ZZ} c_n (z-z_0)^n$, the *principal part of $f$ at $z_0$* consists of terms with negative degree:
-\[  
-P_f(z) \definedas \sum_{n=1}^\infty c_{-n}(z-z_0)^{-n}
+If $f$ has a pole of order $n$ at $z_0$, then there exist a holomorphic $G$ in a neighborhood of $z_0$ such that
+\[
+f(z) = {a_{-n} \over (z-z_0)^n } + \cdots + {a_{-1} \over z-z_0} + G(z) \da P(z) + G(z)
 .\]
 
-The *residue* of $f$ at $z_0$ is the coefficient $c_{-1}$.
+The term $P(z)$ is referred to as the *principal part of $f$ at $z_0$* consists of terms with negative degree, and the *residue* of $f$ at $z_0$ is the coefficient $a_{-1}$.
 :::
 
 
 :::{.definition title="Essential Singularity"}
 A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
-
 Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
 :::
 
