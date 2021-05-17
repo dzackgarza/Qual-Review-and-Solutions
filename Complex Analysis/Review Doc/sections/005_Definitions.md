@@ -28,7 +28,7 @@ A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit conve
 .\]
 :::
 
-:::{.definition title="Harmonic"}
+:::{.definition title="Laplacian and Harmonic Functions"}
 A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanishes:
 \[  
 \Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
@@ -88,6 +88,8 @@ A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a.
 
 Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
 :::
+
+
 
 
 
