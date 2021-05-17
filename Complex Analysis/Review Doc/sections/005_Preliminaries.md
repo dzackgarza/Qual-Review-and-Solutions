@@ -45,7 +45,6 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 .\]
 :::
 
-
 :::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
@@ -64,7 +63,6 @@ A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a.
 
 Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
 :::
-
 
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$

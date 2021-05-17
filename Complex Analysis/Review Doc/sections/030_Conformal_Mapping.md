@@ -1,5 +1,24 @@
 # Conformal Maps
 
+:::{.definition title="Linear Fractional Transformation"}
+A map of the following form is a *linear fractional transformation*:
+\[  
+T(z) = {az + b \over cz + d}
+,\]
+where the denominator is assumed to not be a multiple of the numerator.
+
+These have inverses given by
+\[  
+T^{-1}(w) = {dw-b \over -cw + a}
+.\]
+:::
+
+:::{.definition title="Conformal Map / Biholomorphism"}
+A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a. a **biholomorphism**.
+
+Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
+:::
+
 
 :::{.fact}
 A bijective holomorphic map automatically has a holomorphic inverse.
