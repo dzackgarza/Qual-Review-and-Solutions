@@ -1,8 +1,21 @@
-# Definitions
+# Preliminaries
 
 :::{.definition title="Analytic"}
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
 :::
+
+
+:::{.definition title="Complex Differentiable"}
+A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the following limit exists:
+\[
+{ f(z_0) - f(z) \over z- z_) }
+.\]
+
+:::
+
+\todo[inline]{Check}
+
+
 
 :::{.definition title="Cauchy-Riemann Equations"}
 \[
@@ -15,11 +28,6 @@ u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 A function that is holomorphic on $\CC$ is said to be *entire*.
 :::
 
-:::{.definition title="Essential Singularity"}
-A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
-
-Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
-:::
 
 :::{.definition title="Holomorphic"}
 A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit converges:
@@ -70,7 +78,13 @@ The *residue* of $f$ at $z_0$ is the coefficient $c_{-1}$.
 If $z_0$ is a singularity of $f$ and there exists a $g$ such that $f(z) = g(z)$ for all $z$ in some deleted neighborhood $U\setminus\theset{z_0}$, then $z_0$ is a *removable singularity* of $f$.
 :::
 
-:::{.definition title="Linear Fractional Transformation"}
+:::{.definition title="Essential Singularity"}
+A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
+
+Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
+:::
+:
+::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
 \[  
 T(z) = {az + b \over cz + d}
