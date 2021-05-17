@@ -127,12 +127,25 @@ This can be applied to series of the form $\sum_k f_k(z)$.
 
 ### Symmetric Regions
 
-In this section, take $\Omega$ to be a region symmetric about the real axis, so $z\in \Omega \iff \bar{z} \in \Omega$
+In this section, take $\Omega$ to be a region symmetric about the real axis, so $z\in \Omega \iff \bar{z} \in \Omega$.
+Partition this set as $\Omega^+ \subseteq \HH, I \subseteq \RR, \Omega^- \subseteq \bar{\HH}$.
 
 :::{.theorem title="Symmetry Principle"}
-If $f^+$ is holomorphic on $\Omega^+$ and $f^-$ is holomorphic on $\Omega^-$
-:::
+Suppose that $f^+$ is holomorphic on $\Omega^+$ and $f^-$ is holomorphic on $\Omega^-$, and $f$ extends continuously to $I$ with $f^+(x) = f^-(x)$ for $x\in I$.
+Then the following piecewise-defined function is holomorphic on $\Omega$:
+\[
+f(z) 
+\da
+\begin{cases}
+f^+(z) & z\in \Omega^+ 
+\\
+f^-(z) & z\in \Omega^-
+\\
+f^+(z) = f^-(z) & z\in I.
+\end{cases}
+\]
 
+:::
 
 
 
