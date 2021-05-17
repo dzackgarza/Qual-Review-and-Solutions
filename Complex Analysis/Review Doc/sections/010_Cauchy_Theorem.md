@@ -103,7 +103,6 @@ Apply Improved Taylor Theorem?
 
 
 
-
 ## Morera
 
 :::{.theorem title="Morera's Theorem" ref="Morera"}
