@@ -134,4 +134,12 @@ z^{\alpha} \da e^{\alpha \Log(z)}
 
 
 
+:::{.theorem title="Existence of log"}
+If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
+\[
+f(z) = e^{G(z)}
+.\]
+
+:::
+
 
