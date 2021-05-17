@@ -114,11 +114,20 @@ A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n
 Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 :::
 
+
+:::{.proposition title="?"}
+Any two cosets $xH, yH$ are either identical or disjoint.
+:::
+
 :::{.theorem title="The Fundamental Theorem of Cosets"}
 \[
-aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset
+aH = bH \iff a\inv b \in H \iff b\inv a\in H
 .\]
 :::
+
+\todo[inline]{Prove this}
+
+
 
 :::{.theorem title="Counting Quotients"}
 If $H\normal G$, then
@@ -141,8 +150,18 @@ If $H\normal G$, then
 ### Cyclic Groups
 
 :::{.theorem title="Subgroups of Cyclic Groups"}
-If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
+$G$ is cyclic of order $n \da \# G$ iff $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
 :::
+
+
+:::{.proof title="?"}
+$\impliedby$:
+Use that $\sum_{d\divides n} \phi(d) = n$, and that there are at most $\phi(d)$ elements of order $d$, forcing equality.
+
+$\implies$:
+If $G = \gens{ a }$ with $a^n=e$, then for each $d\divides n$ take $H_d \da \gens{ a^{n\over d} }$ for existence.
+:::
+
 
 
 ### The Symmetric Group
@@ -200,7 +219,14 @@ A_4 =
 ## Counting Theorems
 
 :::{.theorem title="Lagrange's Theorem"}
+Version 1:
 \[H \leq G \implies \abs H \divides \abs G.\]
+
+Version 2:
+\[
+g\in G \implies g^{\abs G} = e
+.\]
+
 :::
 
 :::{.corollary}
@@ -254,12 +280,22 @@ Equivalently, the action has a single orbit.
 
 
 :::{.proposition title="Orbit Stabilizer Isomorphism"}
-If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets:
+If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets given by
 \[
 G/G_{x_0} \mapsvia{\sim} X \\
 \bar{g} &\mapsto g\actson x_0
 .\]
 :::
+
+\todo[inline]{Prove}
+
+
+:::{.proposition title="?"}
+If $X\in \GSet$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+:::
+
+\todo[inline]{Prove}
+
 
 
 :::{.proof title="?"}
@@ -367,6 +403,9 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 .\]
 
 :::
+
+
+
 
 
 :::{.example title="?"}
