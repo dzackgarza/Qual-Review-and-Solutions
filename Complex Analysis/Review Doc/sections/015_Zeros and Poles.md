@@ -74,11 +74,11 @@ We refer to $z_0$ as a **zero of order $n$**.
 :::{.definition title="Poles (and associated terminology)"}
 A *pole* $z_0$ of a function $f(z)$ is a zero of $g(z) \definedas {1\over f(z)}$.
 Equivalently, $\lim_{z\to z_0} f(z) = \infty$.
-If there exists an $n$ such that
+In this case there exists a minimal $n$ and a holomorphic $h$ such that
 \[  
-\lim_{z\to z_0}\qty{z-z_0}^nf(z)
-\]
-is holomorphic and nonzero in a neighborhood of $z_0$, then the minimal such $n$ is the *order* of the pole.
+f(z) = \lim_{z\to z_0}\qty{z-z_0}^{-n} h(z)
+.\]
+Such an $n$ is the *order* of the pole.
 A pole of order 1 is said to be a *simple pole*.
 
 The pole $z_0$ is *isolated* iff there exists a neighborhood of $z_0$ containing no other poles of $f$.
