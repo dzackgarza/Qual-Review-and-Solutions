@@ -1,8 +1,5 @@
 # Theorems
 
-## Basics
-
-
 ## Holomorphic and Entire Functions
 
 ### Key Theorems
@@ -90,7 +87,7 @@ Then
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
 
-:::{.theorem title="Schwarz Lemma" ref="SchwarzLemma"}
+:::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
 If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
 
 1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
@@ -106,32 +103,7 @@ f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 
 :::
 
-:::{.theorem title="Schwarz Reflection " ref="SchwarzReflection"}
-If $f$ is continuous and holomorphic on $\HH^+$ and real-valued on $\RR$, then the extension defined by $F(z) = \bar{f(\bar{z})}$ for $z\in \HH^-$ is a well-defined holomorphic function on $\CC$.
-:::
 
-:::{.theorem title="Classification of Conformal Maps"}
-There are 8 major types of conformal maps:
-
-| Type/Domains                                            | Formula                                   |
-| ------------                                            | -------                                   |
-| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
-| Sectors to sectors                                      | $z\mapsto z^n$                            |
-| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
-| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
-| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
-| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
-| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
-| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
-
-:::
-
-:::{.theorem title="Characterization of conformal maps"}
-Conformal maps $\DD\to\DD$ have the form
-\[
-g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
-.\]
-:::
 
 ### Others
 
