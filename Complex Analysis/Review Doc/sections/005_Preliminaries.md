@@ -105,7 +105,6 @@ If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on
 
 \todo[inline]{proof}
 
-
 :::{.proposition title="Injectivity Relates to Derivatives"}
 If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
 :::
@@ -115,18 +114,6 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 :::
 
 \todo[inline]{proof}
-
-
-:::{.proposition title="Bounded Complex Analytic Functions form a Banach Space"}
-For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC \st f\text{ is bounded}}$ is a Banach space.
-:::
-
-:::{.proof}
-?
-
-> Apply Morera's Theorem and Cauchy's Theorem
-
-:::
 
 
 ## Power Series
