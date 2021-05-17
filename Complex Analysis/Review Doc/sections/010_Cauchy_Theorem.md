@@ -78,3 +78,10 @@ If every integral along a triangle vanishes, implies holomorphic.
 :::
 
 
+:::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
+\[
+f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
+.\]
+
+:::
+

@@ -36,12 +36,6 @@ Then
 .\]
 :::
 
-:::{.theorem title="Mean Value Theorem for Holomorphic Functions"}
-\[
-f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
-.\]
-
-:::
 
 :::{.theorem title="Riemann Mapping"}
 If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
