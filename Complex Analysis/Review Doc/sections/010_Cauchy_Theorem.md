@@ -47,11 +47,11 @@ Closed path integrals of holomorphic functions vanish.
 :::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose $f$ is holomorphic on $\Omega$, then for any $z_0 \in \Omega$ and any open disc $\closure{D_R(z_0)}$ such that $\gamma \da \bd \closure{D_R(z_0)} \subseteq \Omega$,
 \[
-f(z) = {1 \over 2\pi i} \oint_{\gamma} {f(\xi) \over \xi-z}\,d\xi
+f(z_0) = {1 \over 2\pi i} \int_{\gamma} {f(\xi) \over \xi-z_0}\ \dxi
 \]
 and
 \[
-\dd{^nf }{z^n}(z) = {n! \over 2\pi i} \int_{\gamma} {f(\xi) \over (\xi - z)^{n+1}} \,d\xi
+\dd{^nf }{z^n}(z_0) = {n! \over 2\pi i} \int_{\gamma} {f(\xi) \over (\xi - z_0)^{n+1}} \dxi
 .\]
 :::
 
@@ -63,6 +63,8 @@ For $z_0 \in D_R(z_0) \subset \Omega$, we have
 = \frac{n !\norm{f}_{\infty}}{R^n} 
 ,\]
 where $\norm{f}_{\infty}\definedas \sup_{z\in C_R} \abs{f(z)}$.
+:::
+
 
 :::{.slogan}
 The $n$th Taylor coefficient of an analytic function is at most $\sup_{\abs z = R} \abs{f}/R^n$.
