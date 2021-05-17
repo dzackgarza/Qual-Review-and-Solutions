@@ -1,14 +1,5 @@
 # Zeros and Singularities
 
-:::{.definition title="Meromorphic"}
-A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
-
-- $\theset{z_n}$ has no limit points in $\Omega$.
-- $f$ is holomorphic in $\Omega\setminus\theset{z_n}$.
-- $f$ has poles at the points $\theset{z_n}$.
-
-If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
-:::
 
 
 :::{.definition title="Singularity"}
@@ -122,6 +113,15 @@ and use that it's bounded to conclude that $z_0$ is either removable or a pole f
 For any $f$ holomorphic on an unbounded region, we say $z=\infty$ is a singularity (of any of the above types) of $f$ if $g(z) \da f(1/z)$ has a corresponding singularity at $z=0$.
 :::
 
+:::{.definition title="Meromorphic"}
+A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
+
+- $\theset{z_n}$ has no limit points in $\Omega$.
+- $f$ is holomorphic in $\Omega\setminus\theset{z_n}$.
+- $f$ has poles at the points $\theset{z_n}$.
+
+Equivalently, $f$ is holomorphic on $\Omega$ with a discrete set of points delete which are all poles of $f$.
+:::
 
 
 
