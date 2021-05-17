@@ -37,16 +37,6 @@ A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanis
 .\]
 :::
 
-:::{.definition title="Meromorphic"}
-A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
-
-- $\theset{z_n}$ has no limit points in $\Omega$.
-- $f$ is holomorphic in $\Omega\setminus\theset{z_n}$.
-- $f$ has poles at the points $\theset{z_n}$.
-
-If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
-:::
-
 
 :::{.definition title="Linear Fractional Transformation"}
 A map of the following form is a *linear fractional transformation*:
@@ -66,8 +56,4 @@ A bijective holomorphic map is a **conformal** (or angle-preserving) map, a.k.a.
 
 Note that some authors just require the weaker condition that $f'(z) \neq 0$ for any point.
 :::
-
-
-
-
 

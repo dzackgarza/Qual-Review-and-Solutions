@@ -31,6 +31,17 @@ A singularity $z_0$ is *essential* iff it is neither removable nor a pole.
 Equivalently, a Laurent series expansion about $z_0$ has a principal part with infinitely many terms.
 :::
 
+:::{.definition title="Meromorphic"}
+A function $f:\Omega\to\CC$ is *meromorphic* iff there exists a sequence $\theset{z_n}$ such that
+
+- $\theset{z_n}$ has no limit points in $\Omega$.
+- $f$ is holomorphic in $\Omega\setminus\theset{z_n}$.
+- $f$ has poles at the points $\theset{z_n}$.
+
+If $f$ is either holomorphic or has a pole at $z=\infty$ is said to be meromorphic on $\CP^1$.
+:::
+
+
 # Residues
 :::{.remark}
 Check: do you need residues? 
