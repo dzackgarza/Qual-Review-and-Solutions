@@ -118,6 +118,12 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 
 ## Power Series
 
+
+:::{.remark}
+Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
+:::
+
+
 :::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 \[
