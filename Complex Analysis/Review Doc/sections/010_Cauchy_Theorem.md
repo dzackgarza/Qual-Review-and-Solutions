@@ -1,6 +1,6 @@
 # Cauchy's Theorem
 
-## Basic Results
+## Complex Integrals
 
 :::{.definition title="Complex Integral"}
 \[
@@ -43,6 +43,8 @@ Closed path integrals of holomorphic functions vanish.
 
 ## Applications of Cauchy's Theorem
 
+### Integral Formulas and Estimates
+
 :::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose $f$ is holomorphic on $\Omega$, then for any $z_0 \in \Omega$ and any open disc $\closure{D_R(z_0)}$ such that $\gamma \da \bd \closure{D_R(z_0)} \subseteq \Omega$,
 \[
@@ -78,20 +80,21 @@ f(z_0)
 
 :::
 
+### Liouville
+
 :::{.theorem title="Liouville's Theorem" ref="Liouville"}
 If $f$ is entire and bounded, $f$ is constant.
 :::
-
 
 :::{.proof title="?"}
 Use Cauchy's inequality to show $f'\equiv 0$.
 :::
 
-
 :::{.exercise title="?"}
 ![image_2021-05-17-11-54-14](figures/image_2021-05-17-11-54-14.png)
 :::
 
+### Continuation Principle
 
 :::{.theorem title="Continuation Principle / Identity Theorem"}
 If $f$ is holomorphic on a bounded connected domain $\Omega$ and there exists a sequence $\theset{z_i}$ with a limit point in $\Omega$ such that $f(z_i) = 0$, then $f\equiv 0$ on $\Omega$.
@@ -105,7 +108,6 @@ Two functions agreeing on a set with a limit point are equal on a domain.
 Apply Improved Taylor Theorem?
 \todo[inline]{todo}
 :::
-
 
 :::{.exercise title="?"}
 ![image_2021-05-17-11-53-33](figures/image_2021-05-17-11-53-33.png)
