@@ -45,7 +45,6 @@ $f$ is continuous on all of $(0,1)$. ◻
 
 :::
 
-
 :::{.proof}
 *Proof.* We will show that the function $f$ is not uniformly
 continuous. Consider the sequence $(x_n)_{n=1}^\infty$ in
@@ -146,7 +145,7 @@ since $f(x)$ is differentiable at $x=1$ we cannot have $f(x)=x$ on
 $(0,1)$ and $f(x)=2-x$ on $(1,2)$. ◻
 :::
 
-5.  
+##  (May 2016, \#5) 
 Let $f_n(x) = n^\beta x(1-x^2)^n$, $x \in [0,1]$,
 $n \in \mathbb{N}$.
 
@@ -163,13 +162,19 @@ $\beta \geq \frac{1}{2}$.
 
 
 
-6.  
+##  (May 2016, \#6) 
 1.  Suppose $f \colon [-1,1] \to \mathbb{R}$ is a bounded function
 that is continuous at $0$. Let $\alpha(x) = -1$ for
 $x \in [-1,0]$ and $\alpha(x)=1$ for $x \in (0,1]$. Prove that
 $f \in \mathcal{R}(\alpha)[-1,1]$, i.e., $f$ is Riemann
 integrable with respect to $\alpha$ on $[-1,1]$, and
 $\int_{-1}^1 f d\alpha = 2f(0)$.
+
+2.  
+Let $g \colon [0,1] \to \mathbb{R}$ be a continuous function
+such that $\int_0^1 g(x)x^{3k+2} dx = 0$ for all
+$k = 0, 1, 2, \ldots$. Prove that $g(x) =0$ for all
+$x \in [0,1]$.
 
 :::{.proof}
 *Proof.* Let $\epsilon>0$. Choose $\delta >0$ so that if
@@ -182,12 +187,6 @@ we have $L(f,P,\alpha)\leq 2f(0)\leq U(f,P,\alpha)$ for all
 partitions $P$ of the form described above, and so
 $\int_{-1}^1 f d\alpha = 2f(0)$. ◻
 :::
-
-2.  
-Let $g \colon [0,1] \to \mathbb{R}$ be a continuous function
-such that $\int_0^1 g(x)x^{3k+2} dx = 0$ for all
-$k = 0, 1, 2, \ldots$. Prove that $g(x) =0$ for all
-$x \in [0,1]$.
 
 :::{.proof}
 *Proof.* Since $g(x)$ is continuous, so is $g(x^{1/3})$. Thus by
@@ -214,6 +213,11 @@ $$d_{M \times N}((x_1, y_1), (x_2, y_2)) := d_M(x_1, x_2) + d_N(y_1, y_2).$$
 
 1.  
 Prove that $(M \times N, d_{M \times N})$ is a metric space.
+
+2.  
+Let $S \subseteq M$ and $T \subseteq N$ be compact sets in
+$(M, d_M)$ and $(N, d_N)$, respectively. Prove that $S \times T$
+is a compact set in $(M \times N, d_{M \times N})$.
 
 :::{.proof}
 *Proof.* To prove that $(M \times N, d_{M \times N})$ is a
@@ -282,11 +286,6 @@ Therefore $d_{M \times N}$ is a metric on $M \times N$ and
 $(M \times N, d_{M\times N})$ is a metric space. ◻
 :::
 
-2.  
-Let $S \subseteq M$ and $T \subseteq N$ be compact sets in
-$(M, d_M)$ and $(N, d_N)$, respectively. Prove that $S \times T$
-is a compact set in $(M \times N, d_{M \times N})$.
-
 :::{.proof}
 *Proof.* By part a we showed that $(M \times N, d_{M \times N})$
 is a metric space. Let $\{s_n,t_n\}$ be a sequence in
@@ -327,14 +326,12 @@ $d(x_0,K)=\inf_{y\in K} d(x_0,y)$. Prove that there exists a point
 $y_0\in K$ such that $d(x_0,K)=d(x_0,y_0)$.
 
 
-
 ##  (January 2009, \#4a) 
 
 Consider the metric space $(\mathbb{Q},d)$
 where $\mathbb{Q}$ denotes the rational numbers and $d(x,y)=|x-y|$.
 Let $E=\{x\in\mathbb{Q}:x>0,\,2<x^2<3\}$. Is $E$ closed and bounded
 in $\mathbb{Q}$? Is $E$ compact in $\mathbb{Q}$?
-
 
 
 ##  (January 2011 \#3a) 
@@ -362,7 +359,7 @@ Thus, $f_{n_j}$ also converges to $k_0$, and since $F$ is closed,
 $k_0 \in F$. So $K \cap F \neq \emptyset$. ◻
 :::
 
-5.  
+## 5?
 Let $(X,d)$ be an unbounded and connected metric space. Prove that
 for each $x_0 \in X$, the set
 $\{x \in X \, \colon \,  d(x,x_0) = r\}$ is nonempty.
@@ -378,12 +375,12 @@ $\lim_{n\to\infty}a_n=1/2$.
 
 ## (January 2014 \#2) 
 
-(a) 
+1.
 Produce sequences $\{a_n\},\,\{b_n\}$ of
 positive real numbers such that
 $$\liminf_{n\to\infty}(a_nb_n)>\left(\liminf_{n\to\infty} a_n\right) \left(\liminf_{n\to\infty} b_n\right).$$ 
 
-(b)
+2.
 If $\{a_n\},\,\{b_n\}$ are sequences of positive real numbers and
 $\{a_n\}$ converges, prove that
 $$\liminf_{n\to\infty}(a_nb_n)=\left(\lim_{n\to\infty}a_n\right)\left(\liminf_{n\to\infty}b_n\right).$$
@@ -551,14 +548,6 @@ may not be the smallest possible constant.
 
 
 
-##  (Essentialy June 2013 \#7) 
-
-Prove
-Theorem [\[thm:d5-alpha\]](#thm:d5-alpha){reference-type="ref"
-reference="thm:d5-alpha"}.
-
-
-
 # Sequences and Series of Functions
 
 ## (June 2010 \#6a) 
@@ -679,11 +668,9 @@ $f^{-1}(-\infty, b) = \{x \in X \, \colon \,  f(x)<b\}$ is open in
 $X$ for every $b \in \mathbb{R}$.
 
 
-
 1.  
 Prove that a function $f \colon X \to \mathbb{R}$ is continuous
 if and only if $f$ is both l.s.c. and u.s.c.
-
 
 
 2.  
@@ -702,10 +689,10 @@ $x \in X$, and such that $f_n \to 0$ pointwise on $X$. Prove that
 $\{f_n\}_{n=1}^\infty$ converges uniformly on $X$.
 
 
+# Integral Calculus
 
-## Integral Calculus {#integral-calculus-1 .unnumbered}
+## 1.  
 
-1.  
 (June 2014 1)Define $\alpha \colon [-1,1] \to \mathbb{R}$ by
 $$\alpha(x) := \begin{cases} -1 & x \in [-1,0] \\ 1 & x \in (0,1]. \end{cases}$$
 Let $f \colon [-1,1] \to \mathbb{R}$ be a function that is uniformly
@@ -734,7 +721,7 @@ $$\int_a^b f(x) d\alpha(x)= \int_a^b f(x)\alpha'(x)dx.$$
 
 
 
-## Sequences and Series (and of Functions) {#sequences-and-series-and-of-functions .unnumbered}
+# Sequences and Series (and of Functions) 
 
 ##  (January 2006 1) 
 
@@ -744,21 +731,21 @@ of convergence $R_1$ and $R_2$, respectively.
 
 
 
-1.  
+## ?
 If $R_1 \neq R_2$, prove that the radius of convergence, $R$, of
 the power series $\sum_{n=0}^\infty (a_n+b_n)x^n$ is
 $\min\{R_1, R_2\}$. What can be said about $R$ when $R_1 = R_2$?
 
 
 
-2.  
+## ?
 Prove that the radius of convergence, $R$, of
 $\sum_{n=0}^\infty a_nb_nx^n$ satisfies $R \geq R_1R_2$. Show by
 means of example that this inequality can be strict.
 
 
 
-2.  
+## ?
 Show that the infinite series $\sum_{n=0}^\infty x^n2^{-nx}$
 converges uniformly on $[0,B]$ for any $B > 0$. Does this series
 converge uniformly on $[0,\infty)$?
