@@ -105,6 +105,7 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 
 \todo[inline]{Prove}
 
+![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
 
 
 ## Complex Log
