@@ -19,14 +19,14 @@ You may be able to just compute an integral
 :::{.proposition title="Residue formula for higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
 \[  
-\res_{z=z_0} f = \lim_{z\to z_0} {1 \over (n-1)!} \qty{\dd{}{z}}^{n-1} (z-z_0)^n f(z)
+\Res_{z=z_0} f = \lim_{z\to z_0} {1 \over (n-1)!} \qty{\dd{}{z}}^{n-1} (z-z_0)^n f(z)
 .\]
 :::
 
 :::{.proposition title="Residue formula for simple poles"}
 As a special case, if $z_0$ is a simple pole of $f$, then
 \[  
-\res_{z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
+\Res_{z=z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
 .\]
 :::
 
@@ -41,6 +41,11 @@ Then for any $\gamma \in \Omega\sm \ts{ \elts{z}{N} }$,
 \[
 {1 \over 2\pi i } \int_\gamma f(z) \dz = \sum_{j=1}^N n_\gamma(z_j) \Res_{z=z_j} f
 .\]
+If $\gamma$ is a toy contour, then  
+\[
+{1\over 2\pi i}\int_\gamma f\dz = \sum_{j=1}^N \Res_{z=z_j}f
+.\]
+
 
 :::
 
