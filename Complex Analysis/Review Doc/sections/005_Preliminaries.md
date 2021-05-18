@@ -45,7 +45,7 @@ F(\vector p + \vector h) = F(\vector p) + A(\vector h) + R(\vector h) && R\in o(
 :::
 
 
-:::{.remark}
+:::{.proposition title="Derivation of Cauchy-Riemann"}
 If $f$ is differentiable at $z_0$, then the limit defining $f'(z_0)$ must exist when approaching from any direction.
 Identify $f(z) = f(x, y)$ and write $z_0 = x+ iy$, then first consider $h\in RR$, so $h = h_1 + ih_2$ with $h_2 = 0$.
 Then
@@ -59,10 +59,18 @@ Taking $h \in i\RR$ purely imaginary, so $h= ih_2$,
 f'(z_0)
 = \lim_{ih_2\to 0} { f(x, y+h_2) - f(x, y) \over ih_2 } \da {1\over i} \dd{f}{y}(x, y)
 .\]
-
+Equating,
+\[
+\dd{f}{x} = {1\over i} \dd{f}{y}
+,\]
+and writing $f = u + iv$ yields
 
 
 :::
+
+
+
+
 
 
 :::{.definition title="Cauchy-Riemann Equations"}
