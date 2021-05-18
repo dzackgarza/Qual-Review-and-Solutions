@@ -64,6 +64,10 @@ Equating,
 \dd{f}{x} = {1\over i} \dd{f}{y}
 ,\]
 and writing $f = u + iv$ yields
+\[
+\dd{f}{x} &= \dd{u}{x} + i \dd{v}{x} \\
+{1\over i} \dd{f}{y} &= {1\over i} \qty{ \dd{u}{y} + i \dd{v}{y}} = -\dd{v}{y} + i\dd{u}{y}
+.\]
 
 
 :::
