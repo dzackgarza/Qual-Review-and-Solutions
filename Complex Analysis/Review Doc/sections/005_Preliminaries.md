@@ -6,8 +6,8 @@
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
 :::
 
-:::{.definition title="Complex Differentiable"}
-A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the following limit exists:
+:::{.definition title="Complex differentiable / holomorphic"}
+A function $f: \CC\to \CC$ is **complex differentiable** or **holomorphic** at $z_0$ iff the following limit exists:
 \[
 \lim_{h\to 0} { f(z_0 + h) - f(h) \over h  } 
 .\]
@@ -19,7 +19,6 @@ f(z_0+h) - f(z_0) = \alpha h + R(h) && R(h) \converges{h\to 0}\too 0
 In this case, $\alpha = f'(z_0)$.
 
 :::
-
 
 :::{.definition title="Real (multivariate) differentiable"}
 A function $F: \RR^n\to \RR^m$ is **real-differentiable** at $\vector p$ iff there exists a linear transformation $A$ such that
@@ -72,9 +71,12 @@ Thus
 \[
 \dd{u}{x} = \dd{v}{y} \hspace{8em} \dd{u}{y} = -\dd{v}{x}
 .\]
+:::
 
+:::{.proposition title="Polar form of Cauchy-Riemann"}
 
 :::
+
 
 
 :::{.definition title="Cauchy-Riemann Equations"}
@@ -84,12 +86,6 @@ u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 .\]
 :::
 
-:::{.definition title="Holomorphic"}
-A function $f:\CC\to \CC$ is *holomorphic* at $z_0$ if the following limit converges:
-\[  
-\lim_{h\to 0} {1\over h} \qty{f(z_0 + h) - f(z_0)} \definedas f'(z_0)
-.\]
-:::
 
 :::{.example title="Holomorphic vs non-holomorphic"}
 \envlist
