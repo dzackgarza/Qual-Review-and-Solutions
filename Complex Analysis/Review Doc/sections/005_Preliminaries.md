@@ -341,6 +341,15 @@ then
 
 :::{.proof title="?"}
 Use summation by parts and the Cauchy criterion.
+
+Fix $\eps>0$, suppose $\abs{A_n} \leq M$ is assumed the uniform bound, and choose $M\gg 1$ so that $b_M \leq \eps/2M$.
+Then
+\[
+\norm{ \sum_{m\leq k \leq n} a_k b_k }
+=
+\norm{ }
+.\]
+
 :::
 
 
