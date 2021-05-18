@@ -245,25 +245,6 @@ Recall the **$p\dash$test**:
   
 :::
 
-
-:::{.theorem title="Summation by Parts"}
-Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
-\[
-\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-\]
-
-> Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
-
-:::
-
-:::{.theorem title="Abel's Theorem"}
-If $\sum_{k=1}^\infty c_k$ converges, then 
-\[
-\lim_{z\to 1^-} \sum_{k\in \NN} c_k z^k = \sum_{k\in \NN} c_k
-.\]
-
-:::
-
 :::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
 \[
@@ -293,7 +274,6 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
 
-
 :::{.proof}
 Apply the estimate
 \[  
@@ -307,6 +287,24 @@ Now by the $M\dash$test,
 
 
 ### Exercises
+
+:::{.exercise title="Summation by Parts"}
+Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
+\[
+\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
+\]
+
+> Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
+
+:::
+
+:::{.theorem title="Abel's Theorem"}
+If $\sum_{k=1}^\infty c_k$ converges, then 
+\[
+\lim_{z\to 1^-} \sum_{k\in \NN} c_k z^k = \sum_{k\in \NN} c_k
+.\]
+
+:::
 
 
 :::{.exercise title="1.20"}
