@@ -96,18 +96,13 @@ v_r
 &= v_x x_r + v_y y_r \\
 &= v_x \cos(\theta) + v_y\sin(\theta) \\
 &= -u_y\cos(\theta) + u_x\sin(\theta) && \text{CR} \\
-&= {1\over r}\qty{ -u_y r\cos(\theta) + u_x r\sin(\theta)}
+&= {1\over r}\qty{ -u_y r\cos(\theta) + u_x r\sin(\theta)} \\
+&= {1\over r}\qty{ -u_y y_\theta - u_x x_0 } \\
+&= -{1\over r} u_\theta
 .\]
 
-
-
-:::
-
-
-
-:::{.definition title="Cauchy-Riemann Equations"}
+Thus
 \[
-u_x = v_y \quad\text{and}\quad u_y = -v_x \\
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
 .\]
 :::
