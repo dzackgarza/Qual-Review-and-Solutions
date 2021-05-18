@@ -26,6 +26,12 @@ A function $F: \RR^n\to \RR^m$ is **real-differentiable** at $\vector p$ iff the
 \[
 { \norm{ F(\vector p + \vector h) - F(\vector p) - A(\vector h) } \over \norm{ \vector h } } \converges{\norm{\vector h}\to 0}\too 0
 .\]
+Rewriting,
+\[
+\norm{ F(\vector p + \vector h) - F(\vector p)  - A(\vector h) } = \norm{ \vector{h} } \norm{ R(\vector h) }
+&& \norm{R(\vector h) }\converges{\norm{\vector h } \to 0}\too 0
+.\]
+
 Equivalently, 
 \[
 F(\vector p + \vector h) - F(\vector p) = A(\vector h) + \norm{\vector h} R(\vector h) && \norm{R(\vector h) }\converges{\norm{\vector h } \to 0}\too 0
