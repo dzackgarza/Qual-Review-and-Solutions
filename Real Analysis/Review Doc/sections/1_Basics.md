@@ -116,6 +116,24 @@ The main difference is that $\delta$ may depend on $x_0$ and $\eps$ in continuit
 I.e. once $\delta$ is fixed, for continuity one may only range over $x$, but in uniform continuity one can range over all pairs $x,y$.
 :::
 
+:::{.proposition title="Lipschitz implies uniformly continuous"}
+If $f$ is Lipschitz on $X$, then $f$ is uniformly continuous on $X$.
+
+Supposing that
+\[
+\norm{f(x) - f(y)} \leq C \norm{x-y}
+,\]
+for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
+\[
+\norm{f(x) - f(y)}
+&\leq C \norm{x-y} \\
+&\leq C \delta \\
+&= C \qty{\eps/C} \\
+&= \eps
+.\]
+:::
+
+
 :::{.definition title="Nowhere Dense Sets"}
 A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 :::
@@ -326,8 +344,8 @@ A **Hilbert space** is an inner product space which is a Banach space under the 
 :::
 
 
-## Theorems
 
+## Theorems
 
 :::{.theorem title="Lagrange Remainder"}
 If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
@@ -336,17 +354,12 @@ x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{
 \]
 :::
 
-
-
 :::{.theorem title="Cauchy Remainder"}
 If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
 \[
 x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \int_c^x \frac{1}{n!} \dd{^n f}{x^n}(t) (x-t)^n ~dt
 \]
 :::
-
-
-
 
 :::{.proposition title="Sufficient condition for Taylor convergence"}
 Given a point $c$ and some $\varepsilon>0$, if $f \in C^\infty(I)$ and there exists an $M$ such that 
@@ -355,8 +368,6 @@ x \in N_\varepsilon(c) \implies \abs{f^{(n)}(x)} \leq M^n
 $$
 then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
 :::
-
-
 
 
 ### Topology / Sets
@@ -766,6 +777,4 @@ $$
 - Discontinuous on $\QQ$
 - Integrable with $\int_a^b f = 0$
 - Differentiable nowhere
-
-
 
