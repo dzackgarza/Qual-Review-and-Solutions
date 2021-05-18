@@ -309,7 +309,15 @@ Show that
 :::
 
 
+:::{.remark}
+Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
+:::
+
+
 :::{.solution}
+
+1. Use that $\abs{z^k} = 1$ and $\sum c_kz^k < \infty \implies \abs{c_k} \to 0$, but $\abs{kz^k} = \abs{k} \to \infty$ here.
+2. Use that absolutely convergent implies $\sum \abs{c}
 
 :::
 
