@@ -299,6 +299,23 @@ Setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
 
 :::
 
+
+:::{.solution}
+An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
+Behold:
+\[
+\sum_{m\leq k \leq n} a_k b_k 
+&= \sum_{m\leq k \leq n} (A_k - A_{k-1}) b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m\leq k \leq n} A_{k-1} b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) 
+.\]
+
+:::
+
+
 :::{.theorem title="Abel's Theorem"}
 If $\sum_{k=1}^\infty c_k$ converges, then 
 \[
