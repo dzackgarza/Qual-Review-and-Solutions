@@ -289,10 +289,8 @@ Now by the $M\dash$test,
 ### Exercises
 
 :::{.exercise title="Summation by Parts"}
-Setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
+Setting $A_n \da \sum_{k=1}^n b_k$ and $B_0 \da 0$,
 \[
-\sum_{k=m}^{n} a_{k} b_{k} 
-&= a_{n} B_{n}-a_{m} B_{m-1}-\sum_{k=m}^{n-1}\left(a_{k+1}-a_{k}\right) B_{k}
 \sum_{k=m}^n a_k b_k 
 &= A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
 .\]
@@ -319,7 +317,8 @@ Behold:
 &= \sum_{m\leq k \leq n} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
 &= A_nb_n + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
 &= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m\leq k \leq n-1} A_{k} b_{k+1} \\
-&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) 
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) \\
+&= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
 .\]
 
 :::
