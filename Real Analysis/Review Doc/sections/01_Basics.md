@@ -385,6 +385,14 @@ then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
 Every continuous function $f:X\to Y$ where $X$ is a compact metric space is uniformly continuous.
 :::
 
+
+:::{.proof title="?"}
+Fix $\eps>0$, we'll find a $\delta$ that works for all $x\in X$ uniformly.
+For every $x\in X$, pick a $\delta_x$ neighborhood satisfying the conditions for (assumed) continuity.
+Take an open cover by $\delta_x/2$ balls, extract a finite subcover, take $\delta$ the minimal radius.
+:::
+
+
 :::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
 Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
 :::
