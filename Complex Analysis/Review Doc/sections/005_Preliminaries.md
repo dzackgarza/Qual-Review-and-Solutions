@@ -232,15 +232,6 @@ then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverge
 Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
 :::
 
-:::{.proposition title="Checking radius of convergence"}
-For a power series $f(z) = \sum a_n z^n$, define $R$ by
-\[  
-{1\over R}\definedas \limsup \abs{a_n}^{1\over n}
-.\]
-
-Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
-:::
-
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
 \[
@@ -326,7 +317,8 @@ Their difference converges to 0, and their common limit is the limit of the sum.
 :::{.solution}
 
 1. Use that $\abs{z^k} = 1$ and $\sum c_kz^k < \infty \implies \abs{c_k} \to 0$, but $\abs{kz^k} = \abs{k} \to \infty$ here.
-2. Use that absolutely convergent implies $\sum \abs{c}
+2. Use that absolutely convergent implies convergent, and $\sum \abs{k^{-2} z^k} = \sum \abs{k^{-2}}$ converges by the $p\dash$test.
+3. 
 
 :::
 
