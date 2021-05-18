@@ -218,25 +218,29 @@ A_4 =
 ## Counting Theorems
 
 :::{.theorem title="Lagrange's Theorem"}
-Version 1:
 \[H \leq G \implies \abs H \divides \abs G.\]
-
-Version 2:
-\[
-g\in G \implies g^{\abs G} = e
-.\]
-
 :::
+
+:::{.corollary title="?"}
+\[
+\# G = \#(G/H) \#H \da [G:H] \, \# H
+,\]
+or written another way,
+\[
+\#(G/H) = \# G/ \# H
+.\]
+:::
+
 
 :::{.corollary}
 The order of every element divides the size of $G$, i.e.
-  $$
-  g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
-  .$$
+$$
+g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
+.$$
 :::
 
 :::{.warnings}
-There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
+There do **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
 Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
 :::
 
