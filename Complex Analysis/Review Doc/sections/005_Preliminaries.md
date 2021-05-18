@@ -79,7 +79,11 @@ Thus
 .\]
 :::
 
-:::{.proposition title="Polar form of Cauchy-Riemann"}
+:::{.exercise title="Polar Form of Cauchy-Riemann"}
+![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
+:::
+
+:::{.solution}
 Setting 
 \[
 z = re^{i\theta} = r(\cos(\theta) + i\sin(\theta) ) = x+iy
@@ -115,6 +119,7 @@ Thus
 \[
 \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
 .\]
+
 :::
 
 
@@ -206,7 +211,6 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 
 ## Power Series
 
-
 :::{.remark}
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
@@ -244,7 +248,6 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 
 :::
 
-
 :::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
 \[
@@ -252,9 +255,6 @@ f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\
 = {1 \over 2\pi r^n}\int_0^{2\pi} f(z_0 + re^{i\theta})e^{-in\theta} \dtheta
 .\]
 :::
-
-
-### Exercises
 
 :::{.proposition title="Power Series are Smooth"}
 Any power series is smooth and its derivatives can be obtained using term-by-term differentiation.
@@ -297,7 +297,25 @@ For a power series $f(z) = \sum a_n z^n$, define $R$ by
 Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
 
+### Exercises
 
-- ![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
-- ![](figures/image_2021-05-17-10-27-21.png)
+
+:::{.exercise title="1.20"}
+Show that
+
+1. $\sum kz^k$ diverges on $S^1$.
+2. $\sum k^{-2} z^k$ converges on $S^1$.
+3. $\sum k\inv z^k$ converges on $S^1\sm\ts{1}$ and diverges at $1$.
+:::
+
+
+:::{.solution}
+
+:::
+
+
+
+
+![](figures/image_2021-05-17-10-27-21.png)
+
 - ![image_2021-05-17-10-29-25](figures/image_2021-05-17-10-29-25.png)
