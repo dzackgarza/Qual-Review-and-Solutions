@@ -31,9 +31,10 @@ Equivalently,
 F(\vector p + \vector h) - F(\vector p) = A(\vector h) + \norm{\vector h} R(\vector h) && \norm{R(\vector h) }\converges{\norm{\vector h } \to 0}\too 0
 .\]
 
-Possibly equivalently,
+Or in a slightly more useful form,
 \[
-F(\vector p + \vector h) - F(\vector p) = \norm{\vector{h}} A(\vector h) + R(\vector h) && { \norm{R(\vector h) } \over \norm{\vector h} } \converges{\norm{\vector h } \to 0}\too 0
+F(\vector p + \vector h) = F(\vector p) + A(\vector h) + R(\vector h) && R\in o( \norm{\vector h}), \text{ i.e. }
+{ R(\vector h) \over  \norm{\vector h}} \converges{\vector h\to 0}\too 0
 .\]
 
 
