@@ -24,7 +24,7 @@ In this case, $\alpha = f'(z_0)$.
 :::{.definition title="Real (multivariate) differentiable"}
 A function $F: \RR^n\to \RR^m$ is **real-differentiable** at $\vector p$ iff there exists a linear transformation $A$ such that
 \[
-{ \norm{ F(\vector p + \vector h) - F(\vector p) - A(\vector h) } \over \norm{ \vector h } } \converges{\norm{h}\to 0}\too 0
+{ \norm{ F(\vector p + \vector h) - F(\vector p) - A(\vector h) } \over \norm{ \vector h } } \converges{\norm{\vector h}\to 0}\too 0
 .\]
 Equivalently, 
 \[
