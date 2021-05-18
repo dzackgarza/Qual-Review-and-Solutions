@@ -356,7 +356,6 @@ f(b) - f(a) = f'(\xi)(b-a)
 
 :::
 
-
 :::{.theorem title="Lagrange Remainder"}
 If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
 \[
@@ -383,7 +382,7 @@ then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
 ### Topology / Sets
 
 :::{.theorem title="Heine-Cantor"}
-Every continuous function on a compact space is uniformly continuous.
+Every continuous function $f:X\to Y$ where $X$ is a compact metric space is uniformly continuous.
 :::
 
 :::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
