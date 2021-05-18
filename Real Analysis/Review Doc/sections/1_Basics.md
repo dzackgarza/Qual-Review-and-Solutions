@@ -100,15 +100,20 @@ If $X$ is complete, then absolutely convergent implies convergent.
 :::{.definition title="Continuity and Uniform Continuity"}
 A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
 \[
-\forall x_0 \in X, \forall \eps>0, \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
 .\]
 
 $f$ is **uniformly continuous** iff
 
 \[
-    &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
+  &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
 \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
 .\]
+:::
+
+:::{.remark}
+The main difference is that $\delta$ may depend on $x_0$ and $\eps$ in continuity, but only depends on $\eps$ in the uniform version.
+I.e. once $\delta$ is fixed, for continuity one may only range over $x$, but in uniform continuity one can range over all pairs $x,y$.
 :::
 
 :::{.definition title="Nowhere Dense Sets"}
