@@ -298,6 +298,11 @@ Setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
 \sum_{k=m}^n a_k b_k = A_nb_n - A_{m-1} b_m + \sum_{k=m}^{n-1} A_k(b_k - b_{k-1})
 .\]
 
+Note there is a useful form for taking the product of sums:
+\[
+A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
+.\]
+
 
 
 > Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
