@@ -63,10 +63,11 @@ Equating,
 \[
 \dd{f}{x} = {1\over i} \dd{f}{y}
 ,\]
-and writing $f = u + iv$ yields
+and writing $f = u + iv$ and $1/i = -i$ yields
 \[
 \dd{f}{x} &= \dd{u}{x} + i \dd{v}{x} \\
-{1\over i} \dd{f}{y} &= {1\over i} \qty{ \dd{u}{y} + i \dd{v}{y}} = -\dd{v}{y} + i\dd{u}{y}
+{1\over i} \dd{f}{y} &= {1\over i} \qty{ \dd{u}{y} + i \dd{v}{y}} = \dd{v}{y} - i\dd{u}{y} \\ \\
+\implies \dd{u}{x} = - \dd{v}{y} \hspace{8em} \dd{v}{x} = 
 .\]
 
 
