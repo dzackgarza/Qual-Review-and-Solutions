@@ -133,7 +133,6 @@ for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
 .\]
 :::
 
-
 :::{.definition title="Nowhere Dense Sets"}
 A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
 :::
@@ -346,6 +345,17 @@ A **Hilbert space** is an inner product space which is a Banach space under the 
 
 
 ## Theorems
+
+
+:::{.theorem title="Mean Value Theorem"}
+If $f: [a, b] \to \RR$ is continuous on a closed interval and differentiable on $(a, b)$, then there exists $\xi \in [a, b]$ such that 
+\[
+f(b) - f(a) = f'(\xi)(b-a)
+.\]
+
+
+:::
+
 
 :::{.theorem title="Lagrange Remainder"}
 If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
@@ -777,4 +787,3 @@ $$
 - Discontinuous on $\QQ$
 - Integrable with $\int_a^b f = 0$
 - Differentiable nowhere
-
