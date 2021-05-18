@@ -326,6 +326,26 @@ Behold:
 :::
 
 
+:::{.lemma title="Abel's Summation Lemma"}
+Given two sequences of real numbers \( \ts{ a_k } , \ts{ b_k } \) which satisfy
+
+1. The sequence of partial sums \( \ts{ A_n } \) is bounded,
+2. \( \ts{ b_k } \) is monotonically decreasing, and
+3. $b_k \converges{k\to\infty}\too 0$,
+
+then 
+\[
+\sum_{k\geq 1} a_k b_k < \infty
+.\]
+:::
+
+:::{.proof title="?"}
+Use summation by parts and the Cauchy criterion.
+:::
+
+
+
+
 :::{.theorem title="Abel's Theorem"}
 If $\sum_{k=1}^\infty c_k$ converges, then 
 \[
