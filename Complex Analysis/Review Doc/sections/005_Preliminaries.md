@@ -294,21 +294,23 @@ Setting $A_n \da \sum_{k=1}^n b_k$ and $B_0 \da 0$,
 \sum_{k=m}^n a_k b_k 
 &= A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
 .\]
+Compare this to integrating by parts:
+\[
+\int_a^b f g = F(b)g(b) - F(a)g(a) - \int_a^b Fg'
+.\]
 
 Note there is a useful form for taking the product of sums:
 \[
 A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
 .\]
 
-
-
-> Note: compare to $\int_a^b f \, dg  + \int_a^b g\, df = f(b) g(b) - f(a) g(a)$.
-
 :::
 
 
 :::{.solution}
 An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
+\
+
 Behold:
 \[
 \sum_{m\leq k \leq n} a_k b_k 
