@@ -385,7 +385,6 @@ then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
 Every continuous function $f:X\to Y$ where $X$ is a compact metric space is uniformly continuous.
 :::
 
-
 :::{.proof title="?"}
 Fix $\eps>0$, we'll find a $\delta$ that works for all $x\in X$ uniformly.
 For every $x\in X$, pick a $\delta_x$ neighborhood satisfying the conditions for (assumed) continuity.
