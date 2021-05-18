@@ -53,6 +53,33 @@ Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 
 :::
 
+:::{.theorem title="Cayley Transform"}
+The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
+:::
+
+:::{.theorem title="Classification of Conformal Maps"}
+There are 8 major types of conformal maps:
+
+| Type/Domains                                            | Formula                                   |
+| ------------                                            | -------                                   |
+| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
+| Sectors to sectors                                      | $z\mapsto z^n$                            |
+| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
+| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
+| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
+| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
+| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
+| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
+
+:::
+
+:::{.theorem title="Characterization of conformal maps"}
+Conformal maps $\DD\to\DD$ have the form
+\[
+g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
+.\]
+:::
+
 
 ## Schwarz
 
@@ -85,37 +112,21 @@ Show that $\Aut_\CC(\CC) = \ts{ z \mapsto az+b\st a\in \CC\units, b\in \CC }$.
 \[
 \Aut_\CC(\DD) = \ts{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \bar{\alpha} z} }
 .\]
+:::
 
+:::{.proof title="?"}
+Schwarz lemma.
 :::
 
 
-
-:::{.theorem title="Cayley Transform"}
-The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
-:::
-
-:::{.theorem title="Classification of Conformal Maps"}
-There are 8 major types of conformal maps:
-
-| Type/Domains                                            | Formula                                   |
-| ------------                                            | -------                                   |
-| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
-| Sectors to sectors                                      | $z\mapsto z^n$                            |
-| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
-| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
-| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
-| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
-| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
-| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
-
-:::
-
-:::{.theorem title="Characterization of conformal maps"}
-Conformal maps $\DD\to\DD$ have the form
+:::{.theorem title="?"}
 \[
-g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
+\Aut_\CC(\HH) = \ts{ z \mapsto {az+b \over cz+d} \st a,b,c,d\in \CC, ad-bc=1 } \cong\PSL_2(\RR)
 .\]
 :::
+
+
+
 
 ## By Type
 
