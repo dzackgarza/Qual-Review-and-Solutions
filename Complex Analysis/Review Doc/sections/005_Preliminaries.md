@@ -347,7 +347,7 @@ Then
 \[
 \norm{ \sum_{m\leq k \leq n} a_k b_k }
 =
-\norm{ }
+\norm{ A_nb_n - A_{m-1} b_m + \sum_{m\leq k \leq n-1} A_k (b_k- b_{k-1} ) }
 .\]
 
 :::
