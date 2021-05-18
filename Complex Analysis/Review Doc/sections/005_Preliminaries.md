@@ -2,6 +2,7 @@
 
 ## Complex Arithmetic and Calculus
 
+### Holomorphy and Cauchy-Riemann
 :::{.definition title="Analytic"}
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
 :::
@@ -18,6 +19,12 @@ f(z_0+h) - f(z_0) = \alpha h + R(h) && R(h) \converges{h\to 0}\too 0
 .\]
 In this case, $\alpha = f'(z_0)$.
 
+:::
+
+:::{.example title="Holomorphic vs non-holomorphic"}
+\envlist
+- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
+- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
 :::
 
 :::{.definition title="Real (multivariate) differentiable"}
@@ -42,7 +49,6 @@ F(\vector p + \vector h) = F(\vector p) + A(\vector h) + R(\vector h) && R\in o(
 { \norm{ R(\vector h) } \over  \norm{\vector h}} \converges{\vector h\to 0}\too 0
 .\]
 :::
-
 
 :::{.proposition title="Derivation of Cauchy-Riemann"}
 If $f$ is differentiable at $z_0$, then the limit defining $f'(z_0)$ must exist when approaching from any direction.
@@ -108,18 +114,16 @@ Thus
 :::
 
 
-:::{.example title="Holomorphic vs non-holomorphic"}
-\envlist
-- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
-- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
-:::
+### Delbar, Harmonic Functions, Laplacian
 
 :::{.definition title="del and delbar operators"}
 \[
 \del 
 \da \frac{\partial}{\partial z} 
 \da \frac{1}{2}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right) 
-\quad 
+\quad
+\text{ and }
+\quad
 \delbar 
 \da \frac{\partial}{\partial \bar{z}} 
 \da \frac{1}{2}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)
