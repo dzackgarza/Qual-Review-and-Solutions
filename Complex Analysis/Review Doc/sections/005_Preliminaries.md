@@ -238,6 +238,10 @@ Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f
 
 :::{.fact}
 Recall the **$p\dash$test**:
+\[
+\sum n^{-p} < \infty \iff p \in (1, \infty)
+.\]
+
   
 :::
 
