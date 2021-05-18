@@ -14,12 +14,28 @@ A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the follow
 
 Equivalently, there exists an $\alpha\in \CC$ such that
 \[
-f(z_0+h) - f(z_0) - \alpha h = h \psi(h) && \psi(h) \converges{h\to 0}\too 0 
+f(z_0+h) - f(z_0) = \alpha h + R(h) && R(h) \converges{h\to 0}\too 0 
 .\]
 In this case, $\alpha = f'(z_0)$.
 
+:::
+
+
+:::{.remark}
+There is a linear representation of $\CC$:
+\[
+z \da a + bi \mapsto
+\begin{bmatrix}
+a & -b 
+\\
+b & a
+\end{bmatrix}
+.\]
+
+Recall that a function $f:\RR^n\to \RR^m$
 
 :::
+
 
 :::{.definition title="Cauchy-Riemann Equations"}
 \[
