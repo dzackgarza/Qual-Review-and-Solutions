@@ -74,6 +74,13 @@ Thus
 :::
 
 :::{.proposition title="Polar form of Cauchy-Riemann"}
+Using the chain rule and $x=r\cos(\theta), y=r\sin(\theta)$,
+\[
+x_r = \cos(\theta)&, x_\theta = -r\sin(\theta) \\
+y_r = \sin(\theta)&, y_\theta = r\cos(\theta) \\
+
+.\]
+
 \[
 u_r 
 &= u_x x_r + u_y y_r \\
