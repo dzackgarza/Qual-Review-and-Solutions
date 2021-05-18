@@ -215,6 +215,14 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
+:::{.proposition title="Ratio Test"}
+Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall
+
+- $R\in (0, 1) \implies$ convergence.
+- $R\in [1, \infty] \implies$ divergence.
+- $R=1$ yields no information.
+:::
+
 :::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 \[
@@ -224,11 +232,14 @@ then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverge
 Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
 :::
 
-:::{.proposition title="Ratio test"}
+:::{.proposition title="Checking radius of convergence"}
+For a power series $f(z) = \sum a_n z^n$, define $R$ by
+\[  
+{1\over R}\definedas \limsup \abs{a_n}^{1\over n}
+.\]
 
+Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
 :::
-
-\todo[inline]{todo}
 
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
@@ -277,6 +288,7 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
 
+
 :::{.proof}
 Apply the estimate
 \[  
@@ -288,14 +300,6 @@ Now by the $M\dash$test,
 .\]
 :::
 
-:::{.proposition title="Checking radius of convergence"}
-For a power series $f(z) = \sum a_n z^n$, define $R$ by
-\[  
-{1\over R}\definedas \limsup \abs{a_n}^{1\over n}
-.\]
-
-Then $f$ converges absolutely on $\abs{z} < R$ and diverges on $\abs{z} > R$.
-:::
 
 ### Exercises
 
@@ -311,17 +315,11 @@ Show that
 
 :::{.remark}
 Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
-This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge, and their difference is a finite number.
+This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge to a finite number.
+Their difference converges to 0, and their common limit is the limit of the sum.
 :::
 
 
-:::{.proposition title="Ratio Test"}
-Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall
-
-- $R\in (0, 1) \implies$ convergence.
-- $R\in [1, \infty] \implies$ divergence.
-- $R=1$ yields no information.
-:::
 
 
 
