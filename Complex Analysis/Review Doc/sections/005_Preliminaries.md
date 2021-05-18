@@ -215,13 +215,16 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-:::{.fact title="Ratio Test"}
-Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall
+
+:::{.fact}
+Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall the **ratio test**:
 
 - $R\in (0, 1) \implies$ convergence.
 - $R\in [1, \infty] \implies$ divergence.
 - $R=1$ yields no information.
+
 :::
+
 
 :::{.proposition title="Radius of Convergence by the Root Test"}
 For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
@@ -234,6 +237,7 @@ Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f
 
 
 :::{.fact}
+Recall the **$p\dash$test**:
   
 :::
 
