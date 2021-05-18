@@ -231,7 +231,6 @@ or written another way,
 .\]
 :::
 
-
 :::{.corollary}
 The order of every element divides the size of $G$, i.e.
 $$

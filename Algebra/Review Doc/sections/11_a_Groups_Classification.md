@@ -194,6 +194,7 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 - [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
 - Order $p$: cyclic.
+- Order $p^2$: abelian, 2 choices.
 - Order $pq$: cases, letting $q<p$ and checking $q\divides p-1$.
 - Order $pqr$: ?
 - Order $p^2q$: ?
