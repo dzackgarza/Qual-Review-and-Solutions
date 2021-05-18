@@ -77,10 +77,6 @@ Thus
 :::
 
 
-
-
-
-
 :::{.definition title="Cauchy-Riemann Equations"}
 \[
 u_x = v_y \quad\text{and}\quad u_y = -v_x \\
