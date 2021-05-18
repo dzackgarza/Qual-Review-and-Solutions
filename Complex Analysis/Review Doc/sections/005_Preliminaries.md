@@ -318,4 +318,3 @@ Show that
 
 ![](figures/image_2021-05-17-10-27-21.png)
 
-- ![image_2021-05-17-10-29-25](figures/image_2021-05-17-10-29-25.png)
