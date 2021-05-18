@@ -311,7 +311,18 @@ Show that
 
 :::{.remark}
 Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
+This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge, and their difference is a finite number.
 :::
+
+
+:::{.proposition title="Ratio Test"}
+Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall
+
+- $R\in (0, 1) \implies$ convergence.
+- $R\in [1, \infty] \implies$ divergence.
+- $R=1$ yields no information.
+:::
+
 
 
 :::{.solution}
