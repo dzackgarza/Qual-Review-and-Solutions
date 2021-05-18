@@ -95,7 +95,8 @@ Similarly,
 v_r
 &= v_x x_r + v_y y_r \\
 &= v_x \cos(\theta) + v_y\sin(\theta) \\
-&= -u_y\cos(\theta) + u_x\sin(\theta) && \text{CR}
+&= -u_y\cos(\theta) + u_x\sin(\theta) && \text{CR} \\
+&= {1\over r}\qty{ -u_y r\cos(\theta) + u_x r\sin(\theta)}
 .\]
 
 
