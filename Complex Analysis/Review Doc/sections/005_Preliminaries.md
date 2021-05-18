@@ -289,12 +289,7 @@ Now by the $M\dash$test,
 ### Exercises
 
 :::{.exercise title="Summation by Parts"}
-Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
-\[
-\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-\]
-
-Equivalently, setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
+Setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
 \[
 \sum_{n=M}^{N} a_{n} b_{n}=a_{N} B_{N}-a_{M} b_{M-1}-\sum_{n=M}^{N-1}\left(a_{n+1}-a_{n}\right) B_{n}
 .\]
