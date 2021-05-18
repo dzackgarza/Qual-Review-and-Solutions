@@ -295,7 +295,7 @@ Setting $B_k \da \sum_{n=1}^k b_n$ and $B_0 \da 0$,
 .\]
 
 \[
-\sum_{k=m}^n a_k b_k = A_nb_n - A_{m-1} b_m + \sum_{k=m}^{n-1} A_k(b_k - b_{k-1})
+\sum_{k=m}^n a_k b_k = A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
 .\]
 
 Note there is a useful form for taking the product of sums:
