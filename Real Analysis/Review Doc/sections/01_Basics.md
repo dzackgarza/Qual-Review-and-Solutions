@@ -391,7 +391,6 @@ For every $x\in X$, pick a $\delta_x$ neighborhood satisfying the conditions for
 Take an open cover by $\delta_x/2$ balls, extract a finite subcover, take $\delta$ the minimal radius.
 :::
 
-
 :::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
 Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
 :::
