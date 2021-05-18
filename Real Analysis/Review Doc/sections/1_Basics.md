@@ -97,11 +97,16 @@ A metric space is **complete** if every Cauchy sequence converges.
 If $X$ is complete, then absolutely convergent implies convergent.
 :::
 
-:::{.definition title="Uniform Continuity"}
-$f$ is uniformly continuous iff
+:::{.definition title="Continuity and Uniform Continuity"}
+A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
+\[
+\forall x_0 \in X, \forall \eps>0, \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+.\]
+
+$f$ is **uniformly continuous** iff
 
 \[
-    &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
+    &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
 \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
 .\]
 :::
