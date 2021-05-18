@@ -80,7 +80,11 @@ Thus
 :::
 
 :::{.proposition title="Polar form of Cauchy-Riemann"}
-Setting $x=r\cos(\theta), y=r\sin(\theta)$, one can identify
+Setting 
+\[
+z = re^{i\theta} = r(\cos(\theta) + i\sin(\theta) ) = x+iy
+\]
+yields $x=r\cos(\theta), y=r\sin(\theta)$, one can identify
 \[
 x_r = \cos(\theta)&, x_\theta = -r\sin(\theta) \\
 y_r = \sin(\theta)&, y_\theta = r\cos(\theta)
