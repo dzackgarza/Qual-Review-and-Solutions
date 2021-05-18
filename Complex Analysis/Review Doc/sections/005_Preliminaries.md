@@ -45,19 +45,22 @@ F(\vector p + \vector h) = F(\vector p) + A(\vector h) + R(\vector h) && R\in o(
 :::
 
 
-
 :::{.remark}
-There is a linear representation of $\CC$:
+If $f$ is differentiable at $z_0$, then the limit defining $f'(z_0)$ must exist when approaching from any direction.
+Write $z_0 = x+ iy$, and first consider $h\in RR$, so $h = h_1 + ih_2$ with $h_2 = 0$.
+Then
 \[
-z \da a + bi \mapsto
-\begin{bmatrix}
-a & -b 
-\\
-b & a
-\end{bmatrix}
+f'(z_0) = 
+\lim_{h_1\to 0} { f(x+h_1, y) - f(x, y) \over h_1}
+\da \dd{f}{x}(x, y)
+.\]
+Taking $h \in i\RR$ purely imaginary, so $h= ih_2$,
+\[
+f'(z_0)
+= \lim_{ih_2\to 0} { f(x, y+h_2) - f(x, y) \over ih_2 } \da {1\over i} \dd{f}{y}(x, y)
 .\]
 
-Recall that a function $f:\RR^n\to \RR^m$
+
 
 :::
 
