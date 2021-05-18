@@ -12,6 +12,13 @@ A function $f: \CC\to \CC$ is **complex differentiable** at $z_0$ iff the follow
 \lim_{h\to 0} { f(z_0 + h) - f(h) \over h  } 
 .\]
 
+Equivalently, there exists an $\alpha\in \CC$ such that
+\[
+f(z_0+h) - f(z_0) - \alpha h = h \psi(h) && \psi(h) \converges{h\to 0}\too 0 
+.\]
+In this case, $\alpha = f'(z_0)$.
+
+
 :::
 
 :::{.definition title="Cauchy-Riemann Equations"}
