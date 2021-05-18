@@ -215,7 +215,7 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-:::{.proposition title="Ratio Test"}
+:::{.fact title="Ratio Test"}
 Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall
 
 - $R\in (0, 1) \implies$ convergence.
@@ -231,6 +231,12 @@ For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
 then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverges for $\abs{z} > R$.
 Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
 :::
+
+
+:::{.fact}
+  
+:::
+
 
 :::{.theorem title="Summation by Parts"}
 Define the forward difference operator $\Delta f_k = f_{k+1} - f_k$, then
