@@ -8,7 +8,7 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 \envlist
 - Uniform continuity:
 \[  
-\forall \varepsilon>0, \exists \delta(\eps)>0 \qtext{such that} \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \varepsilon
+\forall \varepsilon>0, \exists \delta(\eps)>0 \quad\text{such that}\quad \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \eps
 .\]
 - Negating uniform continuity:
   $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
