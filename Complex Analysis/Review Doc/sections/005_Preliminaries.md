@@ -405,14 +405,14 @@ Their difference converges to 0, and their common limit is the limit of the sum.
 1. Use that $\abs{z^k} = 1$ and $\sum c_kz^k < \infty \implies \abs{c_k} \to 0$, but $\abs{kz^k} = \abs{k} \to \infty$ here.
 2. Use that absolutely convergent implies convergent, and $\sum \abs{k^{-2} z^k} = \sum \abs{k^{-2}}$ converges by the $p\dash$test.
 3. If $z=1$, this is the harmonic series. 
-  Otherwise take $a_k = 1/k, b_k = e^{i k t}$ where $t\in (0, 2\pi)$ and apply Dirichlet's test.
+  Otherwise take $a_k = 1/k, b_k = e^{i k \theta}$ where $\theta \in (0, 2\pi)$ is some constant, and apply Dirichlet's test.
   It suffices to bound the partial sums of the $b_k$.
   Recalling that $\sum_{k\leq N} r^k = (1-r^{N+1}) / (1-r)$,
   \[
-  \norm{ \sum_{k\leq m} e^{ikt} } = \norm{1 - e^{i(m+1)t} \over 1 - e^{it}} \leq {2 \over \norm{ 1- e^{it}}}
-  .\]
-
-
+  \norm{ \sum_{k\leq m} e^{ik\theta } } = \norm{1 - e^{i(m+1)\theta} \over 1 - e^{i\theta}} \leq {2 \over \norm{ 1- e^{i\theta}}} \da M
+  ,\]
+  which is a constant.
+  Here we've used that two points on $S^1$ are at most distance 2 from each other.
 :::
 
 
