@@ -50,9 +50,12 @@ $f$ is *not* uniformly continuous when $c=0$.
 :::{.proof title="of claim"}
 \envlist
 
-- Toward a contradiction, let $\varepsilon < 1$.
+- Take $\varepsilon < 1$, and let $\delta = \delta(\eps)$ be arbitrary.
 - Let $x_n = \frac 1 n$ for $n\geq 1$.
-- Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
+- Choose $n$ large enough such that 
+\[
+\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta
+.\]
   - Why this can be done: by the Archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
   - Then
   \[
