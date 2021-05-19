@@ -484,7 +484,6 @@ For $z=0$:
 {z+1 \over z(z-1)}
 &= {1\over z} {z+1 \over z-1} \\
 &= {z+1\over z} {1\over z-1} 
-
 .\]
 
 :::
