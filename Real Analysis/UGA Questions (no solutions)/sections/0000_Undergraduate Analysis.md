@@ -113,14 +113,16 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 ,\]
   so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
 
-  > Here we've used that $e^x$ is equal to its power series expansion.
+  - Note: we've used that $e^x$ is equal to its power series expansion.
 
-- Thus $f$ converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
+- This argument shows that $f$ converges on any bounded set.
 
-**Claim**: 
+
+:::{.claim}
 $f$ does not converge on $\RR$.
+:::
 
-- If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
+- If $\sum_{n=0}^\infty f_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
 - But taking $A = \RR$ and $g_n(x) = {x^n \over n!}$, we have 
 \[  
 \sup_{x\in \RR} \abs{g_n(x)} = \sup_{x\in \RR} {x^n \over n!} = \infty
