@@ -39,8 +39,7 @@ $$
 &\leq \frac{\delta}{xy} \\
 &< \frac{\delta}{c^2} \\
 &< \varepsilon
-,\]
-  which shows uniform continuity.
+.\]
 
 :::
 
