@@ -135,11 +135,10 @@ Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ co
 Prove that $\sum f_n$ is also continuous.
 
 
-\envlist
 :::{.concept}
 \envlist
 
-- Todo
+- The uniform limit theorem.
 :::
 
 
