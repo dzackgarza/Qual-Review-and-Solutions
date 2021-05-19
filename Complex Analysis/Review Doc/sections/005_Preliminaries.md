@@ -339,16 +339,15 @@ then
 :::
 
 :::{.proof title="?"}
-Use summation by parts and the Cauchy criterion.
-
-Fix $\eps>0$, suppose $\abs{A_n} \leq M$ is assumed the uniform bound, and choose $M\gg 1$ so that $b_M \leq \eps/2M$.
-Then
+Use summation by parts.
+For a fixed $\sum a_k b_k$, write 
 \[
-\norm{ \sum_{m\leq k \leq n} a_k b_k }
-&
-\norm{ A_nb_n - A_{m-1} b_m + \sum_{m\leq k \leq n-1} A_k (b_k- b_{k-1} ) } \\
-&\leq
+\sum_{n=1}^m x_n Y_n + \sum_{n=1}^m X_n y_{n+1} = X_m Y_{m+1}
 .\]
+Set $x_n \da a_n, y_N \da b_n - b_{n-1}$, so $X_n = A_n$ and $Y_n = b_n$ as a telescoping sum.
+Importantly, all $y_n$ are negative, so $\abs{y_n} = \abs{b_n - b_{n-1}} = b_{n-1} - b_n$.
+
+
 
 :::
 
