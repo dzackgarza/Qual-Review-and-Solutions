@@ -371,9 +371,6 @@ So it suffices to bound the latter sum:
 
 :::
 
-
-
-
 :::{.theorem title="Abel's Theorem"}
 If $\sum_{k=1}^\infty c_k$ converges, then 
 \[
@@ -396,6 +393,7 @@ Show that
 Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
 This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge to a finite number.
 Their difference converges to 0, and their common limit is the limit of the sum.
+
 :::
 
 
@@ -406,7 +404,14 @@ Their difference converges to 0, and their common limit is the limit of the sum.
 
 1. Use that $\abs{z^k} = 1$ and $\sum c_kz^k < \infty \implies \abs{c_k} \to 0$, but $\abs{kz^k} = \abs{k} \to \infty$ here.
 2. Use that absolutely convergent implies convergent, and $\sum \abs{k^{-2} z^k} = \sum \abs{k^{-2}}$ converges by the $p\dash$test.
-3. 
+3. If $z=1$, this is the harmonic series. 
+  Otherwise take $a_k = 1/k, b_k = e^{i k t}$ where $t\in (0, 2\pi)$ and apply Dirichlet's test.
+  It suffices to bound the partial sums of the $b_k$.
+  Recalling that $\sum_{k\leq N} r^k = (1-r^{N+1}) / (1-r)$,
+  \[
+  \norm{ \sum_{k\leq m} e^{ikt} } = \norm{1 - e^{i(m+1)t} \over 1 - e^{it}} \leq {2 \over \norm{ 1- e^{it}}}
+  .\]
+
 
 :::
 
