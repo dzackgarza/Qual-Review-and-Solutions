@@ -87,6 +87,8 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 - $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
   - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
 - If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
+- $M\dash$test: if $f_n:A \to\CC$ with $\norm{f_n}_\infty < M_n$ and $\sum M_n < \infty$, then $\sum f_n$ converges uniformly and absolutely.
+  - If the $f_n$ are continuous, the uniform limit theorem implies $\sum f_n$ is continuous.
 :::
 
 :::{.solution}
