@@ -254,7 +254,11 @@ f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\
 :::
 
 :::{.proposition title="Power Series are Smooth"}
-Any power series is smooth and its derivatives can be obtained using term-by-term differentiation.
+Any power series is smooth (and thus holomorphic) on its disc of convergence, and its derivatives can be obtained using term-by-term differentiation:
+\[
+\dd{}{z} f(z) = \dd{}{z} \sum_{k\geq 0} c_k (z-z_0)^k = \sum_{k\geq 1} kc_k (z-z_0)^k
+.\]
+
 :::
 
 :::{.proposition title="Uniform Convergence of Series"}
@@ -380,6 +384,11 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 :::
 
 
+:::{.lemma title="Abel's Test"}
+If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $a_n\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
+:::
+
+
 :::{.exercise title="1.20"}
 Show that
 
@@ -388,17 +397,11 @@ Show that
 3. $\sum k\inv z^k$ converges on $S^1\sm\ts{1}$ and diverges at $1$.
 :::
 
-
 :::{.remark}
 Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
 This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge to a finite number.
 Their difference converges to 0, and their common limit is the limit of the sum.
-
 :::
-
-
-
-
 
 :::{.solution}
 
