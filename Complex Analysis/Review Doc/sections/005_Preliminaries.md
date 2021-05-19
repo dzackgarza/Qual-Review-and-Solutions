@@ -258,8 +258,21 @@ Any power series is smooth (and thus holomorphic) on its disc of convergence, an
 \[
 \dd{}{z} f(z) = \dd{}{z} \sum_{k\geq 0} c_k (z-z_0)^k = \sum_{k\geq 1} kc_k (z-z_0)^k
 .\]
+Moreover, the coefficients are given by 
+\[
+c_k = {f^{(n)}(z_0) \over n! }
+.\]
+:::
+
+
+:::{.fact}
+The product of two sequences is given by the Cauchy product
+\[
+\sum a_kz^k \cdot \sum b_k z^k = \sum c_k z^k,\quad c_k \da \sum_{j\leq k} a_k b_{k-j}
+.\]
 
 :::
+
 
 :::{.proposition title="Uniform Convergence of Series"}
 A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff 
