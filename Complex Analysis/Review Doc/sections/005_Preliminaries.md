@@ -350,9 +350,14 @@ We have
 \[
 \sum_{n\geq 1} a_n b_n 
 &= \lim_{N\to\infty} \sum_{n\leq N} x_n Y_n \\
-&= \lim_{N\to\infty} \sum_{n\leq N} X_N Y_N - \sum_{n\leq N} X_n y_{n+1} = - \sum_{n\geq 1} X_n y_{n+1},
+&= \lim_{N\to\infty} \sum_{n\leq N} X_N Y_N - \sum_{n\leq N} X_n y_{n+1} \\
+&= - \sum_{n\geq 1} X_n y_{n+1},
 \]
-so it suffices to bound the latter.
+where in the last step we've used that 
+\[
+\abs{X_N} = \abs{A_N}\leq M \implies \abs{X_N Y_{N} } = \abs{X_N} \abs{b_{n+1}} \leq M b_{n+1} \to 0
+.\]
+So it suffices to bound the latter sum.
 
 
 
