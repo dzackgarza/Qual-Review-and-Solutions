@@ -326,12 +326,11 @@ Behold:
 :::
 
 
-:::{.lemma title="Abel's Summation Lemma"}
+:::{.lemma title="Dirichlet's Test"}
 Given two sequences of real numbers \( \ts{ a_k } , \ts{ b_k } \) which satisfy
 
 1. The sequence of partial sums \( \ts{ A_n } \) is bounded,
-2. \( \ts{ b_k } \) is monotonically decreasing, and
-3. $b_k \converges{k\to\infty}\too 0$,
+2. $b_k \searrow 0$.
 
 then 
 \[
@@ -346,8 +345,9 @@ Fix $\eps>0$, suppose $\abs{A_n} \leq M$ is assumed the uniform bound, and choos
 Then
 \[
 \norm{ \sum_{m\leq k \leq n} a_k b_k }
-=
-\norm{ A_nb_n - A_{m-1} b_m + \sum_{m\leq k \leq n-1} A_k (b_k- b_{k-1} ) }
+&
+\norm{ A_nb_n - A_{m-1} b_m + \sum_{m\leq k \leq n-1} A_k (b_k- b_{k-1} ) } \\
+&\leq
 .\]
 
 :::
