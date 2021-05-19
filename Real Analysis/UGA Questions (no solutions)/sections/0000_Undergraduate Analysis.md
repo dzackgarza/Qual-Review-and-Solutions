@@ -84,6 +84,10 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 :::{.concept}
 \envlist
 - $f_N\to f$ uniformly $\iff$ $\norm{f_N - f}_\infty \to 0$.
+  - Applied to sums: 
+  \[
+\sum_{0 \leq k\leq N} f_n \converges{u}\to \sum_{k\geq 0} f_n \iff \norm{\sum_{k\geq N+1} f_n } \to 0
+  .\]
 - $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
   - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
 - If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
