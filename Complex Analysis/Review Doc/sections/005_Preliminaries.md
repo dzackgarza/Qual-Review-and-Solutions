@@ -346,6 +346,14 @@ For a fixed $\sum a_k b_k$, write
 .\]
 Set $x_n \da a_n, y_N \da b_n - b_{n-1}$, so $X_n = A_n$ and $Y_n = b_n$ as a telescoping sum.
 Importantly, all $y_n$ are negative, so $\abs{y_n} = \abs{b_n - b_{n-1}} = b_{n-1} - b_n$, and moreover $a_n b_n = x_n Y_n$ for all $n$.
+We have
+\[
+\sum_{n\geq 1} a_n b_n 
+&= \lim_{N\to\infty} \sum_{n\leq N} x_n Y_n \\
+&= \lim_{N\to\infty} \sum_{n\leq N} X_N Y_N - \sum_{n\leq N} X_n y_{n+1} = - \sum_{n\geq 1} X_n y_{n+1},
+\]
+so it suffices to bound the latter.
+
 
 
 
