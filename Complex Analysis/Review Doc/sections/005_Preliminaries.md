@@ -339,6 +339,9 @@ then
 :::
 
 :::{.proof title="?"}
+
+> See <http://www.math.uwaterloo.ca/~krdavids/Comp/Abel.pdf>
+
 Use summation by parts.
 For a fixed $\sum a_k b_k$, write 
 \[
@@ -357,10 +360,14 @@ where in the last step we've used that
 \[
 \abs{X_N} = \abs{A_N}\leq M \implies \abs{X_N Y_{N} } = \abs{X_N} \abs{b_{n+1}} \leq M b_{n+1} \to 0
 .\]
-So it suffices to bound the latter sum.
-
-
-
+So it suffices to bound the latter sum:
+\[
+\sum_{k\geq n}\abs{ X_k y_{k+1} } 
+&\leq M \sum_{k\geq 1} \abs{y_{k+1}}\\
+&\leq M \sum_{k\geq 1} b_{k} - b_{k+1} \\
+&\leq 2M(b_1 - b_{n+1})\\
+&\leq 2M b_1
+.\]
 
 :::
 
