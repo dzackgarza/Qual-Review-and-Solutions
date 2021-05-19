@@ -483,7 +483,8 @@ For $z=0$:
 \[
 {z+1 \over z(z-1)}
 &= {1\over z} {z+1 \over z-1} \\
-&= {z+1\over z} {1\over z-1} 
+&= -{z+1\over z} {1\over 1-z} \\
+&= -\qty{1 + {1\over z}}\sum_{k\geq 0} z^k
 .\]
 
 :::
