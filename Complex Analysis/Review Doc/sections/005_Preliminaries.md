@@ -487,6 +487,16 @@ For $z=0$:
 &= -\qty{1 + {1\over z}}\sum_{k\geq 0} z^k
 .\]
 
+For $z=1$:
+\[
+{z+1 \over z(z-1)}
+&= {1\over z-1}\qty{1 + {1\over z} } \\
+&= {1\over z-1}\qty{1 + {1\over 1 - (1-z)} } \\
+&= {1\over z-1} \qty{1 + \sum_{k\geq 0} (1-z)^k } \\
+&= {1\over z-1} \qty{1 + \sum_{k\geq 0} (-1)^k (z-1)^k }
+.\]
+
+
 :::
 
 
