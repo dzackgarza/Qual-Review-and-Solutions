@@ -447,7 +447,7 @@ Their difference converges to 0, and their common limit is the limit of the sum.
   Here we've used that two points on $S^1$ are at most distance 2 from each other.
 :::
 
-:::{.exercise title="?"}
+:::{.exercise title="Laurent expansions inside and outside of a disc"}
 Expand $f(z) = {1\over z(z-1)}$ in both
 
 - $\abs{z} < 1$
@@ -467,6 +467,27 @@ and
 
 
 :::
+
+
+:::{.exercise title="Laurent expansions about different points"}
+Find the Laurent expansion about $z=0$ and $z=1$ respectively of the following function:
+\[
+f(z) \da {z+1 \over z(z-1)}
+.\]
+
+:::
+
+
+:::{.solution}
+For $z=0$:
+\[
+{z+1 \over z(z-1)}
+&= {1\over z} {z+1 \over z-1} \\
+&= {1\over z} \qty{ {z \over z-1} + {1\over z-1}}
+.\]
+
+:::
+
 
 
 
