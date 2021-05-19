@@ -396,6 +396,7 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 :::
 
 
+
 :::{.example title="?"}
 Integrate a geometric series to obtain
 \[
@@ -403,6 +404,12 @@ Integrate a geometric series to obtain
 .\]
 Since $c_k \da (-1)^k/k \decreasesto 0$, this converges at $z=1$, and by Abel's theorem $f(1) = \log(2)$.
 
+:::
+
+:::{.remark}
+The converse to Abel's theorem is false: take $f(z) = \sum  (-z)^n = 1/(1+z)$.
+Then $f(1) = 1-1+1-\cdots$ diverges at 1, but $1/1+1 = 1/2$.
+So the limit $s\da \lim_{x\to 1^-} f(x) 1/2$, but $\sum a_n$ doesn't converge to $s$.
 :::
 
 
@@ -440,6 +447,33 @@ Their difference converges to 0, and their common limit is the limit of the sum.
   which is a constant.
   Here we've used that two points on $S^1$ are at most distance 2 from each other.
 :::
+
+
+
+:::{.exercise title="?"}
+Expand $f(z) = {1\over z(z-1)}$ in both
+
+- $\abs{z} < 1$
+- $\abs{z} > 1$
+
+
+:::
+
+
+:::{.solution}
+\[
+{1\over z(z-1)} = -{1\over z}{1 \over 1-z} = -{1\over z}\sum z^k
+.\]
+and
+\[
+{1\over z(z-1)} = {1\over z^2(1 - {1\over z})} = {1\over z^2} \sum \qty{1\over z}^k
+.\]
+
+
+:::
+
+
+
 
 
 
