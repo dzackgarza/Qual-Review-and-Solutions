@@ -122,6 +122,7 @@ Describe the intervals on which $f$ does and does not converge uniformly.
 $f$ does not converge on $\RR$.
 :::
 
+- This follows by small (sup norm) tails for sequences of functions: $\sum f_n$ converging uniformly on $A$ implies $\norm{f_n}_{\infty, A}\converges{n\to\infty}\too 0$.
 - If $\sum_{n=0}^\infty f_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
 - But taking $A = \RR$ and $g_n(x) = {x^n \over n!}$, we have 
 \[  
