@@ -274,6 +274,12 @@ The product of two sequences is given by the Cauchy product
 :::
 
 
+:::{.fact}
+Recall partial fraction decomposition
+:::
+
+
+
 :::{.proposition title="Uniform Convergence of Series"}
 A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff 
 \[  
@@ -323,7 +329,6 @@ A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
 
 :::
 
-
 :::{.solution}
 An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
 \
@@ -341,7 +346,6 @@ Behold:
 .\]
 
 :::
-
 
 :::{.lemma title="Dirichlet's Test"}
 Given two sequences of real numbers \( \ts{ a_k } , \ts{ b_k } \) which satisfy
@@ -395,8 +399,6 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 .\]
 :::
 
-
-
 :::{.example title="?"}
 Integrate a geometric series to obtain
 \[
@@ -412,12 +414,9 @@ Then $f(1) = 1-1+1-\cdots$ diverges at 1, but $1/1+1 = 1/2$.
 So the limit $s\da \lim_{x\to 1^-} f(x) 1/2$, but $\sum a_n$ doesn't converge to $s$.
 :::
 
-
-
 :::{.lemma title="Abel's Test"}
 If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $a_n\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
 :::
-
 
 :::{.exercise title="1.20"}
 Show that
@@ -448,8 +447,6 @@ Their difference converges to 0, and their common limit is the limit of the sum.
   Here we've used that two points on $S^1$ are at most distance 2 from each other.
 :::
 
-
-
 :::{.exercise title="?"}
 Expand $f(z) = {1\over z(z-1)}$ in both
 
@@ -458,7 +455,6 @@ Expand $f(z) = {1\over z(z-1)}$ in both
 
 
 :::
-
 
 :::{.solution}
 \[
@@ -471,9 +467,6 @@ and
 
 
 :::
-
-
-
 
 
 
