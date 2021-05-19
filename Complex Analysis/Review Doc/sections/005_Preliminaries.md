@@ -393,8 +393,18 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 \[
 \lim_{z\to 1^-} \sum_{k\in \NN} c_k z^k = \sum_{k\in \NN} c_k
 .\]
+:::
+
+
+:::{.example title="?"}
+Integrate a geometric series to obtain
+\[
+\sum {(-1)^k z^k \over n} = \log(z+1) && \abs{z} < 1
+.\]
+Since $c_k \da (-1)^k/k \decreasesto 0$, this converges at $z=1$, and by Abel's theorem $f(1) = \log(2)$.
 
 :::
+
 
 
 :::{.lemma title="Abel's Test"}
