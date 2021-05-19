@@ -12,6 +12,9 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 .\]
 - Negating uniform continuity:
   $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
+
+- Archimedean property: for all $x,y\in \RR$ there exists an $n \in \NN$ such that $nx>y$.
+  Take $x=\eps, y=1$, so $n\eps > 1$ and ${1\over n} < \eps$.
 :::
 
 :::{.solution}
@@ -54,9 +57,10 @@ $f$ is *not* uniformly continuous when $c=0$.
 - Let $x_n = \frac 1 n$ for $n\geq 1$.
 - Choose $n$ large enough such that 
 \[
-\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta
+\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} = {1\over n(n+1) } \da {1\over m} < \delta
 .\]
-  - Why this can be done: by the Archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
+  - Why this can be done: by the Archimedean property of $\RR$, for any $\delta\in \RR$, one can choo
+  choose $n$ such that ${1\over n} < \eps$.
   - Then
   \[
   {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
