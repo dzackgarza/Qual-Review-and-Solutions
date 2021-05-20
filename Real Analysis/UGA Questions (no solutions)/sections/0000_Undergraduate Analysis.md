@@ -361,12 +361,16 @@ where in the last step we've used that $\alpha$ is strictly positive.
 \[
 f(x) - f(y) 
 &= \sum_{q_k \in (y, x)} \alpha_k \\
-&= \sum_{q_k \in (y, x] } \alpha_k && \text{when } x\in \QQ
 .\]
 
 
 
 - For $q_m$ a rational:
+
+\[
+f(x) - f(y) = \sum_{q_k \in (y, x] } \alpha_k \geq \alpha(q_m) > 0
+.\]
+
   
   - Lower continuity $f(q_m^-) = f(q_m)$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
   - Failure of upper continuity is clear, using the above inequality and that $\alpha(q_m) > 0$.
