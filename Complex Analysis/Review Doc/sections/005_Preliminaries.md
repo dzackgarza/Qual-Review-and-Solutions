@@ -329,6 +329,12 @@ A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
 
 :::
 
+
+:::{.exercise title="?"}
+Use summation by parts to show that $\sin(n)/n$ converges.
+:::
+
+
 :::{.solution}
 An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
 \
