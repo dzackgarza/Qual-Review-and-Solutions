@@ -267,6 +267,8 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
 - Can always filter sets $X$ with a function $X\to \RR$.
 - Countable union of countable sets is still countable.
+- Continuity: $\lim_{y\to x} f(y) = f(x)$ from either side.
+- Trick: pick enumerations of countable sets and reindex sums
 :::
 
 
