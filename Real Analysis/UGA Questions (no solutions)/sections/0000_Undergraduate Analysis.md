@@ -319,6 +319,20 @@ f(q_0) \da \sum_{\substack{q\in \QQ \\ q\leq x}} \alpha(q) = \sum_{k\in A(x)} \a
   - $A(y) \supset A(q_0)$, since there is always a rational in $(q_0, y)$.
     This also implies $f(y) > f(x)$, i.e. $f$ is monotone increasing.
   - Since $q_0 < y$, the index $k=0$ is contained in $A(y)$ by definition.
+  - The index $k=0$ is *not* contained in $A(x)$ by definition.
+- There is a strict inequality
+\[
+f(y) \da \sum_{k\in A(y)} \alpha(q_k) > \sum_{k\in A(x)} \alpha(q_k) \da f(q_0)
+.\]
+- Adding the missing index $\ts{0}$ to the right-hand side makes this an inequality.
+  Set $A'(x) \da A(x)\union \ts{0}$, then
+\[
+f(y) \da \sum_{k\in A(y)} \alpha(q_k) 
+&\geq \sum_{k\in A'(x)} \alpha(q_k) \\
+&= \alpha(q_0) + \sum_{k \in A(x)} \alpha(q_k) \\
+&\da \alpha(q_m) + f(q_m)
+.\]
+
 
 
 
