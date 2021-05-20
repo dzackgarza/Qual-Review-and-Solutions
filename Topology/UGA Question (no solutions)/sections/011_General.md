@@ -22,8 +22,6 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Cantor's Intersection Theorem
@@ -31,6 +29,8 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 - Definition of compactness
 :::
 
+:::{.solution}
+\envlist
 
 - Toward a contradiction, let $\theset{U_\alpha} \covers [0, 1]$ be an open cover with no finite subcover.
 - Then either $[0, {1\over 2}]$ or $[{1\over 2}, 1]$ has no finite subcover; WLOG assume it is $[0, {1\over 2}]$.
@@ -59,12 +59,13 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Proof of the tube lemma.
 :::
+
+:::{.solution}
+\envlist
 
 Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
 
@@ -128,14 +129,10 @@ Write $Y$ for the interval $[0, \infty)$, equipped with the usual topology.
 Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
 :::
 
-\todo[inline]{Not finished.}
+\todo[inline]{Not finished. Add concepts}
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
-
-:::
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
   - Note that $\eps = N$ yields all one point sets $\theset{x_0}$ for $x_0 \geq 0$.
 - No finite discrete sets occur, since the retract of a connected set is connected.
@@ -168,10 +165,6 @@ Show that the union of the $X_\alpha$ is connected.
 :::{.solution}
 
 \envlist
-:::{.concept}
-\envlist
-
-:::
 
 :::{.proof title="Variant 1"}
 
@@ -245,22 +238,17 @@ $$
 
 :::
 
-:::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
-
-
-:::{.proof title="Variant 1"}
-
-\envlist
 :::{.concept}
 \envlist
 - Topic: closure and connectedness in the subspace topology.
     - See Munkres p.148
 :::
+
+:::{.solution}
+\envlist
+
+
+:::{.proof title="Variant 1"}
 \envlist
 
 - $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
@@ -303,15 +291,13 @@ $\impliedby$:
 
 :::
 
-
-
-:::{.proof title="Variant 2"}
-
-\envlist
 :::{.concept}
 \envlist
 - Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
 :::
+
+:::{.proof title="Variant 2"}
+\envlist
 
 If $S\subset X$ is not connected, then there exists a subset $A\subset S$ that is both open and closed in the subspace topology, where $A\neq \emptyset, S$.
 
@@ -359,14 +345,14 @@ Prove that $\mct$ is a topology on $\RR$, and that $\RR$ is compact with respect
 
 :::
 
-:::{.solution}
-\envlist
+
 :::{.concept}
 \envlist
-
+- This is precisely the cofinite topology.
 :::
 
-> Note: this is precisely the cofinite topology.
+:::{.solution}
+\envlist
 
 1. $\RR\in \tau$ since $\RR\setminus \RR = \emptyset$ is trivially a finite set, and $\emptyset \in \tau$ by definition.
 2. If $U_i \in \tau$ then $(\union_i U_i)^c = \intersect U_i^c$ is an intersection of finite sets and thus finite, so $\union_i U_i \in \tau$.
@@ -402,11 +388,6 @@ Describe, with proof, all open subsets of $X$ with respect to this topology.
 :::
 
 :::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
 Proof that $\RR/\QQ$ has the indiscrete topology:
 
 - Let $U \subset \RR/\QQ$ be open and nonempty, show $U = \RR/\QQ$.
@@ -479,12 +460,13 @@ Is $X$ compact?
 :::
 
 \todo[inline]{Incomplete proof for part 3.}
-:::{.solution}
-\envlist
 
 :::{.concept}
 See Munkres p.164, especially for (ii).
 :::
+
+:::{.solution}
+\envlist
 
 a.
 See definitions in review doc.
@@ -529,10 +511,6 @@ Prove that there is a number $\delta > 0$ such that for every $x \in X$, the bal
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
-
-:::
 
 Statement: show that the *Lebesgue number* is well-defined for compact metric spaces.
 
@@ -580,11 +558,6 @@ Prove that the converse to (a) holds if the space is a metric space.
 :::
 
 :::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
 Proof that $\RR/\QQ$ has the indiscrete topology:
 
 - Let $U \subset \RR/\QQ$ be open and nonempty, show $U = \RR/\QQ$.
@@ -610,10 +583,7 @@ then $f$ has a fixed point.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
 - Define a new function
 \begin{align*}
 g: X \to \RR \\
@@ -656,18 +626,14 @@ Prove that the product of two connected topological spaces is connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
+- Use the fact that a union of spaces containing a common point is still connected.
+- Fix a point $(a, b) \in X \cross Y$.
+- Since the horizontal slice $X_b\definedas X \cross \theset{b}$ is homeomorphic to $X$ which is connected, as are all of the vertical slices $Y_x \definedas \theset{x} \cross Y \cong Y$ (for any $x$), the "T-shaped" space $T_x \definedas X_b \union Y_x$ is connected for each $x$.
 
-Use the fact that a union of spaces containing a common point is still connected.
-Fix a point $(a, b) \in X \cross Y$.
-Since the horizontal slice $X_b\definedas X \cross \theset{b}$ is homeomorphic to $X$ which is connected, as are all of the vertical slices $Y_x \definedas \theset{x} \cross Y \cong Y$ (for any $x$), the "T-shaped" space $T_x \definedas X_b \union Y_x$ is connected for each $x$.
+- Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ is connected.
 
-Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ is connected.
-
-![Image](figures/2020-01-21-20:53.png)\
+![Image](figures/2020-01-21-20:53.png)
 
 :::
 
@@ -689,12 +655,13 @@ Give, with proof, an example of a space that is connected but not locally connec
 
 \todo[inline]{What's the picture?}
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Consider $\RR$, unions of intervals, $\QQ$, and the topologists sine curve.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 See definitions in review doc.
@@ -758,12 +725,13 @@ Exhibit a complete metric space $X$ and a closed subset $A$ of $X$ that is bound
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Use diagonal trick to construct the Cauchy sequence.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 $\implies$:
@@ -807,8 +775,6 @@ If so, give a proof; if not, give a counterexample.
 
 \todo[inline]{Review, from last year.}
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 
@@ -829,6 +795,9 @@ If so, give a proof; if not, give a counterexample.
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.proof title="?"}
 Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
  then choose $s = \vector x + A_1 \in B(1,0)/A_1$ such that $\norm{s} = \frac 1 2$ 
@@ -840,7 +809,6 @@ Then, let $A_2 = \mathrm{span}(\vector x_1, \vector x_2)$, (which is closed) and
 This produces a non-convergent sequence in the closed ball, so it can not be compact.
 
 :::
-
 
 :::
 
@@ -857,8 +825,6 @@ Prove that this description defines a topology on $\tilde X$ making $\tilde X$ c
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological space* iff
@@ -868,6 +834,9 @@ Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological s
 - $\theset{U_i}_{i\in \NN} \subseteq \tau \implies \intersect_{i\in \NN} U_i \in \tau$
 
 :::
+
+:::{.solution}
+\envlist
 
 We can write $\overline{(X, \tau)} = (X \disjoint \pt , \tau \union \tau')$ where $\tau' = \theset{U\disjoint \pt \suchthat X-U ~\text{is compact}}$. We need to show that $T \definedas \tau \union \tau'$ forms a topology. 
 
@@ -906,12 +875,6 @@ Prove that $X$ is connected but not path connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\todo[inline]{???}
-
-\envlist
-
-:::
 
 :::{.proof title="Variant 1"}
 $X$ is connected:
@@ -1030,17 +993,14 @@ Prove or disprove that $X$ is connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
-(I.e. this sends points to lines through the origin with rational slope).
+- Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
+  - I.e. this sends points to lines through the origin with rational slope).
 
-Note that the image of $\pi$ is $\RP^1\setminus\theset{\infty}$, which is homeomorphic to $\RR$.
+- Note that the image of $\pi$ is $\RP^1\setminus\theset{\infty}$, which is homeomorphic to $\RR$.
 
-If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subset \RR$.
-If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
+- If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subset \RR$.
+- If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
 :::
 
 ### Spring 2021 #2
