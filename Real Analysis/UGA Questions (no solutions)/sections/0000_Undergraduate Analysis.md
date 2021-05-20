@@ -192,7 +192,7 @@ Switching to polar coordinates and integrating over the quarter of the unit disc
 &\geq \int_D f \, dA \\
 &= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\dr\dtheta  \\
 &= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \dr\dtheta  \\
-&= \qty{ \int_0^1 {1\over r } \dr} \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta  \\
+&= \qty{ \int_0^1 {1\over r } \dr} \qty{ \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta }  \\
 &\too \infty
 .\]
 :::
