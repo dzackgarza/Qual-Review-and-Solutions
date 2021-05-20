@@ -315,7 +315,6 @@ f(x) \da \sum_{q_k\leq x} \alpha_k
   - $f$ has jump discontinuities at every $q_m$, where the jump is precisely $\alpha_m$.
 
 - This follows from computing the left and right limits:
-
 \[
 f(x^+) &= \lim_{h\to 0} \sum_{q_k \leq x+h} \alpha_k = \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k + \sum_{q_k = x} \alpha_k \\
 f(x^-) &= \lim_{h\to 0} \sum_{q_k \leq x-h} \alpha_k = \sum_{q_k < x} \alpha_k
