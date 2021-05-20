@@ -361,18 +361,23 @@ where in the last step we've used that $\alpha$ is strictly positive.
 
 \[
 f(x^+) -f(x^-) 
-&= \lim_{h\to 0} \qty{ f(q_k + h) - f(q_k - h)} \\
+&= \lim_{h\to 0} \qty{ f(x + h) - f(x - h)} \\
 &= \lim_{h\to 0} \qty{ \sum_{k\in A(x+h)} \alpha(q_k) - \sum_{k\in A(x-h)} \alpha(q_k) } \\
 &= \alpha(x) \quad \text{for all } x
 ,\]
-  where we've used that \( \Intersect_{h} (x -h, x+h) = x \), i.e. the only set being indexed over in the limit is $\ts{x}$
+  where we've used that \( \Intersect_{h} (x -h, x+h) = x \), i.e. the only set being indexed over in the limit comes from the term $\ts{x}$.
 
-  > Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
 
 - For $q_m$ a rational:
   
   - Lower continuity $f(q_m^-) = f(q_m)$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
   - Failure of upper continuity is clear, using the above inequality and that $\alpha(q_m) > 0$.
+  - So $f$ can not be continuous at $x=q_m$.
+  
+  > Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
+
+- For $x$ an irrational:
+  
 
 
 
