@@ -366,18 +366,15 @@ f(q_m^+) -f(q_m^-)
 &= \lim_{h\to 0} \qty{ \sum_{k\in A(q_m-h)} \alpha(q_k) - \sum_{k\in A(q_m+h)} \alpha(q_k) } \\
 &= \alpha(q_m) \\
 &>0 \quad \text{for all } q_m
-,\]
+.\]
+
+> Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
 
 
 
 :::
 
 
-
-:::{.proof title="of b, at irrationals"}
-
-
-:::
 
 
 :::
