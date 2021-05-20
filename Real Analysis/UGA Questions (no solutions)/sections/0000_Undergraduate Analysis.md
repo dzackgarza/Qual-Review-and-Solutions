@@ -299,93 +299,18 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 :::
 
 
-First consider the case of $x\in \QQ$.
-Strat: show $\lim_{y\to x^+}f(y) \neq f(x)$.
-
-:::{.proof title="of b, at rationals"}
-\envlist
-
-- Fix an enumeration of $\QQ$, say $\QQ = \ts{q_k}_{k\in \ZZ^{\geq 0}}$.
-  Without loss of generality, relabel so $q_0 = x$.
-- Change the indexing set by defining a section
-\[
-A(x) \da \ts{ k\in \ZZ^{\geq 0 } \st q_k < x } 
-.\]
-
-- Rewrite the sum
-\[
-f(q_0) \da \sum_{\substack{q\in \QQ \\ q\leq x}} \alpha(q) = \sum_{k\in A(x)} \alpha(q_k)
-.\]
-
-- Let $y>q_0$ be arbitrary, and note some facts:
-  - $A(y) \supset A(q_0)$, since there is always a rational in $(q_0, y)$.
-    This also implies $f(y) > f(x)$, i.e. $f$ is monotone increasing.
-  - Since $q_0 < y$, the index $k=0$ is contained in $A(y)$ by definition.
-  - The index $k=0$ is *not* contained in $A(x)$ by definition.
-- There is a strict inequality
-\[
-f(y) \da \sum_{k\in A(y)} \alpha(q_k) > \sum_{k\in A(x)} \alpha(q_k) \da f(q_0)
-.\]
-- Adding the missing index $\ts{0}$ to the right-hand side makes this an inequality.
-  Set $A'(x) \da A(x)\union \ts{0}$, then
-\[
-f(y) \da \sum_{k\in A(y)} \alpha(q_k) 
-&\geq \sum_{k\in A'(x)} \alpha(q_k) \\
-&= \alpha(q_0) + \sum_{k \in A(x)} \alpha(q_k) \\
-&\da \alpha(q_0) + f(q_0) \\
-&> f(q_0)
-,\]
-where in the last step we've used that $\alpha$ is strictly positive.
-
-- Since $f$ is monotone increasing and the set $\ts{f(y) \st y>q_0}$ is bounded below by $q_0$, the right limit $\lim_{y\to q_0^+} f(y)$ exists.
-- By order limit laws, applying it to the above inequality preserves the inequality:
-\[
-\lim_{y\to q_0^+} f(y) \geq \alpha(q_0) + f(q_0) > f(q_0)
-.\]
-
-:::
-
 
 :::{.proof title="of b"}
-\envlist
-
-- Fix an enumeration \( \ts{ q_k }_{k\in \NN} = \QQ \).
-- Trick: reindex to sum over a set of *indices* instead of rationals
-  - Set 
-  \[
-  A(x) \da \ts{ k\in \NN \st q_k \leq x } \implies f(x) \da \sum_{k\in A(x)} \alpha(q_k)
-  .\]
-  - This makes it clear that $f$ is monotone increasing, since $y<x \implies A(y) \subseteq A(x) \implies f(y) < f(x)$.
-
-- For $y<x$, we have
+We'll prove something more general: let $Q = \ts{q_k}$ be countable and $\ts{\alpha_k \da \alpha(q_k)}$ be summable, and define
 \[
-f(x) - f(y) 
-&= \sum_{q_k \in (y, x]} \alpha_k \\
+f(x) \da \sum_{q_k\leq x} \alpha_k
 .\]
-
-- For $q_m$ a rational:
-\[
-f(q_m) - f(y) = \sum_{q_k \in (y, q_m] } \alpha_k \geq \alpha(q_m) > 0 && \forall y< q_m
-,\]
-so $f$ fails to be continuous at $q_m$ since the upper and lower limits disagree.
-
-- For $x$ irrational, we drop the endpoint $x$ in the indexing set
-\[
-f(x) - f(y) = \sum_{q_k \in (y, x) } \alpha(q_k)
-.\]
-- Now since $\sum_{k\in \NN} \alpha(q_k) < \infty$, pick $N$ large enough so that $\sum_{k > N} \alpha(q_k) < \eps$.
-- Pick $y< x$ so that no $q_k \in (y, x)$ for $k \leq N$, i.e. shrink the interval to avoid finitely many indices.
-- Now
-\[
-\abs{ f(x) - f(y)}  = \sum_{q_k \in (y, x) } \alpha(q_k) \leq \sum_{k\geq N} \alpha(k) < \eps
-.\]
-
-
-  
-
-
+This is always discontinuous precisely on the countable set $Q$ and continuous on $\RR\sm Q$.
 
 :::
+
+
+
 
 
 
