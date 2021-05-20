@@ -266,6 +266,7 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 \envlist
 
 - Can always filter sets $X$ with a function $X\to \RR$.
+- Countable union of countable sets is still countable.
 :::
 
 
@@ -278,7 +279,8 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 - Set $S \definedas \sum_{i\in I} \alpha(i)$, we will show that $S<\infty \implies I$ is countable.
 - Write $I = \Union_{n\geq 0} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
   - Note that $S_n \subseteq S$ for all $n$, so $\sum_{i\in I}\alpha(i) \geq \sum_{i\in S_n} \alpha(i)$ for all $n$.
-- We now have the inequality
+- It suffices to show that $S_n$ is at most countable, since $I$ is a countable union of $S_n$.
+- There is an inequality
 \[  
 \infty 
 &> S \da \sum_{i\in I} \alpha(i) \\
@@ -286,11 +288,8 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 &\geq \sum_{i\in S_n} {1\over n} \\
 &= {1\over n} \sum_{i\in S_n} 1 \\
 &= \qty{1\over n} \# S_n \\ \\
-\implies \infty > n S \geq \# S_n
-,\]
-  so $S_n$ is a countable set.
-
-- But then $I$ is a countable union of countable sets and thus countable.
+\implies \infty &> n S \geq \# S_n
+.\]
 
 :::
 
