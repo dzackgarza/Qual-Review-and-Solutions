@@ -301,11 +301,20 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 
 
 :::{.proof title="of b"}
-We'll prove something more general: let $Q = \ts{q_k}$ be countable and $\ts{\alpha_k \da \alpha(q_k)}$ be summable, and define
+\envlist
+
+- We'll prove something more general: let $Q = \ts{q_k}$ be countable and $\ts{\alpha_k \da \alpha(q_k)}$ be summable, and define
 \[
 f(x) \da \sum_{q_k\leq x} \alpha_k
 .\]
-This is always discontinuous precisely on the countable set $Q$ and continuous on $\RR\sm Q$.
+  
+  - $f$ is always discontinuous precisely on the countable set $Q$ and continuous on $\RR\sm Q$.
+
+  - $f$ is always left-continuous, is right-continuous at $x\in\RR\sm Q$, and *not* right-continuous at $x\in Q$
+
+  - $f$ has jump discontinuities at every $q_k$, where the jump is precisely $\alpha(q_k)$.
+
+- This 
 
 :::
 
