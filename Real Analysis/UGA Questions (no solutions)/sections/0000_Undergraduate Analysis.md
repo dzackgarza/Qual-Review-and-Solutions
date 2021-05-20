@@ -357,15 +357,12 @@ where in the last step we've used that $\alpha$ is strictly positive.
   .\]
   - This makes it clear that $f$ is monotone increasing, since $y<x \implies A(y) \subseteq A(x) \implies f(y) < f(x)$.
 
-- Note that
-
+- For $y<x$, we have
 \[
-f(x^+) -f(x^-) 
-&= \lim_{h\to 0} \qty{ f(x + h) - f(x - h)} \\
-&= \lim_{h\to 0} \qty{ \sum_{k\in A(x+h)} \alpha(q_k) - \sum_{k\in A(x-h)} \alpha(q_k) } \\
-&= \alpha(x) \quad \text{for all } x
-,\]
-  where we've used that \( \Intersect_{h} (x -h, x+h) = x \), i.e. the only set being indexed over in the limit comes from the term $\ts{x}$.
+f(x) - f(y) 
+&= \sum_{q_k \in (y, x)} \alpha_k
+.\]
+
 
 
 - For $q_m$ a rational:
