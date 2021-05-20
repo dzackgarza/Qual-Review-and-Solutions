@@ -210,6 +210,8 @@ Prove that the following statements are equivalent:
 :::{.concept}
 \envlist
 - What it means for a sequence to converge.
+- Trading $N$s for $\delta$s.
+
 :::
 
 :::{.solution}
@@ -222,20 +224,20 @@ Prove that the following statements are equivalent:
   - We thus want to show that for every $\eps>0$, there exists an $N(\eps)$ such that \[n\geq N(\eps) \implies \rho(f(x_n),  f(x_0)) < \eps.\]
 - Let $\eps>0$ be arbitrary, then by (1) choose $\delta$ such that $\rho(f(x), f(x_0)) < \eps$ when $d(x, x_0) < \delta$.
 - Since $x_n\to x$, there is some $N$ such that $n\geq N \implies d(x_n, x_0) < \delta$
-- Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ as desired.
+- Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ by definition.
 
 
 :::
 
 :::{.proof title="$2\implies 1$"}
 
-> Note that we need a $\delta$ for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
+> The direct implication is not a good idea here, since you need a handle on *all* $x$ in a neighborhood of $x_0$, not just a specific sequence.
 
-- By contrapositive, we will show that $\not 1\implies \not 2$. 
-- Thus we need to show that if $f$ is not $\eps\dash\delta$ continuous at $x_0$, then there exists a sequence $x_n\to x_0$ where $f(x_n)\not\to f(x_0)$.
+- By contrapositive, show that $\not 1\implies \not 2$. 
+- Need to show: if $f$ is not $\eps\dash\delta$ continuous at $x_0$, then there exists a sequence $x_n\to x_0$ where $f(x_n)\not\to f(x_0)$.
 - Negating $1$, we have that there exists an $\eps>0$ such that for all $\delta$, there exists an $x$ with $d(x, x_0) < \delta$ but $\rho(f(x), f(x_0))>\eps$
-- So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < {1\over n}$ and $\rho(f(x_n), f(x_0)) > \eps$.
-- Then $x_n \to x_0$ but $f(x_n) \not\to f(x_0)$.
+- So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < \delta_n \da {1\over n} \too 0$ and $\rho(f(x_n), f(x_0)) > \eps$ for all $n$.
+- This yields a sequence $x_n \to x_0$ where $f(x_n) \not\to f(x_0)$.
 
 :::
 
