@@ -369,13 +369,18 @@ f(q_m) - f(y) = \sum_{q_k \in (y, q_m] } \alpha_k \geq \alpha(q_m) > 0 && \foral
 ,\]
 so $f$ fails to be continuous at $q_m$ since the upper and lower limits disagree.
 
-  - Lower continuity $f(q_m^-) = f(q_m)$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
-  - Failure of upper continuity is clear, using the above inequality and that $\alpha(q_m) > 0$.
-  - So $f$ can not be continuous at $x=q_m$.
-  
-  > Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
+- For $x$ irrational, we drop the endpoint $x$ in the indexing set
+\[
+f(x) - f(y) = \sum_{q_k \in (y, x) } \alpha(q_k)
+.\]
+- Now since $\sum_{k\in \NN} \alpha(q_k) < \infty$, pick $N$ large enough so that $\sum_{k > N} \alpha(q_k) < \eps$.
+- Pick $y< x$ so that no $q_k \in (y, x)$ for $k \leq N$, i.e. shrink the interval to avoid finitely many indices.
+- Now
+\[
+\abs{ f(x) - f(y)}  = \sum_{q_k \in (y, x) } \alpha(q_k) \leq \sum_{k\geq N} \alpha(k) < \eps
+.\]
 
-- For $x$ an irrational:
+
   
 
 
