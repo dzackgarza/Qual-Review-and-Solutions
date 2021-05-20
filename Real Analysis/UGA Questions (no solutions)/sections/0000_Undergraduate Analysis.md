@@ -358,6 +358,17 @@ where in the last step we've used that $\alpha$ is strictly positive.
   - This makes it clear that $f$ is monotone increasing, since $y<x \implies A(y) \subseteq A(x) \implies f(y) < f(x)$.
   - This also makes lower continuity clear for $x\da q_m$ any rational, since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
 
+- But $f$ is not continuous at $x_n$, since
+
+\[
+f(q_m^+) -f(q_m^-) 
+&= \lim_{h\to 0} \qty{ f(q_k + h) - f(q_k - h)} \\
+&= \lim_{h\to 0} \qty{ \sum_{k\in A(q_m-h)} \alpha(q_k) - \sum_{k\in A(q_m+h)} \alpha(q_k) } \\
+&= \alpha(q_m) \\
+&>0 \quad \text{for all } q_m
+,\]
+
+
 
 :::
 
