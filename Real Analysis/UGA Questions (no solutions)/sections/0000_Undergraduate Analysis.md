@@ -261,24 +261,32 @@ f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
 \]
 Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
-\todo[inline]{Stuck on part b}
+
+:::{.concept}
+\envlist
+
+- Can always filter sets $X$ with a function $X\to \RR$.
+:::
+
 
 :::{.solution}
-
 \envlist
 
 :::{.proof title="of a"}
 \envlist
 
 - Set $S \definedas \sum_{i\in I} \alpha(i)$, we will show that $S<\infty \implies I$ is countable.
-- Write $I = \disjoint_{n\in \NN} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
+- Write $I = \Union_{n\geq 0} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
+  - Note that $S_n \subseteq S$ for all $n$, so $\sum_{i\in I}\alpha(i) \geq \sum_{i\in S_n} \alpha(i)$ for all $n$.
 - We now have the inequality
 \[  
-S = \sum_{i\in I} \alpha(i) 
-\geq \sum_{i\in S_n} \alpha(i) 
-\geq \sum_{i\in S_n} {1\over n} 
-= {1\over n} \sum_{i\in S_n} 1 = \qty{1\over n} \abs{S_n} \\ \\
-\infty > \implies n S \geq \abs{S_n}
+\infty 
+&> S \da \sum_{i\in I} \alpha(i) \\
+&\geq \sum_{i\in S_n} \alpha(i) \\
+&\geq \sum_{i\in S_n} {1\over n} \\
+&= {1\over n} \sum_{i\in S_n} 1 \\
+&= \qty{1\over n} \# S_n \\ \\
+\implies \infty > n S \geq \# S_n
 ,\]
   so $S_n$ is a countable set.
 
