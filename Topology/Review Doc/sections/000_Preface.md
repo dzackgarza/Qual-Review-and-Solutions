@@ -60,15 +60,21 @@ x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
 
 ## Conventions
 
-- Spaces are assumed to be connected and path connected, so $\pi_0(X) = H_0(X) = \ZZ$.
 
-- Graded objects like $\pi_*, H_*, H^*$ are sometimes represented as lists.
-  In this case, all list entries start indexing at 1.
-  Examples: 
-  \[
-	\pi_*(X) &= [\pi_1(X), \pi_2(X), \pi_3(X), \cdots] \\
-	H_*(X) &= [H_1(X), H_2(X), H_3(X), \cdots]
-  .\]
+:::{.remark title="some conventions"}
+Spaces are assumed to be connected and path connected, so $\pi_0(X) = H_0(X) = \ZZ$.
+So I virtually never consider anything occurring at index zero in these notes.
+
+Graded objects such as $\pi_*, H_*, H^*$ are sometimes represented as lists, which always start indexing at 1.
+Examples: 
+\[
+\pi_*(X) &= [\pi_1(X), \pi_2(X), \pi_3(X), \cdots] \\
+H_*(X) &= [H_1(X), H_2(X), H_3(X), \cdots]
+.\]
+
+:::
+
+
 
 ## Some Prerequisite Algebra Facts
 
