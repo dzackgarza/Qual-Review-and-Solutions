@@ -346,6 +346,21 @@ where in the last step we've used that $\alpha$ is strictly positive.
 :::
 
 
+:::{.proof title="of b"}
+\envlist
+
+- Fix an enumeration \( \ts{ q_k }_{k\in \NN} = \QQ \).
+- Trick: reindex to sum over a set of *indices* instead of rationals
+  - Set 
+  \[
+  A(x) \da \ts{ k\in \NN \st q_k \leq x } \implies f(x) \da \sum_{k\in A(x)} \alpha(q_k)
+  .\]
+
+
+:::
+
+
+
 :::{.proof title="of b, at irrationals"}
 
 
