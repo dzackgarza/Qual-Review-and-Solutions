@@ -371,8 +371,8 @@ f(x^+) -f(x^-)
 
 - For $q_m$ a rational:
   
-  - Lower continuity is clear for $q_m$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
-  - Failure of upper continuity is clear since $\alpha(q_m) > 0$
+  - Lower continuity $f(q_m^-) = f(q_m)$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
+  - Failure of upper continuity is clear, using the above inequality and that $\alpha(q_m) > 0$.
 
 
 
