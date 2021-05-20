@@ -335,6 +335,8 @@ f(x^-) &= \sum_{q_k< x} \alpha_k
 ,\]
   so the limits agree.
 
+- To recover the result in the problem, let $\QQ = \ts{q_k}$ be any enumeration of the rationals.
+
 :::
 
 
