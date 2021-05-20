@@ -331,7 +331,7 @@ which clearly differ if $\alpha_m \neq 0$.
 - Taking $x\not\in Q$, we have $\ts{q_k \leq x} = \ts{q_k < x}$, since $\ts{q_k=x} = \emptyset$, so
 \[
 f(x^+) &= \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k \\
-f(x^-) &= = \sum_{q_k< x} \alpha_k
+f(x^-) &= \sum_{q_k< x} \alpha_k
 ,\]
   so the limits agree.
 
