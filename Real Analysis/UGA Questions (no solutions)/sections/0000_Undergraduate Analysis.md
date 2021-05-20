@@ -360,7 +360,8 @@ where in the last step we've used that $\alpha$ is strictly positive.
 - For $y<x$, we have
 \[
 f(x) - f(y) 
-&= \sum_{q_k \in (y, x)} \alpha_k
+&= \sum_{q_k \in (y, x)} \alpha_k \\
+&= \sum_{q_k \in (y, x] } \alpha_k && \text{when } x\in \QQ
 .\]
 
 
