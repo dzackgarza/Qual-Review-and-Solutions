@@ -299,9 +299,11 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 :::
 
 
-:::{.proof title="of b"}
 First consider the case of $x\in \QQ$.
 Strat: show $\lim_{y\to x^+}f(y) \neq f(x)$.
+
+:::{.proof title="of b, at rationals"}
+\envlist
 
 - Fix an enumeration of $\QQ$, say $\QQ = \ts{q_k}_{k\in \ZZ^{\geq 0}}$.
   Without loss of generality, relabel so $q_0 = x$.
@@ -330,13 +332,21 @@ f(y) \da \sum_{k\in A(y)} \alpha(q_k) > \sum_{k\in A(x)} \alpha(q_k) \da f(q_0)
 f(y) \da \sum_{k\in A(y)} \alpha(q_k) 
 &\geq \sum_{k\in A'(x)} \alpha(q_k) \\
 &= \alpha(q_0) + \sum_{k \in A(x)} \alpha(q_k) \\
-&\da \alpha(q_m) + f(q_m) \\
-&> f(q_m)
+&\da \alpha(q_0) + f(q_0) \\
+&> f(q_0)
 ,\]
 where in the last step we've used that $\alpha$ is strictly positive.
 
+- Since $f$ is monotone increasing and the set $\ts{f(y) \st y>q_0}$ is bounded below by $q_0$, the right limit $\lim_{y\to q_0^+} f(y)$ exists.
+- By order limit laws, applying it to the above inequality preserves the inequality:
+\[
+\lim_{y\to q_0^+} f(y) \geq \alpha(q_0) + f(q_0) > f(q_0)
+.\]
+
+:::
 
 
+:::{.proof title="of b, at irrationals"}
 
 
 :::
