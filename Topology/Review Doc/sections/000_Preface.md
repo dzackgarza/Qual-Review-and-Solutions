@@ -11,30 +11,21 @@ Some fun resources:
 
 ## Notation
 
-- $A\cross B, \prod X_j$ are direct products.
-
-- $A\oplus B, \bigoplus_j X_j$ are direct sums, the subset of $A\cross B$ where only finitely many terms are nonzero.
-  - ${\ZZ}^n$ denotes the direct sum of $n$ copies of the group ${\ZZ}$.
-  - Note that $A \oplus B \injects A\cross B$.
-
-- $A\ast B, \ast_j X_J$ are free products, $F_n \da \ZZ^{\ast n}$ is the free group on $n$ generators.
-
-  - Note that the abelianization yields $\qty{\ast_j X_j} = \bigoplus_j X_j$.
-
 | Notation                                             | Definition                          |
 |------------------------------------------------------|-------------------------------------|
-| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Products                            |
+| $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Direct Products                     |
 | $X\oplus Y, \bigoplus_{j\in J} X_j, X^{\oplus n}$    | Direct sums                         |
-| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                       |
 | $X\tensor Y, \bigotimes_{j\in J} X_j, X^{\tensor n}$ | Tensor products                     |
+| $X\ast Y, \ast_{j\in J} X_j, X^{\ast n}$             | Free products                       |
 | $\ZZ^n$                                              | The free abelian group of rank $n$  |
-| $\ZZ^{\ast n}$                                       | The free group on $n$ generators    |
+| $F_n, \ZZ^{\ast n}$                                  | The free group on $n$ generators    |
 | $\pi_0(X)$                                           | The *set* of path components of $X$ |
 | $G=1$                                                | The trivial abelian group           |
 | $G=0$                                                | The trivial nonabelian group        |
 
-
 :::{.remark}
+$A\times B$ denotes the **direct product** of modules.
+$A\oplus B$ denotes a **direct sum**: the subset of $A\cross B$ where only finitely many terms are nonzero.
 Both the product and direct sum have coordinate-wise operations.
 For finite index sets $\abs{J}< \infty$, the direct sum and product coincide, but in general there is only an injection $\bigoplus_j X_i \injects \prod_j X_j$.
 In the direct sum $\bigoplus_j X_j$ have only finitely many nonzero entries, while the product allows *infinitely* many nonzero entries.
