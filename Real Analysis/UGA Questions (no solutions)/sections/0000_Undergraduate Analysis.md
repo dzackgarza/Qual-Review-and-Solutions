@@ -312,14 +312,22 @@ f(x) \da \sum_{q_k\leq x} \alpha_k
 
   - $f$ is always left-continuous, is right-continuous at $x\in\RR\sm Q$, and *not* right-continuous at $x\in Q$
 
-  - $f$ has jump discontinuities at every $q_k$, where the jump is precisely $\alpha(q_k)$.
+  - $f$ has jump discontinuities at every $q_m$, where the jump is precisely $\alpha_m$.
 
 - This follows from computing the left and right limits:
-\[
-f(x^+) &= \lim_{h\to 0} \sum_{q_k \leq x+h} \alpha_k = \sum_{q_k\leq x} \alpha_k
-f(x^-) &= \lim_{h\to 0} \sum_{q_k \leq x-h} \alpha_k = \sum_{q_k < x} \alpha_k
-.\]
 
+\[
+f(x^+) &= \lim_{h\to 0} \sum_{q_k \leq x+h} \alpha_k = \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k + \sum_{q_k = x} \alpha_k \\
+f(x^-) &= \lim_{h\to 0} \sum_{q_k \leq x-h} \alpha_k = \sum_{q_k < x} \alpha_k
+,\]
+  where we've used that $\ts{q_k \leq x} = \ts{q_k < x} \disjoint \ts{x}$ in the first equality.
+
+- Then if $x=q_m$ for some $m$,
+\[
+f(x^+) &= f(q_m^+) = \sum_{q_k < q_m} \alpha_k + \alpha_m \\
+f(x^-) &= f(a_m^-) = \sum_{q_k< q_m} \alpha_k
+,\]
+which clearly differ if $\alpha_m \neq 0$.
 
 :::
 
