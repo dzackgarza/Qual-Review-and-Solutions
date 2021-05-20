@@ -356,20 +356,24 @@ where in the last step we've used that $\alpha$ is strictly positive.
   A(x) \da \ts{ k\in \NN \st q_k \leq x } \implies f(x) \da \sum_{k\in A(x)} \alpha(q_k)
   .\]
   - This makes it clear that $f$ is monotone increasing, since $y<x \implies A(y) \subseteq A(x) \implies f(y) < f(x)$.
-  - This also makes lower continuity clear for $x\da q_m$ any rational, since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
 
-- But $f$ is not continuous at any $q_m$, since
+- Note that
 
 \[
-f(q_m^+) -f(q_m^-) 
+f(x^+) -f(x^-) 
 &= \lim_{h\to 0} \qty{ f(q_k + h) - f(q_k - h)} \\
-&= \lim_{h\to 0} \qty{ \sum_{k\in A(q_m+h)} \alpha(q_k) - \sum_{k\in A(q_m-h)} \alpha(q_k) } \\
-&= \alpha(q_m) \\
-&>0 \quad \text{for all } q_m
+&= \lim_{h\to 0} \qty{ \sum_{k\in A(x+h)} \alpha(q_k) - \sum_{k\in A(x-h)} \alpha(q_k) } \\
+&= \alpha(x) \quad \text{for all } x
 ,\]
-where we've used that \( \Intersect_{h} (x -h, x+h) = x \).
+  where we've used that \( \Intersect_{h} (x -h, x+h) = x \), i.e. the only set being indexed over in the limit is $\ts{x}$
 
-> Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
+  > Note: this also shows that $f$ is not upper-continuous, since $f(q_m^+) = f(q_m^-) + \alpha(q_m) \neq f(q_m^-)$.
+
+- For $q_m$ a rational:
+  
+  - Lower continuity is clear for $q_m$ is clear since the indexing set $A(q_m)$ includes $m$, so $x\increasesto q_m \implies A(x)\increasesto A(q_m)$.
+  - Failure of upper continuity is clear since $\alpha(q_m) > 0$
+
 
 
 :::
