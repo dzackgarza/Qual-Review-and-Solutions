@@ -355,6 +355,8 @@ where in the last step we've used that $\alpha$ is strictly positive.
   \[
   A(x) \da \ts{ k\in \NN \st q_k \leq x } \implies f(x) \da \sum_{k\in A(x)} \alpha(q_k)
   .\]
+  - This makes it clear that $f$ is monotone increasing, since $y<x \implies A(y) \subseteq A(x) \implies f(y) < f(x)$.
+  - This also makes lower continuity clear for $x\da q_m$ any rational, since $y\increasesto q_m \implies A(x) \increasesto A(q_m)$ and $m\in A(q_m)$.
 
 
 :::
