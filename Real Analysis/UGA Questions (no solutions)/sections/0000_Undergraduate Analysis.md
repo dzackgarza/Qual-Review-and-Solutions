@@ -298,7 +298,15 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 .\]
 :::
 
-\todo[inline]{(b): not sure.}
+
+:::{.proof title="of b"}
+Fix an enumeration of $\QQ$, say $\QQ = \ts{q_k}_{k\in \ZZ^{\geq 0}}$.
+First consider the case of $x\in \QQ$.
+
+
+:::
+
+
 :::
 
 
