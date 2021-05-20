@@ -1033,18 +1033,15 @@ Prove that if $A$ is compact in the subspace topology then $A$ is closed as a su
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
-Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
-Then $\theset{U_{a} \suchthat a\in A} \rightrightarrows A$, so by compactness there is a finite subcover $\theset{U_{a_i}} \rightrightarrows A$.
+- Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
+- Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
+- Then $\theset{U_{a} \suchthat a\in A} \rightrightarrows A$, so by compactness there is a finite subcover $\theset{U_{a_i}} \rightrightarrows A$.
 
-Now take $U = \union_i U_{a_i}$ and $V_x = \intersect_i V_{a_i, x}$, so $U\intersect V = \emptyset$.
-Note that both $U$ and $V_x$ are open.
+- Now take $U = \union_i U_{a_i}$ and $V_x = \intersect_i V_{a_i, x}$, so $U\intersect V = \emptyset$.
+  - Note that both $U$ and $V_x$ are open.
 
-But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
+- But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
 
 :::
 
@@ -1061,8 +1058,6 @@ Give an example that shows that the "Hausdorff" hypothesis in part (a) is necess
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Continuous bijection + open map (or closed map) $\implies$ homeomorphism.
@@ -1070,6 +1065,9 @@ Give an example that shows that the "Hausdorff" hypothesis in part (a) is necess
 - The continuous image of a compact set is compact.
 - Closed subsets of Hausdorff spaces are compact.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 We'll show that $f$ is a closed map.
@@ -1109,11 +1107,7 @@ Show that $X$ is a Hausdorff space if and only if $\Delta$ is closed in $X \time
 
 :::{.solution}
 \envlist
-:::{.concept}
-\todo[inline]{todo}
-\envlist
 
-:::
 $\implies$:
 
 - Let $p\in X^2\setminus \Delta$.
@@ -1207,12 +1201,9 @@ Give an example of a quotient map in which the domain is Hausdorff, but the quot
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-$\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
-So take the quotient map $\pi:\RR \to \RR/\QQ$.
+- $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
+- So take the quotient map $\pi:\RR \to \RR/\QQ$.
 
 Direct proof that $\RR/\QQ$ isn't Hausdorff:
 
