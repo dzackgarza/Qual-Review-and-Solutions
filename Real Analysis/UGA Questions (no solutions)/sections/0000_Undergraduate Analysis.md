@@ -244,7 +244,7 @@ Prove that the following statements are equivalent:
 :::
 
 
-## Fall 2014 # 2  $\work$
+## Fall 2014 # 2  $\done$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
 a.
@@ -261,7 +261,6 @@ f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
 \]
 Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
-
 :::{.concept}
 \envlist
 
@@ -270,7 +269,6 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 - Continuity: $\lim_{y\to x} f(y) = f(x)$ from either side.
 - Trick: pick enumerations of countable sets and reindex sums
 :::
-
 
 :::{.solution}
 \envlist
@@ -297,8 +295,6 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 \implies \infty &> n S \geq \# S_n
 .\]
 :::
-
-
 
 :::{.proof title="of b"}
 \envlist
@@ -338,12 +334,6 @@ f(x^-) &= \sum_{q_k< x} \alpha_k
 - To recover the result in the problem, let $\QQ = \ts{q_k}$ be any enumeration of the rationals.
 
 :::
-
-
-
-
-
-
 
 :::
 
