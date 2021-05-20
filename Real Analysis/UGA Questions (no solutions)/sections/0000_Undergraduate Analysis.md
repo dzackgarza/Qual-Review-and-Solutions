@@ -290,7 +290,6 @@ Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 &= \qty{1\over n} \# S_n \\ \\
 \implies \infty &> n S \geq \# S_n
 .\]
-
 :::
 
 \todo[inline]{(b): not sure.}
