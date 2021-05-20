@@ -301,8 +301,10 @@ S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 
 :::{.proof title="of b"}
 First consider the case of $x\in \QQ$.
+Strat: show $\lim_{y\to x^+}f(y) \neq f(x)$.
 
 - Fix an enumeration of $\QQ$, say $\QQ = \ts{q_k}_{k\in \ZZ^{\geq 0}}$.
+  Without loss of generality, relabel so $q_0 = x$.
 - Change the indexing set by defining a section
 \[
 A(x) \da \ts{ k\in \ZZ^{\geq 0 } \st q_k < x } 
@@ -310,8 +312,13 @@ A(x) \da \ts{ k\in \ZZ^{\geq 0 } \st q_k < x }
 
 - Rewrite the sum
 \[
-f(x) \da \sum_{\substack{q\in \QQ \\ q\leq x}} \alpha(q) = \sum_{k\in A(x)} \alpha(q_k)
+f(q_0) \da \sum_{\substack{q\in \QQ \\ q\leq x}} \alpha(q) = \sum_{k\in A(x)} \alpha(q_k)
 .\]
+
+- Let $y>q_0$ be arbitrary, and note some facts:
+  - $A(y) \supset A(q_0)$, since there is always a rational in $(q_0, y)$.
+    This also implies $f(y) > f(x)$, i.e. $f$ is monotone increasing.
+  - Since $q_0 < y$, the index $k=0$ is contained in $A(y)$ by definition.
 
 
 
