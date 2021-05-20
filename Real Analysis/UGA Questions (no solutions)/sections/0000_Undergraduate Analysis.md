@@ -193,7 +193,8 @@ Switching to polar coordinates and integrating over the quarter of the unit disc
 &= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\dr\dtheta  \\
 &= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \dr\dtheta  \\
 &= \qty{ \int_0^1 {1\over r } \dr} \qty{ \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta }  \\
-&= \qty{ \int_0^1 {1\over r } \dr} \qty{ {1\over 2}\sin^2(\theta) \evalfrom_0^{\pi/2} }
+&= \qty{ \int_0^1 {1\over r } \dr} \qty{ {1\over 2}\sin^2(\theta) \evalfrom_0^{\pi/2} } \\
+&= {1\over 2}\qty{ \int_0^1 {1\over r } \dr} \qty{ 1 - 0 } \\
 &\too \infty
 .\]
 :::
