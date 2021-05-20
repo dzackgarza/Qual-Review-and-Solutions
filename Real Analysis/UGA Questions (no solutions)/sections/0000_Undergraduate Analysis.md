@@ -330,8 +330,10 @@ f(y) \da \sum_{k\in A(y)} \alpha(q_k) > \sum_{k\in A(x)} \alpha(q_k) \da f(q_0)
 f(y) \da \sum_{k\in A(y)} \alpha(q_k) 
 &\geq \sum_{k\in A'(x)} \alpha(q_k) \\
 &= \alpha(q_0) + \sum_{k \in A(x)} \alpha(q_k) \\
-&\da \alpha(q_m) + f(q_m)
-.\]
+&\da \alpha(q_m) + f(q_m) \\
+&> f(q_m)
+,\]
+where in the last step we've used that $\alpha$ is strictly positive.
 
 
 
