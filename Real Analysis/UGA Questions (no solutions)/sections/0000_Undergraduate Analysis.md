@@ -139,8 +139,8 @@ Prove that $\sum f_n$ is also continuous.
 \envlist
 
 - The uniform limit theorem.
+- $\eps/3$ trick.
 :::
-
 
 :::{.solution}
 \envlist
@@ -165,9 +165,7 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 :::
 
 - Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
-- Each $F_N$ is continuous and $F_N\to F$ uniformly, so applying the claim yields the desired result.
-
-
+- Each $F_N$ is continuous and $F_N\to F$ uniformly, so $F$ is continuous.
 
 :::
 
@@ -187,7 +185,7 @@ Determine if $f$ is integrable.
 :::
 
 :::{.solution}
-Switching to polar coordinates and integrating over one quarter of the unit disc $D \subseteq I^2$, we have
+Switching to polar coordinates and integrating over the quarter of the unit disc $D \int Q_1 \subseteq I^2$ in quadrant 1, we have
 \[
 \int_{I^2} f \, dA
 &\geq \int_D f \, dA \\
