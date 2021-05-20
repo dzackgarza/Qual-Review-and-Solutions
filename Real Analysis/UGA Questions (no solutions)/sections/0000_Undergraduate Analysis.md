@@ -190,18 +190,11 @@ Switching to polar coordinates and integrating over the quarter of the unit disc
 \[
 \int_{I^2} f \, dA
 &\geq \int_D f \, dA \\
-= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\dr\dtheta  \\
-= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \dr\dtheta  \\
-= \qty{ \int_0^1 {1\over r } \dr} \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta  \\
-&= \int_0^{\pi/2} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{\pi/2} \cos(\theta)\sin(\theta)\,d\theta  }\\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{-{1\over 2}\cos^2(\theta)\evalfrom_0^{\pi/2}}  \\
-&= -{1\over 2r^2}\evalfrom_0^1 \qty{1\over 2} \\
-&= \qty{1\over 4}\qty{ -1 + \lim_{r\to 0} {1\over r^2} } \\
-&= \infty
-,\]
-
-so $f$ is not integrable.
+&= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\dr\dtheta  \\
+&= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \dr\dtheta  \\
+&= \qty{ \int_0^1 {1\over r } \dr} \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta  \\
+&\too \infty
+.\]
 :::
 
 ## Spring 2015 # 1 $\done$
