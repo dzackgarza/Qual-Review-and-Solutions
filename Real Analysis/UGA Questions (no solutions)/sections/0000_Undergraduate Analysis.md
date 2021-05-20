@@ -283,7 +283,7 @@ I = \Union_{n\geq 0} S_n, &&
 S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 .\]
   - Note that $S_n \subseteq S$ for all $n$, so $\sum_{i\in I}\alpha(i) \geq \sum_{i\in S_n} \alpha(i)$ for all $n$.
-  - It also suffices to show that $S_n$ is countable, since $I$ is a countable union of $S_n$.
+  - It suffices to show that $S_n$ is countable, since $I$ is a countable union of $S_n$.
 - There is an inequality
 \[  
 \infty 
