@@ -260,9 +260,7 @@ Let \( p \) be a prime. Show that \( S_p = \left\langle{\tau, \sigma}\right\rang
 
 Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show that \( Z(G) = [G, G] \).
 
-> Note: this is a good problem!
-
-> Proof due to Paco Adajar
+> Note: this is a good problem, it tests several common theorems at once. Proof due to Paco Adajar.
 
 ::: {.concept}
 ```{=tex}
