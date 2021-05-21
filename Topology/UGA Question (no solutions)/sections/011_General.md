@@ -2,7 +2,7 @@
 
 ## Topologies, Subspaces, Closures, and Maps
 
-### Fall '11 $\work$
+### Fall '11 $\done$
 
 :::{.problem title="Fall 2011"}
 Let $X$ be a topological space, and $B \subset A \subset X$. 
@@ -14,7 +14,6 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 :::
 
-
 :::{.concept}
 \envlist
 
@@ -23,11 +22,21 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 - Closed sets in a subspace: $B' \subseteq Y\subseteq X$ is closed in $Y$ if $B' = B\intersect Y$ for some $B'$ closed in $X$.
 :::
 
-
 :::{.solution}
 \envlist
 
 - Claim: $\Cl_X(A) \intersect  Y = \Cl_Y(A)$.
+- Write $\Cl_Y(A)$ as the intersection of $B'$ where $Y\supseteq B' \supseteq A$ with $B'$ closed in $Y$.
+- Every such $B'$ is of the form $B' = B \intersect Y$ for some $B$ closed in $X$.
+- Just identify the two sides directly by reindexing the intersection:
+\[
+\Cl_Y(A) 
+&\da \Intersect_{\substack{ Y\supseteq B' \supseteq A \\ B; \text{ closed in } Y}} B' \\
+&= \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} \qty{ B \intersect Y } \\
+&= \qty{ \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} B} \intersect Y \\ \\
+&\da \Cl_X(A) \intersect Y
+.\]
+
 
 :::
 
