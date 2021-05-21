@@ -14,6 +14,24 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 :::
 
+
+:::{.concept}
+\envlist
+
+- Definition of closure: for $A\subseteq X$, $\cl_X(A)$ is the intersection of all $B\supseteq A$ which are closed in $X$.
+- Definition of "relative" closure: for $A\subseteq Y \subseteq X$, $\Cl_Y(A)$ is the intersection of all $B$ such that $Y\supseteq B \supseteq A$ which are closed in $Y$.
+- Closed sets in a subspace: $B' \subseteq Y\subseteq X$ is closed in $Y$ if $B' = B\intersect Y$ for some $B'$ closed in $X$.
+:::
+
+
+:::{.solution}
+\envlist
+
+- Claim: $\Cl_X(A) \intersect  Y = \Cl_Y(A)$.
+
+:::
+
+
 ### 6 (Fall '05) $\done$
 
 :::{.problem title="Fall 2005"}
