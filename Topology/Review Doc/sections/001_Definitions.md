@@ -188,7 +188,8 @@ A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
 :::{.definition title="$T_n$ Spaces (Separation Axioms)"}
 \envlist
 
-- $T_0$: For any 2 points $x_1\neq x_2$, at least one $x_i$ (say $x_1$) admits a neighborhood not containing $x_2$.
+- $T_0$: Points are distinguishable.
+  For any 2 points $x_1\neq x_2$, at least one $x_i$ (say $x_1$) admits a neighborhood not containing $x_2$.
 
 - $T_1$: For any 2 points, *both* admit neighborhoods not containing the other.
   Equivalently, points are closed.
@@ -207,6 +208,16 @@ A map $\pi$ with a **right** inverse $f$ satisfying $$\pi \circ f = \id$$
   Any two disjoint closed subsets can be separated by neighborhoods.
 
 :::
+
+
+:::{.example title="Counterexamples for separation axioms"}
+\envlist
+
+- Not $T_0$: the space \( \ts{ f:\RR\to \CC\st \int_\RR \abs{f}^2 < \infty } \), since two a.e. equal functions aren't *distinguishable* (they have precisely the same set of neighborhoods).
+- $T_1$ but not $T_0$: $\spec R$ for $R\in \CRing$ with the Zariski topology.
+  There are points that aren't closed: $\spec R \sm \mspec R$.
+:::
+
 
 :::{.definition title="Topology"}
 \envlist
