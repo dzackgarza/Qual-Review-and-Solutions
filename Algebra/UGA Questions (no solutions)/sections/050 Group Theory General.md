@@ -22,8 +22,8 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 \envlist
 
 - Let $p \da \#H$.
-- Let $C_1, \cdots, C_n$ be the conjugacy classes in $G$, then $G = \disjoint_{i=1}^n C_i$
-- 
+- Let \( \ts{ C_i }_{i\leq n} \) be the conjugacy classes in $G$, then $G = \disjoint_{i=1}^n C_i$
+- By the first fact, there is a sub-collection \( \ts{ C_{i_j}}_{j\leq k } \)  such that $H = \disjoint_{j\leq k} C_{i_j}$.
 :::
 
 
