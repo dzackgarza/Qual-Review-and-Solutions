@@ -493,7 +493,7 @@ We also have
 &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
 &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
 &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
-&\implies \limsup_p \pnorm{f}p \leq M \qed
+&\implies \limsup_p \pnorm{f}p \leq M
 .\]
 
 :::
