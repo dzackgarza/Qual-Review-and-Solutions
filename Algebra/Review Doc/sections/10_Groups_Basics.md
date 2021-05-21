@@ -125,8 +125,15 @@ The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its 
 Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
 Write $\ell =xh_1 =yh_2$ for some $h_i$, then
 \[
-\ell = xh_1 = yh_2 \implies \ell h_1\inv = x = yh_2 h_1\inv \da yh'
-.\]
+xh_1 = yh_2 &\implies x = yh_2 h_1\inv \\
+xh_3\in xH &\implies xh_3 = (yh_2h_1\inv) h_3 \in yH
+,\]
+so $xH \subseteq yH$.
+A symmetric argument shows $y_H \subseteq xH$.
+[^df_p80_identical_disjoint]
+
+[^df_p80_identical_disjoint]: 
+See full argument: D&F p.80.
 
 :::
 
