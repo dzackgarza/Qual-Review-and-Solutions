@@ -23,7 +23,7 @@ Some fun resources:
 | $G=1$                                                | The trivial abelian group           |
 | $G=0$                                                | The trivial nonabelian group        |
 
-:::{.remark}
+:::{.remark title="on direct sums vs direct products"}
 $A\times B$ denotes the **direct product** of modules.
 $A\oplus B$ denotes a **direct sum**: the subset of $A\cross B$ where only finitely many terms are nonzero.
 Both the product and direct sum have coordinate-wise operations.
@@ -32,7 +32,7 @@ In the direct sum $\bigoplus_j X_j$ have only finitely many nonzero entries, whi
 So in general, I always use the product notation.
 :::
 
-:::{.remark}
+:::{.remark title="on notation for free groups and free products"}
 The free group on $n$ generators is the free product of $n$ free abelian groups, but is not generally abelian!
 So we use multiplicative notation, and elements 
 \[
@@ -45,7 +45,7 @@ x = a_1^2 a_2^4 a_1 a_2^{-2}
 .\]
 :::
 
-:::{.remark}
+:::{.remark title="on notation for free abelian groups"}
 The free abelian group of rank $n$ is the abelianization of $\ZZ^{\ast n}$,
 and its elements are characterized by
 \[
@@ -58,10 +58,7 @@ x = 2a_1 + 4a_2 + a_1 - a_2 = 3a_1 + 3a_2
 .\]
 :::
 
-## Conventions
-
-
-:::{.remark title="some conventions"}
+:::{.remark title="on indexing conventions and list notation"}
 Spaces are assumed to be connected and path connected, so $\pi_0(X) = H_0(X) = \ZZ$.
 So I virtually never consider anything occurring at index zero in these notes.
 
@@ -74,15 +71,13 @@ H_*(X) &= [H_1(X), H_2(X), H_3(X), \cdots]
 
 :::
 
-
-
-## Some Prerequisite Algebra Facts
+## Background Algebra 
 
 :::{.fact}
-A group morphism $f:X \to Y$ can not be injective if $Y$ is trivial unless $X$ is also trivial.
+An injective group morphism $f:X\injects Y$ where $X$ is trivial forces $Y$ to be trivial.
 :::
 
-:::{.proposition title="Morphisms between groups"}
+:::{.proposition title="Morphisms between groups finite and infinite groups"}
 There are no nontrivial homomorphisms from finite groups into free groups.
 In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
 :::
