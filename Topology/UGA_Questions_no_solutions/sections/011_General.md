@@ -107,7 +107,7 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 :::{.concept}
 \envlist
-- Proof of the tube lemma: a finite product of compact spaces is compact.
+- Proof of the tube lemma: 
 - Continuous image of compact is compact.
 :::
 
@@ -116,7 +116,7 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 We want to show $X, Y \in \Top_{\compact} \iff X\cross Y\in \Top_{\compact}$.
 
-:::{.proof title="Proving the tube lemma"}
+:::{.proof title="Using the tube lemma without proof"}
 $\impliedby$:
 
 - By the universal property, the product $X\cross Y$ is equipped with continuous projections $\pi_X: X\cross Y\to X$ and $\pi_Y: X\cross Y\to X$.
@@ -128,8 +128,9 @@ $\impliedby$:
 
 $\implies$:
 
-- Let $\theset{U_j \suchthat j\in J} \covers X\cross Y$. 
-- Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is compact and can be covered by finitely many elements $\theset{U_j\suchthat j\leq m} \covers \theset{x_0} \cross Y$.
+- Let $\ts{U_j} \covers X\cross Y$ be an open cover.
+- Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is homeomorphic to $Y$ and thus compact 
+- Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x_0} \cross Y$.
   - Sum: write $N = \union_{j=1}^m U_j$; then $\theset{x_0} \cross Y \subset N$.
   - Apply the tube lemma to $N$: produce $\theset{x_0} \cross Y \in W\cross Y \subset N$; then $\theset{U_j \suchthat j\leq m}\covers W\cross Y$.
 - Now let $x\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x\cross Y\suchthat x\in X}\covers X$. 
