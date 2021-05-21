@@ -167,6 +167,16 @@ Let $N\subseteq X\cross Y$ be an open set containing the slice $x_0 \cross Y$, t
 
 :::
 
+
+:::{.remark}
+Compactness in one factor is a necessary condition.
+For a counterexample, $\RR^2$ and let $N$ be the set contained between a Gaussian and its reflection across the $x\dash$axis.
+Then no tube about $y=0$ is entirely contained within $N$:
+
+![image_2021-05-21-01-39-26](figures/image_2021-05-21-01-39-26.png)
+:::
+
+
 :::{.proof title="Sketch"}
 \envlist
 
@@ -198,4 +208,5 @@ Let $N\subseteq X\cross Y$ be an open set containing the slice $x_0 \cross Y$, t
   - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
   - So $(x, y) \in U_j \cross V_j$
 :::
+
 
