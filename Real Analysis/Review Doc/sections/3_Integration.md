@@ -89,7 +89,6 @@ $$
 Measurable, non-negative, increasing pointwise a.e. allows commuting limits and integrals.
 :::
 
-
 :::{.proof title="of MCT"}
 \todo[inline]{todo}
 
@@ -531,11 +530,7 @@ Use Riesz Representation for Hilbert spaces.
 $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective.
 :::
 
-
-
 ## Counterexamples
-
-
 
 :::{.proposition title="a.e. convergence never implies $L^p$ convergence"}
 Sequences $f_k \converges{a.e.}\to f$ but $f_k \converges{L^p}{\not\to} f$:
@@ -554,7 +549,6 @@ Sequences $f_k \converges{a.e.}\to f$ but $f_k \converges{L^p}{\not\to} f$:
 
 	> Converges a.e., but not uniformly, not pointwise, and not in norm.
 :::
-
 
 :::{.proposition title="The four big counterexamples in convergence"}
 \envlist
@@ -591,7 +585,5 @@ We have $1 \implies 2 \implies 3$, and in general no implication can be reversed
   - Then $\int f_n = 1/2^n \to 0$, but $f_n\not\to 0$ pointwise since for every $x$, there are infinitely many $n$ for which $f_n(x) = 0$ and infinitely many for which $f_n(x) = 1$.
 
 :::
-
-
 
 
