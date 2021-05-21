@@ -145,8 +145,10 @@ aH = bH \iff a\inv b \in H \iff b\inv a\in H
 :::
 
 :::{.proof title="?"}
-See D&F p.80:
-$aH = bH \iff a\in bH \iff a=bh$ for some $h \iff b\inv a = h \iff ba\inv \in H$.
+[^df_p80_identical_disjoint]
+\[
+aH = bH \iff a\in bH \iff a=bh \text{ for some } h \iff b\inv a = h \iff ba\inv \in H
+.\]
 :::
 
 
