@@ -22,6 +22,15 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 - Closed sets in a subspace: $B' \subseteq Y\subseteq X$ is closed in $Y$ if $B' = B\intersect Y$ for some $B'$ closed in $X$.
 :::
 
+
+:::{.strategy}
+What's the picture?
+Just need to remember what the closure with respect to a subspace looks like:
+
+![image_2021-05-20-23-58-56](figures/image_2021-05-20-23-58-56.png)
+:::
+
+
 :::{.solution}
 \envlist
 
