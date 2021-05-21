@@ -31,7 +31,7 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 - Just identify the two sides directly by reindexing the intersection:
 \[
 \Cl_Y(A) 
-&\da \Intersect_{\substack{ Y\supseteq B' \supseteq A \\ B; \text{ closed in } Y}} B' \\
+&\da \Intersect_{\substack{ Y\supseteq B' \supseteq A \\ B' \text{ closed in } Y}} B' \\
 &= \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} \qty{ B \intersect Y } \\
 &= \qty{ \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} B} \intersect Y \\ \\
 &\da \Cl_X(A) \intersect Y
@@ -39,7 +39,6 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 
 :::
-
 
 ### 6 (Fall '05) $\done$
 
@@ -51,7 +50,7 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 
 :::{.concept}
 \envlist
-- Cantor's Intersection Theorem
+- Cantor's intersection theorem: for a topological space, any nested sequence of compact nonempty sets has nonempty intersection.
 - Bases for standard topology on $\RR$.
 - Definition of compactness
 :::
