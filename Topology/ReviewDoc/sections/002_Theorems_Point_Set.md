@@ -92,6 +92,12 @@ A closed subset $A$ of a compact set $B$ is compact.
 The continuous image of a compact set is compact.
 :::
 
+:::{.proof title="?"}
+Let $f:X\to f(X)$ be continuous.
+Take an open covering $\mathcal{U} \covers f(X)$, then $f\inv(\mathcal{U}) \covers X$, which is cover by opens since $f$ is continuous.
+Take a finite subcover by compactness of $X$, then they push forward to a finite subcover of $f(X)$.
+:::
+
 :::{.theorem title="Closed in Hausdorff $\implies$ compact"}
 A closed subset of a Hausdorff space is compact.
 :::
@@ -109,7 +115,15 @@ Points are closed in $T_1$ spaces.
 ## Maps and Homeomorphism
 
 :::{.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
-A continuous bijection $f: X\to Y$ where $X$ is compact and $Y$ is Hausdorff is an open map and hence a homeomorphism.
+A continuous bijection $f: X\to Y$ with $X$ is compact and $Y$ is Hausdorff is a homeomorphism.
+:::
+
+:::{.proof title="?"}
+Show that $f\inv$ is continuous by showing $f$ is a closed map.
+If $A\subseteq X$ is closed in a compact space, $A$ is compact.
+The continuous image of a compact set is compact, so $f(A)$ is compact.
+A compact set in a Hausdorff space is closed, so $f(A)$ is closed in $Y$.
+
 :::
 
 :::{.remark title="On retractions"}
