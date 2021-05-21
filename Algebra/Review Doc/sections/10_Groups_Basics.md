@@ -125,7 +125,10 @@ aH = bH \iff a\inv b \in H \iff b\inv a\in H
 .\]
 :::
 
-\todo[inline]{Prove this}
+:::{.proof title="?"}
+See D&F p.80:
+$aH = bH \iff a\in bH \iff a=bh$ for some $h \iff b\inv a = h \iff ba\inv \in H$.
+:::
 
 
 :::{.theorem title="Counting Quotients"}
