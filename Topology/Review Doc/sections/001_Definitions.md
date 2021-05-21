@@ -32,7 +32,11 @@ See \cref{def:open_closed_maps}.
 
 
 :::{.definition title="Closure of a set"}
-$\Cl_X(U) = \intersect_{\substack{ B\supseteq U \\ \text{ closed} }} B$, the intersection of all closed sets in $X$ containing $U$. 
+For $U \subseteq X$, the closure of $U$ in $X$ is given by $\Cl_X(U) = \intersect_{\substack{ B\supseteq U \\ \text{ closed} }} B$, the intersection of all closed sets in $X$ containing $U$. 
+For $Y\subseteq X$ a subspace containing $U$, the closure of $U$ in $Y$ is $\Cl_Y(U) = \Cl_X(U) \intersect Y$.[^closure_relative_theorem]
+
+[^closure_relative_theorem]: 
+This is theorem 17.4 in Munkres
 
 :::
 
