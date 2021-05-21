@@ -1,14 +1,20 @@
 # Integration
 
+:::{.remark title="A common proof technique"}
+\envlist
 
-:::{.remark}
-Notation:
-
- $L^+$: measurable functions
-- $L^1$: Lebesgue integral functions
+- Show something holds for indicator functions.
+- Show it holds for simple functions by linearity.
+- Use $s_k \increasesto f$ and apply MCT to show it holds for $f$.
 :::
 
 
+:::{.remark title="on notation"}
+\envlist
+
+- $L^+$: measurable functions
+- $L^1$: Lebesgue integral functions
+:::
 
 :::{.definition title="Simple Function"}
 A **simple function** $s: \CC\to X$ is a finite linear combination of indicator functions of measurable sets, i.e. 
@@ -16,7 +22,6 @@ A **simple function** $s: \CC\to X$ is a finite linear combination of indicator 
 s(x) = \sum_{j=1}^n c_j \one_{E_j}(x)
 .\]
 :::
-
 
 :::{.definition title="Lebesgue Integral"}
 \[
@@ -31,14 +36,6 @@ Note that if $s = \sum c_j \one_{E_j} $ is simple, then
 :::
 
 
-
-:::{.remark}
-Common proof technique:
-
-- Show something holds for indicator functions.
-- Show it holds for simple functions by linearity.
-- Use $s_k \increasesto f$ and apply MCT to show it holds for $f$.
-:::
 
 
 :::{.remark}
