@@ -46,7 +46,8 @@ A useful fact: for $(X, \mathcal{M})$ a measure space, integrals split across di
 
 
 :::{.definition title="Essential supremum and infimum"}
-An **essential lower bound** $b$ on a function $f$ is any real number such that $\ts{x\st f(x) < b }$ has measure zero.
+An **essential lower bound** $b$ on a function $f$ is any real number such that $S_{b} \da \ts{x\st f(x) < b }$ has measure zero.
+The **essential infimum** $\ess\inf f$ is the supremum of all essential lower bounds, i.e. $\sup_{b} \ts{b\st \mu S_b = 0}$.
 :::
 
 
