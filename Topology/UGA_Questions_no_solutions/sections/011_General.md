@@ -22,14 +22,12 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 - Closed sets in a subspace: $B' \subseteq Y\subseteq X$ is closed in $Y$ if $B' = B\intersect Y$ for some $B'$ closed in $X$.
 :::
 
-
 :::{.strategy}
 What's the picture?
 Just need to remember what the closure with respect to a subspace looks like:
 
 ![image_2021-05-20-23-58-56](figures/image_2021-05-20-23-58-56.png)
 :::
-
 
 :::{.solution}
 \envlist
@@ -64,8 +62,6 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 - Definition of compactness
 :::
 
-
-
 :::{.strategy}
 What's the picture?
 Similar to covering $\ts{1\over n}\union\ts{0}$: cover $x=0$ with one set, which nets all but finitely many points.
@@ -77,7 +73,6 @@ Binary search down into nested intervals, none of which have finite covers.
 Get a single point, a single set which eventually contains all small enough nested intervals.
 Only need finitely many more opens to cover the rest.
 :::
-
 
 :::{.solution}
 \envlist
@@ -94,7 +89,7 @@ Only need finitely many more opens to cover the rest.
 
 :::
 
-### 7 (Fall '06). $\done$
+### 7 (Fall '06). $\work$
 
 :::{.problem title="Fall 2006, 7"}
 A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
@@ -113,19 +108,23 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 :::{.concept}
 \envlist
 - Proof of the tube lemma.
+- Continuous image of compact is compact.
 :::
 
 :::{.solution}
 \envlist
 
-Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
+We want to show $X, Y \in \Top_{\compact} \iff X\cross Y\in \Top_{\compact}$.
 
 :::{.proof title="Variant 1"}
 $\impliedby$:
 
-- By universal properties, the product $X\cross Y$ is equipped with continuous projections
-- The continuous image of a compact set is compact, and $\pi_1(X\cross Y) = X, p_2(X\cross Y) = Y$
-- So $X, Y$ are compact.
+- By the universal property, the product $X\cross Y$ is equipped with continuous projections $\pi_X: X\cross Y\to X$ and $\pi_Y: X\cross Y\to X$.
+- The continuous image of a compact space is compact, and the images are all of $X$ and $Y$ respectively:
+\[
+\pi_1(X\cross Y) &= X \\
+\pi_2(X\cross Y) &= Y
+.\]
 
 $\implies$:
 
@@ -139,7 +138,7 @@ $\implies$:
 - Then $\theset{W_k\cross Y\suchthat k\leq m'} \covers X\cross Y$; the claim is that it is a finite cover.
   - Finitely many $k$
   - For each $k$, the tube $W_k \cross Y$ is covered by finitely by $U_j$
-  - And finite $\times$ finite = finite. $\qed$
+  - And finite $\times$ finite = finite.
 
 Shorter mnemonic:
 
