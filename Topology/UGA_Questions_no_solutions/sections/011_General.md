@@ -144,8 +144,8 @@ N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
     - Note that this is a finite cover.
 - Let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x\cross Y}_{x\in X} \covers X$. 
   - Note that now every tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
-- Since $\theset{W_x\suchthat}_{x\in X}\covers X$ and $X$ is compact, produce a finite subset $\theset{W_k \suchthat k\leq m'} \covers X$. 
-- Then $\theset{W_k\cross Y\suchthat k\leq m'} \covers X\cross Y$; the claim is that it is a finite cover.
+- Use that $\theset{W_x}_{x\in X}\covers X$ and $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
+- Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$; the claim is that it is a finite cover.
   - Finitely many $k$
   - For each $k$, the tube $W_k \cross Y$ is covered by finitely by $U_j$
   - And finite $\times$ finite = finite.
