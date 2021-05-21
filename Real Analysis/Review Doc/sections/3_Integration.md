@@ -518,4 +518,55 @@ $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, 
 
 
 
+## Counterexamples
+
+
+
+:::{.proposition title="a.e. convergence never implies $L^p$ convergence"}
+Sequences $f_k \converges{a.e.}\to f$ but $f_k \converges{L^p}{\not\to} f$:
+
+- For $1\leq p < \infty$:
+	The skateboard to infinity, $f_k = \chi_{[k, k+1]}$.
+
+	Then $f_k \converges{a.e.}\to 0$ but $\norm{f_k}_p = 1$ for all $k$.
+
+	> Converges pointwise and a.e., but not uniformly and not in norm.
+
+- For $p = \infty$:
+  The sliding boxes $f_k = k \cdot \chi_{[0, \frac 1 k]}$.
+
+	Then similarly $f_k \converges{a.e.}\to 0$, but $\norm{f_k}_p = 1$ and $\norm{f_k}_\infty = k \to \infty$
+
+	> Converges a.e., but not uniformly, not pointwise, and not in norm.
+:::
+
+
+:::{.proposition title="The four big counterexamples in convergence"}
+\envlist
+
+1. Uniform: $f_n \uniformlyconverges f: \forall \varepsilon ~\exists N \suchthat ~n\geq N \implies \abs{f_N(x) - f(x)} < \varepsilon \quad \forall x.$
+2. Pointwise: $f_n(x) \to f(x)$ for all $x$. (This is just a sequence of numbers)
+3. Almost Everywhere: $f_n(x) \to f(x)$ for almost all $x$.
+4. Norm: $\norm{f_n - f}_1 = \int \abs{f_n(x) - f(x)} \to 0$.
+
+We have $1 \implies 2 \implies 3$, and in general no implication can be reversed, but (**warning**) none of $1,2,3$ imply $4$ or vice versa.
+
+**Examples**:
+
+- $f_n = n\inv \chi_{[0, n]}$. This converges uniformly to 0, but the integral is identically 1. So this satisfies 1,2,3 and not 4.
+  
+  ![Image](figures/2019-09-29-19:09.png)\
+
+- $f_n = \chi_{(n, n+1)}$ (skateboard to infinity). This satisfies 2,3 but not 1, 4.
+
+- $f_n = n\chi_{(0, \frac 1 n)}$. This satisfies 3 but not 1,2,4.
+
+- $f_n:$ see weird example below. Then $f_n \to 0$ in $L^1$ but is not 1,2, or 3.
+  
+  ![Image](figures/2019-09-29-19:08.png)\
+:::
+
+
+
+
 
