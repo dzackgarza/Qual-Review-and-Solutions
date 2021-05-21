@@ -23,6 +23,11 @@ Some fun resources:
 | $G=1$                                                | The trivial abelian group           |
 | $G=0$                                                | The trivial nonabelian group        |
 
+
+:::{.remark}
+I use $e_G$ or $1_G, 0_G$ to denote identity elements in a group $G$.
+:::
+
 :::{.remark title="on direct sums vs direct products"}
 $A\times B$ denotes the **direct product** of modules.
 $A\oplus B$ denotes a **direct sum**: the subset of $A\cross B$ where only finitely many terms are nonzero.
@@ -79,11 +84,18 @@ An injective group morphism $f:X\injects Y$ where $X$ is trivial forces $Y$ to b
 
 :::{.proposition title="Morphisms between groups finite and infinite groups"}
 There are no nontrivial homomorphisms from finite groups into free groups.
-In particular, any homomorphism $\ZZ_n \to \ZZ$ is trivial.
+In particular, any group morphism $f: \ZZ_n \to \ZZ$ is trivial.
 :::
 
 :::{.proof title="?"}
-Homomorphisms preserve torsion; the former has $n\dash$torsion while the latter does not.
+Let $f: G\to H$, then $f(1_G) = 1_H$.
+Supposing $g\in G$ is torsion of order $n$, we have
+\[
+1_H = f(1_G) = f(g^n) = f(g)^n 
+,\]
+
+so $f(g)$ is torsion of order dividing $n$.
+But a free group is torsionfree.
 :::
 
 :::{.remark title="How to use this fact"}
