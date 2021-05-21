@@ -127,8 +127,6 @@ Use that $X$ is compact to get a finite subcover.
 :::{.solution}
 \envlist
 
-We want to show $X, Y \in \Top_{\compact} \iff X\cross Y\in \Top_{\compact}$.
-
 :::{.proof title="Using the tube lemma without proof"}
 $\impliedby$:
 
@@ -142,54 +140,27 @@ $\impliedby$:
 $\implies$:
 
 - Let $\ts{U_j} \covers X\cross Y$ be an open cover.
-- Cover a fiber: fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is homeomorphic to $Y$ and thus compact 
-- Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x_0} \cross Y$.
+- **Cover a fiber**: fix $x\in X$, the slice $x \cross Y$ is homeomorphic to $Y$ and thus compact 
+- Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x} \cross Y$.
   
-  > Really, cover $Y$, and then cross with $x_0$ to cover $x_0 \cross Y$.
+  > Really, cover $Y$, and then cross with $x$ to cover $x \cross Y$.
 
   - Set 
 \[
-N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
+N_x \da \Union_{j\leq m} U_j \supseteq x \cross Y
 .\]
-  - Apply the tube lemma to $N$: 
-    - Produce a neighborhood $W$ of $x_0$ in $X$ containing $N$ 
-    - Note that $\ts{U_j}_{j\leq m}\covers W\cross Y$ since it covered $N$.
-    - Note that this is a finite cover.
-- Cover the base: let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$. 
-  - Note: each tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
+  - Apply the tube lemma to $N_x$: 
+    - Produce a neighborhood $W_x$ of $x$ in $X$ where $W_x \subset N_x$ 
+    - This yields a finite cover:
+  \[
+\ts{U_j}_{j\leq m}\covers N_x \cross Y \supset W_x \cross Y \implies \ts{U_j}_{j\leq m} \covers W_x\cross Y
+  .\]
+- **Cover the base**: let $x\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$ where each tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
 - Use that $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
-- Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$; the claim is that it is a finite cover.
+- Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$, this is a finite set since each fiber was covered by finitely many opens 
   - Finitely many $k$
   - For each $k$, the tube $W_k \cross Y$ is covered by finitely by $U_j$
   - And finite $\times$ finite = finite.
-
-Shorter mnemonic:
-
-![](figures/image_2020-05-22-11-39-10.png)
-
-:::
-
-:::{.proof title="Variant 2"}
-Let $\pi_X, \pi_Y$ denote the canonical projections, which we can note are continuous and preserve open sets.
-
-$\implies$:
-Suppose $X\cross Y$ is compact, and let $\theset{U_\alpha}, \theset{V_\beta}$ be open covers of $X$ and $Y$ respectively.
-
-Let $T_{\alpha\beta} = U_\alpha \cross V_\beta$; then $\theset{T_{\alpha\beta}}$ is an open cover of $X\cross Y$.
-So there is a finite subcover $\theset{T_{ij}}$, $\theset{\pi_X(T_{ij})}$ is an open cover of $X$, and similarly for $Y$.
-So both $X,Y$ are compact.
-
-$\impliedby$:
-Suppose $X$ and $Y$ are compact, and let $U_\alpha \rightrightarrows X\cross Y$ be an open cover.
-Let $\pi_Y: X\cross Y \to Y$ be the canonical projection; then $\theset{\pi_Y(U_\alpha)}\rightrightarrows Y$ and by compactness of $Y$ there is a finite subcover of the form $\theset{\pi_Y(U_i) \suchthat 1\leq i \leq n}$.
-Then $\theset{V_{x, i} \definedas \theset{x} \cross U_i}$ is an open cover of $\theset{x} \cross Y$ for any fixed $x$. 
-
-So if we fix an $x\in X$, we can let $V_{x, i} \rightrightarrows \theset{x} \cross Y$ be any finite subcollection covering this slice.
-By the Tube Lemma, there is an open set $W_x$ such that $\theset{x} \cross Y \subset W_x \cross Y \subset \union V_{x, i} = \theset{x} \cross Y$.
-
-Then $\theset{W_x} \rightrightarrows X$ as $x$ varies is an open cover of $X$, and by compactness of $X$, there are finitely many $x_j \in X$ such that $W_{x_j} \rightrightarrows X$.
-But then $X \cross Y = \union_{j} W_{x_j} \cross Y = \union_j \union_i W_{x_j} \cross V_{x_j, i} \subset \union_\alpha U_\alpha$ is a finite cover.
-
 :::
 
 :::
