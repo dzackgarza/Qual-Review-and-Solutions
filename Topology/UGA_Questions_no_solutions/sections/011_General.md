@@ -142,7 +142,7 @@ $\impliedby$:
 $\implies$:
 
 - Let $\ts{U_j} \covers X\cross Y$ be an open cover.
-- Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is homeomorphic to $Y$ and thus compact 
+- Cover a fiber: fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is homeomorphic to $Y$ and thus compact 
 - Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x_0} \cross Y$.
   
   > Really, cover $Y$, and then cross with $x_0$ to cover $x_0 \cross Y$.
@@ -155,9 +155,9 @@ N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
     - Produce a neighborhood $W$ of $x_0$ in $X$ containing $N$ 
     - Note that $\ts{U_j}_{j\leq m}\covers W\cross Y$ since it covered $N$.
     - Note that this is a finite cover.
-- Let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$. 
-  - Note that now every tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
-- Use that $\theset{W_x}_{x\in X}\covers X$ and $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
+- Cover the base: let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$. 
+  - Note: each tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
+- Use that $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
 - Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$; the claim is that it is a finite cover.
   - Finitely many $k$
   - For each $k$, the tube $W_k \cross Y$ is covered by finitely by $U_j$
