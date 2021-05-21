@@ -29,6 +29,13 @@ H = \disjoint_{j\leq k} C_{i_j}
 .\]
 - The identity is always in a single conjugacy class, so $C_e = \ts{ e }$.
 - Since $e\in H$, without loss of generality, label $C_{i_1} = \ts{ e }$.
+- Take cardinality in the above equation:
+\[
+\# H 
+= \sum_{j\leq k} \# C_{i_j}
+= \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+.\]
+
 
 :::
 
