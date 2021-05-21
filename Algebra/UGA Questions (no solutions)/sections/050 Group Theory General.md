@@ -4,6 +4,9 @@
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
+
+> Solution due to Swaroop Hegde.
+
 :::{.concept}
 \envlist
 
@@ -14,7 +17,7 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
 :::
 
-:::{.proof title="due to Swaroop Hegde"}
+:::{.proof title=""}
 \envlist
 
 - Let $p \da \#H$.
@@ -77,15 +80,13 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 :::{.strategy}
 Burnside.
-
 :::
-
 
 :::{.solution}
 \envlist
 
 :::{.proof title="Part a"}
-Strategy: Burnside.
+\envlist
 
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
@@ -147,7 +148,6 @@ Statement of the class equation:
 where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
 :::
 
-
 :::{.proof title="Part c"}
 As shown in part 1,
 $$
@@ -179,13 +179,9 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 
 :::
 
-
 \todo[inline]{Redo part c}
 
-
-
 :::
-
 
 ## Spring 2012 #2 $\work$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
@@ -242,6 +238,7 @@ Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G
 
 > Note: this is a good problem!
 
+> Proof due to Paco Adajar
 
 :::{.concept}
 \envlist
