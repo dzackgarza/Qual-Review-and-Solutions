@@ -3,6 +3,10 @@
 \newcommand{\dy}{\,dy}
 \newcommand{\ds}{\,ds}
 \newcommand{\dz}{\,dz}
+\newcommand{\dr}{\,dr}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dtheta}{\,d\theta}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\zbar}{\bar{z} }
@@ -229,9 +233,11 @@
 \newcommand{\Riem}[0]{\mathsf{Riem}}
 \newcommand{\Comm}[0]{\mathsf{Comm}}
 \newcommand{\Top}[0]{{\mathsf{Top}}}
+\newcommand{\CW}[0]{{\mathsf{CW}}}
 \newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
 \newcommand{\ho}[0]{{\mathsf{ho}}}
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
 \newcommand{\Aff}[0]{{\mathsf{Aff}}}
 \newcommand{\Schf}[0]{{\mathsf{Schf}}}
@@ -299,6 +305,7 @@
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
 \newcommand{\bundle}[1]{\mathcal{#1}}
 \newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
@@ -328,9 +335,9 @@
 \newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
 \newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
 \newcommand{\into}[0]{\to}
 \newcommand{\inv}[0]{^{-1}}
 \newcommand{\mfa}[0]{{\mathfrak{a}}}
@@ -617,6 +624,7 @@
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
@@ -710,6 +718,7 @@
 
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
@@ -728,13 +737,67 @@
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
 
+# Preface
+
+I'd like to extend my gratitude to the following people for helping supply solutions and proofs:
+
+- Paco Adajar
+- Swaroop Hegde
+
+Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
+
 # Group Theory: General
 
-## Spring 2020 #2 $\work$
+## Spring 2020 #2 $\done$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
-\todo[inline]{Work this problem.}
+
+> Solution due to Swaroop Hegde.
+
+:::{.concept}
+\envlist
+
+1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
+2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  In particular, $\# C_g$ divides $\#G$.
+3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $p \da \#H$.
+- Let \( \ts{ C_i }_{i\leq n} \) be the conjugacy classes in $G$, then $G = \disjoint_{i\leq n} C_i$
+- By the first fact, there is a sub-collection \( \ts{ C_{i_j}}_{j\leq k } \)  such that 
+\[
+H = \disjoint_{j\leq k} C_{i_j}
+.\]
+- The identity is always in a single conjugacy class, so $C_e = \ts{ e }$.
+- Since $e\in H$, without loss of generality, label $C_{i_1} = \ts{ e }$.
+- So
+\[
+H 
+= \disjoint_{j\leq k} C_{i_j} 
+= C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+.\]
+
+- Take cardinality in the above equation 
+\[
+p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+.\]
+- So $\# C_{i_j} \leq p-1$ for all $j\neq 1$.
+
+- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \neq 1$.
+  - This rules out $\# C_{i_j}$ being a prime less than $p$, but also rules out composites: if a prime $q\divides \# C_{i_j}$, then $q<p$ and $q\divides \# G$, a contradiction.
+
+- By fact 3, each $x\in C_{i_j}$ satisfies $x\in Z(G)$.
+
+- $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
+
+:::
+
 
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
@@ -765,15 +828,13 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 :::{.strategy}
 Burnside.
-
 :::
-
 
 :::{.solution}
 \envlist
 
 :::{.proof title="Part a"}
-Strategy: Burnside.
+\envlist
 
 - Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
 
@@ -835,7 +896,6 @@ Statement of the class equation:
 where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
 :::
 
-
 :::{.proof title="Part c"}
 As shown in part 1,
 $$
@@ -867,13 +927,9 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 
 :::
 
-
 \todo[inline]{Redo part c}
 
-
-
 :::
-
 
 ## Spring 2012 #2 $\work$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
@@ -927,6 +983,72 @@ Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a tran
 
 ## Fall 2019 Midterm #5 $\work$
 Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
+
+> Note: this is a good problem!
+
+> Proof due to Paco Adajar
+
+:::{.concept}
+\envlist
+
+Important notations and definitions:
+
+-   The **center** of $G$, denoted by $Z(G)$, is the subset of elements
+    of $G$ which commute with all elements of $G$. That is, if
+    $x \in Z(G)$, then for all $g \in G$, $gx = xg$:
+    $$Z(G) = \{ x \in G : gx = xg \, \text{for all } x \in G \}.$$
+
+    In fact, $Z(G)$ is not just a subset of $G$, but a normal subgroup
+    of $G$.
+
+-   The **commutator subgroup** of $G$, denoted by $[G, G]$, is the
+    subgroup of $G$ generated by the commutators of $G$, i.e., the
+    elements of the form $ghg^{-1}h^{-1}$:
+    $$[G, G] = \langle ghg^{-1}h^{-1} : g, h \in G \rangle.$$
+
+    The commutator subgroup $[G,G]$ is the smallest normal subgroup of
+    $G$ whose quotient is abelian. That is, if $H$ is a normal subgroup
+    of $G$ for which $G/H$ is abelian, then $[G, G] \le H$.
+
+    Moreover, $G$ is abelian if and only if $[G,G]$ is trivial.
+
+Theorems to remember and know how to prove:
+
+-   **$G/Z(G)$ Theorem**: If $G/Z(G)$ is cyclic, then $G$ is abelian,
+    i.e., $G/Z(G)$ is in fact trivial.
+
+-   **Lagrange's Theorem**: If $G$ is a group of finite order and $H$ is
+    a subgroup of $G$, then the order of $H$ divides that of $G$.
+
+    - One consequence of this is that every group of prime order is
+    cyclic.
+
+-   A $p$-group (a group of order $p^n$ for some prime $p$ and
+    some positive integer $n$) has nontrivial center.
+
+-   A consequence of the theorems above: every group of order $p^2$
+    (where $p$ is prime) is abelian.
+
+:::
+
+
+:::{.solution}
+Since $Z(G)$ is a subgroup of $G$ and $|G| = p^3$, by Lagrange's
+theorem, $|Z(G)| \in \{1, p, p^2, p^3\}$.
+
+Since we stipulated that $G$ is nonabelian, $|Z(G)| \ne p^3$. Also,
+since $G$ is a $p$-group, it has nontrivial center, so $|Z(G)| \ne 1$.
+Finally, by the $G/Z(G)$ theorem, $|Z(G)| \ne p^2$: if $|Z(G)| = p^2$,
+then $|G/Z(G)| = p$ and so $G/Z(G)$ would be cyclic, meaning that $G$ is
+abelian. Hence, $|Z(G)| = p$.
+
+Then, since $|Z(G)| = p$, we have that $|G/Z(G)| = p^2$, and so $G/Z(G)$
+is abelian. Thus, $[G, G] \in Z(G)$. Since $|Z(G)| = p$, then
+$|[G,G]| \in \{ 1, p\}$ again by Lagrange's theorem. If $|[G,G]| = p$
+then $[G,G] = Z(G)$ and we are done. And, indeed, we must have
+$|[G,G]| = p$, because $G$ is nonabelian and so $|[G,G]| \ne 1$.
+:::
+
 
 ## Spring 2021 #2 $\work$
 
