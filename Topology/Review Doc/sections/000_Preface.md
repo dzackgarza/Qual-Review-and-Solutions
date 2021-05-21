@@ -100,7 +100,7 @@ But a free group is torsionfree.
 
 :::{.remark title="How to use this fact"}
 This is especially useful if you have some $f: A\into B$ and you look at the induced homomorphism $f_*: \pi_1(A) \into \pi_1(B)$. If the former is finite and the latter contains a copy of $\ZZ$, then $f_*$ has to be the trivial map $f_*([\alpha]) = e \in \pi_1(B)$ for every $[\alpha] \in \pi_1(A)$.
-
+You can play a similar game when you take homology or cohomology.
 :::
 
  
