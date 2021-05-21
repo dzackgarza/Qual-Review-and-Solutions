@@ -20,7 +20,7 @@
 :::{.definition title="Simple Function"}
 A **simple function** $s: \CC\to X$ is a finite linear combination of indicator functions of measurable sets, i.e. 
 \[
-s(x) = \sum_{j=1}^n c_j \one_{E_j}(x)
+s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
 .\]
 :::
 
@@ -29,7 +29,7 @@ s(x) = \sum_{j=1}^n c_j \one_{E_j}(x)
 \int_X f \da \sup \ts{ \int s(x) \dmu \st 0\leq s \leq f, s\text{ simple } } 
 .\]
 
-Note that if $s = \sum c_j \one_{E_j} $ is simple, then
+Note that if $s = \sum c_j \chi_{E_j}$ is simple, then
 \[
 \int_X s(x) \dmu \da \sum_{j=1}^n c_j \mu(E_j)
 .\]
@@ -311,7 +311,6 @@ Almost everywhere convergence: ?
 
 :::
 
-
 ## $L^1$ Facts
 
 :::{.proposition title="Zero in $L^1$ iff zero almost everywhere"}
@@ -551,21 +550,31 @@ Sequences $f_k \converges{a.e.}\to f$ but $f_k \converges{L^p}{\not\to} f$:
 
 We have $1 \implies 2 \implies 3$, and in general no implication can be reversed, but (**warning**) none of $1,2,3$ imply $4$ or vice versa.
 
-**Examples**:
 
-- $f_n = n\inv \chi_{[0, n]}$. This converges uniformly to 0, but the integral is identically 1. So this satisfies 1,2,3 and not 4.
-  
-  ![Image](figures/2019-09-29-19:09.png)\
+- $f_n = (1/n) \chi_{(0, n)}$. This converges uniformly to 0, but the integral is identically 1. So this satisfies 1,2,3 and not 4.
+
+  ![image_2021-05-21-16-38-30](figures/image_2021-05-21-16-38-30.png)
 
 - $f_n = \chi_{(n, n+1)}$ (skateboard to infinity). This satisfies 2,3 but not 1, 4.
 
+  ![image_2021-05-21-16-42-08](figures/image_2021-05-21-16-42-08.png)
+
 - $f_n = n\chi_{(0, \frac 1 n)}$. This satisfies 3 but not 1,2,4.
 
-- $f_n:$ see weird example below. Then $f_n \to 0$ in $L^1$ but is not 1,2, or 3.
-  
-  ![Image](figures/2019-09-29-19:08.png)\
-:::
+  ![image_2021-05-21-16-54-38](figures/image_2021-05-21-16-54-38.png)
 
+- $f_n:$ one can construct a sequence where $f_n \to 0$ in $L^1$ but is not 1,2, or 3.
+  The construction:
+
+  - Break $I$ into $2$ intervals, let $f_1$ be the indicator on the first half, $f_2$ the indicator on the second.
+  - Break $I$ into $2^2=4$ intervals, like $f_3$ be the indicator on the first quarter, $f_4$ on the second, etc.
+  - Break $I$ into $2^k$ intervals and cyclic through $k$ indicator functions.
+
+  ![image_2021-05-21-16-49-09](figures/image_2021-05-21-16-49-09.png)
+
+  - Then $\int f_n = 1/2^n \to 0$, but $f_n\not\to 0$ pointwise since for every $x$, there are infinitely many $n$ for which $f_n(x) = 0$ and infinitely many for which $f_n(x) = 1$.
+
+:::
 
 
 
