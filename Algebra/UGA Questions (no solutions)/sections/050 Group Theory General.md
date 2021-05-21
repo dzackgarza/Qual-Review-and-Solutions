@@ -11,6 +11,7 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 \envlist
 
 - Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
 - Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
   In particular, $\# C_g$ divides $\#G$.
 - $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
@@ -18,7 +19,11 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 
 
 :::{.proof title="due to Swaroop"}
+\envlist
 
+- Let $p \da \#H$.
+- Let $C_1, \cdots, C_n$ be the conjugacy classes in $G$, then $G = \disjoint_{i=1}^n C_i$
+- 
 :::
 
 
