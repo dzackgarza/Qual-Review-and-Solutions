@@ -119,6 +119,12 @@ Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G 
 Any two cosets $xH, yH$ are either identical or disjoint.
 :::
 
+:::{.proof title="?"}
+Note $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
+The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its cosets.
+:::
+
+
 :::{.theorem title="The Fundamental Theorem of Cosets"}
 \[
 aH = bH \iff a\inv b \in H \iff b\inv a\in H
