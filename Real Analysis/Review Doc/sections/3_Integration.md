@@ -1,5 +1,7 @@
 # Integration
 
+## Unsorted 
+
 :::{.remark title="A common proof technique"}
 \envlist
 
@@ -7,7 +9,6 @@
 - Show it holds for simple functions by linearity.
 - Use $s_k \increasesto f$ and apply MCT to show it holds for $f$.
 :::
-
 
 :::{.remark title="on notation"}
 \envlist
@@ -43,9 +44,7 @@ A useful fact: for $(X, \mathcal{M})$ a measure space, integrals split across di
 
 :::
 
-
-
-:::{.definition title="Essential supremum and infimum"}
+:::{.definition title="Essential supremum and infimum, essentially bounded"}
 An **essential lower bound** $b$ on a function $f$ is any real number such that $S_{b} \da \ts{x\st f(x) < b } = f\inv(-\infty, b)$ has measure zero.
 The **essential infimum** is the supremum of all essential lower bounds, i.e. $\ess\inf f \da \sup_{b} \ts{b\st \mu S_b = 0}$.
 This is the greatest lower bound almost everywhere.
@@ -54,19 +53,14 @@ Similarly an **essential upper bound** $c$ is any number such that $S^c \da f\in
 
 A function is **essentially bounded** if $\norm{f}_\infty \da \ess\sup f < \infty$.
 These are functions which are bounded almost everywhere.
-
 :::
 
-
-
-:::{.remark}
-If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
-:::
-
-
-
-:::{.example title="?"}
+:::{.example title="An essentially bounded but not bounded function"}
 $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
+:::
+
+:::{.proposition title="$L^\infty$ functions are equivalent to bounded almost-everywhere functions"}
+If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
 :::
 
 :::{.theorem title="p-Test for Integrals"}
@@ -77,9 +71,8 @@ $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
 :::
 
 :::{.slogan}
-Large powers of $x$ help us in neighborhoods of infinity and hurt around zero
+Large powers of $x$ help us in neighborhoods of infinity and hurt around zero.
 :::
-
 
 :::{.theorem title="Monotone Convergence"}
 If $f_n \in L^+$ and $f_n \nearrow f$ almost everywhere, then
@@ -182,6 +175,11 @@ If $f_n$ is a sequence of nonnegative measurable functions, then
 .\]
 :::
 
+:::{.proof title="of Fatou"}
+\todo[inline]{Prove Fatou}
+
+:::
+
 :::{.theorem title="Tonelli (Non-Negative, Measurable)"}
 For $f(x, y)$ **non-negative and measurable**, for almost every $x\in \RR^n$, 
 
@@ -222,7 +220,7 @@ m(E) = \int_{\RR^{n_1}} m(E_x) ~dx
 .\]
 :::
 
-:::{.proof}
+:::{.proof title="of measurable slices"}
 \envlist
 
 $\implies$:
