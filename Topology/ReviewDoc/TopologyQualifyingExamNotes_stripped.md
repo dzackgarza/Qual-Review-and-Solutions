@@ -122,7 +122,7 @@ A set \( S \) in a metric space \( (X, d) \) is *bounded* iff there exists an \(
 Given two topologies \( \tau_1, \tau_2 \),
 
 -   \( \tau_1 \) is **finer** than \( \tau_2 \) iff \( \tau_1 \supseteq\tau_2 \).
--   \( \tau_1 \) is **coarser** than \( \tau_2 \) iff \( \tau_1 \iscontainedin \tau_2 \).
+-   \( \tau_1 \) is **coarser** than \( \tau_2 \) iff \( \tau_1 \supseteq\tau_2 \).
 
 Two topologies are **comparable** if either \( \tau_1 < \tau_2 \) or \( \tau_2 < \tau_1 \).
 
