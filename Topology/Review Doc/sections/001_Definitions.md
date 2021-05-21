@@ -30,6 +30,12 @@ Set $x\sim y$ iff there exists a connected set $U\ni x, y$ and take equivalence 
 See \cref{def:open_closed_maps}.
 :::
 
+
+:::{.definition title="Closure of a set"}
+
+:::
+
+
 :::{.definition title="Compact"}
 A topological space $(X, \tau)$ is **compact** if every open cover has a *finite* subcover.
 

@@ -1,6 +1,8 @@
 # Summary and Topics: Point-Set Topology 
 
+Some key high-level topics:
+
 - Connectedness
 - Compactness
-- Hausdorff Spaces
-- Path-Connectedness
+- Metric spaces
+- Hausdorff spaces
