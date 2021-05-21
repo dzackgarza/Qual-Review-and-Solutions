@@ -35,17 +35,13 @@ Note that if $s = \sum c_j \one_{E_j} $ is simple, then
 
 :::
 
-
-
-
-:::{.remark}
-A useful fact: for $(X, \mathcal{M})$ a measure space,
+:::{.remark title="Integrals split across disjoint sets"}
+A useful fact: for $(X, \mathcal{M})$ a measure space, integrals split across disjoint sets:
 \[
 \int_X f = \int_{X\sm A} f + \int_A f && \forall\, A \in \mathcal{M} 
 .\]
 
 :::
-
 
 
 
