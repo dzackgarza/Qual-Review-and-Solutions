@@ -111,6 +111,19 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 - Continuous image of compact is compact.
 :::
 
+
+:::{.strategy}
+What's the picture?
+
+![image_2021-05-21-01-16-52](figures/image_2021-05-21-01-16-52.png)
+
+Take an open cover of the product, use that vertical fibers are compact to get a finite cover for each fiber.
+Use tube lemma to get opens in the base space, run over all $x$ so the tube bases cover $X$.
+Use that $X$ is compact to get a finite subcover.
+
+:::
+
+
 :::{.solution}
 \envlist
 
@@ -142,7 +155,7 @@ N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
     - Produce a neighborhood $W$ of $x_0$ in $X$ containing $N$ 
     - Note that $\ts{U_j}_{j\leq m}\covers W\cross Y$ since it covered $N$.
     - Note that this is a finite cover.
-- Let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x\cross Y}_{x\in X} \covers X$. 
+- Let $x_0\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$. 
   - Note that now every tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
 - Use that $\theset{W_x}_{x\in X}\covers X$ and $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
 - Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$; the claim is that it is a finite cover.
