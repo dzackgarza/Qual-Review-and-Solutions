@@ -90,6 +90,11 @@ Measurable, non-negative, increasing pointwise a.e. allows commuting limits and 
 :::
 
 
+:::{.proof title="of MCT"}
+\todo[inline]{todo}
+
+:::
+
 :::{.theorem title="Dominated Convergence"}
 If $f_n \in L^1$ and $f_n \to f$ almost everywhere with $\abs {f_n} \leq g$ for some $g\in L^1$, then $f\in L^1$ and
 $$
@@ -102,6 +107,11 @@ $$
 .$$
 
 > Positivity *not* needed.
+
+:::
+
+:::{.proof title="of DCT"}
+\todo[inline]{todo}
 
 :::
 
@@ -278,6 +288,8 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 :::
 
 :::{.proof}
+\envlist
+
 - By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
 - By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
 :::
