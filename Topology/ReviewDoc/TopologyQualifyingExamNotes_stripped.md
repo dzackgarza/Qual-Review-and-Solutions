@@ -100,18 +100,49 @@ Some key high-level topics:
 
 ## Point-Set Topology
 
+::: {.remark title="on the term 'locally'"}
+The prefix "locally blah" almost always means that for every \( x\in X \), there exists *some* neighborhood \( N_x\ni x \) which has property "blah".
+:::
+
+::: {.definition title="Basis for a topology"}
+A set \( \mathcal{B} \) is a **basis** for a topology iff
+
+-   \( \mathcal{B} \) is closed under intersections,
+-   Every \( x\in X \) is in some basic set,
+-   If \( x \) is in the intersection of two basis sets \( B_1 \cap B_2 \), there is a third basic open \( B_3 \ni x \) with \( B_3 \subset B_1 \cap B_2 \).
+
+The topology **generated** by \( \mathcal{B} \) is the following: \( U\subseteq X \) is open iff for each \( x\in U \) there is a basic open \( B \) with \( x\in B \subset U \). Equivalently, every open set is a union of basic open sets.
+:::
+
 ::: {.definition title="Bounded"}
 A set \( S \) in a metric space \( (X, d) \) is *bounded* iff there exists an \( m\in {\mathbb{R}} \) such that \( d(x, y) < m \) for every \( x, y\in S \).
 :::
 
-::: {.definition title="Connected"}
-There does not exist a disconnecting set \( X = A{\coprod}B \) such that \( \emptyset \neq A, B \subsetneq \), i.e. \( X \) is the union of two proper disjoint nonempty sets. Additional condition for a subspace \( Y\subset X \): \( { \operatorname{cl}} _{Y}(A) \cap V = A \cap{ \operatorname{cl}} _{Y}(B) = \emptyset \).
+::: {.definition title="Comparability of topologies"}
+Given two topologies \( \tau_1, \tau_2 \),
 
-Equivalently, \( X \) contains no proper nonempty clopen sets.
+-   \( \tau_1 \) is **finer** than \( \tau_2 \) iff \( \tau_1 \supseteq\tau_2 \).
+-   \( \tau_1 \) is **coarser** than \( \tau_2 \) iff \( \tau_1 \iscontainedin \tau_2 \).
+
+Two topologies are **comparable** if either \( \tau_1 < \tau_2 \) or \( \tau_2 < \tau_1 \).
+
+> Note: more open sets is like having a "finer" resolution.
+:::
+
+```{=tex}
+\todo[inline]{Is this actually a poset relation? Fails reflexivity.}
+```
+::: {.definition title="Connected"}
+A space \( X \) is **connected** iff there does not exist a disconnection \( X = A{\coprod}B \) with \( A, B \) nonempty open sets. I.e. \( X \) can not be written as the disjoint union of two proper nonempty open sets. Equivalently, \( X \) contains no proper nonempty clopen sets.
+
+Note that there is an additional condition for a subspace \( Y\subset X \) to be connected:
+\[
+{ \operatorname{cl}} _{Y}(A) \cap V = A \cap{ \operatorname{cl}} _{Y}(B) = \emptyset
+.\]
 :::
 
 ::: {.definition title="Connected Components"}
-Set \( x\sim y \) iff there exists a connected set \( U\ni x, y \) and take equivalence classes.
+Set \( x\sim y \) iff there exists a connected set \( U\ni x, y \) and take equivalence classes. These classes are the **connected components** of \( X \).
 :::
 
 ::: {.definition title="Closed Sets"}
@@ -120,7 +151,7 @@ Set \( x\sim y \) iff there exists a connected set \( U\ni x, y \) and take equi
 ```
 -   A set is closed if and only if its complement is open.
 -   A set is closed iff it contains all of its limit points.
--   A closet set in a subspace: \( Y\subset X \implies { \operatorname{cl}} _{Y}(A) \coloneqq{ \operatorname{cl}} _{X}(A)\cap Y \).
+-   A closed set in a subspace: \( Y\subset X \implies { \operatorname{cl}} _{Y}(A) \coloneqq{ \operatorname{cl}} _{X}(A)\cap Y \).
 :::
 
 ::: {.definition title="Closed Maps"}
@@ -134,9 +165,7 @@ An equivalent condition: \( x\in \mkern 1.5mu\overline{\mkern-1.5muU\mkern-1.5mu
 :::
 
 ::: {.definition title="Compact"}
-A topological space \( (X, \tau) \) is **compact** if every open cover has a *finite* subcover.
-
-That is, if \( \left\{{U_{j} {~\mathrel{\Big|}~}j\in J}\right\} \subset \tau \) is a collection of open sets such that \( X = \cup_{j\in J} U_{j} \), then there exists a *finite* subset \( J' \subset J \) such that \( X \subseteq \cup_{j\in J'} U_{j} \).
+A topological space \( (X, \tau) \) is **compact** iff every open cover has a *finite* subcover. That is, if \( \left\{{U_{j}}\right\}_{j\in J} \subseteq \tau \) is a collection of open sets such that \( X = \displaystyle\bigcup_{j\in J} U_{j} \), then there exists a *finite* subset \( J' \subset J \) such that \( X \subseteq \displaystyle\bigcup_{j\in J'} U_{j} \).
 :::
 
 ::: {.definition title="Continuous Map"}
@@ -144,44 +173,44 @@ A map \( f:X\to Y \) between topological spaces is **continuous** if and only if
 :::
 
 ::: {.definition title="Cover"}
-A collection of subsets \( \left\{{U_\alpha}\right\} \) of \( X \) is said to *cover \( X \)* iff \( X = \cup_{\alpha} U_\alpha \). If \( A\subseteq X \) is a subspace, then this collection *covers \( A \)* iff \( A\subseteq \cup_{\alpha} U_\alpha \).
+A collection of subsets \( \left\{{U_\alpha}\right\} \) of \( X \) is said to **cover** \( X \) iff \( X = \cup_{\alpha} U_\alpha \). If \( A\subseteq X \) is a subspace, then this collection **covers** \( A \) iff \( A\subseteq \cup_{\alpha} U_\alpha \).
 :::
 
 ::: {.definition title="Dense"}
-A subset \( Q\subset X \) is dense iff \( y\in N_{y} \subset X \implies N_{y} \cap Q \neq \emptyset \) iff \( \mkern 1.5mu\overline{\mkern-1.5muQ\mkern-1.5mu}\mkern 1.5mu = X \).
+A subspace \( Q\subset X \) is **dense** iff every neighborhood of every point in \( x \) intersects \( Q \). Equivalently, \( { \operatorname{cl}} _X(Q) = Q \).
 :::
 
 ::: {.definition title="First Countable"}
-A space is *first-countable* iff every point admits a countable neighborhood basis.
+A space is **first-countable** iff every point admits a countable neighborhood basis.
 :::
 
 ::: {.definition title="Hausdorff"}
-A topological space \( X \) is *Hausdorff* iff for every \( p\neq q \in X \) there exist disjoint open sets \( U\ni p \) and \( V\ni q \).
+A topological space \( X \) is *Hausdorff* iff points can be separated by disjoint neighborhoods: for every \( p\neq q \in X \) there exist disjoint open sets \( U\ni p \) and \( V\ni q \).
 :::
 
 ::: {.definition title="Injection"}
-A map \( \iota \) with a **left** inverse \( f \) satisfying \( f\circ \iota = \operatorname{id} \)
+A map \( \iota:A\to B \) with a **left** inverse \( f:B\to A \) satisfying \( f\circ \iota = \operatorname{id}_A \). Note that this is equivalent to \( f(x) = f(y) \implies x = y \).
 :::
 
 ::: {.definition title="Lebesgue Number"}
-For \( (X, d) \) a compact metric space and \( \left\{{U_\alpha}\right\}\rightrightarrows X \), there exist \( \delta_{L} > 0 \) such that
+For \( (X, d) \) a compact metric space and \( \left\{{U_\alpha}\right\}\rightrightarrows X \), there exists a **Lebesgue number** \( \delta_{L} > 0 \) which satisfies
 \[
 A\subset X, ~ {\operatorname{diam}}(A) < \delta_{L} \implies A\subseteq U_\alpha \text{ for some } \alpha
 .\]
 :::
 
 ::: {.definition title="Limit Point"}
-For \( A\subset X \), \( x \) is a limit point of \( A \) if every punctured neighborhood \( P_{x} \) of \( x \) satisfies \( P_{x} \cap A \neq \emptyset \), i.e. every neighborhood of \( x \) intersects \( A \) in some point other than \( x \) itself.
-
-Equivalently, \( x \) is a limit point of \( A \) iff \( x\in { \operatorname{cl}} _{X}(A\setminus\left\{{x}\right\}) \).
+For \( A\subset X \), \( x \) is a **limit point** of \( A \) if every punctured neighborhood \( P_{x} \) of \( x \) intersects \( A \). I.e., every neighborhood of \( x \) intersects \( A \) at a point other than \( x \). Equivalently, \( x\in { \operatorname{cl}} _{X}(A\setminus\left\{{x}\right\}) \).
 :::
 
 ::: {.definition title="Locally Connected"}
-A space is *locally connected* at a point \( x \) iff \( \forall N_{x} \ni x \), there exists a \( U\subset N_{x} \) containing \( x \) that is connected.
+A space is **locally connected** iff every neighborhood of every point admits a smaller connected neighborhood. I.e. for all \( x\in X \), for all \( N_x \ni x \), there exists a connected set \( U \subset X \) with \( x\in U \).
 :::
 
 ::: {.definition title="Locally Compact"}
 A space \( X \) is *locally compact* iff every \( x\in X \) has a neighborhood contained in a compact subset of \( X \).
+
+> Note: authors such as Hartshorne often *also* require that \( X \) is Hausdorff, and refer to the above definition as **quasicompactness**.
 :::
 
 ::: {.definition title="Locally Finite"}
@@ -189,7 +218,7 @@ A collection of subsets \( {\mathcal{S}} \) of \( X \) is *locally finite* iff e
 :::
 
 ::: {.definition title="Locally Path-Connected"}
-A space is **locally path-connected** if it admits a basis of path-connected open subsets.
+A space \( X \) is **locally path-connected** iff every point in \( X \) admits some path-connected neighborhood. Equivalently, \( X \) admits a basis of path-connected open subsets.
 :::
 
 ::: {.definition title="Neighborhood"}
@@ -231,12 +260,18 @@ Set \( x\sim y \) iff there exists a path-connected set \( U\ni x, y \) and take
 A subset \( A\subseteq X \) is **precompact** iff \( { \operatorname{cl}} _{X}(A) \) is compact.
 :::
 
-::: {.definition title="The product topology"}
+::: {.definition title="Product topology"}
 For \( (X, \tau_X) \) and \( (Y, \tau_Y) \) topological spaces, defining
 \[
 \tau_{X \times Y} \coloneqq\left\{{U \times V {~\mathrel{\Big|}~}U\in \tau_X,\, V\in \tau_Y}\right\}
 \]
 yields the **product topology** on \( X \times Y \).
+:::
+
+::: {.definition title="Quasicompact"}
+A topological space \( X \) (possible non-Hausdorff) is **quasi-compact** iff every open cover admits a finite subcover. If \( X \) is additionally Hausdorff, \( X \) is said to be **compact**.
+
+> Note: this is a distinction coming from algebraic geometry, and Hartshorne in particular.
 :::
 
 ::: {.definition title="Refinement"}
@@ -248,11 +283,27 @@ A space \( X \) is **regular** if whenever \( x\in X \) and \( F\not\ni x \) is 
 :::
 
 ::: {.definition title="Retract"}
-A map \( r \) in \( A\mathrel{\textstyle\substack{\hookrightarrow^{\iota}\\\textstyle\dashleftarrow_{r}}} X \) satisfying
+A map \( r \) in \( A\mathrel{\textstyle\substack{\hookrightarrow^{\iota}\\\textstyle\dashleftarrow_{r}}} B \) satisfying
 \[r\circ\iota = \operatorname{id}_{A}.\]
-Equivalently \( X \twoheadrightarrow_{r} A \) and \(  {\left.{{r}} \right|_{{A}} }  = \operatorname{id}_{A} \). If \( X \) retracts onto \( A \), then \( i_* \) is injective.
+A **retract** of \( B \) onto a subspace \( A \) is a map \( r:B\to A \) that is a left-inverse for the inclusion \( f:A\hookrightarrow B \), so \( r \circ f = \operatorname{id}_A \):
 
-Alt: Let \( X \) be a topological space and \( A \subset X \) be a subspace, then a **retraction** of \( X \) onto \( A \) is a map \( r: X\to X \) such that the image of \( X \) is \( A \) and \( r \) restricted to \( A \) is the identity map on \( A \).
+```{=tex}
+\begin{tikzcd}
+    A && B
+    \arrow["f", from=1-1, to=1-3]
+    \arrow["r"', curve={height=18pt}, dashed, from=1-3, to=1-1]
+    \arrow[loop left, from=1-1]{l}{\mathrm{id}_A} 
+\end{tikzcd}
+```
+> [Link to (partial) Diagram](https://q.uiver.app/?q=WzAsMixbMCwwLCJBIl0sWzIsMCwiQiJdLFswLDEsImYiXSxbMSwwLCJyIiwyLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==)
+
+Equivalently, a continuous map \( r:B\to A \) with \( { \left.{{r}} \right|_{{A}} } = \operatorname{id}_A \) restricting to the identity on \( A \), i.e. fixing \( A \) pointwise. Note that \( r \) is necessarily a surjection.
+
+Alt: Let \( X \) be a topological space and \( A \subset X \) be a subspace, then a **retraction** of \( X \) onto \( A \) is a map \( r: X\to X \) such that the image of \( X \) is \( A \) and \( r \) restricted to \( A \) is the identity.
+:::
+
+::: {.remark}
+If \( X \) retracts onto \( A \) with \( \iota:A\hookrightarrow X \), then \( i_* \) is injective. Any nonempty space retracts to a point via a constant map.
 :::
 
 ::: {.definition title="Saturated"}
@@ -318,12 +369,8 @@ A map \( \pi \) with a **right** inverse \( f \) satisfying
 A mnemonic: in \( {\mathbb{R}} \), \( \cap_{n\in {\mathbb{N}}} (-1/n, 1/n) = \left\{{0}\right\} \) which is closed in \( {\mathbb{R}} \).
 :::
 
-::: {.definition title="Topology generated by a basis"}
-For \( X \) an arbitrary set, a collection of subsets \( {\mathcal{B}} \) is a *basis for \( X \)* iff \( {\mathcal{B}} \) is closed under intersections, and every intersection of basis elements contains another basis element. The set of unions of elements in \( B \) is a topology and is denoted *the topology generated by \( {\mathcal{B}} \)*.
-:::
-
 ::: {.definition title="Topological Embedding"}
-A continuous map \( f:X \to Y \) for which \( X\cong f(X) \) are homeomorphic is called a **topological embedding**.
+A topological **embedding** is a continuous map \( f:X\to Y \) which is a homeomorphism onto its image, i.e. \( X\cong_{{\mathsf{Top}}} f(X) \).
 :::
 
 ::: {.definition title="Uniform Continuity"}
@@ -347,7 +394,7 @@ For \( f: (X, d_{x}) \to (Y, d_{Y}) \) metric spaces,
 ```{=tex}
 \todo[inline]{Definitions}
 ```
-::: {.definition title="Basis"}
+::: {.definition title="Basis of a module"}
 For an \( R{\hbox{-}} \)module \( M \), a basis \( B \) is a linearly independent generating set.
 :::
 
@@ -457,19 +504,6 @@ For a directed system \( (X_{i}, f_{ij} \), the **colimit** is an object \( X \)
 -   The \( p{\hbox{-}} \)adic integers \( {\mathbb{Z}}_{p} \).
 :::
 
-::: {.definition title="Cone"}
-For a space \( X \), defined as
-\[  
-CX = \frac{X\times I} {X \times\left\{{0}\right\}}
-.\]
-Example: The cone on the circle \( CS^1 \)
-
-```{=html}
-<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
-```
-Note that the cone embeds \( X \) in a contractible space \( CX \).
-:::
-
 ::: {.definition title="Contractible"}
 A space \( X \) is **contractible** if \( \operatorname{id}_X \) is nullhomotopic. i.e. the identity is homotopic to a constant map \( c(x) = x_0 \).
 
@@ -566,15 +600,13 @@ F_{1}(X) &= A
 
 Alt:
 
-A **deformation retract** is a homotopy \( H:X\times I \to X \) from the identity on \( X \) to the identity on \( A \) that fixes \( A \) at all times:
+A **deformation retract** is a homotopy \( H:X\times I \to X \) from \( \operatorname{id}_X \) to \( \operatorname{id}_A \) where \( { \left.{{H}} \right|_{{A}} } = \operatorname{id}_A \) fixes \( A \) at all times.
 \[
 H: X\times I \to X \\
 H(x, 0) = \operatorname{id}_X \\
 H(x, 1) = \operatorname{id}_A \\
 x\in A \implies H(x, t) \in A \quad \forall t
 \]
-
-Equivalently, this requires that \(  {\left.{{H}} \right|_{{A}} }  = \operatorname{id}_A \)
 :::
 
 ::: {.remark}
@@ -606,12 +638,6 @@ For \( x\in M \), the only nonvanishing homology group \( H_{i}(M, M - \left\{{x
 \todo[inline]{Definitions}
 ```
 ::: {.definition title="Direct Sum"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
-::: {.definition title="Eilenberg-MacLane Space"}
 :::
 
 ```{=tex}
@@ -883,12 +909,6 @@ At a point \( x\in M^n \), a choice of a generator \( \mu_{x} \) of \( H_{n}(M, 
 ```{=tex}
 \todo[inline]{Definitions}
 ```
-::: {.definition title="Loop Space"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
 ::: {.definition title="Manifold"}
 An \( n{\hbox{-}} \)manifold is a Hausdorff space in which each neighborhood has an open neighborhood homeomorphic to \( {\mathbb{R}}^n \).
 :::
@@ -897,24 +917,6 @@ An \( n{\hbox{-}} \)manifold is a Hausdorff space in which each neighborhood has
 A manifold in which open neighborhoods may be isomorphic to either \( {\mathbb{R}}^n \) or a half-space \( \left\{{\mathbf{x} \in {\mathbb{R}}^n \mathrel{\Big|}x_{i} > 0}\right\} \).
 :::
 
-::: {.definition title="Mapping Cone"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
-::: {.definition title="Mapping Cylinder"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
-::: {.definition title="Mapping Path Space"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
 ::: {.definition title="Mayer-Vietoris Sequence"}
 :::
 
@@ -922,12 +924,6 @@ A manifold in which open neighborhoods may be isomorphic to either \( {\mathbb{R
 \todo[inline]{Definitions}
 ```
 ::: {.definition title="Monodromy"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
-::: {.definition title="Moore Space"}
 :::
 
 ```{=tex}
@@ -1136,19 +1132,6 @@ Equivalently, \( \pi _1 X = 1 \) is trivial.
 ```{=tex}
 \todo[inline]{Definitions}
 ```
-::: {.definition title="Smash Product"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
-::: {.definition title="Suspension"}
-Compact represented as \( \Sigma X = CX \coprod_{\operatorname{id}_{X}} CX \), two cones on \( X \) glued along \( X \). Explicitly given by
-
-\[\Sigma X = \frac{X\times I}{(X\times\left\{{0}\right\}) \cup(X\times\left\{{1}\right\}) \cup(\left\{{x_{0}}\right\} \times I)}
-.\]
-:::
-
 ::: {.definition title="Tor Group"}
 For an \( R{\hbox{-}} \)module
 \[
@@ -1176,6 +1159,70 @@ where \( L_{n} \) denotes the \( n \)th left derived functor.
 \todo[inline]{Definitions}
 ```
 ::: {.definition title="Wedge Product"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+## Homotopy
+
+::: {.definition title="Cone"}
+For a space \( X \), defined as
+\[  
+CX = \frac{X\times I} {X \times\left\{{0}\right\}}
+.\]
+Example: The cone on the circle \( CS^1 \)
+
+```{=html}
+<!--![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cone.svg/250px-Cone.svg.png)-->
+```
+Note that the cone embeds \( X \) in a contractible space \( CX \).
+:::
+
+::: {.definition title="Suspension"}
+Compact represented as \( \Sigma X = CX \coprod_{\operatorname{id}_{X}} CX \), two cones on \( X \) glued along \( X \). Explicitly given by
+
+\[\Sigma X = \frac{X\times I}{(X\times\left\{{0}\right\}) \cup(X\times\left\{{1}\right\}) \cup(\left\{{x_{0}}\right\} \times I)}
+.\]
+:::
+
+::: {.definition title="Smash Product"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Moore Space"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Mapping Cone"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Mapping Cylinder"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Mapping Path Space"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Loop Space"}
+:::
+
+```{=tex}
+\todo[inline]{Definitions}
+```
+::: {.definition title="Eilenberg-MacLane Space"}
 :::
 
 ```{=tex}
@@ -1430,6 +1477,10 @@ A closed subset \( A \) of a compact set \( B \) is compact.
 The continuous image of a compact set is compact.
 :::
 
+::: {.proof title="?"}
+Let \( f:X\to f(X) \) be continuous. Take an open covering \( \mathcal{U} \rightrightarrows f(X) \), then \( f^{-1}(\mathcal{U}) \rightrightarrows X \), which is cover by opens since \( f \) is continuous. Take a finite subcover by compactness of \( X \), then they push forward to a finite subcover of \( f(X) \).
+:::
+
 ::: {.theorem title="Closed in Hausdorff $\\implies$ compact"}
 A closed subset of a Hausdorff space is compact.
 :::
@@ -1447,7 +1498,11 @@ Points are closed in \( T_1 \) spaces.
 ## Maps and Homeomorphism
 
 ::: {.theorem title="Continuous bijections from compact to Hausdorff are homeomorphisms"}
-A continuous bijection \( f: X\to Y \) where \( X \) is compact and \( Y \) is Hausdorff is an open map and hence a homeomorphism.
+A continuous bijection \( f: X\to Y \) with \( X \) is compact and \( Y \) is Hausdorff is a homeomorphism.
+:::
+
+::: {.proof title="?"}
+Show that \( f^{-1} \) is continuous by showing \( f \) is a closed map. If \( A\subseteq X \) is closed in a compact space, \( A \) is compact. The continuous image of a compact set is compact, so \( f(A) \) is compact. A compact set in a Hausdorff space is closed, so \( f(A) \) is closed in \( Y \).
 :::
 
 ::: {.remark title="On retractions"}
@@ -1483,10 +1538,15 @@ If \( f:X\to Y \) is continuous where \( X \) is compact and \( Y \) is Hausdorf
 ## The Tube Lemma
 
 ::: {.theorem title="The Tube Lemma"}
-Let \( X, Y \) be spaces with \( Y \) compact. For each \( U \subseteq X \times Y \) and each slice \( \left\{{x}\right\} \times Y \subseteq U \), there is an open \( O \subseteq X \) such that
-\[
-\left\{{x}\right\} \times Y \subseteq O \times Y \subseteq U
-.\]
+Let \( X, Y \) be spaces with \( Y \) compact, and let \( x_0\in X \). Let \( N\subseteq X\times Y \) be an open set containing the slice \( x_0 \times Y \), then there is a neighborhood \( W\ni x \) in \( X \) such that \( N \supset W\times Y \):
+
+![image_2021-05-21-00-28-13](figures/image_2021-05-21-00-28-13.png)
+:::
+
+::: {.remark}
+Compactness in one factor is a necessary condition. For a counterexample, \( {\mathbb{R}}^2 \) and let \( N \) be the set contained between a Gaussian and its reflection across the \( x{\hbox{-}} \)axis. Then no tube about \( y=0 \) is entirely contained within \( N \):
+
+![image_2021-05-21-01-39-26](figures/image_2021-05-21-01-39-26.png)
 :::
 
 ::: {.proof title="Sketch"}
