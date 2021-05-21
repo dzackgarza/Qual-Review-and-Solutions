@@ -4,9 +4,6 @@
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
-\todo[inline]{Work this problem.}
-
-
 :::{.concept}
 \envlist
 
@@ -17,8 +14,7 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
 :::
 
-
-:::{.proof title="due to Swaroop"}
+:::{.proof title="due to Swaroop Hegde"}
 \envlist
 
 - Let $p \da \#H$.
