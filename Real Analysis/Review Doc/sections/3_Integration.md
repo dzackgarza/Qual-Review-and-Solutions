@@ -45,11 +45,17 @@ A useful fact: for $(X, \mathcal{M})$ a measure space, integrals split across di
 
 
 
-## Theorems
+:::{.definition title="Essential supremum and infimum"}
+An **essential lower bound** $b$ on a function $f$ is any real number such that $\ts{x\st f(x) < b }$ has measure zero.
+:::
+
+
 
 :::{.remark}
 If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
 :::
+
+
 
 :::{.example title="?"}
 $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
@@ -66,7 +72,6 @@ $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
 Large powers of $x$ help us in neighborhoods of infinity and hurt around zero
 :::
 
-###  Convergence Theorems
 
 :::{.theorem title="Monotone Convergence"}
 If $f_n \in L^+$ and $f_n \nearrow f$ almost everywhere, then
