@@ -36,13 +36,13 @@ H
 = C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
 .\]
 
-- Take cardinality in the above equation and pulling out $C_{i_1}$:
+- Take cardinality in the above equation 
 \[
-\# H 
-= \sum_{j\leq k} \# C_{i_j}
-= 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 .\]
+- So $\# C_{i_j} \leq p-1$ for all $j$.
 
+- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \geq 2$.
 
 :::
 
