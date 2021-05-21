@@ -83,6 +83,7 @@ A **dihedral group** of order $2n$ is given by
 \[
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 \]
+:::
 
 
 :::{.definition title="Alternating Group"}
@@ -127,22 +128,19 @@ aH = bH \iff a\inv b \in H \iff b\inv a\in H
 \todo[inline]{Prove this}
 
 
-
 :::{.theorem title="Counting Quotients"}
 If $H\normal G$, then
-\[  
+\[
 [G: H] = \abs{G/H} = {\abs G \over \abs H}
 .\]
 :::
 
 :::{.theorem title="Counting by Towers"}
-\[  
+\[
 [G:K] = [G:H]\, [H:K]
 .\]
 :::
 
-
-:::
 
 ## Special Classes of Groups
 
