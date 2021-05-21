@@ -25,8 +25,9 @@ A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a
 :::
 
 :::{.theorem title="Cantor's Nested Intervals Theorem"}
-If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of **closed and bounded** intervals, then their intersection is nonempty.
-If $\diam([a_n, b_n]) \converges{n\to\infty}0$, then the intersection contains exactly one point.
+If $\theset{[a_n, b_n] \suchthat n\in \ZZ^{\geq 0}}$ is a nested sequence of compact intervals in a topological space $X$, then their intersection is nonempty.
+
+If $X$ is a complete metric space and the diameters $\diam([a_n, b_n]) \converges{n\to\infty}\too 0$, then their intersection contains exactly one point.
 :::
 
 :::{.proposition title="Continuous on compact $\implies$ uniformly continuous"}
