@@ -55,6 +55,12 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 - Definition of compactness
 :::
 
+
+:::{.strategy}
+
+:::
+
+
 :::{.solution}
 \envlist
 
@@ -63,7 +69,7 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 - Then either $[0, {1\over 4}]$ or $[{1\over 4}, {1\over 2}]$ has no finite subcover
 - Inductively defining $[a_n, b_n]$ this way yields a sequence of compact nested intervals (each with no finite subcover) so Cantor's Nested Interval theorem applies.
 - Since $\RR$ is a complete metric space and the diameters $\diam([a_n, b_n]) \leq {1 \over 2^n} \to 0$, the intersection contains exactly one point. 
-- Since $p\in [0, 1]$, $p\in U_\alpha$ for some $\alpha$.
+- Since $p\in [0, 1]$ and the $U_\alpha$ form an open cover, $p\in U_\alpha$ for some $\alpha$.
 - Since a basis for $\tau(\RR)$ is given by open intervals, we can find an $\eps>0$ such that $(p-\eps, p+\eps) \subseteq U_\alpha$
 - Then if ${1\over 2^N} < \eps$, for $n\geq N$ we have $$[a_n, b_n] \subseteq (p-\eps, p+\eps) \subseteq U_\alpha.$$
 - But then $U_\alpha \covers [a_n, b_n]$, yielding a finite subcover of $[a_n, b_n]$, a contradiction.
