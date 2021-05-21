@@ -72,107 +72,13 @@ posted on Math Stack Exchange or Math Overflow.
 \hypertarget{group-theory-general}{%
 \section{Group Theory: General}\label{group-theory-general}}
 
-\hypertarget{spring-2020-2-done}{%
+\hypertarget{spring-2020-2-work}{%
 \subsection{\texorpdfstring{Spring 2020 \#2
-\(\done\)}{Spring 2020 \#2 \textbackslash done}}\label{spring-2020-2-done}}
+\(\work\)}{Spring 2020 \#2 \textbackslash work}}\label{spring-2020-2-work}}
 
 Let \(H\) be a normal subgroup of a finite group \(G\) where the order
 of \(H\) and the index of \(H\) in \(G\) are relatively prime. Prove
 that no other subgroup of \(G\) has the same order as \(H\).
-
-\begin{quote}
-Solution due to Swaroop Hegde.
-\end{quote}
-
-\begin{concept}
-
-\envlist
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Normal subgroups are disjoint unions of (some) conjugacy classes in
-  \(G\).
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  In fact, this is a characterization of normal subgroups (i.e.~\(H\) is
-  normal iff a union of conjugacy classes).
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Orbit stabilizer theorem: \(\# C_g = \# G/ \# K_g\) where \(C_g\) is
-  the centralizer and \(K_g\) is the conjugacy class of \(g\). In
-  particular, \(\# C_g\) divides \(\#G\).
-\item
-  \(x\in Z(G)\) iff \(\# C_x = 1\), i.e.~the size of its conjugacy class
-  is one.
-\end{enumerate}
-
-\end{concept}
-
-\begin{proof}[?]
-
-\envlist
-
-\begin{itemize}
-\item
-  Let \(p \coloneqq\#H\).
-\item
-  Let \(\left\{{ C_i }\right\}_{i\leq n}\) be the conjugacy classes in
-  \(G\), then \(G = {\coprod}_{i\leq n} C_i\)
-\item
-  By the first fact, there is a sub-collection
-  \(\left\{{ C_{i_j}}\right\}_{j\leq k }\) such that
-  \begin{align*}
-  H = {\coprod}_{j\leq k} C_{i_j}
-  .\end{align*}
-\item
-  The identity is always in a single conjugacy class, so
-  \(C_e = \left\{{ e }\right\}\).
-\item
-  Since \(e\in H\), without loss of generality, label
-  \(C_{i_1} = \left\{{ e }\right\}\).
-\item
-  So
-  \begin{align*}
-  H 
-  = {\coprod}_{j\leq k} C_{i_j} 
-  = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
-  .\end{align*}
-\item
-  Take cardinality in the above equation
-  \begin{align*}
-  p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
-  .\end{align*}
-\item
-  So \(\# C_{i_j} \leq p-1\) for all \(j\neq 1\).
-\item
-  Every \(\# C_{i_j}\) divides \(\# G\), but \(p\) was the
-  \emph{minimal} prime dividing \(\# G\), forcing \(\# C_{i_j} = 1\) for
-  all \(j \neq 1\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    This rules out \(\# C_{i_j}\) being a prime less than \(p\), but
-    also rules out composites: if a prime \(q\bigm|\# C_{i_j}\), then
-    \(q<p\) and \(q\bigm|\# G\), a contradiction.
-  \end{itemize}
-\item
-  By fact 3, each \(x\in C_{i_j}\) satisfies \(x\in Z(G)\).
-\item
-  \(\cup C_{i_j} = H\), so \(H \subseteq Z(G)\).
-\end{itemize}
-
-\end{proof}
 
 \hypertarget{spring-2019-4-done}{%
 \subsection{\texorpdfstring{Spring 2019 \#4
@@ -549,14 +455,108 @@ must have \(|[G,G]| = p\), because \(G\) is nonabelian and so
 
 \end{solution}
 
-\hypertarget{spring-2021-2-work}{%
+\hypertarget{spring-2021-2-done}{%
 \subsection{\texorpdfstring{Spring 2021 \#2
-\(\work\)}{Spring 2021 \#2 \textbackslash work}}\label{spring-2021-2-work}}
+\(\done\)}{Spring 2021 \#2 \textbackslash done}}\label{spring-2021-2-done}}
 
 Let \(H {~\trianglelefteq~}G\) be a normal subgroup of a finite group
 \(G\), where the order of \(H\) is the smallest prime \(p\) dividing
 \({\left\lvert {G} \right\rvert}\). Prove that \(H\) is contained in the
 center of \(G\).
+
+\begin{quote}
+Solution due to Swaroop Hegde.
+\end{quote}
+
+\begin{concept}
+
+\envlist
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Normal subgroups are disjoint unions of (some) conjugacy classes in
+  \(G\).
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  In fact, this is a characterization of normal subgroups (i.e.~\(H\) is
+  normal iff a union of conjugacy classes).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Orbit stabilizer theorem: \(\# C_g = \# G/ \# K_g\) where \(C_g\) is
+  the centralizer and \(K_g\) is the conjugacy class of \(g\). In
+  particular, \(\# C_g\) divides \(\#G\).
+\item
+  \(x\in Z(G)\) iff \(\# C_x = 1\), i.e.~the size of its conjugacy class
+  is one.
+\end{enumerate}
+
+\end{concept}
+
+\begin{proof}[?]
+
+\envlist
+
+\begin{itemize}
+\item
+  Let \(p \coloneqq\#H\).
+\item
+  Let \(\left\{{ C_i }\right\}_{i\leq n}\) be the conjugacy classes in
+  \(G\), then \(G = {\coprod}_{i\leq n} C_i\)
+\item
+  By the first fact, there is a sub-collection
+  \(\left\{{ C_{i_j}}\right\}_{j\leq k }\) such that
+  \begin{align*}
+  H = {\coprod}_{j\leq k} C_{i_j}
+  .\end{align*}
+\item
+  The identity is always in a single conjugacy class, so
+  \(C_e = \left\{{ e }\right\}\).
+\item
+  Since \(e\in H\), without loss of generality, label
+  \(C_{i_1} = \left\{{ e }\right\}\).
+\item
+  So
+  \begin{align*}
+  H 
+  = {\coprod}_{j\leq k} C_{i_j} 
+  = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+  .\end{align*}
+\item
+  Take cardinality in the above equation
+  \begin{align*}
+  p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+  .\end{align*}
+\item
+  So \(\# C_{i_j} \leq p-1\) for all \(j\neq 1\).
+\item
+  Every \(\# C_{i_j}\) divides \(\# G\), but \(p\) was the
+  \emph{minimal} prime dividing \(\# G\), forcing \(\# C_{i_j} = 1\) for
+  all \(j \neq 1\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This rules out \(\# C_{i_j}\) being a prime less than \(p\), but
+    also rules out composites: if a prime \(q\bigm|\# C_{i_j}\), then
+    \(q<p\) and \(q\bigm|\# G\), a contradiction.
+  \end{itemize}
+\item
+  By fact 3, each \(x\in C_{i_j}\) satisfies \(x\in Z(G)\).
+\item
+  \(\cup C_{i_j} = H\), so \(H \subseteq Z(G)\).
+\end{itemize}
+
+\end{proof}
 
 \hypertarget{groups-sylow-theory}{%
 \section{Groups: Sylow Theory}\label{groups-sylow-theory}}

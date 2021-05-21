@@ -748,55 +748,11 @@ Many other solutions contain input and ideas from other graduate students and fa
 
 # Group Theory: General
 
-## Spring 2020 #2 $\done$
+## Spring 2020 #2 $\work$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
 
-> Solution due to Swaroop Hegde.
-
-:::{.concept}
-\envlist
-
-1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
-  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
-2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
-  In particular, $\# C_g$ divides $\#G$.
-3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
-:::
-
-:::{.proof title="?"}
-\envlist
-
-- Let $p \da \#H$.
-- Let \( \ts{ C_i }_{i\leq n} \) be the conjugacy classes in $G$, then $G = \disjoint_{i\leq n} C_i$
-- By the first fact, there is a sub-collection \( \ts{ C_{i_j}}_{j\leq k } \)  such that 
-\[
-H = \disjoint_{j\leq k} C_{i_j}
-.\]
-- The identity is always in a single conjugacy class, so $C_e = \ts{ e }$.
-- Since $e\in H$, without loss of generality, label $C_{i_1} = \ts{ e }$.
-- So
-\[
-H 
-= \disjoint_{j\leq k} C_{i_j} 
-= C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
-.\]
-
-- Take cardinality in the above equation 
-\[
-p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
-.\]
-- So $\# C_{i_j} \leq p-1$ for all $j\neq 1$.
-
-- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \neq 1$.
-  - This rules out $\# C_{i_j}$ being a prime less than $p$, but also rules out composites: if a prime $q\divides \# C_{i_j}$, then $q<p$ and $q\divides \# G$, a contradiction.
-
-- By fact 3, each $x\in C_{i_j}$ satisfies $x\in Z(G)$.
-
-- $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
-
-:::
 
 
 ## Spring 2019 #4 $\done$
@@ -1049,10 +1005,56 @@ $|[G,G]| = p$, because $G$ is nonabelian and so $|[G,G]| \ne 1$.
 :::
 
 
-## Spring 2021 #2 $\work$
+## Spring 2021 #2 $\done$
 
 Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
 Prove that $H$ is contained in the center of $G$.
+
+> Solution due to Swaroop Hegde.
+
+:::{.concept}
+\envlist
+
+1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
+2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  In particular, $\# C_g$ divides $\#G$.
+3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $p \da \#H$.
+- Let \( \ts{ C_i }_{i\leq n} \) be the conjugacy classes in $G$, then $G = \disjoint_{i\leq n} C_i$
+- By the first fact, there is a sub-collection \( \ts{ C_{i_j}}_{j\leq k } \)  such that 
+\[
+H = \disjoint_{j\leq k} C_{i_j}
+.\]
+- The identity is always in a single conjugacy class, so $C_e = \ts{ e }$.
+- Since $e\in H$, without loss of generality, label $C_{i_1} = \ts{ e }$.
+- So
+\[
+H 
+= \disjoint_{j\leq k} C_{i_j} 
+= C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+.\]
+
+- Take cardinality in the above equation 
+\[
+p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+.\]
+- So $\# C_{i_j} \leq p-1$ for all $j\neq 1$.
+
+- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \neq 1$.
+  - This rules out $\# C_{i_j}$ being a prime less than $p$, but also rules out composites: if a prime $q\divides \# C_{i_j}$, then $q<p$ and $q\divides \# G$, a contradiction.
+
+- By fact 3, each $x\in C_{i_j}$ satisfies $x\in Z(G)$.
+
+- $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
+
+:::
+
 
 # Groups: Sylow Theory
 
