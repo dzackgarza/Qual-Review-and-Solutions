@@ -304,7 +304,7 @@ $\ker \psi = \intersect_{x\in X} G_x$ is the intersection of all stabilizers.
 :::
 
 :::{.definition title="Transitive Group Action"}
-A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
+A group action $G\actson X$ is **transitive** iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
 Equivalently, the action has a single orbit.
 :::
 
@@ -386,7 +386,7 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 Let $G$ act on *itself* by conjugation.
 
 - The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
-  - Note that this means this action is not necessarily transitive.
+  - Thus the action is transitive iff there is one conjugacy class.
 
 - $G_x = Z(x) \definedas C_G(x) = \theset{g \in G\suchthat [g, x] = e}$, the **centralizer** of $x$.
 

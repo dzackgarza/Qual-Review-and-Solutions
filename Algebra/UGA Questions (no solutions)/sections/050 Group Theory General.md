@@ -1,10 +1,26 @@
 # Group Theory: General
 
-## Spring 2020 #2 $\work$
+## Spring 2020 #2 $\done$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
 \todo[inline]{Work this problem.}
+
+
+:::{.concept}
+\envlist
+
+- Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+- Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  In particular, $\# C_g$ divides $\#G$.
+- $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+:::
+
+
+:::{.proof title="due to Swaroop"}
+
+:::
+
 
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
