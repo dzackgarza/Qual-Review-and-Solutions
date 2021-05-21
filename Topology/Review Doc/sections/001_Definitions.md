@@ -32,6 +32,7 @@ See \cref{def:open_closed_maps}.
 
 
 :::{.definition title="Closure of a set"}
+$\Cl_X(U) = \intersect_{\substack{ B\supseteq U \\ \text{ closed} }} B$, the intersection of all closed sets in $X$ containing $U$. 
 
 :::
 
