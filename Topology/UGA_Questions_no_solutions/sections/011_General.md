@@ -107,7 +107,7 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 :::{.concept}
 \envlist
-- Proof of the tube lemma.
+- Proof of the tube lemma: a finite product of compact spaces is compact.
 - Continuous image of compact is compact.
 :::
 
@@ -116,7 +116,7 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 We want to show $X, Y \in \Top_{\compact} \iff X\cross Y\in \Top_{\compact}$.
 
-:::{.proof title="Variant 1"}
+:::{.proof title="Proving the tube lemma"}
 $\impliedby$:
 
 - By the universal property, the product $X\cross Y$ is equipped with continuous projections $\pi_X: X\cross Y\to X$ and $\pi_Y: X\cross Y\to X$.
