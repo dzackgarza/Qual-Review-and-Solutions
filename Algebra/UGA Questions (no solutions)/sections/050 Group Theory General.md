@@ -10,11 +10,11 @@ Prove that no other subgroup of $G$ has the same order as $H$.
 :::{.concept}
 \envlist
 
-- Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
   - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
-- Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
   In particular, $\# C_g$ divides $\#G$.
-- $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
 :::
 
 
@@ -40,9 +40,14 @@ H
 \[
 p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 .\]
-- So $\# C_{i_j} \leq p-1$ for all $j$.
+- So $\# C_{i_j} \leq p-1$ for all $j\neq 1$.
 
-- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \geq 2$.
+- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \neq 1$.
+  - This rules out $\# C_{i_j}$ being a prime less than $p$, but also rules out composites: if a prime $q\divides \# C_{i_j}$, then $q<p$ and $q\divides \# G$, a contradiction.
+
+- By fact 3, each $x\in C_{i_j}$ satisfies $x\in Z(G)$.
+
+- $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
 
 :::
 
