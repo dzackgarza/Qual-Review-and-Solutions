@@ -160,11 +160,10 @@ If $f:X\to Y$ is continuous where $X$ is compact and $Y$ is Hausdorff, then
 ## The Tube Lemma
 
 :::{.theorem title="The Tube Lemma"}
-Let $X, Y$ be spaces with $Y$ compact.
-For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, there is an open $O \subseteq X$ such that
-\[
-\ts{x} \cross Y \subseteq O \cross Y \subseteq U
-.\]
+Let $X, Y$ be spaces with $Y$ compact, and let $x_0\in X$.
+Let $N\subseteq X\cross Y$ be an open set containing the slice $x_0 \cross Y$, then there is a neighborhood $W\ni x$ in $X$ such that $N \supset W\cross Y$:
+
+![image_2021-05-21-00-28-13](figures/image_2021-05-21-00-28-13.png)
 
 :::
 
@@ -199,5 +198,4 @@ For each $U \subseteq X \cross Y$ and each slice $\ts{x} \cross Y \subseteq U$, 
   - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
   - So $(x, y) \in U_j \cross V_j$
 :::
-
 
