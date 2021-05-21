@@ -131,7 +131,11 @@ $\implies$:
 - Let $\ts{U_j} \covers X\cross Y$ be an open cover.
 - Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is homeomorphic to $Y$ and thus compact 
 - Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x_0} \cross Y$.
-  - Set \[
+  
+  > Really, cover $Y$, and then cross with $x_0$ to cover $x_0 \cross Y$.
+
+  - Set 
+\[
 N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
 .\]
   - Apply the tube lemma to $N$: produce $\theset{x_0} \cross Y \in W\cross Y \subset N$; then $\theset{U_j \suchthat j\leq m}\covers W\cross Y$.
