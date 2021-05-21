@@ -122,6 +122,12 @@ Any two cosets $xH, yH$ are either identical or disjoint.
 :::{.proof title="?"}
 Note $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
 The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its cosets.
+Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
+Write $\ell =xh_1 =yh_2$ for some $h_i$, then
+\[
+\ell = xh_1 = yh_2 \implies \ell h_1\inv = x = yh_2 h_1\inv \da yh'
+.\]
+
 :::
 
 
