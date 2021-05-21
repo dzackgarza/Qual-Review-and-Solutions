@@ -138,7 +138,9 @@ $\implies$:
 \[
 N \da \Union_{j\leq m} U_j \supseteq x_0 \cross Y
 .\]
-  - Apply the tube lemma to $N$: produce $\theset{x_0} \cross Y \in W\cross Y \subset N$; then $\theset{U_j \suchthat j\leq m}\covers W\cross Y$.
+  - Apply the tube lemma to $N$: 
+    - Produce a neighborhood $W$ of $x_0$ in $X$ containing $N$ 
+    - Note that $\ts{U_j}_{j\leq m}\covers W\cross Y$ since it covered $N$
 - Now let $x\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x\cross Y\suchthat x\in X}\covers X$. 
   - By above argument, every tube $W_x \cross Y$ can be covered by *finitely* many $U_j$.
 - Since $\theset{W_x\suchthat x\in X}\covers X$ and $X$ is compact, produce a finite subset $\theset{W_k \suchthat k\leq m'} \covers X$. 
