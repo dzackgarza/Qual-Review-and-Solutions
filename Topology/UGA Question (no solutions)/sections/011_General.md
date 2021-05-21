@@ -60,8 +60,10 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 What's the picture?
 Similar to covering $\ts{1\over n}\union\ts{0}$: cover $x=0$ with one set, which nets all but finitely many points.
 
+![image_2021-05-20-22-40-29](figures/image_2021-05-20-22-40-29.png)
 
-![image_2021-05-20-22-19-04](figures/image_2021-05-20-22-19-04.png)
+![image_2021-05-20-22-41-25](figures/image_2021-05-20-22-41-25.png)
+![image_2021-05-20-22-42-06](figures/image_2021-05-20-22-42-06.png)
 
 Proceed by contradiction. 
 Binary search down into nested intervals, none of which have finite covers.
