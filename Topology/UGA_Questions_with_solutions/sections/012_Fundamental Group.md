@@ -98,7 +98,7 @@ V = \DD^2 \times S^1 = \theset{ (z, e^{it}) \suchthat \norm z \leq 1,~~ 0 \leq t
 $$ 
 be the "solid torus" with boundary given by the torus $T = S^1 \times S^1$ . 
 
-For $n \in Z$ define 
+For $n \in \ZZ$ define 
 \begin{align*}
 \phi_n : T &\to T \\
 (e^{is} , e^{it} ) &\mapsto (e^{is} , e^{i(ns+t)})
