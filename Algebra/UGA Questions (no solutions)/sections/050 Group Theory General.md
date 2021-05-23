@@ -17,7 +17,6 @@ Context cue: coprimality hints at division algorithm.
 Descend to quotient so you can leverage both the order of $h$ *and* the order of cosets simultaneously.
 :::
 
-
 :::{.solution}
 \envlist
 
@@ -43,8 +42,6 @@ hN
 :::
 
 
-
-
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
@@ -63,6 +60,14 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 .$$
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
+
+
+:::{.warnings}
+(DZG) This is a slightly anomalous problem!
+It's fun and worth doing, because it uses the major counting formulas.
+Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
+:::
+
 
 :::{.concept}
 \envlist
