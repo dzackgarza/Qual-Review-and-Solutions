@@ -1,8 +1,24 @@
 # Group Theory: General
 
-## Spring 2020 #2 $\work$
+## Spring 2020 #2 $\done$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
+
+
+
+:::{.concept}
+\envlist
+
+- Division algorithm: $(a,b)= d\implies as+bt =1$ for some $s, t$.
+- Coset containment trick: $X\subseteq N \iff xN = N$ for all $x$.
+:::
+
+
+:::{.strategy}
+Recognize that it suffices to show $hN = N$.
+Context cue: coprimality hints at division algorithm.
+Descend to quotient so you can leverage both the order of $h$ *and* the order of cosets simultaneously.
+:::
 
 
 
