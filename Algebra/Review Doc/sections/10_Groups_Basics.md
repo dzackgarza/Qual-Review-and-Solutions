@@ -316,7 +316,7 @@ Equivalently, the action has a single orbit.
 :::{.proposition title="Orbit Stabilizer Isomorphism"}
 If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets given by
 \[
-G/G_{x_0} \mapsvia{\sim} X \\
+G/G_{x_0} &\mapsvia{\sim} X \\
 \bar{g} &\mapsto g\actson x_0
 .\]
 :::
@@ -325,11 +325,10 @@ G/G_{x_0} \mapsvia{\sim} X \\
 
 
 :::{.proposition title="?"}
-If $X\in \GSet$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+If $X\in \GSets$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
 :::
 
 \todo[inline]{Prove}
-
 
 
 :::{.proof title="?"}
@@ -338,8 +337,6 @@ If $X\in \GSet$ where $G\actson X$ transitively, then for any points $x_i\in X$,
 - Injectivity: check that $\phi(\bar{g}) = \phi(\bar{h}) \iff g\actson x_0 = h\actson x_0 \iff gh\inv \in G_{x_0}$.
 - Surjectivity: follows from transitivity.
 :::
-
-
 
 
 :::{.remark title="Reminder of notation"}
