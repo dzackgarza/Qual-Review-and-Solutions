@@ -112,7 +112,6 @@ If you see "coprime" in a finite group question, try the division algorithm.
 :::
 
 
-
 ## Subgroups and Quotients
 
 :::{.fact }
@@ -152,6 +151,10 @@ aH = bH \iff a\inv b \in H \iff b\inv a\in H
 \[
 aH = bH \iff a\in bH \iff a=bh \text{ for some } h \iff b\inv a = h \iff ba\inv \in H
 .\]
+:::
+
+:::{.remark title="Common coset trick"}
+If you can reduce a problem to showing $X \subseteq H$, it suffices to show $xH = H$ for all $x\in X$.
 :::
 
 :::{.theorem title="Counting Quotients"}
