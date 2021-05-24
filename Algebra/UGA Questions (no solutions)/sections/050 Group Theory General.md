@@ -220,9 +220,11 @@ Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\p
 :::{.concept}
 \envlist
 
-- $\Sym(G) \da \Set(G, G)$ is the group of set morphisms from $G$ to itself, i.e. permutations of elements of $G$.
+- $\Sym(G) \da \Aut_\Set(G, G)$ is the group of set morphisms from $G$ to itself, i.e. permutations of elements of $G$.
 - More standard terminology: this is related to the **left regular representation** where $g\mapsto \phi_g$ where $\phi_g(x) = gx$, regarded instead as a permutation representation.
   - This action is transitive!
+- Cayley's theorem: every $G$ is isomorphic to a subgroup of a permutation group.
+  In particular, take \( \ts{ \phi_g \st G\in G } \) with function composition as a subgroup of $\Aut_\Set(G)$.
 :::
 
 
