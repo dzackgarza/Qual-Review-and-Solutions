@@ -117,11 +117,11 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g)
   $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
   which are the elements of $G$ that commute with $g$, which is isomorphic to $A_g$.
 
-- Note $\abs{X/G} = n$, the number of conjugacy classes.
+- Note $\abs{X/G} = n$, i.e. the number of conjugacy classes is the number of orbits.
 
-- Note that 
+- Identifying centralizers with fixed points, 
   $$
-  \#{A} = \#{\disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\abs{X^g}
+  \#{A} = \#{\disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
   .$$
 
 
