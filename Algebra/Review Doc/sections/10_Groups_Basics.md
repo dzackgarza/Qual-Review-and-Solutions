@@ -78,6 +78,18 @@ D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
 \]
 :::
 
+
+:::{.definition title="The sign homomorphism"}
+Defined by the map
+\[
+\sgn: S_n &\to (\ZZ/2, +) \\
+\prod_{i\leq 2k} (a_i b_i) &\mapsto 0 \\
+\prod_{i\leq 2k+1} (a_i b_i) &\mapsto 0 
+.\]
+
+:::
+
+
 :::{.definition title="Alternating Group"}
 The **alternating group** is the subgroup of **even** permutations, i.e.
 \[
