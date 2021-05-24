@@ -387,7 +387,7 @@ r &\mapsto ab \\
 t &\mapsto b
 .\]
 - This is clearly surjective since it hits all generators.
-- We'll show that $ab, a$ satisfy all of the relations defining $D_{2n}$, which factors $\psi$ through $\ker \pi$, yielding a surjection $D_{2n} \surjects G$.
+- We'll show that $ab, a$ satisfy all of the relations defining $D_{2n}$, which factors $\psi$ through $\ker \pi$, yielding a surjection $\tilde \psi: D_{2n} \surjects G$.
   - $(ab)^n = e$ by construction, $b^2 = e$ by assumption, and 
   \[
   b (ab) b\inv = babb\inv = ba = b\inv a\inv = (ab)\inv
@@ -395,6 +395,14 @@ t &\mapsto b
   corresponding to the relation $srs\inv = r\inv$.
   Here we've used that $o(a) = o(b) = 2$ implies $a=a\inv, b=b\inv$.
 
+- Surjectivity of $\tilde \psi$ yields $2n = \# D_{2n} \geq \# G$.
+- The claim is that $\# G \geq 2n$, which forces $\# G = 2n$. 
+  Then $\tilde \psi$ will be a surjective group morphism between groups of the same order, and thus an isomorphism.
+
+  - We have \( \gens{ ab }\leq G  \), so $n\divides \# G$.
+  - Since $b\not\in \gens{ ab }$, this forces $\# G > n$, so $\# G \geq 2n$. 
+
+> Remark: see a more direct proof in [Theorem 2.1 and Theorem 1.1 here](https://kconrad.math.uconn.edu/blurbs/grouptheory/dihedral2.pdf)
 
 :::
 
