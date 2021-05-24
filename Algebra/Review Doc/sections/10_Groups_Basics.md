@@ -469,7 +469,7 @@ For a group $G$ acting on a set $X$,
 | Notation                                                                                  | Definition          |
 |-------------------------------------------------------------------------------------------|---------------------|
 | \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
-| \(\Stab(x) = G_x = \ts{ g \in G \st gx=x } \leq G \)                                      | Stabilizer          |
+| \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
 | \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
 | \( \Fix(G) = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
 
