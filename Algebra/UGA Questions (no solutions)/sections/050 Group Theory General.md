@@ -41,7 +41,6 @@ hN
 
 :::
 
-
 ## Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
@@ -61,13 +60,11 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
-
 :::{.warnings}
 (DZG) This is a slightly anomalous problem!
 It's fun and worth doing, because it uses the major counting formulas.
 Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
 :::
-
 
 :::{.concept}
 \envlist
@@ -83,6 +80,7 @@ Fixed points of the conjugation action are precisely commuting elements.
 Apply Burnside.
 Context clue: $1/[G:Z(G)]$ is weird, right? 
 Use that $[G:Z(G)] = \# G/\# Z(G)$, so try to look for $\#Z(G)/\#(G)$ somewhere.
+Count sizes of centralizers.
 :::
 
 :::{.solution}
@@ -217,6 +215,16 @@ Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
 > (Recall that this means that for an element $x\in G$, $\pi(x)$ acts by left translation on $G$.)
 
 Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\pi(x)$ is even and $\abs{G} / \abs{\pi(x)}$ is odd.
+
+
+:::{.concept}
+\envlist
+
+- $\Sym(G) \da \Set(G, G)$ is the group of set morphisms from $G$ to itself, i.e. permutations of elements of $G$.
+- More standard terminology: this is related to the **left regular representation** where $g\mapsto \phi_g$ where $\phi_g(x) = gx$, regarded instead as a permutation representation.
+  - This action is transitive!
+:::
+
 
 ## Fall 2016 #1 $\work$
 Let $G$ be a finite group and $s, t\in G$ be two distinct elements of order 2.
