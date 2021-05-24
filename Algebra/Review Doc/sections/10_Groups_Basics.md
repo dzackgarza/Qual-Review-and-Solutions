@@ -555,7 +555,7 @@ Then union over $X$:
 \[
 A = \Disjoint_{x\in X} \ts{ (g, x) \st gx= x } \cong \Disjoint_{x\in X} G_x \cross \ts{ g } 
 .\]
-Taking cardinalities, and using the fact that $\ts{p} \cross A \cong \# A$ as sets for any set $A$,
+Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
 \[
 \Disjoint_{g\in G} X^g
 \cong

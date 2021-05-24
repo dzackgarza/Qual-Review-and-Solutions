@@ -169,7 +169,15 @@ P(A)
 .\]
 - Attempt to estimate the sum: pull out central elements $g\in Z(G)$.
   - Note $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$
-  - Note $g\not\int Z(G)$ implies $\# Z(g) \leq {1\over 2} \# G$, since $Z(g) \leq G$ is a subgroup, and $[G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2$.
+  - Note 
+  \[
+  g\not\in Z(G)\implies \# Z(g) \leq {1\over 2} \# G
+  ,\]
+  since $Z(g) \leq G$ is a subgroup, and 
+  \[
+  [G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2
+  .\]
+- Use these facts to calculate:
 \[
 P(A) 
 &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
@@ -180,6 +188,10 @@ P(A)
 &= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
 &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
 &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \sm Z(G) ) } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#G - {1\over 2} \# Z(G) } \\
+&= {1\over (\# G) } \qty{ {1\over 2} \# Z(G) + {1\over 2} \#G  } \\
+&= {1\over 2} \qty{1 + { \# Z(G) \over \# G }} \\
+&= {1\over 2} \qty{1 + { 1 \over [G : Z(G)]  }}
 .\]
 
 
