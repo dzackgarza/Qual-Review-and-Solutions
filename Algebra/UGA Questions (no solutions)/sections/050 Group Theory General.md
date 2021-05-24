@@ -253,7 +253,18 @@ Use transitivity of characteristic.
   - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
 - It thus remains to show that $Z(H) \normal G$.
 - Use that $Z(H) \char H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
-
+- That $Z(H) \char H$: let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+ \[
+ \psi(y)h 
+ &= \psi(y) (\psi \circ \psi\inv)(h) \\
+ &= \psi( y \cdot \psi\inv(h) ) \\
+ &= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
+ &= h\psi(y)
+ .\]
+- That $A \char B \normal C \implies A\normal C$:
+  - $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+  - Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
+  - Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
 :::
 
 :::
