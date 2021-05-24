@@ -235,6 +235,7 @@ My guess is this year's qual class spent more time than usual on the proof of Ca
 \envlist
 
 > (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument.
+  Most of the key ideas are borrowed [from here](https://math.stackexchange.com/questions/3028603/show-that-phig-is-an-even-permutation).
 
 - Write $k \da o(\pi_g)$, then since $\pi$ is injective, $k = o(g)$ in $G$.
 - Since $\pi_g$ as a cycle is obtained from the action of $g$, we can pick an element $x_0$ in $G$, take the orbit under the action, and obtain a cycle of length $k$ since the order of $g$ is $k$.
