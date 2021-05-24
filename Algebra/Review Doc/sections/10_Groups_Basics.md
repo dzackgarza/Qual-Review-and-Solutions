@@ -498,11 +498,11 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
-- The orbit $\OO_x = Gx = G$ is the entire group
-
+- The orbit $\OO_x = Gx = G$ is the entire group.
+  - This action is transitive.
+- The set of fixed points \( \Fix(G) = \ts{ e } \) is just the identity.
 - The stabilizer \( G_x = \ts{ e } \) is only the identity.
 
-- The set of fixed points \( X^g = \ts{ e } \) is only the identity.
 
 :::
 
@@ -512,12 +512,10 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
 
-- The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
+- The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
   - Thus the action is transitive iff there is one conjugacy class.
-
-- $G_x = Z(x) \definedas C_G(x) = \theset{g \in G\suchthat [g, x] = e}$, the **centralizer** of $x$.
-
-- The set of fixed points $X^g = Z(G)$ is the **center**.
+- The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
+- The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
 
 :::
 
@@ -626,10 +624,10 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
 
 - The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
+  - This action is transitive iff all subgroups are conjugate.
+- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
-
-- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
 
 - The kernel is the intersection of all normalizers.
 
