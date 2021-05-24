@@ -558,17 +558,20 @@ Thus
 &= \# G\sum_{x\in X} {1 \over  \# Gx}
 ,\]
 so it suffices to show $\sum_{x\in X}{1\over \# Gx} = \# X/G$.
-
+Proceed by grouping terms in this sum according to which orbit they're in:
 \[
-\sum_{g\in G} \abs{X^g}
-&= \ts{ (g,x) \in G \cross X \st gx = x } \\
-&= \sum_{x\in X} \abs{G_x} \\
-&= \sum_{x\in X} {\abs{G}\over \abs{Gx}  }  && \text{by Orbit-Stabilizer} \\
-&= \abs{G} \sum_{x\in X} {1 \over \abs{Gx}  }  \\
-&= \abs{G} \sum_{A\in X/G} \sum_{x\in A} {1\over \abs{A} } && \text{ since } X = \Disjoint_{A \in X/G} A \\
-&= \abs{G} \sum_{A\in X/G} 1 \\
-&= \abs{G} \abs{X/G}  
+\sum_{x\in X} {1\over \# Gx} 
+&=
+\sum_{Gx \in X/G} \sum_{y\in Gx} {1\over \# Gx} \\
+&=
+\sum_{Gx \in X/G} {1\over \# Gx} \sum_{y\in Gx} 1 \\
+&=
+\sum_{Gx \in X/G} {1\over \# Gx} \# G_x \\
+&=
+\sum_{Gx \in X/G} 1 \\
+&= \# X/G
 .\]
+
 :::
 
 ## Exercises
