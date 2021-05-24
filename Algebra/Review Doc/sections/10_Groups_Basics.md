@@ -492,7 +492,6 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 
 
 
-
 :::{.example title="?"}
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
 Let $x \da gH$, then

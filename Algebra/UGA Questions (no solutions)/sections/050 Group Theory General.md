@@ -79,8 +79,8 @@ Just note that the techniques used in this problem perhaps don't show up in othe
 :::
 
 :::{.strategy}
-Burnside.
 Fixed points of the conjugation action are precisely commuting elements.
+Apply Burnside.
 :::
 
 :::{.solution}
@@ -111,8 +111,8 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \impli
   which is the **conjugacy class** of $g$.
 
   - What are the fixed points? 
-    $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
-    which are the elements of $G$ that commute with $g$, which is precisely $A_g$.
+  $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+  which are the elements of $G$ that commute with $g$, which is isomorphic to $A_g$.
 
 - Note $\abs{X/G} = n$, the number of conjugacy classes.
 
@@ -149,7 +149,7 @@ Statement of the class equation:
 \[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in $G$.
 :::
 
 :::{.proof title="Part c"}
