@@ -194,13 +194,13 @@ Defined by the map
 
 - The kernel is the alternating group, cycles that 
   - **Even** cycles
+  - For a single cycle: has **odd** length
   - Can be written as an **even** number of transpositions
-  - Have **odd** length, or
   - Haven an **even** number of even length cycles.
 - The fiber over 1 is everything else:
   - **Odd** cycles
+  - For a single cycle: has **even** length
   - Can be written as an **odd** number of transpositions
-  - Have **even** length
   - Have an **odd** number of even length cycles.
 
 > Mnemonic: the cycle parity of a $k\dash$cycle is the integer parity of $k-1$.
