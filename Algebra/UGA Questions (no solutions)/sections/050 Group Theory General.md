@@ -131,9 +131,9 @@ $$
 $$
 - Rearrange and use definition:
 $$
-n \abs{G}
-= \abs{X/G} \abs{G}
-= \sum _ { g \in G } \left| X ^ { g } \right|
+n \cdot \#{G}
+= \qty{\#{X/G} }\cdot \#{G}
+= \sum _ { g \in G } \# X ^ { g } 
 $$
 - Compute probability:
 \[
