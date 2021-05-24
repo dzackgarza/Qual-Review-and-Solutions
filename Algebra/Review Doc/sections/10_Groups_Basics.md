@@ -502,6 +502,7 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
   - This action is transitive.
 - The set of fixed points \( \Fix(G) = \ts{ e } \) is just the identity.
 - The stabilizer \( G_x = \ts{ e } \) is only the identity.
+- The kernel is the identity.
 
 
 :::
@@ -516,6 +517,8 @@ Let $G$ act on *itself* by conjugation.
   - Thus the action is transitive iff there is one conjugacy class.
 - The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
 - The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
+- The kernel is the intersection of all centralizers, i.e. the **center** $Z(G)$.
+
 
 :::
 
