@@ -467,14 +467,14 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 
 
 :::{.proof title="of the class equation"}
-$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint_{g\in G}' C(g)$ where $\disjoint'$ denotes taking one element from each conjugacy class.
+$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one element from each conjugacy class.
 Thus 
 \[
-\# G = \sum_{g\in G}' \# C(g) = \sum_{g\in G}' [G: Z(g)]
+\# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
 .\]
 Elements $g \in Z(g)$ in the center satisfy $C(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
 \[
-\# G = \sum_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }}' [G: Z(g)] +  \sum_{\substack{g\in G \\ [G:Z(g)] > 1} }' [G: Z(g)]
+\# G = \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
 .\]
 
 :::
