@@ -521,6 +521,10 @@ Let $G$ act on *itself* by conjugation.
 
 :::
 
+:::{.remark}
+Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
+:::
+
 :::{.corollary}
 Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
 \[
@@ -615,9 +619,6 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 
 :::
 
-:::{.remark}
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-:::
 
 #### Conjugation on Subgroups
 
@@ -628,7 +629,9 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
-- The fixed points $\Fix(G)$ is the set of **normal subgroups** of $G$.
+- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
+
+- The kernel is the intersection of all normalizers.
 
 :::
 
@@ -651,7 +654,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
-- The fixed points are $X^G = \emptyset$.
+- The fixed points form $\Fix(G) = \emptyset$.
 
 - The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
