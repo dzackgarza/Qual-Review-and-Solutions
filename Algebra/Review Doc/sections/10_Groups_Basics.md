@@ -549,8 +549,13 @@ Thus
 =
 \sum_{x\in X} \# G_x
 .\]
-Apply orbit-stabilizer: $G_x \cong 
-
+Apply orbit-stabilizer: $\# G_x = \#G / \# Gx$.
+Thus 
+\[
+\sum_{g\in G} X^g
+&= \sum_{x\in X} \# G_x \\
+&= \sum_{x\in X} \# G/ \# Gx
+.\]
 
 
 
@@ -570,4 +575,7 @@ Apply orbit-stabilizer: $G_x \cong
 ## Exercises
 
 - Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
+
+
+asdasdsadas
 
