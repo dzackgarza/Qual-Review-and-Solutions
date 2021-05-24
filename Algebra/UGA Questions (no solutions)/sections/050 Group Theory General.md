@@ -286,7 +286,10 @@ k \text{ is even and } m \text{ is odd} &
 k \text{ is odd}
  & .
 \end{cases}
-
+.\]
+- Then just recall that $k\da o(\pi_g)$ and 
+\[
+m= [G: \gens{ g }] = \# G / \# \gens{ g }= \# G / o(g) = \# G/ o(\pi_g)
 .\]
 
 
