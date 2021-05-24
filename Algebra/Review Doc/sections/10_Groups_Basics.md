@@ -355,7 +355,7 @@ Equivalently, the action has a single orbit.
 :::{.proposition title="Orbit Stabilizer Isomorphism"}
 If $G\actson X$ transitively, then for any choice of $x\in X$ there is an isomorphism of sets given by
 \[
-G/G_{x} &\mapsvia{\sim} X \\
+\Phi: G/G_{x} &\mapsvia{\sim} X \\
 gG_{x} &\mapsto g\actson x
 .\]
 :::
@@ -364,8 +364,14 @@ gG_{x} &\mapsto g\actson x
 :::{.proof title="?"}
 \envlist
 
-- Well-definedness: if $gG_x = hG_x$, then $gh\inv \in G_x$ and $gh\inv \actson x = x$.
-  Then $hgh\inv \actson x = hx$, so
+- Well-definedness: if $gG_x = hG_x$, then $gh\inv \in G_x$ and $g\inv h \actson x = x$.
+  Then $g (g\inv h) \actson x = g \actson x$ on one hand, and on the other $(gg\inv)h\actson x = h\actson x$, so
+  \[
+  \Phi(hG_x) \da h\actson x = (gg\inv) h\actson x = g(g\inv h)\actson x = g\actson x = \Phi(gG_x)
+  .\]
+
+- Surjectivity: equivalent to the action being transitive.
+
 :::
 
 
