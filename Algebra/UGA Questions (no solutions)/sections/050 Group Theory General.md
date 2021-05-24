@@ -221,6 +221,12 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 :::
 
 
+:::{.strategy}
+
+:::
+
+
+
 :::{.solution}
 \envlist
 
@@ -239,7 +245,6 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
   So $H$ is contained in every Sylow $p\dash$subgroup.
 
 :::
-
 
 :::{.proof title="of b"}
 \envlist
