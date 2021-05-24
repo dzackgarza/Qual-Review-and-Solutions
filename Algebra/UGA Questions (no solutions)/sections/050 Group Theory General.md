@@ -109,6 +109,7 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \impli
   \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
   ,$$ 
   which is the **conjugacy class** of $g$.
+  In particular, the number of orbits is the number of conjugacy classes.
 
   - What are the fixed points? 
   $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
@@ -153,11 +154,8 @@ where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in
 :::
 
 :::{.proof title="Part c"}
-As shown in part 1,
-$$
-\mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
-,$$
-and by the class equation
+As shown in part 1, $\OO_g = C(g)$ is the conjugacy class of $g$ and $\Fix(g) = Z(g)$ is the centralizer of $g$.
+By the class equation
 
 $$
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
