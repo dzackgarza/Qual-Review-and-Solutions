@@ -379,7 +379,23 @@ D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigm
 - Consider $ab$. Since $G$ is finite, this has finite order, so $(ab)^n = e$ for some $n\geq 2$.
 - Note $\gens{ab, b} \subseteq \gens{a, b}$, since any finite word in $ab, b$ is also a finite word in $a, b$.
 - Since $(ab)b = ab^2 = a$, we have $\gens{ab, b} \subseteq \gens{a, b}$, so $\gens{ab, b} = \gens{a, b}$.
-- Write $D_{2n} = \F(r, s) / \ker \pi$ for $\pi: F(r, s)\to D_{2n}$ the canonical presentation map.
+- Write $D_{2n} = F(r, s) / \ker \pi$ for $\pi: F(r, s)\to D_{2n}$ the canonical presentation map.
+- Define 
+\[
+\psi: F(r, s) &\to G \\
+r &\mapsto ab \\
+t &\mapsto b
+.\]
+- This is clearly surjective since it hits all generators.
+- We'll show that $ab, a$ satisfy all of the relations defining $D_{2n}$, which factors $\psi$ through $\ker \pi$, yielding a surjection $D_{2n} \surjects G$.
+  - $(ab)^n = e$ by construction, $b^2 = e$ by assumption, and 
+  \[
+  b (ab) b\inv = babb\inv = ba = b\inv a\inv = (ab)\inv
+  ,\]
+  corresponding to the relation $srs\inv = r\inv$.
+  Here we've used that $o(a) = o(b) = 2$ implies $a=a\inv, b=b\inv$.
+
+
 :::
 
 
