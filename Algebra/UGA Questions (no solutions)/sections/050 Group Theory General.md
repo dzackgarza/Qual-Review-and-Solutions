@@ -80,6 +80,7 @@ Just note that the techniques used in this problem perhaps don't show up in othe
 
 :::{.strategy}
 Burnside.
+Fixed points of the conjugation action are precisely commuting elements.
 :::
 
 :::{.solution}
