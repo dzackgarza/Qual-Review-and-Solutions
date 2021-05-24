@@ -487,7 +487,6 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 :::
 
-
 ### Examples of Orbit-Stabilizer and the Class Equation
 
 :::{.example title="Trivial"}
