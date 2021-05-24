@@ -520,7 +520,7 @@ This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies 
 :::{.corollary title="Burnside's Formula"}
 For $G$ a finite group acting on $X$, 
 \[
-\abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
+\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
 \]
 
 > Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
@@ -554,12 +554,10 @@ Thus
 \[
 \sum_{g\in G} X^g
 &= \sum_{x\in X} \# G_x \\
-&= \sum_{x\in X} {\# G \over  \# Gx}
+&= \sum_{x\in X} {\# G \over  \# Gx} \\
 &= \# G\sum_{x\in X} {1 \over  \# Gx}
-.\]
-
-
-
+,\]
+so it suffices to show $\sum_{x\in X}{1\over \# Gx} = \# X/G$.
 
 \[
 \sum_{g\in G} \abs{X^g}
