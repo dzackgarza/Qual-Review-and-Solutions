@@ -364,7 +364,9 @@ gG_{x} &\mapsto g\actson x
 :::{.proof title="?"}
 \envlist
 
-- Well-definedness: if $gG_x = hG_x$, then $gh\inv \in G_x$ and $g\inv h \actson x = x$.
+- Injectivity: $\Phi(gG_x) = \Phi(hG_x) \iff g\actson x=h\actson x \iff gh\inv \actson x = x \iff gh\inv \in G_x \iff gG_x = hG_x$.
+
+- Well-definedness: use $gG_x = hG_x \iff gh\inv \in G_x \iff g\inv h \actson x = x$.
   Then $g (g\inv h) \actson x = g \actson x$ on one hand, and on the other $(gg\inv)h\actson x = h\actson x$, so
   \[
   \Phi(hG_x) \da h\actson x = (gg\inv) h\actson x = g(g\inv h)\actson x = g\actson x = \Phi(gG_x)
