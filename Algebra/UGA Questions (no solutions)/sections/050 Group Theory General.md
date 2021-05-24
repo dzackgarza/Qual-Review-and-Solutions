@@ -75,6 +75,7 @@ Just note that the techniques used in this problem perhaps don't show up in othe
 - Notation: $X/G$ is the set of $G\dash$orbits
 - Notation: $X^g = \theset{x\in X\suchthat g\cdot x = x}$
 - Burnside's formula: $\#{X/G} = {1 \over \# G} \sum \# {X^g}$.
+- Definition of conjugacy class: $C(g) = \ts{ hgh\inv \st h\in G }$.
 :::
 
 :::{.strategy}
@@ -91,7 +92,7 @@ Burnside.
 
 - Identify the event we want to analyze: 
 \[
-A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}
+A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1} \subseteq \Omega
 .\]
 - Define the slice
 \[
@@ -103,10 +104,10 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \impli
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
   - What are the orbits? 
-    $$
-    \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
-    ,$$ 
-    which is the conjugacy class of $g$.
+  $$
+  \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+  ,$$ 
+  which is the **conjugacy class** of $g$.
 
   - What are the fixed points? 
     $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
