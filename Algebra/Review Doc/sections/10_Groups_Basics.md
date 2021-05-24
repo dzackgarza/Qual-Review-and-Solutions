@@ -645,15 +645,14 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 
 :::{.example title="?"}
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
-Let $x \da gH$, then
 
-- The orbit $Gx = G/H$, the entire set of cosets.
+- The orbit $\OO(xH) = G/H$, the entire set of cosets.
 
   - Note that this is a *transitive* action.
 
-- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
-- The fixed points are $X^G = \emptyset$
+- The fixed points are $X^G = \emptyset$.
 
 - The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
