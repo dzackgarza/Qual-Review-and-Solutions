@@ -73,8 +73,8 @@ Just note that the techniques used in this problem perhaps don't show up in othe
 \envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
-- Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
-- Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+- Notation: $X^g = \theset{x\in X\suchthat g\cdot x = x}$
+- Burnside's formula: $\#{X/G} = {1 \over \# G} \sum \# {X^g}$.
 :::
 
 :::{.strategy}
@@ -87,13 +87,16 @@ Burnside.
 :::{.proof title="Part a"}
 \envlist
 
-- Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
+- Define a sample space $\Omega = G \cross G$, so $\# {\Omega} = (\# {G})^2$.
 
-- Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
-  - Define and note: 
-    \[
-    A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
-    .\]
+- Identify the event we want to analyze: 
+\[
+A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}
+.\]
+- Define the slice
+\[
+A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \implies A = \Disjoint_{g\in G} A_g
+.\]
 
 - Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
  

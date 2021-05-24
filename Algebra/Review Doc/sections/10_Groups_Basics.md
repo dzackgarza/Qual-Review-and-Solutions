@@ -517,7 +517,7 @@ If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 :::
 
-:::{.corollary title="Burnside's Formula"}
+:::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
 \[
 \# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
@@ -527,8 +527,7 @@ For $G$ a finite group acting on $X$,
 
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="of Burnside's Lemma"}
 Strategy: form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write/count it in two different ways.
 First union over $G$:
 \[
