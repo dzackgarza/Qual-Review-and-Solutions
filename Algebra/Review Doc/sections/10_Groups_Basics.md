@@ -492,10 +492,10 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
-- The orbit $\OO_x = Gx = G$ is the entire group.
+- The orbit $\OO(x) = Gx = G$ is the entire group.
   - This action is transitive.
-- The set of fixed points \( \Fix(G) = \ts{ e } \) is just the identity.
-- The stabilizer \( G_x = \ts{ e } \) is only the identity.
+- The set of fixed points \( \Fix(G) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
 
 
