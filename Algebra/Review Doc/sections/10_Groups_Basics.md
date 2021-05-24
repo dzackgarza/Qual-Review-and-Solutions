@@ -532,12 +532,12 @@ For $G$ a finite group acting on $X$,
 Form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write it in two different ways.
 First union over $G$:
 \[
-A = \Disjoint_{g\in G} \ts{ (x, g) \st gx = x } \cong \Disjoint_{g\in G} X^g
+A = \Disjoint_{g\in G} \ts{ (x, g) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
 .\]
 
 Then union over $X$:
 \[
-A = \Disjoint_{x\in X} \ts{ (x, g) \st gx= x } \cong \Disjoint_{x\in X} G_x
+A = \Disjoint_{x\in X} \ts{ (x, g) \st gx= x } \cong \Disjoint_{x\in X} \ts{x}\cross G_x
 .\]
 Thus
 \[
@@ -554,7 +554,8 @@ Thus
 \[
 \sum_{g\in G} X^g
 &= \sum_{x\in X} \# G_x \\
-&= \sum_{x\in X} \# G/ \# Gx
+&= \sum_{x\in X} {\# G \over  \# Gx}
+&= \# G\sum_{x\in X} {1 \over  \# Gx}
 .\]
 
 
@@ -577,5 +578,4 @@ Thus
 - Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
 
 
-asdasdsadas
 
