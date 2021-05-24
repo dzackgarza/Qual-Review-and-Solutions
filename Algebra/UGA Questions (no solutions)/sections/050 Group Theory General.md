@@ -154,21 +154,20 @@ where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in
 :::
 
 :::{.proof title="Part c"}
-As shown in part 1, $\OO_g = C(g)$ is the conjugacy class of $g$ and $\Fix(g) = Z(g)$ is the centralizer of $g$.
-By the class equation
+\envlist
+
+- As shown in part 1, $\OO_g = C(g)$ is the conjugacy class of $g$ and $\Fix(g) = Z(g)$ is the centralizer of $g$.
+- By the class equation
 
 $$
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from each} \\ \text{conjugacy class}}}[G: Z(g)]
 $$
-
-Now note
 
 - Each element of $Z(G)$ is in its own conjugacy class, contributing $\abs{Z(G)}$ classes to $n$.
 
 - Every other class of elements in $G\setminus Z(G)$ contains at least 2 elements
-  - Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
-
-Thus
+- Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
+- If this is true,
 \[
 n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 &= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
