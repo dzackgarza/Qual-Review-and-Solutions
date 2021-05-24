@@ -221,7 +221,11 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 - If $H$ is maximal, then by definition $H\in \Syl_p(G)$
 - Otherwise, if $H$ is not maximal, there exists an $H' \supseteq H$ with $H'\leq G$ a $p\dash$subgroup properly containing $H$.
   - In this apply the same argument to $H'$: this yields a proper superset containment at every stage, and since $G$ is finite, there is no infinite ascending chain of proper supersets.
-  - So this terminates in some maximal $p\dash$subgroup, i.e. a Sylow $p\dash$subgroup.
+  - So this terminates in some maximal $p\dash$subgroup $S$, i.e. a Sylow $p\dash$subgroup.
+- So $H \subseteq S$ for some $S\in \Syl_p(G)$.
+- All Sylows are conjugate, so for any $S' \in \Syl_p(G)$ we can write $S' = gSg\inv$ for some $g$.
+- Then using that $H$ is normal, $H \subseteq S \implies H = gHg\inv \subseteq gSg\inv \da S'$.
+  So $H$ is contained in every Sylow $p\dash$subgroup.
 
 :::
 
