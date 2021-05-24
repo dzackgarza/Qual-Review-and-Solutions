@@ -264,6 +264,16 @@ A_4 =
 Moreover, there is an equality $[G:H] = \# G/ \# H$ when $G$ is finite.
 :::
 
+:::{.proof title="of Lagrange's theorem"}
+Write $G/H = \ts{g_0 H, g_1 H, \cdots, g_N H}$ for some $N \da [G:H]$.
+Since cosets are equal or disjoint and have equal cardinality, 
+\[
+G = \disjoint_{k \leq N} g_k H \implies \#G = \sum_{k\leq N} \# \qty{g_k H} = \sum_{k\leq N} \# H = N \# H
+,\]
+so $\# G = N \# H$, $\#H$ divides $\# G$ and $N = [G:H]$ divides $\# G$.
+:::
+
+
 :::{.corollary title="?"}
 \[
 \# G = \#(G/H) \#H \da [G:H] \, \# H
