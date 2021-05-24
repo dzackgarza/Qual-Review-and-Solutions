@@ -14,12 +14,8 @@ Equivalently, $\phi(H) = H$.
 I.e. $H$ is fixed (not necessarily pointwise) under every automorphism of the ambient group $G$.
 :::
 
-:::{.remark}
+:::{.remark title="Characteristic isn't equivalent to normalcy"}
 Characteristic subgroups are normal, because $\psi_g(\wait) \da g(\wait)g\inv$ is an (inner) automorphic of $G$.
-
-:::
-
-:::{.remark}
 Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\psi(x, y) = (y, x)$.
 :::
 
@@ -33,7 +29,6 @@ Since $H\char N$, $\phi_g(H) = H$ for any such $\phi_g$.
 So $gHg\inv = H$ for all $g$.
 :::
 
-
 :::{.proposition title="Centers are characteristic"}
 For any group $G$,
 \[
@@ -46,6 +41,7 @@ Z(G) \char G
 
 :::
 
+## Normal Closures and Cores
 
 :::{.definition title="Normal Closure of a Subgroup"}
 The smallest normal subgroup of $G$ containing $H$:
@@ -65,7 +61,6 @@ where
 g &\mapsto (xH\mapsto gxH)
 \]
 :::
-
 
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
