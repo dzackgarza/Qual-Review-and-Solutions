@@ -139,8 +139,8 @@ $$
 \[
 P(A)
 = {\# A \over \# \Omega} 
-= \frac{\Sum_{ g \in G } \# X ^ { g }}{\# {G}^2} 
-= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
+= \Sum_{ g \in G } \frac{\# X ^ { g }}{\# {G}^2} 
+= \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
 = \frac{n \abs{G}}{\abs{G}^2} 
 = \frac n {\abs G}
 .\]
