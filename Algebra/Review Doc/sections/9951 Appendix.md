@@ -74,7 +74,9 @@ This is a computation:
 \psi(g) h 
 &= \psi(g) (\psi \psi\inv)(h) \\
 &= \psi( g ) \psi( \psi \inv (h)) \\
-&= \phi( \psi\inv(h) g)
+&= \psi( \psi\inv(h) g) \\
+&= (\psi\psi\inv)(h) \psi(g) \\
+&= h\psi(g)
 .\]
 
 :::
