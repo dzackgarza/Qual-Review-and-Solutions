@@ -353,14 +353,21 @@ Equivalently, the action has a single orbit.
 
 
 :::{.proposition title="Orbit Stabilizer Isomorphism"}
-If $G\actson X$ transitively, then for any choice of $x_0\in X$ there is an isomorphism of $G\dash$sets given by
+If $G\actson X$ transitively, then for any choice of $x\in X$ there is an isomorphism of sets given by
 \[
-G/G_{x_0} &\mapsvia{\sim} X \\
-\bar{g} &\mapsto g\actson x_0
+G/G_{x} &\mapsvia{\sim} X \\
+gG_{x} &\mapsto g\actson x
 .\]
 :::
 
-\todo[inline]{Prove}
+
+:::{.proof title="?"}
+\envlist
+
+- Well-definedness: if $gG_x = hG_x$, then $gh\inv \in G_x$ and $gh\inv \actson x = x$.
+  Then $hgh\inv \actson x = hx$, so
+:::
+
 
 
 :::{.proposition title="?"}
