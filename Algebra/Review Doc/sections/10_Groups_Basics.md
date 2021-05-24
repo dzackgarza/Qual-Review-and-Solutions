@@ -507,6 +507,8 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 :::
 
 
+#### The Class Equation and Burnside's Lemma
+
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
 
@@ -519,7 +521,6 @@ Let $G$ act on *itself* by conjugation.
 
 :::
 
-
 :::{.corollary}
 Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
 \[
@@ -528,13 +529,11 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 
 :::
 
-
 :::{.corollary title="The Class Equation"}
 \[
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
 \]
 :::
-
 
 :::{.proof title="of the class equation"}
 $G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one representative from each conjugacy class.
@@ -551,60 +550,6 @@ Elements $g \in Z(g)$ in the center satisfy $Z(g) = \ts{ e }$ and $[G: Z(g)] = 1
 .\]
 
 :::
-
-
-:::{.remark}
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-:::
-
-:::{.example title="?"}
-Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
-Let $x = H$ be a subgroup, then
-
-- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
-
-- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
-
-- The fixed points $X^g$ is the set of **normal subgroups** of $G$
-
-:::
-
-:::{.corollary}
-Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
-\[
-\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
-.\]
-
-:::
-
-
-:::{.example title="?"}
-For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
-Let $x \da gH$, then
-
-- The orbit $Gx = G/H$, the entire set of cosets.
-
-  - Note that this is a *transitive* action.
-
-- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
-
-- The fixed points are $X^G = \emptyset$
-
-:::
-
-
-:::{.proposition title="Application of action on cosets"}
-If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$, then $H\normal G$.
-:::
-
-
-:::{.proof title="?"}
-Let $G\actson X\da \ts{xH}$, noting that $\# X = p$.
-:::
-
-
-
-
 
 :::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
@@ -667,6 +612,64 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 \sum_{Gx \in X/G} 1 \\
 &= \# X/G
 .\]
+
+:::
+
+:::{.remark}
+Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
+:::
+
+:::{.example title="?"}
+Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
+Let $x = H$ be a subgroup, then
+
+- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+
+- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
+
+- The fixed points $X^g$ is the set of **normal subgroups** of $G$
+
+:::
+
+:::{.corollary}
+Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
+\[
+\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
+.\]
+
+:::
+
+#### Left Translation on Cosets
+
+:::{.example title="?"}
+For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
+Let $x \da gH$, then
+
+- The orbit $Gx = G/H$, the entire set of cosets.
+
+  - Note that this is a *transitive* action.
+
+- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+
+- The fixed points are $X^G = \emptyset$
+
+:::
+
+:::{.proposition title="Application of translation action on cosets"}
+If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$, then $H\normal G$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
+- Then $K\da \ker \phi \subseteq H$.
+- Since $G$ is finite and $K\leq G$, we have $[G:K] = \# (G/K) = \# G/ \# K$ so $\# (G/K)$ divides $\# G$.
+- Since $G/K \cong K'$ is isomorphic to a subgroup of $S_p$, $\# (G/K)$ divides $\# S_p = p!$
+- So $\# (G/K)$ divides $\gcd( \# G, p!)$, which is $p$ since it was the minimal prime dividing $\# G$.
+- $p$ is prime, so if $\# G/K\neq 1$ we have $\# G/K = p$.
+- Since $K \subset H$ and $[G:H] = p = [G: K]$, we have $K = H$.
+- But $K = \ker \phi \normal G$, so $H\normal G$.
 
 :::
 
