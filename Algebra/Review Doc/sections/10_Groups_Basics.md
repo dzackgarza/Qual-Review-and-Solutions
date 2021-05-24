@@ -58,7 +58,6 @@ Consequently, a group morphism between groups of the same size that is either in
 
 :::
 
-
 :::{.definition title="Group Presentation"}
 An expression of the form $G = \gens{S \st R}$ where $S$ is a set of elements and $R$ a set of words defining relations means that $G \da F[S] / \cl_n(R)$ where $F[S]$ is the free group on the set $S$ and $\cl_n(R)$ is the normal closure, the smallest normal subgroup of $F[S]$ containing $R$.
 :::
@@ -85,8 +84,13 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 where adjacent $h_i$ are distinct.
 :::
 
+:::{.definition title="Conjugate subgroups"}
+Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
+Note that all conjugates have the same cardinality.
+:::
+
 :::{.definition title="Normal subgroup"}
-A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$.
+A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$, or equivalently $gHg\inv = H$ for all $g$, so $H$ has only itself as a conjugate.
 We denote this by $N\normal G$.
 Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
 :::
