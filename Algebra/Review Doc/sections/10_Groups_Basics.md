@@ -474,7 +474,10 @@ Thus
 .\]
 Elements $g \in Z(g)$ in the center satisfy $C(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
 \[
-\# G = \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
+\# G 
+&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
+&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} 1 +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
+&= \# Z(G) +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
 .\]
 
 :::
