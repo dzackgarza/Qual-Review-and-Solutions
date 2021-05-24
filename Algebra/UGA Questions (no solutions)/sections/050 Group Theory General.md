@@ -168,12 +168,18 @@ P(A)
 = {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
 .\]
 - Attempt to estimate the sum: pull out central elements $g\in Z(G)$.
-  Use the fact that $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$:
+  - Note $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$
+  - Note $g\not\int Z(G)$ implies $\# Z(g) \leq {1\over 2} \# G$, since $Z(g) \leq G$ is a subgroup, and $[G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2$.
 \[
 P(A) 
 &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
 &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
-&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) }
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&\leq {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} {1\over 2} \# G } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \qty{ \sum_{g\not\in Z(g)} {1\over 2} } \cdot \# G } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \sm Z(G) ) } \\
 .\]
 
 
