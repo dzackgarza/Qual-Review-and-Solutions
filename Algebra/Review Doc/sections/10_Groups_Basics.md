@@ -261,6 +261,7 @@ A_4 =
 
 :::{.theorem title="Lagrange's Theorem"}
 \[H \leq G \implies \# H \divides \# G.\]
+Moreover, there is an equality $[G:H] = \# G/ \# H$ when $G$ is finite.
 :::
 
 :::{.corollary title="?"}
