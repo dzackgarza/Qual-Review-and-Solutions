@@ -209,13 +209,17 @@ Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
-## Spring 2017 #1 $\work$
+## Spring 2017 #1 $\done$
 Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
 
 > (Recall that this means that for an element $x\in G$, $\pi(x)$ acts by left translation on $G$.)
 
 Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\pi(x)$ is even and $\abs{G} / \abs{\pi(x)}$ is odd.
 
+:::{.warnings}
+(DZG): This seems like an unusually hard group theory problem.
+My guess is this year's qual class spent more time than usual on the proof of Cayley's theorem.
+:::
 
 :::{.concept}
 \envlist
@@ -227,11 +231,11 @@ Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\p
   In particular, take \( \ts{ \phi_g \st G\in G } \) with function composition as a subgroup of $\Aut_\Set(G)$.
 :::
 
-
 :::{.solution}
 \envlist
 
-- Start by showing that $o(\pi_g)$ odd implies $\pi_g$ is an odd permutation.
+> (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument.
+
 - Write $k \da o(\pi_g)$, then since $\pi$ is injective, $k = o(g)$ in $G$.
 - Since $\pi_g$ as a cycle is obtained from the action of $g$, we can pick an element $x_0$ in $G$, take the orbit under the action, and obtain a cycle of length $k$ since the order of $g$ is $k$.
   Then continue by taking any $x_1$ not in the first orbit and taking *its* orbit.
@@ -296,8 +300,6 @@ m= [G: \gens{ g }] = \# G / \# \gens{ g }= \# G / o(g) = \# G/ o(\pi_g)
 
 
 :::
-
-
 
 ## Fall 2016 #1 $\work$
 Let $G$ be a finite group and $s, t\in G$ be two distinct elements of order 2.
