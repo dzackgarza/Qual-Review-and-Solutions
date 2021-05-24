@@ -451,9 +451,9 @@ Let $G$ act on *itself* by conjugation.
 
 
 :::{.corollary}
-The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$, i.e.
+Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
 \[
-\abs{C(x)} = [G: C_G(x)]
+\# {C(x)} = [G: Z(x)]
 .\]
 
 :::
@@ -464,6 +464,12 @@ The number of conjugates of an element (i.e. the size of its conjugacy class) is
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
 \]
 :::
+
+
+:::{.proof title="of the class equation"}
+
+:::
+
 
 :::{.remark}
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
