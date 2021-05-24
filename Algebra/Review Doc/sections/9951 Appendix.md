@@ -19,11 +19,9 @@ Characteristic subgroups are normal, because $\psi_g(\wait) \da g(\wait)g\inv$ i
 
 :::
 
-
 :::{.remark}
 Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\psi(x, y) = (y, x)$.
 :::
-
 
 :::{.proposition title="Fixing transitivity of normality"}
 Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
@@ -54,10 +52,17 @@ g &\mapsto (xH\mapsto gxH)
 $H\leq G$ is *characteristic* iff $H$ is fixed by every element of $\Aut(G)$. 
 :::
 
-
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
 :::
+
+### Exercises
+
+
+:::{.exercise title="?"}
+Show that $Z(G) \leq G$ is always characteristic.
+:::
+
 
 ## Nilpotent Groups
 
