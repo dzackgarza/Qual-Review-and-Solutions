@@ -529,6 +529,11 @@ For $G$ a finite group acting on $X$,
 
 
 :::{.proof title="?"}
+Form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write it in two different ways:
+\[
+A = \Disjoint_{g\in G} \ts{ (x, g) \st gx = x } \cong \Disjoint_{g\in G} X^g
+.\]
+
 \[
 \sum_{g\in G} \abs{X^g}
 &= \ts{ (g,x) \in G \cross X \st gx = x } \\
