@@ -209,6 +209,30 @@ Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- By definition, $S\in \Syl_p(G) \iff S$ is a *maximal* $p\dash$subgroup: $S<G$ is a $p\dash$group, so $\#S = p^k$ for some $k$, $S$ is a proper subgroup, and $S$ is maximal in the sense that there are no proper $p\dash$subgroups $S'$ with $S \subseteq S' \subseteq G$.
+- Since $\# H = p^i$, $H$ is a $p\dash$subgroup of $G$.
+- If $H$ is maximal, then by definition $H\in \Syl_p(G)$
+- Otherwise, if $H$ is not maximal, there exists an $H' \supseteq H$ with $H'\leq G$ a $p\dash$subgroup properly containing $H$.
+  - In this apply the same argument to $H'$: this yields a proper superset containment at every stage, and since $G$ is finite, there is no infinite ascending chain of proper supersets.
+  - So this terminates in some maximal $p\dash$subgroup, i.e. a Sylow $p\dash$subgroup.
+
+:::
+
+
+:::{.proof title="of b"}
+
+:::
+
+:::
+
+
 ## Spring 2017 #1 $\done$
 Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
 
