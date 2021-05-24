@@ -81,6 +81,8 @@ Just note that the techniques used in this problem perhaps don't show up in othe
 :::{.strategy}
 Fixed points of the conjugation action are precisely commuting elements.
 Apply Burnside.
+Context clue: $1/[G:Z(G)]$ is weird, right? 
+Use that $[G:Z(G)] = \# G/\# Z(G)$, so try to look for $\#Z(G)/\#(G)$ somewhere.
 :::
 
 :::{.solution}
@@ -156,6 +158,7 @@ where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in
 :::{.proof title="Part c"}
 \envlist
 
+- Proceed by trying to estimate $n$, the number of conjugacy classes.
 - As shown in part 1, $\OO_g = C(g)$ is the conjugacy class of $g$ and $\Fix(g) = Z(g)$ is the centralizer of $g$.
 - By the class equation
 
@@ -165,8 +168,8 @@ $$
 
 - Each element of $Z(G)$ is in its own conjugacy class, contributing $\# {Z(G)}$ classes to $n$.
 
-- Every other class of elements in $G\setminus Z(G)$ contains at least 2 elements
-- Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
+- Every other class of elements with representatives from $G\setminus Z(G)$ contains at least 2 elements.
+- Claim: each nontrivial class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$ classes to $n$.
 - If this is true,
 \[
 n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
