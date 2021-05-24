@@ -539,6 +539,18 @@ Then union over $X$:
 \[
 A = \Disjoint_{x\in X} \ts{ (x, g) \st gx= x } \cong \Disjoint_{x\in X} G_x
 .\]
+Thus
+\[
+\Disjoint_{g\in G} X^g
+\cong
+\Disjoint_{x\in X} G_x
+\implies 
+\sum_{g\in G}\# X^g
+=
+\sum_{x\in X} \# G_x
+.\]
+Apply orbit-stabilizer: $G_x \cong 
+
 
 
 
