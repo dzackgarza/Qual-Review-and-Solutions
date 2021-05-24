@@ -265,6 +265,18 @@ Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\p
   ,\]
   so $y$ and $x$ are in the same orbit and have the same orbit representative.
 
+- We now have
+\[
+\pi_g \text{ is an even permutation } \iff 
+\begin{cases}
+k \text{ is odd and } m \text{ is even} &  
+\\
+\text{ or } & \\
+k \text{ is even}
+ & .
+\end{cases}
+.\]
+
 
 
 :::
