@@ -250,7 +250,22 @@ Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\p
   - Thus $\pi \in \ker \sgn$ and is an even permutation.
 - If $k$ is odd
   - This yields $m$ even cycles, thus an even number of even cycles iff $m$ is even 
-- The claim is that the number of orbit representatives $m$ is equal to $\# G/H$ for $H = \gens{ \pi_g }$. 
+- The claim is that the number of orbit representatives $m$ is equal to $[G:H] = \# G/H$ for $H = \gens{ g }$. 
+  - Proof: define a map
+  \[
+  \ts{ \text{Orbit representatives } x_i } &\to G/H \\
+  x &\mapsto xH
+  .\]
+  - This is injective and surjective because
+  \[
+  xH = yH &\iff xy\inv \in H = \gens{ g } \\
+  &\iff xy\inv = g^\ell \\
+  &\iff x=g^\ell y \\
+  &\iff y\in \OO_x
+  ,\]
+  so $y$ and $x$ are in the same orbit and have the same orbit representative.
+
+
 
 :::
 
