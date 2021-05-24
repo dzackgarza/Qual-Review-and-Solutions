@@ -83,4 +83,7 @@ Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zor
 
 
 
+## Exercises
 
+- Let $G$ be a group of order $p$ with $v$ and $e$ positive integers, $p$ prime, $p > v$, and $v$ is not a multiple of $p$. 
+  Show that $G$ has a normal Sylow p-subgroup.

@@ -674,8 +674,12 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 :::
 
 
+
 ## Exercises
 
 - Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
-
+- Show that if $G$ is a finite group acting transitively on a set $X$ with at least two elements,
+then there exists $g \in G$ which fixes no point of $X$.
+- Let $p$ be prime.
+  For each abelian group $K$ of order $p^2$, how many subgroups $H\leq \ZZ^{\times 3}$ are there with $\ZZ^3/H \cong K$?
 
