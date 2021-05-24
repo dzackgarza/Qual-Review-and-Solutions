@@ -158,28 +158,21 @@ where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in
 :::{.proof title="Part c"}
 \envlist
 
-- Proceed by trying to estimate $n$, the number of conjugacy classes.
-- As shown in part 1, $\OO_g = C(g)$ is the conjugacy class of $g$ and $\Fix(g) = Z(g)$ is the centralizer of $g$.
-- By the class equation
+> (DZG): I couldn't convince myself that a previous proof using the class equation actually works.
+> Instead, I'll borrow the proof from [this note](https://math.berkeley.edu/~tb65536/Commuting_Probability.pdf)
 
-$$
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from each} \\ \text{conjugacy class}}}[G: Z(g)]
-$$
-
-- Each element of $Z(G)$ is in its own conjugacy class, contributing $\# {Z(G)}$ classes to $n$.
-
-- Every other class of elements with representatives from $G\setminus Z(G)$ contains at least 2 elements.
-- Claim: each nontrivial class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$ classes to $n$.
-- If this is true,
+- Write the event as $A = \Disjoint_{g\in G} \ts{g} \cross Z(g)$, then
 \[
-n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
-&= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
-&= \frac 1 2 \abs{G} + \frac 1 2 \abs{Z(G)} \\
-\\
-\implies \frac n {\abs G}
-&\leq \frac 1 2 \frac{\abs{G}}{\abs{G}}  + \frac 1 2 \frac{\abs{Z(G)}}{\abs{G}} \\
-&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
+P(A) 
+= {\# A\over (\# G)^2} 
+= {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
 .\]
+- Attempt to estimate the sum: pull out central elements $g\in Z(G)$, then
+\[
+P(A) = {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) }
+.\]
+
+
 
 :::
 
