@@ -25,7 +25,13 @@ Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\p
 
 :::{.proposition title="Fixing transitivity of normality"}
 Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
+:::
 
+
+:::{.proof title="?"}
+Since $N\normal G$, any conjugation map $\phi_g(\wait) \da g(\wait)g\inv$ is in $\Aut(N)$.
+Since $H\char N$, $\phi_g(H) = H$ for any such $\phi_g$.
+So $gHg\inv = H$ for all $g$.
 :::
 
 
