@@ -210,6 +210,16 @@ b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
 
+:::{.concept}
+\envlist
+
+- $p$ groups have nontrivial centers.
+- Definition of maximality and $p\dash$groups
+- Sylows are conjugate
+- $Z(G) \char G$ always.
+:::
+
+
 :::{.solution}
 \envlist
 
