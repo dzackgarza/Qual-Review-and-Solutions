@@ -448,7 +448,6 @@ gG_{x} &\mapsto g\actson x
 :::
 
 
-
 :::{.proposition title="?"}
 If $X\in \GSets$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
 :::
@@ -579,8 +578,6 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 :::
 
 
-
-
 :::{.example title="?"}
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
 Let $x \da gH$, then
@@ -594,6 +591,18 @@ Let $x \da gH$, then
 - The fixed points are $X^G = \emptyset$
 
 :::
+
+
+:::{.proposition title="Application of action on cosets"}
+If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$, then $H\normal G$.
+:::
+
+
+:::{.proof title="?"}
+Let $G\actson X\da \ts{xH}$, noting that $\# X = p$.
+:::
+
+
 
 
 
@@ -660,6 +669,7 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 .\]
 
 :::
+
 
 ## Exercises
 
