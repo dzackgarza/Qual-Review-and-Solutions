@@ -377,6 +377,9 @@ D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigm
 
 - Suppose $G = \gens{ a, b}$ with $a^2 = b^2 = e$, satisfying some unknown relations.
 - Consider $ab$. Since $G$ is finite, this has finite order, so $(ab)^n = e$ for some $n\geq 2$.
+- Note $\gens{ab, b} \subseteq \gens{a, b}$, since any finite word in $ab, b$ is also a finite word in $a, b$.
+- Since $(ab)b = ab^2 = a$, we have $\gens{ab, b} \subseteq \gens{a, b}$, so $\gens{ab, b} = \gens{a, b}$.
+- Write $D_{2n} = \F(r, s) / \ker \pi$ for $\pi: F(r, s)\to D_{2n}$ the canonical presentation map.
 :::
 
 
