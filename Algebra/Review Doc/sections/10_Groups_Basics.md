@@ -529,10 +529,19 @@ For $G$ a finite group acting on $X$,
 
 
 :::{.proof title="?"}
-Form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write it in two different ways:
+Form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write it in two different ways.
+First union over $G$:
 \[
 A = \Disjoint_{g\in G} \ts{ (x, g) \st gx = x } \cong \Disjoint_{g\in G} X^g
 .\]
+
+Then union over $X$:
+\[
+A = \Disjoint_{x\in X} \ts{ (x, g) \st gx= x } \cong \Disjoint_{x\in X} G_x
+.\]
+
+
+
 
 \[
 \sum_{g\in G} \abs{X^g}
