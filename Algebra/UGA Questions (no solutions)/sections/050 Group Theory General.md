@@ -97,9 +97,9 @@ Use that $[G:Z(G)] = \# G/\# Z(G)$, so try to look for $\#Z(G)/\#(G)$ somewhere.
 \[
 A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1} \subseteq \Omega
 .\]
-- Define the slice
+- Note that the slices are centralizers:
 \[
-A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \implies A = \Disjoint_{g\in G} A_g
+A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g) \implies A = \Disjoint_{g\in G} Z(g)
 .\]
 
 - Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
@@ -121,7 +121,7 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} \impli
 
 - Note that 
   $$
-  \abs{A} = \abs{\disjoint_{g\in G} A_g} = \sum_{g\in G} \abs{A_g} = \sum_{g\in G}\abs{X^g}
+  \#{A} = \#{\disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\abs{X^g}
   .$$
 
 
