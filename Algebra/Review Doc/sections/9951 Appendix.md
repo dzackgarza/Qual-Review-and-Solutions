@@ -24,9 +24,11 @@ Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ an
 :::
 
 :::{.proof title="?"}
-Since $H\normal G$, any conjugation map $\phi_g(\wait) \da g(\wait)g\inv$ for any $g\in G$ descends to an element in $\Aut(H)$.
-Since $N\char H$, $\phi_g(N) = N$ for any such $\phi_g$.
-So $gHg\inv = H$ for all $g$.
+$A \char B \normal C \implies A\normal C$:
+
+- $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+- Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
+- Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
 :::
 
 :::{.proposition title="Centers are characteristic"}
@@ -36,9 +38,15 @@ Z(G) \char G
 .\]
 :::
 
-
 :::{.proof title="?"}
-
+Let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+\[
+\psi(y)h 
+&= \psi(y) (\psi \circ \psi\inv)(h) \\
+&= \psi( y \cdot \psi\inv(h) ) \\
+&= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
+&= h\psi(y)
+.\]
 :::
 
 ## Normal Closures and Cores
