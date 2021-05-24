@@ -65,11 +65,16 @@ Show that $Z(G) \leq G$ is always characteristic.
 
 
 :::{.solution}
-$\tau(Z(G)) \subseteq Z(G)$:
-Let $\tau \in \Aut(G)$, it suffices to show that for all $g\in Z(G)$ and $h\in G$, $\tau(g)\tau(h) = \tau(h)\tau(g)$.
-Then compute
+Let $\psi\in \Aut(G)$.
+
+$\psi(Z(G)) \subseteq Z(G)$:
+It suffices to show $\psi(g) = h = h\psi(g)$ for all $\psi(g) \in \psi(G)$ and $h\in G$.
+This is a computation:
 \[
-\tau(g)\tau(h) = \tau(gh) = \tau(hg) = \tau(h) \tau(g)
+\psi(g) h 
+&= \psi(g) (\psi \psi\inv)(h) \\
+&= \psi( g ) \psi( \psi \inv (h)) \\
+&= \phi( \psi\inv(h) g)
 .\]
 
 :::
