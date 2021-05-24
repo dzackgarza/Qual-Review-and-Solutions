@@ -2,6 +2,35 @@
 
 ## Characteristic Subgroups
 
+
+
+:::{.slogan}
+Normality is not transitive!
+
+I.e. if $H\normal G$ and $N\normal H$, it's not necessarily the case that $N\normal G$.
+:::
+
+
+:::{.definition title="Characteristic Subgroups"}
+A subgroup $H\leq G$ is **characteristic** in $G$, written $H \char G$, iff for every $\phi \in \Aut(G)$, $\phi(H) \subseteq H$.
+:::
+
+
+:::{.remark}
+Characteristic subgroups are normal, because $\psi_g(\wait) \da g(\wait)g\inv$ is an (inner) automorphic of $G$.
+:::
+
+
+
+
+:::{.proposition title="Fixing transitivity of normality"}
+Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
+
+:::
+
+
+
+
 :::{.definition title="Normal Closure of a Subgroup"}
 The smallest normal subgroup of $G$ containing $H$:
 \[
