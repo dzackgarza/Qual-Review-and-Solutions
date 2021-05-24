@@ -619,6 +619,8 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 :::
 
+#### Conjugation on Subgroups
+
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
 Let $x = H$ be a subgroup, then
@@ -653,6 +655,8 @@ Let $x \da gH$, then
 
 - The fixed points are $X^G = \emptyset$
 
+- The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
+
 :::
 
 :::{.proposition title="Application of translation action on cosets"}
@@ -677,6 +681,5 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 ## Exercises
 
 - Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
-
 
 
