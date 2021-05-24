@@ -167,9 +167,13 @@ P(A)
 = {\# A\over (\# G)^2} 
 = {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
 .\]
-- Attempt to estimate the sum: pull out central elements $g\in Z(G)$, then
+- Attempt to estimate the sum: pull out central elements $g\in Z(G)$.
+  Use the fact that $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$:
 \[
-P(A) = {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) }
+P(A) 
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) }
 .\]
 
 
