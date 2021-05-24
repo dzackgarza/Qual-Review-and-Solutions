@@ -200,7 +200,7 @@ P(A)
 
 :::
 
-## Spring 2012 #2 $\work$
+## Spring 2012 #2 $\done$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
 
 a.
