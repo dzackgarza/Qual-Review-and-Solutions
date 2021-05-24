@@ -209,7 +209,6 @@ Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
-
 :::{.concept}
 \envlist
 
@@ -220,12 +219,11 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 - Transitivity of characteristic: $A \char B$ and $B\normal C$ implies $A \normal C$.
 :::
 
-
 :::{.strategy}
-
+Just use maximality for (a).
+For (b), centers are always abelian, so $Z(H)$ is good to consider, just need to ensure it's normal in $G$.
+Use transitivity of characteristic.
 :::
-
-
 
 :::{.solution}
 \envlist
@@ -259,7 +257,6 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 :::
 
 :::
-
 
 ## Spring 2017 #1 $\done$
 Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
