@@ -275,7 +275,20 @@ k \text{ is odd and } m \text{ is even} &
 k \text{ is even}
  & .
 \end{cases}
+\]
+- Everything was an iff, so flip the evens to odds:
+\[
+\pi_g \text{ is an odd permutation } \iff 
+\begin{cases}
+k \text{ is even and } m \text{ is odd} &  
+\\
+\text{ or } & \\
+k \text{ is odd}
+ & .
+\end{cases}
+
 .\]
+
 
 
 
