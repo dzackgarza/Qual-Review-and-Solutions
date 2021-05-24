@@ -529,17 +529,17 @@ For $G$ a finite group acting on $X$,
 
 
 :::{.proof title="?"}
-Form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write it in two different ways.
+Strategy: form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write/count it in two different ways.
 First union over $G$:
 \[
-A = \Disjoint_{g\in G} \ts{ (x, g) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
+A = \Disjoint_{g\in G} \ts{ (g, x) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
 .\]
 
 Then union over $X$:
 \[
-A = \Disjoint_{x\in X} \ts{ (x, g) \st gx= x } \cong \Disjoint_{x\in X} \ts{x}\cross G_x
+A = \Disjoint_{x\in X} \ts{ (g, x) \st gx= x } \cong \Disjoint_{x\in X} G_x \cross \ts{ g } 
 .\]
-Thus
+Taking cardinalities, and using the fact that $\ts{p} \cross A \cong \# A$ as sets for any set $A$,
 \[
 \Disjoint_{g\in G} X^g
 \cong
@@ -549,9 +549,9 @@ Thus
 =
 \sum_{x\in X} \# G_x
 .\]
-Apply orbit-stabilizer: $\# G_x = \#G / \# Gx$.
-Thus 
+Apply orbit-stabilizer:
 \[
+\# G_x = {\# G \over \# Gx} \implies
 \sum_{g\in G} X^g
 &= \sum_{x\in X} \# G_x \\
 &= \sum_{x\in X} {\# G \over  \# Gx} \\
