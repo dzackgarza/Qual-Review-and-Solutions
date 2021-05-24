@@ -231,6 +231,13 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 
 
 :::{.proof title="of b"}
+\envlist
+
+- Claim: $Z(H) \leq H$ works.
+  - It is nontrivial since $H$ is a $p\dash$group and $p\dash$groups have nontrivial centers
+  - It is abelian since $Z(Z(H)) = Z(H)$.
+  - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
+- It thus remains to show that $Z(H) \normal G$.
 
 :::
 
