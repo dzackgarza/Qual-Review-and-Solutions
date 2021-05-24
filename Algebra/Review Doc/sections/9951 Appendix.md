@@ -27,11 +27,23 @@ Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\p
 Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
 :::
 
-
 :::{.proof title="?"}
 Since $N\normal G$, any conjugation map $\phi_g(\wait) \da g(\wait)g\inv$ is in $\Aut(N)$.
 Since $H\char N$, $\phi_g(H) = H$ for any such $\phi_g$.
 So $gHg\inv = H$ for all $g$.
+:::
+
+
+:::{.proposition title="Centers are characteristic"}
+For any group $G$,
+\[
+Z(G) \char G
+.\]
+:::
+
+
+:::{.proof title="?"}
+
 :::
 
 
@@ -54,9 +66,6 @@ g &\mapsto (xH\mapsto gxH)
 \]
 :::
 
-:::{.definition title="Characteristic subgroup"}
-$H\leq G$ is *characteristic* iff $H$ is fixed by every element of $\Aut(G)$. 
-:::
 
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
