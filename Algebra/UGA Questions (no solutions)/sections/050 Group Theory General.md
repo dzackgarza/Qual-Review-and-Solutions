@@ -217,6 +217,7 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 - Definition of maximality and $p\dash$groups
 - Sylows are conjugate
 - $Z(G) \char G$ always.
+- Transitivity of characteristic: $A \char B$ and $B\normal C$ implies $A \normal C$.
 :::
 
 
@@ -248,6 +249,7 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
   - It is abelian since $Z(Z(H)) = Z(H)$.
   - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
 - It thus remains to show that $Z(H) \normal G$.
+- Use that $Z(H) \char H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
 
 :::
 
