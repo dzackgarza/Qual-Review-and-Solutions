@@ -64,6 +64,12 @@ Show that $Z(G) \leq G$ is always characteristic.
 :::
 
 
+:::{.solution}
+Let $\tau \in \Aut(G)$, it suffices to show that for all $g, h \in Z(G)$, $[\tau(g), \tau(h)] = e$.
+:::
+
+
+
 ## Nilpotent Groups
 
 :::{.definition title="Nilpotent"}
