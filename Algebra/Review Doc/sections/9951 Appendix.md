@@ -19,6 +19,12 @@ Characteristic subgroups are normal, because $\psi_g(\wait) \da g(\wait)g\inv$ i
 
 :::
 
+
+:::{.remark}
+Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\psi(x, y) = (y, x)$.
+:::
+
+
 :::{.proposition title="Fixing transitivity of normality"}
 Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
 

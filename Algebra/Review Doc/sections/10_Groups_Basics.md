@@ -59,6 +59,14 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \]
 :::
 
+
+:::{.definition title="Normal subgroup"}
+A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$.
+We denote this by $N\normal G$.
+Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
+:::
+
+
 :::{.definition title="Centralizer"}
 \[
 C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
