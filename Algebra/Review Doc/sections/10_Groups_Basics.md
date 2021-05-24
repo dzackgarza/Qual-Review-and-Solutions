@@ -261,7 +261,6 @@ A_4 =
 :::
 
 
-
 ## Counting Theorems
 
 :::{.theorem title="Lagrange's Theorem"}
