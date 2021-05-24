@@ -223,6 +223,16 @@ If $G = \gens{ a }$ with $a^n=e$, then for each $d\divides n$ take $H_d \da \gen
 
 ### The Symmetric Group
 
+
+:::{.definition title="The symmetric group"}
+The transposition presentation:
+\[
+S_n \da \gens{ \sigma_1, \cdots, \sigma_{n-1} \st \sigma_i^2, [\sigma_i, \sigma_j]\, (j\neq i+1), \sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1} } 
+.\]
+
+:::
+
+
 :::{.definition title="The sign homomorphism"}
 Defined by the map
 \[
