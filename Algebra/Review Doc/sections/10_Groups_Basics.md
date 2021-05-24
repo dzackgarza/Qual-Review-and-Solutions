@@ -623,13 +623,12 @@ Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x
 
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
-Let $x = H$ be a subgroup, then
 
-- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+- The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
 
-- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
+- The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
-- The fixed points $X^g$ is the set of **normal subgroups** of $G$
+- The fixed points $\Fix(G)$ is the set of **normal subgroups** of $G$.
 
 :::
 
