@@ -233,6 +233,25 @@ Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\p
 
 - Start by showing that $o(\pi_g)$ odd implies $\pi_g$ is an odd permutation.
 - Write $k \da o(\pi_g)$, then since $\pi$ is injective, $k = o(g)$ in $G$.
+- Since $\pi_g$ as a cycle is obtained from the action of $g$, we can pick an element $x_0$ in $G$, take the orbit under the action, and obtain a cycle of length $k$ since the order of $g$ is $k$.
+  Then continue by taking any $x_1$ not in the first orbit and taking *its* orbit.
+  Continuing this way exhausts all group elements and yields a decomposition into disjoint cycles:
+\[
+\pi_g = 
+(x_0, gx_0, g^2 x_0, \cdots, g^{k-1} x_0)
+(x_1, gx_1, g^2 x_1, \cdots, g^{k-1} x_1)
+\cdots
+(x_m, gx_m, g^2 x_m, \cdots, g^{k-1} x_m)
+.\]
+- So there are $m$ orbits all of length exactly $k$.
+  Proceed by casework.
+- If $k$ is even:
+  - This yields $m$ odd cycles, and thus $\pi$ has zero (an even number) of even cycles.
+  - Thus $\pi \in \ker \sgn$ and is an even permutation.
+- If $k$ is odd
+  - This yields $m$ even cycles, thus an even number of even cycles iff $m$ is even 
+- The claim is that the number of orbit representatives $m$ is equal to $\# G/H$ for $H = \gens{ \pi_g }$. 
+
 :::
 
 
