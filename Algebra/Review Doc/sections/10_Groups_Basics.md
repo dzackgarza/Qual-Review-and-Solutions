@@ -63,6 +63,7 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \[
 \gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
 \]
+where adjacent $h_i$ are distinct.
 :::
 
 :::{.definition title="Normal subgroup"}
