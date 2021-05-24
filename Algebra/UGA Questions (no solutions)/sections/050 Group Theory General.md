@@ -120,7 +120,7 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g)
 
 - Identifying centralizers with fixed points, 
   $$
-  \#{A} = \#{\disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
+  \#{A} = \#{\Disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
   .$$
 
 
@@ -139,10 +139,10 @@ $$
 \[
 P(A)
 = {\# A \over \# \Omega} 
-= \Sum_{ g \in G } \frac{\# X ^ { g }}{\# {G}^2} 
+= \Sum_{ g \in G } \frac{\# X ^ { g }}{ ( \# {G} )^2} 
 = \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
-= \frac{n \abs{G}}{\abs{G}^2} 
-= \frac n {\abs G}
+= \frac{n \cdot \#{G}}{( \#{G} )^2} 
+= \frac n {\# G}
 .\]
 
 :::
