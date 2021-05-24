@@ -58,17 +58,13 @@ If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ 
 
 ### Exercises
 
-
 :::{.exercise title="?"}
 Show that $Z(G) \leq G$ is always characteristic.
 :::
 
-
 :::{.solution}
 Let $\psi\in \Aut(G)$.
-
-$\psi(Z(G)) \subseteq Z(G)$:
-It suffices to show $\psi(g) = h = h\psi(g)$ for all $\psi(g) \in \psi(G)$ and $h\in G$.
+For one containment, we can show $\psi(g) = h = h\psi(g)$ for all $\psi(g) \in \psi(G)$ and $h\in G$.
 This is a computation:
 \[
 \psi(g) h 
@@ -78,10 +74,12 @@ This is a computation:
 &= (\psi\psi\inv)(h) \psi(g) \\
 &= h\psi(g)
 .\]
+This yields $\psi(Z(G)) \subseteq Z(G)$.
+Applying the same argument to $\psi\inv$ yields $\psi\inv(Z(G)) \subseteq Z(G)$.
+Since $\psi$ is a bijection, $\psi\psi\inv(A) = A$ for all $A\leq G$, 
+so $Z(G) \subseteq \psi(Z(G))$.
 
 :::
-
-
 
 ## Nilpotent Groups
 
