@@ -472,7 +472,7 @@ Thus
 \[
 \# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
 .\]
-Elements $g \in Z(g)$ in the center satisfy $C(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
+Elements $g \in Z(g)$ in the center satisfy $Z(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
 \[
 \# G 
 &= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
