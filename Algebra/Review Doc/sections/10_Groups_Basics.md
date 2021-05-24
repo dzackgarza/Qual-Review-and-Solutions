@@ -511,7 +511,7 @@ Let $G$ act on *itself* by conjugation.
   - Thus the action is transitive iff there is one conjugacy class.
 - The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
 - The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
-- The kernel is the intersection of all centralizers, i.e. the **center** $Z(G)$.
+- The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
 
 
 :::
