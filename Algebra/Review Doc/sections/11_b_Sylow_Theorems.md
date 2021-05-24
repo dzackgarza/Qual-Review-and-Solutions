@@ -29,7 +29,6 @@ If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\b
 In particular, Sylow $p\dash$subgroups always exist.
 :::
 
-
 ## Sylow 2 (Sylows are Conjugate)
 
 
@@ -61,6 +60,7 @@ n_p = 1 \iff S_p \normal G
 :::
 
 ## Corollaries and Applications
+
 
 :::{.corollary}
 By Sylow 3, $p$ does not divide $n_p$.
