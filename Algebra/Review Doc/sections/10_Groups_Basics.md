@@ -461,13 +461,13 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 
 :::{.corollary title="The Class Equation"}
 \[
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
 \]
 :::
 
 
 :::{.proof title="of the class equation"}
-$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one element from each conjugacy class.
+$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one representative from each conjugacy class.
 Thus 
 \[
 \# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
