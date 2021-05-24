@@ -117,7 +117,6 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g)
   $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
   which are the elements of $G$ that commute with $g$, which is isomorphic to $A_g$.
 
-- Note $\abs{X/G} = n$, i.e. the number of conjugacy classes is the number of orbits.
 
 - Identifying centralizers with fixed points, 
   $$
@@ -129,6 +128,7 @@ A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g)
 $$
 \# {X / G} = \frac { 1 } { \# G  } \sum _ { g \in G } \# X ^ { g } ,
 $$
+- Note $\#{X/G} = n$, i.e. the number of conjugacy classes is the number of orbits.
 - Rearrange and use definition:
 $$
 n \cdot \#{G}
@@ -138,8 +138,8 @@ $$
 - Compute probability:
 \[
 P(A)
-= {\abs A \over \abs \Omega} 
-= \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
+= {\# A \over \# \Omega} 
+= \frac{\Sum_{ g \in G } \# X ^ { g }}{\# {G}^2} 
 = \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
 = \frac{n \abs{G}}{\abs{G}^2} 
 = \frac n {\abs G}
