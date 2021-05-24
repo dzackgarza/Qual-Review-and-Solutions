@@ -467,7 +467,8 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 
 
 :::{.proof title="of the class equation"}
-
+$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint_{g\in G}' C(g)$ where $\disjoint'$ denotes taking one element from each conjugacy class.
+Thus $\# G = \sum_{g\in G}' \# C(g) = \sum_{g\in G}' [G: Z(g)]$.
 :::
 
 
