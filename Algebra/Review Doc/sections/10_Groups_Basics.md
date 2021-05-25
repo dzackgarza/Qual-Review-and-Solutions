@@ -189,6 +189,23 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 :::
 
+:::{.proposition title="Tower law for subgroups"}
+\[
+K\leq H \leq G \implies [G: K] = [G:H] [H: K]
+.\]
+:::
+
+:::{.proposition title="Intersection of subgroups is a subgroup"}
+If $H, K\leq G$ then $J \da H \intersect K \leq G$ is a subgroup.
+Moreover $J\leq H$ and $J \leq K$.
+:::
+
+:::{.proof title="?"}
+One-step subgroup test.
+:::
+
+## Cosets
+
 :::{.proposition title="Cosets are identical or disjoint"}
 Any two cosets $xH, yH$ are either identical or disjoint.
 :::
@@ -237,18 +254,13 @@ Cosets form an equivalence relation and thus partition a group.
 Nice trick: write $G/H = \ts{ g_1 H, g_2 H,\cdots, g_n H }$, then $G = \disjoint_{i\leq n} g_i H$.
 :::
 
-:::{.theorem title="Counting Quotients"}
+:::{.theorem title="Counting Cosets"}
 If $H\normal G$, then
 \[
 [G: H] = \abs{G/H} = {\abs G \over \abs H}
 .\]
 :::
 
-:::{.proposition title="Tower law for subgroups"}
-\[
-K\leq H \leq G \implies [G: K] = [G:H] [H: K]
-.\]
-:::
 
 ## Special Classes of Groups
 
