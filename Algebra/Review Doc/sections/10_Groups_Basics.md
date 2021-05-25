@@ -426,8 +426,9 @@ A_4 =
 
 ## Exercises
 
+- Show that normal groups absorb conjugacy classes: if $N\normal G$ and $[g_i]$ is a conjugacy class in $g$, either $[g_i] \subseteq N$ or $[g_i] \intersect N = \emptyset$.
 - Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
-- Prove that if $G$ is a $p\dash$group, every normal subgroup $N\normal G$ intersects the center $Z(G)$.
+- Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
 - Show that if $G$ is a finite group acting transitively on a set $X$ with at least two elements,
 then there exists $g \in G$ which fixes no point of $X$.
 - Let $p$ be prime.
