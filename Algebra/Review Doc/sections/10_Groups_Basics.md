@@ -93,8 +93,16 @@ C(h) \da \ts{ ghg\inv \st g\in G }
 :::
 
 :::{.remark}
-$C(e) = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
+$[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
+Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
+However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
 :::
+
+
+:::{.remark}
+$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
+:::
+
 
 :::{.definition title="Conjugate subgroups"}
 Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
@@ -109,7 +117,7 @@ Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
 
 
 :::{.remark}
-$N\normal G \iff N = \disjoint' C(h_i)$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
+$N\normal G \iff N = \disjoint' [h_i]$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
 :::
 
 
