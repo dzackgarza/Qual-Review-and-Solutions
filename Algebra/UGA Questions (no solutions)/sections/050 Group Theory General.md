@@ -650,14 +650,21 @@ Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontriv
 :::{.solution}
 \envlist
 
+- Write $\# G = p^2 q$
 - Cases: first assume $p>q$, then do $q<p$.
 - In any case, we have
 \[
-n_p \divides q^2 &,\, n_p \equiv 1 \mod p \\ \\
-n_q \divides p &,\, n_q \equiv 1 \mod q
+n_p \divides q &,\, n_p \equiv 1 \mod p \implies n_p \in \ts{ 1,q } \\ \\
+n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \in \ts{ 1, p, p^2} 
 .\]
 
-- If $p>q$, then Sylow 3 says $n_q \divides p$ and $n_q \cong 1 \mod q^2$
+- **Case 1:** $:p>q$.
+- If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
+- So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+
+- **Case 2:**: $p< q$:
+- Finer analysis.
+
 :::
 
 
