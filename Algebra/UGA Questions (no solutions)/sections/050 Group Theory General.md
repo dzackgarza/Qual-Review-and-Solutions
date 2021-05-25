@@ -622,6 +622,21 @@ t &\mapsto b
 Let $P$ be a finite $p\dash$group.
 Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ nontrivially.
 
+
+
+:::{.solution}
+\envlist
+
+- Let $N\normal P$, then for each conjugacy class $[n_i]$ in $N$, $H \intersect [g_i] = [g_i]$ or is empty.
+- $G = \disjoint_{i\leq M} [g_i]$ is a disjoint union of conjugacy classes, and the conjugacy classes of $H$ are of the form $[g_i] \intersect H$.
+- Then pull out the center
+\[
+H = \Disjoint_{i\leq M} [g_i] \intersect H = \qty{ Z(G) \intersect H } \coprod \Disjoint_{i\leq M'} [g_i]
+.\]
+
+:::
+
+
 ### Fall 2019 Midterm #1  $\work$
 Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
 
