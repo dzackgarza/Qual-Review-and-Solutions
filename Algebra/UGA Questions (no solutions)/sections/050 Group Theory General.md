@@ -43,6 +43,39 @@ hN
 
 :::
 
+### Fall 2014 #6 $\done$
+Let $G$ be a group and $H, K < G$ be subgroups of finite index.
+Show that
+\[
+[G: H\intersect K] \leq [G: H] ~ [G:K]
+.\]
+
+
+:::{.concept}
+\envlist
+
+- For $H, K\leq G$, intersection is again a subgroup of everything: $H\int K \leq H, K, G$ by the one-step subgroup test.
+- Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
+- Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
+- Common trick: just list out all of the darn cosets!
+:::
+
+:::{.strategy}
+Count in towers, show that distinct coset reps stay distinct.
+
+:::
+
+:::{.solution}
+\envlist
+
+- $H \intersect K \leq H \leq G \implies [G: H \intersect K] = [G: H] [H : H \intersect K]$
+- So it suffices to show $[H: H \intersect K] \leq [G: K]$
+- Write $H/H \intersect K = \ts{ h_1 J, \cdots, h_m J }$ as distinct cosets where $J \da H \intersect J$.
+- Then $h_i J\neq h_j J \iff h_i h_j\inv \not\in J = H \intersect K$.
+- $H$ is a subgroup, so $h_i h_j\inv \in H$ forces this not to be in $K$.
+- But then $h_i K \neq h_j K$, so these are distinct cosets in $G/K$.
+- So $\#G/K \geq m$.
+:::
 
 ## Burnside / Class Equation
 
@@ -583,12 +616,7 @@ t &\mapsto b
 
 :::
 
-### Fall 2014 #6 $\work$
-Let $G$ be a group and $H, K < G$ be subgroups of finite index.
-Show that
-\[
-[G: H\intersect K] \leq [G: H] ~ [G:K]
-.\]
+
 
 ### Spring 2013 #3 $\work$
 Let $P$ be a finite $p\dash$group.
