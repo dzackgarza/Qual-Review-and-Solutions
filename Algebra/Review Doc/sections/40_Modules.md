@@ -64,7 +64,7 @@ A **free** module $M$ is a module satisfying any of the following conditions:
 
 - Existence of a basis:
 
-  There is linearly independent (so $\sum r_i \beta_i = 0 \implies r_i = 0$) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \ta \ts{ \beta_i }_{i\in I} \), 
+  There is linearly independent (so $\sum r_i \beta_i = 0 \implies r_i = 0$) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \da \ts{ \beta_i }_{i\in I} \), 
 
 - Direct sum decomposition:
 
@@ -96,9 +96,8 @@ If $M_t = M$, we say $M$ is a **torsion module**.
 For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
 :::
 
-:::{.proof title=""}
-Todo
-:::
+\todo[inline]{Prove}
+
 
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.

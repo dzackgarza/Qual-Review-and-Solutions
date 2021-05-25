@@ -9,7 +9,7 @@ I.e. if $H\normal G$ and $N\normal H$, it's not necessarily the case that $N\nor
 :::
 
 :::{.definition title="Characteristic Subgroups"}
-A subgroup $H\leq G$ is **characteristic** in $G$, written $H \char G$, iff for every $\phi \in \Aut(G)$, $\phi(H) \leq H$.
+A subgroup $H\leq G$ is **characteristic** in $G$, written $H \ch G$, iff for every $\phi \in \Aut(G)$, $\phi(H) \leq H$.
 Equivalently, $\phi(H) = H$.
 I.e. $H$ is fixed (not necessarily pointwise) under every automorphism of the ambient group $G$.
 :::
@@ -20,21 +20,21 @@ Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\p
 :::
 
 :::{.proposition title="Fixing transitivity of normality"}
-Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
+Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \ch H$, then $N\normal G$.
 :::
 
 :::{.proof title="?"}
-$A \char B \normal C \implies A\normal C$:
+$A \ch B \normal C \implies A\normal C$:
 
-- $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+- $A\ch B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
 - Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
-- Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
+- Then $\psi(A) = A$ since $A\ch B$, so $cAc\inv = A$ and $A\normal C$.
 :::
 
 :::{.proposition title="Centers are characteristic"}
 For any group $G$,
 \[
-Z(G) \char G
+Z(G) \ch G
 .\]
 :::
 
@@ -61,7 +61,7 @@ H^G \definedas \{gHg^{-1}: g\in G\} = \bigcap \theset{N: H \leq N \normal G }
 :::{.definition title="Normal Core of a subgroup"}
 The largest normal subgroup of $G$ containing $H$:
 \[
-H_G = \intersect_{g\in G} gHg^{-1} = \gens{ N: N \normal G ~\&~ N \leq H} = \ker \psi
+H_G = \Intersect_{g\in G} gHg^{-1} = \gens{ N: N \normal G ~\&~ N \leq H} = \ker \psi
 .\]
 where
 \[
@@ -107,14 +107,6 @@ A group $G$ is **nilpotent** iff $G$ has a terminating upper central series.
 
 > Moral: the adjoint map is nilpotent.
 
-:::{.theorem title="Nilpotents Have All Sylows Normal"}
-A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
-:::
-
-:::{.theorem title="Nilpotent Implies Maximal Normals"}
-A group $G$ is nilpotent iff every maximal subgroup is normal.
-:::
-
 :::{.theorem title="Characterization of Nilpotent Groups"}
 $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
 :::
@@ -123,11 +115,19 @@ $G$ is nilpotent iff $G$ has an upper central series terminating at $G$.
 $G$ is nilpotent iff $G$ has a lower central series terminating at $1$.
 :::
 
+:::{.theorem title="Nilpotents Have All Sylows Normal"}
+A group $G$ is nilpotent iff all of its Sylow $p\dash$subgroups are normal for every $p$ dividing $\abs{G}$.
+:::
+
+:::{.theorem title="Nilpotent Implies Maximal Normals"}
+A group $G$ is nilpotent iff every maximal subgroup is normal.
+:::
+
 :::{.proposition}
 For $G$ a finite group, TFAE:
 
 - $G$ is nilpotent
-- Normalizers grow (i.e.$H < N_G(H)$ whenever $H$ is proper)
+- Normalizers grow, i.e. if $H < G$ is proper then $H < N_G(H)$.
 - Every Sylow-p subgroup is normal
 - $G$ is the direct product of its Sylow p-subgroups
 - Every maximal subgroup is normal
@@ -142,5 +142,4 @@ For $G$ a finite group, TFAE:
 - $G$ has normal subgroups of order $d$ for *every* $d$ dividing $\abs{G}$
 
 :::
-
 

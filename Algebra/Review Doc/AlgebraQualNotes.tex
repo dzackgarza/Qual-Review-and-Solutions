@@ -2540,7 +2540,7 @@ is a field.
 \item
   An ideal that is both prime and maximal:
   \(\left\langle{ f }\right\rangle\) for any
-  \(f\in {\mathbb{Q}}[x]^\irr\)
+  \(f\in {\mathbb{Q}}[x]^{\mathrm{irr}}\)
 \item
   A prime ideal that is not maximal:
   \(\left\langle{ x-c }\right\rangle\in {\mathbb{R}}[x]\).
@@ -3273,9 +3273,10 @@ the greatest common divisors of its coefficients is a unit.
 
 \todo[inline]{todo}
 
-If \({\mathbb{F}}\) is a field with \(\char({\mathbb{F}})\neq 2\) and
-\(E_{/{\mathbb{F}}}\) is a degree 2 extension, then \(E\) is Galois and
-\(E = F(\sqrt{a})\) for some squarefree \(a\in {\mathbb{F}}\).
+If \({\mathbb{F}}\) is a field with
+\(\operatorname{ch}({\mathbb{F}})\neq 2\) and \(E_{/{\mathbb{F}}}\) is a
+degree 2 extension, then \(E\) is Galois and \(E = F(\sqrt{a})\) for
+some squarefree \(a\in {\mathbb{F}}\).
 
 \end{proposition}
 
@@ -4086,7 +4087,7 @@ to Diagram}
   There is linearly independent (so
   \(\sum r_i \beta_i = 0 \implies r_i = 0\)) spanning set (so
   \(m\in M \implies m = \sum r_i \beta_i\) ) of the form
-  \(\mathcal{B} \ta \left\{{ \beta_i }\right\}_{i\in I}\),
+  \(\mathcal{B} \coloneqq\left\{{ \beta_i }\right\}_{i\in I}\),
 \item
   Direct sum decomposition:
 
@@ -4139,11 +4140,7 @@ torsionfree.
 
 \end{proposition}
 
-\begin{proof}[]
-
-Todo
-
-\end{proof}
+\todo[inline]{Prove}
 
 \begin{example}[A torsionfree module that is not free]
 
@@ -7917,10 +7914,10 @@ not necessarily the case that \(N{~\trianglelefteq~}G\).
 \begin{definition}[Characteristic Subgroups]
 
 A subgroup \(H\leq G\) is \textbf{characteristic} in \(G\), written
-\(H \char G\), iff for every \(\phi \in {\operatorname{Aut}}(G)\),
-\(\phi(H) \leq H\). Equivalently, \(\phi(H) = H\). I.e. \(H\) is fixed
-(not necessarily pointwise) under every automorphism of the ambient
-group \(G\).
+\(H \operatorname{ch}G\), iff for every
+\(\phi \in {\operatorname{Aut}}(G)\), \(\phi(H) \leq H\). Equivalently,
+\(\phi(H) = H\). I.e. \(H\) is fixed (not necessarily pointwise) under
+every automorphism of the ambient group \(G\).
 
 \end{definition}
 
@@ -7936,19 +7933,19 @@ Characteristic subgroups are normal, because
 \begin{proposition}[Fixing transitivity of normality]
 
 Characteristic subgroups of normal subgroups are normal, i.e.~if
-\(H{~\trianglelefteq~}G\) and \(N \char H\), then
+\(H{~\trianglelefteq~}G\) and \(N \operatorname{ch}H\), then
 \(N{~\trianglelefteq~}G\).
 
 \end{proposition}
 
 \begin{proof}[?]
 
-\(A \char B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C\):
+\(A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C\):
 
 \begin{itemize}
 \tightlist
 \item
-  \(A\char B\) iff \(A\) is fixed by every
+  \(A\operatorname{ch}B\) iff \(A\) is fixed by every
   \(\psi\in {\operatorname{Aut}}(B)\)., WTS \(cAc^{-1}= A\) for all
   \(c\in C\).
 \item
@@ -7956,8 +7953,8 @@ Characteristic subgroups of normal subgroups are normal, i.e.~if
   \(\psi({-}) \coloneqq c({-})c^{-1}\) descends to an element of
   \({\operatorname{Aut}}(B)\).
 \item
-  Then \(\psi(A) = A\) since \(A\char B\), so \(cAc^{-1}= A\) and
-  \(A{~\trianglelefteq~}C\).
+  Then \(\psi(A) = A\) since \(A\operatorname{ch}B\), so \(cAc^{-1}= A\)
+  and \(A{~\trianglelefteq~}C\).
 \end{itemize}
 
 \end{proof}
@@ -7966,7 +7963,7 @@ Characteristic subgroups of normal subgroups are normal, i.e.~if
 
 For any group \(G\),
 \begin{align*}
-Z(G) \char G
+Z(G) \operatorname{ch}G
 .\end{align*}
 
 \end{proposition}
@@ -8001,7 +7998,7 @@ H^G \coloneqq\{gHg^{-1}: g\in G\} = \bigcap \left\{{N: H \leq N {~\trianglelefte
 
 The largest normal subgroup of \(G\) containing \(H\):
 \begin{align*}
-H_G = \cap_{g\in G} gHg^{-1} = \left\langle{ N: N {~\trianglelefteq~}G ~\&~ N \leq H}\right\rangle = \ker \psi
+H_G = \displaystyle\bigcap_{g\in G} gHg^{-1} = \left\langle{ N: N {~\trianglelefteq~}G ~\&~ N \leq H}\right\rangle = \ker \psi
 .\end{align*}
 where
 \begin{align*}
@@ -8062,19 +8059,6 @@ central series.
 Moral: the adjoint map is nilpotent.
 \end{quote}
 
-\begin{theorem}[Nilpotents Have All Sylows Normal]
-
-A group \(G\) is nilpotent iff all of its Sylow \(p{\hbox{-}}\)subgroups
-are normal for every \(p\) dividing \({\left\lvert {G} \right\rvert}\).
-
-\end{theorem}
-
-\begin{theorem}[Nilpotent Implies Maximal Normals]
-
-A group \(G\) is nilpotent iff every maximal subgroup is normal.
-
-\end{theorem}
-
 \begin{theorem}[Characterization of Nilpotent Groups]
 
 \(G\) is nilpotent iff \(G\) has an upper central series terminating at
@@ -8089,6 +8073,19 @@ A group \(G\) is nilpotent iff every maximal subgroup is normal.
 
 \end{theorem}
 
+\begin{theorem}[Nilpotents Have All Sylows Normal]
+
+A group \(G\) is nilpotent iff all of its Sylow \(p{\hbox{-}}\)subgroups
+are normal for every \(p\) dividing \({\left\lvert {G} \right\rvert}\).
+
+\end{theorem}
+
+\begin{theorem}[Nilpotent Implies Maximal Normals]
+
+A group \(G\) is nilpotent iff every maximal subgroup is normal.
+
+\end{theorem}
+
 \begin{proposition}
 
 For \(G\) a finite group, TFAE:
@@ -8098,7 +8095,7 @@ For \(G\) a finite group, TFAE:
 \item
   \(G\) is nilpotent
 \item
-  Normalizers grow (i.e.\(H < N_G(H)\) whenever \(H\) is proper)
+  Normalizers grow, i.e.~if \(H < G\) is proper then \(H < N_G(H)\).
 \item
   Every Sylow-p subgroup is normal
 \item

@@ -1463,7 +1463,7 @@ ab\in {\mathfrak{p}}\implies a\in {\mathfrak{p}}{\operatorname{ { or } }} b\in {
 \envlist
 ```
 -   A non-maximal, non-prime ideal: \( \left\langle{ x^4 + 2x^2 + 1 }\right\rangle{~\trianglelefteq~}{\mathbb{C}}[x] \)
--   An ideal that is both prime and maximal: \( \left\langle{ f }\right\rangle \) for any \( f\in {\mathbb{Q}}[x]^\irr \)
+-   An ideal that is both prime and maximal: \( \left\langle{ f }\right\rangle \) for any \( f\in {\mathbb{Q}}[x]^{\mathrm{irr}} \)
 -   A prime ideal that is not maximal: \( \left\langle{ x-c }\right\rangle\in {\mathbb{R}}[x] \).
 :::
 
@@ -1882,7 +1882,7 @@ For \( R \) a UFD, a polynomial \( p\in R[x] \) is **primitive** iff the greates
 ```{=tex}
 \todo[inline]{todo}
 ```
-If \( {\mathbb{F}} \) is a field with \( \char({\mathbb{F}})\neq 2 \) and \( E_{/{\mathbb{F}}} \) is a degree 2 extension, then \( E \) is Galois and \( E = F(\sqrt{a}) \) for some squarefree \( a\in {\mathbb{F}} \).
+If \( {\mathbb{F}} \) is a field with \( \operatorname{ch}({\mathbb{F}})\neq 2 \) and \( E_{/{\mathbb{F}}} \) is a degree 2 extension, then \( E \) is Galois and \( E = F(\sqrt{a}) \) for some squarefree \( a\in {\mathbb{F}} \).
 :::
 
 ::: {.corollary title="Quadratic extensions of rationals"}
@@ -2402,7 +2402,7 @@ A **free** module \( M \) is a module satisfying any of the following conditions
 
 -   Existence of a basis:
 
-    There is linearly independent (so \( \sum r_i \beta_i = 0 \implies r_i = 0 \)) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \ta \left\{{ \beta_i }\right\}_{i\in I} \),
+    There is linearly independent (so \( \sum r_i \beta_i = 0 \implies r_i = 0 \)) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \coloneqq\left\{{ \beta_i }\right\}_{i\in I} \),
 
 -   Direct sum decomposition:
 
@@ -2429,10 +2429,9 @@ An element \( m\in M \) is a **torsion element** if there exists a nonzero \( r\
 For \( R \) an integral domain, any free \( R{\hbox{-}} \)module \( M \) is torsionfree.
 :::
 
-::: {.proof title=""}
-Todo
-:::
-
+```{=tex}
+\todo[inline]{Prove}
+```
 ::: {.example title="A torsionfree module that is not free"}
 \( {\mathbb{Q}}\in {\mathsf{{\mathbb{Z}}}{\hbox{-}}\mathsf{Mod}} \) is torsionfree, but not free as a \( {\mathbb{Z}}{\hbox{-}} \)module. This follows because any two elements \( a/b, p/q \) are in a single ideal, since taking \( d\coloneqq\gcd(b, q) \) we have \( 1/a = 1/d + \cdots 1/d \) and similarly \( p/q = 1/a + \cdots + 1/a \), so these are in \( \left\langle{ 1/d }\right\rangle \). So any basis has size one, which would mean \( {\mathbb{Q}}= \left\{{ \pm 1/d, \pm 2/d, \cdots }\right\} \) which in particular doesn't include the average of the first two terms.
 :::
@@ -4813,7 +4812,7 @@ I.e. if \( H{~\trianglelefteq~}G \) and \( N{~\trianglelefteq~}H \), it's not ne
 :::
 
 ::: {.definition title="Characteristic Subgroups"}
-A subgroup \( H\leq G \) is **characteristic** in \( G \), written \( H \char G \), iff for every \( \phi \in {\operatorname{Aut}}(G) \), \( \phi(H) \leq H \). Equivalently, \( \phi(H) = H \). I.e. \( H \) is fixed (not necessarily pointwise) under every automorphism of the ambient group \( G \).
+A subgroup \( H\leq G \) is **characteristic** in \( G \), written \( H \operatorname{ch}G \), iff for every \( \phi \in {\operatorname{Aut}}(G) \), \( \phi(H) \leq H \). Equivalently, \( \phi(H) = H \). I.e. \( H \) is fixed (not necessarily pointwise) under every automorphism of the ambient group \( G \).
 :::
 
 ::: {.remark title="Characteristic isn't equivalent to normalcy"}
@@ -4821,21 +4820,21 @@ Characteristic subgroups are normal, because \( \psi_g({-}) \coloneqq g({-})g^{-
 :::
 
 ::: {.proposition title="Fixing transitivity of normality"}
-Characteristic subgroups of normal subgroups are normal, i.e. if \( H{~\trianglelefteq~}G \) and \( N \char H \), then \( N{~\trianglelefteq~}G \).
+Characteristic subgroups of normal subgroups are normal, i.e. if \( H{~\trianglelefteq~}G \) and \( N \operatorname{ch}H \), then \( N{~\trianglelefteq~}G \).
 :::
 
 ::: {.proof title="?"}
-\( A \char B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
+\( A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
 
--   \( A\char B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
+-   \( A\operatorname{ch}B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
 -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( {\operatorname{Aut}}(B) \).
--   Then \( \psi(A) = A \) since \( A\char B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
+-   Then \( \psi(A) = A \) since \( A\operatorname{ch}B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
 :::
 
 ::: {.proposition title="Centers are characteristic"}
 For any group \( G \),
 \[
-Z(G) \char G
+Z(G) \operatorname{ch}G
 .\]
 :::
 
@@ -4862,7 +4861,7 @@ H^G \coloneqq\{gHg^{-1}: g\in G\} = \bigcap \left\{{N: H \leq N {~\trianglelefte
 ::: {.definition title="Normal Core of a subgroup"}
 The largest normal subgroup of \( G \) containing \( H \):
 \[
-H_G = \cap_{g\in G} gHg^{-1} = \left\langle{ N: N {~\trianglelefteq~}G ~\&~ N \leq H}\right\rangle = \ker \psi
+H_G = \displaystyle\bigcap_{g\in G} gHg^{-1} = \left\langle{ N: N {~\trianglelefteq~}G ~\&~ N \leq H}\right\rangle = \ker \psi
 .\]
 where
 \[
@@ -4902,14 +4901,6 @@ A group \( G \) is **nilpotent** iff \( G \) has a terminating upper central ser
 
 > Moral: the adjoint map is nilpotent.
 
-::: {.theorem title="Nilpotents Have All Sylows Normal"}
-A group \( G \) is nilpotent iff all of its Sylow \( p{\hbox{-}} \)subgroups are normal for every \( p \) dividing \( {\left\lvert {G} \right\rvert} \).
-:::
-
-::: {.theorem title="Nilpotent Implies Maximal Normals"}
-A group \( G \) is nilpotent iff every maximal subgroup is normal.
-:::
-
 ::: {.theorem title="Characterization of Nilpotent Groups"}
 \( G \) is nilpotent iff \( G \) has an upper central series terminating at \( G \).
 :::
@@ -4918,11 +4909,19 @@ A group \( G \) is nilpotent iff every maximal subgroup is normal.
 \( G \) is nilpotent iff \( G \) has a lower central series terminating at \( 1 \).
 :::
 
+::: {.theorem title="Nilpotents Have All Sylows Normal"}
+A group \( G \) is nilpotent iff all of its Sylow \( p{\hbox{-}} \)subgroups are normal for every \( p \) dividing \( {\left\lvert {G} \right\rvert} \).
+:::
+
+::: {.theorem title="Nilpotent Implies Maximal Normals"}
+A group \( G \) is nilpotent iff every maximal subgroup is normal.
+:::
+
 ::: {.proposition}
 For \( G \) a finite group, TFAE:
 
 -   \( G \) is nilpotent
--   Normalizers grow (i.e.\( H < N_G(H) \) whenever \( H \) is proper)
+-   Normalizers grow, i.e. if \( H < G \) is proper then \( H < N_G(H) \).
 -   Every Sylow-p subgroup is normal
 -   \( G \) is the direct product of its Sylow p-subgroups
 -   Every maximal subgroup is normal

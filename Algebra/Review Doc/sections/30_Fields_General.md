@@ -179,7 +179,7 @@ For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common
 
 :::{.proposition title="Classification of quadratic extensions"}
 \todo[inline]{todo}
-If $\FF$ is a field with $\char(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
 :::
 
 :::{.corollary title="Quadratic extensions of rationals"}
