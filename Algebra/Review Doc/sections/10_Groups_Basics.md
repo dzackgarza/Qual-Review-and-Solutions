@@ -66,6 +66,15 @@ A subset $H\subseteq G$ is a **subgroup** iff
 If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 :::
 
+:::{.proof title="?"}
+\envlist
+
+- Identity: $a=b=x\implies xx\inv=e\in H$
+- Inverses: $a=e, b=x \implies x\inv \in H$.
+- Closure: let $x, y\in H$, then $y\inv \in H$ by above, so $xy = x(y\inv )\inv \in H$.
+:::
+
+
 
 
 :::{.fact}
