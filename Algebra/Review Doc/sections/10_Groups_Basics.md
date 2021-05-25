@@ -84,6 +84,18 @@ If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 where adjacent $h_i$ are distinct.
 :::
 
+
+:::{.definition title="Conjugacy class"}
+The **conjugacy class** of $h$ is defined as 
+\[
+C(h) \da \ts{ ghg\inv \st g\in G } 
+.\]
+:::
+
+:::{.remark}
+$C(e) = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
+:::
+
 :::{.definition title="Conjugate subgroups"}
 Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
 Note that all conjugates have the same cardinality.
@@ -97,8 +109,15 @@ Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
 
 
 :::{.remark}
-$N\normal G \iff N = \disjoint' C(h_i)$ is a disjoint union of conjugacy classes.
+$N\normal G \iff N = \disjoint' C(h_i)$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
 :::
+
+
+:::{.proof title="?"}
+Note that $C(h_i) = \ts{ gh_i g\inv \st g\in G }$, and $gh_i g\inv \in H$ since $H$ is normal, so $C(h_i) \subseteq G$ for all $i$.
+Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ for all $i$ and $H$ is normal.
+:::
+
 
 
 :::{.definition title="Centralizer"}
