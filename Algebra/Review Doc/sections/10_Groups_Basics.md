@@ -99,12 +99,14 @@ Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
 \[
 C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
 \]
+These are elements that fix $H$ pointwise under the conjugation action.
 :::
 
 :::{.definition title="Normalizer"}
 \[
 N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
 \]
+Contrast to the centralizer: these don't have to fix $H$ pointwise.
 :::
 
 :::{.definition title="The Dihedral Group"}
