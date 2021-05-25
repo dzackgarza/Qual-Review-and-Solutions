@@ -513,7 +513,6 @@ Theorems to remember and know how to prove:
 
 :::
 
-
 :::{.solution}
 Since $Z(G)$ is a subgroup of $G$ and $|G| = p^3$, by Lagrange's
 theorem, $|Z(G)| \in \{1, p, p^2, p^3\}$.
@@ -646,6 +645,21 @@ t &\mapsto b
 
 ### Fall 2019 Midterm #1  $\work$
 Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
+
+
+:::{.solution}
+\envlist
+
+- Cases: first assume $p>q$, then do $q<p$.
+- In any case, we have
+\[
+n_p \divides q^2 &,\, n_p \equiv 1 \mod p \\ \\
+n_q \divides p &,\, n_q \equiv 1 \mod q
+.\]
+
+- If $p>q$, then Sylow 3 says $n_q \divides p$ and $n_q \cong 1 \mod q^2$
+:::
+
 
 ### Fall 2019 Midterm #4 $\work$
 Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
