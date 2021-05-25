@@ -425,7 +425,6 @@ Prove that $G$ has a normal subgroup which is contained in every conjugate of $H
 
 :::
 
-
 ## Spring 2015 #1 $\work$
 For a prime $p$, let $G$ be a finite $p\dash$group and let $N$ be a normal subgroup of $G$ of order $p$.
 Prove that $N$ is contained in the center of $G$.
@@ -564,4 +563,3 @@ p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 - $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
 
 :::
-
