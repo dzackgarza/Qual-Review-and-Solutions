@@ -189,12 +189,6 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 :::
 
-:::{.proposition title="Tower law for subgroups"}
-\[
-K\leq H \leq G \implies [G: K] = [G:H] [H: K]
-.\]
-:::
-
 :::{.proposition title="Intersection of subgroups is a subgroup"}
 If $H, K\leq G$ then $J \da H \intersect K \leq G$ is a subgroup.
 Moreover $J\leq H$ and $J \leq K$.
@@ -203,6 +197,21 @@ Moreover $J\leq H$ and $J \leq K$.
 :::{.proof title="?"}
 One-step subgroup test.
 :::
+
+:::{.proposition title="Tower law for subgroups"}
+\[
+K\leq H \leq G \implies [G: K] = [G:H] [H: K]
+.\]
+:::
+
+
+:::{.proposition title="Indices grow"}
+If $H, K \leq G$, then 
+\[
+[G: H \intersect K ]\leq [G: K] 
+.\]
+:::
+
 
 ## Cosets
 
