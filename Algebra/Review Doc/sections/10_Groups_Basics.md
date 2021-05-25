@@ -217,8 +217,6 @@ Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in
 So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$.
 :::
 
-
-
 ## Cosets
 
 :::{.proposition title="Cosets are identical or disjoint"}
@@ -277,7 +275,7 @@ If $H\normal G$, then
 :::
 
 
-## Special Classes of Groups
+## Special Groups
 
 :::{.definition title="The Dihedral Group"}
 A **dihedral group** of order $2n$ is given by 
