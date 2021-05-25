@@ -414,7 +414,6 @@ A full-rank matrix that is not diagonalizable:
 0 & 0 & 1 \\
 \end{array}
 \right)
-
 .\]
 
 :::

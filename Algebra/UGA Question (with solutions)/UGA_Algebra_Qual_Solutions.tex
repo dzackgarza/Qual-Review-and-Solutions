@@ -1262,6 +1262,242 @@ Let \(p\) be a prime. Show that
 \(S_p = \left\langle{\tau, \sigma}\right\rangle\) where \(\tau\) is a
 transposition and \(\sigma\) is a \(p{\hbox{-}}\)cycle.
 
+\hypertarget{groups-group-actions}{%
+\section{Groups: Group Actions}\label{groups-group-actions}}
+
+\hypertarget{fall-2012-1-work}{%
+\subsection{\texorpdfstring{Fall 2012 \#1
+\(\work\)}{Fall 2012 \#1 \textbackslash work}}\label{fall-2012-1-work}}
+
+Let \(G\) be a finite group and \(X\) a set on which \(G\) acts.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(x\in X\) and
+  \(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
+  Show that \(G_x\) is a subgroup of \(G\).
+\item
+  Let \(x\in X\) and
+  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
+  Prove that there is a bijection between elements in \(G\cdot x\) and
+  the left cosets of \(G_x\) in \(G\).
+\end{enumerate}
+
+\hypertarget{fall-2015-2-work}{%
+\subsection{\texorpdfstring{Fall 2015 \#2
+\(\work\)}{Fall 2015 \#2 \textbackslash work}}\label{fall-2015-2-work}}
+
+Let \(G\) be a finite group, \(H\) a \(p{\hbox{-}}\)subgroup, and \(P\)
+a sylow \(p{\hbox{-}}\)subgroup for \(p\) a prime. Let \(H\) act on the
+left cosets of \(P\) in \(G\) by left translation.
+
+Prove that this is an orbit under this action of length 1.
+
+Prove that \(xP\) is an orbit of length 1 \(\iff H\) is contained in
+\(xPx^{-1}\).
+
+\hypertarget{spring-2016-5-work}{%
+\subsection{\texorpdfstring{Spring 2016 \#5
+\(\work\)}{Spring 2016 \#5 \textbackslash work}}\label{spring-2016-5-work}}
+
+Let \(G\) be a finite group acting on a set \(X\). For \(x\in X\), let
+\(G_x\) be the stabilizer of \(x\) and \(G\cdot x\) be the orbit of
+\(x\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that there is a bijection between the left cosets \(G/G_x\) and
+  \(G\cdot x\).
+\item
+  Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
+  nontrivial by considering that action of \(G\) on \(X=G\) by
+  conjugation.
+\end{enumerate}
+
+\hypertarget{fall-2017-1-work}{%
+\subsection{\texorpdfstring{Fall 2017 \#1
+\(\work\)}{Fall 2017 \#1 \textbackslash work}}\label{fall-2017-1-work}}
+
+Suppose the group \(G\) acts on the set \(A\). Assume this action is
+faithful (recall that this means that the kernel of the homomorphism
+from \(G\) to \(\operatorname{Sym}(A)\) which gives the action is
+trivial) and transitive (for all \(a, b\) in \(A\), there exists \(g\)
+in \(G\) such that \(g \cdot a = b\).)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
+  Prove that for any \(a \in A\),
+  \begin{align*}
+  \displaystyle\bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
+  .\end{align*}
+\item
+  Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
+  every abelian transitive subgroup of \(S_n\) has order \(n\).
+\end{enumerate}
+
+\hypertarget{fall-2018-2-done}{%
+\subsection{\texorpdfstring{Fall 2018 \#2
+\(\done\)}{Fall 2018 \#2 \textbackslash done}}\label{fall-2018-2-done}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose the group \(G\) acts on the set \(X\) . Show that the
+  stabilizers of elements in the same orbit are conjugate.
+\item
+  Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
+  that the union of the conjugates of \(H\) is strictly smaller than
+  \(G\), i.e.
+  \begin{align*}
+  \displaystyle\bigcup_{g\in G} gHg^{-1}\subsetneq G
+  \end{align*}
+\item
+  Suppose \(G\) is a finite group acting transitively on a set \(S\)
+  with at least 2 elements. Show that there is an element of \(G\) with
+  no fixed points in \(S\).
+\end{enumerate}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Orbit:
+  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X\)
+\item
+  Stabilizer:
+  \(G_x \coloneqq\left\{{g\in G{~\mathrel{\Big|}~}g\cdot x = x}\right\} \leq G\)
+\item
+  Orbit-Stabilizer: \(G\cdot x \simeq G/G_x\).
+\item
+  \(abc\in H \iff b\in a^{-1}H c^{-1}\)
+\item
+  Set of orbits for \(G\curvearrowright X\), notated \(X/G\).
+\item
+  Set of fixed points for \(G\curvearrowright X\), notated \(X^g\).
+\item
+  Burnside's Lemma:
+  \({\left\lvert {X/G} \right\rvert} \cdot {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Number of orbits equals average number of fixed points.
+  \end{itemize}
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Fix \(x\) and let \(y\in G_x\) be another element in the orbit of
+  \(x\).
+\item
+  Then there exists a \(g\in G\) such that \(g\cdot x = y\), so
+  \(x = g^{-1}\cdot y\)
+\item
+  Then
+  \begin{align*}
+  h \in G\cdot x 
+  &\iff h\cdot x = x && \text{by being in the stabilizer} \\
+  &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y && \text{using that $x, y$ are in the same orbit} \\
+  &\iff (g h g^{-1}) \cdot y = y \\
+  &\iff ghg^{-1}\in G_y && \text{by the defn of the stabilizer}\\
+  &\iff h\in g ^{-1}  G_y g
+  ,\end{align*}
+\end{itemize}
+
+so every \(h\in G\cdot x\) is conjugate to some element in \(G_y\).
+
+\end{proof}
+
+\begin{proof}[of b]
+
+Let \(G\) act on its subgroups by conjugation,
+
+\begin{itemize}
+\item
+  The orbit \(G\cdot H\) is the set of all subgroups conjugate to \(H\),
+  and
+\item
+  The stabilizer of \(H\) is \(G_H = N_G(H)\).
+\item
+  By orbit-stabilizer,
+  \begin{align*}
+  G\cdot H = [G: G_H] = [G: N_G(H)]
+  .\end{align*}
+\item
+  Since \({\left\lvert {H} \right\rvert} = n\), and all of its conjugate
+  also have order \(n\).
+\item
+  Note that
+  \begin{align*}
+  H\leq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies {1\over {\left\lvert {N_G(H)} \right\rvert}} \leq {1\over {\left\lvert {H} \right\rvert}}
+  ,\end{align*}
+\item
+  Now \emph{strictly} bound the size of the union by overcounting their
+  intersections at the identity:
+  \begin{align*}
+  {\left\lvert {\displaystyle\bigcup_{g\in G}gHg^{-1}} \right\rvert} 
+  &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+  & \text{strictly overcounts since they intersect in at least the identity} \\
+  &= [G: N_G(H)] {\left\lvert {H} \right\rvert} \\
+  &= {{\left\lvert {G} \right\rvert} \over {\left\lvert {N_G(H)} \right\rvert}} {\left\lvert {H} \right\rvert} \\
+  & \text{since $G$ is finite} \\
+  &\leq {{\left\lvert {G} \right\rvert} \over {\left\lvert {H} \right\rvert}} {\left\lvert {H} \right\rvert} \\
+  &= {\left\lvert {G} \right\rvert}
+  .\end{align*}
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(G\curvearrowright X\) transitively where
+  \({\left\lvert {X} \right\rvert} \geq 2\)
+\item
+  An action is transitive iff there is only one orbit, so
+  \({\left\lvert {X/G} \right\rvert} = 1\).
+\item
+  Apply Burnside's Lemma
+  \begin{align*}
+  1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}
+  \end{align*}
+\item
+  Note that \(X^e = X\), since the identity must fix every element, so
+  \({\left\lvert {X^e} \right\rvert} \geq 2\).
+\item
+  Not \emph{every} other term in the sum can be greater than 1,
+  otherwise the RHS is greater than the size of \(G\)
+\item
+  Thus we must have \({\left\lvert {X^g} \right\rvert} = 0\) for some
+  \(g\in G\), i.e.~\(g\) has no fixed points in \(X\).
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
 \hypertarget{groups-sylow-theory}{%
 \section{Groups: Sylow Theory}\label{groups-sylow-theory}}
 
@@ -1881,242 +2117,6 @@ Let \(G\) be a group of order 60 whose Sylow 3-subgroup is normal.
 \item
   Prove that the Sylow 5-subgroup is also normal.
 \end{enumerate}
-
-\hypertarget{groups-group-actions}{%
-\section{Groups: Group Actions}\label{groups-group-actions}}
-
-\hypertarget{fall-2012-1-work}{%
-\subsection{\texorpdfstring{Fall 2012 \#1
-\(\work\)}{Fall 2012 \#1 \textbackslash work}}\label{fall-2012-1-work}}
-
-Let \(G\) be a finite group and \(X\) a set on which \(G\) acts.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(x\in X\) and
-  \(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
-  Show that \(G_x\) is a subgroup of \(G\).
-\item
-  Let \(x\in X\) and
-  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
-  Prove that there is a bijection between elements in \(G\cdot x\) and
-  the left cosets of \(G_x\) in \(G\).
-\end{enumerate}
-
-\hypertarget{fall-2015-2-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#2
-\(\work\)}{Fall 2015 \#2 \textbackslash work}}\label{fall-2015-2-work}}
-
-Let \(G\) be a finite group, \(H\) a \(p{\hbox{-}}\)subgroup, and \(P\)
-a sylow \(p{\hbox{-}}\)subgroup for \(p\) a prime. Let \(H\) act on the
-left cosets of \(P\) in \(G\) by left translation.
-
-Prove that this is an orbit under this action of length 1.
-
-Prove that \(xP\) is an orbit of length 1 \(\iff H\) is contained in
-\(xPx^{-1}\).
-
-\hypertarget{spring-2016-5-work}{%
-\subsection{\texorpdfstring{Spring 2016 \#5
-\(\work\)}{Spring 2016 \#5 \textbackslash work}}\label{spring-2016-5-work}}
-
-Let \(G\) be a finite group acting on a set \(X\). For \(x\in X\), let
-\(G_x\) be the stabilizer of \(x\) and \(G\cdot x\) be the orbit of
-\(x\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that there is a bijection between the left cosets \(G/G_x\) and
-  \(G\cdot x\).
-\item
-  Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
-  nontrivial by considering that action of \(G\) on \(X=G\) by
-  conjugation.
-\end{enumerate}
-
-\hypertarget{fall-2017-1-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#1
-\(\work\)}{Fall 2017 \#1 \textbackslash work}}\label{fall-2017-1-work}}
-
-Suppose the group \(G\) acts on the set \(A\). Assume this action is
-faithful (recall that this means that the kernel of the homomorphism
-from \(G\) to \(\operatorname{Sym}(A)\) which gives the action is
-trivial) and transitive (for all \(a, b\) in \(A\), there exists \(g\)
-in \(G\) such that \(g \cdot a = b\).)
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
-  Prove that for any \(a \in A\),
-  \begin{align*}
-  \displaystyle\bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
-  .\end{align*}
-\item
-  Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
-  every abelian transitive subgroup of \(S_n\) has order \(n\).
-\end{enumerate}
-
-\hypertarget{fall-2018-2-done}{%
-\subsection{\texorpdfstring{Fall 2018 \#2
-\(\done\)}{Fall 2018 \#2 \textbackslash done}}\label{fall-2018-2-done}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Suppose the group \(G\) acts on the set \(X\) . Show that the
-  stabilizers of elements in the same orbit are conjugate.
-\item
-  Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
-  that the union of the conjugates of \(H\) is strictly smaller than
-  \(G\), i.e.
-  \begin{align*}
-  \displaystyle\bigcup_{g\in G} gHg^{-1}\subsetneq G
-  \end{align*}
-\item
-  Suppose \(G\) is a finite group acting transitively on a set \(S\)
-  with at least 2 elements. Show that there is an element of \(G\) with
-  no fixed points in \(S\).
-\end{enumerate}
-
-\begin{concept}
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Orbit:
-  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X\)
-\item
-  Stabilizer:
-  \(G_x \coloneqq\left\{{g\in G{~\mathrel{\Big|}~}g\cdot x = x}\right\} \leq G\)
-\item
-  Orbit-Stabilizer: \(G\cdot x \simeq G/G_x\).
-\item
-  \(abc\in H \iff b\in a^{-1}H c^{-1}\)
-\item
-  Set of orbits for \(G\curvearrowright X\), notated \(X/G\).
-\item
-  Set of fixed points for \(G\curvearrowright X\), notated \(X^g\).
-\item
-  Burnside's Lemma:
-  \({\left\lvert {X/G} \right\rvert} \cdot {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}\)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Number of orbits equals average number of fixed points.
-  \end{itemize}
-\end{itemize}
-
-\end{concept}
-
-\begin{solution}
-
-\envlist
-
-\begin{proof}[of a]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Fix \(x\) and let \(y\in G_x\) be another element in the orbit of
-  \(x\).
-\item
-  Then there exists a \(g\in G\) such that \(g\cdot x = y\), so
-  \(x = g^{-1}\cdot y\)
-\item
-  Then
-  \begin{align*}
-  h \in G\cdot x 
-  &\iff h\cdot x = x && \text{by being in the stabilizer} \\
-  &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y && \text{using that $x, y$ are in the same orbit} \\
-  &\iff (g h g^{-1}) \cdot y = y \\
-  &\iff ghg^{-1}\in G_y && \text{by the defn of the stabilizer}\\
-  &\iff h\in g ^{-1}  G_y g
-  ,\end{align*}
-\end{itemize}
-
-so every \(h\in G\cdot x\) is conjugate to some element in \(G_y\).
-
-\end{proof}
-
-\begin{proof}[of b]
-
-Let \(G\) act on its subgroups by conjugation,
-
-\begin{itemize}
-\item
-  The orbit \(G\cdot H\) is the set of all subgroups conjugate to \(H\),
-  and
-\item
-  The stabilizer of \(H\) is \(G_H = N_G(H)\).
-\item
-  By orbit-stabilizer,
-  \begin{align*}
-  G\cdot H = [G: G_H] = [G: N_G(H)]
-  .\end{align*}
-\item
-  Since \({\left\lvert {H} \right\rvert} = n\), and all of its conjugate
-  also have order \(n\).
-\item
-  Note that
-  \begin{align*}
-  H\leq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies {1\over {\left\lvert {N_G(H)} \right\rvert}} \leq {1\over {\left\lvert {H} \right\rvert}}
-  ,\end{align*}
-\item
-  Now \emph{strictly} bound the size of the union by overcounting their
-  intersections at the identity:
-  \begin{align*}
-  {\left\lvert {\displaystyle\bigcup_{g\in G}gHg^{-1}} \right\rvert} 
-  &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
-  & \text{strictly overcounts since they intersect in at least the identity} \\
-  &= [G: N_G(H)] {\left\lvert {H} \right\rvert} \\
-  &= {{\left\lvert {G} \right\rvert} \over {\left\lvert {N_G(H)} \right\rvert}} {\left\lvert {H} \right\rvert} \\
-  & \text{since $G$ is finite} \\
-  &\leq {{\left\lvert {G} \right\rvert} \over {\left\lvert {H} \right\rvert}} {\left\lvert {H} \right\rvert} \\
-  &= {\left\lvert {G} \right\rvert}
-  .\end{align*}
-\end{itemize}
-
-\end{proof}
-
-\begin{proof}[of c]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Let \(G\curvearrowright X\) transitively where
-  \({\left\lvert {X} \right\rvert} \geq 2\)
-\item
-  An action is transitive iff there is only one orbit, so
-  \({\left\lvert {X/G} \right\rvert} = 1\).
-\item
-  Apply Burnside's Lemma
-  \begin{align*}
-  1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}
-  \end{align*}
-\item
-  Note that \(X^e = X\), since the identity must fix every element, so
-  \({\left\lvert {X^e} \right\rvert} \geq 2\).
-\item
-  Not \emph{every} other term in the sum can be greater than 1,
-  otherwise the RHS is greater than the size of \(G\)
-\item
-  Thus we must have \({\left\lvert {X^g} \right\rvert} = 0\) for some
-  \(g\in G\), i.e.~\(g\) has no fixed points in \(X\).
-\end{itemize}
-
-\end{proof}
-
-\end{solution}
 
 \hypertarget{groups-classification}{%
 \section{Groups: Classification}\label{groups-classification}}
