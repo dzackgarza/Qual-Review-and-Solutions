@@ -75,6 +75,13 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 :::
 
 
+:::{.proposition title="Tower law for subgroups"}
+\[
+K\leq H \leq G \implies [G: K] = [G:H] [H: K]
+.\]
+:::
+
+
 
 
 :::{.fact}
@@ -285,6 +292,13 @@ aH = bH \iff a\in bH \iff a=bh \text{ for some } h \iff b\inv a = h \iff ba\inv 
 :::{.remark title="Common coset trick"}
 If you can reduce a problem to showing $X \subseteq H$, it suffices to show $xH = H$ for all $x\in X$.
 :::
+
+
+:::{.remark}
+Cosets form an equivalence relation and thus partition a group.
+Nice trick: write $G/H = \ts{ g_1 H, g_2 H,\cdots, g_n H }$, then $G = \disjoint_{i\leq n} g_i H$.
+:::
+
 
 :::{.theorem title="Counting Quotients"}
 If $H\normal G$, then
