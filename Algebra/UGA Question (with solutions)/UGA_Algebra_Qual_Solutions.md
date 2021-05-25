@@ -118,6 +118,7 @@
 \newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
@@ -183,6 +184,7 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
@@ -319,8 +321,9 @@
 \newcommand{\del}[0]{{\partial}}
 \newcommand{\directlim}[0]{\varinjlim}
 \newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
 \newcommand{\dual}[0]{ {}^{ \check{} }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
@@ -521,6 +524,7 @@
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\TMF{ \mathrm{TMF} }
 \newcommand\tmf{ \mathrm{tmf} }
+\newcommand\Fix{ \mathrm{Fix} }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
@@ -748,14 +752,113 @@ Many other solutions contain input and ideas from other graduate students and fa
 
 # Group Theory: General
 
-## Spring 2020 #2 $\work$
+## Cosets
+
+### Spring 2020 #2 $\done$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
+:::{.concept}
+\envlist
+
+- Division algorithm: $(a,b)= d\implies as+bt =1$ for some $s, t$.
+- Coset containment trick: $X\subseteq N \iff xN = N$ for all $x$.
+:::
+
+:::{.strategy}
+Recognize that it suffices to show $hN = N$.
+Context cue: coprimality hints at division algorithm.
+Descend to quotient so you can leverage both the order of $h$ *and* the order of cosets simultaneously.
+:::
+
+:::{.solution}
+\envlist
+
+- For ease of notation, replace $H$ in the problem with $N$ so we remember which one is normal.
+- Write $n\da \# N$ and $m \da [G:N] = \#G/N$, where the quotient makes sense since $N$ is normal.
+- Let $H \leq G$ with $\# H = n$, we'll show $H=N$.
+  - Since $\# H = \# N$ it suffices to show $H \subseteq N$.
+  - It further suffices to show $hN = N$ for all $h\in H$.
+- Noting $\gcd(m, n)=1$, use the division algorithm to write $1 = ns + mt$ for some $s,t\in \ZZ$.
+- The result follows from a computation:
+\[
+hN 
+&= h^1 N \\
+&= h^{ns + mt}N \\
+&= h^{ns} N \cdot h^{mt}N \\
+&= \qty{h^n N}^s \cdot \qty{h^t N}^m \\
+&= (eN)^s \cdot N \\
+&= N
+,\]
+  - We've used that $h\in H \implies o(h) \divides \# H = n$ by Lagrange, so $h^n = e$.
+  - We've also used that $\# G/N = m$, so $(xH)^m = H$ for any $xH\in G/H$.
+
+:::
+
+### Fall 2014 #6 $\done$
+Let $G$ be a group and $H, K < G$ be subgroups of finite index.
+Show that
+\[
+[G: H\intersect K] \leq [G: H] ~ [G:K]
+.\]
 
 
+:::{.concept}
+\envlist
 
-## Spring 2019 #4 $\done$
+- For $H, K\leq G$, intersection is again a subgroup of everything: $H\int K \leq H, K, G$ by the one-step subgroup test.
+- Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
+- Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
+- Common trick: just list out all of the darn cosets!
+:::
+
+:::{.strategy}
+Count in towers, show that distinct coset reps stay distinct.
+
+:::
+
+:::{.solution}
+\envlist
+
+- $H \intersect K \leq H \leq G \implies [G: H \intersect K] = [G: H] [H : H \intersect K]$
+- So it suffices to show $[H: H \intersect K] \leq [G: K]$
+- Write $H/H \intersect K = \ts{ h_1 J, \cdots, h_m J }$ as distinct cosets where $J \da H \intersect J$.
+- Then $h_i J\neq h_j J \iff h_i h_j\inv \not\in J = H \intersect K$.
+- $H$ is a subgroup, so $h_i h_j\inv \in H$ forces this not to be in $K$.
+- But then $h_i K \neq h_j K$, so these are distinct cosets in $G/K$.
+- So $\#G/K \geq m$.
+:::
+
+### Spring 2013 #3 $\done$
+Let $P$ be a finite $p\dash$group.
+Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ nontrivially.
+
+\todo[inline]{Clean up, sketchy argument.}
+
+:::{.solution}
+\envlist
+
+- Let $N\normal P$, then for each conjugacy class $[n_i]$ in $N$, $H \intersect [g_i] = [g_i]$ or is empty.
+- $G = \disjoint_{i\leq M} [g_i]$ is a disjoint union of conjugacy classes, and the conjugacy classes of $H$ are of the form $[g_i] \intersect H$.
+- Then pull out the center
+\[
+H = \Disjoint_{i\leq M} [g_i] \intersect H = \qty{ Z(G) \intersect H } \disjoint \Disjoint_{i\leq M'} [g_i]
+.\]
+- Taking cardinalities, 
+\[
+\# H = \# \qty{ Z(G) \intersect H} + \sum_{i\leq M'} \# [g_i]
+.\]
+- $p$ divides $H$ since $H\leq P$ and $P$ is a $p\dash$group.
+- Each $\# [g_i] \geq 2$ since the trivial conjugacy classes appear in the center, forcing $\# [g_i] \geq p$.
+- $p$ divides $\# [g_i]$ since $\# [g_i]$ must divide $\# P = p^k$
+- So $p$ must divide the remaining term $Z(G) \intersect H$, which makes it nontrivial.
+
+:::
+
+
+## Burnside / Class Equation
+
+### Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
 a.
@@ -774,16 +877,27 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
+:::{.warnings}
+(DZG) This is a slightly anomalous problem!
+It's fun and worth doing, because it uses the major counting formulas.
+Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
+:::
+
 :::{.concept}
 \envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
-- Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
-- Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+- Notation: $X^g = \theset{x\in X\suchthat g\cdot x = x}$
+- Burnside's formula: $\#{X/G} = {1 \over \# G} \sum \# {X^g}$.
+- Definition of conjugacy class: $C(g) = \ts{ hgh\inv \st h\in G }$.
 :::
 
 :::{.strategy}
-Burnside.
+Fixed points of the conjugation action are precisely commuting elements.
+Apply Burnside.
+Context clue: $1/[G:Z(G)]$ is weird, right? 
+Use that $[G:Z(G)] = \# G/\# Z(G)$, so try to look for $\#Z(G)/\#(G)$ somewhere.
+Count sizes of centralizers.
 :::
 
 :::{.solution}
@@ -792,54 +906,58 @@ Burnside.
 :::{.proof title="Part a"}
 \envlist
 
-- Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
+- Define a sample space $\Omega = G \cross G$, so $\# {\Omega} = (\# {G})^2$.
 
-- Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
-  - Define and note: 
-    \[
-    A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
-    .\]
+- Identify the event we want to analyze: 
+\[
+A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1} \subseteq \Omega
+.\]
+- Note that the slices are centralizers:
+\[
+A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g) \implies A = \Disjoint_{g\in G} Z(g)
+.\]
 
 - Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
  
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
   - What are the orbits? 
-    $$
-    \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
-    ,$$ 
-    which is the conjugacy class of $g$.
+  $$
+  \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+  ,$$ 
+  which is the **conjugacy class** of $g$.
+  In particular, the number of orbits is the number of conjugacy classes.
 
   - What are the fixed points? 
-    $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
-    which are the elements of $G$ that commute with $g$, which is precisely $A_g$.
+  $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+  which are the elements of $G$ that commute with $g$, which is isomorphic to $A_g$.
 
-- Note $\abs{X/G} = n$, the number of conjugacy classes.
 
-- Note that 
+- Identifying centralizers with fixed points, 
   $$
-  \abs{A} = \abs{\disjoint_{g\in G} A_g} = \sum_{g\in G} \abs{A_g} = \sum_{g\in G}\abs{X^g}
+  \#{A} = \#{\Disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
   .$$
 
 
 - Apply Burnside
 $$
-\abs{X / G} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+\# {X / G} = \frac { 1 } { \# G  } \sum _ { g \in G } \# X ^ { g } ,
 $$
+- Note $\#{X/G} = n$, i.e. the number of conjugacy classes is the number of orbits.
 - Rearrange and use definition:
 $$
-n \abs{G}
-= \abs{X/G} \abs{G}
-= \sum _ { g \in G } \left| X ^ { g } \right|
+n \cdot \#{G}
+= \qty{\#{X/G} }\cdot \#{G}
+= \sum _ { g \in G } \# X ^ { g } 
 $$
 - Compute probability:
 \[
 P(A)
-= {\abs A \over \abs \Omega} 
-= \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
-= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
-= \frac{n \abs{G}}{\abs{G}^2} 
-= \frac n {\abs G}
+= {\# A \over \# \Omega} 
+= \Sum_{ g \in G } \frac{\# X ^ { g }}{ ( \# {G} )^2} 
+= \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
+= \frac{n \cdot \#{G}}{( \#{G} )^2} 
+= \frac n {\# G}
 .\]
 
 :::
@@ -849,37 +967,49 @@ Statement of the class equation:
 \[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in $G$.
 :::
 
 :::{.proof title="Part c"}
-As shown in part 1,
-$$
-\mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
-,$$
-and by the class equation
+\envlist
 
-$$
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
-$$
+> (DZG): I couldn't convince myself that a previous proof using the class equation actually works.
+> Instead, I'll borrow the proof from [this note](https://math.berkeley.edu/~tb65536/Commuting_Probability.pdf)
 
-Now note
-
-- Each element of $Z(G)$ is in its own conjugacy class, contributing $\abs{Z(G)}$ classes to $n$.
-
-- Every other class of elements in $G\setminus Z(G)$ contains at least 2 elements
-  - Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
-
-Thus
+- Write the event as $A = \Disjoint_{g\in G} \ts{g} \cross Z(g)$, then
 \[
-n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
-&= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
-&= \frac 1 2 \abs{G} + \frac 1 2 \abs{Z(G)} \\
-\\
-\implies \frac n {\abs G}
-&\leq \frac 1 2 \frac{\abs{G}}{\abs{G}}  + \frac 1 2 \frac{\abs{Z(G)}}{\abs{G}} \\
-&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
+P(A) 
+= {\# A\over (\# G)^2} 
+= {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
 .\]
+- Attempt to estimate the sum: pull out central elements $g\in Z(G)$.
+  - Note $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$
+  - Note 
+  \[
+  g\not\in Z(G)\implies \# Z(g) \leq {1\over 2} \# G
+  ,\]
+  since $Z(g) \leq G$ is a subgroup, and 
+  \[
+  [G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2
+  .\]
+- Use these facts to calculate:
+\[
+P(A) 
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&\leq {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} {1\over 2} \# G } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \qty{ \sum_{g\not\in Z(g)} {1\over 2} } \cdot \# G } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \sm Z(G) ) } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#G - {1\over 2} \# Z(G) } \\
+&= {1\over (\# G) } \qty{ {1\over 2} \# Z(G) + {1\over 2} \#G  } \\
+&= {1\over 2} \qty{1 + { \# Z(G) \over \# G }} \\
+&= {1\over 2} \qty{1 + { 1 \over [G : Z(G)]  }}
+.\]
+
+
 
 :::
 
@@ -887,130 +1017,130 @@ n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
 
 :::
 
-## Spring 2012 #2 $\work$
-Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
+## Group Actions / Representations
 
-a.
-Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
-
-b.
-Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
-
-## Spring 2017 #1 $\work$
+### Spring 2017 #1 $\done$
 Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
 
 > (Recall that this means that for an element $x\in G$, $\pi(x)$ acts by left translation on $G$.)
 
 Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\pi(x)$ is even and $\abs{G} / \abs{\pi(x)}$ is odd.
 
-## Fall 2016 #1 $\work$
-Let $G$ be a finite group and $s, t\in G$ be two distinct elements of order 2.
-Show that subgroup of $G$ generated by $s$ and $t$ is a dihedral group.
-
-> Recall that the dihedral groups of order $2m$ for $m\geq 2$ are of the form
-\[
-D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigma\inv \tau}
-.\]
-
-## Fall 2015 #1 $\work$
-Let $G$ be a group containing a subgroup $H$ not equal to $G$ of finite index.
-Prove that $G$ has a normal subgroup which is contained in every conjugate of $H$ which is of finite index.
-
-## Spring 2015 #1 $\work$
-For a prime $p$, let $G$ be a finite $p\dash$group and let $N$ be a normal subgroup of $G$ of order $p$.
-Prove that $N$ is contained in the center of $G$.
-
-## Fall 2014 #6 $\work$
-Let $G$ be a group and $H, K < G$ be subgroups of finite index.
-Show that
-\[
-[G: H\intersect K] \leq [G: H] ~ [G:K]
-.\]
-
-## Spring 2013 #3 $\work$
-Let $P$ be a finite $p\dash$group.
-Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ nontrivially.
-
-## Fall 2019 Midterm #1  $\work$
-Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
-
-## Fall 2019 Midterm #4 $\work$
-Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
-
-## Fall 2019 Midterm #5 $\work$
-Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
-
-> Note: this is a good problem, it tests several common theorems at once.
-> Proof due to Paco Adajar.
+:::{.warnings}
+(DZG): This seems like an unusually hard group theory problem.
+My guess is this year's qual class spent more time than usual on the proof of Cayley's theorem.
+:::
 
 :::{.concept}
 \envlist
 
-Important notations and definitions:
-
--   The **center** of $G$, denoted by $Z(G)$, is the subset of elements
-    of $G$ which commute with all elements of $G$. That is, if
-    $x \in Z(G)$, then for all $g \in G$, $gx = xg$:
-    $$Z(G) = \{ x \in G : gx = xg \, \text{for all } x \in G \}.$$
-
-    In fact, $Z(G)$ is not just a subset of $G$, but a normal subgroup
-    of $G$.
-
--   The **commutator subgroup** of $G$, denoted by $[G, G]$, is the
-    subgroup of $G$ generated by the commutators of $G$, i.e., the
-    elements of the form $ghg^{-1}h^{-1}$:
-    $$[G, G] = \langle ghg^{-1}h^{-1} : g, h \in G \rangle.$$
-
-    The commutator subgroup $[G,G]$ is the smallest normal subgroup of
-    $G$ whose quotient is abelian. That is, if $H$ is a normal subgroup
-    of $G$ for which $G/H$ is abelian, then $[G, G] \le H$.
-
-    Moreover, $G$ is abelian if and only if $[G,G]$ is trivial.
-
-Theorems to remember and know how to prove:
-
--   **$G/Z(G)$ Theorem**: If $G/Z(G)$ is cyclic, then $G$ is abelian,
-    i.e., $G/Z(G)$ is in fact trivial.
-
--   **Lagrange's Theorem**: If $G$ is a group of finite order and $H$ is
-    a subgroup of $G$, then the order of $H$ divides that of $G$.
-
-    - One consequence of this is that every group of prime order is
-    cyclic.
-
--   A $p$-group (a group of order $p^n$ for some prime $p$ and
-    some positive integer $n$) has nontrivial center.
-
--   A consequence of the theorems above: every group of order $p^2$
-    (where $p$ is prime) is abelian.
-
+- $\Sym(G) \da \Aut_\Set(G, G)$ is the group of set morphisms from $G$ to itself, i.e. permutations of elements of $G$.
+- More standard terminology: this is related to the **left regular representation** where $g\mapsto \phi_g$ where $\phi_g(x) = gx$, regarded instead as a permutation representation.
+  - This action is transitive!
+- Cayley's theorem: every $G$ is isomorphic to a subgroup of a permutation group.
+  In particular, take \( \ts{ \phi_g \st G\in G } \) with function composition as a subgroup of $\Aut_\Set(G)$.
 :::
-
 
 :::{.solution}
-Since $Z(G)$ is a subgroup of $G$ and $|G| = p^3$, by Lagrange's
-theorem, $|Z(G)| \in \{1, p, p^2, p^3\}$.
+\envlist
 
-Since we stipulated that $G$ is nonabelian, $|Z(G)| \ne p^3$. Also,
-since $G$ is a $p$-group, it has nontrivial center, so $|Z(G)| \ne 1$.
-Finally, by the $G/Z(G)$ theorem, $|Z(G)| \ne p^2$: if $|Z(G)| = p^2$,
-then $|G/Z(G)| = p$ and so $G/Z(G)$ would be cyclic, meaning that $G$ is
-abelian. Hence, $|Z(G)| = p$.
+> (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument.
+  Most of the key ideas are borrowed [from here](https://math.stackexchange.com/questions/3028603/show-that-phig-is-an-even-permutation).
 
-Then, since $|Z(G)| = p$, we have that $|G/Z(G)| = p^2$, and so $G/Z(G)$
-is abelian. Thus, $[G, G] \in Z(G)$. Since $|Z(G)| = p$, then
-$|[G,G]| \in \{ 1, p\}$ again by Lagrange's theorem. If $|[G,G]| = p$
-then $[G,G] = Z(G)$ and we are done. And, indeed, we must have
-$|[G,G]| = p$, because $G$ is nonabelian and so $|[G,G]| \ne 1$.
+- Write $k \da o(\pi_g)$, then since $\pi$ is injective, $k = o(g)$ in $G$.
+- Since $\pi_g$ as a cycle is obtained from the action of $g$, we can pick an element $x_0$ in $G$, take the orbit under the action, and obtain a cycle of length $k$ since the order of $g$ is $k$.
+  Then continue by taking any $x_1$ not in the first orbit and taking *its* orbit.
+  Continuing this way exhausts all group elements and yields a decomposition into disjoint cycles:
+\[
+\pi_g = 
+(x_0, gx_0, g^2 x_0, \cdots, g^{k-1} x_0)
+(x_1, gx_1, g^2 x_1, \cdots, g^{k-1} x_1)
+\cdots
+(x_m, gx_m, g^2 x_m, \cdots, g^{k-1} x_m)
+.\]
+- So there are $m$ orbits all of length exactly $k$.
+  Proceed by casework.
+- If $k$ is even:
+  - This yields $m$ odd cycles, and thus $\pi$ has zero (an even number) of even cycles.
+  - Thus $\pi \in \ker \sgn$ and is an even permutation.
+- If $k$ is odd
+  - This yields $m$ even cycles, thus an even number of even cycles iff $m$ is even 
+- The claim is that the number of orbit representatives $m$ is equal to $[G:H] = \# G/H$ for $H = \gens{ g }$. 
+  - Proof: define a map
+  \[
+  \ts{ \text{Orbit representatives } x_i } &\to G/H \\
+  x &\mapsto xH
+  .\]
+  - This is injective and surjective because
+  \[
+  xH = yH &\iff xy\inv \in H = \gens{ g } \\
+  &\iff xy\inv = g^\ell \\
+  &\iff x=g^\ell y \\
+  &\iff y\in \OO_x
+  ,\]
+  so $y$ and $x$ are in the same orbit and have the same orbit representative.
+
+- We now have
+\[
+\pi_g \text{ is an even permutation } \iff 
+\begin{cases}
+k \text{ is odd and } m \text{ is even} &  
+\\
+\text{ or } & \\
+k \text{ is even}
+ & .
+\end{cases}
+\]
+- Everything was an iff, so flip the evens to odds:
+\[
+\pi_g \text{ is an odd permutation } \iff 
+\begin{cases}
+k \text{ is even and } m \text{ is odd} &  
+\\
+\text{ or } & \\
+k \text{ is odd}
+ & .
+\end{cases}
+.\]
+- Then just recall that $k\da o(\pi_g)$ and 
+\[
+m= [G: \gens{ g }] = \# G / \# \gens{ g }= \# G / o(g) = \# G/ o(\pi_g)
+.\]
+
+
+
+
 :::
 
 
-## Spring 2021 #2 $\done$
+### Fall 2015 #1 $\done$
+Let $G$ be a group containing a subgroup $H$ not equal to $G$ of finite index.
+Prove that $G$ has a normal subgroup which is contained in every conjugate of $H$ which is of finite index.
+
+> (DZG) A remark: it's not the conjugates that should be finite index here, but rather the normal subgroup.
+
+:::{.solution}
+\envlist
+
+- Let $H\leq G$ and define $n\da [G:H]$.
+- Write $G/H = \ts{ x_1 H, \cdots, x_n H }$ for the finitely many cosets.
+- Let $G$ act on $G/H$ by left translation, so $g\cdot xH \da gxH$..
+  Call the action $\psi: G\to \Sym(G/H)$.
+- Then $\Stab(xH) = xHx\inv$ is a subgroup conjugate to $H$, and $K\da \ker \psi = \Intersect_{i=1}^n xHx\inv$ is the intersection of all conjugates of $H$.
+- Kernels are normal, so $K\normal G$, and $K\subseteq xHx\inv$ for all $x$, meaning $K$ is contained in every conjugate of $H$.
+- The index $[G:K]$ is finite since $G/K \cong \im \psi$ by the first isomorphism theorem, and $\# \im \psi \leq \# \Sym(G/H) = \# S_n = n! < \infty$.
+
+:::
+
+
+## Conjugacy Classes
+
+### Spring 2021 #2 $\done$
 
 Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
 Prove that $H$ is contained in the center of $G$.
 
-> Solution due to Swaroop Hegde.
+> Solution due to Swaroop Hegde, typed up + modifications added by DZG.
 
 :::{.concept}
 \envlist
@@ -1054,6 +1184,247 @@ p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 - $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
 
 :::
+
+
+### Spring 2015 #1 $\done$
+For a prime $p$, let $G$ be a finite $p\dash$group and let $N$ be a normal subgroup of $G$ of order $p$.
+Prove that $N$ is contained in the center of $G$.
+
+:::{.concept}
+\envlist
+
+- Definition of conjugacy class: $[x] = \ts{gxg\inv \st g\in G}$.
+- A conjugacy class $[x]$ is trivial iff $[x] = \ts{ x }$ iff $x\in Z(G)$.
+- Sizes of conjugacy classes divide the order of the group they live in.
+  - This is orbit-stabilizer: $G\actson G$ by $g\cdot x \da gxg\inv$, so $\OO(x) = [x]$.
+    Then $\# \OO(x) = \# G / \# \Stab(x)$, so $\# \OO(x)$ divides $\# G$.
+:::
+
+:::{.solution}
+\envlist
+
+- Use that $N\normal G \iff N = \disjoint' [n_i]$ is a *disjoint* union of (full) conjugacy classes.
+- Take cardinalities:
+\[
+p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
+.\]
+- The size of each conjugacy class divides the size of $H$ by orbit-stabilizer, so $\# [n_i] \divides p$ for each $i$.
+- But the entire second term must sum to $p-1$ for this equality to hold, which forces $\#[n_i] = 1$ (and incidentally $m=p-1$)
+- Then $[n_i] = \ts{ n_i } \iff n_i \in Z(G)$, and this holds for all $i$, so $N \subseteq Z(G)$.
+:::
+
+## Unsorted / Counting Arguments
+
+
+### Fall 2019 Midterm #5 $\done$
+Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
+
+> Note: this is a good problem, it tests several common theorems at once.
+> Proof due to Paco Adajar.
+
+:::{.concept}
+\envlist
+
+Important notations and definitions:
+
+-   The **center** of $G$, denoted by $Z(G)$, is the subset of elements
+    of $G$ which commute with all elements of $G$. That is, if
+    $x \in Z(G)$, then for all $g \in G$, $gx = xg$:
+    $$Z(G) = \{ x \in G : gx = xg \, \text{for all } g \in G \}.$$
+
+    In fact, $Z(G)$ is not just a subset of $G$, but a normal subgroup
+    of $G$.
+
+-   The **commutator subgroup** of $G$, denoted by $[G, G]$, is the
+    subgroup of $G$ generated by the commutators of $G$, i.e., the
+    elements of the form $ghg^{-1}h^{-1}$:
+    $$[G, G] = \langle ghg^{-1}h^{-1} : g, h \in G \rangle.$$
+
+    The commutator subgroup $[G,G]$ is the smallest normal subgroup of
+    $G$ whose quotient is abelian. That is, if $H$ is a normal subgroup
+    of $G$ for which $G/H$ is abelian, then $[G, G] \le H$.
+
+    Moreover, $G$ is abelian if and only if $[G,G]$ is trivial.
+
+Theorems to remember and know how to prove:
+
+-   **$G/Z(G)$ Theorem**: If $G/Z(G)$ is cyclic, then $G$ is abelian,
+    i.e., $G/Z(G)$ is in fact trivial.
+
+-   **Lagrange's Theorem**: If $G$ is a group of finite order and $H$ is
+    a subgroup of $G$, then the order of $H$ divides that of $G$.
+
+    - One consequence of this is that every group of prime order is
+    cyclic.
+
+-   A $p$-group (a group of order $p^n$ for some prime $p$ and
+    some positive integer $n$) has nontrivial center.
+
+-   A consequence of the theorems above: every group of order $p^2$
+    (where $p$ is prime) is abelian.
+
+:::
+
+:::{.solution}
+Since $Z(G)$ is a subgroup of $G$ and $|G| = p^3$, by Lagrange's
+theorem, $|Z(G)| \in \{1, p, p^2, p^3\}$.
+
+Since we stipulated that $G$ is nonabelian, $|Z(G)| \ne p^3$. Also,
+since $G$ is a $p$-group, it has nontrivial center, so $|Z(G)| \ne 1$.
+Finally, by the $G/Z(G)$ theorem, $|Z(G)| \ne p^2$: if $|Z(G)| = p^2$,
+then $|G/Z(G)| = p$ and so $G/Z(G)$ would be cyclic, meaning that $G$ is
+abelian. Hence, $|Z(G)| = p$.
+
+Then, since $|Z(G)| = p$, we have that $|G/Z(G)| = p^2$, and so $G/Z(G)$
+is abelian. Thus, $[G, G] \in Z(G)$. Since $|Z(G)| = p$, then
+$|[G,G]| \in \{ 1, p\}$ again by Lagrange's theorem. If $|[G,G]| = p$
+then $[G,G] = Z(G)$ and we are done. And, indeed, we must have
+$|[G,G]| = p$, because $G$ is nonabelian and so $|[G,G]| \ne 1$.
+:::
+
+### Spring 2012 #2 $\done$
+Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
+
+a.
+Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
+
+b.
+Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
+
+:::{.concept}
+\envlist
+
+- $p$ groups have nontrivial centers.
+- Definition of maximality and $p\dash$groups
+- Sylows are conjugate
+- $Z(G) \char G$ always.
+- Transitivity of characteristic: $A \char B$ and $B\normal C$ implies $A \normal C$.
+:::
+
+:::{.strategy}
+Just use maximality for (a).
+For (b), centers are always abelian, so $Z(H)$ is good to consider, just need to ensure it's normal in $G$.
+Use transitivity of characteristic.
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- By definition, $S\in \Syl_p(G) \iff S$ is a *maximal* $p\dash$subgroup: $S<G$ is a $p\dash$group, so $\#S = p^k$ for some $k$, $S$ is a proper subgroup, and $S$ is maximal in the sense that there are no proper $p\dash$subgroups $S'$ with $S \subseteq S' \subseteq G$.
+- Since $\# H = p^i$, $H$ is a $p\dash$subgroup of $G$.
+- If $H$ is maximal, then by definition $H\in \Syl_p(G)$
+- Otherwise, if $H$ is not maximal, there exists an $H' \supseteq H$ with $H'\leq G$ a $p\dash$subgroup properly containing $H$.
+  - In this apply the same argument to $H'$: this yields a proper superset containment at every stage, and since $G$ is finite, there is no infinite ascending chain of proper supersets.
+  - So this terminates in some maximal $p\dash$subgroup $S$, i.e. a Sylow $p\dash$subgroup.
+- So $H \subseteq S$ for some $S\in \Syl_p(G)$.
+- All Sylows are conjugate, so for any $S' \in \Syl_p(G)$ we can write $S' = gSg\inv$ for some $g$.
+- Then using that $H$ is normal, $H \subseteq S \implies H = gHg\inv \subseteq gSg\inv \da S'$.
+  So $H$ is contained in every Sylow $p\dash$subgroup.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Claim: $Z(H) \leq H$ works.
+  - It is nontrivial since $H$ is a $p\dash$group and $p\dash$groups have nontrivial centers
+  - It is abelian since $Z(Z(H)) = Z(H)$.
+  - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
+- It thus remains to show that $Z(H) \normal G$.
+- Use that $Z(H) \char H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
+- That $Z(H) \char H$: let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+ \[
+ \psi(y)h 
+ &= \psi(y) (\psi \circ \psi\inv)(h) \\
+ &= \psi( y \cdot \psi\inv(h) ) \\
+ &= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
+ &= h\psi(y)
+ .\]
+- That $A \char B \normal C \implies A\normal C$:
+  - $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+  - Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
+  - Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
+:::
+
+:::
+
+### Fall 2016 #1 $\done$
+Let $G$ be a finite group and $s, t\in G$ be two distinct elements of order 2.
+Show that subgroup of $G$ generated by $s$ and $t$ is a dihedral group.
+
+> Recall that the dihedral groups of order $2m$ for $m\geq 2$ are of the form
+\[
+D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigma\inv \tau}
+.\]
+
+:::{.solution}
+\envlist
+
+- Suppose $G = \gens{ a, b}$ with $a^2 = b^2 = e$, satisfying some unknown relations.
+- Consider $ab$. Since $G$ is finite, this has finite order, so $(ab)^n = e$ for some $n\geq 2$.
+- Note $\gens{ab, b} \subseteq \gens{a, b}$, since any finite word in $ab, b$ is also a finite word in $a, b$.
+- Since $(ab)b = ab^2 = a$, we have $\gens{ab, b} \subseteq \gens{a, b}$, so $\gens{ab, b} = \gens{a, b}$.
+- Write $D_{2n} = F(r, s) / \ker \pi$ for $\pi: F(r, s)\to D_{2n}$ the canonical presentation map.
+- Define 
+\[
+\psi: F(r, s) &\to G \\
+r &\mapsto ab \\
+t &\mapsto b
+.\]
+- This is clearly surjective since it hits all generators.
+- We'll show that $ab, a$ satisfy all of the relations defining $D_{2n}$, which factors $\psi$ through $\ker \pi$, yielding a surjection $\tilde \psi: D_{2n} \surjects G$.
+  - $(ab)^n = e$ by construction, $b^2 = e$ by assumption, and 
+  \[
+  b (ab) b\inv = babb\inv = ba = b\inv a\inv = (ab)\inv
+  ,\]
+  corresponding to the relation $srs\inv = r\inv$.
+  Here we've used that $o(a) = o(b) = 2$ implies $a=a\inv, b=b\inv$.
+
+- Surjectivity of $\tilde \psi$ yields $2n = \# D_{2n} \geq \# G$.
+- The claim is that $\# G \geq 2n$, which forces $\# G = 2n$. 
+  Then $\tilde \psi$ will be a surjective group morphism between groups of the same order, and thus an isomorphism.
+
+  - We have \( \gens{ ab }\leq G  \), so $n\divides \# G$.
+  - Since $b\not\in \gens{ ab }$, this forces $\# G > n$, so $\# G \geq 2n$. 
+
+> Remark: see a more direct proof in [Theorem 2.1 and Theorem 1.1 here](https://kconrad.math.uconn.edu/blurbs/grouptheory/dihedral2.pdf)
+
+:::
+
+
+### Fall 2019 Midterm #1  $\work$
+Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
+
+
+:::{.solution}
+\envlist
+
+- Write $\# G = p^2 q$
+- Cases: first assume $p>q$, then do $q<p$.
+- In any case, we have
+\[
+n_p \divides q &,\, n_p \equiv 1 \mod p \implies n_p \in \ts{ 1,q } \\ \\
+n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \in \ts{ 1, p, p^2} 
+.\]
+
+- **Case 1:** $:p>q$.
+- If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
+- So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+
+- **Case 2:**: $p< q$:
+- For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
+- If $n_q = 1$, we're done. 
+- If $n_q = p^2$:
+  - Finer analysis....
+
+:::
+
+
+### Fall 2019 Midterm #4 $\work$
+Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
 
 
 # Groups: Sylow Theory

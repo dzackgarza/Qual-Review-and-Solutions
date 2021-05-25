@@ -10,11 +10,112 @@ Many other solutions contain input and ideas from other graduate students and fa
 
 # Group Theory: General
 
-## Spring 2020 \#2 \( \work \) {#spring-2020-2-work}
+## Cosets
+
+### Spring 2020 \#2 \( \done \) {#spring-2020-2-done}
 
 Let \( H \) be a normal subgroup of a finite group \( G \) where the order of \( H \) and the index of \( H \) in \( G \) are relatively prime. Prove that no other subgroup of \( G \) has the same order as \( H \).
 
-## Spring 2019 \#4 \( \done \) {#spring-2019-4-done}
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Division algorithm: \( (a,b)= d\implies as+bt =1 \) for some \( s, t \).
+-   Coset containment trick: \( X\subseteq N \iff xN = N \) for all \( x \).
+:::
+
+::: {.strategy}
+Recognize that it suffices to show \( hN = N \). Context cue: coprimality hints at division algorithm. Descend to quotient so you can leverage both the order of \( h \) *and* the order of cosets simultaneously.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   For ease of notation, replace \( H \) in the problem with \( N \) so we remember which one is normal.
+-   Write \( n\coloneqq\# N \) and \( m \coloneqq[G:N] = \#G/N \), where the quotient makes sense since \( N \) is normal.
+-   Let \( H \leq G \) with \( \# H = n \), we'll show \( H=N \).
+    -   Since \( \# H = \# N \) it suffices to show \( H \subseteq N \).
+    -   It further suffices to show \( hN = N \) for all \( h\in H \).
+-   Noting \( \gcd(m, n)=1 \), use the division algorithm to write \( 1 = ns + mt \) for some \( s,t\in {\mathbb{Z}} \).
+-   The result follows from a computation:
+    \[
+    hN 
+    &= h^1 N \\
+    &= h^{ns + mt}N \\
+    &= h^{ns} N \cdot h^{mt}N \\
+    &= \qty{h^n N}^s \cdot \qty{h^t N}^m \\
+    &= (eN)^s \cdot N \\
+    &= N
+    ,\]
+    -   We've used that \( h\in H \implies o(h) \bigm|\# H = n \) by Lagrange, so \( h^n = e \).
+    -   We've also used that \( \# G/N = m \), so \( (xH)^m = H \) for any \( xH\in G/H \).
+:::
+
+### Fall 2014 \#6 \( \done \) {#fall-2014-6-done}
+
+Let \( G \) be a group and \( H, K < G \) be subgroups of finite index. Show that
+\[
+[G: H\cap K] \leq [G: H] ~ [G:K]
+.\]
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   For \( H, K\leq G \), intersection is again a subgroup of everything: \( H\int K \leq H, K, G \) by the one-step subgroup test.
+-   Counting in towers: \( A\leq B \leq C \implies [C:A] = [C:B][B:A] \).
+-   Fundamental theorem of cosets: \( xH = yH \iff xy^{-1}\in H \).
+-   Common trick: just list out all of the darn cosets!
+:::
+
+::: {.strategy}
+Count in towers, show that distinct coset reps stay distinct.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   \( H \cap K \leq H \leq G \implies [G: H \cap K] = [G: H] [H : H \cap K] \)
+-   So it suffices to show \( [H: H \cap K] \leq [G: K] \)
+-   Write \( H/H \cap K = \left\{{ h_1 J, \cdots, h_m J }\right\} \) as distinct cosets where \( J \coloneqq H \cap J \).
+-   Then \( h_i J\neq h_j J \iff h_i h_j^{-1}\not\in J = H \cap K \).
+-   \( H \) is a subgroup, so \( h_i h_j^{-1}\in H \) forces this not to be in \( K \).
+-   But then \( h_i K \neq h_j K \), so these are distinct cosets in \( G/K \).
+-   So \( \#G/K \geq m \).
+:::
+
+### Spring 2013 \#3 \( \done \) {#spring-2013-3-done}
+
+Let \( P \) be a finite \( p{\hbox{-}} \)group. Prove that every nontrivial normal subgroup of \( P \) intersects the center of \( P \) nontrivially.
+
+```{=tex}
+\todo[inline]{Clean up, sketchy argument.}
+```
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Let \( N{~\trianglelefteq~}P \), then for each conjugacy class \( [n_i] \) in \( N \), \( H \cap[g_i] = [g_i] \) or is empty.
+-   \( G = {\textstyle\coprod}_{i\leq M} [g_i] \) is a disjoint union of conjugacy classes, and the conjugacy classes of \( H \) are of the form \( [g_i] \cap H \).
+-   Then pull out the center
+    \[
+    H = \displaystyle\coprod_{i\leq M} [g_i] \cap H = \qty{ Z(G) \cap H } {\textstyle\coprod}\displaystyle\coprod_{i\leq M'} [g_i]
+    .\]
+-   Taking cardinalities,
+    \[
+    \# H = \# \qty{ Z(G) \cap H} + \sum_{i\leq M'} \# [g_i]
+    .\]
+-   \( p \) divides \( H \) since \( H\leq P \) and \( P \) is a \( p{\hbox{-}} \)group.
+-   Each \( \# [g_i] \geq 2 \) since the trivial conjugacy classes appear in the center, forcing \( \# [g_i] \geq p \).
+-   \( p \) divides \( \# [g_i] \) since \( \# [g_i] \) must divide \( \# P = p^k \)
+-   So \( p \) must divide the remaining term \( Z(G) \cap H \), which makes it nontrivial.
+:::
+
+## Burnside / Class Equation
+
+### Spring 2019 \#4 \( \done \) {#spring-2019-4-done}
 
 For a finite group \( G \), let \( c(G) \) denote the number of conjugacy classes of \( G \).
 
@@ -32,17 +133,22 @@ c.  Using the class equation (or otherwise) show that the probability in part (a
 
 > Here, as usual, \( Z(G) \) denotes the center of \( G \).
 
+::: {.warnings}
+(DZG) This is a slightly anomalous problem! It's fun and worth doing, because it uses the major counting formulas. Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
+:::
+
 ::: {.concept}
 ```{=tex}
 \envlist
 ```
 -   Notation: \( X/G \) is the set of \( G{\hbox{-}} \)orbits
--   Notation: \( X^g = \left\{{x\in x{~\mathrel{\Big|}~}g\cdot x = x}\right\} \)
--   Burnside's formula: \( {\left\lvert {G} \right\rvert} {\left\lvert {X/G} \right\rvert} = \sum {\left\lvert {X^g} \right\rvert} \).
+-   Notation: \( X^g = \left\{{x\in X{~\mathrel{\Big|}~}g\cdot x = x}\right\} \)
+-   Burnside's formula: \( \#{X/G} = {1 \over \# G} \sum \# {X^g} \).
+-   Definition of conjugacy class: \( C(g) = \left\{{ hgh^{-1}{~\mathrel{\Big|}~}h\in G }\right\} \).
 :::
 
 ::: {.strategy}
-Burnside.
+Fixed points of the conjugation action are precisely commuting elements. Apply Burnside. Context clue: \( 1/[G:Z(G)] \) is weird, right? Use that \( [G:Z(G)] = \# G/\# Z(G) \), so try to look for \( \#Z(G)/\#(G) \) somewhere. Count sizes of centralizers.
 :::
 
 ::: {.solution}
@@ -53,14 +159,17 @@ Burnside.
 ```{=tex}
 \envlist
 ```
--   Define a sample space \( \Omega = G \times G \), so \( {\left\lvert {\Omega} \right\rvert} = {\left\lvert {G} \right\rvert}^2 \).
+-   Define a sample space \( \Omega = G \times G \), so \( \# {\Omega} = (\# {G})^2 \).
 
--   Identify the event we want to analyze: \( A \coloneqq\left\{{(g,h) \in G\times G {~\mathrel{\Big|}~}[g,h] = 1}\right\} \).
+-   Identify the event we want to analyze:
+    \[
+    A \coloneqq\left\{{(g,h) \in G\times G {~\mathrel{\Big|}~}[g,h] = 1}\right\} \subseteq \Omega
+    .\]
 
-    -   Define and note:
-        \[
-        A_g \coloneqq\left\{{(g, h) {~\mathrel{\Big|}~}h\in H, [g, h] = 1}\right\} \implies A = {\coprod}_{g\in G} A_g
-        .\]
+-   Note that the slices are centralizers:
+    \[
+    A_g \coloneqq\left\{{(g, h) \in \left\{{ g }\right\} \times G {~\mathrel{\Big|}~}[g, h] = 1}\right\} = Z(g) \implies A = \displaystyle\coprod_{g\in G} Z(g)
+    .\]
 
 -   Set \( n \) be the number of conjugacy classes, note we want to show \( P(A) = n / {\left\lvert {G} \right\rvert} \).
 
@@ -70,39 +179,39 @@ Burnside.
         \[
         \mathcal{O}_g = \left\{{hgh^{-1}{~\mathrel{\Big|}~}h\in G}\right\}
         ,\]
-        which is the conjugacy class of \( g \).
+        which is the **conjugacy class** of \( g \). In particular, the number of orbits is the number of conjugacy classes.
 
     -   What are the fixed points?
         \[X^g = \left\{{h\in G {~\mathrel{\Big|}~}hgh^{-1}= g}\right\},\]
-        which are the elements of \( G \) that commute with \( g \), which is precisely \( A_g \).
+        which are the elements of \( G \) that commute with \( g \), which is isomorphic to \( A_g \).
 
--   Note \( {\left\lvert {X/G} \right\rvert} = n \), the number of conjugacy classes.
-
--   Note that
+-   Identifying centralizers with fixed points,
     \[
-    {\left\lvert {A} \right\rvert} = {\left\lvert {{\coprod}_{g\in G} A_g} \right\rvert} = \sum_{g\in G} {\left\lvert {A_g} \right\rvert} = \sum_{g\in G}{\left\lvert {X^g} \right\rvert}
+    \#{A} = \#{\displaystyle\coprod_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
     .\]
 
 -   Apply Burnside
     \[
-    {\left\lvert {X / G} \right\rvert} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+    \# {X / G} = \frac { 1 } { \# G  } \sum _ { g \in G } \# X ^ { g } ,
     \]
+
+-   Note \( \#{X/G} = n \), i.e. the number of conjugacy classes is the number of orbits.
 
 -   Rearrange and use definition:
     \[
-    n {\left\lvert {G} \right\rvert}
-    = {\left\lvert {X/G} \right\rvert} {\left\lvert {G} \right\rvert}
-    = \sum _ { g \in G } \left| X ^ { g } \right|
+    n \cdot \#{G}
+    = \qty{\#{X/G} }\cdot \#{G}
+    = \sum _ { g \in G } \# X ^ { g } 
     \]
 
 -   Compute probability:
     \[
     P(A)
-    = {{\left\lvert {A} \right\rvert} \over {\left\lvert {\Omega} \right\rvert}} 
-    = \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac{{\left\lvert {X/G} \right\rvert}{\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac{n {\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac n {{\left\lvert {G} \right\rvert}}
+    = {\# A \over \# \Omega} 
+    =  \displaystyle\sum _{ g \in G } \frac{\# X ^ { g }}{ ( \# {G} )^2} 
+    = \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
+    = \frac{n \cdot \#{G}}{( \#{G} )^2} 
+    = \frac n {\# G}
     .\]
 :::
 
@@ -111,38 +220,47 @@ Statement of the class equation:
 \[
 {\left\lvert {G} \right\rvert} = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-where \( Z(x) = \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\} \).
+where \( Z(x) = \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\} \) is the centralizer of \( x \) in \( G \).
 :::
 
 ::: {.proof title="Part c"}
-As shown in part 1,
-\[
-\mathcal{O}_x = \left\{{g\curvearrowright x {~\mathrel{\Big|}~}g\in G}\right\} = \left\{{h\in G {~\mathrel{\Big|}~}ghg^{-1}= h}\right\} = C_G(g)
-,\]
-and by the class equation
+```{=tex}
+\envlist
+```
+> (DZG): I couldn't convince myself that a previous proof using the class equation actually works. Instead, I'll borrow the proof from [this note](https://math.berkeley.edu/~tb65536/Commuting_Probability.pdf)
 
-\[
-{\left\lvert {G} \right\rvert} = {\left\lvert {Z(G)} \right\rvert} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
-\]
-
-Now note
-
--   Each element of \( Z(G) \) is in its own conjugacy class, contributing \( {\left\lvert {Z(G)} \right\rvert} \) classes to \( n \).
-
--   Every other class of elements in \( G\setminus Z(G) \) contains at least 2 elements
-
-    -   Claim: each such class contributes **at least** \( \frac 1 2 {\left\lvert {G \setminus Z(G)} \right\rvert} \).
-
-Thus
-\[
-n &\leq {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G \setminus Z(G)} \right\rvert} \\
-&= {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G} \right\rvert} - \frac 1 2 {\left\lvert {Z(G)} \right\rvert} \\
-&= \frac 1 2 {\left\lvert {G} \right\rvert} + \frac 1 2 {\left\lvert {Z(G)} \right\rvert} \\
-\\
-\implies \frac n {{\left\lvert {G} \right\rvert}}
-&\leq \frac 1 2 \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}}  + \frac 1 2 \frac{{\left\lvert {Z(G)} \right\rvert}}{{\left\lvert {G} \right\rvert}} \\
-&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
-.\]
+-   Write the event as \( A = \displaystyle\coprod_{g\in G} \left\{{g}\right\} \times Z(g) \), then
+    \[
+    P(A) 
+    = {\# A\over (\# G)^2} 
+    = {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
+    .\]
+-   Attempt to estimate the sum: pull out central elements \( g\in Z(G) \).
+    -   Note \( Z(g) = G \) for central \( g \), so \( \# Z(g) = \# G \)
+    -   Note
+        \[
+        g\not\in Z(G)\implies \# Z(g) \leq {1\over 2} \# G
+        ,\]
+        since \( Z(g) \leq G \) is a subgroup, and
+        \[
+        [G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2
+        .\]
+-   Use these facts to calculate:
+    \[
+    P(A) 
+    &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &\leq {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} {1\over 2} \# G } \\
+    &= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \qty{ \sum_{g\not\in Z(g)} {1\over 2} } \cdot \# G } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \setminus Z(G) ) } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#G - {1\over 2} \# Z(G) } \\
+    &= {1\over (\# G) } \qty{ {1\over 2} \# Z(G) + {1\over 2} \#G  } \\
+    &= {1\over 2} \qty{1 + { \# Z(G) \over \# G }} \\
+    &= {1\over 2} \qty{1 + { 1 \over [G : Z(G)]  }}
+    .\]
 :::
 
 ```{=tex}
@@ -150,15 +268,9 @@ n &\leq {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G \setminus Z
 ```
 :::
 
-## Spring 2012 \#2 \( \work \) {#spring-2012-2-work}
+## Group Actions / Representations
 
-Let \( G \) be a finite group and \( p \) a prime number such that there is a normal subgroup \( H{~\trianglelefteq~}G \) with \( {\left\lvert {H} \right\rvert} = p^i > 1 \).
-
-a.  Show that \( H \) is a subgroup of any Sylow \( p{\hbox{-}} \)subgroup of \( G \).
-
-b.  Show that \( G \) contains a nonzero abelian normal subgroup of order divisible by \( p \).
-
-## Spring 2017 \#1 \( \work \) {#spring-2017-1-work}
+### Spring 2017 \#1 \( \done \) {#spring-2017-1-done}
 
 Let \( G \) be a finite group and \( \pi: G\to \operatorname{Sym}(G) \) the Cayley representation.
 
@@ -166,43 +278,192 @@ Let \( G \) be a finite group and \( \pi: G\to \operatorname{Sym}(G) \) the Cayl
 
 Prove that \( \pi(x) \) is an odd permutation \( \iff \) the order \( {\left\lvert {\pi(x)} \right\rvert} \) of \( \pi(x) \) is even and \( {\left\lvert {G} \right\rvert} / {\left\lvert {\pi(x)} \right\rvert} \) is odd.
 
-## Fall 2016 \#1 \( \work \) {#fall-2016-1-work}
+::: {.warnings}
+(DZG): This seems like an unusually hard group theory problem. My guess is this year's qual class spent more time than usual on the proof of Cayley's theorem.
+:::
 
-Let \( G \) be a finite group and \( s, t\in G \) be two distinct elements of order 2. Show that subgroup of \( G \) generated by \( s \) and \( t \) is a dihedral group.
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   \( \operatorname{Sym}(G) \coloneqq{\operatorname{Aut}}_{\mathsf{Set}}(G, G) \) is the group of set morphisms from \( G \) to itself, i.e. permutations of elements of \( G \).
+-   More standard terminology: this is related to the **left regular representation** where \( g\mapsto \phi_g \) where \( \phi_g(x) = gx \), regarded instead as a permutation representation.
+    -   This action is transitive!
+-   Cayley's theorem: every \( G \) is isomorphic to a subgroup of a permutation group. In particular, take \( \left\{{ \phi_g {~\mathrel{\Big|}~}G\in G }\right\} \) with function composition as a subgroup of \( {\operatorname{Aut}}_{\mathsf{Set}}(G) \).
+:::
 
-> Recall that the dihedral groups of order \( 2m \) for \( m\geq 2 \) are of the form
-> \[
-> D_{2m} = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^m = 1 = \tau^2, \tau \sigma = \sigma^{-1}\tau}\right\rangle
-> .\]
+::: {.solution}
+```{=tex}
+\envlist
+```
+> (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument. Most of the key ideas are borrowed [from here](https://math.stackexchange.com/questions/3028603/show-that-phig-is-an-even-permutation).
 
-## Fall 2015 \#1 \( \work \) {#fall-2015-1-work}
+-   Write \( k \coloneqq o(\pi_g) \), then since \( \pi \) is injective, \( k = o(g) \) in \( G \).
+-   Since \( \pi_g \) as a cycle is obtained from the action of \( g \), we can pick an element \( x_0 \) in \( G \), take the orbit under the action, and obtain a cycle of length \( k \) since the order of \( g \) is \( k \). Then continue by taking any \( x_1 \) not in the first orbit and taking *its* orbit. Continuing this way exhausts all group elements and yields a decomposition into disjoint cycles:
+    \[
+    \pi_g = 
+    (x_0, gx_0, g^2 x_0, \cdots, g^{k-1} x_0)
+    (x_1, gx_1, g^2 x_1, \cdots, g^{k-1} x_1)
+    \cdots
+    (x_m, gx_m, g^2 x_m, \cdots, g^{k-1} x_m)
+    .\]
+-   So there are \( m \) orbits all of length exactly \( k \). Proceed by casework.
+-   If \( k \) is even:
+    -   This yields \( m \) odd cycles, and thus \( \pi \) has zero (an even number) of even cycles.
+    -   Thus \( \pi \in \ker \operatorname{sgn} \) and is an even permutation.
+-   If \( k \) is odd
+    -   This yields \( m \) even cycles, thus an even number of even cycles iff \( m \) is even
+-   The claim is that the number of orbit representatives \( m \) is equal to \( [G:H] = \# G/H \) for \( H = \left\langle{ g }\right\rangle \).
+    -   Proof: define a map
+        \[
+        \left\{{ \text{Orbit representatives } x_i }\right\} &\to G/H \\
+        x &\mapsto xH
+        .\]
+    -   This is injective and surjective because
+        \[
+        xH = yH &\iff xy^{-1}\in H = \left\langle{ g }\right\rangle \\
+        &\iff xy^{-1}= g^\ell \\
+        &\iff x=g^\ell y \\
+        &\iff y\in {\mathcal{O}}_x
+        ,\]
+        so \( y \) and \( x \) are in the same orbit and have the same orbit representative.
+-   We now have
+    \[
+    \pi_g \text{ is an even permutation } \iff 
+    \begin{cases}
+    k \text{ is odd and } m \text{ is even} &  
+    \\
+    \text{ or } & \\
+    k \text{ is even}
+     & .
+    \end{cases}
+    \]
+-   Everything was an iff, so flip the evens to odds:
+    \[
+    \pi_g \text{ is an odd permutation } \iff 
+    \begin{cases}
+    k \text{ is even and } m \text{ is odd} &  
+    \\
+    \text{ or } & \\
+    k \text{ is odd}
+     & .
+    \end{cases}
+    .\]
+-   Then just recall that \( k\coloneqq o(\pi_g) \) and
+    \[
+    m= [G: \left\langle{ g }\right\rangle] = \# G / \# \left\langle{ g }\right\rangle= \# G / o(g) = \# G/ o(\pi_g)
+    .\]
+:::
+
+### Fall 2015 \#1 \( \done \) {#fall-2015-1-done}
 
 Let \( G \) be a group containing a subgroup \( H \) not equal to \( G \) of finite index. Prove that \( G \) has a normal subgroup which is contained in every conjugate of \( H \) which is of finite index.
 
-## Spring 2015 \#1 \( \work \) {#spring-2015-1-work}
+> (DZG) A remark: it's not the conjugates that should be finite index here, but rather the normal subgroup.
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Let \( H\leq G \) and define \( n\coloneqq[G:H] \).
+-   Write \( G/H = \left\{{ x_1 H, \cdots, x_n H }\right\} \) for the finitely many cosets.
+-   Let \( G \) act on \( G/H \) by left translation, so \( g\cdot xH \coloneqq gxH \).. Call the action \( \psi: G\to \operatorname{Sym}(G/H) \).
+-   Then \( {\operatorname{Stab}}(xH) = xHx^{-1} \) is a subgroup conjugate to \( H \), and \( K\coloneqq\ker \psi = \displaystyle\bigcap_{i=1}^n xHx^{-1} \) is the intersection of all conjugates of \( H \).
+-   Kernels are normal, so \( K{~\trianglelefteq~}G \), and \( K\subseteq xHx^{-1} \) for all \( x \), meaning \( K \) is contained in every conjugate of \( H \).
+-   The index \( [G:K] \) is finite since \( G/K \cong \operatorname{im}\psi \) by the first isomorphism theorem, and \( \# \operatorname{im}\psi \leq \# \operatorname{Sym}(G/H) = \# S_n = n! < \infty \).
+:::
+
+## Conjugacy Classes
+
+### Spring 2021 \#2 \( \done \) {#spring-2021-2-done}
+
+Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \), where the order of \( H \) is the smallest prime \( p \) dividing \( {\left\lvert {G} \right\rvert} \). Prove that \( H \) is contained in the center of \( G \).
+
+> Solution due to Swaroop Hegde, typed up + modifications added by DZG.
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+1.  Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+
+-   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff a union of conjugacy classes).
+
+2.  Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \). In particular, \( \# C_g \) divides \( \#G \).
+3.  \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+:::
+
+::: {.proof title="?"}
+```{=tex}
+\envlist
+```
+-   Let \( p \coloneqq\#H \).
+
+-   Let \( \left\{{ C_i }\right\}_{i\leq n} \) be the conjugacy classes in \( G \), then \( G = {\textstyle\coprod}_{i\leq n} C_i \)
+
+-   By the first fact, there is a sub-collection \( \left\{{ C_{i_j}}\right\}_{j\leq k } \) such that
+    \[
+    H = {\textstyle\coprod}_{j\leq k} C_{i_j}
+    .\]
+
+-   The identity is always in a single conjugacy class, so \( C_e = \left\{{ e }\right\} \).
+
+-   Since \( e\in H \), without loss of generality, label \( C_{i_1} = \left\{{ e }\right\} \).
+
+-   So
+    \[
+    H 
+    = {\textstyle\coprod}_{j\leq k} C_{i_j} 
+    = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+    .\]
+
+-   Take cardinality in the above equation
+    \[
+    p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+    .\]
+
+-   So \( \# C_{i_j} \leq p-1 \) for all \( j\neq 1 \).
+
+-   Every \( \# C_{i_j} \) divides \( \# G \), but \( p \) was the *minimal* prime dividing \( \# G \), forcing \( \# C_{i_j} = 1 \) for all \( j \neq 1 \).
+
+    -   This rules out \( \# C_{i_j} \) being a prime less than \( p \), but also rules out composites: if a prime \( q\bigm|\# C_{i_j} \), then \( q<p \) and \( q\bigm|\# G \), a contradiction.
+
+-   By fact 3, each \( x\in C_{i_j} \) satisfies \( x\in Z(G) \).
+
+-   \( \cup C_{i_j} = H \), so \( H \subseteq Z(G) \).
+:::
+
+### Spring 2015 \#1 \( \done \) {#spring-2015-1-done}
 
 For a prime \( p \), let \( G \) be a finite \( p{\hbox{-}} \)group and let \( N \) be a normal subgroup of \( G \) of order \( p \). Prove that \( N \) is contained in the center of \( G \).
 
-## Fall 2014 \#6 \( \work \) {#fall-2014-6-work}
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Definition of conjugacy class: \( [x] = \left\{{gxg^{-1}{~\mathrel{\Big|}~}g\in G}\right\} \).
+-   A conjugacy class \( [x] \) is trivial iff \( [x] = \left\{{ x }\right\} \) iff \( x\in Z(G) \).
+-   Sizes of conjugacy classes divide the order of the group they live in.
+    -   This is orbit-stabilizer: \( G\curvearrowright G \) by \( g\cdot x \coloneqq gxg^{-1} \), so \( {\mathcal{O}}(x) = [x] \). Then \( \# {\mathcal{O}}(x) = \# G / \# {\operatorname{Stab}}(x) \), so \( \# {\mathcal{O}}(x) \) divides \( \# G \).
+:::
 
-Let \( G \) be a group and \( H, K < G \) be subgroups of finite index. Show that
-\[
-[G: H\cap K] \leq [G: H] ~ [G:K]
-.\]
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Use that \( N{~\trianglelefteq~}G \iff N = {\textstyle\coprod}' [n_i] \) is a *disjoint* union of (full) conjugacy classes.
+-   Take cardinalities:
+    \[
+    p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
+    .\]
+-   The size of each conjugacy class divides the size of \( H \) by orbit-stabilizer, so \( \# [n_i] \bigm|p \) for each \( i \).
+-   But the entire second term must sum to \( p-1 \) for this equality to hold, which forces \( \#[n_i] = 1 \) (and incidentally \( m=p-1 \))
+-   Then \( [n_i] = \left\{{ n_i }\right\} \iff n_i \in Z(G) \), and this holds for all \( i \), so \( N \subseteq Z(G) \).
+:::
 
-## Spring 2013 \#3 \( \work \) {#spring-2013-3-work}
+## Unsorted / Counting Arguments
 
-Let \( P \) be a finite \( p{\hbox{-}} \)group. Prove that every nontrivial normal subgroup of \( P \) intersects the center of \( P \) nontrivially.
-
-## Fall 2019 Midterm \#1 \( \work \) {#fall-2019-midterm-1-work}
-
-Let \( G \) be a group of order \( p^2q \) for \( p, q \) prime. Show that \( G \) has a nontrivial normal subgroup.
-
-## Fall 2019 Midterm \#4 \( \work \) {#fall-2019-midterm-4-work}
-
-Let \( p \) be a prime. Show that \( S_p = \left\langle{\tau, \sigma}\right\rangle \) where \( \tau \) is a transposition and \( \sigma \) is a \( p{\hbox{-}} \)cycle.
-
-## Fall 2019 Midterm \#5 \( \work \) {#fall-2019-midterm-5-work}
+### Fall 2019 Midterm \#5 \( \done \) {#fall-2019-midterm-5-done}
 
 Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show that \( Z(G) = [G, G] \).
 
@@ -215,7 +476,7 @@ Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show tha
 Important notations and definitions:
 
 -   The **center** of \( G \), denoted by \( Z(G) \), is the subset of elements of \( G \) which commute with all elements of \( G \). That is, if \( x \in Z(G) \), then for all \( g \in G \), \( gx = xg \):
-    \[Z(G) = \{ x \in G : gx = xg \, \text{for all } x \in G \}.\]
+    \[Z(G) = \{ x \in G : gx = xg \, \text{for all } g \in G \}.\]
 
     In fact, \( Z(G) \) is not just a subset of \( G \), but a normal subgroup of \( G \).
 
@@ -247,63 +508,161 @@ Since we stipulated that \( G \) is nonabelian, \( |Z(G)| \ne p^3 \). Also, sinc
 Then, since \( |Z(G)| = p \), we have that \( |G/Z(G)| = p^2 \), and so \( G/Z(G) \) is abelian. Thus, \( [G, G] \in Z(G) \). Since \( |Z(G)| = p \), then \( |[G,G]| \in \{ 1, p\} \) again by Lagrange's theorem. If \( |[G,G]| = p \) then \( [G,G] = Z(G) \) and we are done. And, indeed, we must have \( |[G,G]| = p \), because \( G \) is nonabelian and so \( |[G,G]| \ne 1 \).
 :::
 
-## Spring 2021 \#2 \( \done \) {#spring-2021-2-done}
+### Spring 2012 \#2 \( \done \) {#spring-2012-2-done}
 
-Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \), where the order of \( H \) is the smallest prime \( p \) dividing \( {\left\lvert {G} \right\rvert} \). Prove that \( H \) is contained in the center of \( G \).
+Let \( G \) be a finite group and \( p \) a prime number such that there is a normal subgroup \( H{~\trianglelefteq~}G \) with \( {\left\lvert {H} \right\rvert} = p^i > 1 \).
 
-> Solution due to Swaroop Hegde.
+a.  Show that \( H \) is a subgroup of any Sylow \( p{\hbox{-}} \)subgroup of \( G \).
+
+b.  Show that \( G \) contains a nonzero abelian normal subgroup of order divisible by \( p \).
 
 ::: {.concept}
 ```{=tex}
 \envlist
 ```
-1.  Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
-
--   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff a union of conjugacy classes).
-
-2.  Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \). In particular, \( \# C_g \) divides \( \#G \).
-3.  \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+-   \( p \) groups have nontrivial centers.
+-   Definition of maximality and \( p{\hbox{-}} \)groups
+-   Sylows are conjugate
+-   \( Z(G) \char G \) always.
+-   Transitivity of characteristic: \( A \char B \) and \( B{~\trianglelefteq~}C \) implies \( A {~\trianglelefteq~}C \).
 :::
 
-::: {.proof title="?"}
+::: {.strategy}
+Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) is good to consider, just need to ensure it's normal in \( G \). Use transitivity of characteristic.
+:::
+
+::: {.solution}
 ```{=tex}
 \envlist
 ```
--   Let \( p \coloneqq\#H \).
-
--   Let \( \left\{{ C_i }\right\}_{i\leq n} \) be the conjugacy classes in \( G \), then \( G = {\coprod}_{i\leq n} C_i \)
-
--   By the first fact, there is a sub-collection \( \left\{{ C_{i_j}}\right\}_{j\leq k } \) such that
-    \[
-    H = {\coprod}_{j\leq k} C_{i_j}
-    .\]
-
--   The identity is always in a single conjugacy class, so \( C_e = \left\{{ e }\right\} \).
-
--   Since \( e\in H \), without loss of generality, label \( C_{i_1} = \left\{{ e }\right\} \).
-
--   So
-    \[
-    H 
-    = {\coprod}_{j\leq k} C_{i_j} 
-    = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
-    .\]
-
--   Take cardinality in the above equation
-    \[
-    p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
-    .\]
-
--   So \( \# C_{i_j} \leq p-1 \) for all \( j\neq 1 \).
-
--   Every \( \# C_{i_j} \) divides \( \# G \), but \( p \) was the *minimal* prime dividing \( \# G \), forcing \( \# C_{i_j} = 1 \) for all \( j \neq 1 \).
-
-    -   This rules out \( \# C_{i_j} \) being a prime less than \( p \), but also rules out composites: if a prime \( q\bigm|\# C_{i_j} \), then \( q<p \) and \( q\bigm|\# G \), a contradiction.
-
--   By fact 3, each \( x\in C_{i_j} \) satisfies \( x\in Z(G) \).
-
--   \( \cup C_{i_j} = H \), so \( H \subseteq Z(G) \).
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
+-   By definition, \( S\in {\operatorname{Syl}}_p(G) \iff S \) is a *maximal* \( p{\hbox{-}} \)subgroup: \( S<G \) is a \( p{\hbox{-}} \)group, so \( \#S = p^k \) for some \( k \), \( S \) is a proper subgroup, and \( S \) is maximal in the sense that there are no proper \( p{\hbox{-}} \)subgroups \( S' \) with \( S \subseteq S' \subseteq G \).
+-   Since \( \# H = p^i \), \( H \) is a \( p{\hbox{-}} \)subgroup of \( G \).
+-   If \( H \) is maximal, then by definition \( H\in {\operatorname{Syl}}_p(G) \)
+-   Otherwise, if \( H \) is not maximal, there exists an \( H' \supseteq H \) with \( H'\leq G \) a \( p{\hbox{-}} \)subgroup properly containing \( H \).
+    -   In this apply the same argument to \( H' \): this yields a proper superset containment at every stage, and since \( G \) is finite, there is no infinite ascending chain of proper supersets.
+    -   So this terminates in some maximal \( p{\hbox{-}} \)subgroup \( S \), i.e. a Sylow \( p{\hbox{-}} \)subgroup.
+-   So \( H \subseteq S \) for some \( S\in {\operatorname{Syl}}_p(G) \).
+-   All Sylows are conjugate, so for any \( S' \in {\operatorname{Syl}}_p(G) \) we can write \( S' = gSg^{-1} \) for some \( g \).
+-   Then using that \( H \) is normal, \( H \subseteq S \implies H = gHg^{-1}\subseteq gSg^{-1}\coloneqq S' \). So \( H \) is contained in every Sylow \( p{\hbox{-}} \)subgroup.
 :::
+
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
+-   Claim: \( Z(H) \leq H \) works.
+    -   It is nontrivial since \( H \) is a \( p{\hbox{-}} \)group and \( p{\hbox{-}} \)groups have nontrivial centers
+    -   It is abelian since \( Z(Z(H)) = Z(H) \).
+    -   \( \#Z(H) = p^\ell \) for some \( \ell \leq i \) by Lagrange
+-   It thus remains to show that \( Z(H) {~\trianglelefteq~}G \).
+-   Use that \( Z(H) \char H \) and use transitivity of characteristic to conclude \( Z(H) {~\trianglelefteq~}H \).
+-   That \( Z(H) \char H \): let \( \psi \in {\operatorname{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
+    \[
+     \psi(y)h 
+     &= \psi(y) (\psi \circ \psi^{-1})(h) \\
+     &= \psi( y \cdot \psi^{-1}(h) ) \\
+     &= \psi( \psi^{-1}(h) \cdot y ) && \text{since } \psi^{-1}(h)\in H, \, y\in Z(H) \\
+     &= h\psi(y)
+     .\]
+-   That \( A \char B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
+    -   \( A\char B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
+    -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( {\operatorname{Aut}}(B) \).
+    -   Then \( \psi(A) = A \) since \( A\char B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
+:::
+:::
+
+### Fall 2016 \#1 \( \done \) {#fall-2016-1-done}
+
+Let \( G \) be a finite group and \( s, t\in G \) be two distinct elements of order 2. Show that subgroup of \( G \) generated by \( s \) and \( t \) is a dihedral group.
+
+> Recall that the dihedral groups of order \( 2m \) for \( m\geq 2 \) are of the form
+> \[
+> D_{2m} = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^m = 1 = \tau^2, \tau \sigma = \sigma^{-1}\tau}\right\rangle
+> .\]
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Suppose \( G = \left\langle{ a, b}\right\rangle \) with \( a^2 = b^2 = e \), satisfying some unknown relations.
+
+-   Consider \( ab \). Since \( G \) is finite, this has finite order, so \( (ab)^n = e \) for some \( n\geq 2 \).
+
+-   Note \( \left\langle{ab, b}\right\rangle \subseteq \left\langle{a, b}\right\rangle \), since any finite word in \( ab, b \) is also a finite word in \( a, b \).
+
+-   Since \( (ab)b = ab^2 = a \), we have \( \left\langle{ab, b}\right\rangle \subseteq \left\langle{a, b}\right\rangle \), so \( \left\langle{ab, b}\right\rangle = \left\langle{a, b}\right\rangle \).
+
+-   Write \( D_{2n} = F(r, s) / \ker \pi \) for \( \pi: F(r, s)\to D_{2n} \) the canonical presentation map.
+
+-   Define
+    \[
+    \psi: F(r, s) &\to G \\
+    r &\mapsto ab \\
+    t &\mapsto b
+    .\]
+
+-   This is clearly surjective since it hits all generators.
+
+-   We'll show that \( ab, a \) satisfy all of the relations defining \( D_{2n} \), which factors \( \psi \) through \( \ker \pi \), yielding a surjection \( \tilde \psi: D_{2n} \twoheadrightarrow G \).
+
+    -   \( (ab)^n = e \) by construction, \( b^2 = e \) by assumption, and
+        \[
+        b (ab) b^{-1}= babb^{-1}= ba = b^{-1}a^{-1}= (ab)^{-1}
+        ,\]
+        corresponding to the relation \( srs^{-1}= r^{-1} \). Here we've used that \( o(a) = o(b) = 2 \) implies \( a=a^{-1}, b=b^{-1} \).
+
+-   Surjectivity of \( \tilde \psi \) yields \( 2n = \# D_{2n} \geq \# G \).
+
+-   The claim is that \( \# G \geq 2n \), which forces \( \# G = 2n \). Then \( \tilde \psi \) will be a surjective group morphism between groups of the same order, and thus an isomorphism.
+
+    -   We have \( \left\langle{ ab }\right\rangle\leq G \), so \( n\bigm|\# G \).
+    -   Since \( b\not\in \left\langle{ ab }\right\rangle \), this forces \( \# G > n \), so \( \# G \geq 2n \).
+
+> Remark: see a more direct proof in [Theorem 2.1 and Theorem 1.1 here](https://kconrad.math.uconn.edu/blurbs/grouptheory/dihedral2.pdf)
+:::
+
+### Fall 2019 Midterm \#1 \( \work \) {#fall-2019-midterm-1-work}
+
+Let \( G \) be a group of order \( p^2q \) for \( p, q \) prime. Show that \( G \) has a nontrivial normal subgroup.
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Write \( \# G = p^2 q \)
+
+-   Cases: first assume \( p>q \), then do \( q<p \).
+
+-   In any case, we have
+    \[
+    n_p \bigm|q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+    n_q \bigm|p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+    .\]
+
+-   **Case 1:** \( :p>q \).
+
+-   If \( p>q \), then \( p\geq q+2 \) since \( p+1 \) can't be prime.
+
+-   So \( q \) is not congruent to \( 1\pmod p \), forcing \( n_p = 1 \).
+
+-   **Case 2:**: \( p< q \):
+
+-   For the same reasons as above, \( p\not\equiv 1\pmod q \) forces \( n_q\neq p \).
+
+-   If \( n_q = 1 \), we're done.
+
+-   If \( n_q = p^2 \):
+
+    -   Finer analysis....
+:::
+
+### Fall 2019 Midterm \#4 \( \work \) {#fall-2019-midterm-4-work}
+
+Let \( p \) be a prime. Show that \( S_p = \left\langle{\tau, \sigma}\right\rangle \) where \( \tau \) is a transposition and \( \sigma \) is a \( p{\hbox{-}} \)cycle.
 
 # Groups: Sylow Theory
 
@@ -619,7 +978,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 
 -   Note that we can write
     \[
-    G = \left\{{\text{elements of order } n}\right\} {\coprod}\left\{{\text{elements of order not } n}\right\}
+    G = \left\{{\text{elements of order } n}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } n}\right\}
     .\]
     for any \( n \), so we count for \( n=5, 7 \):
 
@@ -635,13 +994,13 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 
     -   \( n_5 = 21 \):
         \[
-        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
+        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
         &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = {\left\lvert {G} \right\rvert}
         .\]
 
     -   \( n_7 = 15 \):
         \[
-        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
+        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
         &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = {\left\lvert {G} \right\rvert}
         .\]
 :::
