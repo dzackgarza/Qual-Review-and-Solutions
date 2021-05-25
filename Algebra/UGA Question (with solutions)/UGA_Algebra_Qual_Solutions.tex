@@ -993,9 +993,9 @@ a normal subgroup \(H{~\trianglelefteq~}G\) with
 \item
   Sylows are conjugate
 \item
-  \(Z(G) \char G\) always.
+  \(Z(G) \operatorname{ch}G\) always.
 \item
-  Transitivity of characteristic: \(A \char B\) and
+  Transitivity of characteristic: \(A \operatorname{ch}B\) and
   \(B{~\trianglelefteq~}C\) implies \(A {~\trianglelefteq~}C\).
 \end{itemize}
 
@@ -1081,12 +1081,12 @@ Use transitivity of characteristic.
 \item
   It thus remains to show that \(Z(H) {~\trianglelefteq~}G\).
 \item
-  Use that \(Z(H) \char H\) and use transitivity of characteristic to
-  conclude \(Z(H) {~\trianglelefteq~}H\).
+  Use that \(Z(H) \operatorname{ch}H\) and use transitivity of
+  characteristic to conclude \(Z(H) {~\trianglelefteq~}H\).
 \item
-  That \(Z(H) \char H\): let \(\psi \in {\operatorname{Aut}}(H)\) and
-  \(x=\psi(y)\in \psi(Z(H))\) so \(y\in Z(H)\), then for arbitrary
-  \(h\in H\),
+  That \(Z(H) \operatorname{ch}H\): let
+  \(\psi \in {\operatorname{Aut}}(H)\) and \(x=\psi(y)\in \psi(Z(H))\)
+  so \(y\in Z(H)\), then for arbitrary \(h\in H\),
   \begin{align*}
    \psi(y)h 
    &= \psi(y) (\psi \circ \psi^{-1})(h) \\
@@ -1096,12 +1096,12 @@ Use transitivity of characteristic.
    .\end{align*}
 \item
   That
-  \(A \char B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C\):
+  \(A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C\):
 
   \begin{itemize}
   \tightlist
   \item
-    \(A\char B\) iff \(A\) is fixed by every
+    \(A\operatorname{ch}B\) iff \(A\) is fixed by every
     \(\psi\in {\operatorname{Aut}}(B)\)., WTS \(cAc^{-1}= A\) for all
     \(c\in C\).
   \item
@@ -1109,8 +1109,8 @@ Use transitivity of characteristic.
     \(\psi({-}) \coloneqq c({-})c^{-1}\) descends to an element of
     \({\operatorname{Aut}}(B)\).
   \item
-    Then \(\psi(A) = A\) since \(A\char B\), so \(cAc^{-1}= A\) and
-    \(A{~\trianglelefteq~}C\).
+    Then \(\psi(A) = A\) since \(A\operatorname{ch}B\), so
+    \(cAc^{-1}= A\) and \(A{~\trianglelefteq~}C\).
   \end{itemize}
 \end{itemize}
 

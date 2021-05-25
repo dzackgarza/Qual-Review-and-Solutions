@@ -545,8 +545,8 @@ Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $
 - $p$ groups have nontrivial centers.
 - Definition of maximality and $p\dash$groups
 - Sylows are conjugate
-- $Z(G) \char G$ always.
-- Transitivity of characteristic: $A \char B$ and $B\normal C$ implies $A \normal C$.
+- $Z(G) \ch G$ always.
+- Transitivity of characteristic: $A \ch B$ and $B\normal C$ implies $A \normal C$.
 :::
 
 :::{.strategy}
@@ -582,8 +582,8 @@ Use transitivity of characteristic.
   - It is abelian since $Z(Z(H)) = Z(H)$.
   - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
 - It thus remains to show that $Z(H) \normal G$.
-- Use that $Z(H) \char H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
-- That $Z(H) \char H$: let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+- Use that $Z(H) \ch H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
+- That $Z(H) \ch H$: let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
  \[
  \psi(y)h 
  &= \psi(y) (\psi \circ \psi\inv)(h) \\
@@ -591,10 +591,10 @@ Use transitivity of characteristic.
  &= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
  &= h\psi(y)
  .\]
-- That $A \char B \normal C \implies A\normal C$:
-  - $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+- That $A \ch B \normal C \implies A\normal C$:
+  - $A\ch B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
   - Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
-  - Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
+  - Then $\psi(A) = A$ since $A\ch B$, so $cAc\inv = A$ and $A\normal C$.
 :::
 
 :::

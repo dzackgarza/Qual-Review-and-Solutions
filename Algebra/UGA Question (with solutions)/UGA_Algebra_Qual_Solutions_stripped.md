@@ -523,8 +523,8 @@ b.  Show that \( G \) contains a nonzero abelian normal subgroup of order divisi
 -   \( p \) groups have nontrivial centers.
 -   Definition of maximality and \( p{\hbox{-}} \)groups
 -   Sylows are conjugate
--   \( Z(G) \char G \) always.
--   Transitivity of characteristic: \( A \char B \) and \( B{~\trianglelefteq~}C \) implies \( A {~\trianglelefteq~}C \).
+-   \( Z(G) \operatorname{ch}G \) always.
+-   Transitivity of characteristic: \( A \operatorname{ch}B \) and \( B{~\trianglelefteq~}C \) implies \( A {~\trianglelefteq~}C \).
 :::
 
 ::: {.strategy}
@@ -559,8 +559,8 @@ Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) 
     -   It is abelian since \( Z(Z(H)) = Z(H) \).
     -   \( \#Z(H) = p^\ell \) for some \( \ell \leq i \) by Lagrange
 -   It thus remains to show that \( Z(H) {~\trianglelefteq~}G \).
--   Use that \( Z(H) \char H \) and use transitivity of characteristic to conclude \( Z(H) {~\trianglelefteq~}H \).
--   That \( Z(H) \char H \): let \( \psi \in {\operatorname{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
+-   Use that \( Z(H) \operatorname{ch}H \) and use transitivity of characteristic to conclude \( Z(H) {~\trianglelefteq~}H \).
+-   That \( Z(H) \operatorname{ch}H \): let \( \psi \in {\operatorname{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
     \[
      \psi(y)h 
      &= \psi(y) (\psi \circ \psi^{-1})(h) \\
@@ -568,10 +568,10 @@ Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) 
      &= \psi( \psi^{-1}(h) \cdot y ) && \text{since } \psi^{-1}(h)\in H, \, y\in Z(H) \\
      &= h\psi(y)
      .\]
--   That \( A \char B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
-    -   \( A\char B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
+-   That \( A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
+    -   \( A\operatorname{ch}B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
     -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( {\operatorname{Aut}}(B) \).
-    -   Then \( \psi(A) = A \) since \( A\char B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
+    -   Then \( \psi(A) = A \) since \( A\operatorname{ch}B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
 :::
 :::
 
