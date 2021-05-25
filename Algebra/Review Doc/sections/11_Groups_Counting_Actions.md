@@ -14,7 +14,6 @@ G = \disjoint_{k \leq N} g_k H \implies \#G = \sum_{k\leq N} \# \qty{g_k H} = \s
 so $\# G = N \# H$, $\#H$ divides $\# G$ and $N = [G:H]$ divides $\# G$.
 :::
 
-
 :::{.corollary title="?"}
 \[
 \# G = \#(G/H) \#H \da [G:H] \, \# H
@@ -46,7 +45,6 @@ $x\not\in H$, so $H\neq xH$, but two must be equal:
 - $xH = x^2H$: the fundamental theorem of cosets forces $x\inv x^2 \in H$, so $x\in H$. $\contradiction$
 :::
 
-
 :::{.theorem title="Cauchy's Theorem"}
 For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
 
@@ -54,13 +52,11 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 
 :::
 
-
 :::{.proof title="?"}
 See [https://kconrad.math.uconn.edu/blurbs/grouptheory/cauchypf.pdf](https://kconrad.math.uconn.edu/blurbs/grouptheory/cauchypf.pdf).
 :::
 
-
-### Group Actions
+## Group Actions
 
 :::{.definition title="Group Action"}
 An action of $G$ on $X$ is a group morphism
@@ -156,7 +152,7 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 :::
 
-### Examples of Orbit-Stabilizer and the Class Equation
+## Examples of Orbit-Stabilizer and the Class Equation
 
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
@@ -171,7 +167,7 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 :::
 
 
-#### The Class Equation and Burnside's Lemma
+### The Class Equation and Burnside's Lemma
 
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
@@ -284,7 +280,7 @@ Proceed by grouping terms in this sum according to which orbit they're in:
 :::
 
 
-#### Conjugation on Subgroups
+### Conjugation on Subgroups
 
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
@@ -307,7 +303,7 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 
 :::
 
-#### Left Translation on Cosets
+### Left Translation on Cosets
 
 :::{.example title="?"}
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
