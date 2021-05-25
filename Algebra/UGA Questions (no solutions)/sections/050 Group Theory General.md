@@ -631,7 +631,7 @@ Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ 
 - $G = \disjoint_{i\leq M} [g_i]$ is a disjoint union of conjugacy classes, and the conjugacy classes of $H$ are of the form $[g_i] \intersect H$.
 - Then pull out the center
 \[
-H = \Disjoint_{i\leq M} [g_i] \intersect H = \qty{ Z(G) \intersect H } \coprod \Disjoint_{i\leq M'} [g_i]
+H = \Disjoint_{i\leq M} [g_i] \intersect H = \qty{ Z(G) \intersect H } \disjoint \Disjoint_{i\leq M'} [g_i]
 .\]
 
 :::
