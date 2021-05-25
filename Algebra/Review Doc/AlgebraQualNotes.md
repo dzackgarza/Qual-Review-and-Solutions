@@ -2,6 +2,19 @@
 \newcommand{\dt}{\,dt}
 \newcommand{\dy}{\,dy}
 \newcommand{\ds}{\,ds}
+\newcommand{\dz}{\,dz}
+\newcommand{\dr}{\,dr}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dV}{\,dV}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -17,18 +30,22 @@
 \newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
+\newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\fq}[0]{{\mathbb{F}_{q}}}
 \newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HP}[0]{{\mathbb{HP}}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\kk}[0]{{\mathbb{k}}}
 \newcommand{\bbm}[0]{{\mathbb{M}}}
 \newcommand{\NN}[0]{{\mathbb{N}}}
 \newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\LL}[0]{{\mathbb{L}}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
@@ -37,33 +54,58 @@
 \renewcommand{\SS}[0]{{\mathbb{S}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\kG}[0]{{kG}}
 \newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
 \newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
 \newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
+\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
 \newcommand{\SF}[0]{\operatorname{SF}}
+\newcommand{\vol}[0]{\operatorname{vol}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\bP}[0]{\operatorname{bP}}
 \newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
 \newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
 \newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\gl}[0]{\operatorname{GL}}
 \newcommand{\mat}[0]{\operatorname{Mat}}
 \newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Perv}[0]{\operatorname{Perv}}
 \newcommand{\Gal}[0]{\operatorname{Gal}}
 \newcommand{\Hilb}[0]{\operatorname{Hilb}}
 \newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{\operatorname{red}}
+\newcommand{\red}[0]{{ \text{red} }}
 \newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
 \newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\adj}[0]{\operatorname{adj}}
@@ -71,31 +113,40 @@
 \newcommand{\ann}[0]{\operatorname{Ann}}
 \newcommand{\Ann}[0]{\operatorname{Ann}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\Sp}[0]{{\operatorname{Sp}}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\SH}[0]{{\operatorname{SH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
 \newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\ssets}[0]{\operatorname{sSets}}
-\newcommand{\Ring}[0]{\mathbf{Ring}}
-\newcommand{\Cat}[0]{\mathbf{Cat}}
 \newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dR}[0]{\mathrm{dR}}
 \newcommand{\txor}[0]{{\operatorname{ or }}}
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\operatorname{gr}}}
-\newcommand{\grMod}[0]{{\operatorname{grMod}}}
-\newcommand{\bimod}[2]{({#1}, {#2})\dash\mathbf{biMod}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -106,60 +157,136 @@
 \newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
-\newcommand{\Fun}[0]{{\operatorname{Fun}}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
 \newcommand{\PSL}[0]{{\operatorname{PSL}}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\MO}[0]{{\operatorname{MO}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\alg}[0]{\mathrm{Alg}}
-\newcommand{\scalg}[0]{\mathrm{sCAlg}}
-\newcommand{\calg}[0]{\mathrm{CAlg}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\poly}[0]{\operatorname{poly}}
-\newcommand{\Vect}[0]{{\operatorname{Vect}}}
-\newcommand{\Sh}[0]{{\operatorname{Sh}}}
-\newcommand{\presh}[0]{{\operatorname{Presh}}}
-\newcommand{\Presh}[0]{{\operatorname{Presh}}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
+\newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Poset}[0]{\mathsf{Poset}}
+\newcommand{\Fun}[0]{{\mathsf{Fun}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
+\newcommand{\poly}[0]{\mathsf{poly}}
+\newcommand{\Vect}[0]{{\mathsf{Vect}}}
+\newcommand{\Sh}[0]{{\mathsf{Sh}}}
+\newcommand{\Var}[0]{{\mathsf{Var}}}
+\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
+\newcommand{\Alg}[0]{{\mathsf{Alg}}}
+\newcommand{\Ch}[0]{\mathsf{Ch}}
+\newcommand{\Set}[0]{{\mathsf{Set}}}
+\newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
+\newcommand{\Sets}[0]{{\mathsf{Set}}}
+\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
+\newcommand{\sSet}[0]{{\mathsf{sSet}}}
+\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
+\newcommand{\Sp}[0]{{\mathsf{Sp}}}
+\newcommand{\sets}[0]{{\mathsf{Set}}}
+\newcommand{\Grp}[0]{{\mathsf{Grp}}}
+\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
+\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\Kan}[0]{{\mathsf{Kan}}}
+\newcommand{\Groups}[0]{{\mathsf{Group}}}
+\newcommand{\Ab}[0]{{\mathsf{Ab}}}
+\newcommand{\Ring}[0]{\mathsf{Ring}}
+\newcommand{\CRing}[0]{\mathsf{CRing}}
+\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
+\newcommand{\Field}[0]{\mathsf{Field}}
+\newcommand{\Perf}[0]{\mathsf{Perf}}
+\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
+\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
+\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
+\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
+\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
+\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\gr}[0]{{\mathsf{gr}\,}}
+\newcommand{\grMod}[0]{{\mathsf{grMod}}}
+\newcommand{\Mod}[0]{{\mathsf{Mod}}}
+\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
+\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
+\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
+\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
+\newcommand{\cdga}[0]{{\mathsf{cdga} }}
+\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\alg}[0]{\mathsf{Alg}}
+\newcommand{\scalg}[0]{\mathsf{sCAlg}}
+\newcommand{\calg}[0]{\mathsf{CAlg}}
+\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
+\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
+\newcommand{\ssets}[0]{\mathsf{sSet}}
+\newcommand{\Assoc}[0]{\mathsf{Assoc}}
+\newcommand{\Free}[0]{\mathsf{Free}}
+\newcommand{\Unital}[0]{\mathsf{Unital}}
+\newcommand{\Riem}[0]{\mathsf{Riem}}
+\newcommand{\Comm}[0]{\mathsf{Comm}}
+\newcommand{\Top}[0]{{\mathsf{Top}}}
+\newcommand{\CW}[0]{{\mathsf{CW}}}
+\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
+\newcommand{\ho}[0]{{\mathsf{ho}}}
+\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\hoType}[0]{{\mathsf{hoType}}}
+\newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\Aff}[0]{{\mathsf{Aff}}}
+\newcommand{\Schf}[0]{{\mathsf{Schf}}}
+\newcommand{\Rep}[0]{{\mathsf{Rep}}}
+\newcommand{\sch}[0]{{\mathsf{Sch}}}
+\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
+\newcommand{\Perv}[0]{\mathsf{Perv}}
+\newcommand{\presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\set}{{\mathsf{Set} }}
+
+\newcommand{\eul}[0]{{\operatorname{eul}}}
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Ob}[0]{{\operatorname{Ob}}}
 \newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\Set}[0]{{\operatorname{Set}}}
-\newcommand{\Sets}[0]{{\operatorname{Set}}}
-\newcommand{\Grp}[0]{{\operatorname{Grp}}}
-\newcommand{\Groups}[0]{{\operatorname{Groups}}}
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
 \newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\sets}[0]{{\operatorname{Set}}}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Obs}{\operatorname{Obs} }
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\discriminant}[0]{{\Delta}}
 \newcommand{\id}[0]{\operatorname{id}}
 \newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
 \newcommand{\tors}[0]{{\operatorname{tors}}}
 \newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{\operatorname{compact}}
+\newcommand{\cpt}[0]{{ \text{compact} } }
+\newcommand{\Kah}[0]{{ \text{Kähler} } }
+\newcommand{\oriented}[0]{{ \text{oriented} } }
+\newcommand\compact[0]{\text{cpt}}
+\newcommand\Kahler[0]{\text{Kähler}}
+\newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
@@ -169,12 +296,18 @@
 \newcommand{\bd}[0]{{\del}}
 \newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
 \newcommand{\convolve}[0]{\ast}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
 \newcommand{\coker}[0]{\operatorname{coker}}
 \newcommand{\Mor}[0]{\operatorname{Mor}}
 \newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
 \newcommand{\bundle}[1]{\mathcal{#1}}
 \newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
@@ -182,14 +315,16 @@
 \newcommand{\by}[0]{\times}
 \newcommand{\dash}[0]{{\hbox{-}}}
 \newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
 \newcommand{\definedas}[0]{\coloneqq}
 \newcommand{\da}[0]{\coloneqq}
 \newcommand{\del}[0]{{\partial}}
 \newcommand{\directlim}[0]{\varinjlim}
 \newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
-\newcommand{\dual}[0]{^\vee}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
+\newcommand{\dual}[0]{ {}^{ \check{} }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
 \newcommand{\smts}[1]{\setminus\theset{#1}}
@@ -203,9 +338,9 @@
 \newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
 \newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
 \newcommand{\into}[0]{\to}
 \newcommand{\inv}[0]{^{-1}}
 \newcommand{\mfa}[0]{{\mathfrak{a}}}
@@ -218,34 +353,48 @@
 \newcommand{\mfp}[0]{{\mathfrak{p}}}
 \newcommand{\mfq}[0]{{\mathfrak{q}}}
 \newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
 \newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\lieh}[0]{{\mathfrak{h}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
+\newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\lieb}[0]{{\mathfrak{b}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieh}[0]{{\mathfrak{h}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\Lie}[0]{\operatorname{Lie}}
 \newcommand{\nilrad}[0]{{\mathfrak{N}}}
 \newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
 \newcommand{\mapsvia}[1]{\xrightarrow{#1}}
 \newcommand{\fromvia}[1]{\xleftarrow{#1}}
 \newcommand{\mapstovia}[1]{\xmapsto{#1}}
 \newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\from}[0]{\leftarrow}
 \newcommand{\mapstofrom}[0]{\rightleftharpoons}
-\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
+\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
 \newcommand{\injects}[0]{\hookrightarrow}
 \newcommand{\diagonal}[0]{\Delta}
 \newcommand{\embeds}[0]{\hookrightarrow}
-\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\overset{#1}\injects}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\Prism}[0]{\mathsf{Prism}}
+\newcommand{\Solid}[0]{\mathsf{Solid}}
+\newcommand{\Spf}[0]{\mathsf{Spf}}
+\newcommand{\WCart}[0]{\mathsf{WCart}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
 }
 \newcommand{\adjoint}[0]{\leftrightarrows}
 \newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
@@ -275,29 +424,10 @@
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
 \newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\cl}[0]{\operatorname{cl}}
-\newcommand{\Cl}[0]{\operatorname{Cl}}
-\newcommand{\St}[0]{\operatorname{St}}
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\Crit}[0]{\operatorname{Crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\soc}[0]{\operatorname{Soc}}
-\newcommand{\hd}[0]{\operatorname{Head}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\hilb}[0]{\operatorname{Hilb}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Frame}[0]{{\operatorname{Frame}}}
-\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
-\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
-\newcommand{\Hom}[0]{{\operatorname{Hom}}}
-\newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\FS}{{ \text{FS} }}
 \newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
@@ -309,11 +439,10 @@
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
-\newcommand{\rad}[0]{{\operatorname{rad}}}
-\newcommand{\ralg}[0]{\operatorname{R-alg}}
-\newcommand{\kalg}[0]{k\dash\operatorname{alg}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
 \newcommand{\Log}[0]{\operatorname{Log}}
@@ -323,43 +452,31 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\Top}[0]{{\mathbf{Top}}}
-\newcommand{\Mfd}[0]{{\mathbf{Mfd}}}
-\newcommand{\Ab}[0]{{\mathbf{Ab}}}
-\newcommand{\hoTop}[0]{{\mathbf{hoTop}}}
-\newcommand{\Sch}[0]{{\mathbf{Sch}}}
-\newcommand{\sch}[0]{{\mathbf{Sch}}}
-\newcommand{\rmod}[0]{{R\dash\mathbf{Mod}}}
-\newcommand{\modr}[0]{{\mathbf{Mod}\dash R}}
-\newcommand{\mmod}[0]{{\dash\operatorname{Mod}}}
-\newcommand{\mods}[1]{{{#1}\dash\mathbf{Mod}}}
-\newcommand{\modsright}[1]{\mathbf{Mod}\dash{#1}}
-\newcommand{\modsleft}[1]{{#1}\dash\mathbf{<od}}
-\newcommand{\kmod}[0]{{k\dash\mathbf{Mod}}}
-\newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
 \newcommand{\sign}[0]{\operatorname{sign}}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-\newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\St}[0]{{\mathsf{Stk}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\smashprod}[0]{\wedge}
 \newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Extalg}[0]{\bigwedge}
 \newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand{\connectsum}[0]{\mathop{ \text{\Large \#} }}
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
 \newcommand{\ts}[1]{\left\{{#1}\right\}}
 \newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
@@ -375,19 +492,21 @@
 \newcommand{\covers}[0]{\rightrightarrows}
 \newcommand{\units}[0]{^{\times}}
 \newcommand{\nonzero}[0]{^{\bullet}}
-\newcommand{\wait}[0]{{\,\cdot\,}}
+\newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \renewcommand{\div}[0]{\operatorname{Div}}
 \newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
+\newcommand{\complex}[1]{{#1}_{*}}
 \newcommand*\dif{\mathop{}\!\operatorname{d}}
 \newcommand{\ddt}{\tfrac{\dif}{\dif t}}
 \newcommand{\ddx}{\tfrac{\dif}{\dif x}}
@@ -402,22 +521,29 @@
 \newcommand{\increasesto}[0]{\nearrow}
 \newcommand{\decreasesto}[0]{\searrow}
 \newcommand\jan{\operatorname{Jan}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\TMF{ \mathrm{TMF} }
+\newcommand\tmf{ \mathrm{tmf} }
+\newcommand\Fix{ \mathrm{Fix} }
+
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\DeclareMathOperator{\submfds}{SubMfds}
+\DeclareMathOperator{\crys}{crys}
+\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\ind}{Ind}
-\DeclareMathOperator{\coind}{Coind}
-\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\proj}{proj}
 \DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\res}{Res}
-\DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\BiHol}{BiHol}
 \DeclareMathOperator{\Br}{Br}
 \DeclareMathOperator{\coh}{coh}
 \DeclareMathOperator{\colspace}{colspace}
@@ -428,15 +554,83 @@
 \DeclareMathOperator{\nullity}{nullspace}
 \DeclareMathOperator{\projection}{Proj}
 \DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\Loop}{{\Omega}}
+\DeclareMathOperator{\Suspend}{{\Sigma}}
+\DeclareMathOperator{\B}{{\mathsf{B} }}
+\DeclareMathOperator{\D}{{\mathsf{D} }}
+\DeclareMathOperator{\K}{{\mathsf{K} }}
+\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
+\DeclareMathOperator{\T}{{T}}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\Tot}{Tot}
+\DeclareMathOperator{\Forget}{Forget}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\U}{U}
+
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+
+
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\Crit}[0]{\operatorname{Crit}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\gal}[0]{\operatorname{Gal}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\Curv}{Curv}
+
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Frame}{Frame}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Taut}{Taut}
+
+\DeclareMathOperator{\Frob}{Frob}
+
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\coinfl}{coinf}
+
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\delbar}[0]{\bar{\del}}
 
 
+
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 
@@ -450,15 +644,22 @@
 \newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
-\newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
 \newcommand\constantsheaf[1]{\underline{#1}}
 \newcommand\holomorphic[0]{\text{holo}}
+\newcommand\std[0]{\text{std}}
 \newcommand\Mero[0]{\operatorname{Mero}}
-\newcommand\compact[0]{\text{cpt}}
+\newcommand\even[0]{\text{even}}
+\newcommand\odd[0]{\text{odd}}
+\newcommand\hodgestar[0]{\star}
+\newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
+\newcommand\laplacian[0]{\Delta}
+\newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
+\newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\closure[1]{\overline{#1}}
+\newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
@@ -469,22 +670,76 @@
 \newcommand\cupp[0]{\smile}
 \newcommand\capp[0]{\frown}
 \newcommand\sig[0]{\operatorname{sig}}
-
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
+\newcommand\ev[0]{\operatorname{ev}}
+\newcommand\coev[0]{\operatorname{coev}}
 
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
-\newcommand{\divides}{\mid}
-\newcommand{\notdivides}{\nmid}
+\newcommand{\divides}{\bigm|}
+\newcommand{\notdivides}{%
+  \mathrel{\mkern.5mu % small adjustment
+    % superimpose \nmid to \big|
+    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+  }%
+}
 \newcommand{\fractional}[1]{\theset{#1}}
+\newcommand{\fractionalpart}[1]{\theset{#1}}
+\newcommand{\integerpart}[1]{\left[ {#1}\right] }
+\newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
+\def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+\newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
+\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+
+
+\newcommand{\Totsum}[0]{\Tot^{\oplus}}
+\newcommand{\Totprod}[0]{\Tot^{\Pi}}
+\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
+\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
+\newcommand{\congas}[1]{\underset{#1}{\cong}}
+\newcommand{\ideal}[1]{\mathcal{#1}}
+\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\xpn}[0]{ { x^{p^n} } }
+
+
+
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
+
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+#1 & #2 
+\\
+#3 & #4
+\end{bmatrix}
+}}
+
+
+\newcommand{\ptd}{{\scriptstyle { * } }}
+\newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
+\newcommand{\fd}[0]{{\mathrm{fd}}}
+\newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\ft}[0]{{\mathrm{ft}}}
+\newcommand{\smol}[0]{{\mathrm{small}}}
+\newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
+\newcommand{\semisimple}[0]{{\operatorname{ss}}}
+\newcommand{\gon}[0]{{\dash\mathrm{gon}}}
+\newcommand{\semi}[0]{{\operatorname{semi}}}
+\newcommand{\inc}[0]{{\operatorname{inc}}}
+\newcommand{\Ball}[0]{{B}}
+\newcommand{\hq}[0]{{/}}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
+\newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
+\newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
+\newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
+\newcommand{\realize}[1]{{ \abs{#1} }}
 
 # Topics and Remarks 2
 
@@ -513,115 +768,83 @@ applications (e.g. **how to find the Jordan or rational canonical form** of a gi
 > "The first 6 chapters (220 pages) of Dummit and Foote are excellent.
 All the definitions and proofs of these theorems on groups are given in Smith's web based lecture notes for math 843 part 1."
 
-### Key Topics
+### Topics
 
-- Sylow theorems
+Chapters 1-9 of Dummit and Foote
 
-- Simplicity of $A_n$ for $n > 4$.
-
-- The first isomorphism theorem,
-
-- The Jordan Holder theorem
-
-  - **The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
+- **The first isomorphism theorem**,
 
 - Fundamental theorem of finite abelian groups
-
-  *DF Exercises 12.1.16-19*
-
-- The simple groups of order between 60 and 168 have prime order
-
-### Full List of Topics
-
-- Chapters 1-9 of Dummit and Foote
-
-- Subgroups and quotient groups
-
+- Left and right cosets
+- Normalizer
+- Lagrange's theorem
+- Isomorphism theorems
 - Lagrange's Theorem
-
+- Group generated by a subset
+- Subgroups and quotient groups
 - Fundamental homomorphism theorems
-
-- Group actions with applications to the structure of groups such as
-  - The Sylow Theorems
-
-- Group constructions such as:
-  - Direct and semi-direct products
-
+- Direct and semi-direct products
+	- Recognition of internal direct product
+	- Recognition of semi-direct product
+- Composite groups
 - Structures of special types of groups such as:
   - p-groups
   - Dihedral,
+	- Cyclic groups
+	- Free groups
+		- Generators and relations
   - Symmetric and Alternating groups
     - Cycle decompositions
-
+- Group actions with applications to the structure of groups such as
+	- **The Sylow Theorems**
+		- Proof of Sylow theorems
+	- Orbit stabilizer theorem
+	- Orbits act on left cosets of subgroups
+	- Action of $G$ on itself by conjugation
+	- Class equation
+	- Cayley's theorem
+- The simple groups of order between 60 and 168 have prime order
 - The simplicity of $A_n$, for $n \geq 5$
-
-- Free groups, generators and relations
-
 - Solvable groups
-
-- Left and right cosets
-- Lagrange's theorem
-- Isomorphism theorems
-- Group generated by a subset
-- Structure of cyclic groups
-- Composite groups
-- Normalizer
-- Symmetric groups
-- Cayley's theorem
-- Orbit stabilizer theorem
-- Orbits act on left cosets of subgroups
-- Subgroups of index $p$, the smallest prime dividing $|G|$, are normal
-- Action of $G$ on itself by conjugation
-- Class equation
+- Subgroups of index $p$, the smallest prime dividing $\# G$, are normal
 - $p$-groups
 - $p^2$ groups are abelian
 - Automorphisms
   - Inner automorphisms
-- Proof of Sylow theorems
 - $A_n$ is simple for $n\geq 5$
-- Recognition of internal direct product
-- Recognition of semi-direct product
 - Classification of groups of order $pq$
-- Free group & presentations
 - Commutator subgroup
-- Solvable groups
-- Derived series
 - Nilpotent groups
 - Upper central series
 - Lower central series
+- Derived series
+- Solvable groups
 - Fratini's argument
+ - The Jordan Holder theorem
 
+  > The proof of Jordan-Holder is seldom tested on the qual**, but proofs are always of interest.
 
 ## Linear Algebra
 
 > References: [@dummit_foote_2004],[@hoffman_kunze_1981],[@smith]
 
-### Key Topics
+### Topics
 
 - Determinants
-
 - Eigenvalues and eigenvectors
-
 - Cayley-Hamilton Theorem
-
 - Canonical forms for matrices
-
 - Linear groups ($\GL_n , \SL_n, \mathrm{O}_n, \mathrm{U}_n$)
-
 - Duality
   - Dual spaces,
   - Dual bases,
   - Induced dual map,
   - Double duals
-
 - Finite-dimensional spectral theorem
-
 
 ## Rings
 
 > References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
-
-### Key Topics
 
 - DF chapters 13,14 (about 145 pages).
 
@@ -629,21 +852,28 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
   - 843-2, sections 11,12, and 16-21 (39 pages)
   - 844-1, sections 7-9 (20 pages)
   - 844-2, sections 10-16, (37 pages)
+- DF Chapters 7, 8, 9.
 
-### Full List of Topics
+### Topics
 
 - Properties of ideals and quotient rings
+- The fundamental isomorphism theorems for rings 
 - $I$ maximal iff $R/I$ is a field
 - Zorn's lemma
   - Every vector space has a basis
   - Maximal ideals exist
+  - Construct algebraic field closures
+  - Why it is unnecessary in countable or noetherian rings.
+  
+  > Smith discusses extensively in 844-1.
 - Chinese Remainder Theorem
+- Euclidean algorithm
+- Primes and irreducibles
+- Gaussian integers
 - Localization of a domain
 - Field of fractions
 - Factorization in domains
-- Euclidean algorithm
-- Gaussian integers
-- Primes and irreducibles
+- Factorization in $Z[i]$
 - Characterizations and properties of special rings such as:
   - Euclidean $\implies$ PID $\implies$ UFD
   - Domains
@@ -656,53 +886,29 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
     - Irreducibles are prime
     - Are UFDs
     - Have GCDs
+	- Results about PIDs *(DF Section 8.2)*
+		- Example of a PID that is not a Euclidean domain
+		*(DF p.277)*
+		- Proof that a Euclidean domain is a PID and hence a UFD
+		- Proof that $\ZZ$ and $k[x]$ are UFDs
+		*(p.289 Smith, p.300 DF)*
+		- A polynomial ring in infinitely many variables over a UFD is still a UFD 
+		*(Easy, DF, p.305)*
   - Euclidean domains
     - Are PIDs
-- Factorization in $Z[i]$
-- Polynomial rings
-- Gauss' lemma
-- Remainder and factor theorem
-- Polynomials
-- Reducibility
-- Rational root test
-- Eisenstein's criterion
-
-- DF Chapters 7, 8, 9.
-
 - Gauss's important theorem on unique factorization of polynomials:
   - $\ZZ[x]$ is a UFD
   - $R[x]$ is a UFD when $R$ is a UFD
-
-- The fundamental isomorphism theorems for rings 
-
-  > An easy and useful exercise
-
-- How to use Zorn's lemma
-  - To find maximal ideals
-  - Construct algebraic field closures
-  - Why it is unnecessary in countable or noetherian rings.
-
-  > Smith discusses extensively in 844-1.
-
-- Results about PIDs *(DF Section 8.2)*
-
-  - Example of a PID that is not a Euclidean domain
-    *(DF p.277)*
-
-  - Proof that a Euclidean domain is a PID and hence a UFD
-
-  - Proof that $\ZZ$ and $k[x]$ are UFDs
-    *(p.289 Smith, p.300 DF)*
-
-- A polynomial ring in infinitely many variables over a UFD is still a UFD 
-  *(Easy, DF, p.305)*
-
-- Eisenstein's criterion
-  *(DF p.309)*
-
+- Polynomial rings
+- Polynomials
+	- Gauss' lemma
+	- Remainder and factor theorem
+	- Eisenstein's criterion
+  	*(DF p.309)*
   > Stated only for monic polynomials -- proof of general case identical.
   > See Smith's notes for the  full version.
-
+	- Reducibility
+	- Rational root test
 - Cyclic product structure of $(\ZZ/n\ZZ)\units$
 
   > Exercise in DF, Smith 844-2, section 18
@@ -715,7 +921,7 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 > References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
 
-### Key Topics
+### Topics
 
 - Fundamental homomorphism theorems for rings and modules
 
@@ -727,17 +933,15 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
     *(with emphasis on Euclidean Domains)*
 
 - Modules over PIDs and canonical forms of matrices.
-
   *DF sections 10.1, 10.2, 10.3, and 12.1, 12.2, 12.3.*
 
   - Constructive proof of decomposition: DF Exercises 12.1.16-19
 
-  - Smith 845-1 and 845-2:
-  Detailed discussion of the constructive proof.
+  > Smith 845-1 and 845-2: Detailed discussion of the constructive proof.
 
 ## Field Theory
 
-### Key Topics
+### Topics
 
 > References: [@dummit_foote_2004],[@hungerford_2008],[@smith]
 
@@ -749,20 +953,16 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - Fundamental theorem of Galois theory
 
-- Computations of Galois groups of polynomials of small degree and cyclotomic
-
-- Polynomials
+- Computations of Galois groups 
+	- of polynomials of small degree 
+	- of cyclotomic polynomials
 
 - Solvability of polynomials by radicals
 
 
-
 # Group Theory
 
-
-
 ## Big List of Notation
-
 
 +--------------------------------------+------------------------------------------------------------------------------------------------------------------+
 | Notation                             | Definition                                                                                                       |
@@ -812,45 +1012,238 @@ All the definitions and proofs of these theorems on groups are given in Smith's 
 
 - For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 
-
-
-
-
 ## Definitions
+
+:::{.fact}
+An set morphism that is *either* injective or surjective between sets of the same size is automatically a bijection.
+Consequently, a group morphism between groups of the same size that is either injective or surjective is automatically an isomorphism.
+
+:::
+
+:::{.fact title="The division algorithm"}
+If $a, b\in \ZZ$ with $\gcd(a, b) = d$, then there exist $s,t\in \ZZ$ such that
+\[
+as + bt = d
+.\]
+
+:::
+
+:::{.remark}
+Useful context clue!
+In particular, this works when $a, b$ are coprime and $d=1$.
+If you see "coprime" in a finite group question, try the division algorithm.
+:::
 
 :::{.definition title="Subgroup Generated by a Subset"}
 If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \[
 \gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
 \]
+where adjacent $h_i$ are distinct.
+:::
+
+:::{.definition title="Conjugacy class"}
+The **conjugacy class** of $h$ is defined as 
+\[
+C(h) \da \ts{ ghg\inv \st g\in G } 
+.\]
+:::
+
+:::{.remark}
+$[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
+Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
+However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
+\
+
+Also note that$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
+:::
+
+:::{.definition title="Conjugate subgroups"}
+Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
+Note that all conjugates have the same cardinality.
+:::
+
+:::{.definition title="Normal subgroup"}
+A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$, or equivalently $gHg\inv = H$ for all $g$, so $H$ has only itself as a conjugate.
+We denote this by $N\normal G$.
+Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
+:::
+
+:::{.proposition title="Normal iff disjoint union of conjugacy classes"}
+$N\normal G \iff N = \disjoint' [h_i]$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
+:::
+
+:::{.proof title="?"}
+Note that $C(h_i) = \ts{ gh_i g\inv \st g\in G }$, and $gh_i g\inv \in H$ since $H$ is normal, so $C(h_i) \subseteq G$ for all $i$.
+Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ for all $i$ and $H$ is normal.
 :::
 
 :::{.definition title="Centralizer"}
 \[
 C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
 \]
+These are elements that fix $H$ pointwise under the conjugation action.
 :::
 
 :::{.definition title="Normalizer"}
 \[
 N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
 \]
+Contrast to the centralizer: these don't have to fix $H$ pointwise.
 :::
 
+:::{.remark}
+$C_G(S) \normal N_G(H)$ for any $H$.
+:::
+
+:::{.definition title="Commutator"}
+The **commutator subgroup** of $G$ is denoted $[G, G] \leq G$.
+It is the subgroup generated by all elementary commutators:
+\[
+[G, G] \da \gens{ aba\inv b\inv \st a, b\in G } 
+.\]
+
+It is the smallest normal subgroup $N\normal G$ such that $G/N$ is abelian, so if $H\leq G$ and $G/H$ is abelian, $H\subseteq [G, G]$.
+:::
+
+:::{.definition title="Group Presentation"}
+An expression of the form $G = \gens{S \st R}$ where $S$ is a set of elements and $R$ a set of words defining relations means that $G \da F[S] / \cl_n(R)$ where $F[S]$ is the free group on the set $S$ and $\cl_n(R)$ is the normal closure, the smallest normal subgroup of $F[S]$ containing $R$.
+:::
+
+:::{.remark}
+Finding morphisms between presentations: if $G$ is presented with generators $g_i$ with relations $r_i$ and $H$ is any group containing elements $h_i$ also satisfying $r_i$, there is a group morphism
+\[
+\phi: G &\to H \\
+g_i &\mapsto h_i \quad \forall i
+.\]
+Why this exists: the presentation yields a morphism $\pi: F(g_i) \to G$ with $G\cong F(g_i) / \ker \pi$.
+Define a map $\psi: F(g_i) \to H$ where $g_i\mapsto h_i$, then since the $h_i$ satisfy the relations $r_i$, $\ker \pi \subseteq \ker \psi$.
+So $\psi$ factors through $\ker \pi$ yielding a morphism $F/\ker \pi \to H$.
+:::
+
+:::{.proposition title="NC Theorem"}
+$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
+:::
+
+## Subgroups, Cosets, Quotients
+
+:::{.definition title="Subgroup"}
+A subset $H\subseteq G$ is a **subgroup** iff
+
+1. Closure: $HH \subset H$
+2. Identity: $e\in H$
+3. Inverses: $g\in H \iff g\inv \in H$.
+:::
+
+:::{.proposition title="One-step subgroup test"}
+If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
+:::
+
+:::{.proof title="of the one-step subgroup test"}
+\envlist
+
+- Identity: $a=b=x\implies xx\inv=e\in H$
+- Inverses: $a=e, b=x \implies x\inv \in H$.
+- Closure: let $x, y\in H$, then $y\inv \in H$ by above, so $xy = x(y\inv )\inv \in H$.
+:::
+
+:::{.fact }
+Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+:::
+
+:::{.proposition title="Intersection of subgroups is a subgroup"}
+If $H, K\leq G$ then $J \da H \intersect K \leq G$ is a subgroup.
+Moreover $J\leq H$ and $J \leq K$.
+:::
+
+:::{.proof title="?"}
+One-step subgroup test.
+:::
+
+:::{.proposition title="Tower law for subgroups"}
+\[
+K\leq H \leq G \implies [G: K] = [G:H] [H: K]
+.\]
+:::
+
+:::{.proposition title="Indices grow"}
+If $H, K \leq G$, then 
+\[
+[H: H \intersect K ]\leq [G: K] 
+.\]
+:::
+
+:::{.proof title="?"}
+Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct cosets.
+Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since $H\leq G$, which forces $h_i h_j\inv \not\in K$.
+So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$.
+:::
+
+## Cosets
+
+:::{.proposition title="Cosets are identical or disjoint"}
+Any two cosets $xH, yH$ are either identical or disjoint.
+:::
+
+:::{.proof title="?"}
+Note $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
+The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its cosets.
+Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
+Write $\ell =xh_1 =yh_2$ for some $h_i$, then
+\[
+xh_1 = yh_2 &\implies x = yh_2 h_1\inv \\
+xh_3\in xH &\implies xh_3 = (yh_2h_1\inv) h_3 \in yH
+,\]
+so $xH \subseteq yH$.
+A symmetric argument shows $y_H \subseteq xH$.
+[^df_p80_identical_disjoint]
+
+[^df_p80_identical_disjoint]: 
+See full argument: D&F p.80.
+
+:::
+
+:::{.theorem title="The Fundamental Theorem of Cosets"}
+\[
+aH = bH \iff a\inv b \in H \iff b\inv a\in H
+.\]
+:::
+
+:::{.proof title="?"}
+[^df_p80_identical_disjoint]
+\[
+aH = bH \iff a\in bH \iff a=bh \text{ for some } h \iff b\inv a = h \iff ba\inv \in H
+.\]
+:::
+
+:::{.definition title="Index of a subgroup"}
+The **index** $[G: H]$ of a subgroup $H\leq G$ is the number of left (or right) cosets $gH$.
+:::
+
+:::{.remark title="Common coset trick"}
+If you can reduce a problem to showing $X \subseteq H$, it suffices to show $xH = H$ for all $x\in X$.
+:::
+
+:::{.remark}
+Cosets form an equivalence relation and thus partition a group.
+Nice trick: write $G/H = \ts{ g_1 H, g_2 H,\cdots, g_n H }$, then $G = \disjoint_{i\leq n} g_i H$.
+:::
+
+:::{.theorem title="Counting Cosets"}
+If $H\normal G$, then
+\[
+[G: H] = \abs{G/H} = {\abs G \over \abs H}
+.\]
+:::
+
+
+## Special Groups
 
 :::{.definition title="The Dihedral Group"}
 A **dihedral group** of order $2n$ is given by 
 \[
-D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv }
+D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv } = \gens{r, s \st r^n, s^2, (rs)^2 }
 \]
-
-
-:::{.definition title="Alternating Group"}
-The **alternating group** is the subgroup of **even** permutations, i.e.
-\[
-A_n \definedas \theset{\sigma \in S_n \suchthat \sign(\sigma) = 1}
-\] 
-where $\sign(\sigma) = (-1)^{m}$ and $m$ is the number of cycles of even length.
 :::
 
 :::{.definition title="The Quaternion Group"}
@@ -859,71 +1252,109 @@ The **Quaternion group** of order 8 is given by
 Q &= \gens{x,y,z \suchthat x^2 = y^2 = z^2 = xyz = -1} \\
   &= \gens{x, y \suchthat  x^4 = y^4, x^2 = y^2, yxy\inv = x\inv}
 \]
+Mnemonic: multiply clockwise to preserve sign, counter-clockwise to negate sign.
+Everything squares to $-1$, and the triple product is $-1$:
+
+\begin{tikzcd}
+	&& {-1} \\
+	\\
+	&& i \\
+	\\
+	\\
+	k &&& {} & j
+	\arrow["{ki=j}"', from=3-3, to=6-5]
+	\arrow["{ij=k}"', from=6-5, to=6-1]
+	\arrow["{jk=i}"', from=6-1, to=3-3]
+	\arrow["{ik=-j}"', curve={height=30pt}, dashed, from=6-1, to=6-5]
+	\arrow["{kj=-i}"', curve={height=30pt}, dashed, from=6-5, to=3-3]
+	\arrow["{ji=-k}"', curve={height=30pt}, dashed, from=3-3, to=6-1]
+	\arrow["{ijk=-1}"', from=3-3, to=1-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMiwyLCJpIl0sWzMsNV0sWzAsNSwiayJdLFs0LDUsImoiXSxbMiwwLCItMSJdLFswLDMsImtpPWoiLDJdLFszLDIsImlqPWsiLDJdLFsyLDAsImprPWkiLDJdLFsyLDMsImlrPS1qIiwyLHsiY3VydmUiOjUsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDAsImtqPS1pIiwyLHsiY3VydmUiOjUsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDIsImppPS1rIiwyLHsiY3VydmUiOjUsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDQsImlqaz0tMSIsMl1d)
+
 :::
 
 :::{.definition title="Transitive Subgroup"}
 A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
 :::
 
-
-## Subgroups and Quotients
-
-
-:::{.fact }
-Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
-:::
-
-:::{.theorem title="The Fundamental Theorem of Cosets"}
-\[
-aH = bH \iff a\inv b \in H \text{ or } aH \intersect bH = \emptyset
-.\]
-:::
-
-:::{.theorem title="Counting Quotients"}
-If $H\normal G$, then
-\[  
-[G: H] = \abs{G/H} = {\abs G \over \abs H}
-.\]
-:::
-
-:::{.theorem title="Counting by Towers"}
-\[  
-[G:K] = [G:H]\, [H:K]
-.\]
-:::
-
-
-:::
-
-## Special Classes of Groups
-
 ### Cyclic Groups
 
 :::{.theorem title="Subgroups of Cyclic Groups"}
-If $G$ is cyclic of order $n$, $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
+$G$ is cyclic of order $n \da \# G$ iff $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
 :::
+
+
+:::{.proof title="?"}
+$\impliedby$:
+Use that $\sum_{d\divides n} \phi(d) = n$, and that there are at most $\phi(d)$ elements of order $d$, forcing equality.
+
+$\implies$:
+If $G = \gens{ a }$ with $a^n=e$, then for each $d\divides n$ take $H_d \da \gens{ a^{n\over d} }$ for existence.
+:::
+
 
 
 ### The Symmetric Group
 
-:::{.definition title="Parity of a Cycle"}
 
-- A cycle is **even** $\iff$ product of an *even* number of transpositions.
-
-- A cycle of even *length* is **odd**
-
-- A cycle of odd *length* is **even**
-
-> Mnemonic: the parity of a $k\dash$cycle is the parity of $k-1$.
+:::{.definition title="The symmetric group"}
+The transposition presentation:
+\[
+S_n \da \gens{ \sigma_1, \cdots, \sigma_{n-1} \st \sigma_i^2, [\sigma_i, \sigma_j]\, (j\neq i+1), \sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1} } 
+.\]
 
 :::
 
 
-:::{.corollary title="Alternating Group"}
-Every $\sigma \in A_n$ has an even number of *odd* cycles (i.e. an even number of *even-length* cycles).
+:::{.definition title="The sign homomorphism"}
+Defined by the map
+\[
+\sgn: S_n &\to (\ZZ/2, +) \\
+\prod_{i\leq 2k} (a_i b_i) &\mapsto 0 \\
+\prod_{i\leq 2k+1} (a_i b_i) &\mapsto 1
+.\]
+
+- The kernel is the alternating group, cycles that 
+  - **Even** cycles
+  - For a single cycle: has **odd** length
+  - Have an **even** number of even length cycles.
+  - Can be written as an **even** number of transpositions
+- The fiber over 1 is everything else:
+  - **Odd** cycles
+  - For a single cycle: has **even** length
+  - Have an **odd** number of even length cycles.
+  - Can be written as an **odd** number of transpositions
+
+> Mnemonic: the cycle parity of a $k\dash$cycle is the integer parity of $k-1$.
+
 :::
 
-:::{.example}
+:::{.definition title="Alternating Group"}
+The **alternating group** is the subgroup of **even** permutations, i.e.
+\[
+A_n \definedas \theset{\sigma \in S_n \suchthat \sgn(\sigma) = 0}
+\] 
+:::
+
+:::{.proposition title="$A_n$ is generated by 3-cycles"}
+For $n\geq 3$, $A_n$ is generated by 3-cycles.
+:::
+
+:::{.proof title="?"}
+Every 3-cycle $(abc)$ is even, and thus in $A_n$.
+Given an arbitrary even permutation $(t_1\ldots t_{2k})$, it decomposes into a product of an odd number of transpositions $(t_{2j-1} t_{2j})$.
+So it suffices to write every such transposition as a 3-cycle.
+There are only 3 cases the occur:
+
+- $(ab)(ab) = ()$
+- $(ab)(ac) = (abc)$
+- $(ab)(cd) = (abc)(adc)$.
+
+:::
+
+:::{.example title="Of an explicit alternating group"}
 \[
 A_4 =
 & \{\id, \\
@@ -941,39 +1372,86 @@ A_4 =
 \]
 :::
 
-
-
 :::{.fact title="Some useful facts"}
 \envlist
 
 - $\sigma \circ (a_1 \cdots a_k)\circ \sigma^{-1} = (\sigma(a_1), \cdots \sigma(a_k))$
 - Conjugacy classes are determined by cycle type
 - The order of a cycle is its length.
-- The order of an element is the least common multiple of the sizes of its cycles.
+- The order of an element is the least common multiple of the sizes of its disjoint cycles.
+- Disjoint cycles commute.
 - $A_{n\geq 5}$ is *simple*.
 
 :::
 
 
 
+## Exercises
+
+- Show that normal groups absorb conjugacy classes: if $N\normal G$ and $[g_i]$ is a conjugacy class in $g$, either $[g_i] \subseteq N$ or $[g_i] \intersect N = \emptyset$.
+- Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
+- Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
+- Show that if $G$ is a finite group acting transitively on a set $X$ with at least two elements,
+then there exists $g \in G$ which fixes no point of $X$.
+- Let $p$ be prime.
+  For each abelian group $K$ of order $p^2$, how many subgroups $H\leq \ZZ^{\times 3}$ are there with $\ZZ^3/H \cong K$?
+- Let $\# G = pq$, with $p,q$ distinct primes.
+  Show that $G$ has a nontrivial proper normal subgroup, and if $p\not\equiv 1\mod q$ and $q\not \equiv 1 \mod p$ then $G$ is abelian.
+
+- Let $G$ be a finite group and let $p$ be the smallest prime dividing $\# G$, and assume $G$ has a normal subgroup of order $p$.
+  Show that $H \subset Z(G)$.
+
+- Let $G$ be finite and $P$ a Sylow 2-subgroup.
+  Assume $P$ is cyclic and generated by $x$.
+  Show that the sign of the permutation of $G$ corresponding to $x\mapsto gx$ is 1, and deduce that $G$ has a nontrivial quotient of order 2.
+
+
 ## Counting Theorems
 
 :::{.theorem title="Lagrange's Theorem"}
-\[H \leq G \implies \abs H \divides \abs G.\]
+\[H \leq G \implies \# H \divides \# G.\]
+Moreover, there is an equality $[G:H] = \# G/ \# H$ when $G$ is finite.
+:::
+
+:::{.proof title="of Lagrange's theorem"}
+Write $G/H = \ts{g_0 H, g_1 H, \cdots, g_N H}$ for some $N \da [G:H]$.
+Since cosets are equal or disjoint and have equal cardinality, 
+\[
+G = \disjoint_{k \leq N} g_k H \implies \#G = \sum_{k\leq N} \# \qty{g_k H} = \sum_{k\leq N} \# H = N \# H
+,\]
+so $\# G = N \# H$, $\#H$ divides $\# G$ and $N = [G:H]$ divides $\# G$.
+:::
+
+:::{.corollary title="?"}
+\[
+\# G = \#(G/H) \#H \da [G:H] \, \# H
+,\]
+or written another way,
+\[
+\#(G/H) = \# G/ \# H
+.\]
 :::
 
 :::{.corollary}
 The order of every element divides the size of $G$, i.e.
-  $$
-  g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
-  .$$
+$$
+g\in G \implies o(g) \divides o(G) \implies g^{\abs G} = e
+.$$
 :::
 
 :::{.warnings}
-There does **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
-Counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
-:::
+There do **not** necessarily exist $H \leq G$ with $\abs H = n$ for every $n \divides \abs{G}$.
+Counterexample: take $G = A_5$, then $\# G = 5!/2 = 60$ but $G$ has no subgroup of order $30$.
+If it did, this would be index 2 and thus normal, but $A_{n\geq 5}$ is simple.
 
+Another direct counterexample: $\abs{A_4} = 12$ but has no subgroup of order 6.
+If such an $H$ existed, it can't contain every 3-cycle, since $A_4$ is generated by 3-cycles.
+For $x$ any 3-cycle *not* in $H$, use that $\# A_4/H = 2$ and consider $H, xH, x^2H$.
+$x\not\in H$, so $H\neq xH$, but two must be equal:
+
+- $x^2H = H$: use $x^2 = x\inv$ since $x^3=e$, but $x\in H \implies x\inv\in H$, $\contradiction$
+- $xH = x^2H$: the fundamental theorem of cosets forces $x\inv x^2 \in H$, so $x\in H$. $\contradiction$
+:::
 
 :::{.theorem title="Cauchy's Theorem"}
 For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup) of order $p$.
@@ -982,8 +1460,11 @@ For every prime $p$ dividing $\abs{G}$. there is an element (and thus a subgroup
 
 :::
 
+:::{.proof title="?"}
+See [https://kconrad.math.uconn.edu/blurbs/grouptheory/cauchypf.pdf](https://kconrad.math.uconn.edu/blurbs/grouptheory/cauchypf.pdf).
+:::
 
-### Group Actions
+## Group Actions
 
 :::{.definition title="Group Action"}
 An action of $G$ on $X$ is a group morphism
@@ -1003,29 +1484,67 @@ satisfying
 :::
 
 :::{.fact}
-$\ker \psi = \intersect_{x\in X} G_x$ is the intersection of all stabilizers.
+For any group action, the kernel is the intersection of all stabilizers:
+\[
+\ker \psi = \Intersect_{x\in X} G_x
+.\]
 :::
 
 :::{.definition title="Transitive Group Action"}
-A group action $G\actson X$ is *transitive* iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
+A group action $G\actson X$ is **transitive** iff for all $x, y\in X$ there exists a $g\in G$ such that $g\cdot x = x$.
 Equivalently, the action has a single orbit.
+:::
+
+
+:::{.proposition title="Orbit Stabilizer Isomorphism"}
+If $G\actson X$ transitively, then for any choice of $x\in X$ there is an isomorphism of sets given by
+\[
+\Phi: G/G_{x} &\mapsvia{\sim} X \\
+gG_{x} &\mapsto g\actson x
+.\]
+:::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Injectivity: $\Phi(gG_x) = \Phi(hG_x) \iff g\actson x=h\actson x \iff gh\inv \actson x = x \iff gh\inv \in G_x \iff gG_x = hG_x$.
+
+- Well-definedness: use $gG_x = hG_x \iff gh\inv \in G_x \iff g\inv h \actson x = x$.
+  Then $g (g\inv h) \actson x = g \actson x$ on one hand, and on the other $(gg\inv)h\actson x = h\actson x$, so
+  \[
+  \Phi(hG_x) \da h\actson x = (gg\inv) h\actson x = g(g\inv h)\actson x = g\actson x = \Phi(gG_x)
+  .\]
+
+- Surjectivity: equivalent to the action being transitive.
+
+:::
+
+
+:::{.proposition title="?"}
+If $X\in \GSets$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+:::
+
+\todo[inline]{Prove}
+
+
+:::{.proof title="?"}
+\envlist
+
+- Injectivity: check that $\phi(\bar{g}) = \phi(\bar{h}) \iff g\actson x_0 = h\actson x_0 \iff gh\inv \in G_{x_0}$.
+- Surjectivity: follows from transitivity.
 :::
 
 
 :::{.remark title="Reminder of notation"}
 For a group $G$ acting on a set $X$,
 
-+-----------------------------------------------------------------+---------------+
-|  Notation                                                       |  Definition   |
-+=================================================================+===============+
-| \( G\cdot x = \theset{g\cdot x \suchthat g\in G} \subseteq X \) |  Orbit        |
-+-----------------------------------------------------------------+---------------+
-| \(G_x = \ts{ g \in G \st gx=x } \leq G \)                       | Stabilizer    |
-+-----------------------------------------------------------------+---------------+
-| \( X/G \subseteq 2^X \)                                         | Set of Orbits |
-+-----------------------------------------------------------------+---------------+
-| \( X^g = \theset{x\in X \suchthat g\cdot x = x} \subseteq X \)  | Fixed Points  |
-+-----------------------------------------------------------------+---------------+
+| Notation                                                                                  | Definition          |
+|-------------------------------------------------------------------------------------------|---------------------|
+| \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
+| \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
+| \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
+| \( \Fix(G) = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
 :::
@@ -1034,69 +1553,153 @@ Note that being in the same orbit is an equivalence relation which partitions $X
 
 :::{.theorem title="Orbit-Stabilizer"}
 
-\[\abs{G\cdot x} = [G: G_x] = \abs{G} / \abs{G_x}\quad \text{if $G$ is finite}
+\[\# {Gx} = [G: G_x] = \# {G} / \#{G_x} \quad \text{if $G$ is finite}
 .\]
 
-> Mnemonic: $G/G_x \cong G\cdot x$.
+> Mnemonic: $G/G_x \cong Gx$.
 
 :::
 
-
-### Examples of Orbit-Stabilizer and the Class Equation
+## Examples of Orbit-Stabilizer and the Class Equation
 
 :::{.example title="Trivial"}
 Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
-- The orbit $\OO_x = Gx = G$ is the entire group
+- The orbit $\OO(x) = Gx = G$ is the entire group.
+  - This action is transitive.
+- The set of fixed points \( \Fix(G) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
+- The kernel is the identity.
 
-- The stabilizer \( G_x = \ts{ e } \) is only the identity.
-
-- The set of fixed points \( X^g = \ts{ e } \) is only the identity.
 
 :::
 
+
+### The Class Equation and Burnside's Lemma
 
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
 
-- The orbit $\OO_x = Gx = C(x)$ is the **conjugacy class** of $x$.
-  - Note that this means this action is not necessarily transitive.
-
-- $G_x = Z(x) \definedas C_G(x) = \theset{g \in G\suchthat [g, x] = e}$, the **centralizer** of $x$.
-
-- The set of fixed points $X^g = Z(G)$ is the **center**.
-
-:::
+- The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
+  - Thus the action is transitive iff there is one conjugacy class.
+- The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
+- The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
+- The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
 
 
-:::{.corollary}
-The number of conjugates of an element (i.e. the size of its conjugacy class) is the index of its centralizer, $[G: C_G(x)]$, i.e.
-\[
-\abs{C(x)} = [G: C_G(x)]
-.\]
-
-:::
-
-
-:::{.corollary title="The Class Equation"}
-\[
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x_i$ from} \\ \text{each conjugacy} \\ \text{class}}} [G: C_G(x_i)]
-\]
 :::
 
 :::{.remark}
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 :::
 
+:::{.corollary}
+Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
+\[
+\# {C(x)} = [G: Z(x)]
+.\]
+
+:::
+
+:::{.corollary title="The Class Equation"}
+\[
+\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
+\]
+:::
+
+:::{.proof title="of the class equation"}
+$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one representative from each conjugacy class.
+Thus 
+\[
+\# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
+.\]
+Elements $g \in Z(g)$ in the center satisfy $Z(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
+\[
+\# G 
+&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
+&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} 1 +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
+&= \# Z(G) +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
+.\]
+
+:::
+
+:::{.proposition title="Application of the Class Equation"}
+If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+:::
+
+:::{.proof}
+This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
+:::
+
+:::{.corollary title="Burnside's Lemma"}
+For $G$ a finite group acting on $X$, 
+\[
+\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
+\]
+
+> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+
+:::
+
+:::{.proof title="of Burnside's Lemma"}
+Strategy: form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write/count it in two different ways.
+First union over $G$:
+\[
+A = \Disjoint_{g\in G} \ts{ (g, x) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
+.\]
+
+Then union over $X$:
+\[
+A = \Disjoint_{x\in X} \ts{ (g, x) \st gx= x } \cong \Disjoint_{x\in X} G_x \cross \ts{ g } 
+.\]
+Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
+\[
+\Disjoint_{g\in G} X^g
+\cong
+\Disjoint_{x\in X} G_x
+\implies 
+\sum_{g\in G}\# X^g
+=
+\sum_{x\in X} \# G_x
+.\]
+Apply orbit-stabilizer:
+\[
+\# G_x = {\# G \over \# Gx} \implies
+\sum_{g\in G} X^g
+&= \sum_{x\in X} \# G_x \\
+&= \sum_{x\in X} {\# G \over  \# Gx} \\
+&= \# G\sum_{x\in X} {1 \over  \# Gx}
+,\]
+so it suffices to show $\sum_{x\in X}{1\over \# Gx} = \# X/G$.
+Proceed by grouping terms in this sum according to which orbit they're in:
+\[
+\sum_{x\in X} {1\over \# Gx} 
+&=
+\sum_{Gx \in X/G} \sum_{y\in Gx} {1\over \# Gx} \\
+&=
+\sum_{Gx \in X/G} {1\over \# Gx} \sum_{y\in Gx} 1 \\
+&=
+\sum_{Gx \in X/G} {1\over \# Gx} \# G_x \\
+&=
+\sum_{Gx \in X/G} 1 \\
+&= \# X/G
+.\]
+
+:::
+
+
+### Conjugation on Subgroups
+
 :::{.example title="?"}
 Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation.
-Let $x = H$ be a subgroup, then
 
-- The orbit $Gx = \theset{gHg\inv}$ is the **set of conjugate subgroups** of $H$
+- The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
+  - This action is transitive iff all subgroups are conjugate.
+- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
 
-- The stabilizer $G_x = N_G(H)$ is the **normalizer** of in $G$ of $H$
+- The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
-- The fixed points $X^g$ is the set of **normal subgroups** of $G$
+- The kernel is the intersection of all normalizers.
 
 :::
 
@@ -1108,55 +1711,131 @@ Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
 
 :::
 
+### Left Translation on Cosets
 
 :::{.example title="?"}
 For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \theset{gH\suchthat g\in G}$ by left translation.
-Let $x \da gH$, then
 
-- The orbit $Gx = G/H$, the entire set of cosets.
+- The orbit $\OO(xH) = G/H$, the entire set of cosets.
 
   - Note that this is a *transitive* action.
 
-- The stabilizer $G_{x} = gHg\inv$, a **conjugate subgroup** of $H$
+- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
-- The fixed points are $X^G = \emptyset$
+- The fixed points form $\Fix(G) = \emptyset$.
 
-:::
-
-
-
-:::{.proposition title="Application of the Class Equation"}
-If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
-:::
-
-:::{.proof}
-This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
-:::
-
-:::{.corollary title="Burnside's Formula"}
-For $G$ a finite group acting on $X$, 
-\[
-\abs{X/G} = \frac{1}{\abs G }\sum_{g\in G} \abs {X^g}
-\]
-
-> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+- The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
 :::
 
+:::{.proposition title="Application of translation action on cosets"}
+If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$, then $H\normal G$.
+:::
 
 :::{.proof title="?"}
+\envlist
+
+- Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
+- Then $K\da \ker \phi \subseteq H$.
+- Since $G$ is finite and $K\leq G$, we have $[G:K] = \# (G/K) = \# G/ \# K$ so $\# (G/K)$ divides $\# G$.
+- Since $G/K \cong K'$ is isomorphic to a subgroup of $S_p$, $\# (G/K)$ divides $\# S_p = p!$
+- So $\# (G/K)$ divides $\gcd( \# G, p!)$, which is $p$ since it was the minimal prime dividing $\# G$.
+- $p$ is prime, so if $\# G/K\neq 1$ we have $\# G/K = p$.
+- Since $K \subset H$ and $[G:H] = p = [G: K]$, we have $K = H$.
+- But $K = \ker \phi \normal G$, so $H\normal G$.
+
+:::
+
+
+# Sylow Theorems
+
+
+:::{.definition}
+A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
+  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
+:::
+
+Write
+
+
+- $\abs{G} = p^k m$ where $(p, m) = 1$,
+- $S_p$ a Sylow$\dash p$ subgroup, and
+- $n_p$ the number of Sylow$\dash p$ subgroups.
+
+
+## Sylow 1 (Cauchy for Prime Powers)
+
+
+:::{.theorem title="Sylow 1"}
 \[
-\sum_{g\in G} \abs{X^g}
-&= \ts{ (g,x) \in G \cross X \st gx = x } \\
-&= \sum_{x\in X} \abs{G_x} \\
-&= \sum_{x\in X} {\abs{G}\over \abs{Gx}  }  && \text{by Orbit-Stabilizer} \\
-&= \abs{G} \sum_{x\in X} {1 \over \abs{Gx}  }  \\
-&= \abs{G} \sum_{A\in X/G} \sum_{x\in A} {1\over \abs{A} } && \text{ since } X = \Disjoint_{A \in X/G} A \\
-&= \abs{G} \sum_{A\in X/G} 1 \\
-&= \abs{G} \abs{X/G}  
+\forall p^n \text{ dividing } \abs{G} \text{, there exists a subgroup of size } p^n
 .\]
 :::
 
+:::{.slogan}
+Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
+In particular, Sylow $p\dash$subgroups always exist.
+:::
+
+## Sylow 2 (Sylows are Conjugate)
+
+
+:::{.theorem title="Sylow 2"}
+All Sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
+\[
+S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
+\]
+
+:::
+
+:::{.corollary}
+\[
+n_p = 1 \iff S_p \normal G
+.\]
+:::
+
+## Sylow 3 (Numerical Constraints)
+
+:::{.theorem title="Sylow 3"}
+\envlist
+
+1. $n_p \divides m~$ (in particular, $n_p \leq m$),
+
+2. $n_p \equiv 1 \mod p$,
+
+3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
+
+:::
+
+## Corollaries and Applications
+
+
+:::{.corollary}
+By Sylow 3, $p$ does not divide $n_p$.
+:::
+
+:::{.proposition}
+Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
+:::
+
+:::{.proof}
+Let $H \leq G$ be a $p\dash$subgroup.
+If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
+Otherwise, it is contained in some $p\dash$subgroup $H^1$.
+Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
+:::
+
+## Proof of Sylow Theorems
+
+\todo[inline]{Proof of Sylows}
+
+
+
+## Exercises
+
+- Let $G$ be a group of order $p$ with $v$ and $e$ positive integers, $p$ prime, $p > v$, and $v$ is not a multiple of $p$. 
+  Show that $G$ has a normal Sylow p-subgroup.
 
 ## Isomorphism Theorems
 
@@ -1173,7 +1852,6 @@ Note: for this to make sense, we also have
 If $\phi: G\to H$ is surjective then $H\cong G/\ker \phi$.
 :::
 
-
 :::{.theorem title="Diamond Theorem / 2nd Isomorphism Theorem"}
 If $S \leq G$ and $N \normal G$, then
 \[
@@ -1183,7 +1861,6 @@ If $S \leq G$ and $N \normal G$, then
 ![The 2nd "Diamond" Isomorphism Theorem](figures/2020-01-01-15-20-27.png){width=350px}
 
 :::
-
 
 :::{.remark}
 For this to make sense, we also have
@@ -1206,7 +1883,6 @@ Suppose $N, K \leq G$ with $N \normal G$ and $N\subseteq K \subseteq G$.
 \frac{G/N}{K/N} \cong \frac{G}{K}
 .\]
 :::
-
 
 :::{.theorem title="The Correspondence Theorem / 4th Isomorphism Theorem"}
 Suppose $N \normal G$, then there exists a correspondence:
@@ -1233,11 +1909,9 @@ H \suchthat H < \frac G N
 In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
 :::
 
-
 :::{.fact}
 $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 :::
-
 
 
 ## Products
@@ -1279,7 +1953,6 @@ With these conditions, the following map is an isomorphism:
 .\]
 
 :::
-
 
 :::{.theorem title="Recognizing Generalized Direct Products"}
 We have $G \cong \prod_{i=1}^n H_i$ when
@@ -1340,91 +2013,6 @@ If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a sub
 :::
 
 
-
-## Sylow Theorems
-
-
-:::{.definition}
-A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
-  If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
-:::
-
-Write
-
-
-- $\abs{G} = p^k m$ where $(p, m) = 1$,
-- $S_p$ a Sylow$\dash p$ subgroup, and
-- $n_p$ the number of Sylow$\dash p$ subgroups.
-
-
-
-### Sylow 1 (Cauchy for Prime Powers)
-
-
-:::{.theorem title="Sylow 1"}
-\[
-\forall p^n \text{ dividing } \abs{G} \text{, there exists a subgroup of size } p^n
-.\]
-:::
-
-Idea: Sylow $p\dash$subgroups exist for any $p$ dividing $\abs{G}$, and are maximal in the sense that every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
-
-If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\beta_i}$ for every $i$ and every $0 \leq \beta_i \leq \alpha_i$.
-In particular, Sylow $p\dash$subgroups always exist.
-
-### Sylow 2 (Sylows are Conjugate)
-
-
-:::{.theorem title="Sylow 2"}
-All Sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
-\[
-S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i g\inv = S_p^j
-\]
-
-:::
-
-
-:::{.corollary}
-\[
-n_p = 1 \iff S_p \normal G
-.\]
-:::
-
-### Sylow 3 (Numerical Constraints)
-
-
-:::{.theorem title="Sylow 3"}
-\envlist
-
-1. $n_p \divides m~$ (in particular, $n_p \leq m$),
-
-2. $n_p \equiv 1 \mod p$,
-
-3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
-
-:::
-
-
-
-:::{.corollary}
-$p$ does not divide $n_p$.
-:::
-
-:::{.proposition}
-Every $p\dash$subgroup of $G$ is contained in a Sylow $p\dash$subgroup.
-:::
-:::{.proof}
-Let $H \leq G$ be a $p\dash$subgroup.
-If $H$ is not *properly* contained in any other $p\dash$subgroup, it is a Sylow $p\dash$subgroup by definition.
-Otherwise, it is contained in some $p\dash$subgroup $H^1$.
-Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
-:::
-
-### Proof of Sylow Theorems
-
-\todo[inline]{Proof of Sylows}
-
-
 ## Special Classes of Groups
 
 :::{.definition title="2 out of 3 Property"}
@@ -1445,9 +2033,15 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 - [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
 - Order $p$: cyclic.
+- Order $p^2$: abelian, 2 choices.
 - Order $pq$: cases, letting $q<p$ and checking $q\divides p-1$.
 - Order $pqr$: ?
 - Order $p^2q$: ?
+
+
+:::{.proposition title="PQR Theorem"}
+If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
+:::
 
 
 ### Finitely Generated Abelian Groups
@@ -1674,6 +2268,25 @@ ab\in \mfp \implies a\in \mfp \txt{ or } b\in \mfp
 $\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
 :::
 
+
+:::{.remark}
+\envlist
+
+- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
+- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
+- A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+:::
+
+
+:::{.proposition title="?"}
+\envlist
+
+- $R/\mfm$ is an integral domain $\iff \mfm \in \mspec(R)$ is maximal.
+- $R/\mfp \in \Field \iff \mfp \in \spec(R)$ is prime.
+:::
+
+
+
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
@@ -1885,43 +2498,79 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 
+## Unsorted
 
-# Fields
 
-## Definitions
+:::{.proposition title="Correspondence Theorem"}
+\todo[inline]{todo}
 
+:::
+
+:::{.fact}
+Division algorithm for Euclidean domains.
+
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Localization"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Fraction Field"}
+\todo[inline]{todo}
+
+:::
+
+
+
+:::{.theorem title="Hilbert Basis Theorem"}
+\todo[inline]{todo}
+
+:::
+
+
+# Ring Theory
+
+
+# Field Theory
+
+## Facts and Definitions
 
 Let $k$ denote a field, and $L/k$ extensions.
 
-:::{.definition title="Algebraic Field Extension"}
-A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
+
+:::{.remark}
+\envlist
+
+- $[L: K] = \dim_{\Vect_K} L$, the dimension of $L$ as a $K\dash$vector space
+- \( \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K } \), the lifts of the identity on $K$.
+- \( \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
+- $\Gal(E/F) \da \Aut_{\Fieldsover{k} }$ if $E$ is finite, normal, and separable.
 :::
 
-:::{.definition title="Normal Field Extension"}
-Let $L/k$ be a finite extension.
-Then TFAE:
 
-- $L/k$ is **normal**.
-
-- Every irreducible $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
-  - i.e. every polynomial splits into linear factors
-
-- Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
-
-- If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
+:::{.definition title="Simple Extensions"}
+An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
-:::{.definition title="Separable Field Extension"}
-Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
-The following are equivalent 
 
-- $L/k$ is **separable**
-- Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots.
-- $\gcd(f, f') = 1$.
-- $f' \not\equiv 0$
+:::{.definition title="Fixed Field"}
+For $H \leq \Aut_{\Fieldsover{k}}(L)$,
+\[
+L^H \da \ts{ \ell \in L \st  \sigma(l) = \ell }
+.\]
+
 :::
 
+
+
+:::{.definition title="Prime Subfield"}
+The **prime subfield** of a field $F$ is the subfield generated by $1$.
+:::
 
 :::{.fact}
 \envlist
@@ -1932,11 +2581,16 @@ The following are equivalent
 - Every finite extension of a perfect field is separable. 
 :::
 
-
 :::{.definition title="Field Automorphisms"}
 \[ 
 \Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}
 .\]
+
+:::{.definition title="Reducible and Irreducible Polynomials"}
+For $\FF$ a field, a polynomial $f\in \FF[x]$ is **reducible** if and only if $f$ can be factored as $f(x) = g(x) h(x)$ for some $g, h\in \FF[x]$ with $\deg g, \deg h \geq 1$ (so $g, h$ are nonconstant).
+$f$ is **irreducible** if $f$ is not reducible.
+:::
+
 :::
 
 :::{.remark}
@@ -1946,48 +2600,6 @@ Note that in general,
 .\]
 
 :::
-
-:::{.definition title="Galois Extension and Galois Group"}
-Let $L/k$ be a finite field extension.
-The following are equivalent:
-
-1. \( L/k \) is a **Galois extension**.
-2. $\abs{\Aut(L/k)} = [L: k]$ (D&F's definition).
-3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-5. $L$ is finite, normal, and separable (most general definition?)
-
-
-In this case, we define the **Galois group** as 
-\[
-\Gal(L/k) \definedas \Aut(L/k)
-.\]
-:::
-
-:::{.definition title="Cyclotomic Polynomials"}
-Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
-$$
-\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right)
-,$$
-
-which is a product over primitive roots of unity.
-It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
-:::
-
-:::{.definition title="Simple Extension"}
-An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
-:::
-
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
-:::
-
-:::{.definition title="Prime Subfield"}
-The **prime subfield** of a field $F$ is the subfield generated by $1$.
-:::
-
-
-## Facts
 
 :::{.definition title="Characterizations of Perfect Fields"}
 The following are equivalent:
@@ -2009,20 +2621,6 @@ The following are equivalent:
 - Every field morphism is either zero or injective.
 :::
 
-:::{.theorem title="Finite Extensions are Algebraic"}
-Every finite extension is algebraic.
-:::
-
-:::{.proof}
-If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
-This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
-\[
-f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
-.\]
-But then \( \alpha \) is the root of the polynomial \( f \).
-
-:::
-
 :::{.theorem title="Gauss' Lemma"}
 Let $R$ be a UFD and $F$ its field of fractions.
 Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
@@ -2039,6 +2637,130 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 - $p^2$ does not divide $a_0$,
 
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
+:::
+
+:::{.definition title="Elementary Symmetric Functions"}
+Todo
+:::
+
+## Extensions
+
+:::{.definition title="Algebraic Field Extension"}
+A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
+:::
+
+:::{.proposition title="Normal Field Extension"}
+Let $L/k$ be a finite extension.
+Then TFAE:
+
+- $L/k$ is **normal**.
+
+- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
+  - i.e. every polynomial splits into linear factors
+
+- Either $f$ splits in $L$ or $f$ has no roots in $L$.
+
+- Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
+
+- If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
+:::
+
+:::{.proof title="?"}
+\todo[inline]{todo}
+:::
+
+:::{.definition title="Separable Field Extension"}
+Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
+The following are equivalent 
+
+- $L/k$ is **separable**
+- Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
+- $f$ has no repeated factors/roots, i.e. $f$ has distinct roots in $L$.
+- $\gcd(f, f') = 1$.
+- $f' \not\equiv 0$
+
+If $L/k$ is a finite extension, then, TFAE:
+
+- $L/k$ is separable.
+- \( L = k( \alpha) \) for \( \alpha \)  a separable element.
+- \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
+- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$
+
+:::
+
+:::{.definition title="Galois Extension and Galois Group"}
+Let $L/k$ be a finite field extension.
+The following are equivalent:
+
+1. \( L/k \) is a **Galois extension**.
+2. $\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}$ (D&F's definition).
+3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
+4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
+5. $L$ is finite, normal, and separable (most general definition?)
+- $L$ is a finite separable splitting field of an irreducible polynomial.
+- $L/k$ is separable and normal.
+- The fixed field $L^H$ for $H \da \Aut_{\Fieldsover{k}}(L)$ is precisely $k$.
+
+In this case, we define the **Galois group** as 
+\[
+\Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L)
+.\]
+:::
+
+:::{.definition title="Simple Extension"}
+An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
+:::
+
+:::{.definition title="Primitive Extension"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+:::
+
+:::{.proposition title="Classification of quadratic extensions"}
+\todo[inline]{todo}
+If $\FF$ is a field with $\char(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+:::
+
+:::{.corollary title="Quadratic extensions of rationals"}
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
+:::
+
+:::{.proposition title="?"}
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
+:::
+
+:::{.theorem title="Finite Extensions are Algebraic"}
+Every finite extension is algebraic.
+:::
+
+:::{.proof}
+If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
+This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
+\[
+f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
+.\]
+But then \( \alpha \) is the root of the polynomial \( f \).
+
+:::
+
+:::{.theorem title="Primitive Element Theorem"}
+Every finite separable extension is simple.
+:::
+
+:::{.corollary}
+$\GF(p^n)$ is a simple extension over $\FF_p$.
+:::
+
+
+:::{.proposition title="?"}
+If $L/k$ is separable, then
+\[
+[L: k] = \ts{ L: k } 
+.\]
+If $L/k$ is a splitting field, then
+\[
+[L:K] = \# \Aut_{\Fieldsover{k}}(L) \da \# \Gal(L/k)
+.\]
+
 :::
 
 
@@ -2103,8 +2825,8 @@ $\implies$:
 -  $\phi_n'(x) = p^nx^{p^{n-1}} \neq 0$, so $\phi_n$ is squarefree and thus has no repeated factors. So $\phi_n$ is the product of all such irreducible $f$.
 :::
 
-:::{.proposition}
-No finite field is algebraically closed.
+:::{.proposition title="Finite fields are not algebraically closed"}
+If $\FF$ is a finite field then $F\neq \bar{F}$.
 :::
 
 :::{.proof}
@@ -2116,8 +2838,104 @@ This has no roots in $k$.
 :::
 \todo{Proof}
 
-## Galois Theory
 
+## Cyclotomic Polynomials
+
+:::{.definition title="Cyclotomic Field"}
+Any subfield of the splitting field $E$ of $f(x) = x^m-1$ is a **cyclotomic field**.
+:::
+
+:::{.proposition}
+$\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
+:::
+
+:::{.proof}
+$\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
+:::
+
+:::{.proposition title="Computing Totient Functions"}
+**Computing $\Phi_n$:**
+
+1.
+$$
+\Phi_{n}(z)=\prod_{d | n, d>0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
+$$
+where
+$$
+\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
+$$
+
+2.
+\[
+x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d < n} \Phi_{d}(x)},
+\]
+so just use polynomial long division.
+
+:::
+
+:::{.proposition}
+\[
+\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
+\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
+\]
+:::
+
+:::{.proposition}
+\[
+k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
+\]
+:::
+
+:::{.definition title="Cyclotomic Polynomials"}
+Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
+$$
+\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right) \in \ZZ[x]
+,$$
+
+which is a product over primitive roots of unity.
+It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
+:::
+
+:::{.proposition title="Table of cyclotomic polynomials"}
+\todo[inline]{todo}
+:::
+
+:::{.proposition title="Galois Groups of Cyclotomic Fields"}
+For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units$.
+:::
+
+:::{.theorem title="Kronecker-Weber"}
+If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some $m$.
+:::
+
+
+## Splitting Fields
+
+:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
+The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
+:::
+
+
+
+## Unsorted
+
+
+:::{.proposition title="?"}
+A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
+:::
+
+:::{.proposition title="?"}
+Irreducible polynomials have distinct roots after passing to a splitting field.
+:::
+
+:::{.proof title="?"}
+\todo[inline]{todo}
+
+:::
+
+
+
+# Galois Theory
 
 :::{.proposition}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
@@ -2130,6 +2948,25 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polyno
 :::{.proposition}
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
+
+
+:::{.theorem title="Dirichlet's Theorem on Arithmetic Progressions"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Constructible"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.theorem title="Constructibility of Regular $n\dash$gons"}
+
+:::
+
+
 
 ### Lemmas About Towers
 
@@ -2360,140 +3197,211 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 :::
 
 
-## Cyclotomic Polynomials
 
-:::{.proposition}
-$\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
-:::
 
-:::{.proof}
-$\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
-:::
-
-:::{.proposition title="Computing Totient Functions"}
-**Computing $\Phi_n$:**
-
-1.
-$$
-\Phi_{n}(z)=\prod_{d | n, d>0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
-$$
-where
-$$
-\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
-$$
-
-2.
-\[
-x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d < n} \Phi_{d}(x)},
-\]
-so just use polynomial long division.
-
-:::
-
-:::{.proposition}
-\[
-\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
-\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
-\]
-:::
-
-:::{.proposition}
-\[
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-\]
-:::
-
-:::{.theorem title="Primitive Element Theorem"}
-Every finite separable extension is simple.
-:::
-
-:::{.corollary}
-$\GF(p^n)$ is a simple extension over $\FF_p$.
-:::
 
 # Modules
 
-## General Modules
+
+:::{.definition title="$R\dash$modules"}
+Four properties:
+
+- $r(x+y) = rx + ry$
+- $(r+s)x = rs + sx$
+- $(rs)x= r(s(x))$
+- $1_Rx = x$
+:::
 
 
-:::{.definition title="Simple Module"}
+:::{.proposition title="The one-step submodule test"}
+$M\in \rmod$ iff for every $r\in R$ and $x, y\ \in M$, we have $rx+y\in M$.
+:::
+
+
+
+## General Theory
+
+:::{.definition title="Module Morphisms"}
+A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
+:::
+
+:::{.proposition title="Recognizing direct sums"}
+If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following conditions hold:
+
+- $M_1 + M_2 = M$
+- $M_1 \intersect M_2 = 0$
+:::
+
+:::{.definition title="Simple modules"}
 A module is **simple** iff it has no nontrivial proper submodules.
 :::
 
+:::{.definition title="Indecomposable modules"}
+A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
+An **indecomposable** module is defined in the obvious way.
+:::
+
+:::{.definition title="Cyclic modules"}
+A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
+:::
+
+## Free and Projective Modules
 
 :::{.definition title="Free Module"}
-A **free** module is a module with a basis (i.e. a spanning, linearly independent set).
+A **free** module $M$ is a module satisfying any of the following conditions:
+
+- A universal property:
+  There is a set \( \mathcal{B}  \) and a set map \( M \mapsvia{\iota} \mathcal{B}  \) such that every set map \( \mathcal{B} \mapsvia{N} \) lifts:
+
+\begin{tikzcd}
+	M \\
+	\\
+	{\mathcal{B}} && N
+	\arrow["f", from=3-1, to=3-3]
+	\arrow["{\tilde f}", dashed, from=1-1, to=3-3]
+	\arrow["\iota", hook, from=3-1, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJcXG1hdGhjYWx7Qn0iXSxbMCwwLCJNIl0sWzIsMiwiTiJdLFswLDIsImYiXSxbMSwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXGlvdGEiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==)
+
+- Existence of a basis:
+
+  There is linearly independent (so $\sum r_i \beta_i = 0 \implies r_i = 0$) spanning set (so \( m\in M \implies m = \sum r_i \beta_i \) ) of the form \( \mathcal{B} \ta \ts{ \beta_i }_{i\in I} \), 
+
+- Direct sum decomposition:
+
+  $M$ decomposes as $M \cong \bigoplus_{i\in I} \beta_i R$, a sum of cyclic submodules.
+
 :::
 
-
-:::{.definition title="Torsionfree"}
-A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \).
-I.e. the only torsion element of \( M \) is zero itself.
+:::{.example title="A non-free module"}
+$\ZZ/6$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
+This uses the fact that free modules over a PID are torsionfree.
 :::
 
-
-:::{.fact}
-Free \( \implies \) torsionfree.
+:::{.definition title="Free rank"}
+If a module $M$ is free, the **free rank** of $M$ is the cardinality of any basis.
 :::
 
-
-
-:::{.example title="?"}
-$\ZZ/(6)$ is a $\ZZ\dash$module that is *not* free, since the element \( [3] \) is a torsion element, where \( 2[3] = [6] = [0] \).
+:::{.proposition title="?"}
+Every free \(R\dash\)module admits a basis (spanning $R\dash$linearly independent set).
 :::
 
+:::{.definition title="Torsion and torsionfree"}
+An element $m\in M$ is a **torsion element** if there exists a nonzero $r\in R$ such that $rm = 0_M$.
+A module \( M \) is **torsion-free** if and only if for every \( x\in M \), \( mx = 0_M \implies m=0_M \), i.e. $M$ has no nonzero torsion elements.
+Equivalently, defining $M_t \da \ts{ m\in M \st \exists r\in R, rm = 0_M }$ as the set of all torsion elements, $M$ is torsion free iff $M_t = 0$.
+If $M_t = M$, we say $M$ is a **torsion module**.
+:::
 
+:::{.proposition title="Free implies torsionfree (generally)"}
+For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
+:::
+
+:::{.proof title=""}
+Todo
+:::
+
+:::{.example title="A torsionfree module that is not free"}
+$\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
+This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
+So any basis has size one, which would mean $\QQ = \ts{ \pm 1/d, \pm 2/d, \cdots }$ which in particular doesn't include the average of the first two terms.
+:::
 
 :::{.definition title="Projective Modules"}
-A module $M$ is **projective** iff $M$ is a direct summand of a free module $F = M \oplus \cdots$.
+A module $P$ is **projective** iff it satisfies any of the following conditions:
+
+- A universal property: for every surjective $N \mapsvia{g} M$ and $P \mapsvia{f} M$, the following lift exists:
+
+\begin{tikzcd}
+	&& P \\
+	\\
+	N && M && 0
+	\arrow["g", two heads, from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+	\arrow["f", from=1-3, to=3-3]
+	\arrow["{\exists \tilde f}"', dashed, from=1-3, to=3-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiTSJdLFswLDIsIk4iXSxbNCwyLCIwIl0sWzIsMSwiZyIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDNdLFswLDEsImYiXSxbMCwyLCJcXGV4aXN0cyBcXHRpbGRlIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+
+- Direct summand:
+
+  $P$ is a direct summand of a free module $F$, so $F = P \oplus T$ for some module $T\leq F$.
+
 :::
 
+:::{.proposition title="Free implies projective"}
+Any free $M\in \rmod$ is projective.
+:::
 
+:::{.proof title="?"}
+\todo[inline]{Todo: proof.}
 
-:::{.example title="?"}
-Free implies projective, but not the converse.
+:::
+
+:::{.example title="Projective $\not\implies$ free"}
 Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
 Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
 setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
 Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
 :::
 
-
-
+## Exact Sequences
 
 :::{.definition title="Exact Sequences"}
-A sequence of \(R\dash\)module morphisms $0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0$ is *exact* iff $\im d_i = \ker d_{i+1}$.
+A sequence of \(R\dash\)module morphisms 
+\[
+0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\]
+is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
 
-
-
-:::{.proposition title="Splitting Exact Seueqnces"}
-If $0 \to A \to B \to C \to 0$ is a short exact sequence, then
-
-- $C$ free $\implies$ the sequence splits
-- $C$ projective $\implies$ the sequence splits
-- $A$ injective $\implies$ the sequence splits
-
-Moreover, if this sequence splits, then $B \cong A \oplus C$.
+:::{.definition title="Split Exact Sequences"}
+A short exact sequence 
+\[
+\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
+\]
+has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
+$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
 :::
 
+:::{.proposition title="Classifying split SESs"}
+Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
+
+- $\xi$ admits a right-splitting.
+- $\xi$ admits a left-splitting.
+- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
+:::
+
+:::{.proposition title="Splitting Exact Sequences"}
+A SES $\xi$ splits if any of the following conditions hold:
+
+- $C$ is free.
+- $C$ is projective.
+- $A$ is injective.
+
+:::
 
 ## Classification of Modules over a PID
 
+:::{.proposition title="STFGMPID"}
 Let $M$ be a finitely generated modules over a PID $R$.
 Then there is an invariant factor decomposition
 
 \begin{align*}
-M \cong F \bigoplus R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
+M \cong F \bigoplus_{i=1}^m R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
 \end{align*}
 
-and similarly an elementary divisor decomposition.
+and similarly an elementary divisor decomposition:
 
+\todo[inline]{Elementary divisor decomposition}
 
-:::{.proposition title="Principal Ideals are Free"}
-$I \normal R$ is a free $R\dash$module iff $I$ is a principal ideal.
 :::
 
+:::{.proposition title="Principal Ideals are Free"}
+If $I \normal R$ is an ideal of $R$, then $I$ is a free $R\dash$module iff $I$ is a principal ideal.
+:::
 
 :::{.proof title="?"}
 $\implies$:
@@ -2522,38 +3430,138 @@ Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be 
 :::
 
 
+## Algebraic Properties
 
+
+
+:::{.definition title="Module structure on tensor products"}
+\[
+r\actson (m\tensor n) \da (r\actson m)\tensor n
+.\]
+:::
+
+
+:::{.proposition title="?"}
+If $\dim_k V, \dim_k W < \infty$ then there is an isomorphism
+\[
+V\dual \tensor_k W \mapsvia{\sim} \Hom_{\kmod}(V, W) \\
+\tilde v \tensor w &\mapsto \tilde v(\wait) w
+.\]
+:::
+
+
+:::{.proposition title="?"}
+If either of $\dim_k V, \dim_k W$ is finite, then
+\[
+V\dual \tensor_k W\dual \mapsvia{\sim} (V\tensor W)\dual \\
+v\tensor w &\mapsto (x \tensor y \mapsto v(x) w(y))
+.\]
+
+:::
+
+
+:::{.proposition title="?"}
+\[
+\Hom_{\kmod}(V, W) \mapsvia{\sim} \Hom_{\kmod}(W, V)\dual \\
+T &\mapsto \Tr(T \circ \wait )
+.\]
+:::
+
+
+:::{.proposition title="?"}
+If $T:V \injects W$ is injective, then $T\tensor \one_X: V\tensor X \injects W\tensor X$ is also injective for any $X$.
+Thus $F(\wait) = (\wait \tensor X)$ is right-exact for any $X$.
+:::
+
+
+
+
+:::{.example title="Computing tensor products"}
+$\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
+
+\begin{tikzcd}
+	0 && {\ZZ \tensor_\ZZ \ZZ/3} && {\ZZ \tensor_\ZZ \ZZ/3} && {\ZZ/3 \tensor_\ZZ \ZZ/2} \\
+	\\
+	0 && {\ZZ/3} && {\ZZ/3} && 0
+	\arrow["{(\wait \times 2)}", from=3-3, to=3-5]
+	\arrow["{(\wait \times 2) \cross \one}", from=1-3, to=1-5]
+	\arrow[from=3-5, to=3-7]
+	\arrow[from=1-5, to=1-7]
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=3-1, to=3-3]
+	\arrow["{\proj_2}"{description}, from=1-3, to=3-3]
+	\arrow["{\proj_2}"{description}, from=1-5, to=3-5]
+	\arrow["\cong", dashed, from=1-7, to=3-7]
+\end{tikzcd}
+
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXFpaIFxcdGVuc29yX1xcWlogXFxaWi8zIl0sWzQsMCwiXFxaWiBcXHRlbnNvcl9cXFpaIFxcWlovMyJdLFsyLDIsIlxcWlovMyJdLFs0LDIsIlxcWlovMyJdLFs2LDIsIjAiXSxbNiwwLCJcXFpaLzMgXFx0ZW5zb3JfXFxaWiBcXFpaLzIiXSxbMCwyLCIwIl0sWzAsMCwiMCJdLFsyLDMsIihcXHdhaXQgXFx0aW1lcyAyKSJdLFswLDEsIihcXHdhaXQgXFx0aW1lcyAyKSBcXGNyb3NzIFxcb25lIl0sWzMsNF0sWzEsNV0sWzcsMF0sWzYsMl0sWzAsMiwiXFxwcm9qXzIiLDFdLFsxLDMsIlxccHJval8yIiwxXSxbNSw0LCJcXGNvbmciLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+
+:::
 
 
 # Linear Algebra
 
-
+## Definitions
 
 :::{.definition title="Invariant Factor"}
 Todo
 \todo[inline]{todo}
 :::
 
-
 :::{.definition title="Elementary Divisor"}
 Todo
 \todo[inline]{todo}
 :::
 
+:::{.definition title="Nondegenerate Bilinear Form"}
+\todo[inline]{todo}
+:::
+
+:::{.definition title="Quadratic Form"}
+\todo[inline]{todo}
+
+:::
+
+:::{.definition title="Gram Matrix"}
+\todo[inline]{todo}
+
+:::
+
+
+:::{.definition title="Normal Matrix"}
+A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
+:::
+
+
+
+:::{.proposition title="?"}
+Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpotent, and $[DN] = 0$.
+:::
+
+
+:::{.proposition title="?"}
+\[
+\sum( W_i)^\perp = \int W_i^\perp
+.\]
+
+:::
+
+
 ## Minimal / Characteristic Polynomials
 
+:::{.remark}
 Fix some notation:
-\begin{align*}
+\[
 \min_A(x): \quad & \text{The minimal polynomial of } A \\
 \chi_A(x): \quad & \text{The characteristic polynomial of } A
-.\end{align*}
+.\]
 
-
+:::
 
 :::{.definition title="?"}
 The **minimal polynomial** of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
 :::
-
 
 :::{.definition title="?"}
 The **characteristic polynomial** of $A$ is given by
@@ -2563,17 +3571,13 @@ $$
 
 :::
 
-
 :::{.fact}
 If $A$ is upper triangular, then $\det(A) = \prod_{i} a_{ii}$
 :::
 
-
-
 :::{.theorem title="Cayley-Hamilton"}
 The minimal polynomial divides the characteristic polynomial, and in particular $\chi_A(A) = 0$.
 :::
-
 
 :::{.proof title="?"}
 By minimality, $\min_A$ divides $\chi_A$. 
@@ -2586,11 +3590,9 @@ $$
 which forces $\min_A(\lambda_i) = 0$.
 :::
 
-
 :::{.definition title="Similar Matrices"}
 Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
 :::
-
 
 :::{.definition title="Equivalent Matrices"}
 Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
@@ -2603,19 +3605,20 @@ Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
 
 :::
 
-
 ## Finding Minimal Polynomials
 
+:::{.proposition title="How to find the minimal polynomial"}
 Let $m(x)$ denote the minimal polynomial $A$.
 
 1. Find the characteristic polynomial $\chi(x)$; this annihilates $A$ by Cayley-Hamilton. Then $m(x) \divides \chi(x)$, so just test the finitely many products of irreducible factors.
 
 2. Pick any $\vector v$ and compute $T\vector v, T^2\vector v, \cdots T^k\vector v$ until a linear dependence is introduced. Write this as $p(T) = 0$; then $\min_A(x) \divides p(x)$.
 
+:::
 
 :::{.definition title="Companion Matrix"}
 Given a monic $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + x^n$, the **companion matrix** of $p$ is given by
-\begin{align*}
+\[
 C_p \definedas 
 \begin{bmatrix}
 0 & 0 & \dots & 0 &-a_0 \\ 
@@ -2624,12 +3627,33 @@ C_p \definedas
 \vdots & & \ddots & & \vdots \\ 
 0 & 0 & \dots & 1 & -a_{n-1} 
 \end{bmatrix}
-.\end{align*}
+.\]
 :::
 
-
-
 ## Canonical Forms
+
+
+:::{.proposition title="?"}
+Let $T:V\to V$ be a linear map where $n\da \dim_k V$.
+TFAE:
+
+- There exists a basis \( \ts{ e_i } \) of $V$ such that 
+\[
+T(e_i) = 
+\begin{cases}
+e_{i-1} &  i \geq 2
+\\
+0 & i=1.
+\end{cases}
+\]
+
+- There exists a cyclic vector $\vector v$ such that \( \ts{ T^k \vector v \st k=1,2,\cdots, n} \) form a basis for $V$.
+
+- $T^{n-1} \neq 0$
+- $\dim_k \ker T^\ell = \ell$ for each $1\leq \ell \leq n$.
+- $\dim_k \ker T = 1$.
+:::
+
 
 ### Rational Canonical Form
 
@@ -2638,9 +3662,9 @@ Corresponds to the **Invariant Factor Decomposition** of $T$.
 
 :::{.theorem title="Structure Theorem"}
 For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
-\begin{align*}
+\[
 M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
-\end{align*}
+\]
 where each $a_i$ is an invariant factor.
 :::
 
@@ -2675,18 +3699,16 @@ The derivation:
 
 Corresponds to the **Elementary Divisor Decomposition** of $T$.
 
-
 :::{.lemma title="?"}
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
 
-
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
-\begin{align*}
+\[
 \min_A(x) = \prod (x- \lambda_i)^{a_i} \\
 \chi_A(x) = \prod (x- \lambda_i)^{b_i}
-\end{align*}
+\]
 
 - The roots both polynomials are precisely the eigenvalues of $A$
 
@@ -2702,10 +3724,12 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 
 :::
 
+### Finding Possible Canonical Forms
+
+\todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
 
 
-## Using Canonical Forms
-
+### Using Canonical Forms
 
 :::{.lemma title="?"}
 The characteristic polynomial is the *product of the invariant factors*, i.e.
@@ -2714,14 +3738,12 @@ $$
 .$$
 :::
 
-
 :::{.lemma title="?"}
 The minimal polynomial of $A$ is the *invariant factor of highest degree*, i.e.
 $$
 \min_A(x) = f_n(x)
 .$$
 :::
-
 
 :::{.proposition title="?"}
 For a linear operator on a vector space of nonzero finite dimension, TFAE:
@@ -2740,21 +3762,18 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::
 
-
-
 ## Diagonalizability
 
+:::{.remark}
 *Notation:*
-$A^*$ denotes the conjugate tranpose of $A$.
+$A^*$ denotes the conjugate transpose of $A$.
 
-
+:::
 
 :::{.lemma title="?"}
 Let $V$ be a vector space over $k$ an algebraically closed and $A \in \mathrm{End}(V)$.
 Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$ has an eigenvector in $W$.
 :::
-
-
 
 :::{.theorem title="The Spectral Theorem"}
 \envlist
@@ -2762,7 +3781,6 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
 2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
 :::
-
 
 :::{.proof title="?"}
 \envlist
@@ -2780,18 +3798,15 @@ so $A(W_1) \subseteq W_1$ is an invariant subspace, etc.
 
 - Suppose now that $A$ is symmetric.
 - Then there is an eigenvector of norm 1, $\vector v \in V$.
-\begin{align*}
+\[
 \lambda = \lambda\inner{\vector v}{\vector v} = \inner{A\vector v}{\vector v} = \inner{\vector v}{A\vector v} = \overline{\lambda} \implies \lambda \in \RR
-.\end{align*}
+.\]
 
 :::
-
 
 :::{.proposition title="Simultaneous Diagonalizability"}
 A set of operators $\theset{A_i}$ pairwise commute $\iff$ they are all simultaneously diagonalizable.
 :::
-
-
 
 :::{.proof title="?"}
 By induction on number of operators
@@ -2808,11 +3823,9 @@ By induction on number of operators
 
 :::
 
-
 :::{.theorem title="Characterizations of Diagonalizability"}
 $M$ is diagonalizable over $\FF \iff \min_M(x, \FF)$ splits into distinct linear factors over $\FF$, or equivalently iff all of the roots of $\min_M$ lie in $\FF$.
 :::
-
 
 :::{.proof title="?"}
 $\implies$:
@@ -2823,9 +3836,11 @@ If $A$ is diagonalizable, every elementary divisor is linear, so every invariant
 But the minimal polynomial is just the largest invariant factor.
 :::
 
-
 ## Matrix Counterexamples
 
+
+:::{.example title="?"}
+:::
 
 :::{.example title="?"}
 A matrix that:
@@ -2837,18 +3852,19 @@ A matrix that:
 - $\min_M(x) = \chi_M(x) = x^2 + 1$
 
 \[
-M = \left[\begin{array}{rr}
+M = \left(\begin{array}{rr}
 0  & 1 \\
 -1 & 0
-\end{array}\right] \sim
-\left[\begin{array}{r|r}
+\end{array}\right) \sim
+\left(\begin{array}{r|r}
 -1 \sqrt{-1} & 0 \\
 \hline
 0 & 1 \sqrt{-1}
-\end{array}\right]
+\end{array}
+\right)
 .\]
-:::
 
+:::
 
 :::{.example title="?"}
 A matrix that:
@@ -2859,69 +3875,152 @@ A matrix that:
 
 - $\min_M(x) = \chi_M(x) = x^2-2x+1$
 
-\begin{align*}
-M = \left[\begin{array}{rr}
+\[
+M = \left(\begin{array}{rr}
 1 & 1 \\
 0 & 1
-\end{array}\right] \sim
-\left[\begin{array}{rr}
+\end{array}\right) 
+\sim
+\left(
+\begin{array}{rr}
 1 & 1 \\
 0 & 1
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+.\]
 
 :::
-
 
 :::{.example title="?"}
 Non-similar matrices with the same characteristic polynomial
 $$
-\left[\begin{array}{ll}
+\left(\begin{array}{ll}
 {1}  & {0} \\
 {0} & {1}
-\end{array}\right]
+\end{array}\right)
 \text { and }
-\left[\begin{array}{ll}
+\left(\begin{array}{ll}
 {1} & {1} \\
 {0} & {1}
-\end{array}\right]
+\end{array}\right)
 $$
 :::
 
-
-
 :::{.example title="?"}
 A full-rank matrix that is not diagonalizable:
-\begin{align*}
-\left[\begin{array}{ccc}
+\[
+\left(
+\begin{array}{ccc}
 1 & 1 & 0 \\
 0 & 1 & 1 \\
 0 & 0 & 1 \\
-\end{array}\right]
-.\end{align*}
+\end{array}
+\right)
+
+.\]
 
 :::
-
-
 
 :::{.example title="?"}
-Matrix roots of unity:
-\begin{align*} \sqrt{I_2} =
-\left[\begin{array}{cc}
-0 & 1\\
-1 & 0
-\end{array}\right]
-.\end{align*}
-
-\begin{align*} \sqrt{-I_2} =
-\left[\begin{array}{cc}
-0 & -1\\
-1 & 0
-\end{array}\right]
-.\end{align*}
+Matrix roots of unity, i.e. representations of $i$:
+\[
+M_1 
+\da
+\matt 0 {-1} 1 0 \quad
+M_2
+\da 
+\matt 0 1 {-1} 0
+.\]
 :::
 
 
+## Matrix Groups
+
+:::{.definition title="General Linear Group"}
+\[
+\GL_n(\RR) = \ts{ A \st A = \bar{A} } 
+.\]
+:::
+
+:::{.definition title="Special Linear Group"}
+\[
+\SL_n(\CC) \da \ts{ A \st \det A = 1 } 
+.\]
+::
+
+:::{.definition title="Orthogonal Group"}
+\[
+O_n(\CC) \da \ts{ A \st A^tA = A A^t = I} 
+.\]
+
+Dimension: $n(n-1) / 2$.
+:::
+
+
+:::{.definition title="Special Orthogonal Group"}
+\[
+\SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
+.\]
+
+:::
+
+
+:::{.definition title="Unitary Group"}
+\[
+U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
+.\]
+:::
+
+
+:::{.definition title="Special Unitary Group"}
+\[
+\SU_n(\CC) \da \ts{ A \in U_n(\CC) \st \det A = 1  } 
+.\]
+
+:::
+
+
+
+:::{.definition title="Symplectic Group"}
+
+:::
+
+\todo[inline]{Matrix group definitions.}
+
+
+
+
+:::{.proposition title="Order of $\GL_n$"}
+\todo[inline]{todo}
+:::
+
+
+# Representation Theory 
+
+
+:::{.theorem title="Schur's Lemma"}
+If $M \in \modsleft{G}$ is an irreducible representation of $G$ with $\dim_k M < \infty$ and $k=\bar{k}$, then there is an isomorphism
+\[
+M & \mapsvia{\sim} \Aut_G(M, M)
+.\]
+:::
+
+
+:::{.theorem title="Maschke's Theorem"}
+Let $k$ be a field with $\ch(k)$ not dividing $\# G$.
+Then any finite-dimensional representation of $G$ decomposes into a direct sum of irreducible representations.
+:::
+
+
+
+:::{.definition title="Characters"}
+The **character** of a representation $M$ is the trace of the map
+\[
+T_g: M &\to M \\
+m &\mapsto g\actson m
+.\]
+
+:::
 
 
 # Extra Problems
@@ -2930,8 +4029,11 @@ Matrix roots of unity:
 
 - Show that a finitely generated module over a Noetherian local ring is flat iff it is free using Nakayama and Tor.
 
+- Show that \( \gens{ 2, x }\normal \ZZ[x]  \) is not a principal ideal.
 
-
+- Let $R$ be a Noetherian ring and $A,B$ algebras over $R$. 
+  Suppose $A$ is finite type over $R$ and finite over B. 
+  Then $B$ is finite type over $R$.
 
 ## Group Theory
 
@@ -3313,6 +4415,9 @@ General Algebra
 - Show that if $L/F$ and $\alpha$ is algebraic over both $F$ and $L$, then the minimal polynomial of $\alpha$ over $L$ divides the minimal polynomial over $F$.
 - Prove that if $R$ is an integral domain, then $R[t]$ is again an integral domain.
 - Show that $ff(R[t]) = ff(R)(t)$.
+- Show that $[\QQ(\sqrt 2 + \sqrt 3) : \QQ] = 4$.
+  - Show that $\QQ(\sqrt 2 + \sqrt 3) = \QQ(\sqrt 2 - \sqrt 3) = \QQ(\sqrt 2, \sqrt 3)$.
+- Show that the splitting field of $f(x) = x^3-2$ is $\QQ(\sqrt[3]{2}, \zeta_2)$.
 
 Extensions?
 
@@ -4571,6 +5676,55 @@ What is $\ext(\ZZ/m\ZZ, \ZZ)$?
 
 ## Characteristic Subgroups
 
+:::{.slogan}
+Normality is not transitive!
+
+I.e. if $H\normal G$ and $N\normal H$, it's not necessarily the case that $N\normal G$.
+:::
+
+:::{.definition title="Characteristic Subgroups"}
+A subgroup $H\leq G$ is **characteristic** in $G$, written $H \char G$, iff for every $\phi \in \Aut(G)$, $\phi(H) \leq H$.
+Equivalently, $\phi(H) = H$.
+I.e. $H$ is fixed (not necessarily pointwise) under every automorphism of the ambient group $G$.
+:::
+
+:::{.remark title="Characteristic isn't equivalent to normalcy"}
+Characteristic subgroups are normal, because $\psi_g(\wait) \da g(\wait)g\inv$ is an (inner) automorphic of $G$.
+Not every normal subgroup is characteristic: take $G \da H_1 \cross H_2$ and $\psi(x, y) = (y, x)$.
+:::
+
+:::{.proposition title="Fixing transitivity of normality"}
+Characteristic subgroups of normal subgroups are normal, i.e. if $H\normal G$ and $N \char H$, then $N\normal G$.
+:::
+
+:::{.proof title="?"}
+$A \char B \normal C \implies A\normal C$:
+
+- $A\char B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+- Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
+- Then $\psi(A) = A$ since $A\char B$, so $cAc\inv = A$ and $A\normal C$.
+:::
+
+:::{.proposition title="Centers are characteristic"}
+For any group $G$,
+\[
+Z(G) \char G
+.\]
+:::
+
+:::{.proof title="?"}
+Let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+\[
+\psi(y)h 
+&= \psi(y) (\psi \circ \psi\inv)(h) \\
+&= \psi( y \cdot \psi\inv(h) ) \\
+&= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
+&= h\psi(y)
+.\]
+:::
+
+## Normal Closures and Cores
+
 :::{.definition title="Normal Closure of a Subgroup"}
 The smallest normal subgroup of $G$ containing $H$:
 \[
@@ -4590,13 +5744,33 @@ g &\mapsto (xH\mapsto gxH)
 \]
 :::
 
-:::{.definition title="Characteristic subgroup"}
-$H\leq G$ is *characteristic* iff $H$ is fixed by every element of $\Aut(G)$. 
-:::
-
-
 :::{.theorem title="Fratini's Argument"}
 If $H\normal G$ and $P \in \mathrm{Syl}_p(G)$, then $H N_G(P) = G$ and $[G: H]$ divides $\abs{N_G(P)}$.
+:::
+
+### Exercises
+
+:::{.exercise title="?"}
+Show that $Z(G) \leq G$ is always characteristic.
+:::
+
+:::{.solution}
+Let $\psi\in \Aut(G)$.
+For one containment, we can show $\psi(g) = h = h\psi(g)$ for all $\psi(g) \in \psi(G)$ and $h\in G$.
+This is a computation:
+\[
+\psi(g) h 
+&= \psi(g) (\psi \psi\inv)(h) \\
+&= \psi( g ) \psi( \psi \inv (h)) \\
+&= \psi( \psi\inv(h) g) \\
+&= (\psi\psi\inv)(h) \psi(g) \\
+&= h\psi(g)
+.\]
+This yields $\psi(Z(G)) \subseteq Z(G)$.
+Applying the same argument to $\psi\inv$ yields $\psi\inv(Z(G)) \subseteq Z(G)$.
+Since $\psi$ is a bijection, $\psi\psi\inv(A) = A$ for all $A\leq G$, 
+so $Z(G) \subseteq \psi(Z(G))$.
+
 :::
 
 ## Nilpotent Groups

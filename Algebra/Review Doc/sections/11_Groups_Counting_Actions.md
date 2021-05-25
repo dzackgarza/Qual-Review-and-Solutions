@@ -338,5 +338,3 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 
 :::
 
-
-
