@@ -52,6 +52,22 @@
 
 ## Definitions
 
+
+:::{.definition title="Subgroup"}
+A subset $H\subseteq G$ is a **subgroup** iff
+
+1. Closure: $HH \subset H$
+2. Identity: $e\in H$
+3. Inverses: $g\in H \iff g\inv \in H$.
+:::
+
+
+:::{.proposition title="One-step subgroup test"}
+If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
+:::
+
+
+
 :::{.fact}
 An set morphism that is *either* injective or surjective between sets of the same size is automatically a bijection.
 Consequently, a group morphism between groups of the same size that is either injective or surjective is automatically an isomorphism.
@@ -61,7 +77,6 @@ Consequently, a group morphism between groups of the same size that is either in
 :::{.definition title="Group Presentation"}
 An expression of the form $G = \gens{S \st R}$ where $S$ is a set of elements and $R$ a set of words defining relations means that $G \da F[S] / \cl_n(R)$ where $F[S]$ is the free group on the set $S$ and $\cl_n(R)$ is the normal closure, the smallest normal subgroup of $F[S]$ containing $R$.
 :::
-
 
 :::{.remark}
 Finding morphisms between presentations: if $G$ is presented with generators $g_i$ with relations $r_i$ and $H$ is any group containing elements $h_i$ also satisfying $r_i$, there is a group morphism
@@ -97,7 +112,6 @@ $[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful fo
 Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
 However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
 :::
-
 
 :::{.remark}
 $[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
