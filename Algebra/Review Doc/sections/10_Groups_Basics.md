@@ -213,6 +213,12 @@ If $H, K \leq G$, then
 :::
 
 
+:::{.proof title="?"}
+Write $G/H \intersect K \da G/J = \ts{ g_1J, \cdots, g_m J  }$ as distinct cosets.
+:::
+
+
+
 ## Cosets
 
 :::{.proposition title="Cosets are identical or disjoint"}
