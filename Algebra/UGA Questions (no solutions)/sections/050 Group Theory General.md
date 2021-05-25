@@ -404,7 +404,7 @@ p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
 ## Unsorted / Counting Arguments
 
 
-### Fall 2019 Midterm #5 $\work$
+### Fall 2019 Midterm #5 $\done$
 Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
 
 > Note: this is a good problem, it tests several common theorems at once.
