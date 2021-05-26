@@ -162,5 +162,10 @@ f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + 
 - Map sector to $\HH$ by $z\mapsto z^{\pi\over\alpha}$.
 - Map $\HH\to\DD$.
 
+\[
+e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
+.\]
+
+
 
 

@@ -11,6 +11,14 @@ There are three types of isolated singularities:
 :::
 
 
+:::{.example title="?"}
+The singularities of a rational function are always isolated, since there are finitely many zeros of any polynomial.
+The function $F(z) \da \Log(z)$ has a singularity at $z=0$ that is **not** isolated, since every neighborhood intersects the branch cut $(-\infty, 0) \cross \ts{ 0 }$, where $F$ is not even defined.
+The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and isolated singularities at $1/n$ for all $n$.
+:::
+
+
+
 :::{.definition title="Removable Singularities"}
 If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
 there exists a holomorphic function $g$ such that $f(z) = g(z)$ in a punctured neighborhood of $z_0$.
@@ -131,4 +139,9 @@ Consider $f(z) - P(z)$, subtracting off the principal part at each pole $z_0$, t
 
 
 
+
+
+:::{.theorem title="Riemann Extension Theorem"}
+A singularity of a holomorphic function is removable if and only if the function is bounded in some punctured neighborhood of the singular point.
+:::
 

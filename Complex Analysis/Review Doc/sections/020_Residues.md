@@ -1,23 +1,44 @@
 # Residues
 
-## Computing Residues
 
-:::{.definition title="Toy contour"}
-A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
+:::{.fact}
+Some useful facts:
+\[
+\abs{e^{z}} = e^{\Re(z)}
+.\]
+
+On $S^1$,
+\[
+1/z = e^{-i\theta} \\
+\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\]
+
+
 :::
 
 
-:::{.definition title="Winding Number"}
-For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
+:::{.fact}
+The major fact that reduces integrals to residues: 
 \[
-n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+\int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = \int_0^{2\pi} e^{i(k+1)\theta \dtheta }
+=
+\begin{cases}
+2\pi i & k=-1 
+\\
+0 & \text{else}.
+\end{cases}
 .\]
-
+Thus
+\[
+\int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}
+,\]
+i.e. the integral picks out the $c_{-1}$ coefficient in a Laurent series expansion.
 :::
 
 :::{.remark}
-Check: do you need residues? 
-You may be able to just compute an integral 
+Check: do you need residues at all??
+You may be able to just compute an integral!
 
 - Directly by parameterization:
 \[
@@ -29,6 +50,21 @@ You may be able to just compute an integral
 - Writing $z= z_0 + re^{i \theta }$
 
 :::
+
+## Computing Residues
+
+:::{.definition title="Toy contour"}
+A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
+:::
+
+:::{.definition title="Winding Number"}
+For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
+\[
+n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+.\]
+
+:::
+
 
 
 :::{.proposition title="Residue formula for higher order poles"}
@@ -44,6 +80,16 @@ As a special case, if $z_0$ is a simple pole of $f$, then
 \Res_{z=z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
 .\]
 :::
+
+:::{.corollary title="Better derivative formula that sometimes works for simple poles"}
+If additionally $f=g/h$ where $h(z_0) = 0$ and $h'(z_0)\neq 0$, we can apply L'Hopital's rule to compute this residue:
+\[
+(z-z_0) {g(z) \over h(z)} = {(z-z_0) g(z) \over h(z) } \equalsbecause{LH}
+{g(z) + (z-z_0) g'(z) \over h'(z)} \converges{z\to z_0}\too {g(z_0) \over h'(z_0)}
+.\]
+
+:::
+
 
 :::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
@@ -65,10 +111,43 @@ If $\gamma$ is a toy contour, then
 
 ### Exercises
 
+> Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
+
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
 ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
 ![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
+
+
+:::{.exercise title="?"}
+\[
+\int_\RR {1 \over (1+x^2)^2} \dx
+.\]
+:::
+
+
+:::{.solution}
+\envlist
+
+- Factor $(1+z^2)^2 = ((z-i)(z+i))^2$, so $f$ has poles at $\pm i$ of order 2.
+- Take a semicircular contour $\gamma \da I_R \union D_R$, then $f(z) \approx 1/z^4 \to 0$ for large $R$ and $\int_{D_R} f \to 0$.
+- Note $\int_{I_R} f \to \int_\RR f$, so $\int_\gamma f \to \int_\RR f$.
+- $\int_\gamma f = 2\pi i \sum_{z_0} \Res_{z=z_0} f$, and $z_0 = i$ is the only pole in this region.
+- Compute
+\[
+\Res_{z=i} f 
+&= \lim_{z\to i} {1\over (2-1)!} \dd{}{z} (z-i)^2 f(z) \\
+&= \lim_{z\to i} \dd{}{z} {1\over (z+i)^2 } \\
+&= \lim_{z\to i} {-2 \over (z+i)^3 } \\
+&= -{2 \over (2i)^3 } \\
+&= {1\over 4i} \\ \\
+\implies
+\int_\gamma f &= {2\pi i \over 4i} = \pi/2
+,\]
+
+:::
+
+
 
 ## Argument Principle
 
@@ -115,6 +194,7 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 
 
 ### Exercises
+
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
 
 ## Complex Log

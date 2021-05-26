@@ -1,17 +1,81 @@
 # Preliminaries
 
-## Complex Arithmetic and Calculus
+## Complex Arithmetic
+
+
+:::{.fact title="Complex roots of a number"}
+The complex $n$th roots of $z \da r e^{i\theta}$ are given by
+\[
+\ts{ \omega_k \da r^{1/n} e^{i \qty{ \theta + 2k\pi \over n} } \st 0 \leq k \leq n-1 }
+.\]
+Note that one root is $r^{1/n}\in \RR$, and the rest are separated by angles of $2\pi/n$.
+Mnemonic: 
+\[
+z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
+.\]
+:::
+
+:::{.fact title="Complex Log"}
+For $z= r e^{i\theta}\neq 0$, $\theta$ is of the form $\Theta + 2k\pi$ where $\Theta = \Arg z$
+:::
+
+:::{.fact}
+Common trick:
+\[
+f^{1/n} = e^{{1\over n} \log(f)}
+,\]
+taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
+
+:::
+
+
+## Complex Calculus
+
+
+:::{.remark}
+When parameterizing integrals $\int_\gamma f(z)\dz $, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
+:::
+
+:::{.warnings}
+$f(z) = \sin(z), \cos(z)$ are unbounded on $\CC$!
+An easy way to see this: they are nonconstant and entire, thus unbounded by Liouville.
+
+:::
+
+:::{.example title="?"}
+You can show $f(z) = \sqrt{z}$ is not holomorphic by showing its integral over $S^1$ is nonzero.
+This is a direct computation:
+\[
+\int_{S^1} z^{1/2} \dz 
+&= \int_0^{2\pi} (e^{i\theta})^{1/2} ie^{i\theta} \dtheta \\
+&= i \int_0^{2\pi} e^{i3\theta \over 2}\dtheta \\
+&= i \qty{2\over 3i} e^{i3\theta \over 2}\evalfrom_{0}^{2\pi} \\
+&= {2\over 3}\qty{e^{3\pi i - 1}} \\
+&= -{4\over 3}
+.\]
+
+Note an issue: a different parameterization yields a different (still nonzero) number
+\[
+\cdots 
+&= \int_{-\pi}^{\pi} (e^{i\theta})^{1/2} ie^{i\theta} \dtheta \\
+&= {2\over 3}\qty{ e^{3\pi i \over 2} - e^{-3\pi i \over 2}} \\
+&= -{4i\over 3}
+.\]
+This is these are paths that don't lift to closed loops on the Riemann surface defined by $z\mapsto z^2$.
+:::
 
 ### Holomorphy and Cauchy-Riemann
+
 :::{.definition title="Analytic"}
 A function $f:\Omega \to \CC$ is *analytic* at $z_0\in \Omega$ iff there exists a power series $g(z) = \sum a_n (z-z_0)^n$ with radius of convergence $R>0$ and a neighborhood $U\ni z_0$ such that $f(z) = g(z)$ on $U$.
 :::
 
-:::{.definition title="Complex differentiable / holomorphic"}
+:::{.definition title="Complex differentiable / holomorphic /entire"}
 A function $f: \CC\to \CC$ is **complex differentiable** or **holomorphic** at $z_0$ iff the following limit exists:
 \[
 \lim_{h\to 0} { f(z_0 + h) - f(h) \over h  } 
 .\]
+A function that is holomorphic on $\CC$ is said to be **entire**.
 
 Equivalently, there exists an $\alpha\in \CC$ such that
 \[
@@ -50,7 +114,7 @@ F(\vector p + \vector h) = F(\vector p) + A(\vector h) + R(\vector h) && R\in o(
 .\]
 :::
 
-:::{.proposition title="Derivation of Cauchy-Riemann"}
+:::{.proposition title="Complex differentiable implies Cauchy-Riemann"}
 If $f$ is differentiable at $z_0$, then the limit defining $f'(z_0)$ must exist when approaching from any direction.
 Identify $f(z) = f(x, y)$ and write $z_0 = x+ iy$, then first consider $h\in RR$, so $h = h_1 + ih_2$ with $h_2 = 0$.
 Then
@@ -79,11 +143,13 @@ Thus
 .\]
 :::
 
-:::{.exercise title="Polar Form of Cauchy-Riemann"}
-![image_2021-05-17-10-27-08](figures/image_2021-05-17-10-27-08.png)
+:::{.proposition title="Polar Cauchy-Riemann equations"}
+\[  
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
+.\]
 :::
 
-:::{.solution}
+:::{.proof}
 Setting 
 \[
 z = re^{i\theta} = r(\cos(\theta) + i\sin(\theta) ) = x+iy
@@ -122,45 +188,6 @@ Thus
 
 :::
 
-
-### Delbar, Harmonic Functions, Laplacian
-
-:::{.definition title="del and delbar operators"}
-\[
-\del 
-\da \frac{\partial}{\partial z} 
-\da \frac{1}{2}\left(\frac{\partial}{\partial x}-i \frac{\partial}{\partial y}\right) 
-\quad
-\text{ and }
-\quad
-\delbar 
-\da \frac{\partial}{\partial \bar{z}} 
-\da \frac{1}{2}\left(\frac{\partial}{\partial x}+i \frac{\partial}{\partial y}\right)
-.\]
-
-:::
-
-:::{.proposition title="Holomorphic iff delbar vanishes"}
-$f$ is holomorphic at $z_0$ iff $\delbar f(z_0) = 0$.
-:::
-
-:::{.definition title="Entire"}
-A function that is holomorphic on $\CC$ is said to be *entire*.
-:::
-
-:::{.definition title="Laplacian and Harmonic Functions"}
-A real function of two variables $u(x, y)$ is *harmonic* iff its Laplacian vanishes:
-\[  
-\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
-.\]
-:::
-
-:::{.theorem title="Green's Theorem"}
-If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
-:::
-
-### Exercises
-
 :::{.proposition title="Holomorphic functions have harmonic components"}
 If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
 :::
@@ -174,29 +201,77 @@ In this case, $a = f'(z_0)$.
 :::
 
 :::{.proposition title="Cauchy-Riemann implies holomorphic"}
-If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z) = \dd{f}{z} = {1 \over 2} \qty{\dd{}{x} + {1\over i} \dd{}{y}}f$.
-:::
-
-:::{.proposition title="Polar Cauchy-Riemann equations"}
-\[  
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
+Recall that in general, $f' = \del f + \delbar f$.
+If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and 
+\[
+f'(z) = \del f = {1 \over 2} \qty{\dd{}{x} + {1\over i} \dd{}{y}}f = {1\over 2}\qty{u_x + iv_x}
 .\]
 :::
 
-:::{.concept}
-\hfill
-- See [walkthrough here](https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf).
-- See problem set 1.
+:::{.theorem title="Analytic functions have harmonic components"}
+If $f=u+iv$ is analytic, then $u, v$ are harmonic.
 :::
 
-:::{.proof}
+:::{.proof title="?"}
 \envlist
 
-- Take derivative along two paths, along a ray with constant angle $\theta_0$ and along a circular arc of constant radius $r_0$.
-- Then equate real and imaginary parts.
+- By CR, 
+\[
+u_x = v_y && u_y = -v_x
+.\]
+
+- Differentiate with respect to $x$: 
+\[
+u_{xx} = v_{yx} && u_{yx} = -v_{xx}
+.\]
+- Differentiate with respect to $y$:
+\[
+u_{xy} = v_{yy} && u_{yy} = -v_{xy}
+.\]
+- Clairaut's theorem: partials are equal, so
+\[
+u_{xx} - v_{yx} = 0 \implies u_{xx} + u_{yy} = 0 \\ \\
+v_{xx} + u_{yx} = 0 \implies v_{xx} + v_{yy} = 0 \\ \\
+.\]
+
+
+
 :::
 
-\todo[inline]{proof}
+### Delbar, Harmonic Functions, Laplacian
+
+:::{.definition title="del and delbar operators"}
+\[
+\del \da \del_z \da {1\over 2}\qty{\del_x - i \del_y}
+\quad
+\text{ and }
+\quad
+\delbar
+\da \del_{\bar z}
+={1\over 2}\qty{ \del_x + i\del_y}
+.\]
+
+:::
+
+:::{.proposition title="Holomorphic iff delbar vanishes"}
+$f$ is holomorphic at $z_0$ iff $\delbar f(z_0) = 0$:
+\[
+2\delbar f 
+&\da (\del_x + i \del_y) (u+iv) \\
+&= u_x + iv_x + iu_y - v_y \\
+&= (u_x - v_y) + i(u_y + v_x) \\
+&= 0 && \text{by Cauchy-Riemann}
+.\]
+:::
+
+:::{.definition title="Laplacian and Harmonic Functions"}
+A real function of two variables $u(x, y)$ is **harmonic** iff it is in the kernel of the Laplacian operator:
+\[  
+\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
+.\]
+:::
+
+### Exercises
 
 :::{.proposition title="Injectivity Relates to Derivatives"}
 If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
@@ -208,42 +283,68 @@ If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighbo
 
 \todo[inline]{proof}
 
-
-## Power Series
-
-:::{.remark}
-Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
+:::{.exercise title="Zero derivative implies constant"}
+Show that if $f' = 0$ on a domain $\Omega$, then $f$ is constant on $\Omega$
 :::
 
-
-:::{.fact}
-Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall the **ratio test**:
-
-- $R\in (0, 1) \implies$ convergence.
-- $R\in [1, \infty] \implies$ divergence.
-- $R=1$ yields no information.
-
+:::{.solution}
+Write $f = u + iv$, then $0 = 2 f' = u_x + iv_x = u_y - iu_y$, so $\grad u = \grad v = 0$.
+Show $f$ is constant along every straight line segment $L$ by computing the directional derivative $\grad u \cdot \vector v = 0$ along $L$ connecting $p, q$.
+Then $u(p) = u(q) = a$ some constant, and $v(p) = v(q) = b$, so $f(z) = a+bi$ everywhere.
 :::
 
+:::{.exercise title="f and fbar holomorphic implies constant"}
+Show that if $f$ and $\bar{f}$ are both holomorphic on a domain $\Omega$, then $f$ is constant on $\Omega$.
+:::
 
-:::{.proposition title="Radius of Convergence by the Root Test"}
-For $f(z) = \sum_{k\in \NN} c_k z^k$, defining
+:::{.solution}
+\envlist
+
+- Strategy: show $f'=0$.
+- Write $f = u + iv$. 
+  Since $f$ is analytic, it satisfies CR, so 
+  \[
+  u_x = v_y && u_y = -v_x
+  .\]
+
+- Similarly write $\bar f = U + iV$ where $U = u$ and $V = -v$.
+  Since $\bar f$ is analytic, it also satisfies CR , so
 \[
-{1\over R} \da \limsup_{k} \abs{a_k}^{1\over k}
-,\]
-then $f$ converges absolutely and uniformly for $D_R \da\abs{z} < R$ and diverges for $\abs{z} > R$.
-Moreover $f$ is holomorphic in $D_R$, can be differentiated term-by-term, and $f' = \sum_{k\in \NN} n c_k z^k$.
-:::
-
-
-:::{.fact}
-Recall the **$p\dash$test**:
-\[
-\sum n^{-p} < \infty \iff p \in (1, \infty)
+U_x = V_y && U_y = -V_x \\ \\
+\implies u_x = -v_y && u_y = v_x
 .\]
 
-  
+- Add the LHS of these two equations to get $2u_x = 0 \implies u_x = 0$.
+  Subtract the right-hand side to get $-2v_x = 0 \implies v_x = 0$
+
+- Since $f$ is analytic, it is holomorphic, so $f'$ exists and satisfies $f' = u_x + iv_x$.
+  But by above, this is zero.
+- By the previous exercise, $f'=0 \implies f$ is constant.
 :::
+
+:::{.exercise title="S&S 1.13: Constant real/imaginary/magnitude implies constant"}
+If $f$ is holomorphic on $\Omega$ and any of the following hold, then $f$ is constant:
+
+1. $\Re(f)$ is constant.
+2. $\Im(f)$ is constant.
+3. $\abs{f}$ is constant.
+
+:::
+
+:::{.solution}
+**Part 3**:
+
+- Write $\abs{f} = c \in \RR$.
+- If $c=0$, done, so suppose $c>0$.
+- Use $f\bar{f} = \abs{f}^2 = c^2$ to write $\bar{f}=c^2/f$.
+- Since $\abs{f(z)} = 0 \iff f(z) = 0$, we have $f\neq 0$ on $\Omega$, so $\bar{f}$ is analytic.
+- Similarly $f$ is analytic, and $f,\bar{f}$ analytic implies $f'=0$ implies $f$ is constant. 
+
+:::
+
+\todo[inline]{Finish}
+
+## Power Series
 
 :::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
@@ -264,35 +365,6 @@ c_k = {f^{(n)}(z_0) \over n! }
 .\]
 :::
 
-
-:::{.fact}
-The product of two sequences is given by the Cauchy product
-\[
-\sum a_kz^k \cdot \sum b_k z^k = \sum c_k z^k,\quad c_k \da \sum_{j\leq k} a_k b_{k-j}
-.\]
-
-:::
-
-
-:::{.fact}
-Recall partial fraction decomposition
-:::
-
-
-
-:::{.proposition title="Uniform Convergence of Series"}
-A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff 
-\[  
-\lim_{n\to \infty} \norm{ \sum_{k\geq n} f_k }_\infty = 0
-.\]
-:::
-
-:::{.theorem title="Weierstrass $M\dash$Test"}
-If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\theset{M_n}$ with $\norm{f_n}_\infty \leq M_n$ and $\sum_{n\in \NN} M_n < \infty$, then $f(x) \definedas \sum_{n\in \NN} f_n(x)$ converges absolutely and uniformly on $\Omega$.
-
-Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
-:::
-
 :::{.proposition title="Exponential is uniformly convergent in discs"}
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
@@ -306,51 +378,6 @@ Now by the $M\dash$test,
 \[  
 \abs{z} \leq R < \infty \implies \abs{\sum {z^n \over n!}} \leq e^R < \infty
 .\]
-:::
-
-
-### Exercises
-
-:::{.exercise title="Summation by Parts"}
-Setting $A_n \da \sum_{k=1}^n b_k$ and $B_0 \da 0$,
-\[
-\sum_{k=m}^n a_k b_k 
-&= A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
-.\]
-Compare this to integrating by parts:
-\[
-\int_a^b f g = F(b)g(b) - F(a)g(a) - \int_a^b Fg'
-.\]
-
-Note there is a useful form for taking the product of sums:
-\[
-A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
-.\]
-
-:::
-
-
-:::{.exercise title="?"}
-Use summation by parts to show that $\sin(n)/n$ converges.
-:::
-
-
-:::{.solution}
-An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
-\
-
-Behold:
-\[
-\sum_{m\leq k \leq n} a_k b_k 
-&= \sum_{m\leq k \leq n} (A_k - A_{k-1}) b_k \\
-&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m\leq k \leq n} A_{k-1} b_k \\
-&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
-&= A_nb_n + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
-&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m\leq k \leq n-1} A_{k} b_{k+1} \\
-&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) \\
-&= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
-.\]
-
 :::
 
 :::{.lemma title="Dirichlet's Test"}
@@ -405,7 +432,11 @@ If $\sum_{k=1}^\infty c_k$ converges, then
 .\]
 :::
 
-:::{.example title="?"}
+:::{.lemma title="Abel's Test"}
+If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $a_n\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
+:::
+
+:::{.example title="application of Abel's theorem"}
 Integrate a geometric series to obtain
 \[
 \sum {(-1)^k z^k \over n} = \log(z+1) && \abs{z} < 1
@@ -420,22 +451,54 @@ Then $f(1) = 1-1+1-\cdots$ diverges at 1, but $1/1+1 = 1/2$.
 So the limit $s\da \lim_{x\to 1^-} f(x) 1/2$, but $\sum a_n$ doesn't converge to $s$.
 :::
 
-:::{.lemma title="Abel's Test"}
-If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $a_n\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
+:::{.proposition title="Summation by Parts"}
+Setting $A_n \da \sum_{k=1}^n b_k$ and $B_0 \da 0$,
+\[
+\sum_{k=m}^n a_k b_k 
+&= A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
+.\]
+Compare this to integrating by parts:
+\[
+\int_a^b f g = F(b)g(b) - F(a)g(a) - \int_a^b Fg'
+.\]
+
+Note there is a useful form for taking the product of sums:
+\[
+A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
+.\]
+
 :::
 
-:::{.exercise title="1.20"}
+### Exercises: Series
+
+:::{.exercise title="Application of summation by parts"}
+Use summation by parts to show that $\sin(n)/n$ converges.
+:::
+
+:::{.solution}
+An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
+\
+
+Behold:
+\[
+\sum_{m\leq k \leq n} a_k b_k 
+&= \sum_{m\leq k \leq n} (A_k - A_{k-1}) b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m\leq k \leq n} A_{k-1} b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) \\
+&= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
+.\]
+
+:::
+
+:::{.exercise title="1.20: Series convergence on the circle"}
 Show that
 
 1. $\sum kz^k$ diverges on $S^1$.
 2. $\sum k^{-2} z^k$ converges on $S^1$.
 3. $\sum k\inv z^k$ converges on $S^1\sm\ts{1}$ and diverges at $1$.
-:::
-
-:::{.remark}
-Recall that absolutely convergent implies convergent, but not conversely: $\sum k\inv = \infty$ but $\sum (-1)^k k\inv < \infty$.
-This converges because the even (odd) partial sums are monotone increasing/decreasing respectively and in $(0, 1)$, so they converge to a finite number.
-Their difference converges to 0, and their common limit is the limit of the sum.
 :::
 
 :::{.solution}
@@ -474,7 +537,6 @@ and
 
 :::
 
-
 :::{.exercise title="Laurent expansions about different points"}
 Find the Laurent expansion about $z=0$ and $z=1$ respectively of the following function:
 \[
@@ -483,8 +545,8 @@ f(z) \da {z+1 \over z(z-1)}
 
 :::
 
-
 :::{.solution}
+Note: once you see that everything is in terms of powers of $(z-z_0)$, you're essentially done.
 For $z=0$:
 \[
 {z+1 \over z(z-1)}
@@ -501,13 +563,5 @@ For $z=1$:
 &= {1\over z-1} \qty{1 + \sum_{k\geq 0} (1-z)^k } \\
 &= {1\over z-1} \qty{1 + \sum_{k\geq 0} (-1)^k (z-1)^k }
 .\]
-
-
 :::
-
-
-
-
-
-![](figures/image_2021-05-17-10-27-21.png)
 
