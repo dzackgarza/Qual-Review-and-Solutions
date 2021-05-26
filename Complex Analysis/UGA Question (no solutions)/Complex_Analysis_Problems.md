@@ -3,6 +3,10 @@
 \newcommand{\dy}{\,dy}
 \newcommand{\ds}{\,ds}
 \newcommand{\dz}{\,dz}
+\newcommand{\dr}{\,dr}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dtheta}{\,d\theta}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\zbar}{\bar{z} }
@@ -114,6 +118,7 @@
 \newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
@@ -179,6 +184,7 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
@@ -233,6 +239,7 @@
 \newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
 \newcommand{\ho}[0]{{\mathsf{ho}}}
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
 \newcommand{\Aff}[0]{{\mathsf{Aff}}}
 \newcommand{\Schf}[0]{{\mathsf{Schf}}}
@@ -300,6 +307,7 @@
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
 \newcommand{\bundle}[1]{\mathcal{#1}}
 \newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
@@ -313,8 +321,9 @@
 \newcommand{\del}[0]{{\partial}}
 \newcommand{\directlim}[0]{\varinjlim}
 \newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
 \newcommand{\dual}[0]{ {}^{ \check{} }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
@@ -329,9 +338,9 @@
 \newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
 \newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
 \newcommand{\into}[0]{\to}
 \newcommand{\inv}[0]{^{-1}}
 \newcommand{\mfa}[0]{{\mathfrak{a}}}
@@ -455,7 +464,7 @@
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{St}}}
+\newcommand{\St}[0]{{\mathsf{Stk}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
@@ -515,6 +524,7 @@
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\TMF{ \mathrm{TMF} }
 \newcommand\tmf{ \mathrm{tmf} }
+\newcommand\Fix{ \mathrm{Fix} }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
@@ -618,6 +628,7 @@
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
@@ -711,8 +722,10 @@
 
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
@@ -892,61 +905,6 @@ u(x,0)=0,\quad \frac{\partial u}{\partial y}(x,0)=\frac{\sin nx}{n}.$$
 
 ### 2 
 Show that there exist points $(x,y)\in D$ such that $\displaystyle{\limsup_{n\to\infty} |u(x,y)|=\infty}$.
-
-# Conformal Maps (8155c)
-
-> Notation: $\DD$ is the open unit disc, $\HH$ is the open upper half-plane.
-
-## 1 $\work$
-Find a conformal map from $\DD$ to $\HH$.
-
-## 2 $\work$
-Find a conformal map from the strip $\theset{z\in \CC \suchthat 0 < \Im(z) < 1}$ to $\HH$.
-
-## 3 $\work$
-Find a fractional linear transformation $T$ which maps $\HH$ to $\DD$, and explicitly describe the image of the first quadrant under $T$.
-
-## 4 $\work$
-Find a conformal map from $\theset{z\in \CC\suchthat \abs{z-i} > 1,\, \Re(z) > 0}$ to $\HH$.
-
-## 5 $\work$
-Find a conformal map from $\theset{z\in \CC \suchthat \abs{z} < 1,\, \abs{z - {1\over 2}} > {1\over 2} }$ to $\DD$.
-
-## 6 $\work$
-Find a conformal  map from $\theset{\abs{z-1} < 2} \intersect \theset{\abs{z+1} < 2}$ to $\HH$.
-
-## 7 $\work$
-Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the circle $\abs{z-{1\over 4}} = {1\over 4}$.
-
-Find an injective conformal map from $\Omega$ onto some annulus $\theset{r < \abs{z} < 1}$ for gonstant $r$.
-
-## 8 $\work$
-Let $D$ be the region obtained by deleting the real interval $[0, 1)$ from $\DD$; find a conformal map from $D$ to $\DD$.
-
-## 9 $\work$
-Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\leq 0}$ to $\DD$.
-
-## 10 $\work$
-Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\geq 1}$ to $\DD$.
-
-## 11 $\work$
-Find a bijective conformal map from $G$ to $\HH$, where
-\[  
-G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt 2} \setminus [0, i)
-.\]
-
-## 12 $\work$
-Prove that TFAE for a Möbius transformation $T$ given by $T(z) = {az + b \over cz + d}$:
-
-a. $T$ maps $\RR\union \theset{\infty}$ to itself.
-b. It is possible to choose $a,b,c,d$ to be real numbers.
-c. $\bar{T(z)} = T(\bar z)$ for every $z\in \CP^1$.
-d. There exist $\alpha\in \RR, \beta \in \CC\setminus \RR$ such that $T(\alpha) = \alpha$ and $T(\bar \beta) = \bar{T(\beta)}$.
-
-# Extra Questions
-
-## 12. 
-Find a conformal map from $D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\}$ to the unit disk $\Delta=\{z: \ |z|<1\}$.
 
 # Integrals and Cauchy's Theorem (8155d)
 
@@ -1327,6 +1285,7 @@ Find the Laurent expansion of
 \[
 f(z) = {z + 1 \over z(z-1)}
 \]
+about $z=0$ and $z=1$ respectively.
 
 :::{.solution}
 \hfill
@@ -1361,13 +1320,12 @@ f(z)
 :::
 
 
-about $z=0$ and $z=1$ respectively.
 
 ## 2 $\done$
 
 Find the Laurent expansions about $z=0$ of the following functions:
 \[
-\exp{1\over z} \hspace{8em} \cos \qty{1\over z}
+e^{1\over z} \hspace{8em} \cos \qty{1\over z}
 .\]
 
 :::{.solution}
@@ -1461,104 +1419,209 @@ Idea: show their $f-g$ is analytic by taking away all of the negative powers, an
 :::
 
 
-# Residues (8155g)
+# Conformal Maps (8155c)
+
+> Notation: $\DD$ is the open unit disc, $\HH$ is the open upper half-plane.
 
 ## 1 $\work$
+Find a conformal map from $\DD$ to $\HH$.
+
+## 2 $\work$
+Find a conformal map from the strip $\theset{z\in \CC \suchthat 0 < \Im(z) < 1}$ to $\HH$.
+
+## 3 $\work$
+Find a fractional linear transformation $T$ which maps $\HH$ to $\DD$, and explicitly describe the image of the first quadrant under $T$.
+
+## 4 $\work$
+Find a conformal map from $\theset{z\in \CC\suchthat \abs{z-i} > 1,\, \Re(z) > 0}$ to $\HH$.
+
+## 5 $\work$
+Find a conformal map from $\theset{z\in \CC \suchthat \abs{z} < 1,\, \abs{z - {1\over 2}} > {1\over 2} }$ to $\DD$.
+
+## 6 $\work$
+Find a conformal  map from $\theset{\abs{z-1} < 2} \intersect \theset{\abs{z+1} < 2}$ to $\HH$.
+
+## 7 $\work$
+Let $\Omega$ be the region inside the unit circle $\abs{z} = 1$ and outside the circle $\abs{z-{1\over 4}} = {1\over 4}$.
+
+Find an injective conformal map from $\Omega$ onto some annulus $\theset{r < \abs{z} < 1}$ for constant $r$.
+
+## 8 $\work$
+Let $D$ be the region obtained by deleting the real interval $[0, 1)$ from $\DD$; find a conformal map from $D$ to $\DD$.
+
+## 9 $\work$
+Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\leq 0}$ to $\DD$.
+
+## 10 $\work$
+Find a conformal map from $\CC\setminus\theset{x\in \RR\suchthat x\geq 1}$ to $\DD$.
+
+## 11 $\work$
+Find a bijective conformal map from $G$ to $\HH$, where
+\[  
+G \definedas \theset{z\in \CC \suchthat \abs{z-1} < \sqrt 2,\, \abs{z+1} < \sqrt 2} \setminus [0, i)
+.\]
+
+## 12 $\work$
+Prove that TFAE for a Möbius transformation $T$ given by $T(z) = {az + b \over cz + d}$:
+
+a. $T$ maps $\RR\union \theset{\infty}$ to itself.
+b. It is possible to choose $a,b,c,d$ to be real numbers.
+c. $\bar{T(z)} = T(\bar z)$ for every $z\in \CP^1$.
+d. There exist $\alpha\in \RR, \beta \in \CC\setminus \RR$ such that $T(\alpha) = \alpha$ and $T(\bar \beta) = \bar{T(\beta)}$.
+
+## 13
+Find a conformal map from $D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\}$ to the unit disk $\Delta=\{z: \ |z|<1\}$.
+
+# Residues
+
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {1 \over (1+z)^2 (z+9x^2)} \, dx
 .\]
+:::
 
+## $\work$
 
-## 2 $\work$
+:::{.problem title="?"}
 Let $a>0$ and calculate
 \[
 \int_0^\infty {x\sin(x) \over x^2 + a^2} \,dx
 .\]
 
+:::
 
-## 3 $\work$
+
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\sqrt x \over (x+1)^2} \,dx
 .\]
 
-## 4 $\work$
+:::
+
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\cos(x) - \cos(4x) \over x^2} \, dx
 .\]
+:::
 
-## 5 $\work$
+## $\work$
+
+:::{.problem title="?"}
 Let $a>0$ and calculate
 \[
 \int_0^\infty {x^2 \over (x^2 + a^2)^2} \, dx
 .\]
+:::
 
-## 6 $\work$
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\sin(x) \over x}\, dx
 .\]
+:::
 
-## 7 $\work$
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\sin(x) \over x(x^2+1)}\, dx
 .\]
 
-## 8 $\work$
+:::
+
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\sqrt x \over 1 + x^2} \, dx
 .\]
 
-## 9 $\work$
+:::
+
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_{-\infty}^\infty {1+x^2 \over 1+x^4}\, dx
 .\]
 
-## 10 $\work$
+:::
+
+## $\work$
+
+:::{.problem title="?"}
 Let $a>0$ and calculate
 \[
 \int_0^\infty {\cos(x) \over (x^2 + a^2)^2}\, dx
 .\]
+:::
 
-## 11 $\work$
+## $\work$
+
+:::{.problem title="?"}
 Calculate
 \[
 \int_0^\infty {\sin^3(x) \over x^3} \, dx
 .\]
+:::
 
-## 12 $\work$
+
+## $\work$
+
+:::{.problem title="?"}
 Let $n\in \ZZ^{\geq 1}$ and $0<\theta<\pi$ and show that
 \[
 {1\over 2\pi i} \int_{\abs z = 2} {z^n \over 1 -3z\cos(\theta) + z^2} \,dz = {\sin(n\theta) \over \sin(\theta)}
 .\]
+:::
 
-## 13 $\work$
+
+## $\work$
+
+:::{.problem title="?"}
 Suppose $a>b>0$ and calculate
 \[
 \int_0^{2\pi} {1 \over (a+b\cos(\theta))^2} \,d\theta
 .\]
 
-# Residue Theorem: Extra Questions
+:::
 
-## ?
+
+
+# Extra Questions
+
+## $\work$
+
+:::{.problem title="?"}
 Suppose that $f$ is an analytic function in the region $D$ which
 contains the point $a$. Let
 $$F(z)= z-a-qf(z),\quad \text{where}\quad q \ \text{is a complex
 parameter}.$$ 
 
-### 1 
+1.
 Let $K\subset D$ be a circle with the center at
 point $a$ and also we assume that $f(z)\not =0$ for $z\in K$. Prove
 that the function $F$ has one and only one zero $z=w$ on the closed
-disc $\bar{K}$ whose boundary is the circle $K$ if $\displaystyle{
-|q|<\min_{z\in K} \frac{|z-a|}{|f(z)|}.}$\
+disc $\bar{K}$ whose boundary is the circle $K$ if 
+\[
+\displaystyle{ |q|<\min_{z\in K} \frac{|z-a|}{|f(z)|}.}
+.\]
 
-### 2 
+2.
 Let $G(z)$ be an analytic function on the disk $\bar{K}$. Apply
 the residue theorem to prove that
 \[
@@ -1566,21 +1629,65 @@ the residue theorem to prove that
 \]
 where $w$ is the zero from (1).
 
+:::
 
-## ?
+## $\work$
+
+:::{.problem title="?"}
 Evaluate 
-$$
+\[
 \displaystyle{ \int_{0}^{\infty}\frac{x\sin x}{x^2+a^2} \, dx }
-.$$
+.\]
 
+:::
 
-## ?
+## $\work$
+
+:::{.problem title="?"}
 Show that 
 $$
 \displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}}
 $$ 
 using complex analysis, $0< a <
 n$. Here $n$ is a positive integer.
+
+:::
+
+
+## $\done$
+
+:::{.problem title="?"}
+Show that
+\[
+\int_0^{\infty} {\cos(x) \over x^2 + b^2}\dx = {\pi e^{-b} \over 2b}
+.\]
+:::
+
+:::{.solution}
+\envlist
+
+- Let $I$ be the integral over $\RR$.
+  Since $f(x)$ is even, the original integral is ${1\over 2}I$.
+
+- Write $f(z) = e^{iz} / (z^2 + b^2)$.
+  Take a semicircular contour $\Gamma \da \gamma_1 + \gamma_2$ where $\gamma_1$ is $[-R, R]$ on $\RR$ and $\gamma_2$ is the usual half-circle of radius $R$.
+
+- Claim: $\int_{\gamma_2} f \converges{R\to\infty}\too 0$, so $\int_\Gamma \to \int_\RR f(z)$.
+  - Easy estimate, just be careful with the $i$ in the exponent:
+  \[
+  \abs{f} = { \abs{e^{iz} } \over \abs{z^2 + b^2} } = {e^{-\Re z} \over \abs{z^2 + b^2} } \leq {1\over \abs{z^2 + b^2}} \converges{R\to\infty}\too 0
+  .\]
+
+- Compute $\int_\Gamma f$ by residues: factor $z^2 + b^2 = (z+ib)(z-ib)$, so the contour only contains the order 1 pole $z_0 = ib$.
+
+- Compute the residue:
+\[
+\Res_{z=ib}f = \lim_{z\to ib} (z-ib) {e^{iz} \over (z+ib)(z-ib) } = { e^{iz} \over z+ib} \evalfrom_{z=ib} = {e^{i(ib)} \over 2ib} = {e^{-b} \over 2ib}
+.\]
+- So the intermediate integral is $I$ is $2\pi i$ times this, i.e. $I = \pi e^{-b} / b$.
+- And the original integral is ${1\over 2}I = \pi e^{-b} \over 2b$.
+
+:::
 
 
 
@@ -1848,7 +1955,7 @@ where $L$ is the part of the circle $|z|=R'$ which lies in the
 region $D$.
 
 
-### 3
+## 3
 If $z\in K$, prove that the function
 $\displaystyle{\frac{1}{F(z)}}$ can be represented as a convergent
 series with respect to $q$: 
