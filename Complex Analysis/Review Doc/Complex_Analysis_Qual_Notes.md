@@ -654,6 +654,7 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
@@ -1007,7 +1008,7 @@ taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 
 
 
 :::{.remark}
-When parameterizing integrals $\int_\gamma f(z)\dz $, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
+When parameterizing integrals $\int_\gamma f(z)\dz$, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
 :::
 
 :::{.warnings}
@@ -1296,7 +1297,7 @@ U_x = V_y && U_y = -V_x \\ \\
 - By the previous exercise, $f'=0 \implies f$ is constant.
 :::
 
-:::{.exercise title="S&S 1.13: Constant real/imaginary/magnitude implies constant"}
+:::{.exercise title="SS 1.13: Constant real/imaginary/magnitude implies constant"}
 If $f$ is holomorphic on $\Omega$ and any of the following hold, then $f$ is constant:
 
 1. $\Re(f)$ is constant.
@@ -1759,7 +1760,7 @@ If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
 there exists a holomorphic function $g$ such that $f(z) = g(z)$ in a punctured neighborhood of $z_0$.
 Equivalently,
 \[
-\lim_{z\to \z_0}(z-z_0) f(z) = 0
+\lim_{z\to z_0}(z-z_0) f(z) = 0
 .\]
 Equivalently, $f$ is bounded on a neighborhood of $z_0$.
 :::
@@ -1773,7 +1774,7 @@ If $f$ is holomorphic on $\Omega\sm\ts{z_0}$ where $z_0$ is a removable singular
 :::{.proof title="?"}
 Take $\gamma$ to be a circle centered at $z_0$ and use
 \[
-f(z) \da \int_\gamma { f(\xi) \over \xi - z} \dxii
+f(z) \da \int_\gamma { f(\xi) \over \xi - z} \dx
 .\]
 This is valid for $z\neq z_0$, but the right-hand side is analytic. (?)
 :::
@@ -2482,7 +2483,7 @@ Why these show up: a harmonic function on a simply connected region has a harmon
 See section 27, example 1 in Brown and Churchill.
 On the strip $(x, y)\in (0, \pi) \cross (0, \infty)$, set up the BVP for temperature on a thin plate with no sinks/sources:
 \[
-\Laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
+\laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
 T(x, 0) = \sin(x) && T(x, y) \converges{y\to\infty}\too 0
 .\]
 

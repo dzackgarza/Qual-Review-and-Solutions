@@ -48,7 +48,7 @@ Why these show up: a harmonic function on a simply connected region has a harmon
 See section 27, example 1 in Brown and Churchill.
 On the strip $(x, y)\in (0, \pi) \cross (0, \infty)$, set up the BVP for temperature on a thin plate with no sinks/sources:
 \[
-\Laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
+\laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
 T(x, 0) = \sin(x) && T(x, y) \converges{y\to\infty}\too 0
 .\]
 

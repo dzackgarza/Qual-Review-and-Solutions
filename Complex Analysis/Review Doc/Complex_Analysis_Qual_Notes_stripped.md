@@ -257,7 +257,7 @@ taking (say) a principal branch of \( \log \) given by \( {\mathbb{C}}\setminus(
 ## Complex Calculus
 
 ::: {.remark}
-When parameterizing integrals \$`\int`{=tex}\_`\gamma `{=tex}f(z)`\,dz `{=tex}\$, parameterize \( \gamma \) by \( \theta \) and write \( z=re^{i\theta} \) so \( \,dz= ire^{i\theta}\,d\theta \).
+When parameterizing integrals \( \int_\gamma f(z)\,dz \), parameterize \( \gamma \) by \( \theta \) and write \( z=re^{i\theta} \) so \( \,dz= ire^{i\theta}\,d\theta \).
 :::
 
 ::: {.warnings}
@@ -537,7 +537,7 @@ Show that if \( f \) and \( \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mke
 -   By the previous exercise, \( f'=0 \implies f \) is constant.
 :::
 
-::: {.exercise title="S&S 1.13: Constant real/imaginary/magnitude implies constant"}
+::: {.exercise title="SS 1.13: Constant real/imaginary/magnitude implies constant"}
 If \( f \) is holomorphic on \( \Omega \) and any of the following hold, then \( f \) is constant:
 
 1.  \( \Re(f) \) is constant.
@@ -953,7 +953,7 @@ The singularities of a rational function are always isolated, since there are fi
 ::: {.definition title="Removable Singularities"}
 If \( z_0 \) is a singularity of \( f \). then \( z_0 \) is a **removable singularity** iff there exists a holomorphic function \( g \) such that \( f(z) = g(z) \) in a punctured neighborhood of \( z_0 \). Equivalently,
 \[
-\lim_{z\to \z_0}(z-z_0) f(z) = 0
+\lim_{z\to z_0}(z-z_0) f(z) = 0
 .\]
 Equivalently, \( f \) is bounded on a neighborhood of \( z_0 \).
 :::
@@ -965,7 +965,7 @@ If \( f \) is holomorphic on \( \Omega\setminus\left\{{z_0}\right\} \) where \( 
 ::: {.proof title="?"}
 Take \( \gamma \) to be a circle centered at \( z_0 \) and use
 \[
-f(z) \coloneqq\int_\gamma { f(\xi) \over \xi - z} \dxii
+f(z) \coloneqq\int_\gamma { f(\xi) \over \xi - z} \,dx
 .\]
 This is valid for \( z\neq z_0 \), but the right-hand side is analytic. (?)
 :::
@@ -1583,7 +1583,7 @@ More generally, this is a boundary value problem for a region where the *values*
 ::: {.example title="Dirichlet problem on the strip"}
 See section 27, example 1 in Brown and Churchill. On the strip \( (x, y)\in (0, \pi) \times(0, \infty) \), set up the BVP for temperature on a thin plate with no sinks/sources:
 \[
-\Laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
+\Delta T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
 T(x, 0) = \sin(x) && T(x, y) \overset{y\to\infty}\longrightarrow 0
 .\]
 

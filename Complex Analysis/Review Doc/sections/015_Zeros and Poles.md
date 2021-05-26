@@ -24,7 +24,7 @@ If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
 there exists a holomorphic function $g$ such that $f(z) = g(z)$ in a punctured neighborhood of $z_0$.
 Equivalently,
 \[
-\lim_{z\to \z_0}(z-z_0) f(z) = 0
+\lim_{z\to z_0}(z-z_0) f(z) = 0
 .\]
 Equivalently, $f$ is bounded on a neighborhood of $z_0$.
 :::
@@ -38,7 +38,7 @@ If $f$ is holomorphic on $\Omega\sm\ts{z_0}$ where $z_0$ is a removable singular
 :::{.proof title="?"}
 Take $\gamma$ to be a circle centered at $z_0$ and use
 \[
-f(z) \da \int_\gamma { f(\xi) \over \xi - z} \dxii
+f(z) \da \int_\gamma { f(\xi) \over \xi - z} \dx
 .\]
 This is valid for $z\neq z_0$, but the right-hand side is analytic. (?)
 :::

@@ -33,7 +33,7 @@ taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 
 
 
 :::{.remark}
-When parameterizing integrals $\int_\gamma f(z)\dz $, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
+When parameterizing integrals $\int_\gamma f(z)\dz$, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
 :::
 
 :::{.warnings}
@@ -322,7 +322,7 @@ U_x = V_y && U_y = -V_x \\ \\
 - By the previous exercise, $f'=0 \implies f$ is constant.
 :::
 
-:::{.exercise title="S&S 1.13: Constant real/imaginary/magnitude implies constant"}
+:::{.exercise title="SS 1.13: Constant real/imaginary/magnitude implies constant"}
 If $f$ is holomorphic on $\Omega$ and any of the following hold, then $f$ is constant:
 
 1. $\Re(f)$ is constant.
