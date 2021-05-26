@@ -51,14 +51,10 @@
 \tableofcontents
 \newpage
 
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
+\begin{quote}
+A great deal of content borrowed from the following:
+\url{https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf}
+\end{quote}
 
 \hypertarget{useful-techniques}{%
 \section{Useful Techniques}\label{useful-techniques}}
@@ -66,52 +62,23 @@
 \hypertarget{notation}{%
 \subsection{Notation}\label{notation}}
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.64}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.35}}@{}}
 \toprule
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-Notation\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-Definition\strut
-\end{minipage}\tabularnewline
+Notation & Definition \\
 \midrule
 \endhead
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\({\mathbb{D}}\coloneqq\left\{{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} \leq 1}\right\}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-The unit disc\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\({\mathbb{H}}\coloneqq\left\{{x+iy {~\mathrel{\Big|}~}y > 0}\right\}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-The upper half-plane\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\(X_{1\over 2}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-A ``half version of \(X\)'', see examples\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\({\mathbb{H}}_{1\over 2}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-The first quadrant\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\({\mathbb{D}}_{1\over 2}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-The portion of the first quadrant inside the unit disc\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.64}}\raggedright
-\(S \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.35}}\raggedright
-The horizonta strip\strut
-\end{minipage}\tabularnewline
+\({\mathbb{D}}\coloneqq\left\{{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} \leq 1}\right\}\)
+& The unit disc \\
+\({\mathbb{H}}\coloneqq\left\{{x+iy {~\mathrel{\Big|}~}y > 0}\right\}\)
+& The upper half-plane \\
+\(X_{1\over 2}\) & A ``half version of \(X\)'', see examples \\
+\({\mathbb{H}}_{1\over 2}\) & The first quadrant \\
+\({\mathbb{D}}_{1\over 2}\) & The portion of the first quadrant inside
+the unit disc \\
+\(S \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\}\)
+& The horizonta strip \\
 \bottomrule
 \end{longtable}
 
@@ -237,172 +204,16 @@ Things to know well:
   Consider \(1/f(z)\) and \(f(1/z)\).
 \end{itemize}
 
-\hypertarget{definitions}{%
-\section{Definitions}\label{definitions}}
+\hypertarget{calculus-preliminaries}{%
+\section{Calculus Preliminaries}\label{calculus-preliminaries}}
 
-\begin{definition}[Analytic]
+\begin{theorem}[Implicit Function Theorem]
 
-A function \(f:\Omega \to {\mathbb{C}}\) is \emph{analytic} at
-\(z_0\in \Omega\) iff there exists a power series
-\(g(z) = \sum a_n (z-z_0)^n\) with radius of convergence \(R>0\) and a
-neighborhood \(U\ni z_0\) such that \(f(z) = g(z)\) on \(U\).
+\end{theorem}
 
-\end{definition}
+\begin{theorem}[Inverse Function Theorem]
 
-\begin{definition}[Cauchy-Riemann Equations]
-
-\begin{align*}
-u_x = v_y \quad\text{and}\quad u_y = -v_x \\
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
-.\end{align*}
-
-\end{definition}
-
-\begin{definition}[Entire]
-
-A function that is holomorphic on \({\mathbb{C}}\) is said to be
-\emph{entire}.
-
-\end{definition}
-
-\begin{definition}[Essential Singularity]
-
-A singularity \(z_0\) is \emph{essential} iff it is neither removable
-nor a pole.
-
-Equivalently, a Laurent series expansion about \(z_0\) has a principal
-part with infinitely many terms.
-
-\end{definition}
-
-\begin{definition}[Holomorphic]
-
-A function \(f:{\mathbb{C}}\to {\mathbb{C}}\) is \emph{holomorphic} at
-\(z_0\) if the following limit converges:
-\begin{align*}  
-\lim_{h\to 0} {1\over h} \qty{f(z_0 + h) - f(z_0)} \coloneqq f'(z_0)
-.\end{align*}
-
-\end{definition}
-
-\begin{definition}[Harmonic]
-
-A real function of two variables \(u(x, y)\) is \emph{harmonic} iff its
-Laplacian vanishes:
-\begin{align*}  
-\Delta u \coloneqq\qty{{\frac{\partial ^2}{\partial x^2}\,} + {\frac{\partial ^2}{\partial y^2}\,}}u = 0
-.\end{align*}
-
-\end{definition}
-
-\begin{definition}[Meromorphic]
-
-A function \(f:\Omega\to{\mathbb{C}}\) is \emph{meromorphic} iff there
-exists a sequence \(\left\{{z_n}\right\}\) such that
-
-\begin{itemize}
-\tightlist
-\item
-  \(\left\{{z_n}\right\}\) has no limit points in \(\Omega\).
-\item
-  \(f\) is holomorphic in \(\Omega\setminus\left\{{z_n}\right\}\).
-\item
-  \(f\) has poles at the points \(\left\{{z_n}\right\}\).
-\end{itemize}
-
-If \(f\) is either holomorphic or has a pole at \(z=\infty\) is said to
-be meromorphic on \({\mathbb{CP}}^1\).
-
-\end{definition}
-
-\begin{definition}[Poles (and associated terminology)]
-
-A \emph{pole} \(z_0\) of a meromorphic function \(f(z)\) is a zero of
-\(g(z) \coloneqq{1\over f(z)}\). If there exists an \(n\) such that
-\begin{align*}  
-\lim_{z\to z_0}\qty{z-z_0}^nf(z)
-\end{align*}
-is holomorphic and nonzero in a neighborhood of \(z_0\), then the
-minimal such \(n\) is the \emph{order} of the pole. A pole of order 1 is
-said to be a \emph{simple pole}.
-
-The pole \(z_0\) is \emph{isolated} iff there exists a neighborhood of
-\(z_0\) containing no other poles of \(f\).
-
-\end{definition}
-
-\begin{definition}[Principal Part and Residue]
-
-In a Laurent series
-\(f(z) \coloneqq\sum_{n\in {\mathbb{Z}}} c_n (z-z_0)^n\), the
-\emph{principal part of \(f\) at \(z_0\)} consists of terms with
-negative degree:
-\begin{align*}  
-P_f(z) \coloneqq\sum_{n=1}^\infty c_{-n}(z-z_0)^{-n}
-.\end{align*}
-
-The \emph{residue} of \(f\) at \(z_0\) is the coefficient \(c_{-1}\).
-
-\end{definition}
-
-\begin{definition}[Removable Singularities]
-
-If \(z_0\) is a singularity of \(f\) and there exists a \(g\) such that
-\(f(z) = g(z)\) for all \(z\) in some deleted neighborhood
-\(U\setminus\left\{{z_0}\right\}\), then \(z_0\) is a \emph{removable
-singularity} of \(f\).
-
-\end{definition}
-
-\begin{definition}[Linear Fractional Transformation]
-
-A map of the following form is a \emph{linear fractional
-transformation}:
-\begin{align*}  
-T(z) = {az + b \over cz + d}
-,\end{align*}
-where the denominator is assumed to not be a multiple of the numerator.
-
-These have inverses given by
-\begin{align*}  
-T^{-1}(w) = {dw-b \over -cw + a}
-.\end{align*}
-
-\end{definition}
-
-\begin{definition}[Conformal Map / Biholomorphism]
-
-A bijective holomorphic map is a \textbf{conformal} (or
-angle-preserving) map, a.k.a. a \textbf{biholomorphism}.
-
-Note that some authors just require the weaker condition that
-\(f'(z) \neq 0\) for any point.
-
-\end{definition}
-
-\hypertarget{theorems}{%
-\section{Theorems}\label{theorems}}
-
-\hypertarget{basics}{%
-\subsection{Basics}\label{basics}}
-
-\begin{example}[holomorphic vs non-holomorphic]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  \(f(z) = {1\over z}\) is holomorphic on
-  \({\mathbb{C}}\setminus\left\{{0}\right\}\).
-\item
-  \(f(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu\)
-  is \emph{not} holomorphic, since
-  \(\mkern 1.5mu\overline{\mkern-1.5muh\mkern-1.5mu}\mkern 1.5mu \over h\)
-  does not converge (but is real differentiable).
-\end{itemize}
-
-\end{example}
+\end{theorem}
 
 \begin{theorem}[Green's Theorem]
 
@@ -414,376 +225,19 @@ then
 
 \end{theorem}
 
-\begin{theorem}[Summation by Parts]
-
-Define the forward difference operator \(\Delta f_k = f_{k+1} - f_k\),
-then
-\begin{align*}
-\sum_{k=m}^n f_k \Delta g_k  + \sum_{k=m}^{n-1} g_{k+1}\Delta f_k = f_n g_{n+1} - f_m g_m
-\end{align*}
-
-\begin{quote}
-Note: compare to
-\(\int_a^b f \, dg + \int_a^b g\, df = f(b) g(b) - f(a) g(a)\).
-\end{quote}
-
-\end{theorem}
-
-\hypertarget{holomorphic-and-entire-functions}{%
-\subsection{Holomorphic and Entire
-Functions}\label{holomorphic-and-entire-functions}}
-
-\hypertarget{key-theorems}{%
-\subsubsection{Key Theorems}\label{key-theorems}}
-
-\begin{theorem}[Cauchy's Theorem]\label{CauchyTheorem}
-
-If \(f\) is holomorphic on \(\Omega\), then
-\begin{align*}  
-\int_{{{\partial}}\Omega} f(z) \, dz = 0
-.\end{align*}
-
-\begin{quote}
-Slogan: closed path integrals of holomorphic functions vanish.
-\end{quote}
-
-\end{theorem}
-
-\begin{theorem}[Morera's Theorem]\label{Morera}
-
-If \(f\) is continuous on a domain \(\Omega\) and \(\int_T f = 0\) for
-every triangle \(T\subset \Omega\), then \(f\) is holomorphic.
-
-\begin{quote}
-Slogan: if every integral along a triangle vanishes, implies
-holomorphic.
-\end{quote}
-
-\end{theorem}
-
-\begin{theorem}[Maximum Modulus]\label{MaximumModulus}
-
-If \(f\) is holomorphic and nonconstant on an open connected region
-\(\Omega\), then \({\left\lvert {f} \right\rvert}\) can not attain a
-maximum on \(\Omega\). If \(\Omega\) is bounded and \(f\) is continuous
-on
-\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\),
-then
-\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)
-occurs on \({{\partial}}\Omega\). Conversely, if \(f\) attains a local
-supremum at \(z_0 \in \Omega\), then \(f\) is constant on \(\Omega\).
-
-\end{theorem}
-
-\begin{theorem}[Liouville's Theorem]\label{Liouville}
-
-If \(f\) is entire and bounded, \(f\) is constant.
-
-\end{theorem}
-
-\begin{theorem}[Cauchy Integral Formula]\label{CauchyIntegral}
-
-Suppose \(f\) is holomorphic on \(\Omega\), then
-\begin{align*}
-f(z) = {1 \over 2\pi i} \oint_{{{\partial}}\Omega} {f(\xi) \over \xi-z}\,d\xi
-\end{align*}
-and
-\begin{align*}
-{\frac{\partial ^nf }{\partial z^n}\,}(z) = {n! \over 2\pi i} \int_{{{\partial}}\Omega} {f(\xi) \over (\xi - z)^{n+1}} \,d\xi
-.\end{align*}
-
-\end{theorem}
-
-\begin{theorem}[Cauchy's Inequality]\label{CauchyInequality}
-
-For \(z_0 \in D_R(z_0) \subset \Omega\), we have
-\begin{align*}
-{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
-\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
-= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
-,\end{align*}
-where
-\({\left\lVert {f} \right\rVert}_{\infty}\coloneqq\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert}\).
-
-\begin{slogan}
-
-The \(n\)th Taylor coefficient of an analytic function is at most
-\(\sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n\).
-
-\end{slogan}
-
-\end{theorem}
-
-\begin{theorem}[Argument Principle]
-
-For \(f\) meromorphic in \(\gamma^\circ\), if \(f\) has no poles and is
-nonvanishing on \(\gamma\) then
-\begin{align*}  
-\Delta_\gamma \arg f(z) = \int_\gamma {f'(z) \over f(z)} \,dz = 2\pi (Z_f - P_f)
-,\end{align*}
-where \(Z_f\) and \(P_f\) are the number of zeros and poles respectively
-enclosed by \(\gamma\), counted with multiplicity.
-
-\end{theorem}
-
-\begin{theorem}[Rouché's Theorem]\label{Rouche}
-
-If \(f, g\) are analytic on a domain \(\Omega\) with finitely many zeros
-in \(\Omega\) and \(\gamma \subset \Omega\) is a closed curve
-surrounding each point exactly once, where
-\({\left\lvert {g} \right\rvert} < {\left\lvert {f} \right\rvert}\) on
-\(\gamma\), then \(f\) and \(f+g\) have the same number of zeros.
-
-Alternatively:
-
-Suppose \(f = g + h\) with \(g \neq 0, \infty\) on \(\gamma\) with
-\({\left\lvert {g} \right\rvert} > {\left\lvert {h} \right\rvert}\) on
-\(\gamma\). Then
-\begin{align*}\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.\end{align*}
-
-\end{theorem}
-
-\begin{theorem}[The Residue Theorem]
-
-If \(f\) is holomorphic on an open set \(\Omega\) containing a curve
-\(\gamma\) and its interior \(\gamma^\circ\), except for finitely many
-poles \(\left\{{z_k}\right\}_{k=1}^N \subset \gamma^\circ\). Then
-\begin{align*}  
-\int_\gamma f(z) \,dz = 2\pi i \sum_{k=1}^N \mathop{\mathrm{Res}}_{z_k} f
-.\end{align*}
-
-\end{theorem}
-
-\begin{theorem}[Cayley Transform]
-
-The fractional linear transformation given by
-\(F(z) = {i - z \over i + z}\) maps \({\mathbb{D}}\to {\mathbb{H}}\)
-with inverse \(G(w) = i {1-w \over 1 + w}\).
-
-\end{theorem}
-
-\begin{theorem}[Schwarz Lemma]\label{SchwarzLemma}
-
-If \(f: {\mathbb{D}}\to {\mathbb{D}}\) is holomorphic with \(f(0) = 0\),
-then
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \({\left\lvert {f(z)} \right\rvert} \leq {\left\lvert {z} \right\rvert}\)
-  for all \(z\in {\mathbb{D}}\)
-\item
-  \({\left\lvert {f'(0)} \right\rvert} \leq 1\).
-\end{enumerate}
-
-Moreover, if
-\({\left\lvert {f(z_0)} \right\rvert} = {\left\lvert {z_0} \right\rvert}\)
-for any \(z_0\in {\mathbb{D}}\) or
-\({\left\lvert {f'(0)} \right\rvert} = 1\), then \(f\) is a rotation
-
-\end{theorem}
-
-\begin{theorem}[Mean Value Theorem for Holomorphic Functions]
-
-\begin{align*}
-f(z_0) = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
-.\end{align*}
-
-\end{theorem}
-
-\begin{theorem}[Schwarz Reflection ]\label{SchwarzReflection}
-
-If \(f\) is continuous and holomorphic on \({\mathbb{H}}^+\) and
-real-valued on \({\mathbb{R}}\), then the extension defined by
-\(F(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu\)
-for \(z\in {\mathbb{H}}^-\) is a well-defined holomorphic function on
-\({\mathbb{C}}\).
-
-\end{theorem}
-
-\begin{theorem}[Classification of Conformal Maps]
-
-There are 8 major types of conformal maps:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-Type/Domains\strut
-\end{minipage} &
-\begin{minipage}[b]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-Formula\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-Translation/Dilation/Rotation\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto e^{i\theta}(cz + h)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-Sectors to sectors\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto z^n\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2}\), the first
-quadrant\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto {1+z \over 1-z}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\({\mathbb{H}}\to S\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto \log(z)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\({\mathbb{D}}_{1\over 2} \to S_{1\over 2}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto \log(z)\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\(S_{1\over 2} \to {\mathbb{D}}_{1\over 2}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto e^{iz}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto {1\over 2}\qty{z + {1\over z}}\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.62}}\raggedright
-\(S_{1\over 2} \to {\mathbb{H}}\)\strut
-\end{minipage} &
-\begin{minipage}[t]{(\columnwidth - 1\tabcolsep) * \real{0.37}}\raggedright
-\(z\mapsto \sin(z)\)\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
-\end{theorem}
-
-\begin{theorem}[Characterization of conformal maps]
-
-Conformal maps \({\mathbb{D}}\to{\mathbb{D}}\) have the form
-\begin{align*}
-g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
-.\end{align*}
-
-\end{theorem}
-
-\hypertarget{others}{%
-\subsubsection{Others}\label{others}}
-
-\begin{theorem}[Riemann Mapping]
-
-If \(\Omega\) is simply connected, nonempty, and not \({\mathbb{C}}\),
-then for every \(z_{0}\in \Omega\) there exists a unique conformal map
-\(F:\Omega \to {\mathbb{D}}\) such that \(F(z_{0}) = 0\) and
-\(F'(z_{0}) > 0\).
-
-Thus any two such sets \(\Omega_{1}, \Omega_{2}\) are conformally
-equivalent.
-
-\end{theorem}
-
-\begin{theorem}[Riemann's Removable Singularity Theorem]
-
-If \(f\) is holomorphic on \(\Omega\) except possibly at \(z_0\) and
-\(f\) is bounded on \(\Omega\setminus\left\{{z_0}\right\}\), then
-\(z_0\) is a removable singularity.
-
-\end{theorem}
-
-\begin{proposition}[Holomorphic functions have harmonic components]
-
-If \(f(z) = u(x, y) + iv(x, y)\) is holomorphic, then \(u, v\) are
-harmonic.
-
-\end{proposition}
-
-\begin{proposition}[Holomorphic functions are continuous.]
-
-\(f\) is holomorphic at \(z_0\) iff there exists an
-\(a\in {\mathbb{C}}\) such that
-\begin{align*}  
-f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
-.\end{align*}
-In this case, \(a = f'(z_0)\).
-
-\end{proposition}
-
-\begin{proposition}[Cauchy-Riemann implies holomorphic]
-
-If \(f = u+iv\) with \(u, v\in C^1({\mathbb{R}})\) satisfying the
-Cauchy-Riemann equations on \(\Omega\), then \(f\) is holomorphic on
-\(\Omega\) and
-\(f'(z) = {\frac{\partial f}{\partial z}\,} = {1 \over 2} \qty{{\frac{\partial }{\partial x}\,} + {1\over i} {\frac{\partial }{\partial y}\,}}f\).
-
-\end{proposition}
-
-\begin{proposition}[Polar Cauchy-Riemann equations]
-
-\begin{align*}  
-\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
-.\end{align*}
-
-\end{proposition}
-
-\begin{proof}
-
-\hfill
-
-\begin{concept}
-
-\hfill
-
-\begin{itemize}
-\tightlist
-\item
-  See
-  \href{https://users.math.msu.edu/users/shapiro/Teaching/classes/425/crpolar.pdf}{walkthrough
-  here}.
-\item
-  See problem set 1.
-\end{itemize}
-
-\end{concept}
-
-\begin{itemize}
-\tightlist
-\item
-  Take derivative along two paths, along a ray with constant angle
-  \(\theta_0\) and along a circular arc of constant radius \(r_0\).
-\item
-  Then equate real and imaginary parts.
-\end{itemize}
-
-\end{proof}
-
-\begin{theorem}[Open Mapping]
-
-Any holomorphic non-constant map is an open map.
-
-\end{theorem}
-
-\hypertarget{series-and-analytic-functions}{%
-\subsection{Series and Analytic
-Functions}\label{series-and-analytic-functions}}
-
-\begin{proposition}[Power Series are Smooth]
-
-Any power series is smooth and its derivatives can be obtained using
-term-by-term differentiation.
-
-\end{proposition}
+\hypertarget{convergence}{%
+\subsection{Convergence}\label{convergence}}
+
+\begin{remark}
+
+Recall that absolutely convergent implies convergent, but not
+conversely: \(\sum k^{-1}= \infty\) but \(\sum (-1)^k k^{-1}< \infty\).
+This converges because the even (odd) partial sums are monotone
+increasing/decreasing respectively and in \((0, 1)\), so they converge
+to a finite number. Their difference converges to 0, and their common
+limit is the limit of the sum.
+
+\end{remark}
 
 \begin{proposition}[Uniform Convergence of Series]
 
@@ -809,6 +263,640 @@ Moreover, if the \(f_n\) are continuous, by the uniform limit theorem,
 
 \end{theorem}
 
+\hypertarget{series-and-sequences}{%
+\subsection{Series and Sequences}\label{series-and-sequences}}
+
+\begin{remark}
+
+Note that if a power series converges uniformly, then summing commutes
+with integrating or differentiating.
+
+\end{remark}
+
+\begin{fact}
+
+Consider \(\sum c_k z^k\), set
+\(R = \lim {\left\lvert {c_{k+1} \over c_k} \right\rvert}\), and recall
+the \textbf{ratio test}:
+
+\begin{itemize}
+\tightlist
+\item
+  \(R\in (0, 1) \implies\) convergence.
+\item
+  \(R\in [1, \infty] \implies\) divergence.
+\item
+  \(R=1\) yields no information.
+\end{itemize}
+
+\end{fact}
+
+\begin{proposition}[Radius of Convergence by the Root Test]
+
+For \(f(z) = \sum_{k\in {\mathbb{N}}} c_k z^k\), defining
+\begin{align*}
+{1\over R} \coloneqq\limsup_{k} {\left\lvert {a_k} \right\rvert}^{1\over k}
+,\end{align*}
+then \(f\) converges absolutely and uniformly for
+\(D_R \coloneqq{\left\lvert {z} \right\rvert} < R\) and diverges for
+\({\left\lvert {z} \right\rvert} > R\). Moreover \(f\) is holomorphic in
+\(D_R\), can be differentiated term-by-term, and
+\(f' = \sum_{k\in {\mathbb{N}}} n c_k z^k\).
+
+\end{proposition}
+
+\begin{fact}
+
+Recall the \textbf{\(p{\hbox{-}}\)test}:
+\begin{align*}
+\sum n^{-p} < \infty \iff p \in (1, \infty)
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+The product of two sequences is given by the Cauchy product
+\begin{align*}
+\sum a_kz^k \cdot \sum b_k z^k = \sum c_k z^k,\quad c_k \coloneqq\sum_{j\leq k} a_k b_{k-j}
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+Recall how to carry out polynomial long division:
+
+\todo[inline]{Polynomial long division}
+
+\end{fact}
+
+\begin{fact}[Partial Fraction Decomposition]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  For every root \(r_i\) of multiplicity 1, include a term
+  \(A/(x-r_i)\).
+\item
+  For any factors \(g(x)\) of multiplicity \(k\), include terms
+  \(A_1/g(x), A_2/g(x)^2, \cdots, A_k / g(x)^k\).
+\item
+  For irreducible quadratic factors \(h_i(x)\), include terms of the
+  form \({Ax+B \over h_i(x)}\).
+\end{itemize}
+
+\end{fact}
+
+\begin{fact}[Generalized Binomial Theorem]
+
+Define \((n)_k\) to be the falling factorial
+\(\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1)\) and set
+\({n\choose k} \coloneqq(n)_k/k!\), then
+\begin{align*}
+(x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}[Some useful series]
+
+\begin{align*}
+\sqrt{1+x} = (1+x)^{1/2} = 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+Useful trick for expanding square roots:
+\begin{align*}
+\sqrt{z} = \sqrt{z_0 + z - z_0} = \sqrt{z_0 \qty{ 1 + {z-z_0 \over z} }} = \sqrt{z_0} \sqrt{1+u},\quad u\coloneqq{z-z_0 \over z} \\
+\implies \sqrt{z} = \sqrt{z_0} \sum_{k\geq 0} {1/2 \choose k} \qty{z- z_0 \over z}^k
+.\end{align*}
+
+\end{fact}
+
+\hypertarget{exercises}{%
+\subsection{Exercises}\label{exercises}}
+
+\begin{exercise}[?]
+
+Find the radius of convergences for the power series expansion of
+\(\sqrt{z}\) about \(z_0 = 4 +3i\).
+
+\end{exercise}
+
+\hypertarget{preliminaries}{%
+\section{Preliminaries}\label{preliminaries}}
+
+\hypertarget{complex-arithmetic}{%
+\subsection{Complex Arithmetic}\label{complex-arithmetic}}
+
+\begin{fact}[Complex roots of a number]
+
+The complex \(n\)th roots of \(z \coloneqq r e^{i\theta}\) are given by
+\begin{align*}
+\left\{{ \omega_k \coloneqq r^{1/n} e^{i \qty{ \theta + 2k\pi \over n} } {~\mathrel{\Big|}~}0 \leq k \leq n-1 }\right\}
+.\end{align*}
+Note that one root is \(r^{1/n}\in {\mathbb{R}}\), and the rest are
+separated by angles of \(2\pi/n\). Mnemonic:
+\begin{align*}
+z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}[Complex Log]
+
+For \(z= r e^{i\theta}\neq 0\), \(\theta\) is of the form
+\(\Theta + 2k\pi\) where \(\Theta = \operatorname{Arg}z\)
+
+\end{fact}
+
+\begin{fact}
+
+Common trick:
+\begin{align*}
+f^{1/n} = e^{{1\over n} \log(f)}
+,\end{align*}
+taking (say) a principal branch of \(\log\) given by
+\({\mathbb{C}}\setminus(-\infty, 0] \times 0\).
+
+\end{fact}
+
+\hypertarget{complex-calculus}{%
+\subsection{Complex Calculus}\label{complex-calculus}}
+
+\begin{remark}
+
+When parameterizing integrals \$\int\_\gammaf(z)\,dz\$, parameterize
+\(\gamma\) by \(\theta\) and write \(z=re^{i\theta}\) so
+\(\,dz= ire^{i\theta}\,d\theta\).
+
+\end{remark}
+
+\begin{warnings}
+
+\(f(z) = \sin(z), \cos(z)\) are unbounded on \({\mathbb{C}}\)! An easy
+way to see this: they are nonconstant and entire, thus unbounded by
+Liouville.
+
+\end{warnings}
+
+\begin{example}[?]
+
+You can show \(f(z) = \sqrt{z}\) is not holomorphic by showing its
+integral over \(S^1\) is nonzero. This is a direct computation:
+\begin{align*}
+\int_{S^1} z^{1/2} \,dz
+&= \int_0^{2\pi} (e^{i\theta})^{1/2} ie^{i\theta} \,d\theta\\
+&= i \int_0^{2\pi} e^{i3\theta \over 2}\,d\theta\\
+&= i \qty{2\over 3i} e^{i3\theta \over 2}\Big|_{0}^{2\pi} \\
+&= {2\over 3}\qty{e^{3\pi i - 1}} \\
+&= -{4\over 3}
+.\end{align*}
+
+Note an issue: a different parameterization yields a different (still
+nonzero) number
+\begin{align*}
+\cdots 
+&= \int_{-\pi}^{\pi} (e^{i\theta})^{1/2} ie^{i\theta} \,d\theta\\
+&= {2\over 3}\qty{ e^{3\pi i \over 2} - e^{-3\pi i \over 2}} \\
+&= -{4i\over 3}
+.\end{align*}
+This is these are paths that don't lift to closed loops on the Riemann
+surface defined by \(z\mapsto z^2\).
+
+\end{example}
+
+\hypertarget{holomorphy-and-cauchy-riemann}{%
+\subsubsection{Holomorphy and
+Cauchy-Riemann}\label{holomorphy-and-cauchy-riemann}}
+
+\begin{definition}[Analytic]
+
+A function \(f:\Omega \to {\mathbb{C}}\) is \emph{analytic} at
+\(z_0\in \Omega\) iff there exists a power series
+\(g(z) = \sum a_n (z-z_0)^n\) with radius of convergence \(R>0\) and a
+neighborhood \(U\ni z_0\) such that \(f(z) = g(z)\) on \(U\).
+
+\end{definition}
+
+\begin{definition}[Complex differentiable / holomorphic /entire]
+
+A function \(f: {\mathbb{C}}\to {\mathbb{C}}\) is \textbf{complex
+differentiable} or \textbf{holomorphic} at \(z_0\) iff the following
+limit exists:
+\begin{align*}
+\lim_{h\to 0} { f(z_0 + h) - f(h) \over h  } 
+.\end{align*}
+A function that is holomorphic on \({\mathbb{C}}\) is said to be
+\textbf{entire}.
+
+Equivalently, there exists an \(\alpha\in {\mathbb{C}}\) such that
+\begin{align*}
+f(z_0+h) - f(z_0) = \alpha h + R(h) && R(h) \overset{h\to 0}\longrightarrow 0 
+.\end{align*}
+In this case, \(\alpha = f'(z_0)\).
+
+\end{definition}
+
+\begin{example}[Holomorphic vs non-holomorphic]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(f(z) = {1\over z}\) is holomorphic on
+  \({\mathbb{C}}\setminus\left\{{0}\right\}\).
+\item
+  \(f(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu\)
+  is \emph{not} holomorphic, since
+  \(\mkern 1.5mu\overline{\mkern-1.5muh\mkern-1.5mu}\mkern 1.5mu \over h\)
+  does not converge (but is real differentiable).
+\end{itemize}
+
+\end{example}
+
+\begin{definition}[Real (multivariate) differentiable]
+
+A function \(F: {\mathbb{R}}^n\to {\mathbb{R}}^m\) is
+\textbf{real-differentiable} at \(\mathbf{p}\) iff there exists a linear
+transformation \(A\) such that
+\begin{align*}
+{ {\left\lVert { F(\mathbf{p} + \mathbf{h}) - F(\mathbf{p}) - A(\mathbf{h}) } \right\rVert} \over {\left\lVert { \mathbf{h} } \right\rVert} } \overset{{\left\lVert {\mathbf{h}} \right\rVert}\to 0}\longrightarrow 0
+.\end{align*}
+Rewriting,
+\begin{align*}
+{\left\lVert { F(\mathbf{p} + \mathbf{h}) - F(\mathbf{p})  - A(\mathbf{h}) } \right\rVert} = {\left\lVert { \mathbf{h} } \right\rVert} {\left\lVert { R(\mathbf{h}) } \right\rVert}
+&& {\left\lVert {R(\mathbf{h}) } \right\rVert}\overset{{\left\lVert {\mathbf{h} } \right\rVert} \to 0}\longrightarrow 0
+.\end{align*}
+
+Equivalently,
+\begin{align*}
+F(\mathbf{p} + \mathbf{h}) - F(\mathbf{p}) = A(\mathbf{h}) + {\left\lVert {\mathbf{h}} \right\rVert} R(\mathbf{h}) && {\left\lVert {R(\mathbf{h}) } \right\rVert}\overset{{\left\lVert {\mathbf{h} } \right\rVert} \to 0}\longrightarrow 0
+.\end{align*}
+
+Or in a slightly more useful form,
+\begin{align*}
+F(\mathbf{p} + \mathbf{h}) = F(\mathbf{p}) + A(\mathbf{h}) + R(\mathbf{h}) && R\in o( {\left\lVert {\mathbf{h}} \right\rVert}), \text{ i.e. }
+{ {\left\lVert { R(\mathbf{h}) } \right\rVert} \over  {\left\lVert {\mathbf{h}} \right\rVert}} \overset{\mathbf{h}\to 0}\longrightarrow 0
+.\end{align*}
+
+\end{definition}
+
+\begin{proposition}[Complex differentiable implies Cauchy-Riemann]
+
+If \(f\) is differentiable at \(z_0\), then the limit defining
+\(f'(z_0)\) must exist when approaching from any direction. Identify
+\(f(z) = f(x, y)\) and write \(z_0 = x+ iy\), then first consider
+\(h\in RR\), so \(h = h_1 + ih_2\) with \(h_2 = 0\). Then
+\begin{align*}
+f'(z_0) = 
+\lim_{h_1\to 0} { f(x+h_1, y) - f(x, y) \over h_1}
+\coloneqq{\frac{\partial f}{\partial x}\,}(x, y)
+.\end{align*}
+Taking \(h \in i{\mathbb{R}}\) purely imaginary, so \(h= ih_2\),
+\begin{align*}
+f'(z_0)
+= \lim_{ih_2\to 0} { f(x, y+h_2) - f(x, y) \over ih_2 } \coloneqq{1\over i} {\frac{\partial f}{\partial y}\,}(x, y)
+.\end{align*}
+Equating,
+\begin{align*}
+{\frac{\partial f}{\partial x}\,} = {1\over i} {\frac{\partial f}{\partial y}\,}
+,\end{align*}
+and writing \(f = u + iv\) and \(1/i = -i\) yields
+\begin{align*}
+{\frac{\partial f}{\partial x}\,} &= {\frac{\partial u}{\partial x}\,} + i {\frac{\partial v}{\partial x}\,} \\
+{1\over i} {\frac{\partial f}{\partial y}\,} &= {1\over i} \qty{ {\frac{\partial u}{\partial y}\,} + i {\frac{\partial v}{\partial y}\,}} = {\frac{\partial v}{\partial y}\,} - i{\frac{\partial u}{\partial y}\,} 
+.\end{align*}
+Thus
+\begin{align*}
+{\frac{\partial u}{\partial x}\,} = {\frac{\partial v}{\partial y}\,} \hspace{8em} {\frac{\partial u}{\partial y}\,} = -{\frac{\partial v}{\partial x}\,}
+.\end{align*}
+
+\end{proposition}
+
+\begin{proposition}[Polar Cauchy-Riemann equations]
+
+\begin{align*}  
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{1}{r} \frac{\partial u}{\partial \theta}=-\frac{\partial v}{\partial r}
+.\end{align*}
+
+\end{proposition}
+
+\begin{proof}
+
+Setting
+\begin{align*}
+z = re^{i\theta} = r(\cos(\theta) + i\sin(\theta) ) = x+iy
+\end{align*}
+yields \(x=r\cos(\theta), y=r\sin(\theta)\), one can identify
+\begin{align*}
+x_r = \cos(\theta)&, x_\theta = -r\sin(\theta) \\
+y_r = \sin(\theta)&, y_\theta = r\cos(\theta)
+.\end{align*}
+
+Now apply the chain rule:
+\begin{align*}
+u_r 
+&= u_x x_r + u_y y_r \\
+&= v_y x_r -v_x y_r && \text{CR}\\
+&= v_y \cos(\theta) - v_x \sin(\theta) \\
+&= {1\over r}\qty{ v_y r\cos(\theta) - v_x r\sin(\theta) } \\
+&= {1\over r}\qty { v_y y_\theta + v_x x_\theta} \\
+&= {1\over r} v_\theta
+.\end{align*}
+Similarly,
+\begin{align*}
+v_r
+&= v_x x_r + v_y y_r \\
+&= v_x \cos(\theta) + v_y\sin(\theta) \\
+&= -u_y\cos(\theta) + u_x\sin(\theta) && \text{CR} \\
+&= {1\over r}\qty{ -u_y r\cos(\theta) + u_x r\sin(\theta)} \\
+&= {1\over r}\qty{ -u_y y_\theta - u_x x_0 } \\
+&= -{1\over r} u_\theta
+.\end{align*}
+
+Thus
+\begin{align*}
+\frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \quad \text { and } \quad \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta} \\
+.\end{align*}
+
+\end{proof}
+
+\begin{proposition}[Holomorphic functions have harmonic components]
+
+If \(f(z) = u(x, y) + iv(x, y)\) is holomorphic, then \(u, v\) are
+harmonic.
+
+\end{proposition}
+
+\begin{proposition}[Holomorphic functions are continuous.]
+
+\(f\) is holomorphic at \(z_0\) iff there exists an
+\(a\in {\mathbb{C}}\) such that
+\begin{align*}  
+f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
+.\end{align*}
+In this case, \(a = f'(z_0)\).
+
+\end{proposition}
+
+\begin{proposition}[Cauchy-Riemann implies holomorphic]
+
+Recall that in general,
+\(f' = {\partial}f + \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf\).
+If \(f = u+iv\) with \(u, v\in C^1({\mathbb{R}})\) satisfying the
+Cauchy-Riemann equations on \(\Omega\), then \(f\) is holomorphic on
+\(\Omega\) and
+\begin{align*}
+f'(z) = {\partial}f = {1 \over 2} \qty{{\frac{\partial }{\partial x}\,} + {1\over i} {\frac{\partial }{\partial y}\,}}f = {1\over 2}\qty{u_x + iv_x}
+.\end{align*}
+
+\end{proposition}
+
+\begin{theorem}[Analytic functions have harmonic components]
+
+If \(f=u+iv\) is analytic, then \(u, v\) are harmonic.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+\envlist
+
+\begin{itemize}
+\item
+  By CR,
+  \begin{align*}
+  u_x = v_y && u_y = -v_x
+  .\end{align*}
+\item
+  Differentiate with respect to \(x\):
+  \begin{align*}
+  u_{xx} = v_{yx} && u_{yx} = -v_{xx}
+  .\end{align*}
+\item
+  Differentiate with respect to \(y\):
+  \begin{align*}
+  u_{xy} = v_{yy} && u_{yy} = -v_{xy}
+  .\end{align*}
+\item
+  Clairaut's theorem: partials are equal, so
+  \begin{align*}
+  u_{xx} - v_{yx} = 0 \implies u_{xx} + u_{yy} = 0 \\ \\
+  v_{xx} + u_{yx} = 0 \implies v_{xx} + v_{yy} = 0 \\ \\
+  .\end{align*}
+\end{itemize}
+
+\end{proof}
+
+\hypertarget{delbar-harmonic-functions-laplacian}{%
+\subsubsection{Delbar, Harmonic Functions,
+Laplacian}\label{delbar-harmonic-functions-laplacian}}
+
+\begin{definition}[del and delbar operators]
+
+\begin{align*}
+{\partial}\coloneqq{\partial}_z \coloneqq{1\over 2}\qty{{\partial}_x - i {\partial}_y}
+\quad
+\text{ and }
+\quad
+\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu
+\coloneqq{\partial}_{\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu}
+={1\over 2}\qty{ {\partial}_x + i{\partial}_y}
+.\end{align*}
+
+\end{definition}
+
+\begin{proposition}[Holomorphic iff delbar vanishes]
+
+\(f\) is holomorphic at \(z_0\) iff
+\(\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf(z_0) = 0\):
+\begin{align*}
+2\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf 
+&\coloneqq({\partial}_x + i {\partial}_y) (u+iv) \\
+&= u_x + iv_x + iu_y - v_y \\
+&= (u_x - v_y) + i(u_y + v_x) \\
+&= 0 && \text{by Cauchy-Riemann}
+.\end{align*}
+
+\end{proposition}
+
+\begin{definition}[Laplacian and Harmonic Functions]
+
+A real function of two variables \(u(x, y)\) is \textbf{harmonic} iff it
+is in the kernel of the Laplacian operator:
+\begin{align*}  
+\Delta u \coloneqq\qty{{\frac{\partial ^2}{\partial x^2}\,} + {\frac{\partial ^2}{\partial y^2}\,}}u = 0
+.\end{align*}
+
+\end{definition}
+
+\hypertarget{exercises-1}{%
+\subsubsection{Exercises}\label{exercises-1}}
+
+\begin{proposition}[Injectivity Relates to Derivatives]
+
+If \(z_0\) is a zero of \(f'\) of order \(n\), then \(f\) is
+\((n+1)\)-to-one in a neighborhood of \(z_0\).
+
+\end{proposition}
+
+\begin{proof}
+
+?
+
+\end{proof}
+
+\todo[inline]{proof}
+
+\begin{exercise}[Zero derivative implies constant]
+
+Show that if \(f' = 0\) on a domain \(\Omega\), then \(f\) is constant
+on \(\Omega\)
+
+\end{exercise}
+
+\begin{solution}
+
+Write \(f = u + iv\), then \(0 = 2 f' = u_x + iv_x = u_y - iu_y\), so
+\(\operatorname{grad}u = \operatorname{grad}v = 0\). Show \(f\) is
+constant along every straight line segment \(L\) by computing the
+directional derivative \(\operatorname{grad}u \cdot \mathbf{v} = 0\)
+along \(L\) connecting \(p, q\). Then \(u(p) = u(q) = a\) some constant,
+and \(v(p) = v(q) = b\), so \(f(z) = a+bi\) everywhere.
+
+\end{solution}
+
+\begin{exercise}[f and fbar holomorphic implies constant]
+
+Show that if \(f\) and
+\(\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\) are
+both holomorphic on a domain \(\Omega\), then \(f\) is constant on
+\(\Omega\).
+
+\end{exercise}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Strategy: show \(f'=0\).
+\item
+  Write \(f = u + iv\). Since \(f\) is analytic, it satisfies CR, so
+  \begin{align*}
+  u_x = v_y && u_y = -v_x
+  .\end{align*}
+\item
+  Similarly write
+  \(\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu = U + iV\)
+  where \(U = u\) and \(V = -v\). Since
+  \(\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\) is
+  analytic, it also satisfies CR , so
+  \begin{align*}
+  U_x = V_y && U_y = -V_x \\ \\
+  \implies u_x = -v_y && u_y = v_x
+  .\end{align*}
+\item
+  Add the LHS of these two equations to get
+  \(2u_x = 0 \implies u_x = 0\). Subtract the right-hand side to get
+  \(-2v_x = 0 \implies v_x = 0\)
+\item
+  Since \(f\) is analytic, it is holomorphic, so \(f'\) exists and
+  satisfies \(f' = u_x + iv_x\). But by above, this is zero.
+\item
+  By the previous exercise, \(f'=0 \implies f\) is constant.
+\end{itemize}
+
+\end{solution}
+
+\begin{exercise}[S&S 1.13: Constant real/imaginary/magnitude implies constant]
+
+If \(f\) is holomorphic on \(\Omega\) and any of the following hold,
+then \(f\) is constant:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\Re(f)\) is constant.
+\item
+  \(\Im(f)\) is constant.
+\item
+  \({\left\lvert {f} \right\rvert}\) is constant.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}
+
+\textbf{Part 3}:
+
+\begin{itemize}
+\tightlist
+\item
+  Write \({\left\lvert {f} \right\rvert} = c \in {\mathbb{R}}\).
+\item
+  If \(c=0\), done, so suppose \(c>0\).
+\item
+  Use
+  \(f\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu = {\left\lvert {f} \right\rvert}^2 = c^2\)
+  to write
+  \(\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu=c^2/f\).
+\item
+  Since \({\left\lvert {f(z)} \right\rvert} = 0 \iff f(z) = 0\), we have
+  \(f\neq 0\) on \(\Omega\), so
+  \(\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\) is
+  analytic.
+\item
+  Similarly \(f\) is analytic, and
+  \(f,\mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\)
+  analytic implies \(f'=0\) implies \(f\) is constant.
+\end{itemize}
+
+\end{solution}
+
+\todo[inline]{Finish}
+
+\hypertarget{power-series}{%
+\subsection{Power Series}\label{power-series}}
+
+\begin{theorem}[Improved Taylor's Theorem]
+
+If \(f\) is holomorphic on a region \(\Omega\) with
+\(\overline{ D_R(z_0)} \subseteq \Omega\), and for every
+\(z\in D_r(z_0)\), \(f\) has a power series expansion of the following
+form:
+\begin{align*}
+f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
+= {1 \over 2\pi r^n}\int_0^{2\pi} f(z_0 + re^{i\theta})e^{-in\theta} \,d\theta
+.\end{align*}
+
+\end{theorem}
+
+\begin{proposition}[Power Series are Smooth]
+
+Any power series is smooth (and thus holomorphic) on its disc of
+convergence, and its derivatives can be obtained using term-by-term
+differentiation:
+\begin{align*}
+{\frac{\partial }{\partial z}\,} f(z) = {\frac{\partial }{\partial z}\,} \sum_{k\geq 0} c_k (z-z_0)^k = \sum_{k\geq 1} kc_k (z-z_0)^k
+.\end{align*}
+Moreover, the coefficients are given by
+\begin{align*}
+c_k = {f^{(n)}(z_0) \over n! }
+.\end{align*}
+
+\end{proposition}
+
 \begin{proposition}[Exponential is uniformly convergent in discs]
 
 \(f(z) = e^z\) is uniformly convergent in any disc in \({\mathbb{C}}\).
@@ -828,125 +916,350 @@ Now by the \(M{\hbox{-}}\)test,
 
 \end{proof}
 
-\begin{proposition}[Checking radius of convergence]
+\begin{lemma}[Dirichlet's Test]
 
-For a power series \(f(z) = \sum a_n z^n\), define \(R\) by
-\begin{align*}  
-{1\over R}\coloneqq\limsup {\left\lvert {a_n} \right\rvert}^{1\over n}
+Given two sequences of real numbers
+\(\left\{{ a_k }\right\} , \left\{{ b_k }\right\}\) which satisfy
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The sequence of partial sums \(\left\{{ A_n }\right\}\) is bounded,
+\item
+  \(b_k \searrow 0\).
+\end{enumerate}
+
+then
+\begin{align*}
+\sum_{k\geq 1} a_k b_k < \infty
 .\end{align*}
 
-Then \(f\) converges absolutely on
-\({\left\lvert {z} \right\rvert} < R\) and diverges on
-\({\left\lvert {z} \right\rvert} > R\).
+\end{lemma}
 
-\end{proposition}
-
-\hypertarget{others-1}{%
-\subsection{Others}\label{others-1}}
-
-\begin{theorem}[Casorati-Weierstrass]\label{Casorati}
-
-If \(f\) is holomorphic on \(\Omega\setminus\left\{{z_0}\right\}\) where
-\(z_0\) is an essential singularity, then for every
-\(V\subset \Omega\setminus\left\{{z_0}\right\}\), \(f(V)\) is dense in
-\({\mathbb{C}}\).
+\begin{proof}[?]
 
 \begin{quote}
-The image of a disc punctured at an essential singularity is dense in
-\({\mathbb{C}}\).
+See \url{http://www.math.uwaterloo.ca/~krdavids/Comp/Abel.pdf}
 \end{quote}
 
-\end{theorem}
-
-\begin{theorem}[Little Picard]
-
-If \(f:{\mathbb{C}}\to {\mathbb{C}}\) is entire and nonconstant, then
-\(\operatorname{im}(f)\) is either \({\mathbb{C}}\) or
-\({\mathbb{C}}\setminus\left\{{z_0}\right\}\) for some point \(z_0\).
-
-\end{theorem}
-
-\todo{???}
-
-\begin{theorem}[Continuation Principle / Identity Theorem]
-
-If \(f\) is holomorphic on a bounded connected domain \(\Omega\) and
-there exists a sequence \(\left\{{z_i}\right\}\) with a limit point in
-\(\Omega\) such that \(f(z_i) = 0\), then \(f\equiv 0\) on \(\Omega\).
-
-\begin{quote}
-Two functions agreeing on a set with a limit point are equal on a
-domain.
-\end{quote}
-
-\end{theorem}
-
-\begin{corollary}
-
-The ring of holomorphic functions on a domain in \({\mathbb{C}}\) has no
-zero divisors.
-
-\end{corollary}
-
-\begin{proof}
-
-???
+Use summation by parts. For a fixed \(\sum a_k b_k\), write
+\begin{align*}
+\sum_{n=1}^m x_n Y_n + \sum_{n=1}^m X_n y_{n+1} = X_m Y_{m+1}
+.\end{align*}
+Set \(x_n \coloneqq a_n, y_N \coloneqq b_n - b_{n-1}\), so \(X_n = A_n\)
+and \(Y_n = b_n\) as a telescoping sum. Importantly, all \(y_n\) are
+negative, so
+\({\left\lvert {y_n} \right\rvert} = {\left\lvert {b_n - b_{n-1}} \right\rvert} = b_{n-1} - b_n\),
+and moreover \(a_n b_n = x_n Y_n\) for all \(n\). We have
+\begin{align*}
+\sum_{n\geq 1} a_n b_n 
+&= \lim_{N\to\infty} \sum_{n\leq N} x_n Y_n \\
+&= \lim_{N\to\infty} \sum_{n\leq N} X_N Y_N - \sum_{n\leq N} X_n y_{n+1} \\
+&= - \sum_{n\geq 1} X_n y_{n+1},
+\end{align*}
+where in the last step we've used that
+\begin{align*}
+{\left\lvert {X_N} \right\rvert} = {\left\lvert {A_N} \right\rvert}\leq M \implies {\left\lvert {X_N Y_{N} } \right\rvert} = {\left\lvert {X_N} \right\rvert} {\left\lvert {b_{n+1}} \right\rvert} \leq M b_{n+1} \to 0
+.\end{align*}
+So it suffices to bound the latter sum:
+\begin{align*}
+\sum_{k\geq n}{\left\lvert { X_k y_{k+1} } \right\rvert} 
+&\leq M \sum_{k\geq 1} {\left\lvert {y_{k+1}} \right\rvert}\\
+&\leq M \sum_{k\geq 1} b_{k} - b_{k+1} \\
+&\leq 2M(b_1 - b_{n+1})\\
+&\leq 2M b_1
+.\end{align*}
 
 \end{proof}
 
-\todo[inline]{Find the proof!}
+\begin{theorem}[Abel's Theorem]
 
-\begin{proposition}[Injectivity Relates to Derivatives]
+If \(\sum_{k=1}^\infty c_k\) converges, then
+\begin{align*}
+\lim_{z\to 1^-} \sum_{k\in {\mathbb{N}}} c_k z^k = \sum_{k\in {\mathbb{N}}} c_k
+.\end{align*}
 
-If \(z_0\) is a zero of \(f'\) of order \(n\), then \(f\) is
-\((n+1)\)-to-one in a neighborhood of \(z_0\).
+\end{theorem}
 
-\end{proposition}
+\begin{lemma}[Abel's Test]
 
-\begin{proof}
+If \(f(z) \coloneqq\sum c_k z^k\) is a power series with
+\(c_k \in {\mathbb{R}}^{\geq 0}\) and \(a_n\searrow 0\), then \(f\)
+converges on \(S^1\) except possibly at \(z=1\).
 
-?
+\end{lemma}
 
-\end{proof}
+\begin{example}[application of Abel's theorem]
 
-\begin{proposition}[Bounded Complex Analytic Functions form a Banach Space]
+Integrate a geometric series to obtain
+\begin{align*}
+\sum {(-1)^k z^k \over n} = \log(z+1) && {\left\lvert {z} \right\rvert} < 1
+.\end{align*}
+Since \(c_k \coloneqq(-1)^k/k \searrow 0\), this converges at \(z=1\),
+and by Abel's theorem \(f(1) = \log(2)\).
 
-For \(\Omega\subseteq{\mathbb{C}}\), show that
-\(A({\mathbb{C}})\coloneqq\left\{{f: \Omega \to {\mathbb{C}}{~\mathrel{\Big|}~}f\text{ is bounded}}\right\}\)
-is a Banach space.
-
-\end{proposition}
-
-\begin{proof}
-
-?
-
-\begin{quote}
-Apply Morera's Theorem and Cauchy's Theorem
-\end{quote}
-
-\end{proof}
-
-\hypertarget{residues}{%
-\section{Residues}\label{residues}}
+\end{example}
 
 \begin{remark}
 
-Check: do you need residues? You may be able to just compute an integral
-
-\begin{itemize}
-\item
-  Directly by parameterization:
-  \begin{align*}
-  \int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
-  ,\end{align*}
-\item
-  Finding a primitive \(F\),
-\item
-  Writing \(z= z_0 + re^{i \theta }\)
-\end{itemize}
+The converse to Abel's theorem is false: take
+\(f(z) = \sum (-z)^n = 1/(1+z)\). Then \(f(1) = 1-1+1-\cdots\) diverges
+at 1, but \(1/1+1 = 1/2\). So the limit
+\(s\coloneqq\lim_{x\to 1^-} f(x) 1/2\), but \(\sum a_n\) doesn't
+converge to \(s\).
 
 \end{remark}
+
+\begin{proposition}[Summation by Parts]
+
+Setting \(A_n \coloneqq\sum_{k=1}^n b_k\) and \(B_0 \coloneqq 0\),
+\begin{align*}
+\sum_{k=m}^n a_k b_k 
+&= A_nb_n - A_{m-1} b_m - \sum_{k=m}^{n-1} A_k(b_{k+1} - b_{k})
+.\end{align*}
+Compare this to integrating by parts:
+\begin{align*}
+\int_a^b f g = F(b)g(b) - F(a)g(a) - \int_a^b Fg'
+.\end{align*}
+
+Note there is a useful form for taking the product of sums:
+\begin{align*}
+A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
+.\end{align*}
+
+\end{proposition}
+
+\hypertarget{exercises-series}{%
+\subsubsection{Exercises: Series}\label{exercises-series}}
+
+\begin{exercise}[Application of summation by parts]
+
+Use summation by parts to show that \(\sin(n)/n\) converges.
+
+\end{exercise}
+
+\begin{solution}
+
+An inelegant proof: define \(A_n \coloneqq\sum_{k\leq n} a_k\), use that
+\(a_k = A_k - A_{k-1}\), reindex, and peel a top/bottom term off of each
+sum to pattern-match.\\
+
+Behold:
+\begin{align*}
+\sum_{m\leq k \leq n} a_k b_k 
+&= \sum_{m\leq k \leq n} (A_k - A_{k-1}) b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m\leq k \leq n} A_{k-1} b_k \\
+&= \sum_{m\leq k \leq n} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m-1\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_kb_k - \sum_{m\leq k \leq n-1} A_{k} b_{k+1} \\
+&= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) \\
+&= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
+.\end{align*}
+
+\end{solution}
+
+\begin{exercise}[1.20: Series convergence on the circle]
+
+Show that
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\sum kz^k\) diverges on \(S^1\).
+\item
+  \(\sum k^{-2} z^k\) converges on \(S^1\).
+\item
+  \(\sum k^{-1}z^k\) converges on \(S^1\setminus\left\{{1}\right\}\) and
+  diverges at \(1\).
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Use that \({\left\lvert {z^k} \right\rvert} = 1\) and
+  \(\sum c_kz^k < \infty \implies {\left\lvert {c_k} \right\rvert} \to 0\),
+  but
+  \({\left\lvert {kz^k} \right\rvert} = {\left\lvert {k} \right\rvert} \to \infty\)
+  here.
+\item
+  Use that absolutely convergent implies convergent, and
+  \(\sum {\left\lvert {k^{-2} z^k} \right\rvert} = \sum {\left\lvert {k^{-2}} \right\rvert}\)
+  converges by the \(p{\hbox{-}}\)test.
+\item
+  If \(z=1\), this is the harmonic series. Otherwise take
+  \(a_k = 1/k, b_k = e^{i k \theta}\) where \(\theta \in (0, 2\pi)\) is
+  some constant, and apply Dirichlet's test. It suffices to bound the
+  partial sums of the \(b_k\). Recalling that
+  \(\sum_{k\leq N} r^k = (1-r^{N+1}) / (1-r)\),
+  \begin{align*}
+    {\left\lVert { \sum_{k\leq m} e^{ik\theta } } \right\rVert} = {\left\lVert {1 - e^{i(m+1)\theta} \over 1 - e^{i\theta}} \right\rVert} \leq {2 \over {\left\lVert { 1- e^{i\theta}} \right\rVert}} \coloneqq M
+    ,\end{align*}
+  which is a constant. Here we've used that two points on \(S^1\) are at
+  most distance 2 from each other.
+\end{enumerate}
+
+\end{solution}
+
+\begin{exercise}[Laurent expansions inside and outside of a disc]
+
+Expand \(f(z) = {1\over z(z-1)}\) in both
+
+\begin{itemize}
+\tightlist
+\item
+  \({\left\lvert {z} \right\rvert} < 1\)
+\item
+  \({\left\lvert {z} \right\rvert} > 1\)
+\end{itemize}
+
+\end{exercise}
+
+\begin{solution}
+
+\begin{align*}
+{1\over z(z-1)} = -{1\over z}{1 \over 1-z} = -{1\over z}\sum z^k
+.\end{align*}
+and
+\begin{align*}
+{1\over z(z-1)} = {1\over z^2(1 - {1\over z})} = {1\over z^2} \sum \qty{1\over z}^k
+.\end{align*}
+
+\end{solution}
+
+\begin{exercise}[Laurent expansions about different points]
+
+Find the Laurent expansion about \(z=0\) and \(z=1\) respectively of the
+following function:
+\begin{align*}
+f(z) \coloneqq{z+1 \over z(z-1)}
+.\end{align*}
+
+\end{exercise}
+
+\begin{solution}
+
+Note: once you see that everything is in terms of powers of \((z-z_0)\),
+you're essentially done. For \(z=0\):
+\begin{align*}
+{z+1 \over z(z-1)}
+&= {1\over z} {z+1 \over z-1} \\
+&= -{z+1\over z} {1\over 1-z} \\
+&= -\qty{1 + {1\over z}}\sum_{k\geq 0} z^k
+.\end{align*}
+
+For \(z=1\):
+\begin{align*}
+{z+1 \over z(z-1)}
+&= {1\over z-1}\qty{1 + {1\over z} } \\
+&= {1\over z-1}\qty{1 + {1\over 1 - (1-z)} } \\
+&= {1\over z-1} \qty{1 + \sum_{k\geq 0} (1-z)^k } \\
+&= {1\over z-1} \qty{1 + \sum_{k\geq 0} (-1)^k (z-1)^k }
+.\end{align*}
+
+\end{solution}
+
+\hypertarget{cauchys-theorem}{%
+\section{Cauchy's Theorem}\label{cauchys-theorem}}
+
+\hypertarget{complex-integrals}{%
+\subsection{Complex Integrals}\label{complex-integrals}}
+
+\begin{definition}[Complex Integral]
+
+\begin{align*}
+\int_{\gamma} f d z:=\int_{I} f(\gamma(t)) \gamma^{\prime}(t) \,dt
+= \int_\gamma (u+iv)\,dx\wedge (-v+iu)\,dy
+.\end{align*}
+
+\end{definition}
+
+\begin{proposition}[Crude integral estimate]
+
+Define the \emph{length} of a curve by
+\begin{align*}
+\operatorname{len}(\gamma) \coloneqq\int_\gamma {\left\lvert {\,dz} \right\rvert} = \int_I {\left\lvert {\gamma'(t)} \right\rvert} \,dt
+.\end{align*}
+
+Then there is an estimate of the following form:
+\begin{align*}
+\left|\int_{\gamma} f d z\right| \leq \int_{\gamma}|f||d z| \leq\left(\sup _{\gamma}|f|\right) \cdot \operatorname{len}(\gamma)
+.\end{align*}
+
+\end{proposition}
+
+\begin{exercise}[Primitives imply vanishing integral]
+
+Show that if \(f\) has a primitive \(F\) on \(\Omega\) then
+\(\int_\gamma f = 0\) for every closed curve
+\(\gamma \subseteq \Omega\).
+
+\end{exercise}
+
+\begin{theorem}[Goursat]
+
+If \(f\) is analytic on a rectangle \(R\) with horizontal and vertical
+sides, then \(\int_{{{\partial}}R} f = 0\).
+
+\end{theorem}
+
+\begin{theorem}[Cauchy's Theorem]\label{CauchyTheorem}
+
+If \(f\) is holomorphic on a simply-connected region \(\Omega\), then
+for any closed path \(\gamma \subseteq \Omega\),
+\begin{align*}  
+\int_{\gamma} f(z) \,dz= 0
+.\end{align*}
+
+\end{theorem}
+
+\begin{slogan}
+
+Closed path integrals of holomorphic functions vanish.
+
+\end{slogan}
+
+\hypertarget{applications-of-cauchys-theorem}{%
+\subsection{Applications of Cauchy's
+Theorem}\label{applications-of-cauchys-theorem}}
+
+\hypertarget{integral-formulas-and-estimates}{%
+\subsubsection{Integral Formulas and
+Estimates}\label{integral-formulas-and-estimates}}
+
+\begin{theorem}[Cauchy Integral Formula]\label{CauchyIntegral}
+
+Suppose \(f\) is holomorphic on \(\Omega\), then for any
+\(z_0 \in \Omega\) and any open disc \(\overline{D_R(z_0)}\) such that
+\(\gamma \coloneqq{{\partial}}\overline{D_R(z_0)} \subseteq \Omega\),
+\begin{align*}
+f(z_0) = {1 \over 2\pi i} \int_{\gamma} {f(\xi) \over \xi-z_0}\ \,d\xi
+\end{align*}
+and
+\begin{align*}
+{\frac{\partial ^nf }{\partial z^n}\,}(z_0) = {n! \over 2\pi i} \int_{\gamma} {f(\xi) \over (\xi - z_0)^{n+1}} \,d\xi
+.\end{align*}
+
+\end{theorem}
+
+\begin{theorem}[Cauchy's Inequality]\label{CauchyInequality}
+
+For \(z_0 \in D_R(z_0) \subset \Omega\), we have
+\begin{align*}
+{\left\lvert { f^{(n)} (z_0) } \right\rvert} 
+\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
+= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
+,\end{align*}
+where
+\({\left\lVert {f} \right\rVert}_{\infty}\coloneqq\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert}\).
+
+\end{theorem}
 
 \begin{proof}[of Cauchy's inequality]
 
@@ -963,88 +1276,170 @@ Check: do you need residues? You may be able to just compute an integral
 
 \end{proof}
 
-\begin{proposition}[Residues for simple poles (order 1)]
+\begin{slogan}
 
-If \(z_0\) is a simple pole of \(f\), then
-\begin{align*}  
-\mathop{\mathrm{Res}}_{z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
-.\end{align*}
+The \(n\)th Taylor coefficient of an analytic function is at most
+\(\sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n\).
 
-\end{proposition}
+\end{slogan}
 
-\begin{example}[Residue of a simple pole (order 1)]
+\begin{theorem}[Mean Value Theorem for Holomorphic Functions]
 
-Let \(f(z) = \frac{1}{1+z^2}\), then
-\(\mathop{\mathrm{Res}}(i, f) = \frac{1}{2i}\).
-
-\end{example}
-
-\begin{proposition}[For higher order poles]
-
-If \(f\) has a pole \(z_0\) of order \(n\), then
-\begin{align*}  
-\mathop{\mathrm{Res}}_{z=z_0} f = \lim_{z\to z_0} {1 \over (n-1)!} \qty{{\frac{\partial }{\partial z}\,}}^{n-1} (z-z_0)^n f(z)
-.\end{align*}
-
-\end{proposition}
-
-\hypertarget{conformal-maps}{%
-\section{Conformal Maps}\label{conformal-maps}}
-
-\begin{fact}
-
-A bijective holomorphic map automatically has a holomorphic inverse.
-This can be weakened: an injective holomorphic map satisfies
-\(f'(z) \neq 0\) and \(f ^{-1}\) is well-defined on its range and
-holomorphic.
-
-\end{fact}
-
-\hypertarget{plane-to-disc}{%
-\subsection{Plane to Disc}\label{plane-to-disc}}
-
+If \(f\) is holomorphic on \(D_r(z_0)\)
 \begin{align*}
-\phi: {\mathbb{H}}&\to {\mathbb{D}}\\
-\phi(z) &= {z - i \over z + i} \qquad f^{-1}(z) = i\qty{1 + w \over 1 - w}
+f(z_0) 
+= {1\over 2\pi} \int_0^{2\pi} f(z_0 + re^{i\theta}) \,d\theta
+= {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 .\end{align*}
 
-\hypertarget{sector-to-disc}{%
-\subsection{Sector to Disc}\label{sector-to-disc}}
+\end{theorem}
 
-For
-\(S_\alpha \coloneqq\left\{{z\in{\mathbb{C}}{~\mathrel{\Big|}~}0 < \arg(z) < \alpha }\right\}\)
-an open sector for \(\alpha\) some angle, first map the sector to the
-half-plane:
+\hypertarget{liouville}{%
+\subsubsection{Liouville}\label{liouville}}
+
+\begin{theorem}[Liouville's Theorem]\label{Liouville}
+
+If \(f\) is entire and bounded, \(f\) is constant.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Use Cauchy's inequality to show \(f'\equiv 0\).
+
+\end{proof}
+
+\begin{exercise}[?]
+
+\begin{figure}
+\centering
+\includegraphics{figures/image_2021-05-17-11-54-14.png}
+\caption{image\_2021-05-17-11-54-14}
+\end{figure}
+
+\end{exercise}
+
+\hypertarget{continuation-principle}{%
+\subsubsection{Continuation Principle}\label{continuation-principle}}
+
+\begin{theorem}[Continuation Principle / Identity Theorem]
+
+If \(f\) is holomorphic on a bounded connected domain \(\Omega\) and
+there exists a sequence \(\left\{{z_i}\right\}\) with a limit point in
+\(\Omega\) such that \(f(z_i) = 0\), then \(f\equiv 0\) on \(\Omega\).
+
+\end{theorem}
+
+\begin{slogan}
+
+Two functions agreeing on a set with a limit point are equal on a
+domain.
+
+\end{slogan}
+
+\begin{proof}[?]
+
+Apply Improved Taylor Theorem? \todo[inline]{todo}
+
+\end{proof}
+
+\begin{exercise}[?]
+
+\begin{figure}
+\centering
+\includegraphics{figures/image_2021-05-17-11-53-33.png}
+\caption{image\_2021-05-17-11-53-33}
+\end{figure}
+
+\end{exercise}
+
+\hypertarget{moreras-theorem}{%
+\subsection{Morera's Theorem}\label{moreras-theorem}}
+
+\begin{theorem}[Morera's Theorem]\label{Morera}
+
+If \(f\) is continuous on a domain \(\Omega\) and \(\int_T f = 0\) for
+every triangle \(T\subset \Omega\), then \(f\) is holomorphic.
+
+\end{theorem}
+
+\begin{slogan}
+
+If every integral along a triangle vanishes, implies holomorphic.
+
+\end{slogan}
+
+\begin{corollary}[Sufficient condition for a sequence to converge to a holomorphic function]
+
+If \(\left\{{ f_n }\right\}_{n\in {\mathbb{N}}}\) is a holomorphic
+sequence on a region \(\Omega\) which uniformly converges to \(f\) on
+every compact subset \(K \subseteq \Omega\), then \(f\) is holomorphic,
+and \(f_n' \to f'\) uniformly on every such compact subset \(K\).
+
+\end{corollary}
+
+\begin{proof}[?]
+
+Commute limit with integral and apply Morera's theorem.
+
+\end{proof}
+
+\begin{remark}
+
+This can be applied to series of the form \(\sum_k f_k(z)\).
+
+\end{remark}
+
+\hypertarget{symmetric-regions}{%
+\subsubsection{Symmetric Regions}\label{symmetric-regions}}
+
+In this section, take \(\Omega\) to be a region symmetric about the real
+axis, so
+\(z\in \Omega \iff \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \in \Omega\).
+Partition this set as
+\(\Omega^+ \subseteq {\mathbb{H}}, I \subseteq {\mathbb{R}}, \Omega^- \subseteq \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{H}}\mkern-1.5mu}\mkern 1.5mu\).
+
+\begin{theorem}[Symmetry Principle]
+
+Suppose that \(f^+\) is holomorphic on \(\Omega^+\) and \(f^-\) is
+holomorphic on \(\Omega^-\), and \(f\) extends continuously to \(I\)
+with \(f^+(x) = f^-(x)\) for \(x\in I\). Then the following
+piecewise-defined function is holomorphic on \(\Omega\):
 \begin{align*}
-g: S_\alpha &\to {\mathbb{H}}\\
-g(z) &= z^{\pi \over \alpha}
-.\end{align*}
+f(z) 
+\coloneqq
+\begin{cases}
+f^+(z) & z\in \Omega^+ 
+\\
+f^-(z) & z\in \Omega^-
+\\
+f^+(z) = f^-(z) & z\in I.
+\end{cases}
+\end{align*}
 
-Then compose with a map \({\mathbb{H}}\to{\mathbb{D}}\):
-\begin{align*}
-f: S_\alpha &\to {\mathbb{D}}\\
-f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\end{align*}
+\end{theorem}
 
-\includegraphics{figures/image_2020-07-22-13-22-46.png}
+\begin{proof}[?]
 
-\hypertarget{strip-to-disc}{%
-\subsection{Strip to Disc}\label{strip-to-disc}}
+Apply Morera?
 
-\begin{itemize}
-\tightlist
-\item
-  Map to horizontal strip by rotation \(z\mapsto \lambda z\).
-\item
-  Map horizontal strip to sector by \(z \mapsto e^z\)
-\item
-  Map sector to \({\mathbb{H}}\) by \(z\mapsto z^{\pi\over\alpha}\).
-\item
-  Map \({\mathbb{H}}\to{\mathbb{D}}\).
-\end{itemize}
+\end{proof}
 
-\hypertarget{schwarz-reflection}{%
-\section{Schwarz Reflection}\label{schwarz-reflection}}
+\begin{theorem}[Schwarz Reflection ]\label{SchwarzReflection}
+
+If \(f\) is continuous and holomorphic on \({\mathbb{H}}^+\) and
+real-valued on \({\mathbb{R}}\), then the extension defined by
+\(F^-(z) = \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu\)
+for \(z\in {\mathbb{H}}^-\) is a well-defined holomorphic function on
+\({\mathbb{C}}\).
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Apply the symmetry principle.
+
+\end{proof}
 
 \begin{remark}
 
@@ -1053,8 +1448,525 @@ symmetric about a line segment \(L\subseteq {\mathbb{R}}\).
 
 \end{remark}
 
-\hypertarget{zeros-and-poles}{%
-\section{Zeros and Poles}\label{zeros-and-poles}}
+\hypertarget{zeros-and-singularities}{%
+\section{Zeros and Singularities}\label{zeros-and-singularities}}
+
+\begin{definition}[Singularity]
+
+A point \(z_0\) is an \textbf{isolated singularity} if \(f(z_0)\) is
+undefined but \(f(z)\) is defined in a punctured neighborhood
+\(D(z_0)\setminus\left\{{z_0}\right\}\) of \(z_0\).
+
+There are three types of isolated singularities:
+
+\begin{itemize}
+\tightlist
+\item
+  Removable singularities
+\item
+  Poles
+\item
+  Essential singularities
+\end{itemize}
+
+\end{definition}
+
+\begin{example}[?]
+
+The singularities of a rational function are always isolated, since
+there are finitely many zeros of any polynomial. The function
+\(F(z) \coloneqq\operatorname{Log}(z)\) has a singularity at \(z=0\)
+that is \textbf{not} isolated, since every neighborhood intersects the
+branch cut \((-\infty, 0) \times\left\{{ 0 }\right\}\), where \(F\) is
+not even defined. The function \(G(z) \coloneqq 1/\sin(\pi/z)\) has a
+non-isolated singularity at 0 and isolated singularities at \(1/n\) for
+all \(n\).
+
+\end{example}
+
+\begin{definition}[Removable Singularities]
+
+If \(z_0\) is a singularity of \(f\). then \(z_0\) is a
+\textbf{removable singularity} iff there exists a holomorphic function
+\(g\) such that \(f(z) = g(z)\) in a punctured neighborhood of \(z_0\).
+Equivalently,
+\begin{align*}
+\lim_{z\to \z_0}(z-z_0) f(z) = 0
+.\end{align*}
+Equivalently, \(f\) is bounded on a neighborhood of \(z_0\).
+
+\end{definition}
+
+\begin{theorem}[Extension over removable singularities]
+
+If \(f\) is holomorphic on \(\Omega\setminus\left\{{z_0}\right\}\) where
+\(z_0\) is a removable singularity, then there is a unique holomorphic
+extension of \(f\) to all of \(\Omega\).
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Take \(\gamma\) to be a circle centered at \(z_0\) and use
+\begin{align*}
+f(z) \coloneqq\int_\gamma { f(\xi) \over \xi - z} \dxii
+.\end{align*}
+This is valid for \(z\neq z_0\), but the right-hand side is analytic.
+(?)
+
+\end{proof}
+
+\todo[inline]{Revisit}
+
+\begin{theorem}[Improved Taylor Remainder Theorem]
+
+If \(f\) is analytic on a region \(\Omega\) containing \(z_0\), then
+\(f\) can be written as
+\begin{align*}
+f(z)
+=\left(\sum_{k=0}^{n-1} \frac{f^{(k)}\left(z_{0}\right)}{k !}\left(z-z_{0}\right)^{k}\right)+ 
+R_{n}(z)\left(z-z_{0}\right)^{n}
+,\end{align*}
+where \(R_n\) is analytic.
+
+\end{theorem}
+
+\begin{definition}[Zeros]
+
+If \(f\) is analytic and not identically zero on \(\Omega\) with
+\(f(z_0) = 0\), then there exists a nonvanishing holomorphic function
+\(g\) such that
+\begin{align*}
+f(z) = (z-z_0)^n g(z)
+.\end{align*}
+We refer to \(z_0\) as a \textbf{zero of order \(n\)}.
+
+\end{definition}
+
+\begin{definition}[Poles (and associated terminology)]
+
+A \emph{pole} \(z_0\) of a function \(f(z)\) is a zero of
+\(g(z) \coloneqq{1\over f(z)}\). Equivalently,
+\(\lim_{z\to z_0} f(z) = \infty\). In this case there exists a minimal
+\(n\) and a holomorphic \(h\) such that
+\begin{align*}  
+f(z) = \qty{z-z_0}^{-n} h(z)
+.\end{align*}
+Such an \(n\) is the \emph{order} of the pole. A pole of order 1 is said
+to be a \emph{simple pole}.
+
+\end{definition}
+
+\begin{definition}[Principal Part and Residue]
+
+If \(f\) has a pole of order \(n\) at \(z_0\), then there exist a
+holomorphic \(G\) in a neighborhood of \(z_0\) such that
+\begin{align*}
+f(z) = {a_{-n} \over (z-z_0)^n } + \cdots + {a_{-1} \over z-z_0} + G(z) \coloneqq P(z) + G(z)
+.\end{align*}
+
+The term \(P(z)\) is referred to as the \emph{principal part of \(f\) at
+\(z_0\)} consists of terms with negative degree, and the \emph{residue}
+of \(f\) at \(z_0\) is the coefficient \(a_{-1}\).
+
+\end{definition}
+
+\begin{definition}[Essential Singularity]
+
+A singularity \(z_0\) is \emph{essential} iff it is neither removable
+nor a pole. Equivalently, a Laurent series expansion about \(z_0\) has a
+principal part with infinitely many terms.
+
+\end{definition}
+
+\begin{theorem}[Casorati-Weierstrass]\label{Casorati}
+
+If \(f\) is holomorphic on \(\Omega\setminus\left\{{z_0}\right\}\) where
+\(z_0\) is an essential singularity, then for every
+\(V\subset \Omega\setminus\left\{{z_0}\right\}\), \(f(V)\) is dense in
+\({\mathbb{C}}\).
+
+\end{theorem}
+
+\begin{slogan}
+
+The image of a punctured disc at an essential singularity is dense in
+\({\mathbb{C}}\).
+
+\end{slogan}
+
+\begin{proof}[of Casorati-Weierstrass]
+
+Pick \(w\in {\mathbb{C}}\) and suppose toward a contradiction that
+\(D_R(w) \cap f(V)\) is empty. Consider
+\begin{align*}
+g(z) \coloneqq{1\over f(z) - w}
+,\end{align*}
+and use that it's bounded to conclude that \(z_0\) is either removable
+or a pole for \(f\).
+
+\end{proof}
+
+\begin{definition}[Singularities at infinity]
+
+For any \(f\) holomorphic on an unbounded region, we say \(z=\infty\) is
+a singularity (of any of the above types) of \(f\) if
+\(g(z) \coloneqq f(1/z)\) has a corresponding singularity at \(z=0\).
+
+\end{definition}
+
+\begin{definition}[Meromorphic]
+
+A function \(f:\Omega\to{\mathbb{C}}\) is \emph{meromorphic} iff there
+exists a sequence \(\left\{{z_n}\right\}\) such that
+
+\begin{itemize}
+\tightlist
+\item
+  \(\left\{{z_n}\right\}\) has no limit points in \(\Omega\).
+\item
+  \(f\) is holomorphic in \(\Omega\setminus\left\{{z_n}\right\}\).
+\item
+  \(f\) has poles at the points \(\left\{{z_n}\right\}\).
+\end{itemize}
+
+Equivalently, \(f\) is holomorphic on \(\Omega\) with a discrete set of
+points delete which are all poles of \(f\).
+
+\end{definition}
+
+\begin{theorem}[Meromorphic implies rational]
+
+Meromorphic functions on \({\mathbb{C}}\) are rational functions.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Consider \(f(z) - P(z)\), subtracting off the principal part at each
+pole \(z_0\), to get a bounded entire function and apply Liouville.
+
+\end{proof}
+
+\begin{theorem}[Riemann Extension Theorem]
+
+A singularity of a holomorphic function is removable if and only if the
+function is bounded in some punctured neighborhood of the singular
+point.
+
+\end{theorem}
+
+\hypertarget{residues}{%
+\section{Residues}\label{residues}}
+
+\begin{fact}
+
+Some useful facts:
+\begin{align*}
+{\left\lvert {e^{z}} \right\rvert} = e^{\Re(z)}
+.\end{align*}
+
+On \(S^1\),
+\begin{align*}
+1/z = e^{-i\theta} \\
+\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+The major fact that reduces integrals to residues:
+\begin{align*}
+\int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= \int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
+=
+\begin{cases}
+2\pi i & k=-1 
+\\
+0 & \text{else}.
+\end{cases}
+.\end{align*}
+Thus
+\begin{align*}
+\int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}
+,\end{align*}
+i.e.~the integral picks out the \(c_{-1}\) coefficient in a Laurent
+series expansion.
+
+\end{fact}
+
+\begin{remark}
+
+Check: do you need residues at all?? You may be able to just compute an
+integral!
+
+\begin{itemize}
+\item
+  Directly by parameterization:
+  \begin{align*}
+  \int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
+  ,\end{align*}
+\item
+  Finding a primitive \(F\),
+\item
+  Writing \(z= z_0 + re^{i \theta }\)
+\end{itemize}
+
+\end{remark}
+
+\hypertarget{computing-residues}{%
+\subsection{Computing Residues}\label{computing-residues}}
+
+\begin{definition}[Toy contour]
+
+A closed Jordan curve that separates \({\mathbb{C}}\) into an exterior
+and interior region is referred to as a \textbf{toy contour}.
+
+\end{definition}
+
+\begin{definition}[Winding Number]
+
+For \(\gamma \subseteq \Omega\) a closed curve not passing through a
+point \(z_0\), the \textbf{winding number of \(\gamma\) about \(z_0\)}
+is defined as
+\begin{align*}
+n_\gamma(z_0) \coloneqq{1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\,d\xi
+.\end{align*}
+
+\end{definition}
+
+\begin{proposition}[Residue formula for higher order poles]
+
+If \(f\) has a pole \(z_0\) of order \(n\), then
+\begin{align*}  
+\mathop{\mathrm{Res}}_{z=z_0} f = \lim_{z\to z_0} {1 \over (n-1)!} \qty{{\frac{\partial }{\partial z}\,}}^{n-1} (z-z_0)^n f(z)
+.\end{align*}
+
+\end{proposition}
+
+\begin{proposition}[Residue formula for simple poles]
+
+As a special case, if \(z_0\) is a simple pole of \(f\), then
+\begin{align*}  
+\mathop{\mathrm{Res}}_{z=z_0}f = \lim_{z\to z_0} (z-z_0) f(z)
+.\end{align*}
+
+\end{proposition}
+
+\begin{corollary}[Better derivative formula that sometimes works for simple poles]
+
+If additionally \(f=g/h\) where \(h(z_0) = 0\) and \(h'(z_0)\neq 0\), we
+can apply L'Hopital's rule to compute this residue:
+\begin{align*}
+(z-z_0) {g(z) \over h(z)} = {(z-z_0) g(z) \over h(z) } \overset{LH}{=}
+{g(z) + (z-z_0) g'(z) \over h'(z)} \overset{z\to z_0}\longrightarrow{g(z_0) \over h'(z_0)}
+.\end{align*}
+
+\end{corollary}
+
+\begin{example}[Residue of a simple pole (order 1)]
+
+Let \(f(z) = \frac{1}{1+z^2}\), then
+\(\mathop{\mathrm{Res}}(i, f) = \frac{1}{2i}\).
+
+\end{example}
+
+\begin{theorem}[The Residue Theorem]
+
+Let \(f\) be meromorphic on a region \(\Omega\) with poles
+\(\left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\}\). Then for any
+\(\gamma \in \Omega\setminus\left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\}\),
+\begin{align*}
+{1 \over 2\pi i } \int_\gamma f(z) \,dz= \sum_{j=1}^N n_\gamma(z_j) \mathop{\mathrm{Res}}_{z=z_j} f
+.\end{align*}
+If \(\gamma\) is a toy contour, then\\
+\begin{align*}
+{1\over 2\pi i}\int_\gamma f\,dz= \sum_{j=1}^N \mathop{\mathrm{Res}}_{z=z_j}f
+.\end{align*}
+
+\end{theorem}
+
+\hypertarget{exercises-2}{%
+\subsubsection{Exercises}\label{exercises-2}}
+
+\begin{quote}
+Some good computations
+\href{https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf}{here}.
+\end{quote}
+
+\includegraphics{figures/image_2021-05-17-13-32-46.png}
+\includegraphics{figures/image_2021-05-17-13-32-57.png}
+\includegraphics{figures/image_2021-05-17-13-33-12.png}
+\includegraphics{figures/image_2021-05-17-13-33-30.png}
+
+\begin{exercise}[?]
+
+\begin{align*}
+\int_{\mathbb{R}}{1 \over (1+x^2)^2} \,dx
+.\end{align*}
+
+\end{exercise}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Factor \((1+z^2)^2 = ((z-i)(z+i))^2\), so \(f\) has poles at \(\pm i\)
+  of order 2.
+\item
+  Take a semicircular contour \(\gamma \coloneqq I_R \cup D_R\), then
+  \(f(z) \approx 1/z^4 \to 0\) for large \(R\) and
+  \(\int_{D_R} f \to 0\).
+\item
+  Note \(\int_{I_R} f \to \int_{\mathbb{R}}f\), so
+  \(\int_\gamma f \to \int_{\mathbb{R}}f\).
+\item
+  \(\int_\gamma f = 2\pi i \sum_{z_0} \mathop{\mathrm{Res}}_{z=z_0} f\),
+  and \(z_0 = i\) is the only pole in this region.
+\item
+  Compute
+  \begin{align*}
+  \mathop{\mathrm{Res}}_{z=i} f 
+  &= \lim_{z\to i} {1\over (2-1)!} {\frac{\partial }{\partial z}\,} (z-i)^2 f(z) \\
+  &= \lim_{z\to i} {\frac{\partial }{\partial z}\,} {1\over (z+i)^2 } \\
+  &= \lim_{z\to i} {-2 \over (z+i)^3 } \\
+  &= -{2 \over (2i)^3 } \\
+  &= {1\over 4i} \\ \\
+  \implies
+  \int_\gamma f &= {2\pi i \over 4i} = \pi/2
+  ,\end{align*}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{argument-principle}{%
+\subsection{Argument Principle}\label{argument-principle}}
+
+\begin{theorem}[Argument Principle]
+
+For \(f\) meromorphic in \(\gamma^\circ\) with zeros
+\(\left\{{ z_j }\right\}\) and poles \(\left\{{ p_k }\right\}\) repeated
+with multiplicity where \(\gamma\) does not intersect any zeros or
+poles, then
+\begin{align*}  
+\Delta_\gamma \arg f(z) \coloneqq{1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \,dz= \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) = Z_f - P_f
+,\end{align*}
+where \(Z_f\) and \(P_f\) are the number of zeros and poles respectively
+enclosed by \(\gamma\), counted with multiplicity.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Residue formula applied to \(f'\over f\)?
+
+\end{proof}
+
+\begin{corollary}[Rouché's Theorem]\label{Rouche}
+
+If \(f, g\) are analytic on a domain \(\Omega\) with finitely many zeros
+in \(\Omega\) and \(\gamma \subset \Omega\) is a closed curve
+surrounding each point exactly once, where
+\({\left\lvert {g} \right\rvert} < {\left\lvert {f} \right\rvert}\) on
+\(\gamma\), then \(f\) and \(f+g\) have the same number of zeros.
+
+Alternatively:
+
+Suppose \(f = g + h\) with \(g \neq 0, \infty\) on \(\gamma\) with
+\({\left\lvert {g} \right\rvert} > {\left\lvert {h} \right\rvert}\) on
+\(\gamma\). Then
+\begin{align*}\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.\end{align*}
+
+\end{corollary}
+
+\todo[inline]{Prove}
+
+\begin{corollary}[Open Mapping]
+
+Any holomorphic non-constant map is an open map.
+
+\end{corollary}
+
+\todo[inline]{Prove}
+
+\begin{corollary}[Maximum Modulus]\label{MaximumModulus}
+
+If \(f\) is holomorphic and nonconstant on an open connected region
+\(\Omega\), then \({\left\lvert {f} \right\rvert}\) can not attain a
+maximum on \(\Omega\). If \(\Omega\) is bounded and \(f\) is continuous
+on
+\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\),
+then
+\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)
+occurs on \({{\partial}}\Omega\). Conversely, if \(f\) attains a local
+supremum at \(z_0 \in \Omega\), then \(f\) is constant on \(\Omega\).
+
+\end{corollary}
+
+\todo[inline]{Prove}
+
+\hypertarget{exercises-3}{%
+\subsubsection{Exercises}\label{exercises-3}}
+
+\begin{figure}
+\centering
+\includegraphics{figures/image_2021-05-17-13-33-55.png}
+\caption{image\_2021-05-17-13-33-55}
+\end{figure}
+
+\hypertarget{complex-log}{%
+\subsection{Complex Log}\label{complex-log}}
+
+\begin{proposition}[Existence of complex log]
+
+Suppose \(\Omega\) is a simply-connected region such that
+\(1\in \Omega, 0\not\in\Omega\). Then there exists a branch of
+\(F(z) \coloneqq\operatorname{Log}(z)\) such that
+
+\begin{itemize}
+\tightlist
+\item
+  \(F\) is holomorphic on \(\Omega\),
+\item
+  \(e^{F(z)} = z\) for all \(z\in \Omega\)
+\item
+  \(F(x) = \log(x)\) for \(x\in {\mathbb{R}}\) in a neighborhood of
+  \(1\).
+\end{itemize}
+
+\end{proposition}
+
+\begin{definition}[Principal branch and exponential]
+
+Take \({\mathbb{C}}\) and delete \({\mathbb{R}}^{\leq 0}\) to obtain the
+\textbf{principal branch} of the logarithm, defined as
+\begin{align*}
+\operatorname{Log}(z) \coloneqq\log(r) + i\theta && {\left\lvert {\theta} \right\rvert} < \pi
+.\end{align*}
+Similarly define
+\begin{align*}
+z^{\alpha} \coloneqq e^{\alpha \operatorname{Log}(z)}
+.\end{align*}
+
+\end{definition}
+
+\begin{theorem}[Existence of log]
+
+If \(f\) is holomorphic and nonvanishing on a simply-connected region
+\(\Omega\), then there exists a holomorphic \(G\) on \(\Omega\) such
+that
+\begin{align*}
+f(z) = e^{G(z)}
+.\end{align*}
+
+\end{theorem}
+
+\hypertarget{rouche}{%
+\section{Rouche}\label{rouche}}
 
 \hypertarget{counting-zeros}{%
 \subsection{Counting Zeros}\label{counting-zeros}}
@@ -1112,9 +2024,322 @@ symmetric about a line segment \(L\subseteq {\mathbb{R}}\).
 
 \end{example}
 
+\hypertarget{conformal-maps}{%
+\section{Conformal Maps}\label{conformal-maps}}
+
 \hypertarget{linear-fractional-transformations}{%
-\section{Linear Fractional
+\subsection{Linear Fractional
 Transformations}\label{linear-fractional-transformations}}
+
+\begin{definition}[Conformal Map / Biholomorphism]
+
+A map \(f\) is \textbf{conformal} on \(\Omega\) iff \(f\) is
+complex-differentiable, \(f'(z)\neq 0\) for \(z\in \Omega\), and \(f\)
+preserves signed angles (so \(f\) is orientation-preserving). Conformal
+implies holomorphic, and a bijective conformal map has a holomorphic
+inverse. A bijective conformal map \(f:U\to V\) is called a
+\textbf{biholomorphism}, and we say \(U\) and \(V\) are
+\textbf{biholomorphic}. Self-biholomorphisms of a domain \(\Omega\) form
+a group \({\operatorname{Aut}}_{\mathbb{C}}(\Omega)\).
+
+\end{definition}
+
+\begin{remark}
+
+There is an oft-used weaker condition that \(f'(z) \neq 0\) for any
+point. Note that that this condition alone doesn't necessarily imply
+\(f\) is holomorphic, since anti-holomorphic maps may be nonzero
+derivative. For example, take
+\(f(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu\),
+so \(f(x+iy) = x-iy\) -- this does not satisfy the Cauchy-Riemann
+equations.
+
+\end{remark}
+
+\begin{remark}
+
+A bijective holomorphic map automatically has a holomorphic inverse.
+This can be weakened: an injective holomorphic map satisfies
+\(f'(z) \neq 0\) and \(f ^{-1}\) is well-defined on its range and
+holomorphic.
+
+\end{remark}
+
+\begin{definition}[Linear fractional transformation / Mobius transformation]
+
+A map of the following form is a \emph{linear fractional
+transformation}:
+\begin{align*}  
+T(z) = {az + b \over cz + d}
+,\end{align*}
+where the denominator is assumed to not be a multiple of the numerator.
+These have inverses given by
+\begin{align*}  
+T^{-1}(w) = {dw-b \over -cw + a}
+.\end{align*}
+
+\end{definition}
+
+\begin{proposition}[?]
+
+Given any three points \(z_1, z_2, z_3\), the following Mobius
+transformation sends them to \(1, 0, \infty\) respectively:
+\begin{align*}
+f(z) \coloneqq{ (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
+.\end{align*}
+Such a map is sometimes denoted \((z, z_1, z_2, z_3)\).
+
+\end{proposition}
+
+\begin{example}[?]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \((z, i, 1, -1): {\mathbb{D}}\to {\mathbb{H}}\)
+\item
+  \((z, 0, -1, 1): {\mathbb{D}}\cap{\mathbb{H}}\to Q_1\).
+\end{itemize}
+
+\end{example}
+
+\begin{theorem}[Cayley Transform]
+
+The fractional linear transformation given by
+\(F(z) = {i - z \over i + z}\) maps \({\mathbb{D}}\to {\mathbb{H}}\)
+with inverse \(G(w) = i {1-w \over 1 + w}\).
+
+\end{theorem}
+
+\begin{theorem}[Classification of Conformal Maps]
+
+There are 8 major types of conformal maps:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.62}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.37}}@{}}
+\toprule
+Type/Domains & Formula \\
+\midrule
+\endhead
+Translation/Dilation/Rotation & \(z\mapsto e^{i\theta}(cz + h)\) \\
+Sectors to sectors & \(z\mapsto z^n\) \\
+\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2}\), the first
+quadrant & \(z\mapsto {1+z \over 1-z}\) \\
+\({\mathbb{H}}\to S\) & \(z\mapsto \log(z)\) \\
+\({\mathbb{D}}_{1\over 2} \to S_{1\over 2}\) & \(z\mapsto \log(z)\) \\
+\(S_{1\over 2} \to {\mathbb{D}}_{1\over 2}\) & \(z\mapsto e^{iz}\) \\
+\({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}\) &
+\(z\mapsto {1\over 2}\qty{z + {1\over z}}\) \\
+\(S_{1\over 2} \to {\mathbb{H}}\) & \(z\mapsto \sin(z)\) \\
+\bottomrule
+\end{longtable}
+
+\end{theorem}
+
+\begin{theorem}[Characterization of conformal maps]
+
+Conformal maps \({\mathbb{D}}\to{\mathbb{D}}\) have the form
+\begin{align*}
+g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
+.\end{align*}
+
+\end{theorem}
+
+\hypertarget{schwarz}{%
+\subsection{Schwarz}\label{schwarz}}
+
+\begin{theorem}[Schwarz Lemma]\label{SchwarzzLemma}
+
+If \(f: {\mathbb{D}}\to {\mathbb{D}}\) is holomorphic with \(f(0) = 0\),
+then
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \({\left\lvert {f(z)} \right\rvert} \leq {\left\lvert {z} \right\rvert}\)
+  for all \(z\in {\mathbb{D}}\)
+\item
+  \({\left\lvert {f'(0)} \right\rvert} \leq 1\).
+\end{enumerate}
+
+Moreover, if
+
+\begin{itemize}
+\tightlist
+\item
+  \({\left\lvert {f(z_0)} \right\rvert} = {\left\lvert {z_0} \right\rvert}\)
+  for any \(z_0\in {\mathbb{D}}\), or
+\item
+  \({\left\lvert {f'(0)} \right\rvert} = 1\),
+\end{itemize}
+
+then \(f\) is a rotation.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Apply the maximum modulus principle to \(f(z)/z\).
+
+\end{proof}
+
+\begin{exercise}[?]
+
+Show that
+\({\operatorname{Aut}}_{\mathbb{C}}({\mathbb{C}}) = \left\{{ z \mapsto az+b{~\mathrel{\Big|}~}a\in {\mathbb{C}}^{\times}, b\in {\mathbb{C}}}\right\}\).
+
+\end{exercise}
+
+\begin{theorem}[Biholomorphisms of the disc]
+
+\begin{align*}
+{\operatorname{Aut}}_{\mathbb{C}}({\mathbb{D}}) = \left\{{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu z} }\right\}
+.\end{align*}
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Schwarz lemma.
+
+\end{proof}
+
+\begin{theorem}[?]
+
+\begin{align*}
+{\operatorname{Aut}}_{\mathbb{C}}({\mathbb{H}}) = \left\{{ z \mapsto {az+b \over cz+d} {~\mathrel{\Big|}~}a,b,c,d\in {\mathbb{C}}, ad-bc=1 }\right\} \cong{\operatorname{PSL}}_2({\mathbb{R}})
+.\end{align*}
+
+\end{theorem}
+
+\hypertarget{by-type}{%
+\subsection{By Type}\label{by-type}}
+
+\hypertarget{plane-to-disc}{%
+\subsubsection{Plane to Disc}\label{plane-to-disc}}
+
+\begin{align*}
+\phi: {\mathbb{H}}&\to {\mathbb{D}}\\
+\phi(z) &= {z - i \over z + i} \qquad f^{-1}(z) = i\qty{1 + w \over 1 - w}
+.\end{align*}
+
+\hypertarget{sector-to-disc}{%
+\subsubsection{Sector to Disc}\label{sector-to-disc}}
+
+For
+\(S_\alpha \coloneqq\left\{{z\in{\mathbb{C}}{~\mathrel{\Big|}~}0 < \arg(z) < \alpha }\right\}\)
+an open sector for \(\alpha\) some angle, first map the sector to the
+half-plane:
+\begin{align*}
+g: S_\alpha &\to {\mathbb{H}}\\
+g(z) &= z^{\pi \over \alpha}
+.\end{align*}
+
+Then compose with a map \({\mathbb{H}}\to{\mathbb{D}}\):
+\begin{align*}
+f: S_\alpha &\to {\mathbb{D}}\\
+f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
+.\end{align*}
+
+\includegraphics{figures/image_2020-07-22-13-22-46.png}
+
+\hypertarget{strip-to-disc}{%
+\subsubsection{Strip to Disc}\label{strip-to-disc}}
+
+\begin{itemize}
+\tightlist
+\item
+  Map to horizontal strip by rotation \(z\mapsto \lambda z\).
+\item
+  Map horizontal strip to sector by \(z \mapsto e^z\)
+\item
+  Map sector to \({\mathbb{H}}\) by \(z\mapsto z^{\pi\over\alpha}\).
+\item
+  Map \({\mathbb{H}}\to{\mathbb{D}}\).
+\end{itemize}
+
+\begin{align*}
+e^z: {\mathbb{R}}\times(0, \pi) \to {\mathbb{R}}\times(0, \infty)
+.\end{align*}
+
+\hypertarget{schwarz-reflection}{%
+\section{Schwarz Reflection}\label{schwarz-reflection}}
+
+\hypertarget{linear-fractional-transformations-1}{%
+\section{Linear Fractional
+Transformations}\label{linear-fractional-transformations-1}}
+
+\hypertarget{unsorted-theorems}{%
+\section{Unsorted Theorems}\label{unsorted-theorems}}
+
+\begin{theorem}[Riemann Mapping]
+
+If \(\Omega\) is simply connected, nonempty, and not \({\mathbb{C}}\),
+then for every \(z_{0}\in \Omega\) there exists a unique conformal map
+\(F:\Omega \to {\mathbb{D}}\) such that \(F(z_{0}) = 0\) and
+\(F'(z_{0}) > 0\).
+
+Thus any two such sets \(\Omega_{1}, \Omega_{2}\) are conformally
+equivalent.
+
+\end{theorem}
+
+\begin{theorem}[Riemann's Removable Singularity Theorem]
+
+If \(f\) is holomorphic on \(\Omega\) except possibly at \(z_0\) and
+\(f\) is bounded on \(\Omega\setminus\left\{{z_0}\right\}\), then
+\(z_0\) is a removable singularity.
+
+\end{theorem}
+
+\begin{theorem}[Little Picard]
+
+If \(f:{\mathbb{C}}\to {\mathbb{C}}\) is entire and nonconstant, then
+\(\operatorname{im}(f)\) is either \({\mathbb{C}}\) or
+\({\mathbb{C}}\setminus\left\{{z_0}\right\}\) for some point \(z_0\).
+
+\end{theorem}
+
+\todo{???}
+
+\begin{corollary}
+
+The ring of holomorphic functions on a domain in \({\mathbb{C}}\) has no
+zero divisors.
+
+\end{corollary}
+
+\begin{proof}
+
+???
+
+\end{proof}
+
+\todo[inline]{Find the proof!}
+
+Morera
+
+\begin{proposition}[Bounded Complex Analytic Functions form a Banach Space]
+
+For \(\Omega\subseteq{\mathbb{C}}\), show that
+\(A({\mathbb{C}})\coloneqq\left\{{f: \Omega \to {\mathbb{C}}{~\mathrel{\Big|}~}f\text{ is bounded}}\right\}\)
+is a Banach space.
+
+\end{proposition}
+
+\begin{proof}
+
+?
+
+\begin{quote}
+Apply Morera's Theorem and Cauchy's Theorem
+\end{quote}
+
+\end{proof}
 
 \hypertarget{appendix-proofs-of-the-fundamental-theorem-of-algebra}{%
 \section{Appendix: Proofs of the Fundamental Theorem of
@@ -1321,6 +2546,92 @@ The sum of the interior angles of an \(n{\hbox{-}}\)gon is \((n-2)\pi\),
 where each angle is \(\frac{n-2}{n}\pi\).
 
 \end{fact}
+
+\begin{definition}[The Dirichlet Problem]
+
+Given a bounded piecewise continuous function \(u:S^1\to {\mathbb{R}}\),
+is there a unique extension to a continuous harmonic function
+\(\tilde u: {\mathbb{D}}\to {\mathbb{R}}\)?
+
+\end{definition}
+
+\begin{remark}
+
+More generally, this is a boundary value problem for a region where the
+\emph{values} of the function on the boundary are given. Compare to
+prescribing conditions on the normal vector on the boundary, which would
+be a Neumann BVP. Why these show up: a harmonic function on a simply
+connected region has a harmonic conjugate, and solutions of BVPs are
+always analytic functions with harmonic real/imaginary parts.
+
+\end{remark}
+
+\begin{example}[Dirichlet problem on the strip]
+
+See section 27, example 1 in Brown and Churchill. On the strip
+\((x, y)\in (0, \pi) \times(0, \infty)\), set up the BVP for temperature
+on a thin plate with no sinks/sources:
+\begin{align*}
+\Laplacian T = 0 && T(0, y) = 0,\, T(\pi, y) = 0 \,\,\forall y \\ \\
+T(x, 0) = \sin(x) && T(x, y) \overset{y\to\infty}\longrightarrow 0
+.\end{align*}
+
+Then the following function is harmonic on \({\mathbb{R}}^2\) and
+satisfies that Dirichlet problem:
+\begin{align*}
+T(x ,y) = e^{-y} \sin(x) = \Re(-ie^{iz}) = \Im(e^{iz})
+.\end{align*}
+
+\end{example}
+
+\begin{definition}[Logarithmic Derivative]
+
+The \textbf{logarithmic derivative} of \(f\) is \((\ln f)' = f'/f\).
+
+\end{definition}
+
+\begin{remark}
+
+Why this is useful: deriving the argument principle. If \(f\) has a pole
+of order \(n\) at \(z_0\), then write \(f(z) = (z-z_0)^{-n} g(z)\) with
+\(g\) analytic in a neighborhood of \(z_0\). Then a direct computation
+of the derivatives will show
+\begin{align*}
+(\ln f)' \coloneqq{f'(z) \over f(z)} = -{n\over z-z_0} + {g'(z) \over g(z)}
+.\end{align*}
+Thus
+\begin{align*}
+{1\over 2\pi i } \int_\gamma (\ln f)' = -n
+,\end{align*}
+for \(\gamma\) a small circle about \(z_0\). A similar argument for
+\(z_0\) a \textbf{zero} of \(f\) yields
+\begin{align*}
+{1\over 2\pi i } \int_\gamma h = +n
+.\end{align*}
+
+\end{remark}
+
+\begin{exercise}[?]
+
+Show that there is no continuous square root function defined on all of
+\({\mathbb{C}}\).
+
+\end{exercise}
+
+\begin{solution}
+
+Suppose \(f(z)^2 = z\). Then \(f\) is a section to the covering map
+\begin{align*}
+p: {\mathbb{C}}^{\times}&\to {\mathbb{C}}^{\times}\\
+z & \mapsto z^2
+,\end{align*}
+so \(p\circ f = \operatorname{id}\). Using
+\(\pi_1({\mathbb{C}}^{\times}) = {\mathbb{Z}}\), the induced maps are
+\(p_*(1) = 2\) and \(f_*(1) = n\) for some \(n\in {\mathbb{Z}}\). But
+then \(p_* \circ f_*\) is multiplication by \(2n\), contradicting
+\(p_* \circ f_* = \operatorname{id}\) by functoriality.
+
+\end{solution}
 
 Basics
 
