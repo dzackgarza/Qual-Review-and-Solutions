@@ -77,6 +77,10 @@ $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 
 ## Products
 
+:::{.proposition title="HK Subgroup Theorem"}
+If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
+:::
+
 :::{.theorem title="Chinese Remainder Theorem"}
 \[
 \gcd(p, q) = 1 \implies \ZZ/p\ZZ \cross \ZZ/q\ZZ \cong \ZZ/pq\ZZ
@@ -145,9 +149,6 @@ We have $G \cong N \semidirect_\psi H$ when
 
 :::
 
-:::{.proposition}
-If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
-:::
 
 
 ## Automorphism Groups

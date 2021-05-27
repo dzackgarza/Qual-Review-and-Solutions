@@ -15,16 +15,46 @@ z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
 .\]
 :::
 
-:::{.fact title="Complex Log"}
-For $z= r e^{i\theta}\neq 0$, $\theta$ is of the form $\Theta + 2k\pi$ where $\Theta = \Arg z$
-:::
-
 :::{.fact}
 Common trick:
 \[
 f^{1/n} = e^{{1\over n} \log(f)}
 ,\]
 taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
+
+:::
+
+## Complex Log
+
+:::{.fact title="Complex Log"}
+For $z= r e^{i\theta}\neq 0$, $\theta$ is of the form $\Theta + 2k\pi$ where $\Theta = \Arg z$
+:::
+
+:::{.proposition title="Existence of complex log"}
+Suppose $\Omega$ is a simply-connected region such that $1\in \Omega, 0\not\in\Omega$.
+Then there exists a branch of $F(z) \da \Log(z)$ such that
+
+- $F$ is holomorphic on $\Omega$,
+- $e^{F(z)} = z$ for all $z\in \Omega$
+- $F(x) = \log(x)$ for $x\in \RR$ in a neighborhood of $1$.
+:::
+
+:::{.definition title="Principal branch and exponential"}
+Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
+\[
+\Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
+.\]
+Similarly define
+\[
+z^{\alpha} \da e^{\alpha \Log(z)}
+.\]
+:::
+
+:::{.theorem title="Existence of log"}
+If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
+\[
+f(z) = e^{G(z)}
+.\]
 
 :::
 
@@ -188,9 +218,6 @@ Thus
 
 :::
 
-:::{.proposition title="Holomorphic functions have harmonic components"}
-If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
-:::
 
 :::{.proposition title="Holomorphic functions are continuous."}
 $f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
@@ -200,16 +227,54 @@ f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \converges{h\to 0}\to 0
 In this case, $a = f'(z_0)$.
 :::
 
-:::{.proposition title="Cauchy-Riemann implies holomorphic"}
-Recall that in general, $f' = \del f + \delbar f$.
-If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and 
+\todo[inline]{Prove}
+
+
+
+### Delbar and the Laplacian
+
+:::{.definition title="del and delbar operators"}
 \[
-f'(z) = \del f = {1 \over 2} \qty{\dd{}{x} + {1\over i} \dd{}{y}}f = {1\over 2}\qty{u_x + iv_x}
+\del \da \del_z \da {1\over 2}\qty{\del_x - i \del_y}
+\quad
+\text{ and }
+\quad
+\delbar
+\da \del_{\bar z}
+={1\over 2}\qty{ \del_x + i\del_y}
+.\]
+Moreover, $f' = \del f + \delbar f$.
+:::
+
+:::{.proposition title="Holomorphic iff delbar vanishes"}
+$f$ is holomorphic at $z_0$ iff $\delbar f(z_0) = 0$:
+\[
+2\delbar f 
+&\da (\del_x + i \del_y) (u+iv) \\
+&= u_x + iv_x + iu_y - v_y \\
+&= (u_x - v_y) + i(u_y + v_x) \\
+&= 0 && \text{by Cauchy-Riemann}
 .\]
 :::
 
-:::{.theorem title="Analytic functions have harmonic components"}
-If $f=u+iv$ is analytic, then $u, v$ are harmonic.
+### Harmonic Functions and the Laplacian
+
+:::{.definition title="Laplacian and Harmonic Functions"}
+A real function of two variables $u(x, y)$ is **harmonic** iff it is in the kernel of the Laplacian operator:
+\[  
+\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
+.\]
+:::
+
+:::{.proposition title="Cauchy-Riemann implies holomorphic"}
+If $f = u+iv$ with $u, v\in C^1(\RR)$ satisfying the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and 
+\[
+f'(z) = \del f = {1\over 2}\qty{u_x + iv_x}
+.\]
+:::
+
+:::{.proposition title="Holomorphic functions have harmonic components"}
+If $f(z) = u(x, y) + iv(x, y)$ is holomorphic, then $u, v$ are harmonic.
 :::
 
 :::{.proof title="?"}
@@ -238,38 +303,6 @@ v_{xx} + u_{yx} = 0 \implies v_{xx} + v_{yy} = 0 \\ \\
 
 :::
 
-### Delbar, Harmonic Functions, Laplacian
-
-:::{.definition title="del and delbar operators"}
-\[
-\del \da \del_z \da {1\over 2}\qty{\del_x - i \del_y}
-\quad
-\text{ and }
-\quad
-\delbar
-\da \del_{\bar z}
-={1\over 2}\qty{ \del_x + i\del_y}
-.\]
-
-:::
-
-:::{.proposition title="Holomorphic iff delbar vanishes"}
-$f$ is holomorphic at $z_0$ iff $\delbar f(z_0) = 0$:
-\[
-2\delbar f 
-&\da (\del_x + i \del_y) (u+iv) \\
-&= u_x + iv_x + iu_y - v_y \\
-&= (u_x - v_y) + i(u_y + v_x) \\
-&= 0 && \text{by Cauchy-Riemann}
-.\]
-:::
-
-:::{.definition title="Laplacian and Harmonic Functions"}
-A real function of two variables $u(x, y)$ is **harmonic** iff it is in the kernel of the Laplacian operator:
-\[  
-\Delta u \definedas \qty{\dd{^2}{x^2} + \dd{^2}{y^2}}u = 0
-.\]
-:::
 
 ### Exercises
 
@@ -349,7 +382,7 @@ If $f$ is holomorphic on $\Omega$ and any of the following hold, then $f$ is con
 :::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
 \[
-f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
+f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{ where } a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
 = {1 \over 2\pi r^n}\int_0^{2\pi} f(z_0 + re^{i\theta})e^{-in\theta} \dtheta
 .\]
 :::
@@ -426,17 +459,18 @@ So it suffices to bound the latter sum:
 :::
 
 :::{.theorem title="Abel's Theorem"}
-If $\sum_{k=1}^\infty c_k$ converges, then 
+If $\sum_{k=1}^\infty c_k z^j$ converges on $\abs{z} < 1$ then 
 \[
 \lim_{z\to 1^-} \sum_{k\in \NN} c_k z^k = \sum_{k\in \NN} c_k
 .\]
 :::
 
 :::{.lemma title="Abel's Test"}
-If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $a_n\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
+If $f(z) \da \sum c_k z^k$ is a power series with $c_k \in \RR^{\geq 0}$ and $c_k\decreasesto 0$, then $f$ converges on $S^1$ except possibly at $z=1$.
 :::
 
 :::{.example title="application of Abel's theorem"}
+What is the value of the alternating harmonic series?
 Integrate a geometric series to obtain
 \[
 \sum {(-1)^k z^k \over n} = \log(z+1) && \abs{z} < 1
@@ -469,13 +503,7 @@ A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
 
 :::
 
-### Exercises: Series
-
-:::{.exercise title="Application of summation by parts"}
-Use summation by parts to show that $\sin(n)/n$ converges.
-:::
-
-:::{.solution}
+:::{.proof title="?"}
 An inelegant proof: define $A_n \da \sum_{k\leq n} a_k$, use that $a_k = A_k - A_{k-1}$, reindex, and peel a top/bottom term off of each sum to pattern-match.
 \
 
@@ -491,6 +519,12 @@ Behold:
 &= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
 .\]
 
+:::
+
+### Exercises: Series
+
+:::{.exercise title="Application of summation by parts"}
+Use summation by parts to show that $\sin(n)/n$ converges.
 :::
 
 :::{.exercise title="1.20: Series convergence on the circle"}

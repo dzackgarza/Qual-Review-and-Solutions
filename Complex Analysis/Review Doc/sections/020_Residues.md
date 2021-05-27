@@ -113,6 +113,13 @@ If $\gamma$ is a toy contour, then
 
 > Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
+
+:::{.problem title="?"}
+Show that the complex zeros of $f(z) \da \sin(\pi z)$ are exactly $\ZZ$, and each is order 1.
+Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
+:::
+
+
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
 ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
@@ -196,40 +203,5 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 ### Exercises
 
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
-
-## Complex Log
-
-
-:::{.proposition title="Existence of complex log"}
-Suppose $\Omega$ is a simply-connected region such that $1\in \Omega, 0\not\in\Omega$.
-Then there exists a branch of $F(z) \da \Log(z)$ such that
-
-- $F$ is holomorphic on $\Omega$,
-- $e^{F(z)} = z$ for all $z\in \Omega$
-- $F(x) = \log(x)$ for $x\in \RR$ in a neighborhood of $1$.
-:::
-
-
-:::{.definition title="Principal branch and exponential"}
-Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
-\[
-\Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
-.\]
-Similarly define
-\[
-z^{\alpha} \da e^{\alpha \Log(z)}
-.\]
-:::
-
-
-
-
-:::{.theorem title="Existence of log"}
-If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
-\[
-f(z) = e^{G(z)}
-.\]
-
-:::
 
 

@@ -3,6 +3,8 @@
 ## Counting Zeros 
 
 :::{.example}
+\envlist
+
 - Take $P(z) = z^4 + 6z + 3$.
 - On $\abs{z} < 2$:
   - Set $f(z) = z^4$ and $g(z) = 6z + 3$, then $\abs{g(z)} \leq 6\abs{z} + 3 = 15 < 16= \abs{f(z)}$.
@@ -14,6 +16,8 @@
 :::
 
 :::{.example}
+\envlist 
+
 - Claim: the equation $\alpha z e^z = 1$ where $\abs{\alpha} > e$ has exactly one solution in $\DD$.
 - Set $f(z) = \alpha z$ and $g(z) = e^{-z}$.
 - Estimate at $\abs{z} =1$ we have $\abs{g} =\abs{e^{-z}} = e^{-\Re(z)} \leq e^1 < \abs{\alpha} = \abs{f(z)}$

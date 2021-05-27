@@ -31,8 +31,7 @@ A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff
 :::
 
 :::{.theorem title="Weierstrass $M\dash$Test"}
-If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\theset{M_n}$ with $\norm{f_n}_\infty \leq M_n$ and $\sum_{n\in \NN} M_n < \infty$, then $f(x) \definedas \sum_{n\in \NN} f_n(x)$ converges absolutely and uniformly on $\Omega$.
-
+If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\theset{M_n}$ with $\norm{f_n}_\infty \leq M_n$ and $\sum_{n\in \NN} M_n < \infty$, then $f(x) \definedas \sum_{n\in \NN} f_n(x)$ converges absolutely and uniformly on $\Omega$. 
 Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
 :::
 
@@ -47,7 +46,7 @@ Note that if a power series converges uniformly, then summing commutes with inte
 Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall the **ratio test**:
 
 - $R\in (0, 1) \implies$ convergence.
-- $R\in [1, \infty] \implies$ divergence.
+- $R\in (1, \infty] \implies$ divergence.
 - $R=1$ yields no information.
 
 :::
@@ -93,29 +92,6 @@ Recall how to carry out polynomial long division:
 :::
 
 
-:::{.fact title="Generalized Binomial Theorem"}
-Define $(n)_k$ to be the falling factorial $\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1)$ and set ${n\choose k} \da (n)_k/k!$, then
-\[
-(x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
-.\]
-:::
-
-
-:::{.fact title="Some useful series"}
-\[
-\sqrt{1+x} = (1+x)^{1/2} = 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
-.\]
-:::
-
-
-:::{.fact}
-Useful trick for expanding square roots:
-\[
-\sqrt{z} = \sqrt{z_0 + z - z_0} = \sqrt{z_0 \qty{ 1 + {z-z_0 \over z} }} = \sqrt{z_0} \sqrt{1+u},\quad u\da {z-z_0 \over z} \\
-\implies \sqrt{z} = \sqrt{z_0} \sum_{k\geq 0} {1/2 \choose k} \qty{z- z_0 \over z}^k
-.\]
-
-:::
 
 
 
