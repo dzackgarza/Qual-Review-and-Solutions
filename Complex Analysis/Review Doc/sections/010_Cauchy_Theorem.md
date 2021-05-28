@@ -9,22 +9,7 @@
 .\]
 :::
 
-:::{.proposition title="Crude integral estimate"}
-Define the *length* of a curve by
-\[
-\operatorname{len}(\gamma) \da\int_\gamma \abs{\dz} = \int_I \abs{\gamma'(t)} \dt
-.\]
 
-Then there is an estimate of the following form:
-\[
-\left|\int_{\gamma} f d z\right| \leq \int_{\gamma}|f||d z| \leq\left(\sup _{\gamma}|f|\right) \cdot \operatorname{len}(\gamma)
-.\]
-
-:::
-
-:::{.exercise title="Primitives imply vanishing integral"}
-Show that if $f$ has a primitive $F$ on $\Omega$ then $\int_\gamma f = 0$ for every closed curve $\gamma \subseteq \Omega$.
-:::
 
 :::{.theorem title="Goursat"}
 If $f$ is analytic on a rectangle $R$ with horizontal and vertical sides, then $\int_{\bd R} f = 0$.
@@ -42,11 +27,16 @@ Closed path integrals of holomorphic functions vanish.
 :::
 
 
+:::{.exercise title="Primitives imply vanishing integral"}
+Show that if $f$ has a primitive $F$ on $\Omega$ then $\int_\gamma f = 0$ for every closed curve $\gamma \subseteq \Omega$.
+:::
 
 
 ## Applications of Cauchy's Theorem
 
 ### Integral Formulas and Estimates
+
+> See [reference](http://home.iitk.ac.in/~psraj/mth102/lecture_notes/comp8.pdf)
 
 :::{.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose $f$ is holomorphic on $\Omega$, then for any $z_0 \in \Omega$ and any open disc $\closure{D_R(z_0)}$ such that $\gamma \da \bd \closure{D_R(z_0)} \subseteq \Omega$,
@@ -58,6 +48,21 @@ and
 \dd{^nf }{z^n}(z_0) = {n! \over 2\pi i} \int_{\gamma} {f(\xi) \over (\xi - z_0)^{n+1}} \dxi
 .\]
 :::
+
+:::{.proof title="?"}
+![image_2021-05-27-16-54-06](figures/image_2021-05-27-16-54-06.png)
+
+:::
+
+:::{.proof title="?"}
+![image_2021-05-27-16-56-39](figures/image_2021-05-27-16-56-39.png)
+![image_2021-05-27-16-56-52](figures/image_2021-05-27-16-56-52.png)
+:::
+
+
+
+
+
 
 :::{.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
 For $z_0 \in D_R(z_0) \subset \Omega$, we have

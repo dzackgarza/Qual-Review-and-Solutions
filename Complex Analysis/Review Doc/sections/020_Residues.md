@@ -1,6 +1,26 @@
 # Residues
 
 
+:::{.proposition title="Length bound"}
+\[
+\abs{ \int_\gamma f} \leq \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
+.\]
+This follows from 
+\[
+\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
+.\]
+
+
+:::
+
+
+:::{.proposition title="Jordan's Lemma"}
+\todo[inline]{todo}
+
+:::
+
+
+
 :::{.fact}
 Some useful facts:
 \[
@@ -197,6 +217,12 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 :::
 
 \todo[inline]{Prove}
+
+
+:::{.corollary title="?"}
+If $f$ is nonzero on $\Omega$, then $f$ attains a minimum on $\bd \Omega$.
+This follows from applying the MMP to $1/f$.
+:::
 
 
 

@@ -50,3 +50,9 @@ d. There exist $\alpha\in \RR, \beta \in \CC\setminus \RR$ such that $T(\alpha) 
 
 ## 13
 Find a conformal map from $D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\}$ to the unit disk $\Delta=\{z: \ |z|<1\}$.
+
+### Tie's Extra Questions: Fall 2009
+
+Find a conformal map from $D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\}$
+to the unit disk $\Delta=\{z: \ |z|<1\}$.
+

@@ -521,6 +521,16 @@ Behold:
 
 :::
 
+![image_2021-05-27-15-40-58](figures/image_2021-05-27-15-40-58.png)
+
+
+
+:::{.proposition title="?"}
+If $f$ is non-constant, then $f'$ is analytic and the zeros of $f'$ are isolated.
+If $f,g$ are analytic with $f'=g'$, then $f-g$ is constant.
+:::
+
+
 ### Exercises: Series
 
 :::{.exercise title="Application of summation by parts"}

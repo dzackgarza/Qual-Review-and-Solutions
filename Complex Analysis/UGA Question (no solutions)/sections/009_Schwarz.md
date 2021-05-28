@@ -97,3 +97,28 @@ Prove that
 \[  
 \forall a\in \DD, \qquad {\abs{f'(a)} \over 1 - \abs{f(a)}^2 } \leq {1 \over 1 - \abs{a}^2}
 .\]
+
+### Tie's Extra Questions: Fall 2009
+Let $g$ be analytic for $|z|\leq 1$ and $|g(z)| < 1$ for $|z| = 1$.
+
+1.  Show that $g$ has a unique fixed point in $|z| < 1$.
+
+2.  What happens if we replace $|g(z)| < 1$ with $|g(z)|\leq 1$ for
+    $|z|=1$? Give an example if (a) is not true or give an proof
+    if (a) is still true.
+
+3.  What happens if we simply assume that $f$ is analytic for
+    $|z| < 1$ and $|f(z)| < 1$ for $|z| < 1$? Suppose that $f(z)
+    \not\equiv  z$. Can f have more than one fixed point in
+    $|z| < 1$?
+
+> Hint: The map $\displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\bar{\alpha}z}}$ may be useful.
+
+### Spring 20202 HW 2 #  2.6.15
+
+Suppose $f$ is continuous and nonvanishing on $\bar \DD$, and holomorphic in $\DD$.
+Prove that if $\abs{z} = 1 \implies \abs{f(z)} = 1$, then $f$ is constant.
+
+> Hint: Extend $f$ to all of $\CC$ by $f(z) = 1/ \bar{f(1/\bar z)}$ for any $\abs{z} > 1$, and argue as in the Schwarz reflection principle.
+
+

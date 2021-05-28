@@ -4,13 +4,13 @@
 
 Suppose $f$ is analytic on a region $\Omega$ such that $\DD \subseteq \Omega \subseteq \CC$ and $f(z) = \sum_{n=0}^\infty a_n z^n$ is a power series with radius of convergence exactly 1.
 
-### a $\done$
+a. $\done$
 Give an example of such an $f$ that converges at every point of $S^1$.
 
-### b  $\work$
+b.  $\work$
 Give an example of such an $f$ which is analytic at $1$ but $\sum_{n=0}^\infty a_n$ diverges.
 
-### c  $\work$
+c.  $\work$
 Prove that $f$ can not be analytic at *every* point of $S^1$.
 
 \todo[inline]{Missing part (c)}
@@ -21,13 +21,13 @@ Prove that $f$ can not be analytic at *every* point of $S^1$.
 
 :::
 
-### a  $\done$
+a.  $\done$
 
 - Take $\sum {z^n \over n^2}$
 - Then \[\abs{z}\leq 1 \implies \abs{z^n\over n^2} \leq {1\over n^2}\] which is summable
 - So the series converges for $\abs{z}\leq 1$.
 
-### b $\work$
+b. $\work$
 - Take $\sum {z^n \over n}$; 
 - Then $z=1$ yields the harmonic series, which diverges.
 
@@ -55,13 +55,13 @@ c. ?
 
 Suppose $f$ is entire and has Taylor series $\sum a_n z^n$ about 0.
 
-### a  $\work$
+a.  $\work$
 Express $a_n$ as a contour integral along the circle $\abs{z} = R$.
 
-### b $\work$
+b. $\work$
 Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of $\CC$.
 
-### c $\work$
+c. $\work$
 Determine those functions $f$ for which the above Taylor series converges uniformly on all of $\CC$.
 
 
@@ -155,10 +155,10 @@ Thus all such functions are of the form $f(z) = cz$ for some $c\in \CC$ with $\a
 ## 7 $\work$
 Suppose $\sum_{n=0}^\infty a_n z^n$ converges for some $z_0 \neq 0$.
 
-### a  $\work$
+a.  $\work$
 Prove that the series converges absolutely for each $z$ with $\abs z < \abs z_0$.
 
-### b  $\work$
+b.  $\work$
 Suppose $0 < r < \abs{z_0}$ and show that the series converges uniformly on $\abs{z} \leq r$.
 
 ## 8 $\work$
@@ -190,7 +190,7 @@ Prove that the following series converges uniformly on the set $\theset{z \sucht
 # Extra
 
 
-## ?
+## Tie's Questions
 Let $f(z)$ be entire and assume values of $f(z)$ lie outside a
 *bounded* open set $\Omega$. Show without using Picard's theorems
 that $f(z)$ is a constant.
@@ -200,9 +200,9 @@ Let $f(z)$ be entire and assume values of $f(z)$ lie outside a *bounded* open se
 Show without using Picard's theorems that $f(z)$ is a constant.
 
 
-## ?
+## Tie's Questions
 
-### 1 
+1. 
 Assume $\displaystyle f(z) = \sum_{n=0}^\infty c_n z^n$ converges in $|z| < R$. 
 
 Show that for $r <R$,
@@ -210,5 +210,62 @@ $$
 \frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta = \sum_{n=0}^\infty |c_n|^2 r^{2n}
 .$$
 
-### 2
+2.
 Deduce Liouville's theorem from (1).
+
+### Tie's Extra Questions: Fall 2009
+Suppose $f$ is entire and there exist $A, R >0$ and natural number
+$N$ such that $$|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.$$ Show
+that
+
+1. $f$ is a polynomial and
+2. the degree of $f$ is at least $N$.
+
+### Tie's Extra Questions: Fall 2009
+
+Let $f(z)$ be entire and assume values of $f(z)$ lie outside a *bounded*
+open set $\Omega$. Show without using Picard's theorems that $f(z)$ is a
+constant.
+
+### Tie's Extra Questions: Fall 2009
+
+Let $f(z)$ be entire and assume that $f(z) \leq M |z|^2$ outside some
+disk for some constant $M$. Show that $f(z)$ is a polynomial in $z$ of
+degree $\leq 2$.
+
+### Spring 20202 HW 2 #  4
+Without using Cauchy's integral formula, show that if $\abs{a} < r < \abs{b}$, then
+\[
+\int_{\gamma} \frac{d z}{(z-\alpha)(z-\beta)}=\frac{2 \pi i}{\alpha-\beta}
+\]
+where $\gamma$ denotes the circle centered at the origin of radius $r$ with positive orientation.
+
+> Hint: take a Laurent expansion.
+
+### Spring 20202 HW 3 #  1
+
+Prove that if $f$ has two Laurent series expansions,
+\[
+f(z) = \sum c_n(z-a)^n \quad\text{and}\quad f(z) = \sum c_n'(z-a)^n
+\]
+then $c_n = c_n'$.
+
+### Spring 20202 HW 3 #  2
+
+Find Laurent series expansions of
+\[
+\frac{1}{1-z^2} + \frac{1}{3-z}
+\]
+How many such expansions are there? In what domains are each valid?
+
+### Spring 20202 HW 3 #  3
+
+Let $P, Q$ be polynomials with no common zeros. Assume $a$ is a root of
+$Q$.
+Find the principal part of $P/Q$ at $z=a$ in terms of $P$ and $Q$ if $a$ is (1) a simple root, and (2) a double root.
+
+### Spring 20202 HW 3 #  5
+
+Show that if $f$ is entire and $\lim_{z\to\infty}f(z) = \infty$, then
+$f$ is a polynomial.
+

@@ -141,3 +141,34 @@ $$|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.$$
 
 Show that (i) $f$ is a polynomial and (ii) the degree of $f$ is at least
 $N$.
+
+### Tie's Extra Questions: Fall 2009
+
+Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: If
+$$P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)$$
+is a polynomial of degree n, then it has n zeros in $\mathbb C$.
+
+### Spring 20202 HW 3 #  8
+
+Prove the fundamental theorem of Algebra using
+
+a.  
+Rouche's Theorem.
+
+b. 
+The maximum modulus principle.
+
+### Spring 20202 HW 3 #  11
+
+Find the number of roots of $p(z) = 4z^4 - 6z + 3$ in $\abs{z} < 1$ and
+$1 < \abs{z} < 2$ respectively.
+
+### Spring 20202 HW 3 #  12
+
+Prove that $z^4 + 2z^3 -2z + 10$ has exactly one root in each open
+quadrant.
+
+### Spring 20202 HW 3 #  13
+
+Prove that for $a> 0$, $z\tan z - a$ has only real roots.
+

@@ -27,7 +27,6 @@ Show that any continuous map $f : \RP^2 \to S^1 \times S^1$ is necessarily null-
   - Note that $\widetilde{S^1\cross S^1} = \RR^2$.
 :::
 
-
 ## 4 (Fall '11) $\done$
 Prove that, for $n \geq 2$, every continuous map $f: \RP^n \to S^1$ is null-homotopic.
 
@@ -54,7 +53,6 @@ Prove that, for $n \geq 2$, every continuous map $f: \RP^n \to S^1$ is null-homo
 \todo[inline]{Why?}
 
 :::
-
 
 ## 5 (Spring '06) $\work$ 
 Let $S^2 \to \RP^2$ be the universal covering map. 
@@ -108,4 +106,3 @@ a. Show that $SX$ is the union of two contractible subspaces.
 b. Prove that if $X$ is path-connected then $\pi_1 (SX) = \theset{0}$.
 
 c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
-

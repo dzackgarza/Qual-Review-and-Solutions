@@ -36,27 +36,6 @@ using complex analysis, $0< a < n$.
 > Here $n$ is a positive integer.
 
 
-## 11. 
-Let $g$ be analytic for $|z|\leq 1$ and $|g(z)| < 1$ for $|z| = 1$.
-
-### a   
-Show that $g$ has a unique fixed point in $|z| < 1$.
-
-### b  
-What happens if we replace $|g(z)| < 1$ with $|g(z)|\leq 1$ for $|z|=1$? 
-
-Give an example if (a) is not true or give an proof if (a) is still true.
-
-
-### c
-What happens if we simply assume that $f$ is analytic for
-$|z| < 1$ and $|f(z)| < 1$ for $|z| < 1$? 
-Suppose that $f(z)\not\equiv  z$. 
-
-Can $f$ have more than one fixed point in$|z| < 1$?
-
-> Hint: The map $$\displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\bar{\alpha}z}}$$ may be useful.
-
 
 ## ?
 Let $f(z)$ be entire and assume that $f(z) \leq M |z|^2$ outside some disk for some constant $M$. 
@@ -77,4 +56,25 @@ Let $f(z)$ be analytic in an open set $\Omega$ except possibly at a point $z_0$ 
 
 Show that if $f(z)$ is bounded in near $z_0$, then $\displaystyle \int_\Delta f(z) dz = 0$ for all triangles $\Delta$ in $\Omega$.
 
+### Tie's Extra Questions: Fall 2009
+For $s>0$, the **gamma function** is defined by
+$\displaystyle{\Gamma(s)=\int_0^{\infty} e^{-t}t^{s-1} dt}$.
+
+1.  Show that the gamma function is analytic in the half-plane
+    $\Re (s)>0$, and is still given there by the integral formula
+    above.
+
+2.  Apply the formula in the previous question to show that
+    $$\Gamma(s)\Gamma(1-s)=\frac{\pi}{\sin \pi s}.$$
+
+> Hint: You may need $\displaystyle{\Gamma(1-s)=t \int_0^{\infty}e^{-vt}(vt)^{-s} dv}$ for $t>0$.
+
+
+### Tie's Extra Questions: Fall 2009
+
+Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
+$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
+bounded and closed sub-regions of $D$. Show that
+$\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on
+bounded and closed sub-regions of $D$.
 

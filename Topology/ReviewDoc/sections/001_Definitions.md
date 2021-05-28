@@ -6,6 +6,12 @@
 The prefix "locally blah" almost always means that for every $x\in X$, there exists *some* neighborhood $N_x\ni x$ which has property "blah".
 :::
 
+
+:::{.definition title="Accumulation point"}
+See **limit point**.
+:::
+
+
 :::{.definition title="Basis for a topology"}
 A set $\mathcal{B}$ is a **basis** for a topology iff
 
@@ -17,6 +23,10 @@ The topology **generated** by \( \mathcal{B}  \) is the following: $U\subseteq X
 Equivalently, every open set is a union of basic open sets.
 :::
 
+:::{.definition title="Boundary"}
+The **boundary** of a subset $A\subseteq X$ is defined as $\bd A \da \cl_X(A) \sm \interior{A}$.
+Equivalently, every point $p\in A$ intersects both $A$ and $X\sm A$.
+:::
 
 :::{.definition title="Bounded"}
 A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
@@ -35,7 +45,6 @@ Two topologies are **comparable** if either $\tau_1 < \tau_2$ or $\tau_2 < \tau_
 :::
 
 \todo[inline]{Is this actually a poset relation? Fails reflexivity.}
-
 
 :::{.definition title="Connected"}
 A space $X$ is **connected** iff there does not exist a disconnection $X = A\disjoint B$ with $A, B$ nonempty open sets.
@@ -100,6 +109,10 @@ A subspace $Q\subset X$ is **dense** iff every neighborhood of every point in $x
 Equivalently, $\cl_X(Q) = Q$.
 :::
 
+:::{.definition title="Diameter"}
+For a subset $A$ of a metric space $(X, d)$, the **diameter** of $A$ is defined as $\sup_{p, q\in A}d(p, q)$.
+:::
+
 :::{.definition title="First Countable"}
 A space is **first-countable** iff every point admits a countable neighborhood basis.
 :::
@@ -111,6 +124,16 @@ A topological space $X$ is *Hausdorff* iff points can be separated by disjoint n
 :::{.definition title="Injection"}
 A map $\iota:A\to B$ with a **left** inverse $f:B\to A$ satisfying $f\circ \iota = \id_A$.
 Note that this is equivalent to $f(x) = f(y) \implies x = y$.
+:::
+
+:::{.definition title="Interior Point"}
+A point $p\in A$ is **interior** to $A$ if there exists a neighborhood $U\ni p$ that is entirely contained in $A$.
+:::
+
+:::{.definition title="Isolated Point"}
+A point $p\in A$ is **isolated** if $p$ is not a limit point of $A$.
+Equivalently, there exists a punctured neighborhood of $p$ that does not intersect $A$.
+
 :::
 
 :::{.definition title="Lebesgue Number"}
@@ -334,10 +357,6 @@ For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
 For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
 :::
 
-:::{.definition title="Boundary"}
-
-:::
-\todo[inline]{Definitions}
 
 :::{.definition title="Boundary of a manifold"}
 Points $x\in M^n$ defined by 

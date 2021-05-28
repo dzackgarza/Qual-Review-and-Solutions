@@ -1,6 +1,40 @@
 # Examples
 
+
+
 ## Point-Set
+
+
+:::{.definition title="Topological Notions in Analysis"}
+A useful list:
+
+![image_2021-05-27-20-18-15](figures/image_2021-05-27-20-18-15.png)
+
+Note that limit points require punctured neighborhoods!
+
+:::
+
+:::{.example title="Some useful examples of openness and closedness"}
+
+- $\QQ \subseteq \RR$ is neither open nor closed:
+  - No point is interior, since every neighborhood of $q\in \QQ$ intersects some $p\in \RR\sm\QQ$.
+    No point in the complement is interior for a similar reason.
+  - It has no isolated points, and every $r\in \RR$ is a boundary and accumulation point.
+- $\ZZ \subseteq \RR$ is closed and not open.
+  - Just write $\RR\sm\ZZ = \union_{n\in \ZZ} (n, n+1)$, a countable union of open sets.
+    There are no interior points: every neighborhood of $n\in \ZZ$ intersects $\RR\sm \ZZ$.
+  - Every point is a boundary and accumulation point.
+- Points are closed in $\RR$: $\RR \sm \ts{ p } = (-\infty, p) \union (p, \infty)$.
+  - An infinite intersection of open sets need not be open: $\intersect_{n\in \NN} (p-1/n, p+1/n) = \ts{ p }$ which is closed.
+- Intervals $(a, b)$ are open in $\RR^1$ but not in $\RR^d$ for $d\geq 2$.
+- $\ts{1/n}$ has only isolated boundary points, and no interior points.
+  The point $0$ is an accumulation point.
+- The Cantor set has no interior points and no isolated points.
+  Every point is a boundary point and an accumulation point.
+
+:::
+
+
 
 ### Common Spaces and Operations
 

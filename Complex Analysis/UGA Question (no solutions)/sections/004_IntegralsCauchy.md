@@ -1,21 +1,9 @@
 # Integrals and Cauchy's Theorem (8155d)
 
-> Some interesting problems: 3, 4, 9, 10.
-
-## 1 $\work$
-
-Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in [0, 1]$,
-\[
-\abs{g(x) - g(y)} \leq \abs{f(x) - f(y)}
-.\]
-
-Prove that $g$ is Riemann integrable.
-
 ## 2 $\work$
 
 State and prove Green's Theorem for rectangles.
-
-Then use it to prove Cauchy's Theory for functions that are analytic in a rectangle.
+Use this to prove Cauchy's Theorem for functions that are analytic in a rectangle.
 
 
 ## 3 $\work$
@@ -41,12 +29,15 @@ Show that
 
 Prove that there is no sequence of polynomials that uniformly converge to $f(z) = {1\over z}$ on $S^1$.
 
-:::{.solution}
-\hfill
+
 :::{.concept}
-\hfill
+\envlist
+
+- Uniform limit of holomorphic function is holomorphic
 
 :::
+
+:::{.solution}
 
 - By Cauchy's integral formula, $\int_{S^1} f = 2\pi i$
 - If $p_j$ is any polynomial, then $p_j$ is holomorphic in $\DD$, so $\int_{S^1} p_j = 0$.
@@ -56,7 +47,6 @@ Prove that there is no sequence of polynomials that uniformly converge to $f(z) 
   \]
   which forces $\int f = \int p_j = 0$.
 :::
-
 
 ## 6 $\work$
 
@@ -153,4 +143,136 @@ $\displaystyle \lim_{z \rightarrow a} (z-a) f(z) = A$ exists. Show that
 $$\lim_{r \rightarrow 0} \int_{\gamma_r} f(z) dz  = i A \beta_0 \; , \; \;$$
 where
 $\gamma_r : = \{ z \; | \; z = a + r e^{it}, \; 0 \leq  t \leq \beta_0 \}.$
+
+### Tie's Extra Questions: Fall 2009
+
+Let $f$ be a continuous function in the region
+$$D=\{z \suchthat  \abs{z}>R, 0\leq \arg z\leq \theta\}\quad\text{where}\quad
+1\leq \theta \leq 2\pi.$$ If there exists $k$ such that
+$\displaystyle{\lim_{z\to\infty} zf(z)=k}$ for $z$ in the region
+$D$.
+Show that $$\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,$$
+where $L$ is the part of the circle $|z|=R'$ which lies in the
+region $D$.
+
+### Spring 2020 HW 2 #  2.6.5
+
+Suppose $f\in C_\CC^1(\Omega)$ and $T\subset \Omega$ is a triangle with $T^\circ \subset \Omega$.
+1. Apply Green's theorem to show that $\int_T f(z) ~dz = 0$.
+
+2. Assume that $f'$ is continuous and prove Goursat's theorem.
+
+> Hint: Green's theorem states
+\[
+\int_{T} F d x+G d y=\int_{T^\circ}\left(\frac{\partial G}{\partial x}-\frac{\partial F}{\partial y}\right) d x d y
+.\]
+
+### Spring 2020 HW 2 #  2.6.6
+
+Suppose that $f$ is holomorphic on a punctured open set $\Omega\setminus\theset{w_0}$ and let $T\subset \Omega$ be a triangle containing $w_0$.
+Prove that if $f$ is bounded near $w_0$, then $\int_T f(z) ~dz = 0$.
+
+
+### Spring 2020 HW 2 #  2.6.7
+
+Suppose $f: \DD \to \CC$ is holomorphic and let $d \definedas \sup_{z, w\in \DD}\abs{f(z) - f(w)}$ be the diameter of the image of $f$.
+Show that $2 \abs{f'(0)} \leq d$, and that equality holds iff $f$ is linear, so $f(z) = a_1 z + a_2$.
+
+> Hint: 
+\[
+2f'(0) = \frac{1}{2\pi i} \int_{\abs \xi = r} \frac{ f(\xi) - f(-\xi)  }{\xi^2} ~d\xi
+\]
+whenever $0<r<1$.
+
+
+### Spring 2020 HW 2 #  2.6.8
+
+Suppose that $f$ is holomorphic on the strip $S = \theset{x+iy \suchthat x\in \RR,~ -1<y<1}$ with $\abs{f(z)} \leq A \qty{1 + \abs z}^\nu$ for $\nu$ some fixed real number.
+Show that for all $z\in S$, for each integer $n\geq 0$ there exists an $A_n \geq 0$ such that $\abs{f^{(n)}(x)} \leq A_n (1 + \abs x)^\nu$ for all $x\in \RR$.
+
+> Hint: Use the Cauchy inequalities.
+
+### Spring 2020 HW 2 #  2.6.9
+
+Let $\Omega \subset \CC$ be open and bounded and $\phi: \Omega \to \Omega$ holomorphic.
+Prove that if there exists a point $z_0 \in \Omega$ such that $\phi(z_0) = z_0$ and $\phi'(z_0) = 1$, then $\phi$ is linear.
+
+> Hint: assume $z_0 = 0$ (explain why this can be done) and write $\phi(z)  = z + a_n z^n + O(z^{n+1})$ near $0$.
+  Let $\phi_k = \phi \circ \phi \circ \cdots \circ \phi$ and prove that $\phi_k(z) = z + ka_nz^n  + O(z^{n+1})$.
+  Apply Cauchy's inequalities and let $k\to \infty$ to conclude.
+
+### Spring 2020 HW 2 #  6
+Show by example that there exists a function $f(z)$ that is holomorphic on $\theset{z\in \CC \suchthat 0 < \abs{z} < 1}$ and for all $r<1$,
+\[
+\int_{\abs z = r} f(z) \, dz = 0
+,\]
+but $f$ is not holomorphic at $z=0$.
+
+### Spring 2020 HW 2 #  7
+Let $f$ be analytic on a region $R$ and suppose $f'(z_0) \neq 0$ for some $z_0 \in R$.
+Show that if $C$ is a circle of sufficiently small radius centered at $z_0$, then 
+\[
+\frac{2 \pi i}{f^{\prime}\left(z_{0}\right)}=\int_{C} \frac{d z}{f(z)-f\left(z_{0}\right)}
+.\]
+
+> Hint: use the inverse function theorem.
+
+### Spring 2020 HW 2 #  8
+Assume two functions $u, b: \RR^2 \to \RR$ have continuous partial derivatives at $(x_0 ,y_0)$.
+Show that $f \definedas u + iv$ has derivative $f'(z_0)$ at $z_0 = x_0 + iy_0$ if and only if
+\[
+\lim _{r \rightarrow 0} \frac{1}{\pi r^{2}} \int_{\left|z-z_{0}\right|=r} f(z) d z=0
+.\]
+
+
+### Spring 2020 HW 2 #  9 (Cauchy's Formula for Exterior Regions)
+
+Let $\gamma$ be a piecewise smooth simple closed curve with interior $\Omega_1$ and exterior $\Omega_2$.
+Assume $f'$ exists in an open set containing $\gamma$ and $\Omega_2$ with $\lim_{z\to \infty} f(z) = A$.
+Show that
+\[
+\frac{1}{2 \pi i} \int_{\gamma} \frac{f(\xi)}{\xi-z} d \xi=\left\{\begin{array}{ll}
+A, & \text { if } z \in \Omega_{1} \\
+-f(z)+A, & \text { if } z \in \Omega_{2}
+\end{array}\right.
+.\]
+
+### Spring 2020 HW 2 #  10
+Let $f(z)$ be bounded and analytic in $\CC$.
+Let $a\neq b$ be any fixed complex numbers.
+Show that the following limit exists:
+\[
+\lim_{R\to \infty} \int_{\abs z = R} {f(z) \over (z-a)(z-b)} \,dz
+.\]
+
+Use this to show that $f(z)$ must be constant.
+
+
+### Spring 2020 HW 2 #  11
+Suppose $f(z)$ is entire and 
+\[
+\lim_{z\to\infty} {f(z) \over z} = 0
+.\]
+
+Show that $f(z)$ is a constant.
+
+### Spring 2020 HW 2 #  12
+Let $f$ be analytic in a domain $D$ and $\gamma$ be a closed curve in $D$.
+For any $z_0\in D$ not on $\gamma$, show that
+\[
+\int_{\gamma} \frac{f^{\prime}(z)}{\left(z-z_{0}\right)} d z=\int_{\gamma} \frac{f(z)}{\left(z-z_{0}\right)^{2}} d z
+.\]
+Give a generalization of this result.
+
+
+### Spring 2020 HW 2 #  13
+
+Compute
+\[
+\int_{\abs z = 1} \qty{z + {1\over z}}^{2n} {dz \over z}
+\]
+and use it to show that
+\[
+\int_0^{2\pi} \cos^{2n}(\theta) \, d\theta = 2\pi \qty{1\cdot 3 \cdot 5 \cdots (2n-1) \over 2 \cdot 4 \cdot 6 \cdots (2n)}
+.\]
 

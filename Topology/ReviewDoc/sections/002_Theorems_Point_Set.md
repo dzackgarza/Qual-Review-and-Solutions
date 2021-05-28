@@ -21,7 +21,7 @@ The following are **not preserved**:
 ## Metric Spaces and Analysis
 
 :::{.theorem title="Cantor's Intersection Theorem"}
-A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
+A decreasing collection of nested nonempty compact sets $C_1 \supset C_2 \supset \cdots$ in a topological space $X$ is always nonempty.
 :::
 
 :::{.theorem title="Cantor's Nested Intervals Theorem"}

@@ -10,15 +10,10 @@
 | $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
 | $\HH_{1\over 2}$                                             | The first quadrant                                     |
 | $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
-| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizonta strip |
+| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizontal strip                                   |
 |                                                              |                                                        |
 |                                                              |                                                        |
 |                                                              |                                                        |
-|                                                              |                                                        |
-|                                                              |                                                        |
-|                                                              |                                                        |
-|                                                              |                                                        |
-
 
 ## Greatest Hits
 
@@ -28,13 +23,16 @@ Things to know well:
 - \cref[CauchyTheorem]{Cauchy's Theorem}
 - \cref[CauchyIntegral]{Cauchy's Integral Formula}
 - \cref[CauchyInequality]{Cauchy's Inequality}
+
 - \cref[Morera]{Morera's Theorem}
-- \cref[SchwarzReflection]{The Schwarz Reflection Principle}
-- \cref[MaximumModulus]{Maximum Modulus Principle}
-- \cref[SchwarzLemma]{The Schwarz Lemma}
 - \cref[Liouville]{Liouville's Theorem}
-- \cref[Casorati]{Casorati-Weierstrass Theorem}
+
+- \cref[MaximumModulus]{Maximum Modulus Principle}
 - \cref[Rouche]{Rouché's Theorem}
+
+- \cref[SchwarzReflection]{The Schwarz Reflection Principle}
+- \cref[SchwarzLemma]{The Schwarz Lemma}
+- \cref[Casorati]{Casorati-Weierstrass Theorem}
 - Properties of linear fractional transformations
 - Automorphisms of $\DD, \CC, \CP^1$.
 
@@ -94,7 +92,6 @@ Define $(n)_k$ to be the falling factorial $\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdo
 .\]
 :::
 
-
 :::{.fact title="Some useful series"}
 \[
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
@@ -107,7 +104,6 @@ Define $(n)_k$ to be the falling factorial $\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdo
 \]
 :::
 
-
 :::{.fact}
 Useful trick for expanding square roots:
 \[
@@ -116,5 +112,4 @@ Useful trick for expanding square roots:
 .\]
 
 :::
-
 

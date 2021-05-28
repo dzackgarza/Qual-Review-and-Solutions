@@ -1,10 +1,4 @@
----
-title: UGA Topology Qualifying Exam Questions and Solutions
-hidesolutions: false
-todos: true
----
-
-**Preface**
+# Preface
 
 A great deal of credit for this document goes to Mike Usher, who created an initial PDF of past UGA qual questions organized by topic.
 Here is a list of problems that Mike recommended reviewing during our problem sessions in Spring 2020:
@@ -23,6 +17,3 @@ Here is a list of problems that Mike recommended reviewing during our problem se
 Usually 30% of the problems on any given qual are related to point-set/general Topology.
 Note that this material is not covered in the course!
 :::
-
-
-

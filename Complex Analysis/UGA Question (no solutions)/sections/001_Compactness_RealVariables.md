@@ -49,3 +49,14 @@ Prove that if $\theset{f_n}$ converges pointwise to $0$ on $[0, 1]$ then it conv
 
 ## 9 $\work$
 Show that if $E\subset [0, 1]$ is uncountable, then there is some $t\in \RR$ such that $E\intersect (-\infty ,t)$ and $E\intersect (t, \infty)$ are also uncountable.
+
+
+## 1 $\work$
+
+Suppose $f, g: [0, 1] \to \RR$ where $f$ is Riemann integrable and for $x, y\in [0, 1]$,
+\[
+\abs{g(x) - g(y)} \leq \abs{f(x) - f(y)}
+.\]
+
+Prove that $g$ is Riemann integrable.
+
