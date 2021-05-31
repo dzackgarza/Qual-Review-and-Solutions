@@ -189,6 +189,11 @@ AB \leq {A^p \over p} + {B^q \over q}
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
 .\]
 
+As a consequence,
+\[
+1-x \leq e^{-x}
+.\]
+
 :::
 
 :::{.proposition title="Exponential Inequality"}

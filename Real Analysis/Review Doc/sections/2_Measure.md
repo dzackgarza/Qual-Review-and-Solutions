@@ -36,18 +36,89 @@ $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
 
 :::{.proposition title="Continuity of Measure"}
 \[
-E_{i} \nearrow E &\implies m(E_{i}) \to m(E) \\
+\text{Continuity from below:} \quad 
+E_{n} \nearrow E &\implies m(E_{n}) \to m(E) \\
+\text{Continuity from above:} \quad 
 m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
 .\]
+
+Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.
 :::
 
-:::{.proof title="of continuity of measure"}
+:::{.proof title="sketches"}
 \envlist
 
-1. Break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, etc then apply countable disjoint additivity to $E = \disjoint A_{i}$.
+- From below: break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, 
+  - Apply countable disjoint additivity to $E = \disjoint A_{i}$.
 
-2. Use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+- From above: funny step, use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$.
+  - Taking measures yields a telescoping sum, and use countable additivity, then finiteness to subtract.
+
+![image_2021-05-28-23-29-31](figures/image_2021-05-28-23-29-31.png)
+
+
 :::
+
+
+:::{.proof title="of continuity of measure from below, detailed"}
+For any measure $\mu$,
+\[
+\mu(F_1) < \infty,\, F_k \decreasesto F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+,\]
+  where $F_k \searrow F$ means $F_1 \supseteq F_2 \supseteq \cdots$ with $\intersect_{k=1}^\infty F_k = F$.
+  - Note that $\mu(F)$ makes sense: each $F_k \in \mathcal{B}$, which is a $\sigma\dash$algebra and closed under countable intersections.
+
+- Take disjoint annuli by setting $E_k \da F_k \sm F_{k+1}$
+- Funny step: write
+\[
+F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
+.\]
+
+  - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
+  - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
+  - $x\not\in F_2$ but $x\in F_3$, and so on.
+
+- Now take measures, and note that we get a telescoping sum:
+\[
+\mu(F_1) 
+&= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+&= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \sm F_{k+1} ) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+&= \mu(F) + \lim_{N\to\infty} 
+[
+(\mu(F_1) - \mu(F_2)) +  
+(\mu(F_2) - \mu(F_3)) +  
+\cdots \\ 
+& \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+(\mu(F_N) - \mu(F_{N+1})) 
+] \\ \\
+&= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+.\]
+
+- Justifying the measure subtraction: the general statement is that for any pair of sets $A\subseteq X$, $\mu(X\sm A) = \mu(X) - \mu(A)$ when $\mu(A) < \infty$:
+  \[
+  X &= A \disjoint (X\sm A) \\
+  \implies \mu(X) &= \mu(A) + \mu(X\sm A) && \text{countable additivity} \\
+  \implies \mu(X) -\mu(A) &= \mu(X\sm A) && \text{if } \mu(A) < \infty 
+  .\]
+
+
+- Now use that $\mu(F_1)<\infty$ to justify subtracting it from both sides:
+\[
+\mu(F_1)
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\implies
+0
+&= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\lim_{N\to\infty} \mu(F_{N+1})
+&= \mu(F_1) 
+.\]
+
+- Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
+:::
+
 
 :::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
 Suppose $E$ is measurable; then for every $\eps>0$,

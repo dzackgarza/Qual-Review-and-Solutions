@@ -225,9 +225,23 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 
 :::{.definition title="Limsup and Liminf of Sets"}
 \[
-\limsup_{n} A_{n} \da \intersect_{n} \union_{j\geq n} A_{j}&= \theset{x \suchthat x\in A_{n} \text{ for inf. many $n$}}  \\
-\liminf_{n} A_{n} \da \union_{n} \intersect_{j\geq n} A_{j} &= \theset{x \suchthat x\in A_{n} \text{ for all except fin. many $n$}}  \\
+\liminf_{n} E_{n} \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for all but finitely many } n}  \\
+\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n}  \\
 .\]
+
+How to derive these definitions:
+
+- For $A \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n$:
+  - $x\in A \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
+    So $x$ is in *all* but finitely many $n$.
+
+- For $B \da \Intersect{N=1}^\infty \Union{n=N}^\infty E_n$:
+  - $x\in B \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
+    So $x$ is an infinitely many $E_n$.
+
+Note that $A\subseteq B$ since being in all but finitely many $E_n$ necessarily implies being in infinitely many.
+This corresponds to $\liminf_n E_n \subseteq \limsup_n E_n$.
+  
 :::
 
 :::{.definition title="Lebesgue Measurable Sets"}

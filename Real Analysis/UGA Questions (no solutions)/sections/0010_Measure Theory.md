@@ -4,16 +4,16 @@
 
 Let $m_*$ denote the Lebesgue outer measure on \( \RR \).
 
-### a. 
+a.. 
 Prove that for every $E\subseteq \RR$ there exists a Borel set $B$ containing $E$ such that
 \[
 m_*(B) = m_*(E)
 .\]
 
-### b. 
+b.. 
 Prove that if $E\subseteq \RR$ has the property that
 \[
-m_*(A) = m_*(A\intersect E) + m_*(A\intersect E^c)
+m_*(A) = m_*(A\Intersect E) + m_*(A\Intersect E^c)
 \]
 for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ such that $E = B\setminus N$ with $m_*(N) = 0$.
 
@@ -46,14 +46,14 @@ Be sure to address the case when $m_*(E) = \infty$.
 
 - Note 
 \[
-Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
+Q \subseteq \Union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
 .\]
 - Taking an infimum over coverings on the RHS preserves the inequality, so 
   $$\abs{Q} \leq (1+\eps) m_*(Q)$$
 - Take $\eps\to 0$ to obtain final inequality.
 :::
 
-### a
+a.
 
 - If $m_*(E) = \infty$, then take $B = \RR^n$ since $m(\RR^n) = \infty$.
 - Suppose $N \definedas m_*(E) < \infty$.
@@ -63,14 +63,14 @@ $$
 \sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps
 .$$
 
-- For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
+- For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \Union_{i=1}^\infty Q_i(\eps_n)$.
 
 - The outer measure of cubes is *equal* to the sum of their volumes, so 
 \[
 m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
 .\]
 
-- Now set $B \definedas \intersect_{n=1}^\infty B_n$.
+- Now set $B \definedas \Intersect_{n=1}^\infty B_n$.
 
   - Since $E\subseteq B_n$ for every $n$, $E\subseteq B$
   - Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
@@ -83,15 +83,15 @@ m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
 - This forces $m_*(E) = m_*(B)$.
 
 
-### b
+b.
 
 Suppose $m_*(E) < \infty$.
 
 - By (a), find a Borel set $B\supseteq E$ such that $m_*(B) = m_*(E)$
-- Note that $E\subseteq B \implies B\intersect E = E$ and $B\intersect E^c = B\setminus E$.
+- Note that $E\subseteq B \implies B\Intersect E = E$ and $B\Intersect E^c = B\setminus E$.
 - By assumption, 
 \[
-m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
+m_*(B) &= m_*(B\Intersect E) + m_*(B\Intersect E^c) \\
 m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
 m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \\ 
 \implies m_*(B\setminus E) &= 0
@@ -101,17 +101,17 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \
 
 If $m_*(E) = \infty$:
 
-- Apply result to $E_R\definedas E \intersect [R, R+1)^n \subset \RR^n$ for $R\in \ZZ$, so $E = \disjoint_R E_R$
+- Apply result to $E_R\definedas E \Intersect [R, R+1)^n \subset \RR^n$ for $R\in \ZZ$, so $E = \disjoint_R E_R$
 - Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
 - Note that
-  -   $B\definedas \union_R B_R$ is a union of Borel sets and thus still Borel
-  -  $E = \union_R E_R$
+  -   $B\definedas \Union_R B_R$ is a union of Borel sets and thus still Borel
+  -  $E = \Union_R E_R$
   - $N\definedas B\setminus E$
-  - $N' \definedas \union_R N_R$ is a union of null sets and thus still null
+  - $N' \definedas \Union_R N_R$ is a union of null sets and thus still null
 - Since $E_R \subset B_R$ for every $R$, we have $E\subset B$
 - We can compute
 \[
-N = B\setminus E = \qty{ \union_R B_R } \setminus \qty{\union_R E_R } \subseteq \union_R \qty{B_R\setminus E_R} = \union_R N_R \definedas N'
+N = B\setminus E = \qty{ \Union_R B_R } \setminus \qty{\Union_R E_R } \subseteq \Union_R \qty{B_R\setminus E_R} = \Union_R N_R \definedas N'
 \]
 where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 0$.
 :::
@@ -134,17 +134,15 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Borel-Cantelli: for a sequence of sets $X_n$, 
 \[
-\limsup_n X_n &= \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
-&= \intersect_{m\in \NN} \union_{n\geq m} X_n
+\theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
+&= \Intersect_{m\in \NN} \Union_{n\geq m} X_n
 \\
-\liminf_n X_n &= \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
-&= \union_{m\in \NN} \intersect_{n\geq m} X_n
+\theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
+&= \Union_{m\in \NN} \Intersect_{n\geq m} X_n
 .\]
 
 - Properties of logs and exponentials:
@@ -157,143 +155,255 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 :::
 
-### a
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
 
 - The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
 - $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
 
-### b
+:::
 
-- Tails of convergent sums go to zero, so $\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0$, 
-- $B_M \definedas \intersect_{m = 1}^M \union_{n\geq m} B_n \searrow B$.
+:::{.proof title="of b"}
+\envlist
 
+- Tails of convergent sums go to zero, so 
 \[
-\mu(B_M) 
-&= \mu\left(\intersect_{m\in \NN} \union_{n\geq m} B_n\right) \\
-&\leq \mu\left( \union_{n\geq m} B_n \right) \quad \text{for all } m\in \NN \text{ by countable subadditivity} \\ 
-&\to 0
+\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0
+.\] 
+- Also,
+\[
+B_M \definedas \Intersect_{N = 1}^M \Union_{n\geq N} B_n \decreasesto B 
+.\]
+- A computation:
+\[
+\mu(B) 
+&\da \mu\left(\Intersect_{N\geq 1} \Union_{n\geq N} B_n\right) \\
+&\leq \mu\left( \Union_{n\geq N} B_n \right) && \forall N \\
+&\converges{N\to\infty}\too 0
 ,\]
+  where we've used that we're intersecting over fewer sets and this can only increase measure.
 
-- The result follows by continuity of measure.
+:::
 
-### c
+:::{.proof title="of c"}
+\envlist
 
-- To show $\mu(B) = 1$, we'll show $\mu(B^c) = 0$.
-
-- Let $B_k = \intersect_{m=1}^\infty \union_{n = m}^K B_n$. Then
+- Since $\mu(X) = 1$, in order to show $\mu(B) = 1$ it suffices to show $\mu(X\sm B) = 0$.
+- A computation:
 \[
-\mu(B_K^c) 
-&= \mu \left(\union_{m=1}^\infty \intersect_{n=m}^K B_n^c\right) \\
-&\leq \sum_{m=1}^\infty \mu\left( \intersect_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
-&= \sum_{m=1}^\infty \prod_{n=m}^K \qty{1 - \mu(B_n)} \quad \text{by assumption} \\ 
-&\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
-&= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
-&\converges{K\to\infty}\to 0
-\]
-  since $\displaystyle\sum_{n=m}^K \mu(B_n^c) \converges{K\to\infty}\to \infty$ by assumption 
+\mu(B^c) 
+&= \mu\qty{
+\qty{
+\Intersect _{N=1}^\infty \Union_{n=N}^\infty B_n
+}^c
+}\\
+&= \mu\qty{
+\Union _{N=1}^\infty \Intersect_{n=N}^\infty B_n^c
+} \\
+&\leq \sum_{N=1}^\infty 
+\mu\qty{
+\Intersect_{n=N}^\infty B_n^c
+} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty} \mu\qty{ \Intersect _{n=N}^K B_n^c } && \text{continuity of measure from above} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K \qty{1 - \mu(B_n)} && \text{by assumption} \\
+&\leq 
+\sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K e^{-\mu(B_n)} && \text{by hint} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty}  e^{-\sum_{n=N}^K \mu(B_n)}  \\
+&=
+\sum_{N=1}^\infty  e^{-\lim_{K\to\infty} \sum_{n=N}^K \mu(B_n)} && \text{by continuity of } f(x) = e^x \\
+&=
+\sum_{N=1}^\infty  e^{-\sum_{n=N}^\infty \mu(B_n)}  \\
+&=
+\sum_{N=1}^\infty 0 \\
+&= 0
+.\]
 
-- We can apply continuity of measure since $B_K^c \mapsvia{K\to\infty} B^c$.
+- Here we've used that every tail of a divergent sum is divergent:
+if $\sum_{n=1}^\infty a_n \to \infty$ then for every $N$, the tail $\sum_{n=N}^\infty a_n \to \infty$ as well.
+- We've also use that if $b_n\to \infty$ then $e^{-b_n} \to 0$.
 
-\todo[inline]{How to prove the hint..?}
+:::
+
 :::
 
 ## Spring 2019 # 2 $\done$
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B \to [0, \infty)$ denote a finite Borel measure on $\RR$.
   
-### a 
+a. 
 Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
 \[
 \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
 \]
 
-### b 
+b. 
 Suppose $\mu$ has the property that $\mu (E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
-
 Prove that for every $\epsilon  > 0$ there exists $\delta > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $\mu(E) < ε$.
 
-\todo[inline]{Add concepts.}
+:::{.concept}
+\envlist
+- Proof of continuity of measure.
+- Using limsup/liminf sets (intersections of unions and vice-versa) and (sub)additivity to bound measures.
+  - Control over lower bound: use tails of convergent sums
+  - Control over upper bound: use rapidly converging coefficients like $\sum 1/2^n$
+- Convergent sums have vanishing tails.
+- Intersecting over *more* sets can only lose measure, taking a union over *more* can only gain measure.
+- Similarly intersecting over *fewer* sets can only *gain* measure, and taking a union over *fewer* sets can only *lose* measure.
+:::
+
+
+:::{.strategy}
+Use a limsup or liminf of sets and continuity of measure.
+Note that choosing a limsup vs a liminf is fiddly -- for one choice, you can only get one of the bounds you need, for the other choice you can get both.
+:::
+
 
 :::{.solution}
-\hfill
+\envlist
 
-:::{.concept}
-\hfill
-- ?
+:::{.proof title="of a"}
+- Observation: $\mu$ finite means $\mu(E) < \infty$ for all $E \in\mathcal{B}$, which we'll need in several places.
+- Prove a more general statement: for any measure $\mu$,
+\[
+\mu(F_1) < \infty,\, F_k \decreasesto F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+,\]
+  where $F_k \searrow F$ means $F_1 \supseteq F_2 \supseteq \cdots$ with $\Intersect_{k=1}^\infty F_k = F$.
+  - Note that $\mu(F)$ makes sense: each $F_k \in \mathcal{B}$, which is a $\sigma\dash$algebra and closed under countable intersections.
+
+- Take disjoint annuli by setting $E_k \da F_k \sm F_{k+1}$
+- Funny step: write
+\[
+F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
+.\]
+
+  - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
+  - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
+  - $x\not\in F_2$ but $x\in F_3$, and so on.
+
+- Now take measures, and note that we get a telescoping sum:
+\[
+\mu(F_1) 
+&= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+&= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \sm F_{k+1} ) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+&= \mu(F) + \lim_{N\to\infty} 
+[
+(\mu(F_1) - \mu(F_2)) +  
+(\mu(F_2) - \mu(F_3)) +  
+\cdots \\ 
+& \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+(\mu(F_N) - \mu(F_{N+1})) 
+] \\ \\
+&= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+.\]
+
+- Justifying the measure subtraction: the general statement is that for any pair of sets $A\subseteq X$, $\mu(X\sm A) = \mu(X) - \mu(A)$ when $\mu(A) < \infty$:
+  \[
+  X &= A \disjoint (X\sm A) \\
+  \implies \mu(X) &= \mu(A) + \mu(X\sm A) && \text{countable additivity} \\
+  \implies \mu(X) -\mu(A) &= \mu(X\sm A) && \text{if } \mu(A) < \infty 
+  .\]
+
+
+- Now use that $\mu(F_1)<\infty$ to justify subtracting it from both sides:
+\[
+\mu(F_1)
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\implies
+0
+&= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\lim_{N\to\infty} \mu(F_{N+1})
+&= \mu(F_1) 
+.\]
+
+- Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
 :::
 
-### a
+:::{.proof title="of b"}
+\envlist
 
-> See Folland p.26
-
-- Lemma 1: $\mu(\disjoint_{k=1}^\infty E_k) = \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k)$.
-
-- Suppose $F_0 \supseteq F_1 \supseteq \cdots$.
-- Let $A_k = F_k \setminus F_{k+1}$, since the $F_k$ are nested the $A_k$ are disjoint
-- Set $A \definedas \disjoint_{k=1}^\infty A_k$ and $F \definedas \intersect_{k=1}^\infty F_k$.
-- Note $X = X\setminus Y ~\disjoint~ X\intersect Y$ for any two sets (just write $X\setminus Y \definedas X\intersect  Y^c$)
-- Note that $A$ contains anything that was removed from $F_0$ when passing from any $F_j$ to $F_{j+1}$, while $F$ contains everything that is never removed at any stage, and these are disjoint possibilities.
-- Thus $F_0 = F \disjoint A$, so 
+- Toward a contradiction, negate the implication: there exists an $\eps>0$ such that for all $\delta$, there exists an $E\in \mathcal{B}$ 
 \[
-\mu(F_0) 
-&= \mu(F) + \mu(A) \\
-&= \mu(F) + \mu(\disjoint_{k=1}^\infty A_k) \\
-&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(A_k) \quad \text{by countable additivity}\\
-&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
-&= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
-&=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
+m(E) < \delta && \text{but} \hspace{4em} \mu(E) > \eps 
+.\]
+
+  - **Goal**: produce a set $A$ with $m(A)= 0$ **but** $\mu(A)\neq 0$.
+- Take a sequence $\delta_n = \alpha(n)$, some function to be determined later, produce sets $E_n$ with
+\[
+m(E_n) < \delta_n && \text{but} \hspace{4em} \mu(E_n) > \eps \quad \forall n
+.\]
+- Set 
+\[
+A_M \da \Intersect_{N=1}^M \Union_{n=N}^\infty E_n \da \Intersect_{N=1}^M F_N
+\hspace{4em} 
+F_N \da \Union_{n=N}^\infty E_n
+.\]
+  - Observation: $F_N \supseteq F_{N+1}$ for all $N$, since the right-hand side involves taking a union over *fewer* sets.
+  - Notation: define
+\[
+A_\infty \da \Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n
+.\]
+
+- Bounding the Lebesgue measure $m$ from above:
+\[
+m(A_\infty)
+&\da
+m\qty{ 
+\Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n
+} \\
+&\leq
+m\qty{ 
+\Union_{n=N}^\infty E_n
+} && \forall N \\
+&\leq \sum_{n=N}^\infty m(E_n) && \forall N \quad \text{by countable subadditivity} \\
+&\leq \sum_{n=N}^\infty \alpha(n) \\ \\
+&\converges{N\to\infty}\too 0
 ,\]
+  where we've used that intersecting over *fewer* sets (i.e. none) can only increase measure in the first bound.
+  - We have control over the sequence $\alpha(n)$, so we can choose it to be summable so that the tails converge to zero as rapidly as we'd like.
+  - So e.g. for any $\eps_1 >0$, we can choose $\alpha(n) \da \eps_1/2^n$, then
+  \[
+  \sum_{n=N}^\infty \alpha(n) &\leq \sum_{n=1}^\infty {\eps_1 \over 2^n} = \eps_1 \to 0
+  .\]
 
-- Since $\mu$ is a finite measure, $\mu(F_1) < \infty$ and can be subtracted, yielding
+- Bounding the $\mu$ measure from below:
 \[
-\mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
-\implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
-\implies \mu\qty{\intersect_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
-.\]
-
-### b
-
-- Toward a contradiction, negate the implication: suppose there exists an $\eps>0$ such that for all $\delta$, we have $m(E) < \delta$ but $\mu(E) > \eps$.
-- The sequence $\theset{\delta_n \definedas {1\over 2^n}}_{n\in \NN}$ and produce sets $A_n\in \mcb$ such $m(A_n) < {1\over 2^n}$ but $\mu(A_n) > \varepsilon$.
-- Define
-\[
-F_n &\definedas \union_{j\geq n} A_j \\
-C_m &\definedas \intersect_{k=1}^m F_k \\
-A &\definedas C_\infty \definedas \intersect_{k=1}^\infty F_k 
-.\]
-
-- Note that $F_1 \supseteq F_2 \supseteq \cdots$, since each increase in index unions fewer sets.
-- By continuity for the Lebesgue measure, 
-\[
-m(A) 
-= m \qty{\intersect_{k=1}^\infty F_k }
-= \lim_{k\to \infty} m (F_k) 
-= \lim_{k\to\infty} m\qty{\union_{j\geq k} A_j } 
-\leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
-= \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
-= 0
+\mu(A_\infty) 
+&\da
+\mu\qty{\Intersect_{N=1}^\infty F_N} \\
+&= \lim_{N\to\infty} \mu(F_N) && \text{by part (1) }\\
+&= \lim_{N\to\infty} \mu\qty{ \Union_{n=N}^\infty E_n } \\
+&\geq \lim_{N\to\infty} \mu(E_N ) \\
+&\geq \lim_{N\to\infty} \eps \\
+&= \eps \\
+&>0
 ,\]
-  which follows because this is the tail of a convergent sum
+where we've used that taking a union over *fewer* sets can only make the measure smaller.
 
-- Thus $m(A) = 0$ and by assumption, this implies $\mu(A) = 0$.
-
-- However, by part (a),
-\[
-\mu(A) = \lim_n \mu\left( \union_{k=n}^\infty A_k \right)
-\geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
-.\]
 :::
-\todo[inline]{All messed up!}
 
-## Fall 2018 # 2 $\done$
+:::
+
+
+## Fall 2018 # 2 $\work$
 Let $E\subset \RR$ be a Lebesgue measurable set.
 Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
 \todo[inline]{Move this to review notes to clean things up.}
 
-:::{.solution}
-\hfill
+\todo[inline]{What a mess, redo!!}
+
+
 :::{.concept}
-\hfill
+\envlist
+
 - Definition of measurability: there exists an open $O\supset E$ such that $m_*(O\setminus E) < \eps$ for all $\eps> 0$.
 - Theorem: $E$ is Lebesgue measurable iff there exists a closed set $F\subseteq E$ such that $m_*(E\setminus F) < \eps$ for all $\eps>0$.
 - Every $F_\sigma, G_\delta$ is Borel.
@@ -303,13 +413,13 @@ Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
 - Claim: $E$ is measurable $\implies$ there exists an open $O\supseteq E$ such that $m(O\setminus E) = 0$.
   - Since $E$ is measurable, for each $n\in \NN$ choose $G_n \supseteq E$ such that $m_*(G_n\setminus E) < {1\over n}$.
-  - Set $O_N \definedas \intersect_{n=1}^N G_n$ and $O\definedas \intersect_{n=1}^\infty G_n$.
+  - Set $O_N \definedas \Intersect_{n=1}^N G_n$ and $O\definedas \Intersect_{n=1}^\infty G_n$.
   - Suppose $E$ is bounded.
     - Note $O_N \searrow O$ and $m_*(O_1) < \infty$ if $E$ is bounded, since in this case
     \[
     m_*(G_n\setminus E) = m_*(G_1) - m_*(E) < 1 \iff m_*(G_1) < m_*(E) + {1\over n} < \infty
     .\]
-    - Note $O_N \setminus E \searrow O \setminus E$ since $O_N\setminus E \definedas O_N \intersect E^c \supseteq O_{N+1} \intersect E^c$ for all $N$, and again $m_*(O_1 \setminus E) < \infty$.
+    - Note $O_N \setminus E \searrow O \setminus E$ since $O_N\setminus E \definedas O_N \Intersect E^c \supseteq O_{N+1} \Intersect E^c$ for all $N$, and again $m_*(O_1 \setminus E) < \infty$.
     - So it's valid to apply continuity of measure from above:
 \[
 m_*(O\setminus E) 
@@ -317,12 +427,12 @@ m_*(O\setminus E)
 &\leq \lim_{N\to \infty} m_*(G_N\setminus E) \\ 
 &= \lim_{N\to\infty} {1\over N} = 0
 ,\]
-      where the inequality uses subadditivity on $\intersect_{n=1}^N G_n \subseteq G_N$
+      where the inequality uses subadditivity on $\Intersect_{n=1}^N G_n \subseteq G_N$
   - Suppose $E$ is unbounded.
-    - Write $E^k = E \intersect [k, k+1]^d \subset \RR^d$ as the intersection of $E$ with an annulus, and note that $E = \disjoint_{k\in \NN} E_k$.
+    - Write $E^k = E \Intersect [k, k+1]^d \subset \RR^d$ as the intersection of $E$ with an annulus, and note that $E = \disjoint_{k\in \NN} E_k$.
     - Each $E_k$ is bounded, so apply the previous case to obtain $O_k \supseteq E_k$ with $m(O_k\setminus E_k) = 0$.
     - So write $O_k = E_k \disjoint N_k$ where $N_k \definedas O_k \setminus E_k$ is a null set.
-    - Define $O = \union_{k\in \NN} O_k$, note that $E\subseteq O$.
+    - Define $O = \Union_{k\in \NN} O_k$, note that $E\subseteq O$.
     - Now note
 \[
 O\setminus E 
@@ -334,7 +444,7 @@ O\setminus E
   since any countable union of null sets is again null.
   - So $O\supseteq E$ with $m(O\setminus E) = 0$.
 - Theorem: since $E$ is measurable, $E^c$ is measurable
-  - Proof: It suffices to write $E^c$ as the union of two measurable sets, $E^c = S \union (E^c - S)$, where $S$ is to be determined.
+  - Proof: It suffices to write $E^c$ as the union of two measurable sets, $E^c = S \Union (E^c - S)$, where $S$ is to be determined.
   - We'll produce an $S$ such that $m_*(E^c - S) = 0$ and use the fact that any subset of a null set is measurable.
   - Since $E$ is measurable, for every $\eps > 0$ there exists an open $\OO_\eps \supseteq E$ such that $m_*(\OO_\eps \setminus E) < \eps$.
   - Take the sequence $\theset{\eps_n \definedas {1\over n}}$ to produce a sequence of sets $\OO_n$.
@@ -342,16 +452,16 @@ O\setminus E
   \[
   \OO_n \supseteq E \iff \OO_n^c \subseteq E^c
   .\]
-  - Set $S \definedas \union_n \OO_n^c$, which is a union of closed sets, thus an $F_\sigma$ set, thus Borel, thus measurable.
+  - Set $S \definedas \Union_n \OO_n^c$, which is a union of closed sets, thus an $F_\sigma$ set, thus Borel, thus measurable.
   - Note that $S\subseteq E^c$ since each $\OO_n \subseteq E^c$.
   - Note that
   \[
   E^c\setminus S 
-  &\definedas E^c \setminus \qty{\union_{n=1}^\infty \OO_n^c} \\
-&\definedas E^c \intersect \qty{\union_{n=1}^\infty \OO_n^c}^c  \quad\text{definition of set minus} \\ 
-  &= E^c \intersect \qty{\intersect_{n=1}^\infty \OO_n}^c  \quad \text{De Morgan's law}\\
-  &= E^c \union \qty{\intersect_{n=1}^\infty \OO_n}  \\
-  &\definedas \qty{ \intersect_{n=1}^\infty \OO_n} \setminus E \\
+  &\definedas E^c \setminus \qty{\Union_{n=1}^\infty \OO_n^c} \\
+&\definedas E^c \Intersect \qty{\Union_{n=1}^\infty \OO_n^c}^c  \quad\text{definition of set minus} \\ 
+  &= E^c \Intersect \qty{\Intersect_{n=1}^\infty \OO_n}^c  \quad \text{De Morgan's law}\\
+  &= E^c \Union \qty{\Intersect_{n=1}^\infty \OO_n}  \\
+  &\definedas \qty{ \Intersect_{n=1}^\infty \OO_n} \setminus E \\
   & \subseteq \OO_N \setminus E \quad \text{for every } N\in \NN
   .\]
   - Then by subadditivity,
@@ -360,20 +470,21 @@ O\setminus E
     .$$
   - Thus $E^c\setminus S$ is measurable.
 :::
-  
-### Indirect Proof
+
+:::{.solution}
+\envlist
 
 - Since $E$ is measurable, $E^c$ is measurable.
 - Since $E^c$ is measurable exists an open $O\supseteq E^c$ such that $m(O\setminus E^c) = 0$.
 - Set $B \definedas O^c$, then $O\supseteq E^c \iff \OO^c \subseteq E \iff B\subseteq E$.
 - Computing measures yields 
 \[
-E\setminus B \definedas E\setminus  \OO^c \definedas E\intersect (\OO^c)^c = E\intersect \OO = \OO \intersect(E^c)^c \definedas \OO \setminus E^c
+E\setminus B \definedas E\setminus  \OO^c \definedas E\Intersect (\OO^c)^c = E\Intersect \OO = \OO \Intersect(E^c)^c \definedas \OO \setminus E^c
 ,\]
   thus $m(E\setminus B) = m(\OO\setminus E^c) = 0$.
 - Since $\OO$ is open, $B$ is closed and thus Borel.
 
-### Direct Proof (Todo)
+d.irect Proof (Todo)
 
 \todo[inline]{Try to construct the set.}
 :::
@@ -391,18 +502,18 @@ Prove that $m(E) = 0$.
 :::{.concept}
 \hfill
 - Borel-Cantelli: If $\theset{E_k}_{k\in\ZZ}\subset 2^\RR$ is a countable collection of Lebesgue measurable sets with $\sum_{k\in \ZZ} m(E_k) < \infty$, then almost every $x\in \RR$ is in *at most finitely* many $E_k$.
-  - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \intersect_{k=1}^\infty \union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
+  - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \Intersect_{k=1}^\infty \Union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
 :::
 
 - Strategy: Borel-Cantelli.
 
-- We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
+- We'll show that $m(E) \Intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
 \[
-m(E) = m \qty{\union_{n\in \ZZ} E \intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \intersect [n, n+1]) = 0
+m(E) = m \qty{\Union_{n\in \ZZ} E \Intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \Intersect [n, n+1]) = 0
 .\]
 
-- By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
-  - So WLOG, replace $E$ with $E\intersect [0, 1]$.
+- By translation invariance of measure, it suffices to show $m(E \Intersect [0, 1]) = 0$.
+  - So WLOG, replace $E$ with $E\Intersect [0, 1]$.
 
 - Define
 \[
@@ -415,7 +526,7 @@ E_j \definedas \theset{x\in [0, 1] \suchthat \
 
 - Importantly, note that 
   \[
-\limsup_{j\to\infty} E_j \definedas \intersect_{n=1}^\infty \union_{j=n}^\infty E_j = E
+\limsup_{j\to\infty} E_j \definedas \Intersect_{n=1}^\infty \Union_{j=n}^\infty E_j = E
   \]
   
   since 
@@ -465,8 +576,8 @@ B_{j^{-3}}\qty{j-1\over j}
 \[
 m(E) 
 &= m(\limsup_j E_j) \\
-&= m(\intersect_{n\in \NN} \union_{j\geq n} E_j) \\
-&\leq m(\union_{j\geq N} E_j) \quad\text{for every } N \\
+&= m(\Intersect_{n\in \NN} \Union_{j\geq n} E_j) \\
+&\leq m(\Union_{j\geq N} E_j) \quad\text{for every } N \\
 &\leq \sum_{j\geq N} m(E_j) \\
 &\converges{N\to\infty}\to 0 \quad\text{}
 .\]
@@ -499,10 +610,10 @@ E &\mapsto f(E)
 - ?
 :::
 
-### a
+a.
 
 It suffices to consider the bounded case, i.e. $E \subseteq B_M(0)$ for some $M$.
-Then write $E_n = B_n(0) \intersect E$ and apply the theorem to $E_n$, and by subadditivity, $m^*(E) = m^*(\union_n E_n) \leq \sum_n m^*(E_n) = 0$.
+Then write $E_n = B_n(0) \Intersect E$ and apply the theorem to $E_n$, and by subadditivity, $m^*(E) = m^*(\Union_n E_n) \leq \sum_n m^*(E_n) = 0$.
 
 **Lemma:** 
 $f(x) = x^2, f\inv(x) = \sqrt{x}$ are Lipschitz on any compact subset of $[0, \infty)$.
@@ -544,7 +655,7 @@ m^*(g(E)) \leq \sum_j \abs{g(Q_j)} \leq \sum_j L^n \abs{Q_j} = L^n \sum_j \abs{Q
 Now just take $g(x) = x^2$ for one direction, and $g(x) = f\inv(x) = \sqrt{x}$ for the other.
 $\qed$
 
-### b
+b.
 
 > Lemma: $E$ is measurable iff $E = K \disjoint N$ for some $K$ compact, $N$ null.
 
@@ -560,7 +671,7 @@ Restricting to $[0, \infty)$, $f$ is bijection, and thus so is $\phi$.
 
 ## Spring 2017 # 2 $\done$
 
-### a 
+a. 
 Let $\mu$ be a measure on a measurable space $(X, \mathcal M)$ and $f$ a positive measurable function.
   
   Define a measure $\lambda$ by
@@ -573,7 +684,7 @@ Show that for $g$ any positive measurable function,
 \int_{X} g ~d \lambda=\int_{X} f g ~d \mu
 \]
 
-### b 
+b. 
 Let $E \subset \RR$ be a measurable set such that 
 \[
 \int_{E} x^{2} ~d m=0.
@@ -592,7 +703,7 @@ A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) 
 .\]
 :::
 
-### a
+a.
 
 - Strategy: use approximation by simple functions to show absolute continuity and apply Radon-Nikodym 
 
@@ -616,7 +727,7 @@ A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) 
 
 \todo[inline]{What is the final step in this approximation?}
 
-### b
+b.
 
 - Set $g(x) = x^2$, note that $g$ is positive and measurable.
 - By part (a), there exists a positive $f$ such that for any $E\subseteq \RR$,
@@ -674,7 +785,7 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 - Claim: $G\in \mcm$.
   - Claim:
   \[  
-  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c
+  G = \qty{ \Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n}^c = \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n^c
   .\]
 
     - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
@@ -686,8 +797,8 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
   - We have
   \[  
   \mu(G)
-  &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
-  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
+  &= \mu\qty{\Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n^c} \\
+  &\leq \sum_{N=1}^\infty \mu \qty{\Intersect_{n=N}^\infty E_n^c}  \\
   &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
   &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
@@ -796,7 +907,7 @@ x = 0.d_1 d_2 \cdots d_{k-1}~ 4 ~d_{k+1}\cdots
 = \qty{\sum_{j=1}^k d_j 10^{-j}} + \qty{4\cdot 10^{-k}} + \qty{\sum_{j=k+1}^\infty d_j 10^{-j}}
 .\]
 
-- Set $r_x < 10^{-k}$ and let $y \in [0, 1] \intersect B_{r_x}(x)$ be arbitrary and write 
+- Set $r_x < 10^{-k}$ and let $y \in [0, 1] \Intersect B_{r_x}(x)$ be arbitrary and write 
 \[  
 y = \sum_{j=1}^\infty c_j 10^{-j}
 .\]
@@ -819,7 +930,7 @@ j < k \iff 10^{-j} > 10^{-k}
   
 - This means that for all $j \leq k$ we have $d_j = c_j$, and in particular $d_k = 4 = c_k$, so $y$ has a 4 in its decimal expansion.
 
-- But then $K^c = \union_x B_{r_x}(x)$ is a union of open sets and thus open.
+- But then $K^c = \Union_x B_{r_x}(x)$ is a union of open sets and thus open.
 
 
 Claim: **$K$ is nowhere dense and $m(K) = 0$:**
@@ -961,7 +1072,7 @@ $$
 b.
 Recall that a function $f: {\RR} \to {\RR}$ is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
 
-Prove that if $\mathcal{F}$ is an y family of lower semi-continuous functions, then 
+Prove that if $\mathcal{F}$ is any family of lower semi-continuous functions, then 
 $$
 g(x) = \sup\{ f(x) \mid f\in \mathcal{F}\}
 $$

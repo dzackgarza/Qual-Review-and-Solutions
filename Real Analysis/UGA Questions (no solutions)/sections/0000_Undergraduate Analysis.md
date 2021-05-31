@@ -17,59 +17,51 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
   Take $x=\eps, y=1$, so $n\eps > 1$ and ${1\over n} < \eps$.
 :::
 
+:::{.strategy}
+1 is the only constant around, so try to use it for uniform continuity.
+To negate, find a bad $x$: since $1/x$ blows up near zero, go hunting for small $x$s!
+
+:::
+
 :::{.solution}
 
-:::{.claim}
-$f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
-:::
+- **Claim**: $f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
+  - Note that
+  $$
+  \abs{x}, \abs y > c > 0 \implies \abs{xy} = \abs{x}\abs{y} > c^2 \implies \frac{1}{\abs{xy}} < \frac 1 {c^{2}}
+  .$$
 
-:::{.proof title="of claim"}
-\envlist
+  - Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
+    - Note that $\delta$ does not depend on $x, y$.
+  - Then
+  \[
+  \abs{f(x) - f(y)}
+  &= \abs{\frac 1 x - \frac 1 y} \\
+  &= \frac{\abs{x-y}}{xy} \\
+  &\leq \frac{\delta}{xy} \\
+  &< \frac{\delta}{c^2} \\
+  &< \varepsilon
+  .\]
 
-- Note that
-$$
-\abs{x}, \abs y > c > 0 \implies \abs{xy} = \abs{x}\abs{y} > c^2 \implies \frac{1}{\abs{xy}} < \frac 1 {c^{2}}
-.$$
-
-- Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
-  - Note that $\delta$ does not depend on $x, y$.
-
-- Then
-\[
-\abs{f(x) - f(y)}
-&= \abs{\frac 1 x - \frac 1 y} \\
-&= \frac{\abs{x-y}}{xy} \\
-&\leq \frac{\delta}{xy} \\
-&< \frac{\delta}{c^2} \\
-&< \varepsilon
-.\]
-
-:::
-
-:::{.claim}
-$f$ is *not* uniformly continuous when $c=0$.
-:::
-
-:::{.proof title="of claim"}
-\envlist
-
-- Take $\varepsilon < 1$, and let $\delta = \delta(\eps)$ be arbitrary.
-- Let $x_n = \frac 1 n$ for $n\geq 1$.
-- Choose $n$ large enough such that ${1\over n} < \delta$, then
-\[
-\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} = {1\over n(n+1) } < {1\over n} < \delta
-,\]
+- **Claim**: $f$ is *not* uniformly continuous when $c=0$.
+  - Take $\varepsilon < 1$, and let $\delta = \delta(\eps)$ be arbitrary.
+  - Let $x_n = \frac 1 n$ for $n\geq 1$.
+  - Choose $n$ large enough such that ${1\over n} < \delta$
+  - Then a computation:
+  \[
+  \abs{x_n - x_{n+1}} 
+  &= \frac 1 n - \frac 1 {n+1} \\
+  &= {1\over n(n+1) } \\
+  &< {1\over n} \\
+  &< \delta
+  ,\]
   - Why this can be done: by the Archimedean property of $\RR$, for any $\delta\in \RR$, one can choose
   choose $n$ such that $n\delta > 1$.
   We've also used that $n+1 > 1$ so ${1\over n+1}< 1$
-- Note that $f(x_n) = n$, so
-\[
-\abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
-.\]
-
-:::
-
-
+  - Note that $f(x_n) = n$, so
+  \[
+  \abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
+  .\]
 :::
 
 
@@ -78,7 +70,6 @@ Let
 \[
 f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 \]
-
 Describe the intervals on which $f$ does and does not converge uniformly.
 
 :::{.concept}
@@ -88,45 +79,58 @@ Describe the intervals on which $f$ does and does not converge uniformly.
   \[
 \sum_{0 \leq k\leq N} f_n \converges{u}\to \sum_{k\geq 0} f_n \iff \norm{\sum_{k\geq N+1} f_n }_{\infty} \to 0
   .\]
-- $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
-  - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
-- If $\sum_{n=0}^\infty f_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} = \norm{f_n}_{\infty, A} \to 0$.
+- An infinite sum is defined as the pointwise limit of its partial sums:
+ \[
+\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n
+ .\]
+- Uniformly decaying terms for uniformly convergent series: if $\sum_{n=0}^\infty f_n(x)$ converges uniformly on a set $A$, then 
+\[
+\norm{f_n}_{\infty, A} \da \sup_{x\in A} \abs{f_n(x)} \converges{n\to\infty}\too 0
+.\]
 - $M\dash$test: if $f_n:A \to\CC$ with $\norm{f_n}_\infty < M_n$ and $\sum M_n < \infty$, then $\sum f_n$ converges uniformly and absolutely.
-  - If the $f_n$ are continuous, the uniform limit theorem implies $\sum f_n$ is continuous.
+  - If the $f_n$ are continuous, the uniform limit theorem implies $\sum f_n$ is also continuous.
+:::
+
+:::{.strategy}
+No real place to start, so pick the nicest place: compact intervals.
+Then bounded intervals, then unbounded sets.
 :::
 
 :::{.solution}
 \envlist
 
+
 - Set $f_N(x) = \sum_{n=1}^N {x^n \over n!}$.
   - Then by definition, $f_N(x) \to f(x)$ pointwise on $\RR$.
 
-- For any compact interval $[-M, M]$, we have
-\[
-\norm{f_N(x) - f(x)}_\infty
-&= \sup_{-M \leq x \leq M} ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
-&\leq \sup_{-M\leq x \leq M} ~\sum_{n=N+1}^\infty \abs{ {x^n \over {n!}} } \\
-&\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
-&\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
-&= e^M \\
-&<\infty
-,\]
-  so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
-
-  - Note: we've used that $e^x$ is equal to its power series expansion.
+- **Claim**: $f_N$ converges on compact intervals
+  - For any compact interval $[-M, M]$, we have
+  \[
+  \norm{f_N(x) - f(x)}_\infty
+  &= \sup_{x\in [-M, M] } ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
+  &\leq \sup_{x\in [-M, M] } ~\sum_{n=N+1}^\infty \abs{ {x^n \over {n!}} } \\
+  &\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
+  &\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
+  &= e^M \\
+  &<\infty
+  ,\]
+    so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
+    - Note: we've used that this power series converges to $e^x$ pointwise everywhere.
 
 - This argument shows that $f$ converges on any bounded set.
 
+- **Claim**:
+$f_N$ does not converge uniformly on all of $\RR$.
+  - Uniformly convergent sums have uniformly decaying terms:
+  \[
+  \sum_{n\leq N} g_n \converges{N\to\infty}\too \sum g_n \text{ uniformly on } A \implies \norm{g_n}_{\infty, A} \da \sup_{x\in A} \abs{g_n(x)} \converges{n\to\infty}\too 0
+  .\]
 
-:::{.claim}
-$f$ does not converge on $\RR$.
-:::
-
-- This follows by small (sup norm) tails for sequences of functions: $\sum f_k$ converging uniformly on $A$ implies $\norm{f_k}_{\infty, A}\converges{k\to\infty}\too 0$.
-- Take $B_N$ a ball of radius $N$ about 0, then for $N>1$,
-\[
-\norm{x^k/k!}_{\infty, B_N} = N^k/k! \converges{N\to\infty}\too \infty
-.\]
+  - Take $B_N$ a ball of radius $N$ about 0, then for $N>1$, note that $x=N$ on the boundary and so
+  \[
+  \norm{x^k \over k!}_{\infty, B_N} = {N^k \over k!} \converges{N\to\infty}\too \infty
+  .\]
+- **Conclusion**: $f_N$ converges on any bounded $A\subseteq \RR$ but not on all of $\RR$.
 :::
 
 ## Fall 2014 # 1 $\done$
@@ -339,36 +343,6 @@ f(x^-) &= \sum_{q_k< x} \alpha_k
 
 
 
-## Spring 2014 # 2  $\done$
-
-Let $\theset{a_n}$ be a sequence of real numbers such that
-\[
-\theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
-\]
-Show that $\sum a_n^2 < \infty$.
-
-> Note: Assume $a_n, b_n$ are all non-negative.
-
-\todo[inline]{Have someone check!}
-:::{.solution}
-\envlist
-- Define a sequence of operators 
-\[  
-T_N: \ell^2 &\to \ell^1\\
-\theset{b_n} &\mapsto \sum_{n=1}^N a_n b_n
-.\]
-- By assumption, these are well defined: the image is $\ell^1$ since $\abs{T_N(\theset{b_n})} < \infty$ for all $N$ and all $\theset{b_n} \in \ell^2$.
-- So each $T_N \in \qty{\ell^2}\dual$ is a linear functional on $\ell^2$.
-- For each $x\in \ell^2$, we have $\norm{T_N(x)}_{\RR} = \sum_{n=1}^N a_n b_n < \infty$ by assumption, so each $T_N$ is pointwise bounded.
-- By the Uniform Boundedness Principle, $\sup_N \norm{T_N}_{\text{op}} < \infty$.
-- Define $T = \lim_{N \to\infty } T_N$, then $\norm{T}_{\text{op}} < \infty$.
-- By the Riesz Representation theorem,
-\[  
-\sqrt{\sum a_n^2} \definedas \norm{\theset{a_n}}_{\ell^2} = \norm{T}_{\qty{\ell^2}\dual} = \norm{T}_{\text{op}} < \infty
-.\]
-
-- So $\sum a_n^2 < \infty$.
-:::
 
 
 
@@ -386,16 +360,17 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 
 - DCT
 - Weierstrass Approximation Theorem
+  - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
 :::
 
 :::{.solution}
 \envlist
 
-- Suppose $p$ is a polynomial, then
+- Suppose $p$ is a polynomial, then integrate by parts:
 \[
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
-&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx \right] \quad\text{integrating by parts}\\
+&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx \right] \quad\text{IBP}\\
 &= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx
 ,\]
 
@@ -996,13 +971,13 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 
 Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
 
-## Fall 2020 \# 1
+## Fall 2020 \# 1 $\work$
 Show that if $x_n$ is a decreasing sequence of positive real numbers such that $\sum_{n=1}^\infty x_n$ converges, then
 $$
 \lim_{n\to\infty} n x_n = 0.
 $$
 
-## Fall 2020 \# 3
+## Fall 2020 \# 3 $\work$
 Let $f$ be a non-negative Lebesgue measurable function on $[1, \infty)$.
 
 a.
@@ -1031,4 +1006,37 @@ for all $t\in [1, \infty)$, then
 \int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
 .\]
 
+
+## Unsorted
+
+## Spring 2014 # 2  $\done$
+
+Let $\theset{a_n}$ be a sequence of real numbers such that
+\[
+\theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
+\]
+Show that $\sum a_n^2 < \infty$.
+
+> Note: Assume $a_n, b_n$ are all non-negative.
+
+\todo[inline]{Have someone check!}
+:::{.solution}
+\envlist
+- Define a sequence of operators 
+\[  
+T_N: \ell^2 &\to \ell^1\\
+\theset{b_n} &\mapsto \sum_{n=1}^N a_n b_n
+.\]
+- By assumption, these are well defined: the image is $\ell^1$ since $\abs{T_N(\theset{b_n})} < \infty$ for all $N$ and all $\theset{b_n} \in \ell^2$.
+- So each $T_N \in \qty{\ell^2}\dual$ is a linear functional on $\ell^2$.
+- For each $x\in \ell^2$, we have $\norm{T_N(x)}_{\RR} = \sum_{n=1}^N a_n b_n < \infty$ by assumption, so each $T_N$ is pointwise bounded.
+- By the Uniform Boundedness Principle, $\sup_N \norm{T_N}_{\text{op}} < \infty$.
+- Define $T = \lim_{N \to\infty } T_N$, then $\norm{T}_{\text{op}} < \infty$.
+- By the Riesz Representation theorem,
+\[  
+\sqrt{\sum a_n^2} \definedas \norm{\theset{a_n}}_{\ell^2} = \norm{T}_{\qty{\ell^2}\dual} = \norm{T}_{\text{op}} < \infty
+.\]
+
+- So $\sum a_n^2 < \infty$.
+:::
 

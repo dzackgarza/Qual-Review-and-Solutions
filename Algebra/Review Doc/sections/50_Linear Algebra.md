@@ -222,6 +222,16 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 
 :::
 
+### Smith Normal Form
+
+
+:::{.fact}
+For $A\in \Mat(m\times n; R)$ over $R$ any PID, $\SNF(A)$ is a matrix whose diagonal entries are the invariant factors.
+How to compute $\SNF(A)$: take $A = \diag(a_i)$ where $a_i = d_i/d_{i-1}$ and $d_i$ is the $\gcd$ of the determinants of all $i\times i$ minors of $A$.
+$A\sim B$ are similar $\iff \SNF(A) = \SNF(B)$.
+:::
+
+
 ### Finding Possible Canonical Forms
 
 \todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
