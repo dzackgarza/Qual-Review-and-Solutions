@@ -1,48 +1,6 @@
 # Extra Questions from Jingzhi Tie
 
-## ?
-Let $f$ be a continuous function in the region
-$$
-D=\{z\in \CC \st  0 < \abs{z} < R, 0\leq \arg Z\leq \theta\}\quad\text{where}\quad 0\leq \theta \leq 2\pi
-.$$ 
-If there exists $k$ such that
-$\displaystyle{\lim_{z\to\infty} zf(z)=k}$ for $z$ in the region
-$D$, show that $$\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,$$
-where $L$ is the part of the circle $|z|=R'$ which lies in the
-region $D$.
 
-## 3
-If $z\in K$, prove that the function
-$\displaystyle{\frac{1}{F(z)}}$ can be represented as a convergent
-series with respect to $q$: 
-$$
-\displaystyle{
-\frac{1}{F(z)}=\sum_{n=0}^{\infty} \frac{(qf(z))^n}{(z-a)^{n+1}}.}$$
-
-
-## ?
-Show that 
-$$
-\displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}}
-$$ 
-using complex analysis, $0< a < n$. 
-
-> Here $n$ is a positive integer.
-
-
-
-## ?
-Let $f(z)$ be entire and assume that $f(z) \leq M |z|^2$ outside some disk for some constant $M$. 
-
-Show that $f(z)$ is a polynomial in $z$ of degree $\leq 2$.
-
-
-## ?
-Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
-$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$. 
-
-Show that $\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on bounded and closed sub-regions of $D$.
 
 
 ## 16
@@ -63,14 +21,6 @@ $\displaystyle{\Gamma(s)=\int_0^{\infty} e^{-t}t^{s-1} dt}$.
 
 > Hint: You may need $\displaystyle{\Gamma(1-s)=t \int_0^{\infty}e^{-vt}(vt)^{-s} dv}$ for $t>0$.
 
-
-### Tie's Extra Questions: Fall 2009
-
-Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
-$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$. Show that
-$\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$.
 
 
 ## Fall 2009
@@ -229,14 +179,6 @@ Let $f(z)$ be entire and assume that $f(z) \leq M |z|^2$ outside some
 disk for some constant $M$. Show that $f(z)$ is a polynomial in $z$ of
 degree $\leq 2$.
 
-### Tie's Extra Questions: Fall 2011
-
-
-Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
-$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$. Show that
-$\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$.
 
 ### Tie's Extra Questions: Fall 2011
 
@@ -294,16 +236,6 @@ problem without using the Cauchy theorem.
     Here $\gamma$ denotes the circle centered at the origin, of
     radius $r$, with the positive orientation.
 
-### Tie's Extra Questions: Spring 2014
-
-
-Let $f$ be a continuous function in the region
-$$D=\{z\ |  |z|>R, 0\leq \arg Z\leq \theta\}\quad\text{where}\quad
-0\leq \theta \leq 2\pi.$$ If there exists $k$ such that
-$\displaystyle{\lim_{z\to\infty} zf(z)=k}$ for $z$ in the region
-$D$. Show that $$\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,$$
-where $L$ is the part of the circle $|z|=R'$ which lies in the
-region $D$.
 
 ### Tie's Extra Questions: Spring 2014
 
@@ -596,14 +528,6 @@ $$S = \pi \sum_{n=- \infty}^\infty n |c_n|^2 (R^{2n} - r^{2n}).$$
 
 ## Spring 2015
 
-### Tie's Extra Questions: Spring 2015
-
-
-Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
-$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$. Show that
-$\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on
-bounded and closed sub-regions of $D$.
 
 ### Tie's Extra Questions: Spring 2015
 

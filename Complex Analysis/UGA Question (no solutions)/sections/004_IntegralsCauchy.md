@@ -276,3 +276,46 @@ and use it to show that
 \int_0^{2\pi} \cos^{2n}(\theta) \, d\theta = 2\pi \qty{1\cdot 3 \cdot 5 \cdots (2n-1) \over 2 \cdot 4 \cdot 6 \cdots (2n)}
 .\]
 
+### Entire and $O$ of polynomial implies polynomial $\done$
+
+:::{.problem title="?"}
+Let $f(z)$ be entire and assume that $\abs{f(z)} \leq M |z|^2$ outside of some disk for some constant $M$. 
+Show that $f(z)$ is a polynomial in $z$ of degree $\leq 2$.
+:::
+
+
+:::{.solution}
+\envlist
+
+- Prove a more general statement: if $\abs{f(z)} \leq M\abs{z}^n$, then $f$ is a polynomial of degree at most $n$.
+- Since $f$ is entire, it is analytic everywhere, so $f(z) = \sum_{k\geq 0}c_k z^k$ where $c_k = f^{(k)}(0)/n!$ is given by the coefficient of its Taylor expansion about $z=0$.
+- Applying Cauchy's estimate, on a circle of radius $R$, 
+\[
+\abs{f^{(k)}(0)} \leq { \sup_{\gamma}\abs{f(z)} n! \over R^k} \leq {M\abs{z}^n n! \over R^k} = {M R^n n! \over R^k} 
+.\]
+
+- So for $k \geq n+1$, this goes to zero as $R\to \infty$, so $\abs{f^{k}(0)} = 0$ for all such $k$.
+- But then $f$ is a power series annihilated by taking $n+1$ derivatives, so it is a polynomial of degree at most $n$.
+:::
+
+
+## Uniform sequence implies uniform derivatives $\done$
+
+:::{.problem title="?"}
+Let $a_n(z)$ be an analytic sequence in a domain $D$ such that
+$\displaystyle \sum_{n=0}^\infty |a_n(z)|$ converges uniformly on
+bounded and closed sub-regions of $D$. 
+Show that $\displaystyle \sum_{n=0}^\infty |a'_n(z)|$ converges uniformly on bounded and closed sub-regions of $D$.
+:::
+
+:::{.solution}
+\envlist
+
+- Show a stronger statement: if $f_n\to f$ uniformly with each $f_n$ holomorphic on every compact subset of $D$ then $f_n'\to f'$ on every compact subset of $D$.
+
+- We have $\norm{f_n-f}_{\infty, D}\to 0$, the sup norm on $D$.
+- Pick a $\gamma$ in $\interior{D}$
+
+:::
+
+

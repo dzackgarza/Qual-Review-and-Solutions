@@ -1,10 +1,36 @@
 # Calculus Preliminaries
 
+## Definitions
+
+:::{.definition title="Locally uniform convergence"}
+A sequence of functions $f_n$ is said to converge **locally uniformly** on $\Omega \subseteq \CC$ iff $f_n\to f$ uniformly on every compact subset $K \subseteq \Omega$.
+:::
+
+:::{.definition title="Equicontinuous Family"}
+A family of functions $f_n$ is **equicontinuous** iff for every $\eps$ there exists a $\delta = \delta(\eps)$ (not depending on $n$ or $f_n$) such that $\abs{x-y}<\eps \implies \abs{f_n(x) - f_n(y)} < \eps$ for all $n$.
+:::
+
+:::{.remark}
+Recall Arzelà-Ascoli, an analog of Heine-Borel: for $X$ compact Hausdorff, consider the the Banach space $C(X; \RR)$ equipped with the *uniform norm* $\norm{f}_{\infty, X} \da \sup_{x\in X} \abs{f(x)}$.
+Then a subset $A \subseteq X$ is compact iff $A$ is closed, uniformly bounded, and equicontinuous.
+As a consequence, if $A$ is a sequence, it contains a subsequence converging uniformly to a continuous function.
+The proof is an $\eps/3$ argument.
+:::
+
+:::{.definition title="Normal Family"}
+
+:::
+
+:::{.remark}
+A continuous function on a compact set is uniformly continuous.
+:::
+
+
+## Theorems
 
 :::{.theorem title="Implicit Function Theorem"}
 
 :::
-
 
 :::{.theorem title="Inverse Function Theorem"}
 
@@ -13,7 +39,6 @@
 :::{.theorem title="Green's Theorem"}
 If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
 :::
-
 
 ## Convergence
 

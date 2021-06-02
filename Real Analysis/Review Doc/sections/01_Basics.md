@@ -663,6 +663,28 @@ If $f_n$ are differentiable, $\sum f_n' \to g$ uniformly, and there exists one p
 \[  
 \lim_{n\to \infty} \dd{}{x} f_n \neq \dd{}{n} \qty{\lim_{n\to \infty} f_n}
 .\]
+Note that uniform convergence of $f_n$ and $f_n'$ is sufficient to guarantee that $f$ is differentiable.
+Even worse: every continuous function is a uniform limit of polynomials by the Weierstrass approximation theorem.
+:::
+
+:::{.example title="?"}
+As a counterexample:
+\[
+f_n(x) \da \sqrt{x^2 + {1\over n}} \converges{n\to\infty}\too f(x) \da \abs{x}
+,\]
+and this convergence is even uniform.
+:::
+
+:::{.example title="?"}
+\[
+f_n(x) \da {x\over 1 + nx^2}
+.\]
+Then by Calculus, $f_n(x) \leq 1/2\sqrt{n} \da M_n$ and $f_n\to 0$ uniformly, so $f' = 0$.
+But 
+\[
+f_n'(x) = {1-nx^2 \over\qty{1 + nx^2}^2}
+,\]
+and $f_n'(0) \to 1$.
 :::
 
 :::{.proposition title="?"}

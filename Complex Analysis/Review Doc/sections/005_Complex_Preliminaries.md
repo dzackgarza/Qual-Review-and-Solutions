@@ -398,6 +398,13 @@ c_k = {f^{(n)}(z_0) \over n! }
 .\]
 :::
 
+:::{.remark}
+By an application of the Cauchy integral formula (see S&S 7.1) if $f$ is holomorphic on $D_R(z_0)$ there is a formula for all $k\geq 0$ and all $0<r<R$:
+\[
+c_k = {1\over 2\pi r^k} \int_0^{2\pi} f(z_0 + re^{i\theta}) e^{-in\theta}\dtheta
+.\]
+:::
+
 :::{.proposition title="Exponential is uniformly convergent in discs"}
 $f(z) = e^z$ is uniformly convergent in any disc in $\CC$.
 :::
