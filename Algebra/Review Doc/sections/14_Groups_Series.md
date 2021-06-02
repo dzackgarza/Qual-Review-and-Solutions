@@ -49,9 +49,19 @@ Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1
 :::{.definition title="Solvable"}
 A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
 \[
-G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
+G \da G_n > G_{n-1} > \cdots > G_2 > G_1 \da \ts{ e } && \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
 .\]
 :::
+
+
+:::{.remark}
+If $G = \Gal(L/K)$ is a Galois group corresponding to a polynomial $f$, then $G$ is solvable as a group iff $f$ is solvable in radicals: 
+there is a tower of extensions $K = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_m = L$ where
+
+1. $F_i = F_{i-1}(\alpha_i)$ where \( \alpha_i^{m_i } \in F_{i-1} \) for some power $m_i \in \ZZ^{\geq 0}$, and 
+2. $F_m \supseteq \SF(f)$ contains a splitting field for $f$.
+:::
+
 
 :::{.theorem title="Characterization of Solvable"}
 A group $G$ is solvable iff its derived series terminates.

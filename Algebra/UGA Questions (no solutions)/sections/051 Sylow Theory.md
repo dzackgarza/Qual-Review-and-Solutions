@@ -8,85 +8,38 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 :::{.concept}
 \envlist
 
-- Centralizer: 
-  \[
-  C_G(h) = Z(h) = \theset{g\in G \suchthat [g,h] = 1}
-  \quad\text{Centralizer}
-\]
-- Class equation: 
-  \[
-  \abs{G} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{\abs{G}}{\abs{Z(h)}}
-  \]
-- Notation:
-  \[
-  h^g &= ghg\inv \\
-  h^G &= \theset{ h^g \suchthat g\in G} \quad\text{Conjugacy Class}\\
-  H^g &= \theset{h^g \suchthat h\in H} \\
-  N_G(H) &= \theset{g\in G \suchthat H^g = H} \supseteq H \quad\text{Normalizer}
-  .\]
+- $Z(g) = G \iff g\in Z(G)$, i.e. if the centralizer of $g$ is the whole group, $g$ is central.
 
+- If $H\leq G$ is a *proper* subgroup, then $\Union_{g\in G} hGh\inv$ is again a proper subgroup (subset?)
+  I.e. $G$ is not a union of conjugates of any proper subgroup.
+- So if $G$ *is* a union of conjugates of $H$, then $H$ must not be proper, i.e. $H= G$.
 :::
 
 :::{.solution}
 \envlist
 
-:::{.claim title="1"}
+- We have $g_j \subseteq Z(g_k)$ for all $k$ by assumption.
+- If we can show $Z(g_k) = G$ for all $k$, then $g_k \in Z(G)$ for all $k$.
+  - Then each conjugacy class is size 1, and since $G = \disjoint_{i=1}^n [g_i] = \disjoint_{i=1}^n \ts{g_i}$, every $g\in G$ is some $g_i$.
+  So $G \subseteq Z(G)$, forcing $G$ to be abelian.
+- If we can show $G \subseteq \Union_{h\in H} h Z(g_k) h\inv$ for some $k$, this forces $Z(g_k) = G$ and $g_k \in Z(G)$.
+  - If we can do this for all $k$, we're done!
+- Since $g\in G$ is in some conjugacy class, write $g=hg_j h\inv$ for some $h\in G$ and some $1\leq j\leq n$.
+- Now use $g_j \in Z(g_k)$ for all $k$:
 \[
-\abs{h^G} = [G: Z(h)]
+g\in G &\implies g = hg_j h\inv && \text{for some } h\in H \\
+g_j \in Z(g_k) \forall k &\implies g\in hZ(g_k)h\inv &&\text{for some }h, \, \forall 1\leq k \leq n \\
+&\implies g\in \Union_{h\in G} h Z(g_k) h\inv
+&&\forall 1\leq k \leq n \\
 .\]
-:::
-
-:::{.claim title="2"}
+  - Note that it's necessary to get rid of the $h$ dependence, since now now every $g\in G$ is in $\Union_{h\in G} hZ(g_k)h\inv$.
+- Now
 \[
-\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]
-.\]
-:::
+G \subseteq \Union_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
+,\]
+and we're done.
 
-:::{.proof title="of claim 2"}
-\envlist
 
-- Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
-- Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
-- So Orbit-Stabilizer says $\mathcal O_h \cong G/\mathrm{Stab}(H)$; then just take sizes.
-
-:::
-
-:::{.claim title="3"}
-$\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
-:::
-
-:::{.proof title="of claim 3"}
-- By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
-  \[
-  \abs{\union_{g\in G} H^g} 
-  &= \qty{ \abs{H} - 1} [G: N_G(H)] + 1\\
-  &= \abs{H} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-  &= \abs{G} \frac{\abs G}{\abs{N_G(H)}} - \frac{\abs G}{\abs{N_G(H)}} + 1 \\
-  &\leq \abs{H} \frac{\abs G}{\abs{H}} - \frac{\abs G}{\abs{H}} + 1 \\
-  &= \abs{G} - ([G: H] - 1) \\
-  &< \abs{G} 
-  ,\]
-  where we use the fact that $H \subseteq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies \frac{1}{\abs{N_G(H)}} \leq \frac{1}{\abs{H}}$, and since $H < G$ is proper, $[G:H] \geq 2$.
-
-- Since $[g_i, g_j] = 1$, we have $g_i \in Z(g_j)$ for every $i, j$.
-
-- Then
-  \[
-  g\in G 
-  &\implies g = g_i^h \quad \text{ for some } h \\
-  &\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-  &\implies g \in \union_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-  &\implies G \subseteq \union_{h\in G} Z(g_j)^h \quad\text{for every } j
-  ,\]
-
-  which by Theorem 3, if $Z(g_j) < G$ were proper, then the RHS is properly contained in $G$. 
-- So it must be the case that that $Z(g_j)$ is not proper and thus equal to $G$ for every $j$.
-
-- But $Z(g_i) = G \iff g_i \in Z(G)$, and so each conjugacy class is size one.
-- So for every $g\in G$, we have $g = g_j$ for some $j$, and thus $g = g_j \in Z(g_j) = Z(G)$, so $g$ is central.
-- Then $G\subseteq Z(G)$ and $G$ is abelian.
-
-:::
 
 :::
 

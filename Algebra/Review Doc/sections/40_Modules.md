@@ -184,16 +184,17 @@ A SES $\xi$ splits if any of the following conditions hold:
 
 :::{.proposition title="STFGMPID"}
 Let $M$ be a finitely generated modules over a PID $R$.
-Then there is an invariant factor decomposition
+Then there is an **invariant factor** decomposition
 
 \begin{align*}
 M \cong F \bigoplus_{i=1}^m R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
 \end{align*}
 
-and similarly an elementary divisor decomposition:
-
-\todo[inline]{Elementary divisor decomposition}
-
+and similarly an **elementary divisor** decomposition:
+\[
+M \cong F \bigoplus_{i=1}^n R/ \gens{p_i^{e_i}}
+\]
+where $F$ is free of finite rank and the $p_i$ are *not necessarily distinct* primes in $R$.
 :::
 
 :::{.proposition title="Principal Ideals are Free"}
@@ -226,10 +227,7 @@ Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be 
 
 :::
 
-
 ## Algebraic Properties
-
-
 
 :::{.definition title="Module structure on tensor products"}
 \[

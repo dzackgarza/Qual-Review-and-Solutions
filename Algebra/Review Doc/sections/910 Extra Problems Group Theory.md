@@ -1,42 +1,5 @@
 ## Group Theory
 
-### Basic Structure
-
-Just Structure
-
-- Show that the intersection of two subgroups is again a subgroup.
-- Show that the intersection of two subgroups with coprime orders is trivial.
-- Show that subgroups with the *same* prime order are either equal or intersect trivially.
-- Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
-- Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
-- Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
-- Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
-- Show that the order of any element in a group divides the order of the group.
-- Show that $\abs{G}/\abs{H} = [G: H]$.
-
-Centers
-
-- Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
-- Show that $G/N$ is abelian iff $[G, G] \leq N$.
-- Show that every normal subgroup of $G$ is contained in $Z(G)$.
-
-Cyclic Groups
-
-- Show that any cyclic group is abelian.
-- Show that every subgroup of a cyclic group is cyclic.
-- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
-- Compute $\aut(\ZZ/n\ZZ)$ for $n$ composite.
-- Compute $\aut(\qty{\ZZ/p\ZZ}^n)$.
-
-Conjugacy
-
-- Show that the size of a conjugacy class divides the order of a group.
-- Let $G$ be finite with $H\leq G$ and show that $G$ is not the union of the conjugates of $H$.
-
-  > Hint: consider the intersection and count.
-
-  > Hint: Orbit-stabilizer
-
 ### Centralizing and Normalizing
 
 - Show that $C_G(H) \subseteq N_G(H) \leq G$.
@@ -245,4 +208,3 @@ Generating Sets
 
   > So normality is not transitive, but strengthening one to "characteristic" gives a weak form of transitivity.
 
-#

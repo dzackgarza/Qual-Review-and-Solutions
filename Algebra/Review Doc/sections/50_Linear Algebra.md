@@ -2,15 +2,22 @@
 
 ## Definitions
 
-:::{.definition title="Invariant Factor"}
-Todo
-\todo[inline]{todo}
+
+:::{.remark}
+The main powerhouse: for $T:V\to V$ a linear transformation for $V\in\Vect_k$, map to $V\in \modsleft{k[x]}$ by letting polynomials act via $p(x)\cdot \vector v \da p(T)(\vector v)$.
+Using that $k[x]$ is a PID iff $k$ is a field, and we can apply the FTFGMPID to get two decompositions:
+\[
+V \cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \\
+V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \text{ not necessarily distinct.} 
+\]
+- The $q_i$ are the **invariant factors** of $T$
+  - $q_i$ is the minimal polynomial of $T$ restricted to $V_i \da k[x] / \gens{ q_i(x) }$. 
+  - $q_n$ is the **minimal polynomial** of $T$.
+  - $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
+- The $p_i$ are the **elementary divisors** of $T$.
+
 :::
 
-:::{.definition title="Elementary Divisor"}
-Todo
-\todo[inline]{todo}
-:::
 
 :::{.definition title="Nondegenerate Bilinear Form"}
 \todo[inline]{todo}
@@ -26,25 +33,42 @@ Todo
 
 :::
 
-
 :::{.definition title="Normal Matrix"}
 A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
 :::
 
 
-
-:::{.proposition title="?"}
-Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpotent, and $[DN] = 0$.
+:::{.definition title="Semisimple"}
+A matrix $A$ over $k$ is **semisimple** iff $A$ is diagonalizable over $k^\alg$, the algebraic closure.
 :::
 
 
-:::{.proposition title="?"}
+:::{.definition title="Nilpotent"}
+A matrix $A$ over $k$ is **nilpotent** iff $A^k = 0$ for some $k\geq 1$.
+
+> Idea: upper triangular matrices.
+
+:::
+
+
+:::{.definition title="Unipotent"}
+A element $A$ in a ring $R$ is **unipotent** iff $A-1$ is nilpotent.
+
+> Idea: an upper-triangular matrix with ones on the diagonal.
+
+:::
+
+
+:::{.proposition title="Triangular Decomposition"}
+Any linear map $T:V\to V$ over a perfect field decomposes as $T = S + N$ with $S$ semisimple (diagonal), $N$ nilpotent, and $[DN] = 0$.
+If $T$ is invertible, then $T$ decomposes as $T = SU$ where $S$ is semisimple, $U$ is unipotent, and $[UN] = 0$.
+:::
+
+:::{.proposition title="Perp of sum is intersection of perps"}
 \[
-\sum( W_i)^\perp = \int W_i^\perp
+\qty{ \sum  W_i}^\perp = \Intersect \qty{W_i^\perp}
 .\]
-
 :::
-
 
 ## Minimal / Characteristic Polynomials
 
@@ -58,7 +82,7 @@ Fix some notation:
 :::
 
 :::{.definition title="?"}
-The **minimal polynomial** of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
+The **minimal polynomial** of a linear map $T$ is the unique monic polynomial $\min_T(x)$ of minimal degree such that $\min_T(T) = 0$.
 :::
 
 :::{.definition title="?"}
@@ -157,38 +181,65 @@ e_{i-1} &  i \geq 2
 
 Corresponds to the **Invariant Factor Decomposition** of $T$.
 
-
-:::{.theorem title="Structure Theorem"}
-For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
-\[
-M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
-\]
-where each $a_i$ is an invariant factor.
-:::
-
-
-
-:::{.proposition title="RCG Relates to Invariant Factors"}
+:::{.proposition title="Rational Canonical Form"}
 $RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
 :::
 
+:::{.proof title="Derivation of RCF"}
+\envlist
 
-:::{.proof title="?"}
-The derivation:
+- Let $k[x] \actson V$ by $p(x) \actson \vector v \da p(T)(\vector v)$, making $V$ into a $k[x]\dash$module. 
 
-- Let $k[x] \actson V$ using $T$, makes $V$ into a $k[x]\dash$module. 
+- $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain an invariant factor decomposition 
+\[
+V \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
+&& p_1(x) \divides p_2(x) \divides \cdots p_m(x)
+.\]
 
-- $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain invariant factors $a_i$,
+- Each $p_i$ is an invariant factor of $T$, and the minimal polynomial of $T$ restricted to $V_i$.
 
-- Note that $T\actson V$ by multiplication by $x$
+- Write $V \cong \bigoplus_{i=1}^m V_i$ where $V_i \da k[x] / \gens{ p_i(x) }$, then $A$ is a block matrix $\bigoplus_{i=1}^m M_i$ where $M_i$ is the restriction of $T$ to $V_i$:
+\[
+\left(\begin{array}{ccccc}M_{1} & 0 & 0 & \cdots & 0 \\ 0 & M_{2} & 0 & \cdots & 0 \\ \vdots & & \ddots & & \vdots \\ 0 & \cdots & & & M_{n}\end{array}\right)
+.\]
 
-- Write $\bar x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
+- It suffices to determine the form of $M_i$, so without loss of generality suppose $m=1$ so $V = V_1 = k[x] / \gens{ p(x) }$ is a cyclic $k[x]\dash$module where $\deg p(x) = n$.
 
-- Write $a_i(x) = \sum b_i x^i$, note that $V \to F[x]$ pushes $T\actson V$ to $T\actson k[x]$ by multiplication by $\overline x$
+- Claim: the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
+  - If there is any linear independence, this gives a polynomial relation $\sum_{i=1}^{n'} a_iT^i\vector v = 0$ for some $n'<n$, but then $q(x) \da \sum_{i=1}^{n'} a_i x^i$ is a polynomial annihilating $T$, contradicting the minimality of $p(x)$.
+  - So this yields $n$ linearly independent vectors in $k^n$, so it's a basis.
+- What is $M_i$ in this basis?
+  Check where basis elements are mapped to by $T$, noting that 
+  \[
+p(T) = \sum_{i=1}^{n}a_i T^i\vector v = T^n + a_{n-1} T^{n-1}\vector v + a_{n-2} T^{n-2} + \cdots + a_1 T\vector v + a_0 \vector v = 0
+  ,\]
+  we can write
+  - $T\vector v_0 = \vector v_1$
+  - $T\vector v_2 = T^2 \vector v_0$
+  - $T\vector v_3 = T^3 \vector v_0$
+  - $\cdots$
+  - $T\vector v_{n-2} = T^{n-1}\vector v$
+  - $T\vector v_{n-1} = T^n\vector v = -a_{n-1}T^{n-1}\vector v - \cdots - a_1 T\vector v - a_0 \vector v$ 
 
-- WRT the basis $\overline x$, $T$ then acts via the companion matrix on this summand.
+  (using the minimal polynomial relation).
 
-- Each invariant factor corresponds to a block of the RCF.
+- So we have
+\[
+M_1 = 
+\begin{bmatrix}
+0 &  &  &  & -a_0 \\
+1 & 0 &  &  & -a_1 \\
+ &  1 &  0&  & -a_2 \\
+ &  & \ddots &  0 & \vdots \\
+ &  &  & 1 & -a_{n-1} 
+\end{bmatrix}
+.\]
+
+
+
+
+
+
 
 
 :::
@@ -347,8 +398,6 @@ But the minimal polynomial is just the largest invariant factor.
 ## Matrix Counterexamples
 
 
-:::{.example title="?"}
-:::
 
 :::{.example title="?"}
 A matrix that:
@@ -453,7 +502,7 @@ M_2
 \[
 \SL_n(\CC) \da \ts{ A \st \det A = 1 } 
 .\]
-::
+:::
 
 :::{.definition title="Orthogonal Group"}
 \[
@@ -487,8 +536,16 @@ U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 }
 :::
 
 
-
 :::{.definition title="Symplectic Group"}
+\[
+\mathrm{Sp}_{2n}(\CC) \da \ts{ A \in \GL_{2n}(\CC) \st A^tJA = J } &&
+J \da 
+\begin{bmatrix}
+0 & 1_n
+\\
+1_n & 0
+\end{bmatrix}
+.\]
 
 :::
 

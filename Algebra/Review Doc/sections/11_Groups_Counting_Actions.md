@@ -136,9 +136,10 @@ For a group $G$ acting on a set $X$,
 | \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
 | \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
 | \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
-| \( \Fix(G) = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
+| \( \Fix = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
+Also, $x\in \Fix$ iff $\Orb(x) = \ts{x}$ and $\Stab_G(x) = G$.
 :::
 
 
@@ -159,7 +160,7 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
 - The orbit $\OO(x) = Gx = G$ is the entire group.
   - This action is transitive.
-- The set of fixed points \( \Fix(G) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The set of fixed points \( \Fix = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
 - The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
 
@@ -174,7 +175,7 @@ Let $G$ act on *itself* by conjugation.
 
 - The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
   - Thus the action is transitive iff there is one conjugacy class.
-- The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
+- The set of fixed points $\Fix = Z(G)$ is the **center**.
 - The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
 - The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
 
@@ -185,11 +186,18 @@ Let $G$ act on *itself* by conjugation.
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 :::
 
-:::{.corollary}
-Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
+:::{.remark}
+Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: Z(x)]$, i.e.
 \[
 \# {C(x)} = [G: Z(x)]
 .\]
+Now note that $G = \disjoint_k' \Orb(h_k)$ is a disjoint union of orbits (the prime denotes taking one representative from each orbit), and so
+\[
+G &= \Disjoint_k' \Orb(h_k) \mapsvia{\sim} \Disjoint_k' G/\Stab(h_k) \\
+\implies \# G &= \sum_{k}' \# C(h) = \sum_k' \#(G/\Stab(h_k)) = \sum_k' [G: Z(h_k)]
+.\]
+Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, which yields the class equation:
+
 
 :::
 
@@ -199,21 +207,6 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 \]
 :::
 
-:::{.proof title="of the class equation"}
-$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one representative from each conjugacy class.
-Thus 
-\[
-\# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
-.\]
-Elements $g \in Z(g)$ in the center satisfy $Z(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
-\[
-\# G 
-&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
-&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} 1 +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
-&= \# Z(G) +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
-.\]
-
-:::
 
 :::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
@@ -287,7 +280,7 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
   - This action is transitive iff all subgroups are conjugate.
-- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
+- The fixed points $\Fix$ form the set of **normal subgroups** of $G$.
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
@@ -314,7 +307,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
-- The fixed points form $\Fix(G) = \emptyset$.
+- The fixed points form $\Fix = \emptyset$.
 
 - The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
@@ -337,4 +330,9 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 - But $K = \ker \phi \normal G$, so $H\normal G$.
 
 :::
+
+:::{.exercise title="?"}
+Prove Poincaré's theorem: if $H\leq G$ is finite index, then there exists an $N\normal H$ where $[N: H] < n!$.
+:::
+
 

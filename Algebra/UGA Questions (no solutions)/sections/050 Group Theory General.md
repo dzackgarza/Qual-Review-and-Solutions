@@ -50,11 +50,11 @@ Show that
 [G: H\intersect K] \leq [G: H] ~ [G:K]
 .\]
 
-
+http://www.ams.org/notices/200304/what-is.pdf
 :::{.concept}
 \envlist
 
-- For $H, K\leq G$, intersection is again a subgroup of everything: $H\int K \leq H, K, G$ by the one-step subgroup test.
+- For $H, K\leq G$, intersection is again a subgroup of everything: $H\intersect K \leq H, K, G$ by the one-step subgroup test.
 - Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
 - Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
 - Common trick: just list out all of the darn cosets!
