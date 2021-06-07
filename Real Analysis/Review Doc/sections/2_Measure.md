@@ -1,6 +1,5 @@
 # Measure Theory
 
-
 :::{.fact}
 Some useful tricks:
 
@@ -12,26 +11,33 @@ Some useful tricks:
   - $E \disjoint N = G_{\delta}$ for $N$ a null set.
 :::
 
-## Theorems
+## Abstract Measure Theory
 
-:::{.proposition title="Opens are unions of almost disjoint intervals."}
-Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
-:::
+:::{.definition title="Measures on measurable spaces"}
+If $(X, \mcm)$ is a measurable space, then a **measure** is a function $\mu: \mcm \to [0,\infty]$ such that 
 
-:::{.proposition title="Properties of Outer Measure"}
-\envlist
+1. $\mu(\emptyset) = 0$.
+2. Countable additivity: if $\ts{E_k}_{k\geq 1}$ is a countable union of disjoint sets in $X$, then 
+\[
+\mu\qty{\disjoint_{k\geq 1} E_k} = \sum_{k\geq 1} \mu(E_k)
+.\]
 
-1. Monotonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
-2. Countable Subadditivity: $m_*(\union E_{i}) \leq \sum m_*(E_{i})$.
-3. Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
-4. Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
-
-[^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
-
+If (2) only holds for finitely indexed sums, we say $\mu$ is **$\sigma\dash$additive**.
 :::
 
 :::{.proposition title="Subtraction of Measures"}
 $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
+:::
+
+:::{.theorem title="Properties of measures"}
+Let $(X, \mcm, \mu)$ be a measure space.
+Then
+
+1. Monotonicity: $E \subseteq F \implies \mu(E) \leq \mu(F)$.
+2. Countable subadditivity: If $ts{E_k}_{k\geq 1}$ is a countable collection, 
+\[
+\mu\qty{\Union_{k\geq 1} E_k} \leq \sum_{k\geq 1} \mu(E_k)
+.\]
 :::
 
 :::{.proposition title="Continuity of Measure"}
@@ -58,7 +64,6 @@ Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.
 
 
 :::
-
 
 :::{.proof title="of continuity of measure from below, detailed"}
 For any measure $\mu$,
@@ -119,6 +124,29 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 - Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
 :::
 
+## Outer Measure
+
+:::{.proposition title="Properties of Outer Measure"}
+\envlist
+
+1. Monotonicity: $E\subseteq F \implies m_*(E) \leq m_*(F)$.
+2. Countable Subadditivity: $m_*(\union E_{i}) \leq \sum m_*(E_{i})$.
+3. Approximation: For all $E$ there exists a $G \supseteq E$ such that $m_*(G) \leq m_*(E) + \varepsilon$.
+4. Disjoint[^1] Additivity: $m_*(A \disjoint B) = m_*(A) + m_*(B)$. 
+
+[^1]: This holds for outer measure **iff** $\mathrm{dist}(A, B) > 0$.
+
+:::
+
+## Measures on $\RR^d$
+
+:::{.proposition title="Borel Characterization of Measurable Sets"}
+
+If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::
+:::{.proposition title="Opens are unions of almost disjoint intervals."}
+Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
+:::
 
 :::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
 Suppose $E$ is measurable; then for every $\eps>0$,
@@ -152,7 +180,7 @@ Obvious for cubes; if $Q_{i} \rightrightarrows E$ then $Q_{i} + k \rightrightarr
 :::
 
 :::{.theorem title="Non-measurable sets exist"}
-There is a non-measurable set.
+There is a non-measurable set $A\subseteq \RR$.
 :::
 
 :::{.proof title="Constructing a non-measurable set"}
@@ -164,9 +192,6 @@ There is a non-measurable set.
 - By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
 :::
 
-:::{.proposition title="Borel Characterization of Measurable Sets"}
-If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
-:::
 
 :::{.proof title="of Borel characterization"}
 For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.

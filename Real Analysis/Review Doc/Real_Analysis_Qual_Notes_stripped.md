@@ -1,22 +1,7 @@
-```{=tex}
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
-}
-```
-Exercises from Folland:
-
--   Chapter 1: Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty) Exercises 15, 17, 18, 19, 22(a), 24, 28 Exercises 26, 30 (also check out 31)
-
--   Chapter 2: Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof Exercises 10, 12, 13, 14, 16, 19 Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either) Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59
-
--   Chapter 3: Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22
 
 # Basics
+
+## Table of Notation
 
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Notation                                                                                                                                                                  Definition
@@ -84,7 +69,7 @@ Exercises from Folland:
 -   Simplifications:
 
     -   To show something for a measurable set, show it for bounded/compact/elementary sets/
-    -   To show something for a function, show it for continuous, bounded, compactly supported, simple, indicator functions, \( L^1 \), etc
+    -   To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, \( L^1 \), etc
     -   Replace a continuous sequence (\( \varepsilon\to 0 \)) with an arbitrary countable sequence (\( x_n \to 0 \))
     -   Intersect with a ball \( B_r(\mathbf{0})\subset {\mathbb{R}}^n \).
 
@@ -93,7 +78,7 @@ Exercises from Folland:
     -   Calculus techniques: Taylor series, IVT, MVT, etc.
     -   Break up \( {\mathbb{R}}^n = \left\{{{\left\lvert {x} \right\rvert} \leq 1}\right\} \coprod \left\{{{\left\lvert {x} \right\rvert} > 1}\right\} \).
         -   Or break integration region into disjoint annuli.
-    -   Break up into \( \left\{{f>g}\right\} {\coprod}\left\{{f=g}\right\} {\coprod}\left\{{f< g}\right\} \).
+    -   Break up into \( \left\{{f>g}\right\} {\textstyle\coprod}\left\{{f=g}\right\} {\textstyle\coprod}\left\{{f< g}\right\} \).
     -   Tail estimates!
     -   Most of what works for integrals will work for sums.
 
@@ -114,12 +99,46 @@ Exercises from Folland:
 
 ## Definitions
 
-::: {.definition title="Uniform Continuity"}
-\( f \) is uniformly continuous iff
+::: {.definition title="Completeness"}
+A metric space is **complete** if every Cauchy sequence converges.
+:::
+
+::: {.fact}
+If \( X \) is complete, then absolutely convergent implies convergent.
+:::
+
+::: {.definition title="Continuity and Uniform Continuity"}
+A function \( f: {\mathbb{R}}\to {\mathbb{R}} \) is **continuous** on a set \( X \) iff
+\[
+\forall x_0 \in X, \forall \varepsilon>0, \quad \exists\delta = \delta(x_0, \varepsilon) >0 \quad\text{ such that }\quad \forall x\in X, \, {\left\lvert {x-x_0} \right\rvert}<\delta \implies {\left\lvert {f(x) - f(x_0)} \right\rvert} < \varepsilon
+.\]
+
+\( f \) is **uniformly continuous** iff
 
 \[
-    &\forall \varepsilon \quad \exists \delta(\varepsilon) \mathrel{\Big|}\quad \forall x, y, \quad {\left\lvert {x - y} \right\rvert} < \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} < \varepsilon \\
+  &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad {\left\lvert {x - y} \right\rvert} < \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} < \varepsilon \\
 \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mathrel{\Big|}\quad \forall x, y, \quad {\left\lvert {y} \right\rvert} < \delta \implies {\left\lvert {f(x-y) - f(y)} \right\rvert} < \varepsilon
+.\]
+:::
+
+::: {.remark}
+The main difference is that \( \delta \) may depend on \( x_0 \) and \( \varepsilon \) in continuity, but only depends on \( \varepsilon \) in the uniform version. I.e. once \( \delta \) is fixed, for continuity one may only range over \( x \), but in uniform continuity one can range over all pairs \( x,y \).
+:::
+
+::: {.proposition title="Lipschitz implies uniformly continuous"}
+If \( f \) is Lipschitz on \( X \), then \( f \) is uniformly continuous on \( X \).
+
+Supposing that
+\[
+{\left\lVert {f(x) - f(y)} \right\rVert} \leq C {\left\lVert {x-y} \right\rVert}
+,\]
+for a fixed \( \varepsilon \) take \( \delta(\varepsilon) \coloneqq\varepsilon/C \), then
+\[
+{\left\lVert {f(x) - f(y)} \right\rVert}
+&\leq C {\left\lVert {x-y} \right\rVert} \\
+&\leq C \delta \\
+&= C \qty{\varepsilon/C} \\
+&= \varepsilon
 .\]
 :::
 
@@ -187,6 +206,14 @@ A sequence of functions \( \left\{{ f_j }\right\} \) is said to **converge point
 .\]
 :::
 
+::: {.proposition title="Implications of convergence"}
+Uniform \( \implies \) pointwise \( \implies \) almost everywhere \( \implies \) (roughly) \( L^1 \) convergence. Why these can't be reversed:
+
+-   Pointwise but not uniform???: \( {1\over n}\one_{[0, n]} \)
+-   Almost everywhere but not pointwise???: \( n \one_{[0, {1\over n} ] } \)
+-   \( n \chi_{[n, n+1]} \)????
+:::
+
 ::: {.definition title="Outer Measure"}
 The **outer measure** of a set is given by
 \[
@@ -196,9 +223,18 @@ m_*(E) \coloneqq\inf_{\substack{\left\{{Q_{i}}\right\} \rightrightarrows E \\ \t
 
 ::: {.definition title="Limsup and Liminf of Sets"}
 \[
-\limsup_{n} A_{n} \coloneqq\cap_{n} \cup_{j\geq n} A_{j}&= \left\{{x {~\mathrel{\Big|}~}x\in A_{n} \text{ for inf. many $n$}}\right\}  \\
-\liminf_{n} A_{n} \coloneqq\cup_{n} \cap_{j\geq n} A_{j} &= \left\{{x {~\mathrel{\Big|}~}x\in A_{n} \text{ for all except fin. many $n$}}\right\}  \\
+\liminf_{n} E_{n} \coloneqq\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_{n} &= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for all but finitely many } n}\right\}  \\
+\limsup_{n} E_{n} \coloneqq\displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^{\infty} E_{n} &= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for infinitely many } n}\right\}  \\
 .\]
+
+How to derive these definitions:
+
+-   For \( A \coloneqq\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_n \):
+    -   \( x\in A \iff \) there exists some \( N \) such that \( x\in \cap_{n\geq N} E_n \), i.e. \( x\in E_n \) for all \( n\geq N \). So \( x \) is in *all* but finitely many \( n \).
+-   For \( B \coloneqq\displaystyle\bigcap{N=1}^\infty \displaystyle\bigcup{n=N}^\infty E_n \):
+    -   \( x\in B \iff \) for every \( N \), there exists some \( n\geq N \) such that \( x\in E_n \). So \( x \) is an infinitely many \( E_n \).
+
+Note that \( A\subseteq B \) since being in all but finitely many \( E_n \) necessarily implies being in infinitely many. This corresponds to \( \liminf_n E_n \subseteq \limsup_n E_n \).
 :::
 
 ::: {.definition title="Lebesgue Measurable Sets"}
@@ -232,9 +268,9 @@ L^\infty(X)
 :::
 
 ::: {.definition title="Dual Norm"}
-For \( X \) a normed vector space and \( \Lambda \in X^\vee \),
+For \( X \) a normed vector space and \( \Lambda \in X {}^{ \check{} } \),
 \[
-{\left\lVert {\Lambda} \right\rVert}_{X^\vee} \coloneqq\sup_{\left\{{x\in X {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert}_X \leq 1}\right\}} {\left\lvert {f(x)} \right\rvert}
+{\left\lVert {\Lambda} \right\rVert}_{X {}^{ \check{} }} \coloneqq\sup_{\left\{{x\in X {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert}_X \leq 1}\right\}} {\left\lvert {f(x)} \right\rvert}
 .\]
 :::
 
@@ -282,7 +318,7 @@ A collection of vectors \( \left\{{u_{n}}\right\}\subset H \) is **complete** if
 ::: {.definition title="Dual of a Hilbert space"}
 The **dual** of a Hilbert space \( H \) is defined as
 \[
-H^\vee\coloneqq\left\{{L: H\to {\mathbb{C}}{~\mathrel{\Big|}~}L \text{ is continuous }}\right\}
+H {}^{ \check{} }\coloneqq\left\{{L: H\to {\mathbb{C}}{~\mathrel{\Big|}~}L \text{ is continuous }}\right\}
 .\]
 :::
 
@@ -296,7 +332,7 @@ L(\alpha\mathbf{x} + \mathbf{y}) = \alpha L(\mathbf{x}) + L(\mathbf{y}).
 ::: {.definition title="Operator norm"}
 The **operator norm** of an operator \( L \) is defined as
 \[
-{\left\lVert {L} \right\rVert}_{X^\vee} \coloneqq\sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} = 1} } {\left\lvert {L(x)} \right\rvert}
+{\left\lVert {L} \right\rVert}_{X {}^{ \check{} }} \coloneqq\sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} = 1} } {\left\lvert {L(x)} \right\rvert}
 .\]
 :::
 
@@ -310,14 +346,51 @@ A **Hilbert space** is an inner product space which is a Banach space under the 
 
 ## Theorems
 
+::: {.theorem title="Mean Value Theorem"}
+If \( f: [a, b] \to {\mathbb{R}} \) is continuous on a closed interval and differentiable on \( (a, b) \), then there exists \( \xi \in [a, b] \) such that
+\[
+f(b) - f(a) = f'(\xi)(b-a)
+.\]
+:::
+
+::: {.theorem title="Lagrange Remainder"}
+If \( f \) is \( n \) times differentiable on a neighborhood of a point \( p \), say \( N_\delta(p) \), then for all points \( x \) in the deleted neighborhood \( N_\delta(p) - \left\{{p}\right\} \) , there exists a point \( \xi \) strictly between \( x \) and \( p \) such that
+\[
+x \in N_\delta(p)-\left\{{p}\right\} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \frac{f^{(n)}(\xi)}{n!}(x-p)^n
+\]
+:::
+
+::: {.theorem title="Cauchy Remainder"}
+If \( f \) is \( n \) times differentiable on a neighborhood of a point \( p \), say \( N_\delta(p) \), then for all points \( x \) in the deleted neighborhood \( N_\delta(p) - \left\{{p}\right\} \) , there exists a point \( \xi \) strictly between \( x \) and \( p \) such that
+\[
+x \in N_\delta(p)-\left\{{p}\right\} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \int_c^x \frac{1}{n!} {\frac{\partial ^n f}{\partial x^n}\,}(t) (x-t)^n ~dt
+\]
+:::
+
+::: {.proposition title="Sufficient condition for Taylor convergence"}
+Given a point \( c \) and some \( \varepsilon>0 \), if \( f \in C^\infty(I) \) and there exists an \( M \) such that
+\[
+x \in N_\varepsilon(c) \implies {\left\lvert {f^{(n)}(x)} \right\rvert} \leq M^n
+\]
+then the Taylor expansion about \( c \) converges on \( N_\varepsilon(c) \).
+:::
+
 ### Topology / Sets
 
 ::: {.theorem title="Heine-Cantor"}
-Every continuous function on a compact space is uniformly continuous.
+Every continuous function \( f:X\to Y \) where \( X \) is a compact metric space is uniformly continuous.
+:::
+
+::: {.proof title="?"}
+Fix \( \varepsilon>0 \), we'll find a \( \delta \) that works for all \( x\in X \) uniformly. For every \( x\in X \), pick a \( \delta_x \) neighborhood satisfying the conditions for (assumed) continuity. Take an open cover by \( \delta_x/2 \) balls, extract a finite subcover, take \( \delta \) the minimal radius.
 :::
 
 ::: {.proposition title="Compact if and only if sequentially compact for metric spaces"}
 Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::
+
+::: {.proof title="?"}
+Todo. `\todo[inline]{Proof.}`{=tex}
 :::
 
 ::: {.proposition title="A unit ball that is not compact"}
@@ -417,11 +490,13 @@ A function \( f: (a, b) \to {\mathbb{R}} \) is Lipschitz \( \iff f \) is differe
 
 ### Example: Completeness of a Normed Function Space
 
-:::{.proposition title=\" \( C(I) \) is complete\"} The space \( X = C([0, 1]) \), continuous functions \( f: [0, 1] \to {\mathbb{R}} \), equipped with the norm
+::: {.proposition title="$C(I)$ is complete"}
+The space \( X = C([0, 1]) \), continuous functions \( f: [0, 1] \to {\mathbb{R}} \), equipped with the norm
 \[
 {\left\lVert {f} \right\rVert}_\infty \coloneqq\sup_{x\in [0, 1]} {\left\lvert {f(x)} \right\rvert}
 \]
-is a **complete** metric space. :::
+is a **complete** metric space.
+:::
 
 ::: {.proof}
 ```{=tex}
@@ -544,6 +619,26 @@ If \( f_n \) are differentiable, \( \sum f_n' \to g \) uniformly, and there exis
 \[  
 \lim_{n\to \infty} {\frac{\partial }{\partial x}\,} f_n \neq {\frac{\partial }{\partial n}\,} \qty{\lim_{n\to \infty} f_n}
 .\]
+Note that uniform convergence of \( f_n \) and \( f_n' \) is sufficient to guarantee that \( f \) is differentiable. Even worse: every continuous function is a uniform limit of polynomials by the Weierstrass approximation theorem.
+:::
+
+::: {.example title="?"}
+As a counterexample:
+\[
+f_n(x) \coloneqq\sqrt{x^2 + {1\over n}} \overset{n\to\infty}\longrightarrow f(x) \coloneqq{\left\lvert {x} \right\rvert}
+,\]
+and this convergence is even uniform.
+:::
+
+::: {.example title="?"}
+\[
+f_n(x) \coloneqq{x\over 1 + nx^2}
+.\]
+Then by Calculus, \( f_n(x) \leq 1/2\sqrt{n} \coloneqq M_n \) and \( f_n\to 0 \) uniformly, so \( f' = 0 \). But
+\[
+f_n'(x) = {1-nx^2 \over\qty{1 + nx^2}^2}
+,\]
+and \( f_n'(0) \to 1 \).
 :::
 
 ::: {.proposition title="?"}
@@ -557,7 +652,7 @@ If \( f_n \) are differentiable, \( \sum f_n' \to g \) uniformly, and there exis
 ::: {.theorem title="Weierstrass Approximation"}
 If \( [a, b] \subset {\mathbb{R}} \) is a closed interval and \( f \) is continuous, then for every \( \varepsilon> 0 \) there exists a polynomial \( p_\varepsilon \) such that \( {\left\lVert {f- p_\varepsilon} \right\rVert}_{L^\infty([a, b])} \overset{\varepsilon\to 0}\to 0 \).
 
-Equivalently, polynomials are dense in the Banach space \( C([0, 1], {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \).
+Equivalently, polynomials are dense in the Banach space \( C([0, 1], {\left\lVert {{-}} \right\rVert}_\infty) \).
 :::
 
 ::: {.theorem title="Egorov"}
@@ -574,7 +669,7 @@ m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
 .\]
 :::
 
-## Examples
+## Examples and Counterexamples
 
 ::: {.example title="?"}
 A series of continuous functions that does *not* converge uniformly but is still continuous:
@@ -585,7 +680,132 @@ g(x) \coloneqq\sum {1 \over 1 + n^2 x}
 Take \( x = 1/n^2 \).
 :::
 
+Let all of the following integrals to be over a compact interval \( [a, b] \) with \( 0 \leq a < b \).
+
+Questions to ask:
+
+-   Where is/isn't \( f \) continuous?
+-   Where is/isn't \( f \) differentiable?
+-   Is \( f \) Riemann integrable?
+
+### The Dirichlet function
+
+\[
+f ( x ) = b + (a-b)~\chi(x\in {\mathbb{Q}}) = \begin{cases}
+a, & x\in {\mathbb{Q}}\\
+b, & \text{else}
+\end{cases}
+\]
+(usually take \( a=1, b=0 \))
+
+-   Continuous nowhere
+-   Discontinuous everywhere
+-   Not integrable
+-   Differentiable nowhere
+
+### Dirichlet with a Continuous Point
+
+\[
+f ( x ) = x~\chi({\mathbb{Q}}) = 
+\begin{cases}
+x, & x\in {\mathbb{Q}}\\
+0, & \text{else}
+\end{cases}
+\]
+
+-   Continuous at 0
+-   Discontinuous at \( {\mathbb{R}}-\left\{{0}\right\} \)
+-   Not integrable
+    -   \( U(f) > \frac 1 4 \) but \( L(f) = 0 \).
+-   Differentiable nowhere
+
+### Dirichlet with a Differentiable Point
+
+\[
+f ( x ) = x^2~\chi({\mathbb{Q}}) = \begin{cases}
+x^2, & x\in {\mathbb{Q}}\\
+0, & \text{else}
+\end{cases}
+\]
+
+-   Continuous at 0
+-   Discontinuous at \( {\mathbb{R}}-\left\{{0}\right\} \)
+-   Not integrable
+-   Differentiable at 0
+
+### Dirichlet with Two Functions
+
+\[
+f ( x ) = x~\chi{{\mathbb{Q}}} + (-x)\chi({\mathbb{R}}-{\mathbb{Q}}) = \begin{cases}
+x, & x\in {\mathbb{Q}}\\
+-x, & \text{else}
+\end{cases}
+\]
+
+-   Continuous at 0
+-   Discontinuous at \( {\mathbb{R}}-\left\{{0}\right\} \)
+-   Differentiable nowhere.
+-   Not integrable
+
+::: {.proof title="of non-integrability"}
+Restrict attention to \( {\left[ {\frac 1 2, 1} \right]} \)
+\[
+\overline{\int_0^1} f 
+&= \inf \left\{{ \sum \sup f(x) (x_i - x_{i-1}) }\right\} \\
+\sup f(x) = x_i \implies 
+\sum \sup f(x) (x_i - x_{i-1}) &= \sum x_i (x_i - x_{i-1}) \\
+&> \sum \frac 1 2 (x_i - x_{i-1}) \\
+&= \frac 1 2 \left(\frac 1 2\right) = \frac 1 4 \\
+\implies \overline{\int_0^1} f &\geq \frac 1 4
+\]
+and
+\[
+\underline{\int_0^1} f 
+&= \sup \left\{{ \sum \inf f(x) (x_i - x_{i-1})}\right\} \\
+\inf f(x)= -x_i \implies 
+\sum \inf f(x) (x_i - x_{i-1}) 
+&= \sum -x_i (x_i - x_{i-1}) \\
+&< -\sum \frac 1 2 (x_i - x_{i-1}) \\
+&= -\frac 1 2 \left( \frac 1 2 \right) = -\frac 1 4 \\
+\implies \underline{\int_0^1} f &\leq -\frac 1 4
+\]
+So we have \( \underline{\int_0^1} f \lneq 0 \lneq \overline{\int_0^1} f \).
+:::
+
+## The Thomae function:
+
+\[
+f ( x ) = \begin{cases}
+\frac 1 q, & x = \frac p q \in {\mathbb{Q}},~(p,q) = 1 \\
+0, & \text{else}
+\end{cases}
+\]
+
+-   Continuous on \( {\mathbb{R}}-{\mathbb{Q}} \)
+-   Discontinuous on \( {\mathbb{Q}} \)
+-   Integrable with \( \int_a^b f = 0 \)
+-   Differentiable nowhere
+
+Exercises from Folland:
+
+-   Chapter 1: Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty) Exercises 15, 17, 18, 19, 22(a), 24, 28 Exercises 26, 30 (also check out 31)
+
+-   Chapter 2: Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof Exercises 10, 12, 13, 14, 16, 19 Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either) Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59
+
+-   Chapter 3: Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22
+
 # Measure Theory
+
+::: {.fact}
+Some useful tricks:
+
+-   \( \mu(A\setminus B) = \mu(A) - \mu(B) \) if \( \mu(B) < \infty \)
+-   Write \( f = f-f_n + f_n \)
+-   If \( G \) is measurable, then there exists an \( E \supseteq G \) such \( m(G) \leq m(E) + \varepsilon \)
+-   If \( E \) is measurable,
+    -   \( E = F_{\delta} {\textstyle\coprod}N \) for \( N \) a null set.
+    -   \( E {\textstyle\coprod}N = G_{\delta} \) for \( N \) a null set.
+:::
 
 ## Theorems
 
@@ -600,7 +820,7 @@ Every open subset of \( {\mathbb{R}} \) (resp \( {\mathbb{R}}^n \)) can be writt
 1.  Monotonicity: \( E\subseteq F \implies m_*(E) \leq m_*(F) \).
 2.  Countable Subadditivity: \( m_*(\cup E_{i}) \leq \sum m_*(E_{i}) \).
 3.  Approximation: For all \( E \) there exists a \( G \supseteq E \) such that \( m_*(G) \leq m_*(E) + \varepsilon \).
-4.  Disjoint[^8] Additivity: \( m_*(A {\coprod}B) = m_*(A) + m_*(B) \).
+4.  Disjoint[^8] Additivity: \( m_*(A {\textstyle\coprod}B) = m_*(A) + m_*(B) \).
 :::
 
 ::: {.proposition title="Subtraction of Measures"}
@@ -609,18 +829,83 @@ Every open subset of \( {\mathbb{R}} \) (resp \( {\mathbb{R}}^n \)) can be writt
 
 ::: {.proposition title="Continuity of Measure"}
 \[
-E_{i} \nearrow E &\implies m(E_{i}) \to m(E) \\
+\text{Continuity from below:} \quad 
+E_{n} \nearrow E &\implies m(E_{n}) \to m(E) \\
+\text{Continuity from above:} \quad 
 m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
 .\]
+
+Mnemonic: \( \lim_n \mu(E_n) = \mu(\lim E_n) \).
 :::
 
-::: {.proof title="of continuity of measure"}
+::: {.proof title="sketches"}
 ```{=tex}
 \envlist
 ```
-1.  Break into disjoint annuli \( A_{2} = E_{2}\setminus E_{1} \), etc then apply countable disjoint additivity to \( E = {\coprod}A_{i} \).
+-   From below: break into disjoint annuli \( A_{2} = E_{2}\setminus E_{1} \),
+    -   Apply countable disjoint additivity to \( E = {\textstyle\coprod}A_{i} \).
+-   From above: funny step, use \( E_{1} = ({\textstyle\coprod}E_{j}\setminus E_{j+1}) {\textstyle\coprod}(\cap E_{j}) \).
+    -   Taking measures yields a telescoping sum, and use countable additivity, then finiteness to subtract.
 
-2.  Use \( E_{1} = ({\coprod}E_{j}\setminus E_{j+1}) {\coprod}(\cap E_{j}) \), taking measures yields a telescoping sum,and use countable disjoint additivity.
+![image_2021-05-28-23-29-31](figures/image_2021-05-28-23-29-31.png)
+:::
+
+::: {.proof title="of continuity of measure from below, detailed"}
+For any measure \( \mu \),
+\[
+\mu(F_1) < \infty,\, F_k \searrow F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+,\]
+where \( F_k \searrow F \) means \( F_1 \supseteq F_2 \supseteq \cdots \) with \( \cap_{k=1}^\infty F_k = F \). - Note that \( \mu(F) \) makes sense: each \( F_k \in \mathcal{B} \), which is a \( \sigma{\hbox{-}} \)algebra and closed under countable intersections.
+
+-   Take disjoint annuli by setting \( E_k \coloneqq F_k \setminus F_{k+1} \)
+
+-   Funny step: write
+    \[
+    F_1 = F {\textstyle\coprod}\displaystyle\coprod_{k=1}^{\infty} E_k
+    .\]
+
+    -   This is because \( x\in F_1 \) iff \( x \) is in every \( F_k \), so in \( F \), **or**
+    -   \( x\not \in F_1 \) but \( x\in F_2 \), noting incidentally \( x\in F_3, F_4,\cdots \), **or**,
+    -   \( x\not\in F_2 \) but \( x\in F_3 \), and so on.
+
+-   Now take measures, and note that we get a telescoping sum:
+    \[
+    \mu(F_1) 
+    &= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+    &= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+    &\coloneqq\mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \setminus F_{k+1} ) \\
+    &\coloneqq\mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+    &= \mu(F) + \lim_{N\to\infty} 
+    [
+    (\mu(F_1) - \mu(F_2)) +  
+    (\mu(F_2) - \mu(F_3)) +  
+    \cdots \\ 
+    & \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+    (\mu(F_N) - \mu(F_{N+1})) 
+    ] \\ \\
+    &= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+    &= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+    .\]
+
+-   Justifying the measure subtraction: the general statement is that for any pair of sets \( A\subseteq X \), \( \mu(X\setminus A) = \mu(X) - \mu(A) \) when \( \mu(A) < \infty \):
+    \[
+    X &= A {\textstyle\coprod}(X\setminus A) \\
+    \implies \mu(X) &= \mu(A) + \mu(X\setminus A) && \text{countable additivity} \\
+    \implies \mu(X) -\mu(A) &= \mu(X\setminus A) && \text{if } \mu(A) < \infty 
+    .\]
+
+-   Now use that \( \mu(F_1)<\infty \) to justify subtracting it from both sides:
+    \[
+    \mu(F_1)
+    &= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+    \implies
+    0
+    &= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+    \lim_{N\to\infty} \mu(F_{N+1})
+    &= \mu(F_1) 
+    .\]
+
+-   Now use that \( \lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N) \) to conclude.
 :::
 
 ::: {.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
@@ -664,12 +949,12 @@ There is a non-measurable set.
 ```
 -   Use AOC to choose one representative from every coset of \( {\mathbb{R}}/{\mathbb{Q}} \) on \( [0, 1) \), which is countable, and assemble them into a set \( N \)
 -   Enumerate the rationals in \( [0, 1] \) as \( q_{j} \), and define \( N_{j} = N + q_{j} \). These intersect trivially.
--   Define \( M \coloneqq{\coprod}N_{j} \), then \( [0, 1) \subseteq M \subseteq [-1, 2) \), so the measure must be between 1 and 3.
+-   Define \( M \coloneqq{\textstyle\coprod}N_{j} \), then \( [0, 1) \subseteq M \subseteq [-1, 2) \), so the measure must be between 1 and 3.
 -   By translation invariance, \( m(N_{j}) = m(N) \), and disjoint additivity forces \( m(M) = 0 \), a contradiction.
 :::
 
 ::: {.proposition title="Borel Characterization of Measurable Sets"}
-If \( E \) is Lebesgue measurable, then \( E = H {\coprod}N \) where \( H \in F_\sigma \) and \( N \) is null.
+If \( E \) is Lebesgue measurable, then \( E = H {\textstyle\coprod}N \) where \( H \in F_\sigma \) and \( N \) is null.
 :::
 
 ::: {.proof title="of Borel characterization"}
@@ -717,14 +1002,100 @@ Take the cone on \( f \) to get \( F(x, y) = f(x) \), then compose \( F \) with 
 
 # Integration
 
-## Theorems
+## Unsorted
 
-::: {.remark}
-If \( f\in L^\infty(X) \), then \( f \) is equal to some bounded function \( g \) almost everywhere.
+::: {.definition title="Measurable Function"}
+A function \( f: (X, {\mathcal{M}}_X) \to (Y, {\mathcal{M}}_Y) \) is **\( ({\mathcal{M}}_X, {\mathcal{M}}_Y){\hbox{-}} \)measurable** iff \( f^{-1}({\mathcal{M}}_Y) \subseteq {\mathcal{M}}_X \). Equivalently, if \( {\mathcal{E}}_Y \) is a generating set for \( {\mathcal{B}}_Y \), \( f^{-1}({\mathcal{E}}_Y) \subseteq {\mathcal{B}}_X \).
+
+-   An functional on a general measurable space \( f: f:(X, {\mathcal{M}}_X) \to ({\mathbb{R}}, {\mathcal{B}}_{\mathbb{R}}) \) is **measurable** \( \iff f \) is \( ({\mathcal{M}}_X, {\mathcal{B}}_{\mathbb{R}}){\hbox{-}} \)measurable.
+-   A functional \( f: {\mathbb{R}}^d\to {\mathbb{R}} \) is **Borel measurable** iff \( f \) is \( ({\mathcal{B}}_{{\mathbb{R}}^d}, {\mathcal{B}}_{\mathbb{R}}){\hbox{-}} \)measurable.
+-   A functional \( f: {\mathbb{R}}^d\to {\mathbb{R}} \) is **Lebesgue measurable** iff \( f \) is \( ({\mathcal{L}}_{{\mathbb{R}}^d}, {\mathcal{B}}_{\mathbb{R}}){\hbox{-}} \)measurable.
+
+Using that \( {\mathcal{B}}_{{\mathbb{R}}} \) is generated by open/closed rays, it suffices to check any of the following (for all \( \alpha \in {\mathbb{R}} \)):
+
+-   \( f^{-1}(\alpha, \infty)\in {\mathcal{M}} \)
+-   \( f^{-1}[\alpha, \infty)\in {\mathcal{M}} \)
+-   \( f^{-1}(-\infty, \alpha)\in {\mathcal{M}} \)
+-   \( f^{-1}(-\infty, \alpha]\in {\mathcal{M}} \)
 :::
 
-::: {.example title="?"}
+::: {.remark}
+Note that we still require Borel sets in the target for Lebesgue measurability! Taking \( ({\mathcal{L}}_{{\mathbb{R}}^d}, {\mathcal{L}}_{\mathbb{R}}) \) functions is too stringent, e.g. this class does not contain continuous functionals.
+:::
+
+::: {.warnings}
+If \( f \) is \( {\mathcal{L}}{\hbox{-}} \)measurable and \( h \) is continuous, it's not necessarily true that \( k\coloneqq f\circ h \) is \( {\mathcal{L}}{\hbox{-}} \)measurable. Standard counterexample: set \( g(x) \coloneqq C(x) + x \) for \( C \) the Cantor-Lebesgue function, then \( g:[0, 1]\to [0, 2] \) is a homeomorphism. Then \( m(g(C)) = 1 \) since \( f \) is constant on intervals in \( C^c \), so use Vitali's theorem: a set is null iff every subset is measurable. So \( g(C) \) contains a non-measurable set \( A \). Define \( B\coloneqq g^{-1}(A) \), then \( B \subset C \) and \( m(C) = 0 \) implies \( B \) is measurable and \( \chi_B \) is a measurable function. But then \( k\coloneqq\chi_B \circ g^{-1} \) is not \( {\mathcal{L}}{\hbox{-}} \)measurable, since \( k^{-1}(1) = A \) is a non-measurable set, but \( \chi_B \) is \( {\mathcal{L}}{\hbox{-}} \)measurable and \( g^{-1} \) is continuous.
+:::
+
+::: {.proposition title="Closure of measurable functions under operations"}
+\( {\mathcal{M}}{\hbox{-}} \)measurable functionals are closed under
+
+-   Sums
+-   Products
+-   Sups/infs
+-   Limsups/Liminfs
+-   Limits when they exist, and the limiting function is measurable.
+-   \( \max(f, g) \) and \( \min(f, g) \).
+
+Characteristic functions on measurable sets are automatically measurable, since \( E\in {\mathcal{M}}\implies E = \chi_E^{-1}(\left\{{1}\right\}) \).
+:::
+
+::: {.remark title="A common proof technique"}
+```{=tex}
+\envlist
+```
+-   Show something holds for indicator functions.
+-   Show it holds for simple functions by linearity.
+-   Use \( s_k \nearrow f \) and apply MCT to show it holds for \( f \).
+:::
+
+::: {.remark title="on notation"}
+```{=tex}
+\envlist
+```
+-   \( L^+ \): measurable functions
+-   \( L^1 \): Lebesgue integrable functions, so \( \int {\left\lvert {f} \right\rvert} < \infty \)
+:::
+
+::: {.definition title="Simple Function"}
+A **simple function** \( s: {\mathbb{C}}\to X \) is a finite linear combination of indicator functions of measurable sets, i.e. 
+\[
+s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
+.\]
+:::
+
+::: {.definition title="Lebesgue Integral"}
+\[
+\int_X f \coloneqq\sup \left\{{ \int s(x) \,d\mu{~\mathrel{\Big|}~}0\leq s \leq f, s\text{ simple } }\right\} 
+.\]
+
+Note that if \( s = \sum c_j \chi_{E_j} \) is simple, then
+\[
+\int_X s(x) \,d\mu\coloneqq\sum_{j=1}^n c_j \mu(E_j)
+.\]
+:::
+
+::: {.remark title="Integrals split across disjoint sets"}
+A useful fact: for \( (X, \mathcal{M}) \) a measure space, integrals split across disjoint sets:
+\[
+\int_X f = \int_{X\setminus A} f + \int_A f && \forall\, A \in \mathcal{M} 
+.\]
+:::
+
+::: {.definition title="Essential supremum and infimum, essentially bounded"}
+An **essential lower bound** \( b \) on a function \( f \) is any real number such that \( S_{b} \coloneqq\left\{{x{~\mathrel{\Big|}~}f(x) < b }\right\} = f^{-1}(-\infty, b) \) has measure zero. The **essential infimum** is the supremum of all essential lower bounds, i.e. \( {\mathrm{ess}}\inf f \coloneqq\sup_{b} \left\{{b{~\mathrel{\Big|}~}\mu S_b = 0}\right\} \). This is the greatest lower bound almost everywhere.
+
+Similarly an **essential upper bound** \( c \) is any number such that \( S^c \coloneqq f^{-1}(c, \infty) \) has measure zero, and the **essential supremum** is \( {\mathrm{ess}}\sup f \coloneqq\inf_{c} \left\{{c{~\mathrel{\Big|}~}\mu S^c = 0}\right\} \), which is the least upper bound almost everywhere.
+
+A function is **essentially bounded** if \( {\left\lVert {f} \right\rVert}_\infty \coloneqq{\mathrm{ess}}\sup f < \infty \). These are functions which are bounded almost everywhere.
+:::
+
+::: {.example title="An essentially bounded but not bounded function"}
 \( f(x) = x\chi_{\mathbb{Q}}(x) \) is essentially bounded but not bounded.
+:::
+
+::: {.proposition title="$L^\\infty$ functions are equivalent to bounded almost-everywhere functions"}
+If \( f\in L^\infty(X) \), then \( f \) is equal to some bounded function \( g \) almost everywhere.
 :::
 
 ::: {.theorem title="p-Test for Integrals"}
@@ -735,20 +1106,26 @@ If \( f\in L^\infty(X) \), then \( f \) is equal to some bounded function \( g \
 :::
 
 ::: {.slogan}
-Large powers of \( x \) help us in neighborhoods of infinity and hurt around zero
+Large powers of \( x \) help us in neighborhoods of infinity and hurt around zero.
 :::
 
-### Convergence Theorems
-
 ::: {.theorem title="Monotone Convergence"}
-If \( f_n \in L^+ \) and \( f_n \nearrow f \) almost everywhere, then
+If \( f_n: X\to [0, \infty) \in L^+ \) and \( f_n \nearrow f \) almost everywhere, then
 \[
 \lim \int f_n
 = \int \lim f_n = \int f
 \quad \text{i.e.}~~ \int f_n \to \int f
 .\]
+:::
 
-> Needs to be positive and increasing.
+::: {.slogan}
+Measurable, non-negative, increasing pointwise a.e. allows commuting limits and integrals.
+:::
+
+::: {.proof title="of MCT"}
+```{=tex}
+\todo[inline]{todo}
+```
 :::
 
 ::: {.theorem title="Dominated Convergence"}
@@ -763,6 +1140,12 @@ and more generally,
 .\]
 
 > Positivity *not* needed.
+:::
+
+::: {.proof title="of DCT"}
+```{=tex}
+\todo[inline]{todo}
+```
 :::
 
 ::: {.theorem title="Generalized DCT"}
@@ -832,9 +1215,16 @@ so the DCT applies to \( g_n \) and
 ::: {.theorem title="Fatou"}
 If \( f_n \) is a sequence of nonnegative measurable functions, then
 \[
-\int \liminf_n f_n &\leq \liminf_n \int f_n \\
+\liminf_n \int f_n 
+&\geq \int \liminf_n f_n \\
 \limsup_n \int f_n &\leq \int \limsup_n f_n
 .\]
+:::
+
+::: {.proof title="of Fatou"}
+```{=tex}
+\todo[inline]{Prove Fatou}
+```
 :::
 
 ::: {.theorem title="Tonelli (Non-Negative, Measurable)"}
@@ -876,7 +1266,7 @@ m(E) = \int_{{\mathbb{R}}^{n_1}} m(E_x) ~dx
 .\]
 :::
 
-::: {.proof}
+::: {.proof title="of measurable slices"}
 ```{=tex}
 \envlist
 ```
@@ -906,7 +1296,7 @@ To justify passing the limit, let \( h_k \to 0 \) be any sequence and define
 \[
 f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
 ,\]
-so \( f_k \overset{\text{pointwise}}\to {\frac{\partial }{\partial t}\,}f \).
+so \( f_k \overset{k\to\infty}\longrightarrow{\frac{\partial f}{\partial t}\,} \) pointwise.
 
 Apply the MVT to \( f_k \) to get \( f_k(x, t) = f_k(\xi, t) \) for some \( \xi \in [0, h_k] \), and show that \( f_k(\xi, t) \in L_1 \).
 :::
@@ -930,6 +1320,9 @@ If \( \left\{{f_n}\right\} \) integrable with either \( \sum \int {\left\lvert {
 :::
 
 ::: {.proof}
+```{=tex}
+\envlist
+```
 -   By Tonelli, if \( f_n(x) \geq 0 \) for all \( n \), taking the counting measure allows interchanging the order of "integration".
 -   By Fubini on \( {\left\lvert {f_n} \right\rvert} \), if either "iterated integral" is finite then the result follows.
 :::
@@ -1026,7 +1419,7 @@ The Lebesgue integral is translation invariant, i.e.
 :::
 
 ::: {.proposition title="Integrals distribute over disjoint sets"}
-If \( X \subseteq A \cup B \), then \( \int_X f \leq \int_A f + \int_{A^c} f \) with equality iff \( X = A{\coprod}B \).
+If \( X \subseteq A \cup B \), then \( \int_X f \leq \int_A f + \int_{A^c} f \) with equality iff \( X = A{\textstyle\coprod}B \).
 :::
 
 ::: {.proposition title="Uniformly continuous $L^1$ functions vanish at infinity."}
@@ -1150,12 +1543,12 @@ We also have
 &=  \left( \int_X {\left\lvert {f} \right\rvert}^p \right)^{\frac 1 p} \\
 &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
 &= M ~m(X)^{\frac 1 p} \xrightarrow{p\to\infty} M \\
-&\implies \limsup_p {\left\lVert {f} \right\rVert}_{p} \leq M \hfill\blacksquare
+&\implies \limsup_p {\left\lVert {f} \right\rVert}_{p} \leq M
 .\]
 :::
 
 ::: {.theorem title="Duals for $L^p$ spaces"}
-For \( 1\leq p< \infty \), \( (L^p)^\vee\cong L^q \).
+For \( 1\leq p< \infty \), \( (L^p) {}^{ \check{} }\cong L^q \).
 :::
 
 ::: {.proof title="$p=1$ case"}
@@ -1170,7 +1563,59 @@ Use Riesz Representation for Hilbert spaces.
 :::
 
 ::: {.proposition title="$L^1$ is not quite the dual of $L^\\infty$."}
-\( L^1 \subset (L^\infty)^\vee \), since the isometric mapping is always injective, but *never* surjective.
+\( L^1 \subset (L^\infty) {}^{ \check{} } \), since the isometric mapping is always injective, but *never* surjective.
+:::
+
+## Counterexamples
+
+::: {.proposition title="a.e. convergence never implies $L^p$ convergence"}
+Sequences \( f_k \overset{a.e.}\to f \) but \( f_k \overset{L^p}{\not\to} f \):
+
+-   For \( 1\leq p < \infty \): The skateboard to infinity, \( f_k = \chi_{[k, k+1]} \).
+
+    Then \( f_k \overset{a.e.}\to 0 \) but \( {\left\lVert {f_k} \right\rVert}_p = 1 \) for all \( k \).
+
+    > Converges pointwise and a.e., but not uniformly and not in norm.
+
+-   For \( p = \infty \): The sliding boxes \( f_k = k \cdot \chi_{[0, \frac 1 k]} \).
+
+    Then similarly \( f_k \overset{a.e.}\to 0 \), but \( {\left\lVert {f_k} \right\rVert}_p = 1 \) and \( {\left\lVert {f_k} \right\rVert}_\infty = k \to \infty \)
+
+    > Converges a.e., but not uniformly, not pointwise, and not in norm.
+:::
+
+::: {.proposition title="The four big counterexamples in convergence"}
+```{=tex}
+\envlist
+```
+1.  Uniform: \( f_n \rightrightarrows f: \forall \varepsilon ~\exists N {~\mathrel{\Big|}~}~n\geq N \implies {\left\lvert {f_N(x) - f(x)} \right\rvert} < \varepsilon \quad \forall x. \)
+2.  Pointwise: \( f_n(x) \to f(x) \) for all \( x \). (This is just a sequence of numbers)
+3.  Almost Everywhere: \( f_n(x) \to f(x) \) for almost all \( x \).
+4.  Norm: \( {\left\lVert {f_n - f} \right\rVert}_1 = \int {\left\lvert {f_n(x) - f(x)} \right\rvert} \to 0 \).
+
+We have \( 1 \implies 2 \implies 3 \), and in general no implication can be reversed, but (**warning**) none of \( 1,2,3 \) imply \( 4 \) or vice versa.
+
+-   \( f_n = (1/n) \chi_{(0, n)} \). This converges uniformly to 0, but the integral is identically 1. So this satisfies 1,2,3 and not 4.
+
+    ![image_2021-05-21-16-38-30](figures/image_2021-05-21-16-38-30.png)
+
+-   \( f_n = \chi_{(n, n+1)} \) (skateboard to infinity). This satisfies 2,3 but not 1, 4.
+
+    ![image_2021-05-21-16-42-08](figures/image_2021-05-21-16-42-08.png)
+
+-   \( f_n = n\chi_{(0, \frac 1 n)} \). This satisfies 3 but not 1,2,4.
+
+    ![image_2021-05-21-16-54-38](figures/image_2021-05-21-16-54-38.png)
+
+-   \( f_n: \) one can construct a sequence where \( f_n \to 0 \) in \( L^1 \) but is not 1,2, or 3. The construction:
+
+    -   Break \( I \) into \( 2 \) intervals, let \( f_1 \) be the indicator on the first half, \( f_2 \) the indicator on the second.
+    -   Break \( I \) into \( 2^2=4 \) intervals, like \( f_3 \) be the indicator on the first quarter, \( f_4 \) on the second, etc.
+    -   Break \( I \) into \( 2^k \) intervals and cyclic through \( k \) indicator functions.
+
+    ![image_2021-05-21-16-49-09](figures/image_2021-05-21-16-49-09.png)
+
+    -   Then \( \int f_n = 1/2^n \to 0 \), but \( f_n\not\to 0 \) pointwise since for every \( x \), there are infinitely many \( n \) for which \( f_n(x) = 0 \) and infinitely many for which \( f_n(x) = 1 \).
 :::
 
 # Fourier Transform and Convolution
@@ -1340,6 +1785,12 @@ If \( f, g \in L^1 \) then \( f\ast g\in L^1 \).
 
 ## Theorems
 
+::: {.fact title="Pythagoras"}
+\[
+{\left\langle {v},~{w} \right\rangle} = 0 \implies {\left\lVert {v+w} \right\rVert} = {\left\lVert {v} \right\rVert} + {\left\lVert {w} \right\rVert}
+.\]
+:::
+
 ::: {.theorem title="Bessel's Inequality"}
 For any orthonormal set \( \left\{{u_{n}}\right\} \subseteq {\mathcal{H}} \) a Hilbert space (not necessarily a basis),
 \[
@@ -1460,7 +1911,7 @@ We have \( {\left\lvert {L(x-y)} \right\rvert} \leq c{\left\lVert {x-y} \right\r
 :::
 
 ::: {.theorem title="The operator norm is a norm"}
-If \( H \) is a Hilbert space, then \( (H^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{\text{op}}) \) is a normed space.
+If \( H \) is a Hilbert space, then \( (H {}^{ \check{} }, {\left\lVert {{-}} \right\rVert}_{\text{op}}) \) is a normed space.
 :::
 
 ::: {.proof title="?"}
@@ -1471,20 +1922,20 @@ The only nontrivial property is the triangle inequality, but
 :::
 
 ::: {.theorem title="The operator norm on $X\\dual$ yields a Banach space"}
-If \( X \) is a normed vector space, then \( (X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{\text{op}}) \) is a Banach space.
+If \( X \) is a normed vector space, then \( (X {}^{ \check{} }, {\left\lVert {{-}} \right\rVert}_{\text{op}}) \) is a Banach space.
 :::
 
 ::: {.proof title="?"}
 ```{=tex}
 \envlist
 ```
--   Let \( \left\{{L_{n}}\right\} \) be Cauchy in \( X^\vee \).
+-   Let \( \left\{{L_{n}}\right\} \) be Cauchy in \( X {}^{ \check{} } \).
 
 -   Then for all \( x\in C \), \( \left\{{L_{n}(x)}\right\} \subset {\mathbb{C}} \) is Cauchy and converges to something denoted \( L(x) \).
 
 -   Need to show \( L \) is continuous and \( {\left\lVert {L_{n} - L} \right\rVert} \to 0 \).
 
--   Since \( \left\{{L_{n}}\right\} \) is Cauchy in \( X^\vee \), choose \( N \) large enough so that
+-   Since \( \left\{{L_{n}}\right\} \) is Cauchy in \( X {}^{ \check{} } \), choose \( N \) large enough so that
     \[
     n, m \geq N \implies {\left\lVert {L_{n} - L_{m}} \right\rVert} < \varepsilon \implies {\left\lvert {L_{m}(x) - L_{n}(x)} \right\rvert} < \varepsilon \quad \forall x {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert} = 1
     .\]
@@ -1537,7 +1988,9 @@ a_{n} = {\left\langle {\mathbf{x}},~{\mathbf{u}_{n}} \right\rangle} \quad \foral
 -   By construction, \( {\left\lVert {x-S_{N}} \right\rVert}^2 = {\left\lVert {x} \right\rVert}^2 - \sum^N {\left\lvert {a_{n}} \right\rvert}^2 \to 0 \), so \( {\left\lVert {x} \right\rVert}^2 = \sum^\infty {\left\lvert {a_{n}} \right\rvert}^2 \).
 :::
 
-# Extra Problems
+# Extra Problems: Undergrad Review
+
+# Extra Problems: Measure Theory
 
 ## Greatest Hits
 
@@ -1599,7 +2052,11 @@ Uniform Convergence
 -   Show that a uniform limit of bounded functions is bounded.
 -   Show that a uniform limit of continuous function is continuous.
     -   I.e. if \( f_n\to f \) uniformly with each \( f_n \) continuous then \( f \) is continuous.
--   Show that if \( f_n\to f \) pointwise, \( f_n' \to g \) uniformly for some \( f, g \), then \( f \) is differentiable and \( g = f' \).
+-   Show that
+    -   \( f_n: [a, b]\to {\mathbb{R}} \) are continuously differentiable with derivatives \( f_n' \)
+    -   The sequence of derivatives \( f_n' \) converges uniformly to some function \( g \)
+    -   There exists *at least one* point \( x_0 \) such that \( \lim_n f_n(x_0) \) exists,
+    -   Then \( f_n \to f \) uniformly to some differentiable \( f \), and \( f' = g \).
 -   Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
 -   Show that \( \sum {x^n \over n!} \) converges uniformly on any compact subset of \( {\mathbb{R}} \).
 
@@ -1629,6 +2086,7 @@ Convergence
 
 Convolution
 
+-   Show that if \( f, g \) are continuous and compactly supported, then so is \( f\ast g \).
 -   Show that if \( f\in L^1 \) and \( g \) is bounded, then \( f\ast g \) is bounded and uniformly continuous.
 -   If \( f, g \) are compactly supported, is it necessarily the case that \( f\ast g \) is compactly supported?
 -   Show that under any of the following assumptions, \( f\ast g \) vanishes at infinity:
@@ -1672,13 +2130,49 @@ Approximate Identities
     \ell^2({\mathbb{Z}}) &\subset \ell^1({\mathbb{Z}}) \subset \ell^\infty({\mathbb{Z}})
     .\]
 
+### Unsorted
+
+::: {.proposition title="Volumes of Rectangles"}
+If \( \left\{{R_j}\right\} \rightrightarrows R \) is a covering of \( R \) by rectangles,
+\[
+R = \overset{\circ}{\displaystyle\coprod_{j}} R_j &\implies {\left\lvert {R} \right\rvert} = \sum {\left\lvert {R} \right\rvert}_j \\
+R \subseteq \displaystyle\bigcup_j R_j &\implies {\left\lvert {R} \right\rvert} \leq \sum {\left\lvert {R} \right\rvert}_j
+.\]
+:::
+
+-   Show that any disjoint intervals is countable.
+-   Show that every open \( U \subseteq {\mathbb{R}} \) is a countable union of disjoint open intervals.
+-   Show that every open \( U \subseteq {\mathbb{R}}^n \) is a countable union of *almost* disjoint closed cubes.
+-   Show that that Cantor middle-thirds set is compact, totally disconnected, and perfect, with outer measure zero.
+-   Prove the Borel-Cantelli lemma.
+
+## Rectangles
+
+## Outer Measure
+
+## Lebesgue Measurable Sets
+
+## Lebesgue Measurable Functions
+
+# Extra Problems: Integration
+
+## The Lebesgue Integral
+
+## \( L^1 \) as a Banach Space {#l1-as-a-banach-space}
+
+## Fubini and Tonelli
+
+# Extra Problems: Differentiation and Misc
+
+## ?
+
 # Midterm Exam 2 (December 2014)
 
 ## 1
 
 > Note: (a) is a repeat.
 
--   Let \( \Lambda\in L^2(X)^\vee \).
+-   Let \( \Lambda\in L^2(X) {}^{ \check{} } \).
     -   Show that \( M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X) \) is a closed subspace, and \( L^2(X) = M \oplus M\perp \).
     -   Prove that there exists a unique \( g\in L^2(X) \) such that \( \Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu \).
 
@@ -1687,8 +2181,8 @@ Approximate Identities
 a.  In parts:
 
 -   Given a definition of \( L^\infty({\mathbb{R}}^n) \).
--   Verify that \( {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
--   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{\,\cdot\,}} \right\rVert}_\infty) \) is a Banach space.
+-   Verify that \( {\left\lVert {{-}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
+-   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{-}} \right\rVert}_\infty) \) is a Banach space.
 
 b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \),
     \[
@@ -1810,7 +2304,7 @@ b.  Prove that the map
     \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
     f &\mapsto \int_0^1 fg
     \]
-    defines an element of \( L^1([0, 1])^\vee \) with \( {\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1])^\vee}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])} \).
+    defines an element of \( L^1([0, 1]) {}^{ \check{} } \) with \( {\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1]) {}^{ \check{} }}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])} \).
 
 ## Problem 4
 
@@ -1824,7 +2318,7 @@ Let \( m_*(E) \) denote the Lebesgue outer measure of a set \( E \subseteq {\mat
 
 a.  Prove using the definition of Lebesgue outer measure that
     \[
-    m \qty{ \bigcup_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
+    m \qty{ \displaystyle\bigcup_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
     .\]
 
 b.  Prove that for any \( E \subseteq {\mathbb{R}}^n \) and any \( \epsilon> 0 \) there exists an open set \( G \) with \( E \subseteq G \) and
@@ -1842,7 +2336,7 @@ b.  Let \( f_k \) be a sequence of extended real-valued Lebesgue measurable func
 
         *Hint: argue that*
         \[
-        \left\{{x {~\mathrel{\Big|}~}\inf_k f_k(x) < a}\right\} = \bigcup_k \left\{{x {~\mathrel{\Big|}~}f_k(x) < a}\right\}
+        \left\{{x {~\mathrel{\Big|}~}\inf_k f_k(x) < a}\right\} = \displaystyle\bigcup_k \left\{{x {~\mathrel{\Big|}~}f_k(x) < a}\right\}
         .\]
 
     ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
@@ -2033,7 +2527,7 @@ a.  Give the definition of what it means for a map \( L:X\to {\mathbb{C}} \) to 
 
 b.  Define what it means for \( L \) to be *bounded* and show \( L \) is bounded \( \iff L \) is continuous.
 
-c.  Prove that \( (X^\vee, {\left\lVert {{\,\cdot\,}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
+c.  Prove that \( (X {}^{ \check{} }, {\left\lVert {{-}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
 
 # Extra Problems from Problem Sets
 
@@ -2074,7 +2568,7 @@ Let \( (X, \mathcal{M}, \mu) \) be a measure space and prove the following prope
     {\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {g} \right\rVert}_{\infty }
     .\]
 
--   \( {\left\lVert {{\,\cdot\,}} \right\rVert}_{\infty } \) is a norm on \( L^{\infty } \) making it a Banach space.
+-   \( {\left\lVert {{-}} \right\rVert}_{\infty } \) is a norm on \( L^{\infty } \) making it a Banach space.
 
 -   \( {\left\lVert {f_n - f} \right\rVert}_{\infty } \overset{n\to \infty }\to 0 \iff \) there exists an \( E\in \mathcal{M} \) such that \( \mu(X\setminus E) = 0 \) and \( f_n \to f \) uniformly on \( E \).
 
@@ -2208,7 +2702,7 @@ Let \( E \subseteq H \) a Hilbert space.
 
 a.  Show that \( E\perp \subseteq H \) is a closed subspace.
 
-b.  Show that \( (E^\perp)^\perp = \operatorname{cl}_H(E) \).
+b.  Show that \( (E^\perp)^\perp = { \operatorname{cl}} _H(E) \).
 
 ## 2010 9.5b
 
@@ -2298,9 +2792,32 @@ b.  Following the proof of the Lebesgue differentiation theorem, show that for \
 :::
 
 ::: {.proposition title="Chebyshev's Inequality"}
+The most often used form here:
 \[  
-\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{{\left\lVert {f} \right\rVert}_{p}}{\alpha}\right)^{p}
+\mu f^{-1}\qty{(\alpha, \infty)} \coloneqq\mu\qty{x\in X {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} > \alpha  } \leq {1\over \alpha} \int f
 .\]
+Proof: let \( S_\alpha \) be the set appearing, then \( \alpha \mu(S_\alpha) \) is the sum of areas of certain boxes below the graph of \( f \). Interpret \( \int_X f \) as the total area under the graph to make the inequality obvious.
+
+![image_2021-06-02-22-59-46](figures/image_2021-06-02-22-59-46.png)
+
+The probability interpretation: \( {\mathbb{P}}(X\geq \alpha) \leq {1\over \alpha} {\mathbb{E}}(X) \).
+
+The more general version:
+\[
+\mu f^{-1}\qty{(\alpha, \infty)} \coloneqq\mu\qty{x\in X {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} > \alpha  } \leq \qty{{\left\lVert {f} \right\rVert}_p \over \alpha}^p
+.\]
+A slightly easier to digest form:
+\[
+\mu f^{-1}\qty{(\alpha, \infty)} \coloneqq\mu\qty{x\in X {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} > \alpha  } \leq {1\over \alpha^p} \int_X {\left\lvert {f} \right\rvert}^p
+.\]
+
+Proof:
+\[
+{\left\lVert {f} \right\rVert}_p^p = \int {\left\lvert {f} \right\rvert}^p \geq \int_{S_\alpha} {\left\lvert {f} \right\rvert}^p \geq \alpha^p \int_{S_\alpha} 1 = \alpha^p \mu(S_\alpha)
+.\]
+:::
+
+::: {.proposition title="Markov's Inequality"}
 :::
 
 ::: {.proposition title="Holder's Inequality"}
@@ -2344,7 +2861,7 @@ Fix \( p, q \), let \( r = \frac q p \) and \( s = \frac{r}{r-1} \) so \( r^{-1}
 
 ::: {.proposition title="Cauchy-Schwarz Inequality"}
 \[  
-{\left\lvert {{\left\langle {f},~{g} \right\rangle}} \right\rvert} = {\left\lVert {fg} \right\rVert}_{1} \leq {\left\lVert {f} \right\rVert}_{2} {\left\lVert {g} \right\rVert}_{2}
+{\left\lvert {{\left\langle {f},~{g} \right\rangle}} \right\rvert} = \leq {\left\lVert {f} \right\rVert}_{2} {\left\lVert {g} \right\rVert}_{2}
 && \text{with equality} \iff f = \lambda g
 .\]
 :::
@@ -2460,6 +2977,11 @@ AB \leq {A^p \over p} + {B^q \over q}
 ::: {.proposition title="Bernoulli's Inequality"}
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2{\mathbb{Z}}\text{ and } \forall x
+.\]
+
+As a consequence,
+\[
+1-x \leq e^{-x}
 .\]
 :::
 

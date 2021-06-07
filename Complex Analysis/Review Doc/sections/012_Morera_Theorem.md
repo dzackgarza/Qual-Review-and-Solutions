@@ -21,17 +21,6 @@ This can be applied to series of the form $\sum_k f_k(z)$.
 :::
 
 
-:::{.remark}
-If $f_k\to f$ uniformly with each $f_k$ holomorphic, then $f$ is holomorphic.
-:::
-
-
-:::{.proof title="?"}
-Use Goursat's theorem, exchange limit and integral.
-:::
-
-
-
 ### Symmetric Regions
 
 In this section, take $\Omega$ to be a region symmetric about the real axis, so $z\in \Omega \iff \bar{z} \in \Omega$.

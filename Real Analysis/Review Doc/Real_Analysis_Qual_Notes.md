@@ -1,6 +1,20 @@
 \newcommand{\dx}{\,dx}
 \newcommand{\dt}{\,dt}
 \newcommand{\dy}{\,dy}
+\newcommand{\ds}{\,ds}
+\newcommand{\dz}{\,dz}
+\newcommand{\dr}{\,dr}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dV}{\,dV}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
 \newcommand{\textoperatorname}[1]{
   \operatorname{\textnormal{#1}}
 }
@@ -16,18 +30,22 @@
 \newcommand{\BB}[0]{{\mathbb{B}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
+\newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\fq}[0]{{\mathbb{F}_{q}}}
 \newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HP}[0]{{\mathbb{HP}}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\kk}[0]{{\mathbb{k}}}
 \newcommand{\bbm}[0]{{\mathbb{M}}}
 \newcommand{\NN}[0]{{\mathbb{N}}}
 \newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\LL}[0]{{\mathbb{L}}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
@@ -35,33 +53,61 @@
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \renewcommand{\SS}[0]{{\mathbb{S}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\kG}[0]{{kG}}
 \newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
 \newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
 \newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
+\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
+\newcommand{\SF}[0]{\operatorname{SF}}
+\newcommand{\vol}[0]{\operatorname{vol}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\bP}[0]{\operatorname{bP}}
 \newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\Ch}[0]{\operatorname{Ch}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
 \newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\Arg}[0]{\operatorname{Arg}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\GL}[0]{\operatorname{GL}}
 \newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\gl}[0]{\operatorname{GL}}
 \newcommand{\mat}[0]{\operatorname{Mat}}
 \newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Perv}[0]{\operatorname{Perv}}
 \newcommand{\Gal}[0]{\operatorname{Gal}}
 \newcommand{\Hilb}[0]{\operatorname{Hilb}}
 \newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{\operatorname{red}}
+\newcommand{\red}[0]{{ \text{red} }}
 \newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
 \newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\adj}[0]{\operatorname{adj}}
@@ -69,28 +115,40 @@
 \newcommand{\ann}[0]{\operatorname{Ann}}
 \newcommand{\Ann}[0]{\operatorname{Ann}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\Sp}[0]{{\operatorname{Sp}}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\Tot}[0]{\mathrm{\operatorname{Tot}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\SH}[0]{{\operatorname{SH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
 \newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\Qcoh}[0]{{\mathrm{QCoh}}}
-\newcommand{\QCoh}[0]{{\mathrm{QCoh}}}
 \newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
 \newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\ssets}[0]{\operatorname{sSets}}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dR}[0]{\mathrm{dR}}
 \newcommand{\txor}[0]{{\operatorname{ or }}}
 \newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\operatorname{gr}}}
-\newcommand{\grMod}[0]{{\operatorname{grMod}}}
 \newcommand{\dcoset}[3]{
     {\textstyle #1}
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
@@ -101,66 +159,139 @@
 \newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
-\newcommand{\Fun}[0]{{\operatorname{Fun}}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
 \newcommand{\PSL}[0]{{\operatorname{PSL}}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\MO}[0]{{\operatorname{MO}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Top}[0]{{\operatorname{Top}}}
-\newcommand{\Mfd}[0]{{\operatorname{Mfd}}}
-\newcommand{\Ab}[0]{{\operatorname{Ab}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\operatorname{op}}
-\newcommand{\hoTop}[0]{{\operatorname{hoTop}}}
-\newcommand{\Sch}[0]{{\operatorname{Sch}}}
-\newcommand{\sch}[0]{{\operatorname{Sch}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\alg}[0]{\mathrm{Alg}}
-\newcommand{\scalg}[0]{\mathrm{sCAlg}}
-\newcommand{\calg}[0]{\mathrm{CAlg}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\poly}[0]{\operatorname{poly}}
-\newcommand{\Vect}[0]{{\operatorname{Vect}}}
-\newcommand{\Sh}[0]{{\operatorname{Sh}}}
-\newcommand{\presh}[0]{{\operatorname{Presh}}}
-\newcommand{\Presh}[0]{{\operatorname{Presh}}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
+\newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Poset}[0]{\mathsf{Poset}}
+\newcommand{\Fun}[0]{{\mathsf{Fun}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
+\newcommand{\poly}[0]{\mathsf{poly}}
+\newcommand{\Vect}[0]{{\mathsf{Vect}}}
+\newcommand{\Sh}[0]{{\mathsf{Sh}}}
+\newcommand{\Var}[0]{{\mathsf{Var}}}
+\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
+\newcommand{\Alg}[0]{{\mathsf{Alg}}}
+\newcommand{\Ch}[0]{\mathsf{Ch}}
+\newcommand{\Set}[0]{{\mathsf{Set}}}
+\newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
+\newcommand{\Sets}[0]{{\mathsf{Set}}}
+\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
+\newcommand{\sSet}[0]{{\mathsf{sSet}}}
+\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
+\newcommand{\Sp}[0]{{\mathsf{Sp}}}
+\newcommand{\sets}[0]{{\mathsf{Set}}}
+\newcommand{\Grp}[0]{{\mathsf{Grp}}}
+\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
+\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\Kan}[0]{{\mathsf{Kan}}}
+\newcommand{\Groups}[0]{{\mathsf{Group}}}
+\newcommand{\Ab}[0]{{\mathsf{Ab}}}
+\newcommand{\Ring}[0]{\mathsf{Ring}}
+\newcommand{\CRing}[0]{\mathsf{CRing}}
+\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
+\newcommand{\Field}[0]{\mathsf{Field}}
+\newcommand{\Perf}[0]{\mathsf{Perf}}
+\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
+\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
+\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
+\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
+\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
+\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
+\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\gr}[0]{{\mathsf{gr}\,}}
+\newcommand{\grMod}[0]{{\mathsf{grMod}}}
+\newcommand{\Mod}[0]{{\mathsf{Mod}}}
+\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
+\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
+\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
+\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
+\newcommand{\cdga}[0]{{\mathsf{cdga} }}
+\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\alg}[0]{\mathsf{Alg}}
+\newcommand{\scalg}[0]{\mathsf{sCAlg}}
+\newcommand{\calg}[0]{\mathsf{CAlg}}
+\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
+\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
+\newcommand{\ssets}[0]{\mathsf{sSet}}
+\newcommand{\Assoc}[0]{\mathsf{Assoc}}
+\newcommand{\Free}[0]{\mathsf{Free}}
+\newcommand{\Unital}[0]{\mathsf{Unital}}
+\newcommand{\Riem}[0]{\mathsf{Riem}}
+\newcommand{\Comm}[0]{\mathsf{Comm}}
+\newcommand{\Top}[0]{{\mathsf{Top}}}
+\newcommand{\CW}[0]{{\mathsf{CW}}}
+\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
+\newcommand{\ho}[0]{{\mathsf{ho}}}
+\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\hoType}[0]{{\mathsf{hoType}}}
+\newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\Lag}[0]{{\mathsf{Lag}}}
+\newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
+\newcommand{\Wein}[0]{{\mathsf{Wein}}}
+\newcommand{\Aff}[0]{{\mathsf{Aff}}}
+\newcommand{\Schf}[0]{{\mathsf{Schf}}}
+\newcommand{\Rep}[0]{{\mathsf{Rep}}}
+\newcommand{\sch}[0]{{\mathsf{Sch}}}
+\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
+\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
+\newcommand{\Perv}[0]{\mathsf{Perv}}
+\newcommand{\presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Presh}[0]{{\mathsf{Presh}}}
+\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\set}{{\mathsf{Set} }}
+
+\newcommand{\eul}[0]{{\operatorname{eul}}}
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Ob}[0]{{\operatorname{Ob}}}
 \newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\Set}[0]{{\operatorname{Set}}}
-\newcommand{\Sets}[0]{{\operatorname{Set}}}
-\newcommand{\Grp}[0]{{\operatorname{Grp}}}
-\newcommand{\Groups}[0]{{\operatorname{Groups}}}
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
 \newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\set}[0]{{\operatorname{Set}}}
 \newcommand{\Tor}[0]{\operatorname{Tor}}
 \newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext}}
-\newcommand{\sets}[0]{{\operatorname{Set}}}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Obs}{\operatorname{Obs} }
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\fin}[0]{{\operatorname{fin}}}
 \newcommand{\orr}[0]{{\operatorname{ or }}}
 \newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\bung}[0]{\operatorname{Bun}_G}
 \newcommand{\const}[0]{{\operatorname{const.}}}
 \newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\discriminant}[0]{{\Delta}}
 \newcommand{\id}[0]{\operatorname{id}}
 \newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
 \newcommand{\sep}[0]{^\operatorname{sep}}
 \newcommand{\tors}[0]{{\operatorname{tors}}}
 \newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{\operatorname{compact}}
+\newcommand{\cpt}[0]{{ \text{compact} } }
+\newcommand{\Kah}[0]{{ \text{Kähler} } }
+\newcommand{\oriented}[0]{{ \text{oriented} } }
+\newcommand\compact[0]{\text{cpt}}
+\newcommand\Kahler[0]{\text{Kähler}}
+\newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
@@ -168,27 +299,37 @@
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
 \newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\Large \ast}}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
 \newcommand{\convolve}[0]{\ast}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
 \newcommand{\coker}[0]{\operatorname{coker}}
 \newcommand{\Mor}[0]{\operatorname{Mor}}
 \newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
 \newcommand{\cross}[0]{\times}
 \newcommand{\by}[0]{\times}
 \newcommand{\dash}[0]{{\hbox{-}}}
 \newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
 \newcommand{\definedas}[0]{\coloneqq}
 \newcommand{\da}[0]{\coloneqq}
 \newcommand{\del}[0]{{\partial}}
 \newcommand{\directlim}[0]{\varinjlim}
 \newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
-\newcommand{\dual}[0]{^\vee}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
+\newcommand{\dual}[0]{ {}^{ \check{} }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
 \newcommand{\smts}[1]{\setminus\theset{#1}}
@@ -202,9 +343,9 @@
 \newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
 \newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
 \newcommand{\into}[0]{\to}
 \newcommand{\inv}[0]{^{-1}}
 \newcommand{\mfa}[0]{{\mathfrak{a}}}
@@ -217,32 +358,48 @@
 \newcommand{\mfp}[0]{{\mathfrak{p}}}
 \newcommand{\mfq}[0]{{\mathfrak{q}}}
 \newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
 \newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\lieh}[0]{{\mathfrak{h}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
+\newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\lieb}[0]{{\mathfrak{b}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieh}[0]{{\mathfrak{h}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\Lie}[0]{\operatorname{Lie}}
 \newcommand{\nilrad}[0]{{\mathfrak{N}}}
 \newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
 \newcommand{\mapsvia}[1]{\xrightarrow{#1}}
 \newcommand{\fromvia}[1]{\xleftarrow{#1}}
 \newcommand{\mapstovia}[1]{\xmapsto{#1}}
 \newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\from}[0]{\leftarrow}
 \newcommand{\mapstofrom}[0]{\rightleftharpoons}
-\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#1}^{#2}}}
+\newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
 \newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\diagonal}[0]{\Delta}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\overset{#1}\injects}
 \newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\Prism}[0]{\mathsf{Prism}}
+\newcommand{\Solid}[0]{\mathsf{Solid}}
+\newcommand{\Spf}[0]{\mathsf{Spf}}
+\newcommand{\WCart}[0]{\mathsf{WCart}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
 }
 \newcommand{\adjoint}[0]{\leftrightarrows}
 \newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
@@ -272,28 +429,10 @@
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
 \newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\cl}[0]{\operatorname{cl}}
-\newcommand{\Cl}[0]{\operatorname{Cl}}
-\newcommand{\St}[0]{\operatorname{St}}
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\soc}[0]{\operatorname{Soc}}
-\newcommand{\hd}[0]{\operatorname{Head}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\hilb}[0]{\operatorname{Hilb}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Frame}[0]{{\operatorname{Frame}}}
-\newcommand{\OFrame}[0]{{\operatorname{OFrame}}}
-\newcommand{\UFrame}[0]{{\operatorname{UFrame}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
-\newcommand{\Hom}[0]{{\operatorname{Hom}}}
-\newcommand{\shom}{\mathscr{H}\operatorname{\kern -3pt {\calligra\large om}}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\FS}{{ \text{FS} }}
 \newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
 \newcommand{\Map}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
@@ -302,15 +441,13 @@
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
 \newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
-\newcommand{\notdivides}[0]{\nmid}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
-\newcommand{\rad}[0]{{\operatorname{rad}}}
-\newcommand{\ralg}[0]{\operatorname{R-alg}}
-\newcommand{\kalg}[0]{k\dash\operatorname{alg}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
 \newcommand{\Log}[0]{\operatorname{Log}}
@@ -320,33 +457,31 @@
 \newcommand{\rk}[0]{{\operatorname{rank}}}
 \newcommand{\evalfrom}[0]{\Big|}
 \renewcommand{\mod}{\pmod}
-\newcommand{\rmod}[0]{{R\dash\mathrm{mod}}}
-\newcommand{\modr}[0]{{\mathrm{mod}\dash R}}
-\newcommand{\mmod}[0]{{\dash\operatorname{mod}}}
-\newcommand{\mods}[1]{{{#1}\dash\operatorname{mod}}}
-\newcommand{\kmod}[0]{{k\dash\operatorname{mod}}}
-\newcommand{\Mod}[0]{{\operatorname{Mod}}}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
 \newcommand{\sign}[0]{\operatorname{sign}}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-\newcommand{\strike}[1]{{\enclose{horizontalstrike}{#1}}}
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
+\newcommand{\St}[0]{{\mathsf{Stk}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\Wedge}[0]{\Lambda}
+\newcommand{\smashprod}[0]{\wedge}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Extalg}[0]{\bigwedge}
+\newcommand{\wedgeprod}[0]{\vee}
+\newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand{\connectsum}[0]{\mathop{\Large \#}}
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
 \newcommand{\ts}[1]{\left\{{#1}\right\}}
 \newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
@@ -362,19 +497,21 @@
 \newcommand{\covers}[0]{\rightrightarrows}
 \newcommand{\units}[0]{^{\times}}
 \newcommand{\nonzero}[0]{^{\bullet}}
-\newcommand{\wait}[0]{{\,\cdot\,}}
+\newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \renewcommand{\div}[0]{\operatorname{Div}}
 \newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Prin}[0]{\operatorname{Prin}}
 \newcommand{\Frac}[0]{\operatorname{Frac}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\fourier}[1]{\widehat{#1}}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
+\newcommand{\complex}[1]{{#1}_{*}}
 \newcommand*\dif{\mathop{}\!\operatorname{d}}
 \newcommand{\ddt}{\tfrac{\dif}{\dif t}}
 \newcommand{\ddx}{\tfrac{\dif}{\dif x}}
@@ -389,22 +526,29 @@
 \newcommand{\increasesto}[0]{\nearrow}
 \newcommand{\decreasesto}[0]{\searrow}
 \newcommand\jan{\operatorname{Jan}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\TMF{ \mathrm{TMF} }
+\newcommand\tmf{ \mathrm{tmf} }
+\newcommand\Fix{ \mathrm{Fix} }
+
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\DeclareMathOperator{\submfds}{SubMfds}
+\DeclareMathOperator{\crys}{crys}
+\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\ind}{Ind}
-\DeclareMathOperator{\coind}{Coind}
-\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\proj}{proj}
 \DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\res}{Res}
-\DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\BiHol}{BiHol}
 \DeclareMathOperator{\Br}{Br}
 \DeclareMathOperator{\coh}{coh}
 \DeclareMathOperator{\colspace}{colspace}
@@ -415,15 +559,83 @@
 \DeclareMathOperator{\nullity}{nullspace}
 \DeclareMathOperator{\projection}{Proj}
 \DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\Loop}{{\Omega}}
+\DeclareMathOperator{\Suspend}{{\Sigma}}
+\DeclareMathOperator{\B}{{\mathsf{B} }}
+\DeclareMathOperator{\D}{{\mathsf{D} }}
+\DeclareMathOperator{\K}{{\mathsf{K} }}
+\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
+\DeclareMathOperator{\T}{{T}}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\Tot}{Tot}
+\DeclareMathOperator{\Forget}{Forget}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\U}{U}
+
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+
+
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\Crit}[0]{\operatorname{Crit}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\gal}[0]{\operatorname{Gal}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\Curv}{Curv}
+
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Frame}{Frame}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Taut}{Taut}
+
+\DeclareMathOperator{\Frob}{Frob}
+
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\coinfl}{coinf}
+
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\delbar}[0]{\bar{\del}}
 
 
+
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 
@@ -434,14 +646,28 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
-\newcommand\fp[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 \newcommand\ul[1]{\underline{#1}}
+\newcommand\constantsheaf[1]{\underline{#1}}
+\newcommand\holomorphic[0]{\text{holo}}
+\newcommand\std[0]{\text{std}}
+\newcommand\Mero[0]{\operatorname{Mero}}
+\newcommand\even[0]{\text{even}}
+\newcommand\odd[0]{\text{odd}}
+\newcommand\hodgestar[0]{\star}
+\newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
+\newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
+\newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
+\newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
+\newcommand\closure[1]{\overline{#1}}
+\newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
 \newcommand\capprod{\frown}
+\newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
 \newcommand\gradient{\nabla}
 
@@ -450,38 +676,81 @@
 \newcommand\cupp[0]{\smile}
 \newcommand\capp[0]{\frown}
 \newcommand\sig[0]{\operatorname{sig}}
+\newcommand\ev[0]{\operatorname{ev}}
+\newcommand\coev[0]{\operatorname{coev}}
 
-\def\contradiction
-{
-\tikz[baseline, x=0.2em, y=0.2em, line width=0.04em]
-\draw (0,0) -- ({4*cos(45)},{4*sin(45)})
-    (-1,1) -- ({-1 + 4*cos(45)},{1 + 4*sin(45)})
-    (-1,3) -- ({-1 + 4*cos(315)},{3 + 4*sin(315)})
-    (0,4) -- ({0 + 4*cos(315)},{4 + 4*sin(315)});
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
+\newcommand{\divides}{\bigm|}
+\newcommand{\notdivides}{%
+  \mathrel{\mkern.5mu % small adjustment
+    % superimpose \nmid to \big|
+    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+  }%
+}
+\newcommand{\fractional}[1]{\theset{#1}}
+\newcommand{\fractionalpart}[1]{\theset{#1}}
+\newcommand{\integerpart}[1]{\left[ {#1}\right] }
+\newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
+\def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
+\newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
+\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
 
 
----
-title: Real Analysis Review Notes
----
+\newcommand{\Totsum}[0]{\Tot^{\oplus}}
+\newcommand{\Totprod}[0]{\Tot^{\Pi}}
+\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
+\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
+\newcommand{\congas}[1]{\underset{#1}{\cong}}
+\newcommand{\ideal}[1]{\mathcal{#1}}
+\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\xpn}[0]{ { x^{p^n} } }
 
-Exercises from Folland:
 
-- Chapter 1:
-  Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty)
-  Exercises 15, 17, 18, 19, 22(a), 24, 28
-  Exercises 26, 30 (also check out 31)
 
-- Chapter 2:
-  Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof
-  Exercises 10, 12, 13, 14, 16, 19
-  Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either)
-  Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
 
-- Chapter 3:
-  Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+#1 & #2 
+\\
+#3 & #4
+\end{bmatrix}
+}}
+
+
+\newcommand{\ptd}{{\scriptstyle { * } }}
+\newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
+\newcommand{\fd}[0]{{\mathrm{fd}}}
+\newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
+\newcommand{\ft}[0]{{\mathrm{ft}}}
+\newcommand{\smol}[0]{{\mathrm{small}}}
+\newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
+\newcommand{\smooth}[0]{{\operatorname{sm}}}
+\newcommand{\semisimple}[0]{{\operatorname{ss}}}
+\newcommand{\gon}[0]{{\dash\mathrm{gon}}}
+\newcommand{\semi}[0]{{\operatorname{semi}}}
+\newcommand{\inc}[0]{{\operatorname{inc}}}
+\newcommand{\Ball}[0]{{B}}
+\newcommand{\hq}[0]{{/}}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
+\newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
+\newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
+\newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
+\newcommand{\realize}[1]{{ \abs{#1} }}
 
 # Basics
+
+## Table of Notation
 
 +--------------------------------------------------------------------------------------------------------------------+---------------------------+
 |                                            Notation                                                                | Definition                |
@@ -538,7 +807,7 @@ Exercises from Folland:
 
 - Simplifications:
   - To show something for a measurable set, show it for bounded/compact/elementary sets/
-  - To show something for a function, show it for continuous, bounded, compactly supported, simple, indicator functions, $L^1$, etc
+  - To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, $L^1$, etc
   - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
@@ -570,12 +839,47 @@ Exercises from Folland:
 
 ## Definitions
 
-:::{.definition title="Uniform Continuity"}
-$f$ is uniformly continuous iff
+:::{.definition title="Completeness"}
+A metric space is **complete** if every Cauchy sequence converges.
+:::
+
+:::{.fact}
+If $X$ is complete, then absolutely convergent implies convergent.
+:::
+
+:::{.definition title="Continuity and Uniform Continuity"}
+A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
+\[
+\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+.\]
+
+$f$ is **uniformly continuous** iff
 
 \[
-    &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
+  &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
 \iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
+.\]
+:::
+
+:::{.remark}
+The main difference is that $\delta$ may depend on $x_0$ and $\eps$ in continuity, but only depends on $\eps$ in the uniform version.
+I.e. once $\delta$ is fixed, for continuity one may only range over $x$, but in uniform continuity one can range over all pairs $x,y$.
+:::
+
+:::{.proposition title="Lipschitz implies uniformly continuous"}
+If $f$ is Lipschitz on $X$, then $f$ is uniformly continuous on $X$.
+
+Supposing that
+\[
+\norm{f(x) - f(y)} \leq C \norm{x-y}
+,\]
+for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
+\[
+\norm{f(x) - f(y)}
+&\leq C \norm{x-y} \\
+&\leq C \delta \\
+&= C \qty{\eps/C} \\
+&= \eps
 .\]
 :::
 
@@ -653,6 +957,15 @@ A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \
 .\]
 :::
 
+:::{.proposition title="Implications of convergence"}
+Uniform $\implies$ pointwise $\implies$ almost everywhere $\implies$ (roughly) $L^1$ convergence.
+Why these can't be reversed:
+
+- Pointwise but not uniform???: ${1\over n}\one_{[0, n]}$
+- Almost everywhere but not pointwise???: $n \one_{[0, {1\over n} ] }$
+- $n \chi_{[n, n+1]}$????
+:::
+
 :::{.definition title="Outer Measure"}
 The **outer measure** of a set is given by
 \[
@@ -662,9 +975,23 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 
 :::{.definition title="Limsup and Liminf of Sets"}
 \[
-\limsup_{n} A_{n} \da \intersect_{n} \union_{j\geq n} A_{j}&= \theset{x \suchthat x\in A_{n} \text{ for inf. many $n$}}  \\
-\liminf_{n} A_{n} \da \union_{n} \intersect_{j\geq n} A_{j} &= \theset{x \suchthat x\in A_{n} \text{ for all except fin. many $n$}}  \\
+\liminf_{n} E_{n} \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for all but finitely many } n}  \\
+\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n}  \\
 .\]
+
+How to derive these definitions:
+
+- For $A \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n$:
+  - $x\in A \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
+    So $x$ is in *all* but finitely many $n$.
+
+- For $B \da \Intersect{N=1}^\infty \Union{n=N}^\infty E_n$:
+  - $x\in B \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
+    So $x$ is an infinitely many $E_n$.
+
+Note that $A\subseteq B$ since being in all but finitely many $E_n$ necessarily implies being in infinitely many.
+This corresponds to $\liminf_n E_n \subseteq \limsup_n E_n$.
+  
 :::
 
 :::{.definition title="Lebesgue Measurable Sets"}
@@ -779,16 +1106,62 @@ A space is a **Banach space** if and only if it is a complete normed vector spac
 A **Hilbert space** is an inner product space which is a Banach space under the induced norm.
 :::
 
+
+
 ## Theorems
+
+
+:::{.theorem title="Mean Value Theorem"}
+If $f: [a, b] \to \RR$ is continuous on a closed interval and differentiable on $(a, b)$, then there exists $\xi \in [a, b]$ such that 
+\[
+f(b) - f(a) = f'(\xi)(b-a)
+.\]
+
+
+:::
+
+:::{.theorem title="Lagrange Remainder"}
+If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
+\[
+x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \frac{f^{(n)}(\xi)}{n!}(x-p)^n
+\]
+:::
+
+:::{.theorem title="Cauchy Remainder"}
+If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
+\[
+x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \int_c^x \frac{1}{n!} \dd{^n f}{x^n}(t) (x-t)^n ~dt
+\]
+:::
+
+:::{.proposition title="Sufficient condition for Taylor convergence"}
+Given a point $c$ and some $\varepsilon>0$, if $f \in C^\infty(I)$ and there exists an $M$ such that 
+$$
+x \in N_\varepsilon(c) \implies \abs{f^{(n)}(x)} \leq M^n
+$$
+then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
+:::
+
 
 ### Topology / Sets
 
 :::{.theorem title="Heine-Cantor"}
-Every continuous function on a compact space is uniformly continuous.
+Every continuous function $f:X\to Y$ where $X$ is a compact metric space is uniformly continuous.
+:::
+
+:::{.proof title="?"}
+Fix $\eps>0$, we'll find a $\delta$ that works for all $x\in X$ uniformly.
+For every $x\in X$, pick a $\delta_x$ neighborhood satisfying the conditions for (assumed) continuity.
+Take an open cover by $\delta_x/2$ balls, extract a finite subcover, take $\delta$ the minimal radius.
 :::
 
 :::{.proposition title="Compact if and only if sequentially compact for metric spaces"}
 Metric spaces are compact iff they are sequentially compact, (i.e. every sequence has a convergent subsequence).
+:::
+
+:::{.proof title="?"}
+Todo.
+\todo[inline]{Proof.}
 :::
 
 :::{.proposition title="A unit ball that is not compact"}
@@ -893,12 +1266,13 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 
 ### Example: Completeness of a Normed Function Space
 
-:::{.proposition title=" \( C(I) \) is complete"}
+:::{.proposition title="$C(I)$ is complete"}
 The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
 \[
 \norm{f}_\infty \da \sup_{x\in [0, 1]} \abs{f(x)}
 \]
 is a **complete** metric space.
+
 :::
 
 :::{.proof}
@@ -1039,6 +1413,28 @@ If $f_n$ are differentiable, $\sum f_n' \to g$ uniformly, and there exists one p
 \[  
 \lim_{n\to \infty} \dd{}{x} f_n \neq \dd{}{n} \qty{\lim_{n\to \infty} f_n}
 .\]
+Note that uniform convergence of $f_n$ and $f_n'$ is sufficient to guarantee that $f$ is differentiable.
+Even worse: every continuous function is a uniform limit of polynomials by the Weierstrass approximation theorem.
+:::
+
+:::{.example title="?"}
+As a counterexample:
+\[
+f_n(x) \da \sqrt{x^2 + {1\over n}} \converges{n\to\infty}\too f(x) \da \abs{x}
+,\]
+and this convergence is even uniform.
+:::
+
+:::{.example title="?"}
+\[
+f_n(x) \da {x\over 1 + nx^2}
+.\]
+Then by Calculus, $f_n(x) \leq 1/2\sqrt{n} \da M_n$ and $f_n\to 0$ uniformly, so $f' = 0$.
+But 
+\[
+f_n'(x) = {1-nx^2 \over\qty{1 + nx^2}^2}
+,\]
+and $f_n'(0) \to 1$.
 :::
 
 :::{.proposition title="?"}
@@ -1069,7 +1465,7 @@ m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
 .\]
 :::
 
-## Examples
+## Examples and Counterexamples
 
 :::{.example title="?"}
 A series of continuous functions that does *not* converge uniformly but is still continuous:
@@ -1080,7 +1476,142 @@ g(x) \da \sum {1 \over 1 + n^2 x}
 Take $x = 1/n^2$.
 :::
 
+Let all of the following integrals to be over a compact interval $[a, b]$ with $0 \leq a < b$.
+
+Questions to ask:
+
+- Where is/isn't $f$ continuous?
+- Where is/isn't $f$ differentiable?
+- Is $f$ Riemann integrable?
+
+### The Dirichlet function
+$$
+f ( x ) = b + (a-b)~\chi(x\in \QQ) = \begin{cases}
+a, & x\in \QQ \\
+b, & \text{else}
+\end{cases}
+$$
+(usually take $a=1, b=0$)
+
+- Continuous nowhere
+- Discontinuous everywhere
+- Not integrable
+- Differentiable nowhere
+
+### Dirichlet with a Continuous Point
+$$
+f ( x ) = x~\chi(\QQ) = 
+\begin{cases}
+x, & x\in \QQ \\
+0, & \text{else}
+\end{cases}
+$$
+
+- Continuous at 0
+- Discontinuous at $\RR-\theset{0}$
+- Not integrable
+  - $U(f) > \frac 1 4$ but $L(f) = 0$.
+- Differentiable nowhere
+
+### Dirichlet with a Differentiable Point
+$$
+f ( x ) = x^2~\chi(\QQ) = \begin{cases}
+x^2, & x\in \QQ \\
+0, & \text{else}
+\end{cases}
+$$
+
+- Continuous at 0
+- Discontinuous at $\RR-\theset{0}$
+- Not integrable
+- Differentiable at 0 
+
+### Dirichlet with Two Functions
+$$
+f ( x ) = x~\chi{\QQ} + (-x)\chi(\RR-\QQ) = \begin{cases}
+x, & x\in \QQ \\
+-x, & \text{else}
+\end{cases}
+$$
+
+- Continuous at 0
+- Discontinuous at $\RR-\theset{0}$
+- Differentiable nowhere.
+- Not integrable
+
+
+:::{.proof title="of non-integrability"}
+Restrict attention to $\tv{\frac 1 2, 1}$
+\[
+\overline{\int_0^1} f 
+&= \inf \theset{ \sum \sup f(x) (x_i - x_{i-1}) } \\
+\sup f(x) = x_i \implies 
+\sum \sup f(x) (x_i - x_{i-1}) &= \sum x_i (x_i - x_{i-1}) \\
+&> \sum \frac 1 2 (x_i - x_{i-1}) \\
+&= \frac 1 2 \left(\frac 1 2\right) = \frac 1 4 \\
+\implies \overline{\int_0^1} f &\geq \frac 1 4
+\]
+and 
+\[
+\underline{\int_0^1} f 
+&= \sup \theset{ \sum \inf f(x) (x_i - x_{i-1})} \\
+\inf f(x)= -x_i \implies 
+\sum \inf f(x) (x_i - x_{i-1}) 
+&= \sum -x_i (x_i - x_{i-1}) \\
+&< -\sum \frac 1 2 (x_i - x_{i-1}) \\
+&= -\frac 1 2 \left( \frac 1 2 \right) = -\frac 1 4 \\
+\implies \underline{\int_0^1} f &\leq -\frac 1 4
+\]
+So we have $\underline{\int_0^1} f \lneq 0 \lneq \overline{\int_0^1} f$.
+:::
+
+
+## The Thomae function:
+$$
+f ( x ) = \begin{cases}
+\frac 1 q, & x = \frac p q \in \QQ,~(p,q) = 1 \\
+0, & \text{else}
+\end{cases}
+$$
+
+- Continuous on $\RR-\QQ$
+- Discontinuous on $\QQ$
+- Integrable with $\int_a^b f = 0$
+- Differentiable nowhere
+
+---
+title: Real Analysis Review Notes
+---
+
+Exercises from Folland:
+
+- Chapter 1:
+  Exercises 3, 7, 10, 12, 14 (with the sets in 3(a) being non-empty)
+  Exercises 15, 17, 18, 19, 22(a), 24, 28
+  Exercises 26, 30 (also check out 31)
+
+- Chapter 2:
+  Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof
+  Exercises 10, 12, 13, 14, 16, 19
+  Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either)
+  Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59
+
+- Chapter 3:
+  Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22
+
 # Measure Theory
+
+
+:::{.fact}
+Some useful tricks:
+
+- $\mu(A\sm B) = \mu(A) - \mu(B)$ if $\mu(B) < \infty$
+- Write $f = f-f_n + f_n$
+- If $G$ is measurable, then there exists an $E \supseteq G$ such $m(G) \leq m(E) + \eps$
+- If $E$ is measurable,
+  - $E = F_{\delta} \disjoint N$ for $N$ a null set.
+  - $E \disjoint N = G_{\delta}$ for $N$ a null set.
+:::
 
 ## Theorems
 
@@ -1106,18 +1637,89 @@ $$m(A) = m(B) + m(C) \qtext{and} m(C) < \infty \implies m(A) - m(C) = m(B).$$
 
 :::{.proposition title="Continuity of Measure"}
 \[
-E_{i} \nearrow E &\implies m(E_{i}) \to m(E) \\
+\text{Continuity from below:} \quad 
+E_{n} \nearrow E &\implies m(E_{n}) \to m(E) \\
+\text{Continuity from above:} \quad 
 m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
 .\]
+
+Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.
 :::
 
-:::{.proof title="of continuity of measure"}
+:::{.proof title="sketches"}
 \envlist
 
-1. Break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, etc then apply countable disjoint additivity to $E = \disjoint A_{i}$.
+- From below: break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, 
+  - Apply countable disjoint additivity to $E = \disjoint A_{i}$.
 
-2. Use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$, taking measures yields a telescoping sum,and use countable disjoint additivity.
+- From above: funny step, use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$.
+  - Taking measures yields a telescoping sum, and use countable additivity, then finiteness to subtract.
+
+![image_2021-05-28-23-29-31](figures/image_2021-05-28-23-29-31.png)
+
+
 :::
+
+
+:::{.proof title="of continuity of measure from below, detailed"}
+For any measure $\mu$,
+\[
+\mu(F_1) < \infty,\, F_k \decreasesto F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+,\]
+  where $F_k \searrow F$ means $F_1 \supseteq F_2 \supseteq \cdots$ with $\intersect_{k=1}^\infty F_k = F$.
+  - Note that $\mu(F)$ makes sense: each $F_k \in \mathcal{B}$, which is a $\sigma\dash$algebra and closed under countable intersections.
+
+- Take disjoint annuli by setting $E_k \da F_k \sm F_{k+1}$
+- Funny step: write
+\[
+F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
+.\]
+
+  - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
+  - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
+  - $x\not\in F_2$ but $x\in F_3$, and so on.
+
+- Now take measures, and note that we get a telescoping sum:
+\[
+\mu(F_1) 
+&= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+&= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \sm F_{k+1} ) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+&= \mu(F) + \lim_{N\to\infty} 
+[
+(\mu(F_1) - \mu(F_2)) +  
+(\mu(F_2) - \mu(F_3)) +  
+\cdots \\ 
+& \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+(\mu(F_N) - \mu(F_{N+1})) 
+] \\ \\
+&= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+.\]
+
+- Justifying the measure subtraction: the general statement is that for any pair of sets $A\subseteq X$, $\mu(X\sm A) = \mu(X) - \mu(A)$ when $\mu(A) < \infty$:
+  \[
+  X &= A \disjoint (X\sm A) \\
+  \implies \mu(X) &= \mu(A) + \mu(X\sm A) && \text{countable additivity} \\
+  \implies \mu(X) -\mu(A) &= \mu(X\sm A) && \text{if } \mu(A) < \infty 
+  .\]
+
+
+- Now use that $\mu(F_1)<\infty$ to justify subtracting it from both sides:
+\[
+\mu(F_1)
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\implies
+0
+&= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\lim_{N\to\infty} \mu(F_{N+1})
+&= \mu(F_1) 
+.\]
+
+- Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
+:::
+
 
 :::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
 Suppose $E$ is measurable; then for every $\eps>0$,
@@ -1216,14 +1818,111 @@ Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear t
 
 # Integration
 
-## Theorems
+## Unsorted 
 
-:::{.remark}
-If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
+
+:::{.definition title="Measurable Function"}
+A function $f: (X, \mcm_X) \to (Y, \mcm_Y)$ is **$(\mcm_X, \mcm_Y)\dash$measurable** iff $f\inv(\mcm_Y) \subseteq \mcm_X$.
+Equivalently, if $\mce_Y$ is a generating set for $\mcb_Y$, $f\inv(\mce_Y) \subseteq \mcb_X$.
+
+- An functional on a general measurable space $f: f:(X, \mcm_X) \to (\RR, \mcb_\RR)$ is **measurable** $\iff f$ is $(\mcm_X, \mcb_\RR)\dash$measurable.
+- A functional $f: \RR^d\to \RR$ is **Borel measurable** iff $f$ is $(\mcb_{\RR^d}, \mcb_\RR)\dash$measurable.
+- A functional $f: \RR^d\to \RR$ is **Lebesgue measurable** iff $f$ is $(\mcl_{\RR^d}, \mcb_\RR)\dash$measurable.
+
+Using that $\mcb_{\RR}$ is generated by open/closed rays, it suffices to check any of the following (for all $\alpha \in \RR$):
+
+- $f\inv(\alpha, \infty)\in \mcm$
+- $f\inv[\alpha, \infty)\in \mcm$
+- $f\inv(-\infty, \alpha)\in \mcm$
+- $f\inv(-\infty, \alpha]\in \mcm$
 :::
 
-:::{.example title="?"}
+:::{.remark}
+Note that we still require Borel sets in the target for Lebesgue measurability!
+Taking $(\mcl_{\RR^d}, \mcl_\RR)$ functions is too stringent, e.g. this class does not contain continuous functionals.
+:::
+
+:::{.warnings}
+If $f$ is $\mcl\dash$measurable and $h$ is continuous, it's not necessarily true that $k\da f\circ h$ is $\mcl\dash$measurable.
+Standard counterexample: set $g(x) \da C(x) + x$ for $C$ the Cantor-Lebesgue function, then $g:[0, 1]\to [0, 2]$ is a homeomorphism.
+Then $m(g(C)) = 1$ since $f$ is constant on intervals in $C^c$, so use Vitali's theorem: a set is null iff every subset is measurable.
+So $g(C)$ contains a non-measurable set $A$.
+Define $B\da g\inv(A)$, then $B \subset C$ and $m(C) = 0$ implies $B$ is measurable and $\chi_B$ is a measurable function.
+But then $k\da \chi_B \circ g\inv$ is not $\mcl\dash$measurable, since $k\inv(1) = A$ is a non-measurable set, but $\chi_B$ is $\mcl\dash$measurable and $g\inv$ is continuous.
+:::
+
+:::{.proposition title="Closure of measurable functions under operations"}
+$\mcm\dash$measurable functionals are closed under
+
+- Sums
+- Products
+- Sups/infs
+- Limsups/Liminfs
+- Limits when they exist, and the limiting function is measurable.
+- $\max(f, g)$ and $\min(f, g)$.
+
+Characteristic functions on measurable sets are automatically measurable, since $E\in \mcm \implies E = \chi_E\inv(\ts{1})$.
+:::
+
+:::{.remark title="A common proof technique"}
+\envlist
+
+- Show something holds for indicator functions.
+- Show it holds for simple functions by linearity.
+- Use $s_k \increasesto f$ and apply MCT to show it holds for $f$.
+:::
+
+:::{.remark title="on notation"}
+\envlist
+
+- $L^+$: measurable functions
+- $L^1$: Lebesgue integrable functions, so $\int \abs{f} < \infty$
+:::
+
+:::{.definition title="Simple Function"}
+A **simple function** $s: \CC\to X$ is a finite linear combination of indicator functions of measurable sets, i.e. 
+\[
+s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
+.\]
+:::
+
+:::{.definition title="Lebesgue Integral"}
+\[
+\int_X f \da \sup \ts{ \int s(x) \dmu \st 0\leq s \leq f, s\text{ simple } } 
+.\]
+
+Note that if $s = \sum c_j \chi_{E_j}$ is simple, then
+\[
+\int_X s(x) \dmu \da \sum_{j=1}^n c_j \mu(E_j)
+.\]
+
+:::
+
+:::{.remark title="Integrals split across disjoint sets"}
+A useful fact: for $(X, \mathcal{M})$ a measure space, integrals split across disjoint sets:
+\[
+\int_X f = \int_{X\sm A} f + \int_A f && \forall\, A \in \mathcal{M} 
+.\]
+
+:::
+
+:::{.definition title="Essential supremum and infimum, essentially bounded"}
+An **essential lower bound** $b$ on a function $f$ is any real number such that $S_{b} \da \ts{x\st f(x) < b } = f\inv(-\infty, b)$ has measure zero.
+The **essential infimum** is the supremum of all essential lower bounds, i.e. $\ess\inf f \da \sup_{b} \ts{b\st \mu S_b = 0}$.
+This is the greatest lower bound almost everywhere.
+
+Similarly an **essential upper bound** $c$ is any number such that $S^c \da f\inv(c, \infty)$ has measure zero, and the **essential supremum** is $\ess\sup f \da \inf_{c} \ts{c\st \mu S^c = 0}$, which is the least upper bound almost everywhere.
+
+A function is **essentially bounded** if $\norm{f}_\infty \da \ess\sup f < \infty$.
+These are functions which are bounded almost everywhere.
+:::
+
+:::{.example title="An essentially bounded but not bounded function"}
 $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
+:::
+
+:::{.proposition title="$L^\infty$ functions are equivalent to bounded almost-everywhere functions"}
+If $f\in L^\infty(X)$, then $f$ is equal to some bounded function $g$ almost everywhere.
 :::
 
 :::{.theorem title="p-Test for Integrals"}
@@ -1234,20 +1933,24 @@ $f(x) = x\chi_\QQ(x)$ is essentially bounded but not bounded.
 :::
 
 :::{.slogan}
-Large powers of $x$ help us in neighborhoods of infinity and hurt around zero
+Large powers of $x$ help us in neighborhoods of infinity and hurt around zero.
 :::
 
-###  Convergence Theorems
-
 :::{.theorem title="Monotone Convergence"}
-If $f_n \in L^+$ and $f_n \nearrow f$ almost everywhere, then
+If $f_n: X\to [0, \infty) \in L^+$ and $f_n \nearrow f$ almost everywhere, then
 $$
 \lim \int f_n
 = \int \lim f_n = \int f
 \quad \text{i.e.}~~ \int f_n \to \int f
 .$$
+:::
 
-> Needs to be positive and increasing.
+:::{.slogan}
+Measurable, non-negative, increasing pointwise a.e. allows commuting limits and integrals.
+:::
+
+:::{.proof title="of MCT"}
+\todo[inline]{todo}
 
 :::
 
@@ -1263,6 +1966,11 @@ $$
 .$$
 
 > Positivity *not* needed.
+
+:::
+
+:::{.proof title="of DCT"}
+\todo[inline]{todo}
 
 :::
 
@@ -1334,9 +2042,15 @@ so the DCT applies to $g_n$ and
 :::{.theorem title="Fatou"}
 If $f_n$ is a sequence of nonnegative measurable functions, then
 \[
-\int \liminf_n f_n &\leq \liminf_n \int f_n \\
+\liminf_n \int f_n 
+&\geq \int \liminf_n f_n \\
 \limsup_n \int f_n &\leq \int \limsup_n f_n
 .\]
+:::
+
+:::{.proof title="of Fatou"}
+\todo[inline]{Prove Fatou}
+
 :::
 
 :::{.theorem title="Tonelli (Non-Negative, Measurable)"}
@@ -1379,7 +2093,7 @@ m(E) = \int_{\RR^{n_1}} m(E_x) ~dx
 .\]
 :::
 
-:::{.proof}
+:::{.proof title="of measurable slices"}
 \envlist
 
 $\implies$:
@@ -1409,7 +2123,7 @@ To justify passing the limit, let $h_k \to 0$ be any sequence and define
 $$
 f_k(x, t) = \frac{f(x, t+h_k)-f(x, t)}{h_k}
 ,$$
-so $f_k \converges{\text{pointwise}}\to \dd{}{t}f$.
+so $f_k \converges{k\to\infty}\too \dd{f}{t}$ pointwise.
 
 Apply the MVT to $f_k$ to get $f_k(x, t) = f_k(\xi, t)$ for some $\xi \in [0, h_k]$, and show that $f_k(\xi, t) \in L_1$.
 :::
@@ -1433,6 +2147,8 @@ If $\theset{f_n}$ integrable with either $\sum \int \abs{f_n} < \infty$ or $\int
 :::
 
 :::{.proof}
+\envlist
+
 - By Tonelli, if $f_n(x) \geq 0$ for all $n$, taking the counting measure allows interchanging the order of "integration".
 - By Fubini on $\abs{f_n}$, if either "iterated integral" is finite then the result follows.
 :::
@@ -1469,7 +2185,6 @@ Almost everywhere convergence: ?
 - $\int_0^1 {1\over x^{1+\eps}} = \infty$
 
 :::
-
 
 ## $L^1$ Facts
 
@@ -1652,7 +2367,7 @@ We also have
 &=  \left( \int_X \abs{f}^p \right)^{\frac 1 p} \\
 &\leq \left( \int_X M^p \right)^{\frac 1 p} \\
 &= M ~m(X)^{\frac 1 p} \mapsvia{p\to\infty} M \\
-&\implies \limsup_p \pnorm{f}p \leq M \qed
+&\implies \limsup_p \pnorm{f}p \leq M
 .\]
 
 :::
@@ -1675,7 +2390,61 @@ Use Riesz Representation for Hilbert spaces.
 $L^1 \subset (L^\infty)\dual$, since the isometric mapping is always injective, but *never* surjective.
 :::
 
+## Counterexamples
 
+:::{.proposition title="a.e. convergence never implies $L^p$ convergence"}
+Sequences $f_k \converges{a.e.}\to f$ but $f_k \converges{L^p}{\not\to} f$:
+
+- For $1\leq p < \infty$:
+	The skateboard to infinity, $f_k = \chi_{[k, k+1]}$.
+
+	Then $f_k \converges{a.e.}\to 0$ but $\norm{f_k}_p = 1$ for all $k$.
+
+	> Converges pointwise and a.e., but not uniformly and not in norm.
+
+- For $p = \infty$:
+  The sliding boxes $f_k = k \cdot \chi_{[0, \frac 1 k]}$.
+
+	Then similarly $f_k \converges{a.e.}\to 0$, but $\norm{f_k}_p = 1$ and $\norm{f_k}_\infty = k \to \infty$
+
+	> Converges a.e., but not uniformly, not pointwise, and not in norm.
+:::
+
+:::{.proposition title="The four big counterexamples in convergence"}
+\envlist
+
+1. Uniform: $f_n \uniformlyconverges f: \forall \varepsilon ~\exists N \suchthat ~n\geq N \implies \abs{f_N(x) - f(x)} < \varepsilon \quad \forall x.$
+2. Pointwise: $f_n(x) \to f(x)$ for all $x$. (This is just a sequence of numbers)
+3. Almost Everywhere: $f_n(x) \to f(x)$ for almost all $x$.
+4. Norm: $\norm{f_n - f}_1 = \int \abs{f_n(x) - f(x)} \to 0$.
+
+We have $1 \implies 2 \implies 3$, and in general no implication can be reversed, but (**warning**) none of $1,2,3$ imply $4$ or vice versa.
+
+
+- $f_n = (1/n) \chi_{(0, n)}$. This converges uniformly to 0, but the integral is identically 1. So this satisfies 1,2,3 and not 4.
+
+  ![image_2021-05-21-16-38-30](figures/image_2021-05-21-16-38-30.png)
+
+- $f_n = \chi_{(n, n+1)}$ (skateboard to infinity). This satisfies 2,3 but not 1, 4.
+
+  ![image_2021-05-21-16-42-08](figures/image_2021-05-21-16-42-08.png)
+
+- $f_n = n\chi_{(0, \frac 1 n)}$. This satisfies 3 but not 1,2,4.
+
+  ![image_2021-05-21-16-54-38](figures/image_2021-05-21-16-54-38.png)
+
+- $f_n:$ one can construct a sequence where $f_n \to 0$ in $L^1$ but is not 1,2, or 3.
+  The construction:
+
+  - Break $I$ into $2$ intervals, let $f_1$ be the indicator on the first half, $f_2$ the indicator on the second.
+  - Break $I$ into $2^2=4$ intervals, like $f_3$ be the indicator on the first quarter, $f_4$ on the second, etc.
+  - Break $I$ into $2^k$ intervals and cyclic through $k$ indicator functions.
+
+  ![image_2021-05-21-16-49-09](figures/image_2021-05-21-16-49-09.png)
+
+  - Then $\int f_n = 1/2^n \to 0$, but $f_n\not\to 0$ pointwise since for every $x$, there are infinitely many $n$ for which $f_n(x) = 0$ and infinitely many for which $f_n(x) = 1$.
+
+:::
 
 
 
@@ -1854,6 +2623,14 @@ If $f, g \in L^1$ then $f\ast g\in L^1$.
 # Functional Analysis
 
 ## Theorems
+
+
+:::{.fact title="Pythagoras"}
+\[
+\inner{v}{w} = 0 \implies \norm{v+w} = \norm{v} + \norm{w}
+.\]
+:::
+
 
 :::{.theorem title="Bessel's Inequality"}
 For any orthonormal set $\theset{u_{n}} \subseteq \mch$ a Hilbert space (not necessarily a basis),
@@ -2061,7 +2838,9 @@ $$
 
 
 
-# Extra Problems
+# Extra Problems: Undergrad Review 
+
+# Extra Problems: Measure Theory
 
 ## Greatest Hits
 
@@ -2083,6 +2862,7 @@ $$
 \[  
 \norm{f}_p \converges{p\to\infty}\to \norm{f}_\infty
 .\]
+
 
 
 ## By Topic
@@ -2117,7 +2897,11 @@ Uniform Convergence
 - Show that a uniform limit of bounded functions is bounded.
 - Show that a uniform limit of continuous function is continuous.
   - I.e. if $f_n\to f$ uniformly with each $f_n$ continuous then $f$ is continuous.
-- Show that if $f_n\to f$ pointwise, $f_n' \to g$ uniformly for some $f, g$, then $f$ is differentiable and $g = f'$.
+- Show that 
+  - $f_n: [a, b]\to \RR$ are continuously differentiable with derivatives $f_n'$
+  - The sequence of derivatives $f_n'$ converges uniformly to some function $g$
+  - There exists *at least one* point $x_0$ such that $\lim_n f_n(x_0)$ exists,
+  - Then $f_n \to f$ uniformly to some differentiable $f$, and $f' = g$.
 - Prove that uniform convergence implies pointwise convergence implies a.e. convergence, but none of the implications may be reversed.
 - Show that $\sum {x^n \over n!}$ converges uniformly on any compact subset of $\RR$. 
 
@@ -2148,6 +2932,7 @@ Convergence
 
 Convolution
 
+- Show that if $f, g$ are continuous and compactly supported, then so is $f\ast g$.
 - Show that if $f\in L^1$ and $g$ is bounded, then  $f\ast g$ is bounded and uniformly continuous.
 - If $f, g$ are compactly supported, is it necessarily the case that $f\ast g$ is compactly supported?
 - Show that under any of the following assumptions, $f\ast g$ vanishes at infinity:
@@ -2186,6 +2971,50 @@ $L^p$ Spaces
 L^\infty(X) &\subset L^2(X) \subset L^1(X) \\
 \ell^2(\ZZ) &\subset \ell^1(\ZZ) \subset \ell^\infty(\ZZ)
 .\]
+
+
+### Unsorted
+
+
+:::{.proposition title="Volumes of Rectangles"}
+If $\ts{R_j} \covers R$ is a covering of $R$ by rectangles,
+\[
+R = \overset{\circ}{\Disjoint_{j}} R_j &\implies \abs R = \sum \abs R_j \\
+R \subseteq \Union_j R_j &\implies \abs R \leq \sum \abs R_j
+.\]
+
+:::
+
+- Show that any disjoint intervals is countable.
+- Show that every open $U \subseteq \RR$ is a countable union of disjoint open intervals.
+- Show that every open $U \subseteq \RR^n$ is a countable union of *almost* disjoint closed cubes.
+- Show that that Cantor middle-thirds set is compact, totally disconnected, and perfect, with outer measure zero.
+- Prove the Borel-Cantelli lemma.
+
+## Rectangles
+
+## Outer Measure
+
+## Lebesgue Measurable Sets
+
+## Lebesgue Measurable Functions
+
+
+
+# Extra Problems: Integration 
+
+## The Lebesgue Integral
+
+## $L^1$ as a Banach Space
+
+## Fubini and Tonelli
+
+
+# Extra Problems: Differentiation and Misc
+
+## ?
+
+
 
 
 # Midterm Exam 2 (December 2014)
@@ -2860,11 +3689,38 @@ u(x, y) \converges{y\to 0} \to f(x)
 :::
 
 :::{.proposition title="Chebyshev's Inequality"}
+The most often used form here:
 \[  
-\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
+\mu f\inv\qty{(\alpha, \infty)} \da \mu\qty{x\in X \st \abs{f(x)} > \alpha  } \leq {1\over \alpha} \int f
+.\]
+Proof: let $S_\alpha$ be the set appearing, then $\alpha \mu(S_\alpha)$ is the sum of areas of certain boxes below the graph of $f$.
+Interpret $\int_X f$ as the total area under the graph to make the inequality obvious.
+
+![image_2021-06-02-22-59-46](figures/image_2021-06-02-22-59-46.png)
+
+The probability interpretation: $\PP(X\geq \alpha) \leq {1\over \alpha} \EE(X)$.
+
+The more general version:
+\[
+\mu f\inv\qty{(\alpha, \infty)} \da \mu\qty{x\in X \st \abs{f(x)} > \alpha  } \leq \qty{\norm{f}_p \over \alpha}^p
+.\]
+A slightly easier to digest form:
+\[
+\mu f\inv\qty{(\alpha, \infty)} \da \mu\qty{x\in X \st \abs{f(x)} > \alpha  } \leq {1\over \alpha^p} \int_X \abs{f}^p
+.\]
+
+Proof:
+\[
+\norm{f}_p^p = \int \abs{f}^p \geq \int_{S_\alpha} \abs{f}^p \geq \alpha^p \int_{S_\alpha} 1 = \alpha^p \mu(S_\alpha)
 .\]
 
 :::
+
+
+:::{.proposition title="Markov's Inequality"}
+
+:::
+
 
 :::{.proposition title="Holder's Inequality"}
 \[  
@@ -2912,7 +3768,7 @@ Then let $h = \abs{f}^p$:
 
 :::{.proposition title="Cauchy-Schwarz Inequality"}
 \[  
-\abs{\inner{f}{g}} = \pnorm{fg}1 \leq \pnorm{f}2 \pnorm{g}2
+\abs{\inner{f}{g}} = \leq \pnorm{f}2 \pnorm{g}2
 && \text{with equality} \iff f = \lambda g
 .\]
 
@@ -3039,6 +3895,11 @@ AB \leq {A^p \over p} + {B^q \over q}
 :::{.proposition title="Bernoulli's Inequality"}
 \[
 (1 + x)^n \geq 1 +nx \quad x\geq -1, \text{ or } n\in 2\ZZ \text{ and } \forall x
+.\]
+
+As a consequence,
+\[
+1-x \leq e^{-x}
 .\]
 
 :::

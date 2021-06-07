@@ -13,7 +13,6 @@
 | $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizontal strip                                   |
 |                                                              |                                                        |
 |                                                              |                                                        |
-|                                                              |                                                        |
 
 ## Greatest Hits
 
@@ -36,7 +35,7 @@ Things to know well:
 - Properties of linear fractional transformations
 - Automorphisms of $\DD, \CC, \CP^1$.
 
-### Common Tricks
+## Common Tricks
 
 - Virtually any time: consider $1/f(z)$ and $f(1/z)$.
 
@@ -45,10 +44,7 @@ If you want to show that a function $f$ is constant, try one of the following:
 
 - Write $f = u + iv$ and use Cauchy-Riemann to show $u_x, u_y = 0$, etc.
 - Show that $f$ is entire and bounded.
-
-If you additionally want to show $f$ is zero, try one of these:
-
-- Show $f$ is entire, bounded, and $\lim_{z\to\infty} f(z) = 0$.
+  - If you additionally want to show $f$ is zero, show $\lim_{z\to\infty} f(z) = 0$.
 :::
 
 ## Basic but Useful Facts
@@ -63,11 +59,19 @@ If you additionally want to show $f$ is zero, try one of these:
 .\]
 
 - $\Arg(z/w) = \Arg(z) - \Arg(w)$.
-- Exponential forms of cosine and sine:
+- Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
 \[
-\cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}} && &&
-\sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}
+\cos(z) 
+&= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w\inv)\\
+\sin(z) 
+&= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w\inv)
+\\ \\
+\cosh(z) = \cos(iz) 
+&= {1\over 2}\qty{e^z + e^{-z}} \\
+\sinh(z) = \sin(iz) 
+&= {1\over 2}\qty{e^z - e^{-z}} 
 .\]
+- Setting $w=e^z$ is useful:
 - Various differentials:
 \[
 dz &= dx + i~dy \\
@@ -86,7 +90,11 @@ f_z &= f_x = f_y / i
 :::
 
 :::{.fact title="Generalized Binomial Theorem"}
-Define $(n)_k$ to be the falling factorial $\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1)$ and set ${n\choose k} \da (n)_k/k!$, then
+Define $(n)_k$ to be the falling factorial 
+\[
+\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1)
+\]
+and set ${n\choose k} \da (n)_k/k!$, then
 \[
 (x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
 .\]
@@ -97,10 +105,13 @@ Define $(n)_k$ to be the falling factorial $\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdo
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
-\log(1-x) &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
-\dd{}{z} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
-\sqrt{1+x} = (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
-&= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
+\log(1-x) 
+  &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
+\dd{}{z} \sum_{j=0}^\infty a_j z^j 
+  &= \sum_{j=0}^\infty a_{j+1}z^j \\
+\sqrt{1+x} 
+  &= (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
+  &= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \]
 :::
 

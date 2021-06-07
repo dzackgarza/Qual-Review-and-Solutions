@@ -119,7 +119,6 @@ $H$ is measurable on $\RR^2$:
 :::
 
 
-
 ## Spring 2019 # 4 $\done$
 Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n \times \RR : 0 ≤ t ≤ f (x)\}$.
 
@@ -132,12 +131,11 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
-\todo[inline]{Add concepts.}
-
 :::{.concept}
 \envlist
-- See Stein and Shakarchi p.82.
+- See Stein and Shakarchi p.82 corollary 3.3.
 - Tonelli
+- Important trick! $\ts{(x, t) \st 0\leq t \leq f(x)} = \ts{ f(x) \geq t} \intersect \ts{ t\geq 0 }$
 :::
 
 :::{.solution}
@@ -146,29 +144,76 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 :::{.proof title="of a"}
 $\implies$:
 
-- Suppose $f$ is a measurable function.
-- Note that $\mathcal{A} = \theset{f(x) - t \geq 0} \intersect \theset{t \geq 0}$.
-- Define $F(x, t) = f(x)$, $G(x, t) = t$, which are cylinders on measurable functions and thus measurable.
-- Define $H(x, y) = F(x, t) - G(x, t)$, which are linear combinations of measurable functions and thus measurable.
-- Then $\mathcal{A} = \theset{H \geq 0} \intersect \theset{G \geq 0}$ as a countable intersection of measurable sets, which is again measurable.
+- Suppose $f:\RR^n\to \RR$ is a measurable function.
+- Rewrite $A$:
+\[
+A 
+&= \ts{ (x, t) \in \RR^d \cross \RR \st 0\leq t \leq f(x) } \\
+&= \ts{ (x, t) \in \RR^d \cross \RR \st 0 \leq t < \infty } 
+\intersect \ts{ (x, t) \in \RR^d\cross \RR \st t\leq f(x) } \\
+&= \qty{ \RR^d \cross [0, \infty) } 
+\intersect \ts{ (x, t) \in \RR^d\cross \RR \st f(x) -t \geq 0  } \\
+&\da \qty{ \RR^d \cross [0, \infty) } \intersect H\inv\qty{[0, \infty)}
+,\]
+where we define
+\[
+H: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto f(x) - t
+.\]
+  - Note: this is "clearly" measurable!
+
+- If we can show both sets are measurable, we're done, since $\sigma\dash$algebras are closed under countable intersections.
+- The first set is measurable since it is a Borel set in $\RR^{d+1}$.
+- For the same reason, it suffices to show $H$ is a measurable function.
+- Define cylinder functions
+\[
+F: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto f(x)
+\]
+and
+\[
+G: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto t
+\]
+  - $F$ is a cylinder of $f$, and since $f$ is measurable by assumption, $F$ is measurable.
+  - $G$ is a cylinder on the identity for $\RR$, which is measurable, so $G$ is measurable.
+
+
+- Define 
+\[
+H: \RR^d &\to \RR \\
+(x, t) &\mapsto F(x, t) - G(x, t) \da f(x) - t
+,\]
+  which are linear combinations of measurable functions and thus measurable.
 
 
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
-- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and
+- A corollary of Tonelli applied to $\chi_X$: if $E$ is measurable, then for a.e. $t$ the following slice is measurable:
 \[
-\mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
-\]
+\mca_t \da \ts{ x \in \RR^d \st (x,t) \in \mca  }
+&= \ts{x\in \RR^d \st f(x) \geq t \geq 0} \\
+&= f\inv\qty{[t, \infty)}
+.\]
+  - But maybe this isn't enough, because we need $f\inv\qty{[\alpha, \infty)}$ for *all* $\alpha$
+- But the other slice is also measurable for a.e. $x$:
+\[
+\mca_x 
+&\da \ts{ t\in \RR \st (x, t) \in \mca } \\
+&= \ts{ t\in \RR \st 0 \leq t \leq f(x) } \\
+&= \ts{ t\in \RR \st t\in [0, f(x)]  } \\
+&= [0, f(x)]
+.\]
 
-- But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
-
+- Moreover the function $x\mapsto m(\mca_x)$ is a measurable function of $x$
+- Now note $m(\mca_x) = f(x) - 0 = f(x)$, so $f$ must be measurable.
 
 :::
 
 :::{.proof title="of b"}
 \envlist
-- Note
+- Writing down what the slices are
 \[
 \mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
 \\

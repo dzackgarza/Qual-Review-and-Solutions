@@ -3,6 +3,10 @@
 \newcommand{\dy}{\,dy}
 \newcommand{\ds}{\,ds}
 \newcommand{\dz}{\,dz}
+\newcommand{\dr}{\,dr}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dtheta}{\,d\theta}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\zbar}{\bar{z} }
@@ -49,6 +53,7 @@
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \renewcommand{\SS}[0]{{\mathbb{S}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
 \newcommand{\ZZG}[0]{{\mathbb{Z}G}}
 \newcommand{\ZZH}[0]{{\mathbb{Z}H}}
@@ -66,6 +71,7 @@
 \newcommand{\fp}[0]{\operatorname{fp}}
 \newcommand{\HT}[0]{{\operatorname{HT}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\qc}[0]{{\operatorname{qc}}}
 \newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\vol}[0]{\operatorname{vol}}
@@ -114,6 +120,7 @@
 \newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\ch}[0]{\operatorname{ch}}
 \newcommand{\syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
 \newcommand{\ff}[0]{\operatorname{ff}}
 \newcommand{\txand}[0]{{\operatorname{ and }}}
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
@@ -157,11 +164,23 @@
 \newcommand{\SO}[0]{{\operatorname{SO}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
 \newcommand{\MO}[0]{{\operatorname{MO}}}
+\newcommand{\KO}[0]{{\operatorname{KO}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\MU}[0]{{\operatorname{MU}}}
+\newcommand{\BP}[0]{{\operatorname{BP}}}
+\newcommand{\MSO}[0]{{\operatorname{MSO}}}
+\newcommand{\MSp}[0]{{\operatorname{MSpin}}}
+\newcommand{\MSpin}[0]{{\operatorname{MSpin}}}
+\newcommand{\MStr}[0]{{\operatorname{MString}}}
+\newcommand{\MString}[0]{{\operatorname{MString}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
 \newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
@@ -179,6 +198,7 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
@@ -233,7 +253,11 @@
 \newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
 \newcommand{\ho}[0]{{\mathsf{ho}}}
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
+\newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\Lag}[0]{{\mathsf{Lag}}}
+\newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
+\newcommand{\Wein}[0]{{\mathsf{Wein}}}
 \newcommand{\Aff}[0]{{\mathsf{Aff}}}
 \newcommand{\Schf}[0]{{\mathsf{Schf}}}
 \newcommand{\Rep}[0]{{\mathsf{Rep}}}
@@ -300,6 +324,7 @@
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
 \newcommand{\bundle}[1]{\mathcal{#1}}
 \newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\correspond}[1]{\theset{\substack{#1}}}
@@ -313,8 +338,9 @@
 \newcommand{\del}[0]{{\partial}}
 \newcommand{\directlim}[0]{\varinjlim}
 \newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
 \newcommand{\dual}[0]{ {}^{ \check{} }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
@@ -329,9 +355,9 @@
 \newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
 \newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
 \newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
 \newcommand{\into}[0]{\to}
 \newcommand{\inv}[0]{^{-1}}
 \newcommand{\mfa}[0]{{\mathfrak{a}}}
@@ -455,7 +481,7 @@
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{St}}}
+\newcommand{\St}[0]{{\mathsf{Stk}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
 \newcommand{\Sym}[0]{\operatorname{Sym}}
@@ -514,7 +540,10 @@
 \newcommand\jan{\operatorname{Jan}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\TMF{ \mathrm{TMF} }
+\newcommand\TAF{ \mathrm{TAF} }
 \newcommand\tmf{ \mathrm{tmf} }
+\newcommand\taf{ \mathrm{taf} }
+\newcommand\Fix{ \mathrm{Fix} }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
@@ -545,9 +574,7 @@
 \DeclareMathOperator{\projection}{Proj}
 \DeclareMathOperator{\Der}{Der}
 \DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
 \DeclareMathOperator{\D}{{\mathsf{D} }}
 \DeclareMathOperator{\K}{{\mathsf{K} }}
 \DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
@@ -565,7 +592,7 @@
 
 \newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
 \newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
+\newcommand{\B}[0]{{\mathsf{B}}}
 
 \newcommand{\DSt}[0]{{ \operatorname{DSt}}}
 
@@ -618,6 +645,7 @@
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
@@ -643,6 +671,7 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
@@ -709,10 +738,14 @@
 }}
 
 
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
@@ -729,13 +762,11 @@
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
 
----
-title: UGA Topology Qualifying Exam Questions and Solutions
-hidesolutions: false
-todos: true
----
 
-**Preface**
+\newcommand{\localize}[1]{{}^{\hat{}}_{#1}}
+\newcommand{\complete}[1]{{}^{\hat{}}_{#1}}
+
+# Preface
 
 A great deal of credit for this document goes to Mike Usher, who created an initial PDF of past UGA qual questions organized by topic.
 Here is a list of problems that Mike recommended reviewing during our problem sessions in Spring 2020:
@@ -755,14 +786,11 @@ Usually 30% of the problems on any given qual are related to point-set/general T
 Note that this material is not covered in the course!
 :::
 
-
-
-
 # General Topology
 
 ## Topologies, Subspaces, Closures, and Maps
 
-### Fall '11 $\work$
+### Fall '11 $\done$
 
 :::{.problem title="Fall 2011"}
 Let $X$ be a topological space, and $B \subset A \subset X$. 
@@ -774,6 +802,39 @@ Determine, with proof, the general relationship between $\cl_X (B) \cap A$ and $
 
 :::
 
+:::{.concept}
+\envlist
+
+- Definition of closure: for $A\subseteq X$, $\cl_X(A)$ is the intersection of all $B\supseteq A$ which are closed in $X$.
+- Definition of "relative" closure: for $A\subseteq Y \subseteq X$, $\Cl_Y(A)$ is the intersection of all $B$ such that $Y\supseteq B \supseteq A$ which are closed in $Y$.
+- Closed sets in a subspace: $B' \subseteq Y\subseteq X$ is closed in $Y$ if $B' = B\intersect Y$ for some $B'$ closed in $X$.
+:::
+
+:::{.strategy}
+What's the picture?
+Just need to remember what the closure with respect to a subspace looks like:
+
+![image_2021-05-20-23-58-56](figures/image_2021-05-20-23-58-56.png)
+:::
+
+:::{.solution}
+\envlist
+
+- Claim: $\Cl_X(A) \intersect  Y = \Cl_Y(A)$.
+- Write $\Cl_Y(A)$ as the intersection of $B'$ where $Y\supseteq B' \supseteq A$ with $B'$ closed in $Y$.
+- Every such $B'$ is of the form $B' = B \intersect Y$ for some $B$ closed in $X$.
+- Just identify the two sides directly by reindexing the intersection:
+\[
+\Cl_Y(A) 
+&\da \Intersect_{\substack{ Y\supseteq B' \supseteq A \\ B' \text{ closed in } Y}} B' \\
+&= \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} \qty{ B \intersect Y } \\
+&= \qty{ \Intersect_{\substack{ X \supseteq B \intersect Y \supseteq A \\ B \text{ closed in } X}} B} \intersect Y \\ \\
+&\da \Cl_X(A) \intersect Y
+.\]
+
+
+:::
+
 ### 6 (Fall '05) $\done$
 
 :::{.problem title="Fall 2005"}
@@ -782,28 +843,41 @@ Prove that the unit interval $I$ is compact. Be sure to explicitly state any pro
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
-- Cantor's Intersection Theorem
+- Cantor's intersection theorem: for a topological space, any nested sequence of compact nonempty sets has nonempty intersection.
 - Bases for standard topology on $\RR$.
 - Definition of compactness
 :::
 
+:::{.strategy}
+What's the picture?
+Similar to covering $\ts{1\over n}\union\ts{0}$: cover $x=0$ with one set, which nets all but finitely many points.
+
+![image_2021-05-20-22-46-54](figures/image_2021-05-20-22-46-54.png)
+
+Proceed by contradiction. 
+Binary search down into nested intervals, none of which have finite covers.
+Get a single point, a single set which eventually contains all small enough nested intervals.
+Only need finitely many more opens to cover the rest.
+:::
+
+:::{.solution}
+\envlist
 
 - Toward a contradiction, let $\theset{U_\alpha} \covers [0, 1]$ be an open cover with no finite subcover.
 - Then either $[0, {1\over 2}]$ or $[{1\over 2}, 1]$ has no finite subcover; WLOG assume it is $[0, {1\over 2}]$.
 - Then either $[0, {1\over 4}]$ or $[{1\over 4}, {1\over 2}]$ has no finite subcover
-- Inductively defining $[a_n, b_n]$ this way yields a sequence of closed, bounded, nested intervals (each with no finite subcover) with $\diam([a_n, b_n]) \leq {1 \over 2^n} \to 0$, so Cantor's Nested Interval theorem applies and the intersection contains exactly one point $p \in [0, 1]$.
-- Since $p\in [0, 1]$, $p\in U_\alpha$ for some $\alpha$.
+- Inductively defining $[a_n, b_n]$ this way yields a sequence of compact nested intervals (each with no finite subcover) so Cantor's Nested Interval theorem applies.
+- Since $\RR$ is a complete metric space and the diameters $\diam([a_n, b_n]) \leq {1 \over 2^n} \to 0$, the intersection contains exactly one point. 
+- Since $p\in [0, 1]$ and the $U_\alpha$ form an open cover, $p\in U_\alpha$ for some $\alpha$.
 - Since a basis for $\tau(\RR)$ is given by open intervals, we can find an $\eps>0$ such that $(p-\eps, p+\eps) \subseteq U_\alpha$
 - Then if ${1\over 2^N} < \eps$, for $n\geq N$ we have $$[a_n, b_n] \subseteq (p-\eps, p+\eps) \subseteq U_\alpha.$$
 - But then $U_\alpha \covers [a_n, b_n]$, yielding a finite subcover of $[a_n, b_n]$, a contradiction.
 
 :::
 
-### 7 (Fall '06). $\done$
+### 7 (Fall '06). $\work$
 
 :::{.problem title="Fall 2006, 7"}
 A topological space is **sequentially compact** if every infinite sequence in $X$ has a convergent subsequence. 
@@ -819,63 +893,62 @@ Show that for any two topological spaces $X$ and $Y$ , $X \cross Y$ is compact i
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
-- Proof of the tube lemma.
+- Proof of the tube lemma: 
+- Continuous image of compact is compact.
 :::
 
-Statement: show $X, Y \in \Top_{\mathrm{compact}} \iff X\cross Y\in \Top_{\mathrm{compact}}$.
 
-:::{.proof title="Variant 1"}
+:::{.strategy}
+What's the picture?
+
+![image_2021-05-21-01-16-52](figures/image_2021-05-21-01-16-52.png)
+
+Take an open cover of the product, use that vertical fibers are compact to get a finite cover for each fiber.
+Use tube lemma to get opens in the base space, run over all $x$ so the tube bases cover $X$.
+Use that $X$ is compact to get a finite subcover.
+
+:::
+
+
+:::{.solution}
+\envlist
+
+:::{.proof title="Using the tube lemma without proof"}
 $\impliedby$:
 
-- By universal properties, the product $X\cross Y$ is equipped with continuous projections
-- The continuous image of a compact set is compact, and $\pi_1(X\cross Y) = X, p_2(X\cross Y) = Y$
-- So $X, Y$ are compact.
+- By the universal property, the product $X\cross Y$ is equipped with continuous projections $\pi_X: X\cross Y\to X$ and $\pi_Y: X\cross Y\to X$.
+- The continuous image of a compact space is compact, and the images are all of $X$ and $Y$ respectively:
+\[
+\pi_1(X\cross Y) &= X \\
+\pi_2(X\cross Y) &= Y
+.\]
 
 $\implies$:
 
-- Let $\theset{U_j \suchthat j\in J} \covers X\cross Y$. 
-- Fix $x_0\in X$, the slice $\theset{x_0} \cross Y$ is compact and can be covered by finitely many elements $\theset{U_j\suchthat j\leq m} \covers \theset{x_0} \cross Y$.
-  - Sum: write $N = \union_{j=1}^m U_j$; then $\theset{x_0} \cross Y \subset N$.
-  - Apply the tube lemma to $N$: produce $\theset{x_0} \cross Y \in W\cross Y \subset N$; then $\theset{U_j \suchthat j\leq m}\covers W\cross Y$.
-- Now let $x\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x\cross Y\suchthat x\in X}\covers X$. 
-  - By above argument, every tube $W_x \cross Y$ can be covered by *finitely* many $U_j$.
-- Since $\theset{W_x\suchthat x\in X}\covers X$ and $X$ is compact, produce a finite subset $\theset{W_k \suchthat k\leq m'} \covers X$. 
-- Then $\theset{W_k\cross Y\suchthat k\leq m'} \covers X\cross Y$; the claim is that it is a finite cover.
+- Let $\ts{U_j} \covers X\cross Y$ be an open cover.
+- **Cover a fiber**: fix $x\in X$, the slice $x \cross Y$ is homeomorphic to $Y$ and thus compact 
+- Cover it by finitely many elements $\theset{U_j}_{j\leq m} \covers {x} \cross Y$.
+  
+  > Really, cover $Y$, and then cross with $x$ to cover $x \cross Y$.
+
+  - Set 
+\[
+N_x \da \Union_{j\leq m} U_j \supseteq x \cross Y
+.\]
+  - Apply the tube lemma to $N_x$: 
+    - Produce a neighborhood $W_x$ of $x$ in $X$ where $W_x \subset N_x$ 
+    - This yields a finite cover:
+  \[
+\ts{U_j}_{j\leq m}\covers N_x \cross Y \supset W_x \cross Y \implies \ts{U_j}_{j\leq m} \covers W_x\cross Y
+  .\]
+- **Cover the base**: let $x\in X$ vary: for each $x\in X$, produce $W_x \cross Y$ as above, then $\theset{W_x}_{x\in X} \covers X$ where each tube $W_x \cross Y$ is covered by *finitely* many $U_j$.
+- Use that $X$ is compact to produce a finite subcover $\theset{W_k}_{k \leq M} \covers X$. 
+- Then $\theset{W_k\cross Y}_{k\leq M} \covers X\cross Y$, this is a finite set since each fiber was covered by finitely many opens 
   - Finitely many $k$
   - For each $k$, the tube $W_k \cross Y$ is covered by finitely by $U_j$
-  - And finite $\times$ finite = finite. $\qed$
-
-Shorter mnemonic:
-
-![](figures/image_2020-05-22-11-39-10.png)
-
-:::
-
-:::{.proof title="Variant 2"}
-Let $\pi_X, \pi_Y$ denote the canonical projections, which we can note are continuous and preserve open sets.
-
-$\implies$:
-Suppose $X\cross Y$ is compact, and let $\theset{U_\alpha}, \theset{V_\beta}$ be open covers of $X$ and $Y$ respectively.
-
-Let $T_{\alpha\beta} = U_\alpha \cross V_\beta$; then $\theset{T_{\alpha\beta}}$ is an open cover of $X\cross Y$.
-So there is a finite subcover $\theset{T_{ij}}$, $\theset{\pi_X(T_{ij})}$ is an open cover of $X$, and similarly for $Y$.
-So both $X,Y$ are compact.
-
-$\impliedby$:
-Suppose $X$ and $Y$ are compact, and let $U_\alpha \rightrightarrows X\cross Y$ be an open cover.
-Let $\pi_Y: X\cross Y \to Y$ be the canonical projection; then $\theset{\pi_Y(U_\alpha)}\rightrightarrows Y$ and by compactness of $Y$ there is a finite subcover of the form $\theset{\pi_Y(U_i) \suchthat 1\leq i \leq n}$.
-Then $\theset{V_{x, i} \definedas \theset{x} \cross U_i}$ is an open cover of $\theset{x} \cross Y$ for any fixed $x$. 
-
-So if we fix an $x\in X$, we can let $V_{x, i} \rightrightarrows \theset{x} \cross Y$ be any finite subcollection covering this slice.
-By the Tube Lemma, there is an open set $W_x$ such that $\theset{x} \cross Y \subset W_x \cross Y \subset \union V_{x, i} = \theset{x} \cross Y$.
-
-Then $\theset{W_x} \rightrightarrows X$ as $x$ varies is an open cover of $X$, and by compactness of $X$, there are finitely many $x_j \in X$ such that $W_{x_j} \rightrightarrows X$.
-But then $X \cross Y = \union_{j} W_{x_j} \cross Y = \union_j \union_i W_{x_j} \cross V_{x_j, i} \subset \union_\alpha U_\alpha$ is a finite cover.
-
+  - And finite $\times$ finite = finite.
 :::
 
 :::
@@ -888,14 +961,10 @@ Write $Y$ for the interval $[0, \infty)$, equipped with the usual topology.
 Find, with proof, all subspaces $Z$ of $Y$ which are retracts of $Y$.
 :::
 
-\todo[inline]{Not finished.}
+\todo[inline]{Not finished. Add concepts}
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
-
-:::
 - Using the fact that $[0, \infty) \subset \RR$ is Hausdorff, any retract must be closed, so any closed interval $[\eps, N]$ for $0\leq \eps \leq N \leq \infty$. 
   - Note that $\eps = N$ yields all one point sets $\theset{x_0}$ for $x_0 \geq 0$.
 - No finite discrete sets occur, since the retract of a connected set is connected.
@@ -928,10 +997,6 @@ Show that the union of the $X_\alpha$ is connected.
 :::{.solution}
 
 \envlist
-:::{.concept}
-\envlist
-
-:::
 
 :::{.proof title="Variant 1"}
 
@@ -988,7 +1053,7 @@ $X$ is not compact.
 
 :::
 
-### (Spring '10) $\done$
+### ? (Spring '10) $\done$
 
 :::{.problem title="?"}
 If $X$ is a topological space and $S \subset X$, define in terms of
@@ -1005,22 +1070,21 @@ $$
 
 :::
 
-:::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
-
-
-:::{.proof title="Variant 1"}
-
-\envlist
 :::{.concept}
 \envlist
 - Topic: closure and connectedness in the subspace topology.
     - See Munkres p.148
 :::
+
+:::{.concept}
+\envlist
+- Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="Variant 1"}
 \envlist
 
 - $S\subset X$ is **not ** connected if $S$ with the subspace topology is not connected.
@@ -1063,15 +1127,8 @@ $\impliedby$:
 
 :::
 
-
-
 :::{.proof title="Variant 2"}
-
 \envlist
-:::{.concept}
-\envlist
-- Lemma: $X$ is connected iff the only subsets of $X$ that are closed and open are $\emptyset, X$.
-:::
 
 If $S\subset X$ is not connected, then there exists a subset $A\subset S$ that is both open and closed in the subspace topology, where $A\neq \emptyset, S$.
 
@@ -1083,10 +1140,9 @@ Similarly, since $A$ is open, $B$ is closed, and $\bar B = B \implies \bar B \ca
 
 :::
 
-
 :::
 
-### Spring '11 $\work$
+### ? (Spring '11) $\work$
 
 :::{.problem title="?"}
 A topological space is **totally disconnected** if its only connected subsets are one-point sets. 
@@ -1119,14 +1175,14 @@ Prove that $\mct$ is a topology on $\RR$, and that $\RR$ is compact with respect
 
 :::
 
-:::{.solution}
-\envlist
+
 :::{.concept}
 \envlist
-
+- This is precisely the cofinite topology.
 :::
 
-> Note: this is precisely the cofinite topology.
+:::{.solution}
+\envlist
 
 1. $\RR\in \tau$ since $\RR\setminus \RR = \emptyset$ is trivially a finite set, and $\emptyset \in \tau$ by definition.
 2. If $U_i \in \tau$ then $(\union_i U_i)^c = \intersect U_i^c$ is an intersection of finite sets and thus finite, so $\union_i U_i \in \tau$.
@@ -1154,29 +1210,13 @@ Give an example to show that $\mcs \cup \mct$ need not be a topology.
 ### 42 (Spring '10) $\done$
 
 :::{.problem title="?"}
-Define an equivalence relation $\sim$ on $\RR$ by $x \sim y$ if and only if $x - y \in Q$. 
+Define an equivalence relation $\sim$ on $\RR$ by $x \sim y$ if and only if $x - y \in \QQ$. 
 Let $X$ be the set of equivalence classes, endowed with the quotient topology induced by the canonical projection $\pi : \RR \to X$.
 
 Describe, with proof, all open subsets of $X$ with respect to this topology.
 
 :::
 
-:::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
-Proof that $\RR/\QQ$ has the indiscrete topology:
-
-- Let $U \subset \RR/\QQ$ be open and nonempty, show $U = \RR/\QQ$.
-- Let $[x] \in U$, then $x \in \pi\inv(U) \definedas V \subset\RR$ is open.
-- Then $V$ contains an interval $(a, b)$
-- Every $y\in V$ satisfies $y+q \in V$ for all $q\in \QQ$, since $y+q-y \in \QQ \implies [y+q] = [y]$. 
-- So $(a-q, b+q) \in V$ for all $q\in \QQ$.
-- So $\union_{q\in \QQ}(a-q, b+q) \in V \implies \RR \subset V$.
-- So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
-:::
 
 ### 43 (Fall '12) $\work$
 
@@ -1239,12 +1279,13 @@ Is $X$ compact?
 :::
 
 \todo[inline]{Incomplete proof for part 3.}
-:::{.solution}
-\envlist
 
 :::{.concept}
 See Munkres p.164, especially for (ii).
 :::
+
+:::{.solution}
+\envlist
 
 a.
 See definitions in review doc.
@@ -1259,10 +1300,11 @@ Direct proof:
 - Since $I_k$ is an interval, it contains infinitely many points of the form $x_n = {1 \over n} \in X$
 - Then $I_k \intersect X \subset U_j$ contains infinitely many such points.
 - So there are only *finitely* many points in $X\setminus U_j$, each of which is in $U_{j(n)}$ for some $j(n) \in J$ depending on $n$.
-- So $U_j$ and the *finitely* many $U_{j(n)}$ form a finite subcover of $X$. $\qed$
 
-c.
-Todo: Need direct proof. 
+c. Todo
+
+\todo[inline]{Need direct proof}
+
 
 :::
 
@@ -1289,10 +1331,6 @@ Prove that there is a number $\delta > 0$ such that for every $x \in X$, the bal
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
-
-:::
 
 Statement: show that the *Lebesgue number* is well-defined for compact metric spaces.
 
@@ -1328,7 +1366,7 @@ x &\mapsto {1\over n} \sum_{i=1}^n d(x, X\setminus U_i)
 
 :::
 
-### 44 (Spring '15) $\done$
+### 44 (Spring '15) $\work$
 
 :::{.problem title="?"}
 a.
@@ -1337,23 +1375,6 @@ Prove that a topological space that has a countable base for its topology also c
 b.
 Prove that the converse to (a) holds if the space is a metric space.
 
-:::
-
-:::{.solution}
-\envlist
-:::{.concept}
-\envlist
-
-:::
-Proof that $\RR/\QQ$ has the indiscrete topology:
-
-- Let $U \subset \RR/\QQ$ be open and nonempty, show $U = \RR/\QQ$.
-- Let $[x] \in U$, then $x \in \pi\inv(U) \definedas V \subset\RR$ is open.
-- Then $V$ contains an interval $(a, b)$
-- Every $y\in V$ satisfies $y+q \in V$ for all $q\in \QQ$, since $y+q-y \in \QQ \implies [y+q] = [y]$. 
-- So $(a-q, b+q) \in V$ for all $q\in \QQ$.
-- So $\union_{q\in \QQ}(a-q, b+q) \in V \implies \RR \subset V$.
-- So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
 :::
 
 ### 18 (Fall '07) $\done$
@@ -1370,10 +1391,7 @@ then $f$ has a fixed point.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
 - Define a new function
 \begin{align*}
 g: X \to \RR \\
@@ -1416,18 +1434,14 @@ Prove that the product of two connected topological spaces is connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
+- Use the fact that a union of spaces containing a common point is still connected.
+- Fix a point $(a, b) \in X \cross Y$.
+- Since the horizontal slice $X_b\definedas X \cross \theset{b}$ is homeomorphic to $X$ which is connected, as are all of the vertical slices $Y_x \definedas \theset{x} \cross Y \cong Y$ (for any $x$), the "T-shaped" space $T_x \definedas X_b \union Y_x$ is connected for each $x$.
 
-Use the fact that a union of spaces containing a common point is still connected.
-Fix a point $(a, b) \in X \cross Y$.
-Since the horizontal slice $X_b\definedas X \cross \theset{b}$ is homeomorphic to $X$ which is connected, as are all of the vertical slices $Y_x \definedas \theset{x} \cross Y \cong Y$ (for any $x$), the "T-shaped" space $T_x \definedas X_b \union Y_x$ is connected for each $x$.
+- Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ is connected.
 
-Note that $(a, b) \in T_x$ for every $x$, so $\union_{x\in X} T_x = X \cross Y$ is connected.
-
-![Image](figures/2020-01-21-20:53.png)\
+![Image](figures/2020-01-21-20:53.png)
 
 :::
 
@@ -1449,12 +1463,13 @@ Give, with proof, an example of a space that is connected but not locally connec
 
 \todo[inline]{What's the picture?}
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Consider $\RR$, unions of intervals, $\QQ$, and the topologists sine curve.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 See definitions in review doc.
@@ -1518,12 +1533,13 @@ Exhibit a complete metric space $X$ and a closed subset $A$ of $X$ that is bound
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Use diagonal trick to construct the Cauchy sequence.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 $\implies$:
@@ -1567,8 +1583,6 @@ If so, give a proof; if not, give a counterexample.
 
 \todo[inline]{Review, from last year.}
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 
@@ -1589,6 +1603,9 @@ If so, give a proof; if not, give a counterexample.
 
 :::
 
+:::{.solution}
+\envlist
+
 :::{.proof title="?"}
 Inductively, let $\vector x_1 \in B(1, \vector 0)$ and $A_1 = \spanof{(\vector x_1)}$, 
  then choose $s = \vector x + A_1 \in B(1,0)/A_1$ such that $\norm{s} = \frac 1 2$ 
@@ -1600,7 +1617,6 @@ Then, let $A_2 = \mathrm{span}(\vector x_1, \vector x_2)$, (which is closed) and
 This produces a non-convergent sequence in the closed ball, so it can not be compact.
 
 :::
-
 
 :::
 
@@ -1617,8 +1633,6 @@ Prove that this description defines a topology on $\tilde X$ making $\tilde X$ c
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological space* iff
@@ -1629,10 +1643,37 @@ Definition: $(X, \tau)$ where $\tau \subseteq \mathcal P(X)$ is a *topological s
 
 :::
 
+:::{.solution}
+\envlist
+
 We can write $\overline{(X, \tau)} = (X \disjoint \pt , \tau \union \tau')$ where $\tau' = \theset{U\disjoint \pt \suchthat X-U ~\text{is compact}}$. We need to show that $T \definedas \tau \union \tau'$ forms a topology. 
 
 - We have $\emptyset,X \in \tau \implies \emptyset, X \in \tau \union \tau'$.
 - We just need to check that $\tau'$ is closed under arbitrary unions. Let $\theset{U_i} \subset \tau'$, so $X-U_i = K_i$ a compact set for each $i$. Then $\union_{i} U_i = \union_i X- (X-U_i)= \union_i X - K_i = X - \union_i K_i$
+
+:::
+
+### Spring 2021 #3 $\work$
+
+:::{.problem title="Spring 2021, 3"}
+For nonempty subsets $A, B$ of a metric space $(X, d)$, define the **setwise distance** as 
+\[
+d(A, B) \da \inf \ts{ d(a, b) \st a\in A,\, b\in B } 
+.\]
+
+a. 
+Suppose that $A$ and $B$ are compact.
+Show that there is an $a\in A$ and $b\in B$ such that $d(A, B) = d(a, b)$.
+
+b.
+Suppose that $A$ is closed and $B$ is compact.
+Show that if $d(A, B) = 0$ then $A \intersect B = \emptyset$.
+
+c. 
+Give an example in which $A$ is closed, $B$ is compact, and $d(a, b) > d(A, B)$ for all $a\in A$ and $b\in B$.
+
+> Hint: take $X = \ts{ 0 } \union (1, 2] \subset \RR$.
+> Throughout this problem, you may use without proof that the map $d:X\cross X\to \RR$ is continuous.
 
 :::
 
@@ -1666,12 +1707,6 @@ Prove that $X$ is connected but not path connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\todo[inline]{???}
-
-\envlist
-
-:::
 
 :::{.proof title="Variant 1"}
 $X$ is connected:
@@ -1790,17 +1825,14 @@ Prove or disprove that $X$ is connected.
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
-(I.e. this sends points to lines through the origin with rational slope).
+- Consider the (continuous) projection $\pi: \RR^2 \to \RP^1$ given by $(x, y) \mapsto [y/x, 1]$ in homogeneous coordinates.
+  - I.e. this sends points to lines through the origin with rational slope).
 
-Note that the image of $\pi$ is $\RP^1\setminus\theset{\infty}$, which is homeomorphic to $\RR$.
+- Note that the image of $\pi$ is $\RP^1\setminus\theset{\infty}$, which is homeomorphic to $\RR$.
 
-If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subset \RR$.
-If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
+- If we now define $f = \restrictionof{\pi}{X}$, we have $f(X) \surjects \QQ \subset \RR$.
+- If $X$ were connected, then $f(X)$ would also be connected, but $\QQ \subset \RR$ is disconnected, a contradiction.
 :::
 
 ### Spring 2021 #2
@@ -1833,18 +1865,15 @@ Prove that if $A$ is compact in the subspace topology then $A$ is closed as a su
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
-Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
-Then $\theset{U_{a} \suchthat a\in A} \rightrightarrows A$, so by compactness there is a finite subcover $\theset{U_{a_i}} \rightrightarrows A$.
+- Let $A \subset X$ be compact, and pick a fixed $x\in X\setminus A$.
+- Since $X$ is Hausdorff, for arbitrary $a\in A$, there exists opens $U_{a} \ni a$ and $U_{x,a}\ni x$ such that $V_{a} \intersect U_{x,a} = \emptyset$.
+- Then $\theset{U_{a} \suchthat a\in A} \rightrightarrows A$, so by compactness there is a finite subcover $\theset{U_{a_i}} \rightrightarrows A$.
 
-Now take $U = \union_i U_{a_i}$ and $V_x = \intersect_i V_{a_i, x}$, so $U\intersect V = \emptyset$.
-Note that both $U$ and $V_x$ are open.
+- Now take $U = \union_i U_{a_i}$ and $V_x = \intersect_i V_{a_i, x}$, so $U\intersect V = \emptyset$.
+  - Note that both $U$ and $V_x$ are open.
 
-But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
+- But then defining $V \definedas \union_{x\in X\setminus A} V_x$, we have $X\setminus A \subset V$ and $V\intersect A = \emptyset$, so $V = X\setminus A$, which is open and thus $A$ is closed.
 
 :::
 
@@ -1861,15 +1890,16 @@ Give an example that shows that the "Hausdorff" hypothesis in part (a) is necess
 
 :::
 
-:::{.solution}
-\envlist
 :::{.concept}
 \envlist
 - Continuous bijection + open map (or closed map) $\implies$ homeomorphism.
 - **Closed** subsets of compact sets are compact.
 - The continuous image of a compact set is compact.
-- Closed subsets of Hausdorff spaces are compact.
+- Compact subsets of Hausdorff spaces are closed.
 :::
+
+:::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 We'll show that $f$ is a closed map.
@@ -1909,11 +1939,7 @@ Show that $X$ is a Hausdorff space if and only if $\Delta$ is closed in $X \time
 
 :::{.solution}
 \envlist
-:::{.concept}
-\todo[inline]{todo}
-\envlist
 
-:::
 $\implies$:
 
 - Let $p\in X^2\setminus \Delta$.
@@ -2007,12 +2033,9 @@ Give an example of a quotient map in which the domain is Hausdorff, but the quot
 
 :::{.solution}
 \envlist
-:::{.concept}
-\envlist
 
-:::
-$\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
-So take the quotient map $\pi:\RR \to \RR/\QQ$.
+- $\RR$ is clearly Hausdorff, and $\RR/\QQ$ has the indiscrete topology, and is thus non-Hausdorff.
+- So take the quotient map $\pi:\RR \to \RR/\QQ$.
 
 Direct proof that $\RR/\QQ$ isn't Hausdorff:
 
@@ -2059,41 +2082,15 @@ Show that there is a continuous function $f : X \to [0,1]$ such that $f (x) > 0$
 
 :::
 
-## Analysis and Metric Spaces
+## Exercises
 
-### Spring 2021 #3
+### Basics
 
-:::{.problem title="Spring 2021, 3"}
-For nonempty subsets $A, B$ of a metric space $(X, d)$, define the **setwise distance** as 
-\[
-d(A, B) \da \inf \ts{ d(a, b) \st a\in A,\, b\in B } 
-.\]
+#### Exercise  $\work$
+Show that for $A\subseteq X$, $\cl_X(A)$ is the smallest closed subset containing $A$.
 
-a. 
-Suppose that $A$ and $B$ are compact.
-Show that there is an $a\in A$ and $b\in B$ such that $d(A, B) = d(a, b)$.
-
-b.
-Suppose that $A$ is closed and $B$ is compact.
-Show that if $d(A, B) = 0$ then $A \intersect B = \emptyset$.
-
-c. 
-Give an example in which $A$ is closed, $B$ is compact, and $d(a, b) > d(A, B)$ for all $a\in A$ and $b\in B$.
-
-> Hint: take $X = \ts{ 0 } \union (1, 2] \subset \RR$.
-> Throughout this problem, you may use without proof that the map $d:X\cross X\to \RR$ is continuous.
-
-:::
-
-
-# The Fundamental Group
-
-## 1 (Spring '15) $\work$
-Let $S^1$ denote the unit circle in $C$, $X$ be any topological space, $x_0 \in X$, and $$\gamma_0, \gamma_1 : S^1 \to X$$ be two continuous maps such that $\gamma_0 (1) = \gamma_1 (1) = x_0$.
-
-Prove that $\gamma_0$ is homotopic to $\gamma_1$ if and only if the elements represented by $\gamma_0$ and $\gamma_1$ in $\pi_1 (X, x_0 )$ are conjugate.
-
-\todo[inline]{Incomplete.}
+#### Exercise $\done$
+Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.
 
 :::{.solution}
 \hfill
@@ -2101,29 +2098,345 @@ Prove that $\gamma_0$ is homotopic to $\gamma_1$ if and only if the elements rep
 \hfill
 
 :::
-Proposition:
-$\gamma_1 \homotopic \gamma_2 \iff \gamma_1, \gamma_2$ are conjugate in $\pi_1(X, x_0)$, i.e. $\exists [\alpha] \in \pi_1$ such that $[\gamma_1] = [\alpha][\gamma_2][\alpha]\inv$.
+No: Take $[0, 1] \subset [0, 1] \subset \RR$.
+Then $[0, 1]$ is tautologically open in $[0, 1]$ as it is the entire space, 
+But $[0, 1]$ is not open in $\RR$:
+  - E.g. $\theset{1}$ is not an interior point (every neighborhood intersects the complement $\RR\setminus[0, 1]$).
+:::
 
-Proof:
+#### Exercise  $\work$
+Show that the diagonal map $\Delta(x) = (x, x)$ is continuous.
 
-$\implies$:
-Clear, since $\gamma_1 \sim \gamma_2 \implies [\gamma_1] = [\gamma_2] \in \pi_1(X)$, so take $\alpha(t) = x_0$ the constant loop for all $t$.
+#### Exercise  $\work$
+Show that if $A_i \subseteq X$, then $\cl_X(\union_i A_i) = \union_i \cl_X(A_i)$.
+
+#### Exercise  $\work$
+Show that $\RR$ is not homeomorphic to $[0, \infty)$.
+
+#### Exercise $\work$
+Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
+
+#### Exercise: $\RR/\QQ$ is indiscrete
+
+:::{.problem title="?"}
+Show that $\RR/\QQ$ has the indiscrete topology.
+:::
+
+:::{.solution}
+\envlist
+
+- Let $U \subset \RR/\QQ$ be open and nonempty, show $U = \RR/\QQ$.
+- Let $[x] \in U$, then $x \in \pi\inv(U) \definedas V \subset\RR$ is open.
+- Then $V$ contains an interval $(a, b)$
+- Every $y\in V$ satisfies $y+q \in V$ for all $q\in \QQ$, since $y+q-y \in \QQ \implies [y+q] = [y]$. 
+- So $(a-q, b+q) \in V$ for all $q\in \QQ$.
+- So $\union_{q\in \QQ}(a-q, b+q) \in V \implies \RR \subset V$.
+- So $\pi(V) = \RR/\QQ = U$, and thus the only open sets are the entire space and the empty set.
+:::
+
+### Connectedness
+
+#### Exercise  $\work$
+Prove that $X$ is connected iff the only clopen subsets are $\emptyset, X$.
+
+#### Exercise $\work$
+Let $A \subset X$ be a connected subspace.
+
+Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
+
+#### Exercise  $\work$
+Show that:
+  - Connected does not imply path connected
+  - Connected and locally path connected *does* imply path connected
+  - Path connected implies connected
+
+#### Exercise  $\work$
+Use the fact that intervals are connected to prove the intermediate value theorem.
+
+#### Exercise  $\work$
+Prove that the continuous image of a connected set is connected.
+
+#### Exercise  $\work$
+Show that if $X$ is locally path connected, then 
+
+- Every open subset of $X$ is again locally path-connected.
+- $X$ is connected $\iff X$ is path-connected.
+- Every path component of $X$ is a connected component of $X$.
+- Every connected component of $X$ is open in $X$.
+
+#### Exercise $\done$
+Show that $[0, 1]$ is connected.
+
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+[Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
+[A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
+:::
+
+Let $I = [0, 1] = A\union B$ be a disconnection, so
+  - $A, B \neq \emptyset$
+  - $A \disjoint B = I$
+  - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
+Let $a\in A$ and $b\in B$ where WLOG $a<b$ 
+  - (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
+Let $K = [a, b]$ and define $A_K \definedas A\intersect K$ and $B_K \definedas B\intersect K$.
+Now $A_K, B_K$ is a disconnection of $K$.
+Let $s = \sup(A_K)$, which exists since $\RR$ is complete and has the LUB property
+Claim: $s \in \cl_I(A_K)$. Proof:
+  - If $s\in A_K$ there's nothing to show since $A_K \subset \cl_I(A_K)$, so assume $s\in I\setminus A_K$.
+  - Now let $N_s$ be an arbitrary neighborhood of $s$, then using ??? we can find an $\eps>0$ such that $B_\eps(s) \subset N_s$
+  - Since $s$ is a supremum, there exists an $a\in A_K$ such that $s-\eps < a$.
+  - But then $a \in B_\eps(s)$ and $a\in N_s$ with $a\neq s$.
+  - Since $N_s$ was arbitrary, every $N_s$ contains a point of $A_K$ not equal to $s$, so $s$ is a limit point by definition.
+Since $s\in \cl_I(A_K)$ and $\cl_I(A_K)\intersect B_K = \emptyset$, we have $s\not \in B_K$.
+Then the subinterval $(x, b] \intersect A_K = \emptyset$ for every $x>c$ since $c \definedas \sup A_K$.
+But since $A_K \disjoint B_K = K$, we must have $(x, b] \subset B_K$, and thus $s\in \cl_I(B_K)$.
+Since $A_K, B_K$ were assumed disconnecting, $s\not \in A_K$
+But then $s\in K$ but $s\not\in A_K \disjoint B_K = K$, a contradiction.
+:::
+
+### Compactness
+
+#### $\star$ Exercise $\done$
+Let $X$ be a compact space and let $A$ be a closed subspace. 
+Show that $A$ is compact. 
+
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+Let $X$ be compact, $A\subset X$ closed, and $\theset{U_\alpha} \covers A$ be an open cover.
+By definition of the subspace topology, each $U_\alpha = V_\alpha \intersect A$ for some open $V_\alpha \subset X$, and $A\subset \union_\alpha V_\alpha$.
+Since $A$ is closed in $X$, $X\setminus A$ is open.
+Then $\theset{V_\alpha}\union \theset{X\setminus A}\covers X$ is an open cover, since every point is either in $A$ or $X\setminus A$.
+By compactness of $X$, there is a finite subcover $\theset{U_j \suchthat j\leq N}\union \theset{X\setminus A}$
+Then $\qty{\theset{U_j} \union \theset{X\setminus A}} \intersect A \definedas \theset{V_j}$ is a finite cover of $A$.
+:::
+  
+#### $\star$ Exercise $\done$
+Let $f : X \to Y$ be a continuous function, with $X$ compact. 
+Show that $f(X)$ is compact.
+
+:::{.solution}
+\hfill
+:::{.concept}
+\hfill
+
+:::
+Let $f:X\to Y$ be continuous with $X$ compact, and $\theset{U_\alpha} \covers f(X)$ be an open cover.
+Then $\theset{f\inv(U_\alpha)} \covers X$ is an open cover of $X$, since $x\in X \implies f(x) \in f(X) \implies f(x) \in U_\alpha$ for some $\alpha$, so $x\in f\inv(U_\alpha)$ by definition.
+By compactness of $X$ there is a finite subcover $\theset{f\inv(U_j) \suchthat j\leq N} \covers X$.
+Then the finite subcover $\theset{U_j\suchthat j\leq N} \covers f(X)$, since if $y\in f(X)$, $y\in U_\alpha$ for some $\alpha$ and thus $f\inv(y) \in f\inv(U_j)$ for some $j$ since $\theset{U_j}$ is a cover of $X$.
+
+:::
+ 
+Let $A$ be a compact subspace of a Hausdorff space $X$. 
+Show that $A$ is closed.
+
+#### Exercise  $\work$
+Show that any infinite set with the cofinite topology is compact.
+
+#### Exercise  $\work$
+Show that every compact metric space is complete.
+
+#### Exercise  $\work$
+Show that if $X$ is second countable and Hausdorff, or a metric space, then TFAE:
+
+- $X$ is compact
+- Every infinite subset $A\subseteq X$ has a limit point in $X$.
+- Every sequence in $X$ has a convergent subsequence in $X$. 
+
+#### Exercise  $\work$
+Show that if $f: A\to B$ is a continuous map between metric spaces and $K\subset A$ is compact, then $\restrictionof{f}{K}$ is uniformly continuous.
+
+#### Exercise  $\work$
+Show that if $f:X\to Y$ is continuous and $X$ is compact then $f(X)$ is compact.
+
+#### Exercise  $\work$
+Show that if $f:X\to \RR$ and $X$ is compact then $f$ is bounded and attains its min/max.
+
+#### Exercise  $\work$
+Show that a finite product or union compact spaces is again compact.
+
+#### Exercise  $\work$
+Show that a quotient of a compact space is again compact.
+
+#### Exercise  $\work$
+Show that if $X$ is compact and $A\subseteq X$ is closed then $A$ is compact.
+
+#### Exercise  $\work$
+Show that if $X$ is Hausdorff and $A\subseteq X$ is compact then $A$ is closed.
+
+#### Exercise  $\work$
+Show that if $X$ is a metric space and $A\subseteq X$ is compact then $A$ is bounded.
+
+#### Exercise  $\work$
+Show that a continuous map from a compact space to a Hausdorff space is closed.
+
+#### Exercise  $\work$
+Show that an injective continuous map from a compact space to a Hausdorff space is an embedding (a homeomorphism onto its image).
+
+#### Exercise  $\work$
+Show that $[0, 1]$ is compact.
+
+#### Exercise  $\work$
+Show that a compact Hausdorff space is is metrizable iff it is second-countable.
+
+#### Exercise  $\work$
+Show that if $X$ is metrizable, then $X$ is compact
+
+#### Exercise  $\work$
+Give an example of a space that is compact but not sequentially compact, and vice versa.
+
+#### Exercise  $\work$
+Show that a sequentially compact space is totally bounded.
+
+#### Exercise  $\work$
+Show that $\RR$ with the cofinite topology is compact.
+
+#### Exercise  $\work$
+Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
 
 
-$\impliedby$:
-? Forgot how these arguments go.
+### Separation
 
-![Image](figures/2020-02-04-20:23.png)\
+#### Exercise  $\work$
+Show that $X$ is Hausdorff iff $\Delta(X)$ is closed in $X\cross X$.
 
-$\qed$
+#### Exercise  $\work$
+Prove that $X, Y$ are Hausdorff iff $X\cross Y$ is Hausdorff.
+
+#### Exercise  $\work$
+Show that $\RR$ is separable.
+
+#### Exercise  $\work$
+Show that any space with the indiscrete topology is separable.
+
+#### Exercise  $\work$
+Show that any countable space with the discrete topology is separable.
+
+#### Exercise  $\work$
+Show that the minimal uncountable order with the order topology is not separable.
+
+#### Exercise  $\work$
+Show that every first countable space is second countable.
+
+#### Exercise  $\work$
+Show that every metric space is Hausdorff in its metric topology.
+
+### Hausdorff Spaces
 
 
-Counterexample where homotopic loops are not equal in $\pi_1$, but just conjugate:
+#### Exercise
+Show that a compact set in a Hausdorff space is closed.
 
-![Image](figures/2020-02-04-20:00.png)\
+#### Exercise $\done$
+Let $A\subset X$ with $A$ closed and $X$ compact, and show that $A$ is compact.
+
+:::{.concept}
+Alternative definition of "open": todo.
+:::
+
+:::{.solution}
+\envlist
+
+- Let $A$ be a compact subset of $X$ a Hausdorff space, we will show $X\setminus A$ is open
+- Fix $x\in X\setminus A$.
+- Since $X$ is Hausdorff, for every $y\in A$ we can find $U_y \ni y$ and $V_x(y) \ni x$ depending on $y$ such that $U_x(y) \intersect U_y = \emptyset$.
+- Then $\theset{U_y \suchthat y\in A} \covers A$, and by compactness of $A$ there is a finite subcover corresponding to a finite collection $\theset{y_1, \cdots, y_n}$.
+- **Magic Step**: set $U = \union U_{y_i}$ and $V = \intersect V_x(y_i)$; 
+  - Note $A\subset U$ and $x\in V$
+  - Note $U\intersect V = \emptyset$.
+- Done: for every $x\in X\setminus A$, we have found an open set $V\ni x$ such that $V\intersect A = \emptyset$, so $x$ is an interior point and a set is open iff every point is an interior point.
+
+![](figures/image_2020-06-11-20-14-26.png) 
+
+![](figures/image_2020-06-11-20-35-11.png) 
+:::
+
+#### Exercise $\done$
+Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+
+:::{.solution}
+\envlist
+
+- It suffices to show that $f$ is a closed map, i.e. if $U\subseteq X$ is closed then $f(U)\subseteq Y$ is again closed.
+- Let $U\in X$ be closed; since $X$ is closed, $U$ is compact 
+  - Since closed subsets of compact spaces are compact.
+- Since $f$ is continuous, $f(U)$ is compact
+  - Since the continuous image of a compact set is compact.
+- Since $Y$ is Hausdorff and $f(U)$ is compact, $f(U)$ is closed 
+  - Since compact subsets of Hausdorff spaces are closed.
+:::
+
+#### Exercise  $\work$
+Show that a closed subset of a Hausdorff space need not be compact.
+
+#### Exercise  $\work$
+Show that in a *compact* Hausdorff space, $A$ is closed iff $A$ is compact.
+
+#### Exercise  $\work$
+Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
+
+
+
+# The Fundamental Group
+
+## 1 (Spring '15) $\done$
+
+:::{.problem title="?"}
+Let $S^1$ denote the unit circle in $C$, $X$ be any topological space, $x_0 \in X$, and $$\gamma_0, \gamma_1 : S^1 \to X$$ be two continuous maps such that $\gamma_0 (1) = \gamma_1 (1) = x_0$.
+
+Prove that $\gamma_0$ is homotopic to $\gamma_1$ if and only if the elements represented by $\gamma_0$ and $\gamma_1$ in $\pi_1 (X, x_0 )$ are conjugate.
+:::
+
+:::{.concept}
+\envlist
+
+- Any two maps $f_i: Y\to X$ are **homotopic** iff there exists a homotopy $H: I\cross Y \to X$ with $H_0 = f_0$ and $H_1 = f_1$.
+- $\pi_1(X; x_0)$ is the set of maps $f:S^1\to X$ such that $f(0) = f(1) = x_0$, modulo being homotopic maps.
+- Loops can be homotopic (i.e. *freely* homotopic) without being homotopic rel a base point, so not equal in $\pi_1(X; x_0)$.
+  - Counterexample where homotopic loops are not equal in $\pi_1$, but just conjugate.
+    Need nonabelian $\pi_1$ for conjugates to possibly not be equal, so take a torus:
+
+  ![Image](figures/2020-02-04-20:00.png)\
 
 :::
 
+:::{.solution}
+\hfill
+$\implies$:
+
+- Suppose $\gamma_1 \homotopic \gamma_2$, then there exists a free homotopy $H: I\cross S^1 \to X$ with $H_0 = \gamma_0, H_1 = \gamma_1$.
+- Since $H(0, 1) \gamma_0(1) = x_0$ and $H(1, 1) = \gamma_1(1) =  x_0$, the map
+\[
+T: [0, 1] &\to X \\
+t &\mapsto H(t, 1)
+\]
+  descends to a loop $T:S^1\to X$.
+- Claim: $\gamma_1$ and $T\ast \gamma_2 \ast T\inv$ are homotopic rel $x_0$, making $\gamma_1, \gamma_2$ conjugate in $\pi_1$.
+  - Idea: for each fixed $s$, follow $T$ for the first third, $\gamma_2$ for the middle third, $T\inv$ for the last third.
+
+  ![Image](figures/2020-02-04-20:23.png)
+
+
+$\impliedby$:
+
+- Suppose $[\gamma_1] = [h] [\gamma_2] [h]\inv$ in $\pi_1(X; x_0)$.
+  The claim is that $\gamma_1 \homotopic h\gamma_2 h\inv$ are freely homotopic.
+- Since these are equal in $\pi_1$, we get a square interpolating $\gamma_1$ and $h\gamma_2 h\inv$ with constant sides $\id_{x_0}$.
+- For free homotopies, the sides don't have to be constant, to merge $h$ and $h\inv$ into the sides to get a free homotopy from $f$ to $g$:
+
+![image_2021-06-04-00-44-45](figures/image_2021-06-04-00-44-45.png)
+
+
+
+
+:::
 
 ## 2 (Spring '09/Spring '07/Fall '07/Fall '06) $\work$
 
@@ -2186,7 +2499,7 @@ V = \DD^2 \times S^1 = \theset{ (z, e^{it}) \suchthat \norm z \leq 1,~~ 0 \leq t
 $$ 
 be the "solid torus" with boundary given by the torus $T = S^1 \times S^1$ . 
 
-For $n \in Z$ define 
+For $n \in \ZZ$ define 
 \begin{align*}
 \phi_n : T &\to T \\
 (e^{is} , e^{it} ) &\mapsto (e^{is} , e^{i(ns+t)})
@@ -3055,7 +3368,6 @@ Show that any continuous map $f : \RP^2 \to S^1 \times S^1$ is necessarily null-
   - Note that $\widetilde{S^1\cross S^1} = \RR^2$.
 :::
 
-
 ## 4 (Fall '11) $\done$
 Prove that, for $n \geq 2$, every continuous map $f: \RP^n \to S^1$ is null-homotopic.
 
@@ -3082,7 +3394,6 @@ Prove that, for $n \geq 2$, every continuous map $f: \RP^n \to S^1$ is null-homo
 \todo[inline]{Why?}
 
 :::
-
 
 ## 5 (Spring '06) $\work$ 
 Let $S^2 \to \RP^2$ be the universal covering map. 
@@ -3136,291 +3447,6 @@ a. Show that $SX$ is the union of two contractible subspaces.
 b. Prove that if $X$ is path-connected then $\pi_1 (SX) = \theset{0}$.
 
 c. For all $n \geq 1$, prove that $H_{n} (X) \cong H_{n+1} (SX)$.
-
-
-# Extra Problems
-
-
-## Basics
-
-### Exercise  $\work$
-Show that for $A\subseteq X$, $\cl_X(A)$ is the smallest closed subset containing $A$.
-
-### Exercise $\done$
-Give an example of spaces $A\subseteq B \subseteq X$ such that $A$ is open in $B$ but $A$ is *not* open in $X$.
-
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
-:::
-No: Take $[0, 1] \subset [0, 1] \subset \RR$.
-Then $[0, 1]$ is tautologically open in $[0, 1]$ as it is the entire space, 
-But $[0, 1]$ is not open in $\RR$:
-  - E.g. $\theset{1}$ is not an interior point (every neighborhood intersects the complement $\RR\setminus[0, 1]$).
-:::
-
-### Exercise  $\work$
-Show that the diagonal map $\Delta(x) = (x, x)$ is continuous.
-
-### Exercise  $\work$
-Show that if $A_i \subseteq X$, then $\cl_X(\union_i A_i) = \union_i \cl_X(A_i)$.
-
-### Exercise  $\work$
-Show that $\RR$ is not homeomorphic to $[0, \infty)$.
-
-### Exercise $\work$
-Show that the set $(x, y) \in \RR^2$ such that at least one of $x, y$ is rational with the subspace topology is a connected space.
-
-
-## Connectedness
-
-### Exercise  $\work$
-Prove that $X$ is connected iff the only clopen subsets are $\emptyset, X$.
-
-### Exercise $\work$
-Let $A \subset X$ be a connected subspace.
-
-Show that if $B\subset X$ satisfies $A\subseteq B \subseteq \bar{A}$, then $B$ is connected.
-
-### Exercise  $\work$
-Show that:
-  - Connected does not imply path connected
-  - Connected and locally path connected *does* imply path connected
-  - Path connected implies connected
-
-### Exercise  $\work$
-Use the fact that intervals are connected to prove the intermediate value theorem.
-
-### Exercise  $\work$
-Prove that the continuous image of a connected set is connected.
-
-### Exercise  $\work$
-Show that if $X$ is locally path connected, then 
-
-- Every open subset of $X$ is again locally path-connected.
-- $X$ is connected $\iff X$ is path-connected.
-- Every path component of $X$ is a connected component of $X$.
-- Every connected component of $X$ is open in $X$.
-
-### Exercise $\done$
-Show that $[0, 1]$ is connected.
-
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-[Reference](https://sites.math.washington.edu/~morrow/334_16/connected.pdf)
-[A potentially shorter proof](https://math.stackexchange.com/questions/934421/proof-of-that-every-interval-is-connected)
-:::
-
-Let $I = [0, 1] = A\union B$ be a disconnection, so
-  - $A, B \neq \emptyset$
-  - $A \disjoint B = I$
-  - $\cl_I(A) \intersect B = A \intersect \cl_I(B) = \emptyset$.
-Let $a\in A$ and $b\in B$ where WLOG $a<b$ 
-  - (since either $a<b$ or $b<a$, and $a\neq b$ since $A, B$ are disjoint)
-Let $K = [a, b]$ and define $A_K \definedas A\intersect K$ and $B_K \definedas B\intersect K$.
-Now $A_K, B_K$ is a disconnection of $K$.
-Let $s = \sup(A_K)$, which exists since $\RR$ is complete and has the LUB property
-Claim: $s \in \cl_I(A_K)$. Proof:
-  - If $s\in A_K$ there's nothing to show since $A_K \subset \cl_I(A_K)$, so assume $s\in I\setminus A_K$.
-  - Now let $N_s$ be an arbitrary neighborhood of $s$, then using ??? we can find an $\eps>0$ such that $B_\eps(s) \subset N_s$
-  - Since $s$ is a supremum, there exists an $a\in A_K$ such that $s-\eps < a$.
-  - But then $a \in B_\eps(s)$ and $a\in N_s$ with $a\neq s$.
-  - Since $N_s$ was arbitrary, every $N_s$ contains a point of $A_K$ not equal to $s$, so $s$ is a limit point by definition.
-Since $s\in \cl_I(A_K)$ and $\cl_I(A_K)\intersect B_K = \emptyset$, we have $s\not \in B_K$.
-Then the subinterval $(x, b] \intersect A_K = \emptyset$ for every $x>c$ since $c \definedas \sup A_K$.
-But since $A_K \disjoint B_K = K$, we must have $(x, b] \subset B_K$, and thus $s\in \cl_I(B_K)$.
-Since $A_K, B_K$ were assumed disconnecting, $s\not \in A_K$
-But then $s\in K$ but $s\not\in A_K \disjoint B_K = K$, a contradiction.
-:::
-
-## Compactness
-
-### $\star$ Exercise $\done$
-Let $X$ be a compact space and let $A$ be a closed subspace. 
-Show that $A$ is compact. 
-
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
-:::
-Let $X$ be compact, $A\subset X$ closed, and $\theset{U_\alpha} \covers A$ be an open cover.
-By definition of the subspace topology, each $U_\alpha = V_\alpha \intersect A$ for some open $V_\alpha \subset X$, and $A\subset \union_\alpha V_\alpha$.
-Since $A$ is closed in $X$, $X\setminus A$ is open.
-Then $\theset{V_\alpha}\union \theset{X\setminus A}\covers X$ is an open cover, since every point is either in $A$ or $X\setminus A$.
-By compactness of $X$, there is a finite subcover $\theset{U_j \suchthat j\leq N}\union \theset{X\setminus A}$
-Then $\qty{\theset{U_j} \union \theset{X\setminus A}} \intersect A \definedas \theset{V_j}$ is a finite cover of $A$.
-:::
-  
-### $\star$ Exercise $\done$
-Let $f : X \to Y$ be a continuous function, with $X$ compact. 
-Show that $f(X)$ is compact.
-
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
-:::
-Let $f:X\to Y$ be continuous with $X$ compact, and $\theset{U_\alpha} \covers f(X)$ be an open cover.
-Then $\theset{f\inv(U_\alpha)} \covers X$ is an open cover of $X$, since $x\in X \implies f(x) \in f(X) \implies f(x) \in U_\alpha$ for some $\alpha$, so $x\in f\inv(U_\alpha)$ by definition.
-By compactness of $X$ there is a finite subcover $\theset{f\inv(U_j) \suchthat j\leq N} \covers X$.
-Then the finite subcover $\theset{U_j\suchthat j\leq N} \covers f(X)$, since if $y\in f(X)$, $y\in U_\alpha$ for some $\alpha$ and thus $f\inv(y) \in f\inv(U_j)$ for some $j$ since $\theset{U_j}$ is a cover of $X$.
-
-:::
- 
-Let $A$ be a compact subspace of a Hausdorff space $X$. 
-Show that $A$ is closed.
-
-### Exercise  $\work$
-Show that any infinite set with the cofinite topology is compact.
-
-### Exercise  $\work$
-Show that every compact metric space is complete.
-
-### Exercise  $\work$
-Show that if $X$ is second countable and Hausdorff, or a metric space, then TFAE:
-
-- $X$ is compact
-- Every infinite subset $A\subseteq X$ has a limit point in $X$.
-- Every sequence in $X$ has a convergent subsequence in $X$. 
-
-### Exercise  $\work$
-Show that if $f: A\to B$ is a continuous map between metric spaces and $K\subset A$ is compact, then $\restrictionof{f}{K}$ is uniformly continuous.
-
-### Exercise  $\work$
-Show that if $f:X\to Y$ is continuous and $X$ is compact then $f(X)$ is compact.
-
-### Exercise  $\work$
-Show that if $f:X\to \RR$ and $X$ is compact then $f$ is bounded and attains its min/max.
-
-### Exercise  $\work$
-Show that a finite product or union compact spaces is again compact.
-
-### Exercise  $\work$
-Show that a quotient of a compact space is again compact.
-
-### Exercise  $\work$
-Show that if $X$ is compact and $A\subseteq X$ is closed then $A$ is compact.
-
-### Exercise  $\work$
-Show that if $X$ is Hausdorff and $A\subseteq X$ is compact then $A$ is closed.
-
-### Exercise  $\work$
-Show that if $X$ is a metric space and $A\subseteq X$ is compact then $A$ is bounded.
-
-### Exercise  $\work$
-Show that a continuous map from a compact space to a Hausdorff space is closed.
-
-### Exercise  $\work$
-Show that an injective continuous map from a compact space to a Hausdorff space is an embedding (a homeomorphism onto its image).
-
-### Exercise  $\work$
-Show that $[0, 1]$ is compact.
-
-### Exercise  $\work$
-Show that a compact Hausdorff space is is metrizable iff it is second-countable.
-
-### Exercise  $\work$
-Show that if $X$ is metrizable, then $X$ is compact
-
-### Exercise  $\work$
-Give an example of a space that is compact but not sequentially compact, and vice versa.
-
-### Exercise  $\work$
-Show that a sequentially compact space is totally bounded.
-
-### Exercise  $\work$
-Show that $\RR$ with the cofinite topology is compact.
-
-### Exercise  $\work$
-Show that $[0, 1]$ is compact without using the Heine-Borel theorem.
-
-
-## Separation
-
-### Exercise  $\work$
-Show that $X$ is Hausdorff iff $\Delta(X)$ is closed in $X\cross X$.
-
-### Exercise  $\work$
-Prove that $X, Y$ are Hausdorff iff $X\cross Y$ is Hausdorff.
-
-### Exercise  $\work$
-Show that $\RR$ is separable.
-
-### Exercise  $\work$
-Show that any space with the indiscrete topology is separable.
-
-### Exercise  $\work$
-Show that any countable space with the discrete topology is separable.
-
-### Exercise  $\work$
-Show that the minimal uncountable order with the order topology is not separable.
-
-### Exercise  $\work$
-Show that every first countable space is second countable.
-
-### Exercise  $\work$
-Show that every metric space is Hausdorff in its metric topology.
-
-## Hausdorff Spaces
-
-### Exercise $\done$
-Let $A\subset X$ with $A$ closed and $X$ compact, and show that $A$ is compact.
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-Alternative definition of "open":
-:::
-
-Let $A$ be a compact subset of $X$ a Hausdorff space, we will show $X\setminus A$ is open
-Fix $x\in X\setminus A$.
-Since $X$ is Hausdorff, for every $y\in A$ we can find $U_y \ni y$ and $V_x(y) \ni x$ depending on $y$ such that $U_x(y) \intersect U_y = \emptyset$.
-Then $\theset{U_y \suchthat y\in A} \covers A$, and by compactness of $A$ there is a finite subcover corresponding to a finite collection $\theset{y_1, \cdots, y_n}$.
-**Magic Step**: set $U = \union U_{y_i}$ and $V = \intersect V_x(y_i)$; 
-  - Note $A\subset U$ and $x\in V$
-  - Note $U\intersect V = \emptyset$.
-Done: for every $x\in X\setminus A$, we have found an open set $V\ni x$ such that $V\intersect A = \emptyset$, so $x$ is an interior point and a set is open iff every point is an interior point.
-
-![](figures/image_2020-06-11-20-14-26.png) 
-
-![](figures/image_2020-06-11-20-35-11.png) 
-:::
-
-### Exercise $\done$
-Show that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
-
-:::{.solution}
-\hfill
-:::{.concept}
-\hfill
-
-:::
-It suffices to show that $f$ is a closed map, i.e. if $U\subseteq X$ is closed then $f(U)\subseteq Y$ is again closed.
-Let $U\in X$ be closed; since $X$ is closed, $U$ is compact 
-  - Since closed subsets of compact spaces are compact.
-Since $f$ is continuous, $f(U)$ is compact
-  - Since the continuous image of a compact set is compact.
-Since $Y$ is Hausdorff and $f(U)$ is compact, $f(U)$ is closed 
-  - Since compact subsets of Hausdorff spaces are closed.
-:::
-
-### Exercise  $\work$
-Show that a closed subset of a Hausdorff space need not be compact.
-
-### Exercise  $\work$
-Show that in a *compact* Hausdorff space, $A$ is closed iff $A$ is compact.
-
-### Exercise  $\work$
-Show that a local homeomorphism between compact Hausdorff spaces is a covering space.
-
-
 
 # Extra Problems: Algebraic Topology
 

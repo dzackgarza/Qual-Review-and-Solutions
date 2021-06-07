@@ -357,9 +357,18 @@ A **Hilbert space** is an inner product space which is a Banach space under the 
 :::
 
 
-
 ## Theorems
 
+
+:::{.theorem title="Folland 0.25"}
+For $E \subseteq (X, d)$ a metric space, TFAE:
+
+- $E$ is complete and totally bounded.
+- $E$ is sequentially compact: Every sequence in $E$ has a subsequence that converges to a point in $E$.
+- $E$ is compact: every open cover has a finite subcover.
+
+Note that $E$ is complete as a metric space with the induced metric iff $E$ is closed in $X$, and $E$ is bounded iff it is totally bounded.
+:::
 
 :::{.theorem title="Mean Value Theorem"}
 If $f: [a, b] \to \RR$ is continuous on a closed interval and differentiable on $(a, b)$, then there exists $\xi \in [a, b]$ such that 

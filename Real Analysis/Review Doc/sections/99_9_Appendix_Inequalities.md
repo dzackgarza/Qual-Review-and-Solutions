@@ -8,16 +8,44 @@
 :::
 
 :::{.proposition title="Chebyshev's Inequality"}
+The most often used form here:
 \[  
-\mu(\{x:|f(x)|>\alpha\}) \leq\left(\frac{\pnorm{f}{p}}{\alpha}\right)^{p}
+\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha  }} \leq {1\over \alpha} \norm{f}_1 \da {1\over \alpha} \int_X \abs{f}
+.\]
+Proof: let $S_\alpha$ be the set appearing, then $\alpha \mu(S_\alpha)$ is the sum of areas of certain boxes below the graph of $f$.
+Interpret $\int_X f$ as the total area under the graph to make the inequality obvious.
+
+![image_2021-06-02-22-59-46](figures/image_2021-06-02-22-59-46.png)
+
+The probability interpretation: $\PP(X\geq \alpha) \leq {1\over \alpha} \EE(X)$.
+
+The more general version:
+\[
+\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha }  } \leq {1\over \alpha^p} \norm{f}_p^p \da{1\over \alpha^p} \int_X \abs{f}^p 
+.\]
+Proof:
+\[
+\norm{f}_p^p = \int \abs{f}^p \geq \int_{S_\alpha} \abs{f}^p \geq \alpha^p \int_{S_\alpha} 1 = \alpha^p \mu(S_\alpha)
 .\]
 
 :::
+
+
+:::{.proposition title="Markov's Inequality"}
+
+:::
+
 
 :::{.proposition title="Holder's Inequality"}
 \[  
 \frac 1 p + \frac 1 q = 1 \implies \pnorm{f g}{1} \leq \pnorm{f}{p} \pnorm{g}{q}
 .\]
+
+With integrals:
+\[
+\int_X \abs{fg} \leq \qty{\int_X \abs{f}^p}^{1\over p} \qty{\int_X \abs{f}^q}^{1\over q}
+.\]
+
 
 :::
 

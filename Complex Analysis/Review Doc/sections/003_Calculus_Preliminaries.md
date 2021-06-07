@@ -67,13 +67,17 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-:::{.fact}
+
+:::{.proposition title="Ratio Test"}
 Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall the **ratio test**:
 
 - $R\in (0, 1) \implies$ convergence.
 - $R\in (1, \infty] \implies$ divergence.
 - $R=1$ yields no information.
+:::
 
+:::{.proposition title="Root Test"}
+![image_2021-05-27-15-40-58](figures/image_2021-05-27-15-40-58.png)
 :::
 
 :::{.proposition title="Radius of Convergence by the Root Test"}

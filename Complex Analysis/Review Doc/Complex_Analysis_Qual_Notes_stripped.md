@@ -18,15 +18,7 @@
 
   \( {\mathbb{D}}_{1\over 2} \)                                                                            The portion of the first quadrant inside the unit disc
 
-  \( S \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\} \)                 The horizonta strip
-
-                                                                                                           
-
-                                                                                                           
-
-                                                                                                           
-
-                                                                                                           
+  \( S \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\} \)                 The horizontal strip
 
                                                                                                            
 
@@ -34,6 +26,40 @@
 
                                                                                                            
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Greatest Hits
+
+Things to know well:
+
+-   Estimates for derivatives, mean value theorem
+
+-   `\cref[CauchyTheorem]{Cauchy's Theorem}`{=tex}
+
+-   `\cref[CauchyIntegral]{Cauchy's Integral Formula}`{=tex}
+
+-   `\cref[CauchyInequality]{Cauchy's Inequality}`{=tex}
+
+-   `\cref[Morera]{Morera's Theorem}`{=tex}
+
+-   `\cref[Liouville]{Liouville's Theorem}`{=tex}
+
+-   `\cref[MaximumModulus]{Maximum Modulus Principle}`{=tex}
+
+-   `\cref[Rouche]{Rouché's Theorem}`{=tex}
+
+-   `\cref[SchwarzReflection]{The Schwarz Reflection Principle}`{=tex}
+
+-   `\cref[SchwarzLemma]{The Schwarz Lemma}`{=tex}
+
+-   `\cref[Casorati]{Casorati-Weierstrass Theorem}`{=tex}
+
+-   Properties of linear fractional transformations
+
+-   Automorphisms of \( {\mathbb{D}}, {\mathbb{C}}, {\mathbb{CP}}^1 \).
+
+### Common Tricks
+
+-   Virtually any time: consider \( 1/f(z) \) and \( f(1/z) \).
 
 ::: {.remark title="Showing a function is constant"}
 If you want to show that a function \( f \) is constant, try one of the following:
@@ -45,24 +71,6 @@ If you additionally want to show \( f \) is zero, try one of these:
 
 -   Show \( f \) is entire, bounded, and \( \lim_{z\to\infty} f(z) = 0 \).
 :::
-
-## Greatest Hits
-
-Things to know well:
-
--   Estimates for derivatives, mean value theorem
--   `\cref[CauchyTheorem]{Cauchy's Theorem}`{=tex}
--   `\cref[CauchyIntegral]{Cauchy's Integral Formula}`{=tex}
--   `\cref[CauchyInequality]{Cauchy's Inequality}`{=tex}
--   `\cref[Morera]{Morera's Theorem}`{=tex}
--   `\cref[SchwarzReflection]{The Schwarz Reflection Principle}`{=tex}
--   `\cref[MaximumModulus]{Maximum Modulus Principle}`{=tex}
--   `\cref[SchwarzLemma]{The Schwarz Lemma}`{=tex}
--   `\cref[Liouville]{Liouville's Theorem}`{=tex}
--   `\cref[Casorati]{Casorati-Weierstrass Theorem}`{=tex}
--   `\cref[Rouche]{Rouché's Theorem}`{=tex}
--   Properties of linear fractional transformations
--   Automorphisms of \( {\mathbb{D}}, {\mathbb{C}}, {\mathbb{CP}}^1 \).
 
 ## Basic but Useful Facts
 
@@ -101,21 +109,57 @@ Things to know well:
     .\]
 :::
 
+::: {.fact title="Generalized Binomial Theorem"}
+Define \( (n)_k \) to be the falling factorial \( \prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1) \) and set \( {n\choose k} \coloneqq(n)_k/k! \), then
+\[
+(x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
+.\]
+:::
+
 ::: {.fact title="Some useful series"}
 \[
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
-\log(z) &= \sum_{n=0}^\infty { (-1)^n \over n} \qty{z-a}^n \\
+\log(1-x) &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
 {\frac{\partial }{\partial z}\,} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
+\sqrt{1+x} = (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
+&= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \]
 :::
 
-## Advice
-
--   Consider \( 1/f(z) \) and \( f(1/z) \).
+::: {.fact}
+Useful trick for expanding square roots:
+\[
+\sqrt{z} = \sqrt{z_0 + z - z_0} = \sqrt{z_0 \qty{ 1 + {z-z_0 \over z} }} = \sqrt{z_0} \sqrt{1+u},\quad u\coloneqq{z-z_0 \over z} \\
+\implies \sqrt{z} = \sqrt{z_0} \sum_{k\geq 0} {1/2 \choose k} \qty{z- z_0 \over z}^k
+.\]
+:::
 
 # Calculus Preliminaries
+
+## Definitions
+
+::: {.definition title="Locally uniform convergence"}
+A sequence of functions \( f_n \) is said to converge **locally uniformly** on \( \Omega \subseteq {\mathbb{C}} \) iff \( f_n\to f \) uniformly on every compact subset \( K \subseteq \Omega \).
+:::
+
+::: {.definition title="Equicontinuous Family"}
+A family of functions \( f_n \) is **equicontinuous** iff for every \( \varepsilon \) there exists a \( \delta = \delta(\varepsilon) \) (not depending on \( n \) or \( f_n \)) such that \( {\left\lvert {x-y} \right\rvert}<\varepsilon\implies {\left\lvert {f_n(x) - f_n(y)} \right\rvert} < \varepsilon \) for all \( n \).
+:::
+
+::: {.remark}
+Recall Arzelà-Ascoli, an analog of Heine-Borel: for \( X \) compact Hausdorff, consider the the Banach space \( C(X; {\mathbb{R}}) \) equipped with the *uniform norm* \( {\left\lVert {f} \right\rVert}_{\infty, X} \coloneqq\sup_{x\in X} {\left\lvert {f(x)} \right\rvert} \). Then a subset \( A \subseteq X \) is compact iff \( A \) is closed, uniformly bounded, and equicontinuous. As a consequence, if \( A \) is a sequence, it contains a subsequence converging uniformly to a continuous function. The proof is an \( \varepsilon/3 \) argument.
+:::
+
+::: {.definition title="Normal Family"}
+:::
+
+::: {.remark}
+A continuous function on a compact set is uniformly continuous.
+:::
+
+## Theorems
 
 ::: {.theorem title="Implicit Function Theorem"}
 :::
@@ -142,9 +186,7 @@ A series of functions \( \sum_{n=1}^\infty f_n(x) \) converges uniformly iff
 :::
 
 ::: {.theorem title="Weierstrass $M\\dash$Test"}
-If \( \left\{{f_n}\right\} \) with \( f_n: \Omega \to {\mathbb{C}} \) and there exists a sequence \( \left\{{M_n}\right\} \) with \( {\left\lVert {f_n} \right\rVert}_\infty \leq M_n \) and \( \sum_{n\in {\mathbb{N}}} M_n < \infty \), then \( f(x) \coloneqq\sum_{n\in {\mathbb{N}}} f_n(x) \) converges absolutely and uniformly on \( \Omega \).
-
-Moreover, if the \( f_n \) are continuous, by the uniform limit theorem, \( f \) is again continuous.
+If \( \left\{{f_n}\right\} \) with \( f_n: \Omega \to {\mathbb{C}} \) and there exists a sequence \( \left\{{M_n}\right\} \) with \( {\left\lVert {f_n} \right\rVert}_\infty \leq M_n \) and \( \sum_{n\in {\mathbb{N}}} M_n < \infty \), then \( f(x) \coloneqq\sum_{n\in {\mathbb{N}}} f_n(x) \) converges absolutely and uniformly on \( \Omega \). Moreover, if the \( f_n \) are continuous, by the uniform limit theorem, \( f \) is again continuous.
 :::
 
 ## Series and Sequences
@@ -157,7 +199,7 @@ Note that if a power series converges uniformly, then summing commutes with inte
 Consider \( \sum c_k z^k \), set \( R = \lim {\left\lvert {c_{k+1} \over c_k} \right\rvert} \), and recall the **ratio test**:
 
 -   \( R\in (0, 1) \implies \) convergence.
--   \( R\in [1, \infty] \implies \) divergence.
+-   \( R\in (1, \infty] \implies \) divergence.
 -   \( R=1 \) yields no information.
 :::
 
@@ -200,27 +242,6 @@ Recall how to carry out polynomial long division:
 -   For irreducible quadratic factors \( h_i(x) \), include terms of the form \( {Ax+B \over h_i(x)} \).
 :::
 
-::: {.fact title="Generalized Binomial Theorem"}
-Define \( (n)_k \) to be the falling factorial \( \prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1) \) and set \( {n\choose k} \coloneqq(n)_k/k! \), then
-\[
-(x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
-.\]
-:::
-
-::: {.fact title="Some useful series"}
-\[
-\sqrt{1+x} = (1+x)^{1/2} = 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
-.\]
-:::
-
-::: {.fact}
-Useful trick for expanding square roots:
-\[
-\sqrt{z} = \sqrt{z_0 + z - z_0} = \sqrt{z_0 \qty{ 1 + {z-z_0 \over z} }} = \sqrt{z_0} \sqrt{1+u},\quad u\coloneqq{z-z_0 \over z} \\
-\implies \sqrt{z} = \sqrt{z_0} \sum_{k\geq 0} {1/2 \choose k} \qty{z- z_0 \over z}^k
-.\]
-:::
-
 ## Exercises
 
 ::: {.exercise title="?"}
@@ -242,16 +263,44 @@ z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
 .\]
 :::
 
-::: {.fact title="Complex Log"}
-For \( z= r e^{i\theta}\neq 0 \), \( \theta \) is of the form \( \Theta + 2k\pi \) where \( \Theta = \operatorname{Arg}z \)
-:::
-
 ::: {.fact}
 Common trick:
 \[
 f^{1/n} = e^{{1\over n} \log(f)}
 ,\]
 taking (say) a principal branch of \( \log \) given by \( {\mathbb{C}}\setminus(-\infty, 0] \times 0 \).
+:::
+
+## Complex Log
+
+::: {.fact title="Complex Log"}
+For \( z= r e^{i\theta}\neq 0 \), \( \theta \) is of the form \( \Theta + 2k\pi \) where \( \Theta = \operatorname{Arg}z \)
+:::
+
+::: {.proposition title="Existence of complex log"}
+Suppose \( \Omega \) is a simply-connected region such that \( 1\in \Omega, 0\not\in\Omega \). Then there exists a branch of \( F(z) \coloneqq\operatorname{Log}(z) \) such that
+
+-   \( F \) is holomorphic on \( \Omega \),
+-   \( e^{F(z)} = z \) for all \( z\in \Omega \)
+-   \( F(x) = \log(x) \) for \( x\in {\mathbb{R}} \) in a neighborhood of \( 1 \).
+:::
+
+::: {.definition title="Principal branch and exponential"}
+Take \( {\mathbb{C}} \) and delete \( {\mathbb{R}}^{\leq 0} \) to obtain the **principal branch** of the logarithm, defined as
+\[
+\operatorname{Log}(z) \coloneqq\log(r) + i\theta && {\left\lvert {\theta} \right\rvert} < \pi
+.\]
+Similarly define
+\[
+z^{\alpha} \coloneqq e^{\alpha \operatorname{Log}(z)}
+.\]
+:::
+
+::: {.theorem title="Existence of log"}
+If \( f \) is holomorphic and nonvanishing on a simply-connected region \( \Omega \), then there exists a holomorphic \( G \) on \( \Omega \) such that
+\[
+f(z) = e^{G(z)}
+.\]
 :::
 
 ## Complex Calculus
@@ -407,10 +456,6 @@ Thus
 .\]
 :::
 
-::: {.proposition title="Holomorphic functions have harmonic components"}
-If \( f(z) = u(x, y) + iv(x, y) \) is holomorphic, then \( u, v \) are harmonic.
-:::
-
 ::: {.proposition title="Holomorphic functions are continuous."}
 \( f \) is holomorphic at \( z_0 \) iff there exists an \( a\in {\mathbb{C}} \) such that
 \[  
@@ -419,15 +464,53 @@ f(z_0 + h) - f(z_0) - ah = h \psi(h), \quad \psi(h) \overset{h\to 0}\to 0
 In this case, \( a = f'(z_0) \).
 :::
 
-::: {.proposition title="Cauchy-Riemann implies holomorphic"}
-Recall that in general, \( f' = {\partial}f + \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf \). If \( f = u+iv \) with \( u, v\in C^1({\mathbb{R}}) \) satisfying the Cauchy-Riemann equations on \( \Omega \), then \( f \) is holomorphic on \( \Omega \) and
+```{=tex}
+\todo[inline]{Prove}
+```
+### Delbar and the Laplacian
+
+::: {.definition title="del and delbar operators"}
 \[
-f'(z) = {\partial}f = {1 \over 2} \qty{{\frac{\partial }{\partial x}\,} + {1\over i} {\frac{\partial }{\partial y}\,}}f = {1\over 2}\qty{u_x + iv_x}
+{\partial}\coloneqq{\partial}_z \coloneqq{1\over 2}\qty{{\partial}_x - i {\partial}_y}
+\quad
+\text{ and }
+\quad
+\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu
+\coloneqq{\partial}_{\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu}
+={1\over 2}\qty{ {\partial}_x + i{\partial}_y}
+.\]
+Moreover, \( f' = {\partial}f + \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf \).
+:::
+
+::: {.proposition title="Holomorphic iff delbar vanishes"}
+\( f \) is holomorphic at \( z_0 \) iff \( \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf(z_0) = 0 \):
+\[
+2\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf 
+&\coloneqq({\partial}_x + i {\partial}_y) (u+iv) \\
+&= u_x + iv_x + iu_y - v_y \\
+&= (u_x - v_y) + i(u_y + v_x) \\
+&= 0 && \text{by Cauchy-Riemann}
 .\]
 :::
 
-::: {.theorem title="Analytic functions have harmonic components"}
-If \( f=u+iv \) is analytic, then \( u, v \) are harmonic.
+### Harmonic Functions and the Laplacian
+
+::: {.definition title="Laplacian and Harmonic Functions"}
+A real function of two variables \( u(x, y) \) is **harmonic** iff it is in the kernel of the Laplacian operator:
+\[  
+\Delta u \coloneqq\qty{{\frac{\partial ^2}{\partial x^2}\,} + {\frac{\partial ^2}{\partial y^2}\,}}u = 0
+.\]
+:::
+
+::: {.proposition title="Cauchy-Riemann implies holomorphic"}
+If \( f = u+iv \) with \( u, v\in C^1({\mathbb{R}}) \) satisfying the Cauchy-Riemann equations on \( \Omega \), then \( f \) is holomorphic on \( \Omega \) and
+\[
+f'(z) = {\partial}f = {1\over 2}\qty{u_x + iv_x}
+.\]
+:::
+
+::: {.proposition title="Holomorphic functions have harmonic components"}
+If \( f(z) = u(x, y) + iv(x, y) \) is holomorphic, then \( u, v \) are harmonic.
 :::
 
 ::: {.proof title="?"}
@@ -454,38 +537,6 @@ If \( f=u+iv \) is analytic, then \( u, v \) are harmonic.
     u_{xx} - v_{yx} = 0 \implies u_{xx} + u_{yy} = 0 \\ \\
     v_{xx} + u_{yx} = 0 \implies v_{xx} + v_{yy} = 0 \\ \\
     .\]
-:::
-
-### Delbar, Harmonic Functions, Laplacian
-
-::: {.definition title="del and delbar operators"}
-\[
-{\partial}\coloneqq{\partial}_z \coloneqq{1\over 2}\qty{{\partial}_x - i {\partial}_y}
-\quad
-\text{ and }
-\quad
-\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu
-\coloneqq{\partial}_{\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu}
-={1\over 2}\qty{ {\partial}_x + i{\partial}_y}
-.\]
-:::
-
-::: {.proposition title="Holomorphic iff delbar vanishes"}
-\( f \) is holomorphic at \( z_0 \) iff \( \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf(z_0) = 0 \):
-\[
-2\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf 
-&\coloneqq({\partial}_x + i {\partial}_y) (u+iv) \\
-&= u_x + iv_x + iu_y - v_y \\
-&= (u_x - v_y) + i(u_y + v_x) \\
-&= 0 && \text{by Cauchy-Riemann}
-.\]
-:::
-
-::: {.definition title="Laplacian and Harmonic Functions"}
-A real function of two variables \( u(x, y) \) is **harmonic** iff it is in the kernel of the Laplacian operator:
-\[  
-\Delta u \coloneqq\qty{{\frac{\partial ^2}{\partial x^2}\,} + {\frac{\partial ^2}{\partial y^2}\,}}u = 0
-.\]
 :::
 
 ### Exercises
@@ -563,7 +614,7 @@ If \( f \) is holomorphic on \( \Omega \) and any of the following hold, then \(
 ::: {.theorem title="Improved Taylor's Theorem"}
 If \( f \) is holomorphic on a region \( \Omega \) with \( \overline{ D_R(z_0)} \subseteq \Omega \), and for every \( z\in D_r(z_0) \), \( f \) has a power series expansion of the following form:
 \[
-f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{where} a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
+f(z)=\sum_{n=0}^{\infty} a_{n}\left(z-z_{0}\right)^{n} \quad\text{ where } a_{n}=\frac{f^{(n)}\left(z_{0}\right)}{n !}
 = {1 \over 2\pi r^n}\int_0^{2\pi} f(z_0 + re^{i\theta})e^{-in\theta} \,d\theta
 .\]
 :::
@@ -576,6 +627,13 @@ Any power series is smooth (and thus holomorphic) on its disc of convergence, an
 Moreover, the coefficients are given by
 \[
 c_k = {f^{(n)}(z_0) \over n! }
+.\]
+:::
+
+::: {.remark}
+By an application of the Cauchy integral formula (see S&S 7.1) if \( f \) is holomorphic on \( D_R(z_0) \) there is a formula for all \( k\geq 0 \) and all \( 0<r<R \):
+\[
+c_k = {1\over 2\pi r^k} \int_0^{2\pi} f(z_0 + re^{i\theta}) e^{-in\theta}\,d\theta
 .\]
 :::
 
@@ -635,18 +693,18 @@ So it suffices to bound the latter sum:
 :::
 
 ::: {.theorem title="Abel's Theorem"}
-If \( \sum_{k=1}^\infty c_k \) converges, then
+If \( \sum_{k=1}^\infty c_k z^j \) converges on \( {\left\lvert {z} \right\rvert} < 1 \) then
 \[
 \lim_{z\to 1^-} \sum_{k\in {\mathbb{N}}} c_k z^k = \sum_{k\in {\mathbb{N}}} c_k
 .\]
 :::
 
 ::: {.lemma title="Abel's Test"}
-If \( f(z) \coloneqq\sum c_k z^k \) is a power series with \( c_k \in {\mathbb{R}}^{\geq 0} \) and \( a_n\searrow 0 \), then \( f \) converges on \( S^1 \) except possibly at \( z=1 \).
+If \( f(z) \coloneqq\sum c_k z^k \) is a power series with \( c_k \in {\mathbb{R}}^{\geq 0} \) and \( c_k\searrow 0 \), then \( f \) converges on \( S^1 \) except possibly at \( z=1 \).
 :::
 
 ::: {.example title="application of Abel's theorem"}
-Integrate a geometric series to obtain
+What is the value of the alternating harmonic series? Integrate a geometric series to obtain
 \[
 \sum {(-1)^k z^k \over n} = \log(z+1) && {\left\lvert {z} \right\rvert} < 1
 .\]
@@ -674,13 +732,7 @@ A_{n} B_{n}=\sum_{k=1}^{n} A_{k} b_{k}+\sum_{k=1}^{n} a_{k} B_{k-1}
 .\]
 :::
 
-### Exercises: Series
-
-::: {.exercise title="Application of summation by parts"}
-Use summation by parts to show that \( \sin(n)/n \) converges.
-:::
-
-::: {.solution}
+::: {.proof title="?"}
 An inelegant proof: define \( A_n \coloneqq\sum_{k\leq n} a_k \), use that \( a_k = A_k - A_{k-1} \), reindex, and peel a top/bottom term off of each sum to pattern-match.\
 
 Behold:
@@ -694,6 +746,18 @@ Behold:
 &= A_nb_n - A_{m-1} b_{m} + \sum_{m\leq k \leq n-1} A_k(b_k - b_{k+1}) \\
 &= A_nb_n - A_{m-1} b_{m} - \sum_{m\leq k \leq n-1} A_k(b_{k+1} - b_{k}) 
 .\]
+:::
+
+![image_2021-05-27-15-40-58](figures/image_2021-05-27-15-40-58.png)
+
+::: {.proposition title="?"}
+If \( f \) is non-constant, then \( f' \) is analytic and the zeros of \( f' \) are isolated. If \( f,g \) are analytic with \( f'=g' \), then \( f-g \) is constant.
+:::
+
+### Exercises: Series
+
+::: {.exercise title="Application of summation by parts"}
+Use summation by parts to show that \( \sin(n)/n \) converges.
 :::
 
 ::: {.exercise title="1.20: Series convergence on the circle"}
@@ -768,29 +832,9 @@ For \( z=1 \):
 .\]
 :::
 
-::: {.proposition title="Crude integral estimate"}
-Define the *length* of a curve by
-\[
-\operatorname{len}(\gamma) \coloneqq\int_\gamma {\left\lvert {\,dz} \right\rvert} = \int_I {\left\lvert {\gamma'(t)} \right\rvert} \,dt
-.\]
-
-Then there is an estimate of the following form:
-\[
-\left|\int_{\gamma} f d z\right| \leq \int_{\gamma}|f||d z| \leq\left(\sup _{\gamma}|f|\right) \cdot \operatorname{len}(\gamma)
-.\]
-:::
-
-::: {.exercise title="Primitives imply vanishing integral"}
-Show that if \( f \) has a primitive \( F \) on \( \Omega \) then \( \int_\gamma f = 0 \) for every closed curve \( \gamma \subseteq \Omega \).
-:::
-
-::: {.theorem title="Goursat"}
-If \( f \) is analytic on a rectangle \( R \) with horizontal and vertical sides, then \( \int_{{{\partial}}R} f = 0 \).
-:::
-
-::: {.theorem title="Cauchy's Theorem" ref="CauchyTheorem"}
-If \( f \) is holomorphic on a simply-connected region \( \Omega \), then for any closed path \( \gamma \subseteq \Omega \),
-\[  
+::: {.theorem title="Cauchy-Goursat Theorem" ref="CauchyTheorem"}
+If \( f \) is holomorphic on a region \( \Omega \) with \( \pi_1 \Omega = 1 \), then for any closed path \( \gamma \subseteq \Omega \),
+\[ 
 \int_{\gamma} f(z) \,dz= 0
 .\]
 :::
@@ -803,6 +847,8 @@ Closed path integrals of holomorphic functions vanish.
 
 ### Integral Formulas and Estimates
 
+> See [reference](http://home.iitk.ac.in/~psraj/mth102/lecture_notes/comp8.pdf)
+
 ::: {.theorem title="Cauchy Integral Formula" ref="CauchyIntegral"}
 Suppose \( f \) is holomorphic on \( \Omega \), then for any \( z_0 \in \Omega \) and any open disc \( \overline{D_R(z_0)} \) such that \( \gamma \coloneqq{{\partial}}\overline{D_R(z_0)} \subseteq \Omega \),
 \[
@@ -814,35 +860,53 @@ and
 .\]
 :::
 
-::: {.theorem title="Cauchy's Inequality" ref="CauchyInequality"}
-For \( z_0 \in D_R(z_0) \subset \Omega \), we have
+::: {.proof title="?"}
+![image_2021-05-27-16-54-06](figures/image_2021-05-27-16-54-06.png)
+:::
+
+::: {.proof title="?"}
+![image_2021-05-27-16-56-39](figures/image_2021-05-27-16-56-39.png) ![image_2021-05-27-16-56-52](figures/image_2021-05-27-16-56-52.png)
+:::
+
+::: {.theorem title="Cauchy's Inequality / Cauchy's Estimate" ref="CauchyInequality"}
+For \( z_0 \in D_R(z_0) \subset \Omega \), setting \( M \coloneqq\sup_{z\in \gamma}{\left\lvert {f(z)} \right\rvert} \) so \( {\left\lvert {f(z)} \right\rvert}\leq M \) on \( \gamma \)
 \[
 {\left\lvert { f^{(n)} (z_0) } \right\rvert} 
-\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ {\left\lVert {f} \right\rVert}_{\infty} } {R^{n+1}} R \,d\theta
-= \frac{n !{\left\lVert {f} \right\rVert}_{\infty}}{R^n} 
-,\]
-where \( {\left\lVert {f} \right\rVert}_{\infty}\coloneqq\sup_{z\in C_R} {\left\lvert {f(z)} \right\rvert} \).
+\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{ M } {R^{n+1}} R \,d\theta
+= \frac{M n ! }{R^n} 
+.\]
 :::
 
 ::: {.proof title="of Cauchy's inequality"}
 ```{=tex}
 \envlist
 ```
--   Given \( z_0\in \Omega \), pick the largest disc \( D_R(z_0) \subset \Omega \) and let \( C_R = {{\partial}}D_R \).
+-   Given \( z_0\in \Omega \), pick the largest disc \( D_R(z_0) \subset \Omega \) and let \( C = {{\partial}}D_R \).
 -   Then apply the integral formula.
+
+\[
+\left|f^{(n)}(z_0)\right|
+&= {\left\lvert { \frac{n !}{2 \pi i} \int_{C} \frac{f(\zeta) }{(\zeta-z_0)^{n+1}} \,d\zeta} \right\rvert} \\
+&=\left|\frac{n !}{2 \pi i} \int_{0}^{2 \pi} \frac{f\left(z_0 + r e^{i \theta}\right) r i e^{i \theta} }{\left(r e^{i \theta}\right)^{n+1}} \,d\theta\right| \\
+&\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi}\left|\frac{f\left( z_0 +r e^{i \theta}\right) r i e^{i \theta}}{\left(r e^{i \theta}\right)^{n+1}}\right| \,d\theta\\ 
+&=\frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{\left|f\left(z_0 +r e^{i \theta}\right)\right|}{r^{n}} \,d\theta\\
+&\leq \frac{n !}{2 \pi} \int_{0}^{2 \pi} \frac{M}{r^{n}} \,d\theta\\
+&=\frac{M n !}{r^{n}} 
+.\]
 :::
 
 ::: {.slogan}
 The \( n \)th Taylor coefficient of an analytic function is at most \( \sup_{{\left\lvert {z} \right\rvert} = R} {\left\lvert {f} \right\rvert}/R^n \).
 :::
 
-::: {.theorem title="Mean Value Theorem for Holomorphic Functions"}
+::: {.theorem title="Mean Value Property for Holomorphic Functions"}
 If \( f \) is holomorphic on \( D_r(z_0) \)
 \[
 f(z_0) 
 = {1\over 2\pi} \int_0^{2\pi} f(z_0 + re^{i\theta}) \,d\theta
 = {1\over \pi r^2} \iint_{D_r(z_0)} f(z)\, dA
 .\]
+Taking the real part of both sides, one can replace \( f=u+iv \) with \( u \).
 :::
 
 ### Liouville
@@ -851,8 +915,16 @@ f(z_0)
 If \( f \) is entire and bounded, \( f \) is constant.
 :::
 
-::: {.proof title="?"}
-Use Cauchy's inequality to show \( f'\equiv 0 \).
+::: {.proof title="of Liouville"}
+```{=tex}
+\envlist
+```
+-   Since \( f \) is bounded, \( f(z) \leq M \) uniformly on \( {\mathbb{C}} \).
+-   Apply Cauchy's estimate for the 1st derivative:
+    \[
+    {\left\lvert {f'(z)} \right\rvert} \leq { 1! {\left\lVert {f} \right\rVert}_{C_R} \over R } \leq {M \over R}\overset{R\to\infty}\longrightarrow 0
+    ,\]
+    so \( f'(z) = 0 \) for all \( z \).
 :::
 
 ::: {.exercise title="?"}
@@ -875,6 +947,73 @@ Apply Improved Taylor Theorem? `\todo[inline]{todo}`{=tex}
 
 ::: {.exercise title="?"}
 ![image_2021-05-17-11-53-33](figures/image_2021-05-17-11-53-33.png)
+:::
+
+## Exercises
+
+::: {.exercise title="Primitives imply vanishing integral"}
+Show that if \( f \) has a primitive \( F \) on \( \Omega \) then \( \int_\gamma f = 0 \) for every closed curve \( \gamma \subseteq \Omega \).
+:::
+
+::: {.exercise title="?"}
+Prove the uniform limit theorem for holomorphic functions: if \( f_n\to f \) locally uniformly and each \( f_n \) is holomorphic then \( f \) is holomorphic.
+:::
+
+::: {.solution}
+This is S&S Theorem 5.2. Statement: if \( f_n\to f \) uniformly locally uniformly on \( \Omega \) then \( f \) is holomorphic on \( \Omega \).
+
+```{=tex}
+\envlist
+```
+-   Let \( D \subset \Omega \) with \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu\subset \Omega \) and \( \Delta \subset D \) be a triangle.
+-   Apply Goursat: \( \int_\Delta f_n = 0 \).
+-   \( f_n\to f \) uniformly on \( \Delta \) since it is closed and bounded and thus compact by Heine-Borel, so \( f \) is continuous and
+    \[
+    \lim_n \int_\Delta f_n = \int_\Delta \lim_n f_n \coloneqq\int_\Delta f
+    .\]
+-   Apply Morera's theorem: \( \int_\Delta f \) vanishes on every triangle in \( \Omega \), so \( f \) is holomorphic on \( \Omega \).
+:::
+
+::: {.exercise title="?"}
+Prove that if \( f_n\to f \) locally uniformly with \( f_n \) holomorphic, then \( f_n'\to f' \) locally uniformly and \( f' \) is holomorphic.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Simplifying step: for some reason, it suffices to assume \( f_n\to f \) uniformly on all of \( \Omega \)?
+
+-   Take \( \Omega_R \) to be \( \Omega \) with a buffer of \( R \), so \( d(z, {{\partial}}\Omega) > R \) for every \( z \in \mkern 1.5mu\overline{\mkern-1.5mu\Omega_R\mkern-1.5mu}\mkern 1.5mu \).
+
+-   It suffices to show the following bound for \( F \) any holomorphic function on \( \Omega \):
+    \[
+    \sup_{z\in \Omega_R} {\left\lvert {F'(z)} \right\rvert} \leq {1\over R} \sup_{\zeta \in \Omega} {\left\lvert {F(\zeta)} \right\rvert} && \forall R
+    ,\]
+    where on the right we take the sup over all \( \Omega \).
+
+    -   Then take \( F \coloneqq f_n-f \) and \( R\to 0 \) to conclude, since the right-hand side is a constant not depending on \( \Omega_R \).
+
+-   For any \( z\in \Omega_R \), we have \( \mkern 1.5mu\overline{\mkern-1.5muD_R(z)\mkern-1.5mu}\mkern 1.5mu \subseteq \Omega_R \), so Cauchy's integral formula can be applied:
+
+-   
+    \[
+    {\left\lvert {F'(z)} \right\rvert} 
+    &= {\left\lvert { {1\over 2\pi i} \int_{{{\partial}}D_R(z)} {F(\xi) \over (\xi-z)^2 } \,d\xi} \right\rvert} \\
+    &\leq {1\over 2\pi} \int_{{{\partial}}D_R(z)} { { {\left\lvert {F(\xi)} \right\rvert} \over {\left\lvert {\xi-z} \right\rvert}^2 }} \,d\xi\\
+    &\leq {1\over 2\pi} \int_{{{\partial}}D_R(z)} { { \sup_{\zeta\in \Omega} {\left\lvert {F(\zeta)} \right\rvert} \over {\left\lvert {\xi-z} \right\rvert}^2 }} \,d\xi\\
+    &= {1\over 2\pi} \sup_{\zeta\in \Omega} {\left\lvert {F(\zeta)} \right\rvert}  \int_{{{\partial}}D_R(z)} { { 1 \over R^2 }} \,d\xi\\
+    &= {1\over 2\pi} \sup_{\zeta\in \Omega} {\left\lvert {F(\zeta)} \right\rvert}  {1\over R^2} \int_{{{\partial}}D_R(z)} \,d\xi\\
+    &= {1\over 2\pi} \sup_{\zeta\in \Omega} {\left\lvert {F(\zeta)} \right\rvert}  {1\over R^2} 2\pi R   \\
+    &\leq {1\over 2\pi} \sup_{\zeta\in \Omega} {\left\lvert {F(\zeta)} \right\rvert}  {1\over R^2}\qty{ 2\pi R}   \\
+    &= {1\over R} \sup_{\zeta \in \Omega}{\left\lvert {F(\zeta)} \right\rvert}
+    .\]
+
+-   Now
+    \[
+    {\left\lVert {f_n' - f'} \right\rVert}_{\infty, \Omega_R} \leq {1\over R} {\left\lVert {f_n - f} \right\rVert}_{\infty, \Omega}
+    ,\]
+    where if \( R \) is fixed then by uniform convergence of \( f_n\to f \), for \( n \) large enough \( {\left\lVert {f_n - f} \right\rVert} < \varepsilon/R \).
 :::
 
 ## Morera's Theorem
@@ -1056,6 +1195,22 @@ A singularity of a holomorphic function is removable if and only if the function
 
 # Residues
 
+::: {.proposition title="Length bound"}
+\[
+{\left\lvert { \int_\gamma f} \right\rvert} \leq \sup_{z\in \gamma} {\left\lvert {f} \right\rvert} \cdot \mathrm{length}(\gamma)
+.\]
+This follows from
+\[
+\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
+.\]
+:::
+
+::: {.proposition title="Jordan's Lemma"}
+```{=tex}
+\todo[inline]{todo}
+```
+:::
+
 ::: {.fact}
 Some useful facts:
 \[
@@ -1155,6 +1310,10 @@ If \( \gamma \) is a toy contour, then\
 
 > Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
+::: {.problem title="?"}
+Show that the complex zeros of \( f(z) \coloneqq\sin(\pi z) \) are exactly \( {\mathbb{Z}} \), and each is order 1. Calculate the residue of \( 1/\sin(\pi x) \) at \( z=n\in {\mathbb{Z}} \).
+:::
+
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png) ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png) ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png) ![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
 
 ::: {.exercise title="?"}
@@ -1224,43 +1383,22 @@ If \( f \) is holomorphic and nonconstant on an open connected region \( \Omega 
 ```{=tex}
 \todo[inline]{Prove}
 ```
+::: {.corollary title="?"}
+If \( f \) is nonzero on \( \Omega \), then \( f \) attains a minimum on \( {{\partial}}\Omega \). This follows from applying the MMP to \( 1/f \).
+:::
+
 ### Exercises
 
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
-
-## Complex Log
-
-::: {.proposition title="Existence of complex log"}
-Suppose \( \Omega \) is a simply-connected region such that \( 1\in \Omega, 0\not\in\Omega \). Then there exists a branch of \( F(z) \coloneqq\operatorname{Log}(z) \) such that
-
--   \( F \) is holomorphic on \( \Omega \),
--   \( e^{F(z)} = z \) for all \( z\in \Omega \)
--   \( F(x) = \log(x) \) for \( x\in {\mathbb{R}} \) in a neighborhood of \( 1 \).
-:::
-
-::: {.definition title="Principal branch and exponential"}
-Take \( {\mathbb{C}} \) and delete \( {\mathbb{R}}^{\leq 0} \) to obtain the **principal branch** of the logarithm, defined as
-\[
-\operatorname{Log}(z) \coloneqq\log(r) + i\theta && {\left\lvert {\theta} \right\rvert} < \pi
-.\]
-Similarly define
-\[
-z^{\alpha} \coloneqq e^{\alpha \operatorname{Log}(z)}
-.\]
-:::
-
-::: {.theorem title="Existence of log"}
-If \( f \) is holomorphic and nonvanishing on a simply-connected region \( \Omega \), then there exists a holomorphic \( G \) on \( \Omega \) such that
-\[
-f(z) = e^{G(z)}
-.\]
-:::
 
 # Rouche
 
 ## Counting Zeros
 
 ::: {.example}
+```{=tex}
+\envlist
+```
 -   Take \( P(z) = z^4 + 6z + 3 \).
 -   On \( {\left\lvert {z} \right\rvert} < 2 \):
     -   Set \( f(z) = z^4 \) and \( g(z) = 6z + 3 \), then \( {\left\lvert {g(z)} \right\rvert} \leq 6{\left\lvert {z} \right\rvert} + 3 = 15 < 16= {\left\lvert {f(z)} \right\rvert} \).
@@ -1272,6 +1410,9 @@ f(z) = e^{G(z)}
 :::
 
 ::: {.example}
+```{=tex}
+\envlist
+```
 -   Claim: the equation \( \alpha z e^z = 1 \) where \( {\left\lvert {\alpha} \right\rvert} > e \) has exactly one solution in \( {\mathbb{D}} \).
 -   Set \( f(z) = \alpha z \) and \( g(z) = e^{-z} \).
 -   Estimate at \( {\left\lvert {z} \right\rvert} =1 \) we have \( {\left\lvert {g} \right\rvert} ={\left\lvert {e^{-z}} \right\rvert} = e^{-\Re(z)} \leq e^1 < {\left\lvert {\alpha} \right\rvert} = {\left\lvert {f(z)} \right\rvert} \)
@@ -1434,7 +1575,29 @@ e^z: {\mathbb{R}}\times(0, \pi) \to {\mathbb{R}}\times(0, \infty)
 
 # Schwarz Reflection
 
+```{=tex}
+\todo[inline]{?}
+```
+# Schwarz Lemma
+
+```{=tex}
+\todo[inline]{?}
+```
+```{=tex}
+\todo[inline]{Montel's theorem}
+```
+```{=tex}
+\todo[inline]{Normal families}
+```
+```{=tex}
+\todo[inline]{Schwarz lemma}
+```
+```{=tex}
+\todo[inline]{Equicontinuity}
+```
 # Linear Fractional Transformations
+
+# Montel's Theorem
 
 # Unsorted Theorems
 
@@ -1623,6 +1786,14 @@ p: {\mathbb{C}}^{\times}&\to {\mathbb{C}}^{\times}\\
 z & \mapsto z^2
 ,\]
 so \( p\circ f = \operatorname{id} \). Using \( \pi_1({\mathbb{C}}^{\times}) = {\mathbb{Z}} \), the induced maps are \( p_*(1) = 2 \) and \( f_*(1) = n \) for some \( n\in {\mathbb{Z}} \). But then \( p_* \circ f_* \) is multiplication by \( 2n \), contradicting \( p_* \circ f_* = \operatorname{id} \) by functoriality.
+:::
+
+::: {.theorem title="Uniformization"}
+Every Riemann surface \( S \) is the quotient of a free proper holomorphic action of a group \( G \) on the universal cover \( \tilde S \) of \( S \), so \( S\cong \tilde S/G \) is a biholomorphism. Moreover, \( \tilde S \) is biholomorphic to either
+
+-   \( {\mathbb{CP}}^1 \)
+-   \( {\mathbb{C}} \)
+-   \( {\mathbb{D}} \)
 :::
 
 Basics
