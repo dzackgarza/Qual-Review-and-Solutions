@@ -428,7 +428,6 @@ Division algorithm for Euclidean domains.
 
 :::
 
-
 :::{.definition title="Fraction Field"}
 \todo[inline]{todo}
 
