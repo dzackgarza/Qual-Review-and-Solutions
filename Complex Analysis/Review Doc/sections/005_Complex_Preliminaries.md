@@ -2,7 +2,6 @@
 
 ## Complex Arithmetic
 
-
 :::{.fact title="Complex roots of a number"}
 The complex $n$th roots of $z \da r e^{i\theta}$ are given by
 \[
@@ -23,6 +22,17 @@ f^{1/n} = e^{{1\over n} \log(f)}
 taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
 
 :::
+
+
+:::{.fact}
+Some computations that come up frequently:
+\[
+\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
+(a+bi)(c+di) = (ac - bd) + (ad + bc)
+.\]
+
+:::
+
 
 ## Complex Log
 
