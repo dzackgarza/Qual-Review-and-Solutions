@@ -66,9 +66,6 @@ then for every $a\in \RR^{> 0}$,
 \[
 \int_{\gamma_R} f(z) e^{iaz} \dz \converges{R\to\infty}\too 0
 .\]
-
-
-
 :::
 
 
