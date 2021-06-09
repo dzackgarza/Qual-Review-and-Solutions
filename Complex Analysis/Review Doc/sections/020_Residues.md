@@ -4,15 +4,17 @@
 
 :::{.proposition title="Length bound / ML Estimate"}
 \[
-\abs{ \int_\gamma f} \leq \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
+\abs{ \int_\gamma f} \leq ML \da \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
 .\]
-This follows from 
+:::
+
+:::{.proof title="?"}
 \[
 \left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
 .\]
 
-
 :::
+
 
 :::{.proposition title="Jordan's Lemma"}
 \todo[inline]{todo}
@@ -82,8 +84,6 @@ n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
 
 :::
 
-
-
 :::{.proposition title="Residue formula for higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
 \[  
@@ -106,7 +106,6 @@ If additionally $f=g/h$ where $h(z_0) = 0$ and $h'(z_0)\neq 0$, we can apply L'H
 .\]
 
 :::
-
 
 :::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
