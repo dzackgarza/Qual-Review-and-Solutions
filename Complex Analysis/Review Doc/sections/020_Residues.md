@@ -83,7 +83,8 @@ and check
 \[
 \sup_{z\in \gamma_R} \abs{f(z)} 
 = \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
-= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} }
+= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
+&= {1\over R^2 - 1}
 .\]
 
 
