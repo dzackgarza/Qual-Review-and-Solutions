@@ -158,7 +158,10 @@ Apply L'Hopital:
 
 
 :::{.example title="Residue of a simple pole (order 1)"}
-Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
+Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so that $h'(i) = 2i \neq 0$. Thus
+\[
+\Res_{z=i}{1\over 1+z^2} = \frac{1}{2i}
+.\]
 :::
 
 
