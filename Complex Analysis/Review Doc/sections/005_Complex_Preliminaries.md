@@ -54,6 +54,13 @@ On $S^1$,
 
 :::{.fact title="Complex Log"}
 For $z= r e^{i\theta}\neq 0$, $\theta$ is of the form $\Theta + 2k\pi$ where $\Theta = \Arg z$
+We define
+\[
+\log(z) = \ln\qty{\abs{z}} + i\Arg(z)
+\]
+and $z^c \da e^{c\log(z)}$.
+
+
 :::
 
 :::{.proposition title="Existence of complex log"}

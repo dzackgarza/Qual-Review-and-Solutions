@@ -277,7 +277,8 @@ Compute
 
 
 :::{.solution}
-Factor $(1+z^2)^2 = (z+i)^2(z-i)^2$.
+Factor $(1+z^2)^2 = (z+i^2(z-i)^2$.
+  Take a keyhole contour 
 :::
 
 
