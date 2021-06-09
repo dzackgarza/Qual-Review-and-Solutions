@@ -78,7 +78,12 @@ and check
 :::
 
 :::{.proposition title="Jordan's Lemma"}
-Suppose that
+Suppose that $f(z) = e^{iaz}g(z)$ for some $g$, and let $C_R \da \ts{ z=Re^{it} \st t\in [0, \pi] }$. Then
+\[
+\abs{\int_{C_R} f(z) \dz} \leq {\pi M_R \over a}
+\]
+where $M_R \da \sup_{t\in [0, \pi]} \abs{f(Re^{it})}$.
+
 
 - $f$ is holomorphic outside of some $D_{R_0}(0)$,
 - On $\gamma_R \da Re^{it}$ for $0\leq t \leq \pi$ and $R>R_0$ there is a bound
