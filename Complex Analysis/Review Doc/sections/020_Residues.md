@@ -125,6 +125,19 @@ n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
 
 :::
 
+:::{.theorem title="The Residue Theorem"}
+Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
+Then for any $\gamma \in \Omega\sm \ts{ \elts{z}{N} }$, 
+\[
+{1 \over 2\pi i } \int_\gamma f(z) \dz = \sum_{j=1}^N n_\gamma(z_j) \Res_{z=z_j} f
+.\]
+If $\gamma$ is a toy contour, then  
+\[
+{1\over 2\pi i}\int_\gamma f\dz = \sum_{j=1}^N \Res_{z=z_j}f
+.\]
+
+:::
+
 :::{.proposition title="Residue formula for higher order poles"}
 If $f$ has a pole $z_0$ of order $n$, then
 \[  
@@ -165,18 +178,6 @@ Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so
 :::
 
 
-:::{.theorem title="The Residue Theorem"}
-Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
-Then for any $\gamma \in \Omega\sm \ts{ \elts{z}{N} }$, 
-\[
-{1 \over 2\pi i } \int_\gamma f(z) \dz = \sum_{j=1}^N n_\gamma(z_j) \Res_{z=z_j} f
-.\]
-If $\gamma$ is a toy contour, then  
-\[
-{1\over 2\pi i}\int_\gamma f\dz = \sum_{j=1}^N \Res_{z=z_j}f
-.\]
-
-:::
 
 ### Exercises
 
