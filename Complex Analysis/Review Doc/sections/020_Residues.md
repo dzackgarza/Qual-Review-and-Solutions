@@ -249,6 +249,27 @@ This follows from applying the MMP to $1/f$.
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
 
 
+:::{.exercise title="?"}
+Use a direct Laurent expansion to show
+\[
+\Res_{z=0} {1\over z-\sin(z)} = {3! \over 5\cdot 4}
+.\]
+:::
+
+
+:::{.solution}
+Expand:
+\[
+{1\over z - \sin(z)}
+&= {1\over z }\qty{1 - {\sin(z) \over z}}\inv \\
+&= {1\over z}\qty{ 1 - {1\over z}\qty{z-{1\over 3!}z^3 + \cdots } }\inv \\
+&= {1\over z}\qty{{1\over 3!} z^2 + \cdots}\inv
+.\]
+
+:::
+
+
+
 :::{.exercise title="Sinc Function"}
 Show
 \[
