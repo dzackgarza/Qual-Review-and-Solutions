@@ -31,6 +31,21 @@ Some computations that come up frequently:
 .\]
 :::
 
+:::{.fact}
+Some useful facts:
+\[
+\abs{e^{z}} = e^{\Re(z)}
+.\]
+
+On $S^1$,
+\[
+1/z &= e^{-i\theta} \\
+\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\]
+:::
+
+
 ## Complex Log
 
 :::{.fact title="Complex Log"}

@@ -15,29 +15,12 @@
 
 :::
 
-
 :::{.proposition title="Jordan's Lemma"}
 \todo[inline]{todo}
 
 :::
 
-:::{.fact}
-Some useful facts:
-\[
-\abs{e^{z}} = e^{\Re(z)}
-.\]
-
-On $S^1$,
-\[
-1/z = e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\]
-
-
-:::
-
-:::{.fact}
+:::{.fact title="Integrating $z^k$ around $S^1$ powers residues"}
 The major fact that reduces integrals to residues: 
 \[
 \int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = \int_0^{2\pi} e^{i(k+1)\theta \dtheta }
