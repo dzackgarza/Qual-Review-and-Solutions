@@ -94,6 +94,9 @@ where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 &\leq \int_{C_R} \abs{ e^{ia\qty{Re^{it}}}g(Re^{it}) iRe^{it}} \dt \\
 &=R \int_{C_R} \abs{ e^{ia\qty{Re^{it}}}g(Re^{it})} \dt \\
 &\leq R M_R \int_{C_R} \abs{ e^{ia\qty{Re^{it}}}} \dt \\
+&= R M_R \int_{C_R} e^{\Re\qty{iaRe^{it}}}   \dt \\
+&= R M_R \int_{C_R} e^{\Re\qty{iaR\qty{\cos(t) + i\sin(t) } }}   \dt \\
+&= R M_R \int_{C_R} e^{-aR\sin(t) }   \dt \\
 .\]
 
 :::
