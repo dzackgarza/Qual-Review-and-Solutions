@@ -263,7 +263,10 @@ Expand:
 {1\over z - \sin(z)}
 &= z\inv \qty{1 - z\inv \sin(z) }\inv \\
 &= z\inv \qty{1 - z\inv\qty{ z - {1\over 3!}z^3 + \cdots}}\inv\\
-&= z\inv \qty{1 - \qty{ 1 - {1\over 3!}z^2 + \cdots}}\inv
+&= z\inv \qty{1 - \qty{ 1 - {1\over 3!}z^2 + \cdots}}\inv \\
+&= z\inv \qty{{1\over 3!}z^2 - \cdots}\inv \\
+&= {1\over z} \qty{1 \over 1 - \qty{ z - {1\over 3!}z^2 + \cdots}} \\
+&= {1\over z}\qty{1 + \qty{z - {}} + \qty{}^2 + \cdots}
 .\]
 
 :::
