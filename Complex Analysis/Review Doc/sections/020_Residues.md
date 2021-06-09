@@ -98,7 +98,9 @@ where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 &= R M_R \int_{[0, \pi]} e^{\Re\qty{iaR\qty{\cos(t) + i\sin(t) } }}   \dt \\
 &= R M_R \int_{[0, \pi]} e^{-aR\sin(t) }   \dt \\
 &= 2 R M_R \int_{[0, \pi/2]} e^{-aR\sin(t) }   \dt \\
-&\leq R M_R \int_{[0, \pi]} e^{-aR\qty{2t\over \pi} }   \dt \\
+&\leq 2R M_R \int_{[0, \pi/2]} e^{-aR\qty{2t\over \pi} }   \dt \\
+&= 2RM_R \qty{\pi \over 2aR}\qty{1-e^{-aR}} \\
+&= {\pi M_R \over a}
 .\]
 
 where we've used that on $[0, \pi/2]$, there is an inequality $\sin(t) \geq 2t/\pi$.
