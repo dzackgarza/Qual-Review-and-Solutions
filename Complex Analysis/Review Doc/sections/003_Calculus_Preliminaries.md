@@ -25,6 +25,14 @@ The proof is an $\eps/3$ argument.
 A continuous function on a compact set is uniformly continuous.
 :::
 
+:::{.definition title="Univalent functions"}
+A function $f\in \Hol(U; \CC)$ is called **univalent** if $f$ is injective.
+:::
+
+:::{.remark}
+If $f: \Omega \to \Omega'$ is a univalent surjection, $f$ is invertible on $\Omega$ and $f\inv$ is holomorphic.
+Compare to real functions: $f(x) = x^3$ is injective on $(-c, c)$ for any $c$ but $f'(0) = 0$ and $f\inv(x) \da x^{1/3}$ is not differentiable at zero.
+:::
 
 ## Theorems
 
