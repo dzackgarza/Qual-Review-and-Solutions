@@ -249,6 +249,26 @@ Expand:
 :::
 
 
+:::{.exercise title="?"}
+Compute
+\[
+\Res_{z=0} {1\over z^2 \sin(z)}
+.\]
+:::
+
+
+:::{.solution}
+\[
+z^{-2}\qty{\sin(z)}\inv 
+&= z^{-2} \qty{1 - {1\over 3!}z^3 + {1\over 5!}z^5 }\inv \\
+&= z^{-2} \qty{\qty{} + \qty{}^2 + \cdots}
+.\]
+
+:::
+
+
+
+
 
 :::{.exercise title="Sinc Function"}
 Show
