@@ -103,7 +103,7 @@ where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 &= {\pi M_R \over a}
 .\]
 
-where we've used that on $[0, \pi/2]$, there is an inequality $\sin(t) \geq 2t/\pi$.
+where we've used that on $[0, \pi/2]$, there is an inequality $2t/\pi \leq \sin(t)$.
 :::
 
 
