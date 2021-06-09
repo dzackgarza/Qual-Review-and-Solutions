@@ -23,16 +23,13 @@ taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 
 
 :::
 
-
 :::{.fact}
 Some computations that come up frequently:
 \[
 \abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
 (a+bi)(c+di) = (ac - bd) + (ad + bc)
 .\]
-
 :::
-
 
 ## Complex Log
 
@@ -68,9 +65,7 @@ f(z) = e^{G(z)}
 
 :::
 
-
 ## Complex Calculus
-
 
 :::{.remark}
 When parameterizing integrals $\int_\gamma f(z)\dz$, parameterize $\gamma$ by $\theta$ and write $z=re^{i\theta}$ so $\dz = ire^{i\theta}\dtheta$.
@@ -538,14 +533,10 @@ Behold:
 
 :::
 
-
-
-
 :::{.proposition title="?"}
 If $f$ is non-constant, then $f'$ is analytic and the zeros of $f'$ are isolated.
 If $f,g$ are analytic with $f'=g'$, then $f-g$ is constant.
 :::
-
 
 ### Exercises: Series
 
@@ -624,4 +615,3 @@ For $z=1$:
 &= {1\over z-1} \qty{1 + \sum_{k\geq 0} (-1)^k (z-1)^k }
 .\]
 :::
-

@@ -1,7 +1,8 @@
 # Residues
 
+## Basics
 
-:::{.proposition title="Length bound"}
+:::{.proposition title="Length bound / ML Estimate"}
 \[
 \abs{ \int_\gamma f} \leq \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
 .\]
@@ -13,13 +14,10 @@ This follows from
 
 :::
 
-
 :::{.proposition title="Jordan's Lemma"}
 \todo[inline]{todo}
 
 :::
-
-
 
 :::{.fact}
 Some useful facts:
@@ -36,7 +34,6 @@ On $S^1$,
 
 
 :::
-
 
 :::{.fact}
 The major fact that reduces integrals to residues: 
