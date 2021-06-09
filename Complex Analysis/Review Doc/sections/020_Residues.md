@@ -287,7 +287,10 @@ Compute the residues by just applying the formula and manually computing derivat
 \[
 \Res_{z= \pm i} f(z) 
 &= \lim_{z\to \pm i} \dd{}{z} {\log^2(z) \over (z\pm i)^2} \\
-&= \lim_{z\to \pm i} {2\log(z) (z\pm i)^2 - 2(z\pm i)^2 \log^2(z) \over \qty{(z\pm i )^2}^2}
+&= \lim_{z\to \pm i} {2\log(z) (z\pm i)^2 - 2(z\pm i)^2 \log^2(z) \over \qty{(z\pm i )^2}^2} \\
+&= {
+2\log(\pm i)(\pm 2i)^2 - 2(\pm 2i)^2 \log^2(\pm i)
+\over {\qty{\pm 2i}}^4 }
 .\]
 
 :::
