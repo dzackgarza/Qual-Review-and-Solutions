@@ -104,6 +104,10 @@ where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 .\]
 
 where we've used that on $[0, \pi/2]$, there is an inequality $2t/\pi \leq \sin(t)$.
+This is obvious from a picture, since $\sin(t)$ is a height on $S^1$ and $2t/\pi$ is a height on a diagonal line:
+
+![image_2021-06-09-01-29-22](figures/image_2021-06-09-01-29-22.png)
+
 :::
 
 
