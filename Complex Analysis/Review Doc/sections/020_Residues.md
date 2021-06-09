@@ -290,8 +290,11 @@ Compute the residues by just applying the formula and manually computing derivat
 &= \lim_{z\to \pm i} {2\log(z) (z\pm i)^2 - 2(z\pm i)^2 \log^2(z) \over \qty{(z\pm i )^2}^2} \\
 &= {
 2\log(\pm i)(\pm 2i)^2 - 2(\pm 2i)^2 \log^2(\pm i)
-\over {\qty{\pm 2i}}^4 }
+\over {\qty{\pm 2i}}^4 } \\
+&=_? {\pi \over 4}\pm {i\pi^2 \over 16}
 .\]
+
+> See p.4: <http://www.math.toronto.edu/mnica/complex1.pdf>
 
 :::
 
