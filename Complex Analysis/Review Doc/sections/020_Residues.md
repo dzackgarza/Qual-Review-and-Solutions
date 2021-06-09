@@ -258,19 +258,17 @@ Compute
 
 
 :::{.solution}
+First expand $(\sin(z))\inv$:
+\[
+{1\over \sin(z)}
+&= \qty{z - {1\over 3!}z^3 + O(z^5) }\inv \\
+&= z \qty{1 - {1\over 3!}z^2 + O(z^4) }\inv \\
+.\]
+
 \[
 z^{-2}\qty{\sin(z)}\inv 
 &= z^{-2} \qty{1 - {1\over 3!}z^3 + {1\over 5!}z^5 -\cdots }\inv \\
-&= z^{-2} \qty{
-\qty{{1\over 3!} z^3 - {1\over 5!}z^5 + \cdots}
-+ 
-\qty{{1\over 3!} z^3 - {1\over 5!}z^5 + \cdots}^2
-+ \cdots}
-&= z^{-2} \qty{
-\qty{1 + {1\over 3!} z^3 - \cdots}
-+ 
-\qty{1 + {1\over 3!} z^3 - \cdots}^2
-+ \cdots}
+&=
 .\]
 
 :::
