@@ -152,10 +152,12 @@ If $\gamma$ is a toy contour, then
 > Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
 
-:::{.problem title="?"}
+:::{.exercise}
 Show that the complex zeros of $f(z) \da \sin(\pi z)$ are exactly $\ZZ$, and each is order 1.
 Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 :::
+
+
 
 
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
@@ -192,6 +194,47 @@ Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 
 :::
 
+:::{.exercise title="?"}
+Use a direct Laurent expansion to show
+\[
+\Res_{z=0} {1\over z-\sin(z)} = {3! \over 5\cdot 4}
+.\]
+:::
+
+:::{.solution}
+Expand:
+\[
+{1\over z - \sin(z)}
+&= z\inv \qty{1 - z\inv \sin(z) }\inv \\
+&= z\inv \qty{1 - z\inv\qty{ z - {1\over 3!}z^3 + {1\over 5!} z^5 - \cdots}}\inv\\
+&= z\inv \qty{1 - \qty{ 1 - {1\over 3!}z^2 + {1\over 5!} z^4 - \cdots}}\inv \\
+&= z\inv \qty{{1\over 3!}z^2 - {1\over 5!}z^4 + \cdots}\inv \\
+&= z\inv \cdot 3! z^{-2} \qty{1 - {1\over 5!/3!}z^2 + \cdots}\inv \\
+&= {3!\over z^3} \qty{1 \over 1 - \qty{ {1\over 5\cdot 4}z^2 + \cdots}} \\
+&= {3!\over z^3}\qty{1 + \qty{{1\over 5\cdot 4}z^2} + \qty{{1\over 5\cdot 4}z^2}^2 + \cdots} \\
+&= 3! z^{-3} + {3!\over 5\cdot 4}z\inv + O(z) \\
+.\]
+
+:::
+
+
+
+:::{.exercise title="Sinc Function"}
+Show
+\[
+\int_{(0, \infty)} {\sin(x) \over x }\dx = {\pi \over 2}
+.\]
+:::
+
+
+:::{.solution}
+Take an indented semicircle.
+Let $I$ be the original integral, then 
+\[
+I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
+.\]
+
+:::
 
 
 ## Argument Principle
@@ -249,48 +292,6 @@ This follows from applying the MMP to $1/f$.
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
 
 
-:::{.exercise title="?"}
-Use a direct Laurent expansion to show
-\[
-\Res_{z=0} {1\over z-\sin(z)} = {3! \over 5\cdot 4}
-.\]
-:::
-
-
-:::{.solution}
-Expand:
-\[
-{1\over z - \sin(z)}
-&= z\inv \qty{1 - z\inv \sin(z) }\inv \\
-&= z\inv \qty{1 - z\inv\qty{ z - {1\over 3!}z^3 + {1\over 5!} z^5 - \cdots}}\inv\\
-&= z\inv \qty{1 - \qty{ 1 - {1\over 3!}z^2 + {1\over 5!} z^4 - \cdots}}\inv \\
-&= z\inv \qty{{1\over 3!}z^2 - {1\over 5!}z^4 + \cdots}\inv \\
-&= z\inv \cdot 3! z^{-2} \qty{1 - {1\over 5!/3!}z^2 + \cdots}\inv \\
-&= {3!\over z^3} \qty{1 \over 1 - \qty{ {1\over 5\cdot 4}z^2 + \cdots}} \\
-&= {3!\over z^3}\qty{1 + \qty{{1\over 5\cdot 4}z^2} + \qty{{1\over 5\cdot 4}z^2}^2 + \cdots} \\
-&= 3! z^{-3} + {3!\over 5\cdot 4}z\inv + O(z) \\
-.\]
-
-:::
-
-
-
-:::{.exercise title="Sinc Function"}
-Show
-\[
-\int_{(0, \infty)} {\sin(x) \over x }\dx = {\pi \over 2}
-.\]
-:::
-
-
-:::{.solution}
-Take an indented semicircle.
-Let $I$ be the original integral, then 
-\[
-I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
-.\]
-
-:::
 
 
 
