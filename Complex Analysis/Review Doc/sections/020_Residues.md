@@ -279,7 +279,6 @@ z^{-2}\qty{\sin(z)}\inv
 z\inv\qty{1 + {1\over 3!}z^2 \pm O(z^4) } \\
 &= z^{-3} + {1\over 3!}z\inv + O(z)
 .\]
-
 :::
 
 
