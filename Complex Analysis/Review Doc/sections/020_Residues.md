@@ -91,6 +91,8 @@ where $M_R \da \sup_{t\in [0, \pi]} \abs{f(Re^{it})}$.
 \abs{ \int_{C_R} f(z)\dz }
 &= \abs{ \int_{C_R} e^{iaz}g(z) \dz} \\
 &= \abs{ \int_{C_R} e^{ia\qty{Re^{it}}}g(Re^{it}) iRe^{it} \dt} \\
+&\leq \int_{C_R} \abs{ e^{ia\qty{Re^{it}}}g(Re^{it}) iRe^{it}} \dt \\
+&=R \int_{C_R} \abs{ e^{ia\qty{Re^{it}}}g(Re^{it})} \dt \\
 .\]
 
 :::
