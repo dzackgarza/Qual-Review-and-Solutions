@@ -55,7 +55,19 @@ i.e. the integral picks out the $c_{-1}$ coefficient in a Laurent series expansi
 :::
 
 :::{.proposition title="Jordan's Lemma"}
-\todo[inline]{todo}
+Suppose that
+
+- $f$ is holomorphic outside of some $D_{R_0}(0)$,
+- On $\gamma_R \da Re^{it}$ for $0\leq t \leq \pi$ and $R>R_0$ there is a bound
+\[
+\sup_{z\in \gamma_R} \abs{f(z)} \leq M_R && M_R \converges{R\to\infty}\too 0
+,\]
+then for every $a\in \RR^{> 0}$,
+\[
+\int_{\gamma_R} f(z) e^{iaz} \dz \converges{R\to\infty}\too 0
+.\]
+
+
 
 :::
 
