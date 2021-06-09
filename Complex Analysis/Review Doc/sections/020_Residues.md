@@ -61,7 +61,6 @@ and check
 
 :::
 
-
 ## Estimates
 
 :::{.proposition title="Length bound / ML Estimate"}
@@ -173,14 +172,10 @@ Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so
 
 > Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
-
 :::{.exercise}
 Show that the complex zeros of $f(z) \da \sin(\pi z)$ are exactly $\ZZ$, and each is order 1.
 Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 :::
-
-
-
 
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
@@ -193,7 +188,6 @@ Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 \int_\RR {1 \over (1+x^2)^2} \dx
 .\]
 :::
-
 
 :::{.solution}
 \envlist
@@ -242,14 +236,12 @@ Expand:
 
 :::
 
-
 :::{.exercise title="?"}
 Compute
 \[
 \Res_{z=0} {1\over z^2 \sin(z)}
 .\]
 :::
-
 
 :::{.solution}
 First expand $(\sin(z))\inv$:
@@ -275,6 +267,13 @@ z\inv\qty{1 + {1\over 3!}z^2 \pm O(z^4) } \\
 .\]
 :::
 
+
+:::{.exercise title="Keyhole contour and ML estimate"}
+Compute
+\[
+\int_{[0, \infty]} {\log(x) \over (1+x^2)^2}\dx 
+.\]
+:::
 
 
 
