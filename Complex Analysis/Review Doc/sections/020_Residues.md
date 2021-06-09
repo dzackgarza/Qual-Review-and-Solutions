@@ -227,6 +227,9 @@ Use a direct Laurent expansion to show
 \[
 \Res_{z=0} {1\over z-\sin(z)} = {3! \over 5\cdot 4}
 .\]
+
+> Note the necessity: one doesn't know the order of the pole at zero, so it's unclear how many derivatives to take.
+
 :::
 
 :::{.solution}
