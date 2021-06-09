@@ -87,8 +87,6 @@ and check
 &= {1\over R^2 - 1}
 .\]
 
-
-
 :::
 
 
@@ -249,5 +247,25 @@ This follows from applying the MMP to $1/f$.
 ### Exercises
 
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
+
+
+:::{.exercise title="Sinc Function"}
+Show
+\[
+\int_{(0, \infty)} {\sin(x) \over x }\dx = {\pi \over 2}
+.\]
+:::
+
+
+:::{.solution}
+Take an indented semicircle.
+Let $I$ be the original integral, then 
+\[
+I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
+.\]
+
+:::
+
+
 
 
