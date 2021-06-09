@@ -121,13 +121,22 @@ As a special case, if $z_0$ is a simple pole of $f$, then
 :::
 
 :::{.corollary title="Better derivative formula that sometimes works for simple poles"}
-If additionally $f=g/h$ where $h(z_0) = 0$ and $h'(z_0)\neq 0$, we can apply L'Hopital's rule to compute this residue:
+
+If additionally $f=g/h$ where $h(z_0) = 0$ and $h'(z_0)\neq 0$, 
+\[
+\Res_{z=z_0} {g(z) \over h(z)} = {g(z_0) \over h'(z_0)}
+.\]
+
+:::
+
+:::{.proof title="?"}
+Apply L'Hopital:
 \[
 (z-z_0) {g(z) \over h(z)} = {(z-z_0) g(z) \over h(z) } \equalsbecause{LH}
 {g(z) + (z-z_0) g'(z) \over h'(z)} \converges{z\to z_0}\too {g(z_0) \over h'(z_0)}
 .\]
-
 :::
+
 
 :::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $\Res(i, f) = \frac{1}{2i}$.
