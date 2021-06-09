@@ -11,9 +11,15 @@ You may be able to just compute an integral!
 \int_\gamma f \dz = \int_a^b f(z(t))\, z'(t) \dt && \text{for } z(t) \text{ a parameterization of } \gamma
 ,\]
 
-- Finding a primitive $F$, then $\int_\gamma f = F(b) - F(a)$.
+- Finding a primitive $F$, then 
+\[
+\int_\gamma f = F(b) - F(a)
+.\]
 
-- Writing $z= z_0 + re^{i \theta }$
+  - Note: you can parameterize a circle around $z_0$ using
+  \[
+  z= z_0 + re^{i \theta }
+  .\]
 
 :::
 
