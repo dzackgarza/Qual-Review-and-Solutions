@@ -283,10 +283,11 @@ Take a keyhole contour similar to the following:
 ![image_2021-06-09-02-11-59](figures/image_2021-06-09-02-11-59.png)
 
 Show that outer radius $R$ and inner radius $\rho$ circles contribute zero in the limit by the ML estimate?
-Compute the residues:
+Compute the residues by just applying the formula and manually computing derivatives:
 \[
 \Res_{z= \pm i} f(z) 
 &= \lim_{z\to \pm i} \dd{}{z} {\log^2(z) \over (z\pm i)^2} \\
+&= \lim_{z\to \pm i} {2\log(z) (z\pm i)^2 - 2(z\pm i)^2 \log^2(z) \over \qty{(z\pm i )^2}^2}
 .\]
 
 :::
