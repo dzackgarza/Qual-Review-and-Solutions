@@ -1,5 +1,9 @@
 # Preliminaries
 
+:::{.definition title="Toy contour"}
+A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
+:::
+
 ## Complex Arithmetic
 
 :::{.fact title="Complex roots of a number"}

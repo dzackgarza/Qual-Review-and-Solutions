@@ -113,17 +113,7 @@ This is obvious from a picture, since $\sin(t)$ is a height on $S^1$ and $2t/\pi
 
 ## Residue Formulas
 
-:::{.definition title="Toy contour"}
-A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
-:::
 
-:::{.definition title="Winding Number"}
-For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
-\[
-n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
-.\]
-
-:::
 
 :::{.theorem title="The Residue Theorem"}
 Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
@@ -308,6 +298,14 @@ I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
 
 
 ## Argument Principle
+
+:::{.definition title="Winding Number"}
+For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
+\[
+n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+.\]
+
+:::
 
 :::{.theorem title="Argument Principle"}
 For $f$ meromorphic in $\gamma^\circ$ with zeros \( \ts{ z_j } \) and poles \( \ts{ p_k } \) repeated with multiplicity where $\gamma$ does not intersect any zeros or poles, then
