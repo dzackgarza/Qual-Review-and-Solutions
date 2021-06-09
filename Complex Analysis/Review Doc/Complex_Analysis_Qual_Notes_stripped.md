@@ -23,8 +23,6 @@
                                                                                                            
 
                                                                                                            
-
-                                                                                                           
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Greatest Hits
@@ -57,7 +55,7 @@ Things to know well:
 
 -   Automorphisms of \( {\mathbb{D}}, {\mathbb{C}}, {\mathbb{CP}}^1 \).
 
-### Common Tricks
+## Common Tricks
 
 -   Virtually any time: consider \( 1/f(z) \) and \( f(1/z) \).
 
@@ -66,10 +64,7 @@ If you want to show that a function \( f \) is constant, try one of the followin
 
 -   Write \( f = u + iv \) and use Cauchy-Riemann to show \( u_x, u_y = 0 \), etc.
 -   Show that \( f \) is entire and bounded.
-
-If you additionally want to show \( f \) is zero, try one of these:
-
--   Show \( f \) is entire, bounded, and \( \lim_{z\to\infty} f(z) = 0 \).
+    -   If you additionally want to show \( f \) is zero, show \( \lim_{z\to\infty} f(z) = 0 \).
 :::
 
 ## Basic but Useful Facts
@@ -86,11 +81,20 @@ If you additionally want to show \( f \) is zero, try one of these:
 
 -   \( \operatorname{Arg}(z/w) = \operatorname{Arg}(z) - \operatorname{Arg}(w) \).
 
--   Exponential forms of cosine and sine:
+-   Exponential forms of cosine and sine, where it's sometimes useful to set \( w\coloneqq e^{iz} \):
     \[
-    \cos(\theta) = \frac 1 2 \qty{e^{i\theta} + e^{-i\theta}} && &&
-    \sin(\theta) = \frac{1}{2i}\qty{e^{i\theta} - e^{-i\theta}}
+    \cos(z) 
+    &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w^{-1})\\
+    \sin(z) 
+    &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w^{-1})
+    \\ \\
+    \cosh(z) = \cos(iz) 
+    &= {1\over 2}\qty{e^z + e^{-z}} \\
+    \sinh(z) = \sin(iz) 
+    &= {1\over 2}\qty{e^z - e^{-z}} 
     .\]
+
+-   Setting \( w=e^z \) is useful:
 
 -   Various differentials:
     \[
@@ -110,7 +114,11 @@ If you additionally want to show \( f \) is zero, try one of these:
 :::
 
 ::: {.fact title="Generalized Binomial Theorem"}
-Define \( (n)_k \) to be the falling factorial \( \prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1) \) and set \( {n\choose k} \coloneqq(n)_k/k! \), then
+Define \( (n)_k \) to be the falling factorial
+\[
+\prod_{j=0}^{k-1} (n-k) = n(n-1)\cdots(n-k+1)
+\]
+and set \( {n\choose k} \coloneqq(n)_k/k! \), then
 \[
 (x+y)^n = \sum_{k\geq 0} {n\choose k} x^{k}y^{n-k}
 .\]
@@ -121,10 +129,13 @@ Define \( (n)_k \) to be the falling factorial \( \prod_{j=0}^{k-1} (n-k) = n(n-
 \sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
-\log(1-x) &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
-{\frac{\partial }{\partial z}\,} \sum_{j=0}^\infty a_j z^j &= \sum_{j=0}^\infty a_{j+1}z^j
-\sqrt{1+x} = (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
-&= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
+\log(1-x) 
+  &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
+{\frac{\partial }{\partial z}\,} \sum_{j=0}^\infty a_j z^j 
+  &= \sum_{j=0}^\infty a_{j+1}z^j \\
+\sqrt{1+x} 
+  &= (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
+  &= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \]
 :::
 
@@ -159,12 +170,30 @@ Recall Arzelà-Ascoli, an analog of Heine-Borel: for \( X \) compact Hausdorff, 
 A continuous function on a compact set is uniformly continuous.
 :::
 
+::: {.definition title="Univalent functions"}
+A function \( f\in \mathop{\mathrm{Hol}}(U; {\mathbb{C}}) \) is called **univalent** if \( f \) is injective.
+:::
+
+::: {.remark}
+If \( f: \Omega \to \Omega' \) is a univalent surjection, \( f \) is invertible on \( \Omega \) and \( f^{-1} \) is holomorphic. Compare to real functions: \( f(x) = x^3 \) is injective on \( (-c, c) \) for any \( c \) but \( f'(0) = 0 \) and \( f^{-1}(x) \coloneqq x^{1/3} \) is not differentiable at zero.
+:::
+
 ## Theorems
 
 ::: {.theorem title="Implicit Function Theorem"}
 :::
 
 ::: {.theorem title="Inverse Function Theorem"}
+For \( f \in C^1({\mathbb{R}}; {\mathbb{R}}) \) with \( f'(a) \neq 0 \), then \( f \) is invertible in a neighborhood \( U \ni a \), \( g\coloneqq f^{-1}\in C^1(U; {\mathbb{R}}) \), and at \( b\coloneqq f(a) \) the derivative of \( g \) is given by
+\[
+g'(b) = {1 \over f'(a)}
+.\]
+For \( F \in C^1({\mathbb{R}}^n, {\mathbb{R}}^n) \) with \( D_f \) invertible in a neighborhood of \( a \), so \( \det(J_f)\neq 0 \), then setting \( b\coloneqq F(a) \),
+\[
+J_{F^{-1}}(q) = \qty{J_F(p)}^{-1}
+.\]
+
+The version for holomorphic functions: if \( f\in \mathop{\mathrm{Hol}}({\mathbb{C}}; {\mathbb{C}}) \) with \( f'(p)\neq 0 \) then there is a neighborhood \( V\ni p \) with that \( f\in \mathop{\mathrm{BiHol}}(V, f(V)) \).
 :::
 
 ::: {.theorem title="Green's Theorem"}
@@ -195,12 +224,16 @@ If \( \left\{{f_n}\right\} \) with \( f_n: \Omega \to {\mathbb{C}} \) and there 
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-::: {.fact}
+::: {.proposition title="Ratio Test"}
 Consider \( \sum c_k z^k \), set \( R = \lim {\left\lvert {c_{k+1} \over c_k} \right\rvert} \), and recall the **ratio test**:
 
 -   \( R\in (0, 1) \implies \) convergence.
 -   \( R\in (1, \infty] \implies \) divergence.
 -   \( R=1 \) yields no information.
+:::
+
+::: {.proposition title="Root Test"}
+![image_2021-05-27-15-40-58](figures/image_2021-05-27-15-40-58.png)
 :::
 
 ::: {.proposition title="Radius of Convergence by the Root Test"}
@@ -250,6 +283,10 @@ Find the radius of convergences for the power series expansion of \( \sqrt{z} \)
 
 # Preliminaries
 
+::: {.definition title="Toy contour"}
+A closed Jordan curve that separates \( {\mathbb{C}} \) into an exterior and interior region is referred to as a **toy contour**.
+:::
+
 ## Complex Arithmetic
 
 ::: {.fact title="Complex roots of a number"}
@@ -271,10 +308,36 @@ f^{1/n} = e^{{1\over n} \log(f)}
 taking (say) a principal branch of \( \log \) given by \( {\mathbb{C}}\setminus(-\infty, 0] \times 0 \).
 :::
 
+::: {.fact}
+Some computations that come up frequently:
+\[
+{\left\lvert {z \pm w} \right\rvert}^2 &= {\left\lvert {z} \right\rvert}^2 + {\left\lvert {w} \right\rvert}^z + 2\Re(\mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5muz) \\
+(a+bi)(c+di) = (ac - bd) + (ad + bc)
+.\]
+:::
+
+::: {.fact}
+Some useful facts:
+\[
+{\left\lvert {e^{z}} \right\rvert} = e^{\Re(z)}
+.\]
+
+On \( S^1 \),
+\[
+1/z &= e^{-i\theta} \\
+\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\]
+:::
+
 ## Complex Log
 
 ::: {.fact title="Complex Log"}
-For \( z= r e^{i\theta}\neq 0 \), \( \theta \) is of the form \( \Theta + 2k\pi \) where \( \Theta = \operatorname{Arg}z \)
+For \( z= r e^{i\theta}\neq 0 \), \( \theta \) is of the form \( \Theta + 2k\pi \) where \( \Theta = \operatorname{Arg}z \) We define
+\[
+\log(z) = \ln\qty{{\left\lvert {z} \right\rvert}} + i\operatorname{Arg}(z)
+\]
+and \( z^c \coloneqq e^{c\log(z)} \).
 :::
 
 ::: {.proposition title="Existence of complex log"}
@@ -748,8 +811,6 @@ Behold:
 .\]
 :::
 
-![image_2021-05-27-15-40-58](figures/image_2021-05-27-15-40-58.png)
-
 ::: {.proposition title="?"}
 If \( f \) is non-constant, then \( f' \) is analytic and the zeros of \( f' \) are isolated. If \( f,g \) are analytic with \( f'=g' \), then \( f-g \) is constant.
 :::
@@ -1195,37 +1256,28 @@ A singularity of a holomorphic function is removable if and only if the function
 
 # Residues
 
-::: {.proposition title="Length bound"}
-\[
-{\left\lvert { \int_\gamma f} \right\rvert} \leq \sup_{z\in \gamma} {\left\lvert {f} \right\rvert} \cdot \mathrm{length}(\gamma)
-.\]
-This follows from
-\[
-\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
-.\]
+## Basics
+
+::: {.remark}
+Check: do you need residues at all?? You may be able to just compute an integral!
+
+-   Directly by parameterization:
+    \[
+    \int_\gamma f \,dz= \int_a^b f(z(t))\, z'(t) \,dt&& \text{for } z(t) \text{ a parameterization of } \gamma
+    ,\]
+
+-   Finding a primitive \( F \), then
+    \[
+    \int_\gamma f = F(b) - F(a)
+    .\]
+
+    -   Note: you can parameterize a circle around \( z_0 \) using
+        \[
+        z= z_0 + re^{i \theta }
+        .\]
 :::
 
-::: {.proposition title="Jordan's Lemma"}
-```{=tex}
-\todo[inline]{todo}
-```
-:::
-
-::: {.fact}
-Some useful facts:
-\[
-{\left\lvert {e^{z}} \right\rvert} = e^{\Re(z)}
-.\]
-
-On \( S^1 \),
-\[
-1/z = e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\]
-:::
-
-::: {.fact}
+::: {.fact title="Integrating $z^k$ around $S^1$ powers residues"}
 The major fact that reduces integrals to residues:
 \[
 \int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= \int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
@@ -1243,29 +1295,78 @@ Thus
 i.e. the integral picks out the \( c_{-1} \) coefficient in a Laurent series expansion.
 :::
 
-::: {.remark}
-Check: do you need residues at all?? You may be able to just compute an integral!
-
--   Directly by parameterization:
-    \[
-    \int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
-    ,\]
-
--   Finding a primitive \( F \),
-
--   Writing \( z= z_0 + re^{i \theta } \)
-:::
-
-## Computing Residues
-
-::: {.definition title="Toy contour"}
-A closed Jordan curve that separates \( {\mathbb{C}} \) into an exterior and interior region is referred to as a **toy contour**.
-:::
-
-::: {.definition title="Winding Number"}
-For \( \gamma \subseteq \Omega \) a closed curve not passing through a point \( z_0 \), the **winding number of \( \gamma \) about \( z_0 \)** is defined as
+::: {.example title="?"}
+Consider
 \[
-n_\gamma(z_0) \coloneqq{1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\,d\xi
+f(z) \coloneqq{e^{iz} \over 1 + z^2}
+\]
+where \( z\neq \pm i \), and attempt to integrate
+\[
+\int_{\mathbb{R}}f(z) \,dz
+.\]
+Use a semicircular contour \( \gamma_R \) where \( z = Re^{it} \) and check
+\[
+\sup_{z\in \gamma_R} {\left\lvert {f(z)} \right\rvert} 
+= \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
+= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
+&= {1\over R^2 - 1}
+.\]
+:::
+
+## Estimates
+
+::: {.proposition title="Length bound / ML Estimate"}
+\[
+{\left\lvert { \int_\gamma f} \right\rvert} \leq ML \coloneqq\sup_{z\in \gamma} {\left\lvert {f} \right\rvert} \cdot \mathrm{length}(\gamma)
+.\]
+:::
+
+::: {.proof title="?"}
+\[
+\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
+.\]
+:::
+
+::: {.proposition title="Jordan's Lemma"}
+Suppose that \( f(z) = e^{iaz}g(z) \) for some \( g \), and let \( C_R \coloneqq\left\{{ z=Re^{it} {~\mathrel{\Big|}~}t\in [0, \pi] }\right\} \). Then
+\[
+{\left\lvert {\int_{C_R} f(z) \,dz} \right\rvert} \leq {\pi M_R \over a}
+\]
+where \( M_R \coloneqq\sup_{t\in [0, \pi]} {\left\lvert {g(Re^{it})} \right\rvert} \).
+:::
+
+::: {.proof title="?"}
+\[
+{\left\lvert { \int_{C_R} f(z)\,dz} \right\rvert}
+&= {\left\lvert { \int_{C_R} e^{iaz}g(z) \,dz} \right\rvert} \\
+&= {\left\lvert { \int_{[0, \pi]} e^{ia\qty{Re^{it}}}g(Re^{it}) iRe^{it} \,dt} \right\rvert} \\
+&\leq \int_{[0, \pi]} {\left\lvert { e^{ia\qty{Re^{it}}}g(Re^{it}) iRe^{it}} \right\rvert} \,dt\\
+&=R \int_{[0, \pi]} {\left\lvert { e^{ia\qty{Re^{it}}}g(Re^{it})} \right\rvert} \,dt\\
+&\leq R M_R \int_{[0, \pi]} {\left\lvert { e^{ia\qty{Re^{it}}}} \right\rvert} \,dt\\
+&= R M_R \int_{[0, \pi]} e^{\Re\qty{iaRe^{it}}}   \,dt\\
+&= R M_R \int_{[0, \pi]} e^{\Re\qty{iaR\qty{\cos(t) + i\sin(t) } }}   \,dt\\
+&= R M_R \int_{[0, \pi]} e^{-aR\sin(t) }   \,dt\\
+&= 2 R M_R \int_{[0, \pi/2]} e^{-aR\sin(t) }   \,dt\\
+&\leq 2R M_R \int_{[0, \pi/2]} e^{-aR\qty{2t\over \pi} }   \,dt\\
+&= 2RM_R \qty{\pi \over 2aR}\qty{1-e^{-aR}} \\
+&= {\pi M_R \over a}
+.\]
+
+where we've used that on \( [0, \pi/2] \), there is an inequality \( 2t/\pi \leq \sin(t) \). This is obvious from a picture, since \( \sin(t) \) is a height on \( S^1 \) and \( 2t/\pi \) is a height on a diagonal line:
+
+![image_2021-06-09-01-29-22](figures/image_2021-06-09-01-29-22.png)
+:::
+
+## Residue Formulas
+
+::: {.theorem title="The Residue Theorem"}
+Let \( f \) be meromorphic on a region \( \Omega \) with poles \( \left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\} \). Then for any \( \gamma \in \Omega\setminus\left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\} \),
+\[
+{1 \over 2\pi i } \int_\gamma f(z) \,dz= \sum_{j=1}^N n_\gamma(z_j) \mathop{\mathrm{Res}}_{z=z_j} f
+.\]
+If \( \gamma \) is a toy contour, then\
+\[
+{1\over 2\pi i}\int_\gamma f\,dz= \sum_{j=1}^N \mathop{\mathrm{Res}}_{z=z_j}f
 .\]
 :::
 
@@ -1284,7 +1385,14 @@ As a special case, if \( z_0 \) is a simple pole of \( f \), then
 :::
 
 ::: {.corollary title="Better derivative formula that sometimes works for simple poles"}
-If additionally \( f=g/h \) where \( h(z_0) = 0 \) and \( h'(z_0)\neq 0 \), we can apply L'Hopital's rule to compute this residue:
+If additionally \( f=g/h \) where \( h(z_0) = 0 \) and \( h'(z_0)\neq 0 \),
+\[
+\mathop{\mathrm{Res}}_{z=z_0} {g(z) \over h(z)} = {g(z_0) \over h'(z_0)}
+.\]
+:::
+
+::: {.proof title="?"}
+Apply L'Hopital:
 \[
 (z-z_0) {g(z) \over h(z)} = {(z-z_0) g(z) \over h(z) } \overset{LH}{=}
 {g(z) + (z-z_0) g'(z) \over h'(z)} \overset{z\to z_0}\longrightarrow{g(z_0) \over h'(z_0)}
@@ -1292,17 +1400,9 @@ If additionally \( f=g/h \) where \( h(z_0) = 0 \) and \( h'(z_0)\neq 0 \), we c
 :::
 
 ::: {.example title="Residue of a simple pole (order 1)"}
-Let \( f(z) = \frac{1}{1+z^2} \), then \( \mathop{\mathrm{Res}}(i, f) = \frac{1}{2i} \).
-:::
-
-::: {.theorem title="The Residue Theorem"}
-Let \( f \) be meromorphic on a region \( \Omega \) with poles \( \left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\} \). Then for any \( \gamma \in \Omega\setminus\left\{{ { {z}_1, {z}_2, \cdots, {z}_{N}} }\right\} \),
+Let \( f(z) = \frac{1}{1+z^2} \), then \( g(z) = 1, h(z) = 1+z^2 \), and \( h'(z) = 2z \) so that \( h'(i) = 2i \neq 0 \). Thus
 \[
-{1 \over 2\pi i } \int_\gamma f(z) \,dz= \sum_{j=1}^N n_\gamma(z_j) \mathop{\mathrm{Res}}_{z=z_j} f
-.\]
-If \( \gamma \) is a toy contour, then\
-\[
-{1\over 2\pi i}\int_\gamma f\,dz= \sum_{j=1}^N \mathop{\mathrm{Res}}_{z=z_j}f
+\mathop{\mathrm{Res}}_{z=i}{1\over 1+z^2} = \frac{1}{2i}
 .\]
 :::
 
@@ -1310,7 +1410,7 @@ If \( \gamma \) is a toy contour, then\
 
 > Some good computations [here](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
-::: {.problem title="?"}
+::: {.exercise}
 Show that the complex zeros of \( f(z) \coloneqq\sin(\pi z) \) are exactly \( {\mathbb{Z}} \), and each is order 1. Calculate the residue of \( 1/\sin(\pi x) \) at \( z=n\in {\mathbb{Z}} \).
 :::
 
@@ -1343,7 +1443,109 @@ Show that the complex zeros of \( f(z) \coloneqq\sin(\pi z) \) are exactly \( {\
     ,\]
 :::
 
+::: {.exercise title="?"}
+Use a direct Laurent expansion to show
+\[
+\mathop{\mathrm{Res}}_{z=0} {1\over z-\sin(z)} = {3! \over 5\cdot 4}
+.\]
+
+> Note the necessity: one doesn't know the order of the pole at zero, so it's unclear how many derivatives to take.
+:::
+
+::: {.solution}
+Expand:
+\[
+{1\over z - \sin(z)}
+&= z^{-1}\qty{1 - z^{-1}\sin(z) }^{-1}\\
+&= z^{-1}\qty{1 - z^{-1}\qty{ z - {1\over 3!}z^3 + {1\over 5!} z^5 - \cdots}}^{-1}\\
+&= z^{-1}\qty{1 - \qty{ 1 - {1\over 3!}z^2 + {1\over 5!} z^4 - \cdots}}^{-1}\\
+&= z^{-1}\qty{{1\over 3!}z^2 - {1\over 5!}z^4 + \cdots}^{-1}\\
+&= z^{-1}\cdot 3! z^{-2} \qty{1 - {1\over 5!/3!}z^2 + \cdots}^{-1}\\
+&= {3!\over z^3} \qty{1 \over 1 - \qty{ {1\over 5\cdot 4}z^2 + \cdots}} \\
+&= {3!\over z^3}\qty{1 + \qty{{1\over 5\cdot 4}z^2} + \qty{{1\over 5\cdot 4}z^2}^2 + \cdots} \\
+&= 3! z^{-3} + {3!\over 5\cdot 4}z^{-1}+ O(z) \\
+.\]
+:::
+
+::: {.exercise title="?"}
+Compute
+\[
+\mathop{\mathrm{Res}}_{z=0} {1\over z^2 \sin(z)}
+.\]
+:::
+
+::: {.solution}
+First expand \( (\sin(z))^{-1} \):
+\[
+{1\over \sin(z)}
+&= \qty{z - {1\over 3!}z^3 + {1\over 5!}z^5 -\cdots }^{-1}\\
+&= z^{-1}\qty{1 - {1\over 3!}z^2 + {1\over 5!}z^4 - \cdots }^{-1}\\
+&= z^{-1}\qty{1 + 
+\qty{{1\over 3!}z^2 - {1\over 5!} z^4 + \cdots} 
++
+\qty{{1\over 3!}z^2 - \cdots}^2 + \cdots
+} \\
+&= z^{-1}\qty{1 + {1\over 3!}z^2 \pm O(z^4) }
+,\]
+using that \( (1-x)^{-1}= 1 + x + x^2 + \cdots \).
+
+Thus
+\[
+z^{-2}\qty{\sin(z)}^{-1}
+&= z^{-2} \cdot
+z^{-1}\qty{1 + {1\over 3!}z^2 \pm O(z^4) } \\
+&= z^{-3} + {1\over 3!}z^{-1}+ O(z)
+.\]
+:::
+
+::: {.exercise title="Keyhole contour and ML estimate"}
+Compute
+\[
+\int_{[0, \infty]} {\log(x) \over (1+x^2)^2}\,dx
+.\]
+:::
+
+::: {.solution}
+Factor \( (1+z^2)^2 = (z+i^2(z-i)^2 \). Take a keyhole contour similar to the following:
+
+![image_2021-06-09-02-11-59](figures/image_2021-06-09-02-11-59.png)
+
+Show that outer radius \( R \) and inner radius \( \rho \) circles contribute zero in the limit by the ML estimate? Compute the residues by just applying the formula and manually computing derivatives:
+\[
+\mathop{\mathrm{Res}}_{z= \pm i} f(z) 
+&= \lim_{z\to \pm i} {\frac{\partial }{\partial z}\,} {\log^2(z) \over (z\pm i)^2} \\
+&= \lim_{z\to \pm i} {2\log(z) (z\pm i)^2 - 2(z\pm i)^2 \log^2(z) \over \qty{(z\pm i )^2}^2} \\
+&= {
+2\log(\pm i)(\pm 2i)^2 - 2(\pm 2i)^2 \log^2(\pm i)
+\over {\qty{\pm 2i}}^4 } \\
+&=_? {\pi \over 4}\pm {i\pi^2 \over 16}
+.\]
+
+> See p.4: <http://www.math.toronto.edu/mnica/complex1.pdf>
+:::
+
+::: {.exercise title="Sinc Function"}
+Show
+\[
+\int_{(0, \infty)} {\sin(x) \over x }\,dx= {\pi \over 2}
+.\]
+:::
+
+::: {.solution}
+Take an indented semicircle. Let \( I \) be the original integral, then
+\[
+I = {1\over 2i} \int_{\mathbb{R}}{e^{iz} - 1 \over z } \,dz
+.\]
+:::
+
 ## Argument Principle
+
+::: {.definition title="Winding Number"}
+For \( \gamma \subseteq \Omega \) a closed curve not passing through a point \( z_0 \), the **winding number of \( \gamma \) about \( z_0 \)** is defined as
+\[
+n_\gamma(z_0) \coloneqq{1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\,d\xi
+.\]
+:::
 
 ::: {.theorem title="Argument Principle"}
 For \( f \) meromorphic in \( \gamma^\circ \) with zeros \( \left\{{ z_j }\right\} \) and poles \( \left\{{ p_k }\right\} \) repeated with multiplicity where \( \gamma \) does not intersect any zeros or poles, then
