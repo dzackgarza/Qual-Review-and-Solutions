@@ -269,7 +269,8 @@ First expand $(\sin(z))\inv$:
 \qty{{1\over 3!}z^2 - \cdots}^2 + \cdots
 } \\
 &= z\inv\qty{1 + {1\over 3!}z^2 \pm O(z^4) }
-.\]
+,\]
+using that $(1-x)\inv = 1 + x + x^2 + \cdots$.
 
 Thus
 \[
