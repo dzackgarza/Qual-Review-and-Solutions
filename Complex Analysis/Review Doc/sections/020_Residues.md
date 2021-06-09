@@ -2,21 +2,18 @@
 
 ## Basics
 
-:::{.proposition title="Length bound / ML Estimate"}
+:::{.remark}
+Check: do you need residues at all??
+You may be able to just compute an integral!
+
+- Directly by parameterization:
 \[
-\abs{ \int_\gamma f} \leq ML \da \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
-.\]
-:::
+\int_\gamma f \dz = \int_a^b f(z(t))\, z'(t) \dt && \text{for } z(t) \text{ a parameterization of } \gamma
+,\]
 
-:::{.proof title="?"}
-\[
-\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
-.\]
+- Finding a primitive $F$, then $\int_\gamma f = F(b) - F(a)$.
 
-:::
-
-:::{.proposition title="Jordan's Lemma"}
-\todo[inline]{todo}
+- Writing $z= z_0 + re^{i \theta }$
 
 :::
 
@@ -38,20 +35,25 @@ Thus
 i.e. the integral picks out the $c_{-1}$ coefficient in a Laurent series expansion.
 :::
 
-:::{.remark}
-Check: do you need residues at all??
-You may be able to just compute an integral!
-
-- Directly by parameterization:
+:::{.proposition title="Length bound / ML Estimate"}
 \[
-\int_\gamma f = \int_a^b f(z(t))\, z'(t) && \text{for } z(t) \text{ a parameterization of } \gamma
-,\]
+\abs{ \int_\gamma f} \leq ML \da \sup_{z\in \gamma} \abs{f} \cdot \mathrm{length}(\gamma)
+.\]
+:::
 
-- Finding a primitive $F$,
-
-- Writing $z= z_0 + re^{i \theta }$
+:::{.proof title="?"}
+\[
+\left|\int_{\gamma} f(z) d z\right| \leq \sup _{t \in[a, b]}|f(z(t))| \int_{a}^{b}\left|z^{\prime}(t)\right| d t \leq \sup _{z \in \gamma}|f(z)| \cdot \operatorname{length}(\gamma)
+.\]
 
 :::
+
+:::{.proposition title="Jordan's Lemma"}
+\todo[inline]{todo}
+
+:::
+
+
 
 ## Computing Residues
 
