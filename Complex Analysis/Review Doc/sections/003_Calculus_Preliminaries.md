@@ -85,7 +85,6 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 Note that if a power series converges uniformly, then summing commutes with integrating or differentiating.
 :::
 
-
 :::{.proposition title="Ratio Test"}
 Consider $\sum c_k z^k$, set $R = \lim \abs{c_{k+1} \over c_k}$, and recall the **ratio test**:
 
@@ -121,14 +120,12 @@ The product of two sequences is given by the Cauchy product
 .\]
 :::
 
-
 :::{.fact}
 Recall how to carry out polynomial long division:
 
 \todo[inline]{Polynomial long division}
 
 :::
-
 
 :::{.fact title="Partial Fraction Decomposition"}
 \envlist
@@ -138,15 +135,9 @@ Recall how to carry out polynomial long division:
 - For irreducible quadratic factors $h_i(x)$, include terms of the form ${Ax+B \over h_i(x)}$.
 :::
 
-
-
-
-
 ## Exercises
-
 
 :::{.exercise title="?"}
 Find the radius of convergences for the power series expansion of $\sqrt{z}$ about $z_0 = 4 +3i$.
 :::
-
 
