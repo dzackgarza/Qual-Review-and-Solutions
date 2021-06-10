@@ -1106,7 +1106,13 @@ so $\chi_{E_n} \to 1$ uniformly.
 
 **Part b**:
 
-- **Claim**: $L = X\sm S$, so if $x\in S \iff x\in L^c$.
+- Define
+\[
+S &\da \ts{x\in X \st \chi_{E_k}(x) \to 1}\\
+&\da \ts{x\in X \st \forall \eps,\, \exists N\, \text{ s.t. } \abs{} < \eps }\\
+.\]
+
+- **Claim**: $L = X\sm S$, so if $x\in S \iff x\in X\sm L$.
 - Proof of claim:
 Use the following equivalences:
 \[
