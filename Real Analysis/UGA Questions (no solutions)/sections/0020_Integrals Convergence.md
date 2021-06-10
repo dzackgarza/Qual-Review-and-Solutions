@@ -538,6 +538,23 @@ L
 ,\]
 where we've used that $\cos(\theta)$ is continuous on $\RR$ to pass a limit inside, noting that $x$ is fixed in the integrand.
 
+- Justifying the interchange: DCT.
+  Write $f_n(x) \da \cos(x/n) / (x^2 + \cos(x/n))$.
+
+- On $(\alpha, \infty)$ for any $\alpha > 1$, 
+\[
+\abs{f_n(x)} \leq 
+\abs{1\over x^2 + \cos(x/n)} \leq {1\over x^2-1}
+,\]
+where we've used that $-1\leq \cos(x/n) \leq 1$ for every $x$, and so the denominator is minimized when $\cos(x/n) = -1$, and this maximizes the quantity.
+- Setting $g(x) \da 1/(x^2-1)$, we have $g\in L^1(0, \infty)$ by the limit comparison test with $h(x) \da x^2$:
+\[
+{g(x) \over h(x) } \da {x^2 -1 \over x^2 } = 1 - {1\over x^2} \converges{x\to \infty}\too 1 < \infty
+,\]
+and so $g, h$ either both converge or both diverge.
+But $\int_1^\infty {1\over x^2}\dx < \infty$ by the $p\dash$test for integrals.
+
+
     
 :::
 
