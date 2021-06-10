@@ -1111,7 +1111,7 @@ $\implies$:
 - Suppose $\chi_{E_n}(x) \to 1$ for almost every $x$.
 - Define $S \da \ts{x\in X \st \chi_{E_n}(x) \to 1}$, then by assumption $\mu(X\sm S) = 0$.
 - Write $L\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}$
-- **Claim**: $L \subseteq X\sm S$, so if $x\in S$ then $x\not\in L$.
+- **Claim**: $L = X\sm S$, so if $x\in S \iff x\in L^c$.
   - Why this suffices: $S$ is where $f_n\to f$ and $X\sm S$ is where $f_n$ does **not** converge to $f$.
   So if $\mu(L) = 0$, then $f_n\to f$ everywhere except for a null set, i.e. $f_n\to f$ almost everywhere.
   The claim forces $L$ to be measurable and $\mu(L) = 0$.
@@ -1120,7 +1120,7 @@ $\implies$:
 we use the following equivalent statements:
 \[
 &\forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
-&\quad \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
+&\iff \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
 &\iff \chi_{E_k}(x) = 1 && \forall k\geq N \\
 &\iff x\in E_k && \forall k\geq N \\
 &\iff x\not\in X\sm E_k &&\forall k\geq N \\
