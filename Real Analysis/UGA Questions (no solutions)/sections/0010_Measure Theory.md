@@ -1119,7 +1119,8 @@ $\implies$:
 - Proof of claim:
 we use the following equivalent statements:
 \[
-&\quad \abs{\chi_{E_k}(x) - 1 } < 1 && \forall k\geq N \\ 
+&\forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
+&\quad \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
 &\iff \chi_{E_k}(x) = 1 && \forall k\geq N \\
 &\iff x\in E_k && \forall k\geq N \\
 &\iff x\not\in X\sm E_k &&\forall k\geq N \\
@@ -1133,6 +1134,12 @@ Conversely, if $x\not\in \intersect_{n\geq 0} A_n$, then there exists some $N$ s
   - Here take $A_N\da \union_{k\geq N} X\sm E_k$.
 
 - Now if $x\in S$, then there exists an $N$ such that $\abs{\chi_{E_n} - 1} < \eps \da 1/2 < 1$, so $x\not\in L$ by the above equivalence.
+
+$\impliedby$:
+
+- Let $L$ and $S$ as above, we have $\mu(L) = 0$ and we want to show $f_n\to f$ almost everywhere.
+  It suffices to show $f_n\to f$ on $X\sm L$, since $
+- By the above equivalences, $x\not\in L \iff$ there exists an $N$ such that $\abs{ \chi_{E_k}(x) - 1} < 1$ for all $k\geq N$
 :::
 
 
