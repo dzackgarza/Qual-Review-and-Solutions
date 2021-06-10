@@ -1124,11 +1124,15 @@ we use the following equivalent statements:
 &\iff x\in E_k && \forall k\geq N \\
 &\iff x\not\in X\sm E_k &&\forall k\geq N \\
 &\iff x\not\in \Union_{k\geq N} X\sm E_k  \\
-&\iff x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
+&{\color{blue} \iff} x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
 &\iff x\not\in L
 .\]
 
+- For the blue equivalence, for the forward direction use: if there exists any since $N$ such that $x\not \in A_N$, then $x\not\in \intersect_{n\geq 0} A_n$.
+Conversely, if $x\not\in \intersect_{n\geq 0} A_n$, then there exists some $N$ such that $x\not\in A_N$.
+  - Here take $A_N\da \union_{k\geq N} X\sm E_k$.
 
+- Now if $x\in S$, then there exists an $N$ such that $\abs{\chi_{E_n} - 1} < \eps \da 1/2 < 1$, so $x\not\in L$ by the above equivalence.
 :::
 
 
