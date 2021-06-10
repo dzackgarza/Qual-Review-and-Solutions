@@ -1063,14 +1063,33 @@ Show that
 Let \( (X, \mathcal{M},\mu)  \) be a measure space and let $E_n \in \mathcal{M}$ be a measurable set for $n\geq 1$.
 Let $f_n \da \chi_{E_n}$ be the indicator function of the set $E$ and show that 
 
-a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in |NN$ such that $E_n = X$ for all $n\geq N$.
+a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in \NN$ such that $E_n = X$ for all $n\geq N$.
 
 b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \) 
 \[
 \mu \qty{ \Intersect_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
 .\]
+:::
+
+
+:::{.solution}
+**Part a**:
+
+$\implies$:
+
+- Suppose $\chi_{E_n}\to 1$ uniformly, we want to produce an $N$ such that $n\geq N \implies x\in E_n$ for all $x\in X$.
+- Take $\eps \da 1/2$. 
+  By uniform convergence, for $N$ large enough,
+  \[
+& \forall n\geq N \quad \abs{\chi_{E_n}(x) - 1} < 1/2 && \forall x\in X\\
+&\iff
+\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+&\iff 
+\forall n\geq N \quad x\in E_n && \forall x\in X
+  .\]
 
 :::
+
 
 
 
