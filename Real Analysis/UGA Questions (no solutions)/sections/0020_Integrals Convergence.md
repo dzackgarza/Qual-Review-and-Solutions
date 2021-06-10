@@ -561,12 +561,10 @@ where we've used that $\cos(\theta)$ is continuous on $\RR$ to pass a limit insi
   - Just use that $f_n(x)$ is bounded by a constant:
   \[
   \abs{f_n(x)} 
-  = {\cos(x/n) \over x^2 + \cos(x/n)}
-  \leq {\cos(x/n) \over \cos(x/n)} = 1
+  = \abs{\cos(x/n) \over x^2 + \cos(x/n)}
+  \leq \abs{\cos(x/n) \over \cos(x/n)} = 1
   ,\]
   where we've used that $x^2$ is positive, and removing it from the denominator only makes the quantity larger.
-
-
     
 :::
 
