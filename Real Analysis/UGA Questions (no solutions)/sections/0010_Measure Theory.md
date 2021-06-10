@@ -1118,7 +1118,7 @@ so $S$ is the set where $f_n\to f$ and $X\sm S$ is the exceptional set where $f_
 Suppose there exists an $N$ such that the first line below is true.
 Then for a fixed $x$, there are equivalent statements:
 \[
-&\quad x \in S \\
+&\qquad x \in S \\
 &\iff \exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
 &\iff 
 \exists N \text{ s.t. } 
