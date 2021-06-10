@@ -1055,7 +1055,7 @@ Show that
 \]
 
 
-## Spring 2021 # 1
+## Spring 2021 # 1 $\done$
 
 
 :::{.problem title="Spring 2021 \# 1"}
