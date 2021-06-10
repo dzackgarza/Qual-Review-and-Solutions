@@ -1119,8 +1119,8 @@ so $S$ is the set where $f_n\to f$ and $X\sm S$ is the exceptional set where $f_
 Suppose there exists an $N$ such that the first line below is true.
 Then for a fixed $x$, there are equivalent statements:
 \[
-x \in S \\
-&\exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
+&\quad x \in S \\
+&\quad \exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
 &\iff 
 \exists N \text{ s.t. } 
 \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
@@ -1142,6 +1142,8 @@ x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
 &\iff x\in X\sm L
 .\]
 
+- Proving the iff:
+  $f_n\to f$ almost everywhere $\iff \mu(X\sm S) = 0 \iff \mu(L) = 0$.
 
 :::
 
