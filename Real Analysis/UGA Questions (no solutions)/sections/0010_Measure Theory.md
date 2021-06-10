@@ -1124,7 +1124,8 @@ we use the following equivalent statements:
 &\iff x\in E_k && \forall k\geq N \\
 &\iff x\not\in X\sm E_k &&\forall k\geq N \\
 &\iff x\not\in \Union_{k\geq N} X\sm E_k  \\
-&\iff x\not \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k
+&\iff x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
+&\iff x\not\in L
 .\]
 
 
