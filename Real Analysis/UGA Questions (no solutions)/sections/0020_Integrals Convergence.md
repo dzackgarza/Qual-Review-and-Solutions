@@ -511,13 +511,34 @@ Show that the following limit exists and satisfies the equality
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \]
 
-## Spring 2021 # 2
+## Spring 2021 # 2 $\done$
 
+:::{.problem title="?"}
 Calculate the following limit, justifying each step of your calculation:
-
 \[
 L \da \lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\dx
 .\]
+:::
+
+
+:::{.solution}
+
+- If interchanging a limit and integral is justified, we have
+\[
+L 
+&\da \lim_{n\to \infty} \int_{(0, n)} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \lim_{n\to \infty} \int_{(0, \infty)} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} \chi_{(0, \infty)}(x) \lim_{n\to \infty} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} {\lim_{n\to \infty} \cos\qty{x\over n} \over \lim_{n\to \infty} x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} x\over n} \over x^2 + \cos\qty{\lim_{n\to \infty} x\over n} } \dx \\
+&= \int_{(0, \infty)} {1\over x^2 + 1}\dx \\
+&= \arctan(x)\evalfrom_0^\infty
+.\]
+
+    
+:::
+
 
 
 ## Spring 2021 # 5
