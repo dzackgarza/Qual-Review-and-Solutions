@@ -1095,13 +1095,14 @@ So this $N$ suffices.
 $\impliedby$:
 
 - Let $\eps > 0$ be arbitrary.
-- Suppose there exists an $N$ such that $n\geq N \implies X = E_n$.
-- Then $\chi_{E_n}(x) = 1$ for all $x\in X$
+- Choose $N$ such that $n\geq N \implies X = E_n$.
+  Then
 \[
 &\forall n\geq N \quad x\in E_n && \forall x\in X \\
 &\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
 &\forall n\geq N \quad \abs{\chi_{E_n}(x) - 1} = 0 < \eps && \forall x\in X 
-.\]
+,\]
+so $\chi_{E_n} \to 1$ uniformly.
 
 
 :::
