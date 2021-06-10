@@ -528,7 +528,7 @@ L \da \lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\ov
 L 
 &\da \lim_{n\to \infty} \int_{(0, n)} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
 &= \lim_{n\to \infty} \int_{(0, \infty)} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
-&= \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&\equalsbecause{\text{DCT}} \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
 &= \int_{(0, \infty)} \chi_{(0, \infty)}(x) \lim_{n\to \infty} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
 &= \int_{(0, \infty)} {\lim_{n\to \infty} \cos\qty{x\over n} \over \lim_{n\to \infty} x^2 + \cos\qty{x\over n} } \dx \\
 &= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} {x\over n} } \over x^2 + \cos\qty{\lim_{n\to \infty} {x\over n} } } \dx \\
@@ -549,7 +549,7 @@ where we've used that $\cos(\theta)$ is continuous on $\RR$ to pass a limit insi
   \abs{1\over x^2 + \cos(x/n)} \leq {1\over x^2-1}
   ,\]
   where we've used that $-1\leq \cos(x/n) \leq 1$ for every $x$, and so the denominator is minimized when $\cos(x/n) = -1$, and this maximizes the quantity.
-  - Setting $g(x) \da 1/(x^2-1)$, we have $g\in L^1(0, \infty)$ by the limit comparison test with $h(x) \da x^2$:
+  - Setting $g(x) \da 1/(x^2-1)$, we have $g\in L^1(\alpha, \infty)$ by the limit comparison test with $h(x) \da x^2$:
   \[
   {g(x) \over h(x) } \da {x^2 -1 \over x^2 } = 1 - {1\over x^2} \converges{x\to \infty}\too 1 < \infty
   ,\]
@@ -565,6 +565,7 @@ where we've used that $\cos(\theta)$ is continuous on $\RR$ to pass a limit insi
   \leq \abs{\cos(x/n) \over \cos(x/n)} = 1
   ,\]
   where we've used that $x^2$ is positive, and removing it from the denominator only makes the quantity larger.
+  - Then check that $\int_0^\alpha 1 \dx = \alpha < \infty$, so $1\in L^1(0, \alpha)$.
     
 :::
 
