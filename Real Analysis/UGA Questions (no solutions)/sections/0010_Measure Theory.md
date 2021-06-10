@@ -1104,6 +1104,12 @@ $\impliedby$:
 ,\]
 so $\chi_{E_n} \to 1$ uniformly.
 
+**Part b**:
+
+$\implies$:
+
+- Suppose $\chi_{E_n}(x) \to 1$ for almost every $x$.
+- Define $S \da \ts{x\in X \st \chi_{E_n}(x) \to 1}$, then by assumption $\mu(X\sm S) = 0$.
 
 :::
 
