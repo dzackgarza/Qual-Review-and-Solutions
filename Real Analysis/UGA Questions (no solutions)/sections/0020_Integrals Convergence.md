@@ -531,7 +531,7 @@ L
 &= \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
 &= \int_{(0, \infty)} \chi_{(0, \infty)}(x) \lim_{n\to \infty} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
 &= \int_{(0, \infty)} {\lim_{n\to \infty} \cos\qty{x\over n} \over \lim_{n\to \infty} x^2 + \cos\qty{x\over n} } \dx \\
-&= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} x\over n} \over x^2 + \cos\qty{\lim_{n\to \infty} x\over n} } \dx \\
+&= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} {x\over n} } \over x^2 + \cos\qty{\lim_{n\to \infty} {x\over n} } } \dx \\
 &= \int_{(0, \infty)} {1\over x^2 + 1}\dx \\
 &= \arctan(x)\evalfrom_0^\infty
 .\]
