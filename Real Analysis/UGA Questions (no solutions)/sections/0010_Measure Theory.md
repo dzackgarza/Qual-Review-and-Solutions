@@ -1086,7 +1086,23 @@ $\implies$:
 \forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
 &\iff 
 \forall n\geq N \quad x\in E_n && \forall x\in X
-  .\]
+&\iff 
+\forall n\geq N \quad E_n = X
+,\]
+where we've used that $E_n \subseteq X$ by definition and this shows $X \subseteq E_n$.
+So this $N$ suffices.
+
+$\impliedby$:
+
+- Let $\eps > 0$ be arbitrary.
+- Suppose there exists an $N$ such that $n\geq N \implies X = E_n$.
+- Then $\chi_{E_n}(x) = 1$ for all $x\in X$
+\[
+&\forall n\geq N \quad x\in E_n && \forall x\in X \\
+&\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+&\forall n\geq N \quad \abs{\chi_{E_n}(x) - 1} = 0 < \eps && \forall x\in X 
+.\]
+
 
 :::
 
