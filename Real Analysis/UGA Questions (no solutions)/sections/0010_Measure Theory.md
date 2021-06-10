@@ -1106,18 +1106,9 @@ so $\chi_{E_n} \to 1$ uniformly.
 
 **Part b**:
 
-$\implies$:
-
-- Suppose $\chi_{E_n}(x) \to 1$ for almost every $x$.
-- Define $S \da \ts{x\in X \st \chi_{E_n}(x) \to 1}$, then by assumption $\mu(X\sm S) = 0$.
-- Write $L\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}$
 - **Claim**: $L = X\sm S$, so if $x\in S \iff x\in L^c$.
-  - Why this suffices: $S$ is where $f_n\to f$ and $X\sm S$ is where $f_n$ does **not** converge to $f$.
-  So if $\mu(L) = 0$, then $f_n\to f$ everywhere except for a null set, i.e. $f_n\to f$ almost everywhere.
-  The claim forces $L$ to be measurable and $\mu(L) = 0$.
-
 - Proof of claim:
-we use the following equivalent statements:
+Use the following equivalences:
 \[
 &\forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
 &\iff \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
@@ -1127,7 +1118,18 @@ we use the following equivalent statements:
 &\iff x\not\in \Union_{k\geq N} X\sm E_k  \\
 &{\color{blue} \iff} x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
 &\iff x\not\in L
+&\iff x\in X\sm L
 .\]
+
+$\implies$:
+
+- Suppose $\chi_{E_n}(x) \to 1$ for almost every $x$.
+- Define $S \da \ts{x\in X \st \chi_{E_n}(x) \to 1}$, then by assumption $\mu(X\sm S) = 0$.
+- Write $L\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}$
+  - Why this suffices: $S$ is where $f_n\to f$ and $X\sm S$ is where $f_n$ does **not** converge to $f$.
+  So if $\mu(L) = 0$, then $f_n\to f$ everywhere except for a null set, i.e. $f_n\to f$ almost everywhere.
+  The claim forces $L$ to be measurable and $\mu(L) = 0$, since $\mu(X\sm S) = 0$ by assumption
+
 
 - For the blue equivalence, for the forward direction use: if there exists any since $N$ such that $x\not \in A_N$, then $x\not\in \intersect_{n\geq 0} A_n$.
 Conversely, if $x\not\in \intersect_{n\geq 0} A_n$, then there exists some $N$ such that $x\not\in A_N$.
