@@ -1110,6 +1110,8 @@ $\implies$:
 
 - Suppose $\chi_{E_n}(x) \to 1$ for almost every $x$.
 - Define $S \da \ts{x\in X \st \chi_{E_n}(x) \to 1}$, then by assumption $\mu(X\sm S) = 0$.
+- Write $L\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}$
+- **Claim**: $
 
 :::
 
