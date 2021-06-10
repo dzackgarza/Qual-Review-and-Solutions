@@ -1113,22 +1113,35 @@ S &\da \ts{x\in X \st \chi_{E_k}(x) \to 1}\\
 L &\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}
 ,\]
 so $S$ is the set where $f_n\to f$ and $X\sm S$ is the exceptional set where $f_n\not\to f$ doesn't converge pointwise.
-  
 
 - **Claim**: $L = X\sm S$, so if $x\in S \iff x\in X\sm L$.
 - Proof of claim:
-Use the following equivalences:
+Suppose there exists an $N$ such that the first line below is true.
+Then for a fixed $x$, there are equivalent statements:
 \[
-&\forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
-&\iff \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
-&\iff \chi_{E_k}(x) = 1 && \forall k\geq N \\
-&\iff x\in E_k && \forall k\geq N \\
-&\iff x\not\in X\sm E_k &&\forall k\geq N \\
-&\iff x\not\in \Union_{k\geq N} X\sm E_k  \\
-&{\color{blue} \iff} x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
+x \in S \\
+&\exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
+&\iff 
+\exists N \text{ s.t. } 
+\abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
+&\iff 
+\exists N \text{ s.t. } 
+\chi_{E_k}(x) = 1 && \forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\in E_k && \forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\not\in X\sm E_k &&\forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\not\in \Union_{k\geq N} X\sm E_k  \\
+&{\color{blue} \iff} 
+x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
 &\iff x\not\in L \\
 &\iff x\in X\sm L
 .\]
+
 
 :::
 
