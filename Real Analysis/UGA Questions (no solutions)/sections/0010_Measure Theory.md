@@ -1119,7 +1119,7 @@ Suppose there exists an $N$ such that the first line below is true.
 Then for a fixed $x$, there are equivalent statements:
 \[
 &\quad x \in S \\
-&\quad \exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
+&\iff \exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
 &\iff 
 \exists N \text{ s.t. } 
 \abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
