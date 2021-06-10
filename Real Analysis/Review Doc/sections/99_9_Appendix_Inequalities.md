@@ -96,6 +96,11 @@ Then let $h = \abs{f}^p$:
 
 :::{.remark}
 In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
+Some other useful forms:
+\[
+\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2} \leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right)
+.\]
+
 :::
 
 :::{.proposition title="Minkowski's Inequality"}
