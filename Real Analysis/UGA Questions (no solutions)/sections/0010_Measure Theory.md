@@ -1109,7 +1109,7 @@ so $\chi_{E_n} \to 1$ uniformly.
 - Define
 \[
 S &\da \ts{x\in X \st \chi_{E_k}(x) \to 1}\\
-&\da \ts{x\in X \st \forall \eps,\, \exists N\, \text{ s.t. } \abs{} < \eps }\\
+&\da \ts{x\in X \st \forall \eps,\, \exists N\, \text{ s.t. } \abs{\chi_{E_k}(x) - 1 } < \eps ,\forall k\geq N}\\
 .\]
 
 - **Claim**: $L = X\sm S$, so if $x\in S \iff x\in X\sm L$.
