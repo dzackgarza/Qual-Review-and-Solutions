@@ -242,6 +242,15 @@ Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear t
 
 :::{.definition title="$\sigma\dash$finiteness"}
 A measure space $(X, \mcm, \mu)$ is **$\sigma\dash$finite** if $X$ can be written as a union of countably many measurable sets with finite measure.
+:::
+
+
+:::{.proposition title="Regularity of measure"}
+If $(X, \mcb, \mu)$ is a Borel measure space where $\mu$ is finite on all balls of finite radius, then for any $E \in \mcb$ and any $\eps>0$,
+
+- There exists an open set $O$  with $E \subset O$ and $\mu(O\sm E) < \eps$
+- There exists a closed set $F$ with $F\subset E$ and $\mu(E\sm F) < \eps$.
 
 :::
+
 
