@@ -710,7 +710,7 @@ If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for eve
 Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
 :::
 
-:::{.theorem title="Egorov"}
+:::{.theorem title="Egorov's Theorem"}
 Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
 \[  
 f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
@@ -730,6 +730,24 @@ m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
 ![](figures/2021-06-11_17-52-21.png)
 
 :::
+
+
+:::{.theorem title="Lusin's Theorem"}
+If $f$ is measurable and finite-valued on $E$ with $\mu(E) < \infty$ then for every $\eps>0$ there exists a closed set $F_\eps$ with
+\[
+F_\eps \subset F && \mu(E - F_\eps) \leq \eps
+\]
+where $f$ restricted to $F_\eps$ is continuous.
+
+:::
+
+
+:::{.proof title="of Lusin"}
+
+![](figures/2021-06-11_18-00-42.png)
+:::
+
+
 
 
 ## Examples and Counterexamples
