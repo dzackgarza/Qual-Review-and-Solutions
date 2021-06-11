@@ -106,7 +106,7 @@ and set ${n\choose k} \da (n)_k/k!$, then
 \sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
 \log(1-x) 
-  &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
+  &= \sum_{n \geq 0} {x^n\over n} \quad \abs{z} < 1 \\
 \dd{}{z} \sum_{j=0}^\infty a_j z^j 
   &= \sum_{j=0}^\infty a_{j+1}z^j \\
 \sqrt{1+x} 

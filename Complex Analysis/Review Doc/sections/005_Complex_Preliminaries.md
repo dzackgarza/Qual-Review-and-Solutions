@@ -24,7 +24,6 @@ Common trick:
 f^{1/n} = e^{{1\over n} \log(f)}
 ,\]
 taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
-
 :::
 
 :::{.fact}
@@ -38,7 +37,7 @@ Some computations that come up frequently:
 :::{.fact}
 Some useful facts:
 \[
-\abs{e^{z}} = e^{\Re(z)}
+\abs{e^{z}} = e^{\Re(z)} && \arg(e^z) = \Im(z)
 .\]
 
 On $S^1$,
@@ -49,7 +48,6 @@ On $S^1$,
 .\]
 :::
 
-
 ## Complex Log
 
 :::{.fact title="Complex Log"}
@@ -59,8 +57,10 @@ We define
 \log(z) = \ln\qty{\abs{z}} + i\Arg(z)
 \]
 and $z^c \da e^{c\log(z)}$.
-
-
+Thus
+\[
+\log(re^{i\theta}) = \ln \abs{r} + i\theta
+.\]
 :::
 
 :::{.proposition title="Existence of complex log"}
