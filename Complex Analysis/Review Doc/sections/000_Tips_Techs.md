@@ -108,7 +108,10 @@ and set ${n\choose k} \da (n)_k/k!$, then
   &=\frac{n(n+1)(2 n+1)}{6} \\
 \sum_{k=1}^{n} k^{3} 
   &=\frac{n^{2}(n+1)^{2}}{4}  \\
-e^z &= \sum_{k\geq 0} {z^k \over k!}
+\sum_{0\leq k \leq N} z^k 
+  &= {1 - z^{N+1} \over 1-z} \\
+{1\over 1-z} &= \sum_{k\geq 0} z^k \\
+e^z &= \sum_{k\geq 0} {z^k \over k!} \\
 \sin(z) 
   &= \sum_{k \text{ odd} \geq 1} (-1)^{k+1 \over 2} {z^k \over k!} \\
   &= z - {1\over 3!}z^3 + {1\over 5!}z^5 + \cdots \\
