@@ -724,6 +724,14 @@ m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
 .\]
 :::
 
+
+:::{.proof title="of Egorov"}
+
+![](figures/2021-06-11_17-52-21.png)
+
+:::
+
+
 ## Examples and Counterexamples
 
 :::{.example title="?"}

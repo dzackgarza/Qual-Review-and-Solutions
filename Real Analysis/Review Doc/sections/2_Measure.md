@@ -253,4 +253,15 @@ If $(X, \mcb, \mu)$ is a Borel measure space where $\mu$ is finite on all balls 
 
 :::
 
+## Exercises
+
+
+:::{.problem title="Regularity from above"}
+Show that for any $A\subseteq \RR$ and for any $\eps > 0$ there exists an open set $O \supset A$  with
+\[
+m_*(O) \leq m_*(A) + \eps
+.\]
+
+:::
+
 
