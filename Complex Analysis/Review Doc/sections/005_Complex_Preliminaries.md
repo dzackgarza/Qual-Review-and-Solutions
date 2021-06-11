@@ -4,8 +4,6 @@
 A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
 :::
 
-## Complex Arithmetic
-
 :::{.fact title="Complex roots of a number"}
 The complex $n$th roots of $z \da r e^{i\theta}$ are given by
 \[
@@ -15,36 +13,6 @@ Note that one root is $r^{1/n}\in \RR$, and the rest are separated by angles of 
 Mnemonic: 
 \[
 z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
-.\]
-:::
-
-:::{.fact}
-Common trick:
-\[
-f^{1/n} = e^{{1\over n} \log(f)}
-,\]
-taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
-:::
-
-:::{.fact}
-Some computations that come up frequently:
-\[
-\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
-(a+bi)(c+di) = (ac - bd) + (ad + bc)
-.\]
-:::
-
-:::{.fact}
-Some useful facts:
-\[
-\abs{e^{z}} = e^{\Re(z)} && \arg(e^z) = \Im(z)
-.\]
-
-On $S^1$,
-\[
-1/z &= e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
 .\]
 :::
 
@@ -61,6 +29,14 @@ Thus
 \[
 \log(re^{i\theta}) = \ln \abs{r} + i\theta
 .\]
+:::
+
+:::{.fact}
+Common trick:
+\[
+f^{1/n} = e^{{1\over n} \log(f)}
+,\]
+taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
 :::
 
 :::{.proposition title="Existence of complex log"}
@@ -249,7 +225,6 @@ Thus
 
 :::
 
-
 :::{.proposition title="Holomorphic functions are continuous."}
 $f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
 \[  
@@ -259,7 +234,6 @@ In this case, $a = f'(z_0)$.
 :::
 
 \todo[inline]{Prove}
-
 
 
 ### Delbar and the Laplacian

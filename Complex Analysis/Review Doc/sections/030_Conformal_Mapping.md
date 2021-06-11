@@ -12,7 +12,7 @@ Self-biholomorphisms of a domain $\Omega$ form a group $\Aut_\CC(\Omega)$.
 
 :::{.remark}
 There is an oft-used weaker condition that $f'(z) \neq 0$ for any point.
-Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may be nonzero derivative.
+Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may have nonzero derivatives.
 For example, take $f(z) = \bar{z}$, so $f(x+iy) = x-iy$ -- this does not satisfy the Cauchy-Riemann equations.
 :::
 

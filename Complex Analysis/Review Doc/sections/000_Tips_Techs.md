@@ -136,4 +136,44 @@ Useful trick for expanding square roots:
 .\]
 
 :::
+:::{.fact}
+Some computations that come up frequently:
+\[
+\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
+(a+bi)(c+di) = (ac - bd) + (ad + bc)
+.\]
+:::
+
+:::{.fact}
+Some useful facts:
+\[
+\abs{e^{z}} = e^{\Re(z)} && \arg(e^z) = \Im(z)
+.\]
+
+On $S^1$,
+\[
+1/z &= e^{-i\theta} \\
+\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\]
+:::
+
+
+:::{.fact}
+To show a function is holomorphic,
+
+- Use Morera's theorem
+- Find a primitive
+
+:::
+
+
+:::{.fact}
+To count zeros:
+
+- Rouche's theorem
+- The argument principle
+
+:::
+
 
