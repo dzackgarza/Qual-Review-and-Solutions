@@ -111,7 +111,7 @@ There are 8 major types of conformal maps:
 :::{.proposition title="Half-plane to Disc"}
 \[
 F: \HH^\circ &\mapstofrom \DD^\circ \\
-\ts{\Im(z) > 0 } &\mapstofrom \ts{\abs{z} < 1 } \\
+\ts{z\st \Im(z) > 0 } &\mapstofrom \ts{w\st \abs{w} < 1 } \\
 z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
@@ -122,12 +122,11 @@ So this extends to a map $\HH\to \DD$.
 
 :::{.proposition title="Sector to sector"}
 \[
-F: S_{\pi \over n}^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
-\ts{0 < \Arg(z) < {\pi\over n} } &\mapstofrom \ts{0 < \Arg(z) < \pi } \\
-z &\mapsto z^n \\
-w^{1\over n} &\mapsfrom w
+F: S_{\pi \over \alpha }^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
+\ts{z\st 0 < \Arg(z) < {\pi\over \alpha} } &\mapstofrom \ts{w\st 0 < \Arg(w) < \pi } \\
+z &\mapsto z^\alpha \\
+w^{1\over \alpha} &\mapsfrom w
 .\]
-
 
 :::
 
