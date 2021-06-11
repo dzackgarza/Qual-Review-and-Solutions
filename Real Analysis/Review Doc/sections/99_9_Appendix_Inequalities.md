@@ -192,8 +192,17 @@ This states that if $\ts{e_k}$ is an orthonormal basis for $H$, then
 \[
 \sum_{k\geq 0} \abs{ \inner{x}{e_k} } ^2 = \norm{x}_H^2
 .\]
+:::
+
+
+:::{.remark}
+This appears in several other forms:
+\[
+{1\over 2\pi} \int_{(-\pi, \pi)} \abs{f}^2 = \sum_{k\in \ZZ} \abs{c_k}^2 && c_k \da {1\over 2\pi } \int_{(-\pi, \pi)} f(x) e^{-ikx} \dx
+.\]
 
 :::
+
 
 # Less Explicitly Used Inequalities
 
