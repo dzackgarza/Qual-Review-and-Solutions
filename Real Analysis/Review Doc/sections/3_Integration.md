@@ -634,7 +634,7 @@ We have $1 \implies 2 \implies 3$, and in general no implication can be reversed
 For any measure space $(X, \mcm, \mu)$,
 
 - $L^1(X)$ is Banach space.
-- $L^2(X)$ is a (possibly non-separated) Hilbert space.
+- $L^2(X)$ is a (possibly non-separable) Hilbert space.
 
 :::
 
