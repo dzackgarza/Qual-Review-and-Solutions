@@ -94,7 +94,9 @@ There are 8 major types of conformal maps:
 
 | Type/Domains                                            | Formula                                   |
 | ------------                                            | -------                                   |
-| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
+| Translation                                             | $z\mapsto z + h$            |
+| Dilation                                                | $z\mapsto cz$            |
+| Rotation                                                | $z\mapsto e^{i\theta}$            |
 | Sectors to sectors                                      | $z\mapsto z^n$                            |
 | $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
 | $\HH\to S$                                              | $z\mapsto \log(z)$                        |
@@ -105,25 +107,15 @@ There are 8 major types of conformal maps:
 
 :::
 
-:::{.proposition title="List of Conformal Maps"}
 
-Half-plane to disc:
+:::{.proposition title="Half-plane to Disc"}
 \[
 F: \HH \da \ts{\Im(z) \geq 0 } &\mapstofrom \DD \da \ts{\abs{z} \leq 1 } \\
 z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
-
 :::
-
-
-### Plane to Disc
-
-\[
-\phi: \HH &\to \DD \\
-\phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
-.\]
 
 
 ### Sector to Disc
