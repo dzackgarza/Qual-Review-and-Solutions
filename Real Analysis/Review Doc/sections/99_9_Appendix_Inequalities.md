@@ -204,6 +204,17 @@ This appears in several other forms:
 :::
 
 
+:::{.proposition title="Plancherel"}
+\[
+\norm{f}_{L^2}^2 &= \norm{\hat{f}}_{L^2} \\
+\int_{\RR^d} \abs{f}^2 &= \int_{\RR^d} \abs{\hat f}^2
+.\]
+
+
+:::
+
+
+
 # Less Explicitly Used Inequalities
 
 :::{.proposition title="AM-GM Inequality"}
