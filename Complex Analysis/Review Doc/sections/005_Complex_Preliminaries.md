@@ -49,7 +49,10 @@ Then there exists a branch of $F(z) \da \Log(z)$ such that
 :::
 
 :::{.definition title="Principal branch and exponential"}
-Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
+Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm. 
+Equivalently, this is define for all $z=re^{i\theta}$ where $\theta \in (-\pi, \pi)$.
+
+Here the log is defined as 
 \[
 \Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
 .\]
@@ -59,7 +62,20 @@ z^{\alpha} \da e^{\alpha \Log(z)}
 .\]
 :::
 
-:::{.theorem title="Existence of log"}
+
+:::{.remark}
+Note the problem: for $z\da x+i0 \in \RR^{\leq 0}$, just above the axis consider $z_+ \da x + i\eps$ and $z_- \da x-i\eps$.
+Then
+
+- $\log(z_+) = \log\abs{x} + i\pi$, and
+- $\log(z_-) = \log\abs{x} - i\pi$.
+
+So $\log$ can't even be made continuous if one crosses the branch.
+The issue is the **branch point** or **branch singularity** at $z=0$.
+:::
+
+
+:::{.theorem title="Existence of log of a function"}
 If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
 \[
 f(z) = e^{G(z)}
