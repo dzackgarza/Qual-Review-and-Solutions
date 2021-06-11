@@ -124,8 +124,18 @@ In this case, $\alpha = f'(z_0)$.
 
 :::{.example title="Holomorphic vs non-holomorphic"}
 \envlist
-- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
-- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
+
+- $f(z) \da \abs{z}$ is not holomorphic.
+- $f(z) \da \arg{z}$ is not holomorphic.
+- $f(z) \da \Re{z}$ is not holomorphic.
+- $f(z) \da \Im{z}$ is not holomorphic.
+- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$ but not holomorphic on $\CC$
+- $f(z) = \bar{z}$ is *not* holomorphic, but is real differentiable:
+\[
+{f(z_0 + h) - f(z_0) \over h } = {\bar{z_0} + \bar h - \bar{z_0} \over h} = {\bar{h} \over h} = {re^{-i\theta} \over re^{i\theta}} = e^{-2i\theta} \converges{h\to 0}\too e^{-2i\theta}
+,\]
+which is a complex number that depends on $\theta$ and is thus not a single value.
+
 :::
 
 :::{.definition title="Real (multivariate) differentiable"}
@@ -615,3 +625,9 @@ For $z=1$:
 &= {1\over z-1} \qty{1 + \sum_{k\geq 0} (-1)^k (z-1)^k }
 .\]
 :::
+
+
+:::{.exercise title="?"}
+Show that a real-valued holomorphic function must be constant.
+:::
+
