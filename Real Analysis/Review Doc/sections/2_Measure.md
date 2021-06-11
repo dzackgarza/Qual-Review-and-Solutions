@@ -253,15 +253,21 @@ If $(X, \mcb, \mu)$ is a Borel measure space where $\mu$ is finite on all balls 
 
 :::
 
+:::{.problem title="?"}
+Show that $E$ is measurable iff $E$ is regular in either sense above.
+:::
+
 ## Exercises
 
 
-:::{.problem title="Regularity from above"}
-Show that for any $A\subseteq \RR$ and for any $\eps > 0$ there exists an open set $O \supset A$  with
-\[
-m_*(O) \leq m_*(A) + \eps
-.\]
-
+:::{.problem title="?"}
+Show that if $\sum \mu(E_k) < \infty$ then almost every $x\in X$ is in at most finitely many $E_k$.
 :::
+
+
+
+
+
+
 
 
