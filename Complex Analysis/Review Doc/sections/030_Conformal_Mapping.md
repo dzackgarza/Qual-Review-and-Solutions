@@ -107,6 +107,8 @@ There are 8 major types of conformal maps:
 
 :::
 
+\todo[inline]{Pictures!}
+
 
 :::{.proposition title="Half-plane to Disc"}
 \[
@@ -122,11 +124,17 @@ So this extends to a map $\HH\to \DD$.
 
 :::{.proposition title="Sector to sector"}
 \[
-F: S_{\pi \over \alpha }^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
+F_\alpha: S_{\pi \over \alpha }^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
 \ts{z\st 0 < \Arg(z) < {\pi\over \alpha} } &\mapstofrom \ts{w\st 0 < \Arg(w) < \pi } \\
 z &\mapsto z^\alpha \\
 w^{1\over \alpha} &\mapsfrom w
 .\]
+Note that if you look at the image of $\HH$ under $z\mapsto z^{\alpha}$, you get
+\[
+\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } \\
+.\]
+For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < w^{1\over \alpha}$.
+
 
 :::
 
