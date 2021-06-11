@@ -125,6 +125,7 @@ So this extends to a map $\HH\to \DD$.
 
 
 :::{.proposition title="Sector to sector"}
+For $0 < \alpha < 2$:
 \[
 F_\alpha: S_{\pi \over \alpha }^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
 \ts{z\st 0 < \Arg(z) < {\pi\over \alpha} } &\mapstofrom \ts{w\st 0 < \Arg(w) < \pi } \\
@@ -142,23 +143,33 @@ For the inverse, choose a branch cut of $\log$ deleting the negative real axis, 
 - As $x$ travels from $-\infty\to 0$, $F_\alpha(x)$ travels *away* from infinity along the ray $\theta = \alpha \pi$, so $L = \ts{ e^{t \alpha \pi } \st t\in (0, \infty) }$, from $\infty\to 0$.
 - As $x$ travels from $0\to \infty$, $F_\alpha(x)$ travels from $0\to \infty$ along $\RR$.
 
-
 :::
 
 
-For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
+:::{.proposition title="Sector to Disc"}
+The unmotivated formula first:
+\[
+F: S_{\alpha} &\to \DD \\ \\
+\ts{ z \st 0 < \Arg(z) < \alpha } &\mapstofrom \ts{ w \st \abs{w} < 1 } \\
+z &\mapstofrom {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
+.\]
+
+Idea: compose some known functions.
+![](figures/image_2020-07-22-13-22-46.png)
+
+First map the sector to the half-plane:
 \[
 g: S_\alpha &\to \HH \\
 g(z) &= z^{\pi \over \alpha}
 .\]
 
 Then compose with a map $\HH\to\DD$:
-\[
-f: S_\alpha &\to \DD \\
-f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\]
 
-![](figures/image_2020-07-22-13-22-46.png)
+
+:::
+
+
+
 
 
 ### Strip to Disc
