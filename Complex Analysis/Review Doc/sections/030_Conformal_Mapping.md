@@ -57,6 +57,25 @@ Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
 
+
+:::{.theorem title="Characterization of conformal maps"}
+Conformal maps $\DD\to\DD$ have the form
+\[
+g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
+.\]
+:::
+
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
+
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::
+
+
+## By Type
+
+:::{.remark title="Notation"}
+
 | Notation                                                     | Definition                                             |
 |--------------------------------------------------------------|--------------------------------------------------------|
 | $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
@@ -68,6 +87,7 @@ The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps 
 |                                                              |                                                        |
 |                                                              |                                                        |
 
+:::
 
 :::{.theorem title="Classification of Conformal Maps"}
 There are 8 major types of conformal maps:
@@ -85,7 +105,6 @@ There are 8 major types of conformal maps:
 
 :::
 
-
 :::{.proposition title="List of Conformal Maps"}
 
 Half-plane to disc:
@@ -96,22 +115,46 @@ i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
 
-
 :::
 
 
-:::{.theorem title="Characterization of conformal maps"}
-Conformal maps $\DD\to\DD$ have the form
+### Plane to Disc
+
 \[
-g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
+\phi: \HH &\to \DD \\
+\phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
 .\]
-:::
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
 
-Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
-:::
+### Sector to Disc
+
+For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
+\[
+g: S_\alpha &\to \HH \\
+g(z) &= z^{\pi \over \alpha}
+.\]
+
+Then compose with a map $\HH\to\DD$:
+\[
+f: S_\alpha &\to \DD \\
+f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
+.\]
+
+![](figures/image_2020-07-22-13-22-46.png)
+
+
+### Strip to Disc
+
+- Map to horizontal strip by rotation $z\mapsto \lambda z$.
+- Map horizontal strip to sector by $z \mapsto e^z$
+- Map sector to $\HH$ by $z\mapsto z^{\pi\over\alpha}$.
+- Map $\HH\to\DD$.
+
+\[
+e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
+.\]
+
+
 
 
 ## Schwarz
@@ -157,47 +200,6 @@ Schwarz lemma.
 \Aut_\CC(\HH) = \ts{ z \mapsto {az+b \over cz+d} \st a,b,c,d\in \CC, ad-bc=1 } \cong\PSL_2(\RR)
 .\]
 :::
-
-
-
-
-## By Type
-
-### Plane to Disc
-
-\[
-\phi: \HH &\to \DD \\
-\phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
-.\]
-
-
-### Sector to Disc
-
-For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
-\[
-g: S_\alpha &\to \HH \\
-g(z) &= z^{\pi \over \alpha}
-.\]
-
-Then compose with a map $\HH\to\DD$:
-\[
-f: S_\alpha &\to \DD \\
-f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\]
-
-![](figures/image_2020-07-22-13-22-46.png)
-
-
-### Strip to Disc
-
-- Map to horizontal strip by rotation $z\mapsto \lambda z$.
-- Map horizontal strip to sector by $z \mapsto e^z$
-- Map sector to $\HH$ by $z\mapsto z^{\pi\over\alpha}$.
-- Map $\HH\to\DD$.
-
-\[
-e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
-.\]
 
 
 
