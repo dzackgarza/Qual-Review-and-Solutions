@@ -6,8 +6,17 @@ A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$
 There are three types of isolated singularities:
 
 - Removable singularities
-- Poles
+- Poles 
 - Essential singularities
+:::
+
+
+:::{.remark}
+Singularities can be classified by Laurent expansions $f(z) = \sum_{k\in \ZZ} c_k z^k$:
+
+- Essential singularity: infinitely many negative terms.
+- Pole of order $N$: truncated at $k = -N$, so $c_{N-\ell} = 0$ for all $\ell$.
+- Removable singularity: truncated at $k=0$, so $c_{\leq -1} = 0$.
 :::
 
 
