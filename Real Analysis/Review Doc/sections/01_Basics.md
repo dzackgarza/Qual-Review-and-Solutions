@@ -702,35 +702,21 @@ and $f_n'(0) \to 1$.
 .\]
 :::
 
-## Slightly Advanced Stuff
-
-:::{.theorem title="Weierstrass Approximation"}
-If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
-
-Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
-:::
+## "Almost" Theorems
 
 :::{.theorem title="Egorov's Theorem"}
-Let $E \subseteq \RR^n$ be measurable with $m(E) > 0$ and $\theset{f_k: E \to \RR}$ be measurable functions such that 
-\[  
-f(x) \definedas \lim_{k\to\infty} f_k(x) < \infty 
-\]
-exists almost everywhere.
-
-Then $f_k \to f$ *almost uniformly*, i.e.
-\[
-\forall\varepsilon > 0, ~\exists F \subseteq E ~\text{closed such that } &
-m(E\setminus F) < \varepsilon ~\text{ and }~ f_k\to f ~\text{uniformly on}~ F
-.\]
+Let $E \subseteq \RR^d$ be measurable of positive finite measure with $f_k\to f$ almost everywhere on $E$.
+Then for every $\eps > 0$ there is a closed $A_\eps \subseteq E$ with $\mu(E\sm A_\eps) < \eps$ and $f_k\to f$ uniformly on $A_\eps$.
 :::
-
 
 :::{.proof title="of Egorov"}
 
-![](figures/2021-06-11_17-52-21.png)
+
+![](figures/2021-06-11_18-07-43.png)
+
+![](figures/2021-06-11_18-07-58.png)
 
 :::
-
 
 :::{.theorem title="Lusin's Theorem"}
 If $f$ is measurable and finite-valued on $E$ with $\mu(E) < \infty$ then for every $\eps>0$ there exists a closed set $F_\eps$ with
@@ -743,14 +729,18 @@ where $f$ restricted to $F_\eps$ is continuous.
 
 :::
 
-
 :::{.proof title="of Lusin"}
 
-![](figures/2021-06-11_18-00-42.png)
+![](figures/2021-06-11_18-04-52.png)
 :::
 
+## Slightly Advanced Stuff
 
+:::{.theorem title="Weierstrass Approximation"}
+If $[a, b] \subset \RR$ is a closed interval and $f$ is continuous, then for every $\eps> 0$ there exists a polynomial $p_\eps$ such that $\norm{f- p_\eps}_{L^\infty([a, b])} \converges{\eps \to 0}\to 0$.
 
+Equivalently, polynomials are dense in the Banach space $C([0, 1], \norm{\wait}_\infty)$.
+:::
 
 ## Examples and Counterexamples
 
