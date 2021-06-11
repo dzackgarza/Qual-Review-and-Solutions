@@ -118,7 +118,17 @@ This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges fro
 :::
 
 
-### Sector to Disc
+### Sector to Sector
+
+
+:::{.proposition title="Sector to sector"}
+\[
+F: S_{\pi \over n} &\da \ts{0 < \Arg(z) < \pi/n } &\mapstofrom S_{\pi} \da \ts{0 < \Arg(z) < \pi } = \HH
+.\]
+
+
+:::
+
 
 For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
 \[
