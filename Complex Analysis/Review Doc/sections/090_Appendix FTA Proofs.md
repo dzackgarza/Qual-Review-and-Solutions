@@ -3,11 +3,6 @@
 
 
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
-
-Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
-:::
 
 :::{.theorem title="Riemann's Removable Singularity Theorem"}
 If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
