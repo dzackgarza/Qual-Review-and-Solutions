@@ -739,6 +739,8 @@ F_\eps \subset F && \mu(E - F_\eps) \leq \eps
 \]
 where $f$ restricted to $F_\eps$ is continuous.
 
+> Note: this means that the function $\tilde f \da \ro{f}{F_\eps}$ is continuous, not that the function $f$ defined on all of $E$ is continuous at points of $F_\eps$.
+
 :::
 
 
