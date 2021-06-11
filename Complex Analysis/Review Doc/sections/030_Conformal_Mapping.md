@@ -110,20 +110,22 @@ There are 8 major types of conformal maps:
 
 :::{.proposition title="Half-plane to Disc"}
 \[
-F: \HH \da \ts{\Im(z) \geq 0 } &\mapstofrom \DD \da \ts{\abs{z} \leq 1 } \\
+F: \HH^\circ &\mapstofrom \DD^\circ \\
+\ts{\Im(z) > 0 } &\mapstofrom \ts{\abs{z} < 1 } \\
 z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
+So this extends to a map $\HH\to \DD$.
 :::
-
-
-### Sector to Sector
 
 
 :::{.proposition title="Sector to sector"}
 \[
-F: S_{\pi \over n} &\da \ts{0 < \Arg(z) < \pi/n } &\mapstofrom S_{\pi} \da \ts{0 < \Arg(z) < \pi } = \HH
+F: S_{\pi \over n}^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
+\ts{0 < \Arg(z) < {\pi\over n} } &\mapstofrom \ts{0 < \Arg(z) < \pi } \\
+z &\mapsto z^n \\
+w^{1\over n} &\mapsfrom w
 .\]
 
 
