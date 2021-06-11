@@ -90,10 +90,11 @@ There are 8 major types of conformal maps:
 
 Half-plane to disc:
 \[
-\ts{\Im(z) > 0 } &\mapstofrom \ts{\abs{z} \leq 1 } \\
+F: \HH \da \ts{\Im(z) \geq 0 } &\mapstofrom \DD \da \ts{\abs{z} \leq 1 } \\
 z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
+This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
 
 
 :::
