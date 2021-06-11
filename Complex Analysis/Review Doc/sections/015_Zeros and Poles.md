@@ -18,6 +18,19 @@ The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and is
 :::
 
 
+:::{.example title="Essential singularities"}
+$f(z) \da e^{1/z}$ has an essential singularity at $z=0$, since we can expand and pick up infinitely many negative terms:
+\[
+e^{1/z} = 1 + {1\over z} + {1\over 2! z^2} + \cdots
+.\]
+In fact there exists a neighborhood of zero such that $f(U) = \CC\smz$.
+Similarly $g(z) \da \sin\qty{1\over z}$ has an essential singularity at $z=0$, and there is a neighborhood $V$ of zero such that $g(V) = \CC$.
+
+
+:::
+
+
+
 
 :::{.definition title="Removable Singularities"}
 If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
