@@ -19,10 +19,8 @@ for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ s
 
 Be sure to address the case when $m_*(E) = \infty$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Definition of outer measure: 
   \[ 
   m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}
@@ -32,9 +30,11 @@ Be sure to address the case when $m_*(E) = \infty$.
 - Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof}
-\hfill
+\envlist
 - $m_*(Q) \leq \abs{Q}$:
 - Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
 - $\abs{Q} \leq m_*(Q)$:
@@ -497,13 +497,14 @@ $$
 
 Prove that $m(E) = 0$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Borel-Cantelli: If $\theset{E_k}_{k\in\ZZ}\subset 2^\RR$ is a countable collection of Lebesgue measurable sets with $\sum_{k\in \ZZ} m(E_k) < \infty$, then almost every $x\in \RR$ is in *at most finitely* many $E_k$.
   - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \Intersect_{k=1}^\infty \Union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
 :::
+
+:::{.solution}
+\envlist
 
 - Strategy: Borel-Cantelli.
 
@@ -604,11 +605,7 @@ E &\mapsto f(E)
 \todo[inline]{Walk through.}
 
 :::{.solution}
-\hfill
-:::{.concept}
-\hfill
-- ?
-:::
+\envlist
 
 a.
 
@@ -690,10 +687,8 @@ Let $E \subset \RR$ be a measurable set such that
 \]
 Show that $m(E) = 0$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
 - Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
 - Chebyshev's inequality:
@@ -701,6 +696,9 @@ Show that $m(E) = 0$.
 A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) \leq c^{-p} \int_{A_c} \abs{f}^p \,d\mu \quad \forall 0 < p < \infty
 .\]
 :::
+
+:::{.solution}
+\envlist
 
 a.
 
@@ -775,11 +773,7 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 \todo[inline]{Add concepts.}
 
 :::{.solution}
-\hfill
-:::{.concept}
-\hfill
-- ?
-:::
+\envlist
 
 - Claim: $G\in \mcm$.
   - Claim:
@@ -879,13 +873,14 @@ different from 4, we replace the digit $4$ with $399\cdots$. For example, $0.875
 Show that $K$ is a compact, nowhere dense set without isolated points, and find the
 Lebesgue measure $m(K)$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
   - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
 :::
+
+:::{.solution}
+\envlist
 
 Claim: **$K$ is compact**.
 
@@ -996,7 +991,7 @@ Show that either
 \]
 
 :::{.concept}
-\hfill
+\envlist
 - Monotonicity of the Lebesgue integral: $f\leq g$ on $A$ $\implies \int_A f \leq \int_A g$
 
 :::
@@ -1008,9 +1003,8 @@ The non-obvious move: split $A$ itself up to get a strict inequality.
 
 :::
 
-
 :::{.solution}
-\hfill
+\envlist
 
 - Write $X\da [a, b]$,
 - Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in X \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
@@ -1145,13 +1139,13 @@ x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
 :::
 
 
-## Spring 2021 # 3
+## Spring 2021 # 3 $\work$
 
 Let \( (X, \mathcal{M}, \mu)  \) be a finite measure space and let \( \ts{ f_n}_{n=1}^{\infty } \subseteq L^1(X, \mu) \).
 Suppose $f\in L^1(X, \mu)$ such that $f_n(x) \converges{n\to \infty }\to f(x)$ for almost every $x \in X$.
 Prove that for every \( \eps > 0 \) there exists $M>0$ and a set $E\subseteq X$ such that \( \mu(E) \leq \eps \) and \( \abs{f_n(x)}\leq M  \) for all $x\in X\sm E$ and all $n\in \NN$.
 
-## Fall 2020 \# 2
+## Fall 2020 \# 2 $\work$
 
 a.
 Let $f: \RR \to \RR$. Prove that

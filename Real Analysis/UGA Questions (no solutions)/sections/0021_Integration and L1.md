@@ -8,12 +8,13 @@ Show that
 \lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
 \]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - $\norm{f}_\infty \definedas \inf_t {\theset{ t\suchthat m\qty{\theset{x\in \RR^n \suchthat f(x) > t}} = 0 } }$, i.e. this is the lowest upper bound that holds almost everywhere.
 :::
+
+:::{.solution}
+\envlist
 
 - $\norm{f}_p \leq \norm{f}_\infty$:
   - Note $\abs{f(x)} \leq \norm{f}_\infty$ almost everywhere and taking $p$th powers preserves this inequality.
@@ -70,7 +71,6 @@ Show that
 :::
 
 
-
 ## Spring 2018 # 4 $\done$
 Let $f\in L^2([0, 1])$ and suppose
 $$
@@ -78,15 +78,19 @@ $$
 $$
 Show that $f = 0$ almost everywhere.
 
-:::{.solution}
-\hfill
-
-### Proof 1: Using Fourier Transforms
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Weierstrass Approximation: A continuous function on a compact set can be uniformly approximated by polynomials.
+- $C^1([0, 1])$ is dense in $L^2([0, 1])$
+- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
+  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
 :::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="using Fourier transforms"}
+\envlist
 
 - Fix $k \in \ZZ$.
 - Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
@@ -116,16 +120,10 @@ $$
 
 - Thus $f\equiv 0$ in $L^2([0, 1])$, which implies that $f$ is zero almost everywhere.
 
-$\qed$
-
-### Alternative Proof
-\hfill
-:::{.concept}
-\hfill
-- $C^1([0, 1])$ is dense in $L^2([0, 1])$
-- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
-  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
 :::
+
+:::{.proof title="Alternative"}
+\envlist
 
 - By density of polynomials, for $f\in L^2([0, 1])$ choose $p_\eps(x)$ such that $\norm{f - p_\eps} < \eps$ by Weierstrass approximation.
 - Then on one hand,
@@ -154,6 +152,8 @@ $\qed$
 .\]
   so $\norm{f}_2 = 0$, which implies $f=0$ almost everywhere.
 
+
+:::
 
 :::
 
@@ -191,18 +191,15 @@ b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\inf
 
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Limits
 - Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
 - Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 :::
 
-### a
-
+:::{.solution title="of a"}
 Stated integral equality: 
 
 - Let $\eps > 0$
@@ -226,10 +223,13 @@ To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 - Take $f(x)$ to be a train of rectangles of height 1 and area $1/2^j$ centered on even integers.
 - Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\to 0$$ as the tail of a convergent sum. 
 - However $f(x) = 1$ for infinitely many even integers $x > N$, so $f(x) \not\to 0$ as $\abs{x}\to\infty$.
+:::
 
-### b
+:::{.solution title="of b"}
 
-#### Solution 1 ("Trick")
+
+:::{.proof title="Solution 1: Trick"}
+\envlist
 
 - Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
 \[
@@ -253,7 +253,10 @@ f(x-n) \int_x^{2x} \,dt  \\
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
 - Thus $f(x) \converges{x\to\infty}\to 0$ as well.
 
-#### Solution 2 (Variation on the Trick)
+:::
+
+:::{.proof title="Solution 2: Variation on the trick"}
+\envlist
 
 - Use mean value theorem for integrals:
 \[
@@ -272,8 +275,9 @@ x\leq c_x \leq 2x
 - So $2x f(2x) \to 0$, which by a change of variables gives $uf(u) \to 0$.
 - Since $u\geq 1$, $f(u) \leq uf(u)$ so $f(u) \to 0$ as well.
 
-#### Solution 3 (Contradiction)
+:::
 
+:::{.proof title="Solution 3: Contradiction"}
 Just showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
@@ -317,8 +321,9 @@ Showing $xf(x) \converges{x\to \infty}\to 0$.
 \int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L} \to \infty
 .\]
 
-#### Solution 4 (Akos's Suggestion)
+:::
 
+:::{.proof title="Solution 4: Akos' suggestion"}
 For $x\geq 1$, 
 \[
 \abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
@@ -329,7 +334,11 @@ For $x\geq 1$,
   - Since $f$ is positive and decreasing, for every $t\in[a, b]$ we have $\abs{f(a)} \leq \abs{f(t)}$.
   - By part (a), the last integral goes to zero.
 
-#### Solution 5 (Peter's)
+
+:::
+
+:::{.proof title="Solution 5: Peter's"}
+\envlist
 
 - Toward a contradiction, produce a sequence $x_i\to\infty$ with $x_i f(x_i) \to \infty$ and $x_if(x_i) > \eps > 0$, then
 \[
@@ -343,7 +352,13 @@ For $x\geq 1$,
 \]
   which can be ensured by passing to a subsequence where $\sum {x_{i-1} \over x_i} < \infty$.
 
-### c
+:::
+
+
+:::
+
+:::{.solution title="of c"}
+\envlist
 
 - No: take $f(x) = {1\over x\ln x}$
 - Then by a $u\dash$substitution,
@@ -355,6 +370,8 @@ For $x\geq 1$,
   \[
   xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
   .\]
+:::
+
 
 
 
@@ -362,34 +379,34 @@ For $x\geq 1$,
 
 ## Fall 2019 # 5. $\done$
 
-### a
+a.
 Show that if $f$ is continuous with compact support on $\RR$, then 
 \[
 \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
 \]
 
-### b 
+b. 
 Let $f\in L^1(\RR)$ and for each $h > 0$ let 
 \[
 \mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
 \]
 
-i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
+  - Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
 
-ii. Prove that $\mathcal{A}_h f \to f$ in $L^1(\RR)$ as $h \to 0^+$.
+  - Prove that $\mathcal{A}_h f \to f$ in $L^1(\RR)$ as $h \to 0^+$.
 
 \todo[inline]{Walk through.}
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
 - Lebesgue differentiation in 1-dimensional case. See HW 5.6.
 :::
 
-### a
+:::{.solution}
+\envlist
 
+:::{.proof title="of a"}
 Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
 
 By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
@@ -420,8 +437,9 @@ then
 \int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
 \]
 
-### b
+:::
 
+:::{.proof title="of b"}
 We have
 \[
 \int_\RR \abs{A_h(f)(x)} ~dx 
@@ -445,6 +463,8 @@ and (rough sketch)
 
 :::
 
+:::
+
 
 ## Fall 2017 # 3 $\done$
 Let 
@@ -460,31 +480,31 @@ Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\thes
 
 \todo[inline]{Walk through.}
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - From homework: $E$ is Lebesgue measurable iff there exists a finite union of closed cubes $A$ such that $m(E\Delta A) < \varepsilon$.
 :::
 
-It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
+:::{.solution}
+\envlist
 
-Let $s = \chi_{A}$.
-By regularity of the Lebesgue measure, choose an open set $O \supseteq A$ such that $m(O\setminus A) < \varepsilon$.
+- It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
 
-$O$ is an open subset of $\RR$, and thus $O = \disjoint_{j\in \NN} I_j$ is a disjoint union of countably many open intervals.
+- Let $s = \chi_{A}$.
+- By regularity of the Lebesgue measure, choose an open set $O \supseteq A$ such that $m(O\setminus A) < \varepsilon$.
 
-Now choose $N$ large enough such that $m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n$ where we define $I_{N, n} \definedas \disjoint_{j=1}^N I_j$.
+- $O$ is an open subset of $\RR$, and thus $O = \disjoint_{j\in \NN} I_j$ is a disjoint union of countably many open intervals.
 
-Now define $f_n = \chi_{I_{N, n}}$, then
+- Now choose $N$ large enough such that $m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n$ where we define $I_{N, n} \definedas \disjoint_{j=1}^N I_j$.
+
+- Now define $f_n = \chi_{I_{N, n}}$, then
 \[
 \norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\longrightarrow 0
 .\]
 
-Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
-But simple functions are dense in $L^1$, so $S$ is dense in $L^1$.
+- Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
+- But simple functions are dense in $L^1$, so $S$ is dense in $L^1$.
 :::
-
 
 
 ## Spring 2015 # 4 $\work$
@@ -514,14 +534,13 @@ m(E) < \delta
 \]
 
 
-## Spring 2021 # 4
+## Spring 2021 # 4 $\done$
 
 Let $f, g$ be Lebesgue integrable on $\RR$ and let $g_n(x) \da g(x- n)$.
 Prove that
 \[
 \lim_{n\to \infty } \norm{f + g_n}_1 = \norm{f}_1 + \norm{g}_1
 .\]
-
 
 :::{.concept}
 \envlist
@@ -533,67 +552,156 @@ Prove that
 \norm{f}_{L^1(B_R^c)} < \eps
 .\]
 
-- Shift $g$ off so most of its density occurs where $f$ has a small tail, and vice versa:
+- Shift $g$ to the right far enough so that the two densities are mostly disjoint:
 
-![Shifting density](figures/image_2021-04-24-21-27-21.png)
+![Shifting density](figures/densities.png)
 
 - Any integral $\int_a^b f$ can be written as $\norm{f}_1 - O(\text{err})$.
 
-:::
+- Bounding technique: 
+\[
+a-\eps \leq b \leq a+\eps \implies b=a
+.\]
 
+:::
 
 :::{.solution}
 \envlist
 
 - Fix $\eps$.
-
-- Choose $N\gg 0$ to produce an $R$ so that
+- Using small tails for $f, g \in L^1$, choose $R_1, R_2 \gg 0$ so that
 \[
-\int_R^{\infty } \abs{f} &< \eps \\
-\int_{-\infty}^{R} \abs{g_N} &< \eps
+\int_{B_{R_1}(0)^c} \abs{f} &< \eps \\
+\int_{B_{R_2}(0)^c} \abs{g} &< \eps
 .\]
 
-- Split the integral up:
+  - Note that this implies
+  \[
+  \int_{-R_1}^{R_1} \abs{f} &= \norm{f}_1 - 2\eps \\
+  \int_{-R_2}^{R_2} \abs{g_N} &= \norm{g_N} - 2\eps 
+  .\]
+
+  - Also note that by translation invariance of the Lebesgue integral, $\norm{g}_1 = \norm{g_N}_1$.
+
+
+- Now use $N$ to make the densities almost disjoint: choose $N\gg 1$ so that $N-R_2 > R_1$:
+
+![Shifting density](figures/densities.png)
+
+- Consider the change of variables $x\mapsto x-N$:
 \[
-\norm{f - g_N}_1 = \int_{-\infty}^R \abs{f - g_N} + \int_R^{\infty }\abs{f - g_N}
-,\]
-  where $g_N$ is small in the first term and $f$ is small in the second.
+\int_{-R_2}^{R_2} \abs{g(x)}\dx 
+= \int_{N-R_2} ^{N+R_2} \abs{g(x-N)} \dx
+\da \int_{N-R_2} ^{N+R_2} \abs{g_N(x)} \dx
+.\]
+  - Use this to conclude that
+  \[
+  \int_{N-R_2}^{N+R_2} \abs{g_N} = \norm{g_N} - 2\eps
+  .\]
+
+- Now split the integral in the problem statement at $R_1$:
+
+\[
+\norm{f + g_N}_1 
+= \int_\RR \abs{f+g_N} 
+= \int_{-\infty}^{R_1} \abs{f+ g_N}
++ \int_{R_1}^{\infty} \abs{f+ g_N}
+\da I_1 + I_2
+.\]
+
+- **Idea**: from the picture, 
+
+  - On $I_1$, $f$ is big and $g_N$ is small
+  - On $I_2$, $f$ is small and $g_N$ is big
+
+- Casework: estimate $I_1, I_2$ separately, bounding from above and below.
+
+- $I_1$ upper bound:
+  \[
+  I_1 
+  &\da \int_{-\infty}^{R_1} \abs{f + g_N} \\
+  &\leq \int_{-\infty}^{R_1} \abs{f} + \abs{g_N} \\
+  &= \int_{-\infty}^{R_1} \abs{f} + \int_{-\infty}^{R_1} \abs{g_N} \\
+  &\leq \int_{-\infty}^{R_1} \abs{f} + \int_{-\infty}^{\color{green} N - R_2} \abs{g_N} && R_1 < N-R_2 \\
+  &= \norm{f}_1 - \int_{R_1}^{\infty} \abs{f} + \int_{-\infty}^{N - R_2} \abs{g_N} \\
+  &\leq \norm{f}_1 - \int_{R_1}^{\infty} \abs{f} + \eps \\
+  &\leq \norm{f}_1 + \eps
+  .\]
+  
+  - In the last step we've used that we're subtracting off a positive number, so forgetting it only makes things larger.
+  
+  - We've also used monotonicity of the Lebesgue integral: if $A\leq B$, then $(c, A) \subseteq (c, B)$ and $\int_{c}^A \abs f \leq \int_c^B \abs{f}$ since $\abs f$ is positive.
+
+- $I_1$ lower bound:
+\[
+I_1 
+&\da \int_{-\infty}^{R_1} \abs{f + g_N} \\
+&\geq \int_{-\infty}^{R_1} \abs{f} - \abs{g_N} \\
+&= \int_{-\infty}^{R_1} \abs{f} - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\geq \int_{-\infty}^{R_1} \abs{f} - \int_{-\infty}^{\color{green} N-R_2} \abs{g_N} && R_1 < N-R_2 \\
+&= \norm{f}_1 - \int_{R_1}^{ \infty } \abs f - \int_{- \infty }^{N-R_2} \abs {g_N} \\
+&\geq \norm{f}_1 - \eps - \eps \\
+&= \norm{f}_1 - 2\eps
+.\]
+
+  - Now we've used that the integral with $g_N$ comes in with a negative sign, so extending the range of integration only makes things *smaller*.
+  We've also used the $\eps$ bound on both $f$ and $g_N$ here, and both are tail estimates.
+
+- Taken together we conclude
+\[
+\norm{f}_1 - 2\eps
+\leq I_1
+\leq \norm{f}_1 && \eps\to 0 \implies  I_1 = \norm{f}_1
+.\]
+
+
+- $I_2$ lower bound:
+\[
+I_2 
+&\da \int_{R_1}^{\infty} \abs{f + g_N} \\
+&\leq \int_{R_1}^{\infty} \abs{f} + \int_{R_1}^{\infty} {g_N} \\
+&\leq \int_{R_1}^{\infty} \abs{f} + \norm{g_N}_1 - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\leq \eps + \norm{g_N}_1 - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\leq \eps + \norm{g_N}_1 \\
+&= \eps + \norm{g}_1 
+.\]
+
+  - Here we've again thrown away negative terms, only increasing the bound, and used the tail estimate on $f$.
+
+- $I_2$ upper bound:
+
+\[
+I_2 
+&\da \int_{R_1}^{\infty} \abs{f + g_N} \\
+&= \int_{R_1}^{\infty} \abs{g_N + f} \\
+&\geq \int_{R_1}^{\infty} \abs{g_N} - \int_{R_1}^{\infty} \abs{f} \\
+&=  \norm{g_N} - \int_{-\infty}^{R_1} \abs{g_N} - \int_{R_1}^{\infty} \abs{f} \\
+&\geq  \norm{g_N} - 2\eps
+.\]
+
+  - Here we've swapped the order under the absolute value, and used the tail estimates on both $g$ and $f$.
+
+- Taken together:
+\[
+\norm{g}_1 - \eps \leq I_2 \leq \norm{g}_1 + 2\eps 
+.\]
 
 - Note that we have two inequalities:
 \[
-\norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R} \abs{f -g_N} \leq \norm{f}_1 + 2\eps \\
-\norm{g}_1 - 2\eps &\leq \int^{\infty}_{R} \abs{f -g_N} \leq \norm{g}_1 + 2\eps 
+\norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R_1} \abs{f -g_N} \leq \norm{f}_1 + \eps \\
+\norm{g}_1 - 2\eps &\leq \int^{\infty}_{R_1} \abs{f -g_N} \leq \norm{g}_1 + \eps 
 .\]
-
-\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
 
 - Add these to obtain
 \[
-\norm{f}_1 + \norm{g}_1 - 4\eps \leq \int_\RR \abs{f - g_N} \leq \norm{f} + \norm{g}_1 + 4\eps
+\norm{f}_1 + \norm{g}_1 - 4\eps \leq I_1 + I_2 \da \norm{f - g_N}_1 \leq \norm{f} + \norm{g}_1 + 2\eps
 .\]
 
-- Check that $N\to \infty$ as $\eps\to 0$ to yield the result.
-
-
-- Seeing where the inequalities come from: for the first, we'll generally have $f$ big and $g$ small, which motivates:
-\[
-\int_{-\infty}^R \abs{f - g_N} 
-&\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} \\
-&= \norm{f}_1 - \int_R^{\infty } \abs{f} + \int_{- \infty }^R \abs{g_N} \\
-&\approx \norm{f}_1 + O(\eps) + O(\eps)
-,\]
-and similarly 
-\[
-\int_{- \infty }^R \abs{ f- g_N} 
-&\geq \int_{- \infty }^R \abs{f} - \abs{g_N} \\
-&= \int_{- \infty }^R \abs{f} - \int_{- \infty }^R \abs{g_N} \\
-&= \norm{f}_1 - \int_R^{\infty } \abs{f} - \int_{- \infty }^R \abs{g_N} \\
-&\geq \norm{f}_1 - O(\eps) - O(\eps)
-.\]
+- Check that as $N\to \infty$ as $\eps\to 0$ to yield the result.
 
 :::
 
-## Fall 2020 \# 4
+## Fall 2020 \# 4 $\work$
 Prove that if $xf(x) \in L^1(\RR)$, then
 \[  
 F(y) \da \int f(x) \cos(yx)\,  dx

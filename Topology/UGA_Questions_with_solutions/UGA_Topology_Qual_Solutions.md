@@ -32,6 +32,8 @@
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
 \newcommand{\Fp}[0]{{\mathbb{F}_p}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
@@ -52,6 +54,8 @@
 \newcommand{\RR}[0]{{\mathbb{R}}}
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \renewcommand{\SS}[0]{{\mathbb{S}}}
+\newcommand{\WW}[0]{{\mathbb{W}}}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\HZ}[0]{{H\mathbb{Z}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
@@ -65,10 +69,12 @@
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZZp}[0]{{ \mathbb{Z}_{(p)} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
 \newcommand{\chp}[0]{\operatorname{ch. p}}
 \newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
 \newcommand{\HT}[0]{{\operatorname{HT}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
@@ -126,6 +132,7 @@
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
 \newcommand{\HP}[0]{{\operatorname{HP}}}
@@ -168,7 +175,14 @@
 \newcommand{\ko}[0]{{\operatorname{ko}}}
 \newcommand{\EO}[0]{{\operatorname{EO}}}
 \newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\ku}[0]{{\operatorname{ku}}}
 \newcommand{\MU}[0]{{\operatorname{MU}}}
+\newcommand{\BU}[0]{{\operatorname{BU}}}
+\newcommand{\BO}[0]{{\operatorname{BO}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\KU}[0]{{\operatorname{KU}}}
 \newcommand{\BP}[0]{{\operatorname{BP}}}
 \newcommand{\MSO}[0]{{\operatorname{MSO}}}
 \newcommand{\MSp}[0]{{\operatorname{MSpin}}}
@@ -186,6 +200,7 @@
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Monoid}[0]{\mathsf{Mon}}
 \newcommand{\Poset}[0]{\mathsf{Poset}}
 \newcommand{\Fun}[0]{{\mathsf{Fun}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
@@ -198,6 +213,7 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\FGL}[0]{\mathsf{FGL}}
 \newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
@@ -234,7 +250,9 @@
 \newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
 \newcommand{\cdga}[0]{{\mathsf{cdga} }}
 \newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\kAlg}[0]{{\mathsf{Alg}_{/k} }}
 \newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\rAlg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
 \newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\alg}[0]{\mathsf{Alg}}
@@ -255,6 +273,8 @@
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
 \newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\FFlat}[0]{{\mathsf{FFlat}}}
+\newcommand{\kSch}[0]{{\mathsf{Sch}_{/k}}}
 \newcommand{\Lag}[0]{{\mathsf{Lag}}}
 \newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
 \newcommand{\Wein}[0]{{\mathsf{Wein}}}
@@ -389,8 +409,9 @@
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{{J}\qty{#1} }}
+\newcommand{\jacrad}[1]{{{J}\qty{#1} }}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
 \newcommand{\mapsvia}[1]{\xrightarrow{#1}}
 \newcommand{\fromvia}[1]{\xleftarrow{#1}}
@@ -446,7 +467,8 @@
 \newcommand{\CY}{{ \text{CY} }}
 \newcommand{\FS}{{ \text{FS} }}
 \newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\Map}[0]{{\operatorname{Maps}}}
+\newcommand{\Maps}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
@@ -549,7 +571,6 @@
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator{\submfds}{SubMfds}
 \DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -648,6 +669,7 @@
 \newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 
@@ -694,13 +716,7 @@
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
+
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
@@ -718,6 +734,8 @@
 \newcommand{\congas}[1]{\underset{#1}{\cong}}
 \newcommand{\ideal}[1]{\mathcal{#1}}
 \newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\powerseries}[1]{ { \left[ {#1} \right] } }
+\newcommand{\formalpowerseries}[1]{ { \left[\left[ {#1} \right] \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
 
 
@@ -739,6 +757,7 @@
 
 
 \newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
 \newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
@@ -763,7 +782,7 @@
 \newcommand{\realize}[1]{{ \abs{#1} }}
 
 
-\newcommand{\localize}[1]{{}^{\hat{}}_{#1}}
+\newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
 \newcommand{\complete}[1]{{}^{\hat{}}_{#1}}
 
 # Preface
