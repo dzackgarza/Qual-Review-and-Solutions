@@ -138,14 +138,14 @@ Measurable, non-negative, increasing pointwise a.e. allows commuting limits and 
 
 :::{.theorem title="Dominated Convergence"}
 If $f_n \in L^1$ and $f_n \to f$ almost everywhere with $\abs {f_n} \leq g$ for some $g\in L^1$, then $f\in L^1$ and
-$$
-\lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f < \infty
-,$$
-
-and more generally,
-$$
+\[
 \int \abs{f_n - f} \to 0
-.$$
+.\]
+
+As a consequence,
+\[
+\lim \int f_n = \int \lim f_n = \int f \quad \text{i.e.}~~ \int f_n \to \int f < \infty
+\]
 
 > Positivity *not* needed.
 
@@ -628,4 +628,13 @@ We have $1 \implies 2 \implies 3$, and in general no implication can be reversed
 
 :::
 
+
+
+:::{.proposition title="Functional analytic properties of $L^1$ and $L^2$"}
+For any measure space $(X, \mcm, \mu)$,
+
+- $L^1(X)$ is Banach space.
+- $L^2(X)$ is a (possibly non-separated) Hilbert space.
+
+:::
 
