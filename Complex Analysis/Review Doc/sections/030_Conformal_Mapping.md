@@ -139,7 +139,8 @@ For the inverse, choose a branch cut of $\log$ deleting the negative real axis, 
 
 **Boundary behavior:**
 
-- As $x$ travels from $-\infty\to 0$, $F_\alpha(x)$ travels along the ray $\theta = \alpha \pi$, so $L = \ts{ e^{t \alpha \pi } \st t\in (0, \infty) }$, from $\infty\to 0$.
+- As $x$ travels from $-\infty\to 0$, $F_\alpha(x)$ travels *away* from infinity along the ray $\theta = \alpha \pi$, so $L = \ts{ e^{t \alpha \pi } \st t\in (0, \infty) }$, from $\infty\to 0$.
+- As $x$ travels from $0\to \infty$, $F_\alpha(x)$ travels from $0\to \infty$ along $\RR$.
 
 
 :::
