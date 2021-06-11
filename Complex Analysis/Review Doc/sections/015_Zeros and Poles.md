@@ -20,7 +20,6 @@ Equivalently,
 Equivalently, $f$ is bounded on a neighborhood of $z_0$.
 :::
 
-
 :::{.remark}
 Singularities can be classified by Laurent expansions $f(z) = \sum_{k\in \ZZ} c_k z^k$:
 
@@ -29,15 +28,12 @@ Singularities can be classified by Laurent expansions $f(z) = \sum_{k\in \ZZ} c_
 - Removable singularity: truncated at $k=0$, so $c_{\leq -1} = 0$.
 :::
 
-
 :::{.example title="Removable singularities"}
 \envlist
 
 - $f(z) \da \sin(z)/z$ has a removable singularity at $z=0$, and one can redefine $f(0) \da 1$.
 - If $f(z) = p(z)/q(z)$ with $q(z_0)=0$ and $p(z_0)=0$, then $z_0$ is removable with $f(z_0)\da p'(z_0)/q'(z_0)$.
 :::
-
-
 
 :::{.example title="Essential singularities"}
 $f(z) \da e^{1/z}$ has an essential singularity at $z=0$, since we can expand and pick up infinitely many negative terms:
@@ -46,13 +42,16 @@ e^{1/z} = 1 + {1\over z} + {1\over 2! z^2} + \cdots
 .\]
 In fact there exists a neighborhood of zero such that $f(U) = \CC\smz$.
 Similarly $g(z) \da \sin\qty{1\over z}$ has an essential singularity at $z=0$, and there is a neighborhood $V$ of zero such that $g(V) = \CC$.
-
 :::
 
 :::{.example title="?"}
 The singularities of a rational function are always isolated, since there are finitely many zeros of any polynomial.
 The function $F(z) \da \Log(z)$ has a singularity at $z=0$ that is **not** isolated, since every neighborhood intersects the branch cut $(-\infty, 0) \cross \ts{ 0 }$, where $F$ is not even defined.
 The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and isolated singularities at $1/n$ for all $n$.
+:::
+
+:::{.warnings}
+$f(z) \da z^{1\over 2}$ has a singularity at zero that does not fall under this classification -- $z=0$ is a **branch singularity** and admits no Laurent expansion around $z=0$.
 :::
 
 
