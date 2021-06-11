@@ -52,6 +52,8 @@ The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and is
 
 :::{.warnings}
 $f(z) \da z^{1\over 2}$ has a singularity at zero that does not fall under this classification -- $z=0$ is a **branch singularity** and admits no Laurent expansion around $z=0$.
+
+A similar example: $\qty{z(z-1)}^{1\over 2}$ has two branch singularities at $z=0, 1$.
 :::
 
 

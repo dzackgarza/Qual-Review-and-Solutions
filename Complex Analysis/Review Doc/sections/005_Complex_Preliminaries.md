@@ -63,6 +63,16 @@ z^{\alpha} \da e^{\alpha \Log(z)}
 :::
 
 
+:::{.warnings}
+It's tempting to define
+\[
+z^{1\over n} \da (re^{i\theta})^{1\over n} = r^{1\over n} e^{i\theta \over n}
+,\]
+but this requires a branch cut to ensure continuity.
+
+:::
+
+
 :::{.remark}
 Note the problem: for $z\da x+i0 \in \RR^{\leq 0}$, just above the axis consider $z_+ \da x + i\eps$ and $z_- \da x-i\eps$.
 Then
