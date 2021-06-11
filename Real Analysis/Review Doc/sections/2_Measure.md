@@ -239,3 +239,9 @@ $$
 Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
 :::
 
+
+:::{.definition title="$\sigma\dash$finiteness"}
+A measure space $(X, \mcm, \mu)$ is **$\sigma\dash$finite** if $X$ can be written as a union of countably many measurable sets with finite measure.
+
+:::
+
