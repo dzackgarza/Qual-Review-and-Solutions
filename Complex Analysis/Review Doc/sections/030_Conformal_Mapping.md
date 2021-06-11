@@ -117,6 +117,8 @@ F: \HH^\circ &\mapstofrom \DD^\circ \\
 z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
+
+**Boundary behavior:**
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
 So this extends to a map $\HH\to \DD$.
 :::
@@ -134,6 +136,10 @@ Note that if you look at the image of $\HH$ under $z\mapsto z^{\alpha}$, you get
 \ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } \\
 .\]
 For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < w^{1\over \alpha}$.
+
+**Boundary behavior:**
+
+- As $x$ travels from $-\infty\to 0$, $F_\alpha(x)$ travels along the ray $\theta = \alpha \pi$, so $L = \ts{ e^{t \alpha \pi } \st t\in (0, \infty) }$, from $\infty\to 0$.
 
 
 :::
