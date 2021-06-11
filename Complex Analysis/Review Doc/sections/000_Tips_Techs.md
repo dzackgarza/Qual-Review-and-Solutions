@@ -102,9 +102,19 @@ and set ${n\choose k} \da (n)_k/k!$, then
 
 :::{.fact title="Some useful series"}
 \[
-\sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
-\sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
-\sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\sum_{k=1}^{n} k 
+  &=\frac{n(n+1)}{2} \\
+\sum_{k=1}^{n} k^{2} 
+  &=\frac{n(n+1)(2 n+1)}{6} \\
+\sum_{k=1}^{n} k^{3} 
+  &=\frac{n^{2}(n+1)^{2}}{4}  \\
+e^z &= \sum_{k\geq 0} {z^k \over k!}
+\sin(z) 
+  &= \sum_{k \text{ odd} \geq 1} (-1)^{k+1 \over 2} {z^k \over k!} \\
+  &= z - {1\over 3!}z^3 + {1\over 5!}z^5 + \cdots \\
+\cos(z) 
+  &= \sum_{k \text{ even} \geq 0} (-1)^{k\over 2} {z^k \over k!} \\
+  &= 1 - {1\over 2!}z^2 + {1\over 4!}z^4 + \cdots \\
 \log(1-x) 
   &= \sum_{k \geq 0} {z^k\over k} \quad \abs{z} < 1 \\
 \dd{}{z} \sum_{k=0}^\infty a_k z^k 
