@@ -94,11 +94,14 @@ Then let $h = \abs{f}^p$:
 
 :::
 
-:::{.remark}
+:::{.remark title="Different forms of CS"}
 In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
 Some other useful forms:
 \[
-\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2} \leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right)
+\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2} 
+&\leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right) \\
+\left|\int_{\mathbb{R}^{n}} f(x) \overline{g(x)} d x\right|^{2} 
+&\leq \int_{\mathbb{R}^{n}}|f(x)|^{2} d x \int_{\mathbb{R}^{n}}|g(x)|^{2} d x
 .\]
 
 :::
