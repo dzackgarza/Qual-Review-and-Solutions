@@ -163,7 +163,7 @@ On $S^1$,
 To show a function is holomorphic,
 
 - Use Morera's theorem
-- Find a primitive
+- Find a primitive (sufficient but not necessary)
 
 :::
 
