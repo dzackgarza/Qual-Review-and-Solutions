@@ -85,6 +85,20 @@ There are 8 major types of conformal maps:
 
 :::
 
+
+:::{.proposition title="List of Conformal Maps"}
+
+Half-plane to disc:
+\[
+\ts{\Im(z) > 0 } &\mapstofrom \ts{\abs{z} \leq 1 } \\
+z &\mapsto {i-z \over i+z} \\
+i \qty{1-w \over 1+w} &\mapsfrom w
+.\]
+
+
+:::
+
+
 :::{.theorem title="Characterization of conformal maps"}
 Conformal maps $\DD\to\DD$ have the form
 \[
@@ -92,7 +106,11 @@ g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} 
 .\]
 :::
 
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
 
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::
 
 
 ## Schwarz
