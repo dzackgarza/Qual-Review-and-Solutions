@@ -1,18 +1,6 @@
 > A great deal of content borrowed from the following: <https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf>
 
-# Useful Techniques
-
-## Notation
-| Notation                                                     | Definition                                             |
-|--------------------------------------------------------------|--------------------------------------------------------|
-| $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
-| $\HH \da \ts{x+iy \st y > 0}$                                | The upper half-plane                                   |
-| $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
-| $\HH_{1\over 2}$                                             | The first quadrant                                     |
-| $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
-| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizontal strip                                   |
-|                                                              |                                                        |
-|                                                              |                                                        |
+# General Info / Tips / Techniques
 
 ## Greatest Hits
 
