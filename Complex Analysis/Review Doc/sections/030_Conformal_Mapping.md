@@ -121,6 +121,8 @@ i \qty{1-w \over 1+w} &\mapsfrom w
 **Boundary behavior:**
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
 So this extends to a map $\HH\to \DD$.
+
+> Mnemonic: every $z\in \HH$ is closed to $i$ than $-i$.
 :::
 
 
@@ -128,7 +130,7 @@ So this extends to a map $\HH\to \DD$.
 \[
 \HH_{R} &\mapstofrom \DD \\
 \ts{ z \st \Re(z) > 0 } &\mapstofrom \ts{ w \st \abs{w} < 1 } \\
-z &\mapsto {1+z \over 1-z}
+z &\mapsto {1+z \over 1-z} \\
 {w-1\over w+1} &\mapstofrom w
 .\]
 
@@ -146,6 +148,7 @@ This can easily be inverted:
 &\implies z = {w-1\over w+1}
 .\]
 
+> Mnemonic: every $z\in \HH_R$ is closed to 1 than $-1$.
 
 :::
 
