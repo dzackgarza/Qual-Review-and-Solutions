@@ -359,10 +359,18 @@ given by the $n\dash$valent Cayley graph covering a wedge of circles.
 \end{tikzcd}
 
 
+\begin{tikzcd}
+\ZZ/q
+  \ar[r] 
+& 
+  S^3
+  \ar[d, "{(z, w) \mapsto (e^{2\pi i \over q} z, e^{2\pi i p \over q}) w}"] 
+\\
+& 
+L(p, q)
+\end{tikzcd}
 
 
 - $T^2 \mapsvia{\times 2} \KK$
-- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
-- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
 
 :::
