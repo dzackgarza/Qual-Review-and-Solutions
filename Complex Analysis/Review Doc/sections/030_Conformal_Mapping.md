@@ -109,7 +109,6 @@ There are 8 major types of conformal maps:
 
 \todo[inline]{Pictures!}
 
-
 :::{.proposition title="Half-plane to Disc"}
 \[
 F: \HH^\circ &\mapstofrom \DD^\circ \\
@@ -245,8 +244,7 @@ f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta /
 - As $x$ ranges from $-1\to 1$ in $\RR$, $f(z)$ ranges from $0\to \infty$ with $f(0) = 1$.
 :::
 
-
-:::{.proposition title="Upper half-plane to horizontal strip"}
+:::{.proposition title="Log: Upper half-plane to horizontal strip"}
 \[
 \HH &\mapstofrom \RR \cross (0, \pi) \\
 \ts{ z \st \Im(z) > 0 } &\mapstofrom \ts{ w \st \Im(z) \in (0, \pi ) } \\
@@ -263,27 +261,39 @@ e^w &\mapsfrom w
 
 :::
 
-
 :::{.remark}
 This extends to a function $\CC\sm\RR^{\leq 0} \to \RR \cross (-\pi, \pi)$.
 Circles of radius $R$ are mapped to vertical line segments connecting $\ln(R) + i\pi$ to $\ln(R) - i\pi$, and rays are mapped to horizontal lines.
 :::
 
 
-
-
-
-
-### Strip to Disc
-
-- Map to horizontal strip by rotation $z\mapsto \lambda z$.
-- Map horizontal strip to sector by $z \mapsto e^z$
-- Map sector to $\HH$ by $z\mapsto z^{\pi\over\alpha}$.
-- Map $\HH\to\DD$.
-
+:::{.remark}
+One can find other specific images of the logarithm:
 \[
-e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
+\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \RR^{<0} \cross (0, \pi ) \\
+\ts{ z \st \abs{z} > 1,\, \Im(z) > 0 } &\mapstofrom \RR^{>0} \cross (0, \pi ) \\
 .\]
+
+:::
+
+
+:::{.proposition title="Half-discs to half strips"}
+
+:::
+
+
+:::{.proposition title="Half-disc to upper half-plane"}
+
+:::
+
+
+:::{.proposition title="Upper half-plane to vertical half-strip"}
+
+:::
+
+
+
+
 
 
 
