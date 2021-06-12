@@ -178,11 +178,14 @@ The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover.
 The fiber above $x_0$ contains the two antipodal points.
 :::
 
-:::{.example title="The torus"}
-The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
+:::{.example title="The torus $S^1 \cross S^1$"}
+The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. 
+The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
-:::{.fact}
+
+
+:::{.proposition title="General construction for wedge products"}
 For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
 
 - Each vertex corresponds to one of the universal covers $\tilde X_i$,
@@ -191,8 +194,10 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
 :::
 
-:::{.example title="Covering spaces of wedges of spheres"}
-The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$, and the universal cover is the following 4-valent Cayley graph:
+
+
+:::{.example title="$S^1 \wedgeprod S^1$"}
+The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$ by van Kampen, and the universal cover is the following 4-valent Cayley graph:
 
 ![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
 
@@ -201,18 +206,19 @@ See Hatcher p.58 for other covers.
 :::
 
 :::{.corollary title="Every subgroup of a free group is free"}
-Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+Idea for a particular case: use the fact that $\pi_1\qty{\bigvee^k S^1} = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. 
+Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on the edges in the complement of a maximal tree. 
 
 :::
 
-:::{.example title="of a universal covering space"}
+:::{.example title="$\RP^2 \wedgeprod \RP^2$"}
 The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinite string of copies of 2-valent $S^2$s:
 
 ![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
 
 :::
 
-:::{.example title="of a universal covering space"}
+:::{.example title="$\RP^2 \wedgeprod T^2$"}
 The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
 Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
 
@@ -265,7 +271,7 @@ Since every map into a contractible space is nullhomotopic, there is a homotopy 
 But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
 :::
 
-:::{.proposition title="Application: showing one space can not cover another"}
+:::{.proposition title="Showing one space can not cover another"}
 There is no covering map $p: \RP^2 \to \TT^2$.
 :::
 
