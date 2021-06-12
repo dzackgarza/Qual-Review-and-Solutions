@@ -246,7 +246,7 @@ f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta /
 :::
 
 
-:::{.proposition title="Upper half-plane to horizontal disc"}
+:::{.proposition title="Upper half-plane to horizontal strip"}
 \[
 \HH &\mapstofrom \RR \cross (0, \pi) \\
 \ts{ z \st \Im(z) > 0 } &\mapstofrom \ts{ w \st \Im(z) \in (0, \pi ) } \\
@@ -254,8 +254,16 @@ z &\mapsto \log(z) \\
 e^w &\mapsfrom w
 .\]
 
+- Why this lands in a strip: use that $\arg(z) \in (0, \pi)$ and $\log(z) = \abs{z} + i\arg(z)$.
+- 
 
 :::
+
+
+:::{.remark}
+This extends to a function $\CC\sm\RR^{\leq 0} \to \RR \cross (-\pi, \pi)$.
+:::
+
 
 
 
