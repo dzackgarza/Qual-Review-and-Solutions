@@ -389,3 +389,15 @@ L(p, q)
 If $f:X\to Y$ is a covering map of degree 1, then $f$ is necessarily a homeomorphism.
 :::
 
+
+## Exercises
+
+
+:::{.problem title="?"}
+Let $X$ be $S^1$ with two 2-cells attached via $z\mapsto z^5$ and $z\mapsto z^3$.
+
+- Compute $\pi_1(X)$ and $H_*(X)$ as a ring.
+- Show that $X$ is not homeomorphic to $S^2$.
+
+:::
+
