@@ -123,6 +123,23 @@ This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges fro
 So this extends to a map $\HH\to \DD$.
 
 > Mnemonic: every $z\in \HH$ is closed to $i$ than $-i$.
+
+:::
+
+
+
+:::{.remark}
+Some write a similar map:
+\[
+\HH^\circ &\to \DD^\circ \\
+z &\mapsto {z-i \over z+i}
+.\]
+This is just a composition of the above map with the flip $z\mapsto -z$:
+\[
+- {i-z \over i + z} = {z-i \over i+z} = {z-i \over z+i}
+.\]
+
+
 :::
 
 
@@ -190,11 +207,10 @@ Idea: compose some known functions.
 
 First map the sector to the half-plane:
 \[
-g: S_\alpha &\to \HH \\
-g(z) &= z^{\pi \over \alpha}
+S_{\alpha} \to S_{\pi} = \HH \to \DD \\
+z \mapsto z^{\pi \over \alpha} \mapsto {}
 .\]
 
-Then compose with a map $\HH\to\DD$:
 
 
 :::
