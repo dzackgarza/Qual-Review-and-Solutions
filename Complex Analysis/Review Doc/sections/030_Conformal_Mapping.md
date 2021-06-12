@@ -200,7 +200,6 @@ z &\mapstofrom {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 Idea: compose some known functions.
 ![](figures/image_2020-07-22-13-22-46.png)
 
-First map the sector to the half-plane:
 \[
 S_{\alpha} &\to S_{\pi} = \HH \to \DD \\
 z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\evalfrom_{z= z^{\pi\over \alpha}}
@@ -213,7 +212,7 @@ z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\evalfrom_{z= z^{\pi\over 
 
 :::{.proposition title="Upper half-disc to first quadrant"}
 \[
-\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \ts{ w \st \Re{w)>0,\, \Im(z) > 0} } \\
+\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \ts{ w \st \Re(w)>0,\, \Im(w) > 0}  \\
 z &\mapsto {1+z \over 1-z} \\
 {w-1\over w+1} &\mapsfrom w
 .\]
