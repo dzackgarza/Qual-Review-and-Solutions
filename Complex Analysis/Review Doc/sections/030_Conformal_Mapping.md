@@ -237,6 +237,12 @@ f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y
 
 **Boundary behavior**:
 
+- On the upper half circle \( \ts{ e^{it } \st t\in (0, \pi)  } \), write 
+\[
+f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta / 2}}{e^{-i \theta / 2}-e^{i \theta / 2}}=\frac{i}{\tan (\theta / 2)}
+.\]
+
+
 
 
 :::
