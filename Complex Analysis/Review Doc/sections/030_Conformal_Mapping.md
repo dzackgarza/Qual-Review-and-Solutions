@@ -217,6 +217,14 @@ z &\mapsto {1+z \over 1-z} \\
 {w-1\over w+1} &\mapsfrom w
 .\]
 
+Why this lands in the first quadrant: convert to real coordinates and use that squares are non-negative!
+\[
+f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y^{2}}
+.\]
+
+
+
+> Mnemonic: for $w$ in Q1, the distance from $w$ to 1 is smaller than from $w$ to $-1$.
 
 :::
 
