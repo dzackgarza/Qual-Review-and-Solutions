@@ -209,7 +209,6 @@ z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\evalfrom_{z= z^{\pi\over 
 
 :::
 
-
 :::{.proposition title="Upper half-disc to first quadrant"}
 \[
 \ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \ts{ w \st \Re(w)>0,\, \Im(w) > 0}  \\
@@ -240,9 +239,20 @@ f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y
 - On the upper half circle \( \ts{ e^{it } \st t\in (0, \pi)  } \), write 
 \[
 f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta / 2}}{e^{-i \theta / 2}-e^{i \theta / 2}}=\frac{i}{\tan (\theta / 2)}
+,\]
+  so as $t$ ranges $0\to \pi$ we have $f(z)$ ranging from $0\to i\infty$ along the imaginary axis.
+
+- As $x$ ranges from $-1\to 1$ in $\RR$, $f(z)$ ranges from $0\to \infty$ with $f(0) = 1$.
+:::
+
+
+:::{.proposition title="Upper half-plane to horizontal disc"}
+\[
+\HH &\mapstofrom \RR \cross (0, \pi) \\
+\ts{ z \st \Im(z) > 0 } &\mapstofrom \ts{ w \st \Im(z) \in (0, \pi ) } \\
+z &\mapsto \log(z) \\
+e^w &\mapsfrom w
 .\]
-
-
 
 
 :::
