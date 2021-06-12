@@ -345,7 +345,7 @@ S^1
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
 \begin{tikzcd}
-\ZZ
+2\pi i \ZZ \cong \ZZ
   \ar[r] 
 & 
 \hat{\CC\units} = \CC
