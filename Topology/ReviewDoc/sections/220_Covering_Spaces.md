@@ -183,8 +183,6 @@ The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$.
 The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
-
-
 :::{.proposition title="General construction for wedge products"}
 For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
 
@@ -193,8 +191,6 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 - T
 The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
 :::
-
-
 
 :::{.example title="$S^1 \wedgeprod S^1$"}
 The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$ by van Kampen, and the universal cover is the following 4-valent Cayley graph:
@@ -300,11 +296,11 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 :::{.fact title="Some common covering spaces"}
 \begin{tikzcd}
-\ZZ 
+2\pi \ZZ \cong \ZZ
   \ar[r] 
 & 
 \RR
-  \ar[d] 
+  \ar[d, "t\mapsto e^{i t}"] 
 \\
 & 
 S^1 
