@@ -297,11 +297,19 @@ This uses that $e^{iz} = e^{-\Im(z)} e^{i \Re(z)}$.
 
 
 :::{.proposition title="Half-disc to upper half-plane"}
+\[
+F: ? &\mapstofrom ? \\
+z & \mapsto -{1\over 2}\qty{z + z\inv} \\
+.\]
 
 :::
 
 
 :::{.proposition title="Upper half-plane to vertical half-strip"}
+\[
+? &\mapstofrom ? \\
+z &\mapsto \sin(z) \\
+.\]
 
 :::
 
