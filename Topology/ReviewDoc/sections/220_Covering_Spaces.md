@@ -347,6 +347,18 @@ S^n
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
+\begin{tikzcd}
+\ZZ/n
+  \ar[r] 
+& 
+  \CC\units
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+\CC
+\end{tikzcd}
+
+
 
 
 - $T^2 \mapsvia{\times 2} \KK$
