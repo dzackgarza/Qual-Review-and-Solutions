@@ -230,11 +230,12 @@ f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y
 {w-1 \over w+1} 
 &= { (w-1) \bar{(w+1)} \over \abs{w+1}^2}\\
 &={ \qty{u-1 + iv} \qty{u+1-iv} \over (u+1)^2 + v^2 } \\
-&= {(u^2 + v^2 + 1) \over (u+1)^2 + v^2}
+&= {u^2 + v^2 + 1 \over (u+1)^2 + v^2}
 + i\qty{ 2v \over (u+1)^2 + v^2}
 .\]
 
 
+**Boundary behavior**:
 
 
 
