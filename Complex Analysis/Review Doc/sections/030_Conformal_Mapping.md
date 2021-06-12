@@ -147,6 +147,9 @@ This can easily be inverted:
 &\implies z = {1-w \over 1+w}
 .\]
 
+**Boundary behavior**:
+Just a rotated version of $\HH\to \DD$!
+
 > Mnemonic: every $z\in \HH_R$ is closed to 1 than $-1$.
 
 :::
