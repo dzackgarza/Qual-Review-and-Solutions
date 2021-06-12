@@ -299,7 +299,7 @@ If $G\actson X$ is a free and properly discontinuous action, then
 2\pi \ZZ \cong \ZZ
   \ar[r] 
 & 
-\RR
+\hat{S^1} = \RR
   \ar[d, "t\mapsto e^{i t}"] 
 \\
 & 
@@ -308,10 +308,10 @@ S^1
 
 
 \begin{tikzcd}
-\ZZ^n 
+ \ZZ^{\times n}
   \ar[r] 
 & 
-\RR^n
+\hat{\TT^n} =\RR^n
   \ar[d] 
 \\
 & 
@@ -320,10 +320,10 @@ S^1
 
 
 \begin{tikzcd}
-\ZZ/2\ZZ 
+\ZZ/2
   \ar[r] 
 & 
-S^n
+\hat{\RP^n} = S^n
   \ar[d] 
 \\
 & 
@@ -335,11 +335,11 @@ S^n
 \ZZ^{\ast n} 
   \ar[r] 
 & 
-\mathrm{Cayley}(n)
+\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
   \ar[d] 
 \\
 & 
-\bigvee_n S^1 
+(S^1)^{\wedgeprod n}
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
