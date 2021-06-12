@@ -307,6 +307,7 @@ S^1
 \end{tikzcd}
 
 
+
 \begin{tikzcd}
  \ZZ^{\times n}
   \ar[r] 
@@ -342,6 +343,18 @@ S^1
 (S^1)^{\wedgeprod n}
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+\begin{tikzcd}
+\ZZ
+  \ar[r] 
+& 
+\hat{\CC\units} = \CC
+  \ar[d, "z\mapsto e^{z}"] 
+\\
+& 
+\CC\units
+\end{tikzcd}
+
 
 \begin{tikzcd}
 \ZZ/n
