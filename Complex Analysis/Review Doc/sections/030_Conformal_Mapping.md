@@ -126,8 +126,6 @@ So this extends to a map $\HH\to \DD$.
 
 :::
 
-
-
 :::{.remark}
 Some write a similar map:
 \[
@@ -141,7 +139,6 @@ This is just a composition of the above map with the flip $z\mapsto -z$:
 
 
 :::
-
 
 :::{.proposition title="Right half-plane to Disc"}
 \[
@@ -171,7 +168,6 @@ Just a rotated version of $\HH\to \DD$!
 
 :::
 
-
 :::{.proposition title="Sector to sector"}
 For $0 < \alpha < 2$:
 \[
@@ -193,7 +189,6 @@ For the inverse, choose a branch cut of $\log$ deleting the negative real axis, 
 
 :::
 
-
 :::{.proposition title="Sector to Disc"}
 The unmotivated formula first:
 \[
@@ -207,10 +202,21 @@ Idea: compose some known functions.
 
 First map the sector to the half-plane:
 \[
-S_{\alpha} \to S_{\pi} = \HH \to \DD \\
-z \mapsto z^{\pi \over \alpha} \mapsto {}
+S_{\alpha} &\to S_{\pi} = \HH \to \DD \\
+z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\evalfrom_{z= z^{\pi\over \alpha}}
 .\]
 
+
+
+:::
+
+
+:::{.proposition title="Upper half-disc to first quadrant"}
+\[
+\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \ts{ w \st \Re{w)>0,\, \Im(z) > 0} } \\
+z &\mapsto {1+z \over 1-z} \\
+{w-1\over w+1} &\mapsfrom w
+.\]
 
 
 :::
