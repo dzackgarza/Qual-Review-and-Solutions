@@ -217,15 +217,26 @@ z &\mapsto {1+z \over 1-z} \\
 {w-1\over w+1} &\mapsfrom w
 .\]
 
-Why this lands in the first quadrant: convert to real coordinates and use that squares are non-negative and $z=x+iy\in \DD \implies x^2 + y^2 < 1$:
+- Why this lands in the first quadrant: 
+  - Use that squares are non-negative and $z=x+iy\in \DD \implies x^2 + y^2 < 1$:
 \[
 f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y^{2}}
 .\]
-Why the inverse lands in the unit disc:
+- Why the inverse lands in the unit disc:
+  - For $w$ in Q1, the distance from $w$ to 1 is smaller than from $w$ to $-1$.
+  - Check that if $w=u+iv$ where $u, v>0$, the imaginary part of the image is positive:
+
+\[
+{w-1 \over w+1} 
+&= { (w-1) \bar{(w+1)} \over \abs{w+1}^2}\\
+&={ \qty{u-1 + iv} \qty{u+1-iv} \over (u+1)^2 + v^2 } \\
+&= {(u^2 + v^2 + 1) \over (u+1)^2 + v^2}
++ i\qty{ 2v \over (u+1)^2 + v^2}
+.\]
 
 
 
-> Mnemonic: for $w$ in Q1, the distance from $w$ to 1 is smaller than from $w$ to $-1$.
+
 
 :::
 
