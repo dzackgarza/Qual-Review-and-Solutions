@@ -383,3 +383,9 @@ L(p, q)
 - $T^2 \mapsvia{\times 2} \KK$
 
 :::
+
+
+:::{.fact}
+If $f:X\to Y$ is a covering map of degree 1, then $f$ is necessarily a homeomorphism.
+:::
+
