@@ -130,14 +130,14 @@ So this extends to a map $\HH\to \DD$.
 \[
 \HH_{R} &\mapstofrom \DD \\
 \ts{ z \st \Re(z) > 0 } &\mapstofrom \ts{ w \st \abs{w} < 1 } \\
-z &\mapsto {1+z \over 1-z} \\
-{w-1\over w+1} &\mapstofrom w
+z &\mapsto {1-z \over 1+z} \\
+{w+1\over w-1} &\mapstofrom w
 .\]
 
 Just map the *right* half-plane $\HH_R$ to the disc $\DD$ by precomposing with a rotation $e^{i\pi/2} = i$:
 \[
 \HH_{R} \to \HH &\to \DD \\
-z \mapsto iz &\mapsto {i- (iz) \over i + (iz)} = {1+z \over 1-z}
+z \mapsto iz &\mapsto {i- (iz) \over i + (iz)} = {i(1-z) \over i(1+z) } = {1-z \over 1+z}
 .\]
 
 This can easily be inverted:
@@ -151,7 +151,6 @@ This can easily be inverted:
 > Mnemonic: every $z\in \HH_R$ is closed to 1 than $-1$.
 
 :::
-
 
 
 :::{.proposition title="Sector to sector"}
