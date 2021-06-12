@@ -274,6 +274,11 @@ One can find other specific images of the logarithm:
 \ts{ z \st \abs{z} > 1,\, \Im(z) > 0 } &\mapstofrom \RR^{>0} \cross (0, \pi ) \\
 .\]
 
+For the upper half-disc to the negative horizontal half-strip:
+  - As $x$ travels $0\to 1$ in $\RR$, $\log(x)$ travels from $-\infty\to 0$.
+  - As $x$ travels from $-1$ to $1$ along $S^1\intersect \HH$, $\log(x)$ travels from $0\to i\pi$ vertically.
+  - As $x$ travels from $-1\to 0$, $\log(x)$ travels from $0+i\pi\to i-\infty+i\pi$ along the top of the strip.
+
 :::
 
 
