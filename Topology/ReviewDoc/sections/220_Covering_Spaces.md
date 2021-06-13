@@ -417,7 +417,8 @@ C^*(X)
 = (0 \to C_2(X) \mapsvia{d_2} C_1(X) \mapsvia{d_1} C_0(X) )
 = (0 \to \ZZ\adjoin{e_1, e_2} \mapsvia{\substack{e_1\mapsto 3e \\ e_2 \mapsto 5e} } \ZZ\adjoin{e} \mapsvia{d_1} \ZZ\adjoin{\pt} )
 .\]
+- $\ker d_2 = \gens{ 5e_1, -3e_2 }$, so $H_2 = \ZZ$.
+- Thus $H^*(X) = \Extalgebra_\ZZ(x)$ where $\abs{x} = 2$.
 
 :::
-
 
