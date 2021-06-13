@@ -474,3 +474,6 @@ If $f:X\to Y$ is a covering map of degree 1, then $f$ is necessarily a homeomorp
 
 
 
+## Exercises
+
+- See <https://www.math.utah.edu/~patrikis/6520Spring2018/6520hw4.pdf>
