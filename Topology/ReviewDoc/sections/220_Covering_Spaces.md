@@ -419,6 +419,7 @@ C^*(X)
 .\]
 - $\ker d_2 = \gens{ 5e_1, -3e_2 }$, so $H_2 = \ZZ$.
 - Thus $H^*(X) = \Extalgebra_\ZZ(x)$ where $\abs{x} = 2$.
+- $X\not\cong S^2$: delete a point $p$ in the interior of the 2-cell corresponding to $z^3$, then use that $S^2\sm\ts{\pt} \cong \RR^2$ is contractible but $\pi_1 X\sm\ts{\pt} = \ZZ/5$. 
 
 :::
 
