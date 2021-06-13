@@ -177,8 +177,10 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 S^1 
 \end{tikzcd}
 
+Any subgroup $H \leq \pi_1(S^1; 1) = \ZZ$ is of the form $H = n\ZZ$, so intermediate covers are obtained from $\hat{S^1}/n\ZZ = \RR/n\ZZ \cong S^1$:
+
 \begin{tikzcd}
-2\pi n\ZZ \cong \ZZ
+n\ZZ \cong \ZZ
   \ar[r] 
 & 
 S^1
@@ -187,6 +189,18 @@ S^1
 & 
 S^1 
 \end{tikzcd}
+
+\begin{tikzcd}
+2\pi i \ZZ \cong \ZZ
+  \ar[r] 
+& 
+\hat{\CC\units} = \CC
+  \ar[d, "z\mapsto e^{z}"] 
+\\
+& 
+\CC\units
+\end{tikzcd}
+
 
 
 \begin{tikzcd}
@@ -225,16 +239,6 @@ S^1
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
-\begin{tikzcd}
-2\pi i \ZZ \cong \ZZ
-  \ar[r] 
-& 
-\hat{\CC\units} = \CC
-  \ar[d, "z\mapsto e^{z}"] 
-\\
-& 
-\CC\units
-\end{tikzcd}
 
 
 \begin{tikzcd}
