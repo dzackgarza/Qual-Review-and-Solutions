@@ -41,7 +41,11 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 
 # Appendix: Proofs of the Fundamental Theorem of Algebra
 
-### Fundamental Theorem of Algebra: Argument Principle 
+### Argument Principle 
+
+
+:::{.proof title="using the argument principle"}
+\envlist
 
 - Let $P(z) = a_nz^n + \cdots + a_0$ and $g(z) = P'(z)/P(z)$, note $P$ is holomorphic
 - Since $\lim_{\abs z \to \infty} P(z) = \infty$, there exist an $R>0$ such that $P$ has no roots in $\theset{\abs{z} \geq R}$.
@@ -52,10 +56,14 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - Check that $\lim_{\abs{z\to \infty}}zg(z) = n$, so $g$ has a simple pole at $\infty$
 - Then $g$ has a Laurent series ${n\over z} + {c_2 \over z^2} + \cdots$
 - Integrate term-by-term to get $N(0) = n$.
+:::
 
 
 
-### Fundamental Theorem of Algebra: Rouche's Theorem
+
+
+
+### Rouche's Theorem
 
 - Let $P(z) = a_nz^n + \cdots + a_0$
 - Set $f(z) = a_n z^n$ and $g(z) = P(z) - f(z) = a_{n-1}z^{n-1} + \cdots + a_0$, so $f+g = P$.
@@ -77,7 +85,7 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 
 - Then $a_n z^n$ has $n$ zeros in $\abs{z} < R$, so $f+g$ also has $n$ zeros.
 
-### Fundamental Theorem of Algebra: Liouville's Theorem
+### Liouville's Theorem
 
 
 - Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire.
@@ -104,3 +112,5 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - But the only nonempty clopen subset of a connected space is the entire space.
 - So $p$ is surjective, and $p\inv(0)$ is nonempty.
 - So $p$ has a root.
+
+
