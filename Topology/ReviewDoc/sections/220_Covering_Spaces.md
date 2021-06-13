@@ -35,6 +35,11 @@ These are "maximally symmetric".
 
 ## Universal Covers
 
+
+:::{.definition title="Galois/normal/regular covers"}
+A covering $\tilde X \mapsvia{p} X$ is **Galois** (or **normal/regular**) over $(X, x_0)$ iff $\Deck(\tilde X)$ acts transitively on the fibers: for any two lifts $\tilde x_1, \tilde x_2\in \tilde X$ of $x_0 \in X$, there is a $\psi\in \Deck(\tilde X)$ with $\psi(\tilde x_1) = \tilde x_2$.
+:::
+
 :::{.proposition title="Fundamental theorem of covering spaces, Hatcher 1.39"}
 If $X$ is 
 
@@ -65,6 +70,7 @@ Moreover, letting $\tilde X \to X$ be an arbitrary path-connected cover and $H\d
 - $\Deck(\hat{X} \to X) \cong G$.
 
 :::
+
 
 :::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
 Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.

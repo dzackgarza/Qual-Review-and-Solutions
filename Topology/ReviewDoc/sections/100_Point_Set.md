@@ -232,3 +232,8 @@ This follows because every neighborhood of $q\in \QQ$ contains an irrational and
 Show that any map between compact Hausdorff spaces must be proper.
 :::
 
+:::{.solution}
+If $Y$ is compact Hausdorff, $U$ is compact iff $U$ is closed, and by continuity closed sets pull back.
+:::
+
+
