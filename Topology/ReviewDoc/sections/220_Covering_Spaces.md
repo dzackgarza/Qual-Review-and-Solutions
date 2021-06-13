@@ -177,7 +177,24 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 S^1 
 \end{tikzcd}
 
-Any subgroup $H \leq \pi_1(S^1; 1) = \ZZ$ is of the form $H = n\ZZ$, so intermediate covers are obtained from $\hat{S^1}/n\ZZ = \RR/n\ZZ \cong S^1$:
+Any subgroup $H \leq \pi_1(S^1; 1) = \ZZ$ is of the form $H = n\ZZ$, so intermediate covers are obtained from $\hat{S^1}/n\ZZ = \RR/n\ZZ \cong S^1$ by pulling back the universal bundle:
+
+\begin{tikzcd}
+	& \ZZ && {\hat{S^1} = \RR} \\
+	n\ZZ && {\hat{S^1}/n\ZZ \cong S^1} \\
+	&&& {S^1} \\
+	&& {S^1}
+	\arrow[from=1-2, to=1-4]
+	\arrow[from=1-4, to=3-4]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-3, to=4-3]
+	\arrow[dashed, from=2-1, to=1-2]
+	\arrow[dashed, from=2-3, to=1-4]
+	\arrow[dotted, from=4-3, to=3-4]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMSwwLCJcXFpaIl0sWzMsMCwiXFxoYXR7U14xfSA9IFxcUlIiXSxbMywyLCJTXjEiXSxbMCwxLCJuXFxaWiJdLFsyLDEsIlxcaGF0e1NeMX0vblxcWlogXFxjb25nIFNeMSJdLFsyLDMsIlNeMSJdLFswLDFdLFsxLDJdLFszLDRdLFs0LDVdLFszLDAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ==)
+
 
 \begin{tikzcd}
 n\ZZ \cong \ZZ
