@@ -1,4 +1,13 @@
-# Theorems
+# Point-Set
+
+## Summary and Topics
+
+Some key high-level topics:
+
+- Connectedness
+- Compactness
+- Metric spaces
+- Hausdorff spaces
 
 :::{.proposition title="The continuous image of a..."}
 The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
@@ -65,7 +74,6 @@ A metric space is compact iff it is complete and totally bounded.
 :::{.theorem title="Baire"}
 If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of countably many dense open sets in $X$ is again dense in $X$.
 :::
-
 
 ## Compactness
 
@@ -134,7 +142,6 @@ Every space has at least one retraction - for example, the constant map $r:X \in
 A continuous bijective open map is a homeomorphism.
 :::
 
-
 :::{.theorem title="Characterizations of continuous maps, Munkres 18.1"}
 For $f:X\to Y$, TFAE:
 
@@ -167,7 +174,6 @@ Let $N\subseteq X\cross Y$ be an open set containing the slice $x_0 \cross Y$, t
 
 :::
 
-
 :::{.remark}
 Compactness in one factor is a necessary condition.
 For a counterexample, $\RR^2$ and let $N$ be the set contained between a Gaussian and its reflection across the $x\dash$axis.
@@ -175,7 +181,6 @@ Then no tube about $y=0$ is entirely contained within $N$:
 
 ![image_2021-05-21-01-39-26](figures/image_2021-05-21-01-39-26.png)
 :::
-
 
 :::{.proof title="Sketch"}
 \envlist
@@ -209,4 +214,21 @@ Then no tube about $y=0$ is entirely contained within $N$:
   - So $(x, y) \in U_j \cross V_j$
 :::
 
+## "Analysis"-esque Results in Topology
+
+:::{.proposition title="The rationals are neither open nor closed"}
+$\QQ\subset \RR$ is not open and not closed.
+
+\
+
+This follows because every neighborhood of $q\in \QQ$ contains an irrational and every neighborhood of $q' \in \RR\sm \QQ$ contains a rational.
+:::
+
+
+## Exercises
+
+
+:::{.exercise title="?"}
+Show that any map between compact Hausdorff spaces must be proper.
+:::
 

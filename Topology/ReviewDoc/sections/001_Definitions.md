@@ -6,11 +6,9 @@
 The prefix "locally blah" almost always means that for every $x\in X$, there exists *some* neighborhood $N_x\ni x$ which has property "blah".
 :::
 
-
 :::{.definition title="Accumulation point"}
 See **limit point**.
 :::
-
 
 :::{.definition title="Basis for a topology"}
 A set $\mathcal{B}$ is a **basis** for a topology iff
@@ -218,6 +216,10 @@ For $(X, \tau_X)$ and $(Y, \tau_Y)$ topological spaces, defining
 yields the **product topology** on $X \cross Y$.
 :::
 
+:::{.definition title="Proper"}
+A map $f:X\to Y$ is **proper** if pullbacks of compact sets are compact: if $K \subseteq Y$ is compact, then $f\inv(K) \subseteq X$ is compact.
+:::
+
 :::{.definition title="Quasicompact"}
 A topological space $X$ (possible non-Hausdorff) is **quasi-compact** iff every open cover admits a finite subcover.
 If $X$ is additionally Hausdorff, $X$ is said to be **compact**.
@@ -255,12 +257,10 @@ Alt:
 Let $X$ be a topological space and $A \subset X$ be a subspace, then a **retraction** of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity.
 :::
 
-
 :::{.remark}
 If $X$ retracts onto $A$ with $\iota:A\injects X$, then $i_*$ is injective.
 Any nonempty space retracts to a point via a constant map.
 :::
-
 
 :::{.definition title="Saturated"}
 A subset $U \subseteq X$ is **saturated** with respect to a surjective map $p: X\surjects Y$ if and only if whenever $U \intersect p ^{-1} (y) = V \neq \emptyset$, we have $V \subseteq U$, i.e. $U$ contains every set $p ^{-1} (y)$ that it intersects.
@@ -948,10 +948,6 @@ For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is a
 :::
 \todo[inline]{Definitions}
 
-:::{.definition title="Properly Discontinuous"}
-
-:::
-\todo[inline]{Definitions}
 
 :::{.definition title="Pullback"}
 
