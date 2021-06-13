@@ -165,6 +165,105 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 
 ### Examples
 
+:::{.fact title="Some common covering spaces"}
+\begin{tikzcd}
+2\pi \ZZ \cong \ZZ
+  \ar[r] 
+& 
+\hat{S^1} = \RR
+  \ar[d, "t\mapsto e^{i t}"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+
+\begin{tikzcd}
+2\pi n\ZZ \cong \ZZ
+  \ar[r] 
+& 
+S^1
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+ \ZZ^{\times n}
+  \ar[r] 
+& 
+\hat{\TT^n} =\RR^n
+  \ar[d] 
+\\
+& 
+\TT^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/2
+  \ar[r] 
+& 
+\hat{\RP^n} = S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^{\ast n} 
+  \ar[r] 
+& 
+\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+(S^1)^{\wedgeprod n}
+\end{tikzcd}
+given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+\begin{tikzcd}
+2\pi i \ZZ \cong \ZZ
+  \ar[r] 
+& 
+\hat{\CC\units} = \CC
+  \ar[d, "z\mapsto e^{z}"] 
+\\
+& 
+\CC\units
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/n
+  \ar[r] 
+& 
+  \CC\units
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+\CC
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/q
+  \ar[r] 
+& 
+  S^3
+  \ar[d, "{(z, w) \mapsto (e^{2\pi i \over q} z, e^{2\pi i p \over q}) w}"] 
+\\
+& 
+L(p, q)
+\end{tikzcd}
+
+
+- $T^2 \mapsvia{\times 2} \KK$
+
+:::
 :::{.example title="The circle $S^1$"}
 Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
 The induced map can be described on generators as
@@ -299,96 +398,6 @@ If $G\actson X$ is a free and properly discontinuous action, then
 2. If $X$ is path-connected, then $G = \Aut_{\mathrm{Cov}} (X)$ is the group of deck transformations for the cover $p$,
 
 3. If $X$ is path-connected and locally path-connected, then $G\cong \pi_1(X/G) / p_*(\pi_1(X))$.
-
-:::
-
-:::{.fact title="Some common covering spaces"}
-\begin{tikzcd}
-2\pi \ZZ \cong \ZZ
-  \ar[r] 
-& 
-\hat{S^1} = \RR
-  \ar[d, "t\mapsto e^{i t}"] 
-\\
-& 
-S^1 
-\end{tikzcd}
-
-
-
-\begin{tikzcd}
- \ZZ^{\times n}
-  \ar[r] 
-& 
-\hat{\TT^n} =\RR^n
-  \ar[d] 
-\\
-& 
-\TT^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ/2
-  \ar[r] 
-& 
-\hat{\RP^n} = S^n
-  \ar[d] 
-\\
-& 
-\RP^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ^{\ast n} 
-  \ar[r] 
-& 
-\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
-  \ar[d] 
-\\
-& 
-(S^1)^{\wedgeprod n}
-\end{tikzcd}
-given by the $n\dash$valent Cayley graph covering a wedge of circles.
-
-\begin{tikzcd}
-2\pi i \ZZ \cong \ZZ
-  \ar[r] 
-& 
-\hat{\CC\units} = \CC
-  \ar[d, "z\mapsto e^{z}"] 
-\\
-& 
-\CC\units
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ/n
-  \ar[r] 
-& 
-  \CC\units
-  \ar[d, "z\mapsto z^n"] 
-\\
-& 
-\CC
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ/q
-  \ar[r] 
-& 
-  S^3
-  \ar[d, "{(z, w) \mapsto (e^{2\pi i \over q} z, e^{2\pi i p \over q}) w}"] 
-\\
-& 
-L(p, q)
-\end{tikzcd}
-
-
-- $T^2 \mapsvia{\times 2} \KK$
 
 :::
 
