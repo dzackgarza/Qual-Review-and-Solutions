@@ -39,10 +39,9 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 :::
 
 
-# Appendix: Proofs of the Fundamental Theorem of Algebra
+# Proofs of the Fundamental Theorem of Algebra
 
 ### Argument Principle 
-
 
 :::{.proof title="using the argument principle"}
 \envlist
@@ -58,12 +57,10 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - Integrate term-by-term to get $N(0) = n$.
 :::
 
-
-
-
-
-
 ### Rouche's Theorem
+
+:::{.proof title="using Rouche's theorem"}
+\envlist
 
 - Let $P(z) = a_nz^n + \cdots + a_0$
 - Set $f(z) = a_n z^n$ and $g(z) = P(z) - f(z) = a_{n-1}z^{n-1} + \cdots + a_0$, so $f+g = P$.
@@ -85,8 +82,12 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 
 - Then $a_n z^n$ has $n$ zeros in $\abs{z} < R$, so $f+g$ also has $n$ zeros.
 
+:::
+
 ### Liouville's Theorem
 
+:::{.proof title="using Liouville's theorem"}
+\envlist
 
 - Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire.
   We will show it is also bounded and thus constant, a contradiction.
@@ -100,7 +101,13 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
   - Set $C \da \min(A, B)$, then $\abs{p(z)} \geq C$ on all of $\CC$ and thus $\abs{1/p(z)} \leq C$ everywhere. 
   - So $1/p(z)$ is bounded an entire and thus constant by Liouville's theorem -- but this forces $p$ to be constant. $\contradiction$
 
-### Fundamental Theorem of Algebra: Open Mapping Theorem
+
+:::
+
+### Open Mapping Theorem
+
+:::{.proof title="using the Open Mapping theorem"}
+\envlist
 
 - $p$ induces a continuous map $\CP^1 \to \CP^1$
 - The continuous image of compact space is compact; 
@@ -112,5 +119,34 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - But the only nonempty clopen subset of a connected space is the entire space.
 - So $p$ is surjective, and $p\inv(0)$ is nonempty.
 - So $p$ has a root.
+
+:::
+
+### Generalized Liouville
+
+
+:::{.theorem title="Generalized Liouville"}
+If $X$ is a compact complex manifold,
+any holomorphic $f:X\to \CC$ is constant.
+:::
+
+
+:::{.lemma title="?"}
+If $f:X\to Y$ is a nonconstant holomorphic map between Riemann surfaces with $X$ compact, then
+
+- $f$ must be surjective,
+- $Y$ must be compact,
+- $f\inv(q)$ is finite for all $q\in Y$,
+- The branch and ramification loci consist of finitely many points.
+:::
+
+
+
+:::{.proof title="of FTA, using Generalized Liouville"}
+Given a nonconstant $p\in \CC[x]$, regard it as a function $p: \PP^1(\CC) \to \PP^1(\CC)$ by extending so that $p(\infty) = \infty$.
+Since $p$ is nonconstant, by the lemma $p$ is surjective, so there exists some $x\neq \infty$ in $\PP^1(\CC)$ with $p(x) = 0$.
+:::
+
+
 
 
