@@ -71,6 +71,45 @@ Moreover, letting $\tilde X \to X$ be an arbitrary path-connected cover and $H\d
 
 :::
 
+:::{.remark}
+A Galois cover $\tilde X\to X$ with $\Deck(\tilde X) = G$ is equivalently a principal $G\dash$bundle for a discrete $G$:
+
+\begin{tikzcd}
+G 
+  \ar[r] 
+& 
+\tilde X
+  \ar[d] 
+\\
+& 
+X 
+\end{tikzcd}
+
+:::
+
+
+:::{.remark}
+Covering spaces of $X$ are classified by subgroups of $\pi_1(X)$:
+\[
+\correspond{
+  \text{Covering spaces $\tilde X\to X$}
+}/\text{Isomorphisms over }X
+&\mapstofrom
+\correspond{
+  \text{Subgroups } H\leq \pi_1(X)
+}/\text{Conjugacy}
+\\ \\
+\correspond{
+  \text{Galois covering spaces $\tilde X\to X$}
+}
+&\mapstofrom
+\correspond{
+  \text{Normal subgroups } H \normal \pi_1(X)
+}
+\]
+
+:::
+
 
 :::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
 Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.
