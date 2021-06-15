@@ -237,6 +237,13 @@ Equivalently,
 Note that $0$ is in every ideal.
 :::
 
+
+:::{.definition title="Characteristic"}
+Using that every ring has a $\mods{\ZZ}$ structure, the **characteristic** of a ring $R$ is the smallest $n$ such that $n\actson R = 0$.
+
+:::
+
+
 ### Elements  
 
 :::{.definition title="Divisibility of Elements"}
@@ -702,12 +709,20 @@ Every finite division ring is a field, i.e. finite division rings must be commut
 
 :::{.definition title="Chain in a poset"}
 In a poset, a **chain** is a totally ordered subset.
+An **upper bound** on a subset $S$ of a poset $X$ is any $x\in X$ such that $s\leq x$ for all $s\in S$.
 :::
 
 
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 :::
+
+
+:::{.remark}
+You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
+To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
+:::
+
 
 :::{.proposition title="Existence of maximal ideals"}
 Every proper ideal is contained in a maximal ideal.
