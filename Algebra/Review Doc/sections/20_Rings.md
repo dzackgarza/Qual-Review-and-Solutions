@@ -31,17 +31,14 @@ Where it's also true that this statement makes sense:
 :::
 
 
-:::{.proposition title="nth Isomorphism Theorem"}
+:::{.proposition title="Third Isomorphism Theorem"}
 There is a bijective correspondence:
 \[
 \correspond{
-  \text{Ideals } J \normal R \\
-  \text{containing I}
+  J \in \Id(R) \st J\contains I
 }
 &\mapstofrom
-\correspond{
-  \text{Ideals } \bar{J} \normal R/I
-} \\
+  \Id(R/I) \\
 J \da \phi\inv(\bar J) &\mapsfrom \bar{J}
 ,\]
 where $\phi: R\to R/I$ is the canonical quotient morphism.
@@ -60,6 +57,7 @@ S/I \leq R/I
 {R/I \over J/I} \mveq {R\over J}
 .\]
 
+Moreover, $A\leq R$ is a subring containing $I$ iff $A/I \in \Id(R/I)$.
 
 
 :::
