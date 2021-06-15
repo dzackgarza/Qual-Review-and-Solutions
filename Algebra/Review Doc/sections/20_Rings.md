@@ -110,11 +110,10 @@ This forces $x=r\inv$.
 :::{.proof title="?"}
 \envlist
 
-Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $M$.
-  
+Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
 \[
 &\quad R/\mfm \in \Field \\
-&\iff \not\exists \bar{J} \da J/\mfm \neq R \in \Id(R/\mfm) && J \in \Id(R) \\
+&\iff \not\exists J/\mfm \in \Id(R/\mfm)\nonzero \text{ such that } J \in \Id(R) \\
 &\iff \not\exists \mfm \subsetneq J \subsetneq R \\
 &\iff J\in \mspec(R)
 .\]
