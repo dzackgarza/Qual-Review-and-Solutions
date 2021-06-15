@@ -18,6 +18,21 @@ More traditionally stated:
 :::
 
 
+:::{.proposition title="Second Isomorphism Theorem"}
+Let $R\in \Ring, S\leq R, I\in \Id(R)$, then
+
+- $S+I \leq R$
+- $S \intersect I \normal S$
+- There is an isomorphism:
+\[
+{S+I \over I} \mveq {S\over S \intersect I}
+.\]
+
+
+:::
+
+
+
 :::{.proposition title="nth Isomorphism Theorem"}
 There is a bijective correspondence:
 \[
