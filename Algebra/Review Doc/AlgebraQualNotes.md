@@ -32,6 +32,8 @@
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
 \newcommand{\Fp}[0]{{\mathbb{F}_p}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
@@ -52,7 +54,10 @@
 \newcommand{\RR}[0]{{\mathbb{R}}}
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \renewcommand{\SS}[0]{{\mathbb{S}}}
+\newcommand{\WW}[0]{{\mathbb{W}}}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
 \newcommand{\ZZG}[0]{{\mathbb{Z}G}}
 \newcommand{\ZZH}[0]{{\mathbb{Z}H}}
@@ -64,12 +69,15 @@
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZZp}[0]{{ \mathbb{Z}_{(p)} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
 \newcommand{\chp}[0]{\operatorname{ch. p}}
 \newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
 \newcommand{\HT}[0]{{\operatorname{HT}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\qc}[0]{{\operatorname{qc}}}
 \newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\vol}[0]{\operatorname{vol}}
@@ -124,6 +132,7 @@
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
 \newcommand{\HP}[0]{{\operatorname{HP}}}
@@ -162,16 +171,36 @@
 \newcommand{\SO}[0]{{\operatorname{SO}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
 \newcommand{\MO}[0]{{\operatorname{MO}}}
+\newcommand{\KO}[0]{{\operatorname{KO}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\ku}[0]{{\operatorname{ku}}}
+\newcommand{\MU}[0]{{\operatorname{MU}}}
+\newcommand{\BU}[0]{{\operatorname{BU}}}
+\newcommand{\BO}[0]{{\operatorname{BO}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\KU}[0]{{\operatorname{KU}}}
+\newcommand{\BP}[0]{{\operatorname{BP}}}
+\newcommand{\MSO}[0]{{\operatorname{MSO}}}
+\newcommand{\MSp}[0]{{\operatorname{MSpin}}}
+\newcommand{\MSpin}[0]{{\operatorname{MSpin}}}
+\newcommand{\MStr}[0]{{\operatorname{MString}}}
+\newcommand{\MString}[0]{{\operatorname{MString}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
 \newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Monoid}[0]{\mathsf{Mon}}
 \newcommand{\Poset}[0]{\mathsf{Poset}}
 \newcommand{\Fun}[0]{{\mathsf{Fun}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
@@ -184,12 +213,14 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\FGL}[0]{\mathsf{FGL}}
 \newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
 \newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
 \newcommand{\Sp}[0]{{\mathsf{Sp}}}
+\newcommand{\Spectra}[0]{{\mathsf{Sp}}}
 \newcommand{\sets}[0]{{\mathsf{Set}}}
 \newcommand{\Grp}[0]{{\mathsf{Grp}}}
 \newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
@@ -220,7 +251,9 @@
 \newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
 \newcommand{\cdga}[0]{{\mathsf{cdga} }}
 \newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\kAlg}[0]{{\mathsf{Alg}_{/k} }}
 \newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\rAlg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
 \newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\alg}[0]{\mathsf{Alg}}
@@ -241,6 +274,11 @@
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
 \newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\FFlat}[0]{{\mathsf{FFlat}}}
+\newcommand{\kSch}[0]{{\mathsf{Sch}_{/k}}}
+\newcommand{\Lag}[0]{{\mathsf{Lag}}}
+\newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
+\newcommand{\Wein}[0]{{\mathsf{Wein}}}
 \newcommand{\Aff}[0]{{\mathsf{Aff}}}
 \newcommand{\Schf}[0]{{\mathsf{Schf}}}
 \newcommand{\Rep}[0]{{\mathsf{Rep}}}
@@ -289,6 +327,7 @@
 \newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
 \newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
@@ -372,8 +411,9 @@
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{{J}\qty{#1} }}
+\newcommand{\jacrad}[1]{{{J}\qty{#1} }}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
 \newcommand{\mapsvia}[1]{\xrightarrow{#1}}
 \newcommand{\fromvia}[1]{\xleftarrow{#1}}
@@ -429,7 +469,8 @@
 \newcommand{\CY}{{ \text{CY} }}
 \newcommand{\FS}{{ \text{FS} }}
 \newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\Map}[0]{{\operatorname{Maps}}}
+\newcommand{\Maps}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
@@ -471,6 +512,7 @@
 \newcommand{\smashprod}[0]{\wedge}
 \newcommand{\Wedge}[0]{\bigwedge}
 \newcommand{\Extalg}[0]{\bigwedge}
+\newcommand{\Extalgebra}[0]{\bigwedge}
 \newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
@@ -523,14 +565,15 @@
 \newcommand\jan{\operatorname{Jan}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\TMF{ \mathrm{TMF} }
+\newcommand\TAF{ \mathrm{TAF} }
 \newcommand\tmf{ \mathrm{tmf} }
+\newcommand\taf{ \mathrm{taf} }
 \newcommand\Fix{ \mathrm{Fix} }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator{\submfds}{SubMfds}
 \DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -555,9 +598,7 @@
 \DeclareMathOperator{\projection}{Proj}
 \DeclareMathOperator{\Der}{Der}
 \DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
 \DeclareMathOperator{\D}{{\mathsf{D} }}
 \DeclareMathOperator{\K}{{\mathsf{K} }}
 \DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
@@ -575,7 +616,8 @@
 
 \newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
 \newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\globsec}[1]{{\mathsf{\Gamma}\qty{#1} }}
 
 \newcommand{\DSt}[0]{{ \operatorname{DSt}}}
 
@@ -631,6 +673,7 @@
 \newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 
@@ -654,6 +697,7 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
@@ -676,13 +720,7 @@
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
+
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
@@ -698,8 +736,13 @@
 \newcommand{\equalsbecause}[1]{\overset{#1}{=}}
 \newcommand{\congbecause}[1]{\overset{#1}{\cong}}
 \newcommand{\congas}[1]{\underset{#1}{\cong}}
+\newcommand{\isoas}[1]{\underset{#1}{\cong}}
+\newcommand{\weakeq}[1]{\underset{#1}{\to}}
+\newcommand{\addbase}[1]{{ {}_{\pt} }}
 \newcommand{\ideal}[1]{\mathcal{#1}}
 \newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\powerseries}[1]{ { \left[ {#1} \right] } }
+\newcommand{\formalpowerseries}[1]{ { \left[\left[ {#1} \right] \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
 
 
@@ -720,6 +763,9 @@
 }}
 
 
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
 \newcommand{\ess}[0]{{\mathrm{ess}}}
@@ -741,6 +787,10 @@
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+
+
+\newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
+\newcommand{\complete}[1]{{}^{\hat{}}_{#1}}
 
 # Topics and Remarks 2
 
@@ -965,6 +1015,9 @@ Chapters 1-9 of Dummit and Foote
 
 ## Big List of Notation
 
+:::{.remark title="Notation"}
+I use the following notation throughout:
+
 +--------------------------------------+------------------------------------------------------------------------------------------------------------------+
 | Notation                             | Definition                                                                                                       |
 +======================================+==================================================================================================================+
@@ -1011,7 +1064,11 @@ Chapters 1-9 of Dummit and Foote
 |                                      |  \( \da \ts{ U \subseteq X }  \)  |
 +--------------------------------------+---------------------------------------------------------------------------------------+
 
-- For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
+:::
+
+:::{.remark}
+For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
+:::
 
 ## Definitions
 
@@ -1035,66 +1092,12 @@ In particular, this works when $a, b$ are coprime and $d=1$.
 If you see "coprime" in a finite group question, try the division algorithm.
 :::
 
-:::{.definition title="Subgroup Generated by a Subset"}
-If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
-\[
-\gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
-\]
-where adjacent $h_i$ are distinct.
+:::{.definition title="Order"}
+The **order** of an element $g\in G$, denoted $n \da o(g)$, is the smallest $n\in \ZZ^{\geq 0}$ such that $g^n = e$.
 :::
 
-:::{.definition title="Conjugacy class"}
-The **conjugacy class** of $h$ is defined as 
-\[
-C(h) \da \ts{ ghg\inv \st g\in G } 
-.\]
-:::
-
-:::{.remark}
-$[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
-Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
-However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
-\
-
-Also note that$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
-:::
-
-:::{.definition title="Conjugate subgroups"}
-Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
-Note that all conjugates have the same cardinality.
-:::
-
-:::{.definition title="Normal subgroup"}
-A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$, or equivalently $gHg\inv = H$ for all $g$, so $H$ has only itself as a conjugate.
-We denote this by $N\normal G$.
-Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
-:::
-
-:::{.proposition title="Normal iff disjoint union of conjugacy classes"}
-$N\normal G \iff N = \disjoint' [h_i]$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
-:::
-
-:::{.proof title="?"}
-Note that $C(h_i) = \ts{ gh_i g\inv \st g\in G }$, and $gh_i g\inv \in H$ since $H$ is normal, so $C(h_i) \subseteq G$ for all $i$.
-Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ for all $i$ and $H$ is normal.
-:::
-
-:::{.definition title="Centralizer"}
-\[
-C_G(H) = \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
-\]
-These are elements that fix $H$ pointwise under the conjugation action.
-:::
-
-:::{.definition title="Normalizer"}
-\[
-N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
-\]
-Contrast to the centralizer: these don't have to fix $H$ pointwise.
-:::
-
-:::{.remark}
-$C_G(S) \normal N_G(H)$ for any $H$.
+:::{.exercise title="?"}
+Show that the order of any element in a group divides the order of the group.
 :::
 
 :::{.definition title="Commutator"}
@@ -1122,11 +1125,7 @@ Define a map $\psi: F(g_i) \to H$ where $g_i\mapsto h_i$, then since the $h_i$ s
 So $\psi$ factors through $\ker \pi$ yielding a morphism $F/\ker \pi \to H$.
 :::
 
-:::{.proposition title="NC Theorem"}
-$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
-:::
-
-## Subgroups, Cosets, Quotients
+## Subgroups
 
 :::{.definition title="Subgroup"}
 A subset $H\subseteq G$ is a **subgroup** iff
@@ -1134,6 +1133,18 @@ A subset $H\subseteq G$ is a **subgroup** iff
 1. Closure: $HH \subset H$
 2. Identity: $e\in H$
 3. Inverses: $g\in H \iff g\inv \in H$.
+:::
+
+:::{.exercise title="Unions of subgroups"}
+Show that if $K, H\leq G$ are subgroups, then their union $H \union K$ is a subgroup iff (wlog) $H \subset K$.
+:::
+
+:::{.definition title="Subgroup Generated by a Subset"}
+If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
+\[
+\gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
+\]
+where adjacent $h_i$ are distinct.
 :::
 
 :::{.proposition title="One-step subgroup test"}
@@ -1148,8 +1159,8 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 - Closure: let $x, y\in H$, then $y\inv \in H$ by above, so $xy = x(y\inv )\inv \in H$.
 :::
 
-:::{.fact }
-Coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
+:::{.exercise title="Coprime order implies disjoint"}
+Show that coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
 :::
 
 :::{.proposition title="Intersection of subgroups is a subgroup"}
@@ -1160,6 +1171,161 @@ Moreover $J\leq H$ and $J \leq K$.
 :::{.proof title="?"}
 One-step subgroup test.
 :::
+
+:::{.exercise title="?"}
+\envlist
+
+- Show that the intersection of two subgroups is again a subgroup.
+- Show that the intersection of two subgroups with coprime orders is trivial.
+- Show that subgroups with the *same* prime order are either equal or intersect trivially.
+- Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
+- Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
+:::
+
+## Conjugacy
+
+:::{.definition title="Conjugacy class"}
+The **conjugacy class** of $h$ is defined as 
+\[
+C(h) \da \ts{ ghg\inv \st g\in G } 
+.\]
+:::
+
+:::{.remark}
+$[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
+Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
+However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
+\
+
+Also note that$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
+:::
+
+:::{.definition title="Conjugate subgroups"}
+Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
+Note that all conjugates have the same cardinality.
+:::
+
+:::{.exercise title="?"}
+Show that the size of a conjugacy class divides the order of a group.
+:::
+
+:::{.exercise title="?"}
+Show that if $H < G$ is a proper subgroup, then $\Union_{g\in G} gHg\inv \subset G$ is a proper subset.
+
+> Hint: consider the intersection and count.
+> Try Orbit-stabilizer?
+
+:::
+
+:::{.solution}
+Strategy: bound the cardinality.
+All conjugates of $H$ have the same cardinality, say $\# H = m$.
+Suppose there are $n$ distinct conjugates of $H$.
+Then they intersect only at the identity, so count their elements:
+\[
+\# \Union_{g\in G} gHg\inv = 1 + n(m-1)
+.\]
+Use that $n = [G: N_G(H)]$ by Orbit-Stabilizer, and $N_G(H) \leq G \implies n \leq n' \da [G:H]$.
+Now note $n'm = \# H[G:H] = \# G$ by Lagrange:
+\[
+\# \Union_{g\in G} gHg\inv 
+&= 1 + n(m-1) \\
+&\leq 1 + n'(m-1) \\
+&= 1 + n'm -n' \\
+&= 1 + \# G - n' \\
+&= \# G - (n' - 1) \\
+&< \# G && \iff n' \da [G:H] > 1
+.\]
+:::
+
+:::{.exercise title="?"}
+Show that normal groups absorb conjugacy classes: if $N\normal G$ and $[g_i]$ is a conjugacy class in $g$, either $[g_i] \subseteq N$ or $[g_i] \intersect N = \emptyset$.
+:::
+
+:::{.exercise title="?"}
+Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
+:::
+
+### Normal Subgroups
+
+:::{.definition title="Normal subgroup"}
+A subgroup $N\leq G$ is **normal** iff $gH = Hg$ for every $g\in G$, or equivalently $gHg\inv = H$ for all $g$, so $H$ has only itself as a conjugate.
+We denote this by $N\normal G$.
+Equivalently, for every inner automorphism $\psi \in \Inn(G)$, $\psi(N) = N$.
+:::
+
+:::{.proposition title="Normal iff disjoint union of conjugacy classes"}
+$N\normal G \iff N = \disjoint' [h_i]$ is a disjoint union of conjugacy classes, where the index set for this union is one $h_i$ from each conjugacy class.
+:::
+
+:::{.proof title="?"}
+Note that $C(h_i) = \ts{ gh_i g\inv \st g\in G }$, and $gh_i g\inv \in H$ since $H$ is normal, so $C(h_i) \subseteq G$ for all $i$.
+Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ for all $i$ and $H$ is normal.
+:::
+
+:::{.exercise title="?"}
+- Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
+- Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
+
+:::
+
+:::{.exercise title="?"}
+Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
+:::
+
+## Centralizing and Centers
+
+:::{.definition title="Centralizer"}
+The centralizer of an en element is defined as 
+\[
+Z(h) \da C_G(h) \da \ts{ g\in G \st ghg\inv = h } 
+,\]
+the elements of $G$ the stabilize $h$ under conjugation.
+
+The **centralizer of a subset** $H$ is defined as
+\[
+Z(H) \da C_G(H) \da \Intersect_{h\in H} C_G(h) \da \theset{g\in G \suchthat ghg\inv = h ~\forall h\in H}
+,\]
+the elements of $G$ that simultaneously stabilize all of $H$ pointwise under conjugation.
+:::
+
+:::{.definition title="Normalizer"}
+\[
+N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
+\]
+Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead can permute elements of $H$.
+:::
+
+:::{.remark}
+$C_G(S) \normal N_G(H)$ for any $H$.
+:::
+
+:::{.proposition title="NC Theorem"}
+$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
+:::
+
+:::{.definition title="Normalizers Grow"}
+If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
+:::
+
+:::{.definition title="Center"}
+\[
+Z(G) = \ts{ g\in G \st [g, h] = e \, \forall h\in H}
+= \ts{ g\in G \st Z(g) = G } 
+,\]
+the subgroup of *central* elements:
+those $g\in G$ that commute with every element of $G$.
+:::
+
+:::{.exercise title="?"}
+\envlist
+
+- Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
+- Show that $G/N$ is abelian iff $[G, G] \leq N$.
+- Show that every normal subgroup of $G$ is contained in $Z(G)$.
+:::
+
+## Cosets
 
 :::{.proposition title="Tower law for subgroups"}
 \[
@@ -1179,8 +1345,6 @@ Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct coset
 Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since $H\leq G$, which forces $h_i h_j\inv \not\in K$.
 So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$.
 :::
-
-## Cosets
 
 :::{.proposition title="Cosets are identical or disjoint"}
 Any two cosets $xH, yH$ are either identical or disjoint.
@@ -1231,12 +1395,15 @@ Nice trick: write $G/H = \ts{ g_1 H, g_2 H,\cdots, g_n H }$, then $G = \disjoint
 :::
 
 :::{.theorem title="Counting Cosets"}
-If $H\normal G$, then
+If $H\normal G$ and $G$ is finite then
 \[
 [G: H] = \abs{G/H} = {\abs G \over \abs H}
 .\]
 :::
 
+:::{.exercise title="?"}
+Show that if $G$ is finite then $\abs{G}/\abs{H} = [G: H]$.
+:::
 
 ## Special Groups
 
@@ -1280,12 +1447,15 @@ Everything squares to $-1$, and the triple product is $-1$:
 A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
 :::
 
+:::{.definition title="p-groups"}
+If $\abs{G} = p^k$, then $G$ is a **p-group.**
+:::
+
 ### Cyclic Groups
 
 :::{.theorem title="Subgroups of Cyclic Groups"}
 $G$ is cyclic of order $n \da \# G$ iff $G$ has a unique subgroup of order $d$ for each $d$ dividing $n$.
 :::
-
 
 :::{.proof title="?"}
 $\impliedby$:
@@ -1295,10 +1465,17 @@ $\implies$:
 If $G = \gens{ a }$ with $a^n=e$, then for each $d\divides n$ take $H_d \da \gens{ a^{n\over d} }$ for existence.
 :::
 
+:::{.exercise title="?"}
+\envlist
 
+- Show that any cyclic group is abelian.
+- Show that every subgroup of a cyclic group is cyclic.
+- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
+- Compute $\aut(\ZZ/n\ZZ)$ for $n$ composite.
+- Compute $\aut(\qty{\ZZ/p\ZZ}^n)$.
+:::
 
-### The Symmetric Group
-
+### Symmetric Groups
 
 :::{.definition title="The symmetric group"}
 The transposition presentation:
@@ -1307,7 +1484,6 @@ S_n \da \gens{ \sigma_1, \cdots, \sigma_{n-1} \st \sigma_i^2, [\sigma_i, \sigma_
 .\]
 
 :::
-
 
 :::{.definition title="The sign homomorphism"}
 Defined by the map
@@ -1385,13 +1561,11 @@ A_4 =
 
 :::
 
-
-
 ## Exercises
 
-- Show that normal groups absorb conjugacy classes: if $N\normal G$ and $[g_i]$ is a conjugacy class in $g$, either $[g_i] \subseteq N$ or $[g_i] \intersect N = \emptyset$.
-- Prove that the size of a conjugacy class of $g_i$ is the index of its centralizer, $[G: Z(g_i)] \da [G: C_G(g_i)]$.
-- Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
+:::{.exercise title="?"}
+\envlist
+
 - Show that if $G$ is a finite group acting transitively on a set $X$ with at least two elements,
 then there exists $g \in G$ which fixes no point of $X$.
 - Let $p$ be prime.
@@ -1406,6 +1580,7 @@ then there exists $g \in G$ which fixes no point of $X$.
   Assume $P$ is cyclic and generated by $x$.
   Show that the sign of the permutation of $G$ corresponding to $x\mapsto gx$ is 1, and deduce that $G$ has a nontrivial quotient of order 2.
 
+:::
 
 ## Counting Theorems
 
@@ -1545,9 +1720,10 @@ For a group $G$ acting on a set $X$,
 | \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
 | \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
 | \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
-| \( \Fix(G) = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
+| \( \Fix = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
 
 Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
+Also, $x\in \Fix$ iff $\Orb(x) = \ts{x}$ and $\Stab_G(x) = G$.
 :::
 
 
@@ -1568,7 +1744,7 @@ Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
 
 - The orbit $\OO(x) = Gx = G$ is the entire group.
   - This action is transitive.
-- The set of fixed points \( \Fix(G) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The set of fixed points \( \Fix = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
 - The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
 
@@ -1583,7 +1759,7 @@ Let $G$ act on *itself* by conjugation.
 
 - The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
   - Thus the action is transitive iff there is one conjugacy class.
-- The set of fixed points $\Fix(G) = Z(G)$ is the **center**.
+- The set of fixed points $\Fix = Z(G)$ is the **center**.
 - The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
 - The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
 
@@ -1594,11 +1770,18 @@ Let $G$ act on *itself* by conjugation.
 Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
 :::
 
-:::{.corollary}
-Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: C_G(x)]$, i.e.
+:::{.remark}
+Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: Z(x)]$, i.e.
 \[
 \# {C(x)} = [G: Z(x)]
 .\]
+Now note that $G = \disjoint_k' \Orb(h_k)$ is a disjoint union of orbits (the prime denotes taking one representative from each orbit), and so
+\[
+G &= \Disjoint_k' \Orb(h_k) \mapsvia{\sim} \Disjoint_k' G/\Stab(h_k) \\
+\implies \# G &= \sum_{k}' \# C(h) = \sum_k' \#(G/\Stab(h_k)) = \sum_k' [G: Z(h_k)]
+.\]
+Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, which yields the class equation:
+
 
 :::
 
@@ -1608,21 +1791,6 @@ Directly interpreting this using the orbit-stabilizer formula, the size of a con
 \]
 :::
 
-:::{.proof title="of the class equation"}
-$G$ is a disjoint union of its conjugacy classes, so $G = \Disjoint'_{g\in G} C(g)$ where $\disjoint'$ denotes taking one representative from each conjugacy class.
-Thus 
-\[
-\# G = \Sum'_{g\in G} \# C(g) = \Sum'_{g\in G} [G: Z(g)]
-.\]
-Elements $g \in Z(g)$ in the center satisfy $Z(g) = \ts{ e }$ and $[G: Z(g)] = 1$ since $Z(g) = G$, so pulling these out of the sum yields
-\[
-\# G 
-&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} [G: Z(g)] +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
-&= \Sum'_{\substack{g\in G' \\ \# [G:Z(g)] = 1 }} 1 +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)] \\
-&= \# Z(G) +  \Sum'_{\substack{g\in G \\ [G:Z(g)] > 1} } [G: Z(g)]
-.\]
-
-:::
 
 :::{.proposition title="Application of the Class Equation"}
 If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
@@ -1696,7 +1864,7 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
   - This action is transitive iff all subgroups are conjugate.
-- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
+- The fixed points $\Fix$ form the set of **normal subgroups** of $G$.
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
@@ -1723,7 +1891,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
-- The fixed points form $\Fix(G) = \emptyset$.
+- The fixed points form $\Fix = \emptyset$.
 
 - The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
@@ -1746,6 +1914,11 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 - But $K = \ker \phi \normal G$, so $H\normal G$.
 
 :::
+
+:::{.exercise title="?"}
+Prove Poincaré's theorem: if $H\leq G$ is finite index, then there exists an $N\normal H$ where $[N: H] < n!$.
+:::
+
 
 
 # Sylow Theorems
@@ -1838,6 +2011,31 @@ Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zor
 - Let $G$ be a group of order $p$ with $v$ and $e$ positive integers, $p$ prime, $p > v$, and $v$ is not a multiple of $p$. 
   Show that $G$ has a normal Sylow p-subgroup.
 
+## Automorphism Groups
+
+:::{.fact}
+\envlist
+
+-  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
+
+- $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
+\[  
+\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+.\]
+  
+  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
+
+- $\Aut(\ZZ/n\ZZ) \cong \qty{\ZZ/n\ZZ}\units \cong \ZZ/\varphi(n)\ZZ$ where $\varphi$ is the totient function.
+
+  - $\varphi(p^k) = p^{k-1}(p-1)$
+
+- If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
+
+- $\Inn(G) \cong G/Z(G)$.
+
+
+:::
+
 ## Isomorphism Theorems
 
 :::{.theorem title="1st Isomorphism Theorem"}
@@ -1907,15 +2105,19 @@ H \suchthat H < \frac G N
 }
 .\]
 
-In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. This is given by the map $H \mapsto H/N$.
+In words, subgroups of $G$ containing $N$ correspond to subgroups of the quotient group $G/N$. 
+This is given by the map $H \mapsto H/N$.
 :::
 
 :::{.fact}
 $N \normal G$ and $N \subseteq H < G \implies N \normal H$.
 :::
 
-
 ## Products
+
+:::{.proposition title="HK Subgroup Theorem"}
+If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
+:::
 
 :::{.theorem title="Chinese Remainder Theorem"}
 \[
@@ -1985,99 +2187,73 @@ We have $G \cong N \semidirect_\psi H$ when
 
 :::
 
-:::{.proposition}
-If $H,K \leq G$ and $H \leq N_G(K)$ (or $K \normal G$) then $HK \leq G$ is a subgroup.
-:::
-
-
-## Automorphism Groups
-
-:::{.fact}
-\envlist
-
--  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
-
-- $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
-\[  
-\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
-.\]
-  
-  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
-
-- $\Aut(\ZZ/n\ZZ) \cong \qty{\ZZ/n\ZZ}\units \cong \ZZ/\varphi(n)\ZZ$ where $\varphi$ is the totient function.
-
-  - $\varphi(p^k) = p^{k-1}(p-1)$
-
-- If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
-
-
-:::
-
-
-## Special Classes of Groups
-
-:::{.definition title="2 out of 3 Property"}
-The **"2 out of 3 property"** is satisfied by a class of groups $\mathcal{C}$ iff whenever $G \in \mathcal{C}$, then $N, G/N \in \mathcal{C}$ for any $N \normal G$.
-:::
-
-:::{.definition title="p-groups"}
-If $\abs{G} = p^k$, then $G$ is a **p-group.**
-:::
-
-:::{.definition title="Normalizers Grow"}
-If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
-:::
-
-## Classification of Groups
-
-General strategy: find a normal subgroup (usually a Sylow) and use recognition of semidirect products.
-
-- [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
-- Order $p$: cyclic.
-- Order $p^2$: abelian, 2 choices.
-- Order $pq$: cases, letting $q<p$ and checking $q\divides p-1$.
-- Order $pqr$: ?
-- Order $p^2q$: ?
-
-
-:::{.proposition title="PQR Theorem"}
-If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
-:::
-
-
-### Finitely Generated Abelian Groups
+## Classification: Finitely Generated Abelian Groups
 
 :::{.definition title="Invariant Factor Decomposition"}
+If $G$ is a finitely generated abelian group, then there is a decomposition
 $$
-G \cong \ZZ^r \times \prod_{j=1}^m \ZZ/n_j\ZZ
+G \cong \ZZ^r \times \prod_{k=1}^m \ZZ/n_k
 \quad \text{ where } n_1 \divides \cdots \divides n_m
-.$$
+,$$
+where $r\in \ZZ^{\geq 0}$ is unique and the $n_i$ are uniquely determined.
 :::
 
-**Invariant factors $\to$ Elementary Divisors:**
-
-- Take prime factorization of each factor
-- Split into coprime pieces
-
-:::{.example}
+:::{.definition title="Elementary Divisor Decomposition"}
+If $G$ is a finitely generated abelian group, then there is a unique list of (not necessarily distinct) prime powers such that
 \[
-\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
-\cong
-\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2} \times \ZZ_7
-\]
+G \cong \ZZ^r \cross \prod_{k=1}^m \ZZ/p_k^{e_k}
+,\]
+where $r\in \ZZ^{\geq 0}$ is uniquely determined.
+
 :::
 
-**Elementary divisors $\to$ invariant factors:**
+:::{.proposition title="Converting between elementary divisors and invariant factors"}
+Given any presentation of a group as a product of cyclic groups $G = \prod \ZZ_i/m_i$, with the $m_i$ not necessarily distinct, 
 
-- Bin up by primes occurring (keeping exponents)
-- Take highest power from each prime as *last* invariant factor
-- Take highest power from all remaining primes as next, etc
+- Factor all of the $m_i$ into prime powers, keeping the exponents intact.
+- Organize into a table whose columns correspond to individual primes $p_i$.
+  - Within an individual column for the prime $p_k$, write all terms of the form $p_k^{e_k}$ (with exponents intact) 
+  - Arrange the terms from lowest at the top to highest at the bottom.
+    Push everything down so that the bottom-most rows are all filled out. 
+- For **elementary divisors**, just list out all of elements of the table individually, running across rows.
+- For **invariant factors**, iterate a process of taking the largest of each prime power (i.e. the bottom row) at each step, deleting that row, and continuing in the same fashion.
 
-:::{.example}
-Given the invariant factor decomposition
+> Note: this sounds much more complicated than it actually is!
+
+:::
+
+:::{.example title="Abstract Example"}
+
+| $p_1$       | $p_2$       | $p_3$       | $p_4$       |
+|-------------|-------------|-------------|-------------|
+| $p_1^{e_1}$ |             | $p_3^{g_1}$ |             |
+| $p_1^{e_2}$ | $p_2^{f_1}$ | $p_3^{g_2}$ |             |
+| $p_1^{e_3}$ | $p_2^{f_2}$ | $p_3^{g_3}$ | $p_4^{h_4}$ |
+
+- Elementary divisors: take columns.
+\[
+&\ZZ/p_1^{e_1} \cross \ZZ/p_1^{e_2} \cross \ZZ/p_1^{e_3} \\
+&\quad \cross \ZZ/p_2^{f_1} \cross \ZZ/p_2^{f_2} \\
+&\quad \cross \ZZ/p_3^{g_1} \cross \ZZ/p_3^{g_2} \cross \ZZ/p_3^{g_3} \\
+&\quad \cross \ZZ/p_4^{h_4} 
+.\]
+
+- Invariant factors: take rows (grouped by CRT)
+\[
+& \ZZ / \qty{p_1^{e_3} p_2^{f_2} p_3^{g_3} p_4^{h_4}} \\
+&\quad \cross \ZZ/ \qty{p_1^{e_2} p_2^{f_1} p_3^{g_2}} \\
+&\quad \cross \ZZ/\qty{p_1^{e_1} p_3^{g_1} }
+.\]
+
+:::
+
+:::{.example title="of putting a group in invariant factor form"}
 \[
 G = {\ZZ_{2}\times\ZZ_{2}\times\ZZ_{2}\times\ZZ_{3}\times\ZZ_{3}\times\ZZ_{5^2}}
 \]
+
+I'll use a shortcut for the table: instead of listing columns, I just list the prime powers for a single $p$ in increasing order in the same cell. 
+Then just always take the largest prime power in each cell at each stage:
 
 | $p = 2$  | $p= 3$  | $p =5$ |
 |---|---|---|
@@ -2097,18 +2273,42 @@ $\implies n_{m-1} = 3 \cdot 2$
 
 $\implies n_{m-2} = 2$
 
-and thus
+and thus the invariant factor form is
 \[
 G\cong \ZZ_2 \times \ZZ_{3\cdot 2} \times \ZZ_{5^2 \cdot 3 \cdot 2}
 \]
 :::
 
-### Classifying Abelian Groups of a Given Order
+:::{.example}
+\[
+G \da \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2\cdot 7} 
+\]
+Make the table by factoring the order of each cyclic piece, being careful not to combine terms that come from distinct summands (e.g. not combining the two copies of $2^1$), and to keep exponents from factorizations intact as a single term (e.g. the $2^3$):
 
-Let $p(x)$ be the integer partition function.
+| $2$   | $5$   | $7$ |
+|-------|-------|-----|
+| $2$   |       |     |
+| $2$   |       |     |
+| $2^3$ | $5^2$ | $7$ |
+
+Reading across rows from bottom to top (and using CRT to merge everything within a row) yields invariant factors on the LHS below.
+Reading down columns, left to right (merging nothing) yields elementary divisors on the RHS:
+
+\[
+\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
+\cong
+\ZZ_2 \times \ZZ_2 \times \ZZ_{2^3} \times \ZZ_{5^2} \times \ZZ_7
+.\]
+
+
+:::
+
+:::{.proposition title="Number of abelian groups is given by products of partition numbers"}
+If $\# G \da n = \prod_{k=1}^m p_k^{e_k}$, then there are exactly $\prod_{k=1}^m P(e_k)$ abelian groups of order $n$, where $P$ is the integer partition function.
+:::
 
 :::{.example title="of an integer partition"}
-Example: $p(6) = 11$, given by
+One can compute $P(6) = 11$, where all of the partitions are given by
 \[
 &[6], \\
 &[5, 1], \\
@@ -2125,9 +2325,191 @@ Example: $p(6) = 11$, given by
 
 :::
 
-Write $G = p_1^{k_1} p_2^{k_2} \cdots$; then there are $p(k_1) p(k_2) \cdots$ choices, each yielding a distinct group.
+:::{.remark}
+In practice, it is easy to list all of the partitions out for a given $n$, but it's also useful to have a systematic way to generate them and actually check that you have them all.
+:::
 
-\todo[inline]{Add example}
+:::{.proposition title="Formula for partitions"}
+There is a recurrence relation
+\[
+P_k(n) = P_k(n-k) + P_{k-1}(n-1)
+,\]
+which follows from the fact that one can obtain a partition of $n$ with $k$ parts by either
+
+- Taking a partition of $n-k$ into $k$ parts and adding 1 to each part, e.g. $[1,1,1,3] \mapsto [2,2,2,4]$
+- Taking a partition of $n-1$ into $k-1$ parts and adding a new standalone part $1$, e.g. $[1,1,2,5] \mapsto [1,1,2,5,1]$.
+
+Summing over $k$ yields the following, which can be recursed:
+\[
+P(n) 
+&= \sum_{k=1}^n P_k(n-k) + P(n-1) \\
+&= \sum_{k=1}^n P_k(n-k) + \sum_{k=1}^{n-1} P_k(n-1-k) + P(n-2) \\
+&= \cdots
+,\]
+where $P_k(m) = 0$ for $k>m$ and $P_m(m) = 1$.
+:::
+
+:::{.example title="?"}
+One can compute that $P(5) = 7$, and the formula recovers this:
+\[
+P(5) 
+&= \sum_{k=1}^5 P_{k}(5-k) + P(4) \\
+&= \qty{ P_1(4) + P_2(3) } + P(4) \\
+&= \qty{ P_1(4) + P_2(3) } + \qty{P_1(3) + P_2(2)} + P(3) \\
+&= \qty{ P_1(4) + P_2(3) } + \qty{P_1(3) + P_2(2)} + \qty{P_1(2)} + P(2) \\
+&= \qty{ P_1(4) + P_2(3) } + \qty{P_1(3) + P_2(2)} + \qty{P_1(2)} + \qty{P_1(1) + P(1)} \\
+&= \qty{1 + 1 } + \qty{1 + 1} + \qty{1} + \qty{1 + 1} \\
+&= 7
+.\]
+Note that you could just stop at the third line, since $P(3) = 3$ is easy to enumerate: $[1,1,1], [1,2], [3]$.
+:::
+
+:::{.example title="Applying this to classifying groups"}
+Suppose $\# G = n = p^3 q^4$. 
+Compute that $p(3) = 3$ and $p(4) = 5$, so there should be 15 abelian groups of this order.
+Enumerate the partitions:
+
+- For 3: $[1,1,1], [1,2], [3]$
+- For 4: $[1,1,1,1], [1,2,1], [1,3], [2,2], [4]$
+
+Now for every distinct pair taking one from the first line and one from the second, we get a group of that order.
+A partition of $m$ of the form $[a,b,c, \cdots]$ contributes a group of the form $\ZZ_{m^a} \cross \ZZ_{m^b} \cross \ZZ_{m^c} \cdots$.
+
+Crossing $[1,1,1]$ with everything:
+
+- $\qty{\ZZ_p \cross \ZZ_p \cross \ZZ_p} \cross \qty{\ZZ_q \cross \ZZ_q \cross \ZZ_q \cross \ZZ_q} \mapsfrom [1,1,1] \cross [1,1,1,1]$
+- $\qty{\ZZ_p \cross \ZZ_p \cross \ZZ_p} \cross \qty{\ZZ_q \cross \ZZ_{q^2} \times \ZZ_q} \mapsfrom [1,1,1]\cross [1,2,1]$
+- $\qty{\ZZ_p \cross \ZZ_p \cross \ZZ_p} \cross \qty{\ZZ_q \cross \ZZ_{q^3}} \mapsfrom [1,1,1] \cross [1,3]$
+- $\qty{\ZZ_p \cross \ZZ_p \cross \ZZ_p} \cross \qty{\ZZ_{q^2} \cross \ZZ_{q^2}} \mapsfrom [1,1,1] \cross [2,2]$
+- $\qty{\ZZ_p \cross \ZZ_p \cross \ZZ_p} \cross \ZZ_{q^4} \mapsfrom [1,1,1]\cross [4]$
+
+Crossing $[1, 2]$ with everything:
+
+- $\qty{ \ZZ_p \cross \ZZ_{p^2} } \cross \qty{\ZZ_q \cross \ZZ_q \cross \ZZ_q \cross \ZZ_q} \mapsfrom [1,2]\cross [1,1,1,1]$
+- $\qty{ \ZZ_p \cross \ZZ_{p^2} }  \cross \qty{\ZZ_q \cross \ZZ_{q^2} \cross \ZZ_q} \mapsfrom [1,2] \cross [1,2,1]$
+- $\qty{ \ZZ_p \cross \ZZ_{p^2} }  \cross \qty{\ZZ_q \cross \ZZ_{q^3}} \mapsfrom [1,2] \cross [1,3]$
+- $\qty{ \ZZ_p \cross \ZZ_{p^2} } \cross \qty{\ZZ_{q^2} \cross \ZZ_{q^2}} \mapsfrom [1,2] \cross [2,2]$
+- $\qty{ \ZZ_p \cross \ZZ_{p^2} }  \cross \ZZ_{q^4} \mapsfrom [1, 2]\cross [4]$
+
+And so on!
+:::
+
+## Classification: Groups of Special Orders
+
+General strategy: find a normal subgroup (usually a Sylow) and use recognition of semidirect products.
+
+- [Keith Conrad: Classifying Groups of Order 12](https://kconrad.math.uconn.edu/blurbs/grouptheory/group12.pdf)
+- Order $pqr$: ?
+- Order $p^2q$: ?
+
+:::{.proposition title="Classification of groups of order $p$"}
+Every group $G$ of prime order $p\geq 2$ is cyclic and thus isomorphic to $\ZZ/p$.
+
+Supposing that $g\neq e$, it generates a cyclic subgroup $H \da \gens{g} \leq G$ of order dividing $p$ by Lagrange.
+Since $g\neq e$, $\#H = p = \# G$.
+:::
+
+:::{.proposition title="Classification of groups of order $p^2$"}
+Every group $G$ of order $p^2$ is abelian, and thus isomorphic to either $\ZZ/p^2$ or $(\ZZ/p)^2$.
+
+Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$
+
+- Since $G$ is a $p\dash$group, $G$ has nontrivial center, so $m\neq 1$
+- If $m=p$, then $G/Z(G)$ is cyclic and thus $G$ is abelian by the $G/Z(G)$ theorem.
+- If $m=p^2$, $Z(G) = G$ and $G$ is abelian, done.
+:::
+
+:::{.proposition title="Classification of groups of order $pq$"}
+If $G$ is a group of order $pq$ where without loss of generality $q<p$, then
+
+1. If $q\notdivides p-1$ then $G\cong S_p \cross S_q \cong \ZZ/p \cross \ZZ/q \cong \ZZ/pq$
+2. If $q\divides p-1$ then $G\cong S_q \semidirect_\psi S_p$ where $S_p \normal G$ and $\psi: S_q \to \Aut(S_p)$, and $G$ has a presentation 
+\[
+G\cong \gens{a, b \st a^p, b^q, bab\inv = a^\ell} \\ \\ 
+\ell \not\equiv 1 \mod p && \ell^q \equiv 1 \mod p
+.\]
+:::
+
+:::{.proof title="of $pq$ theorem, case 1"}
+\envlist
+
+- Suppose $q<p$.
+- Apply the Sylow theorems to $p$:
+  - $n_p \cong 1 \mod p \implies n_p \in \ts{ 1, p+1, 2p+1, \cdots }$.
+  - $n_p \divides q \implies n_p \in \ts{ 1, q }$.
+  - Since $1<q<p<p+1$, this forces $n_p = 1$
+- Suppose $q\notdivides p-1$ and apply the Sylow theorems to $q$:
+  - $n_q \equiv 1\mod q \implies n_q \in \ts{ 1, q+1, 2q+1,\cdots }$
+  - $n_q \divides p \implies n_q\in \ts{ 1, p }$
+  - Now note that if $n_q\neq 1$, then $n_q=p$ and $p$ is of the form $kq+1$ for some $k$.
+  - **Use of assumption**: then $p=kq+1 \iff p-1 = kq \iff q\divides p-1$, which is precisely what we assumed is *not* the case.
+- So $n_p = n_q = 1$ and $S_p, S_q \normal G$.
+- Apply recognition of direct products:
+  - $S_p, S_q \leq G$: check.
+  - $S_p, S_q \normal G$: check.
+  - $S_p \intersect S_q = \ts{ e }$: check, because they are coprime order.
+  - $S_p S_q = G$: follows from a counting argument:
+  \[
+  \# S_pS_q = {\# S_p \# S_q \over \# \qty{S_p \intersect S_q}} = {pq \over 1} = \# G
+  .\]
+  If $G$ is finite, then $AB\leq G$ with $\#AB = \#G$ implies $AB = G$.
+:::
+
+:::{.proof title="of $pq$ theorem, case 2"}
+
+- Suppose $q \divides p-1$, the previous argument for $S_p$ works, but the argument for $S_q$ doesn't, so we get a semidirect product.
+- Work up to isomorphism:
+\[
+S_p \cong \ZZ/p = \gens{a\st a^p}
+&\normal G \\ \\
+S_q \cong \ZZ/q =\gens{b\st b^q}
+&\leq G
+.\]
+- We have 
+\[
+G&\cong \ZZ/q \semidirect_{\psi} \ZZ/p
+&& \psi: \ZZ/q \to \Aut\qty{\ZZ/p} \\ \\
+\implies G &\cong\gens{a,b \st a^p, b^q,\,\, aba\inv = \psi(b) = b^\ell } && \text{for some }\ell
+.\]
+  - Since $\ZZ/q$ is cyclic, such a morphism is determined by the image of the generator $[1]_q \in \ZZ/q$.
+  - Note that $[1]_q \mapsto \id_{\ZZ/p}$ is such a morphism, and yields the direct product again.
+- Identify $\Aut(\ZZ/p) \cong \qty{\qty{\ZZ/p}\units, \times } \cong \qty{ \ZZ/(p-1), +}$.
+- So we need to classify morphisms
+\[
+\psi: \ZZ/q\to \ZZ/(p-1)
+.\]
+  - Consider $\im\psi \leq \ZZ/(p-1)$.
+  - Sending $[1]_q$ to the identity in $\Aut(\ZZ/p)$ yields the direct product again, so pick nontrivial morphisms.
+  - Since $\# \im \psi \divides q$ which is prime, its order is equal to $q$.
+  - Since $q\divides p-1$ and $\ZZ/(p-1)$ is cyclic of order $p-1$, by Cauchy's theorem there is a unique subgroup of order $q$, say $C_q \leq \ZZ(p-1)$
+  - We can send $[1]_q$ to $[\alpha]_{p-1} \in \ZZ/(p-1)$ where $\alpha$ is any generator of $C_q$, of which there are $\phi(q) = q-1$ nontrivial choices.
+
+- Thus there are $q-1$ distinct nontrivial choices for the action $\psi: \ZZ/q \to \ZZ/(p-1)$.
+
+:::{.claim}
+All choices yield isomorphic semidirect products.
+:::
+
+- Use that $G\da A\semidirect_{\psi} N$ with $\psi:A\to \Aut(N)$ is an $\Aut(N)$ and $\Aut(A)$ module, where $f \in \Aut(N)$ and $\pi\in \Aut(A)$ act in the following ways:
+\[
+\pi &\actson A\semidirect_\psi N = A \semidirect_{\psi \circ \pi } N \\
+f &\actson A\semidirect_\psi N = A \semidirect_{\gamma_f \circ \psi } N
+.\]
+where
+\[
+\gamma_f: \Aut(N) &\to \Aut(N) \\
+\psi &\mapsto f\circ \psi \circ f\inv
+.\]
+  - These actions preserve the group isomorphism type of $G$
+
+- However, since $C_q \leq \ZZ/(p-1)$ and $\Aut(C_q) \cong \ZZ/(q-1)$, there are exactly $q-1$ automorphisms of the image $C_q$, say $\ts{\pi_k}_{k=1}^{q-1}$.
+- So $\psi \circ \pi_k: \ZZ/q \to \ZZ/(p-1)$ for $1\leq k \leq q-1$ yields $q-1$ distinct actions, and we're done.
+:::
+
+:::{.proposition title="PQR Theorem"}
+If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
+:::
+
 
 
 ## Series of Groups
@@ -2181,9 +2563,19 @@ Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1
 :::{.definition title="Solvable"}
 A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
 \[
-G \to G^1 \to \cdots \to \theset{e} \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
+G \da G_n > G_{n-1} > \cdots > G_2 > G_1 \da \ts{ e } && \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
 .\]
 :::
+
+
+:::{.remark}
+If $G = \Gal(L/K)$ is a Galois group corresponding to a polynomial $f$, then $G$ is solvable as a group iff $f$ is solvable in radicals: 
+there is a tower of extensions $K = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_m = L$ where
+
+1. $F_i = F_{i-1}(\alpha_i)$ where \( \alpha_i^{m_i } \in F_{i-1} \) for some power $m_i \in \ZZ^{\geq 0}$, and 
+2. $F_m \supseteq \SF(f)$ contains a splitting field for $f$.
+:::
+
 
 :::{.theorem title="Characterization of Solvable"}
 A group $G$ is solvable iff its derived series terminates.
@@ -2204,17 +2596,261 @@ If $n\geq 4$ then $S_n$ is solvable.
 
 # Ring Theory
 
-## Definitions
+:::{.proposition title="Ideal Operations"}
+\envlist
 
+- $I + J = \ts{i+j \st i\in I, j\in J} = \gens{I, J}$ is the smallest ideal containing $I$ and $J$.
+- $IJ = \ts{\sum_{k\leq N} x_k y_k \st x_k\in I, y_k \in J, N\in \ZZ^{\geq 0}}$ is the ideal generated by all finite sums of products.
+- $I \intersect J$ is an ideal, $I\union J$ is generally **not** an ideal
+- Ideals are *comaximal* if $I + J = \gens{ 1 }$.
+- If $I+J = \gens{ 1 }$ then $I \intersect J = IJ$. 
+:::
+
+## Isomorphism Theorems
+
+:::{.remark}
+These are all basically the same for modules.
+:::
+
+:::{.proposition title="First Isomorphism Theorem"}
+For any ring morphism $f:A\to B$ there is SES of rings
+\[
+0 \to \ker f \to A \to \im(f) \to 0
+,\]
+and thus $A/\ker f \cong \im f$.
+If $f$ is surjective, then $A/\ker f \cong B$.
+
+More traditionally stated:
+
+- $\ker \phi \in \Id(A)$
+- $\im \phi \leq B$ is a subring (not necessarily an ideal)
+- $R/\ker \phi \cong \im \phi$.
+:::
+
+
+:::{.proposition title="Second Isomorphism Theorem"}
+Let $R\in \Ring, S\leq R, I\in \Id(R)$, then there is an isomorphism:
+\[
+{S+I \over I} \mveq {S\over S \intersect I}
+.\]
+
+Where it's also true that this statement makes sense:
+
+- $S+I \leq R$ is a subring.
+- $S \intersect I \normal S$
+:::
+
+
+:::{.proposition title="Third Isomorphism Theorem"}
+For $I\in \Id(R)$, the canonical quotient map $\phi: R \to R/I$ induces a bijective correspondence:
+\[
+\correspond{
+  J \in \Id(R) \st J\contains I
+}
+&\mapstofrom
+  \Id(R/I) \\
+J \da \phi\inv(\bar J) &\mapsfrom \bar{J} \\
+J &\mapsto \bar{J} \da \phi(J) 
+,\]
+where $\phi: R\to R/I$ is the canonical quotient morphism.
+
+More traditionally:
+
+- If $S, I \in \Id(R)$ with $S$ containing $I$ then
+\[
+S/I \leq R/I
+.\]
+
+- Every ideal in $\Id(R/I)$ is of the form $\bar{S} \da S/I$ for some $S\in \Id(R)$ containing $I$.
+
+- If $I, J \in \Id(R)$ with $I \subseteq J \subseteq R$ then there is an isomorphism
+\[
+{R/I \over J/I} \mveq {R\over J}
+.\]
+
+Moreover, $A\leq R$ is a subring containing $I$ iff $A/I \in \Id(R/I)$.
+:::
+
+
+:::{.exercise title="?"}
+Show that if $J\in \Id(R)$ (with $J\contains I$) is radical/prime/maximal iff $\bar J \in \Id(R/I)$ is radical/prime/maximal.
+:::
+
+
+
+## Important Techniques
+
+
+:::{.proposition title="Fields are simple"}
+$R \in \Field \iff \Id(R) = \ts{ 0, R }$.
+:::
+
+:::{.proof title="?"}
+$\implies$:
+If $0\neq x\in I\normal R$, using that $R\nonzero = R\units$, $x$ is a unit.
+So $x\inv \in R$, and $xx\inv \da 1 \in I$ so $I = R$.
+
+$\impliedby$:
+Let $x\in R\nonzero$, then $Rx = R$ so $1\in Rx$ and $1=rx$ for some $r\in R$.
+This forces $x=r\inv$.
+:::
+
+
+
+:::{.proposition title="Showing ideals are maximal/prime with quotients"}
+\envlist
+
+- $R/\mfm$ is a field $\iff \mfm \in \mspec(R)$ is maximal.
+- $R/\mfp$ is an integral domain $\iff \mfp \in \spec(R)$ is prime.
+- $R/J$ is reduced $\iff J$ is radical.
+:::
+
+
+:::{.proof title="of 1"}
+Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
+\[
+&\quad R/\mfm \in \Field \\
+&\iff \not\exists J/\mfm \in \Id(R/\mfm)\nonzero \text{ such that } J \in \Id(R) \\
+&\iff \not\exists \mfm \subsetneq J \subsetneq R \\
+&\iff J\in \mspec(R)
+.\]
+
+:::
+
+
+:::{.proof title="of 2"}
+$\impliedby$:
+Show $xy = 0$ with $x\neq 0$ forces $y=0$.
+Let $x, y\in \mfp \in \spec R$, so $x = a + I, y = b + I$ for some $a,b\in R$.
+If $xy=0 \mod \mfp$ with $y\neq 0\mod \mfp$, we can check
+\[
+xy = (a+\mfp)(b+\mfp) \da (ab) + \mfp = 0 + \mfp \implies ab\in \mfp
+.\]
+Since $\mfp$ is prime and $x\neq 0 \implies a\not\in\mfp$, so $b\in \mfp$.
+But then 
+\[
+y \da b + \mfp = 0 + \mfp = 0 \mod \mfp
+.\]
+
+$\implies$:
+Let $a,b\in R$ with $xy\in \mfp$, we want to show that if $x\not \in \mfp$ then $y\in \mfp$.
+Note $x\not \in \mfp \iff x \cong 0 \mod \mfp$.
+Setting $x\da a + \mfp, y\da b + \mfp$ yields
+\[
+xy \da (a+\mfp)(b+\mfp) \da ab + \mfp = 0 \mod \mfp
+.\]
+Since $R/\mfp$ is a domain, assuming $x\neq 0 \mod \mfp$ we have $y = 0 \mod \mfp$, so $y\in \mfp$.
+
+
+
+
+:::
+
+:::{.remark}
+Note that this yields a quick proof that $\mspec R \subseteq \spec R$, using that $\Field \leq \mathsf{IntDomain}$:
+\[
+I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{IntDomain} \iff I \text{ prime}
+.\]
+:::
+
+
+:::{.fact}
+If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
+:::
+
+
+:::{.fact}
+The binomial expansion works in any ring:
+\[
+(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
+.\]
+
+This is useful when considering nilpotents or radicals.
+:::
+
+
+
+
+## Undergrad Review
+
+:::{.remark}
 Notation: 
 
 - \( \gens{ a } \da Ra \da \ts{ ra \st r \in R }  \) is the ideal generated by a single element.
+- $R = \gens{ 1 }$ is equivalently the ideal generated by 1. 
+:::
 
-### Undergrad Review
+### Basics 
+
+
+:::{.definition title="Ring"}
+A **ring** is a triple $(R, +, \cdot) \in \CRing$ such that 
+
+- $(R, +)\in \Ab\Grp$,
+- $(R, \cdot) \in \Monoid$
+- Distributivity: $a(b+c) = ab + ac$.
+:::
+
+:::{.example title="of rings"}
+Some of the most important examples of rings:
+
+- The usual suspects: $\ZZ, \QQ$
+  - Their analogs: number fields $K \da \QQ(\zeta)$, their rings of integers $\ZZ_K$ or $\OO_K$,
+- Gaussian integers $\ZZ(i)$
+- Fields $k = \FFpn, \RR$
+- Fraction fields of rings $\ff(R)$, e.g. $\ff(\ZZ) = \QQ$.
+- Polynomial rings $R\adjoin{\elts{x}{n}}$, particularly for $R=k$ a field
+- Power series rings $R\powerseries{\elts{x}{n}}$.
+  - Formal power series rings $R\formalpowerseries{\elts{x}{n}}$.
+- $\ZZpadic \da \ts{a/b \st p \notdivides b }$ the ring of $p\dash$adic integers
+- Rings of germs, e.g. $C^\infty(X, Y)$ where $f\sim g$ iff there exists some $U \subseteq X$ with $\ro{f}{U} = \ro{g}{U}$.
+:::
+
+:::{.definition title="Ring Morphism"}
+A morphism $f\in \CRing(X, Y)$ satisfies:
+
+- $f(1_X) = 1_Y$
+- $f(a(b+c)) = f(a)f(b) + f(a)f(c)$
+:::
+
+:::{.remark}
+Important notes:
+
+- $\ker f \da f\inv(\ts{0})$.
+- A bijective ring morphisms is automatically an isomorphism in $\CRing$.
+- $\ker f \normal X$ is an ideal, but $\im f \leq Y$ is only a subring in general.
+- For any ideal $I\normal R$ there is a quotient map $R\to R/I$, it's useful to write cosets as $a+I$.
+- For quotients, $x \equiv y \mod I \iff x-y \in I$.
+:::
+
+:::{.definition title="Ideal"}
+An **ideal** $I\normal R$ is a subset where $(I, +) \leq (R, +) \in \Grp$ is a subgroup and for $x\in R, i\in I$, $xi \in I$.
+Equivalently,
+
+- $RI \subseteq I$
+- $I + I \subseteq I$
+
+Note that $0$ is in every ideal.
+:::
+
+
+:::{.definition title="Characteristic"}
+Using that every ring has a $\mods{\ZZ}$ structure, the **characteristic** of a ring $R$ is the smallest $n$ such that $n\actson 1_R = 0_R$, i.e. $\sum_{i=1}^n 1_R = 0_R$.
+
+:::
+
+
+### Elements  
 
 :::{.definition title="Divisibility of Elements"}
 An element \( r\in R \) is **divisible** by \( q \in R \) if and only if there exists some \( c \in R \) such that \( r = qc \).
 In this case, we sometimes write \( q\divides r \).
+:::
+
+:::{.definition title="Units"}
+An element $r\in R$ is a **unit** if $r\divides 1$: there exists an $s\in R$ such that $rs = sr = 1$.
+Then $r\inv \da s$ is uniquely determined, and the set of units $(R\units, \cdot) \in \Ab\Grp$ forms a group.
+
 :::
 
 :::{.definition title="Irreducible Element"}
@@ -2231,21 +2867,9 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divi
 .\]
 :::
 
-
 :::{.fact}
 If $R$ is an integral domain, prime $\implies$ irreducible.
 If $R$ is a UFD, then prime $\iff$ irreducible.
-:::
-
-
-:::{.definition title="Zero Divisor"}
-An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$.
-Equivalently, the map
-\[  
-r_\wait: R &\to R \\
-x &\mapsto rx
-\]
-fails to be injective.
 :::
 
 :::{.definition title="Associate Elements"}
@@ -2253,6 +2877,31 @@ $a, b\in R$ are **associates** iff there exists a $u\in R\units$ such that $a = 
 Equivalently, $a\divides b$ and $b\divides a$.
 :::
 
+### Ideals
+
+
+:::{.example title="of specs"}
+
+- $\Id(\ZZ) = \ts{ \gens{m} \st m \in \ZZ^{\geq 0}}$
+- $\mspec \ZZ = \ts{ \gens{p} \st p\neq 0 \text{ is prime} }$
+- $\spec \ZZ = \mspec \ZZ \union \ts{ \gens{0} }$.
+- For $k$ a field and $f\in \kxn$ irreducible, $\gens{f} \in \spec \kxn$.
+  - $\mfm \da \ts{ f = \sum_I a_I x^I\in \kxn \st a_0 = 0  } \in \mspec \kxn$ (i.e. this is the ideal of polynomials with no constant term).
+
+:::
+
+
+:::{.proposition title="Proper ideals contain no units"}
+If $I\normal R$ is a proper ideal $\iff I$ contains no units.
+:::
+
+:::{.proof}
+$r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
+:::
+
+:::{.proposition}
+If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
+:::
 
 :::{.definition title="Irreducible Ideal"}
 An ideal $I\normal R$ is **irreducible** if it can not be written as the intersection of two larger ideals, i.e. there are not $J_1, J_2 \supseteq I$ such that $J_1 \intersect J_2 = I$.
@@ -2261,38 +2910,39 @@ An ideal $I\normal R$ is **irreducible** if it can not be written as the interse
 :::{.definition title="Prime Ideal"}
 $\mfp$ is a **prime** ideal $\iff$
 \[ 
-ab\in \mfp \implies a\in \mfp \txt{ or } b\in \mfp
+ab\in \mfp \implies a\in \mfp \text{ or } b\in \mfp
 .\]
 :::
 
-:::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
+:::{.proposition title="Prime implies irreducible for UFDs"}
+In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 :::
 
-
-:::{.remark}
-\envlist
-
-- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
-- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
-- A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+:::{.example title="of why the converse doesn't hold"}
+For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse:
+\[
+x^2 \mod{x^2 + x} \in \QQ[x]/(x^2 + x)
+.\] 
+Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
 :::
-
-
-:::{.proposition title="?"}
-\envlist
-
-- $R/\mfm$ is an integral domain $\iff \mfm \in \mspec(R)$ is maximal.
-- $R/\mfp \in \Field \iff \mfp \in \spec(R)$ is prime.
-:::
-
-
 
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
 \spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}
 .\]
+:::
+
+:::{.definition title="Maximal Ideal"}
+An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $I\contains \mfm$ then $I = R$.
+:::
+
+:::{.example title="Some counterexamples"}
+\envlist
+
+- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
+- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
+- A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
 :::
 
 :::{.definition title="Max Spectrum"}
@@ -2302,6 +2952,34 @@ The **max spectrum** of $R$ is defined as
 .\]
 :::
 
+:::{.example title="An irreducible element that is not prime."}
+$3\in \ZZ[\sqrt{-5}]$. 
+Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::
+
+:::{.example}
+Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+:::
+
+
+
+
+## Types of Rings
+
+:::{.definition title="Division ring or skew field"}
+A **division ring** is any (potentially noncommutative) ring $R$ for which $R\smz \subset \RR\units$, i.e. every nonzero element is a unit and thus has a multiplicative inverse.
+:::
+
+:::{.definition title="Zero Divisor"}
+An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$, i.e. $r\divides 0$.
+Equivalently, the map
+\[  
+r_\wait: R &\to R \\
+x &\mapsto rx
+\]
+fails to be injective.
+:::
+
 :::{.definition title="Integral Domain"}
 A ring is an **integral domain** if and only if it has no nonzero zero divisors:
 \[  
@@ -2309,12 +2987,42 @@ a, b\in R\smz, ab = 0 \implies a = 0 \txt{ or } b = 0
 .\]
 :::
 
+:::{.example title="of integral domains"}
+Examples of integral domains: $\ZZ, k\adjoin{\elts{x}{n}}$.
+Non-examples: $\ZZ/6, \Mat(2\times 2; k)$
+:::
+
+:::{.definition title="Field"}
+A **field** is a commutative division ring, i.e. every nonzero element is a uni, i.e. every nonzero element is a unit
+:::
+
+
+:::{.exercise title="?"}
+Show that TFAE:
+
+- $A\in \Field$
+- $A$ is a simple ring, so $\Id(A) = \ts{ 0, A }.
+- If $B\in \Field$ is nonzero then every ring morphism $A\to B$ is injective.
+:::
+
+
+:::{.remark}
+Every field is an integral domain, but e.g. $\ZZ$ is an integral domain that is not a field.
+
+:::
+
+
 :::{.definition title="Principal Ideal"}
-An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$.
+An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$, i.e. $I = Ra$.
 :::
 
 :::{.definition title="Principal Ideal Domain"}
 A ring $R$ is a **principal ideal domain** iff every ideal is principal.
+:::
+
+
+:::{.exercise title="?"}
+Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
@@ -2325,81 +3033,100 @@ r = u \prod_{i=1}^n p_i
 where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::
 
-
-### Types of Rings
-
-:::{.definition title="Simple Modules"}
-A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
-A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
-:::
-
-:::{.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition 
-\[
-M = \bigoplus_{j\in J} M_j
-\]
-with each \( M_j \) simple.
-:::
-
 :::{.definition title="Noetherian"}
 A ring $R$ is **Noetherian** if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
 
-
-### Commutative Algebra 
-
-:::{.definition title="Primary Ideal"}
-An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
-:::
-
-:::{.definition title="Nilradical"}
-$\nilrad(R) \definedas \theset{x\in R \suchthat x^n=0\text{ for some } n}$ is the **nilradical** of $R$.
-:::
-
-:::{.definition title="Jacobson Radical"}
-The **Jacobson radical** $\jacobsonrad(R)$ is the intersection of all maximal ideals, i.e.
-\[  
-\jacobsonrad(R) = \intersect\theset{\mfm \suchthat \mfm \in \maxspec(R) }
-.\]
-:::
 
 :::{.definition title="Reduced Ring"}
 A ring $R$ is **reduced** if $R$ contains no nonzero nilpotent elements. 
 :::
 
 :::{.definition title="Local Ring"}
-A ring $R$ is **local** iff it contains a unique maximal ideal.
+A ring $R$ is **local** iff it contains a unique maximal ideal $\mfm$, so $\mspec R = \ts{ 0, \mfm}$.
+As a consequence, there is a uniquely associated **residue field** $\kappa \da R/\mfm$.
 :::
 
-:::{.definition title="Radical of an Ideal"}
-For an ideal $I\normal R$, the **radical** $\rad(I) \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}$, so $x^n \in I \iff x\in I$.
+:::{.exercise title="?"}
+Show that if $R$ is a nonzero ring where every element is either a unit or nilpotent, then $R$ is local.
 :::
 
-:::{.definition title="Radical Ideal"}
-An ideal is **radical** iff $\rad(I) = I$. 
+:::{.exercise title="?"}
+Show that if $p\in \spec R$ then $R\localize{p}$ is local.
+:::
+
+
+:::{.exercise title="?"}
+Suppose $\mfm \in \mspec R$ is a proper maximal ideal.
+Show that under either of the following two conditions, $R$ is local:
+
+- $R\sm \mfm \subseteq R\units$, so every element of $R\sm \mfm$ is a unit, or
+- $1 + \mfm \subseteq R\units$
+
+:::
+
+
+:::{.solution}
+- Sketch: $\mfm$ must contain every non-unit.
+  - If $I \neq R$ then $I$ contains no units, so $I\subseteq N \da R\sm R\units$, i.e. $I$ is contained in the non-units.
+    But $N \subseteq \mfm$ since no element of $\mfm$ is a unit and no element of $R\sm \mfm$ is a non-unit.
+
+- Sketch: show that every $r\in R\sm \mfm$ is a unit and apply the first part.
+  - If $r\in R\sm \mfm$ then $\gens{r, \mfm} = R = \gens{ 1 }$ so $rt + m = 1$ for some $t\in R, m\in \mfm$, so $rt = 1-m \in 1 + \mfm \subseteq R\units$ by assumption.
+    Now apply (1).
 :::
 
 
 
-## Structure Theorems
 
-:::{.proposition title="Characterizations of Rings"}
-- $R$ a commutative division ring $\implies R$ is a field
-- $R$ a finite integral domain $\implies R$ is a field.
-- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
-- $\FF$ a field $\implies \FF[x]$ is a PID.
-- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
-- $R$ is a UFD $\iff R[x]$ is a UFD.
-- $R$ a PID $\implies R[x]$ is a UFD
-- $R$ a PID $\implies R$ Noetherian
-- $R[x]$ a PID $\implies R$ is a field.
+
+:::{.definition title="Dedekind Domains"}
+A **Dedekind domain** is an integral domain for which the monoid $\Id(R)$ of nonzero ideals of $R$ satisfies unique factorization: every ideal can be decomposed uniquely into a product of prime ideals.
 :::
 
-:::{.proposition}
+:::{.exercise title="?"}
+Show that a Dedekind domain $R$ is a PID iff $R$ is a UFD.
+:::
+
+:::{.definition title="Valuation Ring"}
+A **valuation ring** is an integral domain $R$ such that for every $x\in \ff(R)$, $x\in R$ or $x\inv \in R$.
+
+:::
+
+:::{.definition title="Discrete Valuation Rings"}
+A **discrete valuation ring** or **DVR** is a local PID with a *unique* maximal ideal.
+
+:::
+
+:::{.definition title="Regular ring"}
+A commutative ring $R$ is **regular** if $R$ is Noetherian and for every $p\in \spec R$ the localization $R\localize{p}$ is a *regular local ring*: it has a maximal ideal $\mfm$ which admits a minimal generating set of $n$ elements where $n$ is the Krull dimension of $R\localize{p}$.
+:::
+
+:::{.remark}
+Motivation: if $R = \OO_{X, x}$ is the ring of germs at $x$ of an algebraic variety $X$, then $R$ is regular iff $X$ is nonsingular at $x$.
+:::
+
+:::{.definition title="Gorenstein Rings"}
+A commutative Noetherian ring $R$ is **Gorenstein** iff $R$ viewed as an $R\dash$module has finite injective dimension.
+:::
+
+:::{.example title="Why care about Gorenstein rings?"}
+If $R\in \gr\kAlg$ with $\dim_k R < \infty$, then $R$ decomposes as $R = R_0 \oplus R_1 \oplus \cdots R_n$ with $R_0 \da k$, and $R$ is Gorenstein iff $R$ satisfies "Poincaré duality": $\dim_k R_0 = \dim_k R_m = 1$ and there is a perfect pairing $R_i \tensor_k R_{n-j} \to R_n$.
+:::
+
+## Comparing and Transporting Ring Types
+
+:::{.proposition title="Big chain of inclusions"}
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
 :::
 
-:::{.example}
+\todo[inline]{Prove inclusions}
+
+:::{.proposition title="PID implies UFD"}
+If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+:::
+
+:::{.example title="showing these inclusions are strict"}
 - A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
   - *Proof*: Use previous lemma, and $x$ is not invertible
 
@@ -2416,56 +3143,184 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
    - *Proof*: $2 \mod 4$ is a zero divisor.
 :::
 
-:::{.proposition}
-In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
+
+:::{.proposition title="Characterizations of Rings"}
+- $R$ a commutative division ring $\implies R$ is a field
+- $R$ a finite integral domain $\implies R$ is a field.
+- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
+- $\FF$ a field $\iff \FF[x]$ is a PID.
+- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
+- $R$ is a UFD $\iff R[x]$ is a UFD.
+- $R$ a PID $\implies R[x]$ is a UFD
+- $R$ a PID $\implies R$ Noetherian
+- $R[x]$ a PID $\implies R$ is a field.
 :::
 
-Note: For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
 
-$x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)$. Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
+:::{.example title="?"}
+A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
+:::
 
 
-:::{.proposition}
-If $R$ is a PID, then every element in $R$ has a unique prime factorization.
+
+
+## Radicals
+
+:::{.definition title="Radical of an Ideal"}
+For an ideal $I\normal R$, the **radical** 
+\[
+\rad{I} \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}
+,\] 
+so $x^n \in I \implies x\in \rad{I}$.
+:::
+
+:::{.remark}
+In general, "radical" refers to "bad elements" of some type to be quotiented out, not necessarily $\sqrt{\wait}$.
+:::
+
+:::{.definition title="Radical Ideal"}
+An ideal is **radical** iff $\rad{I} = I$. 
+:::
+
+:::{.definition title="Nilpotent"}
+An element $r\in R$ is **nilpotent** if $r^n = 0$ for some $n \in \ZZ^{\geq 0}$.
+:::
+
+:::{.definition title="Nilradical"}
+The **nilradical** of $R \in \CRing$ is
+\[
+\nilrad{R} \definedas \theset{x\in R \suchthat x \text{ is nilpotent}} = \rad{0}
+.\]
+:::
+
+:::{.exercise title="Quotient by nilradical is reduced"}
+Show $\nilrad{R} \normal R$ is an ideal and $A/\nilrad{R}$ is reduced.
+:::
+
+:::{.solution}
+\envlist
+
+- $R\nilrad{R} \subseteq R$:
+  For $r$ nilpotent of order $n$ and $x\in R$, $xr$ is nilpotent since 
+\[
+(xr)^n = (xr)(xr)\cdots(xr) = x^n r^n = x^n 0 = 0
+.\]
+
+- $R^2 \subseteq R$, for $r,s\in \nilrad{R}$ write $r^{n} = s^m = 0$, then
+\[
+(r+s)^{N} = \sum_{k\geq 0}{N \choose k} r^k s^{N-k}
+,\]
+so just choose $N$ large enough so that either $k>n$ or $N-k> m$ always holds, e.g. $N\da n+m-1$.
+
+- $R/\nilrad{R}$ has no nonzero nilpotents:
+  Take $\bar{r} \in R/\nilrad{R}$ for some $r\in R$, then $\phi(r^n) = \phi(r)^n = \bar{r}^n$.
+  So\[
+\bar{r}^n=0 \mod \nilrad{R} \iff \bar{r^n} \equiv 0 \mod \nilrad{R} \iff r^n \in \nilrad{R} \iff r\in 0_R
+  .\]
+
+:::
+
+:::{.exercise title="?"}
+Show that the nilradical is the intersection of all prime ideals.
+
+:::
+
+
+:::{.solution}
+
+> See A&M 1.8
+
+Write $P$ as the intersection of all prime ideals of $R$.
+
+$\nilrad{R} \subseteq P$:
+Suppose $r\in \nilrad{R}$ so $r^n = 0$ and let $\mfp \in \spec R$.
+Then use that $0\in I$ for any ideal: $r^n = 0 \in \mfp \implies r\in \mfp$ since $\mfp$ is prime.
+
+$\nilrad{R}^c \subseteq P^c$:
+Fix $f$ non-nilpotent, we want to show $f$ is not in any prime ideal.
+set $S \subseteq R$ to be all ideals $I$ such that $f^{>0} \not \in I$.
+Apply Zorn's lemma: $S\neq \emptyset$ since $0\in S$, so after ordering $I$ by inclusions $S$ contains a maximal $\mfp$ which we claim is prime.
+If $a,b \in \mfp^c$ then $\mfp + \gens{ a }$ and $\mfp + \gens{b} supset \mfp$ strictly, and by maximality they aren't in $S$.
+So there exist $m,n$ such that $f^m\in \mfp + \gens{ a }$ and $f^n \in \mfp + \gens{b}$. 
+Then $f^{m+n} \in \mfp + \gens{ab}$, so $\mfp + \gens{ab}$ is not in $S$.
+Thus $ab\not \in \mfp$ so $f\not\in \mfp$.
+Letting $\mfp$ be arbitrary yields $f\not \in P$.
+:::
+
+
+:::{.exercise title="?"}
+Show that $\nilrad{R} = \Intersect_{p\in \spec R} p$ is the intersection of all prime ideals $p\normal R$.
+:::
+
+:::{.definition title="Jacobson Radical"}
+The **Jacobson radical** $\jacrad{R}$ is the intersection of all maximal ideals, i.e.
+\[  
+\jacrad{R} = \Intersect_{\mfm \in \mspec R} \mfm
+.\]
+:::
+
+
+:::{.exercise title="?"}
+Show $x\in \jacrad{R} \iff 1-xR \subseteq R\units$.
+:::
+
+
+## Structure Theorems
+
+:::{.definition title="Simple Modules"}
+A module $M$ is **simple** iff every submodule $M' \leq M$ is either $0$ or $M$.
+A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e. there are no nontrivial proper ideals.
+:::
+
+:::{.definition title="Semisimple Modules"}
+A module \( M \) is **simple** if and only if it admits a decomposition 
+\[
+M = \bigoplus_{j\in J} M_j
+\]
+with each \( M_j \) simple.
 :::
 
 :::{.theorem title="Krull"}
-Every ring has proper maximal ideals, and any proper ideal is contained in a maximal ideal.
+Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
 :::
 
 :::{.theorem title="Artin-Wedderburn?"}
-If $R$ is a nonzero, unital, *semisimple* ring then $R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)$, a finite sum of matrix rings over division rings.
+If $R$ is a nonzero, unital, *semisimple* ring then 
+\[
+R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)
+,\]
+a finite sum of matrix rings over division rings.
 :::
-
 
 :::{.corollary}
 If $M$ is a simple ring over $R$ a division ring, the $M$ is isomorphic to a matrix ring.
 :::
 
+:::{.theorem title="Wedderburn"}
+Every finite division ring is a field, i.e. finite division rings must be commutative.
+:::
 
 ## Zorn's Lemma
+
+
+:::{.definition title="Chain in a poset"}
+In a poset, a **chain** is a totally ordered subset.
+An **upper bound** on a subset $S$ of a poset $X$ is any $x\in X$ such that $s\leq x$ for all $s\in S$.
+:::
+
 
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 :::
 
-:::{.proposition}
-Fields are simple rings. 
+
+:::{.remark}
+You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
+To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
 :::
 
-:::{.proposition}
-If $I\normal R$ is a proper ideal $\iff I$ contains no units.
-:::
 
-:::{.proof}
-$r\in R\units \intersect I \implies r\inv r \in I \implies 1\in I \implies x\cdot 1 \in I \quad \forall x\in R$.
-:::
-
-:::{.proposition}
-If $I_1 \subseteq I_2 \subseteq \cdots$ are ideals then $\union_j I_j$ is an ideal.
-:::
-
-:::{.proposition}
+:::{.proposition title="Existence of maximal ideals"}
 Every proper ideal is contained in a maximal ideal.
 :::
 
@@ -2489,23 +3344,22 @@ This follows because every $C_i \subseteq \hat{C}$.
 Use the fact that $I \subseteq C_i < R$ for every $C_i$ and since no $C_i$ contains a unit, $\hat{C}$ doesn't contain a unit, and is thus proper.
 :::
 
-:::{.example title="An irreducible element that is not prime."}
-$3\in \ZZ[\sqrt{-5}]$. 
-Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})$ and doesn't divide either factor.
+:::{.exercise title="?"}
+Show that every non-unit of $R$ is contained in a maximal ideal.
 :::
 
-:::{.example}
-Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
+:::{.solution}
+This follows because if $x\in R\sm R\units$, then $Rx \normal R$ and $Rx\neq R$ implies $R/Rx \neq 0$.
+Then there exists some $\bar \mfm \in \mspec R/Rx$, and by the correspondence theorem this lifts to some $\mfm \in \mspec R$ containing $Rx$.
 :::
+
+
+
+
 
 
 ## Unsorted
 
-
-:::{.proposition title="Correspondence Theorem"}
-\todo[inline]{todo}
-
-:::
 
 :::{.fact}
 Division algorithm for Euclidean domains.
@@ -2520,21 +3374,19 @@ Division algorithm for Euclidean domains.
 
 :::
 
-
 :::{.definition title="Fraction Field"}
 \todo[inline]{todo}
 
 :::
 
 
-
 :::{.theorem title="Hilbert Basis Theorem"}
 \todo[inline]{todo}
 
 :::
-
-
-# Ring Theory
+:::{.definition title="Primary Ideal"}
+An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
+:::
 
 
 # Field Theory
@@ -3387,16 +4239,17 @@ A SES $\xi$ splits if any of the following conditions hold:
 
 :::{.proposition title="STFGMPID"}
 Let $M$ be a finitely generated modules over a PID $R$.
-Then there is an invariant factor decomposition
+Then there is an **invariant factor** decomposition
 
 \begin{align*}
 M \cong F \bigoplus_{i=1}^m R/(r_i) \quad\text{where } r_1 \divides r_2 \divides \cdots
 \end{align*}
 
-and similarly an elementary divisor decomposition:
-
-\todo[inline]{Elementary divisor decomposition}
-
+and similarly an **elementary divisor** decomposition:
+\[
+M \cong F \bigoplus_{i=1}^n R/ \gens{p_i^{e_i}}
+\]
+where $F$ is free of finite rank and the $p_i$ are *not necessarily distinct* primes in $R$.
 :::
 
 :::{.proposition title="Principal Ideals are Free"}
@@ -3429,10 +4282,7 @@ Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be 
 
 :::
 
-
 ## Algebraic Properties
-
-
 
 :::{.definition title="Module structure on tensor products"}
 \[
@@ -3504,15 +4354,22 @@ $\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
 
 ## Definitions
 
-:::{.definition title="Invariant Factor"}
-Todo
-\todo[inline]{todo}
+
+:::{.remark}
+The main powerhouse: for $T:V\to V$ a linear transformation for $V\in\Vect_k$, map to $V\in \modsleft{k[x]}$ by letting polynomials act via $p(x)\cdot \vector v \da p(T)(\vector v)$.
+Using that $k[x]$ is a PID iff $k$ is a field, and we can apply the FTFGMPID to get two decompositions:
+\[
+V \cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \\
+V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \text{ not necessarily distinct.} 
+\]
+- The $q_i$ are the **invariant factors** of $T$
+  - $q_i$ is the minimal polynomial of $T$ restricted to $V_i \da k[x] / \gens{ q_i(x) }$. 
+  - $q_n$ is the **minimal polynomial** of $T$.
+  - $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
+- The $p_i$ are the **elementary divisors** of $T$.
+
 :::
 
-:::{.definition title="Elementary Divisor"}
-Todo
-\todo[inline]{todo}
-:::
 
 :::{.definition title="Nondegenerate Bilinear Form"}
 \todo[inline]{todo}
@@ -3528,25 +4385,42 @@ Todo
 
 :::
 
-
 :::{.definition title="Normal Matrix"}
 A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
 :::
 
 
-
-:::{.proposition title="?"}
-Any linear map $T:V\to V$ decomposes as $T = D + N$ with $D$ diagonal, $N$ nilpotent, and $[DN] = 0$.
+:::{.definition title="Semisimple"}
+A matrix $A$ over $k$ is **semisimple** iff $A$ is diagonalizable over $k^\alg$, the algebraic closure.
 :::
 
 
-:::{.proposition title="?"}
+:::{.definition title="Nilpotent"}
+A matrix $A$ over $k$ is **nilpotent** iff $A^k = 0$ for some $k\geq 1$.
+
+> Idea: upper triangular matrices.
+
+:::
+
+
+:::{.definition title="Unipotent"}
+A element $A$ in a ring $R$ is **unipotent** iff $A-1$ is nilpotent.
+
+> Idea: an upper-triangular matrix with ones on the diagonal.
+
+:::
+
+
+:::{.proposition title="Triangular Decomposition"}
+Any linear map $T:V\to V$ over a perfect field decomposes as $T = S + N$ with $S$ semisimple (diagonal), $N$ nilpotent, and $[DN] = 0$.
+If $T$ is invertible, then $T$ decomposes as $T = SU$ where $S$ is semisimple, $U$ is unipotent, and $[UN] = 0$.
+:::
+
+:::{.proposition title="Perp of sum is intersection of perps"}
 \[
-\sum( W_i)^\perp = \int W_i^\perp
+\qty{ \sum  W_i}^\perp = \Intersect \qty{W_i^\perp}
 .\]
-
 :::
-
 
 ## Minimal / Characteristic Polynomials
 
@@ -3560,7 +4434,7 @@ Fix some notation:
 :::
 
 :::{.definition title="?"}
-The **minimal polynomial** of a linear morphism is the unique monic polynomial $\min_A(x)$ of minimal degree such that $\min_A(A) = 0$.
+The **minimal polynomial** of a linear map $T$ is the unique monic polynomial $\min_T(x)$ of minimal degree such that $\min_T(T) = 0$.
 :::
 
 :::{.definition title="?"}
@@ -3659,38 +4533,65 @@ e_{i-1} &  i \geq 2
 
 Corresponds to the **Invariant Factor Decomposition** of $T$.
 
-
-:::{.theorem title="Structure Theorem"}
-For $R$ a PID and $M$ a finitely-generated $R\dash$module, there exists an invariant factor decomposition
-\[
-M \cong R^r \bigoplus_{i=1}^\ell R/(a_i) \quad a_1 \divides a_2 \divides \cdots \divides a_\ell
-\]
-where each $a_i$ is an invariant factor.
-:::
-
-
-
-:::{.proposition title="RCG Relates to Invariant Factors"}
+:::{.proposition title="Rational Canonical Form"}
 $RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
 :::
 
+:::{.proof title="Derivation of RCF"}
+\envlist
 
-:::{.proof title="?"}
-The derivation:
+- Let $k[x] \actson V$ by $p(x) \actson \vector v \da p(T)(\vector v)$, making $V$ into a $k[x]\dash$module. 
 
-- Let $k[x] \actson V$ using $T$, makes $V$ into a $k[x]\dash$module. 
+- $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain an invariant factor decomposition 
+\[
+V \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
+&& p_1(x) \divides p_2(x) \divides \cdots p_m(x)
+.\]
 
-- $k$ a field implies $k[x]$ a PID, so apply structure theorem to obtain invariant factors $a_i$,
+- Each $p_i$ is an invariant factor of $T$, and the minimal polynomial of $T$ restricted to $V_i$.
 
-- Note that $T\actson V$ by multiplication by $x$
+- Write $V \cong \bigoplus_{i=1}^m V_i$ where $V_i \da k[x] / \gens{ p_i(x) }$, then $A$ is a block matrix $\bigoplus_{i=1}^m M_i$ where $M_i$ is the restriction of $T$ to $V_i$:
+\[
+\left(\begin{array}{ccccc}M_{1} & 0 & 0 & \cdots & 0 \\ 0 & M_{2} & 0 & \cdots & 0 \\ \vdots & & \ddots & & \vdots \\ 0 & \cdots & & & M_{n}\end{array}\right)
+.\]
 
-- Write $\bar x = \pi(x)$ where $F[x] \mapsvia{\pi} F[x]/(a_i)$; then $\spanof\theset{\overline x} = F[x]/(a_i)$.
+- It suffices to determine the form of $M_i$, so without loss of generality suppose $m=1$ so $V = V_1 = k[x] / \gens{ p(x) }$ is a cyclic $k[x]\dash$module where $\deg p(x) = n$.
 
-- Write $a_i(x) = \sum b_i x^i$, note that $V \to F[x]$ pushes $T\actson V$ to $T\actson k[x]$ by multiplication by $\overline x$
+- Claim: the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
+  - If there is any linear independence, this gives a polynomial relation $\sum_{i=1}^{n'} a_iT^i\vector v = 0$ for some $n'<n$, but then $q(x) \da \sum_{i=1}^{n'} a_i x^i$ is a polynomial annihilating $T$, contradicting the minimality of $p(x)$.
+  - So this yields $n$ linearly independent vectors in $k^n$, so it's a basis.
+- What is $M_i$ in this basis?
+  Check where basis elements are mapped to by $T$, noting that 
+  \[
+p(T) = \sum_{i=1}^{n}a_i T^i\vector v = T^n + a_{n-1} T^{n-1}\vector v + a_{n-2} T^{n-2} + \cdots + a_1 T\vector v + a_0 \vector v = 0
+  ,\]
+  we can write
+  - $T\vector v_0 = \vector v_1$
+  - $T\vector v_2 = T^2 \vector v_0$
+  - $T\vector v_3 = T^3 \vector v_0$
+  - $\cdots$
+  - $T\vector v_{n-2} = T^{n-1}\vector v$
+  - $T\vector v_{n-1} = T^n\vector v = -a_{n-1}T^{n-1}\vector v - \cdots - a_1 T\vector v - a_0 \vector v$ 
 
-- WRT the basis $\overline x$, $T$ then acts via the companion matrix on this summand.
+  (using the minimal polynomial relation).
 
-- Each invariant factor corresponds to a block of the RCF.
+- So we have
+\[
+M_1 = 
+\begin{bmatrix}
+0 &  &  &  & -a_0 \\
+1 & 0 &  &  & -a_1 \\
+ &  1 &  0&  & -a_2 \\
+ &  & \ddots &  0 & \vdots \\
+ &  &  & 1 & -a_{n-1} 
+\end{bmatrix}
+.\]
+
+
+
+
+
+
 
 
 :::
@@ -3723,6 +4624,16 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 - $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
 
 :::
+
+### Smith Normal Form
+
+
+:::{.fact}
+For $A\in \Mat(m\times n; R)$ over $R$ any PID, $\SNF(A)$ is a matrix whose diagonal entries are the invariant factors.
+How to compute $\SNF(A)$: take $A = \diag(a_i)$ where $a_i = d_i/d_{i-1}$ and $d_i$ is the $\gcd$ of the determinants of all $i\times i$ minors of $A$.
+$A\sim B$ are similar $\iff \SNF(A) = \SNF(B)$.
+:::
+
 
 ### Finding Possible Canonical Forms
 
@@ -3839,8 +4750,6 @@ But the minimal polynomial is just the largest invariant factor.
 ## Matrix Counterexamples
 
 
-:::{.example title="?"}
-:::
 
 :::{.example title="?"}
 A matrix that:
@@ -3945,7 +4854,7 @@ M_2
 \[
 \SL_n(\CC) \da \ts{ A \st \det A = 1 } 
 .\]
-::
+:::
 
 :::{.definition title="Orthogonal Group"}
 \[
@@ -3979,8 +4888,16 @@ U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 }
 :::
 
 
-
 :::{.definition title="Symplectic Group"}
+\[
+\mathrm{Sp}_{2n}(\CC) \da \ts{ A \in \GL_{2n}(\CC) \st A^tJA = J } &&
+J \da 
+\begin{bmatrix}
+0 & 1_n
+\\
+1_n & 0
+\end{bmatrix}
+.\]
 
 :::
 
@@ -4035,43 +4952,6 @@ m &\mapsto g\actson m
   Then $B$ is finite type over $R$.
 
 ## Group Theory
-
-### Basic Structure
-
-Just Structure
-
-- Show that the intersection of two subgroups is again a subgroup.
-- Show that the intersection of two subgroups with coprime orders is trivial.
-- Show that subgroups with the *same* prime order are either equal or intersect trivially.
-- Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
-- Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
-- Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
-- Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
-- Show that the order of any element in a group divides the order of the group.
-- Show that $\abs{G}/\abs{H} = [G: H]$.
-
-Centers
-
-- Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
-- Show that $G/N$ is abelian iff $[G, G] \leq N$.
-- Show that every normal subgroup of $G$ is contained in $Z(G)$.
-
-Cyclic Groups
-
-- Show that any cyclic group is abelian.
-- Show that every subgroup of a cyclic group is cyclic.
-- Show that $$\phi(n) = n \prod_{p\mid n}\qty{1 - {1\over p}}.$$
-- Compute $\aut(\ZZ/n\ZZ)$ for $n$ composite.
-- Compute $\aut(\qty{\ZZ/p\ZZ}^n)$.
-
-Conjugacy
-
-- Show that the size of a conjugacy class divides the order of a group.
-- Let $G$ be finite with $H\leq G$ and show that $G$ is not the union of the conjugates of $H$.
-
-  > Hint: consider the intersection and count.
-
-  > Hint: Orbit-stabilizer
 
 ### Centralizing and Normalizing
 
@@ -4281,7 +5161,6 @@ Generating Sets
 
   > So normality is not transitive, but strengthening one to "characteristic" gives a weak form of transitivity.
 
-#
 
 ## Ring Theory
 

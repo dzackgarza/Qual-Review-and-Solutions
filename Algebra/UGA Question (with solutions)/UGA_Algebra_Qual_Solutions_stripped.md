@@ -3028,8 +3028,10 @@ Prove that \( M \) is torsion-free of rank 1 but not free.
 -   Todo
 :::
 
-:::{.solution} `\envlist`{=tex}
-
+::: {.solution}
+```{=tex}
+\envlist
+```
 ::: {.proof title="of a"}
 ```{=tex}
 \envlist
@@ -3151,6 +3153,7 @@ Note that the proof follows immediately.
 -   Let \( \mathbf{x} \in \operatorname{Tor}M \), then there exists some \( r\neq 0\in R \) such that \( r\mathbf{x} = \mathbf{0} \).
 
 -   But \( \mathbf{x}\in R \) as well and \( R \) is an integral domain, so \( \mathbf{x}=0_R \), and thus \( \operatorname{Tor}(M) = \left\{{0_R}\right\} \).
+:::
 :::
 :::
 
