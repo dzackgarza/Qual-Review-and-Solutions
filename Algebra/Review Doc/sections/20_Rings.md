@@ -110,10 +110,8 @@ This forces $x=r\inv$.
 :::
 
 
-:::{.proof title="?"}
-\envlist
-
-1: Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
+:::{.proof title="of 1"}
+Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
 \[
 &\quad R/\mfm \in \Field \\
 &\iff \not\exists J/\mfm \in \Id(R/\mfm)\nonzero \text{ such that } J \in \Id(R) \\
@@ -121,7 +119,23 @@ This forces $x=r\inv$.
 &\iff J\in \mspec(R)
 .\]
 
-2: 
+:::
+
+
+:::{.proof title="of 2"}
+$\impliedby$:
+Show $xy = 0$ with $x\neq 0$ forces $y=0$.
+Let $x, y\in \mfp \in \spec R$, so $x = a + I, y = b + I$ for some $a,b\in R$.
+If $xy=0 \mod \mfp$ with $y\neq 0\mod \mfp$, we can check
+\[
+xy = (a+\mfp)(b+\mfp) \da (ab) + \mfp = 0 + \mfp \implies ab\in \mfp
+.\]
+Since $\mfp$ is prime and $x\neq 0 \implies a\not\in\mfp$, so $b\in \mfp$.
+But then 
+\[
+y \da b + \mfp = 0 + \mfp = 0 \mod \mfp
+.\]
+
 
 :::
 
@@ -136,7 +150,6 @@ I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{
 :::{.fact}
 If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
 :::
-
 
 
 :::{.fact}
