@@ -73,9 +73,13 @@ S/I \leq R/I
 .\]
 
 Moreover, $A\leq R$ is a subring containing $I$ iff $A/I \in \Id(R/I)$.
-
-
 :::
+
+
+:::{.exercise title="?"}
+Show that if $J\in \Id(R)$ (with $J\contains I$) is radical/prime/maximal iff $\bar J \in \Id(R/I)$ is radical/prime/maximal.
+:::
+
 
 
 ## Important Techniques
@@ -121,7 +125,7 @@ Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing
 :::
 
 :::{.remark}
-Note that this yields a quick proof that $\mspec R \subseteq \spec R$:
+Note that this yields a quick proof that $\mspec R \subseteq \spec R$, using that $\Field \leq \mathsf{IntDomain}$:
 \[
 I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{IntDomain} \iff I \text{ prime}
 .\]
