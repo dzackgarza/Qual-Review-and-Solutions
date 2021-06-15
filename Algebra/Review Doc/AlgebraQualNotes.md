@@ -343,6 +343,8 @@
 \newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
@@ -3001,7 +3003,7 @@ A **field** is a commutative division ring, i.e. every nonzero element is a uni,
 Show that TFAE:
 
 - $A\in \Field$
-- $A$ is a simple ring, so $\Id(A) = \ts{ 0, A }.
+- $A$ is a simple ring, so $\Id(A) = \ts{ 0, A }$.
 - If $B\in \Field$ is nonzero then every ring morphism $A\to B$ is injective.
 :::
 

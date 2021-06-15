@@ -2080,7 +2080,7 @@ A **field** is a commutative division ring, i.e. every nonzero element is a uni
 Show that TFAE:
 
 -   \( A\in \mathsf{Field} \)
--   \( A \) is a simple ring, so \$`\operatorname{Id}`{=tex}(A) = `\left\{{ 0, A }\right\}`{=tex}.
+-   \( A \) is a simple ring, so \( \operatorname{Id}(A) = \left\{{ 0, A }\right\} \).
 -   If \( B\in \mathsf{Field} \) is nonzero then every ring morphism \( A\to B \) is injective.
 :::
 
@@ -3560,7 +3560,7 @@ Writing \( \operatorname{Spec}(A) = \left\{{(\lambda_i, b_i)}\right\} \),
 ### Smith Normal Form
 
 ::: {.fact}
-For \( A\in \operatorname{Mat}(m\times n; R) \) over \( R \) any PID, \( \SNF(A) \) is a matrix whose diagonal entries are the invariant factors. How to compute \( \SNF(A) \): take \( A = \operatorname{diag}(a_i) \) where \( a_i = d_i/d_{i-1} \) and \( d_i \) is the \( \gcd \) of the determinants of all \( i\times i \) minors of \( A \). \( A\sim B \) are similar \( \iff \SNF(A) = \SNF(B) \).
+For \( A\in \operatorname{Mat}(m\times n; R) \) over \( R \) any PID, \( \mathrm{SNF}(A) \) is a matrix whose diagonal entries are the invariant factors. How to compute \( \mathrm{SNF}(A) \): take \( A = \operatorname{diag}(a_i) \) where \( a_i = d_i/d_{i-1} \) and \( d_i \) is the \( \gcd \) of the determinants of all \( i\times i \) minors of \( A \). \( A\sim B \) are similar \( \iff \mathrm{SNF}(A) = \mathrm{SNF}(B) \).
 :::
 
 ### Finding Possible Canonical Forms

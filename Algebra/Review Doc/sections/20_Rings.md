@@ -405,7 +405,7 @@ A **field** is a commutative division ring, i.e. every nonzero element is a uni,
 Show that TFAE:
 
 - $A\in \Field$
-- $A$ is a simple ring, so $\Id(A) = \ts{ 0, A }.
+- $A$ is a simple ring, so $\Id(A) = \ts{ 0, A }$.
 - If $B\in \Field$ is nonzero then every ring morphism $A\to B$ is injective.
 :::
 
