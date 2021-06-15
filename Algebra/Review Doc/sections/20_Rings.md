@@ -331,7 +331,7 @@ The **prime spectrum** (or just the **spectrum**) of $R$ is defined as
 :::
 
 :::{.definition title="Maximal Ideal"}
-$\mfm$ is **maximal** $\iff \qty{ I \normal R,\, I\neq R \implies I \subseteq \mfm} \iff R/I$ is a field.
+An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $I\contains \mfm$ then $I = R$.
 :::
 
 :::{.example title="Some counterexamples"}
