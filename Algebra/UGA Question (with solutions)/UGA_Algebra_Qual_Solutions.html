@@ -340,7 +340,7 @@ hN
 ,\end{align*}
 <span>
 <ul>
-<li>We’ve used that <span class="math inline">\(h\in H \implies o(h) \bigm|\# H = n\)</span> by Lagrange, so <span class="math inline">\(h^n = e\)</span>.</li>
+<li>We’ve used that <span class="math inline">\(h\in H \implies o(h) \divides \# H = n\)</span> by Lagrange, so <span class="math inline">\(h^n = e\)</span>.</li>
 <li>We’ve also used that <span class="math inline">\(\# G/N = m\)</span>, so <span class="math inline">\((xH)^m = H\)</span> for any <span class="math inline">\(xH\in G/H\)</span>.</li>
 </ul></li>
 </ul>
@@ -352,14 +352,13 @@ hN
 [G: H\cap K] \leq [G: H] ~ [G:K]
 .\end{align*}
 <span></p>
-<div class="concept proofenv">
+<p>http://www.ams.org/notices/200304/what-is.pdf :::{.concept} </p>
 <ul>
-<li>For <span class="math inline">\(H, K\leq G\)</span>, intersection is again a subgroup of everything: <span class="math inline">\(H\int K \leq H, K, G\)</span> by the one-step subgroup test.</li>
+<li>For <span class="math inline">\(H, K\leq G\)</span>, intersection is again a subgroup of everything: <span class="math inline">\(H\cap K \leq H, K, G\)</span> by the one-step subgroup test.</li>
 <li>Counting in towers: <span class="math inline">\(A\leq B \leq C \implies [C:A] = [C:B][B:A]\)</span>.</li>
 <li>Fundamental theorem of cosets: <span class="math inline">\(xH = yH \iff xy^{-1}\in H\)</span>.</li>
-<li>Common trick: just list out all of the darn cosets!</li>
+<li>Common trick: just list out all of the darn cosets! :::</li>
 </ul>
-</div>
 <div class="strategy proofenv">
 <p>Count in towers, show that distinct coset reps stay distinct.</p>
 </div>
@@ -715,7 +714,7 @@ p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 <li><p>So <span class="math inline">\(\# C_{i_j} \leq p-1\)</span> for all <span class="math inline">\(j\neq 1\)</span>.</p></li>
 <li><p>Every <span class="math inline">\(\# C_{i_j}\)</span> divides <span class="math inline">\(\# G\)</span>, but <span class="math inline">\(p\)</span> was the <em>minimal</em> prime dividing <span class="math inline">\(\# G\)</span>, forcing <span class="math inline">\(\# C_{i_j} = 1\)</span> for all <span class="math inline">\(j \neq 1\)</span>.</p>
 <ul>
-<li>This rules out <span class="math inline">\(\# C_{i_j}\)</span> being a prime less than <span class="math inline">\(p\)</span>, but also rules out composites: if a prime <span class="math inline">\(q\bigm|\# C_{i_j}\)</span>, then <span class="math inline">\(q&lt;p\)</span> and <span class="math inline">\(q\bigm|\# G\)</span>, a contradiction.</li>
+<li>This rules out <span class="math inline">\(\# C_{i_j}\)</span> being a prime less than <span class="math inline">\(p\)</span>, but also rules out composites: if a prime <span class="math inline">\(q\divides \# C_{i_j}\)</span>, then <span class="math inline">\(q&lt;p\)</span> and <span class="math inline">\(q\divides \# G\)</span>, a contradiction.</li>
 </ul></li>
 <li><p>By fact 3, each <span class="math inline">\(x\in C_{i_j}\)</span> satisfies <span class="math inline">\(x\in Z(G)\)</span>.</p></li>
 <li><p><span class="math inline">\(\cup C_{i_j} = H\)</span>, so <span class="math inline">\(H \subseteq Z(G)\)</span>.</p></li>
@@ -742,7 +741,7 @@ p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
 p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
 .\end{align*}
 <span></li>
-<li>The size of each conjugacy class divides the size of <span class="math inline">\(H\)</span> by orbit-stabilizer, so <span class="math inline">\(\# [n_i] \bigm|p\)</span> for each <span class="math inline">\(i\)</span>.</li>
+<li>The size of each conjugacy class divides the size of <span class="math inline">\(H\)</span> by orbit-stabilizer, so <span class="math inline">\(\# [n_i] \divides p\)</span> for each <span class="math inline">\(i\)</span>.</li>
 <li>But the entire second term must sum to <span class="math inline">\(p-1\)</span> for this equality to hold, which forces <span class="math inline">\(\#[n_i] = 1\)</span> (and incidentally <span class="math inline">\(m=p-1\)</span>)</li>
 <li>Then <span class="math inline">\([n_i] = \left\{{ n_i }\right\} \iff n_i \in Z(G)\)</span>, and this holds for all <span class="math inline">\(i\)</span>, so <span class="math inline">\(N \subseteq Z(G)\)</span>.</li>
 </ul>
@@ -885,7 +884,7 @@ b (ab) b^{-1}= babb^{-1}= ba = b^{-1}a^{-1}= (ab)^{-1}
 <li><p>Surjectivity of <span class="math inline">\(\tilde \psi\)</span> yields <span class="math inline">\(2n = \# D_{2n} \geq \# G\)</span>.</p></li>
 <li><p>The claim is that <span class="math inline">\(\# G \geq 2n\)</span>, which forces <span class="math inline">\(\# G = 2n\)</span>. Then <span class="math inline">\(\tilde \psi\)</span> will be a surjective group morphism between groups of the same order, and thus an isomorphism.</p>
 <ul>
-<li>We have <span class="math inline">\(\left\langle{ ab }\right\rangle\leq G\)</span>, so <span class="math inline">\(n\bigm|\# G\)</span>.</li>
+<li>We have <span class="math inline">\(\left\langle{ ab }\right\rangle\leq G\)</span>, so <span class="math inline">\(n\divides \# G\)</span>.</li>
 <li>Since <span class="math inline">\(b\not\in \left\langle{ ab }\right\rangle\)</span>, this forces <span class="math inline">\(\# G &gt; n\)</span>, so <span class="math inline">\(\# G \geq 2n\)</span>.</li>
 </ul></li>
 </ul>
@@ -902,8 +901,8 @@ b (ab) b^{-1}= babb^{-1}= ba = b^{-1}a^{-1}= (ab)^{-1}
 <li><p>In any case, we have 
 <span class="math display">
 \begin{align*}
-n_p \bigm|q &amp;,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
-n_q \bigm|p^2 &amp;,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+n_p \divides q &amp;,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+n_q \divides p^2 &amp;,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
 .\end{align*}
 <span></p></li>
 <li><p><strong>Case 1:</strong> <span class="math inline">\(:p&gt;q\)</span>.</p></li>
@@ -1046,89 +1045,42 @@ H\leq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} 
 <p>Let <span class="math inline">\(G\)</span> be a finite group with <span class="math inline">\(n\)</span> distinct conjugacy classes. Let <span class="math inline">\(g_1 \cdots g_n\)</span> be representatives of the conjugacy classes of <span class="math inline">\(G\)</span>. Prove that if <span class="math inline">\(g_i g_j = g_j g_i\)</span> for all <span class="math inline">\(i, j\)</span> then <span class="math inline">\(G\)</span> is abelian.</p>
 <div class="concept proofenv">
 <ul>
-<li>Centralizer: 
-<span class="math display">
-\begin{align*}
-C_G(h) = Z(h) = \left\{{g\in G {~\mathrel{\Big|}~}[g,h] = 1}\right\}
-\quad\text{Centralizer}
-\end{align*}
-<span></li>
-<li>Class equation: 
-<span class="math display">
-\begin{align*}
-{\left\lvert {G} \right\rvert} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {Z(h)} \right\rvert}}
-\end{align*}
-<span></li>
-<li>Notation: 
-<span class="math display">
-\begin{align*}
-h^g &amp;= ghg^{-1}\\
-h^G &amp;= \left\{{ h^g {~\mathrel{\Big|}~}g\in G}\right\} \quad\text{Conjugacy Class}\\
-H^g &amp;= \left\{{h^g {~\mathrel{\Big|}~}h\in H}\right\} \\
-N_G(H) &amp;= \left\{{g\in G {~\mathrel{\Big|}~}H^g = H}\right\} \supseteq H \quad\text{Normalizer}
-.\end{align*}
-<span></li>
+<li><p><span class="math inline">\(Z(g) = G \iff g\in Z(G)\)</span>, i.e. if the centralizer of <span class="math inline">\(g\)</span> is the whole group, <span class="math inline">\(g\)</span> is central.</p></li>
+<li><p>If <span class="math inline">\(H\leq G\)</span> is a <em>proper</em> subgroup, then <span class="math inline">\(\displaystyle\bigcup_{g\in G} hGh^{-1}\)</span> is again a proper subgroup (subset?) I.e. <span class="math inline">\(G\)</span> is not a union of conjugates of any proper subgroup.</p></li>
+<li><p>So if <span class="math inline">\(G\)</span> <em>is</em> a union of conjugates of <span class="math inline">\(H\)</span>, then <span class="math inline">\(H\)</span> must not be proper, i.e. <span class="math inline">\(H= G\)</span>.</p></li>
 </ul>
 </div>
 <div class="solution proofenv">
-<div class="claim proofenv" title="1">
-<p>
-<span class="math display">
-\begin{align*}
-{\left\lvert {h^G} \right\rvert} = [G: Z(h)]
-.\end{align*}
-<span></p>
-</div>
-<div class="claim proofenv" title="2">
-<p>
-<span class="math display">
-\begin{align*}
-{\left\lvert {\left\{{H^g {~\mathrel{\Big|}~}g\in G}\right\}} \right\rvert} = [G: N_G(H)]
-.\end{align*}
-<span></p>
-</div>
-<div class="proof proofenv" title="of claim 2">
 <ul>
-<li>Let <span class="math inline">\(G\curvearrowright\left\{{H {~\mathrel{\Big|}~}H \leq G}\right\}\)</span> by <span class="math inline">\(H \mapsto gHg^{-1}\)</span>.</li>
-<li>Then the <span class="math inline">\(\mathcal O_H\)</span> is the set of conjugate subgroups, <span class="math inline">\(\mathrm{Stab}(H) = N_G(H)\)</span>.</li>
-<li>So Orbit-Stabilizer says <span class="math inline">\(\mathcal O_h \cong G/\mathrm{Stab}(H)\)</span>; then just take sizes.</li>
-</ul>
-</div>
-<div class="claim proofenv" title="3">
-<p><span class="math inline">\(\cup_{g\in G} H^g = \cup_{g\in G} gHg^{-1}\subsetneq G\)</span> for any proper <span class="math inline">\(H \leq G\)</span>.</p>
-</div>
-<div class="proof proofenv" title="of claim 3">
+<li>We have <span class="math inline">\(g_j \subseteq Z(g_k)\)</span> for all <span class="math inline">\(k\)</span> by assumption.</li>
+<li>If we can show <span class="math inline">\(Z(g_k) = G\)</span> for all <span class="math inline">\(k\)</span>, then <span class="math inline">\(g_k \in Z(G)\)</span> for all <span class="math inline">\(k\)</span>.
 <ul>
-<li><p>By theorem 2, since each coset is of size <span class="math inline">\({\left\lvert {H} \right\rvert}\)</span>, which only intersect at the identity, and there are exactly <span class="math inline">\([G: N_G(H)]\)</span> of them 
+<li>Then each conjugacy class is size 1, and since <span class="math inline">\(G = {\textstyle\coprod}_{i=1}^n [g_i] = {\textstyle\coprod}_{i=1}^n \left\{{g_i}\right\}\)</span>, every <span class="math inline">\(g\in G\)</span> is some <span class="math inline">\(g_i\)</span>. So <span class="math inline">\(G \subseteq Z(G)\)</span>, forcing <span class="math inline">\(G\)</span> to be abelian.</li>
+</ul></li>
+<li>If we can show <span class="math inline">\(G \subseteq \displaystyle\bigcup_{h\in H} h Z(g_k) h^{-1}\)</span> for some <span class="math inline">\(k\)</span>, this forces <span class="math inline">\(Z(g_k) = G\)</span> and <span class="math inline">\(g_k \in Z(G)\)</span>.
+<ul>
+<li>If we can do this for all <span class="math inline">\(k\)</span>, we’re done!</li>
+</ul></li>
+<li>Since <span class="math inline">\(g\in G\)</span> is in some conjugacy class, write <span class="math inline">\(g=hg_j h^{-1}\)</span> for some <span class="math inline">\(h\in G\)</span> and some <span class="math inline">\(1\leq j\leq n\)</span>.</li>
+<li>Now use <span class="math inline">\(g_j \in Z(g_k)\)</span> for all <span class="math inline">\(k\)</span>: 
 <span class="math display">
 \begin{align*}
-{\left\lvert {\cup_{g\in G} H^g} \right\rvert} 
-&amp;= \qty{ {\left\lvert {H} \right\rvert} - 1} [G: N_G(H)] + 1\\
-&amp;= {\left\lvert {H} \right\rvert} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-&amp;= {\left\lvert {G} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} + 1 \\
-&amp;\leq {\left\lvert {H} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} + 1 \\
-&amp;= {\left\lvert {G} \right\rvert} - ([G: H] - 1) \\
-&amp;&lt; {\left\lvert {G} \right\rvert} 
-,\end{align*}
-<span> where we use the fact that <span class="math inline">\(H \subseteq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies \frac{1}{{\left\lvert {N_G(H)} \right\rvert}} \leq \frac{1}{{\left\lvert {H} \right\rvert}}\)</span>, and since <span class="math inline">\(H &lt; G\)</span> is proper, <span class="math inline">\([G:H] \geq 2\)</span>.</p></li>
-<li><p>Since <span class="math inline">\([g_i, g_j] = 1\)</span>, we have <span class="math inline">\(g_i \in Z(g_j)\)</span> for every <span class="math inline">\(i, j\)</span>.</p></li>
-<li><p>Then 
+g\in G &amp;\implies g = hg_j h^{-1}&amp;&amp; \text{for some } h\in H \\
+g_j \in Z(g_k) \forall k &amp;\implies g\in hZ(g_k)h^{-1}&amp;&amp;\text{for some }h, \, \forall 1\leq k \leq n \\
+&amp;\implies g\in \displaystyle\bigcup_{h\in G} h Z(g_k) h^{-1}
+&amp;&amp;\forall 1\leq k \leq n \\
+.\end{align*}
+<span>
+<ul>
+<li>Note that it’s necessary to get rid of the <span class="math inline">\(h\)</span> dependence, since now now every <span class="math inline">\(g\in G\)</span> is in <span class="math inline">\(\displaystyle\bigcup_{h\in G} hZ(g_k)h^{-1}\)</span>.</li>
+</ul></li>
+<li>Now 
 <span class="math display">
 \begin{align*}
-g\in G 
-&amp;\implies g = g_i^h \quad \text{ for some } h \\
-&amp;\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-&amp;\implies g \in \cup_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-&amp;\implies G \subseteq \cup_{h\in G} Z(g_j)^h \quad\text{for every } j
+G \subseteq \displaystyle\bigcup_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
 ,\end{align*}
-<span></p>
-<p>which by Theorem 3, if <span class="math inline">\(Z(g_j) &lt; G\)</span> were proper, then the RHS is properly contained in <span class="math inline">\(G\)</span>.</p></li>
-<li><p>So it must be the case that that <span class="math inline">\(Z(g_j)\)</span> is not proper and thus equal to <span class="math inline">\(G\)</span> for every <span class="math inline">\(j\)</span>.</p></li>
-<li><p>But <span class="math inline">\(Z(g_i) = G \iff g_i \in Z(G)\)</span>, and so each conjugacy class is size one.</p></li>
-<li><p>So for every <span class="math inline">\(g\in G\)</span>, we have <span class="math inline">\(g = g_j\)</span> for some <span class="math inline">\(j\)</span>, and thus <span class="math inline">\(g = g_j \in Z(g_j) = Z(G)\)</span>, so <span class="math inline">\(g\)</span> is central.</p></li>
-<li><p>Then <span class="math inline">\(G\subseteq Z(G)\)</span> and <span class="math inline">\(G\)</span> is abelian.</p></li>
+<span> and we’re done.</li>
 </ul>
-</div>
 </div>
 <h2 data-number="4.2" id="fall-2019-midterm-2-work"><span class="header-section-number">4.2</span> Fall 2019 Midterm #2 <span class="math inline">\(\work\)</span></h2>
 <p>Let <span class="math inline">\(G\)</span> be a finite group and let <span class="math inline">\(P\)</span> be a sylow <span class="math inline">\(p{\hbox{-}}\)</span>subgroup for <span class="math inline">\(p\)</span> prime. Show that <span class="math inline">\(N(N(P)) = N(P)\)</span> where <span class="math inline">\(N\)</span> is the normalizer in <span class="math inline">\(G\)</span>.</p>
@@ -1193,7 +1145,7 @@ g\in G
 <ul>
 <li>Sylow 2: All Sylow <span class="math inline">\(p{\hbox{-}}\)</span>subgroups are conjugate.</li>
 <li><span class="math inline">\({\left\lvert {HK} \right\rvert} = {\left\lvert {H} \right\rvert} {\left\lvert {K} \right\rvert} / {\left\lvert {H\cap K} \right\rvert}\)</span>.</li>
-<li>Lagrange’s Theorem: <span class="math inline">\(H\leq G \implies {\left\lvert {H} \right\rvert} \bigm|{\left\lvert {G} \right\rvert}\)</span></li>
+<li>Lagrange’s Theorem: <span class="math inline">\(H\leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert}\)</span></li>
 </ul>
 </div>
 <div class="solution proofenv">
@@ -1239,7 +1191,7 @@ G = MP
 <div class="concept proofenv">
 <ul>
 <li><p>The <span class="math inline">\(pqr\)</span> theorem.</p></li>
-<li><p>Sylow 3: <span class="math inline">\({\left\lvert {G} \right\rvert} = p^n m\)</span> implies <span class="math inline">\(n_p \bigm|m\)</span> and <span class="math inline">\(n_p \cong 1 \pmod p\)</span>.</p></li>
+<li><p>Sylow 3: <span class="math inline">\({\left\lvert {G} \right\rvert} = p^n m\)</span> implies <span class="math inline">\(n_p \divides m\)</span> and <span class="math inline">\(n_p \cong 1 \pmod p\)</span>.</p></li>
 <li><p><strong>Theorem</strong>: If <span class="math inline">\(H, K \leq G\)</span> and any of the following conditions hold, <span class="math inline">\(HK\)</span> is a subgroup:</p>
 <ul>
 <li><span class="math inline">\(H{~\trianglelefteq~}G\)</span> (wlog)</li>
@@ -1261,9 +1213,9 @@ A_i{~\trianglelefteq~}G, \quad G = A_1 \cdots A_k,\quad A_k \cap\prod_{i\neq k} 
 <div class="proof proofenv" title="of 1">
 <ul>
 <li><p>We have</p></li>
-<li><p><span class="math inline">\(n_3 \bigm|5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)</span></p></li>
-<li><p><span class="math inline">\(n_5 \bigm|3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)</span></p></li>
-<li><p><span class="math inline">\(n_7 \bigm|3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)</span></p></li>
+<li><p><span class="math inline">\(n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)</span></p></li>
+<li><p><span class="math inline">\(n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)</span></p></li>
+<li><p><span class="math inline">\(n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)</span></p></li>
 <li><p>Thus 
 <span class="math display">
 \begin{align*}
@@ -1371,7 +1323,7 @@ G \cong P\times Q \times R \cong {\mathbb{Z}}_3 \times{\mathbb{Z}}_5 \times{\mat
 <ul>
 <li>Sylow theorems:</li>
 <li><span class="math inline">\(n_p \cong 1 \pmod p\)</span></li>
-<li><span class="math inline">\(n_p \bigm|m\)</span>.</li>
+<li><span class="math inline">\(n_p \divides m\)</span>.</li>
 </ul>
 </div>
 <div class="solution proofenv">
@@ -1459,8 +1411,8 @@ G/Z(G) = \left\langle{xZ}\right\rangle
 <ul>
 <li><p>By Sylow</p>
 <ul>
-<li><span class="math inline">\(n_5 \bigm|7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)</span></li>
-<li><span class="math inline">\(n_7 \bigm|5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)</span></li>
+<li><span class="math inline">\(n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)</span></li>
+<li><span class="math inline">\(n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)</span></li>
 </ul></li>
 <li><p>By recognition of direct products, <span class="math inline">\(G = S_5 \times S_7\)</span></p>
 <ul>
@@ -1858,7 +1810,7 @@ M N=\left(\begin{array}{ll}{0} &amp; {0} \\ {0} &amp; {*}\end{array}\right)
 </ol>
 <h2 data-number="7.9" id="fall-2017-6-work"><span class="header-section-number">7.9</span> Fall 2017 #6 <span class="math inline">\(\work\)</span></h2>
 <p>For a ring <span class="math inline">\(R\)</span>, let <span class="math inline">\(U(R)\)</span> denote the multiplicative group of units in <span class="math inline">\(R\)</span>. Recall that in an integral domain <span class="math inline">\(R\)</span>, <span class="math inline">\(r \in R\)</span> is called <em>irreducible</em> if <span class="math inline">\(r\)</span> is not a unit in R, and the only divisors of <span class="math inline">\(r\)</span> have the form <span class="math inline">\(ru\)</span> with <span class="math inline">\(u\)</span> a unit in <span class="math inline">\(R\)</span>.</p>
-<p>We call a non-zero, non-unit <span class="math inline">\(r \in R\)</span> <em>prime</em> in <span class="math inline">\(R\)</span> if <span class="math inline">\(r \bigm|ab \implies r \bigm|a\)</span> or <span class="math inline">\(r \bigm|b\)</span>. Consider the ring <span class="math inline">\(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\)</span>.</p>
+<p>We call a non-zero, non-unit <span class="math inline">\(r \in R\)</span> <em>prime</em> in <span class="math inline">\(R\)</span> if <span class="math inline">\(r \divides ab \implies r \divides a\)</span> or <span class="math inline">\(r \divides b\)</span>. Consider the ring <span class="math inline">\(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\)</span>.</p>
 <ol type="a">
 <li><p>Prove <span class="math inline">\(R\)</span> is an integral domain.</p></li>
 <li><p>Show <span class="math inline">\(U(R) = \{\pm1\}\)</span>.</p></li>
@@ -2000,14 +1952,14 @@ f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
 <div class="concept proofenv">
 <ul>
 <li><span class="math inline">\({\mathbb{F}}^{\times}\)</span> is always cyclic for <span class="math inline">\({\mathbb{F}}\)</span> a field.</li>
-<li>Lagrange: <span class="math inline">\(H\leq G \implies \#H \bigm|\# G\)</span>.</li>
+<li>Lagrange: <span class="math inline">\(H\leq G \implies \#H \divides \# G\)</span>.</li>
 </ul>
 </div>
 <div class="solution proofenv">
 <div class="proof proofenv" title="of a">
 <ul>
 <li><p>Since <span class="math inline">\({\left\lvert {F} \right\rvert} = q\)</span> and <span class="math inline">\([E:F] = k\)</span>, we have <span class="math inline">\({\left\lvert {E} \right\rvert} = q^k\)</span> and <span class="math inline">\({\left\lvert {E^{\times}} \right\rvert} = q^k-1\)</span>.</p></li>
-<li><p>Noting that <span class="math inline">\(\zeta \in E^{\times}\)</span> we must have <span class="math inline">\(n = o(\zeta) \bigm|{\left\lvert {E^{\times}} \right\rvert} = q^k-1\)</span> by Lagrange’s theorem.</p></li>
+<li><p>Noting that <span class="math inline">\(\zeta \in E^{\times}\)</span> we must have <span class="math inline">\(n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1\)</span> by Lagrange’s theorem.</p></li>
 </ul>
 </div>
 <div class="proof proofenv" title="of b">
@@ -2015,17 +1967,17 @@ f(x) = a_ 0 + a_1 x + a_2 x^2 + \cdots + a_nx^n
 <li>Rephrasing (a), we have 
 <span class="math display">
 \begin{align*}
-n \bigm|q^k-1 
+n \divides q^k-1 
 &amp;\iff q^k-1 \cong 0 \pmod n \\
 &amp;\iff q^k \cong 1 \pmod n \\
-&amp;\iff m \mathrel{\vcenter{:}}= o(q) \bigm|k
+&amp;\iff m \mathrel{\vcenter{:}}= o(q) \divides k
 .\end{align*}
 <span></li>
 </ul>
 </div>
 <div class="proof proofenv" title="of c">
 <ul>
-<li><p>Since <span class="math inline">\(m\bigm|k \iff k = \ell m\)</span>, (<strong>claim</strong>) there is an intermediate subfield <span class="math inline">\(M\)</span> such that 
+<li><p>Since <span class="math inline">\(m\divides k \iff k = \ell m\)</span>, (<strong>claim</strong>) there is an intermediate subfield <span class="math inline">\(M\)</span> such that 
 <span class="math display">
 \begin{align*}
 E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
@@ -2119,8 +2071,8 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 <li>Orders of multiplicative groups for finite fields are known.</li>
 </ul></li>
 <li><span class="math inline">\({\mathbb{GF}}(p^n)\)</span> is the splitting field of <span class="math inline">\(x^{p^n} - x \in {\mathbb{F}}_p[x]\)</span>.</li>
-<li><span class="math inline">\(x^{p^d} - x \bigm|x^{p^n} - x \iff d \bigm|n\)</span></li>
-<li><span class="math inline">\({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\bigm|n\)</span></li>
+<li><span class="math inline">\(x^{p^d} - x \divides x^{p^n} - x \iff d \divides n\)</span></li>
+<li><span class="math inline">\({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n\)</span></li>
 <li><span class="math inline">\(x^{p^n} - x = \prod f_i(x)\)</span> over all irreducible monic <span class="math inline">\(f_i\)</span> of degree <span class="math inline">\(d\)</span> dividing <span class="math inline">\(n\)</span>.</li>
 </ul>
 </div>
@@ -2137,7 +2089,7 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 = 0 \in K \\
 &amp;\iff q(x) \in \ker \rho \\
 &amp;\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&amp;\iff \pi(x) \bigm|q(x) = x^{p^d}-x
+&amp;\iff \pi(x) \divides q(x) = x^{p^d}-x
 ,\end{align*}
 <span> where we’ve used that “to contain is to divide” in the last step.</p>
 </div>
@@ -2146,7 +2098,7 @@ E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
 <p><span class="math inline">\(\pi(x)\)</span> divides <span class="math inline">\(x^{p^n}-x \iff \deg \pi\)</span> divides <span class="math inline">\(n\)</span>.</p>
 </div>
 <div class="proof proofenv" title="of claim, $\implies$">
-<p>Let <span class="math inline">\(L \cong {\mathbb{GF}}(p^n)\)</span> be the splitting field of <span class="math inline">\(\phi_n(x) \mathrel{\vcenter{:}}= x^{p^n}-x\)</span>; then since <span class="math inline">\(\pi \bigm|\phi_n\)</span> by assumption, <span class="math inline">\(\pi\)</span> splits in <span class="math inline">\(L\)</span>. Let <span class="math inline">\(\alpha \in L\)</span> be any root of <span class="math inline">\(\pi\)</span>; then there is a tower of extensions <span class="math inline">\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\)</span>.</p>
+<p>Let <span class="math inline">\(L \cong {\mathbb{GF}}(p^n)\)</span> be the splitting field of <span class="math inline">\(\phi_n(x) \mathrel{\vcenter{:}}= x^{p^n}-x\)</span>; then since <span class="math inline">\(\pi \divides \phi_n\)</span> by assumption, <span class="math inline">\(\pi\)</span> splits in <span class="math inline">\(L\)</span>. Let <span class="math inline">\(\alpha \in L\)</span> be any root of <span class="math inline">\(\pi\)</span>; then there is a tower of extensions <span class="math inline">\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\)</span>.</p>
 <p>Then <span class="math inline">\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\)</span>, and so 
 <span class="math display">
 \begin{align*}
@@ -2158,7 +2110,7 @@ n &amp;= [L: {\mathbb{F}}_p] \\
 <p>for some <span class="math inline">\(\ell \in {\mathbb{Z}}^{\geq 1}\)</span>, so <span class="math inline">\(d\)</span> divides <span class="math inline">\(n\)</span>.</p>
 </div>
 <div class="proof proofenv" title="of claim, $\impliedby$">
-<p><span class="math inline">\(\impliedby\)</span>: If <span class="math inline">\(d\bigm|n\)</span>, use the fact (claim) that <span class="math inline">\(x^{p^n} - x = \prod f_i(x)\)</span> over all irreducible monic <span class="math inline">\(f_i\)</span> of degree <span class="math inline">\(d\)</span> dividing <span class="math inline">\(n\)</span>. So <span class="math inline">\(f = f_i\)</span> for some <span class="math inline">\(i\)</span>.</p>
+<p><span class="math inline">\(\impliedby\)</span>: If <span class="math inline">\(d\divides n\)</span>, use the fact (claim) that <span class="math inline">\(x^{p^n} - x = \prod f_i(x)\)</span> over all irreducible monic <span class="math inline">\(f_i\)</span> of degree <span class="math inline">\(d\)</span> dividing <span class="math inline">\(n\)</span>. So <span class="math inline">\(f = f_i\)</span> for some <span class="math inline">\(i\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2714,7 +2666,7 @@ a &amp;= a^1\\
 <div class="proof proofenv" title="of b">
 <p>Identify <span class="math inline">\({\mathbb{Z}}{\hbox{-}}\)</span>modules with abelian groups, then by (a), <span class="math inline">\(N\)</span> is maximal <span class="math inline">\(\iff\)</span> <span class="math inline">\(M/N\)</span> is simple <span class="math inline">\(\iff\)</span> <span class="math inline">\(M/N\)</span> has no nontrivial proper subgroups.<br />
 </p>
-<p>By Cauchy’s theorem, if <span class="math inline">\({\left\lvert {M/N} \right\rvert} = ab\)</span> is a composite number, then <span class="math inline">\(a\bigm|ab \implies\)</span> there is an element (and thus a subgroup) of order <span class="math inline">\(a\)</span>. In this case, <span class="math inline">\(M/N\)</span> contains a nontrivial proper cyclic subgroup, so <span class="math inline">\(M/N\)</span> is not simple. So <span class="math inline">\({\left\lvert {M/N} \right\rvert}\)</span> can not be composite, and therefore must be prime.</p>
+<p>By Cauchy’s theorem, if <span class="math inline">\({\left\lvert {M/N} \right\rvert} = ab\)</span> is a composite number, then <span class="math inline">\(a\divides ab \implies\)</span> there is an element (and thus a subgroup) of order <span class="math inline">\(a\)</span>. In this case, <span class="math inline">\(M/N\)</span> contains a nontrivial proper cyclic subgroup, so <span class="math inline">\(M/N\)</span> is not simple. So <span class="math inline">\({\left\lvert {M/N} \right\rvert}\)</span> can not be composite, and therefore must be prime.</p>
 </div>
 <div class="proof proofenv" title="of c">
 <p>Let <span class="math inline">\(G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\}\)</span>, and suppose <span class="math inline">\(H &lt; G\)</span> is a proper subgroup.</p>
@@ -2738,7 +2690,7 @@ f_4 &amp;= [3,1,5]
 \begin{align*}
 M &amp;= \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\} \\
 N &amp;= \left\{{
-(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\bigm|(w - x),~ 4\bigm|(x - y),~ 4\bigm|( y - z)
+(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)
 }\right\}
 .\end{align*}
 <span></p>
@@ -3222,7 +3174,7 @@ M=\frac{k[x]}{(x-1)^{3}} \oplus \frac{k[x]}{\left(x^{2}+1\right)^{2}} \oplus \fr
 q_A(x) \mathrel{\vcenter{:}}=\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}[x],
 \end{align*}
 <span></p>
-<p>where we can note that <span class="math inline">\(q_A(A) = \min_{A^n}(A^n) = 0\)</span>, and so <span class="math inline">\(\min_A(x) \bigm|q_A(x)\)</span> by minimality.</p></li>
+<p>where we can note that <span class="math inline">\(q_A(A) = \min_{A^n}(A^n) = 0\)</span>, and so <span class="math inline">\(\min_A(x) \divides q_A(x)\)</span> by minimality.</p></li>
 </ul>
 <div class="claim proofenv">
 <p><span class="math inline">\(q_A(x)\)</span> has exactly <span class="math inline">\(nm\)</span> distinct linear factors in <span class="math inline">\({ \mkern 1.5mu\overline{\mkern-1.5mu \mathbb{F}\mkern-1.5mu}\mkern 1.5mu }[x]\)</span></p>
@@ -3237,7 +3189,7 @@ x^n - \lambda_i = \prod_{k=1}^n (x - \lambda_i^{1\over n} e^{2\pi i k \over n}) 
 <span> where we now use the fact that <span class="math inline">\(i\neq j \implies \lambda_i^{1\over n} \neq \lambda_j^{1\over n}\)</span>. Thus no term in the above product appears as a factor in <span class="math inline">\(x^n - \lambda_j\)</span> for <span class="math inline">\(j\neq i\)</span>.</p></li>
 <li><p>For the second claim, we can check that <span class="math inline">\({\frac{\partial }{\partial x}\,}\qty{x^n - \lambda_i} = nx^{n-1}\neq 0\in {\mathbb{F}}\)</span>, and <span class="math inline">\(\gcd(x^n-\lambda_i, nx^{n-1}) = 1\)</span> since the latter term has only the roots <span class="math inline">\(x=0\)</span> with multiplicity <span class="math inline">\(n-1\)</span>, whereas <span class="math inline">\(\lambda_i\neq 0 \implies\)</span> zero is not a root of <span class="math inline">\(x^n-\lambda_i\)</span>.</p></li>
 </ul>
-<p>But now since <span class="math inline">\(q_A(x)\)</span> has exactly distinct linear factors in <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x]\)</span> and <span class="math inline">\(\min_A(x) \bigm|q_A(x)\)</span>, <span class="math inline">\(\min_A(x) \in {\mathbb{F}}[x]\)</span> can only have distinct linear factors, and <span class="math inline">\(A\)</span> is thus diagonalizable over <span class="math inline">\({\mathbb{F}}\)</span>.</p>
+<p>But now since <span class="math inline">\(q_A(x)\)</span> has exactly distinct linear factors in <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x]\)</span> and <span class="math inline">\(\min_A(x) \divides q_A(x)\)</span>, <span class="math inline">\(\min_A(x) \in {\mathbb{F}}[x]\)</span> can only have distinct linear factors, and <span class="math inline">\(A\)</span> is thus diagonalizable over <span class="math inline">\({\mathbb{F}}\)</span>.</p>
 </div>
 </div>
 <h1 data-number="11" id="linear-algebra-misc"><span class="header-section-number">11</span> Linear Algebra: Misc</h1>
@@ -3574,7 +3526,7 @@ B &amp; C \\
 <li>Claim: in characteristic zero, every irreducible polynomial is separable
 <ul>
 <li>Proof: it must be the case that either <span class="math inline">\(\gcd(f, f&#39;) = 1\)</span> or <span class="math inline">\(f&#39; \equiv 0\)</span>, where the second case only happens in characteristic <span class="math inline">\(p&gt;0\)</span>.</li>
-<li>The first case is true because <span class="math inline">\(\deg f&#39; &lt; \deg f\)</span>, and if <span class="math inline">\(\gcd(f, f&#39;) = p\)</span>, then <span class="math inline">\(\deg p &lt; \deg f\)</span> and <span class="math inline">\(p\bigm|f\)</span> forces <span class="math inline">\(p=1\)</span> since <span class="math inline">\(f\)</span> is irreducible.</li>
+<li>The first case is true because <span class="math inline">\(\deg f&#39; &lt; \deg f\)</span>, and if <span class="math inline">\(\gcd(f, f&#39;) = p\)</span>, then <span class="math inline">\(\deg p &lt; \deg f\)</span> and <span class="math inline">\(p\divides f\)</span> forces <span class="math inline">\(p=1\)</span> since <span class="math inline">\(f\)</span> is irreducible.</li>
 </ul></li>
 <li>So <span class="math inline">\(\min_{T, F}\)</span> splits into distinct linear factors</li>
 <li>Thus <span class="math inline">\(T\)</span> is diagonalizable.</li>

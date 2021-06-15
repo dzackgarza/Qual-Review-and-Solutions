@@ -393,7 +393,6 @@ Note that the proof follows immediately.
 
 :::
 
-
 ### $\star$ Spring 2020 #6 $\done$
 Let $R$ be a ring with unity.
 

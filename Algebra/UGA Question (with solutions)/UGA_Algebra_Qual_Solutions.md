@@ -32,6 +32,8 @@
 \newcommand{\DD}[0]{{\mathbb{D}}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
 \newcommand{\Fp}[0]{{\mathbb{F}_p}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
@@ -52,7 +54,10 @@
 \newcommand{\RR}[0]{{\mathbb{R}}}
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \renewcommand{\SS}[0]{{\mathbb{S}}}
+\newcommand{\WW}[0]{{\mathbb{W}}}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
 \newcommand{\TT}[0]{{\mathbb{T}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
 \newcommand{\ZZ}[0]{{\mathbb{Z}}}
 \newcommand{\ZZG}[0]{{\mathbb{Z}G}}
 \newcommand{\ZZH}[0]{{\mathbb{Z}H}}
@@ -64,12 +69,15 @@
 \newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
 \newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
+\newcommand{\ZZp}[0]{{ \mathbb{Z}_{(p)} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
 \newcommand{\chp}[0]{\operatorname{ch. p}}
 \newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
 \newcommand{\HT}[0]{{\operatorname{HT}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\qc}[0]{{\operatorname{qc}}}
 \newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\vol}[0]{\operatorname{vol}}
@@ -124,6 +132,7 @@
 \newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
 \newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
 \newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
 \newcommand{\HP}[0]{{\operatorname{HP}}}
@@ -162,16 +171,36 @@
 \newcommand{\SO}[0]{{\operatorname{SO}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
 \newcommand{\MO}[0]{{\operatorname{MO}}}
+\newcommand{\KO}[0]{{\operatorname{KO}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\ku}[0]{{\operatorname{ku}}}
+\newcommand{\MU}[0]{{\operatorname{MU}}}
+\newcommand{\BU}[0]{{\operatorname{BU}}}
+\newcommand{\BO}[0]{{\operatorname{BO}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\KU}[0]{{\operatorname{KU}}}
+\newcommand{\BP}[0]{{\operatorname{BP}}}
+\newcommand{\MSO}[0]{{\operatorname{MSO}}}
+\newcommand{\MSp}[0]{{\operatorname{MSpin}}}
+\newcommand{\MSpin}[0]{{\operatorname{MSpin}}}
+\newcommand{\MStr}[0]{{\operatorname{MString}}}
+\newcommand{\MString}[0]{{\operatorname{MString}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\per}[0]{{\operatorname{Per}}}
 \newcommand{\loc}[0]{{\operatorname{loc}}}
 \newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
 \newcommand{\Pin}[0]{{\operatorname{Pin}}}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\sing}[0]{{\operatorname{Sing}}}
 \newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\Cat}[0]{\mathsf{Cat}}
+\newcommand{\Monoid}[0]{\mathsf{Mon}}
 \newcommand{\Poset}[0]{\mathsf{Poset}}
 \newcommand{\Fun}[0]{{\mathsf{Fun}}}
 \newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
@@ -184,12 +213,14 @@
 \newcommand{\Ch}[0]{\mathsf{Ch}}
 \newcommand{\Set}[0]{{\mathsf{Set}}}
 \newcommand{\FI}[0]{{\mathsf{FI}}}
+\newcommand{\FGL}[0]{\mathsf{FGL}}
 \newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
 \newcommand{\Sets}[0]{{\mathsf{Set}}}
 \newcommand{\Finset}[0]{{\mathsf{FinSet}}}
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
 \newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
 \newcommand{\Sp}[0]{{\mathsf{Sp}}}
+\newcommand{\Spectra}[0]{{\mathsf{Sp}}}
 \newcommand{\sets}[0]{{\mathsf{Set}}}
 \newcommand{\Grp}[0]{{\mathsf{Grp}}}
 \newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
@@ -220,7 +251,9 @@
 \newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
 \newcommand{\cdga}[0]{{\mathsf{cdga} }}
 \newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
+\newcommand{\kAlg}[0]{{\mathsf{Alg}_{/k} }}
 \newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
+\newcommand{\rAlg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
 \newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\alg}[0]{\mathsf{Alg}}
@@ -241,6 +274,11 @@
 \newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
 \newcommand{\hoType}[0]{{\mathsf{hoType}}}
 \newcommand{\Sch}[0]{{\mathsf{Sch}}}
+\newcommand{\FFlat}[0]{{\mathsf{FFlat}}}
+\newcommand{\kSch}[0]{{\mathsf{Sch}_{/k}}}
+\newcommand{\Lag}[0]{{\mathsf{Lag}}}
+\newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
+\newcommand{\Wein}[0]{{\mathsf{Wein}}}
 \newcommand{\Aff}[0]{{\mathsf{Aff}}}
 \newcommand{\Schf}[0]{{\mathsf{Schf}}}
 \newcommand{\Rep}[0]{{\mathsf{Rep}}}
@@ -289,6 +327,7 @@
 \newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
 \newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
@@ -372,8 +411,9 @@
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{{J}\qty{#1} }}
+\newcommand{\jacrad}[1]{{{J}\qty{#1} }}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
 \newcommand{\mapsvia}[1]{\xrightarrow{#1}}
 \newcommand{\fromvia}[1]{\xleftarrow{#1}}
@@ -429,7 +469,8 @@
 \newcommand{\CY}{{ \text{CY} }}
 \newcommand{\FS}{{ \text{FS} }}
 \newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\Map}[0]{{\operatorname{Maps}}}
+\newcommand{\Maps}[0]{{\operatorname{Map}}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
@@ -471,6 +512,7 @@
 \newcommand{\smashprod}[0]{\wedge}
 \newcommand{\Wedge}[0]{\bigwedge}
 \newcommand{\Extalg}[0]{\bigwedge}
+\newcommand{\Extalgebra}[0]{\bigwedge}
 \newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
@@ -523,14 +565,15 @@
 \newcommand\jan{\operatorname{Jan}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\TMF{ \mathrm{TMF} }
+\newcommand\TAF{ \mathrm{TAF} }
 \newcommand\tmf{ \mathrm{tmf} }
+\newcommand\taf{ \mathrm{taf} }
 \newcommand\Fix{ \mathrm{Fix} }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator{\submfds}{SubMfds}
 \DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -555,9 +598,7 @@
 \DeclareMathOperator{\projection}{Proj}
 \DeclareMathOperator{\Der}{Der}
 \DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
 \DeclareMathOperator{\D}{{\mathsf{D} }}
 \DeclareMathOperator{\K}{{\mathsf{K} }}
 \DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
@@ -575,7 +616,8 @@
 
 \newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
 \newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\globsec}[1]{{\mathsf{\Gamma}\qty{#1} }}
 
 \newcommand{\DSt}[0]{{ \operatorname{DSt}}}
 
@@ -631,6 +673,7 @@
 \newcommand{\iscontainedin}[0]{\supseteq}
 
 \newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 
@@ -654,6 +697,7 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
@@ -676,13 +720,7 @@
 \newcommand{\RM}[1]{%
   \textup{\uppercase\expandafter{\romannumeral#1}}%
 }
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
+
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
@@ -698,8 +736,13 @@
 \newcommand{\equalsbecause}[1]{\overset{#1}{=}}
 \newcommand{\congbecause}[1]{\overset{#1}{\cong}}
 \newcommand{\congas}[1]{\underset{#1}{\cong}}
+\newcommand{\isoas}[1]{\underset{#1}{\cong}}
+\newcommand{\weakeq}[1]{\underset{#1}{\to}}
+\newcommand{\addbase}[1]{{ {}_{\pt} }}
 \newcommand{\ideal}[1]{\mathcal{#1}}
 \newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
+\newcommand{\powerseries}[1]{ { \left[ {#1} \right] } }
+\newcommand{\formalpowerseries}[1]{ { \left[\left[ {#1} \right] \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
 
 
@@ -720,6 +763,9 @@
 }}
 
 
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
 \newcommand{\ess}[0]{{\mathrm{ess}}}
@@ -741,6 +787,10 @@
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+
+
+\newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
+\newcommand{\complete}[1]{{}^{\hat{}}_{#1}}
 
 # Preface
 
@@ -803,11 +853,11 @@ Show that
 [G: H\intersect K] \leq [G: H] ~ [G:K]
 .\]
 
-
+http://www.ams.org/notices/200304/what-is.pdf
 :::{.concept}
 \envlist
 
-- For $H, K\leq G$, intersection is again a subgroup of everything: $H\int K \leq H, K, G$ by the one-step subgroup test.
+- For $H, K\leq G$, intersection is again a subgroup of everything: $H\intersect K \leq H, K, G$ by the one-step subgroup test.
 - Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
 - Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
 - Common trick: just list out all of the darn cosets!
@@ -1585,85 +1635,38 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 :::{.concept}
 \envlist
 
-- Centralizer: 
-  \[
-  C_G(h) = Z(h) = \theset{g\in G \suchthat [g,h] = 1}
-  \quad\text{Centralizer}
-\]
-- Class equation: 
-  \[
-  \abs{G} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{\abs{G}}{\abs{Z(h)}}
-  \]
-- Notation:
-  \[
-  h^g &= ghg\inv \\
-  h^G &= \theset{ h^g \suchthat g\in G} \quad\text{Conjugacy Class}\\
-  H^g &= \theset{h^g \suchthat h\in H} \\
-  N_G(H) &= \theset{g\in G \suchthat H^g = H} \supseteq H \quad\text{Normalizer}
-  .\]
+- $Z(g) = G \iff g\in Z(G)$, i.e. if the centralizer of $g$ is the whole group, $g$ is central.
 
+- If $H\leq G$ is a *proper* subgroup, then $\Union_{g\in G} hGh\inv$ is again a proper subgroup (subset?)
+  I.e. $G$ is not a union of conjugates of any proper subgroup.
+- So if $G$ *is* a union of conjugates of $H$, then $H$ must not be proper, i.e. $H= G$.
 :::
 
 :::{.solution}
 \envlist
 
-:::{.claim title="1"}
+- We have $g_j \subseteq Z(g_k)$ for all $k$ by assumption.
+- If we can show $Z(g_k) = G$ for all $k$, then $g_k \in Z(G)$ for all $k$.
+  - Then each conjugacy class is size 1, and since $G = \disjoint_{i=1}^n [g_i] = \disjoint_{i=1}^n \ts{g_i}$, every $g\in G$ is some $g_i$.
+  So $G \subseteq Z(G)$, forcing $G$ to be abelian.
+- If we can show $G \subseteq \Union_{h\in H} h Z(g_k) h\inv$ for some $k$, this forces $Z(g_k) = G$ and $g_k \in Z(G)$.
+  - If we can do this for all $k$, we're done!
+- Since $g\in G$ is in some conjugacy class, write $g=hg_j h\inv$ for some $h\in G$ and some $1\leq j\leq n$.
+- Now use $g_j \in Z(g_k)$ for all $k$:
 \[
-\abs{h^G} = [G: Z(h)]
+g\in G &\implies g = hg_j h\inv && \text{for some } h\in H \\
+g_j \in Z(g_k) \forall k &\implies g\in hZ(g_k)h\inv &&\text{for some }h, \, \forall 1\leq k \leq n \\
+&\implies g\in \Union_{h\in G} h Z(g_k) h\inv
+&&\forall 1\leq k \leq n \\
 .\]
-:::
-
-:::{.claim title="2"}
+  - Note that it's necessary to get rid of the $h$ dependence, since now now every $g\in G$ is in $\Union_{h\in G} hZ(g_k)h\inv$.
+- Now
 \[
-\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]
-.\]
-:::
+G \subseteq \Union_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
+,\]
+and we're done.
 
-:::{.proof title="of claim 2"}
-\envlist
 
-- Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
-- Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
-- So Orbit-Stabilizer says $\mathcal O_h \cong G/\mathrm{Stab}(H)$; then just take sizes.
-
-:::
-
-:::{.claim title="3"}
-$\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
-:::
-
-:::{.proof title="of claim 3"}
-- By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
-  \[
-  \abs{\union_{g\in G} H^g} 
-  &= \qty{ \abs{H} - 1} [G: N_G(H)] + 1\\
-  &= \abs{H} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-  &= \abs{G} \frac{\abs G}{\abs{N_G(H)}} - \frac{\abs G}{\abs{N_G(H)}} + 1 \\
-  &\leq \abs{H} \frac{\abs G}{\abs{H}} - \frac{\abs G}{\abs{H}} + 1 \\
-  &= \abs{G} - ([G: H] - 1) \\
-  &< \abs{G} 
-  ,\]
-  where we use the fact that $H \subseteq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies \frac{1}{\abs{N_G(H)}} \leq \frac{1}{\abs{H}}$, and since $H < G$ is proper, $[G:H] \geq 2$.
-
-- Since $[g_i, g_j] = 1$, we have $g_i \in Z(g_j)$ for every $i, j$.
-
-- Then
-  \[
-  g\in G 
-  &\implies g = g_i^h \quad \text{ for some } h \\
-  &\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-  &\implies g \in \union_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-  &\implies G \subseteq \union_{h\in G} Z(g_j)^h \quad\text{for every } j
-  ,\]
-
-  which by Theorem 3, if $Z(g_j) < G$ were proper, then the RHS is properly contained in $G$. 
-- So it must be the case that that $Z(g_j)$ is not proper and thus equal to $G$ for every $j$.
-
-- But $Z(g_i) = G \iff g_i \in Z(G)$, and so each conjugacy class is size one.
-- So for every $g\in G$, we have $g = g_j$ for some $j$, and thus $g = g_j \in Z(g_j) = Z(G)$, so $g$ is central.
-- Then $G\subseteq Z(G)$ and $G$ is abelian.
-
-:::
 
 :::
 
@@ -4212,7 +4215,6 @@ Note that the proof follows immediately.
 
 
 :::
-
 
 ### $\star$ Spring 2020 #6 $\done$
 Let $R$ be a ring with unity.

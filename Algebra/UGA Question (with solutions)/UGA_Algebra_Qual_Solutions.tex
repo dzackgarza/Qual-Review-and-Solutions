@@ -145,8 +145,8 @@ both the order of \(h\) \emph{and} the order of cosets simultaneously.
   \begin{itemize}
   \tightlist
   \item
-    We've used that \(h\in H \implies o(h) \bigm|\# H = n\) by Lagrange,
-    so \(h^n = e\).
+    We've used that \(h\in H \implies o(h) \divides \# H = n\) by
+    Lagrange, so \(h^n = e\).
   \item
     We've also used that \(\# G/N = m\), so \((xH)^m = H\) for any
     \(xH\in G/H\).
@@ -165,24 +165,20 @@ that
 [G: H\cap K] \leq [G: H] ~ [G:K]
 .\end{align*}
 
-\begin{concept}
-
-\envlist
+http://www.ams.org/notices/200304/what-is.pdf :::\{.concept\} \envlist
 
 \begin{itemize}
 \tightlist
 \item
   For \(H, K\leq G\), intersection is again a subgroup of everything:
-  \(H\int K \leq H, K, G\) by the one-step subgroup test.
+  \(H\cap K \leq H, K, G\) by the one-step subgroup test.
 \item
   Counting in towers: \(A\leq B \leq C \implies [C:A] = [C:B][B:A]\).
 \item
   Fundamental theorem of cosets: \(xH = yH \iff xy^{-1}\in H\).
 \item
-  Common trick: just list out all of the darn cosets!
+  Common trick: just list out all of the darn cosets! :::
 \end{itemize}
-
-\end{concept}
 
 \begin{strategy}
 
@@ -797,8 +793,8 @@ Solution due to Swaroop Hegde, typed up + modifications added by DZG.
   \tightlist
   \item
     This rules out \(\# C_{i_j}\) being a prime less than \(p\), but
-    also rules out composites: if a prime \(q\bigm|\# C_{i_j}\), then
-    \(q<p\) and \(q\bigm|\# G\), a contradiction.
+    also rules out composites: if a prime \(q\divides \# C_{i_j}\), then
+    \(q<p\) and \(q\divides \# G\), a contradiction.
   \end{itemize}
 \item
   By fact 3, each \(x\in C_{i_j}\) satisfies \(x\in Z(G)\).
@@ -859,7 +855,7 @@ contained in the center of \(G\).
   .\end{align*}
 \item
   The size of each conjugacy class divides the size of \(H\) by
-  orbit-stabilizer, so \(\# [n_i] \bigm|p\) for each \(i\).
+  orbit-stabilizer, so \(\# [n_i] \divides p\) for each \(i\).
 \item
   But the entire second term must sum to \(p-1\) for this equality to
   hold, which forces \(\#[n_i] = 1\) (and incidentally \(m=p-1\))
@@ -1192,7 +1188,7 @@ D_{2m} = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^m = 1 = \tau^2, \ta
   \tightlist
   \item
     We have \(\left\langle{ ab }\right\rangle\leq G\), so
-    \(n\bigm|\# G\).
+    \(n\divides \# G\).
   \item
     Since \(b\not\in \left\langle{ ab }\right\rangle\), this forces
     \(\# G > n\), so \(\# G \geq 2n\).
@@ -1226,8 +1222,8 @@ Let \(G\) be a group of order \(p^2q\) for \(p, q\) prime. Show that
 \item
   In any case, we have
   \begin{align*}
-  n_p \bigm|q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
-  n_q \bigm|p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+  n_p \divides q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+  n_q \divides p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
   .\end{align*}
 \item
   \textbf{Case 1:} \(:p>q\).
@@ -1515,26 +1511,17 @@ abelian.
 \envlist
 
 \begin{itemize}
-\tightlist
 \item
-  Centralizer:
-  \begin{align*}
-  C_G(h) = Z(h) = \left\{{g\in G {~\mathrel{\Big|}~}[g,h] = 1}\right\}
-  \quad\text{Centralizer}
-  \end{align*}
+  \(Z(g) = G \iff g\in Z(G)\), i.e.~if the centralizer of \(g\) is the
+  whole group, \(g\) is central.
 \item
-  Class equation:
-  \begin{align*}
-  {\left\lvert {G} \right\rvert} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {Z(h)} \right\rvert}}
-  \end{align*}
+  If \(H\leq G\) is a \emph{proper} subgroup, then
+  \(\displaystyle\bigcup_{g\in G} hGh^{-1}\) is again a proper subgroup
+  (subset?) I.e. \(G\) is not a union of conjugates of any proper
+  subgroup.
 \item
-  Notation:
-  \begin{align*}
-  h^g &= ghg^{-1}\\
-  h^G &= \left\{{ h^g {~\mathrel{\Big|}~}g\in G}\right\} \quad\text{Conjugacy Class}\\
-  H^g &= \left\{{h^g {~\mathrel{\Big|}~}h\in H}\right\} \\
-  N_G(H) &= \left\{{g\in G {~\mathrel{\Big|}~}H^g = H}\right\} \supseteq H \quad\text{Normalizer}
-  .\end{align*}
+  So if \(G\) \emph{is} a union of conjugates of \(H\), then \(H\) must
+  not be proper, i.e.~\(H= G\).
 \end{itemize}
 
 \end{concept}
@@ -1543,97 +1530,58 @@ abelian.
 
 \envlist
 
-\begin{claim}[1]
-
-\begin{align*}
-{\left\lvert {h^G} \right\rvert} = [G: Z(h)]
-.\end{align*}
-
-\end{claim}
-
-\begin{claim}[2]
-
-\begin{align*}
-{\left\lvert {\left\{{H^g {~\mathrel{\Big|}~}g\in G}\right\}} \right\rvert} = [G: N_G(H)]
-.\end{align*}
-
-\end{claim}
-
-\begin{proof}[of claim 2]
-
-\envlist
-
 \begin{itemize}
 \tightlist
 \item
-  Let
-  \(G\curvearrowright\left\{{H {~\mathrel{\Big|}~}H \leq G}\right\}\) by
-  \(H \mapsto gHg^{-1}\).
+  We have \(g_j \subseteq Z(g_k)\) for all \(k\) by assumption.
 \item
-  Then the \(\mathcal O_H\) is the set of conjugate subgroups,
-  \(\mathrm{Stab}(H) = N_G(H)\).
+  If we can show \(Z(g_k) = G\) for all \(k\), then \(g_k \in Z(G)\) for
+  all \(k\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Then each conjugacy class is size 1, and since
+    \(G = {\textstyle\coprod}_{i=1}^n [g_i] = {\textstyle\coprod}_{i=1}^n \left\{{g_i}\right\}\),
+    every \(g\in G\) is some \(g_i\). So \(G \subseteq Z(G)\), forcing
+    \(G\) to be abelian.
+  \end{itemize}
 \item
-  So Orbit-Stabilizer says \(\mathcal O_h \cong G/\mathrm{Stab}(H)\);
-  then just take sizes.
-\end{itemize}
+  If we can show
+  \(G \subseteq \displaystyle\bigcup_{h\in H} h Z(g_k) h^{-1}\) for some
+  \(k\), this forces \(Z(g_k) = G\) and \(g_k \in Z(G)\).
 
-\end{proof}
-
-\begin{claim}[3]
-
-\(\cup_{g\in G} H^g = \cup_{g\in G} gHg^{-1}\subsetneq G\) for any
-proper \(H \leq G\).
-
-\end{claim}
-
-\begin{proof}[of claim 3]
-
-\begin{itemize}
+  \begin{itemize}
+  \tightlist
+  \item
+    If we can do this for all \(k\), we're done!
+  \end{itemize}
 \item
-  By theorem 2, since each coset is of size
-  \({\left\lvert {H} \right\rvert}\), which only intersect at the
-  identity, and there are exactly \([G: N_G(H)]\) of them
+  Since \(g\in G\) is in some conjugacy class, write \(g=hg_j h^{-1}\)
+  for some \(h\in G\) and some \(1\leq j\leq n\).
+\item
+  Now use \(g_j \in Z(g_k)\) for all \(k\):
   \begin{align*}
-  {\left\lvert {\cup_{g\in G} H^g} \right\rvert} 
-  &= \qty{ {\left\lvert {H} \right\rvert} - 1} [G: N_G(H)] + 1\\
-  &= {\left\lvert {H} \right\rvert} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-  &= {\left\lvert {G} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} + 1 \\
-  &\leq {\left\lvert {H} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} + 1 \\
-  &= {\left\lvert {G} \right\rvert} - ([G: H] - 1) \\
-  &< {\left\lvert {G} \right\rvert} 
-  ,\end{align*}
-  where we use the fact that
-  \(H \subseteq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies \frac{1}{{\left\lvert {N_G(H)} \right\rvert}} \leq \frac{1}{{\left\lvert {H} \right\rvert}}\),
-  and since \(H < G\) is proper, \([G:H] \geq 2\).
+  g\in G &\implies g = hg_j h^{-1}&& \text{for some } h\in H \\
+  g_j \in Z(g_k) \forall k &\implies g\in hZ(g_k)h^{-1}&&\text{for some }h, \, \forall 1\leq k \leq n \\
+  &\implies g\in \displaystyle\bigcup_{h\in G} h Z(g_k) h^{-1}
+  &&\forall 1\leq k \leq n \\
+  .\end{align*}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Note that it's necessary to get rid of the \(h\) dependence, since
+    now now every \(g\in G\) is in
+    \(\displaystyle\bigcup_{h\in G} hZ(g_k)h^{-1}\).
+  \end{itemize}
 \item
-  Since \([g_i, g_j] = 1\), we have \(g_i \in Z(g_j)\) for every
-  \(i, j\).
-\item
-  Then
+  Now
   \begin{align*}
-  g\in G 
-  &\implies g = g_i^h \quad \text{ for some } h \\
-  &\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-  &\implies g \in \cup_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-  &\implies G \subseteq \cup_{h\in G} Z(g_j)^h \quad\text{for every } j
+  G \subseteq \displaystyle\bigcup_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
   ,\end{align*}
-
-  which by Theorem 3, if \(Z(g_j) < G\) were proper, then the RHS is
-  properly contained in \(G\).
-\item
-  So it must be the case that that \(Z(g_j)\) is not proper and thus
-  equal to \(G\) for every \(j\).
-\item
-  But \(Z(g_i) = G \iff g_i \in Z(G)\), and so each conjugacy class is
-  size one.
-\item
-  So for every \(g\in G\), we have \(g = g_j\) for some \(j\), and thus
-  \(g = g_j \in Z(g_j) = Z(G)\), so \(g\) is central.
-\item
-  Then \(G\subseteq Z(G)\) and \(G\) is abelian.
+  and we're done.
 \end{itemize}
-
-\end{proof}
 
 \end{solution}
 
@@ -1809,7 +1757,7 @@ Let \(G\) be a finite group whose order is divisible by a prime number
   \({\left\lvert {HK} \right\rvert} = {\left\lvert {H} \right\rvert} {\left\lvert {K} \right\rvert} / {\left\lvert {H\cap K} \right\rvert}\).
 \item
   Lagrange's Theorem:
-  \(H\leq G \implies {\left\lvert {H} \right\rvert} \bigm|{\left\lvert {G} \right\rvert}\)
+  \(H\leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert}\)
 \end{itemize}
 
 \end{concept}
@@ -1901,7 +1849,7 @@ subgroups respectively.
   The \(pqr\) theorem.
 \item
   Sylow 3: \({\left\lvert {G} \right\rvert} = p^n m\) implies
-  \(n_p \bigm|m\) and \(n_p \cong 1 \pmod p\).
+  \(n_p \divides m\) and \(n_p \cong 1 \pmod p\).
 \item
   \textbf{Theorem}: If \(H, K \leq G\) and any of the following
   conditions hold, \(HK\) is a subgroup:
@@ -1945,11 +1893,11 @@ subgroups respectively.
 \item
   We have
 \item
-  \(n_3 \bigm|5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)
+  \(n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\}\)
 \item
-  \(n_5 \bigm|3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)
+  \(n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\}\)
 \item
-  \(n_7 \bigm|3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)
+  \(n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\}\)
 \item
   Thus
   \begin{align*}
@@ -2157,7 +2105,7 @@ Describe a representative from each class.
 \item
   \(n_p \cong 1 \pmod p\)
 \item
-  \(n_p \bigm|m\).
+  \(n_p \divides m\).
 \end{itemize}
 
 \end{concept}
@@ -2335,9 +2283,9 @@ Strategy: examine \({\left\lvert {G/Z(G)} \right\rvert}\) by cases.
   \begin{itemize}
   \tightlist
   \item
-    \(n_5 \bigm|7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)
+    \(n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1\)
   \item
-    \(n_7 \bigm|5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)
+    \(n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1\)
   \end{itemize}
 \item
   By recognition of direct products, \(G = S_5 \times S_7\)
@@ -3129,8 +3077,8 @@ in \(R\). Recall that in an integral domain \(R\), \(r \in R\) is called
 \(r\) have the form \(ru\) with \(u\) a unit in \(R\).
 
 We call a non-zero, non-unit \(r \in R\) \emph{prime} in \(R\) if
-\(r \bigm|ab \implies r \bigm|a\) or \(r \bigm|b\). Consider the ring
-\(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
+\(r \divides ab \implies r \divides a\) or \(r \divides b\). Consider
+the ring \(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -3509,7 +3457,7 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
   \({\mathbb{F}}^{\times}\) is always cyclic for \({\mathbb{F}}\) a
   field.
 \item
-  Lagrange: \(H\leq G \implies \#H \bigm|\# G\).
+  Lagrange: \(H\leq G \implies \#H \divides \# G\).
 \end{itemize}
 
 \end{concept}
@@ -3529,7 +3477,7 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
   \({\left\lvert {E^{\times}} \right\rvert} = q^k-1\).
 \item
   Noting that \(\zeta \in E^{\times}\) we must have
-  \(n = o(\zeta) \bigm|{\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
+  \(n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
   by Lagrange's theorem.
 \end{itemize}
 
@@ -3544,10 +3492,10 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
 \item
   Rephrasing (a), we have
   \begin{align*}
-  n \bigm|q^k-1 
+  n \divides q^k-1 
   &\iff q^k-1 \cong 0 \pmod n \\
   &\iff q^k \cong 1 \pmod n \\
-  &\iff m \coloneqq o(q) \bigm|k
+  &\iff m \coloneqq o(q) \divides k
   .\end{align*}
 \end{itemize}
 
@@ -3559,7 +3507,7 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
 
 \begin{itemize}
 \item
-  Since \(m\bigm|k \iff k = \ell m\), (\textbf{claim}) there is an
+  Since \(m\divides k \iff k = \ell m\), (\textbf{claim}) there is an
   intermediate subfield \(M\) such that
   \begin{align*}
   E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
@@ -3766,9 +3714,9 @@ Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
   \({\mathbb{GF}}(p^n)\) is the splitting field of
   \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
 \item
-  \(x^{p^d} - x \bigm|x^{p^n} - x \iff d \bigm|n\)
+  \(x^{p^d} - x \divides x^{p^n} - x \iff d \divides n\)
 \item
-  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\bigm|n\)
+  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n\)
 \item
   \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
   degree \(d\) dividing \(n\).
@@ -3801,7 +3749,7 @@ Since \(\rho\) is a ring morphism, we have
 = 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \bigm|q(x) = x^{p^d}-x
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
 ,\end{align*}
 where we've used that ``to contain is to divide'' in the last step.
 
@@ -3818,7 +3766,7 @@ where we've used that ``to contain is to divide'' in the last step.
 \begin{proof}[of claim, $\implies$]
 
 Let \(L \cong {\mathbb{GF}}(p^n)\) be the splitting field of
-\(\phi_n(x) \coloneqq x^{p^n}-x\); then since \(\pi \bigm|\phi_n\) by
+\(\phi_n(x) \coloneqq x^{p^n}-x\); then since \(\pi \divides \phi_n\) by
 assumption, \(\pi\) splits in \(L\). Let \(\alpha \in L\) be any root of
 \(\pi\); then there is a tower of extensions
 \({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\).
@@ -3836,7 +3784,7 @@ for some \(\ell \in {\mathbb{Z}}^{\geq 1}\), so \(d\) divides \(n\).
 
 \begin{proof}[of claim, $\impliedby$]
 
-\(\impliedby\): If \(d\bigm|n\), use the fact (claim) that
+\(\impliedby\): If \(d\divides n\), use the fact (claim) that
 \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
 degree \(d\) dividing \(n\). So \(f = f_i\) for some \(i\).
 
@@ -5108,8 +5056,8 @@ Identify \({\mathbb{Z}}{\hbox{-}}\)modules with abelian groups, then by
 nontrivial proper subgroups.\\
 
 By Cauchy's theorem, if \({\left\lvert {M/N} \right\rvert} = ab\) is a
-composite number, then \(a\bigm|ab \implies\) there is an element (and
-thus a subgroup) of order \(a\). In this case, \(M/N\) contains a
+composite number, then \(a\divides ab \implies\) there is an element
+(and thus a subgroup) of order \(a\). In this case, \(M/N\) contains a
 nontrivial proper cyclic subgroup, so \(M/N\) is not simple. So
 \({\left\lvert {M/N} \right\rvert}\) can not be composite, and therefore
 must be prime.
@@ -5158,7 +5106,7 @@ Let
 \begin{align*}
 M &= \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\} \\
 N &= \left\{{
-(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\bigm|(w - x),~ 4\bigm|(x - y),~ 4\bigm|( y - z)
+(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)
 }\right\}
 .\end{align*}
 
@@ -6199,7 +6147,7 @@ diagonalizable.
   \end{align*}
 
   where we can note that \(q_A(A) = \min_{A^n}(A^n) = 0\), and so
-  \(\min_A(x) \bigm|q_A(x)\) by minimality.
+  \(\min_A(x) \divides q_A(x)\) by minimality.
 \end{itemize}
 
 \begin{claim}
@@ -6232,7 +6180,7 @@ diagonalizable.
 
 But now since \(q_A(x)\) has exactly distinct linear factors in
 \(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x]\)
-and \(\min_A(x) \bigm|q_A(x)\), \(\min_A(x) \in {\mathbb{F}}[x]\) can
+and \(\min_A(x) \divides q_A(x)\), \(\min_A(x) \in {\mathbb{F}}[x]\) can
 only have distinct linear factors, and \(A\) is thus diagonalizable over
 \({\mathbb{F}}\).
 
@@ -6920,7 +6868,7 @@ Let \(f\) be the characteristic polynomial of \(T\).
     characteristic \(p>0\).
   \item
     The first case is true because \(\deg f' < \deg f\), and if
-    \(\gcd(f, f') = p\), then \(\deg p < \deg f\) and \(p\bigm|f\)
+    \(\gcd(f, f') = p\), then \(\deg p < \deg f\) and \(p\divides f\)
     forces \(p=1\) since \(f\) is irreducible.
   \end{itemize}
 \item
