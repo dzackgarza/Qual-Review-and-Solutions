@@ -2,6 +2,31 @@
 
 ## Important Techniques
 
+
+:::{.proposition title="Fields are simple"}
+$R \in \Field \iff \Id(R) = \ts{ 0, R }$.
+:::
+
+
+:::{.proof title="?"}
+$\implies$:
+If $0\neq x\in I\normal R$, using that $R\nonzero = R\units$, $x$ is a unit.
+So $x\inv \in R$, and $xx\inv \da 1 \in I$ so $I = R$.
+
+$\impliedby$:
+Let $x\in R\nonzero$, then $Rx = R$ so $1\in Rx$ and $1=rx$ for some $r\in R$.
+This forces $x=r\inv$.
+
+:::
+
+
+
+:::{.proof title="?"}
+
+:::
+
+
+
 :::{.proposition title="Showing ideals are maximal/prime with quotients"}
 \envlist
 
