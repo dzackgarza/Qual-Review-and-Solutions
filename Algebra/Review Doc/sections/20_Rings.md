@@ -7,7 +7,6 @@
 $R \in \Field \iff \Id(R) = \ts{ 0, R }$.
 :::
 
-
 :::{.proof title="?"}
 $\implies$:
 If $0\neq x\in I\normal R$, using that $R\nonzero = R\units$, $x$ is a unit.
@@ -16,13 +15,6 @@ So $x\inv \in R$, and $xx\inv \da 1 \in I$ so $I = R$.
 $\impliedby$:
 Let $x\in R\nonzero$, then $Rx = R$ so $1\in Rx$ and $1=rx$ for some $r\in R$.
 This forces $x=r\inv$.
-
-:::
-
-
-
-:::{.proof title="?"}
-
 :::
 
 
@@ -46,7 +38,15 @@ I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{
 :::{.proof title="?"}
 \envlist
 
-- Use the ideal correspondence theorem: if $\mfm$ is maximal but $
+Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $M$.
+  
+\[
+&\quad R/\mfm \in \Field \\
+&\iff \not\exists \bar{J} \da J/\mfm \normal R/\mfm && J \in \Id(R) \\
+&\iff \not\exists \mfm \subsetneq J \subsetneq R \\
+&\iff J\in \mspec(R)
+.\]
+
 
 :::
 
