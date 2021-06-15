@@ -110,17 +110,18 @@ This forces $x=r\inv$.
 :::
 
 
-
 :::{.proof title="?"}
 \envlist
 
-Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
+1: Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing $\mfm$:
 \[
 &\quad R/\mfm \in \Field \\
 &\iff \not\exists J/\mfm \in \Id(R/\mfm)\nonzero \text{ such that } J \in \Id(R) \\
 &\iff \not\exists \mfm \subsetneq J \subsetneq R \\
 &\iff J\in \mspec(R)
 .\]
+
+2: 
 
 :::
 
@@ -136,6 +137,16 @@ I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{
 If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
 :::
 
+
+
+:::{.fact}
+The binomial expansion works in any ring:
+\[
+(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
+.\]
+
+This is useful when considering nilpotents or radicals.
+:::
 
 
 
