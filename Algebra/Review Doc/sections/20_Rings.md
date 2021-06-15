@@ -136,6 +136,17 @@ But then
 y \da b + \mfp = 0 + \mfp = 0 \mod \mfp
 .\]
 
+$\implies$:
+Let $a,b\in R$ with $xy\in \mfp$, we want to show that if $x\not \in \mfp$ then $y\in \mfp$.
+Note $x\not \in \mfp \iff x \cong 0 \mod \mfp$.
+Setting $x\da a + \mfp, y\da b + \mfp$ yields
+\[
+xy \da (a+\mfp)(b+\mfp) \da ab + \mfp = 0 \mod \mfp
+.\]
+Since $R/\mfp$ is a domain, assuming $x\neq 0 \mod \mfp$ we have $y = 0 \mod \mfp$, so $y\in \mfp$.
+
+
+
 
 :::
 
@@ -221,7 +232,7 @@ An **ideal** $I\normal R$ is a subset where $(I, +) \leq (R, +) \in \Grp$ is a s
 Equivalently,
 
 - $RI \subseteq I$
-- $I^2 \subseteq I$
+- $I + I \subseteq I$
 
 Note that $0$ is in every ideal.
 :::
@@ -307,7 +318,7 @@ In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 :::{.example title="of why the converse doesn't hold"}
 For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse:
 \[
-x^2 \mod (x^2 + x) \in \QQ[x]/(x^2 + x)
+x^2 \mod{x^2 + x} \in \QQ[x]/(x^2 + x)
 .\] 
 Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
 :::
