@@ -7,6 +7,7 @@
 
 - $R/\mfm$ is a field $\iff \mfm \in \mspec(R)$ is maximal.
 - $R/\mfp$ is an integral domain $\iff \mfp \in \spec(R)$ is prime.
+- $R/J$ is reduced $\iff J$ is radical.
 :::
 
 :::{.remark}
@@ -15,6 +16,15 @@ Note that this yields a quick proof that $\mspec R \subseteq \spec R$:
 I \text{ maximal } \iff R/I \in \Field {\color{blue} \implies } R/I \in \mathsf{IntDomain} \iff I \text{ prime}
 .\]
 :::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Use the ideal correspondence theorem: if $\mfm$ is maximal but $
+
+:::
+
 
 :::{.fact}
 If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
