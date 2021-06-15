@@ -637,7 +637,7 @@ $\nilrad{R}^c \subseteq P^c$:
 Fix $f$ non-nilpotent, we want to show $f$ is not in any prime ideal.
 set $S \subseteq R$ to be all ideals $I$ such that $f^{>0} \not \in I$.
 Apply Zorn's lemma: $S\neq \emptyset$ since $0\in S$, so after ordering $I$ by inclusions $S$ contains a maximal $\mfp$ which we claim is prime.
-If $a,b \in \pfp^c$ then $\mfp + \gens{ a }$ and $\mfp + \gens{b} supset \mfp$ strictly, and by maximality they aren't in $S$.
+If $a,b \in \mfp^c$ then $\mfp + \gens{ a }$ and $\mfp + \gens{b} supset \mfp$ strictly, and by maximality they aren't in $S$.
 So there exist $m,n$ such that $f^m\in \mfp + \gens{ a }$ and $f^n \in \mfp + \gens{b}$. 
 Then $f^{m+n} \in \mfp + \gens{ab}$, so $\mfp + \gens{ab}$ is not in $S$.
 Thus $ab\not \in \mfp$ so $f\not\in \mfp$.
