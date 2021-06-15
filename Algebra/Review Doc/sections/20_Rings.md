@@ -1,5 +1,41 @@
 # Ring Theory
 
+## Isomorphism Theorems
+
+:::{.proposition title="First Isomorphism Theorem"}
+For any ring morphism $f:A\to B$ there is SES of rings
+\[
+0 \to \ker f \to A \to \im(f) \to 0
+,\]
+and thus $A/\ker f \cong \im f$.
+If $f$ is surjective, then $A/\ker f \cong B$.
+
+More traditionally stated:
+
+- $\ker \phi \in \Id(A)$
+- $\im \phi \leq B$ is a subring (not necessarily an ideal)
+- $R/\ker \phi \cong \im \phi$.
+:::
+
+
+:::{.proposition title="nth Isomorphism Theorem"}
+There is a bijective correspondence:
+\[
+\correspond{
+  \text{Ideals } J \normal R \\
+  \text{containing I}
+}
+&\mapstofrom
+\correspond{
+  \text{Ideals } \bar{J} \normal R/I
+} \\
+J \da \phi\inv(\bar J) &\mapsfrom \bar{J}
+,\]
+where $\phi: R\to R/I$ is the canonical quotient morphism.
+
+:::
+
+
 ## Important Techniques
 
 
@@ -252,34 +288,6 @@ Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
 
-## Isomorphism Theorems
-
-:::{.proposition title="First Isomorphism Theorem"}
-For any ring morphism $f:A\to B$ there is SES of rings
-\[
-0 \to \ker f \to A \to \im(f) \to 0
-,\]
-and thus $A/\ker f \cong \im f$.
-If $f$ is surjective, then $A/\ker f \cong B$.
-:::
-
-
-:::{.proposition title="nth Isomorphism Theorem"}
-There is a bijective correspondence:
-\[
-\correspond{
-  \text{Ideals } J \normal R \\
-  \text{containing I}
-}
-&\mapstofrom
-\correspond{
-  \text{Ideals } \bar{J} \normal R/I
-} \\
-J \da \phi\inv(\bar J) &\mapsfrom \bar{J}
-,\]
-where $\phi: R\to R/I$ is the canonical quotient morphism.
-
-:::
 
 
 ## Types of Rings
