@@ -19,18 +19,16 @@ More traditionally stated:
 
 
 :::{.proposition title="Second Isomorphism Theorem"}
-Let $R\in \Ring, S\leq R, I\in \Id(R)$, then
-
-- $S+I \leq R$
-- $S \intersect I \normal S$
-- There is an isomorphism:
+Let $R\in \Ring, S\leq R, I\in \Id(R)$, then there is an isomorphism:
 \[
 {S+I \over I} \mveq {S\over S \intersect I}
 .\]
 
+Where it's also true that this statement makes sense:
 
+- $S+I \leq R$ is a subring.
+- $S \intersect I \normal S$
 :::
-
 
 
 :::{.proposition title="nth Isomorphism Theorem"}
@@ -47,6 +45,22 @@ There is a bijective correspondence:
 J \da \phi\inv(\bar J) &\mapsfrom \bar{J}
 ,\]
 where $\phi: R\to R/I$ is the canonical quotient morphism.
+
+More traditionally:
+
+- If $S, I \in \Id(R)$ with $S$ containing $I$ then
+\[
+S/I \leq R/I
+.\]
+
+- Every ideal in $\Id(R/I)$ is of the form $\bar{S} \da S/I$ for some $S\in \Id(R)$ containing $I$.
+
+- If $I, J \in \Id(R)$ with $I \subseteq J \subseteq R$ then there is an isomorphism
+\[
+{R/I \over J/I} \mveq {R\over J}
+.\]
+
+
 
 :::
 
