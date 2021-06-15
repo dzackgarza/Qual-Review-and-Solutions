@@ -699,6 +699,12 @@ Every finite division ring is a field, i.e. finite division rings must be commut
 
 ## Zorn's Lemma
 
+
+:::{.definition title="Chain in a poset"}
+In a poset, a **chain** is a totally ordered subset.
+:::
+
+
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 :::
