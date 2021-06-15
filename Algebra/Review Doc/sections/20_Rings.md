@@ -307,7 +307,7 @@ An ideal $I\normal R$ is **irreducible** if it can not be written as the interse
 :::{.definition title="Prime Ideal"}
 $\mfp$ is a **prime** ideal $\iff$
 \[ 
-ab\in \mfp \implies a\in \mfp \txt{ or } b\in \mfp
+ab\in \mfp \implies a\in \mfp \text{ or } b\in \mfp
 .\]
 :::
 
