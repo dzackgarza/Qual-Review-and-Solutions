@@ -114,7 +114,7 @@ Use the ideal correspondence theorem: $\Id(R/\mfm)$ are ideals of $R$ containing
   
 \[
 &\quad R/\mfm \in \Field \\
-&\iff \not\exists \bar{J} \da J/\mfm \normal R/\mfm && J \in \Id(R) \\
+&\iff \not\exists \bar{J} \da J/\mfm \neq R \in \Id(R/\mfm) && J \in \Id(R) \\
 &\iff \not\exists \mfm \subsetneq J \subsetneq R \\
 &\iff J\in \mspec(R)
 .\]
