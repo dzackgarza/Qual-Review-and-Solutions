@@ -18,11 +18,29 @@ For $f$ meromorphic in $\gamma^\circ$ with zeros \( \ts{ z_j } \) and poles \( \
 where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
 :::
 
-![](figures/2021-06-16_16-42-18.png)
-
 :::{.proof title="?"}
 Residue formula applied to $f'\over f$?
 :::
+
+![](figures/2021-06-16_16-42-18.png)
+
+
+:::{.remark}
+This is useful in numerical computation: if you can compute this integral within an error $E < \pi$ where you know it doesn't contain a pole, you can determine if the contour contains a zero.
+Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
+:::
+
+
+:::{.exercise title="?"}
+Show that $\del_{\ln}(fg) = \del_{\ln} f + \del_{\ln} g$, and thus
+\[
+\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
+.\]
+
+:::
+
+
+
 
 ## Rouché 
 :::{.corollary title="Rouché's Theorem" ref="Rouche"}
