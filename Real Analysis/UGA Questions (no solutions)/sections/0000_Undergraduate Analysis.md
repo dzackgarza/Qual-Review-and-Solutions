@@ -997,11 +997,21 @@ See this MSE post for many solutions: <https://math.stackexchange.com/questions/
 - Trick: $N \da n, M \da 2n$ and take $C\da 2$:
 \[
 2\sum_{n\leq k \leq 2n} x_k
-&\geq 2\sum_{n\leq k \leq 2n} x_{2n} && \text{$x_k$ are decreasing}\\
+&\geq 2\sum_{n\leq k \leq 2n} x_{2n} && \text{$x_k$ are non-increasing }\\
 &= 2 (2n-n)x_{2n} \\
 &= 2nx_{2n}
 ,\]
-and the upper bound goes to zero as $n\to \infty$.
+  and the upper bound goes to zero as $n\to \infty$.
+
+- So the even subsequence $2n x_{2n} \to 0$, it now suffices to show the odd subsequence $(2n+1) x_{2n+1} \to 0$.
+- Write
+\[
+(2n+1)x_{2n+1} 
+&= 2n\cdot x_{2n+1} + 1\cdot x_{2n+1} \\
+&\leq 2n\cdot x_{2n} + 1\cdot x_{2n+1} &&\text{$x_k$ are non-increasing }\\
+&\converges{n\to \infty}\too 0
+,\]
+where the first term converges by what we showed above, and the second by assumption.
 
 :::
 
