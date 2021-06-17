@@ -36,7 +36,6 @@ Show that $\del_{\ln}(fg) = \del_{\ln} f + \del_{\ln} g$, and thus
 \[
 \frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
 .\]
-
 :::
 
 
