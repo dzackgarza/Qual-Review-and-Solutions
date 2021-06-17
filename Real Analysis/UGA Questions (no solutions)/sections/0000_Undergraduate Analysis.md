@@ -977,6 +977,24 @@ $$
 \lim_{n\to\infty} n x_n = 0.
 $$
 
+
+:::{.solution}
+See this MSE post for many solutions: <https://math.stackexchange.com/questions/4603/if-a-n-subset0-infty-is-non-increasing-and-sum-a-n-infty-then-lim>
+
+- Since $\sum_{k\geq 1}x_k < \infty$, by the Cauchy criterion for convergent sequences we have $\lim_{M, N\to \infty} \sum_{M\leq k \leq N} x_k = 0$.
+  - This still holds if we freely add a constant $C$, so $C\sum_{M\leq k \leq N} x_k \to 0$ as well.
+- Trick: $N \da n, M \da 2n$:
+\[
+2\sum_{n\leq k \leq 2n} x_k
+&\geq 2\sum_{n\leq k \leq 2n} x_{2n} && \text{$x_k$ are decreasing}\\
+&= 2 (2n-n)x_{2n} \\
+&= 2nx_{2n}
+,\]
+and the upper bound goes to zero as $n\to \infty$.
+
+:::
+
+
 ## Fall 2020 \# 3 $\work$
 Let $f$ be a non-negative Lebesgue measurable function on $[1, \infty)$.
 
