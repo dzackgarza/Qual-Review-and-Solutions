@@ -376,17 +376,12 @@ f(b) - f(a) = f'(\xi)(b-a)
 
 :::
 
-:::{.theorem title="Lagrange Remainder"}
+:::{.theorem title="Lagrange and Cauchy Remainders"}
 If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
 \[
-x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \frac{f^{(n)}(\xi)}{n!}(x-p)^n
-\]
-:::
-
-:::{.theorem title="Cauchy Remainder"}
-If $f$ is $n$ times differentiable on a neighborhood of a point $p$, say $N_\delta(p)$, then for all points $x$ in the deleted neighborhood $N_\delta(p) - \theset{p}$ , there exists a point $\xi$ strictly between $x$ and $p$ such that
-\[
-x \in N_\delta(p)-\theset{p} \implies f(x) = \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \int_c^x \frac{1}{n!} \dd{^n f}{x^n}(t) (x-t)^n ~dt
+x \in N_\delta(p)-\theset{p} \implies f(x) 
+&= \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \frac{f^{(n)}(\xi)}{n!}(x-p)^n \\ \\
+&= \sum_{k=0}^{n-1} \frac{f^{(k)}(p)}{k!}(x-p)^k + \int_c^x \frac{1}{n!} \dd{^n f}{x^n}(t) (x-t)^n ~dt
 \]
 :::
 
@@ -511,14 +506,12 @@ In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
 
 ### Sequences and Series
 
-
 :::{.proposition title="The Cauchy condensation test"}
 For $\ts{a_k}$ is a non-increasing sequence in $\RR$ then
 \[
 \sum_{k\geq 1} a_k < \infty \iff \sum_{k\geq 1} 2^k a_{2^k}<\infty
 .\]
 :::
-
 
 :::{.proof title="?"}
 Show that
@@ -532,10 +525,7 @@ using
 \]
 where each group with $a_k$ has $2^k$ terms.
 
-
-
 :::
-
 
 
 ## Uniform Convergence
@@ -547,8 +537,6 @@ $f_n \to f$ uniformly iff there exists an $M_n$ such that $\norm{f_n - f}_\infty
 :::{.remark title="Negating the Sup Norm test"}
 **Negating**: find an $x$ which depends on $n$ for which $\norm{f_n}_\infty > \eps$ (negating small tails) or $\norm{f_n - f_m} > \eps$ (negating the Cauchy criterion).
 :::
-
-### Example: Completeness of a Normed Function Space
 
 :::{.proposition title="$C(I)$ is complete"}
 The space $X = C([0, 1])$, continuous functions $f: [0, 1] \to \RR$, equipped with the norm 
