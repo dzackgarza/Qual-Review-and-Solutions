@@ -78,13 +78,11 @@
   - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
 
 
-
 - Approximate by dense subsets of functions
 
 - Useful facts about compactly supported ($C_c(\RR)$) continuous functions:
   - Uniformly continuous
   - Bounded almost everywhere
-
 
 
 ## Definitions
@@ -359,7 +357,6 @@ A **Hilbert space** is an inner product space which is a Banach space under the 
 
 ## Theorems
 
-
 :::{.theorem title="Folland 0.25"}
 For $E \subseteq (X, d)$ a metric space, TFAE:
 
@@ -400,7 +397,6 @@ x \in N_\varepsilon(c) \implies \abs{f^{(n)}(x)} \leq M^n
 $$
 then the Taylor expansion about $c$ converges on $N_\varepsilon(c)$.
 :::
-
 
 ### Topology / Sets
 
@@ -512,6 +508,18 @@ $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}
 A function $f: (a, b) \to \RR$ is Lipschitz $\iff f$ is differentiable and $f'$ is bounded.
 In this case, $\abs{f'(x)} \leq C$, the Lipschitz constant.
 :::
+
+### Sequences and Series
+
+
+:::{.proposition title="The Cauchy condensation test"}
+For $\ts{a_k}$ is a non-increasing sequence in $\RR$ then
+\[
+\sum_{k\geq 1} a_k < \infty \iff \sum_{k\geq 1} 2^k a_{2^k}<\infty
+.\]
+
+:::
+
 
 ## Uniform Convergence
 
