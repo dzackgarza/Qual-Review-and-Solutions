@@ -517,8 +517,25 @@ For $\ts{a_k}$ is a non-increasing sequence in $\RR$ then
 \[
 \sum_{k\geq 1} a_k < \infty \iff \sum_{k\geq 1} 2^k a_{2^k}<\infty
 .\]
+:::
+
+
+:::{.proof title="?"}
+Show that
+\[
+\sum a_k \leq \sum 2^k a_{2^k} \leq 2 \sum a_k
+\]
+using 
+\[
+\sum a_k = a_0 + a_1 + a_2 + a_3 + \cdots
+\leq \qty{a_1} + \qty{a_2 + a_2} + {a_3 + a_3 + a_3 + a_3} + \cdots \\
+\]
+where each group with $a_k$ has $2^k$ terms.
+
+
 
 :::
+
 
 
 ## Uniform Convergence
