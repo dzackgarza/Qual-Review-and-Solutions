@@ -978,6 +978,14 @@ $$
 $$
 
 
+:::{.concept}
+\envlist
+
+- Cauchy criterion for convergence
+- Even and odd subsequences converge iff whole sequence converges.
+:::
+
+
 :::{.solution}
 See this MSE post for many solutions: <https://math.stackexchange.com/questions/4603/if-a-n-subset0-infty-is-non-increasing-and-sum-a-n-infty-then-lim>
 
