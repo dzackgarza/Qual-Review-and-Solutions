@@ -982,7 +982,16 @@ $$
 \envlist
 
 - Cauchy criterion for convergence
-- Even and odd subsequences converge iff whole sequence converges.
+- Claim: even and odd subsequences converge iff whole sequence converges.
+:::
+
+
+:::{.proof title="of claim"}
+$\impliedby$: clear, since any subsequence of a convergent sequence converges, and to the same limit.
+
+$\implies$:
+Fix $\eps$, choose $N\gg 1$ so that both $\abs{a_n - L} < \eps, \abs{a_{2n} - L} < \eps$ for $n\geq N$.
+Then for any $n$, it is either even or odd, so one of these bounds applies.
 :::
 
 
@@ -1012,8 +1021,10 @@ See this MSE post for many solutions: <https://math.stackexchange.com/questions/
 &\converges{n\to \infty}\too 0
 ,\]
 where the first term converges by what we showed above, and the second by assumption.
-
 :::
+
+
+
 
 
 ## Fall 2020 \# 3 $\work$
