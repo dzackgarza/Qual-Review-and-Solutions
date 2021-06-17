@@ -761,7 +761,7 @@ Questions to ask:
 - Where is/isn't $f$ differentiable?
 - Is $f$ Riemann integrable?
 
-### The Dirichlet function
+### Dirichlet function
 $$
 f ( x ) = b + (a-b)~\chi(x\in \QQ) = \begin{cases}
 a, & x\in \QQ \\
