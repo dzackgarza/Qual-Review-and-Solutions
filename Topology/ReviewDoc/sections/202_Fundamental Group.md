@@ -265,12 +265,10 @@ $\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fu
 :::
 
 
-:::{.fact "Unsorted facts"}
-\envlist
-
-- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
-
+:::{.fact}
+For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
 :::
+
 
 
 ## General Homotopy Theory
