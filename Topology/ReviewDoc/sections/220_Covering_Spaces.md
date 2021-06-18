@@ -301,11 +301,11 @@ S^1
 \ZZ^{\ast n} 
   \ar[r] 
 & 
-\hat{(S^1)^{\Wedgeprod n}} = \mathrm{Cayley}(n)
+\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
   \ar[d] 
 \\
 & 
-(S^1)^{\Wedgeprod n}
+(S^1)^{\wedgeprod n}
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
@@ -373,7 +373,7 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
 :::
 
-:::{.example title="$S^1 \wedgeprod S^1$"}
+:::{.example title="Wedge of circles"}
 The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$ by van Kampen, and the universal cover is the following 4-valent Cayley graph:
 
 ![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
@@ -388,7 +388,7 @@ Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only 
 
 :::
 
-:::{.example title="$\RP^2 \wedgeprod \RP^2$"}
+:::{.example title="Wedge of projective spaces"}
 The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinite string of copies of 2-valent $S^2$s:
 
 ![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
