@@ -165,7 +165,10 @@ letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 
 1. $\tilde X$ is normal if and only if $H\normal \pi_1(X)$,
 
-2. $G(\tilde X) \cong \Aut_{\mathrm{Cov}(\tilde X) } N_{\pi_1(X)}(H)$, the normalizer of $H$ in $\pi_1(X)$.
+2. For the normalizer $N_G(H)$ where $G\da \pi_1(X)$,
+\[
+G(\tilde X) \da \Aut_{\mathrm{Cov}(X) }(\tilde X) \cong {N_G(H) \over H}
+.\]
 
 In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
 :::
