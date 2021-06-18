@@ -306,7 +306,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 :::
 \todo[inline]{Theorem}
 
-:::{.fact title="Unsorted facts about higher homotopy groups}
+:::{.fact title="Unsorted facts about higher homotopy groups"}
 \envlist
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
