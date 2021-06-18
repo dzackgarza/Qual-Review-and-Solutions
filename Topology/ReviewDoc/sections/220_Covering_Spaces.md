@@ -170,7 +170,12 @@ letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 G(\tilde X) \da \Aut_{\mathrm{Cov}(X) }(\tilde X) \cong {N_G(H) \over H}
 .\]
 
-In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
+In particular,
+\[
+\tilde X \text{ normal} &\implies G(\tilde X) \cong \pi_1(X) / H \\
+\hat X \text{ universal} &\implies G(\hat X) \cong \pi_1(X)
+.\]
+
 :::
 
 :::{.fact}
@@ -296,11 +301,11 @@ S^1
 \ZZ^{\ast n} 
   \ar[r] 
 & 
-\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
+\hat{(S^1)^{\Wedgeprod n}} = \mathrm{Cayley}(n)
   \ar[d] 
 \\
 & 
-(S^1)^{\wedgeprod n}
+(S^1)^{\Wedgeprod n}
 \end{tikzcd}
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
