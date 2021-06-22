@@ -799,13 +799,26 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 
 
 
-:::{.definition title="Content of a polynomial"}
+:::{.definition title="Content of a polynomial, primitive polynomials"}
 The **content** of a polynomial is the greatest common divisor of its coefficients.
+A polynomial with content 1 is said to be a **primitive polynomial**.
 :::
 
 
 :::{.proposition title="The Euclidean factorization algorithm"}
 \todo[inline]{todo}
+:::
+
+:::{.lemma title="Gauss' Lemma"}
+If $f,g \in \QQ[x]$ is primitive, then $fg$ is primitive.
+As a consequence, $f\in R[x]$ (nonconstant) is irreducible in $R[x]$ iff $f$ is both primitive in $R[x]$ and irreducible in $\ff(R)[x]$.
+:::
+
+
+:::{.proposition title="Polynomial rings over UFDs are UFDs"}
+\todo[inline]{todo}
+
+
 :::
 
 
