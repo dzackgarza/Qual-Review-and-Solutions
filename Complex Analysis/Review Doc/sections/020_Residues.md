@@ -84,7 +84,6 @@ Suppose that $f(z) = e^{iaz}g(z)$ for some $g$, and let $C_R \da \ts{ z=Re^{it} 
 where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 :::
 
-
 :::{.proof title="?"}
 \[
 \abs{ \int_{C_R} f(z)\dz }
@@ -109,10 +108,7 @@ This is obvious from a picture, since $\sin(t)$ is a height on $S^1$ and $2t/\pi
 
 :::
 
-
 ## Residue Formulas
-
-
 
 :::{.theorem title="The Residue Theorem"}
 Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
@@ -158,7 +154,6 @@ Apply L'Hopital:
 .\]
 :::
 
-
 :::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so that $h'(i) = 2i \neq 0$. Thus
 \[
@@ -166,6 +161,15 @@ Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so
 .\]
 :::
 
+
+:::{.proposition title="Residue at infinity"}
+
+\[
+\Res_{z=\infty}f(z) = \Res_{z=0} g(z) && g(z) \da -{1 \over z^2}f\qty{1\over z} 
+.\]
+
+
+:::
 
 
 ### Exercises
@@ -181,7 +185,6 @@ Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
 ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
 ![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
-
 
 :::{.exercise title="?"}
 \[
@@ -267,14 +270,12 @@ z\inv\qty{1 + {1\over 3!}z^2 \pm O(z^4) } \\
 .\]
 :::
 
-
 :::{.exercise title="Keyhole contour and ML estimate"}
 Compute
 \[
 \int_{[0, \infty]} {\log(x) \over (1+x^2)^2}\dx 
 .\]
 :::
-
 
 :::{.solution}
 Factor $(1+z^2)^2 = (z+i^2(z-i)^2$.
@@ -298,17 +299,12 @@ Compute the residues by just applying the formula and manually computing derivat
 
 :::
 
-
-
-
-
 :::{.exercise title="Sinc Function"}
 Show
 \[
 \int_{(0, \infty)} {\sin(x) \over x }\dx = {\pi \over 2}
 .\]
 :::
-
 
 :::{.solution}
 Take an indented semicircle.
@@ -319,16 +315,5 @@ I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
 
 :::
 
-
-
-
-
-### Exercises
-
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
-
-
-
-
-
 
