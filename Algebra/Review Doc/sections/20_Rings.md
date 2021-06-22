@@ -792,16 +792,23 @@ For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be c
 :::{.definition title="Localization"}
 For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS \subseteq S$ and $1_R\in S$, the **localization of $R$ at $S$** can be constructed as
 \[
-S\inv R \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
+R\localize{S} \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
 .\]
 
 > Why the $u$: use in proof of transitivity.
 
 :::
 
+\todo[inline]{Universal property.}
+
 
 :::{.warnings}
-There is a ring morphism $R\to R\localize{S}$
+There is a canonical ring morphism
+\[
+R\to R\localize{S} \\
+x &\mapsto {x\over 1}
+,\]
+but this may not be injective.
 :::
 
 
