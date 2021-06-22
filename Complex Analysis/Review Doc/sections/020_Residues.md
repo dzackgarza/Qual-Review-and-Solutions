@@ -161,16 +161,13 @@ Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so
 .\]
 :::
 
-
 :::{.proposition title="Residue at infinity"}
 
 \[
 \Res_{z=\infty}f(z) = \Res_{z=0} g(z) && g(z) \da -{1 \over z^2}f\qty{1\over z} 
 .\]
 
-
 :::
-
 
 ### Exercises
 
