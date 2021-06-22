@@ -795,7 +795,15 @@ For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS
 S\inv R \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
 .\]
 
+> Why the $u$: use in proof of transitivity.
+
 :::
+
+
+:::{.warnings}
+There is a ring morphism $R\to R\localize{S}$
+:::
+
 
 :::{.definition title="Fraction Field"}
 \todo[inline]{todo}
