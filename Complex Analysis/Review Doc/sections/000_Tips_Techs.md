@@ -97,14 +97,16 @@ Some computations that come up frequently:
 
 ### Calculus
 
-- Various differentials:
+
+:::{.fact}
+Various differentials:
 \[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\ \\
 f_z &= f_x = f_y / i
 .\]
 
-- Integral of a complex exponential:
+Integral of a complex exponential:
 \[
 \int_{0}^{2 \pi} e^{i \ell x} d x
 &=\left\{\begin{array}{ll}
@@ -114,6 +116,7 @@ f_z &= f_x = f_y / i
 .\]
 
 :::
+
 
 
 
