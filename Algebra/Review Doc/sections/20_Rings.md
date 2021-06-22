@@ -378,7 +378,7 @@ A **division ring** is any (potentially noncommutative) ring $R$ for which $R\sm
 An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$, i.e. $r\divides 0$.
 Equivalently, the map
 \[  
-r_\wait: R &\to R \\
+r\cdot: R &\to R \\
 x &\mapsto rx
 \]
 fails to be injective.
@@ -790,5 +790,12 @@ Division algorithm for Euclidean domains.
 :::
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
+:::
+
+
+
+:::{.definition title="Content of a polynomial"}
+The **content** of a polynomial is the greatest common divisor of its coefficients.
+
 :::
 
