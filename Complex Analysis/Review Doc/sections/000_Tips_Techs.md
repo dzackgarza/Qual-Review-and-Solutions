@@ -66,7 +66,7 @@ z\bar z &= \abs{z}^2 &&
 \Im(z) = {z - \bar{z} \over 2i}
 .\]
 
-- Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
+Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
 \[
 \cos(z) 
 &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w\inv)\\
@@ -80,6 +80,7 @@ z\bar z &= \abs{z}^2 &&
 &= \sin(iz) 
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\]
+
 
 :::
 
