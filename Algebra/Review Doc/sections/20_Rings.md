@@ -779,7 +779,7 @@ Division algorithm for Euclidean domains.
 
 
 :::{.definition title="Field of fractions"}
-For $R\in \cring$, the **field of fractions** of $R$ can be constructed as 
+For $R\in \CRing$, the **field of fractions** of $R$ can be constructed as 
 \[
 \ff(R) \da \qty{R \cross R\nonzero}/\sim && (a,s)\sim bt \iff at-bs = 0_R
 .\]
