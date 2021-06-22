@@ -812,10 +812,15 @@ but this may not be injective.
 :::
 
 
-:::{.definition title="Fraction Field"}
-\todo[inline]{todo}
+
+:::{.remark}
+For integral domains $R$, 
+\[
+\ff(R) \cong R\localize{R\nonzero}
+.\]
 
 :::
+
 
 
 :::{.theorem title="Hilbert Basis Theorem"}
