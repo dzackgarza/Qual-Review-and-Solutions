@@ -150,7 +150,7 @@ e^z &= \sum_{k\geq 0} {z^k \over k!} \\
   &= \sum_{k \text{ odd} \geq 1} (-1)^{k+1 \over 2} {z^k \over k!} \\
   &= z - {1\over 3!}z^3 + {1\over 5!}z^5 + \cdots \\
 \cos(z) 
-  &= \sum_{k \text{ even} \geq 0} (-1)^{k\over 2} {z^k \over k!} \\
+  &= \sum_{\substack{ k \text{ even} \geq 0 \\ \text{even}} } (-1)^{k\over 2} {z^k \over k!} \\
   &= 1 - {1\over 2!}z^2 + {1\over 4!}z^4 + \cdots \\
 \log(1-x) 
   &= \sum_{k \geq 0} {z^k\over k} \quad \abs{z} < 1 \\
