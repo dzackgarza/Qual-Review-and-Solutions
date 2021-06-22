@@ -81,6 +81,8 @@ z\bar z &= \abs{z}^2 &&
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\]
 
+:::
+
 :::{.fact}
 Some computations that come up frequently:
 \[
@@ -91,14 +93,6 @@ Some computations that come up frequently:
 .\]
 :::
 
-:::{.fact}
-On $S^1$,
-\[
-1/z &= e^{-i\theta} \\
-\cos (\theta)&=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)&=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\]
-:::
 
 ### Calculus
 
