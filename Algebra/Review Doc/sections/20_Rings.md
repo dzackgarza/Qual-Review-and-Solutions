@@ -548,10 +548,15 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 :::
 
 
+:::{.proposition title="Polynomial rings over fields have division"}
+If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
+:::
+
+
+
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
 - $R$ a finite integral domain $\implies R$ is a field.
-- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
 - $\FF$ a field $\iff \FF[x]$ is a PID.
 - $\FF$ is a field $\iff \FF$ is a commutative simple ring.
 - $R$ is a UFD $\iff R[x]$ is a UFD.
@@ -796,6 +801,11 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 
 :::{.definition title="Content of a polynomial"}
 The **content** of a polynomial is the greatest common divisor of its coefficients.
-
 :::
+
+
+:::{.proposition title="The Euclidean factorization algorithm"}
+\todo[inline]{todo}
+:::
+
 
