@@ -35,18 +35,37 @@ If you want to show that a function $f$ is constant, try one of the following:
   - If you additionally want to show $f$ is zero, show $\lim_{z\to\infty} f(z) = 0$.
 :::
 
+:::{.fact}
+To show a function is holomorphic,
+
+- Use Morera's theorem
+- Find a primitive (sufficient but not necessary)
+
+:::
+
+:::{.fact}
+To count zeros:
+
+- Rouche's theorem
+- The argument principle
+
+:::
+
+- Setting $w=e^z$ is useful.
+
+
 ## Basic but Useful Facts
 
-:::{.fact title="Some useful facts about basic complex algebra"}
-\envlist
+### Arithmetic
 
-- $z\bar z = \abs{z}^2$
+:::{.fact title="Some useful facts about basic complex algebra"}
 \[
-\Re(z) = { z + \bar z \over 2} && && 
+z\bar z &= \abs{z}^2 && 
+\Arg(z/w) = \Arg(z) - \Arg(w) \\
+\Re(z) &= { z + \bar z \over 2} && 
 \Im(z) = {z - \bar{z} \over 2i}
 .\]
 
-- $\Arg(z/w) = \Arg(z) - \Arg(w)$.
 - Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
 \[
 \cos(z) 
@@ -54,18 +73,42 @@ If you want to show that a function $f$ is constant, try one of the following:
 \sin(z) 
 &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w\inv)
 \\ \\
-\cosh(z) = \cos(iz) 
-&= {1\over 2}\qty{e^z + e^{-z}} \\
-\sinh(z) = \sin(iz) 
-&= {1\over 2}\qty{e^z - e^{-z}} 
+\cosh(z) 
+&= \cos(iz) 
+= {1\over 2}\qty{e^z + e^{-z}} \\
+\sinh(z) 
+&= \sin(iz) 
+= {1\over 2}\qty{e^z - e^{-z}} 
 .\]
-- Setting $w=e^z$ is useful:
+
+:::{.fact}
+Some computations that come up frequently:
+\[
+\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
+(a+bi)(c+di) &= (ac - bd) + (ad + bc) \\
+{1\over \abs{a+b}} &\leq {1 \over {\abs a - \abs b}} &&
+\abs{e^{z}} = e^{\Re(z)}, \quad \arg(e^z) = \Im(z)
+.\]
+:::
+
+:::{.fact}
+On $S^1$,
+\[
+1/z &= e^{-i\theta} \\
+\cos (\theta)&=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
+\sin (\theta)&=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
+.\]
+:::
+
+### Calculus
+
 - Various differentials:
 \[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\ \\
 f_z &= f_x = f_y / i
 .\]
+
 - Integral of a complex exponential:
 \[
 \int_{0}^{2 \pi} e^{i \ell x} d x
@@ -76,6 +119,11 @@ f_z &= f_x = f_y / i
 .\]
 
 :::
+
+
+
+
+## Series
 
 :::{.fact title="Generalized Binomial Theorem"}
 Define $(n)_k$ to be the falling factorial 
@@ -124,44 +172,4 @@ Useful trick for expanding square roots:
 .\]
 
 :::
-:::{.fact}
-Some computations that come up frequently:
-\[
-\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
-(a+bi)(c+di) = (ac - bd) + (ad + bc)
-.\]
-:::
-
-:::{.fact}
-Some useful facts:
-\[
-\abs{e^{z}} = e^{\Re(z)} && \arg(e^z) = \Im(z)
-.\]
-
-On $S^1$,
-\[
-1/z &= e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\]
-:::
-
-
-:::{.fact}
-To show a function is holomorphic,
-
-- Use Morera's theorem
-- Find a primitive (sufficient but not necessary)
-
-:::
-
-
-:::{.fact}
-To count zeros:
-
-- Rouche's theorem
-- The argument principle
-
-:::
-
 
