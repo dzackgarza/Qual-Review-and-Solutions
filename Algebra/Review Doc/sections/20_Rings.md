@@ -805,7 +805,7 @@ R\localize{S} \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in 
 :::{.warnings}
 There is a canonical ring morphism
 \[
-R\to R\localize{S} \\
+R &\to R\localize{S} \\
 x &\mapsto {x\over 1}
 ,\]
 but this may not be injective.
@@ -816,7 +816,7 @@ but this may not be injective.
 :::{.remark}
 For integral domains $R$, 
 \[
-\ff(R) \cong R\localize{R\nonzero}
+\ff(R) \cong R\localize{ (R\nonzero) }
 .\]
 
 :::
