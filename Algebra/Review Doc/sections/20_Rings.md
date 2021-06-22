@@ -779,16 +779,21 @@ Division algorithm for Euclidean domains.
 
 
 :::{.definition title="Field of fractions"}
-For $R\in \CRing$, the **field of fractions** of $R$ can be constructed as 
+For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be constructed as 
 \[
 \ff(R) \da \qty{R \cross R\nonzero}/\sim && (a,s)\sim bt \iff at-bs = 0_R
 .\]
+
+> Checking transitivity requires having no nonzero zero divisors.
 
 :::
 
 
 :::{.definition title="Localization"}
-\todo[inline]{todo}
+For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS \subseteq S$ and $1_R\in S$, the **localization of $R$ at $S$** can be constructed as
+\[
+S\inv R \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
+.\]
 
 :::
 
