@@ -2,22 +2,22 @@
 
 ## Definitions
 
-
 :::{.remark}
 The main powerhouse: for $T:V\to V$ a linear transformation for $V\in\Vect_k$, map to $V\in \modsleft{k[x]}$ by letting polynomials act via $p(x)\cdot \vector v \da p(T)(\vector v)$.
 Using that $k[x]$ is a PID iff $k$ is a field, and we can apply the FTFGMPID to get two decompositions:
 \[
-V \cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \\
+V &\cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \divides \cdots  \\
 V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \text{ not necessarily distinct.} 
 \]
+
 - The $q_i$ are the **invariant factors** of $T$
   - $q_i$ is the minimal polynomial of $T$ restricted to $V_i \da k[x] / \gens{ q_i(x) }$. 
-  - $q_n$ is the **minimal polynomial** of $T$.
-  - $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
+  - The largest invariant factor $q_n$ is the **minimal polynomial** of $T$.
+  - The product $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
 - The $p_i$ are the **elementary divisors** of $T$.
+  - Todo: what can you read off of this...?
 
 :::
-
 
 :::{.definition title="Nondegenerate Bilinear Form"}
 \todo[inline]{todo}
@@ -321,6 +321,17 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::
 
+### Computing Jordan Canonical Form
+
+
+:::{.proposition title="JCF Algorithm"}
+The following algorithm always works for computing $\JCF(A)$:
+
+- Compute $\
+
+:::
+
+
 ## Diagonalizability
 
 :::{.remark}
@@ -396,8 +407,6 @@ But the minimal polynomial is just the largest invariant factor.
 :::
 
 ## Matrix Counterexamples
-
-
 
 :::{.example title="?"}
 A matrix that:
@@ -489,13 +498,16 @@ M_2
 .\]
 :::
 
-
 ## Matrix Groups
 
 :::{.definition title="General Linear Group"}
 \[
 \GL_n(\RR) = \ts{ A \st A = \bar{A} } 
 .\]
+:::
+
+:::{.proposition title="Order of $\GL_n$"}
+\todo[inline]{todo}
 :::
 
 :::{.definition title="Special Linear Group"}
@@ -512,7 +524,6 @@ O_n(\CC) \da \ts{ A \st A^tA = A A^t = I}
 Dimension: $n(n-1) / 2$.
 :::
 
-
 :::{.definition title="Special Orthogonal Group"}
 \[
 \SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
@@ -520,13 +531,11 @@ Dimension: $n(n-1) / 2$.
 
 :::
 
-
 :::{.definition title="Unitary Group"}
 \[
 U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
 .\]
 :::
-
 
 :::{.definition title="Special Unitary Group"}
 \[
@@ -534,7 +543,6 @@ U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 }
 .\]
 
 :::
-
 
 :::{.definition title="Symplectic Group"}
 \[
@@ -550,11 +558,4 @@ J \da
 :::
 
 \todo[inline]{Matrix group definitions.}
-
-
-
-
-:::{.proposition title="Order of $\GL_n$"}
-\todo[inline]{todo}
-:::
 
