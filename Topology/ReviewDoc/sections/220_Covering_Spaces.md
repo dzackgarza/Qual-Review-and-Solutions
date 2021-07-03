@@ -35,7 +35,6 @@ These are "maximally symmetric".
 
 ## Universal Covers
 
-
 :::{.definition title="Galois/normal/regular covers"}
 A covering $\tilde X \mapsvia{p} X$ is **Galois** (or **normal/regular**) over $(X, x_0)$ iff $\Deck(\tilde X)$ acts transitively on the fibers: for any two lifts $\tilde x_1, \tilde x_2\in \tilde X$ of $x_0 \in X$, there is a $\psi\in \Deck(\tilde X)$ with $\psi(\tilde x_1) = \tilde x_2$.
 :::
@@ -87,7 +86,6 @@ X
 
 :::
 
-
 :::{.remark}
 Covering spaces of $X$ are classified by subgroups of $\pi_1(X)$:
 \[
@@ -109,7 +107,6 @@ Covering spaces of $X$ are classified by subgroups of $\pi_1(X)$:
 \]
 
 :::
-
 
 :::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
 Let $p:\tilde X \to X$ be any covering space, $F: Y \cross I \to X$ be any homotopy, and $\tilde F_0: Y\to \tilde X$ be any lift of $F_0$.
@@ -310,6 +307,7 @@ S^1
 given by the $n\dash$valent Cayley graph covering a wedge of circles.
 
 
+![For $n=2$](figures/2021-07-03_16-55-01.png)
 
 \begin{tikzcd}
 \ZZ/n
@@ -338,6 +336,7 @@ L(p, q)
 - $T^2 \mapsvia{\times 2} \KK$
 
 :::
+
 :::{.example title="The circle $S^1$"}
 Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
 The induced map can be described on generators as
@@ -475,12 +474,9 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 :::
 
-
 :::{.fact}
 If $f:X\to Y$ is a covering map of degree 1, then $f$ is necessarily a homeomorphism.
 :::
-
-
 
 ## Exercises
 
