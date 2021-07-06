@@ -116,19 +116,18 @@ The following are equivalent:
 
 - $k$ is a **perfect** field.
 
-- Every irreducible polynomial $p\in k[x]$ is separable
-
 - Every finite extension $F/k$ is separable.
 
 - If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+
+- Every irreducible polynomial $p\in k[x]$ is separable
+
 :::
 
-:::{.fact title="about perfect fields"}
-\envlist
 
-- Irreducible $\implies$ separable for a perfect field.
-- Every irreducible polynomial over a perfect field is separable.
-- Every finite extension of a perfect field is separable. 
+:::{.proposition title="Irreducible implies separable for perfect fields"}
+\todo[inline]{todo}
+
 :::
 
 :::{.definition title="Numerical Invariants"}
