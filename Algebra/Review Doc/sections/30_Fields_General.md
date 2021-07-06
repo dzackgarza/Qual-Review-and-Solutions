@@ -503,12 +503,8 @@ A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple 
 :::
 
 :::{.proposition title="?"}
-Irreducible polynomials have distinct roots after passing to a splitting field.
+Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.
 :::
 
-:::{.proof title="?"}
-\todo[inline]{todo}
-
-:::
 
 
