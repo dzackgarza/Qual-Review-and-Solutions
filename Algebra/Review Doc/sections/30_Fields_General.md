@@ -505,11 +505,21 @@ A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple 
 
 :::{.proof title="?"}
 $\implies:$:
-Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then $f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)$ and $(x-a)$ divides both factors.
+Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
+\[
+f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
+\]
+and $(x-a)$ divides both factors.
 
 $\notimplies$:
-If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and $f'(x) = \sum_j \prod_{i\neq j}(x-a_i)$.
-Then fixing any $a_k$ where $f(a_k) = 0$, check $f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0$.
+If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
+\[
+f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
+.\]
+Then fixing any $a_k$ where $f(a_k) = 0$, check 
+\[
+f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
+.\]
 
 :::
 
