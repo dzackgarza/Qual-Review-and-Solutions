@@ -1,6 +1,11 @@
 # Field Theory
 
 
+:::{.remark}
+**I always forget**: Galois is defined as **normal and separable**.
+:::
+
+
 ## Facts and Definitions
 
 
@@ -185,6 +190,7 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
 
 - Algebraic extensions are distinguished.
 - Finite extensions are distinguished.
+- Separable extensions are distinguished.
 - Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
   Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
   - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
