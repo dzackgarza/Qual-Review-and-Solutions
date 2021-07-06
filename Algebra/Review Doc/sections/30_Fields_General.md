@@ -244,6 +244,7 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 
 :::
 
+### Separable Extensions
 
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
@@ -266,6 +267,32 @@ If $L/k$ is a finite extension, then, TFAE:
 
 :::
 
+:::{.proposition title="Derivative criterion for separability"}
+A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
+:::
+
+:::{.proof title="?"}
+$\implies:$:
+Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
+\[
+f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
+\]
+and $(x-a)$ divides both factors.
+
+$\notimplies$:
+If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
+\[
+f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
+.\]
+Then fixing any $a_k$ where $f(a_k) = 0$, check 
+\[
+f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
+.\]
+
+:::
+
+### Galois Extensions
+
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
 The following are equivalent:
@@ -284,6 +311,8 @@ In this case, we define the **Galois group** as
 \Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L)
 .\]
 :::
+
+
 
 :::{.definition title="Simple Extension"}
 An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
@@ -498,30 +527,6 @@ The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive roo
 ## Unsorted
 
 
-:::{.proposition title="?"}
-A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
-:::
-
-
-:::{.proof title="?"}
-$\implies:$:
-Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
-\[
-f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
-\]
-and $(x-a)$ divides both factors.
-
-$\notimplies$:
-If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
-\[
-f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
-.\]
-Then fixing any $a_k$ where $f(a_k) = 0$, check 
-\[
-f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
-.\]
-
-:::
 
 
 :::{.proposition title="?"}
