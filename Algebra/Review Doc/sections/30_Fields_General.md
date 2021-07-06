@@ -510,9 +510,8 @@ k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
 \Phi_2(z) &= z+1 \\
 \Phi_4(z) &= z^2+1 \\
 \Phi_6(z) &= z^2 -z + 1 \\
-\Phi_8(z) &= z^4+1 \\
-
-\]
+\Phi_8(z) &= z^4+1 
+.\]
 :::
 
 :::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
