@@ -2,8 +2,41 @@
 
 ## Facts and Definitions
 
-Let $k$ denote a field, and $L/k$ extensions.
 
+:::{.remark}
+Let $k$ denote a field, and $L/k$ extension.
+Every field morphism is an embedding (injection).
+An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
+
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	& k
+	\arrow[hook', from=3-2, to=1-1]
+	\arrow[hook, from=3-2, to=1-3]
+	\arrow[hook, from=1-1, to=1-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	k && {k_\sigma}
+	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=3-3, to=1-3]
+	\arrow[shorten <=9pt, shorten >=9pt, Rightarrow, from=1, to=0]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==)
+
+Most often, we'll take $\sigma: k\to k$ to be the identity.
+:::
 
 :::{.remark}
 \envlist
@@ -13,6 +46,48 @@ Let $k$ denote a field, and $L/k$ extensions.
 - \( \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
 - $\Gal(E/F) \da \Aut_{\Fieldsover{k} }$ if $E$ is finite, normal, and separable.
 :::
+
+
+:::{.definition title="Distinguished Classes"}
+A collection of field extensions $\mathcal{S}$ is **distinguished** iff
+
+- For any tower $L/K/k$, $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+- If $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \iff && K \\
+	\\
+	k &&&& k
+	\arrow[hook, from=5-1, to=3-1]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=5-5, to=3-5]
+	\arrow[hook, from=3-5, to=1-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-1, to=1-1]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-5, to=3-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
+
+\begin{tikzcd}
+	& LK \\
+	L && K \\
+	& k
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
+	\arrow[hook', from=3-2, to=2-1]
+	\arrow[hook', from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=3-2, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMywiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDMsIiIsMSx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=)
+
+:::
+
+
+
 
 
 :::{.definition title="Simple Extensions"}
@@ -108,41 +183,6 @@ Todo
 ## Extensions
 
 
-:::{.remark}
-Every field morphism is an embedding (injection).
-An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
-
-
-\begin{tikzcd}
-	L && {L'} \\
-	\\
-	& k
-	\arrow[hook', from=3-2, to=1-1]
-	\arrow[hook, from=3-2, to=1-3]
-	\arrow[hook, from=1-1, to=1-3]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
-
-More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
-
-\begin{tikzcd}
-	L && {L'} \\
-	\\
-	k && {k_\sigma}
-	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
-	\arrow[hook, from=3-1, to=1-1]
-	\arrow[hook, from=3-3, to=1-3]
-	\arrow[shorten <=9pt, shorten >=9pt, Rightarrow, from=1, to=0]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==)
-
-Most often, we'll take $\sigma: k\to k$ to be the identity.
-
-
-:::
 
 
 :::{.definition title="Algebraic Field Extension"}
