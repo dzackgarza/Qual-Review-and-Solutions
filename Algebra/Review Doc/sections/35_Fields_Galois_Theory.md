@@ -7,6 +7,21 @@ If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive su
 :::
 
 
+:::{.fact}
+Transitive subgroups of $S_n$ for small $n$:
+
+| $n$ in $S_n$ | Transitive Subgroups              |
+|--------------|-----------------------------------|
+| 1            | 1                                 |
+| 2            | $\ZZ/2$                           |
+| 3            | $S_3, \ZZ/3$                      |
+| 4            | $S_4, A_4, D_4, (\ZZ/2)^2, \ZZ/4$ |
+| 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
+
+:::
+
+
+
 :::{.proposition}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::
