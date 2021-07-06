@@ -499,25 +499,20 @@ so just use polynomial long division.
 
 :::
 
-:::{.fact title="about computing cyclotomic polynomials in special cases"}
+:::{.fact title="computing cyclotomic polynomials, special cases and examples"}
 \[
 \Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
 \Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1 \\
 \\
 k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
-\]
-:::
-
-:::{.proposition title="Table of cyclotomic polynomials"}
-\todo[inline]{todo}
-\[
+\\ \\
 \Phi_1(z) &= z-1 \\
 \Phi_2(z) &= z+1 \\
 \Phi_4(z) &= z^2+1 \\
 \Phi_6(z) &= z^2 -z + 1 \\
 \Phi_8(z) &= z^4+1 \\
-.\]
 
+\]
 :::
 
 :::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
