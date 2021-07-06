@@ -124,7 +124,6 @@ The following are equivalent:
 
 :::
 
-
 :::{.proposition title="Irreducible implies separable for perfect fields"}
 \todo[inline]{todo}
 
@@ -249,9 +248,11 @@ Then TFAE:
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
 
-:::{.proof title="?"}
-\todo[inline]{todo}
+
+:::{.proposition title="?"}
+For $L/k$ finite, $L$ is normal iff $L = \SF(f)$ is the splitting field for some $f\in k[x]$.
 :::
+
 
 ### Separable Extensions
 
