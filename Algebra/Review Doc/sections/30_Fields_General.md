@@ -118,9 +118,9 @@ Then TFAE:
 - $L/k$ is **normal**.
 
 - Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
-  - i.e. every polynomial splits into linear factors
+  - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
+   Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Either $f$ splits in $L$ or $f$ has no roots in $L$.
 
 - Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
