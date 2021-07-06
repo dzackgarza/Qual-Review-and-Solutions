@@ -20,15 +20,6 @@ For $\FF$ a field, a polynomial $f\in \FF[x]$ is **reducible** if and only if $f
 $f$ is **irreducible** if $f$ is not reducible.
 :::
 
-:::{.theorem title="Gauss' Lemma"}
-Let $R$ be a UFD and $F$ its field of fractions.
-Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
-:::
-
-:::{.corollary}
-A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
-:::
-
 :::{.theorem title="Eisenstein's Criterion"}
 If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 
@@ -36,6 +27,15 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 - $p^2$ does not divide $a_0$,
 
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
+:::
+
+:::{.theorem title="Gauss' Lemma"}
+Let $R$ be a UFD and $F$ its field of fractions.
+Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+:::
+
+:::{.corollary}
+A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
 :::
 
 :::{.definition title="Elementary Symmetric Functions"}
@@ -50,10 +50,6 @@ The **characteristic** of a ring $R$ is the smallest integer $p$ such that $\sum
 
 :::{.proposition title="Freshman's Dream"}
 If $\ch k = p$ then $(a+b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$.
-:::
-
-:::{.definition title="Simple Extensions"}
-An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
 :::{.definition title="Fixed Field"}
@@ -160,6 +156,20 @@ with equality when $L/k$ is Galois.
 
 :::
 
+### Extensions
+
+:::{.definition title="Simple Extensions"}
+An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
+:::
+
+:::{.definition title="Primitive Extension"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+:::
+
+:::{.definition title="Algebraic Extension"}
+A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
+:::
+
 ## Extensions
 
 :::{.definition title="Distinguished Classes"}
@@ -216,7 +226,7 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
 
 ### Normal Extensions
 
-:::{.proposition title="Normal Field Extension"}
+:::{.definition title="Normal Field Extension"}
 Let $L/k$ be an extension.
 Then TFAE:
 
@@ -244,23 +254,6 @@ Then TFAE:
 \todo[inline]{todo}
 :::
 
-:::{.remark}
-Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
-The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
-
-\begin{tikzcd}
-	L && {\bar{k}} \\
-	\\
-	& k
-	\arrow["\sigma"', hook, from=3-2, to=1-3]
-	\arrow[dashed, hook, from=1-1, to=1-3]
-	\arrow[hook', from=3-2, to=1-1]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
-
-:::
-
 ### Separable Extensions
 
 :::{.definition title="Separable Field Extension"}
@@ -281,6 +274,23 @@ If $L/k$ is a finite extension, then, TFAE:
 - \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
 - $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
 - $[L: K] = [L:K]_s$, the separable degree.
+
+:::
+
+:::{.definition title="Separable degree"}
+Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	& k
+	\arrow["\sigma"', hook, from=3-2, to=1-3]
+	\arrow[dashed, hook, from=1-1, to=1-3]
+	\arrow[hook', from=3-2, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
 
 :::
 
@@ -346,18 +356,6 @@ In this case, we define the **Galois group** as
 :::
 
 ### Special Extensions
-
-:::{.definition title="Simple Extension"}
-An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
-:::
-
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
-:::
-
-:::{.definition title="Algebraic Extension"}
-A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
-:::
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -463,51 +461,6 @@ This has no roots in $k$.
 
 ## Cyclotomic Polynomials
 
-:::{.definition title="Cyclotomic Field"}
-Any subfield of the splitting field $E$ of $f(x) = x^m-1$ is a **cyclotomic field**.
-:::
-
-:::{.proposition}
-$\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
-:::
-
-:::{.proof}
-$\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
-:::
-
-:::{.proposition title="Computing Totient Functions"}
-**Computing $\Phi_n$:**
-
-1.
-$$
-\Phi_{n}(z)=\prod_{d | n, d>0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
-$$
-where
-$$
-\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
-$$
-
-2.
-\[
-x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d < n} \Phi_{d}(x)},
-\]
-so just use polynomial long division.
-
-:::
-
-:::{.proposition}
-\[
-\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
-\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
-\]
-:::
-
-:::{.proposition}
-\[
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-\]
-:::
-
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
 $$
@@ -516,10 +469,51 @@ $$
 
 which is a product over primitive roots of unity.
 It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
+
+
+Note that $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
+:::
+
+:::{.definition title="Cyclotomic Field"}
+Any subfield of $\SF(x^n-1)$ is a **cyclotomic field**.
+:::
+
+
+:::{.proposition title="Computing Cyclotomic Polynomials"}
+**Computing $\Phi_n$:**
+
+1.
+$$
+\Phi_{n}(z)=\prod_{\substack{ d \divides n \\  d > 0} }\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
+$$
+where
+$$
+\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
+$$
+
+2.
+\[
+x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \qty{x^n-1} \qty{\prod_{d | n \atop d < n} \Phi_{d}(x)}\inv,
+\]
+so just use polynomial long division.
+
+:::
+
+:::{.fact title="about computing cyclotomic polynomials in special cases"}
+\[
+\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
+\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1 \\
+\\
+k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
+\]
 :::
 
 :::{.proposition title="Table of cyclotomic polynomials"}
 \todo[inline]{todo}
+:::
+
+:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
+The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
 :::
 
 :::{.proposition title="Galois Groups of Cyclotomic Fields"}
@@ -528,11 +522,5 @@ For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m
 
 :::{.theorem title="Kronecker-Weber"}
 If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some $m$.
-:::
-
-## Splitting Fields
-
-:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
-The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
 :::
 
