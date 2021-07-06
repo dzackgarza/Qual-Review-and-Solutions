@@ -1,5 +1,12 @@
 # Galois Theory
 
+
+:::{.proposition title="?"}
+If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
+
+:::
+
+
 :::{.proposition}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::

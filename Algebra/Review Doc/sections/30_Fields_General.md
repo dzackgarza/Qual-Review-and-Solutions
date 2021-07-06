@@ -253,7 +253,6 @@ Then TFAE:
 For $L/k$ finite, $L$ is normal iff $L = \SF(f)$ is the splitting field for some $f\in k[x]$.
 :::
 
-
 ### Separable Extensions
 
 :::{.definition title="Separable Field Extension"}
