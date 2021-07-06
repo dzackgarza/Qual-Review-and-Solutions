@@ -515,11 +515,10 @@ k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
 :::
 
 :::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
-The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
-:::
-
-:::{.proposition title="Galois Groups of Cyclotomic Fields"}
-For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units$.
+The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity, and 
+\[
+\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units
+.\]
 :::
 
 :::{.theorem title="Kronecker-Weber"}
