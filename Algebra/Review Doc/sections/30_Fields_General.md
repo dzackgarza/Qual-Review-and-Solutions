@@ -141,6 +141,7 @@ More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
 
 Most often, we'll take $\sigma: k\to k$ to be the identity.
 
+
 :::
 
 
@@ -149,7 +150,7 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 :::
 
 :::{.proposition title="Normal Field Extension"}
-Let $L/k$ be a finite extension.
+Let $L/k$ be an extension.
 Then TFAE:
 
 - $L/k$ is **normal**.
@@ -158,10 +159,20 @@ Then TFAE:
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ that of the identity on $k$ satisfies $\sigma(L) = L$.
+- Every embedding $\sigma: L \injects \bar{k}$ over $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ over $k$.
 
 - If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
 :::
+
+
+:::{.example title="of normal extensions"}
+\envlist
+
+- If $[L: k] = 2$ then $L/k$ is normal.
+- $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
+- $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
+:::
+
 
 :::{.proof title="?"}
 \todo[inline]{todo}
