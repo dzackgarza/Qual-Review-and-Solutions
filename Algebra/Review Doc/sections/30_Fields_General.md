@@ -225,13 +225,33 @@ Then TFAE:
 \todo[inline]{todo}
 :::
 
+
+:::{.remark}
+Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	& k
+	\arrow["\sigma"', hook, from=3-2, to=1-3]
+	\arrow[dashed, hook, from=1-1, to=1-3]
+	\arrow[hook', from=3-2, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+
+:::
+
+
 :::{.definition title="Separable Field Extension"}
-Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
+Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
 
-- $L/k$ is **separable**
-- Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots, i.e. $f$ has distinct roots in $L$.
+- $L/k$ is a **separable** extension.
+- Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
+- $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
 
@@ -240,7 +260,8 @@ If $L/k$ is a finite extension, then, TFAE:
 - $L/k$ is separable.
 - \( L = k( \alpha) \) for \( \alpha \)  a separable element.
 - \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
-- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$
+- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
+- $[L: K] = [L:K]_s$, the separable degree.
 
 :::
 
