@@ -51,7 +51,7 @@ Most often, we'll take $\sigma: k\to k$ to be the identity.
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
-- For any tower $L/K/k$, $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+- For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
 - If $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
 
 \begin{tikzcd}
@@ -88,6 +88,16 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
 > Supposed to think of $LK/L$ as a lift of $K/k$.
 
 :::
+
+
+:::{.example title="?"}
+
+- Algebraic extensions are distinguished.
+- Finite extensions are distinguished.
+- Normal extensions are *not* distinguished, but condition 2 holds.
+
+:::
+
 
 
 
