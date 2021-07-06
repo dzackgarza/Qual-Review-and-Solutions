@@ -154,12 +154,21 @@
 </ul></li>
 <li><a href="#field-theory-1"><span class="toc-section-number">5</span> Field Theory</a>
 <ul>
-<li><a href="#facts-and-definitions"><span class="toc-section-number">5.1</span> Facts and Definitions</a></li>
-<li><a href="#extensions"><span class="toc-section-number">5.2</span> Extensions</a></li>
-<li><a href="#finite-fields"><span class="toc-section-number">5.3</span> Finite Fields</a></li>
-<li><a href="#cyclotomic-polynomials"><span class="toc-section-number">5.4</span> Cyclotomic Polynomials</a></li>
-<li><a href="#splitting-fields"><span class="toc-section-number">5.5</span> Splitting Fields</a></li>
-<li><a href="#unsorted-1"><span class="toc-section-number">5.6</span> Unsorted</a></li>
+<li><a href="#basics-polynomials"><span class="toc-section-number">5.1</span> Basics: Polynomials</a></li>
+<li><a href="#definitions-1"><span class="toc-section-number">5.2</span> Definitions</a>
+<ul>
+<li><a href="#extensions"><span class="toc-section-number">5.2.1</span> Extensions</a></li>
+</ul></li>
+<li><a href="#extensions-1"><span class="toc-section-number">5.3</span> Extensions</a>
+<ul>
+<li><a href="#normal-extensions"><span class="toc-section-number">5.3.1</span> Normal Extensions</a></li>
+<li><a href="#separable-extensions"><span class="toc-section-number">5.3.2</span> Separable Extensions</a></li>
+<li><a href="#galois-extensions"><span class="toc-section-number">5.3.3</span> Galois Extensions</a></li>
+<li><a href="#special-extensions"><span class="toc-section-number">5.3.4</span> Special Extensions</a></li>
+<li><a href="#quadratic-extensions"><span class="toc-section-number">5.3.5</span> Quadratic Extensions</a></li>
+</ul></li>
+<li><a href="#finite-fields"><span class="toc-section-number">5.4</span> Finite Fields</a></li>
+<li><a href="#cyclotomic-polynomials"><span class="toc-section-number">5.5</span> Cyclotomic Polynomials</a></li>
 </ul></li>
 <li><a href="#galois-theory"><span class="toc-section-number">6</span> Galois Theory</a>
 <ul>
@@ -178,7 +187,7 @@
 </ul></li>
 <li><a href="#linear-algebra-1"><span class="toc-section-number">8</span> Linear Algebra</a>
 <ul>
-<li><a href="#definitions-1"><span class="toc-section-number">8.1</span> Definitions</a></li>
+<li><a href="#definitions-2"><span class="toc-section-number">8.1</span> Definitions</a></li>
 <li><a href="#minimal-characteristic-polynomials"><span class="toc-section-number">8.2</span> Minimal / Characteristic Polynomials</a></li>
 <li><a href="#finding-minimal-polynomials"><span class="toc-section-number">8.3</span> Finding Minimal Polynomials</a></li>
 <li><a href="#canonical-forms"><span class="toc-section-number">8.4</span> Canonical Forms</a>
@@ -188,6 +197,7 @@
 <li><a href="#smith-normal-form"><span class="toc-section-number">8.4.3</span> Smith Normal Form</a></li>
 <li><a href="#finding-possible-canonical-forms"><span class="toc-section-number">8.4.4</span> Finding Possible Canonical Forms</a></li>
 <li><a href="#using-canonical-forms"><span class="toc-section-number">8.4.5</span> Using Canonical Forms</a></li>
+<li><a href="#computing-jordan-canonical-form"><span class="toc-section-number">8.4.6</span> Computing Jordan Canonical Form</a></li>
 </ul></li>
 <li><a href="#diagonalizability"><span class="toc-section-number">8.5</span> Diagonalizability</a></li>
 <li><a href="#matrix-counterexamples"><span class="toc-section-number">8.6</span> Matrix Counterexamples</a></li>
@@ -889,12 +899,12 @@
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(\mathrm{Inn}(G)\)</span></td>
 <td style="text-align: left;">Inner Automorphisms<br />
-<span class="math inline">\(\mathrel{\vcenter{:}}=\left\{{ \varphi _g(x) \mathrel{\vcenter{:}}= gxg ^{-1} }\right\} \subseteq {\operatorname{Aut}}(G)\)</span></td>
+<span class="math inline">\(\mathrel{\vcenter{:}}=\left\{{ \varphi _g(x) \mathrel{\vcenter{:}}= gxg ^{-1} }\right\} \subseteq \mathop{\mathrm{Aut}}(G)\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\mathrm{Out}(G)\)</span></td>
 <td style="text-align: left;">Outer Automorphisms<br />
-<span class="math inline">\({\operatorname{Aut}}(G) / {\operatorname{Inn}}(G) \mapsfrom {\operatorname{Aut}}(G)\)</span></td>
+<span class="math inline">\(\mathop{\mathrm{Aut}}(G) / {\operatorname{Inn}}(G) \mapsfrom \mathop{\mathrm{Aut}}(G)\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\([g h]\)</span></td>
@@ -1132,7 +1142,7 @@ N_G(H) = \left\{{g\in G {~\mathrel{\Big|}~}gHg^{-1}= H}\right\} = \cup\left\{{H{
 <p><span class="math inline">\(C_G(S) {~\trianglelefteq~}N_G(H)\)</span> for any <span class="math inline">\(H\)</span>.</p>
 </div>
 <div class="proposition proofenv" title="NC Theorem">
-<p><span class="math inline">\(N_G(H) / C_G(H)\)</span> is isomorphic to a subgroup of <span class="math inline">\({\operatorname{Aut}}(H)\)</span>.</p>
+<p><span class="math inline">\(N_G(H) / C_G(H)\)</span> is isomorphic to a subgroup of <span class="math inline">\(\mathop{\mathrm{Aut}}(H)\)</span>.</p>
 </div>
 <div class="definition proofenv" title="Normalizers Grow">
 <p>If for every proper <span class="math inline">\(H&lt;G\)</span>, <span class="math inline">\(H{~\trianglelefteq~}N_G(H)\)</span> is again proper, then “normalizers grow” in <span class="math inline">\(G\)</span>.</p>
@@ -1444,7 +1454,7 @@ g\in G \implies o(g) \divides o(G) \implies g^{{\left\lvert {G} \right\rvert}} =
 <span> or equivalently 
 <span class="math display">
 \begin{align*}
-\phi: G &amp;\to {\operatorname{Aut}}(X) \\
+\phi: G &amp;\to \mathop{\mathrm{Aut}}(X) \\
 g &amp;\mapsto (x \mapsto \phi_g (x) \mathrel{\vcenter{:}}= g\cdot x)
 \end{align*}
 <span> satisfying</p>
@@ -1784,21 +1794,21 @@ n_p = 1 \iff S_p {~\trianglelefteq~}G
 <h2 data-number="3.7" id="automorphism-groups"><span class="header-section-number">3.7</span> Automorphism Groups</h2>
 <div class="fact proofenv">
 <ul>
-<li><p>If <span class="math inline">\(\sigma \in {\operatorname{Aut}}(H)\)</span> and <span class="math inline">\(\tau \in {\operatorname{Aut}}(N)\)</span>, then <span class="math inline">\(N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H\)</span>.</p></li>
-<li><p><span class="math inline">\({\operatorname{Aut}}\qty{ \qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n } \cong \operatorname{GL}(n, {\mathbb{F}}_p)\)</span>, which has size 
+<li><p>If <span class="math inline">\(\sigma \in \mathop{\mathrm{Aut}}(H)\)</span> and <span class="math inline">\(\tau \in \mathop{\mathrm{Aut}}(N)\)</span>, then <span class="math inline">\(N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H\)</span>.</p></li>
+<li><p><span class="math inline">\(\mathop{\mathrm{Aut}}\qty{ \qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n } \cong \operatorname{GL}(n, {\mathbb{F}}_p)\)</span>, which has size 
 <span class="math display">
 \begin{align*}  
-{\left\lvert {{\operatorname{Aut}}({\mathbb{Z}}/(p)^n)} \right\rvert} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+{\left\lvert {\mathop{\mathrm{Aut}}({\mathbb{Z}}/(p)^n)} \right\rvert} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
 .\end{align*}
 <span></p>
 <ul>
 <li>If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)</li>
 </ul></li>
-<li><p><span class="math inline">\({\operatorname{Aut}}({\mathbb{Z}}/n{\mathbb{Z}}) \cong \qty{{\mathbb{Z}}/n{\mathbb{Z}}}^{\times}\cong {\mathbb{Z}}/\varphi(n){\mathbb{Z}}\)</span> where <span class="math inline">\(\varphi\)</span> is the totient function.</p>
+<li><p><span class="math inline">\(\mathop{\mathrm{Aut}}({\mathbb{Z}}/n{\mathbb{Z}}) \cong \qty{{\mathbb{Z}}/n{\mathbb{Z}}}^{\times}\cong {\mathbb{Z}}/\varphi(n){\mathbb{Z}}\)</span> where <span class="math inline">\(\varphi\)</span> is the totient function.</p>
 <ul>
 <li><span class="math inline">\(\varphi(p^k) = p^{k-1}(p-1)\)</span></li>
 </ul></li>
-<li><p>If <span class="math inline">\(G, H\)</span> have coprime order then <span class="math inline">\({\operatorname{Aut}}(G \times H) \cong {\operatorname{Aut}}(G) \times{\operatorname{Aut}}(H)\)</span>.</p></li>
+<li><p>If <span class="math inline">\(G, H\)</span> have coprime order then <span class="math inline">\(\mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H)\)</span>.</p></li>
 <li><p><span class="math inline">\({\operatorname{Inn}}(G) \cong G/Z(G)\)</span>.</p></li>
 </ul>
 </div>
@@ -1947,7 +1957,7 @@ H {~\mathrel{\Big|}~}H &lt; \frac G N
 <li><p><span class="math inline">\(H \curvearrowright N\)</span> by conjugation via a map 
 <span class="math display">
 \begin{align*}  
-\psi: H \to {\operatorname{Aut}}(N) \\
+\psi: H \to \mathop{\mathrm{Aut}}(N) \\
 h \mapsto h({-})h^{-1}
 .\end{align*}
 <span></p></li>
@@ -2259,7 +2269,7 @@ P(5)
 <p>If <span class="math inline">\(G\)</span> is a group of order <span class="math inline">\(pq\)</span> where without loss of generality <span class="math inline">\(q&lt;p\)</span>, then</p>
 <ol type="1">
 <li>If <span class="math inline">\(q\notdivides p-1\)</span> then <span class="math inline">\(G\cong S_p \times S_q \cong {\mathbb{Z}}/p \times{\mathbb{Z}}/q \cong {\mathbb{Z}}/pq\)</span></li>
-<li>If <span class="math inline">\(q\divides p-1\)</span> then <span class="math inline">\(G\cong S_q \rtimes_\psi S_p\)</span> where <span class="math inline">\(S_p {~\trianglelefteq~}G\)</span> and <span class="math inline">\(\psi: S_q \to {\operatorname{Aut}}(S_p)\)</span>, and <span class="math inline">\(G\)</span> has a presentation 
+<li>If <span class="math inline">\(q\divides p-1\)</span> then <span class="math inline">\(G\cong S_q \rtimes_\psi S_p\)</span> where <span class="math inline">\(S_p {~\trianglelefteq~}G\)</span> and <span class="math inline">\(\psi: S_q \to \mathop{\mathrm{Aut}}(S_p)\)</span>, and <span class="math inline">\(G\)</span> has a presentation 
 <span class="math display">
 \begin{align*}
 G\cong \left\langle{a, b {~\mathrel{\Big|}~}a^p, b^q, bab^{-1}= a^\ell}\right\rangle \\ \\ 
@@ -2318,7 +2328,7 @@ S_q \cong {\mathbb{Z}}/q =\left\langle{b{~\mathrel{\Big|}~}b^q}\right\rangle
 <span class="math display">
 \begin{align*}
 G&amp;\cong {\mathbb{Z}}/q \rtimes_{\psi} {\mathbb{Z}}/p
-&amp;&amp; \psi: {\mathbb{Z}}/q \to {\operatorname{Aut}}\qty{{\mathbb{Z}}/p} \\ \\
+&amp;&amp; \psi: {\mathbb{Z}}/q \to \mathop{\mathrm{Aut}}\qty{{\mathbb{Z}}/p} \\ \\
 \implies G &amp;\cong\left\langle{a,b {~\mathrel{\Big|}~}a^p, b^q,\,\, aba^{-1}= \psi(b) = b^\ell }\right\rangle &amp;&amp; \text{for some }\ell
 .\end{align*}
 <span>
@@ -2326,7 +2336,7 @@ G&amp;\cong {\mathbb{Z}}/q \rtimes_{\psi} {\mathbb{Z}}/p
 <li>Since <span class="math inline">\({\mathbb{Z}}/q\)</span> is cyclic, such a morphism is determined by the image of the generator <span class="math inline">\([1]_q \in {\mathbb{Z}}/q\)</span>.</li>
 <li>Note that <span class="math inline">\([1]_q \mapsto \operatorname{id}_{{\mathbb{Z}}/p}\)</span> is such a morphism, and yields the direct product again.</li>
 </ul></li>
-<li>Identify <span class="math inline">\({\operatorname{Aut}}({\mathbb{Z}}/p) \cong \qty{\qty{{\mathbb{Z}}/p}^{\times}, \times } \cong \qty{ {\mathbb{Z}}/(p-1), +}\)</span>.</li>
+<li>Identify <span class="math inline">\(\mathop{\mathrm{Aut}}({\mathbb{Z}}/p) \cong \qty{\qty{{\mathbb{Z}}/p}^{\times}, \times } \cong \qty{ {\mathbb{Z}}/(p-1), +}\)</span>.</li>
 <li>So we need to classify morphisms 
 <span class="math display">
 \begin{align*}
@@ -2335,7 +2345,7 @@ G&amp;\cong {\mathbb{Z}}/q \rtimes_{\psi} {\mathbb{Z}}/p
 <span>
 <ul>
 <li>Consider <span class="math inline">\(\operatorname{im}\psi \leq {\mathbb{Z}}/(p-1)\)</span>.</li>
-<li>Sending <span class="math inline">\([1]_q\)</span> to the identity in <span class="math inline">\({\operatorname{Aut}}({\mathbb{Z}}/p)\)</span> yields the direct product again, so pick nontrivial morphisms.</li>
+<li>Sending <span class="math inline">\([1]_q\)</span> to the identity in <span class="math inline">\(\mathop{\mathrm{Aut}}({\mathbb{Z}}/p)\)</span> yields the direct product again, so pick nontrivial morphisms.</li>
 <li>Since <span class="math inline">\(\# \operatorname{im}\psi \divides q\)</span> which is prime, its order is equal to <span class="math inline">\(q\)</span>.</li>
 <li>Since <span class="math inline">\(q\divides p-1\)</span> and <span class="math inline">\({\mathbb{Z}}/(p-1)\)</span> is cyclic of order <span class="math inline">\(p-1\)</span>, by Cauchy’s theorem there is a unique subgroup of order <span class="math inline">\(q\)</span>, say <span class="math inline">\(C_q \leq {\mathbb{Z}}(p-1)\)</span></li>
 <li>We can send <span class="math inline">\([1]_q\)</span> to <span class="math inline">\([\alpha]_{p-1} \in {\mathbb{Z}}/(p-1)\)</span> where <span class="math inline">\(\alpha\)</span> is any generator of <span class="math inline">\(C_q\)</span>, of which there are <span class="math inline">\(\phi(q) = q-1\)</span> nontrivial choices.</li>
@@ -2346,7 +2356,7 @@ G&amp;\cong {\mathbb{Z}}/q \rtimes_{\psi} {\mathbb{Z}}/p
 <p>All choices yield isomorphic semidirect products.</p>
 </div>
 <ul>
-<li>Use that <span class="math inline">\(G\mathrel{\vcenter{:}}= A\rtimes_{\psi} N\)</span> with <span class="math inline">\(\psi:A\to {\operatorname{Aut}}(N)\)</span> is an <span class="math inline">\({\operatorname{Aut}}(N)\)</span> and <span class="math inline">\({\operatorname{Aut}}(A)\)</span> module, where <span class="math inline">\(f \in {\operatorname{Aut}}(N)\)</span> and <span class="math inline">\(\pi\in {\operatorname{Aut}}(A)\)</span> act in the following ways: 
+<li>Use that <span class="math inline">\(G\mathrel{\vcenter{:}}= A\rtimes_{\psi} N\)</span> with <span class="math inline">\(\psi:A\to \mathop{\mathrm{Aut}}(N)\)</span> is an <span class="math inline">\(\mathop{\mathrm{Aut}}(N)\)</span> and <span class="math inline">\(\mathop{\mathrm{Aut}}(A)\)</span> module, where <span class="math inline">\(f \in \mathop{\mathrm{Aut}}(N)\)</span> and <span class="math inline">\(\pi\in \mathop{\mathrm{Aut}}(A)\)</span> act in the following ways: 
 <span class="math display">
 \begin{align*}
 \pi &amp;\curvearrowright A\rtimes_\psi N = A \rtimes_{\psi \circ \pi } N \\
@@ -2355,14 +2365,14 @@ f &amp;\curvearrowright A\rtimes_\psi N = A \rtimes_{\gamma_f \circ \psi } N
 <span> where 
 <span class="math display">
 \begin{align*}
-\gamma_f: {\operatorname{Aut}}(N) &amp;\to {\operatorname{Aut}}(N) \\
+\gamma_f: \mathop{\mathrm{Aut}}(N) &amp;\to \mathop{\mathrm{Aut}}(N) \\
 \psi &amp;\mapsto f\circ \psi \circ f^{-1}
 .\end{align*}
 <span>
 <ul>
 <li>These actions preserve the group isomorphism type of <span class="math inline">\(G\)</span></li>
 </ul></li>
-<li>However, since <span class="math inline">\(C_q \leq {\mathbb{Z}}/(p-1)\)</span> and <span class="math inline">\({\operatorname{Aut}}(C_q) \cong {\mathbb{Z}}/(q-1)\)</span>, there are exactly <span class="math inline">\(q-1\)</span> automorphisms of the image <span class="math inline">\(C_q\)</span>, say <span class="math inline">\(\left\{{\pi_k}\right\}_{k=1}^{q-1}\)</span>.</li>
+<li>However, since <span class="math inline">\(C_q \leq {\mathbb{Z}}/(p-1)\)</span> and <span class="math inline">\(\mathop{\mathrm{Aut}}(C_q) \cong {\mathbb{Z}}/(q-1)\)</span>, there are exactly <span class="math inline">\(q-1\)</span> automorphisms of the image <span class="math inline">\(C_q\)</span>, say <span class="math inline">\(\left\{{\pi_k}\right\}_{k=1}^{q-1}\)</span>.</li>
 <li>So <span class="math inline">\(\psi \circ \pi_k: {\mathbb{Z}}/q \to {\mathbb{Z}}/(p-1)\)</span> for <span class="math inline">\(1\leq k \leq q-1\)</span> yields <span class="math inline">\(q-1\)</span> distinct actions, and we’re done.</li>
 </ul>
 </details>
@@ -2757,7 +2767,7 @@ x^2 \pmod{x^2 + x} \in {\mathbb{Q}}[x]/(x^2 + x)
 <p>An element <span class="math inline">\(r\in R\)</span> is a <strong>zero-divisor</strong> iff there exists an <span class="math inline">\(a\in R\setminus\left\{{0}\right\}\)</span> such that <span class="math inline">\(ar = ra = 0\)</span>, i.e. <span class="math inline">\(r\divides 0\)</span>. Equivalently, the map 
 <span class="math display">
 \begin{align*}  
-r_{-}: R &amp;\to R \\
+r\cdot: R &amp;\to R \\
 x &amp;\mapsto rx
 \end{align*}
 <span> fails to be injective.</p>
@@ -2895,11 +2905,13 @@ r = u \prod_{i=1}^n p_i
 </ul></li>
 </ul>
 </div>
+<div class="proposition proofenv" title="Polynomial rings over fields have division">
+<p>If <span class="math inline">\({\mathbb{F}}\)</span> a field then <span class="math inline">\({\mathbb{F}}[x]\)</span> is a Euclidean domain.</p>
+</div>
 <div class="proposition proofenv" title="Characterizations of Rings">
 <ul>
 <li><span class="math inline">\(R\)</span> a commutative division ring <span class="math inline">\(\implies R\)</span> is a field</li>
 <li><span class="math inline">\(R\)</span> a finite integral domain <span class="math inline">\(\implies R\)</span> is a field.</li>
-<li><span class="math inline">\({\mathbb{F}}\)</span> a field <span class="math inline">\(\implies {\mathbb{F}}[x]\)</span> is a Euclidean domain.</li>
 <li><span class="math inline">\({\mathbb{F}}\)</span> a field <span class="math inline">\(\iff {\mathbb{F}}[x]\)</span> is a PID.</li>
 <li><span class="math inline">\({\mathbb{F}}\)</span> is a field <span class="math inline">\(\iff {\mathbb{F}}\)</span> is a commutative simple ring.</li>
 <li><span class="math inline">\(R\)</span> is a UFD <span class="math inline">\(\iff R[x]\)</span> is a UFD.</li>
@@ -3060,11 +3072,44 @@ S = \left\{{J {~\mathrel{\Big|}~}I   \subseteq J &lt; R}\right\}
 <div class="fact proofenv">
 <p>Division algorithm for Euclidean domains.</p>
 </div>
-<div class="definition proofenv" title="Localization">
-
+<div class="definition proofenv" title="Field of fractions">
+<p>For <span class="math inline">\(R\in \mathsf{CRing}\)</span> an integral domain, the <strong>field of fractions</strong> of <span class="math inline">\(R\)</span> can be constructed as 
+<span class="math display">
+\begin{align*}
+\operatorname{ff}(R) \mathrel{\vcenter{:}}=\qty{R \times R^{\bullet}}/\sim &amp;&amp; (a,s)\sim bt \iff at-bs = 0_R
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Checking transitivity requires having no nonzero zero divisors.</p>
+</blockquote>
 </div>
-<div class="definition proofenv" title="Fraction Field">
-
+<div class="definition proofenv" title="Localization">
+<p>For <span class="math inline">\(R\in \mathsf{CRing}\)</span> and <span class="math inline">\(S \subseteq R\)</span> a <em>multiplicatively closed</em> subset, so <span class="math inline">\(RS \subseteq S\)</span> and <span class="math inline">\(1_R\in S\)</span>, the <strong>localization of <span class="math inline">\(R\)</span> at <span class="math inline">\(S\)</span></strong> can be constructed as 
+<span class="math display">
+\begin{align*}
+R \left[ {S}^{-1}\right] \mathrel{\vcenter{:}}=\qty{R\times S} / \sim &amp;&amp; (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
+.\end{align*}
+<span></p>
+<blockquote>
+<p>Why the <span class="math inline">\(u\)</span>: use in proof of transitivity.</p>
+</blockquote>
+</div>
+<div class="warnings proofenv">
+<p>There is a canonical ring morphism 
+<span class="math display">
+\begin{align*}
+R &amp;\to R \left[ {S}^{-1}\right] \\
+x &amp;\mapsto {x\over 1}
+,\end{align*}
+<span> but this may not be injective.</p>
+</div>
+<div class="remark proofenv">
+<p>For integral domains <span class="math inline">\(R\)</span>, 
+<span class="math display">
+\begin{align*}
+\operatorname{ff}(R) \cong R \left[ { (R^{\bullet}) }^{-1}\right]
+.\end{align*}
+<span></p>
 </div>
 <div class="theorem proofenv" title="Hilbert Basis Theorem">
 
@@ -3072,80 +3117,26 @@ S = \left\{{J {~\mathrel{\Big|}~}I   \subseteq J &lt; R}\right\}
 <div class="definition proofenv" title="Primary Ideal">
 <p>An ideal <span class="math inline">\(I{~\trianglelefteq~}R\)</span> is <strong>primary</strong> iff whenever <span class="math inline">\(pq\in I\)</span>, <span class="math inline">\(p\in I\)</span> and <span class="math inline">\(q^n\in I\)</span> for some <span class="math inline">\(n\)</span>.</p>
 </div>
+<div class="proposition proofenv" title="Polynomial rings over UFDs are UFDs">
+
+</div>
 <h1 data-number="5" id="field-theory-1"><span class="header-section-number">5</span> Field Theory</h1>
-<h2 data-number="5.1" id="facts-and-definitions"><span class="header-section-number">5.1</span> Facts and Definitions</h2>
-<p>Let <span class="math inline">\(k\)</span> denote a field, and <span class="math inline">\(L/k\)</span> extensions.</p>
 <div class="remark proofenv">
-<ul>
-<li><span class="math inline">\([L: K] = \dim_{{\mathsf{Vect}}_K} L\)</span>, the dimension of <span class="math inline">\(L\)</span> as a <span class="math inline">\(K{\hbox{-}}\)</span>vector space</li>
-<li><span class="math inline">\({\operatorname{Aut}}(L/k) \mathrel{\vcenter{:}}=\left\{{ \sigma: L \to L&#39; {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \one_K }\right\}\)</span>, the lifts of the identity on <span class="math inline">\(K\)</span>.</li>
-<li><span class="math inline">\(\left\{{ L: K }\right\} \mathrel{\vcenter{:}}=\# {\operatorname{Aut}}(L/k) \mathrel{\vcenter{:}}=\left\{{ \sigma: L \to L&#39; {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \one_K}\right\}\)</span>, the number of lifts of the identity on <span class="math inline">\(K\)</span>.</li>
-<li><span class="math inline">\(\operatorname{Gal}(E/F) \mathrel{\vcenter{:}}={\operatorname{Aut}}_{{ \mathsf{Fields}_{k} } }\)</span> if <span class="math inline">\(E\)</span> is finite, normal, and separable.</li>
-</ul>
-</div>
-<div class="definition proofenv" title="Simple Extensions">
-<p>An extension <span class="math inline">\(L/k\)</span> is <strong>simple</strong> iff <span class="math inline">\(L = K( \alpha)\)</span> for some <span class="math inline">\(\alpha\in L\)</span>.</p>
-</div>
-<div class="definition proofenv" title="Fixed Field">
-<p>For <span class="math inline">\(H \leq {\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span>, 
-<span class="math display">
-\begin{align*}
-L^H \mathrel{\vcenter{:}}=\left\{{ \ell \in L {~\mathrel{\Big|}~}\sigma(l) = \ell }\right\}
-.\end{align*}
-<span></p>
-</div>
-<div class="definition proofenv" title="Prime Subfield">
-<p>The <strong>prime subfield</strong> of a field <span class="math inline">\(F\)</span> is the subfield generated by <span class="math inline">\(1\)</span>.</p>
+<p>Galois is defined as <strong>normal and separable</strong>.</p>
 </div>
 <div class="fact proofenv">
 <ul>
-<li>Irreducible <span class="math inline">\(\implies\)</span> separable.</li>
-<li>The minimal polynomial of an algebraic element is always irreducible.</li>
-<li>Every irreducible polynomial over a perfect field is separable.</li>
-<li>Every finite extension of a perfect field is separable.</li>
+<li>All fields are simple rings (no proper nontrivial ideals).
+<ul>
+<li>Thus every field morphism is either zero or injective.</li>
+</ul></li>
+<li>The characteristic of any field <span class="math inline">\(k\)</span> is either 0 or <span class="math inline">\(p\)</span> a prime.</li>
+<li>If <span class="math inline">\(L/k\)</span> is algebraic, then <span class="math inline">\(\min(\alpha, L)\)</span> divides <span class="math inline">\(\min(\alpha, k)\)</span>.</li>
 </ul>
 </div>
-<div class="definition proofenv" title="Field Automorphisms">
-<p>
-<span class="math display">
-\begin{align*} 
-{\operatorname{Aut}}(L/k) = \left\{{\sigma: L \to L {~\mathrel{\Big|}~} {\left.{{\sigma}} \right|_{{k}} }  = \operatorname{id}_k}\right\}
-.\end{align*}
-<span></p>
+<h2 data-number="5.1" id="basics-polynomials"><span class="header-section-number">5.1</span> Basics: Polynomials</h2>
 <div class="definition proofenv" title="Reducible and Irreducible Polynomials">
 <p>For <span class="math inline">\({\mathbb{F}}\)</span> a field, a polynomial <span class="math inline">\(f\in {\mathbb{F}}[x]\)</span> is <strong>reducible</strong> if and only if <span class="math inline">\(f\)</span> can be factored as <span class="math inline">\(f(x) = g(x) h(x)\)</span> for some <span class="math inline">\(g, h\in {\mathbb{F}}[x]\)</span> with <span class="math inline">\(\deg g, \deg h \geq 1\)</span> (so <span class="math inline">\(g, h\)</span> are nonconstant). <span class="math inline">\(f\)</span> is <strong>irreducible</strong> if <span class="math inline">\(f\)</span> is not reducible.</p>
-</div>
-</div>
-<div class="remark proofenv">
-<p>Note that in general, 
-<span class="math display">
-\begin{align*}
-{\left\lvert { {\operatorname{Aut}}(L/k) } \right\rvert} \leq [L: K]
-.\end{align*}
-<span></p>
-</div>
-<div class="definition proofenv" title="Characterizations of Perfect Fields">
-<p>The following are equivalent:</p>
-<ul>
-<li><p><span class="math inline">\(k\)</span> is a <strong>perfect</strong> field.</p></li>
-<li><p>Every irreducible polynomial <span class="math inline">\(p\in k[x]\)</span> is separable</p></li>
-<li><p>Every finite extension <span class="math inline">\(F/k\)</span> is separable.</p></li>
-<li><p>If <span class="math inline">\(\operatorname{ch}k &gt; 0\)</span>, the Frobenius is an automorphism of <span class="math inline">\(k\)</span>.</p></li>
-</ul>
-</div>
-<div class="fact proofenv">
-<ul>
-<li>The characteristic of any field <span class="math inline">\(k\)</span> is either 0 or <span class="math inline">\(p\)</span> a prime.</li>
-<li>All fields are simple rings (no proper nontrivial ideals).</li>
-<li>If <span class="math inline">\(L/k\)</span> is algebraic, then <span class="math inline">\(\min(\alpha, L)\)</span> divides <span class="math inline">\(\min(\alpha, k)\)</span>.</li>
-<li>Every field morphism is either zero or injective.</li>
-</ul>
-</div>
-<div class="theorem proofenv" title="Gauss&#39; Lemma">
-<p>Let <span class="math inline">\(R\)</span> be a UFD and <span class="math inline">\(F\)</span> its field of fractions. Then a primitive <span class="math inline">\(p\in R[x]\)</span> is irreducible in <span class="math inline">\(R[x] \iff p\)</span> is irreducible in <span class="math inline">\(F[x]\)</span>.</p>
-</div>
-<div class="corollary proofenv">
-<p>A primitive polynomial <span class="math inline">\(p\in {\mathbb{Q}}[x]\)</span> is irreducible <span class="math inline">\(\iff p\)</span> is irreducible in <span class="math inline">\({\mathbb{Z}}[x]\)</span>.</p>
 </div>
 <div class="theorem proofenv" title="Eisenstein&#39;s Criterion">
 <p>If <span class="math inline">\(f(x) = \sum_{i=0}^n \alpha_i x^i \in {\mathbb{Q}}[x]\)</span> and <span class="math inline">\(\exists p\)</span> such that</p>
@@ -3155,52 +3146,241 @@ L^H \mathrel{\vcenter{:}}=\left\{{ \ell \in L {~\mathrel{\Big|}~}\sigma(l) = \el
 </ul>
 <p>then <span class="math inline">\(f\)</span> is irreducible over <span class="math inline">\({\mathbb{Q}}[x]\)</span>, and by Gauss’ lemma, over <span class="math inline">\({\mathbb{Z}}[x]\)</span>.</p>
 </div>
-<div class="definition proofenv" title="Elementary Symmetric Functions">
-<p>Todo</p>
+<div class="theorem proofenv" title="Gauss&#39; Lemma">
+<p>Let <span class="math inline">\(R\)</span> be a UFD and <span class="math inline">\(F\)</span> its field of fractions. Then a primitive <span class="math inline">\(p\in R[x]\)</span> is irreducible in <span class="math inline">\(R[x] \iff p\)</span> is irreducible in <span class="math inline">\(F[x]\)</span>.</p>
 </div>
-<h2 data-number="5.2" id="extensions"><span class="header-section-number">5.2</span> Extensions</h2>
-<div class="definition proofenv" title="Algebraic Field Extension">
+<div class="corollary proofenv">
+<p>A primitive polynomial <span class="math inline">\(p\in {\mathbb{Q}}[x]\)</span> is irreducible <span class="math inline">\(\iff p\)</span> is irreducible in <span class="math inline">\({\mathbb{Z}}[x]\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Elementary Symmetric Functions">
+
+</div>
+<h2 data-number="5.2" id="definitions-1"><span class="header-section-number">5.2</span> Definitions</h2>
+<div class="definition proofenv" title="Characteristic">
+<p>The <strong>characteristic</strong> of a ring <span class="math inline">\(R\)</span> is the smallest integer <span class="math inline">\(p\)</span> such that <span class="math inline">\(\sum_{k=1}^p 1 = 0\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Freshman&#39;s Dream">
+<p>If <span class="math inline">\(\operatorname{ch}k = p\)</span> then <span class="math inline">\((a+b)^p = a^p + b^p\)</span> and <span class="math inline">\((ab)^p = a^p b^p\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Fixed Field">
+<p>For <span class="math inline">\(H \leq \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span>, 
+<span class="math display">
+\begin{align*}
+L^H \mathrel{\vcenter{:}}=\left\{{ \ell \in L {~\mathrel{\Big|}~}\sigma(l) = \ell }\right\}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Prime Subfield">
+<p>The <strong>prime subfield</strong> of a field <span class="math inline">\(F\)</span> is the subfield generated by <span class="math inline">\(1\)</span>.</p>
+</div>
+<div class="theorem proofenv" title="Characterization of Prime Subfields">
+<p>The prime subfield of any field is isomorphic to either <span class="math inline">\({\mathbb{Q}}\)</span> or <span class="math inline">\({\mathbb{F}}_p\)</span> for some <span class="math inline">\(p\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Field Automorphisms">
+<p>
+<span class="math display">
+\begin{align*} 
+\mathop{\mathrm{Aut}}(L/k) = \left\{{\sigma: L \to L {~\mathrel{\Big|}~} {\left.{{\sigma}} \right|_{{k}} }  = \operatorname{id}_k}\right\}
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Embeddings and Lifts">
+<p>Let <span class="math inline">\(k\)</span> denote a field, and <span class="math inline">\(L/k\)</span> extension. Every field morphism is an embedding (injection). An <em>embedding</em> of <span class="math inline">\(k{\hbox{-}}\)</span>algebras <span class="math inline">\(L\hookrightarrow L&#39;\)</span> will refer to any ring morphism over <span class="math inline">\(k\)</span>, i.e. a field morphism that restricts to the identity on <span class="math inline">\(k\)</span>:</p>
+<p><p style="text-align:center;"> <img class="tikzcd" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTUuNDEzcHQiIGhlaWdodD0iNjQuODU4cHQiIHZpZXdCb3g9IjAgMCA5NS40MTMgNjQuODU4IiB2ZXJzaW9uPSIxLjEiPgo8ZGVmcz4KPGc+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDAtMCI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9IiIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0xIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iTSA2LjQwNjI1IC0yLjQ2ODc1IEMgNi40MDYyNSAtMi41IDYuMzc1IC0yLjU3ODEyNSA2LjI5Njg3NSAtMi41NzgxMjUgQyA2LjIwMzEyNSAtMi41NzgxMjUgNi4xODc1IC0yLjUxNTYyNSA2LjEyNSAtMi4zNTkzNzUgQyA1Ljc4MTI1IC0xLjQ1MzEyNSA1LjM0Mzc1IC0wLjMxMjUgMy42MjUgLTAuMzEyNSBMIDIuNjg3NSAtMC4zMTI1IEMgMi41NDY4NzUgLTAuMzEyNSAyLjUxNTYyNSAtMC4zMTI1IDIuNDY4NzUgLTAuMzEyNSBDIDIuMzU5Mzc1IC0wLjMyODEyNSAyLjMyODEyNSAtMC4zNDM3NSAyLjMyODEyNSAtMC40MjE4NzUgQyAyLjMyODEyNSAtMC40NTMxMjUgMi4zMjgxMjUgLTAuNDY4NzUgMi4zNzUgLTAuNjQwNjI1IEwgMy43MzQzNzUgLTYuMDMxMjUgQyAzLjgxMjUgLTYuMzkwNjI1IDMuODQzNzUgLTYuNSA0Ljc4MTI1IC02LjUgQyA1LjA3ODEyNSAtNi41IDUuMTU2MjUgLTYuNSA1LjE1NjI1IC02LjY4NzUgQyA1LjE1NjI1IC02LjgxMjUgNS4wNDY4NzUgLTYuODEyNSA1IC02LjgxMjUgTCAzLjUzMTI1IC02Ljc4MTI1IEwgMi4yMDMxMjUgLTYuODEyNSBDIDIuMTQwNjI1IC02LjgxMjUgMi4wMTU2MjUgLTYuODEyNSAyLjAxNTYyNSAtNi42MDkzNzUgQyAyLjAxNTYyNSAtNi41IDIuMTA5Mzc1IC02LjUgMi4yOTY4NzUgLTYuNSBDIDIuMjk2ODc1IC02LjUgMi41IC02LjUgMi42NzE4NzUgLTYuNDg0Mzc1IEMgMi44NDM3NSAtNi40NTMxMjUgMi45Mzc1IC02LjQ1MzEyNSAyLjkzNzUgLTYuMzEyNSBDIDIuOTM3NSAtNi4yODEyNSAyLjkzNzUgLTYuMjUgMi45MDYyNSAtNi4xMjUgTCAxLjU2MjUgLTAuNzgxMjUgQyAxLjQ2ODc1IC0wLjM5MDYyNSAxLjQ1MzEyNSAtMC4zMTI1IDAuNjU2MjUgLTAuMzEyNSBDIDAuNDg0Mzc1IC0wLjMxMjUgMC4zOTA2MjUgLTAuMzEyNSAwLjM5MDYyNSAtMC4xMDkzNzUgQyAwLjM5MDYyNSAwIDAuNDg0Mzc1IDAgMC42NTYyNSAwIEwgNS4yODEyNSAwIEMgNS41MTU2MjUgMCA1LjUxNTYyNSAwIDUuNTc4MTI1IC0wLjE3MTg3NSBMIDYuMzc1IC0yLjMyODEyNSBDIDYuNDA2MjUgLTIuNDM3NSA2LjQwNjI1IC0yLjQ2ODc1IDYuNDA2MjUgLTIuNDY4NzUgWiBNIDYuNDA2MjUgLTIuNDY4NzUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTIiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDQuODkwNjI1IC0xLjQyMTg3NSBDIDQuODkwNjI1IC0xLjUzMTI1IDQuNzk2ODc1IC0xLjUzMTI1IDQuNzY1NjI1IC0xLjUzMTI1IEMgNC42NzE4NzUgLTEuNTMxMjUgNC42NTYyNSAtMS40ODQzNzUgNC42MjUgLTEuMzQzNzUgQyA0LjQyMTg3NSAtMC42MjUgNC4yMDMxMjUgLTAuMTA5Mzc1IDMuNzY1NjI1IC0wLjEwOTM3NSBDIDMuNTYyNSAtMC4xMDkzNzUgMy40Mzc1IC0wLjIxODc1IDMuNDM3NSAtMC41NzgxMjUgQyAzLjQzNzUgLTAuNzUgMy40ODQzNzUgLTAuOTg0Mzc1IDMuNTE1NjI1IC0xLjE0MDYyNSBDIDMuNTYyNSAtMS4zMTI1IDMuNTYyNSAtMS4zNDM3NSAzLjU2MjUgLTEuNDUzMTI1IEMgMy41NjI1IC0yLjA5Mzc1IDIuOTM3NSAtMi4zNzUgMi4wNzgxMjUgLTIuNSBDIDIuMzkwNjI1IC0yLjY3MTg3NSAyLjcxODc1IC0yLjk4NDM3NSAyLjkzNzUgLTMuMjM0Mzc1IEMgMy40MjE4NzUgLTMuNzY1NjI1IDMuODc1IC00LjE4NzUgNC4zNTkzNzUgLTQuMTg3NSBDIDQuNDIxODc1IC00LjE4NzUgNC40Mzc1IC00LjE4NzUgNC40NTMxMjUgLTQuMTcxODc1IEMgNC41NzgxMjUgLTQuMTU2MjUgNC41NzgxMjUgLTQuMTU2MjUgNC42NzE4NzUgLTQuMDkzNzUgQyA0LjY4NzUgLTQuMDkzNzUgNC42ODc1IC00LjA3ODEyNSA0LjcwMzEyNSAtNC4wNjI1IEMgNC4yMzQzNzUgLTQuMDMxMjUgNC4xNDA2MjUgLTMuNjQwNjI1IDQuMTQwNjI1IC0zLjUxNTYyNSBDIDQuMTQwNjI1IC0zLjM1OTM3NSA0LjI1IC0zLjE3MTg3NSA0LjUxNTYyNSAtMy4xNzE4NzUgQyA0Ljc4MTI1IC0zLjE3MTg3NSA1LjA2MjUgLTMuMzkwNjI1IDUuMDYyNSAtMy43ODEyNSBDIDUuMDYyNSAtNC4wNzgxMjUgNC44MjgxMjUgLTQuNDA2MjUgNC4zOTA2MjUgLTQuNDA2MjUgQyA0LjEwOTM3NSAtNC40MDYyNSAzLjY1NjI1IC00LjMyODEyNSAyLjkzNzUgLTMuNTMxMjUgQyAyLjU5Mzc1IC0zLjE1NjI1IDIuMjAzMTI1IC0yLjc1IDEuODI4MTI1IC0yLjYwOTM3NSBMIDIuODU5Mzc1IC02LjgxMjUgQyAyLjg1OTM3NSAtNi44MTI1IDIuODU5Mzc1IC02LjkyMTg3NSAyLjczNDM3NSAtNi45MjE4NzUgQyAyLjUgLTYuOTIxODc1IDEuNzgxMjUgLTYuODQzNzUgMS41MTU2MjUgLTYuODEyNSBDIDEuNDM3NSAtNi44MTI1IDEuMzI4MTI1IC02Ljc5Njg3NSAxLjMyODEyNSAtNi42MjUgQyAxLjMyODEyNSAtNi41IDEuNDIxODc1IC02LjUgMS41NjI1IC02LjUgQyAyLjA0Njg3NSAtNi41IDIuMDYyNSAtNi40Mzc1IDIuMDYyNSAtNi4zMjgxMjUgTCAyLjAzMTI1IC02LjEyNSBMIDAuNTkzNzUgLTAuMzkwNjI1IEMgMC41NDY4NzUgLTAuMjUgMC41NDY4NzUgLTAuMjM0Mzc1IDAuNTQ2ODc1IC0wLjE3MTg3NSBDIDAuNTQ2ODc1IDAuMDYyNSAwLjc1IDAuMTA5Mzc1IDAuODQzNzUgMC4xMDkzNzUgQyAwLjk2ODc1IDAuMTA5Mzc1IDEuMTA5Mzc1IDAuMDE1NjI1IDEuMTcxODc1IC0wLjA5Mzc1IEMgMS4yMTg3NSAtMC4xODc1IDEuNjcxODc1IC0yLjAzMTI1IDEuNzM0Mzc1IC0yLjI4MTI1IEMgMi4wNzgxMjUgLTIuMjUgMi44OTA2MjUgLTIuMDkzNzUgMi44OTA2MjUgLTEuNDM3NSBDIDIuODkwNjI1IC0xLjM1OTM3NSAyLjg5MDYyNSAtMS4zMjgxMjUgMi44NTkzNzUgLTEuMjE4NzUgQyAyLjg0Mzc1IC0xLjEwOTM3NSAyLjgyODEyNSAtMC45ODQzNzUgMi44MjgxMjUgLTAuODc1IEMgMi44MjgxMjUgLTAuMjk2ODc1IDMuMjE4NzUgMC4xMDkzNzUgMy43MzQzNzUgMC4xMDkzNzUgQyA0LjAzMTI1IDAuMTA5Mzc1IDQuMzEyNSAtMC4wNDY4NzUgNC41MzEyNSAtMC40MjE4NzUgQyA0Ljc4MTI1IC0wLjg1OTM3NSA0Ljg5MDYyNSAtMS40MjE4NzUgNC44OTA2MjUgLTEuNDIxODc1IFogTSA0Ljg5MDYyNSAtMS40MjE4NzUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgxLTAiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSIiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDEtMSI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gMi4wNzgxMjUgLTMuNTE1NjI1IEMgMi4wNzgxMjUgLTMuNzM0Mzc1IDEuODkwNjI1IC0zLjg5MDYyNSAxLjY3MTg3NSAtMy44OTA2MjUgQyAxLjM5MDYyNSAtMy44OTA2MjUgMS4zMjgxMjUgLTMuNjcxODc1IDEuMjk2ODc1IC0zLjU3ODEyNSBMIDAuMzc1IC0wLjU2MjUgTCAwLjMyODEyNSAtMC40Mzc1IEMgMC4zMjgxMjUgLTAuMzU5Mzc1IDAuNTQ2ODc1IC0wLjI4MTI1IDAuNjA5Mzc1IC0wLjI4MTI1IEMgMC42NTYyNSAtMC4yODEyNSAwLjY4NzUgLTAuMzI4MTI1IDAuNzAzMTI1IC0wLjM5MDYyNSBMIDIuMDMxMjUgLTMuMjk2ODc1IEMgMi4wNjI1IC0zLjM1OTM3NSAyLjA3ODEyNSAtMy40MjE4NzUgMi4wNzgxMjUgLTMuNTE1NjI1IFogTSAyLjA3ODEyNSAtMy41MTU2MjUgIi8+Cjwvc3ltYm9sPgo8L2c+CjwvZGVmcz4KPGcgaWQ9InN1cmZhY2UxIj4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0xIiB4PSI0LjI4OSIgeT0iMTEuMTM2Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0xIiB4PSI4MS41NDgiIHk9IjExLjEzNiIvPgo8L2c+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDEtMSIgeD0iODguMzI4IiB5PSI3LjUyMSIvPgo8L2c+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDAtMiIgeD0iNDMuNTU5IiB5PSI2MS4yMTIiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC04LjY1NTIxOSAtMTYuODgzNSBMIC0zNC45MDEzMTMgMTcuMTMyMTI1ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDcuNzA2LDMyLjQyOSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gMC4wMDA0OTQzNjYgMS45NTEyNjIgQyAwLjY4MjYzOCAxLjk1Mjg3MiAxLjIzNDU2NSAxLjUxNzE0MiAxLjIzNDk1MiAwLjk3NDA5NiBDIDEuMjM0NjMyIDAuNDM2NTMgMC42ODA5MzggMC4wMDAyOTMzOTQgLTAuMDAxMjA1NDEgLTAuMDAxMzE2NjkgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjYxMDg2LDAuNzkxNjksMC43OTE2OSwtMC42MTA4NiwzOS4wNTI1Niw0OS4zMTI2NSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcxNTg5IDIuMzg5NDQyIEMgLTEuNjkxOTEyIDAuOTU2NzE3IC0wLjg0OTUzMSAwLjI3NzE0IDAuMDAyMjU4NzQgLTAuMDAwMTY4NjU4IEMgLTAuODUwMTE3IC0wLjI3OTk1NiAtMS42OTMwNzcgLTAuOTU2OCAtMi4wNzM2NjMgLTIuMzkwMDY3ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNjEwODYsLTAuNzkxNjksLTAuNzkxNjksMC42MTA4NiwxMi42ODQ4NCwxNS4xMzg2MSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSA2LjExMDQwNiAtMTYuODk5MTI1IEwgMzMuMzIxMzQ0IDE3LjEzNjAzMSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQ3LjcwNiwzMi40MjkpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAwNzk0NzkxIDEuOTUyNTg5IEMgMC42ODE2NTEgMS45NTM0MSAxLjIzNjM1NSAxLjUxNDkyOSAxLjIzNTMwMiAwLjk3NTYxMiBDIDEuMjM0MjQ5IDAuNDM2Mjk1IDAuNjgyMjU0IDAuMDAyMzUzMjEgLTAuMDAxMDQxMjcgLTAuMDAxNTE4NjEgIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC42MjQ0MiwwLjc4MTAyLC0wLjc4MTAyLC0wLjYyNDQyLDUzLjgxNDU3LDQ5LjMyNzk5KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzIzODIgMi4zOTE1NjggQyAtMS42OTMzNTIgMC45NTQwODcgLTAuODQ4NTkxIDAuMjc5MDcgLTAuMDAxMjY2ODUgMC4wMDEyMTgyMiBDIC0wLjg0OTM3MyAtMC4yNzY3MTkgLTEuNjkyMTEzIC0wLjk1NTQ4NSAtMi4wNzE0MiAtMi4zODkwNzEgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjYyNDQyLC0wLjc4MTAyLC0wLjc4MTAyLC0wLjYyNDQyLDgxLjE1MDE4LDE1LjEzNjQ5KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0zMC43MTM4MTMgMjMuNzg0NDY5IEwgMjguOTU0MTU2IDIzLjc4NDQ2OSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQ3LjcwNiwzMi40MjkpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0wLjAwMDExNzUgMS45NTM0NzQgQyAwLjY4MzQ3NiAxLjk1MzQ3NCAxLjIzNDI1OCAxLjUxNTk3NCAxLjIzNDI1OCAwLjk3NjkxMSBDIDEuMjM0MjU4IDAuNDM3ODQ5IDAuNjgzNDc2IDAuMDAwMzQ4NzUgLTAuMDAwMTE3NSAwLjAwMDM0ODc1ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTEsMCwwLC0xLDE2Ljk5MjA3LDguNjQ0ODgpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0yLjA3MTA3OCAyLjM5MDk3NCBDIC0xLjY5MjE3MSAwLjk1NzM4IC0wLjg0ODQyMSAwLjI3NzY5MiAtMC4wMDA3NjUgMC4wMDAzNDg3NSBDIC0wLjg0ODQyMSAtMC4yNzY5OTUgLTEuNjkyMTcxIC0wLjk1NjY4MyAtMi4wNzEwNzggLTIuMzkwMjc2ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNzYuODYwMTQsOC42NDQ4OCkiLz4KPC9nPgo8L3N2Zz4K"></p></p>
+<blockquote>
+<p><a href="https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d">Link to Diagram</a></p>
+</blockquote>
+<p>More generally, we can ask for lifts of any map <span class="math inline">\(\sigma: k\to k_\sigma\)</span>:</p>
+<p><p style="text-align:center;"> <img class="tikzcd" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODIuMzFwdCIgaGVpZ2h0PSI2Ni4zNTJwdCIgdmlld0JveD0iMCAwIDgyLjMxIDY2LjM1MiIgdmVyc2lvbj0iMS4xIj4KPGRlZnM+CjxnPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTAiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSIiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDAtMSI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gNi40MDYyNSAtMi40Njg3NSBDIDYuNDA2MjUgLTIuNSA2LjM3NSAtMi41NzgxMjUgNi4yOTY4NzUgLTIuNTc4MTI1IEMgNi4yMDMxMjUgLTIuNTc4MTI1IDYuMTg3NSAtMi41MTU2MjUgNi4xMjUgLTIuMzU5Mzc1IEMgNS43ODEyNSAtMS40NTMxMjUgNS4zNDM3NSAtMC4zMTI1IDMuNjI1IC0wLjMxMjUgTCAyLjY4NzUgLTAuMzEyNSBDIDIuNTQ2ODc1IC0wLjMxMjUgMi41MTU2MjUgLTAuMzEyNSAyLjQ2ODc1IC0wLjMxMjUgQyAyLjM1OTM3NSAtMC4zMjgxMjUgMi4zMjgxMjUgLTAuMzQzNzUgMi4zMjgxMjUgLTAuNDIxODc1IEMgMi4zMjgxMjUgLTAuNDUzMTI1IDIuMzI4MTI1IC0wLjQ2ODc1IDIuMzc1IC0wLjY0MDYyNSBMIDMuNzM0Mzc1IC02LjAzMTI1IEMgMy44MTI1IC02LjM5MDYyNSAzLjg0Mzc1IC02LjUgNC43ODEyNSAtNi41IEMgNS4wNzgxMjUgLTYuNSA1LjE1NjI1IC02LjUgNS4xNTYyNSAtNi42ODc1IEMgNS4xNTYyNSAtNi44MTI1IDUuMDQ2ODc1IC02LjgxMjUgNSAtNi44MTI1IEwgMy41MzEyNSAtNi43ODEyNSBMIDIuMjAzMTI1IC02LjgxMjUgQyAyLjE0MDYyNSAtNi44MTI1IDIuMDE1NjI1IC02LjgxMjUgMi4wMTU2MjUgLTYuNjA5Mzc1IEMgMi4wMTU2MjUgLTYuNSAyLjEwOTM3NSAtNi41IDIuMjk2ODc1IC02LjUgQyAyLjI5Njg3NSAtNi41IDIuNSAtNi41IDIuNjcxODc1IC02LjQ4NDM3NSBDIDIuODQzNzUgLTYuNDUzMTI1IDIuOTM3NSAtNi40NTMxMjUgMi45Mzc1IC02LjMxMjUgQyAyLjkzNzUgLTYuMjgxMjUgMi45Mzc1IC02LjI1IDIuOTA2MjUgLTYuMTI1IEwgMS41NjI1IC0wLjc4MTI1IEMgMS40Njg3NSAtMC4zOTA2MjUgMS40NTMxMjUgLTAuMzEyNSAwLjY1NjI1IC0wLjMxMjUgQyAwLjQ4NDM3NSAtMC4zMTI1IDAuMzkwNjI1IC0wLjMxMjUgMC4zOTA2MjUgLTAuMTA5Mzc1IEMgMC4zOTA2MjUgMCAwLjQ4NDM3NSAwIDAuNjU2MjUgMCBMIDUuMjgxMjUgMCBDIDUuNTE1NjI1IDAgNS41MTU2MjUgMCA1LjU3ODEyNSAtMC4xNzE4NzUgTCA2LjM3NSAtMi4zMjgxMjUgQyA2LjQwNjI1IC0yLjQzNzUgNi40MDYyNSAtMi40Njg3NSA2LjQwNjI1IC0yLjQ2ODc1IFogTSA2LjQwNjI1IC0yLjQ2ODc1ICIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0yIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iTSA0Ljg5MDYyNSAtMS40MjE4NzUgQyA0Ljg5MDYyNSAtMS41MzEyNSA0Ljc5Njg3NSAtMS41MzEyNSA0Ljc2NTYyNSAtMS41MzEyNSBDIDQuNjcxODc1IC0xLjUzMTI1IDQuNjU2MjUgLTEuNDg0Mzc1IDQuNjI1IC0xLjM0Mzc1IEMgNC40MjE4NzUgLTAuNjI1IDQuMjAzMTI1IC0wLjEwOTM3NSAzLjc2NTYyNSAtMC4xMDkzNzUgQyAzLjU2MjUgLTAuMTA5Mzc1IDMuNDM3NSAtMC4yMTg3NSAzLjQzNzUgLTAuNTc4MTI1IEMgMy40Mzc1IC0wLjc1IDMuNDg0Mzc1IC0wLjk4NDM3NSAzLjUxNTYyNSAtMS4xNDA2MjUgQyAzLjU2MjUgLTEuMzEyNSAzLjU2MjUgLTEuMzQzNzUgMy41NjI1IC0xLjQ1MzEyNSBDIDMuNTYyNSAtMi4wOTM3NSAyLjkzNzUgLTIuMzc1IDIuMDc4MTI1IC0yLjUgQyAyLjM5MDYyNSAtMi42NzE4NzUgMi43MTg3NSAtMi45ODQzNzUgMi45Mzc1IC0zLjIzNDM3NSBDIDMuNDIxODc1IC0zLjc2NTYyNSAzLjg3NSAtNC4xODc1IDQuMzU5Mzc1IC00LjE4NzUgQyA0LjQyMTg3NSAtNC4xODc1IDQuNDM3NSAtNC4xODc1IDQuNDUzMTI1IC00LjE3MTg3NSBDIDQuNTc4MTI1IC00LjE1NjI1IDQuNTc4MTI1IC00LjE1NjI1IDQuNjcxODc1IC00LjA5Mzc1IEMgNC42ODc1IC00LjA5Mzc1IDQuNjg3NSAtNC4wNzgxMjUgNC43MDMxMjUgLTQuMDYyNSBDIDQuMjM0Mzc1IC00LjAzMTI1IDQuMTQwNjI1IC0zLjY0MDYyNSA0LjE0MDYyNSAtMy41MTU2MjUgQyA0LjE0MDYyNSAtMy4zNTkzNzUgNC4yNSAtMy4xNzE4NzUgNC41MTU2MjUgLTMuMTcxODc1IEMgNC43ODEyNSAtMy4xNzE4NzUgNS4wNjI1IC0zLjM5MDYyNSA1LjA2MjUgLTMuNzgxMjUgQyA1LjA2MjUgLTQuMDc4MTI1IDQuODI4MTI1IC00LjQwNjI1IDQuMzkwNjI1IC00LjQwNjI1IEMgNC4xMDkzNzUgLTQuNDA2MjUgMy42NTYyNSAtNC4zMjgxMjUgMi45Mzc1IC0zLjUzMTI1IEMgMi41OTM3NSAtMy4xNTYyNSAyLjIwMzEyNSAtMi43NSAxLjgyODEyNSAtMi42MDkzNzUgTCAyLjg1OTM3NSAtNi44MTI1IEMgMi44NTkzNzUgLTYuODEyNSAyLjg1OTM3NSAtNi45MjE4NzUgMi43MzQzNzUgLTYuOTIxODc1IEMgMi41IC02LjkyMTg3NSAxLjc4MTI1IC02Ljg0Mzc1IDEuNTE1NjI1IC02LjgxMjUgQyAxLjQzNzUgLTYuODEyNSAxLjMyODEyNSAtNi43OTY4NzUgMS4zMjgxMjUgLTYuNjI1IEMgMS4zMjgxMjUgLTYuNSAxLjQyMTg3NSAtNi41IDEuNTYyNSAtNi41IEMgMi4wNDY4NzUgLTYuNSAyLjA2MjUgLTYuNDM3NSAyLjA2MjUgLTYuMzI4MTI1IEwgMi4wMzEyNSAtNi4xMjUgTCAwLjU5Mzc1IC0wLjM5MDYyNSBDIDAuNTQ2ODc1IC0wLjI1IDAuNTQ2ODc1IC0wLjIzNDM3NSAwLjU0Njg3NSAtMC4xNzE4NzUgQyAwLjU0Njg3NSAwLjA2MjUgMC43NSAwLjEwOTM3NSAwLjg0Mzc1IDAuMTA5Mzc1IEMgMC45Njg3NSAwLjEwOTM3NSAxLjEwOTM3NSAwLjAxNTYyNSAxLjE3MTg3NSAtMC4wOTM3NSBDIDEuMjE4NzUgLTAuMTg3NSAxLjY3MTg3NSAtMi4wMzEyNSAxLjczNDM3NSAtMi4yODEyNSBDIDIuMDc4MTI1IC0yLjI1IDIuODkwNjI1IC0yLjA5Mzc1IDIuODkwNjI1IC0xLjQzNzUgQyAyLjg5MDYyNSAtMS4zNTkzNzUgMi44OTA2MjUgLTEuMzI4MTI1IDIuODU5Mzc1IC0xLjIxODc1IEMgMi44NDM3NSAtMS4xMDkzNzUgMi44MjgxMjUgLTAuOTg0Mzc1IDIuODI4MTI1IC0wLjg3NSBDIDIuODI4MTI1IC0wLjI5Njg3NSAzLjIxODc1IDAuMTA5Mzc1IDMuNzM0Mzc1IDAuMTA5Mzc1IEMgNC4wMzEyNSAwLjEwOTM3NSA0LjMxMjUgLTAuMDQ2ODc1IDQuNTMxMjUgLTAuNDIxODc1IEMgNC43ODEyNSAtMC44NTkzNzUgNC44OTA2MjUgLTEuNDIxODc1IDQuODkwNjI1IC0xLjQyMTg3NSBaIE0gNC44OTA2MjUgLTEuNDIxODc1ICIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMS0wIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgxLTEiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDIuMDc4MTI1IC0zLjUxNTYyNSBDIDIuMDc4MTI1IC0zLjczNDM3NSAxLjg5MDYyNSAtMy44OTA2MjUgMS42NzE4NzUgLTMuODkwNjI1IEMgMS4zOTA2MjUgLTMuODkwNjI1IDEuMzI4MTI1IC0zLjY3MTg3NSAxLjI5Njg3NSAtMy41NzgxMjUgTCAwLjM3NSAtMC41NjI1IEwgMC4zMjgxMjUgLTAuNDM3NSBDIDAuMzI4MTI1IC0wLjM1OTM3NSAwLjU0Njg3NSAtMC4yODEyNSAwLjYwOTM3NSAtMC4yODEyNSBDIDAuNjU2MjUgLTAuMjgxMjUgMC42ODc1IC0wLjMyODEyNSAwLjcwMzEyNSAtMC4zOTA2MjUgTCAyLjAzMTI1IC0zLjI5Njg3NSBDIDIuMDYyNSAtMy4zNTkzNzUgMi4wNzgxMjUgLTMuNDIxODc1IDIuMDc4MTI1IC0zLjUxNTYyNSBaIE0gMi4wNzgxMjUgLTMuNTE1NjI1ICIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMi0wIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgyLTEiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDQuNDUzMTI1IC0yLjgxMjUgQyA0LjQ1MzEyNSAtMyA0LjI2NTYyNSAtMyA0LjE0MDYyNSAtMyBMIDIuMzU5Mzc1IC0zIEMgMS4yNSAtMyAwLjQwNjI1IC0xLjkwNjI1IDAuNDA2MjUgLTEuMDYyNSBDIDAuNDA2MjUgLTAuNDIxODc1IDAuODkwNjI1IDAuMDYyNSAxLjYwOTM3NSAwLjA2MjUgQyAyLjQ4NDM3NSAwLjA2MjUgMy40ODQzNzUgLTAuNzE4NzUgMy40ODQzNzUgLTEuNzk2ODc1IEMgMy40ODQzNzUgLTEuOTA2MjUgMy40ODQzNzUgLTIuMjE4NzUgMy4yODEyNSAtMi41MzEyNSBMIDQuMDc4MTI1IC0yLjUzMTI1IEMgNC4xODc1IC0yLjUzMTI1IDQuMjY1NjI1IC0yLjUzMTI1IDQuMzI4MTI1IC0yLjU3ODEyNSBDIDQuNDIxODc1IC0yLjY1NjI1IDQuNDUzMTI1IC0yLjc2NTYyNSA0LjQ1MzEyNSAtMi44MTI1IFogTSAyLjk2ODc1IC0xLjg3NSBDIDIuOTY4NzUgLTEuNzM0Mzc1IDIuOTA2MjUgLTEuMTA5Mzc1IDIuNTYyNSAtMC42NDA2MjUgQyAyLjI2NTYyNSAtMC4yNjU2MjUgMS44NzUgLTAuMTI1IDEuNjA5Mzc1IC0wLjEyNSBDIDEuMjM0Mzc1IC0wLjEyNSAwLjkyMTg3NSAtMC4zNzUgMC45MjE4NzUgLTAuODc1IEMgMC45MjE4NzUgLTEuMDc4MTI1IDEuMDQ2ODc1IC0yLjUzMTI1IDIuMjUgLTIuNTMxMjUgQyAyLjU5Mzc1IC0yLjUzMTI1IDIuOTY4NzUgLTIuMzkwNjI1IDIuOTY4NzUgLTEuODc1IFogTSAyLjk2ODc1IC0xLjg3NSAiLz4KPC9zeW1ib2w+CjwvZz4KPGNsaXBQYXRoIGlkPSJjbGlwMSI+CiAgPHBhdGggZD0iTSA2IDAgTCA3MyAwIEwgNzMgNjYuMzUxNTYyIEwgNiA2Ni4zNTE1NjIgWiBNIDYgMCAiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMiI+CiAgPHBhdGggZD0iTSAxNyAwIEwgNjIgMCBMIDYyIDY2LjM1MTU2MiBMIDE3IDY2LjM1MTU2MiBaIE0gMTcgMCAiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8ZyBpZD0ic3VyZmFjZTEiPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTEiIHg9IjQuMjg5IiB5PSIxMS4xMzYiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTEiIHg9IjY3Ljk1NyIgeT0iMTEuMTM2Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMS0xIiB4PSI3NC43MzciIHk9IjcuNTIiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTIiIHg9IjQuOTI5IiB5PSI2MS4yMTIiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTIiIHg9IjY3LjQ2OSIgeT0iNjEuMjEyIi8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMi0xIiB4PSI3Mi42NTUiIHk9IjYyLjcwNiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTI0LjE2MjgxMyAyNC41MzE0NjkgTCAyMS45MTUzMTIgMjQuNTMxNDY5ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDEuMTU1LDMzLjE3NikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gMC4wMDAzMTI1IDEuOTUzMjY0IEMgMC42ODM5MDYgMS45NTMyNjQgMS4yMzQ2ODggMS41MTU3NjQgMS4yMzQ2ODggMC45NzY3MDEgQyAxLjIzNDY4OCAwLjQzNzYzOSAwLjY4MzkwNiAwLjAwMDEzODc1IDAuMDAwMzEyNSAwLjAwMDEzODc1ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTEsMCwwLC0xLDE2Ljk5MjUsOC42NDQ2NykiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcwMzExIDIuMzkwNzY0IEMgLTEuNjk1MzExIDAuOTU3MTcgLTAuODUxNTYxIDAuMjc3NDgyIDAuMDAwMDAxMjUgMC4wMDAxMzg3NSBDIC0wLjg1MTU2MSAtMC4yNzcyMDUgLTEuNjk1MzExIC0wLjk1Njg5MyAtMi4wNzAzMTEgLTIuMzkwNDg2ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNjMuMjY5NTMsOC42NDQ2NykiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMjQuODAzNDM4IC0yNS41NDY2NTYgTCAyMS40MjcwMzEgLTI1LjU0NjY1NiAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQxLjE1NSwzMy4xNzYpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAwOTY3NSAxLjk1MTg0OSBDIDAuNjgwNjU1IDEuOTUxODQ5IDEuMjM1MzQzIDEuNTE0MzQ5IDEuMjM1MzQzIDAuOTc1Mjg2IEMgMS4yMzUzNDMgMC40MzYyMjQgMC42ODA2NTUgLTAuMDAxMjc2MjUgMC4wMDA5Njc1IC0wLjAwMTI3NjI1ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTEsMCwwLC0xLDE2LjM1MjUzLDU4LjcyMTM4KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzA0MjMgMi4zODkzNDkgQyAtMS42OTU0MjMgMC45NTU3NTUgLTAuODUxNjczIDAuMjc5OTc0IC0wLjAwMDExIC0wLjAwMTI3NjI1IEMgLTAuODUxNjczIC0wLjI3ODYyIC0xLjY5NTQyMyAtMC45NTQ0MDEgLTIuMDcwNDIzIC0yLjM5MTkwMSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDYyLjc4MTM2LDU4LjcyMTM4KSIvPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgyLTEiIHg9IjM2LjUxNiIgeT0iNTYuMzc3Ii8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMzMuNDc1MzEzIC0xNS44MzU3MTkgTCAtMzMuNDc1MzEzIDE3Ljc5NzA5NCAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQxLjE1NSwzMy4xNzYpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0wLjAwMTkzMTI1IDEuOTUyNTQ4IEMgMC42ODE2NjMgMS45NTI1NDggMS4yMzYzNSAxLjUxNTA0OCAxLjIzNjM1IDAuOTc1OTg1IEMgMS4yMzYzNSAwLjQzNjkyMyAwLjY4MTY2MyAtMC4wMDA1Nzc1IC0wLjAwMTkzMTI1IC0wLjAwMDU3NzUgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLDEsLTEsMCw3LjY3OTExLDQ5LjAxMzY1KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzQwMDYgMi4zOTAwNDggQyAtMS42OTUxIDAuOTU2NDU0IC0wLjg1MTM1IDAuMjgwNjczIDAuMDAwMjEyNSAtMC4wMDA1Nzc1IEMgLTAuODUxMzUgLTAuMjc3OTIxIC0xLjY5NTEgLTAuOTU3NjA5IC0yLjA3NDAwNiAtMi4zOTEyMDIgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLC0xLC0xLDAsNy42NzkxMSwxNS4xNzk5KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDMxLjU5MTA5NCAtMTUuODM1NzE5IEwgMzEuNTkxMDk0IDE3Ljc5NzA5NCAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQxLjE1NSwzMy4xNzYpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0wLjAwMTkxMTI1IDEuOTUyMTkxIEMgMC42ODE2ODMgMS45NTIxOTEgMS4yMzYzNyAxLjUxNDY5MSAxLjIzNjM3IDAuOTc1NjI5IEMgMS4yMzYzNyAwLjQzNjU2NiAwLjY4MTY4MyAtMC4wMDA5MzM3NSAtMC4wMDE5MTEyNSAtMC4wMDA5MzM3NSAiIHRyYW5zZm9ybT0ibWF0cml4KDAsMSwtMSwwLDcyLjc0NTE2LDQ5LjAxMzYzKSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzQwMDYgMi4zODk2OTEgQyAtMS42OTUxIDAuOTU2MDk3IC0wLjg1MTM1IDAuMjgwMzE2IDAuMDAwMjEyNSAtMC4wMDA5MzM3NSBDIC0wLjg1MTM1IC0wLjI3ODI3OCAtMS42OTUxIC0wLjk1Nzk2NSAtMi4wNzQwMDYgLTIuMzkxNTU5ICIgdHJhbnNmb3JtPSJtYXRyaXgoMCwtMSwtMSwwLDcyLjc0NTE2LDE1LjE3OTkpIi8+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMSkiIGNsaXAtcnVsZT0ibm9uemVybyI+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjIuMzI4NzI7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDk2NDA2IC0xNS44ODI1OTQgTCAtMS43NzYwOTQgMTIuNjc5OTA2ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDEuMTU1LDMzLjE3NikiLz4KPC9nPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDIpIiBjbGlwLXJ1bGU9Im5vbnplcm8iPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDoxLjUzMTc0O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMTAwJSwxMDAlLDEwMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0yLjA5NjQwNiAtMTUuODgyNTk0IEwgLTEuNzc2MDk0IDEyLjY3OTkwNiAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQxLjE1NSwzMy4xNzYpIi8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTEuMjkyMDM0IDIuNTU3MDQ0IEMgLTAuNjY3MzY4IDEuMjA0NTY3IDEuMDIxNjA5IDAuMDQ3Njg4MSAxLjk4NzA4NyAtMC4wMDAwMzkxNTgyIEMgMS4wMjI3MDkgLTAuMDQ5OTY1NSAtMC42Njc1NyAtMS4yMDU4MzIgLTEuMjkzMDQ2IC0yLjU1Njc2ICIgdHJhbnNmb3JtPSJtYXRyaXgoMC4wMTEyNiwtMC45OTk5LC0wLjk5OTksLTAuMDExMjYsMzkuMzc5OTMsMjAuNDk0NykiLz4KPC9nPgo8L3N2Zz4K"></p></p>
+<blockquote>
+<p><a href="https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==">Link to Diagram</a></p>
+</blockquote>
+<p>Most often, we’ll take <span class="math inline">\(\sigma: k\to k\)</span> to be the identity.</p>
+</div>
+<div class="definition proofenv" title="Perfect Fields">
+<p>The following are equivalent:</p>
+<ul>
+<li><p><span class="math inline">\(k\)</span> is a <strong>perfect</strong> field.</p></li>
+<li><p>Every finite extension <span class="math inline">\(F/k\)</span> is separable.</p></li>
+<li><p>If <span class="math inline">\(\operatorname{ch}k &gt; 0\)</span>, the Frobenius is an automorphism of <span class="math inline">\(k\)</span>.</p></li>
+<li><p>Every irreducible polynomial <span class="math inline">\(p\in k[x]\)</span> is separable</p></li>
+</ul>
+</div>
+<div class="proposition proofenv" title="Irreducible implies separable for perfect fields">
+
+</div>
+<div class="definition proofenv" title="Numerical Invariants">
+<ul>
+<li>
+<span class="math display">
+\begin{align*}
+[L: K] = \dim_{{\mathsf{Vect}}_K} L
+,\end{align*}
+<span> the dimension of <span class="math inline">\(L\)</span> as a <span class="math inline">\(K{\hbox{-}}\)</span>vector space</li>
+<li>
+<span class="math display">
+\begin{align*} \mathop{\mathrm{Aut}}(L/k) \mathrel{\vcenter{:}}=\left\{{ \sigma: L \to L&#39; {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \operatorname{id}_K }\right\} ,\end{align*}
+<span> the lifts of the identity on <span class="math inline">\(K\)</span>.</li>
+<li>
+<span class="math display">
+\begin{align*} \left\{{ L: K }\right\} \mathrel{\vcenter{:}}=\# \mathop{\mathrm{Aut}}(L/k) \mathrel{\vcenter{:}}=\left\{{ \sigma: L \to L&#39; {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \operatorname{id}_K}\right\} ,\end{align*}
+<span> the number of lifts of the identity on <span class="math inline">\(K\)</span>.</li>
+<li>
+<span class="math display">
+\begin{align*}
+\operatorname{Gal}(E/F) \mathrel{\vcenter{:}}=\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} } }
+,\end{align*}
+<span> if <span class="math inline">\(E\)</span> is finite, normal, and separable.</li>
+</ul>
+</div>
+<div class="remark proofenv" title="on general inequality">
+<p>Note that in general, 
+<span class="math display">
+\begin{align*}
+{\left\lvert { \mathop{\mathrm{Aut}}(L/k) } \right\rvert} \leq [L: K]
+,\end{align*}
+<span> with equality when <span class="math inline">\(L/k\)</span> is Galois.</p>
+</div>
+<h3 data-number="5.2.1" id="extensions"><span class="header-section-number">5.2.1</span> Extensions</h3>
+<div class="definition proofenv" title="Simple Extensions">
+<p>An extension <span class="math inline">\(L/k\)</span> is <strong>simple</strong> iff <span class="math inline">\(L = K( \alpha)\)</span> for some <span class="math inline">\(\alpha\in L\)</span>.</p>
+</div>
+<div class="definition proofenv" title="Primitive Extension">
+<p>For <span class="math inline">\(R\)</span> a UFD, a polynomial <span class="math inline">\(p\in R[x]\)</span> is <strong>primitive</strong> iff the greatest common divisors of its coefficients is a unit.</p>
+</div>
+<div class="definition proofenv" title="Algebraic Extension">
 <p>A field extension <span class="math inline">\(L/k\)</span> is <strong>algebraic</strong> iff every <span class="math inline">\(\alpha \in L\)</span> is the root of some polynomial <span class="math inline">\(f\in k[x]\)</span>.</p>
 </div>
-<div class="proposition proofenv" title="Normal Field Extension">
-<p>Let <span class="math inline">\(L/k\)</span> be a finite extension. Then TFAE:</p>
+<h2 data-number="5.3" id="extensions-1"><span class="header-section-number">5.3</span> Extensions</h2>
+<div class="definition proofenv" title="Distinguished Classes">
+<p>A collection of field extensions <span class="math inline">\(\mathcal{S}\)</span> is <strong>distinguished</strong> iff</p>
+<ol type="1">
+<li>For any tower <span class="math inline">\(L/K/k\)</span>, the extension <span class="math inline">\(L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}\)</span>, and</li>
+<li>Lifts of distinguished extensions are distinguished: if <span class="math inline">\(K/k\in \mathcal{S}\)</span> and <span class="math inline">\(L/k\)</span> is any extension, then <span class="math inline">\(LK/k \in \mathcal{S}\)</span>:</li>
+</ol>
+<p><p style="text-align:center;"> <img class="tikzcd" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTcyLjc4MXB0IiBoZWlnaHQ9IjExNC4xNDFwdCIgdmlld0JveD0iMCAwIDE3Mi43ODEgMTE0LjE0MSIgdmVyc2lvbj0iMS4xIj4KPGRlZnM+CjxnPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTAiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSIiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDAtMSI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gNi40MDYyNSAtMi40Njg3NSBDIDYuNDA2MjUgLTIuNSA2LjM3NSAtMi41NzgxMjUgNi4yOTY4NzUgLTIuNTc4MTI1IEMgNi4yMDMxMjUgLTIuNTc4MTI1IDYuMTg3NSAtMi41MTU2MjUgNi4xMjUgLTIuMzU5Mzc1IEMgNS43ODEyNSAtMS40NTMxMjUgNS4zNDM3NSAtMC4zMTI1IDMuNjI1IC0wLjMxMjUgTCAyLjY4NzUgLTAuMzEyNSBDIDIuNTQ2ODc1IC0wLjMxMjUgMi41MTU2MjUgLTAuMzEyNSAyLjQ2ODc1IC0wLjMxMjUgQyAyLjM1OTM3NSAtMC4zMjgxMjUgMi4zMjgxMjUgLTAuMzQzNzUgMi4zMjgxMjUgLTAuNDIxODc1IEMgMi4zMjgxMjUgLTAuNDUzMTI1IDIuMzI4MTI1IC0wLjQ2ODc1IDIuMzc1IC0wLjY0MDYyNSBMIDMuNzM0Mzc1IC02LjAzMTI1IEMgMy44MTI1IC02LjM5MDYyNSAzLjg0Mzc1IC02LjUgNC43ODEyNSAtNi41IEMgNS4wNzgxMjUgLTYuNSA1LjE1NjI1IC02LjUgNS4xNTYyNSAtNi42ODc1IEMgNS4xNTYyNSAtNi44MTI1IDUuMDQ2ODc1IC02LjgxMjUgNSAtNi44MTI1IEwgMy41MzEyNSAtNi43ODEyNSBMIDIuMjAzMTI1IC02LjgxMjUgQyAyLjE0MDYyNSAtNi44MTI1IDIuMDE1NjI1IC02LjgxMjUgMi4wMTU2MjUgLTYuNjA5Mzc1IEMgMi4wMTU2MjUgLTYuNSAyLjEwOTM3NSAtNi41IDIuMjk2ODc1IC02LjUgQyAyLjI5Njg3NSAtNi41IDIuNSAtNi41IDIuNjcxODc1IC02LjQ4NDM3NSBDIDIuODQzNzUgLTYuNDUzMTI1IDIuOTM3NSAtNi40NTMxMjUgMi45Mzc1IC02LjMxMjUgQyAyLjkzNzUgLTYuMjgxMjUgMi45Mzc1IC02LjI1IDIuOTA2MjUgLTYuMTI1IEwgMS41NjI1IC0wLjc4MTI1IEMgMS40Njg3NSAtMC4zOTA2MjUgMS40NTMxMjUgLTAuMzEyNSAwLjY1NjI1IC0wLjMxMjUgQyAwLjQ4NDM3NSAtMC4zMTI1IDAuMzkwNjI1IC0wLjMxMjUgMC4zOTA2MjUgLTAuMTA5Mzc1IEMgMC4zOTA2MjUgMCAwLjQ4NDM3NSAwIDAuNjU2MjUgMCBMIDUuMjgxMjUgMCBDIDUuNTE1NjI1IDAgNS41MTU2MjUgMCA1LjU3ODEyNSAtMC4xNzE4NzUgTCA2LjM3NSAtMi4zMjgxMjUgQyA2LjQwNjI1IC0yLjQzNzUgNi40MDYyNSAtMi40Njg3NSA2LjQwNjI1IC0yLjQ2ODc1IFogTSA2LjQwNjI1IC0yLjQ2ODc1ICIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0yIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iTSA3LjM3NSAtMC4yMDMxMjUgQyA3LjM3NSAtMC4zMTI1IDcuMjY1NjI1IC0wLjMxMjUgNy4xNzE4NzUgLTAuMzEyNSBDIDYuNzY1NjI1IC0wLjMxMjUgNi42NDA2MjUgLTAuNDA2MjUgNi40ODQzNzUgLTAuNzUgTCA1LjA3ODEyNSAtNC4wMzEyNSBDIDUuMDYyNSAtNC4wNjI1IDUuMDMxMjUgLTQuMTQwNjI1IDUuMDMxMjUgLTQuMTcxODc1IEMgNS4wMzEyNSAtNC4xNzE4NzUgNS4yMDMxMjUgLTQuMzEyNSA1LjMxMjUgLTQuMzkwNjI1IEwgNy4wNjI1IC01LjczNDM3NSBDIDggLTYuNDM3NSA4LjM5MDYyNSAtNi40Njg3NSA4LjY4NzUgLTYuNSBDIDguNzY1NjI1IC02LjUxNTYyNSA4Ljg1OTM3NSAtNi41MTU2MjUgOC44NTkzNzUgLTYuNzAzMTI1IEMgOC44NTkzNzUgLTYuNzM0Mzc1IDguODI4MTI1IC02LjgxMjUgOC43NSAtNi44MTI1IEMgOC41MzEyNSAtNi44MTI1IDguMjgxMjUgLTYuNzgxMjUgOC4wNDY4NzUgLTYuNzgxMjUgQyA3LjY4NzUgLTYuNzgxMjUgNy4yOTY4NzUgLTYuODEyNSA2LjkzNzUgLTYuODEyNSBDIDYuODc1IC02LjgxMjUgNi43NSAtNi44MTI1IDYuNzUgLTYuNjA5Mzc1IEMgNi43NSAtNi41NDY4NzUgNi43OTY4NzUgLTYuNTE1NjI1IDYuODc1IC02LjUgQyA3LjA5Mzc1IC02LjQ4NDM3NSA3LjE3MTg3NSAtNi40Mzc1IDcuMTcxODc1IC02LjI5Njg3NSBDIDcuMTcxODc1IC02LjEwOTM3NSA2Ljg3NSAtNS44NzUgNi44MTI1IC01LjgyODEyNSBMIDIuOTM3NSAtMi44NDM3NSBMIDMuNzM0Mzc1IC02LjA0Njg3NSBDIDMuODEyNSAtNi40MDYyNSAzLjg0Mzc1IC02LjUgNC41NjI1IC02LjUgQyA0LjgxMjUgLTYuNSA0LjkwNjI1IC02LjUgNC45MDYyNSAtNi43MDMxMjUgQyA0LjkwNjI1IC02Ljc4MTI1IDQuODI4MTI1IC02LjgxMjUgNC43NjU2MjUgLTYuODEyNSBMIDMuNDg0Mzc1IC02Ljc4MTI1IEwgMi4yMDMxMjUgLTYuODEyNSBDIDIuMTQwNjI1IC02LjgxMjUgMiAtNi44MTI1IDIgLTYuNjI1IEMgMiAtNi41IDIuMDkzNzUgLTYuNSAyLjI5Njg3NSAtNi41IEMgMi40MjE4NzUgLTYuNSAyLjYwOTM3NSAtNi40ODQzNzUgMi43MTg3NSAtNi40ODQzNzUgQyAyLjg3NSAtNi40NTMxMjUgMi45Mzc1IC02LjQzNzUgMi45Mzc1IC02LjMxMjUgQyAyLjkzNzUgLTYuMjgxMjUgMi45Mzc1IC02LjI1IDIuOTA2MjUgLTYuMTI1IEwgMS41NjI1IC0wLjc4MTI1IEMgMS40Njg3NSAtMC4zOTA2MjUgMS40NTMxMjUgLTAuMzEyNSAwLjY1NjI1IC0wLjMxMjUgQyAwLjQ4NDM3NSAtMC4zMTI1IDAuMzc1IC0wLjMxMjUgMC4zNzUgLTAuMTI1IEMgMC4zNzUgMCAwLjUgMCAwLjUzMTI1IDAgTCAxLjc5Njg3NSAtMC4wMzEyNSBMIDIuNDM3NSAtMC4wMTU2MjUgQyAyLjY1NjI1IC0wLjAxNTYyNSAyLjg3NSAwIDMuMDc4MTI1IDAgQyAzLjE1NjI1IDAgMy4yODEyNSAwIDMuMjgxMjUgLTAuMjAzMTI1IEMgMy4yODEyNSAtMC4zMTI1IDMuMTg3NSAtMC4zMTI1IDMgLTAuMzEyNSBDIDIuNjI1IC0wLjMxMjUgMi4zNTkzNzUgLTAuMzEyNSAyLjM1OTM3NSAtMC40ODQzNzUgQyAyLjM1OTM3NSAtMC41NjI1IDIuNDA2MjUgLTAuNzgxMjUgMi40Mzc1IC0wLjkyMTg3NSBMIDIuODQzNzUgLTIuNSBMIDQuMzI4MTI1IC0zLjY1NjI1IEwgNS40ODQzNzUgLTAuOTY4NzUgQyA1LjYwOTM3NSAtMC43MDMxMjUgNS42MDkzNzUgLTAuNjcxODc1IDUuNjA5Mzc1IC0wLjYyNSBDIDUuNjA5Mzc1IC0wLjMxMjUgNS4xNzE4NzUgLTAuMzEyNSA1LjA3ODEyNSAtMC4zMTI1IEMgNC45Njg3NSAtMC4zMTI1IDQuODU5Mzc1IC0wLjMxMjUgNC44NTkzNzUgLTAuMTA5Mzc1IEMgNC44NTkzNzUgMCA1IDAgNSAwIEMgNS40MDYyNSAwIDUuODI4MTI1IC0wLjAzMTI1IDYuMjE4NzUgLTAuMDMxMjUgQyA2LjQzNzUgLTAuMDMxMjUgNi45ODQzNzUgMCA3LjIwMzEyNSAwIEMgNy4yNSAwIDcuMzc1IDAgNy4zNzUgLTAuMjAzMTI1IFogTSA3LjM3NSAtMC4yMDMxMjUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTMiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDQuODkwNjI1IC0xLjQyMTg3NSBDIDQuODkwNjI1IC0xLjUzMTI1IDQuNzk2ODc1IC0xLjUzMTI1IDQuNzY1NjI1IC0xLjUzMTI1IEMgNC42NzE4NzUgLTEuNTMxMjUgNC42NTYyNSAtMS40ODQzNzUgNC42MjUgLTEuMzQzNzUgQyA0LjQyMTg3NSAtMC42MjUgNC4yMDMxMjUgLTAuMTA5Mzc1IDMuNzY1NjI1IC0wLjEwOTM3NSBDIDMuNTYyNSAtMC4xMDkzNzUgMy40Mzc1IC0wLjIxODc1IDMuNDM3NSAtMC41NzgxMjUgQyAzLjQzNzUgLTAuNzUgMy40ODQzNzUgLTAuOTg0Mzc1IDMuNTE1NjI1IC0xLjE0MDYyNSBDIDMuNTYyNSAtMS4zMTI1IDMuNTYyNSAtMS4zNDM3NSAzLjU2MjUgLTEuNDUzMTI1IEMgMy41NjI1IC0yLjA5Mzc1IDIuOTM3NSAtMi4zNzUgMi4wNzgxMjUgLTIuNSBDIDIuMzkwNjI1IC0yLjY3MTg3NSAyLjcxODc1IC0yLjk4NDM3NSAyLjkzNzUgLTMuMjM0Mzc1IEMgMy40MjE4NzUgLTMuNzY1NjI1IDMuODc1IC00LjE4NzUgNC4zNTkzNzUgLTQuMTg3NSBDIDQuNDIxODc1IC00LjE4NzUgNC40Mzc1IC00LjE4NzUgNC40NTMxMjUgLTQuMTcxODc1IEMgNC41NzgxMjUgLTQuMTU2MjUgNC41NzgxMjUgLTQuMTU2MjUgNC42NzE4NzUgLTQuMDkzNzUgQyA0LjY4NzUgLTQuMDkzNzUgNC42ODc1IC00LjA3ODEyNSA0LjcwMzEyNSAtNC4wNjI1IEMgNC4yMzQzNzUgLTQuMDMxMjUgNC4xNDA2MjUgLTMuNjQwNjI1IDQuMTQwNjI1IC0zLjUxNTYyNSBDIDQuMTQwNjI1IC0zLjM1OTM3NSA0LjI1IC0zLjE3MTg3NSA0LjUxNTYyNSAtMy4xNzE4NzUgQyA0Ljc4MTI1IC0zLjE3MTg3NSA1LjA2MjUgLTMuMzkwNjI1IDUuMDYyNSAtMy43ODEyNSBDIDUuMDYyNSAtNC4wNzgxMjUgNC44MjgxMjUgLTQuNDA2MjUgNC4zOTA2MjUgLTQuNDA2MjUgQyA0LjEwOTM3NSAtNC40MDYyNSAzLjY1NjI1IC00LjMyODEyNSAyLjkzNzUgLTMuNTMxMjUgQyAyLjU5Mzc1IC0zLjE1NjI1IDIuMjAzMTI1IC0yLjc1IDEuODI4MTI1IC0yLjYwOTM3NSBMIDIuODU5Mzc1IC02LjgxMjUgQyAyLjg1OTM3NSAtNi44MTI1IDIuODU5Mzc1IC02LjkyMTg3NSAyLjczNDM3NSAtNi45MjE4NzUgQyAyLjUgLTYuOTIxODc1IDEuNzgxMjUgLTYuODQzNzUgMS41MTU2MjUgLTYuODEyNSBDIDEuNDM3NSAtNi44MTI1IDEuMzI4MTI1IC02Ljc5Njg3NSAxLjMyODEyNSAtNi42MjUgQyAxLjMyODEyNSAtNi41IDEuNDIxODc1IC02LjUgMS41NjI1IC02LjUgQyAyLjA0Njg3NSAtNi41IDIuMDYyNSAtNi40Mzc1IDIuMDYyNSAtNi4zMjgxMjUgTCAyLjAzMTI1IC02LjEyNSBMIDAuNTkzNzUgLTAuMzkwNjI1IEMgMC41NDY4NzUgLTAuMjUgMC41NDY4NzUgLTAuMjM0Mzc1IDAuNTQ2ODc1IC0wLjE3MTg3NSBDIDAuNTQ2ODc1IDAuMDYyNSAwLjc1IDAuMTA5Mzc1IDAuODQzNzUgMC4xMDkzNzUgQyAwLjk2ODc1IDAuMTA5Mzc1IDEuMTA5Mzc1IDAuMDE1NjI1IDEuMTcxODc1IC0wLjA5Mzc1IEMgMS4yMTg3NSAtMC4xODc1IDEuNjcxODc1IC0yLjAzMTI1IDEuNzM0Mzc1IC0yLjI4MTI1IEMgMi4wNzgxMjUgLTIuMjUgMi44OTA2MjUgLTIuMDkzNzUgMi44OTA2MjUgLTEuNDM3NSBDIDIuODkwNjI1IC0xLjM1OTM3NSAyLjg5MDYyNSAtMS4zMjgxMjUgMi44NTkzNzUgLTEuMjE4NzUgQyAyLjg0Mzc1IC0xLjEwOTM3NSAyLjgyODEyNSAtMC45ODQzNzUgMi44MjgxMjUgLTAuODc1IEMgMi44MjgxMjUgLTAuMjk2ODc1IDMuMjE4NzUgMC4xMDkzNzUgMy43MzQzNzUgMC4xMDkzNzUgQyA0LjAzMTI1IDAuMTA5Mzc1IDQuMzEyNSAtMC4wNDY4NzUgNC41MzEyNSAtMC40MjE4NzUgQyA0Ljc4MTI1IC0wLjg1OTM3NSA0Ljg5MDYyNSAtMS40MjE4NzUgNC44OTA2MjUgLTEuNDIxODc1IFogTSA0Ljg5MDYyNSAtMS40MjE4NzUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgxLTAiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSIiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDEtMSI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gOS40MDYyNSAtMS41MzEyNSBDIDkuNDA2MjUgLTEuNzE4NzUgOS4yMTg3NSAtMS43MTg3NSA5LjA2MjUgLTEuNzE4NzUgTCAyLjkyMTg3NSAtMS43MTg3NSBDIDIuNzY1NjI1IC0xLjcxODc1IDIuNzM0Mzc1IC0xLjcxODc1IDIuNjA5Mzc1IC0xLjgyODEyNSBDIDIuMTQwNjI1IC0yLjE3MTg3NSAxLjY3MTg3NSAtMi40MDYyNSAxLjQ2ODc1IC0yLjUgQyAxLjY4NzUgLTIuNTc4MTI1IDIuMTQwNjI1IC0yLjgxMjUgMi42MjUgLTMuMTU2MjUgQyAyLjczNDM3NSAtMy4yNjU2MjUgMi43NjU2MjUgLTMuMjY1NjI1IDIuOTIxODc1IC0zLjI2NTYyNSBMIDkuMDYyNSAtMy4yNjU2MjUgQyA5LjIxODc1IC0zLjI2NTYyNSA5LjQwNjI1IC0zLjI2NTYyNSA5LjQwNjI1IC0zLjQ1MzEyNSBDIDkuNDA2MjUgLTMuNjU2MjUgOS4yMTg3NSAtMy42NTYyNSA5LjA3ODEyNSAtMy42NTYyNSBMIDMuMTg3NSAtMy42NTYyNSBDIDQgLTQuNTMxMjUgNC4xODc1IC01LjA3ODEyNSA0LjE4NzUgLTUuMTA5Mzc1IEMgNC4xODc1IC01LjIzNDM3NSA0LjA3ODEyNSAtNS4yMzQzNzUgMy45ODQzNzUgLTUuMjM0Mzc1IEMgMy44NDM3NSAtNS4yMzQzNzUgMy44NDM3NSAtNS4yMTg3NSAzLjczNDM3NSAtNS4wNDY4NzUgQyAzLjIzNDM3NSAtNC4wNzgxMjUgMi4zMTI1IC0zLjA3ODEyNSAwLjczNDM3NSAtMi42MjUgQyAwLjYyNSAtMi41OTM3NSAwLjU2MjUgLTIuNTc4MTI1IDAuNTYyNSAtMi41IEMgMC41NjI1IC0yLjQwNjI1IDAuNjI1IC0yLjM5MDYyNSAwLjczNDM3NSAtMi4zNTkzNzUgQyAyLjMyODEyNSAtMS45MDYyNSAzLjIxODc1IC0wLjkwNjI1IDMuNzAzMTI1IDAgQyAzLjgxMjUgMC4xODc1IDMuODEyNSAwLjIwMzEyNSAzLjg0Mzc1IDAuMjE4NzUgQyAzLjg3NSAwLjI1IDMuOTIxODc1IDAuMjUgMy45ODQzNzUgMC4yNSBDIDQuMDc4MTI1IDAuMjUgNC4xODc1IDAuMjUgNC4xODc1IDAuMTI1IEMgNC4xODc1IDAuMTI1IDQgLTAuNDM3NSAzLjE4NzUgLTEuMzI4MTI1IEwgOS4wNzgxMjUgLTEuMzI4MTI1IEMgOS4yMTg3NSAtMS4zMjgxMjUgOS40MDYyNSAtMS4zMjgxMjUgOS40MDYyNSAtMS41MzEyNSBaIE0gOS40MDYyNSAtMS41MzEyNSAiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDEtMiI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gOS4zOTA2MjUgLTIuNSBDIDkuMzkwNjI1IC0yLjU3ODEyNSA5LjM0Mzc1IC0yLjU5Mzc1IDkuMjM0Mzc1IC0yLjYyNSBDIDcuNjQwNjI1IC0zLjA3ODEyNSA2LjczNDM3NSAtNC4wNzgxMjUgNi4yNSAtNC45ODQzNzUgQyA2LjE0MDYyNSAtNS4xNzE4NzUgNi4xNDA2MjUgLTUuMTg3NSA2LjEyNSAtNS4yMDMxMjUgQyA2LjA3ODEyNSAtNS4yMzQzNzUgNi4wMzEyNSAtNS4yMzQzNzUgNS45Njg3NSAtNS4yMzQzNzUgQyA1Ljg3NSAtNS4yMzQzNzUgNS43NjU2MjUgLTUuMjM0Mzc1IDUuNzY1NjI1IC01LjEwOTM3NSBDIDUuNzY1NjI1IC01LjEwOTM3NSA1Ljk2ODc1IC00LjU0Njg3NSA2Ljc2NTYyNSAtMy42NTYyNSBMIDAuODkwNjI1IC0zLjY1NjI1IEMgMC43NSAtMy42NTYyNSAwLjU2MjUgLTMuNjU2MjUgMC41NjI1IC0zLjQ1MzEyNSBDIDAuNTYyNSAtMy4yNjU2MjUgMC43NSAtMy4yNjU2MjUgMC44OTA2MjUgLTMuMjY1NjI1IEwgNy4wMzEyNSAtMy4yNjU2MjUgQyA3LjIwMzEyNSAtMy4yNjU2MjUgNy4yMTg3NSAtMy4yNjU2MjUgNy4zNDM3NSAtMy4xNTYyNSBDIDcuODEyNSAtMi44MTI1IDguMjgxMjUgLTIuNTc4MTI1IDguNDg0Mzc1IC0yLjUgQyA4LjI4MTI1IC0yLjQwNjI1IDcuODEyNSAtMi4xNzE4NzUgNy4zNDM3NSAtMS44MjgxMjUgQyA3LjIxODc1IC0xLjcxODc1IDcuMjAzMTI1IC0xLjcxODc1IDcuMDMxMjUgLTEuNzE4NzUgTCAwLjg5MDYyNSAtMS43MTg3NSBDIDAuNzUgLTEuNzE4NzUgMC41NjI1IC0xLjcxODc1IDAuNTYyNSAtMS41MzEyNSBDIDAuNTYyNSAtMS4zMjgxMjUgMC43NSAtMS4zMjgxMjUgMC44OTA2MjUgLTEuMzI4MTI1IEwgNi43NjU2MjUgLTEuMzI4MTI1IEMgNS45Njg3NSAtMC40NTMxMjUgNS43NjU2MjUgMC4wOTM3NSA1Ljc2NTYyNSAwLjEyNSBDIDUuNzY1NjI1IDAuMjUgNS44NzUgMC4yNSA1Ljk2ODc1IDAuMjUgQyA2LjEyNSAwLjI1IDYuMTI1IDAuMjM0Mzc1IDYuMjE4NzUgMC4wNjI1IEMgNi43MzQzNzUgLTAuOTA2MjUgNy42NDA2MjUgLTEuOTA2MjUgOS4yMTg3NSAtMi4zNTkzNzUgQyA5LjM0Mzc1IC0yLjM5MDYyNSA5LjM5MDYyNSAtMi40MDYyNSA5LjM5MDYyNSAtMi41IFogTSA5LjM5MDYyNSAtMi41ICIvPgo8L3N5bWJvbD4KPC9nPgo8Y2xpcFBhdGggaWQ9ImNsaXAxIj4KICA8cGF0aCBkPSJNIDE1NSA1OCBMIDE3Mi43ODEyNSA1OCBMIDE3Mi43ODEyNSAxMDYgTCAxNTUgMTA2IFogTSAxNTUgNTggIi8+CjwvY2xpcFBhdGg+CjxjbGlwUGF0aCBpZD0iY2xpcDIiPgogIDxwYXRoIGQ9Ik0gMTU1IDggTCAxNzIuNzgxMjUgOCBMIDE3Mi43ODEyNSA1NSBMIDE1NSA1NSBaIE0gMTU1IDggIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPGcgaWQ9InN1cmZhY2UxIj4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0xIiB4PSI1LjQ4NiIgeT0iMTAuNDU0Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0xIiB4PSIxNTEuMjU5IiB5PSIxMC40NTQiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTIiIHg9IjQuMjg5IiB5PSI2MC40MTkiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgxLTEiIHg9IjcyLjYzIiB5PSI2MC40MTkiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgxLTIiIHg9IjgwLjkyODg0NiIgeT0iNjAuNDE5Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0yIiB4PSIxNTAuMDYyIiB5PSI2MC40MTkiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTMiIHg9IjYuMTI2IiB5PSIxMTAuNDk1Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0zIiB4PSIxNTEuODk4IiB5PSIxMTAuNDk1Ii8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtNzIuODg3IC00MS4yMjY4NzUgTCAtNzIuODg3IC03LjU5NDA2MiAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDgxLjc2Miw1Ny4wNykiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gMC4wMDAwMDUgMS45NTMwNzUgQyAwLjY4MzU5OSAxLjk1MzA3NSAxLjIzNDM4IDEuNTE1NTc1IDEuMjM0MzggMC45NzY1MTIgQyAxLjIzNDM4IDAuNDM3NDUgMC42ODM1OTkgLTAuMDAwMDUgMC4wMDAwMDUgLTAuMDAwMDUgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLDEsLTEsMCw4Ljg3NDk1LDk4LjI5Njg3KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzIwMjYgMi4zOTA1NzUgQyAtMS42OTMxMiAwLjk1Njk4MSAtMC44NDkzNyAwLjI3NzI5NCAtMC4wMDE3MTM3NSAtMC4wMDAwNSBDIC0wLjg0OTM3IC0wLjI3NzM5NCAtMS42OTMxMiAtMC45NTcwODEgLTIuMDcyMDI2IC0yLjM5MDY3NSAiIHRyYW5zZm9ybT0ibWF0cml4KDAsLTEsLTEsMCw4Ljg3NDk1LDY0LjQ2MzEzKSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC03Mi44ODcgOC43Mzc5NjkgTCAtNzIuODg3IDQyLjM3NDY4OCAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDgxLjc2Miw1Ny4wNykiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gMC4wMDExNzEyNSAxLjk1MzA3NSBDIDAuNjgwODU5IDEuOTUzMDc1IDEuMjM1NTQ2IDEuNTE1NTc1IDEuMjM1NTQ2IDAuOTc2NTEyIEMgMS4yMzU1NDYgMC40Mzc0NSAwLjY4MDg1OSAtMC4wMDAwNSAwLjAwMTE3MTI1IC0wLjAwMDA1ICIgdHJhbnNmb3JtPSJtYXRyaXgoMCwxLC0xLDAsOC44NzQ5NSw0OC4zMzA4NikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDczMTkyIDIuMzkwNTc1IEMgLTEuNjk0Mjg2IDAuOTU2OTgxIC0wLjg1MDUzNiAwLjI3NzI5NCAwLjAwMTAyNjI1IC0wLjAwMDA1IEMgLTAuODUwNTM2IC0wLjI3NzM5NCAtMS42OTQyODYgLTAuOTU3MDgxIC0yLjA3MzE5MiAtMi4zOTA2NzUgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLC0xLC0xLDAsOC44NzQ5NSwxNC40OTcxMikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSA3Mi44ODY0MzcgLTQxLjIyNjg3NSBMIDcyLjg4NjQzNyAtNy41OTQwNjIgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw4MS43NjIsNTcuMDcpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAwMDA1IDEuOTUzNzM3IEMgMC42ODM1OTkgMS45NTM3MzcgMS4yMzQzOCAxLjUxNjIzNyAxLjIzNDM4IDAuOTc3MTc1IEMgMS4yMzQzOCAwLjQzODExMiAwLjY4MzU5OSAwLjAwMDYxMjUgMC4wMDAwMDUgMC4wMDA2MTI1ICIgdHJhbnNmb3JtPSJtYXRyaXgoMCwxLC0xLDAsMTU0LjY0OTA1LDk4LjI5Njg3KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzIwMjYgMi4zOTEyMzcgQyAtMS42OTMxMiAwLjk1NzY0NCAtMC44NDkzNyAwLjI3Nzk1NiAtMC4wMDE3MTM3NSAwLjAwMDYxMjUgQyAtMC44NDkzNyAtMC4yODA2MzggLTEuNjkzMTIgLTAuOTU2NDE5IC0yLjA3MjAyNiAtMi4zOTAwMTMgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLC0xLC0xLDAsMTU0LjY0OTA1LDY0LjQ2MzEzKSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDcyLjg4NjQzNyA4LjczNzk2OSBMIDcyLjg4NjQzNyA0Mi4zNzQ2ODggIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw4MS43NjIsNTcuMDcpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAxMTcxMjUgMS45NTM3MzcgQyAwLjY4MDg1OSAxLjk1MzczNyAxLjIzNTU0NiAxLjUxNjIzNyAxLjIzNTU0NiAwLjk3NzE3NSBDIDEuMjM1NTQ2IDAuNDM4MTEyIDAuNjgwODU5IDAuMDAwNjEyNSAwLjAwMTE3MTI1IDAuMDAwNjEyNSAiIHRyYW5zZm9ybT0ibWF0cml4KDAsMSwtMSwwLDE1NC42NDkwNSw0OC4zMzA4NikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDczMTkyIDIuMzkxMjM3IEMgLTEuNjk0Mjg2IDAuOTU3NjQ0IC0wLjg1MDUzNiAwLjI3Nzk1NiAwLjAwMTAyNjI1IDAuMDAwNjEyNSBDIC0wLjg1MDUzNiAtMC4yODA2MzggLTEuNjk0Mjg2IC0wLjk1NjQxOSAtMi4wNzMxOTIgLTIuMzkwMDEzICIgdHJhbnNmb3JtPSJtYXRyaXgoMCwtMSwtMSwwLDE1NC42NDkwNSwxNC40OTcxMikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6Mi43ODk0MSwxLjU5Mzk1O3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtNjcuOTk2Mzc1IC00MS4zODMxMjUgQyAtNTQuOTUzNDA2IC0xNS45MTgyODEgLTU0Ljk1MzQwNiAxNC4wOTM0MzggLTY5LjQ2MTIxOSA0Mi40MTc2NTYgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw4MS43NjIsNTcuMDcpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoODMuOTIxODE0JSwzNi4wNzc4ODElLDM2LjA3Nzg4MSUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAxMzQ0OTkgMS45NTExMDUgQyAwLjY4MjcyNSAxLjk1MzIyNCAxLjIzNTggMS41MTYzMjcgMS4yMzU3OTkgMC45NzY0ODEgQyAxLjIzNTc5OCAwLjQzNjYzNCAwLjY4Mjk3NyAtMC4wMDAwMDc3OTY4MyAtMC4wMDE4Nzk1OCAtMC4wMDAzNDYyNTkgIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC40NTU4NiwwLjg5MDAxLC0wLjg5MDAxLC0wLjQ1NTg2LDEzLjc2NDQ2LDk4LjQ1NDY0KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzM0MjEgMi4zOTAyNyBDIC0xLjY5MjQ2NSAwLjk1NzQ1OCAtMC44NDk5NDQgMC4yODAxNTcgLTAuMDAxODMxODMgLTAuMDAwNjA5NTIxIEMgLTAuODUwMTA0IC0wLjI3NzE2NCAtMS42OTM1MzYgLTAuOTU1NTk2IC0yLjA3MjU3OCAtMi4zODk3NzggIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC40NTU4NCwtMC44OTAwMSwtMC44OTAwMSwwLjQ1NTg0LDEyLjIwOTU2LDE0LjQ3NTIxKSIvPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDEpIiBjbGlwLXJ1bGU9Im5vbnplcm8iPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoODMuOTIxODE0JSwzNi4wNzc4ODElLDM2LjA3Nzg4MSUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheToyLjc4OTQxLDEuNTkzOTU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDgxLjE1MjA2MiAtNDIuODU5Njg3IEMgOTAuODIwMDMxIC0zMy40MDY1NjIgOTAuODIwMDMxIC0xOC4zODMxMjUgNzkuNjU1OTY5IC03LjQ3Mjk2OSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDgxLjc2Miw1Ny4wNykiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMC4wMDIxNDQ0OCAxLjk1MjA3NSBDIDAuNjgwMTk4IDEuOTUyNTk5IDEuMjMzMjQ2IDEuNTE1MzU3IDEuMjM1NDA0IDAuOTc2NjQ2IEMgMS4yMzQ3NjggMC40MzUyMDQgMC42ODI4MzYgLTAuMDAwNTE0ODk3IDAuMDAwNDkzODM0IC0wLjAwMTAzODEzICIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzE1MDYsMC42OTg5NywtMC42OTg5NywtMC43MTUwNiwxNjIuOTEzNjksOTkuOTI4NikiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDczOTk3IDIuMzkwODU0IEMgLTEuNjkyNjQ5IDAuOTU1NTQ0IC0wLjg0OTU4OCAwLjI3NzM3NiAwLjAwMDgyMjgxOCAtMC4wMDAzMjMyMzkgQyAtMC44NTA0NTYgLTAuMjgwNjI2IC0xLjY5MjQ1IC0wLjk1NjA2NCAtMi4wNzA3NjggLTIuMzkwOTU5ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzE1MTMsLTAuNjk4OTMsLTAuNjk4OTMsMC43MTUxMywxNjEuMjczOCw2NC40MDMxNSkiLz4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAyKSIgY2xpcC1ydWxlPSJub256ZXJvIj4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6Mi43ODk0MSwxLjU5Mzk1O3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSA4Mi4yODQ4NzUgOC4zMDQzNzUgQyA5MC44MjAwMzEgMTYuNjI4NTk0IDkwLjgyMDAzMSAzMS42MjA3ODEgNzkuNjY3Njg3IDQyLjQ5NTc4MSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDgxLjc2Miw1Ny4wNykiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMC4wMDA0Mzc3MDUgMS45NTA1MjIgQyAwLjY4MTg5IDEuOTUwMjAxIDEuMjM3MTgxIDEuNTE1MDEyIDEuMjMzMTQ4IDAuOTc2MzggQyAxLjIzNDYzOSAwLjQzNzY3OSAwLjY4MjE4MSAwLjAwMjY1Mjc4IC0wLjAwMDIxNjA0NSAtMC4wMDI1NTAyNCAiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcxNTk0LDAuNjk4MSwtMC42OTgxLC0wLjcxNTk0LDE2NC4wNDQ5NCw0OC43NjM5NSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcwNTcxIDIuMzkwMjc5IEMgLTEuNjkzNTg4IDAuOTU3MzQyIC0wLjg1MTMwNiAwLjI3ODIxOSAtMC4wMDEyMTY2OCAtMC4wMDA0NDYxMTYgQyAtMC44NTAwMTIgLTAuMjc3MDUxIC0xLjY5MjgzOCAtMC45NTcwNDkgLTIuMDcyNzg3IC0yLjM5MTUwMyAiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcxNTkzLC0wLjY5ODEyLC0wLjY5ODEyLDAuNzE1OTMsMTYxLjI4Nzg4LDE0LjQzNjk3KSIvPgo8L2c+Cjwvc3ZnPgo="></p></p>
+<blockquote>
+<p><a href="https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d">Link to Diagram</a></p>
+</blockquote>
+<p><p style="text-align:center;"> <img class="tikzcd" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTA1LjQ2NXB0IiBoZWlnaHQ9Ijc4LjI3NnB0IiB2aWV3Qm94PSIwIDAgMTA1LjQ2NSA3OC4yNzYiIHZlcnNpb249IjEuMSI+CjxkZWZzPgo8Zz4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0wIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTEiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDYuNDA2MjUgLTIuNDY4NzUgQyA2LjQwNjI1IC0yLjUgNi4zNzUgLTIuNTc4MTI1IDYuMjk2ODc1IC0yLjU3ODEyNSBDIDYuMjAzMTI1IC0yLjU3ODEyNSA2LjE4NzUgLTIuNTE1NjI1IDYuMTI1IC0yLjM1OTM3NSBDIDUuNzgxMjUgLTEuNDUzMTI1IDUuMzQzNzUgLTAuMzEyNSAzLjYyNSAtMC4zMTI1IEwgMi42ODc1IC0wLjMxMjUgQyAyLjU0Njg3NSAtMC4zMTI1IDIuNTE1NjI1IC0wLjMxMjUgMi40Njg3NSAtMC4zMTI1IEMgMi4zNTkzNzUgLTAuMzI4MTI1IDIuMzI4MTI1IC0wLjM0Mzc1IDIuMzI4MTI1IC0wLjQyMTg3NSBDIDIuMzI4MTI1IC0wLjQ1MzEyNSAyLjMyODEyNSAtMC40Njg3NSAyLjM3NSAtMC42NDA2MjUgTCAzLjczNDM3NSAtNi4wMzEyNSBDIDMuODEyNSAtNi4zOTA2MjUgMy44NDM3NSAtNi41IDQuNzgxMjUgLTYuNSBDIDUuMDc4MTI1IC02LjUgNS4xNTYyNSAtNi41IDUuMTU2MjUgLTYuNjg3NSBDIDUuMTU2MjUgLTYuODEyNSA1LjA0Njg3NSAtNi44MTI1IDUgLTYuODEyNSBMIDMuNTMxMjUgLTYuNzgxMjUgTCAyLjIwMzEyNSAtNi44MTI1IEMgMi4xNDA2MjUgLTYuODEyNSAyLjAxNTYyNSAtNi44MTI1IDIuMDE1NjI1IC02LjYwOTM3NSBDIDIuMDE1NjI1IC02LjUgMi4xMDkzNzUgLTYuNSAyLjI5Njg3NSAtNi41IEMgMi4yOTY4NzUgLTYuNSAyLjUgLTYuNSAyLjY3MTg3NSAtNi40ODQzNzUgQyAyLjg0Mzc1IC02LjQ1MzEyNSAyLjkzNzUgLTYuNDUzMTI1IDIuOTM3NSAtNi4zMTI1IEMgMi45Mzc1IC02LjI4MTI1IDIuOTM3NSAtNi4yNSAyLjkwNjI1IC02LjEyNSBMIDEuNTYyNSAtMC43ODEyNSBDIDEuNDY4NzUgLTAuMzkwNjI1IDEuNDUzMTI1IC0wLjMxMjUgMC42NTYyNSAtMC4zMTI1IEMgMC40ODQzNzUgLTAuMzEyNSAwLjM5MDYyNSAtMC4zMTI1IDAuMzkwNjI1IC0wLjEwOTM3NSBDIDAuMzkwNjI1IDAgMC40ODQzNzUgMCAwLjY1NjI1IDAgTCA1LjI4MTI1IDAgQyA1LjUxNTYyNSAwIDUuNTE1NjI1IDAgNS41NzgxMjUgLTAuMTcxODc1IEwgNi4zNzUgLTIuMzI4MTI1IEMgNi40MDYyNSAtMi40Mzc1IDYuNDA2MjUgLTIuNDY4NzUgNi40MDYyNSAtMi40Njg3NSBaIE0gNi40MDYyNSAtMi40Njg3NSAiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDAtMiI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gNy4zNzUgLTAuMjAzMTI1IEMgNy4zNzUgLTAuMzEyNSA3LjI2NTYyNSAtMC4zMTI1IDcuMTcxODc1IC0wLjMxMjUgQyA2Ljc2NTYyNSAtMC4zMTI1IDYuNjQwNjI1IC0wLjQwNjI1IDYuNDg0Mzc1IC0wLjc1IEwgNS4wNzgxMjUgLTQuMDMxMjUgQyA1LjA2MjUgLTQuMDYyNSA1LjAzMTI1IC00LjE0MDYyNSA1LjAzMTI1IC00LjE3MTg3NSBDIDUuMDMxMjUgLTQuMTcxODc1IDUuMjAzMTI1IC00LjMxMjUgNS4zMTI1IC00LjM5MDYyNSBMIDcuMDYyNSAtNS43MzQzNzUgQyA4IC02LjQzNzUgOC4zOTA2MjUgLTYuNDY4NzUgOC42ODc1IC02LjUgQyA4Ljc2NTYyNSAtNi41MTU2MjUgOC44NTkzNzUgLTYuNTE1NjI1IDguODU5Mzc1IC02LjcwMzEyNSBDIDguODU5Mzc1IC02LjczNDM3NSA4LjgyODEyNSAtNi44MTI1IDguNzUgLTYuODEyNSBDIDguNTMxMjUgLTYuODEyNSA4LjI4MTI1IC02Ljc4MTI1IDguMDQ2ODc1IC02Ljc4MTI1IEMgNy42ODc1IC02Ljc4MTI1IDcuMjk2ODc1IC02LjgxMjUgNi45Mzc1IC02LjgxMjUgQyA2Ljg3NSAtNi44MTI1IDYuNzUgLTYuODEyNSA2Ljc1IC02LjYwOTM3NSBDIDYuNzUgLTYuNTQ2ODc1IDYuNzk2ODc1IC02LjUxNTYyNSA2Ljg3NSAtNi41IEMgNy4wOTM3NSAtNi40ODQzNzUgNy4xNzE4NzUgLTYuNDM3NSA3LjE3MTg3NSAtNi4yOTY4NzUgQyA3LjE3MTg3NSAtNi4xMDkzNzUgNi44NzUgLTUuODc1IDYuODEyNSAtNS44MjgxMjUgTCAyLjkzNzUgLTIuODQzNzUgTCAzLjczNDM3NSAtNi4wNDY4NzUgQyAzLjgxMjUgLTYuNDA2MjUgMy44NDM3NSAtNi41IDQuNTYyNSAtNi41IEMgNC44MTI1IC02LjUgNC45MDYyNSAtNi41IDQuOTA2MjUgLTYuNzAzMTI1IEMgNC45MDYyNSAtNi43ODEyNSA0LjgyODEyNSAtNi44MTI1IDQuNzY1NjI1IC02LjgxMjUgTCAzLjQ4NDM3NSAtNi43ODEyNSBMIDIuMjAzMTI1IC02LjgxMjUgQyAyLjE0MDYyNSAtNi44MTI1IDIgLTYuODEyNSAyIC02LjYyNSBDIDIgLTYuNSAyLjA5Mzc1IC02LjUgMi4yOTY4NzUgLTYuNSBDIDIuNDIxODc1IC02LjUgMi42MDkzNzUgLTYuNDg0Mzc1IDIuNzE4NzUgLTYuNDg0Mzc1IEMgMi44NzUgLTYuNDUzMTI1IDIuOTM3NSAtNi40Mzc1IDIuOTM3NSAtNi4zMTI1IEMgMi45Mzc1IC02LjI4MTI1IDIuOTM3NSAtNi4yNSAyLjkwNjI1IC02LjEyNSBMIDEuNTYyNSAtMC43ODEyNSBDIDEuNDY4NzUgLTAuMzkwNjI1IDEuNDUzMTI1IC0wLjMxMjUgMC42NTYyNSAtMC4zMTI1IEMgMC40ODQzNzUgLTAuMzEyNSAwLjM3NSAtMC4zMTI1IDAuMzc1IC0wLjEyNSBDIDAuMzc1IDAgMC41IDAgMC41MzEyNSAwIEwgMS43OTY4NzUgLTAuMDMxMjUgTCAyLjQzNzUgLTAuMDE1NjI1IEMgMi42NTYyNSAtMC4wMTU2MjUgMi44NzUgMCAzLjA3ODEyNSAwIEMgMy4xNTYyNSAwIDMuMjgxMjUgMCAzLjI4MTI1IC0wLjIwMzEyNSBDIDMuMjgxMjUgLTAuMzEyNSAzLjE4NzUgLTAuMzEyNSAzIC0wLjMxMjUgQyAyLjYyNSAtMC4zMTI1IDIuMzU5Mzc1IC0wLjMxMjUgMi4zNTkzNzUgLTAuNDg0Mzc1IEMgMi4zNTkzNzUgLTAuNTYyNSAyLjQwNjI1IC0wLjc4MTI1IDIuNDM3NSAtMC45MjE4NzUgTCAyLjg0Mzc1IC0yLjUgTCA0LjMyODEyNSAtMy42NTYyNSBMIDUuNDg0Mzc1IC0wLjk2ODc1IEMgNS42MDkzNzUgLTAuNzAzMTI1IDUuNjA5Mzc1IC0wLjY3MTg3NSA1LjYwOTM3NSAtMC42MjUgQyA1LjYwOTM3NSAtMC4zMTI1IDUuMTcxODc1IC0wLjMxMjUgNS4wNzgxMjUgLTAuMzEyNSBDIDQuOTY4NzUgLTAuMzEyNSA0Ljg1OTM3NSAtMC4zMTI1IDQuODU5Mzc1IC0wLjEwOTM3NSBDIDQuODU5Mzc1IDAgNSAwIDUgMCBDIDUuNDA2MjUgMCA1LjgyODEyNSAtMC4wMzEyNSA2LjIxODc1IC0wLjAzMTI1IEMgNi40Mzc1IC0wLjAzMTI1IDYuOTg0Mzc1IDAgNy4yMDMxMjUgMCBDIDcuMjUgMCA3LjM3NSAwIDcuMzc1IC0wLjIwMzEyNSBaIE0gNy4zNzUgLTAuMjAzMTI1ICIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0zIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iTSA0Ljg5MDYyNSAtMS40MjE4NzUgQyA0Ljg5MDYyNSAtMS41MzEyNSA0Ljc5Njg3NSAtMS41MzEyNSA0Ljc2NTYyNSAtMS41MzEyNSBDIDQuNjcxODc1IC0xLjUzMTI1IDQuNjU2MjUgLTEuNDg0Mzc1IDQuNjI1IC0xLjM0Mzc1IEMgNC40MjE4NzUgLTAuNjI1IDQuMjAzMTI1IC0wLjEwOTM3NSAzLjc2NTYyNSAtMC4xMDkzNzUgQyAzLjU2MjUgLTAuMTA5Mzc1IDMuNDM3NSAtMC4yMTg3NSAzLjQzNzUgLTAuNTc4MTI1IEMgMy40Mzc1IC0wLjc1IDMuNDg0Mzc1IC0wLjk4NDM3NSAzLjUxNTYyNSAtMS4xNDA2MjUgQyAzLjU2MjUgLTEuMzEyNSAzLjU2MjUgLTEuMzQzNzUgMy41NjI1IC0xLjQ1MzEyNSBDIDMuNTYyNSAtMi4wOTM3NSAyLjkzNzUgLTIuMzc1IDIuMDc4MTI1IC0yLjUgQyAyLjM5MDYyNSAtMi42NzE4NzUgMi43MTg3NSAtMi45ODQzNzUgMi45Mzc1IC0zLjIzNDM3NSBDIDMuNDIxODc1IC0zLjc2NTYyNSAzLjg3NSAtNC4xODc1IDQuMzU5Mzc1IC00LjE4NzUgQyA0LjQyMTg3NSAtNC4xODc1IDQuNDM3NSAtNC4xODc1IDQuNDUzMTI1IC00LjE3MTg3NSBDIDQuNTc4MTI1IC00LjE1NjI1IDQuNTc4MTI1IC00LjE1NjI1IDQuNjcxODc1IC00LjA5Mzc1IEMgNC42ODc1IC00LjA5Mzc1IDQuNjg3NSAtNC4wNzgxMjUgNC43MDMxMjUgLTQuMDYyNSBDIDQuMjM0Mzc1IC00LjAzMTI1IDQuMTQwNjI1IC0zLjY0MDYyNSA0LjE0MDYyNSAtMy41MTU2MjUgQyA0LjE0MDYyNSAtMy4zNTkzNzUgNC4yNSAtMy4xNzE4NzUgNC41MTU2MjUgLTMuMTcxODc1IEMgNC43ODEyNSAtMy4xNzE4NzUgNS4wNjI1IC0zLjM5MDYyNSA1LjA2MjUgLTMuNzgxMjUgQyA1LjA2MjUgLTQuMDc4MTI1IDQuODI4MTI1IC00LjQwNjI1IDQuMzkwNjI1IC00LjQwNjI1IEMgNC4xMDkzNzUgLTQuNDA2MjUgMy42NTYyNSAtNC4zMjgxMjUgMi45Mzc1IC0zLjUzMTI1IEMgMi41OTM3NSAtMy4xNTYyNSAyLjIwMzEyNSAtMi43NSAxLjgyODEyNSAtMi42MDkzNzUgTCAyLjg1OTM3NSAtNi44MTI1IEMgMi44NTkzNzUgLTYuODEyNSAyLjg1OTM3NSAtNi45MjE4NzUgMi43MzQzNzUgLTYuOTIxODc1IEMgMi41IC02LjkyMTg3NSAxLjc4MTI1IC02Ljg0Mzc1IDEuNTE1NjI1IC02LjgxMjUgQyAxLjQzNzUgLTYuODEyNSAxLjMyODEyNSAtNi43OTY4NzUgMS4zMjgxMjUgLTYuNjI1IEMgMS4zMjgxMjUgLTYuNSAxLjQyMTg3NSAtNi41IDEuNTYyNSAtNi41IEMgMi4wNDY4NzUgLTYuNSAyLjA2MjUgLTYuNDM3NSAyLjA2MjUgLTYuMzI4MTI1IEwgMi4wMzEyNSAtNi4xMjUgTCAwLjU5Mzc1IC0wLjM5MDYyNSBDIDAuNTQ2ODc1IC0wLjI1IDAuNTQ2ODc1IC0wLjIzNDM3NSAwLjU0Njg3NSAtMC4xNzE4NzUgQyAwLjU0Njg3NSAwLjA2MjUgMC43NSAwLjEwOTM3NSAwLjg0Mzc1IDAuMTA5Mzc1IEMgMC45Njg3NSAwLjEwOTM3NSAxLjEwOTM3NSAwLjAxNTYyNSAxLjE3MTg3NSAtMC4wOTM3NSBDIDEuMjE4NzUgLTAuMTg3NSAxLjY3MTg3NSAtMi4wMzEyNSAxLjczNDM3NSAtMi4yODEyNSBDIDIuMDc4MTI1IC0yLjI1IDIuODkwNjI1IC0yLjA5Mzc1IDIuODkwNjI1IC0xLjQzNzUgQyAyLjg5MDYyNSAtMS4zNTkzNzUgMi44OTA2MjUgLTEuMzI4MTI1IDIuODU5Mzc1IC0xLjIxODc1IEMgMi44NDM3NSAtMS4xMDkzNzUgMi44MjgxMjUgLTAuOTg0Mzc1IDIuODI4MTI1IC0wLjg3NSBDIDIuODI4MTI1IC0wLjI5Njg3NSAzLjIxODc1IDAuMTA5Mzc1IDMuNzM0Mzc1IDAuMTA5Mzc1IEMgNC4wMzEyNSAwLjEwOTM3NSA0LjMxMjUgLTAuMDQ2ODc1IDQuNTMxMjUgLTAuNDIxODc1IEMgNC43ODEyNSAtMC44NTkzNzUgNC44OTA2MjUgLTEuNDIxODc1IDQuODkwNjI1IC0xLjQyMTg3NSBaIE0gNC44OTA2MjUgLTEuNDIxODc1ICIvPgo8L3N5bWJvbD4KPC9nPgo8L2RlZnM+CjxnIGlkPSJzdXJmYWNlMSI+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDAtMSIgeD0iNDMuNTU5IiB5PSIxMC40NTQiLz4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDAtMiIgeD0iNTAuMzM5NTQ2IiB5PSIxMC40NTQiLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTEiIHg9IjQuMjg5IiB5PSI0Mi40ODciLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTIiIHg9IjkyLjAwMiIgeT0iNDIuNDg3Ii8+CjwvZz4KPGcgc3R5bGU9ImZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiPgogIDx1c2UgeGxpbms6aHJlZj0iI2dseXBoMC0zIiB4PSI0OC43ODYiIHk9Ijc0LjYzIi8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSA3LjIwODQwNiAtMjcuMDA2NTMxIEwgMzQuNjUzNzE5IC03LjQyNDUgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw1Mi43MzMsMzkuMTM4KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDgzLjkyMTgxNCUsMzYuMDc3ODgxJSwzNi4wNzc4ODElKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMC4wMDAzNTQ2MjggMS45NTMwOSBDIDAuNjgyNjM2IDEuOTUwOTMzIDEuMjM0MTcgMS41MTQyNSAxLjIzMzkwMSAwLjk3NjU3NiBDIDEuMjM1OTAxIDAuNDM1NzIyIDAuNjgxNjYyIDAuMDAxODYzMjcgMC4wMDA5NDAwNDMgMC4wMDA4NDEyMDkgIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC44MTM5OCwwLjU4MDgsLTAuNTgwOCwtMC44MTM5OCw1OS45NDI2Niw2Ni4xNDQ2NykiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcxMTQxIDIuMzkyNDM1IEMgLTEuNjkzOTYxIDAuOTU3MTYgLTAuODQ5NDE4IDAuMjc3NzY5IC0wLjAwMTg5NjggLTAuMDAwNjM1MjU5IEMgLTAuODQ4Njg1IC0wLjI3OTQzMiAtMS42OTMwMDQgLTAuOTU4MzA1IC0yLjA3MjM4MyAtMi4zOTEyMzMgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjgxMzk4LC0wLjU4MDgsLTAuNTgwOCwtMC44MTM5OCw4Ny41NDgwNSw0Ni40NDc2KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC05LjU5MjM3NSAtMjYuODUwMjgxIEwgLTM2Ljg1NDA5NCAtNi44NjU5MDYgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw1Mi43MzMsMzkuMTM4KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMC4wMDA3ODM0NjQgMS45NTA2NzkgQyAwLjY4MTMyMyAxLjk1MTgzNCAxLjIzNDQxNyAxLjUxNDUxMiAxLjIzNTU5NCAwLjk3NzczMSBDIDEuMjM1OTMxIDAuNDM1NDkgMC42ODI3MDIgMC4wMDA4NTgyNzkgMC4wMDA1OTU1NzEgLTAuMDAwMjk2NTIzICIgdHJhbnNmb3JtPSJtYXRyaXgoMC44MDY0NywwLjU5MTIyLDAuNTkxMjIsLTAuODA2NDcsNDMuMTQwMzIsNjUuOTg3NjkpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0yLjA3MjU0MSAyLjM5MTI0MiBDIC0xLjY5Mjg1OCAwLjk1NDkzNyAtMC44NDkzNiAwLjI4MDA1MSAtMC4wMDA3NTk4MDMgMC4wMDEyMzk0IEMgLTAuODUxNTQ2IC0wLjI3ODU3IC0xLjY5MzM2MyAtMC45NTM4MjYgLTIuMDczOTA5IC0yLjM5MDQzMyAiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjgwNjQ3LC0wLjU5MTIyLC0wLjU5MTIyLDAuODA2NDcsMTUuNzE4ODcsNDUuODg1MjcpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTM2LjAxODE1NiA1LjczOTU2MiBMIC0xMC4xOTM5MzggMjQuNjAyODQ0ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNTIuNzMzLDM5LjEzOCkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTAuMDAxNjM3MTMgMS45NTIxOTkgQyAwLjY4MDQ3NCAxLjk1MjE4MiAxLjIzNTk3NCAxLjUxNjIxMiAxLjIzNTM3OCAwLjk3Mzk2OCBDIDEuMjM1NjMzIDAuNDM3MTgyIDAuNjgzOTYgMC4wMDAzNDUyMzIgMC4wMDE4NDgyOSAwLjAwMDM2MjQ2ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuODA3NDgsMC41ODk4MywtMC41ODk4MywtMC44MDc0OCwxNi43MTY1NSwzMy4zOTc2NCkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYig4My45MjE4MTQlLDM2LjA3Nzg4MSUsMzYuMDc3ODgxJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcyNDI4IDIuMzkyMzMgQyAtMS42OTQ4NyAwLjk1NTUyMSAtMC44NDg3MzUgMC4yNzk0MDQgMC4wMDAyMzEyNzkgLTAuMDAyMDk5MzMgQyAtMC44NTEwNDggLTAuMjgwMDY2IC0xLjY5MzM5IC0wLjk1NjQwNSAtMi4wNzM3NjEgLTIuMzkxMDYzICIgdHJhbnNmb3JtPSJtYXRyaXgoMC44MDc0OCwtMC41ODk4MywtMC41ODk4MywtMC44MDc0OCw0Mi43MDE3LDE0LjQxNjQxKSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDMzLjYxMDc1IDYuNDIzMTU2IEwgOC4wMzY1MzEgMjQuNjA2NzUgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw1Mi43MzMsMzkuMTM4KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAwLjAwMDg2MDk2NSAxLjk1MTU1MyBDIDAuNjgxNTg4IDEuOTUxNjY0IDEuMjM0MjkgMS41MTU1NDIgMS4yMzU0NTMgMC45Nzc4NjUgQyAxLjIzNDM1NCAwLjQzNzAwNCAwLjY4MzU0NCAtMC4wMDA1OTgyNjggLTAuMDAwMzY3Mzg4IDAuMDAxNTU0MjYgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjgxNDk0LDAuNTc5NDQsLTAuNTc5NDQsMC44MTQ5NCw4Ni4zNDQ5NSwzMi43MTM3OSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcwMTE4IDIuMzkxMTQ2IEMgLTEuNjkzMTIyIDAuOTU3NTc4IC0wLjg0OTkyOSAwLjI3NzI5NiAtMC4wMDA0MTYxNDQgLTAuMDAwNjQ4Njc0IEMgLTAuODUxNTkgLTAuMjc5OTA3IC0xLjY5NDA4NSAtMC45NTU2MzIgLTIuMDczNjU3IC0yLjM5MDI4NyAiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjgxNDk0LC0wLjU3OTQ0LC0wLjU3OTQ0LDAuODE0OTQsNjAuNjA4NjYsMTQuNDE0MzUpIi8+CjwvZz4KPC9zdmc+Cg=="></p></p>
+<blockquote>
+<p><a href="https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=">Link to Diagram</a></p>
+</blockquote>
+<p>Note that if in addition <span class="math inline">\(L/k\in \mathcal{S}\)</span>, then <span class="math inline">\(LK/k \in \mathcal{S}\)</span>.</p>
+<blockquote>
+<p>Supposed to think of <span class="math inline">\(LK/L\)</span> as a lift of <span class="math inline">\(K/k\)</span>.</p>
+</blockquote>
+</div>
+<div class="example proofenv" title="of distinguished classes">
+<ul>
+<li>Algebraic extensions are distinguished.</li>
+<li>Finite extensions are distinguished.</li>
+<li>Separable extensions are distinguished.</li>
+<li>Normal extensions are <em>not</em> distinguished, but condition 2 holds: lifts of normal extensions are normal. Half of the forward implication of condition 1 holds: if <span class="math inline">\(L/k\)</span> is normal, then <span class="math inline">\(L/K\)</span> is normal.
+<ul>
+<li>Why: take <span class="math inline">\({\mathbb{Q}}(2^{1\over 4}) / {\mathbb{Q}}(2^{1\over 2}) / {\mathbb{Q}}\)</span>, each leg is normal since it’s quadratic, but the overall extension misses complex roots. Similar issue for <span class="math inline">\({\mathbb{Q}}(2^{1\over 3}, \zeta_3) / {\mathbb{Q}}(2^{1\over 3}) / {\mathbb{Q}}\)</span>, where now the bottom extension isn’t normal.</li>
+</ul></li>
+</ul>
+</div>
+<h3 data-number="5.3.1" id="normal-extensions"><span class="header-section-number">5.3.1</span> Normal Extensions</h3>
+<div class="definition proofenv" title="Normal Field Extension">
+<p>Let <span class="math inline">\(L/k\)</span> be an extension. Then TFAE:</p>
 <ul>
 <li><p><span class="math inline">\(L/k\)</span> is <strong>normal</strong>.</p></li>
 <li><p>Every irreducible polynomial <span class="math inline">\(f\in k[x]\)</span> that has one root in <span class="math inline">\(L\)</span> has <em>all</em> of its roots in <span class="math inline">\(L\)</span></p>
 <ul>
-<li>i.e. every polynomial splits into linear factors</li>
+<li>So if <span class="math inline">\(\alpha\in L\)</span> then every Galois conjugate <span class="math inline">\(\alpha_k \in L\)</span> as well.. Thus either <span class="math inline">\(f\)</span> splits in <span class="math inline">\(L\)</span> or <span class="math inline">\(f\)</span> has no roots in <span class="math inline">\(L\)</span>.</li>
 </ul></li>
-<li><p>Either <span class="math inline">\(f\)</span> splits in <span class="math inline">\(L\)</span> or <span class="math inline">\(f\)</span> has no roots in <span class="math inline">\(L\)</span>.</p></li>
-<li><p>Every embedding <span class="math inline">\(\sigma: L \hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span> that is a lift of the identity on <span class="math inline">\(k\)</span> satisfies <span class="math inline">\(\sigma(L) = L\)</span>.</p></li>
-<li><p>If <span class="math inline">\(L\)</span> is separable: <span class="math inline">\(L\)</span> is the splitting field of some irreducible <span class="math inline">\(f\in k[x]\)</span>.</p></li>
+<li><p>Every embedding <span class="math inline">\(\sigma: L \hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span> over <span class="math inline">\(k\)</span> satisfies <span class="math inline">\(\sigma(L) = L\)</span>, so <span class="math inline">\(\sigma\)</span> is an automorphism of <span class="math inline">\(L\)</span> over <span class="math inline">\(k\)</span>.</p></li>
+<li><p>If <span class="math inline">\(L\)</span> is separable and finite: <span class="math inline">\(L\)</span> is the splitting field of some irreducible <span class="math inline">\(f\in k[x]\)</span>.</p></li>
 </ul>
 </div>
-<div class="proof proofenv" title="?">
-<details open><summary><i>(Click to expand proof)</i></summary>
-</details>
-</div>
-<div class="definition proofenv" title="Separable Field Extension">
-<p>Let <span class="math inline">\(L/k\)</span> be a field extension, <span class="math inline">\(\alpha \in L\)</span> be arbitrary, and <span class="math inline">\(f(x) \mathrel{\vcenter{:}}=\min(\alpha, k)\)</span>. The following are equivalent</p>
+<div class="example proofenv" title="of normal extensions">
 <ul>
-<li><span class="math inline">\(L/k\)</span> is <strong>separable</strong></li>
-<li>Every element <span class="math inline">\({\alpha} \in L\)</span> has separable minimal polynomial <span class="math inline">\(\min_{\alpha, L}(x) \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu[x]\)</span> (D&amp;F’s definition, p. 551).</li>
-<li><span class="math inline">\(f\)</span> has no repeated factors/roots, i.e. <span class="math inline">\(f\)</span> has distinct roots in <span class="math inline">\(L\)</span>.</li>
+<li>If <span class="math inline">\([L: k] = 2\)</span> then <span class="math inline">\(L/k\)</span> is normal.</li>
+<li><span class="math inline">\(L \mathrel{\vcenter{:}}={\mathbb{Q}}(2^{1\over 3})\)</span> is not normal, since <span class="math inline">\((x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}\)</span> with <span class="math inline">\(\zeta_3, \zeta_3^2\)</span> not in <span class="math inline">\(L \subset {\mathbb{R}}\)</span>.
+<ul>
+<li><span class="math inline">\(L \mathrel{\vcenter{:}}={\mathbb{Q}}(2^{1\over 4})\)</span> is not normal for the same reason.</li>
+</ul></li>
+<li><span class="math inline">\({\mathbb{Q}}(\zeta_k)\)</span> is normal for <span class="math inline">\(\zeta_k\)</span> any primitive <span class="math inline">\(k\)</span>th root of unity.</li>
+</ul>
+</div>
+<div class="proposition proofenv" title="?">
+<p>For <span class="math inline">\(L/k\)</span> finite, <span class="math inline">\(L\)</span> is normal iff <span class="math inline">\(L = \operatorname{SF}(f)\)</span> is the splitting field for some <span class="math inline">\(f\in k[x]\)</span>.</p>
+</div>
+<h3 data-number="5.3.2" id="separable-extensions"><span class="header-section-number">5.3.2</span> Separable Extensions</h3>
+<div class="definition proofenv" title="Separable Field Extension">
+<p>Let <span class="math inline">\(L/k\)</span> be a field extension, <span class="math inline">\(\alpha \in L\)</span> be algebraic over <span class="math inline">\(k\)</span>, and <span class="math inline">\(f(x) \mathrel{\vcenter{:}}=\min(\alpha, k)\)</span>. The following are equivalent</p>
+<ul>
+<li><span class="math inline">\(L/k\)</span> is a <strong>separable</strong> extension.</li>
+<li>Every element <span class="math inline">\({\alpha} \in L\)</span> is separable over <span class="math inline">\(k\)</span>: <span class="math inline">\(\alpha\)</span> has separable minimal polynomial <span class="math inline">\(\min_{\alpha, L}(x) \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu[x]\)</span> (D&amp;F’s definition, p. 551).</li>
+<li><span class="math inline">\(f\)</span> has no repeated factors/roots, i.e. <span class="math inline">\(f\)</span> has no multiple roots in <span class="math inline">\(L\)</span>.</li>
 <li><span class="math inline">\(\gcd(f, f&#39;) = 1\)</span>.</li>
 <li><span class="math inline">\(f&#39; \not\equiv 0\)</span></li>
+<li>Every finite subextension <span class="math inline">\(L&#39;/k\)</span> is separable.</li>
 </ul>
 <p>If <span class="math inline">\(L/k\)</span> is a finite extension, then, TFAE:</p>
 <ul>
 <li><span class="math inline">\(L/k\)</span> is separable.</li>
 <li><span class="math inline">\(L = k( \alpha)\)</span> for <span class="math inline">\(\alpha\)</span> a separable element.</li>
 <li><span class="math inline">\(L = k( \left\{{ \alpha_i }\right\} )\)</span> for <span class="math inline">\(\alpha_i\)</span> separable elements</li>
-<li><span class="math inline">\([L: k] = \left\{{ L: k }\right\} \mathrel{\vcenter{:}}=\# {\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span></li>
+<li><span class="math inline">\([L: k] = \left\{{ L: k }\right\} \mathrel{\vcenter{:}}=\# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span>, the number of automorphisms over <span class="math inline">\(k\)</span>.</li>
+<li><span class="math inline">\([L: K] = [L:K]_s\)</span>, the separable degree.</li>
 </ul>
 </div>
+<div class="definition proofenv" title="Separable degree">
+<p>Recall that a polynomial <span class="math inline">\(p\in k[x]\)</span> is <strong>separable</strong> if <span class="math inline">\(p\)</span> has no multiple roots in <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span> The <strong>separable degree</strong> of an extension <span class="math inline">\(L/k\)</span> is defined by fixing an embedding <span class="math inline">\(\sigma: k\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span> and letting <span class="math inline">\([L:k]_s\)</span> be the number of lifts of <span class="math inline">\(\sigma\)</span> to <span class="math inline">\(\sigma&#39;:L\to \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span>:</p>
+<p><p style="text-align:center;"> <img class="tikzcd" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTEuMzM4cHQiIGhlaWdodD0iNjYuMjc5cHQiIHZpZXdCb3g9IjAgMCA5MS4zMzggNjYuMjc5IiB2ZXJzaW9uPSIxLjEiPgo8ZGVmcz4KPGc+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDAtMCI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9IiIvPgo8L3N5bWJvbD4KPHN5bWJvbCBvdmVyZmxvdz0idmlzaWJsZSIgaWQ9ImdseXBoMC0xIj4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyIgZD0iTSA2LjQwNjI1IC0yLjQ2ODc1IEMgNi40MDYyNSAtMi41IDYuMzc1IC0yLjU3ODEyNSA2LjI5Njg3NSAtMi41NzgxMjUgQyA2LjIwMzEyNSAtMi41NzgxMjUgNi4xODc1IC0yLjUxNTYyNSA2LjEyNSAtMi4zNTkzNzUgQyA1Ljc4MTI1IC0xLjQ1MzEyNSA1LjM0Mzc1IC0wLjMxMjUgMy42MjUgLTAuMzEyNSBMIDIuNjg3NSAtMC4zMTI1IEMgMi41NDY4NzUgLTAuMzEyNSAyLjUxNTYyNSAtMC4zMTI1IDIuNDY4NzUgLTAuMzEyNSBDIDIuMzU5Mzc1IC0wLjMyODEyNSAyLjMyODEyNSAtMC4zNDM3NSAyLjMyODEyNSAtMC40MjE4NzUgQyAyLjMyODEyNSAtMC40NTMxMjUgMi4zMjgxMjUgLTAuNDY4NzUgMi4zNzUgLTAuNjQwNjI1IEwgMy43MzQzNzUgLTYuMDMxMjUgQyAzLjgxMjUgLTYuMzkwNjI1IDMuODQzNzUgLTYuNSA0Ljc4MTI1IC02LjUgQyA1LjA3ODEyNSAtNi41IDUuMTU2MjUgLTYuNSA1LjE1NjI1IC02LjY4NzUgQyA1LjE1NjI1IC02LjgxMjUgNS4wNDY4NzUgLTYuODEyNSA1IC02LjgxMjUgTCAzLjUzMTI1IC02Ljc4MTI1IEwgMi4yMDMxMjUgLTYuODEyNSBDIDIuMTQwNjI1IC02LjgxMjUgMi4wMTU2MjUgLTYuODEyNSAyLjAxNTYyNSAtNi42MDkzNzUgQyAyLjAxNTYyNSAtNi41IDIuMTA5Mzc1IC02LjUgMi4yOTY4NzUgLTYuNSBDIDIuMjk2ODc1IC02LjUgMi41IC02LjUgMi42NzE4NzUgLTYuNDg0Mzc1IEMgMi44NDM3NSAtNi40NTMxMjUgMi45Mzc1IC02LjQ1MzEyNSAyLjkzNzUgLTYuMzEyNSBDIDIuOTM3NSAtNi4yODEyNSAyLjkzNzUgLTYuMjUgMi45MDYyNSAtNi4xMjUgTCAxLjU2MjUgLTAuNzgxMjUgQyAxLjQ2ODc1IC0wLjM5MDYyNSAxLjQ1MzEyNSAtMC4zMTI1IDAuNjU2MjUgLTAuMzEyNSBDIDAuNDg0Mzc1IC0wLjMxMjUgMC4zOTA2MjUgLTAuMzEyNSAwLjM5MDYyNSAtMC4xMDkzNzUgQyAwLjM5MDYyNSAwIDAuNDg0Mzc1IDAgMC42NTYyNSAwIEwgNS4yODEyNSAwIEMgNS41MTU2MjUgMCA1LjUxNTYyNSAwIDUuNTc4MTI1IC0wLjE3MTg3NSBMIDYuMzc1IC0yLjMyODEyNSBDIDYuNDA2MjUgLTIuNDM3NSA2LjQwNjI1IC0yLjQ2ODc1IDYuNDA2MjUgLTIuNDY4NzUgWiBNIDYuNDA2MjUgLTIuNDY4NzUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgwLTIiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSJNIDQuODkwNjI1IC0xLjQyMTg3NSBDIDQuODkwNjI1IC0xLjUzMTI1IDQuNzk2ODc1IC0xLjUzMTI1IDQuNzY1NjI1IC0xLjUzMTI1IEMgNC42NzE4NzUgLTEuNTMxMjUgNC42NTYyNSAtMS40ODQzNzUgNC42MjUgLTEuMzQzNzUgQyA0LjQyMTg3NSAtMC42MjUgNC4yMDMxMjUgLTAuMTA5Mzc1IDMuNzY1NjI1IC0wLjEwOTM3NSBDIDMuNTYyNSAtMC4xMDkzNzUgMy40Mzc1IC0wLjIxODc1IDMuNDM3NSAtMC41NzgxMjUgQyAzLjQzNzUgLTAuNzUgMy40ODQzNzUgLTAuOTg0Mzc1IDMuNTE1NjI1IC0xLjE0MDYyNSBDIDMuNTYyNSAtMS4zMTI1IDMuNTYyNSAtMS4zNDM3NSAzLjU2MjUgLTEuNDUzMTI1IEMgMy41NjI1IC0yLjA5Mzc1IDIuOTM3NSAtMi4zNzUgMi4wNzgxMjUgLTIuNSBDIDIuMzkwNjI1IC0yLjY3MTg3NSAyLjcxODc1IC0yLjk4NDM3NSAyLjkzNzUgLTMuMjM0Mzc1IEMgMy40MjE4NzUgLTMuNzY1NjI1IDMuODc1IC00LjE4NzUgNC4zNTkzNzUgLTQuMTg3NSBDIDQuNDIxODc1IC00LjE4NzUgNC40Mzc1IC00LjE4NzUgNC40NTMxMjUgLTQuMTcxODc1IEMgNC41NzgxMjUgLTQuMTU2MjUgNC41NzgxMjUgLTQuMTU2MjUgNC42NzE4NzUgLTQuMDkzNzUgQyA0LjY4NzUgLTQuMDkzNzUgNC42ODc1IC00LjA3ODEyNSA0LjcwMzEyNSAtNC4wNjI1IEMgNC4yMzQzNzUgLTQuMDMxMjUgNC4xNDA2MjUgLTMuNjQwNjI1IDQuMTQwNjI1IC0zLjUxNTYyNSBDIDQuMTQwNjI1IC0zLjM1OTM3NSA0LjI1IC0zLjE3MTg3NSA0LjUxNTYyNSAtMy4xNzE4NzUgQyA0Ljc4MTI1IC0zLjE3MTg3NSA1LjA2MjUgLTMuMzkwNjI1IDUuMDYyNSAtMy43ODEyNSBDIDUuMDYyNSAtNC4wNzgxMjUgNC44MjgxMjUgLTQuNDA2MjUgNC4zOTA2MjUgLTQuNDA2MjUgQyA0LjEwOTM3NSAtNC40MDYyNSAzLjY1NjI1IC00LjMyODEyNSAyLjkzNzUgLTMuNTMxMjUgQyAyLjU5Mzc1IC0zLjE1NjI1IDIuMjAzMTI1IC0yLjc1IDEuODI4MTI1IC0yLjYwOTM3NSBMIDIuODU5Mzc1IC02LjgxMjUgQyAyLjg1OTM3NSAtNi44MTI1IDIuODU5Mzc1IC02LjkyMTg3NSAyLjczNDM3NSAtNi45MjE4NzUgQyAyLjUgLTYuOTIxODc1IDEuNzgxMjUgLTYuODQzNzUgMS41MTU2MjUgLTYuODEyNSBDIDEuNDM3NSAtNi44MTI1IDEuMzI4MTI1IC02Ljc5Njg3NSAxLjMyODEyNSAtNi42MjUgQyAxLjMyODEyNSAtNi41IDEuNDIxODc1IC02LjUgMS41NjI1IC02LjUgQyAyLjA0Njg3NSAtNi41IDIuMDYyNSAtNi40Mzc1IDIuMDYyNSAtNi4zMjgxMjUgTCAyLjAzMTI1IC02LjEyNSBMIDAuNTkzNzUgLTAuMzkwNjI1IEMgMC41NDY4NzUgLTAuMjUgMC41NDY4NzUgLTAuMjM0Mzc1IDAuNTQ2ODc1IC0wLjE3MTg3NSBDIDAuNTQ2ODc1IDAuMDYyNSAwLjc1IDAuMTA5Mzc1IDAuODQzNzUgMC4xMDkzNzUgQyAwLjk2ODc1IDAuMTA5Mzc1IDEuMTA5Mzc1IDAuMDE1NjI1IDEuMTcxODc1IC0wLjA5Mzc1IEMgMS4yMTg3NSAtMC4xODc1IDEuNjcxODc1IC0yLjAzMTI1IDEuNzM0Mzc1IC0yLjI4MTI1IEMgMi4wNzgxMjUgLTIuMjUgMi44OTA2MjUgLTIuMDkzNzUgMi44OTA2MjUgLTEuNDM3NSBDIDIuODkwNjI1IC0xLjM1OTM3NSAyLjg5MDYyNSAtMS4zMjgxMjUgMi44NTkzNzUgLTEuMjE4NzUgQyAyLjg0Mzc1IC0xLjEwOTM3NSAyLjgyODEyNSAtMC45ODQzNzUgMi44MjgxMjUgLTAuODc1IEMgMi44MjgxMjUgLTAuMjk2ODc1IDMuMjE4NzUgMC4xMDkzNzUgMy43MzQzNzUgMC4xMDkzNzUgQyA0LjAzMTI1IDAuMTA5Mzc1IDQuMzEyNSAtMC4wNDY4NzUgNC41MzEyNSAtMC40MjE4NzUgQyA0Ljc4MTI1IC0wLjg1OTM3NSA0Ljg5MDYyNSAtMS40MjE4NzUgNC44OTA2MjUgLTEuNDIxODc1IFogTSA0Ljg5MDYyNSAtMS40MjE4NzUgIi8+Cjwvc3ltYm9sPgo8c3ltYm9sIG92ZXJmbG93PSJ2aXNpYmxlIiBpZD0iZ2x5cGgxLTAiPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IiBkPSIiLz4KPC9zeW1ib2w+CjxzeW1ib2wgb3ZlcmZsb3c9InZpc2libGUiIGlkPSJnbHlwaDEtMSI+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsiIGQ9Ik0gNC40NTMxMjUgLTIuODEyNSBDIDQuNDUzMTI1IC0zIDQuMjY1NjI1IC0zIDQuMTQwNjI1IC0zIEwgMi4zNTkzNzUgLTMgQyAxLjI1IC0zIDAuNDA2MjUgLTEuOTA2MjUgMC40MDYyNSAtMS4wNjI1IEMgMC40MDYyNSAtMC40MjE4NzUgMC44OTA2MjUgMC4wNjI1IDEuNjA5Mzc1IDAuMDYyNSBDIDIuNDg0Mzc1IDAuMDYyNSAzLjQ4NDM3NSAtMC43MTg3NSAzLjQ4NDM3NSAtMS43OTY4NzUgQyAzLjQ4NDM3NSAtMS45MDYyNSAzLjQ4NDM3NSAtMi4yMTg3NSAzLjI4MTI1IC0yLjUzMTI1IEwgNC4wNzgxMjUgLTIuNTMxMjUgQyA0LjE4NzUgLTIuNTMxMjUgNC4yNjU2MjUgLTIuNTMxMjUgNC4zMjgxMjUgLTIuNTc4MTI1IEMgNC40MjE4NzUgLTIuNjU2MjUgNC40NTMxMjUgLTIuNzY1NjI1IDQuNDUzMTI1IC0yLjgxMjUgWiBNIDIuOTY4NzUgLTEuODc1IEMgMi45Njg3NSAtMS43MzQzNzUgMi45MDYyNSAtMS4xMDkzNzUgMi41NjI1IC0wLjY0MDYyNSBDIDIuMjY1NjI1IC0wLjI2NTYyNSAxLjg3NSAtMC4xMjUgMS42MDkzNzUgLTAuMTI1IEMgMS4yMzQzNzUgLTAuMTI1IDAuOTIxODc1IC0wLjM3NSAwLjkyMTg3NSAtMC44NzUgQyAwLjkyMTg3NSAtMS4wNzgxMjUgMS4wNDY4NzUgLTIuNTMxMjUgMi4yNSAtMi41MzEyNSBDIDIuNTkzNzUgLTIuNTMxMjUgMi45Njg3NSAtMi4zOTA2MjUgMi45Njg3NSAtMS44NzUgWiBNIDIuOTY4NzUgLTEuODc1ICIvPgo8L3N5bWJvbD4KPC9nPgo8L2RlZnM+CjxnIGlkPSJzdXJmYWNlMSI+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDAtMSIgeD0iNC4yODkiIHk9IjEyLjU1NyIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAwOTA2MjUgMC4wMDE4MTI1IEwgMy44NDA3NSAwLjAwMTgxMjUgIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw4Mi4zNzgsNC4yNDQpIi8+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDAtMiIgeD0iODEuNTQ4IiB5PSIxMi41NTciLz4KPC9nPgo8ZyBzdHlsZT0iZmlsbDpyZ2IoMCUsMCUsMCUpO2ZpbGwtb3BhY2l0eToxOyI+CiAgPHVzZSB4bGluazpocmVmPSIjZ2x5cGgwLTIiIHg9IjQzLjU1OSIgeT0iNjIuNjMzIi8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSA3Ljc4MDIxOSAtMTcuNTg3NTYzIEwgMzMuNTg0OTA2IDE2LjQyMDI1ICIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDUuNjY5LDMzLjEzOSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gMC4wMDA2OTIwMDcgMS45NTE5ODQgQyAwLjY4MzU0NCAxLjk1MzYyMyAxLjIzNDI0IDEuNTE2MTQxIDEuMjM1ODk1IDAuOTc1NDgzIEMgMS4yMzQ0MzkgMC40MzcxODYgMC42ODExNzUgLTAuMDAxMTM2ODMgMC4wMDA2ODQ2NjMgMC4wMDAzMzU2NzUgIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC42MDQ0NiwwLjc5NjYsLTAuNzk2NiwtMC42MDQ0Niw1My40NDk5LDUwLjcyNjIyKSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2U6cmdiKDAlLDAlLDAlKTtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIgZD0iTSAtMi4wNzE0OTEgMi4zOTAwOTEgQyAtMS42OTM4OTcgMC45NTU0MjcgLTAuODUwMjA5IDAuMjc2NTM1IDAuMDAxMzc0NDEgMC4wMDA4Mjk0OTQgQyAtMC44NTEwMDUgLTAuMjc4MTgyIC0xLjY5NDEwOSAtMC45NTcxNTggLTIuMDcyMDIgLTIuMzkxMzcyICIgdHJhbnNmb3JtPSJtYXRyaXgoMC42MDQ0NiwtMC43OTY2LC0wLjc5NjYsLTAuNjA0NDYsNzkuMzc0ODMsMTYuNTYwMTkpIi8+CjxnIHN0eWxlPSJmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjE7Ij4KICA8dXNlIHhsaW5rOmhyZWY9IiNnbHlwaDEtMSIgeD0iNjguMzgyIiB5PSIzOS40ODEiLz4KPC9nPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheToyLjc4OTQxLDEuNTkzOTU7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0yOC42NzY4MTMgMjMuMDcyNTk0IEwgMzAuOTkxMTU2IDIzLjA3MjU5NCAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQ1LjY2OSwzMy4xMzkpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIDAuMDAwNDEyNSAxLjk1MjE4OSBDIDAuNjg0MDA2IDEuOTUyMTg5IDEuMjM0Nzg4IDEuNTE0Njg5IDEuMjM0Nzg4IDAuOTc1NjI2IEMgMS4yMzQ3ODggMC40MzY1NjQgMC42ODQwMDYgLTAuMDAwOTM2MjUgMC4wMDA0MTI1IC0wLjAwMDkzNjI1ICIgdHJhbnNmb3JtPSJtYXRyaXgoLTEsMCwwLC0xLDE2Ljk5MjYsMTAuMDY1NDcpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0yLjA3MTYwNyAyLjM4OTY4OSBDIC0xLjY5MjcwMSAwLjk1NjA5NSAtMC44NDg5NTEgMC4yODAzMTQgLTAuMDAxMjk1IC0wLjAwMDkzNjI1IEMgLTAuODQ4OTUxIC0wLjI3ODI4IC0xLjY5MjcwMSAtMC45NTc5NjggLTIuMDcxNjA3IC0yLjM5MTU2MSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDc2Ljg2MDY3LDEwLjA2NTQ3KSIvPgo8cGF0aCBzdHlsZT0iZmlsbDpub25lO3N0cm9rZS13aWR0aDowLjM5ODQ4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC02LjYxNDMxMyAtMTcuNTk1Mzc1IEwgLTMyLjg2MDQwNiAxNi40MjAyNSAiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDQ1LjY2OSwzMy4xMzkpIi8+CjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMzk4NDg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZTpyZ2IoMCUsMCUsMCUpO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7IiBkPSJNIC0wLjAwMTkwNjYgMS45NTI0NTcgQyAwLjY4MzMyOSAxLjk1MTY4MSAxLjIzNTI1NyAxLjUxNTk1MSAxLjIzNDkzNyAwLjk3ODM4NSBDIDEuMjM1MzI0IDAuNDM1MzM5IDAuNjgxNjMgLTAuMDAwODk3MjIzIDAuMDAxODcyNzUgMC4wMDA1ODU0NjkgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjYxMDg2LDAuNzkxNjksMC43OTE2OSwtMC42MTA4NiwzOS4wNTMwOCw1MC43MzMyNSkiLz4KPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MC4zOTg0ODtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOnJnYigwJSwwJSwwJSk7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiIGQ9Ik0gLTIuMDcyMjgxIDIuMzkwNjMzIEMgLTEuNjkyNjAzIDAuOTU3OTA4IC0wLjg1MDIyMiAwLjI3ODMzMSAwLjAwMTU2NjkzIDAuMDAxMDIxOTYgQyAtMC44NTA4MDkgLTAuMjc4NzY2IC0xLjY5Mzc2OSAtMC45NTU2MSAtMi4wNzEyNjMgLTIuMzkxMjYyICIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNjEwODYsLTAuNzkxNjksLTAuNzkxNjksMC42MTA4NiwxMi42ODUzNiwxNi41NTkyMSkiLz4KPC9nPgo8L3N2Zz4K"></p></p>
+<blockquote>
+<p><a href="https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=">Link to Diagram</a></p>
+</blockquote>
+</div>
+<div class="proposition proofenv" title="Derivative criterion for separability">
+<p>A polynomial <span class="math inline">\(f\)</span> has multiple roots <span class="math inline">\(\iff \gcd(f, f&#39;) \neq 1\)</span>, and the multiple roots of <span class="math inline">\(f\)</span> are precisely the roots of <span class="math inline">\(\gcd(f, f&#39;)\)</span>.</p>
+</div>
+<div class="proof proofenv" title="?">
+<details open><summary><i>(Click to expand proof)</i></summary>
+<p><span class="math inline">\(\implies:\)</span>: Write <span class="math inline">\(f(x) \mathrel{\vcenter{:}}=(x-a)^m g(x)\)</span> with <span class="math inline">\(m\geq 2\)</span>, then 
+<span class="math display">
+\begin{align*}
+f&#39;(x) = m(x-a)^{m-1}g(x) + (x-a)^mg&#39;(x)
+\end{align*}
+<span> and <span class="math inline">\((x-a)\)</span> divides both factors.</p>
+<p><span class="math inline">\(\centernot\implies\)</span>: If <span class="math inline">\(f\)</span> has no multiple roots, <span class="math inline">\(f(x) = \prod_i (x-a_i)\)</span> and 
+<span class="math display">
+\begin{align*}
+f&#39;(x) = \sum_j \prod_{i\neq j}(x-a_i)
+.\end{align*}
+<span> Then fixing any <span class="math inline">\(a_k\)</span> where <span class="math inline">\(f(a_k) = 0\)</span>, check 
+<span class="math display">
+\begin{align*}
+f&#39;(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
+.\end{align*}
+<span></p>
+</details>
+</div>
+<div class="proposition proofenv" title="Separable splitting fields are Galois">
+<p>If <span class="math inline">\(L/k\)</span> is separable, then 
+<span class="math display">
+\begin{align*}
+[L: k] = \left\{{ L: k }\right\} 
+.\end{align*}
+<span> If <span class="math inline">\(L/k\)</span> is a splitting field, then 
+<span class="math display">
+\begin{align*}
+[L:K] = \# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L) \mathrel{\vcenter{:}}=\# \operatorname{Gal}(L/k)
+.\end{align*}
+<span></p>
+</div>
+<div class="proposition proofenv" title="?">
+<p>Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.</p>
+</div>
+<h3 data-number="5.3.3" id="galois-extensions"><span class="header-section-number">5.3.3</span> Galois Extensions</h3>
 <div class="definition proofenv" title="Galois Extension and Galois Group">
 <p>Let <span class="math inline">\(L/k\)</span> be a finite field extension. The following are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(L/k\)</span> is a <strong>Galois extension</strong>.</li>
-<li><span class="math inline">\(\# {\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }} (L) = [L: k] = \left\{{ L: k}\right\}\)</span> (D&amp;F’s definition).</li>
+<li><span class="math inline">\(\# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L) = [L: k] = \left\{{ L: k}\right\}\)</span> (D&amp;F’s definition).</li>
 <li>The fixed field of <span class="math inline">\(\mathrm{Aut}(L/k)\)</span> is exactly <span class="math inline">\(k\)</span>.</li>
 <li><span class="math inline">\(L\)</span> is the splitting field of a separable polynomial <span class="math inline">\(p\in K[x]\)</span>.</li>
 <li><span class="math inline">\(L\)</span> is finite, normal, and separable (most general definition?)</li>
@@ -3208,30 +3388,16 @@ L^H \mathrel{\vcenter{:}}=\left\{{ \ell \in L {~\mathrel{\Big|}~}\sigma(l) = \el
 <ul>
 <li><span class="math inline">\(L\)</span> is a finite separable splitting field of an irreducible polynomial.</li>
 <li><span class="math inline">\(L/k\)</span> is separable and normal.</li>
-<li>The fixed field <span class="math inline">\(L^H\)</span> for <span class="math inline">\(H \mathrel{\vcenter{:}}={\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span> is precisely <span class="math inline">\(k\)</span>.</li>
+<li>The fixed field <span class="math inline">\(L^H\)</span> for <span class="math inline">\(H \mathrel{\vcenter{:}}=\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L)\)</span> is precisely <span class="math inline">\(k\)</span>.</li>
 </ul>
 <p>In this case, we define the <strong>Galois group</strong> as 
 <span class="math display">
 \begin{align*}
-\operatorname{Gal}(L/k) \mathrel{\vcenter{:}}={\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }} (L)
+\operatorname{Gal}(L/k) \mathrel{\vcenter{:}}=\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L)
 .\end{align*}
 <span></p>
 </div>
-<div class="definition proofenv" title="Simple Extension">
-<p>An extension <span class="math inline">\(F/k\)</span> is <strong>simple</strong> if <span class="math inline">\(F = k[\alpha]\)</span> for a single element <span class="math inline">\(\alpha\)</span>.</p>
-</div>
-<div class="definition proofenv" title="Primitive Extension">
-<p>For <span class="math inline">\(R\)</span> a UFD, a polynomial <span class="math inline">\(p\in R[x]\)</span> is <strong>primitive</strong> iff the greatest common divisors of its coefficients is a unit.</p>
-</div>
-<div class="proposition proofenv" title="Classification of quadratic extensions">
-<p>If <span class="math inline">\({\mathbb{F}}\)</span> is a field with <span class="math inline">\(\operatorname{ch}({\mathbb{F}})\neq 2\)</span> and <span class="math inline">\(E_{/{\mathbb{F}}}\)</span> is a degree 2 extension, then <span class="math inline">\(E\)</span> is Galois and <span class="math inline">\(E = F(\sqrt{a})\)</span> for some squarefree <span class="math inline">\(a\in {\mathbb{F}}\)</span>.</p>
-</div>
-<div class="corollary proofenv" title="Quadratic extensions of rationals">
-<p>If <span class="math inline">\(E_{/{\mathbb{Q}}}\)</span> is a quadratic extension, <span class="math inline">\(E = {\mathbb{Q}}(\sqrt{p\over q})\)</span> for some <span class="math inline">\(p, q\in {\mathbb{Z}}\)</span>.</p>
-</div>
-<div class="proposition proofenv" title="?">
-<p>For <span class="math inline">\({\mathbb{F}}_p\)</span> a finite field of prime order, all quadratic extensions <span class="math inline">\(E/{\mathbb{F}}_p\)</span> are isomorphic.</p>
-</div>
+<h3 data-number="5.3.4" id="special-extensions"><span class="header-section-number">5.3.4</span> Special Extensions</h3>
 <div class="theorem proofenv" title="Finite Extensions are Algebraic">
 <p>Every finite extension is algebraic.</p>
 </div>
@@ -3251,26 +3417,17 @@ f(\alpha ) \mathrel{\vcenter{:}}=\sum_{j=1}^n c_j \alpha ^j = 0
 <div class="corollary proofenv">
 <p><span class="math inline">\({\mathbb{GF}}(p^n)\)</span> is a simple extension over <span class="math inline">\({\mathbb{F}}_p\)</span>.</p>
 </div>
+<h3 data-number="5.3.5" id="quadratic-extensions"><span class="header-section-number">5.3.5</span> Quadratic Extensions</h3>
+<div class="proposition proofenv" title="Classification of quadratic extensions">
+<p>If <span class="math inline">\({\mathbb{F}}\)</span> is a field with <span class="math inline">\(\operatorname{ch}({\mathbb{F}})\neq 2\)</span> and <span class="math inline">\(E_{/{\mathbb{F}}}\)</span> is a degree 2 extension, then <span class="math inline">\(E\)</span> is Galois and <span class="math inline">\(E = F(\sqrt{a})\)</span> for some squarefree <span class="math inline">\(a\in {\mathbb{F}}\)</span>.</p>
+</div>
+<div class="corollary proofenv" title="Quadratic extensions of rationals">
+<p>If <span class="math inline">\(E_{/{\mathbb{Q}}}\)</span> is a quadratic extension, <span class="math inline">\(E = {\mathbb{Q}}(\sqrt{p\over q})\)</span> for some <span class="math inline">\(p, q\in {\mathbb{Z}}\)</span>.</p>
+</div>
 <div class="proposition proofenv" title="?">
-<p>If <span class="math inline">\(L/k\)</span> is separable, then 
-<span class="math display">
-\begin{align*}
-[L: k] = \left\{{ L: k }\right\} 
-.\end{align*}
-<span> If <span class="math inline">\(L/k\)</span> is a splitting field, then 
-<span class="math display">
-\begin{align*}
-[L:K] = \# {\operatorname{Aut}}_{{ \mathsf{Fields}_{k} }}(L) \mathrel{\vcenter{:}}=\# \operatorname{Gal}(L/k)
-.\end{align*}
-<span></p>
+<p>For <span class="math inline">\({\mathbb{F}}_p\)</span> a finite field of prime order, all quadratic extensions <span class="math inline">\(E/{\mathbb{F}}_p\)</span> are isomorphic.</p>
 </div>
-<h2 data-number="5.3" id="finite-fields"><span class="header-section-number">5.3</span> Finite Fields</h2>
-<div class="theorem proofenv" title="Characterization of Prime Subfields">
-<p>The prime subfield of any field is isomorphic to either <span class="math inline">\({\mathbb{Q}}\)</span> or <span class="math inline">\({\mathbb{F}}_p\)</span> for some <span class="math inline">\(p\)</span>.</p>
-</div>
-<div class="proposition proofenv">
-<p>If <span class="math inline">\(\operatorname{ch}k = p\)</span> then <span class="math inline">\((a+b)^p = a^p + b^p\)</span> and <span class="math inline">\((ab)^p = a^p b^p\)</span>.</p>
-</div>
+<h2 data-number="5.4" id="finite-fields"><span class="header-section-number">5.4</span> Finite Fields</h2>
 <div class="proof proofenv">
 <details open><summary><i>(Click to expand proof)</i></summary>
 <p>Todo</p>
@@ -3328,25 +3485,27 @@ f(x) \mathrel{\vcenter{:}}= 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 <span> This has no roots in <span class="math inline">\(k\)</span>.</p>
 </details>
 </div>
-<h2 data-number="5.4" id="cyclotomic-polynomials"><span class="header-section-number">5.4</span> Cyclotomic Polynomials</h2>
+<h2 data-number="5.5" id="cyclotomic-polynomials"><span class="header-section-number">5.5</span> Cyclotomic Polynomials</h2>
+<div class="definition proofenv" title="Cyclotomic Polynomials">
+<p>Let <span class="math inline">\(\zeta_n = e^{2\pi i/n}\)</span>, then the <strong><span class="math inline">\(n\)</span>th cyclotomic polynomial</strong> is given by 
+<span class="math display">
+\begin{align*}
+\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right) \in {\mathbb{Z}}[x]
+,\end{align*}
+<span></p>
+<p>which is a product over primitive roots of unity. It is the unique irreducible polynomial which is a divisor of <span class="math inline">\(x^n - 1\)</span> but <em>not</em> a divisor of <span class="math inline">\(x^k-1\)</span> for any <span class="math inline">\(k&lt;n\)</span>.</p>
+<p>Note that <span class="math inline">\(\deg \Phi_n(x) = \phi(n)\)</span> for <span class="math inline">\(\phi\)</span> the totient function.</p>
+</div>
 <div class="definition proofenv" title="Cyclotomic Field">
-<p>Any subfield of the splitting field <span class="math inline">\(E\)</span> of <span class="math inline">\(f(x) = x^m-1\)</span> is a <strong>cyclotomic field</strong>.</p>
+<p>Any subfield of <span class="math inline">\(\operatorname{SF}(x^n-1)\)</span> is a <strong>cyclotomic field</strong>.</p>
 </div>
-<div class="proposition proofenv">
-<p><span class="math inline">\(\deg \Phi_n(x) = \phi(n)\)</span> for <span class="math inline">\(\phi\)</span> the totient function.</p>
-</div>
-<div class="proof proofenv">
-<details open><summary><i>(Click to expand proof)</i></summary>
-<p><span class="math inline">\(\deg \Phi_n(x)\)</span> is the number of <span class="math inline">\(n\)</span>th primitive roots, which is the number of numbers less than and coprime to <span class="math inline">\(n\)</span>.</p>
-</details>
-</div>
-<div class="proposition proofenv" title="Computing Totient Functions">
+<div class="proposition proofenv" title="Computing Cyclotomic Polynomials">
 <p><strong>Computing <span class="math inline">\(\Phi_n\)</span>:</strong></p>
 <ol type="1">
 <li><p>
 <span class="math display">
 \begin{align*}
-\Phi_{n}(z)=\prod_{d | n, d&gt;0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
+\Phi_{n}(z)=\prod_{\substack{ d \divides n \\  d &gt; 0} }\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
 \end{align*}
 <span> where 
 <span class="math display">
@@ -3357,67 +3516,81 @@ f(x) \mathrel{\vcenter{:}}= 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 <li><p>
 <span class="math display">
 \begin{align*}
-x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d &lt; n} \Phi_{d}(x)},
+x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \qty{x^n-1} \qty{\prod_{d | n \atop d &lt; n} \Phi_{d}(x)}^{-1},
 \end{align*}
 <span> so just use polynomial long division.</p></li>
 </ol>
 </div>
-<div class="proposition proofenv">
+<div class="fact proofenv" title="computing cyclotomic polynomials, special cases and examples">
 <p>
 <span class="math display">
 \begin{align*}
 \Phi_{p}(x)   &amp;=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
-\Phi_{2 p}(x) &amp;=  x^{p-1}-x^{p-2}+\cdots-x+1
-\end{align*}
+\Phi_{2 p}(x) &amp;=  x^{p-1}-x^{p-2}+\cdots-x+1 \\
+\\
+k\divides n \implies \Phi_{n}(x) &amp;= \Phi_{n\over k}\left(x^{k}\right)
+\\ \\
+\Phi_1(z) &amp;= z-1 \\
+\Phi_2(z) &amp;= z+1 \\
+\Phi_4(z) &amp;= z^2+1 \\
+\Phi_6(z) &amp;= z^2 -z + 1 \\
+\Phi_8(z) &amp;= z^4+1 
+.\end{align*}
 <span></p>
 </div>
-<div class="proposition proofenv">
-<p>
+<div class="proposition proofenv" title="Splitting Fields of Cyclotomic Polynomials">
+<p>The splitting field of <span class="math inline">\(x^m-1\)</span> is <span class="math inline">\({\mathbb{Q}}(\zeta_m)\)</span> for <span class="math inline">\(\zeta_m\)</span> any primitive root of unity, and 
 <span class="math display">
 \begin{align*}
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-\end{align*}
+\operatorname{Gal}({\mathbb{Q}}(\zeta_m)_{/{\mathbb{Q}}}) \cong ({\mathbb{Z}}/m{\mathbb{Z}})^{\times}
+.\end{align*}
 <span></p>
-</div>
-<div class="definition proofenv" title="Cyclotomic Polynomials">
-<p>Let <span class="math inline">\(\zeta_n = e^{2\pi i/n}\)</span>, then the <strong><span class="math inline">\(n\)</span>th cyclotomic polynomial</strong> is given by 
-<span class="math display">
-\begin{align*}
-\Phi_{n}(x)=\prod_{k=1 \atop (j, n)=1}^{n}\left(x- \zeta_n^k\right) \in {\mathbb{Z}}[x]
-,\end{align*}
-<span></p>
-<p>which is a product over primitive roots of unity. It is the unique irreducible polynomial which is a divisor of <span class="math inline">\(x^n - 1\)</span> but <em>not</em> a divisor of <span class="math inline">\(x^k-1\)</span> for any <span class="math inline">\(k&lt;n\)</span>.</p>
-</div>
-<div class="proposition proofenv" title="Table of cyclotomic polynomials">
-
-</div>
-<div class="proposition proofenv" title="Galois Groups of Cyclotomic Fields">
-<p>For <span class="math inline">\(\zeta\)</span> any primitive root of unity, <span class="math inline">\(\operatorname{Gal}({\mathbb{Q}}(\zeta_m)_{/{\mathbb{Q}}}) \cong ({\mathbb{Z}}/m{\mathbb{Z}})^{\times}\)</span>.</p>
 </div>
 <div class="theorem proofenv" title="Kronecker-Weber">
 <p>If <span class="math inline">\(K_{/{\mathbb{Q}}}\)</span> is an abelian extension, then <span class="math inline">\(K \subseteq {\mathbb{Q}}(\zeta_m)\)</span> for some <span class="math inline">\(m\)</span>.</p>
 </div>
-<h2 data-number="5.5" id="splitting-fields"><span class="header-section-number">5.5</span> Splitting Fields</h2>
-<div class="proposition proofenv" title="Splitting Fields of Cyclotomic Polynomials">
-<p>The splitting field of <span class="math inline">\(x^m-1\)</span> is <span class="math inline">\({\mathbb{Q}}(\zeta_m)\)</span> for <span class="math inline">\(\zeta_m\)</span> any primitive root of unity.</p>
-</div>
-<h2 data-number="5.6" id="unsorted-1"><span class="header-section-number">5.6</span> Unsorted</h2>
-<div class="proposition proofenv" title="?">
-<p>A polynomial <span class="math inline">\(f\)</span> has multiple roots <span class="math inline">\(\iff \gcd(f, f&#39;) \neq 1\)</span>, and the multiple roots of <span class="math inline">\(f\)</span> are precisely the roots of <span class="math inline">\(\gcd(f, f&#39;)\)</span>.</p>
-</div>
-<div class="proposition proofenv" title="?">
-<p>Irreducible polynomials have distinct roots after passing to a splitting field.</p>
-</div>
-<div class="proof proofenv" title="?">
-<details open><summary><i>(Click to expand proof)</i></summary>
-</details>
-</div>
 <h1 data-number="6" id="galois-theory"><span class="header-section-number">6</span> Galois Theory</h1>
+<div class="proposition proofenv" title="?">
+<p>If <span class="math inline">\(f\in k[x]\)</span> is irreducible, then <span class="math inline">\(\operatorname{Gal}(\operatorname{SF}(f)/k) \leq S_n\)</span> is a transitive subgroup, i.e. it acts transitively on the set of roots.</p>
+</div>
+<div class="fact proofenv">
+<p>Transitive subgroups of <span class="math inline">\(S_n\)</span> for small <span class="math inline">\(n\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(n\)</span> in <span class="math inline">\(S_n\)</span></th>
+<th style="text-align: left;">Transitive Subgroups</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span class="math inline">\({\mathbb{Z}}/2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><span class="math inline">\(S_3, {\mathbb{Z}}/3\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><span class="math inline">\(S_4, A_4, D_4, ({\mathbb{Z}}/2)^2, {\mathbb{Z}}/4\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><span class="math inline">\(S_5, A_5, F_5, D_5, {\mathbb{Z}}/5\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="proposition proofenv">
 <p>If <span class="math inline">\(\operatorname{ch}k = 0\)</span> or <span class="math inline">\(k\)</span> is finite, then every <em>algebraic</em> extension <span class="math inline">\(L/k\)</span> is separable.</p>
 </div>
 <div class="proposition proofenv">
-<p>If <span class="math inline">\(L/k\)</span> is algebraic, then <span class="math inline">\({\operatorname{Aut}}(L/k)\)</span> permutes the roots of irreducible polynomials.</p>
+<p>If <span class="math inline">\(L/k\)</span> is algebraic, then <span class="math inline">\(\mathop{\mathrm{Aut}}(L/k)\)</span> permutes the roots of irreducible polynomials.</p>
 </div>
 <div class="proposition proofenv">
 <p><span class="math inline">\({\left\lvert {\operatorname{Aut}(L/k)} \right\rvert} \leq [L: k]\)</span> with equality precisely when <span class="math inline">\(L/k\)</span> is normal.</p>
@@ -3744,7 +3917,7 @@ r\curvearrowright(m\otimes n) \mathrel{\vcenter{:}}=(r\curvearrowright m)\otimes
 <p>If <span class="math inline">\(\dim_k V, \dim_k W &lt; \infty\)</span> then there is an isomorphism 
 <span class="math display">
 \begin{align*}
-V {}^{ \check{} }\otimes_k W \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(V, W) \\
+V {}^{ \vee }\otimes_k W \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(V, W) \\
 \tilde v \otimes w &amp;\mapsto \tilde v({-}) w
 .\end{align*}
 <span></p>
@@ -3753,7 +3926,7 @@ V {}^{ \check{} }\otimes_k W \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{
 <p>If either of <span class="math inline">\(\dim_k V, \dim_k W\)</span> is finite, then 
 <span class="math display">
 \begin{align*}
-V {}^{ \check{} }\otimes_k W {}^{ \check{} }\xrightarrow{\sim} (V\otimes W) {}^{ \check{} }\\
+V {}^{ \vee }\otimes_k W {}^{ \vee }\xrightarrow{\sim} (V\otimes W) {}^{ \vee }\\
 v\otimes w &amp;\mapsto (x \otimes y \mapsto v(x) w(y))
 .\end{align*}
 <span></p>
@@ -3762,7 +3935,7 @@ v\otimes w &amp;\mapsto (x \otimes y \mapsto v(x) w(y))
 <p>
 <span class="math display">
 \begin{align*}
-\mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(V, W) \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(W, V) {}^{ \check{} }\\
+\mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(V, W) \xrightarrow{\sim} \mathop{\mathrm{Hom}}_{{\mathsf{k}{\hbox{-}}\mathsf{Mod}}}(W, V) {}^{ \vee }\\
 T &amp;\mapsto \operatorname{Tr}(T \circ {-})
 .\end{align*}
 <span></p>
@@ -3778,15 +3951,27 @@ T &amp;\mapsto \operatorname{Tr}(T \circ {-})
 </blockquote>
 </div>
 <h1 data-number="8" id="linear-algebra-1"><span class="header-section-number">8</span> Linear Algebra</h1>
-<h2 data-number="8.1" id="definitions-1"><span class="header-section-number">8.1</span> Definitions</h2>
+<h2 data-number="8.1" id="definitions-2"><span class="header-section-number">8.1</span> Definitions</h2>
 <div class="remark proofenv">
 <p>The main powerhouse: for <span class="math inline">\(T:V\to V\)</span> a linear transformation for <span class="math inline">\(V\in{\mathsf{Vect}}_k\)</span>, map to <span class="math inline">\(V\in \mathsf{k[x]}{\hbox{-}}\mathsf{Mod}\)</span> by letting polynomials act via <span class="math inline">\(p(x)\cdot \mathbf{v} \mathrel{\vcenter{:}}= p(T)(\mathbf{v})\)</span>. Using that <span class="math inline">\(k[x]\)</span> is a PID iff <span class="math inline">\(k\)</span> is a field, and we can apply the FTFGMPID to get two decompositions: 
 <span class="math display">
 \begin{align*}
-V \cong \bigoplus_{i=1}^n k[x]/ \left\langle{ q_i(x) }\right\rangle &amp;&amp; q_{i}(x) \divides q_{i+1}(x) \\
+V &amp;\cong \bigoplus_{i=1}^n k[x]/ \left\langle{ q_i(x) }\right\rangle &amp;&amp; q_{i}(x) \divides q_{i+1}(x) \divides \cdots  \\
 V &amp;\cong \bigoplus _{j=1}^m k[x] / \left\langle{ p_i(x)^{e_i} }\right\rangle &amp;&amp; \text{ with } p_i \text{ not necessarily distinct.} 
 \end{align*}
-<span> - The <span class="math inline">\(q_i\)</span> are the <strong>invariant factors</strong> of <span class="math inline">\(T\)</span> - <span class="math inline">\(q_i\)</span> is the minimal polynomial of <span class="math inline">\(T\)</span> restricted to <span class="math inline">\(V_i \mathrel{\vcenter{:}}= k[x] / \left\langle{ q_i(x) }\right\rangle\)</span>. - <span class="math inline">\(q_n\)</span> is the <strong>minimal polynomial</strong> of <span class="math inline">\(T\)</span>. - <span class="math inline">\(\prod_{i=1}^n q_i(x)\)</span> is the <strong>characteristic polynomial</strong> of <span class="math inline">\(T\)</span>. - The <span class="math inline">\(p_i\)</span> are the <strong>elementary divisors</strong> of <span class="math inline">\(T\)</span>.</p>
+<span></p>
+<ul>
+<li>The <span class="math inline">\(q_i\)</span> are the <strong>invariant factors</strong> of <span class="math inline">\(T\)</span>
+<ul>
+<li><span class="math inline">\(q_i\)</span> is the minimal polynomial of <span class="math inline">\(T\)</span> restricted to <span class="math inline">\(V_i \mathrel{\vcenter{:}}= k[x] / \left\langle{ q_i(x) }\right\rangle\)</span>.</li>
+<li>The largest invariant factor <span class="math inline">\(q_n\)</span> is the <strong>minimal polynomial</strong> of <span class="math inline">\(T\)</span>.</li>
+<li>The product <span class="math inline">\(\prod_{i=1}^n q_i(x)\)</span> is the <strong>characteristic polynomial</strong> of <span class="math inline">\(T\)</span>.</li>
+</ul></li>
+<li>The <span class="math inline">\(p_i\)</span> are the <strong>elementary divisors</strong> of <span class="math inline">\(T\)</span>.
+<ul>
+<li>Todo: what can you read off of this…?</li>
+</ul></li>
+</ul>
 </div>
 <div class="definition proofenv" title="Nondegenerate Bilinear Form">
 
@@ -4034,6 +4219,14 @@ M_1 =
 <li><p><span class="math inline">\(T\)</span> has <span class="math inline">\(\dim V\)</span> distinct eigenvalues</p></li>
 </ul>
 </div>
+<h3 data-number="8.4.6" id="computing-jordan-canonical-form"><span class="header-section-number">8.4.6</span> Computing Jordan Canonical Form</h3>
+<div class="proposition proofenv" title="JCF Algorithm">
+<p>The following algorithm always works for computing <span class="math inline">\(\mathrm{JCF}(A)\)</span>:</p>
+<ul>
+<li>Compute $<br />
+</li>
+</ul>
+</div>
 <h2 data-number="8.5" id="diagonalizability"><span class="header-section-number">8.5</span> Diagonalizability</h2>
 <div class="remark proofenv">
 <p><em>Notation:</em> <span class="math inline">\(A^*\)</span> denotes the conjugate transpose of <span class="math inline">\(A\)</span>.</p>
@@ -4212,6 +4405,9 @@ M_2
 .\end{align*}
 <span></p>
 </div>
+<div class="proposition proofenv" title="Order of $\GL_n$">
+
+</div>
 <div class="definition proofenv" title="Special Linear Group">
 <p>
 <span class="math display">
@@ -4267,15 +4463,12 @@ J \mathrel{\vcenter{:}}=
 .\end{align*}
 <span></p>
 </div>
-<div class="proposition proofenv" title="Order of $\GL_n$">
-
-</div>
 <h1 data-number="9" id="representation-theory"><span class="header-section-number">9</span> Representation Theory</h1>
 <div class="theorem proofenv" title="Schur&#39;s Lemma">
 <p>If <span class="math inline">\(M \in \mathsf{G}{\hbox{-}}\mathsf{Mod}\)</span> is an irreducible representation of <span class="math inline">\(G\)</span> with <span class="math inline">\(\dim_k M &lt; \infty\)</span> and <span class="math inline">\(k=\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu\)</span>, then there is an isomorphism 
 <span class="math display">
 \begin{align*}
-M &amp; \xrightarrow{\sim} {\operatorname{Aut}}_G(M, M)
+M &amp; \xrightarrow{\sim} \mathop{\mathrm{Aut}}_G(M, M)
 .\end{align*}
 <span></p>
 </div>
@@ -4376,7 +4569,7 @@ m &amp;\mapsto g\curvearrowright m
 <ul>
 <li>Show that the center of <span class="math inline">\(S_3\)</span> is trivial.</li>
 <li>Show that <span class="math inline">\(Z(S_n) = 1\)</span> for <span class="math inline">\(n\geq 3\)</span></li>
-<li>Show that <span class="math inline">\({\operatorname{Aut}}(S_3) = {\operatorname{Inn}}(S_3) \cong S_3\)</span>.</li>
+<li>Show that <span class="math inline">\(\mathop{\mathrm{Aut}}(S_3) = {\operatorname{Inn}}(S_3) \cong S_3\)</span>.</li>
 <li>Show that the transitive subgroups of <span class="math inline">\(S_3\)</span> are <span class="math inline">\(S_3, A_3\)</span></li>
 <li>Show that the transitive subgroups of <span class="math inline">\(S_4\)</span> are <span class="math inline">\(S_4, A_4, D_4, {\mathbb{Z}}_2^2, {\mathbb{Z}}_4\)</span>.</li>
 <li>Show that <span class="math inline">\(S_4\)</span> has two normal subgroups: <span class="math inline">\(A_4, {\mathbb{Z}}_2^2\)</span>.</li>
@@ -5325,7 +5518,7 @@ t &amp;\mapsto w \text{ where } w^p = 1
 <p>I.e. if <span class="math inline">\(H{~\trianglelefteq~}G\)</span> and <span class="math inline">\(N{~\trianglelefteq~}H\)</span>, it’s not necessarily the case that <span class="math inline">\(N{~\trianglelefteq~}G\)</span>.</p>
 </div>
 <div class="definition proofenv" title="Characteristic Subgroups">
-<p>A subgroup <span class="math inline">\(H\leq G\)</span> is <strong>characteristic</strong> in <span class="math inline">\(G\)</span>, written <span class="math inline">\(H \operatorname{ch}G\)</span>, iff for every <span class="math inline">\(\phi \in {\operatorname{Aut}}(G)\)</span>, <span class="math inline">\(\phi(H) \leq H\)</span>. Equivalently, <span class="math inline">\(\phi(H) = H\)</span>. I.e. <span class="math inline">\(H\)</span> is fixed (not necessarily pointwise) under every automorphism of the ambient group <span class="math inline">\(G\)</span>.</p>
+<p>A subgroup <span class="math inline">\(H\leq G\)</span> is <strong>characteristic</strong> in <span class="math inline">\(G\)</span>, written <span class="math inline">\(H \operatorname{ch}G\)</span>, iff for every <span class="math inline">\(\phi \in \mathop{\mathrm{Aut}}(G)\)</span>, <span class="math inline">\(\phi(H) \leq H\)</span>. Equivalently, <span class="math inline">\(\phi(H) = H\)</span>. I.e. <span class="math inline">\(H\)</span> is fixed (not necessarily pointwise) under every automorphism of the ambient group <span class="math inline">\(G\)</span>.</p>
 </div>
 <div class="remark proofenv" title="Characteristic isn&#39;t equivalent to normalcy">
 <p>Characteristic subgroups are normal, because <span class="math inline">\(\psi_g({-}) \mathrel{\vcenter{:}}= g({-})g^{-1}\)</span> is an (inner) automorphic of <span class="math inline">\(G\)</span>. Not every normal subgroup is characteristic: take <span class="math inline">\(G \mathrel{\vcenter{:}}= H_1 \times H_2\)</span> and <span class="math inline">\(\psi(x, y) = (y, x)\)</span>.</p>
@@ -5337,8 +5530,8 @@ t &amp;\mapsto w \text{ where } w^p = 1
 <details open><summary><i>(Click to expand proof)</i></summary>
 <p><span class="math inline">\(A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C\)</span>:</p>
 <ul>
-<li><span class="math inline">\(A\operatorname{ch}B\)</span> iff <span class="math inline">\(A\)</span> is fixed by every <span class="math inline">\(\psi\in {\operatorname{Aut}}(B)\)</span>., WTS <span class="math inline">\(cAc^{-1}= A\)</span> for all <span class="math inline">\(c\in C\)</span>.</li>
-<li>Since <span class="math inline">\(B{~\trianglelefteq~}C\)</span>, the automorphism <span class="math inline">\(\psi({-}) \mathrel{\vcenter{:}}= c({-})c^{-1}\)</span> descends to an element of <span class="math inline">\({\operatorname{Aut}}(B)\)</span>.</li>
+<li><span class="math inline">\(A\operatorname{ch}B\)</span> iff <span class="math inline">\(A\)</span> is fixed by every <span class="math inline">\(\psi\in \mathop{\mathrm{Aut}}(B)\)</span>., WTS <span class="math inline">\(cAc^{-1}= A\)</span> for all <span class="math inline">\(c\in C\)</span>.</li>
+<li>Since <span class="math inline">\(B{~\trianglelefteq~}C\)</span>, the automorphism <span class="math inline">\(\psi({-}) \mathrel{\vcenter{:}}= c({-})c^{-1}\)</span> descends to an element of <span class="math inline">\(\mathop{\mathrm{Aut}}(B)\)</span>.</li>
 <li>Then <span class="math inline">\(\psi(A) = A\)</span> since <span class="math inline">\(A\operatorname{ch}B\)</span>, so <span class="math inline">\(cAc^{-1}= A\)</span> and <span class="math inline">\(A{~\trianglelefteq~}C\)</span>.</li>
 </ul>
 </details>
@@ -5353,7 +5546,7 @@ Z(G) \operatorname{ch}G
 </div>
 <div class="proof proofenv" title="?">
 <details open><summary><i>(Click to expand proof)</i></summary>
-<p>Let <span class="math inline">\(\psi \in {\operatorname{Aut}}(H)\)</span> and <span class="math inline">\(x=\psi(y)\in \psi(Z(H))\)</span> so <span class="math inline">\(y\in Z(H)\)</span>, then for arbitrary <span class="math inline">\(h\in H\)</span>, 
+<p>Let <span class="math inline">\(\psi \in \mathop{\mathrm{Aut}}(H)\)</span> and <span class="math inline">\(x=\psi(y)\in \psi(Z(H))\)</span> so <span class="math inline">\(y\in Z(H)\)</span>, then for arbitrary <span class="math inline">\(h\in H\)</span>, 
 <span class="math display">
 \begin{align*}
 \psi(y)h 
@@ -5383,7 +5576,7 @@ H_G = \displaystyle\bigcap_{g\in G} gHg^{-1} = \left\langle{ N: N {~\trianglelef
 <span> where 
 <span class="math display">
 \begin{align*}
-\psi: G &amp;\to {\operatorname{Aut}}(G/H) \\
+\psi: G &amp;\to \mathop{\mathrm{Aut}}(G/H) \\
 g &amp;\mapsto (xH\mapsto gxH)
 \end{align*}
 <span></p>
@@ -5397,7 +5590,7 @@ g &amp;\mapsto (xH\mapsto gxH)
 </div>
 <div class="solution proofenv">
 <details open><summary><i>(Click to expand solution)</i></summary>
-<p>Let <span class="math inline">\(\psi\in {\operatorname{Aut}}(G)\)</span>. For one containment, we can show <span class="math inline">\(\psi(g) = h = h\psi(g)\)</span> for all <span class="math inline">\(\psi(g) \in \psi(G)\)</span> and <span class="math inline">\(h\in G\)</span>. This is a computation: 
+<p>Let <span class="math inline">\(\psi\in \mathop{\mathrm{Aut}}(G)\)</span>. For one containment, we can show <span class="math inline">\(\psi(g) = h = h\psi(g)\)</span> for all <span class="math inline">\(\psi(g) \in \psi(G)\)</span> and <span class="math inline">\(h\in G\)</span>. This is a computation: 
 <span class="math display">
 \begin{align*}
 \psi(g) h 

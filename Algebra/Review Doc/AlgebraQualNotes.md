@@ -66,16 +66,14 @@
 \newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
 \newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{{ \mathbb{Z}_{(p)} }}
 \newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
 \newcommand{\chp}[0]{\operatorname{ch. p}}
 \newcommand{\fp}[0]{\operatorname{fp}}
 \newcommand{\gp}[0]{ {\operatorname{gp} } }
 \newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\qc}[0]{{\operatorname{qc}}}
@@ -113,6 +111,8 @@
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
 \newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\Spec}[0]{\operatorname{Spec}}
+\newcommand{\Spf}[0]{\operatorname{Spf}}
 \newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
 \newcommand{\Tr}[0]{\operatorname{Tr}}
@@ -161,7 +161,6 @@
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
     \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
 \newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\Aut}[0]{{\operatorname{Aut}}}
 \newcommand{\aut}[0]{\operatorname{Aut}}
 \newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Out}[0]{{\operatorname{Out}}}
@@ -328,6 +327,7 @@
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
 \newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
 \newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
@@ -365,11 +365,11 @@
 \newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
 \newcommand{\Sum}[0]{ \displaystyle\sum }
-\newcommand{\dual}[0]{ {}^{ \check{} }}
+\newcommand{\dual}[0]{ {}^{ \vee }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
 \newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{\varepsilon}
+\newcommand{\eps}[0]{{\varepsilon}}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
 \newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
@@ -407,6 +407,10 @@
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
+\newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lien}[0]{{\mathfrak{n}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
@@ -432,7 +436,6 @@
 \newcommand{\surjects}[0]{\twoheadrightarrow}
 \newcommand{\Prism}[0]{\mathsf{Prism}}
 \newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\Spf}[0]{\mathsf{Spf}}
 \newcommand{\WCart}[0]{\mathsf{WCart}}
 \newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\surjectsvia}[2][]{
@@ -571,11 +574,15 @@
 \newcommand\tmf{ \mathrm{tmf} }
 \newcommand\taf{ \mathrm{taf} }
 \newcommand\Fix{ \mathrm{Fix} }
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\tilt[0]{ { \flat } }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator{\submfds}{SubMfds}
-\DeclareMathOperator{\crys}{crys}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Deck}{Deck}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -635,6 +642,7 @@
 \newcommand{\diam}[0]{{\operatorname{diam}}}
 \newcommand{\gal}[0]{\operatorname{Gal}}
 \newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
 \newcommand{\diag}[0]{\operatorname{diag}}
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
@@ -666,7 +674,7 @@
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\delbar}[0]{\bar{\del}}
+  \newcommand{\delbar}[0]{{ \bar{\del}}}
 
 
 
@@ -789,6 +797,10 @@
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\crys}[0]{{\mathrm{crys}}}
+\newcommand{\Xff}[0]{{X_\mathrm{FF}}}
+\newcommand{\an}[0]{{\mathrm{an}}}
 
 
 \newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
@@ -2976,7 +2988,7 @@ A **division ring** is any (potentially noncommutative) ring $R$ for which $R\sm
 An element $r\in R$ is a **zero-divisor** iff there exists an $a\in R\smz$ such that $ar = ra = 0$, i.e. $r\divides 0$.
 Equivalently, the map
 \[  
-r_\wait: R &\to R \\
+r\cdot: R &\to R \\
 x &\mapsto rx
 \]
 fails to be injective.
@@ -3146,10 +3158,15 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 :::
 
 
+:::{.proposition title="Polynomial rings over fields have division"}
+If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
+:::
+
+
+
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
 - $R$ a finite integral domain $\implies R$ is a field.
-- $\FF$ a field $\implies \FF[x]$ is a Euclidean domain.
 - $\FF$ a field $\iff \FF[x]$ is a PID.
 - $\FF$ is a field $\iff \FF$ is a commutative simple ring.
 - $R$ is a UFD $\iff R[x]$ is a UFD.
@@ -3371,15 +3388,49 @@ Division algorithm for Euclidean domains.
 :::
 
 
+:::{.definition title="Field of fractions"}
+For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be constructed as 
+\[
+\ff(R) \da \qty{R \cross R\nonzero}/\sim && (a,s)\sim bt \iff at-bs = 0_R
+.\]
+
+> Checking transitivity requires having no nonzero zero divisors.
+
+:::
+
+
 :::{.definition title="Localization"}
-\todo[inline]{todo}
+For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS \subseteq S$ and $1_R\in S$, the **localization of $R$ at $S$** can be constructed as
+\[
+R\localize{S} \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
+.\]
+
+> Why the $u$: use in proof of transitivity.
 
 :::
 
-:::{.definition title="Fraction Field"}
-\todo[inline]{todo}
+\todo[inline]{Universal property.}
+
+
+:::{.warnings}
+There is a canonical ring morphism
+\[
+R &\to R\localize{S} \\
+x &\mapsto {x\over 1}
+,\]
+but this may not be injective.
+:::
+
+
+
+:::{.remark}
+For integral domains $R$, 
+\[
+\ff(R) \cong R\localize{ (R\nonzero) }
+.\]
 
 :::
+
 
 
 :::{.theorem title="Hilbert Basis Theorem"}
@@ -3391,98 +3442,34 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 :::
 
 
+:::{.proposition title="Polynomial rings over UFDs are UFDs"}
+\todo[inline]{todo}
+
+
+:::
+
+
+
 # Field Theory
 
-## Facts and Definitions
-
-Let $k$ denote a field, and $L/k$ extensions.
-
-
 :::{.remark}
-\envlist
-
-- $[L: K] = \dim_{\Vect_K} L$, the dimension of $L$ as a $K\dash$vector space
-- \( \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K } \), the lifts of the identity on $K$.
-- \( \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \one_K} \), the number of lifts of the identity on $K$.
-- $\Gal(E/F) \da \Aut_{\Fieldsover{k} }$ if $E$ is finite, normal, and separable.
-:::
-
-
-:::{.definition title="Simple Extensions"}
-An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
-:::
-
-
-:::{.definition title="Fixed Field"}
-For $H \leq \Aut_{\Fieldsover{k}}(L)$,
-\[
-L^H \da \ts{ \ell \in L \st  \sigma(l) = \ell }
-.\]
-
-:::
-
-
-
-:::{.definition title="Prime Subfield"}
-The **prime subfield** of a field $F$ is the subfield generated by $1$.
+Galois is defined as **normal and separable**.
 :::
 
 :::{.fact}
 \envlist
-
-- Irreducible $\implies$ separable.
-- The minimal polynomial of an algebraic element is always irreducible.
-- Every irreducible polynomial over a perfect field is separable.
-- Every finite extension of a perfect field is separable. 
+- All fields are simple rings (no proper nontrivial ideals).
+  - Thus every field morphism is either zero or injective.
+- The characteristic of any field $k$ is either 0 or $p$ a prime.
+- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 :::
 
-:::{.definition title="Field Automorphisms"}
-\[ 
-\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}
-.\]
+
+## Basics: Polynomials
 
 :::{.definition title="Reducible and Irreducible Polynomials"}
 For $\FF$ a field, a polynomial $f\in \FF[x]$ is **reducible** if and only if $f$ can be factored as $f(x) = g(x) h(x)$ for some $g, h\in \FF[x]$ with $\deg g, \deg h \geq 1$ (so $g, h$ are nonconstant).
 $f$ is **irreducible** if $f$ is not reducible.
-:::
-
-:::
-
-:::{.remark}
-Note that in general, 
-\[
-\abs{ \Aut(L/k) } \leq [L: K]
-.\]
-
-:::
-
-:::{.definition title="Characterizations of Perfect Fields"}
-The following are equivalent:
-
-- $k$ is a **perfect** field.
-
-- Every irreducible polynomial $p\in k[x]$ is separable
-
-- Every finite extension $F/k$ is separable.
-
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
-:::
-
-:::{.fact}
-\envlist
-- The characteristic of any field $k$ is either 0 or $p$ a prime.
-- All fields are simple rings (no proper nontrivial ideals).
-- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
-- Every field morphism is either zero or injective.
-:::
-
-:::{.theorem title="Gauss' Lemma"}
-Let $R$ be a UFD and $F$ its field of fractions.
-Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
-:::
-
-:::{.corollary}
-A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
 :::
 
 :::{.theorem title="Eisenstein's Criterion"}
@@ -3494,54 +3481,311 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
+:::{.theorem title="Gauss' Lemma"}
+Let $R$ be a UFD and $F$ its field of fractions.
+Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+:::
+
+:::{.corollary}
+A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
+:::
+
 :::{.definition title="Elementary Symmetric Functions"}
-Todo
+\todo[inline]{todo}
+:::
+
+## Definitions
+
+:::{.definition title="Characteristic"}
+The **characteristic** of a ring $R$ is the smallest integer $p$ such that $\sum_{k=1}^p 1 = 0$.
+:::
+
+:::{.proposition title="Freshman's Dream"}
+If $\ch k = p$ then $(a+b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$.
+:::
+
+:::{.definition title="Fixed Field"}
+For $H \leq \Aut_{\Fieldsover{k}}(L)$,
+\[
+L^H \da \ts{ \ell \in L \st  \sigma(l) = \ell }
+.\]
+
+:::
+
+:::{.definition title="Prime Subfield"}
+The **prime subfield** of a field $F$ is the subfield generated by $1$.
+:::
+
+:::{.theorem title="Characterization of Prime Subfields"}
+The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for some $p$.
+:::
+
+:::{.definition title="Field Automorphisms"}
+\[ 
+\Aut(L/k) = \theset{\sigma: L \to L \suchthat \restrictionof{\sigma}{k} = \id_k}
+.\]
+
+:::
+
+:::{.definition title="Embeddings and Lifts"}
+Let $k$ denote a field, and $L/k$ extension.
+Every field morphism is an embedding (injection).
+An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
+
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	& k
+	\arrow[hook', from=3-2, to=1-1]
+	\arrow[hook, from=3-2, to=1-3]
+	\arrow[hook, from=1-1, to=1-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	k && {k_\sigma}
+	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=3-3, to=1-3]
+	\arrow[shorten <=9pt, shorten >=9pt, Rightarrow, from=1, to=0]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==)
+
+Most often, we'll take $\sigma: k\to k$ to be the identity.
+
+:::
+
+:::{.definition title="Perfect Fields"}
+The following are equivalent:
+
+- $k$ is a **perfect** field.
+
+- Every finite extension $F/k$ is separable.
+
+- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+
+- Every irreducible polynomial $p\in k[x]$ is separable
+
+:::
+
+:::{.proposition title="Irreducible implies separable for perfect fields"}
+\todo[inline]{todo}
+
+:::
+
+:::{.definition title="Numerical Invariants"}
+\envlist
+
+- \[
+[L: K] = \dim_{\Vect_K} L
+,\] 
+  the dimension of $L$ as a $K\dash$vector space
+- \[ \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K } ,\] the lifts of the identity on $K$.
+- \[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} ,\] the number of lifts of the identity on $K$.
+- \[
+\Gal(E/F) \da \Aut_{\Fieldsover{k} }
+,\]
+  if $E$ is finite, normal, and separable.
+
+:::
+
+:::{.remark title="on general inequality"}
+Note that in general, 
+\[
+\abs{ \Aut(L/k) } \leq [L: K]
+,\]
+with equality when $L/k$ is Galois.
+
+:::
+
+### Extensions
+
+:::{.definition title="Simple Extensions"}
+An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
+:::
+
+:::{.definition title="Primitive Extension"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+:::
+
+:::{.definition title="Algebraic Extension"}
+A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
 ## Extensions
 
-:::{.definition title="Algebraic Field Extension"}
-A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
+:::{.definition title="Distinguished Classes"}
+A collection of field extensions $\mathcal{S}$ is **distinguished** iff
+
+1. For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+2. Lifts of distinguished extensions are distinguished: if $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \iff && K \\
+	\\
+	k &&&& k
+	\arrow[hook, from=5-1, to=3-1]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=5-5, to=3-5]
+	\arrow[hook, from=3-5, to=1-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-1, to=1-1]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-5, to=3-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
+
+\begin{tikzcd}
+	& LK \\
+	L && K \\
+	& k
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
+	\arrow[hook', from=3-2, to=2-1]
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=)
+
+Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
+
+> Supposed to think of $LK/L$ as a lift of $K/k$.
+
 :::
 
-:::{.proposition title="Normal Field Extension"}
-Let $L/k$ be a finite extension.
+:::{.example title="of distinguished classes"}
+
+- Algebraic extensions are distinguished.
+- Finite extensions are distinguished.
+- Separable extensions are distinguished.
+- Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
+  Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
+  - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
+  Similar issue for $\QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal.
+:::
+
+### Normal Extensions
+
+:::{.definition title="Normal Field Extension"}
+Let $L/k$ be an extension.
 Then TFAE:
 
 - $L/k$ is **normal**.
 
 - Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
-  - i.e. every polynomial splits into linear factors
+  - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
+   Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Either $f$ splits in $L$ or $f$ has no roots in $L$.
+- Every embedding $\sigma: L \injects \bar{k}$ over $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ over $k$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
-
-- If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
+- If $L$ is separable and finite: $L$ is the splitting field of some irreducible $f\in k[x]$.
 :::
 
-:::{.proof title="?"}
-\todo[inline]{todo}
+:::{.example title="of normal extensions"}
+\envlist
+
+- If $[L: k] = 2$ then $L/k$ is normal.
+- $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
+  - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
+- $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
+
+
+:::{.proposition title="?"}
+For $L/k$ finite, $L$ is normal iff $L = \SF(f)$ is the splitting field for some $f\in k[x]$.
+:::
+
+### Separable Extensions
 
 :::{.definition title="Separable Field Extension"}
-Let $L/k$ be a field extension, $\alpha \in L$ be arbitrary, and $f(x) \definedas\min(\alpha, k)$.
+Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
 
-- $L/k$ is **separable**
-- Every element ${\alpha} \in L$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots, i.e. $f$ has distinct roots in $L$.
+- $L/k$ is a **separable** extension.
+- Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
+- $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
 - $\gcd(f, f') = 1$.
 - $f' \not\equiv 0$
+- Every finite subextension $L'/k$ is separable.
 
 If $L/k$ is a finite extension, then, TFAE:
 
 - $L/k$ is separable.
 - \( L = k( \alpha) \) for \( \alpha \)  a separable element.
 - \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
-- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$
+- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
+- $[L: K] = [L:K]_s$, the separable degree.
 
 :::
+
+:::{.definition title="Separable degree"}
+Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	& k
+	\arrow["\sigma"', hook, from=3-2, to=1-3]
+	\arrow[dashed, hook, from=1-1, to=1-3]
+	\arrow[hook', from=3-2, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+:::
+
+:::{.proposition title="Derivative criterion for separability"}
+A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
+:::
+
+:::{.proof title="?"}
+$\implies:$:
+Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
+\[
+f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
+\]
+and $(x-a)$ divides both factors.
+
+$\notimplies$:
+If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
+\[
+f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
+.\]
+Then fixing any $a_k$ where $f(a_k) = 0$, check 
+\[
+f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
+.\]
+
+:::
+
+:::{.proposition title="Separable splitting fields are Galois"}
+If $L/k$ is separable, then
+\[
+[L: k] = \ts{ L: k } 
+.\]
+If $L/k$ is a splitting field, then
+\[
+[L:K] = \# \Aut_{\Fieldsover{k}}(L) \da \# \Gal(L/k)
+.\]
+
+:::
+
+:::{.proposition title="?"}
+Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.
+:::
+
+### Galois Extensions
 
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
@@ -3562,26 +3806,7 @@ In this case, we define the **Galois group** as
 .\]
 :::
 
-:::{.definition title="Simple Extension"}
-An extension $F/k$ is **simple** if $F = k[\alpha]$ for a single element $\alpha$.
-:::
-
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
-:::
-
-:::{.proposition title="Classification of quadratic extensions"}
-\todo[inline]{todo}
-If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
-:::
-
-:::{.corollary title="Quadratic extensions of rationals"}
-If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
-:::
-
-:::{.proposition title="?"}
-For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
-:::
+### Special Extensions
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -3605,29 +3830,21 @@ Every finite separable extension is simple.
 $\GF(p^n)$ is a simple extension over $\FF_p$.
 :::
 
+### Quadratic Extensions
+
+:::{.proposition title="Classification of quadratic extensions"}
+If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+:::
+
+:::{.corollary title="Quadratic extensions of rationals"}
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
+:::
 
 :::{.proposition title="?"}
-If $L/k$ is separable, then
-\[
-[L: k] = \ts{ L: k } 
-.\]
-If $L/k$ is a splitting field, then
-\[
-[L:K] = \# \Aut_{\Fieldsover{k}}(L) \da \# \Gal(L/k)
-.\]
-
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
 :::
-
 
 ## Finite Fields
-
-:::{.theorem title="Characterization of Prime Subfields"}
-The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for some $p$.
-:::
-
-:::{.proposition}
-If $\ch k = p$ then $(a+b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$.
-:::
 
 :::{.proof}
 Todo
@@ -3693,53 +3910,7 @@ This has no roots in $k$.
 :::
 \todo{Proof}
 
-
 ## Cyclotomic Polynomials
-
-:::{.definition title="Cyclotomic Field"}
-Any subfield of the splitting field $E$ of $f(x) = x^m-1$ is a **cyclotomic field**.
-:::
-
-:::{.proposition}
-$\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
-:::
-
-:::{.proof}
-$\deg \Phi_n(x)$ is the number of $n$th primitive roots, which is the number of numbers less than and coprime to $n$.
-:::
-
-:::{.proposition title="Computing Totient Functions"}
-**Computing $\Phi_n$:**
-
-1.
-$$
-\Phi_{n}(z)=\prod_{d | n, d>0}\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
-$$
-where
-$$
-\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
-$$
-
-2.
-\[
-x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \frac{x^n-1}{\prod_{d | n \atop d < n} \Phi_{d}(x)},
-\]
-so just use polynomial long division.
-
-:::
-
-:::{.proposition}
-\[
-\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
-\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1
-\]
-:::
-
-:::{.proposition}
-\[
-k\divides n \implies \Phi_{n k}(x)=\Phi_{n}\left(x^{k}\right)
-\]
-:::
 
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
@@ -3749,14 +3920,56 @@ $$
 
 which is a product over primitive roots of unity.
 It is the unique irreducible polynomial which is a divisor of $x^n - 1$ but *not* a divisor of $x^k-1$ for any $k<n$.
+
+
+Note that $\deg \Phi_n(x) = \phi(n)$ for $\phi$ the totient function.
 :::
 
-:::{.proposition title="Table of cyclotomic polynomials"}
-\todo[inline]{todo}
+:::{.definition title="Cyclotomic Field"}
+Any subfield of $\SF(x^n-1)$ is a **cyclotomic field**.
 :::
 
-:::{.proposition title="Galois Groups of Cyclotomic Fields"}
-For $\zeta$ any primitive root of unity, $\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units$.
+
+:::{.proposition title="Computing Cyclotomic Polynomials"}
+**Computing $\Phi_n$:**
+
+1.
+$$
+\Phi_{n}(z)=\prod_{\substack{ d \divides n \\  d > 0} }\left(z^{d}-1\right)^{\mu\left(\frac{n}{d}\right)}
+$$
+where
+$$
+\mu(n) \equiv\left\{ \begin{array}{ll}{0} & {\text { if } n \text { has one or more repeated prime factors }} \\ {1} & {\text { if } n=1} \\ {(-1)^{k}} & {\text { if } n \text { is a product of } k \text { distinct primes, }}\end{array}\right.
+$$
+
+2.
+\[
+x^{n}-1=\prod_{d | n} \Phi_{d}(x) \implies \Phi_n(x) = \qty{x^n-1} \qty{\prod_{d | n \atop d < n} \Phi_{d}(x)}\inv,
+\]
+so just use polynomial long division.
+
+:::
+
+:::{.fact title="computing cyclotomic polynomials, special cases and examples"}
+\[
+\Phi_{p}(x)   &=  x^{p-1}+x^{p-2}+\cdots+x+1 \\
+\Phi_{2 p}(x) &=  x^{p-1}-x^{p-2}+\cdots-x+1 \\
+\\
+k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
+\\ \\
+\Phi_1(z) &= z-1 \\
+\Phi_2(z) &= z+1 \\
+\Phi_4(z) &= z^2+1 \\
+\Phi_6(z) &= z^2 -z + 1 \\
+\Phi_8(z) &= z^4+1 
+.\]
+:::
+
+:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
+The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity, and 
+\[
+\Gal(\QQ(\zeta_m)_{/\QQ}) \cong (\ZZ/m\ZZ)\units
+.\]
 :::
 
 :::{.theorem title="Kronecker-Weber"}
@@ -3764,33 +3977,29 @@ If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some 
 :::
 
 
-## Splitting Fields
-
-:::{.proposition title="Splitting Fields of Cyclotomic Polynomials"}
-The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive root of unity.
-:::
-
-
-
-## Unsorted
-
-
-:::{.proposition title="?"}
-A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
-:::
-
-:::{.proposition title="?"}
-Irreducible polynomials have distinct roots after passing to a splitting field.
-:::
-
-:::{.proof title="?"}
-\todo[inline]{todo}
-
-:::
-
-
-
 # Galois Theory
+
+
+:::{.proposition title="?"}
+If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
+
+:::
+
+
+:::{.fact}
+Transitive subgroups of $S_n$ for small $n$:
+
+| $n$ in $S_n$ | Transitive Subgroups              |
+|--------------|-----------------------------------|
+| 1            | 1                                 |
+| 2            | $\ZZ/2$                           |
+| 3            | $S_3, \ZZ/3$                      |
+| 4            | $S_4, A_4, D_4, (\ZZ/2)^2, \ZZ/4$ |
+| 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
+
+:::
+
+
 
 :::{.proposition}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
@@ -4356,22 +4565,22 @@ $\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
 
 ## Definitions
 
-
 :::{.remark}
 The main powerhouse: for $T:V\to V$ a linear transformation for $V\in\Vect_k$, map to $V\in \modsleft{k[x]}$ by letting polynomials act via $p(x)\cdot \vector v \da p(T)(\vector v)$.
 Using that $k[x]$ is a PID iff $k$ is a field, and we can apply the FTFGMPID to get two decompositions:
 \[
-V \cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \\
+V &\cong \bigoplus_{i=1}^n k[x]/ \gens{ q_i(x) } && q_{i}(x) \divides q_{i+1}(x) \divides \cdots  \\
 V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \text{ not necessarily distinct.} 
 \]
+
 - The $q_i$ are the **invariant factors** of $T$
   - $q_i$ is the minimal polynomial of $T$ restricted to $V_i \da k[x] / \gens{ q_i(x) }$. 
-  - $q_n$ is the **minimal polynomial** of $T$.
-  - $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
+  - The largest invariant factor $q_n$ is the **minimal polynomial** of $T$.
+  - The product $\prod_{i=1}^n q_i(x)$ is the **characteristic polynomial** of $T$.
 - The $p_i$ are the **elementary divisors** of $T$.
+  - Todo: what can you read off of this...?
 
 :::
-
 
 :::{.definition title="Nondegenerate Bilinear Form"}
 \todo[inline]{todo}
@@ -4675,6 +4884,17 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::
 
+### Computing Jordan Canonical Form
+
+
+:::{.proposition title="JCF Algorithm"}
+The following algorithm always works for computing $\JCF(A)$:
+
+- Compute $\
+
+:::
+
+
 ## Diagonalizability
 
 :::{.remark}
@@ -4750,8 +4970,6 @@ But the minimal polynomial is just the largest invariant factor.
 :::
 
 ## Matrix Counterexamples
-
-
 
 :::{.example title="?"}
 A matrix that:
@@ -4843,13 +5061,16 @@ M_2
 .\]
 :::
 
-
 ## Matrix Groups
 
 :::{.definition title="General Linear Group"}
 \[
 \GL_n(\RR) = \ts{ A \st A = \bar{A} } 
 .\]
+:::
+
+:::{.proposition title="Order of $\GL_n$"}
+\todo[inline]{todo}
 :::
 
 :::{.definition title="Special Linear Group"}
@@ -4866,7 +5087,6 @@ O_n(\CC) \da \ts{ A \st A^tA = A A^t = I}
 Dimension: $n(n-1) / 2$.
 :::
 
-
 :::{.definition title="Special Orthogonal Group"}
 \[
 \SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
@@ -4874,13 +5094,11 @@ Dimension: $n(n-1) / 2$.
 
 :::
 
-
 :::{.definition title="Unitary Group"}
 \[
 U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
 .\]
 :::
-
 
 :::{.definition title="Special Unitary Group"}
 \[
@@ -4888,7 +5106,6 @@ U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 }
 .\]
 
 :::
-
 
 :::{.definition title="Symplectic Group"}
 \[
@@ -4904,13 +5121,6 @@ J \da
 :::
 
 \todo[inline]{Matrix group definitions.}
-
-
-
-
-:::{.proposition title="Order of $\GL_n$"}
-\todo[inline]{todo}
-:::
 
 
 # Representation Theory 
