@@ -107,6 +107,13 @@ Todo
 
 ## Extensions
 
+
+:::{.remark}
+Every field morphism is an embedding (injection).
+An *embedding* of $k\dash$algebras $L\embeds L'$ is any field morphism that lifts the identity on $k$.
+:::
+
+
 :::{.definition title="Algebraic Field Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
@@ -120,7 +127,6 @@ Then TFAE:
 - Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
-
 
 - Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
 
