@@ -139,6 +139,8 @@ More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==)
 
+Most often, we'll take $\sigma: k\to k$ to be the identity.
+
 :::
 
 
