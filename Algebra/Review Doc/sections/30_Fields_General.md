@@ -51,8 +51,8 @@ Most often, we'll take $\sigma: k\to k$ to be the identity.
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
-- For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
-- If $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
+1. For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+2. Lifts of distinguished extensions are distinguished: if $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
 
 \begin{tikzcd}
 	L &&&& L \\
