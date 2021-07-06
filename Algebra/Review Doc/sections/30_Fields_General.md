@@ -1,5 +1,6 @@
 # Field Theory
 
+
 ## Facts and Definitions
 
 
@@ -89,12 +90,14 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
 
 :::
 
-
 :::{.example title="?"}
 
 - Algebraic extensions are distinguished.
 - Finite extensions are distinguished.
-- Normal extensions are *not* distinguished, but condition 2 holds.
+- Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
+  Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
+  - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
+  Similar issue for $\QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal.
 
 :::
 
@@ -115,7 +118,6 @@ L^H \da \ts{ \ell \in L \st  \sigma(l) = \ell }
 .\]
 
 :::
-
 
 
 :::{.definition title="Prime Subfield"}
@@ -223,6 +225,7 @@ Then TFAE:
 
 - If $[L: k] = 2$ then $L/k$ is normal.
 - $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
+  - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
 
