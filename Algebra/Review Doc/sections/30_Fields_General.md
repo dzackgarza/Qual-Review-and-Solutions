@@ -110,7 +110,35 @@ Todo
 
 :::{.remark}
 Every field morphism is an embedding (injection).
-An *embedding* of $k\dash$algebras $L\embeds L'$ is any field morphism that lifts the identity on $k$.
+An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
+
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	& k
+	\arrow[hook', from=3-2, to=1-1]
+	\arrow[hook, from=3-2, to=1-3]
+	\arrow[hook, from=1-1, to=1-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
+
+\begin{tikzcd}
+	L && {L'} \\
+	\\
+	k && {k_\sigma}
+	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=3-3, to=1-3]
+	\arrow[shorten <=9pt, shorten >=9pt, Rightarrow, from=1, to=0]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMCwyLCJrIl0sWzIsMiwia19cXHNpZ21hIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCJcXHNpZ21hIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==)
+
 :::
 
 
@@ -128,7 +156,7 @@ Then TFAE:
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ that is a lift of the identity on $k$ satisfies $\sigma(L) = L$.
+- Every embedding $\sigma: L \injects \bar{k}$ that of the identity on $k$ satisfies $\sigma(L) = L$.
 
 - If $L$ is separable: $L$ is the splitting field of some irreducible $f\in k[x]$.
 :::
