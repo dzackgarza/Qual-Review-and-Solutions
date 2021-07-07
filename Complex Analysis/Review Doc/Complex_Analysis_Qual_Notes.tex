@@ -56,31 +56,9 @@ A great deal of content borrowed from the following:
 \url{https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf}
 \end{quote}
 
-\hypertarget{useful-techniques}{%
-\section{Useful Techniques}\label{useful-techniques}}
-
-\hypertarget{notation}{%
-\subsection{Notation}\label{notation}}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.64}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.35}}@{}}
-\toprule
-Notation & Definition \\
-\midrule
-\endhead
-\({\mathbb{D}}\coloneqq\left\{{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} \leq 1}\right\}\)
-& The unit disc \\
-\({\mathbb{H}}\coloneqq\left\{{x+iy {~\mathrel{\Big|}~}y > 0}\right\}\)
-& The upper half-plane \\
-\(X_{1\over 2}\) & A ``half version of \(X\)'', see examples \\
-\({\mathbb{H}}_{1\over 2}\) & The first quadrant \\
-\({\mathbb{D}}_{1\over 2}\) & The portion of the first quadrant inside
-the unit disc \\
-\(S \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\}\)
-& The horizontal strip \\
-\bottomrule
-\end{longtable}
+\hypertarget{general-info-tips-techniques}{%
+\section{General Info / Tips /
+Techniques}\label{general-info-tips-techniques}}
 
 \hypertarget{greatest-hits}{%
 \subsection{Greatest Hits}\label{greatest-hits}}
@@ -148,57 +126,110 @@ following:
 
 \end{remark}
 
-\hypertarget{basic-but-useful-facts}{%
-\subsection{Basic but Useful Facts}\label{basic-but-useful-facts}}
+\begin{fact}
 
-\begin{fact}[Some useful facts about basic complex algebra]
-
-\envlist
+To show a function is holomorphic,
 
 \begin{itemize}
+\tightlist
 \item
-  \(z\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu = {\left\lvert {z} \right\rvert}^2\)
-  \begin{align*}
-  \Re(z) = { z + \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \over 2} && && 
-  \Im(z) = {z - \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \over 2i}
-  .\end{align*}
+  Use Morera's theorem
 \item
-  \(\operatorname{Arg}(z/w) = \operatorname{Arg}(z) - \operatorname{Arg}(w)\).
-\item
-  Exponential forms of cosine and sine, where it's sometimes useful to
-  set \(w\coloneqq e^{iz}\):
-  \begin{align*}
-  \cos(z) 
-  &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w^{-1})\\
-  \sin(z) 
-  &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w^{-1})
-  \\ \\
-  \cosh(z) = \cos(iz) 
-  &= {1\over 2}\qty{e^z + e^{-z}} \\
-  \sinh(z) = \sin(iz) 
-  &= {1\over 2}\qty{e^z - e^{-z}} 
-  .\end{align*}
-\item
-  Setting \(w=e^z\) is useful:
-\item
-  Various differentials:
-  \begin{align*}
-  dz &= dx + i~dy \\
-  d\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu &= dx - i~dy \\ \\
-  f_z &= f_x = f_y / i
-  .\end{align*}
-\item
-  Integral of a complex exponential:
-  \begin{align*}
-  \int_{0}^{2 \pi} e^{i \ell x} d x
-  &=\left\{\begin{array}{ll}
-  {2 \pi} & {\ell=0} \\ 
-  {0} & \text{else}
-  \end{array}\right.
-  .\end{align*}
+  Find a primitive (sufficient but not necessary)
 \end{itemize}
 
 \end{fact}
+
+\begin{fact}
+
+To count zeros:
+
+\begin{itemize}
+\tightlist
+\item
+  Rouche's theorem
+\item
+  The argument principle
+\end{itemize}
+
+\end{fact}
+
+\begin{itemize}
+\tightlist
+\item
+  Setting \(w=e^z\) is useful.
+\end{itemize}
+
+\hypertarget{basic-but-useful-facts}{%
+\subsection{Basic but Useful Facts}\label{basic-but-useful-facts}}
+
+\hypertarget{arithmetic}{%
+\subsubsection{Arithmetic}\label{arithmetic}}
+
+\begin{fact}[Some useful facts about basic complex algebra]
+
+\begin{align*}
+z\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu &= {\left\lvert {z} \right\rvert}^2 && 
+\operatorname{Arg}(z/w) = \operatorname{Arg}(z) - \operatorname{Arg}(w) \\
+\Re(z) &= { z + \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \over 2} && 
+\Im(z) = {z - \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \over 2i}
+.\end{align*}
+
+Exponential forms of cosine and sine, where it's sometimes useful to set
+\(w\coloneqq e^{iz}\):
+\begin{align*}
+\cos(z) 
+&= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w^{-1})\\
+\sin(z) 
+&= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w^{-1})
+\\ \\
+\cosh(z) 
+&= \cos(iz) 
+= {1\over 2}\qty{e^z + e^{-z}} \\
+\sinh(z) 
+&= \sin(iz) 
+= {1\over 2}\qty{e^z - e^{-z}} 
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+Some computations that come up frequently:
+\begin{align*}
+{\left\lvert {z \pm w} \right\rvert}^2 &= {\left\lvert {z} \right\rvert}^2 + {\left\lvert {w} \right\rvert}^z + 2\Re(\mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5muz) \\
+(a+bi)(c+di) &= (ac - bd) + (ad + bc) \\
+{1\over {\left\lvert {a+b} \right\rvert}} &\leq {1 \over {{\left\lvert {a} \right\rvert} - {\left\lvert {b} \right\rvert}}} &&
+{\left\lvert {e^{z}} \right\rvert} = e^{\Re(z)}, \quad \arg(e^z) = \Im(z)
+.\end{align*}
+
+\end{fact}
+
+\hypertarget{calculus}{%
+\subsubsection{Calculus}\label{calculus}}
+
+\begin{fact}
+
+Various differentials:
+\begin{align*}
+dz &= dx + i~dy \\
+d\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu &= dx - i~dy \\ \\
+f_z &= f_x = f_y / i
+.\end{align*}
+
+Integral of a complex exponential:
+\begin{align*}
+\int_{0}^{2 \pi} e^{i \ell x} d x
+&=\left\{\begin{array}{ll}
+{2 \pi} & {\ell=0} \\ 
+{0} & \text{else}
+\end{array}\right.
+.\end{align*}
+
+\end{fact}
+
+\hypertarget{series}{%
+\subsection{Series}\label{series}}
 
 \begin{fact}[Generalized Binomial Theorem]
 
@@ -216,15 +247,31 @@ and set \({n\choose k} \coloneqq(n)_k/k!\), then
 \begin{fact}[Some useful series]
 
 \begin{align*}
-\sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
-\sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
-\sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\sum_{k=1}^{n} k 
+  &=\frac{n(n+1)}{2} \\
+\sum_{k=1}^{n} k^{2} 
+  &=\frac{n(n+1)(2 n+1)}{6} \\
+\sum_{k=1}^{n} k^{3} 
+  &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\sum_{0\leq k \leq N} z^k 
+  &= {1 - z^{N+1} \over 1-z} \\
+{1\over 1-z} &= \sum_{k\geq 0} z^k \\
+e^z &= \sum_{k\geq 0} {z^k \over k!} \\
+\sin(z) 
+  &= \sum_{\substack{ k \geq 1 \\ \text{odd} }} (-1)^{k+1 \over 2} {z^k \over k!} \\
+  &= z - {1\over 3!}z^3 + {1\over 5!}z^5 + \cdots \\
+\cos(z) 
+  &= \sum_{\substack{ k \geq 0 \\ \text{even}} } (-1)^{k\over 2} {z^k \over k!} \\
+  &= 1 - {1\over 2!}z^2 + {1\over 4!}z^4 + \cdots \\
+  \\
+\cosh(z) &= \sum_{k\geq 0} { z^{2k} \over (2k)! } \\
+\sinh(z) &= \sum_{k\geq 0} { z^{2k+1} \over (2k+1)! } \\
 \log(1-x) 
-  &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
-{\frac{\partial }{\partial z}\,} \sum_{j=0}^\infty a_j z^j 
-  &= \sum_{j=0}^\infty a_{j+1}z^j \\
-\sqrt{1+x} 
-  &= (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
+  &= \sum_{k \geq 0} {z^k\over k} \quad {\left\lvert {z} \right\rvert} < 1 \\
+{\frac{\partial }{\partial z}\,} \sum_{k=0}^\infty a_k z^k 
+  &= \sum_{k=0}^\infty a_{k+1}z^k \\
+\sqrt{1+x} = (1+x)^{1/2} 
+  &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
   &= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \end{align*}
 
@@ -257,9 +304,9 @@ uniformly on every compact subset \(K \subseteq \Omega\).
 \begin{definition}[Equicontinuous Family]
 
 A family of functions \(f_n\) is \textbf{equicontinuous} iff for every
-\(\varepsilon\) there exists a \(\delta = \delta(\varepsilon)\) (not
+\({\varepsilon}\) there exists a \(\delta = \delta({\varepsilon})\) (not
 depending on \(n\) or \(f_n\)) such that
-\({\left\lvert {x-y} \right\rvert}<\varepsilon\implies {\left\lvert {f_n(x) - f_n(y)} \right\rvert} < \varepsilon\)
+\({\left\lvert {x-y} \right\rvert}<{\varepsilon}\implies {\left\lvert {f_n(x) - f_n(y)} \right\rvert} < {\varepsilon}\)
 for all \(n\).
 
 \end{definition}
@@ -273,7 +320,7 @@ with the \emph{uniform norm}
 Then a subset \(A \subseteq X\) is compact iff \(A\) is closed,
 uniformly bounded, and equicontinuous. As a consequence, if \(A\) is a
 sequence, it contains a subsequence converging uniformly to a continuous
-function. The proof is an \(\varepsilon/3\) argument.
+function. The proof is an \({\varepsilon}/3\) argument.
 
 \end{remark}
 
@@ -497,9 +544,6 @@ and interior region is referred to as a \textbf{toy contour}.
 
 \end{definition}
 
-\hypertarget{complex-arithmetic}{%
-\subsection{Complex Arithmetic}\label{complex-arithmetic}}
-
 \begin{fact}[Complex roots of a number]
 
 The complex \(n\)th roots of \(z \coloneqq r e^{i\theta}\) are given by
@@ -514,43 +558,6 @@ z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
 
 \end{fact}
 
-\begin{fact}
-
-Common trick:
-\begin{align*}
-f^{1/n} = e^{{1\over n} \log(f)}
-,\end{align*}
-taking (say) a principal branch of \(\log\) given by
-\({\mathbb{C}}\setminus(-\infty, 0] \times 0\).
-
-\end{fact}
-
-\begin{fact}
-
-Some computations that come up frequently:
-\begin{align*}
-{\left\lvert {z \pm w} \right\rvert}^2 &= {\left\lvert {z} \right\rvert}^2 + {\left\lvert {w} \right\rvert}^z + 2\Re(\mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5muz) \\
-(a+bi)(c+di) = (ac - bd) + (ad + bc)
-.\end{align*}
-
-\end{fact}
-
-\begin{fact}
-
-Some useful facts:
-\begin{align*}
-{\left\lvert {e^{z}} \right\rvert} = e^{\Re(z)}
-.\end{align*}
-
-On \(S^1\),
-\begin{align*}
-1/z &= e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\end{align*}
-
-\end{fact}
-
 \hypertarget{complex-log}{%
 \subsection{Complex Log}\label{complex-log}}
 
@@ -561,7 +568,21 @@ For \(z= r e^{i\theta}\neq 0\), \(\theta\) is of the form
 \begin{align*}
 \log(z) = \ln\qty{{\left\lvert {z} \right\rvert}} + i\operatorname{Arg}(z)
 \end{align*}
-and \(z^c \coloneqq e^{c\log(z)}\).
+and \(z^c \coloneqq e^{c\log(z)}\). Thus
+\begin{align*}
+\log(re^{i\theta}) = \ln {\left\lvert {r} \right\rvert} + i\theta
+.\end{align*}
+
+\end{fact}
+
+\begin{fact}
+
+Common trick:
+\begin{align*}
+f^{1/n} = e^{{1\over n} \log(f)}
+,\end{align*}
+taking (say) a principal branch of \(\log\) given by
+\({\mathbb{C}}\setminus(-\infty, 0] \times 0\).
 
 \end{fact}
 
@@ -587,7 +608,10 @@ Suppose \(\Omega\) is a simply-connected region such that
 \begin{definition}[Principal branch and exponential]
 
 Take \({\mathbb{C}}\) and delete \({\mathbb{R}}^{\leq 0}\) to obtain the
-\textbf{principal branch} of the logarithm, defined as
+\textbf{principal branch} of the logarithm. Equivalently, this is define
+for all \(z=re^{i\theta}\) where \(\theta \in (-\pi, \pi)\).
+
+Here the log is defined as
 \begin{align*}
 \operatorname{Log}(z) \coloneqq\log(r) + i\theta && {\left\lvert {\theta} \right\rvert} < \pi
 .\end{align*}
@@ -598,7 +622,37 @@ z^{\alpha} \coloneqq e^{\alpha \operatorname{Log}(z)}
 
 \end{definition}
 
-\begin{theorem}[Existence of log]
+\begin{warnings}
+
+It's tempting to define
+\begin{align*}
+z^{1\over n} \coloneqq(re^{i\theta})^{1\over n} = r^{1\over n} e^{i\theta \over n}
+,\end{align*}
+but this requires a branch cut to ensure continuity.
+
+\end{warnings}
+
+\begin{remark}
+
+Note the problem: for \(z\coloneqq x+i0 \in {\mathbb{R}}^{\leq 0}\),
+just above the axis consider \(z_+ \coloneqq x + i{\varepsilon}\) and
+\(z_- \coloneqq x-i{\varepsilon}\). Then
+
+\begin{itemize}
+\tightlist
+\item
+  \(\log(z_+) = \log{\left\lvert {x} \right\rvert} + i\pi\), and
+\item
+  \(\log(z_-) = \log{\left\lvert {x} \right\rvert} - i\pi\).
+\end{itemize}
+
+So \(\log\) can't even be made continuous if one crosses the branch. The
+issue is the \textbf{branch point} or \textbf{branch singularity} at
+\(z=0\).
+
+\end{remark}
+
+\begin{theorem}[Existence of log of a function]
 
 If \(f\) is holomorphic and nonvanishing on a simply-connected region
 \(\Omega\), then there exists a holomorphic \(G\) on \(\Omega\) such
@@ -693,13 +747,25 @@ In this case, \(\alpha = f'(z_0)\).
 \begin{itemize}
 \tightlist
 \item
+  \(f(z) \coloneqq{\left\lvert {z} \right\rvert}\) is not holomorphic.
+\item
+  \(f(z) \coloneqq\arg{z}\) is not holomorphic.
+\item
+  \(f(z) \coloneqq\Re{z}\) is not holomorphic.
+\item
+  \(f(z) \coloneqq\Im{z}\) is not holomorphic.
+\item
   \(f(z) = {1\over z}\) is holomorphic on
-  \({\mathbb{C}}\setminus\left\{{0}\right\}\).
+  \({\mathbb{C}}\setminus\left\{{0}\right\}\) but not holomorphic on
+  \({\mathbb{C}}\)
 \item
   \(f(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu\)
-  is \emph{not} holomorphic, since
-  \(\mkern 1.5mu\overline{\mkern-1.5muh\mkern-1.5mu}\mkern 1.5mu \over h\)
-  does not converge (but is real differentiable).
+  is \emph{not} holomorphic, but is real differentiable:
+  \begin{align*}
+  {f(z_0 + h) - f(z_0) \over h } = {\mkern 1.5mu\overline{\mkern-1.5muz_0\mkern-1.5mu}\mkern 1.5mu + \mkern 1.5mu\overline{\mkern-1.5muh\mkern-1.5mu}\mkern 1.5mu - \mkern 1.5mu\overline{\mkern-1.5muz_0\mkern-1.5mu}\mkern 1.5mu \over h} = {\mkern 1.5mu\overline{\mkern-1.5muh\mkern-1.5mu}\mkern 1.5mu \over h} = {re^{-i\theta} \over re^{i\theta}} = e^{-2i\theta} \overset{h\to 0}\longrightarrow e^{-2i\theta}
+  ,\end{align*}
+  which is a complex number that depends on \(\theta\) and is thus not a
+  single value.
 \end{itemize}
 
 \end{example}
@@ -835,21 +901,21 @@ Laplacian}\label{delbar-and-the-laplacian}}
 \quad
 \text{ and }
 \quad
-\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu
+{ \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu}
 \coloneqq{\partial}_{\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu}
 ={1\over 2}\qty{ {\partial}_x + i{\partial}_y}
 .\end{align*}
 Moreover,
-\(f' = {\partial}f + \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf\).
+\(f' = {\partial}f + { \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu}f\).
 
 \end{definition}
 
 \begin{proposition}[Holomorphic iff delbar vanishes]
 
 \(f\) is holomorphic at \(z_0\) iff
-\(\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf(z_0) = 0\):
+\({ \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu}f(z_0) = 0\):
 \begin{align*}
-2\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf 
+2{ \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu}f 
 &\coloneqq({\partial}_x + i {\partial}_y) (u+iv) \\
 &= u_x + iv_x + iu_y - v_y \\
 &= (u_x - v_y) + i(u_y + v_x) \\
@@ -1368,6 +1434,12 @@ For \(z=1\):
 
 \end{solution}
 
+\begin{exercise}[?]
+
+Show that a real-valued holomorphic function must be constant.
+
+\end{exercise}
+
 \hypertarget{cauchys-theorem}{%
 \section{Cauchy's Theorem}\label{cauchys-theorem}}
 
@@ -1678,7 +1750,7 @@ then \(f_n'\to f'\) locally uniformly and \(f'\) is holomorphic.
   ,\end{align*}
   where if \(R\) is fixed then by uniform convergence of \(f_n\to f\),
   for \(n\) large enough
-  \({\left\lVert {f_n - f} \right\rVert} < \varepsilon/R\).
+  \({\left\lVert {f_n - f} \right\rVert} < {\varepsilon}/R\).
 \end{itemize}
 
 \end{solution}
@@ -1801,6 +1873,68 @@ There are three types of isolated singularities:
 
 \end{definition}
 
+\begin{definition}[Removable Singularities]
+
+If \(z_0\) is a singularity of \(f\). then \(z_0\) is a
+\textbf{removable singularity} iff there exists a holomorphic function
+\(g\) such that \(f(z) = g(z)\) in a punctured neighborhood of \(z_0\).
+Equivalently,
+\begin{align*}
+\lim_{z\to z_0}(z-z_0) f(z) = 0
+.\end{align*}
+Equivalently, \(f\) is bounded on a neighborhood of \(z_0\).
+
+\end{definition}
+
+\begin{remark}
+
+Singularities can be classified by Laurent expansions
+\(f(z) = \sum_{k\in {\mathbb{Z}}} c_k z^k\):
+
+\begin{itemize}
+\tightlist
+\item
+  Essential singularity: infinitely many negative terms.
+\item
+  Pole of order \(N\): truncated at \(k = -N\), so \(c_{N-\ell} = 0\)
+  for all \(\ell\).
+\item
+  Removable singularity: truncated at \(k=0\), so \(c_{\leq -1} = 0\).
+\end{itemize}
+
+\end{remark}
+
+\begin{example}[Removable singularities]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(f(z) \coloneqq\sin(z)/z\) has a removable singularity at \(z=0\),
+  and one can redefine \(f(0) \coloneqq 1\).
+\item
+  If \(f(z) = p(z)/q(z)\) with \(q(z_0)=0\) and \(p(z_0)=0\), then
+  \(z_0\) is removable with \(f(z_0)\coloneqq p'(z_0)/q'(z_0)\).
+\end{itemize}
+
+\end{example}
+
+\begin{example}[Essential singularities]
+
+\(f(z) \coloneqq e^{1/z}\) has an essential singularity at \(z=0\),
+since we can expand and pick up infinitely many negative terms:
+\begin{align*}
+e^{1/z} = 1 + {1\over z} + {1\over 2! z^2} + \cdots
+.\end{align*}
+In fact there exists a neighborhood of zero such that
+\(f(U) = {\mathbb{C}}\setminus\left\{{0}\right\}\). Similarly
+\(g(z) \coloneqq\sin\qty{1\over z}\) has an essential singularity at
+\(z=0\), and there is a neighborhood \(V\) of zero such that
+\(g(V) = {\mathbb{C}}\).
+
+\end{example}
+
 \begin{example}[?]
 
 The singularities of a rational function are always isolated, since
@@ -1814,18 +1948,16 @@ all \(n\).
 
 \end{example}
 
-\begin{definition}[Removable Singularities]
+\begin{warnings}
 
-If \(z_0\) is a singularity of \(f\). then \(z_0\) is a
-\textbf{removable singularity} iff there exists a holomorphic function
-\(g\) such that \(f(z) = g(z)\) in a punctured neighborhood of \(z_0\).
-Equivalently,
-\begin{align*}
-\lim_{z\to z_0}(z-z_0) f(z) = 0
-.\end{align*}
-Equivalently, \(f\) is bounded on a neighborhood of \(z_0\).
+\(f(z) \coloneqq z^{1\over 2}\) has a singularity at zero that does not
+fall under this classification -- \(z=0\) is a \textbf{branch
+singularity} and admits no Laurent expansion around \(z=0\).
 
-\end{definition}
+A similar example: \(\qty{z(z-1)}^{1\over 2}\) has two branch
+singularities at \(z=0, 1\).
+
+\end{warnings}
 
 \begin{theorem}[Extension over removable singularities]
 
@@ -2190,6 +2322,14 @@ Let \(f(z) = \frac{1}{1+z^2}\), then \(g(z) = 1, h(z) = 1+z^2\), and
 
 \end{example}
 
+\begin{proposition}[Residue at infinity]
+
+\begin{align*}
+\mathop{\mathrm{Res}}_{z=\infty}f(z) = \mathop{\mathrm{Res}}_{z=0} g(z) && g(z) \coloneqq-{1 \over z^2}f\qty{1\over z} 
+.\end{align*}
+
+\end{proposition}
+
 \hypertarget{exercises-3}{%
 \subsubsection{Exercises}\label{exercises-3}}
 
@@ -2377,6 +2517,15 @@ I = {1\over 2i} \int_{\mathbb{R}}{e^{iz} - 1 \over z } \,dz
 
 \end{solution}
 
+\begin{figure}
+\centering
+\includegraphics{figures/image_2021-05-17-13-33-55.png}
+\caption{image\_2021-05-17-13-33-55}
+\end{figure}
+
+\hypertarget{counting-zeros-and-poles}{%
+\section{Counting Zeros and Poles}\label{counting-zeros-and-poles}}
+
 \hypertarget{argument-principle}{%
 \subsection{Argument Principle}\label{argument-principle}}
 
@@ -2410,6 +2559,32 @@ enclosed by \(\gamma\), counted with multiplicity.
 Residue formula applied to \(f'\over f\)?
 
 \end{proof}
+
+\includegraphics{figures/2021-06-16_16-42-18.png}
+
+\begin{remark}
+
+This is useful in numerical computation: if you can compute this
+integral within an error \(E < \pi\) where you know it doesn't contain a
+pole, you can determine if the contour contains a zero. Canonical
+example: integrals in rectangles around \(\Re(z) = 1/2\) for
+\(\zeta(s)\).
+
+\end{remark}
+
+\begin{exercise}[?]
+
+Show that
+\({\partial}_{\ln}(fg) = {\partial}_{\ln} f + {\partial}_{\ln} g\), and
+thus
+\begin{align*}
+\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
+.\end{align*}
+
+\end{exercise}
+
+\hypertarget{rouchuxe9}{%
+\subsection{Rouché}\label{rouchuxe9}}
 
 \begin{corollary}[Rouché's Theorem]\label{Rouche}
 
@@ -2460,18 +2635,6 @@ If \(f\) is nonzero on \(\Omega\), then \(f\) attains a minimum on
 \({{\partial}}\Omega\). This follows from applying the MMP to \(1/f\).
 
 \end{corollary}
-
-\hypertarget{exercises-4}{%
-\subsubsection{Exercises}\label{exercises-4}}
-
-\begin{figure}
-\centering
-\includegraphics{figures/image_2021-05-17-13-33-55.png}
-\caption{image\_2021-05-17-13-33-55}
-\end{figure}
-
-\hypertarget{rouche}{%
-\section{Rouche}\label{rouche}}
 
 \hypertarget{counting-zeros}{%
 \subsection{Counting Zeros}\label{counting-zeros}}
@@ -2549,7 +2712,7 @@ implies holomorphic, and a bijective conformal map has a holomorphic
 inverse. A bijective conformal map \(f:U\to V\) is called a
 \textbf{biholomorphism}, and we say \(U\) and \(V\) are
 \textbf{biholomorphic}. Self-biholomorphisms of a domain \(\Omega\) form
-a group \({\operatorname{Aut}}_{\mathbb{C}}(\Omega)\).
+a group \(\mathop{\mathrm{Aut}}_{\mathbb{C}}(\Omega)\).
 
 \end{definition}
 
@@ -2557,8 +2720,8 @@ a group \({\operatorname{Aut}}_{\mathbb{C}}(\Omega)\).
 
 There is an oft-used weaker condition that \(f'(z) \neq 0\) for any
 point. Note that that this condition alone doesn't necessarily imply
-\(f\) is holomorphic, since anti-holomorphic maps may be nonzero
-derivative. For example, take
+\(f\) is holomorphic, since anti-holomorphic maps may have nonzero
+derivatives. For example, take
 \(f(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu\),
 so \(f(x+iy) = x-iy\) -- this does not satisfy the Cauchy-Riemann
 equations.
@@ -2622,6 +2785,54 @@ with inverse \(G(w) = i {1-w \over 1 + w}\).
 
 \end{theorem}
 
+\begin{theorem}[Characterization of conformal maps]
+
+Conformal maps \({\mathbb{D}}\to{\mathbb{D}}\) have the form
+\begin{align*}
+g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
+.\end{align*}
+
+\end{theorem}
+
+\begin{theorem}[Riemann Mapping]
+
+If \(\Omega\) is simply connected, nonempty, and not \({\mathbb{C}}\),
+then for every \(z_{0}\in \Omega\) there exists a unique conformal map
+\(F:\Omega \to {\mathbb{D}}\) such that \(F(z_{0}) = 0\) and
+\(F'(z_{0}) > 0\).
+
+Thus any two such sets \(\Omega_{1}, \Omega_{2}\) are conformally
+equivalent.
+
+\end{theorem}
+
+\hypertarget{by-type}{%
+\subsection{By Type}\label{by-type}}
+
+\begin{remark}[Notation]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.64}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.35}}@{}}
+\toprule
+Notation & Definition \\
+\midrule
+\endhead
+\({\mathbb{D}}\coloneqq\left\{{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} \leq 1}\right\}\)
+& The unit disc \\
+\({\mathbb{H}}\coloneqq\left\{{x+iy {~\mathrel{\Big|}~}y > 0}\right\}\)
+& The upper half-plane \\
+\(X_{1\over 2}\) & A ``half version of \(X\)'', see examples \\
+\({\mathbb{H}}_{1\over 2}\) & The first quadrant \\
+\({\mathbb{D}}_{1\over 2}\) & The portion of the first quadrant inside
+the unit disc \\
+\(L \coloneqq\left\{{x + iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},\, 0<y<\pi}\right\}\)
+& The horizontal strip \\
+\bottomrule
+\end{longtable}
+
+\end{remark}
+
 \begin{theorem}[Classification of Conformal Maps]
 
 There are 8 major types of conformal maps:
@@ -2633,29 +2844,296 @@ There are 8 major types of conformal maps:
 Type/Domains & Formula \\
 \midrule
 \endhead
-Translation/Dilation/Rotation & \(z\mapsto e^{i\theta}(cz + h)\) \\
+Translation & \(z\mapsto z + h\) \\
+Dilation & \(z\mapsto cz\) \\
+Rotation & \(z\mapsto e^{i\theta}\) \\
 Sectors to sectors & \(z\mapsto z^n\) \\
 \({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}_{1\over 2}\), the first
 quadrant & \(z\mapsto {1+z \over 1-z}\) \\
 \({\mathbb{H}}\to S\) & \(z\mapsto \log(z)\) \\
-\({\mathbb{D}}_{1\over 2} \to S_{1\over 2}\) & \(z\mapsto \log(z)\) \\
+\({\mathbb{D}}_{1\over 2} \to L_{1\over 2}\) & \(z\mapsto \log(z)\) \\
 \(S_{1\over 2} \to {\mathbb{D}}_{1\over 2}\) & \(z\mapsto e^{iz}\) \\
 \({\mathbb{D}}_{1\over 2} \to {\mathbb{H}}\) &
 \(z\mapsto {1\over 2}\qty{z + {1\over z}}\) \\
-\(S_{1\over 2} \to {\mathbb{H}}\) & \(z\mapsto \sin(z)\) \\
+\(L_{1\over 2} \to {\mathbb{H}}\) & \(z\mapsto \sin(z)\) \\
 \bottomrule
 \end{longtable}
 
 \end{theorem}
 
-\begin{theorem}[Characterization of conformal maps]
+\todo[inline]{Pictures!}
 
-Conformal maps \({\mathbb{D}}\to{\mathbb{D}}\) have the form
+\begin{proposition}[Half-plane to Disc]
+
 \begin{align*}
-g(z) = \lambda {1-a \over 1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5mu z}, \quad {\left\lvert {a} \right\rvert} < 1, \quad {\left\lvert {\lambda} \right\rvert} = 1
+F: {\mathbb{H}}^\circ &\rightleftharpoons{\mathbb{D}}^\circ \\
+\left\{{z{~\mathrel{\Big|}~}\Im(z) > 0 }\right\} &\rightleftharpoons\left\{{w{~\mathrel{\Big|}~}{\left\lvert {w} \right\rvert} < 1 }\right\} \\
+z &\mapsto {i-z \over i+z} \\
+i \qty{1-w \over 1+w} &\mapsfrom w
 .\end{align*}
 
-\end{theorem}
+\textbf{Boundary behavior:} This maps
+\({\mathbb{R}}\to {{\partial}}{\mathbb{D}}\), where \(F(\infty) = -1\),
+and as \(x\in {\mathbb{R}}\) ranges from \(-\infty\to\infty\), \(F(x)\)
+travels from \(z=-1\) counter-clockwise through \(S^1\) (starting at
+\(z=-1\) and moving through the lower half first). So this extends to a
+map \({\mathbb{H}}\to {\mathbb{D}}\).
+
+\begin{quote}
+Mnemonic: every \(z\in {\mathbb{H}}\) is closed to \(i\) than \(-i\).
+\end{quote}
+
+\end{proposition}
+
+\begin{remark}
+
+Some write a similar map:
+\begin{align*}
+{\mathbb{H}}^\circ &\to {\mathbb{D}}^\circ \\
+z &\mapsto {z-i \over z+i}
+.\end{align*}
+This is just a composition of the above map with the flip
+\(z\mapsto -z\):
+\begin{align*}
+- {i-z \over i + z} = {z-i \over i+z} = {z-i \over z+i}
+.\end{align*}
+
+\end{remark}
+
+\begin{proposition}[Right half-plane to Disc]
+
+\begin{align*}
+{\mathbb{H}}_{R} &\rightleftharpoons{\mathbb{D}}\\
+\left\{{ z {~\mathrel{\Big|}~}\Re(z) > 0 }\right\} &\rightleftharpoons\left\{{ w {~\mathrel{\Big|}~}{\left\lvert {w} \right\rvert} < 1 }\right\} \\
+z &\mapsto {1-z \over 1+z} \\
+{1-w\over 1+w} &\mapsfrom w
+.\end{align*}
+
+Just map the \emph{right} half-plane \({\mathbb{H}}_R\) to the disc
+\({\mathbb{D}}\) by precomposing with a rotation \(e^{i\pi/2} = i\):
+\begin{align*}
+{\mathbb{H}}_{R} \to {\mathbb{H}}&\to {\mathbb{D}}\\
+z \mapsto iz &\mapsto {i- (iz) \over i + (iz)} = {i(1-z) \over i(1+z) } = {1-z \over 1+z}
+.\end{align*}
+
+This can easily be inverted:
+\begin{align*}
+&\quad w = {1+z \over 1+z} \\
+&\implies -(1-w) + z(w+1) = 0 \\
+&\implies z = {1-w \over 1+w}
+.\end{align*}
+
+\textbf{Boundary behavior}: Just a rotated version of
+\({\mathbb{H}}\to {\mathbb{D}}\)!
+
+\begin{quote}
+Mnemonic: every \(z\in {\mathbb{H}}_R\) is closed to 1 than \(-1\).
+\end{quote}
+
+\end{proposition}
+
+\begin{proposition}[Sector to sector]
+
+For \(0 < \alpha < 2\):
+\begin{align*}
+F_\alpha: S_{\pi \over \alpha }^\circ &\rightleftharpoons S_{\pi}^\circ = {\mathbb{H}}^\circ \\
+\left\{{z{~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < {\pi\over \alpha} }\right\} &\rightleftharpoons\left\{{w{~\mathrel{\Big|}~}0 < \operatorname{Arg}(w) < \pi }\right\} \\
+z &\mapsto z^\alpha \\
+w^{1\over \alpha} &\mapsfrom w
+.\end{align*}
+Note that if you look at the image of \({\mathbb{H}}\) under
+\(z\mapsto z^{\alpha}\), you get
+\begin{align*}
+\left\{{z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \pi }\right\} &\rightleftharpoons\left\{{0 < \operatorname{Arg}(w) < \alpha \pi }\right\} \\
+.\end{align*}
+For the inverse, choose a branch cut of \(\log\) deleting the negative
+real axis, or more generally fix \(0 < \arg w < w^{1\over \alpha}\).
+
+\textbf{Boundary behavior:}
+
+\begin{itemize}
+\tightlist
+\item
+  As \(x\) travels from \(-\infty\to 0\), \(F_\alpha(x)\) travels
+  \emph{away} from infinity along the ray \(\theta = \alpha \pi\), so
+  \(L = \left\{{ e^{t \alpha \pi } {~\mathrel{\Big|}~}t\in (0, \infty) }\right\}\),
+  from \(\infty\to 0\).
+\item
+  As \(x\) travels from \(0\to \infty\), \(F_\alpha(x)\) travels from
+  \(0\to \infty\) along \({\mathbb{R}}\).
+\end{itemize}
+
+\end{proposition}
+
+\begin{proposition}[Sector to Disc]
+
+The unmotivated formula first:
+\begin{align*}
+F: S_{\alpha} &\to {\mathbb{D}}\\ \\
+\left\{{ z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \alpha }\right\} &\rightleftharpoons\left\{{ w {~\mathrel{\Big|}~}{\left\lvert {w} \right\rvert} < 1 }\right\} \\
+z &\rightleftharpoons{z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
+.\end{align*}
+
+Idea: compose some known functions.
+\includegraphics{figures/image_2020-07-22-13-22-46.png}
+
+\begin{align*}
+S_{\alpha} &\to S_{\pi} = {\mathbb{H}}\to {\mathbb{D}}\\
+z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\Big|_{z= z^{\pi\over \alpha}}
+.\end{align*}
+
+\end{proposition}
+
+\begin{proposition}[Upper half-disc to first quadrant]
+
+\begin{align*}
+\left\{{ z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} < 1,\, \Im(z) > 0 }\right\} &\rightleftharpoons\left\{{ w {~\mathrel{\Big|}~}\Re(w)>0,\, \Im(w) > 0}\right\}  \\
+z &\mapsto {1+z \over 1-z} \\
+{w-1\over w+1} &\mapsfrom w
+.\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  Why this lands in the first quadrant:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use that squares are non-negative and
+    \(z=x+iy\in {\mathbb{D}}\implies x^2 + y^2 < 1\):
+    \begin{align*}
+    f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y^{2}}
+    .\end{align*}
+  \end{itemize}
+\item
+  Why the inverse lands in the unit disc:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For \(w\) in Q1, the distance from \(w\) to 1 is smaller than from
+    \(w\) to \(-1\).
+  \item
+    Check that if \(w=u+iv\) where \(u, v>0\), the imaginary part of the
+    image is positive:
+  \end{itemize}
+\end{itemize}
+
+\begin{align*}
+{w-1 \over w+1} 
+&= { (w-1) \mkern 1.5mu\overline{\mkern-1.5mu(w+1)\mkern-1.5mu}\mkern 1.5mu \over {\left\lvert {w+1} \right\rvert}^2}\\
+&={ \qty{u-1 + iv} \qty{u+1-iv} \over (u+1)^2 + v^2 } \\
+&= {u^2 + v^2 + 1 \over (u+1)^2 + v^2}
++ i\qty{ 2v \over (u+1)^2 + v^2}
+.\end{align*}
+
+\textbf{Boundary behavior}:
+
+\begin{itemize}
+\item
+  On the upper half circle
+  \(\left\{{ e^{it } {~\mathrel{\Big|}~}t\in (0, \pi) }\right\}\), write
+  \begin{align*}
+  f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta / 2}}{e^{-i \theta / 2}-e^{i \theta / 2}}=\frac{i}{\tan (\theta / 2)}
+  ,\end{align*}
+  so as \(t\) ranges \(0\to \pi\) we have \(f(z)\) ranging from
+  \(0\to i\infty\) along the imaginary axis.
+\item
+  As \(x\) ranges from \(-1\to 1\) in \({\mathbb{R}}\), \(f(z)\) ranges
+  from \(0\to \infty\) with \(f(0) = 1\).
+\end{itemize}
+
+\end{proposition}
+
+\begin{proposition}[Log: Upper half-plane to horizontal strip]
+
+\begin{align*}
+{\mathbb{H}}&\rightleftharpoons{\mathbb{R}}\times(0, \pi) \\
+\left\{{ z {~\mathrel{\Big|}~}\Im(z) > 0 }\right\} &\rightleftharpoons\left\{{ w {~\mathrel{\Big|}~}\Im(z) \in (0, \pi ) }\right\} \\
+z &\mapsto \log(z) \\
+e^w &\mapsfrom w
+.\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  Why this lands in a strip: use that \(\arg(z) \in (0, \pi)\) and
+  \(\log(z) = {\left\lvert {z} \right\rvert} + i\arg(z)\).
+\end{itemize}
+
+\textbf{Boundary behavior}:
+
+\begin{itemize}
+\tightlist
+\item
+  As \(x\) travels from \(-\infty \to 0\), \(F(x)\) travels horizontally
+  from \(\infty + i\pi\) to \(-\infty + i\pi\).
+\item
+  As \(x\) travels from \(o\to \infty\), \(F(x)\) travels from
+  \(-\infty\to\infty\) in \({\mathbb{R}}\).
+\end{itemize}
+
+\end{proposition}
+
+\begin{remark}
+
+This extends to a function
+\({\mathbb{C}}\setminus{\mathbb{R}}^{\leq 0} \to {\mathbb{R}}\times(-\pi, \pi)\).
+Circles of radius \(R\) are mapped to vertical line segments connecting
+\(\ln(R) + i\pi\) to \(\ln(R) - i\pi\), and rays are mapped to
+horizontal lines.
+
+\end{remark}
+
+\begin{remark}
+
+One can find other specific images of the logarithm:
+\begin{align*}
+\left\{{ z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} < 1,\, \Im(z) > 0 }\right\} &\rightleftharpoons{\mathbb{R}}^{<0} \times(0, \pi ) \\
+\left\{{ z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} > 1,\, \Im(z) > 0 }\right\} &\rightleftharpoons{\mathbb{R}}^{>0} \times(0, \pi ) \\
+.\end{align*}
+
+For the upper half-disc to the negative horizontal half-strip: - As
+\(x\) travels \(0\to 1\) in \({\mathbb{R}}\), \(\log(x)\) travels from
+\(-\infty\to 0\). - As \(x\) travels from \(-1\) to \(1\) along
+\(S^1\cap{\mathbb{H}}\), \(\log(x)\) travels from \(0\to i\pi\)
+vertically. - As \(x\) travels from \(-1\to 0\), \(\log(x)\) travels
+from \(0+i\pi\to i-\infty+i\pi\) along the top of the strip.
+
+\end{remark}
+
+\begin{proposition}[Half-discs to half strips]
+
+\begin{align*}
+F: (-{\pi\over 2}, {\pi \over 2}) \times{\mathbb{R}}^{>0} &\to {\mathbb{D}}\cap{\mathbb{H}}\\
+z &\mapsto e^{iz} \\
+{\log(w) \over i}? &\mapsfrom w
+.\end{align*}
+
+This uses that \(e^{iz} = e^{-\Im(z)} e^{i \Re(z)}\).
+
+\textbf{Boundary behavior}:
+
+\end{proposition}
+
+\begin{proposition}[Half-disc to upper half-plane]
+
+\begin{align*}
+F: ? &\rightleftharpoons? \\
+z & \mapsto -{1\over 2}\qty{z + z^{-1}} \\
+.\end{align*}
+
+\end{proposition}
+
+\begin{proposition}[Upper half-plane to vertical half-strip]
+
+\begin{align*}
+? &\rightleftharpoons? \\
+z &\mapsto \sin(z) \\
+.\end{align*}
+
+\end{proposition}
 
 \hypertarget{schwarz}{%
 \subsection{Schwarz}\label{schwarz}}
@@ -2699,14 +3177,14 @@ Apply the maximum modulus principle to \(f(z)/z\).
 \begin{exercise}[?]
 
 Show that
-\({\operatorname{Aut}}_{\mathbb{C}}({\mathbb{C}}) = \left\{{ z \mapsto az+b{~\mathrel{\Big|}~}a\in {\mathbb{C}}^{\times}, b\in {\mathbb{C}}}\right\}\).
+\(\mathop{\mathrm{Aut}}_{\mathbb{C}}({\mathbb{C}}) = \left\{{ z \mapsto az+b{~\mathrel{\Big|}~}a\in {\mathbb{C}}^{\times}, b\in {\mathbb{C}}}\right\}\).
 
 \end{exercise}
 
 \begin{theorem}[Biholomorphisms of the disc]
 
 \begin{align*}
-{\operatorname{Aut}}_{\mathbb{C}}({\mathbb{D}}) = \left\{{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu z} }\right\}
+\mathop{\mathrm{Aut}}_{\mathbb{C}}({\mathbb{D}}) = \left\{{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu z} }\right\}
 .\end{align*}
 
 \end{theorem}
@@ -2720,60 +3198,10 @@ Schwarz lemma.
 \begin{theorem}[?]
 
 \begin{align*}
-{\operatorname{Aut}}_{\mathbb{C}}({\mathbb{H}}) = \left\{{ z \mapsto {az+b \over cz+d} {~\mathrel{\Big|}~}a,b,c,d\in {\mathbb{C}}, ad-bc=1 }\right\} \cong{\operatorname{PSL}}_2({\mathbb{R}})
+\mathop{\mathrm{Aut}}_{\mathbb{C}}({\mathbb{H}}) = \left\{{ z \mapsto {az+b \over cz+d} {~\mathrel{\Big|}~}a,b,c,d\in {\mathbb{C}}, ad-bc=1 }\right\} \cong{\operatorname{PSL}}_2({\mathbb{R}})
 .\end{align*}
 
 \end{theorem}
-
-\hypertarget{by-type}{%
-\subsection{By Type}\label{by-type}}
-
-\hypertarget{plane-to-disc}{%
-\subsubsection{Plane to Disc}\label{plane-to-disc}}
-
-\begin{align*}
-\phi: {\mathbb{H}}&\to {\mathbb{D}}\\
-\phi(z) &= {z - i \over z + i} \qquad f^{-1}(z) = i\qty{1 + w \over 1 - w}
-.\end{align*}
-
-\hypertarget{sector-to-disc}{%
-\subsubsection{Sector to Disc}\label{sector-to-disc}}
-
-For
-\(S_\alpha \coloneqq\left\{{z\in{\mathbb{C}}{~\mathrel{\Big|}~}0 < \arg(z) < \alpha }\right\}\)
-an open sector for \(\alpha\) some angle, first map the sector to the
-half-plane:
-\begin{align*}
-g: S_\alpha &\to {\mathbb{H}}\\
-g(z) &= z^{\pi \over \alpha}
-.\end{align*}
-
-Then compose with a map \({\mathbb{H}}\to{\mathbb{D}}\):
-\begin{align*}
-f: S_\alpha &\to {\mathbb{D}}\\
-f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\end{align*}
-
-\includegraphics{figures/image_2020-07-22-13-22-46.png}
-
-\hypertarget{strip-to-disc}{%
-\subsubsection{Strip to Disc}\label{strip-to-disc}}
-
-\begin{itemize}
-\tightlist
-\item
-  Map to horizontal strip by rotation \(z\mapsto \lambda z\).
-\item
-  Map horizontal strip to sector by \(z \mapsto e^z\)
-\item
-  Map sector to \({\mathbb{H}}\) by \(z\mapsto z^{\pi\over\alpha}\).
-\item
-  Map \({\mathbb{H}}\to{\mathbb{D}}\).
-\end{itemize}
-
-\begin{align*}
-e^z: {\mathbb{R}}\times(0, \pi) \to {\mathbb{R}}\times(0, \infty)
-.\end{align*}
 
 \hypertarget{schwarz-reflection}{%
 \section{Schwarz Reflection}\label{schwarz-reflection}}
@@ -2802,18 +3230,6 @@ Transformations}\label{linear-fractional-transformations-1}}
 
 \hypertarget{unsorted-theorems}{%
 \section{Unsorted Theorems}\label{unsorted-theorems}}
-
-\begin{theorem}[Riemann Mapping]
-
-If \(\Omega\) is simply connected, nonempty, and not \({\mathbb{C}}\),
-then for every \(z_{0}\in \Omega\) there exists a unique conformal map
-\(F:\Omega \to {\mathbb{D}}\) such that \(F(z_{0}) = 0\) and
-\(F'(z_{0}) > 0\).
-
-Thus any two such sets \(\Omega_{1}, \Omega_{2}\) are conformally
-equivalent.
-
-\end{theorem}
 
 \begin{theorem}[Riemann's Removable Singularity Theorem]
 
@@ -2868,13 +3284,16 @@ Apply Morera's Theorem and Cauchy's Theorem
 
 \end{proof}
 
-\hypertarget{appendix-proofs-of-the-fundamental-theorem-of-algebra}{%
-\section{Appendix: Proofs of the Fundamental Theorem of
-Algebra}\label{appendix-proofs-of-the-fundamental-theorem-of-algebra}}
+\hypertarget{proofs-of-the-fundamental-theorem-of-algebra}{%
+\section{Proofs of the Fundamental Theorem of
+Algebra}\label{proofs-of-the-fundamental-theorem-of-algebra}}
 
-\hypertarget{fundamental-theorem-of-algebra-argument-principle}{%
-\subsubsection{Fundamental Theorem of Algebra: Argument
-Principle}\label{fundamental-theorem-of-algebra-argument-principle}}
+\hypertarget{argument-principle-1}{%
+\subsubsection{Argument Principle}\label{argument-principle-1}}
+
+\begin{proof}[using the argument principle]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2900,9 +3319,14 @@ Principle}\label{fundamental-theorem-of-algebra-argument-principle}}
   Integrate term-by-term to get \(N(0) = n\).
 \end{itemize}
 
-\hypertarget{fundamental-theorem-of-algebra-rouches-theorem}{%
-\subsubsection{Fundamental Theorem of Algebra: Rouche's
-Theorem}\label{fundamental-theorem-of-algebra-rouches-theorem}}
+\end{proof}
+
+\hypertarget{rouches-theorem}{%
+\subsubsection{Rouche's Theorem}\label{rouches-theorem}}
+
+\begin{proof}[using Rouche's theorem]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2928,9 +3352,14 @@ Theorem}\label{fundamental-theorem-of-algebra-rouches-theorem}}
   zeros.
 \end{itemize}
 
-\hypertarget{fundamental-theorem-of-algebra-liouvilles-theorem}{%
-\subsubsection{Fundamental Theorem of Algebra: Liouville's
-Theorem}\label{fundamental-theorem-of-algebra-liouvilles-theorem}}
+\end{proof}
+
+\hypertarget{liouvilles-theorem}{%
+\subsubsection{Liouville's Theorem}\label{liouvilles-theorem}}
+
+\begin{proof}[using Liouville's theorem]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -2979,9 +3408,14 @@ Theorem}\label{fundamental-theorem-of-algebra-liouvilles-theorem}}
   \end{itemize}
 \end{itemize}
 
-\hypertarget{fundamental-theorem-of-algebra-open-mapping-theorem}{%
-\subsubsection{Fundamental Theorem of Algebra: Open Mapping
-Theorem}\label{fundamental-theorem-of-algebra-open-mapping-theorem}}
+\end{proof}
+
+\hypertarget{open-mapping-theorem}{%
+\subsubsection{Open Mapping Theorem}\label{open-mapping-theorem}}
+
+\begin{proof}[using the Open Mapping theorem]
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -3008,6 +3442,47 @@ Theorem}\label{fundamental-theorem-of-algebra-open-mapping-theorem}}
 \item
   So \(p\) has a root.
 \end{itemize}
+
+\end{proof}
+
+\hypertarget{generalized-liouville}{%
+\subsubsection{Generalized Liouville}\label{generalized-liouville}}
+
+\begin{theorem}[Generalized Liouville]
+
+If \(X\) is a compact complex manifold, any holomorphic
+\(f:X\to {\mathbb{C}}\) is constant.
+
+\end{theorem}
+
+\begin{lemma}[?]
+
+If \(f:X\to Y\) is a nonconstant holomorphic map between Riemann
+surfaces with \(X\) compact, then
+
+\begin{itemize}
+\tightlist
+\item
+  \(f\) must be surjective,
+\item
+  \(Y\) must be compact,
+\item
+  \(f^{-1}(q)\) is finite for all \(q\in Y\),
+\item
+  The branch and ramification loci consist of finitely many points.
+\end{itemize}
+
+\end{lemma}
+
+\begin{proof}[of FTA, using Generalized Liouville]
+
+Given a nonconstant \(p\in {\mathbb{C}}[x]\), regard it as a function
+\(p: {\mathbb{P}}^1({\mathbb{C}}) \to {\mathbb{P}}^1({\mathbb{C}})\) by
+extending so that \(p(\infty) = \infty\). Since \(p\) is nonconstant, by
+the lemma \(p\) is surjective, so there exists some \(x\neq \infty\) in
+\({\mathbb{P}}^1({\mathbb{C}})\) with \(p(x) = 0\).
+
+\end{proof}
 
 \hypertarget{appendix}{%
 \section{Appendix}\label{appendix}}

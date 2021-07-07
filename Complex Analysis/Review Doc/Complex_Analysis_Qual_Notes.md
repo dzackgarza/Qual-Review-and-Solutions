@@ -66,16 +66,14 @@
 \newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
 \newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
 \newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{{ \mathbb{Z}_{(p)} }}
 \newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\ZpZ}[0]{\mathbb{Z}/p}
 \newcommand{\chp}[0]{\operatorname{ch. p}}
 \newcommand{\fp}[0]{\operatorname{fp}}
 \newcommand{\gp}[0]{ {\operatorname{gp} } }
 \newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
 \newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\qc}[0]{{\operatorname{qc}}}
@@ -113,6 +111,8 @@
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\maps}[0]{\operatorname{Maps}}
 \newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\Spec}[0]{\operatorname{Spec}}
+\newcommand{\Spf}[0]{\operatorname{Spf}}
 \newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
 \newcommand{\Tr}[0]{\operatorname{Tr}}
@@ -161,7 +161,6 @@
     \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
     \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
 \newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\Aut}[0]{{\operatorname{Aut}}}
 \newcommand{\aut}[0]{\operatorname{Aut}}
 \newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Out}[0]{{\operatorname{Out}}}
@@ -220,6 +219,7 @@
 \newcommand{\sSet}[0]{{\mathsf{sSet}}}
 \newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
 \newcommand{\Sp}[0]{{\mathsf{Sp}}}
+\newcommand{\Spectra}[0]{{\mathsf{Sp}}}
 \newcommand{\sets}[0]{{\mathsf{Set}}}
 \newcommand{\Grp}[0]{{\mathsf{Grp}}}
 \newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
@@ -326,6 +326,8 @@
 \newcommand\hyp[0]{\text{hyp}}
 \newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
 \newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
@@ -341,6 +343,8 @@
 \newcommand{\cone}[0]{\operatorname{cone}}
 \newcommand{\cok}[0]{\operatorname{coker}}
 \newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
 \newcommand{\conjugate}[1]{{\overline{{#1}}}}
 \newcommand{\conj}[1]{{\overline{{#1}}}}
 \newcommand{\converges}[1]{\overset{#1}}
@@ -361,11 +365,11 @@
 \newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\Disjoint}[0]{\displaystyle\coprod}
 \newcommand{\Sum}[0]{ \displaystyle\sum }
-\newcommand{\dual}[0]{ {}^{ \check{} }}
+\newcommand{\dual}[0]{ {}^{ \vee }}
 \newcommand{\sm}[0]{\setminus}
 \newcommand{\smz}[0]{\setminus\theset{0}}
 \newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{\varepsilon}
+\newcommand{\eps}[0]{{\varepsilon}}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\up}[0]{\uparrow}
 \newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
@@ -403,6 +407,10 @@
 \newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
+\newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lien}[0]{{\mathfrak{n}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
@@ -428,7 +436,6 @@
 \newcommand{\surjects}[0]{\twoheadrightarrow}
 \newcommand{\Prism}[0]{\mathsf{Prism}}
 \newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\Spf}[0]{\mathsf{Spf}}
 \newcommand{\WCart}[0]{\mathsf{WCart}}
 \newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\surjectsvia}[2][]{
@@ -510,6 +517,7 @@
 \newcommand{\smashprod}[0]{\wedge}
 \newcommand{\Wedge}[0]{\bigwedge}
 \newcommand{\Extalg}[0]{\bigwedge}
+\newcommand{\Extalgebra}[0]{\bigwedge}
 \newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgeprod}[0]{\bigvee}
 \newcommand{\Vee}[0]{\bigvee}
@@ -566,11 +574,15 @@
 \newcommand\tmf{ \mathrm{tmf} }
 \newcommand\taf{ \mathrm{taf} }
 \newcommand\Fix{ \mathrm{Fix} }
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\tilt[0]{ { \flat } }
 
 \DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
 \DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
 \DeclareMathOperator{\submfds}{SubMfds}
-\DeclareMathOperator{\crys}{crys}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Deck}{Deck}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -614,6 +626,7 @@
 \newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
 \newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
 \newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\globsec}[1]{{\mathsf{\Gamma}\qty{#1} }}
 
 \newcommand{\DSt}[0]{{ \operatorname{DSt}}}
 
@@ -629,6 +642,7 @@
 \newcommand{\diam}[0]{{\operatorname{diam}}}
 \newcommand{\gal}[0]{\operatorname{Gal}}
 \newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
 \newcommand{\diag}[0]{\operatorname{diag}}
 \newcommand{\grad}[0]{\operatorname{grad}}
 \newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
@@ -660,7 +674,7 @@
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\delbar}[0]{\bar{\del}}
+  \newcommand{\delbar}[0]{{ \bar{\del}}}
 
 
 
@@ -732,6 +746,9 @@
 \newcommand{\equalsbecause}[1]{\overset{#1}{=}}
 \newcommand{\congbecause}[1]{\overset{#1}{\cong}}
 \newcommand{\congas}[1]{\underset{#1}{\cong}}
+\newcommand{\isoas}[1]{\underset{#1}{\cong}}
+\newcommand{\weakeq}[1]{\underset{#1}{\to}}
+\newcommand{\addbase}[1]{{ {}_{\pt} }}
 \newcommand{\ideal}[1]{\mathcal{#1}}
 \newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
 \newcommand{\powerseries}[1]{ { \left[ {#1} \right] } }
@@ -780,6 +797,10 @@
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\crys}[0]{{\mathrm{crys}}}
+\newcommand{\Xff}[0]{{X_\mathrm{FF}}}
+\newcommand{\an}[0]{{\mathrm{an}}}
 
 
 \newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
@@ -787,19 +808,7 @@
 
 > A great deal of content borrowed from the following: <https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf>
 
-# Useful Techniques
-
-## Notation
-| Notation                                                     | Definition                                             |
-|--------------------------------------------------------------|--------------------------------------------------------|
-| $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
-| $\HH \da \ts{x+iy \st y > 0}$                                | The upper half-plane                                   |
-| $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
-| $\HH_{1\over 2}$                                             | The first quadrant                                     |
-| $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
-| $S \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizontal strip                                   |
-|                                                              |                                                        |
-|                                                              |                                                        |
+# General Info / Tips / Techniques
 
 ## Greatest Hits
 
@@ -834,38 +843,78 @@ If you want to show that a function $f$ is constant, try one of the following:
   - If you additionally want to show $f$ is zero, show $\lim_{z\to\infty} f(z) = 0$.
 :::
 
+:::{.fact}
+To show a function is holomorphic,
+
+- Use Morera's theorem
+- Find a primitive (sufficient but not necessary)
+
+:::
+
+:::{.fact}
+To count zeros:
+
+- Rouche's theorem
+- The argument principle
+
+:::
+
+- Setting $w=e^z$ is useful.
+
+
 ## Basic but Useful Facts
 
-:::{.fact title="Some useful facts about basic complex algebra"}
-\envlist
+### Arithmetic
 
-- $z\bar z = \abs{z}^2$
+:::{.fact title="Some useful facts about basic complex algebra"}
 \[
-\Re(z) = { z + \bar z \over 2} && && 
+z\bar z &= \abs{z}^2 && 
+\Arg(z/w) = \Arg(z) - \Arg(w) \\
+\Re(z) &= { z + \bar z \over 2} && 
 \Im(z) = {z - \bar{z} \over 2i}
 .\]
 
-- $\Arg(z/w) = \Arg(z) - \Arg(w)$.
-- Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
+Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e^{iz}$:
 \[
 \cos(z) 
 &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w\inv)\\
 \sin(z) 
 &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w\inv)
 \\ \\
-\cosh(z) = \cos(iz) 
-&= {1\over 2}\qty{e^z + e^{-z}} \\
-\sinh(z) = \sin(iz) 
-&= {1\over 2}\qty{e^z - e^{-z}} 
+\cosh(z) 
+&= \cos(iz) 
+= {1\over 2}\qty{e^z + e^{-z}} \\
+\sinh(z) 
+&= \sin(iz) 
+= {1\over 2}\qty{e^z - e^{-z}} 
 .\]
-- Setting $w=e^z$ is useful:
-- Various differentials:
+
+
+:::
+
+:::{.fact}
+Some computations that come up frequently:
+\[
+\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
+(a+bi)(c+di) &= (ac - bd) + (ad + bc) \\
+{1\over \abs{a+b}} &\leq {1 \over {\abs a - \abs b}} &&
+\abs{e^{z}} = e^{\Re(z)}, \quad \arg(e^z) = \Im(z)
+.\]
+:::
+
+
+### Calculus
+
+
+:::{.fact}
+Various differentials:
 \[
 dz &= dx + i~dy \\
 d\bar z &= dx - i~dy \\ \\
 f_z &= f_x = f_y / i
 .\]
-- Integral of a complex exponential:
+
+Integral of a complex exponential:
 \[
 \int_{0}^{2 \pi} e^{i \ell x} d x
 &=\left\{\begin{array}{ll}
@@ -875,6 +924,12 @@ f_z &= f_x = f_y / i
 .\]
 
 :::
+
+
+
+
+
+## Series
 
 :::{.fact title="Generalized Binomial Theorem"}
 Define $(n)_k$ to be the falling factorial 
@@ -889,15 +944,31 @@ and set ${n\choose k} \da (n)_k/k!$, then
 
 :::{.fact title="Some useful series"}
 \[
-\sum_{k=1}^{n} k &=\frac{n(n+1)}{2} \\
-\sum_{k=1}^{n} k^{2} &=\frac{n(n+1)(2 n+1)}{6} \\
-\sum_{k=1}^{n} k^{3} &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\sum_{k=1}^{n} k 
+  &=\frac{n(n+1)}{2} \\
+\sum_{k=1}^{n} k^{2} 
+  &=\frac{n(n+1)(2 n+1)}{6} \\
+\sum_{k=1}^{n} k^{3} 
+  &=\frac{n^{2}(n+1)^{2}}{4}  \\
+\sum_{0\leq k \leq N} z^k 
+  &= {1 - z^{N+1} \over 1-z} \\
+{1\over 1-z} &= \sum_{k\geq 0} z^k \\
+e^z &= \sum_{k\geq 0} {z^k \over k!} \\
+\sin(z) 
+  &= \sum_{\substack{ k \geq 1 \\ \text{odd} }} (-1)^{k+1 \over 2} {z^k \over k!} \\
+  &= z - {1\over 3!}z^3 + {1\over 5!}z^5 + \cdots \\
+\cos(z) 
+  &= \sum_{\substack{ k \geq 0 \\ \text{even}} } (-1)^{k\over 2} {z^k \over k!} \\
+  &= 1 - {1\over 2!}z^2 + {1\over 4!}z^4 + \cdots \\
+  \\
+\cosh(z) &= \sum_{k\geq 0} { z^{2k} \over (2k)! } \\
+\sinh(z) &= \sum_{k\geq 0} { z^{2k+1} \over (2k+1)! } \\
 \log(1-x) 
-  &= \sum_{n \geq 0} {x^n\over n} && x\in (-1, 1)\\
-\dd{}{z} \sum_{j=0}^\infty a_j z^j 
-  &= \sum_{j=0}^\infty a_{j+1}z^j \\
-\sqrt{1+x} 
-  &= (1+x)^{1/2} &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
+  &= \sum_{k \geq 0} {z^k\over k} \quad \abs{z} < 1 \\
+\dd{}{z} \sum_{k=0}^\infty a_k z^k 
+  &= \sum_{k=0}^\infty a_{k+1}z^k \\
+\sqrt{1+x} = (1+x)^{1/2} 
+  &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
   &= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \]
 :::
@@ -1062,8 +1133,6 @@ Find the radius of convergences for the power series expansion of $\sqrt{z}$ abo
 A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
 :::
 
-## Complex Arithmetic
-
 :::{.fact title="Complex roots of a number"}
 The complex $n$th roots of $z \da r e^{i\theta}$ are given by
 \[
@@ -1076,38 +1145,6 @@ z = re^{i\theta} = re^{i\qty{\theta + 2k\pi}} \implies z^{1/n} = \cdots
 .\]
 :::
 
-:::{.fact}
-Common trick:
-\[
-f^{1/n} = e^{{1\over n} \log(f)}
-,\]
-taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
-
-:::
-
-:::{.fact}
-Some computations that come up frequently:
-\[
-\abs{z \pm w}^2 &= \abs{z}^2 + \abs{w}^z + 2\Re(\bar{w}z) \\
-(a+bi)(c+di) = (ac - bd) + (ad + bc)
-.\]
-:::
-
-:::{.fact}
-Some useful facts:
-\[
-\abs{e^{z}} = e^{\Re(z)}
-.\]
-
-On $S^1$,
-\[
-1/z &= e^{-i\theta} \\
-\cos (\theta)=\frac{\mathrm{e}^{i \theta}+\mathrm{e}^{-i \theta}}{2}=\frac{z+1 / z}{2} \\
-\sin (\theta)=\frac{\mathrm{e}^{i \theta}-\mathrm{e}^{-i \theta}}{2 i}=\frac{z-1 / z}{2 i} 
-.\]
-:::
-
-
 ## Complex Log
 
 :::{.fact title="Complex Log"}
@@ -1117,8 +1154,18 @@ We define
 \log(z) = \ln\qty{\abs{z}} + i\Arg(z)
 \]
 and $z^c \da e^{c\log(z)}$.
+Thus
+\[
+\log(re^{i\theta}) = \ln \abs{r} + i\theta
+.\]
+:::
 
-
+:::{.fact}
+Common trick:
+\[
+f^{1/n} = e^{{1\over n} \log(f)}
+,\]
+taking (say) a principal branch of $\log$ given by $\CC \sm (-\infty, 0] \cross 0$.
 :::
 
 :::{.proposition title="Existence of complex log"}
@@ -1131,7 +1178,10 @@ Then there exists a branch of $F(z) \da \Log(z)$ such that
 :::
 
 :::{.definition title="Principal branch and exponential"}
-Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm, defined as 
+Take $\CC$ and delete $\RR^{\leq 0}$ to obtain the **principal branch** of the logarithm. 
+Equivalently, this is define for all $z=re^{i\theta}$ where $\theta \in (-\pi, \pi)$.
+
+Here the log is defined as 
 \[
 \Log(z) \da \log(r) + i\theta && \abs{\theta} < \pi
 .\]
@@ -1141,7 +1191,30 @@ z^{\alpha} \da e^{\alpha \Log(z)}
 .\]
 :::
 
-:::{.theorem title="Existence of log"}
+
+:::{.warnings}
+It's tempting to define
+\[
+z^{1\over n} \da (re^{i\theta})^{1\over n} = r^{1\over n} e^{i\theta \over n}
+,\]
+but this requires a branch cut to ensure continuity.
+
+:::
+
+
+:::{.remark}
+Note the problem: for $z\da x+i0 \in \RR^{\leq 0}$, just above the axis consider $z_+ \da x + i\eps$ and $z_- \da x-i\eps$.
+Then
+
+- $\log(z_+) = \log\abs{x} + i\pi$, and
+- $\log(z_-) = \log\abs{x} - i\pi$.
+
+So $\log$ can't even be made continuous if one crosses the branch.
+The issue is the **branch point** or **branch singularity** at $z=0$.
+:::
+
+
+:::{.theorem title="Existence of log of a function"}
 If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
 \[
 f(z) = e^{G(z)}
@@ -1206,8 +1279,18 @@ In this case, $\alpha = f'(z_0)$.
 
 :::{.example title="Holomorphic vs non-holomorphic"}
 \envlist
-- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$.
-- $f(z) = \bar{z}$ is *not* holomorphic, since $\bar h \over h$ does not converge (but is real differentiable).
+
+- $f(z) \da \abs{z}$ is not holomorphic.
+- $f(z) \da \arg{z}$ is not holomorphic.
+- $f(z) \da \Re{z}$ is not holomorphic.
+- $f(z) \da \Im{z}$ is not holomorphic.
+- $f(z) = {1\over z}$ is holomorphic on $\CC\smz$ but not holomorphic on $\CC$
+- $f(z) = \bar{z}$ is *not* holomorphic, but is real differentiable:
+\[
+{f(z_0 + h) - f(z_0) \over h } = {\bar{z_0} + \bar h - \bar{z_0} \over h} = {\bar{h} \over h} = {re^{-i\theta} \over re^{i\theta}} = e^{-2i\theta} \converges{h\to 0}\too e^{-2i\theta}
+,\]
+which is a complex number that depends on $\theta$ and is thus not a single value.
+
 :::
 
 :::{.definition title="Real (multivariate) differentiable"}
@@ -1307,7 +1390,6 @@ Thus
 
 :::
 
-
 :::{.proposition title="Holomorphic functions are continuous."}
 $f$ is holomorphic at $z_0$ iff there exists an $a\in \CC$ such that
 \[  
@@ -1317,7 +1399,6 @@ In this case, $a = f'(z_0)$.
 :::
 
 \todo[inline]{Prove}
-
 
 
 ### Delbar and the Laplacian
@@ -1700,6 +1781,12 @@ For $z=1$:
 .\]
 :::
 
+
+:::{.exercise title="?"}
+Show that a real-valued holomorphic function must be constant.
+:::
+
+
 # Cauchy's Theorem
 
 ## Complex Integrals
@@ -1972,18 +2059,9 @@ A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$
 There are three types of isolated singularities:
 
 - Removable singularities
-- Poles
+- Poles 
 - Essential singularities
 :::
-
-
-:::{.example title="?"}
-The singularities of a rational function are always isolated, since there are finitely many zeros of any polynomial.
-The function $F(z) \da \Log(z)$ has a singularity at $z=0$ that is **not** isolated, since every neighborhood intersects the branch cut $(-\infty, 0) \cross \ts{ 0 }$, where $F$ is not even defined.
-The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and isolated singularities at $1/n$ for all $n$.
-:::
-
-
 
 :::{.definition title="Removable Singularities"}
 If $z_0$ is a singularity of $f$. then $z_0$ is a **removable singularity** iff
@@ -1994,6 +2072,45 @@ Equivalently,
 .\]
 Equivalently, $f$ is bounded on a neighborhood of $z_0$.
 :::
+
+:::{.remark}
+Singularities can be classified by Laurent expansions $f(z) = \sum_{k\in \ZZ} c_k z^k$:
+
+- Essential singularity: infinitely many negative terms.
+- Pole of order $N$: truncated at $k = -N$, so $c_{N-\ell} = 0$ for all $\ell$.
+- Removable singularity: truncated at $k=0$, so $c_{\leq -1} = 0$.
+:::
+
+:::{.example title="Removable singularities"}
+\envlist
+
+- $f(z) \da \sin(z)/z$ has a removable singularity at $z=0$, and one can redefine $f(0) \da 1$.
+- If $f(z) = p(z)/q(z)$ with $q(z_0)=0$ and $p(z_0)=0$, then $z_0$ is removable with $f(z_0)\da p'(z_0)/q'(z_0)$.
+:::
+
+:::{.example title="Essential singularities"}
+$f(z) \da e^{1/z}$ has an essential singularity at $z=0$, since we can expand and pick up infinitely many negative terms:
+\[
+e^{1/z} = 1 + {1\over z} + {1\over 2! z^2} + \cdots
+.\]
+In fact there exists a neighborhood of zero such that $f(U) = \CC\smz$.
+Similarly $g(z) \da \sin\qty{1\over z}$ has an essential singularity at $z=0$, and there is a neighborhood $V$ of zero such that $g(V) = \CC$.
+:::
+
+:::{.example title="?"}
+The singularities of a rational function are always isolated, since there are finitely many zeros of any polynomial.
+The function $F(z) \da \Log(z)$ has a singularity at $z=0$ that is **not** isolated, since every neighborhood intersects the branch cut $(-\infty, 0) \cross \ts{ 0 }$, where $F$ is not even defined.
+The function $G(z) \da 1/\sin(\pi/z)$ has a non-isolated singularity at 0 and isolated singularities at $1/n$ for all $n$.
+:::
+
+:::{.warnings}
+$f(z) \da z^{1\over 2}$ has a singularity at zero that does not fall under this classification -- $z=0$ is a **branch singularity** and admits no Laurent expansion around $z=0$.
+
+A similar example: $\qty{z(z-1)}^{1\over 2}$ has two branch singularities at $z=0, 1$.
+:::
+
+
+
 
 
 :::{.theorem title="Extension over removable singularities"}
@@ -2198,7 +2315,6 @@ Suppose that $f(z) = e^{iaz}g(z)$ for some $g$, and let $C_R \da \ts{ z=Re^{it} 
 where $M_R \da \sup_{t\in [0, \pi]} \abs{g(Re^{it})}$.
 :::
 
-
 :::{.proof title="?"}
 \[
 \abs{ \int_{C_R} f(z)\dz }
@@ -2223,10 +2339,7 @@ This is obvious from a picture, since $\sin(t)$ is a height on $S^1$ and $2t/\pi
 
 :::
 
-
 ## Residue Formulas
-
-
 
 :::{.theorem title="The Residue Theorem"}
 Let $f$ be meromorphic on a region $\Omega$ with poles \( \ts{ \elts{z}{N} } \).
@@ -2272,7 +2385,6 @@ Apply L'Hopital:
 .\]
 :::
 
-
 :::{.example title="Residue of a simple pole (order 1)"}
 Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so that $h'(i) = 2i \neq 0$. Thus
 \[
@@ -2280,7 +2392,13 @@ Let $f(z) = \frac{1}{1+z^2}$, then $g(z) = 1, h(z) = 1+z^2$, and $h'(z) = 2z$ so
 .\]
 :::
 
+:::{.proposition title="Residue at infinity"}
 
+\[
+\Res_{z=\infty}f(z) = \Res_{z=0} g(z) && g(z) \da -{1 \over z^2}f\qty{1\over z} 
+.\]
+
+:::
 
 ### Exercises
 
@@ -2295,7 +2413,6 @@ Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
 ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
 ![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
-
 
 :::{.exercise title="?"}
 \[
@@ -2381,14 +2498,12 @@ z\inv\qty{1 + {1\over 3!}z^2 \pm O(z^4) } \\
 .\]
 :::
 
-
 :::{.exercise title="Keyhole contour and ML estimate"}
 Compute
 \[
 \int_{[0, \infty]} {\log(x) \over (1+x^2)^2}\dx 
 .\]
 :::
-
 
 :::{.solution}
 Factor $(1+z^2)^2 = (z+i^2(z-i)^2$.
@@ -2412,17 +2527,12 @@ Compute the residues by just applying the formula and manually computing derivat
 
 :::
 
-
-
-
-
 :::{.exercise title="Sinc Function"}
 Show
 \[
 \int_{(0, \infty)} {\sin(x) \over x }\dx = {\pi \over 2}
 .\]
 :::
-
 
 :::{.solution}
 Take an indented semicircle.
@@ -2433,6 +2543,10 @@ I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
 
 :::
 
+![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
+
+
+# Counting Zeros and Poles
 
 ## Argument Principle
 
@@ -2452,11 +2566,30 @@ For $f$ meromorphic in $\gamma^\circ$ with zeros \( \ts{ z_j } \) and poles \( \
 where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
 :::
 
-
 :::{.proof title="?"}
 Residue formula applied to $f'\over f$?
 :::
 
+![](figures/2021-06-16_16-42-18.png)
+
+
+:::{.remark}
+This is useful in numerical computation: if you can compute this integral within an error $E < \pi$ where you know it doesn't contain a pole, you can determine if the contour contains a zero.
+Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
+:::
+
+
+:::{.exercise title="?"}
+Show that $\del_{\ln}(fg) = \del_{\ln} f + \del_{\ln} g$, and thus
+\[
+\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
+.\]
+:::
+
+
+
+
+## Rouché 
 :::{.corollary title="Rouché's Theorem" ref="Rouche"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
 
@@ -2467,8 +2600,6 @@ Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f 
 :::
 
 \todo[inline]{Prove}
-
-
 
 :::{.corollary title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
@@ -2484,25 +2615,10 @@ Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is con
 
 \todo[inline]{Prove}
 
-
 :::{.corollary title="?"}
 If $f$ is nonzero on $\Omega$, then $f$ attains a minimum on $\bd \Omega$.
 This follows from applying the MMP to $1/f$.
 :::
-
-
-
-### Exercises
-
-![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
-
-
-
-
-
-
-
-# Rouche 
 
 ## Counting Zeros 
 
@@ -2528,6 +2644,7 @@ This follows from applying the MMP to $1/f$.
 - $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
 :::
 
+
 # Conformal Maps
 
 
@@ -2542,7 +2659,7 @@ Self-biholomorphisms of a domain $\Omega$ form a group $\Aut_\CC(\Omega)$.
 
 :::{.remark}
 There is an oft-used weaker condition that $f'(z) \neq 0$ for any point.
-Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may be nonzero derivative.
+Note that that this condition alone doesn't necessarily imply $f$ is holomorphic, since anti-holomorphic maps may have nonzero derivatives.
 For example, take $f(z) = \bar{z}$, so $f(x+iy) = x-iy$ -- this does not satisfy the Cauchy-Riemann equations.
 :::
 
@@ -2587,21 +2704,6 @@ Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
 
-:::{.theorem title="Classification of Conformal Maps"}
-There are 8 major types of conformal maps:
-
-| Type/Domains                                            | Formula                                   |
-| ------------                                            | -------                                   |
-| Translation/Dilation/Rotation                           | $z\mapsto e^{i\theta}(cz + h)$            |
-| Sectors to sectors                                      | $z\mapsto z^n$                            |
-| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
-| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
-| $\DD_{1\over 2} \to S_{1\over 2}$                       | $z\mapsto \log(z)$                        |
-| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
-| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
-| $S_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
-
-:::
 
 :::{.theorem title="Characterization of conformal maps"}
 Conformal maps $\DD\to\DD$ have the form
@@ -2609,6 +2711,260 @@ Conformal maps $\DD\to\DD$ have the form
 g(z) = \lambda {1-a \over 1 - \bar a z}, \quad \abs{a} < 1, \quad \abs{\lambda} = 1
 .\]
 :::
+
+:::{.theorem title="Riemann Mapping"}
+If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
+
+Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
+:::
+
+
+## By Type
+
+:::{.remark title="Notation"}
+
+| Notation                                                     | Definition                                             |
+|--------------------------------------------------------------|--------------------------------------------------------|
+| $\DD \da \ts{z \st \abs{z} \leq 1}$                          | The unit disc                                          |
+| $\HH \da \ts{x+iy \st y > 0}$                                | The upper half-plane                                   |
+| $X_{1\over 2}$                                               | A "half version of $X$", see examples                  |
+| $\HH_{1\over 2}$                                             | The first quadrant                                     |
+| $\DD_{1\over 2}$                                             | The portion of the first quadrant inside the unit disc |
+| $L \definedas \theset{x + iy \suchthat x\in \RR,\, 0<y<\pi}$ | The horizontal strip                                   |
+|                                                              |                                                        |
+|                                                              |                                                        |
+
+:::
+
+:::{.theorem title="Classification of Conformal Maps"}
+There are 8 major types of conformal maps:
+
+| Type/Domains                                            | Formula                                   |
+| ------------                                            | -------                                   |
+| Translation                                             | $z\mapsto z + h$            |
+| Dilation                                                | $z\mapsto cz$            |
+| Rotation                                                | $z\mapsto e^{i\theta}$            |
+| Sectors to sectors                                      | $z\mapsto z^n$                            |
+| $\DD_{1\over 2} \to \HH_{1\over 2}$, the first quadrant | $z\mapsto {1+z \over 1-z}$                |
+| $\HH\to S$                                              | $z\mapsto \log(z)$                        |
+| $\DD_{1\over 2} \to L_{1\over 2}$                       | $z\mapsto \log(z)$                        |
+| $S_{1\over 2} \to \DD_{1\over 2}$                       | $z\mapsto e^{iz}$                         |
+| $\DD_{1\over 2} \to \HH$                                | $z\mapsto {1\over 2}\qty{z + {1\over z}}$ |
+| $L_{1\over 2} \to \HH$                                  | $z\mapsto \sin(z)$                        |
+
+:::
+
+\todo[inline]{Pictures!}
+
+:::{.proposition title="Half-plane to Disc"}
+\[
+F: \HH^\circ &\mapstofrom \DD^\circ \\
+\ts{z\st \Im(z) > 0 } &\mapstofrom \ts{w\st \abs{w} < 1 } \\
+z &\mapsto {i-z \over i+z} \\
+i \qty{1-w \over 1+w} &\mapsfrom w
+.\]
+
+**Boundary behavior:**
+This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
+So this extends to a map $\HH\to \DD$.
+
+> Mnemonic: every $z\in \HH$ is closed to $i$ than $-i$.
+
+:::
+
+:::{.remark}
+Some write a similar map:
+\[
+\HH^\circ &\to \DD^\circ \\
+z &\mapsto {z-i \over z+i}
+.\]
+This is just a composition of the above map with the flip $z\mapsto -z$:
+\[
+- {i-z \over i + z} = {z-i \over i+z} = {z-i \over z+i}
+.\]
+
+
+:::
+
+:::{.proposition title="Right half-plane to Disc"}
+\[
+\HH_{R} &\mapstofrom \DD \\
+\ts{ z \st \Re(z) > 0 } &\mapstofrom \ts{ w \st \abs{w} < 1 } \\
+z &\mapsto {1-z \over 1+z} \\
+{1-w\over 1+w} &\mapsfrom w
+.\]
+
+Just map the *right* half-plane $\HH_R$ to the disc $\DD$ by precomposing with a rotation $e^{i\pi/2} = i$:
+\[
+\HH_{R} \to \HH &\to \DD \\
+z \mapsto iz &\mapsto {i- (iz) \over i + (iz)} = {i(1-z) \over i(1+z) } = {1-z \over 1+z}
+.\]
+
+This can easily be inverted:
+\[
+&\quad w = {1+z \over 1+z} \\
+&\implies -(1-w) + z(w+1) = 0 \\
+&\implies z = {1-w \over 1+w}
+.\]
+
+**Boundary behavior**:
+Just a rotated version of $\HH\to \DD$!
+
+> Mnemonic: every $z\in \HH_R$ is closed to 1 than $-1$.
+
+:::
+
+:::{.proposition title="Sector to sector"}
+For $0 < \alpha < 2$:
+\[
+F_\alpha: S_{\pi \over \alpha }^\circ &\mapstofrom S_{\pi}^\circ = \HH^\circ \\
+\ts{z\st 0 < \Arg(z) < {\pi\over \alpha} } &\mapstofrom \ts{w\st 0 < \Arg(w) < \pi } \\
+z &\mapsto z^\alpha \\
+w^{1\over \alpha} &\mapsfrom w
+.\]
+Note that if you look at the image of $\HH$ under $z\mapsto z^{\alpha}$, you get
+\[
+\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } \\
+.\]
+For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < w^{1\over \alpha}$.
+
+**Boundary behavior:**
+
+- As $x$ travels from $-\infty\to 0$, $F_\alpha(x)$ travels *away* from infinity along the ray $\theta = \alpha \pi$, so $L = \ts{ e^{t \alpha \pi } \st t\in (0, \infty) }$, from $\infty\to 0$.
+- As $x$ travels from $0\to \infty$, $F_\alpha(x)$ travels from $0\to \infty$ along $\RR$.
+
+:::
+
+:::{.proposition title="Sector to Disc"}
+The unmotivated formula first:
+\[
+F: S_{\alpha} &\to \DD \\ \\
+\ts{ z \st 0 < \Arg(z) < \alpha } &\mapstofrom \ts{ w \st \abs{w} < 1 } \\
+z &\mapstofrom {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
+.\]
+
+Idea: compose some known functions.
+![](figures/image_2020-07-22-13-22-46.png)
+
+\[
+S_{\alpha} &\to S_{\pi} = \HH \to \DD \\
+z &\mapsto z^{\pi \over \alpha} \mapsto {z-i\over z+i}\evalfrom_{z= z^{\pi\over \alpha}}
+.\]
+
+
+
+:::
+
+:::{.proposition title="Upper half-disc to first quadrant"}
+\[
+\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \ts{ w \st \Re(w)>0,\, \Im(w) > 0}  \\
+z &\mapsto {1+z \over 1-z} \\
+{w-1\over w+1} &\mapsfrom w
+.\]
+
+- Why this lands in the first quadrant: 
+  - Use that squares are non-negative and $z=x+iy\in \DD \implies x^2 + y^2 < 1$:
+\[
+f(z)=\frac{1-\left(x^{2}+y^{2}\right)}{(1-x)^{2}+y^{2}}+i \frac{2 y}{(1-x)^{2}+y^{2}}
+.\]
+- Why the inverse lands in the unit disc:
+  - For $w$ in Q1, the distance from $w$ to 1 is smaller than from $w$ to $-1$.
+  - Check that if $w=u+iv$ where $u, v>0$, the imaginary part of the image is positive:
+
+\[
+{w-1 \over w+1} 
+&= { (w-1) \bar{(w+1)} \over \abs{w+1}^2}\\
+&={ \qty{u-1 + iv} \qty{u+1-iv} \over (u+1)^2 + v^2 } \\
+&= {u^2 + v^2 + 1 \over (u+1)^2 + v^2}
++ i\qty{ 2v \over (u+1)^2 + v^2}
+.\]
+
+
+**Boundary behavior**:
+
+- On the upper half circle \( \ts{ e^{it } \st t\in (0, \pi)  } \), write 
+\[
+f(z)=\frac{1+e^{i \theta}}{1-e^{i \theta}}=\frac{e^{-i \theta / 2}+e^{i \theta / 2}}{e^{-i \theta / 2}-e^{i \theta / 2}}=\frac{i}{\tan (\theta / 2)}
+,\]
+  so as $t$ ranges $0\to \pi$ we have $f(z)$ ranging from $0\to i\infty$ along the imaginary axis.
+
+- As $x$ ranges from $-1\to 1$ in $\RR$, $f(z)$ ranges from $0\to \infty$ with $f(0) = 1$.
+:::
+
+:::{.proposition title="Log: Upper half-plane to horizontal strip"}
+\[
+\HH &\mapstofrom \RR \cross (0, \pi) \\
+\ts{ z \st \Im(z) > 0 } &\mapstofrom \ts{ w \st \Im(z) \in (0, \pi ) } \\
+z &\mapsto \log(z) \\
+e^w &\mapsfrom w
+.\]
+
+- Why this lands in a strip: use that $\arg(z) \in (0, \pi)$ and $\log(z) = \abs{z} + i\arg(z)$.
+
+**Boundary behavior**:
+
+- As $x$ travels from $-\infty \to 0$, $F(x)$ travels horizontally from $\infty + i\pi$ to $-\infty + i\pi$.
+- As $x$ travels from $o\to \infty$, $F(x)$ travels from $-\infty\to\infty$ in $\RR$.
+
+:::
+
+:::{.remark}
+This extends to a function $\CC\sm\RR^{\leq 0} \to \RR \cross (-\pi, \pi)$.
+Circles of radius $R$ are mapped to vertical line segments connecting $\ln(R) + i\pi$ to $\ln(R) - i\pi$, and rays are mapped to horizontal lines.
+:::
+
+
+:::{.remark}
+One can find other specific images of the logarithm:
+\[
+\ts{ z \st \abs{z} < 1,\, \Im(z) > 0 } &\mapstofrom \RR^{<0} \cross (0, \pi ) \\
+\ts{ z \st \abs{z} > 1,\, \Im(z) > 0 } &\mapstofrom \RR^{>0} \cross (0, \pi ) \\
+.\]
+
+For the upper half-disc to the negative horizontal half-strip:
+  - As $x$ travels $0\to 1$ in $\RR$, $\log(x)$ travels from $-\infty\to 0$.
+  - As $x$ travels from $-1$ to $1$ along $S^1\intersect \HH$, $\log(x)$ travels from $0\to i\pi$ vertically.
+  - As $x$ travels from $-1\to 0$, $\log(x)$ travels from $0+i\pi\to i-\infty+i\pi$ along the top of the strip.
+
+:::
+
+
+:::{.proposition title="Half-discs to half strips"}
+\[
+F: (-{\pi\over 2}, {\pi \over 2}) \cross \RR^{>0} &\to \DD \intersect \HH \\
+z &\mapsto e^{iz} \\
+{\log(w) \over i}? &\mapsfrom w
+.\]
+
+This uses that $e^{iz} = e^{-\Im(z)} e^{i \Re(z)}$.
+
+**Boundary behavior**:
+
+:::
+
+
+:::{.proposition title="Half-disc to upper half-plane"}
+\[
+F: ? &\mapstofrom ? \\
+z & \mapsto -{1\over 2}\qty{z + z\inv} \\
+.\]
+
+:::
+
+
+:::{.proposition title="Upper half-plane to vertical half-strip"}
+\[
+? &\mapstofrom ? \\
+z &\mapsto \sin(z) \\
+.\]
+
+:::
+
+
+
+
+
+
 
 
 ## Schwarz
@@ -2658,47 +3014,6 @@ Schwarz lemma.
 
 
 
-## By Type
-
-### Plane to Disc
-
-\[
-\phi: \HH &\to \DD \\
-\phi(z) &= {z - i \over z + i} \qquad f\inv(z) = i\qty{1 + w \over 1 - w}
-.\]
-
-
-### Sector to Disc
-
-For $S_\alpha \da \theset{z\in\CC \suchthat 0 < \arg(z) < \alpha }$ an open sector for $\alpha$ some angle, first map the sector to the half-plane:
-\[
-g: S_\alpha &\to \HH \\
-g(z) &= z^{\pi \over \alpha}
-.\]
-
-Then compose with a map $\HH\to\DD$:
-\[
-f: S_\alpha &\to \DD \\
-f(z) &= (\phi \circ g)(z) = {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
-.\]
-
-![](figures/image_2020-07-22-13-22-46.png)
-
-
-### Strip to Disc
-
-- Map to horizontal strip by rotation $z\mapsto \lambda z$.
-- Map horizontal strip to sector by $z \mapsto e^z$
-- Map sector to $\HH$ by $z\mapsto z^{\pi\over\alpha}$.
-- Map $\HH\to\DD$.
-
-\[
-e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
-.\]
-
-
-
-
 
 # Schwarz Reflection
 
@@ -2735,11 +3050,6 @@ e^z: \RR \cross (0, \pi) \to \RR \cross (0, \infty)
 
 
 
-:::{.theorem title="Riemann Mapping"}
-If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\in \Omega$ there exists a unique conformal map $F:\Omega \to \DD$ such that $F(z_{0}) = 0$ and $F'(z_{0}) > 0$.
-
-Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
-:::
 
 :::{.theorem title="Riemann's Removable Singularity Theorem"}
 If $f$ is holomorphic on $\Omega$ except possibly at $z_0$ and $f$ is bounded on $\Omega\setminus\theset{z_0}$, then $z_0$ is a removable singularity.
@@ -2776,9 +3086,12 @@ For $\Omega\subseteq\CC$, show that $A(\CC)\definedas \theset{f: \Omega \to \CC 
 :::
 
 
-# Appendix: Proofs of the Fundamental Theorem of Algebra
+# Proofs of the Fundamental Theorem of Algebra
 
-### Fundamental Theorem of Algebra: Argument Principle 
+### Argument Principle 
+
+:::{.proof title="using the argument principle"}
+\envlist
 
 - Let $P(z) = a_nz^n + \cdots + a_0$ and $g(z) = P'(z)/P(z)$, note $P$ is holomorphic
 - Since $\lim_{\abs z \to \infty} P(z) = \infty$, there exist an $R>0$ such that $P$ has no roots in $\theset{\abs{z} \geq R}$.
@@ -2789,10 +3102,12 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - Check that $\lim_{\abs{z\to \infty}}zg(z) = n$, so $g$ has a simple pole at $\infty$
 - Then $g$ has a Laurent series ${n\over z} + {c_2 \over z^2} + \cdots$
 - Integrate term-by-term to get $N(0) = n$.
+:::
 
+### Rouche's Theorem
 
-
-### Fundamental Theorem of Algebra: Rouche's Theorem
+:::{.proof title="using Rouche's theorem"}
+\envlist
 
 - Let $P(z) = a_nz^n + \cdots + a_0$
 - Set $f(z) = a_n z^n$ and $g(z) = P(z) - f(z) = a_{n-1}z^{n-1} + \cdots + a_0$, so $f+g = P$.
@@ -2814,8 +3129,12 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 
 - Then $a_n z^n$ has $n$ zeros in $\abs{z} < R$, so $f+g$ also has $n$ zeros.
 
-### Fundamental Theorem of Algebra: Liouville's Theorem
+:::
 
+### Liouville's Theorem
+
+:::{.proof title="using Liouville's theorem"}
+\envlist
 
 - Suppose $p$ is nonconstant and has no roots, then ${1\over p}$ is entire.
   We will show it is also bounded and thus constant, a contradiction.
@@ -2829,7 +3148,13 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
   - Set $C \da \min(A, B)$, then $\abs{p(z)} \geq C$ on all of $\CC$ and thus $\abs{1/p(z)} \leq C$ everywhere. 
   - So $1/p(z)$ is bounded an entire and thus constant by Liouville's theorem -- but this forces $p$ to be constant. $\contradiction$
 
-### Fundamental Theorem of Algebra: Open Mapping Theorem
+
+:::
+
+### Open Mapping Theorem
+
+:::{.proof title="using the Open Mapping theorem"}
+\envlist
 
 - $p$ induces a continuous map $\CP^1 \to \CP^1$
 - The continuous image of compact space is compact; 
@@ -2841,6 +3166,37 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - But the only nonempty clopen subset of a connected space is the entire space.
 - So $p$ is surjective, and $p\inv(0)$ is nonempty.
 - So $p$ has a root.
+
+:::
+
+### Generalized Liouville
+
+
+:::{.theorem title="Generalized Liouville"}
+If $X$ is a compact complex manifold,
+any holomorphic $f:X\to \CC$ is constant.
+:::
+
+
+:::{.lemma title="?"}
+If $f:X\to Y$ is a nonconstant holomorphic map between Riemann surfaces with $X$ compact, then
+
+- $f$ must be surjective,
+- $Y$ must be compact,
+- $f\inv(q)$ is finite for all $q\in Y$,
+- The branch and ramification loci consist of finitely many points.
+:::
+
+
+
+:::{.proof title="of FTA, using Generalized Liouville"}
+Given a nonconstant $p\in \CC[x]$, regard it as a function $p: \PP^1(\CC) \to \PP^1(\CC)$ by extending so that $p(\infty) = \infty$.
+Since $p$ is nonconstant, by the lemma $p$ is surjective, so there exists some $x\neq \infty$ in $\PP^1(\CC)$ with $p(x) = 0$.
+:::
+
+
+
+
 
 # Appendix
 
