@@ -5,8 +5,10 @@
 
 :::{.definition title="Conformal Map / Biholomorphism"}
 A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles (so $f$ is orientation-preserving).
-Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse.
-A bijective conformal map $f:U\to V$ is called a **biholomorphism**, and we say $U$ and $V$ are **biholomorphic**.
+Conformal implies holomorphic, and a bijective conformal map has conformal inverse automatically.
+
+A bijective conformal map $f:U\to V$ **biholomorphism**, and we say $U$ and $V$ are **biholomorphic**.
+Importantly, bijective holomorphic maps always have holomorphic inverses.
 Self-biholomorphisms of a domain $\Omega$ form a group $\Aut_\CC(\Omega)$.
 :::
 
@@ -121,7 +123,7 @@ i \qty{1-w \over 1+w} &\mapsfrom w
 This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
 So this extends to a map $\HH\to \DD$.
 
-> Mnemonic: every $z\in \HH$ is closed to $i$ than $-i$.
+> Mnemonic: every $z\in \HH$ is closer to $i$ than $-i$.
 
 :::
 
