@@ -1051,7 +1051,7 @@ Show that
 
 ## Spring 2021 # 1 $\done$
 
-:::{.problem title="Spring 2021 \# 1"}
+:::{.problem title="Spring 2021, 1"}
 Let \( (X, \mathcal{M},\mu)  \) be a measure space and let $E_n \in \mathcal{M}$ be a measurable set for $n\geq 1$.
 Let $f_n \da \chi_{E_n}$ be the indicator function of the set $E$ and show that 
 

@@ -2232,7 +2232,7 @@ Show that
 
 ## Spring 2021 \# 1 \( \done \) {#spring-2021-1-done}
 
-::: {.problem title="Spring 2021 # 1"}
+::: {.problem title="Spring 2021, 1"}
 Let \( (X, \mathcal{M},\mu) \) be a measure space and let \( E_n \in \mathcal{M} \) be a measurable set for \( n\geq 1 \). Let \( f_n \coloneqq\chi_{E_n} \) be the indicator function of the set \( E \) and show that
 
 a.  \( f_n \overset{n\to\infty}\to 1 \) uniformly \( \iff \) there exists \( N\in {\mathbb{N}} \) such that \( E_n = X \) for all \( n\geq N \).
@@ -3196,7 +3196,10 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
 :::
 
 ::: {.solution title="of b"}
-::: {.proof title="Solution 1: Trick"}
+```{=tex}
+\envlist
+```
+::: {.proof title="Solution 1, a slight trick"}
 ```{=tex}
 \envlist
 ```

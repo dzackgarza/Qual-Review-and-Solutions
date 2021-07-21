@@ -226,9 +226,9 @@ To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 :::
 
 :::{.solution title="of b"}
+\envlist
 
-
-:::{.proof title="Solution 1: Trick"}
+:::{.proof title="Solution 1, a slight trick"}
 \envlist
 
 - Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have

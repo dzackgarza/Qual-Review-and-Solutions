@@ -2867,7 +2867,7 @@ Show that
 
 ## Spring 2021 # 1 $\done$
 
-:::{.problem title="Spring 2021 \# 1"}
+:::{.problem title="Spring 2021, 1"}
 Let \( (X, \mathcal{M},\mu)  \) be a measure space and let $E_n \in \mathcal{M}$ be a measurable set for $n\geq 1$.
 Let $f_n \da \chi_{E_n}$ be the indicator function of the set $E$ and show that 
 
@@ -3801,9 +3801,9 @@ To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 :::
 
 :::{.solution title="of b"}
+\envlist
 
-
-:::{.proof title="Solution 1: Trick"}
+:::{.proof title="Solution 1, a slight trick"}
 \envlist
 
 - Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
