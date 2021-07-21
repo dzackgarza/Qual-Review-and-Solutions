@@ -141,7 +141,8 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 :::{.solution}
 \envlist
 
-:::{.proof title="of a"}
+
+:::{.proof title="a, $\implies$"}
 $\implies$:
 
 - Suppose $f:\RR^n\to \RR$ is a measurable function.
@@ -187,6 +188,9 @@ H: \RR^d &\to \RR \\
   which are linear combinations of measurable functions and thus measurable.
 
 
+:::
+
+:::{.proof title="a, $\impliedby$"}
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
