@@ -72,7 +72,10 @@ Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e
 &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w\inv)\\
 \sin(z) 
 &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w\inv)
-\\ \\
+.\]
+
+Exponential forms of *hyperbolic* cosine and sin:
+\[
 \cosh(z) 
 &= \cos(iz) 
 = {1\over 2}\qty{e^z + e^{-z}} \\
@@ -80,6 +83,7 @@ Exponential forms of cosine and sine, where it's sometimes useful to set $w\da e
 &= \sin(iz) 
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\]
+
 
 
 :::
