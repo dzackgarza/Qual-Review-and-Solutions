@@ -171,7 +171,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 - Tails of convergent sums vanish, so 
 \[
-\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0
+\sum_{n\geq N} \mu(B_n) \mapsvia{N\to\infty} 0
 .\] 
 - Also,
 \[
@@ -182,6 +182,7 @@ B_M \definedas \Intersect_{N = 1}^M \Union_{n\geq N} B_n \decreasesto B
 \mu(B) 
 &\da \mu\left(\Intersect_{N\geq 1} \Union_{n\geq N} B_n\right) \\
 &\leq \mu\left( \Union_{n\geq N} B_n \right) && \forall N \\
+&\leq \sum_{n\geq N} \mu(B_n) && \forall N \\
 &\converges{N\to\infty}\too 0
 ,\]
   where we've used that we're intersecting over fewer sets and this can only increase measure.
