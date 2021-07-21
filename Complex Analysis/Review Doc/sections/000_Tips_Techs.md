@@ -80,9 +80,18 @@ Exponential forms of *hyperbolic* cosine and sin:
 &= \cos(iz) 
 = {1\over 2}\qty{e^z + e^{-z}} \\
 \sinh(z) 
-&= \sin(iz) 
+&= -i \sin(iz) 
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\]
+
+Some other useful facts about the hyperbolic exponentials:
+
+- They are periodic with period $2\pi i$.
+- $\dd{}{z}\cosh(z) = \sinh(z)$ and $\dd{}{z}\sinh(z) = \cosh(z)$.
+- $\sinh$ is odd and $\cosh$ is even.
+- $\cosh(z + i\pi) = -\cosh(z)$ and $\sinh(z + i\pi) = -\sinh(z)$.
+- $\cosh$ has zeros at $\ts{i\pi\qty{2k+1\over 2}} = \ts{i \qty{\pi/2 + k\pi}$, i.e. $\cdots, -\pi/2, \pi/2, 3\pi/2,\cdots$, the half-integers.
+- $\sinh$ has zeros at $\ts{i\pi k}$, i.e. the integers.
 
 
 
