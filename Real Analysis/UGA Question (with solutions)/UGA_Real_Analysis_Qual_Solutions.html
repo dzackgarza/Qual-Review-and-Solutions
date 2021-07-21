@@ -181,16 +181,8 @@
 </ul></li>
 <li><a href="#functional-analysis-general"><span class="toc-section-number">11</span> Functional Analysis: General</a>
 <ul>
-<li><a href="#fall-2019-4-done"><span class="toc-section-number">11.1</span> Fall 2019 # 4 <span class="math inline">\(\done\)</span></a>
-<ul>
-<li><a href="#a-4"><span class="toc-section-number">11.1.1</span> a</a></li>
-<li><a href="#b-3"><span class="toc-section-number">11.1.2</span> b</a></li>
-</ul></li>
-<li><a href="#spring-2019-5-done"><span class="toc-section-number">11.2</span> Spring 2019 # 5 <span class="math inline">\(\done\)</span></a>
-<ul>
-<li><a href="#a-6"><span class="toc-section-number">11.2.1</span> a</a></li>
-<li><a href="#b-5"><span class="toc-section-number">11.2.2</span> b</a></li>
-</ul></li>
+<li><a href="#fall-2019-4-done"><span class="toc-section-number">11.1</span> Fall 2019 # 4 <span class="math inline">\(\done\)</span></a></li>
+<li><a href="#spring-2019-5-done"><span class="toc-section-number">11.2</span> Spring 2019 # 5 <span class="math inline">\(\done\)</span></a></li>
 <li><a href="#spring-2016-6-work"><span class="toc-section-number">11.3</span> Spring 2016 # 6 <span class="math inline">\(\work\)</span></a></li>
 <li><a href="#spring-2015-5-work"><span class="toc-section-number">11.4</span> Spring 2015 # 5 <span class="math inline">\(\work\)</span></a></li>
 <li><a href="#fall-2015-6-work"><span class="toc-section-number">11.5</span> Fall 2015 # 6 <span class="math inline">\(\work\)</span></a></li>
@@ -4015,7 +4007,7 @@ m(\mathcal{A})=\int _{{\mathbb{R}}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\
 </ul>
 </div>
 <div class="solution proofenv">
-<div class="proof proofenv" title="of a">
+<div class="proof proofenv" title="a, $\implies$">
 <p><span class="math inline">\(\implies\)</span>:</p>
 <ul>
 <li>Suppose <span class="math inline">\(f:{\mathbb{R}}^n\to {\mathbb{R}}\)</span> is a measurable function.</li>
@@ -4068,6 +4060,8 @@ H: {\mathbb{R}}^d &amp;\to {\mathbb{R}}\\
 ,\end{align*}
 <span> which are linear combinations of measurable functions and thus measurable.</li>
 </ul>
+</div>
+<div class="proof proofenv" title="a, $\impliedby$">
 <p><span class="math inline">\(\impliedby\)</span>:</p>
 <ul>
 <li><p>Suppose <span class="math inline">\({\mathcal{A}}\)</span> is a measurable set.</p></li>
@@ -4567,15 +4561,14 @@ A_\delta f \to \alpha f \text{ in } L^1({\mathbb{R}}) {\quad \operatorname{as} \
 <h1 data-number="11" id="functional-analysis-general"><span class="header-section-number">11</span> Functional Analysis: General</h1>
 <h2 data-number="11.1" id="fall-2019-4-done"><span class="header-section-number">11.1</span> Fall 2019 # 4 <span class="math inline">\(\done\)</span></h2>
 <p>Let <span class="math inline">\(\{u_n\}_{n=1}^∞\)</span> be an orthonormal sequence in a Hilbert space <span class="math inline">\(\mathcal{H}\)</span>.</p>
-<h3 data-number="11.1.1" id="a-4"><span class="header-section-number">11.1.1</span> a</h3>
-<p>Prove that for every <span class="math inline">\(x ∈ \mathcal H\)</span> one has 
+<ol type="a">
+<li><p>Prove that for every <span class="math inline">\(x ∈ \mathcal H\)</span> one has 
 <span class="math display">
 \begin{align*}
 \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
 \end{align*}
-<span></p>
-<h3 data-number="11.1.2" id="b-3"><span class="header-section-number">11.1.2</span> b</h3>
-<p>Prove that for any sequence <span class="math inline">\(\{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})\)</span> there exists an element <span class="math inline">\(x\in\mathcal H\)</span> such that 
+<span></p></li>
+<li><p>Prove that for any sequence <span class="math inline">\(\{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})\)</span> there exists an element <span class="math inline">\(x\in\mathcal H\)</span> such that 
 <span class="math display">
 \begin{align*}
 a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
@@ -4585,8 +4578,8 @@ a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
 \begin{align*}
 {\left\lVert {x} \right\rVert}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
 \end{align*}
-<span></p>
-<div class="solution proofenv">
+<span></p></li>
+</ol>
 <div class="concept proofenv">
 <ul>
 <li>Bessel’s Inequality</li>
@@ -4596,7 +4589,8 @@ a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
 <li>Trick – remember to write out finite sum <span class="math inline">\(S_N\)</span>, and consider <span class="math inline">\({\left\lVert {x - S_N} \right\rVert}\)</span>.</li>
 </ul>
 </div>
-<h3 data-number="11.1.3" id="a-5"><span class="header-section-number">11.1.3</span> a</h3>
+<div class="solution proofenv">
+<div class="proof proofenv" title="of a">
 <p><strong>Claim:</strong> 
 <span class="math display">
 \begin{align*}
@@ -4616,7 +4610,8 @@ a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
 &amp;\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
 .\end{align*}
 <span></p>
-<h3 data-number="11.1.4" id="b-4"><span class="header-section-number">11.1.4</span> b</h3>
+</div>
+<div class="proof proofenv" title="of b">
 <ol type="1">
 <li><p>Fix <span class="math inline">\(\left\{{a_n}\right\} \in \ell^2\)</span>, then note that <span class="math inline">\(\sum {\left\lvert {a_n} \right\rvert}^2 &lt; \infty \implies\)</span> the tails vanish.</p></li>
 <li><p>Define 
@@ -4643,11 +4638,12 @@ x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} 
 <p>Bonus: We didn’t use completeness here, so the Fourier series may not actually converge to <span class="math inline">\(x\)</span>. If <span class="math inline">\(\left\{{u_n}\right\}\)</span> is <strong>complete</strong> (so <span class="math inline">\(x = 0 \iff {\left\langle {x},~{u_n} \right\rangle} = 0 ~\forall n\)</span>) then the Fourier series <em>does</em> converge to <span class="math inline">\(x\)</span> and <span class="math inline">\(\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}\)</span> for all <span class="math inline">\(x \in H\)</span>.</p>
 </blockquote>
 </div>
+</div>
 <h2 data-number="11.2" id="spring-2019-5-done"><span class="header-section-number">11.2</span> Spring 2019 # 5 <span class="math inline">\(\done\)</span></h2>
-<h3 data-number="11.2.1" id="a-6"><span class="header-section-number">11.2.1</span> a</h3>
-<p>Show that <span class="math inline">\(L^2([0, 1]) ⊆ L^1([0, 1])\)</span> and argue that <span class="math inline">\(L^2([0, 1])\)</span> in fact forms a dense subset of <span class="math inline">\(L^1([0, 1])\)</span>.</p>
-<h3 data-number="11.2.2" id="b-5"><span class="header-section-number">11.2.2</span> b</h3>
-<p>Let <span class="math inline">\(Λ\)</span> be a continuous linear functional on <span class="math inline">\(L^1([0, 1])\)</span>.</p>
+<ol type="a">
+<li><p>Show that <span class="math inline">\(L^2([0, 1]) ⊆ L^1([0, 1])\)</span> and argue that <span class="math inline">\(L^2([0, 1])\)</span> in fact forms a dense subset of <span class="math inline">\(L^1([0, 1])\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(Λ\)</span> be a continuous linear functional on <span class="math inline">\(L^1([0, 1])\)</span>.</p></li>
+</ol>
 <p>Prove the Riesz Representation Theorem for <span class="math inline">\(L^1([0, 1])\)</span> by following the steps below:</p>
 <ol type="i">
 <li>Establish the existence of a function <span class="math inline">\(g ∈ L^2([0, 1])\)</span> which represents <span class="math inline">\(Λ\)</span> in the sense that 
@@ -4673,7 +4669,6 @@ x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} 
   \end{align*}
 <span></li>
 </ol>
-<div class="solution proofenv">
 <div class="concept proofenv">
 <ul>
 <li><p>Holders’ inequality: <span class="math inline">\({\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {f} \right\rVert}_q\)</span></p></li>
@@ -4699,7 +4694,8 @@ x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} 
 </div></li>
 </ul>
 </div>
-<h3 data-number="11.2.3" id="a-7"><span class="header-section-number">11.2.3</span> a</h3>
+<div class="solution proofenv">
+<div class="proof proofenv" title="of a">
 <ul>
 <li><p>Note <span class="math inline">\(X = [0, 1] \implies m(X) = 1\)</span>.</p></li>
 <li><p>By Holder’s inequality with <span class="math inline">\(p=q=2\)</span>, 
@@ -4711,9 +4707,9 @@ x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} 
 <li><p>Thus <span class="math inline">\(L^2(X) \subseteq L^1(X)\)</span></p></li>
 <li><p>Since they share a common dense subset (simple functions), <span class="math inline">\(L^2\)</span> is dense in <span class="math inline">\(L^1\)</span></p></li>
 </ul>
-<h3 data-number="11.2.4" id="b-6"><span class="header-section-number">11.2.4</span> b</h3>
+</div>
 <p>Let <span class="math inline">\(\Lambda \in L^1(X) {}^{ \vee }\)</span> be arbitrary.</p>
-<h4 data-number="11.2.4.1" id="existence-of-g-representing-lambda."><span class="header-section-number">11.2.4.1</span> 1: Existence of <span class="math inline">\(g\)</span> Representing <span class="math inline">\(\Lambda\)</span>.</h4>
+<div class="proof proofenv" title="of b, Existence of $g$ representing $\Lambda$">
 <p>Let <span class="math inline">\(f\in L^2\subseteq L^1\)</span> be arbitrary.</p>
 <p>Claim: <span class="math inline">\(\Lambda\in L^1(X) {}^{ \vee }\implies \Lambda \in L^2(X) {}^{ \vee }\)</span>.</p>
 <ul>
@@ -4745,7 +4741,8 @@ x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} 
 <span class="math display">
 \begin{align*}f\in L^2 \implies \Lambda(f) = {\left\langle {f},~{g} \right\rangle} \mathrel{\vcenter{:}}=\int_0^1 f(x) \mkern 1.5mu\overline{\mkern-1.5mug(x)\mkern-1.5mu}\mkern 1.5mu\, dx.\end{align*}
 <span></p>
-<h4 data-number="11.2.4.2" id="g-is-in-linfty"><span class="header-section-number">11.2.4.2</span> 2: <span class="math inline">\(g\)</span> is in <span class="math inline">\(L^\infty\)</span></h4>
+</div>
+<div class="proof proofenv" title="of b, $g$ is in $L^\infty$">
 <ul>
 <li><p>It suffices to show <span class="math inline">\({\left\lVert {g} \right\rVert}_{L^\infty(X)} &lt; \infty\)</span>.</p></li>
 <li><p>Since we’re assuming <span class="math inline">\({\left\lVert {\Gamma} \right\rVert}_{L^1(X) {}^{ \vee }} &lt; \infty\)</span>, it suffices to show the stated equality. </p></li>
@@ -4793,6 +4790,7 @@ h = \frac{1}{m(E)} \frac{\overline{g}}{{\left\lvert {g} \right\rvert}} \chi_E
 </ul></li>
 </ul>
 </div>
+</div>
 <h2 data-number="11.3" id="spring-2016-6-work"><span class="header-section-number">11.3</span> Spring 2016 # 6 <span class="math inline">\(\work\)</span></h2>
 <p>Without using the Riesz Representation Theorem, compute 
 <span class="math display">
@@ -4833,12 +4831,7 @@ f \in L^p({\mathbb{R}}^n) \implies \|f\|_{p} = \sup _{\|g\|_{q}=1}\left|\int f(x
 <li><p>Prove that <span class="math inline">\(C([0, 1])\)</span> is not complete under the <span class="math inline">\(L^1{\hbox{-}}\)</span>norm <span class="math inline">\({\left\lVert {f} \right\rVert}_1 = \displaystyle\int_0^1 |f (x)| ~dx\)</span>.</p></li>
 </ol>
 <div class="solution proofenv">
-<div class="concept proofenv">
-<ul>
-<li>?</li>
-</ul>
-</div>
-<h3 data-number="12.1.1" id="a-8"><span class="header-section-number">12.1.1</span> a</h3>
+<div class="proof proofenv" title="of a">
 <ul>
 <li><p>Let <span class="math inline">\(\left\{{f_n}\right\}\)</span> be a Cauchy sequence in <span class="math inline">\(C(I, {\left\lVert {{-}} \right\rVert}_\infty)\)</span>, so <span class="math inline">\(\lim_n\lim_m {\left\lVert {f_m - f_n} \right\rVert}_\infty = 0\)</span>, we will show it converges to some <span class="math inline">\(f\)</span> in this space.</p></li>
 <li><p>For each fixed <span class="math inline">\(x_0 \in [0, 1]\)</span>, the sequence of real numbers <span class="math inline">\(\left\{{f_n(x_0)}\right\}\)</span> is Cauchy in <span class="math inline">\({\mathbb{R}}\)</span> since 
@@ -4882,7 +4875,8 @@ x_0\in I \implies {\left\lvert {f_m(x_0) - f_n(x_0)} \right\rvert} \leq \sup_{x\
 </ul></li>
 <li><p><span class="math inline">\(f\)</span> is the uniform limit of continuous functions and thus continuous, so <span class="math inline">\(f\in C([0, 1])\)</span>.</p></li>
 </ul>
-<h3 data-number="12.1.2" id="b-7"><span class="header-section-number">12.1.2</span> b</h3>
+</div>
+<div class="proof proofenv" title="of b">
 <ul>
 <li><p>It suffices to produce a Cauchy sequence that does not converge to a continuous function.</p></li>
 <li><p>Take the following sequence of functions:</p>
@@ -4900,6 +4894,7 @@ x_0\in I \implies {\left\lvert {f_m(x_0) - f_n(x_0)} \right\rvert} \leq \sup_{x\
 <li><p>But <span class="math inline">\(f_n\)</span> converges to <span class="math inline">\(\chi_{[{1\over 2}, 1]}\)</span> which is discontinuous.</p></li>
 </ul>
 </div>
+</div>
 <h2 data-number="12.2" id="spring-2017-6-done"><span class="header-section-number">12.2</span> Spring 2017 # 6 <span class="math inline">\(\done\)</span></h2>
 <p>Show that the space <span class="math inline">\(C^1([a, b])\)</span> is a Banach space when equipped with the norm 
 <span class="math display">
@@ -4907,12 +4902,12 @@ x_0\in I \implies {\left\lvert {f_m(x_0) - f_n(x_0)} \right\rvert} \leq \sup_{x\
 \|f\|:=\sup _{x \in[a, b]}|f(x)|+\sup _{x \in[a, b]}\left|f^{\prime}(x)\right|.
 \end{align*}
 <span></p>
-<div class="solution proofenv">
 <div class="concept proofenv">
 <ul>
 <li>See <a href="https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/" class="uri">https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/</a></li>
 </ul>
 </div>
+<div class="solution proofenv">
 <ul>
 <li><p>Denote this norm <span class="math inline">\({\left\lVert {{-}} \right\rVert}_u\)</span></p></li>
 <li><p>Let <span class="math inline">\(f_n\)</span> be a Cauchy sequence in this space, so <span class="math inline">\({\left\lVert {f_n} \right\rVert}_u &lt; \infty\)</span> for every <span class="math inline">\(n\)</span> and <span class="math inline">\({\left\lVert {f_j - f_k} \right\rVert}_u \overset{j, k\to\infty}\to 0\)</span>.</p></li>
@@ -4967,11 +4962,6 @@ f_n(x) - f_n(a) \quad &amp;\overset{u}\to f(x) - f(a) \\
 <span></p>
 <p>Show that <span class="math inline">\((C^0({\mathbb{R}}), {\left\lVert {{-}} \right\rVert} )\)</span> (the space of continuous functions <span class="math inline">\(f: X\to {\mathbb{R}}\)</span>) is complete.</p>
 <div class="solution proofenv">
-<div class="concept proofenv">
-<ul>
-<li>?</li>
-</ul>
-</div>
 <p>Let <span class="math inline">\(\left\{{f_k}\right\}\)</span> be a Cauchy sequence, so <span class="math inline">\({\left\lVert {f_k} \right\rVert} &lt; \infty\)</span> for all <span class="math inline">\(k\)</span>. Then for a fixed <span class="math inline">\(x\)</span>, the sequence <span class="math inline">\(f_k(x)\)</span> is Cauchy in <span class="math inline">\({\mathbb{R}}\)</span> and thus converges to some <span class="math inline">\(f(x)\)</span>, so define <span class="math inline">\(f\)</span> by <span class="math inline">\(f(x) \mathrel{\vcenter{:}}=\lim_{k\to\infty} f_k(x)\)</span>.</p>
 <p>Then <span class="math inline">\({\left\lVert {f_k - f} \right\rVert} = \max_{x\in X}{\left\lvert {f_k(x) - f(x)} \right\rvert} \overset{k\to\infty}\to 0\)</span>, and thus <span class="math inline">\(f_k \to f\)</span> uniformly and thus <span class="math inline">\(f\)</span> is continuous. It just remains to show that <span class="math inline">\(f\)</span> has bounded norm.</p>
 <p>Choose <span class="math inline">\(N\)</span> large enough so that <span class="math inline">\({\left\lVert {f - f_N} \right\rVert} &lt; \varepsilon\)</span>, and write <span class="math inline">\({\left\lVert {f_N} \right\rVert} \mathrel{\vcenter{:}}= M &lt; \infty\)</span></p>
