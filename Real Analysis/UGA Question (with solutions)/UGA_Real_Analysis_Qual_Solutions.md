@@ -1,398 +1,340 @@
-\newcommand{\dx}{\,dx}
-\newcommand{\dt}{\,dt}
-\newcommand{\dy}{\,dy}
-\newcommand{\ds}{\,ds}
-\newcommand{\dz}{\,dz}
-\newcommand{\barz}{\bar{z} }
-\newcommand{\dzbar}{\,d\bar{z} }
-\newcommand{\zbar}{\bar{z} }
-\newcommand{\du}{\,du}
-\newcommand{\dw}{\,dw}
-\newcommand{\dV}{\,dV}
-\newcommand{\dmu}{\,d\mu}
-\newcommand{\open}[1]{\overset{\circ}{#1}}
-\newcommand{\textoperatorname}[1]{
-  \operatorname{\textnormal{#1}}
-}
-\newcommand{\et}{\text{ét}}
-\newcommand{\Et}{\text{Ét}}
-\newcommand\stacksymbol[3]{
-  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
-  $\scriptscriptstyle#2$}}
-}
-\renewcommand{\AA}[0]{{\mathbb{A}}}
+\newcommand*\dif{\mathop{}\!\operatorname{d}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Kahler[0]{\operatorname{Kähler}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand\compact[0]{\operatorname{cpt}}
+\newcommand\hyp[0]{{\operatorname{hyp}}}
+\newcommand\jan{\operatorname{Jan}}
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand\rref{\operatorname{RREF}}
+\newcommand{\Tatesymbol}{\operatorname{TateSymb}}
+\newcommand\taf{ \mathrm{taf} }
+\newcommand\tilt[0]{ { \flat } }
+\newcommand\tmf{ \mathrm{tmf} }
+\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
-\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\Ann}[0]{\operatorname{Ann}}
+\newcommand{\Arg}[0]{\operatorname{Arg}}
+\newcommand{\Art}[0]{\operatorname{Art}}
 \newcommand{\BB}[0]{{\mathbb{B}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
+\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\Div}[0]{\operatorname{Div}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
+\newcommand{\EKL}[0]{{\mathrm{EKL}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\Et}{\text{Ét}}
+\newcommand{\Extalgebra}[0]{\bigwedge}
+\newcommand{\Extalg}[0]{\bigwedge}
+\newcommand{\Extprod}[0]{\bigwedge}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
-\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\FS}{{ \text{FS} }}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
+\newcommand{\Flat}[0]{{\operatorname{Flat}}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
-\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
-\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
-\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Frac}[0]{\operatorname{Frac}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
+\newcommand{\GL}[0]{\operatorname{GL}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\Gal}[0]{{ \mathsf{Gal}} }
+\newcommand{\Gl}[0]{\operatorname{GL}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
+\newcommand{\Hilb}[0]{\operatorname{Hilb}}
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\Id}[0]{\operatorname{Id}}
+\newcommand{\Inn}[0]{{\operatorname{Inn}}}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
-\newcommand{\kk}[0]{{\mathbb{k}}}
-\newcommand{\bbm}[0]{{\mathbb{M}}}
-\newcommand{\NN}[0]{{\mathbb{N}}}
-\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
+\newcommand{\KMW}[0]{ \K^{\scriptscriptstyle \mathrm{MW}} }
+\newcommand{\KMimp}[0]{ \hat{\K}^{\scriptscriptstyle \mathrm{M}} }
+\newcommand{\KM}[0]{ \K^{\scriptstyle\mathrm{M}} }
+\newcommand{\Kah}[0]{{ \operatorname{Kähler} } }
+\newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\LL}[0]{{\mathbb{L}}}
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\Log}[0]{\operatorname{Log}}
+\newcommand{\MCG}[0]{{\operatorname{MCG}}}
+\newcommand{\MM}[0]{{\mathcal{M}}}
+\newcommand{\MW}[0]{\operatorname{MW}}
+\newcommand{\Mat}[0]{\operatorname{Mat}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\NN}[0]{{\mathbb{N}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
+\newcommand{\OO}[0]{{\mathcal{O}}}
+\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\OX}[0]{{\mathcal{O}_X}}
+\newcommand{\Obs}{\operatorname{Obs} }
+\newcommand{\Ob}[0]{{\operatorname{Ob}}}
+\newcommand{\Op}[0]{{\operatorname{Op}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\Out}[0]{{\operatorname{Out}}}
+\newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
+\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+\newcommand{\Presh}[0]{\presh}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
+\newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
 \newcommand{\RR}[0]{{\mathbb{R}}}
-\newcommand{\SpSp}[0]{{\mathbb{S}}}
-\renewcommand{\SS}[0]{{\mathbb{S}}}
-\newcommand{\TT}[0]{{\mathbb{T}}}
-\newcommand{\ZZ}[0]{{\mathbb{Z}}}
-\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
-\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
-\newcommand{\kG}[0]{{kG}}
-\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
-\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
-\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
-\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
-\newcommand{\chp}[0]{\operatorname{ch. p}}
-\newcommand{\fp}[0]{\operatorname{fp}}
-\newcommand{\HT}[0]{{\operatorname{HT}}}
-\newcommand{\LC}[0]{{\mathrm{LC}}}
-\newcommand{\qc}[0]{{\operatorname{qc}}}
-\newcommand{\SF}[0]{\operatorname{SF}}
-\newcommand{\vol}[0]{\operatorname{vol}}
-\newcommand{\Ric}[0]{\operatorname{Ric}}
-\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
-\newcommand{\covol}[0]{\operatorname{covol}}
-\newcommand{\bP}[0]{\operatorname{bP}}
-\newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\HF}[0]{\operatorname{HF}}
-\newcommand{\CF}[0]{\operatorname{CF}}
-\newcommand{\HFK}[0]{\operatorname{HFK}}
-\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
-\newcommand{\QHS}[0]{\operatorname{QHS}}
-\newcommand{\ZHB}[0]{\operatorname{ZHB}}
-\newcommand{\QHB}[0]{\operatorname{QHB}}
-\newcommand{\ks}[0]{\operatorname{ks}}
-\newcommand{\lk}[0]{\operatorname{lk}}
-\newcommand{\nd}[0]{\operatorname{nd}}
-\newcommand{\Arg}[0]{\operatorname{Arg}}
-\newcommand{\PGL}[0]{\operatorname{PGL}}
-\newcommand{\GL}[0]{\operatorname{GL}}
-\newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\mat}[0]{\operatorname{Mat}}
-\newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Gal}[0]{\operatorname{Gal}}
-\newcommand{\Hilb}[0]{\operatorname{Hilb}}
-\newcommand{\Quot}[0]{\operatorname{Quot}}
-\newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{{ \text{red} }}
-\newcommand{\Pic}[0]{{\operatorname{Pic}}}
-\newcommand{\NS}[0]{{\operatorname{NS}}}
-\newcommand{\lcm}[0]{\operatorname{lcm}}
-\newcommand{\maps}[0]{\operatorname{Maps}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
-\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
-\newcommand{\Tr}[0]{\operatorname{Tr}}
-\newcommand{\adj}[0]{\operatorname{adj}}
-\newcommand{\ad}[0]{\operatorname{ad}}
-\newcommand{\ann}[0]{\operatorname{Ann}}
-\newcommand{\Ann}[0]{\operatorname{Ann}}
-\newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\arccsc}[0]{\operatorname{arccsc}}
-\newcommand{\arccot}[0]{\operatorname{arccot}}
-\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
-\newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\syl}[0]{{\operatorname{Syl}}}
-\newcommand{\ff}[0]{\operatorname{ff}}
-\newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
-\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
-\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
-\newcommand{\zar}[0]{{\mathrm{zar}}}
-\newcommand{\afp}[0]{A_{/\FF_p}}
-\newcommand{\HP}[0]{{\operatorname{HP}}}
-\newcommand{\TP}[0]{{\operatorname{TP}}}
-\newcommand{\HC}[0]{{\operatorname{HC}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HoH}[0]{{\operatorname{HH}}}
-\newcommand{\THoH}[0]{{\operatorname{THH}}}
-\newcommand{\mTHH}[0]{{\operatorname{THH}}}
-\newcommand{\THC}[0]{{\operatorname{THC}}}
-\newcommand{\TC}[0]{{\operatorname{TC}}}
-\newcommand{\GW}[0]{{\operatorname{GW}}}
-\newcommand{\SH}[0]{{\operatorname{SH}}}
-\newcommand{\TCH}[0]{{\operatorname{TCH}}}
-\newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\codim}[0]{\operatorname{codim}}
-\newcommand{\reldim}[0]{\operatorname{reldim}}
-\newcommand{\cohdim}[0]{\operatorname{cohdim}}
-\newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\dom}[0]{\operatorname{dom}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\txor}[0]{{\operatorname{ or }}}
-\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
-\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\Aut}[0]{{\operatorname{Aut}}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
-\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\Reg}[0]{\operatorname{Reg}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
-\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
-\newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\MO}[0]{{\operatorname{MO}}}
-\newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
-\newcommand{\per}[0]{{\operatorname{Per}}}
-\newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\SU}[0]{{\operatorname{SU}}}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
-\newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\CH}[0]{{\operatorname{CH}}}
-\newcommand{\Cat}[0]{\mathsf{Cat}}
-\newcommand{\Poset}[0]{\mathsf{Poset}}
-\newcommand{\Fun}[0]{{\mathsf{Fun}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
-\newcommand{\poly}[0]{\mathsf{poly}}
-\newcommand{\Vect}[0]{{\mathsf{Vect}}}
-\newcommand{\Sh}[0]{{\mathsf{Sh}}}
-\newcommand{\Var}[0]{{\mathsf{Var}}}
-\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
-\newcommand{\Alg}[0]{{\mathsf{Alg}}}
-\newcommand{\Ch}[0]{\mathsf{Ch}}
-\newcommand{\Set}[0]{{\mathsf{Set}}}
-\newcommand{\FI}[0]{{\mathsf{FI}}}
-\newcommand{\Sets}[0]{{\mathsf{Set}}}
-\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
-\newcommand{\sSet}[0]{{\mathsf{sSet}}}
-\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
-\newcommand{\Sp}[0]{{\mathsf{Sp}}}
-\newcommand{\sets}[0]{{\mathsf{Set}}}
-\newcommand{\Grp}[0]{{\mathsf{Grp}}}
-\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
-\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
-\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
-\newcommand{\Kan}[0]{{\mathsf{Kan}}}
-\newcommand{\Groups}[0]{{\mathsf{Group}}}
-\newcommand{\Ab}[0]{{\mathsf{Ab}}}
-\newcommand{\Ring}[0]{\mathsf{Ring}}
-\newcommand{\CRing}[0]{\mathsf{CRing}}
-\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
-\newcommand{\Field}[0]{\mathsf{Field}}
-\newcommand{\Perf}[0]{\mathsf{Perf}}
-\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
-\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
-\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
-\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
-\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
-\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
-\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\mathsf{gr}\,}}
-\newcommand{\grMod}[0]{{\mathsf{grMod}}}
-\newcommand{\Mod}[0]{{\mathsf{Mod}}}
-\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
-\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
-\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
-\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
-\newcommand{\cdga}[0]{{\mathsf{cdga} }}
-\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
-\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
-\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
-\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
-\newcommand{\alg}[0]{\mathsf{Alg}}
-\newcommand{\scalg}[0]{\mathsf{sCAlg}}
-\newcommand{\calg}[0]{\mathsf{CAlg}}
-\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
-\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
-\newcommand{\ssets}[0]{\mathsf{sSet}}
-\newcommand{\Assoc}[0]{\mathsf{Assoc}}
-\newcommand{\Free}[0]{\mathsf{Free}}
-\newcommand{\Unital}[0]{\mathsf{Unital}}
-\newcommand{\Riem}[0]{\mathsf{Riem}}
-\newcommand{\Comm}[0]{\mathsf{Comm}}
-\newcommand{\Top}[0]{{\mathsf{Top}}}
-\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
-\newcommand{\ho}[0]{{\mathsf{ho}}}
-\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
-\newcommand{\Sch}[0]{{\mathsf{Sch}}}
-\newcommand{\Aff}[0]{{\mathsf{Aff}}}
-\newcommand{\Schf}[0]{{\mathsf{Schf}}}
-\newcommand{\Rep}[0]{{\mathsf{Rep}}}
-\newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
-\newcommand{\Perv}[0]{\mathsf{Perv}}
-\newcommand{\presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
-\newcommand{\bung}{{\mathsf{Bun}_G}}
-\newcommand{\set}{{\mathsf{Set} }}
-
-\newcommand{\eul}[0]{{\operatorname{eul}}}
-\newcommand{\ab}[0]{{\operatorname{ab}}}
-\newcommand{\op}[0]{^{\operatorname{op}}}
-\newcommand{\Op}[0]{{\operatorname{Op}}}
-\newcommand{\Ob}[0]{{\operatorname{Ob}}}
-\newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\Tor}[0]{\operatorname{Tor}}
-\newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext} }
-\newcommand{\Def}{\operatorname{Def} }
-\newcommand{\Obs}{\operatorname{Obs} }
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\orr}[0]{{\operatorname{ or }}}
-\newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\const}[0]{{\operatorname{const.}}}
-\newcommand{\disc}[0]{{\operatorname{disc}}}
-\newcommand{\discriminant}[0]{{\Delta}}
-\newcommand{\id}[0]{\operatorname{id}}
-\newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\operatorname{pt}}}
-\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
-\newcommand{\sep}[0]{^\operatorname{sep}}
-\newcommand{\tors}[0]{{\operatorname{tors}}}
-\newcommand{\tor}[0]{\operatorname{Tor}}
-\newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{{ \text{compact} } }
-\newcommand{\Kah}[0]{{ \text{Kähler} } }
-\newcommand{\oriented}[0]{{ \text{oriented} } }
-\newcommand\compact[0]{\text{cpt}}
-\newcommand\Kahler[0]{\text{Kähler}}
-\newcommand\hyp[0]{\text{hyp}}
-\newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
-\newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
-\newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
-\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
-\newcommand{\actsonl}[0]{\curvearrowleft}
-\newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
-\newcommand{\convolve}[0]{\ast}
-\newcommand{\freeprod}[0]{\ast}
+\newcommand{\SpSp}[0]{{\mathbb{S}}}
+\newcommand{\Spec}[0]{\operatorname{Spec}}
+\newcommand{\Spf}[0]{\operatorname{Spf}}
 \newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
-\newcommand{\slope}[0]{{\mathrm{slope}}}
-\newcommand{\coker}[0]{\operatorname{coker}}
-\newcommand{\Mor}[0]{\operatorname{Mor}}
-\newcommand{\cone}[0]{\operatorname{cone}}
-\newcommand{\cok}[0]{\operatorname{coker}}
-\newcommand{\PD}[0]{\mathrm{PD}}
-\newcommand{\conjugate}[1]{{\overline{{#1}}}}
-\newcommand{\conj}[1]{{\overline{{#1}}}}
-\newcommand{\converges}[1]{\overset{#1}}
-\newcommand{\bundle}[1]{\mathcal{#1}}
-\newcommand{\td}[0]{\mathrm{td}}
-\newcommand{\correspond}[1]{\theset{\substack{#1}}}
-\newcommand{\cross}[0]{\times}
-\newcommand{\by}[0]{\times}
-\newcommand{\dash}[0]{{\hbox{-}}}
-\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
-\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
-\newcommand{\definedas}[0]{\coloneqq}
-\newcommand{\da}[0]{\coloneqq}
-\newcommand{\del}[0]{{\partial}}
-\newcommand{\directlim}[0]{\varinjlim}
-\newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
-\newcommand{\Disjoint}[0]{\displaystyle\coprod}
-\newcommand{\dual}[0]{ {}^{ \check{} }}
-\newcommand{\sm}[0]{\setminus}
-\newcommand{\smz}[0]{\setminus\theset{0}}
-\newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{\varepsilon}
-\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
-\newcommand{\up}[0]{\uparrow}
-\newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\gs}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\homotopic}[0]{\simeq}
-\newcommand{\injectivelim}[0]{\varinjlim}
-\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
-\newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
-\newcommand{\into}[0]{\to}
-\newcommand{\inv}[0]{^{-1}}
-\newcommand{\mfa}[0]{{\mathfrak{a}}}
-\newcommand{\mfb}[0]{{\mathfrak{b}}}
-\newcommand{\mfc}[0]{{\mathfrak{c}}}
-\newcommand{\mff}[0]{{\mathfrak{f}}}
-\newcommand{\mfi}[0]{{\mathfrak{I}}}
-\newcommand{\mfm}[0]{{\mathfrak{m}}}
-\newcommand{\mfn}[0]{{\mathfrak{n}}}
-\newcommand{\mfp}[0]{{\mathfrak{p}}}
-\newcommand{\mfq}[0]{{\mathfrak{q}}}
-\newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\mfs}[0]{{\mathfrak{s}}}
-\newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\liel}[0]{{\mathfrak{l}}}
-\newcommand{\lief}[0]{{\mathfrak{f}}}
-\newcommand{\liet}[0]{{\mathfrak{t}}}
-\newcommand{\lieo}[0]{{\mathfrak{o}}}
-\newcommand{\lied}[0]{{\mathfrak{d}}}
-\newcommand{\lier}[0]{{\mathfrak{r}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
-\newcommand{\gl}[0]{{\mathfrak{gl}}}
-\newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\Tensor}[0]{\bigotimes}
+\newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
+\newcommand{\U}[0]{{\operatorname{U}}}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\ZZlocal}[1]{{ \ZZ_{\hat{#1}} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\Zar}[0]{{\mathrm{Zar}}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\abuts}[0]{\Rightarrow}
+\newcommand{\ab}[0]{{\operatorname{ab}}}
+\newcommand{\actsonl}[0]{\curvearrowleft}
+\newcommand{\actson}[0]{\curvearrowright}
+\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\adj}[0]{\operatorname{adj}}
+\newcommand{\ad}[0]{\operatorname{ad}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\annd}[0]{{\operatorname{ and }}}
+\newcommand{\ann}[0]{\operatorname{Ann}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\aut}[0]{\operatorname{Aut}}
+\newcommand{\bP}[0]{\operatorname{bP}}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\bbm}[0]{{\mathbb{M}}}
+\newcommand{\bd}[0]{{\del}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
+\newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\Bun}{{\mathsf{Bun}}}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\by}[0]{\times}
+\newcommand{\candim}[0]{\operatorname{candim}}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\ch}[0]{\operatorname{ch}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
+\newcommand{\coim}[0]{\operatorname{coim}}
+\newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\cone}[0]{\operatorname{cone}}
+\newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\const}[0]{{\operatorname{const.}}}
+\newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\convolve}[0]{\ast}
+\newcommand{\correspond}[1]{\theset{\substack{#1}}}
+\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\cpt}[0]{{ \operatorname{compact} } }
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\dR}[0]{\mathrm{dR}}
+\newcommand{\dV}{\,dV}
+\newcommand{\dash}[0]{{\hbox{-}}}
+\newcommand{\da}[0]{\coloneqq}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
+\newcommand{\ddim}[0]{\operatorname{ddim}}
+\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
+\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
+\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\decreasesto}[0]{\searrow}
+\newcommand{\definedas}[0]{\coloneqq}
+\newcommand{\del}[0]{{\partial}}
+\newcommand{\diagonal}[1]{\Delta}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\directlim}[0]{\varinjlim}
+\newcommand{\discriminant}[0]{{\Delta}}
+\newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\dlog}[0]{\operatorname{dLog}}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dr}{\,dr}
+\newcommand{\ds}{\,ds}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\dt}{\,dt}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dx}{\,dx}
+\newcommand{\dy}{\,dy}
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dz}{\,dz}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\eps}[0]{{\varepsilon}}
+\newcommand{\essdim}[0]{\operatorname{essdim}}
+\newcommand{\et}{\text{ét}}
+\newcommand{\eul}[0]{{\operatorname{eul}}}
+\newcommand{\evalfrom}[0]{\Big|}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\ff}[0]{\operatorname{ff}}
+\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\from}[0]{\leftarrow}
+\newcommand{\gal}[0]{{ \operatorname{Gal}} }
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
+\newcommand{\height}[0]{\operatorname{ht}}
+\newcommand{\homotopic}[0]{\simeq}
+\newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\im}[0]{\operatorname{im}}
+\newcommand{\increasesto}[0]{\nearrow}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\injectivelim}[0]{\varinjlim}
+\newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\interior}[0]{^\circ}
+\newcommand{\intersect}[0]{\cap}
+\newcommand{\into}[0]{\to}
+\newcommand{\inverselim}[0]{\varprojlim}
+\newcommand{\inv}[0]{^{-1}}
+\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\isomorphic}{{ \, \mapsvia{\sim}\, }}
+\newcommand{\iso}{{ \isomorphic  }}
+\newcommand{\kG}[0]{{kG}}
+\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
+\newcommand{\kk}[0]{{\mathbb{k}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\krulldim}[0]{\operatorname{krulldim}}
+\newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
+\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
+\newcommand{\lci}[0]{\mathrm{lci}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\lieg}[0]{{\mathfrak{g}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
-\newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
-\newcommand{\fromvia}[1]{\xleftarrow{#1}}
-\newcommand{\mapstovia}[1]{\xmapsto{#1}}
-\newcommand{\ms}[0]{\xrightarrow{\sim}}
-\newcommand{\from}[0]{\leftarrow}
-\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\loc}[0]{{\mathsf{loc}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\mHH}[0]{{\operatorname{HH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
-\newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\diagonal}[0]{\Delta}
-\newcommand{\embeds}[0]{\hookrightarrow}
-\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
-\newcommand{\injectsvia}[1]{\overset{#1}\injects}
-\newcommand{\surjects}[0]{\twoheadrightarrow}
-\newcommand{\Prism}[0]{\mathsf{Prism}}
-\newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\Spf}[0]{\mathsf{Spf}}
-\newcommand{\WCart}[0]{\mathsf{WCart}}
-\newcommand{\padic}[0]{p\dash\text{adic}}
-\newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
-}
-\newcommand{\adjoint}[0]{\leftrightarrows}
-\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
-\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
-\newcommand{\MM}[0]{{\mathcal{M}}}
-\newcommand{\OO}[0]{{\mathcal{O}}}
-\newcommand{\OX}[0]{{\mathcal{O}_X}}
-\newcommand{\imaginarypart}[1]{{\mathcal{Im}({#1})}}
+\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\mapstovia}[1]{\xmapsto{#1}}
+\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsfromvia}[1]{\xhookleftarrow{#1}}
+\newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\mat}[0]{\operatorname{Mat}}
+\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
 \newcommand{\mca}[0]{{\mathcal{A}}}
 \newcommand{\mcb}[0]{{\mathcal{B}}}
 \newcommand{\mcc}[0]{{\mathcal{C}}}
@@ -413,214 +355,210 @@
 \newcommand{\mcv}[0]{{\mathcal{V}}}
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
-\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
-\newcommand{\Hsh}{{ \mathcal{H} }}
-\newcommand{\CY}{{ \text{CY} }}
-\newcommand{\FS}{{ \text{FS} }}
-\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\mfa}[0]{{\mathfrak{a}}}
+\newcommand{\mfb}[0]{{\mathfrak{b}}}
+\newcommand{\mfc}[0]{{\mathfrak{c}}}
+\newcommand{\mff}[0]{{\mathfrak{f}}}
+\newcommand{\mfi}[0]{{\mathfrak{I}}}
+\newcommand{\mfm}[0]{{\mathfrak{m}}}
+\newcommand{\mfn}[0]{{\mathfrak{n}}}
+\newcommand{\mfp}[0]{{\mathfrak{p}}}
+\newcommand{\mfq}[0]{{\mathfrak{q}}}
+\newcommand{\mfr}[0]{{\mathfrak{r}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\mm}[0]{{\mathfrak{m}}}
+\newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
+\newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
+\newcommand{\nd}[0]{\operatorname{nd}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
+\newcommand{\noeth}[0]{\mathrm{Noeth}}
+\newcommand{\nonzero}[0]{^{\bullet}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
-\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
+\newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
-\newcommand{\Stab}[0]{{\operatorname{Stab}}}
-\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\oriented}[0]{{ \operatorname{oriented} } }
+\newcommand{\orr}[0]{{\operatorname{ or }}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
+\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
+\newcommand{\poly}[0]{\mathrm{poly}}
+\newcommand{\prim}[0]{{\operatorname{prim}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
+\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
-\newcommand{\Log}[0]{\operatorname{Log}}
-\newcommand{\reg}[0]{\operatorname{Reg}}
+\newcommand{\red}[0]{{ \text{red} }}
+\newcommand{\reg}[0]{\mathrm{reg}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
 \newcommand{\restrictionof}[2]{ {\left.{{#1}} \right|_{{#2}} } }
-\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\rk}[0]{{\operatorname{rank}}}
-\newcommand{\evalfrom}[0]{\Big|}
-\renewcommand{\mod}{\pmod}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
+\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
+\newcommand{\sep}[0]{{ {}^{ \operatorname{sep} } }}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\signature}[0]{\operatorname{sig}}
 \newcommand{\sign}[0]{\operatorname{sign}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
+\newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\sm}[0]{\setminus}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\Jac}[0]{\operatorname{Jac}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{St}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
+\newcommand{\surjectsvia}[2][]{ \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\, }
+\newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
-\newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\smashprod}[0]{\wedge}
-\newcommand{\Wedge}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\wedgeprod}[0]{\vee}
-\newcommand{\Wedgeprod}[0]{\bigvee}
-\newcommand{\Vee}[0]{\bigvee}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
-\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
-\newcommand{\ts}[1]{\left\{{#1}\right\}}
-\newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
-\newcommand{\gens}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\thevector}[1]{{\left[ {#1} \right]}}
-\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\thinrank}[0]{T_n\dash\operatorname{rank}}
 \newcommand{\too}[1]{{\xrightarrow{#1}}}
+\newcommand{\tors}[0]{{\operatorname{tors}}}
+\newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\transverse}[0]{\pitchfork}
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
 \newcommand{\trianglerightneq}{\mathrel{\ooalign{\raisebox{-0.5ex}{\reflectbox{\rotatebox{90}{$\nshortmid$}}}\cr$\triangleright$\cr}\mkern-3mu}}
-\newcommand{\tr}[0]{\operatorname{Tr}}
+\newcommand{\tr}[0]{{\mathrm{tr}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\ts}[1]{\left\{{#1}\right\}}
+\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\txor}[0]{{\operatorname{ or }}}
+\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
+\newcommand{\type}[0]{{\operatorname{type}}}
 \newcommand{\uniformlyconverges}[0]{\rightrightarrows}
-\newcommand{\abuts}[0]{\Rightarrow}
-\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\union}[0]{\cup}
+\newcommand{\unital}[0]{{\operatorname{unital}}}
 \newcommand{\units}[0]{^{\times}}
-\newcommand{\nonzero}[0]{^{\bullet}}
-\newcommand{\wait}[0]{{-}}
-\newcommand{\wt}[0]{{\operatorname{wt}}}
-\renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
-\renewcommand{\div}[0]{\operatorname{Div}}
-\newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Frac}[0]{\operatorname{Frac}}
-\newcommand{\Sq}[0]{\operatorname{Sq}}
-\renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\up}[0]{\uparrow}
 \newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
-\newcommand{\fourier}[1]{\widehat{#1}}
+\newcommand{\vol}[0]{\operatorname{vol}}
+\newcommand{\wait}[0]{{-}}
+\newcommand{\wedgeprod}[0]{\vee}
+\newcommand{\wt}[0]{{\operatorname{wt}}}
+\newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
+\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
+\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
+\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
+
+\renewcommand{\AA}[0]{{\mathbb{A}}}
+\renewcommand{\SS}[0]{{\mathbb{S}}}
+\renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\renewcommand{\det}{\operatorname{det}}
+\renewcommand{\div}[0]{\operatorname{Div}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\labelitemiii}{$\diamondsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
+\renewcommand{\mod}{\pmod}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
-\newcommand{\complex}[1]{{#1}_{*}}
-\newcommand*\dif{\mathop{}\!\operatorname{d}}
-\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
-\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
-\renewcommand{\labelitemiii}{$\diamondsuit$}
-\renewcommand{\labelitemiv}{$\diamondsuit$}
-\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
-\newcommand\rref{\operatorname{RREF}}
-\newcommand{\interior}[0]{^\circ}
-\newcommand{\increasesto}[0]{\nearrow}
-\newcommand{\decreasesto}[0]{\searrow}
-\newcommand\jan{\operatorname{Jan}}
-\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
-\newcommand\TMF{ \mathrm{TMF} }
-\newcommand\tmf{ \mathrm{tmf} }
 
-\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
-\DeclareMathOperator{\submfds}{SubMfds}
-\DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\BiHol}{BiHol}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Curv}{Curv}
+\DeclareMathOperator{\Deck}{Deck}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Endo}{End}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\eq}{=}
-\DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
-\DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\Hol}{Hol}
-\DeclareMathOperator{\Bun}{Bun}
-\DeclareMathOperator{\BiHol}{BiHol}
-\DeclareMathOperator{\Br}{Br}
-\DeclareMathOperator{\coh}{coh}
-\DeclareMathOperator{\colspace}{colspace}
-\DeclareMathOperator{\rowspace}{rowspace}
-\DeclareMathOperator{\codom}{codom}
-\DeclareMathOperator{\range}{range}
-\DeclareMathOperator{\nullspace}{nullspace}
-\DeclareMathOperator{\nullity}{nullspace}
-\DeclareMathOperator{\projection}{Proj}
-\DeclareMathOperator{\Der}{Der}
-\DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
-\DeclareMathOperator{\D}{{\mathsf{D} }}
-\DeclareMathOperator{\K}{{\mathsf{K} }}
-\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
-\DeclareMathOperator{\T}{{T}}
-\DeclareMathOperator{\Rd}{{\mathbb{R} }}
-\DeclareMathOperator{\Ld}{{\mathbb{L} }}
-\DeclareMathOperator{\Bl}{Bl}
-\DeclareMathOperator{\Triv}{Triv}
-\DeclareMathOperator{\Tot}{Tot}
 \DeclareMathOperator{\Forget}{Forget}
-\DeclareMathOperator{\Griff}{Griff}
-\DeclareMathOperator{\Symb}{Symb}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\U}{U}
-
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
-
-\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
-
-\newcommand{\Lie}[0]{\operatorname{Lie}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
-\newcommand{\cl}[0]{{ \operatorname{cl}} }
-\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\Crit}[0]{\operatorname{Crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Places}[0]{{\operatorname{Places}}}
-
-\DeclareMathOperator{\hilb}{Hilb}
-\DeclareMathOperator{\Curv}{Curv}
-
-\DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\Frame}{Frame}
-\DeclareMathOperator{\OFrame}{OFrame}
-\DeclareMathOperator{\UFrame}{UFrame}
-\DeclareMathOperator{\prin}{prin}
-\DeclareMathOperator{\Prin}{Prin}
-\DeclareMathOperator{\Taut}{Taut}
-
 \DeclareMathOperator{\Frob}{Frob}
-
-\DeclareMathOperator{\hd}{Head}
-\DeclareMathOperator{\soc}{Soc}
-\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\coInd}{coInd}
-\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\Map}{Maps}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
 \DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\cores}{cores}
-\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Taut}{Taut}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\coind}{coInd}
 \DeclareMathOperator{\coinfl}{coinf}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\submfds}{SubMfds}
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\delbar}[0]{\bar{\del}}
-
-
+\newcommand{\delbar}[0]{{ \bar{\del}}}
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\rightderive}[0]{{\mathbf{R}}}
 
 \newcommand\rrarrows{\rightrightarrows}
 \newcommand\rrrarrows{
@@ -629,7 +567,6 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\ul[1]{\underline{#1}}
@@ -642,17 +579,20 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\closure[1]{\overline{#1}}
 \newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
+\newcommand\laurent[1]{{\left(\left( #1 \right)\right)  }}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
 \newcommand\gradient{\nabla}
 
+\newcommand\cechH[0]{{\check{H}}}
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
 \newcommand\cupp[0]{\smile}
@@ -661,16 +601,6 @@
 \newcommand\ev[0]{\operatorname{ev}}
 \newcommand\coev[0]{\operatorname{coev}}
 
-\newcommand{\RM}[1]{%
-  \textup{\uppercase\expandafter{\romannumeral#1}}%
-}
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
@@ -678,55 +608,112 @@
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
-\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\tselts[2]{{ \theset{ {#1}_1, {#1}_2, \cdots, {#1}_{#2} } }}
+\newcommand\fiberproduct[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\fiberprod[1]{{ \fiberproduct{#1} }}
+\newcommand\fprod[1]{{ \fiberproduct{#1} }}
+\newcommand\smallprod[0]{{ \scriptscriptstyle\prod }}
+\newcommand\sumpower[1]{{ {}^{ \scriptscriptstyle\oplus^{#1} }  }}
+\newcommand\prodpower[1]{{ {}^{ \scriptscriptstyle\times^{#1} }  }}
+\newcommand\tensorpower[2]{{ {}^{ \scriptstyle\otimes_{#1}^{#2} }  }}
+\newcommand\derivedtensorpower[3]{{ {}^{ \scriptstyle {}_{#1} {\otimes_{#2}^{#3}} }  }}
+\newcommand\smashpower[1]{{ {}^{ \scriptscriptstyle\smashprod^{#1} }  }}
 
-
+\newcommand{\Tot}[0]{{ \operatorname{Tot} }}
 \newcommand{\Totsum}[0]{\Tot^{\oplus}}
 \newcommand{\Totprod}[0]{\Tot^{\Pi}}
-\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
-\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
-\newcommand{\congas}[1]{\underset{#1}{\cong}}
-\newcommand{\ideal}[1]{\mathcal{#1}}
-\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
-
-
-
-\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
-\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 \newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
-\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
-\newcommand{\Ag}[0]{{\mathcal{A}_g}}
-\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
 
-\newcommand{\matt}[4]{{
-\begin{bmatrix}
-#1 & #2 
-\\
-#3 & #4
-\end{bmatrix}
-}}
-
-
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\can}[0]{{\mathrm{can}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\qproj}[0]{{\mathrm{qproj}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\semisimple}[0]{{\operatorname{ss}}}
 \newcommand{\gon}[0]{{\dash\mathrm{gon}}}
 \newcommand{\semi}[0]{{\operatorname{semi}}}
 \newcommand{\inc}[0]{{\operatorname{inc}}}
 \newcommand{\Ball}[0]{{B}}
 \newcommand{\hq}[0]{{/}}
-\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
+\newcommand{\crys}[0]{{\mathrm{crys}}}
+\newcommand{\Xff}[0]{{X_\mathrm{FF}}}
+\newcommand{\an}[0]{{\mathrm{an}}}
+\newcommand{\Nis}[0]{{\mathrm{Nis}}}
+\newcommand{\perf}[0]{{\mathrm{perf}}}
+
+\newcommand{\quillenplus}[0]{{ {}^{+} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+
+\newcommand{\localize}[1]{ \left[ { \scriptstyle #1\inv } \right]}
+\newcommand{\sheafify}[1]{ \left( #1 \right)^{\scriptscriptstyle \mathrm{sh}} }
+\newcommand{\complete}[1]{{ {}_{ \hat{#1} } }}
+\newcommand{\takecompletion}[1]{{ \overbrace{#1}^{\widehat{\hspace{4em}}}  }}
+\newcommand{\twistleft}[2]{{ {}^{#1} #2 }}
+\newcommand{\twistright}[2]{{ #2 {}^{#1} }}
+\newcommand{\liesover}[1]{{ {}_{/ {#1}} }}
+\newcommand{\liesabove}[1]{{ {}_{/ {#1}} }}
+\newcommand{\slice}[1]{_{/ {#1}} }
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
+
+
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\T}[0]{{\mathsf{T}}}
+\newcommand{\K}[0]{{\mathsf{K}}}
+\newcommand{\G}[0]{{\mathsf{G}}}
+%\newcommand{\H}[0]{{\mathsf{H}}}
+\newcommand{\D}{{ \mathsf{D} }}
+\newcommand{\mH}{{ \mathsf{H} }}
+\newcommand{\BGL}[0]{ \mathsf{B}\mkern-3mu \operatorname{GL} }
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\newcommand{\fourcase}[4]{
+\begin{cases}{#1} & {#2} \\ {#3} & {#4}\end{cases} 
+}
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+  {#1} & {#2} 
+\\
+  {#3} & {#4}
+\end{bmatrix}
+}}
+\newcommand\stacksymbol[3]{
+  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
+  $\scriptscriptstyle#2$}}
+}
+\newcommand{\textoperatorname}[1]{
+  \operatorname{\textnormal{#1}}
+}
+
+\newcommand{\dcoset}[3]{
+    {\textstyle #1}
+    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
+    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
+
+
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 
 # Preface
@@ -744,66 +731,60 @@ Show that $f$ is uniformly continuous on $(1, \infty)$ but not on $(0,\infty)$.
 \envlist
 - Uniform continuity:
 \[  
-\forall \varepsilon>0, \exists \delta(\eps)>0 \qtext{such that} \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \varepsilon
+\forall \varepsilon>0, \exists \delta(\eps)>0 \quad\text{such that}\quad \abs{x-y}<\delta \implies \abs{f(x) - f(y)} < \eps
 .\]
 - Negating uniform continuity:
   $\exists \eps > 0$ such that $\forall \delta(\eps)$ there exist $x, y$ such that $\abs{x-y} < \delta$ *and* $\abs{f(x) - f(y)} > \eps$.
+
+- Archimedean property: for all $x,y\in \RR$ there exists an $n \in \NN$ such that $nx>y$.
+  Take $x=\eps, y=1$, so $n\eps > 1$ and ${1\over n} < \eps$.
+:::
+
+:::{.strategy}
+1 is the only constant around, so try to use it for uniform continuity.
+To negate, find a bad $x$: since $1/x$ blows up near zero, go hunting for small $x$s!
+
 :::
 
 :::{.solution}
 
-:::{.claim}
-$f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
-:::
+- **Claim**: $f(x) = \frac 1 x$ is uniformly continuous on $(c, \infty)$ for any $c > 0$.
+  - Note that
+  $$
+  \abs{x}, \abs y > c > 0 \implies \abs{xy} = \abs{x}\abs{y} > c^2 \implies \frac{1}{\abs{xy}} < \frac 1 {c^{2}}
+  .$$
 
-:::{.proof title="of claim"}
-\envlist
-
-- Note that
-$$
-\abs{x}, \abs y > c > 0 \implies \abs{xy} = \abs{x}\abs{y} > c^2 \implies \frac{1}{\abs{xy}} < \frac 1 {c^{2}}
-.$$
-
-- Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
-  - Note that $\delta$ does not depend on $x, y$.
-
-- Then
-\[
-\abs{f(x) - f(y)}
-&= \abs{\frac 1 x - \frac 1 y} \\
-&= \frac{\abs{x-y}}{xy} \\
-&\leq \frac{\delta}{xy} \\
-&< \frac{\delta}{c^2} \\
-&< \varepsilon
-,\]
-  which shows uniform continuity.
-
-:::
-
-:::{.claim}
-$f$ is *not* uniformly continuous when $c=0$.
-:::
-
-:::{.proof title="of claim"}
-\envlist
-
-- Toward a contradiction, let $\varepsilon < 1$.
-- Let $x_n = \frac 1 n$ for $n\geq 1$.
-- Choose $n$ large enough such that $\abs{x_n - x_{n+1}} = \frac 1 n - \frac 1 {n+1} < \delta$.
-  - Why this can be done: by the archimedean property of $\RR$, choose $n$ such that ${1\over n} < \eps$.
+  - Letting $\varepsilon$ be arbitrary, choose $\delta < \varepsilon c^2$.
+    - Note that $\delta$ does not depend on $x, y$.
   - Then
   \[
-  {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \eps \quad\text{since }n+1 > 1
+  \abs{f(x) - f(y)}
+  &= \abs{\frac 1 x - \frac 1 y} \\
+  &= \frac{\abs{x-y}}{xy} \\
+  &\leq \frac{\delta}{xy} \\
+  &< \frac{\delta}{c^2} \\
+  &< \varepsilon
   .\]
-- Note $f(x_n) = n$ and thus 
-\[
-\abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
-,\]
-  a contradiction.
 
-:::
-
-
+- **Claim**: $f$ is *not* uniformly continuous when $c=0$.
+  - Take $\varepsilon < 1$, and let $\delta = \delta(\eps)$ be arbitrary.
+  - Let $x_n = \frac 1 n$ for $n\geq 1$.
+  - Choose $n$ large enough such that ${1\over n} < \delta$
+  - Then a computation:
+  \[
+  \abs{x_n - x_{n+1}} 
+  &= \frac 1 n - \frac 1 {n+1} \\
+  &= {1\over n(n+1) } \\
+  &< {1\over n} \\
+  &< \delta
+  ,\]
+  - Why this can be done: by the Archimedean property of $\RR$, for any $\delta\in \RR$, one can choose
+  choose $n$ such that $n\delta > 1$.
+  We've also used that $n+1 > 1$ so ${1\over n+1}< 1$
+  - Note that $f(x_n) = n$, so
+  \[
+  \abs{f(x_{n+1}) - f(x_{n})} = (n+1) - n = 1 > \varepsilon
+  .\]
 :::
 
 
@@ -812,47 +793,67 @@ Let
 \[
 f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 \]
-
 Describe the intervals on which $f$ does and does not converge uniformly.
 
 :::{.concept}
 \envlist
 - $f_N\to f$ uniformly $\iff$ $\norm{f_N - f}_\infty \to 0$.
-- $\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n$
-  - I.e. an infinite sum is defined as the pointwise limit of its partial sums.
-- If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
+  - Applied to sums: 
+  \[
+\sum_{0 \leq k\leq N} f_n \converges{u}\to \sum_{k\geq 0} f_n \iff \norm{\sum_{k\geq N+1} f_n }_{\infty} \to 0
+  .\]
+- An infinite sum is defined as the pointwise limit of its partial sums:
+ \[
+\sum_{n=0}^\infty c_n x^n \definedas \lim_{N\to \infty} \sum_{n=0}^N c_n x^n
+ .\]
+- Uniformly decaying terms for uniformly convergent series: if $\sum_{n=0}^\infty f_n(x)$ converges uniformly on a set $A$, then 
+\[
+\norm{f_n}_{\infty, A} \da \sup_{x\in A} \abs{f_n(x)} \converges{n\to\infty}\too 0
+.\]
+- $M\dash$test: if $f_n:A \to\CC$ with $\norm{f_n}_\infty < M_n$ and $\sum M_n < \infty$, then $\sum f_n$ converges uniformly and absolutely.
+  - If the $f_n$ are continuous, the uniform limit theorem implies $\sum f_n$ is also continuous.
+:::
+
+:::{.strategy}
+No real place to start, so pick the nicest place: compact intervals.
+Then bounded intervals, then unbounded sets.
 :::
 
 :::{.solution}
 \envlist
 
+
 - Set $f_N(x) = \sum_{n=1}^N {x^n \over n!}$.
   - Then by definition, $f_N(x) \to f(x)$ pointwise on $\RR$.
 
-- For any compact interval $[-M, M]$, we have
-\[
-\norm{f_N(x) - f(x)}_\infty
-&= \sup_{-M \leq x \leq M} ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
-&\leq \sup_{-M\leq x \leq M} ~\sum_{n=N+1}^\infty \abs{ {x^n \over {n!}} } \\
-&\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
-&\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
-&= e^M \\
-&<\infty
-,\]
-  so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
+- **Claim**: $f_N$ converges on compact intervals
+  - For any compact interval $[-M, M]$, we have
+  \[
+  \norm{f_N(x) - f(x)}_\infty
+  &= \sup_{x\in [-M, M] } ~\abs{\sum_{n=N+1}^\infty {x^n \over {n!}} } \\
+  &\leq \sup_{x\in [-M, M] } ~\sum_{n=N+1}^\infty \abs{ {x^n \over {n!}} } \\
+  &\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
+  &\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
+  &= e^M \\
+  &<\infty
+  ,\]
+    so $f_N \to f$ uniformly on $[-M, M]$ by the M-test.
+    - Note: we've used that this power series converges to $e^x$ pointwise everywhere.
 
-  > Here we've used that $e^x$ is equal to its power series expansion.
+- This argument shows that $f$ converges on any bounded set.
 
-- Thus $f$ converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
+- **Claim**:
+$f_N$ does not converge uniformly on all of $\RR$.
+  - Uniformly convergent sums have uniformly decaying terms:
+  \[
+  \sum_{n\leq N} g_n \converges{N\to\infty}\too \sum g_n \text{ uniformly on } A \implies \norm{g_n}_{\infty, A} \da \sup_{x\in A} \abs{g_n(x)} \converges{n\to\infty}\too 0
+  .\]
 
-**Claim**: 
-$f$ does not converge on $\RR$.
-
-- If $\sum_{n=0}^\infty g_n(x)$ converges uniformly on a set $A$, then $\sup_{x\in A} \abs{f_n(x)} \to 0$.
-- But taking $A = \RR$ and $g_n(x) = {x^n \over n!}$, we have 
-\[  
-\sup_{x\in \RR} \abs{g_n(x)} = \sup_{x\in \RR} {x^n \over n!} = \infty
-.\]
+  - Take $B_N$ a ball of radius $N$ about 0, then for $N>1$, note that $x=N$ on the boundary and so
+  \[
+  \norm{x^k \over k!}_{\infty, B_N} = {N^k \over k!} \converges{N\to\infty}\too \infty
+  .\]
+- **Conclusion**: $f_N$ converges on any bounded $A\subseteq \RR$ but not on all of $\RR$.
 :::
 
 ## Fall 2014 # 1 $\done$
@@ -861,13 +862,12 @@ Let $\theset{f_n}$ be a sequence of continuous functions such that $\sum f_n$ co
 Prove that $\sum f_n$ is also continuous.
 
 
-\envlist
 :::{.concept}
 \envlist
 
-- Todo
+- The uniform limit theorem.
+- $\eps/3$ trick.
 :::
-
 
 :::{.solution}
 \envlist
@@ -892,9 +892,7 @@ If $F_N\to F$ uniformly with each $F_N$ continuous, then $F$ is continuous.
 :::
 
 - Now setting $F_N\definedas \sum_{n=1}^N f_n$ yields a finite sum of continuous functions, which is continuous.
-- Each $F_N$ is continuous and $F_N\to F$ uniformly, so applying the claim yields the desired result.
-
-
+- Each $F_N$ is continuous and $F_N\to F$ uniformly, so $F$ is continuous.
 
 :::
 
@@ -911,23 +909,21 @@ Determine if $f$ is integrable.
 :::{.concept}
 \envlist
 - Just Calculus.
+- $1/r$ is not integrable on $(0, 1)$.
 :::
 
 :::{.solution}
-Switching to polar coordinates and integrating over one quarter of the unit disc $D \subseteq I^2$, we have
+Switching to polar coordinates and integrating over the quarter of the unit disc $D \intersect Q_1 \subseteq I^2$ in quadrant 1, we have
 \[
 \int_{I^2} f \, dA
 &\geq \int_D f \, dA \\
-&\geq \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta  \\
-&= \int_0^{\pi/2} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{\pi/2} \cos(\theta)\sin(\theta)\,d\theta  }\\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{-{1\over 2}\cos^2(\theta)\evalfrom_0^{\pi/2}}  \\
-&= -{1\over 2r^2}\evalfrom_0^1 \qty{1\over 2} \\
-&= \qty{1\over 4}\qty{ -1 + \lim_{r\to 0} {1\over r^2} } \\
-&= \infty
-,\]
-
-so $f$ is not integrable.
+&= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\dr\dtheta  \\
+&= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \dr\dtheta  \\
+&= \qty{ \int_0^1 {1\over r } \dr} \qty{ \int_0^{\pi/2} \cos(\theta)\sin(\theta) \dtheta }  \\
+&= \qty{ \int_0^1 {1\over r } \dr} \qty{ \int_0^{1} u \du }  && u=\sin(\theta)\\
+&= {1\over 2}\qty{ \int_0^1 {1\over r } \dr} \\
+&\too \infty
+.\]
 :::
 
 ## Spring 2015 # 1 $\done$
@@ -941,6 +937,8 @@ Prove that the following statements are equivalent:
 :::{.concept}
 \envlist
 - What it means for a sequence to converge.
+- Trading $N$s for $\delta$s.
+
 :::
 
 :::{.solution}
@@ -953,27 +951,27 @@ Prove that the following statements are equivalent:
   - We thus want to show that for every $\eps>0$, there exists an $N(\eps)$ such that \[n\geq N(\eps) \implies \rho(f(x_n),  f(x_0)) < \eps.\]
 - Let $\eps>0$ be arbitrary, then by (1) choose $\delta$ such that $\rho(f(x), f(x_0)) < \eps$ when $d(x, x_0) < \delta$.
 - Since $x_n\to x$, there is some $N$ such that $n\geq N \implies d(x_n, x_0) < \delta$
-- Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ as desired.
+- Then for $n\geq N$, $d(x_n, x_0) < \delta$ and thus $\rho(f(x_n), f(x_0)) < \eps$, so $f(x_n)\to f(x_0)$ by definition.
 
 
 :::
 
 :::{.proof title="$2\implies 1$"}
 
-> Note that we need a $\delta$ for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
+> The direct implication is not a good idea here, since you need a handle on *all* $x$ in a neighborhood of $x_0$, not just a specific sequence.
 
-- By contrapositive, we will show that $\not 1\implies \not 2$. 
-- Thus we need to show that if $f$ is not $\eps\dash\delta$ continuous at $x_0$, then there exists a sequence $x_n\to x_0$ where $f(x_n)\not\to f(x_0)$.
+- By contrapositive, show that $\not 1\implies \not 2$. 
+- Need to show: if $f$ is not $\eps\dash\delta$ continuous at $x_0$, then there exists a sequence $x_n\to x_0$ where $f(x_n)\not\to f(x_0)$.
 - Negating $1$, we have that there exists an $\eps>0$ such that for all $\delta$, there exists an $x$ with $d(x, x_0) < \delta$ but $\rho(f(x), f(x_0))>\eps$
-- So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < {1\over n}$ and $\rho(f(x_n), f(x_0)) > \eps$.
-- Then $x_n \to x_0$ but $f(x_n) \not\to f(x_0)$.
+- So take a sequence of deltas $\delta_n = {1\over n}$, apply this to produce a sequence $x_n$ with $d(x_n, x_0) < \delta_n \da {1\over n} \too 0$ and $\rho(f(x_n), f(x_0)) > \eps$ for all $n$.
+- This yields a sequence $x_n \to x_0$ where $f(x_n) \not\to f(x_0)$.
 
 :::
 
 :::
 
 
-## Fall 2014 # 2  $\work$
+## Fall 2014 # 2  $\done$
 Let $I$ be an index set and $\alpha: I \to (0, \infty)$.
 
 a.
@@ -990,66 +988,84 @@ f(x):=\sum_{\substack{q \in \mathbb{Q}\\ q \leq x}} a(q).
 \]
 Show that $f$ is continuous at $x \iff x\not\in \QQ$.
 
-\todo[inline]{Stuck on part b}
+:::{.concept}
+\envlist
+
+- Can always filter sets $X$ with a function $X\to \RR$.
+- Countable union of countable sets is still countable.
+- Continuity: $\lim_{y\to x} f(y) = f(x)$ from either side.
+- Trick: pick enumerations of countable sets and reindex sums
+:::
 
 :::{.solution}
-
 \envlist
 
 :::{.proof title="of a"}
 \envlist
 
 - Set $S \definedas \sum_{i\in I} \alpha(i)$, we will show that $S<\infty \implies I$ is countable.
-- Write $I = \disjoint_{n\in \NN} S_n$ where $S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}$.
-- We now have the inequality
-\[  
-S = \sum_{i\in I} \alpha(i) 
-\geq \sum_{i\in S_n} \alpha(i) 
-\geq \sum_{i\in S_n} {1\over n} 
-= {1\over n} \sum_{i\in S_n} 1 = \qty{1\over n} \abs{S_n} \\ \\
-\infty > \implies n S \geq \abs{S_n}
-,\]
-  so $S_n$ is a countable set.
-
-- But then $I$ is a countable union of countable sets and thus countable.
-
-:::
-
-\todo[inline]{(b): not sure.}
-:::
-
-
-
-## Spring 2014 # 2  $\done$
-
-Let $\theset{a_n}$ be a sequence of real numbers such that
+- Write 
 \[
-\theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
-\]
-Show that $\sum a_n^2 < \infty$.
-
-> Note: Assume $a_n, b_n$ are all non-negative.
-
-\todo[inline]{Have someone check!}
-:::{.solution}
-\envlist
-- Define a sequence of operators 
-\[  
-T_N: \ell^2 &\to \ell^1\\
-\theset{b_n} &\mapsto \sum_{n=1}^N a_n b_n
+I = \Union_{n\geq 0} S_n, &&
+S_n \definedas \theset{i\in I \suchthat \alpha(i) \geq {1\over n}}
 .\]
-- By assumption, these are well defined: the image is $\ell^1$ since $\abs{T_N(\theset{b_n})} < \infty$ for all $N$ and all $\theset{b_n} \in \ell^2$.
-- So each $T_N \in \qty{\ell^2}\dual$ is a linear functional on $\ell^2$.
-- For each $x\in \ell^2$, we have $\norm{T_N(x)}_{\RR} = \sum_{n=1}^N a_n b_n < \infty$ by assumption, so each $T_N$ is pointwise bounded.
-- By the Uniform Boundedness Principle, $\sup_N \norm{T_N}_{\text{op}} < \infty$.
-- Define $T = \lim_{N \to\infty } T_N$, then $\norm{T}_{\text{op}} < \infty$.
-- By the Riesz Representation theorem,
+  - Note that $S_n \subseteq S$ for all $n$, so $\sum_{i\in I}\alpha(i) \geq \sum_{i\in S_n} \alpha(i)$ for all $n$.
+  - It suffices to show that $S_n$ is countable, since $I$ is a countable union of $S_n$.
+- There is an inequality
 \[  
-\sqrt{\sum a_n^2} \definedas \norm{\theset{a_n}}_{\ell^2} = \norm{T}_{\qty{\ell^2}\dual} = \norm{T}_{\text{op}} < \infty
+\infty 
+&> S \da \sum_{i\in I} \alpha(i) \\
+&\geq \sum_{i\in S_n} \alpha(i) \\
+&\geq \sum_{i\in S_n} {1\over n} \\
+&= {1\over n} \sum_{i\in S_n} 1 \\
+&= \qty{1\over n} \# S_n \\ \\
+\implies \infty &> n S \geq \# S_n
 .\]
-
-- So $\sum a_n^2 < \infty$.
 :::
+
+:::{.proof title="of b"}
+\envlist
+
+- We'll prove something more general: let $Q = \ts{q_k}$ be countable and $\ts{\alpha_k \da \alpha(q_k)}$ be summable, and define
+\[
+f(x) \da \sum_{q_k\leq x} \alpha_k
+.\]
+  
+  - $f$ is always discontinuous precisely on the countable set $Q$ and continuous on $\RR\sm Q$.
+
+  - $f$ is always left-continuous, is right-continuous at $x\in\RR\sm Q$, and *not* right-continuous at $x\in Q$
+
+  - $f$ has jump discontinuities at every $q_m$, where the jump is precisely $\alpha_m$.
+
+- This follows from computing the left and right limits:
+\[
+f(x^+) &= \lim_{h\to 0} \sum_{q_k \leq x+h} \alpha_k = \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k + \sum_{q_k = x} \alpha_k \\
+f(x^-) &= \lim_{h\to 0} \sum_{q_k \leq x-h} \alpha_k = \sum_{q_k < x} \alpha_k
+,\]
+  where we've used that $\ts{q_k \leq x} = \ts{q_k < x} \disjoint \ts{x}$ in the first equality.
+
+- Then if $x=q_m$ for some $m$,
+\[
+f(x^+) &= f(q_m^+) = \sum_{q_k < q_m} \alpha_k + \alpha_m \\
+f(x^-) &= f(a_m^-) = \sum_{q_k< q_m} \alpha_k
+,\]
+which clearly differ if $\alpha_m \neq 0$.
+
+- Taking $x\not\in Q$, we have $\ts{q_k \leq x} = \ts{q_k < x}$, since $\ts{q_k=x} = \emptyset$, so
+\[
+f(x^+) &= \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k \\
+f(x^-) &= \sum_{q_k< x} \alpha_k
+,\]
+  so the limits agree.
+
+- To recover the result in the problem, let $\QQ = \ts{q_k}$ be any enumeration of the rationals.
+
+:::
+
+:::
+
+
+
 
 
 
@@ -1067,16 +1083,17 @@ Prove that if $f: [0, 1] \to \RR$ is continuous then
 
 - DCT
 - Weierstrass Approximation Theorem
+  - If $f: [a, b] \to \RR$ is continuous, then for every $\eps>0$ there exists a polynomial $p_\eps(x)$ such that $\norm{f - p_\eps}_\infty < \eps$.
 :::
 
 :::{.solution}
 \envlist
 
-- Suppose $p$ is a polynomial, then
+- Suppose $p$ is a polynomial, then integrate by parts:
 \[
 \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
 &= \lim_{k\to\infty} \int_0^1 \qty{ \dd{}{x}x^k } p(x) \, dx \\
-&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx \right] \quad\text{integrating by parts}\\
+&= \lim_{k\to\infty} \left[ x^k p(x) \evalfrom_0^1 - \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx \right] \quad\text{IBP}\\
 &= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{\dd{p}{x}(x) } \, dx
 ,\]
 
@@ -1677,13 +1694,63 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 
 Show that there is a number $x_m$ such that $f(x_m) \leq f(x)$ for all $x\in \RR$.
 
-## Fall 2020 \# 1
+## Fall 2020 \# 1 $\work$
 Show that if $x_n$ is a decreasing sequence of positive real numbers such that $\sum_{n=1}^\infty x_n$ converges, then
 $$
 \lim_{n\to\infty} n x_n = 0.
 $$
 
-## Fall 2020 \# 3
+
+:::{.concept}
+\envlist
+
+- Cauchy criterion for convergence
+- Claim: even and odd subsequences converge iff whole sequence converges.
+:::
+
+
+:::{.proof title="of claim"}
+$\impliedby$: clear, since any subsequence of a convergent sequence converges, and to the same limit.
+
+$\implies$:
+Fix $\eps$, choose $N\gg 1$ so that both $\abs{a_n - L} < \eps, \abs{a_{2n} - L} < \eps$ for $n\geq N$.
+Then for any $n$, it is either even or odd, so one of these bounds applies.
+:::
+
+
+:::{.solution}
+See this MSE post for many solutions: <https://math.stackexchange.com/questions/4603/if-a-n-subset0-infty-is-non-increasing-and-sum-a-n-infty-then-lim>
+
+- Since $\sum_{k\geq 1}x_k < \infty$, by the Cauchy criterion for convergent sequences we have 
+\[
+\lim_{M, N\to \infty} \sum_{M\leq k \leq N} x_k = 0
+.\]
+  - This still holds if we freely add a constant $C$, so $C\sum_{M\leq k \leq N} x_k \to 0$ as well.
+- Trick: $N \da n, M \da 2n$ and take $C\da 2$:
+\[
+2\sum_{n\leq k \leq 2n} x_k
+&\geq 2\sum_{n\leq k \leq 2n} x_{2n} && \text{$x_k$ are non-increasing }\\
+&= 2 (2n-n)x_{2n} \\
+&= 2nx_{2n}
+,\]
+  and the upper bound goes to zero as $n\to \infty$.
+
+- So the even subsequence $2n x_{2n} \to 0$, it now suffices to show the odd subsequence $(2n+1) x_{2n+1} \to 0$.
+- Write
+\[
+(2n+1)x_{2n+1} 
+&= 2n\cdot x_{2n+1} + 1\cdot x_{2n+1} \\
+&\leq 2n\cdot x_{2n} + 1\cdot x_{2n+1} &&\text{$x_k$ are non-increasing }\\
+&\converges{n\to \infty}\too 0
+,\]
+where the first term converges by what we showed above, and the second by assumption.
+:::
+
+
+
+
+
+## Fall 2020 \# 3 $\work$
 Let $f$ be a non-negative Lebesgue measurable function on $[1, \infty)$.
 
 a.
@@ -1713,6 +1780,39 @@ for all $t\in [1, \infty)$, then
 .\]
 
 
+## Unsorted
+
+## Spring 2014 # 2  $\done$
+
+Let $\theset{a_n}$ be a sequence of real numbers such that
+\[
+\theset{b_n} \in \ell^2(\NN) \implies \sum a_n b_n < \infty.
+\]
+Show that $\sum a_n^2 < \infty$.
+
+> Note: Assume $a_n, b_n$ are all non-negative.
+
+\todo[inline]{Have someone check!}
+:::{.solution}
+\envlist
+- Define a sequence of operators 
+\[  
+T_N: \ell^2 &\to \ell^1\\
+\theset{b_n} &\mapsto \sum_{n=1}^N a_n b_n
+.\]
+- By assumption, these are well defined: the image is $\ell^1$ since $\abs{T_N(\theset{b_n})} < \infty$ for all $N$ and all $\theset{b_n} \in \ell^2$.
+- So each $T_N \in \qty{\ell^2}\dual$ is a linear functional on $\ell^2$.
+- For each $x\in \ell^2$, we have $\norm{T_N(x)}_{\RR} = \sum_{n=1}^N a_n b_n < \infty$ by assumption, so each $T_N$ is pointwise bounded.
+- By the Uniform Boundedness Principle, $\sup_N \norm{T_N}_{\text{op}} < \infty$.
+- Define $T = \lim_{N \to\infty } T_N$, then $\norm{T}_{\text{op}} < \infty$.
+- By the Riesz Representation theorem,
+\[  
+\sqrt{\sum a_n^2} \definedas \norm{\theset{a_n}}_{\ell^2} = \norm{T}_{\qty{\ell^2}\dual} = \norm{T}_{\text{op}} < \infty
+.\]
+
+- So $\sum a_n^2 < \infty$.
+:::
+
 
 # Measure Theory: Sets
 
@@ -1720,25 +1820,23 @@ for all $t\in [1, \infty)$, then
 
 Let $m_*$ denote the Lebesgue outer measure on \( \RR \).
 
-### a. 
+a.. 
 Prove that for every $E\subseteq \RR$ there exists a Borel set $B$ containing $E$ such that
 \[
 m_*(B) = m_*(E)
 .\]
 
-### b. 
+b.. 
 Prove that if $E\subseteq \RR$ has the property that
 \[
-m_*(A) = m_*(A\intersect E) + m_*(A\intersect E^c)
+m_*(A) = m_*(A\Intersect E) + m_*(A\Intersect E^c)
 \]
 for every set $A\subseteq \RR$, then there exists a Borel set $B\subseteq \RR$ such that $E = B\setminus N$ with $m_*(N) = 0$.
 
 Be sure to address the case when $m_*(E) = \infty$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Definition of outer measure: 
   \[ 
   m_*(E) = \inf_{\theset{Q_j} \covers E} \sum \abs {Q_j}
@@ -1748,9 +1846,11 @@ Be sure to address the case when $m_*(E) = \infty$.
 - Theorem: $m_*(Q) = \abs{Q}$ for $Q$ a closed cube (i.e. the outer measure equals the volume).
 :::
 
+:::{.solution}
+\envlist
 
 :::{.proof}
-\hfill
+\envlist
 - $m_*(Q) \leq \abs{Q}$:
 - Since $Q\subseteq Q$, $Q\covers Q$ and $m_*(Q) \leq \abs{Q}$ since $m_*$ is an infimum over such coverings.
 - $\abs{Q} \leq m_*(Q)$:
@@ -1762,14 +1862,14 @@ Be sure to address the case when $m_*(E) = \infty$.
 
 - Note 
 \[
-Q \subseteq \union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
+Q \subseteq \Union_{i=1}^N S_i \implies \abs{Q} \leq \sum_{i=1}^N \abs{S_i} \leq \sum_{i=1}^N (1+\eps) \abs{Q_j} \leq (1+\eps)\sum_{i=1}^\infty \abs{Q_i } 
 .\]
 - Taking an infimum over coverings on the RHS preserves the inequality, so 
   $$\abs{Q} \leq (1+\eps) m_*(Q)$$
 - Take $\eps\to 0$ to obtain final inequality.
 :::
 
-### a
+a.
 
 - If $m_*(E) = \infty$, then take $B = \RR^n$ since $m(\RR^n) = \infty$.
 - Suppose $N \definedas m_*(E) < \infty$.
@@ -1779,14 +1879,14 @@ $$
 \sum_{i=1}^\infty \abs{Q_i(\eps)} < N + \eps
 .$$
 
-- For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \union_{i=1}^\infty Q_i(\eps_n)$.
+- For each fixed $n$, set $\eps_n = {1\over n}$ to produce such a covering $\theset{Q_i(\eps_n)}_{i=1}^\infty$ and set $B_n \definedas \Union_{i=1}^\infty Q_i(\eps_n)$.
 
 - The outer measure of cubes is *equal* to the sum of their volumes, so 
 \[
 m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
 .\]
 
-- Now set $B \definedas \intersect_{n=1}^\infty B_n$.
+- Now set $B \definedas \Intersect_{n=1}^\infty B_n$.
 
   - Since $E\subseteq B_n$ for every $n$, $E\subseteq B$
   - Since $B$ is a countable intersection of countable unions of closed sets, $B$ is Borel.
@@ -1799,15 +1899,15 @@ m_*(B_n) = \sum_{i=1}^\infty \abs{Q_i(\eps_n)} < N + \eps_n = N + {1\over n}
 - This forces $m_*(E) = m_*(B)$.
 
 
-### b
+b.
 
 Suppose $m_*(E) < \infty$.
 
 - By (a), find a Borel set $B\supseteq E$ such that $m_*(B) = m_*(E)$
-- Note that $E\subseteq B \implies B\intersect E = E$ and $B\intersect E^c = B\setminus E$.
+- Note that $E\subseteq B \implies B\Intersect E = E$ and $B\Intersect E^c = B\setminus E$.
 - By assumption, 
 \[
-m_*(B) &= m_*(B\intersect E) + m_*(B\intersect E^c) \\
+m_*(B) &= m_*(B\Intersect E) + m_*(B\Intersect E^c) \\
 m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
 m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \\ 
 \implies m_*(B\setminus E) &= 0
@@ -1817,17 +1917,17 @@ m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \
 
 If $m_*(E) = \infty$:
 
-- Apply result to $E_R\definedas E \intersect [R, R+1)^n \subset \RR^n$ for $R\in \ZZ$, so $E = \disjoint_R E_R$
+- Apply result to $E_R\definedas E \Intersect [R, R+1)^n \subset \RR^n$ for $R\in \ZZ$, so $E = \disjoint_R E_R$
 - Obtain $B_R, N_R$ such that $E_R = B_R \setminus N_R$, $m_*(E_R) = m_*(B_R)$, and $m_*(N_R) = 0$.
 - Note that
-  -   $B\definedas \union_R B_R$ is a union of Borel sets and thus still Borel
-  -  $E = \union_R E_R$
+  -   $B\definedas \Union_R B_R$ is a union of Borel sets and thus still Borel
+  -  $E = \Union_R E_R$
   - $N\definedas B\setminus E$
-  - $N' \definedas \union_R N_R$ is a union of null sets and thus still null
+  - $N' \definedas \Union_R N_R$ is a union of null sets and thus still null
 - Since $E_R \subset B_R$ for every $R$, we have $E\subset B$
 - We can compute
 \[
-N = B\setminus E = \qty{ \union_R B_R } \setminus \qty{\union_R E_R } \subseteq \union_R \qty{B_R\setminus E_R} = \union_R N_R \definedas N'
+N = B\setminus E = \qty{ \Union_R B_R } \setminus \qty{\Union_R E_R } \subseteq \Union_R \qty{B_R\setminus E_R} = \Union_R N_R \definedas N'
 \]
 where $m_*(N') = 0$ since $N'$ is null, and thus subadditivity forces $m_*(N) = 0$.
 :::
@@ -1850,17 +1950,15 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 > Hint: Use the fact that $1 - x ≤ e^{-x}$ for all $x$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Borel-Cantelli: for a sequence of sets $X_n$, 
 \[
-\limsup_n X_n &= \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
-&= \intersect_{m\in \NN} \union_{n\geq m} X_n
+\theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
+&= \Intersect_{m\in \NN} \Union_{n\geq m} X_n
 \\
-\liminf_n X_n &= \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
-&= \union_{m\in \NN} \intersect_{n\geq m} X_n
+\theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
+&= \Union_{m\in \NN} \Intersect_{n\geq m} X_n
 .\]
 
 - Properties of logs and exponentials:
@@ -1873,143 +1971,255 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 :::
 
-### a
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
 
 - The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
 - $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
 
-### b
+:::
 
-- Tails of convergent sums go to zero, so $\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0$, 
-- $B_M \definedas \intersect_{m = 1}^M \union_{n\geq m} B_n \searrow B$.
+:::{.proof title="of b"}
+\envlist
 
+- Tails of convergent sums vanish, so 
 \[
-\mu(B_M) 
-&= \mu\left(\intersect_{m\in \NN} \union_{n\geq m} B_n\right) \\
-&\leq \mu\left( \union_{n\geq m} B_n \right) \quad \text{for all } m\in \NN \text{ by countable subadditivity} \\ 
-&\to 0
+\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0
+.\] 
+- Also,
+\[
+B_M \definedas \Intersect_{N = 1}^M \Union_{n\geq N} B_n \decreasesto B 
+.\]
+- A computation:
+\[
+\mu(B) 
+&\da \mu\left(\Intersect_{N\geq 1} \Union_{n\geq N} B_n\right) \\
+&\leq \mu\left( \Union_{n\geq N} B_n \right) && \forall N \\
+&\converges{N\to\infty}\too 0
 ,\]
+  where we've used that we're intersecting over fewer sets and this can only increase measure.
 
-- The result follows by continuity of measure.
+:::
 
-### c
+:::{.proof title="of c"}
+\envlist
 
-- To show $\mu(B) = 1$, we'll show $\mu(B^c) = 0$.
-
-- Let $B_k = \intersect_{m=1}^\infty \union_{n = m}^K B_n$. Then
+- Since $\mu(X) = 1$, in order to show $\mu(B) = 1$ it suffices to show $\mu(X\sm B) = 0$.
+- A computation:
 \[
-\mu(B_K^c) 
-&= \mu \left(\union_{m=1}^\infty \intersect_{n=m}^K B_n^c\right) \\
-&\leq \sum_{m=1}^\infty \mu\left( \intersect_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
-&= \sum_{m=1}^\infty \prod_{n=m}^K \qty{1 - \mu(B_n)} \quad \text{by assumption} \\ 
-&\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
-&= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
-&\converges{K\to\infty}\to 0
-\]
-  since $\displaystyle\sum_{n=m}^K \mu(B_n^c) \converges{K\to\infty}\to \infty$ by assumption 
+\mu(B^c) 
+&= \mu\qty{
+\qty{
+\Intersect _{N=1}^\infty \Union_{n=N}^\infty B_n
+}^c
+}\\
+&= \mu\qty{
+\Union _{N=1}^\infty \Intersect_{n=N}^\infty B_n^c
+} \\
+&\leq \sum_{N=1}^\infty 
+\mu\qty{
+\Intersect_{n=N}^\infty B_n^c
+} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty} \mu\qty{ \Intersect _{n=N}^K B_n^c } && \text{continuity of measure from above} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K \qty{1 - \mu(B_n)} && \text{by assumption} \\
+&\leq 
+\sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K e^{-\mu(B_n)} && \text{by hint} \\
+&=
+\sum_{N=1}^\infty \lim_{K\to\infty}  e^{-\sum_{n=N}^K \mu(B_n)}  \\
+&=
+\sum_{N=1}^\infty  e^{-\lim_{K\to\infty} \sum_{n=N}^K \mu(B_n)} && \text{by continuity of } f(x) = e^x \\
+&=
+\sum_{N=1}^\infty  e^{-\sum_{n=N}^\infty \mu(B_n)}  \\
+&=
+\sum_{N=1}^\infty 0 \\
+&= 0
+.\]
 
-- We can apply continuity of measure since $B_K^c \mapsvia{K\to\infty} B^c$.
+- Here we've used that every tail of a divergent sum is divergent:
+if $\sum_{n=1}^\infty a_n \to \infty$ then for every $N$, the tail $\sum_{n=N}^\infty a_n \to \infty$ as well.
+- We've also use that if $b_n\to \infty$ then $e^{-b_n} \to 0$.
 
-\todo[inline]{How to prove the hint..?}
+:::
+
 :::
 
 ## Spring 2019 # 2 $\done$
 Let $\mathcal B$ denote the set of all Borel subsets of $\RR$ and $\mu : \mathcal B \to [0, \infty)$ denote a finite Borel measure on $\RR$.
   
-### a 
+a. 
 Prove that if $\{F_k\}$ is a sequence of Borel sets for which $F_k \supseteq  F_{k+1}$ for all $k$, then
 \[
 \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
 \]
 
-### b 
+b. 
 Suppose $\mu$ has the property that $\mu (E) = 0$ for every $E \in \mathcal B$ with Lebesgue measure $m(E) = 0$.
-
 Prove that for every $\epsilon  > 0$ there exists $\delta > 0$ so that if $E \in \mathcal B$ with $m(E) < δ$, then $\mu(E) < ε$.
 
-\todo[inline]{Add concepts.}
+:::{.concept}
+\envlist
+- Proof of continuity of measure.
+- Using limsup/liminf sets (intersections of unions and vice-versa) and (sub)additivity to bound measures.
+  - Control over lower bound: use tails of convergent sums
+  - Control over upper bound: use rapidly converging coefficients like $\sum 1/2^n$
+- Convergent sums have vanishing tails.
+- Intersecting over *more* sets can only lose measure, taking a union over *more* can only gain measure.
+- Similarly intersecting over *fewer* sets can only *gain* measure, and taking a union over *fewer* sets can only *lose* measure.
+:::
+
+
+:::{.strategy}
+Use a limsup or liminf of sets and continuity of measure.
+Note that choosing a limsup vs a liminf is fiddly -- for one choice, you can only get one of the bounds you need, for the other choice you can get both.
+:::
+
 
 :::{.solution}
-\hfill
+\envlist
 
-:::{.concept}
-\hfill
-- ?
+:::{.proof title="of a"}
+- Observation: $\mu$ finite means $\mu(E) < \infty$ for all $E \in\mathcal{B}$, which we'll need in several places.
+- Prove a more general statement: for any measure $\mu$,
+\[
+\mu(F_1) < \infty,\, F_k \decreasesto F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+,\]
+  where $F_k \searrow F$ means $F_1 \supseteq F_2 \supseteq \cdots$ with $\Intersect_{k=1}^\infty F_k = F$.
+  - Note that $\mu(F)$ makes sense: each $F_k \in \mathcal{B}$, which is a $\sigma\dash$algebra and closed under countable intersections.
+
+- Take disjoint annuli by setting $E_k \da F_k \sm F_{k+1}$
+- Funny step: write
+\[
+F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
+.\]
+
+  - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
+  - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
+  - $x\not\in F_2$ but $x\in F_3$, and so on.
+
+- Now take measures, and note that we get a telescoping sum:
+\[
+\mu(F_1) 
+&= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+&= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \sm F_{k+1} ) \\
+&\da \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+&= \mu(F) + \lim_{N\to\infty} 
+[
+(\mu(F_1) - \mu(F_2)) +  
+(\mu(F_2) - \mu(F_3)) +  
+\cdots \\ 
+& \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+(\mu(F_N) - \mu(F_{N+1})) 
+] \\ \\
+&= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+.\]
+
+- Justifying the measure subtraction: the general statement is that for any pair of sets $A\subseteq X$, $\mu(X\sm A) = \mu(X) - \mu(A)$ when $\mu(A) < \infty$:
+  \[
+  X &= A \disjoint (X\sm A) \\
+  \implies \mu(X) &= \mu(A) + \mu(X\sm A) && \text{countable additivity} \\
+  \implies \mu(X) -\mu(A) &= \mu(X\sm A) && \text{if } \mu(A) < \infty 
+  .\]
+
+
+- Now use that $\mu(F_1)<\infty$ to justify subtracting it from both sides:
+\[
+\mu(F_1)
+&= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\implies
+0
+&= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+\lim_{N\to\infty} \mu(F_{N+1})
+&= \mu(F_1) 
+.\]
+
+- Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
 :::
 
-### a
+:::{.proof title="of b"}
+\envlist
 
-> See Folland p.26
-
-- Lemma 1: $\mu(\disjoint_{k=1}^\infty E_k) = \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k)$.
-
-- Suppose $F_0 \supseteq F_1 \supseteq \cdots$.
-- Let $A_k = F_k \setminus F_{k+1}$, since the $F_k$ are nested the $A_k$ are disjoint
-- Set $A \definedas \disjoint_{k=1}^\infty A_k$ and $F \definedas \intersect_{k=1}^\infty F_k$.
-- Note $X = X\setminus Y ~\disjoint~ X\intersect Y$ for any two sets (just write $X\setminus Y \definedas X\intersect  Y^c$)
-- Note that $A$ contains anything that was removed from $F_0$ when passing from any $F_j$ to $F_{j+1}$, while $F$ contains everything that is never removed at any stage, and these are disjoint possibilities.
-- Thus $F_0 = F \disjoint A$, so 
+- Toward a contradiction, negate the implication: there exists an $\eps>0$ such that for all $\delta$, there exists an $E\in \mathcal{B}$ 
 \[
-\mu(F_0) 
-&= \mu(F) + \mu(A) \\
-&= \mu(F) + \mu(\disjoint_{k=1}^\infty A_k) \\
-&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(A_k) \quad \text{by countable additivity}\\
-&= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
-&= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
-&=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
+m(E) < \delta && \text{but} \hspace{4em} \mu(E) > \eps 
+.\]
+
+  - **Goal**: produce a set $A$ with $m(A)= 0$ **but** $\mu(A)\neq 0$.
+- Take a sequence $\delta_n = \alpha(n)$, some function to be determined later, produce sets $E_n$ with
+\[
+m(E_n) < \delta_n && \text{but} \hspace{4em} \mu(E_n) > \eps \quad \forall n
+.\]
+- Set 
+\[
+A_M \da \Intersect_{N=1}^M \Union_{n=N}^\infty E_n \da \Intersect_{N=1}^M F_N
+\hspace{4em} 
+F_N \da \Union_{n=N}^\infty E_n
+.\]
+  - Observation: $F_N \supseteq F_{N+1}$ for all $N$, since the right-hand side involves taking a union over *fewer* sets.
+  - Notation: define
+\[
+A_\infty \da \Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n
+.\]
+
+- Bounding the Lebesgue measure $m$ from above:
+\[
+m(A_\infty)
+&\da
+m\qty{ 
+\Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n
+} \\
+&\leq
+m\qty{ 
+\Union_{n=N}^\infty E_n
+} && \forall N \\
+&\leq \sum_{n=N}^\infty m(E_n) && \forall N \quad \text{by countable subadditivity} \\
+&\leq \sum_{n=N}^\infty \alpha(n) \\ \\
+&\converges{N\to\infty}\too 0
 ,\]
+  where we've used that intersecting over *fewer* sets (i.e. none) can only increase measure in the first bound.
+  - We have control over the sequence $\alpha(n)$, so we can choose it to be summable so that the tails converge to zero as rapidly as we'd like.
+  - So e.g. for any $\eps_1 >0$, we can choose $\alpha(n) \da \eps_1/2^n$, then
+  \[
+  \sum_{n=N}^\infty \alpha(n) &\leq \sum_{n=1}^\infty {\eps_1 \over 2^n} = \eps_1 \to 0
+  .\]
 
-- Since $\mu$ is a finite measure, $\mu(F_1) < \infty$ and can be subtracted, yielding
+- Bounding the $\mu$ measure from below:
 \[
-\mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
-\implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
-\implies \mu\qty{\intersect_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
-.\]
-
-### b
-
-- Toward a contradiction, negate the implication: suppose there exists an $\eps>0$ such that for all $\delta$, we have $m(E) < \delta$ but $\mu(E) > \eps$.
-- The sequence $\theset{\delta_n \definedas {1\over 2^n}}_{n\in \NN}$ and produce sets $A_n\in \mcb$ such $m(A_n) < {1\over 2^n}$ but $\mu(A_n) > \varepsilon$.
-- Define
-\[
-F_n &\definedas \union_{j\geq n} A_j \\
-C_m &\definedas \intersect_{k=1}^m F_k \\
-A &\definedas C_\infty \definedas \intersect_{k=1}^\infty F_k 
-.\]
-
-- Note that $F_1 \supseteq F_2 \supseteq \cdots$, since each increase in index unions fewer sets.
-- By continuity for the Lebesgue measure, 
-\[
-m(A) 
-= m \qty{\intersect_{k=1}^\infty F_k }
-= \lim_{k\to \infty} m (F_k) 
-= \lim_{k\to\infty} m\qty{\union_{j\geq k} A_j } 
-\leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
-= \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
-= 0
+\mu(A_\infty) 
+&\da
+\mu\qty{\Intersect_{N=1}^\infty F_N} \\
+&= \lim_{N\to\infty} \mu(F_N) && \text{by part (1) }\\
+&= \lim_{N\to\infty} \mu\qty{ \Union_{n=N}^\infty E_n } \\
+&\geq \lim_{N\to\infty} \mu(E_N ) \\
+&\geq \lim_{N\to\infty} \eps \\
+&= \eps \\
+&>0
 ,\]
-  which follows because this is the tail of a convergent sum
+where we've used that taking a union over *fewer* sets can only make the measure smaller.
 
-- Thus $m(A) = 0$ and by assumption, this implies $\mu(A) = 0$.
-
-- However, by part (a),
-\[
-\mu(A) = \lim_n \mu\left( \union_{k=n}^\infty A_k \right)
-\geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
-.\]
 :::
-\todo[inline]{All messed up!}
 
-## Fall 2018 # 2 $\done$
+:::
+
+
+## Fall 2018 # 2 $\work$
 Let $E\subset \RR$ be a Lebesgue measurable set.
 Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
 \todo[inline]{Move this to review notes to clean things up.}
 
-:::{.solution}
-\hfill
+\todo[inline]{What a mess, redo!!}
+
+
 :::{.concept}
-\hfill
+\envlist
+
 - Definition of measurability: there exists an open $O\supset E$ such that $m_*(O\setminus E) < \eps$ for all $\eps> 0$.
 - Theorem: $E$ is Lebesgue measurable iff there exists a closed set $F\subseteq E$ such that $m_*(E\setminus F) < \eps$ for all $\eps>0$.
 - Every $F_\sigma, G_\delta$ is Borel.
@@ -2019,13 +2229,13 @@ Show that there is a Borel set $B \subset E$ such that $m(E\setminus B) = 0$.
 
 - Claim: $E$ is measurable $\implies$ there exists an open $O\supseteq E$ such that $m(O\setminus E) = 0$.
   - Since $E$ is measurable, for each $n\in \NN$ choose $G_n \supseteq E$ such that $m_*(G_n\setminus E) < {1\over n}$.
-  - Set $O_N \definedas \intersect_{n=1}^N G_n$ and $O\definedas \intersect_{n=1}^\infty G_n$.
+  - Set $O_N \definedas \Intersect_{n=1}^N G_n$ and $O\definedas \Intersect_{n=1}^\infty G_n$.
   - Suppose $E$ is bounded.
     - Note $O_N \searrow O$ and $m_*(O_1) < \infty$ if $E$ is bounded, since in this case
     \[
     m_*(G_n\setminus E) = m_*(G_1) - m_*(E) < 1 \iff m_*(G_1) < m_*(E) + {1\over n} < \infty
     .\]
-    - Note $O_N \setminus E \searrow O \setminus E$ since $O_N\setminus E \definedas O_N \intersect E^c \supseteq O_{N+1} \intersect E^c$ for all $N$, and again $m_*(O_1 \setminus E) < \infty$.
+    - Note $O_N \setminus E \searrow O \setminus E$ since $O_N\setminus E \definedas O_N \Intersect E^c \supseteq O_{N+1} \Intersect E^c$ for all $N$, and again $m_*(O_1 \setminus E) < \infty$.
     - So it's valid to apply continuity of measure from above:
 \[
 m_*(O\setminus E) 
@@ -2033,12 +2243,12 @@ m_*(O\setminus E)
 &\leq \lim_{N\to \infty} m_*(G_N\setminus E) \\ 
 &= \lim_{N\to\infty} {1\over N} = 0
 ,\]
-      where the inequality uses subadditivity on $\intersect_{n=1}^N G_n \subseteq G_N$
+      where the inequality uses subadditivity on $\Intersect_{n=1}^N G_n \subseteq G_N$
   - Suppose $E$ is unbounded.
-    - Write $E^k = E \intersect [k, k+1]^d \subset \RR^d$ as the intersection of $E$ with an annulus, and note that $E = \disjoint_{k\in \NN} E_k$.
+    - Write $E^k = E \Intersect [k, k+1]^d \subset \RR^d$ as the intersection of $E$ with an annulus, and note that $E = \disjoint_{k\in \NN} E_k$.
     - Each $E_k$ is bounded, so apply the previous case to obtain $O_k \supseteq E_k$ with $m(O_k\setminus E_k) = 0$.
     - So write $O_k = E_k \disjoint N_k$ where $N_k \definedas O_k \setminus E_k$ is a null set.
-    - Define $O = \union_{k\in \NN} O_k$, note that $E\subseteq O$.
+    - Define $O = \Union_{k\in \NN} O_k$, note that $E\subseteq O$.
     - Now note
 \[
 O\setminus E 
@@ -2050,7 +2260,7 @@ O\setminus E
   since any countable union of null sets is again null.
   - So $O\supseteq E$ with $m(O\setminus E) = 0$.
 - Theorem: since $E$ is measurable, $E^c$ is measurable
-  - Proof: It suffices to write $E^c$ as the union of two measurable sets, $E^c = S \union (E^c - S)$, where $S$ is to be determined.
+  - Proof: It suffices to write $E^c$ as the union of two measurable sets, $E^c = S \Union (E^c - S)$, where $S$ is to be determined.
   - We'll produce an $S$ such that $m_*(E^c - S) = 0$ and use the fact that any subset of a null set is measurable.
   - Since $E$ is measurable, for every $\eps > 0$ there exists an open $\OO_\eps \supseteq E$ such that $m_*(\OO_\eps \setminus E) < \eps$.
   - Take the sequence $\theset{\eps_n \definedas {1\over n}}$ to produce a sequence of sets $\OO_n$.
@@ -2058,16 +2268,16 @@ O\setminus E
   \[
   \OO_n \supseteq E \iff \OO_n^c \subseteq E^c
   .\]
-  - Set $S \definedas \union_n \OO_n^c$, which is a union of closed sets, thus an $F_\sigma$ set, thus Borel, thus measurable.
+  - Set $S \definedas \Union_n \OO_n^c$, which is a union of closed sets, thus an $F_\sigma$ set, thus Borel, thus measurable.
   - Note that $S\subseteq E^c$ since each $\OO_n \subseteq E^c$.
   - Note that
   \[
   E^c\setminus S 
-  &\definedas E^c \setminus \qty{\union_{n=1}^\infty \OO_n^c} \\
-&\definedas E^c \intersect \qty{\union_{n=1}^\infty \OO_n^c}^c  \quad\text{definition of set minus} \\ 
-  &= E^c \intersect \qty{\intersect_{n=1}^\infty \OO_n}^c  \quad \text{De Morgan's law}\\
-  &= E^c \union \qty{\intersect_{n=1}^\infty \OO_n}  \\
-  &\definedas \qty{ \intersect_{n=1}^\infty \OO_n} \setminus E \\
+  &\definedas E^c \setminus \qty{\Union_{n=1}^\infty \OO_n^c} \\
+&\definedas E^c \Intersect \qty{\Union_{n=1}^\infty \OO_n^c}^c  \quad\text{definition of set minus} \\ 
+  &= E^c \Intersect \qty{\Intersect_{n=1}^\infty \OO_n}^c  \quad \text{De Morgan's law}\\
+  &= E^c \Union \qty{\Intersect_{n=1}^\infty \OO_n}  \\
+  &\definedas \qty{ \Intersect_{n=1}^\infty \OO_n} \setminus E \\
   & \subseteq \OO_N \setminus E \quad \text{for every } N\in \NN
   .\]
   - Then by subadditivity,
@@ -2076,20 +2286,21 @@ O\setminus E
     .$$
   - Thus $E^c\setminus S$ is measurable.
 :::
-  
-### Indirect Proof
+
+:::{.solution}
+\envlist
 
 - Since $E$ is measurable, $E^c$ is measurable.
 - Since $E^c$ is measurable exists an open $O\supseteq E^c$ such that $m(O\setminus E^c) = 0$.
 - Set $B \definedas O^c$, then $O\supseteq E^c \iff \OO^c \subseteq E \iff B\subseteq E$.
 - Computing measures yields 
 \[
-E\setminus B \definedas E\setminus  \OO^c \definedas E\intersect (\OO^c)^c = E\intersect \OO = \OO \intersect(E^c)^c \definedas \OO \setminus E^c
+E\setminus B \definedas E\setminus  \OO^c \definedas E\Intersect (\OO^c)^c = E\Intersect \OO = \OO \Intersect(E^c)^c \definedas \OO \setminus E^c
 ,\]
   thus $m(E\setminus B) = m(\OO\setminus E^c) = 0$.
 - Since $\OO$ is open, $B$ is closed and thus Borel.
 
-### Direct Proof (Todo)
+d.irect Proof (Todo)
 
 \todo[inline]{Try to construct the set.}
 :::
@@ -2102,23 +2313,24 @@ $$
 
 Prove that $m(E) = 0$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Borel-Cantelli: If $\theset{E_k}_{k\in\ZZ}\subset 2^\RR$ is a countable collection of Lebesgue measurable sets with $\sum_{k\in \ZZ} m(E_k) < \infty$, then almost every $x\in \RR$ is in *at most finitely* many $E_k$.
-  - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \intersect_{k=1}^\infty \union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
+  - Equivalently (?), $m(\limsup_{k\to\infty} E_k) = 0$, where $\limsup_{k\to\infty} E_k = \Intersect_{k=1}^\infty \Union_{j\geq k} E_j$, the elements which are in $E_k$ for infinitely many $k$.
 :::
+
+:::{.solution}
+\envlist
 
 - Strategy: Borel-Cantelli.
 
-- We'll show that $m(E) \intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
+- We'll show that $m(E) \Intersect [n, n+1] = 0$ for all $n\in \ZZ$; then the result follows from 
 \[
-m(E) = m \qty{\union_{n\in \ZZ} E \intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \intersect [n, n+1]) = 0
+m(E) = m \qty{\Union_{n\in \ZZ} E \Intersect [n, n+1]} \leq \sum_{n=1}^\infty m(E \Intersect [n, n+1]) = 0
 .\]
 
-- By translation invariance of measure, it suffices to show $m(E \intersect [0, 1]) = 0$.
-  - So WLOG, replace $E$ with $E\intersect [0, 1]$.
+- By translation invariance of measure, it suffices to show $m(E \Intersect [0, 1]) = 0$.
+  - So WLOG, replace $E$ with $E\Intersect [0, 1]$.
 
 - Define
 \[
@@ -2131,7 +2343,7 @@ E_j \definedas \theset{x\in [0, 1] \suchthat \
 
 - Importantly, note that 
   \[
-\limsup_{j\to\infty} E_j \definedas \intersect_{n=1}^\infty \union_{j=n}^\infty E_j = E
+\limsup_{j\to\infty} E_j \definedas \Intersect_{n=1}^\infty \Union_{j=n}^\infty E_j = E
   \]
   
   since 
@@ -2181,8 +2393,8 @@ B_{j^{-3}}\qty{j-1\over j}
 \[
 m(E) 
 &= m(\limsup_j E_j) \\
-&= m(\intersect_{n\in \NN} \union_{j\geq n} E_j) \\
-&\leq m(\union_{j\geq N} E_j) \quad\text{for every } N \\
+&= m(\Intersect_{n\in \NN} \Union_{j\geq n} E_j) \\
+&\leq m(\Union_{j\geq N} E_j) \quad\text{for every } N \\
 &\leq \sum_{j\geq N} m(E_j) \\
 &\converges{N\to\infty}\to 0 \quad\text{}
 .\]
@@ -2209,16 +2421,12 @@ E &\mapsto f(E)
 \todo[inline]{Walk through.}
 
 :::{.solution}
-\hfill
-:::{.concept}
-\hfill
-- ?
-:::
+\envlist
 
-### a
+a.
 
 It suffices to consider the bounded case, i.e. $E \subseteq B_M(0)$ for some $M$.
-Then write $E_n = B_n(0) \intersect E$ and apply the theorem to $E_n$, and by subadditivity, $m^*(E) = m^*(\union_n E_n) \leq \sum_n m^*(E_n) = 0$.
+Then write $E_n = B_n(0) \Intersect E$ and apply the theorem to $E_n$, and by subadditivity, $m^*(E) = m^*(\Union_n E_n) \leq \sum_n m^*(E_n) = 0$.
 
 **Lemma:** 
 $f(x) = x^2, f\inv(x) = \sqrt{x}$ are Lipschitz on any compact subset of $[0, \infty)$.
@@ -2258,9 +2466,8 @@ m^*(g(E)) \leq \sum_j \abs{g(Q_j)} \leq \sum_j L^n \abs{Q_j} = L^n \sum_j \abs{Q
 .\]
 
 Now just take $g(x) = x^2$ for one direction, and $g(x) = f\inv(x) = \sqrt{x}$ for the other.
-$\qed$
 
-### b
+b.
 
 > Lemma: $E$ is measurable iff $E = K \disjoint N$ for some $K$ compact, $N$ null.
 
@@ -2276,7 +2483,7 @@ Restricting to $[0, \infty)$, $f$ is bijection, and thus so is $\phi$.
 
 ## Spring 2017 # 2 $\done$
 
-### a 
+a. 
 Let $\mu$ be a measure on a measurable space $(X, \mathcal M)$ and $f$ a positive measurable function.
   
   Define a measure $\lambda$ by
@@ -2289,17 +2496,15 @@ Show that for $g$ any positive measurable function,
 \int_{X} g ~d \lambda=\int_{X} f g ~d \mu
 \]
 
-### b 
+b. 
 Let $E \subset \RR$ be a measurable set such that 
 \[
 \int_{E} x^{2} ~d m=0.
 \]
 Show that $m(E) = 0$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Absolute continuity of measures: $\lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0$.
 - Radon-Nikodym: if $\lambda \ll \mu$, then there exists a measurable function $\dd{\lambda}{\mu} \definedas f$ where $\lambda(E) = \int_E f \,d\mu$.
 - Chebyshev's inequality:
@@ -2308,7 +2513,10 @@ A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) 
 .\]
 :::
 
-### a
+:::{.solution}
+\envlist
+
+a.
 
 - Strategy: use approximation by simple functions to show absolute continuity and apply Radon-Nikodym 
 
@@ -2332,7 +2540,7 @@ A_c \definedas \theset{ x\in X \suchthat \abs{f(x)} \geq c  } \implies \mu(A_c) 
 
 \todo[inline]{What is the final step in this approximation?}
 
-### b
+b.
 
 - Set $g(x) = x^2$, note that $g$ is positive and measurable.
 - By part (a), there exists a positive $f$ such that for any $E\subseteq \RR$,
@@ -2381,16 +2589,12 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
 \todo[inline]{Add concepts.}
 
 :::{.solution}
-\hfill
-:::{.concept}
-\hfill
-- ?
-:::
+\envlist
 
 - Claim: $G\in \mcm$.
   - Claim:
   \[  
-  G = \qty{ \intersect_{N=1}^\infty \union_{n=N}^\infty E_n}^c = \union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c
+  G = \qty{ \Intersect_{N=1}^\infty \Union_{n=N}^\infty E_n}^c = \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n^c
   .\]
 
     - This follows because $x$ is in the RHS $\iff$ $x\in E_n^c$ for all but finitely many $n$ $\iff$ $x\in E_n$ for at most finitely many $n$.
@@ -2402,8 +2606,8 @@ Show that $G \in \mathcal M$ and $\mu(G) = 0$.
   - We have
   \[  
   \mu(G)
-  &= \mu\qty{\union_{N=1}^\infty \intersect_{n=N}^\infty E_n^c} \\
-  &\leq \sum_{N=1}^\infty \mu \qty{\intersect_{n=N}^\infty E_n^c}  \\
+  &= \mu\qty{\Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n^c} \\
+  &\leq \sum_{N=1}^\infty \mu \qty{\Intersect_{n=N}^\infty E_n^c}  \\
   &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
   &\definedas \sum_{N=1}^\infty \mu(X\setminus E_N) \\
   &\converges{N\to\infty}\to 0
@@ -2485,13 +2689,14 @@ different from 4, we replace the digit $4$ with $399\cdots$. For example, $0.875
 Show that $K$ is a compact, nowhere dense set without isolated points, and find the
 Lebesgue measure $m(K)$.
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Definition: $A$ is *nowhere dense* $\iff$ every interval $I$ contains a subinterval $S \subseteq A^c$.
   - Equivalently, the interior of the closure is empty, $\qty{\bar K}^\circ = \emptyset$.
 :::
+
+:::{.solution}
+\envlist
 
 Claim: **$K$ is compact**.
 
@@ -2512,7 +2717,7 @@ x = 0.d_1 d_2 \cdots d_{k-1}~ 4 ~d_{k+1}\cdots
 = \qty{\sum_{j=1}^k d_j 10^{-j}} + \qty{4\cdot 10^{-k}} + \qty{\sum_{j=k+1}^\infty d_j 10^{-j}}
 .\]
 
-- Set $r_x < 10^{-k}$ and let $y \in [0, 1] \intersect B_{r_x}(x)$ be arbitrary and write 
+- Set $r_x < 10^{-k}$ and let $y \in [0, 1] \Intersect B_{r_x}(x)$ be arbitrary and write 
 \[  
 y = \sum_{j=1}^\infty c_j 10^{-j}
 .\]
@@ -2535,7 +2740,7 @@ j < k \iff 10^{-j} > 10^{-k}
   
 - This means that for all $j \leq k$ we have $d_j = c_j$, and in particular $d_k = 4 = c_k$, so $y$ has a 4 in its decimal expansion.
 
-- But then $K^c = \union_x B_{r_x}(x)$ is a union of open sets and thus open.
+- But then $K^c = \Union_x B_{r_x}(x)$ is a union of open sets and thus open.
 
 
 Claim: **$K$ is nowhere dense and $m(K) = 0$:**
@@ -2593,32 +2798,46 @@ Let $f, g: [a, b] \to \RR$ be measurable with
 $$
 \int_{a}^{b} f(x) ~d x=\int_{a}^{b} g(x) ~d x.
 $$
-
 Show that either
 
 1. $f(x) = g(x)$ almost everywhere, or
 2. There exists a measurable set $E \subset [a, b]$ such that
-\[]
+\[
 \int _{E} f(x) \, dx > \int _{E} g(x) \, dx
 \]
 
-\todo[inline]{Add concepts.}
-
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
-- ?
+\envlist
+- Monotonicity of the Lebesgue integral: $f\leq g$ on $A$ $\implies \int_A f \leq \int_A g$
+
 :::
 
-- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in [a,b] \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
-- Write 
-\[  
-A = A_1\disjoint A_2 \definedas \theset{f>g} \disjoint \theset{f<g}
-,\]
-  then $m(A_1) > 0$ or $m(A_2) > 0$ (or both).
+:::{.strategy}
+Take the assumption and the negation of (1) and show (2).
+The obvious move: define the set $A$ where they differ.
+The non-obvious move: split $A$ itself up to get a strict inequality.
 
-- Wlog (by relabeling $f, g$ if necessary), suppose $m(A_1) > 0$, and take $E\definedas A_1$.
+:::
+
+:::{.solution}
+\envlist
+
+- Write $X\da [a, b]$,
+- Suppose it is *not* the case that $f=g$ almost everywhere; then letting $A\definedas \theset{x\in X \suchthat f(x) \neq g(x)}$, we have $m(A) > 0$.
+- Write 
+  \[
+  A = A_1 \disjoint A_2 \da \ts{f > g} \disjoint \ts{f < g}
+  .\]
+- Both $A_i$ are measurable:
+  - Since $f,g$ are measurable functions, so is $h\da f-g$.
+  - We can write
+  \[
+  A_1 &\da \ts{ x\in X \st h > 0 } = h\inv((0, \infty)) \\
+  A_2 &\da \ts{ x\in X \st h < 0 } = h\inv((-\infty, 0))
+  ,\]
+  and pullbacks of Borel sets by measurable functions are measurable.
+
+
 
 - Then on $E$, we have $f(x)>g(x)$ pointwise. 
   This is preserved by monotonicity of the integral, thus
@@ -2646,26 +2865,103 @@ Show that
 \]
 
 
-## Spring 2021 # 1
+## Spring 2021 # 1 $\done$
 
+:::{.problem title="Spring 2021 \# 1"}
 Let \( (X, \mathcal{M},\mu)  \) be a measure space and let $E_n \in \mathcal{M}$ be a measurable set for $n\geq 1$.
 Let $f_n \da \chi_{E_n}$ be the indicator function of the set $E$ and show that 
 
-a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in |NN$ such that $E_n = X$ for all $n\geq N$.
+a. $f_n \converges{n\to\infty}\to 1$ uniformly \( \iff \) there exists $N\in \NN$ such that $E_n = X$ for all $n\geq N$.
 
 b. $f_n(x) \converges{n\to\infty}\to 1$ for almost every $x$ \( \iff \) 
 \[
 \mu \qty{ \Intersect_{n \geq 0} \Union_{k \geq n} (X \sm E_k) } = 0
 .\]
+:::
+
+:::{.solution}
+**Part a**:
+
+$\implies$:
+
+- Suppose $\chi_{E_n}\to 1$ uniformly, we want to produce an $N$ such that $n\geq N \implies x\in E_n$ for all $x\in X$.
+- Take $\eps \da 1/2$. 
+  By uniform convergence, for $N$ large enough,
+  \[
+& \forall n\geq N \quad \abs{\chi_{E_n}(x) - 1} < 1/2 && \forall x\in X\\
+&\iff
+\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+&\iff 
+\forall n\geq N \quad x\in E_n && \forall x\in X
+&\iff 
+\forall n\geq N \quad E_n = X
+,\]
+where we've used that $E_n \subseteq X$ by definition and this shows $X \subseteq E_n$.
+So this $N$ suffices.
+
+$\impliedby$:
+
+- Let $\eps > 0$ be arbitrary.
+- Choose $N$ such that $n\geq N \implies X = E_n$.
+  Then
+\[
+&\forall n\geq N \quad x\in E_n && \forall x\in X \\
+&\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+&\forall n\geq N \quad \abs{\chi_{E_n}(x) - 1} = 0 < \eps && \forall x\in X 
+,\]
+so $\chi_{E_n} \to 1$ uniformly.
+
+**Part b**:
+
+- Define
+\[
+S &\da \ts{x\in X \st \chi_{E_k}(x) \to 1}\\
+&\da \ts{x\in X \st \forall \eps,\, \exists N\, \text{ s.t. } \abs{\chi_{E_k}(x) - 1 } < \eps ,\forall k\geq N}\\
+L &\da \Intersect_{n\geq 0} \Union_{k\geq n} \qty{X\sm E_k}
+,\]
+so $S$ is the set where $f_n\to f$ and $X\sm S$ is the exceptional set where $f_n\not\to f$ doesn't converge pointwise.
+
+- **Claim**: $L = X\sm S$, so if $x\in S \iff x\in X\sm L$.
+- Proof of claim:
+Suppose there exists an $N$ such that the first line below is true.
+Then for a fixed $x$, there are equivalent statements:
+\[
+&\qquad x \in S \\
+&\iff \exists N \text{ s.t. } \forall \eps>0,\quad \abs{\chi_{E_k}(x) - 1 } < \eps && \forall k\geq N \\ 
+&\iff 
+\exists N \text{ s.t. } 
+\abs{\chi_{E_k}(x) - 1 } = 0 && \forall k\geq N \\ 
+&\iff 
+\exists N \text{ s.t. } 
+\chi_{E_k}(x) = 1 && \forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\in E_k && \forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\not\in X\sm E_k &&\forall k\geq N \\
+&\iff 
+\exists N \text{ s.t. } 
+x\not\in \Union_{k\geq N} X\sm E_k  \\
+&{\color{blue} \iff} 
+x\not\in \Intersect_{n\geq 0}\Union_{k\geq n} X\sm E_k \\
+&\iff x\not\in L \\
+&\iff x\in X\sm L
+.\]
+
+- Proving the iff:
+  $f_n\to f$ almost everywhere $\iff \mu(X\sm S) = 0 \iff \mu(L) = 0$.
+
+:::
 
 
-## Spring 2021 # 3
+## Spring 2021 # 3 $\work$
 
 Let \( (X, \mathcal{M}, \mu)  \) be a finite measure space and let \( \ts{ f_n}_{n=1}^{\infty } \subseteq L^1(X, \mu) \).
 Suppose $f\in L^1(X, \mu)$ such that $f_n(x) \converges{n\to \infty }\to f(x)$ for almost every $x \in X$.
 Prove that for every \( \eps > 0 \) there exists $M>0$ and a set $E\subseteq X$ such that \( \mu(E) \leq \eps \) and \( \abs{f_n(x)}\leq M  \) for all $x\in X\sm E$ and all $n\in \NN$.
 
-## Fall 2020 \# 2
+## Fall 2020 \# 2 $\work$
 
 a.
 Let $f: \RR \to \RR$. Prove that
@@ -2677,7 +2973,7 @@ $$
 b.
 Recall that a function $f: {\RR} \to {\RR}$ is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
 
-Prove that if $\mathcal{F}$ is an y family of lower semi-continuous functions, then 
+Prove that if $\mathcal{F}$ is any family of lower semi-continuous functions, then 
 $$
 g(x) = \sup\{ f(x) \mid f\in \mathcal{F}\}
 $$
@@ -3200,13 +3496,64 @@ Show that the following limit exists and satisfies the equality
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \]
 
-## Spring 2021 # 2
+## Spring 2021 # 2 $\done$
 
+:::{.problem title="?"}
 Calculate the following limit, justifying each step of your calculation:
-
 \[
 L \da \lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\dx
 .\]
+:::
+
+
+:::{.solution}
+
+- If interchanging a limit and integral is justified, we have
+\[
+L 
+&\da \lim_{n\to \infty} \int_{(0, n)} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \lim_{n\to \infty} \int_{(0, \infty)} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&\equalsbecause{\text{DCT}} \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} \chi_{(0, \infty)}(x) \lim_{n\to \infty} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} {\lim_{n\to \infty} \cos\qty{x\over n} \over \lim_{n\to \infty} x^2 + \cos\qty{x\over n} } \dx \\
+&= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} {x\over n} } \over x^2 + \cos\qty{\lim_{n\to \infty} {x\over n} } } \dx \\
+&= \int_{(0, \infty)} {1\over x^2 + 1}\dx \\
+&= \arctan(x)\evalfrom_0^\infty \\
+&= {\pi \over 2}
+,\]
+where we've used that $\cos(\theta)$ is continuous on $\RR$ to pass a limit inside, noting that $x$ is fixed in the integrand.
+
+- Justifying the interchange: DCT.
+  Write $f_n(x) \da \cos(x/n) / (x^2 + \cos(x/n))$.
+
+- On $(\alpha, \infty)$ for any $\alpha > 1$:
+
+  - We have
+  \[
+  \abs{f_n(x)} \leq 
+  \abs{1\over x^2 + \cos(x/n)} \leq {1\over x^2-1}
+  ,\]
+  where we've used that $-1\leq \cos(x/n) \leq 1$ for every $x$, and so the denominator is minimized when $\cos(x/n) = -1$, and this maximizes the quantity.
+  - Setting $g(x) \da 1/(x^2-1)$, we have $g\in L^1(\alpha, \infty)$ by the limit comparison test with $h(x) \da x^2$:
+  \[
+  {g(x) \over h(x) } \da {x^2 -1 \over x^2 } = 1 - {1\over x^2} \converges{x\to \infty}\too 1 < \infty
+  ,\]
+  and so $g, h$ either both converge or both diverge.
+  But $\int_\alpha^\infty {1\over x^2}\dx < \infty$ by the $p\dash$test for integrals since $\alpha>1$.
+
+- On $(0, \alpha)$:
+
+  - Just use that $f_n(x)$ is bounded by a constant:
+  \[
+  \abs{f_n(x)} 
+  = \abs{\cos(x/n) \over x^2 + \cos(x/n)}
+  \leq \abs{\cos(x/n) \over \cos(x/n)} = 1
+  ,\]
+  where we've used that $x^2$ is positive, and removing it from the denominator only makes the quantity larger.
+  - Then check that $\int_0^\alpha 1 \dx = \alpha < \infty$, so $1\in L^1(0, \alpha)$.
+    
+:::
+
 
 
 ## Spring 2021 # 5
@@ -3215,7 +3562,7 @@ Let \( f_n \in L^2([0, 1]) \) for \( n\in \NN \), and assume that
 
 - \( \norm{f_n}_2 \leq n^{-51 \over 100} \)  for all \( n\in \NN \),
 
-- $hat{f}_n$ is supported in the interval $[2^n, 2^{n+1}]$, so
+- $\hat{f}_n$ is supported in the interval $[2^n, 2^{n+1}]$, so
 \[
 \hat{f}_n(\xi) \da \int_0^1 f_n(x) e^{2\pi i \xi \cdot x} \dx = 0 && \text{for } \xi \not\in [2^n, 2^{n+1}]
 .\]
@@ -3236,12 +3583,13 @@ Show that
 \lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
 \]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - $\norm{f}_\infty \definedas \inf_t {\theset{ t\suchthat m\qty{\theset{x\in \RR^n \suchthat f(x) > t}} = 0 } }$, i.e. this is the lowest upper bound that holds almost everywhere.
 :::
+
+:::{.solution}
+\envlist
 
 - $\norm{f}_p \leq \norm{f}_\infty$:
   - Note $\abs{f(x)} \leq \norm{f}_\infty$ almost everywhere and taking $p$th powers preserves this inequality.
@@ -3298,7 +3646,6 @@ Show that
 :::
 
 
-
 ## Spring 2018 # 4 $\done$
 Let $f\in L^2([0, 1])$ and suppose
 $$
@@ -3306,15 +3653,19 @@ $$
 $$
 Show that $f = 0$ almost everywhere.
 
-:::{.solution}
-\hfill
-
-### Proof 1: Using Fourier Transforms
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Weierstrass Approximation: A continuous function on a compact set can be uniformly approximated by polynomials.
+- $C^1([0, 1])$ is dense in $L^2([0, 1])$
+- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
+  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
 :::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="using Fourier transforms"}
+\envlist
 
 - Fix $k \in \ZZ$.
 - Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
@@ -3344,16 +3695,10 @@ $$
 
 - Thus $f\equiv 0$ in $L^2([0, 1])$, which implies that $f$ is zero almost everywhere.
 
-$\qed$
-
-### Alternative Proof
-\hfill
-:::{.concept}
-\hfill
-- $C^1([0, 1])$ is dense in $L^2([0, 1])$
-- Polynomials are dense in $L^p(X, \mathcal{M}, \mu)$ for any $X\subseteq \RR^n$ compact and $\mu$ a finite measure, for all $1\leq p < \infty$.
-  - Use Weierstrass Approximation, then uniform convergence implies $L^p(\mu)$ convergence by DCT.
 :::
+
+:::{.proof title="Alternative"}
+\envlist
 
 - By density of polynomials, for $f\in L^2([0, 1])$ choose $p_\eps(x)$ such that $\norm{f - p_\eps} < \eps$ by Weierstrass approximation.
 - Then on one hand,
@@ -3382,6 +3727,8 @@ $\qed$
 .\]
   so $\norm{f}_2 = 0$, which implies $f=0$ almost everywhere.
 
+
+:::
 
 :::
 
@@ -3419,18 +3766,15 @@ b. Prove that if $f\in L^1([1, \infty])$ and is decreasing, then $\lim_{x\to\inf
 
 c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf(x) = 0$, does this ensure that $f\in L^1([1, \infty))$?
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Limits
 - Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
 - Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 :::
 
-### a
-
+:::{.solution title="of a"}
 Stated integral equality: 
 
 - Let $\eps > 0$
@@ -3454,10 +3798,13 @@ To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 - Take $f(x)$ to be a train of rectangles of height 1 and area $1/2^j$ centered on even integers.
 - Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\to 0$$ as the tail of a convergent sum. 
 - However $f(x) = 1$ for infinitely many even integers $x > N$, so $f(x) \not\to 0$ as $\abs{x}\to\infty$.
+:::
 
-### b
+:::{.solution title="of b"}
 
-#### Solution 1 ("Trick")
+
+:::{.proof title="Solution 1: Trick"}
+\envlist
 
 - Since $f$ is decreasing on $[1, \infty)$, for any $t\in [x-n, x]$ we have
 \[
@@ -3481,7 +3828,10 @@ f(x-n) \int_x^{2x} \,dt  \\
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
 - Thus $f(x) \converges{x\to\infty}\to 0$ as well.
 
-#### Solution 2 (Variation on the Trick)
+:::
+
+:::{.proof title="Solution 2: Variation on the trick"}
+\envlist
 
 - Use mean value theorem for integrals:
 \[
@@ -3500,8 +3850,9 @@ x\leq c_x \leq 2x
 - So $2x f(2x) \to 0$, which by a change of variables gives $uf(u) \to 0$.
 - Since $u\geq 1$, $f(u) \leq uf(u)$ so $f(u) \to 0$ as well.
 
-#### Solution 3 (Contradiction)
+:::
 
+:::{.proof title="Solution 3: Contradiction"}
 Just showing $f(x) \converges{x\to \infty}\to 0$:
 
 - Toward a contradiction, suppose not.
@@ -3545,8 +3896,9 @@ Showing $xf(x) \converges{x\to \infty}\to 0$.
 \int_1^\infty \abs{f} \geq \sum_S \int_{x_i}^{2x_i} \abs{f(t)}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L} \to \infty
 .\]
 
-#### Solution 4 (Akos's Suggestion)
+:::
 
+:::{.proof title="Solution 4: Akos' suggestion"}
 For $x\geq 1$, 
 \[
 \abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
@@ -3557,7 +3909,11 @@ For $x\geq 1$,
   - Since $f$ is positive and decreasing, for every $t\in[a, b]$ we have $\abs{f(a)} \leq \abs{f(t)}$.
   - By part (a), the last integral goes to zero.
 
-#### Solution 5 (Peter's)
+
+:::
+
+:::{.proof title="Solution 5: Peter's"}
+\envlist
 
 - Toward a contradiction, produce a sequence $x_i\to\infty$ with $x_i f(x_i) \to \infty$ and $x_if(x_i) > \eps > 0$, then
 \[
@@ -3571,7 +3927,13 @@ For $x\geq 1$,
 \]
   which can be ensured by passing to a subsequence where $\sum {x_{i-1} \over x_i} < \infty$.
 
-### c
+:::
+
+
+:::
+
+:::{.solution title="of c"}
+\envlist
 
 - No: take $f(x) = {1\over x\ln x}$
 - Then by a $u\dash$substitution,
@@ -3583,6 +3945,8 @@ For $x\geq 1$,
   \[
   xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
   .\]
+:::
+
 
 
 
@@ -3590,34 +3954,34 @@ For $x\geq 1$,
 
 ## Fall 2019 # 5. $\done$
 
-### a
+a.
 Show that if $f$ is continuous with compact support on $\RR$, then 
 \[
 \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
 \]
 
-### b 
+b. 
 Let $f\in L^1(\RR)$ and for each $h > 0$ let 
 \[
 \mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
 \]
 
-i. Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
+  - Prove that $\left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1}$ for all $h > 0$.
 
-ii. Prove that $\mathcal{A}_h f \to f$ in $L^1(\RR)$ as $h \to 0^+$.
+  - Prove that $\mathcal{A}_h f \to f$ in $L^1(\RR)$ as $h \to 0^+$.
 
 \todo[inline]{Walk through.}
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - Continuity in $L^1$ (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
 - Lebesgue differentiation in 1-dimensional case. See HW 5.6.
 :::
 
-### a
+:::{.solution}
+\envlist
 
+:::{.proof title="of a"}
 Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
 
 By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
@@ -3648,8 +4012,9 @@ then
 \int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
 \]
 
-### b
+:::
 
+:::{.proof title="of b"}
 We have
 \[
 \int_\RR \abs{A_h(f)(x)} ~dx 
@@ -3673,6 +4038,8 @@ and (rough sketch)
 
 :::
 
+:::
+
 
 ## Fall 2017 # 3 $\done$
 Let 
@@ -3688,31 +4055,31 @@ Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\thes
 
 \todo[inline]{Walk through.}
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
 - From homework: $E$ is Lebesgue measurable iff there exists a finite union of closed cubes $A$ such that $m(E\Delta A) < \varepsilon$.
 :::
 
-It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
+:::{.solution}
+\envlist
 
-Let $s = \chi_{A}$.
-By regularity of the Lebesgue measure, choose an open set $O \supseteq A$ such that $m(O\setminus A) < \varepsilon$.
+- It suffices to show that $S$ is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for $\chi_A$ for $A$ a measurable set.
 
-$O$ is an open subset of $\RR$, and thus $O = \disjoint_{j\in \NN} I_j$ is a disjoint union of countably many open intervals.
+- Let $s = \chi_{A}$.
+- By regularity of the Lebesgue measure, choose an open set $O \supseteq A$ such that $m(O\setminus A) < \varepsilon$.
 
-Now choose $N$ large enough such that $m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n$ where we define $I_{N, n} \definedas \disjoint_{j=1}^N I_j$.
+- $O$ is an open subset of $\RR$, and thus $O = \disjoint_{j\in \NN} I_j$ is a disjoint union of countably many open intervals.
 
-Now define $f_n = \chi_{I_{N, n}}$, then
+- Now choose $N$ large enough such that $m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n$ where we define $I_{N, n} \definedas \disjoint_{j=1}^N I_j$.
+
+- Now define $f_n = \chi_{I_{N, n}}$, then
 \[
 \norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\longrightarrow 0
 .\]
 
-Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
-But simple functions are dense in $L^1$, so $S$ is dense in $L^1$.
+- Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
+- But simple functions are dense in $L^1$, so $S$ is dense in $L^1$.
 :::
-
 
 
 ## Spring 2015 # 4 $\work$
@@ -3742,14 +4109,13 @@ m(E) < \delta
 \]
 
 
-## Spring 2021 # 4
+## Spring 2021 # 4 $\done$
 
 Let $f, g$ be Lebesgue integrable on $\RR$ and let $g_n(x) \da g(x- n)$.
 Prove that
 \[
 \lim_{n\to \infty } \norm{f + g_n}_1 = \norm{f}_1 + \norm{g}_1
 .\]
-
 
 :::{.concept}
 \envlist
@@ -3761,67 +4127,156 @@ Prove that
 \norm{f}_{L^1(B_R^c)} < \eps
 .\]
 
-- Shift $g$ off so most of its density occurs where $f$ has a small tail, and vice versa:
+- Shift $g$ to the right far enough so that the two densities are mostly disjoint:
 
-![Shifting density](figures/image_2021-04-24-21-27-21.png)
+![Shifting density](figures/densities.png)
 
 - Any integral $\int_a^b f$ can be written as $\norm{f}_1 - O(\text{err})$.
 
-:::
+- Bounding technique: 
+\[
+a-\eps \leq b \leq a+\eps \implies b=a
+.\]
 
+:::
 
 :::{.solution}
 \envlist
 
 - Fix $\eps$.
-
-- Choose $N\gg 0$ to produce an $R$ so that
+- Using small tails for $f, g \in L^1$, choose $R_1, R_2 \gg 0$ so that
 \[
-\int_R^{\infty } \abs{f} &< \eps \\
-\int_{-\infty}^{R} \abs{g_N} &< \eps
+\int_{B_{R_1}(0)^c} \abs{f} &< \eps \\
+\int_{B_{R_2}(0)^c} \abs{g} &< \eps
 .\]
 
-- Split the integral up:
+  - Note that this implies
+  \[
+  \int_{-R_1}^{R_1} \abs{f} &= \norm{f}_1 - 2\eps \\
+  \int_{-R_2}^{R_2} \abs{g_N} &= \norm{g_N} - 2\eps 
+  .\]
+
+  - Also note that by translation invariance of the Lebesgue integral, $\norm{g}_1 = \norm{g_N}_1$.
+
+
+- Now use $N$ to make the densities almost disjoint: choose $N\gg 1$ so that $N-R_2 > R_1$:
+
+![Shifting density](figures/densities.png)
+
+- Consider the change of variables $x\mapsto x-N$:
 \[
-\norm{f - g_N}_1 = \int_{-\infty}^R \abs{f - g_N} + \int_R^{\infty }\abs{f - g_N}
-,\]
-  where $g_N$ is small in the first term and $f$ is small in the second.
+\int_{-R_2}^{R_2} \abs{g(x)}\dx 
+= \int_{N-R_2} ^{N+R_2} \abs{g(x-N)} \dx
+\da \int_{N-R_2} ^{N+R_2} \abs{g_N(x)} \dx
+.\]
+  - Use this to conclude that
+  \[
+  \int_{N-R_2}^{N+R_2} \abs{g_N} = \norm{g_N} - 2\eps
+  .\]
+
+- Now split the integral in the problem statement at $R_1$:
+
+\[
+\norm{f + g_N}_1 
+= \int_\RR \abs{f+g_N} 
+= \int_{-\infty}^{R_1} \abs{f+ g_N}
++ \int_{R_1}^{\infty} \abs{f+ g_N}
+\da I_1 + I_2
+.\]
+
+- **Idea**: from the picture, 
+
+  - On $I_1$, $f$ is big and $g_N$ is small
+  - On $I_2$, $f$ is small and $g_N$ is big
+
+- Casework: estimate $I_1, I_2$ separately, bounding from above and below.
+
+- $I_1$ upper bound:
+  \[
+  I_1 
+  &\da \int_{-\infty}^{R_1} \abs{f + g_N} \\
+  &\leq \int_{-\infty}^{R_1} \abs{f} + \abs{g_N} \\
+  &= \int_{-\infty}^{R_1} \abs{f} + \int_{-\infty}^{R_1} \abs{g_N} \\
+  &\leq \int_{-\infty}^{R_1} \abs{f} + \int_{-\infty}^{\color{green} N - R_2} \abs{g_N} && R_1 < N-R_2 \\
+  &= \norm{f}_1 - \int_{R_1}^{\infty} \abs{f} + \int_{-\infty}^{N - R_2} \abs{g_N} \\
+  &\leq \norm{f}_1 - \int_{R_1}^{\infty} \abs{f} + \eps \\
+  &\leq \norm{f}_1 + \eps
+  .\]
+  
+  - In the last step we've used that we're subtracting off a positive number, so forgetting it only makes things larger.
+  
+  - We've also used monotonicity of the Lebesgue integral: if $A\leq B$, then $(c, A) \subseteq (c, B)$ and $\int_{c}^A \abs f \leq \int_c^B \abs{f}$ since $\abs f$ is positive.
+
+- $I_1$ lower bound:
+\[
+I_1 
+&\da \int_{-\infty}^{R_1} \abs{f + g_N} \\
+&\geq \int_{-\infty}^{R_1} \abs{f} - \abs{g_N} \\
+&= \int_{-\infty}^{R_1} \abs{f} - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\geq \int_{-\infty}^{R_1} \abs{f} - \int_{-\infty}^{\color{green} N-R_2} \abs{g_N} && R_1 < N-R_2 \\
+&= \norm{f}_1 - \int_{R_1}^{ \infty } \abs f - \int_{- \infty }^{N-R_2} \abs {g_N} \\
+&\geq \norm{f}_1 - \eps - \eps \\
+&= \norm{f}_1 - 2\eps
+.\]
+
+  - Now we've used that the integral with $g_N$ comes in with a negative sign, so extending the range of integration only makes things *smaller*.
+  We've also used the $\eps$ bound on both $f$ and $g_N$ here, and both are tail estimates.
+
+- Taken together we conclude
+\[
+\norm{f}_1 - 2\eps
+\leq I_1
+\leq \norm{f}_1 && \eps\to 0 \implies  I_1 = \norm{f}_1
+.\]
+
+
+- $I_2$ lower bound:
+\[
+I_2 
+&\da \int_{R_1}^{\infty} \abs{f + g_N} \\
+&\leq \int_{R_1}^{\infty} \abs{f} + \int_{R_1}^{\infty} {g_N} \\
+&\leq \int_{R_1}^{\infty} \abs{f} + \norm{g_N}_1 - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\leq \eps + \norm{g_N}_1 - \int_{-\infty}^{R_1} \abs{g_N} \\
+&\leq \eps + \norm{g_N}_1 \\
+&= \eps + \norm{g}_1 
+.\]
+
+  - Here we've again thrown away negative terms, only increasing the bound, and used the tail estimate on $f$.
+
+- $I_2$ upper bound:
+
+\[
+I_2 
+&\da \int_{R_1}^{\infty} \abs{f + g_N} \\
+&= \int_{R_1}^{\infty} \abs{g_N + f} \\
+&\geq \int_{R_1}^{\infty} \abs{g_N} - \int_{R_1}^{\infty} \abs{f} \\
+&=  \norm{g_N} - \int_{-\infty}^{R_1} \abs{g_N} - \int_{R_1}^{\infty} \abs{f} \\
+&\geq  \norm{g_N} - 2\eps
+.\]
+
+  - Here we've swapped the order under the absolute value, and used the tail estimates on both $g$ and $f$.
+
+- Taken together:
+\[
+\norm{g}_1 - \eps \leq I_2 \leq \norm{g}_1 + 2\eps 
+.\]
 
 - Note that we have two inequalities:
 \[
-\norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R} \abs{f -g_N} \leq \norm{f}_1 + 2\eps \\
-\norm{g}_1 - 2\eps &\leq \int^{\infty}_{R} \abs{f -g_N} \leq \norm{g}_1 + 2\eps 
+\norm{f}_1 - 2\eps &\leq \int_{-\infty}^{R_1} \abs{f -g_N} \leq \norm{f}_1 + \eps \\
+\norm{g}_1 - 2\eps &\leq \int^{\infty}_{R_1} \abs{f -g_N} \leq \norm{g}_1 + \eps 
 .\]
-
-\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
 
 - Add these to obtain
 \[
-\norm{f}_1 + \norm{g}_1 - 4\eps \leq \int_\RR \abs{f - g_N} \leq \norm{f} + \norm{g}_1 + 4\eps
+\norm{f}_1 + \norm{g}_1 - 4\eps \leq I_1 + I_2 \da \norm{f - g_N}_1 \leq \norm{f} + \norm{g}_1 + 2\eps
 .\]
 
-- Check that $N\to \infty$ as $\eps\to 0$ to yield the result.
-
-
-- Seeing where the inequalities come from: for the first, we'll generally have $f$ big and $g$ small, which motivates:
-\[
-\int_{-\infty}^R \abs{f - g_N} 
-&\leq \int_{- \infty }^R \abs{f} + \int_{- \infty }^R \abs{g_N} \\
-&= \norm{f}_1 - \int_R^{\infty } \abs{f} + \int_{- \infty }^R \abs{g_N} \\
-&\approx \norm{f}_1 + O(\eps) + O(\eps)
-,\]
-and similarly 
-\[
-\int_{- \infty }^R \abs{ f- g_N} 
-&\geq \int_{- \infty }^R \abs{f} - \abs{g_N} \\
-&= \int_{- \infty }^R \abs{f} - \int_{- \infty }^R \abs{g_N} \\
-&= \norm{f}_1 - \int_R^{\infty } \abs{f} - \int_{- \infty }^R \abs{g_N} \\
-&\geq \norm{f}_1 - O(\eps) - O(\eps)
-.\]
+- Check that as $N\to \infty$ as $\eps\to 0$ to yield the result.
 
 :::
 
-## Fall 2020 \# 4
+## Fall 2020 \# 4 $\work$
 Prove that if $xf(x) \in L^1(\RR)$, then
 \[  
 F(y) \da \int f(x) \cos(yx)\,  dx
@@ -3950,7 +4405,6 @@ $H$ is measurable on $\RR^2$:
 :::
 
 
-
 ## Spring 2019 # 4 $\done$
 Let $f$ be a non-negative function on $\RR^n$ and $\mathcal A = \{(x, t) ∈ \RR^n \times \RR : 0 ≤ t ≤ f (x)\}$.
 
@@ -3963,12 +4417,11 @@ b. If $f$ is a Lebesgue measurable function on $\RR^n$, then
 m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \RR^{n}: f(x) \geq t\right\}\right) dt
 \]
 
-\todo[inline]{Add concepts.}
-
 :::{.concept}
 \envlist
-- See Stein and Shakarchi p.82.
+- See Stein and Shakarchi p.82 corollary 3.3.
 - Tonelli
+- Important trick! $\ts{(x, t) \st 0\leq t \leq f(x)} = \ts{ f(x) \geq t} \intersect \ts{ t\geq 0 }$
 :::
 
 :::{.solution}
@@ -3977,29 +4430,76 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 :::{.proof title="of a"}
 $\implies$:
 
-- Suppose $f$ is a measurable function.
-- Note that $\mathcal{A} = \theset{f(x) - t \geq 0} \intersect \theset{t \geq 0}$.
-- Define $F(x, t) = f(x)$, $G(x, t) = t$, which are cylinders on measurable functions and thus measurable.
-- Define $H(x, y) = F(x, t) - G(x, t)$, which are linear combinations of measurable functions and thus measurable.
-- Then $\mathcal{A} = \theset{H \geq 0} \intersect \theset{G \geq 0}$ as a countable intersection of measurable sets, which is again measurable.
+- Suppose $f:\RR^n\to \RR$ is a measurable function.
+- Rewrite $A$:
+\[
+A 
+&= \ts{ (x, t) \in \RR^d \cross \RR \st 0\leq t \leq f(x) } \\
+&= \ts{ (x, t) \in \RR^d \cross \RR \st 0 \leq t < \infty } 
+\intersect \ts{ (x, t) \in \RR^d\cross \RR \st t\leq f(x) } \\
+&= \qty{ \RR^d \cross [0, \infty) } 
+\intersect \ts{ (x, t) \in \RR^d\cross \RR \st f(x) -t \geq 0  } \\
+&\da \qty{ \RR^d \cross [0, \infty) } \intersect H\inv\qty{[0, \infty)}
+,\]
+where we define
+\[
+H: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto f(x) - t
+.\]
+  - Note: this is "clearly" measurable!
+
+- If we can show both sets are measurable, we're done, since $\sigma\dash$algebras are closed under countable intersections.
+- The first set is measurable since it is a Borel set in $\RR^{d+1}$.
+- For the same reason, it suffices to show $H$ is a measurable function.
+- Define cylinder functions
+\[
+F: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto f(x)
+\]
+and
+\[
+G: \RR^d \cross \RR &\to \RR \\
+(x, t) &\mapsto t
+\]
+  - $F$ is a cylinder of $f$, and since $f$ is measurable by assumption, $F$ is measurable.
+  - $G$ is a cylinder on the identity for $\RR$, which is measurable, so $G$ is measurable.
+
+
+- Define 
+\[
+H: \RR^d &\to \RR \\
+(x, t) &\mapsto F(x, t) - G(x, t) \da f(x) - t
+,\]
+  which are linear combinations of measurable functions and thus measurable.
 
 
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
-- Then FT on $\chi_{\mca}$ implies that for almost every $x\in \RR^n$, the $x\dash$slices $\mca_x$ are measurable and
+- A corollary of Tonelli applied to $\chi_X$: if $E$ is measurable, then for a.e. $t$ the following slice is measurable:
 \[
-\mathcal{A}_x \definedas \theset{t\in \RR \suchthat (x, t) \in \mathcal{A}} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
-\]
+\mca_t \da \ts{ x \in \RR^d \st (x,t) \in \mca  }
+&= \ts{x\in \RR^d \st f(x) \geq t \geq 0} \\
+&= f\inv\qty{[t, \infty)}
+.\]
+  - But maybe this isn't enough, because we need $f\inv\qty{[\alpha, \infty)}$ for *all* $\alpha$
+- But the other slice is also measurable for a.e. $x$:
+\[
+\mca_x 
+&\da \ts{ t\in \RR \st (x, t) \in \mca } \\
+&= \ts{ t\in \RR \st 0 \leq t \leq f(x) } \\
+&= \ts{ t\in \RR \st t\in [0, f(x)]  } \\
+&= [0, f(x)]
+.\]
 
-- But $x \mapsto m(\mathcal A_x)$ is a measurable function, and is exactly the function $x \mapsto f(x)$, so $f$ is measurable.
-
+- Moreover the function $x\mapsto m(\mca_x)$ is a measurable function of $x$
+- Now note $m(\mca_x) = f(x) - 0 = f(x)$, so $f$ must be measurable.
 
 :::
 
 :::{.proof title="of b"}
 \envlist
-- Note
+- Writing down what the slices are
 \[
 \mathcal{A} &= \theset{(x, t) \in \RR^n\cross \RR \suchthat 0 \leq t \leq f(x)} 
 \\
@@ -4031,6 +4531,7 @@ Show that
 \[
 \int _{\RR} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
 \]
+
 :::{.concept}
 \envlist
 - Claim: If $E\subseteq \RR^a \cross \RR^b$ is a measurable set, then for almost every $y\in \RR^b$, the slice $E^y$ is measurable and
@@ -4838,5 +5339,59 @@ Choose $N$ large enough so that $\norm{f - f_N} < \varepsilon$, and write $\norm
 \norm{f} \leq \norm{f - f_N} + \norm{f_N} < \varepsilon + M < \infty
 .\]
 :::
+
+
+
+# Extras
+
+:::{.exercise title="?"}
+Compute the following limits:
+
+- $\lim_{n\to\infty} \sum_{k\geq 1} {1\over k^2} \sin^n(k)$
+- $\lim_{n\to\infty} \sum_{k\geq 1} {1\over k} e^{-k/n}$
+:::
+
+:::{.solution}
+For the first, use that
+\[
+\abs{ \sum_{k\geq 1} {1\over k^2} \sin^n(k) }
+\leq
+\sum_{k\geq 1} \abs{ {1\over k^2} \sin^n(k) }
+\sum_{k\geq 1} \abs{ {1\over k^2}} < \infty
+,\]
+since $\abs{\sin(x)} \leq 1$ and $x^n < x$ for $\abs{x}\leq 1$.
+By the dominated convergence theorem, we can pass the limit inside.
+Using the same fact as above, $\lim_{n\to\infty}\sin^n(x) = 0$,
+
+For the second, the claim is that it diverges (very slowly).
+Note that $\lim_{n\to\infty} e^{-k/n} = 1$ for any $k$.
+By Fatou, we have
+\[
+\liminf_{n\to\infty} \sum_{k\geq 1} {e^{-k/n} \over k}
+\geq \sum_{k\geq 1} \liminf_{n\to\infty} {e^{-k/n} \over k} 
+= \sum_{k\geq 1} {1 \over k} 
+= \infty
+.\]
+:::
+
+:::{.exercise title="?"}
+Let $(\Omega,\mcb)$ be a measurable space with a Borel $\sigma\dash$algebra and $\mu_n: \mcb \to [0, \infty]$ be a $\sigma\dash$additive measure for each $n$.
+Show that the following map is again a $\sigma\dash$additive measure on $\mcb$:
+\[
+\mu(B) \da \sum_{n\geq 1} \mu_n(B)
+.\]
+:::
+
+:::{.solution}
+Apply Fubini-Tonelli to commute two sums:
+\[
+\mu\qty{\Union_{1\leq k \leq M} E_k}\da 
+&= \sum_{n\geq 1} \mu_n\qty{\Union_{1\leq k \leq M} E_k}\\
+&= \sum_{n\geq 1} \sum_{1\leq k \leq M} \mu_n\qty{E_k}\\
+&= \sum_{1\leq k \leq M}\sum_{n\geq 1} \mu_n\qty{E_k} \text{FT} \\
+&\da \sum_{1\leq k \leq M} \mu(E_k)
+.\]
+:::
+
 
 

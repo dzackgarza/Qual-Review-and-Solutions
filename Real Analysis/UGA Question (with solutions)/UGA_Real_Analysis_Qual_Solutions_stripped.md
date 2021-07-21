@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Preface
 
 I'd like to extend my gratitude to Peter Woolfitt for supplying many solutions and checking many proofs of the rest in problem sessions. Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
@@ -15,63 +27,55 @@ Let \( f(x) = \frac 1 x \). Show that \( f \) is uniformly continuous on \( (1, 
 ```
 -   Uniform continuity:
     \[  
-    \forall \varepsilon>0, \exists \delta(\varepsilon)>0 {\quad \operatorname{such that} \quad} {\left\lvert {x-y} \right\rvert}<\delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} < \varepsilon
+    \forall \varepsilon>0, \exists \delta({\varepsilon})>0 \quad\text{such that}\quad {\left\lvert {x-y} \right\rvert}<\delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} < {\varepsilon}
     .\]
--   Negating uniform continuity: \( \exists \varepsilon> 0 \) such that \( \forall \delta(\varepsilon) \) there exist \( x, y \) such that \( {\left\lvert {x-y} \right\rvert} < \delta \) *and* \( {\left\lvert {f(x) - f(y)} \right\rvert} > \varepsilon \).
+
+-   Negating uniform continuity: \( \exists {\varepsilon}> 0 \) such that \( \forall \delta({\varepsilon}) \) there exist \( x, y \) such that \( {\left\lvert {x-y} \right\rvert} < \delta \) *and* \( {\left\lvert {f(x) - f(y)} \right\rvert} > {\varepsilon} \).
+
+-   Archimedean property: for all \( x,y\in {\mathbb{R}} \) there exists an \( n \in {\mathbb{N}} \) such that \( nx>y \). Take \( x={\varepsilon}, y=1 \), so \( n{\varepsilon}> 1 \) and \( {1\over n} < {\varepsilon} \).
+:::
+
+::: {.strategy}
+1 is the only constant around, so try to use it for uniform continuity. To negate, find a bad \( x \): since \( 1/x \) blows up near zero, go hunting for small \( x \)s!
 :::
 
 ::: {.solution}
-::: {.claim}
-\( f(x) = \frac 1 x \) is uniformly continuous on \( (c, \infty) \) for any \( c > 0 \).
-:::
+-   **Claim**: \( f(x) = \frac 1 x \) is uniformly continuous on \( (c, \infty) \) for any \( c > 0 \).
+    -   Note that
+        \[
+        {\left\lvert {x} \right\rvert}, {\left\lvert {y} \right\rvert} > c > 0 \implies {\left\lvert {xy} \right\rvert} = {\left\lvert {x} \right\rvert}{\left\lvert {y} \right\rvert} > c^2 \implies \frac{1}{{\left\lvert {xy} \right\rvert}} < \frac 1 {c^{2}}
+        .\]
 
-::: {.proof title="of claim"}
-```{=tex}
-\envlist
-```
--   Note that
-    \[
-    {\left\lvert {x} \right\rvert}, {\left\lvert {y} \right\rvert} > c > 0 \implies {\left\lvert {xy} \right\rvert} = {\left\lvert {x} \right\rvert}{\left\lvert {y} \right\rvert} > c^2 \implies \frac{1}{{\left\lvert {xy} \right\rvert}} < \frac 1 {c^{2}}
-    .\]
+    -   Letting \( \varepsilon \) be arbitrary, choose \( \delta < \varepsilon c^2 \).
 
--   Letting \( \varepsilon \) be arbitrary, choose \( \delta < \varepsilon c^2 \).
+        -   Note that \( \delta \) does not depend on \( x, y \).
 
-    -   Note that \( \delta \) does not depend on \( x, y \).
-
--   Then
-    \[
-    {\left\lvert {f(x) - f(y)} \right\rvert}
-    &= {\left\lvert {\frac 1 x - \frac 1 y} \right\rvert} \\
-    &= \frac{{\left\lvert {x-y} \right\rvert}}{xy} \\
-    &\leq \frac{\delta}{xy} \\
-    &< \frac{\delta}{c^2} \\
-    &< \varepsilon
-    ,\]
-    which shows uniform continuity.
-:::
-
-::: {.claim}
-\( f \) is *not* uniformly continuous when \( c=0 \).
-:::
-
-::: {.proof title="of claim"}
-```{=tex}
-\envlist
-```
--   Toward a contradiction, let \( \varepsilon < 1 \).
--   Let \( x_n = \frac 1 n \) for \( n\geq 1 \).
--   Choose \( n \) large enough such that \( {\left\lvert {x_n - x_{n+1}} \right\rvert} = \frac 1 n - \frac 1 {n+1} < \delta \).
-    -   Why this can be done: by the archimedean property of \( {\mathbb{R}} \), choose \( n \) such that \( {1\over n} < \varepsilon \).
     -   Then
         \[
-        {1 \over n} - {1\over n+1} = {1 \over n(n+1)} \leq {1\over n} < \varepsilon\quad\text{since }n+1 > 1
+        {\left\lvert {f(x) - f(y)} \right\rvert}
+        &= {\left\lvert {\frac 1 x - \frac 1 y} \right\rvert} \\
+        &= \frac{{\left\lvert {x-y} \right\rvert}}{xy} \\
+        &\leq \frac{\delta}{xy} \\
+        &< \frac{\delta}{c^2} \\
+        &< \varepsilon
         .\]
--   Note \( f(x_n) = n \) and thus
-    \[
-    {\left\lvert {f(x_{n+1}) - f(x_{n})} \right\rvert} = (n+1) - n = 1 > \varepsilon
-    ,\]
-    a contradiction.
-:::
+-   **Claim**: \( f \) is *not* uniformly continuous when \( c=0 \).
+    -   Take \( \varepsilon < 1 \), and let \( \delta = \delta({\varepsilon}) \) be arbitrary.
+    -   Let \( x_n = \frac 1 n \) for \( n\geq 1 \).
+    -   Choose \( n \) large enough such that \( {1\over n} < \delta \)
+    -   Then a computation:
+        \[
+        {\left\lvert {x_n - x_{n+1}} \right\rvert} 
+        &= \frac 1 n - \frac 1 {n+1} \\
+        &= {1\over n(n+1) } \\
+        &< {1\over n} \\
+        &< \delta
+        ,\]
+    -   Why this can be done: by the Archimedean property of \( {\mathbb{R}} \), for any \( \delta\in {\mathbb{R}} \), one can choose choose \( n \) such that \( n\delta > 1 \). We've also used that \( n+1 > 1 \) so \( {1\over n+1}< 1 \)
+    -   Note that \( f(x_n) = n \), so
+        \[
+        {\left\lvert {f(x_{n+1}) - f(x_{n})} \right\rvert} = (n+1) - n = 1 > \varepsilon
+        .\]
 :::
 
 ## Fall 2017 \# 1 \( \done \) {#fall-2017-1-done}
@@ -80,7 +84,6 @@ Let
 \[
 f(x) = \sum _{n=0}^{\infty} \frac{x^{n}}{n !}.
 \]
-
 Describe the intervals on which \( f \) does and does not converge uniformly.
 
 ::: {.concept}
@@ -88,9 +91,24 @@ Describe the intervals on which \( f \) does and does not converge uniformly.
 \envlist
 ```
 -   \( f_N\to f \) uniformly \( \iff \) \( {\left\lVert {f_N - f} \right\rVert}_\infty \to 0 \).
--   \( \sum_{n=0}^\infty c_n x^n \coloneqq\lim_{N\to \infty} \sum_{n=0}^N c_n x^n \)
-    -   I.e. an infinite sum is defined as the pointwise limit of its partial sums.
--   If \( \sum_{n=0}^\infty g_n(x) \) converges uniformly on a set \( A \), then \( \sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0 \).
+    -   Applied to sums:
+        \[
+        \sum_{0 \leq k\leq N} f_n \overset{u}\to \sum_{k\geq 0} f_n \iff {\left\lVert {\sum_{k\geq N+1} f_n } \right\rVert}_{\infty} \to 0
+        .\]
+-   An infinite sum is defined as the pointwise limit of its partial sums:
+    \[
+    \sum_{n=0}^\infty c_n x^n \coloneqq\lim_{N\to \infty} \sum_{n=0}^N c_n x^n
+     .\]
+-   Uniformly decaying terms for uniformly convergent series: if \( \sum_{n=0}^\infty f_n(x) \) converges uniformly on a set \( A \), then
+    \[
+    {\left\lVert {f_n} \right\rVert}_{\infty, A} \coloneqq\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \overset{n\to\infty}\longrightarrow 0
+    .\]
+-   \( M{\hbox{-}} \)test: if \( f_n:A \to{\mathbb{C}} \) with \( {\left\lVert {f_n} \right\rVert}_\infty < M_n \) and \( \sum M_n < \infty \), then \( \sum f_n \) converges uniformly and absolutely.
+    -   If the \( f_n \) are continuous, the uniform limit theorem implies \( \sum f_n \) is also continuous.
+:::
+
+::: {.strategy}
+No real place to start, so pick the nicest place: compact intervals. Then bounded intervals, then unbounded sets.
 :::
 
 ::: {.solution}
@@ -101,29 +119,36 @@ Describe the intervals on which \( f \) does and does not converge uniformly.
 
     -   Then by definition, \( f_N(x) \to f(x) \) pointwise on \( {\mathbb{R}} \).
 
--   For any compact interval \( [-M, M] \), we have
-    \[
-    {\left\lVert {f_N(x) - f(x)} \right\rVert}_\infty
-    &= \sup_{-M \leq x \leq M} ~{\left\lvert {\sum_{n=N+1}^\infty {x^n \over {n!}} } \right\rvert} \\
-    &\leq \sup_{-M\leq x \leq M} ~\sum_{n=N+1}^\infty {\left\lvert { {x^n \over {n!}} } \right\rvert} \\
-    &\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
-    &\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
-    &= e^M \\
-    &<\infty
-    ,\]
-    so \( f_N \to f \) uniformly on \( [-M, M] \) by the M-test.
+-   **Claim**: \( f_N \) converges on compact intervals
 
-    > Here we've used that \( e^x \) is equal to its power series expansion.
+    -   For any compact interval \( [-M, M] \), we have
+        \[
+        {\left\lVert {f_N(x) - f(x)} \right\rVert}_\infty
+        &= \sup_{x\in [-M, M] } ~{\left\lvert {\sum_{n=N+1}^\infty {x^n \over {n!}} } \right\rvert} \\
+        &\leq \sup_{x\in [-M, M] } ~\sum_{n=N+1}^\infty {\left\lvert { {x^n \over {n!}} } \right\rvert} \\
+        &\leq \sum_{n=N+1}^\infty {M^n \over n!} \\
+        &\leq \sum_{n=0}^\infty {M^n \over  {n!} } \quad\text{since all additional terms are positive} \\
+        &= e^M \\
+        &<\infty
+        ,\]
+        so \( f_N \to f \) uniformly on \( [-M, M] \) by the M-test.
+        -   Note: we've used that this power series converges to \( e^x \) pointwise everywhere.
 
--   Thus \( f \) converges on any bounded interval, since any bounded interval is contained in some larger compact interval.
+-   This argument shows that \( f \) converges on any bounded set.
 
-**Claim**: \( f \) does not converge on \( {\mathbb{R}} \).
+-   **Claim**: \( f_N \) does not converge uniformly on all of \( {\mathbb{R}} \).
 
--   If \( \sum_{n=0}^\infty g_n(x) \) converges uniformly on a set \( A \), then \( \sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0 \).
--   But taking \( A = {\mathbb{R}} \) and \( g_n(x) = {x^n \over n!} \), we have
-    \[  
-    \sup_{x\in {\mathbb{R}}} {\left\lvert {g_n(x)} \right\rvert} = \sup_{x\in {\mathbb{R}}} {x^n \over n!} = \infty
-    .\]
+    -   Uniformly convergent sums have uniformly decaying terms:
+        \[
+        \sum_{n\leq N} g_n \overset{N\to\infty}\longrightarrow\sum g_n \text{ uniformly on } A \implies {\left\lVert {g_n} \right\rVert}_{\infty, A} \coloneqq\sup_{x\in A} {\left\lvert {g_n(x)} \right\rvert} \overset{n\to\infty}\longrightarrow 0
+        .\]
+
+    -   Take \( B_N \) a ball of radius \( N \) about 0, then for \( N>1 \), note that \( x=N \) on the boundary and so
+        \[
+        {\left\lVert {x^k \over k!} \right\rVert}_{\infty, B_N} = {N^k \over k!} \overset{N\to\infty}\longrightarrow\infty
+        .\]
+
+-   **Conclusion**: \( f_N \) converges on any bounded \( A\subseteq {\mathbb{R}} \) but not on all of \( {\mathbb{R}} \).
 :::
 
 ## Fall 2014 \# 1 \( \done \) {#fall-2014-1-done}
@@ -132,14 +157,12 @@ Let \( \left\{{f_n}\right\} \) be a sequence of continuous functions such that \
 
 Prove that \( \sum f_n \) is also continuous.
 
-```{=tex}
-\envlist
-```
 ::: {.concept}
 ```{=tex}
 \envlist
 ```
--   Todo
+-   The uniform limit theorem.
+-   \( {\varepsilon}/3 \) trick.
 :::
 
 ::: {.solution}
@@ -158,15 +181,15 @@ If \( F_N\to F \) uniformly with each \( F_N \) continuous, then \( F \) is cont
     \[  
     {\left\lvert {F(x) - F(y} \right\rvert} \leq 
     {\left\lvert {F(x) - F_N(x)} \right\rvert} + {\left\lvert {F_N(x) - F_N(y)} \right\rvert} + {\left\lvert {F_N(y) - F(y)} \right\rvert} 
-    \leq \varepsilon\to 0
+    \leq {\varepsilon}\to 0
     .\]
 
-    -   The first and last \( \varepsilon/3 \) come from uniform convergence of \( F_N\to F \).
-    -   The middle \( \varepsilon/3 \) comes from continuity of each \( F_N \).
+    -   The first and last \( {\varepsilon}/3 \) come from uniform convergence of \( F_N\to F \).
+    -   The middle \( {\varepsilon}/3 \) comes from continuity of each \( F_N \).
 :::
 
 -   Now setting \( F_N\coloneqq\sum_{n=1}^N f_n \) yields a finite sum of continuous functions, which is continuous.
--   Each \( F_N \) is continuous and \( F_N\to F \) uniformly, so applying the claim yields the desired result.
+-   Each \( F_N \) is continuous and \( F_N\to F \) uniformly, so \( F \) is continuous.
 :::
 
 ## Spring 2017 \# 4 \( \done \) {#spring-2017-4-done}
@@ -185,23 +208,21 @@ Determine if \( f \) is integrable.
 \envlist
 ```
 -   Just Calculus.
+-   \( 1/r \) is not integrable on \( (0, 1) \).
 :::
 
 ::: {.solution}
-Switching to polar coordinates and integrating over one quarter of the unit disc \( D \subseteq I^2 \), we have
+Switching to polar coordinates and integrating over the quarter of the unit disc \( D \cap Q_1 \subseteq I^2 \) in quadrant 1, we have
 \[
 \int_{I^2} f \, dA
 &\geq \int_D f \, dA \\
-&\geq \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r^4} ~r~dr~d\theta  \\
-&= \int_0^{\pi/2} \cos(\theta)\sin(\theta) \int_0^1 {1 \over r^3} ~dr~d\theta \\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{\int_0^{\pi/2} \cos(\theta)\sin(\theta)\,d\theta  }\\
-&= \qty{\int_0^1 {1\over r^3}\,dr} \qty{-{1\over 2}\cos^2(\theta)\Big|_0^{\pi/2}}  \\
-&= -{1\over 2r^2}\Big|_0^1 \qty{1\over 2} \\
-&= \qty{1\over 4}\qty{ -1 + \lim_{r\to 0} {1\over r^2} } \\
-&= \infty
-,\]
-
-so \( f \) is not integrable.
+&= \int_0^{\pi/2} \int_0^1 \frac{r^2 \cos(\theta)\sin(\theta)}{r^4} ~r~\,dr\,d\theta\\
+&= \int_0^{\pi/2} \int_0^1 \frac{\cos(\theta)\sin(\theta)}{r} \,dr\,d\theta\\
+&= \qty{ \int_0^1 {1\over r } \,dr} \qty{ \int_0^{\pi/2} \cos(\theta)\sin(\theta) \,d\theta}  \\
+&= \qty{ \int_0^1 {1\over r } \,dr} \qty{ \int_0^{1} u \,du}  && u=\sin(\theta)\\
+&= {1\over 2}\qty{ \int_0^1 {1\over r } \,dr} \\
+&\longrightarrow\infty
+.\]
 :::
 
 ## Spring 2015 \# 1 \( \done \) {#spring-2015-1-done}
@@ -218,6 +239,7 @@ Prove that the following statements are equivalent:
 \envlist
 ```
 -   What it means for a sequence to converge.
+-   Trading \( N \)s for \( \delta \)s.
 :::
 
 ::: {.solution}
@@ -229,25 +251,25 @@ Prove that the following statements are equivalent:
 \envlist
 ```
 -   Let \( \left\{{x_n}\right\} \overset{n\to\infty}\to x_0 \) be arbitrary; we want to show \( \left\{{f(x_n)}\right\}\overset{n\to\infty}\to f(x_0) \).
-    -   We thus want to show that for every \( \varepsilon>0 \), there exists an \( N(\varepsilon) \) such that
-        \[n\geq N(\varepsilon) \implies \rho(f(x_n),  f(x_0)) < \varepsilon.\]
--   Let \( \varepsilon>0 \) be arbitrary, then by (1) choose \( \delta \) such that \( \rho(f(x), f(x_0)) < \varepsilon \) when \( d(x, x_0) < \delta \).
+    -   We thus want to show that for every \( {\varepsilon}>0 \), there exists an \( N({\varepsilon}) \) such that
+        \[n\geq N({\varepsilon}) \implies \rho(f(x_n),  f(x_0)) < {\varepsilon}.\]
+-   Let \( {\varepsilon}>0 \) be arbitrary, then by (1) choose \( \delta \) such that \( \rho(f(x), f(x_0)) < {\varepsilon} \) when \( d(x, x_0) < \delta \).
 -   Since \( x_n\to x \), there is some \( N \) such that \( n\geq N \implies d(x_n, x_0) < \delta \)
--   Then for \( n\geq N \), \( d(x_n, x_0) < \delta \) and thus \( \rho(f(x_n), f(x_0)) < \varepsilon \), so \( f(x_n)\to f(x_0) \) as desired.
+-   Then for \( n\geq N \), \( d(x_n, x_0) < \delta \) and thus \( \rho(f(x_n), f(x_0)) < {\varepsilon} \), so \( f(x_n)\to f(x_0) \) by definition.
 :::
 
 ::: {.proof title="$2\\implies 1$"}
-> Note that we need a \( \delta \) for *every* sequence, so picking a sequence for the forward implication is not a good idea here.
+> The direct implication is not a good idea here, since you need a handle on *all* \( x \) in a neighborhood of \( x_0 \), not just a specific sequence.
 
--   By contrapositive, we will show that \( \not 1\implies \not 2 \).
--   Thus we need to show that if \( f \) is not \( \varepsilon{\hbox{-}}\delta \) continuous at \( x_0 \), then there exists a sequence \( x_n\to x_0 \) where \( f(x_n)\not\to f(x_0) \).
--   Negating \( 1 \), we have that there exists an \( \varepsilon>0 \) such that for all \( \delta \), there exists an \( x \) with \( d(x, x_0) < \delta \) but \( \rho(f(x), f(x_0))>\varepsilon \)
--   So take a sequence of deltas \( \delta_n = {1\over n} \), apply this to produce a sequence \( x_n \) with \( d(x_n, x_0) < {1\over n} \) and \( \rho(f(x_n), f(x_0)) > \varepsilon \).
--   Then \( x_n \to x_0 \) but \( f(x_n) \not\to f(x_0) \).
+-   By contrapositive, show that \( \not 1\implies \not 2 \).
+-   Need to show: if \( f \) is not \( {\varepsilon}{\hbox{-}}\delta \) continuous at \( x_0 \), then there exists a sequence \( x_n\to x_0 \) where \( f(x_n)\not\to f(x_0) \).
+-   Negating \( 1 \), we have that there exists an \( {\varepsilon}>0 \) such that for all \( \delta \), there exists an \( x \) with \( d(x, x_0) < \delta \) but \( \rho(f(x), f(x_0))>{\varepsilon} \)
+-   So take a sequence of deltas \( \delta_n = {1\over n} \), apply this to produce a sequence \( x_n \) with \( d(x_n, x_0) < \delta_n \coloneqq{1\over n} \longrightarrow 0 \) and \( \rho(f(x_n), f(x_0)) > {\varepsilon} \) for all \( n \).
+-   This yields a sequence \( x_n \to x_0 \) where \( f(x_n) \not\to f(x_0) \).
 :::
 :::
 
-## Fall 2014 \# 2 \( \work \) {#fall-2014-2-work}
+## Fall 2014 \# 2 \( \done \) {#fall-2014-2-done}
 
 Let \( I \) be an index set and \( \alpha: I \to (0, \infty) \).
 
@@ -262,9 +284,16 @@ b.  Suppose \( I = {\mathbb{Q}} \) and \( \sum_{q \in \mathbb{Q}} a(q)<\infty \)
     \]
     Show that \( f \) is continuous at \( x \iff x\not\in {\mathbb{Q}} \).
 
+::: {.concept}
 ```{=tex}
-\todo[inline]{Stuck on part b}
+\envlist
 ```
+-   Can always filter sets \( X \) with a function \( X\to {\mathbb{R}} \).
+-   Countable union of countable sets is still countable.
+-   Continuity: \( \lim_{y\to x} f(y) = f(x) \) from either side.
+-   Trick: pick enumerations of countable sets and reindex sums
+:::
+
 ::: {.solution}
 ```{=tex}
 \envlist
@@ -274,66 +303,63 @@ b.  Suppose \( I = {\mathbb{Q}} \) and \( \sum_{q \in \mathbb{Q}} a(q)<\infty \)
 \envlist
 ```
 -   Set \( S \coloneqq\sum_{i\in I} \alpha(i) \), we will show that \( S<\infty \implies I \) is countable.
-
--   Write \( I = {\coprod}_{n\in {\mathbb{N}}} S_n \) where \( S_n \coloneqq\left\{{i\in I {~\mathrel{\Big|}~}\alpha(i) \geq {1\over n}}\right\} \).
-
--   We now have the inequality
+-   Write
+    \[
+    I = \displaystyle\bigcup_{n\geq 0} S_n, &&
+    S_n \coloneqq\left\{{i\in I {~\mathrel{\Big|}~}\alpha(i) \geq {1\over n}}\right\}
+    .\]
+    -   Note that \( S_n \subseteq S \) for all \( n \), so \( \sum_{i\in I}\alpha(i) \geq \sum_{i\in S_n} \alpha(i) \) for all \( n \).
+    -   It suffices to show that \( S_n \) is countable, since \( I \) is a countable union of \( S_n \).
+-   There is an inequality
     \[  
-    S = \sum_{i\in I} \alpha(i) 
-    \geq \sum_{i\in S_n} \alpha(i) 
-    \geq \sum_{i\in S_n} {1\over n} 
-    = {1\over n} \sum_{i\in S_n} 1 = \qty{1\over n} {\left\lvert {S_n} \right\rvert} \\ \\
-    \infty > \implies n S \geq {\left\lvert {S_n} \right\rvert}
-    ,\]
-    so \( S_n \) is a countable set.
-
--   But then \( I \) is a countable union of countable sets and thus countable.
+    \infty 
+    &> S \coloneqq\sum_{i\in I} \alpha(i) \\
+    &\geq \sum_{i\in S_n} \alpha(i) \\
+    &\geq \sum_{i\in S_n} {1\over n} \\
+    &= {1\over n} \sum_{i\in S_n} 1 \\
+    &= \qty{1\over n} \# S_n \\ \\
+    \implies \infty &> n S \geq \# S_n
+    .\]
 :::
 
-```{=tex}
-\todo[inline]{(b): not sure.}
-```
-:::
-
-## Spring 2014 \# 2 \( \done \) {#spring-2014-2-done}
-
-Let \( \left\{{a_n}\right\} \) be a sequence of real numbers such that
-\[
-\left\{{b_n}\right\} \in \ell^2({\mathbb{N}}) \implies \sum a_n b_n < \infty.
-\]
-Show that \( \sum a_n^2 < \infty \).
-
-> Note: Assume \( a_n, b_n \) are all non-negative.
-
-```{=tex}
-\todo[inline]{Have someone check!}
-```
-::: {.solution}
+::: {.proof title="of b"}
 ```{=tex}
 \envlist
 ```
--   Define a sequence of operators
-    \[  
-    T_N: \ell^2 &\to \ell^1\\
-    \left\{{b_n}\right\} &\mapsto \sum_{n=1}^N a_n b_n
+-   We'll prove something more general: let \( Q = \left\{{q_k}\right\} \) be countable and \( \left\{{\alpha_k \coloneqq\alpha(q_k)}\right\} \) be summable, and define
+    \[
+    f(x) \coloneqq\sum_{q_k\leq x} \alpha_k
     .\]
 
--   By assumption, these are well defined: the image is \( \ell^1 \) since \( {\left\lvert {T_N(\left\{{b_n}\right\})} \right\rvert} < \infty \) for all \( N \) and all \( \left\{{b_n}\right\} \in \ell^2 \).
+    -   \( f \) is always discontinuous precisely on the countable set \( Q \) and continuous on \( {\mathbb{R}}\setminus Q \).
 
--   So each \( T_N \in \qty{\ell^2} {}^{ \check{} } \) is a linear functional on \( \ell^2 \).
+    -   \( f \) is always left-continuous, is right-continuous at \( x\in{\mathbb{R}}\setminus Q \), and *not* right-continuous at \( x\in Q \)
 
--   For each \( x\in \ell^2 \), we have \( {\left\lVert {T_N(x)} \right\rVert}_{{\mathbb{R}}} = \sum_{n=1}^N a_n b_n < \infty \) by assumption, so each \( T_N \) is pointwise bounded.
+    -   \( f \) has jump discontinuities at every \( q_m \), where the jump is precisely \( \alpha_m \).
 
--   By the Uniform Boundedness Principle, \( \sup_N {\left\lVert {T_N} \right\rVert}_{\text{op}} < \infty \).
+-   This follows from computing the left and right limits:
+    \[
+    f(x^+) &= \lim_{h\to 0} \sum_{q_k \leq x+h} \alpha_k = \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k + \sum_{q_k = x} \alpha_k \\
+    f(x^-) &= \lim_{h\to 0} \sum_{q_k \leq x-h} \alpha_k = \sum_{q_k < x} \alpha_k
+    ,\]
+    where we've used that \( \left\{{q_k \leq x}\right\} = \left\{{q_k < x}\right\} {\textstyle\coprod}\left\{{x}\right\} \) in the first equality.
 
--   Define \( T = \lim_{N \to\infty } T_N \), then \( {\left\lVert {T} \right\rVert}_{\text{op}} < \infty \).
+-   Then if \( x=q_m \) for some \( m \),
+    \[
+    f(x^+) &= f(q_m^+) = \sum_{q_k < q_m} \alpha_k + \alpha_m \\
+    f(x^-) &= f(a_m^-) = \sum_{q_k< q_m} \alpha_k
+    ,\]
+    which clearly differ if \( \alpha_m \neq 0 \).
 
--   By the Riesz Representation theorem,
-    \[  
-    \sqrt{\sum a_n^2} \coloneqq{\left\lVert {\left\{{a_n}\right\}} \right\rVert}_{\ell^2} = {\left\lVert {T} \right\rVert}_{\qty{\ell^2} {}^{ \check{} }} = {\left\lVert {T} \right\rVert}_{\text{op}} < \infty
-    .\]
+-   Taking \( x\not\in Q \), we have \( \left\{{q_k \leq x}\right\} = \left\{{q_k < x}\right\} \), since \( \left\{{q_k=x}\right\} = \emptyset \), so
+    \[
+    f(x^+) &= \sum_{q_k\leq x} \alpha_k = \sum_{q_k < x} \alpha_k \\
+    f(x^-) &= \sum_{q_k< x} \alpha_k
+    ,\]
+    so the limits agree.
 
--   So \( \sum a_n^2 < \infty \).
+-   To recover the result in the problem, let \( {\mathbb{Q}}= \left\{{q_k}\right\} \) be any enumeration of the rationals.
+:::
 :::
 
 # General Analysis
@@ -351,17 +377,18 @@ Prove that if \( f: [0, 1] \to {\mathbb{R}} \) is continuous then
 ```
 -   DCT
 -   Weierstrass Approximation Theorem
+    -   If \( f: [a, b] \to {\mathbb{R}} \) is continuous, then for every \( {\varepsilon}>0 \) there exists a polynomial \( p_{\varepsilon}(x) \) such that \( {\left\lVert {f - p_{\varepsilon}} \right\rVert}_\infty < {\varepsilon} \).
 :::
 
 ::: {.solution}
 ```{=tex}
 \envlist
 ```
--   Suppose \( p \) is a polynomial, then
+-   Suppose \( p \) is a polynomial, then integrate by parts:
     \[
     \lim_{k\to\infty} \int_0^1 kx^{k-1} p(x) \, dx
     &= \lim_{k\to\infty} \int_0^1 \qty{ {\frac{\partial }{\partial x}\,}x^k } p(x) \, dx \\
-    &= \lim_{k\to\infty} \left[ x^k p(x) \Big|_0^1 - \int_0^1 x^k \qty{{\frac{\partial p}{\partial x}\,}(x) } \, dx \right] \quad\text{integrating by parts}\\
+    &= \lim_{k\to\infty} \left[ x^k p(x) \Big|_0^1 - \int_0^1 x^k \qty{{\frac{\partial p}{\partial x}\,}(x) } \, dx \right] \quad\text{IBP}\\
     &= p(1) - \lim_{k\to\infty} \int_0^1 x^k \qty{{\frac{\partial p}{\partial x}\,}(x) } \, dx
     ,\]
 
@@ -390,25 +417,25 @@ Prove that if \( f: [0, 1] \to {\mathbb{R}} \) is continuous then
 
 -   Now use the Weierstrass approximation theorem:
 
-    -   If \( f: [a, b] \to {\mathbb{R}} \) is continuous, then for every \( \varepsilon>0 \) there exists a polynomial \( p_\varepsilon(x) \) such that \( {\left\lVert {f - p_\varepsilon} \right\rVert}_\infty < \varepsilon \).
+    -   If \( f: [a, b] \to {\mathbb{R}} \) is continuous, then for every \( {\varepsilon}>0 \) there exists a polynomial \( p_{\varepsilon}(x) \) such that \( {\left\lVert {f - p_{\varepsilon}} \right\rVert}_\infty < {\varepsilon} \).
 
 -   Thus
     \[
-    {\left\lvert { \int_0^1 kx^{k-1} p_\varepsilon(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } \right\rvert} 
-    &= {\left\lvert { \int_0^1 kx^{k-1} \qty{p_\varepsilon(x) - f(x)} \,dx  } \right\rvert} \\
-    &\leq {\left\lvert { \int_0^1 kx^{k-1} {\left\lVert {p_\varepsilon-f} \right\rVert}_\infty \,dx  } \right\rvert} \\
-    &= {\left\lVert {p_\varepsilon-f} \right\rVert}_\infty \cdot {\left\lvert { \int_0^1 kx^{k-1} \,dx  } \right\rvert} \\
-    &= {\left\lVert {p_\varepsilon-f} \right\rVert}_\infty \cdot x^k \Big|_0^1 \\
-    &= {\left\lVert {p_\varepsilon-f} \right\rVert}_\infty \\ \\
-    &\overset{\varepsilon\to 0}\to 0
+    {\left\lvert { \int_0^1 kx^{k-1} p_{\varepsilon}(x)\,dx - \int_0^1 kx^{k-1}f(x)\,dx  } \right\rvert} 
+    &= {\left\lvert { \int_0^1 kx^{k-1} \qty{p_{\varepsilon}(x) - f(x)} \,dx  } \right\rvert} \\
+    &\leq {\left\lvert { \int_0^1 kx^{k-1} {\left\lVert {p_{\varepsilon}-f} \right\rVert}_\infty \,dx  } \right\rvert} \\
+    &= {\left\lVert {p_{\varepsilon}-f} \right\rVert}_\infty \cdot {\left\lvert { \int_0^1 kx^{k-1} \,dx  } \right\rvert} \\
+    &= {\left\lVert {p_{\varepsilon}-f} \right\rVert}_\infty \cdot x^k \Big|_0^1 \\
+    &= {\left\lVert {p_{\varepsilon}-f} \right\rVert}_\infty \\ \\
+    &\overset{{\varepsilon}\to 0}\to 0
     \]
 
     and the integrals are equal.
 
 -   By the first argument,
-    \[\int_0^1 kx^{k-1} p_\varepsilon(x) \,dx = p_\varepsilon(1) \text{ for each } \varepsilon\]
+    \[\int_0^1 kx^{k-1} p_{\varepsilon}(x) \,dx = p_{\varepsilon}(1) \text{ for each } {\varepsilon}\]
 
--   Since uniform convergence implies pointwise convergence, \( p_\varepsilon(1) \overset{\varepsilon\to 0}\to f(1) \).
+-   Since uniform convergence implies pointwise convergence, \( p_{\varepsilon}(1) \overset{{\varepsilon}\to 0}\to f(1) \).
 :::
 
 ## Fall 2019 \# 1 \( \done \) {#fall-2019-1-done}
@@ -448,12 +475,12 @@ b.  Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converg
     a_k \to S \implies S_N\coloneqq\frac 1 N \sum_{k=1}^N a_k \to S
     .\]
 
--   For any \( \varepsilon> 0 \), use convergence \( a_k \to S \): choose (and fix) \( M = M(\varepsilon) \) large enough such that
+-   For any \( {\varepsilon}> 0 \), use convergence \( a_k \to S \): choose (and fix) \( M = M({\varepsilon}) \) large enough such that
     \[
     k\geq M+1 \implies {\left\lvert {a_k - S} \right\rvert} < \varepsilon
     .\]
 
--   With \( M \) fixed, choose \( N = N(M, \varepsilon) \) large enough so that \( {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} < \varepsilon \).
+-   With \( M \) fixed, choose \( N = N(M, {\varepsilon}) \) large enough so that \( {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} < {\varepsilon} \).
 
 -   Then
     \[
@@ -463,14 +490,14 @@ b.  Prove that if \( \displaystyle\sum_{n=1}^{\infty} \frac{a_{n}}{n} \) converg
     &=\frac{1}{N}\left|\sum_{k=1}^{N}\left(a_{k}-S\right)\right| \\
     &\leq \frac{1}{N} \sum_{k=1}^{N}\left|a_{k}-S\right| \\
     &= {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + \sum_{k=M+1}^N {\left\lvert {a_k - S} \right\rvert} \\
-    &\leq {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + \sum_{k=M+1}^N {\varepsilon} \quad \text{since } a_k \to S\\
-    &= {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + (N - M){\varepsilon} \\
-    &\leq \varepsilon+ (N(M, \varepsilon) - M(\varepsilon))\varepsilon
+    &\leq {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + \sum_{k=M+1}^N {{\varepsilon}} \quad \text{since } a_k \to S\\
+    &= {1\over N} \sum_{k=1}^{M} {\left\lvert {a_k - S} \right\rvert} + (N - M){{\varepsilon}} \\
+    &\leq {\varepsilon}+ (N(M, {\varepsilon}) - M({\varepsilon})){\varepsilon}
     .\]
 :::
 
 ```{=tex}
-\todo[inline]{Revisit, not so clear that the last line can be made smaller than $\varepsilon$, since $M, N$ both depend on $\varepsilon$...}
+\todo[inline]{Revisit, not so clear that the last line can be made smaller than ${\varepsilon}$, since $M, N$ both depend on ${\varepsilon}$...}
 ```
 ::: {.proof title="of b"}
 ```{=tex}
@@ -619,14 +646,14 @@ General case:
         &\coloneqq{2\over \pi} \int_0^1 f
         .\]
 
--   Since \( f\in L^1 \), where simple functions are dense, choose \( s_n\nearrow f \) where \( {\left\lVert {s_N - f} \right\rVert}_1 < \varepsilon \), then
+-   Since \( f\in L^1 \), where simple functions are dense, choose \( s_n\nearrow f \) where \( {\left\lVert {s_N - f} \right\rVert}_1 < {\varepsilon} \), then
     \[  
     {\left\lvert { \int_0^1 f(x) {\left\lvert {\sin(nx)} \right\rvert} \,dx - \int_0^1 s_N(x) {\left\lvert {\sin(nx)} \right\rvert}\,dx } \right\rvert} 
     &= {\left\lvert { \int_0^1 \qty{f(x) - s_N(x)} {\left\lvert {\sin(nx)} \right\rvert} \,dx } \right\rvert} \\
     &\leq \int_0^1 {\left\lvert { f(x) - s_N(x)} \right\rvert} {\left\lvert {\sin(nx)} \right\rvert} \,dx \\
     &= {\left\lVert { \qty{f - s_N} {\left\lvert {\sin(nx)} \right\rvert} } \right\rVert}_1 \\
     &\leq {\left\lVert {f-s_N} \right\rVert}_1 \cdot {\left\lVert {{\left\lvert {\sin(nx)} \right\rvert}} \right\rVert}_\infty \quad\text{by Holder}\\
-    &\leq \varepsilon\cdot 1
+    &\leq {\varepsilon}\cdot 1
     ,\]
 
 -   So the integrals involving \( s_N \) converge to the integral involving \( f \), and
@@ -665,7 +692,7 @@ b.  Show that
 \envlist
 ```
 -   \( \sum f_n < \infty \iff \sup f_n \to 0 \).
--   Negating uniform convergence: \( f_n\not\to f \) uniformly iff \( \exists \varepsilon \) such that \( \forall N(\varepsilon) \) there exists an \( x_N \) such that \( {\left\lvert {f(x_N) - f(x)} \right\rvert} > \varepsilon \).
+-   Negating uniform convergence: \( f_n\not\to f \) uniformly iff \( \exists {\varepsilon} \) such that \( \forall N({\varepsilon}) \) there exists an \( x_N \) such that \( {\left\lvert {f(x_N) - f(x)} \right\rvert} > {\varepsilon} \).
 -   Exponential inequality: \( 1+y \leq e^y \) for all \( y\in {\mathbb{R}} \).
 :::
 
@@ -818,28 +845,28 @@ f'(x)  =\sum_{n=1}^{\infty}\left(\frac{1}{n^{x}}\right)^{\prime}.
 
 -   Claim: \( \sum n^{-x}\ln(n) \) converges.
 
-    -   Use the fact that for any fixed \( \varepsilon>0 \),
+    -   Use the fact that for any fixed \( {\varepsilon}>0 \),
         \[  
-        \lim_{n\to\infty} {\ln(n) \over n^\varepsilon} 
-        \mathop{\mathrm{=}}^{L.H.} \lim_{n\to\infty}{1/n \over \varepsilon n^{\varepsilon-1}} 
-        = \lim_{n\to\infty} {1\over \varepsilon n^\varepsilon} = 0
+        \lim_{n\to\infty} {\ln(n) \over n^{\varepsilon}} 
+        \mathop{\mathrm{=}}^{L.H.} \lim_{n\to\infty}{1/n \over {\varepsilon}n^{{\varepsilon}-1}} 
+        = \lim_{n\to\infty} {1\over {\varepsilon}n^{\varepsilon}} = 0
         ,\]
 
-    -   This implies that for a fixed \( \varepsilon>0 \) and for any constant \( c>0 \) there exists an \( N \) large enough such that \( n\geq N \) implies \( \ln(n)/n^\varepsilon< c \), i.e. \( \ln(n) < c n^{\varepsilon} \).
+    -   This implies that for a fixed \( {\varepsilon}>0 \) and for any constant \( c>0 \) there exists an \( N \) large enough such that \( n\geq N \) implies \( \ln(n)/n^{\varepsilon}< c \), i.e. \( \ln(n) < c n^{{\varepsilon}} \).
 
-    -   Taking \( c=1 \), we have \( n\geq N \implies \ln(n) < n^\varepsilon \)
+    -   Taking \( c=1 \), we have \( n\geq N \implies \ln(n) < n^{\varepsilon} \)
 
     -   We thus break up the sum:
         \[  
         \sum_{n\in {\mathbb{N}}} {\ln(n) \over n^x} 
         &= \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {\ln(n) \over n^x} \\
-        &\leq \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {n^\varepsilon\over n^x} \\
-        &\coloneqq C_\varepsilon+ \sum_{n=N}^\infty {n^\varepsilon\over n^x} \quad \text{with $C_\varepsilon<\infty$ a constant}\\
-        &= C_\varepsilon+ \sum_{n=N}^\infty {1 \over n^{x-\varepsilon}}
+        &\leq \sum_{n=1}^{N-1} { \ln(n) \over n^x} + \sum_{n=N}^\infty {n^{\varepsilon}\over n^x} \\
+        &\coloneqq C_{\varepsilon}+ \sum_{n=N}^\infty {n^{\varepsilon}\over n^x} \quad \text{with $C_{\varepsilon}<\infty$ a constant}\\
+        &= C_{\varepsilon}+ \sum_{n=N}^\infty {1 \over n^{x-{\varepsilon}}}
         ,\]
-        where the last term converges by the \( p{\hbox{-}} \)test if \( x-\varepsilon> 1 \).
+        where the last term converges by the \( p{\hbox{-}} \)test if \( x-{\varepsilon}> 1 \).
 
-    -   But \( \varepsilon \) can depend on \( x \), and if \( x\in (1, \infty) \) is fixed we can choose \( \varepsilon< {\left\lvert {x-1} \right\rvert} \) to ensure this.
+    -   But \( {\varepsilon} \) can depend on \( x \), and if \( x\in (1, \infty) \) is fixed we can choose \( {\varepsilon}< {\left\lvert {x-1} \right\rvert} \) to ensure this.
 
 -   Claim: the interchange of limits is justified. `\todo[inline]{?}`{=tex}
 :::
@@ -883,24 +910,24 @@ where we've used the fact that \( c^{1\over n} \overset{n\to\infty}\to 1 \) for 
 
 Claim: \( R\leq L \).
 
--   We will show that \( R\leq L + \varepsilon \) for every \( \varepsilon>0 \).
+-   We will show that \( R\leq L + {\varepsilon} \) for every \( {\varepsilon}>0 \).
 -   Set
     \[  
-    S_\varepsilon\coloneqq\left\{{x\in {\mathbb{R}}^n{~\mathrel{\Big|}~}{\left\lvert {\phi(x)} \right\rvert} \geq {\left\lVert {\phi} \right\rVert}_\infty - \varepsilon}\right\}
+    S_{\varepsilon}\coloneqq\left\{{x\in {\mathbb{R}}^n{~\mathrel{\Big|}~}{\left\lvert {\phi(x)} \right\rvert} \geq {\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}}\right\}
     .\]
 -   Then we have
     \[  
     \int_{\mathbb{R}}{{\left\lvert {\phi(x)} \right\rvert}^n \over 1 +x^2}\,dx
-    &\geq \int_{S_\varepsilon} {{\left\lvert {\phi(x)} \right\rvert}^n \over 1 +x^2}\,dx \quad S_\varepsilon\subset {\mathbb{R}}\\
-    &\geq \int_{S_\varepsilon} { \qty{{\left\lVert {\phi} \right\rVert}_\infty - \varepsilon}^n \over 1 +x^2}\,dx  \qquad\text{by definition of }S_\varepsilon\\
-    &= \qty{{\left\lVert {\phi} \right\rVert}_\infty - \varepsilon}^n \int_{S_\varepsilon} { 1 \over 1 +x^2}\,dx \\
-    &= \qty{{\left\lVert {\phi} \right\rVert}_\infty - \varepsilon}^n C_\varepsilon\qquad\text{where $C_\varepsilon$ is some constant} \\ \\
+    &\geq \int_{S_{\varepsilon}} {{\left\lvert {\phi(x)} \right\rvert}^n \over 1 +x^2}\,dx \quad S_{\varepsilon}\subset {\mathbb{R}}\\
+    &\geq \int_{S_{\varepsilon}} { \qty{{\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}}^n \over 1 +x^2}\,dx  \qquad\text{by definition of }S_{\varepsilon}\\
+    &= \qty{{\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}}^n \int_{S_{\varepsilon}} { 1 \over 1 +x^2}\,dx \\
+    &= \qty{{\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}}^n C_{\varepsilon}\qquad\text{where $C_{\varepsilon}$ is some constant} \\ \\
     \implies 
     \qty{ \int_{\mathbb{R}}{{\left\lvert {\phi(x)} \right\rvert}^n \over 1 +x^2}\,dx }^{1\over n} 
-    &\geq \qty{{\left\lVert {\phi} \right\rVert}_\infty - \varepsilon} C_\varepsilon^{1 \over n} \\
+    &\geq \qty{{\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}} C_{\varepsilon}^{1 \over n} \\
     &\overset{n\to\infty}\to
-    \qty{{\left\lVert {\phi} \right\rVert}_\infty - \varepsilon} \cdot 1 \\
-    &\overset{\varepsilon\to 0}\to {\left\lVert {\phi} \right\rVert}_\infty
+    \qty{{\left\lVert {\phi} \right\rVert}_\infty - {\varepsilon}} \cdot 1 \\
+    &\overset{{\varepsilon}\to 0}\to {\left\lVert {\phi} \right\rVert}_\infty
     ,\]
     where we've again used the fact that \( c^{1\over n} \to 1 \) for any constant.
 :::
@@ -927,15 +954,15 @@ Let \( f, g \in L^2({\mathbb{R}}) \). Show that
 ```{=tex}
 \envlist
 ```
--   Use the fact that \( L^p \) has small tails: if \( h\in L^2({\mathbb{R}}) \), then for any \( \varepsilon> 0 \),
+-   Use the fact that \( L^p \) has small tails: if \( h\in L^2({\mathbb{R}}) \), then for any \( {\varepsilon}> 0 \),
     \[  
-    \forall \varepsilon,\, \exists N\in {\mathbb{N}}{\quad \operatorname{such that} \quad}\int_{{\left\lvert {x} \right\rvert} \geq {N}} {\left\lvert {h(x)} \right\rvert}^2 \,dx < \varepsilon
+    \forall {\varepsilon},\, \exists N\in {\mathbb{N}}{\quad \operatorname{such that} \quad}\int_{{\left\lvert {x} \right\rvert} \geq {N}} {\left\lvert {h(x)} \right\rvert}^2 \,dx < {\varepsilon}
     .\]
 
 -   So choose \( N \) large enough so that
     \[  
-    \int_{{\left\lVert {x} \right\rVert} \geq N}{\left\lvert {g(x)} \right\rvert}^2 < \varepsilon\\
-    \int_{{\left\lVert {x} \right\rVert} \geq N}{\left\lvert {f(x)} \right\rvert}^2 < \varepsilon\\
+    \int_{{\left\lVert {x} \right\rVert} \geq N}{\left\lvert {g(x)} \right\rvert}^2 < {\varepsilon}\\
+    \int_{{\left\lVert {x} \right\rVert} \geq N}{\left\lvert {f(x)} \right\rvert}^2 < {\varepsilon}\\
     .\]
 
 -   Then write
@@ -949,7 +976,7 @@ Let \( f, g \in L^2({\mathbb{R}}) \). Show that
     \leq 
     \qty{ \int_{{\left\lVert {x} \right\rVert} \geq N} {\left\lvert {f(x)} \right\rvert}^2}^{1\over 2} \cdot 
     \qty{ \int_{{\left\lVert {x} \right\rVert} \geq N} {\left\lvert {g(x)} \right\rvert}^2}^{1\over 2}
-    \leq \varepsilon^{1\over 2} \cdot {\left\lVert {g} \right\rVert}_2
+    \leq {\varepsilon}^{1\over 2} \cdot {\left\lVert {g} \right\rVert}_2
     .\]
 
 -   Bounding the first term: also Cauchy-Schwarz, after variable changes
@@ -959,12 +986,12 @@ Let \( f, g \in L^2({\mathbb{R}}) \). Show that
     &= \int_{-N+n}^{N+n} f(x-n) g(x)\,dx \\
     &\leq \int_{-N+n}^{\infty} f(x-n) g(x)\,dx \\
     &\leq \qty{\int_{-N+n}^{\infty} {\left\lvert {f(x-n)} \right\rvert}^2}^{1\over 2}\cdot \qty{\int_{-N+n}^{\infty} {\left\lvert {g(x)} \right\rvert}^2}^{1\over 2} \\
-    &\leq {\left\lVert {f} \right\rVert}_2 \cdot \varepsilon^{1\over 2}
+    &\leq {\left\lVert {f} \right\rVert}_2 \cdot {\varepsilon}^{1\over 2}
     .\]
 
 -   Then as long as \( n\geq 2N \), we have
     \[  
-    \int {\left\lvert {f(x) g(x+n)} \right\rvert} \leq \qty{{\left\lVert {f} \right\rVert}_2 + {\left\lVert {g} \right\rVert}_2} \cdot \varepsilon^{1\over 2} 
+    \int {\left\lvert {f(x) g(x+n)} \right\rvert} \leq \qty{{\left\lVert {f} \right\rVert}_2 + {\left\lVert {g} \right\rVert}_2} \cdot {\varepsilon}^{1\over 2} 
     .\]
 :::
 
@@ -998,14 +1025,59 @@ f(x)=c_{0}+c_{1} x^{1}+c_{2} x^{2}+\ldots+c_{n} x^{n} \text { with } n \text { e
 
 Show that there is a number \( x_m \) such that \( f(x_m) \leq f(x) \) for all \( x\in {\mathbb{R}} \).
 
-## Fall 2020 \# 1
+## Fall 2020 \# 1 \( \work \) {#fall-2020-1-work}
 
 Show that if \( x_n \) is a decreasing sequence of positive real numbers such that \( \sum_{n=1}^\infty x_n \) converges, then
 \[
 \lim_{n\to\infty} n x_n = 0.
 \]
 
-## Fall 2020 \# 3
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Cauchy criterion for convergence
+-   Claim: even and odd subsequences converge iff whole sequence converges.
+:::
+
+::: {.proof title="of claim"}
+\( \impliedby \): clear, since any subsequence of a convergent sequence converges, and to the same limit.
+
+\( \implies \): Fix \( {\varepsilon} \), choose \( N\gg 1 \) so that both \( {\left\lvert {a_n - L} \right\rvert} < {\varepsilon}, {\left\lvert {a_{2n} - L} \right\rvert} < {\varepsilon} \) for \( n\geq N \). Then for any \( n \), it is either even or odd, so one of these bounds applies.
+:::
+
+::: {.solution}
+See this MSE post for many solutions: <https://math.stackexchange.com/questions/4603/if-a-n-subset0-infty-is-non-increasing-and-sum-a-n-infty-then-lim>
+
+-   Since \( \sum_{k\geq 1}x_k < \infty \), by the Cauchy criterion for convergent sequences we have
+    \[
+    \lim_{M, N\to \infty} \sum_{M\leq k \leq N} x_k = 0
+    .\]
+
+    -   This still holds if we freely add a constant \( C \), so \( C\sum_{M\leq k \leq N} x_k \to 0 \) as well.
+
+-   Trick: \( N \coloneqq n, M \coloneqq 2n \) and take \( C\coloneqq 2 \):
+    \[
+    2\sum_{n\leq k \leq 2n} x_k
+    &\geq 2\sum_{n\leq k \leq 2n} x_{2n} && \text{$x_k$ are non-increasing }\\
+    &= 2 (2n-n)x_{2n} \\
+    &= 2nx_{2n}
+    ,\]
+    and the upper bound goes to zero as \( n\to \infty \).
+
+-   So the even subsequence \( 2n x_{2n} \to 0 \), it now suffices to show the odd subsequence \( (2n+1) x_{2n+1} \to 0 \).
+
+-   Write
+    \[
+    (2n+1)x_{2n+1} 
+    &= 2n\cdot x_{2n+1} + 1\cdot x_{2n+1} \\
+    &\leq 2n\cdot x_{2n} + 1\cdot x_{2n+1} &&\text{$x_k$ are non-increasing }\\
+    &\overset{n\to \infty}\longrightarrow 0
+    ,\]
+    where the first term converges by what we showed above, and the second by assumption.
+:::
+
+## Fall 2020 \# 3 \( \work \) {#fall-2020-3-work}
 
 Let \( f \) be a non-negative Lebesgue measurable function on \( [1, \infty) \).
 
@@ -1033,49 +1105,88 @@ b.  Prove that if \( f \) satisfies
 > \int_1^\infty {1\over f(x) \, dx} = \sum_{k=0}^\infty \int_{2^k}^{2^{k+1}} {1 \over f(x)}\,dx
 > .\]
 
+## Unsorted
+
+## Spring 2014 \# 2 \( \done \) {#spring-2014-2-done}
+
+Let \( \left\{{a_n}\right\} \) be a sequence of real numbers such that
+\[
+\left\{{b_n}\right\} \in \ell^2({\mathbb{N}}) \implies \sum a_n b_n < \infty.
+\]
+Show that \( \sum a_n^2 < \infty \).
+
+> Note: Assume \( a_n, b_n \) are all non-negative.
+
+```{=tex}
+\todo[inline]{Have someone check!}
+```
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Define a sequence of operators
+    \[  
+    T_N: \ell^2 &\to \ell^1\\
+    \left\{{b_n}\right\} &\mapsto \sum_{n=1}^N a_n b_n
+    .\]
+
+-   By assumption, these are well defined: the image is \( \ell^1 \) since \( {\left\lvert {T_N(\left\{{b_n}\right\})} \right\rvert} < \infty \) for all \( N \) and all \( \left\{{b_n}\right\} \in \ell^2 \).
+
+-   So each \( T_N \in \qty{\ell^2} {}^{ \vee } \) is a linear functional on \( \ell^2 \).
+
+-   For each \( x\in \ell^2 \), we have \( {\left\lVert {T_N(x)} \right\rVert}_{{\mathbb{R}}} = \sum_{n=1}^N a_n b_n < \infty \) by assumption, so each \( T_N \) is pointwise bounded.
+
+-   By the Uniform Boundedness Principle, \( \sup_N {\left\lVert {T_N} \right\rVert}_{\text{op}} < \infty \).
+
+-   Define \( T = \lim_{N \to\infty } T_N \), then \( {\left\lVert {T} \right\rVert}_{\text{op}} < \infty \).
+
+-   By the Riesz Representation theorem,
+    \[  
+    \sqrt{\sum a_n^2} \coloneqq{\left\lVert {\left\{{a_n}\right\}} \right\rVert}_{\ell^2} = {\left\lVert {T} \right\rVert}_{\qty{\ell^2} {}^{ \vee }} = {\left\lVert {T} \right\rVert}_{\text{op}} < \infty
+    .\]
+
+-   So \( \sum a_n^2 < \infty \).
+:::
+
 # Measure Theory: Sets
 
 ## Spring 2020 \# 2 \( \done \) {#spring-2020-2-done}
 
 Let \( m_* \) denote the Lebesgue outer measure on \( {\mathbb{R}} \).
 
-### a.
-
-Prove that for every \( E\subseteq {\mathbb{R}} \) there exists a Borel set \( B \) containing \( E \) such that
+a.. Prove that for every \( E\subseteq {\mathbb{R}} \) there exists a Borel set \( B \) containing \( E \) such that
 \[
 m_*(B) = m_*(E)
 .\]
 
-### b.
-
-Prove that if \( E\subseteq {\mathbb{R}} \) has the property that
+b.. Prove that if \( E\subseteq {\mathbb{R}} \) has the property that
 \[
-m_*(A) = m_*(A\cap E) + m_*(A\cap E^c)
+m_*(A) = m_*(A\displaystyle\bigcap E) + m_*(A\displaystyle\bigcap E^c)
 \]
 for every set \( A\subseteq {\mathbb{R}} \), then there exists a Borel set \( B\subseteq {\mathbb{R}} \) such that \( E = B\setminus N \) with \( m_*(N) = 0 \).
 
 Be sure to address the case when \( m_*(E) = \infty \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Definition of outer measure:
     \[ 
     m_*(E) = \inf_{\left\{{Q_j}\right\} \rightrightarrows E} \sum {\left\lvert {Q_j} \right\rvert}
     \]
     where \( \left\{{Q_j}\right\} \) is a countable collection of closed cubes.
--   Break \( {\mathbb{R}} \) into \( {\coprod}_{n\in {\mathbb{Z}}} [n, n+1) \), each with finite measure.
+-   Break \( {\mathbb{R}} \) into \( {\textstyle\coprod}_{n\in {\mathbb{Z}}} [n, n+1) \), each with finite measure.
 -   Theorem: \( m_*(Q) = {\left\lvert {Q} \right\rvert} \) for \( Q \) a closed cube (i.e. the outer measure equals the volume).
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 ::: {.proof}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   \( m_*(Q) \leq {\left\lvert {Q} \right\rvert} \):
 
@@ -1083,45 +1194,45 @@ Be sure to address the case when \( m_*(E) = \infty \).
 
 -   \( {\left\lvert {Q} \right\rvert} \leq m_*(Q) \):
 
--   Fix \( \varepsilon> 0 \).
+-   Fix \( {\varepsilon}> 0 \).
 
 -   Let \( \left\{{Q_i}\right\}_{i=1}^\infty \rightrightarrows Q \) be arbitrary, it suffices to show that
-    \[{\left\lvert {Q} \right\rvert} \leq \qty{\sum_{i=1}^\infty {\left\lvert {Q_i} \right\rvert}} + \varepsilon.\]
+    \[{\left\lvert {Q} \right\rvert} \leq \qty{\sum_{i=1}^\infty {\left\lvert {Q_i} \right\rvert}} + {\varepsilon}.\]
 
--   Pick open cubes \( S_i \) such that \( Q_i\subseteq S_i \) and \( {\left\lvert {Q_i} \right\rvert} \leq {\left\lvert {S_i} \right\rvert} \leq (1+\varepsilon){\left\lvert {Q_i} \right\rvert} \).
+-   Pick open cubes \( S_i \) such that \( Q_i\subseteq S_i \) and \( {\left\lvert {Q_i} \right\rvert} \leq {\left\lvert {S_i} \right\rvert} \leq (1+{\varepsilon}){\left\lvert {Q_i} \right\rvert} \).
 
 -   Then \( \left\{{S_i}\right\} \rightrightarrows Q \), so by compactness of \( Q \) pick a finite subcover with \( N \) elements.
 
 -   Note
     \[
-    Q \subseteq \cup_{i=1}^N S_i \implies {\left\lvert {Q} \right\rvert} \leq \sum_{i=1}^N {\left\lvert {S_i} \right\rvert} \leq \sum_{i=1}^N (1+\varepsilon) {\left\lvert {Q_j} \right\rvert} \leq (1+\varepsilon)\sum_{i=1}^\infty {\left\lvert {Q_i } \right\rvert} 
+    Q \subseteq \displaystyle\bigcup_{i=1}^N S_i \implies {\left\lvert {Q} \right\rvert} \leq \sum_{i=1}^N {\left\lvert {S_i} \right\rvert} \leq \sum_{i=1}^N (1+{\varepsilon}) {\left\lvert {Q_j} \right\rvert} \leq (1+{\varepsilon})\sum_{i=1}^\infty {\left\lvert {Q_i } \right\rvert} 
     .\]
 
 -   Taking an infimum over coverings on the RHS preserves the inequality, so
-    \[{\left\lvert {Q} \right\rvert} \leq (1+\varepsilon) m_*(Q)\]
+    \[{\left\lvert {Q} \right\rvert} \leq (1+{\varepsilon}) m_*(Q)\]
 
--   Take \( \varepsilon\to 0 \) to obtain final inequality.
+-   Take \( {\varepsilon}\to 0 \) to obtain final inequality.
 :::
 
-### a
+a.  
 
 -   If \( m_*(E) = \infty \), then take \( B = {\mathbb{R}}^n \) since \( m({\mathbb{R}}^n) = \infty \).
 
 -   Suppose \( N \coloneqq m_*(E) < \infty \).
 
--   Since \( m_*(E) \) is an infimum, by definition, for every \( \varepsilon> 0 \) there exists a covering by closed cubes \( \left\{{Q_i(\varepsilon)}\right\}_{i=1}^\infty \rightrightarrows E \) depending on \( \varepsilon \) such that
+-   Since \( m_*(E) \) is an infimum, by definition, for every \( {\varepsilon}> 0 \) there exists a covering by closed cubes \( \left\{{Q_i({\varepsilon})}\right\}_{i=1}^\infty \rightrightarrows E \) depending on \( {\varepsilon} \) such that
     \[
-    \sum_{i=1}^\infty {\left\lvert {Q_i(\varepsilon)} \right\rvert} < N + \varepsilon
+    \sum_{i=1}^\infty {\left\lvert {Q_i({\varepsilon})} \right\rvert} < N + {\varepsilon}
     .\]
 
--   For each fixed \( n \), set \( \varepsilon_n = {1\over n} \) to produce such a covering \( \left\{{Q_i(\varepsilon_n)}\right\}_{i=1}^\infty \) and set \( B_n \coloneqq\cup_{i=1}^\infty Q_i(\varepsilon_n) \).
+-   For each fixed \( n \), set \( {\varepsilon}_n = {1\over n} \) to produce such a covering \( \left\{{Q_i({\varepsilon}_n)}\right\}_{i=1}^\infty \) and set \( B_n \coloneqq\displaystyle\bigcup_{i=1}^\infty Q_i({\varepsilon}_n) \).
 
 -   The outer measure of cubes is *equal* to the sum of their volumes, so
     \[
-    m_*(B_n) = \sum_{i=1}^\infty {\left\lvert {Q_i(\varepsilon_n)} \right\rvert} < N + \varepsilon_n = N + {1\over n}
+    m_*(B_n) = \sum_{i=1}^\infty {\left\lvert {Q_i({\varepsilon}_n)} \right\rvert} < N + {\varepsilon}_n = N + {1\over n}
     .\]
 
--   Now set \( B \coloneqq\cap_{n=1}^\infty B_n \).
+-   Now set \( B \coloneqq\displaystyle\bigcap_{n=1}^\infty B_n \).
 
     -   Since \( E\subseteq B_n \) for every \( n \), \( E\subseteq B \)
     -   Since \( B \) is a countable intersection of countable unions of closed sets, \( B \) is Borel.
@@ -1133,15 +1244,15 @@ Be sure to address the case when \( m_*(E) = \infty \).
 
 -   This forces \( m_*(E) = m_*(B) \).
 
-### b
+b.  
 
 Suppose \( m_*(E) < \infty \).
 
 -   By (a), find a Borel set \( B\supseteq E \) such that \( m_*(B) = m_*(E) \)
--   Note that \( E\subseteq B \implies B\cap E = E \) and \( B\cap E^c = B\setminus E \).
+-   Note that \( E\subseteq B \implies B\displaystyle\bigcap E = E \) and \( B\displaystyle\bigcap E^c = B\setminus E \).
 -   By assumption,
     \[
-    m_*(B) &= m_*(B\cap E) + m_*(B\cap E^c) \\
+    m_*(B) &= m_*(B\displaystyle\bigcap E) + m_*(B\displaystyle\bigcap E^c) \\
     m_*(E) &= m_*(E) + m_*(B\setminus E) \\ 
     m_*(E) - m_*(E) &= m_*(B\setminus E) \qquad\qquad\text{since } m_*(E) < \infty \\ 
     \implies m_*(B\setminus E) &= 0
@@ -1150,17 +1261,17 @@ Suppose \( m_*(E) < \infty \).
 
 If \( m_*(E) = \infty \):
 
--   Apply result to \( E_R\coloneqq E \cap[R, R+1)^n \subset {\mathbb{R}}^n \) for \( R\in {\mathbb{Z}} \), so \( E = {\coprod}_R E_R \)
+-   Apply result to \( E_R\coloneqq E \displaystyle\bigcap[R, R+1)^n \subset {\mathbb{R}}^n \) for \( R\in {\mathbb{Z}} \), so \( E = {\textstyle\coprod}_R E_R \)
 -   Obtain \( B_R, N_R \) such that \( E_R = B_R \setminus N_R \), \( m_*(E_R) = m_*(B_R) \), and \( m_*(N_R) = 0 \).
 -   Note that
-    -   \( B\coloneqq\cup_R B_R \) is a union of Borel sets and thus still Borel
-    -   \( E = \cup_R E_R \)
+    -   \( B\coloneqq\displaystyle\bigcup_R B_R \) is a union of Borel sets and thus still Borel
+    -   \( E = \displaystyle\bigcup_R E_R \)
     -   \( N\coloneqq B\setminus E \)
-    -   \( N' \coloneqq\cup_R N_R \) is a union of null sets and thus still null
+    -   \( N' \coloneqq\displaystyle\bigcup_R N_R \) is a union of null sets and thus still null
 -   Since \( E_R \subset B_R \) for every \( R \), we have \( E\subset B \)
 -   We can compute
     \[
-    N = B\setminus E = \qty{ \cup_R B_R } \setminus \qty{\cup_R E_R } \subseteq \cup_R \qty{B_R\setminus E_R} = \cup_R N_R \coloneqq N'
+    N = B\setminus E = \qty{ \displaystyle\bigcup_R B_R } \setminus \qty{\displaystyle\bigcup_R E_R } \subseteq \displaystyle\bigcup_R \qty{B_R\setminus E_R} = \displaystyle\bigcup_R N_R \coloneqq N'
     \]
     where \( m_*(N') = 0 \) since \( N' \) is null, and thus subadditivity forces \( m_*(N) = 0 \).
 :::
@@ -1184,21 +1295,17 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
 
 > Hint: Use the fact that \( 1 - x ≤ e^{-x} \) for all \( x \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Borel-Cantelli: for a sequence of sets \( X_n \),
     \[
-    \limsup_n X_n &= \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for infinitely many $n$} }\right\} 
-    &= \cap_{m\in {\mathbb{N}}} \cup_{n\geq m} X_n
+    \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for infinitely many $n$} }\right\} 
+    &= \displaystyle\bigcap_{m\in {\mathbb{N}}} \displaystyle\bigcup_{n\geq m} X_n
     \\
-    \liminf_n X_n &= \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for all but finitely many $n$} }\right\}
-    &= \cup_{m\in {\mathbb{N}}} \cap_{n\geq m} X_n
+    \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for all but finitely many $n$} }\right\}
+    &= \displaystyle\bigcup_{m\in {\mathbb{N}}} \displaystyle\bigcap_{n\geq m} X_n
     .\]
 
 -   Properties of logs and exponentials:
@@ -1211,182 +1318,275 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
 -   Continuity of measure: \( B_n \searrow B \) and \( \mu(B_0)<\infty \) implies \( \lim_n \mu(B_n) = \mu(B) \), and \( B_n\nearrow B \implies \lim_n \mu(B_n) = \mu(B) \).
 :::
 
-### a
-
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
 -   The Borel \( \sigma{\hbox{-}} \)algebra is closed under countable unions/intersections/complements,
 -   \( B = \limsup_n B_n \) is an intersection of unions of measurable sets.
+:::
 
-### b
-
--   Tails of convergent sums go to zero, so \( \sum_{n\geq M} \mu(B_n) \xrightarrow{M\to\infty} 0 \),
--   \( B_M \coloneqq\cap_{m = 1}^M \cup_{n\geq m} B_n \searrow B \).
-
-\[
-\mu(B_M) 
-&= \mu\left(\cap_{m\in {\mathbb{N}}} \cup_{n\geq m} B_n\right) \\
-&\leq \mu\left( \cup_{n\geq m} B_n \right) \quad \text{for all } m\in {\mathbb{N}}\text{ by countable subadditivity} \\ 
-&\to 0
-,\]
-
--   The result follows by continuity of measure.
-
-### c
-
--   To show \( \mu(B) = 1 \), we'll show \( \mu(B^c) = 0 \).
-
--   Let \( B_k = \cap_{m=1}^\infty \cup_{n = m}^K B_n \). Then
-    \[
-    \mu(B_K^c) 
-    &= \mu \left(\cup_{m=1}^\infty \cap_{n=m}^K B_n^c\right) \\
-    &\leq \sum_{m=1}^\infty \mu\left( \cap_{n=m}^K B_n^c \right) \quad\text{ by subadditivity} \\
-    &= \sum_{m=1}^\infty \prod_{n=m}^K \qty{1 - \mu(B_n)} \quad \text{by assumption} \\ 
-    &\leq \sum_{m=1}^\infty \prod_{n=m}^K e^{-\mu(B_n^c)} \quad\text{by hint} \\
-    &= \sum_{m=1}^\infty \exp{-\sum_{n=m}^K \mu(B_n^c)} \\
-    &\overset{K\to\infty}\to 0
-    \]
-    since \( \displaystyle\sum_{n=m}^K \mu(B_n^c) \overset{K\to\infty}\to \infty \) by assumption
-
--   We can apply continuity of measure since \( B_K^c \xrightarrow{K\to\infty} B^c \).
-
+::: {.proof title="of b"}
 ```{=tex}
-\todo[inline]{How to prove the hint..?}
+\envlist
 ```
+-   Tails of convergent sums vanish, so
+    \[
+    \sum_{n\geq M} \mu(B_n) \xrightarrow{M\to\infty} 0
+    .\]
+-   Also,
+    \[
+    B_M \coloneqq\displaystyle\bigcap_{N = 1}^M \displaystyle\bigcup_{n\geq N} B_n \searrow B 
+    .\]
+-   A computation:
+    \[
+    \mu(B) 
+    &\coloneqq\mu\left(\displaystyle\bigcap_{N\geq 1} \displaystyle\bigcup_{n\geq N} B_n\right) \\
+    &\leq \mu\left( \displaystyle\bigcup_{n\geq N} B_n \right) && \forall N \\
+    &\overset{N\to\infty}\longrightarrow 0
+    ,\]
+    where we've used that we're intersecting over fewer sets and this can only increase measure.
+:::
+
+::: {.proof title="of c"}
+```{=tex}
+\envlist
+```
+-   Since \( \mu(X) = 1 \), in order to show \( \mu(B) = 1 \) it suffices to show \( \mu(X\setminus B) = 0 \).
+
+-   A computation:
+    \[
+    \mu(B^c) 
+    &= \mu\qty{
+    \qty{
+    \displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^\infty B_n
+    }^c
+    }\\
+    &= \mu\qty{
+    \displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty B_n^c
+    } \\
+    &\leq \sum_{N=1}^\infty 
+    \mu\qty{
+    \displaystyle\bigcap_{n=N}^\infty B_n^c
+    } \\
+    &=
+    \sum_{N=1}^\infty \lim_{K\to\infty} \mu\qty{ \displaystyle\bigcap_{n=N}^K B_n^c } && \text{continuity of measure from above} \\
+    &=
+    \sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K \qty{1 - \mu(B_n)} && \text{by assumption} \\
+    &\leq 
+    \sum_{N=1}^\infty \lim_{K\to\infty}  \prod_{n=N}^K e^{-\mu(B_n)} && \text{by hint} \\
+    &=
+    \sum_{N=1}^\infty \lim_{K\to\infty}  e^{-\sum_{n=N}^K \mu(B_n)}  \\
+    &=
+    \sum_{N=1}^\infty  e^{-\lim_{K\to\infty} \sum_{n=N}^K \mu(B_n)} && \text{by continuity of } f(x) = e^x \\
+    &=
+    \sum_{N=1}^\infty  e^{-\sum_{n=N}^\infty \mu(B_n)}  \\
+    &=
+    \sum_{N=1}^\infty 0 \\
+    &= 0
+    .\]
+
+-   Here we've used that every tail of a divergent sum is divergent: if \( \sum_{n=1}^\infty a_n \to \infty \) then for every \( N \), the tail \( \sum_{n=N}^\infty a_n \to \infty \) as well.
+
+-   We've also use that if \( b_n\to \infty \) then \( e^{-b_n} \to 0 \).
+:::
 :::
 
 ## Spring 2019 \# 2 \( \done \) {#spring-2019-2-done}
 
 Let \( \mathcal B \) denote the set of all Borel subsets of \( {\mathbb{R}} \) and \( \mu : \mathcal B \to [0, \infty) \) denote a finite Borel measure on \( {\mathbb{R}} \).
 
-### a
+a.  Prove that if \( \{F_k\} \) is a sequence of Borel sets for which \( F_k \supseteq F_{k+1} \) for all \( k \), then
+    \[
+    \lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
+    \]
 
-Prove that if \( \{F_k\} \) is a sequence of Borel sets for which \( F_k \supseteq F_{k+1} \) for all \( k \), then
-\[
-\lim _{k \rightarrow \infty} \mu\left(F_{k}\right)=\mu\left(\bigcap_{k=1}^{\infty} F_{k}\right)
-\]
+b.  Suppose \( \mu \) has the property that \( \mu (E) = 0 \) for every \( E \in \mathcal B \) with Lebesgue measure \( m(E) = 0 \). Prove that for every \( \epsilon > 0 \) there exists \( \delta > 0 \) so that if \( E \in \mathcal B \) with \( m(E) < δ \), then \( \mu(E) < ε \).
 
-### b
-
-Suppose \( \mu \) has the property that \( \mu (E) = 0 \) for every \( E \in \mathcal B \) with Lebesgue measure \( m(E) = 0 \).
-
-Prove that for every \( \epsilon > 0 \) there exists \( \delta > 0 \) so that if \( E \in \mathcal B \) with \( m(E) < δ \), then \( \mu(E) < ε \).
-
-```{=tex}
-\todo[inline]{Add concepts.}
-```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
--   ?
+-   Proof of continuity of measure.
+-   Using limsup/liminf sets (intersections of unions and vice-versa) and (sub)additivity to bound measures.
+    -   Control over lower bound: use tails of convergent sums
+    -   Control over upper bound: use rapidly converging coefficients like \( \sum 1/2^n \)
+-   Convergent sums have vanishing tails.
+-   Intersecting over *more* sets can only lose measure, taking a union over *more* can only gain measure.
+-   Similarly intersecting over *fewer* sets can only *gain* measure, and taking a union over *fewer* sets can only *lose* measure.
 :::
 
-### a
-
-> See Folland p.26
-
--   Lemma 1: \( \mu({\coprod}_{k=1}^\infty E_k) = \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \).
-
--   Suppose \( F_0 \supseteq F_1 \supseteq \cdots \).
-
--   Let \( A_k = F_k \setminus F_{k+1} \), since the \( F_k \) are nested the \( A_k \) are disjoint
-
--   Set \( A \coloneqq{\coprod}_{k=1}^\infty A_k \) and \( F \coloneqq\cap_{k=1}^\infty F_k \).
-
--   Note \( X = X\setminus Y ~{\coprod}~ X\cap Y \) for any two sets (just write \( X\setminus Y \coloneqq X\cap Y^c \))
-
--   Note that \( A \) contains anything that was removed from \( F_0 \) when passing from any \( F_j \) to \( F_{j+1} \), while \( F \) contains everything that is never removed at any stage, and these are disjoint possibilities.
-
--   Thus \( F_0 = F {\coprod}A \), so
-    \[
-    \mu(F_0) 
-    &= \mu(F) + \mu(A) \\
-    &= \mu(F) + \mu({\coprod}_{k=1}^\infty A_k) \\
-    &= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(A_k) \quad \text{by countable additivity}\\
-    &= \mu(F) + \lim_{n\to\infty} \sum_{k=0}^n \mu(F_k) - \mu(F_{k+1}) \\
-    &= \mu(F) + \lim_{n\to\infty} \left( \mu(F_1) - \mu(F_n) \right) \quad\text{(Telescoping)} \\
-    &=\mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_n)
-    ,\]
-
--   Since \( \mu \) is a finite measure, \( \mu(F_1) < \infty \) and can be subtracted, yielding
-    \[
-    \mu(F_1) &= \mu(F) + \mu(F_1) - \lim_{n\to\infty} \mu(F_n) \\
-    \implies \mu(F) &= \lim_{n\to\infty} \mu(F_n) \\
-    \implies \mu\qty{\cap_{k=1}^\infty F_k} &= \lim_{n\to\infty} \mu(F_n)
-    .\]
-
-### b
-
--   Toward a contradiction, negate the implication: suppose there exists an \( \varepsilon>0 \) such that for all \( \delta \), we have \( m(E) < \delta \) but \( \mu(E) > \varepsilon \).
-
--   The sequence \( \left\{{\delta_n \coloneqq{1\over 2^n}}\right\}_{n\in {\mathbb{N}}} \) and produce sets \( A_n\in {\mathcal{B}} \) such \( m(A_n) < {1\over 2^n} \) but \( \mu(A_n) > \varepsilon \).
-
--   Define
-    \[
-    F_n &\coloneqq\cup_{j\geq n} A_j \\
-    C_m &\coloneqq\cap_{k=1}^m F_k \\
-    A &\coloneqq C_\infty \coloneqq\cap_{k=1}^\infty F_k 
-    .\]
-
--   Note that \( F_1 \supseteq F_2 \supseteq \cdots \), since each increase in index unions fewer sets.
-
--   By continuity for the Lebesgue measure,
-    \[
-    m(A) 
-    = m \qty{\cap_{k=1}^\infty F_k }
-    = \lim_{k\to \infty} m (F_k) 
-    = \lim_{k\to\infty} m\qty{\cup_{j\geq k} A_j } 
-    \leq \lim_{k\to\infty} \sum_{j\geq k} m(A_j) 
-    = \lim_{k\to\infty} \sum_{j\geq k} {1\over 2^n} 
-    = 0
-    ,\]
-    which follows because this is the tail of a convergent sum
-
--   Thus \( m(A) = 0 \) and by assumption, this implies \( \mu(A) = 0 \).
-
--   However, by part (a),
-    \[
-    \mu(A) = \lim_n \mu\left( \cup_{k=n}^\infty A_k \right)
-    \geq \lim_n \mu(A_n) = \lim_n \varepsilon = \varepsilon > 0
-    .\]
+::: {.strategy}
+Use a limsup or liminf of sets and continuity of measure. Note that choosing a limsup vs a liminf is fiddly -- for one choice, you can only get one of the bounds you need, for the other choice you can get both.
 :::
 
+::: {.solution}
 ```{=tex}
-\todo[inline]{All messed up!}
+\envlist
 ```
-## Fall 2018 \# 2 \( \done \) {#fall-2018-2-done}
+::: {.proof title="of a"}
+-   Observation: \( \mu \) finite means \( \mu(E) < \infty \) for all \( E \in\mathcal{B} \), which we'll need in several places.
+
+-   Prove a more general statement: for any measure \( \mu \),
+    \[
+    \mu(F_1) < \infty,\, F_k \searrow F \implies \lim_{k\to\infty}\mu(F_k) = \mu(F)
+    ,\]
+    where \( F_k \searrow F \) means \( F_1 \supseteq F_2 \supseteq \cdots \) with \( \displaystyle\bigcap_{k=1}^\infty F_k = F \).
+
+    -   Note that \( \mu(F) \) makes sense: each \( F_k \in \mathcal{B} \), which is a \( \sigma{\hbox{-}} \)algebra and closed under countable intersections.
+
+-   Take disjoint annuli by setting \( E_k \coloneqq F_k \setminus F_{k+1} \)
+
+-   Funny step: write
+    \[
+    F_1 = F {\textstyle\coprod}\displaystyle\coprod_{k=1}^{\infty} E_k
+    .\]
+
+    -   This is because \( x\in F_1 \) iff \( x \) is in every \( F_k \), so in \( F \), **or**
+    -   \( x\not \in F_1 \) but \( x\in F_2 \), noting incidentally \( x\in F_3, F_4,\cdots \), **or**,
+    -   \( x\not\in F_2 \) but \( x\in F_3 \), and so on.
+
+-   Now take measures, and note that we get a telescoping sum:
+    \[
+    \mu(F_1) 
+    &= \mu(F) + \sum_{k=1}^\infty \mu(E_k) \\
+    &= \mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(E_k) \\
+    &\coloneqq\mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k \setminus F_{k+1} ) \\
+    &\coloneqq\mu(F) + \lim_{N\to\infty} \sum_{k=1}^N \mu(F_k) - \mu(F_{k+1} ) \hspace{5em}\text{to be justified}\\
+    &= \mu(F) + \lim_{N\to\infty} 
+    [
+    (\mu(F_1) - \mu(F_2)) +  
+    (\mu(F_2) - \mu(F_3)) +  
+    \cdots \\ 
+    & \hspace{8em} + (\mu(F_{N-1}) - \mu(F_N)) +  
+    (\mu(F_N) - \mu(F_{N+1})) 
+    ] \\ \\
+    &= \mu(F) + \lim_{N\to\infty} \mu(F_1) - \mu(F_{N+1}) \\
+    &= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1})
+    .\]
+
+-   Justifying the measure subtraction: the general statement is that for any pair of sets \( A\subseteq X \), \( \mu(X\setminus A) = \mu(X) - \mu(A) \) when \( \mu(A) < \infty \):
+    \[
+    X &= A {\textstyle\coprod}(X\setminus A) \\
+    \implies \mu(X) &= \mu(A) + \mu(X\setminus A) && \text{countable additivity} \\
+    \implies \mu(X) -\mu(A) &= \mu(X\setminus A) && \text{if } \mu(A) < \infty 
+    .\]
+
+-   Now use that \( \mu(F_1)<\infty \) to justify subtracting it from both sides:
+    \[
+    \mu(F_1)
+    &= \mu(F) + \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+    \implies
+    0
+    &= \mu(F_1) - \lim_{N\to\infty} \mu(F_{N+1}) \\
+    \lim_{N\to\infty} \mu(F_{N+1})
+    &= \mu(F_1) 
+    .\]
+
+-   Now use that \( \lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N) \) to conclude.
+:::
+
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
+-   Toward a contradiction, negate the implication: there exists an \( {\varepsilon}>0 \) such that for all \( \delta \), there exists an \( E\in \mathcal{B} \)
+    \[
+    m(E) < \delta && \text{but} \hspace{4em} \mu(E) > {\varepsilon}
+    .\]
+
+    -   **Goal**: produce a set \( A \) with \( m(A)= 0 \) **but** \( \mu(A)\neq 0 \).
+
+-   Take a sequence \( \delta_n = \alpha(n) \), some function to be determined later, produce sets \( E_n \) with
+    \[
+    m(E_n) < \delta_n && \text{but} \hspace{4em} \mu(E_n) > {\varepsilon}\quad \forall n
+    .\]
+
+-   Set
+    \[
+    A_M \coloneqq\displaystyle\bigcap_{N=1}^M \displaystyle\bigcup_{n=N}^\infty E_n \coloneqq\displaystyle\bigcap_{N=1}^M F_N
+    \hspace{4em} 
+    F_N \coloneqq\displaystyle\bigcup_{n=N}^\infty E_n
+    .\]
+
+    -   Observation: \( F_N \supseteq F_{N+1} \) for all \( N \), since the right-hand side involves taking a union over *fewer* sets.
+    -   Notation: define
+        \[
+        A_\infty \coloneqq\displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^\infty E_n
+        .\]
+
+-   Bounding the Lebesgue measure \( m \) from above:
+    \[
+    m(A_\infty)
+    &\coloneqq
+    m\qty{ 
+    \displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^\infty E_n
+    } \\
+    &\leq
+    m\qty{ 
+    \displaystyle\bigcup_{n=N}^\infty E_n
+    } && \forall N \\
+    &\leq \sum_{n=N}^\infty m(E_n) && \forall N \quad \text{by countable subadditivity} \\
+    &\leq \sum_{n=N}^\infty \alpha(n) \\ \\
+    &\overset{N\to\infty}\longrightarrow 0
+    ,\]
+    where we've used that intersecting over *fewer* sets (i.e. none) can only increase measure in the first bound.
+
+    -   We have control over the sequence \( \alpha(n) \), so we can choose it to be summable so that the tails converge to zero as rapidly as we'd like.
+    -   So e.g. for any \( {\varepsilon}_1 >0 \), we can choose \( \alpha(n) \coloneqq{\varepsilon}_1/2^n \), then
+        \[
+        \sum_{n=N}^\infty \alpha(n) &\leq \sum_{n=1}^\infty {{\varepsilon}_1 \over 2^n} = {\varepsilon}_1 \to 0
+        .\]
+
+-   Bounding the \( \mu \) measure from below:
+    \[
+    \mu(A_\infty) 
+    &\coloneqq
+    \mu\qty{\displaystyle\bigcap_{N=1}^\infty F_N} \\
+    &= \lim_{N\to\infty} \mu(F_N) && \text{by part (1) }\\
+    &= \lim_{N\to\infty} \mu\qty{ \displaystyle\bigcup_{n=N}^\infty E_n } \\
+    &\geq \lim_{N\to\infty} \mu(E_N ) \\
+    &\geq \lim_{N\to\infty} {\varepsilon}\\
+    &= {\varepsilon}\\
+    &>0
+    ,\]
+    where we've used that taking a union over *fewer* sets can only make the measure smaller.
+:::
+:::
+
+## Fall 2018 \# 2 \( \work \) {#fall-2018-2-work}
 
 Let \( E\subset {\mathbb{R}} \) be a Lebesgue measurable set. Show that there is a Borel set \( B \subset E \) such that \( m(E\setminus B) = 0 \).
 
 ```{=tex}
 \todo[inline]{Move this to review notes to clean things up.}
 ```
-::: {.solution}
 ```{=tex}
-\hfill
+\todo[inline]{What a mess, redo!!}
 ```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
--   Definition of measurability: there exists an open \( O\supset E \) such that \( m_*(O\setminus E) < \varepsilon \) for all \( \varepsilon> 0 \).
--   Theorem: \( E \) is Lebesgue measurable iff there exists a closed set \( F\subseteq E \) such that \( m_*(E\setminus F) < \varepsilon \) for all \( \varepsilon>0 \).
+-   Definition of measurability: there exists an open \( O\supset E \) such that \( m_*(O\setminus E) < {\varepsilon} \) for all \( {\varepsilon}> 0 \).
+-   Theorem: \( E \) is Lebesgue measurable iff there exists a closed set \( F\subseteq E \) such that \( m_*(E\setminus F) < {\varepsilon} \) for all \( {\varepsilon}>0 \).
 -   Every \( F_\sigma, G_\delta \) is Borel.
 -   Claim: \( E \) is measurable \( \iff \) for every \( \varepsilon \) there exist \( F_\varepsilon \subset E \subset G_\varepsilon \) with \( F_\varepsilon \) closed and \( G_\varepsilon \) open and \( m(G_\varepsilon \setminus E)< \varepsilon \) and \( m(E\setminus F_\varepsilon) < \varepsilon \).
-    -   Proof: existence of \( G_\varepsilon \) is the definition of measurability.
-    -   Existence of \( F_\varepsilon \): ?
+    -   Proof: existence of \( G_{\varepsilon} \) is the definition of measurability.
+    -   Existence of \( F_{\varepsilon} \): ?
 -   Claim: \( E \) is measurable \( \implies \) there exists an open \( O\supseteq E \) such that \( m(O\setminus E) = 0 \).
     -   Since \( E \) is measurable, for each \( n\in {\mathbb{N}} \) choose \( G_n \supseteq E \) such that \( m_*(G_n\setminus E) < {1\over n} \).
-    -   Set \( O_N \coloneqq\cap_{n=1}^N G_n \) and \( O\coloneqq\cap_{n=1}^\infty G_n \).
+    -   Set \( O_N \coloneqq\displaystyle\bigcap_{n=1}^N G_n \) and \( O\coloneqq\displaystyle\bigcap_{n=1}^\infty G_n \).
     -   Suppose \( E \) is bounded.
         -   Note \( O_N \searrow O \) and \( m_*(O_1) < \infty \) if \( E \) is bounded, since in this case
             \[
             m_*(G_n\setminus E) = m_*(G_1) - m_*(E) < 1 \iff m_*(G_1) < m_*(E) + {1\over n} < \infty
             .\]
-        -   Note \( O_N \setminus E \searrow O \setminus E \) since \( O_N\setminus E \coloneqq O_N \cap E^c \supseteq O_{N+1} \cap E^c \) for all \( N \), and again \( m_*(O_1 \setminus E) < \infty \).
+        -   Note \( O_N \setminus E \searrow O \setminus E \) since \( O_N\setminus E \coloneqq O_N \displaystyle\bigcap E^c \supseteq O_{N+1} \displaystyle\bigcap E^c \) for all \( N \), and again \( m_*(O_1 \setminus E) < \infty \).
         -   So it's valid to apply continuity of measure from above:
             \[
             m_*(O\setminus E) 
@@ -1394,41 +1594,41 @@ Let \( E\subset {\mathbb{R}} \) be a Lebesgue measurable set. Show that there is
             &\leq \lim_{N\to \infty} m_*(G_N\setminus E) \\ 
             &= \lim_{N\to\infty} {1\over N} = 0
             ,\]
-            where the inequality uses subadditivity on \( \cap_{n=1}^N G_n \subseteq G_N \)
+            where the inequality uses subadditivity on \( \displaystyle\bigcap_{n=1}^N G_n \subseteq G_N \)
     -   Suppose \( E \) is unbounded.
-        -   Write \( E^k = E \cap[k, k+1]^d \subset {\mathbb{R}}^d \) as the intersection of \( E \) with an annulus, and note that \( E = {\coprod}_{k\in {\mathbb{N}}} E_k \).
+        -   Write \( E^k = E \displaystyle\bigcap[k, k+1]^d \subset {\mathbb{R}}^d \) as the intersection of \( E \) with an annulus, and note that \( E = {\textstyle\coprod}_{k\in {\mathbb{N}}} E_k \).
         -   Each \( E_k \) is bounded, so apply the previous case to obtain \( O_k \supseteq E_k \) with \( m(O_k\setminus E_k) = 0 \).
-        -   So write \( O_k = E_k {\coprod}N_k \) where \( N_k \coloneqq O_k \setminus E_k \) is a null set.
-        -   Define \( O = \cup_{k\in {\mathbb{N}}} O_k \), note that \( E\subseteq O \).
+        -   So write \( O_k = E_k {\textstyle\coprod}N_k \) where \( N_k \coloneqq O_k \setminus E_k \) is a null set.
+        -   Define \( O = \displaystyle\bigcup_{k\in {\mathbb{N}}} O_k \), note that \( E\subseteq O \).
         -   Now note
             \[
             O\setminus E 
-            &= \qty{{\coprod}_k O_k}\setminus \qty{{\coprod}_K E_k} \\
-            &\subseteq {\coprod}_k \qty{O_k \setminus E_k} \\
+            &= \qty{{\textstyle\coprod}_k O_k}\setminus \qty{{\textstyle\coprod}_K E_k} \\
+            &\subseteq {\textstyle\coprod}_k \qty{O_k \setminus E_k} \\
             \implies m_*(O\setminus E) 
-            &\leq m_*\qty{{\coprod}\qty{O_k \setminus E_k} } = 0
+            &\leq m_*\qty{{\textstyle\coprod}\qty{O_k \setminus E_k} } = 0
             ,\]
             since any countable union of null sets is again null.
     -   So \( O\supseteq E \) with \( m(O\setminus E) = 0 \).
 -   Theorem: since \( E \) is measurable, \( E^c \) is measurable
-    -   Proof: It suffices to write \( E^c \) as the union of two measurable sets, \( E^c = S \cup(E^c - S) \), where \( S \) is to be determined.
+    -   Proof: It suffices to write \( E^c \) as the union of two measurable sets, \( E^c = S \displaystyle\bigcup(E^c - S) \), where \( S \) is to be determined.
     -   We'll produce an \( S \) such that \( m_*(E^c - S) = 0 \) and use the fact that any subset of a null set is measurable.
-    -   Since \( E \) is measurable, for every \( \varepsilon> 0 \) there exists an open \( {\mathcal{O}}_\varepsilon\supseteq E \) such that \( m_*({\mathcal{O}}_\varepsilon\setminus E) < \varepsilon \).
-    -   Take the sequence \( \left\{{\varepsilon_n \coloneqq{1\over n}}\right\} \) to produce a sequence of sets \( {\mathcal{O}}_n \).
+    -   Since \( E \) is measurable, for every \( {\varepsilon}> 0 \) there exists an open \( {\mathcal{O}}_{\varepsilon}\supseteq E \) such that \( m_*({\mathcal{O}}_{\varepsilon}\setminus E) < {\varepsilon} \).
+    -   Take the sequence \( \left\{{{\varepsilon}_n \coloneqq{1\over n}}\right\} \) to produce a sequence of sets \( {\mathcal{O}}_n \).
     -   Note that each \( {\mathcal{O}}_n^c \) is closed and
         \[
         {\mathcal{O}}_n \supseteq E \iff {\mathcal{O}}_n^c \subseteq E^c
         .\]
-    -   Set \( S \coloneqq\cup_n {\mathcal{O}}_n^c \), which is a union of closed sets, thus an \( F_\sigma \) set, thus Borel, thus measurable.
+    -   Set \( S \coloneqq\displaystyle\bigcup_n {\mathcal{O}}_n^c \), which is a union of closed sets, thus an \( F_\sigma \) set, thus Borel, thus measurable.
     -   Note that \( S\subseteq E^c \) since each \( {\mathcal{O}}_n \subseteq E^c \).
     -   Note that
         \[
         E^c\setminus S 
-        &\coloneqq E^c \setminus \qty{\cup_{n=1}^\infty {\mathcal{O}}_n^c} \\
-        &\coloneqq E^c \cap\qty{\cup_{n=1}^\infty {\mathcal{O}}_n^c}^c  \quad\text{definition of set minus} \\ 
-        &= E^c \cap\qty{\cap_{n=1}^\infty {\mathcal{O}}_n}^c  \quad \text{De Morgan's law}\\
-        &= E^c \cup\qty{\cap_{n=1}^\infty {\mathcal{O}}_n}  \\
-        &\coloneqq\qty{ \cap_{n=1}^\infty {\mathcal{O}}_n} \setminus E \\
+        &\coloneqq E^c \setminus \qty{\displaystyle\bigcup_{n=1}^\infty {\mathcal{O}}_n^c} \\
+        &\coloneqq E^c \displaystyle\bigcap\qty{\displaystyle\bigcup_{n=1}^\infty {\mathcal{O}}_n^c}^c  \quad\text{definition of set minus} \\ 
+        &= E^c \displaystyle\bigcap\qty{\displaystyle\bigcap_{n=1}^\infty {\mathcal{O}}_n}^c  \quad \text{De Morgan's law}\\
+        &= E^c \displaystyle\bigcup\qty{\displaystyle\bigcap_{n=1}^\infty {\mathcal{O}}_n}  \\
+        &\coloneqq\qty{ \displaystyle\bigcap_{n=1}^\infty {\mathcal{O}}_n} \setminus E \\
         & \subseteq {\mathcal{O}}_N \setminus E \quad \text{for every } N\in {\mathbb{N}}
         .\]
     -   Then by subadditivity,
@@ -1438,19 +1638,21 @@ Let \( E\subset {\mathbb{R}} \) be a Lebesgue measurable set. Show that there is
     -   Thus \( E^c\setminus S \) is measurable.
 :::
 
-### Indirect Proof
-
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Since \( E \) is measurable, \( E^c \) is measurable.
 -   Since \( E^c \) is measurable exists an open \( O\supseteq E^c \) such that \( m(O\setminus E^c) = 0 \).
 -   Set \( B \coloneqq O^c \), then \( O\supseteq E^c \iff {\mathcal{O}}^c \subseteq E \iff B\subseteq E \).
 -   Computing measures yields
     \[
-    E\setminus B \coloneqq E\setminus  {\mathcal{O}}^c \coloneqq E\cap({\mathcal{O}}^c)^c = E\cap{\mathcal{O}}= {\mathcal{O}}\cap(E^c)^c \coloneqq{\mathcal{O}}\setminus E^c
+    E\setminus B \coloneqq E\setminus  {\mathcal{O}}^c \coloneqq E\displaystyle\bigcap({\mathcal{O}}^c)^c = E\displaystyle\bigcap{\mathcal{O}}= {\mathcal{O}}\displaystyle\bigcap(E^c)^c \coloneqq{\mathcal{O}}\setminus E^c
     ,\]
     thus \( m(E\setminus B) = m({\mathcal{O}}\setminus E^c) = 0 \).
 -   Since \( {\mathcal{O}} \) is open, \( B \) is closed and thus Borel.
 
-### Direct Proof (Todo)
+d.irect Proof (Todo)
 
 ```{=tex}
 \todo[inline]{Try to construct the set.}
@@ -1466,28 +1668,28 @@ E:=\left\{x \in \mathbb{R}:\left|x-\frac{p}{q}\right|<q^{-3} \text { for infinit
 
 Prove that \( m(E) = 0 \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Borel-Cantelli: If \( \left\{{E_k}\right\}_{k\in{\mathbb{Z}}}\subset 2^{\mathbb{R}} \) is a countable collection of Lebesgue measurable sets with \( \sum_{k\in {\mathbb{Z}}} m(E_k) < \infty \), then almost every \( x\in {\mathbb{R}} \) is in *at most finitely* many \( E_k \).
-    -   Equivalently (?), \( m(\limsup_{k\to\infty} E_k) = 0 \), where \( \limsup_{k\to\infty} E_k = \cap_{k=1}^\infty \cup_{j\geq k} E_j \), the elements which are in \( E_k \) for infinitely many \( k \).
+    -   Equivalently (?), \( m(\limsup_{k\to\infty} E_k) = 0 \), where \( \limsup_{k\to\infty} E_k = \displaystyle\bigcap_{k=1}^\infty \displaystyle\bigcup_{j\geq k} E_j \), the elements which are in \( E_k \) for infinitely many \( k \).
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Strategy: Borel-Cantelli.
 
--   We'll show that \( m(E) \cap[n, n+1] = 0 \) for all \( n\in {\mathbb{Z}} \); then the result follows from
+-   We'll show that \( m(E) \displaystyle\bigcap[n, n+1] = 0 \) for all \( n\in {\mathbb{Z}} \); then the result follows from
     \[
-    m(E) = m \qty{\cup_{n\in {\mathbb{Z}}} E \cap[n, n+1]} \leq \sum_{n=1}^\infty m(E \cap[n, n+1]) = 0
+    m(E) = m \qty{\displaystyle\bigcup_{n\in {\mathbb{Z}}} E \displaystyle\bigcap[n, n+1]} \leq \sum_{n=1}^\infty m(E \displaystyle\bigcap[n, n+1]) = 0
     .\]
 
--   By translation invariance of measure, it suffices to show \( m(E \cap[0, 1]) = 0 \).
+-   By translation invariance of measure, it suffices to show \( m(E \displaystyle\bigcap[0, 1]) = 0 \).
 
-    -   So WLOG, replace \( E \) with \( E\cap[0, 1] \).
+    -   So WLOG, replace \( E \) with \( E\displaystyle\bigcap[0, 1] \).
 
 -   Define
     \[
@@ -1495,11 +1697,11 @@ Prove that \( m(E) = 0 \).
     \exists p\in {\mathbb{Z}}^{\geq 0} \text{ s.t. } {\left\lvert {x - \frac{p}{j} } \right\rvert} < \frac 1 {j^3}}\right\} 
     .\]
 
-    -   Note that \( E_j \subseteq {\coprod}_{p\in {\mathbb{Z}}^{\geq 0}} B_{j^{-3}}\qty{p\over j} \), i.e. a union over integers \( p \) of intervals of radius \( 1/j^3 \) around the points \( p/j \). Since \( 1/j^3 < 1/j \), this union is in fact disjoint.
+    -   Note that \( E_j \subseteq {\textstyle\coprod}_{p\in {\mathbb{Z}}^{\geq 0}} B_{j^{-3}}\qty{p\over j} \), i.e. a union over integers \( p \) of intervals of radius \( 1/j^3 \) around the points \( p/j \). Since \( 1/j^3 < 1/j \), this union is in fact disjoint.
 
 -   Importantly, note that
     \[
-    \limsup_{j\to\infty} E_j \coloneqq\cap_{n=1}^\infty \cup_{j=n}^\infty E_j = E
+    \limsup_{j\to\infty} E_j \coloneqq\displaystyle\bigcap_{n=1}^\infty \displaystyle\bigcup_{j=n}^\infty E_j = E
     \]
 
     since
@@ -1515,12 +1717,12 @@ Prove that \( m(E) = 0 \).
 -   Intersecting with \( [0, 1] \), we can write \( E_j \) as a union of intervals:
     \[
     E_j =& \qty{0, {j^{-3}}} 
-    \quad {\coprod}\quad 
-    B_{j^{-3}}\qty{1\over j} {\coprod}
-    B_{j^{-3}}\qty{2\over j} {\coprod}
-    \cdots {\coprod}
+    \quad {\textstyle\coprod}\quad 
+    B_{j^{-3}}\qty{1\over j} {\textstyle\coprod}
+    B_{j^{-3}}\qty{2\over j} {\textstyle\coprod}
+    \cdots {\textstyle\coprod}
     B_{j^{-3}}\qty{j-1\over j} 
-    \quad {\coprod}\quad 
+    \quad {\textstyle\coprod}\quad 
     (1 - {j^{-3}}, 1)
     ,\]
     where we've separated out the "boundary" terms to emphasize that they are balls about \( 0 \) and \( 1 \) intersected with \( [0, 1] \).
@@ -1550,8 +1752,8 @@ Prove that \( m(E) = 0 \).
     \[
     m(E) 
     &= m(\limsup_j E_j) \\
-    &= m(\cap_{n\in {\mathbb{N}}} \cup_{j\geq n} E_j) \\
-    &\leq m(\cup_{j\geq N} E_j) \quad\text{for every } N \\
+    &= m(\displaystyle\bigcap_{n\in {\mathbb{N}}} \displaystyle\bigcup_{j\geq n} E_j) \\
+    &\leq m(\displaystyle\bigcup_{j\geq N} E_j) \quad\text{for every } N \\
     &\leq \sum_{j\geq N} m(E_j) \\
     &\overset{N\to\infty}\to 0 \quad\text{}
     .\]
@@ -1581,18 +1783,11 @@ is a bijection from the class of Lebesgue measurable sets of \( [0, \infty) \) t
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
-::: {.concept}
-```{=tex}
-\hfill
-```
--   ?
-:::
+a.  
 
-### a
-
-It suffices to consider the bounded case, i.e. \( E \subseteq B_M(0) \) for some \( M \). Then write \( E_n = B_n(0) \cap E \) and apply the theorem to \( E_n \), and by subadditivity, \( m^*(E) = m^*(\cup_n E_n) \leq \sum_n m^*(E_n) = 0 \).
+It suffices to consider the bounded case, i.e. \( E \subseteq B_M(0) \) for some \( M \). Then write \( E_n = B_n(0) \displaystyle\bigcap E \) and apply the theorem to \( E_n \), and by subadditivity, \( m^*(E) = m^*(\displaystyle\bigcup_n E_n) \leq \sum_n m^*(E_n) = 0 \).
 
 **Lemma:** \( f(x) = x^2, f^{-1}(x) = \sqrt{x} \) are Lipschitz on any compact subset of \( [0, \infty) \).
 
@@ -1624,26 +1819,24 @@ and so
 m^*(g(E)) \leq \sum_j {\left\lvert {g(Q_j)} \right\rvert} \leq \sum_j L^n {\left\lvert {Q_j} \right\rvert} = L^n \sum_j {\left\lvert {Q_j} \right\rvert} \to 0 
 .\]
 
-Now just take \( g(x) = x^2 \) for one direction, and \( g(x) = f^{-1}(x) = \sqrt{x} \) for the other. \( \hfill\blacksquare \)
+Now just take \( g(x) = x^2 \) for one direction, and \( g(x) = f^{-1}(x) = \sqrt{x} \) for the other.
 
-### b
+b.  
 
-> Lemma: \( E \) is measurable iff \( E = K {\coprod}N \) for some \( K \) compact, \( N \) null.
+> Lemma: \( E \) is measurable iff \( E = K {\textstyle\coprod}N \) for some \( K \) compact, \( N \) null.
 
-Write \( E = K {\coprod}N \) where \( K \) is compact and \( N \) is null.
+Write \( E = K {\textstyle\coprod}N \) where \( K \) is compact and \( N \) is null.
 
-Then \( \phi^{-1}(E) = \phi^{-1}(K {\coprod}N) = \phi^{-1}(K) {\coprod}\phi^{-1}(N) \).
+Then \( \phi^{-1}(E) = \phi^{-1}(K {\textstyle\coprod}N) = \phi^{-1}(K) {\textstyle\coprod}\phi^{-1}(N) \).
 
-Since \( \phi^{-1}(N) \) is null by part (a) and \( \phi^{-1}(K) \) is the preimage of a compact set under a continuous map and thus compact, \( \phi^{-1}(E) = K' {\coprod}N' \) where \( K' \) is compact and \( N' \) is null, so \( \phi^{-1}(E) \) is measurable.
+Since \( \phi^{-1}(N) \) is null by part (a) and \( \phi^{-1}(K) \) is the preimage of a compact set under a continuous map and thus compact, \( \phi^{-1}(E) = K' {\textstyle\coprod}N' \) where \( K' \) is compact and \( N' \) is null, so \( \phi^{-1}(E) \) is measurable.
 
 So \( \phi \) is a measurable function, and thus yields a well-defined map \( \mathcal L({\mathbb{R}}) \to \mathcal L({\mathbb{R}}) \) since it preserves measurable sets. Restricting to \( [0, \infty) \), \( f \) is bijection, and thus so is \( \phi \).
 :::
 
 ## Spring 2017 \# 2 \( \done \) {#spring-2017-2-done}
 
-### a
-
-Let \( \mu \) be a measure on a measurable space \( (X, \mathcal M) \) and \( f \) a positive measurable function.
+a.  Let \( \mu \) be a measure on a measurable space \( (X, \mathcal M) \) and \( f \) a positive measurable function.
 
 Define a measure \( \lambda \) by
 \[
@@ -1655,21 +1848,15 @@ Show that for \( g \) any positive measurable function,
 \int_{X} g ~d \lambda=\int_{X} f g ~d \mu
 \]
 
-### b
+b.  Let \( E \subset {\mathbb{R}} \) be a measurable set such that
+    \[
+    \int_{E} x^{2} ~d m=0.
+    \]
+    Show that \( m(E) = 0 \).
 
-Let \( E \subset {\mathbb{R}} \) be a measurable set such that
-\[
-\int_{E} x^{2} ~d m=0.
-\]
-Show that \( m(E) = 0 \).
-
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Absolute continuity of measures: \( \lambda \ll \mu \iff E\in\mathcal{M}, \mu(E) = 0 \implies \lambda(E) = 0 \).
 -   Radon-Nikodym: if \( \lambda \ll \mu \), then there exists a measurable function \( {\frac{\partial \lambda}{\partial \mu}\,} \coloneqq f \) where \( \lambda(E) = \int_E f \,d\mu \).
@@ -1679,7 +1866,11 @@ Show that \( m(E) = 0 \).
     .\]
 :::
 
-### a
+::: {.solution}
+```{=tex}
+\envlist
+```
+a.  
 
 -   Strategy: use approximation by simple functions to show absolute continuity and apply Radon-Nikodym
 
@@ -1704,7 +1895,7 @@ Show that \( m(E) = 0 \).
 ```{=tex}
 \todo[inline]{What is the final step in this approximation?}
 ```
-### b
+b.  
 
 -   Set \( g(x) = x^2 \), note that \( g \) is positive and measurable.
 
@@ -1757,20 +1948,13 @@ Show that \( G \in \mathcal M \) and \( \mu(G) = 0 \).
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
-::: {.concept}
-```{=tex}
-\hfill
-```
--   ?
-:::
-
 -   Claim: \( G\in {\mathcal{M}} \).
 
     -   Claim:
         \[  
-        G = \qty{ \cap_{N=1}^\infty \cup_{n=N}^\infty E_n}^c = \cup_{N=1}^\infty \cap_{n=N}^\infty E_n^c
+        G = \qty{ \displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^\infty E_n}^c = \displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_n^c
         .\]
 
         -   This follows because \( x \) is in the RHS \( \iff \) \( x\in E_n^c \) for all but finitely many \( n \) \( \iff \) \( x\in E_n \) for at most finitely many \( n \).
@@ -1782,8 +1966,8 @@ Show that \( G \in \mathcal M \) and \( \mu(G) = 0 \).
     -   We have
         \[  
         \mu(G)
-        &= \mu\qty{\cup_{N=1}^\infty \cap_{n=N}^\infty E_n^c} \\
-        &\leq \sum_{N=1}^\infty \mu \qty{\cap_{n=N}^\infty E_n^c}  \\
+        &= \mu\qty{\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_n^c} \\
+        &\leq \sum_{N=1}^\infty \mu \qty{\displaystyle\bigcap_{n=N}^\infty E_n^c}  \\
         &\leq \sum_{N=1}^\infty \mu(E_M^c) \\ 
         &\coloneqq\sum_{N=1}^\infty \mu(X\setminus E_N) \\
         &\overset{N\to\infty}\to 0
@@ -1868,18 +2052,18 @@ Let \( K \) be the set of numbers in \( [0, 1] \) whose decimal expansions do no
 
 Show that \( K \) is a compact, nowhere dense set without isolated points, and find the Lebesgue measure \( m(K) \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Definition: \( A \) is *nowhere dense* \( \iff \) every interval \( I \) contains a subinterval \( S \subseteq A^c \).
     -   Equivalently, the interior of the closure is empty, \( \qty{\mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu}^\circ = \emptyset \).
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 Claim: **\( K \) is compact**.
 
 -   It suffices to show that \( K^c \coloneqq[0, 1]\setminus K \) is open; Then \( K \) will be a closed and bounded subset of \( {\mathbb{R}} \) and thus compact by Heine-Borel.
@@ -1898,7 +2082,7 @@ Claim: **\( K \) is compact**.
     = \qty{\sum_{j=1}^k d_j 10^{-j}} + \qty{4\cdot 10^{-k}} + \qty{\sum_{j=k+1}^\infty d_j 10^{-j}}
     .\]
 
--   Set \( r_x < 10^{-k} \) and let \( y \in [0, 1] \cap B_{r_x}(x) \) be arbitrary and write
+-   Set \( r_x < 10^{-k} \) and let \( y \in [0, 1] \displaystyle\bigcap B_{r_x}(x) \) be arbitrary and write
     \[  
     y = \sum_{j=1}^\infty c_j 10^{-j}
     .\]
@@ -1921,7 +2105,7 @@ Claim: **\( K \) is compact**.
 
 -   This means that for all \( j \leq k \) we have \( d_j = c_j \), and in particular \( d_k = 4 = c_k \), so \( y \) has a 4 in its decimal expansion.
 
--   But then \( K^c = \cup_x B_{r_x}(x) \) is a union of open sets and thus open.
+-   But then \( K^c = \displaystyle\bigcup_x B_{r_x}(x) \) is a union of open sets and thus open.
 
 Claim: **\( K \) is nowhere dense and \( m(K) = 0 \):**
 
@@ -1966,7 +2150,7 @@ Claim: **\( K \) has no isolated points**:
 -   Fix \( x \). Then for every \( \varepsilon \), by the Archimedean property of \( {\mathbb{R}} \), choose \( n \) such that \( \left( \frac 9 {10} \right)^n < \varepsilon \).
 
 -   Then there is an endpoint \( x_n \) of some deleted interval \( I_n \) satisfying
-    \[{\left\lvert {x - x_n} \right\rvert} \leq  \left( \frac 9 {10} \right)^n < \varepsilon.\]
+    \[{\left\lvert {x - x_n} \right\rvert} \leq  \left( \frac 9 {10} \right)^n < {\varepsilon}.\]
 
 -   So every ball containing \( x \) contains some endpoint of a removed interval, and thus an element of \( K \).
 :::
@@ -1985,39 +2169,43 @@ Let \( f, g: [a, b] \to {\mathbb{R}} \) be measurable with
 \[
 \int_{a}^{b} f(x) ~d x=\int_{a}^{b} g(x) ~d x.
 \]
-
 Show that either
 
 1.  \( f(x) = g(x) \) almost everywhere, or
 2.  There exists a measurable set \( E \subset [a, b] \) such that
-    \[]
+    \[
     \int _{E} f(x) \, dx > \int _{E} g(x) \, dx
     \]
 
-```{=tex}
-\todo[inline]{Add concepts.}
-```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
--   ?
+-   Monotonicity of the Lebesgue integral: \( f\leq g \) on \( A \) \( \implies \int_A f \leq \int_A g \)
 :::
 
--   Suppose it is *not* the case that \( f=g \) almost everywhere; then letting \( A\coloneqq\left\{{x\in [a,b] {~\mathrel{\Big|}~}f(x) \neq g(x)}\right\} \), we have \( m(A) > 0 \).
+::: {.strategy}
+Take the assumption and the negation of (1) and show (2). The obvious move: define the set \( A \) where they differ. The non-obvious move: split \( A \) itself up to get a strict inequality.
+:::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Write \( X\coloneqq[a, b] \),
+-   Suppose it is *not* the case that \( f=g \) almost everywhere; then letting \( A\coloneqq\left\{{x\in X {~\mathrel{\Big|}~}f(x) \neq g(x)}\right\} \), we have \( m(A) > 0 \).
 -   Write
-    \[  
-    A = A_1{\coprod}A_2 \coloneqq\left\{{f>g}\right\} {\coprod}\left\{{f<g}\right\}
-    ,\]
-    then \( m(A_1) > 0 \) or \( m(A_2) > 0 \) (or both).
-
--   Wlog (by relabeling \( f, g \) if necessary), suppose \( m(A_1) > 0 \), and take \( E\coloneqq A_1 \).
-
+    \[
+    A = A_1 {\textstyle\coprod}A_2 \coloneqq\left\{{f > g}\right\} {\textstyle\coprod}\left\{{f < g}\right\}
+    .\]
+-   Both \( A_i \) are measurable:
+    -   Since \( f,g \) are measurable functions, so is \( h\coloneqq f-g \).
+    -   We can write
+        \[
+        A_1 &\coloneqq\left\{{ x\in X {~\mathrel{\Big|}~}h > 0 }\right\} = h^{-1}((0, \infty)) \\
+        A_2 &\coloneqq\left\{{ x\in X {~\mathrel{\Big|}~}h < 0 }\right\} = h^{-1}((-\infty, 0))
+        ,\]
+        and pullbacks of Borel sets by measurable functions are measurable.
 -   Then on \( E \), we have \( f(x)>g(x) \) pointwise. This is preserved by monotonicity of the integral, thus
     \[  
     f(x) > g(x) \text{ on } E \implies \int_{E} f(x)\,dx > \int_{E} g(x)\, dx 
@@ -2042,22 +2230,93 @@ Show that
 > \chi_{E \cap(E+x)}(y)=\chi_{E}(y) \chi_{E}(y-x)
 > \]
 
-## Spring 2021 \# 1
+## Spring 2021 \# 1 \( \done \) {#spring-2021-1-done}
 
+::: {.problem title="Spring 2021 # 1"}
 Let \( (X, \mathcal{M},\mu) \) be a measure space and let \( E_n \in \mathcal{M} \) be a measurable set for \( n\geq 1 \). Let \( f_n \coloneqq\chi_{E_n} \) be the indicator function of the set \( E \) and show that
 
-a.  \( f_n \overset{n\to\infty}\to 1 \) uniformly \( \iff \) there exists \( N\in |NN \) such that \( E_n = X \) for all \( n\geq N \).
+a.  \( f_n \overset{n\to\infty}\to 1 \) uniformly \( \iff \) there exists \( N\in {\mathbb{N}} \) such that \( E_n = X \) for all \( n\geq N \).
 
 b.  \( f_n(x) \overset{n\to\infty}\to 1 \) for almost every \( x \) \( \iff \)
     \[
-    \mu \qty{ \bigcap_{n \geq 0} \bigcup_{k \geq n} (X \setminus E_k) } = 0
+    \mu \qty{ \displaystyle\bigcap_{n \geq 0} \displaystyle\bigcup_{k \geq n} (X \setminus E_k) } = 0
+    .\]
+:::
+
+::: {.solution}
+**Part a**:
+
+\( \implies \):
+
+-   Suppose \( \chi_{E_n}\to 1 \) uniformly, we want to produce an \( N \) such that \( n\geq N \implies x\in E_n \) for all \( x\in X \).
+-   Take \( {\varepsilon}\coloneqq 1/2 \). By uniform convergence, for \( N \) large enough,
+    \[
+    & \forall n\geq N \quad {\left\lvert {\chi_{E_n}(x) - 1} \right\rvert} < 1/2 && \forall x\in X\\
+    &\iff
+    \forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+    &\iff 
+    \forall n\geq N \quad x\in E_n && \forall x\in X
+    &\iff 
+    \forall n\geq N \quad E_n = X
+    ,\]
+    where we've used that \( E_n \subseteq X \) by definition and this shows \( X \subseteq E_n \). So this \( N \) suffices.
+
+\( \impliedby \):
+
+-   Let \( {\varepsilon}> 0 \) be arbitrary.
+-   Choose \( N \) such that \( n\geq N \implies X = E_n \). Then
+    \[
+    &\forall n\geq N \quad x\in E_n && \forall x\in X \\
+    &\forall n\geq N \quad \chi_{E_n}(x) = 1 && \forall x\in X \\
+    &\forall n\geq N \quad {\left\lvert {\chi_{E_n}(x) - 1} \right\rvert} = 0 < {\varepsilon}&& \forall x\in X 
+    ,\]
+    so \( \chi_{E_n} \to 1 \) uniformly.
+
+**Part b**:
+
+-   Define
+    \[
+    S &\coloneqq\left\{{x\in X {~\mathrel{\Big|}~}\chi_{E_k}(x) \to 1}\right\}\\
+    &\coloneqq\left\{{x\in X {~\mathrel{\Big|}~}\forall {\varepsilon},\, \exists N\, \text{ s.t. } {\left\lvert {\chi_{E_k}(x) - 1 } \right\rvert} < {\varepsilon},\forall k\geq N}\right\}\\
+    L &\coloneqq\displaystyle\bigcap_{n\geq 0} \displaystyle\bigcup_{k\geq n} \qty{X\setminus E_k}
+    ,\]
+    so \( S \) is the set where \( f_n\to f \) and \( X\setminus S \) is the exceptional set where \( f_n\not\to f \) doesn't converge pointwise.
+
+-   **Claim**: \( L = X\setminus S \), so if \( x\in S \iff x\in X\setminus L \).
+
+-   Proof of claim: Suppose there exists an \( N \) such that the first line below is true. Then for a fixed \( x \), there are equivalent statements:
+    \[
+    &\qquad x \in S \\
+    &\iff \exists N \text{ s.t. } \forall {\varepsilon}>0,\quad {\left\lvert {\chi_{E_k}(x) - 1 } \right\rvert} < {\varepsilon}&& \forall k\geq N \\ 
+    &\iff 
+    \exists N \text{ s.t. } 
+    {\left\lvert {\chi_{E_k}(x) - 1 } \right\rvert} = 0 && \forall k\geq N \\ 
+    &\iff 
+    \exists N \text{ s.t. } 
+    \chi_{E_k}(x) = 1 && \forall k\geq N \\
+    &\iff 
+    \exists N \text{ s.t. } 
+    x\in E_k && \forall k\geq N \\
+    &\iff 
+    \exists N \text{ s.t. } 
+    x\not\in X\setminus E_k &&\forall k\geq N \\
+    &\iff 
+    \exists N \text{ s.t. } 
+    x\not\in \displaystyle\bigcup_{k\geq N} X\setminus E_k  \\
+    &{\color{blue} \iff} 
+    x\not\in \displaystyle\bigcap_{n\geq 0}\displaystyle\bigcup_{k\geq n} X\setminus E_k \\
+    &\iff x\not\in L \\
+    &\iff x\in X\setminus L
     .\]
 
-## Spring 2021 \# 3
+-   Proving the iff: \( f_n\to f \) almost everywhere \( \iff \mu(X\setminus S) = 0 \iff \mu(L) = 0 \).
+:::
 
-Let \( (X, \mathcal{M}, \mu) \) be a finite measure space and let \( \left\{{ f_n}\right\}_{n=1}^{\infty } \subseteq L^1(X, \mu) \). Suppose \( f\in L^1(X, \mu) \) such that \( f_n(x) \overset{n\to \infty }\to f(x) \) for almost every \( x \in X \). Prove that for every \( \varepsilon> 0 \) there exists \( M>0 \) and a set \( E\subseteq X \) such that \( \mu(E) \leq \varepsilon \) and \( {\left\lvert {f_n(x)} \right\rvert}\leq M \) for all \( x\in X\setminus E \) and all \( n\in {\mathbb{N}} \).
+## Spring 2021 \# 3 \( \work \) {#spring-2021-3-work}
 
-## Fall 2020 \# 2
+Let \( (X, \mathcal{M}, \mu) \) be a finite measure space and let \( \left\{{ f_n}\right\}_{n=1}^{\infty } \subseteq L^1(X, \mu) \). Suppose \( f\in L^1(X, \mu) \) such that \( f_n(x) \overset{n\to \infty }\to f(x) \) for almost every \( x \in X \). Prove that for every \( {\varepsilon}> 0 \) there exists \( M>0 \) and a set \( E\subseteq X \) such that \( \mu(E) \leq {\varepsilon} \) and \( {\left\lvert {f_n(x)} \right\rvert}\leq M \) for all \( x\in X\setminus E \) and all \( n\in {\mathbb{N}} \).
+
+## Fall 2020 \# 2 \( \work \) {#fall-2020-2-work}
 
 a.  Let \( f: {\mathbb{R}}\to {\mathbb{R}} \). Prove that
     \[
@@ -2066,7 +2325,7 @@ a.  Let \( f: {\mathbb{R}}\to {\mathbb{R}} \). Prove that
 
 b.  Recall that a function \( f: {{\mathbb{R}}} \to {{\mathbb{R}}} \) is called *lower semi-continuous* iff it satisfies either condition in part (a) above.
 
-Prove that if \( \mathcal{F} \) is an y family of lower semi-continuous functions, then
+Prove that if \( \mathcal{F} \) is any family of lower semi-continuous functions, then
 \[
 g(x) = \sup\{ f(x) \mathrel{\Big|}f\in \mathcal{F}\}
 \]
@@ -2249,7 +2508,7 @@ Prove that if \( f_k \to f \) almost everywhere, then \( f ∈ L^2([0, 1]) \) wi
 ```
 -   Definition of \( L^+ \): space of measurable function \( X\to [0, \infty] \).
 -   Fatou: For any sequence of \( L^+ \) functions, \( \int \liminf f_n \leq \liminf \int f_n \).
--   Egorov's Theorem: If \( E\subseteq {\mathbb{R}}^n \) is measurable, \( m(E) > 0 \), \( f_k:E\to {\mathbb{R}} \) a sequence of measurable functions where \( \lim_{n\to\infty} f_n(x) \) exists and is finite a.e., then \( f_n\to f \) *almost uniformly*: for every \( \varepsilon>0 \) there exists a closed subset \( F_\varepsilon\subseteq E \) with \( m(E\setminus F) < \varepsilon \) and \( f_n\to f \) uniformly on \( F \).
+-   Egorov's Theorem: If \( E\subseteq {\mathbb{R}}^n \) is measurable, \( m(E) > 0 \), \( f_k:E\to {\mathbb{R}} \) a sequence of measurable functions where \( \lim_{n\to\infty} f_n(x) \) exists and is finite a.e., then \( f_n\to f \) *almost uniformly*: for every \( {\varepsilon}>0 \) there exists a closed subset \( F_{\varepsilon}\subseteq E \) with \( m(E\setminus F) < {\varepsilon} \) and \( f_n\to f \) uniformly on \( F \).
 :::
 
 \( L^2 \) bound:
@@ -2273,31 +2532,31 @@ Prove that if \( f_k \to f \) almost everywhere, then \( f ∈ L^2([0, 1]) \) wi
 ```
 Equality of Integrals:
 
--   Take the sequence \( \varepsilon_n = {1\over n} \)
+-   Take the sequence \( {\varepsilon}_n = {1\over n} \)
 
--   Apply Egorov's theorem: obtain a set \( F_\varepsilon \) such that \( f_n \to f \) uniformly on \( F_\varepsilon \) and \( m(I\setminus F_\varepsilon) < \varepsilon \).
+-   Apply Egorov's theorem: obtain a set \( F_{\varepsilon} \) such that \( f_n \to f \) uniformly on \( F_{\varepsilon} \) and \( m(I\setminus F_{\varepsilon}) < {\varepsilon} \).
     \[
     \lim_{n\to \infty} {\left\lvert { \int_0^1 f_n - f } \right\rvert}
     &\leq \lim_{n\to\infty} \int_0^1 {\left\lvert {f_n - f} \right\rvert} \\
-    &= \lim_{n\to\infty} \qty{ \int_{F_\varepsilon} {\left\lvert {f_n - f} \right\rvert} + \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert} } \\
-    &= \int_{F_\varepsilon} \lim_{n\to\infty} {\left\lvert {f_n - f} \right\rvert} + \lim_{n\to\infty} \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert} \quad\text{by uniform convergence} \\ 
-    &= 0 + \lim_{n\to\infty} \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert}
+    &= \lim_{n\to\infty} \qty{ \int_{F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert} + \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert} } \\
+    &= \int_{F_{\varepsilon}} \lim_{n\to\infty} {\left\lvert {f_n - f} \right\rvert} + \lim_{n\to\infty} \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert} \quad\text{by uniform convergence} \\ 
+    &= 0 + \lim_{n\to\infty} \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert}
     ,\]
 
-    so it suffices to show \( \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert} \overset{n\to\infty}\to 0 \).
+    so it suffices to show \( \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert} \overset{n\to\infty}\to 0 \).
 
 -   We can obtain a bound using Holder's inequality with \( p=q=2 \):
     \[
-    \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert} 
-    &\leq \qty{ \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert}^2 } \qty{ \int_{I\setminus F_\varepsilon} {\left\lvert {1} \right\rvert}^2  } \\
-    &= \qty{ \int_{I\setminus F_\varepsilon} {\left\lvert {f_n - f} \right\rvert}^2 } \mu(F_\varepsilon) \\
-    &\leq {\left\lVert {f_n - f} \right\rVert}_2 \mu(F_\varepsilon) \\
-    &\leq \qty{ {\left\lVert {f_n} \right\rVert}_2 + {\left\lVert {f} \right\rVert}_2 } \mu(F_\varepsilon) \\
-    &\leq 2M \cdot \mu(F_\varepsilon)
+    \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert} 
+    &\leq \qty{ \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert}^2 } \qty{ \int_{I\setminus F_{\varepsilon}} {\left\lvert {1} \right\rvert}^2  } \\
+    &= \qty{ \int_{I\setminus F_{\varepsilon}} {\left\lvert {f_n - f} \right\rvert}^2 } \mu(F_{\varepsilon}) \\
+    &\leq {\left\lVert {f_n - f} \right\rVert}_2 \mu(F_{\varepsilon}) \\
+    &\leq \qty{ {\left\lVert {f_n} \right\rVert}_2 + {\left\lVert {f} \right\rVert}_2 } \mu(F_{\varepsilon}) \\
+    &\leq 2M \cdot \mu(F_{\varepsilon})
     \]
-    where \( M \) is now a constant not depending on \( \varepsilon \) or \( n \).
+    where \( M \) is now a constant not depending on \( {\varepsilon} \) or \( n \).
 
--   Now take a nested sequence of sets \( F_{\varepsilon} \) with \( \mu(F_\varepsilon) \to 0 \) and applying continuity of measure yields the desired statement.
+-   Now take a nested sequence of sets \( F_{{\varepsilon}} \) with \( \mu(F_{\varepsilon}) \to 0 \) and applying continuity of measure yields the desired statement.
 :::
 
 ## Fall 2018 \# 6 \( \done \) {#fall-2018-6-done}
@@ -2578,10 +2837,10 @@ Let \( f\in L^1({\mathbb{R}}) \). Show that
     \[  
     {\left\lVert {\tau_x f -f} \right\rVert}_{L^1} \overset{x\to 0}\to 0
     .\]
--   Claim: by an \( \varepsilon/3 \) argument, it suffices to show this for compactly supported functions:
+-   Claim: by an \( {\varepsilon}/3 \) argument, it suffices to show this for compactly supported functions:
     -   Since \( f\in L^1 \), choose \( g_n\subset C_c^\infty({\mathbb{R}}^1) \) smooth and compactly supported so that
-        \[{\left\lVert {f-g} \right\rVert}_{L^1} < \varepsilon.\]
-    -   Claim: \( {\left\lVert {\tau_x f - \tau_x g} \right\rVert} < \varepsilon \).
+        \[{\left\lVert {f-g} \right\rVert}_{L^1} < {\varepsilon}.\]
+    -   Claim: \( {\left\lVert {\tau_x f - \tau_x g} \right\rVert} < {\varepsilon} \).
         -   Proof 1: translation invariance of the integral.
         -   Proof 2: Apply a change of variables:
             \[  
@@ -2590,14 +2849,14 @@ Let \( f\in L^1({\mathbb{R}}) \). Show that
             &= \int_{\mathbb{R}}{\left\lvert {f(y-x) - g(y-x)} \right\rvert}\, dy  \\
             &= \int_{\mathbb{R}}{\left\lvert {f(u) - g(u)} \right\rvert}\, du \qquad (u=y-x,\, du=dy) \\
             &= {\left\lVert {f-g} \right\rVert}_1 \\
-            &< \varepsilon
+            &< {\varepsilon}
             .\]
     -   Then
         \[  
         {\left\lVert {\tau_x f - f} \right\rVert}_1 
         &= {\left\lVert {\tau_x f - \tau_x g + \tau_x g - g +g - f} \right\rVert}_{1} \\
         &\leq {\left\lVert {\tau_x f - \tau_x g} \right\rVert}_1 + {\left\lVert {\tau_x g - g} \right\rVert}_1 + {\left\lVert {g - f} \right\rVert}_{1} \\
-        &\leq 2\varepsilon+ {\left\lVert {\tau_x g - g} \right\rVert}_1
+        &\leq 2{\varepsilon}+ {\left\lVert {\tau_x g - g} \right\rVert}_1
         .\]
 -   To show this for compactly supported functions:
     -   Let \( g\in C_c^\infty({\mathbb{R}}^1) \), let \( E = {\operatorname{supp}}(g) \), and write
@@ -2636,13 +2895,58 @@ Show that the following limit exists and satisfies the equality
 \lim _{x \rightarrow \infty} f(x) \leq 1 + \frac \pi 4
 \]
 
-## Spring 2021 \# 2
+## Spring 2021 \# 2 \( \done \) {#spring-2021-2-done}
 
+::: {.problem title="?"}
 Calculate the following limit, justifying each step of your calculation:
-
 \[
 L \coloneqq\lim_{n\to \infty} \int_0^n { \cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} }\,dx
 .\]
+:::
+
+::: {.solution}
+-   If interchanging a limit and integral is justified, we have
+    \[
+    L 
+    &\coloneqq\lim_{n\to \infty} \int_{(0, n)} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \,dx\\
+    &= \lim_{n\to \infty} \int_{(0, \infty)} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \,dx\\
+    &\overset{\text{DCT}}{=} \int_{(0, \infty)} \lim_{n\to \infty} \chi_{(0, n)}(x) {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \,dx\\
+    &= \int_{(0, \infty)} \chi_{(0, \infty)}(x) \lim_{n\to \infty} {\cos\qty{x\over n} \over x^2 + \cos\qty{x\over n} } \,dx\\
+    &= \int_{(0, \infty)} {\lim_{n\to \infty} \cos\qty{x\over n} \over \lim_{n\to \infty} x^2 + \cos\qty{x\over n} } \,dx\\
+    &= \int_{(0, \infty)} {\cos\qty{\lim_{n\to \infty} {x\over n} } \over x^2 + \cos\qty{\lim_{n\to \infty} {x\over n} } } \,dx\\
+    &= \int_{(0, \infty)} {1\over x^2 + 1}\,dx\\
+    &= \arctan(x)\Big|_0^\infty \\
+    &= {\pi \over 2}
+    ,\]
+    where we've used that \( \cos(\theta) \) is continuous on \( {\mathbb{R}} \) to pass a limit inside, noting that \( x \) is fixed in the integrand.
+
+-   Justifying the interchange: DCT. Write \( f_n(x) \coloneqq\cos(x/n) / (x^2 + \cos(x/n)) \).
+
+-   On \( (\alpha, \infty) \) for any \( \alpha > 1 \):
+
+    -   We have
+        \[
+        {\left\lvert {f_n(x)} \right\rvert} \leq 
+        {\left\lvert {1\over x^2 + \cos(x/n)} \right\rvert} \leq {1\over x^2-1}
+        ,\]
+        where we've used that \( -1\leq \cos(x/n) \leq 1 \) for every \( x \), and so the denominator is minimized when \( \cos(x/n) = -1 \), and this maximizes the quantity.
+    -   Setting \( g(x) \coloneqq 1/(x^2-1) \), we have \( g\in L^1(\alpha, \infty) \) by the limit comparison test with \( h(x) \coloneqq x^2 \):
+        \[
+        {g(x) \over h(x) } \coloneqq{x^2 -1 \over x^2 } = 1 - {1\over x^2} \overset{x\to \infty}\longrightarrow 1 < \infty
+        ,\]
+        and so \( g, h \) either both converge or both diverge. But \( \int_\alpha^\infty {1\over x^2}\,dx< \infty \) by the \( p{\hbox{-}} \)test for integrals since \( \alpha>1 \).
+
+-   On \( (0, \alpha) \):
+
+    -   Just use that \( f_n(x) \) is bounded by a constant:
+        \[
+        {\left\lvert {f_n(x)} \right\rvert} 
+        = {\left\lvert {\cos(x/n) \over x^2 + \cos(x/n)} \right\rvert}
+        \leq {\left\lvert {\cos(x/n) \over \cos(x/n)} \right\rvert} = 1
+        ,\]
+        where we've used that \( x^2 \) is positive, and removing it from the denominator only makes the quantity larger.
+    -   Then check that \( \int_0^\alpha 1 \,dx= \alpha < \infty \), so \( 1\in L^1(0, \alpha) \).
+:::
 
 ## Spring 2021 \# 5
 
@@ -2650,7 +2954,7 @@ Let \( f_n \in L^2([0, 1]) \) for \( n\in {\mathbb{N}} \), and assume that
 
 -   \( {\left\lVert {f_n} \right\rVert}_2 \leq n^{-51 \over 100} \) for all \( n\in {\mathbb{N}} \),
 
--   \( hat{f}_n \) is supported in the interval \( [2^n, 2^{n+1}] \), so
+-   \( \widehat{f}_n \) is supported in the interval \( [2^n, 2^{n+1}] \), so
     \[
     \widehat{f}_n(\xi) \coloneqq\int_0^1 f_n(x) e^{2\pi i \xi \cdot x} \,dx= 0 && \text{for } \xi \not\in [2^n, 2^{n+1}]
     .\]
@@ -2670,17 +2974,17 @@ Show that
 \lim _{p \rightarrow \infty}\left(\int_{[0,1]} f(x)^{p} d x\right)^{\frac{1}{p}}=\|f\|_{\infty}.
 \]
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   \( {\left\lVert {f} \right\rVert}_\infty \coloneqq\inf_t {\left\{{ t{~\mathrel{\Big|}~}m\qty{\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}f(x) > t}\right\}} = 0 }\right\} } \), i.e. this is the lowest upper bound that holds almost everywhere.
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   \( {\left\lVert {f} \right\rVert}_p \leq {\left\lVert {f} \right\rVert}_\infty \):
     -   Note \( {\left\lvert {f(x)} \right\rvert} \leq {\left\lVert {f} \right\rVert}_\infty \) almost everywhere and taking \( p \)th powers preserves this inequality.
 
@@ -2707,16 +3011,16 @@ Show that
         S_\varepsilon \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \geq {\left\lVert {f} \right\rVert}_\infty - \varepsilon}\right\}
         .\]
 
-        -   Note that \( m(S_\varepsilon) > 0 \); otherwise if \( m(S_\varepsilon) = 0 \), then \( t\coloneqq{\left\lVert {f} \right\rVert}_\infty - \varepsilon< {\left\lVert {f} \right\rVert}_\varepsilon \). But this produces a *smaller* upper bound almost everywhere than \( {\left\lVert {f} \right\rVert}_\varepsilon \), contradicting the definition of \( {\left\lVert {f} \right\rVert}_\varepsilon \) as an infimum over such bounds.
+        -   Note that \( m(S_{\varepsilon}) > 0 \); otherwise if \( m(S_{\varepsilon}) = 0 \), then \( t\coloneqq{\left\lVert {f} \right\rVert}_\infty - {\varepsilon}< {\left\lVert {f} \right\rVert}_{\varepsilon} \). But this produces a *smaller* upper bound almost everywhere than \( {\left\lVert {f} \right\rVert}_{\varepsilon} \), contradicting the definition of \( {\left\lVert {f} \right\rVert}_{\varepsilon} \) as an infimum over such bounds.
 
     -   Then
         \[
         {\left\lVert {f} \right\rVert}_p^p 
         &= \int_X {\left\lvert {f(x)} \right\rvert}^p ~dx \\
-        &\geq \int_{S_\varepsilon} {\left\lvert {f(x)} \right\rvert}^p ~dx \quad\text{since } S_\varepsilon\subseteq X \\
-        &\geq \int_{S_\varepsilon} {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert}^p ~dx \quad\text{since on } S_\varepsilon, {\left\lvert {f} \right\rvert} \geq {\left\lVert {f} \right\rVert}_\infty - \varepsilon\\
+        &\geq \int_{S_\varepsilon} {\left\lvert {f(x)} \right\rvert}^p ~dx \quad\text{since } S_{\varepsilon}\subseteq X \\
+        &\geq \int_{S_\varepsilon} {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert}^p ~dx \quad\text{since on } S_{\varepsilon}, {\left\lvert {f} \right\rvert} \geq {\left\lVert {f} \right\rVert}_\infty - {\varepsilon}\\
         &= {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert}^p \cdot m(S_\varepsilon) \quad\text{since the integrand is independent of }x \\
-        & \geq 0 \quad\text{since } m(S_\varepsilon) > 0
+        & \geq 0 \quad\text{since } m(S_{\varepsilon}) > 0
         \]
 
     -   Taking \( p \)th roots for \( p\geq 1 \) preserves the inequality, so
@@ -2738,22 +3042,24 @@ Let \( f\in L^2([0, 1]) \) and suppose
 \]
 Show that \( f = 0 \) almost everywhere.
 
-::: {.solution}
-```{=tex}
-\hfill
-```
-### Proof 1: Using Fourier Transforms
-
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Weierstrass Approximation: A continuous function on a compact set can be uniformly approximated by polynomials.
+-   \( C^1([0, 1]) \) is dense in \( L^2([0, 1]) \)
+-   Polynomials are dense in \( L^p(X, \mathcal{M}, \mu) \) for any \( X\subseteq {\mathbb{R}}^n \) compact and \( \mu \) a finite measure, for all \( 1\leq p < \infty \).
+    -   Use Weierstrass Approximation, then uniform convergence implies \( L^p(\mu) \) convergence by DCT.
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="using Fourier transforms"}
+```{=tex}
+\envlist
+```
 -   Fix \( k \in {\mathbb{Z}} \).
 
 -   Since \( e^{2\pi i k x} \) is continuous on the compact interval \( [0, 1] \), it is uniformly continuous.
@@ -2783,29 +3089,18 @@ Show that \( f = 0 \) almost everywhere.
 -   Thus \( f\in S^\perp \coloneqq{\operatorname{span}}_{\mathbb{C}}\left\{{e_k}\right\}_{k\in {\mathbb{Z}}}^\perp \subseteq L^2([0, 1]) \), but since this is a basis, \( S \) is dense and thus \( S^\perp = \left\{{0}\right\} \) in \( L^2([0, 1]) \).
 
 -   Thus \( f\equiv 0 \) in \( L^2([0, 1]) \), which implies that \( f \) is zero almost everywhere.
-
-\( \hfill\blacksquare \)
-
-### Alternative Proof
-
-```{=tex}
-\hfill
-```
-::: {.concept}
-```{=tex}
-\hfill
-```
--   \( C^1([0, 1]) \) is dense in \( L^2([0, 1]) \)
--   Polynomials are dense in \( L^p(X, \mathcal{M}, \mu) \) for any \( X\subseteq {\mathbb{R}}^n \) compact and \( \mu \) a finite measure, for all \( 1\leq p < \infty \).
-    -   Use Weierstrass Approximation, then uniform convergence implies \( L^p(\mu) \) convergence by DCT.
 :::
 
--   By density of polynomials, for \( f\in L^2([0, 1]) \) choose \( p_\varepsilon(x) \) such that \( {\left\lVert {f - p_\varepsilon} \right\rVert} < \varepsilon \) by Weierstrass approximation.
+::: {.proof title="Alternative"}
+```{=tex}
+\envlist
+```
+-   By density of polynomials, for \( f\in L^2([0, 1]) \) choose \( p_{\varepsilon}(x) \) such that \( {\left\lVert {f - p_{\varepsilon}} \right\rVert} < {\varepsilon} \) by Weierstrass approximation.
 
 -   Then on one hand,
     \[
-    {\left\lVert {f(f-p_\varepsilon)} \right\rVert}_1 
-    &= {\left\lVert {f^2} \right\rVert}_1 - {\left\lVert {f\cdot p_\varepsilon} \right\rVert}_1 \\
+    {\left\lVert {f(f-p_{\varepsilon})} \right\rVert}_1 
+    &= {\left\lVert {f^2} \right\rVert}_1 - {\left\lVert {f\cdot p_{\varepsilon}} \right\rVert}_1 \\
     &= {\left\lVert {f^2} \right\rVert}_1 - 0 \quad\text{by assumption} \\
     &= {\left\lVert {f} \right\rVert}_2^2
     .\]
@@ -2814,20 +3109,21 @@ Show that \( f = 0 \) almost everywhere.
 
 -   On the other hand
     \[
-    {\left\lVert {f(f-p_\varepsilon)} \right\rVert} 
-    &\leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {f-p_\varepsilon} \right\rVert}_\infty \quad\text{by Holder} \\
-    &\leq \varepsilon{\left\lVert {f} \right\rVert}_1  \\
-    &\leq \varepsilon{\left\lVert {f} \right\rVert}_2 \sqrt{m(X)} \\ 
-    &= \varepsilon{\left\lVert {f} \right\rVert}_2 \quad\text{since } m(X)= 1
+    {\left\lVert {f(f-p_{\varepsilon})} \right\rVert} 
+    &\leq {\left\lVert {f} \right\rVert}_1 {\left\lVert {f-p_{\varepsilon}} \right\rVert}_\infty \quad\text{by Holder} \\
+    &\leq {\varepsilon}{\left\lVert {f} \right\rVert}_1  \\
+    &\leq {\varepsilon}{\left\lVert {f} \right\rVert}_2 \sqrt{m(X)} \\ 
+    &= {\varepsilon}{\left\lVert {f} \right\rVert}_2 \quad\text{since } m(X)= 1
     .\]
 
     -   Where we've used that \( {\left\lVert {fg} \right\rVert}_1 = \int {\left\lvert {fg} \right\rvert} = \int {\left\lvert {f} \right\rvert}{\left\lvert {g} \right\rvert} \leq \int {\left\lVert {f} \right\rVert}_\infty {\left\lvert {g} \right\rvert} = {\left\lVert {f} \right\rVert}_\infty {\left\lVert {g} \right\rVert}_1 \).
 
 -   Combining these,
     \[
-    {\left\lVert {f} \right\rVert}_2^2 \leq {\left\lVert {f} \right\rVert}_2 \varepsilon\implies {\left\lVert {f} \right\rVert}_2 < \varepsilon\to 0,
+    {\left\lVert {f} \right\rVert}_2^2 \leq {\left\lVert {f} \right\rVert}_2 {\varepsilon}\implies {\left\lVert {f} \right\rVert}_2 < {\varepsilon}\to 0,
     .\]
     so \( {\left\lVert {f} \right\rVert}_2 = 0 \), which implies \( f=0 \) almost everywhere.
+:::
 :::
 
 ## Spring 2015 \# 2 \( \work \) {#spring-2015-2-work}
@@ -2862,25 +3158,20 @@ b.  Prove that if \( f\in L^1([1, \infty]) \) and is decreasing, then \( \lim_{x
 
 c.  If \( f: [1, \infty) \to [0, \infty) \) is decreasing with \( \lim_{x\to \infty} xf(x) = 0 \), does this ensure that \( f\in L^1([1, \infty)) \)?
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Limits
--   Cauchy Criterion for Integrals: \( \int_a^\infty f(x) \,dx \) converges iff for every \( \varepsilon>0 \) there exists an \( M_0 \) such that \( A,B\geq M_0 \) implies \( {\left\lvert {\int_A^B f} \right\rvert} < \varepsilon \), i.e. \( {\left\lvert {\int_A^B f} \right\rvert} \overset{A\to\infty}\to 0 \).
+-   Cauchy Criterion for Integrals: \( \int_a^\infty f(x) \,dx \) converges iff for every \( {\varepsilon}>0 \) there exists an \( M_0 \) such that \( A,B\geq M_0 \) implies \( {\left\lvert {\int_A^B f} \right\rvert} < {\varepsilon} \), i.e. \( {\left\lvert {\int_A^B f} \right\rvert} \overset{A\to\infty}\to 0 \).
 -   Integrals of \( L^1 \) functions have vanishing tails: \( \int_{N}^\infty {\left\lvert {f} \right\rvert} \overset{N\to\infty}\to 0 \).
 -   Mean Value Theorem for Integrals: \( \int_a^b f(t)\, dt = (b-a) f(c) \) for some \( c\in [a, b] \).
 :::
 
-### a
-
+::: {.solution title="of a"}
 Stated integral equality:
 
--   Let \( \varepsilon> 0 \)
+-   Let \( {\varepsilon}> 0 \)
 -   \( C_c({\mathbb{R}}^n) \hookrightarrow L^1({\mathbb{R}}^n) \) is dense so choose \( \left\{{f_n}\right\} \to f \) with \( {\left\lVert {f_n - f} \right\rVert}_1 \to 0 \).
 -   Since \( \left\{{f_n}\right\} \) are compactly supported, choose \( N_0\gg 1 \) such that \( f_n \) is zero outside of \( B_{N_0}(\mathbf{0}) \).
 -   Then
@@ -2902,11 +3193,13 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
     \[\int_{{\left\lvert {x} \right\rvert} > N} {\left\lvert {f} \right\rvert} = \sum_{j=N}^\infty 1/2^j \overset{N\to\infty}\to 0\]
     as the tail of a convergent sum.
 -   However \( f(x) = 1 \) for infinitely many even integers \( x > N \), so \( f(x) \not\to 0 \) as \( {\left\lvert {x} \right\rvert}\to\infty \).
+:::
 
-### b
-
-#### Solution 1 ("Trick")
-
+::: {.solution title="of b"}
+::: {.proof title="Solution 1: Trick"}
+```{=tex}
+\envlist
+```
 -   Since \( f \) is decreasing on \( [1, \infty) \), for any \( t\in [x-n, x] \) we have
     \[
     x-n \leq t \leq x \implies f(x) \leq f(t) \leq f(x-n)
@@ -2931,9 +3224,12 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
 -   Since \( x>1 \), \( {\left\lvert {f(x)} \right\rvert} \leq {\left\lvert {xf(x)} \right\rvert} \)
 
 -   Thus \( f(x) \overset{x\to\infty}\to 0 \) as well.
+:::
 
-#### Solution 2 (Variation on the Trick)
-
+::: {.proof title="Solution 2: Variation on the trick"}
+```{=tex}
+\envlist
+```
 -   Use mean value theorem for integrals:
     \[
     \int_x^{2x} f(t)\, dt = xf(c_x) \quad\text{for some $c_x \in [x, 2x]$ depending on $x$}
@@ -2952,9 +3248,9 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
 -   So \( 2x f(2x) \to 0 \), which by a change of variables gives \( uf(u) \to 0 \).
 
 -   Since \( u\geq 1 \), \( f(u) \leq uf(u) \) so \( f(u) \to 0 \) as well.
+:::
 
-#### Solution 3 (Contradiction)
-
+::: {.proof title="Solution 3: Contradiction"}
 Just showing \( f(x) \overset{x\to \infty}\to 0 \):
 
 -   Toward a contradiction, suppose not.
@@ -2972,13 +3268,13 @@ Just showing \( f(x) \overset{x\to \infty}\to 0 \):
 
 -   If \( L>0 \):
 
-    -   Fix \( \varepsilon>0 \), choose \( x_0\gg 1 \) such that \( t\geq x_0 \implies L-\varepsilon\leq f(t) \leq L \)
+    -   Fix \( {\varepsilon}>0 \), choose \( x_0\gg 1 \) such that \( t\geq x_0 \implies L-{\varepsilon}\leq f(t) \leq L \)
     -   Then
-        \[\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L-\varepsilon}\,dt = \infty\]
+        \[\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L-{\varepsilon}}\,dt = \infty\]
 
 -   If \( L<0 \):
 
-    -   Fix \( \varepsilon> 0 \), choose \( x_0\gg 1 \) such that \( t\geq x_0 \implies L \leq f(t) \leq L + \varepsilon \).
+    -   Fix \( {\varepsilon}> 0 \), choose \( x_0\gg 1 \) such that \( t\geq x_0 \implies L \leq f(t) \leq L + {\varepsilon} \).
     -   Then
         \[\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L}\,dt = \infty\]
 
@@ -2996,18 +3292,18 @@ Showing \( xf(x) \overset{x\to \infty}\to 0 \).
         \sum_{x_i \in S} \int_{x_i}^{2x_i} {\left\lvert {f(x_i)} \right\rvert} &= \sum_{x_i \in S} x_i f(x_i) \to \infty
         .\]
 -   If \( xf(x) \to L \neq 0 \) for \( 0 < L< \infty \):
-    -   Fix \( \varepsilon> 0 \), choose an infinite sequence \( \left\{{x_i}\right\} \) such that \( L-\varepsilon\leq x_i f(x_i) \leq L \) for all \( i \).
+    -   Fix \( {\varepsilon}> 0 \), choose an infinite sequence \( \left\{{x_i}\right\} \) such that \( L-{\varepsilon}\leq x_i f(x_i) \leq L \) for all \( i \).
         \[
-        \int_1^\infty {\left\lvert {f} \right\rvert} \geq \sum_S \int_{x_i}^{2x_i} {\left\lvert {f(t)} \right\rvert}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L-\varepsilon} \to \infty
+        \int_1^\infty {\left\lvert {f} \right\rvert} \geq \sum_S \int_{x_i}^{2x_i} {\left\lvert {f(t)} \right\rvert}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L-{\varepsilon}} \to \infty
         .\]
 -   If \( xf(x) \to L \neq 0 \) for \( -\infty < L < 0 \):
-    -   Fix \( \varepsilon> 0 \), choose an infinite sequence \( \left\{{x_i}\right\} \) such that \( L \leq x_i f(x_i) \leq L + \varepsilon \) for all \( i \).
+    -   Fix \( {\varepsilon}> 0 \), choose an infinite sequence \( \left\{{x_i}\right\} \) such that \( L \leq x_i f(x_i) \leq L + {\varepsilon} \) for all \( i \).
         \[
         \int_1^\infty {\left\lvert {f} \right\rvert} \geq \sum_S \int_{x_i}^{2x_i} {\left\lvert {f(t)} \right\rvert}\,dt \geq \sum_S \int_{x_i}^{2x_i} f(x_i) \,dt = \sum_S x_i f(x_i) \geq \sum_S \qty{L} \to \infty
         .\]
+:::
 
-#### Solution 4 (Akos's Suggestion)
-
+::: {.proof title="Solution 4: Akos' suggestion"}
 For \( x\geq 1 \),
 \[
 {\left\lvert {xf(x)} \right\rvert} = {\left\lvert { \int_x^{2x} f(x) \, dt } \right\rvert} \leq \int_x^{2x} {\left\lvert {f(x)} \right\rvert} \, dt \leq \int_x^{2x} {\left\lvert {f(t)} \right\rvert}\, dt \leq \int_x^{\infty} {\left\lvert {f(t)} \right\rvert} \,dt \overset{x\to\infty}\to 0
@@ -3017,23 +3313,30 @@ where we've used
 -   Since \( f \) is decreasing and \( \lim_{x\to\infty}f(x) =0 \) from part (a), \( f \) is non-negative.
 -   Since \( f \) is positive and decreasing, for every \( t\in[a, b] \) we have \( {\left\lvert {f(a)} \right\rvert} \leq {\left\lvert {f(t)} \right\rvert} \).
 -   By part (a), the last integral goes to zero.
+:::
 
-#### Solution 5 (Peter's)
-
--   Toward a contradiction, produce a sequence \( x_i\to\infty \) with \( x_i f(x_i) \to \infty \) and \( x_if(x_i) > \varepsilon> 0 \), then
+::: {.proof title="Solution 5: Peter's"}
+```{=tex}
+\envlist
+```
+-   Toward a contradiction, produce a sequence \( x_i\to\infty \) with \( x_i f(x_i) \to \infty \) and \( x_if(x_i) > {\varepsilon}> 0 \), then
     \[
     \int f(x) \, dx 
     &\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x) \, dx \\
     &\geq \sum_{i=1}^\infty \int_{x_i}^{x_{i+1}} f(x_{i+1}) \, dx \\
     &=    \sum_{i=1}^\infty f(x_{i+1}) \int_{x_i}^{x_{i+1}} \, dx \\
     &\geq \sum_{i=1}^\infty (x_{i+1} - x_i) f(x_{i+1}) \\
-    &\geq \sum_{i=1}^\infty (x_{i+1} - x_i) {\varepsilon\over x_{i+1}} \\
-    &= \varepsilon\sum_{i=1}^\infty \qty{ 1 - {x_{i-1} \over x_i}} \to \infty
+    &\geq \sum_{i=1}^\infty (x_{i+1} - x_i) {{\varepsilon}\over x_{i+1}} \\
+    &= {\varepsilon}\sum_{i=1}^\infty \qty{ 1 - {x_{i-1} \over x_i}} \to \infty
     \]
     which can be ensured by passing to a subsequence where \( \sum {x_{i-1} \over x_i} < \infty \).
+:::
+:::
 
-### c
-
+::: {.solution title="of c"}
+```{=tex}
+\envlist
+```
 -   No: take \( f(x) = {1\over x\ln x} \)
 -   Then by a \( u{\hbox{-}} \)substitution,
     \[
@@ -3046,43 +3349,40 @@ where we've used
     .\]
 :::
 
+:::
+
 ## Fall 2019 \# 5. \( \done \) {#fall-2019-5.-done}
 
-### a
+a.  Show that if \( f \) is continuous with compact support on \( {\mathbb{R}} \), then
+    \[
+    \lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
+    \]
 
-Show that if \( f \) is continuous with compact support on \( {\mathbb{R}} \), then
-\[
-\lim _{y \rightarrow 0} \int_{\mathbb{R}}|f(x-y)-f(x)| d x=0
-\]
+b.  Let \( f\in L^1({\mathbb{R}}) \) and for each \( h > 0 \) let
+    \[
+    \mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
+    \]
 
-### b
+-   Prove that \( \left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1} \) for all \( h > 0 \).
 
-Let \( f\in L^1({\mathbb{R}}) \) and for each \( h > 0 \) let
-\[
-\mathcal{A}_{h} f(x):=\frac{1}{2 h} \int_{|y| \leq h} f(x-y) d y
-\]
-
-i.  Prove that \( \left\|\mathcal{A}_{h} f\right\|_{1} \leq\|f\|_{1} \) for all \( h > 0 \).
-
-ii. Prove that \( \mathcal{A}_h f \to f \) in \( L^1({\mathbb{R}}) \) as \( h \to 0^+ \).
+-   Prove that \( \mathcal{A}_h f \to f \) in \( L^1({\mathbb{R}}) \) as \( h \to 0^+ \).
 
 ```{=tex}
 \todo[inline]{Walk through.}
 ```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Continuity in \( L^1 \) (recall that DCT won't work! Notes 19.4, prove it for a dense subset first).
 -   Lebesgue differentiation in 1-dimensional case. See HW 5.6.
 :::
 
-### a
-
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
 Choose \( g\in C_c^0 \) such that \( {\left\lVert {f- g} \right\rVert}_1 \to 0 \).
 
 By translation invariance, \( {\left\lVert {\tau_h f - \tau_h g} \right\rVert}_1 \to 0 \).
@@ -3111,9 +3411,9 @@ then
 \[
 \int_K {\left\lvert {g(x-h) - g(x)} \right\rvert} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
 \]
+:::
 
-### b
-
+::: {.proof title="of b"}
 We have
 \[
 \int_{\mathbb{R}}{\left\lvert {A_h(f)(x)} \right\rvert} ~dx 
@@ -3135,6 +3435,7 @@ and (rough sketch)
 &\to 0 \quad\text{by (a)}
 .\]
 :::
+:::
 
 ## Fall 2017 \# 3 \( \done \) {#fall-2017-3-done}
 
@@ -3152,31 +3453,35 @@ Show that for every \( f\in L^1({\mathbb{R}}) \), there exists a sequence of fun
 ```{=tex}
 \todo[inline]{Walk through.}
 ```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   From homework: \( E \) is Lebesgue measurable iff there exists a finite union of closed cubes \( A \) such that \( m(E\Delta A) < \varepsilon \).
 :::
 
-It suffices to show that \( S \) is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for \( \chi_A \) for \( A \) a measurable set.
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   It suffices to show that \( S \) is dense in simple functions, and since simple functions are *finite* linear combinations of characteristic functions, it suffices to show this for \( \chi_A \) for \( A \) a measurable set.
 
-Let \( s = \chi_{A} \). By regularity of the Lebesgue measure, choose an open set \( O \supseteq A \) such that \( m(O\setminus A) < \varepsilon \).
+-   Let \( s = \chi_{A} \).
 
-\( O \) is an open subset of \( {\mathbb{R}} \), and thus \( O = {\coprod}_{j\in {\mathbb{N}}} I_j \) is a disjoint union of countably many open intervals.
+-   By regularity of the Lebesgue measure, choose an open set \( O \supseteq A \) such that \( m(O\setminus A) < \varepsilon \).
 
-Now choose \( N \) large enough such that \( m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n \) where we define \( I_{N, n} \coloneqq{\coprod}_{j=1}^N I_j \).
+-   \( O \) is an open subset of \( {\mathbb{R}} \), and thus \( O = {\textstyle\coprod}_{j\in {\mathbb{N}}} I_j \) is a disjoint union of countably many open intervals.
 
-Now define \( f_n = \chi_{I_{N, n}} \), then
-\[
-{\left\lVert {s - f_n} \right\rVert}_1 = \int {\left\lvert {\chi_A - \chi_{I_{N, n}}} \right\rvert} = m(A \Delta I_{N, n}) \overset{n\to\infty}\longrightarrow 0
-.\]
+-   Now choose \( N \) large enough such that \( m(O \Delta I_{N, n}) < \varepsilon = \frac 1 n \) where we define \( I_{N, n} \coloneqq{\textstyle\coprod}_{j=1}^N I_j \).
 
-Since any simple function is a finite linear combination of \( \chi_{A_i} \), we can do this for each \( i \) to extend this result to all simple functions. But simple functions are dense in \( L^1 \), so \( S \) is dense in \( L^1 \).
+-   Now define \( f_n = \chi_{I_{N, n}} \), then
+    \[
+    {\left\lVert {s - f_n} \right\rVert}_1 = \int {\left\lvert {\chi_A - \chi_{I_{N, n}}} \right\rvert} = m(A \Delta I_{N, n}) \overset{n\to\infty}\longrightarrow 0
+    .\]
+
+-   Since any simple function is a finite linear combination of \( \chi_{A_i} \), we can do this for each \( i \) to extend this result to all simple functions.
+
+-   But simple functions are dense in \( L^1 \), so \( S \) is dense in \( L^1 \).
 :::
 
 ## Spring 2015 \# 4 \( \work \) {#spring-2015-4-work}
@@ -3207,7 +3512,7 @@ m(E) < \delta
     \lim_{{\left\lvert {x} \right\rvert} \to \infty} f(x) = 0.
     \]
 
-## Spring 2021 \# 4
+## Spring 2021 \# 4 \( \done \) {#spring-2021-4-done}
 
 Let \( f, g \) be Lebesgue integrable on \( {\mathbb{R}} \) and let \( g_n(x) \coloneqq g(x- n) \). Prove that
 \[
@@ -3220,70 +3525,157 @@ Let \( f, g \) be Lebesgue integrable on \( {\mathbb{R}} \) and let \( g_n(x) \c
 ```
 -   For \( f\in L^1(X) \), \( {\left\lVert {f} \right\rVert}_1 \coloneqq\int_X {\left\lvert {f(x)} \right\rvert} \,dx< \infty \).
 
--   Small tails in \( L_1 \): if \( f\in L^1({\mathbb{R}}^n) \), then for every \( \varepsilon>0 \) exists some radius \( R \) such that
+-   Small tails in \( L_1 \): if \( f\in L^1({\mathbb{R}}^n) \), then for every \( {\varepsilon}>0 \) exists some radius \( R \) such that
     \[
-    {\left\lVert {f} \right\rVert}_{L^1(B_R^c)} < \varepsilon
+    {\left\lVert {f} \right\rVert}_{L^1(B_R^c)} < {\varepsilon}
     .\]
 
--   Shift \( g \) off so most of its density occurs where \( f \) has a small tail, and vice versa:
+-   Shift \( g \) to the right far enough so that the two densities are mostly disjoint:
 
-![Shifting density](figures/image_2021-04-24-21-27-21.png)
+![Shifting density](figures/densities.png)
 
 -   Any integral \( \int_a^b f \) can be written as \( {\left\lVert {f} \right\rVert}_1 - O(\text{err}) \).
+
+-   Bounding technique:
+    \[
+    a-{\varepsilon}\leq b \leq a+{\varepsilon}\implies b=a
+    .\]
 :::
 
 ::: {.solution}
 ```{=tex}
 \envlist
 ```
--   Fix \( \varepsilon \).
+-   Fix \( {\varepsilon} \).
 
--   Choose \( N\gg 0 \) to produce an \( R \) so that
+-   Using small tails for \( f, g \in L^1 \), choose \( R_1, R_2 \gg 0 \) so that
     \[
-    \int_R^{\infty } {\left\lvert {f} \right\rvert} &< \varepsilon\\
-    \int_{-\infty}^{R} {\left\lvert {g_N} \right\rvert} &< \varepsilon
+    \int_{B_{R_1}(0)^c} {\left\lvert {f} \right\rvert} &< {\varepsilon}\\
+    \int_{B_{R_2}(0)^c} {\left\lvert {g} \right\rvert} &< {\varepsilon}
     .\]
 
--   Split the integral up:
+    -   Note that this implies
+        \[
+        \int_{-R_1}^{R_1} {\left\lvert {f} \right\rvert} &= {\left\lVert {f} \right\rVert}_1 - 2{\varepsilon}\\
+        \int_{-R_2}^{R_2} {\left\lvert {g_N} \right\rvert} &= {\left\lVert {g_N} \right\rVert} - 2{\varepsilon}
+        .\]
+
+    -   Also note that by translation invariance of the Lebesgue integral, \( {\left\lVert {g} \right\rVert}_1 = {\left\lVert {g_N} \right\rVert}_1 \).
+
+-   Now use \( N \) to make the densities almost disjoint: choose \( N\gg 1 \) so that \( N-R_2 > R_1 \):
+
+![Shifting density](figures/densities.png)
+
+-   Consider the change of variables \( x\mapsto x-N \):
     \[
-    {\left\lVert {f - g_N} \right\rVert}_1 = \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} + \int_R^{\infty }{\left\lvert {f - g_N} \right\rvert}
-    ,\]
-    where \( g_N \) is small in the first term and \( f \) is small in the second.
+    \int_{-R_2}^{R_2} {\left\lvert {g(x)} \right\rvert}\,dx
+    = \int_{N-R_2} ^{N+R_2} {\left\lvert {g(x-N)} \right\rvert} \,dx
+    \coloneqq\int_{N-R_2} ^{N+R_2} {\left\lvert {g_N(x)} \right\rvert} \,dx
+    .\]
+    -   Use this to conclude that
+        \[
+        \int_{N-R_2}^{N+R_2} {\left\lvert {g_N} \right\rvert} = {\left\lVert {g_N} \right\rVert} - 2{\varepsilon}
+        .\]
+-   Now split the integral in the problem statement at \( R_1 \):
+
+\[
+{\left\lVert {f + g_N} \right\rVert}_1 
+= \int_{\mathbb{R}}{\left\lvert {f+g_N} \right\rvert} 
+= \int_{-\infty}^{R_1} {\left\lvert {f+ g_N} \right\rvert}
++ \int_{R_1}^{\infty} {\left\lvert {f+ g_N} \right\rvert}
+\coloneqq I_1 + I_2
+.\]
+
+-   **Idea**: from the picture,
+
+    -   On \( I_1 \), \( f \) is big and \( g_N \) is small
+    -   On \( I_2 \), \( f \) is small and \( g_N \) is big
+
+-   Casework: estimate \( I_1, I_2 \) separately, bounding from above and below.
+
+-   \( I_1 \) upper bound:
+    \[
+    I_1 
+    &\coloneqq\int_{-\infty}^{R_1} {\left\lvert {f + g_N} \right\rvert} \\
+    &\leq \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} + {\left\lvert {g_N} \right\rvert} \\
+    &= \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} + \int_{-\infty}^{R_1} {\left\lvert {g_N} \right\rvert} \\
+    &\leq \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} + \int_{-\infty}^{\color{green} N - R_2} {\left\lvert {g_N} \right\rvert} && R_1 < N-R_2 \\
+    &= {\left\lVert {f} \right\rVert}_1 - \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} + \int_{-\infty}^{N - R_2} {\left\lvert {g_N} \right\rvert} \\
+    &\leq {\left\lVert {f} \right\rVert}_1 - \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} + {\varepsilon}\\
+    &\leq {\left\lVert {f} \right\rVert}_1 + {\varepsilon}
+    .\]
+
+    -   In the last step we've used that we're subtracting off a positive number, so forgetting it only makes things larger.
+
+    -   We've also used monotonicity of the Lebesgue integral: if \( A\leq B \), then \( (c, A) \subseteq (c, B) \) and \( \int_{c}^A {\left\lvert {f} \right\rvert} \leq \int_c^B {\left\lvert {f} \right\rvert} \) since \( {\left\lvert {f} \right\rvert} \) is positive.
+
+-   \( I_1 \) lower bound:
+    \[
+    I_1 
+    &\coloneqq\int_{-\infty}^{R_1} {\left\lvert {f + g_N} \right\rvert} \\
+    &\geq \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} - {\left\lvert {g_N} \right\rvert} \\
+    &= \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} - \int_{-\infty}^{R_1} {\left\lvert {g_N} \right\rvert} \\
+    &\geq \int_{-\infty}^{R_1} {\left\lvert {f} \right\rvert} - \int_{-\infty}^{\color{green} N-R_2} {\left\lvert {g_N} \right\rvert} && R_1 < N-R_2 \\
+    &= {\left\lVert {f} \right\rVert}_1 - \int_{R_1}^{ \infty } {\left\lvert {f} \right\rvert} - \int_{- \infty }^{N-R_2} {\left\lvert {g_N} \right\rvert} \\
+    &\geq {\left\lVert {f} \right\rVert}_1 - {\varepsilon}- {\varepsilon}\\
+    &= {\left\lVert {f} \right\rVert}_1 - 2{\varepsilon}
+    .\]
+
+    -   Now we've used that the integral with \( g_N \) comes in with a negative sign, so extending the range of integration only makes things *smaller*. We've also used the \( {\varepsilon} \) bound on both \( f \) and \( g_N \) here, and both are tail estimates.
+
+-   Taken together we conclude
+    \[
+    {\left\lVert {f} \right\rVert}_1 - 2{\varepsilon}
+    \leq I_1
+    \leq {\left\lVert {f} \right\rVert}_1 && {\varepsilon}\to 0 \implies  I_1 = {\left\lVert {f} \right\rVert}_1
+    .\]
+
+-   \( I_2 \) lower bound:
+    \[
+    I_2 
+    &\coloneqq\int_{R_1}^{\infty} {\left\lvert {f + g_N} \right\rvert} \\
+    &\leq \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} + \int_{R_1}^{\infty} {g_N} \\
+    &\leq \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} + {\left\lVert {g_N} \right\rVert}_1 - \int_{-\infty}^{R_1} {\left\lvert {g_N} \right\rvert} \\
+    &\leq {\varepsilon}+ {\left\lVert {g_N} \right\rVert}_1 - \int_{-\infty}^{R_1} {\left\lvert {g_N} \right\rvert} \\
+    &\leq {\varepsilon}+ {\left\lVert {g_N} \right\rVert}_1 \\
+    &= {\varepsilon}+ {\left\lVert {g} \right\rVert}_1 
+    .\]
+
+    -   Here we've again thrown away negative terms, only increasing the bound, and used the tail estimate on \( f \).
+
+-   \( I_2 \) upper bound:
+
+\[
+I_2 
+&\coloneqq\int_{R_1}^{\infty} {\left\lvert {f + g_N} \right\rvert} \\
+&= \int_{R_1}^{\infty} {\left\lvert {g_N + f} \right\rvert} \\
+&\geq \int_{R_1}^{\infty} {\left\lvert {g_N} \right\rvert} - \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} \\
+&=  {\left\lVert {g_N} \right\rVert} - \int_{-\infty}^{R_1} {\left\lvert {g_N} \right\rvert} - \int_{R_1}^{\infty} {\left\lvert {f} \right\rvert} \\
+&\geq  {\left\lVert {g_N} \right\rVert} - 2{\varepsilon}
+.\]
+
+-   Here we've swapped the order under the absolute value, and used the tail estimates on both \( g \) and \( f \).
+
+-   Taken together:
+    \[
+    {\left\lVert {g} \right\rVert}_1 - {\varepsilon}\leq I_2 \leq {\left\lVert {g} \right\rVert}_1 + 2{\varepsilon}
+    .\]
 
 -   Note that we have two inequalities:
     \[
-    {\left\lVert {f} \right\rVert}_1 - 2\varepsilon&\leq \int_{-\infty}^{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert}_1 + 2\varepsilon\\
-    {\left\lVert {g} \right\rVert}_1 - 2\varepsilon&\leq \int^{\infty}_{R} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {g} \right\rVert}_1 + 2\varepsilon
+    {\left\lVert {f} \right\rVert}_1 - 2{\varepsilon}&\leq \int_{-\infty}^{R_1} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert}_1 + {\varepsilon}\\
+    {\left\lVert {g} \right\rVert}_1 - 2{\varepsilon}&\leq \int^{\infty}_{R_1} {\left\lvert {f -g_N} \right\rvert} \leq {\left\lVert {g} \right\rVert}_1 + {\varepsilon}
     .\]
 
-```{=tex}
-\todo[inline]{Check: maybe fill in an extra step showing where these come from.}
-```
 -   Add these to obtain
     \[
-    {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1 - 4\varepsilon\leq \int_{\mathbb{R}}{\left\lvert {f - g_N} \right\rvert} \leq {\left\lVert {f} \right\rVert} + {\left\lVert {g} \right\rVert}_1 + 4\varepsilon
+    {\left\lVert {f} \right\rVert}_1 + {\left\lVert {g} \right\rVert}_1 - 4{\varepsilon}\leq I_1 + I_2 \coloneqq{\left\lVert {f - g_N} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert} + {\left\lVert {g} \right\rVert}_1 + 2{\varepsilon}
     .\]
 
--   Check that \( N\to \infty \) as \( \varepsilon\to 0 \) to yield the result.
-
--   Seeing where the inequalities come from: for the first, we'll generally have \( f \) big and \( g \) small, which motivates:
-    \[
-    \int_{-\infty}^R {\left\lvert {f - g_N} \right\rvert} 
-    &\leq \int_{- \infty }^R {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
-    &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} + \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
-    &\approx {\left\lVert {f} \right\rVert}_1 + O(\varepsilon) + O(\varepsilon)
-    ,\]
-    and similarly
-    \[
-    \int_{- \infty }^R {\left\lvert { f- g_N} \right\rvert} 
-    &\geq \int_{- \infty }^R {\left\lvert {f} \right\rvert} - {\left\lvert {g_N} \right\rvert} \\
-    &= \int_{- \infty }^R {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
-    &= {\left\lVert {f} \right\rVert}_1 - \int_R^{\infty } {\left\lvert {f} \right\rvert} - \int_{- \infty }^R {\left\lvert {g_N} \right\rvert} \\
-    &\geq {\left\lVert {f} \right\rVert}_1 - O(\varepsilon) - O(\varepsilon)
-    .\]
+-   Check that as \( N\to \infty \) as \( {\varepsilon}\to 0 \) to yield the result.
 :::
 
-## Fall 2020 \# 4
+## Fall 2020 \# 4 \( \work \) {#fall-2020-4-work}
 
 Prove that if \( xf(x) \in L^1({\mathbb{R}}) \), then
 \[  
@@ -3415,15 +3807,13 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
     m(\mathcal{A})=\int _{{\mathbb{R}}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in {\mathbb{R}}^{n}: f(x) \geq t\right\}\right) dt
     \]
 
-```{=tex}
-\todo[inline]{Add concepts.}
-```
 ::: {.concept}
 ```{=tex}
 \envlist
 ```
--   See Stein and Shakarchi p.82.
+-   See Stein and Shakarchi p.82 corollary 3.3.
 -   Tonelli
+-   Important trick! \( \left\{{(x, t) {~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\} = \left\{{ f(x) \geq t}\right\} \cap\left\{{ t\geq 0 }\right\} \)
 :::
 
 ::: {.solution}
@@ -3433,29 +3823,77 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
 ::: {.proof title="of a"}
 \( \implies \):
 
--   Suppose \( f \) is a measurable function.
--   Note that \( \mathcal{A} = \left\{{f(x) - t \geq 0}\right\} \cap\left\{{t \geq 0}\right\} \).
--   Define \( F(x, t) = f(x) \), \( G(x, t) = t \), which are cylinders on measurable functions and thus measurable.
--   Define \( H(x, y) = F(x, t) - G(x, t) \), which are linear combinations of measurable functions and thus measurable.
--   Then \( \mathcal{A} = \left\{{H \geq 0}\right\} \cap\left\{{G \geq 0}\right\} \) as a countable intersection of measurable sets, which is again measurable.
+-   Suppose \( f:{\mathbb{R}}^n\to {\mathbb{R}} \) is a measurable function.
+-   Rewrite \( A \):
+    \[
+    A 
+    &= \left\{{ (x, t) \in {\mathbb{R}}^d \times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x) }\right\} \\
+    &= \left\{{ (x, t) \in {\mathbb{R}}^d \times{\mathbb{R}}{~\mathrel{\Big|}~}0 \leq t < \infty }\right\} 
+    \cap\left\{{ (x, t) \in {\mathbb{R}}^d\times{\mathbb{R}}{~\mathrel{\Big|}~}t\leq f(x) }\right\} \\
+    &= \qty{ {\mathbb{R}}^d \times[0, \infty) } 
+    \cap\left\{{ (x, t) \in {\mathbb{R}}^d\times{\mathbb{R}}{~\mathrel{\Big|}~}f(x) -t \geq 0  }\right\} \\
+    &\coloneqq\qty{ {\mathbb{R}}^d \times[0, \infty) } \cap H^{-1}\qty{[0, \infty)}
+    ,\]
+    where we define
+    \[
+    H: {\mathbb{R}}^d \times{\mathbb{R}}&\to {\mathbb{R}}\\
+    (x, t) &\mapsto f(x) - t
+    .\]
+    -   Note: this is "clearly" measurable!
+-   If we can show both sets are measurable, we're done, since \( \sigma{\hbox{-}} \)algebras are closed under countable intersections.
+-   The first set is measurable since it is a Borel set in \( {\mathbb{R}}^{d+1} \).
+-   For the same reason, it suffices to show \( H \) is a measurable function.
+-   Define cylinder functions
+    \[
+    F: {\mathbb{R}}^d \times{\mathbb{R}}&\to {\mathbb{R}}\\
+    (x, t) &\mapsto f(x)
+    \]
+    and
+    \[
+    G: {\mathbb{R}}^d \times{\mathbb{R}}&\to {\mathbb{R}}\\
+    (x, t) &\mapsto t
+    \]
+    -   \( F \) is a cylinder of \( f \), and since \( f \) is measurable by assumption, \( F \) is measurable.
+    -   \( G \) is a cylinder on the identity for \( {\mathbb{R}} \), which is measurable, so \( G \) is measurable.
+-   Define
+    \[
+    H: {\mathbb{R}}^d &\to {\mathbb{R}}\\
+    (x, t) &\mapsto F(x, t) - G(x, t) \coloneqq f(x) - t
+    ,\]
+    which are linear combinations of measurable functions and thus measurable.
 
 \( \impliedby \):
 
 -   Suppose \( {\mathcal{A}} \) is a measurable set.
 
--   Then FT on \( \chi_{{\mathcal{A}}} \) implies that for almost every \( x\in {\mathbb{R}}^n \), the \( x{\hbox{-}} \)slices \( {\mathcal{A}}_x \) are measurable and
+-   A corollary of Tonelli applied to \( \chi_X \): if \( E \) is measurable, then for a.e. \( t \) the following slice is measurable:
     \[
-    \mathcal{A}_x \coloneqq\left\{{t\in {\mathbb{R}}{~\mathrel{\Big|}~}(x, t) \in \mathcal{A}}\right\} = [0, f(x)] \implies m(\mathcal A_x) = f(x) - 0 = f(x)
-    \]
+    {\mathcal{A}}_t \coloneqq\left\{{ x \in {\mathbb{R}}^d {~\mathrel{\Big|}~}(x,t) \in {\mathcal{A}}}\right\}
+    &= \left\{{x\in {\mathbb{R}}^d {~\mathrel{\Big|}~}f(x) \geq t \geq 0}\right\} \\
+    &= f^{-1}\qty{[t, \infty)}
+    .\]
 
--   But \( x \mapsto m(\mathcal A_x) \) is a measurable function, and is exactly the function \( x \mapsto f(x) \), so \( f \) is measurable.
+    -   But maybe this isn't enough, because we need \( f^{-1}\qty{[\alpha, \infty)} \) for *all* \( \alpha \)
+
+-   But the other slice is also measurable for a.e. \( x \):
+    \[
+    {\mathcal{A}}_x 
+    &\coloneqq\left\{{ t\in {\mathbb{R}}{~\mathrel{\Big|}~}(x, t) \in {\mathcal{A}}}\right\} \\
+    &= \left\{{ t\in {\mathbb{R}}{~\mathrel{\Big|}~}0 \leq t \leq f(x) }\right\} \\
+    &= \left\{{ t\in {\mathbb{R}}{~\mathrel{\Big|}~}t\in [0, f(x)]  }\right\} \\
+    &= [0, f(x)]
+    .\]
+
+-   Moreover the function \( x\mapsto m({\mathcal{A}}_x) \) is a measurable function of \( x \)
+
+-   Now note \( m({\mathcal{A}}_x) = f(x) - 0 = f(x) \), so \( f \) must be measurable.
 :::
 
 ::: {.proof title="of b"}
 ```{=tex}
 \envlist
 ```
--   Note
+-   Writing down what the slices are
     \[
     \mathcal{A} &= \left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0 \leq t \leq f(x)}\right\} 
     \\
@@ -3485,11 +3923,19 @@ Let \( f \geq 0 \) be a measurable function on \( {\mathbb{R}} \). Show that
 \[
 \int _{{\mathbb{R}}} f = \int _{0}^{\infty} m(\{x: f(x)>t\}) dt
 \]
-:::{.concept} `\envlist`{=tex} - Claim: If \( E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b \) is a measurable set, then for almost every \( y\in {\mathbb{R}}^b \), the slice \( E^y \) is measurable and
-\[
-m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
-.\]
-- Set \( g = \chi_E \), which is non-negative and measurable, so apply Tonelli. - Conclude that \( g^y = \chi_{E^y} \) is measurable, the function \( y\mapsto \int g^y(x)\, dx \) is measurable, and \( \int \int g^y(x)\,dx \,dy = \int g \). - But \( \int g = m(E) \) and \( \int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy \). :::
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Claim: If \( E\subseteq {\mathbb{R}}^a \times{\mathbb{R}}^b \) is a measurable set, then for almost every \( y\in {\mathbb{R}}^b \), the slice \( E^y \) is measurable and
+    \[
+    m(E) = \int_{{\mathbb{R}}^b} m(E^y) \,dy
+    .\]
+    -   Set \( g = \chi_E \), which is non-negative and measurable, so apply Tonelli.
+    -   Conclude that \( g^y = \chi_{E^y} \) is measurable, the function \( y\mapsto \int g^y(x)\, dx \) is measurable, and \( \int \int g^y(x)\,dx \,dy = \int g \).
+    -   But \( \int g = m(E) \) and \( \int\int g^y(x) \,dx\,dy = \int m(E^y)\,dy \).
+:::
 
 ::: {.solution}
 ```{=tex}
@@ -3595,7 +4041,7 @@ E_x \coloneqq\left\{{ y\in {\mathbb{R}}{~\mathrel{\Big|}~}\mu\qty{ z\in {\mathbb
 .\]
 Show that the following set is a measurable subset of \( {\mathbb{R}}\times{\mathbb{R}} \):
 \[
-E \coloneqq\bigcup_{x\in {\mathbb{R}}} \left\{{ x }\right\} \times E_x
+E \coloneqq\displaystyle\bigcup_{x\in {\mathbb{R}}} \left\{{ x }\right\} \times E_x
 .\]
 
 > Hint: consider the measurable function \( h(x,y,z) \coloneqq f(x, y) - f(x, z) \).
@@ -3995,7 +4441,7 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
       \]
     with
     \[
-      \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1]) {}^{ \check{} }}
+      \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1]) {}^{ \vee }}
       \]
 
 ::: {.solution}
@@ -4008,7 +4454,7 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
 ```
 -   Holders' inequality: \( {\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {f} \right\rVert}_q \)
 
--   Riesz Representation for \( L^2 \): If \( \Lambda \in (L^2) {}^{ \check{} } \) then there exists a unique \( g\in L^2 \) such that \( \Lambda(f) = \int fg \).
+-   Riesz Representation for \( L^2 \): If \( \Lambda \in (L^2) {}^{ \vee } \) then there exists a unique \( g\in L^2 \) such that \( \Lambda(f) = \int fg \).
 
 -   \( {\left\lVert {f} \right\rVert}_{L^\infty(X)} \coloneqq\inf \left\{{t\geq 0 {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} \leq t \text{ almost everywhere} }\right\} \).
 
@@ -4046,37 +4492,37 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
 
 ### b
 
-Let \( \Lambda \in L^1(X) {}^{ \check{} } \) be arbitrary.
+Let \( \Lambda \in L^1(X) {}^{ \vee } \) be arbitrary.
 
 #### 1: Existence of \( g \) Representing \( \Lambda \). {#existence-of-g-representing-lambda.}
 
 Let \( f\in L^2\subseteq L^1 \) be arbitrary.
 
-Claim: \( \Lambda\in L^1(X) {}^{ \check{} }\implies \Lambda \in L^2(X) {}^{ \check{} } \).
+Claim: \( \Lambda\in L^1(X) {}^{ \vee }\implies \Lambda \in L^2(X) {}^{ \vee } \).
 
--   Suffices to show that \( {\left\lVert {\Gamma} \right\rVert}_{L^2(X) {}^{ \check{} }} \coloneqq\sup_{{\left\lVert {f} \right\rVert}_2 = 1} {\left\lvert {\Gamma(f)} \right\rvert} < \infty \), since bounded implies continuous.
+-   Suffices to show that \( {\left\lVert {\Gamma} \right\rVert}_{L^2(X) {}^{ \vee }} \coloneqq\sup_{{\left\lVert {f} \right\rVert}_2 = 1} {\left\lvert {\Gamma(f)} \right\rvert} < \infty \), since bounded implies continuous.
 
 -   By the lemma, \( {\left\lVert {f} \right\rVert}_1 \leq C{\left\lVert {f} \right\rVert}_2 \) for some constant \( C \approx m(X) \).
 
 -   Note
-    \[{\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} \coloneqq\displaystyle\sup_{{\left\lVert {f} \right\rVert}_1 = 1} {\left\lvert {\Lambda(f)} \right\rvert}\]
+    \[{\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} \coloneqq\displaystyle\sup_{{\left\lVert {f} \right\rVert}_1 = 1} {\left\lvert {\Lambda(f)} \right\rvert}\]
 
 -   Define \( \widehat{f} = {f\over {\left\lVert {f} \right\rVert}_1} \) so \( {\left\lVert {\widehat{f}} \right\rVert}_1 = 1 \)
 
--   Since \( {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \check{} }} \) is a supremum over *all* \( f \in L^1(X) \) with \( {\left\lVert {f} \right\rVert}_1 =1 \),
+-   Since \( {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \vee }} \) is a supremum over *all* \( f \in L^1(X) \) with \( {\left\lVert {f} \right\rVert}_1 =1 \),
     \[
-    {\left\lvert {\Lambda(\widehat{f})} \right\rvert} \leq {\left\lVert {\Lambda} \right\rVert}_{(L^1(X)) {}^{ \check{} }}
+    {\left\lvert {\Lambda(\widehat{f})} \right\rvert} \leq {\left\lVert {\Lambda} \right\rVert}_{(L^1(X)) {}^{ \vee }}
     ,\]
 
 -   Then
     \[
-    \frac{{\left\lvert {\Lambda(f)} \right\rvert}}{{\left\lVert {f} \right\rVert}_1} &= {\left\lvert {\Lambda(\widehat{f})} \right\rvert} \leq {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} \\
+    \frac{{\left\lvert {\Lambda(f)} \right\rvert}}{{\left\lVert {f} \right\rVert}_1} &= {\left\lvert {\Lambda(\widehat{f})} \right\rvert} \leq {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} \\
     \implies {\left\lvert {\Lambda(f)} \right\rvert} 
-    &\leq {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \check{} }} \cdot {\left\lVert {f} \right\rVert}_1 \\
-    &\leq {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \check{} }} \cdot C {\left\lVert {f} \right\rVert}_2 < \infty \quad\text{by assumption}
+    &\leq {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \vee }} \cdot {\left\lVert {f} \right\rVert}_1 \\
+    &\leq {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \vee }} \cdot C {\left\lVert {f} \right\rVert}_2 < \infty \quad\text{by assumption}
     ,\]
 
--   So \( \Lambda \in (L^2) {}^{ \check{} } \).
+-   So \( \Lambda \in (L^2) {}^{ \vee } \).
 
 Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such that
 \[f\in L^2 \implies \Lambda(f) = {\left\langle {f},~{g} \right\rangle} \coloneqq\int_0^1 f(x) \mkern 1.5mu\overline{\mkern-1.5mug(x)\mkern-1.5mu}\mkern 1.5mu\, dx.\]
@@ -4085,15 +4531,15 @@ Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such th
 
 -   It suffices to show \( {\left\lVert {g} \right\rVert}_{L^\infty(X)} < \infty \).
 
--   Since we're assuming \( {\left\lVert {\Gamma} \right\rVert}_{L^1(X) {}^{ \check{} }} < \infty \), it suffices to show the stated equality. `\todo[inline]{Is this assumed..? Or did we show it..?}`{=tex}
+-   Since we're assuming \( {\left\lVert {\Gamma} \right\rVert}_{L^1(X) {}^{ \vee }} < \infty \), it suffices to show the stated equality. `\todo[inline]{Is this assumed..? Or did we show it..?}`{=tex}
 
--   Claim: \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} ={\left\lVert {g} \right\rVert}_{L^\infty(X)} \)
+-   Claim: \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} ={\left\lVert {g} \right\rVert}_{L^\infty(X)} \)
 
-    -   The result will follow since \( \Lambda \) was assumed to be in \( L^1(X) {}^{ \check{} } \), so \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} < \infty \).
+    -   The result will follow since \( \Lambda \) was assumed to be in \( L^1(X) {}^{ \vee } \), so \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} < \infty \).
 
     -   \( \leq \):
         \[
-        {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} 
+        {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} 
         &= \sup_{{\left\lVert {f} \right\rVert}_1 = 1} {\left\lvert {\Lambda(f)} \right\rvert} \\
         &= \sup_{{\left\lVert {f} \right\rVert}_1 = 1} {\left\lvert {\int_X f \mkern 1.5mu\overline{\mkern-1.5mug\mkern-1.5mu}\mkern 1.5mu} \right\rvert} \quad\text{by (i)}\\
         &= \sup_{{\left\lVert {f} \right\rVert}_1 = 1} \int_X {\left\lvert {f \mkern 1.5mu\overline{\mkern-1.5mug\mkern-1.5mu}\mkern 1.5mu} \right\rvert} \\
@@ -4104,10 +4550,10 @@ Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such th
 
     -   \( \geq \):
 
-        -   Suppose toward a contradiction that \( {\left\lVert {g} \right\rVert}_\infty > {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \check{} }} \).
+        -   Suppose toward a contradiction that \( {\left\lVert {g} \right\rVert}_\infty > {\left\lVert {\Lambda} \right\rVert}_{1 {}^{ \vee }} \).
 
         -   Then there exists some \( E\subseteq X \) with \( m(E) > 0 \) such that
-            \[x\in E \implies {\left\lvert {g(x)} \right\rvert} > {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }}.\]
+            \[x\in E \implies {\left\lvert {g(x)} \right\rvert} > {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }}.\]
 
         -   Define
             \[
@@ -4123,9 +4569,9 @@ Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such th
             &= \frac{1}{m(E)} \int_E {\left\lvert {g} \right\rvert} \\
             &\geq \frac{1}{m(E)} {\left\lVert {g} \right\rVert}_\infty m(E) \\
             &= {\left\lVert {g} \right\rVert}_\infty \\
-            &> {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }}
+            &> {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }}
             ,\]
-            a contradiction since \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \check{} }} \) is the supremum over all \( h_\alpha \) with \( {\left\lVert {h_\alpha} \right\rVert}_{L^1(X)} = 1 \).
+            a contradiction since \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} \) is the supremum over all \( h_\alpha \) with \( {\left\lVert {h_\alpha} \right\rVert}_{L^1(X)} = 1 \).
 :::
 
 ## Spring 2016 \# 6 \( \work \) {#spring-2016-6-work}
@@ -4199,24 +4645,24 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
 -   Claim: \( {\left\lVert {f - f_n} \right\rVert} \overset{n\to\infty}\to 0 \), so \( f_n \) converges to \( f \) in \( C([0, 1], {\left\lVert {{-}} \right\rVert}_\infty) \).
 
     -   Proof:
-        -   Fix \( \varepsilon> 0 \); we will show there exists an \( N \) such that \( n\geq N \implies {\left\lVert {f_n - f} \right\rVert} < \varepsilon \)
+        -   Fix \( {\varepsilon}> 0 \); we will show there exists an \( N \) such that \( n\geq N \implies {\left\lVert {f_n - f} \right\rVert} < {\varepsilon} \)
         -   Fix an \( x_0 \in I \). Since \( f_n \to f \) pointwise, choose \( N_1 \) large enough so that
-            \[n\geq N_1 \implies {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} < \varepsilon/2.\]
+            \[n\geq N_1 \implies {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} < {\varepsilon}/2.\]
         -   Since \( {\left\lVert {f_n - f_m} \right\rVert}_\infty \to 0 \), choose and \( N_2 \) large enough so that
-            \[n, m \geq N_2 \implies {\left\lVert {f_n - f_m} \right\rVert}_\infty < \varepsilon/2.\]
+            \[n, m \geq N_2 \implies {\left\lVert {f_n - f_m} \right\rVert}_\infty < {\varepsilon}/2.\]
         -   Then for \( n, m \geq \max(N_1, N_2) \), we have
             \[
               {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} 
             &=    {\left\lvert {f_n(x_0) - f(x_0) + f_m(x_0) - f_m(x_0)} \right\rvert} \\
             &=    {\left\lvert {f_n(x_0) - f_m(x_0) + f_m(x_0) - f(x_0)} \right\rvert} \\
             &\leq {\left\lvert {f_n(x_0) - f_m(x_0)} \right\rvert} + {\left\lvert {f_m(x_0) - f(x_0)} \right\rvert} \\
-            &<  {\left\lvert {f_n(x_0) - f_m(x_0)} \right\rvert} + {\varepsilon\over 2} \\
-            &\leq  \sup_{x\in I} {\left\lvert {f_n(x) - f_m(x)} \right\rvert} + {\varepsilon\over 2} \\
-            &<  {\left\lVert {f_n - f_m} \right\rVert}_\infty + {\varepsilon\over 2} \\
-            &\leq  {\varepsilon\over 2} + {\varepsilon\over 2} \\ 
-            \implies {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} &< \varepsilon\\
-            \implies \sup_{x\in I} {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} &\leq \sup_{x\in I} \varepsilon\quad\text{by order limit laws} \\
-            \implies {\left\lVert {f_n - f} \right\rVert} &\leq \varepsilon\\
+            &<  {\left\lvert {f_n(x_0) - f_m(x_0)} \right\rvert} + {{\varepsilon}\over 2} \\
+            &\leq  \sup_{x\in I} {\left\lvert {f_n(x) - f_m(x)} \right\rvert} + {{\varepsilon}\over 2} \\
+            &<  {\left\lVert {f_n - f_m} \right\rVert}_\infty + {{\varepsilon}\over 2} \\
+            &\leq  {{\varepsilon}\over 2} + {{\varepsilon}\over 2} \\ 
+            \implies {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} &< {\varepsilon}\\
+            \implies \sup_{x\in I} {\left\lvert {f_n(x_0) - f(x_0)} \right\rvert} &\leq \sup_{x\in I} {\varepsilon}\quad\text{by order limit laws} \\
+            \implies {\left\lVert {f_n - f} \right\rVert} &\leq {\varepsilon}\\
             .\]
 
 -   \( f \) is the uniform limit of continuous functions and thus continuous, so \( f\in C([0, 1]) \).
@@ -4339,5 +4785,51 @@ Choose \( N \) large enough so that \( {\left\lVert {f - f_N} \right\rVert} < \v
 
 \[
 {\left\lVert {f} \right\rVert} \leq {\left\lVert {f - f_N} \right\rVert} + {\left\lVert {f_N} \right\rVert} < \varepsilon + M < \infty
+.\]
+:::
+
+# Extras
+
+::: {.exercise title="?"}
+Compute the following limits:
+
+-   \( \lim_{n\to\infty} \sum_{k\geq 1} {1\over k^2} \sin^n(k) \)
+-   \( \lim_{n\to\infty} \sum_{k\geq 1} {1\over k} e^{-k/n} \)
+:::
+
+::: {.solution}
+For the first, use that
+\[
+{\left\lvert { \sum_{k\geq 1} {1\over k^2} \sin^n(k) } \right\rvert}
+\leq
+\sum_{k\geq 1} {\left\lvert { {1\over k^2} \sin^n(k) } \right\rvert}
+\sum_{k\geq 1} {\left\lvert { {1\over k^2}} \right\rvert} < \infty
+,\]
+since \( {\left\lvert {\sin(x)} \right\rvert} \leq 1 \) and \( x^n < x \) for \( {\left\lvert {x} \right\rvert}\leq 1 \). By the dominated convergence theorem, we can pass the limit inside. Using the same fact as above, \( \lim_{n\to\infty}\sin^n(x) = 0 \),
+
+For the second, the claim is that it diverges (very slowly). Note that \( \lim_{n\to\infty} e^{-k/n} = 1 \) for any \( k \). By Fatou, we have
+\[
+\liminf_{n\to\infty} \sum_{k\geq 1} {e^{-k/n} \over k}
+\geq \sum_{k\geq 1} \liminf_{n\to\infty} {e^{-k/n} \over k} 
+= \sum_{k\geq 1} {1 \over k} 
+= \infty
+.\]
+:::
+
+::: {.exercise title="?"}
+Let \( (\Omega,{\mathcal{B}}) \) be a measurable space with a Borel \( \sigma{\hbox{-}} \)algebra and \( \mu_n: {\mathcal{B}}\to [0, \infty] \) be a \( \sigma{\hbox{-}} \)additive measure for each \( n \). Show that the following map is again a \( \sigma{\hbox{-}} \)additive measure on \( {\mathcal{B}} \):
+\[
+\mu(B) \coloneqq\sum_{n\geq 1} \mu_n(B)
+.\]
+:::
+
+::: {.solution}
+Apply Fubini-Tonelli to commute two sums:
+\[
+\mu\qty{\displaystyle\bigcup_{1\leq k \leq M} E_k}\coloneqq
+&= \sum_{n\geq 1} \mu_n\qty{\displaystyle\bigcup_{1\leq k \leq M} E_k}\\
+&= \sum_{n\geq 1} \sum_{1\leq k \leq M} \mu_n\qty{E_k}\\
+&= \sum_{1\leq k \leq M}\sum_{n\geq 1} \mu_n\qty{E_k} \text{FT} \\
+&\coloneqq\sum_{1\leq k \leq M} \mu(E_k)
 .\]
 :::

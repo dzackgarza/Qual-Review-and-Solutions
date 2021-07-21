@@ -169,7 +169,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 :::{.proof title="of b"}
 \envlist
 
-- Tails of convergent sums go to zero, so 
+- Tails of convergent sums vanish, so 
 \[
 \sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0
 .\] 
