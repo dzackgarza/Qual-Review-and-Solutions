@@ -106,10 +106,8 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1])\dual}
   \]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envist
 - Holders' inequality: $\norm{fg}_1 \leq \norm{f}_p \norm{f}_q$
 - Riesz Representation for $L^2$: If $\Lambda \in (L^2)\dual$ then there exists a unique $g\in L^2$ such that $\Lambda(f) = \int fg$.
 - $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
@@ -130,8 +128,11 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   :::
 :::
 
+:::{.solution}
+\envlist
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Note $X = [0, 1] \implies m(X) = 1$.
 - By Holder's inequality with $p=q=2$, 
@@ -142,12 +143,12 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
 - Thus $L^2(X) \subseteq L^1(X)$ 
 - Since they share a common dense subset (simple functions), $L^2$ is dense in $L^1$ 
 
-### b
+
+:::
 
 Let $\Lambda \in L^1(X)\dual$ be arbitrary.
 
-#### 1: Existence of $g$ Representing $\Lambda$.
-
+:::{.proof title="of b, Existence of $g$ representing $\Lambda$"}
 Let $f\in L^2\subseteq L^1$ be arbitrary.
 
 Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
@@ -177,7 +178,10 @@ Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
 
 Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
 
-#### 2: $g$ is in $L^\infty$
+:::
+
+:::{.proof title="of b, $g$ is in $L^\infty$"}
+\envlist
 
 - It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
 - Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. 
@@ -222,6 +226,7 @@ Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\i
 
 :::
 
+:::
 
 
 ## Spring 2016 # 6 $\work$
