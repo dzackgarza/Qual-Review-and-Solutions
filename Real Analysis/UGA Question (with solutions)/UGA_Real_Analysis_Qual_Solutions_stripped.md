@@ -3823,7 +3823,7 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
 ```{=tex}
 \envlist
 ```
-::: {.proof title="of a"}
+::: {.proof title="a, $\\implies$"}
 \( \implies \):
 
 -   Suppose \( f:{\mathbb{R}}^n\to {\mathbb{R}} \) is a measurable function.
@@ -3864,7 +3864,9 @@ b.  If \( f \) is a Lebesgue measurable function on \( {\mathbb{R}}^n \), then
     (x, t) &\mapsto F(x, t) - G(x, t) \coloneqq f(x) - t
     ,\]
     which are linear combinations of measurable functions and thus measurable.
+:::
 
+::: {.proof title="a, $\\impliedby$"}
 \( \impliedby \):
 
 -   Suppose \( {\mathcal{A}} \) is a measurable set.
@@ -4341,31 +4343,23 @@ b.  Prove that
 
 Let \( \{u_n\}_{n=1}^∞ \) be an orthonormal sequence in a Hilbert space \( \mathcal{H} \).
 
-### a
+a.  Prove that for every \( x ∈ \mathcal H \) one has
+    \[
+    \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+    \]
 
-Prove that for every \( x ∈ \mathcal H \) one has
-\[
-\displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-\]
+b.  Prove that for any sequence \( \{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}}) \) there exists an element \( x\in\mathcal H \) such that
+    \[
+    a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
+    \]
+    and
+    \[
+    {\left\lVert {x} \right\rVert}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+    \]
 
-### b
-
-Prove that for any sequence \( \{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}}) \) there exists an element \( x\in\mathcal H \) such that
-\[
-a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
-\]
-and
-\[
-{\left\lVert {x} \right\rVert}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-\]
-
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Bessel's Inequality
 -   Pythagoras
@@ -4374,8 +4368,11 @@ and
 -   Trick -- remember to write out finite sum \( S_N \), and consider \( {\left\lVert {x - S_N} \right\rVert} \).
 :::
 
-### a
-
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
 **Claim:**
 \[
 0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
@@ -4392,9 +4389,12 @@ and
 &= {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2 \\
 &\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
 .\]
+:::
 
-### b
-
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
 1.  Fix \( \left\{{a_n}\right\} \in \ell^2 \), then note that \( \sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies \) the tails vanish.
 
 2.  Define
@@ -4418,16 +4418,13 @@ and
 
 > Bonus: We didn't use completeness here, so the Fourier series may not actually converge to \( x \). If \( \left\{{u_n}\right\} \) is **complete** (so \( x = 0 \iff {\left\langle {x},~{u_n} \right\rangle} = 0 ~\forall n \)) then the Fourier series *does* converge to \( x \) and \( \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2} \) for all \( x \in H \).
 :::
+:::
 
 ## Spring 2019 \# 5 \( \done \) {#spring-2019-5-done}
 
-### a
+a.  Show that \( L^2([0, 1]) ⊆ L^1([0, 1]) \) and argue that \( L^2([0, 1]) \) in fact forms a dense subset of \( L^1([0, 1]) \).
 
-Show that \( L^2([0, 1]) ⊆ L^1([0, 1]) \) and argue that \( L^2([0, 1]) \) in fact forms a dense subset of \( L^1([0, 1]) \).
-
-### b
-
-Let \( Λ \) be a continuous linear functional on \( L^1([0, 1]) \).
+b.  Let \( Λ \) be a continuous linear functional on \( L^1([0, 1]) \).
 
 Prove the Riesz Representation Theorem for \( L^1([0, 1]) \) by following the steps below:
 
@@ -4447,13 +4444,9 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
       \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1]) {}^{ \vee }}
       \]
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
 -   Holders' inequality: \( {\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {f} \right\rVert}_q \)
 
@@ -4480,8 +4473,14 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
     :::
 :::
 
-### a
-
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
 -   Note \( X = [0, 1] \implies m(X) = 1 \).
 
 -   By Holder's inequality with \( p=q=2 \),
@@ -4492,13 +4491,11 @@ ii. Argue that the \( g \) obtained above must in fact belong to \( L^∞([0, 1]
 -   Thus \( L^2(X) \subseteq L^1(X) \)
 
 -   Since they share a common dense subset (simple functions), \( L^2 \) is dense in \( L^1 \)
-
-### b
+:::
 
 Let \( \Lambda \in L^1(X) {}^{ \vee } \) be arbitrary.
 
-#### 1: Existence of \( g \) Representing \( \Lambda \). {#existence-of-g-representing-lambda.}
-
+::: {.proof title="of b, Existence of $g$ representing $\\Lambda$"}
 Let \( f\in L^2\subseteq L^1 \) be arbitrary.
 
 Claim: \( \Lambda\in L^1(X) {}^{ \vee }\implies \Lambda \in L^2(X) {}^{ \vee } \).
@@ -4529,9 +4526,12 @@ Claim: \( \Lambda\in L^1(X) {}^{ \vee }\implies \Lambda \in L^2(X) {}^{ \vee } \
 
 Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such that
 \[f\in L^2 \implies \Lambda(f) = {\left\langle {f},~{g} \right\rangle} \coloneqq\int_0^1 f(x) \mkern 1.5mu\overline{\mkern-1.5mug(x)\mkern-1.5mu}\mkern 1.5mu\, dx.\]
+:::
 
-#### 2: \( g \) is in \( L^\infty \) {#g-is-in-linfty}
-
+::: {.proof title="of b, $g$ is in $L^\\infty$"}
+```{=tex}
+\envlist
+```
 -   It suffices to show \( {\left\lVert {g} \right\rVert}_{L^\infty(X)} < \infty \).
 
 -   Since we're assuming \( {\left\lVert {\Gamma} \right\rVert}_{L^1(X) {}^{ \vee }} < \infty \), it suffices to show the stated equality. `\todo[inline]{Is this assumed..? Or did we show it..?}`{=tex}
@@ -4575,6 +4575,7 @@ Now apply Riesz Representation for \( L^2 \): there is a \( g \in L^2 \) such th
             &> {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }}
             ,\]
             a contradiction since \( {\left\lVert {\Lambda} \right\rVert}_{L^1(X) {}^{ \vee }} \) is the supremum over all \( h_\alpha \) with \( {\left\lVert {h_\alpha} \right\rVert}_{L^1(X)} = 1 \).
+:::
 :::
 
 ## Spring 2016 \# 6 \( \work \) {#spring-2016-6-work}
@@ -4623,17 +4624,12 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
 ```
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
-::: {.concept}
+::: {.proof title="of a"}
 ```{=tex}
-\hfill
+\envlist
 ```
--   ?
-:::
-
-### a
-
 -   Let \( \left\{{f_n}\right\} \) be a Cauchy sequence in \( C(I, {\left\lVert {{-}} \right\rVert}_\infty) \), so \( \lim_n\lim_m {\left\lVert {f_m - f_n} \right\rVert}_\infty = 0 \), we will show it converges to some \( f \) in this space.
 
 -   For each fixed \( x_0 \in [0, 1] \), the sequence of real numbers \( \left\{{f_n(x_0)}\right\} \) is Cauchy in \( {\mathbb{R}} \) since
@@ -4669,9 +4665,12 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
             .\]
 
 -   \( f \) is the uniform limit of continuous functions and thus continuous, so \( f\in C([0, 1]) \).
+:::
 
-### b
-
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
 -   It suffices to produce a Cauchy sequence that does not converge to a continuous function.
 
 -   Take the following sequence of functions:
@@ -4693,6 +4692,7 @@ b.  Prove that \( C([0, 1]) \) is not complete under the \( L^1{\hbox{-}} \)norm
 \todo[inline]{show that $\int_0^1 {\left\lvert {f_n(x) - f_m(x)} \right\rvert} \,dx \to 0$ rigorously, show that no $g\in L^1([0, 1])$ can converge to this indicator function.}
 ```
 :::
+:::
 
 ## Spring 2017 \# 6 \( \done \) {#spring-2017-6-done}
 
@@ -4704,10 +4704,6 @@ Show that the space \( C^1([a, b]) \) is a Banach space when equipped with the n
 ```{=tex}
 \todo[inline]{Add concepts.}
 ```
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
 \hfill
@@ -4715,6 +4711,10 @@ Show that the space \( C^1([a, b]) \) is a Banach space when equipped with the n
 -   See <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 :::
 
+::: {.solution}
+```{=tex}
+\envlist
+```
 -   Denote this norm \( {\left\lVert {{-}} \right\rVert}_u \)
 
 -   Let \( f_n \) be a Cauchy sequence in this space, so \( {\left\lVert {f_n} \right\rVert}_u < \infty \) for every \( n \) and \( {\left\lVert {f_j - f_k} \right\rVert}_u \overset{j, k\to\infty}\to 0 \).
@@ -4773,13 +4773,6 @@ Show that \( (C^0({\mathbb{R}}), {\left\lVert {{-}} \right\rVert} ) \) (the spac
 ```{=tex}
 \hfill
 ```
-::: {.concept}
-```{=tex}
-\hfill
-```
--   ?
-:::
-
 Let \( \left\{{f_k}\right\} \) be a Cauchy sequence, so \( {\left\lVert {f_k} \right\rVert} < \infty \) for all \( k \). Then for a fixed \( x \), the sequence \( f_k(x) \) is Cauchy in \( {\mathbb{R}} \) and thus converges to some \( f(x) \), so define \( f \) by \( f(x) \coloneqq\lim_{k\to\infty} f_k(x) \).
 
 Then \( {\left\lVert {f_k - f} \right\rVert} = \max_{x\in X}{\left\lvert {f_k(x) - f(x)} \right\rvert} \overset{k\to\infty}\to 0 \), and thus \( f_k \to f \) uniformly and thus \( f \) is continuous. It just remains to show that \( f \) has bounded norm.

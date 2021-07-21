@@ -4427,7 +4427,8 @@ m(\mathcal{A})=\int _{\RR^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \R
 :::{.solution}
 \envlist
 
-:::{.proof title="of a"}
+
+:::{.proof title="a, $\implies$"}
 $\implies$:
 
 - Suppose $f:\RR^n\to \RR$ is a measurable function.
@@ -4473,6 +4474,9 @@ H: \RR^d &\to \RR \\
   which are linear combinations of measurable functions and thus measurable.
 
 
+:::
+
+:::{.proof title="a, $\impliedby$"}
 $\impliedby$:
 
 - Suppose $\mca$ is a measurable set.
@@ -4930,13 +4934,13 @@ A_\delta f \to \alpha f \text{ in } L^1(\RR) \qtext{as} \delta\to 0^+
 ## Fall 2019 # 4 $\done$
 Let $\{u_n\}_{n=1}^∞$ be an orthonormal sequence in a Hilbert space $\mathcal{H}$.
 
-### a 
+a.
 Prove that for every $x ∈ \mathcal H$ one has 
 \[
 \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
 \]
 
-### b
+b.
 Prove that for any sequence $\{a_n\}_{n=1}^\infty \in \ell^2(\NN)$ there exists an element $x\in\mathcal H$ such that 
 \[
 a_n = \inner{x}{u_n} \text{ for all } n\in \NN
@@ -4946,10 +4950,9 @@ and
 \norm{x}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
 \]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
+
 - Bessel's Inequality
 - Pythagoras
 - Surjectivity of the Riesz map
@@ -4957,8 +4960,10 @@ and
 - Trick -- remember to write out finite sum $S_N$, and consider $\norm{x - S_N}$.
 :::
 
-### a
+:::{.solution}
+\envlist
 
+:::{.proof title="of a"}
 **Claim:**
 \[
 0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
@@ -4979,7 +4984,10 @@ Then
 .\]
 
 
-### b
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 1. Fix $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
 
@@ -5007,12 +5015,15 @@ If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$
 
 :::
 
+:::
+
+
 ## Spring 2019 # 5 $\done$
 
-### a  
+a.
 Show that $L^2([0, 1]) ⊆ L^1([0, 1])$ and argue that $L^2([0, 1])$ in fact forms a dense subset of $L^1([0, 1])$.
 
-### b  
+b.
 Let $Λ$ be a continuous linear functional on $L^1([0, 1])$.
   
 Prove the Riesz Representation Theorem for $L^1([0, 1])$ by following the steps below:
@@ -5033,10 +5044,9 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   \|g\|_{L^{\infty}([0,1])} = \|\Lambda\|_{L^{1}([0,1])\dual}
   \]
 
-:::{.solution}
-\hfill
 :::{.concept}
-\hfill
+\envlist
+
 - Holders' inequality: $\norm{fg}_1 \leq \norm{f}_p \norm{f}_q$
 - Riesz Representation for $L^2$: If $\Lambda \in (L^2)\dual$ then there exists a unique $g\in L^2$ such that $\Lambda(f) = \int fg$.
 - $\norm{f}_{L^\infty(X)} \definedas \inf \theset{t\geq 0 \suchthat \abs{f(x)} \leq t \text{ almost everywhere} }$.
@@ -5057,8 +5067,11 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
   :::
 :::
 
+:::{.solution}
+\envlist
 
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Note $X = [0, 1] \implies m(X) = 1$.
 - By Holder's inequality with $p=q=2$, 
@@ -5069,12 +5082,12 @@ ii. Argue that the $g$ obtained above must in fact belong to $L^∞([0, 1])$ and
 - Thus $L^2(X) \subseteq L^1(X)$ 
 - Since they share a common dense subset (simple functions), $L^2$ is dense in $L^1$ 
 
-### b
+
+:::
 
 Let $\Lambda \in L^1(X)\dual$ be arbitrary.
 
-#### 1: Existence of $g$ Representing $\Lambda$.
-
+:::{.proof title="of b, Existence of $g$ representing $\Lambda$"}
 Let $f\in L^2\subseteq L^1$ be arbitrary.
 
 Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
@@ -5104,7 +5117,10 @@ Claim: $\Lambda\in L^1(X)\dual \implies \Lambda \in L^2(X)\dual$.
 
 Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\in L^2 \implies \Lambda(f) = \inner{f}{g} \definedas \int_0^1 f(x) \bar{g(x)}\, dx.$$
 
-#### 2: $g$ is in $L^\infty$
+:::
+
+:::{.proof title="of b, $g$ is in $L^\infty$"}
+\envlist
 
 - It suffices to show $\norm{g}_{L^\infty(X)} < \infty$.
 - Since we're assuming $\norm{\Gamma}_{L^1(X)\dual} < \infty$, it suffices to show the stated equality. 
@@ -5149,6 +5165,7 @@ Now apply Riesz Representation for $L^2$: there is a $g \in L^2$ such that $$f\i
 
 :::
 
+:::
 
 
 ## Spring 2016 # 6 $\work$
@@ -5192,14 +5209,10 @@ b. Prove that $C([0, 1])$ is not complete under the $L^1\dash$norm $\norm{f}_1 =
 \todo[inline]{Add concepts.}
 
 :::{.solution}
-\hfill
-:::{.concept}
-\hfill
-- ?
-:::
+\envlist
 
-
-### a
+:::{.proof title="of a"}
+\envlist
 
 - Let $\theset{f_n}$ be  a Cauchy sequence in $C(I, \norm{\wait}_\infty)$, so $\lim_n\lim_m \norm{f_m - f_n}_\infty = 0$, we will show it converges to some $f$ in this space.
 - For each fixed $x_0 \in [0, 1]$, the sequence of real numbers $\theset{f_n(x_0)}$ is Cauchy in $\RR$ since
@@ -5231,7 +5244,11 @@ $$
 
 - $f$ is the uniform limit of continuous functions and thus continuous, so $f\in C([0, 1])$.
 
-### b
+
+:::
+
+:::{.proof title="of b"}
+\envlist
 
 - It suffices to produce a Cauchy sequence that does not converge to a continuous function. 
 
@@ -5252,6 +5269,7 @@ $$
 
 :::
 
+:::
 
 
 ## Spring 2017 # 6 $\done$
@@ -5262,13 +5280,14 @@ Show that the space $C^1([a, b])$ is a Banach space when equipped with the norm
 
 \todo[inline]{Add concepts.}
 
-:::{.solution}
-\hfill
 :::{.concept}
 \hfill
 - See 
 <https://math.stackexchange.com/questions/507263/prove-that-c1a-b-with-the-c1-norm-is-a-banach-space/>
 :::
+
+:::{.solution}
+\envlist
 
 - Denote this norm $\norm{\wait}_u$
 
@@ -5307,7 +5326,6 @@ and define a candidate limit: for each $x\in I$, set \[f(x) \definedas \lim_{n\t
 :::
 
 
-
 ## Fall 2017 # 6 $\done$
 Let $X$ be a complete metric space and define a norm
 $$
@@ -5322,11 +5340,6 @@ Show that $(C^0(\RR), \norm{\wait} )$ (the space of continuous functions $f: X\t
 
 :::{.solution}
 \hfill
-:::{.concept}
-\hfill
-- ?
-:::
-
 
 Let $\theset{f_k}$ be a Cauchy sequence, so $\norm{f_k} < \infty$ for all $k$.
 Then for a fixed $x$, the sequence $f_k(x)$ is Cauchy in $\RR$ and thus converges to some $f(x)$, so define $f$ by $f(x) \definedas \lim_{k\to\infty} f_k(x)$.

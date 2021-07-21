@@ -5954,7 +5954,7 @@ Prove the validity of the following two statements:
 
 \envlist
 
-\begin{proof}[of a]
+\begin{proof}[a, $\implies$]
 
 \(\implies\):
 
@@ -6023,6 +6023,10 @@ Prove the validity of the following two statements:
   which are linear combinations of measurable functions and thus
   measurable.
 \end{itemize}
+
+\end{proof}
+
+\begin{proof}[a, $\impliedby$]
 
 \(\impliedby\):
 
@@ -6742,35 +6746,29 @@ General}\label{functional-analysis-general}}
 Let \(\{u_n\}_{n=1}^∞\) be an orthonormal sequence in a Hilbert space
 \(\mathcal{H}\).
 
-\hypertarget{a-4}{%
-\subsubsection{a}\label{a-4}}
-
-Prove that for every \(x ∈ \mathcal H\) one has
-\begin{align*}
-\displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-\end{align*}
-
-\hypertarget{b-3}{%
-\subsubsection{b}\label{b-3}}
-
-Prove that for any sequence
-\(\{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})\) there exists an
-element \(x\in\mathcal H\) such that
-\begin{align*}
-a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
-\end{align*}
-and
-\begin{align*}
-{\left\lVert {x} \right\rVert}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-\end{align*}
-
-\begin{solution}
-
-\hfill
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that for every \(x ∈ \mathcal H\) one has
+  \begin{align*}
+  \displaystyle\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+  \end{align*}
+\item
+  Prove that for any sequence
+  \(\{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})\) there exists an
+  element \(x\in\mathcal H\) such that
+  \begin{align*}
+  a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
+  \end{align*}
+  and
+  \begin{align*}
+  {\left\lVert {x} \right\rVert}^2 = \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+  \end{align*}
+\end{enumerate}
 
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -6789,8 +6787,11 @@ and
 
 \end{concept}
 
-\hypertarget{a-5}{%
-\subsubsection{a}\label{a-5}}
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
 
 \textbf{Claim:}
 \begin{align*}
@@ -6810,8 +6811,11 @@ and
 &\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
 .\end{align*}
 
-\hypertarget{b-4}{%
-\subsubsection{b}\label{b-4}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6852,22 +6856,22 @@ then the Fourier series \emph{does} converge to \(x\) and
 for all \(x \in H\).
 \end{quote}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2019-5-done}{%
 \subsection{\texorpdfstring{Spring 2019 \# 5
 \(\done\)}{Spring 2019 \# 5 \textbackslash done}}\label{spring-2019-5-done}}
 
-\hypertarget{a-6}{%
-\subsubsection{a}\label{a-6}}
-
-Show that \(L^2([0, 1]) ⊆ L^1([0, 1])\) and argue that \(L^2([0, 1])\)
-in fact forms a dense subset of \(L^1([0, 1])\).
-
-\hypertarget{b-5}{%
-\subsubsection{b}\label{b-5}}
-
-Let \(Λ\) be a continuous linear functional on \(L^1([0, 1])\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(L^2([0, 1]) ⊆ L^1([0, 1])\) and argue that \(L^2([0, 1])\)
+  in fact forms a dense subset of \(L^1([0, 1])\).
+\item
+  Let \(Λ\) be a continuous linear functional on \(L^1([0, 1])\).
+\end{enumerate}
 
 Prove the Riesz Representation Theorem for \(L^1([0, 1])\) by following
 the steps below:
@@ -6904,13 +6908,9 @@ Hint: You may use, without proof, the Riesz Representation Theorem for
     \end{align*}
 \end{enumerate}
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
-\hfill
+\envlist
 
 \begin{itemize}
 \item
@@ -6950,8 +6950,13 @@ Hint: You may use, without proof, the Riesz Representation Theorem for
 
 \end{concept}
 
-\hypertarget{a-7}{%
-\subsubsection{a}\label{a-7}}
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -6968,14 +6973,11 @@ Hint: You may use, without proof, the Riesz Representation Theorem for
   dense in \(L^1\)
 \end{itemize}
 
-\hypertarget{b-6}{%
-\subsubsection{b}\label{b-6}}
+\end{proof}
 
 Let \(\Lambda \in L^1(X) {}^{ \vee }\) be arbitrary.
 
-\hypertarget{existence-of-g-representing-lambda.}{%
-\paragraph{\texorpdfstring{1: Existence of \(g\) Representing
-\(\Lambda\).}{1: Existence of g Representing \textbackslash Lambda.}}\label{existence-of-g-representing-lambda.}}
+\begin{proof}[of b, Existence of $g$ representing $\Lambda$]
 
 Let \(f\in L^2\subseteq L^1\) be arbitrary.
 
@@ -7020,9 +7022,11 @@ Now apply Riesz Representation for \(L^2\): there is a \(g \in L^2\)
 such that
 \begin{align*}f\in L^2 \implies \Lambda(f) = {\left\langle {f},~{g} \right\rangle} \coloneqq\int_0^1 f(x) \mkern 1.5mu\overline{\mkern-1.5mug(x)\mkern-1.5mu}\mkern 1.5mu\, dx.\end{align*}
 
-\hypertarget{g-is-in-linfty}{%
-\paragraph{\texorpdfstring{2: \(g\) is in
-\(L^\infty\)}{2: g is in L\^{}\textbackslash infty}}\label{g-is-in-linfty}}
+\end{proof}
+
+\begin{proof}[of b, $g$ is in $L^\infty$]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -7088,6 +7092,8 @@ such that
     \end{itemize}
   \end{itemize}
 \end{itemize}
+
+\end{proof}
 
 \end{solution}
 
@@ -7166,22 +7172,11 @@ functions on \([0, 1]\).
 
 \begin{solution}
 
-\hfill
+\envlist
 
-\begin{concept}
+\begin{proof}[of a]
 
-\hfill
-
-\begin{itemize}
-\tightlist
-\item
-  ?
-\end{itemize}
-
-\end{concept}
-
-\hypertarget{a-8}{%
-\subsubsection{a}\label{a-8}}
+\envlist
 
 \begin{itemize}
 \item
@@ -7247,8 +7242,11 @@ functions on \([0, 1]\).
   continuous, so \(f\in C([0, 1])\).
 \end{itemize}
 
-\hypertarget{b-7}{%
-\subsubsection{b}\label{b-7}}
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
 
 \begin{itemize}
 \item
@@ -7292,6 +7290,8 @@ functions on \([0, 1]\).
 
 \todo[inline]{show that $\int_0^1 {\left\lvert {f_n(x) - f_m(x)} \right\rvert} \,dx \to 0$ rigorously, show that no $g\in L^1([0, 1])$ can converge to this indicator function.}
 
+\end{proof}
+
 \end{solution}
 
 \hypertarget{spring-2017-6-done}{%
@@ -7306,10 +7306,6 @@ the norm
 
 \todo[inline]{Add concepts.}
 
-\begin{solution}
-
-\hfill
-
 \begin{concept}
 
 \hfill
@@ -7322,6 +7318,10 @@ the norm
 \end{itemize}
 
 \end{concept}
+
+\begin{solution}
+
+\envlist
 
 \begin{itemize}
 \item
@@ -7418,18 +7418,6 @@ complete.
 \begin{solution}
 
 \hfill
-
-\begin{concept}
-
-\hfill
-
-\begin{itemize}
-\tightlist
-\item
-  ?
-\end{itemize}
-
-\end{concept}
 
 Let \(\left\{{f_k}\right\}\) be a Cauchy sequence, so
 \({\left\lVert {f_k} \right\rVert} < \infty\) for all \(k\). Then for a

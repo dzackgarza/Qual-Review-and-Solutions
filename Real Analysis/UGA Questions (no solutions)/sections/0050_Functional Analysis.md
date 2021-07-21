@@ -89,10 +89,10 @@ If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$
 
 ## Spring 2019 # 5 $\done$
 
-### a  
+a.
 Show that $L^2([0, 1]) ⊆ L^1([0, 1])$ and argue that $L^2([0, 1])$ in fact forms a dense subset of $L^1([0, 1])$.
 
-### b  
+b.
 Let $Λ$ be a continuous linear functional on $L^1([0, 1])$.
   
 Prove the Riesz Representation Theorem for $L^1([0, 1])$ by following the steps below:
