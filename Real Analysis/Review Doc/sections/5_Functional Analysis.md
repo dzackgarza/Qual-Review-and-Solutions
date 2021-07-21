@@ -64,7 +64,7 @@ and thus
 :::{.theorem title="Riesz Representation for Hilbert Spaces"}
 If $\Lambda$ is a continuous linear functional on a Hilbert space $H$, then there exists a unique $y \in H$ such that
 \[
-\forall x\in H,\quad \Lambda(x) = \inner{x}{y}.
+\forall x\in H,\quad \Lambda(x) = \inner{x}{y}
 .\]
 :::
 
@@ -110,7 +110,7 @@ Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
 
 1. $L$ is continuous
 2. $L$ is continuous at zero
-3. $L$ is bounded, i.e. $\exists c\geq 0 \suchthat \abs{L(x)} \leq c \norm{x}$ for all $x\in H$
+3. $L$ is bounded, i.e. $\exists c\geq 0$ such that $\abs{L(x)} \leq c \norm{x}$ for all $x\in H$
 :::
 
 :::{.proof title="?"}
