@@ -33,6 +33,30 @@ and
 \envlist
 
 :::{.proof title="of a"}
+\envlist
+
+- Equivalently, we can show
+\[
+\norm{x}^2 - \sum_{n=1}^\infty \abs{ \inner{x}{u_n} }^2 \geq 0
+.\]
+
+- Claim: the LHS is the norm of an element in $H$, and thus non-negative.
+  More precisely, set $S_N\da \sum_{n=1}^N \inner{x}{u_n}u_n$, then the above is equal to
+  \[
+  \norm{x - \lim_{N\to\infty} S_N}^2
+  .\]
+  Note that if this is true, we're done.
+
+- To see this, expand the norm in terms of inner products:
+\[
+  \norm{x - \lim_{N\to\infty} S_N}^2
+  &= \inner{x-S_N}{x-S_N} \\
+  &= \inner{x}{x} - \inner{x}{S_N} - \inner{S_N}{x} + \inner{S_N}{S_N} \\
+  &= \norm{x}^2 + \norm{S_N}^2 - \qty{\inner{x}{S_N} + \conjugate{\inner{x}{S_N}} } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{\inner x {S_N} }
+.\]
+
+
 **Claim:**
 \[
 0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
