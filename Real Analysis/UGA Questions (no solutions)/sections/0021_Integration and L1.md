@@ -408,7 +408,16 @@ Let $f\in L^1(\RR)$ and for each $h > 0$ let
 
 :::{.proof title="of a"}
 
-Fix $\varepsilon > 0$.
+- Fix $\varepsilon > 0$.
+  If we can find a set $A$ such that the following calculation holds for $h$ small enough, we're done:
+  \[
+  \int_\RR \abs{f(x-h) - f(x)} \dx 
+  &= \int_A \abs{f(x-h) - f(x)} \dx \\
+  &\leq \int_A \eps \\
+  &= \eps \mu(A) \too 0
+  ,\]
+  provided $h\to 0$ as $\eps\to 0$, which we can arrange if $\abs{h} < \eps$.
+
 Enlarge the support of $g$ to $K$ such that
 \[
 \abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
@@ -468,7 +477,7 @@ This works for arbitrary $f\in L^1$, using approximation by continuous functions
 &\to \norm{\tau_h g - g}
 ,\]
 
-  so it suffices to show that $\norm{\tau_h g - g} \to 0$ for $g\in C_c^0$.
+  so it suffices to show that $\norm{\tau_h g - g} \to 0$.
 
 :::
 
