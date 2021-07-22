@@ -1302,10 +1302,10 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
 -   Borel-Cantelli: for a sequence of sets \( X_n \),
     \[
     \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for infinitely many $n$} }\right\} 
-    &= \displaystyle\bigcap_{m\in {\mathbb{N}}} \displaystyle\bigcup_{n\geq m} X_n
+    &= \displaystyle\bigcap_{N\geq 1} \displaystyle\bigcup_{n\geq N} X_n = \limsup_n X_n
     \\
     \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for all but finitely many $n$} }\right\}
-    &= \displaystyle\bigcup_{m\in {\mathbb{N}}} \displaystyle\bigcap_{n\geq m} X_n
+    &= \displaystyle\bigcup_{N\geq 1} \displaystyle\bigcap_{n\geq N} X_n = \liminf X_n
     .\]
 
 -   Properties of logs and exponentials:
@@ -1327,7 +1327,7 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
 \envlist
 ```
 -   The Borel \( \sigma{\hbox{-}} \)algebra is closed under countable unions/intersections/complements,
--   \( B = \limsup_n B_n \) is an intersection of unions of measurable sets.
+-   \( B = \limsup_n B_n = \cap_{N\geq 1} \cup_{n\geq N} B_n \) is an intersection of unions of measurable sets.
 :::
 
 ::: {.proof title="of b"}
@@ -1336,7 +1336,7 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
 ```
 -   Tails of convergent sums vanish, so
     \[
-    \sum_{n\geq M} \mu(B_n) \xrightarrow{M\to\infty} 0
+    \sum_{n\geq N} \mu(B_n) \xrightarrow{N\to\infty} 0
     .\]
 -   Also,
     \[
@@ -1347,6 +1347,7 @@ c.  Prove that if \( \sum_{n=1}^\infty \mu(B_n) = \infty \) **and** the sequence
     \mu(B) 
     &\coloneqq\mu\left(\displaystyle\bigcap_{N\geq 1} \displaystyle\bigcup_{n\geq N} B_n\right) \\
     &\leq \mu\left( \displaystyle\bigcup_{n\geq N} B_n \right) && \forall N \\
+    &\leq \sum_{n\geq N} \mu(B_n) && \forall N \\
     &\overset{N\to\infty}\longrightarrow 0
     ,\]
     where we've used that we're intersecting over fewer sets and this can only increase measure.
@@ -3026,8 +3027,8 @@ Show that
     -   Taking \( p \)th roots for \( p\geq 1 \) preserves the inequality, so
         \[
         \implies {\left\lVert {f} \right\rVert}_p &\geq {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} \cdot m(S_\varepsilon)^{\frac 1 p} 
-        \overset{p\to\infty}\to {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} 
-        \overset{\varepsilon \to 0}\to {\left\lVert {f} \right\rVert}_\infty
+        \overset{p\to\infty}\longrightarrow{\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} 
+        \overset{\varepsilon \to 0}\longrightarrow{\left\lVert {f} \right\rVert}_\infty
         \]
         where we've used the fact that above arguments work
 
@@ -3066,7 +3067,7 @@ Show that \( f = 0 \) almost everywhere.
 
 -   Thus there is a sequence of polynomials \( P_\ell \) such that
     \[
-    P_{\ell, k} \overset{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+    P_{\ell, k} \overset{\ell\to\infty}\longrightarrow e^{2\pi i k x} \text{ uniformly on } [0,1]
     .\]
 
 -   Note applying linearity to the assumption \( \int f(x) \, x^n \), we have
@@ -3164,7 +3165,7 @@ c.  If \( f: [1, \infty) \to [0, \infty) \) is decreasing with \( \lim_{x\to \in
 ```
 -   Limits
 -   Cauchy Criterion for Integrals: \( \int_a^\infty f(x) \,dx \) converges iff for every \( {\varepsilon}>0 \) there exists an \( M_0 \) such that \( A,B\geq M_0 \) implies \( {\left\lvert {\int_A^B f} \right\rvert} < {\varepsilon} \), i.e. \( {\left\lvert {\int_A^B f} \right\rvert} \overset{A\to\infty}\to 0 \).
--   Integrals of \( L^1 \) functions have vanishing tails: \( \int_{N}^\infty {\left\lvert {f} \right\rvert} \overset{N\to\infty}\to 0 \).
+-   Integrals of \( L^1 \) functions have vanishing tails: \( \int_{N}^\infty {\left\lvert {f} \right\rvert} \overset{N\to\infty}\longrightarrow 0 \).
 -   Mean Value Theorem for Integrals: \( \int_a^b f(t)\, dt = (b-a) f(c) \) for some \( c\in [a, b] \).
 :::
 
@@ -3181,16 +3182,16 @@ Stated integral equality:
     &= \int_{{\left\lvert {x} \right\rvert} > N} {\left\lvert {f-f_n} \right\rvert} \\ 
     &\leq \int_{{\left\lvert {x} \right\rvert} > N} {\left\lVert {f-f_n} \right\rVert}_1 \\
     &= {\left\lVert {f_n-f} \right\rVert}_1 \qty{\int_{{\left\lvert {x} \right\rvert} > N} 1} \\
-    &\overset{n\to\infty}\to 0 \qty{\int_{{\left\lvert {x} \right\rvert} > N} 1} \\
+    &\overset{n\to\infty}\longrightarrow 0 \qty{\int_{{\left\lvert {x} \right\rvert} > N} 1} \\
     &= 0\\
-    &\overset{N\to\infty}\to 0
+    &\overset{N\to\infty}\longrightarrow 0
     .\]
 
 To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rvert} \to \infty \):
 
 -   Take \( f(x) \) to be a train of rectangles of height 1 and area \( 1/2^j \) centered on even integers.
 -   Then
-    \[\int_{{\left\lvert {x} \right\rvert} > N} {\left\lvert {f} \right\rvert} = \sum_{j=N}^\infty 1/2^j \overset{N\to\infty}\to 0\]
+    \[\int_{{\left\lvert {x} \right\rvert} > N} {\left\lvert {f} \right\rvert} = \sum_{j=N}^\infty 1/2^j \overset{N\to\infty}\longrightarrow 0\]
     as the tail of a convergent sum.
 -   However \( f(x) = 1 \) for infinitely many even integers \( x > N \), so \( f(x) \not\to 0 \) as \( {\left\lvert {x} \right\rvert}\to\infty \).
 :::
@@ -3222,11 +3223,11 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
 
 -   By the Cauchy Criterion for integrals, \( \lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0 \).
 
--   So the LHS term \( xf(x) \overset{x\to\infty}\to 0 \).
+-   So the LHS term \( xf(x) \overset{x\to\infty}\longrightarrow 0 \).
 
 -   Since \( x>1 \), \( {\left\lvert {f(x)} \right\rvert} \leq {\left\lvert {xf(x)} \right\rvert} \)
 
--   Thus \( f(x) \overset{x\to\infty}\to 0 \) as well.
+-   Thus \( f(x) \overset{x\to\infty}\longrightarrow 0 \) as well.
 :::
 
 ::: {.proof title="Solution 2: Variation on the trick"}
@@ -3254,7 +3255,7 @@ To see that this doesn't force \( f(x)\to 0 \) as \( {\left\lvert {x} \right\rve
 :::
 
 ::: {.proof title="Solution 3: Contradiction"}
-Just showing \( f(x) \overset{x\to \infty}\to 0 \):
+Just showing \( f(x) \overset{x\to \infty}\longrightarrow 0 \):
 
 -   Toward a contradiction, suppose not.
 
@@ -3281,7 +3282,7 @@ Just showing \( f(x) \overset{x\to \infty}\to 0 \):
     -   Then
         \[\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L}\,dt = \infty\]
 
-Showing \( xf(x) \overset{x\to \infty}\to 0 \).
+Showing \( xf(x) \overset{x\to \infty}\longrightarrow 0 \).
 
 -   Toward a contradiction, suppose not.
 -   (How to show that \( xf(x) \not\to + \infty \)?)
@@ -3309,7 +3310,7 @@ Showing \( xf(x) \overset{x\to \infty}\to 0 \).
 ::: {.proof title="Solution 4: Akos' suggestion"}
 For \( x\geq 1 \),
 \[
-{\left\lvert {xf(x)} \right\rvert} = {\left\lvert { \int_x^{2x} f(x) \, dt } \right\rvert} \leq \int_x^{2x} {\left\lvert {f(x)} \right\rvert} \, dt \leq \int_x^{2x} {\left\lvert {f(t)} \right\rvert}\, dt \leq \int_x^{\infty} {\left\lvert {f(t)} \right\rvert} \,dt \overset{x\to\infty}\to 0
+{\left\lvert {xf(x)} \right\rvert} = {\left\lvert { \int_x^{2x} f(x) \, dt } \right\rvert} \leq \int_x^{2x} {\left\lvert {f(x)} \right\rvert} \, dt \leq \int_x^{2x} {\left\lvert {f(t)} \right\rvert}\, dt \leq \int_x^{\infty} {\left\lvert {f(t)} \right\rvert} \,dt \overset{x\to\infty}\longrightarrow 0
 \]
 where we've used
 
@@ -3343,15 +3344,13 @@ where we've used
 -   No: take \( f(x) = {1\over x\ln x} \)
 -   Then by a \( u{\hbox{-}} \)substitution,
     \[
-    \int_0^x f = \ln\qty{\ln (x)} \overset{x\to\infty}\to \infty
+    \int_0^x f = \ln\qty{\ln (x)} \overset{x\to\infty}\longrightarrow\infty
     \]
     is unbounded, so \( f\not\in L^1([1, \infty)) \).
 -   But
     \[
-    xf(x) = { 1 \over \ln(x)} \overset{x\to\infty} \to 0
+    xf(x) = { 1 \over \ln(x)} \overset{x\to\infty} \longrightarrow 0
     .\]
-:::
-
 :::
 
 ## Fall 2019 \# 5. \( \done \) {#fall-2019-5.-done}
@@ -3386,34 +3385,31 @@ b.  Let \( f\in L^1({\mathbb{R}}) \) and for each \( h > 0 \) let
 \envlist
 ```
 ::: {.proof title="of a"}
-Choose \( g\in C_c^0 \) such that \( {\left\lVert {f- g} \right\rVert}_1 \to 0 \).
+-   Fix \( \varepsilon > 0 \). If we can find a set \( A \) such that the following calculation holds for \( h \) small enough, we're done:
+    \[
+    \int_{\mathbb{R}}{\left\lvert {f(x-h) - f(x)} \right\rvert} \,dx
+    &= \int_A {\left\lvert {f(x-h) - f(x)} \right\rvert} \,dx\\
+    &\leq \int_A {\varepsilon}\\
+    &= {\varepsilon}\mu(A) \longrightarrow 0
+    ,\]
+    provided \( h\to 0 \) as \( {\varepsilon}\to 0 \), which we can arrange if \( {\left\lvert {h} \right\rvert} < {\varepsilon} \).
 
-By translation invariance, \( {\left\lVert {\tau_h f - \tau_h g} \right\rVert}_1 \to 0 \).
+-   Choose \( A\supseteq{\operatorname{supp}}f \) compact such that \( {\operatorname{supp}}f \pm 1 \subseteq A \)
 
-Write
-\[
-{\left\lVert {\tau f - f} \right\rVert}_1 
-&= {\left\lVert {\tau_h f - g + g - \tau_h g + \tau_h g - f} \right\rVert}_1 \\
-&\leq {\left\lVert {\tau_h f - \tau_h g} \right\rVert} + {\left\lVert {g - f} \right\rVert} + {\left\lVert {\tau_h g - g} \right\rVert} \\
-&\to {\left\lVert {\tau_h g - g} \right\rVert}
-,\]
+    -   Why this can be done: \( {\operatorname{supp}}f \) is compact, so closed and bounded, and contained in some compact interval \( [-M, M] \). So e.g. \( A\coloneqq[-M-1, M+1] \) suffices.
 
-so it suffices to show that \( {\left\lVert {\tau_h g - g} \right\rVert} \to 0 \) for \( g\in C_c^0 \).
+-   Note that \( f \) is still continuous on \( A \), since it is zero on \( A\setminus{\operatorname{supp}}f \), and thus uniformly continuous (by Heine-Cantor, for example).
 
-Fix \( \varepsilon > 0 \). Enlarge the support of \( g \) to \( K \) such that
-\[
-{\left\lvert {h} \right\rvert} \leq 1 \text{ and } x \in K^c \implies {\left\lvert {g(x-h) - g(x)} \right\rvert} = 0
-.\]
+-   We can rephrase the usual definition of uniform continuity:
+    \[
+    \forall {\varepsilon}\exists \delta = \delta({\varepsilon}) \text{ such that } {\left\lvert {x - y} \right\rvert} < \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} < {\varepsilon}\quad \forall x, y\in A
+    \]
+    as
+    \[
+    \forall {\varepsilon}\exists \delta = \delta({\varepsilon}) \text{ such that } {\left\lvert {h} \right\rvert} < \delta \implies {\left\lvert {f(x-h) - f(x)} \right\rvert} < {\varepsilon}\quad \forall x \text{ such that }x, x\pm h \in A
+    \]
 
-By uniform continuity of \( g \), pick \( \delta \leq 1 \) small enough such that
-\[
-x\in K, ~{\left\lvert {h} \right\rvert} \leq \delta \implies {\left\lvert {g(x-h) -g(x)} \right\rvert} < \varepsilon
-,\]
-
-then
-\[
-\int_K {\left\lvert {g(x-h) - g(x)} \right\rvert} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
-\]
+-   So fix \( {\varepsilon} \) and choose such a \( \delta \) for \( A \), and choose \( h \) such that \( {\left\lvert {h} \right\rvert} < \min(1, \delta) \). Then the desired computation goes through by uniform continuity of \( f \) on \( A \).
 :::
 
 ::: {.proof title="of b"}
@@ -3438,6 +3434,24 @@ and (rough sketch)
 &\to 0 \quad\text{by (a)}
 .\]
 :::
+:::
+
+::: {.remark}
+This works for arbitrary \( f\in L^1 \), using approximation by continuous functions with compact support:
+
+-   Choose \( g\in C_c^0 \) such that \( {\left\lVert {f- g} \right\rVert}_1 \to 0 \).
+
+-   By translation invariance, \( {\left\lVert {\tau_h f - \tau_h g} \right\rVert}_1 \to 0 \).
+
+-   Write
+    \[
+    {\left\lVert {\tau f - f} \right\rVert}_1 
+    &= {\left\lVert {\tau_h f - g + g - \tau_h g + \tau_h g - f} \right\rVert}_1 \\
+    &\leq {\left\lVert {\tau_h f - \tau_h g} \right\rVert} + {\left\lVert {g - f} \right\rVert} + {\left\lVert {\tau_h g - g} \right\rVert} \\
+    &\to {\left\lVert {\tau_h g - g} \right\rVert}
+    ,\]
+
+    so it suffices to show that \( {\left\lVert {\tau_h g - g} \right\rVert} \to 0 \).
 :::
 
 ## Fall 2017 \# 3 \( \done \) {#fall-2017-3-done}
@@ -4373,50 +4387,82 @@ b.  Prove that for any sequence \( \{a_n\}_{n=1}^\infty \in \ell^2({\mathbb{N}})
 \envlist
 ```
 ::: {.proof title="of a"}
-**Claim:**
-\[
-0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
-&= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
-&\implies
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-.\]
+```{=tex}
+\envlist
+```
+-   Equivalently, we can show
+    \[
+    {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^\infty {\left\lvert { {\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \geq 0
+    .\]
 
-*Proof:* Let \( S_N = \sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n \). Then
-\[
-0 
-&\leq {\left\lVert {x - S_N} \right\rVert}^2 \\ 
-&= {\left\langle {x - S_n},~{x - S_N} \right\rangle} \\
-&= {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2 \\
-&\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
-.\]
+-   Claim: the LHS is the norm of an element in \( H \), and thus non-negative. More precisely, set \( S_N\coloneqq\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle}u_n \), then the above is equal to
+    \[
+    {\left\lVert {x - \lim_{N\to\infty} S_N} \right\rVert}^2
+    .\]
+    Note that if this is true, we're done.
+
+-   To see this, expand the norm in terms of inner products:
+    \[
+    {\left\lVert {x - S_N} \right\rVert}^2
+    &= {\left\langle {x-S_N},~{x-S_N} \right\rangle} \\
+    &= {\left\langle {x},~{x} \right\rangle} - {\left\langle {x},~{S_N} \right\rangle} - {\left\langle {S_N},~{x} \right\rangle} + {\left\langle {S_N},~{S_N} \right\rangle} \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - \qty{{\left\langle {x},~{S_N} \right\rangle} + {\overline{{{\left\langle {x},~{S_N} \right\rangle}}}} } \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{{\left\langle {x},~{S_N} \right\rangle} } \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ {\left\langle {x},~{\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n } \right\rangle} } \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ \sum_{n=1}^N {\left\langle {x},~{{\left\langle {x},~{u_n} \right\rangle} u_n } \right\rangle} } \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ \sum_{n=1}^N {\overline{{{\left\langle {x},~{u_n} \right\rangle} }}} {\left\langle {x},~{u_n } \right\rangle} } \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n} \right\rVert}^2 - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + 
+    {\left\langle {\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n},~{\sum_{m=1}^N {\left\langle {x},~{u_m} \right\rangle} u_m} \right\rangle} 
+    - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + 
+    \sum_{n, m \leq N}{\left\langle {x},~{u_n} \right\rangle} {\overline{{{\left\langle {x},~{u_m} \right\rangle} }}}{\left\langle {u_n},~{u_m} \right\rangle}
+    - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + \sum_{n, m\leq N} {\left\langle {x},~{u_n} \right\rangle} {\overline{{{\left\langle {x},~{u_m} \right\rangle}}}} \delta_{mn}
+    - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 + \sum_{n\leq N} {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
+    - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+    &= {\left\lVert {x} \right\rVert}^2 
+    - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 
+    .\]
+
+-   Now take \( \lim_{N\to\infty} \) and use that \( {\left\lVert {{-}} \right\rVert} \) is continuous.
 :::
 
 ::: {.proof title="of b"}
 ```{=tex}
 \envlist
 ```
-1.  Fix \( \left\{{a_n}\right\} \in \ell^2 \), then note that \( \sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies \) the tails vanish.
-
-2.  Define
+-   Set
     \[
-    x \coloneqq\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
-    \]
+    x\coloneqq\sum_{n\in {\mathbb{N}}} a_n u_n
+    .\]
 
-3.  \( \left\{{S_N}\right\} \) Cauchy (by 1) and \( H \) complete \( \implies x\in H \).
-
-4.  
+-   Checking the first desired property:
     \[
-    {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n \quad \forall n\in {\mathbb{N}}
-    \]
-    since the \( u_k \) are all orthogonal.
+    {\left\langle {x},~{u_m} \right\rangle} &= {\left\langle { \sum_{n\geq 1} a_n u_n },~{u_m} \right\rangle} \\
+    &=\sum_{n\geq 1} a_n  {\left\langle { u_n },~{u_m} \right\rangle} \\
+    &=\sum_{n\geq 1} a_n  \delta_{mn} \\
+    &= a_m
+    .\]
 
-5.  
+-   That \( x\in H \): this would follow from
     \[
-    {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
-    \]
-    by Pythagoras since the \( u_k \) are orthogonal, where we've used normality in the last equality.
+    {\left\lVert {x} \right\rVert}^2 = \sum_n {\left\lvert {{\left\langle {x},~{u_n } \right\rangle}} \right\rvert}^2 = \sum_n {\left\lvert {a_n} \right\rvert}^2 <\infty
+    .\]
+    The inequality holds by assumption since \( \left\{{a_n}\right\}\in\ell^2 \), so it suffices to show the first equality:
 
-> Bonus: We didn't use completeness here, so the Fourier series may not actually converge to \( x \). If \( \left\{{u_n}\right\} \) is **complete** (so \( x = 0 \iff {\left\langle {x},~{u_n} \right\rangle} = 0 ~\forall n \)) then the Fourier series *does* converge to \( x \) and \( \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2} \) for all \( x \in H \).
+\[
+{\left\lVert {x} \right\rVert}^2 &\coloneqq{\left\langle {x},~{x} \right\rangle} \\
+&= {\left\langle {\sum_n a_n u_n},~{\sum_m a_m u_m} \right\rangle} \\
+&= \sum_{n, m} a_n {\overline{{a_m}}} {\left\langle {u_n},~{u_m} \right\rangle} \\
+&= \sum_{n, m} a_n {\overline{{a_m}}} \delta_{mn} \\
+&= \sum_{n} a_n {\overline{{a_n}}} \\
+&= \sum_{n} {\left\lvert {a_n} \right\rvert}^2 \\
+&= \sum_n {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
+.\]
 :::
 :::
 

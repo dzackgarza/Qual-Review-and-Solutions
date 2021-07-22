@@ -1955,10 +1955,10 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 - Borel-Cantelli: for a sequence of sets $X_n$, 
 \[
 \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
-&= \Intersect_{m\in \NN} \Union_{n\geq m} X_n
+&= \Intersect_{N\geq 1} \Union_{n\geq N} X_n = \limsup_n X_n
 \\
 \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
-&= \Union_{m\in \NN} \Intersect_{n\geq m} X_n
+&= \Union_{N\geq 1} \Intersect_{n\geq N} X_n = \liminf X_n
 .\]
 
 - Properties of logs and exponentials:
@@ -1978,7 +1978,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 \envlist
 
 - The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
-- $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
+- $B = \limsup_n B_n = \intersect_{N\geq 1} \union_{n\geq N} B_n$ is an intersection of unions of measurable sets.
 
 :::
 
@@ -1987,7 +1987,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 
 - Tails of convergent sums vanish, so 
 \[
-\sum_{n\geq M} \mu(B_n) \mapsvia{M\to\infty} 0
+\sum_{n\geq N} \mu(B_n) \mapsvia{N\to\infty} 0
 .\] 
 - Also,
 \[
@@ -1998,6 +1998,7 @@ B_M \definedas \Intersect_{N = 1}^M \Union_{n\geq N} B_n \decreasesto B
 \mu(B) 
 &\da \mu\left(\Intersect_{N\geq 1} \Union_{n\geq N} B_n\right) \\
 &\leq \mu\left( \Union_{n\geq N} B_n \right) && \forall N \\
+&\leq \sum_{n\geq N} \mu(B_n) && \forall N \\
 &\converges{N\to\infty}\too 0
 ,\]
   where we've used that we're intersecting over fewer sets and this can only increase measure.
@@ -3635,8 +3636,8 @@ Show that
   - Taking $p$th roots for $p\geq 1$ preserves the inequality, so
   \[
   \implies \norm{f}_p &\geq \abs{\norm{f}_\infty - \varepsilon} \cdot m(S_\varepsilon)^{\frac 1 p} 
-  \converges{p\to\infty}\to \abs{\norm{f}_\infty - \varepsilon} 
-  \converges{\varepsilon \to 0}\to \norm{f}_\infty
+  \converges{p\to\infty}\too \abs{\norm{f}_\infty - \varepsilon} 
+  \converges{\varepsilon \to 0}\too \norm{f}_\infty
   \]
   where we've used the fact that above arguments work 
 
@@ -3671,7 +3672,7 @@ Show that $f = 0$ almost everywhere.
 - Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
 - Thus there is a sequence of polynomials $P_\ell$ such that 
 $$
-P_{\ell, k} \converges{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+P_{\ell, k} \converges{\ell\to\infty}\too e^{2\pi i k x} \text{ uniformly on } [0,1]
 .$$
 
 - Note applying linearity to the assumption $\int f(x) \, x^n$, we have
@@ -3770,7 +3771,7 @@ c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf
 \envlist
 - Limits
 - Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
-- Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
+- Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\too 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 :::
 
@@ -3787,16 +3788,16 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n +
 &= \int_{\abs x > N} \abs{f-f_n} \\ 
 &\leq \int_{\abs x > N} \norm{f-f_n}_1 \\
 &= \norm{f_n-f}_1 \qty{\int_{\abs x > N} 1} \\
-&\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} \\
+&\converges{n\to\infty}\too 0 \qty{\int_{\abs x > N} 1} \\
 &= 0\\
-&\converges{N\to\infty}\to 0
+&\converges{N\to\infty}\too 0
 .\]
 
 
 To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 
 - Take $f(x)$ to be a train of rectangles of height 1 and area $1/2^j$ centered on even integers.
-- Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\to 0$$ as the tail of a convergent sum. 
+- Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\too 0$$ as the tail of a convergent sum. 
 - However $f(x) = 1$ for infinitely many even integers $x > N$, so $f(x) \not\to 0$ as $\abs{x}\to\infty$.
 :::
 
@@ -3824,9 +3825,9 @@ f(x-n) \int_x^{2x} \,dt  \\
 .\]
 
 - By the Cauchy Criterion for integrals, $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$.
-- So the LHS term $xf(x) \converges{x\to\infty}\to 0$.
+- So the LHS term $xf(x) \converges{x\to\infty}\too 0$.
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
-- Thus $f(x) \converges{x\to\infty}\to 0$ as well.
+- Thus $f(x) \converges{x\to\infty}\too 0$ as well.
 
 :::
 
@@ -3853,7 +3854,7 @@ x\leq c_x \leq 2x
 :::
 
 :::{.proof title="Solution 3: Contradiction"}
-Just showing $f(x) \converges{x\to \infty}\to 0$:
+Just showing $f(x) \converges{x\to \infty}\too 0$:
 
 - Toward a contradiction, suppose not.
 - Since $f$ is decreasing, it can not diverge to $+\infty$
@@ -3871,7 +3872,7 @@ Just showing $f(x) \converges{x\to \infty}\to 0$:
   - Fix $\eps > 0$, choose $x_0\gg 1$ such that $t\geq x_0 \implies L \leq f(t) \leq L + \eps$.
   - Then $$\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L}\,dt = \infty$$
 
-Showing $xf(x) \converges{x\to \infty}\to 0$.
+Showing $xf(x) \converges{x\to \infty}\too 0$.
 
 - Toward a contradiction, suppose not.
 - (How to show that $xf(x) \not\to + \infty$?)
@@ -3901,7 +3902,7 @@ Showing $xf(x) \converges{x\to \infty}\to 0$.
 :::{.proof title="Solution 4: Akos' suggestion"}
 For $x\geq 1$, 
 \[
-\abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
+\abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\too 0
 \]
   where we've used 
   
@@ -3938,19 +3939,16 @@ For $x\geq 1$,
 - No: take $f(x) = {1\over x\ln x}$
 - Then by a $u\dash$substitution,
   \[
-  \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\to \infty
+  \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\too \infty
   \]
   is unbounded, so $f\not\in L^1([1, \infty))$.
 - But 
   \[
-  xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
+  xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \too 0
   .\]
-:::
-
-
-
 
 :::
+
 
 ## Fall 2019 # 5. $\done$
 
@@ -3982,35 +3980,32 @@ Let $f\in L^1(\RR)$ and for each $h > 0$ let
 \envlist
 
 :::{.proof title="of a"}
-Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
 
-By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
+- Fix $\varepsilon > 0$.
+  If we can find a set $A$ such that the following calculation holds for $h$ small enough, we're done:
+  \[
+  \int_\RR \abs{f(x-h) - f(x)} \dx 
+  &= \int_A \abs{f(x-h) - f(x)} \dx \\
+  &\leq \int_A \eps \\
+  &= \eps \mu(A) \too 0
+  ,\]
+  provided $h\to 0$ as $\eps\to 0$, which we can arrange if $\abs{h} < \eps$.
 
-Write
+- Choose $A\contains \supp f$ compact such that $\supp f \pm 1 \subseteq A$
+  - Why this can be done: $\supp f$ is compact, so closed and bounded, and contained in some compact interval $[-M, M]$.
+  So e.g. $A\da [-M-1, M+1]$ suffices.
+- Note that $f$ is still continuous on $A$, since it is zero on $A\sm \supp f$, and thus uniformly continuous (by Heine-Cantor, for example).
+- We can rephrase the usual definition of uniform continuity:
 \[
-\norm{\tau f - f}_1 
-&= \norm{\tau_h f - g + g - \tau_h g + \tau_h g - f}_1 \\
-&\leq \norm{\tau_h f - \tau_h g} + \norm{g - f} + \norm{\tau_h g - g} \\
-&\to \norm{\tau_h g - g}
-,\]
-
-so it suffices to show that $\norm{\tau_h g - g} \to 0$ for $g\in C_c^0$.
-
-Fix $\varepsilon > 0$.
-Enlarge the support of $g$ to $K$ such that
-\[
-\abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
-.\]
-
-By uniform continuity of $g$, pick $\delta \leq 1$ small enough such that 
-$$
-x\in K, ~\abs{h} \leq \delta \implies \abs{g(x-h) -g(x)} < \varepsilon
-,$$
-
-then
-\[
-\int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
+\forall \eps \exists \delta = \delta(\eps) \text{ such that } \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \eps \quad \forall x, y\in A
 \]
+as
+\[
+\forall \eps \exists \delta = \delta(\eps) \text{ such that } \abs{h} < \delta \implies \abs{f(x-h) - f(x)} < \eps \quad \forall x \text{ such that }x, x\pm h \in A
+\]
+
+- So fix $\eps$ and choose such a $\delta$ for $A$, and choose $h$ such that $\abs{h} < \min(1, \delta)$.
+  Then the desired computation goes through by uniform continuity of $f$ on $A$.
 
 :::
 
@@ -4039,6 +4034,27 @@ and (rough sketch)
 :::
 
 :::
+
+
+:::{.remark}
+This works for arbitrary $f\in L^1$, using approximation by continuous functions with compact support:
+
+- Choose $g\in C_c^0$ such that $\norm{f- g}_1 \to 0$.
+
+- By translation invariance, $\norm{\tau_h f - \tau_h g}_1 \to 0$.
+
+- Write
+\[
+\norm{\tau f - f}_1 
+&= \norm{\tau_h f - g + g - \tau_h g + \tau_h g - f}_1 \\
+&\leq \norm{\tau_h f - \tau_h g} + \norm{g - f} + \norm{\tau_h g - g} \\
+&\to \norm{\tau_h g - g}
+,\]
+
+  so it suffices to show that $\norm{\tau_h g - g} \to 0$.
+
+:::
+
 
 
 ## Fall 2017 # 3 $\done$
@@ -4074,7 +4090,7 @@ Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\thes
 
 - Now define $f_n = \chi_{I_{N, n}}$, then
 \[
-\norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\longrightarrow 0
+\norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\too 0
 .\]
 
 - Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
@@ -4964,56 +4980,89 @@ and
 \envlist
 
 :::{.proof title="of a"}
-**Claim:**
+\envlist
+
+- Equivalently, we can show
 \[
-0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
-&= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
-&\implies
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+\norm{x}^2 - \sum_{n=1}^\infty \abs{ \inner{x}{u_n} }^2 \geq 0
 .\]
 
-*Proof:*
-Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
-Then
+- Claim: the LHS is the norm of an element in $H$, and thus non-negative.
+  More precisely, set $S_N\da \sum_{n=1}^N \inner{x}{u_n}u_n$, then the above is equal to
+  \[
+  \norm{x - \lim_{N\to\infty} S_N}^2
+  .\]
+  Note that if this is true, we're done.
+
+- To see this, expand the norm in terms of inner products:
 \[
-0 
-&\leq \norm{x - S_N}^2 \\ 
-&= \inner{x - S_n}{x - S_N} \\
-&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-&\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
+  \norm{x - S_N}^2
+  &= \inner{x-S_N}{x-S_N} \\
+  &= \inner{x}{x} - \inner{x}{S_N} - \inner{S_N}{x} + \inner{S_N}{S_N} \\
+  &= \norm{x}^2 + \norm{S_N}^2 - \qty{\inner{x}{S_N} + \conjugate{\inner{x}{S_N}} } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{\inner x {S_N} } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \inner{x} {\sum_{n=1}^N \inner{x}{u_n} u_n } } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \inner{x} {\inner{x}{u_n} u_n } } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \conjugate{\inner{x}{u_n} } \inner{x} {u_n } } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \norm{\sum_{n=1}^N \inner{x}{u_n} u_n}^2 - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + 
+  \inner
+  {\sum_{n=1}^N \inner{x}{u_n} u_n} 
+  {\sum_{m=1}^N \inner{x}{u_m} u_m} 
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + 
+  \sum_{n, m \leq N}\inner{x}{u_n} \conjugate{\inner{x}{u_m} }\inner{u_n}{u_m}
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \sum_{n, m\leq N} \inner{x}{u_n} \conjugate{\inner{x}{u_m}} \delta_{mn}
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \sum_{n\leq N} \abs{\inner{x}{u_n}}^2
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 
+  - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 
 .\]
 
-
+- Now take $\lim_{N\to\infty}$ and use that $\norm{\wait}$ is continuous.
 :::
+
 
 :::{.proof title="of b"}
 \envlist
 
-1. Fix $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
+- Set 
+\[
+x\da \sum_{n\in \NN} a_n u_n
+.\]
 
-2. Define 
-$$
-x \definedas \displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
-$$
+- Checking the first desired property:
+\[
+\inner{x}{u_m} &= \inner{ \sum_{n\geq 1} a_n u_n }{u_m} \\
+&=\sum_{n\geq 1} a_n  \inner{ u_n }{u_m} \\
+&=\sum_{n\geq 1} a_n  \delta_{mn} \\
+&= a_m
+.\]
 
-3. $\theset{S_N}$ Cauchy (by 1) and $H$ complete $\implies x\in H$.
 
-4.  
-$$
-\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n \quad \forall n\in \NN
-$$ 
-since the $u_k$ are all orthogonal.
+- That $x\in H$: this would follow from 
+\[
+\norm{x}^2 = \sum_n \abs{\inner x {u_n }}^2 = \sum_n \abs{a_n}^2 <\infty
+.\]
+  The inequality holds by assumption since $\ts{a_n}\in\ell^2$, so it suffices to show the first equality:
 
-5.
-$$
-\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
-$$ 
-by Pythagoras since the $u_k$ are orthogonal, where we've used normality in the last equality.
-
-> Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
-If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
-
+\[
+\norm{x}^2 &\da \inner{x}{x} \\
+&= \inner
+{\sum_n a_n u_n}
+{\sum_m a_m u_m} \\
+&= \sum_{n, m} a_n \conjugate{a_m} \inner{u_n}{u_m} \\
+&= \sum_{n, m} a_n \conjugate{a_m} \delta_{mn} \\
+&= \sum_{n} a_n \conjugate{a_n} \\
+&= \sum_{n} \abs{a_n}^2 \\
+&= \sum_n \abs{\inner x {u_n}}^2
+.\]
 :::
+
 
 :::
 
