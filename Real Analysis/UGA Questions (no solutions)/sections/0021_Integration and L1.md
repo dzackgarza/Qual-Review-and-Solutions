@@ -418,6 +418,10 @@ Let $f\in L^1(\RR)$ and for each $h > 0$ let
   ,\]
   provided $h\to 0$ as $\eps\to 0$, which we can arrange if $\abs{h} < \eps$.
 
+- Choose $A\contains \supp f$ compact such that $\supp f \pm 1 \subseteq A$
+  - Why this can be done: $\supp f$ is compact, so closed and bounded, and contained in some compact interval $[-M, M]$.
+  So e.g. $A\da [-M-1, M+1]$ suffices.
+
 Enlarge the support of $g$ to $K$ such that
 \[
 \abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
