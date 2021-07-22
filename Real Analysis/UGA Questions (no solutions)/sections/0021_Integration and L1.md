@@ -370,12 +370,9 @@ For $x\geq 1$,
   \[
   xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
   .\]
-:::
-
-
-
 
 :::
+
 
 ## Fall 2019 # 5. $\done$
 
@@ -421,21 +418,18 @@ Let $f\in L^1(\RR)$ and for each $h > 0$ let
 - Choose $A\contains \supp f$ compact such that $\supp f \pm 1 \subseteq A$
   - Why this can be done: $\supp f$ is compact, so closed and bounded, and contained in some compact interval $[-M, M]$.
   So e.g. $A\da [-M-1, M+1]$ suffices.
-
-Enlarge the support of $g$ to $K$ such that
+- Note that $f$ is still continuous on $A$, since it is zero on $A\sm \supp f$, and thus uniformly continuous (by Heine-Cantor, for example).
+- We can rephrase the usual definition of uniform continuity:
 \[
-\abs{h} \leq 1 \text{ and } x \in K^c \implies \abs{g(x-h) - g(x)} = 0
-.\]
-
-By uniform continuity of $g$, pick $\delta \leq 1$ small enough such that 
-$$
-x\in K, ~\abs{h} \leq \delta \implies \abs{g(x-h) -g(x)} < \varepsilon
-,$$
-
-then
-\[
-\int_K \abs{g(x-h) - g(x)} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
+\forall \eps \exists \delta = \delta(\eps) \text{ such that } \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \eps \quad \forall x, y\in A
 \]
+as
+\[
+\forall \eps \exists \delta = \delta(\eps) \text{ such that } \abs{h} < \delta \implies \abs{f(x-h) - f(x)} < \eps \quad \forall x \text{ such that }x, x\pm h \in A
+\]
+
+- So fix $\eps$ and choose such a $\delta$ for $A$, and choose $h$ such that $\abs{h} < \min(1, \delta)$.
+  Then the desired computation goes through by uniform continuity of $f$ on $A$.
 
 :::
 
