@@ -1465,10 +1465,10 @@ B \mathrel{\vcenter{:}}=\left\{{x\in X {~\mathrel{\Big|}~}x\in B_n \text{ for in
 <span class="math display">
 \begin{align*}
 \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for infinitely many $n$} }\right\} 
-&amp;= \displaystyle\bigcap_{m\in {\mathbb{N}}} \displaystyle\bigcup_{n\geq m} X_n
+&amp;= \displaystyle\bigcap_{N\geq 1} \displaystyle\bigcup_{n\geq N} X_n = \limsup_n X_n
 \\
 \left\{{x {~\mathrel{\Big|}~}x\in X_n \text{ for all but finitely many $n$} }\right\}
-&amp;= \displaystyle\bigcup_{m\in {\mathbb{N}}} \displaystyle\bigcap_{n\geq m} X_n
+&amp;= \displaystyle\bigcup_{N\geq 1} \displaystyle\bigcap_{n\geq N} X_n = \liminf X_n
 .\end{align*}
 <span></p></li>
 <li><p>Properties of logs and exponentials: 
@@ -1485,7 +1485,7 @@ B \mathrel{\vcenter{:}}=\left\{{x\in X {~\mathrel{\Big|}~}x\in B_n \text{ for in
 <div class="proof proofenv" title="of a">
 <ul>
 <li>The Borel <span class="math inline">\(\sigma{\hbox{-}}\)</span>algebra is closed under countable unions/intersections/complements,</li>
-<li><span class="math inline">\(B = \limsup_n B_n\)</span> is an intersection of unions of measurable sets.</li>
+<li><span class="math inline">\(B = \limsup_n B_n = \cap_{N\geq 1} \cup_{n\geq N} B_n\)</span> is an intersection of unions of measurable sets.</li>
 </ul>
 </div>
 <div class="proof proofenv" title="of b">
@@ -1493,7 +1493,7 @@ B \mathrel{\vcenter{:}}=\left\{{x\in X {~\mathrel{\Big|}~}x\in B_n \text{ for in
 <li>Tails of convergent sums vanish, so 
 <span class="math display">
 \begin{align*}
-\sum_{n\geq M} \mu(B_n) \xrightarrow{M\to\infty} 0
+\sum_{n\geq N} \mu(B_n) \xrightarrow{N\to\infty} 0
 .\end{align*}
 <span></li>
 <li>Also, 
@@ -1508,6 +1508,7 @@ B_M \mathrel{\vcenter{:}}=\displaystyle\bigcap_{N = 1}^M \displaystyle\bigcup_{n
 \mu(B) 
 &amp;\mathrel{\vcenter{:}}=\mu\left(\displaystyle\bigcap_{N\geq 1} \displaystyle\bigcup_{n\geq N} B_n\right) \\
 &amp;\leq \mu\left( \displaystyle\bigcup_{n\geq N} B_n \right) &amp;&amp; \forall N \\
+&amp;\leq \sum_{n\geq N} \mu(B_n) &amp;&amp; \forall N \\
 &amp;\overset{N\to\infty}\longrightarrow 0
 ,\end{align*}
 <span> where we’ve used that we’re intersecting over fewer sets and this can only increase measure.</li>
@@ -3202,8 +3203,8 @@ S_\varepsilon \mathrel{\vcenter{:}}=\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|
 <span class="math display">
 \begin{align*}
 \implies {\left\lVert {f} \right\rVert}_p &amp;\geq {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} \cdot m(S_\varepsilon)^{\frac 1 p} 
-\overset{p\to\infty}\to {\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} 
-\overset{\varepsilon \to 0}\to {\left\lVert {f} \right\rVert}_\infty
+\overset{p\to\infty}\longrightarrow{\left\lvert {{\left\lVert {f} \right\rVert}_\infty - \varepsilon} \right\rvert} 
+\overset{\varepsilon \to 0}\longrightarrow{\left\lVert {f} \right\rVert}_\infty
 \end{align*}
 <span> where we’ve used the fact that above arguments work</p></li>
 <li><p>Thus <span class="math inline">\({\left\lVert {f} \right\rVert}_p \geq {\left\lVert {f} \right\rVert}_\infty\)</span>.</p></li>
@@ -3235,7 +3236,7 @@ S_\varepsilon \mathrel{\vcenter{:}}=\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|
 <li><p>Thus there is a sequence of polynomials <span class="math inline">\(P_\ell\)</span> such that 
 <span class="math display">
 \begin{align*}
-P_{\ell, k} \overset{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+P_{\ell, k} \overset{\ell\to\infty}\longrightarrow e^{2\pi i k x} \text{ uniformly on } [0,1]
 .\end{align*}
 <span></p></li>
 <li><p>Note applying linearity to the assumption <span class="math inline">\(\int f(x) \, x^n\)</span>, we have 
@@ -3332,7 +3333,7 @@ P_{\ell, k} \overset{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1
 <ul>
 <li>Limits</li>
 <li>Cauchy Criterion for Integrals: <span class="math inline">\(\int_a^\infty f(x) \,dx\)</span> converges iff for every <span class="math inline">\({\varepsilon}&gt;0\)</span> there exists an <span class="math inline">\(M_0\)</span> such that <span class="math inline">\(A,B\geq M_0\)</span> implies <span class="math inline">\({\left\lvert {\int_A^B f} \right\rvert} &lt; {\varepsilon}\)</span>, i.e. <span class="math inline">\({\left\lvert {\int_A^B f} \right\rvert} \overset{A\to\infty}\to 0\)</span>.</li>
-<li>Integrals of <span class="math inline">\(L^1\)</span> functions have vanishing tails: <span class="math inline">\(\int_{N}^\infty {\left\lvert {f} \right\rvert} \overset{N\to\infty}\to 0\)</span>.</li>
+<li>Integrals of <span class="math inline">\(L^1\)</span> functions have vanishing tails: <span class="math inline">\(\int_{N}^\infty {\left\lvert {f} \right\rvert} \overset{N\to\infty}\longrightarrow 0\)</span>.</li>
 <li>Mean Value Theorem for Integrals: <span class="math inline">\(\int_a^b f(t)\, dt = (b-a) f(c)\)</span> for some <span class="math inline">\(c\in [a, b]\)</span>.</li>
 </ul>
 </div>
@@ -3350,9 +3351,9 @@ N\geq N_0 \implies \int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lvert {f}
 &amp;= \int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lvert {f-f_n} \right\rvert} \\ 
 &amp;\leq \int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lVert {f-f_n} \right\rVert}_1 \\
 &amp;= {\left\lVert {f_n-f} \right\rVert}_1 \qty{\int_{{\left\lvert {x} \right\rvert} &gt; N} 1} \\
-&amp;\overset{n\to\infty}\to 0 \qty{\int_{{\left\lvert {x} \right\rvert} &gt; N} 1} \\
+&amp;\overset{n\to\infty}\longrightarrow 0 \qty{\int_{{\left\lvert {x} \right\rvert} &gt; N} 1} \\
 &amp;= 0\\
-&amp;\overset{N\to\infty}\to 0
+&amp;\overset{N\to\infty}\longrightarrow 0
 .\end{align*}
 <span></li>
 </ul>
@@ -3361,7 +3362,7 @@ N\geq N_0 \implies \int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lvert {f}
 <li>Take <span class="math inline">\(f(x)\)</span> to be a train of rectangles of height 1 and area <span class="math inline">\(1/2^j\)</span> centered on even integers.</li>
 <li>Then 
 <span class="math display">
-\begin{align*}\int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lvert {f} \right\rvert} = \sum_{j=N}^\infty 1/2^j \overset{N\to\infty}\to 0\end{align*}
+\begin{align*}\int_{{\left\lvert {x} \right\rvert} &gt; N} {\left\lvert {f} \right\rvert} = \sum_{j=N}^\infty 1/2^j \overset{N\to\infty}\longrightarrow 0\end{align*}
 <span> as the tail of a convergent sum.</li>
 <li>However <span class="math inline">\(f(x) = 1\)</span> for infinitely many even integers <span class="math inline">\(x &gt; N\)</span>, so <span class="math inline">\(f(x) \not\to 0\)</span> as <span class="math inline">\({\left\lvert {x} \right\rvert}\to\infty\)</span>.</li>
 </ul>
@@ -3389,9 +3390,9 @@ f(x-n) \int_x^{2x} \,dt  \\
 .\end{align*}
 <span></p></li>
 <li><p>By the Cauchy Criterion for integrals, <span class="math inline">\(\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0\)</span>.</p></li>
-<li><p>So the LHS term <span class="math inline">\(xf(x) \overset{x\to\infty}\to 0\)</span>.</p></li>
+<li><p>So the LHS term <span class="math inline">\(xf(x) \overset{x\to\infty}\longrightarrow 0\)</span>.</p></li>
 <li><p>Since <span class="math inline">\(x&gt;1\)</span>, <span class="math inline">\({\left\lvert {f(x)} \right\rvert} \leq {\left\lvert {xf(x)} \right\rvert}\)</span></p></li>
-<li><p>Thus <span class="math inline">\(f(x) \overset{x\to\infty}\to 0\)</span> as well.</p></li>
+<li><p>Thus <span class="math inline">\(f(x) \overset{x\to\infty}\longrightarrow 0\)</span> as well.</p></li>
 </ul>
 </div>
 <div class="proof proofenv" title="Solution 2: Variation on the trick">
@@ -3417,7 +3418,7 @@ x\leq c_x \leq 2x
 </ul>
 </div>
 <div class="proof proofenv" title="Solution 3: Contradiction">
-<p>Just showing <span class="math inline">\(f(x) \overset{x\to \infty}\to 0\)</span>:</p>
+<p>Just showing <span class="math inline">\(f(x) \overset{x\to \infty}\longrightarrow 0\)</span>:</p>
 <ul>
 <li><p>Toward a contradiction, suppose not.</p></li>
 <li><p>Since <span class="math inline">\(f\)</span> is decreasing, it can not diverge to <span class="math inline">\(+\infty\)</span></p></li>
@@ -3446,7 +3447,7 @@ x\leq c_x \leq 2x
 <span></li>
 </ul></li>
 </ul>
-<p>Showing <span class="math inline">\(xf(x) \overset{x\to \infty}\to 0\)</span>.</p>
+<p>Showing <span class="math inline">\(xf(x) \overset{x\to \infty}\longrightarrow 0\)</span>.</p>
 <ul>
 <li>Toward a contradiction, suppose not.</li>
 <li>(How to show that <span class="math inline">\(xf(x) \not\to + \infty\)</span>?)</li>
@@ -3487,7 +3488,7 @@ x\leq c_x \leq 2x
 <p>For <span class="math inline">\(x\geq 1\)</span>, 
 <span class="math display">
 \begin{align*}
-{\left\lvert {xf(x)} \right\rvert} = {\left\lvert { \int_x^{2x} f(x) \, dt } \right\rvert} \leq \int_x^{2x} {\left\lvert {f(x)} \right\rvert} \, dt \leq \int_x^{2x} {\left\lvert {f(t)} \right\rvert}\, dt \leq \int_x^{\infty} {\left\lvert {f(t)} \right\rvert} \,dt \overset{x\to\infty}\to 0
+{\left\lvert {xf(x)} \right\rvert} = {\left\lvert { \int_x^{2x} f(x) \, dt } \right\rvert} \leq \int_x^{2x} {\left\lvert {f(x)} \right\rvert} \, dt \leq \int_x^{2x} {\left\lvert {f(t)} \right\rvert}\, dt \leq \int_x^{\infty} {\left\lvert {f(t)} \right\rvert} \,dt \overset{x\to\infty}\longrightarrow 0
 \end{align*}
 <span> where we’ve used</p>
 <ul>
@@ -3519,18 +3520,17 @@ x\leq c_x \leq 2x
 <li>Then by a <span class="math inline">\(u{\hbox{-}}\)</span>substitution, 
 <span class="math display">
 \begin{align*}
-\int_0^x f = \ln\qty{\ln (x)} \overset{x\to\infty}\to \infty
+\int_0^x f = \ln\qty{\ln (x)} \overset{x\to\infty}\longrightarrow\infty
 \end{align*}
 <span> is unbounded, so <span class="math inline">\(f\not\in L^1([1, \infty))\)</span>.</li>
 <li>But 
 <span class="math display">
 \begin{align*}
-xf(x) = { 1 \over \ln(x)} \overset{x\to\infty} \to 0
+xf(x) = { 1 \over \ln(x)} \overset{x\to\infty} \longrightarrow 0
 .\end{align*}
 <span></li>
 </ul>
 </div>
-<p>:::</p>
 <h2 data-number="8.2" id="fall-2019-5.-done"><span class="header-section-number">8.2</span> Fall 2019 # 5. <span class="math inline">\(\done\)</span></h2>
 <ol type="a">
 <li><p>Show that if <span class="math inline">\(f\)</span> is continuous with compact support on <span class="math inline">\({\mathbb{R}}\)</span>, then 
@@ -3558,36 +3558,34 @@ xf(x) = { 1 \over \ln(x)} \overset{x\to\infty} \to 0
 </div>
 <div class="solution proofenv">
 <div class="proof proofenv" title="of a">
-<p>Choose <span class="math inline">\(g\in C_c^0\)</span> such that <span class="math inline">\({\left\lVert {f- g} \right\rVert}_1 \to 0\)</span>.</p>
-<p>By translation invariance, <span class="math inline">\({\left\lVert {\tau_h f - \tau_h g} \right\rVert}_1 \to 0\)</span>.</p>
-<p>Write 
+<ul>
+<li><p>Fix <span class="math inline">\(\varepsilon &gt; 0\)</span>. If we can find a set <span class="math inline">\(A\)</span> such that the following calculation holds for <span class="math inline">\(h\)</span> small enough, we’re done: 
 <span class="math display">
 \begin{align*}
-{\left\lVert {\tau f - f} \right\rVert}_1 
-&amp;= {\left\lVert {\tau_h f - g + g - \tau_h g + \tau_h g - f} \right\rVert}_1 \\
-&amp;\leq {\left\lVert {\tau_h f - \tau_h g} \right\rVert} + {\left\lVert {g - f} \right\rVert} + {\left\lVert {\tau_h g - g} \right\rVert} \\
-&amp;\to {\left\lVert {\tau_h g - g} \right\rVert}
+\int_{\mathbb{R}}{\left\lvert {f(x-h) - f(x)} \right\rvert} \,dx
+&amp;= \int_A {\left\lvert {f(x-h) - f(x)} \right\rvert} \,dx\\
+&amp;\leq \int_A {\varepsilon}\\
+&amp;= {\varepsilon}\mu(A) \longrightarrow 0
 ,\end{align*}
-<span></p>
-<p>so it suffices to show that <span class="math inline">\({\left\lVert {\tau_h g - g} \right\rVert} \to 0\)</span> for <span class="math inline">\(g\in C_c^0\)</span>.</p>
-<p>Fix <span class="math inline">\(\varepsilon &gt; 0\)</span>. Enlarge the support of <span class="math inline">\(g\)</span> to <span class="math inline">\(K\)</span> such that 
+<span> provided <span class="math inline">\(h\to 0\)</span> as <span class="math inline">\({\varepsilon}\to 0\)</span>, which we can arrange if <span class="math inline">\({\left\lvert {h} \right\rvert} &lt; {\varepsilon}\)</span>.</p></li>
+<li><p>Choose <span class="math inline">\(A\supseteq{\operatorname{supp}}f\)</span> compact such that <span class="math inline">\({\operatorname{supp}}f \pm 1 \subseteq A\)</span></p>
+<ul>
+<li>Why this can be done: <span class="math inline">\({\operatorname{supp}}f\)</span> is compact, so closed and bounded, and contained in some compact interval <span class="math inline">\([-M, M]\)</span>. So e.g. <span class="math inline">\(A\mathrel{\vcenter{:}}=[-M-1, M+1]\)</span> suffices.</li>
+</ul></li>
+<li><p>Note that <span class="math inline">\(f\)</span> is still continuous on <span class="math inline">\(A\)</span>, since it is zero on <span class="math inline">\(A\setminus{\operatorname{supp}}f\)</span>, and thus uniformly continuous (by Heine-Cantor, for example).</p></li>
+<li><p>We can rephrase the usual definition of uniform continuity: 
 <span class="math display">
 \begin{align*}
-{\left\lvert {h} \right\rvert} \leq 1 \text{ and } x \in K^c \implies {\left\lvert {g(x-h) - g(x)} \right\rvert} = 0
-.\end{align*}
-<span></p>
-<p>By uniform continuity of <span class="math inline">\(g\)</span>, pick <span class="math inline">\(\delta \leq 1\)</span> small enough such that 
-<span class="math display">
-\begin{align*}
-x\in K, ~{\left\lvert {h} \right\rvert} \leq \delta \implies {\left\lvert {g(x-h) -g(x)} \right\rvert} &lt; \varepsilon
-,\end{align*}
-<span></p>
-<p>then 
-<span class="math display">
-\begin{align*}
-\int_K {\left\lvert {g(x-h) - g(x)} \right\rvert} \leq \int_K \varepsilon = \varepsilon \cdot m(K) \to 0.
+\forall {\varepsilon}\exists \delta = \delta({\varepsilon}) \text{ such that } {\left\lvert {x - y} \right\rvert} &lt; \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} &lt; {\varepsilon}\quad \forall x, y\in A
 \end{align*}
-<span></p>
+<span> as 
+<span class="math display">
+\begin{align*}
+\forall {\varepsilon}\exists \delta = \delta({\varepsilon}) \text{ such that } {\left\lvert {h} \right\rvert} &lt; \delta \implies {\left\lvert {f(x-h) - f(x)} \right\rvert} &lt; {\varepsilon}\quad \forall x \text{ such that }x, x\pm h \in A
+\end{align*}
+<span></p></li>
+<li><p>So fix <span class="math inline">\({\varepsilon}\)</span> and choose such a <span class="math inline">\(\delta\)</span> for <span class="math inline">\(A\)</span>, and choose <span class="math inline">\(h\)</span> such that <span class="math inline">\({\left\lvert {h} \right\rvert} &lt; \min(1, \delta)\)</span>. Then the desired computation goes through by uniform continuity of <span class="math inline">\(f\)</span> on <span class="math inline">\(A\)</span>.</p></li>
+</ul>
 </div>
 <div class="proof proofenv" title="of b">
 <p>We have 
@@ -3614,6 +3612,23 @@ x\in K, ~{\left\lvert {h} \right\rvert} \leq \delta \implies {\left\lvert {g(x-h
 .\end{align*}
 <span></p>
 </div>
+</div>
+<div class="remark proofenv">
+<p>This works for arbitrary <span class="math inline">\(f\in L^1\)</span>, using approximation by continuous functions with compact support:</p>
+<ul>
+<li><p>Choose <span class="math inline">\(g\in C_c^0\)</span> such that <span class="math inline">\({\left\lVert {f- g} \right\rVert}_1 \to 0\)</span>.</p></li>
+<li><p>By translation invariance, <span class="math inline">\({\left\lVert {\tau_h f - \tau_h g} \right\rVert}_1 \to 0\)</span>.</p></li>
+<li><p>Write 
+<span class="math display">
+\begin{align*}
+{\left\lVert {\tau f - f} \right\rVert}_1 
+&amp;= {\left\lVert {\tau_h f - g + g - \tau_h g + \tau_h g - f} \right\rVert}_1 \\
+&amp;\leq {\left\lVert {\tau_h f - \tau_h g} \right\rVert} + {\left\lVert {g - f} \right\rVert} + {\left\lVert {\tau_h g - g} \right\rVert} \\
+&amp;\to {\left\lVert {\tau_h g - g} \right\rVert}
+,\end{align*}
+<span></p>
+<p>so it suffices to show that <span class="math inline">\({\left\lVert {\tau_h g - g} \right\rVert} \to 0\)</span>.</p></li>
+</ul>
 </div>
 <h2 data-number="8.3" id="fall-2017-3-done"><span class="header-section-number">8.3</span> Fall 2017 # 3 <span class="math inline">\(\done\)</span></h2>
 <p>Let 
@@ -4591,52 +4606,86 @@ a_n = {\left\langle {x},~{u_n} \right\rangle} \text{ for all } n\in {\mathbb{N}}
 </div>
 <div class="solution proofenv">
 <div class="proof proofenv" title="of a">
-<p><strong>Claim:</strong> 
+<ul>
+<li><p>Equivalently, we can show 
 <span class="math display">
 \begin{align*}
-0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
-&amp;= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
-&amp;\implies
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
+{\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^\infty {\left\lvert { {\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \geq 0
 .\end{align*}
-<span></p>
-<p><em>Proof:</em> Let <span class="math inline">\(S_N = \sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n\)</span>. Then 
+<span></p></li>
+<li><p>Claim: the LHS is the norm of an element in <span class="math inline">\(H\)</span>, and thus non-negative. More precisely, set <span class="math inline">\(S_N\mathrel{\vcenter{:}}=\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle}u_n\)</span>, then the above is equal to 
 <span class="math display">
 \begin{align*}
-0 
-&amp;\leq {\left\lVert {x - S_N} \right\rVert}^2 \\ 
-&amp;= {\left\langle {x - S_n},~{x - S_N} \right\rangle} \\
-&amp;= {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2 \\
-&amp;\xrightarrow{N\to\infty} {\left\lVert {x} \right\rVert}^2 - \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
+{\left\lVert {x - \lim_{N\to\infty} S_N} \right\rVert}^2
 .\end{align*}
-<span></p>
+<span> Note that if this is true, we’re done.</p></li>
+<li><p>To see this, expand the norm in terms of inner products: 
+<span class="math display">
+\begin{align*}
+{\left\lVert {x - S_N} \right\rVert}^2
+&amp;= {\left\langle {x-S_N},~{x-S_N} \right\rangle} \\
+&amp;= {\left\langle {x},~{x} \right\rangle} - {\left\langle {x},~{S_N} \right\rangle} - {\left\langle {S_N},~{x} \right\rangle} + {\left\langle {S_N},~{S_N} \right\rangle} \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - \qty{{\left\langle {x},~{S_N} \right\rangle} + {\overline{{{\left\langle {x},~{S_N} \right\rangle}}}} } \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{{\left\langle {x},~{S_N} \right\rangle} } \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ {\left\langle {x},~{\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n } \right\rangle} } \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ \sum_{n=1}^N {\left\langle {x},~{{\left\langle {x},~{u_n} \right\rangle} u_n } \right\rangle} } \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re\qty{ \sum_{n=1}^N {\overline{{{\left\langle {x},~{u_n} \right\rangle} }}} {\left\langle {x},~{u_n } \right\rangle} } \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\Re \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {S_N} \right\rVert}^2 - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + {\left\lVert {\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n} \right\rVert}^2 - 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + 
+{\left\langle {\sum_{n=1}^N {\left\langle {x},~{u_n} \right\rangle} u_n},~{\sum_{m=1}^N {\left\langle {x},~{u_m} \right\rangle} u_m} \right\rangle} 
+- 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + 
+\sum_{n, m \leq N}{\left\langle {x},~{u_n} \right\rangle} {\overline{{{\left\langle {x},~{u_m} \right\rangle} }}}{\left\langle {u_n},~{u_m} \right\rangle}
+- 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + \sum_{n, m\leq N} {\left\langle {x},~{u_n} \right\rangle} {\overline{{{\left\langle {x},~{u_m} \right\rangle}}}} \delta_{mn}
+- 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 + \sum_{n\leq N} {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
+- 2\sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 \\
+&amp;= {\left\lVert {x} \right\rVert}^2 
+- \sum_{n=1}^N {\left\lvert {{\left\langle {x},~{u_n} \right\rangle} } \right\rvert}^2 
+.\end{align*}
+<span></p></li>
+<li><p>Now take <span class="math inline">\(\lim_{N\to\infty}\)</span> and use that <span class="math inline">\({\left\lVert {{-}} \right\rVert}\)</span> is continuous.</p></li>
+</ul>
 </div>
 <div class="proof proofenv" title="of b">
-<ol type="1">
-<li><p>Fix <span class="math inline">\(\left\{{a_n}\right\} \in \ell^2\)</span>, then note that <span class="math inline">\(\sum {\left\lvert {a_n} \right\rvert}^2 &lt; \infty \implies\)</span> the tails vanish.</p></li>
-<li><p>Define 
+<ul>
+<li><p>Set 
 <span class="math display">
 \begin{align*}
-x \mathrel{\vcenter{:}}=\displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
-\end{align*}
+x\mathrel{\vcenter{:}}=\sum_{n\in {\mathbb{N}}} a_n u_n
+.\end{align*}
 <span></p></li>
-<li><p><span class="math inline">\(\left\{{S_N}\right\}\)</span> Cauchy (by 1) and <span class="math inline">\(H\)</span> complete <span class="math inline">\(\implies x\in H\)</span>.</p></li>
-<li><p>
+<li><p>Checking the first desired property: 
 <span class="math display">
 \begin{align*}
-{\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n \quad \forall n\in {\mathbb{N}}
-\end{align*}
-<span> since the <span class="math inline">\(u_k\)</span> are all orthogonal.</p></li>
-<li><p>
+{\left\langle {x},~{u_m} \right\rangle} &amp;= {\left\langle { \sum_{n\geq 1} a_n u_n },~{u_m} \right\rangle} \\
+&amp;=\sum_{n\geq 1} a_n  {\left\langle { u_n },~{u_m} \right\rangle} \\
+&amp;=\sum_{n\geq 1} a_n  \delta_{mn} \\
+&amp;= a_m
+.\end{align*}
+<span></p></li>
+<li><p>That <span class="math inline">\(x\in H\)</span>: this would follow from 
 <span class="math display">
 \begin{align*}
-{\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
-\end{align*}
-<span> by Pythagoras since the <span class="math inline">\(u_k\)</span> are orthogonal, where we’ve used normality in the last equality.</p></li>
-</ol>
-<blockquote>
-<p>Bonus: We didn’t use completeness here, so the Fourier series may not actually converge to <span class="math inline">\(x\)</span>. If <span class="math inline">\(\left\{{u_n}\right\}\)</span> is <strong>complete</strong> (so <span class="math inline">\(x = 0 \iff {\left\langle {x},~{u_n} \right\rangle} = 0 ~\forall n\)</span>) then the Fourier series <em>does</em> converge to <span class="math inline">\(x\)</span> and <span class="math inline">\(\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}\)</span> for all <span class="math inline">\(x \in H\)</span>.</p>
-</blockquote>
+{\left\lVert {x} \right\rVert}^2 = \sum_n {\left\lvert {{\left\langle {x},~{u_n } \right\rangle}} \right\rvert}^2 = \sum_n {\left\lvert {a_n} \right\rvert}^2 &lt;\infty
+.\end{align*}
+<span> The inequality holds by assumption since <span class="math inline">\(\left\{{a_n}\right\}\in\ell^2\)</span>, so it suffices to show the first equality:</p></li>
+</ul>
+<p>
+<span class="math display">
+\begin{align*}
+{\left\lVert {x} \right\rVert}^2 &amp;\mathrel{\vcenter{:}}={\left\langle {x},~{x} \right\rangle} \\
+&amp;= {\left\langle {\sum_n a_n u_n},~{\sum_m a_m u_m} \right\rangle} \\
+&amp;= \sum_{n, m} a_n {\overline{{a_m}}} {\left\langle {u_n},~{u_m} \right\rangle} \\
+&amp;= \sum_{n, m} a_n {\overline{{a_m}}} \delta_{mn} \\
+&amp;= \sum_{n} a_n {\overline{{a_n}}} \\
+&amp;= \sum_{n} {\left\lvert {a_n} \right\rvert}^2 \\
+&amp;= \sum_n {\left\lvert {{\left\langle {x},~{u_n} \right\rangle}} \right\rvert}^2
+.\end{align*}
+<span></p>
 </div>
 </div>
 <h2 data-number="11.2" id="spring-2019-5-done"><span class="header-section-number">11.2</span> Spring 2019 # 5 <span class="math inline">\(\done\)</span></h2>
