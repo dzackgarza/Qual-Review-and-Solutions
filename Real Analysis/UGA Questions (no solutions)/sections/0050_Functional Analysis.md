@@ -55,6 +55,7 @@ and
   &= \norm{x}^2 + \norm{S_N}^2 - \qty{\inner{x}{S_N} + \conjugate{\inner{x}{S_N}} } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{\inner x {S_N} } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \inner{x} {\sum_{n=1}^N \inner{x}{u_n} u_n } } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \inner{x} {\inner{x}{u_n} u_n } } \\
 .\]
 
 
