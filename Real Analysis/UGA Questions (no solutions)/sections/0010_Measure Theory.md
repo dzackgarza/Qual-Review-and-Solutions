@@ -139,10 +139,10 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 - Borel-Cantelli: for a sequence of sets $X_n$, 
 \[
 \theset{x \suchthat x\in X_n \text{ for infinitely many $n$} } 
-&= \Intersect_{m\in \NN} \Union_{n\geq m} X_n
+&= \Intersect_{N\geq 1} \Union_{n\geq N} X_n = \limsup_n X_n
 \\
 \theset{x \suchthat x\in X_n \text{ for all but finitely many $n$} }
-&= \Union_{m\in \NN} \Intersect_{n\geq m} X_n
+&= \Union_{N\geq 1} \Intersect_{n\geq N} X_n = \liminf X_n
 .\]
 
 - Properties of logs and exponentials:
@@ -162,7 +162,7 @@ for all positive integers $k$ and $K$ with $k < K$, then $\mu(B) = 1$.
 \envlist
 
 - The Borel $\sigma\dash$algebra is closed under countable unions/intersections/complements, 
-- $B = \limsup_n B_n$ is an intersection of unions of measurable sets.
+- $B = \limsup_n B_n = \intersect_{N\geq 1} \union_{n\geq N} B_n$ is an intersection of unions of measurable sets.
 
 :::
 
