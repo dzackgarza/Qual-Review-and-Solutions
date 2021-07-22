@@ -57,6 +57,7 @@ and
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \inner{x} {\sum_{n=1}^N \inner{x}{u_n} u_n } } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \inner{x} {\inner{x}{u_n} u_n } } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \conjugate{\inner{x}{u_n} } \inner{x} {u_n } } \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
 .\]
 
 
