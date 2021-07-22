@@ -7,7 +7,7 @@
 
 :::
 
-:::{.proposition title="Chebyshev's Inequality"}
+:::{.proposition title="Markov/Chebyshev's Inequality"}
 The most often used form here:
 \[  
 \mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha  }} \leq {1\over \alpha} \norm{f}_1 \da {1\over \alpha} \int_X \abs{f}
