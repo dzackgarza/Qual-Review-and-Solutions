@@ -49,7 +49,7 @@ and
 
 - To see this, expand the norm in terms of inner products:
 \[
-  \norm{x - \lim_{N\to\infty} S_N}^2
+  \norm{x - S_N}^2
   &= \inner{x-S_N}{x-S_N} \\
   &= \inner{x}{x} - \inner{x}{S_N} - \inner{S_N}{x} + \inner{S_N}{S_N} \\
   &= \norm{x}^2 + \norm{S_N}^2 - \qty{\inner{x}{S_N} + \conjugate{\inner{x}{S_N}} } \\
@@ -58,36 +58,25 @@ and
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \inner{x} {\inner{x}{u_n} u_n } } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re\qty{ \sum_{n=1}^N \conjugate{\inner{x}{u_n} } \inner{x} {u_n } } \\
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
-  &= \norm{x}^2 + \norm{S_N}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
-  &= \norm{x}^2 + \norm{\sum_{n=1}^N \inner{x}{u_n} u_n}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \norm{S_N}^2 - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \norm{\sum_{n=1}^N \inner{x}{u_n} u_n}^2 - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
   &= \norm{x}^2 + 
   \inner
   {\sum_{n=1}^N \inner{x}{u_n} u_n} 
   {\sum_{m=1}^N \inner{x}{u_m} u_m} 
-  - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + 
+  \sum_{n, m \leq N}\inner{x}{u_n} \conjugate{\inner{x}{u_m} }\inner{u_n}{u_m}
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \sum_{n, m\leq N} \inner{x}{u_n} \conjugate{\inner{x}{u_m}} \delta_{mn}
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + \sum_{n\leq N} \abs{\inner{x}{u_n}}^2
+  - 2\sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 
+  - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 
 .\]
 
-
-**Claim:**
-\[
-0 \leq \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|^{2}
-&= \|x\|^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \\ 
-&\implies
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|^{2}
-.\]
-
-*Proof:*
-Let $S_N = \sum_{n=1}^N \inner{x}{u_n} u_n$. 
-Then
-\[
-0 
-&\leq \norm{x - S_N}^2 \\ 
-&= \inner{x - S_n}{x - S_N} \\
-&= \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2 \\
-&\mapsvia{N\to\infty} \norm{x}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n}}^2
-.\]
-
-
+- Now take $\lim_{N\to\infty}$ and use that $\norm{\wait}$ is continuous.
 :::
 
 :::{.proof title="of b"}
