@@ -60,6 +60,11 @@ and
   &= \norm{x}^2 + \norm{S_N}^2 - 2\Re \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
   &= \norm{x}^2 + \norm{S_N}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
   &= \norm{x}^2 + \norm{\sum_{n=1}^N \inner{x}{u_n} u_n}^2 - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
+  &= \norm{x}^2 + 
+  \inner
+  {\sum_{n=1}^N \inner{x}{u_n} u_n} 
+  {\sum_{n=1}^N \inner{x}{u_n} u_n} 
+  - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
 .\]
 
 
