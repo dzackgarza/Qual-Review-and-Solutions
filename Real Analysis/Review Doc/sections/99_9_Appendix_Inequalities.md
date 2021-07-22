@@ -1,40 +1,33 @@
 # Common Inequalities
 
+## The GOATs
+
+:::{.proposition title="Cauchy-Schwarz Inequality"}
+\[  
+\abs{\inner{f}{g}} = \leq \pnorm{f}2 \pnorm{g}2
+&& \text{with equality} \iff f = \lambda g
+.\]
+
+:::
+
+:::{.remark title="Different forms of CS"}
+In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
+Some other useful forms:
+\[
+\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2} 
+&\leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right) \\
+\left|\int_{\mathbb{R}^{n}} f(x) \overline{g(x)} d x\right|^{2} 
+&\leq \int_{\mathbb{R}^{n}}|f(x)|^{2} d x \int_{\mathbb{R}^{n}}|g(x)|^{2} d x
+.\]
+
+:::
+
 :::{.proposition title="Reverse Triangle Inequality"}
 \[  
 \abs{\norm{x} - \norm{y}} \leq \norm{x - y}
 .\]
 
 :::
-
-:::{.proposition title="Markov/Chebyshev's Inequality"}
-The most often used form here:
-\[  
-\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha  }} \leq {1\over \alpha} \norm{f}_1 \da {1\over \alpha} \int_X \abs{f}
-.\]
-Proof: let $S_\alpha$ be the set appearing, then $\alpha \mu(S_\alpha)$ is the sum of areas of certain boxes below the graph of $f$.
-Interpret $\int_X f$ as the total area under the graph to make the inequality obvious.
-
-![image_2021-06-02-22-59-46](figures/image_2021-06-02-22-59-46.png)
-
-The probability interpretation: $\PP(X\geq \alpha) \leq {1\over \alpha} \EE(X)$.
-
-The more general version:
-\[
-\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha }  } \leq {1\over \alpha^p} \norm{f}_p^p \da{1\over \alpha^p} \int_X \abs{f}^p 
-.\]
-Proof:
-\[
-\norm{f}_p^p = \int \abs{f}^p \geq \int_{S_\alpha} \abs{f}^p \geq \alpha^p \int_{S_\alpha} 1 = \alpha^p \mu(S_\alpha)
-.\]
-
-:::
-
-
-:::{.proposition title="Markov's Inequality"}
-
-:::
-
 
 :::{.proposition title="Holder's Inequality"}
 \[  
@@ -86,22 +79,62 @@ Then let $h = \abs{f}^p$:
 
 :::
 
-:::{.proposition title="Cauchy-Schwarz Inequality"}
+:::{.proposition title="Bessel's Inequality"}
+For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
 \[  
-\abs{\inner{f}{g}} = \leq \pnorm{f}2 \pnorm{g}2
-&& \text{with equality} \iff f = \lambda g
+\sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
+.\]
+
+> Note that this does not need to be a basis.
+
+:::
+
+:::{.proposition title="Parseval's Identity"}
+Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
+This states that if $\ts{e_k}$ is an orthonormal basis for $H$, then
+\[
+\sum_{k\geq 0} \abs{ \inner{x}{e_k} } ^2 = \norm{x}_H^2
+.\]
+:::
+
+:::{.remark}
+This appears in several other forms:
+\[
+{1\over 2\pi} \int_{(-\pi, \pi)} \abs{f}^2 = \sum_{k\in \ZZ} \abs{c_k}^2 && c_k \da {1\over 2\pi } \int_{(-\pi, \pi)} f(x) e^{-ikx} \dx
 .\]
 
 :::
 
-:::{.remark title="Different forms of CS"}
-In general, Cauchy-Schwarz relates inner product to norm, and only happens to relate norms in $L^1$.
-Some other useful forms:
+:::{.proposition title="Plancherel"}
 \[
-\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2} 
-&\leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right) \\
-\left|\int_{\mathbb{R}^{n}} f(x) \overline{g(x)} d x\right|^{2} 
-&\leq \int_{\mathbb{R}^{n}}|f(x)|^{2} d x \int_{\mathbb{R}^{n}}|g(x)|^{2} d x
+\norm{f}_{L^2}^2 &= \norm{\hat{f}}_{L^2} \\
+\int_{\RR^d} \abs{f}^2 &= \int_{\RR^d} \abs{\hat f}^2
+.\]
+
+
+:::
+
+## Less common
+
+:::{.proposition title="Markov/Chebyshev's Inequality"}
+The most often used form here:
+\[  
+\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha  }} \leq {1\over \alpha} \norm{f}_1 \da {1\over \alpha} \int_X \abs{f}
+.\]
+Proof: let $S_\alpha$ be the set appearing, then $\alpha \mu(S_\alpha)$ is the sum of areas of certain boxes below the graph of $f$.
+Interpret $\int_X f$ as the total area under the graph to make the inequality obvious.
+
+![image_2021-06-02-22-59-46](figures/image_2021-06-02-22-59-46.png)
+
+The probability interpretation: $\PP(X\geq \alpha) \leq {1\over \alpha} \EE(X)$.
+
+The more general version:
+\[
+\mu \qty{ f\inv\qty{(\alpha, \infty)} } \da \mu\qty{\ts{ x\in X \st \abs{f(x)} > \alpha }  } \leq {1\over \alpha^p} \norm{f}_p^p \da{1\over \alpha^p} \int_X \abs{f}^p 
+.\]
+Proof:
+\[
+\norm{f}_p^p = \int \abs{f}^p \geq \int_{S_\alpha} \abs{f}^p \geq \alpha^p \int_{S_\alpha} 1 = \alpha^p \mu(S_\alpha)
 .\]
 
 :::
@@ -118,7 +151,7 @@ This does not handle $p=\infty$ case.
 Use to prove $L^p$ is a normed space.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of Minkowski's inequality"}
 \envlist
 
 - We first note
@@ -176,52 +209,13 @@ q &= \frac p {p-1}
 
 :::
 
-:::{.proposition title="Bessel's Inequality"}
-For $x\in H$ a Hilbert space and $\theset{e_k}$ an orthonormal sequence,
-\[  
-\sum_{k=1}^{\infty}\| \inner{x}{e_{k} } \|^{2} \leq \|x\|^{2}
-.\]
 
-> Note that this does not need to be a basis.
-
-:::
-
-:::{.proposition title="Parseval's Identity"}
-Equality in Bessel's inequality, attained when $\theset{e_k}$ is a *basis*, i.e. it is complete, i.e. the span of its closure is all of $H$.
-This states that if $\ts{e_k}$ is an orthonormal basis for $H$, then
-\[
-\sum_{k\geq 0} \abs{ \inner{x}{e_k} } ^2 = \norm{x}_H^2
-.\]
-:::
-
-
-:::{.remark}
-This appears in several other forms:
-\[
-{1\over 2\pi} \int_{(-\pi, \pi)} \abs{f}^2 = \sum_{k\in \ZZ} \abs{c_k}^2 && c_k \da {1\over 2\pi } \int_{(-\pi, \pi)} f(x) e^{-ikx} \dx
-.\]
-
-:::
-
-
-:::{.proposition title="Plancherel"}
-\[
-\norm{f}_{L^2}^2 &= \norm{\hat{f}}_{L^2} \\
-\int_{\RR^d} \abs{f}^2 &= \int_{\RR^d} \abs{\hat f}^2
-.\]
-
-
-:::
-
-
-
-# Less Explicitly Used Inequalities
+## Inequalities that appear in proofs 
 
 :::{.proposition title="AM-GM Inequality"}
 \[
 \sqrt{ab} \leq \frac{a+b}{2}
 .\]
-
 :::
 
 :::{.proposition title="Jensen's Inequality"}
