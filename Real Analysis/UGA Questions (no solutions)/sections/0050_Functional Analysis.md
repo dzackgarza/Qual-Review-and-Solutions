@@ -97,13 +97,22 @@ x\da \sum_{n\in \NN} a_n u_n
 .\]
 
 
-- That $x\in H$: this would follow from the equality
+- That $x\in H$: this would follow from 
 \[
 \norm{x}^2 = \sum_n \abs{\inner x {u_n }}^2 = \sum_n \abs{a_n}^2 <\infty
 .\]
+  The inequality holds by assumption since $\ts{a_n}\in\ell^2$, so it suffices to show the first equality:
 
 \[
-\norm{x}^2 = \norm{\sum_n a_n u_n }
+\norm{x}^2 &\da \inner{x}{x} \\
+&= \inner
+{\sum_n a_n u_n}
+{\sum_m a_m u_m} \\
+&= \sum_{n, m} a_n \conjugate{a_m} \inner{u_n}{u_m} \\
+&= \sum_{n, m} a_n \conjugate{a_m} \delta_{mn} \\
+&= \sum_{n} a_n \conjugate{a_n} \\
+&= \sum_{n} \abs{a_n}^2 \\
+&= \sum_n \abs{\inner x {u_n}}^2
 .\]
 
 
