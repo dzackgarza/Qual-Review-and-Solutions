@@ -63,7 +63,7 @@ and
   &= \norm{x}^2 + 
   \inner
   {\sum_{n=1}^N \inner{x}{u_n} u_n} 
-  {\sum_{n=1}^N \inner{x}{u_n} u_n} 
+  {\sum_{m=1}^N \inner{x}{u_m} u_m} 
   - \sum_{n=1}^N \abs{\inner{x}{u_n} }^2 \\
 .\]
 
