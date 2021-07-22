@@ -79,6 +79,38 @@ and
 - Now take $\lim_{N\to\infty}$ and use that $\norm{\wait}$ is continuous.
 :::
 
+
+:::{.proof title="of b"}
+\envlist
+
+- Set 
+\[
+x\da \sum_{n\in \NN} a_n u_n
+.\]
+
+- Checking the first desired property:
+\[
+\inner{x}{u_m} &= \inner{ \sum_{n\geq 1} a_n u_n }{u_m} \\
+&=\sum_{n\geq 1} a_n  \inner{ u_n }{u_m} \\
+&=\sum_{n\geq 1} a_n  \delta_{mn} \\
+&= a_m
+.\]
+
+
+- That $x\in H$: this would follow from the equality
+\[
+\norm{x}^2 = \sum_n \abs{\inner x {u_n }}^2 = \sum_n \abs{a_n}^2 <\infty
+.\]
+
+\[
+\norm{x}^2 = \norm{\sum_n a_n u_n }
+.\]
+
+
+
+:::
+
+
 :::{.proof title="of b"}
 \envlist
 
