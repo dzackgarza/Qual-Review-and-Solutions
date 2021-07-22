@@ -60,8 +60,8 @@ Show that
   - Taking $p$th roots for $p\geq 1$ preserves the inequality, so
   \[
   \implies \norm{f}_p &\geq \abs{\norm{f}_\infty - \varepsilon} \cdot m(S_\varepsilon)^{\frac 1 p} 
-  \converges{p\to\infty}\to \abs{\norm{f}_\infty - \varepsilon} 
-  \converges{\varepsilon \to 0}\to \norm{f}_\infty
+  \converges{p\to\infty}\too \abs{\norm{f}_\infty - \varepsilon} 
+  \converges{\varepsilon \to 0}\too \norm{f}_\infty
   \]
   where we've used the fact that above arguments work 
 
@@ -96,7 +96,7 @@ Show that $f = 0$ almost everywhere.
 - Since $e^{2\pi i k x}$ is continuous on the compact interval $[0, 1]$, it is uniformly continuous.
 - Thus there is a sequence of polynomials $P_\ell$ such that 
 $$
-P_{\ell, k} \converges{\ell\to\infty}\to e^{2\pi i k x} \text{ uniformly on } [0,1]
+P_{\ell, k} \converges{\ell\to\infty}\too e^{2\pi i k x} \text{ uniformly on } [0,1]
 .$$
 
 - Note applying linearity to the assumption $\int f(x) \, x^n$, we have
@@ -195,7 +195,7 @@ c. If $f: [1, \infty) \to [0, \infty)$ is decreasing with $\lim_{x\to \infty} xf
 \envlist
 - Limits
 - Cauchy Criterion for Integrals: $\int_a^\infty f(x) \,dx$ converges iff for every $\eps>0$ there exists an $M_0$ such that $A,B\geq M_0$ implies $\abs{\int_A^B f} < \eps$, i.e. $\abs{\int_A^B f} \converges{A\to\infty}\to 0$.
-- Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\to 0$.
+- Integrals of $L^1$ functions have vanishing tails: $\int_{N}^\infty \abs{f} \converges{N\to\infty}\too 0$.
 - Mean Value Theorem for Integrals: $\int_a^b f(t)\, dt = (b-a) f(c)$ for some $c\in [a, b]$.
 :::
 
@@ -212,16 +212,16 @@ N\geq N_0 \implies \int_{\abs x > N} \abs{f} &= \int_{\abs x > N} \abs{f - f_n +
 &= \int_{\abs x > N} \abs{f-f_n} \\ 
 &\leq \int_{\abs x > N} \norm{f-f_n}_1 \\
 &= \norm{f_n-f}_1 \qty{\int_{\abs x > N} 1} \\
-&\converges{n\to\infty}\to 0 \qty{\int_{\abs x > N} 1} \\
+&\converges{n\to\infty}\too 0 \qty{\int_{\abs x > N} 1} \\
 &= 0\\
-&\converges{N\to\infty}\to 0
+&\converges{N\to\infty}\too 0
 .\]
 
 
 To see that this doesn't force $f(x)\to 0$ as $\abs{x} \to \infty$:
 
 - Take $f(x)$ to be a train of rectangles of height 1 and area $1/2^j$ centered on even integers.
-- Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\to 0$$ as the tail of a convergent sum. 
+- Then $$\int_{\abs x > N} \abs{f} = \sum_{j=N}^\infty 1/2^j \converges{N\to\infty}\too 0$$ as the tail of a convergent sum. 
 - However $f(x) = 1$ for infinitely many even integers $x > N$, so $f(x) \not\to 0$ as $\abs{x}\to\infty$.
 :::
 
@@ -249,9 +249,9 @@ f(x-n) \int_x^{2x} \,dt  \\
 .\]
 
 - By the Cauchy Criterion for integrals, $\lim_{x\to \infty} \int_x^{2x} f(t)~dt = 0$.
-- So the LHS term $xf(x) \converges{x\to\infty}\to 0$.
+- So the LHS term $xf(x) \converges{x\to\infty}\too 0$.
 - Since $x>1$, $\abs{f(x)} \leq \abs{xf(x)}$ 
-- Thus $f(x) \converges{x\to\infty}\to 0$ as well.
+- Thus $f(x) \converges{x\to\infty}\too 0$ as well.
 
 :::
 
@@ -278,7 +278,7 @@ x\leq c_x \leq 2x
 :::
 
 :::{.proof title="Solution 3: Contradiction"}
-Just showing $f(x) \converges{x\to \infty}\to 0$:
+Just showing $f(x) \converges{x\to \infty}\too 0$:
 
 - Toward a contradiction, suppose not.
 - Since $f$ is decreasing, it can not diverge to $+\infty$
@@ -296,7 +296,7 @@ Just showing $f(x) \converges{x\to \infty}\to 0$:
   - Fix $\eps > 0$, choose $x_0\gg 1$ such that $t\geq x_0 \implies L \leq f(t) \leq L + \eps$.
   - Then $$\int_1^\infty f \geq \int_{x_0}^\infty f \geq \int_{x_0}^\infty \qty{L}\,dt = \infty$$
 
-Showing $xf(x) \converges{x\to \infty}\to 0$.
+Showing $xf(x) \converges{x\to \infty}\too 0$.
 
 - Toward a contradiction, suppose not.
 - (How to show that $xf(x) \not\to + \infty$?)
@@ -326,7 +326,7 @@ Showing $xf(x) \converges{x\to \infty}\to 0$.
 :::{.proof title="Solution 4: Akos' suggestion"}
 For $x\geq 1$, 
 \[
-\abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\to 0
+\abs{xf(x)} = \abs{ \int_x^{2x} f(x) \, dt } \leq \int_x^{2x} \abs{f(x)} \, dt \leq \int_x^{2x} \abs{f(t)}\, dt \leq \int_x^{\infty} \abs{f(t)} \,dt \converges{x\to\infty}\too 0
 \]
   where we've used 
   
@@ -363,12 +363,12 @@ For $x\geq 1$,
 - No: take $f(x) = {1\over x\ln x}$
 - Then by a $u\dash$substitution,
   \[
-  \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\to \infty
+  \int_0^x f = \ln\qty{\ln (x)} \converges{x\to\infty}\too \infty
   \]
   is unbounded, so $f\not\in L^1([1, \infty))$.
 - But 
   \[
-  xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \to 0
+  xf(x) = { 1 \over \ln(x)} \converges{x\to\infty} \too 0
   .\]
 
 :::
@@ -514,7 +514,7 @@ Show that for every $f\in L^1(\RR)$, there exists a sequence of functions $\thes
 
 - Now define $f_n = \chi_{I_{N, n}}$, then
 \[
-\norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\longrightarrow 0
+\norm{s - f_n}_1 = \int \abs{\chi_A - \chi_{I_{N, n}}} = m(A \Delta I_{N, n}) \converges{n\to\infty}\too 0
 .\]
 
 - Since any simple function is a finite linear combination of $\chi_{A_i}$, we can do this for each $i$ to extend this result to all simple functions.
