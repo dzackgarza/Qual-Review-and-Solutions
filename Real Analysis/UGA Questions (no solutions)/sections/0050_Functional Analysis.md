@@ -114,40 +114,8 @@ x\da \sum_{n\in \NN} a_n u_n
 &= \sum_{n} \abs{a_n}^2 \\
 &= \sum_n \abs{\inner x {u_n}}^2
 .\]
-
-
-
 :::
 
-
-:::{.proof title="of b"}
-\envlist
-
-1. Fix $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
-
-2. Define 
-$$
-x \definedas \displaystyle\lim_{N\to\infty} S_N = \lim_{N\to \infty} \sum_{k=1}^N a_k u_k
-$$
-
-3. $\theset{S_N}$ Cauchy (by 1) and $H$ complete $\implies x\in H$.
-
-4.  
-$$
-\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n \quad \forall n\in \NN
-$$ 
-since the $u_k$ are all orthogonal.
-
-5.
-$$
-\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
-$$ 
-by Pythagoras since the $u_k$ are orthogonal, where we've used normality in the last equality.
-
-> Bonus: We didn't use completeness here, so the Fourier series may not actually converge to $x$.
-If $\theset{u_n}$ is **complete** (so $x = 0 \iff \inner{x}{u_n} = 0 ~\forall n$) then the Fourier series *does* converge to $x$ and $\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2}=\|x\|^{2}$ for all $x \in H$.
-
-:::
 
 :::
 
