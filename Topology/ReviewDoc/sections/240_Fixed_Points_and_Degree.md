@@ -5,7 +5,7 @@
 
 - $f\homotopic g \iff \deg f = \deg g$, since this implies $f_* = g_*$.
 
-- $\deg f = 1 \iff f \homotopic \id$.
+- If $f$ is a homotopy equivalence, $\abs{\deg f} = 1$.
 
 - $\deg\id_{S^n} = 1$
 
@@ -21,6 +21,13 @@ H_{x_i}: \RR^{n+1} &\to \RR^{n+1} \\
 
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ hyperplane reflections, so $\deg\alpha = (-1)^{n+1}$.
 :::
+
+
+:::{.exercise title="?"}
+Show that if $f: S^n\to S^n$ has no fixed points $\iff \deg f = (-1)^{n+1}$ and $f$ is homotopic to the antipodal map.
+
+:::
+
 
 :::{.theorem title="Lefschetz Fixed Point"}
 For $f:X\to X$, define the **trace** of $f$ to be
