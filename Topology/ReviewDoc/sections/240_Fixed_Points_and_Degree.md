@@ -3,9 +3,12 @@
 :::{.fact title="Useful properties of the degree of a map between spheres"}
 \envlist
 
+- The degree of a constant map is 0.
+
 - $f\homotopic g \iff \deg f = \deg g$, since this implies $f_* = g_*$.
 
 - If $f$ is a homotopy equivalence, $\abs{\deg f} = 1$.
+  - This is because $f\homotopic g \implies H_*(f) = H_*(g)$.
 
 - $\deg\id_{S^n} = 1$
 
@@ -20,6 +23,7 @@ H_{x_i}: \RR^{n+1} &\to \RR^{n+1} \\
 .\]
 
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ hyperplane reflections, so $\deg\alpha = (-1)^{n+1}$.
+  - As a consequence, if $\deg f$ is even then $f$ is not homotopic to the antipodal map.
 :::
 
 
