@@ -3,13 +3,19 @@
 :::{.fact title="Useful properties of the degree of a map between spheres"}
 \envlist
 
-- $\text{deg}~\id_{S^n} = 1$
+- $\deg\id_{S^n} = 1$
 
-- $\text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g$
+- $\text{deg} (f\circ g) = \degf \cdot \degg$
 
-- $\text{deg}~r = -1$ where $r$ is any rotation about a hyperplane, i.e. $r(\thevector{x_1 \cdots x_i \cdots x_n}) = \thevector{x_1 \cdots -x_i \cdots x_n}$.
+- $\deg(H_{x_i}) = -1$ for $H_{x_i}$ any rotation about the hyperplane $x_i = 0$, i.e. 
+\[
+H_{x_i}: \RR^{n+1} &\to \RR^{n+1} \\
+\tv{x_1, \cdots, x_i, \cdots, x_{n+1}} 
+&\mapsto
+\tv{x_1, \cdots, - x_i, \cdots, x_{n+1}} 
+.\]
 
-- The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
+- The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ hyperplane reflections, so $\deg\alpha = (-1)^{n+1}$.
 :::
 
 :::{.theorem title="Lefschetz Fixed Point"}
