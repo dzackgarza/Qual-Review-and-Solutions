@@ -1,8 +1,5 @@
 #  CW and Simplicial Complexes
 
-\todo[inline]{Missing a lot on CW complexes}
-
-
 :::{.proposition title="Product CW structure"}
 If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is 
 \[
@@ -16,6 +13,10 @@ so
 \[
 C_n^{\cell}(X \cross Y ) \cong \bigoplus_{i+j=n} C_i^\cell(X) \cross C_j^{\cell}(Y)
 .\]
+:::
+
+:::{.remark}
+This is nontrivial, it's the content of the *Eilenberg-Zilber theorem*.
 
 :::
 
