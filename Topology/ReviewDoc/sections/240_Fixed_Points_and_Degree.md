@@ -24,11 +24,20 @@ H_{x_i}: \RR^{n+1} &\to \RR^{n+1} \\
 
 - The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ hyperplane reflections, so $\deg\alpha = (-1)^{n+1}$.
   - As a consequence, if $\deg f$ is even then $f$ is not homotopic to the antipodal map.
+
 :::
 
 
 :::{.exercise title="No fixed points implies homotopic to antipodal"}
 Show that if $f: S^n\to S^n$ has no fixed points $\iff \deg f = (-1)^{n+1}$ and $f$ is homotopic to the antipodal map.
+:::
+
+:::{.concept}
+\envlist
+
+- If $f(x)\neq x$, the line segment $L(-x, f(x))$ does not contain $0$. 
+
+- If $f(x) \neq -x$, the line segment $L(x, f(x))$ does not contain $0$.
 :::
 
 :::{.solution}
@@ -42,6 +51,13 @@ H: I\cross S^n &\to S^n \\
 
 Less explicitly: if $f(x) \neq x$ for all $x\in S^n$, there is a unique geodesic through these two points, so let each point flow along its corresponding geodesic.
 :::
+
+
+:::{.exercise title="?"}
+Show that if $f$ is not surjective then $\deg f = 0$.
+
+:::
+
 
 
 
