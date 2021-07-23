@@ -47,6 +47,13 @@ Let $X= S^a \cross S^b$, so $p_{S^a}(t) = 1 + t^a$ and $p_{S^b}(t) = 1 + t^b$, t
 :::
 
 
+:::{.exercise title="Homology of product of spheres"}
+Compute all of the possible cases for $H_*(S^a\cross S^b)$, where $a, b\geq 0$ are not necessarily distinct.
+
+:::
+
+
+
 
 ## CW Structures on Common Spaces
 
