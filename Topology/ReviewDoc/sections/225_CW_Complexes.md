@@ -1,5 +1,15 @@
 #  CW and Simplicial Complexes
 
+
+:::{.warnings}
+The maps go *down* in degree for cellular chain complexes! I.e., 
+\[
+C_*(X) = (0 \from C_0 \from C_1 \from \cdots )
+.\]
+
+:::
+
+
 :::{.proposition title="Product CW structure"}
 If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is 
 \[
