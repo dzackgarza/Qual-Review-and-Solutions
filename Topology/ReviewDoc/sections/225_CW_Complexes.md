@@ -4,9 +4,23 @@
 
 
 :::{.proposition title="Product CW structure"}
-If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is $p_{X\cross Y}(t) = p_X(t)p_Y(t)$.
+If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is 
+\[
+p_{X\cross Y}(t) = p_X(t)p_Y(t)
+.\]
+:::
+
+
+:::{.example title="?"}
+Let $X= S^a \cross S^b$, so $p_{S^a}(t) = 1 + t^a$ and $p_{S^b}(t) = 1 + t^b$, then $p_X(t) = 1 + t^a + t^b + t^{a+b}$, so $X$ has 
+
+- One 1-cell
+- One $a\dash$cell
+- One $b\dash$cell
+- One $(a+b)\dash$cell
 
 :::
+
 
 
 ## CW Structures on Common Spaces
