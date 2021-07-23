@@ -2,10 +2,14 @@
 
 \todo[inline]{Missing a lot on CW complexes}
 
-## Degrees 
+
+:::{.proposition title="Product CW structure"}
+If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is $p_{X\cross Y}(t) = p_X(t)p_Y(t)$.
+
+:::
 
 
-## Examples of CW Complexes/Structures 
+## CW Structures on Common Spaces
 
 :::{.example title="Spheres"}
 $S^n = e^0 \union e^n$: a point and an $n\dash$cell.
@@ -23,7 +27,7 @@ $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
 ![Fundamental domains](figures/1513064067523.png)
 :::
 
-## Examples of Simplicial Complexe, 
+## Examples of Simplicial Complexes 
 
 :::{.remark}
 To write down a simplicial complex, label the vertices with increasing integers. 
