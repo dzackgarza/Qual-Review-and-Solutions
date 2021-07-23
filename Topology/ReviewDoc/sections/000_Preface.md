@@ -13,7 +13,12 @@ Some fun resources:
 
 
 :::{.warnings}
-All maps between spaces are assumed continuous!
+\envlist
+
+- All maps between spaces are assumed continuous!
+- All maps are *pointed*, i.e. we implicitly work in the category $\Top_*$.
+- If left unspecified, homology is always taken with $\ZZ\dash$coefficients.
+
 :::
 
 
