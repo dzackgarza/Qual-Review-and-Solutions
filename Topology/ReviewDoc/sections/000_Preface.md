@@ -11,6 +11,12 @@ Some fun resources:
 
 ## Notation
 
+
+:::{.warnings}
+All maps between spaces are assumed continuous!
+:::
+
+
 | Notation                                             | Definition                          |
 |------------------------------------------------------|-------------------------------------|
 | $X\cross Y, \prod_{j\in J} X_j, X^{\cross n}$        | Direct Products                     |

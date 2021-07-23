@@ -570,7 +570,7 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. 
 Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. 
 But homomorphisms of free groups are entirely determined by their action on generators. 
-So if $f^*(1) = n$, define $n$ to be the **degree** of $f$.
+So if $f^*(1) = n$, define $n$ to be the **degree** of $f$, which only depends on the homotopy class $f\in [S^n, S^n]$.
 :::
 
 :::{.definition title="Derived Functor"}
