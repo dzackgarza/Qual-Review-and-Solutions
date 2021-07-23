@@ -23,7 +23,7 @@ $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
 ![Fundamental domains](figures/1513064067523.png)
 :::
 
-## Examples of Simplicial Complexes
+## Examples of Simplicial Complexe, 
 
 :::{.remark}
 To write down a simplicial complex, label the vertices with increasing integers. 
