@@ -3,6 +3,10 @@
 :::{.fact title="Useful properties of the degree of a map between spheres"}
 \envlist
 
+- $f\homotopic g \iff \deg f = \deg g$, since this implies $f_* = g_*$.
+
+- $\deg f = 1 \iff f \homotopic \id$.
+
 - $\deg\id_{S^n} = 1$
 
 - $\text{deg} (f\circ g) = \degf \cdot \degg$
