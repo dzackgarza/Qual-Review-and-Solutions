@@ -9,9 +9,11 @@ A trick for finding characteristic polynomials:
 ,\]
 using that 
 
-- $\trace\qty{\Extpower^0 A} &\da 1$,
-- ${\Extpower^1 A} &\da A$,
-- $\trace\qty{\Extpower^n A} = \det(A)$.
+\[
+{\Extpower^0 A} \da 1 \\
+{\Extpower^1 A} \da A \\
+\trace\qty{\Extpower^n A} = \det(A)
+.\]
 
 Moreover, these traces are easy to compute by hand:
 \[
@@ -22,9 +24,23 @@ where $M_{ii}$ is the principal minor obtained from $A$ by deleting the $i$th ro
 To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
 Note that this simplifies greatly for $f$ monic!
 Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
+:::
+
+
+:::{.example title="of polynomial long division"}
+Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\om 8, \pm 4, \pm 2, \pm 1}$.
+Testing $f(2) = 0$ works, and dividing by $x-2$ yields
+
+![](figures/2021-07-24_18-32-38.png)
+
+The rest can be factored by inspection:
+\[
+f(x) = (x-2)(x^2-4x+4) = (x-2)^3
+.\]
 
 
 :::
+
 
 
 ## Definitions
