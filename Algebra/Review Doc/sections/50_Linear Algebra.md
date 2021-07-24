@@ -327,7 +327,18 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 :::{.proposition title="JCF Algorithm"}
 The following algorithm always works for computing $\JCF(A)$:
 
-- Compute $\
+- Compute and factor the characteristic polynomial as $\chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i}$.
+- For each $\lambda_i$, find the constant $\ell_i$ such that
+\[
+\cdots 
+\rank (A-\lambda_i I)^{\ell_i - 1} 
+> \rank (A-\lambda_i I)^{\ell_i}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = } \cdots
+.\]
 
 :::
 
