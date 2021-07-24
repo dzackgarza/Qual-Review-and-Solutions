@@ -15,11 +15,11 @@ using that
 \trace\qty{\Extpower^n A} = \det(A)
 .\]
 
-Moreover, these traces are easy to compute by hand:
+Moreover, the intermediate traces are easy to compute by hand:
 \[
-\trace\qty{\Extpower^\ell A} = \sum_{i=1}^n \det\qty{M_{ii}}
+\trace\qty{\Extpower^\ell A} = \sum_{i=1}^n \det\qty{M^{\ell}_{ii}}
 ,\]
-where $M_{ii}$ is the principal minor obtained from $A$ by deleting the $i$th row and $i$th column.
+where $M^{\ell}_{ii}$ is the $\ell\times\ell$ principal minor obtained from $A$ by deleting the $i$th row and $i$th column.
 
 To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
 Note that this simplifies greatly for $f$ monic!
