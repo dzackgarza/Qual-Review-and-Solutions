@@ -9,9 +9,16 @@ A trick for finding characteristic polynomials:
 ,\]
 using that 
 
-- $\trace\qty{\Extpower^0 A} &\da 1$
-- ${\Extpower^1 A} &\da A$
-- $\trace\qty{\Extpower^n A} = \det(A)$
+- $\trace\qty{\Extpower^0 A} &\da 1$,
+- ${\Extpower^1 A} &\da A$,
+- $\trace\qty{\Extpower^n A} = \det(A)$.
+
+Moreover, these traces are easy to compute by hand:
+\[
+\trace\qty{\Extpower^\ell A} = \sum_{i=1}^n \det\qty{M_{ii}}
+,\]
+where $M_{ii}$ is the principal minor obtained from $A$ by deleting the $i$th row and $i$th column.
+
 
 
 :::
