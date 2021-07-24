@@ -246,6 +246,35 @@ M_1 =
 
 ### Jordan Canonical Form
 
+
+:::{.proposition title="JCF Algorithm"}
+The following algorithm always works for computing $\JCF(A)$:
+
+- Compute and factor the characteristic polynomial as $\chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i}$.
+- For each $\lambda_i$, find the constant $\ell_i$ such that
+\[
+\cdots 
+\rank (A-\lambda_i I)^{\ell_i - 1} 
+> \rank (A-\lambda_i I)^{\ell_i}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = } \cdots
+.\]
+- Find as many usual eigenvectors $\vector v_i$ as you can.
+  Suppose you just get one, $\vector v$.
+- Solve the systems:
+\[
+(A - \lambda_i I)\vector v_1 = \vector v &\implies \vector v_1 = ? \\
+(A - \lambda_i I)^2\vector v_2 = \vector v_1 &\implies \vector v_2 = ? \\
+&\vdots \\
+,\]
+  which can be solved by putting the $\vector v_i$ in an augmented matrix and computing the RREF.
+- This terminates in at most $\ell_i$ steps, and these vectors correspond to a single Jordan block.
+- If there are other eigenvector $\vector w, \cdots$ for $\lambda_i$, repeating this process yields a Jordan block for each of them.
+  Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
+:::
 Corresponds to the **Elementary Divisor Decomposition** of $T$.
 
 :::{.lemma title="?"}
@@ -253,9 +282,9 @@ The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
 
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
-Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
+Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
 \[
-\min_A(x) = \prod_i (x- \lambda_i)^{a_i} \\
+\min_A(x) = \prod_i (x- \lambda_i)^{\ell_i} \\
 \chi_A(x) = \prod (x- \lambda_i)^{m_i}
 \]
 
@@ -263,9 +292,11 @@ Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 
 - The spectrum of $A$ (the eigenvalues with their multiplicities) corresponds precisely to the **characteristic** polynomial.
 
-- $a_i \leq m_i$
+- $\ell_i \leq m_i$
 
-- $a_i$ is the size of the **largest** Jordan block associated to $\lambda_i$, and corresponds to the "stabilizing constant".
+- $\ell_i$ is
+  - The size of the **largest** Jordan block associated to $\lambda_i$, and 
+  - The "stabilizing constant".
 
 - $m_i$, associated to the characteristic polynomial, is
   - The **sum of sizes** of all Jordan blocks associated to $\lambda_i$, 
@@ -326,36 +357,6 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 ### Computing Jordan Canonical Form
 
-
-:::{.proposition title="JCF Algorithm"}
-The following algorithm always works for computing $\JCF(A)$:
-
-- Compute and factor the characteristic polynomial as $\chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i}$.
-- For each $\lambda_i$, find the constant $\ell_i$ such that
-\[
-\cdots 
-\rank (A-\lambda_i I)^{\ell_i - 1} 
-> \rank (A-\lambda_i I)^{\ell_i}
-{\color{red} = }
-\rank (A-\lambda_i I)^{\ell_i+1}
-{\color{red} = }
-\rank (A-\lambda_i I)^{\ell_i+1}
-{\color{red} = } \cdots
-.\]
-- Find as many usual eigenvectors $\vector v_i$ as you can.
-  Suppose you just get one, $\vector v_0$.
-- Solve the systems:
-\[
-(A - \lambda_i I)\vector v_1 = \vector v_0 &\implies \vector v_1 = ? \\
-(A - \lambda_i I)^2\vector v_2 = \vector v_1 &\implies \vector v_2 = ? \\
-&\vdots \\
-,\]
-  which can be solved by putting the $\vector v_i$ in an augmented matrix and computing the RREF.
-- This terminates in at most $\ell_i$ steps, and these vectors correspond to a cyclic basis of $E_{\lambda_i}$.
-  Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
-
-
-:::
 
 
 ## Diagonalizability
