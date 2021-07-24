@@ -1,5 +1,22 @@
 # Linear Algebra
 
+
+:::{.proposition title="Useful computational trick"}
+A trick for finding characteristic polynomials:
+\[
+\chi_A(t) &= \sum_{k=0}^n (-1)^k \trace\qty{\Extpower^k A} t^{n-k} \\
+&= t^n - \trace\qty{A} t^{n-1} + \trace\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \trace\qty{\Extpower^{n-1} A} t \mp \det(A)
+,\]
+using that 
+
+- $\trace\qty{\Extpower^0 A} &\da 1$
+- ${\Extpower^1 A} &\da A$
+- $\trace\qty{\Extpower^n A} = \det(A)$
+
+
+:::
+
+
 ## Definitions
 
 :::{.remark}
