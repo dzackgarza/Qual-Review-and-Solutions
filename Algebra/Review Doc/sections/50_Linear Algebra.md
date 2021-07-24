@@ -19,9 +19,9 @@ Moreover, these traces are easy to compute by hand:
 ,\]
 where $M_{ii}$ is the principal minor obtained from $A$ by deleting the $i$th row and $i$th column.
 
-To factor this polynomial, the rational roots test can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
+To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
 Note that this simplifies greatly for $f$ monic!
-Once you have a root, apply polynomial long division to get a smaller problem, and hopefully this continues to work until it's factored.
+Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
 
 
 :::
