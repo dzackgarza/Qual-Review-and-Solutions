@@ -263,6 +263,7 @@ The following algorithm always works for computing $\JCF(A)$:
 {\color{red} = } \cdots
 .\]
 - Find as many usual eigenvectors $\vector v_i$ as you can.
+   The number of eigenvectors you find will be $\dim E_{\lambda_i}$.
   Suppose you just get one, $\vector v$.
 - Solve the systems:
 \[
@@ -272,14 +273,11 @@ The following algorithm always works for computing $\JCF(A)$:
 ,\]
   which can be solved by putting the $\vector v_i$ in an augmented matrix and computing the RREF.
 - This terminates in at most $\ell_i$ steps, and these vectors correspond to a single Jordan block.
-- If there are other eigenvector $\vector w, \cdots$ for $\lambda_i$, repeating this process yields a Jordan block for each of them.
+- If there are other eigenvectors $\vector w, \cdots$ for $\lambda_i$, repeating this process yields a Jordan block for each of them.
   Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
 :::
 Corresponds to the **Elementary Divisor Decomposition** of $T$.
 
-:::{.lemma title="?"}
-The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
-:::
 
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
@@ -290,9 +288,7 @@ Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
 
 - The roots both polynomials are precisely the eigenvalues of $A$.
 
-- The spectrum of $A$ (the eigenvalues with their multiplicities) corresponds precisely to the **characteristic** polynomial.
-
-- $\ell_i \leq m_i$
+- $\ell_i \leq m_i$ by Cayley-Hamilton.
 
 - $\ell_i$ is
   - The size of the **largest** Jordan block associated to $\lambda_i$, and 
@@ -301,10 +297,15 @@ Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
 - $m_i$, associated to the characteristic polynomial, is
   - The **sum of sizes** of all Jordan blocks associated to $\lambda_i$, 
   - The number of times $\lambda_i$ appears on the diagonal of $JCF(A)$, 
-  - The dimension of the generalized eigenspace $E_{i}$ corresponding to $\lambda_i$.
 
-- $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
+- $\dim E_{\lambda_i}$ is 
+  - The **number of Jordan blocks** associated to $\lambda_i$
+  - The number of (usual) eigenvector associated to $\lambda_i$, i.e. the dimension of their span.
 
+:::
+
+:::{.lemma title="?"}
+The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
 
 ### Smith Normal Form
