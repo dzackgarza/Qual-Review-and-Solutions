@@ -282,13 +282,14 @@ Corresponds to the **Elementary Divisor Decomposition** of $T$.
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
 \[
-\min_A(x) = \prod_i (x- \lambda_i)^{\ell_i} \\
-\chi_A(x) = \prod (x- \lambda_i)^{m_i}
+\min_A(x) &= \prod_i (x- \lambda_i)^{\ell_i} \\
+\chi_A(x) &= \prod (x- \lambda_i)^{m_i} \\
+E_{\lambda_i} &= \dim(A - \lambda_i I)
 \]
 
 - The roots both polynomials are precisely the eigenvalues $\lambda_i$ of $A$.
-  - $\ell_i$ are the *geometric multiplicities*,
   - $m_i$ are the *algebraic multiplicities*.
+  - $\dim E_{\lambda_i}$ are the *geometric multiplicities*.
 
 - $\ell_i \leq m_i$ by Cayley-Hamilton.
 
