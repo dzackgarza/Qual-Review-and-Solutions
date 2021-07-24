@@ -19,7 +19,8 @@ Moreover, the intermediate traces are easy to compute by hand:
 \[
 \trace\qty{\Extpower^\ell A} = \sum \det\qty{M^{\ell}}
 ,\]
-where the sum is taken over all $\ell\times\ell$ principal minors: determinants of the $n \choose \ell$ principal matrices which are obtained by selecting diagonal entries $a^1_{ii}, \cdots, a^\ell_{ii}$, and deleting the rows and columns for every entry not selected.
+where the sum is taken over all $\ell\times\ell$ **principal minors**: determinants of the $n \choose \ell$ principal matrices which are obtained by choosing $\ell$ diagonal entries to keep and and deleting the rows and columns for every entry not chosen.
+Equivalently, one can select $n-\ell$ diagonal entries and delete the corresponding row/column for each. 
 
 
 :::{.example title="?"}
@@ -41,7 +42,7 @@ $\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
 
 
 :::{.example title="of polynomial long division"}
-Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\om 8, \pm 4, \pm 2, \pm 1}$.
+Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\pm 8, \pm 4, \pm 2, \pm 1}$.
 Testing $f(2) = 0$ works, and dividing by $x-2$ yields
 
 ![](figures/2021-07-24_18-32-38.png)
@@ -422,8 +423,9 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 :::{.theorem title="The Spectral Theorem"}
 \envlist
 
-1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
+1. Hermitian (self-adjoint) matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
 2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
+
 :::
 
 :::{.proof title="?"}
