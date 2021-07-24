@@ -256,18 +256,21 @@ The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 \[
 \min_A(x) = \prod_i (x- \lambda_i)^{a_i} \\
-\chi_A(x) = \prod (x- \lambda_i)^{b_i}
+\chi_A(x) = \prod (x- \lambda_i)^{m_i}
 \]
 
 - The roots both polynomials are precisely the eigenvalues of $A$.
 
 - The spectrum of $A$ (the eigenvalues with their multiplicities) corresponds precisely to the **characteristic** polynomial.
 
-- $a_i \leq b_i$
+- $a_i \leq m_i$
 
 - $a_i$ is the size of the **largest** Jordan block associated to $\lambda_i$, and corresponds to the "stabilizing constant".
 
-- $b_i$ is the **sum of sizes** of all Jordan blocks associated to $\lambda_i$, the number of times $\lambda_i$ appears on the diagonal of $JCF(A)$, and the dimension of the generalized eigenspace $E_{i}$ corresponding to $\lambda_i$.
+- $m_i$, associated to the characteristic polynomial, is
+  - The **sum of sizes** of all Jordan blocks associated to $\lambda_i$, 
+  - The number of times $\lambda_i$ appears on the diagonal of $JCF(A)$, 
+  - The dimension of the generalized eigenspace $E_{i}$ corresponding to $\lambda_i$.
 
 - $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
 
