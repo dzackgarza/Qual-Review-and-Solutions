@@ -27,6 +27,12 @@ Once you have a root, apply **polynomial long division** to get a smaller proble
 :::
 
 
+
+:::{.fact}
+$\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
+:::
+
+
 :::{.example title="of polynomial long division"}
 Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\om 8, \pm 4, \pm 2, \pm 1}$.
 Testing $f(2) = 0$ works, and dividing by $x-2$ yields
