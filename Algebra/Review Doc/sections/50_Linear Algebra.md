@@ -255,11 +255,11 @@ The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
 \[
-\min_A(x) = \prod (x- \lambda_i)^{a_i} \\
+\min_A(x) = \prod_i (x- \lambda_i)^{a_i} \\
 \chi_A(x) = \prod (x- \lambda_i)^{b_i}
 \]
 
-- The roots both polynomials are precisely the eigenvalues of $A$
+- The roots both polynomials are precisely the eigenvalues of $A$.
 
 - The spectrum of $A$ corresponds precisely to the **characteristic** polynomial 
 
@@ -339,6 +339,18 @@ The following algorithm always works for computing $\JCF(A)$:
 \rank (A-\lambda_i I)^{\ell_i+1}
 {\color{red} = } \cdots
 .\]
+- Find as many usual eigenvectors $\vector v_i$ as you can.
+  Suppose you just get one, $\vector v_0$.
+- Solve the systems:
+\[
+(A - \lambda_i I)\vector v_1 = \vector v_0 &\implies \vector v_1 = ? \\
+(A - \lambda_i I)^2\vector v_2 = \vector v_1 &\implies \vector v_2 = ? \\
+&\vdots \\
+,\]
+  which can be solved by putting the $\vector v_i$ in an augmented matrix and computing the RREF.
+- This terminates in at most $\ell_i$ steps, and these vectors correspond to a cyclic basis of $E_{\lambda_i}$.
+  Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
+
 
 :::
 
