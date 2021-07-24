@@ -17,8 +17,9 @@ using that
 
 Moreover, the intermediate traces are easy to compute by hand:
 \[
-\trace\qty{\Extpower^\ell A} = \sum_{i=1}^n \det\qty{M^{\ell}_{ii}}
+\trace\qty{\Extpower^\ell A} = \sum \det\qty{M^{\ell}}
 ,\]
+where the sum is taken over all $\ell\times\ell$ principal minors: determinants of the principal matrices which are obtained by deleting the $i$th row and $i$th column for some subset of $I \subseteq [n]$ of size $n-\ell$.
 where $M^{\ell}_{ii}$ is the $\ell\times\ell$ principal minor obtained from $A$ by deleting the $i$th row and $i$th column.
 
 To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
@@ -27,8 +28,7 @@ Once you have a root, apply **polynomial long division** to get a smaller proble
 :::
 
 
-
-:::{.fact}
+:::{.fact}\det(A) = \prod \lambda_i$.
 $\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
 :::
 
