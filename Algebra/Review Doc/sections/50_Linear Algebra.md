@@ -350,7 +350,16 @@ The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 
 
 :::{.remark}
-Writing $\Ann(\vector v)$ as the annihilator of $\vector v$, a generalized eigenvector for the pair $(\lambda_i, \vector v_i)$ is anything in the space $\sqrt{\Ann(\vector v_i)}$.
+Writing $\Ann(\vector v)$ as the annihilator of $\vector v$, a generalized eigenvector for the pair $(\lambda_i, \vector v)$ for a matrix $A$ is any operator in the space $\sqrt{\Ann(\vector v)}$, where we view $V$ as a $k[x]\dash$module using $p(x) \actson \vector v \da p(A)(\vector v)$.
+So 
+\[
+\Ann(\vector v) \da \ts{ q(x) \in k[x] \st q(x) \actson \vector v = 0} = \ts{q(x) \in k[x] \st q(A)(\vector v) = 0}
+.\]
+Now use that $\vector w$ is an eigenvector for $A$ iff $A-\lambda_i I \in \Ann(\vector w)$, and is a generalized eigenvector iff
+\[
+(A-\lambda_i I)^k\in \Ann(\vector w) &\text{ for some }k \iff A-\lambda_i I \in \sqrt{\Ann(\vector w)}
+.\]
+
 :::
 
 
