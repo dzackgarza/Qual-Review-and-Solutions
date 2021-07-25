@@ -846,21 +846,21 @@ Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
 \[
 (A-\lambda_n I) \Fil_n V &\subseteq \Fil_{n-1} V \\
 (A-\lambda_{n-1} I) (A-\lambda_n I ) \Fil_n V &\subseteq \Fil_{n-2} V \\
-&\vdots
+&\vdots \\
 \prod_i (A-\lambda_{n-i} I) \Fil_n V &\subseteq \Fil_0 V = \ts{0}
 .\]
 Conclude that $\chi_A(A) = 0$.
 :::
 
 
+### JCF
 
 :::{.exercise title="?"}
 Compute $\JCF(A)$ for 
 \[
-A \da
-\mattt 1 {-1} 0 {-1} 4 {-1} {-4} {13} {-3}
+A \da 
+\mattt{1}{-1}{0}{-1}{4}{-1}{-4}{13}{-3}
 .\]
-
 
 :::
 
