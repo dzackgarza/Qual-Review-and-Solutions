@@ -13,8 +13,30 @@ Some definitions:
 - $A$ is **Hermitian** iff $A^{\dagger} = A$.
   - $A$ is **normal** iff $AA^{\dagger} = A^{\dagger} A$.
   - $A$ is **unitary** iff $A^{\dagger}A = AA^{\dagger} = I$.
+:::
+
+
+:::{.fact}
+\[
+\det M = \prod_{\sigma \in S_n} \eps(\sigma) \prod_{i=1}^n a_{i, \sigma(i)}
+.\]
+
+For example,
+
+\[
+\operatorname{det}\left(\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right)=\begin{gathered}
+a_{11} a_{22} a_{33}+a_{12} a_{23} a_{31}+a_{13} a_{21} a_{32} \\
+-a_{13} a_{22} a_{31}-a_{12} a_{21} a_{33}-a_{11} a_{23} a_{32}
+\end{gathered}
+.\]
+
 
 :::
+
 
 
 :::{.proposition title="Useful computational trick"}
