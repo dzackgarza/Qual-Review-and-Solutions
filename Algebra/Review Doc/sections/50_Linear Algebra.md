@@ -1,6 +1,19 @@
 # Linear Algebra
 
 
+:::{.remark}
+Some definitions:
+
+- $A^*$ is the conjugate transpose.
+- $A^t$ is the usual transpose.
+- A matrix is $A^*$ is **adjoint** to $A$ iff $\inner{A\vector x}{\vector y} = \inner{\vector x}{A^* \vector y}$.
+  - $A$ is **self-adjoint** iff $A$ is an adjoint for itself, so $\inner{A\vector x}{\vector y} = \inner{\vector x}{A \vector y}$.
+- $A$ is **symmetric** iff $A = A^t$.
+- $A$ is **Hermitian** iff $A^* = A$.
+
+:::
+
+
 :::{.proposition title="Useful computational trick"}
 A trick for finding characteristic polynomials:
 \[
