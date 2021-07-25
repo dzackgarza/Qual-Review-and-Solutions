@@ -65,6 +65,23 @@ G & H
 
 > Note that if any of these matrix multiplications don't make sense, the results won't be valid!
 
+If $A$ is upper triangular, some entries of $A^k$ can be computed easily:
+
+\[
+A\da\left(\begin{array}{ccc}
+a_1 & & * \\
+& \ddots & \\
+0 & & a_n
+\end{array}\right)
+\implies
+A^k\da\left(\begin{array}{ccc}
+a_1^k & & * \\
+& \ddots & \\
+0 & & a_n^k
+\end{array}\right)
+.\]
+
+
 Traces of products can be commuted: $\trace(AB) = \trace(BA)$, so similar matrices have identical traces since $\trace(PJP\inv) = \trace{PP\inv J} = \trace{J}$.
 
 The coefficients of the characteristic polynomial are elementary symmetric functions in the eigenvalues:
@@ -365,12 +382,10 @@ We can then write
 V^{\lambda_i} 
 &\da \ts{\vector v\in V \st (A-\lambda_i I)^n \vector v = 0 \text{ for some }n } \\
 &= \ts{\vector v\in V \st (A-\lambda_i I)^n \in \Ann(\vector v) } \\
-&= \ts{\vector v\in V \st A-\lambda_i I \in \sqrt{\Ann(\vector v)} } \\
-&= \Union_{\vector v\in V} \sqrt{\Ann(\vector v)}
+&= \ts{\vector v\in V \st A-\lambda_i I \in \sqrt{\Ann(\vector v)} } 
 ,\]
 and the theorem is that $V \cong \bigoplus_i V^{\lambda_i}$.
-
-
+It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V$.
 :::
 
 
