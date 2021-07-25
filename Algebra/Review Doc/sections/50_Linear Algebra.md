@@ -355,10 +355,21 @@ So
 \[
 \Ann(\vector v) \da \ts{ q(x) \in k[x] \st q(x) \actson \vector v = 0} = \ts{q(x) \in k[x] \st q(A)(\vector v) = 0}
 .\]
-Now use that $\vector w$ is an eigenvector for $A$ iff $A-\lambda_i I \in \Ann(\vector w)$, and is a generalized eigenvector iff
+Now use that $\vector w$ is an eigenvector for $A$ with eigenvalue $\lambda_i \iff A-\lambda_i I \in \Ann(\vector w)$, and is a generalized eigenvector iff
 \[
 (A-\lambda_i I)^k\in \Ann(\vector w) &\text{ for some }k \iff A-\lambda_i I \in \sqrt{\Ann(\vector w)}
 .\]
+
+We can then write
+\[
+V^{\lambda_i} 
+&\da \ts{\vector v\in V \st (A-\lambda_i I)^n \vector v = 0 \text{ for some }n } \\
+&= \ts{\vector v\in V \st (A-\lambda_i I)^n \in \Ann(\vector v) } \\
+&= \ts{\vector v\in V \st A-\lambda_i I \in \sqrt{\Ann(\vector v)} } \\
+&= \Union_{\vector v\in V} \sqrt{\Ann(\vector v)}
+,\]
+and the theorem is that $V \cong \bigoplus_i V^{\lambda_i}$.
+
 
 :::
 
