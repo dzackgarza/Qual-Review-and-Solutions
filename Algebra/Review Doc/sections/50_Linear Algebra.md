@@ -16,7 +16,7 @@ Some definitions:
 :::
 
 
-:::{.fact}
+:::{.fact title="Undergrad reminders"}
 \[
 \det M = \prod_{\sigma \in S_n} \eps(\sigma) \prod_{i=1}^n a_{i, \sigma(i)}
 .\]
@@ -32,6 +32,19 @@ a_{31} & a_{32} & a_{33}
 a_{11} a_{22} a_{33}+a_{12} a_{23} a_{31}+a_{13} a_{21} a_{32} \\
 -a_{13} a_{22} a_{31}-a_{12} a_{21} a_{33}-a_{11} a_{23} a_{32}
 \end{gathered}
+.\]
+
+Let $\minor_A(i, j)$ denote $A$ with the $i$th row, $j$th column deleted.
+
+One can expand determinants along rows:
+\[
+\det(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} \det \minor_A(i, j)
+.\]
+
+
+Also useful, a matrix can be inverted by computing the adjugate:
+\[
+A\inv = {1\over \det A} \operatorname{adj}(A) && \adj(A)_{ij} \da (-1)^{i+j} \det \minor_A(j, i)
 .\]
 
 
