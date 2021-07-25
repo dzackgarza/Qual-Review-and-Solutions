@@ -68,7 +68,7 @@ Traces of products can be commuted: $\trace(AB) = \trace(BA)$, so similar matric
 
 The coefficients of the characteristic polynomial are elementary symmetric functions in the eigenvalues:
 \[
-\chi_A(t) = t^n - \qty{\sum_i \lambda_i }t^{n-1} + \qty{\sum_{i<j} \lambda_i \lambda_j }t^{n-2} + \cdots \pm \qty{\prod_i \lambda_i}
+\chi_A(t) = t^n - \qty{\sum_i \lambda_i }t^{n-1} + \qty{\sum_{i < j} \lambda_i \lambda_j }t^{n-2} + \cdots \pm \qty{\prod_i \lambda_i}
 .\]
 
 :::
