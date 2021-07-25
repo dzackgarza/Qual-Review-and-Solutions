@@ -5,11 +5,11 @@
 Some definitions:
 
 - $A^t$ is the usual transpose.
+- $A^{\dagger}$ is the conjugate transpose.
 - A matrix is $A^{\dagger}$ is **adjoint** to $A$ iff $\inner{A\vector x}{\vector y} = \inner{\vector x}{A^{\dagger} \vector y}$.
   - $A$ is **self-adjoint** iff $A$ is an adjoint for itself, so $\inner{A\vector x}{\vector y} = \inner{\vector x}{A \vector y}$.
 - $A$ is **symmetric** iff $A = A^t$.
   - $A$ is **orthogonal** iff $A^tA = AA^t = I$
-- $A^{\dagger}$ is the conjugate transpose.
 - $A$ is **Hermitian** iff $A^{\dagger} = A$.
   - $A$ is **normal** iff $AA^{\dagger} = A^{\dagger} A$.
   - $A$ is **unitary** iff $A^{\dagger}A = AA^{\dagger} = I$.
@@ -656,4 +656,19 @@ J \da
 :::
 
 \todo[inline]{Matrix group definitions.}
+
+
+## Exercises
+
+
+:::{.exercise title="?"}
+Show that a nonzero nilpotent matrix $A$ is not diagonalizable over any field.
+Some useful facts:
+
+- $\spec A = \ts{0}$, since $Ax=\lambda x \implies A^n=\lambda^nx$, so $A^n=0$ forces $\lambda =0$.
+  This forces $\JCF(A)$ to be strictly upper-triangular.
+- $\min_A(x) = x^n$.
+- If $A$ were diagonalizable, $\JCF(A) = 0$.
+
+:::
 
