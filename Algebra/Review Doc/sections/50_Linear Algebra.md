@@ -791,7 +791,7 @@ J \da
 \abs{\GL_n(\FF_p)} = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n - p^{n-1})
 .\]
 
-It suffices to count ordered bases of $\FF^p^n$:
+It suffices to count ordered bases of $\FF_p^n$:
 
 - Choose $\vector v_1$: there are $p$ choices for each coefficient, but leave out the vector $0$, so $p^n-1$ choices.
 - Choose any $\vector v_2 \neq \lambda \vector v_1$, so $p^n-p$ choices.
@@ -840,7 +840,7 @@ Some useful facts:
 
 :::{.exercise title="?"}
 Prove Cayley-Hamilton in the following way.
-Let $V = \spanof\ts{\vector v_1, \cdots, \vector v_n}$ and define the $i$th flag as $\Fil_i V \da \spenof\ts{\vector v_1, \cdots, \vector v_i}$ for all $1\leq i \leq n$, and set $\Fil_0 V \da \ts{0}$.
+Let $V = \spanof\ts{\vector v_1, \cdots, \vector v_n}$ and define the $i$th flag as $\Fil_i V \da \spanof\ts{\vector v_1, \cdots, \vector v_i}$ for all $1\leq i \leq n$, and set $\Fil_0 V \da \ts{0}$.
 Show that if if $A$ is upper triangular, then $A(\Fil_i V) \subseteq \Fil_i V$.
 Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
 \[
@@ -851,4 +851,32 @@ Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
 .\]
 Conclude that $\chi_A(A) = 0$.
 :::
+
+
+
+:::{.exercise title="?"}
+Compute $\JCF(A)$ for 
+\[
+A \da
+\mattt 1 {-1} 0 {-1} 4 {-1} {-4} {13} {-3}
+.\]
+
+
+:::
+
+
+:::{.solution}
+
+- $\det(A) = 0$
+- $\tr(A) = 2$
+- $\tr(\Extpower^2 A) = 1$
+- $\chi_A(t) = t^3 - 2t^2 + t$
+- $e_1 = \tv{1,1,3}$
+- $e_2 = \tv{1,0,-1}$
+  - $e_{2, 1} = \tv{-3,-1, 0}$.
+
+![](figures/2021-07-24_23-15-22.png)
+
+:::
+
 
