@@ -864,7 +864,6 @@ A \da
 
 :::
 
-
 :::{.solution}
 
 - $\det(A) = 0$
@@ -878,5 +877,22 @@ A \da
 ![](figures/2021-07-24_23-15-22.png)
 
 :::
+
+
+:::{.exercise title="?"}
+Determine $\JCF(B)$ for
+\[
+B \da
+\left(\begin{array}{cccc}
+5 & -1 & 0 & 0 \\
+9 & -1 & 0 & 0 \\
+0 & 0 & 7 & -2 \\
+0 & 0 & 12 & -3
+\end{array}\right)
+.\]
+
+
+:::
+
 
 
