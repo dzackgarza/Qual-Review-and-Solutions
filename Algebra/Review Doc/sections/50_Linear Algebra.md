@@ -62,6 +62,9 @@ G & H
 \end{bmatrix}
 = \matt{AE + BG}{AF + BH}{CE + DG}{ CF + DH}
 .\]
+Note that if any of these matrix multiplications don't make sense, the results won't be valid!
+
+Traces of products can be commuted: $\trace(AB) = \trace(BA)$, so similar matrices have identical traces since $\trace(PJP\inv) = \trace{PP\inv J} = \trace{J}$.
 
 :::
 
