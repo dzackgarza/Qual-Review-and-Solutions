@@ -47,6 +47,8 @@ Also useful, a matrix can be inverted by computing the adjugate:
 A\inv = {1\over \det A} \operatorname{adj}(A) && \adj(A)_{ij} \da (-1)^{i+j} \det \minor_A(j, i)
 .\]
 
+The eigenvalues of an upper-triangular matrix are exactly the diagonal entries, and the determinant is their product.
+More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues.
 
 :::
 
