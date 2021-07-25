@@ -50,6 +50,19 @@ A\inv = {1\over \det A} \operatorname{adj}(A) && \adj(A)_{ij} \da (-1)^{i+j} \de
 The eigenvalues of an upper-triangular matrix are exactly the diagonal entries, and the determinant is their product.
 More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues.
 
+Matrices can be block-multiplied when all dimensions are compatible:
+\[
+\begin{bmatrix}
+A & B \\
+C & D 
+\end{bmatrix}
+\begin{bmatrix}
+E & F \\
+G & H 
+\end{bmatrix}
+= \matt{AE + BG}{AF + BH}{CE + DG}{ CF + DH}
+.\]
+
 :::
 
 
