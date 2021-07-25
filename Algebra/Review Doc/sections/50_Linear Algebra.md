@@ -74,7 +74,7 @@ a_1 & & * \\
 0 & & a_n
 \end{array}\right)
 \implies
-A^k\da\left(\begin{array}{ccc}
+A^k = \left(\begin{array}{ccc}
 a_1^k & & * \\
 & \ddots & \\
 0 & & a_n^k
