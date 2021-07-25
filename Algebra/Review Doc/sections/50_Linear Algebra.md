@@ -662,6 +662,11 @@ J \da
 
 
 :::{.exercise title="?"}
+Show that normal matrices are diagonalizable.
+:::
+
+
+:::{.exercise title="?"}
 Show that a nonzero nilpotent matrix $A$ is not diagonalizable over any field.
 Some useful facts:
 
