@@ -337,6 +337,7 @@ E_{\lambda_i} &= \dim(A - \lambda_i I)
   - The **number of Jordan blocks** associated to $\lambda_i$
   - The number of (usual) eigenvector associated to $\lambda_i$, i.e. the dimension of their span.
 
+- $A$ is diagonalizable iff $\dim E_{\lambda_i} = m_i$ for all $i$.
 :::
 
 :::{.lemma title="?"}
