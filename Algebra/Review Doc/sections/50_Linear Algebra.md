@@ -48,7 +48,7 @@ A\inv = {1\over \det A} \operatorname{adj}(A) && \adj(A)_{ij} \da (-1)^{i+j} \de
 .\]
 
 The eigenvalues of an upper-triangular matrix are exactly the diagonal entries, and the determinant is their product.
-More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues.
+More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues, so $\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
 
 Matrices can be block-multiplied when all dimensions are compatible:
 \[
@@ -62,7 +62,8 @@ G & H
 \end{bmatrix}
 = \matt{AE + BG}{AF + BH}{CE + DG}{ CF + DH}
 .\]
-Note that if any of these matrix multiplications don't make sense, the results won't be valid!
+
+> Note that if any of these matrix multiplications don't make sense, the results won't be valid!
 
 Traces of products can be commuted: $\trace(AB) = \trace(BA)$, so similar matrices have identical traces since $\trace(PJP\inv) = \trace{PP\inv J} = \trace{J}$.
 
@@ -72,7 +73,6 @@ The coefficients of the characteristic polynomial are elementary symmetric funct
 .\]
 
 :::
-
 
 :::{.proposition title="Useful computational trick"}
 A trick for finding characteristic polynomials:
@@ -109,11 +109,6 @@ Once you have a root, apply **polynomial long division** to get a smaller proble
 :::
 
 
-:::{.fact}\det(A) = \prod \lambda_i$.
-$\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
-:::
-
-
 :::{.example title="of polynomial long division"}
 Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\pm 8, \pm 4, \pm 2, \pm 1}$.
 Testing $f(2) = 0$ works, and dividing by $x-2$ yields
@@ -127,7 +122,6 @@ f(x) = (x-2)(x^2-4x+4) = (x-2)^3
 
 
 :::
-
 
 
 ## Definitions
@@ -614,17 +608,18 @@ M = \left(\begin{array}{rr}
 
 :::{.example title="?"}
 Non-similar matrices with the same characteristic polynomial
-$$
+\[
 \left(\begin{array}{ll}
-{1}  & {0} \\
-{0} & {1}
+{0}  & {0} \\
+{0} & {0}
 \end{array}\right)
 \text { and }
 \left(\begin{array}{ll}
-{1} & {1} \\
-{0} & {1}
+{0} & {0} \\
+{0} & {0}
 \end{array}\right)
-$$
+\]
+Here $\chi_A(x) = \chi_B(x) = x^2$, but they are not conjugate since their JCFs differ (note that they're already in JCF!)
 :::
 
 :::{.example title="?"}
