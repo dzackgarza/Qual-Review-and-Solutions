@@ -278,8 +278,14 @@ C_p \definedas
 
 ## Jordan Canonical Form
 
+:::{.fact}
+The JCF corresponds to **elementary divisors**.
+:::
 
-:::{.proposition title="JCF Algorithm"}
+\todo[inline]{Make more precise..}
+
+
+:::{.proposition title="JCF Algorithm for generalized eigenvectors"}
 The following algorithm always works for computing $\JCF(A)$:
 
 - Compute and factor the characteristic polynomial as $\chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i}$.
@@ -308,8 +314,6 @@ The following algorithm always works for computing $\JCF(A)$:
 - If there are other eigenvectors $\vector w, \cdots$ for $\lambda_i$, repeating this process yields a Jordan block for each of them.
   Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
 :::
-Corresponds to the **Elementary Divisor Decomposition** of $T$.
-
 
 :::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
 Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
@@ -343,6 +347,12 @@ E_{\lambda_i} &= \dim(A - \lambda_i I)
 :::{.lemma title="?"}
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
+
+
+:::{.remark}
+Writing $\Ann(\vector v)$ as the annihilator of $\vector v$, a generalized eigenvector for the pair $(\lambda_i, \vector v_i)$ is anything in the space $\sqrt{\Ann(\vector v_i)}$.
+:::
+
 
 ## Other Canonical Forms
 
@@ -713,7 +723,6 @@ J \da
 
 ### Counting
 
-
 :::{.proposition title="Size of $\GL_n(\FF_p)$"}
 \[
 \abs{\GL_n(\FF_p)} = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n - p^{n-1})
@@ -752,9 +761,6 @@ Show that
 \[
 \det A = \prod_{i < j} (\lambda_i - \lambda_j)
 .\]
-
-
-
 :::
 
 
@@ -769,8 +775,6 @@ Some useful facts:
 
 :::
 
-
-
 :::{.exercise title="?"}
 Prove Cayley-Hamilton in the following way.
 Let $V = \spanof\ts{\vector v_1, \cdots, \vector v_n}$ and define the $i$th flag as $\Fil_i V \da \spenof\ts{\vector v_1, \cdots, \vector v_i}$ for all $1\leq i \leq n$, and set $\Fil_0 V \da \ts{0}$.
@@ -783,6 +787,5 @@ Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
 \prod_i (A-\lambda_{n-i} I) \Fil_n V &\subseteq \Fil_0 V = \ts{0}
 .\]
 Conclude that $\chi_A(A) = 0$.
-
 :::
 
