@@ -4,12 +4,15 @@
 :::{.remark}
 Some definitions:
 
-- $A^*$ is the conjugate transpose.
 - $A^t$ is the usual transpose.
-- A matrix is $A^*$ is **adjoint** to $A$ iff $\inner{A\vector x}{\vector y} = \inner{\vector x}{A^* \vector y}$.
+- A matrix is $A^{\dagger}$ is **adjoint** to $A$ iff $\inner{A\vector x}{\vector y} = \inner{\vector x}{A^{\dagger} \vector y}$.
   - $A$ is **self-adjoint** iff $A$ is an adjoint for itself, so $\inner{A\vector x}{\vector y} = \inner{\vector x}{A \vector y}$.
 - $A$ is **symmetric** iff $A = A^t$.
-- $A$ is **Hermitian** iff $A^* = A$.
+  - $A$ is **orthogonal** iff $A^tA = AA^t = I$
+- $A^{\dagger}$ is the conjugate transpose.
+- $A$ is **Hermitian** iff $A^{\dagger} = A$.
+  - $A$ is **normal** iff $AA^{\dagger} = A^{\dagger} A$.
+  - $A$ is **unitary** iff $A^{\dagger}A = AA^{\dagger} = I$.
 
 :::
 
@@ -104,7 +107,7 @@ V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \t
 :::
 
 :::{.definition title="Normal Matrix"}
-A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
+A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^{\dagger} A = AA^{\dagger}$ where $A^{\dagger}$ is the conjugate transpose.
 :::
 
 
@@ -424,7 +427,7 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::{.remark}
 *Notation:*
-$A^*$ denotes the conjugate transpose of $A$.
+$A^{\dagger}$ denotes the conjugate transpose of $A$.
 
 :::
 
@@ -436,7 +439,7 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 :::{.theorem title="The Spectral Theorem"}
 \envlist
 
-1. Hermitian (self-adjoint) matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
+1. Hermitian (self-adjoint) matrices (i.e. $A^{\dagger} = A$) are diagonalizable over $\CC$.
 2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
 
 :::
