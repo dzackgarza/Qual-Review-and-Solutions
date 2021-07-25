@@ -736,6 +736,28 @@ Show that normal matrices are diagonalizable.
 
 
 :::{.exercise title="?"}
+Consider the Vandermonde matrix:
+\[
+A \da 
+\left(\begin{array}{ccc}
+1 & \cdots & 1 \\
+\lambda_{1} & \cdots & \lambda_{k} \\
+\vdots & & \vdots \\
+\lambda_{1}^{k-1} & \cdots & \lambda_{k}^{k-1}
+\end{array}\right)
+.\]
+
+Show that
+\[
+\det A = \prod_{i < j} (\lambda_i - \lambda_j)
+.\]
+
+
+
+:::
+
+
+:::{.exercise title="?"}
 Show that a nonzero nilpotent matrix $A$ is not diagonalizable over any field.
 Some useful facts:
 
