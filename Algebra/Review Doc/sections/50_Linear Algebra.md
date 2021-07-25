@@ -399,8 +399,16 @@ It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V
 - Claim: $\sum V^j = V$:
   - Let $\vector v\in V$ be arbitrary, then by Euclid's algorithm write $\sum_i f_i h_i = 1$ since the $h_i$ are coprime.
   - Thus $\sum f_i(A) h_i(A) = I \implies \qty{\sum f_i(A) h_i(A)}(\vector v) = \vector v \implies \vector v \in \sum W^j$
+- Claim: the sum is direct.
+  - It suffices to show $0=\sum w_i$ with $w_i \in W^i$ implies $w_i =0$ for all $i$.
+  - Use that $h_j(w_i) = 0$ for $i\neq j$ since $w_i \in W^i \da \ker(A-\lambda_I I)^{n_i}$.
+  - Write $\vector w_i = \sum f_j(A) h_j(A) \vector w_i$, which collapses to $f_i(A) h_i(A) \vector w_i$.
+  - So $f_i(A) h_i(A) \qty{\sum w_i} = 0 \implies w_i = 0$.
 
 :::
+
+\todo[inline]{Messy indexing.}
+
 
 
 
