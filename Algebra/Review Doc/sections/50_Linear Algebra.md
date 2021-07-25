@@ -428,6 +428,12 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 
 :::
 
+
+:::{.remark}
+In fact, $A$ is symmetric $\iff \spec A$ forms an orthonormal basis.
+:::
+
+
 :::{.proof title="?"}
 \envlist
 
