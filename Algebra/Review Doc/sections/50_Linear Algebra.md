@@ -389,6 +389,21 @@ It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V
 :::
 
 
+:::{.proof title="of generalized eigenspace decomposition"}
+
+- Suppose $\chi_A(x) = \prod (x-\lambda_i)^{n_i}$.
+- Define $V^{j} \da \ker (A-\lambda_i I)^n$ as the generalized eigenspace for each $i$.
+- Fix $j$ and define $h_j(x) = \prod_{i\neq j}(x-\lambda_i)^{n_i}$, the characteristic polynomial with the $\lambda_j$ term deleted.
+- Define $W^j \da \im(h_j(A))$, then the claim is $W^j \subseteq V^j$
+  - This follows because $0 = \chi_A(A) = (A-\lambda_j I)^{n_j} h_j(A)$, so in fact $W^j \subseteq \ker (A - \lambda_j)^{n_j}$.
+- Claim: $\sum V^j = V$:
+  - Let $\vector v\in V$ be arbitrary, then by Euclid's algorithm write $\sum_j f_j h_j = 1$ since the $h_j$ are coprime.
+  - Thus $\sum f_j(A) h_j(A) = I \implies \qty{\sum f_j(A) h_j(A)}(\vector v) = \vector v$
+
+:::
+
+
+
 ## Other Canonical Forms
 
 :::{.proposition title="?"}
