@@ -279,7 +279,7 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
   However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
   Slogan: "Being Galois is not transitive in towers."
 - A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
-:::
+:::n
 
 
 
