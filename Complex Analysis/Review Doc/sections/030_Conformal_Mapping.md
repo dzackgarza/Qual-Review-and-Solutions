@@ -1,7 +1,4 @@
-# Conformal Maps
-
-
-## Linear Fractional Transformations
+# Conformal Maps / Linear Fractional Transformations
 
 :::{.definition title="Conformal Map / Biholomorphism"}
 A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles (so $f$ is orientation-preserving).
@@ -81,6 +78,7 @@ If $\Omega$ is simply connected, nonempty, and not $\CC$, then for every $z_{0}\
 
 Thus any two such sets $\Omega_{1}, \Omega_{2}$ are conformally equivalent.
 :::
+
 
 ## By Type
 
@@ -334,50 +332,18 @@ z &\mapsto \sin(z) \\
 
 
 
-## Schwarz
 
-:::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
-If $f: \DD \to \DD$ is holomorphic with $f(0) = 0$, then
-
-1. $\abs{f(z)} \leq \abs z$ for all $z\in \DD$
-2. $\abs{f'(0)} \leq 1$.
-
-Moreover, if 
-
-- $\abs{f(z_0)} = \abs{z_0}$ for any $z_0\in \DD$, or 
-- $\abs{f'(0)} = 1$, 
-
-then $f$ is a rotation.
-:::
-
-
-:::{.proof title="?"}
-Apply the maximum modulus principle to $f(z)/z$.
-:::
+## Exercises
 
 
 :::{.exercise title="?"}
-Show that $\Aut_\CC(\CC) = \ts{ z \mapsto az+b\st a\in \CC\units, b\in \CC }$.
+Find a conformal map from the upper half-disc to the upper half-plane.
 :::
 
 
-:::{.theorem title="Biholomorphisms of the disc"}
-\[
-\Aut_\CC(\DD) = \ts{ z\mapsto e^{i\theta} \qty{\alpha - z \over 1 - \bar{\alpha} z} }
-.\]
+:::{.solution}
+
+![](figures/2021-07-29_19-26-39.png)
 :::
-
-:::{.proof title="?"}
-Schwarz lemma.
-:::
-
-
-:::{.theorem title="?"}
-\[
-\Aut_\CC(\HH) = \ts{ z \mapsto {az+b \over cz+d} \st a,b,c,d\in \CC, ad-bc=1 } \cong\PSL_2(\RR)
-.\]
-:::
-
-
 
 
