@@ -55,7 +55,15 @@ so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m
 \[
 \del_{\log} f = {-m \over z-z_0} + \del_{\log} g
 ,\]
-  so $z_0$ is a simple pole.
+  so $z_0$ is a simple pole and $\Res_{z=z_0} \del_{\log f} = -m$.
+
+- Now apply the residue theorem, and group residues according to sign:
+\[
+{1\over 2\pi i } \int_{\gamma} \del_{\log }f(z) \dz 
+&= \sum_{P_{\del_{\log} f}} \Res_{z=z_k} \del_{\log} f(z)\\
+&= \sum_{Z_f} \Res_{z=z_k} f(z)
+ - \sum_{P_f} \Res_{z=z_k} f(z)
+.\]
 
 
 :::
