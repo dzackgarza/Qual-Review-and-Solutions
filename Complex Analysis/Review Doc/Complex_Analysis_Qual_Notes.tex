@@ -40,7 +40,6 @@
 \begin{document}
 
 \date{}
-\author{D. Zack Garza}
 \maketitle
 
 
@@ -182,14 +181,38 @@ Exponential forms of cosine and sine, where it's sometimes useful to set
 &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w^{-1})\\
 \sin(z) 
 &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w^{-1})
-\\ \\
+.\end{align*}
+
+Exponential forms of \emph{hyperbolic} cosine and sin:
+\begin{align*}
 \cosh(z) 
 &= \cos(iz) 
 = {1\over 2}\qty{e^z + e^{-z}} \\
 \sinh(z) 
-&= \sin(iz) 
+&= -i \sin(iz) 
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\end{align*}
+
+Some other useful facts about the hyperbolic exponentials:
+
+\begin{itemize}
+\tightlist
+\item
+  They are periodic with period \(2\pi i\).
+\item
+  \({\frac{\partial }{\partial z}\,}\cosh(z) = \sinh(z)\) and
+  \({\frac{\partial }{\partial z}\,}\sinh(z) = \cosh(z)\).
+\item
+  \(\sinh\) is odd and \(\cosh\) is even.
+\item
+  \(\cosh(z + i\pi) = -\cosh(z)\) and \(\sinh(z + i\pi) = -\sinh(z)\).
+\item
+  \(\cosh\) has zeros at
+  \(\left\{{i\pi\qty{2k+1\over 2}}\right\} = \ts{i \qty{\pi/2 + k\pi}\),
+  i.e.~\(\cdots, -\pi/2, \pi/2, 3\pi/2,\cdots\), the half-integers.
+\item
+  \(\sinh\) has zeros at \(\left\{{i\pi k}\right\}\), i.e.~the integers.
+\end{itemize}
 
 \end{fact}
 
@@ -368,8 +391,8 @@ then \(f\) is invertible in a neighborhood \(U \ni a\),
 g'(b) = {1 \over f'(a)}
 .\end{align*}
 For \(F \in C^1({\mathbb{R}}^n, {\mathbb{R}}^n)\) with \(D_f\)
-invertible in a neighborhood of \(a\), so \(\det(J_f)\neq 0\), then
-setting \(b\coloneqq F(a)\),
+invertible in a neighborhood of \(a\), so
+\(\operatorname{det}(J_f)\neq 0\), then setting \(b\coloneqq F(a)\),
 \begin{align*}
 J_{F^{-1}}(q) = \qty{J_F(p)}^{-1}
 .\end{align*}
@@ -2187,8 +2210,8 @@ where \(z\neq \pm i\), and attempt to integrate
 Use a semicircular contour \(\gamma_R\) where \(z = Re^{it}\) and check
 \begin{align*}
 \sup_{z\in \gamma_R} {\left\lvert {f(z)} \right\rvert} 
-= \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
-= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
+&= \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
+&= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
 &= {1\over R^2 - 1}
 .\end{align*}
 
@@ -2708,11 +2731,14 @@ Transformations}\label{linear-fractional-transformations}}
 A map \(f\) is \textbf{conformal} on \(\Omega\) iff \(f\) is
 complex-differentiable, \(f'(z)\neq 0\) for \(z\in \Omega\), and \(f\)
 preserves signed angles (so \(f\) is orientation-preserving). Conformal
-implies holomorphic, and a bijective conformal map has a holomorphic
-inverse. A bijective conformal map \(f:U\to V\) is called a
-\textbf{biholomorphism}, and we say \(U\) and \(V\) are
-\textbf{biholomorphic}. Self-biholomorphisms of a domain \(\Omega\) form
-a group \(\mathop{\mathrm{Aut}}_{\mathbb{C}}(\Omega)\).
+implies holomorphic, and a bijective conformal map has conformal inverse
+automatically.
+
+A bijective conformal map \(f:U\to V\) \textbf{biholomorphism}, and we
+say \(U\) and \(V\) are \textbf{biholomorphic}. Importantly, bijective
+holomorphic maps always have holomorphic inverses. Self-biholomorphisms
+of a domain \(\Omega\) form a group
+\(\mathop{\mathrm{Aut}}_{\mathbb{C}}(\Omega)\).
 
 \end{definition}
 
@@ -2880,7 +2906,7 @@ travels from \(z=-1\) counter-clockwise through \(S^1\) (starting at
 map \({\mathbb{H}}\to {\mathbb{D}}\).
 
 \begin{quote}
-Mnemonic: every \(z\in {\mathbb{H}}\) is closed to \(i\) than \(-i\).
+Mnemonic: every \(z\in {\mathbb{H}}\) is closer to \(i\) than \(-i\).
 \end{quote}
 
 \end{proposition}

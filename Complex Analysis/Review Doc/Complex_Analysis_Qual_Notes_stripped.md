@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 > A great deal of content borrowed from the following: <https://web.stanford.edu/~chriseur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf>
 
 # General Info / Tips / Techniques
@@ -79,14 +91,26 @@ Exponential forms of cosine and sine, where it's sometimes useful to set \( w\co
 &= \frac 1 2 \qty{e^{iz} + e^{-iz}} = {1\over 2}(w+ w^{-1})\\
 \sin(z) 
 &= \frac{1}{2i}\qty{e^{iz} - e^{-iz}} = {1\over 2i}(w-w^{-1})
-\\ \\
+.\]
+
+Exponential forms of *hyperbolic* cosine and sin:
+\[
 \cosh(z) 
 &= \cos(iz) 
 = {1\over 2}\qty{e^z + e^{-z}} \\
 \sinh(z) 
-&= \sin(iz) 
+&= -i \sin(iz) 
 = {1\over 2}\qty{e^z - e^{-z}} 
 .\]
+
+Some other useful facts about the hyperbolic exponentials:
+
+-   They are periodic with period \( 2\pi i \).
+-   \( {\frac{\partial }{\partial z}\,}\cosh(z) = \sinh(z) \) and \( {\frac{\partial }{\partial z}\,}\sinh(z) = \cosh(z) \).
+-   \( \sinh \) is odd and \( \cosh \) is even.
+-   \( \cosh(z + i\pi) = -\cosh(z) \) and \( \sinh(z + i\pi) = -\sinh(z) \).
+-   \( \cosh \) has zeros at \( \left\{{i\pi\qty{2k+1\over 2}}\right\} = \ts{i \qty{\pi/2 + k\pi} \), i.e. \( \cdots, -\pi/2, \pi/2, 3\pi/2,\cdots \), the half-integers.
+-   \( \sinh \) has zeros at \( \left\{{i\pi k}\right\} \), i.e. the integers.
 :::
 
 ::: {.fact}
@@ -212,7 +236,7 @@ For \( f \in C^1({\mathbb{R}}; {\mathbb{R}}) \) with \( f'(a) \neq 0 \), then \(
 \[
 g'(b) = {1 \over f'(a)}
 .\]
-For \( F \in C^1({\mathbb{R}}^n, {\mathbb{R}}^n) \) with \( D_f \) invertible in a neighborhood of \( a \), so \( \det(J_f)\neq 0 \), then setting \( b\coloneqq F(a) \),
+For \( F \in C^1({\mathbb{R}}^n, {\mathbb{R}}^n) \) with \( D_f \) invertible in a neighborhood of \( a \), so \( \operatorname{det}(J_f)\neq 0 \), then setting \( b\coloneqq F(a) \),
 \[
 J_{F^{-1}}(q) = \qty{J_F(p)}^{-1}
 .\]
@@ -1371,8 +1395,8 @@ where \( z\neq \pm i \), and attempt to integrate
 Use a semicircular contour \( \gamma_R \) where \( z = Re^{it} \) and check
 \[
 \sup_{z\in \gamma_R} {\left\lvert {f(z)} \right\rvert} 
-= \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
-= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
+&= \max_{t\in [0, \pi} {1 \over 1 + (Re^{it})^2 } \\
+&= \max_{t\in [0, \pi} {1 \over 1 + R^2e^{2it} } \\
 &= {1\over R^2 - 1}
 .\]
 :::
@@ -1709,7 +1733,9 @@ If \( f \) is nonzero on \( \Omega \), then \( f \) attains a minimum on \( {{\p
 ## Linear Fractional Transformations
 
 ::: {.definition title="Conformal Map / Biholomorphism"}
-A map \( f \) is **conformal** on \( \Omega \) iff \( f \) is complex-differentiable, \( f'(z)\neq 0 \) for \( z\in \Omega \), and \( f \) preserves signed angles (so \( f \) is orientation-preserving). Conformal implies holomorphic, and a bijective conformal map has a holomorphic inverse. A bijective conformal map \( f:U\to V \) is called a **biholomorphism**, and we say \( U \) and \( V \) are **biholomorphic**. Self-biholomorphisms of a domain \( \Omega \) form a group \( \mathop{\mathrm{Aut}}_{\mathbb{C}}(\Omega) \).
+A map \( f \) is **conformal** on \( \Omega \) iff \( f \) is complex-differentiable, \( f'(z)\neq 0 \) for \( z\in \Omega \), and \( f \) preserves signed angles (so \( f \) is orientation-preserving). Conformal implies holomorphic, and a bijective conformal map has conformal inverse automatically.
+
+A bijective conformal map \( f:U\to V \) **biholomorphism**, and we say \( U \) and \( V \) are **biholomorphic**. Importantly, bijective holomorphic maps always have holomorphic inverses. Self-biholomorphisms of a domain \( \Omega \) form a group \( \mathop{\mathrm{Aut}}_{\mathbb{C}}(\Omega) \).
 :::
 
 ::: {.remark}
@@ -1829,7 +1855,7 @@ i \qty{1-w \over 1+w} &\mapsfrom w
 
 **Boundary behavior:** This maps \( {\mathbb{R}}\to {{\partial}}{\mathbb{D}} \), where \( F(\infty) = -1 \), and as \( x\in {\mathbb{R}} \) ranges from \( -\infty\to\infty \), \( F(x) \) travels from \( z=-1 \) counter-clockwise through \( S^1 \) (starting at \( z=-1 \) and moving through the lower half first). So this extends to a map \( {\mathbb{H}}\to {\mathbb{D}} \).
 
-> Mnemonic: every \( z\in {\mathbb{H}} \) is closed to \( i \) than \( -i \).
+> Mnemonic: every \( z\in {\mathbb{H}} \) is closer to \( i \) than \( -i \).
 :::
 
 ::: {.remark}
