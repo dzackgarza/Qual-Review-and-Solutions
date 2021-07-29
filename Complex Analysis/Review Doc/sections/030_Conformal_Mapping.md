@@ -332,7 +332,6 @@ z &\mapsto \sin(z) \\
 
 
 
-
 ## Exercises
 
 
@@ -340,9 +339,7 @@ z &\mapsto \sin(z) \\
 Find a conformal map from the upper half-disc to the upper half-plane.
 :::
 
-
 :::{.solution}
-
 ![](figures/2021-07-29_19-26-39.png)
 :::
 
