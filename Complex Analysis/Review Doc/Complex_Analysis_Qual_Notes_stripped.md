@@ -109,7 +109,7 @@ Some other useful facts about the hyperbolic exponentials:
 -   \( {\frac{\partial }{\partial z}\,}\cosh(z) = \sinh(z) \) and \( {\frac{\partial }{\partial z}\,}\sinh(z) = \cosh(z) \).
 -   \( \sinh \) is odd and \( \cosh \) is even.
 -   \( \cosh(z + i\pi) = -\cosh(z) \) and \( \sinh(z + i\pi) = -\sinh(z) \).
--   \( \cosh \) has zeros at \( \left\{{i\pi\qty{2k+1\over 2}}\right\} = \ts{i \qty{\pi/2 + k\pi} \), i.e. \( \cdots, -\pi/2, \pi/2, 3\pi/2,\cdots \), the half-integers.
+-   \( \cosh \) has zeros at \( \left\{{i\pi\qty{2k+1\over 2}}\right\} = \left\{{i \qty{\pi/2 + k\pi}}\right\} \), i.e. \( \cdots, -\pi/2, \pi/2, 3\pi/2,\cdots \), the half-integers.
 -   \( \sinh \) has zeros at \( \left\{{i\pi k}\right\} \), i.e. the integers.
 :::
 
