@@ -1,5 +1,7 @@
 # Integrals
 
+[See this very detailed note](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
+
 - For integrals that decay faster than $1/z^\alpha, \alpha>1$: semicircular contours.
 
   ![](figures/2021-07-29_18-37-57.png)
@@ -77,11 +79,24 @@ Write $2\cos(z) = z + z\inv$ on $S^1$ to get
 .\]
 :::
 
-
 :::{.solution}
 
 ![](figures/2021-07-29_18-51-17.png)
 :::
+
+
+:::{.exercise title="?"}
+\[
+\int_{1}^{\infty} \frac{d x}{x \sqrt{x^{2}-1}} = {\pi \over 2}
+.\]
+:::
+
+
+:::{.solution}
+
+![](figures/2021-07-29_18-53-35.png)
+:::
+
 
 
 
