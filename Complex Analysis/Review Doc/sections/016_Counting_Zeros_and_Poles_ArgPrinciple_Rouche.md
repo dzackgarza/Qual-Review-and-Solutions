@@ -10,8 +10,26 @@ n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
 
 :::
 
+
+:::{.definition title="The logarithmic derivative"}
+The **logarithmic derivative** is defined as 
+\[
+\del_{\log} f \da {f' \over f}
+.\]
+
+:::
+
+:::{.exercise title="?"}
+Show that $\del_{\log}(fg) = \del_{\log} f + \del_{\log} g$, i.e. 
+\[
+{ (fg)' \over fg} = {f'\over f} + {g' \over g}
+.\]
+:::
+
+
 :::{.theorem title="Argument Principle"}
-For $f$ meromorphic in $\gamma^\circ$ with zeros \( \ts{ z_j } \) and poles \( \ts{ p_k } \) repeated with multiplicity where $\gamma$ does not intersect any zeros or poles, then
+For $f$ meromorphic in $\Omega$ with multisets of zeros \( \ts{ z_j } \) and poles \( \ts{ p_k } \) (so repeated with multiplicity) where $\gamma$ does not intersect any zeros or poles, then
+for $\gamma \da \bd \Omega$,
 \[  
 \Delta_\gamma \arg f(z) \da {1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz = \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) = Z_f - P_f
 ,\]
@@ -31,12 +49,6 @@ Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
 :::
 
 
-:::{.exercise title="?"}
-Show that $\del_{\ln}(fg) = \del_{\ln} f + \del_{\ln} g$, and thus
-\[
-\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
-.\]
-:::
 
 
 
