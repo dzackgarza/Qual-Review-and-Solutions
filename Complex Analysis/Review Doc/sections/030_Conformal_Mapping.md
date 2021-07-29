@@ -38,7 +38,7 @@ T^{-1}(w) = {dw-b \over -cw + a}
 :::{.proposition title="?"}
 Given any three points $z_1, z_2, z_3$, the following Mobius transformation sends them to $1, 0, \infty$ respectively:
 \[
-f(z) \da { (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
+f(z) \da { (z-z_1) (z_2-z_3) \over (z-z_3) (z_2 - z_1)}
 .\]
 Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 
