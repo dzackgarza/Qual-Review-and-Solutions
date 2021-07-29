@@ -10,6 +10,8 @@
 
 - If a trigonometric function is in the numerator, check if $I \approx \Re(\tilde I)$ where $\tilde I$ replaces cosines/sines with $e^{iz}$.
 
+- For rational functions of $\cos, \sin$: set $2\cos(z) = z + z\inv, 2\sin(z) = z - z\inv, \dtheta = {\dz\over iz}$ to reduce to a residue count in $\abs{z} \leq 1$.
+
 :::{.exercise title="?"}
 \[
 \int_\RR {1 \over (1+x)^2} = {\pi \over 2}
@@ -50,7 +52,6 @@ Extend to $\int_\RR$ using that $f$ is even.
 :::
 
 
-
 :::{.exercise title="Trigonometric functions"}
 \[
 \int_{0}^{2 \pi} \frac{d \theta}{1+a^{2}-2 a \cos (\theta)}
@@ -66,6 +67,22 @@ Write $2\cos(z) = z + z\inv$ on $S^1$ to get
 .\]
 
 :::
+
+## Branch Cuts
+
+
+:::{.exercise title="?"}
+\[
+\int_0^\infty {x^{1\over 3} \over 1 + x^2} \dx = {\pi \over \sqrt 3}
+.\]
+:::
+
+
+:::{.solution}
+
+![](figures/2021-07-29_18-51-17.png)
+:::
+
 
 
 
