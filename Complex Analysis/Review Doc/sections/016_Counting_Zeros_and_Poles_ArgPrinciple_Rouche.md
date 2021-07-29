@@ -16,7 +16,7 @@ The **logarithmic derivative** is defined as
 \[
 \del_{\log} f \da {f' \over f}
 .\]
-
+It converts all poles and zeros of $f$ into simple poles of $\del_{\log f}$.
 :::
 
 :::{.exercise title="?"}
@@ -28,16 +28,36 @@ Show that $\del_{\log}(fg) = \del_{\log} f + \del_{\log} g$, i.e.
 
 
 :::{.theorem title="Argument Principle"}
-For $f$ meromorphic in $\Omega$ with multisets of zeros \( \ts{ z_j } \) and poles \( \ts{ p_k } \) (so repeated with multiplicity) where $\gamma$ does not intersect any zeros or poles, then
-for $\gamma \da \bd \Omega$,
+For $f$ meromorphic in $\Omega$ with multisets of zeros \( Z_f \da \ts{ z_j } \) and poles \( P_f\da \ts{ p_k } \) (so repeated with multiplicity) 
+for $\gamma \da \bd \Omega$ not intersect
 \[  
-\Delta_\gamma \arg f(z) \da {1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz = \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) = Z_f - P_f
+\Delta_\gamma \arg f(z) &\da {1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz \\
+&= \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) \\ 
+&= \# Z_f - \# P_f
 ,\]
-where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
+where $\# Z_f$ and $\# P_f$ are the number of zeros and poles respectively, counted with multiplicity.
 :::
 
 :::{.proof title="?"}
 Residue formula applied to $f'\over f$?
+
+- If $z_0$ is a zero of $f$ of order $m$, write $f(z) = (z-z_0)^m g(z)$ with $g(z)$ holomorphic and nonzero on some neighborhood of $z_0$.
+- Compute
+\[
+\del_{\log} f(z)
+&=
+\frac{m\left(z-z_{0}\right)^{m-1} g(z)+\left(z-z_{0}\right)^{m} g^{\prime}(z)}{\left(z-z_{0}\right)^{m} g(z)} \\
+&= {m \over z-z_0} + \del_{\log} g(z)
+,\]
+so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m$.
+
+- If $z_0$ is a pole of $f$ of order $m$, write $f(z) = (z-z_0)^{-m} g(z)$, then
+\[
+\del_{\log} f = {-m \over z-z_0} + \del_{\log} g
+,\]
+  so $z_0$ is a simple pole.
+
+
 :::
 
 ![](figures/2021-06-16_16-42-18.png)
