@@ -38,7 +38,8 @@ T^{-1}(w) = {dw-b \over -cw + a}
 :::{.proposition title="?"}
 Given any three points $z_1, z_2, z_3$, the following Möbius transformation sends them to $1, 0, \infty$ respectively:
 \[
-T(z) \da { (z-z_1) (z_2-z_3) \over (z-z_3) (z_2 - z_1)}
+T(z) 
+&\da { (z-z_1) (z_2-z_3) \over (z-z_3) (z_2 - z_1)}
 \\
 z_1 & \mapsto 0 \\
 z_2 & \mapsto 1 \\
