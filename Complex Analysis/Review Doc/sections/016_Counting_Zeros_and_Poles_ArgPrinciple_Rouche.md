@@ -76,6 +76,16 @@ With the same setup as above,
 :::
 
 
+:::{.proof title="?"}
+Make the change of variables $w = f(z)$, then $z=\gamma(t) \mapsto w = (f\circ \gamma)(t)$ and $\dw = f'(z) \dz$, so
+\[
+\int_{\gamma} \del_{\log} f(z) \dz = \int_{f\circ \gamma} {1\over w} \dw
+.\]
+
+
+:::
+
+
 :::{.remark}
 This is useful in numerical computation: if you can compute this integral within an error $E < \pi$ where you know it doesn't contain a pole, you can determine if the contour contains a zero.
 Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
