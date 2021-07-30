@@ -78,7 +78,6 @@ If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\these
 Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
 :::
 
-
 ## Series and Sequences
 
 :::{.remark}
@@ -134,6 +133,18 @@ Recall how to carry out polynomial long division:
 - For any factors $g(x)$ of multiplicity $k$, include terms $A_1/g(x), A_2/g(x)^2, \cdots, A_k / g(x)^k$.
 - For irreducible quadratic factors $h_i(x)$, include terms of the form ${Ax+B \over h_i(x)}$.
 :::
+
+## Misc
+
+
+:::{.definition title="Laplace Transform"}
+\[
+\mcl(f, \xi) \da \int_\RR e^{-\xi x} f(x) \dx
+.\]
+
+- $e^{at} \mapstofrom (s-a)\inv$.
+:::
+
 
 ## Exercises
 
