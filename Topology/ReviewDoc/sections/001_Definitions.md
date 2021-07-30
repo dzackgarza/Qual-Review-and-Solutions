@@ -51,7 +51,7 @@ Equivalently, $X$ contains no proper nonempty clopen sets.
 
 Note that there is an additional condition for a subspace $Y\subset X$ to be connected: 
 \[
-\cl_{Y}(A) \intersect V = A \intersect \cl_{Y}(B) = \emptyset
+\cl_{Y}(A) \intersect B = A \intersect \cl_{Y}(B) = \emptyset
 .\]
 :::
 
