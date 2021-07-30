@@ -75,7 +75,6 @@ With the same setup as above,
 
 :::
 
-
 :::{.proof title="?"}
 Make the change of variables $w = f(z)$, then $z=\gamma(t) \mapsto w = (f\circ \gamma)(t)$ and $\dw = f'(z) \dz$, so
 \[
@@ -87,18 +86,17 @@ Make the change of variables $w = f(z)$, then $z=\gamma(t) \mapsto w = (f\circ \
 :::
 
 
-:::{.remark}
-This is useful in numerical computation: if you can compute this integral within an error $E < \pi$ where you know it doesn't contain a pole, you can determine if the contour contains a zero.
-Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
+:::{.example title="Using the index version of the argument principle"}
+Let $f(z) = z^2 + z = z(z+1)$.
+
+- $\gamma_1 \da \ts{\abs z = 2}$ contains 2 zeros and 0 poles, so $f\circ \gamma$ winds twice around zero counterclockwise.
+- $\gamma_2 \da \ts{\abs z = {1\over 2}}$ contains 1 zero and 0 poles, so $f\circ \gamma$ winds once.
+
 :::
 
-
-
-
-
-
 ## Rouché 
-:::{.corollary title="Rouché's Theorem" ref="Rouche"}
+
+:::{.theorem title="Rouché's Theorem" ref="Rouche"}
 If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
 
 Alternatively:
