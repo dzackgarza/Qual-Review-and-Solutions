@@ -12,7 +12,7 @@
 
 - $\deg\id_{S^n} = 1$
 
-- $\text{deg} (f\circ g) = \degf \cdot \degg$
+- $\text{deg} (f\circ g) = \deg f \cdot \deg g$
 
 - $\deg(H_{x_i}) = -1$ for $H_{x_i}$ any rotation about the hyperplane $x_i = 0$, i.e. 
 \[
