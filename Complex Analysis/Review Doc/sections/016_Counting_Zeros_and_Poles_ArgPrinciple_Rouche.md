@@ -69,7 +69,7 @@ so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m
 With the same setup as above, 
 \[
 {1\over 2\pi i} \int_\gamma \del_{\log} f(z) \dz
-&= \Ind_{z=0}(f\circ \gamma)
+&= \Ind_{w=0}(f\circ \gamma)(w)
 .\]
 
 
@@ -79,7 +79,8 @@ With the same setup as above,
 :::{.proof title="?"}
 Make the change of variables $w = f(z)$, then $z=\gamma(t) \mapsto w = (f\circ \gamma)(t)$ and $\dw = f'(z) \dz$, so
 \[
-\int_{\gamma} \del_{\log} f(z) \dz = \int_{f\circ \gamma} {1\over w} \dw
+{1\over 2\pi i }\int_{\gamma} \del_{\log} f(z) \dz 
+= {1\over 2\pi i} \int_{f\circ \gamma} {1\over w} \dw \da \Ind_{w=0} (f\circ \gamma)(w)
 .\]
 
 
