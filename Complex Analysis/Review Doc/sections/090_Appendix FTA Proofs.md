@@ -57,10 +57,13 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - Integrate term-by-term to get $N(0) = n$.
 :::
 
+
 ### Rouche's Theorem
 
 :::{.proof title="using Rouche's theorem"}
-\envlist
+
+![](figures/2021-07-29_20-41-18.png)
+![](figures/2021-07-29_20-41-29.png)
 
 - Let $P(z) = a_nz^n + \cdots + a_0$
 - Set $f(z) = a_n z^n$ and $g(z) = P(z) - f(z) = a_{n-1}z^{n-1} + \cdots + a_0$, so $f+g = P$.

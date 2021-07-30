@@ -111,13 +111,34 @@ In particular, if $f, g$ are holomorphic, they have the same number of zeros in 
 
 :::
 
-
 :::{.slogan}
 The number of zeros/poles are determined by a dominating function.
 :::
 
-
 \todo[inline]{Prove}
+
+
+:::{.exercise title="?"}
+Show that $h(z) =z^5 + 3z + 1$ has 5 zeros in $\abs z \leq 2$.
+:::
+
+
+:::{.exercise title="?"}
+Show that $h(z) = z + 3 + 2e^z$ has one root in $\ts{ \Re(z) \leq 0}$.
+:::
+
+
+:::{.solution}
+Use the following contour:
+
+
+![](figures/2021-07-29_20-39-31.png)
+
+Take $g(z) \da 2e^z < f(z) \da f(z) \da z+3$.
+:::
+
+
+
 
 :::{.corollary title="Open Mapping"}
 Any holomorphic non-constant map is an open map.
