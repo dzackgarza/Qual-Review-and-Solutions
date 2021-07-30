@@ -185,3 +185,5 @@ Useful trick for expanding square roots:
 
 :::
 
+\todo[inline]{Add series tricks.}
+
