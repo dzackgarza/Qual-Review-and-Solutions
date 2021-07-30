@@ -27,13 +27,12 @@ For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, 
 
 :::
 
-:::{.theorem title="Argument Principle"}
+:::{.theorem title="Argument Principle, Zeros/Poles Version"}
 For $f$ meromorphic in $\Omega$ with multisets of zeros \( Z_f \da \ts{ z_j } \) and poles \( P_f\da \ts{ p_k } \) (so repeated with multiplicity) 
 for $\gamma \da \bd \Omega$ not intersect
 \[  
-{1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz 
-&= \# Z_f - \# P_f \\
-&= \Ind_{z=0}(f\circ \gamma)
+{1\over 2\pi i} \int_\gamma \del_{\log} f(z) \dz
+&= \# Z_f - \# P_f
 ,\]
 where $\# Z_f$ and $\# P_f$ are the number of zeros and poles respectively, counted with multiplicity.
 :::
@@ -64,10 +63,21 @@ so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m
 &= \sum_{z_k \in Z_f} \Res_{z=z_k} f(z) - \sum_{z_j \in P_f} \Res_{z=z_j} f(z)
 .\]
 
+![](figures/2021-06-16_16-42-18.png)
 
 :::
 
-![](figures/2021-06-16_16-42-18.png)
+
+
+:::{.theorem title="Argument Principle, Index Version"}
+With the same setup as above, 
+\[
+{1\over 2\pi i} \int_\gamma \del_{\log} f(z) \dz
+&= \Ind_{z=0}(f\circ \gamma)
+.\]
+
+
+:::
 
 
 :::{.remark}
