@@ -8,6 +8,7 @@
 \newcommand\compact[0]{\operatorname{cpt}}
 \newcommand\hyp[0]{{\operatorname{hyp}}}
 \newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
 \newcommand\kbar{ { \bar{k} } }
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
@@ -238,17 +239,18 @@
 \newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\dlog}[0]{\operatorname{dLog}}
-\newcommand{\dmu}{\,d\mu}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
 \newcommand{\dr}{\,dr}
 \newcommand{\ds}{\,ds}
 \newcommand{\dtheta}{\,d\theta}
 \newcommand{\dt}{\,dt}
-\newcommand{\dual}[0]{ {}^{ \vee }}
 \newcommand{\du}{\,du}
 \newcommand{\dw}{\,dw}
 \newcommand{\dxi}{\,d\xi}
 \newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
 \newcommand{\dy}{\,dy}
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\dzeta}{\,d\zeta}
@@ -976,7 +978,12 @@ The version for holomorphic functions: if $f\in \Hol(\CC; \CC)$ with $f'(p)\neq 
 :::
 
 :::{.theorem title="Green's Theorem"}
-If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
+If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then 
+$$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, \dA.$$
+In vector form,
+\[
+\int_\gamma F\cdot \dr = \iint_R \curl F \dA
+.\]
 :::
 
 ## Convergence
@@ -999,6 +1006,18 @@ If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\these
 Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
 :::
 
+## Integrals
+
+:::{.remark}
+Some basic facts needed for line integrals in the plane:
+
+- $\grad f = \tv{ \dd{f}{x}, \dd{f}{y} }$.
+  - If $F = \grad f$ for some $f$, $F$ is a vector field.
+- Given $f(x, y)$ and $\gamma(t)$, the chain rule yields $\dd{}{t} (f\circ \gamma)(t) = \inner{ \grad f\circ \gamma)(t)} {\gamma'(t)}$.
+- For $F(x, y) = \tv{M(x, y), N(x, y)}$, $\curl F = \dd{N}{x} - \dd{M}{y}$ and $\div F = \dd{M}{x} + \dd{N}{y}$.
+- $\int_\gamma F\cdot \dr = \int_a^b F(\gamma(t))\cdot \gamma'(t) \dt$.
+
+:::
 
 ## Series and Sequences
 
@@ -1055,6 +1074,10 @@ Recall how to carry out polynomial long division:
 - For any factors $g(x)$ of multiplicity $k$, include terms $A_1/g(x), A_2/g(x)^2, \cdots, A_k / g(x)^k$.
 - For irreducible quadratic factors $h_i(x)$, include terms of the form ${Ax+B \over h_i(x)}$.
 :::
+
+
+
+
 
 ## Exercises
 
@@ -2165,6 +2188,192 @@ A singularity of a holomorphic function is removable if and only if the function
 :::
 
 
+# Counting Zeros and Poles
+
+## Argument Principle
+
+
+
+:::{.definition title="The logarithmic derivative"}
+The **logarithmic derivative** is defined as 
+\[
+\del_{\log} f \da {f' \over f}
+.\]
+It converts all poles and zeros of $f$ into simple poles of $\del_{\log f}$.
+:::
+
+:::{.exercise title="?"}
+Show that $\del_{\log}(fg) = \del_{\log} f + \del_{\log} g$, i.e. 
+\[
+{ (fg)' \over fg} = {f'\over f} + {g' \over g}
+.\]
+:::
+
+:::{.definition title="Winding Number"}
+For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** (or the **index**) is defined as
+\[
+\Ind_{z=z_0}(\gamma) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+.\]
+
+:::
+
+:::{.theorem title="Argument Principle, Zeros/Poles Version"}
+For $f$ meromorphic in $\Omega$ with multisets of zeros \( Z_f \da \ts{ z_j } \) and poles \( P_f\da \ts{ p_k } \) (so repeated with multiplicity) 
+for $\gamma \da \bd \Omega$ not intersect
+\[  
+{1\over 2\pi i} \int_\gamma \del_{\log} f(z) \dz
+&= \# Z_f - \# P_f
+,\]
+where $\# Z_f$ and $\# P_f$ are the number of zeros and poles respectively, counted with multiplicity.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- If $z_0$ is a zero of $f$ of order $m$, write $f(z) = (z-z_0)^m g(z)$ with $g(z)$ holomorphic and nonzero on some neighborhood of $z_0$.
+- Compute
+\[
+\del_{\log} f(z)
+&=
+\frac{m\left(z-z_{0}\right)^{m-1} g(z)+\left(z-z_{0}\right)^{m} g^{\prime}(z)}{\left(z-z_{0}\right)^{m} g(z)} \\
+&= {m \over z-z_0} + \del_{\log} g(z)
+,\]
+so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m$.
+
+- If $z_0$ is a pole of $f$ of order $m$, write $f(z) = (z-z_0)^{-m} g(z)$, then
+\[
+\del_{\log} f = {-m \over z-z_0} + \del_{\log} g
+,\]
+  so $z_0$ is a simple pole and $\Res_{z=z_0} \del_{\log f} = -m$.
+
+- Now apply the residue theorem, and group residues according to sign:
+\[
+{1\over 2\pi i } \int_{\gamma} \del_{\log }f(z) \dz 
+&= \sum_{z_i \in P_{\del_{\log} f}} \Res_{z=z_i} \del_{\log} f(z)\\
+&= \sum_{z_k \in Z_f} \Res_{z=z_k} f(z) - \sum_{z_j \in P_f} \Res_{z=z_j} f(z)
+.\]
+
+:::
+
+:::{.theorem title="Argument Principle, Index Version"}
+With the same setup as above, 
+\[
+{1\over 2\pi i} \int_\gamma \del_{\log} f(z) \dz
+&= \Ind_{w=0}(f\circ \gamma)(w)
+.\]
+
+
+:::
+
+:::{.proof title="?"}
+Make the change of variables $w = f(z)$, then $z=\gamma(t) \mapsto w = (f\circ \gamma)(t)$ and $\dw = f'(z) \dz$, so
+\[
+{1\over 2\pi i }\int_{\gamma} \del_{\log} f(z) \dz 
+= {1\over 2\pi i} \int_{f\circ \gamma} {1\over w} \dw \da \Ind_{w=0} (f\circ \gamma)(w)
+.\]
+
+
+:::
+
+
+:::{.example title="Using the index version of the argument principle"}
+Let $f(z) = z^2 + z = z(z+1)$.
+
+- $\gamma_1 \da \ts{\abs z = 2}$ contains 2 zeros and 0 poles, so $f\circ \gamma$ winds twice around zero counterclockwise.
+- $\gamma_2 \da \ts{\abs z = {1\over 2}}$ contains 1 zero and 0 poles, so $f\circ \gamma$ winds once.
+
+:::
+
+## Rouché 
+
+:::{.theorem title="Rouché's Theorem" ref="Rouche"}
+If
+
+- $f, g$ are meromorphic on $\Omega$
+- $\gamma \subset \Omega$ is a toy contour winding about each zero/pole of $f, g$ exactly once,
+- $\abs{g} < \abs{f}$ on $\gamma$
+
+then
+\[
+\Ind_{z=0}(f\circ \gamma)(z) = \Ind_{z=0}((f+g)\circ \gamma)(z) \implies Z_f - P_f = Z_{f+g} - P_{f+g}
+.\]
+In particular, if $f, g$ are holomorphic, they have the same number of zeros in $\Omega$.
+
+:::
+
+:::{.slogan}
+The number of zeros/poles are determined by a dominating function.
+:::
+
+\todo[inline]{Prove}
+
+
+:::{.exercise title="?"}
+Show that $h(z) =z^5 + 3z + 1$ has 5 zeros in $\abs z \leq 2$.
+:::
+
+
+:::{.exercise title="?"}
+Show that $h(z) = z + 3 + 2e^z$ has one root in $\ts{ \Re(z) \leq 0}$.
+:::
+
+
+:::{.solution}
+Use the following contour:
+
+
+![](figures/2021-07-29_20-39-31.png)
+
+Take $g(z) \da 2e^z < f(z) \da f(z) \da z+3$.
+:::
+
+
+
+
+:::{.corollary title="Open Mapping"}
+Any holomorphic non-constant map is an open map.
+:::
+
+\todo[inline]{Prove}
+
+:::{.corollary title="Maximum Modulus" ref="MaximumModulus"}
+If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
+If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
+Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
+:::
+
+\todo[inline]{Prove}
+
+:::{.corollary title="?"}
+If $f$ is nonzero on $\Omega$, then $f$ attains a minimum on $\bd \Omega$.
+This follows from applying the MMP to $1/f$.
+:::
+
+## Counting Zeros 
+
+:::{.example}
+\envlist
+
+- Take $P(z) = z^4 + 6z + 3$.
+- On $\abs{z} < 2$:
+  - Set $f(z) = z^4$ and $g(z) = 6z + 3$, then $\abs{g(z)} \leq 6\abs{z} + 3 = 15 < 16= \abs{f(z)}$.
+  - So $P$ has 4 zeros here.
+- On $\abs{z} < 1$:
+  - Set $f(z) = 6z$ and $g(z) = z^4 + 3$.
+  - Check $\abs{g(z)} \leq \abs{z}^4 + 3 = 4 < 6 = \abs{f(z)}$.
+  - So $P$ has 1 zero here.
+:::
+
+:::{.example}
+\envlist 
+
+- Claim: the equation $\alpha z e^z = 1$ where $\abs{\alpha} > e$ has exactly one solution in $\DD$.
+- Set $f(z) = \alpha z$ and $g(z) = e^{-z}$.
+- Estimate at $\abs{z} =1$ we have $\abs{g} =\abs{e^{-z}} = e^{-\Re(z)} \leq e^1 < \abs{\alpha} = \abs{f(z)}$
+- $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
+:::
+
+
 # Residues
 
 ## Basics
@@ -2482,109 +2691,111 @@ I = {1\over 2i} \int_\RR {e^{iz} - 1 \over z } \dz
 ![image_2021-05-17-13-33-55](figures/image_2021-05-17-13-33-55.png)
 
 
-# Counting Zeros and Poles
+# Integrals
 
-## Argument Principle
+[See this very detailed note](https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf).
 
-:::{.definition title="Winding Number"}
-For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
+- For integrals that decay faster than $1/z^\alpha, \alpha>1$: semicircular contours.
+
+  ![](figures/2021-07-29_18-37-57.png)
+
+-  For integrals that decay like $1/z$: rectangular contours.
+
+  ![](figures/2021-07-29_18-38-24.png)
+
+- If a trigonometric function is in the numerator, check if $I \approx \Re(\tilde I)$ where $\tilde I$ replaces cosines/sines with $e^{iz}$.
+
+- For rational functions of $\cos, \sin$: set $2\cos(z) = z + z\inv, 2\sin(z) = z - z\inv, \dtheta = {\dz\over iz}$ to reduce to a residue count in $\abs{z} \leq 1$.
+
+:::{.exercise title="?"}
 \[
-n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+\int_\RR {1 \over (1+x)^2} = {\pi \over 2}
+.\]
+
+Use that $f(z) \sim 1/z^4$.
+:::
+
+:::{.solution}
+
+![](figures/2021-07-29_18-40-40.png)
+:::
+
+:::{.exercise title="?"}
+\[
+\int_\RR {1 \over x^4 + 1} = {\pi \sqrt{2} \over 2}
 .\]
 
 :::
 
-:::{.theorem title="Argument Principle"}
-For $f$ meromorphic in $\gamma^\circ$ with zeros \( \ts{ z_j } \) and poles \( \ts{ p_k } \) repeated with multiplicity where $\gamma$ does not intersect any zeros or poles, then
-\[  
-\Delta_\gamma \arg f(z) \da {1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz = \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) = Z_f - P_f
-,\]
-where $Z_f$ and $P_f$ are the number of zeros and poles respectively enclosed by $\gamma$, counted with multiplicity.
-:::
+:::{.solution}
 
-:::{.proof title="?"}
-Residue formula applied to $f'\over f$?
-:::
-
-![](figures/2021-06-16_16-42-18.png)
-
-
-:::{.remark}
-This is useful in numerical computation: if you can compute this integral within an error $E < \pi$ where you know it doesn't contain a pole, you can determine if the contour contains a zero.
-Canonical example: integrals in rectangles around $\Re(z) = 1/2$ for $\zeta(s)$.
+![](figures/2021-07-29_18-41-05.png)
 :::
 
 
 :::{.exercise title="?"}
-Show that $\del_{\ln}(fg) = \del_{\ln} f + \del_{\ln} g$, and thus
 \[
-\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
+\int_{0}^{\infty} \frac{\cos (x)}{x^{2}+b^{2}} d x=\frac{\pi \mathrm{e}^{-b}}{2 b} .
 .\]
 :::
 
 
+:::{.solution}
+Extend to $\int_\RR$ using that $f$ is even.
 
-
-## Rouché 
-:::{.corollary title="Rouché's Theorem" ref="Rouche"}
-If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
-
-Alternatively:
-
-Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
-:::
-
-\todo[inline]{Prove}
-
-:::{.corollary title="Open Mapping"}
-Any holomorphic non-constant map is an open map.
-:::
-
-\todo[inline]{Prove}
-
-:::{.corollary title="Maximum Modulus" ref="MaximumModulus"}
-If $f$ is holomorphic and nonconstant on an open connected region $\Omega$, then $\abs{f}$ can not attain a maximum on $\Omega$.
-If $\Omega$ is bounded and $f$ is continuous on $\bar \Omega$, then $\max_{\bar \Omega} \abs{f}$ occurs on $\bd \Omega$.
-Conversely, if $f$ attains a local supremum at $z_0 \in \Omega$, then $f$ is constant on $\Omega$.
-:::
-
-\todo[inline]{Prove}
-
-:::{.corollary title="?"}
-If $f$ is nonzero on $\Omega$, then $f$ attains a minimum on $\bd \Omega$.
-This follows from applying the MMP to $1/f$.
-:::
-
-## Counting Zeros 
-
-:::{.example}
-\envlist
-
-- Take $P(z) = z^4 + 6z + 3$.
-- On $\abs{z} < 2$:
-  - Set $f(z) = z^4$ and $g(z) = 6z + 3$, then $\abs{g(z)} \leq 6\abs{z} + 3 = 15 < 16= \abs{f(z)}$.
-  - So $P$ has 4 zeros here.
-- On $\abs{z} < 1$:
-  - Set $f(z) = 6z$ and $g(z) = z^4 + 3$.
-  - Check $\abs{g(z)} \leq \abs{z}^4 + 3 = 4 < 6 = \abs{f(z)}$.
-  - So $P$ has 1 zero here.
-:::
-
-:::{.example}
-\envlist 
-
-- Claim: the equation $\alpha z e^z = 1$ where $\abs{\alpha} > e$ has exactly one solution in $\DD$.
-- Set $f(z) = \alpha z$ and $g(z) = e^{-z}$.
-- Estimate at $\abs{z} =1$ we have $\abs{g} =\abs{e^{-z}} = e^{-\Re(z)} \leq e^1 < \abs{\alpha} = \abs{f(z)}$
-- $f$ has one zero at $z_0 = 0$, thus so does $f+g$.
+![](figures/2021-07-29_18-42-38.png)
 :::
 
 
-# Conformal Maps
+:::{.exercise title="Trigonometric functions"}
+\[
+\int_{0}^{2 \pi} \frac{d \theta}{1+a^{2}-2 a \cos (\theta)}
+= \begin{cases}\frac{2 \pi}{a^{2}-1} & \text { if }|a|>1 \\ \frac{2 \pi}{1-a^{2}} & \text { if }|a|<1\end{cases}
+.\]
+:::
 
 
-## Linear Fractional Transformations
+:::{.solution}
+Write $2\cos(z) = z + z\inv$ on $S^1$ to get
+\[
+=\int_{|z|=1} \frac{1}{i\left(\left(1+a^{2}\right) z-a\left(z^{2}+1\right)\right)} d z
+.\]
+
+:::
+
+## Branch Cuts
+
+
+:::{.exercise title="?"}
+\[
+\int_0^\infty {x^{1\over 3} \over 1 + x^2} \dx = {\pi \over \sqrt 3}
+.\]
+:::
+
+:::{.solution}
+
+![](figures/2021-07-29_18-51-17.png)
+:::
+
+
+:::{.exercise title="?"}
+\[
+\int_{1}^{\infty} \frac{d x}{x \sqrt{x^{2}-1}} = {\pi \over 2}
+.\]
+:::
+
+
+:::{.solution}
+
+![](figures/2021-07-29_18-53-35.png)
+:::
+
+
+
+
+
+
+# Conformal Maps / Linear Fractional Transformations
 
 :::{.definition title="Conformal Map / Biholomorphism"}
 A map $f$ is **conformal** on $\Omega$ iff $f$ is complex-differentiable, $f'(z)\neq 0$ for $z\in \Omega$, and $f$ preserves signed angles (so $f$ is orientation-preserving).
@@ -2618,17 +2829,27 @@ T^{-1}(w) = {dw-b \over -cw + a}
 .\]
 :::
 
-
-
 :::{.proposition title="?"}
-Given any three points $z_1, z_2, z_3$, the following Mobius transformation sends them to $1, 0, \infty$ respectively:
+Given any three points $z_1, z_2, z_3$, the following Möbius transformation sends them to $1, 0, \infty$ respectively:
 \[
-f(z) \da { (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
+T(z) 
+&\da { (z-z_1) (z_2-z_3) \over (z-z_3) (z_2 - z_1)}
+\\
+z_1 & \mapsto 0 \\
+z_2 & \mapsto 1 \\
+z_3 & \mapsto \infty
 .\]
-Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
+Such a map is sometimes denoted $(z; z_1, z_2, z_3)$.
+One can use this to produce a map sending any three points to any other three points:
+\[
+T(z) \da 
+(w; w_1, w_2, w_3)\inv
+\circ
+(z; z_1,z_2, z_3)
+.\]
+
 
 :::
-
 
 :::{.example title="?"}
 \envlist
@@ -2641,7 +2862,6 @@ Such a map is sometimes denoted $(z, z_1, z_2, z_3)$.
 :::{.theorem title="Cayley Transform"}
 The fractional linear transformation given by $F(z) = {i - z \over i + z}$ maps $\DD\to \HH$ with inverse $G(w) = i {1-w \over 1 + w}$.
 :::
-
 
 :::{.theorem title="Characterization of conformal maps"}
 Conformal maps $\DD\to\DD$ have the form
@@ -2703,7 +2923,11 @@ i \qty{1-w \over 1+w} &\mapsfrom w
 .\]
 
 **Boundary behavior:**
-This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
+
+- This maps $\RR\to \bd \DD$, where $F(\infty) = -1$, and as $x\in \RR$ ranges from $-\infty\to\infty$, $F(x)$ travels from $z=-1$ counter-clockwise through $S^1$ (starting at $z=-1$ and moving through the lower half first).
+
+![](figures/2021-07-29_19-02-54.png)
+
 So this extends to a map $\HH\to \DD$.
 
 > Mnemonic: every $z\in \HH$ is closer to $i$ than $-i$.
@@ -2905,6 +3129,21 @@ z &\mapsto \sin(z) \\
 
 
 
+## Exercises
+
+
+:::{.exercise title="?"}
+Find a conformal map from the upper half-disc to the upper half-plane.
+:::
+
+:::{.solution}
+![](figures/2021-07-29_19-26-39.png)
+:::
+
+
+
+# Schwarz Reflection
+
 ## Schwarz
 
 :::{.theorem title="Schwarz Lemma" ref="SchwarzzLemma"}
@@ -2950,10 +3189,6 @@ Schwarz lemma.
 :::
 
 
-
-
-
-# Schwarz Reflection
 
 \todo[inline]{?}
 
@@ -3042,10 +3277,13 @@ N(0) = {1\over 2\pi i} \oint_{\abs{\xi} = R} g(\xi) \,d\xi
 - Integrate term-by-term to get $N(0) = n$.
 :::
 
+
 ### Rouche's Theorem
 
 :::{.proof title="using Rouche's theorem"}
-\envlist
+
+![](figures/2021-07-29_20-41-18.png)
+![](figures/2021-07-29_20-41-29.png)
 
 - Let $P(z) = a_nz^n + \cdots + a_0$
 - Set $f(z) = a_n z^n$ and $g(z) = P(z) - f(z) = a_{n-1}z^{n-1} + \cdots + a_0$, so $f+g = P$.
@@ -3138,8 +3376,48 @@ Since $p$ is nonconstant, by the lemma $p$ is surjective, so there exists some $
 
 # Appendix
 
-## Misc Basic Algebra
 
+:::{.definition title="Gamma function"}
+\[
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t} \dt
+.\]
+
+
+:::
+
+
+:::{.remark}
+Some interesting properties of $\Gamma$:
+$\Gamma(z+1) = z\Gamma(z)$ and has simple poles at $z=0,-1,-2,\cdots$ with residues $\Res_{z=-m} \Gamma(z) = (-1)^m/m!$.
+There is also a factorization
+\[
+\Gamma(z) = {1 \over ze^{\gamma z} \prod_{n=1}^\infty \qty{1 + {z\over n}}e^{-z\over n} }
+\]
+where $\gamma \da \lim_{N\to\infty } \sum_{n=1^N} {1\over n} - \log(N)$
+
+\[
+\Gamma(z) \Gamma(1-z) = {\pi \over \sin(\pi z)}
+,\]
+which yields a product factorization for $\sin(\pi z)$.
+
+$\mcl(t^{z-1}, s=1) = \Gamma(z)$ and $\mcl(t^n, s=1) = \Gamma(n+1)$.
+
+
+:::
+
+
+
+:::{.theorem title="Uniformization"}
+Every Riemann surface $S$ is the quotient of a free proper holomorphic action of a group $G$ on the universal cover $\tilde S$ of $S$, so $S\cong \tilde S/G$ is a biholomorphism.
+Moreover, $\tilde S$ is biholomorphic to either 
+
+- $\CP^1$
+- $\CC$
+- $\DD$
+
+:::
+
+## Misc Basic Algebra
 
 :::{.fact title="Standard forms of conic sections"}
 \envlist
@@ -3170,7 +3448,6 @@ x^2 + bx = (x + s)^2 - s^2 \quad\text{where} s = \frac{b}{2}
 The sum of the interior angles of an $n\dash$gon is $(n-2)\pi$, where each angle is $\frac{n-2}{n}\pi$.
 :::
 
-
 :::{.definition title="The Dirichlet Problem"}
 Given a bounded piecewise continuous function $u:S^1\to \RR$, is there a unique extension to a continuous harmonic function $\tilde u: \DD\to \RR$?
 
@@ -3196,30 +3473,6 @@ T(x ,y) = e^{-y} \sin(x) = \Re(-ie^{iz}) = \Im(e^{iz})
 .\]
 :::
 
-:::{.definition title="Logarithmic Derivative"}
-The **logarithmic derivative** of $f$ is $(\ln f)' = f'/f$.
-:::
-
-:::{.remark}
-Why this is useful: deriving the argument principle.
-If $f$ has a pole of order $n$ at $z_0$, then write $f(z) = (z-z_0)^{-n} g(z)$ with $g$ analytic in a neighborhood of $z_0$.
-Then a direct computation of the derivatives will show
-\[
-(\ln f)' \da {f'(z) \over f(z)} = -{n\over z-z_0} + {g'(z) \over g(z)}
-.\]
-Thus
-\[
-{1\over 2\pi i } \int_\gamma (\ln f)' = -n
-,\]
-for $\gamma$ a small circle about $z_0$.
-A similar argument for $z_0$ a **zero** of $f$ yields
-\[
-{1\over 2\pi i } \int_\gamma h = +n
-.\]
-:::
-
-
-
 :::{.exercise title="?"}
 Show that there is no continuous square root function defined on all of $\CC$.
 :::
@@ -3236,22 +3489,29 @@ Using $\pi_1(\CC\units) = \ZZ$, the induced maps are $p_*(1) = 2$ and $f_*(1) = 
 But then $p_* \circ f_*$ is multiplication by $2n$, contradicting $p_* \circ f_* = \id$ by functoriality.
 :::
 
+:::{.definition title="Laplace Transform"}
+\[
+\mcl(f, \xi) \da \int_\RR e^{-\xi x} f(x) \dx
+.\]
 
-:::{.theorem title="Uniformization"}
-Every Riemann surface $S$ is the quotient of a free proper holomorphic action of a group $G$ on the universal cover $\tilde S$ of $S$, so $S\cong \tilde S/G$ is a biholomorphism.
-Moreover, $\tilde S$ is biholomorphic to either 
-
-- $\CP^1$
-- $\CC$
-- $\DD$
+- $f(t) = c \mapstofrom F(s) = cs\inv$
+- $f(t) = e^{at} \mapstofrom F(s) = (s-a)\inv$.
+- $f(t) = t \mapstofrom F(s) = s^{-2}$.
+- $f(t) = \cos(at) \mapstofrom F(s) = s(s^2 + a^2)\inv$.
 
 :::
 
+:::{.remark}
+\[
+\hat{f}(\xi) \da \mcl(f, i\xi) \da \int_\RR f(x) e^{-i\xi x} \dx
+.\]
+:::
 
+:::{.fact title="Table of Laplace Transforms"}
 
-
-
-
+![](figures/2021-07-29_21-14-27.png)
+![](figures/2021-07-29_21-14-42.png)
+:::
 
 Basics
 

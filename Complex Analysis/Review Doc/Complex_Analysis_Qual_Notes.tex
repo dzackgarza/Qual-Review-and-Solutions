@@ -410,7 +410,11 @@ If \(\Omega \subseteq {\mathbb{C}}\) is bounded with
 \({{\partial}}\Omega\) piecewise smooth and
 \(f, g\in C^1(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu)\),
 then
-\begin{align*}\int_{{{\partial}}\Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ {\frac{\partial g}{\partial x}\,} - {\frac{\partial f}{\partial y}\,} } \, dA.\end{align*}
+\begin{align*}\int_{{{\partial}}\Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ {\frac{\partial g}{\partial x}\,} - {\frac{\partial f}{\partial y}\,} } \, \,dA.\end{align*}
+In vector form,
+\begin{align*}
+\int_\gamma F\cdot \,dr= \iint_R \operatorname{curl}F \,dA
+.\end{align*}
 
 \end{theorem}
 
@@ -449,6 +453,38 @@ and uniformly on \(\Omega\). Moreover, if the \(f_n\) are continuous, by
 the uniform limit theorem, \(f\) is again continuous.
 
 \end{theorem}
+
+\hypertarget{integrals}{%
+\subsection{Integrals}\label{integrals}}
+
+\begin{remark}
+
+Some basic facts needed for line integrals in the plane:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\operatorname{grad}f = {\left[ { {\frac{\partial f}{\partial x}\,}, {\frac{\partial f}{\partial y}\,} } \right]}\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If \(F = \operatorname{grad}f\) for some \(f\), \(F\) is a vector
+    field.
+  \end{itemize}
+\item
+  Given \(f(x, y)\) and \(\gamma(t)\), the chain rule yields
+  \({\frac{\partial }{\partial t}\,} (f\circ \gamma)(t) = {\left\langle { \operatorname{grad}f\circ \gamma)(t)},~{\gamma'(t)} \right\rangle}\).
+\item
+  For \(F(x, y) = {\left[ {M(x, y), N(x, y)} \right]}\),
+  \(\operatorname{curl}F = {\frac{\partial N}{\partial x}\,} - {\frac{\partial M}{\partial y}\,}\)
+  and
+  \(\operatorname{Div}F = {\frac{\partial M}{\partial x}\,} + {\frac{\partial N}{\partial y}\,}\).
+\item
+  \(\int_\gamma F\cdot \,dr= \int_a^b F(\gamma(t))\cdot \gamma'(t) \,dt\).
+\end{itemize}
+
+\end{remark}
 
 \hypertarget{series-and-sequences}{%
 \subsection{Series and Sequences}\label{series-and-sequences}}
@@ -2141,6 +2177,288 @@ point.
 
 \end{theorem}
 
+\hypertarget{counting-zeros-and-poles}{%
+\section{Counting Zeros and Poles}\label{counting-zeros-and-poles}}
+
+\hypertarget{argument-principle}{%
+\subsection{Argument Principle}\label{argument-principle}}
+
+\begin{definition}[The logarithmic derivative]
+
+The \textbf{logarithmic derivative} is defined as
+\begin{align*}
+{\partial}_{\log} f \coloneqq{f' \over f}
+.\end{align*}
+It converts all poles and zeros of \(f\) into simple poles of
+\({\partial}_{\log f}\).
+
+\end{definition}
+
+\begin{exercise}[?]
+
+Show that
+\({\partial}_{\log}(fg) = {\partial}_{\log} f + {\partial}_{\log} g\),
+i.e.~
+\begin{align*}
+{ (fg)' \over fg} = {f'\over f} + {g' \over g}
+.\end{align*}
+
+\end{exercise}
+
+\begin{definition}[Winding Number]
+
+For \(\gamma \subseteq \Omega\) a closed curve not passing through a
+point \(z_0\), the \textbf{winding number of \(\gamma\) about \(z_0\)}
+(or the \textbf{index}) is defined as
+\begin{align*}
+\mathop{\mathrm{Ind}}_{z=z_0}(\gamma) \coloneqq{1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\,d\xi
+.\end{align*}
+
+\end{definition}
+
+\begin{theorem}[Argument Principle, Zeros/Poles Version]
+
+For \(f\) meromorphic in \(\Omega\) with multisets of zeros
+\(Z_f \coloneqq\left\{{ z_j }\right\}\) and poles
+\(P_f\coloneqq\left\{{ p_k }\right\}\) (so repeated with multiplicity)
+for \(\gamma \coloneqq{{\partial}}\Omega\) not intersect
+\begin{align*}  
+{1\over 2\pi i} \int_\gamma {\partial}_{\log} f(z) \,dz
+&= \# Z_f - \# P_f
+,\end{align*}
+where \(\# Z_f\) and \(\# P_f\) are the number of zeros and poles
+respectively, counted with multiplicity.
+
+\end{theorem}
+
+\begin{proof}[?]
+
+\envlist
+
+\begin{itemize}
+\item
+  If \(z_0\) is a zero of \(f\) of order \(m\), write
+  \(f(z) = (z-z_0)^m g(z)\) with \(g(z)\) holomorphic and nonzero on
+  some neighborhood of \(z_0\).
+\item
+  Compute
+  \begin{align*}
+  {\partial}_{\log} f(z)
+  &=
+  \frac{m\left(z-z_{0}\right)^{m-1} g(z)+\left(z-z_{0}\right)^{m} g^{\prime}(z)}{\left(z-z_{0}\right)^{m} g(z)} \\
+  &= {m \over z-z_0} + {\partial}_{\log} g(z)
+  ,\end{align*}
+  so \(z_0\) is a simple pole of \({\partial}_{\log} f\) and
+  \(\mathop{\mathrm{res}}_{z=z_0} {\partial}_{\log} f = m\).
+\item
+  If \(z_0\) is a pole of \(f\) of order \(m\), write
+  \(f(z) = (z-z_0)^{-m} g(z)\), then
+  \begin{align*}
+  {\partial}_{\log} f = {-m \over z-z_0} + {\partial}_{\log} g
+  ,\end{align*}
+  so \(z_0\) is a simple pole and
+  \(\mathop{\mathrm{Res}}_{z=z_0} {\partial}_{\log f} = -m\).
+\item
+  Now apply the residue theorem, and group residues according to sign:
+  \begin{align*}
+  {1\over 2\pi i } \int_{\gamma} {\partial}_{\log }f(z) \,dz
+  &= \sum_{z_i \in P_{{\partial}_{\log} f}} \mathop{\mathrm{Res}}_{z=z_i} {\partial}_{\log} f(z)\\
+  &= \sum_{z_k \in Z_f} \mathop{\mathrm{Res}}_{z=z_k} f(z) - \sum_{z_j \in P_f} \mathop{\mathrm{Res}}_{z=z_j} f(z)
+  .\end{align*}
+\end{itemize}
+
+\end{proof}
+
+\begin{theorem}[Argument Principle, Index Version]
+
+With the same setup as above,
+\begin{align*}
+{1\over 2\pi i} \int_\gamma {\partial}_{\log} f(z) \,dz
+&= \mathop{\mathrm{Ind}}_{w=0}(f\circ \gamma)(w)
+.\end{align*}
+
+\end{theorem}
+
+\begin{proof}[?]
+
+Make the change of variables \(w = f(z)\), then
+\(z=\gamma(t) \mapsto w = (f\circ \gamma)(t)\) and \(\,dw= f'(z) \,dz\),
+so
+\begin{align*}
+{1\over 2\pi i }\int_{\gamma} {\partial}_{\log} f(z) \,dz
+= {1\over 2\pi i} \int_{f\circ \gamma} {1\over w} \,dw\coloneqq\mathop{\mathrm{Ind}}_{w=0} (f\circ \gamma)(w)
+.\end{align*}
+
+\end{proof}
+
+\begin{example}[Using the index version of the argument principle]
+
+Let \(f(z) = z^2 + z = z(z+1)\).
+
+\begin{itemize}
+\tightlist
+\item
+  \(\gamma_1 \coloneqq\left\{{{\left\lvert {z} \right\rvert} = 2}\right\}\)
+  contains 2 zeros and 0 poles, so \(f\circ \gamma\) winds twice around
+  zero counterclockwise.
+\item
+  \(\gamma_2 \coloneqq\left\{{{\left\lvert {z} \right\rvert} = {1\over 2}}\right\}\)
+  contains 1 zero and 0 poles, so \(f\circ \gamma\) winds once.
+\end{itemize}
+
+\end{example}
+
+\hypertarget{rouchuxe9}{%
+\subsection{Rouché}\label{rouchuxe9}}
+
+\begin{theorem}[Rouché's Theorem]\label{Rouche}
+
+If
+
+\begin{itemize}
+\tightlist
+\item
+  \(f, g\) are meromorphic on \(\Omega\)
+\item
+  \(\gamma \subset \Omega\) is a toy contour winding about each
+  zero/pole of \(f, g\) exactly once,
+\item
+  \({\left\lvert {g} \right\rvert} < {\left\lvert {f} \right\rvert}\) on
+  \(\gamma\)
+\end{itemize}
+
+then
+\begin{align*}
+\mathop{\mathrm{Ind}}_{z=0}(f\circ \gamma)(z) = \mathop{\mathrm{Ind}}_{z=0}((f+g)\circ \gamma)(z) \implies Z_f - P_f = Z_{f+g} - P_{f+g}
+.\end{align*}
+In particular, if \(f, g\) are holomorphic, they have the same number of
+zeros in \(\Omega\).
+
+\end{theorem}
+
+\begin{slogan}
+
+The number of zeros/poles are determined by a dominating function.
+
+\end{slogan}
+
+\todo[inline]{Prove}
+
+\begin{exercise}[?]
+
+Show that \(h(z) =z^5 + 3z + 1\) has 5 zeros in
+\({\left\lvert {z} \right\rvert} \leq 2\).
+
+\end{exercise}
+
+\begin{exercise}[?]
+
+Show that \(h(z) = z + 3 + 2e^z\) has one root in
+\(\left\{{ \Re(z) \leq 0}\right\}\).
+
+\end{exercise}
+
+\begin{solution}
+
+Use the following contour:
+
+\includegraphics{figures/2021-07-29_20-39-31.png}
+
+Take \(g(z) \coloneqq 2e^z < f(z) \coloneqq f(z) \coloneqq z+3\).
+
+\end{solution}
+
+\begin{corollary}[Open Mapping]
+
+Any holomorphic non-constant map is an open map.
+
+\end{corollary}
+
+\todo[inline]{Prove}
+
+\begin{corollary}[Maximum Modulus]\label{MaximumModulus}
+
+If \(f\) is holomorphic and nonconstant on an open connected region
+\(\Omega\), then \({\left\lvert {f} \right\rvert}\) can not attain a
+maximum on \(\Omega\). If \(\Omega\) is bounded and \(f\) is continuous
+on
+\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\),
+then
+\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)
+occurs on \({{\partial}}\Omega\). Conversely, if \(f\) attains a local
+supremum at \(z_0 \in \Omega\), then \(f\) is constant on \(\Omega\).
+
+\end{corollary}
+
+\todo[inline]{Prove}
+
+\begin{corollary}[?]
+
+If \(f\) is nonzero on \(\Omega\), then \(f\) attains a minimum on
+\({{\partial}}\Omega\). This follows from applying the MMP to \(1/f\).
+
+\end{corollary}
+
+\hypertarget{counting-zeros}{%
+\subsection{Counting Zeros}\label{counting-zeros}}
+
+\begin{example}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Take \(P(z) = z^4 + 6z + 3\).
+\item
+  On \({\left\lvert {z} \right\rvert} < 2\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Set \(f(z) = z^4\) and \(g(z) = 6z + 3\), then
+    \({\left\lvert {g(z)} \right\rvert} \leq 6{\left\lvert {z} \right\rvert} + 3 = 15 < 16= {\left\lvert {f(z)} \right\rvert}\).
+  \item
+    So \(P\) has 4 zeros here.
+  \end{itemize}
+\item
+  On \({\left\lvert {z} \right\rvert} < 1\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Set \(f(z) = 6z\) and \(g(z) = z^4 + 3\).
+  \item
+    Check
+    \({\left\lvert {g(z)} \right\rvert} \leq {\left\lvert {z} \right\rvert}^4 + 3 = 4 < 6 = {\left\lvert {f(z)} \right\rvert}\).
+  \item
+    So \(P\) has 1 zero here.
+  \end{itemize}
+\end{itemize}
+
+\end{example}
+
+\begin{example}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Claim: the equation \(\alpha z e^z = 1\) where
+  \({\left\lvert {\alpha} \right\rvert} > e\) has exactly one solution
+  in \({\mathbb{D}}\).
+\item
+  Set \(f(z) = \alpha z\) and \(g(z) = e^{-z}\).
+\item
+  Estimate at \({\left\lvert {z} \right\rvert} =1\) we have
+  \({\left\lvert {g} \right\rvert} ={\left\lvert {e^{-z}} \right\rvert} = e^{-\Re(z)} \leq e^1 < {\left\lvert {\alpha} \right\rvert} = {\left\lvert {f(z)} \right\rvert}\)
+\item
+  \(f\) has one zero at \(z_0 = 0\), thus so does \(f+g\).
+\end{itemize}
+
+\end{example}
+
 \hypertarget{residues}{%
 \section{Residues}\label{residues}}
 
@@ -2546,185 +2864,134 @@ I = {1\over 2i} \int_{\mathbb{R}}{e^{iz} - 1 \over z } \,dz
 \caption{image\_2021-05-17-13-33-55}
 \end{figure}
 
-\hypertarget{counting-zeros-and-poles}{%
-\section{Counting Zeros and Poles}\label{counting-zeros-and-poles}}
+\hypertarget{integrals-1}{%
+\section{Integrals}\label{integrals-1}}
 
-\hypertarget{argument-principle}{%
-\subsection{Argument Principle}\label{argument-principle}}
+\href{https://math.mit.edu/~jorloff/18.04/notes/topic9.pdf}{See this
+very detailed note}.
 
-\begin{definition}[Winding Number]
+\begin{itemize}
+\item
+  For integrals that decay faster than \(1/z^\alpha, \alpha>1\):
+  semicircular contours.
 
-For \(\gamma \subseteq \Omega\) a closed curve not passing through a
-point \(z_0\), the \textbf{winding number of \(\gamma\) about \(z_0\)}
-is defined as
-\begin{align*}
-n_\gamma(z_0) \coloneqq{1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\,d\xi
-.\end{align*}
+  \includegraphics{figures/2021-07-29_18-37-57.png}
+\item
+  For integrals that decay like \(1/z\): rectangular contours.
+\end{itemize}
 
-\end{definition}
+\includegraphics{figures/2021-07-29_18-38-24.png}
 
-\begin{theorem}[Argument Principle]
-
-For \(f\) meromorphic in \(\gamma^\circ\) with zeros
-\(\left\{{ z_j }\right\}\) and poles \(\left\{{ p_k }\right\}\) repeated
-with multiplicity where \(\gamma\) does not intersect any zeros or
-poles, then
-\begin{align*}  
-\Delta_\gamma \arg f(z) \coloneqq{1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \,dz= \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) = Z_f - P_f
-,\end{align*}
-where \(Z_f\) and \(P_f\) are the number of zeros and poles respectively
-enclosed by \(\gamma\), counted with multiplicity.
-
-\end{theorem}
-
-\begin{proof}[?]
-
-Residue formula applied to \(f'\over f\)?
-
-\end{proof}
-
-\includegraphics{figures/2021-06-16_16-42-18.png}
-
-\begin{remark}
-
-This is useful in numerical computation: if you can compute this
-integral within an error \(E < \pi\) where you know it doesn't contain a
-pole, you can determine if the contour contains a zero. Canonical
-example: integrals in rectangles around \(\Re(z) = 1/2\) for
-\(\zeta(s)\).
-
-\end{remark}
+\begin{itemize}
+\item
+  If a trigonometric function is in the numerator, check if
+  \(I \approx \Re(\tilde I)\) where \(\tilde I\) replaces cosines/sines
+  with \(e^{iz}\).
+\item
+  For rational functions of \(\cos, \sin\): set
+  \(2\cos(z) = z + z^{-1}, 2\sin(z) = z - z^{-1}, \,d\theta= {\,dz\over iz}\)
+  to reduce to a residue count in
+  \({\left\lvert {z} \right\rvert} \leq 1\).
+\end{itemize}
 
 \begin{exercise}[?]
 
-Show that
-\({\partial}_{\ln}(fg) = {\partial}_{\ln} f + {\partial}_{\ln} g\), and
-thus
 \begin{align*}
-\frac{f^{\prime}(x)}{f(x)}=\frac{g^{\prime}(x)}{g(x)}+\frac{h^{\prime}(x)}{h(x)}
+\int_{\mathbb{R}}{1 \over (1+x)^2} = {\pi \over 2}
+.\end{align*}
+
+Use that \(f(z) \sim 1/z^4\).
+
+\end{exercise}
+
+\begin{solution}
+
+\includegraphics{figures/2021-07-29_18-40-40.png}
+
+\end{solution}
+
+\begin{exercise}[?]
+
+\begin{align*}
+\int_{\mathbb{R}}{1 \over x^4 + 1} = {\pi \sqrt{2} \over 2}
 .\end{align*}
 
 \end{exercise}
 
-\hypertarget{rouchuxe9}{%
-\subsection{Rouché}\label{rouchuxe9}}
+\begin{solution}
 
-\begin{corollary}[Rouché's Theorem]\label{Rouche}
+\includegraphics{figures/2021-07-29_18-41-05.png}
 
-If \(f, g\) are analytic on a domain \(\Omega\) with finitely many zeros
-in \(\Omega\) and \(\gamma \subset \Omega\) is a closed curve
-surrounding each point exactly once, where
-\({\left\lvert {g} \right\rvert} < {\left\lvert {f} \right\rvert}\) on
-\(\gamma\), then \(f\) and \(f+g\) have the same number of zeros.
+\end{solution}
 
-Alternatively:
+\begin{exercise}[?]
 
-Suppose \(f = g + h\) with \(g \neq 0, \infty\) on \(\gamma\) with
-\({\left\lvert {g} \right\rvert} > {\left\lvert {h} \right\rvert}\) on
-\(\gamma\). Then
-\begin{align*}\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.\end{align*}
+\begin{align*}
+\int_{0}^{\infty} \frac{\cos (x)}{x^{2}+b^{2}} d x=\frac{\pi \mathrm{e}^{-b}}{2 b} .
+.\end{align*}
 
-\end{corollary}
+\end{exercise}
 
-\todo[inline]{Prove}
+\begin{solution}
 
-\begin{corollary}[Open Mapping]
+Extend to \(\int_{\mathbb{R}}\) using that \(f\) is even.
 
-Any holomorphic non-constant map is an open map.
+\includegraphics{figures/2021-07-29_18-42-38.png}
 
-\end{corollary}
+\end{solution}
 
-\todo[inline]{Prove}
+\begin{exercise}[Trigonometric functions]
 
-\begin{corollary}[Maximum Modulus]\label{MaximumModulus}
+\begin{align*}
+\int_{0}^{2 \pi} \frac{d \theta}{1+a^{2}-2 a \cos (\theta)}
+= \begin{cases}\frac{2 \pi}{a^{2}-1} & \text { if }|a|>1 \\ \frac{2 \pi}{1-a^{2}} & \text { if }|a|<1\end{cases}
+.\end{align*}
 
-If \(f\) is holomorphic and nonconstant on an open connected region
-\(\Omega\), then \({\left\lvert {f} \right\rvert}\) can not attain a
-maximum on \(\Omega\). If \(\Omega\) is bounded and \(f\) is continuous
-on
-\(\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu\),
-then
-\(\max_{\mkern 1.5mu\overline{\mkern-1.5mu\Omega\mkern-1.5mu}\mkern 1.5mu} {\left\lvert {f} \right\rvert}\)
-occurs on \({{\partial}}\Omega\). Conversely, if \(f\) attains a local
-supremum at \(z_0 \in \Omega\), then \(f\) is constant on \(\Omega\).
+\end{exercise}
 
-\end{corollary}
+\begin{solution}
 
-\todo[inline]{Prove}
+Write \(2\cos(z) = z + z^{-1}\) on \(S^1\) to get
+\begin{align*}
+=\int_{|z|=1} \frac{1}{i\left(\left(1+a^{2}\right) z-a\left(z^{2}+1\right)\right)} d z
+.\end{align*}
 
-\begin{corollary}[?]
+\end{solution}
 
-If \(f\) is nonzero on \(\Omega\), then \(f\) attains a minimum on
-\({{\partial}}\Omega\). This follows from applying the MMP to \(1/f\).
+\hypertarget{branch-cuts}{%
+\subsection{Branch Cuts}\label{branch-cuts}}
 
-\end{corollary}
+\begin{exercise}[?]
 
-\hypertarget{counting-zeros}{%
-\subsection{Counting Zeros}\label{counting-zeros}}
+\begin{align*}
+\int_0^\infty {x^{1\over 3} \over 1 + x^2} \,dx= {\pi \over \sqrt 3}
+.\end{align*}
 
-\begin{example}
+\end{exercise}
 
-\envlist
+\begin{solution}
 
-\begin{itemize}
-\tightlist
-\item
-  Take \(P(z) = z^4 + 6z + 3\).
-\item
-  On \({\left\lvert {z} \right\rvert} < 2\):
+\includegraphics{figures/2021-07-29_18-51-17.png}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Set \(f(z) = z^4\) and \(g(z) = 6z + 3\), then
-    \({\left\lvert {g(z)} \right\rvert} \leq 6{\left\lvert {z} \right\rvert} + 3 = 15 < 16= {\left\lvert {f(z)} \right\rvert}\).
-  \item
-    So \(P\) has 4 zeros here.
-  \end{itemize}
-\item
-  On \({\left\lvert {z} \right\rvert} < 1\):
+\end{solution}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Set \(f(z) = 6z\) and \(g(z) = z^4 + 3\).
-  \item
-    Check
-    \({\left\lvert {g(z)} \right\rvert} \leq {\left\lvert {z} \right\rvert}^4 + 3 = 4 < 6 = {\left\lvert {f(z)} \right\rvert}\).
-  \item
-    So \(P\) has 1 zero here.
-  \end{itemize}
-\end{itemize}
+\begin{exercise}[?]
 
-\end{example}
+\begin{align*}
+\int_{1}^{\infty} \frac{d x}{x \sqrt{x^{2}-1}} = {\pi \over 2}
+.\end{align*}
 
-\begin{example}
+\end{exercise}
 
-\envlist
+\begin{solution}
 
-\begin{itemize}
-\tightlist
-\item
-  Claim: the equation \(\alpha z e^z = 1\) where
-  \({\left\lvert {\alpha} \right\rvert} > e\) has exactly one solution
-  in \({\mathbb{D}}\).
-\item
-  Set \(f(z) = \alpha z\) and \(g(z) = e^{-z}\).
-\item
-  Estimate at \({\left\lvert {z} \right\rvert} =1\) we have
-  \({\left\lvert {g} \right\rvert} ={\left\lvert {e^{-z}} \right\rvert} = e^{-\Re(z)} \leq e^1 < {\left\lvert {\alpha} \right\rvert} = {\left\lvert {f(z)} \right\rvert}\)
-\item
-  \(f\) has one zero at \(z_0 = 0\), thus so does \(f+g\).
-\end{itemize}
+\includegraphics{figures/2021-07-29_18-53-35.png}
 
-\end{example}
+\end{solution}
 
-\hypertarget{conformal-maps}{%
-\section{Conformal Maps}\label{conformal-maps}}
-
-\hypertarget{linear-fractional-transformations}{%
-\subsection{Linear Fractional
-Transformations}\label{linear-fractional-transformations}}
+\hypertarget{conformal-maps-linear-fractional-transformations}{%
+\section{Conformal Maps / Linear Fractional
+Transformations}\label{conformal-maps-linear-fractional-transformations}}
 
 \begin{definition}[Conformal Map / Biholomorphism]
 
@@ -2780,12 +3047,24 @@ T^{-1}(w) = {dw-b \over -cw + a}
 
 \begin{proposition}[?]
 
-Given any three points \(z_1, z_2, z_3\), the following Mobius
+Given any three points \(z_1, z_2, z_3\), the following Möbius
 transformation sends them to \(1, 0, \infty\) respectively:
 \begin{align*}
-f(z) \coloneqq{ (z-z_2) (z_1-z_3) \over (z-z_3) (z_1 - z_2)}
+T(z) 
+&\coloneqq{ (z-z_1) (z_2-z_3) \over (z-z_3) (z_2 - z_1)}
+\\
+z_1 & \mapsto 0 \\
+z_2 & \mapsto 1 \\
+z_3 & \mapsto \infty
 .\end{align*}
-Such a map is sometimes denoted \((z, z_1, z_2, z_3)\).
+Such a map is sometimes denoted \((z; z_1, z_2, z_3)\). One can use this
+to produce a map sending any three points to any other three points:
+\begin{align*}
+T(z) \coloneqq
+(w; w_1, w_2, w_3)^{-1}
+\circ
+(z; z_1,z_2, z_3)
+.\end{align*}
 
 \end{proposition}
 
@@ -2898,12 +3177,21 @@ z &\mapsto {i-z \over i+z} \\
 i \qty{1-w \over 1+w} &\mapsfrom w
 .\end{align*}
 
-\textbf{Boundary behavior:} This maps
-\({\mathbb{R}}\to {{\partial}}{\mathbb{D}}\), where \(F(\infty) = -1\),
-and as \(x\in {\mathbb{R}}\) ranges from \(-\infty\to\infty\), \(F(x)\)
-travels from \(z=-1\) counter-clockwise through \(S^1\) (starting at
-\(z=-1\) and moving through the lower half first). So this extends to a
-map \({\mathbb{H}}\to {\mathbb{D}}\).
+\textbf{Boundary behavior:}
+
+\begin{itemize}
+\tightlist
+\item
+  This maps \({\mathbb{R}}\to {{\partial}}{\mathbb{D}}\), where
+  \(F(\infty) = -1\), and as \(x\in {\mathbb{R}}\) ranges from
+  \(-\infty\to\infty\), \(F(x)\) travels from \(z=-1\) counter-clockwise
+  through \(S^1\) (starting at \(z=-1\) and moving through the lower
+  half first).
+\end{itemize}
+
+\includegraphics{figures/2021-07-29_19-02-54.png}
+
+So this extends to a map \({\mathbb{H}}\to {\mathbb{D}}\).
 
 \begin{quote}
 Mnemonic: every \(z\in {\mathbb{H}}\) is closer to \(i\) than \(-i\).
@@ -3161,6 +3449,24 @@ z &\mapsto \sin(z) \\
 
 \end{proposition}
 
+\hypertarget{exercises-4}{%
+\subsection{Exercises}\label{exercises-4}}
+
+\begin{exercise}[?]
+
+Find a conformal map from the upper half-disc to the upper half-plane.
+
+\end{exercise}
+
+\begin{solution}
+
+\includegraphics{figures/2021-07-29_19-26-39.png}
+
+\end{solution}
+
+\hypertarget{schwarz-reflection}{%
+\section{Schwarz Reflection}\label{schwarz-reflection}}
+
 \hypertarget{schwarz}{%
 \subsection{Schwarz}\label{schwarz}}
 
@@ -3229,9 +3535,6 @@ Schwarz lemma.
 
 \end{theorem}
 
-\hypertarget{schwarz-reflection}{%
-\section{Schwarz Reflection}\label{schwarz-reflection}}
-
 \todo[inline]{?}
 
 \hypertarget{schwarz-lemma}{%
@@ -3247,9 +3550,9 @@ Schwarz lemma.
 
 \todo[inline]{Equicontinuity}
 
-\hypertarget{linear-fractional-transformations-1}{%
+\hypertarget{linear-fractional-transformations}{%
 \section{Linear Fractional
-Transformations}\label{linear-fractional-transformations-1}}
+Transformations}\label{linear-fractional-transformations}}
 
 \hypertarget{montels-theorem}{%
 \section{Montel's Theorem}\label{montels-theorem}}
@@ -3352,7 +3655,8 @@ Algebra}\label{proofs-of-the-fundamental-theorem-of-algebra}}
 
 \begin{proof}[using Rouche's theorem]
 
-\envlist
+\includegraphics{figures/2021-07-29_20-41-18.png}
+\includegraphics{figures/2021-07-29_20-41-29.png}
 
 \begin{itemize}
 \tightlist
@@ -3513,6 +3817,55 @@ the lemma \(p\) is surjective, so there exists some \(x\neq \infty\) in
 \hypertarget{appendix}{%
 \section{Appendix}\label{appendix}}
 
+\begin{definition}[Gamma function]
+
+\begin{align*}
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t} \,dt
+.\end{align*}
+
+\end{definition}
+
+\begin{remark}
+
+Some interesting properties of \(\Gamma\): \(\Gamma(z+1) = z\Gamma(z)\)
+and has simple poles at \(z=0,-1,-2,\cdots\) with residues
+\(\mathop{\mathrm{Res}}_{z=-m} \Gamma(z) = (-1)^m/m!\). There is also a
+factorization
+\begin{align*}
+\Gamma(z) = {1 \over ze^{\gamma z} \prod_{n=1}^\infty \qty{1 + {z\over n}}e^{-z\over n} }
+\end{align*}
+where
+\(\gamma \coloneqq\lim_{N\to\infty } \sum_{n=1^N} {1\over n} - \log(N)\)
+
+\begin{align*}
+\Gamma(z) \Gamma(1-z) = {\pi \over \sin(\pi z)}
+,\end{align*}
+which yields a product factorization for \(\sin(\pi z)\).
+
+\({\mathcal{L}}(t^{z-1}, s=1) = \Gamma(z)\) and
+\({\mathcal{L}}(t^n, s=1) = \Gamma(n+1)\).
+
+\end{remark}
+
+\begin{theorem}[Uniformization]
+
+Every Riemann surface \(S\) is the quotient of a free proper holomorphic
+action of a group \(G\) on the universal cover \(\tilde S\) of \(S\), so
+\(S\cong \tilde S/G\) is a biholomorphism. Moreover, \(\tilde S\) is
+biholomorphic to either
+
+\begin{itemize}
+\tightlist
+\item
+  \({\mathbb{CP}}^1\)
+\item
+  \({\mathbb{C}}\)
+\item
+  \({\mathbb{D}}\)
+\end{itemize}
+
+\end{theorem}
+
 \hypertarget{misc-basic-algebra}{%
 \subsection{Misc Basic Algebra}\label{misc-basic-algebra}}
 
@@ -3612,33 +3965,6 @@ T(x ,y) = e^{-y} \sin(x) = \Re(-ie^{iz}) = \Im(e^{iz})
 
 \end{example}
 
-\begin{definition}[Logarithmic Derivative]
-
-The \textbf{logarithmic derivative} of \(f\) is \((\ln f)' = f'/f\).
-
-\end{definition}
-
-\begin{remark}
-
-Why this is useful: deriving the argument principle. If \(f\) has a pole
-of order \(n\) at \(z_0\), then write \(f(z) = (z-z_0)^{-n} g(z)\) with
-\(g\) analytic in a neighborhood of \(z_0\). Then a direct computation
-of the derivatives will show
-\begin{align*}
-(\ln f)' \coloneqq{f'(z) \over f(z)} = -{n\over z-z_0} + {g'(z) \over g(z)}
-.\end{align*}
-Thus
-\begin{align*}
-{1\over 2\pi i } \int_\gamma (\ln f)' = -n
-,\end{align*}
-for \(\gamma\) a small circle about \(z_0\). A similar argument for
-\(z_0\) a \textbf{zero} of \(f\) yields
-\begin{align*}
-{1\over 2\pi i } \int_\gamma h = +n
-.\end{align*}
-
-\end{remark}
-
 \begin{exercise}[?]
 
 Show that there is no continuous square root function defined on all of
@@ -3661,24 +3987,40 @@ then \(p_* \circ f_*\) is multiplication by \(2n\), contradicting
 
 \end{solution}
 
-\begin{theorem}[Uniformization]
+\begin{definition}[Laplace Transform]
 
-Every Riemann surface \(S\) is the quotient of a free proper holomorphic
-action of a group \(G\) on the universal cover \(\tilde S\) of \(S\), so
-\(S\cong \tilde S/G\) is a biholomorphism. Moreover, \(\tilde S\) is
-biholomorphic to either
+\begin{align*}
+{\mathcal{L}}(f, \xi) \coloneqq\int_{\mathbb{R}}e^{-\xi x} f(x) \,dx
+.\end{align*}
 
 \begin{itemize}
 \tightlist
 \item
-  \({\mathbb{CP}}^1\)
+  \(f(t) = c \rightleftharpoons F(s) = cs^{-1}\)
 \item
-  \({\mathbb{C}}\)
+  \(f(t) = e^{at} \rightleftharpoons F(s) = (s-a)^{-1}\).
 \item
-  \({\mathbb{D}}\)
+  \(f(t) = t \rightleftharpoons F(s) = s^{-2}\).
+\item
+  \(f(t) = \cos(at) \rightleftharpoons F(s) = s(s^2 + a^2)^{-1}\).
 \end{itemize}
 
-\end{theorem}
+\end{definition}
+
+\begin{remark}
+
+\begin{align*}
+\widehat{f}(\xi) \coloneqq{\mathcal{L}}(f, i\xi) \coloneqq\int_{\mathbb{R}}f(x) e^{-i\xi x} \,dx
+.\end{align*}
+
+\end{remark}
+
+\begin{fact}[Table of Laplace Transforms]
+
+\includegraphics{figures/2021-07-29_21-14-27.png}
+\includegraphics{figures/2021-07-29_21-14-42.png}
+
+\end{fact}
 
 Basics
 

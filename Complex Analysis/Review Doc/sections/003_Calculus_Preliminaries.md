@@ -61,7 +61,6 @@ In vector form,
 \[
 \int_\gamma F\cdot \dr = \iint_R \curl F \dA
 .\]
-
 :::
 
 ## Convergence
@@ -86,7 +85,6 @@ Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is agai
 
 ## Integrals
 
-
 :::{.remark}
 Some basic facts needed for line integrals in the plane:
 
@@ -97,7 +95,6 @@ Some basic facts needed for line integrals in the plane:
 - $\int_\gamma F\cdot \dr = \int_a^b F(\gamma(t))\cdot \gamma'(t) \dt$.
 
 :::
-
 
 ## Series and Sequences
 
