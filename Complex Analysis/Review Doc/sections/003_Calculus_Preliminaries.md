@@ -134,28 +134,7 @@ Recall how to carry out polynomial long division:
 - For irreducible quadratic factors $h_i(x)$, include terms of the form ${Ax+B \over h_i(x)}$.
 :::
 
-## Misc
 
-
-:::{.definition title="Laplace Transform"}
-\[
-\mcl(f, \xi) \da \int_\RR e^{-\xi x} f(x) \dx
-.\]
-
-- $f(t) = c \mapstofrom F(s) = cs\inv$
-- $f(t) = e^{at} \mapstofrom F(s) = (s-a)\inv$.
-- $f(t) = t \mapstofrom F(s) = s^{-2}$.
-- $f(t) = \cos(at) \mapstofrom F(s) = s(s^2 + a^2)\inv$.
-
-:::
-
-
-:::{.remark}
-\[
-\hat{f}(\xi) \da \mcl(f, i\xi) \da \int_\RR f(x) e^{-i\xi x} \dx
-.\]
-
-:::
 
 
 
