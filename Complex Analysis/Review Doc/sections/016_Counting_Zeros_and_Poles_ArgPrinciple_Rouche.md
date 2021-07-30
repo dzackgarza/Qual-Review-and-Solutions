@@ -38,7 +38,7 @@ where $\# Z_f$ and $\# P_f$ are the number of zeros and poles respectively, coun
 :::
 
 :::{.proof title="?"}
-Residue formula applied to $f'\over f$?
+\envlist
 
 - If $z_0$ is a zero of $f$ of order $m$, write $f(z) = (z-z_0)^m g(z)$ with $g(z)$ holomorphic and nonzero on some neighborhood of $z_0$.
 - Compute
@@ -63,11 +63,7 @@ so $z_0$ is a simple pole of $\del_{\log} f$ and $\res_{z=z_0} \del_{\log} f = m
 &= \sum_{z_k \in Z_f} \Res_{z=z_k} f(z) - \sum_{z_j \in P_f} \Res_{z=z_j} f(z)
 .\]
 
-![](figures/2021-06-16_16-42-18.png)
-
 :::
-
-
 
 :::{.theorem title="Argument Principle, Index Version"}
 With the same setup as above, 
