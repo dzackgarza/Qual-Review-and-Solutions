@@ -3538,10 +3538,6 @@ for all \(n\) implies \(\mathbf{x} = \mathbf{0}\).
 
 \end{proof}
 
-\hypertarget{extra-problems-undergrad-review}{%
-\section{Extra Problems: Undergrad
-Review}\label{extra-problems-undergrad-review}}
-
 \hypertarget{extra-problems-measure-theory}{%
 \section{Extra Problems: Measure
 Theory}\label{extra-problems-measure-theory}}
@@ -3919,626 +3915,12 @@ R \subseteq \displaystyle\bigcup_j R_j &\implies {\left\lvert {R} \right\rvert} 
 \subsection{Lebesgue Measurable
 Functions}\label{lebesgue-measurable-functions}}
 
-\hypertarget{extra-problems-integration}{%
-\section{Extra Problems: Integration}\label{extra-problems-integration}}
-
-\hypertarget{the-lebesgue-integral}{%
-\subsection{The Lebesgue Integral}\label{the-lebesgue-integral}}
-
-\hypertarget{l1-as-a-banach-space}{%
-\subsection{\texorpdfstring{\(L^1\) as a Banach
-Space}{L\^{}1 as a Banach Space}}\label{l1-as-a-banach-space}}
-
-\hypertarget{fubini-and-tonelli}{%
-\subsection{Fubini and Tonelli}\label{fubini-and-tonelli}}
-
-\hypertarget{extra-problems-differentiation-and-misc}{%
-\section{Extra Problems: Differentiation and
-Misc}\label{extra-problems-differentiation-and-misc}}
-
-\hypertarget{section}{%
-\subsection{?}\label{section}}
-
-\hypertarget{midterm-exam-2-december-2014}{%
-\section{Midterm Exam 2 (December
-2014)}\label{midterm-exam-2-december-2014}}
-
-\hypertarget{section-1}{%
-\subsection{1}\label{section-1}}
-
-\begin{quote}
-Note: (a) is a repeat.
-\end{quote}
-
-\begin{itemize}
-\tightlist
-\item
-  Let \(\Lambda\in L^2(X) {}^{ \vee }\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Show that
-    \(M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X)\)
-    is a closed subspace, and \(L^2(X) = M \oplus M\perp\).
-  \item
-    Prove that there exists a unique \(g\in L^2(X)\) such that
-    \(\Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu\).
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{section-2}{%
-\subsection{2}\label{section-2}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  In parts:
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Given a definition of \(L^\infty({\mathbb{R}}^n)\).
-\item
-  Verify that \({\left\lVert {{-}} \right\rVert}_\infty\) defines a norm
-  on \(L^\infty({\mathbb{R}}^n)\).
-\item
-  Carefully proved that
-  \((L^\infty({\mathbb{R}}^n), {\left\lVert {{-}} \right\rVert}_\infty)\)
-  is a Banach space.
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Prove that for any measurable \(f:{\mathbb{R}}^n \to {\mathbb{C}}\),
-  \begin{align*}
-  L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}
-  .\end{align*}
-\end{enumerate}
-
-\hypertarget{section-3}{%
-\subsection{3}\label{section-3}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that if \(f, g: {\mathbb{R}}^n\to {\mathbb{C}}\) is both
-  measurable then \(F(x, y) \coloneqq f(x)\) and
-  \(h(x, y)\coloneqq f(x-y) g(y)\) is measurable on
-  \({\mathbb{R}}^n\times{\mathbb{R}}^n\).
-\item
-  Show that if
-  \(f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) and
-  \(g\in L^1({\mathbb{R}}^n)\), then
-  \(f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n)\) is
-  well defined, and carefully show that it satisfies the following
-  properties:
-  \begin{align*}
-  {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty
-  {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
-  {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2
-  .\end{align*}
-\end{enumerate}
-
-\begin{quote}
-Hint: first show
-\({\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}}\).
-\end{quote}
-
-\hypertarget{weierstrass-approximation-theorem}{%
-\subsection{4 (Weierstrass Approximation
-Theorem)}\label{weierstrass-approximation-theorem}}
-
-\begin{quote}
-Note: (a) is a repeat.
-\end{quote}
-
-Let \(f: [0, 1]\to {\mathbb{R}}\) be continuous, and prove the
-Weierstrass approximation theorem: for any \({\varepsilon}> 0\) there
-exists a polynomial \(P\) such that
-\({\left\lVert {f - P} \right\rVert}_{\infty} < {\varepsilon}\).
-
-\hypertarget{midterm-exam-1-october-2018}{%
-\section{Midterm Exam 1 (October
-2018)}\label{midterm-exam-1-october-2018}}
-
-\hypertarget{problem-1}{%
-\subsection{Problem 1}\label{problem-1}}
-
-\label{equivalence_of_approximating_measures} Let
-\(E \subseteq {\mathbb{R}}^n\) be bounded. Prove the following are
-equivalent:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  For any \(\epsilon>0\) there exists and open set \(G\) and a closed
-  set \(F\) such that
-  \begin{align*}
-  F \subseteq E \subseteq G && m(G\setminus F) < \epsilon
-  .\end{align*}
-\item
-  There exists a \(G_ \delta\) set \(V\) and an \(F_ \sigma\) set \(H\)
-  such that
-  \begin{align*}
-  m(V\setminus H) = 0
-  .\end{align*}
-\end{enumerate}
-
-\hypertarget{problem-2}{%
-\subsection{Problem 2}\label{problem-2}}
-
-Let \(\left\{{ f_k }\right\} _{k=1}^{\infty }\) be a sequence of
-extended real-valued Lebesgue measurable functions.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that \(\sup_k f_k\) is a Lebesgue measurable function.
-\item
-  Prove that if \(\lim_{k \to \infty } f_k(x)\) exists for every
-  \(x \in {\mathbb{R}}^n\) then \(\lim_{k\to \infty } f_k\) is also a
-  measurable function.
-\end{enumerate}
-
-\hypertarget{problem-3}{%
-\subsection{Problem 3}\label{problem-3}}
-
-\hypertarget{a}{%
-\subsubsection{a}\label{a}}
-
-Prove that if \(E \subseteq {\mathbb{R}}^n\) is a Lebesgue measurable
-set, then for any \(h \in {\mathbb{R}}\) the set
-\begin{align*}
-E+h \coloneqq\left\{{x + h {~\mathrel{\Big|}~}x\in E }\right\}
-\end{align*}
-is also Lebesgue measurable and satisfies \(m(E + h) = m(E)\).
-
-\hypertarget{b}{%
-\subsubsection{b}\label{b}}
-
-Prove that if \(f\) is a non-negative measurable function on
-\({\mathbb{R}}^n\) and \(h\in {\mathbb{R}}^n\) then the function
-\begin{align*}
-\tau_h d(x) \coloneqq f(x-h)
-\end{align*}
-is a non-negative measurable function and
-\begin{align*}
-\int f(x) \,dx= \int f(x-h) \,dx
-.\end{align*}
-
-\hypertarget{problem-4}{%
-\subsection{Problem 4}\label{problem-4}}
-
-Let \(f: {\mathbb{R}}^n\to {\mathbb{R}}\) be a Lebesgue measurable
-function.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that for all \(\alpha> 0\) ,
-  \begin{align*}
-  A_ \alpha  \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert { f(x) } \right\rvert} > \alpha}\right\} \implies m(A_ \alpha) \leq {1\over \alpha} \int {\left\lvert {f (x)} \right\rvert} \,dx
-  .\end{align*}
-\item
-  Prove that
-  \begin{align*}
-  \int {\left\lvert { f(x) } \right\rvert} \,dx= 0 \iff f = 0 \text{ almost everywhere}
-  .\end{align*}
-\end{enumerate}
-
-\hypertarget{problem-5}{%
-\subsection{Problem 5}\label{problem-5}}
-
-Let \(\left\{{ f_k }\right\}_{k=1}^{\infty } \subseteq L^2([0, 1])\) be
-a sequence which \emph{converges in \(L^1\)} to a function \(f\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that \(f\in L^1([0, 1])\).
-\item
-  Give an example illustrating that \(f_k\) may not converge to \(f\)
-  almost everywhere.
-\item
-  Prove that \(\left\{{f_k}\right\}\) must contain a subsequence that
-  converges to \(f\) almost everywhere.
-\end{enumerate}
-
-\hypertarget{midterm-exam-2-november-2018}{%
-\section{Midterm Exam 2 (November
-2018)}\label{midterm-exam-2-november-2018}}
-
-\hypertarget{problem-1-1}{%
-\subsection{Problem 1}\label{problem-1-1}}
-
-Let \(f, g\in L^1([0, 1])\), define \(F(x) = \int_0^x f(y)\,dy\) and
-\(G(x) = \int_0^x g(y)\,dy\), and show
-\begin{align*}
-\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
-.\end{align*}
-
-\hypertarget{problem-2-1}{%
-\subsection{Problem 2}\label{problem-2-1}}
-
-Let \(\phi\in L^1({\mathbb{R}}^n)\) such that \(\int \phi = 1\) and
-define \(\phi_t(x) = t^{-n}\phi(t^{-1}x)\). Show that if \(f\) is
-bounded and uniformly continuous then
-\(f\ast \phi_t \overset{t\to 0}\to f\) uniformly.
-
-\hypertarget{problem-3-1}{%
-\subsection{Problem 3}\label{problem-3-1}}
-
-Let \(g\in L^\infty([0, 1])\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove
-  \begin{align*}
-  {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}
-  .\end{align*}
-\item
-  Prove that the map
-  \begin{align*}
-  \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
-  f &\mapsto \int_0^1 fg
-  \end{align*}
-  defines an element of \(L^1([0, 1]) {}^{ \vee }\) with
-  \({\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1]) {}^{ \vee }}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}\).
-\end{enumerate}
-
-\hypertarget{problem-4-1}{%
-\subsection{Problem 4}\label{problem-4-1}}
-
-See \cref{hilbert_space_exam_question}
-
-\hypertarget{practice-exam-november-2014}{%
-\section{Practice Exam (November
-2014)}\label{practice-exam-november-2014}}
-
-\hypertarget{problem-1-2}{%
-\subsection{Problem 1}\label{problem-1-2}}
-
-Let \(m_*(E)\) denote the Lebesgue outer measure of a set
-\(E \subseteq {\mathbb{R}}^n\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove using the definition of Lebesgue outer measure that
-  \begin{align*}
-  m \qty{ \displaystyle\bigcup_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
-  .\end{align*}
-\item
-  Prove that for any \(E \subseteq {\mathbb{R}}^n\) and any
-  \(\epsilon> 0\) there exists an open set \(G\) with \(E \subseteq G\)
-  and
-  \begin{align*}
-  m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
-  .\end{align*}
-\end{enumerate}
-
-\hypertarget{problem-2-2}{%
-\subsection{Problem 2}\label{problem-2-2}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  See \cref{equivalence_of_approximating_measures}
-\item
-  Let \(f_k\) be a sequence of extended real-valued Lebesgue measurable
-  function.
-
-  \begin{enumerate}
-  \def\labelenumii{\roman{enumii}.}
-  \item
-    Prove that \(\inf_k f_k, \sup_k f_k\) are both Lebesgue measurable
-    function.
-
-    \emph{Hint: argue that}
-    \begin{align*}
-    \left\{{x {~\mathrel{\Big|}~}\inf_k f_k(x) < a}\right\} = \displaystyle\bigcup_k \left\{{x {~\mathrel{\Big|}~}f_k(x) < a}\right\}
-    .\end{align*}
-  \item
-    Carefully state Fatou's Lemma and deduce the Monotone Converge
-    Theorem from it.
-  \end{enumerate}
-\end{enumerate}
-
-\hypertarget{problem-3-2}{%
-\subsection{Problem 3}\label{problem-3-2}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that if \(f, g\in L^+({\mathbb{R}})\) then
-  \begin{align*}
-  \int(f +g) = \int f + \int g
-  .\end{align*}
-  Extend this to establish that if
-  \(\left\{{ f_k}\right\} \subseteq L^+({\mathbb{R}}^n)\) then
-  \begin{align*}
-    \int \sum_k f_k = \sum_k \int f_k
-    .\end{align*}
-\item
-  Let
-  \(\left\{{E_j}\right\}_{j\in {\mathbb{N}}} \subseteq \mathcal{M}({\mathbb{R}}^n)\)
-  with \(E_j \nearrow E\). Use the countable additivity of \(\mu_f\) on
-  \(\mathcal{M}({\mathbb{R}}^n)\) established above to show that
-  \begin{align*}
-    \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
-    .\end{align*}
-\end{enumerate}
-
-\hypertarget{problem-4-2}{%
-\subsection{Problem 4}\label{problem-4-2}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that
-  \(f\in L^1({\mathbb{R}}^n) \implies {\left\lvert {f(x)} \right\rvert} < \infty\)
-  almost everywhere.
-\item
-  Show that if \(\left\{{f_k}\right\} \subseteq L^1({\mathbb{R}}^n)\)
-  with \(\sum {\left\lVert {f_k} \right\rVert}_1 < \infty\) then
-  \(\sum f_k\) converges almost everywhere and in \(L^1\).
-\item
-  Use the Dominated Convergence Theorem to evaluate
-  \begin{align*}
-  \lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \,dx
-  .\end{align*}
-\end{enumerate}
-
-\hypertarget{practice-exam-november-2014-1}{%
-\section{Practice Exam (November
-2014)}\label{practice-exam-november-2014-1}}
-
-\hypertarget{fubini-tonelli}{%
-\subsection{1: Fubini-Tonelli}\label{fubini-tonelli}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Carefully state Tonelli's theorem for a nonnegative function
-  \(F(x, t)\) on \({\mathbb{R}}^n\times{\mathbb{R}}\).
-\item
-  Let \(f:{\mathbb{R}}^n\to [0, \infty]\) and define
-  \begin{align*}
-  {\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\}
-  .\end{align*}
-
-  Prove the validity of the following two statements:
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \tightlist
-  \item
-    \(f\) is Lebesgue measurable on
-    \({\mathbb{R}}^{n} \iff {\mathcal{A}}\) is a Lebesgue measurable
-    subset of \({\mathbb{R}}^{n+1}\).
-  \item
-    If \(f\) is Lebesgue measurable on \({\mathbb{R}}^n\) then
-    \begin{align*}
-    m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}{~\mathrel{\Big|}~}f(x) \geq t\right\}\right) d t
-    .\end{align*}
-  \end{enumerate}
-\end{enumerate}
-
-\hypertarget{convolutions-and-the-fourier-transform}{%
-\subsection{2: Convolutions and the Fourier
-Transform}\label{convolutions-and-the-fourier-transform}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(f, g\in L^1({\mathbb{R}}^n)\) and give a definition of
-  \(f\ast g\).
-\item
-  Prove that if \(f, g\) are integrable and bounded, then
-  \begin{align*}
-  (f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0
-  .\end{align*}
-\item
-  In parts:
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \tightlist
-  \item
-    Define the \emph{Fourier transform} of an integrable function \(f\)
-    on \({\mathbb{R}}^n\).
-  \item
-    Give an outline of the proof of the Fourier inversion formula.
-  \item
-    Give an example of a function \(f\in L^1({\mathbb{R}}^n)\) such that
-    \(\widehat{f}\) is not in \(L^1({\mathbb{R}}^n)\).
-  \end{enumerate}
-\end{enumerate}
-
-\hypertarget{hilbert-spaces}{%
-\subsection{3: Hilbert Spaces}\label{hilbert-spaces}}
-
-\label{hilbert_space_exam_question}
-
-Let \(\left\{{u_n}\right\}_{n=1}^\infty\) be an orthonormal sequence in
-a Hilbert space \(H\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(x\in H\) and verify that
-  \begin{align*}
-  \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
-  =
-  \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-  .\end{align*}
-  for any \(N\in {\mathbb{N}}\) and deduce that
-  \begin{align*}
-  \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
-  .\end{align*}
-\item
-  Let
-  \(\left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}})\)
-  and prove that there exists an \(x\in H\) such that
-  \(a_n = {\left\langle {x},~{u_n} \right\rangle}\) for all
-  \(n\in {\mathbb{N}}\), and moreover \(x\) may be chosen such that
-  \begin{align*}
-  {\left\lVert {x} \right\rVert}_H = \qty{ \sum_{n\in {\mathbb{N}}} {\left\lvert {a_n} \right\rvert}^2}^{1\over 2}
-  .\end{align*}
-\item
-  Prove that if \(\left\{{u_n}\right\}\) is \emph{complete}, Bessel's
-  inequality becomes an equality.
-\end{enumerate}
-
-\begin{solution}[part b]
-
-\envlist
-
-\begin{itemize}
-\item
-  Take \(\left\{{a_n}\right\} \in \ell^2\), then note that
-  \(\sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies\) the
-  tails vanish.
-\item
-  Define \(x \coloneqq\displaystyle\lim_{N\to\infty} S_N\) where
-  \(S_N = \sum_{k=1}^N a_k u_k\)
-\item
-  \(\left\{{S_N}\right\}\) is Cauchy and \(H\) is complete, so
-  \(x\in H\).
-\item
-  By construction,
-  \begin{align*}
-  {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n 
-  \end{align*}
-  since the \(u_k\) are all orthogonal.
-\item
-  By Pythagoras since the \(u_k\) are normal,
-  \begin{align*}
-  {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
-  .\end{align*}
-\end{itemize}
-
-\end{solution}
-
-\begin{solution}[part c]
-
-Let \(x\) and \(u_n\) be arbitrary.
-
-\begin{align*}
-{\left\langle {x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle}
-&=
-{\left\langle {x},~{u_n} \right\rangle}
--
-{\left\langle {\sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
-&=
-{\left\langle {x},~{u_n} \right\rangle}
--
-\sum_{k=1}^\infty  {\left\langle {{\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
-&=
-{\left\langle {x},~{u_n} \right\rangle}
--
-\sum_{k=1}^\infty  {\left\langle {x},~{u_k} \right\rangle} {\left\langle {u_k },~{u_n} \right\rangle} \\
-&= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {x},~{u_n} \right\rangle} = 0 \\
-\implies 
-x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k &= 0 \quad\text{by completeness}
-.\end{align*}
-
-So
-\begin{align*}
-x = \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle} u_k
-\implies
-{\left\lVert {x} \right\rVert}^2 = \sum_{k=1}^\infty {\left\lvert {{\left\langle {x},~{u_k} \right\rangle}} \right\rvert}^2. \hfill\blacksquare
-.\end{align*}
-
-\end{solution}
-
-\hypertarget{lp-spaces}{%
-\subsection{\texorpdfstring{4: \(L^p\)
-Spaces}{4: L\^{}p Spaces}}\label{lp-spaces}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove Holder's inequality: let \(f\in L^p, g\in L^q\) with \(p, q\)
-  conjugate, and show that
-  \begin{align*}
-  {\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q}
-  .\end{align*}
-\item
-  Prove Minkowski's Inequality:
-  \begin{align*}
-  1\leq p < \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p}
-  .\end{align*}
-  Conclude that if \(f, g\in L^p({\mathbb{R}}^n)\) then so is \(f+g\).
-\item
-  Let \(X = [0, 1] \subset {\mathbb{R}}\).
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \item
-    Give a definition of the Banach space \(L^\infty(X)\) of essentially
-    bounded functions of \(X\).
-  \item
-    Let \(f\) be non-negative and measurable on \(X\), prove that
-    \begin{align*}
-     \int_X f(x)^p \,dx \overset{p\to\infty}\to
-     \begin{dcases}
-     \infty \quad\text{or} \\
-     m\qty{\left\{{f^{-1}(1)}\right\}}
-     \end{dcases}
-     ,\end{align*}
-    and characterize the functions of each type
-  \end{enumerate}
-\end{enumerate}
-
-\begin{solution}
-
-\begin{align*}
-\int f^p 
-&= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
-&= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
-&= \int_{x < 1} f^p + m(\left\{{f = 1}\right\}) + \int_{x > 1} f^p \\
-&\overset{p\to\infty}\to 0  + m(\left\{{f = 1}\right\}) + 
-\begin{cases} 
-0 & m(\left\{{x\geq 1}\right\}) = 0 \\ 
-\infty & m(\left\{{x\geq 1}\right\}) > 0.
-\end{cases}
-\end{align*}
-
-\end{solution}
-
-\hypertarget{dual-spaces}{%
-\subsection{5: Dual Spaces}\label{dual-spaces}}
-
-Let \(X\) be a normed vector space.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Give the definition of what it means for a map \(L:X\to {\mathbb{C}}\)
-  to be a \emph{linear functional}.
-\item
-  Define what it means for \(L\) to be \emph{bounded} and show \(L\) is
-  bounded \(\iff L\) is continuous.
-\item
-  Prove that
-  \((X {}^{ \vee }, {\left\lVert {{-}} \right\rVert}_{^{\operatorname{op}}})\)
-  is a Banach space.
-\end{enumerate}
-
 \hypertarget{extra-problems-from-problem-sets}{%
 \section{Extra Problems from Problem
 Sets}\label{extra-problems-from-problem-sets}}
 
-\hypertarget{section-4}{%
-\subsection{2010 6.1}\label{section-4}}
+\hypertarget{section}{%
+\subsection{2010 6.1}\label{section}}
 
 Show that
 \begin{align*}
@@ -4546,16 +3928,16 @@ Show that
 \int_{{\mathbb{R}}^n\setminus{\mathbb{B}}^n} {1 \over {\left\lvert {x} \right\rvert}^p } \,dx&< \infty \iff p > n 
 .\end{align*}
 
-\hypertarget{section-5}{%
-\subsection{2010 6.2}\label{section-5}}
+\hypertarget{section-1}{%
+\subsection{2010 6.2}\label{section-1}}
 
 Show that
 \begin{align*}
 \int_{{\mathbb{R}}^n} {\left\lvert { f} \right\rvert} = \int_0^{\infty } m(A_t)\,dt&& A_t \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert {f(x)} \right\rvert} > t}\right\}
 .\end{align*}
 
-\hypertarget{section-6}{%
-\subsection{2010 6.5}\label{section-6}}
+\hypertarget{section-2}{%
+\subsection{2010 6.5}\label{section-2}}
 
 Suppose \(F \subseteq {\mathbb{R}}\) with \(m(F^c) < \infty\) and let
 \(\delta(x) \coloneqq d(x, F)\) and
@@ -4573,8 +3955,8 @@ I_F(x) \coloneqq\int_{\mathbb{R}}{ \delta(y) \over {\left\lvert {x-y} \right\rve
   Show that \(I_F(x) < \infty\) for almost every \(x\)
 \end{enumerate}
 
-\hypertarget{section-7}{%
-\subsection{2010 7.1}\label{section-7}}
+\hypertarget{section-3}{%
+\subsection{2010 7.1}\label{section-3}}
 
 Let \((X, \mathcal{M}, \mu)\) be a measure space and prove the following
 properties of \(L^ \infty (X, \mathcal{M}, \mu)\):
@@ -4596,16 +3978,16 @@ properties of \(L^ \infty (X, \mathcal{M}, \mu)\):
   Simple functions are dense in \(L^{\infty }\).
 \end{itemize}
 
-\hypertarget{section-8}{%
-\subsection{2010 7.2}\label{section-8}}
+\hypertarget{section-4}{%
+\subsection{2010 7.2}\label{section-4}}
 
 Show that for \(0 < p < q \leq \infty\),
 \({\left\lVert {a} \right\rVert}_{\ell^q} \leq {\left\lVert {a} \right\rVert}_{\ell^p}\)
 over \({\mathbb{C}}\), where
 \({\left\lVert {a} \right\rVert}_{\infty } \coloneqq\sup_j {\left\lvert {a_j} \right\rvert}\).
 
-\hypertarget{section-9}{%
-\subsection{2010 7.3}\label{section-9}}
+\hypertarget{section-5}{%
+\subsection{2010 7.3}\label{section-5}}
 
 Let \(f, g\) be non-negative measurable functions on \([0, \infty)\)
 with
@@ -4619,15 +4001,15 @@ Show that
 \int_0^{\infty } \qty{ \int_0^{\infty } f(y) \,dy} {g(x) \over x} \,dx\leq AB
 .\end{align*}
 
-\hypertarget{section-10}{%
-\subsection{2010 7.4}\label{section-10}}
+\hypertarget{section-6}{%
+\subsection{2010 7.4}\label{section-6}}
 
 Let \((X, \mathcal{M}, \mu)\) be a measure space and
 \(0 < p < q< \infty\). Prove that if \(L^q(X) \subseteq L^p(X)\), then
 \(X\) does not contain sets of arbitrarily large finite measure.
 
-\hypertarget{section-11}{%
-\subsection{2010 7.5}\label{section-11}}
+\hypertarget{section-7}{%
+\subsection{2010 7.5}\label{section-7}}
 
 Suppose \(0 < a < b \leq \infty\), and find examples of functions
 \(f \in L^p((0, \infty ))\) if and only if:
@@ -4646,8 +4028,8 @@ Suppose \(0 < a < b \leq \infty\), and find examples of functions
 f(x) \coloneqq x^{- \alpha} {\left\lvert { \log(x) } \right\rvert}^{ \beta}
 .\end{align*}
 
-\hypertarget{section-12}{%
-\subsection{2010 7.6}\label{section-12}}
+\hypertarget{section-8}{%
+\subsection{2010 7.6}\label{section-8}}
 
 Define
 \begin{align*}
@@ -4676,8 +4058,8 @@ G(x) &\coloneqq
 H(\xi) \coloneqq e^{2\pi i \xi} \int_0^1 y e^{2\pi i y \xi }\,dy
 .\end{align*}
 
-\hypertarget{section-13}{%
-\subsection{2010 7.7}\label{section-13}}
+\hypertarget{section-9}{%
+\subsection{2010 7.7}\label{section-9}}
 
 Show that for each \(\epsilon>0\) the following function is the Fourier
 transform of an \(L^1({\mathbb{R}}^n)\) function:
@@ -4723,15 +4105,15 @@ Prove that
 f \in L^p, g\in L^q \implies f \ast g \in L^r \text{ and } {\left\lVert {f \ast g} \right\rVert}_r \leq {\left\lVert {f} \right\rVert}_p {\left\lVert {g} \right\rVert}_q
 .\end{align*}
 
-\hypertarget{section-14}{%
-\subsection{2010 9.1}\label{section-14}}
+\hypertarget{section-10}{%
+\subsection{2010 9.1}\label{section-10}}
 
 Show that the set
 \(\left\{{ u_k(j) \coloneqq\delta_{ij} }\right\} \subseteq \ell^2({\mathbb{Z}})\)
 and forms an orthonormal system.
 
-\hypertarget{section-15}{%
-\subsection{2010 9.2}\label{section-15}}
+\hypertarget{section-11}{%
+\subsection{2010 9.2}\label{section-11}}
 
 Consider \(L^2([0, 1])\) and define
 \begin{align*}
@@ -4753,8 +4135,8 @@ e_1(x) &= \sqrt{3}(2x-1)
 
 Compute \({\left\lVert {f - g} \right\rVert}_2\).
 
-\hypertarget{section-16}{%
-\subsection{2010 9.3}\label{section-16}}
+\hypertarget{section-12}{%
+\subsection{2010 9.3}\label{section-12}}
 
 Let \(E \subseteq H\) a Hilbert space.
 
@@ -4766,8 +4148,8 @@ Let \(E \subseteq H\) a Hilbert space.
   Show that \((E^\perp)^\perp = { \operatorname{cl}} _H(E)\).
 \end{enumerate}
 
-\hypertarget{b-1}{%
-\subsection{2010 9.5b}\label{b-1}}
+\hypertarget{b}{%
+\subsection{2010 9.5b}\label{b}}
 
 Let \(f\in L^1((0, 2\pi))\).
 
@@ -4780,8 +4162,8 @@ Let \(f\in L^1((0, 2\pi))\).
   \({\left\lVert {H} \right\rVert}_1 < \epsilon\).
 \end{enumerate}
 
-\hypertarget{section-17}{%
-\subsection{2010 9.6}\label{section-17}}
+\hypertarget{section-13}{%
+\subsection{2010 9.6}\label{section-13}}
 
 Prove that every closed convex \(K \subset H\) a Hilbert space has a
 unique element of minimal norm.
@@ -4800,16 +4182,16 @@ Show that for all \(x\in H\),
 {\left\lVert { S_N x - Px} \right\rVert}_H \overset{N\to \infty } \to 0
 .\end{align*}
 
-\hypertarget{section-18}{%
-\subsection{2010 10.1}\label{section-18}}
+\hypertarget{section-14}{%
+\subsection{2010 10.1}\label{section-14}}
 
 Let \(\nu, \mu\) be signed measures, and show that
 \begin{align*}
 \nu \perp \mu \text{ and } \nu \ll {\left\lvert { \mu} \right\rvert} \implies \nu = 0
 .\end{align*}
 
-\hypertarget{section-19}{%
-\subsection{2010 10.2}\label{section-19}}
+\hypertarget{section-15}{%
+\subsection{2010 10.2}\label{section-15}}
 
 Let \(f\in L^1({\mathbb{R}}^n)\) with \(f\neq 0\).
 
@@ -4823,8 +4205,8 @@ Let \(f\in L^1({\mathbb{R}}^n)\) with \(f\neq 0\).
   .\end{align*}
 \end{enumerate}
 
-\hypertarget{section-20}{%
-\subsection{2010 10.3}\label{section-20}}
+\hypertarget{section-16}{%
+\subsection{2010 10.3}\label{section-16}}
 
 Consider the function
 \begin{align*}
@@ -4849,8 +4231,8 @@ f(x) \coloneqq
   Conclude that \(Hf\) is not locally integrable.
 \end{enumerate}
 
-\hypertarget{section-21}{%
-\subsection{2010 10.4}\label{section-21}}
+\hypertarget{section-17}{%
+\subsection{2010 10.4}\label{section-17}}
 
 Let \(f\in L^1({\mathbb{R}})\) and let
 \(\mathcal{U}\coloneqq\left\{{(x, y) \in {\mathbb{R}}^2 {~\mathrel{\Big|}~}y > 0}\right\}\)

@@ -48,6 +48,7 @@ Things to know well:
 ## Common Tricks
 
 -   Virtually any time: consider \( 1/f(z) \) and \( f(1/z) \).
+-   Setting \( w=e^z \) is useful.
 
 ::: {.remark title="Showing a function is constant"}
 If you want to show that a function \( f \) is constant, try one of the following:
@@ -70,8 +71,6 @@ To count zeros:
 -   Rouche's theorem
 -   The argument principle
 :::
-
--   Setting \( w=e^z \) is useful.
 
 ## Basic but Useful Facts
 
@@ -181,7 +180,7 @@ e^z &= \sum_{k\geq 0} {z^k \over k!} \\
   &= \sum_{k \geq 0} {z^k\over k} \quad {\left\lvert {z} \right\rvert} < 1 \\
 {\frac{\partial }{\partial z}\,} \sum_{k=0}^\infty a_k z^k 
   &= \sum_{k=0}^\infty a_{k+1}z^k \\
-\sqrt{1+x} = (1+x)^{1/2} 
+(1+x)^{1/2} 
   &= 1 + (1/2)x + {(1/2)(-1/2) \over 2!}x^2 + {(1/2)(-1/2)(-3/2) \over 3!}x^3 + \cdots \\
   &= 1 + {1\over 2} x - {1\over 8}x^2 + {1\over 16}x^3 - \cdots
 \]
@@ -195,6 +194,9 @@ Useful trick for expanding square roots:
 .\]
 :::
 
+```{=tex}
+\todo[inline]{Add series tricks.}
+```
 # Calculus Preliminaries
 
 ## Definitions

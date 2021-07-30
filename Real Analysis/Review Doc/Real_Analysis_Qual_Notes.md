@@ -8,6 +8,7 @@
 \newcommand\compact[0]{\operatorname{cpt}}
 \newcommand\hyp[0]{{\operatorname{hyp}}}
 \newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
 \newcommand\kbar{ { \bar{k} } }
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
@@ -45,10 +46,13 @@
 \newcommand{\EKL}[0]{{\mathrm{EKL}}}
 \newcommand{\EO}[0]{{\operatorname{EO}}}
 \newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\minor}[0]{{\operatorname{minor}}}
 \newcommand{\Et}{\text{Ét}}
-\newcommand{\Extalgebra}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\Extprod}[0]{\bigwedge}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Extpower}[0]{\bigwedge\nolimits}
+\newcommand{\Extalgebra}[0]{\bigwedge\nolimits}
+\newcommand{\Extalg}[0]{\Extalgebra}
+\newcommand{\Extprod}[0]{\bigwedge\nolimits}
 \newcommand{\Ext}{\operatorname{Ext} }
 \newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
@@ -235,17 +239,18 @@
 \newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\dlog}[0]{\operatorname{dLog}}
-\newcommand{\dmu}{\,d\mu}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
 \newcommand{\dr}{\,dr}
 \newcommand{\ds}{\,ds}
 \newcommand{\dtheta}{\,d\theta}
 \newcommand{\dt}{\,dt}
-\newcommand{\dual}[0]{ {}^{ \vee }}
 \newcommand{\du}{\,du}
 \newcommand{\dw}{\,dw}
 \newcommand{\dxi}{\,d\xi}
 \newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
 \newcommand{\dy}{\,dy}
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\dzeta}{\,d\zeta}
@@ -371,6 +376,7 @@
 \newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
 \newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\cell}[0]{{ \mathrm{cell}} }
 \newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
@@ -698,6 +704,16 @@
   {#3} & {#4}
 \end{bmatrix}
 }}
+\newcommand{\mattt}[9]{{
+\begin{bmatrix}
+  {#1} & {#2} & {#3}
+\\
+  {#4} & {#5} & {#6}
+\\
+  {#7} & {#8} & {#9}
+\end{bmatrix}
+}}
+
 \newcommand\stacksymbol[3]{
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
@@ -2911,8 +2927,6 @@ $$
 
 
 
-# Extra Problems: Undergrad Review 
-
 # Extra Problems: Measure Theory
 
 ## Greatest Hits
@@ -3072,409 +3086,6 @@ R \subseteq \Union_j R_j &\implies \abs R \leq \sum \abs R_j
 
 ## Lebesgue Measurable Functions
 
-
-
-# Extra Problems: Integration 
-
-## The Lebesgue Integral
-
-## $L^1$ as a Banach Space
-
-## Fubini and Tonelli
-
-
-# Extra Problems: Differentiation and Misc
-
-## ?
-
-
-
-
-# Midterm Exam 2 (December 2014)
-
-## 1
-
-> Note: (a) is a repeat.
-
-- Let $\Lambda\in L^2(X)\dual$.
-  - Show that $M\definedas \theset{f\in L^2(X) \suchthat \Lambda(f) = 0} \subseteq L^2(X)$ is a closed subspace, and $L^2(X) = M \oplus M\perp$.
-  - Prove that there exists a unique $g\in L^2(X)$ such that $\Lambda(f) = \int_X g \bar f$.
-
-## 2
-
-a. In parts:
-  - Given a definition of $L^\infty(\RR^n)$.
-  - Verify that $\norm{\wait}_\infty$ defines a norm on $L^\infty(\RR^n)$.
-  - Carefully proved that $(L^\infty(\RR^n), \norm{\wait}_\infty)$ is a Banach space.
-
-b. Prove that for any measurable $f:\RR^n \to \CC$,
-\[
-L^1(\RR^n) \intersect L^\infty(\RR^n) \subset L^2(\RR^n) \qtext{and} \norm{f}_2 \leq \norm{f}_1^{1\over 2} \cdot \norm{f}_\infty^{1\over 2}
-.\]
-
-## 3
-
-a. Prove that if $f, g: \RR^n\to \CC$ is both measurable then $F(x, y) \definedas f(x)$ and $h(x, y)\definedas f(x-y) g(y)$ is measurable on $\RR^n\cross \RR^n$.
-
-b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n)$, then $f\ast g \in L^1(\RR^n) \intersect L^\infty(\RR^n)$ is well defined, and carefully show that it satisfies the following properties:
-\[
-\norm{f\ast g}_\infty &\leq \norm{g}_1 \norm{f}_\infty
-\norm{f\ast g}_1      &\leq \norm{g}_1 \norm{f}_1
-\norm{f\ast g}_2      &\leq \norm{g}_1 \norm{f}_2
-.\]
-
-> Hint: first show $\abs{f\ast g}^2 \leq \norm{g}_1 \qty{ \abs{f}^2 \ast \abs{g}}$.
-
-## 4 (Weierstrass Approximation Theorem)
-
-> Note: (a) is a repeat.
-
-Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation theorem: for any $\eps> 0$ there exists a polynomial $P$ such that $\norm{f - P}_{\infty} < \eps$.
-
-# Midterm Exam 1 (October 2018)
-
-## Problem 1
-\label{equivalence_of_approximating_measures}
-Let $E \subseteq \RR^n$ be bounded.
-Prove the following are equivalent: 
-
-1. For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that 
-\[
-F \subseteq E \subseteq G && m(G\sm F) < \epsilon
-.\]
-
-2. There exists a \( G_ \delta \) set $V$ and an \( F_ \sigma \) set $H$ such that 
-\[
-m(V\sm H) = 0
-.\]
-
-## Problem 2
-
-Let \( \ts{ f_k } _{k=1}^{\infty } \) be a sequence of extended real-valued Lebesgue measurable functions.
-
-a. Prove that \( \sup_k f_k \) is a Lebesgue measurable function.
-
-b. Prove that if \( \lim_{k \to \infty } f_k(x) \) exists for every \( x \in \RR^n \) then \( \lim_{k\to \infty } f_k \) is also a measurable function.
-
-
-## Problem 3
-
-### a
-
-Prove that if \( E \subseteq \RR^n \) is a Lebesgue measurable set, then for any \( h \in \RR \) the set
-\[
-E+h \da \ts{x + h \st x\in E }
-\]
-is also Lebesgue measurable and satisfies \( m(E + h) = m(E) \).
-
-### b
-
-Prove that if $f$ is a non-negative measurable function on $\RR^n$ and $h\in \RR^n$ then the function
-\[
-\tau_h d(x) \da f(x-h)
-\]
-is a non-negative measurable function and
-\[
-\int f(x) \dx = \int f(x-h) \dx
-.\]
-
-
-## Problem 4
-
-Let $f: \RR^n\to \RR$ be a Lebesgue measurable function.
-
-a. Prove that for all \( \alpha> 0 \) ,
-\[
-A_ \alpha  \da \ts{x\in \RR^n \st \abs{ f(x) } > \alpha} \implies m(A_ \alpha) \leq {1\over \alpha} \int \abs{f (x)} \dx
-.\]
-
-b. Prove that 
-\[
-\int \abs{ f(x) } \dx = 0 \iff f = 0 \text{ almost everywhere}
-.\]
-
-
-## Problem 5
-
-Let \( \ts{ f_k }_{k=1}^{\infty } \subseteq L^2([0, 1]) \) be a sequence which *converges in $L^1$* to a function $f$.
-
-a. Prove that $f\in L^1([0, 1])$.
-
-b. Give an example illustrating that $f_k$ may not converge to $f$ almost everywhere.
-
-c. Prove that $\ts{f_k}$ must contain a subsequence that converges to $f$ almost everywhere.
-
-# Midterm Exam 2 (November 2018)
-
-## Problem 1 
-
-Let $f, g\in L^1([0, 1])$, define $F(x) = \int_0^x f(y)\dy$ and $G(x) = \int_0^x g(y)\dy$, and show
-\[
-\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
-.\]
-
-## Problem 2
-Let $\phi\in L^1(\RR^n)$ such that $\int \phi = 1$ and define $\phi_t(x) = t^{-n}\phi(t\inv x)$.
-Show that if $f$ is bounded and uniformly continuous then $f\ast \phi_t \converges{t\to 0}\to f$ uniformly.
-
-## Problem 3
-
-Let $g\in L^\infty([0, 1])$.
-
-a. Prove
-\[
-\norm{g}_{L^p([0, 1])}  \converges{p\to\infty}\to \norm{g}_{L^\infty([0, 1])}
-.\]
-
-b. Prove that the map
-\[
-\Lambda_g: L^1([0, 1]) &\to \CC \\
-f &\mapsto \int_0^1 fg
-\]
-  defines an element of $L^1([0, 1])\dual$ with $\norm{\Lambda_g}_{L^1([0, 1])\dual}= \norm{g}_{L^\infty([0, 1])}$.
-
-
-## Problem 4
-
-See
-\cref{hilbert_space_exam_question}
-
-# Practice Exam (November 2014)
-
-## Problem 1
-
-Let $m_*(E)$ denote the Lebesgue outer measure of a set \( E \subseteq \RR^n \).
-
-a. Prove using the definition of Lebesgue outer measure that
-\[
-m \qty{ \Union_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
-.\]
-
-b. Prove that for any \( E \subseteq \RR^n \) and any \( \epsilon> 0 \) there exists an open set $G$ with $E \subseteq G$ and
-\[
-m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
-.\]
-
-## Problem 2
-
-a. See \cref{equivalence_of_approximating_measures}
-
-b. Let $f_k$ be a sequence of extended real-valued Lebesgue measurable function.
-
-    i. Prove that $\inf_k f_k, \sup_k f_k$ are both Lebesgue measurable function.
-    
-        *Hint: argue that*
-\[
-\ts{x \st \inf_k f_k(x) < a} = \Union_k \ts{x \st f_k(x) < a}
-.\]
-
-    ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
-
-
-## Problem 3
-
-a. Prove that if $f, g\in L^+(\RR)$ then 
-\[
-\int(f +g) = \int f + \int g
-.\]
-  Extend this to establish that if $\ts{ f_k} \subseteq L^+(\RR^n)$ then
-  \[
-  \int \sum_k f_k = \sum_k \int f_k
-  .\]
-
-
-b. Let $\ts{E_j}_{j\in \NN} \subseteq \mathcal{M}(\RR^n)$ with $E_j \nearrow E$. 
-  Use the countable additivity of $\mu_f$ on \( \mathcal{M}(\RR^n)  \) established above to show that
-  \[
-  \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
-  .\]
-
-## Problem 4
-
-a. Show that $f\in L^1(\RR^n) \implies \abs{f(x)} < \infty$ almost everywhere.
-
-b. Show that if $\ts{f_k} \subseteq L^1(\RR^n)$ with $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
-
-c. Use the Dominated Convergence Theorem to evaluate
-\[
-\lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \dx
-.\]
-
-
-
-
-# Practice Exam (November 2014)
-
-## 1: Fubini-Tonelli
-
-a.
-Carefully state Tonelli's theorem for a nonnegative function $F(x, t)$ on $\RR^n\cross \RR$.
-
-b.
-  Let $f:\RR^n\to [0, \infty]$ and define
-\[
-\mca \definedas \theset{(x, t) \in \RR^n\cross \RR \suchthat 0\leq t \leq f(x)}
-.\]
-
-  Prove the validity of the following two statements:
-
-  1. $f$ is Lebesgue measurable on $\RR^{n} \iff \mca$ is a Lebesgue measurable subset of $\RR^{n+1}$.
-  2. If $f$ is Lebesgue measurable on $\RR^n$ then
-  \[
-  m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}\suchthat f(x) \geq t\right\}\right) d t
-  .\]
-
-
-## 2: Convolutions and the Fourier Transform
-
-a.
-Let $f, g\in L^1(\RR^n)$ and give a definition of $f\ast g$.
-
-b.
-Prove that if $f, g$ are integrable and bounded, then
-\[
-(f\ast g)(x) \converges{\abs x\to\infty}\to 0
-.\]
-
-
-c. In parts:
-
-    1. Define the *Fourier transform* of an integrable function $f$ on $\RR^n$.
-    2. Give an outline of the proof of the Fourier inversion formula.
-    3. Give an example of a function $f\in L^1(\RR^n)$ such that $\hat{f}$ is not in $L^1(\RR^n)$.
-
-
-## 3: Hilbert Spaces
-\label{hilbert_space_exam_question}
-
-Let $\theset{u_n}_{n=1}^\infty$ be an orthonormal sequence in a Hilbert space $H$.
-
-a. Let $x\in H$ and verify that 
-\[
-\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
-=
-\|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
-.\]
-for any $N\in \NN$ and deduce that
-\[
-\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
-.\]
-
-b. Let $\theset{a_n}_{n\in \NN} \in \ell^2(\NN)$ and prove that there exists an $x\in H$ such that $a_n = \inner{x}{u_n}$ for all $n\in \NN$, and moreover $x$ may be chosen such that 
-\[
-\norm{x}_H = \qty{ \sum_{n\in \NN} \abs{a_n}^2}^{1\over 2}
-.\]
-
-c. Prove that if $\theset{u_n}$ is *complete*, Bessel's inequality becomes an equality.
-
-:::{.solution title="part b"}
-\envlist
-
-- Take $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
-
-- Define $x \definedas \displaystyle\lim_{N\to\infty} S_N$ where $S_N = \sum_{k=1}^N a_k u_k$
-
-- $\theset{S_N}$ is Cauchy and $H$ is complete, so $x\in H$.
-
-- By construction, 
-\[
-\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n 
-\]
-since the $u_k$ are all orthogonal.
-
-- By Pythagoras since the $u_k$ are normal,
-\[
-\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
-.\]
-
-:::
-
-:::{.solution title="part c"}
-Let $x$ and $u_n$ be arbitrary. 
-
-\[
-\inner{x - \sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n}
-&=
-\inner{x}{u_n}
--
-\inner{\sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n} \\
-&=
-\inner{x}{u_n}
--
-\sum_{k=1}^\infty  \inner{\inner{x}{u_k}u_k }{u_n} \\
-&=
-\inner{x}{u_n}
--
-\sum_{k=1}^\infty  \inner{x}{u_k} \inner{u_k }{u_n} \\
-&= \inner{x}{u_n} - \inner{x}{u_n} = 0 \\
-\implies 
-x - \sum_{k=1}^\infty \inner{x}{u_k}u_k &= 0 \quad\text{by completeness}
-.\]
-
-So 
-\[
-x = \sum_{k=1}^\infty \inner{x}{u_k} u_k
-\implies
-\norm{x}^2 = \sum_{k=1}^\infty \abs{\inner{x}{u_k}}^2. \qed
-.\]
-
-
-:::
-
-## 4: $L^p$ Spaces
-
-
-a. Prove Holder's inequality:
-  let $f\in L^p, g\in L^q$ with $p, q$ conjugate, and show that
-\[
-\pnorm{fg}p \leq \pnorm{f}p \cdot \pnorm{g}q
-.\]
-
-b. Prove Minkowski's Inequality:
-\[
-1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
-.\]
-Conclude that if $f, g\in L^p(\RR^n)$ then so is $f+g$.
-
-c. Let $X = [0, 1] \subset \RR$.
-
-    1. Give a definition of the Banach space $L^\infty(X)$ of essentially bounded functions of $X$.
-
-    2. Let $f$ be non-negative and measurable on $X$, prove that
-    \[
-    \int_X f(x)^p \,dx \converges{p\to\infty}\to
-    \begin{dcases}
-    \infty \quad\text{or} \\
-    m\qty{\theset{f\inv(1)}}
-    \end{dcases}
-    ,\]
-    and characterize the functions of each type
-
-
-:::{.solution}
-\[
-\int f^p 
-&= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
-&= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
-&= \int_{x < 1} f^p + m(\theset{f = 1}) + \int_{x > 1} f^p \\
-&\converges{p\to\infty}\to 0  + m(\theset{f = 1}) + 
-\begin{cases} 
-0 & m(\theset{x\geq 1}) = 0 \\ 
-\infty & m(\theset{x\geq 1}) > 0.
-\end{cases}
-\] 
-
-:::
-
-## 5: Dual Spaces
-
-Let $X$ be a normed vector space.
-
-a. Give the definition of what it means for a map $L:X\to \CC$ to be a *linear functional*.
-
-b. Define what it means for $L$ to be *bounded* and show $L$ is bounded $\iff L$ is continuous.
-
-c. Prove that $(X\dual, \norm{\wait}_{\op})$ is a Banach space.
 
 
 # Extra Problems from Problem Sets
