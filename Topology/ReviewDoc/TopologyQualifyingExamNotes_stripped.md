@@ -157,7 +157,7 @@ A space \( X \) is **connected** iff there does not exist a disconnection \( X =
 
 Note that there is an additional condition for a subspace \( Y\subset X \) to be connected:
 \[
-{ \operatorname{cl}} _{Y}(A) \cap V = A \cap{ \operatorname{cl}} _{Y}(B) = \emptyset
+{ \operatorname{cl}} _{Y}(A) \cap B = A \cap{ \operatorname{cl}} _{Y}(B) = \emptyset
 .\]
 :::
 
