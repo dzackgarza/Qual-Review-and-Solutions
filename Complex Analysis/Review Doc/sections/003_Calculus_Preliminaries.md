@@ -55,7 +55,13 @@ The version for holomorphic functions: if $f\in \Hol(\CC; \CC)$ with $f'(p)\neq 
 :::
 
 :::{.theorem title="Green's Theorem"}
-If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then $$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, dA.$$
+If $\Omega \subseteq \CC$ is bounded with $\bd \Omega$ piecewise smooth and $f, g\in C^1(\bar \Omega)$, then 
+$$\int_{\bd \Omega} f\, dx + g\, dy = \iint_{\Omega} \qty{ \dd{g}{x} - \dd{f}{y} } \, \dA.$$
+In vector form,
+\[
+\int_\gamma F\cdot \dr = \iint_R \curl F \dA
+.\]
+
 :::
 
 ## Convergence
@@ -77,6 +83,21 @@ A series of functions $\sum_{n=1}^\infty f_n(x)$ converges uniformly iff
 If $\theset{f_n}$ with $f_n: \Omega \to \CC$ and there exists a sequence $\theset{M_n}$ with $\norm{f_n}_\infty \leq M_n$ and $\sum_{n\in \NN} M_n < \infty$, then $f(x) \definedas \sum_{n\in \NN} f_n(x)$ converges absolutely and uniformly on $\Omega$. 
 Moreover, if the $f_n$ are continuous, by the uniform limit theorem, $f$ is again continuous.
 :::
+
+## Integrals
+
+
+:::{.remark}
+Some basic facts needed for line integrals in the plane:
+
+- $\grad f = \tv{ \dd{f}{x}, \dd{f}{y} }$.
+  - If $F = \grad f$ for some $f$, $F$ is a vector field.
+- Given $f(x, y)$ and $\gamma(t)$, the chain rule yields $\dd{}{t} (f\circ \gamma)(t) = \inner{ \grad f\circ \gamma)(t)} {\gamma'(t)}$.
+- For $F(x, y) = \tv{M(x, y), N(x, y)}$, $\curl F = \dd{N}{x} - \dd{M}{y}$ and $\div F = \dd{M}{x} + \dd{N}{y}$.
+- $\int_\gamma F\cdot \dr = \int_a^b F(\gamma(t))\cdot \gamma'(t) \dt$.
+
+:::
+
 
 ## Series and Sequences
 

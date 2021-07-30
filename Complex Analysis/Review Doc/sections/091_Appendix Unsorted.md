@@ -24,7 +24,7 @@ where $\gamma \da \lim_{N\to\infty } \sum_{n=1^N} {1\over n} - \log(N)$
 ,\]
 which yields a product factorization for $\sin(\pi z)$.
 
-$\mcl(t^{z-1}, s=1) = \Gamma(z)$.
+$\mcl(t^{z-1}, s=1) = \Gamma(z)$ and $\mcl(t^n, s=1) = \Gamma(n+1)$.
 
 
 :::
