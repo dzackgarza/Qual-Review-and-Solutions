@@ -111,6 +111,12 @@ In particular, if $f, g$ are holomorphic, they have the same number of zeros in 
 
 :::
 
+
+:::{.slogan}
+The number of zeros/poles are determined by a dominating function.
+:::
+
+
 \todo[inline]{Prove}
 
 :::{.corollary title="Open Mapping"}
