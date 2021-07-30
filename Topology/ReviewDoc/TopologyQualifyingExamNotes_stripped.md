@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Preface
 
 References:
@@ -11,6 +23,15 @@ Some fun resources:
 -   [The Line with Two Origins](https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-line-with-2-origins/)
 
 ## Notation
+
+::: {.warnings}
+```{=tex}
+\envlist
+```
+-   All maps between spaces are assumed continuous!
+-   All maps are *pointed*, i.e. we implicitly work in the category \( {\mathsf{Top}}_* \).
+-   If left unspecified, homology is always taken with \( {\mathbb{Z}}{\hbox{-}} \)coefficients.
+:::
 
   Notation                                                   Definition
   ---------------------------------------------------------- -----------------------------------------
@@ -87,21 +108,16 @@ so \( f(g) \) is torsion of order dividing \( n \). But a free group is torsionf
 This is especially useful if you have some \( f: A\to B \) and you look at the induced homomorphism \( f_*: \pi_1(A) \to\pi_1(B) \). If the former is finite and the latter contains a copy of \( {\mathbb{Z}} \), then \( f_* \) has to be the trivial map \( f_*([\alpha]) = e \in \pi_1(B) \) for every \( [\alpha] \in \pi_1(A) \). You can play a similar game when you take homology or cohomology.
 :::
 
-# Summary and Topics: Point-Set Topology
-
-Some key high-level topics:
-
--   Connectedness
--   Compactness
--   Metric spaces
--   Hausdorff spaces
-
 # Definitions
 
 ## Point-Set Topology
 
 ::: {.remark title="on the term 'locally'"}
 The prefix "locally blah" almost always means that for every \( x\in X \), there exists *some* neighborhood \( N_x\ni x \) which has property "blah".
+:::
+
+::: {.definition title="Accumulation point"}
+See **limit point**.
 :::
 
 ::: {.definition title="Basis for a topology"}
@@ -112,6 +128,10 @@ A set \( \mathcal{B} \) is a **basis** for a topology iff
 -   If \( x \) is in the intersection of two basis sets \( B_1 \cap B_2 \), there is a third basic open \( B_3 \ni x \) with \( B_3 \subset B_1 \cap B_2 \).
 
 The topology **generated** by \( \mathcal{B} \) is the following: \( U\subseteq X \) is open iff for each \( x\in U \) there is a basic open \( B \) with \( x\in B \subset U \). Equivalently, every open set is a union of basic open sets.
+:::
+
+::: {.definition title="Boundary"}
+The **boundary** of a subset \( A\subseteq X \) is defined as \( {{\partial}}A \coloneqq{ \operatorname{cl}} _X(A) \setminus^\circ{A} \). Equivalently, every point \( p\in A \) intersects both \( A \) and \( X\setminus A \).
 :::
 
 ::: {.definition title="Bounded"}
@@ -133,7 +153,7 @@ Two topologies are **comparable** if either \( \tau_1 < \tau_2 \) or \( \tau_2 <
 \todo[inline]{Is this actually a poset relation? Fails reflexivity.}
 ```
 ::: {.definition title="Connected"}
-A space \( X \) is **connected** iff there does not exist a disconnection \( X = A{\coprod}B \) with \( A, B \) nonempty open sets. I.e. \( X \) can not be written as the disjoint union of two proper nonempty open sets. Equivalently, \( X \) contains no proper nonempty clopen sets.
+A space \( X \) is **connected** iff there does not exist a disconnection \( X = A{\textstyle\coprod}B \) with \( A, B \) nonempty open sets. I.e. \( X \) can not be written as the disjoint union of two proper nonempty open sets. Equivalently, \( X \) contains no proper nonempty clopen sets.
 
 Note that there is an additional condition for a subspace \( Y\subset X \) to be connected:
 \[
@@ -180,6 +200,10 @@ A collection of subsets \( \left\{{U_\alpha}\right\} \) of \( X \) is said to **
 A subspace \( Q\subset X \) is **dense** iff every neighborhood of every point in \( x \) intersects \( Q \). Equivalently, \( { \operatorname{cl}} _X(Q) = Q \).
 :::
 
+::: {.definition title="Diameter"}
+For a subset \( A \) of a metric space \( (X, d) \), the **diameter** of \( A \) is defined as \( \sup_{p, q\in A}d(p, q) \).
+:::
+
 ::: {.definition title="First Countable"}
 A space is **first-countable** iff every point admits a countable neighborhood basis.
 :::
@@ -190,6 +214,14 @@ A topological space \( X \) is *Hausdorff* iff points can be separated by disjoi
 
 ::: {.definition title="Injection"}
 A map \( \iota:A\to B \) with a **left** inverse \( f:B\to A \) satisfying \( f\circ \iota = \operatorname{id}_A \). Note that this is equivalent to \( f(x) = f(y) \implies x = y \).
+:::
+
+::: {.definition title="Interior Point"}
+A point \( p\in A \) is **interior** to \( A \) if there exists a neighborhood \( U\ni p \) that is entirely contained in \( A \).
+:::
+
+::: {.definition title="Isolated Point"}
+A point \( p\in A \) is **isolated** if \( p \) is not a limit point of \( A \). Equivalently, there exists a punctured neighborhood of \( p \) that does not intersect \( A \).
 :::
 
 ::: {.definition title="Lebesgue Number"}
@@ -266,6 +298,10 @@ For \( (X, \tau_X) \) and \( (Y, \tau_Y) \) topological spaces, defining
 \tau_{X \times Y} \coloneqq\left\{{U \times V {~\mathrel{\Big|}~}U\in \tau_X,\, V\in \tau_Y}\right\}
 \]
 yields the **product topology** on \( X \times Y \).
+:::
+
+::: {.definition title="Proper"}
+A map \( f:X\to Y \) is **proper** if pullbacks of compact sets are compact: if \( K \subseteq Y \) is compact, then \( f^{-1}(K) \subseteq X \) is compact.
 :::
 
 ::: {.definition title="Quasicompact"}
@@ -376,7 +412,7 @@ A topological **embedding** is a continuous map \( f:X\to Y \) which is a homeom
 ::: {.definition title="Uniform Continuity"}
 For \( f: (X, d_{x}) \to (Y, d_{Y}) \) metric spaces,
 \[
-\forall \varepsilon> 0, ~\exists \delta > 0 \text{ such that } \quad d_{X}(x_{1}, x_{2}) < \delta \implies d_{Y}(f(x_{1}), f(x_{2})) < \varepsilon
+\forall {\varepsilon}> 0, ~\exists \delta > 0 \text{ such that } \quad d_{X}(x_{1}, x_{2}) < \delta \implies d_{Y}(f(x_{1}), f(x_{2})) < {\varepsilon}
 .\]
 :::
 
@@ -398,12 +434,6 @@ For \( f: (X, d_{x}) \to (Y, d_{Y}) \) metric spaces,
 For an \( R{\hbox{-}} \)module \( M \), a basis \( B \) is a linearly independent generating set.
 :::
 
-::: {.definition title="Boundary"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
 ::: {.definition title="Boundary of a manifold"}
 Points \( x\in M^n \) defined by
 \[
@@ -614,7 +644,7 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 :::
 
 ::: {.definition title="Degree of a Map of Spheres"}
-Given any \( f: S^n \to S^n \), there are induced maps on homotopy and homology groups. Taking \( f^*: H^n(S^n) \to H^n(S^n) \) and identifying \( H^n(S^n) \cong {\mathbb{Z}} \), we have \( f^*: {\mathbb{Z}}\to{\mathbb{Z}} \). But homomorphisms of free groups are entirely determined by their action on generators. So if \( f^*(1) = n \), define \( n \) to be the **degree** of \( f \).
+Given any \( f: S^n \to S^n \), there are induced maps on homotopy and homology groups. Taking \( f^*: H^n(S^n) \to H^n(S^n) \) and identifying \( H^n(S^n) \cong {\mathbb{Z}} \), we have \( f^*: {\mathbb{Z}}\to{\mathbb{Z}} \). But homomorphisms of free groups are entirely determined by their action on generators. So if \( f^*(1) = n \), define \( n \) to be the **degree** of \( f \), which only depends on the homotopy class \( f\in [S^n, S^n] \).
 :::
 
 ::: {.definition title="Derived Functor"}
@@ -815,7 +845,7 @@ H_{\widehat{i}}M \otimes H_{\widehat{j}}M \to H_{\widehat{i+j}}X\\
 \]
 obtained by conjugating the cup product with Poincaré Duality, i.e. 
 
-\[\left< \alpha, \beta \right> = [M] \frown ([\alpha] {}^{ \check{} }\smile [\beta] {}^{ \check{} })
+\[\left< \alpha, \beta \right> = [M] \frown ([\alpha] {}^{ \vee }\smile [\beta] {}^{ \vee })
 .\]
 
 Then, if \( [A], [B] \) are transversely intersecting submanifolds representing \( \alpha, \beta \), then
@@ -1024,12 +1054,6 @@ For a closed, orientable \( n{\hbox{-}} \)manifold, following map \( [M] \frown 
 ```{=tex}
 \todo[inline]{Definitions}
 ```
-::: {.definition title="Properly Discontinuous"}
-:::
-
-```{=tex}
-\todo[inline]{Definitions}
-```
 ::: {.definition title="Pullback"}
 :::
 
@@ -1232,6 +1256,28 @@ Compact represented as \( \Sigma X = CX \coprod_{\operatorname{id}_{X}} CX \), t
 
 ## Point-Set
 
+::: {.definition title="Topological Notions in Analysis"}
+A useful list:
+
+![image_2021-05-27-20-18-15](figures/image_2021-05-27-20-18-15.png)
+
+Note that limit points require punctured neighborhoods!
+:::
+
+::: {.example title="Some useful examples of openness and closedness"}
+-   \( {\mathbb{Q}}\subseteq {\mathbb{R}} \) is neither open nor closed:
+    -   No point is interior, since every neighborhood of \( q\in {\mathbb{Q}} \) intersects some \( p\in {\mathbb{R}}\setminus{\mathbb{Q}} \). No point in the complement is interior for a similar reason.
+    -   It has no isolated points, and every \( r\in {\mathbb{R}} \) is a boundary and accumulation point.
+-   \( {\mathbb{Z}}\subseteq {\mathbb{R}} \) is closed and not open.
+    -   Just write \( {\mathbb{R}}\setminus{\mathbb{Z}}= \cup_{n\in {\mathbb{Z}}} (n, n+1) \), a countable union of open sets. There are no interior points: every neighborhood of \( n\in {\mathbb{Z}} \) intersects \( {\mathbb{R}}\setminus{\mathbb{Z}} \).
+    -   Every point is a boundary and accumulation point.
+-   Points are closed in \( {\mathbb{R}} \): \( {\mathbb{R}}\setminus\left\{{ p }\right\} = (-\infty, p) \cup(p, \infty) \).
+    -   An infinite intersection of open sets need not be open: \( \cap_{n\in {\mathbb{N}}} (p-1/n, p+1/n) = \left\{{ p }\right\} \) which is closed.
+-   Intervals \( (a, b) \) are open in \( {\mathbb{R}}^1 \) but not in \( {\mathbb{R}}^d \) for \( d\geq 2 \).
+-   \( \left\{{1/n}\right\} \) has only isolated boundary points, and no interior points. The point \( 0 \) is an accumulation point.
+-   The Cantor set has no interior points and no isolated points. Every point is a boundary point and an accumulation point.
+:::
+
 ### Common Spaces and Operations
 
 ::: {.example title="Nice spaces"}
@@ -1374,17 +1420,16 @@ Some facts about the indiscrete topology:
   Sine Curve                \( \checkmark \)   
   \( {\mathbb{Q}} \)                           
 
-# "Analysis"-esque Results in Topology
+# Point-Set
 
-::: {.proposition title="The rationals are neither open nor closed"}
-\( {\mathbb{Q}}\subset {\mathbb{R}} \) is not open and not closed.
+## Summary and Topics
 
-\
+Some key high-level topics:
 
-This follows because every neighborhood of \( q\in {\mathbb{Q}} \) contains an irrational and every neighborhood of \( q' \in {\mathbb{R}}\setminus{\mathbb{Q}} \) contains a rational.
-:::
-
-# Theorems
+-   Connectedness
+-   Compactness
+-   Metric spaces
+-   Hausdorff spaces
 
 ::: {.proposition title="The continuous image of a..."}
 The following properties are "pushed forward" through continuous maps, in the sense that if property \( P \) holds for \( X \) and \( f:X\to Y \), then \( f(X) \) also satisfies \( P \):
@@ -1406,7 +1451,7 @@ The following are **not preserved**:
 ## Metric Spaces and Analysis
 
 ::: {.theorem title="Cantor's Intersection Theorem"}
-A bounded collection of nested closed sets \( C_1 \supset C_2 \supset \cdots \) in a metric space \( X \) is nonempty \( \iff X \) is complete.
+A decreasing collection of nested nonempty compact sets \( C_1 \supset C_2 \supset \cdots \) in a topological space \( X \) is always nonempty.
 :::
 
 ::: {.theorem title="Cantor's Nested Intervals Theorem"}
@@ -1420,11 +1465,11 @@ A continuous function on a compact set is uniformly continuous.
 :::
 
 ::: {.proof title="?"}
-Take \( \left\{{B_{\varepsilon\over 2}(y) {~\mathrel{\Big|}~}y\in Y}\right\}\rightrightarrows Y \), pull back to an open cover of \( X \), has Lebesgue number \( \delta_L > 0 \), then \( x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{\varepsilon\over 2}(y) \) for some \( y \).
+Take \( \left\{{B_{{\varepsilon}\over 2}(y) {~\mathrel{\Big|}~}y\in Y}\right\}\rightrightarrows Y \), pull back to an open cover of \( X \), has Lebesgue number \( \delta_L > 0 \), then \( x' \in B_{\delta_L}(x) \implies f(x), f(x') \in B_{{\varepsilon}\over 2}(y) \) for some \( y \).
 :::
 
 ::: {.corollary title="Lipschitz implies uniformly continuous"}
-Lipschitz continuity implies uniform continuity (take \( \delta = \varepsilon/C \))
+Lipschitz continuity implies uniform continuity (take \( \delta = {\varepsilon}/C \))
 :::
 
 ::: {.remark}
@@ -1579,6 +1624,26 @@ Compactness in one factor is a necessary condition. For a counterexample, \( {\m
     -   So \( y\in V_j \) for this \( j \)
     -   Since \( x\in W \), \( x\in U_j \) for *every* \( j \), thus \( x\in U_j \).
     -   So \( (x, y) \in U_j \times V_j \)
+:::
+
+## "Analysis"-esque Results in Topology
+
+::: {.proposition title="The rationals are neither open nor closed"}
+\( {\mathbb{Q}}\subset {\mathbb{R}} \) is not open and not closed.
+
+\
+
+This follows because every neighborhood of \( q\in {\mathbb{Q}} \) contains an irrational and every neighborhood of \( q' \in {\mathbb{R}}\setminus{\mathbb{Q}} \) contains a rational.
+:::
+
+## Exercises
+
+::: {.exercise title="?"}
+Show that any map between compact Hausdorff spaces must be proper.
+:::
+
+::: {.solution}
+If \( Y \) is compact Hausdorff, \( U \) is compact iff \( U \) is closed, and by continuity closed sets pull back.
 :::
 
 # Summary of Standard Topics
@@ -2193,10 +2258,8 @@ If \( X, Y \) are path-connected, then
 \( \Leftarrow \): Suppose \( \pi_{1}(X) = 0 \). Then there is just one element in the fundamental group, the identity element, so if \( \alpha \) is a loop in \( X \) then \( [\alpha] = [\operatorname{id}_{x_{0}}] \). So there is a homotopy taking \( \alpha \) to the constant map, which is a contraction of \( \alpha \) to a point.
 :::
 
-:::{.fact "Unsorted facts"} `\envlist`{=tex}
-
--   For a graph \( G \), we always have \( \pi_{1}(G) \cong {\mathbb{Z}}^n \) where \( n = |E(G - T)| \), the complement of the set of edges in any maximal tree. Equivalently, \( n = 1-\chi(G) \). Moreover, \( X \simeq\bigvee^n S^1 \) in this case.
-
+::: {.fact}
+For a graph \( G \), we always have \( \pi_{1}(G) \cong {\mathbb{Z}}^n \) where \( n = |E(G - T)| \), the complement of the set of edges in any maximal tree. Equivalently, \( n = 1-\chi(G) \). Moreover, \( X \simeq\bigvee^n S^1 \) in this case.
 :::
 
 ## General Homotopy Theory
@@ -2233,8 +2296,10 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 ```{=tex}
 \todo[inline]{Theorem}
 ```
-:::{.fact title=\"Unsorted facts about higher homotopy groups} `\envlist`{=tex}
-
+::: {.fact title="Unsorted facts about higher homotopy groups"}
+```{=tex}
+\envlist
+```
 -   \( \pi_{i\geq 2}(X) \) is always abelian.
 
     -   \( X \) simply connected \( \implies \pi_{k}(X) \cong H_{k}(X) \) up to and including the first nonvanishing \( H_{k} \)
@@ -2261,7 +2326,6 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 -   In general, homotopy groups behave nicely under homotopy pull-backs (e.g., fibrations and products), but not homotopy push-outs (e.g., cofibrations and wedges). Homology is the opposite.
 
 -   Constructing a \( K(\pi, 1) \): since \( \pi = \left< S \mathrel{\Big|}R\right> = F(S)/R \), take \( \bigvee^{|S|} S^1 \cup_{|R|} e^2 \). In English, wedge a circle for each generator and attach spheres for relations.
-
 :::
 
 # Covering Spaces
@@ -2299,18 +2363,22 @@ Normal subgroups correspond to *normal/regular* coverings, where automorphisms a
 
 ## Universal Covers
 
-::: {.proposition title="Existence of universal covers"}
+::: {.definition title="Galois/normal/regular covers"}
+A covering \( \tilde X \xrightarrow{p} X \) is **Galois** (or **normal/regular**) over \( (X, x_0) \) iff \( \mathop{\mathrm{Deck}}(\tilde X) \) acts transitively on the fibers: for any two lifts \( \tilde x_1, \tilde x_2\in \tilde X \) of \( x_0 \in X \), there is a \( \psi\in \mathop{\mathrm{Deck}}(\tilde X) \) with \( \psi(\tilde x_1) = \tilde x_2 \).
+:::
+
+::: {.proposition title="Fundamental theorem of covering spaces, Hatcher 1.39"}
 If \( X \) is
 
--   Connected,
+-   Path-connected,
 -   Locally path-connected, and
 -   Semilocally simply connected,
 
-then \( X \) admits a universal cover: if \( C \xrightarrow{q} X \) is a covering map with \( C \) connected, then there exists a covering map \( \tilde p: \tilde X \to C \) making the following diagram commute:
+then \( X \) admits a universal cover \( \widehat{X} \to X \): if \( C \xrightarrow{q} X \) is any other covering map with \( C \) connected, then there exists a covering map \( \tilde p: \widehat{X} \to C \) making the following diagram commute:
 
 ```{=tex}
 \begin{tikzcd}
-    {C} && {\tilde X} \\
+    {C} && {\widehat{X}} \\
     \\
     {X}
     \arrow["{q}", from=1-1, to=3-1, two heads]
@@ -2320,7 +2388,52 @@ then \( X \) admits a universal cover: if \( C \xrightarrow{q} X \) is a coverin
 ```
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJYIl0sWzAsMCwiQyJdLFsyLDAsIlxcdGlsZGUgWCJdLFsxLDAsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiXFx0aWxkZSBwIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 
-That is, any other cover \( C \) of \( X \) is itself covered by \( \tilde X \). Note that by this universal property, \( \tilde X \) is unique up to homeomorphism when it exists.
+That is, any other cover \( C \) of \( X \) is itself covered by \( \widehat{X} \). Note that by the universal property, \( \widehat{X} \) is unique up to homeomorphism when it exists.
+
+Moreover, letting \( \tilde X \to X \) be an arbitrary path-connected cover and \( H\coloneqq p_* \pi_1(\tilde X; \tilde x_0), G\coloneqq\pi_1(X; x_0) \),
+
+-   The \( \tilde X\to X \) is Galois iff \( H{~\trianglelefteq~}G \),
+-   \( \mathop{\mathrm{Deck}}(\tilde X\to X) \cong N_{G}(H)/H \) where \( N \) is the normalizer in \( G \) of \( H \),
+-   \( \mathop{\mathrm{Deck}}(\tilde X\to X) \cong G/H \) if \( \tilde X\to X \) is Galois,
+-   \( \mathop{\mathrm{Deck}}(\widehat{X} \to X) \cong G \).
+:::
+
+::: {.remark}
+A Galois cover \( \tilde X\to X \) with \( \mathop{\mathrm{Deck}}(\tilde X) = G \) is equivalently a principal \( G{\hbox{-}} \)bundle for a discrete \( G \):
+
+```{=tex}
+\begin{tikzcd}
+G 
+  \ar[r] 
+& 
+\tilde X
+  \ar[d] 
+\\
+& 
+X 
+\end{tikzcd}
+```
+:::
+
+::: {.remark}
+Covering spaces of \( X \) are classified by subgroups of \( \pi_1(X) \):
+\[
+\left\{{\substack{
+  \text{Covering spaces $\tilde X\to X$}
+}}\right\}/\text{Isomorphisms over }X
+&\rightleftharpoons
+\left\{{\substack{
+  \text{Subgroups } H\leq \pi_1(X)
+}}\right\}/\text{Conjugacy}
+\\ \\
+\left\{{\substack{
+  \text{Galois covering spaces $\tilde X\to X$}
+}}\right\}
+&\rightleftharpoons
+\left\{{\substack{
+  \text{Normal subgroups } H {~\trianglelefteq~}\pi_1(X)
+}}\right\}
+\]
 :::
 
 ::: {.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
@@ -2377,9 +2490,16 @@ letting \( H \) be the image of \( \pi_1(\tilde X) \) in \( \pi_1(X) \), we have
 
 1.  \( \tilde X \) is normal if and only if \( H{~\trianglelefteq~}\pi_1(X) \),
 
-2.  \( G(\tilde X) \cong {\operatorname{Aut}}_{\mathrm{Cov}(\tilde X) } N_{\pi_1(X)}(H) \), the normalizer of \( H \) in \( \pi_1(X) \).
+2.  For the normalizer \( N_G(H) \) where \( G\coloneqq\pi_1(X) \),
+    \[
+    G(\tilde X) \coloneqq\mathop{\mathrm{Aut}}_{\mathrm{Cov}(X) }(\tilde X) \cong {N_G(H) \over H}
+    .\]
 
-In particular, if \( \tilde X \) is normal, \( {\operatorname{Aut}}(\tilde X) \cong \pi_1(X) / H \), and if \( \tilde X \) is the universal cover, \( {\operatorname{Aut}}(\tilde X) = \pi_1(X) \).
+In particular,
+\[
+\tilde X \text{ normal} &\implies G(\tilde X) \cong \pi_1(X) / H \\
+\widehat{X} \text{ universal} &\implies G(\widehat{X}) \cong \pi_1(X)
+.\]
 :::
 
 ::: {.fact}
@@ -2419,6 +2539,129 @@ Note that the number of sheets is always equal to the cardinality of \( p ^{-1} 
 
 ### Examples
 
+::: {.fact title="Some common covering spaces"}
+```{=tex}
+\begin{tikzcd}
+2\pi {\mathbb{Z}}\cong {\mathbb{Z}}
+  \ar[r] 
+& 
+\widehat{S^1} = {\mathbb{R}}
+  \ar[d, "t\mapsto e^{i t}"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+```
+Any subgroup \( H \leq \pi_1(S^1; 1) = {\mathbb{Z}} \) is of the form \( H = n{\mathbb{Z}} \), so intermediate covers are obtained from \( \widehat{S^1}/n{\mathbb{Z}}= {\mathbb{R}}/n{\mathbb{Z}}\cong S^1 \) by pulling back the universal bundle:
+
+```{=tex}
+\begin{tikzcd}
+    & {\mathbb{Z}}&& {\widehat{S^1} = {\mathbb{R}}} \\
+    n{\mathbb{Z}}&& {\widehat{S^1}/n{\mathbb{Z}}\cong S^1} \\
+    &&& {S^1} \\
+    && {S^1}
+    \arrow[from=1-2, to=1-4]
+    \arrow[from=1-4, to=3-4]
+    \arrow[from=2-1, to=2-3]
+    \arrow[from=2-3, to=4-3]
+    \arrow[dashed, from=2-1, to=1-2]
+    \arrow[dashed, from=2-3, to=1-4]
+    \arrow[dotted, from=4-3, to=3-4]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMSwwLCJcXFpaIl0sWzMsMCwiXFxoYXR7U14xfSA9IFxcUlIiXSxbMywyLCJTXjEiXSxbMCwxLCJuXFxaWiJdLFsyLDEsIlxcaGF0e1NeMX0vblxcWlogXFxjb25nIFNeMSJdLFsyLDMsIlNeMSJdLFswLDFdLFsxLDJdLFszLDRdLFs0LDVdLFszLDAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ==)
+
+```{=tex}
+\begin{tikzcd}
+n{\mathbb{Z}}\cong {\mathbb{Z}}
+  \ar[r] 
+& 
+S^1
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+```
+```{=tex}
+\begin{tikzcd}
+2\pi i {\mathbb{Z}}\cong {\mathbb{Z}}
+  \ar[r] 
+& 
+\widehat{{\mathbb{C}}^{\times}} = {\mathbb{C}}
+  \ar[d, "z\mapsto e^{z}"] 
+\\
+& 
+{\mathbb{C}}^{\times}
+\end{tikzcd}
+```
+```{=tex}
+\begin{tikzcd}
+ {\mathbb{Z}}^{\times n}
+  \ar[r] 
+& 
+\widehat{{\mathbb{T}}^n} ={\mathbb{R}}^n
+  \ar[d] 
+\\
+& 
+{\mathbb{T}}^n 
+\end{tikzcd}
+```
+```{=tex}
+\begin{tikzcd}
+{\mathbb{Z}}/2
+  \ar[r] 
+& 
+\widehat{{\mathbb{RP}}^n} = S^n
+  \ar[d] 
+\\
+& 
+{\mathbb{RP}}^n 
+\end{tikzcd}
+```
+```{=tex}
+\begin{tikzcd}
+{\mathbb{Z}}^{\ast n} 
+  \ar[r] 
+& 
+\widehat{(S^1)^{\vee n}} = \mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+(S^1)^{\vee n}
+\end{tikzcd}
+```
+given by the \( n{\hbox{-}} \)valent Cayley graph covering a wedge of circles.
+
+![For \( n=2 \)](figures/2021-07-03_16-55-01.png)
+
+```{=tex}
+\begin{tikzcd}
+{\mathbb{Z}}/n
+  \ar[r] 
+& 
+  {\mathbb{C}}^{\times}
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+{\mathbb{C}}
+\end{tikzcd}
+```
+```{=tex}
+\begin{tikzcd}
+{\mathbb{Z}}/q
+  \ar[r] 
+& 
+  S^3
+  \ar[d, "{(z, w) \mapsto (e^{2\pi i \over q} z, e^{2\pi i p \over q}) w}"] 
+\\
+& 
+L(p, q)
+\end{tikzcd}
+```
+-   \( T^2 \xrightarrow{\times 2} {\mathbb{K}} \)
+:::
+
 ::: {.example title="The circle $S^1$"}
 Identify \( S^1 \subset {\mathbb{C}} \), then every map \( p_n: S^1 \to S^1 \) given by \( z\mapsto z^n \) a yields a covering space \( \tilde X_n \). The induced map can be described on generators as
 \[
@@ -2427,7 +2670,7 @@ p_n^*: \pi_1(S^1) &\to \pi_1(S^1) \\
 \]
 and so the image is isomorphic to \( n{\mathbb{Z}} \) and thus
 \[
-p_n^*(\pi_1(S^1)) = {\operatorname{Aut}}_{\mathrm{Cov} }(\tilde X_n) = {\mathbb{Z}}/n{\mathbb{Z}}
+p_n^*(\pi_1(S^1)) = \mathop{\mathrm{Aut}}_{\mathrm{Cov} }(\tilde X_n) = {\mathbb{Z}}/n{\mathbb{Z}}
 .\]
 where the deck transformations are rotations of the circle by \( 2\pi/n \). The universal cover of \( S^1 \) is \( {\mathbb{R}} \); this is an infinitely sheeted cover, and the fiber above \( x_0 \) has cardinality \( {\left\lvert {{\mathbb{Z}}} \right\rvert} \).
 :::
@@ -2436,11 +2679,11 @@ where the deck transformations are rotations of the circle by \( 2\pi/n \). The 
 The universal cover of \( {\mathbb{RP}}^n \) is \( S^n \); this is a two-sheeted cover. The fiber above \( x_0 \) contains the two antipodal points.
 :::
 
-::: {.example title="The torus"}
+::: {.example title="The torus $S^1 \\cross S^1$"}
 The universal cover of \( T = S^1 \times S^1 \) is \( \tilde X ={\mathbb{R}}\times{\mathbb{R}} \). The fiber above the base point contains every point on the integer lattice \( {\mathbb{Z}}\times{\mathbb{Z}}= \pi_1(T) = \text{Aut}(\tilde X) \)
 :::
 
-::: {.fact}
+::: {.proposition title="General construction for wedge products"}
 For a wedge product \( X = \bigvee_i^n \tilde X_i \), the covering space \( \tilde X \) is constructed as a infinite tree with \( n{\hbox{-}} \)colored vertices:
 
 -   Each vertex corresponds to one of the universal covers \( \tilde X_i \),
@@ -2448,8 +2691,8 @@ For a wedge product \( X = \bigvee_i^n \tilde X_i \), the covering space \( \til
 -   T The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of \( \pi_1(X_i) \).
 :::
 
-::: {.example title="Covering spaces of wedges of spheres"}
-The fundamental group of \( S^1 \vee S^1 \) is \( {\mathbb{Z}}\ast {\mathbb{Z}} \), and the universal cover is the following 4-valent Cayley graph:
+::: {.example title="Wedge of circles"}
+The fundamental group of \( S^1 \vee S^1 \) is \( {\mathbb{Z}}\ast {\mathbb{Z}} \) by van Kampen, and the universal cover is the following 4-valent Cayley graph:
 
 ![The universal cover of \( \S^1 \vee S^1 \)](figures/image_2021-01-10-13-19-32.png)
 
@@ -2457,16 +2700,16 @@ See Hatcher p.58 for other covers.
 :::
 
 ::: {.corollary title="Every subgroup of a free group is free"}
-Idea for a particular case: use the fact that \( \pi_1(\bigvee^k S^1) = {\mathbb{Z}}^{\ast k} \), so if \( G \leq {\mathbb{Z}}^{\ast k} \) then there is a covering space \( X \twoheadrightarrow\bigvee^k S^1 \) such that \( \pi_1(X) = G \). Since \( X \) can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, \( \pi_1(X) \) is free on its maximal tree. \( \hfill\blacksquare \)
+Idea for a particular case: use the fact that \( \pi_1\qty{\bigvee^k S^1} = {\mathbb{Z}}^{\ast k} \), so if \( G \leq {\mathbb{Z}}^{\ast k} \) then there is a covering space \( X \twoheadrightarrow\bigvee^k S^1 \) such that \( \pi_1(X) = G \). Since \( X \) can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, \( \pi_1(X) \) is free on the edges in the complement of a maximal tree.
 :::
 
-::: {.example title="of a universal covering space"}
+::: {.example title="Wedge of projective spaces"}
 The fundamental group of \( {\mathbb{RP}}^2 \vee {\mathbb{RP}}^2 \) is \( {\mathbb{Z}}_2 \ast {\mathbb{Z}}_2 \), corresponding to an infinite string of copies of 2-valent \( S^2 \)s:
 
 ![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
 :::
 
-::: {.example title="of a universal covering space"}
+::: {.example title="$\\RP^2 \\wedgeprod T^2$"}
 The fundamental group of \( {\mathbb{RP}}^2 \vee T^2 \) is \( {\mathbb{Z}}_2 \ast {\mathbb{Z}} \), and the universal cover is shown in the following image. Each red vertex corresponds to a copy of \( S^2 \) covering \( {\mathbb{RP}}^2 \) (having exactly 2 neighbors each), and each blue vertex corresponds to \( {\mathbb{R}}^2 \) cover \( {\mathbb{T}}^2 \), with \( {\left\lvert {{\mathbb{Z}}^2} \right\rvert} \) many vertices as neighbors.
 
 ![Universal cover of \( {\mathbb{T}}^2 \vee {\mathbb{RP}}^2 \)](figures/tree_cover.png)
@@ -2515,7 +2758,7 @@ We have the following situation where \( f = p \circ \tilde f \):
 Since every map into a contractible space is nullhomotopic, there is a homotopy \( \tilde H: Y\times I \to Z \) from \( \tilde f \) to a constant map \( c: Y\to Z \), say \( c(y) = z_0 \) for all \( y \). But then \( p\circ \tilde H: X \times I \to Y \) is also a homotopy from \( f \) to the map \( p\circ c \), which satisfies \( (p\circ c)(y) = p(z_0) = x_0 \) for some \( x_0 \in X \), and is in particular a constant map.
 :::
 
-::: {.proposition title="Application: showing one space can not cover another"}
+::: {.proposition title="Showing one space can not cover another"}
 There is no covering map \( p: {\mathbb{RP}}^2 \to {\mathbb{T}}^2 \).
 :::
 
@@ -2537,88 +2780,65 @@ If \( G\curvearrowright X \) is a free and properly discontinuous action, then
 
 1.  The quotient map \( p:X \to X/G \) given by \( p(y) = Gy \) is a normal covering space,
 
-2.  If \( X \) is path-connected, then \( G = {\operatorname{Aut}}_{\mathrm{Cov}} (X) \) is the group of deck transformations for the cover \( p \),
+2.  If \( X \) is path-connected, then \( G = \mathop{\mathrm{Aut}}_{\mathrm{Cov}} (X) \) is the group of deck transformations for the cover \( p \),
 
 3.  If \( X \) is path-connected and locally path-connected, then \( G\cong \pi_1(X/G) / p_*(\pi_1(X)) \).
 :::
 
-::: {.fact title="Some common covering spaces"}
-```{=tex}
-\begin{tikzcd}
-{\mathbb{Z}}
-  \ar[r] 
-& 
-{\mathbb{R}}
-  \ar[d] 
-\\
-& 
-S^1 
-\end{tikzcd}
-```
-```{=tex}
-\begin{tikzcd}
-{\mathbb{Z}}^n 
-  \ar[r] 
-& 
-{\mathbb{R}}^n
-  \ar[d] 
-\\
-& 
-{\mathbb{T}}^n 
-\end{tikzcd}
-```
-```{=tex}
-\begin{tikzcd}
-{\mathbb{Z}}/2{\mathbb{Z}}
-  \ar[r] 
-& 
-S^n
-  \ar[d] 
-\\
-& 
-{\mathbb{RP}}^n 
-\end{tikzcd}
-```
-```{=tex}
-\begin{tikzcd}
-{\mathbb{Z}}^{\ast n} 
-  \ar[r] 
-& 
-\mathrm{Cayley}(n)
-  \ar[d] 
-\\
-& 
-\bigvee_n S^1 
-\end{tikzcd}
-```
-given by the \( n{\hbox{-}} \)valent Cayley graph covering a wedge of circles.
-
--   \( T^2 \xrightarrow{\times 2} {\mathbb{K}} \)
--   \( {\mathbb{Z}}/q{\mathbb{Z}}\to L_{p/q} \xrightarrow{\pi} S^3 \)
--   \( {\mathbb{Z}}/n{\mathbb{Z}}\to {\mathbb{C}}^* \xrightarrow{z^n} {\mathbb{C}} \)
+::: {.fact}
+If \( f:X\to Y \) is a covering map of degree 1, then \( f \) is necessarily a homeomorphism.
 :::
+
+## Exercises
+
+-   See <https://www.math.utah.edu/~patrikis/6520Spring2018/6520hw4.pdf>
 
 # CW and Simplicial Complexes
 
-```{=tex}
-\todo[inline]{Missing a lot on CW complexes}
-```
-## Degrees
-
-::: {.fact title="Useful properties of the degree of a map between spheres"}
-```{=tex}
-\envlist
-```
--   \( \text{deg}~\operatorname{id}_{S^n} = 1 \)
-
--   \( \text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g \)
-
--   \( \text{deg}~r = -1 \) where \( r \) is any rotation about a hyperplane, i.e. \( r({\left[ {x_1 \cdots x_i \cdots x_n} \right]}) = {\left[ {x_1 \cdots -x_i \cdots x_n} \right]} \).
-
--   The antipodal map on \( S^n\subset {\mathbb{R}}^{n+1} \) is the composition of \( n+1 \) reflections, so \( \text{deg}~\alpha = (-1)^{n+1} \).
+::: {.warnings}
+The maps go *down* in degree for cellular chain complexes! I.e.,
+\[
+C_*(X) = (0 \leftarrow C_0 \leftarrow C_1 \leftarrow\cdots )
+.\]
 :::
 
-## Examples of CW Complexes/Structures
+::: {.proposition title="Product CW structure"}
+If \( X, Y \) are CW complexes with \( p_X(t), p_Y(t) \) the generating functions for the number of cells (so \( [t^n] p_X(t) \coloneqq a_n \) is the number of \( n{\hbox{-}} \)cells in \( X \)), then the generating function for the product is
+\[
+p_{X\times Y}(t) = p_X(t)p_Y(t)
+.\]
+Categorified, this comes from a quasi-isomorphism
+\[
+C_*^{{ \mathrm{cell}} }(X\times Y) \cong C_*^{{ \mathrm{cell}} }(X) \otimes_{\mathbb{Z}}C_*^{{ \mathrm{cell}} }(Y)
+.\]
+so
+\[
+C_n^{{ \mathrm{cell}} }(X \times Y ) \cong \bigoplus_{i+j=n} C_i^{ \mathrm{cell}} (X) \times C_j^{{ \mathrm{cell}} }(Y)
+.\]
+The boundary maps are thus given by
+\[
+{{\partial}}(a, b) &\coloneqq{{\partial}}_X a \otimes b + (-1)^{{\left\lvert {a} \right\rvert}} a \otimes{{\partial}}_Y b
+.\]
+:::
+
+::: {.remark}
+This is nontrivial, it's the content of the *Eilenberg-Zilber theorem*.
+:::
+
+::: {.example title="?"}
+Let \( X= S^a \times S^b \), so \( p_{S^a}(t) = 1 + t^a \) and \( p_{S^b}(t) = 1 + t^b \), then \( p_X(t) = 1 + t^a + t^b + t^{a+b} \), so \( X \) has
+
+-   One 1-cell
+-   One \( a{\hbox{-}} \)cell
+-   One \( b{\hbox{-}} \)cell
+-   One \( (a+b){\hbox{-}} \)cell
+:::
+
+::: {.exercise title="Homology of product of spheres"}
+Compute all of the possible cases for \( H_*(S^a\times S^b) \), where \( a, b\geq 0 \) are not necessarily distinct.
+:::
+
+## CW Structures on Common Spaces
 
 ::: {.example title="Spheres"}
 \( S^n = e^0 \cup e^n \): a point and an \( n{\hbox{-}} \)cell.
@@ -2714,6 +2934,36 @@ Given \( G = \bigoplus G_{i} \), and want a space such that \( H_{i} X = G \)? C
 1.  Attach an \( e^n \) to a point to get \( H_{n} = {\mathbb{Z}} \)
 
 2.  Attach an \( e^{n+1} \) with attaching map of degree \( d \) to get \( H_{n} = {\mathbb{Z}}_{d} \)
+
+## Exercises
+
+::: {.problem title="?"}
+Let \( X \) be \( S^1 \) with two 2-cells attached via \( z\mapsto z^5 \) and \( z\mapsto z^3 \).
+
+-   Compute \( \pi_1(X) \) and \( H^*(X) \) as a ring.
+-   Show that \( X \) is not homeomorphic to \( S^2 \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   \( X \) is path-connected, so \( H_0(X) = {\mathbb{Z}} \).
+-   \( X \) is a CW complex with only one 1-cell, so \( \pi_1(X^{(1)}) = {\mathbb{Z}} \) for the 1-skeleton.
+    -   Use that \( 3{\mathbb{Z}}+ 5{\mathbb{Z}}= 1{\mathbb{Z}} \) as a ring, so the attached cells kill off all 1-homotopy and \( \pi_1(X) = 1 \).
+-   By Hurewicz, \( H_1(X) = 1 \).
+-   By UCT, \( H^1(X) = H_1(X) {}^{ \vee }= \mathop{\mathrm{Hom}}_{\mathbb{Z}}(1, {\mathbb{Z}}) = 1 \)
+-   By UCT, \( H^2(X) = H_2(X) {}^{ \vee } \)
+-   We can compute \( H_2 \) directly:
+    \[
+    C^*(X) 
+    = (0 \to C_2(X) \xrightarrow{d_2} C_1(X) \xrightarrow{d_1} C_0(X) )
+    = (0 \to {\mathbb{Z}} { \left[ {e_1, e_2} \right] }  \xrightarrow{\substack{e_1\mapsto 3e \\ e_2 \mapsto 5e} } {\mathbb{Z}} { \left[ {e} \right] }  \xrightarrow{d_1} {\mathbb{Z}} { \left[ {{\operatorname{pt}}} \right] }  )
+    .\]
+-   \( \ker d_2 = \left\langle{ 5e_1, -3e_2 }\right\rangle \), so \( H_2 = {\mathbb{Z}} \).
+-   Thus \( H^*(X) = \bigwedge\nolimits_{\mathbb{Z}}(x) \) where \( {\left\lvert {x} \right\rvert} = 2 \).
+-   \( X\not\cong S^2 \): delete a point \( p \) in the interior of the 2-cell corresponding to \( z^3 \), then use that \( S^2\setminus\left\{{{\operatorname{pt}}}\right\} \cong {\mathbb{R}}^2 \) is contractible but \( \pi_1 X\setminus\left\{{{\operatorname{pt}}}\right\} = {\mathbb{Z}}/5 \).
+:::
 
 # Homology
 
@@ -2910,7 +3160,7 @@ H^i(X; G) &= \hom(H_{i}X, G) \oplus \operatorname{Ext} (H_{i-1}X; G)
 When all of the \( H_{i}X \) are all finitely generated (e.g. if \( G \) is a field), writing \( H_{i}(X; {\mathbb{Z}}) = {\mathbb{Z}}^{\beta_{i}} \oplus T_{i} \) as the sum of a free and a torsionfree module, we have
 \[
 H^i(X; {\mathbb{Z}}) &\cong {\mathbb{Z}}^{\beta_{i}} \times T_{i-1} \\
-H^i(X; A) &\cong \qty{H_i(X; G)} {}^{ \check{} }\coloneqq\hom_{\mathbb{Z}}(H_{i}(X; G), G)
+H^i(X; A) &\cong \qty{H_i(X; G)} {}^{ \vee }\coloneqq\hom_{\mathbb{Z}}(H_{i}(X; G), G)
 .\]
 
 In other words, letting \( F({-}) \) be the free part and \( T({-}) \) be the torsion part, we have
@@ -2943,7 +3193,91 @@ H_{i}(X; {\mathbb{Z}}) &= F(H^i(X; {\mathbb{Z}})) \times T(H^{i+1}(X; {\mathbb{Z
 -   \( H_{n}(X, A) \cong_? H_{n}(X/A, {\operatorname{pt}}) \)
 :::
 
+## Exercises
+
+::: {.problem title="?"}
+Show that \( S^2 \times{\mathbb{RP}}^4 \not\simeq S^4 \times{\mathbb{RP}}^2 \).
+:::
+
+::: {.solution}
+Take coefficients in \( {\mathbb{F}}_2 \), apply Kunneth to get
+\[
+H^*(X_1; {\mathbb{F}}_2) = \bigwedge\nolimits_{{\mathbb{F}}_2}{x_2} \otimes_{{\mathbb{F}}_2} {{\mathbb{F}}_2 { \left[ {y_1} \right] }  \over \left\langle{ y_1^5 }\right\rangle \\ 
+H^*(X_2; {\mathbb{F}}_2) = \bigwedge\nolimits_{{\mathbb{F}}_2}{w_4} \otimes_{{\mathbb{F}}_2} {{\mathbb{F}}_2 { \left[ {z_1} \right] }  \over \left\langle{ z_1^3 }\right\rangle \\ 
+.\]
+
+Now use that any homotopy equivalence induces a graded ring isomorphism \( f \), where \( f(y_1) = z_1 \) in \( H^1 \), but these have different orders.
+:::
+
+::: {.exercise title="?"}
+Show that \( S^n \) is not a strong deformation retract of \( {\mathbb{B}}^{n+1} \).
+:::
+
+::: {.solution}
+If \( \iota S^n \hookrightarrow{\mathbb{B}}^{n+1} \) then a strong deformation retract yields a \( p: {\mathbb{B}}^{n+1} \to S^n \) with \( p\circ \iota = \operatorname{id} \). Then apply homology to factor the identity map \( {\mathbb{Z}}\to {\mathbb{Z}} \) through a constant zero map \( {\mathbb{Z}}\to 0 \).
+:::
+
 # Fixed Points and Degree Theory
+
+::: {.fact title="Useful properties of the degree of a map between spheres"}
+```{=tex}
+\envlist
+```
+-   The degree of a constant map is 0.
+
+-   \( f\simeq g \iff \deg f = \deg g \), since this implies \( f_* = g_* \).
+
+-   If \( f \) is a homotopy equivalence, \( {\left\lvert {\deg f} \right\rvert} = 1 \).
+
+    -   This is because \( f\simeq g \implies H_*(f) = H_*(g) \).
+
+-   \( \deg\operatorname{id}_{S^n} = 1 \)
+
+-   \( \text{deg} (f\circ g) = \degf \cdot \degg \)
+
+-   \( \deg(H_{x_i}) = -1 \) for \( H_{x_i} \) any rotation about the hyperplane \( x_i = 0 \), i.e. 
+    \[
+    H_{x_i}: {\mathbb{R}}^{n+1} &\to {\mathbb{R}}^{n+1} \\
+    {\left[ {x_1, \cdots, x_i, \cdots, x_{n+1}} \right]} 
+    &\mapsto
+    {\left[ {x_1, \cdots, - x_i, \cdots, x_{n+1}} \right]} 
+    .\]
+
+-   The antipodal map on \( S^n\subset {\mathbb{R}}^{n+1} \) is the composition of \( n+1 \) hyperplane reflections, so \( \deg\alpha = (-1)^{n+1} \).
+
+    -   As a consequence, if \( \deg f \) is even then \( f \) is not homotopic to the antipodal map.
+:::
+
+::: {.exercise title="No fixed points implies homotopic to antipodal"}
+Show that if \( f: S^n\to S^n \) has no fixed points \( \iff \deg f = (-1)^{n+1} \) and \( f \) is homotopic to the antipodal map.
+:::
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   If \( f(x)\neq x \), the line segment \( L(-x, f(x)) \) does not contain \( 0 \).
+
+-   If \( f(x) \neq -x \), the line segment \( L(x, f(x)) \) does not contain \( 0 \).
+:::
+
+::: {.solution}
+The straight line homotopy \( H(t, x) = (1-t)f(x) + t(-x) \) is a homotopy between \( f \) and the antipodal map in \( {\mathbb{R}}^{n+1} \). Use that \( H(t, x) = 0 \iff t=1/2 \iff f(x) = x \), so \( H(t, {-}) \) is always a line from \( x \) to \( f(x) \) not passing through \( 0 \), so \( H(t, {-}) \neq 0 \). So this descends to a homotopy of \( {\mathbb{R}}^{n+1}\setminus\left\{{0}\right\}\simeq S^n \), or explicitly one can project
+\[
+H: I\times S^n &\to S^n \\
+(t, x) &\mapsto {H(t, x) \over {\left\lVert {H(t, x)} \right\rVert}}
+.\]
+
+Less explicitly: if \( f(x) \neq x \) for all \( x\in S^n \), there is a unique geodesic through these two points, so let each point flow along its corresponding geodesic.
+:::
+
+::: {.exercise title="?"}
+Show that if \( f \) is not surjective then \( \deg f = 0 \).
+:::
+
+::: {.solution}
+In this case \( f \) factors as \( S^n \xrightarrow{f_1} S^n\setminus\left\{{{\operatorname{pt}}}\right\}\xrightarrow{f_2} S_n \). But \( S^n\setminus\left\{{{\operatorname{pt}}}\right\} \simeq{\mathbb{R}}^n \), to \( H_*(f_1) = 0 \) and \( \deg f_1 = 0 \). Then apply \( \deg f = \qty{\deg f_1} \qty{\deg f_2} \).
+:::
 
 ::: {.theorem title="Lefschetz Fixed Point"}
 For \( f:X\to X \), define the **trace** of \( f \) to be
@@ -3056,7 +3390,7 @@ Set \( U= A, B=V \), then by definition of the connect sum, \( A\cap B = {\mathb
 
 ::: {.proposition title="Decomposing $\\RP^2$"}
 \[  
-{\mathbb{RP}}^2 = {\mathbb{M}}{\coprod}_{\operatorname{id}_{{{\partial}}{\mathbb{M}}}} {\mathbb{M}}
+{\mathbb{RP}}^2 = {\mathbb{M}}{\textstyle\coprod}_{\operatorname{id}_{{{\partial}}{\mathbb{M}}}} {\mathbb{M}}
 .\]
 :::
 
@@ -3518,7 +3852,7 @@ Facts Used:[^9]
 -   
     \[
     \operatorname{Ext} ({\mathbb{Z}}/n, {\mathbb{Z}}/m) = ({\mathbb{Z}}/m) / (n \cdot {\mathbb{Z}}/m) \cong ({\mathbb{Z}}/m) / (d \cdot {\mathbb{Z}}/m) && 
-    \text{where } d \coloneqq\gcd(m, n)
+    \\ \text{where } d \coloneqq\gcd(m, n)
     .\]
     General principle: \( \operatorname{Ext} ({\mathbb{Z}}/n, G) = G/nG \)
 
@@ -3654,26 +3988,26 @@ Describe the universal cover of \( X = (S^1 \times S^1) \vee S^2 \) and compute 
 -   \( \pi_{\geq 2}(\overline{X} ) \cong \pi_{\geq 2}(X) \) for \( \overline{X} \) the universal cover of \( X \)
 -   Structure of the universal cover of a wedges
 -   \( \overline{T^2} = {\mathbb{R}}^2 \) and \( \overline{S^2} = S^2 \)
--   By Mayer-Vietoris, \( H_n(\bigvee X_i) = \bigoplus H_n(X_i) \).
+-   By Mayer-Vietoris, \( H_n(\vee X_i) = \bigoplus H_n(X_i) \).
 :::
 
 The universal cover can be identified as
 \[
-\overline{X} = {\mathbb{R}}^2 \bigvee_{i, j \in {\mathbb{Z}}^2} S^2
+\overline{X} = {\mathbb{R}}^2 \vee_{i, j \in {\mathbb{Z}}^2} S^2
 ,\]
 i.e. the plane with a sphere wedged onto every integer lattice point. We can then check
 \[
 \pi_1(X) 
 &\cong \pi_1(\overline{X} ) \\
-&= \pi_1( {\mathbb{R}}^2 \bigvee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
-&= \pi_1( {\mathbb{R}}^2 \bigvee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
+&= \pi_1( {\mathbb{R}}^2 \vee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
+&= \pi_1( {\mathbb{R}}^2 \vee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
 &= \prod_{i,j \in {\mathbb{Z}}^2} \pi_1({\mathbb{R}}^2) \times\pi_1(S^2) \\
 &= 0
 ,\]
 using that \( \pi_1(S^2) = 0 \). Then by Hurewicz, \( \pi_2(X) \cong H_2(X) \), so we can compute
 \[
 H_2(X) 
-&= H_2( {\mathbb{R}}^2 \bigvee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
+&= H_2( {\mathbb{R}}^2 \vee_{i, j \in {\mathbb{Z}}^2} S^2 ) \\
 &= \bigoplus_{i,j \in {\mathbb{Z}}^2} H_2({\mathbb{R}}^2) \oplus H_2(S^2) \\
 &= \bigoplus_{i,j \in {\mathbb{Z}}^2} {\mathbb{Z}}
 .\]
@@ -4077,13 +4411,13 @@ Then the images under inclusion define homology classes
 
 Denoting their Poincare duals by
 
--   \( [A] {}^{ \check{} }\in H^i X \)
--   \( [B] {}^{ \check{} }\in H^j X \)
--   \( [A\cap B] {}^{ \check{} }\in H^{i+j}X \)
+-   \( [A] {}^{ \vee }\in H^i X \)
+-   \( [B] {}^{ \vee }\in H^j X \)
+-   \( [A\cap B] {}^{ \vee }\in H^{i+j}X \)
 
 We then have
 \[
-[A] {}^{ \check{} }\smile [B] {}^{ \check{} }= [A\cap B] {}^{ \check{} }\in H^{i+j} X
+[A] {}^{ \vee }\smile [B] {}^{ \vee }= [A\cap B] {}^{ \vee }\in H^{i+j} X
 \]
 
 Example: in \( {\mathbb{CP}}^n \), each even-dimensional cohomology \( H^{2i}{\mathbb{CP}}^n \) has a generator \( \alpha_i \) with is Poincare dual to an \( \widehat{i} \) plane. A generic \( \widehat{i} \) plane intersects a \( \widehat{j} \) plane in a \( \widehat{i+j} \) plane, yielding \( \alpha_i \smile \alpha_j = \alpha_{i+j} \) for \( i+j \leq n \).
@@ -4092,8 +4426,8 @@ Example: For \( T^2 \), we have - \( H_1T^2 = {\mathbb{Z}}^2 \) generated by \( 
 
 Then \( A\cap B = \pm [p] \), and so
 \[
-[A] {}^{ \check{} }\smile [B] {}^{ \check{} }= [p] {}^{ \check{} }\\
-[B] {}^{ \check{} }\smile [A] {}^{ \check{} }= -[p] {}^{ \check{} }
+[A] {}^{ \vee }\smile [B] {}^{ \vee }= [p] {}^{ \vee }\\
+[B] {}^{ \vee }\smile [A] {}^{ \vee }= -[p] {}^{ \vee }
 \]
 
 ## The Long Exact Sequence of a Pair

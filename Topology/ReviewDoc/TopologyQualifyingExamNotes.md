@@ -1,405 +1,345 @@
-\newcommand{\dx}{\,dx}
-\newcommand{\dt}{\,dt}
-\newcommand{\dy}{\,dy}
-\newcommand{\ds}{\,ds}
-\newcommand{\dz}{\,dz}
-\newcommand{\dr}{\,dr}
-\newcommand{\dxi}{\,d\xi}
-\newcommand{\dzeta}{\,d\zeta}
-\newcommand{\dtheta}{\,d\theta}
-\newcommand{\barz}{\bar{z} }
-\newcommand{\dzbar}{\,d\bar{z} }
-\newcommand{\zbar}{\bar{z} }
-\newcommand{\du}{\,du}
-\newcommand{\dw}{\,dw}
-\newcommand{\dV}{\,dV}
-\newcommand{\dmu}{\,d\mu}
-\newcommand{\open}[1]{\overset{\circ}{#1}}
-\newcommand{\textoperatorname}[1]{
-  \operatorname{\textnormal{#1}}
-}
-\newcommand{\et}{\text{ét}}
-\newcommand{\Et}{\text{Ét}}
-\newcommand\stacksymbol[3]{
-  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
-  $\scriptscriptstyle#2$}}
-}
-\renewcommand{\AA}[0]{{\mathbb{A}}}
+\newcommand*\dif{\mathop{}\!\operatorname{d}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Kahler[0]{\operatorname{Kähler}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand\compact[0]{\operatorname{cpt}}
+\newcommand\hyp[0]{{\operatorname{hyp}}}
+\newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand\rref{\operatorname{RREF}}
+\newcommand{\Tatesymbol}{\operatorname{TateSymb}}
+\newcommand\taf{ \mathrm{taf} }
+\newcommand\tilt[0]{ { \flat } }
+\newcommand\tmf{ \mathrm{tmf} }
+\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
-\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\Ann}[0]{\operatorname{Ann}}
+\newcommand{\Arg}[0]{\operatorname{Arg}}
+\newcommand{\Art}[0]{\operatorname{Art}}
 \newcommand{\BB}[0]{{\mathbb{B}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
+\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\Div}[0]{\operatorname{Div}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
+\newcommand{\EKL}[0]{{\mathrm{EKL}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\minor}[0]{{\operatorname{minor}}}
+\newcommand{\Et}{\text{Ét}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Extpower}[0]{\bigwedge\nolimits}
+\newcommand{\Extalgebra}[0]{\bigwedge\nolimits}
+\newcommand{\Extalg}[0]{\Extalgebra}
+\newcommand{\Extprod}[0]{\bigwedge\nolimits}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
-\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\FS}{{ \text{FS} }}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
+\newcommand{\Flat}[0]{{\operatorname{Flat}}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
-\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
-\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
-\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Frac}[0]{\operatorname{Frac}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
+\newcommand{\GL}[0]{\operatorname{GL}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\Gal}[0]{{ \mathsf{Gal}} }
+\newcommand{\Gl}[0]{\operatorname{GL}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
+\newcommand{\Hilb}[0]{\operatorname{Hilb}}
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\Id}[0]{\operatorname{Id}}
+\newcommand{\Inn}[0]{{\operatorname{Inn}}}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
-\newcommand{\kk}[0]{{\mathbb{k}}}
-\newcommand{\bbm}[0]{{\mathbb{M}}}
-\newcommand{\NN}[0]{{\mathbb{N}}}
-\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
+\newcommand{\KMW}[0]{ \K^{\scriptscriptstyle \mathrm{MW}} }
+\newcommand{\KMimp}[0]{ \hat{\K}^{\scriptscriptstyle \mathrm{M}} }
+\newcommand{\KM}[0]{ \K^{\scriptstyle\mathrm{M}} }
+\newcommand{\Kah}[0]{{ \operatorname{Kähler} } }
+\newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\LL}[0]{{\mathbb{L}}}
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\Log}[0]{\operatorname{Log}}
+\newcommand{\MCG}[0]{{\operatorname{MCG}}}
+\newcommand{\MM}[0]{{\mathcal{M}}}
+\newcommand{\MW}[0]{\operatorname{MW}}
+\newcommand{\Mat}[0]{\operatorname{Mat}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\NN}[0]{{\mathbb{N}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
+\newcommand{\OO}[0]{{\mathcal{O}}}
+\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\OX}[0]{{\mathcal{O}_X}}
+\newcommand{\Obs}{\operatorname{Obs} }
+\newcommand{\Ob}[0]{{\operatorname{Ob}}}
+\newcommand{\Op}[0]{{\operatorname{Op}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\Out}[0]{{\operatorname{Out}}}
+\newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
+\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+\newcommand{\Presh}[0]{\presh}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
+\newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
 \newcommand{\RR}[0]{{\mathbb{R}}}
-\newcommand{\SpSp}[0]{{\mathbb{S}}}
-\renewcommand{\SS}[0]{{\mathbb{S}}}
-\newcommand{\TT}[0]{{\mathbb{T}}}
-\newcommand{\ZZ}[0]{{\mathbb{Z}}}
-\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
-\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
-\newcommand{\kG}[0]{{kG}}
-\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
-\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
-\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
-\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
-\newcommand{\chp}[0]{\operatorname{ch. p}}
-\newcommand{\fp}[0]{\operatorname{fp}}
-\newcommand{\HT}[0]{{\operatorname{HT}}}
-\newcommand{\LC}[0]{{\mathrm{LC}}}
-\newcommand{\qc}[0]{{\operatorname{qc}}}
-\newcommand{\SF}[0]{\operatorname{SF}}
-\newcommand{\vol}[0]{\operatorname{vol}}
-\newcommand{\Ric}[0]{\operatorname{Ric}}
-\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
-\newcommand{\covol}[0]{\operatorname{covol}}
-\newcommand{\bP}[0]{\operatorname{bP}}
-\newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\HF}[0]{\operatorname{HF}}
-\newcommand{\CF}[0]{\operatorname{CF}}
-\newcommand{\HFK}[0]{\operatorname{HFK}}
-\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
-\newcommand{\QHS}[0]{\operatorname{QHS}}
-\newcommand{\ZHB}[0]{\operatorname{ZHB}}
-\newcommand{\QHB}[0]{\operatorname{QHB}}
-\newcommand{\ks}[0]{\operatorname{ks}}
-\newcommand{\lk}[0]{\operatorname{lk}}
-\newcommand{\nd}[0]{\operatorname{nd}}
-\newcommand{\Arg}[0]{\operatorname{Arg}}
-\newcommand{\PGL}[0]{\operatorname{PGL}}
-\newcommand{\GL}[0]{\operatorname{GL}}
-\newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\mat}[0]{\operatorname{Mat}}
-\newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Gal}[0]{\operatorname{Gal}}
-\newcommand{\Hilb}[0]{\operatorname{Hilb}}
-\newcommand{\Quot}[0]{\operatorname{Quot}}
-\newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{{ \text{red} }}
-\newcommand{\Pic}[0]{{\operatorname{Pic}}}
-\newcommand{\NS}[0]{{\operatorname{NS}}}
-\newcommand{\lcm}[0]{\operatorname{lcm}}
-\newcommand{\maps}[0]{\operatorname{Maps}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
-\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
-\newcommand{\Tr}[0]{\operatorname{Tr}}
-\newcommand{\adj}[0]{\operatorname{adj}}
-\newcommand{\ad}[0]{\operatorname{ad}}
-\newcommand{\ann}[0]{\operatorname{Ann}}
-\newcommand{\Ann}[0]{\operatorname{Ann}}
-\newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\arccsc}[0]{\operatorname{arccsc}}
-\newcommand{\arccot}[0]{\operatorname{arccot}}
-\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
-\newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\syl}[0]{{\operatorname{Syl}}}
-\newcommand{\ff}[0]{\operatorname{ff}}
-\newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
-\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
-\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
-\newcommand{\zar}[0]{{\mathrm{zar}}}
-\newcommand{\afp}[0]{A_{/\FF_p}}
-\newcommand{\HP}[0]{{\operatorname{HP}}}
-\newcommand{\TP}[0]{{\operatorname{TP}}}
-\newcommand{\HC}[0]{{\operatorname{HC}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HoH}[0]{{\operatorname{HH}}}
-\newcommand{\THoH}[0]{{\operatorname{THH}}}
-\newcommand{\mTHH}[0]{{\operatorname{THH}}}
-\newcommand{\THC}[0]{{\operatorname{THC}}}
-\newcommand{\TC}[0]{{\operatorname{TC}}}
-\newcommand{\GW}[0]{{\operatorname{GW}}}
-\newcommand{\SH}[0]{{\operatorname{SH}}}
-\newcommand{\TCH}[0]{{\operatorname{TCH}}}
-\newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\codim}[0]{\operatorname{codim}}
-\newcommand{\reldim}[0]{\operatorname{reldim}}
-\newcommand{\cohdim}[0]{\operatorname{cohdim}}
-\newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\dom}[0]{\operatorname{dom}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\txor}[0]{{\operatorname{ or }}}
-\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
-\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\Aut}[0]{{\operatorname{Aut}}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
-\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\Reg}[0]{\operatorname{Reg}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
-\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
-\newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\MO}[0]{{\operatorname{MO}}}
-\newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
-\newcommand{\per}[0]{{\operatorname{Per}}}
-\newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\SU}[0]{{\operatorname{SU}}}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
-\newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\CH}[0]{{\operatorname{CH}}}
-\newcommand{\Cat}[0]{\mathsf{Cat}}
-\newcommand{\Poset}[0]{\mathsf{Poset}}
-\newcommand{\Fun}[0]{{\mathsf{Fun}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
-\newcommand{\poly}[0]{\mathsf{poly}}
-\newcommand{\Vect}[0]{{\mathsf{Vect}}}
-\newcommand{\Sh}[0]{{\mathsf{Sh}}}
-\newcommand{\Var}[0]{{\mathsf{Var}}}
-\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
-\newcommand{\Alg}[0]{{\mathsf{Alg}}}
-\newcommand{\Ch}[0]{\mathsf{Ch}}
-\newcommand{\Set}[0]{{\mathsf{Set}}}
-\newcommand{\FI}[0]{{\mathsf{FI}}}
-\newcommand{\Sets}[0]{{\mathsf{Set}}}
-\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
-\newcommand{\sSet}[0]{{\mathsf{sSet}}}
-\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
-\newcommand{\Sp}[0]{{\mathsf{Sp}}}
-\newcommand{\sets}[0]{{\mathsf{Set}}}
-\newcommand{\Grp}[0]{{\mathsf{Grp}}}
-\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
-\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
-\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
-\newcommand{\Kan}[0]{{\mathsf{Kan}}}
-\newcommand{\Groups}[0]{{\mathsf{Group}}}
-\newcommand{\Ab}[0]{{\mathsf{Ab}}}
-\newcommand{\Ring}[0]{\mathsf{Ring}}
-\newcommand{\CRing}[0]{\mathsf{CRing}}
-\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
-\newcommand{\Field}[0]{\mathsf{Field}}
-\newcommand{\Perf}[0]{\mathsf{Perf}}
-\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
-\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
-\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
-\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
-\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
-\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
-\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\mathsf{gr}\,}}
-\newcommand{\grMod}[0]{{\mathsf{grMod}}}
-\newcommand{\Mod}[0]{{\mathsf{Mod}}}
-\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
-\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
-\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
-\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
-\newcommand{\cdga}[0]{{\mathsf{cdga} }}
-\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
-\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
-\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
-\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
-\newcommand{\alg}[0]{\mathsf{Alg}}
-\newcommand{\scalg}[0]{\mathsf{sCAlg}}
-\newcommand{\calg}[0]{\mathsf{CAlg}}
-\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
-\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
-\newcommand{\ssets}[0]{\mathsf{sSet}}
-\newcommand{\Assoc}[0]{\mathsf{Assoc}}
-\newcommand{\Free}[0]{\mathsf{Free}}
-\newcommand{\Unital}[0]{\mathsf{Unital}}
-\newcommand{\Riem}[0]{\mathsf{Riem}}
-\newcommand{\Comm}[0]{\mathsf{Comm}}
-\newcommand{\Top}[0]{{\mathsf{Top}}}
-\newcommand{\CW}[0]{{\mathsf{CW}}}
-\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
-\newcommand{\ho}[0]{{\mathsf{ho}}}
-\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
-\newcommand{\hoType}[0]{{\mathsf{hoType}}}
-\newcommand{\Sch}[0]{{\mathsf{Sch}}}
-\newcommand{\Aff}[0]{{\mathsf{Aff}}}
-\newcommand{\Schf}[0]{{\mathsf{Schf}}}
-\newcommand{\Rep}[0]{{\mathsf{Rep}}}
-\newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
-\newcommand{\Perv}[0]{\mathsf{Perv}}
-\newcommand{\presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
-\newcommand{\bung}{{\mathsf{Bun}_G}}
-\newcommand{\set}{{\mathsf{Set} }}
-
-\newcommand{\eul}[0]{{\operatorname{eul}}}
-\newcommand{\ab}[0]{{\operatorname{ab}}}
-\newcommand{\op}[0]{^{\operatorname{op}}}
-\newcommand{\Op}[0]{{\operatorname{Op}}}
-\newcommand{\Ob}[0]{{\operatorname{Ob}}}
-\newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\Tor}[0]{\operatorname{Tor}}
-\newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext} }
-\newcommand{\Def}{\operatorname{Def} }
-\newcommand{\Obs}{\operatorname{Obs} }
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\orr}[0]{{\operatorname{ or }}}
-\newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\const}[0]{{\operatorname{const.}}}
-\newcommand{\disc}[0]{{\operatorname{disc}}}
-\newcommand{\discriminant}[0]{{\Delta}}
-\newcommand{\id}[0]{\operatorname{id}}
-\newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\operatorname{pt}}}
-\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
-\newcommand{\sep}[0]{^\operatorname{sep}}
-\newcommand{\tors}[0]{{\operatorname{tors}}}
-\newcommand{\tor}[0]{\operatorname{Tor}}
-\newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{{ \text{compact} } }
-\newcommand{\Kah}[0]{{ \text{Kähler} } }
-\newcommand{\oriented}[0]{{ \text{oriented} } }
-\newcommand\compact[0]{\text{cpt}}
-\newcommand\Kahler[0]{\text{Kähler}}
-\newcommand\hyp[0]{\text{hyp}}
-\newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
-\newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
-\newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
-\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
-\newcommand{\actsonl}[0]{\curvearrowleft}
-\newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
-\newcommand{\convolve}[0]{\ast}
-\newcommand{\freeprod}[0]{\ast}
+\newcommand{\SpSp}[0]{{\mathbb{S}}}
+\newcommand{\Spec}[0]{\operatorname{Spec}}
+\newcommand{\Spf}[0]{\operatorname{Spf}}
 \newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
-\newcommand{\slope}[0]{{\mathrm{slope}}}
-\newcommand{\coker}[0]{\operatorname{coker}}
-\newcommand{\Mor}[0]{\operatorname{Mor}}
-\newcommand{\cone}[0]{\operatorname{cone}}
-\newcommand{\cok}[0]{\operatorname{coker}}
-\newcommand{\PD}[0]{\mathrm{PD}}
-\newcommand{\conjugate}[1]{{\overline{{#1}}}}
-\newcommand{\conj}[1]{{\overline{{#1}}}}
-\newcommand{\converges}[1]{\overset{#1}}
-\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
-\newcommand{\bundle}[1]{\mathcal{#1}}
-\newcommand{\td}[0]{\mathrm{td}}
-\newcommand{\correspond}[1]{\theset{\substack{#1}}}
-\newcommand{\cross}[0]{\times}
-\newcommand{\by}[0]{\times}
-\newcommand{\dash}[0]{{\hbox{-}}}
-\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
-\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
-\newcommand{\definedas}[0]{\coloneqq}
-\newcommand{\da}[0]{\coloneqq}
-\newcommand{\del}[0]{{\partial}}
-\newcommand{\directlim}[0]{\varinjlim}
-\newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
-\newcommand{\Disjoint}[0]{\displaystyle\coprod}
-\newcommand{\dual}[0]{ {}^{ \check{} }}
-\newcommand{\sm}[0]{\setminus}
-\newcommand{\smz}[0]{\setminus\theset{0}}
-\newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{\varepsilon}
-\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
-\newcommand{\up}[0]{\uparrow}
-\newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\gs}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\homotopic}[0]{\simeq}
-\newcommand{\injectivelim}[0]{\varinjlim}
-\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\displaystyle\bigcup}
-\newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\into}[0]{\to}
-\newcommand{\inv}[0]{^{-1}}
-\newcommand{\mfa}[0]{{\mathfrak{a}}}
-\newcommand{\mfb}[0]{{\mathfrak{b}}}
-\newcommand{\mfc}[0]{{\mathfrak{c}}}
-\newcommand{\mff}[0]{{\mathfrak{f}}}
-\newcommand{\mfi}[0]{{\mathfrak{I}}}
-\newcommand{\mfm}[0]{{\mathfrak{m}}}
-\newcommand{\mfn}[0]{{\mathfrak{n}}}
-\newcommand{\mfp}[0]{{\mathfrak{p}}}
-\newcommand{\mfq}[0]{{\mathfrak{q}}}
-\newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\mfs}[0]{{\mathfrak{s}}}
-\newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\liel}[0]{{\mathfrak{l}}}
-\newcommand{\lief}[0]{{\mathfrak{f}}}
-\newcommand{\liet}[0]{{\mathfrak{t}}}
-\newcommand{\lieo}[0]{{\mathfrak{o}}}
-\newcommand{\lied}[0]{{\mathfrak{d}}}
-\newcommand{\lier}[0]{{\mathfrak{r}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
-\newcommand{\gl}[0]{{\mathfrak{gl}}}
-\newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\Tensor}[0]{\bigotimes}
+\newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
+\newcommand{\U}[0]{{\operatorname{U}}}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\ZZlocal}[1]{{ \ZZ_{\hat{#1}} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\Zar}[0]{{\mathrm{Zar}}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\abuts}[0]{\Rightarrow}
+\newcommand{\ab}[0]{{\operatorname{ab}}}
+\newcommand{\actsonl}[0]{\curvearrowleft}
+\newcommand{\actson}[0]{\curvearrowright}
+\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\adj}[0]{\operatorname{adj}}
+\newcommand{\ad}[0]{\operatorname{ad}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\annd}[0]{{\operatorname{ and }}}
+\newcommand{\ann}[0]{\operatorname{Ann}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\aut}[0]{\operatorname{Aut}}
+\newcommand{\bP}[0]{\operatorname{bP}}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\bbm}[0]{{\mathbb{M}}}
+\newcommand{\bd}[0]{{\del}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
+\newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\Bun}{{\mathsf{Bun}}}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\by}[0]{\times}
+\newcommand{\candim}[0]{\operatorname{candim}}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\ch}[0]{\operatorname{ch}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
+\newcommand{\coim}[0]{\operatorname{coim}}
+\newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\cone}[0]{\operatorname{cone}}
+\newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\const}[0]{{\operatorname{const.}}}
+\newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\convolve}[0]{\ast}
+\newcommand{\correspond}[1]{\theset{\substack{#1}}}
+\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\cpt}[0]{{ \operatorname{compact} } }
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\dR}[0]{\mathrm{dR}}
+\newcommand{\dV}{\,dV}
+\newcommand{\dash}[0]{{\hbox{-}}}
+\newcommand{\da}[0]{\coloneqq}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
+\newcommand{\ddim}[0]{\operatorname{ddim}}
+\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
+\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
+\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\decreasesto}[0]{\searrow}
+\newcommand{\definedas}[0]{\coloneqq}
+\newcommand{\del}[0]{{\partial}}
+\newcommand{\diagonal}[1]{\Delta}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\directlim}[0]{\varinjlim}
+\newcommand{\discriminant}[0]{{\Delta}}
+\newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\dlog}[0]{\operatorname{dLog}}
+\newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\dr}{\,dr}
+\newcommand{\ds}{\,ds}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\dt}{\,dt}
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
+\newcommand{\dy}{\,dy}
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dz}{\,dz}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\eps}[0]{{\varepsilon}}
+\newcommand{\essdim}[0]{\operatorname{essdim}}
+\newcommand{\et}{\text{ét}}
+\newcommand{\eul}[0]{{\operatorname{eul}}}
+\newcommand{\evalfrom}[0]{\Big|}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\ff}[0]{\operatorname{ff}}
+\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\from}[0]{\leftarrow}
+\newcommand{\gal}[0]{{ \operatorname{Gal}} }
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
+\newcommand{\height}[0]{\operatorname{ht}}
+\newcommand{\homotopic}[0]{\simeq}
+\newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\im}[0]{\operatorname{im}}
+\newcommand{\increasesto}[0]{\nearrow}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\injectivelim}[0]{\varinjlim}
+\newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\interior}[0]{^\circ}
+\newcommand{\intersect}[0]{\cap}
+\newcommand{\into}[0]{\to}
+\newcommand{\inverselim}[0]{\varprojlim}
+\newcommand{\inv}[0]{^{-1}}
+\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\isomorphic}{{ \, \mapsvia{\sim}\, }}
+\newcommand{\iso}{{ \isomorphic  }}
+\newcommand{\kG}[0]{{kG}}
+\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
+\newcommand{\kk}[0]{{\mathbb{k}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\krulldim}[0]{\operatorname{krulldim}}
+\newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
+\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
+\newcommand{\lci}[0]{\mathrm{lci}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\lieg}[0]{{\mathfrak{g}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
-\newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
-\newcommand{\fromvia}[1]{\xleftarrow{#1}}
-\newcommand{\mapstovia}[1]{\xmapsto{#1}}
-\newcommand{\ms}[0]{\xrightarrow{\sim}}
-\newcommand{\from}[0]{\leftarrow}
-\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\loc}[0]{{\mathsf{loc}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\mHH}[0]{{\operatorname{HH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
-\newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\diagonal}[0]{\Delta}
-\newcommand{\embeds}[0]{\hookrightarrow}
-\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
-\newcommand{\injectsvia}[1]{\overset{#1}\injects}
-\newcommand{\surjects}[0]{\twoheadrightarrow}
-\newcommand{\Prism}[0]{\mathsf{Prism}}
-\newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\Spf}[0]{\mathsf{Spf}}
-\newcommand{\WCart}[0]{\mathsf{WCart}}
-\newcommand{\padic}[0]{p\dash\text{adic}}
-\newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
-}
-\newcommand{\adjoint}[0]{\leftrightarrows}
-\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
-\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
-\newcommand{\MM}[0]{{\mathcal{M}}}
-\newcommand{\OO}[0]{{\mathcal{O}}}
-\newcommand{\OX}[0]{{\mathcal{O}_X}}
-\newcommand{\imaginarypart}[1]{{\mathcal{Im}({#1})}}
+\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\mapstovia}[1]{\xmapsto{#1}}
+\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsfromvia}[1]{\xhookleftarrow{#1}}
+\newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\mat}[0]{\operatorname{Mat}}
+\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
 \newcommand{\mca}[0]{{\mathcal{A}}}
 \newcommand{\mcb}[0]{{\mathcal{B}}}
 \newcommand{\mcc}[0]{{\mathcal{C}}}
@@ -420,215 +360,210 @@
 \newcommand{\mcv}[0]{{\mathcal{V}}}
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
-\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
-\newcommand{\Hsh}{{ \mathcal{H} }}
-\newcommand{\CY}{{ \text{CY} }}
-\newcommand{\FS}{{ \text{FS} }}
-\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\mfa}[0]{{\mathfrak{a}}}
+\newcommand{\mfb}[0]{{\mathfrak{b}}}
+\newcommand{\mfc}[0]{{\mathfrak{c}}}
+\newcommand{\mff}[0]{{\mathfrak{f}}}
+\newcommand{\mfi}[0]{{\mathfrak{I}}}
+\newcommand{\mfm}[0]{{\mathfrak{m}}}
+\newcommand{\mfn}[0]{{\mathfrak{n}}}
+\newcommand{\mfp}[0]{{\mathfrak{p}}}
+\newcommand{\mfq}[0]{{\mathfrak{q}}}
+\newcommand{\mfr}[0]{{\mathfrak{r}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\mm}[0]{{\mathfrak{m}}}
+\newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\cell}[0]{{ \mathrm{cell}} }
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
+\newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
+\newcommand{\nd}[0]{\operatorname{nd}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
+\newcommand{\noeth}[0]{\mathrm{Noeth}}
+\newcommand{\nonzero}[0]{^{\bullet}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
-\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
+\newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
-\newcommand{\Stab}[0]{{\operatorname{Stab}}}
-\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\oriented}[0]{{ \operatorname{oriented} } }
+\newcommand{\orr}[0]{{\operatorname{ or }}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
+\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
+\newcommand{\poly}[0]{\mathrm{poly}}
+\newcommand{\prim}[0]{{\operatorname{prim}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
+\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
-\newcommand{\Log}[0]{\operatorname{Log}}
-\newcommand{\reg}[0]{\operatorname{Reg}}
+\newcommand{\red}[0]{{ \text{red} }}
+\newcommand{\reg}[0]{\mathrm{reg}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
 \newcommand{\restrictionof}[2]{ {\left.{{#1}} \right|_{{#2}} } }
-\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\rk}[0]{{\operatorname{rank}}}
-\newcommand{\evalfrom}[0]{\Big|}
-\renewcommand{\mod}{\pmod}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
+\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
+\newcommand{\sep}[0]{{ {}^{ \operatorname{sep} } }}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\signature}[0]{\operatorname{sig}}
 \newcommand{\sign}[0]{\operatorname{sign}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
+\newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\sm}[0]{\setminus}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\Jac}[0]{\operatorname{Jac}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{St}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
+\newcommand{\surjectsvia}[2][]{ \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\, }
+\newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
-\newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\smashprod}[0]{\wedge}
-\newcommand{\Wedge}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\wedgeprod}[0]{\vee}
-\newcommand{\Wedgeprod}[0]{\bigvee}
-\newcommand{\Vee}[0]{\bigvee}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
-\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
-\newcommand{\ts}[1]{\left\{{#1}\right\}}
-\newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
-\newcommand{\gens}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\thevector}[1]{{\left[ {#1} \right]}}
-\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\thinrank}[0]{T_n\dash\operatorname{rank}}
 \newcommand{\too}[1]{{\xrightarrow{#1}}}
+\newcommand{\tors}[0]{{\operatorname{tors}}}
+\newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\transverse}[0]{\pitchfork}
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
 \newcommand{\trianglerightneq}{\mathrel{\ooalign{\raisebox{-0.5ex}{\reflectbox{\rotatebox{90}{$\nshortmid$}}}\cr$\triangleright$\cr}\mkern-3mu}}
-\newcommand{\tr}[0]{\operatorname{Tr}}
+\newcommand{\tr}[0]{{\mathrm{tr}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\ts}[1]{\left\{{#1}\right\}}
+\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\txor}[0]{{\operatorname{ or }}}
+\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
+\newcommand{\type}[0]{{\operatorname{type}}}
 \newcommand{\uniformlyconverges}[0]{\rightrightarrows}
-\newcommand{\abuts}[0]{\Rightarrow}
-\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\union}[0]{\cup}
+\newcommand{\unital}[0]{{\operatorname{unital}}}
 \newcommand{\units}[0]{^{\times}}
-\newcommand{\nonzero}[0]{^{\bullet}}
+\newcommand{\up}[0]{\uparrow}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
+\newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
+\newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
+\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
+\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
+\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
+
+\renewcommand{\AA}[0]{{\mathbb{A}}}
+\renewcommand{\SS}[0]{{\mathbb{S}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\renewcommand{\det}{\operatorname{det}}
 \renewcommand{\div}[0]{\operatorname{Div}}
-\newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Frac}[0]{\operatorname{Frac}}
-\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
-\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
-\newcommand{\fourier}[1]{\widehat{#1}}
+\renewcommand{\labelitemiii}{$\diamondsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
+\renewcommand{\mod}{\pmod}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
-\newcommand{\complex}[1]{{#1}_{*}}
-\newcommand*\dif{\mathop{}\!\operatorname{d}}
-\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
-\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
-\renewcommand{\labelitemiii}{$\diamondsuit$}
-\renewcommand{\labelitemiv}{$\diamondsuit$}
-\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
-\newcommand\rref{\operatorname{RREF}}
-\newcommand{\interior}[0]{^\circ}
-\newcommand{\increasesto}[0]{\nearrow}
-\newcommand{\decreasesto}[0]{\searrow}
-\newcommand\jan{\operatorname{Jan}}
-\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
-\newcommand\TMF{ \mathrm{TMF} }
-\newcommand\tmf{ \mathrm{tmf} }
 
-\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
-\DeclareMathOperator{\submfds}{SubMfds}
-\DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\BiHol}{BiHol}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Curv}{Curv}
+\DeclareMathOperator{\Deck}{Deck}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Endo}{End}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\eq}{=}
-\DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
-\DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\Hol}{Hol}
-\DeclareMathOperator{\Bun}{Bun}
-\DeclareMathOperator{\BiHol}{BiHol}
-\DeclareMathOperator{\Br}{Br}
-\DeclareMathOperator{\coh}{coh}
-\DeclareMathOperator{\colspace}{colspace}
-\DeclareMathOperator{\rowspace}{rowspace}
-\DeclareMathOperator{\codom}{codom}
-\DeclareMathOperator{\range}{range}
-\DeclareMathOperator{\nullspace}{nullspace}
-\DeclareMathOperator{\nullity}{nullspace}
-\DeclareMathOperator{\projection}{Proj}
-\DeclareMathOperator{\Der}{Der}
-\DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
-\DeclareMathOperator{\D}{{\mathsf{D} }}
-\DeclareMathOperator{\K}{{\mathsf{K} }}
-\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
-\DeclareMathOperator{\T}{{T}}
-\DeclareMathOperator{\Rd}{{\mathbb{R} }}
-\DeclareMathOperator{\Ld}{{\mathbb{L} }}
-\DeclareMathOperator{\Bl}{Bl}
-\DeclareMathOperator{\Triv}{Triv}
-\DeclareMathOperator{\Tot}{Tot}
 \DeclareMathOperator{\Forget}{Forget}
-\DeclareMathOperator{\Griff}{Griff}
-\DeclareMathOperator{\Symb}{Symb}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\U}{U}
-
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
-
-\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
-
-\newcommand{\Lie}[0]{\operatorname{Lie}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
-\newcommand{\cl}[0]{{ \operatorname{cl}} }
-\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\Crit}[0]{\operatorname{Crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Places}[0]{{\operatorname{Places}}}
-
-\DeclareMathOperator{\hilb}{Hilb}
-\DeclareMathOperator{\Curv}{Curv}
-
-\DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\Frame}{Frame}
-\DeclareMathOperator{\OFrame}{OFrame}
-\DeclareMathOperator{\UFrame}{UFrame}
-\DeclareMathOperator{\prin}{prin}
-\DeclareMathOperator{\Prin}{Prin}
-\DeclareMathOperator{\Taut}{Taut}
-
 \DeclareMathOperator{\Frob}{Frob}
-
-\DeclareMathOperator{\hd}{Head}
-\DeclareMathOperator{\soc}{Soc}
-\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\coInd}{coInd}
-\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\Map}{Maps}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
 \DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\cores}{cores}
-\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Taut}{Taut}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\coind}{coInd}
 \DeclareMathOperator{\coinfl}{coinf}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\submfds}{SubMfds}
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\delbar}[0]{\bar{\del}}
-
-
+\newcommand{\delbar}[0]{{ \bar{\del}}}
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
 \newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\rightderive}[0]{{\mathbf{R}}}
 
 \newcommand\rrarrows{\rightrightarrows}
 \newcommand\rrrarrows{
@@ -637,7 +572,6 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\ul[1]{\underline{#1}}
@@ -650,17 +584,20 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\closure[1]{\overline{#1}}
 \newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
+\newcommand\laurent[1]{{\left(\left( #1 \right)\right)  }}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
 \newcommand\gradient{\nabla}
 
+\newcommand\cechH[0]{{\check{H}}}
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
 \newcommand\cupp[0]{\smile}
@@ -669,72 +606,130 @@
 \newcommand\ev[0]{\operatorname{ev}}
 \newcommand\coev[0]{\operatorname{coev}}
 
-\newcommand{\RM}[1]{%
-  \textup{\uppercase\expandafter{\romannumeral#1}}%
-}
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
-\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\tselts[2]{{ \theset{ {#1}_1, {#1}_2, \cdots, {#1}_{#2} } }}
+\newcommand\fiberproduct[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\fiberprod[1]{{ \fiberproduct{#1} }}
+\newcommand\fprod[1]{{ \fiberproduct{#1} }}
+\newcommand\smallprod[0]{{ \scriptscriptstyle\prod }}
+\newcommand\sumpower[1]{{ {}^{ \scriptscriptstyle\oplus^{#1} }  }}
+\newcommand\prodpower[1]{{ {}^{ \scriptscriptstyle\times^{#1} }  }}
+\newcommand\tensorpower[2]{{ {}^{ \scriptstyle\otimes_{#1}^{#2} }  }}
+\newcommand\derivedtensorpower[3]{{ {}^{ \scriptstyle {}_{#1} {\otimes_{#2}^{#3}} }  }}
+\newcommand\smashpower[1]{{ {}^{ \scriptscriptstyle\smashprod^{#1} }  }}
 
-
+\newcommand{\Tot}[0]{{ \operatorname{Tot} }}
 \newcommand{\Totsum}[0]{\Tot^{\oplus}}
 \newcommand{\Totprod}[0]{\Tot^{\Pi}}
-\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
-\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
-\newcommand{\congas}[1]{\underset{#1}{\cong}}
-\newcommand{\ideal}[1]{\mathcal{#1}}
-\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
-
-
-
-\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
-\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 \newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
-\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
-\newcommand{\Ag}[0]{{\mathcal{A}_g}}
-\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
 
-\newcommand{\matt}[4]{{
-\begin{bmatrix}
-#1 & #2 
-\\
-#3 & #4
-\end{bmatrix}
-}}
-
-
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\can}[0]{{\mathrm{can}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\qproj}[0]{{\mathrm{qproj}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\semisimple}[0]{{\operatorname{ss}}}
 \newcommand{\gon}[0]{{\dash\mathrm{gon}}}
 \newcommand{\semi}[0]{{\operatorname{semi}}}
 \newcommand{\inc}[0]{{\operatorname{inc}}}
 \newcommand{\Ball}[0]{{B}}
 \newcommand{\hq}[0]{{/}}
-\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
+\newcommand{\crys}[0]{{\mathrm{crys}}}
+\newcommand{\Xff}[0]{{X_\mathrm{FF}}}
+\newcommand{\an}[0]{{\mathrm{an}}}
+\newcommand{\Nis}[0]{{\mathrm{Nis}}}
+\newcommand{\perf}[0]{{\mathrm{perf}}}
+
+\newcommand{\quillenplus}[0]{{ {}^{+} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
+
+\newcommand{\localize}[1]{ \left[ { \scriptstyle #1\inv } \right]}
+\newcommand{\sheafify}[1]{ \left( #1 \right)^{\scriptscriptstyle \mathrm{sh}} }
+\newcommand{\complete}[1]{{ {}_{ \hat{#1} } }}
+\newcommand{\takecompletion}[1]{{ \overbrace{#1}^{\widehat{\hspace{4em}}}  }}
+\newcommand{\twistleft}[2]{{ {}^{#1} #2 }}
+\newcommand{\twistright}[2]{{ #2 {}^{#1} }}
+\newcommand{\liesover}[1]{{ {}_{/ {#1}} }}
+\newcommand{\liesabove}[1]{{ {}_{/ {#1}} }}
+\newcommand{\slice}[1]{_{/ {#1}} }
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
+
+
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\T}[0]{{\mathsf{T}}}
+\newcommand{\K}[0]{{\mathsf{K}}}
+\newcommand{\G}[0]{{\mathsf{G}}}
+%\newcommand{\H}[0]{{\mathsf{H}}}
+\newcommand{\D}{{ \mathsf{D} }}
+\newcommand{\mH}{{ \mathsf{H} }}
+\newcommand{\BGL}[0]{ \mathsf{B}\mkern-3mu \operatorname{GL} }
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\newcommand{\fourcase}[4]{
+\begin{cases}{#1} & {#2} \\ {#3} & {#4}\end{cases} 
+}
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+  {#1} & {#2} 
+\\
+  {#3} & {#4}
+\end{bmatrix}
+}}
+\newcommand{\mattt}[9]{{
+\begin{bmatrix}
+  {#1} & {#2} & {#3}
+\\
+  {#4} & {#5} & {#6}
+\\
+  {#7} & {#8} & {#9}
+\end{bmatrix}
+}}
+
+\newcommand\stacksymbol[3]{
+  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
+  $\scriptscriptstyle#2$}}
+}
+\newcommand{\textoperatorname}[1]{
+  \operatorname{\textnormal{#1}}
+}
+
+\newcommand{\dcoset}[3]{
+    {\textstyle #1}
+    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
+    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
+
+
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 # Preface
 
@@ -748,6 +743,17 @@ Some fun resources:
 - [The Line with Two Origins](https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-line-with-2-origins/)
 
 ## Notation
+
+
+:::{.warnings}
+\envlist
+
+- All maps between spaces are assumed continuous!
+- All maps are *pointed*, i.e. we implicitly work in the category $\Top_*$.
+- If left unspecified, homology is always taken with $\ZZ\dash$coefficients.
+
+:::
+
 
 | Notation                                             | Definition                          |
 |------------------------------------------------------|-------------------------------------|
@@ -843,14 +849,7 @@ You can play a similar game when you take homology or cohomology.
 
  
 
-# Summary and Topics: Point-Set Topology 
 
-Some key high-level topics:
-
-- Connectedness
-- Compactness
-- Metric spaces
-- Hausdorff spaces
 
 # Definitions
 
@@ -858,6 +857,10 @@ Some key high-level topics:
 
 :::{.remark title="on the term 'locally'"}
 The prefix "locally blah" almost always means that for every $x\in X$, there exists *some* neighborhood $N_x\ni x$ which has property "blah".
+:::
+
+:::{.definition title="Accumulation point"}
+See **limit point**.
 :::
 
 :::{.definition title="Basis for a topology"}
@@ -871,6 +874,10 @@ The topology **generated** by \( \mathcal{B}  \) is the following: $U\subseteq X
 Equivalently, every open set is a union of basic open sets.
 :::
 
+:::{.definition title="Boundary"}
+The **boundary** of a subset $A\subseteq X$ is defined as $\bd A \da \cl_X(A) \sm \interior{A}$.
+Equivalently, every point $p\in A$ intersects both $A$ and $X\sm A$.
+:::
 
 :::{.definition title="Bounded"}
 A set $S$ in a metric space $(X, d)$ is *bounded* iff there exists an $m\in \RR$ such that $d(x, y) < m$ for every $x, y\in S$.
@@ -889,7 +896,6 @@ Two topologies are **comparable** if either $\tau_1 < \tau_2$ or $\tau_2 < \tau_
 :::
 
 \todo[inline]{Is this actually a poset relation? Fails reflexivity.}
-
 
 :::{.definition title="Connected"}
 A space $X$ is **connected** iff there does not exist a disconnection $X = A\disjoint B$ with $A, B$ nonempty open sets.
@@ -954,6 +960,10 @@ A subspace $Q\subset X$ is **dense** iff every neighborhood of every point in $x
 Equivalently, $\cl_X(Q) = Q$.
 :::
 
+:::{.definition title="Diameter"}
+For a subset $A$ of a metric space $(X, d)$, the **diameter** of $A$ is defined as $\sup_{p, q\in A}d(p, q)$.
+:::
+
 :::{.definition title="First Countable"}
 A space is **first-countable** iff every point admits a countable neighborhood basis.
 :::
@@ -965,6 +975,16 @@ A topological space $X$ is *Hausdorff* iff points can be separated by disjoint n
 :::{.definition title="Injection"}
 A map $\iota:A\to B$ with a **left** inverse $f:B\to A$ satisfying $f\circ \iota = \id_A$.
 Note that this is equivalent to $f(x) = f(y) \implies x = y$.
+:::
+
+:::{.definition title="Interior Point"}
+A point $p\in A$ is **interior** to $A$ if there exists a neighborhood $U\ni p$ that is entirely contained in $A$.
+:::
+
+:::{.definition title="Isolated Point"}
+A point $p\in A$ is **isolated** if $p$ is not a limit point of $A$.
+Equivalently, there exists a punctured neighborhood of $p$ that does not intersect $A$.
+
 :::
 
 :::{.definition title="Lebesgue Number"}
@@ -1049,6 +1069,10 @@ For $(X, \tau_X)$ and $(Y, \tau_Y)$ topological spaces, defining
 yields the **product topology** on $X \cross Y$.
 :::
 
+:::{.definition title="Proper"}
+A map $f:X\to Y$ is **proper** if pullbacks of compact sets are compact: if $K \subseteq Y$ is compact, then $f\inv(K) \subseteq X$ is compact.
+:::
+
 :::{.definition title="Quasicompact"}
 A topological space $X$ (possible non-Hausdorff) is **quasi-compact** iff every open cover admits a finite subcover.
 If $X$ is additionally Hausdorff, $X$ is said to be **compact**.
@@ -1086,12 +1110,10 @@ Alt:
 Let $X$ be a topological space and $A \subset X$ be a subspace, then a **retraction** of $X$ onto $A$ is a map $r: X\into X$ such that the image of $X$ is $A$ and $r$ restricted to $A$ is the identity.
 :::
 
-
 :::{.remark}
 If $X$ retracts onto $A$ with $\iota:A\injects X$, then $i_*$ is injective.
 Any nonempty space retracts to a point via a constant map.
 :::
-
 
 :::{.definition title="Saturated"}
 A subset $U \subseteq X$ is **saturated** with respect to a surjective map $p: X\surjects Y$ if and only if whenever $U \intersect p ^{-1} (y) = V \neq \emptyset$, we have $V \subseteq U$, i.e. $U$ contains every set $p ^{-1} (y)$ that it intersects.
@@ -1188,10 +1210,6 @@ For $f: (X, d_{x}) \to (Y, d_{Y})$ metric spaces,
 For an $R\dash$module $M$, a basis $B$ is a linearly independent generating set.
 :::
 
-:::{.definition title="Boundary"}
-
-:::
-\todo[inline]{Definitions}
 
 :::{.definition title="Boundary of a manifold"}
 Points $x\in M^n$ defined by 
@@ -1405,7 +1423,7 @@ A deformation retract between a space and a subspace is a homotopy equivalence, 
 Given any $f: S^n \into S^n$, there are induced maps on homotopy and homology groups. 
 Taking $f^*: H^n(S^n) \into H^n(S^n)$ and identifying $H^n(S^n) \cong \ZZ$, we have $f^*: \ZZ \into \ZZ$. 
 But homomorphisms of free groups are entirely determined by their action on generators. 
-So if $f^*(1) = n$, define $n$ to be the **degree** of $f$.
+So if $f^*(1) = n$, define $n$ to be the **degree** of $f$, which only depends on the homotopy class $f\in [S^n, S^n]$.
 :::
 
 :::{.definition title="Derived Functor"}
@@ -1783,10 +1801,6 @@ For a closed, orientable $n\dash$manifold, following map $[M] \frown \wait$ is a
 :::
 \todo[inline]{Definitions}
 
-:::{.definition title="Properly Discontinuous"}
-
-:::
-\todo[inline]{Definitions}
 
 :::{.definition title="Pullback"}
 
@@ -1970,7 +1984,41 @@ Explicitly given by
 
 # Examples
 
+
+
 ## Point-Set
+
+
+:::{.definition title="Topological Notions in Analysis"}
+A useful list:
+
+![image_2021-05-27-20-18-15](figures/image_2021-05-27-20-18-15.png)
+
+Note that limit points require punctured neighborhoods!
+
+:::
+
+:::{.example title="Some useful examples of openness and closedness"}
+
+- $\QQ \subseteq \RR$ is neither open nor closed:
+  - No point is interior, since every neighborhood of $q\in \QQ$ intersects some $p\in \RR\sm\QQ$.
+    No point in the complement is interior for a similar reason.
+  - It has no isolated points, and every $r\in \RR$ is a boundary and accumulation point.
+- $\ZZ \subseteq \RR$ is closed and not open.
+  - Just write $\RR\sm\ZZ = \union_{n\in \ZZ} (n, n+1)$, a countable union of open sets.
+    There are no interior points: every neighborhood of $n\in \ZZ$ intersects $\RR\sm \ZZ$.
+  - Every point is a boundary and accumulation point.
+- Points are closed in $\RR$: $\RR \sm \ts{ p } = (-\infty, p) \union (p, \infty)$.
+  - An infinite intersection of open sets need not be open: $\intersect_{n\in \NN} (p-1/n, p+1/n) = \ts{ p }$ which is closed.
+- Intervals $(a, b)$ are open in $\RR^1$ but not in $\RR^d$ for $d\geq 2$.
+- $\ts{1/n}$ has only isolated boundary points, and no interior points.
+  The point $0$ is an accumulation point.
+- The Cantor set has no interior points and no isolated points.
+  Every point is a boundary point and an accumulation point.
+
+:::
+
+
 
 ### Common Spaces and Operations
 
@@ -2110,18 +2158,16 @@ Some facts about the indiscrete topology:
 | Sine Curve             | $\checkmark$ |                   |
 | $\QQ$                  |              |                   |
 
-# "Analysis"-esque Results in Topology
+# Point-Set
 
-:::{.proposition title="The rationals are neither open nor closed"}
-$\QQ\subset \RR$ is not open and not closed.
+## Summary and Topics
 
-\
+Some key high-level topics:
 
-This follows because every neighborhood of $q\in \QQ$ contains an irrational and every neighborhood of $q' \in \RR\sm \QQ$ contains a rational.
-:::
-
-
-# Theorems
+- Connectedness
+- Compactness
+- Metric spaces
+- Hausdorff spaces
 
 :::{.proposition title="The continuous image of a..."}
 The following properties are "pushed forward" through continuous maps, in the sense that if property $P$ holds for $X$ and $f:X\to Y$, then $f(X)$ also satisfies $P$:
@@ -2144,7 +2190,7 @@ The following are **not preserved**:
 ## Metric Spaces and Analysis
 
 :::{.theorem title="Cantor's Intersection Theorem"}
-A bounded collection of nested closed sets $C_1 \supset C_2 \supset \cdots$ in a metric space $X$ is nonempty $\iff X$ is complete.
+A decreasing collection of nested nonempty compact sets $C_1 \supset C_2 \supset \cdots$ in a topological space $X$ is always nonempty.
 :::
 
 :::{.theorem title="Cantor's Nested Intervals Theorem"}
@@ -2188,7 +2234,6 @@ A metric space is compact iff it is complete and totally bounded.
 :::{.theorem title="Baire"}
 If $X$ is a complete metric space, $X$ is a **Baire space**: the intersection of countably many dense open sets in $X$ is again dense in $X$.
 :::
-
 
 ## Compactness
 
@@ -2257,7 +2302,6 @@ Every space has at least one retraction - for example, the constant map $r:X \in
 A continuous bijective open map is a homeomorphism.
 :::
 
-
 :::{.theorem title="Characterizations of continuous maps, Munkres 18.1"}
 For $f:X\to Y$, TFAE:
 
@@ -2290,7 +2334,6 @@ Let $N\subseteq X\cross Y$ be an open set containing the slice $x_0 \cross Y$, t
 
 :::
 
-
 :::{.remark}
 Compactness in one factor is a necessary condition.
 For a counterexample, $\RR^2$ and let $N$ be the set contained between a Gaussian and its reflection across the $x\dash$axis.
@@ -2298,7 +2341,6 @@ Then no tube about $y=0$ is entirely contained within $N$:
 
 ![image_2021-05-21-01-39-26](figures/image_2021-05-21-01-39-26.png)
 :::
-
 
 :::{.proof title="Sketch"}
 \envlist
@@ -2330,6 +2372,28 @@ Then no tube about $y=0$ is entirely contained within $N$:
   - So $y\in V_j$ for this $j$
   - Since $x\in W$, $x\in U_j$ for *every* $j$, thus $x\in U_j$.
   - So $(x, y) \in U_j \cross V_j$
+:::
+
+## "Analysis"-esque Results in Topology
+
+:::{.proposition title="The rationals are neither open nor closed"}
+$\QQ\subset \RR$ is not open and not closed.
+
+\
+
+This follows because every neighborhood of $q\in \QQ$ contains an irrational and every neighborhood of $q' \in \RR\sm \QQ$ contains a rational.
+:::
+
+
+## Exercises
+
+
+:::{.exercise title="?"}
+Show that any map between compact Hausdorff spaces must be proper.
+:::
+
+:::{.solution}
+If $Y$ is compact Hausdorff, $U$ is compact iff $U$ is closed, and by continuity closed sets pull back.
 :::
 
 
@@ -2944,12 +3008,10 @@ $\Leftarrow$: Suppose $\pi_{1}(X) = 0$. Then there is just one element in the fu
 :::
 
 
-:::{.fact "Unsorted facts"}
-\envlist
-
-- For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
-
+:::{.fact}
+For a graph $G$, we always have $\pi_{1}(G) \cong \ZZ^n$ where $n = |E(G - T)|$, the complement of the set of edges in any maximal tree. Equivalently, $n = 1-\chi(G)$. Moreover, $X \homotopic \bigvee^n S^1$ in this case.
 :::
+
 
 
 ## General Homotopy Theory
@@ -2985,7 +3047,7 @@ Any continuous map between CW complexes is homotopy equivalent to a cellular map
 :::
 \todo[inline]{Theorem}
 
-:::{.fact title="Unsorted facts about higher homotopy groups}
+:::{.fact title="Unsorted facts about higher homotopy groups"}
 \envlist
 
 - $\pi_{i\geq 2}(X)$ is always abelian.
@@ -3060,17 +3122,21 @@ These are "maximally symmetric".
 
 ## Universal Covers
 
-:::{.proposition title="Existence of universal covers"}
+:::{.definition title="Galois/normal/regular covers"}
+A covering $\tilde X \mapsvia{p} X$ is **Galois** (or **normal/regular**) over $(X, x_0)$ iff $\Deck(\tilde X)$ acts transitively on the fibers: for any two lifts $\tilde x_1, \tilde x_2\in \tilde X$ of $x_0 \in X$, there is a $\psi\in \Deck(\tilde X)$ with $\psi(\tilde x_1) = \tilde x_2$.
+:::
+
+:::{.proposition title="Fundamental theorem of covering spaces, Hatcher 1.39"}
 If $X$ is 
 
-- Connected,
+- Path-connected,
 - Locally path-connected, and
 - Semilocally simply connected,
 
-then $X$ admits a universal cover: if $C \mapsvia{q} X$ is a covering map with $C$ connected, then there exists a covering map $\tilde p: \tilde X \to C$ making the following diagram commute:
+then $X$ admits a universal cover $\hat{X} \to X$: if $C \mapsvia{q} X$ is any other covering map with $C$ connected, then there exists a covering map $\tilde p: \hat{X} \to C$ making the following diagram commute:
 
 \begin{tikzcd}
-	{C} && {\tilde X} \\
+	{C} && {\hat X} \\
 	\\
 	{X}
 	\arrow["{q}", from=1-1, to=3-1, two heads]
@@ -3079,8 +3145,54 @@ then $X$ admits a universal cover: if $C \mapsvia{q} X$ is a covering map with $
 \end{tikzcd}
 > [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJYIl0sWzAsMCwiQyJdLFsyLDAsIlxcdGlsZGUgWCJdLFsxLDAsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiXFx0aWxkZSBwIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 
-That is, any other cover $C$ of $X$ is itself covered by $\tilde X$.
-Note that by this universal property, $\tilde X$ is unique up to homeomorphism when it exists.
+That is, any other cover $C$ of $X$ is itself covered by $\hat X$.
+Note that by the universal property, $\hat X$ is unique up to homeomorphism when it exists.
+
+Moreover, letting $\tilde X \to X$ be an arbitrary path-connected cover and $H\da p_* \pi_1(\tilde X; \tilde x_0), G\da \pi_1(X; x_0)$,
+
+- The $\tilde X\to X$ is Galois iff $H\normal G$,
+- $\Deck(\tilde X\to X) \cong N_{G}(H)/H$ where $N$ is the normalizer in $G$ of $H$,
+- $\Deck(\tilde X\to X) \cong G/H$ if $\tilde X\to X$ is Galois,
+- $\Deck(\hat{X} \to X) \cong G$.
+
+:::
+
+:::{.remark}
+A Galois cover $\tilde X\to X$ with $\Deck(\tilde X) = G$ is equivalently a principal $G\dash$bundle for a discrete $G$:
+
+\begin{tikzcd}
+G 
+  \ar[r] 
+& 
+\tilde X
+  \ar[d] 
+\\
+& 
+X 
+\end{tikzcd}
+
+:::
+
+:::{.remark}
+Covering spaces of $X$ are classified by subgroups of $\pi_1(X)$:
+\[
+\correspond{
+  \text{Covering spaces $\tilde X\to X$}
+}/\text{Isomorphisms over }X
+&\mapstofrom
+\correspond{
+  \text{Subgroups } H\leq \pi_1(X)
+}/\text{Conjugacy}
+\\ \\
+\correspond{
+  \text{Galois covering spaces $\tilde X\to X$}
+}
+&\mapstofrom
+\correspond{
+  \text{Normal subgroups } H \normal \pi_1(X)
+}
+\]
+
 :::
 
 :::{.theorem title="Homotopy lifting property for covers, Hatcher 1.30"}
@@ -3137,9 +3249,17 @@ letting $H$ be the image of $\pi_1(\tilde X)$ in $\pi_1(X)$, we have
 
 1. $\tilde X$ is normal if and only if $H\normal \pi_1(X)$,
 
-2. $G(\tilde X) \cong \Aut_{\mathrm{Cov}(\tilde X) } N_{\pi_1(X)}(H)$, the normalizer of $H$ in $\pi_1(X)$.
+2. For the normalizer $N_G(H)$ where $G\da \pi_1(X)$,
+\[
+G(\tilde X) \da \Aut_{\mathrm{Cov}(X) }(\tilde X) \cong {N_G(H) \over H}
+.\]
 
-In particular, if $\tilde X$ is normal, $\Aut(\tilde X) \cong \pi_1(X) / H$, and if $\tilde X$ is the universal cover, $\Aut(\tilde X) = \pi_1(X)$.
+In particular,
+\[
+\tilde X \text{ normal} &\implies G(\tilde X) \cong \pi_1(X) / H \\
+\hat X \text{ universal} &\implies G(\hat X) \cong \pi_1(X)
+.\]
+
 :::
 
 :::{.fact}
@@ -3182,6 +3302,128 @@ Note that the number of sheets is always equal to the cardinality of $p ^{-1} (x
 
 ### Examples
 
+:::{.fact title="Some common covering spaces"}
+\begin{tikzcd}
+2\pi \ZZ \cong \ZZ
+  \ar[r] 
+& 
+\hat{S^1} = \RR
+  \ar[d, "t\mapsto e^{i t}"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+
+Any subgroup $H \leq \pi_1(S^1; 1) = \ZZ$ is of the form $H = n\ZZ$, so intermediate covers are obtained from $\hat{S^1}/n\ZZ = \RR/n\ZZ \cong S^1$ by pulling back the universal bundle:
+
+\begin{tikzcd}
+	& \ZZ && {\hat{S^1} = \RR} \\
+	n\ZZ && {\hat{S^1}/n\ZZ \cong S^1} \\
+	&&& {S^1} \\
+	&& {S^1}
+	\arrow[from=1-2, to=1-4]
+	\arrow[from=1-4, to=3-4]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-3, to=4-3]
+	\arrow[dashed, from=2-1, to=1-2]
+	\arrow[dashed, from=2-3, to=1-4]
+	\arrow[dotted, from=4-3, to=3-4]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMSwwLCJcXFpaIl0sWzMsMCwiXFxoYXR7U14xfSA9IFxcUlIiXSxbMywyLCJTXjEiXSxbMCwxLCJuXFxaWiJdLFsyLDEsIlxcaGF0e1NeMX0vblxcWlogXFxjb25nIFNeMSJdLFsyLDMsIlNeMSJdLFswLDFdLFsxLDJdLFszLDRdLFs0LDVdLFszLDAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ==)
+
+
+\begin{tikzcd}
+n\ZZ \cong \ZZ
+  \ar[r] 
+& 
+S^1
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+S^1 
+\end{tikzcd}
+
+\begin{tikzcd}
+2\pi i \ZZ \cong \ZZ
+  \ar[r] 
+& 
+\hat{\CC\units} = \CC
+  \ar[d, "z\mapsto e^{z}"] 
+\\
+& 
+\CC\units
+\end{tikzcd}
+
+
+
+\begin{tikzcd}
+ \ZZ^{\times n}
+  \ar[r] 
+& 
+\hat{\TT^n} =\RR^n
+  \ar[d] 
+\\
+& 
+\TT^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/2
+  \ar[r] 
+& 
+\hat{\RP^n} = S^n
+  \ar[d] 
+\\
+& 
+\RP^n 
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ^{\ast n} 
+  \ar[r] 
+& 
+\hat{(S^1)^{\wedgeprod n}} = \mathrm{Cayley}(n)
+  \ar[d] 
+\\
+& 
+(S^1)^{\wedgeprod n}
+\end{tikzcd}
+given by the $n\dash$valent Cayley graph covering a wedge of circles.
+
+
+![For $n=2$](figures/2021-07-03_16-55-01.png)
+
+\begin{tikzcd}
+\ZZ/n
+  \ar[r] 
+& 
+  \CC\units
+  \ar[d, "z\mapsto z^n"] 
+\\
+& 
+\CC
+\end{tikzcd}
+
+
+\begin{tikzcd}
+\ZZ/q
+  \ar[r] 
+& 
+  S^3
+  \ar[d, "{(z, w) \mapsto (e^{2\pi i \over q} z, e^{2\pi i p \over q}) w}"] 
+\\
+& 
+L(p, q)
+\end{tikzcd}
+
+
+- $T^2 \mapsvia{\times 2} \KK$
+
+:::
+
 :::{.example title="The circle $S^1$"}
 Identify $S^1 \subset \CC$, then every map $p_n: S^1 \into S^1$ given by $z\mapsto z^n$ a yields a covering space $\tilde X_n$.
 The induced map can be described on generators as
@@ -3203,11 +3445,12 @@ The universal cover of $\RP^n$ is $S^n$; this is a two-sheeted cover.
 The fiber above $x_0$ contains the two antipodal points.
 :::
 
-:::{.example title="The torus"}
-The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
+:::{.example title="The torus $S^1 \cross S^1$"}
+The universal cover of $T = S^1 \cross S^1$ is $\tilde X =\RR \cross \RR$. 
+The fiber above the base point contains every point on the integer lattice $\ZZ \cross \ZZ = \pi_1(T) = \text{Aut}(\tilde X)$
 :::
 
-:::{.fact}
+:::{.proposition title="General construction for wedge products"}
 For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ is constructed as a infinite tree with $n\dash$colored vertices:
 
 - Each vertex corresponds to one of the universal covers $\tilde X_i$,
@@ -3216,8 +3459,8 @@ For a wedge product $X = \bigvee_i^n \tilde X_i$, the covering space $\tilde X$ 
 The neighborhood of each colored vertex has edges corresponding (not bijectively) to generators of $\pi_1(X_i)$.
 :::
 
-:::{.example title="Covering spaces of wedges of spheres"}
-The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$, and the universal cover is the following 4-valent Cayley graph:
+:::{.example title="Wedge of circles"}
+The fundamental group of $S^1 \vee S^1$ is $\ZZ \ast \ZZ$ by van Kampen, and the universal cover is the following 4-valent Cayley graph:
 
 ![The universal cover of $\S^1 \vee S^1$](figures/image_2021-01-10-13-19-32.png)
 
@@ -3226,18 +3469,19 @@ See Hatcher p.58 for other covers.
 :::
 
 :::{.corollary title="Every subgroup of a free group is free"}
-Idea for a particular case: use the fact that $\pi_1(\bigvee^k S^1) = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on its maximal tree. $\qed$
+Idea for a particular case: use the fact that $\pi_1\qty{\bigvee^k S^1} = \ZZ^{\ast k}$, so if $G \leq \ZZ^{\ast k}$ then there is a covering space $X \surjects \bigvee^k S^1$ such that $\pi_1(X) = G$. 
+Since $X$ can be explicitly constructed as a graph, i.e. a CW complex with only a 1-skeleton, $\pi_1(X)$ is free on the edges in the complement of a maximal tree. 
 
 :::
 
-:::{.example title="of a universal covering space"}
+:::{.example title="Wedge of projective spaces"}
 The fundamental group of $\RP^2 \vee \RP^2$ is $\ZZ_2 \ast \ZZ_2$, corresponding to an infinite string of copies of 2-valent $S^2$s:
 
 ![Another universal cover.](figures/image_2021-01-10-13-14-27.png)
 
 :::
 
-:::{.example title="of a universal covering space"}
+:::{.example title="$\RP^2 \wedgeprod T^2$"}
 The fundamental group of $\RP^2 \vee T^2$ is $\ZZ_2 \ast \ZZ$, and the universal cover is shown in the following image.
 Each red vertex corresponds to a copy of $S^2$ covering $\RP^2$ (having exactly 2 neighbors each), and each blue vertex corresponds to $\RR^2$ cover $\TT^2$, with $\abs{\ZZ^2}$ many vertices as neighbors.
 
@@ -3290,7 +3534,7 @@ Since every map into a contractible space is nullhomotopic, there is a homotopy 
 But then $p\circ \tilde H: X \cross I \into Y$ is also a homotopy from $f$ to the map $p\circ c$, which satisfies $(p\circ c)(y) = p(z_0) = x_0$ for some $x_0 \in X$, and is in particular a constant map.
 :::
 
-:::{.proposition title="Application: showing one space can not cover another"}
+:::{.proposition title="Showing one space can not cover another"}
 There is no covering map $p: \RP^2 \to \TT^2$.
 :::
 
@@ -3317,82 +3561,71 @@ If $G\actson X$ is a free and properly discontinuous action, then
 
 :::
 
-:::{.fact title="Some common covering spaces"}
-\begin{tikzcd}
-\ZZ 
-  \ar[r] 
-& 
-\RR
-  \ar[d] 
-\\
-& 
-S^1 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ^n 
-  \ar[r] 
-& 
-\RR^n
-  \ar[d] 
-\\
-& 
-\TT^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ/2\ZZ 
-  \ar[r] 
-& 
-S^n
-  \ar[d] 
-\\
-& 
-\RP^n 
-\end{tikzcd}
-
-
-\begin{tikzcd}
-\ZZ^{\ast n} 
-  \ar[r] 
-& 
-\mathrm{Cayley}(n)
-  \ar[d] 
-\\
-& 
-\bigvee_n S^1 
-\end{tikzcd}
-given by the $n\dash$valent Cayley graph covering a wedge of circles.
-
-
-
-- $T^2 \mapsvia{\times 2} \KK$
-- $\ZZ/q\ZZ \to L_{p/q} \mapsvia{\pi} S^3$
-- $\ZZ/n\ZZ \to \CC^* \mapsvia{z^n} \CC$
-
+:::{.fact}
+If $f:X\to Y$ is a covering map of degree 1, then $f$ is necessarily a homeomorphism.
 :::
+
+## Exercises
+
+- See <https://www.math.utah.edu/~patrikis/6520Spring2018/6520hw4.pdf>
 
 #  CW and Simplicial Complexes
 
-\todo[inline]{Missing a lot on CW complexes}
 
-## Degrees 
+:::{.warnings}
+The maps go *down* in degree for cellular chain complexes! I.e., 
+\[
+C_*(X) = (0 \from C_0 \from C_1 \from \cdots )
+.\]
 
-:::{.fact title="Useful properties of the degree of a map between spheres"}
-\envlist
-
-- $\text{deg}~\id_{S^n} = 1$
-
-- $\text{deg} (f\circ g) = \text{deg}~f \cdot \text{deg}~g$
-
-- $\text{deg}~r = -1$ where $r$ is any rotation about a hyperplane, i.e. $r(\thevector{x_1 \cdots x_i \cdots x_n}) = \thevector{x_1 \cdots -x_i \cdots x_n}$.
-
-- The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ reflections, so $\text{deg}~\alpha = (-1)^{n+1}$.
 :::
 
-## Examples of CW Complexes/Structures 
+
+:::{.proposition title="Product CW structure"}
+If $X, Y$ are CW complexes with $p_X(t), p_Y(t)$ the generating functions for the number of cells (so $[t^n] p_X(t) \da a_n$ is the number of $n\dash$cells in $X$), then the generating function for the product is 
+\[
+p_{X\cross Y}(t) = p_X(t)p_Y(t)
+.\]
+Categorified, this comes from a quasi-isomorphism 
+\[
+C_*^{\cell}(X\cross Y) \cong C_*^{\cell}(X) \tensor_\ZZ C_*^{\cell}(Y)
+.\] 
+so 
+\[
+C_n^{\cell}(X \cross Y ) \cong \bigoplus_{i+j=n} C_i^\cell(X) \cross C_j^{\cell}(Y)
+.\]
+The boundary maps are thus given by
+\[
+\bd(a, b) &\da \bd_X a \tensor b + (-1)^{\abs a} a \tensor \bd_Y b
+.\]
+
+:::
+
+:::{.remark}
+This is nontrivial, it's the content of the *Eilenberg-Zilber theorem*.
+
+:::
+
+
+:::{.example title="?"}
+Let $X= S^a \cross S^b$, so $p_{S^a}(t) = 1 + t^a$ and $p_{S^b}(t) = 1 + t^b$, then $p_X(t) = 1 + t^a + t^b + t^{a+b}$, so $X$ has 
+
+- One 1-cell
+- One $a\dash$cell
+- One $b\dash$cell
+- One $(a+b)\dash$cell
+
+:::
+
+
+:::{.exercise title="Homology of product of spheres"}
+Compute all of the possible cases for $H_*(S^a\cross S^b)$, where $a, b\geq 0$ are not necessarily distinct.
+:::
+
+
+
+
+## CW Structures on Common Spaces
 
 :::{.example title="Spheres"}
 $S^n = e^0 \union e^n$: a point and an $n\dash$cell.
@@ -3410,7 +3643,7 @@ $\mathbb{CP}^n =e^2 \cup e^4 \cup \cdots e^{2n}$
 ![Fundamental domains](figures/1513064067523.png)
 :::
 
-## Examples of Simplicial Complexes
+## Examples of Simplicial Complexes 
 
 :::{.remark}
 To write down a simplicial complex, label the vertices with increasing integers. 
@@ -3490,6 +3723,37 @@ Recipe:
 1. Attach an $e^n$ to a point to get $H_{n} = \ZZ$
 
 2. Attach an $e^{n+1}$ with attaching map of degree $d$ to get $H_{n} = \ZZ_{d}$
+
+## Exercises
+
+:::{.problem title="?"}
+Let $X$ be $S^1$ with two 2-cells attached via $z\mapsto z^5$ and $z\mapsto z^3$.
+
+- Compute $\pi_1(X)$ and $H^*(X)$ as a ring.
+- Show that $X$ is not homeomorphic to $S^2$.
+
+:::
+
+:::{.solution}
+\envlist
+
+- $X$ is path-connected, so $H_0(X) = \ZZ$.
+- $X$ is a CW complex with only one 1-cell, so $\pi_1(X^{(1)}) = \ZZ$ for the 1-skeleton.
+  - Use that $3\ZZ + 5\ZZ = 1\ZZ$ as a ring, so the attached cells kill off all 1-homotopy and $\pi_1(X) = 1$.
+- By Hurewicz, $H_1(X) = 1$.
+- By UCT, $H^1(X) = H_1(X)\dual = \Hom_\ZZ(1, \ZZ) = 1$
+- By UCT, $H^2(X) = H_2(X)\dual$
+- We can compute $H_2$ directly: 
+\[
+C^*(X) 
+= (0 \to C_2(X) \mapsvia{d_2} C_1(X) \mapsvia{d_1} C_0(X) )
+= (0 \to \ZZ\adjoin{e_1, e_2} \mapsvia{\substack{e_1\mapsto 3e \\ e_2 \mapsto 5e} } \ZZ\adjoin{e} \mapsvia{d_1} \ZZ\adjoin{\pt} )
+.\]
+- $\ker d_2 = \gens{ 5e_1, -3e_2 }$, so $H_2 = \ZZ$.
+- Thus $H^*(X) = \Extalgebra_\ZZ(x)$ where $\abs{x} = 2$.
+- $X\not\cong S^2$: delete a point $p$ in the interior of the 2-cell corresponding to $z^3$, then use that $S^2\sm\ts{\pt} \cong \RR^2$ is contractible but $\pi_1 X\sm\ts{\pt} = \ZZ/5$. 
+
+:::
 
 
 # Homology
@@ -3734,10 +3998,103 @@ H_{n}(X^{(k)},X^{(k-1)}) \cong \begin{cases}\ZZ[\theset{e^n}]~ &k=n,\\ 0 &\text{
 :::
 
 
+## Exercises
+
+:::{.problem title="?"}
+Show that $S^2 \cross \RP^4 \not\homotopic S^4 \cross \RP^2$.
+:::
+
+:::{.solution}
+Take coefficients in $\FF_2$, apply Kunneth to get
+\[
+H^*(X_1; \FF_2) = \Extalgebra_{\FF_2}{x_2} \tensor_{\FF_2} {\FF_2\adjoin{y_1} \over \gens{ y_1^5 } \\ 
+H^*(X_2; \FF_2) = \Extalgebra_{\FF_2}{w_4} \tensor_{\FF_2} {\FF_2\adjoin{z_1} \over \gens{ z_1^3 } \\ 
+.\]
+
+Now use that any homotopy equivalence induces a graded ring isomorphism $f$, where $f(y_1) = z_1$ in $H^1$, but these have different orders.
+
+:::
+
+:::{.exercise title="?"}
+Show that $S^n$ is not a strong deformation retract of $\BB^{n+1}$.
+:::
+
+:::{.solution}
+If $\iota S^n \injects \BB^{n+1}$ then a strong deformation retract yields a $p: \BB^{n+1} \to S^n$ with $p\circ \iota = \id$.
+Then apply homology to factor the identity map $\ZZ \to \ZZ$ through a constant zero map $\ZZ\to 0$.
+:::
 
 
 
 # Fixed Points and Degree Theory
+
+:::{.fact title="Useful properties of the degree of a map between spheres"}
+\envlist
+
+- The degree of a constant map is 0.
+
+- $f\homotopic g \iff \deg f = \deg g$, since this implies $f_* = g_*$.
+
+- If $f$ is a homotopy equivalence, $\abs{\deg f} = 1$.
+  - This is because $f\homotopic g \implies H_*(f) = H_*(g)$.
+
+- $\deg\id_{S^n} = 1$
+
+- $\text{deg} (f\circ g) = \degf \cdot \degg$
+
+- $\deg(H_{x_i}) = -1$ for $H_{x_i}$ any rotation about the hyperplane $x_i = 0$, i.e. 
+\[
+H_{x_i}: \RR^{n+1} &\to \RR^{n+1} \\
+\tv{x_1, \cdots, x_i, \cdots, x_{n+1}} 
+&\mapsto
+\tv{x_1, \cdots, - x_i, \cdots, x_{n+1}} 
+.\]
+
+- The antipodal map on $S^n\subset \RR^{n+1}$ is the composition of $n+1$ hyperplane reflections, so $\deg\alpha = (-1)^{n+1}$.
+  - As a consequence, if $\deg f$ is even then $f$ is not homotopic to the antipodal map.
+
+:::
+
+
+:::{.exercise title="No fixed points implies homotopic to antipodal"}
+Show that if $f: S^n\to S^n$ has no fixed points $\iff \deg f = (-1)^{n+1}$ and $f$ is homotopic to the antipodal map.
+:::
+
+:::{.concept}
+\envlist
+
+- If $f(x)\neq x$, the line segment $L(-x, f(x))$ does not contain $0$. 
+
+- If $f(x) \neq -x$, the line segment $L(x, f(x))$ does not contain $0$.
+:::
+
+:::{.solution}
+The straight line homotopy $H(t, x) = (1-t)f(x) + t(-x)$ is a homotopy between $f$ and the antipodal map in $\RR^{n+1}$.
+Use that $H(t, x) = 0 \iff t=1/2 \iff f(x) = x$, so $H(t, \wait)$ is always a line from $x$ to $f(x)$ not passing through $0$, so $H(t, \wait) \neq 0$. 
+So this descends to a homotopy of $\RR^{n+1}\smz \homotopic S^n$, or explicitly one can project
+\[
+H: I\cross S^n &\to S^n \\
+(t, x) &\mapsto {H(t, x) \over \norm{H(t, x)}}
+.\]
+
+Less explicitly: if $f(x) \neq x$ for all $x\in S^n$, there is a unique geodesic through these two points, so let each point flow along its corresponding geodesic.
+:::
+
+
+:::{.exercise title="?"}
+Show that if $f$ is not surjective then $\deg f = 0$.
+:::
+
+
+:::{.solution}
+In this case $f$ factors as $S^n \mapsvia{f_1} S^n\smts{\pt}\mapsvia{f_2} S_n$.
+But $S^n\smts{\pt} \homotopic \RR^n$, to $H_*(f_1) = 0$ and $\deg f_1 = 0$.
+Then apply $\deg f = \qty{\deg f_1} \qty{\deg f_2}$.
+:::
+
+
+
+
 
 :::{.theorem title="Lefschetz Fixed Point"}
 For $f:X\to X$, define the **trace** of $f$ to be
@@ -4313,7 +4670,7 @@ Facts Used:[^fix_facts_on_ext_oskar]
 - 
 \[
 \ext(\ZZ/n, \ZZ/m) = (\ZZ/m) / (n \cdot \ZZ/m) \cong (\ZZ/m) / (d \cdot \ZZ/m) && 
-\text{where } d \da \gcd(m, n)
+\\ \text{where } d \da \gcd(m, n)
 .\]
   General principle: $\Ext(\ZZ/n, G) = G/nG$ 
 
@@ -4453,20 +4810,20 @@ Describe the universal cover of $X = (S^1 \cross S^1) \vee S^2$ and compute $\pi
 - $\pi_{\geq 2}(\univcover{X} ) \cong \pi_{\geq 2}(X)$ for $\univcover{X}$ the universal cover of $X$
 - Structure of the universal cover of a wedges
 - $\univcover{T^2} = \RR^2$ and $\univcover{S^2} = S^2$
-- By Mayer-Vietoris, $H_n(\Vee X_i) = \bigoplus H_n(X_i)$.
+- By Mayer-Vietoris, $H_n(\wedgeprod X_i) = \bigoplus H_n(X_i)$.
 :::
 
 The universal cover can be identified as
 \[
-\univcover{X} = \RR^2 \Vee_{i, j \in \ZZ^2} S^2
+\univcover{X} = \RR^2 \wedgeprod_{i, j \in \ZZ^2} S^2
 ,\]
 i.e. the plane with a sphere wedged onto every integer lattice point.
 We can then check
 \[
 \pi_1(X) 
 &\cong \pi_1(\univcover{X} ) \\
-&= \pi_1( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
-&= \pi_1( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
+&= \pi_1( \RR^2 \wedgeprod_{i, j \in \ZZ^2} S^2 ) \\
+&= \pi_1( \RR^2 \wedgeprod_{i, j \in \ZZ^2} S^2 ) \\
 &= \prod_{i,j \in \ZZ^2} \pi_1(\RR^2) \cross \pi_1(S^2) \\
 &= 0
 ,\]
@@ -4474,7 +4831,7 @@ using that $\pi_1(S^2) = 0$.
 Then by Hurewicz, $\pi_2(X) \cong H_2(X)$, so we can compute
 \[
 H_2(X) 
-&= H_2( \RR^2 \Vee_{i, j \in \ZZ^2} S^2 ) \\
+&= H_2( \RR^2 \wedgeprod_{i, j \in \ZZ^2} S^2 ) \\
 &= \bigoplus_{i,j \in \ZZ^2} H_2(\RR^2) \oplus H_2(S^2) \\
 &= \bigoplus_{i,j \in \ZZ^2} \ZZ
 .\]
