@@ -2,13 +2,6 @@
 
 ## Argument Principle
 
-:::{.definition title="Winding Number"}
-For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** is defined as
-\[
-n_\gamma(z_0) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
-.\]
-
-:::
 
 
 :::{.definition title="The logarithmic derivative"}
@@ -26,14 +19,21 @@ Show that $\del_{\log}(fg) = \del_{\log} f + \del_{\log} g$, i.e.
 .\]
 :::
 
+:::{.definition title="Winding Number"}
+For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** (or the **index**) is defined as
+\[
+\Ind_{z=z_0}(\gamma) \da {1\over 2\pi i} \int_\gamma {1\over \xi -z_0}\dxi
+.\]
+
+:::
 
 :::{.theorem title="Argument Principle"}
 For $f$ meromorphic in $\Omega$ with multisets of zeros \( Z_f \da \ts{ z_j } \) and poles \( P_f\da \ts{ p_k } \) (so repeated with multiplicity) 
 for $\gamma \da \bd \Omega$ not intersect
 \[  
-\Delta_\gamma \arg f(z) &\da {1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz \\
-&= \sum_{j} n_\gamma(z_j) - \sum_k n_\gamma(p_k) \\ 
-&= \# Z_f - \# P_f
+{1\over 2\pi i} \int_\gamma {f'(z) \over f(z)} \dz 
+&= \# Z_f - \# P_f \\
+&= \Ind_{z=0}(f\circ \gamma)
 ,\]
 where $\# Z_f$ and $\# P_f$ are the number of zeros and poles respectively, counted with multiplicity.
 :::
