@@ -97,12 +97,18 @@ Let $f(z) = z^2 + z = z(z+1)$.
 ## Rouché 
 
 :::{.theorem title="Rouché's Theorem" ref="Rouche"}
-If $f, g$ are analytic on a domain $\Omega$ with finitely many zeros in $\Omega$ and $\gamma \subset \Omega$ is a closed curve surrounding each point exactly once, where $\abs{g} < \abs{f}$ on $\gamma$, then $f$ and $f+g$ have the same number of zeros.
+If
 
-Alternatively:
+- $f, g$ are meromorphic on $\Omega$
+- $\gamma \subset \Omega$ is a toy contour winding about each zero/pole of $f, g$ exactly once,
+- $\abs{g} < \abs{f}$ on $\gamma$
 
-Suppose $f = g + h$ with $g \neq 0, \infty$ on $\gamma$ with $\abs g > \abs h$ on $\gamma$.
-Then $$\Delta_\gamma \arg(f) = \Delta_\gamma \arg(h)\quad\text{ and } Z_f - P_f = Z_g - P_g.$$
+then
+\[
+\Ind_{z=0}(f\circ \gamma)(z) = \Ind_{z=0}((f+g)\circ \gamma)(z) \implies Z_f - P_f = Z_{f+g} - P_{f+g}
+.\]
+In particular, if $f, g$ are holomorphic, they have the same number of zeros in $\Omega$.
+
 :::
 
 \todo[inline]{Prove}
