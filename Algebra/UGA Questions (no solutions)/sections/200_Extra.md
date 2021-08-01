@@ -1,5 +1,22 @@
 # Extra Problems
 
+## Linear Algebra
+
+1. For a division ring $D$, let $V_{i}$ be a finite dimensional vector space over $D$ for $i \in\{1, \ldots, k\}$. Suppose the sequence
+\[
+0 \longrightarrow V_{1} \longrightarrow V_{2} \longrightarrow \cdots V_{k} \longrightarrow 0
+\]
+is exact. Prove that $\sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0$.
+2. Prove that if $A$ and $B$ are invertible matrices over a field $\boldsymbol{k}$, then $A+\lambda B$ is invertible for all but finitely many $\lambda \in \boldsymbol{k}$.
+3. For the ring of $n \times n$ matrices over a commutative unital ring $R$, which we'll denote $\operatorname{Mat}_{n}(R)$, recall the definition of the determinant map det: $\operatorname{Mat}_{n}(R) \rightarrow R$. For $A \in \operatorname{Mat}_{n}(R)$ also recall the definition of the classical adjoint $A^{a}$ of $A$. Prove that:
+  - $\operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1}$
+  - $\left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A$
+4. If $R$ is an integral domain and $A$ is an $n \times n$ matrix over $R$, prove that if a system of linear equations $A x=0$ has a nonzero solution then $\operatorname{det} A=0$. Is the converse true? What if we drop the assumption that $R$ is an integral domain?
+5. What is the companion matrix $M$ of the polynomial $f=x^{2}-x+2$ over $C$ ? Prove that $f$ is the minimal polynomial of $M$.
+6. Suppose that $\phi$ and $\psi$ are commuting endomorphisms of a finite dimensional vector space $E$ over a field $\boldsymbol{k}$, so $\phi \psi=\psi \phi$.
+  - Prove that if $k$ is algebraically closed, then $\phi$ and $\psi$ have a common eigenvector.
+  - Prove that if $E$ has a basis consisting of eigenvectors of $\phi$ and $E$ has a basis consisting of eigenvectors of $\psi$, then $E$ has a basis consisting of vectors that are eigenvectors for both $\phi$ and $\psi$ simultaneously.
+
 ## Galois Theory
 
 > Taken from here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/galois/>
@@ -34,4 +51,4 @@ b. Aut $_{A \cap B} F=\mathrm{Aut}_{A} F \vee \mathrm{Aut}_{B} F$
 \]
 where $\varphi$ is Euler's totient function.
 23. Suppose that a field $K$ with characteristic not equal to 2 contains an primitive $n$ th root of unity for some odd integer $n$. Prove that $K$ must also contain a primitive $2 n$ th root of unity.
-24. Prove that the Galois group of the polynomial $x^{n}-1$ over $Q$ is abelian. (MathSE)
+24. Prove that the Galois group of the polynomial $x^{n}-1$ over $Q$ is abelian.
