@@ -11,6 +11,7 @@ is exact. Prove that $\sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0$.
 3. For the ring of $n \times n$ matrices over a commutative unital ring $R$, which we'll denote $\operatorname{Mat}_{n}(R)$, recall the definition of the determinant map det: $\operatorname{Mat}_{n}(R) \rightarrow R$. For $A \in \operatorname{Mat}_{n}(R)$ also recall the definition of the classical adjoint $A^{a}$ of $A$. Prove that:
   - $\operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1}$
   - $\left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A$
+
 4. If $R$ is an integral domain and $A$ is an $n \times n$ matrix over $R$, prove that if a system of linear equations $A x=0$ has a nonzero solution then $\operatorname{det} A=0$. Is the converse true? What if we drop the assumption that $R$ is an integral domain?
 5. What is the companion matrix $M$ of the polynomial $f=x^{2}-x+2$ over $C$ ? Prove that $f$ is the minimal polynomial of $M$.
 6. Suppose that $\phi$ and $\psi$ are commuting endomorphisms of a finite dimensional vector space $E$ over a field $\boldsymbol{k}$, so $\phi \psi=\psi \phi$.
