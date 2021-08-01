@@ -1,5 +1,7 @@
 # Extra Problems
 
+> Many many fundamental problems here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/groups/>
+
 ## Linear Algebra
 
 1. For a division ring $D$, let $V_{i}$ be a finite dimensional vector space over $D$ for $i \in\{1, \ldots, k\}$. Suppose the sequence
