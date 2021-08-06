@@ -127,11 +127,11 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 :::{.proof title="of c"}
 \envlist
 
-- Let $G\actson X$ transitively where $\abs{X} \geq 2$
+- Let $G\actson X$ transitively where $\abs{X} \geq 2$.
 - An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
 - Apply Burnside's Lemma
 \[
-1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{\Fix(g)} \implies \abs{G} = \sum_{g\in G} \abs{\Fix(g)}
 \]
 - Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
 - Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
