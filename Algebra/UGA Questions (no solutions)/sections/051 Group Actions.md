@@ -77,19 +77,17 @@ Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 e
 :::{.proof title="of a"}
 \envlist
 
-- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
-- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
+- Fix $x$, then $y\in \Orb(x) \implies g\cdot x = y$ for some $g$, and $x = g\inv \cdot y$.
 - Then
 \[
-h \in G\cdot x 
+h \in \Stab(x)
 &\iff h\cdot x = x && \text{by being in the stabilizer} \\
-&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y && \text{using that $x, y$ are in the same orbit} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \\
 &\iff (g h g\inv) \cdot y = y \\
-&\iff ghg\inv \in G_y && \text{by the defn of the stabilizer}\\
-&\iff h\in g ^{-1}  G_y g
+&\iff ghg\inv \in G_y && \text{by definition}\\
+&\iff h\in g ^{-1}  \Stab(y) g
 ,\]
-
-so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
+so $\Stab(x) = g\inv \Stab(y) g$.
 
 :::
 
