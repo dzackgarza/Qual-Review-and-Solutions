@@ -645,9 +645,11 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 - For the infinite case, want to show every $\alpha\in L$ is separable over $k$.
 - Let $f(x) \da \min_{\alpha, K}(x)$ be the minimal polynomial of $\alpha$ *over the intermediate extension* $K$, which by assumption is separable since $L/K$ is separable.
   - So $f\in K[x]$, and letting $S$ be the finite set of coefficients of $f$, $S \subseteq K$.
-  - Note that each coefficient $s\in S$ is separable over $k$.
-- Then $\alpha$ is algebraic over the finite extension $K(S)/K$.
-- Now $K(S, \alpha) / K(S)/K$ is a tower of finite extensions where $K(S, \alpha)/K(S)$ and $K(S)/K$ are separable, so this reduces to the finite case.
+  - Note that each coefficient $s\in S$ is separable over $k$ since $K/k$ is separable by assumption.
+- Set $F\da K(\alpha, S) \intersect K$.
+  Since $K/k$ is separable and $F \subseteq K$, $F/k$ is separable.
+- Moreover $K(\alpha, S)/F$ is separable, since the minimal polynomial $\min_{\alpha, F} = f$ doesn't change.
+- Now $K(\alpha, S) / K(S)/K$ is a tower of finite extensions where $K(\alpha, S)/K(S)$ and $K(S)/K$ are separable, so this reduces to the finite case.
 
 
 :::
