@@ -292,16 +292,26 @@ However, they do have the (forward implication) upper transitive, lifting, and c
 :::
 
 
-:::{.example title="showing normal extensions are not transitive, reverse implication"}
+:::{.example title="Normal extensions are not transitive: failure of reverse implication"}
 One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
 take 
 \[
-\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
+L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
 .\]
 Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
 
-Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
+
+
+:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
+One can similarly produce towers where the total extension is normal but some iterate is not normal: take
+\[
+L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
+.\]
+Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
+
+:::
+
 
 :::{.proposition title="Normal extensions are upper transitive, forward implication"}
 If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
