@@ -286,11 +286,12 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 - Separable extensions are distinguished.
 :::
 
+### Issues with Normal Towers
+
 :::{.warnings}
 Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity.
 However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
 :::
-
 
 :::{.example title="Normal extensions are not transitive: failure of reverse implication"}
 One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
@@ -299,22 +300,18 @@ take
 L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
 .\]
 Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
-
 :::
 
-
 :::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
-One can similarly produce towers where the total extension is normal but some iterate is not normal: take
+One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
 \[
 L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
 .\]
 Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
-
 :::
 
-
 :::{.proposition title="Normal extensions are upper transitive, forward implication"}
-If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
+If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
 :::
 
 :::{.proof title="?"}
@@ -325,6 +322,42 @@ Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 
 :::
 
+:::{.proposition title="Normal extensions are upper transitive, forward implication"}
+For $L/k$ finite,
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \implies && K \\
+	\\
+	k &&&& k
+	\arrow[from=3-1, to=1-1]
+	\arrow[from=5-1, to=3-1]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
+	\arrow[from=5-5, to=3-5]
+	\arrow[from=3-5, to=1-5]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
+
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Since $L/k$ is finite and normal, it is the splitting field of a separable polynomial $f\in k[x]$.
+- Then regard $f\in K[x]$; it is still a splitting field, done.
+
+Alternatively,
+
+- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
+- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
+- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
+- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
+  Since $m'$ splits in $L$, so must $m$.
+
+:::
 
 
 ### Normal Extensions
@@ -401,42 +434,6 @@ $\impliedby$:
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
 
-:::{.proposition title="Lifting normality"}
-For $L/k$ finite,
-
-\begin{tikzcd}
-	L &&&& L \\
-	\\
-	K && \implies && K \\
-	\\
-	k &&&& k
-	\arrow[from=3-1, to=1-1]
-	\arrow[from=5-1, to=3-1]
-	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
-	\arrow[from=5-5, to=3-5]
-	\arrow[from=3-5, to=1-5]
-	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
-
-:::
-
-:::{.proof title="?"}
-\envlist
-
-- Since $L/k$ is finite and normal, it is the splitting field of a separable polynomial $f\in k[x]$.
-- Then regard $f\in K[x]$; it is still a splitting field, done.
-
-Alternatively,
-
-- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
-- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
-- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
-- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
-  Since $m'$ splits in $L$, so must $m$.
-
-:::
 
 
 ### Separable Extensions
