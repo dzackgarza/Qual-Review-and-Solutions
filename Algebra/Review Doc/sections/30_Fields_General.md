@@ -253,23 +253,19 @@ Then TFAE:
 
 - Every embedding $\sigma: L \injects \bar{k}$ over $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ over $k$.
 
-- For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some irreducible $f\in k[x]$.
+- For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
 
 :::{.example title="of normal extensions"}
 \envlist
 
 - If $[L: k] = 2$ then $L/k$ is automatically normal.
-- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$
+- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
 - $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
   - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
 
-
-:::{.proposition title="?"}
-For $L/k$ finite, $L$ is normal iff $L = \SF(f)$ is the splitting field for some $f\in k[x]$.
-:::
 
 ### Separable Extensions
 
