@@ -247,7 +247,7 @@ Then TFAE:
 
 - $L/k$ is **normal**.
 
-- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
+- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$, and thus splits in $L[x]$.
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
@@ -255,6 +255,13 @@ Then TFAE:
 
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
+
+
+:::{.proposition title="Finite and normal iff splitting field"}
+An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
+
+:::
+
 
 :::{.example title="of normal extensions"}
 \envlist
@@ -294,6 +301,14 @@ For $L/k$ finite,
 
 - Since $L/k$ is finite and normal, it is the splitting field of a separable polynomial $f\in k[x]$.
 - Then regard $f\in K[x]$; it is still a splitting field, done.
+
+Alternatively,
+
+- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
+- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
+- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
+- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
+  Since $m'$ splits in $L$, so must $m$.
 
 :::
 
