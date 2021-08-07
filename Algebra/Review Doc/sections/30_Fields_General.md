@@ -581,13 +581,10 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 
 :::{.remark}
 The separable degree is multiplicative in towers.
-Example use: showing that for finite extensions, if $L/K/k$ with $L/K$ and $K/k$ separable then $L/k$ is separable.
-Consider
+An example use is showing that for finite extensions, if $L/K/k$ with $L/K$ and $K/k$ separable then $L/k$ is separable:
 \[
-[L:k] &= [L:K][K:k] \\
-[L:k]_s &= [L:K]_s [K:k]_s
-,\]
-and by assumption the matching terms on the right-hand side are equal, so the LHS terms are equal.
+[L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
+.\]
 
 :::
 

@@ -144,16 +144,15 @@ If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some 
 
 ## Misc
 
-
 :::{.proposition title="?"}
 If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
 :::
-
 
 :::{.definition title="Elementary Symmetric Functions"}
 \todo[inline]{todo}
 :::
 
+## Exercises
 
 :::{.exercise title="?"}
 Show 
@@ -161,7 +160,6 @@ Show
 x^\ell - 1 \divides x^m-1 \iff \ell\divides m
 .\]
 :::
-
 
 :::{.solution}
 
@@ -186,14 +184,12 @@ $\impliedby$:
 
 :::
 
-
 :::{.exercise title="?"}
 Show that if $f \in \FF_p[x]^{\irr}$ is degree $d$,
 \[
 f \divides x^{p^n}-x \iff d\divides n
 .\]
 :::
-
 
 :::{.solution}
 
@@ -217,7 +213,6 @@ n &= [\GF(p^n) : \FF_p] \\
 &= [\GF(p^n) : \FF_p(\alpha)] \cdot [\FF_p(\alpha) : \FF_p] \\
 &= kd
 .\]
-
 
 :::
 
