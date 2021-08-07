@@ -200,6 +200,29 @@ Then $K/k$ is Galois iff $H\da \Gal(L/K)$ is normal in $G$, and moreover $\Gal(K
 :::
 
 
+:::{.proof title="?"}
+\envlist
+
+- Note separability is distinguished, so $K/k$ is separable.
+- $K/k$ is Galois $\iff$ $F/k$ is normal (since we already have separability).
+- $\iff \sigma(K) = K$ for all $\sigma\in G$
+- $\iff \sigma H \sigma\inv = H$ for all $\sigma \in G$.
+
+So $H$ is normal and $G/H$ is a group.
+For the isomorphism, take 
+\[
+\rho: G \da \Gal(L/k) &\to H\to \Gal(K/k) \\
+\rho &\mapsto \ro{\rho}{K}
+.\]
+This is well-defined since by normality $\sigma(K) = K$.
+Any $f\in \ker \rho$ is the identity on $K$, so $f\in \Gal(L/K)$ and $\ker \phi = H$.
+Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho$ surjective.
+
+
+:::
+
+
+
 ### Examples
 
 :::{.example title="Cyclotomic Fields"}
