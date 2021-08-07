@@ -310,19 +310,7 @@ L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
 Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
-:::{.proposition title="Normal extensions are upper transitive, forward implication"}
-If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
-:::
-
-:::{.proof title="?"}
-Use the embedding characterization, it suffices to show that every embedding $\sigma: $
-Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
-Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
-
-
-:::
-
-:::{.proposition title="Normal extensions are upper transitive, forward implication"}
+:::{.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
 For $L/k$ finite,
 
 \begin{tikzcd}
@@ -356,6 +344,18 @@ Alternatively,
 - Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
 - Minimal polynomials are divisible in towers, so $m$ divides $m'$.
   Since $m'$ splits in $L$, so must $m$.
+
+:::
+
+:::{.proposition title="Normal extensions are upper transitive, forward implication (general case)"}
+If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
+:::
+
+:::{.proof title="?"}
+Use the embedding characterization, it suffices to show that every embedding $\sigma: $
+Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
+Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
+
 
 :::
 
