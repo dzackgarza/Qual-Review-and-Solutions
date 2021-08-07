@@ -145,7 +145,14 @@ x^p - a = x^p - r^p = (x-r)^p
 .\]
 
 - Note $f$ is irreducible: its only possible divisors are $(x-r)^m$ for $m \leq p$.
-  Expanding yields $(x-r)^m = \sum_{k=0}^m {m\choose k} x^{m-k} (-r)^{k}$.
+  Expanding yields 
+  \[
+(x-r)^m = \sum_{k=0}^m {m\choose k} x^{m-k} (-r)^{k} = x^m + {m\choose 1} x^{m-1} (-r)^m + \cdots
+  ,\]
+  so the coefficient of $x^{m-1}$ is $-mr \in k$.
+
+- Thus if $(x-r)^m$ has a nontrivial divisor in $k[x]$ then $m$ must be in $k\units$, forcing $r\in k$.
+  But then $r^p = a\in k$, $\contradiction$.
 
 :::
 
