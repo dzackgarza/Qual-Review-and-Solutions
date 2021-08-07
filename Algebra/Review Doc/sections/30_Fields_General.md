@@ -400,6 +400,9 @@ If $p\da \ch k > 0$, then $m(x) = q(x^{p^n})$ for some unique $n$.
 
 
 :::{.proof title="?"}
+Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
+So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
+Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \eqiuv 0$.
 
 :::
 
