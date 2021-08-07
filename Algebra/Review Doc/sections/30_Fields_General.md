@@ -124,7 +124,6 @@ The following are equivalent:
 
 :::
 
-
 :::{.proposition title="Characterization of perfect fields"}
 $k$ is perfect (using the irreducible implies separable condition) if either 
 
@@ -170,9 +169,6 @@ f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
 so $f$ is reducible. $\contradiction$.
 
 :::
-
-
-
 
 
 :::{.example title="of a non-perfect field"}
