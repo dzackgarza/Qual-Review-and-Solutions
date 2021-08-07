@@ -111,6 +111,11 @@ The following are equivalent:
 
 :::
 
+:::{.example title="of a non-perfect field"}
+Example of a non-perfect field: $\FF_p(t)$.
+Use that $f(x) \da x^p - t$ is irreducible in $\FF_p(t)[x]$ but not separable.
+:::
+
 :::{.proposition title="Characterization of perfect fields"}
 $k$ is perfect (using the irreducible implies separable condition) if either 
 
@@ -141,42 +146,26 @@ x^p - a = x^p - r^p = (x-r)^p
 
 :::
 
-:::{.proposition title="Irreducible implies separable for perfect fields"}
-If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
-:::
-
-:::{.proof title="?"}
-If $\ch k = 0$ and $f$ is irreducible, then since $\deg f' < \deg f$ and $f$ is irreducible we must have $\gcd(f, f')=1$ and $f$ is separable.
-
-If $\ch k = p>0$, then if $f$ is irreducible and inseparable then $f(x) = g(x^p)$ for some $g$.
-Write $g(x) = \sum a_k x^k$, and since $k$ is perfect, write $b_k \da a_k^{1\over p}$, then
-\[
-f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
-,\]
-so $f$ is reducible. $\contradiction$.
-
-:::
-
-
-:::{.example title="of a non-perfect field"}
-Example of a non-perfect field: $\FF_p(t)$.
-Use that $f(x) \da x^p - t$ is irreducible in $\FF_p(t)[x]$ but not separable.
-:::
-
-
 :::{.definition title="Numerical Invariants"}
 \envlist
 
-- \[
+\[
 [L: K] = \dim_{\Vect_K} L
 ,\] 
-  the dimension of $L$ as a $K\dash$vector space
-- \[ \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K } ,\] the lifts of the identity on $K$.
-- \[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} ,\] the number of lifts of the identity on $K$.
-- \[
+is the dimension of $L$ as a $K\dash$vector space
+\[ 
+\Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K } 
+,\] 
+is the number of lifts of the identity on $K$.
+
+\[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} 
+,\] 
+is the number of lifts of the identity on $K$.
+
+If $E$ is finite, normal, and separable,
+\[
 \Gal(E/F) \da \Aut_{\Fieldsover{k} }
 ,\]
-  if $E$ is finite, normal, and separable.
 
 :::
 
@@ -592,6 +581,22 @@ Irreducible polynomials have distinct roots after passing to a splitting field.
 
 :::{.proposition title="Algebraic extensions of perfect fields are separable"}
 If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
+:::
+
+:::{.proposition title="Irreducible implies separable for perfect fields"}
+If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
+:::
+
+:::{.proof title="?"}
+If $\ch k = 0$ and $f$ is irreducible, then since $\deg f' < \deg f$ and $f$ is irreducible we must have $\gcd(f, f')=1$ and $f$ is separable.
+
+If $\ch k = p>0$, then if $f$ is irreducible and inseparable then $f(x) = g(x^p)$ for some $g$.
+Write $g(x) = \sum a_k x^k$, and since $k$ is perfect, write $b_k \da a_k^{1\over p}$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
+,\]
+so $f$ is reducible. $\contradiction$.
+
 :::
 
 ### Galois Extensions
