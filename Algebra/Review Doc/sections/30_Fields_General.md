@@ -525,9 +525,16 @@ Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) 
 The following are equivalent 
 
 - $L/k$ is a **separable** extension.
-- Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
+- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
 - Every finite subextension $L'/k$ is separable.
+:::
 
+:::{.fact}
+Every irreducible polynomial is separable in characteristic zero.
+
+:::
+
+:::{.proposition title="Simplifications of separability for finite extensions"}
 If $L/k$ is a finite extension, then, TFAE:
 
 - $L/k$ is separable.
@@ -535,6 +542,7 @@ If $L/k$ is a finite extension, then, TFAE:
 - \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
 - $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
 - $[L: K] = [L:K]_s$, the separable degree.
+
 
 :::
 
