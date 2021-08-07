@@ -357,10 +357,9 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
 
-:::{.proposition title="Separability test with derivatives"}
+:::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 :::
-
 
 :::{.proof title="?"}
 $\not\implies$:
@@ -379,6 +378,18 @@ So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
 :::
 
 
+:::{.proposition title="Separability test: identically zero derivative"}
+$f\in k[x]$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
+In this case, $m(x) = q(x^{p})$ for $p = \ch k$.
+:::
+
+
+:::{.proof title="?"}
+
+:::
+
+
+
 
 
 :::{.definition title="Separable Field Extension"}
@@ -388,7 +399,6 @@ The following are equivalent
 - $L/k$ is a **separable** extension.
 - Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
 - $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
-- $\gcd(f, f') = 1$, so $f$ and $f'$ share no common roots.
 - $f' \not\equiv 0$
 - Every finite subextension $L'/k$ is separable.
 
