@@ -29,10 +29,6 @@ Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $
 A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
 :::
 
-:::{.definition title="Elementary Symmetric Functions"}
-\todo[inline]{todo}
-:::
-
 ## Definitions
 
 :::{.definition title="Characteristic"}
@@ -69,7 +65,7 @@ The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for som
 :::{.definition title="Embeddings and Lifts"}
 Let $k$ denote a field, and $L/k$ extension.
 Every field morphism is an embedding (injection).
-An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
+An **embedding** of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
 
 
 \begin{tikzcd}
@@ -83,12 +79,12 @@ An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
 
-More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
+More generally, we can ask for lifts of any map $\sigma: k\to k'$:
 
 \begin{tikzcd}
 	L && {L'} \\
 	\\
-	k && {k_\sigma}
+	k && {k'}
 	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
 	\arrow[hook, from=3-1, to=1-1]
