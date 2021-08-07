@@ -562,6 +562,20 @@ If $L/k$ is a finite extension, then, TFAE:
 
 :::
 
+
+:::{.remark}
+The separable degree is multiplicative in towers.
+Example use: showing that if $L/K/k$ with $L/K$ and $K/k$ separable then $L/k$ is separable.
+Then
+\[
+[L:k] &= [L:K][K:k] \\
+[L:k]_s &= [L:K]_s [K:k]_s
+,\]
+and by assumption the matching terms on the right-hand side are equal, so the LHS terms are equal.
+
+:::
+
+
 :::{.fact}
 A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
