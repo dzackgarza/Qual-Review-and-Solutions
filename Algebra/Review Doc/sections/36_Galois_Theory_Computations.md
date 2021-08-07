@@ -37,6 +37,10 @@ Transitive subgroups of $S_n$ for small $n$:
 
 :::
 
+:::{.proposition}
+If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
+:::
+
 ## Explicit Examples
 
 :::{.exercise title="?"}

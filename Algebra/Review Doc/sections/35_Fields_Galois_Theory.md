@@ -1,5 +1,19 @@
 # General Field Theory
 
+:::{.fact}
+\envlist
+- All fields are simple rings (no proper nontrivial ideals).
+  - Thus every field morphism is either zero or injective.
+- The characteristic of any field $k$ is either 0 or $p$ a prime.
+- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
+:::
+
+:::{.proposition title="Towers are multiplicative in degree"}
+Let $L/F/k$ be a finite tower of field extensions.
+\[
+[L : k] = [L: F][F: k]
+.\]
+:::
 
 ## Finite Fields
 

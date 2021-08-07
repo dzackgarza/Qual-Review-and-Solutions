@@ -4,15 +4,6 @@
 Galois is defined as **normal and separable**.
 :::
 
-:::{.fact}
-\envlist
-- All fields are simple rings (no proper nontrivial ideals).
-  - Thus every field morphism is either zero or injective.
-- The characteristic of any field $k$ is either 0 or $p$ a prime.
-- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
-:::
-
-
 ## Basics: Polynomials
 
 :::{.definition title="Reducible and Irreducible Polynomials"}
@@ -290,6 +281,7 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 
 If $L/F/k$, then $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
 :::
+
 ### Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
@@ -394,6 +386,10 @@ $E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect
 
 > [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
 
+:::
+
+:::{.proposition}
+$\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 :::
 
 ### Issues with Normal Towers
@@ -678,7 +674,6 @@ This is well-defined since by normality $\sigma(K) = K$.
 Any $f\in \ker \rho$ is the identity on $K$, so $f\in \Gal(L/K)$ and $\ker \phi = H$.
 Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho$ surjective.
 
-
 :::
 
 :::{.example title="?"}
@@ -693,59 +688,7 @@ Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho
 :::
 
 
-### Special Extensions
 
-:::{.theorem title="Finite Extensions are Algebraic"}
-Every finite extension is algebraic.
-:::
-
-:::{.proof}
-If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
-This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
-\[
-f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
-.\]
-But then \( \alpha \) is the root of the polynomial \( f \).
-
-:::
-
-:::{.theorem title="Primitive Element Theorem"}
-Every finite separable extension is simple.
-:::
-
-:::{.corollary}
-$\GF(p^n)$ is a simple extension over $\FF_p$.
-:::
-
-### Quadratic Extensions
-
-:::{.proposition title="Classification of quadratic extensions"}
-If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
-:::
-
-:::{.corollary title="Quadratic extensions of rationals"}
-If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
-:::
-
-:::{.proposition title="?"}
-For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
-:::
-
-
-:::{.proposition}
-If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
-:::
-
-:::{.proposition}
-$\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
-:::
-
-:::{.proposition title="Towers are multiplicative in degree"}
-Let $L/F/k$ be a finite tower of field extensions.
-\[
-[L : k] = [L: F][F: k]
-.\]
-:::
 
 ### Fundamental Theorem of Galois Theory
 
@@ -789,5 +732,43 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 \[
 \Gal(FL/L) = \Gal(F / F\intersect L) \subset \Gal(F/k)
 .\]
+:::
+
+### Special Extensions
+
+:::{.theorem title="Finite Extensions are Algebraic"}
+Every finite extension is algebraic.
+:::
+
+:::{.proof}
+If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
+This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
+\[
+f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
+.\]
+But then \( \alpha \) is the root of the polynomial \( f \).
+
+:::
+
+:::{.theorem title="Primitive Element Theorem"}
+Every finite separable extension is simple.
+:::
+
+:::{.corollary}
+$\GF(p^n)$ is a simple extension over $\FF_p$.
+:::
+
+### Quadratic Extensions
+
+:::{.proposition title="Classification of quadratic extensions"}
+If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+:::
+
+:::{.corollary title="Quadratic extensions of rationals"}
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(q)$ for some $q\in \QQ$.
+:::
+
+:::{.proposition title="?"}
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
 :::
 
