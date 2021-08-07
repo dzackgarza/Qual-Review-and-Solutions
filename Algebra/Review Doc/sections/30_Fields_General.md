@@ -157,7 +157,6 @@ x^p - a = x^p - r^p = (x-r)^p
 :::
 
 
-
 :::{.proposition title="Irreducible implies separable for perfect fields"}
 If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
 :::
@@ -411,11 +410,12 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::{.example title="of separable and inseparable polynomials"}
 \envlist
 
-- $x^2-2$ is separable over $\QQ$.
+- $x^2-2$ is separable over $\QQ$, but inseparable over $\FF_2$.
 - $(x^2-2)^2$ is inseparable over $\QQ$
 - $x^2-t$ is inseparable over $\FF_2(t)$.
-- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
 - $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
+  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
 - If $\ch k=0$, then irreducible $\implies$ separable.
 
 :::
