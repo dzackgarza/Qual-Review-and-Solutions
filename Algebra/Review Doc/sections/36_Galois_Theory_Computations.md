@@ -7,7 +7,9 @@ If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $
 :::
 
 :::{.corollary}
-$n$ divides the order $\abs{ \Gal(K/\QQ)}$.
+\[
+n\divides \# \Gal(K/\QQ) \leq n!
+.\]
 :::
 
 :::{.definition title="Discriminant"}
