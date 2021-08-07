@@ -351,6 +351,13 @@ Alternatively,
 
 ### Separable Extensions
 
+
+:::{.definition title="Separable polynomials"}
+A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
+
+:::
+
+
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
