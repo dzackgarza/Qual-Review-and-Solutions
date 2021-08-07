@@ -547,6 +547,11 @@ Every irreducible polynomial is separable in characteristic zero.
 
 :::
 
+
+:::{.fact}
+If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::
+
 :::{.proposition title="Simplifications of separability for finite extensions"}
 If $L/k$ is a finite extension, then, TFAE:
 
@@ -558,7 +563,6 @@ If $L/k$ is a finite extension, then, TFAE:
 [L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
 .\] 
 :::
-
 
 :::{.fact}
 A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
@@ -599,7 +603,6 @@ f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
 so $f$ is reducible. $\contradiction$.
 
 :::
-
 
 :::{.definition title="Separable degree"}
 The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ (the algebraic or separable closure) and letting $[L:k]_s$ be the number of embeddings $\sigma':L\to \bar{k}$:
