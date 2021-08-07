@@ -62,4 +62,10 @@ More generally, $G\injects A_n \iff \Delta$ is a perfect square in $k$.
 
 
 
+:::{.proposition}
+If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
+:::
 
+:::{.corollary}
+$n$ divides the order $\abs{ \Gal(K/\QQ)}$.
+:::

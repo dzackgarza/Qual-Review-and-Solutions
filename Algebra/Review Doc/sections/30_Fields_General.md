@@ -652,6 +652,46 @@ In this case,
 
 :::
 
+:::{.proposition title="?"}
+Let $L/K/k$ with $L/k$ Galois. Then
+\[
+K/k \text{ is Galois } \iff \Gal(L/K)\normal \Gal(L/k)
+,\]
+and moreover $\Gal(K/k) = G$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Note separability is distinguished, so $K/k$ is separable.
+- $K/k$ is Galois $\iff$ $F/k$ is normal (since we already have separability).
+- $\iff \sigma(K) = K$ for all $\sigma\in G$
+- $\iff \sigma H \sigma\inv = H$ for all $\sigma \in G$.
+
+So $H$ is normal and $G/H$ is a group.
+For the isomorphism, take 
+\[
+\rho: \Gal(L/k) &\to \Gal(K/k) \\
+\rho &\mapsto \ro{\rho}{K}
+.\]
+This is well-defined since by normality $\sigma(K) = K$.
+Any $f\in \ker \rho$ is the identity on $K$, so $f\in \Gal(L/K)$ and $\ker \phi = H$.
+Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho$ surjective.
+
+
+:::
+
+:::{.example title="?"}
+\envlist
+
+- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
+- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
+  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
+  Slogan: "Being Galois is not transitive in towers."
+- A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
+:::
+
 
 ### Special Extensions
 
