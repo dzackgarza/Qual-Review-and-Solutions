@@ -218,6 +218,8 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 
 ## Extensions
 
+### Properties in Towers
+
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
@@ -281,11 +283,31 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$:
 - Algebraic extensions are distinguished.
 - Finite extensions are distinguished.
 - Separable extensions are distinguished.
-- Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
-  Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
+  For normal extensions, half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
   - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
   - Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
+
+
+:::{.warnings}
+Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
+:::
+
+
+
+:::{.proposition title="Galois in towers"}
+If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois
+:::
+
+
+:::{.proof title="?"}
+Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
+Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
+
+
+:::
+
+
 
 ### Normal Extensions
 
@@ -304,11 +326,9 @@ Then TFAE:
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
 
-
 :::{.proposition title="Finite and normal iff splitting field"}
 An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
 :::
-
 
 :::{.proof title="?"}
 $\implies$:
@@ -340,8 +360,6 @@ $\impliedby$:
 
 :::
 
-
-
 :::{.example title="of normal extensions"}
 \envlist
 
@@ -355,7 +373,6 @@ $\impliedby$:
   - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 :::
-
 
 :::{.proposition title="Lifting normality"}
 For $L/k$ finite,
@@ -378,7 +395,6 @@ For $L/k$ finite,
 
 :::
 
-
 :::{.proof title="?"}
 \envlist
 
@@ -394,7 +410,6 @@ Alternatively,
   Since $m'$ splits in $L$, so must $m$.
 
 :::
-
 
 
 ### Separable Extensions
