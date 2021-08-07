@@ -3,9 +3,7 @@
 
 :::{.proposition title="?"}
 If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
-
 :::
-
 
 :::{.fact}
 Transitive subgroups of $S_n$ for small $n$:
@@ -19,7 +17,6 @@ Transitive subgroups of $S_n$ for small $n$:
 | 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
 
 :::
-
 
 
 :::{.proposition}
@@ -194,6 +191,14 @@ H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
 
 - The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
 :::
+
+
+
+:::{.proposition title="?"}
+Let $L/k$ be Galois and set $G\da \Gal(L/k)$ with $L/K/k$.
+Then $K/k$ is Galois iff $H\da \Gal(K/k)$ is normal in $G$.
+:::
+
 
 ### Examples
 
