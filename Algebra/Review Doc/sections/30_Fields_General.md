@@ -236,7 +236,7 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$:
 - Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
   Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
   - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
-  Similar issue for $\QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal.
+  - Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
 ### Normal Extensions
