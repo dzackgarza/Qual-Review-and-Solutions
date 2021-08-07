@@ -305,12 +305,15 @@ Then TFAE:
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
 
+
+:::{.definition title="Normal Closure"}
+If $K/k$ is algebraic, then there is an extension $N_k/K$ such that $N_k/k$ is normal and $N_k/K/k$ is a tower.
+:::
+
+
 :::{.example title="?"}
 \envlist
 
-- $K\slice{k} \da \QQ(2^{1\over 3}) \slice{\QQ}$ is not normal, since an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
-- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
-  This has finite degree $p^2$ but infinitely many subfields.
 
 :::
 
@@ -351,15 +354,21 @@ $\impliedby$:
 :::{.example title="of normal extensions"}
 \envlist
 
-- Useful tricks:
-  - If $[L: k] = 2$ then $L/k$ is automatically normal.
-  - Any field $k$ has a normal closure $N_k$. 
-    You can use this to reason about towers, e.g. take $L/k = \QQ(2^{1\over 3})\slice{\QQ}$.
-    Then $L$ is not normal but $N_k/L/k$ is a tower with $N_k/k$ normal.
-- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
+- Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
+
 - $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
+
+- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
+
   - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
+
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
+
+- $K\slice{k} \da \QQ(2^{1\over 3}) \slice{\QQ}$ is not normal, since an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
+
+- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
+  This has finite degree $p^2$ but infinitely many subfields.
+
 :::
 
 ### Issues with Normal Towers
@@ -369,6 +378,17 @@ Normal extensions are *not* distinguished, since they fail the forward implicati
 However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
 :::
 
+:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
+One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
+\[
+L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
+.\]
+Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
+
+Another example: let $L/k$ be any algebraic extension that isn't normal, and take $N_k$ to be the normal closure to get $N_k/L$. 
+Concretely, $N_\QQ / \QQ(2^{1\over 3})/\QQ$ works.
+:::
+
 :::{.example title="Normal extensions are not transitive: failure of reverse implication"}
 One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
 take 
@@ -376,14 +396,6 @@ take
 L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
 .\]
 Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
-:::
-
-:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
-One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
-\[
-L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
-.\]
-Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
 :::{.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
