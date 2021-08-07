@@ -139,10 +139,13 @@ For $\ch k = 0$, use that irreducible implies separable.
 For $\ch k = p$, show that $k_p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
 
 - Supposing $k^p\neq k$, choose $a\in k$ not a $p$th power.
-- Note that $x^p-a$ has only one root: in a splitting field, any root $r$ satisfies $r^p=a$, so 
+- Note that $f(x) \da x^p-a$ has only one root in $\bar{k}$: in a splitting field, any root $r$ satisfies $r^p=a$, so 
 \[
 x^p - a = x^p - r^p = (x-r)^p
 .\]
+
+- Note $f$ is irreducible: its only possible divisors are $(x-r)^m$ for $m \leq p$.
+  Expanding yields $(x-r)^m = \sum_{k=0}^m {m\choose k} x^{m-k} (-r)^{k}$.
 
 :::
 
