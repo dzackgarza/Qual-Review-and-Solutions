@@ -186,7 +186,6 @@ with equality when $L/k$ is Galois.
 An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
-
 :::{.definition title="Algebraic Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
@@ -194,6 +193,8 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 ## Extensions
 
 ### Properties in Towers
+
+> See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
@@ -217,7 +218,7 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
 
-2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/k \in \mathcal{S}$:
+2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/L \in \mathcal{S}$:
 
 \begin{tikzcd}
 	& LK \\
