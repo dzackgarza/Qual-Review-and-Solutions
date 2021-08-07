@@ -357,6 +357,20 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
 
+:::{.example title="?"}
+\envlist
+
+- $x^2-2$ is separable over $\QQ$.
+- $(x^2-2)^2$ is inseparable over $\QQ$
+- $x^2-t$ is inseparable over $\FF_2(t)$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$.
+- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
+- If $\ch k=0$, then irreducible $\implies$ separable.
+
+:::
+
+
+
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 :::
@@ -412,8 +426,11 @@ If $L/k$ is a finite extension, then, TFAE:
 
 :::
 
+
+:::{.proposition title="?"}
+:::
+
 :::{.definition title="Separable degree"}
-Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
 The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
 
 \begin{tikzcd}
@@ -426,6 +443,9 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 \end{tikzcd}
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+Alternatively, if $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
+The separable degree is then $\deg g$.
 
 :::
 
