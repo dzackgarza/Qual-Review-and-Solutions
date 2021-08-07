@@ -283,24 +283,24 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$:
 - Algebraic extensions are distinguished.
 - Finite extensions are distinguished.
 - Separable extensions are distinguished.
-  For normal extensions, half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
-  - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
-  - Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
-
 
 :::{.warnings}
 Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
 :::
 
 
-
-:::{.proposition title="Galois in towers"}
-If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois
+:::{.remark}
+A counterexample to being distinguished: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
+Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
+:::{.proposition title="Normals are half-distinguished."}
+If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
+:::
 
 :::{.proof title="?"}
+Use the embedding characterization, it suffices to show
 Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
 Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 
@@ -321,7 +321,7 @@ Then TFAE:
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ over $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ over $k$.
+- Every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
 
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
