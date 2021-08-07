@@ -126,12 +126,11 @@ The following are equivalent:
 
 
 :::{.proposition title="Characterization of perfect fields"}
-$k$ is perfect if either 
+$k$ is perfect (using the irreducible implies separable condition) if either 
 
 - $\ch k = 0$ or 
 - $\ch k = p > 0$ and $k^p = k$.
 :::
-
 
 :::{.proof title="?"}
 For $\ch k = 0$, use that irreducible implies separable.
@@ -156,11 +155,9 @@ x^p - a = x^p - r^p = (x-r)^p
 
 :::
 
-
 :::{.proposition title="Irreducible implies separable for perfect fields"}
 If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
 :::
-
 
 :::{.proof title="?"}
 If $\ch k = 0$ and $f$ is irreducible, then since $\deg f' < \deg f$ and $f$ is irreducible we must have $\gcd(f, f')=1$ and $f$ is separable.
