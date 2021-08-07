@@ -356,15 +356,15 @@ $\impliedby$:
 
 - Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
 
-- $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
+- $K \da \QQ(2^{1\over 3})$ is not normal, since $K\subset \RR$ but $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2 \in \CC$.
+  - Another reason: an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
 
 - $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
 
-  - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
+- $L \da \QQ(2^{1\over 4})$ is not normal, since it is finite but not the splitting field of any polynomial.
 
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
 
-- $K\slice{k} \da \QQ(2^{1\over 3}) \slice{\QQ}$ is not normal, since an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
 
 - A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
   This has finite degree $p^2$ but infinitely many subfields.
