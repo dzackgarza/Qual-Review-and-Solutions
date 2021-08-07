@@ -287,7 +287,6 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 :::
 
 
-
 ### Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
@@ -305,20 +304,12 @@ Then TFAE:
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
 
-
 :::{.definition title="Normal Closure"}
 If $K/k$ is algebraic, then there is an extension $N_k/K$ such that $N_k/k$ is normal and $N_k/K/k$ is a tower.
 :::
 
-
-:::{.example title="?"}
-\envlist
-
-
-:::
-
 :::{.proposition title="Finite and normal iff splitting field"}
-An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
+An extension $L/k$ is finite and normal $\iff L$ is the splitting field of some polynomial $f\in k[x]$.
 :::
 
 :::{.proof title="?"}
@@ -356,6 +347,8 @@ $\impliedby$:
 
 - Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
 
+- Useful trick: if $L/K/k$, then $K/k$ is normal iff $\Gal(L/K) \normal \Gal(L/k)$.
+
 - $K \da \QQ(2^{1\over 3})$ is not normal, since $K\subset \RR$ but $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2 \in \CC$.
   - Another reason: an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
 
@@ -367,7 +360,7 @@ $\impliedby$:
 
 
 - A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
-  This has finite degree $p^2$ but infinitely many subfields.
+  This has finite degree $p^2$ but infinitely many subfields?
 
 :::
 
