@@ -263,13 +263,21 @@ An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some
 
 
 :::{.proof title="?"}
-\envlist
+$\implies$:
 
 - Write $L = k(a_1, \cdots, a_n)$ by finiteness.
 - Let $m_i$ be the minimal polynomials of the $a_i$.
 - By normality, the $m_i$ split in $L[x]$.
 - Then $L$ is the splitting field of $f(x) \da \prod_i m_i(x)$.
 
+$\impliedby$:
+
+- Suppose $L/k = \SF(f)$, and pick any monic $m\in L[x]^{\irr}$ with a root $a\in L$, so that $m$ is the minimal polynomial of $a$.
+- Toward showing $m$ splits in $L$: let $M = \SF(m)$, we'll show $M=L$.
+- To show that for any root $b\in M$ we have $b\in L$, it suffices to show $[L(b): L] = 1$.
+
+  The strategy: use that $[L(a):L] = 1$ since $a\in L$ by assumption, and try to relate the two degrees.
+- 
 :::
 
 
