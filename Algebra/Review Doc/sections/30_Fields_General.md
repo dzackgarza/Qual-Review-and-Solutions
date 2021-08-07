@@ -11,6 +11,10 @@ For $\FF$ a field, a polynomial $f\in \FF[x]$ is **reducible** if and only if $f
 $f$ is **irreducible** if $f$ is not reducible.
 :::
 
+:::{.definition title="Primitive Polynomials"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
+:::
+
 :::{.theorem title="Eisenstein's Criterion"}
 If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 
@@ -146,8 +150,7 @@ x^p - a = x^p - r^p = (x-r)^p
 
 :::
 
-:::{.definition title="Numerical Invariants"}
-
+:::{.remark title="Numerical Invariants"}
 Let $K/k$ be an extension.
 
 \[
@@ -157,28 +160,25 @@ is the dimension of $K$ as a $k\dash$vector space.
 Automorphisms of fields over $K$ are defined as
 
 \[ 
-\Aut\slice{k}(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
+\Aut_{\Fieldsover{k}}(K) \da \Aut(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
 , \] 
 so lifts of the identity on $k$, and 
 \[
 \ts{K:k} \da \# \Aut(K/k)
 .\]
 
-If $E$ is finite, normal, and separable,
+If $K/k$ is finite, normal, and separable,
 \[
-\Gal(E/F) \da \Aut_{\Fieldsover{k} }(E)
+\Gal(K/k) \da \Aut(K/k)
 ,\]
-
-:::
-
-:::{.remark title="on general inequality"}
-Note that in general, 
+where in general
 \[
-\abs{ \Aut(L/k) } \leq [L: K]
-,\]
+\ts{K: k} \leq [K: k]
+\]
 with equality when $L/k$ is Galois.
 
 :::
+
 
 ### Extensions
 
@@ -186,9 +186,6 @@ with equality when $L/k$ is Galois.
 An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
-:::
 
 :::{.definition title="Algebraic Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
