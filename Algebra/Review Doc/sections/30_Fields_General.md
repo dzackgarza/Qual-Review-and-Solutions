@@ -675,6 +675,26 @@ $\implies$:
 
 :::
 
+:::{.proposition title="Separability has the compositing property"}
+$E/k$ and $F/k$ are separable $\iff$ $EF/k$ is separable.
+:::
+
+:::{.proof title="?"}
+$\impliedby$:
+Separability always descends to subfields, and $E \leq EF, F\leq EF$.
+
+$\implies$:
+
+- Write $E = k(S)$ for some finite set $S$. 
+  Then $EF = F(S)$.
+- Use that $k(S)/k$ is separable iff $s\in S$ is a separable element for all $s$.
+  - Since $E/k$ is separable, each $s\in S$ is separable over $k$.
+- Since $F/k$ is separable, each $s\in S$ is separable over $F$.
+- So $F(S)/F$ is separable.
+- Now use the tower $F(S)/F/k$ to obtain $F(S)/k$ separable, which is $EF/k$.
+
+:::
+
 
 ### Galois Extensions
 
