@@ -10,7 +10,7 @@ If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive su
 :::{.fact}
 Transitive subgroups of $S_n$ for small $n$:
 
-| $n$ in $S_n$ | Transitive Subgroups              |
+| $n \text{ in }S_n$ | Transitive Subgroups              |
 |--------------|-----------------------------------|
 | 1            | 1                                 |
 | 2            | $\ZZ/2$                           |
@@ -32,23 +32,6 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polyno
 
 :::{.proposition}
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
-:::
-
-
-:::{.theorem title="Dirichlet's Theorem on Arithmetic Progressions"}
-\todo[inline]{todo}
-
-:::
-
-
-:::{.definition title="Constructible"}
-\todo[inline]{todo}
-
-:::
-
-
-:::{.theorem title="Constructibility of Regular $n\dash$gons"}
-
 :::
 
 
