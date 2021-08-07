@@ -19,6 +19,18 @@ For $f = \sum a_k x^k$ monic,
 :::
 
 
+:::{.example title="Cubics"}
+For $f(x) =x^3 +ax + b$ over $\ch k\neq 2,3$, then the Galois group $G$ is known:
+
+- If $\Delta$ is a perfect square in $K$, $G= A_3$.
+- Else, $G= S_3$.
+
+Note that $\Delta = -4a^3 - 27b^2$ here.
+
+:::
+
+
+
 
 :::{.exercise title="?"}
 \envlist
@@ -27,7 +39,16 @@ For $f = \sum a_k x^k$ monic,
 
 - $K/k = \SF(x^3-2)/\QQ = \QQ(2^{1\over 3}, \zeta_3)$: $\Gal(K/k) = S_3$.
 
-- $K/k \da \SF(x^n-1)/\QQ$: $\Gal(K/k) = (\ZZ/n)\units$.
+
+- $f(x) \da x^n-1$ over $\QQ$: $G = (\ZZ/n)\units$
+
+- $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
+
+- $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
+
+
+
+
 :::
 
 
