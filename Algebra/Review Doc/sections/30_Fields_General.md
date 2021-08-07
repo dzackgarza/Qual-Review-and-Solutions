@@ -290,7 +290,6 @@ $\impliedby$:
 - Thus $[L(a):k] = [L(b): k]$, which forces $[L(a): L] = [L(b): L]$ after dividing by $[L:k]$.
   But $[L(a): L] = 1$.
 
-
 :::
 
 
@@ -298,7 +297,11 @@ $\impliedby$:
 :::{.example title="of normal extensions"}
 \envlist
 
-- If $[L: k] = 2$ then $L/k$ is automatically normal.
+- Useful tricks:
+  - If $[L: k] = 2$ then $L/k$ is automatically normal.
+  - Any field $k$ has a normal closure $N_k$. 
+    You can use this to reason about towers, e.g. take $L/k = \QQ(2^{1\over 3})\slice{\QQ}$.
+    Then $L$ is not normal but $N_k/L/k$ is a tower with $N_k/k$ normal.
 - $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
 - $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
   - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
@@ -355,7 +358,7 @@ The following are equivalent
 - $L/k$ is a **separable** extension.
 - Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
 - $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
-- $\gcd(f, f') = 1$.
+- $\gcd(f, f') = 1$, so $f$ and $f'$ share no common roots.
 - $f' \not\equiv 0$
 - Every finite subextension $L'/k$ is separable.
 
