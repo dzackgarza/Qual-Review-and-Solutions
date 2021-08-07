@@ -354,8 +354,31 @@ Alternatively,
 
 :::{.definition title="Separable polynomials"}
 A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
-
 :::
+
+
+:::{.proposition title="Separability test with derivatives"}
+$f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
+:::
+
+
+:::{.proof title="?"}
+$\not\implies$:
+Suppose $f$ has a repeated root $r_i$, so its multiplicity is at least 2.
+Then 
+\[
+f(x) = (x-r)^2 g(x) \implies f'(x) = 2(x-r)g(x) + (x-r)^2g'(x)
+,\]
+so $r$ is a root of $f'$.
+
+$\not\impliedby$:
+Suppose $r$ is a root of $f, f'$.
+Write $f(x) = (x-r)p(x)$ and $f'(x) = (x-r)p'(x) + p(x)$.
+Rearranging, $f'(x) - (x-r)p'(x) = p(x)$, and since $r$ is a root of the LHS it's a root of the RHS.
+So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
+:::
+
+
 
 
 :::{.definition title="Separable Field Extension"}
