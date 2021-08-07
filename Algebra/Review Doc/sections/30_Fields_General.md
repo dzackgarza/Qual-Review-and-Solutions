@@ -147,16 +147,17 @@ x^p - a = x^p - r^p = (x-r)^p
 :::
 
 :::{.definition title="Numerical Invariants"}
-\envlist
+
+Let $K/k$ be an extension.
 
 \[
-[L: K] = \dim_{\Vect_K} L
+[K: k] = \dim_{\Vect_k} K
 ,\] 
-is the dimension of $L$ as a $K\dash$vector space
+is the dimension of $K$ as a $k\dash$vector space
 \[ 
-\Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K } 
+\Aut(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
 ,\] 
-is the number of lifts of the identity on $K$.
+is the number of lifts of the identity on $k$.
 
 \[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} 
 ,\] 
@@ -164,7 +165,7 @@ is the number of lifts of the identity on $K$.
 
 If $E$ is finite, normal, and separable,
 \[
-\Gal(E/F) \da \Aut_{\Fieldsover{k} }
+\Gal(E/F) \da \Aut_{\Fieldsover{k} }(E)
 ,\]
 
 :::
