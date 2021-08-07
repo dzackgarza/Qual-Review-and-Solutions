@@ -80,6 +80,18 @@ Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2:
 ,\] making $L$ separable.
 :::
 
+
+:::{.remark}
+One can complete the square for quadratics:
+\[
+f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha^{2}}{4} \text { . }
+.\]
+
+Thus it suffices to consider quadratics of the form $x^2+a$.
+
+:::
+
+
 :::{.example title="Cubics"}
 For $f(x) =x^3 +ax + b$ over $\ch k\neq 2,3$, then the Galois group $G$ is known:
 
