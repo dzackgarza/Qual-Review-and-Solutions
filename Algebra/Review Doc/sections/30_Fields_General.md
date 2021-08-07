@@ -116,9 +116,9 @@ The following are equivalent:
 
 - $k$ is a **perfect** field.
 
-- Every finite extension $F/k$ is separable.
-
 - If $\ch k > 0$, the Frobenius is an automorphism of $k$, so $k^p = k$.
+
+- Every finite extension $F/k$ is separable.
 
 - Every irreducible polynomial $p\in k[x]$ is separable.
 
@@ -407,19 +407,6 @@ Alternatively,
 A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
-:::{.example title="of separable and inseparable polynomials"}
-\envlist
-
-- $x^2-2$ is separable over $\QQ$, but inseparable over $\FF_2$.
-- $(x^2-2)^2$ is inseparable over $\QQ$
-- $x^2-t$ is inseparable over $\FF_2(t)$.
-- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
-- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
-  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
-- If $\ch k=0$, then irreducible $\implies$ separable.
-
-:::
-
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
@@ -451,6 +438,19 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
+:::{.example title="of separable and inseparable polynomials"}
+\envlist
+
+- $x^2-2$ is separable over $\QQ$, but inseparable over $\FF_2$.
+- $(x^2-2)^2$ is inseparable over $\QQ$
+- $x^2-t$ is inseparable over $\FF_2(t)$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
+- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
+  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
+- If $\ch k=0$, then irreducible $\implies$ separable.
+
+:::
+
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
 :::
@@ -459,6 +459,7 @@ If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(
 $\implies$:
 
 Use that $f$ is inseparable iff $f' \equiv 0$.
+The claim is that $f' \equiv 0$ in characteristic $p$ iff all exponents present in $f$ are divisible by $p$.
 If $f'\equiv 0$, write
 \[
 f(x) &= a_nx^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\
@@ -469,7 +470,7 @@ which forces $i a_i = 0$ for all $i$.
 For any $a_i\neq 0$, this forces $i\equiv 0 \mod p$, so $a_i$ can only be nonzero when $p\divides i$, so $i=kp$ for some $k$.
 So reindex to write
 \[
-f(x) = a_0 + a_1x^p + a_2x^{p^2} + \cdots + a_n x^{p^n} = \qty{b_0 + b_1 x + b_2 x^{p} + \cdots + b_nx^{p^{n-1} }}^p \in \bar{k}[x]
+f(x) = a_0 + a_1x^p + a_2x^{2p} + \cdots + a_n x^{np} = \qty{b_0 + b_1 x + b_2 x^{2} + \cdots + b_nx^{n}}^p \in \bar{k}[x]
 ,\]
 using $(c+d)^p = c^p + d^p$ in characteristic $p$, and taking $b_i \da a_i^{1\over p} \in \bar{k}$
 So $f' \equiv 0\implies f(x) = q(x^p)$ where $q(t) \da \sum b_i t^i$.
