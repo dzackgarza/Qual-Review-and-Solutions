@@ -555,8 +555,12 @@ If $L/k$ is a splitting field, then
 
 :::
 
-:::{.proposition title="?"}
-Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.
+:::{.proposition title="Irreducible polynomials have separable splitting fields"}
+Irreducible polynomials have distinct roots after passing to a splitting field.
+:::
+
+:::{.proposition title="Algebraic extensions of perfect fields are separable"}
+If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::
 
 ### Galois Extensions

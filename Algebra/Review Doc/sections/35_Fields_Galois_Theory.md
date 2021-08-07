@@ -21,9 +21,6 @@ Transitive subgroups of $S_n$ for small $n$:
 :::
 
 
-:::{.proposition}
-If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
-:::
 
 :::{.proposition}
 If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
