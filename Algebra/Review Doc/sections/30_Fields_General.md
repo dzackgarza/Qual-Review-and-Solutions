@@ -125,9 +125,14 @@ The following are equivalent:
 :::
 
 :::{.proposition title="Irreducible implies separable for perfect fields"}
-\todo[inline]{todo}
-
+If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
 :::
+
+
+:::{.example title="of a non-perfect field"}
+Example of a non-perfect field: $\FF_p(t)$.
+:::
+
 
 :::{.definition title="Numerical Invariants"}
 \envlist
@@ -281,7 +286,7 @@ $\impliedby$:
 - We have $L/k$, and a number of towers to work with:
 \[
 [L(a):k] &= [L(a): k(a)] [k(a): k] &= [L(a) : L] [L: k] \\ \\
-[L(b):k] &= [L(b): k(b)] [k(b): k] &= [L(b) : L] [L: k] \\ 
+[L(b):k] &= [L(b): k(b)] [k(b): k] &= [L(b) : L] [L: k]
 .\]
 
 - In the first set of equalities, note that $k(a)\slice{k} \cong k(b)\slice{k}$ since $a,b$ are conjugate roots over $k$.
@@ -401,16 +406,17 @@ $f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \e
 :::{.proof title="?"}
 Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
 So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
-Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \eqiuv 0$.
+Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
 
-:::{.corollary title="?"}
-If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\implies f(x) = q(x^{p^n})$ for some unique $n$.
+:::{.corollary title="Inseparable iff polynomial in characteristic powers"}
+If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
 :::
-
 
 :::{.proof title="?"}
+$\implies$:
+
 Use that $f$ is inseparable iff $f' \equiv 0$.
 If $f'\equiv 0$, write
 \[
@@ -425,10 +431,8 @@ f(x) = a_0 + a_1x^p + a_2x^{p^2} + \cdots + a_n x^{p^n} = \qty{b_0 + b_1 x + b_2
 using $(c+d)^p = c^p + d^p$ in characteristic $p$, and taking $b_i \da a_i^{1\over p} \in \bar{k}$
 So $f' \equiv 0\implies f(x) = q(x^p)$ where $q(t) \da \sum b_i t^i$.
 
-
-
-
-
+$\impliedby$:
+If $f(x) = q(x^p)$ for some $q$, the previous calculation shows $q$ has multiple roots, thus so does $f$, so $f$ is inseparable.
 :::
 
 
