@@ -636,13 +636,19 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 
 :::
 
-We can now use that the separable degree is multiplicative in towers.
-If all extensions in sight are finite, this direction is immediate:
+- Now use that the separable degree is multiplicative in towers.
+- If all extensions in sight are **finite**, this direction is immediate:
 \[
 [L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
 .\]
-For the infinite case, it suffices to show every $\alpha\in L$ is a separable element over $k$, i.e. its minimal polynomial over $L$ is a separable polynomial.
-It suffices to show the extension
+
+- For the infinite case, want to show every $\alpha\in L$ is separable over $k$.
+- Let $f(x) \da \min_{\alpha, K}(x)$ be the minimal polynomial of $\alpha$ *over the intermediate extension* $K$, which by assumption is separable since $L/K$ is separable.
+  - So $f\in K[x]$, and letting $S$ be the finite set of coefficients of $f$, $S \subseteq K$.
+  - Note that each coefficient $s\in S$ is separable over $k$.
+- Then $\alpha$ is algebraic over the finite extension $K(S)/K$.
+- Now $K(S, \alpha) / K(S)/K$ is a tower of finite extensions where $K(S, \alpha)/K(S)$ and $K(S)/K$ are separable, so this reduces to the finite case.
+
 
 :::
 
