@@ -172,6 +172,9 @@ so $f$ is reducible. $\contradiction$.
 :::
 
 
+
+
+
 :::{.example title="of a non-perfect field"}
 Example of a non-perfect field: $\FF_p(t)$.
 Use that $f(x) \da x^p - t$ is irreducible in $\FF_p(t)[x]$ but not separable.
