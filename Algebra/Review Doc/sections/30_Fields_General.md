@@ -373,6 +373,7 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
+Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
 :::
 
 :::{.proof title="?"}
@@ -403,9 +404,6 @@ In this case, $m(x) = q(x^{p})$ for $p = \ch k$.
 :::
 
 
-
-
-
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
@@ -426,51 +424,9 @@ If $L/k$ is a finite extension, then, TFAE:
 
 :::
 
-
-:::{.proposition title="?"}
-:::
-
-:::{.definition title="Separable degree"}
-The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
-
-\begin{tikzcd}
-	L && {\bar{k}} \\
-	\\
-	& k
-	\arrow["\sigma"', hook, from=3-2, to=1-3]
-	\arrow[dashed, hook, from=1-1, to=1-3]
-	\arrow[hook', from=3-2, to=1-1]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
-
-Alternatively, if $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
-The separable degree is then $\deg g$.
-
-:::
-
-:::{.proposition title="Derivative criterion for separability"}
-A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
-:::
-
-:::{.proof title="?"}
-$\implies:$:
-Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
-\[
-f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
-\]
-and $(x-a)$ divides both factors.
-
-$\notimplies$:
-If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
-\[
-f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
-.\]
-Then fixing any $a_k$ where $f(a_k) = 0$, check 
-\[
-f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
-.\]
-
+:::{.fact}
+$L/k$ finite and $k$ perfect $\implies L$ separable.
+So every finite extension of $\QQ$ or $\FF_p$ is automatically separable, and to show it's Galois, one only has to show normality.
 :::
 
 :::{.proposition title="Separable splitting fields are Galois"}
@@ -680,3 +636,25 @@ The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive roo
 If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some $m$.
 :::
 
+## Misc
+
+
+:::{.proposition title="?"}
+If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
+:::
+
+:::{.definition title="Separable degree"}
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	& k
+	\arrow["\sigma"', hook, from=3-2, to=1-3]
+	\arrow[dashed, hook, from=1-1, to=1-3]
+	\arrow[hook', from=3-2, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+:::
