@@ -300,7 +300,7 @@ If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
 :::
 
 :::{.proof title="?"}
-Use the embedding characterization, it suffices to show
+Use the embedding characterization, it suffices to show that every embedding $\$
 Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
 Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 
@@ -321,10 +321,22 @@ Then TFAE:
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
+- For $L$ algebraic: every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
 
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
+
+
+:::{.example title="?"}
+\envlist
+
+- $K\slice{k} \da \QQ(2^{1\over 3}) \slice{\QQ}$ is not normal, since an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
+ 
+
+
+
+:::
+
 
 :::{.proposition title="Finite and normal iff splitting field"}
 An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
