@@ -299,16 +299,17 @@ Then TFAE:
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- For $L$ algebraic: every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
+:::
 
-- For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
+:::{.proposition title="Characterization of normal algebraic extensions"}
+If $L/k$ s algebraic, then $L/k$ is normal iff every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
 :::
 
 :::{.definition title="Normal Closure"}
 If $K/k$ is algebraic, then there is an extension $N_k/K$ such that $N_k/k$ is normal and $N_k/K/k$ is a tower.
 :::
 
-:::{.proposition title="Finite and normal iff splitting field"}
+:::{.proposition title="Characterization of finite normal extensions as splitting fields"}
 An extension $L/k$ is finite and normal $\iff L$ is the splitting field of some polynomial $f\in k[x]$.
 :::
 

@@ -51,6 +51,8 @@ More generally, $G\injects A_n \iff \Delta$ is a perfect square in $k$.
 - $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
 
 - Any irreducible $f(x)$ of degree $p$ prime with only two non-real roots: $G = S_p$, since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
+  - Example: $x^3-2$ over $\QQ$.
+  - Example: $x^5-4x+2$ over $\QQ$.
 
 
 
