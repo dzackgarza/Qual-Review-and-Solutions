@@ -651,6 +651,22 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 - Moreover $K(\alpha, S)/F$ is separable, since the minimal polynomial $\min_{\alpha, F} = f$ doesn't change.
 - Now $K(\alpha, S) / K(S)/K$ is a tower of finite extensions where $K(\alpha, S)/K(S)$ and $K(S)/K$ are separable, so this reduces to the finite case.
 
+\begin{tikzcd}
+	\alpha\in & L \\
+	&&& {k(\alpha, S)} & {\ni \alpha} \\
+	{f\in K[x]} & K \\
+	&&& {F\da k(\alpha, S) \intersect K} & {f\in F[x]} \\
+	& k
+	\arrow["s"', hook, from=5-2, to=4-4]
+	\arrow["s"', hook, from=4-4, to=2-4]
+	\arrow["s", hook', from=3-2, to=1-2]
+	\arrow[hook', from=4-4, to=3-2]
+	\arrow["s", hook', from=5-2, to=3-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMSwwLCJMIl0sWzEsMiwiSyJdLFsxLDQsImsiXSxbMywzLCJGXFxkYSBrKFxcYWxwaGEsIFMpIFxcaW50ZXJzZWN0IEsiXSxbMywxLCJrKFxcYWxwaGEsIFMpIl0sWzAsMCwiXFxhbHBoYVxcaW4iXSxbMCwyLCJmXFxpbiBLW3hdIl0sWzQsMywiZlxcaW4gRlt4XSJdLFs0LDEsIlxcbmkgXFxhbHBoYSJdLFsyLDMsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDAsInMiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwicyIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV1d)
+
+
 
 :::
 
