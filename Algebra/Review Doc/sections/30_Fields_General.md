@@ -539,16 +539,17 @@ If $L/k$ is a finite extension, then, TFAE:
 
 - $L/k$ is separable.
 - \( L = k( \alpha) \) for \( \alpha \)  a separable element.
-- \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
-- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
+- \( L = k( S ) \) for \( S \) some set of separable elements
 - $[L: K] = [L:K]_s$, the separable degree.
+\[
+[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
+.\] 
 
 
 :::
 
 :::{.fact}
-$L/k$ finite and $k$ perfect $\implies L$ separable.
-So every finite extension of $\QQ$ or $\FF_p$ is automatically separable, and to show it's Galois, one only has to show normality.
+A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
 
 :::{.proposition title="Separable splitting fields are Galois"}
@@ -578,6 +579,7 @@ Let $L/k$ be a finite field extension.
 The following are equivalent:
 
 1. \( L/k \) is a **Galois extension**.
+2. $L/k$ is normal and separable.
 2. $\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
@@ -591,6 +593,12 @@ In this case, we define the **Galois group** as
 \Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L)
 .\]
 :::
+
+
+:::{.fact}
+For $L/k$ algebraic and $\ch k = 0$, $L/k$ is Galois $\iff L/k$ is normal.
+:::
+
 
 
 ### Special Extensions
