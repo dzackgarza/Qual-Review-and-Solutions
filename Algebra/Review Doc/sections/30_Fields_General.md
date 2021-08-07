@@ -287,16 +287,23 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 :::
 
 :::{.warnings}
-Normal extensions are *not* distinguished, since they fail (lower) transitivity.
-However, they do have the lifting and compositing properties.
+Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity.
+However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
 :::
 
-:::{.remark}
-A counterexample to being distinguished: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
+
+:::{.example title="showing normal extensions are not transitive, reverse implication"}
+One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
+take 
+\[
+\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
+.\]
+Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
+
 Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
-:::{.proposition title="Normal extensions are upper transitive"}
+:::{.proposition title="Normal extensions are upper transitive, forward implication"}
 If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
 :::
 
