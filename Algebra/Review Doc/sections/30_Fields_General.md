@@ -331,6 +331,8 @@ Then TFAE:
 \envlist
 
 - $K\slice{k} \da \QQ(2^{1\over 3}) \slice{\QQ}$ is not normal, since an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
+- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
+  This has finite degree $p^2$ but infinitely many subfields.
  
 
 
