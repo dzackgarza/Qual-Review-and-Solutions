@@ -124,6 +124,30 @@ The following are equivalent:
 
 :::
 
+
+:::{.proposition title="Characterization of perfect fields"}
+$k$ is perfect if either 
+
+- $\ch k = 0$ or 
+- $\ch k = p > 0$ and $k^p = k$.
+:::
+
+
+:::{.proof title="?"}
+For $\ch k = 0$, use that irreducible implies separable.
+
+For $\ch k = p$, show that $k_p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
+
+- Supposing $k^p\neq k$, choose $a\in k$ not a $p$th power.
+- Note that $x^p-a$ has only one root: in a splitting field, any root $r$ satisfies $r^p=a$, so 
+\[
+x^p - a = x^p - r^p = (x-r)^p
+.\]
+
+:::
+
+
+
 :::{.proposition title="Irreducible implies separable for perfect fields"}
 If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
 :::
@@ -131,10 +155,11 @@ If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automati
 
 :::{.proof title="?"}
 If $\ch k = 0$ and $f$ is irreducible, then since $\deg f' < \deg f$ and $f$ is irreducible we must have $\gcd(f, f')=1$ and $f$ is separable.
+
 If $\ch k = p>0$, then if $f$ is irreducible and inseparable then $f(x) = g(x^p)$ for some $g$.
-Write $g(x) = \sum a_i x^i$, and since $k$ is perfect, write $b_i \da a_i^{1\over p}$, then
+Write $g(x) = \sum a_k x^k$, and since $k$ is perfect, write $b_k \da a_k^{1\over p}$, then
 \[
-f(x) = \sum a_i x^{p^i} = \sum b_i^p x^{pi} = \qty{\sum b_i x^i}^p
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
 ,\]
 so $f$ is reducible. $\contradiction$.
 
