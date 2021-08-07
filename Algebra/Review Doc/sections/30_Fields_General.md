@@ -223,7 +223,7 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
-1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K \in \mcs$ (upper transitivity) and $K/k\in \mathcal{S}$ (lower transitivity):
 
 \begin{tikzcd}
 	L &&&& L \\
@@ -287,7 +287,7 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 :::
 
 :::{.warnings}
-Normal extensions are *not* distinguished, since they fail transitivity.
+Normal extensions are *not* distinguished, since they fail (lower) transitivity.
 However, they do have the lifting and compositing properties.
 :::
 
@@ -296,7 +296,7 @@ A counterexample to being distinguished: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over
 Similar issue for $L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal: $\Gal(L/k) = S_3$, but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
 :::
 
-:::{.proposition title="Normals are half-distinguished."}
+:::{.proposition title="Normal extensions are upper transitive"}
 If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
 :::
 
