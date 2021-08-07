@@ -43,14 +43,6 @@ Let $L/F/k$ be a finite tower of field extensions.
 .\]
 :::
 
-:::{.proposition title="Normal/Algebraic/Galois extensions are transitive"}
-If $L/F/k$, then $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
-:::
-
-:::{.proof title="that normal extensions are transitive"}
-$\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then so does the former.
-:::
-
 :::{.corollary title="?"}
 $\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
 :::

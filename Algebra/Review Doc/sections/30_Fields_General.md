@@ -286,7 +286,10 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 - Separable extensions are distinguished.
 :::
 
+:::{.proposition title="Normal/Algebraic/Galois extensions are upper transitive"}
 
+If $L/F/k$, then $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
+:::
 ### Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
