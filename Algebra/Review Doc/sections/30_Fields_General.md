@@ -152,16 +152,13 @@ Let $K/k$ be an extension.
 
 \[
 [K: k] = \dim_{\Vect_k} K
-,\] 
+\] 
 is the dimension of $K$ as a $k\dash$vector space
+
 \[ 
 \Aut(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
-,\] 
-is the number of lifts of the identity on $k$.
-
-\[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} 
-,\] 
-is the number of lifts of the identity on $K$.
+\] 
+are lifts of the identity on $k$, and $\ts{K:k} \da \# \Aut(K/k)$.
 
 If $E$ is finite, normal, and separable,
 \[
