@@ -394,8 +394,8 @@ So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
 
 
 :::{.proposition title="Separability test: identically zero derivative"}
-$f\in k[x]$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
-In this case, $m(x) = q(x^{p})$ for $p = \ch k$.
+$f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
+If $p\da \ch k > 0$, then $m(x) = q(x^{p^n})$ for some unique $n$.
 :::
 
 
