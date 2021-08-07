@@ -601,24 +601,6 @@ so $f$ is reducible. $\contradiction$.
 :::
 
 
-:::{.proposition title="Separability is transitive."}
-If $L/K/k$, then $L/K$ is separable and $K/k$ is separable $\iff$ $L/k$ is separable.
-:::
-
-
-:::{.proof title="?"}
-$\impliedby$:
-
-- By definition, every $\alpha \in L$ is separable over $k$.
-- $K/k$ is separable:
-  - Since $K \subseteq L$, any $\alpha \in K$ is also separable over $k$.
-- $L/K$ is separable:
-  - If $\alpha \in L$, then $\min_{\alpha, k}(x)$ is a separable polynomial over some splitting field.
-  - Use that $L/k$ implies $\min_{\alpha, L}(x)$ divides $\min_{\alpha, k}(x)$, so the former is separable, done.
-
-$\implies$:
-A definition helps:
-
 :::{.definition title="Separable degree"}
 The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ (the algebraic or separable closure) and letting $[L:k]_s$ be the number of embeddings $\sigma':L\to \bar{k}$:
 
@@ -636,6 +618,22 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 
 :::
 
+:::{.proposition title="Separability is transitive."}
+If $L/K/k$, then $L/K$ is separable and $K/k$ is separable $\iff$ $L/k$ is separable.
+:::
+
+:::{.proof title="?"}
+$\impliedby$:
+
+- By definition, every $\alpha \in L$ is separable over $k$.
+- $K/k$ is separable:
+  - Since $K \subseteq L$, any $\alpha \in K$ is also separable over $k$.
+- $L/K$ is separable:
+  - If $\alpha \in L$, then $\min_{\alpha, k}(x)$ is a separable polynomial over some splitting field.
+  - Use that $L/k$ implies $\min_{\alpha, L}(x)$ divides $\min_{\alpha, k}(x)$, so the former is separable, done.
+
+$\implies$:
+
 - Now use that the separable degree is multiplicative in towers.
 - If all extensions in sight are **finite**, this direction is immediate:
 \[
@@ -643,13 +641,8 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 .\]
 
 - For the infinite case, want to show every $\alpha\in L$ is separable over $k$.
-- Let $f(x) \da \min_{\alpha, K}(x)$ be the minimal polynomial of $\alpha$ *over the intermediate extension* $K$, which by assumption is separable since $L/K$ is separable.
-  - So $f\in K[x]$, and letting $S$ be the finite set of coefficients of $f$, $S \subseteq K$.
-  - Note that each coefficient $s\in S$ is separable over $k$ since $K/k$ is separable by assumption.
-- Set $F\da K(\alpha, S) \intersect K$.
-  Since $K/k$ is separable and $F \subseteq K$, $F/k$ is separable.
-- Moreover $K(\alpha, S)/F$ is separable, since the minimal polynomial $\min_{\alpha, F} = f$ doesn't change.
-- Now $K(\alpha, S) / K(S)/K$ is a tower of finite extensions where $K(\alpha, S)/K(S)$ and $K(S)/K$ are separable, so this reduces to the finite case.
+  It suffices to show $\alpha$ is contained in some finite separable subextension.
+  The strategy:
 
 \begin{tikzcd}
 	\alpha\in & L \\
@@ -662,15 +655,22 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 	\arrow["s", hook', from=3-2, to=1-2]
 	\arrow[hook', from=4-4, to=3-2]
 	\arrow["s", hook', from=5-2, to=3-2]
+	\arrow[hook', from=2-4, to=1-2]
 \end{tikzcd}
 
-> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMSwwLCJMIl0sWzEsMiwiSyJdLFsxLDQsImsiXSxbMywzLCJGXFxkYSBrKFxcYWxwaGEsIFMpIFxcaW50ZXJzZWN0IEsiXSxbMywxLCJrKFxcYWxwaGEsIFMpIl0sWzAsMCwiXFxhbHBoYVxcaW4iXSxbMCwyLCJmXFxpbiBLW3hdIl0sWzQsMywiZlxcaW4gRlt4XSJdLFs0LDEsIlxcbmkgXFxhbHBoYSJdLFsyLDMsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDAsInMiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwicyIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV1d)
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMSwwLCJMIl0sWzEsMiwiSyJdLFsxLDQsImsiXSxbMywzLCJGXFxkYSBrKFxcYWxwaGEsIFMpIFxcaW50ZXJzZWN0IEsiXSxbMywxLCJrKFxcYWxwaGEsIFMpIl0sWzAsMCwiXFxhbHBoYVxcaW4iXSxbMCwyLCJmXFxpbiBLW3hdIl0sWzQsMywiZlxcaW4gRlt4XSJdLFs0LDEsIlxcbmkgXFxhbHBoYSJdLFsyLDMsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDAsInMiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwicyIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzQsMCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
 
+
+- Let $f(x) \da \min_{\alpha, K}(x)$ be the minimal polynomial of $\alpha$ *over the intermediate extension* $K$, which by assumption is separable since $L/K$ is separable.
+  - So $f\in K[x]$, and letting $S$ be the finite set of coefficients of $f$, $S \subseteq K$.
+  - Note that each coefficient $s\in S$ is separable over $k$ since $K/k$ is separable by assumption.
+- Set $F\da k(\alpha, S) \intersect K$.
+  Note $K/k$ is separable and $F \subseteq K$, so $F/k$ is separable.
+- Moreover $k(\alpha, S)/F$ is separable, since the minimal polynomial of $\alpha$ over $F$ is still $f$. 
+- Now $k(\alpha, S) / F /K$ is a tower of finite extensions where $k(\alpha, S)/F$ and $F/k$ are separable, so this reduces to the finite case.
 
 
 :::
-
-
 
 
 ### Galois Extensions
