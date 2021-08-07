@@ -165,7 +165,46 @@ The **separable degree** of an extension $L/k$ is defined by fixing an embedding
 
 :::
 
-
 :::{.definition title="Elementary Symmetric Functions"}
 \todo[inline]{todo}
 :::
+
+
+
+:::{.exercise title="?"}
+Show 
+\[
+x^\ell - 1 \divides x^m-1 \iff \ell\divides m
+.\]
+:::
+
+
+:::{.solution}
+
+$\implies$
+- Write $m = \ell q + r$ with $0\leq r < \ell$.
+- By divisibility, the we can write
+\[
+p(x) = {x^m-1 \over x^\ell - 1}
+= {x^{lq+r} -1 \over x^\ell - 1}
+= {x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
+.\]
+
+
+:::
+
+
+:::{.exercise title="?"}
+Show that if $f \in \FF_p[x]^{\irr}$ is degree $d$,
+\[
+f \divides x^{p^n}-x \iff d\divides n
+.\]
+:::
+
+
+:::{.solution}
+
+
+:::
+
+
