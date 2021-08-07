@@ -1,4 +1,4 @@
-# Field Theory
+# Field Theory: Basics
 
 :::{.remark}
 Galois is defined as **normal and separable**.
@@ -180,7 +180,7 @@ with equality when $L/k$ is Galois.
 :::
 
 
-### Extensions
+# Field Theory: Extensions and Towers
 
 :::{.definition title="Simple Extensions"}
 An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
@@ -190,9 +190,7 @@ An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \)
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
-## Extensions
-
-### Distinguished Classes
+## Distinguished Classes
 
 > See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
@@ -270,7 +268,7 @@ The following classes of extensions are distinguished:
 For $L/F/k$: $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
 :::
 
-### Normal Extensions
+## Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
 Let $L/k$ be an extension.
@@ -455,7 +453,7 @@ Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
 
 
-### Separable Extensions
+## Separable Extensions
 
 :::{.definition title="Separable polynomials"}
 A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
@@ -546,7 +544,6 @@ The following are equivalent
 Every irreducible polynomial is separable in characteristic zero.
 
 :::
-
 
 :::{.fact}
 If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
@@ -696,7 +693,7 @@ $\implies$:
 :::
 
 
-### Galois Extensions
+## Galois Extensions
 
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
@@ -787,8 +784,7 @@ Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho
 
 
 
-
-### Fundamental Theorem of Galois Theory
+## Fundamental Theorem of Galois Theory
 
 :::{.theorem title="Fundamental Theorem of Galois Theory"}
 Let $L/k$ be a Galois extension, then there is a correspondence:
@@ -832,7 +828,21 @@ If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
 .\]
 :::
 
-### Special Extensions
+## Quadratic Extensions
+
+:::{.proposition title="Classification of quadratic extensions"}
+If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+:::
+
+:::{.corollary title="Quadratic extensions of rationals"}
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(q)$ for some $q\in \QQ$.
+:::
+
+:::{.proposition title="?"}
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
+:::
+
+## Other Special Extensions
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -854,19 +864,5 @@ Every finite separable extension is simple.
 
 :::{.corollary}
 $\GF(p^n)$ is a simple extension over $\FF_p$.
-:::
-
-### Quadratic Extensions
-
-:::{.proposition title="Classification of quadratic extensions"}
-If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
-:::
-
-:::{.corollary title="Quadratic extensions of rationals"}
-If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(q)$ for some $q\in \QQ$.
-:::
-
-:::{.proposition title="?"}
-For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
 :::
 
