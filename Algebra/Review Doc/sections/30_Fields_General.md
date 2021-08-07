@@ -118,9 +118,9 @@ The following are equivalent:
 
 - Every finite extension $F/k$ is separable.
 
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
+- If $\ch k > 0$, the Frobenius is an automorphism of $k$, so $k^p = k$.
 
-- Every irreducible polynomial $p\in k[x]$ is separable
+- Every irreducible polynomial $p\in k[x]$ is separable.
 
 :::
 
@@ -128,9 +128,9 @@ The following are equivalent:
 If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
 :::
 
-
 :::{.example title="of a non-perfect field"}
 Example of a non-perfect field: $\FF_p(t)$.
+Use that $f(x) \da x^p - t$ is irreducible in $\FF_p(t)[x]$ but not separable.
 :::
 
 
@@ -356,13 +356,11 @@ Alternatively,
 
 ### Separable Extensions
 
-
 :::{.definition title="Separable polynomials"}
 A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
-
-:::{.example title="?"}
+:::{.example title="of separable and inseparable polynomials"}
 \envlist
 
 - $x^2-2$ is separable over $\QQ$.
@@ -374,14 +372,12 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 
 :::
 
-
-
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of separability test"}
 $\not\implies$:
 Suppose $f$ has a repeated root $r_i$, so its multiplicity is at least 2.
 Then 
@@ -397,24 +393,21 @@ Rearranging, $f'(x) - (x-r)p'(x) = p(x)$, and since $r$ is a root of the LHS it'
 So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
 :::
 
-
 :::{.proposition title="Separability test: identically zero derivative"}
 $f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="of separability test"}
 Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
 So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
-
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of inseparable characterization"}
 $\implies$:
 
 Use that $f$ is inseparable iff $f' \equiv 0$.
@@ -435,17 +428,12 @@ $\impliedby$:
 If $f(x) = q(x^p)$ for some $q$, the previous calculation shows $q$ has multiple roots, thus so does $f$, so $f$ is inseparable.
 :::
 
-
-
-
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
 
 - $L/k$ is a **separable** extension.
 - Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
-- $f' \not\equiv 0$
 - Every finite subextension $L'/k$ is separable.
 
 If $L/k$ is a finite extension, then, TFAE:
