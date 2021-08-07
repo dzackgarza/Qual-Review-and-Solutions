@@ -277,7 +277,20 @@ $\impliedby$:
 - To show that for any root $b\in M$ we have $b\in L$, it suffices to show $[L(b): L] = 1$.
 
   The strategy: use that $[L(a):L] = 1$ since $a\in L$ by assumption, and try to relate the two degrees.
-- 
+
+- We have $L/k$, and a number of towers to work with:
+\[
+[L(a):k] &= [L(a): k(a)] [k(a): k] &= [L(a) : L] [L: k] \\ \\
+[L(b):k] &= [L(b): k(b)] [k(b): k] &= [L(b) : L] [L: k] \\ 
+.\]
+
+- In the first set of equalities, note that $k(a)\slice{k} \cong k(b)\slice{k}$ since $a,b$ are conjugate roots over $k$.
+  Moreover $L(a)\slice{k(a)} \cong L(b) \slice{k(b)}$ since both are splitting fields for $f$.
+
+- Thus $[L(a):k] = [L(b): k]$, which forces $[L(a): L] = [L(b): L]$ after dividing by $[L:k]$.
+  But $[L(a): L] = 1$.
+
+
 :::
 
 
