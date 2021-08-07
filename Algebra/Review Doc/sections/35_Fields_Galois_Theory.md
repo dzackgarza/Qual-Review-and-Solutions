@@ -16,6 +16,8 @@ Transitive subgroups of $S_n$ for small $n$:
 | 4            | $S_4, A_4, D_4, (\ZZ/2)^2, \ZZ/4$ |
 | 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
 
+- Nonabelian groups of order 8: $D_4, Q_8$.
+
 :::
 
 

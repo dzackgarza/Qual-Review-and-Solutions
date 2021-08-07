@@ -27,6 +27,8 @@ For $f(x) =x^3 +ax + b$ over $\ch k\neq 2,3$, then the Galois group $G$ is known
 
 Note that $\Delta = -4a^3 - 27b^2$ here.
 
+More generally, $G\injects A_n \iff \Delta$ is a perfect square in $k$.
+
 :::
 
 
@@ -45,6 +47,8 @@ Note that $\Delta = -4a^3 - 27b^2$ here.
 - $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
 
 - $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
+
+- $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
 
 
 
