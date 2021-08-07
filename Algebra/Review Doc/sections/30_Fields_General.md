@@ -153,12 +153,16 @@ Let $K/k$ be an extension.
 \[
 [K: k] = \dim_{\Vect_k} K
 \] 
-is the dimension of $K$ as a $k\dash$vector space
+is the dimension of $K$ as a $k\dash$vector space.
+Automorphisms of fields over $K$ are defined as
 
 \[ 
-\Aut(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
-\] 
-are lifts of the identity on $k$, and $\ts{K:k} \da \# \Aut(K/k)$.
+\Aut\slice{k}(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
+, \] 
+so lifts of the identity on $k$, and 
+\[
+\ts{K:k} \da \# \Aut(K/k)
+.\]
 
 If $E$ is finite, normal, and separable,
 \[
