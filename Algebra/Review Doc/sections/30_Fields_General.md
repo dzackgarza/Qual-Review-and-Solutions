@@ -192,7 +192,7 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 
 ## Extensions
 
-### Properties in Towers
+### Distinguished Classes
 
 > See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
@@ -255,11 +255,14 @@ Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 :::
 
 :::{.example title="of distinguished classes"}
-\envlist
+The following classes of extensions are distinguished:
 
-- Algebraic extensions are distinguished.
-- Finite extensions are distinguished.
-- Separable extensions are distinguished.
+- Algebraic.
+- Finite.
+- Separable.
+- Purely inseparable.
+- Finitely generated.
+- Solvable.
 :::
 
 :::{.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
