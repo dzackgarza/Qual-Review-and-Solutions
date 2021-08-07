@@ -131,12 +131,12 @@ H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \
 - An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
 - Apply Burnside's Lemma
 \[
-1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{\Fix(g)} \implies \abs{G} = \sum_{g\in G} \abs{\Fix(g)}
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{\Fix(g)} \implies \abs{G} = \sum_{g\in G} \abs{\Fix(g)} = \Fix(e) + \sum_{\substack{g\in G \\ g\neq e}} \abs{\Fix(g)}
 \]
-- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
-- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
-- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
-
+- Note that $\Fix(e) = X$, since the identity must fix every element, so $\abs{\Fix(e)} \geq 2$.
+- If $\abs{\Fix(g)} > 0$ for all $g\neq e$, the remaining term is at least $\abs{G} -1$.
+  But then the right-hand side yields is at least $2 + (\abs{G} -1) = \abs{G} + 1$, contradicting the equality.
+- So not every $\abs{\Fix(g)} > 0$, and $\abs{ \Fix(g) } = 0$ for some $g$, which says $g$ has no fixed points in $X$.
 
 :::
 
