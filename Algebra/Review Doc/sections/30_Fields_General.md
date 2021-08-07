@@ -259,8 +259,19 @@ Then TFAE:
 
 :::{.proposition title="Finite and normal iff splitting field"}
 An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
+:::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Write $L = k(a_1, \cdots, a_n)$ by finiteness.
+- Let $m_i$ be the minimal polynomials of the $a_i$.
+- By normality, the $m_i$ split in $L[x]$.
+- Then $L$ is the splitting field of $f(x) \da \prod_i m_i(x)$.
 
 :::
+
 
 
 :::{.example title="of normal extensions"}
