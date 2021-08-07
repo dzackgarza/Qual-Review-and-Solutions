@@ -223,7 +223,7 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
-1. For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
+1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
 
 \begin{tikzcd}
 	L &&&& L \\
@@ -242,7 +242,7 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
 
-2. Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/k \in \mathcal{S}$:
+2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/k \in \mathcal{S}$:
 
 \begin{tikzcd}
 	& LK \\
@@ -257,7 +257,8 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
 
 
-Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$:
+3. (Compositing property)
+Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
 
 \begin{tikzcd}
 	& LK \\
@@ -286,9 +287,9 @@ Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$:
 :::
 
 :::{.warnings}
-Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
+Normal extensions are *not* distinguished, since they fail transitivity.
+However, they do have the lifting and compositing properties.
 :::
-
 
 :::{.remark}
 A counterexample to being distinguished: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
@@ -300,7 +301,7 @@ If $L/K/k$ with $L/k$ Galois, then $L/K$ is Galois.
 :::
 
 :::{.proof title="?"}
-Use the embedding characterization, it suffices to show that every embedding $\$
+Use the embedding characterization, it suffices to show that every embedding $\sigma: $
 Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
 Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 
@@ -326,7 +327,6 @@ Then TFAE:
 - For $L$ finite: $L$ is normal and separable $\iff$ $L$ is the splitting field of some separable $f\in k[x]$.
 :::
 
-
 :::{.example title="?"}
 \envlist
 
@@ -336,7 +336,6 @@ Then TFAE:
 
 
 :::
-
 
 :::{.proposition title="Finite and normal iff splitting field"}
 An extension $L/k$ is finite and normal $\iff$ it is the splitting field of some polynomial $f\in k[x]$.
