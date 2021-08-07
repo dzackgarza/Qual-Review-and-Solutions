@@ -196,7 +196,7 @@ H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
 
 :::{.proposition title="?"}
 Let $L/k$ be Galois and set $G\da \Gal(L/k)$ with $L/K/k$.
-Then $K/k$ is Galois iff $H\da \Gal(K/k)$ is normal in $G$.
+Then $K/k$ is Galois iff $H\da \Gal(L/K)$ is normal in $G$, and moreover $\Gal(K/k) = G$.
 :::
 
 
