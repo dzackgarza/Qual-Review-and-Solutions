@@ -452,8 +452,6 @@ If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
 Use the embedding characterization, it suffices to show that every embedding $\sigma: $
 Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
 Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
-
-
 :::
 
 
@@ -549,7 +547,6 @@ Every irreducible polynomial is separable in characteristic zero.
 
 :::
 
-
 :::{.proposition title="Simplifications of separability for finite extensions"}
 If $L/k$ is a finite extension, then, TFAE:
 
@@ -560,32 +557,6 @@ If $L/k$ is a finite extension, then, TFAE:
 \[
 [L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
 .\] 
-
-:::
-
-:::{.definition title="Separable degree"}
-The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ (the algebraic or separable closure) and letting $[L:k]_s$ be the number of embeddings $\sigma':L\to \bar{k}$:
-\begin{tikzcd}
-	L && {\bar{k}} \\
-	\\
-	k && k
-	\arrow["{\sigma'}", dashed, hook, from=1-1, to=1-3]
-	\arrow[hook, from=3-1, to=1-1]
-	\arrow["\sigma"', hook, from=3-3, to=1-3]
-	\arrow[Rightarrow, no head, from=3-1, to=3-3]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzIsMiwiayJdLFsyLDEsIlxcc2lnbWEnIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMywxLCJcXHNpZ21hIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
-
-:::
-
-:::{.remark}
-The separable degree is multiplicative in towers.
-An example use is showing that for finite extensions, if $L/K/k$ with $L/K$ and $K/k$ separable then $L/k$ is separable:
-\[
-[L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
-.\]
-
 :::
 
 
@@ -628,6 +599,55 @@ f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
 so $f$ is reducible. $\contradiction$.
 
 :::
+
+
+:::{.proposition title="Separability is transitive."}
+If $L/K/k$, then $L/K$ is separable and $K/k$ is separable $\iff$ $L/k$ is separable.
+:::
+
+
+:::{.proof title="?"}
+$\impliedby$:
+
+- By definition, every $\alpha \in L$ is separable over $k$.
+- $K/k$ is separable:
+  - Since $K \subseteq L$, any $\alpha \in K$ is also separable over $k$.
+- $L/K$ is separable:
+  - If $\alpha \in L$, then $\min_{\alpha, k}(x)$ is a separable polynomial over some splitting field.
+  - Use that $L/k$ implies $\min_{\alpha, L}(x)$ divides $\min_{\alpha, k}(x)$, so the former is separable, done.
+
+$\implies$:
+A definition helps:
+
+:::{.definition title="Separable degree"}
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ (the algebraic or separable closure) and letting $[L:k]_s$ be the number of embeddings $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	k && k
+	\arrow["{\sigma'}", dashed, hook, from=1-1, to=1-3]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow["\sigma"', hook, from=3-3, to=1-3]
+	\arrow[Rightarrow, no head, from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzIsMiwiayJdLFsyLDEsIlxcc2lnbWEnIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMywxLCJcXHNpZ21hIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
+
+:::
+
+We can now use that the separable degree is multiplicative in towers.
+If all extensions in sight are finite, this direction is immediate:
+\[
+[L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
+.\]
+For the infinite case, it suffices to show every $\alpha\in L$ is a separable element over $k$, i.e. its minimal polynomial over $L$ is a separable polynomial.
+It suffices to show the extension
+
+:::
+
+
+
 
 ### Galois Extensions
 
