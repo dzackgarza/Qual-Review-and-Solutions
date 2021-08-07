@@ -561,8 +561,6 @@ In this case, we define the **Galois group** as
 :::
 
 
-
-
 ### Special Extensions
 
 :::{.theorem title="Finite Extensions are Algebraic"}
