@@ -395,7 +395,6 @@ So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
 
 :::{.proposition title="Separability test: identically zero derivative"}
 $f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
-If $p\da \ch k > 0$, then $m(x) = q(x^{p^n})$ for some unique $n$.
 :::
 
 
@@ -403,8 +402,36 @@ If $p\da \ch k > 0$, then $m(x) = q(x^{p^n})$ for some unique $n$.
 Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
 So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \eqiuv 0$.
+:::
+
+
+:::{.corollary title="?"}
+If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\implies f(x) = q(x^{p^n})$ for some unique $n$.
+:::
+
+
+:::{.proof title="?"}
+Use that $f$ is inseparable iff $f' \equiv 0$.
+If $f'\equiv 0$, write
+\[
+f(x) = a_nx^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \implies f'(x) = na_nx^{n-1} + (n-1)a_{n-1}x^{n-2} + \cdots + a_1 \equiv 0
+,\]
+which forces $i a_i = 0$ for all $i$.
+For any $a_i\neq 0$, this forces $i\equiv 0 \mod p$, so $a_i$ can only be nonzero when $p\divides i$, so $i=p^k$ for some $k$.
+So reindex to write
+\[
+f(x) = a_0 + a_1x^p + a_2x^{p^2} + \cdots + a_n x^{p^n} = \qty{b_0 + b_1 x + b_2 x^{p} + \cdots + b_nx^{p^n-1}}^p \in \bar{k}[x]
+,\]
+using $(c+d)^p = c^p + d^p$ in characteristic $p$, and taking $b_i \da a_i^{1\over p} \in \bar{k}$
+So $f' \equiv 0\implies f(x) = q(x^p)$ where $q(t) \da \sum b_i t^i$.
+
+
+
+
 
 :::
+
+
 
 
 :::{.definition title="Separable Field Extension"}
