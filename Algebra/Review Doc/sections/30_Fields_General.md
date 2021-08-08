@@ -405,7 +405,7 @@ L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
 Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
 :::
 
-:::{.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
+:::{.proposition title="Normal extensions are upper transitive, forward implication"}
 For $L/k$ finite,
 
 \begin{tikzcd}
@@ -426,7 +426,7 @@ For $L/k$ finite,
 
 :::
 
-:::{.proof title="?"}
+:::{.proof title="Finite case"}
 \envlist
 
 - Use the fact that for finite extensions, $L/k$ is normal and separable $\iff L$ is the splitting field of a separable polynomial $f\in k[x]$.
@@ -442,14 +442,12 @@ Alternatively,
 
 :::
 
-:::{.proposition title="Normal extensions are upper transitive, forward implication (general case)"}
-If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
-:::
+:::{.proof title="General case"}
+\envlist
 
-:::{.proof title="?"}
-Use the embedding characterization, it suffices to show that every embedding $\sigma: $
-Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
-Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
+- Use the embedding characterization, it suffices to show that every embedding $\sigma: L\embeds \bar{K}$ is an automorphism of $L/K$.
+- Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
+- Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
 
 
