@@ -1,6 +1,5 @@
 # Linear Algebra
 
-
 :::{.remark}
 Some definitions:
 
@@ -14,7 +13,6 @@ Some definitions:
   - $A$ is **normal** iff $AA^{\dagger} = A^{\dagger} A$.
   - $A$ is **unitary** iff $A^{\dagger}A = AA^{\dagger} = I$.
 :::
-
 
 :::{.fact title="Undergrad reminders"}
 \[
@@ -91,41 +89,6 @@ The coefficients of the characteristic polynomial are elementary symmetric funct
 
 :::
 
-:::{.proposition title="Useful computational trick"}
-A trick for finding characteristic polynomials:
-\[
-\chi_A(t) &= \sum_{k=0}^n (-1)^k \trace\qty{\Extpower^k A} t^{n-k} \\
-&= t^n - \trace\qty{A} t^{n-1} + \trace\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \trace\qty{\Extpower^{n-1} A} t \mp \det(A)
-,\]
-using that 
-
-\[
-{\Extpower^0 A} \da 1 \\
-{\Extpower^1 A} \da A \\
-\trace\qty{\Extpower^n A} = \det(A)
-.\]
-
-Moreover, the intermediate traces are easy to compute by hand:
-\[
-\trace\qty{\Extpower^\ell A} = \sum \det\qty{M^{\ell}}
-,\]
-where the sum is taken over all $\ell\times\ell$ **principal minors**: determinants of the $n \choose \ell$ principal matrices which are obtained by choosing $\ell$ diagonal entries to keep and and deleting the rows and columns for every entry not chosen.
-Equivalently, one can select $n-\ell$ diagonal entries and delete the corresponding row/column for each. 
-
-
-:::{.example title="?"}
-
-![](figures/2021-07-24_19-48-11.png)
-
-:::
-
-
-To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
-Note that this simplifies greatly for $f$ monic!
-Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
-:::
-
-
 :::{.example title="of polynomial long division"}
 Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\pm 8, \pm 4, \pm 2, \pm 1}$.
 Testing $f(2) = 0$ works, and dividing by $x-2$ yields
@@ -139,7 +102,6 @@ f(x) = (x-2)(x^2-4x+4) = (x-2)^3
 
 
 :::
-
 
 ## Definitions
 
@@ -178,11 +140,9 @@ V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \t
 A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^{\dagger} A = AA^{\dagger}$ where $A^{\dagger}$ is the conjugate transpose.
 :::
 
-
 :::{.definition title="Semisimple"}
 A matrix $A$ over $k$ is **semisimple** iff $A$ is diagonalizable over $k^\alg$, the algebraic closure.
 :::
-
 
 :::{.definition title="Nilpotent"}
 A matrix $A$ over $k$ is **nilpotent** iff $A^k = 0$ for some $k\geq 1$.
@@ -191,14 +151,12 @@ A matrix $A$ over $k$ is **nilpotent** iff $A^k = 0$ for some $k\geq 1$.
 
 :::
 
-
 :::{.definition title="Unipotent"}
 A element $A$ in a ring $R$ is **unipotent** iff $A-1$ is nilpotent.
 
 > Idea: an upper-triangular matrix with ones on the diagonal.
 
 :::
-
 
 :::{.proposition title="Triangular Decomposition"}
 Any linear map $T:V\to V$ over a perfect field decomposes as $T = S + N$ with $S$ semisimple (diagonal), $N$ nilpotent, and $[DN] = 0$.
@@ -211,7 +169,118 @@ If $T$ is invertible, then $T$ decomposes as $T = SU$ where $S$ is semisimple, $
 .\]
 :::
 
+:::{.definition title="Similar Matrices"}
+Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
+:::
+
+:::{.definition title="Equivalent Matrices"}
+Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
+
+- They have the same rank,
+
+- They have the same invariant factors, *and*
+
+- They have the same (JCF)
+
+:::
+
+### Matrix Groups
+
+:::{.definition title="General Linear Group"}
+\[
+\GL_n(\RR) = \ts{ A \st A = \bar{A} } 
+.\]
+:::
+
+:::{.proposition title="Order of $\GL_n$"}
+\todo[inline]{todo}
+:::
+
+:::{.definition title="Special Linear Group"}
+\[
+\SL_n(\CC) \da \ts{ A \st \det A = 1 } 
+.\]
+:::
+
+:::{.definition title="Orthogonal Group"}
+\[
+O_n(\CC) \da \ts{ A \st A^tA = A A^t = I} 
+.\]
+
+Dimension: $n(n-1) / 2$.
+:::
+
+:::{.definition title="Special Orthogonal Group"}
+\[
+\SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
+.\]
+
+:::
+
+:::{.definition title="Unitary Group"}
+\[
+U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
+.\]
+:::
+
+:::{.definition title="Special Unitary Group"}
+\[
+\SU_n(\CC) \da \ts{ A \in U_n(\CC) \st \det A = 1  } 
+.\]
+
+:::
+
+:::{.definition title="Symplectic Group"}
+\[
+\mathrm{Sp}_{2n}(\CC) \da \ts{ A \in \GL_{2n}(\CC) \st A^tJA = J } &&
+J \da 
+\begin{bmatrix}
+0 & 1_n
+\\
+1_n & 0
+\end{bmatrix}
+.\]
+
+:::
+
+\todo[inline]{Matrix group definitions.}
+
+
 ## Minimal / Characteristic Polynomials
+
+:::{.proposition title="Useful computational trick"}
+A trick for finding characteristic polynomials:
+\[
+\chi_A(t) &= \sum_{k=0}^n (-1)^k \trace\qty{\Extpower^k A} t^{n-k} \\
+&= t^n - \trace\qty{A} t^{n-1} + \trace\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \trace\qty{\Extpower^{n-1} A} t \mp \det(A)
+,\]
+using that 
+
+\[
+{\Extpower^0 A} \da 1 \\
+{\Extpower^1 A} \da A \\
+\trace\qty{\Extpower^n A} = \det(A)
+.\]
+
+Moreover, the intermediate traces are easy to compute by hand:
+\[
+\trace\qty{\Extpower^\ell A} = \sum \det\qty{M^{\ell}}
+,\]
+where the sum is taken over all $\ell\times\ell$ **principal minors**: determinants of the $n \choose \ell$ principal matrices which are obtained by choosing $\ell$ diagonal entries to keep and and deleting the rows and columns for every entry not chosen.
+Equivalently, one can select $n-\ell$ diagonal entries and delete the corresponding row/column for each. 
+
+
+:::{.example title="?"}
+
+![](figures/2021-07-24_19-48-11.png)
+
+:::
+
+
+To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
+Note that this simplifies greatly for $f$ monic!
+Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
+:::
 
 :::{.remark}
 Fix some notation:
@@ -222,11 +291,11 @@ Fix some notation:
 
 :::
 
-:::{.definition title="?"}
+:::{.definition title="Minimal polynomial"}
 The **minimal polynomial** of a linear map $T$ is the unique monic polynomial $\min_T(x)$ of minimal degree such that $\min_T(T) = 0$.
 :::
 
-:::{.definition title="?"}
+:::{.definition title="Characteristic polynomial"}
 The **characteristic polynomial** of $A$ is given by
 $$
 \chi_A(x) = \det(A - xI))= \det(SNF(A - xI))
@@ -251,21 +320,6 @@ $$
 \min_A(\lambda_i)\vector v_i = \min_A(A)\vector v_i = \vector 0
 ,$$ 
 which forces $\min_A(\lambda_i) = 0$.
-:::
-
-:::{.definition title="Similar Matrices"}
-Two matrices $A,B$ are **similar** (i.e. $A = PBP\inv$) $\iff A,B$ have the same Jordan Canonical Form (JCF).
-:::
-
-:::{.definition title="Equivalent Matrices"}
-Two matrices $A, B$ are **equivalent** (i.e. $A = PBQ$) $\iff$
-
-- They have the same rank,
-
-- They have the same invariant factors, *and*
-
-- They have the same (JCF)
-
 :::
 
 ## Finding Minimal Polynomials
@@ -449,7 +503,7 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 In fact, $A$ is symmetric $\iff \spec A$ forms an orthonormal basis.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="of spectral theorem"}
 \envlist
 
 - Suppose $A$ is Hermitian.
@@ -596,68 +650,6 @@ M_2
 .\]
 :::
 
-## Matrix Groups
-
-:::{.definition title="General Linear Group"}
-\[
-\GL_n(\RR) = \ts{ A \st A = \bar{A} } 
-.\]
-:::
-
-:::{.proposition title="Order of $\GL_n$"}
-\todo[inline]{todo}
-:::
-
-:::{.definition title="Special Linear Group"}
-\[
-\SL_n(\CC) \da \ts{ A \st \det A = 1 } 
-.\]
-:::
-
-:::{.definition title="Orthogonal Group"}
-\[
-O_n(\CC) \da \ts{ A \st A^tA = A A^t = I} 
-.\]
-
-Dimension: $n(n-1) / 2$.
-:::
-
-:::{.definition title="Special Orthogonal Group"}
-\[
-\SO_n(\RR) = \ts{ A \st  AA^t = I} = \ker(\GL_n(\RR) \to k\units)
-.\]
-
-:::
-
-:::{.definition title="Unitary Group"}
-\[
-U_n(\CC) \da \ts{ A \st A^\dagger A = AA^\dagger = 1 } 
-.\]
-:::
-
-:::{.definition title="Special Unitary Group"}
-\[
-\SU_n(\CC) \da \ts{ A \in U_n(\CC) \st \det A = 1  } 
-.\]
-
-:::
-
-:::{.definition title="Symplectic Group"}
-\[
-\mathrm{Sp}_{2n}(\CC) \da \ts{ A \in \GL_{2n}(\CC) \st A^tJA = J } &&
-J \da 
-\begin{bmatrix}
-0 & 1_n
-\\
-1_n & 0
-\end{bmatrix}
-.\]
-
-:::
-
-\todo[inline]{Matrix group definitions.}
-
-
 ### Counting
 
 :::{.proposition title="Size of $\GL_n(\FF_p)$"}
@@ -722,6 +714,4 @@ Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
 .\]
 Conclude that $\chi_A(A) = 0$.
 :::
-
-
 
