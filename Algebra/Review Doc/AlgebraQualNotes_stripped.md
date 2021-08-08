@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Topics and Remarks 2
 
 ::: {.remark}
@@ -290,7 +302,7 @@ I use the following notation throughout:
                                     \( \coloneqq\left\{{ \varphi _g(x) \coloneqq gxg ^{-1} }\right\} \subseteq \mathop{\mathrm{Aut}}(G) \)
 
   \( \mathrm{Out}(G) \)             Outer Automorphisms\
-                                    \( \mathop{\mathrm{Aut}}(G) / {\operatorname{Inn}}(G) \mapsfrom \mathop{\mathrm{Aut}}(G) \)
+                                    \( \mathop{\mathrm{Aut}}(G) / \mathop{\mathrm{Inn}}(G) \mapsfrom \mathop{\mathrm{Aut}}(G) \)
 
   \( [g h] \)                       Commutator of Elements\
                                     \( \coloneqq ghg ^{-1} \in G \)
@@ -481,7 +493,7 @@ Prove that the size of a conjugacy class of \( g_i \) is the index of its centra
 ### Normal Subgroups
 
 ::: {.definition title="Normal subgroup"}
-A subgroup \( N\leq G \) is **normal** iff \( gH = Hg \) for every \( g\in G \), or equivalently \( gHg^{-1}= H \) for all \( g \), so \( H \) has only itself as a conjugate. We denote this by \( N{~\trianglelefteq~}G \). Equivalently, for every inner automorphism \( \psi \in {\operatorname{Inn}}(G) \), \( \psi(N) = N \).
+A subgroup \( N\leq G \) is **normal** iff \( gH = Hg \) for every \( g\in G \), or equivalently \( gHg^{-1}= H \) for all \( g \), so \( H \) has only itself as a conjugate. We denote this by \( N{~\trianglelefteq~}G \). Equivalently, for every inner automorphism \( \psi \in \mathop{\mathrm{Inn}}(G) \), \( \psi(N) = N \).
 :::
 
 ::: {.proposition title="Normal iff disjoint union of conjugacy classes"}
@@ -686,8 +698,8 @@ If \( {\left\lvert {G} \right\rvert} = p^k \), then \( G \) is a **p-group.**
 -   Show that every subgroup of a cyclic group is cyclic.
 -   Show that
     \[\phi(n) = n \prod_{p\mathrel{\Big|}n}\qty{1 - {1\over p}}.\]
--   Compute \( \operatorname{Aut}({\mathbb{Z}}/n{\mathbb{Z}}) \) for \( n \) composite.
--   Compute \( \operatorname{Aut}(\qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n) \).
+-   Compute \( \mathop{\mathrm{Aut}}({\mathbb{Z}}/n{\mathbb{Z}}) \) for \( n \) composite.
+-   Compute \( \mathop{\mathrm{Aut}}(\qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n) \).
 :::
 
 ### Symmetric Groups
@@ -1194,7 +1206,7 @@ Let \( H \leq G \) be a \( p{\hbox{-}} \)subgroup. If \( H \) is not *properly* 
 
 -   If \( G, H \) have coprime order then \( \mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H) \).
 
--   \( {\operatorname{Inn}}(G) \cong G/Z(G) \).
+-   \( \mathop{\mathrm{Inn}}(G) \cong G/Z(G) \).
 :::
 
 ## Isomorphism Theorems
@@ -1702,7 +1714,7 @@ G \coloneqq G_n > G_{n-1} > \cdots > G_2 > G_1 \coloneqq\left\{{ e }\right\} && 
 :::
 
 ::: {.remark}
-If \( G = \operatorname{Gal}(L/K) \) is a Galois group corresponding to a polynomial \( f \), then \( G \) is solvable as a group iff \( f \) is solvable in radicals: there is a tower of extensions \( K = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_m = L \) where
+If \( G = { \mathsf{Gal}} (L/K) \) is a Galois group corresponding to a polynomial \( f \), then \( G \) is solvable as a group iff \( f \) is solvable in radicals: there is a tower of extensions \( K = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_m = L \) where
 
 1.  \( F_i = F_{i-1}(\alpha_i) \) where \( \alpha_i^{m_i } \in F_{i-1} \) for some power \( m_i \in {\mathbb{Z}}^{\geq 0} \), and
 2.  \( F_m \supseteq \operatorname{SF}(f) \) contains a splitting field for \( f \).
@@ -2125,7 +2137,7 @@ Show that if \( R \) is a nonzero ring where every element is either a unit or n
 :::
 
 ::: {.exercise title="?"}
-Show that if \( p\in \operatorname{Spec}R \) then \( R \left[ {p}^{-1}\right] \) is local.
+Show that if \( p\in \operatorname{Spec}R \) then \( R \left[ { \scriptstyle p^{-1}} \right] \) is local.
 :::
 
 ::: {.exercise title="?"}
@@ -2159,7 +2171,7 @@ A **discrete valuation ring** or **DVR** is a local PID with a *unique* maximal 
 :::
 
 ::: {.definition title="Regular ring"}
-A commutative ring \( R \) is **regular** if \( R \) is Noetherian and for every \( p\in \operatorname{Spec}R \) the localization \( R \left[ {p}^{-1}\right] \) is a *regular local ring*: it has a maximal ideal \( {\mathfrak{m}} \) which admits a minimal generating set of \( n \) elements where \( n \) is the Krull dimension of \( R \left[ {p}^{-1}\right] \).
+A commutative ring \( R \) is **regular** if \( R \) is Noetherian and for every \( p\in \operatorname{Spec}R \) the localization \( R \left[ { \scriptstyle p^{-1}} \right] \) is a *regular local ring*: it has a maximal ideal \( {\mathfrak{m}} \) which admits a minimal generating set of \( n \) elements where \( n \) is the Krull dimension of \( R \left[ { \scriptstyle p^{-1}} \right] \).
 :::
 
 ::: {.remark}
@@ -2292,14 +2304,14 @@ Show that \( {\sqrt{0_{R}} } = \displaystyle\bigcap_{p\in \operatorname{Spec}R} 
 :::
 
 ::: {.definition title="Jacobson Radical"}
-The **Jacobson radical** \( {{J}\qty{R} } \) is the intersection of all maximal ideals, i.e.
+The **Jacobson radical** \( \jacrad{R} \) is the intersection of all maximal ideals, i.e.
 \[  
-{{J}\qty{R} } = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
+\jacrad{R} = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
 .\]
 :::
 
 ::: {.exercise title="?"}
-Show \( x\in {{J}\qty{R} } \iff 1-xR \subseteq R^{\times} \).
+Show \( x\in \jacrad{R} \iff 1-xR \subseteq R^{\times} \).
 :::
 
 ## Structure Theorems
@@ -2401,7 +2413,7 @@ For \( R\in \mathsf{CRing} \) an integral domain, the **field of fractions** of 
 ::: {.definition title="Localization"}
 For \( R\in \mathsf{CRing} \) and \( S \subseteq R \) a *multiplicatively closed* subset, so \( RS \subseteq S \) and \( 1_R\in S \), the **localization of \( R \) at \( S \)** can be constructed as
 \[
-R \left[ {S}^{-1}\right] \coloneqq\qty{R\times S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
+R \left[ { \scriptstyle S^{-1}} \right] \coloneqq\qty{R\times S} / \sim && (a, s)\sim (b, t) \iff \exists u\in S\quad (at-bs)u = 0_R
 .\]
 
 > Why the \( u \): use in proof of transitivity.
@@ -2413,7 +2425,7 @@ R \left[ {S}^{-1}\right] \coloneqq\qty{R\times S} / \sim && (a, s)\sim (b, t) \i
 ::: {.warnings}
 There is a canonical ring morphism
 \[
-R &\to R \left[ {S}^{-1}\right] \\
+R &\to R \left[ { \scriptstyle S^{-1}} \right] \\
 x &\mapsto {x\over 1}
 ,\]
 but this may not be injective.
@@ -2422,7 +2434,7 @@ but this may not be injective.
 ::: {.remark}
 For integral domains \( R \),
 \[
-\operatorname{ff}(R) \cong R \left[ { (R^{\bullet}) }^{-1}\right]
+\operatorname{ff}(R) \cong R \left[ { \scriptstyle  (R^{\bullet}) ^{-1}} \right]
 .\]
 :::
 
@@ -2442,26 +2454,20 @@ An ideal \( I{~\trianglelefteq~}R \) is **primary** iff whenever \( pq\in I \), 
 ```
 :::
 
-# Field Theory
+# Field Theory: Basics
 
 ::: {.remark}
 Galois is defined as **normal and separable**.
-:::
-
-::: {.fact}
-```{=tex}
-\envlist
-```
--   All fields are simple rings (no proper nontrivial ideals).
-    -   Thus every field morphism is either zero or injective.
--   The characteristic of any field \( k \) is either 0 or \( p \) a prime.
--   If \( L/k \) is algebraic, then \( \min(\alpha, L) \) divides \( \min(\alpha, k) \).
 :::
 
 ## Basics: Polynomials
 
 ::: {.definition title="Reducible and Irreducible Polynomials"}
 For \( {\mathbb{F}} \) a field, a polynomial \( f\in {\mathbb{F}}[x] \) is **reducible** if and only if \( f \) can be factored as \( f(x) = g(x) h(x) \) for some \( g, h\in {\mathbb{F}}[x] \) with \( \deg g, \deg h \geq 1 \) (so \( g, h \) are nonconstant). \( f \) is **irreducible** if \( f \) is not reducible.
+:::
+
+::: {.definition title="Primitive Polynomials"}
+For \( R \) a UFD, a polynomial \( p\in R[x] \) is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
 
 ::: {.theorem title="Eisenstein's Criterion"}
@@ -2479,12 +2485,6 @@ Let \( R \) be a UFD and \( F \) its field of fractions. Then a primitive \( p\i
 
 ::: {.corollary}
 A primitive polynomial \( p\in {\mathbb{Q}}[x] \) is irreducible \( \iff p \) is irreducible in \( {\mathbb{Z}}[x] \).
-:::
-
-::: {.definition title="Elementary Symmetric Functions"}
-```{=tex}
-\todo[inline]{todo}
-```
 :::
 
 ## Definitions
@@ -2519,7 +2519,7 @@ The prime subfield of any field is isomorphic to either \( {\mathbb{Q}} \) or \(
 :::
 
 ::: {.definition title="Embeddings and Lifts"}
-Let \( k \) denote a field, and \( L/k \) extension. Every field morphism is an embedding (injection). An *embedding* of \( k{\hbox{-}} \)algebras \( L\hookrightarrow L' \) will refer to any ring morphism over \( k \), i.e. a field morphism that restricts to the identity on \( k \):
+Let \( k \) denote a field, and \( L/k \) extension. Every field morphism is an embedding (injection). An **embedding** of \( k{\hbox{-}} \)algebras \( L\hookrightarrow L' \) will refer to any ring morphism over \( k \), i.e. a field morphism that restricts to the identity on \( k \):
 
 ```{=tex}
 \begin{tikzcd}
@@ -2533,13 +2533,13 @@ Let \( k \) denote a field, and \( L/k \) extension. Every field morphism is an 
 ```
 > [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
 
-More generally, we can ask for lifts of any map \( \sigma: k\to k_\sigma \):
+More generally, we can ask for lifts of any map \( \sigma: k\to k' \):
 
 ```{=tex}
 \begin{tikzcd}
     L && {L'} \\
     \\
-    k && {k_\sigma}
+    k && {k'}
     \arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
     \arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
     \arrow[hook, from=3-1, to=1-1]
@@ -2557,70 +2557,90 @@ The following are equivalent:
 
 -   \( k \) is a **perfect** field.
 
+-   If \( \operatorname{ch}k > 0 \), the Frobenius is an automorphism of \( k \), so \( k^p = k \).
+
 -   Every finite extension \( F/k \) is separable.
 
--   If \( \operatorname{ch}k > 0 \), the Frobenius is an automorphism of \( k \).
-
--   Every irreducible polynomial \( p\in k[x] \) is separable
+-   Every irreducible polynomial \( p\in k[x] \) is separable.
 :::
 
-::: {.proposition title="Irreducible implies separable for perfect fields"}
-```{=tex}
-\todo[inline]{todo}
-```
+::: {.example title="of a non-perfect field"}
+Example of a non-perfect field: \( {\mathbb{F}}_p(t) \). Use that \( f(x) \coloneqq x^p - t \) is irreducible in \( {\mathbb{F}}_p(t)[x] \) but not separable.
 :::
 
-::: {.definition title="Numerical Invariants"}
-```{=tex}
-\envlist
-```
--   
+::: {.proposition title="Characterization of perfect fields"}
+\( k \) is perfect (using the irreducible implies separable condition) if either
+
+-   \( \operatorname{ch}k = 0 \) or
+-   \( \operatorname{ch}k = p > 0 \) and \( k^p = k \).
+:::
+
+::: {.proof title="?"}
+For \( \operatorname{ch}k = 0 \), use that irreducible implies separable.
+
+For \( \operatorname{ch}k = p \), show that \( k_p\neq k \iff \) irreducible does *not* imply separable, so there exists an inseparable irreducible.
+
+-   Supposing \( k^p\neq k \), choose \( a\in k \) not a \( p \)th power.
+
+-   Note that \( f(x) \coloneqq x^p-a \) has only one root in \( \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \): in a splitting field, any root \( r \) satisfies \( r^p=a \), so
     \[
-    [L: K] = \dim_{{\mathsf{Vect}}_K} L
-    ,\]
-    the dimension of \( L \) as a \( K{\hbox{-}} \)vector space
--   
-    \[ \mathop{\mathrm{Aut}}(L/k) \coloneqq\left\{{ \sigma: L \to L' {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \operatorname{id}_K }\right\} ,\]
-    the lifts of the identity on \( K \).
--   
-    \[ \left\{{ L: K }\right\} \coloneqq\# \mathop{\mathrm{Aut}}(L/k) \coloneqq\left\{{ \sigma: L \to L' {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{K}} } = \operatorname{id}_K}\right\} ,\]
-    the number of lifts of the identity on \( K \).
--   
+    x^p - a = x^p - r^p = (x-r)^p
+    .\]
+
+-   Note \( f \) is irreducible: its only possible divisors are \( (x-r)^m \) for \( m \leq p \). Expanding yields
     \[
-    \operatorname{Gal}(E/F) \coloneqq\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} } }
+    (x-r)^m = \sum_{k=0}^m {m\choose k} x^{m-k} (-r)^{k} = x^m + {m\choose 1} x^{m-1} (-r)^m + \cdots
     ,\]
-    if \( E \) is finite, normal, and separable.
+    so the coefficient of \( x^{m-1} \) is \( -mr \in k \).
+
+-   Thus if \( (x-r)^m \) has a nontrivial divisor in \( k[x] \) then \( m \) must be in \( k^{\times} \), forcing \( r\in k \). But then \( r^p = a\in k \), \( \contradiction \).
 :::
 
-::: {.remark title="on general inequality"}
-Note that in general,
+::: {.remark title="Numerical Invariants"}
+Let \( K/k \) be an extension.
+
 \[
-{\left\lvert { \mathop{\mathrm{Aut}}(L/k) } \right\rvert} \leq [L: K]
+[K: k] = \dim_{{ \mathsf{Vect} }_k} K
+\]
+is the dimension of \( K \) as a \( k{\hbox{-}} \)vector space. Automorphisms of fields over \( K \) are defined as
+
+\[ 
+\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(K) \coloneqq\mathop{\mathrm{Aut}}(K/k) \coloneqq\left\{{ \sigma: K \to K' {~\mathrel{\Big|}~}{ \left.{{\sigma}} \right|_{{k}} } = \operatorname{id}_k }\right\} 
+, \]
+so lifts of the identity on \( k \), and
+\[
+\left\{{K:k}\right\} \coloneqq\# \mathop{\mathrm{Aut}}(K/k)
+.\]
+
+If \( K/k \) is finite, normal, and separable,
+\[
+{ \mathsf{Gal}} (K/k) \coloneqq\mathop{\mathrm{Aut}}(K/k)
 ,\]
+where in general
+\[
+\left\{{K: k}\right\} \leq [K: k]
+\]
 with equality when \( L/k \) is Galois.
 :::
 
-### Extensions
+# Field Theory: Extensions and Towers
 
 ::: {.definition title="Simple Extensions"}
 An extension \( L/k \) is **simple** iff \( L = K( \alpha) \) for some \( \alpha\in L \).
-:::
-
-::: {.definition title="Primitive Extension"}
-For \( R \) a UFD, a polynomial \( p\in R[x] \) is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
 
 ::: {.definition title="Algebraic Extension"}
 A field extension \( L/k \) is **algebraic** iff every \( \alpha \in L \) is the root of some polynomial \( f\in k[x] \).
 :::
 
-## Extensions
+## Distinguished Classes
+
+> See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
 ::: {.definition title="Distinguished Classes"}
 A collection of field extensions \( \mathcal{S} \) is **distinguished** iff
 
-1.  For any tower \( L/K/k \), the extension \( L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S} \), and
-2.  Lifts of distinguished extensions are distinguished: if \( K/k\in \mathcal{S} \) and \( L/k \) is any extension, then \( LK/k \in \mathcal{S} \):
+1.  (Transitive property) For any tower \( L/K/k \), the extension \( L/k \in \mathcal{S} \iff L/K \in {\mathcal{S}} \) (upper transitivity) and \( K/k\in \mathcal{S} \) (lower transitivity):
 
 ```{=tex}
 \begin{tikzcd}
@@ -2640,118 +2660,319 @@ A collection of field extensions \( \mathcal{S} \) is **distinguished** iff
 ```
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
 
+2.  (Lifting property) Lifts of distinguished extensions are distinguished: \( K/k\in \mathcal{S} \) and \( L/k \) any extension \( \implies LK/L \in \mathcal{S} \):
+
+```{=tex}
+\begin{tikzcd}
+    & LK \\
+    L && K \\
+    & k
+    \arrow[draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=3-2, to=2-3]
+    \arrow[hook', from=3-2, to=2-1]
+    \arrow["\therefore", draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=2-1, to=1-2]
+    \arrow[hook, from=2-3, to=1-2]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+3.  (Compositing property) Whenever \( L/k, K/k\in {\mathcal{S}} \), the amalgam \( KL/k \in {\mathcal{S}} \) as well:
+
 ```{=tex}
 \begin{tikzcd}
     & LK \\
     L && K \\
     & k
     \arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
-    \arrow[hook', from=3-2, to=2-1]
+    \arrow[draw={rgb,255:red,214;green,92;blue,92}, hook', from=3-2, to=2-1]
     \arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=2-1, to=1-2]
     \arrow[hook, from=2-3, to=1-2]
+    \arrow["\therefore", color={rgb,255:red,214;green,92;blue,92}, dashed, from=3-2, to=1-2]
 \end{tikzcd}
 ```
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=)
-
-Note that if in addition \( L/k\in \mathcal{S} \), then \( LK/k \in \mathcal{S} \).
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMywiXFx0aGVyZWZvcmUiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV1d)
 
 > Supposed to think of \( LK/L \) as a lift of \( K/k \).
 :::
 
 ::: {.example title="of distinguished classes"}
--   Algebraic extensions are distinguished.
--   Finite extensions are distinguished.
--   Separable extensions are distinguished.
--   Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal. Half of the forward implication of condition 1 holds: if \( L/k \) is normal, then \( L/K \) is normal.
-    -   Why: take \( {\mathbb{Q}}(2^{1\over 4}) / {\mathbb{Q}}(2^{1\over 2}) / {\mathbb{Q}} \), each leg is normal since it's quadratic, but the overall extension misses complex roots. Similar issue for \( {\mathbb{Q}}(2^{1\over 3}, \zeta_3) / {\mathbb{Q}}(2^{1\over 3}) / {\mathbb{Q}} \), where now the bottom extension isn't normal.
+The following classes of extensions are distinguished:
+
+-   Algebraic.
+-   Finite.
+-   Separable.
+-   Purely inseparable.
+-   Finitely generated.
+-   Solvable.
 :::
 
-### Normal Extensions
+::: {.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
+For \( L/F/k \): \( L/k \) normal/algebraic/Galois \( \implies L/F \) normal/algebraic/Galois.
+:::
+
+## Normal Extensions
 
 ::: {.definition title="Normal Field Extension"}
 Let \( L/k \) be an extension. Then TFAE:
 
 -   \( L/k \) is **normal**.
 
--   Every irreducible polynomial \( f\in k[x] \) that has one root in \( L \) has *all* of its roots in \( L \)
+-   Every irreducible polynomial \( f\in k[x] \) that has one root in \( L \) has *all* of its roots in \( L \), and thus splits in \( L[x] \).
 
     -   So if \( \alpha\in L \) then every Galois conjugate \( \alpha_k \in L \) as well.. Thus either \( f \) splits in \( L \) or \( f \) has no roots in \( L \).
+:::
 
--   Every embedding \( \sigma: L \hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) over \( k \) satisfies \( \sigma(L) = L \), so \( \sigma \) is an automorphism of \( L \) over \( k \).
+::: {.proposition title="Characterization of normal algebraic extensions"}
+If \( L/k \) s algebraic, then \( L/k \) is normal iff every embedding \( \sigma: L \hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) lifting the identity on \( k \) satisfies \( \sigma(L) = L \), so \( \sigma \) is an automorphism of \( L \) fixing \( k \).
+:::
 
--   If \( L \) is separable and finite: \( L \) is the splitting field of some irreducible \( f\in k[x] \).
+::: {.definition title="Normal Closure"}
+If \( K/k \) is algebraic, then there is an extension \( N_k/K \) such that \( N_k/k \) is normal and \( N_k/K/k \) is a tower.
+:::
+
+::: {.proposition title="Characterization of finite normal extensions as splitting fields"}
+An extension \( L/k \) is finite and normal \( \iff L \) is the splitting field of some polynomial \( f\in k[x] \).
+:::
+
+::: {.proof title="?"}
+\( \implies \):
+
+-   Write \( L = k(a_1, \cdots, a_n) \) by finiteness.
+-   Let \( m_i \) be the minimal polynomials of the \( a_i \).
+-   By normality, the \( m_i \) split in \( L[x] \).
+-   Then \( L \) is the splitting field of \( f(x) \coloneqq\prod_i m_i(x) \).
+
+\( \impliedby \):
+
+-   Suppose \( L/k = \operatorname{SF}(f) \), and pick any monic \( m\in L[x]^{{\mathrm{irr}}} \) with a root \( a\in L \), so that \( m \) is the minimal polynomial of \( a \).
+
+-   Toward showing \( m \) splits in \( L \): let \( M = \operatorname{SF}(m) \), we'll show \( M=L \).
+
+-   To show that for any root \( b\in M \) we have \( b\in L \), it suffices to show \( [L(b): L] = 1 \).
+
+    The strategy: use that \( [L(a):L] = 1 \) since \( a\in L \) by assumption, and try to relate the two degrees.
+
+-   We have \( L/k \), and a number of towers to work with:
+    \[
+    [L(a):k] &= [L(a): k(a)] [k(a): k] &= [L(a) : L] [L: k] \\ \\
+    [L(b):k] &= [L(b): k(b)] [k(b): k] &= [L(b) : L] [L: k]
+    .\]
+
+-   In the first set of equalities, note that \( k(a)_{/ {k}}  \cong k(b)_{/ {k}}  \) since \( a,b \) are conjugate roots over \( k \). Moreover \( L(a)_{/ {k(a)}}  \cong L(b) _{/ {k(b)}}  \) since both are splitting fields for \( f \).
+
+-   Thus \( [L(a):k] = [L(b): k] \), which forces \( [L(a): L] = [L(b): L] \) after dividing by \( [L:k] \). But \( [L(a): L] = 1 \).
 :::
 
 ::: {.example title="of normal extensions"}
 ```{=tex}
 \envlist
 ```
--   If \( [L: k] = 2 \) then \( L/k \) is normal.
--   \( L \coloneqq{\mathbb{Q}}(2^{1\over 3}) \) is not normal, since \( (x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3} \) with \( \zeta_3, \zeta_3^2 \) not in \( L \subset {\mathbb{R}} \).
-    -   \( L \coloneqq{\mathbb{Q}}(2^{1\over 4}) \) is not normal for the same reason.
+-   Useful trick: if \( [L: k] = 2 \) then \( L/k \) is automatically normal.
+
+-   Useful trick: if \( L/K/k \), then \( K/k \) is normal iff \( { \mathsf{Gal}} (L/K) {~\trianglelefteq~}{ \mathsf{Gal}} (L/k) \).
+
+-   \( K \coloneqq{\mathbb{Q}}(2^{1\over 3}) \) is not normal, since \( K\subset {\mathbb{R}} \) but \( (x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3} \) with \( \zeta_3, \zeta_3^2 \in {\mathbb{C}} \).
+
+    -   Another reason: an embedding \( \sigma: K\to \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) can send \( 2^{1\over 3} \) to any other root of \( x^3-2 \).
+
+-   \( {\mathbb{Q}}(\sqrt 2, \sqrt 3) \) is normal over \( {\mathbb{Q}} \), since it it is finite and splits \( f(x) \coloneqq(x^2-2)(x^2-3) \), which is a separable polynomial.
+
+-   \( L \coloneqq{\mathbb{Q}}(2^{1\over 4}) \) is not normal, since it is finite but not the splitting field of any polynomial.
+
 -   \( {\mathbb{Q}}(\zeta_k) \) is normal for \( \zeta_k \) any primitive \( k \)th root of unity.
+
+-   A normal non-separable extension: \( {\mathbb{F}}_p(x, y) _{/ {{\mathbb{F}}_p (x^p, y^p)}}  \). This has finite degree \( p^2 \) but infinitely many subfields?
 :::
 
-::: {.proposition title="?"}
-For \( L/k \) finite, \( L \) is normal iff \( L = \operatorname{SF}(f) \) is the splitting field for some \( f\in k[x] \).
+::: {.corollary title="?"}
+\( E_1/k \) normal and \( E_2/k \) normal \( \implies E_1E_2/k \) normal and \( E_1 \cap E_2 / k \) normal.
+
+```{=tex}
+\begin{tikzcd}
+    && {E_1 E_2} \\
+    \\
+    {E_1} &&&& {E_2} \\
+    && {E_1 \cap E_2} \\
+    \\
+    \\
+    && {k}
+    \arrow["{\text{normal}}", from=3-5, to=7-3]
+    \arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
+    \arrow["{\text{normal}}"', from=3-1, to=7-3]
+    \arrow[from=1-3, to=3-1, no head]
+    \arrow[from=1-3, to=3-5, no head]
+    \arrow[from=1-3, to=4-3, no head]
+    \arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
+    \arrow[from=3-1, to=4-3, no head]
+    \arrow[from=4-3, to=3-5, no head]
+\end{tikzcd}
+```
+> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
 :::
 
-### Separable Extensions
+::: {.proposition}
+\( {\left\lvert {\mathop{\mathrm{Aut}}(L/k)} \right\rvert} \leq [L: k] \) with equality precisely when \( L/k \) is normal.
+:::
+
+### Issues with Normal Towers
+
+::: {.warnings}
+Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity. However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
+:::
+
+::: {.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
+One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
+\[
+L/K/k \coloneqq{\mathbb{Q}}(2^{1\over 3}, \zeta_3) / {\mathbb{Q}}(2^{1\over 3}) / {\mathbb{Q}}
+.\]
+Now \( K/k \) isn't normal, since \( { \mathsf{Gal}} (L/k) = S_3 \) but \( { \mathsf{Gal}} (L/K) = {\mathbb{Z}}/2 \not{~\trianglelefteq~}S_3 \).
+
+Another example: let \( L/k \) be any algebraic extension that isn't normal, and take \( N_k \) to be the normal closure to get \( N_k/L \). Concretely, \( N_{\mathbb{Q}}/ {\mathbb{Q}}(2^{1\over 3})/{\mathbb{Q}} \) works.
+:::
+
+::: {.example title="Normal extensions are not transitive: failure of reverse implication"}
+One can produce towers of successively normal extensions whose total extension is not normal in a cheap way: take
+\[
+L/K/k \coloneqq{\mathbb{Q}}(2^{1\over 4}) / {\mathbb{Q}}(2^{1\over 2}) / {\mathbb{Q}}
+.\]
+Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
+:::
+
+::: {.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
+For \( L/k \) finite,
+
+```{=tex}
+\begin{tikzcd}
+    L &&&& L \\
+    \\
+    K && \implies && K \\
+    \\
+    k &&&& k
+    \arrow[from=3-1, to=1-1]
+    \arrow[from=5-1, to=3-1]
+    \arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
+    \arrow[from=5-5, to=3-5]
+    \arrow[from=3-5, to=1-5]
+    \arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
+:::
+
+::: {.proof title="?"}
+```{=tex}
+\envlist
+```
+-   Use the fact that for finite extensions, \( L/k \) is normal and separable \( \iff L \) is the splitting field of a separable polynomial \( f\in k[x] \).
+-   Now regard \( f \) as a polynomial in \( K[x] \); then \( L \) is still the splitting field of \( f \) over \( K \), done.
+
+Alternatively,
+
+-   Let \( \alpha\in L \) be a root of \( f\in K[x] \) with \( f \) irreducible, it suffices to show all roots of \( f \) are in \( L \).
+-   Let \( m\in K[x] \) be the minimal polynomial of \( \alpha \) over \( K \), and let \( m'\in k[x] \) be the minimal polynomial of \( \alpha \) over \( k \).
+-   Since \( L/k \) is normal and \( \alpha\in L \), \( m' \) splits in \( L \).
+-   Minimal polynomials are divisible in towers, so \( m \) divides \( m' \). Since \( m' \) splits in \( L \), so must \( m \).
+:::
+
+::: {.proposition title="Normal extensions are upper transitive, forward implication (general case)"}
+If \( L/K/k \) with \( L/k \) normal, then \( L/K \) is normal.
+:::
+
+::: {.proof title="?"}
+Use the embedding characterization, it suffices to show that every embedding \$`\sigma`{=tex}: \$ Since \( k \subseteq K \), any embedding \( \sigma: K\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) over \( \operatorname{id}_K \) is also an embedding over \( \operatorname{id}_k \). Since \( L/k \) is normal, \( \sigma(L) = L \) and \( L/K \) is thus normal.
+:::
+
+## Separable Extensions
+
+::: {.definition title="Separable polynomials"}
+A polynomial \( f \in k[x] \) is **separable** iff \( f \) has no repeated roots.
+:::
+
+::: {.proposition title="Separability test: $\\gcd$ with derivative"}
+\( f \) is separable iff \( \gcd(f, f')=1 \), so \( f, f' \) share no common roots. Moreover, the multiple roots of \( f \) are precisely the roots of \( \gcd(f, f') \).
+:::
+
+::: {.proof title="of separability test"}
+\( \not\implies \): Suppose \( f \) has a repeated root \( r_i \), so its multiplicity is at least 2. Then
+\[
+f(x) = (x-r)^2 g(x) \implies f'(x) = 2(x-r)g(x) + (x-r)^2g'(x)
+,\]
+so \( r \) is a root of \( f' \).
+
+\( \not\impliedby \): Suppose \( r \) is a root of \( f, f' \). Write \( f(x) = (x-r)p(x) \) and \( f'(x) = (x-r)p'(x) + p(x) \). Rearranging, \( f'(x) - (x-r)p'(x) = p(x) \), and since \( r \) is a root of the LHS it's a root of the RHS. So \( p(x) = (x-r) q(x) \) and \( f(x) = (x-r)^2 q(x) \), making \( r \) a repeated root.
+:::
+
+::: {.proposition title="Separability test: identically zero derivative"}
+\( f\in k[x]^{{\mathrm{irr}}} \) is **inseparable** (so \( f \) has a repeated root) iff \( f'(x) \equiv 0 \).
+:::
+
+::: {.proof title="of separability test"}
+Assume \( f \) is monic, then \( f \) is inseparable iff \( f, f' \) have a common root \( a \). So \( (x-a)\divides q\coloneqq\gcd(f, f') \), and since \( f \) is irreducible, it must be the minimal polynomial of \( a \). Since \( f'(a) = 0 \), this forces \( f'\divides f \), and since \( \deg f' = \deg f - 1 < \deg f \) this forces \( f' \equiv 0 \).
+:::
+
+::: {.example title="of separable and inseparable polynomials"}
+```{=tex}
+\envlist
+```
+-   \( x^2-2 \) is separable over \( {\mathbb{Q}} \), but inseparable over \( {\mathbb{F}}_2 \).
+-   \( (x^2-2)^2 \) is inseparable over \( {\mathbb{Q}} \)
+-   \( x^2-t \) is inseparable over \( {\mathbb{F}}_2(t) \).
+-   \( f(x) \coloneqq x^{p^n}-x \) is separable over \( {\mathbb{F}}_p \), since \( f'(x) = -1 \) has no roots at all.
+-   \( f(x) \coloneqq x^n-1 \) is inseparable over \( {\mathbb{F}}_p \) when \( p\divides n \). Otherwise, \( f' = nx^{n-1} \) has only \( x=0 \) as roots, whereas \( 0 \) is not a root of \( f \), so \( f \) is separable.
+-   If \( \operatorname{ch}k=0 \), then irreducible \( \implies \) separable.
+:::
+
+::: {.corollary title="Inseparable iff polynomial in characteristic powers"}
+If \( f\in k[x]^{{\mathrm{irr}}} \) and \( p\coloneqq\operatorname{ch}k > 0 \), then \( f \) inseparable \( \iff f(x) = q(x^{p^n}) \) for some unique \( n \).
+:::
+
+::: {.proof title="of inseparable characterization"}
+\( \implies \):
+
+Use that \( f \) is inseparable iff \( f' \equiv 0 \). The claim is that \( f' \equiv 0 \) in characteristic \( p \) iff all exponents present in \( f \) are divisible by \( p \). If \( f'\equiv 0 \), write
+\[
+f(x) &= a_nx^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\
+\implies f'(x) &= na_nx^{n-1} + (n-1)a_{n-1}x^{n-2} + \cdots + a_1 \\
+&\equiv 0
+,\]
+which forces \( i a_i = 0 \) for all \( i \). For any \( a_i\neq 0 \), this forces \( i\equiv 0 \pmod p \), so \( a_i \) can only be nonzero when \( p\divides i \), so \( i=kp \) for some \( k \). So reindex to write
+\[
+f(x) = a_0 + a_1x^p + a_2x^{2p} + \cdots + a_n x^{np} = \qty{b_0 + b_1 x + b_2 x^{2} + \cdots + b_nx^{n}}^p \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu[x]
+,\]
+using \( (c+d)^p = c^p + d^p \) in characteristic \( p \), and taking \( b_i \coloneqq a_i^{1\over p} \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) So \( f' \equiv 0\implies f(x) = q(x^p) \) where \( q(t) \coloneqq\sum b_i t^i \).
+
+\( \impliedby \): If \( f(x) = q(x^p) \) for some \( q \), the previous calculation shows \( q \) has multiple roots, thus so does \( f \), so \( f \) is inseparable.
+:::
 
 ::: {.definition title="Separable Field Extension"}
 Let \( L/k \) be a field extension, \( \alpha \in L \) be algebraic over \( k \), and \( f(x) \coloneqq\min(\alpha, k) \). The following are equivalent
 
 -   \( L/k \) is a **separable** extension.
--   Every element \( {\alpha} \in L \) is separable over \( k \): \( \alpha \) has separable minimal polynomial \( \min_{\alpha, L}(x) \in \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu[x] \) (D&F's definition, p. 551).
--   \( f \) has no repeated factors/roots, i.e. \( f \) has no multiple roots in \( L \).
--   \( \gcd(f, f') = 1 \).
--   \( f' \not\equiv 0 \)
+-   Every element \( {\alpha} \in L \) is separable over \( k \), so \( \alpha \) has separable minimal polynomial \( m(x) \) in some splitting field of \( m \).
 -   Every finite subextension \( L'/k \) is separable.
+:::
 
+::: {.fact}
+Every irreducible polynomial is separable in characteristic zero.
+:::
+
+::: {.fact}
+If \( \alpha \in K/k \) is separable, then \( \alpha \) is separable in any larger field \( L/K/k \) since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field.
+:::
+
+::: {.proposition title="Simplifications of separability for finite extensions"}
 If \( L/k \) is a finite extension, then, TFAE:
 
 -   \( L/k \) is separable.
 -   \( L = k( \alpha) \) for \( \alpha \) a separable element.
--   \( L = k( \left\{{ \alpha_i }\right\} ) \) for \( \alpha_i \) separable elements
--   \( [L: k] = \left\{{ L: k }\right\} \coloneqq\# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L) \), the number of automorphisms over \( k \).
+-   \( L = k( S ) \) for \( S \) some set of separable elements
 -   \( [L: K] = [L:K]_s \), the separable degree.
+    \[
+    [L: k] = \left\{{ L: k }\right\} \coloneqq\# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L)
+    .\]
 :::
 
-::: {.definition title="Separable degree"}
-Recall that a polynomial \( p\in k[x] \) is **separable** if \( p \) has no multiple roots in \( \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) The **separable degree** of an extension \( L/k \) is defined by fixing an embedding \( \sigma: k\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) and letting \( [L:k]_s \) be the number of lifts of \( \sigma \) to \( \sigma':L\to \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \):
-
-```{=tex}
-\begin{tikzcd}
-    L && {\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu} \\
-    \\
-    & k
-    \arrow["\sigma"', hook, from=3-2, to=1-3]
-    \arrow[dashed, hook, from=1-1, to=1-3]
-    \arrow[hook', from=3-2, to=1-1]
-\end{tikzcd}
-```
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
-:::
-
-::: {.proposition title="Derivative criterion for separability"}
-A polynomial \( f \) has multiple roots \( \iff \gcd(f, f') \neq 1 \), and the multiple roots of \( f \) are precisely the roots of \( \gcd(f, f') \).
-:::
-
-::: {.proof title="?"}
-\( \implies: \): Write \( f(x) \coloneqq(x-a)^m g(x) \) with \( m\geq 2 \), then
-\[
-f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
-\]
-and \( (x-a) \) divides both factors.
-
-\( \centernot\implies \): If \( f \) has no multiple roots, \( f(x) = \prod_i (x-a_i) \) and
-\[
-f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
-.\]
-Then fixing any \( a_k \) where \( f(a_k) = 0 \), check
-\[
-f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
-.\]
+::: {.fact}
+A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
 
 ::: {.proposition title="Separable splitting fields are Galois"}
@@ -2761,24 +2982,127 @@ If \( L/k \) is separable, then
 .\]
 If \( L/k \) is a splitting field, then
 \[
-[L:K] = \# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L) \coloneqq\# \operatorname{Gal}(L/k)
+[L:K] = \# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }}(L) \coloneqq\# { \mathsf{Gal}} (L/k)
 .\]
 :::
 
-::: {.proposition title="?"}
-Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.
+::: {.proposition title="Irreducible polynomials have separable splitting fields"}
+Irreducible polynomials have distinct roots after passing to a splitting field.
 :::
 
-### Galois Extensions
+::: {.proposition title="Algebraic extensions of perfect fields are separable"}
+If \( \operatorname{ch}k = 0 \) or \( k \) is finite, then every *algebraic* extension \( L/k \) is separable.
+:::
+
+::: {.proposition title="Irreducible implies separable for perfect fields"}
+If \( k \) is a perfect field, then every irreducible \( f\in k[x]^{{\mathrm{irr}}} \) is automatically separable.
+:::
+
+::: {.proof title="?"}
+If \( \operatorname{ch}k = 0 \) and \( f \) is irreducible, then since \( \deg f' < \deg f \) and \( f \) is irreducible we must have \( \gcd(f, f')=1 \) and \( f \) is separable.
+
+If \( \operatorname{ch}k = p>0 \), then if \( f \) is irreducible and inseparable then \( f(x) = g(x^p) \) for some \( g \). Write \( g(x) = \sum a_k x^k \), and since \( k \) is perfect, write \( b_k \coloneqq a_k^{1\over p} \), then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
+,\]
+so \( f \) is reducible. \( \contradiction \).
+:::
+
+::: {.definition title="Separable degree"}
+The **separable degree** of an extension \( L/k \) is defined by fixing an embedding \( \sigma: k\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) (the algebraic or separable closure) and letting \( [L:k]_s \) be the number of embeddings \( \sigma':L\to \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \):
+
+```{=tex}
+\begin{tikzcd}
+    L && {\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu} \\
+    \\
+    k && k
+    \arrow["{\sigma'}", dashed, hook, from=1-1, to=1-3]
+    \arrow[hook, from=3-1, to=1-1]
+    \arrow["\sigma"', hook, from=3-3, to=1-3]
+    \arrow[Rightarrow, no head, from=3-1, to=3-3]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzIsMiwiayJdLFsyLDEsIlxcc2lnbWEnIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMywxLCJcXHNpZ21hIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
+:::
+
+::: {.proposition title="Separability is transitive."}
+If \( L/K/k \), then \( L/K \) is separable and \( K/k \) is separable \( \iff \) \( L/k \) is separable.
+:::
+
+::: {.proof title="?"}
+\( \impliedby \):
+
+-   By definition, every \( \alpha \in L \) is separable over \( k \).
+-   \( K/k \) is separable:
+    -   Since \( K \subseteq L \), any \( \alpha \in K \) is also separable over \( k \).
+-   \( L/K \) is separable:
+    -   If \( \alpha \in L \), then \( \min_{\alpha, k}(x) \) is a separable polynomial over some splitting field.
+    -   Use that \( L/k \) implies \( \min_{\alpha, L}(x) \) divides \( \min_{\alpha, k}(x) \), so the former is separable, done.
+
+\( \implies \):
+
+-   Now use that the separable degree is multiplicative in towers.
+
+-   If all extensions in sight are **finite**, this direction is immediate:
+    \[
+    [L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
+    .\]
+
+-   For the infinite case, want to show every \( \alpha\in L \) is separable over \( k \). It suffices to show \( \alpha \) is contained in some finite separable subextension. The strategy:
+
+```{=tex}
+\begin{tikzcd}
+    \alpha\in & L \\
+    &&& {k(\alpha, S)} & {\ni \alpha} \\
+    {f\in K[x]} & K \\
+    &&& {F\coloneqq k(\alpha, S) \cap K} & {f\in F[x]} \\
+    & k
+    \arrow["s"', hook, from=5-2, to=4-4]
+    \arrow["s"', hook, from=4-4, to=2-4]
+    \arrow["s", hook', from=3-2, to=1-2]
+    \arrow[hook', from=4-4, to=3-2]
+    \arrow["s", hook', from=5-2, to=3-2]
+    \arrow[hook', from=2-4, to=1-2]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMSwwLCJMIl0sWzEsMiwiSyJdLFsxLDQsImsiXSxbMywzLCJGXFxkYSBrKFxcYWxwaGEsIFMpIFxcaW50ZXJzZWN0IEsiXSxbMywxLCJrKFxcYWxwaGEsIFMpIl0sWzAsMCwiXFxhbHBoYVxcaW4iXSxbMCwyLCJmXFxpbiBLW3hdIl0sWzQsMywiZlxcaW4gRlt4XSJdLFs0LDEsIlxcbmkgXFxhbHBoYSJdLFsyLDMsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDAsInMiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwicyIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzQsMCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+-   Let \( f(x) \coloneqq\min_{\alpha, K}(x) \) be the minimal polynomial of \( \alpha \) *over the intermediate extension* \( K \), which by assumption is separable since \( L/K \) is separable.
+    -   So \( f\in K[x] \), and letting \( S \) be the finite set of coefficients of \( f \), \( S \subseteq K \).
+    -   Note that each coefficient \( s\in S \) is separable over \( k \) since \( K/k \) is separable by assumption.
+-   Set \( F\coloneqq k(\alpha, S) \cap K \). Note \( K/k \) is separable and \( F \subseteq K \), so \( F/k \) is separable.
+-   Moreover \( k(\alpha, S)/F \) is separable, since the minimal polynomial of \( \alpha \) over \( F \) is still \( f \).
+-   Now \( k(\alpha, S) / F /K \) is a tower of finite extensions where \( k(\alpha, S)/F \) and \( F/k \) are separable, so this reduces to the finite case.
+:::
+
+::: {.proposition title="Separability has the compositing property"}
+\( E/k \) and \( F/k \) are separable \( \iff \) \( EF/k \) is separable.
+:::
+
+::: {.proof title="?"}
+\( \impliedby \): Separability always descends to subfields, and \( E \leq EF, F\leq EF \).
+
+\( \implies \):
+
+-   Write \( E = k(S) \) for some finite set \( S \). Then \( EF = F(S) \).
+-   Use that \( k(S)/k \) is separable iff \( s\in S \) is a separable element for all \( s \).
+    -   Since \( E/k \) is separable, each \( s\in S \) is separable over \( k \).
+-   Since \( F/k \) is separable, each \( s\in S \) is separable over \( F \).
+-   So \( F(S)/F \) is separable.
+-   Now use the tower \( F(S)/F/k \) to obtain \( F(S)/k \) separable, which is \( EF/k \).
+:::
+
+## Galois Extensions
 
 ::: {.definition title="Galois Extension and Galois Group"}
 Let \( L/k \) be a finite field extension. The following are equivalent:
 
 1.  \( L/k \) is a **Galois extension**.
-2.  \( \# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L) = [L: k] = \left\{{ L: k}\right\} \) (D&F's definition).
-3.  The fixed field of \( \mathrm{Aut}(L/k) \) is exactly \( k \).
-4.  \( L \) is the splitting field of a separable polynomial \( p\in K[x] \).
-5.  \( L \) is finite, normal, and separable (most general definition?)
+2.  \( L/k \) is normal and separable.
+3.  \( \# \mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L) = [L: k] = \left\{{ L: k}\right\} \) (D&F's definition).
+4.  The fixed field of \( \mathrm{Aut}(L/k) \) is exactly \( k \).
+5.  \( L \) is the splitting field of a separable polynomial \( p\in K[x] \).
+6.  \( L \) is finite, normal, and separable (most general definition?)
 
 -   \( L \) is a finite separable splitting field of an irreducible polynomial.
 -   \( L/k \) is separable and normal.
@@ -2786,11 +3110,132 @@ Let \( L/k \) be a finite field extension. The following are equivalent:
 
 In this case, we define the **Galois group** as
 \[
-\operatorname{Gal}(L/k) \coloneqq\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L)
+{ \mathsf{Gal}} (L/k) \coloneqq\mathop{\mathrm{Aut}}_{{ \mathsf{Fields}_{k} }} (L)
 .\]
 :::
 
-### Special Extensions
+::: {.fact}
+For \( L/k \) algebraic and \( \operatorname{ch}k = 0 \), \( L/k \) is Galois \( \iff L/k \) is normal.
+:::
+
+::: {.proposition title="Galois is upper transitive, characterization of when lower transitivity holds"}
+If \( L/k \) is Galois, then \( L/F \) is **always** Galois. Moreover, \( F/k \) is Galois if and only if \( { \mathsf{Gal}} (L/F) {~\trianglelefteq~}{ \mathsf{Gal}} (L/k) \)
+
+```{=tex}
+\begin{tikzcd}
+    {L} \\
+    \\
+    {F} \\
+    \\
+    {k}
+    \arrow["{\text{Galois}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
+    \arrow["{\text{Galois}}", from=5-1, to=3-1, curve={height=-12pt}, squiggly, no head]
+    \arrow["{\text{Galois}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
+\end{tikzcd}
+```
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7R2Fsb2lzfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtHYWxvaXN9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e0dhbG9pc30iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
+
+In this case,
+\[
+{ \mathsf{Gal}} (F/k) \cong \frac{{ \mathsf{Gal}} (L/k)}{{ \mathsf{Gal}} (L/F)}
+.\]
+:::
+
+::: {.proposition title="?"}
+Let \( L/K/k \) with \( L/k \) Galois. Then
+\[
+K/k \text{ is Galois } \iff { \mathsf{Gal}} (L/K){~\trianglelefteq~}{ \mathsf{Gal}} (L/k)
+,\]
+and moreover \( { \mathsf{Gal}} (K/k) = G \).
+:::
+
+::: {.proof title="?"}
+```{=tex}
+\envlist
+```
+-   Note separability is distinguished, so \( K/k \) is separable.
+-   \( K/k \) is Galois \( \iff \) \( F/k \) is normal (since we already have separability).
+-   \( \iff \sigma(K) = K \) for all \( \sigma\in G \)
+-   \( \iff \sigma H \sigma^{-1}= H \) for all \( \sigma \in G \).
+
+So \( H \) is normal and \( G/H \) is a group. For the isomorphism, take
+\[
+\rho: { \mathsf{Gal}} (L/k) &\to { \mathsf{Gal}} (K/k) \\
+\rho &\mapsto { \left.{{\rho}} \right|_{{K}} }
+.\]
+This is well-defined since by normality \( \sigma(K) = K \). Any \( f\in \ker \rho \) is the identity on \( K \), so \( f\in { \mathsf{Gal}} (L/K) \) and \( \ker \phi = H \). Since \( L/K \) is Galois, every \( f\in { \mathsf{Gal}} (K/k) \) lifts to \( { \mathsf{Gal}} (L/k) \), making \( \rho \) surjective.
+:::
+
+::: {.example title="?"}
+```{=tex}
+\envlist
+```
+-   \( {\mathbb{Q}}(\zeta_3, 2^{1/3}) \) is normal but \( {\mathbb{Q}}(2^{1/3}) \) is not since the irreducible polynomial \( x^3 - 2 \) has only one root in it.
+-   \( {\mathbb{Q}}(2^{1/3}) \) is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+-   \( {\mathbb{Q}}(2^{1/4}) \) is not Galois since its automorphism group is too small (only of size 2 instead of 4). However, the intermediate extensions \( {\mathbb{Q}}(2^{1/4}) / {\mathbb{Q}}(2^{1/2}) \) and \( {\mathbb{Q}}(\sqrt 2) / {\mathbb{Q}} \) are Galois since they are quadratic. Slogan: "Being Galois is not transitive in towers."
+-   A quadratic extension that is not Galois: \( \operatorname{SF}(x^2 + y) \in {\mathbb{F}}_2(y)[x] \), which factors as \( (x - \sqrt{y})^2 \), making the extension not separable.
+:::
+
+## Fundamental Theorem of Galois Theory
+
+::: {.theorem title="Fundamental Theorem of Galois Theory"}
+Let \( L/k \) be a Galois extension, then there is a correspondence:
+\[
+\left\{{\substack{\text{Subgroups } H \leq { \mathsf{Gal}} (L/k)}}\right\}
+&\rightleftharpoons
+\left\{{\substack{\text{Fields }  F \text{ such}\\ \text{that } L/F/k}}\right\} \\
+H &\rightarrow \left\{{\substack{E^H \coloneqq~\text{The fixed field of $H$}}}\right\} \\
+\left\{{\substack{{ \mathsf{Gal}} (L/F) \coloneqq\left\{{ \sigma \in { \mathsf{Gal}} (L/k) {~\mathrel{\Big|}~}\sigma(F) = F}\right\}}}\right\} &\leftarrow F
+\]
+
+-   This is contravariant with respect to subgroups/subfields.
+
+-   \( [F: k] = [G: H] \), so degrees of extensions over the base field correspond to indices of subgroups.
+
+-   \( [K : F] = {\left\lvert {H} \right\rvert} \)
+
+-   \( L/F \) is Galois and \( Gal(K/F) = H \)
+
+-   \( F/k \) is Galois \( \iff H \) is normal, and \( { \mathsf{Gal}} (F/k) = { \mathsf{Gal}} (L/k)/H \).
+
+-   The compositum \( F_1 F_2 \) corresponds to \( H_1 \cap H_2 \).
+
+-   The subfield \( F_1 \cap F_2 \) corresponds to \( H_1 H_2 \).
+:::
+
+::: {.theorem title="Splitting + Perfect implies Galois"}
+```{=tex}
+\envlist
+```
+-   If \( \operatorname{ch}k = 0 \) or \( k \) is finite, then \( k \) is perfect.
+
+-   \( k = {\mathbb{C}},{\mathbb{R}}, {\mathbb{Q}}, {\mathbb{F}}_p \) are perfect, so any finite normal extension is Galois.
+
+-   Every splitting field of a polynomial over a perfect field is Galois.
+:::
+
+::: {.proposition title="Composite Extensions"}
+If \( F/k \) is finite and Galois and \( L/k \) is arbitrary, then \( FL/L \) is Galois and
+\[
+{ \mathsf{Gal}} (FL/L) = { \mathsf{Gal}} (F / F\cap L) \subset { \mathsf{Gal}} (F/k)
+.\]
+:::
+
+## Quadratic Extensions
+
+::: {.proposition title="Classification of quadratic extensions"}
+If \( {\mathbb{F}} \) is a field with \( \operatorname{ch}({\mathbb{F}})\neq 2 \) and \( E_{/{\mathbb{F}}} \) is a degree 2 extension, then \( E \) is Galois and \( E = F(\sqrt{a}) \) for some squarefree \( a\in {\mathbb{F}} \).
+:::
+
+::: {.corollary title="Quadratic extensions of rationals"}
+If \( E_{/{\mathbb{Q}}} \) is a quadratic extension, \( E = {\mathbb{Q}}(q) \) for some \( q\in {\mathbb{Q}} \).
+:::
+
+::: {.proposition title="?"}
+For \( {\mathbb{F}}_p \) a finite field of prime order, all quadratic extensions \( E/{\mathbb{F}}_p \) are isomorphic.
+:::
+
+## Other Special Extensions
 
 ::: {.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -2812,29 +3257,27 @@ Every finite separable extension is simple.
 \( {\mathbb{GF}}(p^n) \) is a simple extension over \( {\mathbb{F}}_p \).
 :::
 
-### Quadratic Extensions
+# General Field Theory
 
-::: {.proposition title="Classification of quadratic extensions"}
-If \( {\mathbb{F}} \) is a field with \( \operatorname{ch}({\mathbb{F}})\neq 2 \) and \( E_{/{\mathbb{F}}} \) is a degree 2 extension, then \( E \) is Galois and \( E = F(\sqrt{a}) \) for some squarefree \( a\in {\mathbb{F}} \).
+::: {.fact}
+```{=tex}
+\envlist
+```
+-   All fields are simple rings (no proper nontrivial ideals).
+    -   Thus every field morphism is either zero or injective.
+-   The characteristic of any field \( k \) is either 0 or \( p \) a prime.
+-   If \( L/k \) is algebraic, then \( \min(\alpha, L) \) divides \( \min(\alpha, k) \).
 :::
 
-::: {.corollary title="Quadratic extensions of rationals"}
-If \( E_{/{\mathbb{Q}}} \) is a quadratic extension, \( E = {\mathbb{Q}}(\sqrt{p\over q}) \) for some \( p, q\in {\mathbb{Z}} \).
-:::
-
-::: {.proposition title="?"}
-For \( {\mathbb{F}}_p \) a finite field of prime order, all quadratic extensions \( E/{\mathbb{F}}_p \) are isomorphic.
+::: {.proposition title="Towers are multiplicative in degree"}
+Let \( L/F/k \) be a finite tower of field extensions.
+\[
+[L : k] = [L: F][F: k]
+.\]
 :::
 
 ## Finite Fields
 
-::: {.proof}
-Todo
-:::
-
-```{=tex}
-\todo{Proof}
-```
 ::: {.theorem title="Construction of Finite Fields"}
 \( {\mathbb{GF}}(p^n)\cong \frac{{\mathbb{F}}_p}{(f)} \) where \( f \in {\mathbb{F}}_p[x] \) is any irreducible of degree \( n \), and \( {\mathbb{GF}}(p^n) \cong {\mathbb{F}}[\alpha] \cong {\operatorname{span}}_{\mathbb{F}}\left\{{1, \alpha, \cdots, \alpha^{n-1}}\right\} \) for any root \( \alpha \) of \( f \).
 :::
@@ -2948,7 +3391,7 @@ k\divides n \implies \Phi_{n}(x) &= \Phi_{n\over k}\left(x^{k}\right)
 ::: {.proposition title="Splitting Fields of Cyclotomic Polynomials"}
 The splitting field of \( x^m-1 \) is \( {\mathbb{Q}}(\zeta_m) \) for \( \zeta_m \) any primitive root of unity, and
 \[
-\operatorname{Gal}({\mathbb{Q}}(\zeta_m)_{/{\mathbb{Q}}}) \cong ({\mathbb{Z}}/m{\mathbb{Z}})^{\times}
+{ \mathsf{Gal}} ({\mathbb{Q}}(\zeta_m)_{/{\mathbb{Q}}}) \cong ({\mathbb{Z}}/m{\mathbb{Z}})^{\times}
 .\]
 :::
 
@@ -2956,270 +3399,195 @@ The splitting field of \( x^m-1 \) is \( {\mathbb{Q}}(\zeta_m) \) for \( \zeta_m
 If \( K_{/{\mathbb{Q}}} \) is an abelian extension, then \( K \subseteq {\mathbb{Q}}(\zeta_m) \) for some \( m \).
 :::
 
-# Galois Theory
+## Misc
 
 ::: {.proposition title="?"}
-If \( f\in k[x] \) is irreducible, then \( \operatorname{Gal}(\operatorname{SF}(f)/k) \leq S_n \) is a transitive subgroup, i.e. it acts transitively on the set of roots.
+If \( f\in k[x]^{{\mathrm{irr}}} \) with \( \operatorname{ch}k = p \), then there is a unique separable \( g\in k[x]^{{\mathrm{irr}}} \) such that \( f(x) = g(x^{p^k}) \) for some unique \( k \).
+:::
+
+::: {.definition title="Elementary Symmetric Functions"}
+```{=tex}
+\todo[inline]{todo}
+```
+:::
+
+## Exercises
+
+::: {.exercise title="?"}
+Show
+\[
+x^\ell - 1 \divides x^m-1 \iff \ell\divides m
+.\]
+:::
+
+::: {.solution}
+\( \implies \) - Write \( m = \ell q + r \) with \( 0\leq r < \ell \). - Write
+\[
+p(x) = {x^m-1 \over x^\ell - 1}
+= {x^{lq+r} -1 \over x^\ell - 1}
+= x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
+= q(x) + {x^r-1 \over x^\ell - 1}
+,\]
+where \( p,q \) are polynomial by divisibility. - So the remaining ratio must be polynomial, but since \( r<\ell \) is strict this forces \( r=0 \). Thus \( \ell \divides m \).
+
+\( \impliedby \):
+
+-   Write \( m = \ell q + r \), then \( r=0 \) by divisibility.
+-   Then \( x^m-1 = x^{\ell q} - 1 \coloneqq z^q-1 \) where \( z\coloneqq x^\ell \).
+-   Use that \( z-1 \divides z^q - 1 \), so \( x^{\ell}-1 \divides x{\lq} -1 = x^m-1 \).
+:::
+
+::: {.exercise title="?"}
+Show that if \( f \in {\mathbb{F}}_p[x]^{{\mathrm{irr}}} \) is degree \( d \),
+\[
+f \divides x^{p^n}-x \iff d\divides n
+.\]
+:::
+
+::: {.solution}
+\( \impliedby \):
+
+-   If \( d\divides n \), \( x^d-1 \divides x^n-1 \) by a previous exercise, and so \( p^d-1 \divides p^n-1 \).
+-   So \( x^{p^d-1} \divides x^{p^n-1} \), now multiply through by \( x \).
+-   Claim: \( f \divides x^{p^d-1} \), from which the result immediately follows.
+-   For \( \alpha \) any root of \( f \), \( {\mathbb{F}}_p(\alpha) \) is a finite field of size \( p^d \) since \( [{\mathbb{F}}_p(\alpha):{\mathbb{F}}_p] = d \).
+-   So \( {\mathbb{F}}_p(\alpha)\cong {\mathbb{GF}}(p^d) \), which is the splitting field of \( x^{p^d}-x \).
+-   Thus \( \alpha \) is a root of \( x^{p^d}-x \). Iterating over all roots yields the divisibility statement.
+
+\( \implies \):
+
+-   If \( f\divides g_n(x) \coloneqq x^{p^n}-x \), then every root \( \alpha \) of \( f \) is a root of \( g_n \).
+-   So \( {\mathbb{F}}_p(\alpha) \subseteq {\mathbb{GF}}(p^n) \).
+-   The result follows from the computation
+    \[
+    n &= [{\mathbb{GF}}(p^n) : {\mathbb{F}}_p] \\
+    &= [{\mathbb{GF}}(p^n) : {\mathbb{F}}_p(\alpha)] \cdot [{\mathbb{F}}_p(\alpha) : {\mathbb{F}}_p] \\
+    &= kd
+    .\]
+:::
+
+# Galois Theory: Computations
+
+## Useful Facts
+
+::: {.proposition}
+If \( K \) is the splitting field of an irreducible polynomial of degree \( n \), then \( { \mathsf{Gal}} (K/{\mathbb{Q}}) \leq S_n \) is a transitive subgroup.
+:::
+
+::: {.corollary}
+\[
+n\divides \# { \mathsf{Gal}} (K/{\mathbb{Q}}) \leq n!
+.\]
+:::
+
+::: {.definition title="Discriminant"}
+For \( f = \sum a_k x^k \) monic,
+\[
+\Delta_f = \prod_{i<j} (r_i - r_j)^2
+.\]
+:::
+
+::: {.proposition title="Galois groups are transitive subgroups"}
+If \( f\in k[x] \) is irreducible, then \( { \mathsf{Gal}} (\operatorname{SF}(f)/k) \leq S_n \) is a transitive subgroup, i.e. it acts transitively on the set of roots.
 :::
 
 ::: {.fact}
 Transitive subgroups of \( S_n \) for small \( n \):
 
-  \( n \) in \( S_n \)   Transitive Subgroups
-  ---------------------- ---------------------------------------------------------
-  1                      1
-  2                      \( {\mathbb{Z}}/2 \)
-  3                      \( S_3, {\mathbb{Z}}/3 \)
-  4                      \( S_4, A_4, D_4, ({\mathbb{Z}}/2)^2, {\mathbb{Z}}/4 \)
-  5                      \( S_5, A_5, F_5, D_5, {\mathbb{Z}}/5 \)
-:::
+  \( n \text{ in }S_n \)   Transitive Subgroups
+  ------------------------ ---------------------------------------------------------
+  1                        1
+  2                        \( {\mathbb{Z}}/2 \)
+  3                        \( S_3, {\mathbb{Z}}/3 \)
+  4                        \( S_4, A_4, D_4, ({\mathbb{Z}}/2)^2, {\mathbb{Z}}/4 \)
+  5                        \( S_5, A_5, F_5, D_5, {\mathbb{Z}}/5 \)
 
-::: {.proposition}
-If \( \operatorname{ch}k = 0 \) or \( k \) is finite, then every *algebraic* extension \( L/k \) is separable.
+-   Nonabelian groups of order 8: \( D_4, Q_8 \).
 :::
 
 ::: {.proposition}
 If \( L/k \) is algebraic, then \( \mathop{\mathrm{Aut}}(L/k) \) permutes the roots of irreducible polynomials.
 :::
 
-::: {.proposition}
-\( {\left\lvert {\operatorname{Aut}(L/k)} \right\rvert} \leq [L: k] \) with equality precisely when \( L/k \) is normal.
-:::
+## Explicit Examples
 
-::: {.theorem title="Dirichlet's Theorem on Arithmetic Progressions"}
+::: {.exercise title="?"}
 ```{=tex}
-\todo[inline]{todo}
+\envlist
 ```
+-   \( K/k \coloneqq{\mathbb{Q}}(\sqrt 2, \sqrt 3)/{\mathbb{Q}} \): \( { \mathsf{Gal}} (K/k) = ({\mathbb{Z}}/2)^{\times 2} \).
+
+-   \( K/k = \operatorname{SF}(x^3-2)/{\mathbb{Q}}= {\mathbb{Q}}(2^{1\over 3}, \zeta_3) \): \( { \mathsf{Gal}} (K/k) = S_3 \).
+
+-   \( f(x) \coloneqq x^n-1 \) over \( {\mathbb{Q}} \): \( G = ({\mathbb{Z}}/n)^{\times} \)
+
+-   \( f(x) \coloneqq x^3-x+1 \) over \( {\mathbb{Q}} \): \( G = S_3 \) since \( \Delta = -23 \) is squarefree in \( {\mathbb{Q}} \).
+
+-   \( f(x) \coloneqq x^3-3x+1 \) over \( {\mathbb{Q}} \): \( G=A_3 \) since \( \Delta = 81 \).
+
+-   \( f(x) \coloneqq x^4-2 \) over \( {\mathbb{Q}} \): \( G=D_4 \) since \( i\mapsto -i \) is order 2 and \( 2^{1\over 4}\mapsto i2^{1\over 4} \) is order 4, and this eliminates all other possibilities for groups of order 8.
+
+-   Any irreducible \( f(x) \) of degree \( p \) prime with only two non-real roots: \( G = S_p \), since conjugation is a transposition and Galois acts transitively, so there is a \( p{\hbox{-}} \)cycle, and these generate \( S_p \).
+
+    -   Example: \( x^3-2 \) over \( {\mathbb{Q}} \).
+    -   Example: \( x^5-4x+2 \) over \( {\mathbb{Q}} \).
 :::
 
-::: {.definition title="Constructible"}
-```{=tex}
-\todo[inline]{todo}
-```
+::: {.example title="Quadratics"}
+Every degree 2 extension \( L/k \) is Galois, except possibly in characteristic 2:
+
+-   If \( \alpha\in L \setminus k \) then \( \min_{\alpha}(x) \in L[x] \) must split in \( L[x] \)
+    -   Why? \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
+-   So \( L \) is a splitting field.
+-   If \( \operatorname{ch}(k) \neq 2 \), then
+    \[
+    {\frac{\partial }{\partial x}\,} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0
+    ,\]
+    making \( L \) separable.
 :::
 
-::: {.theorem title="Constructibility of Regular $n\\dash$gons"}
-:::
-
-### Lemmas About Towers
-
-Let \( L/F/k \) be a finite tower of field extensions.
-
-::: {.proposition title="Towers are multiplicative in degree"}
+::: {.remark}
+One can complete the square for quadratics:
 \[
-[L : k] = [L: F][F: k]
+f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha^{2}}{4} \text { . }
 .\]
+
+Thus it suffices to consider quadratics of the form \( x^2+a \).
 :::
 
-::: {.proposition title="Normal/Algebraic/Galois in towers"}
-\( L/k \) normal/algebraic/Galois \( \implies L/F \) normal/algebraic/Galois.
+::: {.example title="Cubics"}
+For \( f(x) =x^3 +ax + b \) over \( \operatorname{ch}k\neq 2,3 \), then the Galois group \( G \) is known:
+
+-   If \( \Delta \) is a perfect square in \( K \), \( G= A_3 \).
+-   Else, \( G= S_3 \).
+
+Note that \( \Delta = -4a^3 - 27b^2 \) here.
+
+More generally, \( G\hookrightarrow A_n \iff \Delta \) is a perfect square in \( k \).
 :::
 
-::: {.proof title="for normality"}
-\( \min(\alpha, F) \divides \min(\alpha, k) \), so if the latter splits in \( L \) then so does the former.
+::: {.proposition title="Quartics"}
+The Galois groups of irreducible quartics can be determined using a bit of number theory:
+
+![](figures/2021-07-20_22-06-48.png)
 :::
-
-::: {.corollary title="?"}
-\( \alpha \in L \) algebraic over \( k \implies \alpha \) algebraic over \( F \).
-:::
-
-::: {.corollary title="?"}
-\( E_1/k \) normal and \( E_2/k \) normal \( \implies E_1E_2/k \) normal and \( E_1 \cap E_2 / k \) normal.
-
-```{=tex}
-\begin{tikzcd}
-    && {E_1 E_2} \\
-    \\
-    {E_1} &&&& {E_2} \\
-    && {E_1 \cap E_2} \\
-    \\
-    \\
-    && {k}
-    \arrow["{\text{normal}}", from=3-5, to=7-3]
-    \arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
-    \arrow["{\text{normal}}"', from=3-1, to=7-3]
-    \arrow[from=1-3, to=3-1, no head]
-    \arrow[from=1-3, to=3-5, no head]
-    \arrow[from=1-3, to=4-3, no head]
-    \arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
-    \arrow[from=3-1, to=4-3, no head]
-    \arrow[from=4-3, to=3-5, no head]
-\end{tikzcd}
-```
-> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
-:::
-
-::: {.proposition title="Algebraicity is transitive"}
-\( F/k \) algebraic and \( L/F \) algebraic \( \implies L/k \) algebraic.
-```{=tex}
-\begin{tikzcd}
-L \arrow[d, bend right=49, "\text{alg}"'] 
-  \arrow[dd, dashed, bend left=49, "\text{alg}"] \\
-F \arrow[d, bend right=49, "\text{alg}"']                                  \\
-k
-\end{tikzcd}
-```
-:::
-
-::: {.proposition title="Separability is transitive"}
-For \( L/F/k \), then \( L/k \) is separable \( \iff L/F,\, F/k \) are separable.
-```{=tex}
-\begin{tikzcd}
-L \arrow[d, bend right=49, "\text{sep}"'] 
-  \arrow[dd, dashed, bend left=49, "\text{sep}"] \\
-F \arrow[d, bend right=49, "\text{sep}"']                                  \\
-k
-\end{tikzcd}
-```
-:::
-
-::: {.warnings}
-Being Galois is **not** transitive. Take \( {\mathbb{Q}}\qty{ \sqrt[4]{2} } / {\mathbb{Q}}\qty{ \sqrt{2} } / {\mathbb{Q}} \).
-:::
-
-::: {.proposition title="?"}
-If \( L/k \) is algebraic, then \( F/k \) separable:
-
-```{=tex}
-\begin{tikzcd}
-    {L} \\
-    \\
-    {F} \\
-    \\
-    {k}
-    \arrow["{\text{algebraic}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-    \arrow["{\text{separable}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
-\end{tikzcd}
-```
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
-
-Moreover, \( L/F \) is additionally separable \( \iff L/k \) separable:
-
-```{=tex}
-\begin{tikzcd}
-    {L} \\
-    \\
-    {F} \\
-    \\
-    {k}
-    \arrow["\substack{\text{algebraic,} \\ \text{separable}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-    \arrow["{\text{sep}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
-    \arrow["{\text{separable}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
-\end{tikzcd}
-```
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSBcXFxcIFxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFx0ZXh0e3NlcH0iLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3NlcGFyYWJsZX0iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
-:::
-
-::: {.proposition title="?"}
-If \( L/k \) is Galois, then \( L/F \) is **always** Galois. Moreover, \( F/k \) is Galois if and only if \( \operatorname{Gal}(L/F) {~\trianglelefteq~}\operatorname{Gal}(L/k) \)
-
-```{=tex}
-\begin{tikzcd}
-    {L} \\
-    \\
-    {F} \\
-    \\
-    {k}
-    \arrow["{\text{Galois}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-    \arrow["{\text{Galois}}", from=5-1, to=3-1, curve={height=-12pt}, squiggly, no head]
-    \arrow["{\text{Galois}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
-\end{tikzcd}
-```
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7R2Fsb2lzfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtHYWxvaXN9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e0dhbG9pc30iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
-
-In this case,
-\[
-\operatorname{Gal}(F/k) \cong \frac{\operatorname{Gal}(L/k)}{\operatorname{Gal}(L/F)}
-.\]
-:::
-
-### Fundamental Theorem of Galois Theory
-
-::: {.theorem title="Fundamental Theorem of Galois Theory"}
-Let \( L/k \) be a Galois extension, then there is a correspondence:
-\[
-\left\{{\substack{\text{Subgroups } H \leq \operatorname{Gal}(L/k)}}\right\}
-&\rightleftharpoons
-\left\{{\substack{\text{Fields }  F \text{ such}\\ \text{that } L/F/k}}\right\} \\
-H &\rightarrow \left\{{\substack{E^H \coloneqq~\text{The fixed field of $H$}}}\right\} \\
-\left\{{\substack{\operatorname{Gal}(L/F) \coloneqq\left\{{ \sigma \in \operatorname{Gal}(L/k) {~\mathrel{\Big|}~}\sigma(F) = F}\right\}}}\right\} &\leftarrow F
-\]
-
--   This is contravariant with respect to subgroups/subfields.
-
--   \( [F: k] = [G: H] \), so degrees of extensions over the base field correspond to indices of subgroups.
-
--   \( [K : F] = {\left\lvert {H} \right\rvert} \)
-
--   \( L/F \) is Galois and \( Gal(K/F) = H \)
-
--   \( F/k \) is Galois \( \iff H \) is normal, and \( \operatorname{Gal}(F/k) = \operatorname{Gal}(L/k)/H \).
-
--   The compositum \( F_1 F_2 \) corresponds to \( H_1 \cap H_2 \).
-
--   The subfield \( F_1 \cap F_2 \) corresponds to \( H_1 H_2 \).
-:::
-
-### Examples
 
 ::: {.example title="Cyclotomic Fields"}
-\( \operatorname{Gal}({\mathbb{Q}}(\zeta_n)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times} \) and is generated by maps of the form \( \zeta_n \mapsto \zeta_n^j \) where \( (j, n) = 1 \). I.e., the following map is an isomorphism:
+\( { \mathsf{Gal}} ({\mathbb{Q}}(\zeta_n)/{\mathbb{Q}}) \cong ({\mathbb{Z}}/n)^{\times} \) and is generated by maps of the form \( \zeta_n \mapsto \zeta_n^j \) where \( (j, n) = 1 \). I.e., the following map is an isomorphism:
 \[
-{\mathbb{Z}}/(n)^{\times}&\to \operatorname{Gal}({\mathbb{Q}}(\zeta_n), {\mathbb{Q}}) \\
-r \pmod n &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
+({\mathbb{Z}}/n)^{\times}&\to { \mathsf{Gal}} ({\mathbb{Q}}(\zeta_n), {\mathbb{Q}}) \\
+[r] &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
 \]
 :::
 
 ::: {.example title="Finite Fields"}
-\( \operatorname{Gal}({\mathbb{F}}_{p^n}/{\mathbb{F}}_p) \cong {\mathbb{Z}}/ \left\langle{ n }\right\rangle \), a cyclic group generated by powers of the Frobenius automorphism:
+\( { \mathsf{Gal}} ({\mathbb{F}}_{p^n}/{\mathbb{F}}_p) \cong {\mathbb{Z}}/ \left\langle{ n }\right\rangle \), a cyclic group generated by powers of the Frobenius automorphism:
 \[
-\varphi_p: {\mathbb{F}}_{p^n} \to {\mathbb{F}}_{p^n} \\
+\varphi_p: {\mathbb{F}}_{p^n} &\to {\mathbb{F}}_{p^n} \\
 x &\mapsto x^p
 \]
 
 > See D&F p.566 example 7.
-:::
-
-::: {.example title="Quadratic Fields"}
-Every degree 2 extension \( L/k \) is Galois, except possibly in characteristic 2: if \( \alpha\in L \setminus k \) then \( \min_{\alpha}(x) \in L[x] \) must split in \( L[x] \) since \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \). So \( L \) is a splitting field. If \( \operatorname{ch}(k) \neq 2 \), then \( {\frac{\partial }{\partial x}\,} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0 \), making \( L \) separable.
-:::
-
-::: {.proposition}
-If \( K \) is the splitting field of an irreducible polynomial of degree \( n \), then \( \operatorname{Gal}(K/{\mathbb{Q}}) \leq S_n \) is a transitive subgroup.
-:::
-
-::: {.corollary}
-\( n \) divides the order \( {\left\lvert { \operatorname{Gal}(K/{\mathbb{Q}})} \right\rvert} \).
-:::
-
-::: {.theorem title="Splitting + Perfect implies Galois"}
-```{=tex}
-\hfill
-```
--   If \( \operatorname{ch}k = 0 \) or \( k \) is finite, then \( k \) is perfect.
-
--   \( k = {\mathbb{C}},{\mathbb{R}}, {\mathbb{Q}}, {\mathbb{F}}_p \) are perfect, so any finite normal extension is Galois.
-
--   Every splitting field of a polynomial over a perfect field is Galois.
-:::
-
-::: {.proposition title="Composite Extensions"}
-If \( F/k \) is finite and Galois and \( L/k \) is arbitrary, then \( FL/L \) is Galois and
-\[
-\operatorname{Gal}(FL/L) = \operatorname{Gal}(F / F\cap L) \subset \operatorname{Gal}(F/k)
-.\]
-:::
-
-### Counterexamples
-
-::: {.example title="?"}
-```{=tex}
-\envlist
-```
--   \( {\mathbb{Q}}(\zeta_3, 2^{1/3}) \) is normal but \( {\mathbb{Q}}(2^{1/3}) \) is not since the irreducible polynomial \( x^3 - 2 \) has only one root in it.
--   \( {\mathbb{Q}}(2^{1/3}) \) is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
--   \( {\mathbb{Q}}(2^{1/4}) \) is not Galois since its automorphism group is too small (only of size 2 instead of 4). However, the intermediate extensions \( {\mathbb{Q}}(2^{1/4}) / {\mathbb{Q}}(2^{1/2}) \) and \( {\mathbb{Q}}(\sqrt 2) / {\mathbb{Q}} \) are Galois since they are quadratic. Slogan: "Being Galois is not transitive in towers."
--   A quadratic extension that is not Galois: \( \operatorname{SF}(x^2 + y) \in {\mathbb{F}}_2(y)[x] \), which factors as \( (x - \sqrt{y})^2 \), making the extension not separable.
 :::
 
 # Modules
@@ -3487,10 +3855,139 @@ If \( T:V \hookrightarrow W \) is injective, then \( T\otimes\one_X: V\otimes X 
 
 # Linear Algebra
 
+::: {.remark}
+Some definitions:
+
+-   \( A^t \) is the usual transpose.
+-   \( A^{\dagger} \) is the conjugate transpose.
+-   A matrix is \( A^{\dagger} \) is **adjoint** to \( A \) iff \( {\left\langle {A\mathbf{x}},~{\mathbf{y}} \right\rangle} = {\left\langle {\mathbf{x}},~{A^{\dagger} \mathbf{y}} \right\rangle} \).
+    -   \( A \) is **self-adjoint** iff \( A \) is an adjoint for itself, so \( {\left\langle {A\mathbf{x}},~{\mathbf{y}} \right\rangle} = {\left\langle {\mathbf{x}},~{A \mathbf{y}} \right\rangle} \).
+-   \( A \) is **symmetric** iff \( A = A^t \).
+    -   \( A \) is **orthogonal** iff \( A^tA = AA^t = I \)
+-   \( A \) is **Hermitian** iff \( A^{\dagger} = A \).
+    -   \( A \) is **normal** iff \( AA^{\dagger} = A^{\dagger} A \).
+    -   \( A \) is **unitary** iff \( A^{\dagger}A = AA^{\dagger} = I \).
+:::
+
+::: {.fact title="Undergrad reminders"}
+\[
+\operatorname{det}M = \prod_{\sigma \in S_n} {\varepsilon}(\sigma) \prod_{i=1}^n a_{i, \sigma(i)}
+.\]
+
+For example,
+
+\[
+\operatorname{det}\left(\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right)=\begin{gathered}
+a_{11} a_{22} a_{33}+a_{12} a_{23} a_{31}+a_{13} a_{21} a_{32} \\
+-a_{13} a_{22} a_{31}-a_{12} a_{21} a_{33}-a_{11} a_{23} a_{32}
+\end{gathered}
+.\]
+
+Let \( {\operatorname{minor}}_A(i, j) \) denote \( A \) with the \( i \)th row, \( j \)th column deleted.
+
+One can expand determinants along rows:
+\[
+\operatorname{det}(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} \operatorname{det}{\operatorname{minor}}_A(i, j)
+.\]
+
+Also useful, a matrix can be inverted by computing the adjugate:
+\[
+A^{-1}= {1\over \operatorname{det}A} \operatorname{adj}(A) && \operatorname{adj}(A)_{ij} \coloneqq(-1)^{i+j} \operatorname{det}{\operatorname{minor}}_A(j, i)
+.\]
+
+The eigenvalues of an upper-triangular matrix are exactly the diagonal entries, and the determinant is their product. More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues, so \( {\mathrm{tr}}(A) = \sum \lambda_i \) and \( \operatorname{det}(A) = \prod \lambda_i \).
+
+Matrices can be block-multiplied when all dimensions are compatible:
+\[
+\begin{bmatrix}
+A & B \\
+C & D 
+\end{bmatrix}
+\begin{bmatrix}
+E & F \\
+G & H 
+\end{bmatrix}
+= {
+\begin{bmatrix}
+  {AE + BG} & {AF + BH} 
+\\
+  {CE + DG} & { CF + DH}
+\end{bmatrix}
+}
+.\]
+
+> Note that if any of these matrix multiplications don't make sense, the results won't be valid!
+
+If \( A \) is upper triangular, some entries of \( A^k \) can be computed easily:
+
+\[
+A\coloneqq\left(\begin{array}{ccc}
+a_1 & & * \\
+& \ddots & \\
+0 & & a_n
+\end{array}\right)
+\implies
+A^k = \left(\begin{array}{ccc}
+a_1^k & & * \\
+& \ddots & \\
+0 & & a_n^k
+\end{array}\right)
+.\]
+
+Traces of products can be commuted: \( \operatorname{tr}(AB) = \operatorname{tr}(BA) \), so similar matrices have identical traces since \( \operatorname{tr}(PJP^{-1}) = \operatorname{tr}{PP^{-1}J} = \operatorname{tr}{J} \).
+
+The coefficients of the characteristic polynomial are elementary symmetric functions in the eigenvalues:
+\[
+\chi_A(t) = t^n - \qty{\sum_i \lambda_i }t^{n-1} + \qty{\sum_{i < j} \lambda_i \lambda_j }t^{n-2} + \cdots \pm \qty{\prod_i \lambda_i}
+.\]
+:::
+
+::: {.proposition title="Useful computational trick"}
+A trick for finding characteristic polynomials:
+\[
+\chi_A(t) &= \sum_{k=0}^n (-1)^k \operatorname{tr}\qty{\bigwedge\nolimits^k A} t^{n-k} \\
+&= t^n - \operatorname{tr}\qty{A} t^{n-1} + \operatorname{tr}\qty{\bigwedge\nolimits^2 A}t^{n-2} - \cdots \pm \operatorname{tr}\qty{\bigwedge\nolimits^{n-1} A} t \mp \operatorname{det}(A)
+,\]
+using that
+
+\[
+{\bigwedge\nolimits^0 A} \coloneqq 1 \\
+{\bigwedge\nolimits^1 A} \coloneqq A \\
+\operatorname{tr}\qty{\bigwedge\nolimits^n A} = \operatorname{det}(A)
+.\]
+
+Moreover, the intermediate traces are easy to compute by hand:
+\[
+\operatorname{tr}\qty{\bigwedge\nolimits^\ell A} = \sum \operatorname{det}\qty{M^{\ell}}
+,\]
+where the sum is taken over all \( \ell\times\ell \) **principal minors**: determinants of the \( n \choose \ell \) principal matrices which are obtained by choosing \( \ell \) diagonal entries to keep and and deleting the rows and columns for every entry not chosen. Equivalently, one can select \( n-\ell \) diagonal entries and delete the corresponding row/column for each.
+
+::: {.example title="?"}
+![](figures/2021-07-24_19-48-11.png)
+:::
+
+To factor this polynomial, the **rational roots test** can be useful: for \( f(t) = a_nt^n + \cdots + a_1 t + a_0 \), rational roots are of the form \( p/q \) where \( p \divides a_n \) and \( q\divides a_0 \). Note that this simplifies greatly for \( f \) monic! Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
+:::
+
+::: {.example title="of polynomial long division"}
+Consider \( f(x) \coloneqq x^3-6x^2+12x-8 \), then any rational root is in \( \left\{{\pm 8, \pm 4, \pm 2, \pm 1}\right\} \). Testing \( f(2) = 0 \) works, and dividing by \( x-2 \) yields
+
+![](figures/2021-07-24_18-32-38.png)
+
+The rest can be factored by inspection:
+\[
+f(x) = (x-2)(x^2-4x+4) = (x-2)^3
+.\]
+:::
+
 ## Definitions
 
 ::: {.remark}
-The main powerhouse: for \( T:V\to V \) a linear transformation for \( V\in{\mathsf{Vect}}_k \), map to \( V\in \mathsf{k[x]}{\hbox{-}}\mathsf{Mod} \) by letting polynomials act via \( p(x)\cdot \mathbf{v} \coloneqq p(T)(\mathbf{v}) \). Using that \( k[x] \) is a PID iff \( k \) is a field, and we can apply the FTFGMPID to get two decompositions:
+The main powerhouse: for \( T:V\to V \) a linear transformation for \( V\in{ \mathsf{Vect} }_k \), map to \( V\in \mathsf{k[x]}{\hbox{-}}\mathsf{Mod} \) by letting polynomials act via \( p(x)\cdot \mathbf{v} \coloneqq p(T)(\mathbf{v}) \). Using that \( k[x] \) is a PID iff \( k \) is a field, and we can apply the FTFGMPID to get two decompositions:
 \[
 V &\cong \bigoplus_{i=1}^n k[x]/ \left\langle{ q_i(x) }\right\rangle && q_{i}(x) \divides q_{i+1}(x) \divides \cdots  \\
 V &\cong \bigoplus _{j=1}^m k[x] / \left\langle{ p_i(x)^{e_i} }\right\rangle && \text{ with } p_i \text{ not necessarily distinct.} 
@@ -3523,7 +4020,7 @@ V &\cong \bigoplus _{j=1}^m k[x] / \left\langle{ p_i(x)^{e_i} }\right\rangle && 
 :::
 
 ::: {.definition title="Normal Matrix"}
-A matrix \( A\in \operatorname{Mat}(n\times n; {\mathbb{C}}) \) is **normal** iff \( A^* A = AA^* \) where \( A^* \) is the conjugate transpose.
+A matrix \( A\in \operatorname{Mat}(n\times n; {\mathbb{C}}) \) is **normal** iff \( A^{\dagger} A = AA^{\dagger} \) where \( A^{\dagger} \) is the conjugate transpose.
 :::
 
 ::: {.definition title="Semisimple"}
@@ -3569,12 +4066,12 @@ The **minimal polynomial** of a linear map \( T \) is the unique monic polynomia
 ::: {.definition title="?"}
 The **characteristic polynomial** of \( A \) is given by
 \[
-\chi_A(x) = \det(A - xI))= \det(SNF(A - xI))
+\chi_A(x) = \operatorname{det}(A - xI))= \operatorname{det}(SNF(A - xI))
 .\]
 :::
 
 ::: {.fact}
-If \( A \) is upper triangular, then \( \det(A) = \prod_{i} a_{ii} \)
+If \( A \) is upper triangular, then \( \operatorname{det}(A) = \prod_{i} a_{ii} \)
 :::
 
 ::: {.theorem title="Cayley-Hamilton"}
@@ -3627,7 +4124,120 @@ C_p \coloneqq
 .\]
 :::
 
-## Canonical Forms
+## Jordan Canonical Form
+
+::: {.fact}
+The JCF corresponds to **elementary divisors**.
+:::
+
+```{=tex}
+\todo[inline]{Make more precise..}
+```
+::: {.proposition title="JCF Algorithm for generalized eigenvectors"}
+The following algorithm always works for computing \( \mathrm{JCF}(A) \):
+
+-   Compute and factor the characteristic polynomial as \( \chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i} \).
+-   For each \( \lambda_i \), find the constant \( \ell_i \) such that
+    \[
+    \cdots 
+    \operatorname{rank}(A-\lambda_i I)^{\ell_i - 1} 
+    > \operatorname{rank}(A-\lambda_i I)^{\ell_i}
+    {\color{red} = }
+    \operatorname{rank}(A-\lambda_i I)^{\ell_i+1}
+    {\color{red} = }
+    \operatorname{rank}(A-\lambda_i I)^{\ell_i+1}
+    {\color{red} = } \cdots
+    .\]
+-   Find as many usual eigenvectors \( \mathbf{v}_i \) as you can. The number of eigenvectors you find will be \( \dim E_{\lambda_i} \). Suppose you just get one, \( \mathbf{v} \).
+-   Solve the systems:
+    \[
+    (A - \lambda_i I)\mathbf{v}_1 = \mathbf{v} &\implies \mathbf{v}_1 = ? \\
+    (A - \lambda_i I)^2\mathbf{v}_2 = \mathbf{v}_1 &\implies \mathbf{v}_2 = ? \\
+    &\vdots \\
+    ,\]
+    which can be solved by putting the \( \mathbf{v}_i \) in an augmented matrix and computing the RREF.
+-   This terminates in at most \( \ell_i \) steps, and these vectors correspond to a single Jordan block.
+-   If there are other eigenvectors \( \mathbf{w}, \cdots \) for \( \lambda_i \), repeating this process yields a Jordan block for each of them. Assemble \( P \) by placing these \( \mathbf{v}_i \) in the appropriate columns.
+:::
+
+::: {.lemma title="JCF from Minimal and Characteristic Polynomials"}
+Writing \( \operatorname{Spec}(A) = \left\{{(\lambda_i, m_i)}\right\} \),
+\[
+\min_A(x) &= \prod_i (x- \lambda_i)^{\ell_i} \\
+\chi_A(x) &= \prod (x- \lambda_i)^{m_i} \\
+E_{\lambda_i} &= \dim(A - \lambda_i I)
+\]
+
+-   The roots both polynomials are precisely the eigenvalues \( \lambda_i \) of \( A \).
+
+    -   \( m_i \) are the *algebraic multiplicities*.
+    -   \( \dim E_{\lambda_i} \) are the *geometric multiplicities*.
+
+-   \( \ell_i \leq m_i \) by Cayley-Hamilton.
+
+-   \( \ell_i \) is
+
+    -   The size of the **largest** Jordan block associated to \( \lambda_i \)[^3], and
+    -   The "stabilizing constant".
+
+-   \( m_i \), associated to the characteristic polynomial, is
+
+    -   The **sum of sizes** of all Jordan blocks associated to \( \lambda_i \),
+    -   The number of times \( \lambda_i \) appears on the diagonal of \( JCF(A) \),
+    -   The dimension of the *generalized* eigenspace \( V^{\lambda_i} \).
+
+-   \( \dim E_{\lambda_i} \) is
+
+    -   The **number of Jordan blocks** associated to \( \lambda_i \)
+    -   The number of (usual) eigenvector associated to \( \lambda_i \), i.e. the dimension of their span.
+
+-   \( A \) is diagonalizable iff \( \dim E_{\lambda_i} = m_i \) for all \( i \).
+:::
+
+::: {.lemma title="?"}
+The elementary divisors of \( A \) are the minimal polynomials of the Jordan blocks.
+:::
+
+::: {.remark}
+Writing \( \operatorname{Ann}(\mathbf{v}) \) as the annihilator of \( \mathbf{v} \), a generalized eigenvector for the pair \( (\lambda_i, \mathbf{v}) \) for a matrix \( A \) is any operator in the space \( \sqrt{\operatorname{Ann}(\mathbf{v})} \), where we view \( V \) as a \( k[x]{\hbox{-}} \)module using \( p(x) \curvearrowright\mathbf{v} \coloneqq p(A)(\mathbf{v}) \). So
+\[
+\operatorname{Ann}(\mathbf{v}) \coloneqq\left\{{ q(x) \in k[x] {~\mathrel{\Big|}~}q(x) \curvearrowright\mathbf{v} = 0}\right\} = \left\{{q(x) \in k[x] {~\mathrel{\Big|}~}q(A)(\mathbf{v}) = 0}\right\}
+.\]
+Now use that \( \mathbf{w} \) is an eigenvector for \( A \) with eigenvalue \( \lambda_i \iff A-\lambda_i I \in \operatorname{Ann}(\mathbf{w}) \), and is a generalized eigenvector iff
+\[
+(A-\lambda_i I)^k\in \operatorname{Ann}(\mathbf{w}) &\text{ for some }k \iff A-\lambda_i I \in \sqrt{\operatorname{Ann}(\mathbf{w})}
+.\]
+
+We can then write
+\[
+V^{\lambda_i} 
+&\coloneqq\left\{{\mathbf{v}\in V {~\mathrel{\Big|}~}(A-\lambda_i I)^n \mathbf{v} = 0 \text{ for some }n }\right\} \\
+&= \left\{{\mathbf{v}\in V {~\mathrel{\Big|}~}(A-\lambda_i I)^n \in \operatorname{Ann}(\mathbf{v}) }\right\} \\
+&= \left\{{\mathbf{v}\in V {~\mathrel{\Big|}~}A-\lambda_i I \in \sqrt{\operatorname{Ann}(\mathbf{v})} }\right\} 
+,\]
+and the theorem is that \( V \cong \bigoplus_i V^{\lambda_i} \). It also turns out that \( V^{\lambda_i} = \ker (A-\lambda_i I)^n \) for \( n\coloneqq\dim V \).
+:::
+
+::: {.proof title="of generalized eigenspace decomposition"}
+-   Suppose \( \chi_A(x) = \prod (x-\lambda_i)^{n_i} \).
+-   Define \( V^{j} \coloneqq\ker (A-\lambda_i I)^n \) as the generalized eigenspace for each \( i \).
+-   Fix \( j \) and define \( h_j(x) = \prod_{i\neq j}(x-\lambda_i)^{n_i} \), the characteristic polynomial with the \( \lambda_j \) term deleted.
+-   Define \( W^j \coloneqq\operatorname{im}(h_j(A)) \), then the claim is \( W^j \subseteq V^j \)
+    -   This follows because \( 0 = \chi_A(A) = (A-\lambda_j I)^{n_j} h_j(A) \), so in fact \( W^j \subseteq \ker (A - \lambda_j)^{n_j} \).
+-   Claim: \( \sum V^j = V \):
+    -   Let \( \mathbf{v}\in V \) be arbitrary, then by Euclid's algorithm write \( \sum_i f_i h_i = 1 \) since the \( h_i \) are coprime.
+    -   Thus \( \sum f_i(A) h_i(A) = I \implies \qty{\sum f_i(A) h_i(A)}(\mathbf{v}) = \mathbf{v} \implies \mathbf{v} \in \sum W^j \)
+-   Claim: the sum is direct.
+    -   It suffices to show \( 0=\sum w_i \) with \( w_i \in W^i \) implies \( w_i =0 \) for all \( i \).
+    -   Use that \( h_j(w_i) = 0 \) for \( i\neq j \) since \( w_i \in W^i \coloneqq\ker(A-\lambda_I I)^{n_i} \).
+    -   Write \( \mathbf{w}_i = \sum f_j(A) h_j(A) \mathbf{w}_i \), which collapses to \( f_i(A) h_i(A) \mathbf{w}_i \).
+    -   So \( f_i(A) h_i(A) \qty{\sum w_i} = 0 \implies w_i = 0 \).
+:::
+
+```{=tex}
+\todo[inline]{Messy indexing.}
+```
+## Other Canonical Forms
 
 ::: {.proposition title="?"}
 Let \( T:V\to V \) be a linear map where \( n\coloneqq\dim_k V \). TFAE:
@@ -3713,45 +4323,12 @@ Corresponds to the **Invariant Factor Decomposition** of \( T \).
     .\]
 :::
 
-### Jordan Canonical Form
-
-Corresponds to the **Elementary Divisor Decomposition** of \( T \).
-
-::: {.lemma title="?"}
-The elementary divisors of \( A \) are the minimal polynomials of the Jordan blocks.
-:::
-
-::: {.lemma title="JCF from Minimal and Characteristic Polynomials"}
-Writing \( \operatorname{Spec}(A) = \left\{{(\lambda_i, b_i)}\right\} \),
-\[
-\min_A(x) = \prod (x- \lambda_i)^{a_i} \\
-\chi_A(x) = \prod (x- \lambda_i)^{b_i}
-\]
-
--   The roots both polynomials are precisely the eigenvalues of \( A \)
-
--   The spectrum of \( A \) corresponds precisely to the **characteristic** polynomial
-
--   \( a_i \leq b_i \)
-
--   \( a_i \) is the size of the **largest** Jordan block associated to \( \lambda_i \),
-
--   \( b_i \) is the **sum of sizes** of all Jordan blocks associated to \( \lambda_i \) and the number of times \( \lambda_i \) appears on the diagonal of \( JCF(A) \).
-
--   \( \dim E_{\lambda_i} \) is the **number of Jordan blocks** associated to \( \lambda_i \)
-:::
-
 ### Smith Normal Form
 
 ::: {.fact}
 For \( A\in \operatorname{Mat}(m\times n; R) \) over \( R \) any PID, \( \mathrm{SNF}(A) \) is a matrix whose diagonal entries are the invariant factors. How to compute \( \mathrm{SNF}(A) \): take \( A = \operatorname{diag}(a_i) \) where \( a_i = d_i/d_{i-1} \) and \( d_i \) is the \( \gcd \) of the determinants of all \( i\times i \) minors of \( A \). \( A\sim B \) are similar \( \iff \mathrm{SNF}(A) = \mathrm{SNF}(B) \).
 :::
 
-### Finding Possible Canonical Forms
-
-```{=tex}
-\todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
-```
 ### Using Canonical Forms
 
 ::: {.lemma title="?"}
@@ -3784,18 +4361,10 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 -   \( T \) has \( \dim V \) distinct eigenvalues
 :::
 
-### Computing Jordan Canonical Form
-
-::: {.proposition title="JCF Algorithm"}
-The following algorithm always works for computing \( \mathrm{JCF}(A) \):
-
--   Compute \$\
-:::
-
 ## Diagonalizability
 
 ::: {.remark}
-*Notation:* \( A^* \) denotes the conjugate transpose of \( A \).
+*Notation:* \( A^{\dagger} \) denotes the conjugate transpose of \( A \).
 :::
 
 ::: {.lemma title="?"}
@@ -3806,8 +4375,12 @@ Let \( V \) be a vector space over \( k \) an algebraically closed and \( A \in 
 ```{=tex}
 \envlist
 ```
-1.  Hermitian matrices (i.e. \( A^* = A \)) are diagonalizable over \( {\mathbb{C}} \).
+1.  Hermitian (self-adjoint) matrices (i.e. \( A^{\dagger} = A \)) are diagonalizable over \( {\mathbb{C}} \).
 2.  Symmetric matrices (i.e. \( A^t = A \)) are diagonalizable over \( {\mathbb{R}} \).
+:::
+
+::: {.remark}
+In fact, \( A \) is symmetric \( \iff \operatorname{Spec}A \) forms an orthonormal basis.
 :::
 
 ::: {.proof title="?"}
@@ -3917,15 +4490,16 @@ M = \left(\begin{array}{rr}
 Non-similar matrices with the same characteristic polynomial
 \[
 \left(\begin{array}{ll}
-{1}  & {0} \\
-{0} & {1}
+{0}  & {0} \\
+{0} & {0}
 \end{array}\right)
 \text { and }
 \left(\begin{array}{ll}
-{1} & {1} \\
-{0} & {1}
+{0} & {0} \\
+{0} & {0}
 \end{array}\right)
 \]
+Here \( \chi_A(x) = \chi_B(x) = x^2 \), but they are not conjugate since their JCFs differ (note that they're already in JCF!)
 :::
 
 ::: {.example title="?"}
@@ -3948,18 +4522,18 @@ M_1
 \coloneqq
 {
 \begin{bmatrix}
-0 & -1 
+  {0} & {-1} 
 \\
-1 & 0
+  {1} & {0}
 \end{bmatrix}
 } \quad
 M_2
 \coloneqq
 {
 \begin{bmatrix}
-0 & 1 
+  {0} & {1} 
 \\
--1 & 0
+  {-1} & {0}
 \end{bmatrix}
 }
 .\]
@@ -3981,7 +4555,7 @@ M_2
 
 ::: {.definition title="Special Linear Group"}
 \[
-{\operatorname{SL}}_n({\mathbb{C}}) \coloneqq\left\{{ A {~\mathrel{\Big|}~}\det A = 1 }\right\} 
+{\operatorname{SL}}_n({\mathbb{C}}) \coloneqq\left\{{ A {~\mathrel{\Big|}~}\operatorname{det}A = 1 }\right\} 
 .\]
 :::
 
@@ -4007,7 +4581,7 @@ U_n({\mathbb{C}}) \coloneqq\left\{{ A {~\mathrel{\Big|}~}A^\dagger A = AA^\dagge
 
 ::: {.definition title="Special Unitary Group"}
 \[
-{\operatorname{SU}}_n({\mathbb{C}}) \coloneqq\left\{{ A \in U_n({\mathbb{C}}) {~\mathrel{\Big|}~}\det A = 1  }\right\} 
+{\operatorname{SU}}_n({\mathbb{C}}) \coloneqq\left\{{ A \in U_n({\mathbb{C}}) {~\mathrel{\Big|}~}\operatorname{det}A = 1  }\right\} 
 .\]
 :::
 
@@ -4026,6 +4600,107 @@ J \coloneqq
 ```{=tex}
 \todo[inline]{Matrix group definitions.}
 ```
+### Counting
+
+::: {.proposition title="Size of $\\GL_n(\\FF_p)$"}
+\[
+{\left\lvert {\operatorname{GL}_n({\mathbb{F}}_p)} \right\rvert} = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n - p^{n-1})
+.\]
+
+It suffices to count ordered bases of \( {\mathbb{F}}_p^n \):
+
+-   Choose \( \mathbf{v}_1 \): there are \( p \) choices for each coefficient, but leave out the vector \( 0 \), so \( p^n-1 \) choices.
+-   Choose any \( \mathbf{v}_2 \neq \lambda \mathbf{v}_1 \), so \( p^n-p \) choices.
+-   Choose any nonzero \( \mathbf{v}_3 \neq \lambda \mathbf{v}_1 + \eta \mathbf{v}_2 \), so \( p^n-p^2 \) choices.
+-   Etc.
+:::
+
+## Exercises
+
+::: {.exercise title="?"}
+Show that normal matrices are diagonalizable.
+:::
+
+::: {.exercise title="?"}
+Consider the Vandermonde matrix:
+\[
+A \coloneqq
+\left(\begin{array}{ccc}
+1 & \cdots & 1 \\
+\lambda_{1} & \cdots & \lambda_{k} \\
+\vdots & & \vdots \\
+\lambda_{1}^{k-1} & \cdots & \lambda_{k}^{k-1}
+\end{array}\right)
+.\]
+
+Show that
+\[
+\operatorname{det}A = \prod_{i < j} (\lambda_i - \lambda_j)
+.\]
+:::
+
+::: {.exercise title="?"}
+Show that a nonzero nilpotent matrix \( A \) is not diagonalizable over any field. Some useful facts:
+
+-   \( \operatorname{Spec}A = \left\{{0}\right\} \), since \( Ax=\lambda x \implies A^n=\lambda^nx \), so \( A^n=0 \) forces \( \lambda =0 \). This forces \( \mathrm{JCF}(A) \) to be strictly upper-triangular.
+-   \( \min_A(x) = x^n \).
+-   If \( A \) were diagonalizable, \( \mathrm{JCF}(A) = 0 \).
+:::
+
+::: {.exercise title="?"}
+Prove Cayley-Hamilton in the following way. Let \( V = {\operatorname{span}}\left\{{\mathbf{v}_1, \cdots, \mathbf{v}_n}\right\} \) and define the \( i \)th flag as \( {\operatorname{Fil}}_i V \coloneqq{\operatorname{span}}\left\{{\mathbf{v}_1, \cdots, \mathbf{v}_i}\right\} \) for all \( 1\leq i \leq n \), and set \( {\operatorname{Fil}}_0 V \coloneqq\left\{{0}\right\} \). Show that if if \( A \) is upper triangular, then \( A({\operatorname{Fil}}_i V) \subseteq {\operatorname{Fil}}_i V \). Now supposing \( \mathbf{v}_i \) are eigenvectors for \( \lambda_i \), show that
+\[
+(A-\lambda_n I) {\operatorname{Fil}}_n V &\subseteq {\operatorname{Fil}}_{n-1} V \\
+(A-\lambda_{n-1} I) (A-\lambda_n I ) {\operatorname{Fil}}_n V &\subseteq {\operatorname{Fil}}_{n-2} V \\
+&\vdots \\
+\prod_i (A-\lambda_{n-i} I) {\operatorname{Fil}}_n V &\subseteq {\operatorname{Fil}}_0 V = \left\{{0}\right\}
+.\]
+Conclude that \( \chi_A(A) = 0 \).
+:::
+
+### JCF
+
+::: {.exercise title="?"}
+Compute \( \mathrm{JCF}(A) \) for
+\[
+A \coloneqq
+{
+\begin{bmatrix}
+  {1} & {-1} & {0}
+\\
+  {-1} & {4} & {-1}
+\\
+  {-4} & {13} & {-3}
+\end{bmatrix}
+}
+.\]
+:::
+
+::: {.solution}
+-   \( \operatorname{det}(A) = 0 \)
+-   \( {\mathrm{tr}}(A) = 2 \)
+-   \( {\mathrm{tr}}(\bigwedge\nolimits^2 A) = 1 \)
+-   \( \chi_A(t) = t^3 - 2t^2 + t \)
+-   \( e_1 = {\left[ {1,1,3} \right]} \)
+-   \( e_2 = {\left[ {1,0,-1} \right]} \)
+    -   \( e_{2, 1} = {\left[ {-3,-1, 0} \right]} \).
+
+![](figures/2021-07-24_23-15-22.png)
+:::
+
+::: {.exercise title="?"}
+Determine \( \mathrm{JCF}(B) \) for
+\[
+B \coloneqq
+\left(\begin{array}{cccc}
+5 & -1 & 0 & 0 \\
+9 & -1 & 0 & 0 \\
+0 & 0 & 7 & -2 \\
+0 & 0 & 12 & -3
+\end{array}\right)
+.\]
+:::
+
 # Representation Theory
 
 ::: {.theorem title="Schur's Lemma"}
@@ -4158,7 +4833,7 @@ Specific Groups
 
 -   Show that the center of \( S_3 \) is trivial.
 -   Show that \( Z(S_n) = 1 \) for \( n\geq 3 \)
--   Show that \( \mathop{\mathrm{Aut}}(S_3) = {\operatorname{Inn}}(S_3) \cong S_3 \).
+-   Show that \( \mathop{\mathrm{Aut}}(S_3) = \mathop{\mathrm{Inn}}(S_3) \cong S_3 \).
 -   Show that the transitive subgroups of \( S_3 \) are \( S_3, A_3 \)
 -   Show that the transitive subgroups of \( S_4 \) are \( S_4, A_4, D_4, {\mathbb{Z}}_2^2, {\mathbb{Z}}_4 \).
 -   Show that \( S_4 \) has two normal subgroups: \( A_4, {\mathbb{Z}}_2^2 \).
@@ -4194,7 +4869,7 @@ Generating Sets
 -   Show that \( A_n \) is generated \( 3{\hbox{-}} \)cycles.
 -   Prove that \( A_n \) is normal in \( S_n \).
 -   Argue that \( A_n \) is simple for \( n \geq 5 \).
--   Show that \( {\operatorname{Out}}(A_4) \) is nontrivial.
+-   Show that \( \mathop{\mathrm{Out}}(A_4) \) is nontrivial.
 
 ### Dihedral Groups
 
@@ -4263,11 +4938,11 @@ Generating Sets
 
 -   Prove Burnside's theorem.
 
--   Show that \( {\operatorname{Inn}}(G) {~\trianglelefteq~}Aut(G) \)
+-   Show that \( \mathop{\mathrm{Inn}}(G) {~\trianglelefteq~}Aut(G) \)
 
--   Show that \( {\operatorname{Inn}}(G) \cong G / Z(G) \)
+-   Show that \( \mathop{\mathrm{Inn}}(G) \cong G / Z(G) \)
 
--   Show that the kernel of the map \( G\to \operatorname{Aut}(G) \) given by \( g\mapsto (h\mapsto ghg^{-1}) \) is \( Z(G) \).
+-   Show that the kernel of the map \( G\to \mathop{\mathrm{Aut}}(G) \) given by \( g\mapsto (h\mapsto ghg^{-1}) \) is \( Z(G) \).
 
 -   Show that \( N_G(H) / C_G(H) \cong A \leq Aut(H) \)
 
@@ -4353,7 +5028,7 @@ Characterizing Certain Ideals
 ::: {.problem title="Jacobson radical is bigger than the nilradical"}
 The nilradical is contained in the Jacobson radical, i.e.
 \[
-\mathfrak {\sqrt{0_{(}} }R) \subseteq {{J}\qty{(} }R)
+\mathfrak {\sqrt{0_{(}} }R) \subseteq \jacobsonrad(R)
 .\]
 :::
 
@@ -4402,7 +5077,7 @@ Misc
 
 -   Show that localizing a ring at a prime ideal produces a local ring.
 -   Show that \( R \) is a local ring iff for every \( x\in R \), either \( x \) or \( 1-x \) is a unit.
--   Show that if \( R \) is a local ring then \( R\setminus R^{\times} \) is a proper ideal that is contained in \( {{J}\qty{(} }R) \).
+-   Show that if \( R \) is a local ring then \( R\setminus R^{\times} \) is a proper ideal that is contained in \( \jacobsonrad(R) \).
 -   Show that if \( R\neq 0 \) is a ring in which every non-unit is nilpotent then \( R \) is local.
 -   Show that every prime ideal is primary.
 -   Show that every prime ideal is irreducible.
@@ -4467,14 +5142,14 @@ Special Polynomials
 -   Show that \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n \)
 -   Compute the Galois group of \( x^n - 1 \in {\mathbb{Q}}[x] \) as a function of \( n \).
 -   Identify all of the elements of the Galois group of \( x^p-2 \) for \( p \) an odd prime (note: this has a complicated presentation).
--   Show that \( \operatorname{Gal}(x^{15}+2)/{\mathbb{Q}}\cong S_2 \rtimes{\mathbb{Z}}/15{\mathbb{Z}} \) for \( S_2 \) a Sylow \( 2{\hbox{-}} \)subgroup.
--   Show that \( \operatorname{Gal}(x^3+4x+2)/{\mathbb{Q}}\cong S_3 \), a symmetric group.
+-   Show that \( { \operatorname{Gal}} (x^{15}+2)/{\mathbb{Q}}\cong S_2 \rtimes{\mathbb{Z}}/15{\mathbb{Z}} \) for \( S_2 \) a Sylow \( 2{\hbox{-}} \)subgroup.
+-   Show that \( { \operatorname{Gal}} (x^3+4x+2)/{\mathbb{Q}}\cong S_3 \), a symmetric group.
 
 ## Modules and Linear Algebra
 
 -   Prove the Cayley-Hamilton theorem.
 -   Prove that the minimal polynomial divides the characteristic polynomial.
--   Prove that the cokernel of \( A\in \operatorname{Mat}(n\times n, {\mathbb{Z}}) \) is finite \( \iff \det A \neq 0 \), and show that in this case \( {\left\lvert {\operatorname{coker}(A)} \right\rvert} = {\left\lvert {\det(A)} \right\rvert} \).
+-   Prove that the cokernel of \( A\in \operatorname{Mat}(n\times n, {\mathbb{Z}}) \) is finite \( \iff \operatorname{det}A \neq 0 \), and show that in this case \( {\left\lvert {\operatorname{coker}(A)} \right\rvert} = {\left\lvert {\operatorname{det}(A)} \right\rvert} \).
 -   Show that a nilpotent operator is diagonalizable.
 -   Show that if \( A,B \) are diagonalizable and \( [A, B] = 0 \) then \( A,B \) are simultaneously diagonalizable.
 -   Does diagonalizable imply invertible? The converse?
@@ -4829,7 +5504,7 @@ Take a quadratic extension of a field of characteristic 0. Is it Galois? Take a 
 
 ### Question 3.13.
 
-Is Abelian Galois extension transitive? That is, if \( K \) has abelian Galois group over \( E \), \( E \) has abelian Galois group over \( F \) , and \( K \) is a Galois extension of \( F \), is it necessarily true that \( \operatorname{Gal}(K/F) \) is also abelian? Give a counterexample involving number fields as well as one involving function fields.
+Is Abelian Galois extension transitive? That is, if \( K \) has abelian Galois group over \( E \), \( E \) has abelian Galois group over \( F \) , and \( K \) is a Galois extension of \( F \), is it necessarily true that \( { \mathsf{Gal}} (K/F) \) is also abelian? Give a counterexample involving number fields as well as one involving function fields.
 
 ### Question 3.14
 
@@ -4999,7 +5674,7 @@ Do you know what the quaternion group is? How many elements are there of each or
 
 ### Question 3.54
 
-Suppose you are given a finite Galois extension \( K/{\mathbb{Q}} \) by \( f(x) \in {\mathbb{Z}}[x] \) such that \( \deg(f ) = n \) and \( \operatorname{Gal}(K/Q) = S_n \). What can you say about the roots?
+Suppose you are given a finite Galois extension \( K/{\mathbb{Q}} \) by \( f(x) \in {\mathbb{Z}}[x] \) such that \( \deg(f ) = n \) and \( { \mathsf{Gal}} (K/Q) = S_n \). What can you say about the roots?
 
 ### Question 3.55
 
@@ -6851,3 +7526,5 @@ Suppose that \( V \) is a 6-dimensional vector space and that \( T \) is a linea
 [^1]: See full argument: D&F p.80.
 
 [^2]: See full argument: D&F p.80.
+
+[^3]: This is because \( (x-\lambda_i)^{\ell_i} \) annihilates a Jordan block of size \( \ell_i \), along with any blocks of size \( k\leq \ell_i \).

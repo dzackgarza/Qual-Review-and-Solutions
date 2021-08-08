@@ -1,453 +1,341 @@
-\newcommand{\dx}{\,dx}
-\newcommand{\dt}{\,dt}
-\newcommand{\dy}{\,dy}
-\newcommand{\ds}{\,ds}
-\newcommand{\dz}{\,dz}
-\newcommand{\dr}{\,dr}
-\newcommand{\dxi}{\,d\xi}
-\newcommand{\dzeta}{\,d\zeta}
-\newcommand{\dtheta}{\,d\theta}
-\newcommand{\barz}{\bar{z} }
-\newcommand{\dzbar}{\,d\bar{z} }
-\newcommand{\zbar}{\bar{z} }
-\newcommand{\du}{\,du}
-\newcommand{\dw}{\,dw}
-\newcommand{\dV}{\,dV}
-\newcommand{\dmu}{\,d\mu}
-\newcommand{\open}[1]{\overset{\circ}{#1}}
-\newcommand{\textoperatorname}[1]{
-  \operatorname{\textnormal{#1}}
-}
-\newcommand{\et}{\text{ét}}
-\newcommand{\Et}{\text{Ét}}
-\newcommand\stacksymbol[3]{
-  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
-  $\scriptscriptstyle#2$}}
-}
-\renewcommand{\AA}[0]{{\mathbb{A}}}
+\newcommand*\dif{\mathop{}\!\operatorname{d}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Ell{ \mathrm{Ell} }
+\newcommand\Kahler[0]{\operatorname{Kähler}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand\compact[0]{\operatorname{cpt}}
+\newcommand\hyp[0]{{\operatorname{hyp}}}
+\newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand\rref{\operatorname{RREF}}
+\newcommand{\Tatesymbol}{\operatorname{TateSymb}}
+\newcommand\tilt[0]{ { \flat } }
+\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
-\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\Ann}[0]{\operatorname{Ann}}
+\newcommand{\Arg}[0]{\operatorname{Arg}}
+\newcommand{\Art}[0]{\operatorname{Art}}
 \newcommand{\BB}[0]{{\mathbb{B}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
+\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\Div}[0]{\operatorname{Div}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
-\newcommand{\FF}[0]{{\mathbb{F}}}
-\newcommand{\FFp}[0]{{\mathbb{F}_p}}
+\newcommand{\EKL}[0]{{\mathrm{EKL}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\minor}[0]{{\operatorname{minor}}}
+\newcommand{\Et}{\text{Ét}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Extpower}[0]{\bigwedge\nolimits}
+\newcommand{\Extalgebra}[0]{\bigwedge\nolimits}
+\newcommand{\Extalg}[0]{\Extalgebra}
+\newcommand{\Extprod}[0]{\bigwedge\nolimits}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
-\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
+\newcommand{\FF}[0]{{\mathbb{F}}}
+\newcommand{\FS}{{ \text{FS} }}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
+\newcommand{\Flat}[0]{{\operatorname{Flat}}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
-\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
-\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
-\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Frac}[0]{\operatorname{Frac}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
+\newcommand{\GL}[0]{\operatorname{GL}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\Gal}[0]{{ \mathsf{Gal}} }
+\newcommand{\Gl}[0]{\operatorname{GL}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
+\newcommand{\Hilb}[0]{\operatorname{Hilb}}
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\Id}[0]{\operatorname{Id}}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
-\newcommand{\kk}[0]{{\mathbb{k}}}
-\newcommand{\bbm}[0]{{\mathbb{M}}}
-\newcommand{\NN}[0]{{\mathbb{N}}}
-\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
+\newcommand{\KMW}[0]{ \K^{\scriptscriptstyle \mathrm{MW}} }
+\newcommand{\KMimp}[0]{ \hat{\K}^{\scriptscriptstyle \mathrm{M}} }
+\newcommand{\KM}[0]{ \K^{\scriptstyle\mathrm{M}} }
+\newcommand{\Kah}[0]{{ \operatorname{Kähler} } }
+\newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\LL}[0]{{\mathbb{L}}}
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\Log}[0]{\operatorname{Log}}
+\newcommand{\MCG}[0]{{\operatorname{MCG}}}
+\newcommand{\MM}[0]{{\mathcal{M}}}
+\newcommand{\MW}[0]{\operatorname{MW}}
+\newcommand{\Mat}[0]{\operatorname{Mat}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\NN}[0]{{\mathbb{N}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
+\newcommand{\OO}[0]{{\mathcal{O}}}
+\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\OX}[0]{{\mathcal{O}_X}}
+\newcommand{\Obs}{\operatorname{Obs} }
+\newcommand{\Ob}[0]{{\operatorname{Ob}}}
+\newcommand{\Op}[0]{{\operatorname{Op}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
+\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+\newcommand{\Presh}[0]{\presh}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
+\newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
 \newcommand{\RR}[0]{{\mathbb{R}}}
-\newcommand{\SpSp}[0]{{\mathbb{S}}}
-\renewcommand{\SS}[0]{{\mathbb{S}}}
-\newcommand{\WW}[0]{{\mathbb{W}}}
-\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
-\newcommand{\TT}[0]{{\mathbb{T}}}
-\newcommand{\HZ}[0]{{H\mathbb{Z}}}
-\newcommand{\ZZ}[0]{{\mathbb{Z}}}
-\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
-\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
-\newcommand{\kG}[0]{{kG}}
-\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
-\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
-\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
-\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
-\newcommand{\QQpadic}[0]{{ \QQ_p }}
-\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
-\newcommand{\chp}[0]{\operatorname{ch. p}}
-\newcommand{\fp}[0]{\operatorname{fp}}
-\newcommand{\gp}[0]{ {\operatorname{gp} } }
-\newcommand{\HT}[0]{{\operatorname{HT}}}
-\newcommand{\Fil}[0]{{\operatorname{Fil}}}
-\newcommand{\LC}[0]{{\mathrm{LC}}}
-\newcommand{\Orb}[0]{{\mathrm{Orb}}}
-\newcommand{\qc}[0]{{\operatorname{qc}}}
-\newcommand{\SF}[0]{\operatorname{SF}}
-\newcommand{\vol}[0]{\operatorname{vol}}
-\newcommand{\Ric}[0]{\operatorname{Ric}}
-\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
-\newcommand{\covol}[0]{\operatorname{covol}}
-\newcommand{\bP}[0]{\operatorname{bP}}
-\newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\HF}[0]{\operatorname{HF}}
-\newcommand{\CF}[0]{\operatorname{CF}}
-\newcommand{\HFK}[0]{\operatorname{HFK}}
-\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
-\newcommand{\QHS}[0]{\operatorname{QHS}}
-\newcommand{\ZHB}[0]{\operatorname{ZHB}}
-\newcommand{\QHB}[0]{\operatorname{QHB}}
-\newcommand{\ks}[0]{\operatorname{ks}}
-\newcommand{\lk}[0]{\operatorname{lk}}
-\newcommand{\nd}[0]{\operatorname{nd}}
-\newcommand{\Arg}[0]{\operatorname{Arg}}
-\newcommand{\PGL}[0]{\operatorname{PGL}}
-\newcommand{\GL}[0]{\operatorname{GL}}
-\newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\mat}[0]{\operatorname{Mat}}
-\newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Gal}[0]{\operatorname{Gal}}
-\newcommand{\Hilb}[0]{\operatorname{Hilb}}
-\newcommand{\Quot}[0]{\operatorname{Quot}}
-\newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{{ \text{red} }}
-\newcommand{\Pic}[0]{{\operatorname{Pic}}}
-\newcommand{\NS}[0]{{\operatorname{NS}}}
-\newcommand{\lcm}[0]{\operatorname{lcm}}
-\newcommand{\maps}[0]{\operatorname{Maps}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\Reg}[0]{\operatorname{Reg}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\SF}[0]{\operatorname{SF}}
+\newcommand{\SL}[0]{{\operatorname{SL}}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
+\newcommand{\SO}[0]{{\operatorname{SO}}}
+\newcommand{\SP}[0]{{\operatorname{SP}}}
+\newcommand{\SU}[0]{{\operatorname{SU}}}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
+\newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\Sm}[0]{{\operatorname{Sm}}}
+\newcommand{\SpSp}[0]{{\mathbb{S}}}
 \newcommand{\Spec}[0]{\operatorname{Spec}}
 \newcommand{\Spf}[0]{\operatorname{Spf}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
-\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
-\newcommand{\Tr}[0]{\operatorname{Tr}}
-\newcommand{\adj}[0]{\operatorname{adj}}
-\newcommand{\ad}[0]{\operatorname{ad}}
-\newcommand{\ann}[0]{\operatorname{Ann}}
-\newcommand{\Ann}[0]{\operatorname{Ann}}
-\newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\arccsc}[0]{\operatorname{arccsc}}
-\newcommand{\arccot}[0]{\operatorname{arccot}}
-\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
-\newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\syl}[0]{{\operatorname{Syl}}}
-\newcommand{\Syl}[0]{{\operatorname{Syl}}}
-\newcommand{\ff}[0]{\operatorname{ff}}
-\newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
-\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
-\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
-\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
-\newcommand{\zar}[0]{{\mathrm{zar}}}
-\newcommand{\afp}[0]{A_{/\FF_p}}
-\newcommand{\HP}[0]{{\operatorname{HP}}}
-\newcommand{\TP}[0]{{\operatorname{TP}}}
-\newcommand{\HC}[0]{{\operatorname{HC}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HoH}[0]{{\operatorname{HH}}}
-\newcommand{\THoH}[0]{{\operatorname{THH}}}
-\newcommand{\mTHH}[0]{{\operatorname{THH}}}
-\newcommand{\THC}[0]{{\operatorname{THC}}}
-\newcommand{\TC}[0]{{\operatorname{TC}}}
-\newcommand{\GW}[0]{{\operatorname{GW}}}
-\newcommand{\SH}[0]{{\operatorname{SH}}}
-\newcommand{\TCH}[0]{{\operatorname{TCH}}}
-\newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\codim}[0]{\operatorname{codim}}
-\newcommand{\reldim}[0]{\operatorname{reldim}}
-\newcommand{\cohdim}[0]{\operatorname{cohdim}}
-\newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\dom}[0]{\operatorname{dom}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\txor}[0]{{\operatorname{ or }}}
-\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
-\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
-\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
-\newcommand{\SL}[0]{{\operatorname{SL}}}
-\newcommand{\PSL}[0]{{\operatorname{PSL}}}
-\newcommand{\SO}[0]{{\operatorname{SO}}}
-\newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\MO}[0]{{\operatorname{MO}}}
-\newcommand{\KO}[0]{{\operatorname{KO}}}
-\newcommand{\ko}[0]{{\operatorname{ko}}}
-\newcommand{\EO}[0]{{\operatorname{EO}}}
-\newcommand{\eo}[0]{{\operatorname{eo}}}
-\newcommand{\ku}[0]{{\operatorname{ku}}}
-\newcommand{\MU}[0]{{\operatorname{MU}}}
-\newcommand{\BU}[0]{{\operatorname{BU}}}
-\newcommand{\BO}[0]{{\operatorname{BO}}}
-\newcommand{\Betti}[0]{{\operatorname{Betti}}}
-\newcommand{\Emb}[0]{{\operatorname{Emb}}}
-\newcommand{\Rees}[0]{{\operatorname{Rees}}}
-\newcommand{\KU}[0]{{\operatorname{KU}}}
-\newcommand{\BP}[0]{{\operatorname{BP}}}
-\newcommand{\MSO}[0]{{\operatorname{MSO}}}
-\newcommand{\MSp}[0]{{\operatorname{MSpin}}}
-\newcommand{\MSpin}[0]{{\operatorname{MSpin}}}
-\newcommand{\MStr}[0]{{\operatorname{MString}}}
-\newcommand{\MString}[0]{{\operatorname{MString}}}
-\newcommand{\SU}[0]{{\operatorname{SU}}}
-\newcommand{\SP}[0]{{\operatorname{SP}}}
-\newcommand{\per}[0]{{\operatorname{Per}}}
-\newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\Disk}[0]{{\operatorname{Disk}}}
-\newcommand{\Pin}[0]{{\operatorname{Pin}}}
-\newcommand{\Sing}[0]{{\operatorname{Sing}}}
-\newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\CH}[0]{{\operatorname{CH}}}
-\newcommand{\Cat}[0]{\mathsf{Cat}}
-\newcommand{\Monoid}[0]{\mathsf{Mon}}
-\newcommand{\Poset}[0]{\mathsf{Poset}}
-\newcommand{\Fun}[0]{{\mathsf{Fun}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
-\newcommand{\poly}[0]{\mathsf{poly}}
-\newcommand{\Vect}[0]{{\mathsf{Vect}}}
-\newcommand{\Sh}[0]{{\mathsf{Sh}}}
-\newcommand{\Var}[0]{{\mathsf{Var}}}
-\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
-\newcommand{\Alg}[0]{{\mathsf{Alg}}}
-\newcommand{\Ch}[0]{\mathsf{Ch}}
-\newcommand{\Set}[0]{{\mathsf{Set}}}
-\newcommand{\FI}[0]{{\mathsf{FI}}}
-\newcommand{\FGL}[0]{\mathsf{FGL}}
-\newcommand{\GSets}[0]{{G\dash\mathsf{Set}}}
-\newcommand{\Sets}[0]{{\mathsf{Set}}}
-\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
-\newcommand{\sSet}[0]{{\mathsf{sSet}}}
-\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
-\newcommand{\Sp}[0]{{\mathsf{Sp}}}
-\newcommand{\Spectra}[0]{{\mathsf{Sp}}}
-\newcommand{\sets}[0]{{\mathsf{Set}}}
-\newcommand{\Grp}[0]{{\mathsf{Grp}}}
-\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
-\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
-\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
-\newcommand{\Kan}[0]{{\mathsf{Kan}}}
-\newcommand{\Groups}[0]{{\mathsf{Group}}}
-\newcommand{\Ab}[0]{{\mathsf{Ab}}}
-\newcommand{\Ring}[0]{\mathsf{Ring}}
-\newcommand{\CRing}[0]{\mathsf{CRing}}
-\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
-\newcommand{\Field}[0]{\mathsf{Field}}
-\newcommand{\Perf}[0]{\mathsf{Perf}}
-\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
-\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
-\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
-\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
-\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
-\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
-\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\mathsf{gr}\,}}
-\newcommand{\grMod}[0]{{\mathsf{grMod}}}
-\newcommand{\Mod}[0]{{\mathsf{Mod}}}
-\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
-\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
-\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
-\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
-\newcommand{\cdga}[0]{{\mathsf{cdga} }}
-\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
-\newcommand{\kAlg}[0]{{\mathsf{Alg}_{/k} }}
-\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
-\newcommand{\rAlg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
-\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
-\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
-\newcommand{\alg}[0]{\mathsf{Alg}}
-\newcommand{\scalg}[0]{\mathsf{sCAlg}}
-\newcommand{\calg}[0]{\mathsf{CAlg}}
-\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
-\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
-\newcommand{\ssets}[0]{\mathsf{sSet}}
-\newcommand{\Assoc}[0]{\mathsf{Assoc}}
-\newcommand{\Free}[0]{\mathsf{Free}}
-\newcommand{\Unital}[0]{\mathsf{Unital}}
-\newcommand{\Riem}[0]{\mathsf{Riem}}
-\newcommand{\Comm}[0]{\mathsf{Comm}}
-\newcommand{\Top}[0]{{\mathsf{Top}}}
-\newcommand{\CW}[0]{{\mathsf{CW}}}
-\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
-\newcommand{\ho}[0]{{\mathsf{ho}}}
-\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
-\newcommand{\hoType}[0]{{\mathsf{hoType}}}
-\newcommand{\Sch}[0]{{\mathsf{Sch}}}
-\newcommand{\FFlat}[0]{{\mathsf{FFlat}}}
-\newcommand{\kSch}[0]{{\mathsf{Sch}_{/k}}}
-\newcommand{\Lag}[0]{{\mathsf{Lag}}}
-\newcommand{\Fuk}[0]{{\mathsf{Fuk}}}
-\newcommand{\Wein}[0]{{\mathsf{Wein}}}
-\newcommand{\Aff}[0]{{\mathsf{Aff}}}
-\newcommand{\Schf}[0]{{\mathsf{Schf}}}
-\newcommand{\Rep}[0]{{\mathsf{Rep}}}
-\newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
-\newcommand{\Perv}[0]{\mathsf{Perv}}
-\newcommand{\presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
-\newcommand{\bung}{{\mathsf{Bun}_G}}
-\newcommand{\set}{{\mathsf{Set} }}
-
-\newcommand{\eul}[0]{{\operatorname{eul}}}
-\newcommand{\ab}[0]{{\operatorname{ab}}}
-\newcommand{\op}[0]{^{\operatorname{op}}}
-\newcommand{\Op}[0]{{\operatorname{Op}}}
-\newcommand{\Ob}[0]{{\operatorname{Ob}}}
-\newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\Tor}[0]{\operatorname{Tor}}
-\newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext} }
-\newcommand{\Def}{\operatorname{Def} }
-\newcommand{\Obs}{\operatorname{Obs} }
-\newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\orr}[0]{{\operatorname{ or }}}
-\newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\const}[0]{{\operatorname{const.}}}
-\newcommand{\disc}[0]{{\operatorname{disc}}}
-\newcommand{\discriminant}[0]{{\Delta}}
-\newcommand{\id}[0]{\operatorname{id}}
-\newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\operatorname{pt}}}
-\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
-\newcommand{\sep}[0]{^\operatorname{sep}}
-\newcommand{\tors}[0]{{\operatorname{tors}}}
-\newcommand{\tor}[0]{\operatorname{Tor}}
-\newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{{ \text{compact} } }
-\newcommand{\Kah}[0]{{ \text{Kähler} } }
-\newcommand{\oriented}[0]{{ \text{oriented} } }
-\newcommand\compact[0]{\text{cpt}}
-\newcommand\Kahler[0]{\text{Kähler}}
-\newcommand\hyp[0]{\text{hyp}}
-\newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
-\newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
-\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
-\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
-\newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
-\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
-\newcommand{\actsonl}[0]{\curvearrowleft}
-\newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
-\newcommand{\convolve}[0]{\ast}
-\newcommand{\freeprod}[0]{\ast}
 \newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
-\newcommand{\slope}[0]{{\mathrm{slope}}}
-\newcommand{\coker}[0]{\operatorname{coker}}
-\newcommand{\Mor}[0]{\operatorname{Mor}}
-\newcommand{\cone}[0]{\operatorname{cone}}
-\newcommand{\cok}[0]{\operatorname{coker}}
-\newcommand{\PD}[0]{\mathrm{PD}}
-\newcommand{\SNF}[0]{\mathrm{SNF}}
-\newcommand{\JCF}[0]{\mathrm{JCF}}
-\newcommand{\conjugate}[1]{{\overline{{#1}}}}
-\newcommand{\conj}[1]{{\overline{{#1}}}}
-\newcommand{\converges}[1]{\overset{#1}}
-\newcommand{\ctz}[1]{\, {\converges{{#1} \to\infty}\longrightarrow 0} \, }
-\newcommand{\bundle}[1]{\mathcal{#1}}
-\newcommand{\td}[0]{\mathrm{td}}
-\newcommand{\correspond}[1]{\theset{\substack{#1}}}
-\newcommand{\cross}[0]{\times}
-\newcommand{\by}[0]{\times}
-\newcommand{\dash}[0]{{\hbox{-}}}
-\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
-\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
-\newcommand{\definedas}[0]{\coloneqq}
-\newcommand{\da}[0]{\coloneqq}
-\newcommand{\del}[0]{{\partial}}
-\newcommand{\directlim}[0]{\varinjlim}
-\newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\textstyle\coprod}}
-\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
 \newcommand{\Sum}[0]{ \displaystyle\sum }
-\newcommand{\dual}[0]{ {}^{ \vee }}
-\newcommand{\sm}[0]{\setminus}
-\newcommand{\smz}[0]{\setminus\theset{0}}
-\newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{{\varepsilon}}
-\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
-\newcommand{\up}[0]{\uparrow}
-\newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\gs}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\homotopic}[0]{\simeq}
-\newcommand{\injectivelim}[0]{\varinjlim}
-\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\displaystyle\bigcup}
-\newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\into}[0]{\to}
-\newcommand{\inv}[0]{^{-1}}
-\newcommand{\mfa}[0]{{\mathfrak{a}}}
-\newcommand{\mfb}[0]{{\mathfrak{b}}}
-\newcommand{\mfc}[0]{{\mathfrak{c}}}
-\newcommand{\mff}[0]{{\mathfrak{f}}}
-\newcommand{\mfi}[0]{{\mathfrak{I}}}
-\newcommand{\mfm}[0]{{\mathfrak{m}}}
-\newcommand{\mfn}[0]{{\mathfrak{n}}}
-\newcommand{\mfp}[0]{{\mathfrak{p}}}
-\newcommand{\mfq}[0]{{\mathfrak{q}}}
-\newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\mfs}[0]{{\mathfrak{s}}}
-\newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\liel}[0]{{\mathfrak{l}}}
-\newcommand{\lief}[0]{{\mathfrak{f}}}
-\newcommand{\liet}[0]{{\mathfrak{t}}}
-\newcommand{\lieo}[0]{{\mathfrak{o}}}
-\newcommand{\lied}[0]{{\mathfrak{d}}}
-\newcommand{\lier}[0]{{\mathfrak{r}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
-\newcommand{\gl}[0]{{\mathfrak{gl}}}
-\newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\Tensor}[0]{\bigotimes}
+\newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
-\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
-\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
-\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
+\newcommand{\U}[0]{{\operatorname{U}}}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\ZZlocal}[1]{{ \ZZ_{\hat{#1}} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\Zar}[0]{{\mathrm{Zar}}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\abuts}[0]{\Rightarrow}
+\newcommand{\ab}[0]{{\operatorname{ab}}}
+\newcommand{\actsonl}[0]{\curvearrowleft}
+\newcommand{\actson}[0]{\curvearrowright}
+\newcommand{\adjoint}[0]{\dagger}
+\newcommand{\adj}[0]{\operatorname{adj}}
+\newcommand{\ad}[0]{\operatorname{ad}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\annd}[0]{{\operatorname{ and }}}
+\newcommand{\ann}[0]{\operatorname{Ann}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\bP}[0]{\operatorname{bP}}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\bbm}[0]{{\mathbb{M}}}
+\newcommand{\bd}[0]{{\del}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
 \newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\Bun}{{\mathsf{Bun}}}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\by}[0]{\times}
+\newcommand{\candim}[0]{\operatorname{candim}}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\ch}[0]{\operatorname{ch}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
+\newcommand{\coim}[0]{\operatorname{coim}}
+\newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\cone}[0]{\operatorname{cone}}
+\newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\const}[0]{{\operatorname{const.}}}
+\newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\convolve}[0]{\ast}
+\newcommand{\correspond}[1]{\theset{\substack{#1}}}
+\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\cpt}[0]{{ \operatorname{compact} } }
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\dR}[0]{\mathrm{dR}}
+\newcommand{\dV}{\,dV}
+\newcommand{\dash}[0]{{\hbox{-}}}
+\newcommand{\da}[0]{\coloneqq}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
+\newcommand{\ddim}[0]{\operatorname{ddim}}
+\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
+\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
+\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\decreasesto}[0]{\searrow}
+\newcommand{\definedas}[0]{\coloneqq}
+\newcommand{\del}[0]{{\partial}}
+\newcommand{\diagonal}[1]{\Delta}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\directlim}[0]{\varinjlim}
+\newcommand{\discriminant}[0]{{\Delta}}
+\newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\dlog}[0]{\operatorname{dLog}}
+\newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\dr}{\,dr}
+\newcommand{\ds}{\,ds}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\dt}{\,dt}
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
+\newcommand{\dy}{\,dy}
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dz}{\,dz}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\eps}[0]{{\varepsilon}}
+\newcommand{\essdim}[0]{\operatorname{essdim}}
+\newcommand{\et}{\text{ét}}
+\newcommand{\eul}[0]{{\operatorname{eul}}}
+\newcommand{\evalfrom}[0]{\Big|}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\ff}[0]{\operatorname{ff}}
+\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\from}[0]{\leftarrow}
+\newcommand{\gal}[0]{{ \operatorname{Gal}} }
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
+\newcommand{\height}[0]{\operatorname{ht}}
+\newcommand{\homotopic}[0]{\simeq}
+\newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\im}[0]{\operatorname{im}}
+\newcommand{\increasesto}[0]{\nearrow}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\injectivelim}[0]{\varinjlim}
+\newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\interior}[0]{^\circ}
+\newcommand{\intersect}[0]{\cap}
+\newcommand{\into}[0]{\to}
+\newcommand{\inverselim}[0]{\varprojlim}
+\newcommand{\inv}[0]{^{-1}}
+\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\isomorphic}{{ \, \mapsvia{\sim}\, }}
+\newcommand{\iso}{{ \isomorphic  }}
+\newcommand{\kG}[0]{{kG}}
+\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
+\newcommand{\kk}[0]{{\mathbb{k}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\krulldim}[0]{\operatorname{krulldim}}
+\newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
+\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
+\newcommand{\lci}[0]{\mathrm{lci}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\lieg}[0]{{\mathfrak{g}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
-\newcommand{\jacobsonrad}[1]{{{J}\qty{#1} }}
-\newcommand{\jacrad}[1]{{{J}\qty{#1} }}
-\newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
-\newcommand{\fromvia}[1]{\xleftarrow{#1}}
-\newcommand{\mapstovia}[1]{\xmapsto{#1}}
-\newcommand{\ms}[0]{\xrightarrow{\sim}}
-\newcommand{\from}[0]{\leftarrow}
-\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\loc}[0]{{\mathsf{loc}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\mHH}[0]{{\operatorname{HH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
-\newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\diagonal}[0]{\Delta}
-\newcommand{\embeds}[0]{\hookrightarrow}
-\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
-\newcommand{\injectsvia}[1]{\overset{#1}\injects}
-\newcommand{\surjects}[0]{\twoheadrightarrow}
-\newcommand{\Prism}[0]{\mathsf{Prism}}
-\newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\WCart}[0]{\mathsf{WCart}}
-\newcommand{\padic}[0]{p\dash\text{adic}}
-\newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
-}
-\newcommand{\adjoint}[0]{\leftrightarrows}
-\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
-\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
-\newcommand{\MM}[0]{{\mathcal{M}}}
-\newcommand{\OO}[0]{{\mathcal{O}}}
-\newcommand{\OX}[0]{{\mathcal{O}_X}}
-\newcommand{\imaginarypart}[1]{{\mathcal{Im}({#1})}}
+\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\mapstovia}[1]{\xmapsto{#1}}
+\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsfromvia}[1]{\xhookleftarrow{#1}}
+\newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\mat}[0]{\operatorname{Mat}}
+\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
 \newcommand{\mca}[0]{{\mathcal{A}}}
 \newcommand{\mcb}[0]{{\mathcal{B}}}
 \newcommand{\mcc}[0]{{\mathcal{C}}}
@@ -468,224 +356,213 @@
 \newcommand{\mcv}[0]{{\mathcal{V}}}
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
-\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
-\newcommand{\Hsh}{{ \mathcal{H} }}
-\newcommand{\CY}{{ \text{CY} }}
-\newcommand{\FS}{{ \text{FS} }}
-\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Maps}}}
-\newcommand{\Maps}[0]{{\operatorname{Map}}}
+\newcommand{\mfa}[0]{{\mathfrak{a}}}
+\newcommand{\mfb}[0]{{\mathfrak{b}}}
+\newcommand{\mfc}[0]{{\mathfrak{c}}}
+\newcommand{\mff}[0]{{\mathfrak{f}}}
+\newcommand{\mfi}[0]{{\mathfrak{I}}}
+\newcommand{\mfm}[0]{{\mathfrak{m}}}
+\newcommand{\mfn}[0]{{\mathfrak{n}}}
+\newcommand{\mfp}[0]{{\mathfrak{p}}}
+\newcommand{\mfq}[0]{{\mathfrak{q}}}
+\newcommand{\mfr}[0]{{\mathfrak{r}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\mm}[0]{{\mathfrak{m}}}
+\newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\cell}[0]{{ \mathrm{cell}} }
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
+\newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
+\newcommand{\nd}[0]{\operatorname{nd}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
+\newcommand{\noeth}[0]{\mathrm{Noeth}}
+\newcommand{\nonzero}[0]{^{\bullet}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
-\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
+\newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
-\newcommand{\Stab}[0]{{\operatorname{Stab}}}
-\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\oriented}[0]{{ \operatorname{oriented} } }
+\newcommand{\orr}[0]{{\operatorname{ or }}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
+\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
+\newcommand{\poly}[0]{\mathrm{poly}}
+\newcommand{\prim}[0]{{\operatorname{prim}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
+\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
-\newcommand{\Log}[0]{\operatorname{Log}}
-\newcommand{\reg}[0]{\operatorname{Reg}}
+\newcommand{\red}[0]{{ \text{red} }}
+\newcommand{\reg}[0]{\mathrm{reg}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
 \newcommand{\restrictionof}[2]{ {\left.{{#1}} \right|_{{#2}} } }
-\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\rk}[0]{{\operatorname{rank}}}
-\newcommand{\evalfrom}[0]{\Big|}
-\renewcommand{\mod}{\pmod}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
+\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
+\newcommand{\sep}[0]{{ {}^{ \operatorname{sep} } }}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\signature}[0]{\operatorname{sig}}
 \newcommand{\sign}[0]{\operatorname{sign}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
+\newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\sm}[0]{\setminus}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\Jac}[0]{\operatorname{Jac}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{Stk}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
+\newcommand{\surjectsvia}[2][]{ \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\, }
+\newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
-\newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\smashprod}[0]{\wedge}
-\newcommand{\Wedge}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\Extalgebra}[0]{\bigwedge}
-\newcommand{\wedgeprod}[0]{\vee}
-\newcommand{\Wedgeprod}[0]{\bigvee}
-\newcommand{\Vee}[0]{\bigvee}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
-\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
-\newcommand{\ts}[1]{\left\{{#1}\right\}}
-\newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
-\newcommand{\gens}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\thevector}[1]{{\left[ {#1} \right]}}
-\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\thinrank}[0]{T_n\dash\operatorname{rank}}
 \newcommand{\too}[1]{{\xrightarrow{#1}}}
+\newcommand{\tors}[0]{{\operatorname{tors}}}
+\newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\transverse}[0]{\pitchfork}
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
 \newcommand{\trianglerightneq}{\mathrel{\ooalign{\raisebox{-0.5ex}{\reflectbox{\rotatebox{90}{$\nshortmid$}}}\cr$\triangleright$\cr}\mkern-3mu}}
-\newcommand{\tr}[0]{\operatorname{Tr}}
+\newcommand{\tr}[0]{{\mathrm{tr}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\ts}[1]{\left\{{#1}\right\}}
+\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\txor}[0]{{\operatorname{ or }}}
+\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
+\newcommand{\type}[0]{{\operatorname{type}}}
 \newcommand{\uniformlyconverges}[0]{\rightrightarrows}
-\newcommand{\abuts}[0]{\Rightarrow}
-\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\union}[0]{\cup}
+\newcommand{\unital}[0]{{\operatorname{unital}}}
 \newcommand{\units}[0]{^{\times}}
-\newcommand{\nonzero}[0]{^{\bullet}}
+\newcommand{\up}[0]{\uparrow}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
+\newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
+\newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
+\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
+\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
+\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
+
+\renewcommand{\AA}[0]{{\mathbb{A}}}
+\renewcommand{\SS}[0]{{\mathbb{S}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\renewcommand{\det}{\operatorname{det}}
 \renewcommand{\div}[0]{\operatorname{Div}}
-\newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Frac}[0]{\operatorname{Frac}}
-\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
-\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
-\newcommand{\fourier}[1]{\widehat{#1}}
+\renewcommand{\labelitemiii}{$\diamondsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
+\renewcommand{\mod}{\pmod}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
-\newcommand{\complex}[1]{{#1}_{*}}
-\newcommand*\dif{\mathop{}\!\operatorname{d}}
-\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
-\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
-\renewcommand{\labelitemiii}{$\diamondsuit$}
-\renewcommand{\labelitemiv}{$\diamondsuit$}
-\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
-\newcommand\rref{\operatorname{RREF}}
-\newcommand{\interior}[0]{^\circ}
-\newcommand{\increasesto}[0]{\nearrow}
-\newcommand{\decreasesto}[0]{\searrow}
-\newcommand\jan{\operatorname{Jan}}
-\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
-\newcommand\TMF{ \mathrm{TMF} }
-\newcommand\TAF{ \mathrm{TAF} }
-\newcommand\tmf{ \mathrm{tmf} }
-\newcommand\taf{ \mathrm{taf} }
-\newcommand\Fix{ \mathrm{Fix} }
-\newcommand\kbar{ { \bar{k} } }
-\newcommand\ksep{ { k\sep } }
-\newcommand\tilt[0]{ { \flat } }
 
-\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
-\DeclareMathOperator{\submfds}{SubMfds}
+\DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\aut}{Aut}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\BiHol}{BiHol}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Curv}{Curv}
 \DeclareMathOperator{\Deck}{Deck}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Endo}{End}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\eq}{=}
-\DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
-\DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\Hol}{Hol}
-\DeclareMathOperator{\Bun}{Bun}
-\DeclareMathOperator{\BiHol}{BiHol}
-\DeclareMathOperator{\Br}{Br}
-\DeclareMathOperator{\coh}{coh}
-\DeclareMathOperator{\colspace}{colspace}
-\DeclareMathOperator{\rowspace}{rowspace}
-\DeclareMathOperator{\codom}{codom}
-\DeclareMathOperator{\range}{range}
-\DeclareMathOperator{\nullspace}{nullspace}
-\DeclareMathOperator{\nullity}{nullspace}
-\DeclareMathOperator{\projection}{Proj}
-\DeclareMathOperator{\Der}{Der}
-\DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
-\DeclareMathOperator{\D}{{\mathsf{D} }}
-\DeclareMathOperator{\K}{{\mathsf{K} }}
-\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
-\DeclareMathOperator{\T}{{T}}
-\DeclareMathOperator{\Rd}{{\mathbb{R} }}
-\DeclareMathOperator{\Ld}{{\mathbb{L} }}
-\DeclareMathOperator{\Bl}{Bl}
-\DeclareMathOperator{\Triv}{Triv}
-\DeclareMathOperator{\Tot}{Tot}
 \DeclareMathOperator{\Forget}{Forget}
-\DeclareMathOperator{\Griff}{Griff}
-\DeclareMathOperator{\Symb}{Symb}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\U}{U}
-
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-\newcommand{\B}[0]{{\mathsf{B}}}
-\newcommand{\globsec}[1]{{\mathsf{\Gamma}\qty{#1} }}
-
-\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
-
-\newcommand{\Lie}[0]{\operatorname{Lie}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
-\newcommand{\cl}[0]{{ \operatorname{cl}} }
-\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\Crit}[0]{\operatorname{Crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\Diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Places}[0]{{\operatorname{Places}}}
-
-\DeclareMathOperator{\hilb}{Hilb}
-\DeclareMathOperator{\Curv}{Curv}
-
-\DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\Frame}{Frame}
-\DeclareMathOperator{\OFrame}{OFrame}
-\DeclareMathOperator{\UFrame}{UFrame}
-\DeclareMathOperator{\prin}{prin}
-\DeclareMathOperator{\Prin}{Prin}
-\DeclareMathOperator{\Taut}{Taut}
-
 \DeclareMathOperator{\Frob}{Frob}
-
-\DeclareMathOperator{\hd}{Head}
-\DeclareMathOperator{\soc}{Soc}
-\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\coInd}{coInd}
-\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\Map}{Maps}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
 \DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\cores}{cores}
-\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Taut}{Taut}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\coind}{coInd}
 \DeclareMathOperator{\coinfl}{coinf}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\submfds}{SubMfds}
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-  \newcommand{\delbar}[0]{{ \bar{\del}}}
-
-
+\newcommand{\delbar}[0]{{ \bar{\del}}}
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
 \newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathsf{#1}}
 \newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\rightderive}[0]{{\mathbf{R}}}
 
 \newcommand\rrarrows{\rightrightarrows}
 \newcommand\rrrarrows{
@@ -694,7 +571,6 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\ul[1]{\underline{#1}}
@@ -714,11 +590,13 @@
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\closure[1]{\overline{#1}}
 \newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
+\newcommand\laurent[1]{{\left(\left( #1 \right)\right)  }}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
 \newcommand\gradient{\nabla}
 
+\newcommand\cechH[0]{{\check{H}}}
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
 \newcommand\cupp[0]{\smile}
@@ -727,84 +605,127 @@
 \newcommand\ev[0]{\operatorname{ev}}
 \newcommand\coev[0]{\operatorname{coev}}
 
-\newcommand{\RM}[1]{%
-  \textup{\uppercase\expandafter{\romannumeral#1}}%
-}
-
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
-\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\tselts[2]{{ \theset{ {#1}_1, {#1}_2, \cdots, {#1}_{#2} } }}
+\newcommand\fiberproduct[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\fiberprod[1]{{ \fiberproduct{#1} }}
+\newcommand\fprod[1]{{ \fiberproduct{#1} }}
+\newcommand\smallprod[0]{{ \scriptscriptstyle\prod }}
+\newcommand\sumpower[1]{{ {}^{ \scriptscriptstyle\oplus^{#1} }  }}
+\newcommand\prodpower[1]{{ {}^{ \scriptscriptstyle\times^{#1} }  }}
+\newcommand\tensorpower[2]{{ {}^{ \scriptstyle\otimes_{#1}^{#2} }  }}
+\newcommand\derivedtensorpower[3]{{ {}^{ \scriptstyle {}_{#1} {\otimes_{#2}^{#3}} }  }}
+\newcommand\smashpower[1]{{ {}^{ \scriptscriptstyle\smashprod^{#1} }  }}
 
-
+\newcommand{\Tot}[0]{{ \operatorname{Tot} }}
 \newcommand{\Totsum}[0]{\Tot^{\oplus}}
 \newcommand{\Totprod}[0]{\Tot^{\Pi}}
-\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
-\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
-\newcommand{\congas}[1]{\underset{#1}{\cong}}
-\newcommand{\isoas}[1]{\underset{#1}{\cong}}
-\newcommand{\weakeq}[1]{\underset{#1}{\to}}
-\newcommand{\addbase}[1]{{ {}_{\pt} }}
-\newcommand{\ideal}[1]{\mathcal{#1}}
-\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
-\newcommand{\powerseries}[1]{ { \left[ {#1} \right] } }
-\newcommand{\formalpowerseries}[1]{ { \left[\left[ {#1} \right] \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
-
-
-
-\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
-\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 \newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
-\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
-\newcommand{\Ag}[0]{{\mathcal{A}_g}}
-\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
-
-\newcommand{\matt}[4]{{
-\begin{bmatrix}
-#1 & #2 
-\\
-#3 & #4
-\end{bmatrix}
-}}
-
 
 \newcommand{\Loop}[0]{{\Omega}}
 \newcommand{\Loopinf}[0]{{\Omega}^\infty}
 \newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\can}[0]{{\mathrm{can}}}
 \newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\qproj}[0]{{\mathrm{qproj}}}
 \newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\semisimple}[0]{{\operatorname{ss}}}
 \newcommand{\gon}[0]{{\dash\mathrm{gon}}}
 \newcommand{\semi}[0]{{\operatorname{semi}}}
 \newcommand{\inc}[0]{{\operatorname{inc}}}
 \newcommand{\Ball}[0]{{B}}
 \newcommand{\hq}[0]{{/}}
-\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
-\newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
-\newcommand{\realize}[1]{{ \abs{#1} }}
-\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
 \newcommand{\crys}[0]{{\mathrm{crys}}}
 \newcommand{\Xff}[0]{{X_\mathrm{FF}}}
 \newcommand{\an}[0]{{\mathrm{an}}}
+\newcommand{\Nis}[0]{{\mathrm{Nis}}}
+\newcommand{\perf}[0]{{\mathrm{perf}}}
+
+\newcommand{\quillenplus}[0]{{ {}^{+} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
+\newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
+\newcommand{\realize}[1]{{ \abs{#1} }}
+
+\newcommand{\localize}[1]{ \left[ { \scriptstyle #1\inv } \right]}
+\newcommand{\sheafify}[1]{ \left( #1 \right)^{\scriptscriptstyle \mathrm{sh}} }
+\newcommand{\complete}[1]{{ {}_{ \hat{#1} } }}
+\newcommand{\takecompletion}[1]{{ \overbrace{#1}^{\widehat{\hspace{4em}}}  }}
+\newcommand{\twistleft}[2]{{ {}^{#1} #2 }}
+\newcommand{\twistright}[2]{{ #2 {}^{#1} }}
+\newcommand{\liesover}[1]{{ {}_{/ {#1}} }}
+\newcommand{\liesabove}[1]{{ {}_{/ {#1}} }}
+\newcommand{\slice}[1]{_{/ {#1}} }
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
 
 
-\newcommand{\localize}[1]{ \left[ {#1}\inv \right]}
-\newcommand{\complete}[1]{{}^{\hat{}}_{#1}}
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\E}[0]{{\mathsf{E}}}
+\newcommand{\T}[0]{{\mathsf{T}}}
+\newcommand{\K}[0]{{\mathsf{K}}}
+\newcommand{\G}[0]{{\mathsf{G}}}
+%\newcommand{\H}[0]{{\mathsf{H}}}
+\newcommand{\D}{{ \mathsf{D} }}
+\newcommand{\mH}{{ \mathsf{H} }}
+\newcommand{\BGL}[0]{ \mathsf{B}\mkern-3mu \operatorname{GL} }
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\newcommand{\fourcase}[4]{
+\begin{cases}{#1} & {#2} \\ {#3} & {#4}\end{cases} 
+}
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+  {#1} & {#2} 
+\\
+  {#3} & {#4}
+\end{bmatrix}
+}}
+\newcommand{\mattt}[9]{{
+\begin{bmatrix}
+  {#1} & {#2} & {#3}
+\\
+  {#4} & {#5} & {#6}
+\\
+  {#7} & {#8} & {#9}
+\end{bmatrix}
+}}
+
+\newcommand\stacksymbol[3]{
+  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
+  $\scriptscriptstyle#2$}}
+}
+\newcommand{\textoperatorname}[1]{
+  \operatorname{\textnormal{#1}}
+}
+
+
+
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 # Topics and Remarks 2
 
@@ -3450,26 +3371,21 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 
 
 
-# Field Theory
+# Field Theory: Basics
 
 :::{.remark}
 Galois is defined as **normal and separable**.
 :::
-
-:::{.fact}
-\envlist
-- All fields are simple rings (no proper nontrivial ideals).
-  - Thus every field morphism is either zero or injective.
-- The characteristic of any field $k$ is either 0 or $p$ a prime.
-- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
-:::
-
 
 ## Basics: Polynomials
 
 :::{.definition title="Reducible and Irreducible Polynomials"}
 For $\FF$ a field, a polynomial $f\in \FF[x]$ is **reducible** if and only if $f$ can be factored as $f(x) = g(x) h(x)$ for some $g, h\in \FF[x]$ with $\deg g, \deg h \geq 1$ (so $g, h$ are nonconstant).
 $f$ is **irreducible** if $f$ is not reducible.
+:::
+
+:::{.definition title="Primitive Polynomials"}
+For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
 
 :::{.theorem title="Eisenstein's Criterion"}
@@ -3488,10 +3404,6 @@ Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $
 
 :::{.corollary}
 A primitive polynomial $p\in \QQ[x]$ is irreducible $\iff p$ is irreducible in $\ZZ[x]$.
-:::
-
-:::{.definition title="Elementary Symmetric Functions"}
-\todo[inline]{todo}
 :::
 
 ## Definitions
@@ -3530,7 +3442,7 @@ The prime subfield of any field is isomorphic to either $\QQ$ or $\FF_p$ for som
 :::{.definition title="Embeddings and Lifts"}
 Let $k$ denote a field, and $L/k$ extension.
 Every field morphism is an embedding (injection).
-An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
+An **embedding** of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism over $k$, i.e. a field morphism that restricts to the identity on $k$:
 
 
 \begin{tikzcd}
@@ -3544,12 +3456,12 @@ An *embedding* of $k\dash$algebras $L\embeds L'$ will refer to any ring morphism
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzIsMCwiTCciXSxbMSwyLCJrIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
 
-More generally, we can ask for lifts of any map $\sigma: k\to k_\sigma$:
+More generally, we can ask for lifts of any map $\sigma: k\to k'$:
 
 \begin{tikzcd}
 	L && {L'} \\
 	\\
-	k && {k_\sigma}
+	k && {k'}
 	\arrow[""{name=0, anchor=center, inner sep=0}, hook, from=1-1, to=1-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, "\sigma", hook, from=3-1, to=3-3]
 	\arrow[hook, from=3-1, to=1-1]
@@ -3568,65 +3480,97 @@ The following are equivalent:
 
 - $k$ is a **perfect** field.
 
+- If $\ch k > 0$, the Frobenius is an automorphism of $k$, so $k^p = k$.
+
 - Every finite extension $F/k$ is separable.
 
-- If $\ch k > 0$, the Frobenius is an automorphism of $k$.
-
-- Every irreducible polynomial $p\in k[x]$ is separable
+- Every irreducible polynomial $p\in k[x]$ is separable.
 
 :::
 
-:::{.proposition title="Irreducible implies separable for perfect fields"}
-\todo[inline]{todo}
-
+:::{.example title="of a non-perfect field"}
+Example of a non-perfect field: $\FF_p(t)$.
+Use that $f(x) \da x^p - t$ is irreducible in $\FF_p(t)[x]$ but not separable.
 :::
 
-:::{.definition title="Numerical Invariants"}
-\envlist
+:::{.proposition title="Characterization of perfect fields"}
+$k$ is perfect (using the irreducible implies separable condition) if either 
 
-- \[
-[L: K] = \dim_{\Vect_K} L
-,\] 
-  the dimension of $L$ as a $K\dash$vector space
-- \[ \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K } ,\] the lifts of the identity on $K$.
-- \[ \ts{ L: K } \da \# \Aut(L/k) \da \ts{ \sigma: L \to L' \st \ro{\sigma}{K} = \id_K} ,\] the number of lifts of the identity on $K$.
-- \[
-\Gal(E/F) \da \Aut_{\Fieldsover{k} }
-,\]
-  if $E$ is finite, normal, and separable.
-
+- $\ch k = 0$ or 
+- $\ch k = p > 0$ and $k^p = k$.
 :::
 
-:::{.remark title="on general inequality"}
-Note that in general, 
+:::{.proof title="?"}
+For $\ch k = 0$, use that irreducible implies separable.
+
+For $\ch k = p$, show that $k_p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
+
+- Supposing $k^p\neq k$, choose $a\in k$ not a $p$th power.
+- Note that $f(x) \da x^p-a$ has only one root in $\bar{k}$: in a splitting field, any root $r$ satisfies $r^p=a$, so 
 \[
-\abs{ \Aut(L/k) } \leq [L: K]
+x^p - a = x^p - r^p = (x-r)^p
+.\]
+
+- Note $f$ is irreducible: its only possible divisors are $(x-r)^m$ for $m \leq p$.
+  Expanding yields 
+  \[
+(x-r)^m = \sum_{k=0}^m {m\choose k} x^{m-k} (-r)^{k} = x^m + {m\choose 1} x^{m-1} (-r)^m + \cdots
+  ,\]
+  so the coefficient of $x^{m-1}$ is $-mr \in k$.
+
+- Thus if $(x-r)^m$ has a nontrivial divisor in $k[x]$ then $m$ must be in $k\units$, forcing $r\in k$.
+  But then $r^p = a\in k$, $\contradiction$.
+
+:::
+
+:::{.remark title="Numerical Invariants"}
+Let $K/k$ be an extension.
+
+\[
+[K: k] = \dim_{\Vect_k} K
+\] 
+is the dimension of $K$ as a $k\dash$vector space.
+Automorphisms of fields over $K$ are defined as
+
+\[ 
+\Aut_{\Fieldsover{k}}(K) \da \Aut(K/k) \da \ts{ \sigma: K \to K' \st \ro{\sigma}{k} = \id_k } 
+, \] 
+so lifts of the identity on $k$, and 
+\[
+\ts{K:k} \da \# \Aut(K/k)
+.\]
+
+If $K/k$ is finite, normal, and separable,
+\[
+\Gal(K/k) \da \Aut(K/k)
 ,\]
+where in general
+\[
+\ts{K: k} \leq [K: k]
+\]
 with equality when $L/k$ is Galois.
 
 :::
 
-### Extensions
+
+# Field Theory: Extensions and Towers
 
 :::{.definition title="Simple Extensions"}
 An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
-:::
-
-:::{.definition title="Primitive Extension"}
-For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
 
 :::{.definition title="Algebraic Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
-## Extensions
+## Distinguished Classes
+
+> See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
 :::{.definition title="Distinguished Classes"}
 A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
-1. For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K, K/k\in \mathcal{S}$, and
-2. Lifts of distinguished extensions are distinguished: if $K/k\in \mathcal{S}$ and $L/k$ is any extension, then $LK/k \in \mathcal{S}$:
+1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K \in \mcs$ (upper transitivity) and $K/k\in \mathcal{S}$ (lower transitivity):
 
 \begin{tikzcd}
 	L &&&& L \\
@@ -3645,36 +3589,59 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
 
+2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/L \in \mathcal{S}$:
+
+\begin{tikzcd}
+	& LK \\
+	L && K \\
+	& k
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=3-2, to=2-3]
+	\arrow[hook', from=3-2, to=2-1]
+	\arrow["\therefore", draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+
+3. (Compositing property)
+Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
+
 \begin{tikzcd}
 	& LK \\
 	L && K \\
 	& k
 	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
-	\arrow[hook', from=3-2, to=2-1]
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook', from=3-2, to=2-1]
 	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=2-1, to=1-2]
 	\arrow[hook, from=2-3, to=1-2]
+	\arrow["\therefore", color={rgb,255:red,214;green,92;blue,92}, dashed, from=3-2, to=1-2]
 \end{tikzcd}
 
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=)
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMywiXFx0aGVyZWZvcmUiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV1d)
 
-Note that if in addition $L/k\in \mathcal{S}$, then $LK/k \in \mathcal{S}$.
 
 > Supposed to think of $LK/L$ as a lift of $K/k$.
 
 :::
 
 :::{.example title="of distinguished classes"}
+The following classes of extensions are distinguished:
 
-- Algebraic extensions are distinguished.
-- Finite extensions are distinguished.
-- Separable extensions are distinguished.
-- Normal extensions are *not* distinguished, but condition 2 holds: lifts of normal extensions are normal.
-  Half of the forward implication of condition 1 holds: if $L/k$ is normal, then $L/K$ is normal.
-  - Why: take $\QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ$, each leg is normal since it's quadratic, but the overall extension misses complex roots.
-  Similar issue for $\QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ$, where now the bottom extension isn't normal.
+- Algebraic.
+- Finite.
+- Separable.
+- Purely inseparable.
+- Finitely generated.
+- Solvable.
 :::
 
-### Normal Extensions
+:::{.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
+
+For $L/F/k$: $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
+:::
+
+## Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
 Let $L/k$ be an extension.
@@ -3682,91 +3649,293 @@ Then TFAE:
 
 - $L/k$ is **normal**.
 
-- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$
+- Every irreducible polynomial $f\in k[x]$ that has one root in $L$ has *all* of its roots in $L$, and thus splits in $L[x]$.
   - So if $\alpha\in L$ then every Galois conjugate $\alpha_k \in L$ as well..
    Thus either $f$ splits in $L$ or $f$ has no roots in $L$.
 
-- Every embedding $\sigma: L \injects \bar{k}$ over $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ over $k$.
+:::
 
-- If $L$ is separable and finite: $L$ is the splitting field of some irreducible $f\in k[x]$.
+:::{.proposition title="Characterization of normal algebraic extensions"}
+If $L/k$ s algebraic, then $L/k$ is normal iff every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
+:::
+
+:::{.definition title="Normal Closure"}
+If $K/k$ is algebraic, then there is an extension $N_k/K$ such that $N_k/k$ is normal and $N_k/K/k$ is a tower.
+:::
+
+:::{.proposition title="Characterization of finite normal extensions as splitting fields"}
+An extension $L/k$ is finite and normal $\iff L$ is the splitting field of some polynomial $f\in k[x]$.
+:::
+
+:::{.proof title="?"}
+$\implies$:
+
+- Write $L = k(a_1, \cdots, a_n)$ by finiteness.
+- Let $m_i$ be the minimal polynomials of the $a_i$.
+- By normality, the $m_i$ split in $L[x]$.
+- Then $L$ is the splitting field of $f(x) \da \prod_i m_i(x)$.
+
+$\impliedby$:
+
+- Suppose $L/k = \SF(f)$, and pick any monic $m\in L[x]^{\irr}$ with a root $a\in L$, so that $m$ is the minimal polynomial of $a$.
+- Toward showing $m$ splits in $L$: let $M = \SF(m)$, we'll show $M=L$.
+- To show that for any root $b\in M$ we have $b\in L$, it suffices to show $[L(b): L] = 1$.
+
+  The strategy: use that $[L(a):L] = 1$ since $a\in L$ by assumption, and try to relate the two degrees.
+
+- We have $L/k$, and a number of towers to work with:
+\[
+[L(a):k] &= [L(a): k(a)] [k(a): k] &= [L(a) : L] [L: k] \\ \\
+[L(b):k] &= [L(b): k(b)] [k(b): k] &= [L(b) : L] [L: k]
+.\]
+
+- In the first set of equalities, note that $k(a)\slice{k} \cong k(b)\slice{k}$ since $a,b$ are conjugate roots over $k$.
+  Moreover $L(a)\slice{k(a)} \cong L(b) \slice{k(b)}$ since both are splitting fields for $f$.
+
+- Thus $[L(a):k] = [L(b): k]$, which forces $[L(a): L] = [L(b): L]$ after dividing by $[L:k]$.
+  But $[L(a): L] = 1$.
+
 :::
 
 :::{.example title="of normal extensions"}
 \envlist
 
-- If $[L: k] = 2$ then $L/k$ is normal.
-- $L \da \QQ(2^{1\over 3})$ is not normal, since $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2$ not in $L \subset \RR$.
-  - $L \da \QQ(2^{1\over 4})$ is not normal for the same reason.
+- Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
+
+- Useful trick: if $L/K/k$, then $K/k$ is normal iff $\Gal(L/K) \normal \Gal(L/k)$.
+
+- $K \da \QQ(2^{1\over 3})$ is not normal, since $K\subset \RR$ but $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2 \in \CC$.
+  - Another reason: an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
+
+- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
+
+- $L \da \QQ(2^{1\over 4})$ is not normal, since it is finite but not the splitting field of any polynomial.
+
 - $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
+
+
+- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
+  This has finite degree $p^2$ but infinitely many subfields?
+
+:::
+
+:::{.corollary title="?"}
+$E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
+
+
+
+\begin{tikzcd}
+	&& {E_1 E_2} \\
+	\\
+	{E_1} &&&& {E_2} \\
+	&& {E_1 \cap E_2} \\
+	\\
+	\\
+	&& {k}
+	\arrow["{\text{normal}}", from=3-5, to=7-3]
+	\arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
+	\arrow["{\text{normal}}"', from=3-1, to=7-3]
+	\arrow[from=1-3, to=3-1, no head]
+	\arrow[from=1-3, to=3-5, no head]
+	\arrow[from=1-3, to=4-3, no head]
+	\arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
+	\arrow[from=3-1, to=4-3, no head]
+	\arrow[from=4-3, to=3-5, no head]
+\end{tikzcd}
+
+> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
+
+:::
+
+:::{.proposition}
+$\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
+:::
+
+### Issues with Normal Towers
+
+:::{.warnings}
+Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity.
+However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
+:::
+
+:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
+One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
+\[
+L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
+.\]
+Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
+
+Another example: let $L/k$ be any algebraic extension that isn't normal, and take $N_k$ to be the normal closure to get $N_k/L$. 
+Concretely, $N_\QQ / \QQ(2^{1\over 3})/\QQ$ works.
+:::
+
+:::{.example title="Normal extensions are not transitive: failure of reverse implication"}
+One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
+take 
+\[
+L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
+.\]
+Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
+:::
+
+:::{.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
+For $L/k$ finite,
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \implies && K \\
+	\\
+	k &&&& k
+	\arrow[from=3-1, to=1-1]
+	\arrow[from=5-1, to=3-1]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
+	\arrow[from=5-5, to=3-5]
+	\arrow[from=3-5, to=1-5]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
+
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Use the fact that for finite extensions, $L/k$ is normal and separable $\iff L$ is the splitting field of a separable polynomial $f\in k[x]$.
+- Now regard $f$ as a polynomial in $K[x]$; then $L$ is still the splitting field of $f$ over $K$, done.
+
+Alternatively,
+
+- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
+- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
+- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
+- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
+  Since $m'$ splits in $L$, so must $m$.
+
+:::
+
+:::{.proposition title="Normal extensions are upper transitive, forward implication (general case)"}
+If $L/K/k$ with $L/k$ normal, then $L/K$ is normal.
+:::
+
+:::{.proof title="?"}
+Use the embedding characterization, it suffices to show that every embedding $\sigma: $
+Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
+Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
 
 
-:::{.proposition title="?"}
-For $L/k$ finite, $L$ is normal iff $L = \SF(f)$ is the splitting field for some $f\in k[x]$.
+## Separable Extensions
+
+:::{.definition title="Separable polynomials"}
+A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
-### Separable Extensions
+:::{.proposition title="Separability test: $\gcd$ with derivative"}
+$f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
+Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
+:::
+
+:::{.proof title="of separability test"}
+$\not\implies$:
+Suppose $f$ has a repeated root $r_i$, so its multiplicity is at least 2.
+Then 
+\[
+f(x) = (x-r)^2 g(x) \implies f'(x) = 2(x-r)g(x) + (x-r)^2g'(x)
+,\]
+so $r$ is a root of $f'$.
+
+$\not\impliedby$:
+Suppose $r$ is a root of $f, f'$.
+Write $f(x) = (x-r)p(x)$ and $f'(x) = (x-r)p'(x) + p(x)$.
+Rearranging, $f'(x) - (x-r)p'(x) = p(x)$, and since $r$ is a root of the LHS it's a root of the RHS.
+So $p(x) = (x-r) q(x)$ and $f(x) = (x-r)^2 q(x)$, making $r$ a repeated root.
+:::
+
+:::{.proposition title="Separability test: identically zero derivative"}
+$f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \equiv 0$.
+:::
+
+:::{.proof title="of separability test"}
+Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
+So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
+Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
+:::
+
+:::{.example title="of separable and inseparable polynomials"}
+\envlist
+
+- $x^2-2$ is separable over $\QQ$, but inseparable over $\FF_2$.
+- $(x^2-2)^2$ is inseparable over $\QQ$
+- $x^2-t$ is inseparable over $\FF_2(t)$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
+- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
+  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
+- If $\ch k=0$, then irreducible $\implies$ separable.
+
+:::
+
+:::{.corollary title="Inseparable iff polynomial in characteristic powers"}
+If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
+:::
+
+:::{.proof title="of inseparable characterization"}
+$\implies$:
+
+Use that $f$ is inseparable iff $f' \equiv 0$.
+The claim is that $f' \equiv 0$ in characteristic $p$ iff all exponents present in $f$ are divisible by $p$.
+If $f'\equiv 0$, write
+\[
+f(x) &= a_nx^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\
+\implies f'(x) &= na_nx^{n-1} + (n-1)a_{n-1}x^{n-2} + \cdots + a_1 \\
+&\equiv 0
+,\]
+which forces $i a_i = 0$ for all $i$.
+For any $a_i\neq 0$, this forces $i\equiv 0 \mod p$, so $a_i$ can only be nonzero when $p\divides i$, so $i=kp$ for some $k$.
+So reindex to write
+\[
+f(x) = a_0 + a_1x^p + a_2x^{2p} + \cdots + a_n x^{np} = \qty{b_0 + b_1 x + b_2 x^{2} + \cdots + b_nx^{n}}^p \in \bar{k}[x]
+,\]
+using $(c+d)^p = c^p + d^p$ in characteristic $p$, and taking $b_i \da a_i^{1\over p} \in \bar{k}$
+So $f' \equiv 0\implies f(x) = q(x^p)$ where $q(t) \da \sum b_i t^i$.
+
+$\impliedby$:
+If $f(x) = q(x^p)$ for some $q$, the previous calculation shows $q$ has multiple roots, thus so does $f$, so $f$ is inseparable.
+:::
 
 :::{.definition title="Separable Field Extension"}
 Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
 The following are equivalent 
 
 - $L/k$ is a **separable** extension.
-- Every element ${\alpha} \in L$ is separable over $k$: $\alpha$ has separable minimal polynomial $\min_{\alpha, L}(x) \in \bar{k}[x]$ (D&F's definition, p. 551).
-- $f$ has no repeated factors/roots, i.e. $f$ has no multiple roots in $L$.
-- $\gcd(f, f') = 1$.
-- $f' \not\equiv 0$
+- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
 - Every finite subextension $L'/k$ is separable.
+:::
 
+:::{.fact}
+Every irreducible polynomial is separable in characteristic zero.
+
+:::
+
+:::{.fact}
+If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::
+
+:::{.proposition title="Simplifications of separability for finite extensions"}
 If $L/k$ is a finite extension, then, TFAE:
 
 - $L/k$ is separable.
 - \( L = k( \alpha) \) for \( \alpha \)  a separable element.
-- \( L = k( \ts{ \alpha_i } ) \) for \( \alpha_i \) separable elements
-- $[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)$, the number of automorphisms over $k$.
+- \( L = k( S ) \) for \( S \) some set of separable elements
 - $[L: K] = [L:K]_s$, the separable degree.
-
+\[
+[L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
+.\] 
 :::
 
-:::{.definition title="Separable degree"}
-Recall that a polynomial $p\in k[x]$ is **separable** if $p$ has no multiple roots in $\bar{k}$
-The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ and letting $[L:k]_s$ be the number of lifts of $\sigma$ to $\sigma':L\to \bar{k}$:
-
-\begin{tikzcd}
-	L && {\bar{k}} \\
-	\\
-	& k
-	\arrow["\sigma"', hook, from=3-2, to=1-3]
-	\arrow[dashed, hook, from=1-1, to=1-3]
-	\arrow[hook', from=3-2, to=1-1]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMSwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzAsMSwiXFxzaWdtYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
-
-:::
-
-:::{.proposition title="Derivative criterion for separability"}
-A polynomial $f$ has multiple roots $\iff \gcd(f, f') \neq 1$, and the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
-:::
-
-:::{.proof title="?"}
-$\implies:$:
-Write $f(x) \da (x-a)^m g(x)$ with $m\geq 2$, then 
-\[
-f'(x) = m(x-a)^{m-1}g(x) + (x-a)^mg'(x)
-\]
-and $(x-a)$ divides both factors.
-
-$\notimplies$:
-If $f$ has no multiple roots, $f(x) = \prod_i (x-a_i)$ and 
-\[
-f'(x) = \sum_j \prod_{i\neq j}(x-a_i)
-.\]
-Then fixing any $a_k$ where $f(a_k) = 0$, check 
-\[
-f'(a_k) = \prod_{i\neq k}(x-a_i)\neq 0
-.\]
-
+:::{.fact}
+A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
 
 :::{.proposition title="Separable splitting fields are Galois"}
@@ -3781,17 +3950,130 @@ If $L/k$ is a splitting field, then
 
 :::
 
-:::{.proposition title="?"}
-Irreducible polynomials have distinct roots after passing to a splitting field, i.e. irreducible polynomials have separable splitting fields.
+:::{.proposition title="Irreducible polynomials have separable splitting fields"}
+Irreducible polynomials have distinct roots after passing to a splitting field.
 :::
 
-### Galois Extensions
+:::{.proposition title="Algebraic extensions of perfect fields are separable"}
+If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
+:::
+
+:::{.proposition title="Irreducible implies separable for perfect fields"}
+If $k$ is a perfect field, then every irreducible $f\in k[x]^{\irr}$ is automatically separable.
+:::
+
+:::{.proof title="?"}
+If $\ch k = 0$ and $f$ is irreducible, then since $\deg f' < \deg f$ and $f$ is irreducible we must have $\gcd(f, f')=1$ and $f$ is separable.
+
+If $\ch k = p>0$, then if $f$ is irreducible and inseparable then $f(x) = g(x^p)$ for some $g$.
+Write $g(x) = \sum a_k x^k$, and since $k$ is perfect, write $b_k \da a_k^{1\over p}$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} = \qty{\sum b_k x^k}^p
+,\]
+so $f$ is reducible. $\contradiction$.
+
+:::
+
+:::{.definition title="Separable degree"}
+The **separable degree** of an extension $L/k$ is defined by fixing an embedding $\sigma: k\embeds \bar{k}$ (the algebraic or separable closure) and letting $[L:k]_s$ be the number of embeddings $\sigma':L\to \bar{k}$:
+
+\begin{tikzcd}
+	L && {\bar{k}} \\
+	\\
+	k && k
+	\arrow["{\sigma'}", dashed, hook, from=1-1, to=1-3]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow["\sigma"', hook, from=3-3, to=1-3]
+	\arrow[Rightarrow, no head, from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwyLCJrIl0sWzIsMCwiXFxiYXJ7a30iXSxbMCwwLCJMIl0sWzIsMiwiayJdLFsyLDEsIlxcc2lnbWEnIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMywxLCJcXHNpZ21hIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
+
+:::
+
+:::{.proposition title="Separability is transitive."}
+If $L/K/k$, then $L/K$ is separable and $K/k$ is separable $\iff$ $L/k$ is separable.
+:::
+
+:::{.proof title="?"}
+$\impliedby$:
+
+- By definition, every $\alpha \in L$ is separable over $k$.
+- $K/k$ is separable:
+  - Since $K \subseteq L$, any $\alpha \in K$ is also separable over $k$.
+- $L/K$ is separable:
+  - If $\alpha \in L$, then $\min_{\alpha, k}(x)$ is a separable polynomial over some splitting field.
+  - Use that $L/k$ implies $\min_{\alpha, L}(x)$ divides $\min_{\alpha, k}(x)$, so the former is separable, done.
+
+$\implies$:
+
+- Now use that the separable degree is multiplicative in towers.
+- If all extensions in sight are **finite**, this direction is immediate:
+\[
+[L:k]_s = [L:K]_s [K:k]_s = [L:K][K:k] = [L:K]
+.\]
+
+- For the infinite case, want to show every $\alpha\in L$ is separable over $k$.
+  It suffices to show $\alpha$ is contained in some finite separable subextension.
+  The strategy:
+
+\begin{tikzcd}
+	\alpha\in & L \\
+	&&& {k(\alpha, S)} & {\ni \alpha} \\
+	{f\in K[x]} & K \\
+	&&& {F\da k(\alpha, S) \intersect K} & {f\in F[x]} \\
+	& k
+	\arrow["s"', hook, from=5-2, to=4-4]
+	\arrow["s"', hook, from=4-4, to=2-4]
+	\arrow["s", hook', from=3-2, to=1-2]
+	\arrow[hook', from=4-4, to=3-2]
+	\arrow["s", hook', from=5-2, to=3-2]
+	\arrow[hook', from=2-4, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMSwwLCJMIl0sWzEsMiwiSyJdLFsxLDQsImsiXSxbMywzLCJGXFxkYSBrKFxcYWxwaGEsIFMpIFxcaW50ZXJzZWN0IEsiXSxbMywxLCJrKFxcYWxwaGEsIFMpIl0sWzAsMCwiXFxhbHBoYVxcaW4iXSxbMCwyLCJmXFxpbiBLW3hdIl0sWzQsMywiZlxcaW4gRlt4XSJdLFs0LDEsIlxcbmkgXFxhbHBoYSJdLFsyLDMsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsInMiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDAsInMiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMSwicyIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzQsMCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=)
+
+
+- Let $f(x) \da \min_{\alpha, K}(x)$ be the minimal polynomial of $\alpha$ *over the intermediate extension* $K$, which by assumption is separable since $L/K$ is separable.
+  - So $f\in K[x]$, and letting $S$ be the finite set of coefficients of $f$, $S \subseteq K$.
+  - Note that each coefficient $s\in S$ is separable over $k$ since $K/k$ is separable by assumption.
+- Set $F\da k(\alpha, S) \intersect K$.
+  Note $K/k$ is separable and $F \subseteq K$, so $F/k$ is separable.
+- Moreover $k(\alpha, S)/F$ is separable, since the minimal polynomial of $\alpha$ over $F$ is still $f$. 
+- Now $k(\alpha, S) / F /K$ is a tower of finite extensions where $k(\alpha, S)/F$ and $F/k$ are separable, so this reduces to the finite case.
+
+
+:::
+
+:::{.proposition title="Separability has the compositing property"}
+$E/k$ and $F/k$ are separable $\iff$ $EF/k$ is separable.
+:::
+
+:::{.proof title="?"}
+$\impliedby$:
+Separability always descends to subfields, and $E \leq EF, F\leq EF$.
+
+$\implies$:
+
+- Write $E = k(S)$ for some finite set $S$. 
+  Then $EF = F(S)$.
+- Use that $k(S)/k$ is separable iff $s\in S$ is a separable element for all $s$.
+  - Since $E/k$ is separable, each $s\in S$ is separable over $k$.
+- Since $F/k$ is separable, each $s\in S$ is separable over $F$.
+- So $F(S)/F$ is separable.
+- Now use the tower $F(S)/F/k$ to obtain $F(S)/k$ separable, which is $EF/k$.
+
+:::
+
+
+## Galois Extensions
 
 :::{.definition title="Galois Extension and Galois Group"}
 Let $L/k$ be a finite field extension.
 The following are equivalent:
 
 1. \( L/k \) is a **Galois extension**.
+2. $L/k$ is normal and separable.
 2. $\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}$ (D&F's definition).
 3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
 4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
@@ -3806,7 +4088,134 @@ In this case, we define the **Galois group** as
 .\]
 :::
 
-### Special Extensions
+:::{.fact}
+For $L/k$ algebraic and $\ch k = 0$, $L/k$ is Galois $\iff L/k$ is normal.
+:::
+
+:::{.proposition title="Galois is upper transitive, characterization of when lower transitivity holds"}
+If $L/k$ is Galois, then $L/F$ is **always** Galois.
+Moreover, $F/k$ is Galois if and only if \( \Gal(L/F) \normal \Gal(L/k) \)
+
+\begin{tikzcd}
+	{L} \\
+	\\
+	{F} \\
+	\\
+	{k}
+	\arrow["{\text{Galois}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
+	\arrow["{\text{Galois}}", from=5-1, to=3-1, curve={height=-12pt}, squiggly, no head]
+	\arrow["{\text{Galois}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
+\end{tikzcd}
+
+> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7R2Fsb2lzfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtHYWxvaXN9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e0dhbG9pc30iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
+
+In this case, 
+\[
+\Gal(F/k) \cong \frac{\Gal(L/k)}{\Gal(L/F)}
+.\]
+
+:::
+
+:::{.proposition title="?"}
+Let $L/K/k$ with $L/k$ Galois. Then
+\[
+K/k \text{ is Galois } \iff \Gal(L/K)\normal \Gal(L/k)
+,\]
+and moreover $\Gal(K/k) = G$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Note separability is distinguished, so $K/k$ is separable.
+- $K/k$ is Galois $\iff$ $F/k$ is normal (since we already have separability).
+- $\iff \sigma(K) = K$ for all $\sigma\in G$
+- $\iff \sigma H \sigma\inv = H$ for all $\sigma \in G$.
+
+So $H$ is normal and $G/H$ is a group.
+For the isomorphism, take 
+\[
+\rho: \Gal(L/k) &\to \Gal(K/k) \\
+\rho &\mapsto \ro{\rho}{K}
+.\]
+This is well-defined since by normality $\sigma(K) = K$.
+Any $f\in \ker \rho$ is the identity on $K$, so $f\in \Gal(L/K)$ and $\ker \phi = H$.
+Since $L/K$ is Galois, every $f\in \Gal(K/k)$ lifts to $\Gal(L/k)$, making $\rho$ surjective.
+
+:::
+
+:::{.example title="?"}
+\envlist
+
+- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
+- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
+- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
+  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
+  Slogan: "Being Galois is not transitive in towers."
+- A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
+:::
+
+
+
+## Fundamental Theorem of Galois Theory
+
+:::{.theorem title="Fundamental Theorem of Galois Theory"}
+Let $L/k$ be a Galois extension, then there is a correspondence:
+\[
+\correspond{\text{Subgroups } H \leq \Gal(L/k)}
+&\mapstofrom
+\correspond{\text{Fields }  F \text{ such}\\ \text{that } L/F/k} \\
+H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
+\correspond{\Gal(L/F) \definedas \theset{ \sigma \in \Gal(L/k) \suchthat \sigma(F) = F}} &\leftarrow F
+\]
+
+- This is contravariant with respect to subgroups/subfields.
+
+- $[F: k] = [G: H]$, so degrees of extensions over the base field correspond to indices of subgroups.
+
+- $[K : F] = \abs{H}$
+
+- $L/F$ is Galois and $Gal(K/F) = H$
+
+- $F/k$ is Galois $\iff H$ is normal, and $\Gal(F/k) = \Gal(L/k)/H$.
+
+- The compositum $F_1 F_2$ corresponds to $H_1 \intersect H_2$.
+
+- The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
+:::
+
+:::{.theorem title="Splitting + Perfect implies Galois"}
+\envlist
+
+- If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
+
+- $k = \CC,\RR, \QQ, \FF_p$ are perfect, so any finite normal extension is Galois.
+
+- Every splitting field of a polynomial over a perfect field is Galois.
+:::
+
+:::{.proposition title="Composite Extensions"}
+If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
+\[
+\Gal(FL/L) = \Gal(F / F\intersect L) \subset \Gal(F/k)
+.\]
+:::
+
+## Quadratic Extensions
+
+:::{.proposition title="Classification of quadratic extensions"}
+If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+:::
+
+:::{.corollary title="Quadratic extensions of rationals"}
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(q)$ for some $q\in \QQ$.
+:::
+
+:::{.proposition title="?"}
+For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
+:::
+
+## Other Special Extensions
 
 :::{.theorem title="Finite Extensions are Algebraic"}
 Every finite extension is algebraic.
@@ -3830,26 +4239,25 @@ Every finite separable extension is simple.
 $\GF(p^n)$ is a simple extension over $\FF_p$.
 :::
 
-### Quadratic Extensions
 
-:::{.proposition title="Classification of quadratic extensions"}
-If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension, then $E$ is Galois and $E = F(\sqrt{a})$ for some squarefree $a\in \FF$.
+# General Field Theory
+
+:::{.fact}
+\envlist
+- All fields are simple rings (no proper nontrivial ideals).
+  - Thus every field morphism is either zero or injective.
+- The characteristic of any field $k$ is either 0 or $p$ a prime.
+- If $L/k$ is algebraic, then $\min(\alpha, L)$ divides $\min(\alpha, k)$.
 :::
 
-:::{.corollary title="Quadratic extensions of rationals"}
-If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt{p\over q})$ for some $p, q\in \ZZ$.
-:::
-
-:::{.proposition title="?"}
-For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
+:::{.proposition title="Towers are multiplicative in degree"}
+Let $L/F/k$ be a finite tower of field extensions.
+\[
+[L : k] = [L: F][F: k]
+.\]
 :::
 
 ## Finite Fields
-
-:::{.proof}
-Todo
-:::
-\todo{Proof}
 
 :::{.theorem title="Construction of Finite Fields"}
 $\GF(p^n)\cong \frac{\FF_p}{(f)}$ where $f \in \FF_p[x]$ is any irreducible of degree $n$, and $\GF(p^n) \cong \FF[\alpha] \cong \spanof_\FF\theset{1, \alpha, \cdots, \alpha^{n-1}}$ for any root $\alpha$ of $f$.
@@ -3976,20 +4384,112 @@ The splitting field of $x^m-1$ is $\QQ(\zeta_m)$ for $\zeta_m$ any primitive roo
 If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some $m$.
 :::
 
-
-# Galois Theory
-
+## Misc
 
 :::{.proposition title="?"}
-If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
+If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
+:::
+
+:::{.definition title="Elementary Symmetric Functions"}
+\todo[inline]{todo}
+:::
+
+## Exercises
+
+:::{.exercise title="?"}
+Show 
+\[
+x^\ell - 1 \divides x^m-1 \iff \ell\divides m
+.\]
+:::
+
+:::{.solution}
+
+$\implies$
+- Write $m = \ell q + r$ with $0\leq r < \ell$.
+- Write 
+\[
+p(x) = {x^m-1 \over x^\ell - 1}
+= {x^{lq+r} -1 \over x^\ell - 1}
+= x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
+= q(x) + {x^r-1 \over x^\ell - 1}
+,\]
+where $p,q$ are polynomial by divisibility.
+- So the remaining ratio must be polynomial, but since $r<\ell$ is strict this forces $r=0$.
+  Thus $\ell \divides m$.
+
+$\impliedby$:
+
+- Write $m = \ell q + r$, then $r=0$ by divisibility.
+- Then $x^m-1 = x^{\ell q} - 1 \da z^q-1$ where $z\da x^\ell$. 
+- Use that $z-1 \divides z^q - 1$, so $x^{\ell}-1 \divides x{\lq} -1 = x^m-1$.
+
+:::
+
+:::{.exercise title="?"}
+Show that if $f \in \FF_p[x]^{\irr}$ is degree $d$,
+\[
+f \divides x^{p^n}-x \iff d\divides n
+.\]
+:::
+
+:::{.solution}
+
+$\impliedby$:
+
+- If $d\divides n$, $x^d-1 \divides x^n-1$ by a previous exercise, and so $p^d-1 \divides p^n-1$.
+- So $x^{p^d-1} \divides x^{p^n-1}$, now multiply through by $x$.
+- Claim: $f \divides x^{p^d-1}$, from which the result immediately follows.
+- For $\alpha$ any root of $f$, $\FF_p(\alpha)$ is a finite field of size $p^d$ since $[\FF_p(\alpha):\FF_p] = d$.
+- So $\FF_p(\alpha)\cong \GF(p^d)$, which is the splitting field of $x^{p^d}-x$.
+- Thus $\alpha$ is a root of $x^{p^d}-x$.
+  Iterating over all roots yields the divisibility statement.
+
+$\implies$:
+
+- If $f\divides g_n(x) \da x^{p^n}-x$, then every root $\alpha$ of $f$ is a root of $g_n$.
+- So $\FF_p(\alpha) \subseteq \GF(p^n)$.
+- The result follows from the computation
+\[
+n &= [\GF(p^n) : \FF_p] \\
+&= [\GF(p^n) : \FF_p(\alpha)] \cdot [\FF_p(\alpha) : \FF_p] \\
+&= kd
+.\]
 
 :::
 
 
+
+# Galois Theory: Computations
+
+## Useful Facts
+
+:::{.proposition}
+If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
+:::
+
+:::{.corollary}
+\[
+n\divides \# \Gal(K/\QQ) \leq n!
+.\]
+:::
+
+:::{.definition title="Discriminant"}
+For $f = \sum a_k x^k$ monic,
+\[
+\Delta_f = \prod_{i<j} (r_i - r_j)^2
+.\]
+
+:::
+
+:::{.proposition title="Galois groups are transitive subgroups"}
+If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
+:::
+
 :::{.fact}
 Transitive subgroups of $S_n$ for small $n$:
 
-| $n$ in $S_n$ | Transitive Subgroups              |
+| $n \text{ in }S_n$ | Transitive Subgroups              |
 |--------------|-----------------------------------|
 | 1            | 1                                 |
 | 2            | $\ZZ/2$                           |
@@ -3997,270 +4497,103 @@ Transitive subgroups of $S_n$ for small $n$:
 | 4            | $S_4, A_4, D_4, (\ZZ/2)^2, \ZZ/4$ |
 | 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
 
-:::
+- Nonabelian groups of order 8: $D_4, Q_8$.
 
-
-
-:::{.proposition}
-If $\ch k = 0$ or $k$ is finite, then every *algebraic* extension $L/k$ is separable.
 :::
 
 :::{.proposition}
 If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of irreducible polynomials.
 :::
 
-:::{.proposition}
-$\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
+## Explicit Examples
+
+:::{.exercise title="?"}
+\envlist
+
+- $K/k \da \QQ(\sqrt 2, \sqrt 3)/\QQ$: $\Gal(K/k) = (\ZZ/2)^{\times 2}$.
+
+- $K/k = \SF(x^3-2)/\QQ = \QQ(2^{1\over 3}, \zeta_3)$: $\Gal(K/k) = S_3$.
+
+
+- $f(x) \da x^n-1$ over $\QQ$: $G = (\ZZ/n)\units$
+
+- $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
+
+- $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
+
+- $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
+
+- Any irreducible $f(x)$ of degree $p$ prime with only two non-real roots: $G = S_p$, since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
+  - Example: $x^3-2$ over $\QQ$.
+  - Example: $x^5-4x+2$ over $\QQ$.
+
+
+
+
 :::
 
+:::{.example title="Quadratics"}
+Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: 
 
-:::{.theorem title="Dirichlet's Theorem on Arithmetic Progressions"}
-\todo[inline]{todo}
-
-:::
-
-
-:::{.definition title="Constructible"}
-\todo[inline]{todo}
-
-:::
-
-
-:::{.theorem title="Constructibility of Regular $n\dash$gons"}
-
-:::
-
-
-
-### Lemmas About Towers
-
-Let $L/F/k$ be a finite tower of field extensions.
-
-
-:::{.proposition title="Towers are multiplicative in degree"}
+- If \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ 
+  - Why? \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
+- So $L$ is a splitting field.
+- If $\ch(k) \neq 2$, then 
 \[
-[L : k] = [L: F][F: k]
-.\]
+\dd{}{x} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0
+,\] making $L$ separable.
 :::
 
-:::{.proposition title="Normal/Algebraic/Galois in towers"}
-$L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
-:::
 
-:::{.proof title="for normality"}
-$\min(\alpha, F) \divides \min(\alpha, k)$, so if the latter splits in $L$ then so does the former.
-:::
-
-:::{.corollary title="?"}
-$\alpha \in L$ algebraic over $k \implies \alpha$ algebraic over $F$.
-:::
-
-:::{.corollary title="?"}
-$E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
-
-
-
-\begin{tikzcd}
-	&& {E_1 E_2} \\
-	\\
-	{E_1} &&&& {E_2} \\
-	&& {E_1 \cap E_2} \\
-	\\
-	\\
-	&& {k}
-	\arrow["{\text{normal}}", from=3-5, to=7-3]
-	\arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
-	\arrow["{\text{normal}}"', from=3-1, to=7-3]
-	\arrow[from=1-3, to=3-1, no head]
-	\arrow[from=1-3, to=3-5, no head]
-	\arrow[from=1-3, to=4-3, no head]
-	\arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
-	\arrow[from=3-1, to=4-3, no head]
-	\arrow[from=4-3, to=3-5, no head]
-\end{tikzcd}
-
-> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
-
-:::
-
-:::{.proposition title="Algebraicity is transitive"}
-$F/k$ algebraic and $L/F$ algebraic $\implies L/k$ algebraic.
-\begin{tikzcd}
-L \arrow[d, bend right=49, "\text{alg}"'] 
-  \arrow[dd, dashed, bend left=49, "\text{alg}"] \\
-F \arrow[d, bend right=49, "\text{alg}"']                                  \\
-k
-\end{tikzcd}
-:::
-
-:::{.proposition title="Separability is transitive"}
-For $L/F/k$, then $L/k$ is separable \( \iff L/F,\, F/k \) are separable.
-\begin{tikzcd}
-L \arrow[d, bend right=49, "\text{sep}"'] 
-  \arrow[dd, dashed, bend left=49, "\text{sep}"] \\
-F \arrow[d, bend right=49, "\text{sep}"']                                  \\
-k
-\end{tikzcd}
-
-:::
-
-:::{.warnings}
-Being Galois is **not** transitive.
-Take \( \QQ\qty{ \sqrt[4]{2} } / \QQ\qty{ \sqrt{2} } / \QQ \).
-:::
-
-:::{.proposition title="?"}
-If $L/k$ is algebraic, then $F/k$ separable:
-
-
-\begin{tikzcd}
-	{L} \\
-	\\
-	{F} \\
-	\\
-	{k}
-	\arrow["{\text{algebraic}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-	\arrow["{\text{separable}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
-\end{tikzcd}
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==)
-
-Moreover, $L/F$ is additionally separable $\iff L/k$ separable:
-
-\begin{tikzcd}
-	{L} \\
-	\\
-	{F} \\
-	\\
-	{k}
-	\arrow["\substack{\text{algebraic,} \\ \text{separable}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-	\arrow["{\text{sep}}", from=5-1, to=3-1, curve={height=-12pt}, dashed, no head]
-	\arrow["{\text{separable}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
-\end{tikzcd}
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7YWxnZWJyYWljfSBcXFxcIFxcdGV4dHtzZXBhcmFibGV9IiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFx0ZXh0e3NlcH0iLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e3NlcGFyYWJsZX0iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
-
-:::
-
-:::{.proposition title="?"}
-If $L/k$ is Galois, then $L/F$ is **always** Galois.
-Moreover, $F/k$ is Galois if and only if \( \Gal(L/F) \normal \Gal(L/k) \)
-
-\begin{tikzcd}
-	{L} \\
-	\\
-	{F} \\
-	\\
-	{k}
-	\arrow["{\text{Galois}}", from=1-1, to=5-1, curve={height=-18pt}, no head]
-	\arrow["{\text{Galois}}", from=5-1, to=3-1, curve={height=-12pt}, squiggly, no head]
-	\arrow["{\text{Galois}}"', from=1-1, to=3-1, curve={height=12pt}, dashed, no head]
-\end{tikzcd}
-
-> [Link to diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJMIl0sWzAsMiwiRiJdLFswLDQsImsiXSxbMCwyLCJcXHRleHR7R2Fsb2lzfSIsMCx7ImN1cnZlIjotMywic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcdGV4dHtHYWxvaXN9IiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFx0ZXh0e0dhbG9pc30iLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
-
-In this case, 
+:::{.remark}
+One can complete the square for quadratics:
 \[
-\Gal(F/k) \cong \frac{\Gal(L/k)}{\Gal(L/F)}
+f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha^{2}}{4} \text { . }
 .\]
 
+Thus it suffices to consider quadratics of the form $x^2+a$.
+
 :::
 
-### Fundamental Theorem of Galois Theory
 
-:::{.theorem title="Fundamental Theorem of Galois Theory"}
-Let $L/k$ be a Galois extension, then there is a correspondence:
-\[
-\correspond{\text{Subgroups } H \leq \Gal(L/k)}
-&\mapstofrom
-\correspond{\text{Fields }  F \text{ such}\\ \text{that } L/F/k} \\
-H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
-\correspond{\Gal(L/F) \definedas \theset{ \sigma \in \Gal(L/k) \suchthat \sigma(F) = F}} &\leftarrow F
-\]
+:::{.example title="Cubics"}
+For $f(x) =x^3 +ax + b$ over $\ch k\neq 2,3$, then the Galois group $G$ is known:
 
-- This is contravariant with respect to subgroups/subfields.
+- If $\Delta$ is a perfect square in $K$, $G= A_3$.
+- Else, $G= S_3$.
 
-- $[F: k] = [G: H]$, so degrees of extensions over the base field correspond to indices of subgroups.
+Note that $\Delta = -4a^3 - 27b^2$ here.
 
-- $[K : F] = \abs{H}$
+More generally, $G\injects A_n \iff \Delta$ is a perfect square in $k$.
 
-- $L/F$ is Galois and $Gal(K/F) = H$
-
-- $F/k$ is Galois $\iff H$ is normal, and $\Gal(F/k) = \Gal(L/k)/H$.
-
-- The compositum $F_1 F_2$ corresponds to $H_1 \intersect H_2$.
-
-- The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
 :::
 
-### Examples
+:::{.proposition title="Quartics"}
+The Galois groups of irreducible quartics can be determined using a bit of number theory:
+
+![](figures/2021-07-20_22-06-48.png)
+
+:::
 
 :::{.example title="Cyclotomic Fields"}
-$\Gal(\QQ(\zeta_n)/\QQ) \cong \ZZ/(n)\units$ and is generated by maps of the form $\zeta_n \mapsto \zeta_n^j$ where $(j, n) = 1$.
+$\Gal(\QQ(\zeta_n)/\QQ) \cong (\ZZ/n)\units$ and is generated by maps of the form $\zeta_n \mapsto \zeta_n^j$ where $(j, n) = 1$.
 I.e., the following map is an isomorphism:
 \[
-\ZZ/(n)\units &\to \Gal(\QQ(\zeta_n), \QQ) \\
-r \mod n &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
+(\ZZ/n)\units &\to \Gal(\QQ(\zeta_n), \QQ) \\
+[r] &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
 \]
 :::
 
 :::{.example title="Finite Fields"}
 $\Gal(\FF_{p^n}/\FF_p) \cong \ZZ/ \gens{ n }$, a cyclic group generated by powers of the Frobenius automorphism:
 \[
-\varphi_p: \FF_{p^n} \to \FF_{p^n} \\
+\varphi_p: \FF_{p^n} &\to \FF_{p^n} \\
 x &\mapsto x^p
 \]
 
 > See D&F p.566 example 7.
 
 :::
-
-
-:::{.example title="Quadratic Fields"}
-Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: if \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ since \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
-So $L$ is a splitting field.
-If $\ch(k) \neq 2$, then $\dd{}{x} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0$, making $L$ separable.
-:::
-
-
-:::{.proposition}
-If $K$ is the splitting field of an irreducible polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
-:::
-
-:::{.corollary}
-$n$ divides the order $\abs{ \Gal(K/\QQ)}$.
-:::
-
-:::{.theorem title="Splitting + Perfect implies Galois"}
-\hfill
-
-- If $\ch k = 0$ or $k$ is finite, then $k$ is perfect.
-
-- $k = \CC,\RR, \QQ, \FF_p$ are perfect, so any finite normal extension is Galois.
-
-- Every splitting field of a polynomial over a perfect field is Galois.
-:::
-
-:::{.proposition title="Composite Extensions"}
-If $F/k$ is finite and Galois and $L/k$ is arbitrary, then $FL/L$ is Galois and
-\[
-\Gal(FL/L) = \Gal(F / F\intersect L) \subset \Gal(F/k)
-.\]
-:::
-
-
-### Counterexamples
-
-:::{.example title="?"}
-\envlist
-
-- $\QQ(\zeta_3, 2^{1/3})$ is normal but $\QQ(2^{1/3})$ is not since the irreducible polynomial $x^3 - 2$ has only one root in it.
-- $\QQ(2^{1/3})$ is not Galois since its automorphism group is too small (only of size 1 instead of 3?).
-- $\QQ(2^{1/4})$ is not Galois since its automorphism group is too small (only of size 2 instead of 4).
-  However, the intermediate extensions $\QQ(2^{1/4}) / \QQ(2^{1/2})$ and $\QQ(\sqrt 2) / \QQ$ are Galois since they are quadratic.
-  Slogan: "Being Galois is not transitive in towers."
-- A quadratic extension that is not Galois: $\SF(x^2 + y) \in \FF_2(y)[x]$, which factors as $(x - \sqrt{y})^2$, making the extension not separable.
-:::
-
-
 
 
 
@@ -4563,6 +4896,147 @@ $\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
 
 # Linear Algebra
 
+
+:::{.remark}
+Some definitions:
+
+- $A^t$ is the usual transpose.
+- $A^{\dagger}$ is the conjugate transpose.
+- A matrix is $A^{\dagger}$ is **adjoint** to $A$ iff $\inner{A\vector x}{\vector y} = \inner{\vector x}{A^{\dagger} \vector y}$.
+  - $A$ is **self-adjoint** iff $A$ is an adjoint for itself, so $\inner{A\vector x}{\vector y} = \inner{\vector x}{A \vector y}$.
+- $A$ is **symmetric** iff $A = A^t$.
+  - $A$ is **orthogonal** iff $A^tA = AA^t = I$
+- $A$ is **Hermitian** iff $A^{\dagger} = A$.
+  - $A$ is **normal** iff $AA^{\dagger} = A^{\dagger} A$.
+  - $A$ is **unitary** iff $A^{\dagger}A = AA^{\dagger} = I$.
+:::
+
+
+:::{.fact title="Undergrad reminders"}
+\[
+\det M = \prod_{\sigma \in S_n} \eps(\sigma) \prod_{i=1}^n a_{i, \sigma(i)}
+.\]
+
+For example,
+
+\[
+\operatorname{det}\left(\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right)=\begin{gathered}
+a_{11} a_{22} a_{33}+a_{12} a_{23} a_{31}+a_{13} a_{21} a_{32} \\
+-a_{13} a_{22} a_{31}-a_{12} a_{21} a_{33}-a_{11} a_{23} a_{32}
+\end{gathered}
+.\]
+
+Let $\minor_A(i, j)$ denote $A$ with the $i$th row, $j$th column deleted.
+
+One can expand determinants along rows:
+\[
+\det(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} \det \minor_A(i, j)
+.\]
+
+
+Also useful, a matrix can be inverted by computing the adjugate:
+\[
+A\inv = {1\over \det A} \operatorname{adj}(A) && \adj(A)_{ij} \da (-1)^{i+j} \det \minor_A(j, i)
+.\]
+
+The eigenvalues of an upper-triangular matrix are exactly the diagonal entries, and the determinant is their product.
+More generally, the determinant is always the product of the eigenvalues, and the trace is the sum of the eigenvalues, so $\tr(A) = \sum \lambda_i$ and $\det(A) = \prod \lambda_i$.
+
+Matrices can be block-multiplied when all dimensions are compatible:
+\[
+\begin{bmatrix}
+A & B \\
+C & D 
+\end{bmatrix}
+\begin{bmatrix}
+E & F \\
+G & H 
+\end{bmatrix}
+= \matt{AE + BG}{AF + BH}{CE + DG}{ CF + DH}
+.\]
+
+> Note that if any of these matrix multiplications don't make sense, the results won't be valid!
+
+If $A$ is upper triangular, some entries of $A^k$ can be computed easily:
+
+\[
+A\da\left(\begin{array}{ccc}
+a_1 & & * \\
+& \ddots & \\
+0 & & a_n
+\end{array}\right)
+\implies
+A^k = \left(\begin{array}{ccc}
+a_1^k & & * \\
+& \ddots & \\
+0 & & a_n^k
+\end{array}\right)
+.\]
+
+
+Traces of products can be commuted: $\trace(AB) = \trace(BA)$, so similar matrices have identical traces since $\trace(PJP\inv) = \trace{PP\inv J} = \trace{J}$.
+
+The coefficients of the characteristic polynomial are elementary symmetric functions in the eigenvalues:
+\[
+\chi_A(t) = t^n - \qty{\sum_i \lambda_i }t^{n-1} + \qty{\sum_{i < j} \lambda_i \lambda_j }t^{n-2} + \cdots \pm \qty{\prod_i \lambda_i}
+.\]
+
+:::
+
+:::{.proposition title="Useful computational trick"}
+A trick for finding characteristic polynomials:
+\[
+\chi_A(t) &= \sum_{k=0}^n (-1)^k \trace\qty{\Extpower^k A} t^{n-k} \\
+&= t^n - \trace\qty{A} t^{n-1} + \trace\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \trace\qty{\Extpower^{n-1} A} t \mp \det(A)
+,\]
+using that 
+
+\[
+{\Extpower^0 A} \da 1 \\
+{\Extpower^1 A} \da A \\
+\trace\qty{\Extpower^n A} = \det(A)
+.\]
+
+Moreover, the intermediate traces are easy to compute by hand:
+\[
+\trace\qty{\Extpower^\ell A} = \sum \det\qty{M^{\ell}}
+,\]
+where the sum is taken over all $\ell\times\ell$ **principal minors**: determinants of the $n \choose \ell$ principal matrices which are obtained by choosing $\ell$ diagonal entries to keep and and deleting the rows and columns for every entry not chosen.
+Equivalently, one can select $n-\ell$ diagonal entries and delete the corresponding row/column for each. 
+
+
+:::{.example title="?"}
+
+![](figures/2021-07-24_19-48-11.png)
+
+:::
+
+
+To factor this polynomial, the **rational roots test** can be useful: for $f(t) = a_nt^n + \cdots + a_1 t + a_0$, rational roots are of the form $p/q$ where $p \divides a_n$ and $q\divides a_0$.
+Note that this simplifies greatly for $f$ monic!
+Once you have a root, apply **polynomial long division** to get a smaller problem, and hopefully this continues to work until it's factored.
+:::
+
+
+:::{.example title="of polynomial long division"}
+Consider $f(x) \da x^3-6x^2+12x-8$, then any rational root is in $\ts{\pm 8, \pm 4, \pm 2, \pm 1}$.
+Testing $f(2) = 0$ works, and dividing by $x-2$ yields
+
+![](figures/2021-07-24_18-32-38.png)
+
+The rest can be factored by inspection:
+\[
+f(x) = (x-2)(x^2-4x+4) = (x-2)^3
+.\]
+
+
+:::
+
+
 ## Definitions
 
 :::{.remark}
@@ -4597,7 +5071,7 @@ V &\cong \bigoplus _{j=1}^m k[x] / \gens{ p_i(x)^{e_i} } && \text{ with } p_i \t
 :::
 
 :::{.definition title="Normal Matrix"}
-A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^* A = AA^*$ where $A^*$ is the conjugate transpose.
+A matrix $A\in \Mat(n\times n; \CC)$ is **normal** iff $A^{\dagger} A = AA^{\dagger}$ where $A^{\dagger}$ is the conjugate transpose.
 :::
 
 
@@ -4715,8 +5189,131 @@ C_p \definedas
 .\]
 :::
 
-## Canonical Forms
+## Jordan Canonical Form
 
+:::{.fact}
+The JCF corresponds to **elementary divisors**.
+:::
+
+\todo[inline]{Make more precise..}
+
+
+:::{.proposition title="JCF Algorithm for generalized eigenvectors"}
+The following algorithm always works for computing $\JCF(A)$:
+
+- Compute and factor the characteristic polynomial as $\chi_A(x) = \prod_{i} (x-\lambda_i)^{m_i}$.
+- For each $\lambda_i$, find the constant $\ell_i$ such that
+\[
+\cdots 
+\rank (A-\lambda_i I)^{\ell_i - 1} 
+> \rank (A-\lambda_i I)^{\ell_i}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = }
+\rank (A-\lambda_i I)^{\ell_i+1}
+{\color{red} = } \cdots
+.\]
+- Find as many usual eigenvectors $\vector v_i$ as you can.
+   The number of eigenvectors you find will be $\dim E_{\lambda_i}$.
+  Suppose you just get one, $\vector v$.
+- Solve the systems:
+\[
+(A - \lambda_i I)\vector v_1 = \vector v &\implies \vector v_1 = ? \\
+(A - \lambda_i I)^2\vector v_2 = \vector v_1 &\implies \vector v_2 = ? \\
+&\vdots \\
+,\]
+  which can be solved by putting the $\vector v_i$ in an augmented matrix and computing the RREF.
+- This terminates in at most $\ell_i$ steps, and these vectors correspond to a single Jordan block.
+- If there are other eigenvectors $\vector w, \cdots$ for $\lambda_i$, repeating this process yields a Jordan block for each of them.
+  Assemble $P$ by placing these $\vector v_i$ in the appropriate columns.
+:::
+
+:::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
+Writing $\spec(A) = \theset{(\lambda_i, m_i)}$,
+\[
+\min_A(x) &= \prod_i (x- \lambda_i)^{\ell_i} \\
+\chi_A(x) &= \prod (x- \lambda_i)^{m_i} \\
+E_{\lambda_i} &= \dim(A - \lambda_i I)
+\]
+
+- The roots both polynomials are precisely the eigenvalues $\lambda_i$ of $A$.
+  - $m_i$ are the *algebraic multiplicities*.
+  - $\dim E_{\lambda_i}$ are the *geometric multiplicities*.
+
+- $\ell_i \leq m_i$ by Cayley-Hamilton.
+
+- $\ell_i$ is
+  - The size of the **largest** Jordan block associated to $\lambda_i$[^why_largest_block], and 
+  - The "stabilizing constant".
+
+- $m_i$, associated to the characteristic polynomial, is
+  - The **sum of sizes** of all Jordan blocks associated to $\lambda_i$, 
+  - The number of times $\lambda_i$ appears on the diagonal of $JCF(A)$, 
+  - The dimension of the *generalized* eigenspace $V^{\lambda_i}$.
+
+- $\dim E_{\lambda_i}$ is 
+  - The **number of Jordan blocks** associated to $\lambda_i$
+  - The number of (usual) eigenvector associated to $\lambda_i$, i.e. the dimension of their span.
+
+- $A$ is diagonalizable iff $\dim E_{\lambda_i} = m_i$ for all $i$.
+
+[^why_largest_block]: 
+This is because $(x-\lambda_i)^{\ell_i}$ annihilates a Jordan block of size $\ell_i$, along with any blocks of size $k\leq \ell_i$.
+
+:::
+
+:::{.lemma title="?"}
+The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
+:::
+
+
+:::{.remark}
+Writing $\Ann(\vector v)$ as the annihilator of $\vector v$, a generalized eigenvector for the pair $(\lambda_i, \vector v)$ for a matrix $A$ is any operator in the space $\sqrt{\Ann(\vector v)}$, where we view $V$ as a $k[x]\dash$module using $p(x) \actson \vector v \da p(A)(\vector v)$.
+So 
+\[
+\Ann(\vector v) \da \ts{ q(x) \in k[x] \st q(x) \actson \vector v = 0} = \ts{q(x) \in k[x] \st q(A)(\vector v) = 0}
+.\]
+Now use that $\vector w$ is an eigenvector for $A$ with eigenvalue $\lambda_i \iff A-\lambda_i I \in \Ann(\vector w)$, and is a generalized eigenvector iff
+\[
+(A-\lambda_i I)^k\in \Ann(\vector w) &\text{ for some }k \iff A-\lambda_i I \in \sqrt{\Ann(\vector w)}
+.\]
+
+We can then write
+\[
+V^{\lambda_i} 
+&\da \ts{\vector v\in V \st (A-\lambda_i I)^n \vector v = 0 \text{ for some }n } \\
+&= \ts{\vector v\in V \st (A-\lambda_i I)^n \in \Ann(\vector v) } \\
+&= \ts{\vector v\in V \st A-\lambda_i I \in \sqrt{\Ann(\vector v)} } 
+,\]
+and the theorem is that $V \cong \bigoplus_i V^{\lambda_i}$.
+It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V$.
+:::
+
+
+:::{.proof title="of generalized eigenspace decomposition"}
+
+- Suppose $\chi_A(x) = \prod (x-\lambda_i)^{n_i}$.
+- Define $V^{j} \da \ker (A-\lambda_i I)^n$ as the generalized eigenspace for each $i$.
+- Fix $j$ and define $h_j(x) = \prod_{i\neq j}(x-\lambda_i)^{n_i}$, the characteristic polynomial with the $\lambda_j$ term deleted.
+- Define $W^j \da \im(h_j(A))$, then the claim is $W^j \subseteq V^j$
+  - This follows because $0 = \chi_A(A) = (A-\lambda_j I)^{n_j} h_j(A)$, so in fact $W^j \subseteq \ker (A - \lambda_j)^{n_j}$.
+- Claim: $\sum V^j = V$:
+  - Let $\vector v\in V$ be arbitrary, then by Euclid's algorithm write $\sum_i f_i h_i = 1$ since the $h_i$ are coprime.
+  - Thus $\sum f_i(A) h_i(A) = I \implies \qty{\sum f_i(A) h_i(A)}(\vector v) = \vector v \implies \vector v \in \sum W^j$
+- Claim: the sum is direct.
+  - It suffices to show $0=\sum w_i$ with $w_i \in W^i$ implies $w_i =0$ for all $i$.
+  - Use that $h_j(w_i) = 0$ for $i\neq j$ since $w_i \in W^i \da \ker(A-\lambda_I I)^{n_i}$.
+  - Write $\vector w_i = \sum f_j(A) h_j(A) \vector w_i$, which collapses to $f_i(A) h_i(A) \vector w_i$.
+  - So $f_i(A) h_i(A) \qty{\sum w_i} = 0 \implies w_i = 0$.
+
+:::
+
+\todo[inline]{Messy indexing.}
+
+
+
+
+## Other Canonical Forms
 
 :::{.proposition title="?"}
 Let $T:V\to V$ be a linear map where $n\da \dim_k V$.
@@ -4738,7 +5335,6 @@ e_{i-1} &  i \geq 2
 - $\dim_k \ker T^\ell = \ell$ for each $1\leq \ell \leq n$.
 - $\dim_k \ker T = 1$.
 :::
-
 
 ### Rational Canonical Form
 
@@ -4807,49 +5403,13 @@ M_1 =
 
 :::
 
-### Jordan Canonical Form
-
-Corresponds to the **Elementary Divisor Decomposition** of $T$.
-
-:::{.lemma title="?"}
-The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
-:::
-
-:::{.lemma title="JCF from Minimal and Characteristic Polynomials"}
-Writing $\spec(A) = \theset{(\lambda_i, b_i)}$,
-\[
-\min_A(x) = \prod (x- \lambda_i)^{a_i} \\
-\chi_A(x) = \prod (x- \lambda_i)^{b_i}
-\]
-
-- The roots both polynomials are precisely the eigenvalues of $A$
-
-- The spectrum of $A$ corresponds precisely to the **characteristic** polynomial 
-
-- $a_i \leq b_i$
-
-- $a_i$ is the size of the **largest** Jordan block associated to $\lambda_i$,
-
-- $b_i$ is the **sum of sizes** of all Jordan blocks associated to $\lambda_i$ and the number of times $\lambda_i$ appears on the diagonal of $JCF(A)$.
-
-- $\dim E_{\lambda_i}$ is the **number of Jordan blocks** associated to $\lambda_i$
-
-:::
-
 ### Smith Normal Form
-
 
 :::{.fact}
 For $A\in \Mat(m\times n; R)$ over $R$ any PID, $\SNF(A)$ is a matrix whose diagonal entries are the invariant factors.
 How to compute $\SNF(A)$: take $A = \diag(a_i)$ where $a_i = d_i/d_{i-1}$ and $d_i$ is the $\gcd$ of the determinants of all $i\times i$ minors of $A$.
 $A\sim B$ are similar $\iff \SNF(A) = \SNF(B)$.
 :::
-
-
-### Finding Possible Canonical Forms
-
-\todo[inline]{Show how to find RCF and JCF from eigenvalues, or minimal/char polynomials.}
-
 
 ### Using Canonical Forms
 
@@ -4884,22 +5444,11 @@ For a linear operator on a vector space of nonzero finite dimension, TFAE:
 
 :::
 
-### Computing Jordan Canonical Form
-
-
-:::{.proposition title="JCF Algorithm"}
-The following algorithm always works for computing $\JCF(A)$:
-
-- Compute $\
-
-:::
-
-
 ## Diagonalizability
 
 :::{.remark}
 *Notation:*
-$A^*$ denotes the conjugate transpose of $A$.
+$A^{\dagger}$ denotes the conjugate transpose of $A$.
 
 :::
 
@@ -4911,9 +5460,16 @@ Then if $W \subseteq V$ is an invariant subspace, so $A(W) \subseteq W$, the $A$
 :::{.theorem title="The Spectral Theorem"}
 \envlist
 
-1. Hermitian matrices (i.e. $A^* = A$) are diagonalizable over $\CC$.
+1. Hermitian (self-adjoint) matrices (i.e. $A^{\dagger} = A$) are diagonalizable over $\CC$.
 2. Symmetric matrices (i.e. $A^t = A$) are diagonalizable over $\RR$.
+
 :::
+
+
+:::{.remark}
+In fact, $A$ is symmetric $\iff \spec A$ forms an orthonormal basis.
+:::
+
 
 :::{.proof title="?"}
 \envlist
@@ -5022,17 +5578,18 @@ M = \left(\begin{array}{rr}
 
 :::{.example title="?"}
 Non-similar matrices with the same characteristic polynomial
-$$
+\[
 \left(\begin{array}{ll}
-{1}  & {0} \\
-{0} & {1}
+{0}  & {0} \\
+{0} & {0}
 \end{array}\right)
 \text { and }
 \left(\begin{array}{ll}
-{1} & {1} \\
-{0} & {1}
+{0} & {0} \\
+{0} & {0}
 \end{array}\right)
-$$
+\]
+Here $\chi_A(x) = \chi_B(x) = x^2$, but they are not conjugate since their JCFs differ (note that they're already in JCF!)
 :::
 
 :::{.example title="?"}
@@ -5121,6 +5678,119 @@ J \da
 :::
 
 \todo[inline]{Matrix group definitions.}
+
+
+### Counting
+
+:::{.proposition title="Size of $\GL_n(\FF_p)$"}
+\[
+\abs{\GL_n(\FF_p)} = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n - p^{n-1})
+.\]
+
+It suffices to count ordered bases of $\FF_p^n$:
+
+- Choose $\vector v_1$: there are $p$ choices for each coefficient, but leave out the vector $0$, so $p^n-1$ choices.
+- Choose any $\vector v_2 \neq \lambda \vector v_1$, so $p^n-p$ choices.
+- Choose any nonzero $\vector v_3 \neq \lambda \vector v_1 + \eta \vector v_2$, so $p^n-p^2$ choices.
+- Etc.
+
+:::
+
+
+## Exercises
+
+:::{.exercise title="?"}
+Show that normal matrices are diagonalizable.
+:::
+
+
+:::{.exercise title="?"}
+Consider the Vandermonde matrix:
+\[
+A \da 
+\left(\begin{array}{ccc}
+1 & \cdots & 1 \\
+\lambda_{1} & \cdots & \lambda_{k} \\
+\vdots & & \vdots \\
+\lambda_{1}^{k-1} & \cdots & \lambda_{k}^{k-1}
+\end{array}\right)
+.\]
+
+Show that
+\[
+\det A = \prod_{i < j} (\lambda_i - \lambda_j)
+.\]
+:::
+
+
+:::{.exercise title="?"}
+Show that a nonzero nilpotent matrix $A$ is not diagonalizable over any field.
+Some useful facts:
+
+- $\spec A = \ts{0}$, since $Ax=\lambda x \implies A^n=\lambda^nx$, so $A^n=0$ forces $\lambda =0$.
+  This forces $\JCF(A)$ to be strictly upper-triangular.
+- $\min_A(x) = x^n$.
+- If $A$ were diagonalizable, $\JCF(A) = 0$.
+
+:::
+
+:::{.exercise title="?"}
+Prove Cayley-Hamilton in the following way.
+Let $V = \spanof\ts{\vector v_1, \cdots, \vector v_n}$ and define the $i$th flag as $\Fil_i V \da \spanof\ts{\vector v_1, \cdots, \vector v_i}$ for all $1\leq i \leq n$, and set $\Fil_0 V \da \ts{0}$.
+Show that if if $A$ is upper triangular, then $A(\Fil_i V) \subseteq \Fil_i V$.
+Now supposing $\vector v_i$ are eigenvectors for $\lambda_i$, show that
+\[
+(A-\lambda_n I) \Fil_n V &\subseteq \Fil_{n-1} V \\
+(A-\lambda_{n-1} I) (A-\lambda_n I ) \Fil_n V &\subseteq \Fil_{n-2} V \\
+&\vdots \\
+\prod_i (A-\lambda_{n-i} I) \Fil_n V &\subseteq \Fil_0 V = \ts{0}
+.\]
+Conclude that $\chi_A(A) = 0$.
+:::
+
+
+### JCF
+
+:::{.exercise title="?"}
+Compute $\JCF(A)$ for 
+\[
+A \da 
+\mattt{1}{-1}{0}{-1}{4}{-1}{-4}{13}{-3}
+.\]
+
+:::
+
+:::{.solution}
+
+- $\det(A) = 0$
+- $\tr(A) = 2$
+- $\tr(\Extpower^2 A) = 1$
+- $\chi_A(t) = t^3 - 2t^2 + t$
+- $e_1 = \tv{1,1,3}$
+- $e_2 = \tv{1,0,-1}$
+  - $e_{2, 1} = \tv{-3,-1, 0}$.
+
+![](figures/2021-07-24_23-15-22.png)
+
+:::
+
+
+:::{.exercise title="?"}
+Determine $\JCF(B)$ for
+\[
+B \da
+\left(\begin{array}{cccc}
+5 & -1 & 0 & 0 \\
+9 & -1 & 0 & 0 \\
+0 & 0 & 7 & -2 \\
+0 & 0 & 12 & -3
+\end{array}\right)
+.\]
+
+
+:::
+
+
 
 
 # Representation Theory 
