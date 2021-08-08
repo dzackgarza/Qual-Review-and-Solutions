@@ -2304,14 +2304,14 @@ Show that \( {\sqrt{0_{R}} } = \displaystyle\bigcap_{p\in \operatorname{Spec}R} 
 :::
 
 ::: {.definition title="Jacobson Radical"}
-The **Jacobson radical** \( \jacrad{R} \) is the intersection of all maximal ideals, i.e.
+The **Jacobson radical** \( {\sqrt{0_{R}} } \) is the intersection of all maximal ideals, i.e.
 \[  
-\jacrad{R} = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
+{\sqrt{0_{R}} } = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
 .\]
 :::
 
 ::: {.exercise title="?"}
-Show \( x\in \jacrad{R} \iff 1-xR \subseteq R^{\times} \).
+Show \( x\in {\sqrt{0_{R}} } \iff 1-xR \subseteq R^{\times} \).
 :::
 
 ## Structure Theorems
