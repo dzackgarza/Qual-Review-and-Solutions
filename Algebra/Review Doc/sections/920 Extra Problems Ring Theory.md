@@ -50,7 +50,7 @@ $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is prop
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
 - $\star$ Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 - Show that every prime ideal is radical.
-- Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
+- Show that the nilradical is given by $\nilrad{R} = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
 - Show that if $\spec(R) \subseteq \maxspec(R)$ then $R$ is a UFD.
 - Show that if $R$ is Noetherian then every ideal is finitely generated.
@@ -72,7 +72,7 @@ Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessari
 :::
 
 :::{.problem title="Mod by nilradical to kill nilpotents"}
-$R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
+$R/ \nilrad{R}$ has no nonzero nilpotent elements.
 :::
 :::{.solution}
 \hfill
@@ -111,7 +111,6 @@ Misc
 - Show that if $R\neq 0$ is a ring in which every non-unit is nilpotent then $R$ is local.
 - Show that every prime ideal is primary.
 - Show that every prime ideal is irreducible.
-- Show that
 
 
 
