@@ -387,10 +387,9 @@ TFAE:
 :::
 
 
-:::{.proposition title="?"}
+:::{.proposition title="Minimal equals characteristic iff cyclic"}
 $\chi_A(x) = \min_A(x)$ iff $A$ admits a cyclic vector.
 :::
-
 
 :::{.proof title="?"}
 $\not\implies$:
@@ -399,7 +398,15 @@ Set $n\da \deg \chi_A$, then if $n' \da \deg \min_A < n$, using that $\min_A(A) 
 In particular, since $n>n'$, any set $\ts{v, Av,\cdots,A^nv}$ has a linear dependence.
 
 $\implies$:
-
+Apply the structure theorem to write $V\cong \bigoplus_{i=1}^m k[x]/\gens{p_i}$.
+Since $\chi_A(x) = \prod p_i(x)$ and $\min_A(x) = p_m(x)$, this forces $m=1$ -- one way to see this is that $\dim_k V = \sum_{i=1}^m \dim_k k[x]/\gens{p_i}$,
+where $\deg \chi_A = \dim_k V$ and $\deg \min_A = \dim k[x]/\gens{p_m}$.
+For these to be equal, this forces $\dim_k k[x]/\gens{p_i} = 0$ for $1\leq i \leq m-1$, making $V$ a cyclic $k[x]\dash$module.
+So $V = k[x]\actson \vector v$ for some $\vector v\in V$, which is the desired cyclic vector, and 
+\[
+V = \ts{f(x).v \st f\in k[x]} = \span_k\ts{A^k v \st k\geq 0}
+.\]
+By Cayley-Hamilton, $\chi_A(A) = 0$ and so $A^n$ is a linear combinations of $A^k$ for $0\leq k \leq n-1$, so $V= \span_k \ts{A^k v \st 0\leq k \leq n-1}$.
 :::
 
 
