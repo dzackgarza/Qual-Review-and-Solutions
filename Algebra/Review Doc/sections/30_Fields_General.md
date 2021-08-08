@@ -713,16 +713,12 @@ If $\FF$ is a field with $\ch(\FF)\neq 2$ and $E_{/\FF}$ is a degree 2 extension
 :::
 
 :::{.corollary title="Quadratic extensions of rationals"}
-If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(q)$ for some $q\in \QQ$.
+If $E_{/\QQ}$ is a quadratic extension, $E = \QQ(\sqrt q)$ for some $q\in \QQ$ squarefree.
 :::
 
 :::{.proposition title="?"}
 For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ are isomorphic.
 :::
-
-## Other Special Extensions
-
-
 
 # Distinguished Classes
 
