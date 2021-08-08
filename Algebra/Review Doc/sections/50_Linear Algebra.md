@@ -387,6 +387,24 @@ TFAE:
 :::
 
 
+:::{.proposition title="?"}
+$\chi_A(x) = \min_A(x)$ iff $A$ admits a cyclic vector.
+:::
+
+
+:::{.proof title="?"}
+$\not\implies$:
+In general, $\min_A \divides \chi_A$, so suppose they're not equal.
+Set $n\da \deg \chi_A$, then if $n' \da \deg \min_A < n$, using that $\min_A(A) = 0$ this exhibits a linear dependence in $\ts{v, Av, \cdots, A^{n'} v}$ for any $v$.
+In particular, since $n>n'$, any set $\ts{v, Av,\cdots,A^nv}$ has a linear dependence.
+
+$\implies$:
+
+:::
+
+
+
+
 :::{.proposition title="Rational Canonical Form"}
 $RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
 :::
@@ -406,6 +424,7 @@ V \cong k[x] / \gens{\chi_T(x)} \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
 - Since each factor is submodule, each corresponds to a $T\dash$invariant subspace $V_i$ where $p_i$ is the minimal polynomial of $T$ restricted to $V_i$.
 
   - The largest invariant factor $p_m$ is the minimal polynomial of $T$, their product is the characteristic polynomial.
+  This follows because $p_m(x)\actson V = 0$, since $p_i\divides p_m$ for all $i$, forcing $\min_A \divides p_m$ by minimality.
 
 - Write $V \cong \bigoplus_{i=1}^m V_i$ as a $k[x]\dash$module, where $V_i \da k[x] / \gens{ p_i(x) }$, then $T$ is a block matrix $\bigoplus_{i=1}^m T_i$ where $T_i$ is the restriction of $T$ to $V_i$:
 \[
