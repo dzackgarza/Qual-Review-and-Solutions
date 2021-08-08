@@ -191,100 +191,6 @@ A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of
 :::
 
 
-:::{.proposition title="Transitivity of algebraic extensions, forward implication"}
-If $L/K/k$ (not necessarily finite) with $L/K$ and $K/k$ both algebraic, then $L/k$ is algebraic.
-:::
-
-:::{.proof title="?"}
-\envlist
-
-- We want to show every $\alpha \in L$ is algebraic over $k$, and it suffices to show $\alpha$ is algebraic over some finite subextension $k(S)$.
-- Pick $\alpha\in L$, then $\alpha$ is algebraic over $K$ by assumption, so it is a root of some $f\in K[x]$.
-- Let $S$ be the finitely many coefficients of $f$, then $\alpha$ is algebraic over $k(S)$.
-- Note that $k(S)/k$ is finite and thus algebraic, and $k(S,\alpha)/k(s)$ is finite and also algebraic, so we're reduced to the finite case.
-- It suffices to show $k(S, \alpha)/k(s)/k$ is finite, which follows from multiplicativity of degrees.
-:::
-
-
-
-## Distinguished Classes
-
-> See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
-
-:::{.definition title="Distinguished Classes"}
-A collection of field extensions $\mathcal{S}$ is **distinguished** iff
-
-1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K \in \mcs$ (upper transitivity) and $K/k\in \mathcal{S}$ (lower transitivity):
-
-\begin{tikzcd}
-	L &&&& L \\
-	\\
-	K && \iff && K \\
-	\\
-	k &&&& k
-	\arrow[hook, from=5-1, to=3-1]
-	\arrow[hook, from=3-1, to=1-1]
-	\arrow[hook, from=5-5, to=3-5]
-	\arrow[hook, from=3-5, to=1-5]
-	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-1, to=1-1]
-	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-5, to=3-5]
-	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=3-5, to=1-5]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
-
-2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/L \in \mathcal{S}$:
-
-\begin{tikzcd}
-	& LK \\
-	L && K \\
-	& k
-	\arrow[draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=3-2, to=2-3]
-	\arrow[hook', from=3-2, to=2-1]
-	\arrow["\therefore", draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=2-1, to=1-2]
-	\arrow[hook, from=2-3, to=1-2]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
-
-
-3. (Compositing property)
-Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
-
-\begin{tikzcd}
-	& LK \\
-	L && K \\
-	& k
-	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
-	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook', from=3-2, to=2-1]
-	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=2-1, to=1-2]
-	\arrow[hook, from=2-3, to=1-2]
-	\arrow["\therefore", color={rgb,255:red,214;green,92;blue,92}, dashed, from=3-2, to=1-2]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMywiXFx0aGVyZWZvcmUiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV1d)
-
-
-> Supposed to think of $LK/L$ as a lift of $K/k$.
-
-:::
-
-:::{.example title="of distinguished classes"}
-The following classes of extensions are distinguished:
-
-- Algebraic.
-- Finite.
-- Separable.
-- Purely inseparable.
-- Finitely generated.
-- Solvable.
-:::
-
-:::{.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
-
-For $L/F/k$: $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
-:::
-
 ## Normal Extensions
 
 :::{.definition title="Normal Field Extension"}
@@ -919,5 +825,99 @@ Every finite separable extension is simple.
 
 :::{.corollary}
 $\GF(p^n)$ is a simple extension over $\FF_p$.
+:::
+
+## Distinguished Classes
+
+> See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
+
+:::{.definition title="Distinguished Classes"}
+A collection of field extensions $\mathcal{S}$ is **distinguished** iff
+
+1. (Transitive property) For any tower $L/K/k$, the extension $L/k \in \mathcal{S} \iff L/K \in \mcs$ (upper transitivity) and $K/k\in \mathcal{S}$ (lower transitivity):
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \iff && K \\
+	\\
+	k &&&& k
+	\arrow[hook, from=5-1, to=3-1]
+	\arrow[hook, from=3-1, to=1-1]
+	\arrow[hook, from=5-5, to=3-5]
+	\arrow[hook, from=3-5, to=1-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-1, to=1-1]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=5-5, to=3-5]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, hook, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw0LCJrIl0sWzAsMiwiSyJdLFswLDAsIkwiXSxbNCw0LCJrIl0sWzQsMiwiSyJdLFs0LDAsIkwiXSxbMiwyLCJcXGlmZiJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMiwiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0LCIiLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMix7ImN1cnZlIjozLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d)
+
+2. (Lifting property) Lifts of distinguished extensions are distinguished: $K/k\in \mathcal{S}$ and $L/k$ any extension $\implies LK/L \in \mathcal{S}$:
+
+\begin{tikzcd}
+	& LK \\
+	L && K \\
+	& k
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=3-2, to=2-3]
+	\arrow[hook', from=3-2, to=2-1]
+	\arrow["\therefore", draw={rgb,255:red,214;green,92;blue,92}, dashed, hook, from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
+
+
+3. (Compositing property)
+Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
+
+\begin{tikzcd}
+	& LK \\
+	L && K \\
+	& k
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=3-2, to=2-3]
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook', from=3-2, to=2-1]
+	\arrow[draw={rgb,255:red,214;green,92;blue,92}, hook, from=2-1, to=1-2]
+	\arrow[hook, from=2-3, to=1-2]
+	\arrow["\therefore", color={rgb,255:red,214;green,92;blue,92}, dashed, from=3-2, to=1-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMix7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsMywiXFx0aGVyZWZvcmUiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV1d)
+
+
+> Supposed to think of $LK/L$ as a lift of $K/k$.
+
+:::
+
+:::{.example title="of distinguished classes"}
+The following classes of extensions are distinguished:
+
+- Algebraic.
+- Finite.
+- Separable.
+- Purely inseparable.
+- Finitely generated.
+- Solvable.
+:::
+
+:::{.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
+
+For $L/F/k$: $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
+:::
+
+### Algebraic Extensions
+
+:::{.proposition title="Transitivity of algebraic extensions, forward implication"}
+If $L/K/k$ (not necessarily finite) with $L/K$ and $K/k$ both algebraic, then $L/k$ is algebraic.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- We want to show every $\alpha \in L$ is algebraic over $k$, and it suffices to show $\alpha$ is algebraic over some finite subextension $k(S)$.
+- Pick $\alpha\in L$, then $\alpha$ is algebraic over $K$ by assumption, so it is a root of some $f\in K[x]$.
+- Let $S$ be the finitely many coefficients of $f$, then $\alpha$ is algebraic over $k(S)$.
+- Note that $k(S)/k$ is finite and thus algebraic, and $k(S,\alpha)/k(s)$ is finite and also algebraic, so we're reduced to the finite case.
+- It suffices to show $k(S, \alpha)/k(s)/k$ is finite, which follows from multiplicativity of degrees.
 :::
 
