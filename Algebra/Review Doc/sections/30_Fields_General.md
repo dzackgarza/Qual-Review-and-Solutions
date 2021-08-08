@@ -327,10 +327,24 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 - $x^2-t$ is inseparable over $\FF_2(t)$.
 - $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
 - $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
-  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
-- If $\ch k=0$, then irreducible $\implies$ separable.
+  - Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
 
 :::
+
+:::{.fact title="Irreducible implies separable in characteristic zero"}
+If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
+
+Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$, since a nontrivial $\gcd$ would yield a polynomial dividing $f$.
+But $\deg f' < f$, so $f$ can not divide $f'$, so the $\gcd$ is 1.
+:::
+
+
+:::{.fact title="Irreducible implies separable for perfect fields"}
+
+:::
+
+
+
 
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
@@ -362,7 +376,6 @@ Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
 So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
-
 
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
@@ -401,10 +414,7 @@ The following are equivalent
 - Every finite subextension $L'/k$ is separable.
 :::
 
-:::{.fact}
-Every irreducible polynomial is separable in characteristic zero.
 
-:::
 
 :::{.fact}
 If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
