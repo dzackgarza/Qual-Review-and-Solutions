@@ -462,7 +462,30 @@ Alternatively,
 :::{.proof title="General case"}
 \envlist
 
-- Use the embedding characterization, it suffices to show that every embedding $\sigma: L\embeds \bar{K}$ is an automorphism of $L/K$.
+- Suppose $L/K/k$ with $L/k$ normal, we want to show $L/K$ is normal.
+- Use the embedding characterization, it suffices to show that every embedding $\sigma: L\embeds \bar{K}$ satisfies $\im \sigma = L$:
+
+\begin{tikzcd}
+	&& {\bar{K} = \bar{k}} \\
+	\\
+	L && {\sigma(L)} \\
+	\\
+	K && K \\
+	\\
+	k && k
+	\arrow[Rightarrow, no head, from=7-1, to=7-3]
+	\arrow[hook, from=7-1, to=5-1]
+	\arrow[hook, from=7-3, to=5-3]
+	\arrow[hook, from=5-3, to=3-3]
+	\arrow[hook, from=5-1, to=3-1]
+	\arrow[hook, from=3-3, to=1-3]
+	\arrow["\sigma", hook, from=3-1, to=1-3]
+	\arrow["\sigma", hook, from=3-1, to=3-3]
+	\arrow[Rightarrow, no head, from=5-1, to=5-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw2LCJrIl0sWzAsNCwiSyJdLFswLDIsIkwiXSxbMiwyLCJcXHNpZ21hKEwpIl0sWzIsNCwiSyJdLFsyLDYsImsiXSxbMiwwLCJcXGJhcntLfSA9IFxcYmFye2t9Il0sWzAsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNiwiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMywiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
+
 - Since $k \subseteq K$, any embedding $\sigma: K\injects \bar{k}$ over $\id_K$ is also an embedding over $\id_k$.
 - Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
