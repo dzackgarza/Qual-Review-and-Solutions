@@ -319,6 +319,19 @@ $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
 A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::
 
+:::{.example title="of separable and inseparable polynomials"}
+\envlist
+
+- $x^2-1$ is separable over $\QQ$, but inseparable over $\FF_2$ since it factors as $(x-1)^2$.
+- $(x^2-2)^2$ is inseparable over $\QQ$
+- $x^2-t$ is inseparable over $\FF_2(t)$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
+- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
+  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
+- If $\ch k=0$, then irreducible $\implies$ separable.
+
+:::
+
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
@@ -350,18 +363,6 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
-:::{.example title="of separable and inseparable polynomials"}
-\envlist
-
-- $x^2-2$ is separable over $\QQ$, but inseparable over $\FF_2$.
-- $(x^2-2)^2$ is inseparable over $\QQ$
-- $x^2-t$ is inseparable over $\FF_2(t)$.
-- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
-- $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
-  Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
-- If $\ch k=0$, then irreducible $\implies$ separable.
-
-:::
 
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
