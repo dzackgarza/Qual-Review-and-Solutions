@@ -337,14 +337,21 @@ If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
 Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
 It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
 So this $\gcd$ is 1.
-
 :::
-
 
 :::{.fact title="Irreducible implies separable for perfect fields"}
 \envlist
 
-- Use that irreducible polynomial $f$ must have distinct roots, by the argument above
+- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
+  (In fact, it is the minimal polynomial of its roots.)
+
+- Toward a contradiction, suppose $f$ is irreducible but inseparable.
+- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
+- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
+,\]
+  making $f$ reducible. $\contradiction$
 :::
 
 
