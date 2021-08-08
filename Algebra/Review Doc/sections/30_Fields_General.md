@@ -226,6 +226,28 @@ Then TFAE:
 
 :::
 
+:::{.example title="of normal extensions"}
+\envlist
+
+- Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
+
+- Useful trick: if $L/K/k$, then $K/k$ is normal iff $\Gal(L/K) \normal \Gal(L/k)$.
+
+- $K \da \QQ(2^{1\over 3})$ is not normal, since $K\subset \RR$ but $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2 \in \CC$.
+  - Another reason: an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
+
+- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
+
+- $L \da \QQ(2^{1\over 4})$ is not normal, since it is finite but not the splitting field of any polynomial.
+
+- $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
+
+
+- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
+  This has finite degree $p^2$ but infinitely many subfields?
+
+:::
+
 :::{.proposition title="Characterization of normal algebraic extensions"}
 For $L/k$ algebraic: let $\bar{k}$ be an algebraic closure containing $L$, then $L/k$ is normal iff every $k\dash$embedding $\sigma: L\to \bar{k}$ satisfies $\im \sigma = L$, so $\sigma$ is a $k\dash$automorphism of $L$:
 
@@ -286,153 +308,9 @@ $\impliedby$:
 
 :::
 
-:::{.example title="of normal extensions"}
-\envlist
-
-- Useful trick: if $[L: k] = 2$ then $L/k$ is automatically normal.
-
-- Useful trick: if $L/K/k$, then $K/k$ is normal iff $\Gal(L/K) \normal \Gal(L/k)$.
-
-- $K \da \QQ(2^{1\over 3})$ is not normal, since $K\subset \RR$ but $(x^3-2) = \prod_k x-\zeta_3^k 2^{1\over 3}$ with $\zeta_3, \zeta_3^2 \in \CC$.
-  - Another reason: an embedding $\sigma: K\to \bar k$ can send $2^{1\over 3}$ to any other root of $x^3-2$.
-
-- $\QQ(\sqrt 2, \sqrt 3)$ is normal over $\QQ$, since it it is finite and splits $f(x) \da (x^2-2)(x^2-3)$, which is a separable polynomial.
-
-- $L \da \QQ(2^{1\over 4})$ is not normal, since it is finite but not the splitting field of any polynomial.
-
-- $\QQ(\zeta_k)$ is normal for $\zeta_k$ any primitive $k$th root of unity.
-
-
-- A normal non-separable extension: $\FF_p(x, y) \slice{\FF_p (x^p, y^p)}$.
-  This has finite degree $p^2$ but infinitely many subfields?
-
-:::
-
-:::{.corollary title="?"}
-$E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
-
-
-
-\begin{tikzcd}
-	&& {E_1 E_2} \\
-	\\
-	{E_1} &&&& {E_2} \\
-	&& {E_1 \cap E_2} \\
-	\\
-	\\
-	&& {k}
-	\arrow["{\text{normal}}", from=3-5, to=7-3]
-	\arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
-	\arrow["{\text{normal}}"', from=3-1, to=7-3]
-	\arrow[from=1-3, to=3-1, no head]
-	\arrow[from=1-3, to=3-5, no head]
-	\arrow[from=1-3, to=4-3, no head]
-	\arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
-	\arrow[from=3-1, to=4-3, no head]
-	\arrow[from=4-3, to=3-5, no head]
-\end{tikzcd}
-
-> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
-
-:::
 
 :::{.proposition}
 $\abs{\aut(L/k)} \leq [L: k]$ with equality precisely when $L/k$ is normal.
-:::
-
-### Issues with Normal Towers
-
-:::{.warnings}
-Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity.
-However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
-:::
-
-:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
-One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
-\[
-L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
-.\]
-Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
-
-Another example: let $L/k$ be any algebraic extension that isn't normal, and take $N_k$ to be the normal closure to get $N_k/L$. 
-Concretely, $N_\QQ / \QQ(2^{1\over 3})/\QQ$ works.
-:::
-
-:::{.example title="Normal extensions are not transitive: failure of reverse implication"}
-One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
-take 
-\[
-L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
-.\]
-Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
-:::
-
-:::{.proposition title="Normal extensions are upper transitive, forward implication"}
-For $L/k$ finite,
-
-\begin{tikzcd}
-	L &&&& L \\
-	\\
-	K && \implies && K \\
-	\\
-	k &&&& k
-	\arrow[from=3-1, to=1-1]
-	\arrow[from=5-1, to=3-1]
-	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
-	\arrow[from=5-5, to=3-5]
-	\arrow[from=3-5, to=1-5]
-	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
-
-:::
-
-:::{.proof title="Finite case"}
-\envlist
-
-- Use the fact that for finite extensions, $L/k$ is normal and separable $\iff L$ is the splitting field of a separable polynomial $f\in k[x]$.
-- Now regard $f$ as a polynomial in $K[x]$; then $L$ is still the splitting field of $f$ over $K$, done.
-
-Alternatively,
-
-- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
-- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
-- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
-- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
-  Since $m'$ splits in $L$, so must $m$.
-
-:::
-
-:::{.proof title="General case"}
-\envlist
-
-- Suppose $L/K/k$ with $L/k$ normal, we want to show $L/K$ is normal.
-- Use the embedding characterization, it suffices to show that every embedding $\sigma: L\embeds \bar{K}$ satisfies $\im \sigma = L$:
-
-\begin{tikzcd}
-	&& {\bar{K} = \bar{k}} \\
-	\\
-	L && {\sigma(L)} \\
-	\\
-	K && K \\
-	\\
-	k && k
-	\arrow[Rightarrow, no head, from=7-1, to=7-3]
-	\arrow[hook, from=7-1, to=5-1]
-	\arrow[hook, from=7-3, to=5-3]
-	\arrow[hook, from=5-3, to=3-3]
-	\arrow[hook, from=5-1, to=3-1]
-	\arrow[hook, from=3-3, to=1-3]
-	\arrow["\sigma", hook, from=3-1, to=1-3]
-	\arrow["\sigma", hook, from=3-1, to=3-3]
-	\arrow[Rightarrow, no head, from=5-1, to=5-3]
-\end{tikzcd}
-
-> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw2LCJrIl0sWzAsNCwiSyJdLFswLDIsIkwiXSxbMiwyLCJcXHNpZ21hKEwpIl0sWzIsNCwiSyJdLFsyLDYsImsiXSxbMiwwLCJcXGJhcntLfSA9IFxcYmFye2t9Il0sWzAsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNiwiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMywiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
-
-- Now just use the fact that $\bar{k} = \bar{K}$, and since $k\subseteq K$, any $K\dash$morphism is also a $k\dash$morphism.
-- Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
 
 ## Separable Extensions
@@ -828,7 +706,7 @@ For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ ar
 
 
 
-## Distinguished Classes
+# Distinguished Classes
 
 > See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
 
@@ -899,10 +777,17 @@ The following classes of extensions are distinguished:
 - Purely inseparable.
 - Finitely generated.
 - Solvable.
+
+:::
+
+:::{.warnings}
+Normal extensions are *not* distinguished, since they fail the forward implication for (lower) transitivity.
+However, they do have the (forward implication) upper transitive, lifting, and compositing properties.
+
+As a consequence, Galois extensions are also not distinguished.
 :::
 
 :::{.fact title="Normal/Algebraic/Galois extensions are upper transitive"}
-
 For $L/F/k$: $L/k$ normal/algebraic/Galois $\implies L/F$ normal/algebraic/Galois.
 :::
 
@@ -920,5 +805,124 @@ If $L/K/k$ (not necessarily finite) with $L/K$ and $K/k$ both algebraic, then $L
 - Let $S$ be the finitely many coefficients of $f$, then $\alpha$ is algebraic over $k(S)$.
 - Note that $k(S)/k$ is finite and thus algebraic, and $k(S,\alpha)/k(s)$ is finite and also algebraic, so we're reduced to the finite case.
 - It suffices to show $k(S, \alpha)/k(s)/k$ is finite, which follows from multiplicativity of degrees.
+:::
+
+### Normal Extensions
+
+:::{.corollary title="Normality satisfies the lifting property"}
+$E_1/k$ normal and $E_2/k$ normal $\implies E_1E_2/k$ normal and $E_1 \intersect E_2 / k$ normal.
+
+\begin{tikzcd}
+	&& {E_1 E_2} \\
+	\\
+	{E_1} &&&& {E_2} \\
+	&& {E_1 \cap E_2} \\
+	\\
+	\\
+	&& {k}
+	\arrow["{\text{normal}}", from=3-5, to=7-3]
+	\arrow[from=4-3, to=7-3, dashed, no head, "\text{normal}", near start]
+	\arrow["{\text{normal}}"', from=3-1, to=7-3]
+	\arrow[from=1-3, to=3-1, no head]
+	\arrow[from=1-3, to=3-5, no head]
+	\arrow[from=1-3, to=4-3, no head]
+	\arrow[from=1-3, to=7-3, curve={height=25pt}, dashed, no head, "\text{normal}"', near start]
+	\arrow[from=3-1, to=4-3, no head]
+	\arrow[from=4-3, to=3-5, no head]
+\end{tikzcd}
+
+> [Link to diagram](https://q.uiver.app/?q=WzAsNSxbMiwwLCJFXzEgRV8yIl0sWzAsMiwiRV8xIl0sWzQsMiwiRV8yIl0sWzIsMywiRV8xIFxcY2FwIEVfMiJdLFsyLDYsImsiXSxbMiw0LCJcXHRleHR7bm9ybWFsfSJdLFszLDQsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFx0ZXh0e25vcm1hbH0iLDJdLFswLDEsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDQsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d)
+
+:::
+
+#### Issues with Normal Towers
+
+
+:::{.example title="Normal extensions are not transitive: failure of lower transitivity, forward implication"}
+One can similarly produce towers where the total extension is normal but the lower iterate is not normal: take
+\[
+L/K/k \da \QQ(2^{1\over 3}, \zeta_3) / \QQ(2^{1\over 3}) / \QQ
+.\]
+Now $K/k$ isn't normal, since $\Gal(L/k) = S_3$ but $\Gal(L/K) = \ZZ/2 \not\normal S_3$.
+
+Another example: let $L/k$ be any algebraic extension that isn't normal, and take $N_k$ to be the normal closure to get $N_k/L$. 
+Concretely, $N_\QQ / \QQ(2^{1\over 3})/\QQ$ works.
+:::
+
+:::{.example title="Normal extensions are not transitive: failure of reverse implication"}
+One can produce towers of successively normal extensions whose total extension is not normal in a cheap way:
+take 
+\[
+L/K/k \da \QQ(2^{1\over 4}) / \QQ(2^{1\over 2}) / \QQ
+.\]
+Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
+:::
+
+:::{.proposition title="Normal extensions are upper transitive, forward implication"}
+For $L/k$ finite,
+
+\begin{tikzcd}
+	L &&&& L \\
+	\\
+	K && \implies && K \\
+	\\
+	k &&&& k
+	\arrow[from=3-1, to=1-1]
+	\arrow[from=5-1, to=3-1]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=24pt}, dashed, from=5-1, to=1-1]
+	\arrow[from=5-5, to=3-5]
+	\arrow[from=3-5, to=1-5]
+	\arrow["{\text{Normal}}"', color={rgb,255:red,214;green,92;blue,92}, curve={height=18pt}, dashed, from=3-5, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
+
+:::
+
+:::{.proof title="Finite case"}
+\envlist
+
+- Use the fact that for finite extensions, $L/k$ is normal and separable $\iff L$ is the splitting field of a separable polynomial $f\in k[x]$.
+- Now regard $f$ as a polynomial in $K[x]$; then $L$ is still the splitting field of $f$ over $K$, done.
+
+Alternatively,
+
+- Let $\alpha\in L$ be a root of $f\in K[x]$ with $f$ irreducible, it suffices to show all roots of $f$ are in $L$.
+- Let $m\in K[x]$ be the minimal polynomial of $\alpha$ over $K$, and let $m'\in k[x]$ be the minimal polynomial of $\alpha$ over $k$.
+- Since $L/k$ is normal and $\alpha\in L$, $m'$ splits in $L$.
+- Minimal polynomials are divisible in towers, so $m$ divides $m'$.
+  Since $m'$ splits in $L$, so must $m$.
+
+:::
+
+:::{.proof title="General case"}
+\envlist
+
+- Suppose $L/K/k$ with $L/k$ normal, we want to show $L/K$ is normal.
+- Use the embedding characterization, it suffices to show that every embedding $\sigma: L\embeds \bar{K}$ satisfies $\im \sigma = L$:
+
+\begin{tikzcd}
+	&& {\bar{K} = \bar{k}} \\
+	\\
+	L && {\sigma(L)} \\
+	\\
+	K && K \\
+	\\
+	k && k
+	\arrow[Rightarrow, no head, from=7-1, to=7-3]
+	\arrow[hook, from=7-1, to=5-1]
+	\arrow[hook, from=7-3, to=5-3]
+	\arrow[hook, from=5-3, to=3-3]
+	\arrow[hook, from=5-1, to=3-1]
+	\arrow[hook, from=3-3, to=1-3]
+	\arrow["\sigma", hook, from=3-1, to=1-3]
+	\arrow["\sigma", hook, from=3-1, to=3-3]
+	\arrow[Rightarrow, no head, from=5-1, to=5-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw2LCJrIl0sWzAsNCwiSyJdLFswLDIsIkwiXSxbMiwyLCJcXHNpZ21hKEwpIl0sWzIsNCwiSyJdLFsyLDYsImsiXSxbMiwwLCJcXGJhcntLfSA9IFxcYmFye2t9Il0sWzAsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNiwiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMywiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
+
+- Now just use the fact that $\bar{k} = \bar{K}$, and since $k\subseteq K$, any $K\dash$morphism is also a $k\dash$morphism.
+- Since $L/k$ is normal, $\sigma(L) = L$ and $L/K$ is thus normal.
 :::
 
