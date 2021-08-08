@@ -283,7 +283,7 @@ Then TFAE:
 :::
 
 :::{.proposition title="Characterization of normal algebraic extensions"}
-If $L/k$ s algebraic, then $L/k$ is normal iff every embedding $\sigma: L \injects \bar{k}$ lifting the identity on $k$ satisfies $\sigma(L) = L$, so $\sigma$ is an automorphism of $L$ fixing $k$.
+For $L/k$ algebraic: let $\bar{k}$ be an algebraic closure containing $L$, then $L/k$ is normal iff every $k\dash$embedding $\sigma: L\to \bar{k}$ satisfies $\im \sigma = L$, so $\sigma$ is a $k\dash$automorphism of $L$.
 :::
 
 :::{.definition title="Normal Closure"}
