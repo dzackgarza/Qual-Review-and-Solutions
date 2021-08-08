@@ -60,12 +60,12 @@ $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is prop
 ### Characterizing Certain Ideals
 
 - Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
-- Show that $\rad(I)$ is the intersection of all prime ideals containing $I$.
+- Show that $\rad{I}$ is the intersection of all prime ideals containing $I$.
 
 :::{.problem title="Jacobson radical is bigger than the nilradical"}
 The nilradical is contained in the Jacobson radical, i.e.
 \[
-\mathfrak N(R) \subseteq J(R)
+\nilrad{R} \subseteq J(R)
 .\]
 :::
 
@@ -80,10 +80,10 @@ $R/ \nilrad{R}$ has no nonzero nilpotent elements.
 :::{.solution}
 \envlist
 \[
-a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
-&\implies a^n \in \mathfrak N(R) \\
+a + \nilrad{R} \text{ nilpotent } &\implies (a+ \nilrad{R})^n \definedas a^n + \nilrad{R}= \nilrad{R} \\
+&\implies a^n \in \nilrad{R} \\
 &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-&\implies a\in \mathfrak N(R)
+&\implies a\in \nilrad{R}
 .
 \]
 :::
@@ -91,18 +91,18 @@ a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas 
 :::{.problem title="Nilradical is intersection of primes"}
 The nilradical is the intersection of all prime ideals, i.e.
 \[
-\mathfrak{N}(R) = \Intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
+\nilrad{R} = \Intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
 \]
 :::
 
 :::{.solution}
 \envlist
 
-- $\mathfrak{N} \subseteq \intersect \mathfrak{p}$:
+- $\nilrad{R} \subseteq \intersect \mathfrak{p}$:
 
-- $x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
+- $x \in \nilrad{R} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
 
-- $\mathfrak{N}^c \subseteq \union \mathfrak{p}^c$:
+- $R\sm \nilrad{R} \subseteq \union_{\mfp} (R\sm \mathfrak{p})$:
 
 - Define $S = \theset{I\normal R \suchthat a^n\not\in I \text{ for any } n}$.
 

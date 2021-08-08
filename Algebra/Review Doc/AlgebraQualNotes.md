@@ -381,6 +381,7 @@
 \newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{\sqrt{0_{#1}} }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\noeth}[0]{\mathrm{Noeth}}
 \newcommand{\nonzero}[0]{^{\bullet}}
@@ -6046,16 +6047,19 @@ Generating Sets
 
 ## Ring Theory
 
-Basic Structure
+### Basic Structure
 
 - Show that if an ideal $I\normal R$ contains a unit then $I = R$.
 - Show that $R\units$ need not be closed under addition.
 
-Ideals
+### Ideals
+
+- $\star$ Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 
 :::{.problem title="Units or Zero Divisors"}
 Every $a\in R$ for a finite ring is either a unit or a zero divisor.
 :::
+
 :::{.solution}
 \hfill
 - Let $a\in R$ and define $\phi(x) = ax$.
@@ -6067,6 +6071,7 @@ Every $a\in R$ for a finite ring is either a unit or a zero divisor.
 :::{.problem title="Maximal implies prime"}
 Maximal $\implies$ prime, but generally not the converse.
 :::
+
 :::{.solution}
 
 - Suppose $\mm$ is maximal, $ab\in \mm$, and $b\not\in \mm$.
@@ -6084,7 +6089,6 @@ Maximal $\implies$ prime, but generally not the converse.
 $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is properly contained in any other ideal.
 :::
 
-
 - Show that every proper ideal is contained in a maximal ideal
 - Show that if $x\in R$ a PID, then $x$ is irreducible $\iff \gens{x}\normal R$ is maximal.
 - Show that intersections, products, and sums of ideals are ideals.
@@ -6094,39 +6098,39 @@ $(0) \in \ZZ$ is prime since $\ZZ$ is a domain, but not maximal since it is prop
 - Show that $I \normal R$ is prime iff $R/I$ is an integral domain.
 - Show that $\union_{\mfm \in \maxspec(R)} = R\setminus R\units$.
 - Show that $\maxspec(R) \subsetneq \spec(R)$ but the containment is strict.
-- $\star$ Show that if $x$ is not a unit, then $x$ is contained in some maximal ideal.
 - Show that every prime ideal is radical.
-- Show that the nilradical is given by $\nilrad(R) = \rad(0)$.
+- Show that the nilradical is given by $\nilrad{R} = \rad(0)$.
 - Show that $\text{rad}(IJ) = \text{rad}(I) \intersect \text{rad}(J)$
 - Show that if $\spec(R) \subseteq \maxspec(R)$ then $R$ is a UFD.
 - Show that if $R$ is Noetherian then every ideal is finitely generated.
 
-Characterizing Certain Ideals
+### Characterizing Certain Ideals
 
-- Show that the nilradical of a ring is the intersection of all prime ideals $I\normal R$.
 - Show that for an ideal $I\normal R$, its radical is the intersection of all prime ideals containing $I$.
-- Show that $\rad(I)$ is the intersection of all prime ideals containing $I$.
+- Show that $\rad{I}$ is the intersection of all prime ideals containing $I$.
 
 :::{.problem title="Jacobson radical is bigger than the nilradical"}
 The nilradical is contained in the Jacobson radical, i.e.
 \[
-\mathfrak \nilrad (R) \subseteq \jacobsonrad(R)
+\nilrad{R} \subseteq J(R)
 .\]
 :::
+
 :::{.solution}
 Maximal $\implies$ prime, and so if $x$ is in every prime ideal, it is necessarily in every maximal ideal as well.
 :::
 
 :::{.problem title="Mod by nilradical to kill nilpotents"}
-$R/\mathfrak \nilrad(R)$ has no nonzero nilpotent elements.
+$R/ \nilrad{R}$ has no nonzero nilpotent elements.
 :::
+
 :::{.solution}
-\hfill
+\envlist
 \[
-a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas a^n + \mathfrak N(R)= \mathfrak N(R) \\
-&\implies a^n \in \mathfrak N(R) \\
+a + \nilrad{R} \text{ nilpotent } &\implies (a+ \nilrad{R})^n \definedas a^n + \nilrad{R}= \nilrad{R} \\
+&\implies a^n \in \nilrad{R} \\
 &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-&\implies a\in \mathfrak N(R)
+&\implies a\in \nilrad{R}
 .
 \]
 :::
@@ -6134,30 +6138,32 @@ a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \definedas 
 :::{.problem title="Nilradical is intersection of primes"}
 The nilradical is the intersection of all prime ideals, i.e.
 \[
-\mathfrak{N}(R) = \intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
+\nilrad{R} = \Intersect_{\mathfrak{p} \in \spec(R)} \mathfrak{p}
 \]
 :::
+
 :::{.solution}
-- $\mathfrak{N} \subseteq \intersect \mathfrak{p}$:
+\envlist
 
-- $x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
+- $\nilrad{R} \subseteq \intersect \mathfrak{p}$:
 
-- $\mathfrak{N}^c \subseteq \union \mathfrak{p}^c$:
+- $x \in \nilrad{R} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p$.
+
+- $R\sm \nilrad{R} \subseteq \union_{\mfp} (R\sm \mathfrak{p})$:
 
 - Define $S = \theset{I\normal R \suchthat a^n\not\in I \text{ for any } n}$.
 
 - Then apply Zorn's lemma to get a maximal ideal $\mm$, and maximal $\implies$ prime.
 :::
 
-Misc
+### Misc
 
 - Show that localizing a ring at a prime ideal produces a local ring.
 - Show that $R$ is a local ring iff for every $x\in R$, either $x$ or $1-x$ is a unit.
-- Show that if $R$ is a local ring then $R\setminus R\units$ is a proper ideal that is contained in $\jacobsonrad(R)$.
+- Show that if $R$ is a local ring then $R\setminus R\units$ is a proper ideal that is contained in the Jacobson radical $J(R)$.
 - Show that if $R\neq 0$ is a ring in which every non-unit is nilpotent then $R$ is local.
 - Show that every prime ideal is primary.
 - Show that every prime ideal is irreducible.
-- Show that
 
 
 

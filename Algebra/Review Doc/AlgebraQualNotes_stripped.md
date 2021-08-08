@@ -4964,12 +4964,14 @@ Generating Sets
 
 ## Ring Theory
 
-Basic Structure
+### Basic Structure
 
 -   Show that if an ideal \( I{~\trianglelefteq~}R \) contains a unit then \( I = R \).
 -   Show that \( R^{\times} \) need not be closed under addition.
 
-Ideals
+### Ideals
+
+-   \( \star \) Show that if \( x \) is not a unit, then \( x \) is contained in some maximal ideal.
 
 ::: {.problem title="Units or Zero Divisors"}
 Every \( a\in R \) for a finite ring is either a unit or a zero divisor.
@@ -5012,23 +5014,21 @@ Maximal \( \implies \) prime, but generally not the converse.
 -   Show that \( I {~\trianglelefteq~}R \) is prime iff \( R/I \) is an integral domain.
 -   Show that \( \cup_{{\mathfrak{m}}\in {\operatorname{maxSpec}}(R)} = R\setminus R^{\times} \).
 -   Show that \( {\operatorname{maxSpec}}(R) \subsetneq \operatorname{Spec}(R) \) but the containment is strict.
--   \( \star \) Show that if \( x \) is not a unit, then \( x \) is contained in some maximal ideal.
 -   Show that every prime ideal is radical.
--   Show that the nilradical is given by \( {\sqrt{0_{(}} }R) = \sqrt{(}0) \).
+-   Show that the nilradical is given by \( {\sqrt{0_{R}} } = \sqrt{(}0) \).
 -   Show that \( \text{rad}(IJ) = \text{rad}(I) \cap\text{rad}(J) \)
 -   Show that if \( \operatorname{Spec}(R) \subseteq {\operatorname{maxSpec}}(R) \) then \( R \) is a UFD.
 -   Show that if \( R \) is Noetherian then every ideal is finitely generated.
 
-Characterizing Certain Ideals
+### Characterizing Certain Ideals
 
--   Show that the nilradical of a ring is the intersection of all prime ideals \( I{~\trianglelefteq~}R \).
 -   Show that for an ideal \( I{~\trianglelefteq~}R \), its radical is the intersection of all prime ideals containing \( I \).
--   Show that \( \sqrt{(}I) \) is the intersection of all prime ideals containing \( I \).
+-   Show that \( \sqrt{I} \) is the intersection of all prime ideals containing \( I \).
 
 ::: {.problem title="Jacobson radical is bigger than the nilradical"}
 The nilradical is contained in the Jacobson radical, i.e.
 \[
-\mathfrak {\sqrt{0_{(}} }R) \subseteq \jacobsonrad(R)
+{\sqrt{0_{R}} } \subseteq J(R)
 .\]
 :::
 
@@ -5037,19 +5037,19 @@ Maximal \( \implies \) prime, and so if \( x \) is in every prime ideal, it is n
 :::
 
 ::: {.problem title="Mod by nilradical to kill nilpotents"}
-\( R/\mathfrak {\sqrt{0_{(}} }R) \) has no nonzero nilpotent elements.
+\( R/ {\sqrt{0_{R}} } \) has no nonzero nilpotent elements.
 :::
 
 ::: {.solution}
 ```{=tex}
-\hfill
+\envlist
 ```
 
 \[
-a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \coloneqq a^n + \mathfrak N(R)= \mathfrak N(R) \\
-&\implies a^n \in \mathfrak N(R) \\
+a + {\sqrt{0_{R}} } \text{ nilpotent } &\implies (a+ {\sqrt{0_{R}} })^n \coloneqq a^n + {\sqrt{0_{R}} }= {\sqrt{0_{R}} } \\
+&\implies a^n \in {\sqrt{0_{R}} } \\
 &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-&\implies a\in \mathfrak N(R)
+&\implies a\in {\sqrt{0_{R}} }
 .
 \]
 :::
@@ -5057,31 +5057,33 @@ a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \coloneqq a
 ::: {.problem title="Nilradical is intersection of primes"}
 The nilradical is the intersection of all prime ideals, i.e.
 \[
-\mathfrak{N}(R) = \cap_{\mathfrak{p} \in \operatorname{Spec}(R)} \mathfrak{p}
+{\sqrt{0_{R}} } = \displaystyle\bigcap_{\mathfrak{p} \in \operatorname{Spec}(R)} \mathfrak{p}
 \]
 :::
 
 ::: {.solution}
--   \( \mathfrak{N} \subseteq \cap\mathfrak{p} \):
+```{=tex}
+\envlist
+```
+-   \( {\sqrt{0_{R}} } \subseteq \cap\mathfrak{p} \):
 
--   \( x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p \).
+-   \( x \in {\sqrt{0_{R}} } \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p \).
 
--   \( \mathfrak{N}^c \subseteq \cup\mathfrak{p}^c \):
+-   \( R\setminus{\sqrt{0_{R}} } \subseteq \cup_{{\mathfrak{p}}} (R\setminus\mathfrak{p}) \):
 
 -   Define \( S = \left\{{I{~\trianglelefteq~}R {~\mathrel{\Big|}~}a^n\not\in I \text{ for any } n}\right\} \).
 
 -   Then apply Zorn's lemma to get a maximal ideal \( {\mathfrak{m}} \), and maximal \( \implies \) prime.
 :::
 
-Misc
+### Misc
 
 -   Show that localizing a ring at a prime ideal produces a local ring.
 -   Show that \( R \) is a local ring iff for every \( x\in R \), either \( x \) or \( 1-x \) is a unit.
--   Show that if \( R \) is a local ring then \( R\setminus R^{\times} \) is a proper ideal that is contained in \( \jacobsonrad(R) \).
+-   Show that if \( R \) is a local ring then \( R\setminus R^{\times} \) is a proper ideal that is contained in the Jacobson radical \( J(R) \).
 -   Show that if \( R\neq 0 \) is a ring in which every non-unit is nilpotent then \( R \) is local.
 -   Show that every prime ideal is primary.
 -   Show that every prime ideal is irreducible.
--   Show that
 
 ## Field Theory
 

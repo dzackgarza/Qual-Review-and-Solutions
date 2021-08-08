@@ -8610,7 +8610,8 @@ Generating Sets
 \hypertarget{ring-theory-1}{%
 \subsection{Ring Theory}\label{ring-theory-1}}
 
-Basic Structure
+\hypertarget{basic-structure}{%
+\subsubsection{Basic Structure}\label{basic-structure}}
 
 \begin{itemize}
 \tightlist
@@ -8621,7 +8622,15 @@ Basic Structure
   Show that \(R^{\times}\) need not be closed under addition.
 \end{itemize}
 
-Ideals
+\hypertarget{ideals-1}{%
+\subsubsection{Ideals}\label{ideals-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\star\) Show that if \(x\) is not a unit, then \(x\) is contained in
+  some maximal ideal.
+\end{itemize}
 
 \begin{problem}[Units or Zero Divisors]
 
@@ -8705,13 +8714,9 @@ contained in any other ideal.
   \({\operatorname{maxSpec}}(R) \subsetneq \operatorname{Spec}(R)\) but
   the containment is strict.
 \item
-  \(\star\) Show that if \(x\) is not a unit, then \(x\) is contained in
-  some maximal ideal.
-\item
   Show that every prime ideal is radical.
 \item
-  Show that the nilradical is given by
-  \({\sqrt{0_{(}} }R) = \sqrt{(}0)\).
+  Show that the nilradical is given by \({\sqrt{0_{R}} } = \sqrt{(}0)\).
 \item
   Show that \(\text{rad}(IJ) = \text{rad}(I) \cap\text{rad}(J)\)
 \item
@@ -8723,18 +8728,17 @@ contained in any other ideal.
   generated.
 \end{itemize}
 
-Characterizing Certain Ideals
+\hypertarget{characterizing-certain-ideals}{%
+\subsubsection{Characterizing Certain
+Ideals}\label{characterizing-certain-ideals}}
 
 \begin{itemize}
 \tightlist
 \item
-  Show that the nilradical of a ring is the intersection of all prime
-  ideals \(I{~\trianglelefteq~}R\).
-\item
   Show that for an ideal \(I{~\trianglelefteq~}R\), its radical is the
   intersection of all prime ideals containing \(I\).
 \item
-  Show that \(\sqrt{(}I)\) is the intersection of all prime ideals
+  Show that \(\sqrt{I}\) is the intersection of all prime ideals
   containing \(I\).
 \end{itemize}
 
@@ -8742,7 +8746,7 @@ Characterizing Certain Ideals
 
 The nilradical is contained in the Jacobson radical, i.e.
 \begin{align*}
-\mathfrak {\sqrt{0_{(}} }R) \subseteq \jacobsonrad(R)
+{\sqrt{0_{R}} } \subseteq J(R)
 .\end{align*}
 
 \end{problem}
@@ -8756,19 +8760,19 @@ is necessarily in every maximal ideal as well.
 
 \begin{problem}[Mod by nilradical to kill nilpotents]
 
-\(R/\mathfrak {\sqrt{0_{(}} }R)\) has no nonzero nilpotent elements.
+\(R/ {\sqrt{0_{R}} }\) has no nonzero nilpotent elements.
 
 \end{problem}
 
 \begin{solution}
 
-\hfill
+\envlist
 
 \begin{align*}
-a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \coloneqq a^n + \mathfrak N(R)= \mathfrak N(R) \\
-&\implies a^n \in \mathfrak N(R) \\
+a + {\sqrt{0_{R}} } \text{ nilpotent } &\implies (a+ {\sqrt{0_{R}} })^n \coloneqq a^n + {\sqrt{0_{R}} }= {\sqrt{0_{R}} } \\
+&\implies a^n \in {\sqrt{0_{R}} } \\
 &\implies \exists \ell \text{ such that } (a^n)^\ell = 0 \\
-&\implies a\in \mathfrak N(R)
+&\implies a\in {\sqrt{0_{R}} }
 .
 \end{align*}
 
@@ -8778,20 +8782,22 @@ a + \mathfrak N(R)\text{ nilpotent } &\implies (a+ \mathfrak N(R))^n \coloneqq a
 
 The nilradical is the intersection of all prime ideals, i.e.
 \begin{align*}
-\mathfrak{N}(R) = \cap_{\mathfrak{p} \in \operatorname{Spec}(R)} \mathfrak{p}
+{\sqrt{0_{R}} } = \displaystyle\bigcap_{\mathfrak{p} \in \operatorname{Spec}(R)} \mathfrak{p}
 \end{align*}
 
 \end{problem}
 
 \begin{solution}
 
+\envlist
+
 \begin{itemize}
 \item
-  \(\mathfrak{N} \subseteq \cap\mathfrak{p}\):
+  \({\sqrt{0_{R}} } \subseteq \cap\mathfrak{p}\):
 \item
-  \(x \in \mathfrak{N} \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p\).
+  \(x \in {\sqrt{0_{R}} } \implies x^n = 0 \in \mathfrak p \implies x\in \mathfrak{p} \text{ or } x^{n-1}\in\mathfrak p\).
 \item
-  \(\mathfrak{N}^c \subseteq \cup\mathfrak{p}^c\):
+  \(R\setminus{\sqrt{0_{R}} } \subseteq \cup_{{\mathfrak{p}}} (R\setminus\mathfrak{p})\):
 \item
   Define
   \(S = \left\{{I{~\trianglelefteq~}R {~\mathrel{\Big|}~}a^n\not\in I \text{ for any } n}\right\}\).
@@ -8802,7 +8808,8 @@ The nilradical is the intersection of all prime ideals, i.e.
 
 \end{solution}
 
-Misc
+\hypertarget{misc-2}{%
+\subsubsection{Misc}\label{misc-2}}
 
 \begin{itemize}
 \tightlist
@@ -8813,7 +8820,7 @@ Misc
   or \(1-x\) is a unit.
 \item
   Show that if \(R\) is a local ring then \(R\setminus R^{\times}\) is a
-  proper ideal that is contained in \(\jacobsonrad(R)\).
+  proper ideal that is contained in the Jacobson radical \(J(R)\).
 \item
   Show that if \(R\neq 0\) is a ring in which every non-unit is
   nilpotent then \(R\) is local.
@@ -8821,8 +8828,6 @@ Misc
   Show that every prime ideal is primary.
 \item
   Show that every prime ideal is irreducible.
-\item
-  Show that
 \end{itemize}
 
 \hypertarget{field-theory-1}{%

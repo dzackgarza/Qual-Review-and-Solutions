@@ -662,15 +662,15 @@ Show that $\nilrad{R} = \Intersect_{p\in \spec R} p$ is the intersection of all 
 :::
 
 :::{.definition title="Jacobson Radical"}
-The **Jacobson radical** $\jacrad{R}$ is the intersection of all maximal ideals, i.e.
+The **Jacobson radical** $\jacobsonrad{R}$ is the intersection of all maximal ideals, i.e.
 \[  
-\jacrad{R} = \Intersect_{\mfm \in \mspec R} \mfm
+\jacobsonrad{R} = \Intersect_{\mfm \in \mspec R} \mfm
 .\]
 :::
 
 
 :::{.exercise title="?"}
-Show $x\in \jacrad{R} \iff 1-xR \subseteq R\units$.
+Show $x\in \jacobsonrad{R} \iff 1-xR \subseteq R\units$.
 :::
 
 
