@@ -1,6 +1,6 @@
 # Jordan Canonical Form
 
-> https://mattbaker.blog/2015/07/31/the-jordan-canonical-form/
+> Useful reference: <https://mattbaker.blog/2015/07/31/the-jordan-canonical-form/>
 
 ## Facts
 
@@ -9,7 +9,6 @@ The JCF corresponds to **elementary divisors**.
 :::
 
 \todo[inline]{Make more precise..}
-
 
 :::{.proposition title="JCF Algorithm for generalized eigenvectors"}
 The following algorithm always works for computing $\JCF(A)$:
@@ -79,7 +78,6 @@ This is because $(x-\lambda_i)^{\ell_i}$ annihilates a Jordan block of size $\el
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
 
-
 :::{.remark}
 Writing $\Ann(\vector v)$ as the annihilator of $\vector v$, a generalized eigenvector for the pair $(\lambda_i, \vector v)$ for a matrix $A$ is any operator in the space $\sqrt{\Ann(\vector v)}$, where we view $V$ as a $k[x]\dash$module using $p(x) \actson \vector v \da p(A)(\vector v)$.
 So 
@@ -102,7 +100,6 @@ and the theorem is that $V \cong \bigoplus_i V^{\lambda_i}$.
 It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V$.
 :::
 
-
 :::{.proof title="of generalized eigenspace decomposition"}
 
 - Suppose $\chi_A(x) = \prod (x-\lambda_i)^{n_i}$.
@@ -123,9 +120,18 @@ It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V
 
 \todo[inline]{Messy indexing.}
 
-
-
 ## Exercises
+
+
+:::{.exercise title="?"}
+Prove Cayley-Hamilton using the JCF.
+:::
+
+:::{.exercise title="?"}
+Prove the rank-nullity theorem using JCF.
+:::
+
+
 
 :::{.exercise title="?"}
 Compute $\JCF(A)$ for 
@@ -164,6 +170,4 @@ B \da
 
 
 :::
-
-
 
