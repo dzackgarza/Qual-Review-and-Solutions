@@ -1,14 +1,130 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+# Preface
+
+I'd like to extend my gratitude to the following people for helping supply solutions and proofs:
+
+-   Paco Adajar
+-   Swaroop Hegde
+
+Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
+
 # Group Theory: General
 
-## Spring 2020 \#2 \( \work \) {#spring-2020-2-work}
+## Cosets
+
+### Spring 2020 \#2 \( \done \) {#spring-2020-2-done}
 
 Let \( H \) be a normal subgroup of a finite group \( G \) where the order of \( H \) and the index of \( H \) in \( G \) are relatively prime. Prove that no other subgroup of \( G \) has the same order as \( H \).
 
+::: {.concept}
 ```{=tex}
-\todo[inline]{Work this problem.}
+\envlist
 ```
-## Spring 2019 \#4 \( \done \) {#spring-2019-4-done}
+-   Division algorithm: \( (a,b)= d\implies as+bt =1 \) for some \( s, t \).
+-   Coset containment trick: \( X\subseteq N \iff xN = N \) for all \( x \).
+:::
+
+::: {.strategy}
+Recognize that it suffices to show \( hN = N \). Context cue: coprimality hints at division algorithm. Descend to quotient so you can leverage both the order of \( h \) *and* the order of cosets simultaneously.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   For ease of notation, replace \( H \) in the problem with \( N \) so we remember which one is normal.
+-   Write \( n\coloneqq\# N \) and \( m \coloneqq[G:N] = \#G/N \), where the quotient makes sense since \( N \) is normal.
+-   Let \( H \leq G \) with \( \# H = n \), we'll show \( H=N \).
+    -   Since \( \# H = \# N \) it suffices to show \( H \subseteq N \).
+    -   It further suffices to show \( hN = N \) for all \( h\in H \).
+-   Noting \( \gcd(m, n)=1 \), use the division algorithm to write \( 1 = ns + mt \) for some \( s,t\in {\mathbb{Z}} \).
+-   The result follows from a computation:
+    \[
+    hN 
+    &= h^1 N \\
+    &= h^{ns + mt}N \\
+    &= h^{ns} N \cdot h^{mt}N \\
+    &= \qty{h^n N}^s \cdot \qty{h^t N}^m \\
+    &= (eN)^s \cdot N \\
+    &= N
+    ,\]
+    -   We've used that \( h\in H \implies o(h) \divides \# H = n \) by Lagrange, so \( h^n = e \).
+    -   We've also used that \( \# G/N = m \), so \( (xH)^m = H \) for any \( xH\in G/H \).
+:::
+
+### Fall 2014 \#6 \( \done \) {#fall-2014-6-done}
+
+Let \( G \) be a group and \( H, K < G \) be subgroups of finite index. Show that
+\[
+[G: H\cap K] \leq [G: H] ~ [G:K]
+.\]
+
+http://www.ams.org/notices/200304/what-is.pdf :::{.concept} `\envlist`{=tex}
+
+-   For \( H, K\leq G \), intersection is again a subgroup of everything: \( H\cap K \leq H, K, G \) by the one-step subgroup test.
+-   Counting in towers: \( A\leq B \leq C \implies [C:A] = [C:B][B:A] \).
+-   Fundamental theorem of cosets: \( xH = yH \iff xy^{-1}\in H \).
+-   Common trick: just list out all of the darn cosets! :::
+
+::: {.strategy}
+Count in towers, show that distinct coset reps stay distinct.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   \( H \cap K \leq H \leq G \implies [G: H \cap K] = [G: H] [H : H \cap K] \)
+-   So it suffices to show \( [H: H \cap K] \leq [G: K] \)
+-   Write \( H/H \cap K = \left\{{ h_1 J, \cdots, h_m J }\right\} \) as distinct cosets where \( J \coloneqq H \cap J \).
+-   Then \( h_i J\neq h_j J \iff h_i h_j^{-1}\not\in J = H \cap K \).
+-   \( H \) is a subgroup, so \( h_i h_j^{-1}\in H \) forces this not to be in \( K \).
+-   But then \( h_i K \neq h_j K \), so these are distinct cosets in \( G/K \).
+-   So \( \#G/K \geq m \).
+:::
+
+### Spring 2013 \#3 \( \done \) {#spring-2013-3-done}
+
+Let \( P \) be a finite \( p{\hbox{-}} \)group. Prove that every nontrivial normal subgroup of \( P \) intersects the center of \( P \) nontrivially.
+
+```{=tex}
+\todo[inline]{Clean up, sketchy argument.}
+```
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Let \( N{~\trianglelefteq~}P \), then for each conjugacy class \( [n_i] \) in \( N \), \( H \cap[g_i] = [g_i] \) or is empty.
+-   \( G = {\textstyle\coprod}_{i\leq M} [g_i] \) is a disjoint union of conjugacy classes, and the conjugacy classes of \( H \) are of the form \( [g_i] \cap H \).
+-   Then pull out the center
+    \[
+    H = \displaystyle\coprod_{i\leq M} [g_i] \cap H = \qty{ Z(G) \cap H } {\textstyle\coprod}\displaystyle\coprod_{i\leq M'} [g_i]
+    .\]
+-   Taking cardinalities,
+    \[
+    \# H = \# \qty{ Z(G) \cap H} + \sum_{i\leq M'} \# [g_i]
+    .\]
+-   \( p \) divides \( H \) since \( H\leq P \) and \( P \) is a \( p{\hbox{-}} \)group.
+-   Each \( \# [g_i] \geq 2 \) since the trivial conjugacy classes appear in the center, forcing \( \# [g_i] \geq p \).
+-   \( p \) divides \( \# [g_i] \) since \( \# [g_i] \) must divide \( \# P = p^k \)
+-   So \( p \) must divide the remaining term \( Z(G) \cap H \), which makes it nontrivial.
+:::
+
+## Burnside / Class Equation
+
+### Spring 2019 \#4 \( \done \) {#spring-2019-4-done}
 
 For a finite group \( G \), let \( c(G) \) denote the number of conjugacy classes of \( G \).
 
@@ -26,17 +142,22 @@ c.  Using the class equation (or otherwise) show that the probability in part (a
 
 > Here, as usual, \( Z(G) \) denotes the center of \( G \).
 
+::: {.warnings}
+(DZG) This is a slightly anomalous problem! It's fun and worth doing, because it uses the major counting formulas. Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
+:::
+
 ::: {.concept}
 ```{=tex}
 \envlist
 ```
 -   Notation: \( X/G \) is the set of \( G{\hbox{-}} \)orbits
--   Notation: \( X^g = \left\{{x\in x{~\mathrel{\Big|}~}g\cdot x = x}\right\} \)
--   Burnside's formula: \( {\left\lvert {G} \right\rvert} {\left\lvert {X/G} \right\rvert} = \sum {\left\lvert {X^g} \right\rvert} \).
+-   Notation: \( X^g = \left\{{x\in X{~\mathrel{\Big|}~}g\cdot x = x}\right\} \)
+-   Burnside's formula: \( \#{X/G} = {1 \over \# G} \sum \# {X^g} \).
+-   Definition of conjugacy class: \( C(g) = \left\{{ hgh^{-1}{~\mathrel{\Big|}~}h\in G }\right\} \).
 :::
 
 ::: {.strategy}
-Burnside.
+Fixed points of the conjugation action are precisely commuting elements. Apply Burnside. Context clue: \( 1/[G:Z(G)] \) is weird, right? Use that \( [G:Z(G)] = \# G/\# Z(G) \), so try to look for \( \#Z(G)/\#(G) \) somewhere. Count sizes of centralizers.
 :::
 
 ::: {.solution}
@@ -44,16 +165,20 @@ Burnside.
 \envlist
 ```
 ::: {.proof title="Part a"}
-Strategy: Burnside.
+```{=tex}
+\envlist
+```
+-   Define a sample space \( \Omega = G \times G \), so \( \# {\Omega} = (\# {G})^2 \).
 
--   Define a sample space \( \Omega = G \times G \), so \( {\left\lvert {\Omega} \right\rvert} = {\left\lvert {G} \right\rvert}^2 \).
+-   Identify the event we want to analyze:
+    \[
+    A \coloneqq\left\{{(g,h) \in G\times G {~\mathrel{\Big|}~}[g,h] = 1}\right\} \subseteq \Omega
+    .\]
 
--   Identify the event we want to analyze: \( A \coloneqq\left\{{(g,h) \in G\times G {~\mathrel{\Big|}~}[g,h] = 1}\right\} \).
-
-    -   Define and note:
-        \[
-        A_g \coloneqq\left\{{(g, h) {~\mathrel{\Big|}~}h\in H, [g, h] = 1}\right\} \implies A = {\coprod}_{g\in G} A_g
-        .\]
+-   Note that the slices are centralizers:
+    \[
+    A_g \coloneqq\left\{{(g, h) \in \left\{{ g }\right\} \times G {~\mathrel{\Big|}~}[g, h] = 1}\right\} = Z(g) \implies A = \displaystyle\coprod_{g\in G} Z(g)
+    .\]
 
 -   Set \( n \) be the number of conjugacy classes, note we want to show \( P(A) = n / {\left\lvert {G} \right\rvert} \).
 
@@ -63,39 +188,39 @@ Strategy: Burnside.
         \[
         \mathcal{O}_g = \left\{{hgh^{-1}{~\mathrel{\Big|}~}h\in G}\right\}
         ,\]
-        which is the conjugacy class of \( g \).
+        which is the **conjugacy class** of \( g \). In particular, the number of orbits is the number of conjugacy classes.
 
     -   What are the fixed points?
         \[X^g = \left\{{h\in G {~\mathrel{\Big|}~}hgh^{-1}= g}\right\},\]
-        which are the elements of \( G \) that commute with \( g \), which is precisely \( A_g \).
+        which are the elements of \( G \) that commute with \( g \), which is isomorphic to \( A_g \).
 
--   Note \( {\left\lvert {X/G} \right\rvert} = n \), the number of conjugacy classes.
-
--   Note that
+-   Identifying centralizers with fixed points,
     \[
-    {\left\lvert {A} \right\rvert} = {\left\lvert {{\coprod}_{g\in G} A_g} \right\rvert} = \sum_{g\in G} {\left\lvert {A_g} \right\rvert} = \sum_{g\in G}{\left\lvert {X^g} \right\rvert}
+    \#{A} = \#{\displaystyle\coprod_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
     .\]
 
 -   Apply Burnside
     \[
-    {\left\lvert {X / G} \right\rvert} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+    \# {X / G} = \frac { 1 } { \# G  } \sum _ { g \in G } \# X ^ { g } ,
     \]
+
+-   Note \( \#{X/G} = n \), i.e. the number of conjugacy classes is the number of orbits.
 
 -   Rearrange and use definition:
     \[
-    n {\left\lvert {G} \right\rvert}
-    = {\left\lvert {X/G} \right\rvert} {\left\lvert {G} \right\rvert}
-    = \sum _ { g \in G } \left| X ^ { g } \right|
+    n \cdot \#{G}
+    = \qty{\#{X/G} }\cdot \#{G}
+    = \sum _ { g \in G } \# X ^ { g } 
     \]
 
 -   Compute probability:
     \[
     P(A)
-    = {{\left\lvert {A} \right\rvert} \over {\left\lvert {\Omega} \right\rvert}} 
-    = \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac{{\left\lvert {X/G} \right\rvert}{\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac{n {\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}^2} 
-    = \frac n {{\left\lvert {G} \right\rvert}}
+    = {\# A \over \# \Omega} 
+    =  \displaystyle\sum _{ g \in G } \frac{\# X ^ { g }}{ ( \# {G} )^2} 
+    = \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
+    = \frac{n \cdot \#{G}}{( \#{G} )^2} 
+    = \frac n {\# G}
     .\]
 :::
 
@@ -104,38 +229,47 @@ Statement of the class equation:
 \[
 {\left\lvert {G} \right\rvert} = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-where \( Z(x) = \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\} \).
+where \( Z(x) = \left\{{g\in G {~\mathrel{\Big|}~}[g, x] = 1}\right\} \) is the centralizer of \( x \) in \( G \).
 :::
 
 ::: {.proof title="Part c"}
-As shown in part 1,
-\[
-\mathcal{O}_x = \left\{{g\curvearrowright x {~\mathrel{\Big|}~}g\in G}\right\} = \left\{{h\in G {~\mathrel{\Big|}~}ghg^{-1}= h}\right\} = C_G(g)
-,\]
-and by the class equation
+```{=tex}
+\envlist
+```
+> (DZG): I couldn't convince myself that a previous proof using the class equation actually works. Instead, I'll borrow the proof from [this note](https://math.berkeley.edu/~tb65536/Commuting_Probability.pdf)
 
-\[
-{\left\lvert {G} \right\rvert} = {\left\lvert {Z(G)} \right\rvert} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
-\]
-
-Now note
-
--   Each element of \( Z(G) \) is in its own conjugacy class, contributing \( {\left\lvert {Z(G)} \right\rvert} \) classes to \( n \).
-
--   Every other class of elements in \( G\setminus Z(G) \) contains at least 2 elements
-
-    -   Claim: each such class contributes **at least** \( \frac 1 2 {\left\lvert {G \setminus Z(G)} \right\rvert} \).
-
-Thus
-\[
-n &\leq {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G \setminus Z(G)} \right\rvert} \\
-&= {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G} \right\rvert} - \frac 1 2 {\left\lvert {Z(G)} \right\rvert} \\
-&= \frac 1 2 {\left\lvert {G} \right\rvert} + \frac 1 2 {\left\lvert {Z(G)} \right\rvert} \\
-\\
-\implies \frac n {{\left\lvert {G} \right\rvert}}
-&\leq \frac 1 2 \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {G} \right\rvert}}  + \frac 1 2 \frac{{\left\lvert {Z(G)} \right\rvert}}{{\left\lvert {G} \right\rvert}} \\
-&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
-.\]
+-   Write the event as \( A = \displaystyle\coprod_{g\in G} \left\{{g}\right\} \times Z(g) \), then
+    \[
+    P(A) 
+    = {\# A\over (\# G)^2} 
+    = {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
+    .\]
+-   Attempt to estimate the sum: pull out central elements \( g\in Z(G) \).
+    -   Note \( Z(g) = G \) for central \( g \), so \( \# Z(g) = \# G \)
+    -   Note
+        \[
+        g\not\in Z(G)\implies \# Z(g) \leq {1\over 2} \# G
+        ,\]
+        since \( Z(g) \leq G \) is a subgroup, and
+        \[
+        [G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2
+        .\]
+-   Use these facts to calculate:
+    \[
+    P(A) 
+    &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+    &\leq {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} {1\over 2} \# G } \\
+    &= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \qty{ \sum_{g\not\in Z(g)} {1\over 2} } \cdot \# G } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \setminus Z(G) ) } \\
+    &= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#G - {1\over 2} \# Z(G) } \\
+    &= {1\over (\# G) } \qty{ {1\over 2} \# Z(G) + {1\over 2} \#G  } \\
+    &= {1\over 2} \qty{1 + { \# Z(G) \over \# G }} \\
+    &= {1\over 2} \qty{1 + { 1 \over [G : Z(G)]  }}
+    .\]
 :::
 
 ```{=tex}
@@ -143,15 +277,9 @@ n &\leq {\left\lvert {Z(G)} \right\rvert} + \frac 1 2{\left\lvert {G \setminus Z
 ```
 :::
 
-## Spring 2012 \#2 \( \work \) {#spring-2012-2-work}
+## Group Actions / Representations
 
-Let \( G \) be a finite group and \( p \) a prime number such that there is a normal subgroup \( H{~\trianglelefteq~}G \) with \( {\left\lvert {H} \right\rvert} = p^i > 1 \).
-
-a.  Show that \( H \) is a subgroup of any Sylow \( p{\hbox{-}} \)subgroup of \( G \).
-
-b.  Show that \( G \) contains a nonzero abelian normal subgroup of order divisible by \( p \).
-
-## Spring 2017 \#1 \( \work \) {#spring-2017-1-work}
+### Spring 2017 \#1 \( \done \) {#spring-2017-1-done}
 
 Let \( G \) be a finite group and \( \pi: G\to \operatorname{Sym}(G) \) the Cayley representation.
 
@@ -159,7 +287,304 @@ Let \( G \) be a finite group and \( \pi: G\to \operatorname{Sym}(G) \) the Cayl
 
 Prove that \( \pi(x) \) is an odd permutation \( \iff \) the order \( {\left\lvert {\pi(x)} \right\rvert} \) of \( \pi(x) \) is even and \( {\left\lvert {G} \right\rvert} / {\left\lvert {\pi(x)} \right\rvert} \) is odd.
 
-## Fall 2016 \#1 \( \work \) {#fall-2016-1-work}
+::: {.warnings}
+(DZG): This seems like an unusually hard group theory problem. My guess is this year's qual class spent more time than usual on the proof of Cayley's theorem.
+:::
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   \( \operatorname{Sym}(G) \coloneqq\mathop{\mathrm{Aut}}_{\mathsf{Set}}(G, G) \) is the group of set morphisms from \( G \) to itself, i.e. permutations of elements of \( G \).
+-   More standard terminology: this is related to the **left regular representation** where \( g\mapsto \phi_g \) where \( \phi_g(x) = gx \), regarded instead as a permutation representation.
+    -   This action is transitive!
+-   Cayley's theorem: every \( G \) is isomorphic to a subgroup of a permutation group. In particular, take \( \left\{{ \phi_g {~\mathrel{\Big|}~}G\in G }\right\} \) with function composition as a subgroup of \( \mathop{\mathrm{Aut}}_{\mathsf{Set}}(G) \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+> (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument. Most of the key ideas are borrowed [from here](https://math.stackexchange.com/questions/3028603/show-that-phig-is-an-even-permutation).
+
+-   Write \( k \coloneqq o(\pi_g) \), then since \( \pi \) is injective, \( k = o(g) \) in \( G \).
+-   Since \( \pi_g \) as a cycle is obtained from the action of \( g \), we can pick an element \( x_0 \) in \( G \), take the orbit under the action, and obtain a cycle of length \( k \) since the order of \( g \) is \( k \). Then continue by taking any \( x_1 \) not in the first orbit and taking *its* orbit. Continuing this way exhausts all group elements and yields a decomposition into disjoint cycles:
+    \[
+    \pi_g = 
+    (x_0, gx_0, g^2 x_0, \cdots, g^{k-1} x_0)
+    (x_1, gx_1, g^2 x_1, \cdots, g^{k-1} x_1)
+    \cdots
+    (x_m, gx_m, g^2 x_m, \cdots, g^{k-1} x_m)
+    .\]
+-   So there are \( m \) orbits all of length exactly \( k \). Proceed by casework.
+-   If \( k \) is even:
+    -   This yields \( m \) odd cycles, and thus \( \pi \) has zero (an even number) of even cycles.
+    -   Thus \( \pi \in \ker \operatorname{sgn} \) and is an even permutation.
+-   If \( k \) is odd
+    -   This yields \( m \) even cycles, thus an even number of even cycles iff \( m \) is even
+-   The claim is that the number of orbit representatives \( m \) is equal to \( [G:H] = \# G/H \) for \( H = \left\langle{ g }\right\rangle \).
+    -   Proof: define a map
+        \[
+        \left\{{ \text{Orbit representatives } x_i }\right\} &\to G/H \\
+        x &\mapsto xH
+        .\]
+    -   This is injective and surjective because
+        \[
+        xH = yH &\iff xy^{-1}\in H = \left\langle{ g }\right\rangle \\
+        &\iff xy^{-1}= g^\ell \\
+        &\iff x=g^\ell y \\
+        &\iff y\in {\mathcal{O}}_x
+        ,\]
+        so \( y \) and \( x \) are in the same orbit and have the same orbit representative.
+-   We now have
+    \[
+    \pi_g \text{ is an even permutation } \iff 
+    \begin{cases}
+    k \text{ is odd and } m \text{ is even} &  
+    \\
+    \text{ or } & \\
+    k \text{ is even}
+     & .
+    \end{cases}
+    \]
+-   Everything was an iff, so flip the evens to odds:
+    \[
+    \pi_g \text{ is an odd permutation } \iff 
+    \begin{cases}
+    k \text{ is even and } m \text{ is odd} &  
+    \\
+    \text{ or } & \\
+    k \text{ is odd}
+     & .
+    \end{cases}
+    .\]
+-   Then just recall that \( k\coloneqq o(\pi_g) \) and
+    \[
+    m= [G: \left\langle{ g }\right\rangle] = \# G / \# \left\langle{ g }\right\rangle= \# G / o(g) = \# G/ o(\pi_g)
+    .\]
+:::
+
+### Fall 2015 \#1 \( \done \) {#fall-2015-1-done}
+
+Let \( G \) be a group containing a subgroup \( H \) not equal to \( G \) of finite index. Prove that \( G \) has a normal subgroup which is contained in every conjugate of \( H \) which is of finite index.
+
+> (DZG) A remark: it's not the conjugates that should be finite index here, but rather the normal subgroup.
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Let \( H\leq G \) and define \( n\coloneqq[G:H] \).
+-   Write \( G/H = \left\{{ x_1 H, \cdots, x_n H }\right\} \) for the finitely many cosets.
+-   Let \( G \) act on \( G/H \) by left translation, so \( g\cdot xH \coloneqq gxH \).. Call the action \( \psi: G\to \operatorname{Sym}(G/H) \).
+-   Then \( {\operatorname{Stab}}(xH) = xHx^{-1} \) is a subgroup conjugate to \( H \), and \( K\coloneqq\ker \psi = \displaystyle\bigcap_{i=1}^n xHx^{-1} \) is the intersection of all conjugates of \( H \).
+-   Kernels are normal, so \( K{~\trianglelefteq~}G \), and \( K\subseteq xHx^{-1} \) for all \( x \), meaning \( K \) is contained in every conjugate of \( H \).
+-   The index \( [G:K] \) is finite since \( G/K \cong \operatorname{im}\psi \) by the first isomorphism theorem, and \( \# \operatorname{im}\psi \leq \# \operatorname{Sym}(G/H) = \# S_n = n! < \infty \).
+:::
+
+## Conjugacy Classes
+
+### Spring 2021 \#2 \( \done \) {#spring-2021-2-done}
+
+Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \), where the order of \( H \) is the smallest prime \( p \) dividing \( {\left\lvert {G} \right\rvert} \). Prove that \( H \) is contained in the center of \( G \).
+
+> Solution due to Swaroop Hegde, typed up + modifications added by DZG.
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+1.  Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+
+-   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff a union of conjugacy classes).
+
+2.  Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \). In particular, \( \# C_g \) divides \( \#G \).
+3.  \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+:::
+
+::: {.proof title="?"}
+```{=tex}
+\envlist
+```
+-   Let \( p \coloneqq\#H \).
+
+-   Let \( \left\{{ C_i }\right\}_{i\leq n} \) be the conjugacy classes in \( G \), then \( G = {\textstyle\coprod}_{i\leq n} C_i \)
+
+-   By the first fact, there is a sub-collection \( \left\{{ C_{i_j}}\right\}_{j\leq k } \) such that
+    \[
+    H = {\textstyle\coprod}_{j\leq k} C_{i_j}
+    .\]
+
+-   The identity is always in a single conjugacy class, so \( C_e = \left\{{ e }\right\} \).
+
+-   Since \( e\in H \), without loss of generality, label \( C_{i_1} = \left\{{ e }\right\} \).
+
+-   So
+    \[
+    H 
+    = {\textstyle\coprod}_{j\leq k} C_{i_j} 
+    = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+    .\]
+
+-   Take cardinality in the above equation
+    \[
+    p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+    .\]
+
+-   So \( \# C_{i_j} \leq p-1 \) for all \( j\neq 1 \).
+
+-   Every \( \# C_{i_j} \) divides \( \# G \), but \( p \) was the *minimal* prime dividing \( \# G \), forcing \( \# C_{i_j} = 1 \) for all \( j \neq 1 \).
+
+    -   This rules out \( \# C_{i_j} \) being a prime less than \( p \), but also rules out composites: if a prime \( q\divides \# C_{i_j} \), then \( q<p \) and \( q\divides \# G \), a contradiction.
+
+-   By fact 3, each \( x\in C_{i_j} \) satisfies \( x\in Z(G) \).
+
+-   \( \cup C_{i_j} = H \), so \( H \subseteq Z(G) \).
+:::
+
+### Spring 2015 \#1 \( \done \) {#spring-2015-1-done}
+
+For a prime \( p \), let \( G \) be a finite \( p{\hbox{-}} \)group and let \( N \) be a normal subgroup of \( G \) of order \( p \). Prove that \( N \) is contained in the center of \( G \).
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Definition of conjugacy class: \( [x] = \left\{{gxg^{-1}{~\mathrel{\Big|}~}g\in G}\right\} \).
+-   A conjugacy class \( [x] \) is trivial iff \( [x] = \left\{{ x }\right\} \) iff \( x\in Z(G) \).
+-   Sizes of conjugacy classes divide the order of the group they live in.
+    -   This is orbit-stabilizer: \( G\curvearrowright G \) by \( g\cdot x \coloneqq gxg^{-1} \), so \( {\mathcal{O}}(x) = [x] \). Then \( \# {\mathcal{O}}(x) = \# G / \# {\operatorname{Stab}}(x) \), so \( \# {\mathcal{O}}(x) \) divides \( \# G \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Use that \( N{~\trianglelefteq~}G \iff N = {\textstyle\coprod}' [n_i] \) is a *disjoint* union of (full) conjugacy classes.
+-   Take cardinalities:
+    \[
+    p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
+    .\]
+-   The size of each conjugacy class divides the size of \( H \) by orbit-stabilizer, so \( \# [n_i] \divides p \) for each \( i \).
+-   But the entire second term must sum to \( p-1 \) for this equality to hold, which forces \( \#[n_i] = 1 \) (and incidentally \( m=p-1 \))
+-   Then \( [n_i] = \left\{{ n_i }\right\} \iff n_i \in Z(G) \), and this holds for all \( i \), so \( N \subseteq Z(G) \).
+:::
+
+## Unsorted / Counting Arguments
+
+### Fall 2019 Midterm \#5 \( \done \) {#fall-2019-midterm-5-done}
+
+Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show that \( Z(G) = [G, G] \).
+
+> Note: this is a good problem, it tests several common theorems at once. Proof due to Paco Adajar.
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+Important notations and definitions:
+
+-   The **center** of \( G \), denoted by \( Z(G) \), is the subset of elements of \( G \) which commute with all elements of \( G \). That is, if \( x \in Z(G) \), then for all \( g \in G \), \( gx = xg \):
+    \[Z(G) = \{ x \in G : gx = xg \, \text{for all } g \in G \}.\]
+
+    In fact, \( Z(G) \) is not just a subset of \( G \), but a normal subgroup of \( G \).
+
+-   The **commutator subgroup** of \( G \), denoted by \( [G, G] \), is the subgroup of \( G \) generated by the commutators of \( G \), i.e., the elements of the form \( ghg^{-1}h^{-1} \):
+    \[[G, G] = \langle ghg^{-1}h^{-1} : g, h \in G \rangle.\]
+
+    The commutator subgroup \( [G,G] \) is the smallest normal subgroup of \( G \) whose quotient is abelian. That is, if \( H \) is a normal subgroup of \( G \) for which \( G/H \) is abelian, then \( [G, G] \le H \).
+
+    Moreover, \( G \) is abelian if and only if \( [G,G] \) is trivial.
+
+Theorems to remember and know how to prove:
+
+-   **\( G/Z(G) \) Theorem**: If \( G/Z(G) \) is cyclic, then \( G \) is abelian, i.e., \( G/Z(G) \) is in fact trivial.
+
+-   **Lagrange's Theorem**: If \( G \) is a group of finite order and \( H \) is a subgroup of \( G \), then the order of \( H \) divides that of \( G \).
+
+    -   One consequence of this is that every group of prime order is cyclic.
+
+-   A \( p \)-group (a group of order \( p^n \) for some prime \( p \) and some positive integer \( n \)) has nontrivial center.
+
+-   A consequence of the theorems above: every group of order \( p^2 \) (where \( p \) is prime) is abelian.
+:::
+
+::: {.solution}
+Since \( Z(G) \) is a subgroup of \( G \) and \( |G| = p^3 \), by Lagrange's theorem, \( |Z(G)| \in \{1, p, p^2, p^3\} \).
+
+Since we stipulated that \( G \) is nonabelian, \( |Z(G)| \ne p^3 \). Also, since \( G \) is a \( p \)-group, it has nontrivial center, so \( |Z(G)| \ne 1 \). Finally, by the \( G/Z(G) \) theorem, \( |Z(G)| \ne p^2 \): if \( |Z(G)| = p^2 \), then \( |G/Z(G)| = p \) and so \( G/Z(G) \) would be cyclic, meaning that \( G \) is abelian. Hence, \( |Z(G)| = p \).
+
+Then, since \( |Z(G)| = p \), we have that \( |G/Z(G)| = p^2 \), and so \( G/Z(G) \) is abelian. Thus, \( [G, G] \in Z(G) \). Since \( |Z(G)| = p \), then \( |[G,G]| \in \{ 1, p\} \) again by Lagrange's theorem. If \( |[G,G]| = p \) then \( [G,G] = Z(G) \) and we are done. And, indeed, we must have \( |[G,G]| = p \), because \( G \) is nonabelian and so \( |[G,G]| \ne 1 \).
+:::
+
+### Spring 2012 \#2 \( \done \) {#spring-2012-2-done}
+
+Let \( G \) be a finite group and \( p \) a prime number such that there is a normal subgroup \( H{~\trianglelefteq~}G \) with \( {\left\lvert {H} \right\rvert} = p^i > 1 \).
+
+a.  Show that \( H \) is a subgroup of any Sylow \( p{\hbox{-}} \)subgroup of \( G \).
+
+b.  Show that \( G \) contains a nonzero abelian normal subgroup of order divisible by \( p \).
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   \( p \) groups have nontrivial centers.
+-   Definition of maximality and \( p{\hbox{-}} \)groups
+-   Sylows are conjugate
+-   \( Z(G) \operatorname{ch}G \) always.
+-   Transitivity of characteristic: \( A \operatorname{ch}B \) and \( B{~\trianglelefteq~}C \) implies \( A {~\trianglelefteq~}C \).
+:::
+
+::: {.strategy}
+Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) is good to consider, just need to ensure it's normal in \( G \). Use transitivity of characteristic.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
+-   By definition, \( S\in {\operatorname{Syl}}_p(G) \iff S \) is a *maximal* \( p{\hbox{-}} \)subgroup: \( S<G \) is a \( p{\hbox{-}} \)group, so \( \#S = p^k \) for some \( k \), \( S \) is a proper subgroup, and \( S \) is maximal in the sense that there are no proper \( p{\hbox{-}} \)subgroups \( S' \) with \( S \subseteq S' \subseteq G \).
+-   Since \( \# H = p^i \), \( H \) is a \( p{\hbox{-}} \)subgroup of \( G \).
+-   If \( H \) is maximal, then by definition \( H\in {\operatorname{Syl}}_p(G) \)
+-   Otherwise, if \( H \) is not maximal, there exists an \( H' \supseteq H \) with \( H'\leq G \) a \( p{\hbox{-}} \)subgroup properly containing \( H \).
+    -   In this apply the same argument to \( H' \): this yields a proper superset containment at every stage, and since \( G \) is finite, there is no infinite ascending chain of proper supersets.
+    -   So this terminates in some maximal \( p{\hbox{-}} \)subgroup \( S \), i.e. a Sylow \( p{\hbox{-}} \)subgroup.
+-   So \( H \subseteq S \) for some \( S\in {\operatorname{Syl}}_p(G) \).
+-   All Sylows are conjugate, so for any \( S' \in {\operatorname{Syl}}_p(G) \) we can write \( S' = gSg^{-1} \) for some \( g \).
+-   Then using that \( H \) is normal, \( H \subseteq S \implies H = gHg^{-1}\subseteq gSg^{-1}\coloneqq S' \). So \( H \) is contained in every Sylow \( p{\hbox{-}} \)subgroup.
+:::
+
+::: {.proof title="of b"}
+```{=tex}
+\envlist
+```
+-   Claim: \( Z(H) \leq H \) works.
+    -   It is nontrivial since \( H \) is a \( p{\hbox{-}} \)group and \( p{\hbox{-}} \)groups have nontrivial centers
+    -   It is abelian since \( Z(Z(H)) = Z(H) \).
+    -   \( \#Z(H) = p^\ell \) for some \( \ell \leq i \) by Lagrange
+-   It thus remains to show that \( Z(H) {~\trianglelefteq~}G \).
+-   Use that \( Z(H) \operatorname{ch}H \) and use transitivity of characteristic to conclude \( Z(H) {~\trianglelefteq~}H \).
+-   That \( Z(H) \operatorname{ch}H \): let \( \psi \in \mathop{\mathrm{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
+    \[
+     \psi(y)h 
+     &= \psi(y) (\psi \circ \psi^{-1})(h) \\
+     &= \psi( y \cdot \psi^{-1}(h) ) \\
+     &= \psi( \psi^{-1}(h) \cdot y ) && \text{since } \psi^{-1}(h)\in H, \, y\in Z(H) \\
+     &= h\psi(y)
+     .\]
+-   That \( A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
+    -   \( A\operatorname{ch}B \) iff \( A \) is fixed by every \( \psi\in \mathop{\mathrm{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
+    -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( \mathop{\mathrm{Aut}}(B) \).
+    -   Then \( \psi(A) = A \) since \( A\operatorname{ch}B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
+:::
+:::
+
+### Fall 2016 \#1 \( \done \) {#fall-2016-1-done}
 
 Let \( G \) be a finite group and \( s, t\in G \) be two distinct elements of order 2. Show that subgroup of \( G \) generated by \( s \) and \( t \) is a dihedral group.
 
@@ -168,40 +593,216 @@ Let \( G \) be a finite group and \( s, t\in G \) be two distinct elements of or
 > D_{2m} = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^m = 1 = \tau^2, \tau \sigma = \sigma^{-1}\tau}\right\rangle
 > .\]
 
-## Fall 2015 \#1 \( \work \) {#fall-2015-1-work}
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Suppose \( G = \left\langle{ a, b}\right\rangle \) with \( a^2 = b^2 = e \), satisfying some unknown relations.
 
-Let \( G \) be a group containing a subgroup \( H \) not equal to \( G \) of finite index. Prove that \( G \) has a normal subgroup which is contained in every conjugate of \( H \) which is of finite index.
+-   Consider \( ab \). Since \( G \) is finite, this has finite order, so \( (ab)^n = e \) for some \( n\geq 2 \).
 
-## Spring 2015 \#1 \( \work \) {#spring-2015-1-work}
+-   Note \( \left\langle{ab, b}\right\rangle \subseteq \left\langle{a, b}\right\rangle \), since any finite word in \( ab, b \) is also a finite word in \( a, b \).
 
-For a prime \( p \), let \( G \) be a finite \( p{\hbox{-}} \)group and let \( N \) be a normal subgroup of \( G \) of order \( p \). Prove that \( N \) is contained in the center of \( G \).
+-   Since \( (ab)b = ab^2 = a \), we have \( \left\langle{ab, b}\right\rangle \subseteq \left\langle{a, b}\right\rangle \), so \( \left\langle{ab, b}\right\rangle = \left\langle{a, b}\right\rangle \).
 
-## Fall 2014 \#6 \( \work \) {#fall-2014-6-work}
+-   Write \( D_{2n} = F(r, s) / \ker \pi \) for \( \pi: F(r, s)\to D_{2n} \) the canonical presentation map.
 
-Let \( G \) be a group and \( H, K < G \) be subgroups of finite index. Show that
-\[
-[G: H\cap K] \leq [G: H] ~ [G:K]
-.\]
+-   Define
+    \[
+    \psi: F(r, s) &\to G \\
+    r &\mapsto ab \\
+    t &\mapsto b
+    .\]
 
-## Spring 2013 \#3 \( \work \) {#spring-2013-3-work}
+-   This is clearly surjective since it hits all generators.
 
-Let \( P \) be a finite \( p{\hbox{-}} \)group. Prove that every nontrivial normal subgroup of \( P \) intersects the center of \( P \) nontrivially.
+-   We'll show that \( ab, a \) satisfy all of the relations defining \( D_{2n} \), which factors \( \psi \) through \( \ker \pi \), yielding a surjection \( \tilde \psi: D_{2n} \twoheadrightarrow G \).
 
-## Fall 2019 Midterm \#1 \( \work \) {#fall-2019-midterm-1-work}
+    -   \( (ab)^n = e \) by construction, \( b^2 = e \) by assumption, and
+        \[
+        b (ab) b^{-1}= babb^{-1}= ba = b^{-1}a^{-1}= (ab)^{-1}
+        ,\]
+        corresponding to the relation \( srs^{-1}= r^{-1} \). Here we've used that \( o(a) = o(b) = 2 \) implies \( a=a^{-1}, b=b^{-1} \).
+
+-   Surjectivity of \( \tilde \psi \) yields \( 2n = \# D_{2n} \geq \# G \).
+
+-   The claim is that \( \# G \geq 2n \), which forces \( \# G = 2n \). Then \( \tilde \psi \) will be a surjective group morphism between groups of the same order, and thus an isomorphism.
+
+    -   We have \( \left\langle{ ab }\right\rangle\leq G \), so \( n\divides \# G \).
+    -   Since \( b\not\in \left\langle{ ab }\right\rangle \), this forces \( \# G > n \), so \( \# G \geq 2n \).
+
+> Remark: see a more direct proof in [Theorem 2.1 and Theorem 1.1 here](https://kconrad.math.uconn.edu/blurbs/grouptheory/dihedral2.pdf)
+:::
+
+### Fall 2019 Midterm \#1 \( \work \) {#fall-2019-midterm-1-work}
 
 Let \( G \) be a group of order \( p^2q \) for \( p, q \) prime. Show that \( G \) has a nontrivial normal subgroup.
 
-## Fall 2019 Midterm \#4 \( \work \) {#fall-2019-midterm-4-work}
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Write \( \# G = p^2 q \)
+
+-   Cases: first assume \( p>q \), then do \( q<p \).
+
+-   In any case, we have
+    \[
+    n_p \divides q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+    n_q \divides p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+    .\]
+
+-   **Case 1:** \( :p>q \).
+
+-   If \( p>q \), then \( p\geq q+2 \) since \( p+1 \) can't be prime.
+
+-   So \( q \) is not congruent to \( 1\pmod p \), forcing \( n_p = 1 \).
+
+-   **Case 2:**: \( p< q \):
+
+-   For the same reasons as above, \( p\not\equiv 1\pmod q \) forces \( n_q\neq p \).
+
+-   If \( n_q = 1 \), we're done.
+
+-   If \( n_q = p^2 \):
+
+    -   Finer analysis....
+:::
+
+### Fall 2019 Midterm \#4 \( \work \) {#fall-2019-midterm-4-work}
 
 Let \( p \) be a prime. Show that \( S_p = \left\langle{\tau, \sigma}\right\rangle \) where \( \tau \) is a transposition and \( \sigma \) is a \( p{\hbox{-}} \)cycle.
 
-## Fall 2019 Midterm \#5 \( \work \) {#fall-2019-midterm-5-work}
+# Groups: Group Actions
 
-Let \( G \) be a nonabelian group of order \( p^3 \) for \( p \) prime. Show that \( Z(G) = [G, G] \).
+## Fall 2012 \#1 \( \work \) {#fall-2012-1-work}
 
-## Spring 2021 \#2 \( \work \) {#spring-2021-2-work}
+Let \( G \) be a finite group and \( X \) a set on which \( G \) acts.
 
-Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \), where the order of \( H \) is the smallest prime \( p \) dividing \( {\left\lvert {G} \right\rvert} \). Prove that \( H \) is contained in the center of \( G \).
+a.  Let \( x\in X \) and \( G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\} \). Show that \( G_x \) is a subgroup of \( G \).
+
+b.  Let \( x\in X \) and \( G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \). Prove that there is a bijection between elements in \( G\cdot x \) and the left cosets of \( G_x \) in \( G \).
+
+## Fall 2015 \#2 \( \work \) {#fall-2015-2-work}
+
+Let \( G \) be a finite group, \( H \) a \( p{\hbox{-}} \)subgroup, and \( P \) a sylow \( p{\hbox{-}} \)subgroup for \( p \) a prime. Let \( H \) act on the left cosets of \( P \) in \( G \) by left translation.
+
+Prove that this is an orbit under this action of length 1.
+
+Prove that \( xP \) is an orbit of length 1 \( \iff H \) is contained in \( xPx^{-1} \).
+
+## Spring 2016 \#5 \( \work \) {#spring-2016-5-work}
+
+Let \( G \) be a finite group acting on a set \( X \). For \( x\in X \), let \( G_x \) be the stabilizer of \( x \) and \( G\cdot x \) be the orbit of \( x \).
+
+a.  Prove that there is a bijection between the left cosets \( G/G_x \) and \( G\cdot x \).
+
+b.  Prove that the center of every finite \( p{\hbox{-}} \)group \( G \) is nontrivial by considering that action of \( G \) on \( X=G \) by conjugation.
+
+## Fall 2017 \#1 \( \work \) {#fall-2017-1-work}
+
+Suppose the group \( G \) acts on the set \( A \). Assume this action is faithful (recall that this means that the kernel of the homomorphism from \( G \) to \( \operatorname{Sym}(A) \) which gives the action is trivial) and transitive (for all \( a, b \) in \( A \), there exists \( g \) in \( G \) such that \( g \cdot a = b \).)
+
+a.  For \( a \in A \), let \( G_a \) denote the stabilizer of \( a \) in \( G \). Prove that for any \( a \in A \),
+    \[
+    \displaystyle\bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
+    .\]
+
+b.  Suppose that \( G \) is abelian. Prove that \( |G| = |A| \). Deduce that every abelian transitive subgroup of \( S_n \) has order \( n \).
+
+## Fall 2018 \#2 \( \done \) {#fall-2018-2-done}
+
+a.  Suppose the group \( G \) acts on the set \( X \) . Show that the stabilizers of elements in the same orbit are conjugate.
+
+b.  Let \( G \) be a finite group and let \( H \) be a proper subgroup. Show that the union of the conjugates of \( H \) is strictly smaller than \( G \), i.e.
+    \[
+    \displaystyle\bigcup_{g\in G} gHg^{-1}\subsetneq G
+    \]
+
+c.  Suppose \( G \) is a finite group acting transitively on a set \( S \) with at least 2 elements. Show that there is an element of \( G \) with no fixed points in \( S \).
+
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   Orbit: \( G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X \)
+-   Stabilizer: \( G_x \coloneqq\left\{{g\in G{~\mathrel{\Big|}~}g\cdot x = x}\right\} \leq G \)
+-   Orbit-Stabilizer: \( G\cdot x \simeq G/G_x \).
+-   \( abc\in H \iff b\in a^{-1}H c^{-1} \)
+-   Set of orbits for \( G\curvearrowright X \), notated \( X/G \).
+-   Set of fixed points for \( G\curvearrowright X \), notated \( X^g \).
+-   Burnside's Lemma: \( {\left\lvert {X/G} \right\rvert} \cdot {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \)
+    -   Number of orbits equals average number of fixed points.
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="of a"}
+```{=tex}
+\envlist
+```
+-   Fix \( x \), then \( y\in {\mathrm{Orb}}(x) \implies g\cdot x = y \) for some \( g \), and \( x = g^{-1}\cdot y \).
+-   Then
+    \[
+    h \in {\operatorname{Stab}}(x)
+    &\iff h\cdot x = x && \text{by being in the stabilizer} \\
+    &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y \\
+    &\iff (g h g^{-1}) \cdot y = y \\
+    &\iff ghg^{-1}\in G_y && \text{by definition}\\
+    &\iff h\in g ^{-1}  {\operatorname{Stab}}(y) g
+    ,\]
+    so \( {\operatorname{Stab}}(x) = g^{-1}{\operatorname{Stab}}(y) g \).
+:::
+
+::: {.proof title="of b"}
+Let \( G \) act on its subgroups by conjugation,
+
+-   The orbit \( G\cdot H \) is the set of all subgroups conjugate to \( H \), and
+
+-   The stabilizer of \( H \) is \( G_H = N_G(H) \).
+
+-   By orbit-stabilizer,
+    \[
+    G\cdot H = [G: G_H] = [G: N_G(H)]
+    .\]
+
+-   Since \( {\left\lvert {H} \right\rvert} = n \), and all of its conjugate also have order \( n \).
+
+-   Note that
+    \[
+    H\leq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies {1\over {\left\lvert {N_G(H)} \right\rvert}} \leq {1\over {\left\lvert {H} \right\rvert}}
+    ,\]
+
+-   Now *strictly* bound the size of the union by overcounting their intersections at the identity:
+    \[
+    {\left\lvert {\displaystyle\bigcup_{g\in G}gHg^{-1}} \right\rvert} 
+    &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+    & \text{strictly overcounts since they intersect in at least the identity} \\
+    &= [G: N_G(H)] {\left\lvert {H} \right\rvert} \\
+    &= {{\left\lvert {G} \right\rvert} \over {\left\lvert {N_G(H)} \right\rvert}} {\left\lvert {H} \right\rvert} \\
+    & \text{since $G$ is finite} \\
+    &\leq {{\left\lvert {G} \right\rvert} \over {\left\lvert {H} \right\rvert}} {\left\lvert {H} \right\rvert} \\
+    &= {\left\lvert {G} \right\rvert}
+    .\]
+:::
+
+::: {.proof title="of c"}
+```{=tex}
+\envlist
+```
+-   Let \( G\curvearrowright X \) transitively where \( {\left\lvert {X} \right\rvert} \geq 2 \).
+-   An action is transitive iff there is only one orbit, so \( {\left\lvert {X/G} \right\rvert} = 1 \).
+-   Apply Burnside's Lemma
+    \[
+    1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert { \mathrm{Fix} (g)} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert { \mathrm{Fix} (g)} \right\rvert} =  \mathrm{Fix} (e) + \sum_{\substack{g\in G \\ g\neq e}} {\left\lvert { \mathrm{Fix} (g)} \right\rvert}
+    \]
+-   Note that \(  \mathrm{Fix} (e) = X \), since the identity must fix every element, so \( {\left\lvert { \mathrm{Fix} (e)} \right\rvert} \geq 2 \).
+-   If \( {\left\lvert { \mathrm{Fix} (g)} \right\rvert} > 0 \) for all \( g\neq e \), the remaining term is at least \( {\left\lvert {G} \right\rvert} -1 \). But then the right-hand side yields is at least \( 2 + ({\left\lvert {G} \right\rvert} -1) = {\left\lvert {G} \right\rvert} + 1 \), contradicting the equality.
+-   So not every \( {\left\lvert { \mathrm{Fix} (g)} \right\rvert} > 0 \), and \( {\left\lvert {  \mathrm{Fix} (g) } \right\rvert} = 0 \) for some \( g \), which says \( g \) has no fixed points in \( X \).
+:::
+:::
 
 # Groups: Sylow Theory
 
@@ -213,87 +814,36 @@ Let \( G \) be a finite group with \( n \) distinct conjugacy classes. Let \( g_
 ```{=tex}
 \envlist
 ```
--   Centralizer:
-    \[
-    C_G(h) = Z(h) = \left\{{g\in G {~\mathrel{\Big|}~}[g,h] = 1}\right\}
-    \quad\text{Centralizer}
-    \]
--   Class equation:
-    \[
-    {\left\lvert {G} \right\rvert} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {Z(h)} \right\rvert}}
-    \]
--   Notation:
-    \[
-    h^g &= ghg^{-1}\\
-    h^G &= \left\{{ h^g {~\mathrel{\Big|}~}g\in G}\right\} \quad\text{Conjugacy Class}\\
-    H^g &= \left\{{h^g {~\mathrel{\Big|}~}h\in H}\right\} \\
-    N_G(H) &= \left\{{g\in G {~\mathrel{\Big|}~}H^g = H}\right\} \supseteq H \quad\text{Normalizer}
-    .\]
+-   \( Z(g) = G \iff g\in Z(G) \), i.e. if the centralizer of \( g \) is the whole group, \( g \) is central.
+
+-   If \( H\leq G \) is a *proper* subgroup, then \( \displaystyle\bigcup_{g\in G} hGh^{-1} \) is again a proper subgroup (subset?) I.e. \( G \) is not a union of conjugates of any proper subgroup.
+
+-   So if \( G \) *is* a union of conjugates of \( H \), then \( H \) must not be proper, i.e. \( H= G \).
 :::
 
 ::: {.solution}
 ```{=tex}
 \envlist
 ```
-::: {.claim title="1"}
-\[
-{\left\lvert {h^G} \right\rvert} = [G: Z(h)]
-.\]
-:::
-
-::: {.claim title="2"}
-\[
-{\left\lvert {\left\{{H^g {~\mathrel{\Big|}~}g\in G}\right\}} \right\rvert} = [G: N_G(H)]
-.\]
-:::
-
-::: {.proof title="of claim 2"}
-```{=tex}
-\envlist
-```
--   Let \( G\curvearrowright\left\{{H {~\mathrel{\Big|}~}H \leq G}\right\} \) by \( H \mapsto gHg^{-1} \).
--   Then the \( \mathcal O_H \) is the set of conjugate subgroups, \( \mathrm{Stab}(H) = N_G(H) \).
--   So Orbit-Stabilizer says \( \mathcal O_h \cong G/\mathrm{Stab}(H) \); then just take sizes.
-:::
-
-::: {.claim title="3"}
-\( \cup_{g\in G} H^g = \cup_{g\in G} gHg^{-1}\subsetneq G \) for any proper \( H \leq G \).
-:::
-
-::: {.proof title="of claim 3"}
--   By theorem 2, since each coset is of size \( {\left\lvert {H} \right\rvert} \), which only intersect at the identity, and there are exactly \( [G: N_G(H)] \) of them
+-   We have \( g_j \subseteq Z(g_k) \) for all \( k \) by assumption.
+-   If we can show \( Z(g_k) = G \) for all \( k \), then \( g_k \in Z(G) \) for all \( k \).
+    -   Then each conjugacy class is size 1, and since \( G = {\textstyle\coprod}_{i=1}^n [g_i] = {\textstyle\coprod}_{i=1}^n \left\{{g_i}\right\} \), every \( g\in G \) is some \( g_i \). So \( G \subseteq Z(G) \), forcing \( G \) to be abelian.
+-   If we can show \( G \subseteq \displaystyle\bigcup_{h\in H} h Z(g_k) h^{-1} \) for some \( k \), this forces \( Z(g_k) = G \) and \( g_k \in Z(G) \).
+    -   If we can do this for all \( k \), we're done!
+-   Since \( g\in G \) is in some conjugacy class, write \( g=hg_j h^{-1} \) for some \( h\in G \) and some \( 1\leq j\leq n \).
+-   Now use \( g_j \in Z(g_k) \) for all \( k \):
     \[
-    {\left\lvert {\cup_{g\in G} H^g} \right\rvert} 
-    &= \qty{ {\left\lvert {H} \right\rvert} - 1} [G: N_G(H)] + 1\\
-    &= {\left\lvert {H} \right\rvert} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-    &= {\left\lvert {G} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {N_G(H)} \right\rvert}} + 1 \\
-    &\leq {\left\lvert {H} \right\rvert} \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} - \frac{{\left\lvert {G} \right\rvert}}{{\left\lvert {H} \right\rvert}} + 1 \\
-    &= {\left\lvert {G} \right\rvert} - ([G: H] - 1) \\
-    &< {\left\lvert {G} \right\rvert} 
-    ,\]
-    where we use the fact that \( H \subseteq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies \frac{1}{{\left\lvert {N_G(H)} \right\rvert}} \leq \frac{1}{{\left\lvert {H} \right\rvert}} \), and since \( H < G \) is proper, \( [G:H] \geq 2 \).
-
--   Since \( [g_i, g_j] = 1 \), we have \( g_i \in Z(g_j) \) for every \( i, j \).
-
--   Then
+    g\in G &\implies g = hg_j h^{-1}&& \text{for some } h\in H \\
+    g_j \in Z(g_k) \forall k &\implies g\in hZ(g_k)h^{-1}&&\text{for some }h, \, \forall 1\leq k \leq n \\
+    &\implies g\in \displaystyle\bigcup_{h\in G} h Z(g_k) h^{-1}
+    &&\forall 1\leq k \leq n \\
+    .\]
+    -   Note that it's necessary to get rid of the \( h \) dependence, since now now every \( g\in G \) is in \( \displaystyle\bigcup_{h\in G} hZ(g_k)h^{-1} \).
+-   Now
     \[
-    g\in G 
-    &\implies g = g_i^h \quad \text{ for some } h \\
-    &\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-    &\implies g \in \cup_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-    &\implies G \subseteq \cup_{h\in G} Z(g_j)^h \quad\text{for every } j
+    G \subseteq \displaystyle\bigcup_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
     ,\]
-
-    which by Theorem 3, if \( Z(g_j) < G \) were proper, then the RHS is properly contained in \( G \).
-
--   So it must be the case that that \( Z(g_j) \) is not proper and thus equal to \( G \) for every \( j \).
-
--   But \( Z(g_i) = G \iff g_i \in Z(G) \), and so each conjugacy class is size one.
-
--   So for every \( g\in G \), we have \( g = g_j \) for some \( j \), and thus \( g = g_j \in Z(g_j) = Z(G) \), so \( g \) is central.
-
--   Then \( G\subseteq Z(G) \) and \( G \) is abelian.
-:::
+    and we're done.
 :::
 
 ## Fall 2019 Midterm \#2 \( \work \) {#fall-2019-midterm-2-work}
@@ -384,7 +934,7 @@ b.  Let \( M \) be a maximal proper subgroup of \( G \). Show that either \( P \
 ```
 -   Sylow 2: All Sylow \( p{\hbox{-}} \)subgroups are conjugate.
 -   \( {\left\lvert {HK} \right\rvert} = {\left\lvert {H} \right\rvert} {\left\lvert {K} \right\rvert} / {\left\lvert {H\cap K} \right\rvert} \).
--   Lagrange's Theorem: \( H\leq G \implies {\left\lvert {H} \right\rvert} \bigm|{\left\lvert {G} \right\rvert} \)
+-   Lagrange's Theorem: \( H\leq G \implies {\left\lvert {H} \right\rvert} \divides {\left\lvert {G} \right\rvert} \)
 :::
 
 ::: {.solution}
@@ -448,7 +998,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   The \( pqr \) theorem.
 
--   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \bigm|m \) and \( n_p \cong 1 \pmod p \).
+-   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \pmod p \).
 
 -   **Theorem**: If \( H, K \leq G \) and any of the following conditions hold, \( HK \) is a subgroup:
 
@@ -478,11 +1028,11 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   We have
 
--   \( n_3 \bigm|5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
+-   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
 
--   \( n_5 \bigm|3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
+-   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
 
--   \( n_7 \bigm|3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
+-   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
 
 -   Thus
     \[
@@ -517,7 +1067,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 
 -   Note that we can write
     \[
-    G = \left\{{\text{elements of order } n}\right\} {\coprod}\left\{{\text{elements of order not } n}\right\}
+    G = \left\{{\text{elements of order } n}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } n}\right\}
     .\]
     for any \( n \), so we count for \( n=5, 7 \):
 
@@ -533,13 +1083,13 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 
     -   \( n_5 = 21 \):
         \[
-        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
+        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 5}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } 5}\right\}} \right\rvert} \\
         &\geq n_5(5-1) + 31 = 21(4) + 31 = 115 > 105 = {\left\lvert {G} \right\rvert}
         .\]
 
     -   \( n_7 = 15 \):
         \[
-        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
+        {\left\lvert {G} \right\rvert}  &= {\left\lvert {\left\{{\text{elements of order } 7}\right\} {\textstyle\coprod}\left\{{\text{elements of order not } 7}\right\}} \right\rvert} \\
         &\geq n_7(7-1) + 29 = 15(6) + 29 = 119 > 105 = {\left\lvert {G} \right\rvert}
         .\]
 :::
@@ -585,139 +1135,6 @@ a.  Prove that \( G \) is solvable.
 
 b.  Prove that the Sylow 5-subgroup is also normal.
 
-# Groups: Group Actions
-
-## Fall 2012 \#1 \( \work \) {#fall-2012-1-work}
-
-Let \( G \) be a finite group and \( X \) a set on which \( G \) acts.
-
-a.  Let \( x\in X \) and \( G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\} \). Show that \( G_x \) is a subgroup of \( G \).
-
-b.  Let \( x\in X \) and \( G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \). Prove that there is a bijection between elements in \( G\cdot x \) and the left cosets of \( G_x \) in \( G \).
-
-## Fall 2015 \#2 \( \work \) {#fall-2015-2-work}
-
-Let \( G \) be a finite group, \( H \) a \( p{\hbox{-}} \)subgroup, and \( P \) a sylow \( p{\hbox{-}} \)subgroup for \( p \) a prime. Let \( H \) act on the left cosets of \( P \) in \( G \) by left translation.
-
-Prove that this is an orbit under this action of length 1.
-
-Prove that \( xP \) is an orbit of length 1 \( \iff H \) is contained in \( xPx^{-1} \).
-
-## Spring 2016 \#5 \( \work \) {#spring-2016-5-work}
-
-Let \( G \) be a finite group acting on a set \( X \). For \( x\in X \), let \( G_x \) be the stabilizer of \( x \) and \( G\cdot x \) be the orbit of \( x \).
-
-a.  Prove that there is a bijection between the left cosets \( G/G_x \) and \( G\cdot x \).
-
-b.  Prove that the center of every finite \( p{\hbox{-}} \)group \( G \) is nontrivial by considering that action of \( G \) on \( X=G \) by conjugation.
-
-## Fall 2017 \#1 \( \work \) {#fall-2017-1-work}
-
-Suppose the group \( G \) acts on the set \( A \). Assume this action is faithful (recall that this means that the kernel of the homomorphism from \( G \) to \( \operatorname{Sym}(A) \) which gives the action is trivial) and transitive (for all \( a, b \) in \( A \), there exists \( g \) in \( G \) such that \( g \cdot a = b \).)
-
-a.  For \( a \in A \), let \( G_a \) denote the stabilizer of \( a \) in \( G \). Prove that for any \( a \in A \),
-    \[
-    \bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
-    .\]
-
-b.  Suppose that \( G \) is abelian. Prove that \( |G| = |A| \). Deduce that every abelian transitive subgroup of \( S_n \) has order \( n \).
-
-## Fall 2018 \#2 \( \done \) {#fall-2018-2-done}
-
-a.  Suppose the group \( G \) acts on the set \( X \) . Show that the stabilizers of elements in the same orbit are conjugate.
-
-b.  Let \( G \) be a finite group and let \( H \) be a proper subgroup. Show that the union of the conjugates of \( H \) is strictly smaller than \( G \), i.e.
-    \[
-    \bigcup_{g\in G} gHg^{-1}\subsetneq G
-    \]
-
-c.  Suppose \( G \) is a finite group acting transitively on a set \( S \) with at least 2 elements. Show that there is an element of \( G \) with no fixed points in \( S \).
-
-::: {.concept}
-```{=tex}
-\envlist
-```
--   Orbit: \( G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\} \subseteq X \)
--   Stabilizer: \( G_x \coloneqq\left\{{g\in G{~\mathrel{\Big|}~}g\cdot x = x}\right\} \leq G \)
--   Orbit-Stabilizer: \( G\cdot x \simeq G/G_x \).
--   \( abc\in H \iff b\in a^{-1}H c^{-1} \)
--   Set of orbits for \( G\curvearrowright X \), notated \( X/G \).
--   Set of fixed points for \( G\curvearrowright X \), notated \( X^g \).
--   Burnside's Lemma: \( {\left\lvert {X/G} \right\rvert} \cdot {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \)
-    -   Number of orbits equals average number of fixed points.
-:::
-
-::: {.solution}
-```{=tex}
-\envlist
-```
-::: {.proof title="of a"}
-```{=tex}
-\envlist
-```
--   Fix \( x \) and let \( y\in G_x \) be another element in the orbit of \( x \).
--   Then there exists a \( g\in G \) such that \( g\cdot x = y \), so \( x = g^{-1}\cdot y \)
--   Then
-    \[
-    h \in G\cdot x 
-    &\iff h\cdot x = x && \text{by being in the stabilizer} \\
-    &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y && \text{using that $x, y$ are in the same orbit} \\
-    &\iff (g h g^{-1}) \cdot y = y \\
-    &\iff ghg^{-1}\in G_y && \text{by the defn of the stabilizer}\\
-    &\iff h\in g ^{-1}  G_y g
-    ,\]
-
-so every \( h\in G\cdot x \) is conjugate to some element in \( G_y \).
-:::
-
-::: {.proof title="of b"}
-Let \( G \) act on its subgroups by conjugation,
-
--   The orbit \( G\cdot H \) is the set of all subgroups conjugate to \( H \), and
-
--   The stabilizer of \( H \) is \( G_H = N_G(H) \).
-
--   By orbit-stabilizer,
-    \[
-    G\cdot H = [G: G_H] = [G: N_G(H)]
-    .\]
-
--   Since \( {\left\lvert {H} \right\rvert} = n \), and all of its conjugate also have order \( n \).
-
--   Note that
-    \[
-    H\leq N_G(H) \implies {\left\lvert {H} \right\rvert} \leq {\left\lvert {N_G(H)} \right\rvert} \implies {1\over {\left\lvert {N_G(H)} \right\rvert}} \leq {1\over {\left\lvert {H} \right\rvert}}
-    ,\]
-
--   Now *strictly* bound the size of the union by overcounting their intersections at the identity:
-    \[
-    {\left\lvert {\bigcup_{g\in G}gHg^{-1}} \right\rvert} 
-    &< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
-    & \text{strictly overcounts since they intersect in at least the identity} \\
-    &= [G: N_G(H)] {\left\lvert {H} \right\rvert} \\
-    &= {{\left\lvert {G} \right\rvert} \over {\left\lvert {N_G(H)} \right\rvert}} {\left\lvert {H} \right\rvert} \\
-    & \text{since $G$ is finite} \\
-    &\leq {{\left\lvert {G} \right\rvert} \over {\left\lvert {H} \right\rvert}} {\left\lvert {H} \right\rvert} \\
-    &= {\left\lvert {G} \right\rvert}
-    .\]
-:::
-
-::: {.proof title="of c"}
-```{=tex}
-\envlist
-```
--   Let \( G\curvearrowright X \) transitively where \( {\left\lvert {X} \right\rvert} \geq 2 \)
--   An action is transitive iff there is only one orbit, so \( {\left\lvert {X/G} \right\rvert} = 1 \).
--   Apply Burnside's Lemma
-    \[
-    1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}
-    \]
--   Note that \( X^e = X \), since the identity must fix every element, so \( {\left\lvert {X^e} \right\rvert} \geq 2 \).
--   Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of \( G \)
--   Thus we must have \( {\left\lvert {X^g} \right\rvert} = 0 \) for some \( g\in G \), i.e. \( g \) has no fixed points in \( X \).
-:::
-:::
-
 # Groups: Classification
 
 ## Spring 2020 \#1 \( \work \) {#spring-2020-1-work}
@@ -743,7 +1160,7 @@ Describe a representative from each class.
 ```
 -   Sylow theorems:
 -   \( n_p \cong 1 \pmod p \)
--   \( n_p \bigm|m \).
+-   \( n_p \divides m \).
 :::
 
 ::: {.solution}
@@ -855,8 +1272,8 @@ Strategy: examine \( {\left\lvert {G/Z(G)} \right\rvert} \) by cases.
 ```
 -   By Sylow
 
-    -   \( n_5 \bigm|7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
-    -   \( n_7 \bigm|5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
+    -   \( n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
+    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
 
 -   By recognition of direct products, \( G = S_5 \times S_7 \)
 
@@ -901,7 +1318,7 @@ a.  Let \( \operatorname{Sym}G \) be the set of all bijections from \( G\to G \)
     \]
     is an injective homomorphism.
 
-b.  Let \( \Phi: \operatorname{Sym}G\to S_N \) be an isomorphism. For \( a\in G \) define \( \varepsilon(a) \in \left\{{\pm 1}\right\} \) to be the sign of the permutation \( \Phi(C(a)) \). Suppose that \( a \) has order \( d \). Prove that \( \varepsilon(a) = -1 \iff d \) is even and \( N/d \) is odd.
+b.  Let \( \Phi: \operatorname{Sym}G\to S_N \) be an isomorphism. For \( a\in G \) define \( {\varepsilon}(a) \in \left\{{\pm 1}\right\} \) to be the sign of the permutation \( \Phi(C(a)) \). Suppose that \( a \) has order \( d \). Prove that \( {\varepsilon}(a) = -1 \iff d \) is even and \( N/d \) is odd.
 
 c.  Suppose \( N> 2 \) and \( n\equiv 2 \pmod 4 \). Prove that \( G \) is not simple.
 
@@ -1346,7 +1763,7 @@ b.  Let \( k \) be a field. Show the ring \( M_n (k) \), \( n \times n \) matric
 
 For a ring \( R \), let \( U(R) \) denote the multiplicative group of units in \( R \). Recall that in an integral domain \( R \), \( r \in R \) is called *irreducible* if \( r \) is not a unit in R, and the only divisors of \( r \) have the form \( ru \) with \( u \) a unit in \( R \).
 
-We call a non-zero, non-unit \( r \in R \) *prime* in \( R \) if \( r \bigm|ab \implies r \bigm|a \) or \( r \bigm|b \). Consider the ring \( R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\} \).
+We call a non-zero, non-unit \( r \in R \) *prime* in \( R \) if \( r \divides ab \implies r \divides a \) or \( r \divides b \). Consider the ring \( R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\} \).
 
 a.  Prove \( R \) is an integral domain.
 
@@ -1535,7 +1952,7 @@ c.  Prove that \( m = k \).
 \envlist
 ```
 -   \( {\mathbb{F}}^{\times} \) is always cyclic for \( {\mathbb{F}} \) a field.
--   Lagrange: \( H\leq G \implies \#H \bigm|\# G \).
+-   Lagrange: \( H\leq G \implies \#H \divides \# G \).
 :::
 
 ::: {.solution}
@@ -1548,7 +1965,7 @@ c.  Prove that \( m = k \).
 ```
 -   Since \( {\left\lvert {F} \right\rvert} = q \) and \( [E:F] = k \), we have \( {\left\lvert {E} \right\rvert} = q^k \) and \( {\left\lvert {E^{\times}} \right\rvert} = q^k-1 \).
 
--   Noting that \( \zeta \in E^{\times} \) we must have \( n = o(\zeta) \bigm|{\left\lvert {E^{\times}} \right\rvert} = q^k-1 \) by Lagrange's theorem.
+-   Noting that \( \zeta \in E^{\times} \) we must have \( n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1 \) by Lagrange's theorem.
 :::
 
 ::: {.proof title="of b"}
@@ -1557,10 +1974,10 @@ c.  Prove that \( m = k \).
 ```
 -   Rephrasing (a), we have
     \[
-    n \bigm|q^k-1 
+    n \divides q^k-1 
     &\iff q^k-1 \cong 0 \pmod n \\
     &\iff q^k \cong 1 \pmod n \\
-    &\iff m \coloneqq o(q) \bigm|k
+    &\iff m \coloneqq o(q) \divides k
     .\]
 :::
 
@@ -1568,7 +1985,7 @@ c.  Prove that \( m = k \).
 ```{=tex}
 \envlist
 ```
--   Since \( m\bigm|k \iff k = \ell m \), (**claim**) there is an intermediate subfield \( M \) such that
+-   Since \( m\divides k \iff k = \ell m \), (**claim**) there is an intermediate subfield \( M \) such that
     \[
     E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
     ,\]
@@ -1624,14 +2041,14 @@ Let \( K = {\mathbb{Q}}(\zeta) \). Then \( K \) is the splitting field of \( f(x
 
 > Or equivalently, \( f \) splits into distinct linear factors \( f(x) = \prod_{k\leq n}(x-\zeta^k) \).
 
-Since it is a Galois extension, \( {\left\lvert {\operatorname{Gal}(K/{\mathbb{Q}})} \right\rvert} = [K: {\mathbb{Q}}] = \phi(n) \) for the totient function.
+Since it is a Galois extension, \( {\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = [K: {\mathbb{Q}}] = \phi(n) \) for the totient function.
 
 We can now define maps
 \[
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
 \]
-and if we restrict to \( j \) such that \( \gcd(n, j) = 1 \), this yields \( \phi(n) \) maps. Noting that if \( \zeta \) is a primitive root, then \( (n, j) = 1 \) implies that that \( \zeta^j \) is also a primitive root, and hence another root of \( \min(\zeta, {\mathbb{Q}}) \), and so these are in fact automorphisms of \( K \) that fix \( {\mathbb{Q}} \) and thus elements of \( \operatorname{Gal}(K/{\mathbb{Q}}) \).
+and if we restrict to \( j \) such that \( \gcd(n, j) = 1 \), this yields \( \phi(n) \) maps. Noting that if \( \zeta \) is a primitive root, then \( (n, j) = 1 \) implies that that \( \zeta^j \) is also a primitive root, and hence another root of \( \min(\zeta, {\mathbb{Q}}) \), and so these are in fact automorphisms of \( K \) that fix \( {\mathbb{Q}} \) and thus elements of \( { \mathsf{Gal}} (K/{\mathbb{Q}}) \).
 
 So define a map
 \[
@@ -1687,8 +2104,8 @@ b.  Show that if \( \pi(x) \in F[x] \) is an irreducible polynomial that divides
 -   Go to a field extension.
     -   Orders of multiplicative groups for finite fields are known.
 -   \( {\mathbb{GF}}(p^n) \) is the splitting field of \( x^{p^n} - x \in {\mathbb{F}}_p[x] \).
--   \( x^{p^d} - x \bigm|x^{p^n} - x \iff d \bigm|n \)
--   \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\bigm|n \)
+-   \( x^{p^d} - x \divides x^{p^n} - x \iff d \divides n \)
+-   \( {\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n \)
 -   \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \).
 :::
 
@@ -1710,7 +2127,7 @@ Since \( \rho \) is a ring morphism, we have
 = 0 \in K \\
 &\iff q(x) \in \ker \rho \\
 &\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \bigm|q(x) = x^{p^d}-x
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
 ,\]
 where we've used that "to contain is to divide" in the last step.
 :::
@@ -1721,7 +2138,7 @@ where we've used that "to contain is to divide" in the last step.
 :::
 
 ::: {.proof title="of claim, $\\implies$"}
-Let \( L \cong {\mathbb{GF}}(p^n) \) be the splitting field of \( \phi_n(x) \coloneqq x^{p^n}-x \); then since \( \pi \bigm|\phi_n \) by assumption, \( \pi \) splits in \( L \). Let \( \alpha \in L \) be any root of \( \pi \); then there is a tower of extensions \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \).
+Let \( L \cong {\mathbb{GF}}(p^n) \) be the splitting field of \( \phi_n(x) \coloneqq x^{p^n}-x \); then since \( \pi \divides \phi_n \) by assumption, \( \pi \) splits in \( L \). Let \( \alpha \in L \) be any root of \( \pi \); then there is a tower of extensions \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \).
 
 Then \( {\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L \), and so
 \[
@@ -1734,7 +2151,7 @@ for some \( \ell \in {\mathbb{Z}}^{\geq 1} \), so \( d \) divides \( n \).
 :::
 
 ::: {.proof title="of claim, $\\impliedby$"}
-\( \impliedby \): If \( d\bigm|n \), use the fact (claim) that \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \). So \( f = f_i \) for some \( i \).
+\( \impliedby \): If \( d\divides n \), use the fact (claim) that \( x^{p^n} - x = \prod f_i(x) \) over all irreducible monic \( f_i \) of degree \( d \) dividing \( n \). So \( f = f_i \) for some \( i \).
 :::
 :::
 :::
@@ -1761,7 +2178,7 @@ c.  What is the degree of \( {\mathbb{Q}}(\zeta, \sqrt[4] 2) \) over \( {\mathbb
         \[
         p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
         .\]
--   \( \operatorname{Gal}({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times} \)
+-   \( { \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times} \)
 :::
 
 ::: {.solution}
@@ -1787,7 +2204,7 @@ Let \( K = {\mathbb{Q}}(\zeta) \).
 ```{=tex}
 \envlist
 ```
--   \( \operatorname{Gal}({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4) \) by general theory
+-   \( { \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4) \) by general theory
 -   \( {\mathbb{Z}}/(4) \) has exactly one subgroup of index 2.
 -   Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
 :::
@@ -1914,14 +2331,14 @@ We then have
 [K: {\mathbb{Q}}] = [K: L] [L : {\mathbb{Q}}] = (2)(2) = 4
 .\]
 
-This \( {\left\lvert {\operatorname{Gal}(K/{\mathbb{Q}})} \right\rvert} = 4 \), which leaves only two possibilities:
+This \( {\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = 4 \), which leaves only two possibilities:
 
 -   \( {\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2) \)
 -   \( {\mathbb{Z}}/(4) \)
 
 We can next check orders of elements. Take
 \[
-\sigma &\in \operatorname{Gal}(K/{\mathbb{Q}}) \\
+\sigma &\in { \mathsf{Gal}} (K/{\mathbb{Q}}) \\
 \alpha_1 &\mapsto \alpha_2
 .\]
 
@@ -1943,7 +2360,7 @@ and thus
 &\neq \alpha_1
 ,\]
 
-and so the order of \( \sigma \) is strictly greater than 2, and thus 4, and thus \( \operatorname{Gal}(K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4) \).
+and so the order of \( \sigma \) is strictly greater than 2, and thus 4, and thus \( { \mathsf{Gal}} (K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4) \).
 :::
 
 ::: {.proof title="of c"}
@@ -1961,7 +2378,7 @@ Let \( K \) be a Galois extension of \( {\mathbb{Q}} \) with Galois group \( G \
 
 Let \( E = E_1 E_2 \subset K \).
 
-Let \( H_i = \operatorname{Gal}(K/E_i) \) and \( H = \operatorname{Gal}(K/E) \).
+Let \( H_i = { \mathsf{Gal}} (K/E_i) \) and \( H = { \mathsf{Gal}} (K/E) \).
 
 a.  Show that \( H = H_1 \cap H_2 \).
 
@@ -1969,7 +2386,7 @@ b.  Show that \( H_1 H_2 \) is a subgroup of \( G \).
 
 c.  Show that
     \[
-    \operatorname{Gal}(K/(E_1 \cap E_2 )) = H_1 H_2
+    { \mathsf{Gal}} (K/(E_1 \cap E_2 )) = H_1 H_2
     .\]
 
 ::: {.concept}
@@ -1988,7 +2405,7 @@ c.  Show that
 ::: {.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of \( H_1 \cap H_2 \) is \( E_1 E_2 \).
 
-Let \( \sigma \in H_1 \cap H_2 \); then \( \sigma \in {\operatorname{Aut}}(K) \) fixes both \( E_1 \) and \( E_2 \).
+Let \( \sigma \in H_1 \cap H_2 \); then \( \sigma \in \mathop{\mathrm{Aut}}(K) \) fixes both \( E_1 \) and \( E_2 \).
 
 > Not sure if this works -- compositum is not literally product..?
 
@@ -2049,7 +2466,7 @@ Let \( f(x) = x^4-2 \in {\mathbb{Q}}[x] \).
 
 a.  Define what it means for a finite extension field \( E \) of a field \( F \) to be a Galois extension.
 
-b.  Determine the Galois group \( \operatorname{Gal}(E/{\mathbb{Q}}) \) for the polynomial \( f(x) \), and justify your answer carefully.
+b.  Determine the Galois group \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \) for the polynomial \( f(x) \), and justify your answer carefully.
 
 c.  Exhibit a subfield \( K \) in \( (b) \) such that \( {\mathbb{Q}}\leq K \leq E \) with \( K \) not a Galois extension over \( {\mathbb{Q}} \). Explain.
 
@@ -2134,11 +2551,11 @@ c.  Determine the Galois group of \( E \) over \( {\mathbb{Q}} \) and determine 
 
 ## Fall 2015 \#6 \( \work \) {#fall-2015-6-work}
 
-a.  Let \( G \) be a finite group. Show that there exists a field extension \( K/F \) with \( \operatorname{Gal}(K/F) = G \).
+a.  Let \( G \) be a finite group. Show that there exists a field extension \( K/F \) with \( { \operatorname{Gal}} (K/F) = G \).
 
     > You may assume that for any natural number \( n \) there is a field extension with Galois group \( S_n \).
 
-b.  Let \( K \) be a Galois extension of \( F \) with \( {\left\lvert {\operatorname{Gal}(K/F)} \right\rvert} = 12 \). Prove that there exists an intermediate field \( E \) of \( K/F \) with \( [E: F] = 3 \).
+b.  Let \( K \) be a Galois extension of \( F \) with \( {\left\lvert {{ \operatorname{Gal}} (K/F)} \right\rvert} = 12 \). Prove that there exists an intermediate field \( E \) of \( K/F \) with \( [E: F] = 3 \).
 
 c.  With \( K/F \) as in (b), does an intermediate field \( L \) necessarily exist satisfying \( [L: F] = 2 \)? Give a proof or counterexample.
 
@@ -2208,15 +2625,15 @@ c.  Give an example of a finite extension \( L/K \) that is not separable.
 
 ## Fall 2013 \#6 \( \work \) {#fall-2013-6-work}
 
-Let \( K \) be the splitting field of \( x^4-2 \) over \( {\mathbb{Q}} \) and set \( G = \operatorname{Gal}(K/{\mathbb{Q}}) \).
+Let \( K \) be the splitting field of \( x^4-2 \) over \( {\mathbb{Q}} \) and set \( G = { \operatorname{Gal}} (K/{\mathbb{Q}}) \).
 
 a.  Show that \( K/{\mathbb{Q}} \) contains both \( {\mathbb{Q}}(i) \) and \( {\mathbb{Q}}(\sqrt[4]{2}) \) and has degree 8 over \( {\mathbb{Q}} \)/
 
-b.  Let \( N = \operatorname{Gal}(K/{\mathbb{Q}}(i)) \) and \( H = \operatorname{Gal}(K/{\mathbb{Q}}(\sqrt[4]{2})) \). Show that \( N \) is normal in \( G \) and \( NH = G \).
+b.  Let \( N = { \operatorname{Gal}} (K/{\mathbb{Q}}(i)) \) and \( H = { \operatorname{Gal}} (K/{\mathbb{Q}}(\sqrt[4]{2})) \). Show that \( N \) is normal in \( G \) and \( NH = G \).
 
     > Hint: what field is fixed by \( NH \)?
 
-c.  Show that \( \operatorname{Gal}(K/{\mathbb{Q}}) \) is generated by elements \( \sigma, \tau \), of orders 4 and 2 respectively, with \( \tau \sigma\tau^{-1}= \sigma^{-1} \).
+c.  Show that \( { \operatorname{Gal}} (K/{\mathbb{Q}}) \) is generated by elements \( \sigma, \tau \), of orders 4 and 2 respectively, with \( \tau \sigma\tau^{-1}= \sigma^{-1} \).
 
     > Equivalently, show it is the dihedral group of order 8.
 
@@ -2226,15 +2643,15 @@ d.  How many distinct quartic subfields of \( K \) are there? Justify your answe
 
 Let \( f(x) = g(x) h(x) \in {\mathbb{Q}}[x] \) and \( E,B,C/{\mathbb{Q}} \) be the splitting fields of \( f,g,h \) respectively.
 
-a.  Prove that \( \operatorname{Gal}(E/B) \) and \( \operatorname{Gal}(E/C) \) are normal subgroups of \( \operatorname{Gal}(E/{\mathbb{Q}}) \).
+a.  Prove that \( { \operatorname{Gal}} (E/B) \) and \( { \operatorname{Gal}} (E/C) \) are normal subgroups of \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \).
 
-b.  Prove that \( \operatorname{Gal}(E/B) \cap\operatorname{Gal}(E/C) = \left\{{1}\right\} \).
+b.  Prove that \( { \operatorname{Gal}} (E/B) \cap{ \operatorname{Gal}} (E/C) = \left\{{1}\right\} \).
 
-c.  If \( B\cap C = {\mathbb{Q}} \), show that \( \operatorname{Gal}(E/B) \operatorname{Gal}(E/C) = \operatorname{Gal}(E/{\mathbb{Q}}) \).
+c.  If \( B\cap C = {\mathbb{Q}} \), show that \( { \operatorname{Gal}} (E/B) { \operatorname{Gal}} (E/C) = { \operatorname{Gal}} (E/{\mathbb{Q}}) \).
 
-d.  Under the hypothesis of (c), show that \( \operatorname{Gal}(E/{\mathbb{Q}}) \cong \operatorname{Gal}(E/B) \times \operatorname{Gal}(E/C) \).
+d.  Under the hypothesis of (c), show that \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \cong { \operatorname{Gal}} (E/B) \times { \operatorname{Gal}} (E/C) \).
 
-e.  Use (d) to describe \( \operatorname{Gal}({\mathbb{Q}}[\alpha]/{\mathbb{Q}}) \) where \( \alpha = \sqrt 2 + \sqrt 3 \).
+e.  Use (d) to describe \( { \operatorname{Gal}} ({\mathbb{Q}}[\alpha]/{\mathbb{Q}}) \) where \( \alpha = \sqrt 2 + \sqrt 3 \).
 
 ## Spring 2013 \#8 \( \work \) {#spring-2013-8-work}
 
@@ -2242,7 +2659,7 @@ Let \( F \) be the field with 2 elements and \( K \) a splitting field of \( f(x
 
 a.  Show that if \( r \) is a root of \( f \) in \( K \), then \( r^9 = 1 \) but \( r^3\neq 1 \).
 
-b.  Find \( \operatorname{Gal}(K/F) \) and express each intermediate field between \( F \) and \( K \) as \( F(\beta) \) for an appropriate \( \beta \in K \).
+b.  Find \( { \operatorname{Gal}} (K/F) \) and express each intermediate field between \( F \) and \( K \) as \( F(\beta) \) for an appropriate \( \beta \in K \).
 
 ## Fall 2012 \#3 \( \work \) {#fall-2012-3-work}
 
@@ -2254,11 +2671,11 @@ Let \( f(x) \in {\mathbb{Q}}[x] \) be a polynomial and \( K \) be a splitting fi
 
 ## Spring 2012 \#1 \( \work \) {#spring-2012-1-work}
 
-Suppose that \( F\subset E \) are fields such that \( E/F \) is Galois and \( {\left\lvert {\operatorname{Gal}(E/F)} \right\rvert} = 14 \).
+Suppose that \( F\subset E \) are fields such that \( E/F \) is Galois and \( {\left\lvert {{ \operatorname{Gal}} (E/F)} \right\rvert} = 14 \).
 
 a.  Show that there exists a unique intermediate field \( K \) with \( F\subset K \subset E \) such that \( [K: F] = 2 \).
 
-b.  Assume that there are at least two distinct intermediate subfields \( F \subset L_1, L_2 \subset E \) with \( [L_i: F]= 7 \). Prove that \( \operatorname{Gal}(E/F) \) is nonabelian.
+b.  Assume that there are at least two distinct intermediate subfields \( F \subset L_1, L_2 \subset E \) with \( [L_i: F]= 7 \). Prove that \( { \operatorname{Gal}} (E/F) \) is nonabelian.
 
 ## Spring 2012 \#4 \( \work \) {#spring-2012-4-work}
 
@@ -2383,7 +2800,29 @@ c.  Find all subfields of the splitting field of \( f(x) \) over \( {\mathbb{Q}}
 
 ## Fall 2020 \#4 \( \work \) {#fall-2020-4-work}
 
-Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq\operatorname{Gal}(K/F) \) and \( H \coloneqq\operatorname{Gal}(K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \pmod p \).
+Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq{ \mathsf{Gal}} (K/F) \) and \( H \coloneqq{ \mathsf{Gal}} (K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \pmod p \).
+
+## Exercises
+
+::: {.exercise title="?"}
+Let \( p \in \mathbb{Z} \) be a prime number. Then describe the elements of the Galois group of the polynomial \( x^{p}-2 \).
+:::
+
+::: {.solution}
+\( {\mathbb{Q}}(2^{1\over p}, \zeta_p) \), which has degree \( p(p-1) \) and is generated by the maps
+\[
+\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
+\zeta & \mapsto \zeta^{b}
+.\]
+:::
+
+::: {.exercise title="?"}
+Compute the Galois group of \( x^2-2 \).
+:::
+
+::: {.solution}
+\( {\mathbb{Z}}/2{\mathbb{Z}} \)?
+:::
 
 # Modules
 
@@ -2427,7 +2866,7 @@ So
 ::: {.proof title="of b"}
 Identify \( {\mathbb{Z}}{\hbox{-}} \)modules with abelian groups, then by (a), \( N \) is maximal \( \iff \) \( M/N \) is simple \( \iff \) \( M/N \) has no nontrivial proper subgroups.\
 
-By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composite number, then \( a\bigm|ab \implies \) there is an element (and thus a subgroup) of order \( a \). In this case, \( M/N \) contains a nontrivial proper cyclic subgroup, so \( M/N \) is not simple. So \( {\left\lvert {M/N} \right\rvert} \) can not be composite, and therefore must be prime.
+By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composite number, then \( a\divides ab \implies \) there is an element (and thus a subgroup) of order \( a \). In this case, \( M/N \) contains a nontrivial proper cyclic subgroup, so \( M/N \) is not simple. So \( {\left\lvert {M/N} \right\rvert} \) can not be composite, and therefore must be prime.
 :::
 
 ::: {.proof title="of c"}
@@ -2456,7 +2895,7 @@ Let
 \[
 M &= \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\} \\
 N &= \left\{{
-(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\bigm|(w - x),~ 4\bigm|(x - y),~ 4\bigm|( y - z)
+(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)
 }\right\}
 .\]
 
@@ -2621,8 +3060,10 @@ Prove that \( M \) is torsion-free of rank 1 but not free.
 -   Todo
 :::
 
-:::{.solution} `\envlist`{=tex}
-
+::: {.solution}
+```{=tex}
+\envlist
+```
 ::: {.proof title="of a"}
 ```{=tex}
 \envlist
@@ -2744,6 +3185,7 @@ Note that the proof follows immediately.
 -   Let \( \mathbf{x} \in \operatorname{Tor}M \), then there exists some \( r\neq 0\in R \) such that \( r\mathbf{x} = \mathbf{0} \).
 
 -   But \( \mathbf{x}\in R \) as well and \( R \) is an integral domain, so \( \mathbf{x}=0_R \), and thus \( \operatorname{Tor}(M) = \left\{{0_R}\right\} \).
+:::
 :::
 :::
 
@@ -3047,7 +3489,7 @@ If \( A \in \operatorname{GL}(m, {\mathbb{F}}) \) is invertible and \( A^n/{\mat
 
     where \( \left\{{\lambda_i}\right\}_{i=1}^m \subset {\mathbb{F}} \) are the **distinct** eigenvalues of \( A^n \).
 
--   Moreover \( A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}}) \): \( A \) is invertible \( \iff \det(A) = d \in {\mathbb{F}}^{\times} \), and so \( \det(A^n) = \det(A)^n = d^n \in {\mathbb{F}}^{\times} \) using the fact that the determinant is a ring morphism \( \det: \operatorname{Mat}(m\times m) \to{\mathbb{F}} \) and \( {\mathbb{F}}^{\times} \) is closed under multiplication.
+-   Moreover \( A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}}) \): \( A \) is invertible \( \iff \operatorname{det}(A) = d \in {\mathbb{F}}^{\times} \), and so \( \operatorname{det}(A^n) = \operatorname{det}(A)^n = d^n \in {\mathbb{F}}^{\times} \) using the fact that the determinant is a ring morphism \( \operatorname{det}: \operatorname{Mat}(m\times m) \to{\mathbb{F}} \) and \( {\mathbb{F}}^{\times} \) is closed under multiplication.
 
 -   So \( A^n \) is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so \( \lambda_i \neq 0 \) for any \( i \).
 
@@ -3058,7 +3500,7 @@ If \( A \in \operatorname{GL}(m, {\mathbb{F}}) \) is invertible and \( A^n/{\mat
     q_A(x) \coloneqq\min_{A^n}(x^n) = \prod_{i=1}^m (x^n-\lambda_i) \in {\mathbb{F}}[x],
     \]
 
-    where we can note that \( q_A(A) = \min_{A^n}(A^n) = 0 \), and so \( \min_A(x) \bigm|q_A(x) \) by minimality.
+    where we can note that \( q_A(A) = \min_{A^n}(A^n) = 0 \), and so \( \min_A(x) \divides q_A(x) \) by minimality.
 
 ::: {.claim}
 \( q_A(x) \) has exactly \( nm \) distinct linear factors in \( { \mkern 1.5mu\overline{\mkern-1.5mu \mathbb{F}\mkern-1.5mu}\mkern 1.5mu }[x] \)
@@ -3074,7 +3516,7 @@ If \( A \in \operatorname{GL}(m, {\mathbb{F}}) \) is invertible and \( A^n/{\mat
 
 -   For the second claim, we can check that \( {\frac{\partial }{\partial x}\,}\qty{x^n - \lambda_i} = nx^{n-1}\neq 0\in {\mathbb{F}} \), and \( \gcd(x^n-\lambda_i, nx^{n-1}) = 1 \) since the latter term has only the roots \( x=0 \) with multiplicity \( n-1 \), whereas \( \lambda_i\neq 0 \implies \) zero is not a root of \( x^n-\lambda_i \).
 
-But now since \( q_A(x) \) has exactly distinct linear factors in \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x] \) and \( \min_A(x) \bigm|q_A(x) \), \( \min_A(x) \in {\mathbb{F}}[x] \) can only have distinct linear factors, and \( A \) is thus diagonalizable over \( {\mathbb{F}} \).
+But now since \( q_A(x) \) has exactly distinct linear factors in \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu[x] \) and \( \min_A(x) \divides q_A(x) \), \( \min_A(x) \in {\mathbb{F}}[x] \) can only have distinct linear factors, and \( A \) is thus diagonalizable over \( {\mathbb{F}} \).
 :::
 :::
 
@@ -3094,7 +3536,7 @@ b.  Exhibit with justification a subset \( S \) of \( M_{m, n}(k) \) which conta
 
 ## \( \star \) Spring 2014 \#7 \( \work \) {#star-spring-2014-7-work}
 
-Let \( G = \operatorname{GL}(3, {\mathbb{Q}}[x]) \) be the group of invertible \( 3\times 3 \) matrices over \( {\mathbb{Q}}[x] \). For each \( f\in {\mathbb{Q}}[x] \), let \( S_f \) be the set of \( 3\times 3 \) matrices \( A \) over \( {\mathbb{Q}}[x] \) such that \( \det(A) = c f(x) \) for some nonzero constant \( c\in {\mathbb{Q}} \).
+Let \( G = \operatorname{GL}(3, {\mathbb{Q}}[x]) \) be the group of invertible \( 3\times 3 \) matrices over \( {\mathbb{Q}}[x] \). For each \( f\in {\mathbb{Q}}[x] \), let \( S_f \) be the set of \( 3\times 3 \) matrices \( A \) over \( {\mathbb{Q}}[x] \) such that \( \operatorname{det}(A) = c f(x) \) for some nonzero constant \( c\in {\mathbb{Q}} \).
 
 a.  Show that for \( (P, Q) \in G\times G \) and \( A\in S_f \), the formula
     \[
@@ -3106,7 +3548,7 @@ b.  For \( f(x) = x^3(x^2+1)^2 \), give one representative from each orbit of th
 
 ## Fall 2012 \#7 \( \work \) {#fall-2012-7-work}
 
-Let \( k \) be a field of characteristic zero and \( A, B \in M_n(k) \) be two square \( n\times n \) matrices over \( k \) such that \( AB - BA = A \). Prove that \( \det A = 0 \).
+Let \( k \) be a field of characteristic zero and \( A, B \in M_n(k) \) be two square \( n\times n \) matrices over \( k \) such that \( AB - BA = A \). Prove that \( \operatorname{det}A = 0 \).
 
 Moreover, when the characteristic of \( k \) is 2, find a counterexample to this statement.
 
@@ -3143,7 +3585,7 @@ b.  If \( k\in F[x] \) is nonzero and of degree strictly less than \( g \), then
 
 ## Fall 2015 \#8 \( \work \) {#fall-2015-8-work}
 
-Let \( V \) be a vector space over a field \( F \) and \( V {}^{ \check{} } \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
+Let \( V \) be a vector space over a field \( F \) and \( V {}^{ \vee } \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
 \[
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) {\quad \operatorname{and} \quad} (v_1, v_2) = (v_2, v_1)
 \]
@@ -3158,7 +3600,7 @@ a.  Show that if \( X, Y \) are subspaces of \( V \) with \( Y\subset X \), then
 
 b.  Define an injective linear map
     \[
-    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \check{} }
+    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \vee }
     \]
     which is an isomorphism if \( V \) is finite dimensional.
 
@@ -3282,15 +3724,15 @@ Let \( \cdot \) be a non-degenerate (\( v \cdot w = 0 \) for all \( w \in V \iff
 
 Define the dual of \( \Lambda \) to be
 \[
-\Lambda  {}^{ \check{} }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
+\Lambda  {}^{ \vee }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
 \}
 .\]
 
-a.  Show that \( \Lambda \subset \Lambda  {}^{ \check{} } \).
+a.  Show that \( \Lambda \subset \Lambda  {}^{ \vee } \).
 
-b.  Prove that \( \det M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda {}^{ \check{} } \).
+b.  Prove that \( \operatorname{det}M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda {}^{ \vee } \).
 
-c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
+c.  Prove that \( \operatorname{det}M = |\Lambda {}^{ \vee }/\Lambda| \).
 
 ```{=tex}
 \todo[inline]{Todo, missing part (c).}
@@ -3311,7 +3753,7 @@ c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
     &= {\left\langle {\sum_{i=1}^n r_i \mathbf{e}_i},~{\sum_{j=1}^n s_j \mathbf{e}_j } \right\rangle} \\
     &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j } \right\rangle}  \in {\mathbb{Z}}
     \]
-    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda {}^{ \check{} } \) by definition.
+    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda {}^{ \vee } \) by definition.
 :::
 
 ::: {.proof title="of b"}
@@ -3319,7 +3761,7 @@ c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
 The determinant is nonzero.
 :::
 
--   Suppose \( \det M = 0 \). Then \( \ker M \neq \mathbf{0} \), so let \( \mathbf{v} \in \ker M \) be given by \( \mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0} \).
+-   Suppose \( \operatorname{det}M = 0 \). Then \( \ker M \neq \mathbf{0} \), so let \( \mathbf{v} \in \ker M \) be given by \( \mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0} \).
 
 -   Note that
     \[
@@ -3368,25 +3810,25 @@ since \( A \) has full rank because the \( \mathbf{e}_i \) are linearly independ
 Let \( A = [\mathbf{e}_1^t, \cdots, \mathbf{e}_n^t] \) be the matrix with \( \mathbf{e}_i \) in the \( i \)th column.
 
 ::: {.claim}
-The rows of \( A^{-1} \) span \( \Lambda {}^{ \check{} } \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda {}^{ \check{} } \).
+The rows of \( A^{-1} \) span \( \Lambda {}^{ \vee } \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda {}^{ \vee } \).
 :::
 
 -   Let \( B = A^{-t} \) and let \( \mathbf{b}_i \) denote the columns of \( B \), so \( \operatorname{im}B = {\operatorname{span}}{\left\{{\mathbf{b}_i}\right\}} \).
 
 -   Since \( A \in \operatorname{GL}(n, {\mathbb{Z}}) \), \( A^{-1}, A^t, A^{-t} \in \operatorname{GL}(n, {\mathbb{Z}}) \) as well.
     \[
-    \mathbf{v} \in \Lambda {}^{ \check{} }
+    \mathbf{v} \in \Lambda {}^{ \vee }
     &\implies {\left\langle {\mathbf{e}_i},~{\mathbf{v}} \right\rangle} = z_i \in {\mathbb{Z}}\quad \forall i \\
     &\implies A^t \mathbf{v} = \mathbf{z} \coloneqq[z_1, \cdots, z_n] \in {\mathbb{Z}}^n \\
     &\implies \mathbf{v} = A^{-t} \mathbf{z} \coloneqq B\mathbf{z} \in \operatorname{im}B \\
     &\implies \mathbf{v} \in \operatorname{im}B \\
-    &\implies \Lambda {}^{ \check{} }\subseteq \operatorname{im}B
+    &\implies \Lambda {}^{ \vee }\subseteq \operatorname{im}B
     ,\]
     and
     \[
     B^t A = (A^{-t})^t A = A^{-1}A = I \\
     \implies \mathbf{b}_i \cdot \mathbf{e}_j = \delta_{ij} \in {\mathbb{Z}}\\
-    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda {}^{ \check{} }
+    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda {}^{ \vee }
     .\]
 :::
 
@@ -3448,12 +3890,12 @@ Let \( f \) be the characteristic polynomial of \( T \).
 
 -   Now expand along the first column block to obtain
     \[
-    \chi_{T, V}(x) \coloneqq\det([T]_{{\mathcal{B}}_V} - xI) = \det(B - xI)\cdot \det(D - xI) \coloneqq\chi_{T, W}(x) \cdot \det(D-xI)
+    \chi_{T, V}(x) \coloneqq\operatorname{det}([T]_{{\mathcal{B}}_V} - xI) = \operatorname{det}(B - xI)\cdot \operatorname{det}(D - xI) \coloneqq\chi_{T, W}(x) \cdot \operatorname{det}(D-xI)
     .\]
 
--   Claim: \( \det(D - xI) \in xF[x] \) is nontrivial
+-   Claim: \( \operatorname{det}(D - xI) \in xF[x] \) is nontrivial
 
--   The claim follows because this forces \( \deg(\det(D-xI)) \geq 1 \) and so \( \chi_{T, W}(x) \) is a proper divisor of \( \chi_{T, V}(x) \).
+-   The claim follows because this forces \( \deg(\operatorname{det}(D-xI)) \geq 1 \) and so \( \chi_{T, W}(x) \) is a proper divisor of \( \chi_{T, V}(x) \).
 
 -   Thus \( f \) is reducible.
 :::
@@ -3477,7 +3919,7 @@ Let \( f \) be the characteristic polynomial of \( T \).
 -   Replace \( F \) with its algebraic closure, then \( \min_{T, F} \) splits.
 -   Claim: in characteristic zero, every irreducible polynomial is separable
     -   Proof: it must be the case that either \( \gcd(f, f') = 1 \) or \( f' \equiv 0 \), where the second case only happens in characteristic \( p>0 \).
-    -   The first case is true because \( \deg f' < \deg f \), and if \( \gcd(f, f') = p \), then \( \deg p < \deg f \) and \( p\bigm|f \) forces \( p=1 \) since \( f \) is irreducible.
+    -   The first case is true because \( \deg f' < \deg f \), and if \( \gcd(f, f') = p \), then \( \deg p < \deg f \) and \( p\divides f \) forces \( p=1 \) since \( f \) is irreducible.
 -   So \( \min_{T, F} \) splits into distinct linear factors
 -   Thus \( T \) is diagonalizable.
 :::
@@ -3678,7 +4120,7 @@ Each vector of the form \( \mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1}
 -   Since the first component is fixed and we have \( p-1 \) choices for where to place a \( -1 \), this yields \( p-1 \) possibilities for \( \mathbf{p}_i \)
 -   These are linearly independent since the \( (p-1)\times (p-1) \) matrix \( {\left[ { \mathbf{p}_1^t, \cdots, \mathbf{p}_{p-1}^t} \right]} \) satisfies
     \[
-    \det 
+    \operatorname{det}
     \begin{bmatrix}
     1 & 1 & 1 & \cdots & 1\\
     -1 & 0  & 0 & \cdots & 0\\
@@ -3687,7 +4129,7 @@ Each vector of the form \( \mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1}
     \vdots & \vdots  & \vdots & \ddots & \vdots \\
     0 & 0  & 0 & \cdots & -1\\
     \end{bmatrix}
-    &= (1) \cdot \det 
+    &= (1) \cdot \operatorname{det}
     \begin{bmatrix}
     -1 & 0  & 0 & \cdots & 0\\
     0 & -1  & 0 & \cdots & 0\\
@@ -3717,7 +4159,7 @@ For \( F = {\mathbb{F}}_p \), all eigenvalues/vectors still lie in \( {\mathbb{F
 
 -   A computation shows that \( (A+I)^2 = pA = 0 \in M_p({\mathbb{F}}_p) \) and \( (A+I) \neq 0 \), so \( \min_{A, {\mathbb{F}}_p}(x) = (x+1)^2 \).
     -   Thus the largest Jordan block corresponding to \( \lambda = -1 \) is of size 2
--   Can check that \( \det(A) = \pm 1 \in {\mathbb{F}}_p^{\times} \), so the vectors \( \mathbf{e}_1 - \mathbf{e}_i \) are still linearly independent and thus \( \dim E_{-1} = p-1 \)
+-   Can check that \( \operatorname{det}(A) = \pm 1 \in {\mathbb{F}}_p^{\times} \), so the vectors \( \mathbf{e}_1 - \mathbf{e}_i \) are still linearly independent and thus \( \dim E_{-1} = p-1 \)
     -   So there are \( p-1 \) Jordan blocks for \( \lambda = 0 \).
 
 Summary:
@@ -3870,3 +4312,70 @@ B \coloneqq
 a.  Find the minimal polynomial of \( B \).
 
 b.  Find a \( 3\times 3 \) matrix \( J \) in Jordan canonical form such that \( B = JPJ^{-1} \) where \( P \) is an invertible matrix.
+
+# Extra Problems
+
+> Many many fundamental problems here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/groups/>
+
+## Linear Algebra
+
+1.  For a division ring \( D \), let \( V_{i} \) be a finite dimensional vector space over \( D \) for \( i \in\{1, \ldots, k\} \). Suppose the sequence
+    \[
+    0 \longrightarrow V_{1} \longrightarrow V_{2} \longrightarrow \cdots V_{k} \longrightarrow 0
+    \]
+    is exact. Prove that \( \sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0 \).
+2.  Prove that if \( A \) and \( B \) are invertible matrices over a field \( \boldsymbol{k} \), then \( A+\lambda B \) is invertible for all but finitely many \( \lambda \in \boldsymbol{k} \).
+3.  For the ring of \( n \times n \) matrices over a commutative unital ring \( R \), which we'll denote \( \operatorname{Mat}_{n}(R) \), recall the definition of the determinant map det: \( \operatorname{Mat}_{n}(R) \rightarrow R \). For \( A \in \operatorname{Mat}_{n}(R) \) also recall the definition of the classical adjoint \( A^{a} \) of \( A \). Prove that:
+
+-   \( \operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1} \)
+-   \( \left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A \)
+
+4.  If \( R \) is an integral domain and \( A \) is an \( n \times n \) matrix over \( R \), prove that if a system of linear equations \( A x=0 \) has a nonzero solution then \( \operatorname{det} A=0 \). Is the converse true? What if we drop the assumption that \( R \) is an integral domain?
+5.  What is the companion matrix \( M \) of the polynomial \( f=x^{2}-x+2 \) over \( C \) ? Prove that \( f \) is the minimal polynomial of \( M \).
+6.  Suppose that \( \phi \) and \( \psi \) are commuting endomorphisms of a finite dimensional vector space \( E \) over a field \( \boldsymbol{k} \), so \( \phi \psi=\psi \phi \).
+
+-   Prove that if \( k \) is algebraically closed, then \( \phi \) and \( \psi \) have a common eigenvector.
+-   Prove that if \( E \) has a basis consisting of eigenvectors of \( \phi \) and \( E \) has a basis consisting of eigenvectors of \( \psi \), then \( E \) has a basis consisting of vectors that are eigenvectors for both \( \phi \) and \( \psi \) simultaneously.
+
+## Galois Theory
+
+> Taken from here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/galois/>
+
+1.  Suppose that for an extension field \( F \) over \( K \) and for \( a \in F \), we have that \( b \in F \) is algebraic over \( K(a) \) but transcendental over \( K \). Prove that \( a \) is algebraic over \( K(b) \).
+2.  Suppose that for a field \( F / K \) that \( a \in F \) is algebraic and has odd degree over \( K \). Prove that \( a^{2} \) is also algebraic and has odd degree over \( K \), and furthermore that \( K(a)=K\left(a^{2}\right) \)
+3.  For a polynomial \( f \in K[x] \), prove that if \( r \in F \) is a root of \( f \) then for any \( \sigma \in \mathbf{A u t}_{K} F, \sigma(r) \) is also a root of \( f \)
+4.  Prove that as extensions of \( \boldsymbol{Q}, \boldsymbol{Q}(x) \) is Galois over \( \boldsymbol{Q}\left(x^{2}\right) \) but not over \( \boldsymbol{Q}\left(x^{3}\right) \).
+5.  If \( F \) is over \( E \), and \( E \) is \( \quad \) over \( K \) is \( F \) necessarily over \( K \) ? Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+6.  If \( F \) is over \( K \), and \( E \) is an intermediate extension of \( F \) over \( K \), is \( F \) necessarily over \( E ? \) Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+7.  If \( F \) is some (not necessarily Galois) field extension over \( K \) such that \( [F: K]=6 \) and Aut \( _{K} F \simeq S_{3} \), then \( F \) is the splitting field of an irreducible cubic over \( K[x] \).
+8.  Recall the definition of the join of two subgroups \( H \vee G \) (or \( H+G \) ). For \( F \) a finite dimensional Galois extension over \( K \) and let \( A \) and \( B \) be intermediate extensions. Prove that
+
+```{=html}
+<!-- -->
+```
+a.  \( \operatorname{Aut}_{A B} F=\mathrm{Aut}_{A} F \cap \mathrm{Aut}_{B} F \)
+b.  Aut \( _{A \cap B} F=\mathrm{Aut}_{A} F \vee \mathrm{Aut}_{B} F \)
+
+```{=html}
+<!-- -->
+```
+9.  For a field \( K \) take \( f \in K[x] \) and let \( n=\operatorname{deg} f \). Prove that for a splitting field \( F \) of \( f \) over \( K \) that \( [F: K] \leq n ! \). Furthermore prove that \( [F: K] \) divides \( n ! \).
+10. Let \( F \) be the splitting field of \( f \in K[x] \) over \( K \). Prove that if \( g \in K[x] \) is irreducible and has a root in \( F \), then \( g \) splits into linear factors over \( F \).
+11. Prove that a finite field cannot be algebraically closed.
+12. For \( u=\sqrt{2+\sqrt{2}} \), What is the Galois group of \( \boldsymbol{Q}(u) \) over \( \boldsymbol{Q} ? \) What are the intermediate fields of the extension \( \boldsymbol{Q}(u) \) over \( \boldsymbol{Q} \) ?
+13. Characterize the splitting field and all intermediate fields of the polynomial \( \left(x^{2}-2\right)\left(x^{2}-3\right)\left(x^{2}-5\right) \) over \( Q \). Using this characterization, find a primitive element of the splitting field.
+14. Characterize the splitting field and all intermediate fields of the polynomial \( x^{4}-3 \) over \( Q \)
+15. Consider the polynomial \( f=x^{3}-x+1 \) in \( \boldsymbol{F}_{3}[x] \). Prove that \( f \) is irreducible. Calculate the degree of the splitting field of \( f \) over \( \boldsymbol{F}_{3} \) and the cardinality of the splitting field of \( f \).
+16. Given an example of a finite extension of fields that has infinitely many intermediate fields.
+17. Let \( u=\sqrt{3+\sqrt{2}} \). Is \( \boldsymbol{Q}(u) \) a splitting field of \( u \) over \( \boldsymbol{Q} \) ? (MathSE)
+18. Prove that the multiplicative group of units of a finite field must be cyclic, and so is generated by a single element.
+19. Prove that \( \boldsymbol{F}_{p^{n}} \) is the splitting field of \( x^{p^{n}}-x \) over \( \boldsymbol{F}_{p} \).
+20. Prove that for any positive integer \( n \) there is an irreducible polynomial of degree \( n \) over \( \boldsymbol{F}_{p} \)
+21. Recall the definition of a perfect field. Give an example of an imperfect field, and the prove that every finite field is perfect.
+22. For \( n>2 \) let \( \zeta_{n} \) denote a primitive \( n \) th root of unity over \( Q \). Prove that
+    \[
+    \left[\boldsymbol{Q}\left(\zeta_{n}+\zeta_{n}^{-1}: \boldsymbol{Q}\right)\right]=\frac{1}{2} \varphi(n)
+    \]
+    where \( \varphi \) is Euler's totient function.
+23. Suppose that a field \( K \) with characteristic not equal to 2 contains an primitive \( n \) th root of unity for some odd integer \( n \). Prove that \( K \) must also contain a primitive \( 2 n \) th root of unity.
+24. Prove that the Galois group of the polynomial \( x^{n}-1 \) over \( Q \) is abelian.

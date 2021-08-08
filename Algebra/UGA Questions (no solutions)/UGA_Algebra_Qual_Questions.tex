@@ -40,7 +40,6 @@
 \begin{document}
 
 \date{}
-\author{D. Zack Garza}
 \maketitle
 
 
@@ -51,21 +50,89 @@
 \tableofcontents
 \newpage
 
+\hypertarget{preface}{%
+\section{Preface}\label{preface}}
+
+I'd like to extend my gratitude to the following people for helping
+supply solutions and proofs:
+
+\begin{itemize}
+\tightlist
+\item
+  Paco Adajar
+\item
+  Swaroop Hegde
+\end{itemize}
+
+Many other solutions contain input and ideas from other graduate
+students and faculty members at UGA, along with questions and answers
+posted on Math Stack Exchange or Math Overflow.
+
 \hypertarget{group-theory-general}{%
 \section{Group Theory: General}\label{group-theory-general}}
 
-\hypertarget{spring-2020-2-work}{%
-\subsection{\texorpdfstring{Spring 2020 \#2
-\(\work\)}{Spring 2020 \#2 \textbackslash work}}\label{spring-2020-2-work}}
+\hypertarget{cosets}{%
+\subsection{Cosets}\label{cosets}}
+
+\hypertarget{spring-2020-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2020 \#2
+\(\done\)}{Spring 2020 \#2 \textbackslash done}}\label{spring-2020-2-done}}
 
 Let \(H\) be a normal subgroup of a finite group \(G\) where the order
 of \(H\) and the index of \(H\) in \(G\) are relatively prime. Prove
 that no other subgroup of \(G\) has the same order as \(H\).
 
-\todo[inline]{Work this problem.}
+Relevant concepts omitted.
+
+Hint/strategy omitted.
+
+Solution omitted.
+
+\hypertarget{fall-2014-6-done}{%
+\subsubsection{\texorpdfstring{Fall 2014 \#6
+\(\done\)}{Fall 2014 \#6 \textbackslash done}}\label{fall-2014-6-done}}
+
+Let \(G\) be a group and \(H, K < G\) be subgroups of finite index. Show
+that
+\begin{align*}
+[G: H\cap K] \leq [G: H] ~ [G:K]
+.\end{align*}
+
+http://www.ams.org/notices/200304/what-is.pdf :::\{.concept\} \envlist
+
+\begin{itemize}
+\tightlist
+\item
+  For \(H, K\leq G\), intersection is again a subgroup of everything:
+  \(H\cap K \leq H, K, G\) by the one-step subgroup test.
+\item
+  Counting in towers: \(A\leq B \leq C \implies [C:A] = [C:B][B:A]\).
+\item
+  Fundamental theorem of cosets: \(xH = yH \iff xy^{-1}\in H\).
+\item
+  Common trick: just list out all of the darn cosets! :::
+\end{itemize}
+
+Hint/strategy omitted.
+
+Solution omitted.
+
+\hypertarget{spring-2013-3-done}{%
+\subsubsection{\texorpdfstring{Spring 2013 \#3
+\(\done\)}{Spring 2013 \#3 \textbackslash done}}\label{spring-2013-3-done}}
+
+Let \(P\) be a finite \(p{\hbox{-}}\)group. Prove that every nontrivial
+normal subgroup of \(P\) intersects the center of \(P\) nontrivially.
+
+\todo[inline]{Clean up, sketchy argument.}
+
+Solution omitted.
+
+\hypertarget{burnside-class-equation}{%
+\subsection{Burnside / Class Equation}\label{burnside-class-equation}}
 
 \hypertarget{spring-2019-4-done}{%
-\subsection{\texorpdfstring{Spring 2019 \#4
+\subsubsection{\texorpdfstring{Spring 2019 \#4
 \(\done\)}{Spring 2019 \#4 \textbackslash done}}\label{spring-2019-4-done}}
 
 For a finite group \(G\), let \(c(G)\) denote the number of conjugacy
@@ -93,15 +160,124 @@ classes of \(G\).
 Here, as usual, \(Z(G)\) denotes the center of \(G\).
 \end{quote}
 
+\begin{warnings}
+
+(DZG) This is a slightly anomalous problem! It's fun and worth doing,
+because it uses the major counting formulas. Just note that the
+techniques used in this problem perhaps don't show up in other group
+theory problems.
+
+\end{warnings}
+
 Relevant concepts omitted.
 
 Hint/strategy omitted.
 
 Solution omitted.
 
-\hypertarget{spring-2012-2-work}{%
-\subsection{\texorpdfstring{Spring 2012 \#2
-\(\work\)}{Spring 2012 \#2 \textbackslash work}}\label{spring-2012-2-work}}
+\hypertarget{group-actions-representations}{%
+\subsection{Group Actions /
+Representations}\label{group-actions-representations}}
+
+\hypertarget{spring-2017-1-done}{%
+\subsubsection{\texorpdfstring{Spring 2017 \#1
+\(\done\)}{Spring 2017 \#1 \textbackslash done}}\label{spring-2017-1-done}}
+
+Let \(G\) be a finite group and \(\pi: G\to \operatorname{Sym}(G)\) the
+Cayley representation.
+
+\begin{quote}
+(Recall that this means that for an element \(x\in G\), \(\pi(x)\) acts
+by left translation on \(G\).)
+\end{quote}
+
+Prove that \(\pi(x)\) is an odd permutation \(\iff\) the order
+\({\left\lvert {\pi(x)} \right\rvert}\) of \(\pi(x)\) is even and
+\({\left\lvert {G} \right\rvert} / {\left\lvert {\pi(x)} \right\rvert}\)
+is odd.
+
+\begin{warnings}
+
+(DZG): This seems like an unusually hard group theory problem. My guess
+is this year's qual class spent more time than usual on the proof of
+Cayley's theorem.
+
+\end{warnings}
+
+Relevant concepts omitted.
+
+Solution omitted.
+
+\hypertarget{fall-2015-1-done}{%
+\subsubsection{\texorpdfstring{Fall 2015 \#1
+\(\done\)}{Fall 2015 \#1 \textbackslash done}}\label{fall-2015-1-done}}
+
+Let \(G\) be a group containing a subgroup \(H\) not equal to \(G\) of
+finite index. Prove that \(G\) has a normal subgroup which is contained
+in every conjugate of \(H\) which is of finite index.
+
+\begin{quote}
+(DZG) A remark: it's not the conjugates that should be finite index
+here, but rather the normal subgroup.
+\end{quote}
+
+Solution omitted.
+
+\hypertarget{conjugacy-classes}{%
+\subsection{Conjugacy Classes}\label{conjugacy-classes}}
+
+\hypertarget{spring-2021-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2021 \#2
+\(\done\)}{Spring 2021 \#2 \textbackslash done}}\label{spring-2021-2-done}}
+
+Let \(H {~\trianglelefteq~}G\) be a normal subgroup of a finite group
+\(G\), where the order of \(H\) is the smallest prime \(p\) dividing
+\({\left\lvert {G} \right\rvert}\). Prove that \(H\) is contained in the
+center of \(G\).
+
+\begin{quote}
+Solution due to Swaroop Hegde, typed up + modifications added by DZG.
+\end{quote}
+
+Relevant concepts omitted.
+
+Proof omitted.
+
+\hypertarget{spring-2015-1-done}{%
+\subsubsection{\texorpdfstring{Spring 2015 \#1
+\(\done\)}{Spring 2015 \#1 \textbackslash done}}\label{spring-2015-1-done}}
+
+For a prime \(p\), let \(G\) be a finite \(p{\hbox{-}}\)group and let
+\(N\) be a normal subgroup of \(G\) of order \(p\). Prove that \(N\) is
+contained in the center of \(G\).
+
+Relevant concepts omitted.
+
+Solution omitted.
+
+\hypertarget{unsorted-counting-arguments}{%
+\subsection{Unsorted / Counting
+Arguments}\label{unsorted-counting-arguments}}
+
+\hypertarget{fall-2019-midterm-5-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#5
+\(\done\)}{Fall 2019 Midterm \#5 \textbackslash done}}\label{fall-2019-midterm-5-done}}
+
+Let \(G\) be a nonabelian group of order \(p^3\) for \(p\) prime. Show
+that \(Z(G) = [G, G]\).
+
+\begin{quote}
+Note: this is a good problem, it tests several common theorems at once.
+Proof due to Paco Adajar.
+\end{quote}
+
+Relevant concepts omitted.
+
+Solution omitted.
+
+\hypertarget{spring-2012-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2012 \#2
+\(\done\)}{Spring 2012 \#2 \textbackslash done}}\label{spring-2012-2-done}}
 
 Let \(G\) be a finite group and \(p\) a prime number such that there is
 a normal subgroup \(H{~\trianglelefteq~}G\) with
@@ -117,26 +293,15 @@ a normal subgroup \(H{~\trianglelefteq~}G\) with
   divisible by \(p\).
 \end{enumerate}
 
-\hypertarget{spring-2017-1-work}{%
-\subsection{\texorpdfstring{Spring 2017 \#1
-\(\work\)}{Spring 2017 \#1 \textbackslash work}}\label{spring-2017-1-work}}
+Relevant concepts omitted.
 
-Let \(G\) be a finite group and \(\pi: G\to \operatorname{Sym}(G)\) the
-Cayley representation.
+Hint/strategy omitted.
 
-\begin{quote}
-(Recall that this means that for an element \(x\in G\), \(\pi(x)\) acts
-by left translation on \(G\).)
-\end{quote}
+Solution omitted.
 
-Prove that \(\pi(x)\) is an odd permutation \(\iff\) the order
-\({\left\lvert {\pi(x)} \right\rvert}\) of \(\pi(x)\) is even and
-\({\left\lvert {G} \right\rvert} / {\left\lvert {\pi(x)} \right\rvert}\)
-is odd.
-
-\hypertarget{fall-2016-1-work}{%
-\subsection{\texorpdfstring{Fall 2016 \#1
-\(\work\)}{Fall 2016 \#1 \textbackslash work}}\label{fall-2016-1-work}}
+\hypertarget{fall-2016-1-done}{%
+\subsubsection{\texorpdfstring{Fall 2016 \#1
+\(\done\)}{Fall 2016 \#1 \textbackslash done}}\label{fall-2016-1-done}}
 
 Let \(G\) be a finite group and \(s, t\in G\) be two distinct elements
 of order 2. Show that subgroup of \(G\) generated by \(s\) and \(t\) is
@@ -150,69 +315,127 @@ D_{2m} = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^m = 1 = \tau^2, \ta
 .\end{align*}
 \end{quote}
 
-\hypertarget{fall-2015-1-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#1
-\(\work\)}{Fall 2015 \#1 \textbackslash work}}\label{fall-2015-1-work}}
-
-Let \(G\) be a group containing a subgroup \(H\) not equal to \(G\) of
-finite index. Prove that \(G\) has a normal subgroup which is contained
-in every conjugate of \(H\) which is of finite index.
-
-\hypertarget{spring-2015-1-work}{%
-\subsection{\texorpdfstring{Spring 2015 \#1
-\(\work\)}{Spring 2015 \#1 \textbackslash work}}\label{spring-2015-1-work}}
-
-For a prime \(p\), let \(G\) be a finite \(p{\hbox{-}}\)group and let
-\(N\) be a normal subgroup of \(G\) of order \(p\). Prove that \(N\) is
-contained in the center of \(G\).
-
-\hypertarget{fall-2014-6-work}{%
-\subsection{\texorpdfstring{Fall 2014 \#6
-\(\work\)}{Fall 2014 \#6 \textbackslash work}}\label{fall-2014-6-work}}
-
-Let \(G\) be a group and \(H, K < G\) be subgroups of finite index. Show
-that
-\begin{align*}
-[G: H\cap K] \leq [G: H] ~ [G:K]
-.\end{align*}
-
-\hypertarget{spring-2013-3-work}{%
-\subsection{\texorpdfstring{Spring 2013 \#3
-\(\work\)}{Spring 2013 \#3 \textbackslash work}}\label{spring-2013-3-work}}
-
-Let \(P\) be a finite \(p{\hbox{-}}\)group. Prove that every nontrivial
-normal subgroup of \(P\) intersects the center of \(P\) nontrivially.
+Solution omitted.
 
 \hypertarget{fall-2019-midterm-1-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#1
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#1
 \(\work\)}{Fall 2019 Midterm \#1 \textbackslash work}}\label{fall-2019-midterm-1-work}}
 
 Let \(G\) be a group of order \(p^2q\) for \(p, q\) prime. Show that
 \(G\) has a nontrivial normal subgroup.
 
+Solution omitted.
+
 \hypertarget{fall-2019-midterm-4-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#4
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#4
 \(\work\)}{Fall 2019 Midterm \#4 \textbackslash work}}\label{fall-2019-midterm-4-work}}
 
 Let \(p\) be a prime. Show that
 \(S_p = \left\langle{\tau, \sigma}\right\rangle\) where \(\tau\) is a
 transposition and \(\sigma\) is a \(p{\hbox{-}}\)cycle.
 
-\hypertarget{fall-2019-midterm-5-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#5
-\(\work\)}{Fall 2019 Midterm \#5 \textbackslash work}}\label{fall-2019-midterm-5-work}}
+\hypertarget{groups-group-actions}{%
+\section{Groups: Group Actions}\label{groups-group-actions}}
 
-Let \(G\) be a nonabelian group of order \(p^3\) for \(p\) prime. Show
-that \(Z(G) = [G, G]\).
+\hypertarget{fall-2012-1-work}{%
+\subsection{\texorpdfstring{Fall 2012 \#1
+\(\work\)}{Fall 2012 \#1 \textbackslash work}}\label{fall-2012-1-work}}
 
-\hypertarget{spring-2021-2-work}{%
-\subsection{\texorpdfstring{Spring 2021 \#2
-\(\work\)}{Spring 2021 \#2 \textbackslash work}}\label{spring-2021-2-work}}
+Let \(G\) be a finite group and \(X\) a set on which \(G\) acts.
 
-Let \(H {~\trianglelefteq~}G\) be a normal subgroup of a finite group
-\(G\), where the order of \(H\) is the smallest prime \(p\) dividing
-\({\left\lvert {G} \right\rvert}\). Prove that \(H\) is contained in the
-center of \(G\).
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(x\in X\) and
+  \(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
+  Show that \(G_x\) is a subgroup of \(G\).
+\item
+  Let \(x\in X\) and
+  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
+  Prove that there is a bijection between elements in \(G\cdot x\) and
+  the left cosets of \(G_x\) in \(G\).
+\end{enumerate}
+
+\hypertarget{fall-2015-2-work}{%
+\subsection{\texorpdfstring{Fall 2015 \#2
+\(\work\)}{Fall 2015 \#2 \textbackslash work}}\label{fall-2015-2-work}}
+
+Let \(G\) be a finite group, \(H\) a \(p{\hbox{-}}\)subgroup, and \(P\)
+a sylow \(p{\hbox{-}}\)subgroup for \(p\) a prime. Let \(H\) act on the
+left cosets of \(P\) in \(G\) by left translation.
+
+Prove that this is an orbit under this action of length 1.
+
+Prove that \(xP\) is an orbit of length 1 \(\iff H\) is contained in
+\(xPx^{-1}\).
+
+\hypertarget{spring-2016-5-work}{%
+\subsection{\texorpdfstring{Spring 2016 \#5
+\(\work\)}{Spring 2016 \#5 \textbackslash work}}\label{spring-2016-5-work}}
+
+Let \(G\) be a finite group acting on a set \(X\). For \(x\in X\), let
+\(G_x\) be the stabilizer of \(x\) and \(G\cdot x\) be the orbit of
+\(x\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that there is a bijection between the left cosets \(G/G_x\) and
+  \(G\cdot x\).
+\item
+  Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
+  nontrivial by considering that action of \(G\) on \(X=G\) by
+  conjugation.
+\end{enumerate}
+
+\hypertarget{fall-2017-1-work}{%
+\subsection{\texorpdfstring{Fall 2017 \#1
+\(\work\)}{Fall 2017 \#1 \textbackslash work}}\label{fall-2017-1-work}}
+
+Suppose the group \(G\) acts on the set \(A\). Assume this action is
+faithful (recall that this means that the kernel of the homomorphism
+from \(G\) to \(\operatorname{Sym}(A)\) which gives the action is
+trivial) and transitive (for all \(a, b\) in \(A\), there exists \(g\)
+in \(G\) such that \(g \cdot a = b\).)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
+  Prove that for any \(a \in A\),
+  \begin{align*}
+  \displaystyle\bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
+  .\end{align*}
+\item
+  Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
+  every abelian transitive subgroup of \(S_n\) has order \(n\).
+\end{enumerate}
+
+\hypertarget{fall-2018-2-done}{%
+\subsection{\texorpdfstring{Fall 2018 \#2
+\(\done\)}{Fall 2018 \#2 \textbackslash done}}\label{fall-2018-2-done}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Suppose the group \(G\) acts on the set \(X\) . Show that the
+  stabilizers of elements in the same orbit are conjugate.
+\item
+  Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
+  that the union of the conjugates of \(H\) is strictly smaller than
+  \(G\), i.e.
+  \begin{align*}
+  \displaystyle\bigcup_{g\in G} gHg^{-1}\subsetneq G
+  \end{align*}
+\item
+  Suppose \(G\) is a finite group acting transitively on a set \(S\)
+  with at least 2 elements. Show that there is an element of \(G\) with
+  no fixed points in \(S\).
+\end{enumerate}
+
+Relevant concepts omitted.
+
+Solution omitted.
 
 \hypertarget{groups-sylow-theory}{%
 \section{Groups: Sylow Theory}\label{groups-sylow-theory}}
@@ -462,109 +685,6 @@ Let \(G\) be a group of order 60 whose Sylow 3-subgroup is normal.
   Prove that the Sylow 5-subgroup is also normal.
 \end{enumerate}
 
-\hypertarget{groups-group-actions}{%
-\section{Groups: Group Actions}\label{groups-group-actions}}
-
-\hypertarget{fall-2012-1-work}{%
-\subsection{\texorpdfstring{Fall 2012 \#1
-\(\work\)}{Fall 2012 \#1 \textbackslash work}}\label{fall-2012-1-work}}
-
-Let \(G\) be a finite group and \(X\) a set on which \(G\) acts.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(x\in X\) and
-  \(G_x \coloneqq\left\{{g\in G {~\mathrel{\Big|}~}g\cdot x = x}\right\}\).
-  Show that \(G_x\) is a subgroup of \(G\).
-\item
-  Let \(x\in X\) and
-  \(G\cdot x \coloneqq\left\{{g\cdot x {~\mathrel{\Big|}~}g\in G}\right\}\).
-  Prove that there is a bijection between elements in \(G\cdot x\) and
-  the left cosets of \(G_x\) in \(G\).
-\end{enumerate}
-
-\hypertarget{fall-2015-2-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#2
-\(\work\)}{Fall 2015 \#2 \textbackslash work}}\label{fall-2015-2-work}}
-
-Let \(G\) be a finite group, \(H\) a \(p{\hbox{-}}\)subgroup, and \(P\)
-a sylow \(p{\hbox{-}}\)subgroup for \(p\) a prime. Let \(H\) act on the
-left cosets of \(P\) in \(G\) by left translation.
-
-Prove that this is an orbit under this action of length 1.
-
-Prove that \(xP\) is an orbit of length 1 \(\iff H\) is contained in
-\(xPx^{-1}\).
-
-\hypertarget{spring-2016-5-work}{%
-\subsection{\texorpdfstring{Spring 2016 \#5
-\(\work\)}{Spring 2016 \#5 \textbackslash work}}\label{spring-2016-5-work}}
-
-Let \(G\) be a finite group acting on a set \(X\). For \(x\in X\), let
-\(G_x\) be the stabilizer of \(x\) and \(G\cdot x\) be the orbit of
-\(x\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that there is a bijection between the left cosets \(G/G_x\) and
-  \(G\cdot x\).
-\item
-  Prove that the center of every finite \(p{\hbox{-}}\)group \(G\) is
-  nontrivial by considering that action of \(G\) on \(X=G\) by
-  conjugation.
-\end{enumerate}
-
-\hypertarget{fall-2017-1-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#1
-\(\work\)}{Fall 2017 \#1 \textbackslash work}}\label{fall-2017-1-work}}
-
-Suppose the group \(G\) acts on the set \(A\). Assume this action is
-faithful (recall that this means that the kernel of the homomorphism
-from \(G\) to \(\operatorname{Sym}(A)\) which gives the action is
-trivial) and transitive (for all \(a, b\) in \(A\), there exists \(g\)
-in \(G\) such that \(g \cdot a = b\).)
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  For \(a \in A\), let \(G_a\) denote the stabilizer of \(a\) in \(G\).
-  Prove that for any \(a \in A\),
-  \begin{align*}
-  \bigcap_{\sigma\in G} \sigma G_a \sigma^{-1}= \left\{{1}\right\}
-  .\end{align*}
-\item
-  Suppose that \(G\) is abelian. Prove that \(|G| = |A|\). Deduce that
-  every abelian transitive subgroup of \(S_n\) has order \(n\).
-\end{enumerate}
-
-\hypertarget{fall-2018-2-done}{%
-\subsection{\texorpdfstring{Fall 2018 \#2
-\(\done\)}{Fall 2018 \#2 \textbackslash done}}\label{fall-2018-2-done}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Suppose the group \(G\) acts on the set \(X\) . Show that the
-  stabilizers of elements in the same orbit are conjugate.
-\item
-  Let \(G\) be a finite group and let \(H\) be a proper subgroup. Show
-  that the union of the conjugates of \(H\) is strictly smaller than
-  \(G\), i.e.
-  \begin{align*}
-  \bigcup_{g\in G} gHg^{-1}\subsetneq G
-  \end{align*}
-\item
-  Suppose \(G\) is a finite group acting transitively on a set \(S\)
-  with at least 2 elements. Show that there is an element of \(G\) with
-  no fixed points in \(S\).
-\end{enumerate}
-
-Relevant concepts omitted.
-
-Solution omitted.
-
 \hypertarget{groups-classification}{%
 \section{Groups: Classification}\label{groups-classification}}
 
@@ -685,9 +805,9 @@ order \(N\).
   is an injective homomorphism.
 \item
   Let \(\Phi: \operatorname{Sym}G\to S_N\) be an isomorphism. For
-  \(a\in G\) define \(\varepsilon(a) \in \left\{{\pm 1}\right\}\) to be
-  the sign of the permutation \(\Phi(C(a))\). Suppose that \(a\) has
-  order \(d\). Prove that \(\varepsilon(a) = -1 \iff d\) is even and
+  \(a\in G\) define \({\varepsilon}(a) \in \left\{{\pm 1}\right\}\) to
+  be the sign of the permutation \(\Phi(C(a))\). Suppose that \(a\) has
+  order \(d\). Prove that \({\varepsilon}(a) = -1 \iff d\) is even and
   \(N/d\) is odd.
 \item
   Suppose \(N> 2\) and \(n\equiv 2 \pmod 4\). Prove that \(G\) is not
@@ -939,8 +1059,8 @@ in \(R\). Recall that in an integral domain \(R\), \(r \in R\) is called
 \(r\) have the form \(ru\) with \(u\) a unit in \(R\).
 
 We call a non-zero, non-unit \(r \in R\) \emph{prime} in \(R\) if
-\(r \bigm|ab \implies r \bigm|a\) or \(r \bigm|b\). Consider the ring
-\(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
+\(r \divides ab \implies r \divides a\) or \(r \divides b\). Consider
+the ring \(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1429,8 +1549,7 @@ the splitting fields of irreducible \(f_i (x) \in {\mathbb{Q}}[x]\).
 
 Let \(E = E_1 E_2 \subset K\).
 
-Let \(H_i = \operatorname{Gal}(K/E_i)\) and
-\(H = \operatorname{Gal}(K/E)\).
+Let \(H_i = { \mathsf{Gal}} (K/E_i)\) and \(H = { \mathsf{Gal}} (K/E)\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1441,7 +1560,7 @@ Let \(H_i = \operatorname{Gal}(K/E_i)\) and
 \item
   Show that
   \begin{align*}
-  \operatorname{Gal}(K/(E_1 \cap E_2 )) = H_1 H_2
+  { \mathsf{Gal}} (K/(E_1 \cap E_2 )) = H_1 H_2
   .\end{align*}
 \end{enumerate}
 
@@ -1461,8 +1580,8 @@ Let \(f(x) = x^4-2 \in {\mathbb{Q}}[x]\).
   Define what it means for a finite extension field \(E\) of a field
   \(F\) to be a Galois extension.
 \item
-  Determine the Galois group \(\operatorname{Gal}(E/{\mathbb{Q}})\) for
-  the polynomial \(f(x)\), and justify your answer carefully.
+  Determine the Galois group \({ \operatorname{Gal}} (E/{\mathbb{Q}})\)
+  for the polynomial \(f(x)\), and justify your answer carefully.
 \item
   Exhibit a subfield \(K\) in \((b)\) such that
   \({\mathbb{Q}}\leq K \leq E\) with \(K\) not a Galois extension over
@@ -1631,7 +1750,7 @@ Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
 \def\labelenumi{\alph{enumi}.}
 \item
   Let \(G\) be a finite group. Show that there exists a field extension
-  \(K/F\) with \(\operatorname{Gal}(K/F) = G\).
+  \(K/F\) with \({ \operatorname{Gal}} (K/F) = G\).
 
   \begin{quote}
   You may assume that for any natural number \(n\) there is a field
@@ -1639,8 +1758,8 @@ Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
   \end{quote}
 \item
   Let \(K\) be a Galois extension of \(F\) with
-  \({\left\lvert {\operatorname{Gal}(K/F)} \right\rvert} = 12\). Prove
-  that there exists an intermediate field \(E\) of \(K/F\) with
+  \({\left\lvert {{ \operatorname{Gal}} (K/F)} \right\rvert} = 12\).
+  Prove that there exists an intermediate field \(E\) of \(K/F\) with
   \([E: F] = 3\).
 \item
   With \(K/F\) as in (b), does an intermediate field \(L\) necessarily
@@ -1781,7 +1900,7 @@ Let \(L/K\) be a finite extension of fields.
 \(\work\)}{Fall 2013 \#6 \textbackslash work}}\label{fall-2013-6-work}}
 
 Let \(K\) be the splitting field of \(x^4-2\) over \({\mathbb{Q}}\) and
-set \(G = \operatorname{Gal}(K/{\mathbb{Q}})\).
+set \(G = { \operatorname{Gal}} (K/{\mathbb{Q}})\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1789,15 +1908,15 @@ set \(G = \operatorname{Gal}(K/{\mathbb{Q}})\).
   Show that \(K/{\mathbb{Q}}\) contains both \({\mathbb{Q}}(i)\) and
   \({\mathbb{Q}}(\sqrt[4]{2})\) and has degree 8 over \({\mathbb{Q}}\)/
 \item
-  Let \(N = \operatorname{Gal}(K/{\mathbb{Q}}(i))\) and
-  \(H = \operatorname{Gal}(K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that
+  Let \(N = { \operatorname{Gal}} (K/{\mathbb{Q}}(i))\) and
+  \(H = { \operatorname{Gal}} (K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that
   \(N\) is normal in \(G\) and \(NH = G\).
 
   \begin{quote}
   Hint: what field is fixed by \(NH\)?
   \end{quote}
 \item
-  Show that \(\operatorname{Gal}(K/{\mathbb{Q}})\) is generated by
+  Show that \({ \operatorname{Gal}} (K/{\mathbb{Q}})\) is generated by
   elements \(\sigma, \tau\), of orders 4 and 2 respectively, with
   \(\tau \sigma\tau^{-1}= \sigma^{-1}\).
 
@@ -1819,20 +1938,21 @@ be the splitting fields of \(f,g,h\) respectively.
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Prove that \(\operatorname{Gal}(E/B)\) and \(\operatorname{Gal}(E/C)\)
-  are normal subgroups of \(\operatorname{Gal}(E/{\mathbb{Q}})\).
+  Prove that \({ \operatorname{Gal}} (E/B)\) and
+  \({ \operatorname{Gal}} (E/C)\) are normal subgroups of
+  \({ \operatorname{Gal}} (E/{\mathbb{Q}})\).
 \item
   Prove that
-  \(\operatorname{Gal}(E/B) \cap\operatorname{Gal}(E/C) = \left\{{1}\right\}\).
+  \({ \operatorname{Gal}} (E/B) \cap{ \operatorname{Gal}} (E/C) = \left\{{1}\right\}\).
 \item
   If \(B\cap C = {\mathbb{Q}}\), show that
-  \(\operatorname{Gal}(E/B) \operatorname{Gal}(E/C) = \operatorname{Gal}(E/{\mathbb{Q}})\).
+  \({ \operatorname{Gal}} (E/B) { \operatorname{Gal}} (E/C) = { \operatorname{Gal}} (E/{\mathbb{Q}})\).
 \item
   Under the hypothesis of (c), show that
-  \(\operatorname{Gal}(E/{\mathbb{Q}}) \cong \operatorname{Gal}(E/B) \times \operatorname{Gal}(E/C)\).
+  \({ \operatorname{Gal}} (E/{\mathbb{Q}}) \cong { \operatorname{Gal}} (E/B) \times { \operatorname{Gal}} (E/C)\).
 \item
   Use (d) to describe
-  \(\operatorname{Gal}({\mathbb{Q}}[\alpha]/{\mathbb{Q}})\) where
+  \({ \operatorname{Gal}} ({\mathbb{Q}}[\alpha]/{\mathbb{Q}})\) where
   \(\alpha = \sqrt 2 + \sqrt 3\).
 \end{enumerate}
 
@@ -1850,8 +1970,8 @@ irreducible over \(F\).
   Show that if \(r\) is a root of \(f\) in \(K\), then \(r^9 = 1\) but
   \(r^3\neq 1\).
 \item
-  Find \(\operatorname{Gal}(K/F)\) and express each intermediate field
-  between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
+  Find \({ \operatorname{Gal}} (K/F)\) and express each intermediate
+  field between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
   \(\beta \in K\).
 \end{enumerate}
 
@@ -1878,7 +1998,7 @@ radicals.
 \(\work\)}{Spring 2012 \#1 \textbackslash work}}\label{spring-2012-1-work}}
 
 Suppose that \(F\subset E\) are fields such that \(E/F\) is Galois and
-\({\left\lvert {\operatorname{Gal}(E/F)} \right\rvert} = 14\).
+\({\left\lvert {{ \operatorname{Gal}} (E/F)} \right\rvert} = 14\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1888,7 +2008,7 @@ Suppose that \(F\subset E\) are fields such that \(E/F\) is Galois and
 \item
   Assume that there are at least two distinct intermediate subfields
   \(F \subset L_1, L_2 \subset E\) with \([L_i: F]= 7\). Prove that
-  \(\operatorname{Gal}(E/F)\) is nonabelian.
+  \({ \operatorname{Gal}} (E/F)\) is nonabelian.
 \end{enumerate}
 
 \hypertarget{spring-2012-4-work}{%
@@ -2011,10 +2131,30 @@ Solution omitted.
 
 Let \(K\) be a Galois extension of \(F\), and let
 \(F \subset E \subset K\) be inclusions of fields. Let
-\(G \coloneqq\operatorname{Gal}(K/F)\) and
-\(H \coloneqq\operatorname{Gal}(K/E)\), and suppose \(H\) contains
+\(G \coloneqq{ \mathsf{Gal}} (K/F)\) and
+\(H \coloneqq{ \mathsf{Gal}} (K/E)\), and suppose \(H\) contains
 \(N_G(P)\), where \(P\) is a Sylow \(p\)-subgroup of \(G\) for \(p\) a
 prime. Prove that \([E: F] \equiv 1 \pmod p\).
+
+\hypertarget{exercises}{%
+\subsection{Exercises}\label{exercises}}
+
+\begin{exercise}[?]
+
+Let \(p \in \mathbb{Z}\) be a prime number. Then describe the elements
+of the Galois group of the polynomial \(x^{p}-2\).
+
+\end{exercise}
+
+Solution omitted.
+
+\begin{exercise}[?]
+
+Compute the Galois group of \(x^2-2\).
+
+\end{exercise}
+
+Solution omitted.
 
 \hypertarget{modules}{%
 \section{Modules}\label{modules}}
@@ -2073,7 +2213,7 @@ Let
 \begin{align*}
 M &= \{(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}w + x + y + z \in 2{\mathbb{Z}}\} \\
 N &= \left\{{
-(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\bigm|(w - x),~ 4\bigm|(x - y),~ 4\bigm|( y - z)
+(w, x, y, z) \in {\mathbb{Z}}^4 {~\mathrel{\Big|}~}4\divides (w - x),~ 4\divides (x - y),~ 4\divides ( y - z)
 }\right\}
 .\end{align*}
 
@@ -2275,17 +2415,7 @@ Prove that \(M\) is torsion-free of rank 1 but not free.
 
 Relevant concepts omitted.
 
-:::\{.solution\} \envlist
-
-Proof omitted.
-
-Proof omitted.
-
-Proof omitted.
-
-Proof omitted.
-
-Proof omitted.
+Solution omitted.
 
 \hypertarget{star-spring-2020-6-done}{%
 \subsubsection{\texorpdfstring{\(\star\) Spring 2020 \#6
@@ -2545,8 +2675,9 @@ where \((A, B) \in G\) and \(X\in M_{m, n}(k)\).
 Let \(G = \operatorname{GL}(3, {\mathbb{Q}}[x])\) be the group of
 invertible \(3\times 3\) matrices over \({\mathbb{Q}}[x]\). For each
 \(f\in {\mathbb{Q}}[x]\), let \(S_f\) be the set of \(3\times 3\)
-matrices \(A\) over \({\mathbb{Q}}[x]\) such that \(\det(A) = c f(x)\)
-for some nonzero constant \(c\in {\mathbb{Q}}\).
+matrices \(A\) over \({\mathbb{Q}}[x]\) such that
+\(\operatorname{det}(A) = c f(x)\) for some nonzero constant
+\(c\in {\mathbb{Q}}\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2568,7 +2699,7 @@ for some nonzero constant \(c\in {\mathbb{Q}}\).
 
 Let \(k\) be a field of characteristic zero and \(A, B \in M_n(k)\) be
 two square \(n\times n\) matrices over \(k\) such that \(AB - BA = A\).
-Prove that \(\det A = 0\).
+Prove that \(\operatorname{det}A = 0\).
 
 Moreover, when the characteristic of \(k\) is 2, find a counterexample
 to this statement.
@@ -2648,9 +2779,9 @@ Show that the following statements are equivalent about a polynomial
 \subsection{\texorpdfstring{Fall 2015 \#8
 \(\work\)}{Fall 2015 \#8 \textbackslash work}}\label{fall-2015-8-work}}
 
-Let \(V\) be a vector space over a field \(F\) and \(V {}^{ \check{} }\)
-its dual. A \emph{symmetric bilinear form} \(({-}, {-})\) on \(V\) is a
-map \(V\times V\to F\) satisfying
+Let \(V\) be a vector space over a field \(F\) and \(V {}^{ \vee }\) its
+dual. A \emph{symmetric bilinear form} \(({-}, {-})\) on \(V\) is a map
+\(V\times V\to F\) satisfying
 \begin{align*}
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) {\quad \operatorname{and} \quad} (v_1, v_2) = (v_2, v_1)
 \end{align*}
@@ -2672,7 +2803,7 @@ W^{\perp} \coloneqq\left\{{v\in V {~\mathrel{\Big|}~}(v, w) = 0 \text{ for all }
 \item
   Define an injective linear map
   \begin{align*}
-  \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \check{} }
+  \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \vee }
   \end{align*}
   which is an isomorphism if \(V\) is finite dimensional.
 \end{enumerate}
@@ -2734,19 +2865,19 @@ Gram matrix \(M = (e_i \cdot e_j )\) has integer entries.
 
 Define the dual of \(\Lambda\) to be
 \begin{align*}
-\Lambda  {}^{ \check{} }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
+\Lambda  {}^{ \vee }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
 \}
 .\end{align*}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Show that \(\Lambda \subset \Lambda {}^{ \check{} }\).
+  Show that \(\Lambda \subset \Lambda {}^{ \vee }\).
 \item
-  Prove that \(\det M \neq 0\) and that the rows of \(M^{-1}\) span
-  \(\Lambda {}^{ \check{} }\).
+  Prove that \(\operatorname{det}M \neq 0\) and that the rows of
+  \(M^{-1}\) span \(\Lambda {}^{ \vee }\).
 \item
-  Prove that \(\det M = |\Lambda {}^{ \check{} }/\Lambda|\).
+  Prove that \(\operatorname{det}M = |\Lambda {}^{ \vee }/\Lambda|\).
 \end{enumerate}
 
 \todo[inline]{Todo, missing part (c).}
@@ -3114,6 +3245,205 @@ B \coloneqq
 \item
   Find a \(3\times 3\) matrix \(J\) in Jordan canonical form such that
   \(B = JPJ^{-1}\) where \(P\) is an invertible matrix.
+\end{enumerate}
+
+\hypertarget{extra-problems}{%
+\section{Extra Problems}\label{extra-problems}}
+
+\begin{quote}
+Many many fundamental problems here:
+\url{https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/groups/}
+\end{quote}
+
+\hypertarget{linear-algebra}{%
+\subsection{Linear Algebra}\label{linear-algebra}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For a division ring \(D\), let \(V_{i}\) be a finite dimensional
+  vector space over \(D\) for \(i \in\{1, \ldots, k\}\). Suppose the
+  sequence
+  \begin{align*}
+  0 \longrightarrow V_{1} \longrightarrow V_{2} \longrightarrow \cdots V_{k} \longrightarrow 0
+  \end{align*}
+  is exact. Prove that
+  \(\sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0\).
+\item
+  Prove that if \(A\) and \(B\) are invertible matrices over a field
+  \(\boldsymbol{k}\), then \(A+\lambda B\) is invertible for all but
+  finitely many \(\lambda \in \boldsymbol{k}\).
+\item
+  For the ring of \(n \times n\) matrices over a commutative unital ring
+  \(R\), which we'll denote \(\operatorname{Mat}_{n}(R)\), recall the
+  definition of the determinant map det:
+  \(\operatorname{Mat}_{n}(R) \rightarrow R\). For
+  \(A \in \operatorname{Mat}_{n}(R)\) also recall the definition of the
+  classical adjoint \(A^{a}\) of \(A\). Prove that:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1}\)
+\item
+  \(\left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A\)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  If \(R\) is an integral domain and \(A\) is an \(n \times n\) matrix
+  over \(R\), prove that if a system of linear equations \(A x=0\) has a
+  nonzero solution then \(\operatorname{det} A=0\). Is the converse
+  true? What if we drop the assumption that \(R\) is an integral domain?
+\item
+  What is the companion matrix \(M\) of the polynomial \(f=x^{2}-x+2\)
+  over \(C\) ? Prove that \(f\) is the minimal polynomial of \(M\).
+\item
+  Suppose that \(\phi\) and \(\psi\) are commuting endomorphisms of a
+  finite dimensional vector space \(E\) over a field \(\boldsymbol{k}\),
+  so \(\phi \psi=\psi \phi\).
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Prove that if \(k\) is algebraically closed, then \(\phi\) and
+  \(\psi\) have a common eigenvector.
+\item
+  Prove that if \(E\) has a basis consisting of eigenvectors of \(\phi\)
+  and \(E\) has a basis consisting of eigenvectors of \(\psi\), then
+  \(E\) has a basis consisting of vectors that are eigenvectors for both
+  \(\phi\) and \(\psi\) simultaneously.
+\end{itemize}
+
+\hypertarget{galois-theory}{%
+\subsection{Galois Theory}\label{galois-theory}}
+
+\begin{quote}
+Taken from here:
+\url{https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/galois/}
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Suppose that for an extension field \(F\) over \(K\) and for
+  \(a \in F\), we have that \(b \in F\) is algebraic over \(K(a)\) but
+  transcendental over \(K\). Prove that \(a\) is algebraic over
+  \(K(b)\).
+\item
+  Suppose that for a field \(F / K\) that \(a \in F\) is algebraic and
+  has odd degree over \(K\). Prove that \(a^{2}\) is also algebraic and
+  has odd degree over \(K\), and furthermore that
+  \(K(a)=K\left(a^{2}\right)\)
+\item
+  For a polynomial \(f \in K[x]\), prove that if \(r \in F\) is a root
+  of \(f\) then for any \(\sigma \in \mathbf{A u t}_{K} F, \sigma(r)\)
+  is also a root of \(f\)
+\item
+  Prove that as extensions of \(\boldsymbol{Q}, \boldsymbol{Q}(x)\) is
+  Galois over \(\boldsymbol{Q}\left(x^{2}\right)\) but not over
+  \(\boldsymbol{Q}\left(x^{3}\right)\).
+\item
+  If \(F\) is over \(E\), and \(E\) is \(\quad\) over \(K\) is \(F\)
+  necessarily over \(K\) ? Answer this question for each of the words
+  ``algebraic,'' ``normal,'' and ``separable'' in the blanks.
+\item
+  If \(F\) is over \(K\), and \(E\) is an intermediate extension of
+  \(F\) over \(K\), is \(F\) necessarily over \(E ?\) Answer this
+  question for each of the words ``algebraic,'' ``normal,'' and
+  ``separable'' in the blanks.
+\item
+  If \(F\) is some (not necessarily Galois) field extension over \(K\)
+  such that \([F: K]=6\) and Aut \(_{K} F \simeq S_{3}\), then \(F\) is
+  the splitting field of an irreducible cubic over \(K[x]\).
+\item
+  Recall the definition of the join of two subgroups \(H \vee G\) (or
+  \(H+G\) ). For \(F\) a finite dimensional Galois extension over \(K\)
+  and let \(A\) and \(B\) be intermediate extensions. Prove that
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\operatorname{Aut}_{A B} F=\mathrm{Aut}_{A} F \cap \mathrm{Aut}_{B} F\)
+\item
+  Aut \(_{A \cap B} F=\mathrm{Aut}_{A} F \vee \mathrm{Aut}_{B} F\)
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  For a field \(K\) take \(f \in K[x]\) and let
+  \(n=\operatorname{deg} f\). Prove that for a splitting field \(F\) of
+  \(f\) over \(K\) that \([F: K] \leq n !\). Furthermore prove that
+  \([F: K]\) divides \(n !\).
+\item
+  Let \(F\) be the splitting field of \(f \in K[x]\) over \(K\). Prove
+  that if \(g \in K[x]\) is irreducible and has a root in \(F\), then
+  \(g\) splits into linear factors over \(F\).
+\item
+  Prove that a finite field cannot be algebraically closed.
+\item
+  For \(u=\sqrt{2+\sqrt{2}}\), What is the Galois group of
+  \(\boldsymbol{Q}(u)\) over \(\boldsymbol{Q} ?\) What are the
+  intermediate fields of the extension \(\boldsymbol{Q}(u)\) over
+  \(\boldsymbol{Q}\) ?
+\item
+  Characterize the splitting field and all intermediate fields of the
+  polynomial
+  \(\left(x^{2}-2\right)\left(x^{2}-3\right)\left(x^{2}-5\right)\) over
+  \(Q\). Using this characterization, find a primitive element of the
+  splitting field.
+\item
+  Characterize the splitting field and all intermediate fields of the
+  polynomial \(x^{4}-3\) over \(Q\)
+\item
+  Consider the polynomial \(f=x^{3}-x+1\) in \(\boldsymbol{F}_{3}[x]\).
+  Prove that \(f\) is irreducible. Calculate the degree of the splitting
+  field of \(f\) over \(\boldsymbol{F}_{3}\) and the cardinality of the
+  splitting field of \(f\).
+\item
+  Given an example of a finite extension of fields that has infinitely
+  many intermediate fields.
+\item
+  Let \(u=\sqrt{3+\sqrt{2}}\). Is \(\boldsymbol{Q}(u)\) a splitting
+  field of \(u\) over \(\boldsymbol{Q}\) ? (MathSE)
+\item
+  Prove that the multiplicative group of units of a finite field must be
+  cyclic, and so is generated by a single element.
+\item
+  Prove that \(\boldsymbol{F}_{p^{n}}\) is the splitting field of
+  \(x^{p^{n}}-x\) over \(\boldsymbol{F}_{p}\).
+\item
+  Prove that for any positive integer \(n\) there is an irreducible
+  polynomial of degree \(n\) over \(\boldsymbol{F}_{p}\)
+\item
+  Recall the definition of a perfect field. Give an example of an
+  imperfect field, and the prove that every finite field is perfect.
+\item
+  For \(n>2\) let \(\zeta_{n}\) denote a primitive \(n\) th root of
+  unity over \(Q\). Prove that
+  \begin{align*}
+  \left[\boldsymbol{Q}\left(\zeta_{n}+\zeta_{n}^{-1}: \boldsymbol{Q}\right)\right]=\frac{1}{2} \varphi(n)
+  \end{align*}
+  where \(\varphi\) is Euler's totient function.
+\item
+  Suppose that a field \(K\) with characteristic not equal to 2 contains
+  an primitive \(n\) th root of unity for some odd integer \(n\). Prove
+  that \(K\) must also contain a primitive \(2 n\) th root of unity.
+\item
+  Prove that the Galois group of the polynomial \(x^{n}-1\) over \(Q\)
+  is abelian.
 \end{enumerate}
 
 

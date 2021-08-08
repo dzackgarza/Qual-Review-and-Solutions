@@ -1,398 +1,341 @@
-\newcommand{\dx}{\,dx}
-\newcommand{\dt}{\,dt}
-\newcommand{\dy}{\,dy}
-\newcommand{\ds}{\,ds}
-\newcommand{\dz}{\,dz}
-\newcommand{\barz}{\bar{z} }
-\newcommand{\dzbar}{\,d\bar{z} }
-\newcommand{\zbar}{\bar{z} }
-\newcommand{\du}{\,du}
-\newcommand{\dw}{\,dw}
-\newcommand{\dV}{\,dV}
-\newcommand{\dmu}{\,d\mu}
-\newcommand{\open}[1]{\overset{\circ}{#1}}
-\newcommand{\textoperatorname}[1]{
-  \operatorname{\textnormal{#1}}
-}
-\newcommand{\et}{\text{ét}}
-\newcommand{\Et}{\text{Ét}}
-\newcommand\stacksymbol[3]{
-  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
-  $\scriptscriptstyle#2$}}
-}
-\renewcommand{\AA}[0]{{\mathbb{A}}}
+\newcommand*\dif{\mathop{}\!\operatorname{d}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Ell{ \mathrm{Ell} }
+\newcommand\Kahler[0]{\operatorname{Kähler}}
+\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand\compact[0]{\operatorname{cpt}}
+\newcommand\hyp[0]{{\operatorname{hyp}}}
+\newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
+\newcommand\kbar{ { \bar{k} } }
+\newcommand\ksep{ { k\sep } }
+\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
+\newcommand\rref{\operatorname{RREF}}
+\newcommand{\Tatesymbol}{\operatorname{TateSymb}}
+\newcommand\tilt[0]{ { \flat } }
+\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
-\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\Ag}[0]{{\mathcal{A}_g}}
+\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
+\newcommand{\Ann}[0]{\operatorname{Ann}}
+\newcommand{\Arg}[0]{\operatorname{Arg}}
+\newcommand{\Art}[0]{\operatorname{Art}}
 \newcommand{\BB}[0]{{\mathbb{B}}}
+\newcommand{\Betti}[0]{{\operatorname{Betti}}}
+\newcommand{\CC}[0]{{\mathbb{C}}}
+\newcommand{\CF}[0]{\operatorname{CF}}
+\newcommand{\CH}[0]{{\operatorname{CH}}}
 \newcommand{\CP}[0]{{\mathbb{CP}}}
+\newcommand{\CY}{{ \text{CY} }}
+\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
+\newcommand{\Crit}[0]{\operatorname{Crit}}
 \newcommand{\DD}[0]{{\mathbb{D}}}
+\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
+\newcommand{\Def}{\operatorname{Def} }
+\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
+\newcommand{\Diff}[0]{\operatorname{Diff}}
+\newcommand{\Disjoint}[0]{\displaystyle\coprod}
+\newcommand{\Disk}[0]{{\operatorname{Disk}}}
+\newcommand{\Dist}[0]{\operatorname{Dist}}
+\newcommand{\Div}[0]{\operatorname{Div}}
 \newcommand{\EE}[0]{{\mathbb{E}}}
+\newcommand{\EKL}[0]{{\mathrm{EKL}}}
+\newcommand{\EO}[0]{{\operatorname{EO}}}
+\newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\minor}[0]{{\operatorname{minor}}}
+\newcommand{\Et}{\text{Ét}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Extpower}[0]{\bigwedge\nolimits}
+\newcommand{\Extalgebra}[0]{\bigwedge\nolimits}
+\newcommand{\Extalg}[0]{\Extalgebra}
+\newcommand{\Extprod}[0]{\bigwedge\nolimits}
+\newcommand{\Ext}{\operatorname{Ext} }
+\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
+\newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
+\newcommand{\FFp}[0]{{\mathbb{F}_p}}
 \newcommand{\FF}[0]{{\mathbb{F}}}
-\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\FS}{{ \text{FS} }}
+\newcommand{\Fil}[0]{{\operatorname{Fil}}}
+\newcommand{\Flat}[0]{{\operatorname{Flat}}}
 \newcommand{\Fpbar}[0]{\bar{\mathbb{F}_p}}
 \newcommand{\Fpn}[0]{{\mathbb{F}_{p^n} }}
-\newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
-\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
-\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
+\newcommand{\Fp}[0]{{\mathbb{F}_p}}
+\newcommand{\Frac}[0]{\operatorname{Frac}}
 \newcommand{\GF}[0]{{\mathbb{GF}}}
 \newcommand{\GG}[0]{{\mathbb{G}}}
+\newcommand{\GL}[0]{\operatorname{GL}}
+\newcommand{\GW}[0]{{\operatorname{GW}}}
+\newcommand{\Gal}[0]{{ \mathsf{Gal}} }
+\newcommand{\Gl}[0]{\operatorname{GL}}
+\newcommand{\Gr}[0]{{\operatorname{Gr}}}
+\newcommand{\HC}[0]{{\operatorname{HC}}}
+\newcommand{\HFK}[0]{\operatorname{HFK}}
+\newcommand{\HF}[0]{\operatorname{HF}}
+\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
+\newcommand{\HH}[0]{{\mathbb{H}}}
+\newcommand{\HP}[0]{{\operatorname{HP}}}
+\newcommand{\HT}[0]{{\operatorname{HT}}}
+\newcommand{\HZ}[0]{{H\mathbb{Z}}}
+\newcommand{\Hilb}[0]{\operatorname{Hilb}}
+\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
+\newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
+\newcommand{\Hsh}{{ \mathcal{H} }}
+\newcommand{\Id}[0]{\operatorname{Id}}
+\newcommand{\Intersect}[0]{\displaystyle\bigcap}
+\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
-\newcommand{\kk}[0]{{\mathbb{k}}}
-\newcommand{\bbm}[0]{{\mathbb{M}}}
-\newcommand{\NN}[0]{{\mathbb{N}}}
-\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
+\newcommand{\KMW}[0]{ \K^{\scriptscriptstyle \mathrm{MW}} }
+\newcommand{\KMimp}[0]{ \hat{\K}^{\scriptscriptstyle \mathrm{M}} }
+\newcommand{\KM}[0]{ \K^{\scriptstyle\mathrm{M}} }
+\newcommand{\Kah}[0]{{ \operatorname{Kähler} } }
+\newcommand{\LC}[0]{{\mathrm{LC}}}
 \newcommand{\LL}[0]{{\mathbb{L}}}
+\newcommand{\Lie}[0]{\operatorname{Lie}}
+\newcommand{\Log}[0]{\operatorname{Log}}
+\newcommand{\MCG}[0]{{\operatorname{MCG}}}
+\newcommand{\MM}[0]{{\mathcal{M}}}
+\newcommand{\MW}[0]{\operatorname{MW}}
+\newcommand{\Mat}[0]{\operatorname{Mat}}
+\newcommand{\Mor}[0]{\operatorname{Mor}}
+\newcommand{\NN}[0]{{\mathbb{N}}}
+\newcommand{\NS}[0]{{\operatorname{NS}}}
+\newcommand{\OO}[0]{{\mathcal{O}}}
+\newcommand{\OP}[0]{{\mathbb{OP}}}
+\newcommand{\OX}[0]{{\mathcal{O}_X}}
+\newcommand{\Obs}{\operatorname{Obs} }
+\newcommand{\Ob}[0]{{\operatorname{Ob}}}
+\newcommand{\Op}[0]{{\operatorname{Op}}}
+\newcommand{\Orb}[0]{{\mathrm{Orb}}}
+\newcommand{\Orth}[0]{{\operatorname{O}}}
+\newcommand{\PD}[0]{\mathrm{PD}}
+\newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
+\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\Pic}[0]{{\operatorname{Pic}}}
+\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\Places}[0]{{\operatorname{Places}}}
+\newcommand{\Presh}[0]{\presh}
+\newcommand{\QHB}[0]{\operatorname{QHB}}
+\newcommand{\QHS}[0]{\operatorname{QHS}}
+\newcommand{\QQpadic}[0]{{ \QQ_p }}
 \newcommand{\QQ}[0]{{\mathbb{Q}}}
+\newcommand{\Quot}[0]{\operatorname{Quot}}
 \newcommand{\RP}[0]{{\mathbb{RP}}}
 \newcommand{\RR}[0]{{\mathbb{R}}}
-\newcommand{\SpSp}[0]{{\mathbb{S}}}
-\renewcommand{\SS}[0]{{\mathbb{S}}}
-\newcommand{\TT}[0]{{\mathbb{T}}}
-\newcommand{\ZZ}[0]{{\mathbb{Z}}}
-\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
-\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
-\newcommand{\kG}[0]{{kG}}
-\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
-\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
-\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
-\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
-\newcommand{\Qp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\QQp}[0]{\mathbb{Q}_{(p)}}
-\newcommand{\Zp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZZp}[0]{\mathbb{Z}_{(p)}}
-\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
-\newcommand{\chp}[0]{\operatorname{ch. p}}
-\newcommand{\fp}[0]{\operatorname{fp}}
-\newcommand{\HT}[0]{{\operatorname{HT}}}
-\newcommand{\LC}[0]{{\mathrm{LC}}}
-\newcommand{\qc}[0]{{\operatorname{qc}}}
-\newcommand{\SF}[0]{\operatorname{SF}}
-\newcommand{\vol}[0]{\operatorname{vol}}
-\newcommand{\Ric}[0]{\operatorname{Ric}}
-\newcommand{\Ahat}[0]{\hat{ \operatorname{A}}_g }
-\newcommand{\covol}[0]{\operatorname{covol}}
-\newcommand{\bP}[0]{\operatorname{bP}}
-\newcommand{\Cx}[0]{\operatorname{Cx}}
-\newcommand{\HF}[0]{\operatorname{HF}}
-\newcommand{\CF}[0]{\operatorname{CF}}
-\newcommand{\HFK}[0]{\operatorname{HFK}}
-\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
-\newcommand{\QHS}[0]{\operatorname{QHS}}
-\newcommand{\ZHB}[0]{\operatorname{ZHB}}
-\newcommand{\QHB}[0]{\operatorname{QHB}}
-\newcommand{\ks}[0]{\operatorname{ks}}
-\newcommand{\lk}[0]{\operatorname{lk}}
-\newcommand{\nd}[0]{\operatorname{nd}}
-\newcommand{\Arg}[0]{\operatorname{Arg}}
-\newcommand{\PGL}[0]{\operatorname{PGL}}
-\newcommand{\GL}[0]{\operatorname{GL}}
-\newcommand{\Gl}[0]{\operatorname{GL}}
-\newcommand{\mat}[0]{\operatorname{Mat}}
-\newcommand{\Mat}[0]{\operatorname{Mat}}
 \newcommand{\Rat}[0]{\operatorname{Rat}}
-\newcommand{\Gal}[0]{\operatorname{Gal}}
-\newcommand{\Hilb}[0]{\operatorname{Hilb}}
-\newcommand{\Quot}[0]{\operatorname{Quot}}
-\newcommand{\Art}[0]{\operatorname{Art}}
-\newcommand{\red}[0]{{ \text{red} }}
-\newcommand{\Pic}[0]{{\operatorname{Pic}}}
-\newcommand{\NS}[0]{{\operatorname{NS}}}
-\newcommand{\lcm}[0]{\operatorname{lcm}}
-\newcommand{\maps}[0]{\operatorname{Maps}}
-\newcommand{\spec}[0]{\operatorname{Spec}}
-\newcommand{\mspec}[0]{\operatorname{mSpec}}
-\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
-\newcommand{\Tr}[0]{\operatorname{Tr}}
-\newcommand{\adj}[0]{\operatorname{adj}}
-\newcommand{\ad}[0]{\operatorname{ad}}
-\newcommand{\ann}[0]{\operatorname{Ann}}
-\newcommand{\Ann}[0]{\operatorname{Ann}}
-\newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\arccsc}[0]{\operatorname{arccsc}}
-\newcommand{\arccot}[0]{\operatorname{arccot}}
-\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
-\newcommand{\ch}[0]{\operatorname{ch}}
-\newcommand{\syl}[0]{{\operatorname{Syl}}}
-\newcommand{\ff}[0]{\operatorname{ff}}
-\newcommand{\txand}[0]{{\operatorname{ and }}}
-\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
-\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
-\newcommand{\Fppf}[0]{\mathrm{\operatorname{Fppf}}}
-\newcommand{\zar}[0]{{\mathrm{zar}}}
-\newcommand{\afp}[0]{A_{/\FF_p}}
-\newcommand{\HP}[0]{{\operatorname{HP}}}
-\newcommand{\TP}[0]{{\operatorname{TP}}}
-\newcommand{\HC}[0]{{\operatorname{HC}}}
-\newcommand{\HH}[0]{{\mathbb{H}}}
-\newcommand{\HoH}[0]{{\operatorname{HH}}}
-\newcommand{\THoH}[0]{{\operatorname{THH}}}
-\newcommand{\mTHH}[0]{{\operatorname{THH}}}
-\newcommand{\THC}[0]{{\operatorname{THC}}}
-\newcommand{\TC}[0]{{\operatorname{TC}}}
-\newcommand{\GW}[0]{{\operatorname{GW}}}
-\newcommand{\SH}[0]{{\operatorname{SH}}}
-\newcommand{\TCH}[0]{{\operatorname{TCH}}}
-\newcommand{\Zar}[0]{{\mathrm{Zar}}}
-\newcommand{\codim}[0]{\operatorname{codim}}
-\newcommand{\reldim}[0]{\operatorname{reldim}}
-\newcommand{\cohdim}[0]{\operatorname{cohdim}}
-\newcommand{\coim}[0]{\operatorname{coim}}
-\newcommand{\dom}[0]{\operatorname{dom}}
-\newcommand{\dR}[0]{\mathrm{dR}}
-\newcommand{\txor}[0]{{\operatorname{ or }}}
-\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
-\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
-\newcommand{\Aut}[0]{{\operatorname{Aut}}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
-\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\Rees}[0]{{\operatorname{Rees}}}
+\newcommand{\Reg}[0]{\operatorname{Reg}}
+\newcommand{\Ric}[0]{\operatorname{Ric}}
+\newcommand{\SF}[0]{\operatorname{SF}}
 \newcommand{\SL}[0]{{\operatorname{SL}}}
-\newcommand{\PSL}[0]{{\operatorname{PSL}}}
+\newcommand{\SNF}[0]{\mathrm{SNF}}
 \newcommand{\SO}[0]{{\operatorname{SO}}}
-\newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\MO}[0]{{\operatorname{MO}}}
-\newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\SP}[0]{{\operatorname{SP}}}
-\newcommand{\per}[0]{{\operatorname{Per}}}
-\newcommand{\loc}[0]{{\operatorname{loc}}}
-\newcommand{\Spin}[0]{{\operatorname{Spin}}}
-\newcommand{\Pin}[0]{{\operatorname{Pin}}}
+\newcommand{\SU}[0]{{\operatorname{SU}}}
+\newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
 \newcommand{\Sing}[0]{{\operatorname{Sing}}}
-\newcommand{\sing}[0]{{\operatorname{Sing}}}
-\newcommand{\CH}[0]{{\operatorname{CH}}}
-\newcommand{\Cat}[0]{\mathsf{Cat}}
-\newcommand{\Poset}[0]{\mathsf{Poset}}
-\newcommand{\Fun}[0]{{\mathsf{Fun}}}
-\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
-\newcommand{\poly}[0]{\mathsf{poly}}
-\newcommand{\Vect}[0]{{\mathsf{Vect}}}
-\newcommand{\Sh}[0]{{\mathsf{Sh}}}
-\newcommand{\Var}[0]{{\mathsf{Var}}}
-\newcommand{\Vark}[0]{{\mathsf{Var}_{/k} }}
-\newcommand{\Alg}[0]{{\mathsf{Alg}}}
-\newcommand{\Ch}[0]{\mathsf{Ch}}
-\newcommand{\Set}[0]{{\mathsf{Set}}}
-\newcommand{\FI}[0]{{\mathsf{FI}}}
-\newcommand{\Sets}[0]{{\mathsf{Set}}}
-\newcommand{\Finset}[0]{{\mathsf{FinSet}}}
-\newcommand{\sSet}[0]{{\mathsf{sSet}}}
-\newcommand{\Spaces}[0]{{\mathsf{Spaces}}}
-\newcommand{\Sp}[0]{{\mathsf{Sp}}}
-\newcommand{\sets}[0]{{\mathsf{Set}}}
-\newcommand{\Grp}[0]{{\mathsf{Grp}}}
-\newcommand{\Grpd}[0]{{\mathsf{Grpd}}}
-\newcommand{\inftyGrpd}[0]{{\infty\dash\mathsf{Grpd}}}
-\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
-\newcommand{\Kan}[0]{{\mathsf{Kan}}}
-\newcommand{\Groups}[0]{{\mathsf{Group}}}
-\newcommand{\Ab}[0]{{\mathsf{Ab}}}
-\newcommand{\Ring}[0]{\mathsf{Ring}}
-\newcommand{\CRing}[0]{\mathsf{CRing}}
-\newcommand{\Ringedspace}[0]{\mathsf{RingSp}}
-\newcommand{\Field}[0]{\mathsf{Field}}
-\newcommand{\Perf}[0]{\mathsf{Perf}}
-\newcommand{\zmod}[0]{{\mathbb{Z}\dash\mathsf{Mod}}}
-\newcommand{\rmod}[0]{{\mathsf{R}\dash\mathsf{Mod}}}
-\newcommand{\gmod}[0]{{\mathsf{G}\dash\mathsf{Mod}}}
-\newcommand{\liegmod}[0]{{\mathfrak{g}\dash\mathsf{Mod}}}
-\newcommand{\mods}[1]{{\mathsf{#1}\dash\mathsf{Mod}}}
-\newcommand{\modsright}[1]{\mathsf{Mod}\dash\mathsf{#1}}
-\newcommand{\modsleft}[1]{\mathsf{#1}\dash\mathsf{Mod}}
-\newcommand{\Gr}[0]{{\operatorname{Gr}}}
-\newcommand{\gr}[0]{{\mathsf{gr}\,}}
-\newcommand{\grMod}[0]{{\mathsf{grMod}}}
-\newcommand{\Mod}[0]{{\mathsf{Mod}}}
-\newcommand{\bimod}[2]{(\mathsf{#1}, \mathsf{#2})\dash\mathsf{biMod}}
-\newcommand{\modr}[0]{{\mathsf{Mod}\dash\mathsf{R}}}
-\newcommand{\mmod}[0]{{\dash\mathsf{Mod}}}
-\newcommand{\kmod}[0]{{\mathsf{k}\dash\mathsf{Mod}}}
-\newcommand{\cdga}[0]{{\mathsf{cdga} }}
-\newcommand{\kalg}[0]{{\mathsf{Alg}_{/k} }}
-\newcommand{\ralg}[0]{{\mathsf{R}\dash\mathsf{Alg}}}
-\newcommand{\liealg}[0]{{\mathsf{Lie}\dash\mathsf{Alg}}}
-\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
-\newcommand{\alg}[0]{\mathsf{Alg}}
-\newcommand{\scalg}[0]{\mathsf{sCAlg}}
-\newcommand{\calg}[0]{\mathsf{CAlg}}
-\newcommand{\CCalg}[0]{{\mathsf{Alg}_{\mathbb{C}} }}
-\newcommand{\VectBundle}[0]{{\mathsf{VectBundle}}}
-\newcommand{\ssets}[0]{\mathsf{sSet}}
-\newcommand{\Assoc}[0]{\mathsf{Assoc}}
-\newcommand{\Free}[0]{\mathsf{Free}}
-\newcommand{\Unital}[0]{\mathsf{Unital}}
-\newcommand{\Riem}[0]{\mathsf{Riem}}
-\newcommand{\Comm}[0]{\mathsf{Comm}}
-\newcommand{\Top}[0]{{\mathsf{Top}}}
-\newcommand{\Mfd}[0]{{\mathsf{Mfd}}}
-\newcommand{\ho}[0]{{\mathsf{ho}}}
-\newcommand{\hoTop}[0]{{\mathsf{hoTop}}}
-\newcommand{\Sch}[0]{{\mathsf{Sch}}}
-\newcommand{\Aff}[0]{{\mathsf{Aff}}}
-\newcommand{\Schf}[0]{{\mathsf{Schf}}}
-\newcommand{\Rep}[0]{{\mathsf{Rep}}}
-\newcommand{\sch}[0]{{\mathsf{Sch}}}
-\newcommand{\QCoh}[0]{{\mathsf{QCoh}}}
-\newcommand{\DCoh}[0]{{\mathsf{DCoh}}}
-\newcommand{\Perv}[0]{\mathsf{Perv}}
-\newcommand{\presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Presh}[0]{{\mathsf{Presh}}}
-\newcommand{\Fieldsover}[1]{{ \mathsf{Fields}_{#1} }}
-\newcommand{\bung}{{\mathsf{Bun}_G}}
-\newcommand{\set}{{\mathsf{Set} }}
-
-\newcommand{\eul}[0]{{\operatorname{eul}}}
-\newcommand{\ab}[0]{{\operatorname{ab}}}
-\newcommand{\op}[0]{^{\operatorname{op}}}
-\newcommand{\Op}[0]{{\operatorname{Op}}}
-\newcommand{\Ob}[0]{{\operatorname{Ob}}}
-\newcommand{\prim}[0]{{\operatorname{prim}}}
-\newcommand{\MCG}[0]{{\operatorname{MCG}}}
-\newcommand{\Tor}[0]{\operatorname{Tor}}
-\newcommand{\ext}{\operatorname{Ext} }
-\newcommand{\Ext}{\operatorname{Ext} }
-\newcommand{\Def}{\operatorname{Def} }
-\newcommand{\Obs}{\operatorname{Obs} }
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
-\newcommand{\orr}[0]{{\operatorname{ or }}}
-\newcommand{\annd}[0]{{\operatorname{ and }}}
-\newcommand{\const}[0]{{\operatorname{const.}}}
-\newcommand{\disc}[0]{{\operatorname{disc}}}
-\newcommand{\discriminant}[0]{{\Delta}}
-\newcommand{\id}[0]{\operatorname{id}}
-\newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\im}[0]{\operatorname{im}}
-\newcommand{\pt}[0]{{\operatorname{pt}}}
-\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
-\newcommand{\sep}[0]{^\operatorname{sep}}
-\newcommand{\tors}[0]{{\operatorname{tors}}}
-\newcommand{\tor}[0]{\operatorname{Tor}}
-\newcommand{\height}[0]{\operatorname{ht}}
-\newcommand{\cpt}[0]{{ \text{compact} } }
-\newcommand{\Kah}[0]{{ \text{Kähler} } }
-\newcommand{\oriented}[0]{{ \text{oriented} } }
-\newcommand\compact[0]{\text{cpt}}
-\newcommand\Kahler[0]{\text{Kähler}}
-\newcommand\hyp[0]{\text{hyp}}
-\newcommand{\abs}[1]{{\left\lvert {#1} \right\rvert}}
-\newcommand{\stack}[1]{\mathclap{\substack{ #1 }}} 
-\newcommand{\qtext}[1]{{\quad \operatorname{#1} \quad}}
-\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
-\newcommand{\actsonl}[0]{\curvearrowleft}
-\newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\bd}[0]{{\del}}
-\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
-\newcommand{\convolve}[0]{\ast}
-\newcommand{\freeprod}[0]{\ast}
+\newcommand{\SpSp}[0]{{\mathbb{S}}}
+\newcommand{\Spec}[0]{\operatorname{Spec}}
+\newcommand{\Spf}[0]{\operatorname{Spf}}
 \newcommand{\Spinc}[0]{\mathrm{Spin}^{{c} }}
-\newcommand{\slope}[0]{{\mathrm{slope}}}
-\newcommand{\coker}[0]{\operatorname{coker}}
-\newcommand{\Mor}[0]{\operatorname{Mor}}
-\newcommand{\cone}[0]{\operatorname{cone}}
-\newcommand{\cok}[0]{\operatorname{coker}}
-\newcommand{\PD}[0]{\mathrm{PD}}
-\newcommand{\conjugate}[1]{{\overline{{#1}}}}
-\newcommand{\conj}[1]{{\overline{{#1}}}}
-\newcommand{\converges}[1]{\overset{#1}}
-\newcommand{\bundle}[1]{\mathcal{#1}}
-\newcommand{\td}[0]{\mathrm{td}}
-\newcommand{\correspond}[1]{\theset{\substack{#1}}}
-\newcommand{\cross}[0]{\times}
-\newcommand{\by}[0]{\times}
-\newcommand{\dash}[0]{{\hbox{-}}}
-\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
-\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
-\newcommand{\definedas}[0]{\coloneqq}
-\newcommand{\da}[0]{\coloneqq}
-\newcommand{\del}[0]{{\partial}}
-\newcommand{\directlim}[0]{\varinjlim}
-\newcommand{\inverselim}[0]{\varprojlim}
-\newcommand{\disjoint}[0]{{\coprod}}
-\newcommand{\Disjoint}[0]{\displaystyle\coprod}
-\newcommand{\dual}[0]{ {}^{ \check{} }}
-\newcommand{\sm}[0]{\setminus}
-\newcommand{\smz}[0]{\setminus\theset{0}}
-\newcommand{\smts}[1]{\setminus\theset{#1}}
-\newcommand{\eps}[0]{\varepsilon}
-\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
-\newcommand{\up}[0]{\uparrow}
-\newcommand{\generators}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\gs}[1]{\left\langle{#1}\right\rangle}
-\newcommand{\homotopic}[0]{\simeq}
-\newcommand{\injectivelim}[0]{\varinjlim}
-\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
-\newcommand{\union}[0]{\cup}
-\newcommand{\Union}[0]{\bigcup}
-\newcommand{\intersect}[0]{\cap}
-\newcommand{\Intersect}[0]{\bigcap}
-\newcommand{\into}[0]{\to}
-\newcommand{\inv}[0]{^{-1}}
-\newcommand{\mfa}[0]{{\mathfrak{a}}}
-\newcommand{\mfb}[0]{{\mathfrak{b}}}
-\newcommand{\mfc}[0]{{\mathfrak{c}}}
-\newcommand{\mff}[0]{{\mathfrak{f}}}
-\newcommand{\mfi}[0]{{\mathfrak{I}}}
-\newcommand{\mfm}[0]{{\mathfrak{m}}}
-\newcommand{\mfn}[0]{{\mathfrak{n}}}
-\newcommand{\mfp}[0]{{\mathfrak{p}}}
-\newcommand{\mfq}[0]{{\mathfrak{q}}}
-\newcommand{\mfr}[0]{{\mathfrak{r}}}
-\newcommand{\mfs}[0]{{\mathfrak{s}}}
-\newcommand{\lieg}[0]{{\mathfrak{g}}}
-\newcommand{\liel}[0]{{\mathfrak{l}}}
-\newcommand{\lief}[0]{{\mathfrak{f}}}
-\newcommand{\liet}[0]{{\mathfrak{t}}}
-\newcommand{\lieo}[0]{{\mathfrak{o}}}
-\newcommand{\lied}[0]{{\mathfrak{d}}}
-\newcommand{\lier}[0]{{\mathfrak{r}}}
-\newcommand{\liegl}[0]{{\mathfrak{gl}}}
-\newcommand{\gl}[0]{{\mathfrak{gl}}}
-\newcommand{\liesl}[0]{{\mathfrak{sl}}}
+\newcommand{\Spin}[0]{{\operatorname{Spin}}}
+\newcommand{\Sq}[0]{\operatorname{Sq}}
+\newcommand{\Stab}[0]{{\operatorname{Stab}}}
+\newcommand{\Sum}[0]{ \displaystyle\sum }
+\newcommand{\Syl}[0]{{\operatorname{Syl}}}
+\newcommand{\Sym}[0]{\operatorname{Sym}}
+\newcommand{\Tensor}[0]{\bigotimes}
+\newcommand{\Tor}[0]{\operatorname{Tor}}
+\newcommand{\Tr}[0]{\operatorname{Tr}}
 \newcommand{\Ug}[0]{{\mathcal{U}(\mathfrak{g}) }}
 \newcommand{\Uh}[0]{{\mathcal{U}(\mathfrak{h}) }}
+\newcommand{\Union}[0]{\displaystyle\bigcup}
+\newcommand{\U}[0]{{\operatorname{U}}}
+\newcommand{\Wedge}[0]{\bigwedge}
+\newcommand{\Wittvectors}[0]{{\mathbb{W}}}
+\newcommand{\ZHB}[0]{\operatorname{ZHB}}
+\newcommand{\ZHS}[0]{\mathbb{Z}\operatorname{HS}}
+\newcommand{\ZZG}[0]{{\mathbb{Z}G}}
+\newcommand{\ZZH}[0]{{\mathbb{Z}H}}
+\newcommand{\ZZlocal}[1]{{ \ZZ_{\hat{#1}} }}
+\newcommand{\ZZpadic}[0]{{ \ZZ_p }}
+\newcommand{\ZZ}[0]{{\mathbb{Z}}}
+\newcommand{\Zar}[0]{{\mathrm{Zar}}}
+\newcommand{\ZpZ}[0]{\mathbb{Z}/p}
+\newcommand{\abuts}[0]{\Rightarrow}
+\newcommand{\ab}[0]{{\operatorname{ab}}}
+\newcommand{\actsonl}[0]{\curvearrowleft}
+\newcommand{\actson}[0]{\curvearrowright}
+\newcommand{\adjoint}[0]{\dagger}
+\newcommand{\adj}[0]{\operatorname{adj}}
+\newcommand{\ad}[0]{\operatorname{ad}}
+\newcommand{\afp}[0]{A_{/\FF_p}}
+\newcommand{\annd}[0]{{\operatorname{ and }}}
+\newcommand{\ann}[0]{\operatorname{Ann}}
+\newcommand{\arccot}[0]{\operatorname{arccot}}
+\newcommand{\arccsc}[0]{\operatorname{arccsc}}
+\newcommand{\arcsec}[0]{\operatorname{arcsec}}
+\newcommand{\bP}[0]{\operatorname{bP}}
+\newcommand{\barz}{\bar{z} }
+\newcommand{\bbm}[0]{{\mathbb{M}}}
+\newcommand{\bd}[0]{{\del}}
+\newcommand{\bigast}[0]{{\mathop{\text{\Large $\ast$}}}}
+\newcommand{\bmgn}[0]{{ \bar{\mathcal{M}}_{g, n} }}
+\newcommand{\bundle}[1]{\mathcal{#1}}
+\newcommand{\Bun}{{\mathsf{Bun}}}
+\newcommand{\bung}{{\mathsf{Bun}_G}}
+\newcommand{\by}[0]{\times}
+\newcommand{\candim}[0]{\operatorname{candim}}
+\newcommand{\chp}[0]{\operatorname{ch. p}}
+\newcommand{\ch}[0]{\operatorname{ch}}
+\newcommand{\cl}[0]{{ \operatorname{cl}} }
+\newcommand{\codim}[0]{\operatorname{codim}}
+\newcommand{\cohdim}[0]{\operatorname{cohdim}}
+\newcommand{\coim}[0]{\operatorname{coim}}
+\newcommand{\coker}[0]{\operatorname{coker}}
+\newcommand{\cok}[0]{\operatorname{coker}}
+\newcommand{\cone}[0]{\operatorname{cone}}
+\newcommand{\conjugate}[1]{{\overline{{#1}}}}
+\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\const}[0]{{\operatorname{const.}}}
+\newcommand{\converges}[1]{\overset{#1}}
+\newcommand{\convolve}[0]{\ast}
+\newcommand{\correspond}[1]{\theset{\substack{#1}}}
+\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\covol}[0]{\operatorname{covol}}
+\newcommand{\cpt}[0]{{ \operatorname{compact} } }
+\newcommand{\crit}[0]{\operatorname{crit}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\dR}[0]{\mathrm{dR}}
+\newcommand{\dV}{\,dV}
+\newcommand{\dash}[0]{{\hbox{-}}}
+\newcommand{\da}[0]{\coloneqq}
+\newcommand{\ddd}[2]{{\frac{d #1}{d #2}\,}}
+\newcommand{\ddim}[0]{\operatorname{ddim}}
+\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
+\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
+\newcommand{\dd}[2]{{\frac{\partial #1}{\partial #2}\,}}
+\newcommand{\decreasesto}[0]{\searrow}
+\newcommand{\definedas}[0]{\coloneqq}
+\newcommand{\del}[0]{{\partial}}
+\newcommand{\diagonal}[1]{\Delta}
+\newcommand{\diag}[0]{\operatorname{diag}}
+\newcommand{\diam}[0]{{\operatorname{diam}}}
+\newcommand{\diff}[0]{\operatorname{Diff}}
+\newcommand{\directlim}[0]{\varinjlim}
+\newcommand{\discriminant}[0]{{\Delta}}
+\newcommand{\disc}[0]{{\operatorname{disc}}}
+\newcommand{\disjoint}[0]{{\textstyle\coprod}}
+\newcommand{\dist}[0]{\operatorname{dist}}
+\newcommand{\dlog}[0]{\operatorname{dLog}}
+\newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
+\newcommand{\dr}{\,dr}
+\newcommand{\ds}{\,ds}
+\newcommand{\dtheta}{\,d\theta}
+\newcommand{\dt}{\,dt}
+\newcommand{\du}{\,du}
+\newcommand{\dw}{\,dw}
+\newcommand{\dxi}{\,d\xi}
+\newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
+\newcommand{\dy}{\,dy}
+\newcommand{\dzbar}{\,d\bar{z} }
+\newcommand{\dzeta}{\,d\zeta}
+\newcommand{\dz}{\,dz}
+\newcommand{\embeds}[0]{\hookrightarrow}
+\newcommand{\eo}[0]{{\operatorname{eo}}}
+\newcommand{\eps}[0]{{\varepsilon}}
+\newcommand{\essdim}[0]{\operatorname{essdim}}
+\newcommand{\et}{\text{ét}}
+\newcommand{\eul}[0]{{\operatorname{eul}}}
+\newcommand{\evalfrom}[0]{\Big|}
+\newcommand{\ext}{\operatorname{Ext} }
+\newcommand{\ff}[0]{\operatorname{ff}}
+\newcommand{\fppf}[0]{\mathrm{\operatorname{fppf}}}
+\newcommand{\fpqc}[0]{\mathrm{\operatorname{fpqc}}}
+\newcommand{\fp}[0]{\operatorname{fp}}
+\newcommand{\fqr}[0]{{\mathbb{F}_{q^r}}}
+\newcommand{\fq}[0]{{\mathbb{F}_{q}}}
+\newcommand{\freeprod}[0]{\ast}
+\newcommand{\from}[0]{\leftarrow}
+\newcommand{\gal}[0]{{ \operatorname{Gal}} }
+\newcommand{\gl}[0]{{\mathfrak{gl}}}
+\newcommand{\gp}[0]{ {\operatorname{gp} } }
+\newcommand{\grad}[0]{\operatorname{grad}}
+\newcommand{\grdim}[0]{{\operatorname{gr\,dim}}}
+\newcommand{\height}[0]{\operatorname{ht}}
+\newcommand{\homotopic}[0]{\simeq}
+\newcommand{\id}[0]{\operatorname{id}}
+\newcommand{\im}[0]{\operatorname{im}}
+\newcommand{\increasesto}[0]{\nearrow}
+\newcommand{\inftycat}[0]{{ \underset{\infty}{ \Cat}  }}
+\newcommand{\injectivelim}[0]{\varinjlim}
+\newcommand{\injects}[0]{\hookrightarrow}
+\newcommand{\inner}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\interior}[0]{^\circ}
+\newcommand{\intersect}[0]{\cap}
+\newcommand{\into}[0]{\to}
+\newcommand{\inverselim}[0]{\varprojlim}
+\newcommand{\inv}[0]{^{-1}}
+\newcommand{\ip}[2]{{\left\langle {#1},~{#2} \right\rangle}}
+\newcommand{\isomorphic}{{ \, \mapsvia{\sim}\, }}
+\newcommand{\iso}{{ \isomorphic  }}
+\newcommand{\kG}[0]{{kG}}
+\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
+\newcommand{\kk}[0]{{\mathbb{k}}}
+\newcommand{\ko}[0]{{\operatorname{ko}}}
+\newcommand{\krulldim}[0]{\operatorname{krulldim}}
+\newcommand{\ks}[0]{\operatorname{ks}}
+\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
+\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
+\newcommand{\lci}[0]{\mathrm{lci}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\liealgk}[0]{{ \liealg_{/k} }}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
-\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lied}[0]{{\mathfrak{d}}}
+\newcommand{\lief}[0]{{\mathfrak{f}}}
+\newcommand{\liegl}[0]{{\mathfrak{gl}}}
+\newcommand{\lieg}[0]{{\mathfrak{g}}}
 \newcommand{\lieh}[0]{{\mathfrak{h}}}
+\newcommand{\liel}[0]{{\mathfrak{l}}}
+\newcommand{\lien}[0]{{\mathfrak{n}}}
+\newcommand{\lieo}[0]{{\mathfrak{o}}}
+\newcommand{\lier}[0]{{\mathfrak{r}}}
+\newcommand{\liesl}[0]{{\mathfrak{sl}}}
 \newcommand{\lieso}[0]{{\mathfrak{so}}}
 \newcommand{\liesp}[0]{{\mathfrak{sp}}}
+\newcommand{\liet}[0]{{\mathfrak{t}}}
 \newcommand{\lieu}[0]{{\mathfrak{u}}}
-\newcommand{\nilrad}[0]{{\mathfrak{N}}}
-\newcommand{\jacobsonrad}[0]{{\mathfrak{J}}}
-\newcommand{\mm}[0]{{\mathfrak{m}}}
-\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
-\newcommand{\fromvia}[1]{\xleftarrow{#1}}
-\newcommand{\mapstovia}[1]{\xmapsto{#1}}
-\newcommand{\ms}[0]{\xrightarrow{\sim}}
-\newcommand{\from}[0]{\leftarrow}
-\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\lk}[0]{\operatorname{lk}}
+\newcommand{\loc}[0]{{\mathsf{loc}}}
+\newcommand{\mTHH}[0]{{\operatorname{THH}}}
+\newcommand{\mHH}[0]{{\operatorname{HH}}}
+\newcommand{\TCH}[0]{{\operatorname{TCH}}}
+\newcommand{\TC}[0]{{\operatorname{TC}}}
+\newcommand{\THC}[0]{{\operatorname{THC}}}
+\newcommand{\THoH}[0]{{\operatorname{THH}}}
+\newcommand{\HoH}[0]{{\operatorname{HH}}}
+\newcommand{\TP}[0]{{\operatorname{TP}}}
+\newcommand{\TT}[0]{{\mathbb{T}}}
 \newcommand{\mapscorrespond}[2]{\mathrel{\operatorname*{\rightleftharpoons}_{#2}^{#1}}}
-\newcommand{\injects}[0]{\hookrightarrow}
-\newcommand{\diagonal}[0]{\Delta}
-\newcommand{\embeds}[0]{\hookrightarrow}
-\newcommand{\embedsvia}[1]{\xhookrightarrow{#1}}
-\newcommand{\injectsvia}[1]{\overset{#1}\injects}
-\newcommand{\surjects}[0]{\twoheadrightarrow}
-\newcommand{\Prism}[0]{\mathsf{Prism}}
-\newcommand{\Solid}[0]{\mathsf{Solid}}
-\newcommand{\Spf}[0]{\mathsf{Spf}}
-\newcommand{\WCart}[0]{\mathsf{WCart}}
-\newcommand{\padic}[0]{p\dash\text{adic}}
-\newcommand{\surjectsvia}[2][]{
-  \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\,
-}
-\newcommand{\adjoint}[0]{\leftrightarrows}
-\newcommand{\kx}[1]{k[x_1, \cdots, x_{#1}]}
-\newcommand{\kxn}[0]{k[x_1, \cdots, x_{n}]}
-\newcommand{\MM}[0]{{\mathcal{M}}}
-\newcommand{\OO}[0]{{\mathcal{O}}}
-\newcommand{\OX}[0]{{\mathcal{O}_X}}
-\newcommand{\imaginarypart}[1]{{\mathcal{Im}({#1})}}
+\newcommand{\mapstofrom}[0]{\rightleftharpoons}
+\newcommand{\mapstovia}[1]{\xmapsto{#1}}
+\newcommand{\mapsvia}[1]{\xrightarrow{#1}}
+\newcommand{\injectsvia}[1]{\xhookrightarrow{#1}}
+\newcommand{\injectsfromvia}[1]{\xhookleftarrow{#1}}
+\newcommand{\maps}[0]{\operatorname{Maps}}
+\newcommand{\mat}[0]{\operatorname{Mat}}
+\newcommand{\maxspec}[0]{{\operatorname{maxSpec}}}
+\newcommand{\mcTop}[0]{\mathcal{T}\mathsf{op}}
 \newcommand{\mca}[0]{{\mathcal{A}}}
 \newcommand{\mcb}[0]{{\mathcal{B}}}
 \newcommand{\mcc}[0]{{\mathcal{C}}}
@@ -413,214 +356,214 @@
 \newcommand{\mcv}[0]{{\mathcal{V}}}
 \newcommand{\mcx}[0]{{\mathcal{X}}}
 \newcommand{\mcz}[0]{{\mathcal{Z}}}
-\newcommand{\kfq}[0]{K_{/\mathbb{F}_q}}
-\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
-\newcommand{\Hsh}{{ \mathcal{H} }}
-\newcommand{\CY}{{ \text{CY} }}
-\newcommand{\FS}{{ \text{FS} }}
-\newcommand{\HHom}{\mathscr{H}\kern-2pt\operatorname{om}}
-\newcommand{\Map}[0]{{\operatorname{Map}}}
+\newcommand{\mfa}[0]{{\mathfrak{a}}}
+\newcommand{\mfb}[0]{{\mathfrak{b}}}
+\newcommand{\mfc}[0]{{\mathfrak{c}}}
+\newcommand{\mff}[0]{{\mathfrak{f}}}
+\newcommand{\mfi}[0]{{\mathfrak{I}}}
+\newcommand{\mfm}[0]{{\mathfrak{m}}}
+\newcommand{\mfn}[0]{{\mathfrak{n}}}
+\newcommand{\mfp}[0]{{\mathfrak{p}}}
+\newcommand{\mfq}[0]{{\mathfrak{q}}}
+\newcommand{\mfr}[0]{{\mathfrak{r}}}
+\newcommand{\mfs}[0]{{\mathfrak{s}}}
+\newcommand{\mgn}[0]{{ \mathcal{M}_{g, n} }}
+\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
+\newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
+\newcommand{\mm}[0]{{\mathfrak{m}}}
+\newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\cell}[0]{{ \mathrm{cell}} }
+\newcommand{\mspec}[0]{\operatorname{mSpec}}
+\newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
+\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\mveq}[0]{{\mapsvia{\sim}}} 
+\newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
+\newcommand{\nd}[0]{\operatorname{nd}}
+\newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{\sqrt{0_{#1}} }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
+\newcommand{\noeth}[0]{\mathrm{Noeth}}
+\newcommand{\nonzero}[0]{^{\bullet}}
 \newcommand{\normalneq}{\mathrel{\reflectbox{$\trianglerightneq$}}}
 \newcommand{\normal}[0]{{~\trianglelefteq~}}
 \newcommand{\norm}[1]{{\left\lVert {#1} \right\rVert}}
-\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
 \newcommand{\notimplies}[0]{\centernot\implies}
 \newcommand{\onto}[0]{\twoheadhthtarrow}
+\newcommand{\open}[1]{\overset{\circ}{#1}}
+\newcommand{\op}[0]{^{\operatorname{op}}}
 \newcommand{\ord}[0]{{\operatorname{Ord}}}
-\newcommand{\Stab}[0]{{\operatorname{Stab}}}
-\newcommand{\mult}[0]{{\operatorname{mult}}}
+\newcommand{\oriented}[0]{{ \operatorname{oriented} } }
+\newcommand{\orr}[0]{{\operatorname{ or }}}
+\newcommand{\padic}[0]{p\dash\text{adic}}
 \newcommand{\pic}[0]{{\operatorname{Pic}}}
+\newcommand{\pnorm}[2]{{\left\lVert {#1} \right\rVert}_{#2}}
+\newcommand{\poly}[0]{\mathrm{poly}}
+\newcommand{\prim}[0]{{\operatorname{prim}}}
 \newcommand{\projectivelim}[0]{\varprojlim}
+\newcommand{\pr}[0]{{\operatorname{pr}}}
+\newcommand{\pt}[0]{{\operatorname{pt}}}
+\newcommand{\qc}[0]{{\operatorname{qc}}}
+\newcommand{\qst}[0]{{\quad \operatorname{such that} \quad}}
 \newcommand{\rank}[0]{\operatorname{rank}}
 \newcommand{\realpart}[1]{{\mathcal{Re}({#1})}}
-\newcommand{\Log}[0]{\operatorname{Log}}
-\newcommand{\reg}[0]{\operatorname{Reg}}
+\newcommand{\red}[0]{{ \text{red} }}
+\newcommand{\reg}[0]{\mathrm{reg}}
+\newcommand{\reldim}[0]{\operatorname{reldim}}
 \newcommand{\restrictionof}[2]{ {\left.{{#1}} \right|_{{#2}} } }
-\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\rk}[0]{{\operatorname{rank}}}
-\newcommand{\evalfrom}[0]{\Big|}
-\renewcommand{\mod}{\pmod}
 \newcommand{\rotate}[2]{{\style{display: inline-block; transform: rotate(#1deg)}{#2}}}
+\newcommand{\ro}[2]{{ \left.{{#1}} \right|_{{#2}} }}
 \newcommand{\selfmap}[0]{{\circlearrowleft}}
 \newcommand{\semidirect}[0]{\rtimes}
+\newcommand{\sep}[0]{{ {}^{ \operatorname{sep} } }}
 \newcommand{\sgn}[0]{\operatorname{sgn}}
+\newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
+\newcommand{\signature}[0]{\operatorname{sig}}
 \newcommand{\sign}[0]{\operatorname{sign}}
+\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\slope}[0]{{\mathrm{slope}}}
+\newcommand{\smts}[1]{\setminus\theset{#1}}
+\newcommand{\smz}[0]{\setminus\theset{0}}
+\newcommand{\sm}[0]{\setminus}
 \newcommand{\spanof}[0]{{\operatorname{span}}}
-\newcommand{\Jac}[0]{\operatorname{Jac}}
+\newcommand{\spec}[0]{\operatorname{Spec}}
 \newcommand{\stab}[0]{{\operatorname{Stab}}}
 \newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
 \newcommand{\stirling}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
-%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \newcommand{\st}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\St}[0]{{\mathsf{St}}}
 \newcommand{\supp}[0]{{\operatorname{supp}}}
+\newcommand{\surjectsvia}[2][]{ \xrightarrow[#1]{#2} { \mathrel{\mkern-16mu}\rightarrow }\, }
+\newcommand{\surjects}[0]{\twoheadrightarrow}
+\newcommand{\syl}[0]{{\operatorname{Syl}}}
 \newcommand{\sym}[0]{\operatorname{Sym}}
-\newcommand{\Sym}[0]{\operatorname{Sym}}
-\newcommand{\smashprod}[0]{\wedge}
-\newcommand{\Wedge}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\wedgeprod}[0]{\vee}
-\newcommand{\Wedgeprod}[0]{\bigvee}
-\newcommand{\Vee}[0]{\bigvee}
+\newcommand{\td}[0]{\mathrm{td}}
 \newcommand{\tensor}[0]{\otimes}
-\newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
-\newcommand{\connectsum}[0]{\mathop{ \Large\mypound }}
+\newcommand{\tgn}[0]{{ \mathcal{T}_{g, n} }}
 \newcommand{\theset}[1]{\left\{{#1}\right\}}
-\newcommand{\ts}[1]{\left\{{#1}\right\}}
-\newcommand{\infsum}[1]{\sum_{{#1=0}}^\infty}
-\newcommand{\gens}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\thetaref}[0]{{ \theta_{\mathrm{Ref} } }}
 \newcommand{\thevector}[1]{{\left[ {#1} \right]}}
-\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\thinrank}[0]{T_n\dash\operatorname{rank}}
 \newcommand{\too}[1]{{\xrightarrow{#1}}}
+\newcommand{\tors}[0]{{\operatorname{tors}}}
+\newcommand{\tor}[0]{\operatorname{Tor}}
 \newcommand{\transverse}[0]{\pitchfork}
+\newcommand{\trdeg}[0]{\operatorname{trdeg}}
 \newcommand{\trianglerightneq}{\mathrel{\ooalign{\raisebox{-0.5ex}{\reflectbox{\rotatebox{90}{$\nshortmid$}}}\cr$\triangleright$\cr}\mkern-3mu}}
-\newcommand{\tr}[0]{\operatorname{Tr}}
+\newcommand{\tr}[0]{{\mathrm{tr}}}
+\newcommand{\tspt}[0]{{\{\operatorname{pt}\}}}
+\newcommand{\ts}[1]{\left\{{#1}\right\}}
+\newcommand{\tv}[1]{{\left[ {#1} \right]}}
+\newcommand{\txand}[0]{{\operatorname{ and }}}
+\newcommand{\txor}[0]{{\operatorname{ or }}}
+\newcommand{\txt}[1]{{\operatorname{ {#1} }}}
+\newcommand{\type}[0]{{\operatorname{type}}}
 \newcommand{\uniformlyconverges}[0]{\rightrightarrows}
-\newcommand{\abuts}[0]{\Rightarrow}
-\newcommand{\covers}[0]{\rightrightarrows}
+\newcommand{\union}[0]{\cup}
+\newcommand{\unital}[0]{{\operatorname{unital}}}
 \newcommand{\units}[0]{^{\times}}
-\newcommand{\nonzero}[0]{^{\bullet}}
+\newcommand{\up}[0]{\uparrow}
+\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
+\newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
+\newcommand{\zar}[0]{{\mathrm{zar}}}
+\newcommand{\zbar}{\bar{z} }
+\newcommand{\zlnz}[0]{\mathbb{Z}/\ell^n\mathbb{Z}}
+\newcommand{\zlz}[0]{\mathbb{Z}/\ell\mathbb{Z}}
+\newcommand{\znz}[0]{\mathbb{Z}/n\mathbb{Z}}
+\newcommand{\zpz}[0]{\mathbb{Z}/p\mathbb{Z}}
+
+\renewcommand{\AA}[0]{{\mathbb{A}}}
+\renewcommand{\SS}[0]{{\mathbb{S}}}
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\renewcommand{\det}{\operatorname{det}}
 \renewcommand{\div}[0]{\operatorname{Div}}
-\newcommand{\Div}[0]{\operatorname{Div}}
-\newcommand{\Frac}[0]{\operatorname{Frac}}
-\newcommand{\Sq}[0]{\operatorname{Sq}}
 \renewcommand{\hat}[1]{\widehat{#1}}
-\newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
-\newcommand{\fourier}[1]{\widehat{#1}}
+\renewcommand{\labelitemiii}{$\diamondsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
+\renewcommand{\mod}{\pmod}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
-\newcommand{\complex}[1]{{#1}_{*}}
-\newcommand*\dif{\mathop{}\!\operatorname{d}}
-\newcommand{\ddt}{\tfrac{\dif}{\dif t}}
-\newcommand{\ddx}{\tfrac{\dif}{\dif x}}
-\renewcommand{\labelitemiii}{$\diamondsuit$}
-\renewcommand{\labelitemiv}{$\diamondsuit$}
-\newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
-\newcommand\rref{\operatorname{RREF}}
-\newcommand{\interior}[0]{^\circ}
-\newcommand{\increasesto}[0]{\nearrow}
-\newcommand{\decreasesto}[0]{\searrow}
-\newcommand\jan{\operatorname{Jan}}
-\newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
-\newcommand\TMF{ \mathrm{TMF} }
-\newcommand\tmf{ \mathrm{tmf} }
 
-\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
-\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
-\DeclareMathOperator{\submfds}{SubMfds}
-\DeclareMathOperator{\crys}{crys}
-\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator*{\eq}{=}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\BiHol}{BiHol}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Curv}{Curv}
+\DeclareMathOperator{\Deck}{Deck}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Endo}{End}
 \DeclareMathOperator{\Exists}{\exists}
 \DeclareMathOperator{\Forall}{\forall}
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclareMathOperator*{\hocolim}{hocolim}
-\DeclareMathOperator*{\eq}{=}
-\DeclareMathOperator{\Endo}{End}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
-\DeclareMathOperator{\proj}{proj}
-\DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\Hol}{Hol}
-\DeclareMathOperator{\Bun}{Bun}
-\DeclareMathOperator{\BiHol}{BiHol}
-\DeclareMathOperator{\Br}{Br}
-\DeclareMathOperator{\coh}{coh}
-\DeclareMathOperator{\colspace}{colspace}
-\DeclareMathOperator{\rowspace}{rowspace}
-\DeclareMathOperator{\codom}{codom}
-\DeclareMathOperator{\range}{range}
-\DeclareMathOperator{\nullspace}{nullspace}
-\DeclareMathOperator{\nullity}{nullspace}
-\DeclareMathOperator{\projection}{Proj}
-\DeclareMathOperator{\Der}{Der}
-\DeclareMathOperator{\len}{len}
-\DeclareMathOperator{\Loop}{{\Omega}}
-\DeclareMathOperator{\Suspend}{{\Sigma}}
-\DeclareMathOperator{\B}{{\mathsf{B} }}
-\DeclareMathOperator{\D}{{\mathsf{D} }}
-\DeclareMathOperator{\K}{{\mathsf{K} }}
-\DeclareMathOperator{\mH}{{\mathsf{H}\mkern-3mu }}
-\DeclareMathOperator{\T}{{T}}
-\DeclareMathOperator{\Rd}{{\mathbb{R} }}
-\DeclareMathOperator{\Ld}{{\mathbb{L} }}
-\DeclareMathOperator{\Bl}{Bl}
-\DeclareMathOperator{\Triv}{Triv}
-\DeclareMathOperator{\Tot}{Tot}
 \DeclareMathOperator{\Forget}{Forget}
-\DeclareMathOperator{\Griff}{Griff}
-\DeclareMathOperator{\Symb}{Symb}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\U}{U}
-
-\newcommand{\Homeo}[0]{{\operatorname{Homeo}}}
-\newcommand{\Diffeo}[0]{{\operatorname{Diffeo}}}
-
-
-\newcommand{\DSt}[0]{{ \operatorname{DSt}}}
-
-\newcommand{\Lie}[0]{\operatorname{Lie}}
-\newcommand{\pr}[0]{{\operatorname{pr}}}
-\newcommand{\cl}[0]{{ \operatorname{cl}} }
-\newcommand{\Cl}[0]{{ \operatorname{Cl}} }
-\newcommand{\trdeg}[0]{\operatorname{trdeg}}
-\newcommand{\dist}[0]{\operatorname{dist}}
-\newcommand{\Dist}[0]{\operatorname{Dist}}
-\newcommand{\crit}[0]{\operatorname{crit}}
-\newcommand{\Crit}[0]{\operatorname{Crit}}
-\newcommand{\diam}[0]{{\operatorname{diam}}}
-\newcommand{\gal}[0]{\operatorname{Gal}}
-\newcommand{\diff}[0]{\operatorname{Diff}}
-\newcommand{\diag}[0]{\operatorname{diag}}
-\newcommand{\grad}[0]{\operatorname{grad}}
-\newcommand{\minpoly}[0]{{\operatorname{minpoly}}}
-\newcommand{\Places}[0]{{\operatorname{Places}}}
-
-\DeclareMathOperator{\hilb}{Hilb}
-\DeclareMathOperator{\Curv}{Curv}
-
-\DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\Frame}{Frame}
-\DeclareMathOperator{\OFrame}{OFrame}
-\DeclareMathOperator{\UFrame}{UFrame}
-\DeclareMathOperator{\prin}{prin}
-\DeclareMathOperator{\Prin}{Prin}
-\DeclareMathOperator{\Taut}{Taut}
-
 \DeclareMathOperator{\Frob}{Frob}
-
-\DeclareMathOperator{\hd}{Head}
-\DeclareMathOperator{\soc}{Soc}
-\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Ind}{Ind}
-\DeclareMathOperator{\coInd}{coInd}
-\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Ld}{{\mathbb{L} }}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\Map}{Maps}
+\DeclareMathOperator{\OFrame}{OFrame}
+\DeclareMathOperator{\Prin}{Prin}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\RHom}{\mathbb{R}Hom}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Rd}{{\mathbb{R} }}
 \DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\cores}{cores}
-\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\Suspendpinf}{{\Sigma_+^\infty}}
+\DeclareMathOperator{\Symb}{Symb}
+\DeclareMathOperator{\Taut}{Taut}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\Triv}{Triv}
+\DeclareMathOperator{\UFrame}{UFrame}
+\DeclareMathOperator{\coInd}{coInd}
+\DeclareMathOperator{\codom}{codom}
+\DeclareMathOperator{\coh}{coh}
+\DeclareMathOperator{\coind}{coInd}
 \DeclareMathOperator{\coinfl}{coinf}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\hd}{Head}
+\DeclareMathOperator{\hilb}{Hilb}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\infl}{inf}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\nullity}{nullspace}
+\DeclareMathOperator{\nullspace}{nullspace}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\prin}{prin}
+\DeclareMathOperator{\projection}{Proj}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\soc}{Soc}
+\DeclareMathOperator{\submfds}{SubMfds}
 
 \newcommand{\Suchthat}[0]{\middle\vert}
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
-\newcommand{\delbar}[0]{\bar{\del}}
-
-
+\newcommand{\delbar}[0]{{ \bar{\del}}}
 
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
+\newcommand{\iscontainedin}[0]{\supseteq}
 
-\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\rad}[1]{\sqrt{#1}}
 \newcommand{\thecat}[1]{\mathbf{#1}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\rightderive}[0]{{\mathbf{R}}}
 
 \newcommand\rrarrows{\rightrightarrows}
 \newcommand\rrrarrows{
@@ -629,7 +572,6 @@
         \textstyle\rightarrow}}
 }
 
-\newcommand\colim{\mathop{\mathrm{colim}}\nolimits}
 
 
 \newcommand\ul[1]{\underline{#1}}
@@ -642,17 +584,20 @@
 \newcommand\hodgestar[0]{\star}
 \newcommand\dirac[0]{\mkern-3mu \not{ \partial} }
 \newcommand\laplacian[0]{\Delta}
+\newcommand\Laplacian[0]{\Delta}
 \newcommand\stardstar[0]{\hodgestar {d} \mkern-5mu \hodgestar}
 \newcommand\covariant[0]{\nabla}
 \newcommand\ol[1]{\overline{#1}}
 \newcommand\univcover[1]{\overline{#1}}
 \newcommand\closure[1]{\overline{#1}}
 \newcommand\fps[1]{{\left[\left[ #1 \right]\right]  }}
+\newcommand\laurent[1]{{\left(\left( #1 \right)\right)  }}
 \newcommand\capprod{\frown}
 \newcommand\cupprod{\smile}
 \newcommand\Path{\mathcal{P}}
 \newcommand\gradient{\nabla}
 
+\newcommand\cechH[0]{{\check{H}}}
 \newcommand\Hc[0]{{\check{H}}}
 \newcommand\Cc[0]{{\check{C}}}
 \newcommand\cupp[0]{\smile}
@@ -661,82 +606,246 @@
 \newcommand\ev[0]{\operatorname{ev}}
 \newcommand\coev[0]{\operatorname{coev}}
 
-\newcommand{\RM}[1]{%
-  \textup{\uppercase\expandafter{\romannumeral#1}}%
-}
-\newcommand{\divides}{\bigm|}
-\newcommand{\notdivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
-}
 \newcommand{\fractional}[1]{\theset{#1}}
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
-\newcommand\fiberprod[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\tselts[2]{{ \theset{ {#1}_1, {#1}_2, \cdots, {#1}_{#2} } }}
+\newcommand\fiberproduct[1]{\underset{\scriptscriptstyle {#1} }{\times}}
+\newcommand\fiberprod[1]{{ \fiberproduct{#1} }}
+\newcommand\fprod[1]{{ \fiberproduct{#1} }}
+\newcommand\smallprod[0]{{ \scriptscriptstyle\prod }}
+\newcommand\sumpower[1]{{ {}^{ \scriptscriptstyle\oplus^{#1} }  }}
+\newcommand\prodpower[1]{{ {}^{ \scriptscriptstyle\times^{#1} }  }}
+\newcommand\tensorpower[2]{{ {}^{ \scriptstyle\otimes_{#1}^{#2} }  }}
+\newcommand\derivedtensorpower[3]{{ {}^{ \scriptstyle {}_{#1} {\otimes_{#2}^{#3}} }  }}
+\newcommand\smashpower[1]{{ {}^{ \scriptscriptstyle\smashprod^{#1} }  }}
 
-
+\newcommand{\Tot}[0]{{ \operatorname{Tot} }}
 \newcommand{\Totsum}[0]{\Tot^{\oplus}}
 \newcommand{\Totprod}[0]{\Tot^{\Pi}}
-\newcommand{\equalsbecause}[1]{\overset{#1}{=}}
-\newcommand{\congbecause}[1]{\overset{#1}{\cong}}
-\newcommand{\congas}[1]{\underset{#1}{\cong}}
-\newcommand{\ideal}[1]{\mathcal{#1}}
-\newcommand{\adjoin}[1]{ { \left[ {#1} \right] } }
 \newcommand{\xpn}[0]{ { x^{p^n} } }
-
-
-
-\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
-\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
 \newcommand{\Qbar}[0]{{ \bar{ \mathbb{Q} } }}
-\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
-\newcommand{\Ag}[0]{{\mathcal{A}_g}}
-\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
 
-\newcommand{\matt}[4]{{
-\begin{bmatrix}
-#1 & #2 
-\\
-#3 & #4
-\end{bmatrix}
-}}
-
-
+\newcommand{\Loop}[0]{{\Omega}}
+\newcommand{\Loopinf}[0]{{\Omega}^\infty}
+\newcommand{\Suspend}[0]{{\Sigma}}
 \newcommand{\ptd}{{\scriptstyle { * } }}
 \newcommand{\fin}[0]{{\mathrm{fin}}}
+\newcommand{\can}[0]{{\mathrm{can}}}
+\newcommand{\ess}[0]{{\mathrm{ess}}}
 \newcommand{\fd}[0]{{\mathrm{fd}}}
 \newcommand{\fg}[0]{{\mathrm{fg}}}
+\newcommand{\qproj}[0]{{\mathrm{qproj}}}
+\newcommand{\irr}[0]{{\mathrm{irr}}}
 \newcommand{\ft}[0]{{\mathrm{ft}}}
 \newcommand{\smol}[0]{{\mathrm{small}}}
 \newcommand{\alev}[0]{{\,\mathrm{a.e.}}}
-\newcommand{\smooth}[0]{{\operatorname{sm}}}
 \newcommand{\semisimple}[0]{{\operatorname{ss}}}
 \newcommand{\gon}[0]{{\dash\mathrm{gon}}}
 \newcommand{\semi}[0]{{\operatorname{semi}}}
 \newcommand{\inc}[0]{{\operatorname{inc}}}
 \newcommand{\Ball}[0]{{B}}
 \newcommand{\hq}[0]{{/}}
-\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\unioninfty}[0]{{\union\ts{\infty}}}
 \newcommand{\dualnumbers}[0]{{ [\eps] / \eps^2 }}
+\newcommand{\crys}[0]{{\mathrm{crys}}}
+\newcommand{\Xff}[0]{{X_\mathrm{FF}}}
+\newcommand{\an}[0]{{\mathrm{an}}}
+\newcommand{\Nis}[0]{{\mathrm{Nis}}}
+\newcommand{\perf}[0]{{\mathrm{perf}}}
+
+\newcommand{\quillenplus}[0]{{ {}^{+} }}
+\newcommand{\glue}[1]{{ \Disjoint_{#1} }}
+\newcommand{\normcomplex}[1]{{\norm{\complex{#1}}}}
 \newcommand{\nerve}[1]{{ \mathcal{N}({#1}) }}
 \newcommand{\realize}[1]{{ \abs{#1} }}
 
+\newcommand{\localize}[1]{ \left[ { \scriptstyle #1\inv } \right]}
+\newcommand{\sheafify}[1]{ \left( #1 \right)^{\scriptscriptstyle \mathrm{sh}} }
+\newcommand{\complete}[1]{{ {}_{ \hat{#1} } }}
+\newcommand{\takecompletion}[1]{{ \overbrace{#1}^{\widehat{\hspace{4em}}}  }}
+\newcommand{\twistleft}[2]{{ {}^{#1} #2 }}
+\newcommand{\twistright}[2]{{ #2 {}^{#1} }}
+\newcommand{\liesover}[1]{{ {}_{/ {#1}} }}
+\newcommand{\liesabove}[1]{{ {}_{/ {#1}} }}
+\newcommand{\slice}[1]{_{/ {#1}} }
+\newcommand{\quotright}[2]{ {}^{#1}\mkern-2mu/\mkern-2mu_{#2} }
+\newcommand{\quotleft}[2]{ {}_{#2}\mkern-.5mu\backslash\mkern-2mu^{#1} }
+\newcommand{\invert}[1]{{ \left[ { \scriptstyle \frac{1}{#1} } \right] }}
+\newcommand{\pcomplete}[0]{{ {}^{ \wedge }_{p} }}
+
+
+\newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\E}[0]{{\mathsf{E}}}
+\newcommand{\T}[0]{{\mathsf{T}}}
+\newcommand{\K}[0]{{\mathsf{K}}}
+\newcommand{\G}[0]{{\mathsf{G}}}
+%\newcommand{\H}[0]{{\mathsf{H}}}
+\newcommand{\D}{{ \mathsf{D} }}
+\newcommand{\mH}{{ \mathsf{H} }}
+\newcommand{\BGL}[0]{ \mathsf{B}\mkern-3mu \operatorname{GL} }
+
+\newcommand{\RM}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\DeclareMathOperator{\righttriplearrows} {{\; \tikz{ \foreach \y in {0, 0.1, 0.2} { \draw [-stealth] (0, \y) -- +(0.5, 0);}} \; }}
+\DeclareMathOperator*{\mapbackforth}{\rightleftharpoons}
+\newcommand{\fourcase}[4]{
+\begin{cases}{#1} & {#2} \\ {#3} & {#4}\end{cases} 
+}
+\newcommand{\matt}[4]{{
+\begin{bmatrix}
+  {#1} & {#2} 
+\\
+  {#3} & {#4}
+\end{bmatrix}
+}}
+\newcommand{\mattt}[9]{{
+\begin{bmatrix}
+  {#1} & {#2} & {#3}
+\\
+  {#4} & {#5} & {#6}
+\\
+  {#7} & {#8} & {#9}
+\end{bmatrix}
+}}
+
+\newcommand\stacksymbol[3]{
+  \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
+  $\scriptscriptstyle#2$}}
+}
+\newcommand{\textoperatorname}[1]{
+  \operatorname{\textnormal{#1}}
+}
+
+
+
+%\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+# Preface
+
+I'd like to extend my gratitude to the following people for helping supply solutions and proofs:
+
+- Paco Adajar
+- Swaroop Hegde
+
+Many other solutions contain input and ideas from other graduate students and faculty members at UGA, along with questions and answers posted on Math Stack Exchange or Math Overflow.
+
 # Group Theory: General
 
-## Spring 2020 #2 $\work$
+## Cosets
+
+### Spring 2020 #2 $\done$
 Let $H$ be a normal subgroup of a finite group $G$ where the order of $H$ and the index of $H$ in $G$ are relatively prime.
 Prove that no other subgroup of $G$ has the same order as $H$.
 
-\todo[inline]{Work this problem.}
+:::{.concept}
+\envlist
 
-## Spring 2019 #4 $\done$
+- Division algorithm: $(a,b)= d\implies as+bt =1$ for some $s, t$.
+- Coset containment trick: $X\subseteq N \iff xN = N$ for all $x$.
+:::
+
+:::{.strategy}
+Recognize that it suffices to show $hN = N$.
+Context cue: coprimality hints at division algorithm.
+Descend to quotient so you can leverage both the order of $h$ *and* the order of cosets simultaneously.
+:::
+
+:::{.solution}
+\envlist
+
+- For ease of notation, replace $H$ in the problem with $N$ so we remember which one is normal.
+- Write $n\da \# N$ and $m \da [G:N] = \#G/N$, where the quotient makes sense since $N$ is normal.
+- Let $H \leq G$ with $\# H = n$, we'll show $H=N$.
+  - Since $\# H = \# N$ it suffices to show $H \subseteq N$.
+  - It further suffices to show $hN = N$ for all $h\in H$.
+- Noting $\gcd(m, n)=1$, use the division algorithm to write $1 = ns + mt$ for some $s,t\in \ZZ$.
+- The result follows from a computation:
+\[
+hN 
+&= h^1 N \\
+&= h^{ns + mt}N \\
+&= h^{ns} N \cdot h^{mt}N \\
+&= \qty{h^n N}^s \cdot \qty{h^t N}^m \\
+&= (eN)^s \cdot N \\
+&= N
+,\]
+  - We've used that $h\in H \implies o(h) \divides \# H = n$ by Lagrange, so $h^n = e$.
+  - We've also used that $\# G/N = m$, so $(xH)^m = H$ for any $xH\in G/H$.
+
+:::
+
+### Fall 2014 #6 $\done$
+Let $G$ be a group and $H, K < G$ be subgroups of finite index.
+Show that
+\[
+[G: H\intersect K] \leq [G: H] ~ [G:K]
+.\]
+
+http://www.ams.org/notices/200304/what-is.pdf
+:::{.concept}
+\envlist
+
+- For $H, K\leq G$, intersection is again a subgroup of everything: $H\intersect K \leq H, K, G$ by the one-step subgroup test.
+- Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
+- Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
+- Common trick: just list out all of the darn cosets!
+:::
+
+:::{.strategy}
+Count in towers, show that distinct coset reps stay distinct.
+
+:::
+
+:::{.solution}
+\envlist
+
+- $H \intersect K \leq H \leq G \implies [G: H \intersect K] = [G: H] [H : H \intersect K]$
+- So it suffices to show $[H: H \intersect K] \leq [G: K]$
+- Write $H/H \intersect K = \ts{ h_1 J, \cdots, h_m J }$ as distinct cosets where $J \da H \intersect J$.
+- Then $h_i J\neq h_j J \iff h_i h_j\inv \not\in J = H \intersect K$.
+- $H$ is a subgroup, so $h_i h_j\inv \in H$ forces this not to be in $K$.
+- But then $h_i K \neq h_j K$, so these are distinct cosets in $G/K$.
+- So $\#G/K \geq m$.
+:::
+
+### Spring 2013 #3 $\done$
+Let $P$ be a finite $p\dash$group.
+Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ nontrivially.
+
+\todo[inline]{Clean up, sketchy argument.}
+
+:::{.solution}
+\envlist
+
+- Let $N\normal P$, then for each conjugacy class $[n_i]$ in $N$, $H \intersect [g_i] = [g_i]$ or is empty.
+- $G = \disjoint_{i\leq M} [g_i]$ is a disjoint union of conjugacy classes, and the conjugacy classes of $H$ are of the form $[g_i] \intersect H$.
+- Then pull out the center
+\[
+H = \Disjoint_{i\leq M} [g_i] \intersect H = \qty{ Z(G) \intersect H } \disjoint \Disjoint_{i\leq M'} [g_i]
+.\]
+- Taking cardinalities, 
+\[
+\# H = \# \qty{ Z(G) \intersect H} + \sum_{i\leq M'} \# [g_i]
+.\]
+- $p$ divides $H$ since $H\leq P$ and $P$ is a $p\dash$group.
+- Each $\# [g_i] \geq 2$ since the trivial conjugacy classes appear in the center, forcing $\# [g_i] \geq p$.
+- $p$ divides $\# [g_i]$ since $\# [g_i]$ must divide $\# P = p^k$
+- So $p$ must divide the remaining term $Z(G) \intersect H$, which makes it nontrivial.
+
+:::
+
+
+## Burnside / Class Equation
+
+### Spring 2019 #4 $\done$
 For a finite group $G$, let $c(G)$ denote the number of conjugacy classes of $G$.
 
 a.
@@ -755,74 +864,87 @@ Using the class equation (or otherwise) show that the probability in part (a) is
 
 > Here, as usual, $Z(G)$ denotes the center of $G$.
 
+:::{.warnings}
+(DZG) This is a slightly anomalous problem!
+It's fun and worth doing, because it uses the major counting formulas.
+Just note that the techniques used in this problem perhaps don't show up in other group theory problems.
+:::
+
 :::{.concept}
 \envlist
 
 - Notation: $X/G$ is the set of $G\dash$orbits
-- Notation: $X^g = \theset{x\in x\suchthat g\cdot x = x}$
-- Burnside's formula: $\abs G \abs{X/G} = \sum \abs {X^g}$.
+- Notation: $X^g = \theset{x\in X\suchthat g\cdot x = x}$
+- Burnside's formula: $\#{X/G} = {1 \over \# G} \sum \# {X^g}$.
+- Definition of conjugacy class: $C(g) = \ts{ hgh\inv \st h\in G }$.
 :::
 
 :::{.strategy}
-Burnside.
-
+Fixed points of the conjugation action are precisely commuting elements.
+Apply Burnside.
+Context clue: $1/[G:Z(G)]$ is weird, right? 
+Use that $[G:Z(G)] = \# G/\# Z(G)$, so try to look for $\#Z(G)/\#(G)$ somewhere.
+Count sizes of centralizers.
 :::
-
 
 :::{.solution}
 \envlist
 
 :::{.proof title="Part a"}
-Strategy: Burnside.
+\envlist
 
-- Define a sample space $\Omega = G \cross G$, so $\abs{\Omega} = \abs{G}^2$.
+- Define a sample space $\Omega = G \cross G$, so $\# {\Omega} = (\# {G})^2$.
 
-- Identify the event we want to analyze: $A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1}$.
-  - Define and note: 
-    \[
-    A_g \definedas \theset{(g, h) \suchthat h\in H, [g, h] = 1} \implies A = \disjoint_{g\in G} A_g
-    .\]
+- Identify the event we want to analyze: 
+\[
+A \definedas \theset{(g,h) \in G\cross G \suchthat [g,h] = 1} \subseteq \Omega
+.\]
+- Note that the slices are centralizers:
+\[
+A_g \definedas \theset{(g, h) \in \ts{ g } \cross G \suchthat [g, h] = 1} = Z(g) \implies A = \Disjoint_{g\in G} Z(g)
+.\]
 
 - Set $n$ be the number of conjugacy classes, note we want to show $P(A) = n / \abs{G}$.
  
 - Let $G$ act on itself by conjugation, which partitions $G$ into conjugacy classes.
 
   - What are the orbits? 
-    $$
-    \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
-    ,$$ 
-    which is the conjugacy class of $g$.
+  $$
+  \mathcal{O}_g = \theset{hgh\inv \suchthat h\in G}
+  ,$$ 
+  which is the **conjugacy class** of $g$.
+  In particular, the number of orbits is the number of conjugacy classes.
 
   - What are the fixed points? 
-    $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
-    which are the elements of $G$ that commute with $g$, which is precisely $A_g$.
+  $$X^g = \theset{h\in G \suchthat hgh\inv = g},$$ 
+  which are the elements of $G$ that commute with $g$, which is isomorphic to $A_g$.
 
-- Note $\abs{X/G} = n$, the number of conjugacy classes.
 
-- Note that 
+- Identifying centralizers with fixed points, 
   $$
-  \abs{A} = \abs{\disjoint_{g\in G} A_g} = \sum_{g\in G} \abs{A_g} = \sum_{g\in G}\abs{X^g}
+  \#{A} = \#{\Disjoint_{g\in G} Z(g) } = \sum_{g\in G} \#{Z(g)} = \sum_{g\in G}\# {X^g}
   .$$
 
 
 - Apply Burnside
 $$
-\abs{X / G} = \frac { 1 } { | G | } \sum _ { g \in G } \left| X ^ { g } \right|,
+\# {X / G} = \frac { 1 } { \# G  } \sum _ { g \in G } \# X ^ { g } ,
 $$
+- Note $\#{X/G} = n$, i.e. the number of conjugacy classes is the number of orbits.
 - Rearrange and use definition:
 $$
-n \abs{G}
-= \abs{X/G} \abs{G}
-= \sum _ { g \in G } \left| X ^ { g } \right|
+n \cdot \#{G}
+= \qty{\#{X/G} }\cdot \#{G}
+= \sum _ { g \in G } \# X ^ { g } 
 $$
 - Compute probability:
 \[
 P(A)
-= {\abs A \over \abs \Omega} 
-= \frac{\sum_{ g \in G } \left| X ^ { g } \right|}{\abs{G}^2} 
-= \frac{\abs{X/G}\abs{G}}{\abs{G}^2} 
-= \frac{n \abs{G}}{\abs{G}^2} 
-= \frac n {\abs G}
+= {\# A \over \# \Omega} 
+= \Sum_{ g \in G } \frac{\# X ^ { g }}{ ( \# {G} )^2} 
+= \frac{\qty{ \# {X/G}} \cdot \#{G}}{ (\#{G})^2} 
+= \frac{n \cdot \#{G}}{( \#{G} )^2} 
+= \frac n {\# G}
 .\]
 
 :::
@@ -832,50 +954,322 @@ Statement of the class equation:
 \[
 \abs G = Z(G) + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
 \]
-where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$.
+where $Z(x) = \theset{g\in G \suchthat [g, x] = 1}$ is the centralizer of $x$ in $G$.
 :::
-
 
 :::{.proof title="Part c"}
-As shown in part 1,
-$$
-\mathcal{O}_x = \theset{g\actson x \suchthat g\in G} = \theset{h\in G \suchthat ghg\inv = h} = C_G(g)
-,$$
-and by the class equation
+\envlist
 
-$$
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $x$ from each} \\ \text{conjugacy class}}}[G: Z(x)]
-$$
+> (DZG): I couldn't convince myself that a previous proof using the class equation actually works.
+> Instead, I'll borrow the proof from [this note](https://math.berkeley.edu/~tb65536/Commuting_Probability.pdf)
 
-Now note
-
-- Each element of $Z(G)$ is in its own conjugacy class, contributing $\abs{Z(G)}$ classes to $n$.
-
-- Every other class of elements in $G\setminus Z(G)$ contains at least 2 elements
-  - Claim: each such class contributes **at least** $\frac 1 2 \abs{G \setminus Z(G)}$.
-
-Thus
+- Write the event as $A = \Disjoint_{g\in G} \ts{g} \cross Z(g)$, then
 \[
-n &\leq \abs{Z(G)} + \frac 1 2\abs{G \setminus Z(G)} \\
-&= \abs{Z(G)} + \frac 1 2\abs{G} - \frac 1 2 \abs{Z(G)} \\
-&= \frac 1 2 \abs{G} + \frac 1 2 \abs{Z(G)} \\
-\\
-\implies \frac n {\abs G}
-&\leq \frac 1 2 \frac{\abs{G}}{\abs{G}}  + \frac 1 2 \frac{\abs{Z(G)}}{\abs{G}} \\
-&= \frac 1 2 + \frac 1 2 \frac 1 {[G: Z(G)]}
+P(A) 
+= {\# A\over (\# G)^2} 
+= {1\over (\# G)^2} \sum_{g\in G} \# Z(g)
+.\]
+- Attempt to estimate the sum: pull out central elements $g\in Z(G)$.
+  - Note $Z(g) = G$ for central $g$, so $\# Z(g) = \# G$
+  - Note 
+  \[
+  g\not\in Z(G)\implies \# Z(g) \leq {1\over 2} \# G
+  ,\]
+  since $Z(g) \leq G$ is a subgroup, and 
+  \[
+  [G:Z(g)] \neq 1 \implies [G: Z(g)] \geq 2
+  .\]
+- Use these facts to calculate:
+\[
+P(A) 
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# Z(g) + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \sum_{g\in Z(g)} \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} \# Z(g) } \\
+&\leq {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \sum_{g\not\in Z(g)} {1\over 2} \# G } \\
+&= {1\over (\# G)^2 } \qty{ \# Z(G) \cdot \# G + \qty{ \sum_{g\not\in Z(g)} {1\over 2} } \cdot \# G } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + \sum_{g\not\in Z(g)} {1\over 2} } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \sum_{g\not\in Z(g)} 1 } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#(G \sm Z(G) ) } \\
+&= {1\over (\# G) } \qty{ \# Z(G) + {1\over 2} \#G - {1\over 2} \# Z(G) } \\
+&= {1\over (\# G) } \qty{ {1\over 2} \# Z(G) + {1\over 2} \#G  } \\
+&= {1\over 2} \qty{1 + { \# Z(G) \over \# G }} \\
+&= {1\over 2} \qty{1 + { 1 \over [G : Z(G)]  }}
 .\]
 
-:::
 
+
+:::
 
 \todo[inline]{Redo part c}
 
+:::
+
+## Group Actions / Representations
+
+### Spring 2017 #1 $\done$
+Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
+
+> (Recall that this means that for an element $x\in G$, $\pi(x)$ acts by left translation on $G$.)
+
+Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\pi(x)$ is even and $\abs{G} / \abs{\pi(x)}$ is odd.
+
+:::{.warnings}
+(DZG): This seems like an unusually hard group theory problem.
+My guess is this year's qual class spent more time than usual on the proof of Cayley's theorem.
+:::
+
+:::{.concept}
+\envlist
+
+- $\Sym(G) \da \Aut_\Set(G, G)$ is the group of set morphisms from $G$ to itself, i.e. permutations of elements of $G$.
+- More standard terminology: this is related to the **left regular representation** where $g\mapsto \phi_g$ where $\phi_g(x) = gx$, regarded instead as a permutation representation.
+  - This action is transitive!
+- Cayley's theorem: every $G$ is isomorphic to a subgroup of a permutation group.
+  In particular, take \( \ts{ \phi_g \st G\in G } \) with function composition as a subgroup of $\Aut_\Set(G)$.
+:::
+
+:::{.solution}
+\envlist
+
+> (DZG): Warning!! I haven't checked this solution very carefully, and this is kind of a delicate parity argument.
+  Most of the key ideas are borrowed [from here](https://math.stackexchange.com/questions/3028603/show-that-phig-is-an-even-permutation).
+
+- Write $k \da o(\pi_g)$, then since $\pi$ is injective, $k = o(g)$ in $G$.
+- Since $\pi_g$ as a cycle is obtained from the action of $g$, we can pick an element $x_0$ in $G$, take the orbit under the action, and obtain a cycle of length $k$ since the order of $g$ is $k$.
+  Then continue by taking any $x_1$ not in the first orbit and taking *its* orbit.
+  Continuing this way exhausts all group elements and yields a decomposition into disjoint cycles:
+\[
+\pi_g = 
+(x_0, gx_0, g^2 x_0, \cdots, g^{k-1} x_0)
+(x_1, gx_1, g^2 x_1, \cdots, g^{k-1} x_1)
+\cdots
+(x_m, gx_m, g^2 x_m, \cdots, g^{k-1} x_m)
+.\]
+- So there are $m$ orbits all of length exactly $k$.
+  Proceed by casework.
+- If $k$ is even:
+  - This yields $m$ odd cycles, and thus $\pi$ has zero (an even number) of even cycles.
+  - Thus $\pi \in \ker \sgn$ and is an even permutation.
+- If $k$ is odd
+  - This yields $m$ even cycles, thus an even number of even cycles iff $m$ is even 
+- The claim is that the number of orbit representatives $m$ is equal to $[G:H] = \# G/H$ for $H = \gens{ g }$. 
+  - Proof: define a map
+  \[
+  \ts{ \text{Orbit representatives } x_i } &\to G/H \\
+  x &\mapsto xH
+  .\]
+  - This is injective and surjective because
+  \[
+  xH = yH &\iff xy\inv \in H = \gens{ g } \\
+  &\iff xy\inv = g^\ell \\
+  &\iff x=g^\ell y \\
+  &\iff y\in \OO_x
+  ,\]
+  so $y$ and $x$ are in the same orbit and have the same orbit representative.
+
+- We now have
+\[
+\pi_g \text{ is an even permutation } \iff 
+\begin{cases}
+k \text{ is odd and } m \text{ is even} &  
+\\
+\text{ or } & \\
+k \text{ is even}
+ & .
+\end{cases}
+\]
+- Everything was an iff, so flip the evens to odds:
+\[
+\pi_g \text{ is an odd permutation } \iff 
+\begin{cases}
+k \text{ is even and } m \text{ is odd} &  
+\\
+\text{ or } & \\
+k \text{ is odd}
+ & .
+\end{cases}
+.\]
+- Then just recall that $k\da o(\pi_g)$ and 
+\[
+m= [G: \gens{ g }] = \# G / \# \gens{ g }= \# G / o(g) = \# G/ o(\pi_g)
+.\]
+
+
 
 
 :::
 
 
-## Spring 2012 #2 $\work$
+### Fall 2015 #1 $\done$
+Let $G$ be a group containing a subgroup $H$ not equal to $G$ of finite index.
+Prove that $G$ has a normal subgroup which is contained in every conjugate of $H$ which is of finite index.
+
+> (DZG) A remark: it's not the conjugates that should be finite index here, but rather the normal subgroup.
+
+:::{.solution}
+\envlist
+
+- Let $H\leq G$ and define $n\da [G:H]$.
+- Write $G/H = \ts{ x_1 H, \cdots, x_n H }$ for the finitely many cosets.
+- Let $G$ act on $G/H$ by left translation, so $g\cdot xH \da gxH$..
+  Call the action $\psi: G\to \Sym(G/H)$.
+- Then $\Stab(xH) = xHx\inv$ is a subgroup conjugate to $H$, and $K\da \ker \psi = \Intersect_{i=1}^n xHx\inv$ is the intersection of all conjugates of $H$.
+- Kernels are normal, so $K\normal G$, and $K\subseteq xHx\inv$ for all $x$, meaning $K$ is contained in every conjugate of $H$.
+- The index $[G:K]$ is finite since $G/K \cong \im \psi$ by the first isomorphism theorem, and $\# \im \psi \leq \# \Sym(G/H) = \# S_n = n! < \infty$.
+
+:::
+
+
+## Conjugacy Classes
+
+### Spring 2021 #2 $\done$
+
+Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
+Prove that $H$ is contained in the center of $G$.
+
+> Solution due to Swaroop Hegde, typed up + modifications added by DZG.
+
+:::{.concept}
+\envlist
+
+1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
+2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  In particular, $\# C_g$ divides $\#G$.
+3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $p \da \#H$.
+- Let \( \ts{ C_i }_{i\leq n} \) be the conjugacy classes in $G$, then $G = \disjoint_{i\leq n} C_i$
+- By the first fact, there is a sub-collection \( \ts{ C_{i_j}}_{j\leq k } \)  such that 
+\[
+H = \disjoint_{j\leq k} C_{i_j}
+.\]
+- The identity is always in a single conjugacy class, so $C_e = \ts{ e }$.
+- Since $e\in H$, without loss of generality, label $C_{i_1} = \ts{ e }$.
+- So
+\[
+H 
+= \disjoint_{j\leq k} C_{i_j} 
+= C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
+.\]
+
+- Take cardinality in the above equation 
+\[
+p = 1 + \sum_{\substack{ j\leq k \\ j\neq 1 }} \# C_{i_j}
+.\]
+- So $\# C_{i_j} \leq p-1$ for all $j\neq 1$.
+
+- Every $\# C_{i_j}$ divides $\# G$, but $p$ was the *minimal* prime dividing $\# G$, forcing $\# C_{i_j} = 1$ for all $j \neq 1$.
+  - This rules out $\# C_{i_j}$ being a prime less than $p$, but also rules out composites: if a prime $q\divides \# C_{i_j}$, then $q<p$ and $q\divides \# G$, a contradiction.
+
+- By fact 3, each $x\in C_{i_j}$ satisfies $x\in Z(G)$.
+
+- $\union C_{i_j} = H$, so $H \subseteq Z(G)$.
+
+:::
+
+
+### Spring 2015 #1 $\done$
+For a prime $p$, let $G$ be a finite $p\dash$group and let $N$ be a normal subgroup of $G$ of order $p$.
+Prove that $N$ is contained in the center of $G$.
+
+:::{.concept}
+\envlist
+
+- Definition of conjugacy class: $[x] = \ts{gxg\inv \st g\in G}$.
+- A conjugacy class $[x]$ is trivial iff $[x] = \ts{ x }$ iff $x\in Z(G)$.
+- Sizes of conjugacy classes divide the order of the group they live in.
+  - This is orbit-stabilizer: $G\actson G$ by $g\cdot x \da gxg\inv$, so $\OO(x) = [x]$.
+    Then $\# \OO(x) = \# G / \# \Stab(x)$, so $\# \OO(x)$ divides $\# G$.
+:::
+
+:::{.solution}
+\envlist
+
+- Use that $N\normal G \iff N = \disjoint' [n_i]$ is a *disjoint* union of (full) conjugacy classes.
+- Take cardinalities:
+\[
+p = \# N = \sum_{i=1}^m \# [n_i] = 1 + \sum_{i=2}^m [n_i]
+.\]
+- The size of each conjugacy class divides the size of $H$ by orbit-stabilizer, so $\# [n_i] \divides p$ for each $i$.
+- But the entire second term must sum to $p-1$ for this equality to hold, which forces $\#[n_i] = 1$ (and incidentally $m=p-1$)
+- Then $[n_i] = \ts{ n_i } \iff n_i \in Z(G)$, and this holds for all $i$, so $N \subseteq Z(G)$.
+:::
+
+## Unsorted / Counting Arguments
+
+
+### Fall 2019 Midterm #5 $\done$
+Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
+
+> Note: this is a good problem, it tests several common theorems at once.
+> Proof due to Paco Adajar.
+
+:::{.concept}
+\envlist
+
+Important notations and definitions:
+
+-   The **center** of $G$, denoted by $Z(G)$, is the subset of elements
+    of $G$ which commute with all elements of $G$. That is, if
+    $x \in Z(G)$, then for all $g \in G$, $gx = xg$:
+    $$Z(G) = \{ x \in G : gx = xg \, \text{for all } g \in G \}.$$
+
+    In fact, $Z(G)$ is not just a subset of $G$, but a normal subgroup
+    of $G$.
+
+-   The **commutator subgroup** of $G$, denoted by $[G, G]$, is the
+    subgroup of $G$ generated by the commutators of $G$, i.e., the
+    elements of the form $ghg^{-1}h^{-1}$:
+    $$[G, G] = \langle ghg^{-1}h^{-1} : g, h \in G \rangle.$$
+
+    The commutator subgroup $[G,G]$ is the smallest normal subgroup of
+    $G$ whose quotient is abelian. That is, if $H$ is a normal subgroup
+    of $G$ for which $G/H$ is abelian, then $[G, G] \le H$.
+
+    Moreover, $G$ is abelian if and only if $[G,G]$ is trivial.
+
+Theorems to remember and know how to prove:
+
+-   **$G/Z(G)$ Theorem**: If $G/Z(G)$ is cyclic, then $G$ is abelian,
+    i.e., $G/Z(G)$ is in fact trivial.
+
+-   **Lagrange's Theorem**: If $G$ is a group of finite order and $H$ is
+    a subgroup of $G$, then the order of $H$ divides that of $G$.
+
+    - One consequence of this is that every group of prime order is
+    cyclic.
+
+-   A $p$-group (a group of order $p^n$ for some prime $p$ and
+    some positive integer $n$) has nontrivial center.
+
+-   A consequence of the theorems above: every group of order $p^2$
+    (where $p$ is prime) is abelian.
+
+:::
+
+:::{.solution}
+Since $Z(G)$ is a subgroup of $G$ and $|G| = p^3$, by Lagrange's
+theorem, $|Z(G)| \in \{1, p, p^2, p^3\}$.
+
+Since we stipulated that $G$ is nonabelian, $|Z(G)| \ne p^3$. Also,
+since $G$ is a $p$-group, it has nontrivial center, so $|Z(G)| \ne 1$.
+Finally, by the $G/Z(G)$ theorem, $|Z(G)| \ne p^2$: if $|Z(G)| = p^2$,
+then $|G/Z(G)| = p$ and so $G/Z(G)$ would be cyclic, meaning that $G$ is
+abelian. Hence, $|Z(G)| = p$.
+
+Then, since $|Z(G)| = p$, we have that $|G/Z(G)| = p^2$, and so $G/Z(G)$
+is abelian. Thus, $[G, G] \in Z(G)$. Since $|Z(G)| = p$, then
+$|[G,G]| \in \{ 1, p\}$ again by Lagrange's theorem. If $|[G,G]| = p$
+then $[G,G] = Z(G)$ and we are done. And, indeed, we must have
+$|[G,G]| = p$, because $G$ is nonabelian and so $|[G,G]| \ne 1$.
+:::
+
+### Spring 2012 #2 $\done$
 Let $G$ be a finite group and $p$ a prime number such that there is a normal subgroup $H\normal G$ with $\abs{H} = p^i > 1$.
 
 a.
@@ -884,14 +1278,67 @@ Show that $H$ is a subgroup of any Sylow $p\dash$subgroup of $G$.
 b.
 Show that $G$ contains a nonzero abelian normal subgroup of order divisible by $p$.
 
-## Spring 2017 #1 $\work$
-Let $G$ be a finite group and $\pi: G\to \sym(G)$ the Cayley representation.
+:::{.concept}
+\envlist
 
-> (Recall that this means that for an element $x\in G$, $\pi(x)$ acts by left translation on $G$.)
+- $p$ groups have nontrivial centers.
+- Definition of maximality and $p\dash$groups
+- Sylows are conjugate
+- $Z(G) \ch G$ always.
+- Transitivity of characteristic: $A \ch B$ and $B\normal C$ implies $A \normal C$.
+:::
 
-Prove that $\pi(x)$ is an odd permutation $\iff$ the order $\abs{\pi(x)}$ of $\pi(x)$ is even and $\abs{G} / \abs{\pi(x)}$ is odd.
+:::{.strategy}
+Just use maximality for (a).
+For (b), centers are always abelian, so $Z(H)$ is good to consider, just need to ensure it's normal in $G$.
+Use transitivity of characteristic.
+:::
 
-## Fall 2016 #1 $\work$
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- By definition, $S\in \Syl_p(G) \iff S$ is a *maximal* $p\dash$subgroup: $S<G$ is a $p\dash$group, so $\#S = p^k$ for some $k$, $S$ is a proper subgroup, and $S$ is maximal in the sense that there are no proper $p\dash$subgroups $S'$ with $S \subseteq S' \subseteq G$.
+- Since $\# H = p^i$, $H$ is a $p\dash$subgroup of $G$.
+- If $H$ is maximal, then by definition $H\in \Syl_p(G)$
+- Otherwise, if $H$ is not maximal, there exists an $H' \supseteq H$ with $H'\leq G$ a $p\dash$subgroup properly containing $H$.
+  - In this apply the same argument to $H'$: this yields a proper superset containment at every stage, and since $G$ is finite, there is no infinite ascending chain of proper supersets.
+  - So this terminates in some maximal $p\dash$subgroup $S$, i.e. a Sylow $p\dash$subgroup.
+- So $H \subseteq S$ for some $S\in \Syl_p(G)$.
+- All Sylows are conjugate, so for any $S' \in \Syl_p(G)$ we can write $S' = gSg\inv$ for some $g$.
+- Then using that $H$ is normal, $H \subseteq S \implies H = gHg\inv \subseteq gSg\inv \da S'$.
+  So $H$ is contained in every Sylow $p\dash$subgroup.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Claim: $Z(H) \leq H$ works.
+  - It is nontrivial since $H$ is a $p\dash$group and $p\dash$groups have nontrivial centers
+  - It is abelian since $Z(Z(H)) = Z(H)$.
+  - $\#Z(H) = p^\ell$ for some $\ell \leq i$ by Lagrange
+- It thus remains to show that $Z(H) \normal G$.
+- Use that $Z(H) \ch H$ and use transitivity of characteristic to conclude $Z(H) \normal H$.
+- That $Z(H) \ch H$: let $\psi \in \Aut(H)$ and $x=\psi(y)\in \psi(Z(H))$ so $y\in Z(H)$, then for arbitrary $h\in H$,
+ \[
+ \psi(y)h 
+ &= \psi(y) (\psi \circ \psi\inv)(h) \\
+ &= \psi( y \cdot \psi\inv(h) ) \\
+ &= \psi( \psi\inv(h) \cdot y ) && \text{since } \psi\inv(h)\in H, \, y\in Z(H) \\
+ &= h\psi(y)
+ .\]
+- That $A \ch B \normal C \implies A\normal C$:
+  - $A\ch B$ iff $A$ is fixed by every $\psi\in \Aut(B)$., WTS $cAc\inv = A$ for all $c\in C$.
+  - Since $B\normal C$, the automorphism $\psi(\wait) \da c(\wait)c\inv$ descends to an element of $\Aut(B)$.
+  - Then $\psi(A) = A$ since $A\ch B$, so $cAc\inv = A$ and $A\normal C$.
+:::
+
+:::
+
+### Fall 2016 #1 $\done$
 Let $G$ be a finite group and $s, t\in G$ be two distinct elements of order 2.
 Show that subgroup of $G$ generated by $s$ and $t$ is a dihedral group.
 
@@ -900,38 +1347,217 @@ Show that subgroup of $G$ generated by $s$ and $t$ is a dihedral group.
 D_{2m} = \gens{\sigma, \tau \suchthat \sigma^m = 1 = \tau^2, \tau \sigma = \sigma\inv \tau}
 .\]
 
-## Fall 2015 #1 $\work$
-Let $G$ be a group containing a subgroup $H$ not equal to $G$ of finite index.
-Prove that $G$ has a normal subgroup which is contained in every conjugate of $H$ which is of finite index.
+:::{.solution}
+\envlist
 
-## Spring 2015 #1 $\work$
-For a prime $p$, let $G$ be a finite $p\dash$group and let $N$ be a normal subgroup of $G$ of order $p$.
-Prove that $N$ is contained in the center of $G$.
-
-## Fall 2014 #6 $\work$
-Let $G$ be a group and $H, K < G$ be subgroups of finite index.
-Show that
+- Suppose $G = \gens{ a, b}$ with $a^2 = b^2 = e$, satisfying some unknown relations.
+- Consider $ab$. Since $G$ is finite, this has finite order, so $(ab)^n = e$ for some $n\geq 2$.
+- Note $\gens{ab, b} \subseteq \gens{a, b}$, since any finite word in $ab, b$ is also a finite word in $a, b$.
+- Since $(ab)b = ab^2 = a$, we have $\gens{ab, b} \subseteq \gens{a, b}$, so $\gens{ab, b} = \gens{a, b}$.
+- Write $D_{2n} = F(r, s) / \ker \pi$ for $\pi: F(r, s)\to D_{2n}$ the canonical presentation map.
+- Define 
 \[
-[G: H\intersect K] \leq [G: H] ~ [G:K]
+\psi: F(r, s) &\to G \\
+r &\mapsto ab \\
+t &\mapsto b
 .\]
+- This is clearly surjective since it hits all generators.
+- We'll show that $ab, a$ satisfy all of the relations defining $D_{2n}$, which factors $\psi$ through $\ker \pi$, yielding a surjection $\tilde \psi: D_{2n} \surjects G$.
+  - $(ab)^n = e$ by construction, $b^2 = e$ by assumption, and 
+  \[
+  b (ab) b\inv = babb\inv = ba = b\inv a\inv = (ab)\inv
+  ,\]
+  corresponding to the relation $srs\inv = r\inv$.
+  Here we've used that $o(a) = o(b) = 2$ implies $a=a\inv, b=b\inv$.
 
-## Spring 2013 #3 $\work$
-Let $P$ be a finite $p\dash$group.
-Prove that every nontrivial normal subgroup of $P$ intersects the center of $P$ nontrivially.
+- Surjectivity of $\tilde \psi$ yields $2n = \# D_{2n} \geq \# G$.
+- The claim is that $\# G \geq 2n$, which forces $\# G = 2n$. 
+  Then $\tilde \psi$ will be a surjective group morphism between groups of the same order, and thus an isomorphism.
 
-## Fall 2019 Midterm #1  $\work$
+  - We have \( \gens{ ab }\leq G  \), so $n\divides \# G$.
+  - Since $b\not\in \gens{ ab }$, this forces $\# G > n$, so $\# G \geq 2n$. 
+
+> Remark: see a more direct proof in [Theorem 2.1 and Theorem 1.1 here](https://kconrad.math.uconn.edu/blurbs/grouptheory/dihedral2.pdf)
+
+:::
+
+
+### Fall 2019 Midterm #1  $\work$
 Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
 
-## Fall 2019 Midterm #4 $\work$
+
+:::{.solution}
+\envlist
+
+- Write $\# G = p^2 q$
+- Cases: first assume $p>q$, then do $q<p$.
+- In any case, we have
+\[
+n_p \divides q &,\, n_p \equiv 1 \mod p \implies n_p \in \ts{ 1,q } \\ \\
+n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \in \ts{ 1, p, p^2} 
+.\]
+
+- **Case 1:** $:p>q$.
+- If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
+- So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+
+- **Case 2:**: $p< q$:
+- For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
+- If $n_q = 1$, we're done. 
+- If $n_q = p^2$:
+  - Finer analysis....
+
+:::
+
+
+### Fall 2019 Midterm #4 $\work$
 Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
 
-## Fall 2019 Midterm #5 $\work$
-Let $G$ be a nonabelian group of order $p^3$ for $p$ prime. Show that $Z(G) = [G, G]$.
 
-## Spring 2021 #2 $\work$
+# Groups: Group Actions
 
-Let $H \normal G$ be a normal subgroup of a finite group $G$, where the order of $H$ is the smallest prime $p$ dividing $\abs{G}$.
-Prove that $H$ is contained in the center of $G$.
+## Fall 2012 #1 $\work$
+Let $G$ be a finite group and $X$ a set on which $G$ acts.
+
+a.
+Let $x\in X$ and $G_x \definedas \theset{g\in G \suchthat g\cdot x = x}$. 
+Show that $G_x$ is a subgroup of $G$.
+
+b.
+Let $x\in X$ and $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G}$.
+Prove that there is a bijection between elements in $G\cdot x$ and the left cosets of $G_x$ in $G$.
+
+## Fall 2015 #2 $\work$
+Let $G$ be a finite group, $H$ a $p\dash$subgroup, and $P$ a sylow $p\dash$subgroup for $p$ a prime.
+Let $H$ act on the left cosets of $P$ in $G$ by left translation.
+
+Prove that this is an orbit under this action of length 1.
+
+Prove that $xP$ is an orbit of length 1 $\iff H$ is contained in $xPx\inv$.
+
+## Spring 2016 #5 $\work$
+Let $G$ be a finite group acting on a set $X$.
+For $x\in X$, let $G_x$ be the stabilizer of $x$ and $G\cdot x$ be the orbit of $x$.
+
+a.
+Prove that there is a bijection between the left cosets $G/G_x$ and $G\cdot x$.
+
+b.
+Prove that the center of every finite $p\dash$group $G$ is nontrivial by considering that action of $G$ on $X=G$ by conjugation.
+
+## Fall 2017 #1 $\work$
+Suppose the group $G$ acts on the set $A$. 
+Assume this action is faithful (recall that this means that the kernel of the homomorphism from $G$ to $\sym(A)$ which gives the action is trivial) and transitive (for all $a, b$ in $A$, there exists $g$ in $G$ such that $g \cdot a = b$.)
+
+a.
+For $a \in A$, let $G_a$ denote the stabilizer of $a$ in $G$. 
+Prove that for any $a \in A$, 
+$$
+\Intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
+.$$
+
+b.
+Suppose that $G$ is abelian. Prove that $|G| = |A|$. Deduce that every abelian transitive subgroup of $S_n$ has order $n$.
+
+## Fall 2018 #2 $\done$
+
+a.
+Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
+
+b.
+Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
+\[
+\Union_{g\in G} gHg\inv \subsetneq G
+\]
+
+c.
+Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
+
+:::{.concept}
+\envlist
+
+- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
+- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
+- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
+- $abc\in H \iff b\in a\inv H c\inv$
+- Set of orbits for $G\actson X$, notated $X/G$.
+- Set of fixed points for $G\actson X$, notated $X^g$.
+- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
+  - Number of orbits equals average number of fixed points.
+
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Fix $x$, then $y\in \Orb(x) \implies g\cdot x = y$ for some $g$, and $x = g\inv \cdot y$.
+- Then
+\[
+h \in \Stab(x)
+&\iff h\cdot x = x && \text{by being in the stabilizer} \\
+&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y \\
+&\iff (g h g\inv) \cdot y = y \\
+&\iff ghg\inv \in G_y && \text{by definition}\\
+&\iff h\in g ^{-1}  \Stab(y) g
+,\]
+so $\Stab(x) = g\inv \Stab(y) g$.
+
+:::
+
+:::{.proof title="of b"}
+Let $G$ act on its subgroups by conjugation, 
+
+- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
+
+- The stabilizer of $H$ is $G_H = N_G(H)$.
+
+- By orbit-stabilizer,
+\[
+G\cdot H = [G: G_H] = [G: N_G(H)]
+.\]
+
+- Since $\abs H = n$, and all of its conjugate also have order $n$.
+
+- Note that 
+\[
+H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
+,\]
+
+- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
+\[
+\abs{\Union_{g\in G}gHg\inv} 
+&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
+& \text{strictly overcounts since they intersect in at least the identity} \\
+&= [G: N_G(H)] \abs{H} \\
+&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \\
+& \text{since $G$ is finite} \\
+&\leq {\abs G \over \abs H} \abs H \\
+&= \abs{G}
+.\]
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Let $G\actson X$ transitively where $\abs{X} \geq 2$.
+- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
+- Apply Burnside's Lemma
+\[
+1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{\Fix(g)} \implies \abs{G} = \sum_{g\in G} \abs{\Fix(g)} = \Fix(e) + \sum_{\substack{g\in G \\ g\neq e}} \abs{\Fix(g)}
+\]
+- Note that $\Fix(e) = X$, since the identity must fix every element, so $\abs{\Fix(e)} \geq 2$.
+- If $\abs{\Fix(g)} > 0$ for all $g\neq e$, the remaining term is at least $\abs{G} -1$.
+  But then the right-hand side yields is at least $2 + (\abs{G} -1) = \abs{G} + 1$, contradicting the equality.
+- So not every $\abs{\Fix(g)} > 0$, and $\abs{ \Fix(g) } = 0$ for some $g$, which says $g$ has no fixed points in $X$.
+
+:::
+
+:::
+
 
 # Groups: Sylow Theory
 
@@ -943,85 +1569,38 @@ Prove that if $g_i g_j = g_j g_i$ for all $i, j$ then $G$ is abelian.
 :::{.concept}
 \envlist
 
-- Centralizer: 
-  \[
-  C_G(h) = Z(h) = \theset{g\in G \suchthat [g,h] = 1}
-  \quad\text{Centralizer}
-\]
-- Class equation: 
-  \[
-  \abs{G} = \sum_{\substack{\text{One $h$ from each } \\ \text{ conjugacy class}}} \frac{\abs{G}}{\abs{Z(h)}}
-  \]
-- Notation:
-  \[
-  h^g &= ghg\inv \\
-  h^G &= \theset{ h^g \suchthat g\in G} \quad\text{Conjugacy Class}\\
-  H^g &= \theset{h^g \suchthat h\in H} \\
-  N_G(H) &= \theset{g\in G \suchthat H^g = H} \supseteq H \quad\text{Normalizer}
-  .\]
+- $Z(g) = G \iff g\in Z(G)$, i.e. if the centralizer of $g$ is the whole group, $g$ is central.
 
+- If $H\leq G$ is a *proper* subgroup, then $\Union_{g\in G} hGh\inv$ is again a proper subgroup (subset?)
+  I.e. $G$ is not a union of conjugates of any proper subgroup.
+- So if $G$ *is* a union of conjugates of $H$, then $H$ must not be proper, i.e. $H= G$.
 :::
 
 :::{.solution}
 \envlist
 
-:::{.claim title="1"}
+- We have $g_j \subseteq Z(g_k)$ for all $k$ by assumption.
+- If we can show $Z(g_k) = G$ for all $k$, then $g_k \in Z(G)$ for all $k$.
+  - Then each conjugacy class is size 1, and since $G = \disjoint_{i=1}^n [g_i] = \disjoint_{i=1}^n \ts{g_i}$, every $g\in G$ is some $g_i$.
+  So $G \subseteq Z(G)$, forcing $G$ to be abelian.
+- If we can show $G \subseteq \Union_{h\in H} h Z(g_k) h\inv$ for some $k$, this forces $Z(g_k) = G$ and $g_k \in Z(G)$.
+  - If we can do this for all $k$, we're done!
+- Since $g\in G$ is in some conjugacy class, write $g=hg_j h\inv$ for some $h\in G$ and some $1\leq j\leq n$.
+- Now use $g_j \in Z(g_k)$ for all $k$:
 \[
-\abs{h^G} = [G: Z(h)]
+g\in G &\implies g = hg_j h\inv && \text{for some } h\in H \\
+g_j \in Z(g_k) \forall k &\implies g\in hZ(g_k)h\inv &&\text{for some }h, \, \forall 1\leq k \leq n \\
+&\implies g\in \Union_{h\in G} h Z(g_k) h\inv
+&&\forall 1\leq k \leq n \\
 .\]
-:::
-
-:::{.claim title="2"}
+  - Note that it's necessary to get rid of the $h$ dependence, since now now every $g\in G$ is in $\Union_{h\in G} hZ(g_k)h\inv$.
+- Now
 \[
-\abs{\theset{H^g \suchthat g\in G}} = [G: N_G(H)]
-.\]
-:::
+G \subseteq \Union_{h\in G} hZ(g_k) \subseteq G \,\,\forall k \implies Z(g_k) = G\,\, \forall k
+,\]
+and we're done.
 
-:::{.proof title="of claim 2"}
-\envlist
 
-- Let $G\actson \theset{H \suchthat H \leq G}$ by $H \mapsto gHg\inv$.
-- Then the $\mathcal O_H$ is the set of conjugate subgroups, $\mathrm{Stab}(H) = N_G(H)$.
-- So Orbit-Stabilizer says $\mathcal O_h \cong G/\mathrm{Stab}(H)$; then just take sizes.
-
-:::
-
-:::{.claim title="3"}
-$\union_{g\in G} H^g = \union_{g\in G} gHg\inv \subsetneq G$ for any proper $H \leq G$.
-:::
-
-:::{.proof title="of claim 3"}
-- By theorem 2, since each coset is of size $\abs{H}$, which only intersect at the identity, and there are exactly $[G: N_G(H)]$ of them
-  \[
-  \abs{\union_{g\in G} H^g} 
-  &= \qty{ \abs{H} - 1} [G: N_G(H)] + 1\\
-  &= \abs{H} [G: N_G(H)]  - [G:N_G(H)] + 1\\
-  &= \abs{G} \frac{\abs G}{\abs{N_G(H)}} - \frac{\abs G}{\abs{N_G(H)}} + 1 \\
-  &\leq \abs{H} \frac{\abs G}{\abs{H}} - \frac{\abs G}{\abs{H}} + 1 \\
-  &= \abs{G} - ([G: H] - 1) \\
-  &< \abs{G} 
-  ,\]
-  where we use the fact that $H \subseteq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies \frac{1}{\abs{N_G(H)}} \leq \frac{1}{\abs{H}}$, and since $H < G$ is proper, $[G:H] \geq 2$.
-
-- Since $[g_i, g_j] = 1$, we have $g_i \in Z(g_j)$ for every $i, j$.
-
-- Then
-  \[
-  g\in G 
-  &\implies g = g_i^h \quad \text{ for some } h \\
-  &\implies g \in Z(g_\mathbf{j})^h \quad\text{for every } j \text{ since }g_i \in Z(g_j) ~\forall j \\
-  &\implies g \in \union_{h\in G} Z(g_j)^h \quad\text{for every } j\\
-  &\implies G \subseteq \union_{h\in G} Z(g_j)^h \quad\text{for every } j
-  ,\]
-
-  which by Theorem 3, if $Z(g_j) < G$ were proper, then the RHS is properly contained in $G$. 
-- So it must be the case that that $Z(g_j)$ is not proper and thus equal to $G$ for every $j$.
-
-- But $Z(g_i) = G \iff g_i \in Z(G)$, and so each conjugacy class is size one.
-- So for every $g\in G$, we have $g = g_j$ for some $j$, and thus $g = g_j \in Z(g_j) = Z(G)$, so $g$ is central.
-- Then $G\subseteq Z(G)$ and $G$ is abelian.
-
-:::
 
 :::
 
@@ -1335,153 +1914,6 @@ Let $G$ be a group of order 60 whose Sylow 3-subgroup is normal.
 a. Prove that $G$ is solvable.
 
 b. Prove that the Sylow 5-subgroup is also normal.
-
-
-# Groups: Group Actions
-
-## Fall 2012 #1 $\work$
-Let $G$ be a finite group and $X$ a set on which $G$ acts.
-
-a.
-Let $x\in X$ and $G_x \definedas \theset{g\in G \suchthat g\cdot x = x}$. 
-Show that $G_x$ is a subgroup of $G$.
-
-b.
-Let $x\in X$ and $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G}$.
-Prove that there is a bijection between elements in $G\cdot x$ and the left cosets of $G_x$ in $G$.
-
-## Fall 2015 #2 $\work$
-Let $G$ be a finite group, $H$ a $p\dash$subgroup, and $P$ a sylow $p\dash$subgroup for $p$ a prime.
-Let $H$ act on the left cosets of $P$ in $G$ by left translation.
-
-Prove that this is an orbit under this action of length 1.
-
-Prove that $xP$ is an orbit of length 1 $\iff H$ is contained in $xPx\inv$.
-
-## Spring 2016 #5 $\work$
-Let $G$ be a finite group acting on a set $X$.
-For $x\in X$, let $G_x$ be the stabilizer of $x$ and $G\cdot x$ be the orbit of $x$.
-
-a.
-Prove that there is a bijection between the left cosets $G/G_x$ and $G\cdot x$.
-
-b.
-Prove that the center of every finite $p\dash$group $G$ is nontrivial by considering that action of $G$ on $X=G$ by conjugation.
-
-## Fall 2017 #1 $\work$
-Suppose the group $G$ acts on the set $A$. 
-Assume this action is faithful (recall that this means that the kernel of the homomorphism from $G$ to $\sym(A)$ which gives the action is trivial) and transitive (for all $a, b$ in $A$, there exists $g$ in $G$ such that $g \cdot a = b$.)
-
-a.
-For $a \in A$, let $G_a$ denote the stabilizer of $a$ in $G$. 
-Prove that for any $a \in A$, 
-$$
-\Intersect_{\sigma\in G} \sigma G_a \sigma\inv = \theset{1}
-.$$
-
-b.
-Suppose that $G$ is abelian. Prove that $|G| = |A|$. Deduce that every abelian transitive subgroup of $S_n$ has order $n$.
-
-## Fall 2018 #2 $\done$
-
-a.
-Suppose the group $G$ acts on the set $X$ . Show that the stabilizers of elements in the same orbit are conjugate.
-
-b.
-Let $G$ be a finite group and let $H$ be a proper subgroup. Show that the union of the conjugates of $H$ is strictly smaller than $G$, i.e.
-\[
-\Union_{g\in G} gHg\inv \subsetneq G
-\]
-
-c.
-Suppose $G$ is a finite group acting transitively on a set $S$ with at least 2 elements. Show that there is an element of $G$ with no fixed points in $S$.
-
-:::{.concept}
-\envlist
-
-- Orbit: $G\cdot x \definedas \theset{g\cdot x \suchthat g\in G} \subseteq X$
-- Stabilizer: $G_x \definedas \theset{g\in G\suchthat g\cdot x = x} \leq G$
-- Orbit-Stabilizer: $G\cdot x \simeq G/G_x$.
-- $abc\in H \iff b\in a\inv H c\inv$
-- Set of orbits for $G\actson X$, notated $X/G$.
-- Set of fixed points for $G\actson X$, notated $X^g$.
-- Burnside's Lemma: $\abs{X/G} \cdot \abs{G} = \sum_{g\in G} \abs{X^g}$ 
-  - Number of orbits equals average number of fixed points.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-\envlist
-
-- Fix $x$ and let $y\in G_x$ be another element in the orbit of $x$.
-- Then there exists a $g\in G$ such that $g\cdot x = y$, so $x = g\inv \cdot y$
-- Then
-\[
-h \in G\cdot x 
-&\iff h\cdot x = x && \text{by being in the stabilizer} \\
-&\iff h\cdot (g\inv \cdot y) = g\inv \cdot y && \text{using that $x, y$ are in the same orbit} \\
-&\iff (g h g\inv) \cdot y = y \\
-&\iff ghg\inv \in G_y && \text{by the defn of the stabilizer}\\
-&\iff h\in g ^{-1}  G_y g
-,\]
-
-so every $h\in G\cdot x$ is conjugate to some element in $G_y$.
-
-:::
-
-:::{.proof title="of b"}
-Let $G$ act on its subgroups by conjugation, 
-
-- The orbit $G\cdot H$ is the set of all subgroups conjugate to $H$, and
-
-- The stabilizer of $H$ is $G_H = N_G(H)$.
-
-- By orbit-stabilizer,
-\[
-G\cdot H = [G: G_H] = [G: N_G(H)]
-.\]
-
-- Since $\abs H = n$, and all of its conjugate also have order $n$.
-
-- Note that 
-\[
-H\leq N_G(H) \implies \abs{H} \leq \abs{N_G(H)} \implies {1\over \abs{N_G(H)}} \leq {1\over \abs{H}}
-,\]
-
-- Now *strictly* bound the size of the union by overcounting their intersections at the identity:
-\[
-\abs{\Union_{g\in G}gHg\inv} 
-&< (\text{Number of Conjugates of } H) \cdot (\text{Size of each conjugate}) \\ 
-& \text{strictly overcounts since they intersect in at least the identity} \\
-&= [G: N_G(H)] \abs{H} \\
-&= {\abs{G} \over \abs{N_G(H)}} \abs{H} \\
-& \text{since $G$ is finite} \\
-&\leq {\abs G \over \abs H} \abs H \\
-&= \abs{G}
-.\]
-
-:::
-
-:::{.proof title="of c"}
-\envlist
-
-- Let $G\actson X$ transitively where $\abs{X} \geq 2$
-- An action is transitive iff there is only one orbit, so $\abs{X/G} = 1$.
-- Apply Burnside's Lemma
-\[
-1 = \abs{X/G} = \frac{1}{\abs G} \sum_{g\in G} \abs{X^g} \implies \abs{G} = \sum_{g\in G} \abs{X^g}
-\]
-- Note that $X^e = X$, since the identity must fix every element, so $\abs{X^e} \geq 2$.
-- Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of $G$
-- Thus we must have $\abs{X^g} = 0$ for some $g\in G$, i.e. $g$ has no fixed points in $X$.
-
-
-:::
-
-:::
 
 
 # Groups: Classification
@@ -3323,6 +3755,36 @@ Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, 
 Prove that \( [E: F] \equiv 1 \mod p \).
 
 
+## Exercises
+
+
+:::{.exercise title="?"}
+Let $p \in \mathbb{Z}$ be a prime number.
+Then describe the elements of the Galois group of the polynomial $x^{p}-2$.
+:::
+
+:::{.solution}
+$\QQ(2^{1\over p}, \zeta_p)$, which has degree $p(p-1)$ and is generated by the maps
+\[
+\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
+\zeta & \mapsto \zeta^{b}
+.\]
+
+:::
+
+
+:::{.exercise title="?"}
+Compute the Galois group of $x^2-2$.
+:::
+
+
+:::{.solution}
+$\ZZ/2\ZZ$?
+:::
+
+
+
+
 # Modules
 
 ## General Questions
@@ -3715,6 +4177,8 @@ Note that the proof follows immediately.
 
 :::
 
+
+:::
 
 :::
 
@@ -4910,3 +5374,61 @@ b. Find a $3\times 3$ matrix $J$ in Jordan canonical form such that $B = JPJ\inv
 
 
 
+
+# Extra Problems
+
+> Many many fundamental problems here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/groups/>
+
+## Linear Algebra
+
+1. For a division ring $D$, let $V_{i}$ be a finite dimensional vector space over $D$ for $i \in\{1, \ldots, k\}$. Suppose the sequence
+\[
+0 \longrightarrow V_{1} \longrightarrow V_{2} \longrightarrow \cdots V_{k} \longrightarrow 0
+\]
+is exact. Prove that $\sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0$.
+2. Prove that if $A$ and $B$ are invertible matrices over a field $\boldsymbol{k}$, then $A+\lambda B$ is invertible for all but finitely many $\lambda \in \boldsymbol{k}$.
+3. For the ring of $n \times n$ matrices over a commutative unital ring $R$, which we'll denote $\operatorname{Mat}_{n}(R)$, recall the definition of the determinant map det: $\operatorname{Mat}_{n}(R) \rightarrow R$. For $A \in \operatorname{Mat}_{n}(R)$ also recall the definition of the classical adjoint $A^{a}$ of $A$. Prove that:
+  - $\operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1}$
+  - $\left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A$
+
+4. If $R$ is an integral domain and $A$ is an $n \times n$ matrix over $R$, prove that if a system of linear equations $A x=0$ has a nonzero solution then $\operatorname{det} A=0$. Is the converse true? What if we drop the assumption that $R$ is an integral domain?
+5. What is the companion matrix $M$ of the polynomial $f=x^{2}-x+2$ over $C$ ? Prove that $f$ is the minimal polynomial of $M$.
+6. Suppose that $\phi$ and $\psi$ are commuting endomorphisms of a finite dimensional vector space $E$ over a field $\boldsymbol{k}$, so $\phi \psi=\psi \phi$.
+  - Prove that if $k$ is algebraically closed, then $\phi$ and $\psi$ have a common eigenvector.
+  - Prove that if $E$ has a basis consisting of eigenvectors of $\phi$ and $E$ has a basis consisting of eigenvectors of $\psi$, then $E$ has a basis consisting of vectors that are eigenvectors for both $\phi$ and $\psi$ simultaneously.
+
+## Galois Theory
+
+> Taken from here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/galois/>
+
+1. Suppose that for an extension field $F$ over $K$ and for $a \in F$, we have that $b \in F$ is algebraic over $K(a)$ but transcendental over $K$. Prove that $a$ is algebraic over $K(b)$.
+2. Suppose that for a field $F / K$ that $a \in F$ is algebraic and has odd degree over $K$. Prove that $a^{2}$ is also algebraic and has odd degree over $K$, and furthermore that $K(a)=K\left(a^{2}\right)$
+3. For a polynomial $f \in K[x]$, prove that if $r \in F$ is a root of $f$ then for any $\sigma \in \mathbf{A u t}_{K} F, \sigma(r)$ is also a root of $f$
+4. Prove that as extensions of $\boldsymbol{Q}, \boldsymbol{Q}(x)$ is Galois over $\boldsymbol{Q}\left(x^{2}\right)$ but not over $\boldsymbol{Q}\left(x^{3}\right)$.
+5. If $F$ is over $E$, and $E$ is $\quad$ over $K$ is $F$ necessarily over $K$ ? Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+6. If $F$ is over $K$, and $E$ is an intermediate extension of $F$ over $K$, is $F$
+necessarily over $E ?$ Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+7. If $F$ is some (not necessarily Galois) field extension over $K$ such that $[F: K]=6$ and Aut $_{K} F \simeq S_{3}$, then $F$ is the splitting field of an irreducible cubic over $K[x]$.
+8. Recall the definition of the join of two subgroups $H \vee G$ (or $H+G$ ). For $F$ a finite dimensional Galois extension over $K$ and let $A$ and $B$ be intermediate extensions. Prove that
+a. $\operatorname{Aut}_{A B} F=\mathrm{Aut}_{A} F \cap \mathrm{Aut}_{B} F$
+b. Aut $_{A \cap B} F=\mathrm{Aut}_{A} F \vee \mathrm{Aut}_{B} F$
+9. For a field $K$ take $f \in K[x]$ and let $n=\operatorname{deg} f$. Prove that for a splitting field $F$ of $f$ over $K$ that $[F: K] \leq n !$. Furthermore prove that $[F: K]$ divides $n !$.
+10. Let $F$ be the splitting field of $f \in K[x]$ over $K$. Prove that if $g \in K[x]$ is irreducible and has a root in $F$, then $g$ splits into linear factors over $F$.
+11. Prove that a finite field cannot be algebraically closed.
+12. For $u=\sqrt{2+\sqrt{2}}$, What is the Galois group of $\boldsymbol{Q}(u)$ over $\boldsymbol{Q} ?$ What are the intermediate fields of the extension $\boldsymbol{Q}(u)$ over $\boldsymbol{Q}$ ?
+13. Characterize the splitting field and all intermediate fields of the polynomial $\left(x^{2}-2\right)\left(x^{2}-3\right)\left(x^{2}-5\right)$ over $Q$. Using this characterization, find a primitive element of the splitting field.
+14. Characterize the splitting field and all intermediate fields of the polynomial $x^{4}-3$ over $Q$
+15. Consider the polynomial $f=x^{3}-x+1$ in $\boldsymbol{F}_{3}[x]$. Prove that $f$ is irreducible. Calculate the degree of the splitting field of $f$ over $\boldsymbol{F}_{3}$ and the cardinality of the splitting field of $f$.
+16. Given an example of a finite extension of fields that has infinitely many intermediate fields.
+17. Let $u=\sqrt{3+\sqrt{2}}$. Is $\boldsymbol{Q}(u)$ a splitting field of $u$ over $\boldsymbol{Q}$ ? (MathSE)
+18. Prove that the multiplicative group of units of a finite field must be cyclic, and so is generated by a single element.
+19. Prove that $\boldsymbol{F}_{p^{n}}$ is the splitting field of $x^{p^{n}}-x$ over $\boldsymbol{F}_{p}$.
+20. Prove that for any positive integer $n$ there is an irreducible polynomial of degree $n$ over $\boldsymbol{F}_{p}$
+21. Recall the definition of a perfect field. Give an example of an imperfect field, and the prove that every finite field is perfect.
+22. For $n>2$ let $\zeta_{n}$ denote a primitive $n$ th root of unity over $Q$. Prove that
+\[
+\left[\boldsymbol{Q}\left(\zeta_{n}+\zeta_{n}^{-1}: \boldsymbol{Q}\right)\right]=\frac{1}{2} \varphi(n)
+\]
+where $\varphi$ is Euler's totient function.
+23. Suppose that a field $K$ with characteristic not equal to 2 contains an primitive $n$ th root of unity for some odd integer $n$. Prove that $K$ must also contain a primitive $2 n$ th root of unity.
+24. Prove that the Galois group of the polynomial $x^{n}-1$ over $Q$ is abelian.
