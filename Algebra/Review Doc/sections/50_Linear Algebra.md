@@ -405,7 +405,7 @@ V \cong k[x] / \gens{\chi_T(x)} \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
   
 - Since each factor is submodule, each corresponds to a $T\dash$invariant subspace $V_i$ where $p_i$ is the minimal polynomial of $T$ restricted to $V_i$.
 
-  - The largest invariant factor $p_m$ is the minimal polynomial of $T$.
+  - The largest invariant factor $p_m$ is the minimal polynomial of $T$, their product is the characteristic polynomial.
 
 - Write $V \cong \bigoplus_{i=1}^m V_i$ as a $k[x]\dash$module, where $V_i \da k[x] / \gens{ p_i(x) }$, then $T$ is a block matrix $\bigoplus_{i=1}^m T_i$ where $T_i$ is the restriction of $T$ to $V_i$:
 \[
@@ -414,7 +414,7 @@ V \cong k[x] / \gens{\chi_T(x)} \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
 
 - It suffices to determine the form of a single $M_i$, so without loss of generality suppose $m=1$ so $V = V_1 = k[x] / \gens{ p(x) }$ is a cyclic $k[x]\dash$module with $\deg p(x) = n$.
 
-- Lemma: $\chi_M(x) = \min_M(x) \iff$ there exists a cyclic vector $\vector v$, so the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
+- $\chi_M(x) = \min_M(x) \iff$ there exists a cyclic vector $\vector v$, so the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
   - If there is any linear independence, this gives a polynomial relation $\sum_{i=1}^{n'} a_iT^i\vector v = 0$ for some $n'<n$, but then $q(x) \da \sum_{i=1}^{n'} a_i x^i$ is a polynomial annihilating $T$, contradicting the minimality of $p(x)$.
   - So this yields $n$ linearly independent vectors in $k^n$, so it's a basis.
 - What is $M_i$ in this basis?
@@ -422,15 +422,13 @@ V \cong k[x] / \gens{\chi_T(x)} \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
   \[
 p(T) = \sum_{i=1}^{n}a_i T^i\vector v = T^n + a_{n-1} T^{n-1}\vector v + a_{n-2} T^{n-2} + \cdots + a_1 T\vector v + a_0 \vector v = 0
   ,\]
-  we can write
+  using the minimal polynomial we can write
   - $T\vector v_0 = \vector v_1$
   - $T\vector v_2 = T^2 \vector v_0$
   - $T\vector v_3 = T^3 \vector v_0$
   - $\cdots$
   - $T\vector v_{n-2} = T^{n-1}\vector v$
   - $T\vector v_{n-1} = T^n\vector v = -a_{n-1}T^{n-1}\vector v - \cdots - a_1 T\vector v - a_0 \vector v$ 
-
-  (using the minimal polynomial relation).
 
 - So we have
 \[
