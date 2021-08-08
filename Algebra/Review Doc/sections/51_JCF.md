@@ -122,7 +122,6 @@ It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V
 
 ## Exercises
 
-
 :::{.exercise title="?"}
 Prove Cayley-Hamilton using the JCF.
 :::
@@ -130,7 +129,6 @@ Prove Cayley-Hamilton using the JCF.
 :::{.exercise title="?"}
 Prove the rank-nullity theorem using JCF.
 :::
-
 
 
 :::{.exercise title="?"}

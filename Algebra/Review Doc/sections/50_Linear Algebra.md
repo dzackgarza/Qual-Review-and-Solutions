@@ -389,16 +389,16 @@ V \cong \bigoplus_{i=1}^m k[x] / \gens{ p_i(x) }
 && p_1(x) \divides p_2(x) \divides \cdots p_m(x)
 .\]
 
-- Each $p_i$ is an invariant factor of $T$, and the minimal polynomial of $T$ restricted to $V_i$.
+- Each $p_i$ is an invariant factor of $T$, and the minimal polynomial of $T$ restricted to $V_i$, and the largest invariant factor $p_m$ is the characteristic polynomial of $T$.
 
-- Write $V \cong \bigoplus_{i=1}^m V_i$ where $V_i \da k[x] / \gens{ p_i(x) }$, then $A$ is a block matrix $\bigoplus_{i=1}^m M_i$ where $M_i$ is the restriction of $T$ to $V_i$:
+- Write $V \cong \bigoplus_{i=1}^m V_i$ as a $k[x]\dash$module, where $V_i \da k[x] / \gens{ p_i(x) }$, then $A$ is a block matrix $\bigoplus_{i=1}^m M_i$ where $M_i$ is the restriction of $T$ to $V_i$:
 \[
 \left(\begin{array}{ccccc}M_{1} & 0 & 0 & \cdots & 0 \\ 0 & M_{2} & 0 & \cdots & 0 \\ \vdots & & \ddots & & \vdots \\ 0 & \cdots & & & M_{n}\end{array}\right)
 .\]
 
 - It suffices to determine the form of $M_i$, so without loss of generality suppose $m=1$ so $V = V_1 = k[x] / \gens{ p(x) }$ is a cyclic $k[x]\dash$module where $\deg p(x) = n$.
 
-- Claim: the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
+- Claim: there exists a cyclic vector $\vector v$, so the set \( \ts{\vector v_i}_{i=0}^{n-1} \da \ts{ \vector v, T\vector v, T^2\vector v, \cdots, T^{n-1}\vector v } \) is a basis for $V_1$.
   - If there is any linear independence, this gives a polynomial relation $\sum_{i=1}^{n'} a_iT^i\vector v = 0$ for some $n'<n$, but then $q(x) \da \sum_{i=1}^{n'} a_i x^i$ is a polynomial annihilating $T$, contradicting the minimality of $p(x)$.
   - So this yields $n$ linearly independent vectors in $k^n$, so it's a basis.
 - What is $M_i$ in this basis?
