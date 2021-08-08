@@ -190,6 +190,23 @@ An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \)
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
+
+:::{.proposition title="Transitivity of algebraic extensions, forward implication"}
+If $L/K/k$ (not necessarily finite) with $L/K$ and $K/k$ both algebraic, then $L/k$ is algebraic.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- We want to show every $\alpha \in L$ is algebraic over $k$, and it suffices to show $\alpha$ is algebraic over some finite subextension $k(S)$.
+- Pick $\alpha\in L$, then $\alpha$ is algebraic over $K$ by assumption, so it is a root of some $f\in K[x]$.
+- Let $S$ be the finitely many coefficients of $f$, then $\alpha$ is algebraic over $k(S)$.
+- Note that $k(S)/k$ is finite and thus algebraic, and $k(S,\alpha)/k(s)$ is finite and also algebraic, so we're reduced to the finite case.
+- It suffices to show $k(S, \alpha)/k(s)/k$ is finite, which follows from multiplicativity of degrees.
+:::
+
+
+
 ## Distinguished Classes
 
 > See <http://math.wsu.edu/students/jstreipel/notes/galoistheory.pdf>
