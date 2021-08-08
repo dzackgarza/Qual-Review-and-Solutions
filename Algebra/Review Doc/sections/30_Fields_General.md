@@ -334,13 +334,17 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 :::{.fact title="Irreducible implies separable in characteristic zero"}
 If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
 
-Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$, since a nontrivial $\gcd$ would yield a polynomial dividing $f$.
-But $\deg f' < f$, so $f$ can not divide $f'$, so the $\gcd$ is 1.
+Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
+It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
+So this $\gcd$ is 1.
+
 :::
 
 
 :::{.fact title="Irreducible implies separable for perfect fields"}
+\envlist
 
+- Use that irreducible polynomial $f$ must have distinct roots, by the argument above
 :::
 
 
