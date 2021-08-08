@@ -2722,7 +2722,24 @@ Let \( L/k \) be an extension. Then TFAE:
 :::
 
 ::: {.proposition title="Characterization of normal algebraic extensions"}
-If \( L/k \) s algebraic, then \( L/k \) is normal iff every embedding \( \sigma: L \hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) lifting the identity on \( k \) satisfies \( \sigma(L) = L \), so \( \sigma \) is an automorphism of \( L \) fixing \( k \).
+For \( L/k \) algebraic: let \( \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) be an algebraic closure containing \( L \), then \( L/k \) is normal iff every \( k{\hbox{-}} \)embedding \( \sigma: L\to \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) satisfies \( \operatorname{im}\sigma = L \), so \( \sigma \) is a \( k{\hbox{-}} \)automorphism of \( L \):
+
+```{=tex}
+\begin{tikzcd}
+    && {\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu} \\
+    \\
+    L && \textcolor{rgb,255:red,92;green,214;blue,92}{\sigma(L) = L} \\
+    \\
+    k && k
+    \arrow[hook, from=5-1, to=3-1]
+    \arrow[Rightarrow, no head, from=5-1, to=5-3]
+    \arrow[hook, from=5-3, to=3-3]
+    \arrow[hook, from=3-3, to=1-3]
+    \arrow["\sigma", hook, from=3-1, to=1-3]
+    \arrow[hook, two heads, from=3-1, to=3-3]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMCw0LCJrIl0sWzAsMiwiTCJdLFsyLDQsImsiXSxbMiwwLCJcXGJhcntrfSJdLFsyLDIsIlxcc2lnbWEoTCkgPSBMIixbMTIwLDYwLDYwLDFdXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDIsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNCwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIlxcc2lnbWEiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDQsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==)
 :::
 
 ::: {.definition title="Normal Closure"}
@@ -2837,7 +2854,7 @@ L/K/k \coloneqq{\mathbb{Q}}(2^{1\over 4}) / {\mathbb{Q}}(2^{1\over 2}) / {\mathb
 Each iterate is normal since it's quadratic, but the overall extension misses complex roots and is thus not normal.
 :::
 
-::: {.proposition title="Normal extensions are upper transitive, forward implication (finite case)"}
+::: {.proposition title="Normal extensions are upper transitive, forward implication"}
 For \( L/k \) finite,
 
 ```{=tex}
@@ -2858,7 +2875,7 @@ For \( L/k \) finite,
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwwLCJMIl0sWzAsMiwiSyJdLFswLDQsImsiXSxbMiwyLCJcXGltcGxpZXMiXSxbNCwwLCJMIl0sWzQsMiwiSyJdLFs0LDQsImsiXSxbMSwwXSxbMiwxXSxbMiwwLCJcXHRleHR7Tm9ybWFsfSIsMix7ImN1cnZlIjo0LCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV0sWzYsNV0sWzUsNF0sWzUsNCwiXFx0ZXh0e05vcm1hbH0iLDIseyJjdXJ2ZSI6MywiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzAsNjAsNjAsMV1dXQ==)
 :::
 
-::: {.proof title="?"}
+::: {.proof title="Finite case"}
 ```{=tex}
 \envlist
 ```
@@ -2873,12 +2890,37 @@ Alternatively,
 -   Minimal polynomials are divisible in towers, so \( m \) divides \( m' \). Since \( m' \) splits in \( L \), so must \( m \).
 :::
 
-::: {.proposition title="Normal extensions are upper transitive, forward implication (general case)"}
-If \( L/K/k \) with \( L/k \) normal, then \( L/K \) is normal.
-:::
+::: {.proof title="General case"}
+```{=tex}
+\envlist
+```
+-   Suppose \( L/K/k \) with \( L/k \) normal, we want to show \( L/K \) is normal.
+-   Use the embedding characterization, it suffices to show that every embedding \( \sigma: L\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \) satisfies \( \operatorname{im}\sigma = L \):
 
-::: {.proof title="?"}
-Use the embedding characterization, it suffices to show that every embedding \$`\sigma`{=tex}: \$ Since \( k \subseteq K \), any embedding \( \sigma: K\hookrightarrow\mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu \) over \( \operatorname{id}_K \) is also an embedding over \( \operatorname{id}_k \). Since \( L/k \) is normal, \( \sigma(L) = L \) and \( L/K \) is thus normal.
+```{=tex}
+\begin{tikzcd}
+    && {\mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu = \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu} \\
+    \\
+    L && {\sigma(L)} \\
+    \\
+    K && K \\
+    \\
+    k && k
+    \arrow[Rightarrow, no head, from=7-1, to=7-3]
+    \arrow[hook, from=7-1, to=5-1]
+    \arrow[hook, from=7-3, to=5-3]
+    \arrow[hook, from=5-3, to=3-3]
+    \arrow[hook, from=5-1, to=3-1]
+    \arrow[hook, from=3-3, to=1-3]
+    \arrow["\sigma", hook, from=3-1, to=1-3]
+    \arrow["\sigma", hook, from=3-1, to=3-3]
+    \arrow[Rightarrow, no head, from=5-1, to=5-3]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCw2LCJrIl0sWzAsNCwiSyJdLFswLDIsIkwiXSxbMiwyLCJcXHNpZ21hKEwpIl0sWzIsNCwiSyJdLFsyLDYsImsiXSxbMiwwLCJcXGJhcntLfSA9IFxcYmFye2t9Il0sWzAsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNiwiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMywiXFxzaWdtYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=)
+
+-   Now just use the fact that \( \mkern 1.5mu\overline{\mkern-1.5muk\mkern-1.5mu}\mkern 1.5mu = \mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \), and since \( k\subseteq K \), any \( K{\hbox{-}} \)morphism is also a \( k{\hbox{-}} \)morphism.
+-   Since \( L/k \) is normal, \( \sigma(L) = L \) and \( L/K \) is thus normal.
 :::
 
 ## Separable Extensions
