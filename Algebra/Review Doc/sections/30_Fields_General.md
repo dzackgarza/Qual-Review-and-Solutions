@@ -305,6 +305,7 @@ For $L/k$ algebraic: let $\bar{k}$ be an algebraic closure containing $L$, then 
 
 :::{.definition title="Normal Closure"}
 If $K/k$ is algebraic, then there is an extension $N_k/K$ such that $N_k/k$ is normal and $N_k/K/k$ is a tower.
+$N_k$ is referred to as the **normal closure** of $K/k$.
 :::
 
 :::{.proposition title="Characterization of finite normal extensions as splitting fields"}
