@@ -186,10 +186,31 @@ with equality when $L/k$ is Galois.
 An extension $L/k$ is **simple** iff $L = K( \alpha)$ for some \( \alpha\in L \).
 :::
 
+:::{.theorem title="Primitive Element Theorem"}
+Every finite separable extension is simple.
+:::
+
+:::{.corollary}
+$\GF(p^n)$ is a simple extension over $\FF_p$.
+:::
+
 :::{.definition title="Algebraic Extension"}
 A field extension $L/k$ is **algebraic** iff every $\alpha \in L$ is the root of some polynomial $f\in k[x]$.
 :::
 
+:::{.theorem title="Finite Extensions are Algebraic"}
+Every finite extension is algebraic.
+:::
+
+:::{.proof title="that finite extensions are algebraic"}
+If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
+This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
+\[
+f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
+.\]
+But then \( \alpha \) is the root of the polynomial \( f \).
+
+:::
 
 ## Normal Extensions
 
@@ -805,27 +826,7 @@ For $\FF_p$ a finite field of prime order, all quadratic extensions $E/\FF_p$ ar
 
 ## Other Special Extensions
 
-:::{.theorem title="Finite Extensions are Algebraic"}
-Every finite extension is algebraic.
-:::
 
-:::{.proof}
-If \( K/F \) and \( [K:F] = n \), then pick any \( \alpha \in K \) and consider \( 1, \alpha , \alpha ^2, ...  \).
-This yields \( n+1 \) elements in an \( n\dash \)dimensional vector space, and thus there is a linear dependence 
-\[
-f(\alpha ) \da \sum_{j=1}^n c_j \alpha ^j = 0
-.\]
-But then \( \alpha \) is the root of the polynomial \( f \).
-
-:::
-
-:::{.theorem title="Primitive Element Theorem"}
-Every finite separable extension is simple.
-:::
-
-:::{.corollary}
-$\GF(p^n)$ is a simple extension over $\FF_p$.
-:::
 
 ## Distinguished Classes
 
