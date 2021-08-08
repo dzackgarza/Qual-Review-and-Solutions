@@ -325,37 +325,12 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 - $x^2-1$ is separable over $\QQ$, but inseparable over $\FF_2$ since it factors as $(x-1)^2$.
 - $(x^2-2)^2$ is inseparable over $\QQ$
 - $x^2-t$ is inseparable over $\FF_2(t)$.
-- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
 - $f(x) \da x^n-1$ is inseparable over $\FF_p$ when $p\divides n$.
   - Otherwise, $f' = nx^{n-1}$ has only $x=0$ as roots, whereas $0$ is not a root of $f$, so $f$ is separable.
+- $f(x) \da x^p-t$ is not separable over $\FF_p(t)$: it is irreducible by Eisenstein, but has only the single root $t^{1\over p}$.
+- $f(x) \da x^{p^n}-x$ is separable over $\FF_p$, since $f'(x) = -1$ has no roots at all.
 
 :::
-
-:::{.fact title="Irreducible implies separable in characteristic zero"}
-If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
-
-Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
-It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
-So this $\gcd$ is 1.
-:::
-
-:::{.fact title="Irreducible implies separable for perfect fields"}
-\envlist
-
-- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
-  (In fact, it is the minimal polynomial of its roots.)
-
-- Toward a contradiction, suppose $f$ is irreducible but inseparable.
-- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
-- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
-\[
-f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
-,\]
-  making $f$ reducible. $\contradiction$
-:::
-
-
-
 
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
@@ -386,6 +361,29 @@ $f\in k[x]^{\irr}$ is **inseparable** (so $f$ has a repeated root) iff $f'(x) \e
 Assume $f$ is monic, then $f$ is inseparable iff $f, f'$ have a common root $a$.
 So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be the minimal polynomial of $a$.
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
+:::
+
+:::{.fact title="Irreducible implies separable in characteristic zero"}
+If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
+
+Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
+It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
+So this $\gcd$ is 1.
+:::
+
+:::{.fact title="Irreducible implies separable for perfect fields"}
+\envlist
+
+- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
+  (In fact, it is the minimal polynomial of its roots.)
+
+- Toward a contradiction, suppose $f$ is irreducible but inseparable.
+- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
+- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
+,\]
+  making $f$ reducible. $\contradiction$
 :::
 
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
@@ -425,10 +423,12 @@ The following are equivalent
 - Every finite subextension $L'/k$ is separable.
 :::
 
-
-
 :::{.fact}
 If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::
+
+:::{.fact title="finite extensions of perfect fields are separable"}
+A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
 
 :::{.proposition title="Simplifications of separability for finite extensions"}
@@ -441,10 +441,6 @@ If $L/k$ is a finite extension, then, TFAE:
 \[
 [L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
 .\] 
-:::
-
-:::{.fact}
-A finite extension of a perfect field is automatically separable, and one only needs to show normality to show it's Galois.
 :::
 
 :::{.proposition title="Separable splitting fields are Galois"}
