@@ -74,6 +74,35 @@ This is because $(x-\lambda_i)^{\ell_i}$ annihilates a Jordan block of size $\el
 
 :::
 
+
+:::{.example title="?"}
+Suppose $A$ is $5\times 5$ with 
+\[
+\min_A(t) &= (t-4)^2(t+6) \\
+\chi_A(t) &= (t-4)^3(t+6)^2
+.\]
+
+Some deductions:
+
+- For $\lambda = 4$:
+  - The total size of all blocks is 3
+  - The largest block is size 2
+  - So this yields $J_1 \oplus J_2$.
+- For $\lambda = -6$:
+  - The total size of all blocks is 2
+  - The largest block is size 1
+  - So this must be $J_1 \oplus J_1$
+
+:::
+
+
+:::{.warnings}
+The data of $\min_A(t), \chi_A(t)$ is **not** enough to uniquely determine $\JCF(A)$.
+Counterexample: there are two distinct possibilities for $4\times 4$ matrices with $\min_A(t) = t^2$ and $\chi_A(t) = t^4$, namely $J_2 \oplus J_2$ and $J_2 \oplus J_1 \oplus J_1$.
+:::
+
+
+
 :::{.lemma title="?"}
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
@@ -120,6 +149,7 @@ It also turns out that $V^{\lambda_i} = \ker (A-\lambda_i I)^n$ for $n\da \dim V
 
 \todo[inline]{Messy indexing.}
 
+
 ## Exercises
 
 :::{.exercise title="?"}
@@ -129,7 +159,6 @@ Prove Cayley-Hamilton using the JCF.
 :::{.exercise title="?"}
 Prove the rank-nullity theorem using JCF.
 :::
-
 
 :::{.exercise title="?"}
 Compute $\JCF(A)$ for 
