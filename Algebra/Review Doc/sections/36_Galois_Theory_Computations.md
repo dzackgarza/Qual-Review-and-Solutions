@@ -288,6 +288,16 @@ The following are the cycle types that can occur:
 
 :::
 
+
+:::{.example title="?"}
+
+\envlist
+
+- $G(x^4-2) = D_4$:
+
+:::
+
+
 ### Cyclotomic Fields
 
 :::{.example title="Cyclotomic Fields"}
