@@ -264,8 +264,7 @@ There are only two possibilities: $S_3, A_3 \cong C_3$:
 :::{.example title="?"}
 
 ![](figures/2021-08-09_14-28.png)
-
-
+![](figures/2021-08-09_14-36-34.png)
 :::
 
 
