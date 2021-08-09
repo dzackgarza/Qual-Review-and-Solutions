@@ -1,6 +1,5 @@
 # Modules
 
-
 :::{.definition title="$R\dash$modules"}
 Four properties:
 
@@ -8,12 +7,25 @@ Four properties:
 - $(r+s)x = rs + sx$
 - $(rs)x= r(s(x))$
 - $1_Rx = x$
+
+Note that $M$ is additionally an $R\dash$algebra if the multiplication map is $R\dash$bilinear and so given by $m: M^{\tensor_R 2}\to M$ satisfying
+\[
+r
+.\]
+
+:::
+
+
+:::{.remark}
+Checking 
 :::
 
 
 :::{.proposition title="The one-step submodule test"}
-$M\in \rmod$ iff for every $r\in R$ and $x, y\ \in M$, we have $rx+y\in M$.
+$N\subseteq M$ is an $R\dash$submodule iff $N$ is nonempty and for every $r\in R$ and $x, y \in N$, we have $rx+y\in N$.
 :::
+
+
 
 
 
