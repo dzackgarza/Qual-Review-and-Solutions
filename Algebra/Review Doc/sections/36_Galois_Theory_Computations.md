@@ -329,9 +329,11 @@ Examples of quartics:
   - This restricts to $C_4, C_2^2$.
   - Reduce $\mod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
   - 
-- $G(x^4-1) = ?$:
+- $G(x^4-1) = C_2$:
   - The roots are $\zeta_4^k$ for $0\leq k \leq 3$.
   - The splitting field is $\QQ(\zeta_4) = \QQ(i)$ which has degree $\phi(4) = 2$.
+  - But this is not a reducible polynomial!
+    Use that that Galois is defined as $\Gal(\SF(f) / \QQ)$ and quadratic extensions are Galois.
 - $G(x^4-2) = D_4$: 
   - The roots are $\zeta_4^k \omega$ for $0\leq k \leq 3$, where $\zeta_4 = i, \omega = 2^{1\over 4}$.
   - The splitting field is $\QQ(\omega, \zeta_4)$, which has degree $4\phi(4) = 8$
