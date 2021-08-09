@@ -337,14 +337,6 @@ x &\mapsto x^p
 
 ## Worked Examples
 
-
-:::{.exercise title="?"}
-\envlist
-
-
-:::
-
-
 :::{.fact}
 \envlist
 
@@ -352,9 +344,7 @@ x &\mapsto x^p
   - Conjugation of $r_1, r_2$ yields a transposition.
   - Galois acting transitively, yielding a $p\dash$cycle.
 - Some examples:
-  - $x^3-2$ over $\QQ$.
-  - $x^5-4x+2$ over $\QQ$.
-
+  - $x^3-2$, $x^3-4x+5$.
 :::
 
 
