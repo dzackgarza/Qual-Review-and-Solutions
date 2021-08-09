@@ -336,7 +336,7 @@ The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^
 Also use that splitting fields over $\QQ$ are always normal, so it suffices to check that $f$ is separable and irreducible to show extensions are Galois.
 :::
 
-:::{.example title="$x^p-a$"}
+:::{.example title="$x^n-a$"}
 
 - $G(x^4-1) = C_2$:
   - The roots are $\zeta_4^k$ for $0\leq k \leq 3$.
@@ -357,8 +357,8 @@ Also use that splitting fields over $\QQ$ are always normal, so it suffices to c
 :::
 
 
-:::{.example title="?"}
-Examples of quartics:
+:::{.example title="$x^n+a$"}
+\envlist
 
 - $G(x^4+1) = C_2^2$:
   - This is irreducible because it is irreducible (by having no roots) mod $3$.
@@ -377,3 +377,14 @@ Examples of quartics:
   - The splitting field is $\QQ(\omega, \zeta_8)$ of degree $\phi(8) = 8$
 
 :::
+
+
+:::{.example title="Cubics"}
+\envlist
+
+- $G(x^3+x+1) = S_3$:
+  - Irreducible because it has no rational roots (by the rational roots test)
+  - $f'(x) = 3x^2+1>0$ so $f$ increases everywhere and can only have one real root $r$, so $\QQ(r)/\QQ = \deg f = 3$.
+  - The other roots are a non-real conjugate pair $w, \bar{w}$, so $\QQ(w, r)/\QQ(r) = \deg f(x)/(x-r) = 2$.
+  - So $[\SF(f): \QQ] = 6$, and the only transitive subgroup of order 6 in $S_3$ is $S_3$ itself.
+
