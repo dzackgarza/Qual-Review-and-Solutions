@@ -61,8 +61,9 @@ Some useful tricks:
 - If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
 - $G \subseteq A_n \iff \Delta \da \prod_{i<j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
-- For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
+- Density: for any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
   - Warning: this only works if the $p_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
+- General fact: if $f\in \ZZ[x]$ and $\deg(f) = \def (f\mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
 :::
 
 
