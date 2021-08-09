@@ -466,7 +466,8 @@ J = J_1(\lambda = 2) \oplus J_2(\lambda = 1)
 \\
 0 & 0 & 1
 \end{bmatrix} \\
-P &= [v_1, v_2, v_3] = 
+P = [v_1, v_2, v_3] 
+&= 
 \begin{bmatrix}
 1 & 1 & 0
 \\
