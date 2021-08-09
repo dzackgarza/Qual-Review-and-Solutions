@@ -454,6 +454,28 @@ Write down the minimal polynomial of $A$.
   ,\]
   so take $v_3 = [0,1,0]$.
 
+- Putting things together:
+\[
+A = P\inv J P \text{ where }
+J = 
+\begin{bmatrix}
+2 & 0 & 0
+\\
+0 & 1 & 1
+\\
+0 & 0 & 1
+\end{bmatrix},\quad 
+P = [v_1, v_2, v_3] = 
+\begin{bmatrix}
+1 & 1 & 0
+\\
+-2 & -2 & 1
+\\
+0 & 1 & 0
+\end{bmatrix}
+.\]
+
+
 
 :::
 
