@@ -389,7 +389,6 @@ Write down the minimal polynomial of $A$.
 
 :::{.solution}
 
-
 :::{.proof title="parts a and b"}
 \envlist
 
@@ -482,12 +481,7 @@ P = [v_1, v_2, v_3]
 \end{bmatrix}
 .\]
 
-- Check that this actually works by inverting and multiplying everything out:
-
-![](figures/2021-08-08_23-35-22.png)
-
 :::
-
 
 :::{.proof title="part c"}
 \envlist
@@ -501,13 +495,7 @@ P = [v_1, v_2, v_3]
 
 :::
 
-
-
-
-
 :::
-
-
 
 
 ## Fall 2020 #5 $\work$
