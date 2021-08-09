@@ -393,12 +393,20 @@ Prove that $H$ is contained in the center of $G$.
 :::{.concept}
 \envlist
 
-1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+- $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+- Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
   - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff $H$ is a union of conjugacy classes in $G$).
-2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
-  In particular, $\# C_g$ divides $\#G$.
-3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+  - Why: if $H\normal G$ then $ghg\inv \in H$ for all $g$, so $C_h \subseteq H$ and $\Union_h C_h = H$.
+  Conversely, if $H = \Union_{h\in H} C_h$, then $ghg\inv \in C_h \subseteq H$ and thus $gHg\inv = H$.
+- Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  - In particular, $\# C_g$ divides $\#G$.
 :::
+
+
+:::{.strategy}
+Show an element $x$ is central by showing $\# C_x = 1$.
+:::
+
 
 :::{.proof title="?"}
 \envlist
@@ -414,7 +422,7 @@ H = \disjoint_{j\leq k} C_{i_j}
 - So
 \[
 H 
-= \disjoint_{j\leq k} C_{i_j} 
+= \Disjoint_{j\leq k} C_{i_j} 
 = C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
 .\]
 
