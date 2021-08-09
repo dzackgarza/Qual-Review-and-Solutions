@@ -385,7 +385,6 @@ Write down the minimal polynomial of $A$.
 
 :::
 
-
 :::{.solution}
 \envlist
 
@@ -396,11 +395,11 @@ Write down the minimal polynomial of $A$.
 - So $\chi_A(t) = t^3 - 4t^2 + 5t-2$.
 - Try rational roots test: $r \in \ts{\pm 2/1}$, and check that 2 is root.
 - By polynomial long division, $\chi_A(t) / (t-2) = t^2-2t+1 = (t-1)^2$.
-- So the eigenvalues are $\lamda = 2, 1$.
+- So the eigenvalues are $\lambda = 2, 1$.
 - $\lambda = 2$:
   - Set $U\da A-\lambda I$, then find $\RREF(U)$ to compute its kernel:
   \[
-  
+  U \da
   \begin{bmatrix}
   2 & 1 & -1
   \\
@@ -409,7 +408,6 @@ Write down the minimal polynomial of $A$.
   2 & 1 & -1
   \end{bmatrix}
   \leadsto
-  
   \begin{bmatrix}
   2 & 1 & 0
   \\
@@ -419,6 +417,28 @@ Write down the minimal polynomial of $A$.
   \end{bmatrix}
   ,\]
   which yields $v_1 = [1,-2,0]$.
+
+- $\lambda = 2$:
+  - Similarly,
+  \[
+  U \da 
+  \begin{bmatrix}
+  3 & 1 & -1 \\
+  -6 & -2 & 2 \\
+  2 & 1 & 0
+  \end{bmatrix}
+  \leadsto  
+  \begin{bmatrix}
+  1 & 0 & -1
+  \\
+  0 & 1 & 2
+  \\
+  0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  which yields $v_2 = [1,-2,1]$.
+
+  - Solve
 
 :::
 
