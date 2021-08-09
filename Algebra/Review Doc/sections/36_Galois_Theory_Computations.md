@@ -33,9 +33,14 @@ Some useful tricks:
 :::
 
 
-:::{.remark}
-Distinguishing $C_2^2$ from $C_4$: the former has two elements of order 2, the latter does not.
-So seeing a cycle of type $(2, 2)$ forces $C_2^2$.
+:::{.remark title="Distinguishing groups"}
+\envlist
+
+- Order 4:
+  - Distinguishing $C_2^2$ from $C_4$: the former has two elements of order 2, the latter does not.
+    So seeing a cycle of type $(2, 2)$ forces $C_2^2$.
+- Order 8:
+  - $S_4$ contains a Sylow-2 subgroup of order 8 (which divides $4! = 24$) but $A_4$ does not since it's of order $4!/2 = 12$ and $8\not\divides 12$.
 :::
 
 
