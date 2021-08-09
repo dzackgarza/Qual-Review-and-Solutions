@@ -314,18 +314,10 @@ x &\mapsto x^p
 :::{.exercise title="?"}
 \envlist
 
-- $K/k \da \QQ(\sqrt 2, \sqrt 3)/\QQ$: $\Gal(K/k) = (\ZZ/2)^{\times 2}$.
-
-- $K/k = \SF(x^3-2)/\QQ = \QQ(2^{1\over 3}, \zeta_3)$: $\Gal(K/k) = S_3$.
 
 
-- $f(x) \da x^n-1$ over $\QQ$: $G = (\ZZ/n)\units$
 
-- $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
 
-- $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
-
-- $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
 
 - Any irreducible $f(x)$ of degree $p$ prime with only two non-real roots: $G = S_p$, since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
   - Example: $x^3-2$ over $\QQ$.
@@ -367,6 +359,7 @@ Degree 3:
     - Note that there is exactly one real root and one conjugate pair, so $G$ contains a transposition $(23)$.
     - There is a 3-cycle $(123)$ given by fixing $\omega$ and sending $\zeta_3 \mapsto \zeta_3\omega$, and this is enough to generate $D_3 \cong S_3$.
 
+
 Degree 4:
 
 - $G(x^4-1) = C_2$:
@@ -395,6 +388,9 @@ Degree 4:
   - Note on explicit automorphisms:
     - Since $\zeta_4 = i$, every 
 
+
+- $G(x^p-1) = C_p\units$:
+  - ?
 :::
 
 
@@ -440,6 +436,13 @@ Degree 4:
   - $f'(x) = 3x^2+1>0$ so $f$ increases everywhere and can only have one real root $r$, so $\QQ(r)/\QQ = \deg f = 3$.
   - The other roots are a non-real conjugate pair $w, \bar{w}$, so $\QQ(w, r)/\QQ(r) = \deg f(x)/(x-r) = 2$.
   - So $[\SF(f): \QQ] = 6$, and the only transitive subgroup of order 6 in $S_3$ is $S_3$ itself.
+
+- $G(x^3-x+1) = S_3$:
+  - Just check $\Delta = -23$ is squarefree in $\QQ$.
+
+- $G(x^3-3x+1) = A_3$:
+  - Check $\Delta = 81$, a perfect square in $\QQ$.
+
 :::
 
 
