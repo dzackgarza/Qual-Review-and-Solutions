@@ -10,6 +10,7 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of any irreducible po
 Some useful tricks:
 
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
+- A quadratic with no real roots is irreducible.
 - The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
 - The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
 - $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
@@ -331,6 +332,16 @@ x &\mapsto x^p
   - Example: $x^5-4x+2$ over $\QQ$.
 :::
 
+
+
+:::{.example title="Quadratics"}
+\envlist
+
+- $G(x^2-n) = C_2$ for $m$ not a perfect square.
+  - $x^2-m = (x+\sqrt{m})(x-\sqrt{m})$, so the splitting field is $\QQ(\sqrt{m})$ of degree 2.
+  - Since $G\leq S_2$ and has order 2, $G= S_2 \cong C_2$.
+  - Concretely, take $m=2$, then $G = \ts{\id, \tau}$ where $\tau: \sqrt{2} \mapsto -\sqrt{2}$, and correspondingly $a+b\sqrt{2} \mapsto a-b\sqrt{2}$.
+:::
 
 :::{.fact}
 The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
