@@ -43,6 +43,7 @@ Transitive subgroups of $S_n$ for small $n$:
 
 :::
 
+> Material borrowed from <https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf>
 
 :::{.proposition title="Recognizing groups from cycles"}
 \envlist
@@ -64,8 +65,16 @@ This is hard, but $f\mod 2$ has type $(1,2,3)$ and $\qty{ (a,b)(c,d,e) }^3 = (a,
 :::{.example title="?"}
 Let $f(x) = x^7-x-1$, reduce $\mod 2$ to get a 7-cycle, and $\mod 3$ to get $(2, 5)$.
 Then use $(2, 5)^5 = (2,1,1,\cdots)$ to get a transposition, So $G = S_7$.
+:::
+
+
+:::{.example title="?"}
+Let $f(x) \da x^7-7x+10$.
+Reducing $\mod 3$ yields $(2, 5)$ and $(2, 5)^5 = (2, \cdots)$ and have a transposition.
+Since $5>n/2=7/2$, $G = S_7$.
 
 :::
+
 
 
 
