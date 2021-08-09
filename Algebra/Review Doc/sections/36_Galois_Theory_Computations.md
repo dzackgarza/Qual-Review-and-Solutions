@@ -129,7 +129,7 @@ and Eisenstein on $f(x+3)$ with $p=5$ works.
 :::
 
 :::{.remark}
-General fact: if $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \def (f\mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
+General fact: if $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
 Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields.
 :::
 
@@ -143,7 +143,7 @@ $f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\
 :::{.definition title="Discriminant"}
 For $f = \sum a_k x^k$ monic,
 \[
-\Delta_f = \prod_{i<j} (r_i - r_j)^2
+\Delta_f = \prod_{i < j} (r_i - r_j)^2
 .\]
 :::
 
@@ -163,16 +163,14 @@ In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
 Some useful facts:
 
 - $\Delta = 0 \iff f$ has a repeated root.
-- Away from $\ch k = 2$, Galois groups of cubics are entirely determined by discriminants:
-  - There are only two possibilities: $S_3, A_3 \cong C_3$.
-  - If $\sqrt{\Delta}\in k$, then $G\cong A_3$.
-    Otherwise, $G\cong S_3$.
+- $G\injects A_n \iff \Delta$ is a perfect square in $k$.
 
 :::
 
-### Misc
 
 
+
+### Density
 
 :::{.fact}
 Density: for any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
@@ -189,7 +187,6 @@ f(x) &\equiv x(x+2)(x^4 + \cdots) \mod 3 \implies \text{type } (1,1,4) \in G \\
 .\]
 :::
 
-
 :::{.example title="of using density"}
 Take $f(x) \da x^4+x+1$, then
 \[
@@ -202,8 +199,6 @@ This is enough to show $G = A_4$.
 
 
 :::
-
-
 
 
 ## Explicit Examples
@@ -233,7 +228,9 @@ This is enough to show $G = A_4$.
 
 :::
 
-:::{.example title="Quadratics"}
+### Quadratics
+
+:::{.example title="Classifying quadratics"}
 Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: 
 
 - If \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ 
@@ -245,7 +242,6 @@ Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2:
 ,\] making $L$ separable.
 :::
 
-
 :::{.remark}
 One can complete the square for quadratics:
 \[
@@ -253,21 +249,26 @@ f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha
 .\]
 
 Thus it suffices to consider quadratics of the form $x^2+a$.
+:::
+
+### Cubics
+
+:::{.proposition title="Classifying cubics"}
+Away from $\ch k = 2$, Galois groups of cubics are entirely determined by discriminants:
+There are only two possibilities: $S_3, A_3 \cong C_3$:
+
+- If $\sqrt{\Delta}\in k$, then $G\cong A_3$.
+- Otherwise, $G\cong S_3$.
+:::
+
+:::{.example title="?"}
+
+![](figures/2021-08-09_14-25-52.png)
 
 :::
 
 
-:::{.example title="Cubics"}
-For $f(x) =x^3 +ax + b$ over $\ch k\neq 2,3$, then the Galois group $G$ is known:
-
-- If $\Delta$ is a perfect square in $K$, $G= A_3$.
-- Else, $G= S_3$.
-
-Note that $\Delta = -4a^3 - 27b^2$ here.
-
-More generally, $G\injects A_n \iff \Delta$ is a perfect square in $k$.
-
-:::
+### Quartics
 
 :::{.proposition title="Quartics"}
 The Galois groups of irreducible quartics can be determined using a bit of number theory:
@@ -295,5 +296,4 @@ x &\mapsto x^p
 > See D&F p.566 example 7.
 
 :::
-
 
