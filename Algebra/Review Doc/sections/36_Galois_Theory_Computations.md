@@ -278,8 +278,13 @@ The Galois groups of irreducible quartics can be determined using a bit of numbe
 
 The following are the cycle types that can occur:
 
-
 ![](figures/2021-08-09_14-39-07.png)
+
+- If $\sqrt{\Delta}\in \QQ$, then $G = A_4, C_2^2.
+- If $\sqrt{\Delta}\not\in \QQ$ then $G = S_4, D_4, C_4$.
+
+
+![](figures/2021-08-09_14-48-55.png)
 
 :::
 
