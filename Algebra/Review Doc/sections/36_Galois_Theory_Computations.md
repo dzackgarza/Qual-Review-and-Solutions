@@ -18,6 +18,17 @@ This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works 
 A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
 :::
 
+:::{.example title="of shifting"}
+Set $f(x) \da x^2+x+2$, then $f(x+3) = x^2 + 7x + 14$ and Eisenstein applies at $p=7$.
+
+:::
+
+
+:::{.remark}
+Inverting: if $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
+:::
+
+
 :::{.example title="mod p reduction checks for Eisenstein"}
 Check
 \[
