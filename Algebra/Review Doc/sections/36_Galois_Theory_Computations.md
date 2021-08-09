@@ -23,11 +23,14 @@ Set $f(x) \da x^2+x+2$, then $f(x+3) = x^2 + 7x + 14$ and Eisenstein applies at 
 
 :::
 
-
 :::{.remark}
 Inverting: if $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
+Note that this is just reversing the coefficients.
 :::
 
+:::{.example title="Of inverting"}
+Take $f(x) \da 2x^5 -4x^2-3$, then for $g(x) \da 3x^5 +4x^2 - 2$ Eisenstein applies with $p=2$.
+:::
 
 :::{.example title="mod p reduction checks for Eisenstein"}
 Check
