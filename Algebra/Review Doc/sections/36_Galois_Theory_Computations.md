@@ -54,8 +54,11 @@ If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive su
 
 :::{.corollary}
 \[
-n\divides \# \Gal(K/\QQ) \leq n!
+n\divides \# \Gal(K/\QQ) \divides n!
 .\]
+
+Why: $\Gal(K/\QQ) \cong G\leq S_n$, and Lagrange yields $\#H \divides n!$.
+Galois acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
 :::
 
 :::{.fact}
