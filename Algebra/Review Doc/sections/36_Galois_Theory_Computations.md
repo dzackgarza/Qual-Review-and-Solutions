@@ -396,6 +396,15 @@ Also use that splitting fields over $\QQ$ are always normal, so it suffices to c
 :::
 
 
+:::{.example title="Quadratics"}
+\envlist
+
+- $G((x^2-2)(x^2-3)) = C_2\cross C_2$.
+  - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have $G \subseteq \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2$.
+
+:::
+
+
 :::{.example title="Cubics"}
 \envlist
 
