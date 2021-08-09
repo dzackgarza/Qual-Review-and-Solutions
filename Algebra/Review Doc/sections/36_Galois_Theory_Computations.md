@@ -12,6 +12,7 @@ Some useful tricks:
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
 - The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
+- The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
 - $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
 - If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
   Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
