@@ -9,6 +9,8 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of any irreducible po
 :::{.fact title="Random tricks"}
 Some useful tricks:
 
+- If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
+  Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
 - If all exponents are even, $f(r) = 0 \iff f(-r) = 0$, so roots occur in pairs $(r, -r)$.
   - Pairs are preserved by $G$ in the sense that every $\sigma\in G$ satisfies either $\ts{r, -r}\mapsto \ts{r, -r}$ or $\ts{r, -r} \mapsto \ts{s, -s}$ for another pair.
   - Example: $x^4-5x^2+5$ has two pairs.
