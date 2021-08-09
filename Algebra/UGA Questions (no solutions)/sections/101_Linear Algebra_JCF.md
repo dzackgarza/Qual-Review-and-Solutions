@@ -356,7 +356,7 @@ Let m
 \[
 A \da 
 \begin{bmatrix}
-r & 1 & -1 \\
+4 & 1 & -1 \\
 -6 & -1 & 2 \\
 2 & 1 & 1
 \end{bmatrix}
@@ -373,6 +373,15 @@ Find an invertible matrix $P$ such that $J = P \inv A P$.
 
 c. 
 Write down the minimal polynomial of $A$.
+
+
+:::{.concept}
+\envlist
+
+- $\chi_A(t) = t^n - \tr\qty{\Extpower^1 A}t^{n-1} + \tr\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \det(A)$
+- Finding generalized eigenvectors: let $B = A-\lambda I$, get eigenvectors $v$, solve $Bw_1 = v, Bw_2 = w_1, \cdots$.
+:::
+
 
 
 ## Fall 2020 #5 $\work$
