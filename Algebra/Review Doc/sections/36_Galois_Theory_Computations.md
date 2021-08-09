@@ -52,10 +52,27 @@ Some useful tricks:
 :::{.fact}
 Some useful generating sets: see <https://kconrad.math.uconn.edu/blurbs/grouptheory/genset.pdf>
 
-
 ![](figures/2021-08-09_18-51-08.png)
 
+In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough to generate $S_n$ or $A_n$ respectively.
+
 :::
+
+
+:::{.fact}
+
+Some subgroup lattices:
+
+- $D_3$:
+
+![](figures/2021-08-09_18-58-50.png)
+
+- $D_4$:
+
+![](figures/2021-08-09_18-59-04.png)
+
+:::
+
 
 
 
