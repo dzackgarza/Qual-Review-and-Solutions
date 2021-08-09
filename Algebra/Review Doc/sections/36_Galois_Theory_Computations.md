@@ -11,7 +11,7 @@ Some useful tricks:
 
 - If all exponents are even, $f(r) = 0 \iff f(-r) = 0$, so roots occur in pairs $(r, -r)$.
   - Pairs are preserved by $G$ in the sense that every $\sigma\in G$ satisfies either $\ts{r, -r}\mapsto \ts{r, -r}$ or $\ts{r, -r} \mapsto \ts{s, -s}$ for another pair.
-  - Example: $x^4-5x^2+5$ has two pairs, and $G$ can't send $r\to s$, which forces $G\leq D_4$.
+  - Example: $x^4-5x^2+5$ has two pairs.
 - If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
 - $G \subseteq A_n \iff \Delta \da \prod_{i<j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
@@ -144,11 +144,23 @@ For $f = \sum a_k x^k$ monic,
 \[
 \Delta_f = \prod_{i<j} (r_i - r_j)^2
 .\]
+:::
 
+:::{.example title="?"}
+For $f(x) = \prod_{i=1}^4(x-r_i)$, we have
+\[
+\Delta_f 
+&= (r_1 - r_2)^2(r_1 - r_3)^2 (r_1 - r_4)^2 \\
+& (r_2 - r_3)^2 (r_2 - r_4)^2 \\
+& (r_3 - r_4)^2
+.\]
+
+In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
 :::
 
 :::{.remark}
 $\Delta = 0 \iff f$ has a repeated root.
+
 :::
 
 ### Misc
