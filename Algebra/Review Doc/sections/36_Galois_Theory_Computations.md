@@ -169,8 +169,6 @@ Some useful facts:
 :::
 
 
-
-
 ### Density
 
 :::{.fact}
@@ -201,32 +199,8 @@ This is enough to show $G = A_4$.
 
 :::
 
-## Explicit Examples
+## Known Fully Classified Galois Groups
 
-:::{.exercise title="?"}
-\envlist
-
-- $K/k \da \QQ(\sqrt 2, \sqrt 3)/\QQ$: $\Gal(K/k) = (\ZZ/2)^{\times 2}$.
-
-- $K/k = \SF(x^3-2)/\QQ = \QQ(2^{1\over 3}, \zeta_3)$: $\Gal(K/k) = S_3$.
-
-
-- $f(x) \da x^n-1$ over $\QQ$: $G = (\ZZ/n)\units$
-
-- $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
-
-- $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
-
-- $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
-
-- Any irreducible $f(x)$ of degree $p$ prime with only two non-real roots: $G = S_p$, since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
-  - Example: $x^3-2$ over $\QQ$.
-  - Example: $x^5-4x+2$ over $\QQ$.
-
-
-
-
-:::
 
 ### Quadratics
 
@@ -326,3 +300,30 @@ x &\mapsto x^p
 
 :::
 
+## Worked Examples
+
+
+:::{.exercise title="?"}
+\envlist
+
+- $K/k \da \QQ(\sqrt 2, \sqrt 3)/\QQ$: $\Gal(K/k) = (\ZZ/2)^{\times 2}$.
+
+- $K/k = \SF(x^3-2)/\QQ = \QQ(2^{1\over 3}, \zeta_3)$: $\Gal(K/k) = S_3$.
+
+
+- $f(x) \da x^n-1$ over $\QQ$: $G = (\ZZ/n)\units$
+
+- $f(x) \da x^3-x+1$ over $\QQ$: $G = S_3$ since $\Delta = -23$ is squarefree in $\QQ$.
+
+- $f(x) \da x^3-3x+1$ over $\QQ$: $G=A_3$ since $\Delta = 81$.
+
+- $f(x) \da x^4-2$ over $\QQ$: $G=D_4$ since $i\mapsto -i$ is order 2 and $2^{1\over 4}\mapsto i2^{1\over 4}$ is order 4, and this eliminates all other possibilities for groups of order 8.
+
+- Any irreducible $f(x)$ of degree $p$ prime with only two non-real roots: $G = S_p$, since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
+  - Example: $x^3-2$ over $\QQ$.
+  - Example: $x^5-4x+2$ over $\QQ$.
+
+
+
+
+:::
