@@ -58,7 +58,8 @@ n\divides \# \Gal(K/\QQ) \divides n!
 .\]
 
 Why: $\Gal(K/\QQ) \cong G\leq S_n$, and Lagrange yields $\#H \divides n!$.
-Galois acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
+$G$ acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
+The size of an orbit divides the size of the group by orbit stabilizer, since $\OO_r \cong G/\Stab_G(r)$, and the right-hand side has a size that must divide $\# G$.
 :::
 
 :::{.fact}
