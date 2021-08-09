@@ -37,15 +37,16 @@ n\divides \# \Gal(K/\QQ) \leq n!
 :::
 
 :::{.fact}
+Write $C_n$ for the cyclic group of order $n$.
 Transitive subgroups of $S_n$ for small $n$:
 
-| $n \text{ in }S_n$ | Transitive Subgroups              |
+| $n \text{ in }S_n$ | Transitive Subgroups        |
 |--------------|-----------------------------------|
 | 1            | 1                                 |
-| 2            | $\ZZ/2$                           |
-| 3            | $S_3, \ZZ/3$                      |
-| 4            | $S_4, A_4, D_4, (\ZZ/2)^2, \ZZ/4$ |
-| 5            | $S_5, A_5, F_5, D_5, \ZZ/5$       |
+| 2            | $S_2 \cong C_2$                   |
+| 3            | $S_3, A_3 \cong C_3$              |
+| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
+| 5            | $S_5, A_5, F_5, D_5, C_5$         |
 
 - Nonabelian groups of order 8: $D_4, Q_8$.
 
@@ -159,7 +160,11 @@ In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
 :::
 
 :::{.remark}
-$\Delta = 0 \iff f$ has a repeated root.
+Some useful facts:
+
+- $\Delta = 0 \iff f$ has a repeated root.
+- Galois groups of cubics are entirely determined by discriminants:
+  - There are only two possibilities: $S_3, A_3 \cong C_3$
 
 :::
 
