@@ -328,7 +328,10 @@ x &\mapsto x^p
 
 :::{.fact}
 The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
-For $x^p - a$, take $\QQ(\zeta_p, \omega)$, and $x^p+a$ take $\QQ(\zeta_{2p}, \omega)$ for $\omega \da a^{1\over p}$.
+
+- $x^p - a$ factors as $\prod_{k=0}^{p-1} (x- \zeta_p^k \omega)$ where $\omega \da a^{1\over p}$, so this splits in $\QQ(\zeta_p, \omega)$ which has degree $\phi(p) \deg \min_\omega(x) = (p-1)p$.
+  - This yields two cyclic subgroups $C_{p-1}, C_p$ where $C_p\normal G$, and thus some semidirect product $C_{p-1} \actson C_{p}$.
+- $x^p+a$ factors as $\prod_{k=0}^{p-1}(x - \zeta_p^k \omega )$ for $\omega \da (-a)^{1\over p}$.
 
 Also use that splitting fields over $\QQ$ are always normal, so it suffices to check that $f$ is separable and irreducible to show extensions are Galois.
 :::
@@ -361,11 +364,12 @@ Examples of quartics:
   - Reduce $\mod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
 
 - $G(x^4+2) = D_4$: 
-  - The roots are $\zeta_4^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
+  - The roots are $\zeta_8^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
   - The splitting field is $\QQ(\zeta_8, \omega) = \QQ(\zeta_4, \omega)$.
 
 
 - $G(x^4+3) = D_4$:
   - The roots are $\zeta_8^k, \omega$ for $\omega = 3^{1\over 4}, k=1,3,5,7$ coprime to 8.
+  - The splitting field is $\QQ(\omega, \zeta_8)$ of degree $\phi(8) = 8$
 
 :::
