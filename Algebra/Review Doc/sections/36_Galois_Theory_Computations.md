@@ -364,4 +364,8 @@ Examples of quartics:
   - The roots are $\zeta_4^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
   - The splitting field is $\QQ(\zeta_8, \omega) = \QQ(\zeta_4, \omega)$.
 
+
+- $G(x^4+3) = D_4$:
+  - The roots are $\zeta_8^k, \omega$ for $\omega = 3^{1\over 4}, k=1,3,5,7$ coprime to 8.
+
 :::
