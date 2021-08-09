@@ -80,10 +80,10 @@ Find the Jordan canonical form $J$ of $A$.
 b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
 
-  > You should not need to compute $P\inv$.
-
 c.
 Write down the minimal polynomial of $A$.
+
+> You should not need to compute $P\inv$.
 
 ## Spring 2019 #7 $\done$ 
 Let $p$ be a prime number.
@@ -295,7 +295,7 @@ Find the Jordan canonical form $J$ of $A$.
 b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
-  > You should not need to compute $P\inv$.
+> You should not need to compute $P\inv$.
 
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
@@ -369,11 +369,10 @@ Find the Jordan canonical form $J$ of $A$.
 b. 
 Find an invertible matrix $P$ such that $J = P \inv A P$.
 
-  > You should not need to compute $P\inv$
-
 c. 
 Write down the minimal polynomial of $A$.
 
+> You should not need to compute $P\inv$
 
 :::{.concept}
 \envlist
@@ -476,6 +475,10 @@ P = [v_1, v_2, v_3]
 0 & 1 & 0
 \end{bmatrix}
 .\]
+
+- Check that this actually works by inverting and multiplying everything out:
+
+![](figures/2021-08-08_23-35-22.png)
 
 
 
