@@ -60,7 +60,6 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 
 
 :::{.fact}
-
 Some subgroup lattices:
 
 - $D_3$:
@@ -72,7 +71,6 @@ Some subgroup lattices:
 ![](figures/2021-08-09_18-59-04.png)
 
 :::
-
 
 
 
@@ -353,10 +351,9 @@ x &\mapsto x^p
 - $G(f) = S_p$ for $f$ irreducible of degree $p$ with exactly two non-real roots $r_1, r_2$:
   - Conjugation of $r_1, r_2$ yields a transposition.
   - Galois acting transitively, yielding a $p\dash$cycle.
-  
-since conjugation is a transposition and Galois acts transitively, so there is a $p\dash$cycle, and these generate $S_p$.
-  - Example: $x^3-2$ over $\QQ$.
-  - Example: $x^5-4x+2$ over $\QQ$.
+- Some examples:
+  - $x^3-2$ over $\QQ$.
+  - $x^5-4x+2$ over $\QQ$.
 
 :::
 
