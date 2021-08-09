@@ -30,6 +30,13 @@ Some useful tricks:
   -$A_4: (2,2), (3,1)$.
 :::
 
+
+:::{.remark}
+Distinguishing $C_2^2$ from $C_4$: the former has two elements of order 2, the latter does not.
+So seeing a cycle of type $(2, 2)$ forces $C_2^2$.
+:::
+
+
 ## Transitive Subgroups
 
 :::{.proposition title="Galois groups are transitive subgroups"}
@@ -315,9 +322,13 @@ x &\mapsto x^p
 :::{.example title="?"}
 Examples of quartics:
 
-- $G(x^4+1) = ?$:
+- $G(x^4+1) = C_2^2$:
+  - This is irreducible because it is irreducible (by having no roots) mod $3$.
   - The roots are $\zeta_8^k$ for $k=1,3,5,7$ coprime to 8, since this is $\Phi_8(x)$.
   - The splitting field is $\QQ(\zeta_8) = \QQ(i, \sqrt 2)$, noting that $\zeta_8 = e^{2\pi i \over 8} = e^{\pi i \over 4} = \cos(\pi/4) + i\sin(\pi/4) = (1/2)(\sqrt 2 + i \sqrt{2})$ so we have containment and both are degree $\phi(8)=4$ extensions.
+  - This restricts to $C_4, C_2^2$.
+  - Reduce $\mod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
+  - 
 - $G(x^4-1) = ?$:
   - The roots are $\zeta_4^k$ for $0\leq k \leq 3$.
   - The splitting field is $\QQ(\zeta_4) = \QQ(i)$ which has degree $\phi(4) = 2$.
