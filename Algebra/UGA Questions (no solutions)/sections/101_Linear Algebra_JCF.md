@@ -385,6 +385,9 @@ Write down the minimal polynomial of $A$.
 :::
 
 :::{.solution}
+
+
+:::{.proof title="parts a and b"}
 \envlist
 
 - Write $\chi_A(t) = t^3 - T_1 t^2 + T_2 t - T_3$ where $T_i \da \tr\qty{\Extpower^i A}$:
@@ -479,6 +482,17 @@ P = [v_1, v_2, v_3]
 - Check that this actually works by inverting and multiplying everything out:
 
 ![](figures/2021-08-08_23-35-22.png)
+
+:::
+
+
+:::{.proof title="part c"}
+\envlist
+
+- Since $\min_A(t) \divides \chi_A(t)$ and has all of the same roots, $\min_A(t) = (t-2)(t-1)^k$ for either $k=1$ or $k=2$.
+:::
+
+
 
 
 
