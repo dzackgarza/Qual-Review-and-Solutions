@@ -15,15 +15,6 @@ $f$ is **irreducible** if $f$ is not reducible.
 For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common divisors of its coefficients is a unit.
 :::
 
-:::{.theorem title="Eisenstein's Criterion"}
-If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
-
-- $p$ divides every coefficient *except* $a_n$ and
-- $p^2$ does not divide $a_0$,
-
-then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
-:::
-
 :::{.theorem title="Gauss' Lemma"}
 Let $R$ be a UFD and $F$ its field of fractions.
 Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
