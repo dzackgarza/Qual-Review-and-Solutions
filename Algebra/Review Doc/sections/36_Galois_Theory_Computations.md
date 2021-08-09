@@ -374,6 +374,9 @@ Also use that splitting fields over $\QQ$ are always normal, so it suffices to c
   - The roots are $\zeta_3^k \omega$ for $0\leq k \leq 3$, $\omega \da 2^{1\over 3}$.
   - The splitting field is $\QQ(\omega, \zeta_3)$ which has degree $3\phi(3) =6$.
   - The possibilities are $G = A_3\cong C_3, S_3$, and order 6 forces $G=S_3$. 
+  - Useful alternative:
+    - Note that there is exactly one real root and one conjugate pair, so $G$ contains a transposition $(23)$.
+    - There is a 3-cycle $(123)$ given by fixing $\omega$ and sending $\zeta_3 \mapsto \zeta_3\omega$, and this is enough to generate $S_3$.
 :::
 
 
