@@ -14,6 +14,7 @@ then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 
 :::{.remark}
 Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
+This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
 :::
 
 :::{.proposition}
