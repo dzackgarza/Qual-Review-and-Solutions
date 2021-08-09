@@ -9,6 +9,7 @@ If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of any irreducible po
 :::{.fact title="Random tricks"}
 Some useful tricks:
 
+- To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
   Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
 - If all exponents are even, $f(r) = 0 \iff f(-r) = 0$, so roots occur in pairs $(r, -r)$.
@@ -18,6 +19,8 @@ Some useful tricks:
 - $G \subseteq A_n \iff \Delta \da \prod_{i < j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
   - $A_4$ does not contain a subgroup isomorphic to $\ZZ/2^2$.
+
+- $G \leq A_n \iff \sqrt{\Delta} \in \QQ$.
   
 - Recognizing cycle types:
   - $\ZZ/4: (2), (4)$.
@@ -85,10 +88,6 @@ Reducing $\mod 3$ yields $(2, 5)$ and $(2, 5)^5 = (2, \cdots)$ and have a transp
 Since $5>n/2=7/2$, $G = S_7$.
 
 :::
-
-
-
-
 
 ### Irreducibility
 
