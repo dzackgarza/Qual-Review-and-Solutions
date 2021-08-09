@@ -311,19 +311,20 @@ following:
 :::{.proof title="of b"}
 Let $\phi_r(x) \da rx$ be the multiplication map.
 
-
 - Let $x\in \ker \phi_r \da \ts{x\in R \st rx = 0}$.
+
 - Since $R$ is commutative $0 = rx = xr$, and so $r\in \ker \phi_x$, so $\ker \phi_x \neq 0$ and $x$ is a zero divisor by definition.
 
-- Let $y\in \im \phi = \theset{y = rx \suchthat x\in R}$. 
+- Let $y\in \im \phi_r \da \theset{y \da rx \suchthat x\in R}$, we want to show $\ker \phi_y$ is nontrivial by producing some $z$ such that $yz=0$.
+  Write $y\da rx$ for some $x\in R$.
 
-- Since $r$ is a zero divisor, there exists $z\in \ker \phi_r$, so $rz = 0$. 
+- Since $r$ is a zero divisor, we can produce some $z\neq 0 \in \ker \phi_r$, so $rz = 0$. 
 
-- But then 
+- Now using that $R$ is commutative, we can compute
 \[
-yz = rxz = xrz = x\cdot 0 = 0
-\]
-since $R$ is commutative, so $y$ is a zero divisor.
+yz = (rx)z = (xr)z = x (rz) = x(0) = 0
+,\]
+so $z\in \ker \phi_y$.
 :::
 
 :::{.proof title="of c"}
