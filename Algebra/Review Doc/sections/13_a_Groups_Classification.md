@@ -125,6 +125,12 @@ We have $G \cong H \times K$ when
 
 :::
 
+:::{.remark}
+Things are particularly nice when the orders of $H$ and $k$ are coprime.
+For 3, $x\in H \intersect K$ implies that the order of $x$ divides $\gcd(\# H, \# K) = 1$, so $H \intersect K = \ts{e}$.
+Thus for 2, one only needs that $\#(HK) = \# G$.
+:::
+
 :::{.proof title="?"}
 With these conditions, the following map is an isomorphism:
 \[
@@ -134,7 +140,11 @@ With these conditions, the following map is an isomorphism:
 
 - This is a group morphism by condition (1):
 \[
-\Gamma(h_1, k_1) \Gamma(h_2, k_2) \da (h_1 k_1) (h_2 k_2) = h_1 ({ \color{red} k_1 h_2 } ) k_2 = h_1 ( { \color{red} h_2 k_1 } ) k_2 = (h_1 h_2) ( k_1 k_2) \da \Gamma( (h_1, k_1)(h_2, k_2) )
+\Gamma(h_1, k_1) \Gamma(h_2, k_2) 
+&\da (h_1 k_1) (h_2 k_2) = h_1 ({ \color{red} k_1 h_2 } ) k_2 \\
+&= h_1 ( { \color{red} h_2 k_1 } ) k_2 \\
+&= (h_1 h_2) ( k_1 k_2) \\
+&\da \Gamma( (h_1, k_1)(h_2, k_2) )
 .\]
 - This is surjective by condition (2)
 - This is injective by condition(3) and checking the kernel:
