@@ -379,8 +379,49 @@ Write down the minimal polynomial of $A$.
 \envlist
 
 - $\chi_A(t) = t^n - \tr\qty{\Extpower^1 A}t^{n-1} + \tr\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \det(A)$
-- Finding generalized eigenvectors: let $B = A-\lambda I$, get eigenvectors $v$, solve $Bw_1 = v, Bw_2 = w_1, \cdots$.
+- Finding generalized eigenvectors: let $B = A-\lambda I$, get eigenvector $v$, solve $Bw_1 = v, Bw_2 = w_1, \cdots$ to get a Jordan block. 
+  Repeat with any other usual eigenvectors.
+- Convention: construct Jordan blocks in decreasing order of magnitude of eigenvalues.
+
 :::
+
+
+:::{.solution}
+\envlist
+
+- Write $\chi_A(t) = t^3 - T_1 t^2 + T_2 t - T_3$ where $T_i \da \tr\qty{\Extpower^i A}$:
+  - $T_1 = \tr(A) = 4-1+1=4$.
+  - $T_2 = (-1-2) + (4+2) + (-4-6) = 5$.
+  - $T_3 = \det(A) = 4(-1-2) -1(-10) + (-1)(-6+2) = 2$.
+- So $\chi_A(t) = t^3 - 4t^2 + 5t-2$.
+- Try rational roots test: $r \in \ts{\pm 2/1}$, and check that 2 is root.
+- By polynomial long division, $\chi_A(t) / (t-2) = t^2-2t+1 = (t-1)^2$.
+- So the eigenvalues are $\lamda = 2, 1$.
+- $\lambda = 2$:
+  - Set $U\da A-\lambda I$, then find $\RREF(U)$ to compute its kernel:
+  \[
+  
+  \begin{bmatrix}
+  2 & 1 & -1
+  \\
+  -6 & -3 & 2
+  \\
+  2 & 1 & -1
+  \end{bmatrix}
+  \leadsto
+  
+  \begin{bmatrix}
+  2 & 1 & 0
+  \\
+  0 & 0 & 1
+  \\
+  0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  which yields $v_1 = [1,-2,0]$.
+
+:::
+
 
 
 
