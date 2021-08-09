@@ -13,7 +13,7 @@ Some useful tricks:
   - Pairs are preserved by $G$ in the sense that every $\sigma\in G$ satisfies either $\ts{r, -r}\mapsto \ts{r, -r}$ or $\ts{r, -r} \mapsto \ts{s, -s}$ for another pair.
   - Example: $x^4-5x^2+5$ has two pairs.
 - If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
-- $G \subseteq A_n \iff \Delta \da \prod_{i<j} (r_i - r_j)^2$ is a perfect square in the ground field.
+- $G \subseteq A_n \iff \Delta \da \prod_{i < j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
   - $A_4$ does not contain a subgroup isomorphic to $\ZZ/2^2$.
   
