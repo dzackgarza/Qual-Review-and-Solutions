@@ -47,7 +47,8 @@ Transitive subgroups of $S_n$ for small $n$:
 :::{.proposition title="Recognizing groups from cycles"}
 \envlist
 
-- If a transitive $G\leq S_n$ contains a transposition $(i, i+1)$ and a cycle of prime length $p> n/2$, then $G= S_n$
+- For $n\geq 2$, if a transitive $G\leq S_n$ contains a transposition $(i, i+1)$ and a cycle of prime length $p> n/2$, then $G= S_n$.
+- For $n\geq 3$, if a transitive $G\leq S_n$ contains a **three cycle** and a $p\dash$cycle with $p>n/2$ then $G=A_n, S_n$.
 
 :::
 
