@@ -489,7 +489,13 @@ P = [v_1, v_2, v_3]
 :::{.proof title="part c"}
 \envlist
 
-- Since $\min_A(t) \divides \chi_A(t)$ and has all of the same roots, $\min_A(t) = (t-2)(t-1)^k$ for either $k=1$ or $k=2$.
+- Write $\min_A(t) = (t-2)(t-1)^{\ell_1}$, then since $\min_A(t)$ divides $\chi_A(t)$ either $\ell_1 = 1, 2$.
+- $\ell_1$ is the size of the **largest** block corresponding to $\lambda = 1$, which is size 2, so $\lambda_1=2$.
+- Thus 
+\[
+\min_A(t) = (t-2)(t-1)^2
+.\]
+
 :::
 
 
