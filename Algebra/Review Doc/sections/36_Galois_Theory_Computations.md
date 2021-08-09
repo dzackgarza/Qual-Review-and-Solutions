@@ -11,6 +11,11 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
+
+:::{.remark}
+Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
+:::
+
 :::{.proposition}
 If $K$ is the splitting field of an **irreducible** polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
 :::
@@ -28,6 +33,12 @@ For $f = \sum a_k x^k$ monic,
 .\]
 
 :::
+
+
+:::{.remark}
+$\Delta = 0 \iff f$ has a repeated root.
+:::
+
 
 :::{.proposition title="Galois groups are transitive subgroups"}
 If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
