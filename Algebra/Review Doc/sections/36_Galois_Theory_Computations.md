@@ -15,7 +15,20 @@ then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::{.remark}
 Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
 This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
+
+A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
 :::
+
+
+:::{.example title="?"}
+Check
+\[
+f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
+,\]
+and Eisenstein on $f(x+3)$ with $p=5$ works.
+
+:::
+
 
 :::{.proposition}
 If $K$ is the splitting field of an **irreducible** polynomial of degree $n$, then $\Gal(K/\QQ) \leq S_n$ is a transitive subgroup.
