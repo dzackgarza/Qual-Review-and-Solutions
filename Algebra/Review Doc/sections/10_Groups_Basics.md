@@ -523,7 +523,13 @@ There are only 3 cases the occur:
 
 :::
 
-:::{.example title="Of an explicit alternating group"}
+:::{.example title="Explicit alternating group"}
+\[
+A_3 =
+\ts{ \id, (1,2,3), (1,3,2) } 
+,\]
+which has cycle types $(1,1,1)$ and $(3)$.
+
 \[
 A_4 =
 & \{\id, \\
@@ -538,7 +544,15 @@ A_4 =
 (1,4,3), \\
 & (2,3,4),
 (2,4,3) \}
-\]
+,\]
+which has cycle types $(1,1,1,1), (2,2), (3, 1)$.
+
+$A_5$ is too big to write down, but has cycle types
+
+- $(1,1,1,1,1)$
+- $(2,2,1)$
+- $(3,1,1)$
+- $(5)$
 :::
 
 :::{.fact title="Some useful facts"}

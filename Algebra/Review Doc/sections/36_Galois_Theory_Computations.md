@@ -66,6 +66,32 @@ Some useful tricks:
 :::
 
 
+:::{.example title="of using density"}
+Take $f(x) \da x^6 + x^4 + x + 3$, then
+
+\[
+f(x) &\equiv (x+1)(x^2 + \cdots)(x^3 + \cdots) \mod 2 \implies \text{type } (1,2,3) \in G \\
+f(x) &\equiv x(x+2)(x^4 + \cdots) \mod 3 \implies \text{type } (1,1,4) \in G \\
+.\]
+:::
+
+
+:::{.example title="of using density"}
+Take $f(x) \da x^4+x+1$, then
+\[
+f(x) &\equiv x^4+x+1 \mod 2 \implies \text{type } (4) \\
+f(x) &\equiv (x-1)(x^3+x^2+x-1) \mod 3 \implies \text{type } (1,3) \\
+.\]
+
+So $G$ contains a 4-cycle and a 3-cycle.
+This is enough to show $G = A_4$.
+
+
+:::
+
+
+
+
 ## Explicit Examples
 
 :::{.exercise title="?"}
