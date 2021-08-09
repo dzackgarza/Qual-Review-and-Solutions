@@ -10,20 +10,31 @@ Four properties:
 
 Note that $M$ is additionally an $R\dash$algebra if the multiplication map is $R\dash$bilinear and so given by $m: M^{\tensor_R 2}\to M$ satisfying
 \[
-r
+r. m(a\tensor b) = m(r.a \tensor b) = m(a\tensor r.b) && \forall r\in R, a,b \in M
 .\]
 
-:::
-
-
-:::{.remark}
-Checking 
 :::
 
 
 :::{.proposition title="The one-step submodule test"}
 $N\subseteq M$ is an $R\dash$submodule iff $N$ is nonempty and for every $r\in R$ and $x, y \in N$, we have $rx+y\in N$.
 :::
+
+
+:::{.proposition title="One-step module morphism test"}
+A map $\phi: M\to N$ is a morphism in $\rmod$ iff
+\[
+\phi(r.x + y) = r.\phi(x) + \phi(y) \in N && \forall r\in R, x,y\in M
+.\]
+:::
+
+
+:::{.remark}
+Quotients of modules are easier to reason about additively, writing $M/N = \ts{x + N}$ as cosets.
+Then $(x + N) + (y + N) = (x+y) + N$ and $(x+N)(y+N) = (xy) + N$.
+:::
+
+
 
 
 
