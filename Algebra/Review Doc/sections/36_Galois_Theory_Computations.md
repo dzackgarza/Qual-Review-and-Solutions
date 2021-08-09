@@ -293,7 +293,7 @@ The following are the cycle types that can occur:
 
 \envlist
 
-- $G(x^4-2) = D_4$:
+- $G(x^4-2) = D_4$: the splitting field is $\QQ(2^{1\over 4}, \zeta_4)$ which has degree $4 \times \phi(4) = 8$.
 
 :::
 
