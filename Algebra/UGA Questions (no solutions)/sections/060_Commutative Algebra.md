@@ -309,14 +309,15 @@ following:
 :::
 
 :::{.proof title="of b"}
-\envlist
+Let $\phi_r(x) \da rx$ be the multiplication map.
 
-- We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
 
-- Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
-  So let $y\in \im \phi$.
+- Let $x\in \ker \phi_r \da \ts{x\in R \st rx = 0}$.
+- Since $R$ is commutative $0 = rx = xr$, and so $r\in \ker \phi_x$, so $\ker \phi_x \neq 0$ and $x$ is a zero divisor by definition.
 
-- Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+- Let $y\in \im \phi = \theset{y = rx \suchthat x\in R}$. 
+
+- Since $r$ is a zero divisor, there exists $z\in \ker \phi_r$, so $rz = 0$. 
 
 - But then 
 \[
