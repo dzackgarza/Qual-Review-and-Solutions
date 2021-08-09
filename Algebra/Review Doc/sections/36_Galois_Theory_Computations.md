@@ -163,8 +163,10 @@ In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
 Some useful facts:
 
 - $\Delta = 0 \iff f$ has a repeated root.
-- Galois groups of cubics are entirely determined by discriminants:
-  - There are only two possibilities: $S_3, A_3 \cong C_3$
+- Away from $\ch k = 2$, Galois groups of cubics are entirely determined by discriminants:
+  - There are only two possibilities: $S_3, A_3 \cong C_3$.
+  - If $\sqrt{\Delta}\in k$, then $G\cong A_3$.
+    Otherwise, $G\cong S_3$.
 
 :::
 
