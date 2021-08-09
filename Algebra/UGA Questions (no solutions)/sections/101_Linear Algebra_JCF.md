@@ -350,7 +350,7 @@ Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there
 b.
 Give all of the possible Jordan canonical forms of $T$.
 
-## Spring 2021 #1 $\work$
+## Spring 2021 #1 $\done$
 
 Let m
 \[
@@ -381,6 +381,9 @@ Write down the minimal polynomial of $A$.
 - Finding generalized eigenvectors: let $B = A-\lambda I$, get eigenvector $v$, solve $Bw_1 = v, Bw_2 = w_1, \cdots$ to get a Jordan block. 
   Repeat with any other usual eigenvectors.
 - Convention: construct Jordan blocks in decreasing order of magnitude of eigenvalues.
+- Polynomial exponent data:
+  - Minimal polynomial exponents: sizes of **largest** Jordan blocks.
+  - Characteristic polynomial exponents: **sum of sizes** of Jordan blocks, i.e. how many times $\lambda$ is on the diagonal of $\JCF(A)$.
 
 :::
 
