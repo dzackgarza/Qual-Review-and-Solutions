@@ -438,7 +438,22 @@ Write down the minimal polynomial of $A$.
   ,\]
   which yields $v_2 = [1,-2,1]$.
 
-  - Solve
+  - Solve $Uw = v_3$:
+  \[
+  \begin{bmatrix}
+  3 & 1 & -1 & 1 \\
+  -6 & -2 & 2 & -2 \\
+  2 & 1 & 0 & 1
+  \end{bmatrix}
+  \leadsto
+  \begin{bmatrix}
+  1 & 0 & -1 & 0 \\
+  0 & 1 & 2 & 1 \\
+  0 & 0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  so take $v_3 = [0,1,0]$.
+
 
 :::
 
