@@ -12,8 +12,6 @@ Some useful tricks:
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
 - The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
-- The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
-  - For $x^p - a$, take $\QQ(\zeta_p, \omega)$, and $x^p+a$ take $\QQ(\zeta_{2p}, \omega)$ for $\omega \da a^{1\over p}$.
 - $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
 - If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
   Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
@@ -328,8 +326,14 @@ x &\mapsto x^p
 :::
 
 
+:::{.fact}
+The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
+For $x^p - a$, take $\QQ(\zeta_p, \omega)$, and $x^p+a$ take $\QQ(\zeta_{2p}, \omega)$ for $\omega \da a^{1\over p}$.
+
+Also use that splitting fields over $\QQ$ are always normal, so it suffices to check that $f$ is separable and irreducible to show extensions are Galois.
+:::
+
 :::{.example title="$x^p-a$"}
-\envlist
 
 - $G(x^4-1) = C_2$:
   - The roots are $\zeta_4^k$ for $0\leq k \leq 3$.
