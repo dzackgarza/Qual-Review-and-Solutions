@@ -275,6 +275,11 @@ The Galois groups of irreducible quartics can be determined using a bit of numbe
 
 ![](figures/2021-07-20_22-06-48.png)
 
+The following are the cycle types that can occur:
+
+
+![](figures/2021-08-09_14-39-07.png)
+
 :::
 
 ### Cyclotomic Fields
