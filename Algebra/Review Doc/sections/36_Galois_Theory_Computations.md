@@ -11,7 +11,6 @@ If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
 then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 :::
 
-
 :::{.remark}
 Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
 This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
@@ -19,13 +18,23 @@ This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works 
 A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
 :::
 
-
-:::{.example title="?"}
+:::{.example title="mod p reduction checks for Eisenstein"}
 Check
 \[
 f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
 ,\]
 and Eisenstein on $f(x+3)$ with $p=5$ works.
+:::
+
+
+:::{.remark}
+General fact: if $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \def (f\mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
+Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields.
+:::
+
+
+:::{.example title="?"}
+$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\mod 2$.
 
 :::
 
@@ -48,11 +57,9 @@ For $f = \sum a_k x^k$ monic,
 
 :::
 
-
 :::{.remark}
 $\Delta = 0 \iff f$ has a repeated root.
 :::
-
 
 :::{.proposition title="Galois groups are transitive subgroups"}
 If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
@@ -88,7 +95,6 @@ Some useful tricks:
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
 - Density: for any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
   - Warning: this only works if the $p_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
-- General fact: if $f\in \ZZ[x]$ and $\deg(f) = \def (f\mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
 :::
 
 
