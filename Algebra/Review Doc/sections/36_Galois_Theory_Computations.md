@@ -13,6 +13,7 @@ Some useful tricks:
 - The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
 - The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
 - The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
+  - For $x^p - a$, take $\QQ(\zeta_p, \omega)$, and $x^p+a$ take $\QQ(\zeta_{2p}, \omega)$ for $\omega \da a^{1\over p}$.
 - $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
 - If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
   Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
@@ -354,8 +355,9 @@ Examples of quartics:
   - The splitting field is $\QQ(\zeta_8) = \QQ(i, \sqrt 2)$, noting that $\zeta_8 = e^{2\pi i \over 8} = e^{\pi i \over 4} = \cos(\pi/4) + i\sin(\pi/4) = (1/2)(\sqrt 2 + i \sqrt{2})$ so we have containment and both are degree $\phi(8)=4$ extensions.
   - This restricts to $C_4, C_2^2$.
   - Reduce $\mod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
+
 - $G(x^4+2) = D_4$: 
-  - The roots are $\zeta_8^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
-  - The splitting field is $\QQ(\zeta_8, \omega) = \QQ(\zeta_2, \omega)$.
+  - The roots are $\zeta_4^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
+  - The splitting field is $\QQ(\zeta_8, \omega) = \QQ(\zeta_4, \omega)$.
 
 :::
