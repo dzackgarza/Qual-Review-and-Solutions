@@ -1,16 +1,45 @@
 # Galois Theory: Computations
 
+Assume all extensions here are algebraic and finite.
+
 ## Useful Facts
 
 :::{.proposition}
 If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of any irreducible polynomial.
 :::
 
-:::{.fact title="Random tricks"}
-Some useful tricks:
+:::{.fact}
+Showing your polynomial is irreducible:
 
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - A quadratic with no real roots is irreducible.
+
+Showing your polynomial (or extension) is separable:
+
+- Show $f$ has distinct roots in $\bar{k}$.
+- For $f$ irreducible, $f$ is separable iff $f'(x) \not\equiv 0$.
+- In characteristic zero, irreducibles are automatically separable.
+- Finite extensions of a perfect field are automatically separable.
+:::
+
+:::{.fact}
+Showing your extension is Galois: 
+
+- Show normality and separability.
+- 
+
+Separable:
+
+- Any extension over a field $k$ with $\ch k = 0$ is automatically separable.
+- Any finite splitting field of a separable polynomial is automatically separable *and* normal.
+
+:::
+
+
+
+:::{.fact title="Random tricks"}
+Once you've confirmed that you have a Galois extension, some useful tricks:
+
 - The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
 - The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
 - $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
