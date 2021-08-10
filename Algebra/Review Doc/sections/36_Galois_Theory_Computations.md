@@ -418,6 +418,7 @@ x &\mapsto x^p
 :::
 
 
+
 ## Worked Examples
 
 :::{.fact}
@@ -459,8 +460,6 @@ So $G = S_5$.
   - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have $G \subseteq \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2$.
   - $\# G = 4$, taking the tower $\QQ(\sqrt 2, \sqrt 3) / \QQ(\sqrt 2)/ \QQ$ and noting $\sqrt 3 \not\in \QQ(\sqrt 2)$ which makes each step degree 2.
   So this forces $G \cong C_2\cross C_2$.
-
-
 :::
 
 :::{.example title="Cubics"}
