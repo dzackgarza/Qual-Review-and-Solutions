@@ -119,13 +119,13 @@ The size of an orbit divides the size of the group by orbit stabilizer, since $\
 Write $C_n$ for the cyclic group of order $n$.
 Transitive subgroups of $S_n$ for small $n$:
 
-| $n \text{ in }S_n$ | Transitive Subgroups        |
-|--------------|-----------------------------------|
-| 1            | 1                                 |
-| 2            | $S_2 \cong C_2$                   |
-| 3            | $S_3, A_3 \cong C_3$              |
-| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
-| 5            | $S_5, A_5 = C_5\semidirect C_4, F_5, D_5, C_5$         |
+| $n \text{ in }S_n$ | Transitive Subgroups        | Sizes |
+|--------------|-----------------------------------|-------|
+| 1            | 1                                 |1      |
+| 2            | $S_2 \cong C_2$                   |2      |
+| 3            | $S_3, A_3 \cong C_3$              |6,3    |
+| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |24,12,8,4,4 |
+| 5            | $S_5, A_5 , F_5\cong C_5\semidirect C_4, D_5, C_5$ | 120,60,20,10,5 |
 
 Other useful facts:
 
@@ -217,9 +217,13 @@ Equivalently, if $\tilde f \da f\mod p$, then $G(\tilde f) \leq G(f)$ is a subgr
 :::
 
 
-:::{.remark}
+:::{.example title="?"}
 You can use this to rule out types of groups using Lagrange's theorem: if you find a cycle of length $m$ which doesn't divide $\# H$, then $H$ isn't a possibility!
+Take $f$ to be degree 5 with 3 real roots and a conjugate pair, labeled $a_1,\cdots, a_5$ with $a_1, a_2$ not real.
+Then $(1,2)\in G$, given by complex conjugation, so $2\divides \# G$.
+
 :::
+
 
 
 
