@@ -1,5 +1,15 @@
 # Galois Theory
 
+
+:::{.remark}
+**The algorithm**:
+
+- Show your extension is Galois (normal and separable)
+  - Show $f$ is irreducible and separable.
+- For $n\da \deg f$, obtain $n\divides \# G \divides n!$ and $G\leq S_n$ is a transitive subgroup.
+- Rule out cases or determine the group completely by finding cycle types.
+:::
+
 ## Showing Extensions are Galois
 
 :::{.fact}
