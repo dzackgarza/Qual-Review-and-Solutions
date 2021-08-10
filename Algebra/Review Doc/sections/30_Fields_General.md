@@ -245,6 +245,42 @@ This has no roots in $k$.
 
 ## Cyclotomic Polynomials
 
+
+:::{.definition title="Euler's Totient Function"}
+\[
+\phi(n) \da \# \ts{ k\leq n \st \gcd(k ,n ) = 1}
+.\]
+:::
+
+
+:::{.remark}
+\envlist
+
+- $\phi(p) = p-1$, because every number $k\leq p-1$ is coprime to $p$.
+- $\phi(p^k) = p^{k} - p^{k-1}$, since there are $p^k$ total numbers less than $p^k$, most of which are coprime to $p$.
+  The ones to remove are those dividing $p^k$: the only divisors of $p^k$ are $p^\ell$ for $0\leq \ell \leq k$, and $\gcd(p^k, m) = p^\ell$ 
+  whenever $m=tp$ for $t = 1,2,3,\cdots,p^{k-1}$ (i.e. $m$ is divisible by some power of $p$, so the $p^{k-1}$ multiples of $p$ are possible).
+- $\phi$ is multiplicative (arithmetically, so only on prime powers!)
+
+:::
+
+
+
+:::{.example title="Some totient values"}
+\[
+\phi(1) &= 1 \\
+\phi(2) &= 1 \\
+\phi(3) &= 2 \\
+\phi(4) &= 2 \\
+\phi(6) &= 2 \\
+\phi(8) &= 4 \\
+.\]
+
+
+:::
+
+
+
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
 $$

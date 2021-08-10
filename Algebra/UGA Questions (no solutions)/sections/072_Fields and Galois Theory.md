@@ -906,7 +906,31 @@ c. Exhibit explicitly the correspondence between subgroups of $G$ and intermedia
 Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
 Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
 
+
 :::{.strategy}
+\envlist
+
+- Contradiction: go to splitting field, apply Freshman's dream.
+- Use that this polynomial is ramified, and its only factors are $(x-a)$.
+:::
+
+
+:::{.solution title="Likely the 'right' solution"}
+\envlist
+
+- Suppose $a$ is not a $p$th power in $F$, then $f(x) \da x^p-a$ has no roots in $F$.
+- Toward a contradiction, suppose $f$ is reducible in $F[x]$.
+- In $\SF(f)$, since $\ch F = p$ we have $f(x) = (x-\zeta)^p$ for some $\zeta = a^{1\over p}$.
+  - So if $f$ is reducible in $F[x]$, we have $f(x) = p_1(x) p_2(x)$ where $p(x) = (x-\zeta)^q\in F[x]$ for some $1\leq q < p$, since these are the only factors of $f$.
+  - The claim is that $\zeta\in F$ as well, which is a contradiction since $\zeta$ is a $p$th root of $a$.
+- We have $x^q-\zeta^q \in F[x]$, so $\zeta^q\in F$.
+- We know $a = \zeta^p\in F$, and thus $\zeta^{d} = \zeta\in F$ for $d \da \gcd(p, n) = 1$. $\contradiction$
+  - Why this is true: write $d = \gcd(p, n)$ in $\ZZ$ to obtain $d = tp + sn$ for some $t, s$.
+  - Then $\zeta^d = \zeta^{tp+sn} = (\zeta^p)^t \cdot (\zeta^n)^s \in F$.
+:::
+
+
+:::{.strategy title="for an alternative solution"}
 \envlist
 
 - By contrapositive, show that $f(x) \da x^p-a \in \FF[x]$ reducible $\implies a$ is a $p$th power in $\FF$.
@@ -968,6 +992,7 @@ a &= a^1\\
 
 
 :::
+
 
 
 ## Fall 2020 #3 $\work$

@@ -388,6 +388,7 @@ Write down the minimal polynomial of $A$.
 :::
 
 :::{.solution}
+\envlist
 
 :::{.proof title="parts a and b"}
 \envlist

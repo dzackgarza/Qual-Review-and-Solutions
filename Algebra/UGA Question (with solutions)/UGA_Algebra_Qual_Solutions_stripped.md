@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Preface
 
 I'd like to extend my gratitude to the following people for helping supply solutions and proofs:
@@ -283,10 +295,10 @@ Prove that \( \pi(x) \) is an odd permutation \( \iff \) the order \( {\left\lve
 ```{=tex}
 \envlist
 ```
--   \( \operatorname{Sym}(G) \coloneqq{\operatorname{Aut}}_{\mathsf{Set}}(G, G) \) is the group of set morphisms from \( G \) to itself, i.e. permutations of elements of \( G \).
+-   \( \operatorname{Sym}(G) \coloneqq\mathop{\mathrm{Aut}}_{\mathsf{Set}}(G, G) \) is the group of set morphisms from \( G \) to itself, i.e. permutations of elements of \( G \).
 -   More standard terminology: this is related to the **left regular representation** where \( g\mapsto \phi_g \) where \( \phi_g(x) = gx \), regarded instead as a permutation representation.
     -   This action is transitive!
--   Cayley's theorem: every \( G \) is isomorphic to a subgroup of a permutation group. In particular, take \( \left\{{ \phi_g {~\mathrel{\Big|}~}G\in G }\right\} \) with function composition as a subgroup of \( {\operatorname{Aut}}_{\mathsf{Set}}(G) \).
+-   Cayley's theorem: every \( G \) is isomorphic to a subgroup of a permutation group. In particular, take \( \left\{{ \phi_g {~\mathrel{\Big|}~}G\in G }\right\} \) with function composition as a subgroup of \( \mathop{\mathrm{Aut}}_{\mathsf{Set}}(G) \).
 :::
 
 ::: {.solution}
@@ -382,12 +394,16 @@ Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \),
 ```{=tex}
 \envlist
 ```
-1.  Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+-   \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+-   Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+    -   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff \( H \) is a union of conjugacy classes in \( G \)).
+    -   Why: if \( H{~\trianglelefteq~}G \) then \( ghg^{-1}\in H \) for all \( g \), so \( C_h \subseteq H \) and \( \displaystyle\bigcup_h C_h = H \). Conversely, if \( H = \displaystyle\bigcup_{h\in H} C_h \), then \( ghg^{-1}\in C_h \subseteq H \) and thus \( gHg^{-1}= H \).
+-   Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \).
+    -   In particular, \( \# C_g \) divides \( \#G \).
+:::
 
--   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff a union of conjugacy classes).
-
-2.  Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \). In particular, \( \# C_g \) divides \( \#G \).
-3.  \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+::: {.strategy}
+Show an element \( x \) is central by showing \( \# C_x = 1 \).
 :::
 
 ::: {.proof title="?"}
@@ -410,7 +426,7 @@ Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \),
 -   So
     \[
     H 
-    = {\textstyle\coprod}_{j\leq k} C_{i_j} 
+    = \displaystyle\coprod_{j\leq k} C_{i_j} 
     = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
     .\]
 
@@ -557,7 +573,7 @@ Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) 
     -   \( \#Z(H) = p^\ell \) for some \( \ell \leq i \) by Lagrange
 -   It thus remains to show that \( Z(H) {~\trianglelefteq~}G \).
 -   Use that \( Z(H) \operatorname{ch}H \) and use transitivity of characteristic to conclude \( Z(H) {~\trianglelefteq~}H \).
--   That \( Z(H) \operatorname{ch}H \): let \( \psi \in {\operatorname{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
+-   That \( Z(H) \operatorname{ch}H \): let \( \psi \in \mathop{\mathrm{Aut}}(H) \) and \( x=\psi(y)\in \psi(Z(H)) \) so \( y\in Z(H) \), then for arbitrary \( h\in H \),
     \[
      \psi(y)h 
      &= \psi(y) (\psi \circ \psi^{-1})(h) \\
@@ -566,8 +582,8 @@ Just use maximality for (a). For (b), centers are always abelian, so \( Z(H) \) 
      &= h\psi(y)
      .\]
 -   That \( A \operatorname{ch}B {~\trianglelefteq~}C \implies A{~\trianglelefteq~}C \):
-    -   \( A\operatorname{ch}B \) iff \( A \) is fixed by every \( \psi\in {\operatorname{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
-    -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( {\operatorname{Aut}}(B) \).
+    -   \( A\operatorname{ch}B \) iff \( A \) is fixed by every \( \psi\in \mathop{\mathrm{Aut}}(B) \)., WTS \( cAc^{-1}= A \) for all \( c\in C \).
+    -   Since \( B{~\trianglelefteq~}C \), the automorphism \( \psi({-}) \coloneqq c({-})c^{-1} \) descends to an element of \( \mathop{\mathrm{Aut}}(B) \).
     -   Then \( \psi(A) = A \) since \( A\operatorname{ch}B \), so \( cAc^{-1}= A \) and \( A{~\trianglelefteq~}C \).
 :::
 :::
@@ -636,19 +652,19 @@ Let \( G \) be a group of order \( p^2q \) for \( p, q \) prime. Show that \( G 
 
 -   In any case, we have
     \[
-    n_p \divides q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
-    n_q \divides p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+    n_p \divides q &,\, n_p \equiv 1 \operatorname{mod}p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+    n_q \divides p^2 &,\, n_q \equiv 1 \operatorname{mod}q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
     .\]
 
 -   **Case 1:** \( :p>q \).
 
 -   If \( p>q \), then \( p\geq q+2 \) since \( p+1 \) can't be prime.
 
--   So \( q \) is not congruent to \( 1\pmod p \), forcing \( n_p = 1 \).
+-   So \( q \) is not congruent to \( 1\operatorname{mod}p \), forcing \( n_p = 1 \).
 
 -   **Case 2:**: \( p< q \):
 
--   For the same reasons as above, \( p\not\equiv 1\pmod q \) forces \( n_q\neq p \).
+-   For the same reasons as above, \( p\not\equiv 1\operatorname{mod}q \) forces \( n_q\neq p \).
 
 -   If \( n_q = 1 \), we're done.
 
@@ -731,19 +747,17 @@ c.  Suppose \( G \) is a finite group acting transitively on a set \( S \) with 
 ```{=tex}
 \envlist
 ```
--   Fix \( x \) and let \( y\in G_x \) be another element in the orbit of \( x \).
--   Then there exists a \( g\in G \) such that \( g\cdot x = y \), so \( x = g^{-1}\cdot y \)
+-   Fix \( x \), then \( y\in {\mathrm{Orb}}(x) \implies g\cdot x = y \) for some \( g \), and \( x = g^{-1}\cdot y \).
 -   Then
     \[
-    h \in G\cdot x 
+    h \in {\operatorname{Stab}}(x)
     &\iff h\cdot x = x && \text{by being in the stabilizer} \\
-    &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y && \text{using that $x, y$ are in the same orbit} \\
+    &\iff h\cdot (g^{-1}\cdot y) = g^{-1}\cdot y \\
     &\iff (g h g^{-1}) \cdot y = y \\
-    &\iff ghg^{-1}\in G_y && \text{by the defn of the stabilizer}\\
-    &\iff h\in g ^{-1}  G_y g
+    &\iff ghg^{-1}\in G_y && \text{by definition}\\
+    &\iff h\in g ^{-1}  {\operatorname{Stab}}(y) g
     ,\]
-
-so every \( h\in G\cdot x \) is conjugate to some element in \( G_y \).
+    so \( {\operatorname{Stab}}(x) = g^{-1}{\operatorname{Stab}}(y) g \).
 :::
 
 ::: {.proof title="of b"}
@@ -782,15 +796,15 @@ Let \( G \) act on its subgroups by conjugation,
 ```{=tex}
 \envlist
 ```
--   Let \( G\curvearrowright X \) transitively where \( {\left\lvert {X} \right\rvert} \geq 2 \)
+-   Let \( G\curvearrowright X \) transitively where \( {\left\lvert {X} \right\rvert} \geq 2 \).
 -   An action is transitive iff there is only one orbit, so \( {\left\lvert {X/G} \right\rvert} = 1 \).
 -   Apply Burnside's Lemma
     \[
-    1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert {X^g} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert {X^g} \right\rvert}
+    1 = {\left\lvert {X/G} \right\rvert} = \frac{1}{{\left\lvert {G} \right\rvert}} \sum_{g\in G} {\left\lvert { \mathrm{Fix} (g)} \right\rvert} \implies {\left\lvert {G} \right\rvert} = \sum_{g\in G} {\left\lvert { \mathrm{Fix} (g)} \right\rvert} =  \mathrm{Fix} (e) + \sum_{\substack{g\in G \\ g\neq e}} {\left\lvert { \mathrm{Fix} (g)} \right\rvert}
     \]
--   Note that \( X^e = X \), since the identity must fix every element, so \( {\left\lvert {X^e} \right\rvert} \geq 2 \).
--   Not *every* other term in the sum can be greater than 1, otherwise the RHS is greater than the size of \( G \)
--   Thus we must have \( {\left\lvert {X^g} \right\rvert} = 0 \) for some \( g\in G \), i.e. \( g \) has no fixed points in \( X \).
+-   Note that \(  \mathrm{Fix} (e) = X \), since the identity must fix every element, so \( {\left\lvert { \mathrm{Fix} (e)} \right\rvert} \geq 2 \).
+-   If \( {\left\lvert { \mathrm{Fix} (g)} \right\rvert} > 0 \) for all \( g\neq e \), the remaining term is at least \( {\left\lvert {G} \right\rvert} -1 \). But then the right-hand side yields is at least \( 2 + ({\left\lvert {G} \right\rvert} -1) = {\left\lvert {G} \right\rvert} + 1 \), contradicting the equality.
+-   So not every \( {\left\lvert { \mathrm{Fix} (g)} \right\rvert} > 0 \), and \( {\left\lvert {  \mathrm{Fix} (g) } \right\rvert} = 0 \) for some \( g \), which says \( g \) has no fixed points in \( X \).
 :::
 :::
 
@@ -988,7 +1002,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   The \( pqr \) theorem.
 
--   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \pmod p \).
+-   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \operatorname{mod}p \).
 
 -   **Theorem**: If \( H, K \leq G \) and any of the following conditions hold, \( HK \) is a subgroup:
 
@@ -996,7 +1010,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
     -   \( [H, K] = 1 \)
     -   \( H \leq N_G(K) \)
 
--   **Theorem**: For a positive integer \( n \), all groups of order \( n \) are cyclic \( \iff n \) is squarefree and, for each pair of distinct primes \( p \) and \( q \) dividing \( n \), \( q - 1 \neq 0 \pmod p \).
+-   **Theorem**: For a positive integer \( n \), all groups of order \( n \) are cyclic \( \iff n \) is squarefree and, for each pair of distinct primes \( p \) and \( q \) dividing \( n \), \( q - 1 \neq 0 \operatorname{mod}p \).
 
 -   **Theorem:**
     \[
@@ -1018,11 +1032,11 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   We have
 
--   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
+-   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \operatorname{mod}3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
 
--   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
+-   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \operatorname{mod}5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
 
--   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
+-   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \operatorname{mod}7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
 
 -   Thus
     \[
@@ -1149,7 +1163,7 @@ Describe a representative from each class.
 \envlist
 ```
 -   Sylow theorems:
--   \( n_p \cong 1 \pmod p \)
+-   \( n_p \cong 1 \operatorname{mod}p \)
 -   \( n_p \divides m \).
 :::
 
@@ -1262,8 +1276,8 @@ Strategy: examine \( {\left\lvert {G/Z(G)} \right\rvert} \) by cases.
 ```
 -   By Sylow
 
-    -   \( n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
-    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
+    -   \( n_5 \divides 7^2,\quad n_5\cong 1\operatorname{mod}5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
+    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \operatorname{mod}7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
 
 -   By recognition of direct products, \( G = S_5 \times S_7 \)
 
@@ -1308,9 +1322,9 @@ a.  Let \( \operatorname{Sym}G \) be the set of all bijections from \( G\to G \)
     \]
     is an injective homomorphism.
 
-b.  Let \( \Phi: \operatorname{Sym}G\to S_N \) be an isomorphism. For \( a\in G \) define \( \varepsilon(a) \in \left\{{\pm 1}\right\} \) to be the sign of the permutation \( \Phi(C(a)) \). Suppose that \( a \) has order \( d \). Prove that \( \varepsilon(a) = -1 \iff d \) is even and \( N/d \) is odd.
+b.  Let \( \Phi: \operatorname{Sym}G\to S_N \) be an isomorphism. For \( a\in G \) define \( {\varepsilon}(a) \in \left\{{\pm 1}\right\} \) to be the sign of the permutation \( \Phi(C(a)) \). Suppose that \( a \) has order \( d \). Prove that \( {\varepsilon}(a) = -1 \iff d \) is even and \( N/d \) is odd.
 
-c.  Suppose \( N> 2 \) and \( n\equiv 2 \pmod 4 \). Prove that \( G \) is not simple.
+c.  Suppose \( N> 2 \) and \( n\equiv 2 \operatorname{mod}4 \). Prove that \( G \) is not simple.
 
 > Hint: use part (b).
 
@@ -1322,7 +1336,7 @@ Let \( p, n \) be integers such that \( p \) is prime and \( p \) does not divid
 
 Let \( p, q \) be distinct primes.
 
-a.  Let \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p \) be the class of \( q\pmod p \) and let \( k \) denote the order of \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \) as an element of \( {\mathbb{Z}}_p^{\times} \). Prove that no group of order \( pq^k \) is simple.
+a.  Let \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p \) be the class of \( q\operatorname{mod}p \) and let \( k \) denote the order of \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \) as an element of \( {\mathbb{Z}}_p^{\times} \). Prove that no group of order \( pq^k \) is simple.
 
 b.  Let \( G \) be a group of order \( pq \), and prove that \( G \) is not simple.
 
@@ -1626,20 +1640,21 @@ d.  Show that up to isomorphism there are exactly two commutative rings \( R \) 
 :::
 
 ::: {.proof title="of b"}
-```{=tex}
-\envlist
-```
--   We identify \( \ker \phi = \left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\} \), and since \( r\neq 0 \) by assumption, this implies each such \( x \) is a zero divisor by definition (and \( \ker \phi \) is nonempty by assumption).
+Let \( \phi_r(x) \coloneqq rx \) be the multiplication map.
 
--   Similarly, we identify \( \operatorname{im}\phi = \left\{{y = rx {~\mathrel{\Big|}~}x\in R}\right\} \). So let \( y\in \operatorname{im}\phi \).
+-   Let \( x\in \ker \phi_r \coloneqq\left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\} \).
 
--   Since \( r \) is a zero divisor, there exists some \( z\in R \) such that \( rz = 0 \).
+-   Since \( R \) is commutative \( 0 = rx = xr \), and so \( r\in \ker \phi_x \), so \( \ker \phi_x \neq 0 \) and \( x \) is a zero divisor by definition.
 
--   But then
+-   Let \( y\in \operatorname{im}\phi_r \coloneqq\left\{{y \coloneqq rx {~\mathrel{\Big|}~}x\in R}\right\} \), we want to show \( \ker \phi_y \) is nontrivial by producing some \( z \) such that \( yz=0 \). Write \( y\coloneqq rx \) for some \( x\in R \).
+
+-   Since \( r \) is a zero divisor, we can produce some \( z\neq 0 \in \ker \phi_r \), so \( rz = 0 \).
+
+-   Now using that \( R \) is commutative, we can compute
     \[
-    yz = rxz = xrz = x\cdot 0 = 0
-    \]
-    since \( R \) is commutative, so \( y \) is a zero divisor.
+    yz = (rx)z = (xr)z = x (rz) = x(0) = 0
+    ,\]
+    so \( z\in \ker \phi_y \).
 :::
 
 ::: {.proof title="of c"}
@@ -1892,9 +1907,39 @@ c.  Is a Euclidean domain an UFD? Give either a proof or a counterexample with j
 
 d.  Is a UFD a Euclidean domain? Give either a proof or a counterexample with justification.
 
-## Spring 2021 \#5 \( \work \) {#spring-2021-5-work}
+## Spring 2021 \#5 \( \done \) {#spring-2021-5-done}
 
+::: {.problem title="Spring 2021"}
 Suppose that \( f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x] \) is a zero divisor. Show that there is a nonzero \( a\in {\mathbb{Z}}/n{\mathbb{Z}} \) with \( af(x) = 0 \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Write \( f(x) = \sum_{k=0}^n a_k x^k \), and supposing it's a zero divisor choose \( g(x) = \sum_{k=0}^m b_k x^k \) of minimal degree so that \( g\neq 0, b_m\neq 0 \), and \( f(x)g(x) = 0 \).
+-   The claim is that the top coefficient \( b_m \) will suffice.
+-   Write the product:
+    \[
+    0 = f(x)g(x) 
+    = (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
+    (b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
+    .\]
+-   Equating coefficients, the coefficient for \( x^{m+n} \) must be zero, so (**importantly**) \( a_n b_m = 0 \).
+    -   Since \( a_n b_m=0 \), consider \( a_ng(x) \). This has degree \( d_1 \leq m-1 \) but satisfies \( a_ng(x)f(x) = a_n(g(x)f(x)) = 0 \), so by minimality \( a_ng(x) = 0 \).
+    -   This forces \( a_n b_0 = \cdots = a_n b_{m-1} = 0 \), so \( a_n \) annihilates all of the \( b_k \).
+-   Now consider the coefficient of \( x^{m+n-1} \), given by \( a_{n-1}b_m + a_{n}b_{m-1} \).
+    -   The second term \( a_n b_{m-1}=0 \) since \( a_n \) annihilates all \( b_k \), so (**importantly**) \( a_{n-1} b_m = 0 \).
+    -   Considering now \( a_{n-1}g(x) \):
+        -   The same argument shows this has degree \( d_2 \leq m-1 \) but \( a_{n-1}g(x)f(x) = 0 \), so \( a_{n-1}g(x) = 0 \).
+        -   So \( a_{n-1} \) annihilates all \( b_k \), and allowing this process to continue inductively.
+-   For good measure, the coefficient of \( x^{m+n-2} \) is \( a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2} \).
+    -   Note that \( a_n, a_{n-1} \) annihilate all \( b_k \), so (**importantly**) \( a_{n-2} b_m=0 \), and so on.
+-   Thus \( a_k b_m = 0 \) for all \( 0\leq k \leq n \), and by linearity and commutativity, we have
+    \[
+    b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
+    .\]
+:::
 
 ## Spring 2021 \#6
 
@@ -1909,6 +1954,29 @@ b.  Let \( R \) be a subset of \( {\mathbb{Z}}[x] \) consisting of all polynomia
 c.  Show that \( R \) is not Noetherian.
 
 > *Hint: consider the ideal generated by \( \left\{{ 2x^k {~\mathrel{\Big|}~}1\leq k \in {\mathbb{Z}}}\right\} \).*
+
+::: {.solution}
+-   A ring is **Noetherian** iff \( R \) satisfies the ascending chain condition: every chain of ideals \( A_1 \subseteq A_2 \subseteq \cdots \) eventually stabilizes, so \( A_m \subseteq A_{m+1} = A_{m+2} = \cdots \).
+
+-   That \( R \) is a subring of \( {\mathbb{Z}}[x] \):
+
+    -   \( (R, +) \) is an abelian subgroup: note that \( f(x) + g(x) = \sum a_k x^k + \sum b_k x^k = \sum (a_k + b_k) x^k \), so if \( a_k, b_k \) are even then \( a_k + b_k \) is even. It's closed under inverses, since \( a_k \) is even iff \( -a_k \) is even, and contains zero.
+    -   \( (R, \cdot) \) is a submonoid: \( f(x) g(x) = \sum_{n=1}^N \qty{ \sum_{k=1}^n a_k b_{n-k}} x^k \) where without loss of generality, \( \deg f = \deg g = n \) by setting coefficients to zero. Then sums and products of even integers are even, so \( fg \in R \).
+
+-   That \( R \) is not Noetherian: it suffices to show that \( R \) contains an ideal that is not finitely generated.
+
+-   The claim is that setting \( S \coloneqq\left\{{2x^k}\right\}_{k\in {\mathbb{Z}}_{\geq 1}} \) and taking
+    \[
+    I \coloneqq\left\langle{S}\right\rangle = \sum_{k\in {\mathbb{Z}}_{\geq 1}} R\cdot 2x^k \coloneqq\left\{{ \sum_{i=1}^m r_k(x) 2x^k {~\mathrel{\Big|}~}r_k(x) \in 2{\mathbb{Z}}[x], m\in {\mathbb{Z}}_{\geq 0}}\right\}
+    \]
+    yields an ideal that is not finitely generated.
+
+-   Suppose toward a contradiction that \( \left\{{g_1, g_2, \cdots, g_M}\right\} \) were a finite generating set, where each \( g_i \in I \).
+
+```{=tex}
+\todo[inline]{???}
+```
+:::
 
 # Fields and Galois Theory
 
@@ -1965,8 +2033,8 @@ c.  Prove that \( m = k \).
 -   Rephrasing (a), we have
     \[
     n \divides q^k-1 
-    &\iff q^k-1 \cong 0 \pmod n \\
-    &\iff q^k \cong 1 \pmod n \\
+    &\iff q^k-1 \cong 0 \operatorname{mod}n \\
+    &\iff q^k \cong 1 \operatorname{mod}n \\
     &\iff m \coloneqq o(q) \divides k
     .\]
 :::
@@ -2031,14 +2099,14 @@ Let \( K = {\mathbb{Q}}(\zeta) \). Then \( K \) is the splitting field of \( f(x
 
 > Or equivalently, \( f \) splits into distinct linear factors \( f(x) = \prod_{k\leq n}(x-\zeta^k) \).
 
-Since it is a Galois extension, \( {\left\lvert {\operatorname{Gal}(K/{\mathbb{Q}})} \right\rvert} = [K: {\mathbb{Q}}] = \phi(n) \) for the totient function.
+Since it is a Galois extension, \( {\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = [K: {\mathbb{Q}}] = \phi(n) \) for the totient function.
 
 We can now define maps
 \[
 \tau_j: K &\to K \\
 \zeta &\mapsto \zeta^j 
 \]
-and if we restrict to \( j \) such that \( \gcd(n, j) = 1 \), this yields \( \phi(n) \) maps. Noting that if \( \zeta \) is a primitive root, then \( (n, j) = 1 \) implies that that \( \zeta^j \) is also a primitive root, and hence another root of \( \min(\zeta, {\mathbb{Q}}) \), and so these are in fact automorphisms of \( K \) that fix \( {\mathbb{Q}} \) and thus elements of \( \operatorname{Gal}(K/{\mathbb{Q}}) \).
+and if we restrict to \( j \) such that \( \gcd(n, j) = 1 \), this yields \( \phi(n) \) maps. Noting that if \( \zeta \) is a primitive root, then \( (n, j) = 1 \) implies that that \( \zeta^j \) is also a primitive root, and hence another root of \( \min(\zeta, {\mathbb{Q}}) \), and so these are in fact automorphisms of \( K \) that fix \( {\mathbb{Q}} \) and thus elements of \( { \mathsf{Gal}} (K/{\mathbb{Q}}) \).
 
 So define a map
 \[
@@ -2168,7 +2236,7 @@ c.  What is the degree of \( {\mathbb{Q}}(\zeta, \sqrt[4] 2) \) over \( {\mathbb
         \[
         p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
         .\]
--   \( \operatorname{Gal}({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times} \)
+-   \( { \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times} \)
 :::
 
 ::: {.solution}
@@ -2194,7 +2262,7 @@ Let \( K = {\mathbb{Q}}(\zeta) \).
 ```{=tex}
 \envlist
 ```
--   \( \operatorname{Gal}({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4) \) by general theory
+-   \( { \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4) \) by general theory
 -   \( {\mathbb{Z}}/(4) \) has exactly one subgroup of index 2.
 -   Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
 :::
@@ -2321,14 +2389,14 @@ We then have
 [K: {\mathbb{Q}}] = [K: L] [L : {\mathbb{Q}}] = (2)(2) = 4
 .\]
 
-This \( {\left\lvert {\operatorname{Gal}(K/{\mathbb{Q}})} \right\rvert} = 4 \), which leaves only two possibilities:
+This \( {\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = 4 \), which leaves only two possibilities:
 
 -   \( {\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2) \)
 -   \( {\mathbb{Z}}/(4) \)
 
 We can next check orders of elements. Take
 \[
-\sigma &\in \operatorname{Gal}(K/{\mathbb{Q}}) \\
+\sigma &\in { \mathsf{Gal}} (K/{\mathbb{Q}}) \\
 \alpha_1 &\mapsto \alpha_2
 .\]
 
@@ -2350,7 +2418,7 @@ and thus
 &\neq \alpha_1
 ,\]
 
-and so the order of \( \sigma \) is strictly greater than 2, and thus 4, and thus \( \operatorname{Gal}(K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4) \).
+and so the order of \( \sigma \) is strictly greater than 2, and thus 4, and thus \( { \mathsf{Gal}} (K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4) \).
 :::
 
 ::: {.proof title="of c"}
@@ -2368,7 +2436,7 @@ Let \( K \) be a Galois extension of \( {\mathbb{Q}} \) with Galois group \( G \
 
 Let \( E = E_1 E_2 \subset K \).
 
-Let \( H_i = \operatorname{Gal}(K/E_i) \) and \( H = \operatorname{Gal}(K/E) \).
+Let \( H_i = { \mathsf{Gal}} (K/E_i) \) and \( H = { \mathsf{Gal}} (K/E) \).
 
 a.  Show that \( H = H_1 \cap H_2 \).
 
@@ -2376,7 +2444,7 @@ b.  Show that \( H_1 H_2 \) is a subgroup of \( G \).
 
 c.  Show that
     \[
-    \operatorname{Gal}(K/(E_1 \cap E_2 )) = H_1 H_2
+    { \mathsf{Gal}} (K/(E_1 \cap E_2 )) = H_1 H_2
     .\]
 
 ::: {.concept}
@@ -2395,7 +2463,7 @@ c.  Show that
 ::: {.proof title="of a"}
 By the Galois correspondence, it suffices to show that the fixed field of \( H_1 \cap H_2 \) is \( E_1 E_2 \).
 
-Let \( \sigma \in H_1 \cap H_2 \); then \( \sigma \in {\operatorname{Aut}}(K) \) fixes both \( E_1 \) and \( E_2 \).
+Let \( \sigma \in H_1 \cap H_2 \); then \( \sigma \in \mathop{\mathrm{Aut}}(K) \) fixes both \( E_1 \) and \( E_2 \).
 
 > Not sure if this works -- compositum is not literally product..?
 
@@ -2456,7 +2524,7 @@ Let \( f(x) = x^4-2 \in {\mathbb{Q}}[x] \).
 
 a.  Define what it means for a finite extension field \( E \) of a field \( F \) to be a Galois extension.
 
-b.  Determine the Galois group \( \operatorname{Gal}(E/{\mathbb{Q}}) \) for the polynomial \( f(x) \), and justify your answer carefully.
+b.  Determine the Galois group \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \) for the polynomial \( f(x) \), and justify your answer carefully.
 
 c.  Exhibit a subfield \( K \) in \( (b) \) such that \( {\mathbb{Q}}\leq K \leq E \) with \( K \) not a Galois extension over \( {\mathbb{Q}} \). Explain.
 
@@ -2541,11 +2609,11 @@ c.  Determine the Galois group of \( E \) over \( {\mathbb{Q}} \) and determine 
 
 ## Fall 2015 \#6 \( \work \) {#fall-2015-6-work}
 
-a.  Let \( G \) be a finite group. Show that there exists a field extension \( K/F \) with \( \operatorname{Gal}(K/F) = G \).
+a.  Let \( G \) be a finite group. Show that there exists a field extension \( K/F \) with \( { \operatorname{Gal}} (K/F) = G \).
 
     > You may assume that for any natural number \( n \) there is a field extension with Galois group \( S_n \).
 
-b.  Let \( K \) be a Galois extension of \( F \) with \( {\left\lvert {\operatorname{Gal}(K/F)} \right\rvert} = 12 \). Prove that there exists an intermediate field \( E \) of \( K/F \) with \( [E: F] = 3 \).
+b.  Let \( K \) be a Galois extension of \( F \) with \( {\left\lvert {{ \operatorname{Gal}} (K/F)} \right\rvert} = 12 \). Prove that there exists an intermediate field \( E \) of \( K/F \) with \( [E: F] = 3 \).
 
 c.  With \( K/F \) as in (b), does an intermediate field \( L \) necessarily exist satisfying \( [L: F] = 2 \)? Give a proof or counterexample.
 
@@ -2615,15 +2683,15 @@ c.  Give an example of a finite extension \( L/K \) that is not separable.
 
 ## Fall 2013 \#6 \( \work \) {#fall-2013-6-work}
 
-Let \( K \) be the splitting field of \( x^4-2 \) over \( {\mathbb{Q}} \) and set \( G = \operatorname{Gal}(K/{\mathbb{Q}}) \).
+Let \( K \) be the splitting field of \( x^4-2 \) over \( {\mathbb{Q}} \) and set \( G = { \operatorname{Gal}} (K/{\mathbb{Q}}) \).
 
 a.  Show that \( K/{\mathbb{Q}} \) contains both \( {\mathbb{Q}}(i) \) and \( {\mathbb{Q}}(\sqrt[4]{2}) \) and has degree 8 over \( {\mathbb{Q}} \)/
 
-b.  Let \( N = \operatorname{Gal}(K/{\mathbb{Q}}(i)) \) and \( H = \operatorname{Gal}(K/{\mathbb{Q}}(\sqrt[4]{2})) \). Show that \( N \) is normal in \( G \) and \( NH = G \).
+b.  Let \( N = { \operatorname{Gal}} (K/{\mathbb{Q}}(i)) \) and \( H = { \operatorname{Gal}} (K/{\mathbb{Q}}(\sqrt[4]{2})) \). Show that \( N \) is normal in \( G \) and \( NH = G \).
 
     > Hint: what field is fixed by \( NH \)?
 
-c.  Show that \( \operatorname{Gal}(K/{\mathbb{Q}}) \) is generated by elements \( \sigma, \tau \), of orders 4 and 2 respectively, with \( \tau \sigma\tau^{-1}= \sigma^{-1} \).
+c.  Show that \( { \operatorname{Gal}} (K/{\mathbb{Q}}) \) is generated by elements \( \sigma, \tau \), of orders 4 and 2 respectively, with \( \tau \sigma\tau^{-1}= \sigma^{-1} \).
 
     > Equivalently, show it is the dihedral group of order 8.
 
@@ -2633,15 +2701,15 @@ d.  How many distinct quartic subfields of \( K \) are there? Justify your answe
 
 Let \( f(x) = g(x) h(x) \in {\mathbb{Q}}[x] \) and \( E,B,C/{\mathbb{Q}} \) be the splitting fields of \( f,g,h \) respectively.
 
-a.  Prove that \( \operatorname{Gal}(E/B) \) and \( \operatorname{Gal}(E/C) \) are normal subgroups of \( \operatorname{Gal}(E/{\mathbb{Q}}) \).
+a.  Prove that \( { \operatorname{Gal}} (E/B) \) and \( { \operatorname{Gal}} (E/C) \) are normal subgroups of \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \).
 
-b.  Prove that \( \operatorname{Gal}(E/B) \cap\operatorname{Gal}(E/C) = \left\{{1}\right\} \).
+b.  Prove that \( { \operatorname{Gal}} (E/B) \cap{ \operatorname{Gal}} (E/C) = \left\{{1}\right\} \).
 
-c.  If \( B\cap C = {\mathbb{Q}} \), show that \( \operatorname{Gal}(E/B) \operatorname{Gal}(E/C) = \operatorname{Gal}(E/{\mathbb{Q}}) \).
+c.  If \( B\cap C = {\mathbb{Q}} \), show that \( { \operatorname{Gal}} (E/B) { \operatorname{Gal}} (E/C) = { \operatorname{Gal}} (E/{\mathbb{Q}}) \).
 
-d.  Under the hypothesis of (c), show that \( \operatorname{Gal}(E/{\mathbb{Q}}) \cong \operatorname{Gal}(E/B) \times \operatorname{Gal}(E/C) \).
+d.  Under the hypothesis of (c), show that \( { \operatorname{Gal}} (E/{\mathbb{Q}}) \cong { \operatorname{Gal}} (E/B) \times { \operatorname{Gal}} (E/C) \).
 
-e.  Use (d) to describe \( \operatorname{Gal}({\mathbb{Q}}[\alpha]/{\mathbb{Q}}) \) where \( \alpha = \sqrt 2 + \sqrt 3 \).
+e.  Use (d) to describe \( { \operatorname{Gal}} ({\mathbb{Q}}[\alpha]/{\mathbb{Q}}) \) where \( \alpha = \sqrt 2 + \sqrt 3 \).
 
 ## Spring 2013 \#8 \( \work \) {#spring-2013-8-work}
 
@@ -2649,7 +2717,7 @@ Let \( F \) be the field with 2 elements and \( K \) a splitting field of \( f(x
 
 a.  Show that if \( r \) is a root of \( f \) in \( K \), then \( r^9 = 1 \) but \( r^3\neq 1 \).
 
-b.  Find \( \operatorname{Gal}(K/F) \) and express each intermediate field between \( F \) and \( K \) as \( F(\beta) \) for an appropriate \( \beta \in K \).
+b.  Find \( { \operatorname{Gal}} (K/F) \) and express each intermediate field between \( F \) and \( K \) as \( F(\beta) \) for an appropriate \( \beta \in K \).
 
 ## Fall 2012 \#3 \( \work \) {#fall-2012-3-work}
 
@@ -2661,11 +2729,11 @@ Let \( f(x) \in {\mathbb{Q}}[x] \) be a polynomial and \( K \) be a splitting fi
 
 ## Spring 2012 \#1 \( \work \) {#spring-2012-1-work}
 
-Suppose that \( F\subset E \) are fields such that \( E/F \) is Galois and \( {\left\lvert {\operatorname{Gal}(E/F)} \right\rvert} = 14 \).
+Suppose that \( F\subset E \) are fields such that \( E/F \) is Galois and \( {\left\lvert {{ \operatorname{Gal}} (E/F)} \right\rvert} = 14 \).
 
 a.  Show that there exists a unique intermediate field \( K \) with \( F\subset K \subset E \) such that \( [K: F] = 2 \).
 
-b.  Assume that there are at least two distinct intermediate subfields \( F \subset L_1, L_2 \subset E \) with \( [L_i: F]= 7 \). Prove that \( \operatorname{Gal}(E/F) \) is nonabelian.
+b.  Assume that there are at least two distinct intermediate subfields \( F \subset L_1, L_2 \subset E \) with \( [L_i: F]= 7 \). Prove that \( { \operatorname{Gal}} (E/F) \) is nonabelian.
 
 ## Spring 2012 \#4 \( \work \) {#spring-2012-4-work}
 
@@ -2717,6 +2785,29 @@ c.  Exhibit explicitly the correspondence between subgroups of \( G \) and inter
 Let \( p \) be a prime number and let \( F \) be a field of characteristic \( p \). Show that if \( a\in F \) is not a \( p \)th power in \( F \), then \( x^p-a \in F[x] \) is irreducible.
 
 ::: {.strategy}
+```{=tex}
+\envlist
+```
+-   Contradiction: go to splitting field, apply Freshman's dream.
+-   Use that this polynomial is ramified, and its only factors are \( (x-a) \).
+:::
+
+::: {.solution title="Likely the 'right' solution"}
+```{=tex}
+\envlist
+```
+-   Suppose \( a \) is not a \( p \)th power in \( F \), then \( f(x) \coloneqq x^p-a \) has no roots in \( F \).
+-   Toward a contradiction, suppose \( f \) is reducible in \( F[x] \).
+-   In \( \operatorname{SF}(f) \), since \( \operatorname{ch}F = p \) we have \( f(x) = (x-\zeta)^p \) for some \( \zeta = a^{1\over p} \).
+    -   So if \( f \) is reducible in \( F[x] \), we have \( f(x) = p_1(x) p_2(x) \) where \( p(x) = (x-\zeta)^q\in F[x] \) for some \( 1\leq q < p \), since these are the only factors of \( f \).
+    -   The claim is that \( \zeta\in F \) as well, which is a contradiction since \( \zeta \) is a \( p \)th root of \( a \).
+-   We have \( x^q-\zeta^q \in F[x] \), so \( \zeta^q\in F \).
+-   We know \( a = \zeta^p\in F \), and thus \( \zeta^{d} = \zeta\in F \) for \( d \coloneqq\gcd(p, n) = 1 \). \( \contradiction \)
+    -   Why this is true: write \( d = \gcd(p, n) \) in \( {\mathbb{Z}} \) to obtain \( d = tp + sn \) for some \( t, s \).
+    -   Then \( \zeta^d = \zeta^{tp+sn} = (\zeta^p)^t \cdot (\zeta^n)^s \in F \).
+:::
+
+::: {.strategy title="for an alternative solution"}
 ```{=tex}
 \envlist
 ```
@@ -2790,7 +2881,29 @@ c.  Find all subfields of the splitting field of \( f(x) \) over \( {\mathbb{Q}}
 
 ## Fall 2020 \#4 \( \work \) {#fall-2020-4-work}
 
-Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq\operatorname{Gal}(K/F) \) and \( H \coloneqq\operatorname{Gal}(K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \pmod p \).
+Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq{ \mathsf{Gal}} (K/F) \) and \( H \coloneqq{ \mathsf{Gal}} (K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \operatorname{mod}p \).
+
+## Exercises
+
+::: {.exercise title="?"}
+Let \( p \in \mathbb{Z} \) be a prime number. Then describe the elements of the Galois group of the polynomial \( x^{p}-2 \).
+:::
+
+::: {.solution}
+\( {\mathbb{Q}}(2^{1\over p}, \zeta_p) \), which has degree \( p(p-1) \) and is generated by the maps
+\[
+\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
+\zeta & \mapsto \zeta^{b}
+.\]
+:::
+
+::: {.exercise title="?"}
+Compute the Galois group of \( x^2-2 \).
+:::
+
+::: {.solution}
+\( {\mathbb{Z}}/2{\mathbb{Z}} \)?
+:::
 
 # Modules
 
@@ -2838,7 +2951,14 @@ By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composi
 :::
 
 ::: {.proof title="of c"}
-Let \( G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\} \), and suppose \( H < G \) is a proper subgroup.
+```{=tex}
+\envlist
+```
+-   Let \( G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\} \), and suppose \( H < G \) is a proper submodule.
+
+-   Since \( H\neq G \), there is some \( p \) and some \( k \) such that \( \zeta_{p^k}\not\in H \).
+
+    -   Otherwise, if \( H \) contains every \( \zeta_{p^k} \) it contains every \( \zeta_n \)
 
 Then there must be a prime \( p \) such that the \( \zeta_{p^k} \not \in H \) for all \( k \) greater than some constant \( m \) -- otherwise, we can use the fact that if \( \zeta_{p^k} \in H \) then \( \zeta_{p^\ell} \in H \) for all \( \ell \leq k \), and if \( \zeta_{p^k} \in H \) for all \( p \) and all \( k \) then \( H = G \).
 
@@ -3457,7 +3577,7 @@ If \( A \in \operatorname{GL}(m, {\mathbb{F}}) \) is invertible and \( A^n/{\mat
 
     where \( \left\{{\lambda_i}\right\}_{i=1}^m \subset {\mathbb{F}} \) are the **distinct** eigenvalues of \( A^n \).
 
--   Moreover \( A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}}) \): \( A \) is invertible \( \iff \det(A) = d \in {\mathbb{F}}^{\times} \), and so \( \det(A^n) = \det(A)^n = d^n \in {\mathbb{F}}^{\times} \) using the fact that the determinant is a ring morphism \( \det: \operatorname{Mat}(m\times m) \to{\mathbb{F}} \) and \( {\mathbb{F}}^{\times} \) is closed under multiplication.
+-   Moreover \( A\in \operatorname{GL}(m,{\mathbb{F}}) \implies A^n \in \operatorname{GL}(m,{\mathbb{F}}) \): \( A \) is invertible \( \iff \operatorname{det}(A) = d \in {\mathbb{F}}^{\times} \), and so \( \operatorname{det}(A^n) = \operatorname{det}(A)^n = d^n \in {\mathbb{F}}^{\times} \) using the fact that the determinant is a ring morphism \( \operatorname{det}: \operatorname{Mat}(m\times m) \to{\mathbb{F}} \) and \( {\mathbb{F}}^{\times} \) is closed under multiplication.
 
 -   So \( A^n \) is invertible, and thus has trivial kernel, and thus zero is not an eigenvalue, so \( \lambda_i \neq 0 \) for any \( i \).
 
@@ -3504,7 +3624,7 @@ b.  Exhibit with justification a subset \( S \) of \( M_{m, n}(k) \) which conta
 
 ## \( \star \) Spring 2014 \#7 \( \work \) {#star-spring-2014-7-work}
 
-Let \( G = \operatorname{GL}(3, {\mathbb{Q}}[x]) \) be the group of invertible \( 3\times 3 \) matrices over \( {\mathbb{Q}}[x] \). For each \( f\in {\mathbb{Q}}[x] \), let \( S_f \) be the set of \( 3\times 3 \) matrices \( A \) over \( {\mathbb{Q}}[x] \) such that \( \det(A) = c f(x) \) for some nonzero constant \( c\in {\mathbb{Q}} \).
+Let \( G = \operatorname{GL}(3, {\mathbb{Q}}[x]) \) be the group of invertible \( 3\times 3 \) matrices over \( {\mathbb{Q}}[x] \). For each \( f\in {\mathbb{Q}}[x] \), let \( S_f \) be the set of \( 3\times 3 \) matrices \( A \) over \( {\mathbb{Q}}[x] \) such that \( \operatorname{det}(A) = c f(x) \) for some nonzero constant \( c\in {\mathbb{Q}} \).
 
 a.  Show that for \( (P, Q) \in G\times G \) and \( A\in S_f \), the formula
     \[
@@ -3516,7 +3636,7 @@ b.  For \( f(x) = x^3(x^2+1)^2 \), give one representative from each orbit of th
 
 ## Fall 2012 \#7 \( \work \) {#fall-2012-7-work}
 
-Let \( k \) be a field of characteristic zero and \( A, B \in M_n(k) \) be two square \( n\times n \) matrices over \( k \) such that \( AB - BA = A \). Prove that \( \det A = 0 \).
+Let \( k \) be a field of characteristic zero and \( A, B \in M_n(k) \) be two square \( n\times n \) matrices over \( k \) such that \( AB - BA = A \). Prove that \( \operatorname{det}A = 0 \).
 
 Moreover, when the characteristic of \( k \) is 2, find a counterexample to this statement.
 
@@ -3553,7 +3673,7 @@ b.  If \( k\in F[x] \) is nonzero and of degree strictly less than \( g \), then
 
 ## Fall 2015 \#8 \( \work \) {#fall-2015-8-work}
 
-Let \( V \) be a vector space over a field \( F \) and \( V {}^{ \check{} } \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
+Let \( V \) be a vector space over a field \( F \) and \( V {}^{ \vee } \) its dual. A *symmetric bilinear form* \( ({-}, {-}) \) on \( V \) is a map \( V\times V\to F \) satisfying
 \[
 (av_1 + b v_2, w) = a(v_1, w) + b(v_2, w) {\quad \operatorname{and} \quad} (v_1, v_2) = (v_2, v_1)
 \]
@@ -3568,7 +3688,7 @@ a.  Show that if \( X, Y \) are subspaces of \( V \) with \( Y\subset X \), then
 
 b.  Define an injective linear map
     \[
-    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \check{} }
+    \psi: Y^{\perp}/X^{\perp} \hookrightarrow(X/Y) {}^{ \vee }
     \]
     which is an isomorphism if \( V \) is finite dimensional.
 
@@ -3646,38 +3766,43 @@ so \( B = p(A) \) as operators since their actions agree on every basis vector i
 :::
 
 ::: {.proof title="of b, $\\implies$"}
-\( \implies \):
+```{=tex}
+\envlist
+```
+-   If \( \left\{{A^j \mathbf{v}_k {~\mathrel{\Big|}~}0\leq j \leq n-1}\right\} \) is linearly independent, this means that \( A \) does satisfy any polynomial of degree \( d < n \).
 
-If \( \left\{{A^j \mathbf{v}_k {~\mathrel{\Big|}~}0\leq j \leq n-1}\right\} \) is linearly independent, this means that \( A \) does satisfy any polynomial of degree \( d < n \).
-
-So \( \deg m_A(x) = n \), and since \( m_A(x) \) divides \( \chi_A(x) \) and both are monic degree polynomials of degree \( n \), they must be equal.
+-   So \( \deg m_A(x) = n \), and since \( m_A(x) \) divides \( \chi_A(x) \) and both are monic degree polynomials of degree \( n \), they must be equal.
 :::
 
 ::: {.proof title="of b, $\\impliedby$"}
-\( \impliedby \):
+```{=tex}
+\envlist
+```
+-   Let \( A\curvearrowright k[x] \) by \( A \curvearrowright p(x) \coloneqq p(A) \). This induces an invariant factor decomposition \( V =\cong \bigoplus k[x]/(f_i) \).
 
-Let \( A\curvearrowright k[x] \) by \( A \curvearrowright p(x) \coloneqq p(A) \). This induces an invariant factor decomposition \( V =\cong \bigoplus k[x]/(f_i) \). Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
-\[
-V\cong \frac{k[x]}{(\chi_A(x))}
-\]
-as an isomorphism of \( k[x]{\hbox{-}} \)modules.
+-   Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
+    \[
+    V\cong \frac{k[x]}{(\chi_A(x))}
+    \]
+    as an isomorphism of \( k[x]{\hbox{-}} \)modules.
 
-So \( V \) is a cyclic \( k[x] \) module, which means that \( V = k[x]\curvearrowright\mathbf{v} \) for some \( \mathbf{v}\in V \) such that \( \operatorname{Ann}(\mathbf{v}) = \chi_A(x) \), i.e. there is some element \( \mathbf{v}\in V \) whose orbit is all of \( V \).
+-   So \( V \) is a cyclic \( k[x] \) module, which means that \( V = k[x]\curvearrowright\mathbf{v} \) for some \( \mathbf{v}\in V \) such that \( \operatorname{Ann}(\mathbf{v}) = \chi_A(x) \), i.e. there is some element \( \mathbf{v}\in V \) whose orbit is all of \( V \).
 
-But then noting that monomials span \( k[x] \) as a \( k{\hbox{-}} \)module, we can write
-\[
-V &\cong
-k[x] \curvearrowright\mathbf{v} \\
-&\coloneqq\left\{{f(x) \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}f \in k[x]}\right\} \\
-&= {\operatorname{span}}_k \left\{{x^k \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\} \\
-&\coloneqq{\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\}
-.\]
+-   But then noting that monomials span \( k[x] \) as a \( k{\hbox{-}} \)module, we can write
+    \[
+    V &\cong
+    k[x] \curvearrowright\mathbf{v} \\
+    &\coloneqq\left\{{f(x) \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}f \in k[x]}\right\} \\
+    &= {\operatorname{span}}_k \left\{{x^k \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\} \\
+    &\coloneqq{\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\}
+    ,\]
+    where we've used that \( x \) acts by \( A \) and thus \( x^k \) acts by \( A^k \).
 
-Moreover, we can note that if \( \ell \geq \deg \chi_A(x) \), then \( A^\ell \) is a linear combination of \( \left\{{A^j \mathrel{\Big|}0 \leq j \leq n-1}\right\} \), and so
-\[
-V &\cong {\operatorname{span}}_k \left\{{A^\ell\mathbf{v} {~\mathrel{\Big|}~}\ell \geq 0}\right\} \\
-&= {\operatorname{span}}_k \left\{{A^\ell \mathbf{v} {~\mathrel{\Big|}~}1 \leq \ell \leq n-1}\right\}
-.\]
+-   Moreover, we can note that if \( \ell \geq \deg \chi_A(x) \), then \( A^\ell \) is a linear combination of \( \left\{{A^j \mathrel{\Big|}0 \leq j \leq n-1}\right\} \), and so
+    \[
+    V &\cong {\operatorname{span}}_k \left\{{A^\ell\mathbf{v} {~\mathrel{\Big|}~}\ell \geq 0}\right\} \\
+    &= {\operatorname{span}}_k \left\{{A^\ell \mathbf{v} {~\mathrel{\Big|}~}1 \leq \ell \leq n-1}\right\}
+    .\]
 :::
 :::
 
@@ -3692,15 +3817,15 @@ Let \( \cdot \) be a non-degenerate (\( v \cdot w = 0 \) for all \( w \in V \iff
 
 Define the dual of \( \Lambda \) to be
 \[
-\Lambda  {}^{ \check{} }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
+\Lambda  {}^{ \vee }\coloneqq\{v \in V {~\mathrel{\Big|}~}v \cdot x \in {\mathbb{Z}}\text{ for all } x \in \Lambda
 \}
 .\]
 
-a.  Show that \( \Lambda \subset \Lambda  {}^{ \check{} } \).
+a.  Show that \( \Lambda \subset \Lambda  {}^{ \vee } \).
 
-b.  Prove that \( \det M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda {}^{ \check{} } \).
+b.  Prove that \( \operatorname{det}M \neq 0 \) and that the rows of \( M^{-1} \) span \( \Lambda {}^{ \vee } \).
 
-c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
+c.  Prove that \( \operatorname{det}M = |\Lambda {}^{ \vee }/\Lambda| \).
 
 ```{=tex}
 \todo[inline]{Todo, missing part (c).}
@@ -3721,7 +3846,7 @@ c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
     &= {\left\langle {\sum_{i=1}^n r_i \mathbf{e}_i},~{\sum_{j=1}^n s_j \mathbf{e}_j } \right\rangle} \\
     &= \sum_{i=1}^n \sum_{j=1}^n r_i s_j {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j } \right\rangle}  \in {\mathbb{Z}}
     \]
-    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda {}^{ \check{} } \) by definition.
+    since this is a sum of products of integers (since \( {\left\langle {\mathbf{e}_i},~{\mathbf{e}_j} \right\rangle} \in {\mathbb{Z}} \) for each \( i, j \) pair by assumption) so \( \mathbf{v} \in \Lambda {}^{ \vee } \) by definition.
 :::
 
 ::: {.proof title="of b"}
@@ -3729,7 +3854,7 @@ c.  Prove that \( \det M = |\Lambda {}^{ \check{} }/\Lambda| \).
 The determinant is nonzero.
 :::
 
--   Suppose \( \det M = 0 \). Then \( \ker M \neq \mathbf{0} \), so let \( \mathbf{v} \in \ker M \) be given by \( \mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0} \).
+-   Suppose \( \operatorname{det}M = 0 \). Then \( \ker M \neq \mathbf{0} \), so let \( \mathbf{v} \in \ker M \) be given by \( \mathbf{v} = \sum_{i=1}^n v_i \mathbf{e}_i \neq \mathbf{0} \).
 
 -   Note that
     \[
@@ -3778,25 +3903,25 @@ since \( A \) has full rank because the \( \mathbf{e}_i \) are linearly independ
 Let \( A = [\mathbf{e}_1^t, \cdots, \mathbf{e}_n^t] \) be the matrix with \( \mathbf{e}_i \) in the \( i \)th column.
 
 ::: {.claim}
-The rows of \( A^{-1} \) span \( \Lambda {}^{ \check{} } \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda {}^{ \check{} } \).
+The rows of \( A^{-1} \) span \( \Lambda {}^{ \vee } \). Equivalently, the columns of \( A^{-t} \) span \( \Lambda {}^{ \vee } \).
 :::
 
 -   Let \( B = A^{-t} \) and let \( \mathbf{b}_i \) denote the columns of \( B \), so \( \operatorname{im}B = {\operatorname{span}}{\left\{{\mathbf{b}_i}\right\}} \).
 
 -   Since \( A \in \operatorname{GL}(n, {\mathbb{Z}}) \), \( A^{-1}, A^t, A^{-t} \in \operatorname{GL}(n, {\mathbb{Z}}) \) as well.
     \[
-    \mathbf{v} \in \Lambda {}^{ \check{} }
+    \mathbf{v} \in \Lambda {}^{ \vee }
     &\implies {\left\langle {\mathbf{e}_i},~{\mathbf{v}} \right\rangle} = z_i \in {\mathbb{Z}}\quad \forall i \\
     &\implies A^t \mathbf{v} = \mathbf{z} \coloneqq[z_1, \cdots, z_n] \in {\mathbb{Z}}^n \\
     &\implies \mathbf{v} = A^{-t} \mathbf{z} \coloneqq B\mathbf{z} \in \operatorname{im}B \\
     &\implies \mathbf{v} \in \operatorname{im}B \\
-    &\implies \Lambda {}^{ \check{} }\subseteq \operatorname{im}B
+    &\implies \Lambda {}^{ \vee }\subseteq \operatorname{im}B
     ,\]
     and
     \[
     B^t A = (A^{-t})^t A = A^{-1}A = I \\
     \implies \mathbf{b}_i \cdot \mathbf{e}_j = \delta_{ij} \in {\mathbb{Z}}\\
-    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda {}^{ \check{} }
+    \implies \operatorname{im}B \subseteq {\operatorname{span}}~ \Lambda {}^{ \vee }
     .\]
 :::
 
@@ -3858,12 +3983,12 @@ Let \( f \) be the characteristic polynomial of \( T \).
 
 -   Now expand along the first column block to obtain
     \[
-    \chi_{T, V}(x) \coloneqq\det([T]_{{\mathcal{B}}_V} - xI) = \det(B - xI)\cdot \det(D - xI) \coloneqq\chi_{T, W}(x) \cdot \det(D-xI)
+    \chi_{T, V}(x) \coloneqq\operatorname{det}([T]_{{\mathcal{B}}_V} - xI) = \operatorname{det}(B - xI)\cdot \operatorname{det}(D - xI) \coloneqq\chi_{T, W}(x) \cdot \operatorname{det}(D-xI)
     .\]
 
--   Claim: \( \det(D - xI) \in xF[x] \) is nontrivial
+-   Claim: \( \operatorname{det}(D - xI) \in xF[x] \) is nontrivial
 
--   The claim follows because this forces \( \deg(\det(D-xI)) \geq 1 \) and so \( \chi_{T, W}(x) \) is a proper divisor of \( \chi_{T, V}(x) \).
+-   The claim follows because this forces \( \deg(\operatorname{det}(D-xI)) \geq 1 \) and so \( \chi_{T, W}(x) \) is a proper divisor of \( \chi_{T, V}(x) \).
 
 -   Thus \( f \) is reducible.
 :::
@@ -3979,9 +4104,9 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( P^{-1}A P = J \).
 
-    > You should not need to compute \( P^{-1} \).
-
 c.  Write down the minimal polynomial of \( A \).
+
+> You should not need to compute \( P^{-1} \).
 
 ## Spring 2019 \#7 \( \done \) {#spring-2019-7-done}
 
@@ -4088,7 +4213,7 @@ Each vector of the form \( \mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1}
 -   Since the first component is fixed and we have \( p-1 \) choices for where to place a \( -1 \), this yields \( p-1 \) possibilities for \( \mathbf{p}_i \)
 -   These are linearly independent since the \( (p-1)\times (p-1) \) matrix \( {\left[ { \mathbf{p}_1^t, \cdots, \mathbf{p}_{p-1}^t} \right]} \) satisfies
     \[
-    \det 
+    \operatorname{det}
     \begin{bmatrix}
     1 & 1 & 1 & \cdots & 1\\
     -1 & 0  & 0 & \cdots & 0\\
@@ -4097,7 +4222,7 @@ Each vector of the form \( \mathbf{p}_i \coloneqq\mathbf{e}_1 - \mathbf{e}_{i+1}
     \vdots & \vdots  & \vdots & \ddots & \vdots \\
     0 & 0  & 0 & \cdots & -1\\
     \end{bmatrix}
-    &= (1) \cdot \det 
+    &= (1) \cdot \operatorname{det}
     \begin{bmatrix}
     -1 & 0  & 0 & \cdots & 0\\
     0 & -1  & 0 & \cdots & 0\\
@@ -4127,7 +4252,7 @@ For \( F = {\mathbb{F}}_p \), all eigenvalues/vectors still lie in \( {\mathbb{F
 
 -   A computation shows that \( (A+I)^2 = pA = 0 \in M_p({\mathbb{F}}_p) \) and \( (A+I) \neq 0 \), so \( \min_{A, {\mathbb{F}}_p}(x) = (x+1)^2 \).
     -   Thus the largest Jordan block corresponding to \( \lambda = -1 \) is of size 2
--   Can check that \( \det(A) = \pm 1 \in {\mathbb{F}}_p^{\times} \), so the vectors \( \mathbf{e}_1 - \mathbf{e}_i \) are still linearly independent and thus \( \dim E_{-1} = p-1 \)
+-   Can check that \( \operatorname{det}(A) = \pm 1 \in {\mathbb{F}}_p^{\times} \), so the vectors \( \mathbf{e}_1 - \mathbf{e}_i \) are still linearly independent and thus \( \dim E_{-1} = p-1 \)
     -   So there are \( p-1 \) Jordan blocks for \( \lambda = 0 \).
 
 Summary:
@@ -4190,7 +4315,7 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( P^{-1}AP = J \).
 
-    > You should not need to compute \( P^{-1} \).
+> You should not need to compute \( P^{-1} \).
 
 ## Spring 2017 \#6 \( \work \) {#spring-2017-6-work}
 
@@ -4242,13 +4367,13 @@ a.  Show that there does not exist any vector \( v\in V \) such that \( Tv = v \
 
 b.  Give all of the possible Jordan canonical forms of \( T \).
 
-## Spring 2021 \#1 \( \work \) {#spring-2021-1-work}
+## Spring 2021 \#1 \( \done \) {#spring-2021-1-done}
 
 Let m
 \[
 A \coloneqq
 \begin{bmatrix}
-r & 1 & -1 \\
+4 & 1 & -1 \\
 -6 & -1 & 2 \\
 2 & 1 & 1
 \end{bmatrix}
@@ -4259,9 +4384,130 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( J = P ^{-1}A P \).
 
+c.  Write down the minimal polynomial of \( A \).
+
 > You should not need to compute \( P^{-1} \)
 
-c.  Write down the minimal polynomial of \( A \).
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   \( \chi_A(t) = t^n - {\mathrm{tr}}\qty{\bigwedge\nolimits^1 A}t^{n-1} + {\mathrm{tr}}\qty{\bigwedge\nolimits^2 A}t^{n-2} - \cdots \pm \operatorname{det}(A) \)
+-   Finding generalized eigenvectors: let \( B = A-\lambda I \), get eigenvector \( v \), solve \( Bw_1 = v, Bw_2 = w_1, \cdots \) to get a Jordan block. Repeat with any other usual eigenvectors.
+-   Convention: construct Jordan blocks in decreasing order of magnitude of eigenvalues.
+-   Polynomial exponent data:
+    -   Minimal polynomial exponents: sizes of **largest** Jordan blocks.
+    -   Characteristic polynomial exponents: **sum of sizes** of Jordan blocks, i.e. how many times \( \lambda \) is on the diagonal of \( \operatorname{JCF}(A) \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+::: {.proof title="parts a and b"}
+```{=tex}
+\envlist
+```
+-   Write \( \chi_A(t) = t^3 - T_1 t^2 + T_2 t - T_3 \) where \( T_i \coloneqq{\mathrm{tr}}\qty{\bigwedge\nolimits^i A} \):
+    -   \( T_1 = {\mathrm{tr}}(A) = 4-1+1=4 \).
+    -   \( T_2 = (-1-2) + (4+2) + (-4-6) = 5 \).
+    -   \( T_3 = \operatorname{det}(A) = 4(-1-2) -1(-10) + (-1)(-6+2) = 2 \).
+-   So \( \chi_A(t) = t^3 - 4t^2 + 5t-2 \).
+-   Try rational roots test: \( r \in \left\{{\pm 2/1}\right\} \), and check that 2 is root.
+-   By polynomial long division, \( \chi_A(t) / (t-2) = t^2-2t+1 = (t-1)^2 \).
+-   So the eigenvalues are \( \lambda = 2, 1 \).
+-   \( \lambda = 2 \):
+    -   Set \( U\coloneqq A-\lambda I \), then find \( \operatorname{RREF}(U) \) to compute its kernel:
+        \[
+        U \coloneqq
+        \begin{bmatrix}
+        2 & 1 & -1
+        \\
+        -6 & -3 & 2
+        \\
+        2 & 1 & -1
+        \end{bmatrix}
+        \leadsto
+        \begin{bmatrix}
+        2 & 1 & 0
+        \\
+        0 & 0 & 1
+        \\
+        0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        which yields \( v_1 = [1,-2,0] \).
+-   \( \lambda = 2 \):
+    -   Similarly,
+        \[
+        U \coloneqq
+        \begin{bmatrix}
+        3 & 1 & -1 \\
+        -6 & -2 & 2 \\
+        2 & 1 & 0
+        \end{bmatrix}
+        \leadsto  
+        \begin{bmatrix}
+        1 & 0 & -1
+        \\
+        0 & 1 & 2
+        \\
+        0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        which yields \( v_2 = [1,-2,1] \).
+
+    -   Solve \( Uw = v_3 \):
+        \[
+        \begin{bmatrix}
+        3 & 1 & -1 & 1 \\
+        -6 & -2 & 2 & -2 \\
+        2 & 1 & 0 & 1
+        \end{bmatrix}
+        \leadsto
+        \begin{bmatrix}
+        1 & 0 & -1 & 0 \\
+        0 & 1 & 2 & 1 \\
+        0 & 0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        so take \( v_3 = [0,1,0] \).
+-   Putting things together:
+    \[
+    A &= P^{-1}J P \text{ where } \\
+    J = J_1(\lambda = 2) \oplus J_2(\lambda = 1) 
+    &=
+    \begin{bmatrix}
+    2 & 0 & 0
+    \\
+    0 & 1 & 1
+    \\
+    0 & 0 & 1
+    \end{bmatrix} \\
+    P = [v_1, v_2, v_3] 
+    &= 
+    \begin{bmatrix}
+    1 & 1 & 0
+    \\
+    -2 & -2 & 1
+    \\
+    0 & 1 & 0
+    \end{bmatrix}
+    .\]
+:::
+
+::: {.proof title="part c"}
+```{=tex}
+\envlist
+```
+-   Write \( \min_A(t) = (t-2)(t-1)^{\ell_1} \), then since \( \min_A(t) \) divides \( \chi_A(t) \) either \( \ell_1 = 1, 2 \).
+-   \( \ell_1 \) is the size of the **largest** block corresponding to \( \lambda = 1 \), which is size 2, so \( \lambda_1=2 \).
+-   Thus
+    \[
+    \min_A(t) = (t-2)(t-1)^2
+    .\]
+:::
+:::
 
 ## Fall 2020 \#5 \( \work \) {#fall-2020-5-work}
 
@@ -4280,3 +4526,70 @@ B \coloneqq
 a.  Find the minimal polynomial of \( B \).
 
 b.  Find a \( 3\times 3 \) matrix \( J \) in Jordan canonical form such that \( B = JPJ^{-1} \) where \( P \) is an invertible matrix.
+
+# Extra Problems
+
+> Many many fundamental problems here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/groups/>
+
+## Linear Algebra
+
+1.  For a division ring \( D \), let \( V_{i} \) be a finite dimensional vector space over \( D \) for \( i \in\{1, \ldots, k\} \). Suppose the sequence
+    \[
+    0 \longrightarrow V_{1} \longrightarrow V_{2} \longrightarrow \cdots V_{k} \longrightarrow 0
+    \]
+    is exact. Prove that \( \sum_{i=1}^{k}(-1)^{i} \operatorname{dim}_{D} V_{i}=0 \).
+2.  Prove that if \( A \) and \( B \) are invertible matrices over a field \( \boldsymbol{k} \), then \( A+\lambda B \) is invertible for all but finitely many \( \lambda \in \boldsymbol{k} \).
+3.  For the ring of \( n \times n \) matrices over a commutative unital ring \( R \), which we'll denote \( \operatorname{Mat}_{n}(R) \), recall the definition of the determinant map det: \( \operatorname{Mat}_{n}(R) \rightarrow R \). For \( A \in \operatorname{Mat}_{n}(R) \) also recall the definition of the classical adjoint \( A^{a} \) of \( A \). Prove that:
+
+-   \( \operatorname{det}\left(A^{a}\right)=\operatorname{det}(A)^{n-1} \)
+-   \( \left(A^{a}\right)^{a}=\operatorname{det}(A)^{n-2} A \)
+
+4.  If \( R \) is an integral domain and \( A \) is an \( n \times n \) matrix over \( R \), prove that if a system of linear equations \( A x=0 \) has a nonzero solution then \( \operatorname{det} A=0 \). Is the converse true? What if we drop the assumption that \( R \) is an integral domain?
+5.  What is the companion matrix \( M \) of the polynomial \( f=x^{2}-x+2 \) over \( C \) ? Prove that \( f \) is the minimal polynomial of \( M \).
+6.  Suppose that \( \phi \) and \( \psi \) are commuting endomorphisms of a finite dimensional vector space \( E \) over a field \( \boldsymbol{k} \), so \( \phi \psi=\psi \phi \).
+
+-   Prove that if \( k \) is algebraically closed, then \( \phi \) and \( \psi \) have a common eigenvector.
+-   Prove that if \( E \) has a basis consisting of eigenvectors of \( \phi \) and \( E \) has a basis consisting of eigenvectors of \( \psi \), then \( E \) has a basis consisting of vectors that are eigenvectors for both \( \phi \) and \( \psi \) simultaneously.
+
+## Galois Theory
+
+> Taken from here: <https://math.ucr.edu/~mpierce/teaching/qual-algebra/fun/galois/>
+
+1.  Suppose that for an extension field \( F \) over \( K \) and for \( a \in F \), we have that \( b \in F \) is algebraic over \( K(a) \) but transcendental over \( K \). Prove that \( a \) is algebraic over \( K(b) \).
+2.  Suppose that for a field \( F / K \) that \( a \in F \) is algebraic and has odd degree over \( K \). Prove that \( a^{2} \) is also algebraic and has odd degree over \( K \), and furthermore that \( K(a)=K\left(a^{2}\right) \)
+3.  For a polynomial \( f \in K[x] \), prove that if \( r \in F \) is a root of \( f \) then for any \( \sigma \in \mathbf{A u t}_{K} F, \sigma(r) \) is also a root of \( f \)
+4.  Prove that as extensions of \( \boldsymbol{Q}, \boldsymbol{Q}(x) \) is Galois over \( \boldsymbol{Q}\left(x^{2}\right) \) but not over \( \boldsymbol{Q}\left(x^{3}\right) \).
+5.  If \( F \) is over \( E \), and \( E \) is \( \quad \) over \( K \) is \( F \) necessarily over \( K \) ? Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+6.  If \( F \) is over \( K \), and \( E \) is an intermediate extension of \( F \) over \( K \), is \( F \) necessarily over \( E ? \) Answer this question for each of the words "algebraic," "normal," and "separable" in the blanks.
+7.  If \( F \) is some (not necessarily Galois) field extension over \( K \) such that \( [F: K]=6 \) and Aut \( _{K} F \simeq S_{3} \), then \( F \) is the splitting field of an irreducible cubic over \( K[x] \).
+8.  Recall the definition of the join of two subgroups \( H \vee G \) (or \( H+G \) ). For \( F \) a finite dimensional Galois extension over \( K \) and let \( A \) and \( B \) be intermediate extensions. Prove that
+
+```{=html}
+<!-- -->
+```
+a.  \( \operatorname{Aut}_{A B} F=\mathrm{Aut}_{A} F \cap \mathrm{Aut}_{B} F \)
+b.  Aut \( _{A \cap B} F=\mathrm{Aut}_{A} F \vee \mathrm{Aut}_{B} F \)
+
+```{=html}
+<!-- -->
+```
+9.  For a field \( K \) take \( f \in K[x] \) and let \( n=\operatorname{deg} f \). Prove that for a splitting field \( F \) of \( f \) over \( K \) that \( [F: K] \leq n ! \). Furthermore prove that \( [F: K] \) divides \( n ! \).
+10. Let \( F \) be the splitting field of \( f \in K[x] \) over \( K \). Prove that if \( g \in K[x] \) is irreducible and has a root in \( F \), then \( g \) splits into linear factors over \( F \).
+11. Prove that a finite field cannot be algebraically closed.
+12. For \( u=\sqrt{2+\sqrt{2}} \), What is the Galois group of \( \boldsymbol{Q}(u) \) over \( \boldsymbol{Q} ? \) What are the intermediate fields of the extension \( \boldsymbol{Q}(u) \) over \( \boldsymbol{Q} \) ?
+13. Characterize the splitting field and all intermediate fields of the polynomial \( \left(x^{2}-2\right)\left(x^{2}-3\right)\left(x^{2}-5\right) \) over \( Q \). Using this characterization, find a primitive element of the splitting field.
+14. Characterize the splitting field and all intermediate fields of the polynomial \( x^{4}-3 \) over \( Q \)
+15. Consider the polynomial \( f=x^{3}-x+1 \) in \( \boldsymbol{F}_{3}[x] \). Prove that \( f \) is irreducible. Calculate the degree of the splitting field of \( f \) over \( \boldsymbol{F}_{3} \) and the cardinality of the splitting field of \( f \).
+16. Given an example of a finite extension of fields that has infinitely many intermediate fields.
+17. Let \( u=\sqrt{3+\sqrt{2}} \). Is \( \boldsymbol{Q}(u) \) a splitting field of \( u \) over \( \boldsymbol{Q} \) ? (MathSE)
+18. Prove that the multiplicative group of units of a finite field must be cyclic, and so is generated by a single element.
+19. Prove that \( \boldsymbol{F}_{p^{n}} \) is the splitting field of \( x^{p^{n}}-x \) over \( \boldsymbol{F}_{p} \).
+20. Prove that for any positive integer \( n \) there is an irreducible polynomial of degree \( n \) over \( \boldsymbol{F}_{p} \)
+21. Recall the definition of a perfect field. Give an example of an imperfect field, and the prove that every finite field is perfect.
+22. For \( n>2 \) let \( \zeta_{n} \) denote a primitive \( n \) th root of unity over \( Q \). Prove that
+    \[
+    \left[\boldsymbol{Q}\left(\zeta_{n}+\zeta_{n}^{-1}: \boldsymbol{Q}\right)\right]=\frac{1}{2} \varphi(n)
+    \]
+    where \( \varphi \) is Euler's totient function.
+23. Suppose that a field \( K \) with characteristic not equal to 2 contains an primitive \( n \) th root of unity for some odd integer \( n \). Prove that \( K \) must also contain a primitive \( 2 n \) th root of unity.
+24. Prove that the Galois group of the polynomial \( x^{n}-1 \) over \( Q \) is abelian.
