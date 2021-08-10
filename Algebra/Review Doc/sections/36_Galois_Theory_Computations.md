@@ -21,15 +21,17 @@ Showing your polynomial is irreducible:
 
 Showing your polynomial is separable:
 
-- Show $f$ has distinct roots in $\bar{k}$.
-- For $f$ irreducible, $f$ is separable iff $f'(x) \not\equiv 0$.
+- Show directly that $f$ has distinct roots in $\bar{k}$ by factoring it.
 - For perfect fields, irreducibles are automatically separable.
+- For $f$ irreducible, $f$ is separable iff $f'(x) \not\equiv 0$.
 
 Showing your *extension* is separable:
 
 - Splitting fields of separable polynomials are automatically separable *and* normal (and thus Galois).
 - Extensions of a perfect field are automatically separable.
   - In particular, extensions over $\QQ$ or any $\ch k = 0$ are separable, and one only needs to show normality.
+- (Hard) Show $[L:k]_s = [L:k]$.
+- (Hard) Use that separability is a distinguished class.
 
 Showing your extension $K/k$ is Galois: 
 
