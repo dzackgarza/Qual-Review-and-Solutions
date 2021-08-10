@@ -671,6 +671,12 @@ If $L/K/k$ (not necessarily finite) with $L/K$ and $K/k$ both algebraic, then $L
 - It suffices to show $k(S, \alpha)/k(s)/k$ is finite, which follows from multiplicativity of degrees.
 :::
 
+
+:::{.remark}
+If $L/K/k$ with $\alpha$ algebraic over $L$, then $\alpha$ is algebraic over $K$ and $\min_{\alpha, L}$ divides $\min_{\alpha, K}$ (so minimal polynomials only get smaller in extensions).
+:::
+
+
 ### Normal Extensions
 
 :::{.corollary title="Normality satisfies the lifting property"}
