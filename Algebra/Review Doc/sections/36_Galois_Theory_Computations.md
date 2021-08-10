@@ -545,8 +545,17 @@ General cases:
 
 - $G(x^3-3x+1) = A_3$:
   - Check $\Delta = 81$, a perfect square in $\QQ$.
+:::
+
+
+:::{.example title="Quartics"}
+
+- $G(x^4+8x+12) = A_4$:
+  - The resolvent cubic is $x^3-48x+64$, which has no rational roots.
+  - $\Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2$, so $G=A_4$.
 
 :::
+
 
 :::{.example title="Indirect"}
 If $\deg f = 5$ with exactly 3 real roots and one non-real complex conjugate pair, then $G(f) = S_5$.
