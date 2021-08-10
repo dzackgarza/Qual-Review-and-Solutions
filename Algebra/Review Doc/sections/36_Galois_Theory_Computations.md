@@ -278,19 +278,28 @@ For $f = \sum a_k x^k$ monic,
 :::{.remark}
 Some special cases:
 
-- $f(x) = ax^2 + bx + c$: $\Delta = b^2-4ac$.
-- $f(x) = ax^3 + bx^2 + cx + d$: $\Delta = b²c² - 4ac³ - 4b³d - 27a²d² + 18abc$.
-- $f(x) = x³ + px + q$: $\Delta = -4p³-27q²$.
+- Quadratics: $f(x) = ax^2 + bx + c$: $\Delta = b^2-4ac$.
+- Cubics:
+  - General: $f(x) = ax^3 + bx^2 + cx + d$: $\Delta = b²c² - 4ac³ - 4b³d - 27a²d² + 18abc$.
+  - Depressed: $f(x) = x³ + px + q$: $\Delta = -4p³-27q²$.
+    - Note that you can depress a general cubic by substituting $t=x - {b\over 3a}$.
 :::
 
 
 :::{.example title="?"}
+For $f(x) = \prod_{i=1}^3 (x-r_i)$, we have
+\[
+\Delta_f 
+&= (r_1 - r_2)^2 (r_1 - r_3 )^2 \\
+&\quad (r_2 - r_3)^2
+.\]
+
 For $f(x) = \prod_{i=1}^4(x-r_i)$, we have
 \[
 \Delta_f 
 &= (r_1 - r_2)^2(r_1 - r_3)^2 (r_1 - r_4)^2 \\
-& (r_2 - r_3)^2 (r_2 - r_4)^2 \\
-& (r_3 - r_4)^2
+& \quad (r_2 - r_3)^2 (r_2 - r_4)^2 \\
+& \quad (r_3 - r_4)^2
 .\]
 
 In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
