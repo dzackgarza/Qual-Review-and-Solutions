@@ -14,6 +14,7 @@
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
 \newcommand\rref{\operatorname{RREF}}
+\newcommand\RREF{\operatorname{RREF}}
 \newcommand{\Tatesymbol}{\operatorname{TateSymb}}
 \newcommand\tilt[0]{ { \flat } }
 \newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
@@ -86,7 +87,8 @@
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\Id}[0]{\operatorname{Id}}
 \newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\JCF}[0]{\operatorname{JCF}}
+\newcommand{\RCF}[0]{\operatorname{RCF}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
@@ -483,7 +485,7 @@
 \renewcommand{\labelitemiii}{$\diamondsuit$}
 \renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
-\renewcommand{\mod}{\pmod}
+\renewcommand{\mod}{\operatorname{mod}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
@@ -1132,12 +1134,20 @@ Prove that $H$ is contained in the center of $G$.
 :::{.concept}
 \envlist
 
-1. Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
-  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff a union of conjugacy classes).
-2. Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
-  In particular, $\# C_g$ divides $\#G$.
-3. $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+- $x\in Z(G)$ iff $\# C_x = 1$, i.e. the size of its conjugacy class is one.
+- Normal subgroups are disjoint unions of (some) conjugacy classes in $G$.
+  - In fact, this is a characterization of normal subgroups (i.e. $H$ is normal iff $H$ is a union of conjugacy classes in $G$).
+  - Why: if $H\normal G$ then $ghg\inv \in H$ for all $g$, so $C_h \subseteq H$ and $\Union_h C_h = H$.
+  Conversely, if $H = \Union_{h\in H} C_h$, then $ghg\inv \in C_h \subseteq H$ and thus $gHg\inv = H$.
+- Orbit stabilizer theorem: $\# C_g = \# G/ \# K_g$ where $C_g$ is the centralizer and $K_g$ is the conjugacy class of $g$.
+  - In particular, $\# C_g$ divides $\#G$.
 :::
+
+
+:::{.strategy}
+Show an element $x$ is central by showing $\# C_x = 1$.
+:::
+
 
 :::{.proof title="?"}
 \envlist
@@ -1153,7 +1163,7 @@ H = \disjoint_{j\leq k} C_{i_j}
 - So
 \[
 H 
-= \disjoint_{j\leq k} C_{i_j} 
+= \Disjoint_{j\leq k} C_{i_j} 
 = C_{i_1}{\textstyle  \coprod} \displaystyle\Disjoint_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
 .\]
 
@@ -2448,20 +2458,22 @@ following:
 :::
 
 :::{.proof title="of b"}
-\envlist
+Let $\phi_r(x) \da rx$ be the multiplication map.
 
-- We identify $\ker \phi = \theset{x\in R \suchthat rx = 0}$, and since $r\neq 0$ by assumption, this implies each such $x$ is a zero divisor by definition (and $\ker \phi$ is nonempty by assumption).
+- Let $x\in \ker \phi_r \da \ts{x\in R \st rx = 0}$.
 
-- Similarly, we identify $\im \phi = \theset{y = rx \suchthat x\in R}$. 
-  So let $y\in \im \phi$.
+- Since $R$ is commutative $0 = rx = xr$, and so $r\in \ker \phi_x$, so $\ker \phi_x \neq 0$ and $x$ is a zero divisor by definition.
 
-- Since $r$ is a zero divisor, there exists some $z\in R$ such that $rz = 0$.
+- Let $y\in \im \phi_r \da \theset{y \da rx \suchthat x\in R}$, we want to show $\ker \phi_y$ is nontrivial by producing some $z$ such that $yz=0$.
+  Write $y\da rx$ for some $x\in R$.
 
-- But then 
+- Since $r$ is a zero divisor, we can produce some $z\neq 0 \in \ker \phi_r$, so $rz = 0$. 
+
+- Now using that $R$ is commutative, we can compute
 \[
-yz = rxz = xrz = x\cdot 0 = 0
-\]
-since $R$ is commutative, so $y$ is a zero divisor.
+yz = (rx)z = (xr)z = x (rz) = x(0) = 0
+,\]
+so $z\in \ker \phi_y$.
 :::
 
 :::{.proof title="of c"}
@@ -3838,7 +3850,12 @@ So $\abs{M/N}$ can not be composite, and therefore must be prime.
 :::
 
 :::{.proof title="of c"}
-Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper subgroup.
+\envlist
+
+- Let $G = \theset{x \in \CC \suchthat x^n=1 \text{ for some }n\in \NN}$, and suppose $H < G$ is a proper submodule.
+
+- Since $H\neq G$, there is some $p$ and some $k$ such that $\zeta_{p^k}\not\in H$.
+  - Otherwise, if $H$ contains every $\zeta_{p^k}$ it contains every $\zeta_n$
 
 Then there must be a prime $p$ such that the $\zeta_{p^k} \not \in H$ for all $k$ greater than some constant $m$ -- otherwise, we can use the fact that if $\zeta_{p^k} \in H$ then $\zeta_{p^\ell} \in H$ for all $\ell \leq k$, and if $\zeta_{p^k} \in H$ for all $p$ and all $k$ then $H = G$.
 
@@ -4707,38 +4724,38 @@ so $B = p(A)$ as operators since their actions agree on every basis vector in $V
 :::
 
 :::{.proof title="of b, $\implies$"}
-$\implies$:
+\envlist
 
-If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
+- If $\theset{A^j \vector v_k \suchthat 0\leq j \leq n-1}$ is linearly independent, this means that $A$ does satisfy any polynomial of degree $d < n$.
 
-So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
-
-
+- So $\deg m_A(x) = n$, and since $m_A(x)$ divides $\chi_A(x)$ and both are monic degree polynomials of degree $n$, they must be equal.
 :::
 
 :::{.proof title="of b, $\impliedby$"}
-$\impliedby$:
+\envlist
 
-Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
-This induces an invariant factor decomposition $V =\cong \bigoplus k[x]/(f_i)$.
-Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
+- Let $A\actson k[x]$ by $A \actson p(x) \definedas p(A)$.
+  This induces an invariant factor decomposition $V =\cong \bigoplus k[x]/(f_i)$.
+
+- Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
 $$
 V\cong \frac{k[x]}{(\chi_A(x))}
 $$
-as an isomorphism of $k[x]\dash$modules.
+  as an isomorphism of $k[x]\dash$modules.
 
-So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$, i.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
+- So $V$ is a cyclic $k[x]$ module, which means that $V = k[x]\actson \vector v$ for some $\vector v\in V$ such that $\ann(\vector v) = \chi_A(x)$, i.e. there is some element $\vector v\in V$ whose orbit is all of $V$.
 
-But then noting that monomials span $k[x]$ as a $k\dash$module, we can write
+- But then noting that monomials span $k[x]$ as a $k\dash$module, we can write
 \[
 V &\cong
 k[x] \actson \vector v \\
 &\definedas \theset{f(x) \actson \vector v \suchthat f \in k[x]} \\
 &= \spanof_k \theset{x^k \actson \vector v \suchthat k \geq 0} \\
 &\definedas \spanof_k \theset{A^k\vector v \suchthat k \geq 0}
-.\]
+,\]
+  where we've used that $x$ acts by $A$ and thus $x^k$ acts by $A^k$.
 
-Moreover, we can note that if $\ell \geq \deg \chi_A(x)$, then $A^\ell$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
+- Moreover, we can note that if $\ell \geq \deg \chi_A(x)$, then $A^\ell$ is a linear combination of $\theset{A^j \mid 0 \leq j \leq n-1}$, and so
 \[
 V &\cong \spanof_k \theset{A^\ell\vector v \suchthat \ell \geq 0} \\
 &= \spanof_k \theset{A^\ell \vector v \suchthat 1 \leq \ell \leq n-1}
@@ -5059,10 +5076,10 @@ Find the Jordan canonical form $J$ of $A$.
 b.
 Find an invertible matrix $P$ such that $P\inv A P = J$. 
 
-  > You should not need to compute $P\inv$.
-
 c.
 Write down the minimal polynomial of $A$.
+
+> You should not need to compute $P\inv$.
 
 ## Spring 2019 #7 $\done$ 
 Let $p$ be a prime number.
@@ -5274,7 +5291,7 @@ Find the Jordan canonical form $J$ of $A$.
 b.
 Find an invertible matrix $P$ such that $P\inv AP = J$. 
 
-  > You should not need to compute $P\inv$.
+> You should not need to compute $P\inv$.
 
 ## Spring 2017 #6 $\work$
 Let $A$ be an $n\times n$ matrix with all entries equal to $0$ except for the $n-1$ entries just above the diagonal being equal to 2.
@@ -5329,13 +5346,13 @@ Show that there does not exist any vector $v\in V$ such that $Tv = v$, but there
 b.
 Give all of the possible Jordan canonical forms of $T$.
 
-## Spring 2021 #1 $\work$
+## Spring 2021 #1 $\done$
 
 Let m
 \[
 A \da 
 \begin{bmatrix}
-r & 1 & -1 \\
+4 & 1 & -1 \\
 -6 & -1 & 2 \\
 2 & 1 & 1
 \end{bmatrix}
@@ -5348,10 +5365,133 @@ Find the Jordan canonical form $J$ of $A$.
 b. 
 Find an invertible matrix $P$ such that $J = P \inv A P$.
 
-  > You should not need to compute $P\inv$
-
 c. 
 Write down the minimal polynomial of $A$.
+
+> You should not need to compute $P\inv$
+
+:::{.concept}
+\envlist
+
+- $\chi_A(t) = t^n - \tr\qty{\Extpower^1 A}t^{n-1} + \tr\qty{\Extpower^2 A}t^{n-2} - \cdots \pm \det(A)$
+- Finding generalized eigenvectors: let $B = A-\lambda I$, get eigenvector $v$, solve $Bw_1 = v, Bw_2 = w_1, \cdots$ to get a Jordan block. 
+  Repeat with any other usual eigenvectors.
+- Convention: construct Jordan blocks in decreasing order of magnitude of eigenvalues.
+- Polynomial exponent data:
+  - Minimal polynomial exponents: sizes of **largest** Jordan blocks.
+  - Characteristic polynomial exponents: **sum of sizes** of Jordan blocks, i.e. how many times $\lambda$ is on the diagonal of $\JCF(A)$.
+
+:::
+
+:::{.solution}
+
+:::{.proof title="parts a and b"}
+\envlist
+
+- Write $\chi_A(t) = t^3 - T_1 t^2 + T_2 t - T_3$ where $T_i \da \tr\qty{\Extpower^i A}$:
+  - $T_1 = \tr(A) = 4-1+1=4$.
+  - $T_2 = (-1-2) + (4+2) + (-4-6) = 5$.
+  - $T_3 = \det(A) = 4(-1-2) -1(-10) + (-1)(-6+2) = 2$.
+- So $\chi_A(t) = t^3 - 4t^2 + 5t-2$.
+- Try rational roots test: $r \in \ts{\pm 2/1}$, and check that 2 is root.
+- By polynomial long division, $\chi_A(t) / (t-2) = t^2-2t+1 = (t-1)^2$.
+- So the eigenvalues are $\lambda = 2, 1$.
+- $\lambda = 2$:
+  - Set $U\da A-\lambda I$, then find $\RREF(U)$ to compute its kernel:
+  \[
+  U \da
+  \begin{bmatrix}
+  2 & 1 & -1
+  \\
+  -6 & -3 & 2
+  \\
+  2 & 1 & -1
+  \end{bmatrix}
+  \leadsto
+  \begin{bmatrix}
+  2 & 1 & 0
+  \\
+  0 & 0 & 1
+  \\
+  0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  which yields $v_1 = [1,-2,0]$.
+
+- $\lambda = 2$:
+  - Similarly,
+  \[
+  U \da 
+  \begin{bmatrix}
+  3 & 1 & -1 \\
+  -6 & -2 & 2 \\
+  2 & 1 & 0
+  \end{bmatrix}
+  \leadsto  
+  \begin{bmatrix}
+  1 & 0 & -1
+  \\
+  0 & 1 & 2
+  \\
+  0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  which yields $v_2 = [1,-2,1]$.
+
+  - Solve $Uw = v_3$:
+  \[
+  \begin{bmatrix}
+  3 & 1 & -1 & 1 \\
+  -6 & -2 & 2 & -2 \\
+  2 & 1 & 0 & 1
+  \end{bmatrix}
+  \leadsto
+  \begin{bmatrix}
+  1 & 0 & -1 & 0 \\
+  0 & 1 & 2 & 1 \\
+  0 & 0 & 0 & 0
+  \end{bmatrix}
+  ,\]
+  so take $v_3 = [0,1,0]$.
+
+- Putting things together:
+\[
+A &= P\inv J P \text{ where } \\
+J = J_1(\lambda = 2) \oplus J_2(\lambda = 1) 
+&=
+\begin{bmatrix}
+2 & 0 & 0
+\\
+0 & 1 & 1
+\\
+0 & 0 & 1
+\end{bmatrix} \\
+P = [v_1, v_2, v_3] 
+&= 
+\begin{bmatrix}
+1 & 1 & 0
+\\
+-2 & -2 & 1
+\\
+0 & 1 & 0
+\end{bmatrix}
+.\]
+
+:::
+
+:::{.proof title="part c"}
+\envlist
+
+- Write $\min_A(t) = (t-2)(t-1)^{\ell_1}$, then since $\min_A(t)$ divides $\chi_A(t)$ either $\ell_1 = 1, 2$.
+- $\ell_1$ is the size of the **largest** block corresponding to $\lambda = 1$, which is size 2, so $\lambda_1=2$.
+- Thus 
+\[
+\min_A(t) = (t-2)(t-1)^2
+.\]
+
+:::
+
+:::
 
 
 ## Fall 2020 #5 $\work$

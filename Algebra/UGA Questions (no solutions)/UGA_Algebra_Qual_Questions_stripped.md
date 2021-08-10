@@ -394,12 +394,16 @@ Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \),
 ```{=tex}
 \envlist
 ```
-1.  Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+-   \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+-   Normal subgroups are disjoint unions of (some) conjugacy classes in \( G \).
+    -   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff \( H \) is a union of conjugacy classes in \( G \)).
+    -   Why: if \( H{~\trianglelefteq~}G \) then \( ghg^{-1}\in H \) for all \( g \), so \( C_h \subseteq H \) and \( \displaystyle\bigcup_h C_h = H \). Conversely, if \( H = \displaystyle\bigcup_{h\in H} C_h \), then \( ghg^{-1}\in C_h \subseteq H \) and thus \( gHg^{-1}= H \).
+-   Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \).
+    -   In particular, \( \# C_g \) divides \( \#G \).
+:::
 
--   In fact, this is a characterization of normal subgroups (i.e. \( H \) is normal iff a union of conjugacy classes).
-
-2.  Orbit stabilizer theorem: \( \# C_g = \# G/ \# K_g \) where \( C_g \) is the centralizer and \( K_g \) is the conjugacy class of \( g \). In particular, \( \# C_g \) divides \( \#G \).
-3.  \( x\in Z(G) \) iff \( \# C_x = 1 \), i.e. the size of its conjugacy class is one.
+::: {.strategy}
+Show an element \( x \) is central by showing \( \# C_x = 1 \).
 :::
 
 ::: {.proof title="?"}
@@ -422,7 +426,7 @@ Let \( H {~\trianglelefteq~}G \) be a normal subgroup of a finite group \( G \),
 -   So
     \[
     H 
-    = {\textstyle\coprod}_{j\leq k} C_{i_j} 
+    = \displaystyle\coprod_{j\leq k} C_{i_j} 
     = C_{i_1}{\textstyle  \coprod} \displaystyle\displaystyle\coprod_{\substack{ j\leq k \\ j\neq 1} } C_{i_j} 
     .\]
 
@@ -648,19 +652,19 @@ Let \( G \) be a group of order \( p^2q \) for \( p, q \) prime. Show that \( G 
 
 -   In any case, we have
     \[
-    n_p \divides q &,\, n_p \equiv 1 \pmod p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
-    n_q \divides p^2 &,\, n_q \equiv 1 \pmod q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+    n_p \divides q &,\, n_p \equiv 1 \operatorname{mod}p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
+    n_q \divides p^2 &,\, n_q \equiv 1 \operatorname{mod}q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
     .\]
 
 -   **Case 1:** \( :p>q \).
 
 -   If \( p>q \), then \( p\geq q+2 \) since \( p+1 \) can't be prime.
 
--   So \( q \) is not congruent to \( 1\pmod p \), forcing \( n_p = 1 \).
+-   So \( q \) is not congruent to \( 1\operatorname{mod}p \), forcing \( n_p = 1 \).
 
 -   **Case 2:**: \( p< q \):
 
--   For the same reasons as above, \( p\not\equiv 1\pmod q \) forces \( n_q\neq p \).
+-   For the same reasons as above, \( p\not\equiv 1\operatorname{mod}q \) forces \( n_q\neq p \).
 
 -   If \( n_q = 1 \), we're done.
 
@@ -998,7 +1002,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   The \( pqr \) theorem.
 
--   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \pmod p \).
+-   Sylow 3: \( {\left\lvert {G} \right\rvert} = p^n m \) implies \( n_p \divides m \) and \( n_p \cong 1 \operatorname{mod}p \).
 
 -   **Theorem**: If \( H, K \leq G \) and any of the following conditions hold, \( HK \) is a subgroup:
 
@@ -1006,7 +1010,7 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
     -   \( [H, K] = 1 \)
     -   \( H \leq N_G(K) \)
 
--   **Theorem**: For a positive integer \( n \), all groups of order \( n \) are cyclic \( \iff n \) is squarefree and, for each pair of distinct primes \( p \) and \( q \) dividing \( n \), \( q - 1 \neq 0 \pmod p \).
+-   **Theorem**: For a positive integer \( n \), all groups of order \( n \) are cyclic \( \iff n \) is squarefree and, for each pair of distinct primes \( p \) and \( q \) dividing \( n \), \( q - 1 \neq 0 \operatorname{mod}p \).
 
 -   **Theorem:**
     \[
@@ -1028,11 +1032,11 @@ d.  Prove that if \( P \) is normal in \( G \) then \( G \) is cyclic.
 ```
 -   We have
 
--   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \pmod 3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
+-   \( n_3 \divides 5\cdot 7, \quad n_3 \cong 1 \operatorname{mod}3 \implies n_3 \in \left\{{1, 5, 7, 35}\right\} \setminus \left\{{5, 35}\right\} \)
 
--   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \pmod 5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
+-   \( n_5 \divides 3\cdot 7, \quad n_5 \cong 1 \operatorname{mod}5 \implies n_5 \in \left\{{1, 3, 7, 21}\right\}\setminus \left\{{3, 7}\right\} \)
 
--   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
+-   \( n_7 \divides 3\cdot 5, \quad n_7 \cong 1 \operatorname{mod}7 \implies n_7 \in \left\{{1, 3, 5, 15}\right\}\setminus\left\{{3, 5}\right\} \)
 
 -   Thus
     \[
@@ -1159,7 +1163,7 @@ Describe a representative from each class.
 \envlist
 ```
 -   Sylow theorems:
--   \( n_p \cong 1 \pmod p \)
+-   \( n_p \cong 1 \operatorname{mod}p \)
 -   \( n_p \divides m \).
 :::
 
@@ -1272,8 +1276,8 @@ Strategy: examine \( {\left\lvert {G/Z(G)} \right\rvert} \) by cases.
 ```
 -   By Sylow
 
-    -   \( n_5 \divides 7^2,\quad n_5\cong 1\pmod 5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
-    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \pmod 7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
+    -   \( n_5 \divides 7^2,\quad n_5\cong 1\operatorname{mod}5 \implies n_5\in\left\{{1, 7, 49}\right\}\setminus\left\{{7, 49}\right\} = \left\{{1}\right\} \implies n_5 = 1 \)
+    -   \( n_7 \divides 5^2, \quad n_7 \cong 1 \operatorname{mod}7 \implies n_7 \in \left\{{1, 5, 25}\right\}\setminus\left\{{5, 25}\right\} =\left\{{1}\right\} \implies n_7 = 1 \)
 
 -   By recognition of direct products, \( G = S_5 \times S_7 \)
 
@@ -1320,7 +1324,7 @@ a.  Let \( \operatorname{Sym}G \) be the set of all bijections from \( G\to G \)
 
 b.  Let \( \Phi: \operatorname{Sym}G\to S_N \) be an isomorphism. For \( a\in G \) define \( {\varepsilon}(a) \in \left\{{\pm 1}\right\} \) to be the sign of the permutation \( \Phi(C(a)) \). Suppose that \( a \) has order \( d \). Prove that \( {\varepsilon}(a) = -1 \iff d \) is even and \( N/d \) is odd.
 
-c.  Suppose \( N> 2 \) and \( n\equiv 2 \pmod 4 \). Prove that \( G \) is not simple.
+c.  Suppose \( N> 2 \) and \( n\equiv 2 \operatorname{mod}4 \). Prove that \( G \) is not simple.
 
 > Hint: use part (b).
 
@@ -1332,7 +1336,7 @@ Let \( p, n \) be integers such that \( p \) is prime and \( p \) does not divid
 
 Let \( p, q \) be distinct primes.
 
-a.  Let \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p \) be the class of \( q\pmod p \) and let \( k \) denote the order of \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \) as an element of \( {\mathbb{Z}}_p^{\times} \). Prove that no group of order \( pq^k \) is simple.
+a.  Let \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \in {\mathbb{Z}}_p \) be the class of \( q\operatorname{mod}p \) and let \( k \) denote the order of \( \mkern 1.5mu\overline{\mkern-1.5muq\mkern-1.5mu}\mkern 1.5mu \) as an element of \( {\mathbb{Z}}_p^{\times} \). Prove that no group of order \( pq^k \) is simple.
 
 b.  Let \( G \) be a group of order \( pq \), and prove that \( G \) is not simple.
 
@@ -1636,20 +1640,21 @@ d.  Show that up to isomorphism there are exactly two commutative rings \( R \) 
 :::
 
 ::: {.proof title="of b"}
-```{=tex}
-\envlist
-```
--   We identify \( \ker \phi = \left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\} \), and since \( r\neq 0 \) by assumption, this implies each such \( x \) is a zero divisor by definition (and \( \ker \phi \) is nonempty by assumption).
+Let \( \phi_r(x) \coloneqq rx \) be the multiplication map.
 
--   Similarly, we identify \( \operatorname{im}\phi = \left\{{y = rx {~\mathrel{\Big|}~}x\in R}\right\} \). So let \( y\in \operatorname{im}\phi \).
+-   Let \( x\in \ker \phi_r \coloneqq\left\{{x\in R {~\mathrel{\Big|}~}rx = 0}\right\} \).
 
--   Since \( r \) is a zero divisor, there exists some \( z\in R \) such that \( rz = 0 \).
+-   Since \( R \) is commutative \( 0 = rx = xr \), and so \( r\in \ker \phi_x \), so \( \ker \phi_x \neq 0 \) and \( x \) is a zero divisor by definition.
 
--   But then
+-   Let \( y\in \operatorname{im}\phi_r \coloneqq\left\{{y \coloneqq rx {~\mathrel{\Big|}~}x\in R}\right\} \), we want to show \( \ker \phi_y \) is nontrivial by producing some \( z \) such that \( yz=0 \). Write \( y\coloneqq rx \) for some \( x\in R \).
+
+-   Since \( r \) is a zero divisor, we can produce some \( z\neq 0 \in \ker \phi_r \), so \( rz = 0 \).
+
+-   Now using that \( R \) is commutative, we can compute
     \[
-    yz = rxz = xrz = x\cdot 0 = 0
-    \]
-    since \( R \) is commutative, so \( y \) is a zero divisor.
+    yz = (rx)z = (xr)z = x (rz) = x(0) = 0
+    ,\]
+    so \( z\in \ker \phi_y \).
 :::
 
 ::: {.proof title="of c"}
@@ -1975,8 +1980,8 @@ c.  Prove that \( m = k \).
 -   Rephrasing (a), we have
     \[
     n \divides q^k-1 
-    &\iff q^k-1 \cong 0 \pmod n \\
-    &\iff q^k \cong 1 \pmod n \\
+    &\iff q^k-1 \cong 0 \operatorname{mod}n \\
+    &\iff q^k \cong 1 \operatorname{mod}n \\
     &\iff m \coloneqq o(q) \divides k
     .\]
 :::
@@ -2800,7 +2805,7 @@ c.  Find all subfields of the splitting field of \( f(x) \) over \( {\mathbb{Q}}
 
 ## Fall 2020 \#4 \( \work \) {#fall-2020-4-work}
 
-Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq{ \mathsf{Gal}} (K/F) \) and \( H \coloneqq{ \mathsf{Gal}} (K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \pmod p \).
+Let \( K \) be a Galois extension of \( F \), and let \( F \subset E \subset K \) be inclusions of fields. Let \( G \coloneqq{ \mathsf{Gal}} (K/F) \) and \( H \coloneqq{ \mathsf{Gal}} (K/E) \), and suppose \( H \) contains \( N_G(P) \), where \( P \) is a Sylow \( p \)-subgroup of \( G \) for \( p \) a prime. Prove that \( [E: F] \equiv 1 \operatorname{mod}p \).
 
 ## Exercises
 
@@ -2870,7 +2875,14 @@ By Cauchy's theorem, if \( {\left\lvert {M/N} \right\rvert} = ab \) is a composi
 :::
 
 ::: {.proof title="of c"}
-Let \( G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\} \), and suppose \( H < G \) is a proper subgroup.
+```{=tex}
+\envlist
+```
+-   Let \( G = \left\{{x \in {\mathbb{C}}{~\mathrel{\Big|}~}x^n=1 \text{ for some }n\in {\mathbb{N}}}\right\} \), and suppose \( H < G \) is a proper submodule.
+
+-   Since \( H\neq G \), there is some \( p \) and some \( k \) such that \( \zeta_{p^k}\not\in H \).
+
+    -   Otherwise, if \( H \) contains every \( \zeta_{p^k} \) it contains every \( \zeta_n \)
 
 Then there must be a prime \( p \) such that the \( \zeta_{p^k} \not \in H \) for all \( k \) greater than some constant \( m \) -- otherwise, we can use the fact that if \( \zeta_{p^k} \in H \) then \( \zeta_{p^\ell} \in H \) for all \( \ell \leq k \), and if \( \zeta_{p^k} \in H \) for all \( p \) and all \( k \) then \( H = G \).
 
@@ -3678,38 +3690,43 @@ so \( B = p(A) \) as operators since their actions agree on every basis vector i
 :::
 
 ::: {.proof title="of b, $\\implies$"}
-\( \implies \):
+```{=tex}
+\envlist
+```
+-   If \( \left\{{A^j \mathbf{v}_k {~\mathrel{\Big|}~}0\leq j \leq n-1}\right\} \) is linearly independent, this means that \( A \) does satisfy any polynomial of degree \( d < n \).
 
-If \( \left\{{A^j \mathbf{v}_k {~\mathrel{\Big|}~}0\leq j \leq n-1}\right\} \) is linearly independent, this means that \( A \) does satisfy any polynomial of degree \( d < n \).
-
-So \( \deg m_A(x) = n \), and since \( m_A(x) \) divides \( \chi_A(x) \) and both are monic degree polynomials of degree \( n \), they must be equal.
+-   So \( \deg m_A(x) = n \), and since \( m_A(x) \) divides \( \chi_A(x) \) and both are monic degree polynomials of degree \( n \), they must be equal.
 :::
 
 ::: {.proof title="of b, $\\impliedby$"}
-\( \impliedby \):
+```{=tex}
+\envlist
+```
+-   Let \( A\curvearrowright k[x] \) by \( A \curvearrowright p(x) \coloneqq p(A) \). This induces an invariant factor decomposition \( V =\cong \bigoplus k[x]/(f_i) \).
 
-Let \( A\curvearrowright k[x] \) by \( A \curvearrowright p(x) \coloneqq p(A) \). This induces an invariant factor decomposition \( V =\cong \bigoplus k[x]/(f_i) \). Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
-\[
-V\cong \frac{k[x]}{(\chi_A(x))}
-\]
-as an isomorphism of \( k[x]{\hbox{-}} \)modules.
+-   Since the product of the invariant factors is the characteristic polynomial, the largest invariant factor is the minimal polynomial, and these two are equal, there can only be one invariant factor and thus the invariant factor decomposition is
+    \[
+    V\cong \frac{k[x]}{(\chi_A(x))}
+    \]
+    as an isomorphism of \( k[x]{\hbox{-}} \)modules.
 
-So \( V \) is a cyclic \( k[x] \) module, which means that \( V = k[x]\curvearrowright\mathbf{v} \) for some \( \mathbf{v}\in V \) such that \( \operatorname{Ann}(\mathbf{v}) = \chi_A(x) \), i.e. there is some element \( \mathbf{v}\in V \) whose orbit is all of \( V \).
+-   So \( V \) is a cyclic \( k[x] \) module, which means that \( V = k[x]\curvearrowright\mathbf{v} \) for some \( \mathbf{v}\in V \) such that \( \operatorname{Ann}(\mathbf{v}) = \chi_A(x) \), i.e. there is some element \( \mathbf{v}\in V \) whose orbit is all of \( V \).
 
-But then noting that monomials span \( k[x] \) as a \( k{\hbox{-}} \)module, we can write
-\[
-V &\cong
-k[x] \curvearrowright\mathbf{v} \\
-&\coloneqq\left\{{f(x) \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}f \in k[x]}\right\} \\
-&= {\operatorname{span}}_k \left\{{x^k \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\} \\
-&\coloneqq{\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\}
-.\]
+-   But then noting that monomials span \( k[x] \) as a \( k{\hbox{-}} \)module, we can write
+    \[
+    V &\cong
+    k[x] \curvearrowright\mathbf{v} \\
+    &\coloneqq\left\{{f(x) \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}f \in k[x]}\right\} \\
+    &= {\operatorname{span}}_k \left\{{x^k \curvearrowright\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\} \\
+    &\coloneqq{\operatorname{span}}_k \left\{{A^k\mathbf{v} {~\mathrel{\Big|}~}k \geq 0}\right\}
+    ,\]
+    where we've used that \( x \) acts by \( A \) and thus \( x^k \) acts by \( A^k \).
 
-Moreover, we can note that if \( \ell \geq \deg \chi_A(x) \), then \( A^\ell \) is a linear combination of \( \left\{{A^j \mathrel{\Big|}0 \leq j \leq n-1}\right\} \), and so
-\[
-V &\cong {\operatorname{span}}_k \left\{{A^\ell\mathbf{v} {~\mathrel{\Big|}~}\ell \geq 0}\right\} \\
-&= {\operatorname{span}}_k \left\{{A^\ell \mathbf{v} {~\mathrel{\Big|}~}1 \leq \ell \leq n-1}\right\}
-.\]
+-   Moreover, we can note that if \( \ell \geq \deg \chi_A(x) \), then \( A^\ell \) is a linear combination of \( \left\{{A^j \mathrel{\Big|}0 \leq j \leq n-1}\right\} \), and so
+    \[
+    V &\cong {\operatorname{span}}_k \left\{{A^\ell\mathbf{v} {~\mathrel{\Big|}~}\ell \geq 0}\right\} \\
+    &= {\operatorname{span}}_k \left\{{A^\ell \mathbf{v} {~\mathrel{\Big|}~}1 \leq \ell \leq n-1}\right\}
+    .\]
 :::
 :::
 
@@ -4011,9 +4028,9 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( P^{-1}A P = J \).
 
-    > You should not need to compute \( P^{-1} \).
-
 c.  Write down the minimal polynomial of \( A \).
+
+> You should not need to compute \( P^{-1} \).
 
 ## Spring 2019 \#7 \( \done \) {#spring-2019-7-done}
 
@@ -4222,7 +4239,7 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( P^{-1}AP = J \).
 
-    > You should not need to compute \( P^{-1} \).
+> You should not need to compute \( P^{-1} \).
 
 ## Spring 2017 \#6 \( \work \) {#spring-2017-6-work}
 
@@ -4274,13 +4291,13 @@ a.  Show that there does not exist any vector \( v\in V \) such that \( Tv = v \
 
 b.  Give all of the possible Jordan canonical forms of \( T \).
 
-## Spring 2021 \#1 \( \work \) {#spring-2021-1-work}
+## Spring 2021 \#1 \( \done \) {#spring-2021-1-done}
 
 Let m
 \[
 A \coloneqq
 \begin{bmatrix}
-r & 1 & -1 \\
+4 & 1 & -1 \\
 -6 & -1 & 2 \\
 2 & 1 & 1
 \end{bmatrix}
@@ -4291,9 +4308,127 @@ a.  Find the Jordan canonical form \( J \) of \( A \).
 
 b.  Find an invertible matrix \( P \) such that \( J = P ^{-1}A P \).
 
+c.  Write down the minimal polynomial of \( A \).
+
 > You should not need to compute \( P^{-1} \)
 
-c.  Write down the minimal polynomial of \( A \).
+::: {.concept}
+```{=tex}
+\envlist
+```
+-   \( \chi_A(t) = t^n - {\mathrm{tr}}\qty{\bigwedge\nolimits^1 A}t^{n-1} + {\mathrm{tr}}\qty{\bigwedge\nolimits^2 A}t^{n-2} - \cdots \pm \operatorname{det}(A) \)
+-   Finding generalized eigenvectors: let \( B = A-\lambda I \), get eigenvector \( v \), solve \( Bw_1 = v, Bw_2 = w_1, \cdots \) to get a Jordan block. Repeat with any other usual eigenvectors.
+-   Convention: construct Jordan blocks in decreasing order of magnitude of eigenvalues.
+-   Polynomial exponent data:
+    -   Minimal polynomial exponents: sizes of **largest** Jordan blocks.
+    -   Characteristic polynomial exponents: **sum of sizes** of Jordan blocks, i.e. how many times \( \lambda \) is on the diagonal of \( \operatorname{JCF}(A) \).
+:::
+
+::: {.solution}
+::: {.proof title="parts a and b"}
+```{=tex}
+\envlist
+```
+-   Write \( \chi_A(t) = t^3 - T_1 t^2 + T_2 t - T_3 \) where \( T_i \coloneqq{\mathrm{tr}}\qty{\bigwedge\nolimits^i A} \):
+    -   \( T_1 = {\mathrm{tr}}(A) = 4-1+1=4 \).
+    -   \( T_2 = (-1-2) + (4+2) + (-4-6) = 5 \).
+    -   \( T_3 = \operatorname{det}(A) = 4(-1-2) -1(-10) + (-1)(-6+2) = 2 \).
+-   So \( \chi_A(t) = t^3 - 4t^2 + 5t-2 \).
+-   Try rational roots test: \( r \in \left\{{\pm 2/1}\right\} \), and check that 2 is root.
+-   By polynomial long division, \( \chi_A(t) / (t-2) = t^2-2t+1 = (t-1)^2 \).
+-   So the eigenvalues are \( \lambda = 2, 1 \).
+-   \( \lambda = 2 \):
+    -   Set \( U\coloneqq A-\lambda I \), then find \( \operatorname{RREF}(U) \) to compute its kernel:
+        \[
+        U \coloneqq
+        \begin{bmatrix}
+        2 & 1 & -1
+        \\
+        -6 & -3 & 2
+        \\
+        2 & 1 & -1
+        \end{bmatrix}
+        \leadsto
+        \begin{bmatrix}
+        2 & 1 & 0
+        \\
+        0 & 0 & 1
+        \\
+        0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        which yields \( v_1 = [1,-2,0] \).
+-   \( \lambda = 2 \):
+    -   Similarly,
+        \[
+        U \coloneqq
+        \begin{bmatrix}
+        3 & 1 & -1 \\
+        -6 & -2 & 2 \\
+        2 & 1 & 0
+        \end{bmatrix}
+        \leadsto  
+        \begin{bmatrix}
+        1 & 0 & -1
+        \\
+        0 & 1 & 2
+        \\
+        0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        which yields \( v_2 = [1,-2,1] \).
+
+    -   Solve \( Uw = v_3 \):
+        \[
+        \begin{bmatrix}
+        3 & 1 & -1 & 1 \\
+        -6 & -2 & 2 & -2 \\
+        2 & 1 & 0 & 1
+        \end{bmatrix}
+        \leadsto
+        \begin{bmatrix}
+        1 & 0 & -1 & 0 \\
+        0 & 1 & 2 & 1 \\
+        0 & 0 & 0 & 0
+        \end{bmatrix}
+        ,\]
+        so take \( v_3 = [0,1,0] \).
+-   Putting things together:
+    \[
+    A &= P^{-1}J P \text{ where } \\
+    J = J_1(\lambda = 2) \oplus J_2(\lambda = 1) 
+    &=
+    \begin{bmatrix}
+    2 & 0 & 0
+    \\
+    0 & 1 & 1
+    \\
+    0 & 0 & 1
+    \end{bmatrix} \\
+    P = [v_1, v_2, v_3] 
+    &= 
+    \begin{bmatrix}
+    1 & 1 & 0
+    \\
+    -2 & -2 & 1
+    \\
+    0 & 1 & 0
+    \end{bmatrix}
+    .\]
+:::
+
+::: {.proof title="part c"}
+```{=tex}
+\envlist
+```
+-   Write \( \min_A(t) = (t-2)(t-1)^{\ell_1} \), then since \( \min_A(t) \) divides \( \chi_A(t) \) either \( \ell_1 = 1, 2 \).
+-   \( \ell_1 \) is the size of the **largest** block corresponding to \( \lambda = 1 \), which is size 2, so \( \lambda_1=2 \).
+-   Thus
+    \[
+    \min_A(t) = (t-2)(t-1)^2
+    .\]
+:::
+:::
 
 ## Fall 2020 \#5 \( \work \) {#fall-2020-5-work}
 
