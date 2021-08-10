@@ -5,7 +5,6 @@ Assume all extensions here are algebraic and finite.
 ## Useful Facts
 
 :::{.proposition}
-If $L/k$ is algebraic, then $\Aut(L/k)$ permutes the roots of any irreducible polynomial.
 :::
 
 :::{.fact}
@@ -14,24 +13,27 @@ Showing your polynomial is irreducible:
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - A quadratic with no real roots is irreducible.
 
-Showing your polynomial (or extension) is separable:
+Showing your polynomial is separable:
 
 - Show $f$ has distinct roots in $\bar{k}$.
 - For $f$ irreducible, $f$ is separable iff $f'(x) \not\equiv 0$.
-- In characteristic zero, irreducibles are automatically separable.
-- Finite extensions of a perfect field are automatically separable.
+- For perfect fields, irreducibles are automatically separable.
+
+Showing your *extension* is separable:
+
+- Splitting fields of separable polynomials are automatically separable *and* normal (and thus Galois).
+- Extensions of a perfect field are automatically separable.
+  - In particular, extensions over $\QQ$ or any $\ch k = 0$ are separable, and one only needs to show normality.
+
+Showing your extension $K/k$ is Galois: 
+
+- Show normality and separability.
+- Show $K$ is the splitting field of a separable polynomial ("separable splitting field")
+
+
 :::
 
 :::{.fact}
-Showing your extension is Galois: 
-
-- Show normality and separability.
-- 
-
-Separable:
-
-- Any extension over a field $k$ with $\ch k = 0$ is automatically separable.
-- Any finite splitting field of a separable polynomial is automatically separable *and* normal.
 
 :::
 
@@ -52,6 +54,7 @@ Once you've confirmed that you have a Galois extension, some useful tricks:
 - $G \subseteq A_n \iff \Delta \da \prod_{i < j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
   - $A_4$ does not contain a subgroup isomorphic to $\ZZ/2^2$.
+- $\Gal(L/k)$ permutes the roots of any irreducible polynomial.
 
 - $G \leq A_n \iff \sqrt{\Delta} \in \QQ$.
   
