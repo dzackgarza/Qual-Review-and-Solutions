@@ -125,7 +125,7 @@ Transitive subgroups of $S_n$ for small $n$:
 | 2            | $S_2 \cong C_2$                   |
 | 3            | $S_3, A_3 \cong C_3$              |
 | 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
-| 5            | $S_5, A_5, F_5, D_5, C_5$         |
+| 5            | $S_5, A_5 = C_5\semidirect C_4, F_5, D_5, C_5$         |
 
 Other useful facts:
 
@@ -181,6 +181,7 @@ Some subgroup lattices:
 
 :::
 
+
 ### Distinguishing Groups
 
 > Material borrowed from <https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf>
@@ -214,6 +215,12 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
 Equivalently, if $\tilde f \da f\mod p$, then $G(\tilde f) \leq G(f)$ is a subgroup.
 :::
+
+
+:::{.remark}
+You can use this to rule out types of groups using Lagrange's theorem: if you find a cycle of length $m$ which doesn't divide $\# H$, then $H$ isn't a possibility!
+:::
+
 
 
 :::{.example title="?"}
