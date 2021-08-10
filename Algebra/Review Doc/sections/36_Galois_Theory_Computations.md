@@ -1,8 +1,14 @@
-# Galois Theory: Computations
+# Galois Theory: Computations 
 
+:::{.remark}
 Assume all extensions here are algebraic and finite.
+:::
 
 ## Useful Facts
+
+:::{.proposition title="Galois groups are transitive subgroups"}
+If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is **always** a transitive subgroup, i.e. it acts transitively on the set of roots.
+:::
 
 :::{.proposition}
 :::
@@ -37,8 +43,6 @@ Showing your extension $K/k$ is Galois:
 
 :::
 
-
-
 :::{.fact title="Random tricks"}
 Once you've confirmed that you have a Galois extension, some useful tricks:
 
@@ -65,6 +69,20 @@ Once you've confirmed that you have a Galois extension, some useful tricks:
   -$A_4: (2,2), (3,1)$.
 :::
 
+:::{.fact}
+Some subgroup lattices:
+
+- $D_3$:
+
+![](figures/2021-08-09_18-58-50.png)
+
+- $D_4$:
+
+![](figures/2021-08-09_18-59-04.png)
+
+:::
+
+## Distinguishing Groups
 
 :::{.remark title="Distinguishing groups"}
 \envlist
@@ -80,7 +98,6 @@ Once you've confirmed that you have a Galois extension, some useful tricks:
     In particular, the $(1, 2)$ and any length $n$ cycle works.
 :::
 
-
 :::{.fact}
 Some useful generating sets: see <https://kconrad.math.uconn.edu/blurbs/grouptheory/genset.pdf>
 
@@ -90,27 +107,18 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 
 :::
 
+:::{.proposition title="Recognizing groups from cycles"}
+\envlist
 
-:::{.fact}
-Some subgroup lattices:
-
-- $D_3$:
-
-![](figures/2021-08-09_18-58-50.png)
-
-- $D_4$:
-
-![](figures/2021-08-09_18-59-04.png)
+- For $n\geq 2$, if a transitive $G\leq S_n$ contains a transposition $(i, i+1)$ and a cycle of prime length $p> n/2$, then $G= S_n$.
+- For $n\geq 3$, if a transitive $G\leq S_n$ contains a **three cycle** and a $p\dash$cycle with $p>n/2$ then $G=A_n, S_n$.
 
 :::
 
-
+## Cycle Types from Reduction mod $p$
 
 ## Transitive Subgroups
 
-:::{.proposition title="Galois groups are transitive subgroups"}
-If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is a transitive subgroup, i.e. it acts transitively on the set of roots.
-:::
 
 :::{.corollary}
 \[
@@ -140,15 +148,6 @@ Transitive subgroups of $S_n$ for small $n$:
 
 > Material borrowed from <https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf>
 
-:::{.proposition title="Recognizing groups from cycles"}
-\envlist
-
-- For $n\geq 2$, if a transitive $G\leq S_n$ contains a transposition $(i, i+1)$ and a cycle of prime length $p> n/2$, then $G= S_n$.
-- For $n\geq 3$, if a transitive $G\leq S_n$ contains a **three cycle** and a $p\dash$cycle with $p>n/2$ then $G=A_n, S_n$.
-
-:::
-
-
 :::{.example title="?"}
 Let $f(x) = x^6 + x^4 + x + 3$, reduce $\mod 11$ to get a cycle type $(1, 5)$.
 So $G\leq S_6$ contains a 5-cycle, where $5>n/2 \da 6/2=3$, meaning $G = A_n, S_n$.
@@ -156,12 +155,10 @@ Now reduce $\mod p$ for various $p$ to look for a cycle type of the form $(2,1,1
 This is hard, but $f\mod 2$ has type $(1,2,3)$ and $\qty{ (a,b)(c,d,e) }^3 = (a, b)$, so $G$ contains a transposition and thus $G = S_n = S_6$.
 :::
 
-
 :::{.example title="?"}
 Let $f(x) = x^7-x-1$, reduce $\mod 2$ to get a 7-cycle, and $\mod 3$ to get $(2, 5)$.
 Then use $(2, 5)^5 = (2,1,1,\cdots)$ to get a transposition, So $G = S_7$.
 :::
-
 
 :::{.example title="?"}
 Let $f(x) \da x^7-7x+10$.
@@ -341,8 +338,6 @@ The following are the cycle types that can occur:
 ![](figures/2021-08-09_14-48-55.png)
 
 :::
-
-
 
 
 ### Cyclotomic Fields
