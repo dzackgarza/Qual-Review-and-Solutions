@@ -2,13 +2,41 @@
 
 :::{.remark}
 Assume all extensions here are algebraic and finite.
+Let $f\in \QQ[x]$ with $n \da \deg f$.
+:::
 
-**The algorithm**:
+:::{.theorem title="The Algorithm"}
+\envlist
 
 - Show your extension is Galois (normal and separable)
   - Show $f$ is irreducible and separable.
-- For $n\da \deg f$, obtain $n\divides \# G \divides n!$ and $G\leq S_n$ is a transitive subgroup.
+- Find the degree of the extension $d$, since then $\# G = d$.
+  - Note that in general, $G\leq S_n$ and $n\neq d$, $\# G\neq n$.
+- Obtain $n\divides d \da \# G \divides n!$ and $G\leq S_n$ is a transitive subgroup, list possibilities.
 - Rule out cases or determine the group completely by finding cycle types.
+
+:::
+
+:::{.example title="Of using the algorithm"}
+Consider $f(x) \da x^5-9x+3$, let $L\da \SF(f)/\QQ$.
+
+- $f$ is irreducible:
+  Apply Eisenstein with $p=3$.
+- $f$ is separable:
+  - $\QQ$ is perfect, so irreducible implies separable.
+- $L$ is Galois:
+  - $L/\QQ$ is a finite extension over a perfect field and thus automatically separable.
+  - $L/\QQ$ is the splitting field of a separable polynomial, and thus normal.
+- Since $L$ is Galois, $\# G = d \da [L: \QQ]$, so compute the degree.
+  - Since $f$ is irreducible, for any root $\alpha$, $[\QQ(\alpha): \QQ] = \deg f$ and thus $d=5$.
+- Possibilities: $S_5, A_5 , F_5\cong C_5\rtimes C_4, D_5, C_5$.
+- Claim: $G = S_5$.
+  - Reduce mod 2: $(x^2 + x + 1) (x^3 + x^2 + 1)$, yielding a cycle type $(2, 3)$.
+  This rules out 
+    - $C_5, D_5$ since $3\notdivides 5, 10$.
+    - $A_5$, since this is an odd number of even length cycles.
+    - $F_5$ since $3\notdivides 20$.
+  - So this only leaves $S_5$.
 :::
 
 ## Showing Extensions are Galois
@@ -34,6 +62,10 @@ Showing your *extension* is separable:
 - (Hard) Show $[L:k]_s = [L:k]$.
 - (Hard) Use that separability is a distinguished class.
 
+Showing your extension is normal:
+
+- Show that $L/k$ is finite and the splitting field of some separable polynomial.
+
 Showing your extension $K/k$ is Galois: 
 
 - Show normality and separability.
@@ -45,32 +77,34 @@ Showing your extension $K/k$ is Galois:
 ## Irreducibility
 
 :::{.proposition title="Consequence of Chebotarev density: checking irreducibility mod $p$"}
-If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\FF_p[x]$ implies $f$ irreducible in $\QQ[x]$.
+If $f\in \ZZ[x]$ is monic and there exists any prime $p$ such that $f\mod p$ is irreducible in $\FF_p[x]$, then $f$ irreducible in $\QQ[x]$.
 :::
 
 :::{.remark}
-Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields.
+Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields: just enumerate all polynomials and try polynomial long division.
 :::
 
 :::{.example title="using irreducibility mod $p$"}
-$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\FF_2[x]$ shows that $0, 1$ are not roots $\mod 2$.
-
+$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\FF_2[x]$ shows that $0, 1$ are not roots $\mod 2$ so there is not linear factor.
+Manually dividing $a_1 x^2 + a_2 x + a_3$ for $a_i\in 0, 1$ leaves remainders, so there are no quadratic factors.
 :::
 
 :::{.theorem title="Eisenstein's Criterion"}
-If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
+If \[
+f(x) = \sum_{i=0}^n \alpha_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 \in \QQ[x]
+.\]
+then $f$ will be irreducible over $\QQ[x]$ (and thus over $\ZZ[x]$ by Gauss' lemma) if
+$\exists p$ such that
 
 - $p$ divides every coefficient *except* $a_n$ and
-- $p^2$ does not divide $a_0$,
+- $p^2$ does not divide $a_0$.
 
-then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
+Note that if $f$ is monic, it suffices to find any prime dividing all of the non-leading terms.
 :::
 
-:::{.remark}
-Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
+:::{.remark title="Shifting"}
+If $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
 This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
-
-A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
 :::
 
 :::{.example title="of shifting"}
@@ -78,8 +112,8 @@ Set $f(x) \da x^2+x+2$, then $f(x+3) = x^2 + 7x + 14$ and Eisenstein applies at 
 
 :::
 
-:::{.remark}
-Inverting: if $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
+:::{.remark title="Inverting"}
+If $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
 Note that this is just reversing the coefficients.
 :::
 
@@ -87,7 +121,15 @@ Note that this is just reversing the coefficients.
 Take $f(x) \da 2x^5 -4x^2-3$, then for $g(x) \da 3x^5 +4x^2 - 2$ Eisenstein applies with $p=2$.
 :::
 
-:::{.example title="mod p reduction checks for Eisenstein"}
+
+:::{.remark title="mod $p$ reduction checks to find a good $p$ for Eisenstein"}
+If $f(x) \equiv b(x+a)^n\mod p$ for some $p$ where $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$.
+Note the change in signs/reverse translation.
+
+In other words, reduce mod $p$ for various $p$, and if any $p$ collapses $f$ to a power of a linear factor, use that $p$ for Eisenstein.
+:::
+
+:::{.example title="of mod $p$ reduction checks"}
 Check
 \[
 f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
@@ -98,7 +140,41 @@ and Eisenstein on $f(x+3)$ with $p=5$ works.
 
 ## Computing
 
-### Galois Groups act Transitively
+### Misc Useful Facts
+
+Once you've confirmed that you have a Galois extension, some useful tricks are available:
+
+:::{.fact title="Degrees of extensions"}
+\envlist
+
+- The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
+- The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
+  - Note that $\QQ(\alpha)\neq \SF(f)$ in general.
+- If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
+  Thus 
+  \[
+[\QQ(r_i) : \QQ] = d \implies
+d\divides [\SF(f): \QQ]
+  .\]
+  - Note that $d\neq \deg f$ in general!
+
+:::
+
+:::{.fact title="Random tricks"}
+\envlist
+
+- Reminder of rational roots test: for $f(x) = a_nx^n + \cdots + a_0$, rational roots are of the form $p_0/p_n$ where $p_i \divides a_i$.
+- $\Gal(L/k)$ permutes the roots of any irreducible polynomial in $k[x]$.
+  In particular, if $L=\SF(f)$ with $f$ reducible, then $G$ must send roots of irreducible factors to conjugates of the same factor.
+- $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 2b$ and $b$ is odd.
+- If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
+- If all exponents are even, $f(r) = 0 \iff f(-r) = 0$, so roots occur in pairs $(r, -r)$.
+  - Pairs are preserved by $G$ in the sense that every $\sigma\in G$ satisfies either $\ts{r, -r}\mapsto \ts{r, -r}$ or $\ts{r, -r} \mapsto \ts{s, -s}$ for another pair.
+  - Example: $x^4-5x^2+5$ has two pairs.
+:::
+
+
+### Transitive Subgroups
 
 :::{.proposition title="Galois groups are transitive subgroups"}
 If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is **always** a transitive subgroup, i.e. it acts transitively on the set of roots.
@@ -110,77 +186,40 @@ n\divides \# \Gal(K/\QQ) \divides n!
 .\]
 
 Why: $\Gal(K/\QQ) \cong G\leq S_n$, and Lagrange yields $\#H \divides n!$.
-$G$ acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
-The size of an orbit divides the size of the group by orbit stabilizer, since $\OO_r \cong G/\Stab_G(r)$, and the right-hand side has a size that must divide $\# G$.
-
+Note that $G$ acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
+By orbit stabilizer, $\OO_r \cong G/\Stab_G(r)$ and thus
+\[
+\# G = \# \OO_r \cdot \# \Stab_G(r)
+,\]
+so both terms on the right-hand side patently divide $\# G$
 :::
 
-:::{.fact}
+:::{.fact title="Table of transitive subgroups of $S_n$ for qual-sized $n$"}
 Write $C_n$ for the cyclic group of order $n$.
-Transitive subgroups of $S_n$ for small $n$:
+The following are transitive subgroups of $S_n$ for small $n$, where blue groups are nonabelian:
 
 | $n \text{ in }S_n$ | Transitive Subgroups        | Sizes |
 |--------------|-----------------------------------|-------|
 | 1            | 1                                 |1      |
 | 2            | $S_2 \cong C_2$                   |2      |
-| 3            | $S_3, A_3 \cong C_3$              |6,3    |
-| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |24,12,8,4,4 |
-| 5            | $S_5, A_5 , F_5\cong C_5\semidirect C_4, D_5, C_5$ | 120,60,20,10,5 |
+| 3            | ${\color{blue}S_3\cong D_3}, A_3 \cong C_3$              |6,3    |
+| 4            | ${\color{blue}S_4, A_4, D_4}, C_4, C_2^2$       |24,12,8,4,4 |
+| 5            | ${\color{blue}S_5, A_5 , F_5\cong C_5\semidirect C_4, D_5}, C_5$ | 120,60,20,10,5 |
 
 Other useful facts:
 
-- Nonabelian groups of order 8: $D_4, Q_8$.
 - $\# D_n = 2n$, $\#S_n = n!, \# A_n = n!/2$, and $\# F_5 = 20$.
-- $F_5$ is nonabelian and has presentation $\gens{a,b \st a^5, b^4, bab\inv = a^2}$.
+- $Q_8 \leq S_8$ is transitive and nonabelian of order 8, and has presentation
+\[
+Q_{8}=\left\langle\alpha, \beta \mid \alpha^{4}=\beta^{4}=1, \alpha \beta \alpha=\beta, \beta^{2}=\alpha^{2}\right\rangle
+.\]
+
+- $F_5$ has presentation 
+\[
+\gens{a,b \st a^5, b^4, bab\inv = a^2}
+.\]
 
 :::
-
-### Misc Useful Facts
-
-
-:::{.fact}
-
-:::
-
-:::{.fact title="Random tricks"}
-Once you've confirmed that you have a Galois extension, some useful tricks:
-
-- The degree of $[\QQ(\alpha): \QQ]$ is the degree of $\min_{\alpha}(x)$, or any irreducible polynomial with $\alpha$ as a root.
-- The size $\# G(f)$ is the degree $[\SF(f) : \QQ]$.
-- $\QQ(\zeta_a) = \QQ(\zeta_b) \iff a = 3b$ and $b$ is odd.
-- If $f=\prod(x-r_i)$, then $\SF(f)$ contains every $\QQ(r_i)$.
-  Thus if $[\QQ(r_i) : \QQ] = d$, then $d$ divides $[\SF(f): \QQ]$.
-- If all exponents are even, $f(r) = 0 \iff f(-r) = 0$, so roots occur in pairs $(r, -r)$.
-  - Pairs are preserved by $G$ in the sense that every $\sigma\in G$ satisfies either $\ts{r, -r}\mapsto \ts{r, -r}$ or $\ts{r, -r} \mapsto \ts{s, -s}$ for another pair.
-  - Example: $x^4-5x^2+5$ has two pairs.
-- If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
-- $G \subseteq A_n \iff \Delta \da \prod_{i < j} (r_i - r_j)^2$ is a perfect square in the ground field.
-  - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
-  - $A_4$ does not contain a subgroup isomorphic to $\FF_2^2$.
-- $\Gal(L/k)$ permutes the roots of any irreducible polynomial.
-
-- $G \leq A_n \iff \sqrt{\Delta} \in \QQ$.
-  
-- Recognizing cycle types:
-  - $\ZZ/4: (2), (4)$.
-  - $\FF_2^2: (2, 2)$.
-  - $D_4: (4), (2,2), (2,1,1)$
-  -$A_4: (2,2), (3,1)$.
-:::
-
-:::{.fact}
-Some subgroup lattices:
-
-- $D_3$:
-
-![](figures/2021-08-09_18-58-50.png)
-
-- $D_4$:
-
-![](figures/2021-08-09_18-59-04.png)
-
-:::
-
 
 ### Distinguishing Groups
 
@@ -188,26 +227,57 @@ Some subgroup lattices:
 
 :::{.remark title="Distinguishing groups"}
 \envlist
+By $n$ in $G\leq S_n$:
 
-- Order 4:
-  - Distinguishing $C_2^2$ from $C_4$: the former has two elements of order 2, the latter does not.
-    So seeing a cycle of type $(2, 2)$ forces $C_2^2$.
-- Order 8:
-  - $S_4$ contains a Sylow-2 subgroup of order 8 (which divides $4! = 24$) but $A_4$ does not since it's of order $4!/2 = 12$ and $8\not\divides 12$.
+- $n=4$:
+  - $C_2^2$ vs $C_4$: 
+  $C_2^2$ has two elements of order 2, the latter does not.
+  So a cycle of type $(2, 2)$ forces $C_2^2$.
+  - $S_4$ vs $A_4$: 
+  $S_4$ contains a Sylow-2 subgroup of order 8 (which divides $4! = 24$) but $A_4$ does not since it's of order $4!/2 = 12$ and $8\not\divides 12$.
+  - $D_4$ vs $Q_8$:
+
 - 5 roots:
   - $S_5$ is generated by any transposition and any 5-cycle.
   - $S_n$ is generated by $(a,b)$ and $(1,2,\cdots,n) \iff \gcd(b-a, n) = 1$.
     In particular, the $(1, 2)$ and any length $n$ cycle works.
+
 :::
+
+
+:::{.fact title="Recognizing cycle types"}
+The following are the cycle types that can occur:
+
+- ![$G\leq S_4$](figures/2021-08-09_14-39-07.png)
+
+:::
+
+
+:::{.proposition title="Recognizing $A_n$ or $S_n$"}
+If $n>2$ and $G$ contains a 3-cycle and an $n\dash$cycle, then $G = A_n$ or $S_n$.
+Note that by Orbit-Stabilizer $n\divides \# G$, and if $n$ is prime then by Cauchy there is an $n\dash$cycle (but this is not always the case).
+In fact, it suffices to find a $k\dash$cycle for any $k\geq n/2$, which can be found by reducing mod $p$ and examining cycle types.
+
+Moreover, if $G$ contains a 2-cycle (transposition), then $G = S_n$.
+:::
+
+
+:::{.remark title="Other useful facts to reason about $A_n$"}
+\envlist
+
+- Alternating groups have even numbers of cycles of even length.
+- Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
+- $A_4$ does not contain a subgroup isomorphic to $C_2^2$.
+:::
+
 
 :::{.fact}
 Some useful generating sets: see <https://kconrad.math.uconn.edu/blurbs/grouptheory/genset.pdf>
 
 ![](figures/2021-08-09_18-51-08.png)
 
-In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough to generate $S_n$ or $A_n$ respectively.
-
 :::
+
 
 ### Density: Cycle Types
 
@@ -216,25 +286,22 @@ For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G
 Equivalently, if $\tilde f \da f\mod p$, then $G(\tilde f) \leq G(f)$ is a subgroup.
 :::
 
-
-:::{.example title="?"}
-You can use this to rule out types of groups using Lagrange's theorem: if you find a cycle of length $m$ which doesn't divide $\# H$, then $H$ isn't a possibility!
-
+:::{.warnings}
+Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
 :::
 
+:::{.example title="Ruling out choices by existence of cycle types"}
+You can use this to rule out types of groups using Lagrange's theorem: if you find a cycle of length $m$ which doesn't divide $\# H$, then $H$ isn't a possibility!
+Example: $\deg f=5$ with exactly one conjugate pair of roots, then there is a 5-cycle $\sigma \da (1,2,3,4,5)$ because $5\divides \# G$ and a 2-cycle $\tau \da (1,2)$ coming from complex conjugation.
+There check that $a_1 \da \sigma \tau \sigma\inv = (1, 5)$ and $a_1 \tau = (1, 5, 2)$ is a 3-cycle, so $3\divides \# G$.
+This rules out $F_5$ which is of order 20, since $3\not\divides 20$.
+:::
 
-
-
-:::{.example title="?"}
+:::{.example title="Finding cycle types by reducing mod $p$"}
 Consider $f(x) = x^5+2x+1$.
 Reducing to $\FF_3$ yields no roots, so $f$ is irreducible, and moreover $G(f)$ contains a 5-cycle.
 Reducing to $\FF_7$ splits $f$ as $(x+2)(x+3)(x^3+2x^2+5x+5)$, so $G(f)$ contains a 3-cycle.
 
-:::
-
-
-:::{.warnings}
-Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
 :::
 
 :::{.example title="of using density"}
@@ -294,27 +361,15 @@ For cubics,
 - $\Delta < 0 \implies 1$ real root and 1 conjugate pair.
 :::
 
-
-:::{.remark}
-Some special cases:
-
-- Quadratics: $f(x) = ax^2 + bx + c$: $\Delta = b^2-4ac$.
-- Cubics:
-  - General: $f(x) = ax^3 + bx^2 + cx + d$: $\Delta = b²c² - 4ac³ - 4b³d - 27a²d² + 18abc$.
-  - Depressed: $f(x) = x³ + px + q$: $\Delta = -4p³-27q²$.
-    - Note that you can depress a general cubic by substituting $t=x - {b\over 3a}$.
-:::
-
-
-:::{.example title="?"}
-For $f(x) = \prod_{i=1}^3 (x-r_i)$, we have
+:::{.example title="How to actually write this product"}
+For $f$ a cubic:
 \[
 \Delta_f 
 &= (r_1 - r_2)^2 (r_1 - r_3 )^2 \\
 &\quad (r_2 - r_3)^2
 .\]
 
-For $f(x) = \prod_{i=1}^4(x-r_i)$, we have
+For $f$ a quartic:
 \[
 \Delta_f 
 &= (r_1 - r_2)^2(r_1 - r_3)^2 (r_1 - r_4)^2 \\
@@ -326,6 +381,33 @@ In general, for a degree $n$ polynomial this will have $n(n-1)/2$ terms.
 :::
 
 :::{.remark}
+In general, 
+\[
+G \subseteq A_n \iff \sqrt{\Delta} \in k
+,\]
+i.e. $\Delta$ is a perfect square in the ground field $k$.
+
+Some special cases of discriminant values:
+
+- Quadratics: \[
+f(x) = ax^2 + bx + c
+\implies
+\Delta = b^2-4ac
+.\]
+- Cubics:
+  - General:
+\[
+f(x) = ax^3 + bx^2 + cx + d \implies \Delta = b²c² - 4ac³ - 4b³d - 27a²d² + 18abc
+.\]
+    - Note that you can depress a general cubic by substituting $t=x - {b\over 3a}$, yielding
+\[
+f(t) = t³ + pt + q \implies \Delta = -4p³-27q²
+.\]
+
+
+:::
+
+:::{.remark}
 Some useful facts:
 
 - $\Delta = 0 \iff f$ has a repeated root.
@@ -333,102 +415,11 @@ Some useful facts:
 
 :::
 
-## Fully Classified Galois Groups
-
-### Quadratics
-
-:::{.example title="Classifying quadratics"}
-Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: 
-
-- If \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$ 
-  - Why? \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
-- So $L$ is a splitting field.
-- If $\ch(k) \neq 2$, then 
-\[
-\dd{}{x} \min_{ \alpha}(x) = 2x - \cdots \not\equiv 0
-,\] making $L$ separable.
-:::
-
-:::{.remark}
-One can complete the square for quadratics:
-\[
-f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha^{2}}{4} \text { . }
-.\]
-
-Thus it suffices to consider quadratics of the form $x^2+a$.
-:::
-
-### Cubics
-
-:::{.proposition title="Classifying cubics"}
-Away from $\ch k = 2$, Galois groups of cubics are entirely determined by discriminants:
-There are only two possibilities: $S_3, A_3 \cong C_3$:
-
-- If $\sqrt{\Delta}\in k$, then $G\cong A_3$.
-- Otherwise, $G\cong S_3$.
-:::
-
-:::{.example title="?"}
-
-![](figures/2021-08-09_14-28.png)
-![](figures/2021-08-09_14-36-34.png)
-:::
-
-
-### Quartics
-
-:::{.proposition title="Quartics"}
-The Galois groups of irreducible quartics can be determined using a bit of number theory:
-
-![](figures/2021-07-20_22-06-48.png)
-
-The following are the cycle types that can occur:
-
-![](figures/2021-08-09_14-39-07.png)
-
-- If $\sqrt{\Delta}\in \QQ$, then $G = A_4, C_2^2.
-- If $\sqrt{\Delta}\not\in \QQ$ then $G = S_4, D_4, C_4$.
-
-
-![](figures/2021-08-09_14-48-55.png)
-
-:::
-
-
-### Cyclotomic Fields
-
-:::{.example title="Cyclotomic Fields"}
-$\Gal(\QQ(\zeta_n)/\QQ) \cong (\ZZ/n)\units$ and is generated by maps of the form $\zeta_n \mapsto \zeta_n^j$ where $(j, n) = 1$.
-I.e., the following map is an isomorphism:
-\[
-(\ZZ/n)\units &\to \Gal(\QQ(\zeta_n), \QQ) \\
-[r] &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
-\]
-:::
-
-:::{.example title="Finite Fields"}
-$\Gal(\FF_{p^n}/\FF_p) \cong \ZZ/ \gens{ n }$, a cyclic group generated by powers of the Frobenius automorphism:
-\[
-\varphi_p: \FF_{p^n} &\to \FF_{p^n} \\
-x &\mapsto x^p
-\]
-
-> See D&F p.566 example 7.
-
-:::
-
-
-
-## Worked Examples
+## Worked Examples 
 
 :::{.fact}
 \envlist
 
-- $G(f) = S_p$ for $f$ irreducible of degree $p$ with exactly two non-real roots $r_1, r_2$:
-  - Conjugation of $r_1, r_2$ yields a transposition.
-  - Galois acting transitively, yielding a $p\dash$cycle.
-- Some examples:
-  - $x^3-2$, $x^3-4x+5$.
 :::
 
 :::{.example title="Indirect: exactly one conjugate pair of roots"}
@@ -446,23 +437,106 @@ This follows because
 So $G = S_5$.
 :::
 
-### Specific Degrees
+### Quadratics
+
+:::{.example title="Classifying quadratics"}
+Every degree 2 extension $L/k$ is Galois, except possibly in characteristic 2: 
+
+- If \( \alpha\in L \sm k\) then \( \min_{\alpha}(x) \in L[x] \) must split in $L[x]$, so $L$ is automatically a splitting field.
+  - Why? \( \alpha\in L \implies \min_{\alpha}(x) = (x- \alpha)g(x) \) which forces \( \deg(g) = 1 \).
+- If $\ch(k) \neq 2$, then $L$ is separable since
+\[
+\min_{ \alpha}(x)' = 2x + \cdots \not\equiv 0
+,\] 
+:::
+
+:::{.remark}
+One can complete the square for quadratics:
+\[
+f(x)=x^{2}+\alpha x+\beta=\left(x-\frac{\alpha}{2}\right)^{2}+\beta-\frac{\alpha^{2}}{4} \text { . }
+.\]
+
+Thus it suffices to consider quadratics of the form $x^2+a$.
+:::
 
 :::{.example title="Quadratics"}
 \envlist
 
-- $G(x^2-n) = C_2$ for $m$ not a perfect square.
+- $G(x^2-m) = C_2$ for $m$ not a perfect square.
   - $x^2-m = (x+\sqrt{m})(x-\sqrt{m})$, so the splitting field is $\QQ(\sqrt{m})$ of degree 2.
   - Since $G\leq S_2$ and has order 2, $G= S_2 \cong C_2$.
   - Concretely, take $m=2$, then $G = \ts{\id, \tau}$ where $\tau: \sqrt{2} \mapsto -\sqrt{2}$, and correspondingly $a+b\sqrt{2} \mapsto a-b\sqrt{2}$.
 
 - $G((x^2-2)(x^2-3)) = C_2\cross C_2$.
-  - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have $G \subseteq \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2$.
+  - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have 
+  \[
+G \subseteq \gens{(1, 2), (3, 4)} = \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2
+  .\]
   - $\# G = 4$, taking the tower $\QQ(\sqrt 2, \sqrt 3) / \QQ(\sqrt 2)/ \QQ$ and noting $\sqrt 3 \not\in \QQ(\sqrt 2)$ which makes each step degree 2.
   So this forces $G \cong C_2\cross C_2$.
 :::
 
-:::{.example title="Cubics"}
+### Cubics
+
+
+:::{.remark}
+Tricks/reminders:
+
+- Try the rational roots test to check irreducibility, since reducible implies there's a linear factor.
+- Nice situation: one real and two complex roots.
+  Try Calculus and MVT to reason about real roots.
+  This immediately yields $S_3$.
+- Otherwise, 3 real roots (or no easy way to check root types).
+  Try discriminant classification: put in the form $t^3+pt+q$, potentially using $t=x-b/3a$, then $\Delta = -4p^3-27q^2$.
+:::
+
+:::{.remark title="Easy cycles in odd/prime degrees with basic Calculus"}
+If $n \da \deg f$ is odd, then $f$ has at least one real root.
+If $f$ has two non-real roots, then $G$ contains a transposition.
+If $n$ is prime, then $G$ contains an $n\dash$cycle (by transitivity and Cauchy), forcing $G = S_n$.
+:::
+
+:::{.example title="Of using easy cycles to get $S_3$"}
+Let $f(x) = x^3-2$.
+
+Then $f'(x) = 3x^2$, so $f$ is monotone increasing.
+By the MVT, checking $f(-2)<0$ and $f(2)>0$, $f$ has a single real root in $[-2, 2]$.
+The other two must be a complex conjugate pair.
+
+Alternatively, just factor the darn thing: $f(x) = (x-\omega)(x-\zeta_3\omega)(x-\zeta_3^2\omega)$ where $\omega \da 2^{1\over 3}$ and $\zeta_3^3=1$.
+
+So $G(f)$ contains a transposition, and since $\deg f = 3$ is prime, $G$ contains a 3-cycle and $G(f) = S_3$.
+:::
+
+:::{.example title="Of using easy cycles to get $S_3$"}
+Let $f(x) = x^3-4x+5$.
+
+Then $f'(x) = 3x^2-4 = 0$ when $x = \pm \sqrt{4/3}$.
+Checking $f''(x) = 6x$ yields a max at $-\sqrt{4/3}$ and a min at $\sqrt{4/3}$.
+Checking 
+\[
+f(4/3) = (4/3)^3-4(4/3)+5 = (64/27)-(16/3)+5 = 55/27 > 0
+,\]
+so knowing the general shape of a cubic, there is exactly one real root, somewhere in $(-\infty ,-\sqrt{4/3})$.
+So $G(f) = S_3$.
+:::
+
+:::{.proposition title="Classification for cubics"}
+Away from $\ch k = 2$, Galois groups of cubics are entirely determined by discriminants:
+
+**There are only two possibilities**: $S_3$ or $A_3 \cong C_3$.
+
+- If $\sqrt{\Delta}\in k$, then $G\cong A_3$.
+- Otherwise, $G\cong S_3$.
+:::
+
+:::{.example title="of discriminants of cubics"}
+
+![](figures/2021-08-09_14-28.png)
+![](figures/2021-08-09_14-36-34.png)
+:::
+
+:::{.example title="Cubics (manually)"}
 \envlist
 
 - $G(x^3+x+1) = S_3$:
@@ -471,18 +545,78 @@ So $G = S_5$.
   - The other roots are a non-real conjugate pair $w, \bar{w}$, so $\QQ(w, r)/\QQ(r) = \deg f(x)/(x-r) = 2$.
   - So $[\SF(f): \QQ] = 6$, and the only transitive subgroup of order 6 in $S_3$ is $S_3$ itself.
 
-- $G(x^3-x+1) = S_3$:
-  - Just check $\Delta = -23$ is squarefree in $\QQ$.
-
-- $G(x^3-3x+1) = A_3$:
-  - Check $\Delta = 81$, a perfect square in $\QQ$.
 :::
 
-:::{.example title="Quartics"}
+:::{.example title="Cubics (using $\Delta$)"}
+\envlist
 
+- $G(x^3-x+1) = S_3$:
+  - This is already a depressed cubic, so use $\Delta = -4 (-1)^3 - 27(1) = -23$.
+  - $\Delta = -23 \not\in \QQ^2$, so $G\not\leq A_4$ which forces $G = S_4$.
+
+- $G(x^3-3x+1) = A_3$:
+  - This is already a depressed cubic, so $\Delta = -4(-3)^3 + 27(1) = -3(27) = 81$.
+  - $\Delta = 81 \in \QQ^2$, so $G\leq A_3$.
+:::
+
+
+### Quartics
+
+
+:::{.definition title="Resolvent of a quartic"}
+If 
+\[
+f(x)=x^{4}+a_{3} x^{3}+a_{2} x^{2}+a_{1} x+a_{0}
+\]
+then define the **resolvent** of $f$ by
+\[
+R_{4}(t)=t^{3}-a_{2} t^{2}+\left(a_{1} a_{3}-4 a_{0}\right) t+4 a_{0} a_{2}-a_{1}^{2}-a_{0} a_{3}{ }^{2}
+.\]
+
+Alternatively, it can be defined in terms of the roots $r_i$:
+\[
+\left(x-\left(r_{1} r_{2}+r_{3} r_{4}\right)\right)\left(x-\left(r_{1} r_{3}+r_{2} r_{4}\right)\right)\left(x-\left(r_{1} r_{4}+r_{2} r_{3}\right)\right)
+.\]
+
+For depressed quartics,
+\[
+f(X)=X^{4}+c X+d \Longrightarrow R_{3}(X)=X^{3}-4 d X-c^{2}
+.\]
+
+:::
+
+
+:::{.proposition title="Classification for quartics"}
+The Galois groups of irreducible quartics can be determined using discriminants, resolvents, and checking irreducibility:
+
+- If $\sqrt{\Delta}\in \QQ$, then $G = A_4, C_2^2$.
+  - If resolvent is irreducible: $A_4$.
+    Otherwise $C_2^2$.
+- If $\sqrt{\Delta}\not\in \QQ$ then $G = S_4, D_4, C_4$.
+  - Is resolvent is irreducible: $S_4$.
+    Otherwise, $D_4$ or $C_4$, argue by cycle types (or if $f$ is irreducible in $\QQ(\sqrt{\Delta})$, $D_4$).
+- Summary:
+  ![](figures/2021-08-09_14-48-55.png)
+
+A flow chart summarizing the full process:
+
+![](figures/2021-07-20_22-06-48.png)
+
+:::
+
+:::{.example title="Quartics using resolvent cubics"}
+\envlist
+
+- $G(x^4-x-1) = S_4$:
+  - Check $f$ is irreducible in $\FF_2[x]$.
+  - $R_3(t) = t^4+4t-1$
 - $G(x^4+8x+12) = A_4$:
   - The resolvent cubic is $x^3-48x+64$, which has no rational roots.
-  - $\Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2$, so $G=A_4$.
+  - Now check
+  \[
+  \Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2
+  ,\] 
+  so $G=A_4$.
 
 - $G(x^4+3x+3) = D_4$:
   - The resolvent cubic is $g(x) = x^3-12x+9=(x-3)(x^2+3x-3)$ and $\Delta = 3^3 5^2 7$, so $G = C_4, D_4$.
@@ -494,7 +628,16 @@ So $G = S_5$.
 
 :::
 
-### General Families
+### Cyclotomic Fields
+
+:::{.example title="Cyclotomic Fields"}
+$\Gal(\QQ(\zeta_n)/\QQ) \cong (\ZZ/n)\units$ and is generated by maps of the form $\zeta_n \mapsto \zeta_n^j$ where $(j, n) = 1$.
+I.e., the following map is an isomorphism:
+\[
+(\ZZ/n)\units &\to \Gal(\QQ(\zeta_n), \QQ) \\
+[r] &\mapsto (\phi_r: \zeta_n \mapsto \zeta_n^r )
+\]
+:::
 
 :::{.fact}
 The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
@@ -575,3 +718,49 @@ General cases:
 
 :::
 
+### Finite Fields
+
+:::{.example title="Finite Fields"}
+$\Gal(\FF_{p^n}/\FF_p) \cong \ZZ/ \gens{ n }$, a cyclic group generated by powers of the Frobenius automorphism:
+\[
+\varphi_p: \FF_{p^n} &\to \FF_{p^n} \\
+x &\mapsto x^p
+\]
+
+> See D&F p.566 example 7.
+
+:::
+
+## Lattices
+
+:::{.fact title="Common lattices of subgroups"}
+
+$n=2$:
+
+- $D_2 \cong 1$
+- $A_2 \cong 1$
+- $S_2 \cong C_2$ 
+
+$n=3$:
+
+- $D_3 \cong S_3$
+- $A_3 \cong C_3$.
+- ![$S_3$](figures/2021-08-10_01-41-05.png)
+
+$n=4$:
+
+- ![$D_4$](figures/2021-08-10_01-46-58.png)
+- ![$A_4$](figures/2021-08-10_01-42-20.png)
+- ![$S_4$](figures/2021-08-10_01-41-53.png)
+
+$n=5$:
+
+- ![$D_5$](figures/2021-08-10_01-47-16.png)
+- ![$A_5$](figures/2021-08-10_01-43-01.png)
+- ![$S_5$](figures/2021-08-10_01-42-45.png)
+
+Misc:
+
+- ![$Q_8$](figures/2021-08-10_01-40-14.png)
+
+:::

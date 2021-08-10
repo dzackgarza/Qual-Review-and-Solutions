@@ -86,7 +86,6 @@ The coefficients of the characteristic polynomial are elementary symmetric funct
 \[
 \chi_A(t) = t^n - \qty{\sum_i \lambda_i }t^{n-1} + \qty{\sum_{i < j} \lambda_i \lambda_j }t^{n-2} + \cdots \pm \qty{\prod_i \lambda_i}
 .\]
-
 :::
 
 :::{.example title="of polynomial long division"}
@@ -99,8 +98,6 @@ The rest can be factored by inspection:
 \[
 f(x) = (x-2)(x^2-4x+4) = (x-2)^3
 .\]
-
-
 :::
 
 ## Definitions
@@ -333,7 +330,6 @@ Let $m(x)$ denote the minimal polynomial $A$.
 
 :::
 
-
 ## Other Canonical Forms
 
 :::{.proposition title="?"}
@@ -389,7 +385,6 @@ TFAE:
 
 :::
 
-
 :::{.proposition title="Minimal equals characteristic iff cyclic"}
 $\chi_A(x) = \min_A(x)$ iff $A$ admits a cyclic vector.
 :::
@@ -407,11 +402,10 @@ where $\deg \chi_A = \dim_k V$ and $\deg \min_A = \dim k[x]/\gens{p_m}$.
 For these to be equal, this forces $\dim_k k[x]/\gens{p_i} = 0$ for $1\leq i \leq m-1$, making $V$ a cyclic $k[x]\dash$module.
 So $V = k[x]\actson \vector v$ for some $\vector v\in V$, which is the desired cyclic vector, and 
 \[
-V = \ts{f(x).v \st f\in k[x]} = \span_k\ts{A^k v \st k\geq 0}
+V = \ts{f(x).v \st f\in k[x]} = \spanof_k\ts{A^k v \st k\geq 0}
 .\]
-By Cayley-Hamilton, $\chi_A(A) = 0$ and so $A^n$ is a linear combinations of $A^k$ for $0\leq k \leq n-1$, so $V= \span_k \ts{A^k v \st 0\leq k \leq n-1}$.
+By Cayley-Hamilton, $\chi_A(A) = 0$ and so $A^n$ is a linear combinations of $A^k$ for $0\leq k \leq n-1$, so $V= \spanof_k \ts{A^k v \st 0\leq k \leq n-1}$.
 :::
-
 
 :::{.proposition title="Rational Canonical Form"}
 $\RCF(A)$ is a block matrix where each block is the companion matrix of an invariant factor of $A$.
@@ -421,7 +415,6 @@ $\RCF(A)$ is a block matrix where each block is the companion matrix of an invar
 Thus the blocks of $\RCF(A)$ biject with invariant factors of $A$.
 Note that any companion matrix is already in $\RCF$.
 :::
-
 
 :::{.proof title="Derivation of RCF"}
 \envlist
