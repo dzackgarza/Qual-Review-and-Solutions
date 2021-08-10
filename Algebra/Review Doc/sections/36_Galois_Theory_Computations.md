@@ -131,6 +131,7 @@ Other useful facts:
 
 - Nonabelian groups of order 8: $D_4, Q_8$.
 - $\# D_n = 2n$, $\#S_n = n!, \# A_n = n!/2$, and $\# F_5 = 20$.
+- $F_5$ is nonabelian and has presentation $\gens{a,b \st a^5, b^4, bab\inv = a^2}$.
 
 :::
 
