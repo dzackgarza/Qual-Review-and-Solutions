@@ -1,5 +1,7 @@
 # Field Theory: Extensions and Towers
 
+## Basics
+
 :::{.remark}
 Galois is defined as **normal and separable**.
 :::

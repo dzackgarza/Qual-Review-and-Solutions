@@ -28,7 +28,7 @@ Showing your polynomial is separable:
 Showing your *extension* is separable:
 
 - Splitting fields of separable polynomials are automatically separable *and* normal (and thus Galois).
-- Extensions of a perfect field are automatically separable.
+- Algebraic extensions of a perfect field are automatically separable.
   - In particular, extensions over $\QQ$ or any $\ch k = 0$ are separable, and one only needs to show normality.
 - (Hard) Show $[L:k]_s = [L:k]$.
 - (Hard) Use that separability is a distinguished class.
@@ -37,7 +37,7 @@ Showing your extension $K/k$ is Galois:
 
 - Show normality and separability.
 - Show $K$ is the splitting field of a separable polynomial ("separable splitting field")
-- 
+- Automatic when $K/k$ is algebraic and a finite field, since it's the splitting field of $x^{p^n}-x$.
 
 :::
 
