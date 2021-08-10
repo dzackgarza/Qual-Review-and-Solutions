@@ -1,21 +1,11 @@
-# Galois Theory: Computations 
+# Galois Theory
 
-:::{.remark}
-Assume all extensions here are algebraic and finite.
-:::
-
-## Useful Facts
-
-:::{.proposition title="Galois groups are transitive subgroups"}
-If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is **always** a transitive subgroup, i.e. it acts transitively on the set of roots.
-:::
-
-:::{.proposition}
-:::
+## Showing Extensions are Galois
 
 :::{.fact}
 Showing your polynomial is irreducible:
 
+- Eisenstein (including shifting/inverting tricks, see section below)
 - To show $f$ is irreducible, it suffices to show it is irreducible over any $\FF_p[x]$.
 - A quadratic with no real roots is irreducible.
 
@@ -36,8 +26,102 @@ Showing your extension $K/k$ is Galois:
 - Show normality and separability.
 - Show $K$ is the splitting field of a separable polynomial ("separable splitting field")
 
+:::
+
+### Irreducibility
+
+:::{.proposition title="Consequence of Chebotarev density: checking irreducibility mod $p$"}
+If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
+:::
+
+:::{.remark}
+Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields.
+:::
+
+:::{.example title="using irreducibility mod $p$"}
+$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\mod 2$.
 
 :::
+
+:::{.theorem title="Eisenstein's Criterion"}
+If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
+
+- $p$ divides every coefficient *except* $a_n$ and
+- $p^2$ does not divide $a_0$,
+
+then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
+:::
+
+:::{.remark}
+Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
+This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
+
+A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
+:::
+
+:::{.example title="of shifting"}
+Set $f(x) \da x^2+x+2$, then $f(x+3) = x^2 + 7x + 14$ and Eisenstein applies at $p=7$.
+
+:::
+
+:::{.remark}
+Inverting: if $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
+Note that this is just reversing the coefficients.
+:::
+
+:::{.example title="Of inverting"}
+Take $f(x) \da 2x^5 -4x^2-3$, then for $g(x) \da 3x^5 +4x^2 - 2$ Eisenstein applies with $p=2$.
+:::
+
+:::{.example title="mod p reduction checks for Eisenstein"}
+Check
+\[
+f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
+,\]
+and Eisenstein on $f(x+3)$ with $p=5$ works.
+:::
+
+## Computing
+
+:::{.remark}
+Assume all extensions here are algebraic and finite.
+:::
+
+### Galois Groups act Transitively
+
+:::{.proposition title="Galois groups are transitive subgroups"}
+If $f\in k[x]$ is irreducible, then $\Gal(\SF(f)/k) \leq S_n$ is **always** a transitive subgroup, i.e. it acts transitively on the set of roots.
+:::
+
+:::{.corollary}
+\[
+n\divides \# \Gal(K/\QQ) \divides n!
+.\]
+
+Why: $\Gal(K/\QQ) \cong G\leq S_n$, and Lagrange yields $\#H \divides n!$.
+$G$ acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
+The size of an orbit divides the size of the group by orbit stabilizer, since $\OO_r \cong G/\Stab_G(r)$, and the right-hand side has a size that must divide $\# G$.
+
+:::
+
+:::{.fact}
+Write $C_n$ for the cyclic group of order $n$.
+Transitive subgroups of $S_n$ for small $n$:
+
+| $n \text{ in }S_n$ | Transitive Subgroups        |
+|--------------|-----------------------------------|
+| 1            | 1                                 |
+| 2            | $S_2 \cong C_2$                   |
+| 3            | $S_3, A_3 \cong C_3$              |
+| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
+| 5            | $S_5, A_5, F_5, D_5, C_5$         |
+
+- Nonabelian groups of order 8: $D_4, Q_8$.
+
+:::
+
+### Misc Useful Facts
+
 
 :::{.fact}
 
@@ -82,7 +166,9 @@ Some subgroup lattices:
 
 :::
 
-## Distinguishing Groups
+### Distinguishing Groups
+
+> Material borrowed from <https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf>
 
 :::{.remark title="Distinguishing groups"}
 \envlist
@@ -107,46 +193,37 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 
 :::
 
-:::{.proposition title="Recognizing groups from cycles"}
-\envlist
+### Density
 
-- For $n\geq 2$, if a transitive $G\leq S_n$ contains a transposition $(i, i+1)$ and a cycle of prime length $p> n/2$, then $G= S_n$.
-- For $n\geq 3$, if a transitive $G\leq S_n$ contains a **three cycle** and a $p\dash$cycle with $p>n/2$ then $G=A_n, S_n$.
-
+:::{.proposition title="A consequence of Chebotarev Density: reading cycles from reduction mod $p$"}
+For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
 :::
 
-## Cycle Types from Reduction mod $p$
+:::{.warnings}
+Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
+:::
 
-## Transitive Subgroups
+:::{.example title="of using density"}
+Take $f(x) \da x^6 + x^4 + x + 3$, then
 
-
-:::{.corollary}
 \[
-n\divides \# \Gal(K/\QQ) \divides n!
+f(x) &\equiv (x+1)(x^2 + \cdots)(x^3 + \cdots) \mod 2 &\implies \text{type } (1,2,3) \in G \\
+f(x) &\equiv x(x+2)(x^4 + \cdots) \mod 3 &\implies \text{type } (1,1,4) \in G \\
+.\]
+:::
+
+:::{.example title="of using density"}
+Take $f(x) \da x^4+x+1$, then
+\[
+f(x) &\equiv x^4+x+1 \mod 2 &\implies \text{type } (4) \\
+f(x) &\equiv (x-1)(x^3+x^2+x-1) \mod 3 &\implies \text{type } (1,3) \\
 .\]
 
-Why: $\Gal(K/\QQ) \cong G\leq S_n$, and Lagrange yields $\#H \divides n!$.
-$G$ acts on $R$ the set of $n$ roots, and since it acts transitively, $R$ is a single orbit.
-The size of an orbit divides the size of the group by orbit stabilizer, since $\OO_r \cong G/\Stab_G(r)$, and the right-hand side has a size that must divide $\# G$.
-:::
+So $G$ contains a 4-cycle and a 3-cycle.
+This is enough to show $G = A_4$.
 
-:::{.fact}
-Write $C_n$ for the cyclic group of order $n$.
-Transitive subgroups of $S_n$ for small $n$:
-
-| $n \text{ in }S_n$ | Transitive Subgroups        |
-|--------------|-----------------------------------|
-| 1            | 1                                 |
-| 2            | $S_2 \cong C_2$                   |
-| 3            | $S_3, A_3 \cong C_3$              |
-| 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
-| 5            | $S_5, A_5, F_5, D_5, C_5$         |
-
-- Nonabelian groups of order 8: $D_4, Q_8$.
 
 :::
-
-> Material borrowed from <https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf>
 
 :::{.example title="?"}
 Let $f(x) = x^6 + x^4 + x + 3$, reduce $\mod 11$ to get a cycle type $(1, 5)$.
@@ -164,56 +241,6 @@ Then use $(2, 5)^5 = (2,1,1,\cdots)$ to get a transposition, So $G = S_7$.
 Let $f(x) \da x^7-7x+10$.
 Reducing $\mod 3$ yields $(2, 5)$ and $(2, 5)^5 = (2, \cdots)$ and have a transposition.
 Since $5>n/2=7/2$, $G = S_7$.
-
-:::
-
-### Irreducibility
-
-:::{.theorem title="Eisenstein's Criterion"}
-If $f(x) = \sum_{i=0}^n \alpha_i x^i \in \QQ[x]$ and $\exists p$ such that
-
-- $p$ divides every coefficient *except* $a_n$ and
-- $p^2$ does not divide $a_0$,
-
-then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
-:::
-
-:::{.remark}
-Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
-This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
-
-A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
-:::
-
-:::{.example title="of shifting"}
-Set $f(x) \da x^2+x+2$, then $f(x+3) = x^2 + 7x + 14$ and Eisenstein applies at $p=7$.
-
-:::
-
-:::{.remark}
-Inverting: if $n \da \deg(f)$ and $x^n f(1/x)$ is irreducible, then $f$ is irreducible.
-Note that this is just reversing the coefficients.
-:::
-
-:::{.example title="Of inverting"}
-Take $f(x) \da 2x^5 -4x^2-3$, then for $g(x) \da 3x^5 +4x^2 - 2$ Eisenstein applies with $p=2$.
-:::
-
-:::{.example title="mod p reduction checks for Eisenstein"}
-Check
-\[
-f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
-,\]
-and Eisenstein on $f(x+3)$ with $p=5$ works.
-:::
-
-:::{.remark}
-General fact: if $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
-Finding a good prime for this is hard, but irreducibility can be checked exhaustively in small fields.
-:::
-
-:::{.example title="using irreducibility mod $p$"}
-$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\mod 2$.
 
 :::
 
@@ -246,39 +273,7 @@ Some useful facts:
 
 :::
 
-
-### Density
-
-:::{.fact}
-Density: for any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
-
-Warning: this only works if the $p_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
-:::
-
-:::{.example title="of using density"}
-Take $f(x) \da x^6 + x^4 + x + 3$, then
-
-\[
-f(x) &\equiv (x+1)(x^2 + \cdots)(x^3 + \cdots) \mod 2 &\implies \text{type } (1,2,3) \in G \\
-f(x) &\equiv x(x+2)(x^4 + \cdots) \mod 3 &\implies \text{type } (1,1,4) \in G \\
-.\]
-:::
-
-:::{.example title="of using density"}
-Take $f(x) \da x^4+x+1$, then
-\[
-f(x) &\equiv x^4+x+1 \mod 2 &\implies \text{type } (4) \\
-f(x) &\equiv (x-1)(x^3+x^2+x-1) \mod 3 &\implies \text{type } (1,3) \\
-.\]
-
-So $G$ contains a 4-cycle and a 3-cycle.
-This is enough to show $G = A_4$.
-
-
-:::
-
-## Known Fully Classified Galois Groups
-
+## Fully Classified Galois Groups
 
 ### Quadratics
 
@@ -362,6 +357,7 @@ x &\mapsto x^p
 
 :::
 
+
 ## Worked Examples
 
 :::{.fact}
@@ -373,8 +369,6 @@ x &\mapsto x^p
 - Some examples:
   - $x^3-2$, $x^3-4x+5$.
 :::
-
-
 
 :::{.example title="Quadratics"}
 \envlist
@@ -443,7 +437,6 @@ General cases:
 
 :::
 
-
 :::{.example title="$x^n+a$"}
 \envlist
 
@@ -465,7 +458,6 @@ General cases:
 
 :::
 
-
 :::{.example title="Quadratics"}
 \envlist
 
@@ -476,7 +468,6 @@ General cases:
 
 
 :::
-
 
 :::{.example title="Cubics"}
 \envlist
@@ -494,7 +485,6 @@ General cases:
   - Check $\Delta = 81$, a perfect square in $\QQ$.
 
 :::
-
 
 :::{.example title="Indirect"}
 If $\deg f = 5$ with exactly 3 real roots and one non-real complex conjugate pair, then $G(f) = S_5$.
