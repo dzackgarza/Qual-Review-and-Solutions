@@ -259,7 +259,7 @@ If $L/k$ is a finite extension, then, TFAE:
 - $L/k$ is separable.
 - \( L = k( \alpha) \) for \( \alpha \)  a separable element.
 - \( L = k( S ) \) for \( S \) some set of separable elements
-- $[L: K] = [L:K]_s$, the separable degree.
+- $[L: K] = [L:K]_s$, i.e. the separable degree equals the actual degree.
 \[
 [L: k] = \ts{ L: k } \da \# \Aut_{\Fieldsover k}(L)
 .\] 
@@ -342,6 +342,8 @@ If $L/K/k$, then $L/K$ is separable and $K/k$ is separable $\iff$ $L/k$ is separ
 :::
 
 :::{.proof title="?"}
+Use that $L/k$ is separable $\iff [L:k] = [L:k]_s$.
+
 $\impliedby$:
 
 - By definition, every $\alpha \in L$ is separable over $k$.
