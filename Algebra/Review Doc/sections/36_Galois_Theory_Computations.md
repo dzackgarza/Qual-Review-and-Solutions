@@ -37,6 +37,7 @@ Showing your extension $K/k$ is Galois:
 
 - Show normality and separability.
 - Show $K$ is the splitting field of a separable polynomial ("separable splitting field")
+- 
 
 :::
 

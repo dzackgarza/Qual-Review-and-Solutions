@@ -420,19 +420,22 @@ $\implies$:
 Let $L/k$ be a finite field extension.
 The following are equivalent:
 
-1. \( L/k \) is a **Galois extension**.
-2. $L/k$ is normal and separable.
-2. $\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}$ (D&F's definition).
-3. The fixed field of $\mathrm{Aut}(L/k)$ is exactly $k$.
-4. $L$ is the splitting field of a separable polynomial $p\in K[x]$.
-5. $L$ is finite, normal, and separable (most general definition?)
+- \( L/k \) is a **Galois extension**.
+- $L$ is normal, and separable.
+- The fixed field $L^H$ of $H\da \mathrm{Aut}(L/k)$ is exactly $k$.
+- $L$ is the splitting field of a separable polynomial $p\in K[x]$.
 - $L$ is a finite separable splitting field of an irreducible polynomial.
-- $L/k$ is separable and normal.
-- The fixed field $L^H$ for $H \da \Aut_{\Fieldsover{k}}(L)$ is precisely $k$.
+- There is a numerical equality:
+\[
+\# \Aut_{\Fieldsover{k}} (L) = [L: k] = \ts{ L: k}
+,\]
+  where $\ts{E:F}$ is the number of isomorphisms to any field lifting $\id_F$:
+
+  ![](figures/2021-08-09_22-29-40.png)
 
 In this case, we define the **Galois group** as 
 \[
-\Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L)
+\Gal(L/k) \definedas \Aut_{\Fieldsover{k}} (L/k)
 .\]
 :::
 
