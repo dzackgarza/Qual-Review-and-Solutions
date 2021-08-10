@@ -1,7 +1,8 @@
 # Galois Theory
 
-
 :::{.remark}
+Assume all extensions here are algebraic and finite.
+
 **The algorithm**:
 
 - Show your extension is Galois (normal and separable)
@@ -41,10 +42,10 @@ Showing your extension $K/k$ is Galois:
 
 :::
 
-### Irreducibility
+## Irreducibility
 
 :::{.proposition title="Consequence of Chebotarev density: checking irreducibility mod $p$"}
-If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
+If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \pmod p)$, then $f\pmod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
 :::
 
 :::{.remark}
@@ -52,7 +53,7 @@ Finding a good prime for this is hard, but irreducibility can be checked exhaust
 :::
 
 :::{.example title="using irreducibility mod $p$"}
-$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\mod 2$.
+$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\pmod 2$.
 
 :::
 
@@ -69,7 +70,7 @@ then $f$ is irreducible over $\QQ[x]$, and by Gauss' lemma, over $\ZZ[x]$.
 Shifting: if $f(x+a)$ satisfies Eisenstein for any $p$, then $f$ is irreducible.
 This is generally because $\Delta_{f(x)} = \Delta_{f(x + a)}$, and if $p$ works for Eisenstein on any $f$ then $p\divides \Delta_f$.
 
-A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\mod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
+A useful trick: for any such $p$, if $f(x) \equiv b(x+a)^n\pmod p$ for $n\da \deg f$, then Eisenstein may work on $f(x-a)$ using the prime $p$
 :::
 
 :::{.example title="of shifting"}
@@ -89,16 +90,13 @@ Take $f(x) \da 2x^5 -4x^2-3$, then for $g(x) \da 3x^5 +4x^2 - 2$ Eisenstein appl
 :::{.example title="mod p reduction checks for Eisenstein"}
 Check
 \[
-f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \mod 5
+f(x) \da x^3 + x^2 -48 x + 128 \leadsto f(x)\equiv (x-3)^3 \pmod 5
 ,\]
 and Eisenstein on $f(x+3)$ with $p=5$ works.
 :::
 
-## Computing
 
-:::{.remark}
-Assume all extensions here are algebraic and finite.
-:::
+## Computing
 
 ### Galois Groups act Transitively
 
@@ -209,27 +207,27 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 ### Density
 
 :::{.proposition title="A consequence of Chebotarev Density: reading cycles from reduction mod $p$"}
-For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
+For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \pmod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
 :::
 
 :::{.warnings}
-Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
+Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\pmod p$.
 :::
 
 :::{.example title="of using density"}
 Take $f(x) \da x^6 + x^4 + x + 3$, then
 
 \[
-f(x) &\equiv (x+1)(x^2 + \cdots)(x^3 + \cdots) \mod 2 &\implies \text{type } (1,2,3) \in G \\
-f(x) &\equiv x(x+2)(x^4 + \cdots) \mod 3 &\implies \text{type } (1,1,4) \in G \\
+f(x) &\equiv (x+1)(x^2 + \cdots)(x^3 + \cdots) \pmod 2 &\implies \text{type } (1,2,3) \in G \\
+f(x) &\equiv x(x+2)(x^4 + \cdots) \pmod 3 &\implies \text{type } (1,1,4) \in G \\
 .\]
 :::
 
 :::{.example title="of using density"}
 Take $f(x) \da x^4+x+1$, then
 \[
-f(x) &\equiv x^4+x+1 \mod 2 &\implies \text{type } (4) \\
-f(x) &\equiv (x-1)(x^3+x^2+x-1) \mod 3 &\implies \text{type } (1,3) \\
+f(x) &\equiv x^4+x+1 \pmod 2 &\implies \text{type } (4) \\
+f(x) &\equiv (x-1)(x^3+x^2+x-1) \pmod 3 &\implies \text{type } (1,3) \\
 .\]
 
 So $G$ contains a 4-cycle and a 3-cycle.
@@ -239,20 +237,20 @@ This is enough to show $G = A_4$.
 :::
 
 :::{.example title="?"}
-Let $f(x) = x^6 + x^4 + x + 3$, reduce $\mod 11$ to get a cycle type $(1, 5)$.
+Let $f(x) = x^6 + x^4 + x + 3$, reduce $\pmod 11$ to get a cycle type $(1, 5)$.
 So $G\leq S_6$ contains a 5-cycle, where $5>n/2 \da 6/2=3$, meaning $G = A_n, S_n$.
-Now reduce $\mod p$ for various $p$ to look for a cycle type of the form $(2,1,1,\cdots)$ or $(3,1,1,\cdots)$.
-This is hard, but $f\mod 2$ has type $(1,2,3)$ and $\qty{ (a,b)(c,d,e) }^3 = (a, b)$, so $G$ contains a transposition and thus $G = S_n = S_6$.
+Now reduce $\pmod p$ for various $p$ to look for a cycle type of the form $(2,1,1,\cdots)$ or $(3,1,1,\cdots)$.
+This is hard, but $f\pmod 2$ has type $(1,2,3)$ and $\qty{ (a,b)(c,d,e) }^3 = (a, b)$, so $G$ contains a transposition and thus $G = S_n = S_6$.
 :::
 
 :::{.example title="?"}
-Let $f(x) = x^7-x-1$, reduce $\mod 2$ to get a 7-cycle, and $\mod 3$ to get $(2, 5)$.
+Let $f(x) = x^7-x-1$, reduce $\pmod 2$ to get a 7-cycle, and $\pmod 3$ to get $(2, 5)$.
 Then use $(2, 5)^5 = (2,1,1,\cdots)$ to get a transposition, So $G = S_7$.
 :::
 
 :::{.example title="?"}
 Let $f(x) \da x^7-7x+10$.
-Reducing $\mod 3$ yields $(2, 5)$ and $(2, 5)^5 = (2, \cdots)$ and have a transposition.
+Reducing $\pmod 3$ yields $(2, 5)$ and $(2, 5)^5 = (2, \cdots)$ and have a transposition.
 Since $5>n/2=7/2$, $G = S_7$.
 
 :::
@@ -458,7 +456,7 @@ General cases:
   - The roots are $\zeta_8^k$ for $k=1,3,5,7$ coprime to 8, since this is $\Phi_8(x)$.
   - The splitting field is $\QQ(\zeta_8) = \QQ(i, \sqrt 2)$, noting that $\zeta_8 = e^{2\pi i \over 8} = e^{\pi i \over 4} = \cos(\pi/4) + i\sin(\pi/4) = (1/2)(\sqrt 2 + i \sqrt{2})$ so we have containment and both are degree $\phi(8)=4$ extensions.
   - This restricts to $C_4, C_2^2$.
-  - Reduce $\mod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
+  - Reduce $\pmod 5$ to get $(x^2+2)(x^2+2)$ of cycle type $(2, 2)$, forcing $C_2^2$.
 
 - $G(x^4+2) = D_4$: 
   - The roots are $\zeta_8^k \omega$ for $\omega = 2^{1\over 4}, k = 1,3,5,7$ coprime to 8. 
@@ -511,4 +509,3 @@ This follows because
 
 
 :::
-
