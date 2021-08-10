@@ -204,11 +204,21 @@ In particular, finding an $n$ cycle and either a 2-cycle or a 3-cycle is enough 
 
 :::
 
-### Density
+### Density: Cycle Types
 
 :::{.proposition title="A consequence of Chebotarev Density: reading cycles from reduction mod $p$"}
 For any $p\not\divides \Delta$, writing $f(x) = \prod_{i=1}^m f_i(x) \mod p$, $G$ contains a cycle of type $(\deg f_1, \deg f_2, \cdots, \deg f_m)$.
+Equivalently, if $\tilde f \da f\mod p$, then $G(\tilde f) \leq G(f)$ is a subgroup.
 :::
+
+
+:::{.example title="?"}
+Consider $f(x) = x^5+2x+1$.
+Reducing to $\FF_3$ yields no roots, so $f$ is irreducible, and moreover $G(f)$ contains a 5-cycle.
+Reducing to $\FF_7$ splits $f$ as $(x+2)(x+3)(x^3+2x^2+5x+5)$, so $G(f)$ contains a 3-cycle.
+
+:::
+
 
 :::{.warnings}
 Warning: this only works if the $f_i$ are distinct, i.e. there are no repeated factors in the factorization $\mod p$.
