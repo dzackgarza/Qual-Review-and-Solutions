@@ -274,6 +274,16 @@ For $f = \sum a_k x^k$ monic,
 .\]
 :::
 
+
+:::{.remark}
+Some special cases:
+
+- $f(x) = ax^2 + bx + c$: $\Delta = b^2-4ac$.
+- $f(x) = ax^3 + bx^2 + cx + d$: $\Delta = b²c² - 4ac³ - 4b³d - 27a²d² + 18abc$.
+- $f(x) = x³ + px + q$: $\Delta = -4p³-27q²$.
+:::
+
+
 :::{.example title="?"}
 For $f(x) = \prod_{i=1}^4(x-r_i)$, we have
 \[
