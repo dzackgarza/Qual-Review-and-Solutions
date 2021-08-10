@@ -45,7 +45,7 @@ Showing your extension $K/k$ is Galois:
 ## Irreducibility
 
 :::{.proposition title="Consequence of Chebotarev density: checking irreducibility mod $p$"}
-If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\ZZ/p[x]$ implies $f$ irreducible in $\QQ[x]$.
+If $f\in \ZZ[x]$ and there exists any prime $p$ such that $\deg(f) = \deg(f \mod p)$, then $f\mod p$ irreducible in $\FF_p[x]$ implies $f$ irreducible in $\QQ[x]$.
 :::
 
 :::{.remark}
@@ -53,7 +53,7 @@ Finding a good prime for this is hard, but irreducibility can be checked exhaust
 :::
 
 :::{.example title="using irreducibility mod $p$"}
-$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\ZZ/2[x]$ shows that $0, 1$ are not roots $\mod 2$.
+$f(x) \da x^4 + x + 1$ is irreducible in $\ZZ[x]$, since checking manually in $\FF_2[x]$ shows that $0, 1$ are not roots $\mod 2$.
 
 :::
 
@@ -152,14 +152,14 @@ Once you've confirmed that you have a Galois extension, some useful tricks:
 - If there are $k$ complex conjugate pairs (accounting for $2k$ roots) then $G$ contains a cycle $(1,2)(3,4)\cdots(2k-1,2k)$.
 - $G \subseteq A_n \iff \Delta \da \prod_{i < j} (r_i - r_j)^2$ is a perfect square in the ground field.
   - Elements in $A_n$ either have cycle type with an even number of even lengths (including 0).
-  - $A_4$ does not contain a subgroup isomorphic to $\ZZ/2^2$.
+  - $A_4$ does not contain a subgroup isomorphic to $\FF_2^2$.
 - $\Gal(L/k)$ permutes the roots of any irreducible polynomial.
 
 - $G \leq A_n \iff \sqrt{\Delta} \in \QQ$.
   
 - Recognizing cycle types:
   - $\ZZ/4: (2), (4)$.
-  - $\ZZ/2^2: (2, 2)$.
+  - $\FF_2^2: (2, 2)$.
   - $D_4: (4), (2,2), (2,1,1)$
   -$A_4: (2,2), (3,1)$.
 :::
