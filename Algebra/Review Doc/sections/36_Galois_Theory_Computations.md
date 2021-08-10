@@ -554,6 +554,14 @@ General cases:
   - The resolvent cubic is $x^3-48x+64$, which has no rational roots.
   - $\Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2$, so $G=A_4$.
 
+- $G(x^4+3x+3) = D_4$:
+  - The resolvent cubic is $g(x) = x^3-12x+9=(x-3)(x^2+3x-3)$ and $\Delta = 3^3 5^2 7$, so $G = C_4, D_4$.
+  - Check $D \da \Delta_g = 21$.
+  - Check if $g$ is irreducible in $\QQ(\sqrt{21})$: suppose $x^{4}+3 x+3=\left(x^{2}+a x+b\right)\left(x^{2}-a x+c\right)$, then $-a^{2}+b+c=0, a(c-b)=0, b c=3$
+    - From $a(c-b)=0$, if $a=0$ then $b=-c$ and $c^2=3$, but $\sqrt{-3}\not\in \QQ(D)$.
+      Otherwise $c=b$ and $c^2 = 3$, but $\sqrt{3}\not\in\QQ(D)$.
+  - So $G= D_4$.
+
 :::
 
 
