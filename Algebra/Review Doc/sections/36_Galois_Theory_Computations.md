@@ -127,7 +127,10 @@ Transitive subgroups of $S_n$ for small $n$:
 | 4            | $S_4, A_4, D_4, C_4, C_2^2$       |
 | 5            | $S_5, A_5, F_5, D_5, C_5$         |
 
+Other useful facts:
+
 - Nonabelian groups of order 8: $D_4, Q_8$.
+- $\# D_n = 2n$, $\#S_n = n!, \# A_n = n!/2$, and $\# F_5 = 20$.
 
 :::
 
