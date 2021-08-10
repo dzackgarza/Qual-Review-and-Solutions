@@ -219,8 +219,6 @@ Equivalently, if $\tilde f \da f\mod p$, then $G(\tilde f) \leq G(f)$ is a subgr
 
 :::{.example title="?"}
 You can use this to rule out types of groups using Lagrange's theorem: if you find a cycle of length $m$ which doesn't divide $\# H$, then $H$ isn't a possibility!
-Take $f$ to be degree 5 with 3 real roots and a conjugate pair, labeled $a_1,\cdots, a_5$ with $a_1, a_2$ not real.
-Then $(1,2)\in G$, given by complex conjugation, so $2\divides \# G$.
 
 :::
 
@@ -432,6 +430,23 @@ x &\mapsto x^p
   - $x^3-2$, $x^3-4x+5$.
 :::
 
+:::{.example title="Indirect: exactly one conjugate pair of roots"}
+If $\deg f = 5$ with exactly 3 real roots and one non-real complex conjugate pair, then $G(f) = S_5$.
+$G$ contains a transposition, namely complex conjugation on the conjugate pair.
+This already implies $G\neq A_5$, since a transposition is an odd number of even cycles.
+
+The claim is that $G$ contains an element of order 5, i.e. a 5-cycle, which is enough to generate $S_5$.
+This follows because 
+
+- Galois acts transitively, so there is a length 5 orbit.
+- By Orbit-Stabilizer, 5 divides $\# G$.
+- By Sylow, there is an element of order 5.
+
+So $G = S_5$.
+:::
+
+### Specific Degrees
+
 :::{.example title="Quadratics"}
 \envlist
 
@@ -439,7 +454,48 @@ x &\mapsto x^p
   - $x^2-m = (x+\sqrt{m})(x-\sqrt{m})$, so the splitting field is $\QQ(\sqrt{m})$ of degree 2.
   - Since $G\leq S_2$ and has order 2, $G= S_2 \cong C_2$.
   - Concretely, take $m=2$, then $G = \ts{\id, \tau}$ where $\tau: \sqrt{2} \mapsto -\sqrt{2}$, and correspondingly $a+b\sqrt{2} \mapsto a-b\sqrt{2}$.
+
+- $G((x^2-2)(x^2-3)) = C_2\cross C_2$.
+  - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have $G \subseteq \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2$.
+  - $\# G = 4$, taking the tower $\QQ(\sqrt 2, \sqrt 3) / \QQ(\sqrt 2)/ \QQ$ and noting $\sqrt 3 \not\in \QQ(\sqrt 2)$ which makes each step degree 2.
+  So this forces $G \cong C_2\cross C_2$.
+
+
 :::
+
+:::{.example title="Cubics"}
+\envlist
+
+- $G(x^3+x+1) = S_3$:
+  - Irreducible because it has no rational roots (by the rational roots test)
+  - $f'(x) = 3x^2+1>0$ so $f$ increases everywhere and can only have one real root $r$, so $\QQ(r)/\QQ = \deg f = 3$.
+  - The other roots are a non-real conjugate pair $w, \bar{w}$, so $\QQ(w, r)/\QQ(r) = \deg f(x)/(x-r) = 2$.
+  - So $[\SF(f): \QQ] = 6$, and the only transitive subgroup of order 6 in $S_3$ is $S_3$ itself.
+
+- $G(x^3-x+1) = S_3$:
+  - Just check $\Delta = -23$ is squarefree in $\QQ$.
+
+- $G(x^3-3x+1) = A_3$:
+  - Check $\Delta = 81$, a perfect square in $\QQ$.
+:::
+
+:::{.example title="Quartics"}
+
+- $G(x^4+8x+12) = A_4$:
+  - The resolvent cubic is $x^3-48x+64$, which has no rational roots.
+  - $\Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2$, so $G=A_4$.
+
+- $G(x^4+3x+3) = D_4$:
+  - The resolvent cubic is $g(x) = x^3-12x+9=(x-3)(x^2+3x-3)$ and $\Delta = 3^3 5^2 7$, so $G = C_4, D_4$.
+  - Check $D \da \Delta_g = 21$.
+  - Check if $g$ is irreducible in $\QQ(\sqrt{21})$: suppose $x^{4}+3 x+3=\left(x^{2}+a x+b\right)\left(x^{2}-a x+c\right)$, then $-a^{2}+b+c=0, a(c-b)=0, b c=3$
+    - From $a(c-b)=0$, if $a=0$ then $b=-c$ and $c^2=3$, but $\sqrt{-3}\not\in \QQ(D)$.
+      Otherwise $c=b$ and $c^2 = 3$, but $\sqrt{3}\not\in\QQ(D)$.
+  - So $G= D_4$.
+
+:::
+
+### General Families
 
 :::{.fact}
 The splitting field of $x^p-1$ is $\QQ(\zeta_p)$, and the splitting field of $x^p+1$ is $\QQ(\zeta_{2p})$.
@@ -520,60 +576,3 @@ General cases:
 
 :::
 
-:::{.example title="Quadratics"}
-\envlist
-
-- $G((x^2-2)(x^2-3)) = C_2\cross C_2$.
-  - Since $G$ must permute irreducible factors, labeling the roots $r_1, r_2 = \pm \sqrt{2}$ and $r_3, r_4 = \pm \sqrt{3}$, we have $G \subseteq \ts{\id, (1,2), (3,4), (1,2)(3,4)} \cong C_2\cross C_2$.
-  - $\# G = 4$, taking the tower $\QQ(\sqrt 2, \sqrt 3) / \QQ(\sqrt 2)/ \QQ$ and noting $\sqrt 3 \not\in \QQ(\sqrt 2)$ which makes each step degree 2.
-  So this forces $G \cong C_2\cross C_2$.
-
-
-:::
-
-:::{.example title="Cubics"}
-\envlist
-
-- $G(x^3+x+1) = S_3$:
-  - Irreducible because it has no rational roots (by the rational roots test)
-  - $f'(x) = 3x^2+1>0$ so $f$ increases everywhere and can only have one real root $r$, so $\QQ(r)/\QQ = \deg f = 3$.
-  - The other roots are a non-real conjugate pair $w, \bar{w}$, so $\QQ(w, r)/\QQ(r) = \deg f(x)/(x-r) = 2$.
-  - So $[\SF(f): \QQ] = 6$, and the only transitive subgroup of order 6 in $S_3$ is $S_3$ itself.
-
-- $G(x^3-x+1) = S_3$:
-  - Just check $\Delta = -23$ is squarefree in $\QQ$.
-
-- $G(x^3-3x+1) = A_3$:
-  - Check $\Delta = 81$, a perfect square in $\QQ$.
-:::
-
-
-:::{.example title="Quartics"}
-
-- $G(x^4+8x+12) = A_4$:
-  - The resolvent cubic is $x^3-48x+64$, which has no rational roots.
-  - $\Delta = (-27)(8^4) + (256)(12^3)=(81)(2^{12}) \in \QQ^2$, so $G=A_4$.
-
-- $G(x^4+3x+3) = D_4$:
-  - The resolvent cubic is $g(x) = x^3-12x+9=(x-3)(x^2+3x-3)$ and $\Delta = 3^3 5^2 7$, so $G = C_4, D_4$.
-  - Check $D \da \Delta_g = 21$.
-  - Check if $g$ is irreducible in $\QQ(\sqrt{21})$: suppose $x^{4}+3 x+3=\left(x^{2}+a x+b\right)\left(x^{2}-a x+c\right)$, then $-a^{2}+b+c=0, a(c-b)=0, b c=3$
-    - From $a(c-b)=0$, if $a=0$ then $b=-c$ and $c^2=3$, but $\sqrt{-3}\not\in \QQ(D)$.
-      Otherwise $c=b$ and $c^2 = 3$, but $\sqrt{3}\not\in\QQ(D)$.
-  - So $G= D_4$.
-
-:::
-
-
-:::{.example title="Indirect"}
-If $\deg f = 5$ with exactly 3 real roots and one non-real complex conjugate pair, then $G(f) = S_5$.
-$G$ contains a transposition, namely complex conjugation on the conjugate pair.
-The claim is that $G$ contains an element of order 5, i.e. a 5-cycle, which is enough to generate $S_5$.
-This follows because 
-
-- Galois acts transitively, so there is a length 5 orbit.
-- By Orbit-Stabilizer, 5 divides $\# G$.
-- By Sylow, there is an element of order 5.
-
-
-:::
