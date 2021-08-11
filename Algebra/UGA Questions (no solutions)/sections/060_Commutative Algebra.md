@@ -1,10 +1,6 @@
 # Commutative Algebra
 
-## Spring 2020 #5 $\done$
-Let $R$ be a ring and $f: M\to N$ and $g: N\to M$ be $R\dash$module homomorphisms such that $g\circ f = \id_M$.
-Show that $N \cong \im f \oplus \ker g$.
-
-## Fall 2019 #3 $\work$
+## Fall 2019 #3 $\done$
 Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
 
 a.
@@ -13,11 +9,6 @@ Prove that $R$ has characteristic 2.
 b.
 Prove that $R$ is commutative.
 
-:::{.concept}
-\envlist
-
-- Todo
-:::
 
 :::{.strategy}
 \envlist
@@ -221,17 +212,15 @@ But $1\in R$, so we have
 
 :::
 
-:::{.proof title="of c"}
-- We want to show $J(R) = \mathfrak N(R)$.
-
+:::{.proof title="of c: $J(R) = \mathfrak N(R)$"}
 $\mathfrak N(R) \subseteq J(R)$:
 
-- We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
+- Use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
 $$
 \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)\inv
 .$$
 
-- $J(R) \subseteq \mathfrak N(R)$:
+$J(R) \subseteq \mathfrak N(R)$:
 
 - Let $x \in J(R) \setminus \mathfrak N(R)$.
 
@@ -288,7 +277,8 @@ following:
 :::{.concept}
 \envlist
 
-- Todo
+- Testing module morphisms: $\phi(sm + n) = s\phi(m) + \phi(n)$.
+- First isomorphism theorem used for sizes: $R/\ker f \cong \im f$, so $\# R = \# \ker f \cdot \# \im f$.
 - See 1964 Annals "Properties of rings with a finite number of zero divisors"
 :::
 
@@ -399,7 +389,7 @@ R &\cong \ZZ/(2)[t] / (t^2)
 
 :::
 
-## Spring 2018 #5 $\work$
+## Spring 2018 #5 $\done$
 Let 
 \[
 M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
@@ -414,7 +404,53 @@ M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
 \implies MN = 0
 .\]
 
-## Spring 2018 #8 $\work$
+:::{.solution}
+\envlist
+
+- Multiply everything out to get
+\[
+\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
+,\]
+  so it suffices to show $cu=dv$ given
+  \[
+  ax &= by \\
+  cx &= dy \\
+  au &= bv
+  .\]
+
+- Writing $cu$:
+  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
+  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
+  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
+  - Summary:
+  \[
+  ax = by 
+  &\implies b\inv ax = y \\
+  &\implies cx = dy = d(b\inv a x) \\
+  &\implies c = db\inv a \\
+  &\implies cu = db\inv au 
+  .\]
+
+- Writing $dv$:
+  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
+  - Left-multiply by $d$ to get $db\inv au = dv$
+  - Summary:
+  \[
+  au = bv 
+  &\implies b\inv a u = v \\
+  &\implies db\inv au = dv
+  .\]
+
+- So 
+\[
+cu = db\inv a u = dv
+.\]
+
+
+
+:::
+
+## Spring 2018 #8 $\done$
 Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
 
 a.
@@ -426,7 +462,61 @@ If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text
 c.
 Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
 
-## Fall 2017 #5 $\work$
+:::{.remark}
+Cool problem, but pretty specific topological tricks needed.
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Suppose $c\da f(a)\neq 0$, noting that $c$ may not be positive.
+- By continuity, pick $\eps$ small enough so that $\abs{x-a}<\eps \implies \abs{f(x) - f(a)} < c/2$.
+  Since we're on the interval, we have $f(x) \in (f(a) - c/2, f(a) + c/2) = (c/2, 3c/2)$ which is a ball of radius $c/2$ about $c$, which thus doesn't intersect $0$.
+- So $f(x) \neq 0$ on this ball, and $g \da f^2 > 0$ on it.
+  Note that ideals are closed under products, so $g\in I$
+- Moreover $f^2(x) \geq 0$ since squares are non-negative, so $g\geq 0$ on $[0, 1]$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- By contrapositive, suppose $V(I)= \emptyset$, we'll show $I$ contains a unit and thus $I=R$.
+- For each fixed $x\in [0, 1]$, since $V(I)$ is empty there is some $f_x$ such that $f_x(x) \neq 0$.
+- By (a), there is some $g_x$ with $g_x(x) > 0$ on a neighborhood $U_x\ni x$ and $g_x \geq 0$ everywhere.
+- Ranging over all $x$ yields a collection $\ts{(g_x, U_x) \st x\in [0, 1]}$ where $\ts{U_x}\covers [0, 1]$.
+- By compactness there is a finite subcover, yielding a finite collection $\ts{(g_k, U_k)}_{k=1}^n$ for some $n$.
+- Define the candidate unit as 
+\[
+G(x) \da {1\over \sum_{k=1}^n g_k(x)}
+.\]
+- This is well-defined: fix an $x$, then the denominator is zero at $x$ iff $g_k(x) = 0$ for all $k$.
+  But since the $U_k$ form an open cover, $x\in U_\ell$ for some $\ell$, and $g_\ell > 0$ on $U_\ell$.
+- Since ideals are closed under sums, $H\da {1\over G} \da \sum g_k \in I$.
+  But $H$ is clearly a unit since $HG = \id$.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- If $I\normal R$ is maximal, $I\neq R$, and so by (b) we have $V(I) \neq \emptyset$.
+- So there is some $x_0\in[0, 1]$ with $f(x_0) = 0$ for all $f\in I$.
+- Define $\mfm_{x_0} \da \ts{f\in R \st f(x_0) = 0}$, which is clearly an ideal.
+  - This is a proper ideal, since constant nonzero functions are continuous and thus in $R$, not not $\mfm_{x_0}$.
+- We thus have $I \subseteq \mfm_{x_0}$, and by maximality they are equal.
+
+:::
+
+\todo[inline]{I'm not super convinced by c!}
+
+
+:::
+
+
+## Fall 2017 #5 $\done$
 A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
 
 a.
@@ -435,7 +525,54 @@ Suppose $R$ is a commutative ring with 1. Prove $R$ is simple if and only if $R$
 b.
 Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries in $k$, is a simple ring.
 
-## Fall 2017 #6 $\work$
+
+:::{.concept}
+\envlist
+
+- Nonzero proper ideals contain at least one nonzero element.
+- $I=R$ when $1\in I$.
+- Effects of special matrices: let $A_{ij}$ be a matrix with only a 1 in the $ij$ position.
+  - Left-multiplying $A_{ij}M$ moves row $j$ to row $i$ and zeros out the rest of $M$.
+  - Right-multiplying $MA_{ij}$ moves column $i$ to column $j$ and zeros out the rest.
+  - So $A_{ij} M A_{kl}$ moves entry $j, k$ to $i, l$ and zeros out the rest.
+:::
+
+:::{.solution}
+
+:::{.proof title="of a"}
+$\implies$:
+
+- Suppose $\Id(R) = \ts{\gens{0}, \gens{1}}$.
+  Then for any nonzero $r\in R$, the ideal $\gens{r} = \gens{1}$ is the entire ring.
+- In particular, $1\in \gens{r}$, so we can write $a = tr$ for some $t\in R$.
+- But then $r\in R\units$ with $t\da r\inv$.
+
+$\impliedby$:
+
+- Suppose $R$ is a field and $I\in \Id(R)$ is an ideal.
+- If $I \neq \gens{0}$ is proper and nontrivial, then $I$ contains at least one nonzero element $a\in I$.
+- Since $R$ is a field, $a\inv \in R$, and $aa\inv = 1\in I$ forces $I = \gens{1}$.
+
+:::
+
+:::{.proof title="of b"}
+
+- Let $J\normal R$ be a nonzero two-sided ideal, noting that $R$ is noncommutative -- the claim is that $J$ contains $I_n$, the $n\times n$ identity matrix, and thus $J = R$.
+- Pick a nonzero element $M\in I$, then $M$ has a nonzero entry $m{ij}$.
+- Let $A_{ij}$ be the matrix with a 1 in the $i,j$ position and zeros elsewhere.
+  - Left-multiplying $A_{ij}M$ moves row $j$ to row $i$ and zeros out the rest of $M$.
+  - Right-multiplying $MA_{ij}$ moves column $i$ to column $j$ and zeros out the rest.
+  - So $A_{ij} M A_{kl}$ moves entry $j, k$ to $i, l$ and zeros out the rest.
+- So define $B \da A_{i, i}MA_{j, i}$, which movies $m_{ij}$ to the $i,i$ position on the diagonal and has zeros elsewhere.
+- Then $m_{ij}\inv \eps_{ii} \da A_{ii}$ is a matrix with $1$ in the $i, i$ spot for any $i$.
+  Since $I$ is an ideal, we have $\eps_{ii}\in I$ for every $i$.
+- We can write the identity $I_n$ as $\sum_{i=1}^n \eps_{ii}$, so $I_n \in I$ and $I=R$.
+
+:::
+
+:::
+
+## Fall 2017 #6 $\done$
 For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
 
 We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
@@ -456,20 +593,61 @@ Show 3 is not prime in $R$.
 e.
 Conclude $R$ is not a PID.
 
-## Spring 2017 #3 $\work$
-Let $R$ be a commutative ring with 1.
-Suppose that $M$ is a free $R\dash$module with a finite basis $X$.
 
-a.
-Let $I \normal R$ be a proper ideal.
-Prove that $M/IM$ is a free $R/I\dash$module with basis $X'$, where $X'$ is the image of $X$ under the canonical map $M\to M/IM$.
+:::{.concept}
+\envlist
 
-b.
-Prove that any two bases of $M$ have the same number of elements.
-You may assume that the result is true when $R$ is a field.
+- Integral domain: $ab=0 \implies a\neq 0 \text{ or } b\neq 0$.
+- Prime: $p \divides ab \implies p\divides a$ or $b$.
+- Reducible: $a = xy$ where $x, y$ are proper divisors.
+- Irreducible implies prime in a UFD.
+:::
 
 
-## Spring 2017 #4 $\work$
+:::{.solution}
+\envlist
+
+- $R$ is an integral domain:
+  - Let $\alpha = a + b\sqrt{-5}$ and $\beta = c + d \sqrt{-5}$ and set $\bar \alpha, \bar \beta$ be their conjugates.
+  - Then
+  \[
+  0 = \alpha \beta = \alpha\bar\alpha \beta\bar\beta = (a^2-5b^2)(c^2-5d^2) \in \ZZ
+  ,\]
+  so one factor is zero.
+  - If $a^2 = 5b^2$ then $a = \sqrt{5} b \not\in \ZZ$ unless $a=b=0$.
+    Otherwise, the same argument forces $c=d=0$.
+
+- The units are $\pm 1$:
+  - Use that $u\in R\units \implies N(u) = \pm 1$, and $N(\alpha) = \alpha \bar\alpha = (a+b\sqrt{-5})(a-b\sqrt{-5}) = a^2 + 5b^2 = 1$
+    forces $b=0$ and $a=\pm 1$.
+
+- Irreducible elements:
+  - $2, 3$ are irreducible because if (say) $3=xy$ then $N(x)N(y) = N(3) = 9$, and if neither $x,y$ are units then $N(x) = N(y) = 3$.
+    But $N(a + b\sqrt{-5}) = a^2 + 5b^2$ and $a^2 + 5b^2 = 3$ has no solutions.
+    The same argument works for $2$.
+  - $2\pm \sqrt{-5}$ are irreducible because $N(2 + \sqrt{-5}) = 2^2 + 5(1) = 9$, and in fact $N(2 - \sqrt{-5}) = 2^2 + 5(-1)^2 = 9$.
+    By the same argument as above, this forces irreducibility.
+
+- $3$ is not prime: 
+  - We can write $6 = (3)(2) = (1 + \sqrt{-5})(1 - \sqrt{-5})$, so if we assume $3$ is prime we get $3\divides (1 \pm \sqrt{-5})$.
+  - But writing $(1\pm \sqrt{-5}) = 3r$ for some $r\in R$ yields 
+  \[
+  (1 \pm \sqrt{-5}) = 3(a + b\sqrt{-5}) \implies 3a=1, 3b = \pm 1
+  .\]
+  These have no solutions $a, b\in \ZZ$. $\contradiction$
+
+- $R$ is not a PID:
+  - Use that irreducibles are prime in a UFD, which is not true here. 
+
+
+
+:::
+
+
+
+
+
+## Spring 2017 #4 $\done$
 
 a.
 Let $R$ be an integral domain with quotient field $F$.
@@ -483,6 +661,43 @@ b.
 Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
   > Hint: let $p(x) = x^2-2$.
+
+:::{.concept}
+\envlist
+
+- Gauss' lemma: for $R$ a UFD with fraction field $F$, if $f$ is reducible in $F[x]$ with $f=pq$ then there are $r,s\in R$ such that $f = (rp)(sq)$ reduces in $R[x]$.
+- Corollary: $R$ is a UFD iff $R[x]$ is a UFD.
+:::
+
+:::{.solution}
+
+:::{.proof title="of 1"}
+\envlist
+
+- The important assumption is $a(x)\not\in R[x]$, we'll assume $R$ is a UFD and try to contradict this.
+- Write $f(x) = a(x)b(x)\in F[x]$, then if $R$ is a UFD we have $r,s\in F$ such that $f(x) = ra(x) sb(x) \in R[x]$.
+- Since $a(x), b(x)$ are monic and $f=ab$, $f$ is monic, and by the factorization in $R[x]$ we have $rs=1$.
+  So $r,s\in R\units$.
+- Then using that $ra(x)\in R[x]$, we have $r\inv ra(x) = a(x)\in R[x]$. $\contradiction$
+
+:::
+
+
+:::{.proof title="of b"}
+\envlist
+
+- Set $R = \ZZ[2\sqrt 2], F = \QQ[2\sqrt 2]$.
+- Let $p(x) \da x^2-2 \in R[x]$ which splits as $p(x) = (x+ \sqrt{2} )(x - \sqrt{2} ) \da a(x) b(x) \in F[x]$.
+- Note neither $a(x), b(x)$ are in $R[x]$.
+  - Explicitly, every monic linear $p\in R[x]$ is of the form $x + 2t\sqrt{2}$ with $t\in \ZZ$, and $\pm \sqrt{2} \neq 2t\sqrt{2}$ for any $t$.
+- So we have $p(x) \in R[x]$ splitting as $p=ab$ in $F[x]$ with $a\not \in R[x]$, so part (a) applies.
+
+:::
+
+
+:::
+
+
 
 ## Spring 2016 #8 $\work$
 Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
@@ -499,6 +714,12 @@ b.
 Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
 
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
+
+
+:::{.solution}
+
+:::
+
 
 ## Fall 2015 #3 $\work$
 Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.

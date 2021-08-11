@@ -305,7 +305,7 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divi
 
 :::{.fact}
 If $R$ is an integral domain, prime $\implies$ irreducible.
-If $R$ is a UFD, then prime $\iff$ irreducible.
+If $R$ is a UFD, then irreducible $\implies$ prime, so this is an iff.
 :::
 
 :::{.definition title="Associate Elements"}
@@ -397,9 +397,6 @@ Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})
 Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
 
-
-
-
 ## Types of Rings
 
 :::{.definition title="Division ring or skew field"}
@@ -432,7 +429,6 @@ Non-examples: $\ZZ/6, \Mat(2\times 2; k)$
 A **field** is a commutative division ring, i.e. every nonzero element is a uni, i.e. every nonzero element is a unit
 :::
 
-
 :::{.exercise title="?"}
 Show that TFAE:
 
@@ -441,12 +437,10 @@ Show that TFAE:
 - If $B\in \Field$ is nonzero then every ring morphism $A\to B$ is injective.
 :::
 
-
 :::{.remark}
 Every field is an integral domain, but e.g. $\ZZ$ is an integral domain that is not a field.
 
 :::
-
 
 :::{.definition title="Principal Ideal"}
 An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$, i.e. $I = Ra$.
@@ -455,7 +449,6 @@ An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I
 :::{.definition title="Principal Ideal Domain"}
 A ring $R$ is a **principal ideal domain** iff every ideal is principal.
 :::
-
 
 :::{.exercise title="?"}
 Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
@@ -472,7 +465,6 @@ where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates
 :::{.definition title="Noetherian"}
 A ring $R$ is **Noetherian** if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
-
 
 :::{.definition title="Reduced Ring"}
 A ring $R$ is **reduced** if $R$ contains no nonzero nilpotent elements. 
@@ -491,7 +483,6 @@ Show that if $R$ is a nonzero ring where every element is either a unit or nilpo
 Show that if $p\in \spec R$ then $R\localize{p}$ is local.
 :::
 
-
 :::{.exercise title="?"}
 Suppose $\mfm \in \mspec R$ is a proper maximal ideal.
 Show that under either of the following two conditions, $R$ is local:
@@ -500,7 +491,6 @@ Show that under either of the following two conditions, $R$ is local:
 - $1 + \mfm \subseteq R\units$
 
 :::
-
 
 :::{.solution}
 - Sketch: $\mfm$ must contain every non-unit.
@@ -511,10 +501,6 @@ Show that under either of the following two conditions, $R$ is local:
   - If $r\in R\sm \mfm$ then $\gens{r, \mfm} = R = \gens{ 1 }$ so $rt + m = 1$ for some $t\in R, m\in \mfm$, so $rt = 1-m \in 1 + \mfm \subseteq R\units$ by assumption.
     Now apply (1).
 :::
-
-
-
-
 
 :::{.definition title="Dedekind Domains"}
 A **Dedekind domain** is an integral domain for which the monoid $\Id(R)$ of nonzero ideals of $R$ satisfies unique factorization: every ideal can be decomposed uniquely into a product of prime ideals.
@@ -579,12 +565,9 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
    - *Proof*: $2 \mod 4$ is a zero divisor.
 :::
 
-
 :::{.proposition title="Polynomial rings over fields have division"}
 If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 :::
-
-
 
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
@@ -597,13 +580,9 @@ If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 - $R[x]$ a PID $\implies R$ is a field.
 :::
 
-
 :::{.example title="?"}
 A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
 :::
-
-
-
 
 ## Radicals
 
@@ -666,7 +645,6 @@ Show that the nilradical is the intersection of all prime ideals.
 
 :::
 
-
 :::{.solution}
 
 > See A&M 1.8
@@ -688,7 +666,6 @@ Thus $ab\not \in \mfp$ so $f\not\in \mfp$.
 Letting $\mfp$ be arbitrary yields $f\not \in P$.
 :::
 
-
 :::{.exercise title="?"}
 Show that $\nilrad{R} = \Intersect_{p\in \spec R} p$ is the intersection of all prime ideals $p\normal R$.
 :::
@@ -700,11 +677,9 @@ The **Jacobson radical** $\jacobsonrad{R}$ is the intersection of all maximal id
 .\]
 :::
 
-
 :::{.exercise title="?"}
 Show $x\in \jacobsonrad{R} \iff 1-xR \subseteq R\units$.
 :::
-
 
 ## Structure Theorems
 
@@ -743,23 +718,19 @@ Every finite division ring is a field, i.e. finite division rings must be commut
 
 ## Zorn's Lemma
 
-
 :::{.definition title="Chain in a poset"}
 In a poset, a **chain** is a totally ordered subset.
 An **upper bound** on a subset $S$ of a poset $X$ is any $x\in X$ such that $s\leq x$ for all $s\in S$.
 :::
 
-
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 :::
-
 
 :::{.remark}
 You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
 To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
 :::
-
 
 :::{.proposition title="Existence of maximal ideals"}
 Every proper ideal is contained in a maximal ideal.
@@ -794,13 +765,7 @@ This follows because if $x\in R\sm R\units$, then $Rx \normal R$ and $Rx\neq R$ 
 Then there exists some $\bar \mfm \in \mspec R/Rx$, and by the correspondence theorem this lifts to some $\mfm \in \mspec R$ containing $Rx$.
 :::
 
-
-
-
-
-
 ## Unsorted
-
 
 :::{.fact}
 Division algorithm for Euclidean domains.
@@ -808,7 +773,6 @@ Division algorithm for Euclidean domains.
 \todo[inline]{todo}
 
 :::
-
 
 :::{.definition title="Field of fractions"}
 For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be constructed as 
@@ -819,7 +783,6 @@ For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be c
 > Checking transitivity requires having no nonzero zero divisors.
 
 :::
-
 
 :::{.definition title="Localization"}
 For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS \subseteq S$ and $1_R\in S$, the **localization of $R$ at $S$** can be constructed as
@@ -833,7 +796,6 @@ R\localize{S} \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in 
 
 \todo[inline]{Universal property.}
 
-
 :::{.warnings}
 There is a canonical ring morphism
 \[
@@ -843,8 +805,6 @@ x &\mapsto {x\over 1}
 but this may not be injective.
 :::
 
-
-
 :::{.remark}
 For integral domains $R$, 
 \[
@@ -853,21 +813,18 @@ For integral domains $R$,
 
 :::
 
-
-
 :::{.theorem title="Hilbert Basis Theorem"}
 \todo[inline]{todo}
 
 :::
+
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
-
 
 :::{.proposition title="Polynomial rings over UFDs are UFDs"}
 \todo[inline]{todo}
 
 
 :::
-
 

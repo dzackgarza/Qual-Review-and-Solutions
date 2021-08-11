@@ -1,5 +1,10 @@
 # Linear Algebra
 
+
+:::{.remark}
+Algorithm for SNF: D&F page 479.
+:::
+
 :::{.remark}
 Some definitions:
 

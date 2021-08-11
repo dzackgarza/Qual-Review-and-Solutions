@@ -27,9 +27,13 @@ Consider $f(x) \da x^5-9x+3$, let $L\da \SF(f)/\QQ$.
 - $L$ is Galois:
   - $L/\QQ$ is a finite extension over a perfect field and thus automatically separable.
   - $L/\QQ$ is the splitting field of a separable polynomial, and thus normal.
-- Since $L$ is Galois, $\# G = d \da [L: \QQ]$, so compute the degree.
-  - Since $f$ is irreducible, for any root $\alpha$, $[\QQ(\alpha): \QQ] = \deg f$ and thus $d=5$.
-- Possibilities: $S_5, A_5 , F_5\cong C_5\rtimes C_4, D_5, C_5$.
+- Since $L$ is Galois, $\# G = d \da [L: \QQ]$, so try to compute the degree by computing the splitting field (and its degree) explicitly.
+  - Here: difficult! The roots are complicated.
+- Since $L$ is Galois, $G\leq S_5$ is a transitive subgroup.
+  Possibilities: 
+  \[
+  S_5, A_5 , F_5\cong C_5\rtimes C_4, D_5, C_5
+  .\]
 - Claim: $G = S_5$.
   - Reduce mod 2: $(x^2 + x + 1) (x^3 + x^2 + 1)$, yielding a cycle type $(2, 3)$.
   This rules out 
@@ -270,14 +274,12 @@ Moreover, if $G$ contains a 2-cycle (transposition), then $G = S_n$.
 - $A_4$ does not contain a subgroup isomorphic to $C_2^2$.
 :::
 
-
 :::{.fact}
 Some useful generating sets: see <https://kconrad.math.uconn.edu/blurbs/grouptheory/genset.pdf>
 
 ![](figures/2021-08-09_18-51-08.png)
 
 :::
-
 
 ### Density: Cycle Types
 
@@ -602,6 +604,8 @@ A flow chart summarizing the full process:
 
 ![](figures/2021-07-20_22-06-48.png)
 
+
+See Hungerford 273 for classification.
 :::
 
 :::{.example title="Quartics using resolvent cubics"}

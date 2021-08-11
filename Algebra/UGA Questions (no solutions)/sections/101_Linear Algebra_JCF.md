@@ -119,9 +119,7 @@ matrix $P$ such that $P\inv AP$ is in JCF.
 :::
 
 :::{.solution}
-\envlist
-
-:::{.proof title="of a"}
+**Proof of (a)**:
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
 
 - Noting that $B = A+I$, we have
@@ -180,8 +178,6 @@ P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 \end{array}\right]
 .\]
 
-:::
-
 :::{.proof title="of claim 1"}
 \envlist
 
@@ -223,7 +219,8 @@ where the first equality follows from expanding along the first row and noting t
 
 :::
 
-:::{.proof title="of b"}
+**Proof of (b)**:
+
 For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
 
 - A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
@@ -278,8 +275,6 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 1 & 0 & 0 & 0 & 0 & 0 \\
 \end{array}\right]
 .\]
-
-:::
 
 :::
 
