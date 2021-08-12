@@ -1,5 +1,16 @@
 # General Field Theory
 
+
+:::{.remark}
+The most useful tricks of the trade:
+
+- $\# \GG_m(\GF(p^k)) = p^k-1$, since every element is invertible except 0.
+  You can use this to cook up strong numerical constraints on orders of elements.
+- Multiplicativity in towers can force numerical divisibility constraints.
+  E.g. if $\alpha$ is a root of any irreducible $f$, then take the tower $\SF(\alpha, k)/k(\alpha)/k$: then the degree of $\min_{\alpha, k}(x)\in k[x]$ divides the degree of the extension $[\SF(\alpha, k) :  k]$.
+:::
+
+
 ## Basics: Polynomials
 
 :::{.definition title="Reducible and Irreducible Polynomials"}
