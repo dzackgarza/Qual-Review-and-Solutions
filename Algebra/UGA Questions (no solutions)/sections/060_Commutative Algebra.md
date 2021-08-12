@@ -721,21 +721,6 @@ No clue! Send help!
 :::
 
 
-## Fall 2015 #4 $\done$
-Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
-Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
-
-:::{.solution}
-\envlist
-
-- Let $I\da \union Ra_i$ which is an ideal in a PID and thus $I = Rb$ for some $b$.
-- Using that $b\in I$, which is a union, we have $Rb\in Ra_m$ for some $m$.
-- Thus $I = R_b \subseteq Ra_m$, and $Ra_m \subseteq I$ by definition of $I$, so $Rb = Ra_m$.
-- In particular, since $Ra_{m} \subseteq Ra_{m+1}$ by assumption, and $Ra_{m+1} \subseteq Rb \subseteq Ra_m$ since $Rb = I$, we have $Ra_m = Ra_{m+1}$.
-  So inductively, the chain stabilizes at $m$.
-:::
-
-
 ## Spring 2015 #7 $\work$
 Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
 Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
@@ -776,27 +761,6 @@ Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ th
 b.
 Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
 
-## Fall 2013 #4 $\work$
-Let $R$ be a commutative ring with $1\neq 0$.
-Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
-
-a.
-Show that the collection of nilpotent elements in $R$ forms an ideal.
-
-b.
-Show that if $x$ is nilpotent, then $x$ is contained in every prime ideal of $R$.
-
-c.
-Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
-There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
-
-By Zorn's lemma the set of ideals disjoint from $S$ has a maximal element with respect to inclusion, say $I$.
-In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $S$ with $I\subseteq J \subseteq R$ then $J=I$ or $J=R$.
-
-Show that $I$ is a prime ideal.
-
-d. 
-Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
 
 ## Spring 2013 #1 $\work$
 Let $R$ be a commutative ring.
@@ -872,7 +836,84 @@ b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
 
 
 
-## Spring 2021 #6
+
+# Zorn's Lemma
+
+## Fall 2013 #4 $\work$
+Let $R$ be a commutative ring with $1\neq 0$.
+Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
+
+a.
+Show that the collection of nilpotent elements in $R$ forms an ideal.
+
+b.
+Show that if $x$ is nilpotent, then $x$ is contained in every prime ideal of $R$.
+
+c.
+  Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
+  There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
+
+  By Zorn's lemma the set of ideals disjoint from $S$ has a maximal element with respect to inclusion, say $I$.
+  In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $S$ with $I\subseteq J \subseteq R$ then $J=I$ or $J=R$.
+
+  Show that $I$ is a prime ideal.
+
+d. 
+Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
+
+## Fall 2015 #3 $\done$
+Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
+
+Prove that $R$ contains a maximal left ideal.
+
+> Hint: imitate the proof (using Zorn's lemma) in the case where $R$ does have a 1.
+
+:::{.solution}
+\envlist
+
+- Define the map
+\[
+\phi_u: R &\to R\\
+x &\mapsto xu
+,\]
+  which is right-multiplication by $u$.
+  By assumption, $\phi_u$ is surjective, so the principal ideal $Ru$ equals $R$.
+
+- Then $K \da \ker \phi_u \in \Id(R)$ is an ideal.
+- $K$ is proper -- otherwise, noting $Ru=R$, if $K=R$ we have $Ru = 0$ and thus $R=0$.
+  So suppose $R\neq 0$.
+- Take a poset $S \da \ts{J\in \Id(R) \st J \contains K, J\neq R}$, the set of all ideals containing $K$, ordered by subset inclusion.
+  Note that $K \in S$, so $S$ is nonempty.
+- Apply Zorn's lemma: let $C: C_1 \subseteq C_2 \subseteq \cdots$ be a chain (totally ordered sub-poset) in $S$.
+  If $C$ is the empty chain, $K$ is an upper bound.
+  Otherwise, if $C$ is nonempty, define $\hat{C} \da \Union_{i=1}^\infty C_i$.
+  - $\hat{C}$ is an ideal: if $a,b\in \hat{C}$, then $a\in C_i, b\in C_j$ for some $i,j$.
+  But without loss of generality, using that chains are totally ordered, $C_i \subseteq C_j$, so $a,b\in C_j$ and thus $ab\in C_j$.
+  Similarly for $x\in \hat{C}$, $x\in C_j$ for some $j$, and thus $Rx \subseteq C_j$ since $C_j$ is an ideal.
+  - $\hat{C}$ is in $S$:
+  It clearly contains $K$, since for example $K \subseteq C_1 \subseteq \hat{C}$.
+    - That $\hat{C} \neq R$: an ideal equals $R$ iff it contains a unit.
+    But if $r\in \hat{C}$ is a unit, $r\in C_j$ for some $j$ is a unit, making $C_j=R$. $\contradiction$
+- So by Zorn's lemma, $\hat{C}$ contains a maximal ideal (incidentally containing $K$).
+:::
+
+# Noetherian Rings
+
+## Fall 2015 #4 $\done$
+Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
+Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
+
+:::{.solution}
+\envlist
+
+- Let $I\da \union Ra_i$ which is an ideal in a PID and thus $I = Rb$ for some $b$.
+- Using that $b\in I$, which is a union, we have $Rb\in Ra_m$ for some $m$.
+- Thus $I = R_b \subseteq Ra_m$, and $Ra_m \subseteq I$ by definition of $I$, so $Rb = Ra_m$.
+- In particular, since $Ra_{m} \subseteq Ra_{m+1}$ by assumption, and $Ra_{m+1} \subseteq Rb \subseteq Ra_m$ since $Rb = I$, we have $Ra_m = Ra_{m+1}$.
+  So inductively, the chain stabilizes at $m$.
+:::
+
+## Spring 2021 #6 $\work$
 
 a. 
 Carefully state the definition of **Noetherian** for a commutative ring $R$.
@@ -913,43 +954,5 @@ I \da \gens{S} = \sum_{k\in \ZZ_{\geq 1}} R\cdot 2x^k \da \ts{ \sum_{i=1}^m r_k(
 \todo[inline]{???}
 
 
-:::
-
-# Zorn's Lemma
-
-## Fall 2015 #3 $\done$
-Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
-
-Prove that $R$ contains a maximal left ideal.
-
-> Hint: imitate the proof (using Zorn's lemma) in the case where $R$ does have a 1.
-
-:::{.solution}
-\envlist
-
-- Define the map
-\[
-\phi_u: R &\to R\\
-x &\mapsto xu
-,\]
-  which is right-multiplication by $u$.
-  By assumption, $\phi_u$ is surjective, so the principal ideal $Ru$ equals $R$.
-
-- Then $K \da \ker \phi_u \in \Id(R)$ is an ideal.
-- $K$ is proper -- otherwise, noting $Ru=R$, if $K=R$ we have $Ru = 0$ and thus $R=0$.
-  So suppose $R\neq 0$.
-- Take a poset $S \da \ts{J\in \Id(R) \st J \contains K, J\neq R}$, the set of all ideals containing $K$, ordered by subset inclusion.
-  Note that $K \in S$, so $S$ is nonempty.
-- Apply Zorn's lemma: let $C: C_1 \subseteq C_2 \subseteq \cdots$ be a chain (totally ordered sub-poset) in $S$.
-  If $C$ is the empty chain, $K$ is an upper bound.
-  Otherwise, if $C$ is nonempty, define $\hat{C} \da \Union_{i=1}^\infty C_i$.
-  - $\hat{C}$ is an ideal: if $a,b\in \hat{C}$, then $a\in C_i, b\in C_j$ for some $i,j$.
-  But without loss of generality, using that chains are totally ordered, $C_i \subseteq C_j$, so $a,b\in C_j$ and thus $ab\in C_j$.
-  Similarly for $x\in \hat{C}$, $x\in C_j$ for some $j$, and thus $Rx \subseteq C_j$ since $C_j$ is an ideal.
-  - $\hat{C}$ is in $S$:
-  It clearly contains $K$, since for example $K \subseteq C_1 \subseteq \hat{C}$.
-    - That $\hat{C} \neq R$: an ideal equals $R$ iff it contains a unit.
-    But if $r\in \hat{C}$ is a unit, $r\in C_j$ for some $j$ is a unit, making $C_j=R$. $\contradiction$
-- So by Zorn's lemma, $\hat{C}$ contains a maximal ideal (incidentally containing $K$).
 :::
 
