@@ -828,3 +828,13 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 
 :::
 
+
+:::{.exercise title="?"}
+\envlist
+
+- Show that any PID is Noetherian.
+- Show that not $\ZZ$ is Noetherian but not Artinian.
+  - Hint: take a chain $n\ZZ \contains n^2\ZZ \contains \cdots$.
+
+:::
+
