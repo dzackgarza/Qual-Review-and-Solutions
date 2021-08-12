@@ -1006,7 +1006,8 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
   0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
   .\]
   
-
+- Part 2: no clue! 
+  Hopefully falls out of some manipulation..
 
 :::
 
