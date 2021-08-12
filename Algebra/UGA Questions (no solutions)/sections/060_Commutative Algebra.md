@@ -720,9 +720,28 @@ Prove that $I$ is a prime ideal.
 :::{.solution}
 \envlist
 
+:::{.proof title="part a and b"}
+\envlist
+
 - Maximal: a proper ideal $I\normal R$, so $I\neq R$, such that if $J\contains I$ is any other ideal, $J = R$.
 - Existence of a maximal ideal: use that $0\in \Id(R)$ always, so $S\da \ts{I\in \Id(R) \st I\neq R}$ is a nonempty poset under subset inclusion.
   Applying the usual Zorn's lemma argument produces a maximal element.
+:::
+
+
+:::{.proof title="part c"}
+$\impliedby$:
+If $r\in R$ is a unit and $\mfm$ is maximal, then $r\in \mfm \implies \mfm = R$, contradicting that $\mfm$ is proper.
+
+
+$\implies$:
+
+
+
+:::
+
+
+- 
 :::
 
 
