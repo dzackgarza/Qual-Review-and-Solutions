@@ -638,16 +638,16 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
 :::
 
-
 :::
-
-
-
-
-
 
 ## Fall 2014 #7 $\work$
 Give a careful proof that $\CC[x, y]$ is not a PID.
+
+
+:::{.solution}
+
+:::
+
 
 ## Fall 2014 #8 $\work$
 Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
@@ -970,7 +970,7 @@ $\impliedby$:
 
 :::
 
-## Spring 2016 #8 $\work$
+## Spring 2016 #8 $\done$
 Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
 
 i. $R$ has no zero divisors, and
@@ -986,14 +986,12 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
 
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
 
-
 :::{.concept}
 \envlist
 
 - $R$ has no left zero divisors iff $R$ has the left cancellation property: $xa=xb \implies a=b$.
 - $R$ has no right zero divisors iff $R$ has the right cancellation property: $ax=bx \implies a=b$.
 :::
-
 
 :::{.solution}
 Note: solutions borrowed from folks on Math twitter!
@@ -1017,7 +1015,6 @@ Note: solutions borrowed from folks on Math twitter!
   0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
   .\]
 :::
-
 
 :::{.proof title="part 2"}
 \envlist
@@ -1047,11 +1044,31 @@ yz + yz &= z \\
 2(zy) = z = 2(yz) \implies 2(zy - yz) = 0 \implies zy-yz = 0
 ,\]
 so $zy=yz$.
-
 :::
 
+:::{.proof title="of 2, if $R$ is unital"}
+\envlist
 
-  
+- If $1\in R$, 
+\[
+2xy &= x \\
+\implies 2xy-x &= 0 \\
+\implies x(2y-1) &= 0 \\
+\implies 2y-1 &= 0 && x\neq 0 \text{ and no zero divisors}\\
+\implies 2y &= 1
+.\]
+- Now use
+\[
+1\cdot z &= z\cdot 1 \\
+\implies (2y)z &= z(2y) \\
+\implies (y+y)z &= z(y+y) \\
+\implies yz+yz &= zy+zy \\
+\implies 2(yz) &= 2(zy) \\
+\implies 2(yz-zy) &= 0 \\
+\implies yz-zy &= 0 \\
+,\]
+using condition (2).
+:::
 
 :::
 
