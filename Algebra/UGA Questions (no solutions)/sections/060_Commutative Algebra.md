@@ -909,10 +909,10 @@ Let $M$ be an $R\dash$module, and recall that for $0\neq \mu \in M$, the *annihi
 \[
 \ann(\mu) = \theset{r\in R \suchthat r\mu = 0}
 .\]
-Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property that there exists an element $\mu \in M$ such that $I = \ann(\mu)$ for some $\mu \in M$.
-In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \ann(\nu) \subsetneq R$ such that $I\subsetneq J$.
+  Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property that there exists an element $\mu \in M$ such that $I = \ann(\mu)$ for some $\mu \in M$.
+  In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \ann(\nu) \subsetneq R$ such that $I\subsetneq J$.
 
-Prove that $I$ is a prime ideal.
+  Prove that $I$ is a prime ideal.
 
 
 :::{.solution}
@@ -946,8 +946,9 @@ $\implies$:
 
 :::
 
-
 :::{.proof title="of d"}
+\envlist
+
 
 :::
 
