@@ -717,7 +717,7 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
 
 
 :::{.solution}
-
+No clue! Send help!
 :::
 
 
