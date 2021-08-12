@@ -751,14 +751,23 @@ Give either a proof or a counterexample with justification.
     - Use that irreducible implies prime in a PID, so every $x\in R$ has some factorization into finitely many primes.
     - Supposing $x = u_p \prod_{i=1}^m p_i = u_q \prod_{i=1}^n q_i$, use that $p_1$ divides the LHS and so $p_1$ divides the RHS.
     WLOG, $p_1\divides q_1$, so $q_1 = u_1 p_1$ for $u\in R\units$, so $x = u_q u_1 p_1 \prod_{i=2}^m q_i$ by rewriting a term on the RHS.
+    - Note that this makes $p_1, q_1$ associates.
     - Continuing up to $m$, we get
   \[
   x = u_p \prod_{i=1}^m p_i = 
   u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
   \implies 
   u_p = u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
-  1 = \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
-  .\]
+  \tilde u = \prod_{k=m+1}^n q_i \\
+  ,\]
+    where we've moved all units to the LHS.
+    This makes $p_i, q_i$ associates for $i\leq m$.
+    - But primes aren't units and the product of nontrivial primes can't be a unit, so the right-hand side product must be empty.
+    - So $m=n$ and all $p_i, q_i$ are associate, QED.
+
+- UFD does not imply Euclidean:
+
+  -
 
 
 :::
