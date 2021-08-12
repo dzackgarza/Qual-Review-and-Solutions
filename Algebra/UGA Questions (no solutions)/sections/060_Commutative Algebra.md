@@ -837,8 +837,19 @@ Prove that every such ideal $J$ is prime.
 - $\hat{C} \neq R$:
   - By contradiction, if so then $1 \in \hat{C} \implies 1 \in C_j$ for some $j$, forcing $C_j = R$.
 - So Zorn's lemma applies and we obtain some ideal $\mfp$, which we now claim is prime.
-- Let $ab\in \mfp$ with $a\not \in\mfp$, we want to show $b\in \mfp$.
-- Suppose not, then by maximality, $\mfp + Rb = R$, and so $\mfp + Rb$ intersects $S$.
+- Let $ab\in \mfp$, we want to show $a\in \mfp$ or $b\in\mfp$.
+- Suppose not, then neither $a,b\in \mfp$. 
+  By maximality, $\mfp + Ra = R$, and so $\mfp + Ra$ intersects $S$.
+  Similarly $\mfp + Rb = R$ so $\mfp + Rb$ intersects $S$.
+- Produce elements $x\da p_1 + r_1a, y\da p_2 + r_2b\in S$, then since $S$ is multiplicatively closed,
+\[
+xy&\da (p_1 + r_1 a)(p_2 + r_2b)\in S \\
+&\implies p_1 p_2 + p_1r_2 b + p_2 r_1 a + r_1 r_2 ab \in S \\ 
+&\implies xy\in \mfp + \mfp Rb + \mfp Ra + R\mfp && \text{since } p_i, ab\in \mfp \\
+&\implies xy \in (\mfp + Rb + Ra + R)\mfp \subseteq \mfp
+.\]
+  But then $xy\in S \intersect \mfp$, a contradiction.
+
 :::
 
 
