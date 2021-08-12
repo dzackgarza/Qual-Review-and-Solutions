@@ -988,6 +988,16 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
 
 
 :::{.solution}
-No clue! Send help!
+\envlist
+
+- Existence: the claim is that $2R \da \ts{2y \st y\in R}$ is a nontrivial two-sided ideal of $R$, forcing $2R = R$ by simpleness.
+  - That $2R \neq 0$ follows from condition (1):
+  Provided $y\neq 0$, we have $2y\neq 0$, and so if $R\neq 0$ then there exists some nonzero $a\in R$, in which case $2a\neq 0$ and $2a\in 2R$.
+  - That $2R$ is a right ideal: clear, since $(2y)\cdot r = 2(yr)\in 2R$.
+  - That $2R$ is a left ideal: use that multiplication is distributive:
+  \[
+  r\cdot 2y \da r(y+y) = ry + ry \da 2(ry) \in 2R
+  .\]
+
 :::
 
