@@ -987,6 +987,14 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
 
 
+:::{.concept}
+\envlist
+
+- $R$ has no left zero divisors iff $R$ has the left cancellation property: $xa=xb \implies a=b$.
+- $R$ has no right zero divisors iff $R$ has the right cancellation property: $ax=bx \implies a=b$.
+:::
+
+
 :::{.solution}
 Note: solutions borrowed from folks on Math twitter!
 
