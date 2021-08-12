@@ -547,7 +547,6 @@ Conclude $R$ is not a PID.
 - Irreducible implies prime in a UFD.
 :::
 
-
 :::{.solution}
 \envlist
 
@@ -583,12 +582,7 @@ Conclude $R$ is not a PID.
 - $R$ is not a PID:
   - Use that irreducibles are prime in a UFD, which is not true here. 
 
-
-
 :::
-
-
-
 
 
 ## Spring 2017 #4 $\done$
@@ -640,12 +634,34 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
 :::
 
-## Fall 2014 #7 $\work$
+## Fall 2014 #7 $\done$
 Give a careful proof that $\CC[x, y]$ is not a PID.
 
+:::{.concept}
+\envlist
+
+- If $R[x]$ is a PID, then $R$ is a field (not explicitly used).
+- In $P \da R[x_1, \cdots, x_n]$, there are degree functions $\deg_{x_n}: P\to \ZZ_{\geq 0}$.
+:::
 
 :::{.solution}
+\envlist
 
+- The claim is that $I \da \gens{x, y}$ is not principal.
+- Toward a contradiction, if so, then $\gens{x, y} = \gens{f}$.
+- So write $x = fg$ for some $g\in \CC[x, y]$, then 
+  - $\deg_x(x) = 1$, so $\deg_x(fg) = 1$ which forces $\deg_x(f) \leq 1$.
+  - $\deg_y(y) = 1$, so $\deg_y(fg) = 1$ which forces $\deg_y(f) \leq 1$.
+  - So $f(x, y) = ax + by + c$ for some $a,b,c\in \CC$.
+  - $\deg_x(y) = 0$ and thus $\deg_x(fg) = 0$, forcing $a=0$
+  - $\deg_y(x) = 0$ and thus $\deg_y(fg) = 0$, forcing $b=0$
+  - So $f(x, y) = c \in \CC$.
+- But $\CC[x]$ is a field, so $c$ is a unit in $\CC$ and thus $\CC[x, y]$, so $\gens{f} = \gens{c} = \CC[x, y]$.
+- This is a contradiction, since $1\not\in \gens{x, y}$:
+  - Every element in $\alpha(x, y) \in\gens{x, y}$ is of the form $\alpha(x, y) = xp(x, y) + yq(x, y)$.
+  - But $\deg_x(\alpha) \geq 1, \deg_y(\alpha)\geq 1$, while $\deg_x(1) = \deg_y(1) = 0$.
+  - So $\gens{x, y} \neq \CC[x, y]$.
+- Alternatively, $\gens{x, y}$ is proper since $\CC[x, y] / \gens{x, y} \cong \CC \neq \CC[x, y]$.
 :::
 
 
@@ -654,6 +670,12 @@ Let $R$ be a nonzero commutative ring without unit such that $R$ does not contai
 Prove that for all $x\in R$, the ideal $xR$ is proper.
 
 > You may assume the axiom of choice.
+
+
+:::{.solution}
+
+:::
+
 
 ## Spring 2014 #5 $\work$
 Let $R$ be a commutative ring and $a\in R$.
