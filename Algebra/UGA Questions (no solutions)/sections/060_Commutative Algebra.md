@@ -721,11 +721,20 @@ No clue! Send help!
 :::
 
 
-
-
-## Fall 2015 #4 $\work$
+## Fall 2015 #4 $\done$
 Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
 Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
+
+:::{.solution}
+\envlist
+
+- Let $I\da \union Ra_i$ which is an ideal in a PID and thus $I = Rb$ for some $b$.
+- Using that $b\in I$, which is a union, we have $Rb\in Ra_m$ for some $m$.
+- Thus $I = R_b \subseteq Ra_m$, and $Ra_m \subseteq I$ by definition of $I$, so $Rb = Ra_m$.
+- In particular, since $Ra_{m} \subseteq Ra_{m+1}$ by assumption, and $Ra_{m+1} \subseteq Rb \subseteq Ra_m$ since $Rb = I$, we have $Ra_m = Ra_{m+1}$.
+  So inductively, the chain stabilizes at $m$.
+:::
+
 
 ## Spring 2015 #7 $\work$
 Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
