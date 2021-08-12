@@ -672,10 +672,6 @@ Prove that for all $x\in R$, the ideal $xR$ is proper.
 > You may assume the axiom of choice.
 
 
-:::{.solution}
-
-:::
-
 
 ## Spring 2014 #5 $\work$
 Let $R$ be a commutative ring and $a\in R$.
@@ -735,6 +731,14 @@ Give either a proof or a counterexample with justification.
 d.
 Is a UFD a Euclidean domain?
 Give either a proof or a counterexample with justification.
+
+
+:::{.solution}
+\envlist
+
+- $R$ is Euclidean iff it admits a Euclidean algorithm: there is a remainder function $f: R\to \ZZ_{\geq 0}$ such that for all $a,b\in R$, there exist $q, r\in R$ such that $a = bq + r$ where $f(r) <f(b)$ or $r=0$.
+:::
+
 
 ## Spring 2021 #5 $\done$
 
