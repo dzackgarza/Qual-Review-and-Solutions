@@ -6,8 +6,10 @@ The most useful tricks of the trade:
 
 - $\# \GG_m(\GF(p^k)) = p^k-1$, since every element is invertible except 0.
   You can use this to cook up strong numerical constraints on orders of elements.
+  E.g. if $a^{17}=1$ in some finite field of size $p^k$, $o(a)$ divides 17 and $o(a)$ divides $p^{k}-1$, so $o(a)$ divides $\gcd(17, p^{k}-1)$.
 - Multiplicativity in towers can force numerical divisibility constraints.
-  E.g. if $\alpha$ is a root of any irreducible $f$, then take the tower $\SF(\alpha, k)/k(\alpha)/k$: then the degree of $\min_{\alpha, k}(x)\in k[x]$ divides the degree of the extension $[\SF(\alpha, k) :  k]$.
+  E.g. if $\alpha$ is a root of any irreducible $f$, take the tower $\SF(\alpha, k)/k(\alpha)/k$: then the degree of $\min_{\alpha, k}(x)\in k[x]$ divides the degree of the extension $[\SF(\alpha, k) :  k]$.
+- 
 :::
 
 
