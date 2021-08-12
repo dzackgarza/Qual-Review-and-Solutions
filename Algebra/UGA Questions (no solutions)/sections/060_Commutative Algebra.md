@@ -737,6 +737,9 @@ Give either a proof or a counterexample with justification.
 \envlist
 
 - $R$ is Euclidean iff it admits a Euclidean algorithm: there is a remainder function $f: R\to \ZZ_{\geq 0}$ such that for all $a,b\in R$, there exist $q, r\in R$ such that $a = bq + r$ where $f(r) <f(b)$ or $r=0$.
+
+- $R$ is a UFD iff every $r\in R$ can be written as $r = u \prod_{i=1}^n p_i$ with $n\geq 0$, $u\in R\units$, and $p_i$ irreducible.
+  This is unique up to associates of the $p_i$ and reordering.
 :::
 
 
