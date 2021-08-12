@@ -833,8 +833,10 @@ Prove that every such ideal $J$ is prime.
 - By standard arguments, $\hat{C} \in \Id(R)$ and $\hat{C} \contains I$, and it suffices to show $\hat{C} \intersect S = \emptyset$ and $\hat{C}\neq R$.
 - $\hat{C} \intersect S = \emptyset$:
   - By contradiction, if $x\in \hat{C} \intersect S$ then $x\in C_j$ for some $j$, and $x\in S$.
-    But then $x \intersect C_j \intersect S = \emptyset$.
-
+    But then $x \in C_j \intersect S = \emptyset$.
+- $\hat{C} \neq R$:
+  - By contradiction, if so then $1 \in \hat{C} \implies 1 \in C_j$ for some $j$, forcing $C_j = R$.
+- So Zorn's lemma applies and we obtain some ideal $\mfp$, which we now claim is prime.
 :::
 
 
