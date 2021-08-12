@@ -988,6 +988,9 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
 
 
 :::{.solution}
+Note: solutions borrowed from folks on Math twitter!
+
+:::{.proof title="part 1"}
 \envlist
 
 - Existence: the claim is that $2R \da \ts{2y \st y\in R}$ is a nontrivial two-sided ideal of $R$, forcing $2R = R$ by simpleness.
@@ -1005,9 +1008,42 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
   \[
   0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
   .\]
+:::
+
+
+:::{.proof title="part 2"}
+\envlist
+
+- First we'll show $z=2(yz)$:
+\[
+xy + xy &= x \\
+\implies xy + xy - x &= 0 \\
+\implies xyz + xyz - xz &= 0 \\
+\implies x(yz + yz - z) &= 0 \\
+\implies yz + yz - z &= 0 && \text{since } x\neq 0 \text{ and no zero divisors }\\
+\implies 2(yz) &= z 
+.\]
+
+- Now we'll show $z=2(zy)$:
+\[
+yz + yz &= z \\
+\implies zyz + zyz &= zz \\
+\implies zyz + zyz - zz &= 0 \\
+\implies (zy + zy - z)z &= 0\\
+\implies z=0 \text{ or } zy+zy-z &= 0 && \text{ no zero divisors } 
+.\]
+
+- Then if $z=0$, we have $yz = 0 = zy$ and we're done.
+- Otherwise, $2(zy) = z$, and thus
+\[
+2(zy) = z = 2(yz) \implies 2(zy - yz) = 0 \implies zy-yz = 0
+,\]
+so $zy=yz$.
+
+:::
+
+
   
-- Part 2: no clue! 
-  Hopefully falls out of some manipulation..
 
 :::
 
