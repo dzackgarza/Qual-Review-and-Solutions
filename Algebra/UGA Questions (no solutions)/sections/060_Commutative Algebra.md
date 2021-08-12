@@ -837,6 +837,8 @@ Prove that every such ideal $J$ is prime.
 - $\hat{C} \neq R$:
   - By contradiction, if so then $1 \in \hat{C} \implies 1 \in C_j$ for some $j$, forcing $C_j = R$.
 - So Zorn's lemma applies and we obtain some ideal $\mfp$, which we now claim is prime.
+- Let $ab\in \mfp$ with $a\not \in\mfp$, we want to show $b\in \mfp$.
+- Suppose not, then by maximality, $\mfp + Rb = R$, and so $\mfp + Rb$ intersects $S$.
 :::
 
 
