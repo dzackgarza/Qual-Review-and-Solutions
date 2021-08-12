@@ -998,6 +998,15 @@ Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $
   \[
   r\cdot 2y \da r(y+y) = ry + ry \da 2(ry) \in 2R
   .\]
+- So $2R = R$ by simpleness.
+- Uniqueness: 
+  - Use the contrapositive of condition (1), so that $2x = 0 \implies x=0$.
+  - Suppose toward a contradiction that $x=2y_1 = 2y_2$, then
+  \[
+  0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
+  .\]
+  
+
 
 :::
 
