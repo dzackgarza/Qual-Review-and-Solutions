@@ -379,6 +379,7 @@ An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $I\contains \mfm$ 
 - A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
 - An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
 - A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+- A ring with no maximal ideals: the Prüfer $p\dash$group $\ZZ(p^\infty)$, whose subgroups
 :::
 
 :::{.definition title="Max Spectrum"}
