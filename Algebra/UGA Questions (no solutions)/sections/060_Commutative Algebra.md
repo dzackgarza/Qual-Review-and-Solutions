@@ -716,7 +716,13 @@ In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \a
 
 Prove that $I$ is a prime ideal.
 
-## Spring 2013 #2 $\work$
+
+:::{.solution}
+
+:::
+
+
+## Spring 2013 #2 $\done$
 
 a.
 Define a *Euclidean domain*.
@@ -766,8 +772,9 @@ Give either a proof or a counterexample with justification.
     - So $m=n$ and all $p_i, q_i$ are associate, QED.
 
 - UFD does not imply Euclidean:
-
-  -
+  - It suffices to find a UFD that is not a PID.
+  - Take $R \da \CC[x, y]$, which is a UFD by the usual factorization of polynomials.
+  It is not a PID, since $\gens{2, x}$ is not principal.
 
 
 :::
