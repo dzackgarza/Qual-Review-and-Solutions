@@ -835,10 +835,18 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 - Show that any PID is Noetherian.
 - Show that not $\ZZ$ is Noetherian but not Artinian.
   - Hint: take a chain $n\ZZ \contains n^2\ZZ \contains \cdots$.
-- Show that $R[x]$ a PID $\implies R$ is a field.
-  - Hint: take $r\in R$, then $\gens{r, x} = \gens{f}$ for some $f$.
-    Write $r = fp$ and $x = fq$ for $p, q\in R[x]$, show $\deg f = 0$ and $\deg q = 1$.
-    Write $f = c$ a constant, $q(x) = ax + b$ to get $c(ax+b)=x \implies ca=1 \implies c\in R\units \implies \gens{f} = R[x]$.
-    Conclude by writing $1= ar_1(x) + xr_2(x)$, evaluate at $x=0$ to get $a\inv = r_1(0)$.
 :::
+
+:::{.exercise title="?"}
+Show that $R[x]$ a PID $\iff R$ is a field.
+:::
+
+:::{.solution}
+Hint: take $r\in R$, then $\gens{r, x} = \gens{f}$ for some $f$.
+Write $r = fp$ and $x = fq$ for $p, q\in R[x]$, show $\deg f = 0$ and $\deg q = 1$.
+Write $f = c$ a constant, $q(x) = ax + b$ to get $c(ax+b)=x \implies ca=1 \implies c\in R\units \implies \gens{f} = R[x]$.
+Conclude by writing $1= ar_1(x) + xr_2(x)$, evaluate at $x=0$ to get $a\inv = r_1(0)$.
+:::
+
+
 
