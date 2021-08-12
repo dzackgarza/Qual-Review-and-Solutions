@@ -645,13 +645,6 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
 
 
-## Spring 2015 #7 $\work$
-Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
-Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
-
-Show that for every ideal $I\in \mci$, there is an ideal $J\in \mci$ such that $I\subset J$ and $J$ is not properly contained in any other ideal in $\mci$.
-
-Prove that every such ideal $J$ is prime.
 
 ## Fall 2014 #7 $\work$
 Give a careful proof that $\CC[x, y]$ is not a PID.
@@ -820,6 +813,22 @@ x &\mapsto xu
     But if $r\in \hat{C}$ is a unit, $r\in C_j$ for some $j$ is a unit, making $C_j=R$. $\contradiction$
 - So by Zorn's lemma, $\hat{C}$ contains a maximal ideal (incidentally containing $K$).
 :::
+
+## Spring 2015 #7 $\done$
+Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
+Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
+
+Show that for every ideal $I\in \mci$, there is an ideal $J\in \mci$ such that $I\subset J$ and $J$ is not properly contained in any other ideal in $\mci$.
+
+Prove that every such ideal $J$ is prime.
+
+
+:::{.solution}
+\envlist
+
+- ?
+:::
+
 
 # Noetherian Rings
 
