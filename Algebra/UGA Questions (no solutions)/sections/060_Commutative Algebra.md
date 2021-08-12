@@ -721,13 +721,12 @@ No clue! Send help!
 :::
 
 
-## Fall 2015 #3 $\work$
+## Fall 2015 #3 $\done$
 Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
 
 Prove that $R$ contains a maximal left ideal.
 
 > Hint: imitate the proof (using Zorn's lemma) in the case where $R$ does have a 1.
-
 
 :::{.solution}
 \envlist
@@ -751,9 +750,10 @@ x &\mapsto xu
   - $\hat{C}$ is an ideal: if $a,b\in \hat{C}$, then $a\in C_i, b\in C_j$ for some $i,j$.
   But without loss of generality, using that chains are totally ordered, $C_i \subseteq C_j$, so $a,b\in C_j$ and thus $ab\in C_j$.
   Similarly for $x\in \hat{C}$, $x\in C_j$ for some $j$, and thus $Rx \subseteq C_j$ since $C_j$ is an ideal.
-  - $\hat{C}$ is proper:
-  
-
+  - $\hat{C}$ is in $S$:
+  It clearly contains $K$, since for example $K \subseteq C_1 \subseteq \hat{C}$.
+    - That $\hat{C} \neq R$: an ideal equals $R$ iff it contains a unit.
+    But if $r\in \hat{C}$ is a unit, $r\in C_j$ for some $j$ is a unit, making $C_j=R$. $\contradiction$
 :::
 
 
