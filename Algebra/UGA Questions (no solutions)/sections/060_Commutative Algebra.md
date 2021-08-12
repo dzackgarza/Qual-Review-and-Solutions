@@ -826,7 +826,15 @@ Prove that every such ideal $J$ is prime.
 :::{.solution}
 \envlist
 
-- ?
+- Restating, take the poset $S\da \ts{J\in \Id(R) \st J \intersect S = \emptyset, I\neq R, I \subseteq J}$ ordered by inclusion.
+  Note that $S$ is nonempty since it contains $I$.
+  It suffices to produce a maximal element of $S$.
+- Applying Zorn's lemma, let $C: C_1 \subseteq C_2 \subseteq \cdots$ be a chain and define $\hat{C} \da \union C_i$.
+- By standard arguments, $\hat{C} \in \Id(R)$ and $\hat{C} \contains I$, and it suffices to show $\hat{C} \intersect S = \emptyset$ and $\hat{C}\neq R$.
+- $\hat{C} \intersect S = \emptyset$:
+  - By contradiction, if $x\in \hat{C} \intersect S$ then $x\in C_j$ for some $j$, and $x\in S$.
+    But then $x \intersect C_j \intersect S = \emptyset$.
+
 :::
 
 
