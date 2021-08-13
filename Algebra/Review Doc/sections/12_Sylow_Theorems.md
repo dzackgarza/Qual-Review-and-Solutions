@@ -1,6 +1,13 @@
 # Sylow Theorems
 
 
+:::{.remark}
+Useful facts:
+
+- Counting elements of order $p$: writing $\# G = p^k m$ so that $\# S_p = p^k$, using that every order $p$ element is in some $S_p$ one gets $n_p( \# S_p - 1)$ elements of order $p$ (where the $-1$ comes from taking out the identity).
+:::
+
+
 :::{.definition}
 A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
   If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
