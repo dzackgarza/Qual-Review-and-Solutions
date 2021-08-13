@@ -184,14 +184,13 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
 ## Ideals (Prime, Maximal, Proper, Principal, etc)
 
-### Fall 2013 #3 $\work$
+### Fall 2013 #3 $\done$
 
 a.
 Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
 
 b.
 Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
-
 
 
 :::{.solution}
@@ -207,7 +206,6 @@ Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ a
   Alternatively, "to contain is to divide" holds for Dedekind domains, so $m\ZZ \contains p\ZZ \iff m\divides p$, which forces $m=1,p$, so either $m\ZZ = p\ZZ$ or $m\ZZ = \ZZ$.
 
 :::
-
 
 
 ### Fall 2014 #8 $\work$
@@ -1025,6 +1023,13 @@ b.
 Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
 
 > You can get partial credit for (b) by showing it in the case $R$ has a 1.
+
+
+:::{.remark}
+A general opinion is that this is not a great qual problem! 
+Possibly worth skipping.
+:::
+
 
 :::{.concept}
 \envlist

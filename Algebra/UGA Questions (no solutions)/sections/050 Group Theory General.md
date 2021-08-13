@@ -50,7 +50,7 @@ Show that
 [G: H\intersect K] \leq [G: H] ~ [G:K]
 .\]
 
-http://www.ams.org/notices/200304/what-is.pdf
+
 :::{.concept}
 \envlist
 
@@ -58,6 +58,7 @@ http://www.ams.org/notices/200304/what-is.pdf
 - Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
 - Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
 - Common trick: just list out all of the darn cosets!
+
 :::
 
 :::{.strategy}
