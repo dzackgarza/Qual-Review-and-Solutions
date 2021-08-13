@@ -895,7 +895,7 @@ xy&\da (p_1 + r_1 a)(p_2 + r_2b)\in S \\
 
 :::
 
-## Spring 2013 #1 $\work$
+## Spring 2013 #1 $\done$
 Let $R$ be a commutative ring.
 
 a.
@@ -953,11 +953,13 @@ $\implies$:
 - Then $abu=0$ but $au\neq 0, bu\neq 0$.
 - Since $abu=0$, we have $a\in \Ann(bu)$.
   Note that $\Ann(bu) \contains \Ann(u)$, since $su = 0\implies bsu=sbu=0$.
+- We can't have $\Ann(bu) = R$, since if $sbu=0$ for all $s\in R$, so we could take $s=1$ to get $bu=0$ and $b\in \Ann(u)$.
+- By maximality, this forces $\Ann(u) = \Ann(bu)$, so $sbu = 0 \implies su=0$ for any $s\in R$.
+- Now take $s=a$, and since $abu=0$ we get $au=0$ and $a\in \Ann(u)$. $\contradiction$
 
 :::
 
 
-- 
 :::
 
 
