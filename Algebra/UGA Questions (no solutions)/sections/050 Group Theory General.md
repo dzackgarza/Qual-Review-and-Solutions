@@ -652,7 +652,7 @@ t &\mapsto b
 :::
 
 
-### Fall 2019 Midterm #1  $\work$
+### Fall 2019 Midterm #1  $\done$
 Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
 
 
@@ -667,7 +667,7 @@ n_p \divides q &\implies n_p \in \ts{ 1,q } \\ \\
 n_q \divides p^2 &\implies n_q \in \ts{ 1, p, p^2} 
 .\]
 
-- If $n_p=1$ or $n_q=$, we're done, so suppose otherwise.
+- If $n_p=1$ or $n_q=1$, we're done, so suppose otherwise.
 
 - **Case 1:** $:p>q$.
   - Using that $[n_p]_p \equiv 1$, consider reducing elements in $\ts{1, q} \mod p$.
@@ -678,6 +678,20 @@ n_q \divides p^2 &\implies n_q \in \ts{ 1, p, p^2}
   - Using that $[n_q]_q \equiv 1$, consider reducing $\ts{1, p, p^2}\mod q$.
   - Since now $p<q$, we have $p\mod q = p$ itself, so $p\mod q \neq 1$ and we can rule it out.
   - The remaining possibility is $n_q = p^2$.
+  - Supposing that $n_p \neq 1$, we have $n_p=q$, so we can count 
+  \[
+  \text{Elements of order } p: n_p( \# S_p - 1) &= q(p^2-1) \\
+  \text{Elements of order } q: n_q( \# S_q - 1) &= p^2(q-1)
+  .\]
+  - Now count how many elements this contributes to $G$, adding in the identity:
+  \[
+  q(p^2 - 1) + p^2(q-1) + 1
+  &= p^2q -q + p^2q - p^2 + 1 \\
+  &= p^2 q + (p^2-1)(q-1) \\
+  &> p^2 q = \# G
+  ,\]
+  provided $(p^2-1)(q-1) \neq 0$, which is fine for $p\geq 2$ since this is at least $(2^2-1)(3-2) = 3$ (since $p<q$ and $q=3$ is the next smallest prime).
+  But since this inequality is strict, this is a contradiction. $\contradiction$
 
 :::
 
