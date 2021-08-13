@@ -119,6 +119,8 @@ $\not A\implies \not B$:
 $A\implies B$:
 
 - If $a$ is not nilpotent, localize at the infinite multiplicative subset $A \da \ts{1, a, a^2, \cdots}$ to obtain $R\localize{A}$.
+  Since $0\not\in A$, this is not the zero ring.
+- By the universal property, there is a map $R\to R\localize{A}$, and the claim is that $\phi(a)$ is a unit in $R\localize{A}$.
 
 :::
 
