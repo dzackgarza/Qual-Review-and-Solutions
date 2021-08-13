@@ -195,15 +195,14 @@ Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ a
 
 
 :::{.solution}
-
-
-:::{.proof title="of 1"}
 \envlist
 
 - $\mfp$ is **prime** iff $xy\in \mfp \implies x\in \mfp$ or $y\in \mfp$.
-- An ideal $I\normal \ZZ$ that is not prime: $8\ZZ$
+  - An ideal $I\normal \ZZ$ that is not prime: $I \da 8\ZZ$.
+  - For example, $2\cdot 4\in 8\ZZ$ but neither 2 nor 4 is a multiple of 8.
 
-:::
+- $\mfm$ is **maximal** iff whenever $I\contains \mfm$ is an ideal in $R$, then either $I=\mfm$ or $I = R$.
+  - A maximal ideal in $\ZZ$: 
 
 :::
 
