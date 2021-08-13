@@ -631,8 +631,11 @@ Let $U, U(R), R\units$ be the units of $R$.
     Write $fg(x) = \sum_{k=0}^{n+m} c_k x^k$ where $c_k = \sum_{j=0}^k a_j b_{k-j}$.
     Using $fg=1$, $c_{0} = a_0 b_0 = 1$ so $a_0, b_0$ are units, and proceed inductively by descending coefficients, checking that $a_n b_m$ is the $r=0$ case.
 
-
 - Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ for all $k$.
+  - Solution: $f$ nilpotent with $f(x) = \sum a_k x^k$ implies $f^m=0$, and check the leading term $a_n^m x^{nm}$.
+    Induct down: $f, a_nx^n$ nilpotent implies $f - a_n x^n$ nilpotent.
+    Conversely, if $a_i^{n_i} = 0$, use that $N(R) \normal R$ form an ideal.
+
 - Show that $f\in ZD(R[x]) \iff f\neq 0$ and $rf(x) = 0$ for some $r\in R$.
 
 :::
