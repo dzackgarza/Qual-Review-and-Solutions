@@ -40,84 +40,316 @@ a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
 
 :::
 
-## Fall 2019 #6 $\done$
-Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
+
+## Spring 2018 #5 $\done$
+Let 
+\[
+M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
+\quad \text{and} \quad 
+N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
+\]
+
+over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
+Prove that
+\[
+M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
+\implies MN = 0
+.\]
+
+:::{.solution}
+\envlist
+
+- Multiply everything out to get
+\[
+\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
+,\]
+  so it suffices to show $cu=dv$ given
+  \[
+  ax &= by \\
+  cx &= dy \\
+  au &= bv
+  .\]
+
+- Writing $cu$:
+  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
+  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
+  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
+  - Summary:
+  \[
+  ax = by 
+  &\implies b\inv ax = y \\
+  &\implies cx = dy = d(b\inv a x) \\
+  &\implies c = db\inv a \\
+  &\implies cu = db\inv au 
+  .\]
+
+- Writing $dv$:
+  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
+  - Left-multiply by $d$ to get $db\inv au = dv$
+  - Summary:
+  \[
+  au = bv 
+  &\implies b\inv a u = v \\
+  &\implies db\inv au = dv
+  .\]
+
+- So 
+\[
+cu = db\inv a u = dv
+.\]
+
+:::
+
+
+## Spring 2014 #5 $\work$
+Let $R$ be a commutative ring and $a\in R$.
+Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
+
+> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
+
+
+:::{.solution}
+
+:::
+
+
+## Spring 2014 #6 $\work$
+ $R$ be a commutative ring with identity and let $n$ be a positive integer.
 
 a.
-Show that
-$$
-N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
-$$
-is an ideal which is contained in any prime ideal.
+Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
 
 b.
-Let $r$ be an element of $R$ not in $N$.
-Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
-there is a prime ideal in $S$.
+Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
+
+
+# UFDs, PIDs, etc
+
+## Spring 2013 #2 $\done$
+
+a.
+Define a *Euclidean domain*.
+
+b.
+Define a *unique factorization domain*.
 
 c.
-Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
+Is a Euclidean domain an UFD? 
+Give either a proof or a counterexample with justification.
+
+d.
+Is a UFD a Euclidean domain?
+Give either a proof or a counterexample with justification.
+
+
+:::{.solution}
+\envlist
+
+- $R$ is Euclidean iff it admits a Euclidean algorithm: there is a degree function $f: R\to \ZZ_{\geq 0}$ such that for all $a,b\in R$, there exist $q, r\in R$ such that $a = bq + r$ where $f(r) <f(b)$ or $r=0$.
+
+- $R$ is a UFD iff every $r\in R$ can be written as $r = u \prod_{i=1}^n p_i$ with $n\geq 0$, $u\in R\units$, and $p_i$ irreducible.
+  This is unique up to associates of the $p_i$ and reordering.
+
+- Euclidean implies UFD:
+  - Euclidean implies PID:
+    - If $I \in \Id(R)$ one can use the degree function to find any $b \in I$ where $f(b)$ is minimal.
+    - Then $I = \gens{b}$, since if $a\in I$ one can write $a = bq + r$ and use that $a-bq \in I \implies r\in I$.
+    - But by minimality, we can't have $f(r)<f(b)$, so $r=0$ and $a \divides b$, so $b\in \gens{a}$.
+    
+  - PID implies UFD:
+    - Use that irreducible implies prime in a PID, so every $x\in R$ has some factorization into finitely many primes.
+    - Supposing $x = u_p \prod_{i=1}^m p_i = u_q \prod_{i=1}^n q_i$, use that $p_1$ divides the LHS and so $p_1$ divides the RHS.
+    WLOG, $p_1\divides q_1$, so $q_1 = u_1 p_1$ for $u\in R\units$, so $x = u_q u_1 p_1 \prod_{i=2}^m q_i$ by rewriting a term on the RHS.
+    - Note that this makes $p_1, q_1$ associates.
+    - Continuing up to $m$, we get
+  \[
+  x = u_p \prod_{i=1}^m p_i = 
+  u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
+  \implies 
+  u_p = u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
+  \tilde u = \prod_{k=m+1}^n q_i \\
+  ,\]
+    where we've moved all units to the LHS.
+    This makes $p_i, q_i$ associates for $i\leq m$.
+    - But primes aren't units and the product of nontrivial primes can't be a unit, so the right-hand side product must be empty.
+    - So $m=n$ and all $p_i, q_i$ are associate, QED.
+
+- UFD does not imply Euclidean:
+  - It suffices to find a UFD that is not a PID.
+  - Take $R \da \CC[x, y]$, which is a UFD by the usual factorization of polynomials.
+  It is not a PID, since $\gens{2, x}$ is not principal.
+
+
+:::
+
+
+
+## Fall 2017 #6 $\done$
+For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
+
+We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
+Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
+
+a.
+Prove $R$ is an integral domain.
+
+b.
+Show $U(R) = \{\pm1\}$.
+
+c.
+Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
+
+d.
+Show 3 is not prime in $R$.
+
+e.
+Conclude $R$ is not a PID.
+
 
 :::{.concept}
 \envlist
 
-- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
-- Silly fact: 0 is in every ideal!
- 
-- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
- 
-- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
-
-  \todo[inline]{Prove this}
-
-- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
-
-  \todo[inline]{Prove this}
-
-- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
-
+- Integral domain: $ab=0 \implies a\neq 0 \text{ or } b\neq 0$.
+- Prime: $p \divides ab \implies p\divides a$ or $b$.
+- Reducible: $a = xy$ where $x, y$ are proper divisors.
+- Irreducible implies prime in a UFD.
 :::
 
 :::{.solution}
 \envlist
 
-:::{.proof title="of a"}
+- $R$ is an integral domain:
+  - Let $\alpha = a + b\sqrt{-5}$ and $\beta = c + d \sqrt{-5}$ and set $\bar \alpha, \bar \beta$ be their conjugates.
+  - Then
+  \[
+  0 = \alpha \beta = \alpha\bar\alpha \beta\bar\beta = (a^2-5b^2)(c^2-5d^2) \in \ZZ
+  ,\]
+  so one factor is zero.
+  - If $a^2 = 5b^2$ then $a = \sqrt{5} b \not\in \ZZ$ unless $a=b=0$.
+    Otherwise, the same argument forces $c=d=0$.
+
+- The units are $\pm 1$:
+  - Use that $u\in R\units \implies N(u) = \pm 1$, and $N(\alpha) = \alpha \bar\alpha = (a+b\sqrt{-5})(a-b\sqrt{-5}) = a^2 + 5b^2 = 1$
+    forces $b=0$ and $a=\pm 1$.
+
+- Irreducible elements:
+  - $2, 3$ are irreducible because if (say) $3=xy$ then $N(x)N(y) = N(3) = 9$, and if neither $x,y$ are units then $N(x) = N(y) = 3$.
+    But $N(a + b\sqrt{-5}) = a^2 + 5b^2$ and $a^2 + 5b^2 = 3$ has no solutions.
+    The same argument works for $2$.
+  - $2\pm \sqrt{-5}$ are irreducible because $N(2 + \sqrt{-5}) = 2^2 + 5(1) = 9$, and in fact $N(2 - \sqrt{-5}) = 2^2 + 5(-1)^2 = 9$.
+    By the same argument as above, this forces irreducibility.
+
+- $3$ is not prime: 
+  - We can write $6 = (3)(2) = (1 + \sqrt{-5})(1 - \sqrt{-5})$, so if we assume $3$ is prime we get $3\divides (1 \pm \sqrt{-5})$.
+  - But writing $(1\pm \sqrt{-5}) = 3r$ for some $r\in R$ yields 
+  \[
+  (1 \pm \sqrt{-5}) = 3(a + b\sqrt{-5}) \implies 3a=1, 3b = \pm 1
+  .\]
+  These have no solutions $a, b\in \ZZ$. $\contradiction$
+
+- $R$ is not a PID:
+  - Use that irreducibles are prime in a UFD, which is not true here. 
+
+:::
+
+## Spring 2017 #4 $\done$
+
+a.
+Let $R$ be an integral domain with quotient field $F$.
+Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
+
+  Prove that $R$ is not a UFD.
+
+  > (You may assume Gauss' lemma)
+
+b.
+Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
+
+  > Hint: let $p(x) = x^2-2$.
+
+:::{.concept}
 \envlist
 
-- Let $\mathfrak{p}$ be prime and $x\in N$.
-- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
-- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+- Gauss' lemma: for $R$ a UFD with fraction field $F$, if $f$ is reducible in $F[x]$ with $f=pq$ then there are $r,s\in R$ such that $f = (rp)(sq)$ reduces in $R[x]$.
+- Corollary: $R$ is a UFD iff $R[x]$ is a UFD.
 :::
+
+:::{.solution}
+
+:::{.proof title="of 1"}
+\envlist
+
+- The important assumption is $a(x)\not\in R[x]$, we'll assume $R$ is a UFD and try to contradict this.
+- Write $f(x) = a(x)b(x)\in F[x]$, then if $R$ is a UFD we have $r,s\in F$ such that $f(x) = ra(x) sb(x) \in R[x]$.
+- Since $a(x), b(x)$ are monic and $f=ab$, $f$ is monic, and by the factorization in $R[x]$ we have $rs=1$.
+  So $r,s\in R\units$.
+- Then using that $ra(x)\in R[x]$, we have $r\inv ra(x) = a(x)\in R[x]$. $\contradiction$
+
+:::
+
 
 :::{.proof title="of b"}
 \envlist
 
-- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
-
-- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
-
-- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
-
-- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+- Set $R = \ZZ[2\sqrt 2], F = \QQ[2\sqrt 2]$.
+- Let $p(x) \da x^2-2 \in R[x]$ which splits as $p(x) = (x+ \sqrt{2} )(x - \sqrt{2} ) \da a(x) b(x) \in F[x]$.
+- Note neither $a(x), b(x)$ are in $R[x]$.
+  - Explicitly, every monic linear $p\in R[x]$ is of the form $x + 2t\sqrt{2}$ with $t\in \ZZ$, and $\pm \sqrt{2} \neq 2t\sqrt{2}$ for any $t$.
+- So we have $p(x) \in R[x]$ splitting as $p=ab$ in $F[x]$ with $a\not \in R[x]$, so part (a) applies.
 
 :::
 
-:::{.proof title="of c"}
+:::
+
+# Ideals (Prime, Maximal, Proper, Principal, etc) 
+
+## Fall 2013 #3 $\work$
+
+a.
+Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
+
+b.
+Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
+
+
+
+## Fall 2014 #8 $\work$
+Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
+Prove that for all $x\in R$, the ideal $xR$ is proper.
+
+> You may assume the axiom of choice.
+
+## Fall 2014 #7 $\done$
+Give a careful proof that $\CC[x, y]$ is not a PID.
+
+:::{.concept}
 \envlist
 
-- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
-
-- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
-
-- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
-
-- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
-Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
-  But then $r\not\in \mathfrak{p}$, a contradiction.
-
+- If $R[x]$ is a PID, then $R$ is a field (not explicitly used).
+- In $P \da R[x_1, \cdots, x_n]$, there are degree functions $\deg_{x_n}: P\to \ZZ_{\geq 0}$.
 :::
 
+:::{.solution}
+\envlist
+
+- The claim is that $I \da \gens{x, y}$ is not principal.
+- Toward a contradiction, if so, then $\gens{x, y} = \gens{f}$.
+- So write $x = fg$ for some $g\in \CC[x, y]$, then 
+  - $\deg_x(x) = 1$, so $\deg_x(fg) = 1$ which forces $\deg_x(f) \leq 1$.
+  - $\deg_y(y) = 1$, so $\deg_y(fg) = 1$ which forces $\deg_y(f) \leq 1$.
+  - So $f(x, y) = ax + by + c$ for some $a,b,c\in \CC$.
+  - $\deg_x(y) = 0$ and thus $\deg_x(fg) = 0$, forcing $a=0$
+  - $\deg_y(x) = 0$ and thus $\deg_y(fg) = 0$, forcing $b=0$
+  - So $f(x, y) = c \in \CC$.
+- But $\CC[x]$ is a field, so $c$ is a unit in $\CC$ and thus $\CC[x, y]$, so $\gens{f} = \gens{c} = \CC[x, y]$.
+- This is a contradiction, since $1\not\in \gens{x, y}$:
+  - Every element in $\alpha(x, y) \in\gens{x, y}$ is of the form $\alpha(x, y) = xp(x, y) + yq(x, y)$.
+  - But $\deg_x(\alpha) \geq 1, \deg_y(\alpha)\geq 1$, while $\deg_x(1) = \deg_y(1) = 0$.
+  - So $\gens{x, y} \neq \CC[x, y]$.
+- Alternatively, $\gens{x, y}$ is proper since $\CC[x, y] / \gens{x, y} \cong \CC \neq \CC[x, y]$.
 :::
+
+
 
 ## Spring 2019 #6 $\done$
 Let $R$ be a commutative ring with 1.
@@ -241,6 +473,111 @@ But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradi
 .\]
 
 :::
+
+:::
+
+## Spring 2018 #8 $\done$
+Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
+
+a.
+Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
+
+b.
+If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
+
+c.
+Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
+
+:::{.remark}
+Cool problem, but pretty specific topological tricks needed.
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Suppose $c\da f(a)\neq 0$, noting that $c$ may not be positive.
+- By continuity, pick $\eps$ small enough so that $\abs{x-a}<\eps \implies \abs{f(x) - f(a)} < c/2$.
+  Since we're on the interval, we have $f(x) \in (f(a) - c/2, f(a) + c/2) = (c/2, 3c/2)$ which is a ball of radius $c/2$ about $c$, which thus doesn't intersect $0$.
+- So $f(x) \neq 0$ on this ball, and $g \da f^2 > 0$ on it.
+  Note that ideals are closed under products, so $g\in I$
+- Moreover $f^2(x) \geq 0$ since squares are non-negative, so $g\geq 0$ on $[0, 1]$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- By contrapositive, suppose $V(I)= \emptyset$, we'll show $I$ contains a unit and thus $I=R$.
+- For each fixed $x\in [0, 1]$, since $V(I)$ is empty there is some $f_x$ such that $f_x(x) \neq 0$.
+- By (a), there is some $g_x$ with $g_x(x) > 0$ on a neighborhood $U_x\ni x$ and $g_x \geq 0$ everywhere.
+- Ranging over all $x$ yields a collection $\ts{(g_x, U_x) \st x\in [0, 1]}$ where $\ts{U_x}\covers [0, 1]$.
+- By compactness there is a finite subcover, yielding a finite collection $\ts{(g_k, U_k)}_{k=1}^n$ for some $n$.
+- Define the candidate unit as 
+\[
+G(x) \da {1\over \sum_{k=1}^n g_k(x)}
+.\]
+- This is well-defined: fix an $x$, then the denominator is zero at $x$ iff $g_k(x) = 0$ for all $k$.
+  But since the $U_k$ form an open cover, $x\in U_\ell$ for some $\ell$, and $g_\ell > 0$ on $U_\ell$.
+- Since ideals are closed under sums, $H\da {1\over G} \da \sum g_k \in I$.
+  But $H$ is clearly a unit since $HG = \id$.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- If $I\normal R$ is maximal, $I\neq R$, and so by (b) we have $V(I) \neq \emptyset$.
+- So there is some $x_0\in[0, 1]$ with $f(x_0) = 0$ for all $f\in I$.
+- Define $\mfm_{x_0} \da \ts{f\in R \st f(x_0) = 0}$, which is clearly an ideal.
+  - This is a proper ideal, since constant nonzero functions are continuous and thus in $R$, not not $\mfm_{x_0}$.
+- We thus have $I \subseteq \mfm_{x_0}$, and by maximality they are equal.
+
+:::
+
+\todo[inline]{I'm not super convinced by c!}
+
+
+:::
+
+
+# Zero Divisors
+
+## Spring 2021 #5 $\done$
+
+:::{.problem title="Spring 2021"}
+Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
+Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+:::
+
+:::{.solution}
+\envlist
+
+- Write $f(x) = \sum_{k=0}^n a_k x^k$, and supposing it's a zero divisor choose $g(x) = \sum_{k=0}^m b_k x^k$ of minimal degree so that $g\neq 0, b_m\neq 0$, and $f(x)g(x) = 0$.
+- The claim is that the top coefficient $b_m$ will suffice.
+- Write the product:
+\[
+0 = f(x)g(x) 
+= (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
+(b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
+.\]
+- Equating coefficients, the coefficient for $x^{m+n}$ must be zero, so (**importantly**) $a_n b_m = 0$.
+  - Since $a_n b_m=0$, consider $a_ng(x)$.
+    This has degree $d_1 \leq m-1$ but satisfies $a_ng(x)f(x) = a_n(g(x)f(x)) = 0$, so by minimality $a_ng(x) = 0$.
+  - This forces $a_n b_0 = \cdots = a_n b_{m-1} = 0$, so $a_n$ annihilates all of the $b_k$.
+- Now consider the coefficient of $x^{m+n-1}$, given by $a_{n-1}b_m + a_{n}b_{m-1}$.
+  - The second term $a_n b_{m-1}=0$ since $a_n$ annihilates all $b_k$, so (**importantly**) $a_{n-1} b_m = 0$.
+  - Considering now $a_{n-1}g(x)$:
+    - The same argument shows this has degree $d_2 \leq m-1$ but $a_{n-1}g(x)f(x) = 0$, so $a_{n-1}g(x) = 0$.
+    - So $a_{n-1}$ annihilates all $b_k$, and allowing this process to continue inductively.
+- For good measure, the coefficient of $x^{m+n-2}$ is $a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}$.
+  - Note that $a_n, a_{n-1}$ annihilate all $b_k$, so (**importantly**) $a_{n-2} b_m=0$, and so on.
+
+- Thus $a_k b_m = 0$ for all $0\leq k \leq n$, and by linearity and commutativity, we have
+\[
+b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
+.\]
 
 :::
 
@@ -388,412 +725,6 @@ R &\cong \ZZ/(2)[t] / (t^2)
 :::
 
 :::
-
-## Spring 2018 #5 $\done$
-Let 
-\[
-M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
-\quad \text{and} \quad 
-N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
-\]
-
-over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
-Prove that
-\[
-M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
-\implies MN = 0
-.\]
-
-:::{.solution}
-\envlist
-
-- Multiply everything out to get
-\[
-\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
-,\]
-  so it suffices to show $cu=dv$ given
-  \[
-  ax &= by \\
-  cx &= dy \\
-  au &= bv
-  .\]
-
-- Writing $cu$:
-  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
-  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
-  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
-  - Summary:
-  \[
-  ax = by 
-  &\implies b\inv ax = y \\
-  &\implies cx = dy = d(b\inv a x) \\
-  &\implies c = db\inv a \\
-  &\implies cu = db\inv au 
-  .\]
-
-- Writing $dv$:
-  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
-  - Left-multiply by $d$ to get $db\inv au = dv$
-  - Summary:
-  \[
-  au = bv 
-  &\implies b\inv a u = v \\
-  &\implies db\inv au = dv
-  .\]
-
-- So 
-\[
-cu = db\inv a u = dv
-.\]
-
-
-
-:::
-
-## Spring 2018 #8 $\done$
-Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
-
-a.
-Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
-
-b.
-If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
-
-c.
-Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
-
-:::{.remark}
-Cool problem, but pretty specific topological tricks needed.
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-\envlist
-
-- Suppose $c\da f(a)\neq 0$, noting that $c$ may not be positive.
-- By continuity, pick $\eps$ small enough so that $\abs{x-a}<\eps \implies \abs{f(x) - f(a)} < c/2$.
-  Since we're on the interval, we have $f(x) \in (f(a) - c/2, f(a) + c/2) = (c/2, 3c/2)$ which is a ball of radius $c/2$ about $c$, which thus doesn't intersect $0$.
-- So $f(x) \neq 0$ on this ball, and $g \da f^2 > 0$ on it.
-  Note that ideals are closed under products, so $g\in I$
-- Moreover $f^2(x) \geq 0$ since squares are non-negative, so $g\geq 0$ on $[0, 1]$.
-:::
-
-:::{.proof title="of b"}
-\envlist
-
-- By contrapositive, suppose $V(I)= \emptyset$, we'll show $I$ contains a unit and thus $I=R$.
-- For each fixed $x\in [0, 1]$, since $V(I)$ is empty there is some $f_x$ such that $f_x(x) \neq 0$.
-- By (a), there is some $g_x$ with $g_x(x) > 0$ on a neighborhood $U_x\ni x$ and $g_x \geq 0$ everywhere.
-- Ranging over all $x$ yields a collection $\ts{(g_x, U_x) \st x\in [0, 1]}$ where $\ts{U_x}\covers [0, 1]$.
-- By compactness there is a finite subcover, yielding a finite collection $\ts{(g_k, U_k)}_{k=1}^n$ for some $n$.
-- Define the candidate unit as 
-\[
-G(x) \da {1\over \sum_{k=1}^n g_k(x)}
-.\]
-- This is well-defined: fix an $x$, then the denominator is zero at $x$ iff $g_k(x) = 0$ for all $k$.
-  But since the $U_k$ form an open cover, $x\in U_\ell$ for some $\ell$, and $g_\ell > 0$ on $U_\ell$.
-- Since ideals are closed under sums, $H\da {1\over G} \da \sum g_k \in I$.
-  But $H$ is clearly a unit since $HG = \id$.
-
-:::
-
-:::{.proof title="of c"}
-\envlist
-
-- If $I\normal R$ is maximal, $I\neq R$, and so by (b) we have $V(I) \neq \emptyset$.
-- So there is some $x_0\in[0, 1]$ with $f(x_0) = 0$ for all $f\in I$.
-- Define $\mfm_{x_0} \da \ts{f\in R \st f(x_0) = 0}$, which is clearly an ideal.
-  - This is a proper ideal, since constant nonzero functions are continuous and thus in $R$, not not $\mfm_{x_0}$.
-- We thus have $I \subseteq \mfm_{x_0}$, and by maximality they are equal.
-
-:::
-
-\todo[inline]{I'm not super convinced by c!}
-
-
-:::
-
-
-## Fall 2017 #6 $\done$
-For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
-
-We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
-Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
-
-a.
-Prove $R$ is an integral domain.
-
-b.
-Show $U(R) = \{\pm1\}$.
-
-c.
-Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
-
-d.
-Show 3 is not prime in $R$.
-
-e.
-Conclude $R$ is not a PID.
-
-
-:::{.concept}
-\envlist
-
-- Integral domain: $ab=0 \implies a\neq 0 \text{ or } b\neq 0$.
-- Prime: $p \divides ab \implies p\divides a$ or $b$.
-- Reducible: $a = xy$ where $x, y$ are proper divisors.
-- Irreducible implies prime in a UFD.
-:::
-
-:::{.solution}
-\envlist
-
-- $R$ is an integral domain:
-  - Let $\alpha = a + b\sqrt{-5}$ and $\beta = c + d \sqrt{-5}$ and set $\bar \alpha, \bar \beta$ be their conjugates.
-  - Then
-  \[
-  0 = \alpha \beta = \alpha\bar\alpha \beta\bar\beta = (a^2-5b^2)(c^2-5d^2) \in \ZZ
-  ,\]
-  so one factor is zero.
-  - If $a^2 = 5b^2$ then $a = \sqrt{5} b \not\in \ZZ$ unless $a=b=0$.
-    Otherwise, the same argument forces $c=d=0$.
-
-- The units are $\pm 1$:
-  - Use that $u\in R\units \implies N(u) = \pm 1$, and $N(\alpha) = \alpha \bar\alpha = (a+b\sqrt{-5})(a-b\sqrt{-5}) = a^2 + 5b^2 = 1$
-    forces $b=0$ and $a=\pm 1$.
-
-- Irreducible elements:
-  - $2, 3$ are irreducible because if (say) $3=xy$ then $N(x)N(y) = N(3) = 9$, and if neither $x,y$ are units then $N(x) = N(y) = 3$.
-    But $N(a + b\sqrt{-5}) = a^2 + 5b^2$ and $a^2 + 5b^2 = 3$ has no solutions.
-    The same argument works for $2$.
-  - $2\pm \sqrt{-5}$ are irreducible because $N(2 + \sqrt{-5}) = 2^2 + 5(1) = 9$, and in fact $N(2 - \sqrt{-5}) = 2^2 + 5(-1)^2 = 9$.
-    By the same argument as above, this forces irreducibility.
-
-- $3$ is not prime: 
-  - We can write $6 = (3)(2) = (1 + \sqrt{-5})(1 - \sqrt{-5})$, so if we assume $3$ is prime we get $3\divides (1 \pm \sqrt{-5})$.
-  - But writing $(1\pm \sqrt{-5}) = 3r$ for some $r\in R$ yields 
-  \[
-  (1 \pm \sqrt{-5}) = 3(a + b\sqrt{-5}) \implies 3a=1, 3b = \pm 1
-  .\]
-  These have no solutions $a, b\in \ZZ$. $\contradiction$
-
-- $R$ is not a PID:
-  - Use that irreducibles are prime in a UFD, which is not true here. 
-
-:::
-
-
-## Spring 2017 #4 $\done$
-
-a.
-Let $R$ be an integral domain with quotient field $F$.
-Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
-
-  Prove that $R$ is not a UFD.
-
-  > (You may assume Gauss' lemma)
-
-b.
-Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
-
-  > Hint: let $p(x) = x^2-2$.
-
-:::{.concept}
-\envlist
-
-- Gauss' lemma: for $R$ a UFD with fraction field $F$, if $f$ is reducible in $F[x]$ with $f=pq$ then there are $r,s\in R$ such that $f = (rp)(sq)$ reduces in $R[x]$.
-- Corollary: $R$ is a UFD iff $R[x]$ is a UFD.
-:::
-
-:::{.solution}
-
-:::{.proof title="of 1"}
-\envlist
-
-- The important assumption is $a(x)\not\in R[x]$, we'll assume $R$ is a UFD and try to contradict this.
-- Write $f(x) = a(x)b(x)\in F[x]$, then if $R$ is a UFD we have $r,s\in F$ such that $f(x) = ra(x) sb(x) \in R[x]$.
-- Since $a(x), b(x)$ are monic and $f=ab$, $f$ is monic, and by the factorization in $R[x]$ we have $rs=1$.
-  So $r,s\in R\units$.
-- Then using that $ra(x)\in R[x]$, we have $r\inv ra(x) = a(x)\in R[x]$. $\contradiction$
-
-:::
-
-
-:::{.proof title="of b"}
-\envlist
-
-- Set $R = \ZZ[2\sqrt 2], F = \QQ[2\sqrt 2]$.
-- Let $p(x) \da x^2-2 \in R[x]$ which splits as $p(x) = (x+ \sqrt{2} )(x - \sqrt{2} ) \da a(x) b(x) \in F[x]$.
-- Note neither $a(x), b(x)$ are in $R[x]$.
-  - Explicitly, every monic linear $p\in R[x]$ is of the form $x + 2t\sqrt{2}$ with $t\in \ZZ$, and $\pm \sqrt{2} \neq 2t\sqrt{2}$ for any $t$.
-- So we have $p(x) \in R[x]$ splitting as $p=ab$ in $F[x]$ with $a\not \in R[x]$, so part (a) applies.
-
-:::
-
-:::
-
-## Fall 2014 #7 $\done$
-Give a careful proof that $\CC[x, y]$ is not a PID.
-
-:::{.concept}
-\envlist
-
-- If $R[x]$ is a PID, then $R$ is a field (not explicitly used).
-- In $P \da R[x_1, \cdots, x_n]$, there are degree functions $\deg_{x_n}: P\to \ZZ_{\geq 0}$.
-:::
-
-:::{.solution}
-\envlist
-
-- The claim is that $I \da \gens{x, y}$ is not principal.
-- Toward a contradiction, if so, then $\gens{x, y} = \gens{f}$.
-- So write $x = fg$ for some $g\in \CC[x, y]$, then 
-  - $\deg_x(x) = 1$, so $\deg_x(fg) = 1$ which forces $\deg_x(f) \leq 1$.
-  - $\deg_y(y) = 1$, so $\deg_y(fg) = 1$ which forces $\deg_y(f) \leq 1$.
-  - So $f(x, y) = ax + by + c$ for some $a,b,c\in \CC$.
-  - $\deg_x(y) = 0$ and thus $\deg_x(fg) = 0$, forcing $a=0$
-  - $\deg_y(x) = 0$ and thus $\deg_y(fg) = 0$, forcing $b=0$
-  - So $f(x, y) = c \in \CC$.
-- But $\CC[x]$ is a field, so $c$ is a unit in $\CC$ and thus $\CC[x, y]$, so $\gens{f} = \gens{c} = \CC[x, y]$.
-- This is a contradiction, since $1\not\in \gens{x, y}$:
-  - Every element in $\alpha(x, y) \in\gens{x, y}$ is of the form $\alpha(x, y) = xp(x, y) + yq(x, y)$.
-  - But $\deg_x(\alpha) \geq 1, \deg_y(\alpha)\geq 1$, while $\deg_x(1) = \deg_y(1) = 0$.
-  - So $\gens{x, y} \neq \CC[x, y]$.
-- Alternatively, $\gens{x, y}$ is proper since $\CC[x, y] / \gens{x, y} \cong \CC \neq \CC[x, y]$.
-:::
-
-
-## Fall 2014 #8 $\work$
-Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
-Prove that for all $x\in R$, the ideal $xR$ is proper.
-
-> You may assume the axiom of choice.
-
-
-
-## Spring 2014 #5 $\work$
-Let $R$ be a commutative ring and $a\in R$.
-Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
-
-> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
-
-## Spring 2014 #6 $\work$
- $R$ be a commutative ring with identity and let $n$ be a positive integer.
-
-a.
-Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
-
-b.
-Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
-
-## Fall 2013 #3 $\work$
-
-a.
-Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
-
-b.
-Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
-
-
-
-
-## Spring 2013 #2 $\done$
-
-a.
-Define a *Euclidean domain*.
-
-b.
-Define a *unique factorization domain*.
-
-c.
-Is a Euclidean domain an UFD? 
-Give either a proof or a counterexample with justification.
-
-d.
-Is a UFD a Euclidean domain?
-Give either a proof or a counterexample with justification.
-
-
-:::{.solution}
-\envlist
-
-- $R$ is Euclidean iff it admits a Euclidean algorithm: there is a degree function $f: R\to \ZZ_{\geq 0}$ such that for all $a,b\in R$, there exist $q, r\in R$ such that $a = bq + r$ where $f(r) <f(b)$ or $r=0$.
-
-- $R$ is a UFD iff every $r\in R$ can be written as $r = u \prod_{i=1}^n p_i$ with $n\geq 0$, $u\in R\units$, and $p_i$ irreducible.
-  This is unique up to associates of the $p_i$ and reordering.
-
-- Euclidean implies UFD:
-  - Euclidean implies PID:
-    - If $I \in \Id(R)$ one can use the degree function to find any $b \in I$ where $f(b)$ is minimal.
-    - Then $I = \gens{b}$, since if $a\in I$ one can write $a = bq + r$ and use that $a-bq \in I \implies r\in I$.
-    - But by minimality, we can't have $f(r)<f(b)$, so $r=0$ and $a \divides b$, so $b\in \gens{a}$.
-    
-  - PID implies UFD:
-    - Use that irreducible implies prime in a PID, so every $x\in R$ has some factorization into finitely many primes.
-    - Supposing $x = u_p \prod_{i=1}^m p_i = u_q \prod_{i=1}^n q_i$, use that $p_1$ divides the LHS and so $p_1$ divides the RHS.
-    WLOG, $p_1\divides q_1$, so $q_1 = u_1 p_1$ for $u\in R\units$, so $x = u_q u_1 p_1 \prod_{i=2}^m q_i$ by rewriting a term on the RHS.
-    - Note that this makes $p_1, q_1$ associates.
-    - Continuing up to $m$, we get
-  \[
-  x = u_p \prod_{i=1}^m p_i = 
-  u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
-  \implies 
-  u_p = u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
-  \tilde u = \prod_{k=m+1}^n q_i \\
-  ,\]
-    where we've moved all units to the LHS.
-    This makes $p_i, q_i$ associates for $i\leq m$.
-    - But primes aren't units and the product of nontrivial primes can't be a unit, so the right-hand side product must be empty.
-    - So $m=n$ and all $p_i, q_i$ are associate, QED.
-
-- UFD does not imply Euclidean:
-  - It suffices to find a UFD that is not a PID.
-  - Take $R \da \CC[x, y]$, which is a UFD by the usual factorization of polynomials.
-  It is not a PID, since $\gens{2, x}$ is not principal.
-
-
-:::
-
-
-## Spring 2021 #5 $\done$
-
-:::{.problem title="Spring 2021"}
-Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
-Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
-:::
-
-:::{.solution}
-\envlist
-
-- Write $f(x) = \sum_{k=0}^n a_k x^k$, and supposing it's a zero divisor choose $g(x) = \sum_{k=0}^m b_k x^k$ of minimal degree so that $g\neq 0, b_m\neq 0$, and $f(x)g(x) = 0$.
-- The claim is that the top coefficient $b_m$ will suffice.
-- Write the product:
-\[
-0 = f(x)g(x) 
-= (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
-(b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
-.\]
-- Equating coefficients, the coefficient for $x^{m+n}$ must be zero, so (**importantly**) $a_n b_m = 0$.
-  - Since $a_n b_m=0$, consider $a_ng(x)$.
-    This has degree $d_1 \leq m-1$ but satisfies $a_ng(x)f(x) = a_n(g(x)f(x)) = 0$, so by minimality $a_ng(x) = 0$.
-  - This forces $a_n b_0 = \cdots = a_n b_{m-1} = 0$, so $a_n$ annihilates all of the $b_k$.
-- Now consider the coefficient of $x^{m+n-1}$, given by $a_{n-1}b_m + a_{n}b_{m-1}$.
-  - The second term $a_n b_{m-1}=0$ since $a_n$ annihilates all $b_k$, so (**importantly**) $a_{n-1} b_m = 0$.
-  - Considering now $a_{n-1}g(x)$:
-    - The same argument shows this has degree $d_2 \leq m-1$ but $a_{n-1}g(x)f(x) = 0$, so $a_{n-1}g(x) = 0$.
-    - So $a_{n-1}$ annihilates all $b_k$, and allowing this process to continue inductively.
-- For good measure, the coefficient of $x^{m+n-2}$ is $a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}$.
-  - Note that $a_n, a_{n-1}$ annihilate all $b_k$, so (**importantly**) $a_{n-2} b_m=0$, and so on.
-
-- Thus $a_k b_m = 0$ for all $0\leq k \leq n$, and by linearity and commutativity, we have
-\[
-b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
-.\]
-
-:::
-
 
 
 
@@ -959,6 +890,85 @@ $\implies$:
 
 :::
 
+
+:::
+
+## Fall 2019 #6 $\done$
+Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
+
+a.
+Show that
+$$
+N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
+$$
+is an ideal which is contained in any prime ideal.
+
+b.
+Let $r$ be an element of $R$ not in $N$.
+Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
+there is a prime ideal in $S$.
+
+c.
+Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
+
+:::{.concept}
+\envlist
+
+- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
+- Silly fact: 0 is in every ideal!
+ 
+- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
+ 
+- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
+
+  \todo[inline]{Prove this}
+
+- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
+
+  \todo[inline]{Prove this}
+
+- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
+
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Let $\mathfrak{p}$ be prime and $x\in N$.
+- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
+- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
+
+- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+
+- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+
+- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
+
+- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
+
+- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+
+- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
+Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
+  But then $r\not\in \mathfrak{p}$, a contradiction.
+
+:::
 
 :::
 
