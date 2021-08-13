@@ -195,14 +195,6 @@ If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
 :::
 
 
-:::{.fact}
-The binomial expansion works in any ring:
-\[
-(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
-.\]
-
-This is useful when considering nilpotents or radicals.
-:::
 
 
 
@@ -607,6 +599,34 @@ An ideal is **radical** iff $\rad{I} = I$.
 :::{.definition title="Nilpotent"}
 An element $r\in R$ is **nilpotent** if $r^n = 0$ for some $n \in \ZZ^{\geq 0}$.
 :::
+
+
+:::{.fact}
+The binomial expansion works in any ring:
+\[
+(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
+.\]
+
+This is useful when considering nilpotents or radicals.
+:::
+
+
+:::{.exercise title="?"}
+\envlist
+Notation: let $N$ or $N(R)$ be the set of nilpotents of $R$.
+
+- Show that every nilpotent is either zero or a zero divisor.
+  - Solution: $a^m=0$ with $a\neq 0$ and $m>1$, then $x x^{m-1} = 0$, so $x^{m-1}$ is a nontrivial element annihilating $x$.
+- Show that $R$ commutative and unital and $x$ nilpotent implies $1+x$ is a unit, and moreover $N + R\units = R\units$ (the sum of a nilpotent and unit is a unit).
+  - Solution: expand $1/(1+x) = \sum_{k=0}^\infty (-x)^k = \sum_{k=0}^n (-x)^k \da f(x)$, so $(1+x)f(x) =1$.
+  Now use that $RN = N$ since $x^n=0$ implies $(rx)^n = rxrx\cdots rx = r^n x^n = 0$.
+  Taking $n + u\in N + R\units$, then $u+n = u\inv(1 + u\inv n) \in R\units R\units$ since $u\inv n\in N$ and $1+u\inv\in R\units$ by the first part.
+
+- Show that if $f(x) = \sum a_k x^k \in R[x]$, then $f\in R[x]\units \iff a_0\in R\units, a_{k>1}\in N$.
+- Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ 
+
+:::
+
 
 :::{.definition title="Nilradical"}
 The **nilradical** of $R \in \CRing$ is
