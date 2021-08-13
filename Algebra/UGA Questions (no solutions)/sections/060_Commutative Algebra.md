@@ -109,6 +109,14 @@ Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a
 
 
 :::{.solution}
+$\not A\implies \not B$:
+
+- Suppose $a$ is nilpotent, so $a^m = 0_R$, and suppose $\phi: R\to S$ is a ring morphism.
+- Ring morphisms send zero to zero, so $0_S = \phi(0_R) = \phi(a^m) = \phi(a)^m$ and $\phi(a)$ is nilpotent.
+- But nontrivial rings can't contain nilpotent units: if $u$ is a unit and $ut= 1$ with $u^k=0$, then $1 = 1^k = (ut)^k = u^k t^k=0$ and $R=0$.
+
+
+$A\implies B$:
 
 :::
 
