@@ -202,7 +202,9 @@ Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ a
   - For example, $2\cdot 4\in 8\ZZ$ but neither 2 nor 4 is a multiple of 8.
 
 - $\mfm$ is **maximal** iff whenever $I\contains \mfm$ is an ideal in $R$, then either $I=\mfm$ or $I = R$.
-  - A maximal ideal in $\ZZ$: 
+  - A maximal ideal in $\ZZ$: $p\ZZ$.
+  This is because primes are maximal in a PID and $p\ZZ$ is a prime ideal.
+  Alternatively, "to contain is to divide" holds for Dedekind domains, so $m\ZZ \contains p\ZZ \iff m\divides p$, which forces $m=1,p$, so either $m\ZZ = p\ZZ$ or $m\ZZ = \ZZ$.
 
 :::
 
