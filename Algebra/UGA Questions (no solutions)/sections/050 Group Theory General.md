@@ -664,18 +664,18 @@ Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontriv
 - In any case, we have
 \[
 n_p \divides q &,\, n_p \equiv 1 \mod p \implies n_p \in \ts{ 1,q } \\ \\
-n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \in \ts{ 1, p, p^2} 
+n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \ts{ 1, p, p^2} 
 .\]
 
 - **Case 1:** $:p>q$.
-- If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
-- So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+  - If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
+  - So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
 
-- **Case 2:**: $p< q$:
-- For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
-- If $n_q = 1$, we're done. 
-- If $n_q = p^2$:
-  - Finer analysis....
+- **Case 2:** $p< q$:
+  - For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
+  - If $n_q = 1$, we're done. 
+  - If $n_q = p^2$:
+    - Finer analysis....
 
 :::
 
