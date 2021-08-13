@@ -668,8 +668,10 @@ n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \ts{ 1, p, p^2}
 .\]
 
 - **Case 1:** $:p>q$.
-  - If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
-  - So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+  - Consider reducing elements in $\ts{1, q} \mod p$.
+  - Since $p>q$, then $p\geq q+2$ since $p+1$ is even and thus not prime. 
+  - So $q\not\equiv 1 \mod p$, and we can rule it out. 
+    This only leaves $n_p = 1$ as a possibility.
 
 - **Case 2:** $p< q$:
   - For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
