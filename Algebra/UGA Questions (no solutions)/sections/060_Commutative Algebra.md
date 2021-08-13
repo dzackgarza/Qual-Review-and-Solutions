@@ -1,143 +1,8 @@
 # Commutative Algebra
 
-## Fall 2019 #3 $\done$
-Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
+## UFDs, PIDs, etc
 
-a.
-Prove that $R$ has characteristic 2.
-
-b.
-Prove that $R$ is commutative.
-
-
-:::{.strategy}
-\envlist
-
-- Just fiddle with direct computations.
-- Context hint: that we should be considering things like $x^2$ and $a+b$.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-\[
-2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
-.\]
-Note that this implies $x = -x$ for all $x\in R$.
-:::
-
-:::{.proof title="of b"}
-\[
-a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
-&\implies ab + ba = 0 \\
-&\implies ab = -ba \\
-&\implies ab = ba \quad\text{by (a)}
-.\]
-
-:::
-
-:::
-
-
-## Spring 2018 #5 $\done$
-Let 
-\[
-M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
-\quad \text{and} \quad 
-N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
-\]
-
-over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
-Prove that
-\[
-M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
-\implies MN = 0
-.\]
-
-:::{.solution}
-\envlist
-
-- Multiply everything out to get
-\[
-\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
-,\]
-  so it suffices to show $cu=dv$ given
-  \[
-  ax &= by \\
-  cx &= dy \\
-  au &= bv
-  .\]
-
-- Writing $cu$:
-  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
-  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
-  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
-  - Summary:
-  \[
-  ax = by 
-  &\implies b\inv ax = y \\
-  &\implies cx = dy = d(b\inv a x) \\
-  &\implies c = db\inv a \\
-  &\implies cu = db\inv au 
-  .\]
-
-- Writing $dv$:
-  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
-  - Left-multiply by $d$ to get $db\inv au = dv$
-  - Summary:
-  \[
-  au = bv 
-  &\implies b\inv a u = v \\
-  &\implies db\inv au = dv
-  .\]
-
-- So 
-\[
-cu = db\inv a u = dv
-.\]
-
-:::
-
-
-## Spring 2014 #5 $\work$
-Let $R$ be a commutative ring and $a\in R$.
-Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
-
-> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
-
-
-:::{.solution}
-$\not A\implies \not B$:
-
-- Suppose $a$ is nilpotent, so $a^m = 0_R$, and suppose $\phi: R\to S$ is a ring morphism.
-- Ring morphisms send zero to zero, so $0_S = \phi(0_R) = \phi(a^m) = \phi(a)^m$ and $\phi(a)$ is nilpotent.
-- But nontrivial rings can't contain nilpotent units: if $u$ is a unit and $ut= 1$ with $u^k=0$, then $1 = 1^k = (ut)^k = u^k t^k=0$ and $R=0$.
-
-
-$A\implies B$:
-
-- If $a$ is not nilpotent, localize at the infinite multiplicative subset $A \da \ts{1, a, a^2, \cdots}$ to obtain $R\localize{A}$.
-  Since $0\not\in A$, this is not the zero ring.
-- By the universal property, there is a map $R\to R\localize{A}$, and the claim is that $\phi(a)$ is a unit in $R\localize{A}$.
-
-:::
-
-
-## Spring 2014 #6 $\work$
- $R$ be a commutative ring with identity and let $n$ be a positive integer.
-
-a.
-Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
-
-b.
-Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
-
-
-# UFDs, PIDs, etc
-
-## Spring 2013 #2 $\done$
+### Spring 2013 #2 $\done$
 
 a.
 Define a *Euclidean domain*.
@@ -175,11 +40,15 @@ Give either a proof or a counterexample with justification.
     - Note that this makes $p_1, q_1$ associates.
     - Continuing up to $m$, we get
   \[
-  x = u_p \prod_{i=1}^m p_i = 
+  x 
+  &= u_p \prod_{i=1}^m p_i \\
+  &= 
   u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
   \implies 
-  u_p = u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
-  \tilde u = \prod_{k=m+1}^n q_i \\
+  u_p 
+  &= u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
+  \tilde u 
+  &= \prod_{k=m+1}^n q_i \\
   ,\]
     where we've moved all units to the LHS.
     This makes $p_i, q_i$ associates for $i\leq m$.
@@ -196,7 +65,7 @@ Give either a proof or a counterexample with justification.
 
 
 
-## Fall 2017 #6 $\done$
+### Fall 2017 #6 $\done$
 For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
 
 We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
@@ -264,7 +133,7 @@ Conclude $R$ is not a PID.
 
 :::
 
-## Spring 2017 #4 $\done$
+### Spring 2017 #4 $\done$
 
 a.
 Let $R$ be an integral domain with quotient field $F$.
@@ -313,9 +182,9 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 
 :::
 
-# Ideals (Prime, Maximal, Proper, Principal, etc) 
+## Ideals (Prime, Maximal, Proper, Principal, etc)
 
-## Fall 2013 #3 $\work$
+### Fall 2013 #3 $\work$
 
 a.
 Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
@@ -325,13 +194,13 @@ Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ a
 
 
 
-## Fall 2014 #8 $\work$
+### Fall 2014 #8 $\work$
 Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
 Prove that for all $x\in R$, the ideal $xR$ is proper.
 
 > You may assume the axiom of choice.
 
-## Fall 2014 #7 $\done$
+### Fall 2014 #7 $\done$
 Give a careful proof that $\CC[x, y]$ is not a PID.
 
 :::{.concept}
@@ -363,7 +232,7 @@ Give a careful proof that $\CC[x, y]$ is not a PID.
 
 
 
-## Spring 2019 #6 $\done$
+### Spring 2019 #6 $\done$
 Let $R$ be a commutative ring with 1.
 
 > Recall that $x \in R$ is nilpotent iff $xn = 0$ for
@@ -488,7 +357,7 @@ But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradi
 
 :::
 
-## Spring 2018 #8 $\done$
+### Spring 2018 #8 $\done$
 Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
 
 a.
@@ -550,13 +419,36 @@ G(x) \da {1\over \sum_{k=1}^n g_k(x)}
 
 \todo[inline]{I'm not super convinced by c!}
 
-
 :::
 
 
-# Zero Divisors
+## Zero Divisors and Nilpotents
 
-## Spring 2021 #5 $\done$
+### Spring 2014 #5 $\done$
+Let $R$ be a commutative ring and $a\in R$.
+Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
+
+> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
+
+
+:::{.solution}
+$\not A\implies \not B$:
+
+- Suppose $a$ is nilpotent, so $a^m = 0_R$, and suppose $\phi: R\to S$ is a ring morphism.
+- Ring morphisms send zero to zero, so $0_S = \phi(0_R) = \phi(a^m) = \phi(a)^m$ and $\phi(a)$ is nilpotent.
+- But nontrivial rings can't contain nilpotent units: if $u$ is a unit and $ut= 1$ with $u^k=0$, then $1 = 1^k = (ut)^k = u^k t^k=0$ and $R=0$.
+
+
+$A\implies B$:
+
+- If $a$ is not nilpotent, localize at the infinite multiplicative subset $A \da \ts{1, a, a^2, \cdots}$ to obtain $R\localize{A}$.
+  Since $0\not\in A$, this is not the zero ring.
+- By the universal property, there is a map $\phi: R\to R\localize{A}$, and the claim is that $\phi(a)$ is a unit in $R\localize{A}$.
+- More directly, $\phi(a) = [a/1] \in \ts{p,q \st p\in R, q\in A}$, which has inverse $[a/1]$.
+
+:::
+
+### Spring 2021 #5 $\done$
 
 :::{.problem title="Spring 2021"}
 Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
@@ -593,7 +485,7 @@ b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
 
 :::
 
-## Fall 2018 #7 $\done$
+### Fall 2018 #7 $\done$
 Let $R$ be a commutative ring.
 
 a.
@@ -740,9 +632,9 @@ R &\cong \ZZ/(2)[t] / (t^2)
 
 
 
-# Zorn's Lemma
+## Zorn's Lemma
 
-## Fall 2013 #4 $\work$
+### Fall 2013 #4 $\work$
 Let $R$ be a commutative ring with $1\neq 0$.
 Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
 
@@ -764,7 +656,7 @@ c.
 d. 
 Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
 
-## Fall 2015 #3 $\done$
+### Fall 2015 #3 $\done$
 Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
 
 Prove that $R$ contains a maximal left ideal.
@@ -800,7 +692,7 @@ x &\mapsto xu
 - So by Zorn's lemma, $\hat{C}$ contains a maximal ideal (incidentally containing $K$).
 :::
 
-## Spring 2015 #7 $\done$
+### Spring 2015 #7 $\done$
 Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
 Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
 
@@ -838,7 +730,7 @@ xy&\da (p_1 + r_1 a)(p_2 + r_2b)\in S \\
 
 :::
 
-## Spring 2013 #1 $\done$
+### Spring 2013 #1 $\done$
 Let $R$ be a commutative ring.
 
 a.
@@ -905,7 +797,7 @@ $\implies$:
 
 :::
 
-## Fall 2019 #6 $\done$
+### Fall 2019 #6 $\done$
 Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
 
 a.
@@ -985,9 +877,9 @@ Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
 :::
 
 
-# Noetherian Rings
+## Noetherian Rings
 
-## Fall 2015 #4 $\done$
+### Fall 2015 #4 $\done$
 Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
 Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
 
@@ -1001,7 +893,7 @@ Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
   So inductively, the chain stabilizes at $m$.
 :::
 
-## Spring 2021 #6 $\work$
+### Spring 2021 #6 $\work$
 
 a. 
 Carefully state the definition of **Noetherian** for a commutative ring $R$.
@@ -1044,9 +936,9 @@ I \da \gens{S} = \sum_{k\in \ZZ_{\geq 1}} R\cdot 2x^k \da \ts{ \sum_{i=1}^m r_k(
 
 :::
 
-# Simple Rings
+## Simple Rings
 
-## Fall 2017 #5 $\done$
+### Fall 2017 #5 $\done$
 A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
 
 a.
@@ -1102,7 +994,7 @@ $\impliedby$:
 
 :::
 
-## Spring 2016 #8 $\done$
+### Spring 2016 #8 $\done$
 Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
 
 i. $R$ has no zero divisors, and
@@ -1203,4 +1095,119 @@ using condition (2).
 :::
 
 :::
+
+## Unsorted
+
+### Fall 2019 #3 $\done$
+Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
+
+a.
+Prove that $R$ has characteristic 2.
+
+b.
+Prove that $R$ is commutative.
+
+
+:::{.strategy}
+\envlist
+
+- Just fiddle with direct computations.
+- Context hint: that we should be considering things like $x^2$ and $a+b$.
+
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\[
+2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
+.\]
+Note that this implies $x = -x$ for all $x\in R$.
+:::
+
+:::{.proof title="of b"}
+\[
+a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
+&\implies ab + ba = 0 \\
+&\implies ab = -ba \\
+&\implies ab = ba \quad\text{by (a)}
+.\]
+
+:::
+
+:::
+
+
+### Spring 2018 #5 $\done$
+Let 
+\[
+M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
+\quad \text{and} \quad 
+N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
+\]
+
+over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
+Prove that
+\[
+M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
+\implies MN = 0
+.\]
+
+:::{.solution}
+\envlist
+
+- Multiply everything out to get
+\[
+\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
+,\]
+  so it suffices to show $cu=dv$ given
+  \[
+  ax &= by \\
+  cx &= dy \\
+  au &= bv
+  .\]
+
+- Writing $cu$:
+  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
+  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
+  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
+  - Summary:
+  \[
+  ax = by 
+  &\implies b\inv ax = y \\
+  &\implies cx = dy = d(b\inv a x) \\
+  &\implies c = db\inv a \\
+  &\implies cu = db\inv au 
+  .\]
+
+- Writing $dv$:
+  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
+  - Left-multiply by $d$ to get $db\inv au = dv$
+  - Summary:
+  \[
+  au = bv 
+  &\implies b\inv a u = v \\
+  &\implies db\inv au = dv
+  .\]
+
+- So 
+\[
+cu = db\inv a u = dv
+.\]
+
+:::
+
+
+
+
+### Spring 2014 #6 $\work$
+ $R$ be a commutative ring with identity and let $n$ be a positive integer.
+
+a.
+Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
+
+b.
+Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
+
 
