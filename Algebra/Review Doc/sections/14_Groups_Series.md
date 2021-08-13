@@ -46,13 +46,27 @@ Equivalently, since $Z_i\normal G$, there is a quotient map $\pi:G\to G/Z_i$, so
 Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
 :::
 
+## Solvability
+
+
+:::{.remark}
+A useful way to extract normal subgroups: let $G$ act on literally anything by $\phi: G\to \Aut(X)$.
+Then $\ker \phi \normal G$ is always a normal subgroup.
+Some examples:
+
+- $G\actson G$ by $x\mapsto gx$.
+- $G\actson \ts{H\leq G}$ by $H\mapsto gH$ or $H\mapsto gHg\inv$.
+- $G\actsons \ts{\Syl_p(G)}$ for a fixed $p$ by $S_p \mapsto gS_p g\inv$.
+- $G\actson H$ for $H\normal G$ by inner automorphisms $h\mapsto ghg\inv$.
+:::
+
+
 :::{.definition title="Solvable"}
 A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
 \[
 G \da G_n > G_{n-1} > \cdots > G_2 > G_1 \da \ts{ e } && \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
 .\]
 :::
-
 
 :::{.remark}
 If $G = \Gal(L/K)$ is a Galois group corresponding to a polynomial $f$, then $G$ is solvable as a group iff $f$ is solvable in radicals: 
@@ -62,7 +76,6 @@ there is a tower of extensions $K = F_0 \subset F_1 \subset F_2 \subset \cdots \
 2. $F_m \supseteq \SF(f)$ contains a splitting field for $f$.
 :::
 
-
 :::{.theorem title="Characterization of Solvable"}
 A group $G$ is solvable iff its derived series terminates.
 :::
@@ -71,11 +84,16 @@ A group $G$ is solvable iff its derived series terminates.
 If $n\geq 4$ then $S_n$ is solvable.
 :::
 
-**Lemmas**:
+:::{.fact}
+Some useful facts about solvable groups:
 
 - $G$ is solvable iff $G$ has a terminating *derived series*.
 - Solvable groups satisfy the 2 out of 3 property
 - Abelian $\implies$ solvable
 - Every group of order less than 60 is solvable.
+:::
+
+
+
 
 
