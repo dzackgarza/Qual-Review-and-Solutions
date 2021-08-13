@@ -671,17 +671,13 @@ n_q \divides p^2 &\implies n_q \in \ts{ 1, p, p^2}
 
 - **Case 1:** $:p>q$.
   - Using that $[n_p]_p \equiv 1$, consider reducing elements in $\ts{1, q} \mod p$.
-  - Since $p>q$, then $p\geq q+2$ since $p+1$ is even and thus not prime. 
-  - So $q\not\equiv 1 \mod p$, and we can rule it out. 
+  - Since $q<p$, we just have $q\mod p = q$, and as long as $q\neq 1$ we have $q\not\equiv 1\mod p$.
     But since $n_p\neq 1$ and $n_p\neq q$, this is a contradiction. $\contradiction$
 
 - **Case 2:** $p< q$:
   - Using that $[n_q]_q \equiv 1$, consider reducing $\ts{1, p, p^2}\mod q$.
-  - Since $
-  - For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
-  - If $n_q = 1$, we're done. 
-  - If $n_q = p^2$:
-    - Finer analysis....
+  - Since now $p<q$, we have $p\mod q = p$ itself, so $p\mod q \neq 1$ and we can rule it out.
+  - The remaining possibility is $n_q = p^2$.
 
 :::
 
