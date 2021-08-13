@@ -4,7 +4,13 @@
 :::{.remark}
 Useful facts:
 
-- Counting elements of order $p$: writing $\# G = p^k m$ so that $\# S_p = p^k$, using that every order $p$ element is in some $S_p$ one gets $n_p( \# S_p - 1)$ elements of order $p$ (where the $-1$ comes from taking out the identity).
+- Counting contributions to $\# G$ from $\Syl_p(G)$: writing $\# G = p^k m$ so that $\# S_p = p^k$, using that every order $p$ element is in some $S_p$ one gets at least $n_p(\ell - 1)$ for some constant $\ell > 1$.
+  - **Warning**: every $S_p$ is the same size, so it's tempting to take $\ell \da \# S_p = p^k$.
+    But this only works if one knows the $S_p$ intersect trivially, e.g. if $k=1$.
+    Otherwise, the best one can do without more information $\ell = p$, i.e. the $S_p$ all intersect trivially or in subgroups of order $p$.
+  - **Warning**:
+  This isn't quite a count of elements of order $p$, since elements in $S_p$ can have orders $p^{k'}$ for other $k'\leq k$.
+- When counting: just leave the identity out of every calculation, and add it back in as a $+1$ for the final count.
 :::
 
 
