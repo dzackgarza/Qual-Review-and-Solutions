@@ -627,6 +627,10 @@ Let $U, U(R), R\units$ be the units of $R$.
 - Show that $f(x) = \sum a_k x^k \in R[x]$ iff $f\in R[x]\units \iff a_0\in R\units, a_{k>1}\in N$.
   - Solution: use that if $a_k$ is nilpotent, $a_k x^k$ is nilpotent.
     Then $a_0$ a unit at $a_1 x$ nilpotent implies $a_0 + a_1 x$ is a unit, and inductively $f$ is a unit.
+    If $f$ is a unit, take $fg=1$ with $f = \sum_{k=0}^na_k x^k$ and $g = \sum_{k=0}^m a_k x^k$.
+    Write $fg(x) = \sum_{k=0}^{n+m} c_k x^k$ where $c_k = \sum_{j=0}^k a_j b_{k-j}$.
+    Using $fg=1$, $c_{0} = a_0 b_0 = 1$ so $a_0, b_0$ are units, and proceed inductively by descending coefficients, checking that $a_n b_m$ is the $r=0$ case.
+
 
 - Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ for all $k$.
 - Show that $f\in ZD(R[x]) \iff f\neq 0$ and $rf(x) = 0$ for some $r\in R$.
