@@ -48,7 +48,7 @@ Give either a proof or a counterexample with justification.
   u_p 
   &= u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
   \tilde u 
-  &= \prod_{k=m+1}^n q_i \\
+  &= \prod_{k=m+1}^n q_i
   ,\]
     where we've moved all units to the LHS.
     This makes $p_i, q_i$ associates for $i\leq m$.
