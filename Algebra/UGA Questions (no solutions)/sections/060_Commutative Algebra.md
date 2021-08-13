@@ -194,6 +194,21 @@ Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ a
 
 
 
+:::{.solution}
+
+
+:::{.proof title="of 1"}
+\envlist
+
+- $\mfp$ is **prime** iff $xy\in \mfp \implies x\in \mfp$ or $y\in \mfp$.
+- An ideal $I\normal \ZZ$ that is not prime: $8\ZZ$
+
+:::
+
+:::
+
+
+
 ### Fall 2014 #8 $\work$
 Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
 Prove that for all $x\in R$, the ideal $xR$ is proper.
