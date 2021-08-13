@@ -680,10 +680,10 @@ n_q \divides p^2 &\implies n_q \in \ts{ 1, p, p^2}
   - The remaining possibility is $n_q = p^2$.
   - Supposing that $n_p \neq 1$, we have $n_p=q$, so we can count 
   \[
-  \text{Elements of order } p: n_p( \# S_p - 1) &= q(p^2-1) \\
-  \text{Elements of order } q: n_q( \# S_q - 1) &= p^2(q-1)
+  \text{Elements from Sylow } p: n_p( \# S_p - 1) &= q(p^2-1) +1 \\
+  \text{Elements from Sylow } q: n_q( \# S_q - 1) &= p^2(q-1) + 1
   .\]
-  - Now count how many elements this contributes to $G$, adding in the identity:
+  - Now count how many elements this contributes to $G$, removing and adding the identity to the counts appropriately:
   \[
   q(p^2 - 1) + p^2(q-1) + 1
   &= p^2q -q + p^2q - p^2 + 1 \\
