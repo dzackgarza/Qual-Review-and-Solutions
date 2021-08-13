@@ -613,7 +613,9 @@ This is useful when considering nilpotents or radicals.
 
 :::{.exercise title="?"}
 \envlist
-Notation: let $N$ or $N(R)$ be the set of nilpotents of $R$.
+Notation: let $N$ or $N(R)$ be the set of nilpotents in $R$.
+Let $ZD$ or $ZD(R)$ be the set of zero divisors.
+Let $U, U(R), R\units$ be the units of $R$.
 
 - Show that every nilpotent is either zero or a zero divisor.
   - Solution: $a^m=0$ with $a\neq 0$ and $m>1$, then $x x^{m-1} = 0$, so $x^{m-1}$ is a nontrivial element annihilating $x$.
@@ -622,8 +624,12 @@ Notation: let $N$ or $N(R)$ be the set of nilpotents of $R$.
   Now use that $RN = N$ since $x^n=0$ implies $(rx)^n = rxrx\cdots rx = r^n x^n = 0$.
   Taking $n + u\in N + R\units$, then $u+n = u\inv(1 + u\inv n) \in R\units R\units$ since $u\inv n\in N$ and $1+u\inv\in R\units$ by the first part.
 
-- Show that if $f(x) = \sum a_k x^k \in R[x]$, then $f\in R[x]\units \iff a_0\in R\units, a_{k>1}\in N$.
-- Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ 
+- Show that $f(x) = \sum a_k x^k \in R[x]$ iff $f\in R[x]\units \iff a_0\in R\units, a_{k>1}\in N$.
+  - Solution: use that if $a_k$ is nilpotent, $a_k x^k$ is nilpotent.
+    Then $a_0$ a unit at $a_1 x$ nilpotent implies $a_0 + a_1 x$ is a unit, and inductively $f$ is a unit.
+
+- Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ for all $k$.
+- Show that $f\in ZD(R[x]) \iff f\neq 0$ and $rf(x) = 0$ for some $r\in R$.
 
 :::
 
