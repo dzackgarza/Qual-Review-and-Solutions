@@ -949,6 +949,10 @@ $\implies$:
 :::{.proof title="of d"}
 \envlist
 
+- Write $I \da \Ann(u)$ for some $u$, and toward a contradiction suppose $ab\in I$ but $a,b\not\in I$.
+- Then $abu=0$ but $au\neq 0, bu\neq 0$.
+- Since $abu=0$, we have $a\in \Ann(bu)$.
+  Note that $\Ann(bu) \contains \Ann(u)$, since $su = 0\implies bsu=sbu=0$.
 
 :::
 
