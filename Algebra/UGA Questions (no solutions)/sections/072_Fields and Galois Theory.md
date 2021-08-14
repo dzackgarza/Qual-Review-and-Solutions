@@ -19,6 +19,12 @@ Give an example of a finite extension $L/K$ that is not separable.
 \envlist
 
 - $L/k$ is **separable** iff every element $\alpha$ is separable, i.e. the minimal polynomial $m(x)$ of $\alpha$ is a separable polynomial, i.e. $m(x)$ has no repeated roots in (say) the algebraic closure of $L$ (or just any splitting field of $m$).
+
+- If $\ch k = p$, suppose toward a contradiction that $L/k$ is not separable.
+  Then there is some $\alpha$ with an inseparable (and irreducible) minimal polynomial $f(x)\in k[x]$.
+- Claim: since $f$ is inseparable and irreducible, $f(x) = g(x^p)$ for some $g\in k[x]$.
+  - Note: write $g(x) \da \sum a_k x^k$, so that $f(x) = \sum a_k (x^p)^k = \sum a_k x^{pk}$.
+- Then 
 :::
 
 
