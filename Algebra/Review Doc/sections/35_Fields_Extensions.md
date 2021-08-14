@@ -210,6 +210,12 @@ Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 <
 
 :::
 
+
+:::{.proposition title="Derivative completely detects separability"}
+
+:::
+
+
 :::{.proof title="?"}
 - First part:
   - $\not A\implies \not B$: 
@@ -223,8 +229,10 @@ Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 <
   - If $\ch k = 0$ and $f$ is irreducible, then $\deg f \geq 2$ and $\deg f' \geq 1$ so $f' \neq 0$ and $f$ is thus separable.
 
 - Third part:
+  - $\impliedby$: If $f(x) = g(x^p)$ then $f'(x) = g'(x^p)\cdot px^{p-1}\eqiuv 0$.
   - $\implies$: Let $f$ be irreducible and inseparable, so $f' \equiv 0 \in k[x]$.
-    Then $f(x) \da \sum_{k=0}^n a_k x^k$ implies $f'(x) \da \sum_{k=1}^{n}ka_k x^{k-1}$
+    Then $f(x) \da \sum_{k=0}^n a_k x^k$ implies $f'(x) \da \sum_{k=1}^{n}ka_k x^{k-1}$, which is zero iff $ka_k \equiv 0$ so $p$ divides $ka_k$.
+    So $a_k\not\equiv 0$ forces $p\divides k$, so $f = a_0 + a_px^p + a_{2p}x^{2p} + \cdots$.
 :::
 
 
