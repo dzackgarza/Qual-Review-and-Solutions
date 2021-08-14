@@ -173,11 +173,11 @@ Equivalently, defining $M_t \da \ts{ m\in M \st \exists r\in R, rm = 0_M }$ as t
 If $M_t = M$, we say $M$ is a **torsion module**.
 :::
 
-:::{.proposition title="Free implies torsionfree (generally)"}
+:::{.proposition title="Free implies torsionfree"}
 For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is torsionfree.
 :::
 
-:::{.proof title="?"}
+:::{.proof title="that free implies torsionfree"}
 \envlist
 
 - If $M$ is finitely generated, write $M = \gens{X}$ with $X\da \ts{x_1, \cdots, x_m}$ and $\# X<\infty$ a finite generating set.
@@ -185,14 +185,11 @@ For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is 
 - Consider $N\leq M$ defined by $\gens{\mcb}$; this is a basis for $N$ and makes $N$ free.
   The claim is now that $M\cong N$, so that any maximal linearly independent subset of generators is all of $X$.
 - If $N \not\cong M$, set $\mcb^c \da X\sm \mcb = \ts{x_{n+1}, \cdots, x_m}$ to be all generators for $M$ that the basis $\mcb$ misses.
-- Then $\mcb^c \union \ts{x_{j}}$ for any $n+1\leq j \leq m$ has a linear dependence, and $r_j x_j + \sum_{k=1}^n r_n x_n = 0$ implies $r_j x_j = - \sum_{k=1}^n r_n x_n$.
-
-- Idea: 
-  - Show that we can scale every element $y_i$ of $\mcb^c$ by some $r_i$ to land in $N \da \spanof \mcb$.
-  - Take $r\da \prod r_i$ so that $rM \leq N$, since the $y_i$ occur as some of the $M$ in this submodule.
-  - Use that $\phi_r(x) \da rx$ is a map $M\to rM$ where $\im(\phi_r) = M$ since $x_k \da r_k y_k$ is in the image for each $x_k \in X$ and these generate $M$.
-  - Use that $\ker \phi_r$ is torsion and thus zero, so $M\cong rM$.
-  - Use $rM\leq N \leq M$ and $M\cong rM$ to conclude $N\cong M$, and since $N$ is free so is $M$.
+- Then $\mcb^c \union \ts{x_{j}}$ for any $n+1\leq j \leq m$ has a linear dependence, and $r_j x_j + \sum_{k=1}^n r_n x_n = 0$ for some $r_j\neq 0$ implies $r_j x_j = - \sum_{k=1}^n r_n x_n$.
+- Let $r$ be the product of all of the scalars obtained this way, so $r = \prod_{k=n+1}^m r_j$, and consider the submodule $rX \leq N \leq M$.
+  We get $rM \leq N \leq M$ since $X$ is a generating set for $M$, so it now suffices to show $rM \cong M$.
+- Just define a map $\phi_r: M\surjects rM$ where $m\mapsto rm$, and note $\ker \phi_r =\ts{ m\in M \st rm = 0} = 0$ since $M$ is torsionfree.
+  So $M = M/\ker \phi_r \cong rM$.
 :::
 
 
