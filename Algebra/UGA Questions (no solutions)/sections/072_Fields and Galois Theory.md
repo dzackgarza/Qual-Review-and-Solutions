@@ -311,7 +311,20 @@ G = S_3 \cong D_3, A_3 \cong C_3
 .\]
   So $G = \gens{\sigma, \tau \st \sigma^3, \tau^2}$.
 
-Part 3:
+Part c:
+
+- Note that the subgroup lattice for $S_3$ looks like the following:
+
+
+![](figures/2021-08-14_18-00-51.png)
+
+- Note that we can identify
+  - $\sigma = (1,2,3)$
+  - $\tau = (2,3)$ which fixes $r_1$
+  - $\sigma \tau = (1,2)$ which fixes $r_3$
+  - $\sigma^2\tau = (1, 3)$ which fixes $r_2$
+
+- Computing the fixed field of $\tau$
 
 
 
