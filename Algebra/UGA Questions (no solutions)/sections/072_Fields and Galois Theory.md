@@ -3,11 +3,9 @@
 ## General Galois Extensions
 
 ### Fall 2020 #4 $\done$
-
 Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
 Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
 Prove that \( [E: F] \equiv 1 \mod p \).
-
 
 :::{.concept}
 The correspondence:
@@ -35,7 +33,6 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
 .\]
 
 :::
-
 
 :::{.solution}
 \envlist
@@ -84,10 +81,8 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
 
 :::
 
-
-### Fall 2019 Midterm #9  $\work$
+### Fall 2019 Midterm #9  $\done$
 Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(\zeta_n + \zeta_n\inv): \QQ] = \phi(n)/2$ for $\phi$ the totient function.
-
 
 :::{.solution}
 \envlist
@@ -107,7 +102,8 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
   \sigma_{n-2}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-2} + \zeta_n^{-(n-2)} = \zeta_n^{-2} + \zeta_n^{2} = \alpha_2 \\
   \sigma_{n-3}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3
   ,\]
-  so we see that $\sigma_{k}(\alpha)=\sigma_{n-k}(\alpha)$ and we pick up $(n-1)/2$ distinct conjugates.
+  where we've used that $\zeta^{k} = \zeta^{k\mod n}$.
+  From this, we see that $\sigma_{k}(\alpha_1)=\sigma_{n-k}(\alpha_1)$ and we pick up $(n-1)/2$ distinct conjugates.
 
 - For $n$ not prime, the exact same argument runs through $\phi(n)$ values of $k$ for $\sigma_k$, and again yields $\sigma_{k}(\alpha_1) = \sigma_{\phi(n) - k}(\alpha_1)$.
   Matching them up appropriately yields $\phi(n)/2$ distinct roots.
