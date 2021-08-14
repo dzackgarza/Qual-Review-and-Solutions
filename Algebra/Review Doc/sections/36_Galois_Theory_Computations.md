@@ -17,6 +17,8 @@
  Once you get $A\inv \vector x = \vector b$, read off the first row dotted against $\vector b$ to get a polynomial in $x$.
  - In general: take $\alpha$, sort out the degree $n$ of the extension $\QQ(\alpha)/\QQ$, and use the basis $1,\alpha,\alpha^2,\cdots, \alpha^{n-1}$.
 
+- A trick to remember how degrees, indices and sizes match up: $L/K/F$ corresponds to $1/H/G$, and $[L:K] = [H:1] = \# H$, $[F:K] = [G:H]$, $[L:F] = [G:1] = \# G$, etc.
+
 :::
 
 :::{.remark}
