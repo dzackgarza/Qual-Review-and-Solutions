@@ -75,10 +75,11 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
 - We have an equation of the form $n_p(G)/n_p(H) = m$, and we want to show $m\equiv 1 \mod p$.
   So write
   \[
-  {n_p(G) \over n_p(H) } = m \implies m n_p(H) = n_p(G) \\
-  \implies m n_p(H) \equiv n_p(G) \mod p \\
-  \implies m\cdot 1 \equiv 1 \mod p \\
-  \implies m \equiv 1 \mod p
+  {n_p(G) \over n_p(H) } 
+  = m \implies m n_p(H) &= n_p(G) \\
+  \implies m n_p(H) &\equiv n_p(G) \mod p \\
+  \implies m\cdot 1 &\equiv 1 \mod p \\
+  \implies m &\equiv 1 \mod p
   .\]
 
 :::
@@ -86,7 +87,8 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
 
 ### Fall 2019 Midterm #9  $\work$
 Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(\zeta_n + \zeta_n\inv): \QQ] = \phi(n)/2$ for $\phi$ the totient function.
-10. 
+
+### Fall 2019 Midterm #10
 
 Let $L/K$ be a finite normal extension.
 
