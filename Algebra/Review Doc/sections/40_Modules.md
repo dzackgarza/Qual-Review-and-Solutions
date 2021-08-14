@@ -103,8 +103,8 @@ A short exact sequence
 \[
 \xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
 \]
-has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
-$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
+has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \id_{C}$.
+$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \id_A$.
 :::
 
 :::{.proposition title="Classifying split SESs"}
@@ -117,6 +117,16 @@ Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
 - $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
 
 :::
+
+
+:::{.proof title="?"}
+
+Right-splitting implies direct sum:
+
+- Use that $B \subset \ker g + \im f$, writing $b = \id_C
+
+:::
+
 
 ## Free and Projective Modules
 
