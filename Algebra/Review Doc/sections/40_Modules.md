@@ -107,26 +107,30 @@ has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \cir
 $\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \id_A$.
 :::
 
-:::{.proposition title="Classifying split SESs"}
-Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
+:::{.proposition title="Equivalent conditions for splitting SESs"}
+Let $\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2}  C \to 0$ be a SES, then TFAE
 
-- $\xi$ admits a right-splitting.
+- $\xi$ admits a right-splitting $s: C\to B$.
 - $C$ is projective.
-- $\xi$ admits a left-splitting.
+- $\xi$ admits a left-splitting $t: B\to A$.
 - $A$ is injective.
 - $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
 
 :::
 
-
 :::{.proof title="?"}
-
 Right-splitting implies direct sum:
 
-- Use that $B \subset \ker g + \im f$, writing $b = \id_C
+- Use that $B \subset \ker d_2 + \im s$, writing $b = (b - sd_2(b) ) + sd_2(b)$ and noting
+\[
+d_2(b - sd_2(b)) = d_2(b) - d_2sd_2(b) = d_2(b) - d_2(b) = 0 
+.\]
+- Show $\ker d_2 \intersect \im s=0$, writing $b$ with $d_2(b) = 0$ and $b = s(c)$ for some $c$ yields
+\[
+0 = d_2(b) = d_2s(c) = \id_C(c) = c
+.\]
 
 :::
-
 
 ## Free and Projective Modules
 
