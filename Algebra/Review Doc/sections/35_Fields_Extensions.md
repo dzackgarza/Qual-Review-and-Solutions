@@ -200,21 +200,13 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
-
-:::{.fact}
+:::{.proposition title="Derivative completely detects separability"}
 \envlist
 
 - For any field $k$, $f\in k[x]$ is separable $\iff f'\not\equiv 0 \in k[x]$.
 - For $\ch k = 0$, irreducible implies separable.
 - For $\ch k = p$, irreducibles $f(x)$ are inseparable iff $f(x) = g(x^p)$ for some $g\in k[x]$.
-
 :::
-
-
-:::{.proposition title="Derivative completely detects separability"}
-
-:::
-
 
 :::{.proof title="?"}
 - First part:
@@ -234,8 +226,6 @@ Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 <
     Then $f(x) \da \sum_{k=0}^n a_k x^k$ implies $f'(x) \da \sum_{k=1}^{n}ka_k x^{k-1}$, which is zero iff $ka_k \equiv 0$ so $p$ divides $ka_k$.
     So $a_k\not\equiv 0$ forces $p\divides k$, so $f = a_0 + a_px^p + a_{2p}x^{2p} + \cdots$.
 :::
-
-
 
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.

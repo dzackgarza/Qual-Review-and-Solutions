@@ -30,9 +30,13 @@ f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \da (h(x))^p
 .\]
 
 - Proof of claim: in $\ch k = p, f$ inseparable $\implies f(x) = g(x^p)$. 
-  - $f$ is separable iff $\gcd(f, f') = 1$, so $d(x) \da \gcd(f, f')\neq 1$.
-  - Since $f$ is irreducible and $d(x)$ must divide $f$, the only possibility is that $d(x) = 0$.
+  - Use that $f$ is inseparable iff $\gcd(f, f') \neq 1$, and since $f$ is irreducible this forces $f' \equiv 0$, so $ka_k = 0$ for all $k$.
+  - Then $a_k\neq 0$ forces $p\divides k$, so $f(x) = a_0 + a_px^p + a_{2p}x^{2p} + \cdots$ and one takes $g(x) \da \sum a_{kp}x^{kp}$.
 
+- A finite inseparable extension:
+  - It's a theorem that finite extensions of perfect fields are separable, so one needs a non-perfect field.
+  - Take $L/k \da \FF_p(t)/\FF_p$, which is infinite and $\ch L = p$.
+  - Now use that for *any* field, an irreducible $f$ is inseparable iff $f' = 0$.
 :::
 
 
