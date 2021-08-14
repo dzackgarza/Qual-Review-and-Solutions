@@ -141,8 +141,13 @@ The setup:
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwwLCJMIl0sWzAsMiwiRSJdLFswLDQsIksiXSxbNCwwLCIxIl0sWzQsMiwiSFxcZGEgXFxHYWwoTC9FKSJdLFs0LDQsIkdcXGRhIFxcR2FsKEwvSykgPSBDX24iXSxbMyw0XSxbNCw1LCJuIl0sWzIsMSwibiIsMl0sWzEsMCwiZyJdLFsyLDAsImciLDAseyJjdXJ2ZSI6LTV9XSxbMyw1LCIiLDIseyJjdXJ2ZSI6LTV9XV0=)
 
 
-- $L/K$ is cyclic means $L/K$ is Galois and $\Gal(L/K) = C_n$ for some $n$.
-- By the FTGT, setting $H \da \Gal(L/E)$
+Part 1:
+
+- $L/K$ is cyclic means $L/K$ is Galois and $G\da \Gal(L/K) = C_n$ for some $n$.
+- By the FTGT, setting $H \da \Gal(L/E)$, we get $H \normal G$ precisely because $E/K$ is normal, and $\Gal(L/E) = G/H$.
+- But then if $G$ is cyclic, $H \leq G$ must be cyclic, and $G/H$ is cyclic as well since writing $G = C_n = \gens{x}$, we have $G/H = \gens{xH}$.
+
+Part 2:
 :::
 
 
