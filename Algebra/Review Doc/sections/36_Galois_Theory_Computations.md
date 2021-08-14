@@ -1,5 +1,13 @@
 # Galois Theory
 
+
+:::{.remark}
+\envlist
+
+- Given $x\da \sqrt{a} + \sqrt{b}$, to find a minimal polynomial consider $x^2, x^3,\cdots$ and try to get a linear combination.
+  Then check if its irreducible.
+:::
+
 :::{.remark}
 Assume all extensions here are algebraic and finite.
 Let $f\in \QQ[x]$ with $n \da \deg f$.
