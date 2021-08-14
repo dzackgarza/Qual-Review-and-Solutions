@@ -257,9 +257,37 @@ c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
 
 
 :::{.solution}
+Part a:
+
 - A finite extension $E/F$ is **Galois** if it is normal and separable:
   - Normal: every $f\in F[x]$ either has no roots in $E$ or all roots in $E$.
   - Separable: every element $e\in E$ has a separable minimal polynomial $m(x)$, i.e. $m$ has no repeated roots.
+
+Part b:
+
+- Note $f$ is irreducible by Eisenstein with $p=7$, and since $\QQ$ is perfect, irreducible implies separable.
+- Writing $L \da \SF(f)/\QQ$, this is a Galois extension:
+  - $L$ is separable: it is a finite extension of a perfect field, which is automatically separable.
+  - $L$ is normal: $L$ is the splitting field of a separable polynomial, and thus normal.
+- Since $f$ is degree 3, we have $G\da \Gal(L/k) \leq S_3$, and since $G$ is a transitive subgroup the only possibilities are
+\[
+G = S_3 \cong D_3, A_3 \cong C_3
+.\]
+
+- Factor $x^3 - 7 = (x-\omega)(x-\zeta_3\omega)(x-\zeta_3^2\omega)$ where $\omega \da 7^{1\over 3}$ and $\zeta_3$ is a primitive 3rd root of unity.
+  Then $L = \QQ(\zeta_3, \omega)$.
+
+- Write $\min_{\omega, \QQ}(x) = x^3 - 7$ and let $L_0/\QQ \da \QQ(\omega)/\QQ$ yields $[L_0: \QQ] = 3$.
+- Write $\min_{\zeta_3, \QQ}(x) = (x^3-1)/(x-1) = x^2 + x + 1$, and note that this is still the minimal polynomial over $L_0$ since $L_0 \subseteq \RR$ and $\zeta_3 \in \CC\sm\RR$.
+  So $[L:L_0] = 2$.
+
+- Counting in towers,
+\[
+[L:\QQ] = [L:L_0][L_0: \QQ] = (2)(3) = 6
+.\]
+- But $\# S_3 = 6$ and $\# A_3 = 3$, so $G = S_3$.
+
+
 :::
 
 
