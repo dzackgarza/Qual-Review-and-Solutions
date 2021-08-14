@@ -181,12 +181,66 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
   The (always left-exact) covariant hom functor $\Hom(P, \wait)$ is right-exact.
 :::
 
+
+:::{.remark}
+There is a nice way to remember the right diagrams for injective and projective modules.
+The slogan is that morphisms *out* of a projective module can be *pulled* back through epimorphisms/surjections, and morphisms *into* an injective module can be *pushed* forward through monomorphisms/injections.
+
+\begin{tikzcd}
+	&&&&&& P \\
+	\\
+	0 && A && B && C && 0 \\
+	\\
+	&& I
+	\arrow[from=3-1, to=3-3]
+	\arrow[hook, from=3-3, to=3-5]
+	\arrow[two heads, from=3-5, to=3-7]
+	\arrow[from=3-7, to=3-9]
+	\arrow["{\text{Pull back through surjection}}"', dashed, from=1-7, to=3-5]
+	\arrow["{\text{Push forward through injections}}", dashed, from=3-5, to=5-3]
+	\arrow[from=1-7, to=3-7]
+	\arrow[from=3-3, to=5-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwyLCIwIl0sWzIsMiwiQSJdLFs0LDIsIkIiXSxbNiwyLCJDIl0sWzgsMiwiMCJdLFs2LDAsIlAiXSxbMiw0LCJJIl0sWzAsMV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw0XSxbNSwyLCJcXHRleHR7UHVsbCBiYWNrIHRocm91Z2ggc3VyamVjdGlvbn0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiw2LCJcXHRleHR7UHVzaCBmb3J3YXJkIHRocm91Z2ggaW5qZWN0aW9uc30iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSwzXSxbMSw2XV0=)
+
+:::
+
+
 :::{.proposition title="Free implies projective"}
 Any free $M\in \rmod$ is projective.
 :::
 
 :::{.proof title="?"}
-\todo[inline]{Todo: proof.}
+\envlist
+
+- Let $M$ be free, so that the universal property gives us this diagram:
+
+\begin{tikzcd}
+	M \\
+	\\
+	{\mathcal{B}} && N
+	\arrow["f", from=3-1, to=3-3]
+	\arrow["{\tilde f}", dashed, from=1-1, to=3-3]
+	\arrow["\iota", hook, from=3-1, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJcXG1hdGhjYWx7Qn0iXSxbMCwwLCJNIl0sWzIsMiwiTiJdLFswLDIsImYiXSxbMSwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXGlvdGEiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==)
+
+- To show $M$ is projective, we need to produce a lift in the following diagram, where $B, C$ are arbitrary:
+
+\begin{tikzcd}
+	&& P \\
+	\\
+	B && C && 0
+	\arrow[from=3-3, to=3-5]
+	\arrow["f", from=1-3, to=3-3]
+	\arrow["{\exists \tilde f}"', dashed, from=1-3, to=3-1]
+	\arrow["g", two heads, from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiQyJdLFswLDIsIkIiXSxbNCwyLCIwIl0sWzEsM10sWzAsMSwiZiJdLFswLDIsIlxcZXhpc3RzIFxcdGlsZGUgZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImciLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=)
+
 
 :::
 
