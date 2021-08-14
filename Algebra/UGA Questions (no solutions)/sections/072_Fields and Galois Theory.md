@@ -97,7 +97,17 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
   Note that $\alpha_1 \in \QQ(\zeta_n)$. 
 - Use that $\Gal(\QQ(\zeta_n)/\QQ) \cong C_n\units$, consisting of maps $\sigma_k: \zeta \mapsto \zeta^k$ for $\gcd(k, n) = 1$, of which there are $\phi(n)$ many.
 - Galois transitively permutes the roots of irreducible polynomials, so the roots of $m$ are precisely the Galois conjugates of $\alpha$, i.e. the Galois orbit of $\alpha$, so we can just compute it.
-  - $
+  For illustrative purposes, suppose $n$ is prime, then
+  \[
+  \sigma_1(\zeta_n + \zeta_n\inv) &= \zeta_n + \zeta_n\inv =\alpha_1 \\
+  \sigma_2(\zeta_n + \zeta_n\inv) &= \zeta_n^2 + \zeta_n^{-2} = \alpha_2 \\
+  \sigma_3(\zeta_n + \zeta_n\inv) &= \zeta_n^3 + \zeta_n^{-3} = \alpha_3 \\
+  \vdots&\\
+  \sigma_{n-1}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-1} + \zeta_n^{-(n-1)} = \zeta_n^{-1} + \zeta_n^{1} = \alpha_1 \\
+  \sigma_{n-2}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-2} + \zeta_n^{-(n-2)} = \zeta_n^{-2} + \zeta_n^{2} = \alpha_2 \\
+  \sigma_{n-3}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3 \\
+  ,\]
+  so we see that $\sigma_{k}(\alpha)=\sigma_{n-k}(\alpha)$ and we pick up $(n-1)/2$ distinct conjugates.
 :::
 
 
