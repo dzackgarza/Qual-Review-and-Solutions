@@ -120,6 +120,32 @@ Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/
 b.
 Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
 
+
+:::{.solution}
+The setup:
+
+\begin{tikzcd}
+	L &&&& 1 \\
+	\\
+	E &&&& {H\da \Gal(L/E)\hspace{4em} } \\
+	\\
+	K &&&& {G\da \Gal(L/K) = C_n}
+	\arrow[from=1-5, to=3-5]
+	\arrow["n", from=3-5, to=5-5]
+	\arrow["n"', from=5-1, to=3-1]
+	\arrow["g", from=3-1, to=1-1]
+	\arrow["g", curve={height=-30pt}, from=5-1, to=1-1]
+	\arrow[curve={height=-30pt}, from=1-5, to=5-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwwLCJMIl0sWzAsMiwiRSJdLFswLDQsIksiXSxbNCwwLCIxIl0sWzQsMiwiSFxcZGEgXFxHYWwoTC9FKSJdLFs0LDQsIkdcXGRhIFxcR2FsKEwvSykgPSBDX24iXSxbMyw0XSxbNCw1LCJuIl0sWzIsMSwibiIsMl0sWzEsMCwiZyJdLFsyLDAsImciLDAseyJjdXJ2ZSI6LTV9XSxbMyw1LCIiLDIseyJjdXJ2ZSI6LTV9XV0=)
+
+
+- $L/K$ is cyclic means $L/K$ is Galois and $\Gal(L/K) = C_n$ for some $n$.
+- By the FTGT, setting $H \da \Gal(L/E)$
+:::
+
+
 ### Fall 2019 Midterm #8  $\work$
 Let $k$ be a field of characteristic $p\neq 0$ and $f\in k[x]$ irreducible. 
 Show that $f(x) = g(x^{p^d})$ where $g(x) \in k[x]$ is irreducible and separable. 
