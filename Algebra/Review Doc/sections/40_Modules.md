@@ -230,7 +230,7 @@ Any free $M\in \rmod$ is projective.
 - To show $M$ is projective, we need to produce a lift in the following diagram, where $B, C$ are arbitrary:
 
 \begin{tikzcd}
-	&& P \\
+	&& M \\
 	\\
 	B && C && 0
 	\arrow[from=3-3, to=3-5]
@@ -240,6 +240,8 @@ Any free $M\in \rmod$ is projective.
 \end{tikzcd}
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiQyJdLFswLDIsIkIiXSxbNCwyLCIwIl0sWzEsM10sWzAsMSwiZiJdLFswLDIsIlxcZXhpc3RzIFxcdGlsZGUgZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImciLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=)
+
+- It suffices to produce a map $\mathcal{B}\to B$, since the universal property then provides $M\to B$.
 
 
 :::
