@@ -49,17 +49,30 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
   &\implies [G:H] = {\# G \over \# H} = [K:E]
   .\]
 
-- Now use that $N_G(P) \subseteq H$, and do Sylow theory on both $G$ and $H$.
+- Essential fact: if $P \in \Syl_p(G)$, we can use that $P \subseteq N_G(P) \subset H$ and so $P\in \Syl_p(H)$ as well.
+- Now use that $N_G(P) \subseteq H$, and do Sylow theory for $P$ in both $G$ and $H$:
+  - Sylow 3 on $G$ yields $[G: N_G(P)] \equiv 1 \mod p$.
+  - Sylow 3 on $H$ yields $[G: N_H(P)] \equiv 1 \mod p$.
 - Claim: $N_H(P) = N_G(P)$.
   - We have $N_H(P) \subseteq N_G(P)$ since $H \subseteq G$, so $hPh\inv = P$ remains true regarding either $h\in H$ or $h\in G$.
   - For $N_G(P) \subseteq N_H(P)$, use that $N_G(P) \subseteq H$ and so $gPg\inv = P$ implies $g\in H$, so $g\in N_H(P)$.
 
-- Now apply an isomorphism theorem:
+- Now morally one might want to apply an isomorphism theorem:
 \[
 {G/ N_G(P) \over H/N_H(P)}=
 {G/ N_H(P) \over H/N_H(P)}\cong
 {G\over H}
-.\]
+,\]
+  but we don't have normality.
+  However, we can still get away with the corresponding counting argument if everything is finite:
+  \[
+  {[G: N_G(P)] \over [H:N_H(P)] }=
+  {[G: N_H(P)] \over [H:N_H(P)] }=
+  {\# G / \# N_H(P) \over \# H / \#N_H(P)}
+  = {\# G \over \# H} 
+  = [G: H]
+  .\]
+
 
 
 :::
