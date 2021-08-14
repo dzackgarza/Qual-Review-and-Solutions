@@ -30,6 +30,8 @@ f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \da (h(x))^p
 .\]
 
 - Proof of claim: in $\ch k = p, f$ inseparable $\implies f(x) = g(x^p)$. 
+  - $f$ is separable iff $\gcd(f, f') = 1$, so $d(x) \da \gcd(f, f')\neq 1$.
+  - Since $f$ is irreducible and $d(x)$ must divide $f$, the only possibility is that $d(x) = 0$.
 
 :::
 
