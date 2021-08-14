@@ -2,7 +2,7 @@
 
 ## General Galois Extensions
 
-### Fall 2020 #4 $\work$
+### Fall 2020 #4 $\done$
 
 Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
 Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
@@ -10,7 +10,6 @@ Prove that \( [E: F] \equiv 1 \mod p \).
 
 
 :::{.concept}
-
 The correspondence:
 
 \begin{tikzcd}
@@ -51,8 +50,8 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
 
 - Essential fact: if $P \in \Syl_p(G)$, we can use that $P \subseteq N_G(P) \subset H$ and so $P\in \Syl_p(H)$ as well.
 - Now use that $N_G(P) \subseteq H$, and do Sylow theory for $P$ in both $G$ and $H$:
-  - Sylow 3 on $G$ yields $[G: N_G(P)] \equiv 1 \mod p$.
-  - Sylow 3 on $H$ yields $[G: N_H(P)] \equiv 1 \mod p$.
+  - Sylow 3 on $G$ yields $n_p(G) = [G: N_G(P)] \equiv 1 \mod p$.
+  - Sylow 3 on $H$ yields $n_p(H) = [G: N_H(P)] \equiv 1 \mod p$.
 - Claim: $N_H(P) = N_G(P)$.
   - We have $N_H(P) \subseteq N_G(P)$ since $H \subseteq G$, so $hPh\inv = P$ remains true regarding either $h\in H$ or $h\in G$.
   - For $N_G(P) \subseteq N_H(P)$, use that $N_G(P) \subseteq H$ and so $gPg\inv = P$ implies $g\in H$, so $g\in N_H(P)$.
@@ -73,7 +72,14 @@ N_G(P) = \ts{g\in G \st gPg\inv = P}
   = [G: H]
   .\]
 
-
+- We have an equation of the form $n_p(G)/n_p(H) = m$, and we want to show $m\equiv 1 \mod p$.
+  So write
+  \[
+  {n_p(G) \over n_p(H) } = m \implies m n_p(H) = n_p(G) \\
+  \implies m n_p(H) \equiv n_p(G) \mod p \\
+  \implies m\cdot 1 \equiv 1 \mod p \\
+  \implies m \equiv 1 \mod p
+  .\]
 
 :::
 
