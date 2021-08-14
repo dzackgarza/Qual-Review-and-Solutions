@@ -143,7 +143,6 @@ For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
 
 \todo[inline]{Prove}
 
-
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
 This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
@@ -171,6 +170,15 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
 
   $P$ is a direct summand of a free module $F$, so $F = P \oplus T$ for some module $T\leq F$.
 
+- Splitting:
+
+  For every SES $0\to A\to B\to P\to 0$, there is a right section $P\to B$ such that $P\to B\to P = \id_P$.
+
+  > Note that this implies $B\cong \im(P\to B) \oplus \ker(B\to P)$.
+  
+- Exactness:
+
+  The (always left-exact) covariant hom functor $\Hom(P, \wait)$ is right-exact.
 :::
 
 :::{.proposition title="Free implies projective"}
