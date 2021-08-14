@@ -26,7 +26,7 @@ Give an example of a finite extension $L/K$ that is not separable.
   - Note: write $g(x) \da \sum a_k x^k$, so that $f(x) = \sum a_k (x^p)^k = \sum a_k x^{pk}$.
 - This is a contradiction, since it makes $f$ reducible by using the "Freshman's dream":
 \[
-f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p = (g(x))^p
+f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \da (h(x))^p 
 .\]
 
 :::
