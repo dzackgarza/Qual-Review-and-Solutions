@@ -276,6 +276,7 @@ G = S_3 \cong D_3, A_3 \cong C_3
 
 - Factor $x^3 - 7 = (x-\omega)(x-\zeta_3\omega)(x-\zeta_3^2\omega)$ where $\omega \da 7^{1\over 3}$ and $\zeta_3$ is a primitive 3rd root of unity.
   Then $L = \QQ(\zeta_3, \omega)$.
+  - Aside: label the roots in this order, so $r_1 = \omega, r_2 = \zeta_3\omega, r_3 = \zeta_3^2\omega$.
 
 - Write $\min_{\omega, \QQ}(x) = x^3 - 7$ and let $L_0/\QQ \da \QQ(\omega)/\QQ$ yields $[L_0: \QQ] = 3$.
 - Write $\min_{\zeta_3, \QQ}(x) = (x^3-1)/(x-1) = x^2 + x + 1$, and note that this is still the minimal polynomial over $L_0$ since $L_0 \subseteq \RR$ and $\zeta_3 \in \CC\sm\RR$.
@@ -286,6 +287,33 @@ G = S_3 \cong D_3, A_3 \cong C_3
 [L:\QQ] = [L:L_0][L_0: \QQ] = (2)(3) = 6
 .\]
 - But $\# S_3 = 6$ and $\# A_3 = 3$, so $G = S_3$.
+
+- Explicitly, since we can write $\SF(f) = \QQ(\omega, \zeta_3)$, we can find explicit generators:
+\[
+\sigma:
+&\begin{cases}
+\omega &\mapsto \omega
+&  
+\\
+\zeta_3 &\mapsto \zeta_3\cdot \zeta_3.
+\end{cases}
+&&
+\implies \sigma \sim (1,2,3) \\
+\tau:
+&\begin{cases}
+\omega &\mapsto \omega
+&  
+\\
+\zeta_3 &\mapsto \bar{\zeta_3}.
+\end{cases}
+&&
+\implies \tau \sim (2, 3)
+.\]
+  So $G = \gens{\sigma, \tau \st \sigma^3, \tau^2}$.
+
+Part 3:
+
+
 
 
 :::
