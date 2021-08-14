@@ -92,6 +92,12 @@ A sequence of \(R\dash\)module morphisms
 is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
 
+
+:::{.remark}
+Note that $C\cong B/d_1(A)$ always, but $B$ is not a direct sum of the outer terms unless the sequence splits.
+:::
+
+
 :::{.definition title="Split Exact Sequences"}
 A short exact sequence 
 \[
@@ -105,16 +111,10 @@ $\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \c
 Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
 
 - $\xi$ admits a right-splitting.
-- $\xi$ admits a left-splitting.
-- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
-:::
-
-:::{.proposition title="Splitting Exact Sequences"}
-A SES $\xi$ splits if any of the following conditions hold:
-
 - $C$ is projective.
-- $C$ is free (since free implies projective)
+- $\xi$ admits a left-splitting.
 - $A$ is injective.
+- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
 
 :::
 
