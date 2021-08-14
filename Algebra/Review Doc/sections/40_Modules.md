@@ -1,5 +1,7 @@
 # Modules
 
+## Definitions and Basics
+
 :::{.definition title="$R\dash$modules"}
 Four properties:
 
@@ -20,6 +22,9 @@ r. m(a\tensor b) = m(r.a \tensor b) = m(a\tensor r.b) && \forall r\in R, a,b \in
 $N\subseteq M$ is an $R\dash$submodule iff $N$ is nonempty and for every $r\in R$ and $x, y \in N$, we have $rx+y\in N$.
 :::
 
+:::{.definition title="Module Morphisms"}
+A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
+:::
 
 :::{.proposition title="One-step module morphism test"}
 A map $\phi: M\to N$ is a morphism in $\rmod$ iff
@@ -34,6 +39,20 @@ Quotients of modules are easier to reason about additively, writing $M/N = \ts{x
 Then $(x + N) + (y + N) = (x+y) + N$ and $(x+N)(y+N) = (xy) + N$.
 :::
 
+:::{.definition title="Simple modules"}
+A module is **simple** iff it has no nontrivial proper submodules.
+:::
+
+:::{.definition title="Indecomposable modules"}
+A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
+An **indecomposable** module is defined in the obvious way.
+:::
+
+:::{.definition title="Cyclic modules"}
+A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
+:::
+
+## Structure Theorems
 
 :::{.proposition title="Isomorphism theorems"}
 \[
@@ -55,19 +74,6 @@ Note that the lattice correspondence commutes with sums and intersections of sub
 
 :::
 
-
-
-
-
-
-
-
-## General Theory
-
-:::{.definition title="Module Morphisms"}
-A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
-:::
-
 :::{.proposition title="Recognizing direct sums"}
 If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following conditions hold:
 
@@ -75,18 +81,6 @@ If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following 
 - $M_1 \intersect M_2 = 0$
 :::
 
-:::{.definition title="Simple modules"}
-A module is **simple** iff it has no nontrivial proper submodules.
-:::
-
-:::{.definition title="Indecomposable modules"}
-A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
-An **indecomposable** module is defined in the obvious way.
-:::
-
-:::{.definition title="Cyclic modules"}
-A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
-:::
 
 ## Exact Sequences
 
@@ -192,8 +186,6 @@ For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is 
   So $M = M/\ker \phi_r \cong rM$.
 :::
 
-
-
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
 This follows because any two elements $a/b, p/q$ are in a single ideal, since taking $d\da \gcd(b, q)$ we have $1/a = 1/d + \cdots 1/d$ and similarly $p/q = 1/a + \cdots + 1/a$, so these are in \( \gens{ 1/d }  \).
@@ -231,7 +223,6 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
 
   The (always left-exact) covariant hom functor $\Hom(P, \wait)$ is right-exact.
 :::
-
 
 :::{.remark}
 There is a nice way to remember the right diagrams for injective and projective modules.
@@ -370,6 +361,19 @@ But since $M \subset R$, we have $\alpha, m \in R$ and $\vector 0_M = 0_R$, and 
 Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be a linearly independent set and thus a basis for $M$ as an $R\dash$module.
 
 :::
+
+
+:::{.remark}
+This says every module $M$ decomposes as $M \cong F_M \oplus M_t$ where $F_M$ is free (and thus torsionfree) and $M_t$ is torsion, and moreover $F_M \cong M/M_t$.
+
+That $M/M_t$ is torsionfree: suppose $r(m+ M_t) = M_t$, so $rm\in M_t$ is torsion.
+Then $r'(rm)=0$ for some $r'$, making $m$ torsion, and $m+ M_t = M_t$ is the zero coset.
+
+That $F_M \cong M/M_t$: take the SES $0\to M_t\to M \to F\to 0$ to get $F\cong M/M_t$.
+This splits since $F$ is free and thus projective, so $F\cong M \oplus M_t$.
+
+:::
+
 
 ## Algebraic Properties
 
