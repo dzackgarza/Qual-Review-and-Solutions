@@ -105,9 +105,12 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
   \vdots&\\
   \sigma_{n-1}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-1} + \zeta_n^{-(n-1)} = \zeta_n^{-1} + \zeta_n^{1} = \alpha_1 \\
   \sigma_{n-2}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-2} + \zeta_n^{-(n-2)} = \zeta_n^{-2} + \zeta_n^{2} = \alpha_2 \\
-  \sigma_{n-3}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3 \\
+  \sigma_{n-3}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3
   ,\]
   so we see that $\sigma_{k}(\alpha)=\sigma_{n-k}(\alpha)$ and we pick up $(n-1)/2$ distinct conjugates.
+
+- For $n$ not prime, the exact same argument runs through $\phi(n)$ values of $k$ for $\sigma_k$, and again yields $\sigma_{k}(\alpha_1) = \sigma_{\phi(n) - k}(\alpha_1)$.
+  Matching them up appropriately yields $\phi(n)/2$ distinct roots.
 :::
 
 
