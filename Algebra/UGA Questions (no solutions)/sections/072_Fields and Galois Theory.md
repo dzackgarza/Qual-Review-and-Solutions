@@ -111,7 +111,6 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 
 
 ### Fall 2019 Midterm #10 $\done$
-
 Let $L/K$ be a finite normal extension.
 
 a.
@@ -119,7 +118,6 @@ Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/
 
 b.
 Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
-
 
 :::{.solution}
 The setup:
@@ -256,6 +254,14 @@ a. Define what it means for a finite extension of fields $E$ over $F$ to be a *G
 b. Determine the Galois group of $f(x) = x^3 - 7$ over $\QQ$, and justify your answer carefully.
 
 c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
+
+
+:::{.solution}
+- A finite extension $E/F$ is **Galois** if it is normal and separable:
+  - Normal: every $f\in F[x]$ either has no roots in $E$ or all roots in $E$.
+  - Separable: every element $e\in E$ has a separable minimal polynomial $m(x)$, i.e. $m$ has no repeated roots.
+:::
+
 
 ### Spring 2021 #4 $\work$
 
