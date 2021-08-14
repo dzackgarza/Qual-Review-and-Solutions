@@ -1,11 +1,13 @@
 # Galois Theory
 
+> Some useful exercises and solutions: <https://feog.github.io/chap4.pdf>
 
 :::{.remark}
 \envlist
 
 - Given $x\da \sqrt{a} + \sqrt{b}$, to find a minimal polynomial consider $x^2, x^3,\cdots$ and try to get a linear combination.
   Then check if its irreducible.
+  - General strategy here: try to isolate radicals on one side, then raise both sides to that power.
 :::
 
 :::{.remark}

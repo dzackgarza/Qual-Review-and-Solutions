@@ -110,7 +110,7 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 :::
 
 
-### Fall 2019 Midterm #10
+### Fall 2019 Midterm #10 $\done$
 
 Let $L/K$ be a finite normal extension.
 
@@ -150,7 +150,10 @@ Part 1:
 Part 2:
 
 - Letting $G\da\Gal(L/K) = C_n$, by elementary group theory we have subgroups $H\da C_d \leq C_n$ for every $d$ dividing $n$.
-- By taking the fixed field of $H \leq \Gal(L/K)$, we obtain some intermediate extension $L/K^H/K$.
+  - A observation we'll need: every subgroup is normal here since $G$ is abelian.
+- By the fundamental theorem, taking the fixed field of $H \leq \Gal(L/K)$, we obtain some intermediate extension $E\da K^H$ fitting into a tower $L/E/K$.
+- By the fundamental theorem, $[E: K] = [G:H] = n/d$, where we've used that $H\normal G$.
+- Letting $d$ range through divisors lets $n/d$ range through divisors, so we get extensions of every degree $d$ dividing $n$.
 :::
 
 
