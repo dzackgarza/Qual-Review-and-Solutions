@@ -92,10 +92,12 @@ Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(
 :::{.solution}
 \envlist
 
-- Let $m(x)$ be the minimal polynomial of $\alpha \da \zeta_n + \zeta_n\inv$.
-  Note that $\alpha \in \QQ(\zeta_n)$. 
+- Some notation: let $\alpha_k \da \zeta_n^k + \zeta_n^{-k}$.
+- Let $m(x)$ be the minimal polynomial of $\alpha_1 \da \zeta_n + \zeta_n\inv$.
+  Note that $\alpha_1 \in \QQ(\zeta_n)$. 
 - Use that $\Gal(\QQ(\zeta_n)/\QQ) \cong C_n\units$, consisting of maps $\sigma_k: \zeta \mapsto \zeta^k$ for $\gcd(k, n) = 1$, of which there are $\phi(n)$ many.
 - Galois transitively permutes the roots of irreducible polynomials, so the roots of $m$ are precisely the Galois conjugates of $\alpha$, i.e. the Galois orbit of $\alpha$, so we can just compute it.
+  - $
 :::
 
 
