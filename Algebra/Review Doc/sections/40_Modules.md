@@ -177,15 +177,15 @@ If $M_t = M$, we say $M$ is a **torsion module**.
 For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is torsionfree.
 :::
 
-
 :::{.proof title="?"}
 \envlist
 
 - If $M$ is finitely generated, write $M = \gens{X}$ with $X\da \ts{x_1, \cdots, x_m}$ and $\# X<\infty$ a finite generating set.
-- Since $M$ is free, there is some maximal subset $\mcb \da \ts{b_1, \cdots, b_n}\leq X$ that is linearly independent.
+- Since $M$ is free, there is some maximal subset of generators $\mcb \da \ts{x_1, \cdots, x_n} \subseteq X$ where $n\leq m$ that is linearly independent.
 - Consider $N\leq M$ defined by $\gens{\mcb}$; this is a basis for $N$ and makes $N$ free.
-  The claim is now that $M\cong N$.
-- If $N \not\cong M$, set $\mcb^c \da X\sm \mcb$ to be all generators for $M$ that the basis $\mcb$ misses.
+  The claim is now that $M\cong N$, so that any maximal linearly independent subset of generators is all of $X$.
+- If $N \not\cong M$, set $\mcb^c \da X\sm \mcb = \ts{x_{n+1}, \cdots, x_m}$ to be all generators for $M$ that the basis $\mcb$ misses.
+- Then $\mcb^c \union \ts{x_{j}}$ for any $n+1\leq j \leq m$ has a linear dependence, and $r_j x_j + \sum_{k=1}^n r_n x_n = 0$ implies $r_j x_j = - \sum_{k=1}^n r_n x_n$.
 
 - Idea: 
   - Show that we can scale every element $y_i$ of $\mcb^c$ by some $r_i$ to land in $N \da \spanof \mcb$.
