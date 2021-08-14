@@ -14,6 +14,14 @@ Show that if $K$ is a finite field, then $L/K$ is always separable.
 c.
 Give an example of a finite extension $L/K$ that is not separable.
 
+
+:::{.solution}
+\envlist
+
+- $L/k$ is **separable** iff every element $\alpha$ is separable, i.e. the minimal polynomial $m(x)$ of $\alpha$ is a separable polynomial, i.e. $m(x)$ has no repeated roots in (say) the algebraic closure of $L$ (or just any splitting field of $m$).
+:::
+
+
 ### Fall 2020 #4 $\work$
 
 Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
