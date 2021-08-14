@@ -8,6 +8,15 @@
 - Given $x\da \sqrt{a} + \sqrt{b}$, to find a minimal polynomial consider $x^2, x^3,\cdots$ and try to get a linear combination.
   Then check if its irreducible.
   - General strategy here: try to isolate radicals on one side, then raise both sides to that power.
+
+- Useful trick: for $x \da \sqrt{a} + \sqrt{b}$, compute $x,x^2, x^3, x^4$ and write them in terms of the basis $\ts{1, \sqrt{a}, \sqrt{b}, \sqrt{ab}}$.
+ Then put this linear system into a matrix and invert:
+ \[
+   A\vector v = \vector c \da A \tv{1, \sqrt a, \sqrt b, \sqrt{ab} } = \tv{x, x^2, x^3, x^4}
+ .\]
+ Once you get $A\inv \vector x = \vector b$, read off the first row dotted against $\vector b$ to get a polynomial in $x$.
+ - In general: take $\alpha$, sort out the degree $n$ of the extension $\QQ(\alpha)/\QQ$, and use the basis $1,\alpha,\alpha^2,\cdots, \alpha^{n-1}$.
+
 :::
 
 :::{.remark}
