@@ -200,6 +200,36 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
+
+:::{.fact}
+\envlist
+
+- For any field $k$, $f\in k[x]$ is separable $\iff f'\not\equiv 0 \in k[x]$.
+- For $\ch k = 0$, irreducible implies separable.
+- For $\ch k = p$, irreducibles $f(x)$ are inseparable iff $f(x) = g(x^p)$ for some $g\in k[x]$.
+
+:::
+
+
+:::{.proof title="?"}
+
+- First part:
+  - $\not A\implies \not B$: 
+    - Let $f$ be irreducible, and suppose $f$ is separable.
+      If $d(x) \da \gcd(f, f') \neq 1$, then $f'$ can not divide $f$ since $f$ is irreducible, so $f$ divides $f'$.
+      But $\deg f' < f$ and $f\divides f'$ forces $f'\equiv 0$.
+  - $\not B \implies \not A$:
+    - If $f'\equiv 0$, then $d(x) \da \gcd(f, f') = \gcd(f, 0) = f \neq 1$ and $f$ is *not* separable.
+
+- Second part:
+  - If $\ch k = 0$ and $f$ is irreducible, then $\deg f \geq 2$ and $\deg f' \geq 1$ so $f' \neq 0$ and $f$ is thus separable.
+
+- Third part:
+  - 
+:::
+
+
+
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
 :::
