@@ -36,7 +36,14 @@ The correspondence:
 :::{.solution}
 \envlist
 
-- Reduce to a group theory problem: $[E:F]
+- Reduce to a group theory problem: $[E:F] = [G:H]$, despite the fact that $E/F$ is not necessarily Galois.
+  This is because we can count in towers:
+  \[
+  [K:F] = [K:E][E:F] &\implies [G:1] = [K:E][H:1] \\
+  &\implies \# G = [K:E] \# H \\
+  &\implies [G:H] = {\# G \over \# H} = [K:E]
+  .\]
+
 :::
 
 
