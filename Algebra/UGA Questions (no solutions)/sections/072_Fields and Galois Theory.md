@@ -1,96 +1,20 @@
-# Fields and Galois Theory
+# General Galois Theory 
 
-## $\star$ Fall 2016 #5 $\work$
-How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
-Justify your answer.
-
-
-## $\star$ Fall 2013 #7 $\work$
-Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
+## Fall 2013 #5 $\work$
+Let $L/K$ be a finite extension of fields.
 
 a.
-Show that $\bar F$ is not a finite extension of $F$.
+Define what it means for $L/K$ to be *separable*.
 
 b.
-Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
-Show that $F(\alpha)/F$ has degree 8.
-
-## Fall 2019 #4 $\done$
-Let $F$ be a finite field with $q$ elements.
-Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
-Let $E = F [\omega]$ and let $k = [E : F]$.
-
-a.
-Prove that $n$ divides $q^{k}-1$.
-
-b. 
-Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
-Prove that $m$ divides $k$.
+Show that if $K$ is a finite field, then $L/K$ is always separable.
 
 c.
-Prove that $m = k$.
+Give an example of a finite extension $L/K$ that is not separable.
 
-\todo[inline]{Revisit, tricky!}
+## Computing Galois Groups
 
-:::{.concept}
-\envlist
-
-- $\FF\units$ is always cyclic for $\FF$ a field.
-- Lagrange: $H\leq G \implies \#H \divides \# G$.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-\envlist
-
-- Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
-
-- Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
-
-:::
-
-:::{.proof title="of b"}
-\envlist
-
-- Rephrasing (a), we have 
-\[
-n \divides q^k-1 
-&\iff q^k-1 \cong 0 \mod n \\
-&\iff q^k \cong 1 \mod n \\
-&\iff m \definedas o(q) \divides k
-.\]
-
-:::
-
-:::{.proof title="of c"}
-\envlist
-
-- Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
-\[
-E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
-,\]
-
-  so $M$ is a degree $m$ extension of $E$.
-
-- Now consider $M\units$. 
-- By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
-
-- But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
-
-- So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
-
-- But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
-
-- Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
-
-:::
-
-:::
-
-## Fall 2019 #7 $\done$
+### Fall 2019 #7 $\done$
 Let $\zeta_n$ denote a primitive $n$th root of 1 $\in \QQ$.
 You may assume the roots of the minimal polynomial $p_n(x)$ of $\zeta_n$ are exactly the primitive $n$th roots of 1.
 
@@ -179,165 +103,7 @@ For some elements $\omega_i$ which exist by the primitive element theorem.
 
 :::
 
-## Spring 2019 #2 $\done$
-Let $F = \FF_p$ , where $p$ is a prime number.
-
-a.
-Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
-
-b.
-Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
-
-:::{.concept}
-\envlist
-
-- Go to a field extension.
-  - Orders of multiplicative groups for finite fields are known.
-- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
-- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
-- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
-- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
-
-Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
-
-So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
-
-Since $\rho$ is a ring morphism, we have
-
-\[
-\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
-= 0 \in K \\
-&\iff q(x) \in \ker \rho \\
-&\iff q(x) \in \generators{\pi(x)} \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x
-,\]
-  where we've used that "to contain is to divide" in the last step.
-
-
-:::
-
-:::{.proof title="of b"}
-
-:::{.claim}
-$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
-:::
-
-:::{.proof title="of claim, $\implies$"}
-Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
-Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
-
-Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
-\[
-n &= [L: \FF_p] \\
-&= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
-&= \ell d
-,\]
-
-for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
-
-:::
-
-:::{.proof title="of claim, $\impliedby$"}
-$\impliedby$:
-If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
-So $f = f_i$ for some $i$.
-
-:::
-
-:::
-
-:::
-
-## Spring 2019 #8 $\done$
-Let $\zeta = e^{2\pi i/8}$.
-
-a.
-What is the degree of $\QQ(\zeta)/\QQ$?
-
-b.
-How many quadratic subfields of $\QQ(\zeta)$ are there?
-
-c.
-What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
-
-:::{.concept}
-\envlist
-
-- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
-  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
-- $\deg \Phi_n(x) = \phi(n)$
-- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
-  - Proof: for a nontrivial gcd, the possibilities are 
-  \[
-  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
-  .\]
-
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
-
-:::
-
-:::{.solution}
-\envlist
-
-Let $K = \QQ(\zeta)$.
-
-:::{.proof title="of a"}
-\envlist
-
-- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
-- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
-- The degree of the field extension is the degree of $\Phi_8$, which is
-\[
-\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
-.\]
-- So $[\QQ(\zeta): \QQ] = 4$.
-
-:::
-
-:::{.proof title="of b"}
-\envlist
-
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
-- $\ZZ/(4)$ has exactly one subgroup of index 2.
-- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
-
-:::
-
-:::{.proof title="of c"}
-\envlist
-
-- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
-
-- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
-  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
-    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
-  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
-    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
-
-- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
-  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
-
-- Conclude
-\[
-[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
-\]
-  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
-
-
-:::
-
-
-:::
-
-## Fall 2018 #3 $\done$
+### Fall 2018 #3 $\done$
 Let $F \subset K \subset L$ be finite degree field extensions.
 For each of the following assertions, give a proof or a counterexample.
 
@@ -390,7 +156,8 @@ Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ 
 
 :::
 
-## Spring 2018 #2 $\done$
+
+### Spring 2018 #2 $\done$
 Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
 
 a.
@@ -490,7 +257,7 @@ and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\
 
 :::
 
-## Spring 2018 #3 $\done$
+### Spring 2018 #3 $\done$
 Let $K$ be a Galois extension of $\QQ$ with Galois group $G$, and let $E_1 , E_2$ be intermediate fields of $K$ which are the splitting fields of irreducible $f_i (x) \in \QQ[x]$. 
 
 Let $E = E_1 E_2 \subset K$. 
@@ -583,7 +350,17 @@ But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an 
 
 :::
 
-## Spring 2020 #4 $\work$
+### Fall 2017 #4 $\work$
+
+a.
+Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
+
+  Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
+
+b.
+Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
+
+### Spring 2020 #4 $\work$
 Let $f(x) = x^4-2 \in \QQ[x]$.
 
 a.
@@ -595,32 +372,9 @@ Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify 
 c.
 Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
 
-## Spring 2020 #3 $\work$
-Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
 
-a.
-Show that $F(\alpha) = F(\alpha^2)$.
 
-b.
-Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
-
-## Fall 2017 #4 $\work$
-
-a.
-Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
-
-  Let $\theta$ be a root of $f(x)$. Prove that $\QQ[\theta]$ is an extension of $\QQ$ of degree 4 and that there are no intermediate fields between $\QQ$ and $\QQ[\theta]$.
-
-b.
-Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
-
-## Fall 2017 #3 $\work$
-Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
-be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
-
-Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
-
-## Spring 2017 #7 $\work$
+### Spring 2017 #7 $\work$
 Let $F$ be a field and let $f(x) \in F[x]$.
 
 a.
@@ -635,7 +389,7 @@ Fully justify your answer.
 c.
 Show that the extension $E/F$ in (b) is a Galois extension.
 
-## Spring 2017 #8 $\work$
+### Spring 2017 #8 $\work$
 
 a.
 Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
@@ -651,7 +405,7 @@ a & b \\
 b.
 Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
 
-## Fall 2016 #4 $\work$
+### Fall 2016 #4 $\work$
 Set $f(x) = x^3 - 5 \in \QQ[x]$.
 
 a.
@@ -663,7 +417,7 @@ Find the Galois group $G$ of $K$ over $\QQ$.
 c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
-## Spring 2016 #2 $\work$
+### Spring 2016 #2 $\work$
 Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
 
 a.
@@ -675,12 +429,12 @@ Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
 c.
 Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
-## Spring 2016 #6 $\work$
+### Spring 2016 #6 $\work$
 Let $K$ be a Galois extension of a field $F$ with $[K: F] = 2015$.
 Prove that $K$ is an extension by radicals of the field $F$.
 
 
-## Fall 2015 #5 $\work$
+### Fall 2015 #5 $\work$
 Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
 
 a.
@@ -693,7 +447,7 @@ c.
 Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
 
 
-## Fall 2015 #6 $\work$
+### Fall 2015 #6 $\work$
 
 a.
 Let $G$ be a finite group.
@@ -709,20 +463,7 @@ c.
 With $K/F$ as in (b), does an intermediate field $L$ necessarily exist satisfying $[L: F] = 2$?
 Give a proof or counterexample.
 
-## Spring 2015 #2 $\work$
-Let $\FF$ be a finite field.
-
-a.
-Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
-
-b.
-The *exponent* of a finite group is the least common multiple of the orders of its elements.
-Prove that a finite abelian group has an element of order equal to its exponent.
-
-c.
-Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
-
-## Spring 2015 #5 $\work$
+### Spring 2015 #5 $\work$
 Let $f(x) = x^4 - 5 \in \QQ[x]$.
 
 a.
@@ -731,7 +472,7 @@ Compute the Galois group of $f$ over $\QQ$.
 b.
 Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
 
-## Fall 2014 #1 $\work$
+### Fall 2014 #1 $\work$
 Let $f\in \QQ[x]$ be an irreducible polynomial and $L$ a finite Galois extension of $\QQ$.
 Let $f(x) = g_1(x)g_2(x)\cdots g_r(x)$ be a factorization of $f$ into irreducibles in $L[x]$.
 
@@ -741,7 +482,7 @@ Prove that each of the factors $g_i(x)$ has the same degree.
 b.
 Give an example showing that if $L$ is not Galois over $\QQ$, the conclusion of part (a) need not hold.
 
-## Fall 2014 #3 $\work$
+### Fall 2014 #3 $\work$
 Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
 
 a.
@@ -751,16 +492,7 @@ b.
 Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
 Describe the corresponding subgroups of the Galois group.
 
-## Spring 2014 #3 $\work$
-Let $F\subset C$ be a field extension with $C$ algebraically closed.
-
-a.
-Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
-
-b.
-Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
-
-## Spring 2014 #4 $\work$
+### Spring 2014 #4 $\work$
 Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
 
 a.
@@ -774,19 +506,7 @@ Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
 c.
 Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
 
-## Fall 2013 #5 $\work$
-Let $L/K$ be a finite extension of fields.
-
-a.
-Define what it means for $L/K$ to be *separable*.
-
-b.
-Show that if $K$ is a finite field, then $L/K$ is always separable.
-
-c.
-Give an example of a finite extension $L/K$ that is not separable.
-
-## Fall 2013 #6 $\work$
+### Fall 2013 #6 $\work$
 Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
 
 a.
@@ -807,7 +527,7 @@ d.
 How many distinct quartic subfields of $K$ are there? 
 Justify your answer.
 
-## Spring 2013 #7 $\work$
+### Spring 2013 #7 $\work$
 Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
 
 a.
@@ -824,6 +544,296 @@ Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(
 
 e.
 Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
+
+## General Field Extensions
+
+### $\star$ Fall 2016 #5 $\work$
+How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
+Justify your answer.
+
+
+### $\star$ Fall 2013 #7 $\work$
+Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
+
+a.
+Show that $\bar F$ is not a finite extension of $F$.
+
+b.
+Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
+Show that $F(\alpha)/F$ has degree 8.
+
+### Fall 2019 #4 $\done$
+Let $F$ be a finite field with $q$ elements.
+Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
+Let $E = F [\omega]$ and let $k = [E : F]$.
+
+a.
+Prove that $n$ divides $q^{k}-1$.
+
+b. 
+Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
+Prove that $m$ divides $k$.
+
+c.
+Prove that $m = k$.
+
+\todo[inline]{Revisit, tricky!}
+
+:::{.concept}
+\envlist
+
+- $\FF\units$ is always cyclic for $\FF$ a field.
+- Lagrange: $H\leq G \implies \#H \divides \# G$.
+
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
+
+- Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Rephrasing (a), we have 
+\[
+n \divides q^k-1 
+&\iff q^k-1 \cong 0 \mod n \\
+&\iff q^k \cong 1 \mod n \\
+&\iff m \definedas o(q) \divides k
+.\]
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
+\[
+E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+,\]
+
+  so $M$ is a degree $m$ extension of $E$.
+
+- Now consider $M\units$. 
+- By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
+
+- But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
+
+- So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
+
+- But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
+
+- Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
+
+:::
+
+:::
+
+
+### Spring 2019 #2 $\done$
+Let $F = \FF_p$ , where $p$ is a prime number.
+
+a.
+Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
+
+b.
+Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
+
+:::{.concept}
+\envlist
+
+- Go to a field extension.
+  - Orders of multiplicative groups for finite fields are known.
+- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
+
+Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
+
+So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
+
+Since $\rho$ is a ring morphism, we have
+
+\[
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
+&\iff q(x) \in \ker \rho \\
+&\iff q(x) \in \generators{\pi(x)} \\
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
+,\]
+  where we've used that "to contain is to divide" in the last step.
+
+
+:::
+
+:::{.proof title="of b"}
+
+:::{.claim}
+$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+:::
+
+:::{.proof title="of claim, $\implies$"}
+Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
+Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
+
+Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
+\[
+n &= [L: \FF_p] \\
+&= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
+&= \ell d
+,\]
+
+for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
+
+:::
+
+:::{.proof title="of claim, $\impliedby$"}
+$\impliedby$:
+If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
+So $f = f_i$ for some $i$.
+
+:::
+
+:::
+
+:::
+
+### Spring 2019 #8 $\done$
+Let $\zeta = e^{2\pi i/8}$.
+
+a.
+What is the degree of $\QQ(\zeta)/\QQ$?
+
+b.
+How many quadratic subfields of $\QQ(\zeta)$ are there?
+
+c.
+What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
+
+:::{.concept}
+\envlist
+
+- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
+  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
+- $\deg \Phi_n(x) = \phi(n)$
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
+  - Proof: for a nontrivial gcd, the possibilities are 
+  \[
+  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+  .\]
+
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
+
+:::
+
+:::{.solution}
+\envlist
+
+Let $K = \QQ(\zeta)$.
+
+:::{.proof title="of a"}
+\envlist
+
+- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
+- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
+- The degree of the field extension is the degree of $\Phi_8$, which is
+\[
+\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
+.\]
+- So $[\QQ(\zeta): \QQ] = 4$.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
+- $\ZZ/(4)$ has exactly one subgroup of index 2.
+- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
+
+- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
+  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
+    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
+  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
+    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
+
+- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
+  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
+
+- Conclude
+\[
+[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
+\]
+  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
+
+
+:::
+
+
+:::
+
+
+### Fall 2017 #3 $\work$
+Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
+be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
+
+Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
+
+### Spring 2020 #3 $\work$
+Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
+
+a.
+Show that $F(\alpha) = F(\alpha^2)$.
+
+b.
+Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
+
+
+### Spring 2015 #2 $\work$
+Let $\FF$ be a finite field.
+
+a.
+Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
+
+b.
+The *exponent* of a finite group is the least common multiple of the orders of its elements.
+Prove that a finite abelian group has an element of order equal to its exponent.
+
+c.
+Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
+
+### Spring 2014 #3 $\work$
+Let $F\subset C$ be a field extension with $C$ algebraically closed.
+
+a.
+Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
+
+b.
+Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
 
 ## Spring 2013 #8 $\work$
 Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
