@@ -30,6 +30,11 @@ The correspondence:
 
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwyLCJFIl0sWzAsMCwiSyJdLFswLDQsIkYiXSxbNCwwLCIxIl0sWzQsMiwiSCBcXGRhIFxcR2FsKEsvRSlcXGhzcGFjZXs0ZW19Il0sWzQsNCwiRyBcXGRhIFxcR2FsKEsvRilcXGhzcGFjZXs0ZW19Il0sWzIsMCwiW0U6Rl0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIltLOkVdIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJbSzpGXSIsMix7ImN1cnZlIjo1LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsIltIOjFdIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCJbRzpIXSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNSwiW0c6MV0iLDAseyJjdXJ2ZSI6LTUsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzgsNCwiXFxHYWwoSy9cXHdhaXQpIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV1d)
 
+Normalizers:
+\[
+N_G(P) = \ts{g\in G \st gPg\inv = P}
+.\]
+
 :::
 
 
@@ -43,6 +48,19 @@ The correspondence:
   &\implies \# G = [K:E] \# H \\
   &\implies [G:H] = {\# G \over \# H} = [K:E]
   .\]
+
+- Now use that $N_G(P) \subseteq H$, and do Sylow theory on both $G$ and $H$.
+- Claim: $N_H(P) = N_G(P)$.
+  - We have $N_H(P) \subseteq N_G(P)$ since $H \subseteq G$, so $hPh\inv = P$ remains true regarding either $h\in H$ or $h\in G$.
+  - For $N_G(P) \subseteq N_H(P)$, use that $N_G(P) \subseteq H$ and so $gPg\inv = P$ implies $g\in H$, so $g\in N_H(P)$.
+
+- Now apply an isomorphism theorem:
+\[
+{G/ N_G(P) \over H/N_H(P)}=
+{G/ N_H(P) \over H/N_H(P)}\cong
+{G\over H}
+.\]
+
 
 :::
 
