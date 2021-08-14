@@ -206,7 +206,6 @@ The slogan is that morphisms *out* of a projective module can be *pulled* back t
 
 :::
 
-
 :::{.proposition title="Free implies projective"}
 Any free $M\in \rmod$ is projective.
 :::
@@ -242,7 +241,28 @@ Any free $M\in \rmod$ is projective.
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiQyJdLFswLDIsIkIiXSxbNCwyLCIwIl0sWzEsM10sWzAsMSwiZiJdLFswLDIsIlxcZXhpc3RzIFxcdGlsZGUgZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImciLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=)
 
 - It suffices to produce a map $\mathcal{B}\to B$, since the universal property then provides $M\to B$.
+  Here's the schematic:  
 
+\begin{tikzcd}
+	&& {\mathcal{B}} & {\ts{e_i}} \\
+	\\
+	&& M \\
+	\\
+	B && C && 0 \\
+	{\ts{g\inv f(e_i)}} && {} & {\ts{f(e_i)}}
+	\arrow[from=5-3, to=5-5]
+	\arrow["f", from=3-3, to=5-3]
+	\arrow["{\exists \tilde f}"', dashed, from=3-3, to=5-1]
+	\arrow["g", two heads, from=5-1, to=5-3]
+	\arrow[hook, from=1-3, to=3-3]
+	\arrow[dotted, maps to, from=1-4, to=6-4]
+	\arrow[dotted, maps to, from=6-4, to=6-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMiwyLCJNIl0sWzIsNCwiQyJdLFswLDQsIkIiXSxbNCw0LCIwIl0sWzIsMCwiXFxtYXRoY2Fse0J9Il0sWzMsMCwiXFx0c3tlX2l9Il0sWzIsNV0sWzMsNSwiXFx0c3tmKGVfaSl9Il0sWzAsNSwiXFx0c3tnXFxpbnYgZihlX2kpfSJdLFsxLDNdLFswLDEsImYiXSxbMCwyLCJcXGV4aXN0cyBcXHRpbGRlIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxLCJnIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn0sImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDgsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifSwiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d)
+
+- Here we write $\mcb \da \ts{e_i}$, included into $M$, and mapped by $f$ to $C$.
+  Then use surjectivity to choose preimages in $B$ under $g$ arbitrarily, and this defines a morphism $\mcb \to B$.
 
 :::
 
