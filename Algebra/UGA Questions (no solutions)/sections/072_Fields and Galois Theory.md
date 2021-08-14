@@ -24,7 +24,11 @@ Give an example of a finite extension $L/K$ that is not separable.
   Then there is some $\alpha$ with an inseparable (and irreducible) minimal polynomial $f(x)\in k[x]$.
 - Claim: since $f$ is inseparable and irreducible, $f(x) = g(x^p)$ for some $g\in k[x]$.
   - Note: write $g(x) \da \sum a_k x^k$, so that $f(x) = \sum a_k (x^p)^k = \sum a_k x^{pk}$.
-- Then 
+- This is a contradiction, since it makes $f$ reducible by using the "Freshman's dream":
+\[
+f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p = (g(x))^p
+.\]
+
 :::
 
 
