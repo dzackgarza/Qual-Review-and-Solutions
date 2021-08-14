@@ -181,15 +181,18 @@ For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is 
 :::{.proof title="?"}
 \envlist
 
-- If $M$ is finitely generated, write $M = \gens{X}$ with $\# X<\infty$ a finite generating set.
-- Since $M$ is free, take a free basis $\mcb = \ts{b_1, \cdots, b_n} \subseteq X$.
+- If $M$ is finitely generated, write $M = \gens{X}$ with $X\da \ts{x_1, \cdots, x_m}$ and $\# X<\infty$ a finite generating set.
+- Since $M$ is free, there is some maximal subset $\mcb \da \ts{b_1, \cdots, b_n}\leq X$ that is linearly independent.
 - Consider $N\leq M$ defined by $\gens{\mcb}$; this is a basis for $N$ and makes $N$ free.
   The claim is now that $M\cong N$.
 - If $N \not\cong M$, set $\mcb^c \da X\sm \mcb$ to be all generators for $M$ that the basis $\mcb$ misses.
-- Run through the finitely many elements $y\in \mcb^c$, and produce some nonzero $r_y\in Y$ such that $r_y y \in ?$
-  - For each $y\in \mcb^c$, since $\mcb$ is a basis, $\mcb\union\ts{y}$ is linearly dependent.
-  - ?
 
+- Idea: 
+  - Show that we can scale every element $y_i$ of $\mcb^c$ by some $r_i$ to land in $N \da \spanof \mcb$.
+  - Take $r\da \prod r_i$ so that $rM \leq N$, since the $y_i$ occur as some of the $M$ in this submodule.
+  - Use that $\phi_r(x) \da rx$ is a map $M\to rM$ where $\im(\phi_r) = M$ since $x_k \da r_k y_k$ is in the image for each $x_k \in X$ and these generate $M$.
+  - Use that $\ker \phi_r$ is torsion and thus zero, so $M\cong rM$.
+  - Use $rM\leq N \leq M$ and $M\cong rM$ to conclude $N\cong M$, and since $N$ is free so is $M$.
 :::
 
 
