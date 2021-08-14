@@ -148,6 +148,9 @@ Part 1:
 - But then if $G$ is cyclic, $H \leq G$ must be cyclic, and $G/H$ is cyclic as well since writing $G = C_n = \gens{x}$, we have $G/H = \gens{xH}$.
 
 Part 2:
+
+- Letting $G\da\Gal(L/K) = C_n$, by elementary group theory we have subgroups $H\da C_d \leq C_n$ for every $d$ dividing $n$.
+- By taking the fixed field of $H \leq \Gal(L/K)$, we obtain some intermediate extension $L/K^H/K$.
 :::
 
 
