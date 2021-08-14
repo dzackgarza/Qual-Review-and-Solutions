@@ -29,6 +29,8 @@ Give an example of a finite extension $L/K$ that is not separable.
 f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \da (h(x))^p 
 .\]
 
+- Proof of claim: in $\ch k = p, f$ inseparable $\implies f(x) = g(x^p)$. 
+
 :::
 
 

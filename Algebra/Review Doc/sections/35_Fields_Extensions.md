@@ -156,6 +156,19 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 
 :::
 
+:::{.definition title="Separable Field Extension"}
+Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
+The following are equivalent 
+
+- $L/k$ is a **separable** extension.
+- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
+- Every finite subextension $L'/k$ is separable.
+:::
+
+:::{.fact}
+If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::
+
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
@@ -187,29 +200,6 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
-:::{.fact title="Irreducible implies separable in characteristic zero"}
-If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
-
-Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
-It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
-So this $\gcd$ is 1.
-:::
-
-:::{.fact title="Irreducible implies separable for perfect fields"}
-\envlist
-
-- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
-  (In fact, it is the minimal polynomial of its roots.)
-
-- Toward a contradiction, suppose $f$ is irreducible but inseparable.
-- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
-- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
-\[
-f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
-,\]
-  making $f$ reducible. $\contradiction$
-:::
-
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
 If $f\in k[x]^{\irr}$ and $p\da \ch k > 0$, then $f$ inseparable $\iff f(x) = q(x^{p^n})$ for some unique $n$.
 :::
@@ -238,17 +228,27 @@ $\impliedby$:
 If $f(x) = q(x^p)$ for some $q$, the previous calculation shows $q$ has multiple roots, thus so does $f$, so $f$ is inseparable.
 :::
 
-:::{.definition title="Separable Field Extension"}
-Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
-The following are equivalent 
+:::{.fact title="Irreducible implies separable in characteristic zero"}
+If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
 
-- $L/k$ is a **separable** extension.
-- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
-- Every finite subextension $L'/k$ is separable.
+Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
+It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
+So this $\gcd$ is 1.
 :::
 
-:::{.fact}
-If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::{.fact title="Irreducible implies separable for perfect fields"}
+\envlist
+
+- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
+  (In fact, it is the minimal polynomial of its roots.)
+
+- Toward a contradiction, suppose $f$ is irreducible but inseparable.
+- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
+- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
+,\]
+  making $f$ reducible. $\contradiction$
 :::
 
 :::{.fact title="finite extensions of perfect fields are separable"}
