@@ -88,6 +88,42 @@ An **indecomposable** module is defined in the obvious way.
 A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
 :::
 
+## Exact Sequences
+
+:::{.definition title="Exact Sequences"}
+A sequence of \(R\dash\)module morphisms 
+\[
+0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\]
+is *exact* iff $\im d_i = \ker d_{i+1}$.
+:::
+
+:::{.definition title="Split Exact Sequences"}
+A short exact sequence 
+\[
+\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
+\]
+has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
+$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
+:::
+
+:::{.proposition title="Classifying split SESs"}
+Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
+
+- $\xi$ admits a right-splitting.
+- $\xi$ admits a left-splitting.
+- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
+:::
+
+:::{.proposition title="Splitting Exact Sequences"}
+A SES $\xi$ splits if any of the following conditions hold:
+
+- $C$ is projective.
+- $C$ is free (since free implies projective)
+- $A$ is injective.
+
+:::
+
 ## Free and Projective Modules
 
 :::{.definition title="Free Module"}
@@ -138,10 +174,25 @@ If $M_t = M$, we say $M$ is a **torsion module**.
 :::
 
 :::{.proposition title="Free implies torsionfree (generally)"}
-For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
+For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is torsionfree.
 :::
 
-\todo[inline]{Prove}
+
+:::{.proof title="?"}
+\envlist
+
+- If $M$ is finitely generated, write $M = \gens{X}$ with $\# X<\infty$ a finite generating set.
+- Since $M$ is free, take a free basis $\mcb = \ts{b_1, \cdots, b_n} \subseteq X$.
+- Consider $N\leq M$ defined by $\gens{\mcb}$; this is a basis for $N$ and makes $N$ free.
+  The claim is now that $M\cong N$.
+- If $N \not\cong M$, set $\mcb^c \da X\sm \mcb$ to be all generators for $M$ that the basis $\mcb$ misses.
+- Run through the finitely many elements $y\in \mcb^c$, and produce some nonzero $r_y\in Y$ such that $r_y y \in ?$
+  - For each $y\in \mcb^c$, since $\mcb$ is a basis, $\mcb\union\ts{y}$ is linearly dependent.
+  - ?
+
+:::
+
+
 
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
@@ -271,42 +322,6 @@ Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
 Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
 setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
 Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
-:::
-
-## Exact Sequences
-
-:::{.definition title="Exact Sequences"}
-A sequence of \(R\dash\)module morphisms 
-\[
-0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
-\]
-is *exact* iff $\im d_i = \ker d_{i+1}$.
-:::
-
-:::{.definition title="Split Exact Sequences"}
-A short exact sequence 
-\[
-\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
-\]
-has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
-$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
-:::
-
-:::{.proposition title="Classifying split SESs"}
-Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
-
-- $\xi$ admits a right-splitting.
-- $\xi$ admits a left-splitting.
-- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
-:::
-
-:::{.proposition title="Splitting Exact Sequences"}
-A SES $\xi$ splits if any of the following conditions hold:
-
-- $C$ is free.
-- $C$ is projective.
-- $A$ is injective.
-
 :::
 
 ## Classification of Modules over a PID
