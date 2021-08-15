@@ -135,7 +135,13 @@ If $X\in \GSets$, then for any points $x_i\in X$ in the same orbit, the stabiliz
 :::{.proof title="?"}
 \envlist
 
--
+- Fix $x\in X$ and $y\in \Orb(x)$, so $g.x=y$ for some $g$.
+- Let $H_x \da \Stab(x)$ and $H_y\da \Stab(y)$, the claim is that $H_x = g\inv H_y g$.
+- Now just check:
+\[
+h\in H_x \iff hx = x \iff hg\inv y = g\inv y \iff ghg\inv y = y \iff ghg\inv \in H_y \iff h\in g\inv H_y g
+.\]
+
 
 :::
 
