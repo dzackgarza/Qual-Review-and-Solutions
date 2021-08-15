@@ -128,12 +128,14 @@ gG_{x} &\mapsto g\actson x
 
 
 :::{.proposition title="Stabilizers are conjugate"}
-If $X\in \GSets$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+If $X\in \GSets$, then for any points $x_i\in X$ in the same orbit, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
 :::
 
 
 :::{.proof title="?"}
-?
+\envlist
+
+-
 
 :::
 
