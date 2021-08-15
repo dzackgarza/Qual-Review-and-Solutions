@@ -362,7 +362,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The kernel of this action is $\ker \phi = \Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$, sometimes called the **normal core** of $H$.
 
-  - Note that if $\ker \phi = G$ then $H$ is normal, and if $\ker \phi = 1$ then all conjugates of $H$ are distinct.
+  - Note that if $\ker \phi = G$ then $H$ is normal, and if $\ker \phi = 1$ then at least one conjugate doesn't intersect $H$ nontrivially.
 
 :::
 
