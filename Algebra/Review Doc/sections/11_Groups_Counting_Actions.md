@@ -205,7 +205,7 @@ Applying the fixed-point count trick and substituting in orbit-stabilizer yields
 \[
 G &= \Fix(\phi) \Disjoint_{x}' \Orb(x) \\
 &= Z(G) \Disjoint_{g}' [g]\\
-&= Z(G) \Disjoint_{g}' {G\over Z(g) } \\
+&= Z(G) \Disjoint_{g}' {G\over Z(g) } 
 .\]
 
 Now taking cardinalities yields the class equation:
@@ -214,14 +214,14 @@ Now taking cardinalities yields the class equation:
 
 :::{.corollary title="The Class Equation"}
 \[
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
+\# {G} = \# {Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
 \]
 
 As a reminder,
 
 \[
-Z(g) = \ts{h\in G \st hgh\inv = g} \\
-Z(G) = \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g) \\
+Z(g) &= \ts{h\in G \st hgh\inv = g} \text{ is the centralizer of } g\\
+Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g) \text{ is the center of } G 
 .\]
 
 :::
