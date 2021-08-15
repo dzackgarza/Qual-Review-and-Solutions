@@ -415,6 +415,35 @@ where we've used that $\min_{\sqrt 5, \QQ}(x) = x^2-5$ and $\min_{i\sqrt 3, \QQ}
 
 - So $G\da \Gal(L/\QQ) \leq S_4$ is a transitive subgroup of size 4, making it either $C_4$ or $C_2^2$.
 
+- Label the roots:
+\[
+r_1 &= \sqrt 5 + i\sqrt 3 \\
+r_2 &= \sqrt{5} - i \sqrt{3} \\
+r_3 &= - \sqrt 5 + i\sqrt 3 = -r_2 \\
+r_4 &= -\sqrt{5} - i\sqrt{3} = -r_1
+.\]
+
+
+- We can produce two distinct elements of order 2, forcing it to be $C_2^2$:
+\[
+\tau_1:
+\begin{cases}
+\sqrt 5 &\mapsto -\sqrt 5  
+\\
+i\sqrt 3 &\mapsto i\sqrt 3 .
+\end{cases}
+\quad \tau_1 \sim 
+\tau_2
+\begin{cases}
+\sqrt 5 &\mapsto \sqrt 5  
+\\
+i\sqrt 3 &\mapsto -i\sqrt 3 .
+\end{cases}
+.\]
+  Note that these define automorphisms because we've specified what happens to a basis and they send roots to other roots.
+
+
+
 
 :::
 
