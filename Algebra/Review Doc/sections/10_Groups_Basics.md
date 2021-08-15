@@ -157,7 +157,6 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 - Show that subgroups with the *same* prime order are either equal or intersect trivially.
 - **Important for Sylow theory**: show (perhaps by example) that if $S_1, S_2$ are distinct subgroups of order $p^k$, then it's possible for their intersection to be trivial **or** for them to intersect in a subgroup of order $p^\ell$ for $1\leq \ell \leq k-1$.
 - Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
-- Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
 :::
 
 ## Conjugacy

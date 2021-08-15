@@ -125,6 +125,11 @@ We have $G \cong H \times K$ when
 
 :::
 
+:::{.exercise title="?"}
+Prove the "recognizing direct products" theorem.
+Can the conditions be relaxed?
+:::
+
 :::{.remark}
 Things are particularly nice when the orders of $H$ and $k$ are coprime.
 For 3, $x\in H \intersect K$ implies that the order of $x$ divides $\gcd(\# H, \# K) = 1$, so $H \intersect K = \ts{e}$.
