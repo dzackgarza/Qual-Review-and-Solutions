@@ -332,12 +332,9 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The kernel is the intersection of all normalizers.
 
-:::
-
-:::{.corollary}
-Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
+- Applying Orbit-stabilizer yields that the number of conjugates is the index of the normalizer:
 \[
-\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
+\# {\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
 .\]
 
 :::
