@@ -358,7 +358,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
   &= xHx\inv
   .\]
 
-- The fixed points form $\Fix = \emptyset$.
+- There are no fixed points, i.e. $\Fix(G) = \emptyset$, since the action is transitive.
 
 - The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
 
