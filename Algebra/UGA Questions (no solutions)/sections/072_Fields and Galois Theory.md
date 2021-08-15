@@ -445,6 +445,20 @@ i\sqrt 3 &\mapsto -i\sqrt 3 .
   Note that these define automorphisms because we've specified what happens to a basis and they send roots to other roots.
 
 - Checking that $\sigma_1^2 = \sigma_2^2 = \id$, this produces two distinct order 2 elements, forcing $G \cong C_2^2$ since $C_4$ only has one order 2 element.
+  Explicitly, we have
+\[
+C_2^2 \cong G = \gens{\tau_1, \tau_2} = \ts{\id, \tau_1, \tau_2, \tau_1 \tau_2} = \ts{\id, (1,3)(2,4), (1,2)(3,4),  (1,4)(2,3) }
+,\]
+  and the generic subgroup lattice looks like:
+
+![](figures/2021-08-15_00-02-28.png)
+
+- Computing some fixed fields:
+
+  - ?
+
+- So the lattice correspondence we get here is
+
 
 
 
