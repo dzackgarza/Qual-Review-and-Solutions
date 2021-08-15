@@ -432,13 +432,15 @@ r_4 &= -\sqrt{5} - i\sqrt{3} = -r_1
 \\
 i\sqrt 3 &\mapsto i\sqrt 3 .
 \end{cases}
-\quad \tau_1 \sim 
+&& \tau_1 \sim (1,3)(2,4)
+\\
 \tau_2
 \begin{cases}
 \sqrt 5 &\mapsto \sqrt 5  
 \\
 i\sqrt 3 &\mapsto -i\sqrt 3 .
 \end{cases}
+&& \tau_2 \sim (1, 2)(3, 4)
 .\]
   Note that these define automorphisms because we've specified what happens to a basis and they send roots to other roots.
 
