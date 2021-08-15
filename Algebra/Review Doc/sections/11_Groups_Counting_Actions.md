@@ -372,10 +372,16 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 \envlist
 
 - Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
-- Then $K\da \ker \phi \subseteq H$.
-- Since $G$ is finite and $K\leq G$, we have $[G:K] = \# (G/K) = \# G/ \# K$ so $\# (G/K)$ divides $\# G$.
-- Since $G/K \cong K'$ is isomorphic to a subgroup of $S_p$, $\# (G/K)$ divides $\# S_p = p!$
-- So $\# (G/K)$ divides $\gcd( \# G, p!)$, which is $p$ since it was the minimal prime dividing $\# G$.
+- Then $K\da \ker \phi$, and importantly $K \contains H$ since $K$ is the intersection of stabilizers, and contains $\Stab(eH) \contains H$ since $gH = H \implies g\in H$.
+- Since $G$ is finite and $K\leq G$, we have $\#(G/K)$ dividing $\# G$, since
+  \[
+  [G:K] = \# (G/K) = \# G/ \# K \implies \# G = \#(G/K) \# K
+  .\]
+- Since $G/K \cong K' \leq S_p$ by restricting $\phi$ to its image in $S_p$, we also get that $\# (G/K)$ divides $\# S_p = p!$
+- So $\# (G/K)$ divides $\gcd( \# G, p!)=p$ since $p$ was the minimal prime dividing $\# G$.
+  This forces $\#(G/K)$ to be 1 or $p$.
+- If it's $p$:
+  
 - $p$ is prime, so if $\# G/K\neq 1$ we have $\# G/K = p$.
 - Since $K \subset H$ and $[G:H] = p = [G: K]$, we have $K = H$.
 - But $K = \ker \phi \normal G$, so $H\normal G$.
