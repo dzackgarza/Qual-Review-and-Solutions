@@ -163,7 +163,7 @@ so $H_x = g\inv H_y g$.
 :::{.remark title="The fixed-point count trick"}
 A useful mnemonic: for any group action $\phi: G\actson X$, using that orbits partition $X$ we always have
 \[
-X = \Fix(\phi) \Disjoint' \Orb(x)
+X = \Fix(\phi) \Disjoint_{x}' \Orb(x)
 ,\]
 where $\Fix(\phi)$ is the union of all orbits of size 1, and the remaining union is over distinct nontrivial orbits, taking one representative $x$ from each.
 :::
@@ -201,22 +201,14 @@ Let $G$ act on *itself* by conjugation, so $\phi: g.x = gxg\inv$.
 
 :::{.remark}
 Worth reiterating: $[G: Z(g)]$ is the number of elements in the conjugacy class $[g]$, and each $g \in Z(G)$ has a singleton conjugacy class $[g] = \ts{g}$.
-Applying the fixed-point count trick yields
+Applying the fixed-point count trick and substituting in orbit-stabilizer yields
 \[
-G = \Fix(\phi) \Disjoint' \Orb(x)
+G &= \Fix(\phi) \Disjoint_{x}' \Orb(x) \\
+&= Z(G) \Disjoint_{g}' [g]\\
+&= Z(G) \Disjoint_{g}' {G\over Z(g) } \\
 .\]
 
-
-Now note that $G = \disjoint_k' \Orb(h_k)$ is a disjoint union of orbits (the prime denotes taking one representative from each orbit), and so
-\[
-G &= \Disjoint_k' \Orb(h_k) \mapsvia{\sim} \Disjoint_k' G/\Stab(h_k) \\
-\implies \# G &= \sum_{k}' \# C(h) = \sum_k' \#(G/\Stab(h_k)) = \sum_k' [G: Z(h_k)]
-.\]
-Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, which yields the class equation:
-:::
-
-:::{.remark}
-
+Now taking cardinalities yields the class equation:
 
 :::
 
@@ -224,6 +216,14 @@ Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, 
 \[
 \abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
 \]
+
+As a reminder,
+
+\[
+Z(g) = \ts{h\in G \st hgh\inv = g} \\
+Z(G) = \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g) \\
+.\]
+
 :::
 
 
