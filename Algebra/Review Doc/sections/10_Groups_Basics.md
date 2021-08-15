@@ -365,6 +365,9 @@ those $g\in G$ that commute with every element of $G$.
 The $G/Z(G)$ theorem:
 
 - Write $H\da Z(G)$ and $G/H = \gens{xH}$ as a cyclic quotient.
+- Fix $a, b\in G$, then $aH = x^n H$ and $bH = x^m H$.
+- So $ax^{-n} = h_1, bx^{-m} = h_2$ where the $h_i$ are now central.
+- Now write $ab = (x^n h_1)(x^m h_2) = ba$ by commuting everything.
 :::
 
 
