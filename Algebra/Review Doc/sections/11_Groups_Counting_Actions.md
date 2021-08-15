@@ -232,6 +232,14 @@ If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 :::
 
 :::{.proof}
+\envlist
+
+- Define a group action $\phi: G\actson G/H \da \ts{eH, g_1 H, \cdots, g_{n-1} H}$ acting on the $n$ cosets of $H$.
+- Then use that $\Sym(G/H) \leq S_n$, so $\im \phi \leq S_n$ is a subgroup.
+- Since $G$ is simple and $\ker \phi \leq G$, we have $\ker \phi = 1, G$.
+  If $\ker \phi = 1$, $\phi$ is injective and we're done.
+
+- Otherwise $\ker \phi = G$.
 This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
 :::
 
