@@ -79,6 +79,7 @@ Summary of useful qual tips:
     Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
     Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
 - Cosets:
+  - Cosets partition a group.
   - Anything dealing with indices $[G:H]$: try just listing the cosets.
   - $aH = bH \iff ab\inv \in H$.
   - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
@@ -449,6 +450,12 @@ A **dihedral group** of order $2n$ is given by
 \[
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv } = \gens{r, s \st r^n, s^2, (rs)^2 }
 \]
+The $r$ is a cycle of length $n$, and $s$ is a reflection.
+
+Examples of explicit cycle presentations:
+
+- $D_4 = \gens{(1,2,3,4), (1,3)}$ which is a $2\pi/4$ rotation and a reflection through the diagonal line $y=-x$ in a square.
+- $D_5 = \gens{(1,2,3,4,5), (1,5)(2,4)}$ which is a $2\pi/5$ rotation and a reflection about the line through vertex $3$ in a pentagon.
 :::
 
 :::{.definition title="The Quaternion Group"}
@@ -481,7 +488,8 @@ Everything squares to $-1$, and the triple product is $-1$:
 :::
 
 :::{.definition title="Transitive Subgroup"}
-A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
+A subgroup $H\leq S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive, i.e. for each pair $(i, j)$ there is some element $\sigma\in H$ such that $\sigma(i) = j$.
+Note that $\sigma$ may not fix other elements, and can have other effects!
 :::
 
 :::{.definition title="p-groups"}
