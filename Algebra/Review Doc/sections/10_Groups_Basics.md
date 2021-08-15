@@ -360,6 +360,14 @@ those $g\in G$ that commute with every element of $G$.
   - Hint: consider the order 3 subgroup of $S_3$.
 :::
 
+
+:::{.solution}
+The $G/Z(G)$ theorem:
+
+- Write $H\da Z(G)$ and $G/H = \gens{xH}$ as a cyclic quotient.
+:::
+
+
 ## Cosets
 
 :::{.proposition title="Tower law for subgroups"}
