@@ -1,6 +1,5 @@
 # Sylow Theorems
 
-
 :::{.remark}
 Useful facts:
 
@@ -13,11 +12,33 @@ Useful facts:
 - When counting: just leave the identity out of every calculation, and add it back in as a $+1$ for the final count.
 :::
 
-
 :::{.definition}
 A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
   If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
 :::
+
+:::{.lemma title="Congruences for fixed points"}
+If $G\actson X$ for $G$ a $p\dash$group, then letting $\Fix(G) \da \ts{x\in X \st gx=x}$, one has
+\[
+\# X \equiv \# \Fix(G) \mod p
+.\]
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Use the fixed-point count trick:
+\[
+\# X = \# \Fix(G) + \sum_{x}' \# \Orb(x)
+.\]
+  Note that the result follows immediately by reducing $\mod p$ if the sum is zero $\mod p$. 
+- Letting $x$ be an element with a nontrivial orbit, we have $\# \Orb(x) > 1$, so $\Stab(x) \neq G$ since orbit-stabilizer would yield $\# \Orb(x) = [G:\Stab(x)] = 1$.
+- Now use that $\# \Orb(x) = \# G/ \#\Stab(x) = p^k/p^\ell$ where $0< \ell < k$ with strict inequalities.
+  So $\# \Orb(x) = p^{k-\ell} \neq 1$, and $p$ divides its size.
+
+:::
+
+## Statements of Sylow
 
 Write
 
@@ -27,7 +48,7 @@ Write
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
 
-## Sylow 1 (Cauchy for Prime Powers)
+### Sylow 1 (Cauchy for Prime Powers)
 
 
 :::{.theorem title="Sylow 1"}
@@ -42,7 +63,7 @@ If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\b
 In particular, Sylow $p\dash$subgroups always exist.
 :::
 
-## Sylow 2 (Sylows are Conjugate)
+### Sylow 2 (Sylows are Conjugate)
 
 
 :::{.theorem title="Sylow 2"}
@@ -59,7 +80,7 @@ n_p = 1 \iff S_p \normal G
 .\]
 :::
 
-## Sylow 3 (Numerical Constraints)
+### Sylow 3 (Numerical Constraints)
 
 :::{.theorem title="Sylow 3"}
 \envlist
