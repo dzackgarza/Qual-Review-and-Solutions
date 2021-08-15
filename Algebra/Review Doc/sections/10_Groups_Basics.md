@@ -172,9 +172,8 @@ C(h) \da \ts{ ghg\inv \st g\in G }
 $[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
 Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
 However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
-\
 
-Also note that$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
+**Useful qual fact**: $[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
 :::
 
 :::{.definition title="Conjugate subgroups"}
