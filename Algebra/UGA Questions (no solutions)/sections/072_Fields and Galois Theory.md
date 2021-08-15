@@ -538,12 +538,6 @@ Exhibit explicitly the correspondence between subgroups of $G$ and intermediate 
 
 \todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
 
-:::{.concept}
-\envlist
-
-- Todo
-
-:::
 
 :::{.solution}
 \envlist
