@@ -159,7 +159,9 @@ so $H_x = g\inv H_y g$.
 
 ## Examples of Orbit-Stabilizer and the Class Equation
 
-:::{.example title="Trivial"}
+### Left Translation
+
+:::{.example title="The left translation action: trivial"}
 Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$.
 
 - The orbit $\Orb(x) = G$ is the entire group.
@@ -167,12 +169,12 @@ Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$
 - The set of fixed points \( \Fix(\phi) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
 - The stabilizer \( \Stab(x) = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
-
+- Orbit stabilizer just says $G \cong G/\ts{e}$.
 
 :::
 
 
-### The Class Equation and Burnside's Lemma
+### Conjugation: The Class Equation and Burnside's Lemma
 
 :::{.example title="Conjugation yields centers/centralizers"}
 Let $G$ act on *itself* by conjugation.
