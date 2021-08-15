@@ -326,7 +326,7 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
   - This action is transitive iff all subgroups are conjugate.
-- The fixed points $\Fix$ form the set of **normal subgroups** of $G$.
+- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
