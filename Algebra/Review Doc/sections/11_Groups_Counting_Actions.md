@@ -396,7 +396,7 @@ G/K \cong K' \leq S_p \implies \#(G/K)\divides p!
 :::
 
 :::{.exercise title="?"}
-Prove Poincaré's theorem: if $H\leq G$ is finite index, then there exists an $N\normal H$ where $[N: H] < n!$.
+Prove the Poincaré theorem for groups: if $H\leq G$  are possibly infinite groups with finite index $n\da [G:H]$, then there exists an $N\normal H$ where $[N: H] < n!$.
 :::
 
 
