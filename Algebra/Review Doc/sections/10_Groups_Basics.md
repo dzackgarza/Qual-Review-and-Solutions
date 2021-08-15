@@ -61,11 +61,11 @@ For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of 
 
 :::{.fact}
 An set morphism that is *either* injective or surjective between sets of the same size is automatically a bijection.
-Consequently, a group morphism between groups of the same size that is either injective or surjective is automatically an isomorphism.
+It turns out that a group morphism between groups of the same size that is either injective or surjective is automatically a bijection, and the inverse is automatically a group morphism, so bijective group morphisms are isomorphisms.
 
 :::
 
-:::{.fact title="The division algorithm"}
+:::{.fact title="Bezout's Identity"}
 If $a, b\in \ZZ$ with $\gcd(a, b) = d$, then there exist $s,t\in \ZZ$ such that
 \[
 as + bt = d
