@@ -1,5 +1,13 @@
 # Appendix: Extra Topics
 
+:::{.proposition title="NC Theorem"}
+$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
+:::
+
+:::{.definition title="Normalizers Grow"}
+If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
+:::
+
 ## Characteristic Subgroups
 
 :::{.slogan}

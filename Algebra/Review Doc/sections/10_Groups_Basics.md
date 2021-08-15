@@ -277,7 +277,6 @@ Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the
 
 :::
 
-
 :::{.solution}
 \envlist
 
@@ -305,15 +304,13 @@ where the $[h_i]$ are conjugacy classes of size greater than 1.
 - This is true because each $\#[h_i] \neq 1$ and $[h_i]$ divides $\# H$ which divides $\# G$ which is a power of $p$.
   So $p\divides \# [h_i]$ for each $i$.
 
-- 
-
 :::
 
 
 ## Centralizing and Centers
 
 :::{.definition title="Centralizer"}
-The centralizer of an en element is defined as 
+The **centralizer of an element** is defined as 
 \[
 Z(h) \da C_G(h) \da \ts{ g\in G \st ghg\inv = h } 
 ,\]
@@ -328,7 +325,7 @@ the elements of $G$ that simultaneously stabilize all of $H$ pointwise under con
 
 :::{.definition title="Normalizer"}
 \[
-N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
+N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \Union_{M\in S} M, \quad S \da \theset{H\suchthat H \normal M \leq G} 
 \]
 Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead can permute elements of $H$.
 :::
@@ -337,15 +334,8 @@ Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead 
 $C_G(S) \normal N_G(H)$ for any $H$.
 :::
 
-:::{.proposition title="NC Theorem"}
-$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
-:::
-
-:::{.definition title="Normalizers Grow"}
-If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
-:::
-
 :::{.definition title="Center"}
+The **center** of $G$ is defined as
 \[
 Z(G) = \ts{ g\in G \st [g, h] = e \, \forall h\in H}
 = \ts{ g\in G \st Z(g) = G } 
