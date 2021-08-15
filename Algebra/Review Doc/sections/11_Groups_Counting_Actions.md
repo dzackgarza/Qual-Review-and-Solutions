@@ -267,7 +267,7 @@ For $G$ a finite group acting on $X$,
 ,\]
 where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits and $\Fix(g) = \ts{x\in X \st gx=x}$ are the fixed points under $g$.
 
-> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+> Slogan: the number of orbits is equal to the average number of fixed points.
 
 :::
 
@@ -292,7 +292,11 @@ we get the following equality
 = \sum_{x_0\in X} \# \Stab(x_0)
 .\]
 
-Now rearrange orbit-stabilizer: $\Orb(x_0) = G/\Stab(x_0)$ implies $\# \Stab(x_0) = \# G/ \# \Orb(x_0)$, and use this to rewrite the RHS:
+Now rearrange orbit-stabilizer: 
+\[
+\Orb(x_0) = G/\Stab(x_0) \implies \# \Stab(x_0) = \# G/ \# \Orb(x_0)
+,\]
+and use this to rewrite the RHS:
 \[
 \sum_{g_0\in G} \# \Fix(g_0)
 &= \sum_{x_0\in X} \# \Stab(x_0) \\
@@ -303,39 +307,15 @@ Now rearrange orbit-stabilizer: $\Orb(x_0) = G/\Stab(x_0)$ implies $\# \Stab(x_0
 ,\]
 so it suffices to show the right-hand side sum is the number of orbits, $\#(X/G)$.
 
-
+Proceed by partitioning the sum up according to which orbit each term comes from:
 \[
-\Disjoint_{g\in G} X^g
-\cong
-\Disjoint_{x\in X} G_x
-\implies 
-\sum_{g\in G}\# X^g
-=
-\sum_{x\in X} \# G_x
+\sum_{x_0\in X}\qty{1\over \# \Orb(x_0)} 
+&= \sum_{\Orb(x_0) \in X/G} \qty{ \sum_{y\in \Orb(x_0)} \qty{1\over \# \Orb(x_0)} }\\
+&= \sum_{\Orb(x_0) \in X/G} \qty{1\over \# \Orb(x_0)}\sum_{y\in \Orb(x_0)} 1  \\
+&= \sum_{\Orb(x_0) \in X/G} \qty{1\over \# \Orb(x_0)} \# \Orb(x_0) \\
+&= \sum_{\Orb(x_0) \in X/G} 1 \\
+&= \#(X/G)
 .\]
-Apply orbit-stabilizer:
-\[
-\# G_x = {\# G \over \# Gx} \implies
-\sum_{g\in G} X^g
-&= \sum_{x\in X} \# G_x \\
-&= \sum_{x\in X} {\# G \over  \# Gx} \\
-&= \# G\sum_{x\in X} {1 \over  \# Gx}
-,\]
-so it suffices to show $\sum_{x\in X}{1\over \# Gx} = \# X/G$.
-Proceed by grouping terms in this sum according to which orbit they're in:
-\[
-\sum_{x\in X} {1\over \# Gx} 
-&=
-\sum_{Gx \in X/G} \sum_{y\in Gx} {1\over \# Gx} \\
-&=
-\sum_{Gx \in X/G} {1\over \# Gx} \sum_{y\in Gx} 1 \\
-&=
-\sum_{Gx \in X/G} {1\over \# Gx} \# G_x \\
-&=
-\sum_{Gx \in X/G} 1 \\
-&= \# X/G
-.\]
-
 :::
 
 
