@@ -273,14 +273,16 @@ where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits.
 
 :::{.proof title="of Burnside's Lemma"}
 Strategy: form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write/count it in two different ways.
-First union over $G$:
+Write $\Stab(x) = \ts{g\in G \st gx=x}$ and $\Fix(g) = \ts{x\in X\st gx = x}$.
+
+First union over $G$, where the inner set lets $x$ vary:
 \[
-A = \Disjoint_{g\in G} \ts{ (g, x) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
+A = \Disjoint_{g_0\in G} \ts{ (g_0, x) \st g_0 x = x } \cong \Disjoint_{g_0\in G} \ts{g_0}\cross \Fix(g_0) \subseteq G\cross X
 .\]
 
-Then union over $X$:
+Then union over $X$, where the inner set lets $g$ vary:
 \[
-A = \Disjoint_{x\in X} \ts{ (g, x) \st gx= x } \cong \Disjoint_{x\in X} G_x \cross \ts{ g } 
+A = \Disjoint_{x_0\in X} \ts{ (g, x_0) \st gx_0= x_0 } \cong \Disjoint_{x_0\in X} \Stab(x_0) \cross \ts{ x_0 } \subseteq G\cross X
 .\]
 Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
 \[
