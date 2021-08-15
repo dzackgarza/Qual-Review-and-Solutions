@@ -330,7 +330,7 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
-- The kernel is the intersection of all normalizers.
+- The kernel is the intersection of all normalizers: $\ker \phi = \Intersect_{H\leq G} N_G(H)$.
 
 - Applying Orbit-stabilizer yields that the number of conjugates is the index of the normalizer:
 \[
@@ -346,7 +346,7 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The orbit $\OO(xH) = G/H$, the entire set of cosets.
 
-  - Note that this is a *transitive* action.
+  - Note that this is a *transitive* action, since the trivial coset $eH\in G/H$ and its orbit is $gH$ as $g$ ranges over $G$, hitting every coset representative.
 
 - The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
 
