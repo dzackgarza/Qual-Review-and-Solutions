@@ -67,6 +67,8 @@ Summary of useful qual tips:
 .\]
 - $x$ is central iff $[x] = \ts{e}$.
 - Unions aren't (generally) subgroups, intersections always are.
+- Coprime order subgroups intersect trivially.
+- Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
 
 :::
 
