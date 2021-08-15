@@ -238,7 +238,6 @@ Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g
 
 :::
 
-
 :::{.exercise title="Applications of the class equation"}
 \envlist
 
@@ -246,7 +245,6 @@ Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g
 - Show that groups of order $p^2$ are abelian.
 
 :::
-
 
 :::{.solution}
 $p\dash$groups have nontrivial centers:
@@ -261,9 +259,6 @@ $p^2$ groups are abelian:
   If $Z(G) = p^2$ we're done, so assume $Z(G) = p$.
 - Then $G/Z(G) = p$ and groups of order $p$ are cyclic, so the $G/Z(G)$ theorem applies and $G$ is abelian.
 :::
-
-
-
 
 :::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
