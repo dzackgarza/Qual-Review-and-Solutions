@@ -387,6 +387,19 @@ b. Find the Galois group $G$ of $f$.
 c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
 
 
+:::{.solution}
+\envlist
+
+- First consider $g(x) \da x^2 + 4x + 64$.
+  Applying the quadratic formula yields
+  \[
+  x = {-4 \pm \sqrt{16 - 64} \over 2} = -2 \pm {1\over 2}\sqrt{ -15 \cdot 16 } = -2 \pm 2i \sqrt{15}
+  .\]
+
+:::
+
+
+
 ### Fall 2019 Midterm #6  $\work$
 Compute the Galois group of $f(x) = x^3-3x -3\in \QQ[x]/\QQ$.
 

@@ -23,6 +23,8 @@
 - Trick: once you find $\SF(f)/\QQ$, if any subextension is not normal over $\QQ$, then $G$ can not be abelian.
   - Example: $f(x) = x^3-2$ splits in $\QQ(\zeta_3, 2^{1\3})$ which is a non-normal extension $\QQ(2^{1\over 3})$, forcing $G= S_3$.
 
+- If $\alpha\beta \in \QQ$, then $\alpha \in \QQ(\beta)$ and vice-versa (I think).
+
 :::
 
 :::{.remark}
