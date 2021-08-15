@@ -543,18 +543,20 @@ the map defined by
 :::{.remark}
 \envlist
 
-- The kernel is the alternating group, cycles that 
+- The kernel is the alternating group:
   - **Even** cycles
   - For a single cycle: has **odd** length
   - Have an **even** number of even length cycles.
-  - Can be written as an **even** number of transpositions
+  - Can be written as an **even** number of transpositions.
+  - Examples: $(1,2,3)$ or $(1,2)(3,4)$ in $S_4$.
+  - Non-examples: $(1,2)$ or $(1,2,3,4)$ in $S_4$, since they have an odd number of even length cycles.
 - The fiber over 1 is everything else:
   - **Odd** cycles
   - For a single cycle: has **even** length
   - Have an **odd** number of even length cycles.
   - Can be written as an **odd** number of transpositions
 
-> Mnemonic: the cycle parity of a $k\dash$cycle is the integer parity of $k-1$.
+> Mnemonic: the cycle parity of a $k\dash$cycle is the usual integer parity of $k-1$.
 
 :::
 
