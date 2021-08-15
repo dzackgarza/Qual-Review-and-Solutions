@@ -348,7 +348,15 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
   - Note that this is a *transitive* action, since the trivial coset $eH\in G/H$ and its orbit is $gH$ as $g$ ranges over $G$, hitting every coset representative.
 
-- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
+- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$.
+  - This is because
+  \[
+  \Stab(xH) &= \ts{g\in G\st gxH = xH} \\
+  &= \ts{g\in G \st x\inv g x\in H} \\
+  &= \ts{g\in G\st gx\in xH}\\
+  &= \ts{g\in G\st g\in xHx\inv} \\
+  &= xHx\inv
+  .\]
 
 - The fixed points form $\Fix = \emptyset$.
 
