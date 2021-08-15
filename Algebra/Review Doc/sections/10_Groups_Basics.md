@@ -361,11 +361,12 @@ K\leq H \leq G \implies [G: K] = [G:H] [H: K]
 .\]
 :::
 
-:::{.proposition title="Indices grow"}
-If $H, K \leq G$, then 
+:::{.proposition title="Quotients by bigger subgroups yield smaller quotients"}
+If $H\leq K \leq G$, then 
 \[
-[H: H \intersect K ]\leq [G: K] 
+\# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
 .\]
+In particular, If $H, K\leq G$ are just arbitrary, since $H \intersect K \leq H, K$ we have $[H: H \intersect K] \geq [G:H] \text{ and } [G:K]$.
 :::
 
 :::{.proof title="?"}
