@@ -531,7 +531,8 @@ S_n \da \gens{ \sigma_1, \cdots, \sigma_{n-1} \st \sigma_i^2, [\sigma_i, \sigma_
 :::
 
 :::{.definition title="The sign homomorphism"}
-Defined by the map
+Writing a cycle as a product of transpositions,
+the map defined by
 \[
 \sgn: S_n &\to (\ZZ/2, +) \\
 \prod_{i\leq 2k} (a_i b_i) &\mapsto 0 \\
