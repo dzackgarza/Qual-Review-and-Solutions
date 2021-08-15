@@ -57,6 +57,20 @@ I use the following notation throughout:
 For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 :::
 
+
+:::{.remark}
+Summary of useful qual tips:
+
+- Quotienting by bigger groups yields smaller indices:
+\[
+1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
+.\]
+- $x$ is central iff $[x] = \ts{e}$.
+- Unions aren't (generally) subgroups, intersections always are.
+
+:::
+
+
 ## Definitions
 
 :::{.fact}
