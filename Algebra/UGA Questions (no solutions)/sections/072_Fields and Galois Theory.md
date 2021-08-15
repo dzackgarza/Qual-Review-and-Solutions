@@ -424,7 +424,7 @@ r_4 &= -\sqrt{5} - i\sqrt{3} = -r_1
 .\]
 
 
-- We can produce two distinct elements of order 2, forcing it to be $C_2^2$:
+- We can start writing down automorphisms: 
 \[
 \sigma_1:
 \begin{cases}
