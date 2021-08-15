@@ -63,6 +63,20 @@ If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\b
 In particular, Sylow $p\dash$subgroups always exist.
 :::
 
+
+:::{.proof title="?"}
+\envlist
+
+- Let $\# G = p^k m$.
+- Idea: let $G\actson \ts{H\leq G}$ by left-translation.
+  Induct up by showing that if $\# H = p^i$ for $i\leq k$, one can product a bigger subgroup $\tilde H \contains H$ with $[\tilde H : H] = p$.
+  This makes $\# \tilde H = p^{i+1}$.
+- Let $H\leq G$ so that $H$ is a $p\dash$group.
+- Use the lemma that $\#(G/H)\equiv \Fix_H(G/H)\mod p$
+
+:::
+
+
 ### Sylow 2 (Sylows are Conjugate)
 
 
