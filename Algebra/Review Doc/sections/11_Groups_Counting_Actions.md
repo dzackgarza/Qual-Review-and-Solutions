@@ -263,9 +263,9 @@ $p^2$ groups are abelian:
 :::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
 \[
-\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
+\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# \Fix(g)
 ,\]
-where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits.
+where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits and $\Fix(g) = \ts{x\in X \st gx=x}$ are the fixed points under $g$.
 
 > Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
 
@@ -285,14 +285,10 @@ Then union over $X$, where the inner set lets $g$ vary:
 A = \Disjoint_{x_0\in X} \ts{ (g, x_0) \st gx_0= x_0 } \cong \Disjoint_{x_0\in X} \Stab(x_0) \cross \ts{ x_0 } \subseteq G\cross X
 .\]
 Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
-we have
-
-- $\# A = \sum_{g_0\in G} \# \Fix(g_0)$
-- $\# A = \sum_{x_0\in X} \# \Stab(x_0)$
-
-Now set these equal
+we get the following equality
 \[
 \sum_{g_0\in G} \# \Fix(g_0)
+= \# A
 = \sum_{x_0\in X} \# \Stab(x_0)
 .\]
 
@@ -300,8 +296,12 @@ Now rearrange orbit-stabilizer: $\Orb(x_0) = G/\Stab(x_0)$ implies $\# \Stab(x_0
 \[
 \sum_{g_0\in G} \# \Fix(g_0)
 &= \sum_{x_0\in X} \# \Stab(x_0) \\
-&= \sum_{x_0\in X} {\# G \over \# \Orb(x_0)}
-.\]
+&= \sum_{x_0\in X} {\# G \over \# \Orb(x_0)} \\
+&= \# G \sum_{x_0\in X} {1 \over \# \Orb(x_0)} \\ \\
+\implies {1\over \# G} \sum_{g_0\in G} \# \Fix(g_0) 
+&= \sum_{x_0\in X} {1\over \# \Orb(x_0)}
+,\]
+so it suffices to show the right-hand side sum is the number of orbits, $\#(X/G)$.
 
 
 \[
