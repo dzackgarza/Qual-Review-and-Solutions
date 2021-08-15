@@ -177,19 +177,20 @@ Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$
 ### Conjugation: The Class Equation and Burnside's Lemma
 
 :::{.example title="Conjugation yields centers/centralizers"}
-Let $G$ act on *itself* by conjugation.
+Let $G$ act on *itself* by conjugation, so $\phi: g.x = gxg\inv$.
 
-- The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
-  - Thus the action is transitive iff there is one conjugacy class.
-- The set of fixed points $\Fix = Z(G)$ is the **center**.
-- The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
+- The orbit $\Orb(g) = [g]$ is the **conjugacy class** of $g$.
+  - Thus the action is transitive iff $G$ has only one single conjugacy class, which can only happen if $\# G = 1, 2$.
+    On the other extreme, the orbits are all size 1 iff $G$ is abelian.
+- The set of fixed points $\Fix(\phi) = Z(G)$ is the **center**.
+- The stabilizer is $\Stab(g) = Z(g)$, the **centralizer** of $g$ in $G$.
 - The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
-
+- Orbit-stabilizer says $[g] = G/Z(g)$, so **the size of a conjugacy class is the index of the centralizer**.
 
 :::
 
 :::{.remark}
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
+Worth reiterating: $[G: Z(g)]$ is the number of elements in the conjugacy class $[g]$, and each $g \in Z(G)$ has a singleton conjugacy class $[g] = \ts{g}$.
 :::
 
 :::{.remark}
