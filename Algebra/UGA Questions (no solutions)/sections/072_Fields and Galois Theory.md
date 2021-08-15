@@ -390,11 +390,19 @@ c. Exhibit explicitly the correspondence between subgroups of $G$ and intermedia
 :::{.solution}
 \envlist
 
-- First consider $g(x) \da x^2 + 4x + 64$.
+- First consider $g(z) \da z^2 + 4z + 64$.
   Applying the quadratic formula yields
   \[
-  x = {-4 \pm \sqrt{16 - 64} \over 2} = -2 \pm {1\over 2}\sqrt{ -15 \cdot 16 } = -2 \pm 2i \sqrt{15}
+  z = {-4 \pm \sqrt{16 - 64} \over 2} = -2 \pm {1\over 2}\sqrt{ -15 \cdot 16 } = -2 \pm 2i \sqrt{15}
   .\]
+- Substituting $z=x^2$ yields the splitting field of $f$ as $L\da \QQ(\pm \sqrt{ -2 \pm 2i\sqrt{15}})$.
+
+- In this form, it's not clear what the degree $[L:\QQ]$ is, so we can find a better basis by rewriting the roots of $g$:
+\[
+-2 + 2i\sqrt{15} = \qty{\sqrt{5}}^2 - \qty{\sqrt 3}^2 + 2i\sqrt{5}\sqrt{3} = (\sqrt 5 + i\sqrt{3})^2
+,\]
+and so $x = \pm \sqrt{5} + i\sqrt{3}$ and $L = \QQ(\sqrt 5, i\sqrt 3)$.
+
 
 :::
 
