@@ -349,7 +349,8 @@ those $g\in G$ that commute with every element of $G$.
 
 - Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
 - Show that $G/N$ is abelian iff $[G, G] \leq N$.
-- Show that every normal subgroup of $G$ is contained in $Z(G)$.
+- Show that normal subgroups are not necessarily contained in $Z(G)$.
+  - Hint: consider the order 3 subgroup of $S_3$.
 :::
 
 ## Cosets
