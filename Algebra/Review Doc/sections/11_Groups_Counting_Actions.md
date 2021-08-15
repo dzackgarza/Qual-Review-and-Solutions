@@ -377,14 +377,21 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
   \[
   [G:K] = \# (G/K) = \# G/ \# K \implies \# G = \#(G/K) \# K
   .\]
-- Since $G/K \cong K' \leq S_p$ by restricting $\phi$ to its image in $S_p$, we also get that $\# (G/K)$ divides $\# S_p = p!$
-- So $\# (G/K)$ divides $\gcd( \# G, p!)=p$ since $p$ was the minimal prime dividing $\# G$.
+- Now
+\[
+G/K \cong K' \leq S_p \implies \#(G/K)\divides p!
+.\]
+
+- So $\# (G/K)$ divides $\gcd( \# G, p!)=p$, using that $p$ was the minimal prime dividing $\# G$.
   This forces $\#(G/K)$ to be 1 or $p$.
 - If it's $p$:
+  - Then $p = [G:K] = [G:H]$ and since $K\contains H$ this forces $K=H$.
+  Kernels are automatically normal, so we're done.
+- If it's 1:
+  - Then $[G:K] = 1$ and $K = \ker \phi = G$.
+  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) = G$ for all $xH$.
+
   
-- $p$ is prime, so if $\# G/K\neq 1$ we have $\# G/K = p$.
-- Since $K \subset H$ and $[G:H] = p = [G: K]$, we have $K = H$.
-- But $K = \ker \phi \normal G$, so $H\normal G$.
 
 :::
 
