@@ -397,7 +397,9 @@ c. Exhibit explicitly the correspondence between subgroups of $G$ and intermedia
   .\]
 - Substituting $z=x^2$ yields the splitting field of $f$ as $L\da \QQ(\pm \sqrt{ -2 \pm 2i\sqrt{15}})$.
 
-- Note that this factorization shows that $f$ is irreducible over $\QQ$, since the two quadratic factors have irrational coefficients and none of the roots are real.
+  - Note that this factorization shows that $f$ is irreducible over $\QQ$, since the two quadratic factors have irrational coefficients and none of the roots are real.
+  - Irreducible implies separable over a perfect field, so $L/\QQ$ is a separable extension.
+  - $L$ is the splitting field of a separable polynomial and thus normal, making $L$ Galois.
 
 - In this form, it's not clear what the degree $[L:\QQ]$ is, so we can find a better basis by rewriting the roots of $g$:
 \[
@@ -407,6 +409,7 @@ and so the roots of $f$ are $x = \pm \sqrt{5} \pm i\sqrt{3}$ and $L = \QQ(\sqrt 
 
 - Counting in towers, $[L:\QQ] = [\QQ(\sqrt 5, i \sqrt{3} ) : \QQ \sqrt{5} ][\QQ \sqrt{5} : \QQ] = (2)(2) = 4$, where we've used that $\min_{\sqrt 5, \QQ}(x) = x^2-5$ and $\min_{i\sqrt 3, \QQ}(x) = x^2 + 3$, which remains the minimal polynomial over $\QQ(\sqrt 5) \subseteq \RR$ since both roots are not real.
 
+- So $G\da \Gal(L/\QQ) \leq S_4$ is a transitive subgroup of size 4, making it either $C_4$ or $C_2^2$.
 
 :::
 
