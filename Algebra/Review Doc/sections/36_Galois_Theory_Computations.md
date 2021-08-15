@@ -9,6 +9,7 @@
   Then check if its irreducible.
   - General strategy here: try to isolate radicals on one side, then raise both sides to that power.
 
+- To find a minimal polynomial for an element $\alpha$, figure out the dimension of $\QQ(\alpha)/\QQ$ -- say it's $n$, then $1, \alpha, \cdots, \alpha^n$ must be a $\QQ\dash$linearly dependent set, so you compute these powers and fiddle with $\QQ$ coefficients (or invert a matrix).
 - Useful trick: for $x \da \sqrt{a} + \sqrt{b}$, compute $x,x^2, x^3, x^4$ and write them in terms of the basis $\ts{1, \sqrt{a}, \sqrt{b}, \sqrt{ab}}$.
  Then put this linear system into a matrix and invert:
  \[
