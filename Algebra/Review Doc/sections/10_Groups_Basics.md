@@ -111,7 +111,7 @@ Finding morphisms between presentations: if $G$ is presented with generators $g_
 \phi: G &\to H \\
 g_i &\mapsto h_i \quad \forall i
 .\]
-Why this exists: the presentation yields a morphism $\pi: F(g_i) \to G$ with $G\cong F(g_i) / \ker \pi$.
+Why this exists: the presentation yields a surjective morphism $\pi: F(g_i) \to G$ with $G\cong F(g_i) / \ker \pi$.
 Define a map $\psi: F(g_i) \to H$ where $g_i\mapsto h_i$, then since the $h_i$ satisfy the relations $r_i$, $\ker \pi \subseteq \ker \psi$.
 So $\psi$ factors through $\ker \pi$ yielding a morphism $F/\ker \pi \to H$.
 :::
