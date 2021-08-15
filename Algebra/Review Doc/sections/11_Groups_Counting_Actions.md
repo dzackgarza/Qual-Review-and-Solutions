@@ -159,13 +159,28 @@ so $H_x = g\inv H_y g$.
 
 ## Examples of Orbit-Stabilizer and the Class Equation
 
-
 :::{.remark title="The fixed-point count trick"}
 A useful mnemonic: for any group action $\phi: G\actson X$, using that orbits partition $X$ we always have
 \[
 X = \Fix(\phi) \Disjoint_{x}' \Orb(x)
 ,\]
 where $\Fix(\phi)$ is the union of all orbits of size 1, and the remaining union is over distinct nontrivial orbits, taking one representative $x$ from each.
+:::
+
+:::{.proposition title="Simple groups with a nontrivial subgroup embed into symmetric groups"}
+An application of group actions:
+if $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+:::
+
+:::{.proof}
+\envlist
+
+- Define a group action $\phi: G\actson G/H \da \ts{eH, g_1 H, \cdots, g_{n-1} H}$ acting on the $n$ cosets of $H$ by left-translation $g.(g_k H) = (gg_k) H$.
+- Then use that $\Sym(G/H) \leq S_n$, so $\im \phi \leq S_n$ is a subgroup.
+- Since $G$ is simple and $\ker \phi \leq G$, we have $\ker \phi = 1, G$.
+  If $\ker \phi = 1$, $\phi$ is injective and we're done.
+
+- Otherwise $\ker \phi = G$, and acting on $eH$ yields $gH = H$ for all $g$, forcing $H=G$ and $n=1$, contradicting that $H<G$ is proper. $\contradiction$
 :::
 
 
@@ -227,21 +242,6 @@ Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g
 :::
 
 
-:::{.proposition title="Application of the Class Equation"}
-If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
-:::
-
-:::{.proof}
-\envlist
-
-- Define a group action $\phi: G\actson G/H \da \ts{eH, g_1 H, \cdots, g_{n-1} H}$ acting on the $n$ cosets of $H$.
-- Then use that $\Sym(G/H) \leq S_n$, so $\im \phi \leq S_n$ is a subgroup.
-- Since $G$ is simple and $\ker \phi \leq G$, we have $\ker \phi = 1, G$.
-  If $\ker \phi = 1$, $\phi$ is injective and we're done.
-
-- Otherwise $\ker \phi = G$.
-This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
-:::
 
 :::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
