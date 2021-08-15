@@ -159,6 +159,16 @@ so $H_x = g\inv H_y g$.
 
 ## Examples of Orbit-Stabilizer and the Class Equation
 
+
+:::{.remark}
+A useful mnemonic: for any group action $\phi: G\actson X$, using that orbits partition $X$ we always have
+\[
+X = \Fix(\phi) \Disjoint' \Orb(x)
+,\]
+where $\Fix(\phi)$ is the union of all orbits of size 1, and the remaining union is over nontrivial orbits.
+:::
+
+
 ### Left Translation
 
 :::{.example title="The left translation action: trivial"}
@@ -191,19 +201,16 @@ Let $G$ act on *itself* by conjugation, so $\phi: g.x = gxg\inv$.
 
 :::{.remark}
 Worth reiterating: $[G: Z(g)]$ is the number of elements in the conjugacy class $[g]$, and each $g \in Z(G)$ has a singleton conjugacy class $[g] = \ts{g}$.
-:::
 
-:::{.remark}
-Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: Z(x)]$, i.e.
-\[
-\# {C(x)} = [G: Z(x)]
-.\]
 Now note that $G = \disjoint_k' \Orb(h_k)$ is a disjoint union of orbits (the prime denotes taking one representative from each orbit), and so
 \[
 G &= \Disjoint_k' \Orb(h_k) \mapsvia{\sim} \Disjoint_k' G/\Stab(h_k) \\
 \implies \# G &= \sum_{k}' \# C(h) = \sum_k' \#(G/\Stab(h_k)) = \sum_k' [G: Z(h_k)]
 .\]
 Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, which yields the class equation:
+:::
+
+:::{.remark}
 
 
 :::
