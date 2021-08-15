@@ -152,25 +152,13 @@ More generally, show that if $H\da C_m, K\da C_n \leq G$ then $H \intersect K = 
 Most generally, show that coprime order subgroups are disjoint.
 :::
 
-:::{.proposition title="Intersection of subgroups is a subgroup"}
-If $H, K\leq G$ then $J \da H \intersect K \leq G$ is a subgroup.
-Moreover $J\leq H$ and $J \leq K$.
-:::
-
-:::{.proof title="?"}
-One-step subgroup test.
-:::
-
-:::{.exercise title="Unions of subgroups"}
-Show that if $K, H\leq G$ are subgroups, then their union $H \union K$ is a subgroup iff (wlog) $H \subset K$.
-Thus the union of subgroups is not generally a subgroup, although the intersection is always a subgroup.
-:::
-
-:::{.exercise title="?"}
+:::{.exercise title="On subgroups"}
 \envlist
 
 - Show that the intersection of two subgroups is again a subgroup.
+  - Hint: one-step subgroup test.
 - Show that the intersection of two subgroups with coprime orders is trivial.
+- Show that the union of two subgroups $H, K$ is a subgroup iff $H \subset K$.
 - Show that subgroups with the *same* prime order are either equal or intersect trivially.
 - Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
 - Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
