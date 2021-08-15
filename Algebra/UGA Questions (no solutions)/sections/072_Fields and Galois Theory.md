@@ -407,9 +407,14 @@ z = -2 \pm 2i\sqrt{15} = \qty{\sqrt{5}}^2 - \qty{\sqrt 3}^2 \pm 2i\sqrt{5}\sqrt{
 ,\]
 and so the roots of $f$ are $x = \pm \sqrt{5} \pm i\sqrt{3}$ and $L = \QQ(\sqrt 5, i\sqrt 3)$.
 
-- Counting in towers, $[L:\QQ] = [\QQ(\sqrt 5, i \sqrt{3} ) : \QQ \sqrt{5} ][\QQ \sqrt{5} : \QQ] = (2)(2) = 4$, where we've used that $\min_{\sqrt 5, \QQ}(x) = x^2-5$ and $\min_{i\sqrt 3, \QQ}(x) = x^2 + 3$, which remains the minimal polynomial over $\QQ(\sqrt 5) \subseteq \RR$ since both roots are not real.
+- Counting in towers, 
+\[
+[L:\QQ] = [\QQ(\sqrt 5, i \sqrt{3} ) : \QQ \sqrt{5} ][\QQ \sqrt{5} : \QQ] = (2)(2) = 4
+,\]
+where we've used that $\min_{\sqrt 5, \QQ}(x) = x^2-5$ and $\min_{i\sqrt 3, \QQ}(x) = x^2 + 3$, which remains the minimal polynomial over $\QQ(\sqrt 5) \subseteq \RR$ since both roots are not real.
 
 - So $G\da \Gal(L/\QQ) \leq S_4$ is a transitive subgroup of size 4, making it either $C_4$ or $C_2^2$.
+
 
 :::
 
