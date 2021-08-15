@@ -444,6 +444,7 @@ i\sqrt 3 &\mapsto -i\sqrt 3 .
 .\]
   Note that these define automorphisms because we've specified what happens to a basis and they send roots to other roots.
 
+- Checking that $\sigma_1^2 = \sigma_2^2 = \id$, this produces two distinct order 2 elements, forcing $G \cong C_2^2$ since $C_4$ only has one order 2 element.
 
 
 
