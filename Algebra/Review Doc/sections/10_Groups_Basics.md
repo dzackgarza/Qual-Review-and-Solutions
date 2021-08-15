@@ -370,9 +370,9 @@ In particular, If $H, K\leq G$ are just arbitrary, since $H \intersect K \leq H,
 :::
 
 :::{.proof title="?"}
-Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct cosets.
-Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since $H\leq G$, which forces $h_i h_j\inv \not\in K$.
-So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$.
+Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct cosets where $m\da [G:H]$ and the $h_i$ are all in $H$.
+Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since subgroups are closed under products and inverses, which forces $h_i h_j\inv \not\in K$.
+So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$, so $[G:K] \geq m$.
 :::
 
 :::{.proposition title="Cosets are identical or disjoint"}
