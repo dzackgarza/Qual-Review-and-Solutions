@@ -360,7 +360,9 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - There are no fixed points, i.e. $\Fix(G) = \emptyset$, since the action is transitive.
 
-- The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
+- The kernel of this action is $\ker \phi = \Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$, sometimes called the **normal core** of $H$.
+
+  - Note that if $\ker \phi = G$ then $H$ is normal, and if $\ker \phi = 1$ then all conjugates of $H$ are distinct.
 
 :::
 
@@ -372,6 +374,7 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 \envlist
 
 - Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
+  - Identify $\Stab(xH) = \ts{g\in G \st gxH = xH} = \ts{g\in G\st gH = xHx\inv}$
 - Then $K\da \ker \phi$, and importantly $K \contains H$ since $K$ is the intersection of stabilizers, and contains $\Stab(eH) \contains H$ since $gH = H \implies g\in H$.
 - Since $G$ is finite and $K\leq G$, we have $\#(G/K)$ dividing $\# G$, since
   \[
@@ -389,7 +392,7 @@ G/K \cong K' \leq S_p \implies \#(G/K)\divides p!
   Kernels are automatically normal, so we're done.
 - If it's 1:
   - Then $[G:K] = 1$ and $K = \ker \phi = G$.
-  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) = G$ for all $xH$.
+  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) xHx\inv = G$ for all $x$, which says $H$ is normal.
 
   
 
