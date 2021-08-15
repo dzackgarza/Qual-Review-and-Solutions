@@ -178,7 +178,7 @@ However, by orbit-stabilizer and the conjugation action, their sizes always divi
 
 :::{.definition title="Conjugate subgroups"}
 Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
-Note that all conjugates have the same cardinality.
+Note that all conjugate subgroups have the same cardinality.
 :::
 
 :::{.exercise title="?"}
