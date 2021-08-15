@@ -61,21 +61,27 @@ For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of 
 :::{.remark}
 Summary of useful qual tips:
 
-- Quotienting by bigger groups yields smaller indices:
-\[
-1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
-.\]
-- $x$ is central iff $[x] = \ts{e}$.
-- Unions aren't (generally) subgroups, intersections always are.
-- Coprime order subgroups intersect trivially.
-- Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
-- Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
-- Conjugate subgroups have equal cardinality.
-- Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
-- Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
-- Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
-  Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
-  Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
+- Sizes and structure:
+  - Quotienting by bigger groups yields smaller indices:
+  \[
+  1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
+  .\]
+  - $x$ is central iff $[x] = \ts{e}$.
+  - Unions aren't (generally) subgroups, intersections always are.
+  - Coprime order subgroups intersect trivially.
+  - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
+- Conjugacy:
+  - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
+  - Conjugate subgroups have equal cardinality.
+  - Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
+  - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
+  - Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
+    Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
+    Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
+- Cosets:
+  - Anything dealing with indices $[G:H]$: try just listing the cosets.
+  - $aH = bH \iff ab\inv \in H$.
+  - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
 
 :::
 
@@ -375,22 +381,24 @@ Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in
 So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$, so $[G:K] \geq m$.
 :::
 
-:::{.proposition title="Cosets are identical or disjoint"}
-Any two cosets $xH, yH$ are either identical or disjoint.
+:::{.proposition title="Cosets are equal or disjoint"}
+Any two cosets $xH, yH$ are either equal or disjoint.
 :::
 
 :::{.proof title="?"}
-Note $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
-The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its cosets.
-Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
-Write $\ell =xh_1 =yh_2$ for some $h_i$, then
+\envlist
+
+- $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
+- The reverse containment is clear, so $G = \Union_{x\in G} xH$ is a union of its cosets.
+- Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
+- Write $\ell =xh_1 =yh_2$ for some $h_i$, then
 \[
 xh_1 = yh_2 &\implies x = yh_2 h_1\inv \\
 xh_3\in xH &\implies xh_3 = (yh_2h_1\inv) h_3 \in yH
 ,\]
-so $xH \subseteq yH$.
-A symmetric argument shows $y_H \subseteq xH$.
-[^df_p80_identical_disjoint]
+  so $xH \subseteq yH$.
+
+- A symmetric argument shows $y_H \subseteq xH$.[^df_p80_identical_disjoint]
 
 [^df_p80_identical_disjoint]: 
 See full argument: D&F p.80.
