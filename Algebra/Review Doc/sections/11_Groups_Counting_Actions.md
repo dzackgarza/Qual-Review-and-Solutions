@@ -285,6 +285,25 @@ Then union over $X$, where the inner set lets $g$ vary:
 A = \Disjoint_{x_0\in X} \ts{ (g, x_0) \st gx_0= x_0 } \cong \Disjoint_{x_0\in X} \Stab(x_0) \cross \ts{ x_0 } \subseteq G\cross X
 .\]
 Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
+we have
+
+- $\# A = \sum_{g_0\in G} \# \Fix(g_0)$
+- $\# A = \sum_{x_0\in X} \# \Stab(x_0)$
+
+Now set these equal
+\[
+\sum_{g_0\in G} \# \Fix(g_0)
+= \sum_{x_0\in X} \# \Stab(x_0)
+.\]
+
+Now rearrange orbit-stabilizer: $\Orb(x_0) = G/\Stab(x_0)$ implies $\# \Stab(x_0) = \# G/ \# \Orb(x_0)$, and use this to rewrite the RHS:
+\[
+\sum_{g_0\in G} \# \Fix(g_0)
+&= \sum_{x_0\in X} \# \Stab(x_0) \\
+&= \sum_{x_0\in X} {\# G \over \# \Orb(x_0)}
+.\]
+
+
 \[
 \Disjoint_{g\in G} X^g
 \cong
