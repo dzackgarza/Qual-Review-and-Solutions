@@ -295,13 +295,15 @@ So at least one other $\# [h_i] = 1$, making that $h_i$ central.
 Another solution:
 
 - Idea: use the class equation to force $p$ to divide $\#(H \intersect Z(G))$.
-- Write $[x_1], \cdots [x_k], \cdots, [x_n]$ be the $n$ conjugacy classes in $G$, where the first $k$ are those not intersecting $N$ and the remaining do intersect $N$.
-- Since conjugacy class intersect normal subgroups either completely or trivially, the first $k$ are size 1, and the remaining are size $> 1$.
-  But then the first $k$ are in classes of size 1 and thus central, so $H \intersect Z(G) = \disjoint_{i=1}^k [x_i]$.
-- Now apply the class equation:
+  Applying it to $H$ yields
 \[
-\# H = \# Z(H) + \sum_{h}' [H: Z(h)]
-.\]
+H = Z(H) \disjoint_{i=1}^m [h_i]
+,\]
+where the $[h_i]$ are conjugacy classes of size greater than 1.
+
+- Now use that $Z(H) = Z(G) \intersect H$, and since $p$ divides the LHS the result will follow if $p$ divides the size of the disjoint union on the RHS.
+- This is true because each $\#[h_i] \neq 1$ and $[h_i]$ divides $\# H$ which divides $\# G$ which is a power of $p$.
+  So $p\divides \# [h_i]$ for each $i$.
 
 - 
 
