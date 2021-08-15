@@ -73,6 +73,9 @@ Summary of useful qual tips:
 - Conjugate subgroups have equal cardinality.
 - Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
 - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
+- Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
+  Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
+  Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
 
 :::
 
@@ -294,6 +297,12 @@ Another solution:
 - Idea: use the class equation to force $p$ to divide $\#(H \intersect Z(G))$.
 - Write $[x_1], \cdots [x_k], \cdots, [x_n]$ be the $n$ conjugacy classes in $G$, where the first $k$ are those not intersecting $N$ and the remaining do intersect $N$.
 - Since conjugacy class intersect normal subgroups either completely or trivially, the first $k$ are size 1, and the remaining are size $> 1$.
+  But then the first $k$ are in classes of size 1 and thus central, so $H \intersect Z(G) = \disjoint_{i=1}^k [x_i]$.
+- Now apply the class equation:
+\[
+\# H = \# Z(H) + \sum_{h}' [H: Z(h)]
+.\]
+
 - 
 
 :::
