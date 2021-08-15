@@ -326,11 +326,11 @@ Part c:
   Using that $\sigma(\omega) =\zeta\omega$ and $\sigma(\zeta)=\zeta$,
   supposing $\sigma(\alpha) = \alpha$ we have
   \[
-  \sigma(\alpha) &\da \sigma(a + b\zeta + c\zeta^2 + d\omega + e\zeta\omega + f\zeta^2\omega) \\
-  &= a + b\zeta + c\zeta^2 + d\zeta\omega + e\zeta^2\omega + f\omega \\
-  \implies \alpha &= a + b\zeta + c\zeta^2 + t_1(\omega + \zeta\omega + \zeta_2\omega) \\
-  \implies \alpha &= a + b\zeta + c\zeta^2 + t_1\omega (1 + \zeta+ \zeta_2) \\
-  \implies \alpha &= a + b\zeta + c\zeta^2 
+  \sigma(\alpha) &\da \sigma(a + b\zeta_3 + c\zeta_3^2 + d\omega + e\zeta_3\omega + f\zeta_3^2\omega) \\
+  &= a + b\zeta_3 + c\zeta_3^2 + d\zeta_3\omega + e\zeta_3^2\omega + f\omega \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1(\omega + \zeta_3\omega + \zeta_3^2\omega) \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1\omega (1 + \zeta_3+ \zeta_3^2) \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 
   ,\]
   using the general fact that $\sum_{k=0}^{n-1}\zeta_n^k = 0$.
   So the fixed field is $\QQ(1, \zeta, \zeta^2) = \QQ(\zeta)$.
