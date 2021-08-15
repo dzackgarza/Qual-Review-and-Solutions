@@ -71,7 +71,7 @@ Summary of useful qual tips:
 - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
 - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
 - Conjugate subgroups have equal cardinality.
-- Normal subgroups absorb conjugacy classes.
+- Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
 - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
 
 :::
@@ -278,8 +278,24 @@ Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the
 :::{.solution}
 \envlist
 
-- Write $[x_1], \cdots [x_k], \cdots, [x_n]$ be the $n$ conjugacy classes in $G$, where the first $k$ are those intersecting $N$ and the remaining do not.
-- Then for the first $k$, $[x_k] \subseteq H$, and for the remaining $[x_k] \intersect H = \ts{e}$
+Easy solution:
+
+- Use that $\# H \mod p = 1$ since $H\leq G$ and $G$ is a $p\dash$group.
+- Then use that $H$ is a union of conjugacy classes, and since $e\in H$ there is at least one class of size 1, so
+\[
+\# H = \# \disjoint' [h_i] = \# [e] + \sum' \# [h_i] \\
+\implies 0 \equiv \# H \equiv 1 + \sum' \#[h_i] \mod p
+,\]
+and since each $\# [h_i]$ divides $\# H$, not all can be of size $p^\ell$ since then the sum would be $0\mod p$.
+So at least one other $\# [h_i] = 1$, making that $h_i$ central.
+
+Another solution:
+
+- Idea: use the class equation to force $p$ to divide $\#(H \intersect Z(G))$.
+- Write $[x_1], \cdots [x_k], \cdots, [x_n]$ be the $n$ conjugacy classes in $G$, where the first $k$ are those not intersecting $N$ and the remaining do intersect $N$.
+- Since conjugacy class intersect normal subgroups either completely or trivially, the first $k$ are size 1, and the remaining are size $> 1$.
+- 
+
 :::
 
 
