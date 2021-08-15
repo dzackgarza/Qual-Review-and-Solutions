@@ -72,6 +72,7 @@ Summary of useful qual tips:
 - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
 - Conjugate subgroups have equal cardinality.
 - Normal subgroups absorb conjugacy classes.
+- Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
 
 :::
 
@@ -268,7 +269,19 @@ Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ 
 
 :::{.exercise title="?"}
 Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
+
+> Hint: use the class equation.
+
 :::
+
+
+:::{.solution}
+\envlist
+
+- Write $[x_1], \cdots [x_k], \cdots, [x_n]$ be the $n$ conjugacy classes in $G$, where the first $k$ are those intersecting $N$ and the remaining do not.
+- Then for the first $k$, $[x_k] \subseteq H$, and for the remaining $[x_k] \intersect H = \ts{e}$
+:::
+
 
 ## Centralizing and Centers
 
