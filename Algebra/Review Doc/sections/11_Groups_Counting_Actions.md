@@ -183,7 +183,6 @@ if $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injectiv
 - Otherwise $\ker \phi = G$, and acting on $eH$ yields $gH = H$ for all $g$, forcing $H=G$ and $n=1$, contradicting that $H<G$ is proper. $\contradiction$
 :::
 
-
 ### Left Translation
 
 :::{.example title="The left translation action: trivial"}
@@ -197,7 +196,6 @@ Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$
 - Orbit stabilizer just says $G \cong G/\ts{e}$.
 
 :::
-
 
 ### Conjugation: The Class Equation and Burnside's Lemma
 
@@ -233,7 +231,6 @@ Now taking cardinalities yields the class equation:
 \]
 
 As a reminder,
-
 \[
 Z(g) &= \ts{h\in G \st hgh\inv = g} \text{ is the centralizer of } g\\
 Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g) \text{ is the center of } G 
@@ -242,12 +239,12 @@ Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g
 :::
 
 
-
 :::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
 \[
 \# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
-\]
+,\]
+where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits.
 
 > Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
 
