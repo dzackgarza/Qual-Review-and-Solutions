@@ -337,13 +337,17 @@ Part c:
 
 - We thus get the following lattice correspondence:
 
-
 \begin{tikzcd}
-	&& {\QQ(\zeta_3,\omega)} &&&&&&& 1 \\
+	&& {\QQ(\zeta_3,\omega)} \\
 	\\
-	{\QQ(\omega) = \QQ(r_1)} & {\QQ(\zeta_3\omega) = \QQ(r_2)} & {\QQ(\zeta_3^2\omega) = \QQ(r_3)} && {\QQ(\zeta_3)} &&& {\gens{(2,3) = \tau} \cong C_2} & {\gens{(1,3) = \sigma^2\tau} \cong C_2} & {\gens{(1,2) = \sigma\tau} \cong C_2} && {\gens{(1,2,3) = \sigma} \cong C_3} \\
+	{\QQ(\omega) = \QQ(r_1)} & {\QQ(\zeta_3\omega) = \QQ(r_2)} & {\QQ(\zeta_3^2\omega) = \QQ(r_3)} && {\QQ(\zeta_3)} \\
 	\\
-	&& \QQ &&&&&&& {\gens{\sigma, \tau}\cong S_3}
+	&& \QQ \\
+	&& 1 \\
+	\\
+	{\gens{(2,3) = \tau} \cong C_2} & {\gens{(1,3) = \sigma^2\tau} \cong C_2} & {\gens{(1,2) = \sigma\tau} \cong C_2} && {\gens{(1,2,3) = \sigma} \cong C_3} \\
+	\\
+	&& {\gens{\sigma, \tau}\cong S_3}
 	\arrow["3"{description}, from=5-3, to=3-1]
 	\arrow["3"{description}, from=5-3, to=3-3]
 	\arrow["2"{description}, from=3-1, to=1-3]
@@ -352,17 +356,17 @@ Part c:
 	\arrow["2"{description}, from=5-3, to=3-5]
 	\arrow["3"{description}, from=3-5, to=1-3]
 	\arrow["3"{description}, from=5-3, to=3-2]
-	\arrow["2"{description}, from=1-10, to=3-8]
-	\arrow["3"{description}, from=3-8, to=5-10]
-	\arrow["3"{description}, from=3-9, to=5-10]
-	\arrow["3"{description}, from=3-10, to=5-10]
-	\arrow["2"{description}, from=1-10, to=3-9]
-	\arrow["2"{description}, from=1-10, to=3-10]
-	\arrow["3"{description}, from=1-10, to=3-12]
-	\arrow["2"{description}, from=3-12, to=5-10]
+	\arrow["2"{description}, from=6-3, to=8-1]
+	\arrow["3"{description}, from=8-1, to=10-3]
+	\arrow["3"{description}, from=8-3, to=10-3]
+	\arrow["2"{description}, from=6-3, to=8-3]
+	\arrow["3"{description}, from=6-3, to=8-5]
+	\arrow["2"{description}, from=8-5, to=10-3]
+	\arrow["3"{description}, from=8-2, to=10-3]
+	\arrow["2"{description}, from=6-3, to=8-2]
 \end{tikzcd}
 
-> [Link to Diagram](https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHpldGFfMyxcXG9tZWdhKSJdLFswLDIsIlxcUVEoXFxvbWVnYSkgPSBcXFFRKHJfMSkiXSxbMiwyLCJcXFFRKFxcemV0YV8zXjJcXG9tZWdhKSA9IFxcUVEocl8zKSJdLFsyLDQsIlxcUVEiXSxbMSwyLCJcXFFRKFxcemV0YV8zXFxvbWVnYSkgPSBcXFFRKHJfMikiXSxbNCwyLCJcXFFRKFxcemV0YV8zKSJdLFs3LDIsIlxcZ2Vuc3soMiwzKSA9IFxcdGF1fSBcXGNvbmcgQ18yIl0sWzksNCwiXFxnZW5ze1xcc2lnbWEsIFxcdGF1fVxcY29uZyBTXzMiXSxbOSwwLCIxIl0sWzgsMiwiXFxnZW5zeygxLDMpID0gXFxzaWdtYV4yXFx0YXV9IFxcY29uZyBDXzIiXSxbOSwyLCJcXGdlbnN7KDEsMikgPSBcXHNpZ21hXFx0YXV9IFxcY29uZyBDXzIiXSxbMTEsMiwiXFxnZW5zeygxLDIsMykgPSBcXHNpZ21hfSBcXGNvbmcgQ18zIl0sWzMsMSwiMyIsMV0sWzMsMiwiMyIsMV0sWzEsMCwiMiIsMV0sWzQsMCwiMiIsMV0sWzIsMCwiMiIsMV0sWzMsNSwiMiIsMV0sWzUsMCwiMyIsMV0sWzMsNCwiMyIsMV0sWzgsNiwiMiIsMV0sWzYsNywiMyIsMV0sWzksNywiMyIsMV0sWzEwLDcsIjMiLDFdLFs4LDksIjIiLDFdLFs4LDEwLCIyIiwxXSxbOCwxMSwiMyIsMV0sWzExLDcsIjIiLDFdXQ==)
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHpldGFfMyxcXG9tZWdhKSJdLFswLDIsIlxcUVEoXFxvbWVnYSkgPSBcXFFRKHJfMSkiXSxbMiwyLCJcXFFRKFxcemV0YV8zXjJcXG9tZWdhKSA9IFxcUVEocl8zKSJdLFsyLDQsIlxcUVEiXSxbMSwyLCJcXFFRKFxcemV0YV8zXFxvbWVnYSkgPSBcXFFRKHJfMikiXSxbNCwyLCJcXFFRKFxcemV0YV8zKSJdLFswLDcsIlxcZ2Vuc3soMiwzKSA9IFxcdGF1fSBcXGNvbmcgQ18yIl0sWzIsOSwiXFxnZW5ze1xcc2lnbWEsIFxcdGF1fVxcY29uZyBTXzMiXSxbMiw1LCIxIl0sWzIsNywiXFxnZW5zeygxLDIpID0gXFxzaWdtYVxcdGF1fSBcXGNvbmcgQ18yIl0sWzQsNywiXFxnZW5zeygxLDIsMykgPSBcXHNpZ21hfSBcXGNvbmcgQ18zIl0sWzEsNywiXFxnZW5zeygxLDMpID0gXFxzaWdtYV4yXFx0YXV9IFxcY29uZyBDXzIiXSxbMywxLCIzIiwxXSxbMywyLCIzIiwxXSxbMSwwLCIyIiwxXSxbNCwwLCIyIiwxXSxbMiwwLCIyIiwxXSxbMyw1LCIyIiwxXSxbNSwwLCIzIiwxXSxbMyw0LCIzIiwxXSxbOCw2LCIyIiwxXSxbNiw3LCIzIiwxXSxbOSw3LCIzIiwxXSxbOCw5LCIyIiwxXSxbOCwxMCwiMyIsMV0sWzEwLDcsIjIiLDFdLFsxMSw3LCIzIiwxXSxbOCwxMSwiMiIsMV1d)
 
 
 
