@@ -25,6 +25,8 @@
 
 - If $\alpha\beta \in \QQ$, then $\alpha \in \QQ(\beta)$ and vice-versa (I think).
 
+- Checking subgroup lattices: <https://hobbes.la.asu.edu/groups/groups.html>
+
 :::
 
 :::{.remark}
