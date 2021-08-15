@@ -110,8 +110,7 @@ gG_{x} &\mapsto g\actson x
 .\]
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="of orbit stabilizer"}
 \envlist
 
 - Injectivity: $\Phi(gG_x) = \Phi(hG_x) \iff g\actson x=h\actson x \iff gh\inv \actson x = x \iff gh\inv \in G_x \iff gG_x = hG_x$.
@@ -126,27 +125,28 @@ gG_{x} &\mapsto g\actson x
 
 :::
 
-
-:::{.proposition title="Stabilizers are conjugate"}
+:::{.proposition title="Stabilizers of all orbit reps are conjugate"}
 If $X\in \GSets$, then for any points $x_i\in X$ in the same orbit, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+
+Note that if $G$ acts transitively, this says all stabilizers are conjugate.
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="that stabilizers are conjugate"}
 \envlist
 
 - Fix $x\in X$ and $y\in \Orb(x)$, so $g.x=y$ for some $g$.
 - Let $H_x \da \Stab(x)$ and $H_y\da \Stab(y)$, the claim is that $H_x = g\inv H_y g$.
 - Now just check:
 \[
-h\in H_x \iff hx = x \iff hg\inv y = g\inv y \iff ghg\inv y = y \iff ghg\inv \in H_y \iff h\in g\inv H_y g
-.\]
-
+h\in H_x &\iff hx = x \\
+&\iff hg\inv y = g\inv y \\
+&\iff ghg\inv y = y \\
+&\iff ghg\inv \in H_y \\
+&\iff h\in g\inv H_y g
+,\]
+so $H_x = g\inv H_y g$.
 
 :::
-
-
-
 
 :::{.theorem title="Orbit-Stabilizer"}
 
@@ -160,12 +160,12 @@ h\in H_x \iff hx = x \iff hg\inv y = g\inv y \iff ghg\inv y = y \iff ghg\inv \in
 ## Examples of Orbit-Stabilizer and the Class Equation
 
 :::{.example title="Trivial"}
-Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
+Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$.
 
-- The orbit $\OO(x) = Gx = G$ is the entire group.
+- The orbit $\Orb(x) = G$ is the entire group.
   - This action is transitive.
-- The set of fixed points \( \Fix = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
-- The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
+- The set of fixed points \( \Fix(\phi) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The stabilizer \( \Stab(x) = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
 
 
