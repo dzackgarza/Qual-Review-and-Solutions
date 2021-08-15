@@ -69,6 +69,9 @@ Summary of useful qual tips:
 - Unions aren't (generally) subgroups, intersections always are.
 - Coprime order subgroups intersect trivially.
 - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
+- Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
+- Conjugate subgroups have equal cardinality.
+- Normal subgroups absorb conjugacy classes.
 
 :::
 
