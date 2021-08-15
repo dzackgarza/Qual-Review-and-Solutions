@@ -374,7 +374,6 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 \envlist
 
 - Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
-  - Identify $\Stab(xH) = \ts{g\in G \st gxH = xH} = \ts{g\in G\st gH = xHx\inv}$
 - Then $K\da \ker \phi$, and importantly $K \contains H$ since $K$ is the intersection of stabilizers, and contains $\Stab(eH) \contains H$ since $gH = H \implies g\in H$.
 - Since $G$ is finite and $K\leq G$, we have $\#(G/K)$ dividing $\# G$, since
   \[
@@ -392,9 +391,7 @@ G/K \cong K' \leq S_p \implies \#(G/K)\divides p!
   Kernels are automatically normal, so we're done.
 - If it's 1:
   - Then $[G:K] = 1$ and $K = \ker \phi = G$.
-  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) xHx\inv = G$ for all $x$, which says $H$ is normal.
-
-  
+  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) = xHx\inv = G$ for all $x$, which says $H$ is normal.
 
 :::
 
