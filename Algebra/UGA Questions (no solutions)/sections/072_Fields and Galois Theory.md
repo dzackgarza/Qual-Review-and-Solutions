@@ -319,13 +319,50 @@ Part c:
 ![](figures/2021-08-14_18-00-51.png)
 
 - Note that we can identify
-  - $\sigma = (1,2,3)$
   - $\tau = (2,3)$ which fixes $r_1$
   - $\sigma \tau = (1,2)$ which fixes $r_3$
   - $\sigma^2\tau = (1, 3)$ which fixes $r_2$
+  - $\sigma = (1,2,3)$, for which we need to calculate the fixed field.
+  Using that $\sigma(\omega) =\zeta\omega$ and $\sigma(\zeta)=\zeta$,
+  supposing $\sigma(\alpha) = \alpha$ we have
+  \[
+  \sigma(\alpha) &\da \sigma(a + b\zeta + c\zeta^2 + d\omega + e\zeta\omega + f\zeta^2\omega) \\
+  &= a + b\zeta + c\zeta^2 + d\zeta\omega + e\zeta^2\omega + f\omega \\
+  \implies \alpha &= a + b\zeta + c\zeta^2 + t_1(\omega + \zeta\omega + \zeta_2\omega) \\
+  \implies \alpha &= a + b\zeta + c\zeta^2 + t_1\omega (1 + \zeta+ \zeta_2) \\
+  \implies \alpha &= a + b\zeta + c\zeta^2 
+  ,\]
+  using the general fact that $\sum_{k=0}^{n-1}\zeta_n^k = 0$.
+  So the fixed field is $\QQ(1, \zeta, \zeta^2) = \QQ(\zeta)$.
 
-- Computing the fixed field of $\tau$
+- We thus get the following lattice correspondence:
 
+
+\begin{tikzcd}
+	&& {\QQ(\zeta_3,\omega)} &&&&&&& 1 \\
+	\\
+	{\QQ(\omega) = \QQ(r_1)} & {\QQ(\zeta_3\omega) = \QQ(r_2)} & {\QQ(\zeta_3^2\omega) = \QQ(r_3)} && {\QQ(\zeta_3)} &&& {\gens{(2,3) = \tau} \cong C_2} & {\gens{(1,3) = \sigma^2\tau} \cong C_2} & {\gens{(1,2) = \sigma\tau} \cong C_2} && {\gens{(1,2,3) = \sigma} \cong C_3} \\
+	\\
+	&& \QQ &&&&&&& {\gens{\sigma, \tau}\cong S_3}
+	\arrow["3"{description}, from=5-3, to=3-1]
+	\arrow["3"{description}, from=5-3, to=3-3]
+	\arrow["2"{description}, from=3-1, to=1-3]
+	\arrow["2"{description}, from=3-2, to=1-3]
+	\arrow["2"{description}, from=3-3, to=1-3]
+	\arrow["2"{description}, from=5-3, to=3-5]
+	\arrow["3"{description}, from=3-5, to=1-3]
+	\arrow["3"{description}, from=5-3, to=3-2]
+	\arrow["2"{description}, from=1-10, to=3-8]
+	\arrow["3"{description}, from=3-8, to=5-10]
+	\arrow["3"{description}, from=3-9, to=5-10]
+	\arrow["3"{description}, from=3-10, to=5-10]
+	\arrow["2"{description}, from=1-10, to=3-9]
+	\arrow["2"{description}, from=1-10, to=3-10]
+	\arrow["3"{description}, from=1-10, to=3-12]
+	\arrow["2"{description}, from=3-12, to=5-10]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHpldGFfMyxcXG9tZWdhKSJdLFswLDIsIlxcUVEoXFxvbWVnYSkgPSBcXFFRKHJfMSkiXSxbMiwyLCJcXFFRKFxcemV0YV8zXjJcXG9tZWdhKSA9IFxcUVEocl8zKSJdLFsyLDQsIlxcUVEiXSxbMSwyLCJcXFFRKFxcemV0YV8zXFxvbWVnYSkgPSBcXFFRKHJfMikiXSxbNCwyLCJcXFFRKFxcemV0YV8zKSJdLFs3LDIsIlxcZ2Vuc3soMiwzKSA9IFxcdGF1fSBcXGNvbmcgQ18yIl0sWzksNCwiXFxnZW5ze1xcc2lnbWEsIFxcdGF1fVxcY29uZyBTXzMiXSxbOSwwLCIxIl0sWzgsMiwiXFxnZW5zeygxLDMpID0gXFxzaWdtYV4yXFx0YXV9IFxcY29uZyBDXzIiXSxbOSwyLCJcXGdlbnN7KDEsMikgPSBcXHNpZ21hXFx0YXV9IFxcY29uZyBDXzIiXSxbMTEsMiwiXFxnZW5zeygxLDIsMykgPSBcXHNpZ21hfSBcXGNvbmcgQ18zIl0sWzMsMSwiMyIsMV0sWzMsMiwiMyIsMV0sWzEsMCwiMiIsMV0sWzQsMCwiMiIsMV0sWzIsMCwiMiIsMV0sWzMsNSwiMiIsMV0sWzUsMCwiMyIsMV0sWzMsNCwiMyIsMV0sWzgsNiwiMiIsMV0sWzYsNywiMyIsMV0sWzksNywiMyIsMV0sWzEwLDcsIjMiLDFdLFs4LDksIjIiLDFdLFs4LDEwLCIyIiwxXSxbOCwxMSwiMyIsMV0sWzExLDcsIjIiLDFdXQ==)
 
 
 
