@@ -309,6 +309,7 @@ Equivalently, $a\divides b$ and $b\divides a$.
 
 
 :::{.example title="of specs"}
+\envlist
 
 - $\Id(\ZZ) = \ts{ \gens{m} \st m \in \ZZ^{\geq 0}}$
 - $\mspec \ZZ = \ts{ \gens{p} \st p\neq 0 \text{ is prime} }$
@@ -347,17 +348,16 @@ In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 :::
 
 :::{.example title="of why the converse doesn't hold"}
-For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse:
-\[
-x^2 \mod{x^2 + x} \in \QQ[x]/(x^2 + x)
-.\] 
-Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
+For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
+Take $R \da k[x, y]/\gens{x^2-y^3} \cong k[x^2, y^3]$, which is a domain,
+But here $[x^2] = [y^3]$ as equivalence classes where $[y^3]$ is irreducible since every element in $r\in R$ has $\deg_y(r) = 0,3,6,\cdots$.
+But $[y^3]$ is not prime since it divides $[x^2]$ but doesn't divide $[x]$.
 :::
 
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
-\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}
+\spec(R) = \theset{\mfp \normal R \suchthat \mfp \text{ is prime}}
 .\]
 :::
 
@@ -451,7 +451,7 @@ Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
 :::{.definition title="Unique Factorization Domain"}
 A ring $R$ is a **unique factorization domain** iff $R$ is an integral domain and every $r\in R\smz$ admits a decomposition
 \[  
-r = u \prod_{i=1}^n p_i
+r = u \mfpod_{i=1}^n p_i
 \]
 where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::
