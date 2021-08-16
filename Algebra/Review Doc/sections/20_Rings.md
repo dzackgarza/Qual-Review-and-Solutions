@@ -678,7 +678,7 @@ Let $U, U(R), R\units$ be the units of $R$.
 :::{.definition title="Nilradical"}
 The **nilradical** of $R \in \CRing$ is
 \[
-\nilrad{R} \definedas \theset{x\in R \suchthat x \text{ is nilpotent}} = \rad{0}
+\nilrad{R} \definedas \theset{x\in R \suchthat x \text{ is nilpotent}}
 .\]
 :::
 
@@ -719,10 +719,12 @@ Show that the nilradical is the intersection of all prime ideals.
 > See A&M 1.8
 
 Write $P$ as the intersection of all prime ideals of $R$.
+\
 
 $\nilrad{R} \subseteq P$:
 Suppose $r\in \nilrad{R}$ so $r^n = 0$ and let $\mfp \in \spec R$.
 Then use that $0\in I$ for any ideal: $r^n = 0 \in \mfp \implies r\in \mfp$ since $\mfp$ is prime.
+\
 
 $\nilrad{R}^c \subseteq P^c$:
 Fix $f$ non-nilpotent, we want to show $f$ is not in any prime ideal.
@@ -735,9 +737,6 @@ Thus $ab\not \in \mfp$ so $f\not\in \mfp$.
 Letting $\mfp$ be arbitrary yields $f\not \in P$.
 :::
 
-:::{.exercise title="?"}
-Show that $\nilrad{R} = \Intersect_{p\in \spec R} p$ is the intersection of all prime ideals $p\normal R$.
-:::
 
 :::{.definition title="Jacobson Radical"}
 The **Jacobson radical** $\jacobsonrad{R}$ is the intersection of all maximal ideals, i.e.
@@ -758,7 +757,7 @@ A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e
 :::
 
 :::{.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition 
+A module \( M \) is **semisimple** if and only if it admits a decomposition 
 \[
 M = \bigoplus_{j\in J} M_j
 \]
