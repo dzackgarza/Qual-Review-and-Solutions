@@ -145,12 +145,26 @@ where we now get equality since these sets have the same cardinality.
 :::
 
 
-:::{.proof title="?"}
+:::{.proof title="of Sylow 3"}
 \envlist
 
 - $n_p\equiv 1 \mod p$:
-  - Let $G\actson \mcs \da \Syl_p(G)$ by conjugation, apply the lemma to get $n_p \equiv \Fix_{\mcs}(G) \mod p$.
+  - Fix a $P\in \Syl_p(G)$, and let $P\actson \mcs \da \Syl_p(G)$ by conjugation.
+  - Apply the lemma to get $n_p \equiv \Fix_{\mcs}(P) \mod p$.
+    The claim is that there is just one fixed point.
+  - If $Q\in \Fix_{\mcs}(P)$, then $pQp\inv = Q$ for all $p\in P$, so $P$ normalizes $Q$ and $P \subseteq N_G(Q) \leq G$.
+  - Then $P, Q \in \Syl_p(N_G(Q))$, which by Sylow II are conjugate.
+  - Since $Q\normal N_G(Q)$, there is only one conjugate of $Q$, and $P=Q$.
+  - So $P$ is the only fixed point.
 
+- $n_p \divides m$:
+  - Let $G\actson X\da \Syl_p(G)$ by conjugation; this is transitive by Sylow II and there is one orbit.
+  - Then $\# X$ must divide $\$ G$, so $n_p$ divides $\# G = p^k m$.
+  - Using $n_p \equiv 1 \mod p$, we can't have $n_p\divides p^k$, and so $n^p$ must divide $m$.
+
+- $n_p = [G: N_G(P)]$ for any $P\in \Syl_p(G)$:
+  - Let $G\actson \Syl_p(G)$ by conjugation and apply orbit-stabilizer to get $n_p = [G: \Stab(P)]$
+  - Identify $\Stab(P) = N_G(P)$.
 :::
 
 
