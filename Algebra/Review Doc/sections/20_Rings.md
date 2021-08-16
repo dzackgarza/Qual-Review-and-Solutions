@@ -568,8 +568,8 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 - A PID that is not a Euclidean Domain: $\ZZ\left[\frac{1 + \sqrt{-19}}{2}\right]$.
   - *Proof*: complicated.
 
-- A UFD that is not a PID: $\FF[x, y]$.
-  - *Proof*: $\gens{x, y}$ is not principal
+- A UFD that is not a PID: $\ZZ[x]$.
+  - *Proof*: $\ZZ$ a UFD implies $\ZZ[x]$ is a UFD, but  $\gens{2, x} = \ts{\sum r_ix^i \st r_0 \in 2\ZZ}$ is not principal. 
 
 -  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
    - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
