@@ -537,6 +537,7 @@ If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 \envlist
 
 - Let $m\da \# G = pqr$.
+  The claim is that $G$ has some normal Sylow subgroup.
 - If none of the Sylow $p,q,r$ groups are normal, then $n_r \geq r$ and $n_p \geq q$.
   Counting the contributions from just $\Syl_q(G)$ and $\Syl_p(G)$ yields
   \[
@@ -550,6 +551,7 @@ qr-q-r \leq 0 \iff q(r-1) \leq r \iff q\leq {r\over r-1}
 .\]
   But $q>2$ be assumption, and $1\leq {r\over r-1}\leq 2$ for any number $r$. $\contradiction$.
 
+- So there is one of $S_p , S_q, S_r$ that is normal in $G$.
 
 
 :::
