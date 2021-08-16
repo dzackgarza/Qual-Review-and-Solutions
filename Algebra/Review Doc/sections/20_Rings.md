@@ -560,7 +560,10 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 Mnemonics:
 
 - Field $\implies$ UFD: given $x,y$ we need to write $x=qy+r$, so just take $q=y\inv$ and $r=0$.
-- Euclidean $\implies$ PID:
+- Euclidean $\implies$ PID: to divide is to contain, and the Euclidean algorithm terminates to yield a gcd.
+  Alternatively, pick an element $a\in I$ of minimal degree. 
+  If $I\neq Ra$ pick $b\in Ra$ that $a$ doesn't divide and write $b = aq + r$ with $d(r) < d(a)$.
+  Then $r = b-aq \in I$. $\contradiction$
 
 :::
 
