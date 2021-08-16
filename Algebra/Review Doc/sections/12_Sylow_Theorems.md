@@ -42,16 +42,19 @@ If $G\actson X$ for $G$ a $p\dash$group, then letting $\Fix(G) \da \ts{x\in X \s
 
 > For full proofs (some of which I've borrowed), see Keith Conrad's notes: <https://kconrad.math.uconn.edu/blurbs/grouptheory/sylowpf.pdf>
 
-Write
 
+:::{.remark}
+Some setup and notation: assume
 
 - $\abs{G} = p^k m$ where $(p, m) = 1$,
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
+:::
+
+
 
 ### Sylow 1 (Cauchy for Prime Powers)
-
 
 :::{.theorem title="Sylow 1"}
 \[
@@ -92,7 +95,6 @@ xH \in \Fix_H(G/H)
 
 :::
 
-
 ### Sylow 2 (Sylows are Conjugate)
 
 :::{.theorem title="Sylow 2"}
@@ -108,6 +110,27 @@ S_p^i, S_p^j \in \mathrm{Syl}_p(G) \implies \exists g \text{ such that } g S_p^i
 n_p = 1 \iff S_p \normal G
 .\]
 :::
+
+:::{.proof title="of Sylow 2"}
+\envlist
+
+- Let $S_1, S_2\in \Syl_p(G)$, and let $S_1\actson G/S_2$ by left-translation.
+- Use the lemma:
+\[
+\# (G/S_2) \equiv \Fix_{S_1}(G/S_2) \mod p
+.\]
+
+- $[G:S_2] = m$ is coprime to $p$, so there is a fixed point, say $xS_2$ where $gxS_2 = xS_2$ for all $g\in S_1$.
+\[
+gxS_2 = xS_2 \forall g\in S_1 \\
+\implies gx \in xS_2 \forall g\in S_1 \\
+\implies S_1 x \subseteq xS_2 \\
+\implies S_1 \subseteq xS_2 x\inv
+,\]
+where we now get equality since these sets have the same cardinality.
+
+:::
+
 
 ### Sylow 3 (Numerical Constraints)
 
