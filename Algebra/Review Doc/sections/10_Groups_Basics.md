@@ -6,6 +6,7 @@ Summary of useful qual tips:
 - Slightly obvious but good to remember:
   - Subgroups of abelian groups are automatically normal.
   - If $N$ is normal in $G$, then $N$ is normal in any subgroup containing it.
+  - If $N\leq G$ is the unique group of order $\# N$, then $N$ is normal (since any conjugate must have the same size).
 - Sizes and structure:
   - Quotienting by bigger groups yields smaller indices:
   \[
