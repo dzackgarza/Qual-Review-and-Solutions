@@ -293,7 +293,6 @@ G = S_3 \cong D_3, A_3 \cong C_3
 \sigma:
 &\begin{cases}
 \omega &\mapsto \omega
-&  
 \\
 \zeta_3 &\mapsto \zeta_3\cdot \zeta_3.
 \end{cases}
@@ -302,7 +301,6 @@ G = S_3 \cong D_3, A_3 \cong C_3
 \tau:
 &\begin{cases}
 \omega &\mapsto \omega
-&  
 \\
 \zeta_3 &\mapsto \bar{\zeta_3}.
 \end{cases}
@@ -594,7 +592,8 @@ Computations show that
 
 and thus
 \[
-\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
+\sigma^2(\alpha_1) 
+&= \sigma(\alpha_2) \\
 &= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
 &= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
 &= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\

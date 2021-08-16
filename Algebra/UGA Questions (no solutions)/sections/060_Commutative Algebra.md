@@ -975,6 +975,7 @@ Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries 
 :::
 
 :::{.solution}
+\envlist
 
 :::{.proof title="of a"}
 $\implies$:

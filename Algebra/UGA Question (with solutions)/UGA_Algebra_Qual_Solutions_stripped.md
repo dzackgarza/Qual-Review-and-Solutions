@@ -2261,6 +2261,9 @@ b.  Let \( k \) be a field. Show the ring \( M_n (k) \), \( n \times n \) matric
 :::
 
 ::: {.solution}
+```{=tex}
+\envlist
+```
 ::: {.proof title="of a"}
 \( \implies \):
 
@@ -2801,7 +2804,6 @@ Part b:
     \sigma:
     &\begin{cases}
     \omega &\mapsto \omega
-    &  
     \\
     \zeta_3 &\mapsto \zeta_3\cdot \zeta_3.
     \end{cases}
@@ -2810,7 +2812,6 @@ Part b:
     \tau:
     &\begin{cases}
     \omega &\mapsto \omega
-    &  
     \\
     \zeta_3 &\mapsto \mkern 1.5mu\overline{\mkern-1.5mu\zeta_3\mkern-1.5mu}\mkern 1.5mu.
     \end{cases}
@@ -3079,7 +3080,8 @@ Computations show that
 
 and thus
 \[
-\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
+\sigma^2(\alpha_1) 
+&= \sigma(\alpha_2) \\
 &= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
 &= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
 &= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
