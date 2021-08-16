@@ -302,6 +302,7 @@
 \newcommand{\lci}[0]{\mathrm{lci}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\liea}[0]{{\mathfrak{a}}}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
 \newcommand{\lief}[0]{{\mathfrak{f}}}
@@ -732,11 +733,22 @@
 
 # Topics and Remarks 2
 
+
+:::{.remark}
+(DZG) on the structure of these notes: these are *extremely* disorganized at the moment, and only reflect some amalgamation of all of the random notes I made to myself while studying for qualifying exams.
+As a result, things are bound to be out of order, and likely useless pedagogically unless you've seen most of the material before.
+Moreover, this has been a long-running document (started in my undergrad years, so pre-2018), and since I've forgotten and rewritten certain things at various points, there may even be duplicated material (e.g. propositions stated/proved in multiple places, repeated exercises or statements, etc).
+
+In any case, I'd love to hear if you do find it useful!
+Readers are welcome to email me with any questions, comments, errors/typos, suggestions for improvement, or just to say hello! 😄
+:::
+
+
 :::{.remark}
 Adapted from remark written by Roy Smith, August 2006:
 
-As a general rule, students are responsible for knowing both the theory (proofs) and practical
-applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the Galois group of a given polynomial**) of the topics mentioned.
+"As a general rule, students are responsible for knowing both the theory (proofs) and practical
+applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the Galois group of a given polynomial**) of the topics mentioned."
 
 :::
 
@@ -951,6 +963,41 @@ Chapters 1-9 of Dummit and Foote
 
 # Group Theory
 
+:::{.remark}
+Summary of useful qual tips:
+
+- Slightly obvious but good to remember:
+  - Subgroups of abelian groups are automatically normal.
+  - If $N$ is normal in $G$, then $N$ is normal in any subgroup containing it.
+  - If $N\leq G$ is the unique group of order $\# N$, then $N$ is normal (since any conjugate must have the same size).
+  - Using the subgroup correspondence: if $L/H\leq G/H$ then $L\leq G$ has size $\#(L/H)\#H$.
+- Sizes and structure:
+  - Quotienting by bigger groups yields smaller indices:
+  \[
+  1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
+  .\]
+  - $x$ is central iff $[x] = \ts{e}$.
+  - Unions aren't (generally) subgroups, intersections always are.
+  - Coprime order subgroups intersect trivially.
+  - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
+- Conjugacy:
+  - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
+  - Conjugate subgroups have equal cardinality.
+  - Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
+  - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
+  - Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
+    Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
+    Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
+- Cosets:
+  - Cosets partition a group.
+  - Anything dealing with indices $[G:H]$: try just listing the cosets.
+  - $aH = bH \iff ab\inv \in H$.
+  - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
+- Sylows:
+  - If $S_p$ is normal, then $S_p$ is characteristic.
+    This is useful if $H\leq G$ and $P\in\Syl_p(H)$ is normal in $H$, then $P$ is also normal in $G$.
+
+:::
 ## Big List of Notation
 
 :::{.remark title="Notation"}
@@ -1008,25 +1055,30 @@ I use the following notation throughout:
 For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of Sylow$\dash p$ subgroups of $G$.
 :::
 
+
+
+
 ## Definitions
 
 :::{.fact}
 An set morphism that is *either* injective or surjective between sets of the same size is automatically a bijection.
-Consequently, a group morphism between groups of the same size that is either injective or surjective is automatically an isomorphism.
+It turns out that a group morphism between groups of the same size that is either injective or surjective is automatically a bijection, and the inverse is automatically a group morphism, so bijective group morphisms are isomorphisms.
 
 :::
 
-:::{.fact title="The division algorithm"}
+:::{.fact title="Bezout's Identity"}
 If $a, b\in \ZZ$ with $\gcd(a, b) = d$, then there exist $s,t\in \ZZ$ such that
 \[
 as + bt = d
 .\]
 
+This $d$ can be computed using the extended Euclidean algorithm.
+
 :::
 
 :::{.remark}
 Useful context clue!
-In particular, this works when $a, b$ are coprime and $d=1$.
+In particular, this works when $a, b$ are coprime and $d=1$, since you can write $x^1 = x^{as + bt} = x^{as}x^{bt}$ to get interesting information about orders of elements.
 If you see "coprime" in a finite group question, try the division algorithm.
 :::
 
@@ -1036,16 +1088,6 @@ The **order** of an element $g\in G$, denoted $n \da o(g)$, is the smallest $n\i
 
 :::{.exercise title="?"}
 Show that the order of any element in a group divides the order of the group.
-:::
-
-:::{.definition title="Commutator"}
-The **commutator subgroup** of $G$ is denoted $[G, G] \leq G$.
-It is the subgroup generated by all elementary commutators:
-\[
-[G, G] \da \gens{ aba\inv b\inv \st a, b\in G } 
-.\]
-
-It is the smallest normal subgroup $N\normal G$ such that $G/N$ is abelian, so if $H\leq G$ and $G/H$ is abelian, $H\subseteq [G, G]$.
 :::
 
 :::{.definition title="Group Presentation"}
@@ -1058,7 +1100,7 @@ Finding morphisms between presentations: if $G$ is presented with generators $g_
 \phi: G &\to H \\
 g_i &\mapsto h_i \quad \forall i
 .\]
-Why this exists: the presentation yields a morphism $\pi: F(g_i) \to G$ with $G\cong F(g_i) / \ker \pi$.
+Why this exists: the presentation yields a surjective morphism $\pi: F(g_i) \to G$ with $G\cong F(g_i) / \ker \pi$.
 Define a map $\psi: F(g_i) \to H$ where $g_i\mapsto h_i$, then since the $h_i$ satisfy the relations $r_i$, $\ker \pi \subseteq \ker \psi$.
 So $\psi$ factors through $\ker \pi$ yielding a morphism $F/\ker \pi \to H$.
 :::
@@ -1073,16 +1115,24 @@ A subset $H\subseteq G$ is a **subgroup** iff
 3. Inverses: $g\in H \iff g\inv \in H$.
 :::
 
-:::{.exercise title="Unions of subgroups"}
-Show that if $K, H\leq G$ are subgroups, then their union $H \union K$ is a subgroup iff (wlog) $H \subset K$.
-:::
-
 :::{.definition title="Subgroup Generated by a Subset"}
 If $H\subset G$, then $\gens{H}$ is the smallest subgroup containing $H$:
 \[
 \gens{H} = \intersect \theset{H\suchthat H\subseteq M \leq G} M = \theset{ h_1^{\pm 1} \cdots h_n^{\pm 1} \suchthat n\geq 0, h_i \in H}
 \]
 where adjacent $h_i$ are distinct.
+:::
+
+:::{.definition title="Commutator"}
+The **commutator subgroup** of $G$ is denoted $[G, G] \leq G$.
+It is the subgroup *generated* by all elementary commutators:
+\[
+[G, G] \da \gens{ aba\inv b\inv \st a, b\in G } 
+.\]
+It is the smallest normal subgroup $N\normal G$ such that $G/N$ is abelian, so if $H\leq G$ and $G/H$ is abelian, $H\subseteq [G, G]$.
+
+> Note that elements in $[G, G]$ are generally *products* of elementary commutators, and not elementary themselves, since we're taking the group generated by them.
+
 :::
 
 :::{.proposition title="One-step subgroup test"}
@@ -1097,27 +1147,17 @@ If $H \subseteq G$ and $a,b\in H \implies ab\inv\in H$, then $H\leq G$.
 - Closure: let $x, y\in H$, then $y\inv \in H$ by above, so $xy = x(y\inv )\inv \in H$.
 :::
 
-:::{.exercise title="Coprime order implies disjoint"}
-Show that coprime order subgroups are disjoint, or more generally $\ZZ_p, \ZZ_q \subset G \implies \ZZ_p \intersect \ZZ_q = \ZZ_{(p,q)}$.
-:::
-
-:::{.proposition title="Intersection of subgroups is a subgroup"}
-If $H, K\leq G$ then $J \da H \intersect K \leq G$ is a subgroup.
-Moreover $J\leq H$ and $J \leq K$.
-:::
-
-:::{.proof title="?"}
-One-step subgroup test.
-:::
-
-:::{.exercise title="?"}
+:::{.exercise title="On subgroups"}
 \envlist
 
 - Show that the intersection of two subgroups is again a subgroup.
+  - Hint: one-step subgroup test.
+- Show that if $H\da C_m, K\da C_n \leq G$ are cyclic, then $H \intersect K = C_{d}$ where $d \da \gcd(m, n)$.
 - Show that the intersection of two subgroups with coprime orders is trivial.
+- Show that the union of two subgroups $H, K$ is a subgroup iff $H \subset K$, and so is generally *not* a subgroup.
 - Show that subgroups with the *same* prime order are either equal or intersect trivially.
+- **Important for Sylow theory**: show (perhaps by example) that if $S_1, S_2$ are distinct subgroups of order $p^k$, then it's possible for their intersection to be trivial **or** for them to intersect in a subgroup of order $p^\ell$ for $1\leq \ell \leq k-1$.
 - Give a counterexample where $H,K\leq G$ but $HK$ is not a subgroup of $G$.
-- Show that $G=H\cross K$ iff the conditions for recognizing direct products hold.
 :::
 
 ## Conjugacy
@@ -1133,14 +1173,13 @@ C(h) \da \ts{ ghg\inv \st g\in G }
 $[e] = \ts{ e }$ is always in a conjugacy class of size one -- this is useful for counting and divisibility arguments.
 Conjugacy classes are **not** subgroups in general, since they don't generally contain $e$.
 However, by orbit-stabilizer and the conjugation action, their sizes always divide the order of $G$.
-\
 
-Also note that$[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
+**Useful qual fact**: $[x] = \ts{ x } \iff x\in Z(G)$, i.e. having a trivial conjugacy class is the same as being central.
 :::
 
 :::{.definition title="Conjugate subgroups"}
 Two subgroups $H, K \leq G$ are **conjugate** iff there exists some $g\in G$ such that $gHg\inv = K$.
-Note that all conjugates have the same cardinality.
+Note that all conjugate subgroups have the same cardinality.
 :::
 
 :::{.exercise title="?"}
@@ -1202,6 +1241,8 @@ Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ 
 :::
 
 :::{.exercise title="?"}
+\envlist
+
 - Show that if $H, K \normal G$ and $H\intersect K = \emptyset$, then $hk=kh$ for all $h\in H,k\in K$.
 - Show that if $H,K\normal G$ are normal subgroups that intersect trivially, then $[H, K] = 1$ (so $hk = kh$ for all $k$ and $h$).
 
@@ -1209,12 +1250,45 @@ Conversely, if $C(h_i) \subseteq H$ for all $h_i \in H$, then $gh_ig\inv \in H$ 
 
 :::{.exercise title="?"}
 Prove that if $G$ is a $p\dash$group, every subgroup $N\normal G$ intersects the center $Z(G)$.
+
+> Hint: use the class equation.
+
 :::
+
+:::{.solution}
+\envlist
+
+Easy solution:
+
+- Use that $\# H \mod p = 1$ since $H\leq G$ and $G$ is a $p\dash$group.
+- Then use that $H$ is a union of conjugacy classes, and since $e\in H$ there is at least one class of size 1, so
+\[
+\# H = \# \disjoint' [h_i] = \# [e] + \sum' \# [h_i] \\
+\implies 0 \equiv \# H \equiv 1 + \sum' \#[h_i] \mod p
+,\]
+and since each $\# [h_i]$ divides $\# H$, not all can be of size $p^\ell$ since then the sum would be $0\mod p$.
+So at least one other $\# [h_i] = 1$, making that $h_i$ central.
+
+Another solution:
+
+- Idea: use the class equation to force $p$ to divide $\#(H \intersect Z(G))$.
+  Applying it to $H$ yields
+\[
+H = Z(H) \disjoint_{i=1}^m [h_i]
+,\]
+where the $[h_i]$ are conjugacy classes of size greater than 1.
+
+- Now use that $Z(H) = Z(G) \intersect H$, and since $p$ divides the LHS the result will follow if $p$ divides the size of the disjoint union on the RHS.
+- This is true because each $\#[h_i] \neq 1$ and $[h_i]$ divides $\# H$ which divides $\# G$ which is a power of $p$.
+  So $p\divides \# [h_i]$ for each $i$.
+
+:::
+
 
 ## Centralizing and Centers
 
 :::{.definition title="Centralizer"}
-The centralizer of an en element is defined as 
+The **centralizer of an element** is defined as 
 \[
 Z(h) \da C_G(h) \da \ts{ g\in G \st ghg\inv = h } 
 ,\]
@@ -1229,7 +1303,7 @@ the elements of $G$ that simultaneously stabilize all of $H$ pointwise under con
 
 :::{.definition title="Normalizer"}
 \[
-N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \union \theset{H\suchthat H \normal M \leq G} M
+N_G(H) = \theset{g\in G \suchthat gHg\inv = H} = \Union_{M\in S} M, \quad S \da \theset{H\suchthat H \normal M \leq G} 
 \]
 Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead can permute elements of $H$.
 :::
@@ -1238,15 +1312,8 @@ Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead 
 $C_G(S) \normal N_G(H)$ for any $H$.
 :::
 
-:::{.proposition title="NC Theorem"}
-$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
-:::
-
-:::{.definition title="Normalizers Grow"}
-If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
-:::
-
 :::{.definition title="Center"}
+The **center** of $G$ is defined as
 \[
 Z(G) = \ts{ g\in G \st [g, h] = e \, \forall h\in H}
 = \ts{ g\in G \st Z(g) = G } 
@@ -1260,8 +1327,20 @@ those $g\in G$ that commute with every element of $G$.
 
 - Show that if $G/Z(G)$ is cyclic then $G$ is abelian.
 - Show that $G/N$ is abelian iff $[G, G] \leq N$.
-- Show that every normal subgroup of $G$ is contained in $Z(G)$.
+- Show that normal subgroups are not necessarily contained in $Z(G)$.
+  - Hint: consider the order 3 subgroup of $S_3$.
 :::
+
+
+:::{.solution}
+The $G/Z(G)$ theorem:
+
+- Write $H\da Z(G)$ and $G/H = \gens{xH}$ as a cyclic quotient.
+- Fix $a, b\in G$, then $aH = x^n H$ and $bH = x^m H$.
+- So $ax^{-n} = h_1, bx^{-m} = h_2$ where the $h_i$ are now central.
+- Now write $ab = (x^n h_1)(x^m h_2) = ba$ by commuting everything.
+:::
+
 
 ## Cosets
 
@@ -1271,35 +1350,38 @@ K\leq H \leq G \implies [G: K] = [G:H] [H: K]
 .\]
 :::
 
-:::{.proposition title="Indices grow"}
-If $H, K \leq G$, then 
+:::{.proposition title="Quotients by bigger subgroups yield smaller quotients"}
+If $H\leq K \leq G$, then 
 \[
-[H: H \intersect K ]\leq [G: K] 
+\# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
 .\]
+In particular, If $H, K\leq G$ are just arbitrary, since $H \intersect K \leq H, K$ we have $[H: H \intersect K] \geq [G:H] \text{ and } [G:K]$.
 :::
 
 :::{.proof title="?"}
-Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct cosets.
-Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since $H\leq G$, which forces $h_i h_j\inv \not\in K$.
-So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$.
+Write $G/H \intersect K \da G/J = \ts{ h_1J, \cdots, h_m J  }$ as distinct cosets where $m\da [G:H]$ and the $h_i$ are all in $H$.
+Then $i\neq j\implies h_i h_j\inv \not \in H \intersect K$, but $h_i h_j\inv \in H$ since subgroups are closed under products and inverses, which forces $h_i h_j\inv \not\in K$.
+So $h_i K \neq h_j K$, meaning there are at least $m$ cosets in $G/K$, so $[G:K] \geq m$.
 :::
 
-:::{.proposition title="Cosets are identical or disjoint"}
-Any two cosets $xH, yH$ are either identical or disjoint.
+:::{.proposition title="Cosets are equal or disjoint"}
+Any two cosets $xH, yH$ are either equal or disjoint.
 :::
 
 :::{.proof title="?"}
-Note $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
-The reverse containment is clear, so $G = \union_{x\in G} xH$ is a union of its cosets.
-Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
-Write $\ell =xh_1 =yh_2$ for some $h_i$, then
+\envlist
+
+- $x\in xH$, since $e\in H$ because $H$ is a subgroup and we can take $h=e$ to get $x = xe \da xh \in xH$.
+- The reverse containment is clear, so $G = \Union_{x\in G} xH$ is a union of its cosets.
+- Suppose toward a contradiction that $\ell \in xH \intersect yH$ we'll show $xH = yH$.
+- Write $\ell =xh_1 =yh_2$ for some $h_i$, then
 \[
 xh_1 = yh_2 &\implies x = yh_2 h_1\inv \\
 xh_3\in xH &\implies xh_3 = (yh_2h_1\inv) h_3 \in yH
 ,\]
-so $xH \subseteq yH$.
-A symmetric argument shows $y_H \subseteq xH$.
-[^df_p80_identical_disjoint]
+  so $xH \subseteq yH$.
+
+- A symmetric argument shows $y_H \subseteq xH$.[^df_p80_identical_disjoint]
 
 [^df_p80_identical_disjoint]: 
 See full argument: D&F p.80.
@@ -1350,6 +1432,12 @@ A **dihedral group** of order $2n$ is given by
 \[
 D_n = \gens{r, s \suchthat r^n, s^2, rsr\inv = s\inv } = \gens{r, s \st r^n, s^2, (rs)^2 }
 \]
+The $r$ is a cycle of length $n$, and $s$ is a reflection.
+
+Examples of explicit cycle presentations:
+
+- $D_4 = \gens{(1,2,3,4), (1,3)}$ which is a $2\pi/4$ rotation and a reflection through the diagonal line $y=-x$ in a square.
+- $D_5 = \gens{(1,2,3,4,5), (1,5)(2,4)}$ which is a $2\pi/5$ rotation and a reflection about the line through vertex $3$ in a pentagon.
 :::
 
 :::{.definition title="The Quaternion Group"}
@@ -1382,7 +1470,8 @@ Everything squares to $-1$, and the triple product is $-1$:
 :::
 
 :::{.definition title="Transitive Subgroup"}
-A subgroup of $S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive. 
+A subgroup $H\leq S_n$ is **transitive** iff its action on $\theset{1, 2, \cdots, n}$ is transitive, i.e. for each pair $(i, j)$ there is some element $\sigma\in H$ such that $\sigma(i) = j$.
+Note that $\sigma$ may not fix other elements, and can have other effects!
 :::
 
 :::{.definition title="p-groups"}
@@ -1424,7 +1513,8 @@ S_n \da \gens{ \sigma_1, \cdots, \sigma_{n-1} \st \sigma_i^2, [\sigma_i, \sigma_
 :::
 
 :::{.definition title="The sign homomorphism"}
-Defined by the map
+Writing a cycle as a product of transpositions,
+the map defined by
 \[
 \sgn: S_n &\to (\ZZ/2, +) \\
 \prod_{i\leq 2k} (a_i b_i) &\mapsto 0 \\
@@ -1435,18 +1525,20 @@ Defined by the map
 :::{.remark}
 \envlist
 
-- The kernel is the alternating group, cycles that 
+- The kernel is the alternating group:
   - **Even** cycles
   - For a single cycle: has **odd** length
   - Have an **even** number of even length cycles.
-  - Can be written as an **even** number of transpositions
+  - Can be written as an **even** number of transpositions.
+  - Examples: $(1,2,3)$ or $(1,2)(3,4)$ in $S_4$.
+  - Non-examples: $(1,2)$ or $(1,2,3,4)$ in $S_4$, since they have an odd number of even length cycles.
 - The fiber over 1 is everything else:
   - **Odd** cycles
   - For a single cycle: has **even** length
   - Have an **odd** number of even length cycles.
   - Can be written as an **odd** number of transpositions
 
-> Mnemonic: the cycle parity of a $k\dash$cycle is the integer parity of $k-1$.
+> Mnemonic: the cycle parity of a $k\dash$cycle is the usual integer parity of $k-1$.
 
 :::
 
@@ -1616,6 +1708,20 @@ satisfying
 2. $g\cdot (h\cdot x) = (gh)\cdot x$
 :::
 
+:::{.remark title="Reminder of notation"}
+For a group $G$ acting on a set $X$,
+
+| Notation                                                                                  | Definition          |
+|-------------------------------------------------------------------------------------------|---------------------|
+| \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
+| \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
+| \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
+| \( \Fix = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
+
+Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
+Also, $x\in \Fix$ iff $\Orb(x) = \ts{x}$ and $\Stab_G(x) = G$.
+:::
+
 :::{.fact}
 For any group action, the kernel is the intersection of all stabilizers:
 \[
@@ -1637,8 +1743,7 @@ gG_{x} &\mapsto g\actson x
 .\]
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="of orbit stabilizer"}
 \envlist
 
 - Injectivity: $\Phi(gG_x) = \Phi(hG_x) \iff g\actson x=h\actson x \iff gh\inv \actson x = x \iff gh\inv \in G_x \iff gG_x = hG_x$.
@@ -1653,37 +1758,28 @@ gG_{x} &\mapsto g\actson x
 
 :::
 
+:::{.proposition title="Stabilizers of all orbit reps are conjugate"}
+If $X\in \GSets$, then for any points $x_i\in X$ in the same orbit, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
 
-:::{.proposition title="?"}
-If $X\in \GSets$ where $G\actson X$ transitively, then for any points $x_i\in X$, the stabilizers $G_{x_0}$ and $G_{x_1}$ are conjugate.
+Note that if $G$ acts transitively, this says all stabilizers are conjugate.
 :::
 
-\todo[inline]{Prove}
-
-
-:::{.proof title="?"}
+:::{.proof title="that stabilizers are conjugate"}
 \envlist
 
-- Injectivity: check that $\phi(\bar{g}) = \phi(\bar{h}) \iff g\actson x_0 = h\actson x_0 \iff gh\inv \in G_{x_0}$.
-- Surjectivity: follows from transitivity.
+- Fix $x\in X$ and $y\in \Orb(x)$, so $g.x=y$ for some $g$.
+- Let $H_x \da \Stab(x)$ and $H_y\da \Stab(y)$, the claim is that $H_x = g\inv H_y g$.
+- Now just check:
+\[
+h\in H_x &\iff hx = x \\
+&\iff hg\inv y = g\inv y \\
+&\iff ghg\inv y = y \\
+&\iff ghg\inv \in H_y \\
+&\iff h\in g\inv H_y g
+,\]
+so $H_x = g\inv H_y g$.
+
 :::
-
-
-:::{.remark title="Reminder of notation"}
-For a group $G$ acting on a set $X$,
-
-| Notation                                                                                  | Definition          |
-|-------------------------------------------------------------------------------------------|---------------------|
-| \( \OO(x) = Gx = \theset{g\cdot x \suchthat g\in G} \subseteq X \)                        | Orbit               |
-| \(\Stab(x) = G_x = \ts{ g \in G \st g\cdot x=x } \leq G \)                                | Stabilizer          |
-| \( X/G \subseteq 2^X \)                                                                   | Set of Orbits       |
-| \( \Fix = X^G = \theset{x\in X \suchthat g\cdot x = x\, \forall g\in G} \subseteq X \) | Set of Fixed Points |
-
-Note that being in the same orbit is an equivalence relation which partitions $X$, and $G$ acts transitively if restricted to any single orbit.
-Also, $x\in \Fix$ iff $\Orb(x) = \ts{x}$ and $\Stab_G(x) = G$.
-:::
-
-
 
 :::{.theorem title="Orbit-Stabilizer"}
 
@@ -1696,121 +1792,163 @@ Also, $x\in \Fix$ iff $\Orb(x) = \ts{x}$ and $\Stab_G(x) = G$.
 
 ## Examples of Orbit-Stabilizer and the Class Equation
 
-:::{.example title="Trivial"}
-Let $G$ act on itself by left translation, where $g \mapsto (h\mapsto gh)$.
+:::{.remark title="The fixed-point count trick"}
+A useful mnemonic: for any group action $\phi: G\actson X$, using that orbits partition $X$ we always have
+\[
+X = \Fix(\phi) \Disjoint_{x}' \Orb(x)
+,\]
+where $\Fix(\phi)$ is the union of all orbits of size 1, and the remaining union is over distinct nontrivial orbits, taking one representative $x$ from each.
+:::
 
-- The orbit $\OO(x) = Gx = G$ is the entire group.
+:::{.proposition title="Simple groups with a nontrivial subgroup embed into symmetric groups"}
+An application of group actions:
+if $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+:::
+
+:::{.proof}
+\envlist
+
+- Define a group action $\phi: G\actson G/H \da \ts{eH, g_1 H, \cdots, g_{n-1} H}$ acting on the $n$ cosets of $H$ by left-translation $g.(g_k H) = (gg_k) H$.
+- Then use that $\Sym(G/H) \leq S_n$, so $\im \phi \leq S_n$ is a subgroup.
+- Since $G$ is simple and $\ker \phi \leq G$, we have $\ker \phi = 1, G$.
+  If $\ker \phi = 1$, $\phi$ is injective and we're done.
+
+- Otherwise $\ker \phi = G$, and acting on $eH$ yields $gH = H$ for all $g$, forcing $H=G$ and $n=1$, contradicting that $H<G$ is proper. $\contradiction$
+:::
+
+### Left Translation
+
+:::{.example title="The left translation action: trivial"}
+Let $G$ act on itself by left translation, where $\phi: g \mapsto (h\mapsto gh)$.
+
+- The orbit $\Orb(x) = G$ is the entire group.
   - This action is transitive.
-- The set of fixed points \( \Fix = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
-- The stabilizer \( G_x = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
+- The set of fixed points \( \Fix(\phi) = \ts{g\in G \st gx=x \,\forall x\in G } = \ts{ e } \) is just the identity.
+- The stabilizer \( \Stab(x) = \ts{ g\in G\st gx=x } = \ts{ e } \) is just the identity.
 - The kernel is the identity.
-
+- Orbit stabilizer just says $G \cong G/\ts{e}$.
 
 :::
 
-
-### The Class Equation and Burnside's Lemma
+### Conjugation: The Class Equation and Burnside's Lemma
 
 :::{.example title="Conjugation yields centers/centralizers"}
-Let $G$ act on *itself* by conjugation.
+Let $G$ act on *itself* by conjugation, so $\phi: g.x = gxg\inv$.
 
-- The orbit $\OO(g) = C(g)$ is the **conjugacy class** of $x$.
-  - Thus the action is transitive iff there is one conjugacy class.
-- The set of fixed points $\Fix = Z(G)$ is the **center**.
-- The stabilizer is $\Stab(g) = Z(g) = C_G(g)$, the **centralizer** of $g$.
+- The orbit $\Orb(g) = [g]$ is the **conjugacy class** of $g$.
+  - Thus the action is transitive iff $G$ has only one single conjugacy class, which can only happen if $\# G = 1, 2$.
+    On the other extreme, the orbits are all size 1 iff $G$ is abelian.
+- The set of fixed points $\Fix(\phi) = Z(G)$ is the **center**.
+- The stabilizer is $\Stab(g) = Z(g)$, the **centralizer** of $g$ in $G$.
 - The kernel is the intersection of all centralizers, i.e. again the **center** $Z(G)$.
-
+- Orbit-stabilizer says $[g] = G/Z(g)$, so **the size of a conjugacy class is the index of the centralizer**.
 
 :::
 
 :::{.remark}
-Note that $[G: C_G(x_i)]$ is the number of elements in the conjugacy class of $x_i$, and each $x_i \in Z(G)$ has a singleton conjugacy class.
-:::
-
-:::{.remark}
-Directly interpreting this using the orbit-stabilizer formula, the size of a conjugacy class $C(x)$ is the index of its centralizer, $[G: Z(x)]$, i.e.
+Worth reiterating: $[G: Z(g)]$ is the number of elements in the conjugacy class $[g]$, and each $g \in Z(G)$ has a singleton conjugacy class $[g] = \ts{g}$.
+Applying the fixed-point count trick and substituting in orbit-stabilizer yields
 \[
-\# {C(x)} = [G: Z(x)]
+G &= \Fix(\phi) \Disjoint_{x}' \Orb(x) \\
+&= Z(G) \Disjoint_{g}' [g]\\
+&= Z(G) \Disjoint_{g}' {G\over Z(g) } 
 .\]
-Now note that $G = \disjoint_k' \Orb(h_k)$ is a disjoint union of orbits (the prime denotes taking one representative from each orbit), and so
-\[
-G &= \Disjoint_k' \Orb(h_k) \mapsvia{\sim} \Disjoint_k' G/\Stab(h_k) \\
-\implies \# G &= \sum_{k}' \# C(h) = \sum_k' \#(G/\Stab(h_k)) = \sum_k' [G: Z(h_k)]
-.\]
-Pulling out the terms of size 1, we have $[G: N_G(h_k)] = 1 \iff h_k \in Z(G)$, which yields the class equation:
 
+Now taking cardinalities yields the class equation:
 
 :::
 
 :::{.corollary title="The Class Equation"}
 \[
-\abs{G} = \abs{Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
+\# {G} = \# {Z(G)} + \sum_{\substack{\text{One $g$ from} \\ \text{each nontrivial} \\ \text{conj. class}}} [G: Z(g)]
 \]
+
+As a reminder,
+\[
+Z(g) &= \ts{h\in G \st hgh\inv = g} \text{ is the centralizer of } g\\
+Z(G) &= \ts{h\in G \st hgh\inv = g\,\, \forall g\in G} = \Intersect_{g\in G} Z(g) \text{ is the center of } G 
+.\]
+
 :::
 
+:::{.exercise title="Applications of the class equation"}
+\envlist
 
-:::{.proposition title="Application of the Class Equation"}
-If $G$ is simple, $H < G$ proper, and $[G:H] = n$, then there exists an injective map $\phi: G \injects S_n$.
+- Show that $p$ groups have nontrivial centers.
+- Show that groups of order $p^2$ are abelian.
+
 :::
 
-:::{.proof}
-This action induces $\phi$; it is nontrivial since $gH = H$ for all $g$ implies $H = G$; $\ker \phi \normal G$ and $G$ simple implies $\ker \phi = 1$.
+:::{.solution}
+$p\dash$groups have nontrivial centers:
+
+- Abusing notation by identifying sets with their cardinalities, the class equation says $G = Z(G) + \sum_{g}' [G: Z(g)]$ where the terms in the sum are all bigger than 1.
+- Reducing mod $p$ yields $0 = Z(g) + 0$, since $p$ must divide $[G:Z(g)]$ when $[G:Z(g)] > 1$ because $G = [G:Z(g)]Z(g)$ and $p$ divides the LHS.
+- So $p$ divides $Z(g)$, making $Z(g)$ nontrivial.
+
+$p^2$ groups are abelian:
+
+- $Z(G) = 1,p,p^2$, and by above we know $Z(G)\neq 1$. 
+  If $Z(G) = p^2$ we're done, so assume $Z(G) = p$.
+- Then $G/Z(G) = p$ and groups of order $p$ are cyclic, so the $G/Z(G)$ theorem applies and $G$ is abelian.
 :::
 
 :::{.corollary title="Burnside's Lemma"}
 For $G$ a finite group acting on $X$, 
 \[
-\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# {X^g}
-\]
+\# {X/G} = \frac{1}{\# G }\sum_{g\in G} \# \Fix(g)
+,\]
+where $X/G = \ts{\Orb(x_1), \cdots, \Orb(x_n)}$ is the set or orbits and $\Fix(g) = \ts{x\in X \st gx=x}$ are the fixed points under $g$.
 
-> Mnemonic: the number of orbits is equal to the average number of fixed points, i.e.
+> Slogan: the number of orbits is equal to the average number of fixed points.
 
 :::
 
 :::{.proof title="of Burnside's Lemma"}
 Strategy: form the set $A \da \ts{ (g,x) \in G\cross X \st g\actson x = x }$ and write/count it in two different ways.
-First union over $G$:
+Write $\Stab(x) = \ts{g\in G \st gx=x}$ and $\Fix(g) = \ts{x\in X\st gx = x}$.
+
+First union over $G$, where the inner set lets $x$ vary:
 \[
-A = \Disjoint_{g\in G} \ts{ (g, x) \st gx = x } \cong \Disjoint_{g\in G} \ts{g}\cross X^g
+A = \Disjoint_{g_0\in G} \ts{ (g_0, x) \st g_0 x = x } \cong \Disjoint_{g_0\in G} \ts{g_0}\cross \Fix(g_0) \subseteq G\cross X
 .\]
 
-Then union over $X$:
+Then union over $X$, where the inner set lets $g$ vary:
 \[
-A = \Disjoint_{x\in X} \ts{ (g, x) \st gx= x } \cong \Disjoint_{x\in X} G_x \cross \ts{ g } 
+A = \Disjoint_{x_0\in X} \ts{ (g, x_0) \st gx_0= x_0 } \cong \Disjoint_{x_0\in X} \Stab(x_0) \cross \ts{ x_0 } \subseteq G\cross X
 .\]
 Taking cardinalities, and using the fact that $\ts{p} \cross A \cong  A$ as sets for any set $A$,
+we get the following equality
 \[
-\Disjoint_{g\in G} X^g
-\cong
-\Disjoint_{x\in X} G_x
-\implies 
-\sum_{g\in G}\# X^g
-=
-\sum_{x\in X} \# G_x
-.\]
-Apply orbit-stabilizer:
-\[
-\# G_x = {\# G \over \# Gx} \implies
-\sum_{g\in G} X^g
-&= \sum_{x\in X} \# G_x \\
-&= \sum_{x\in X} {\# G \over  \# Gx} \\
-&= \# G\sum_{x\in X} {1 \over  \# Gx}
-,\]
-so it suffices to show $\sum_{x\in X}{1\over \# Gx} = \# X/G$.
-Proceed by grouping terms in this sum according to which orbit they're in:
-\[
-\sum_{x\in X} {1\over \# Gx} 
-&=
-\sum_{Gx \in X/G} \sum_{y\in Gx} {1\over \# Gx} \\
-&=
-\sum_{Gx \in X/G} {1\over \# Gx} \sum_{y\in Gx} 1 \\
-&=
-\sum_{Gx \in X/G} {1\over \# Gx} \# G_x \\
-&=
-\sum_{Gx \in X/G} 1 \\
-&= \# X/G
+\sum_{g_0\in G} \# \Fix(g_0)
+= \# A
+= \sum_{x_0\in X} \# \Stab(x_0)
 .\]
 
+Now rearrange orbit-stabilizer: 
+\[
+\Orb(x_0) = G/\Stab(x_0) \implies \# \Stab(x_0) = \# G/ \# \Orb(x_0)
+,\]
+and use this to rewrite the RHS:
+\[
+\sum_{g_0\in G} \# \Fix(g_0)
+&= \sum_{x_0\in X} \# \Stab(x_0) \\
+&= \sum_{x_0\in X} {\# G \over \# \Orb(x_0)} \\
+&= \# G \sum_{x_0\in X} {1 \over \# \Orb(x_0)} \\ \\
+\implies {1\over \# G} \sum_{g_0\in G} \# \Fix(g_0) 
+&= \sum_{x_0\in X} {1\over \# \Orb(x_0)}
+,\]
+so it suffices to show the right-hand side sum is the number of orbits, $\#(X/G)$.
+
+Proceed by partitioning the sum up according to which orbit each term comes from:
+\[
+\sum_{x_0\in X}\qty{1\over \# \Orb(x_0)} 
+&= \sum_{\Orb(x_0) \in X/G} \qty{ \sum_{y\in \Orb(x_0)} \qty{1\over \# \Orb(x_0)} }\\
+&= \sum_{\Orb(x_0) \in X/G} \qty{1\over \# \Orb(x_0)}\sum_{y\in \Orb(x_0)} 1  \\
+&= \sum_{\Orb(x_0) \in X/G} \qty{1\over \# \Orb(x_0)} \# \Orb(x_0) \\
+&= \sum_{\Orb(x_0) \in X/G} 1 \\
+&= \#(X/G)
+.\]
 :::
 
 
@@ -1821,18 +1959,15 @@ Let $G$ act on $X \da\ts{H \st H\leq G}$ (its set of *subgroups*) by conjugation
 
 - The orbit $\OO(H) = \theset{gHg\inv \st g\in G}$ is the **set of conjugate subgroups** of $H$.
   - This action is transitive iff all subgroups are conjugate.
-- The fixed points $\Fix$ form the set of **normal subgroups** of $G$.
+- The fixed points $\Fix(G)$ form the set of **normal subgroups** of $G$.
 
 - The stabilizer $\Stab(H) = N_G(H)$ is the **normalizer** of $H$ in $G$.
 
-- The kernel is the intersection of all normalizers.
+- The kernel is the intersection of all normalizers: $\ker \phi = \Intersect_{H\leq G} N_G(H)$.
 
-:::
-
-:::{.corollary}
-Given $H \leq G$, the number of conjugate subgroups is $[G: N_G(H)]$, i.e.
+- Applying Orbit-stabilizer yields that the number of conjugates is the index of the normalizer:
 \[
-\abs{\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
+\# {\ts{ gHg ^{-1} \st g \in G } } = [G: N_G(H)]
 .\]
 
 :::
@@ -1844,13 +1979,23 @@ For a fixed proper subgroup $H< G$, let $G$ act on its cosets $X \da G/H \da \th
 
 - The orbit $\OO(xH) = G/H$, the entire set of cosets.
 
-  - Note that this is a *transitive* action.
+  - Note that this is a *transitive* action, since the trivial coset $eH\in G/H$ and its orbit is $gH$ as $g$ ranges over $G$, hitting every coset representative.
 
-- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$
+- The stabilizer $\Stab(xH) = xHx\inv$, a **conjugate subgroup** of $H$.
+  - This is because
+  \[
+  \Stab(xH) &= \ts{g\in G\st gxH = xH} \\
+  &= \ts{g\in G \st x\inv g x\in H} \\
+  &= \ts{g\in G\st gx\in xH}\\
+  &= \ts{g\in G\st g\in xHx\inv} \\
+  &= xHx\inv
+  .\]
 
-- The fixed points form $\Fix = \emptyset$.
+- There are no fixed points, i.e. $\Fix(G) = \emptyset$, since the action is transitive.
 
-- The kernel of this action is $\Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$.
+- The kernel of this action is $\ker \phi = \Intersect_{g\in G} gHg\inv$, the intersection of all conjugates of $H$, sometimes called the **normal core** of $H$.
+
+  - Note that if $\ker \phi = G$ then $H$ is normal, and if $\ker \phi = 1$ then at least one conjugate doesn't intersect $H$ nontrivially.
 
 :::
 
@@ -1862,40 +2007,89 @@ If $G$ is a finite group and $p\da [G:H]$ is the smallest prime dividing $\# G$,
 \envlist
 
 - Let $\phi: G\actson X\da \ts{xH}$, noting that $\# X = p$ and $\Sym(X) \cong S_p$.
-- Then $K\da \ker \phi \subseteq H$.
-- Since $G$ is finite and $K\leq G$, we have $[G:K] = \# (G/K) = \# G/ \# K$ so $\# (G/K)$ divides $\# G$.
-- Since $G/K \cong K'$ is isomorphic to a subgroup of $S_p$, $\# (G/K)$ divides $\# S_p = p!$
-- So $\# (G/K)$ divides $\gcd( \# G, p!)$, which is $p$ since it was the minimal prime dividing $\# G$.
-- $p$ is prime, so if $\# G/K\neq 1$ we have $\# G/K = p$.
-- Since $K \subset H$ and $[G:H] = p = [G: K]$, we have $K = H$.
-- But $K = \ker \phi \normal G$, so $H\normal G$.
+- Then $K\da \ker \phi$, and importantly $K \contains H$ since $K$ is the intersection of stabilizers, and contains $\Stab(eH) \contains H$ since $gH = H \implies g\in H$.
+- Since $G$ is finite and $K\leq G$, we have $\#(G/K)$ dividing $\# G$, since
+  \[
+  [G:K] = \# (G/K) = \# G/ \# K \implies \# G = \#(G/K) \# K
+  .\]
+- Now
+\[
+G/K \cong K' \leq S_p \implies \#(G/K)\divides p!
+.\]
+
+- So $\# (G/K)$ divides $\gcd( \# G, p!)=p$, using that $p$ was the minimal prime dividing $\# G$.
+  This forces $\#(G/K)$ to be 1 or $p$.
+- If it's $p$:
+  - Then $p = [G:K] = [G:H]$ and since $K\contains H$ this forces $K=H$.
+  Kernels are automatically normal, so we're done.
+- If it's 1:
+  - Then $[G:K] = 1$ and $K = \ker \phi = G$.
+  - Identifying $\ker \phi = \Intersect_{xH\in G/H} \Stab(xH)$, we have $\Stab(xH) = xHx\inv = G$ for all $x$, which says $H$ is normal.
 
 :::
 
 :::{.exercise title="?"}
-Prove Poincaré's theorem: if $H\leq G$ is finite index, then there exists an $N\normal H$ where $[N: H] < n!$.
+Prove the Poincaré theorem for groups: if $H\leq G$  are possibly infinite groups with finite index $n\da [G:H]$, then there exists an $N\normal H$ where $[N: H] < n!$.
 :::
 
 
 
 # Sylow Theorems
 
+:::{.remark}
+Useful facts:
+
+- Counting contributions to $\# G$ from $\Syl_p(G)$: writing $\# G = p^k m$ so that $\# S_p = p^k$, using that every order $p$ element is in some $S_p$ one gets at least $n_p(\ell - 1)$ for some constant $\ell > 1$.
+  - **Warning**: every $S_p$ is the same size, so it's tempting to take $\ell \da \# S_p = p^k$.
+    But this only works if one knows the $S_p$ intersect trivially, e.g. if $k=1$.
+    Otherwise, the best one can do without more information $\ell = p$, i.e. the $S_p$ all intersect trivially or in subgroups of order $p$.
+  - **Warning**:
+  This isn't quite a count of elements of order $p$, since elements in $S_p$ can have orders $p^{k'}$ for other $k'\leq k$.
+- When counting: just leave the identity out of every calculation, and add it back in as a $+1$ for the final count.
+:::
 
 :::{.definition}
 A **$p\dash$group** is a group $G$ such that every element is order $p^k$ for some $k$.
   If $G$ is a finite $p\dash$group, then $\abs G = p^j$ for some $j$.
 :::
 
-Write
+:::{.lemma title="Congruences for fixed points"}
+If $G\actson X$ for $G$ a $p\dash$group, then letting $\Fix(G) \da \ts{x\in X \st gx=x}$, one has
+\[
+\# X \equiv \# \Fix(G) \mod p
+.\]
+:::
 
+:::{.proof title="?"}
+\envlist
+
+- Use the fixed-point count trick:
+\[
+\# X = \# \Fix(G) + \sum_{x}' \# \Orb(x)
+.\]
+  Note that the result follows immediately by reducing $\mod p$ if the sum is zero $\mod p$. 
+- Letting $x$ be an element with a nontrivial orbit, we have $\# \Orb(x) > 1$, so $\Stab(x) \neq G$ since orbit-stabilizer would yield $\# \Orb(x) = [G:\Stab(x)] = 1$.
+- Now use that $\# \Orb(x) = \# G/ \#\Stab(x) = p^k/p^\ell$ where $0< \ell < k$ with strict inequalities.
+  So $\# \Orb(x) = p^{k-\ell} \neq 1$, and $p$ divides its size.
+
+:::
+
+## Statements of Sylow
+
+> For full proofs (some of which I've borrowed), see Keith Conrad's notes: <https://kconrad.math.uconn.edu/blurbs/grouptheory/sylowpf.pdf>
+
+
+:::{.remark}
+Some setup and notation: assume
 
 - $\abs{G} = p^k m$ where $(p, m) = 1$,
 - $S_p$ a Sylow$\dash p$ subgroup, and
 - $n_p$ the number of Sylow$\dash p$ subgroups.
 
+:::
 
-## Sylow 1 (Cauchy for Prime Powers)
 
+### Sylow 1 (Cauchy for Prime Powers)
 
 :::{.theorem title="Sylow 1"}
 \[
@@ -1909,8 +2103,34 @@ If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\b
 In particular, Sylow $p\dash$subgroups always exist.
 :::
 
-## Sylow 2 (Sylows are Conjugate)
+:::{.proof title="of Sylow 1: left translation"}
+\envlist
 
+- Let $\# G = p^k m$.
+  Idea: Induct up by showing that if $\# H = p^i$ for $i\leq k$, one can product a bigger subgroup $\tilde H \contains H$ with $[\tilde H : H] = p$.
+  This makes $\# \tilde H = p^{i+1}$.
+- Let $H\leq G$ so that $H$ is a $p\dash$group.
+- Let $H\actson G/H$ by left-translation.
+- Use the lemma that $\#(G/H)\equiv \Fix_H(G/H)\mod p$
+- Identify $\Fix_H(G/H) = N_G(H)$, since fixing $xH$ means $gxH = xH \implies gHg\inv \subseteq H \implies gHg\inv = H$ for all $g\in G$.
+\[
+xH \in \Fix_H(G/H) 
+&\iff gxH &= xH \forall g\in H\\
+&\iff x\inv g x H \in H \forall g\in H\\
+&\iff x\inv H x\inv = H \\
+&\iff x\in N_G(H)
+,\]
+  so $\Fix_H(G/H) = \ts{gH \st g\in N(H)} = N_G(H)/ H$ are cosets whose representatives are normalizers of $H$.
+- Since $H\normal N_G(H)$, these cosets form a group.
+- We have $[G:H] = \#(N_G(H) / H)$, and if $i<k$ then $p$ divides $[G: H]$.
+- So $N_G(H)/H$ is a $p\dash$group and has a subgroup $L$ of order $p$ by Cauchy.
+- Use the subgroup correspondence: $L\leq N_G(H)/H$ corresponds to some $L' \leq G$ with $H \subseteq L' \subseteq N_G(H)$ and $L = L'/H$.
+  Now use that $\# L = p$ implies $\#(L' / H) = [L':H] = p$, so $\# L' = [L':H]\#H = p\#H = p^{i+1}$ as desired.
+
+
+:::
+
+### Sylow 2 (Sylows are Conjugate)
 
 :::{.theorem title="Sylow 2"}
 All Sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
@@ -1926,21 +2146,64 @@ n_p = 1 \iff S_p \normal G
 .\]
 :::
 
-## Sylow 3 (Numerical Constraints)
+:::{.proof title="of Sylow 2"}
+\envlist
+
+- Let $S_1, S_2\in \Syl_p(G)$, and let $S_1\actson G/S_2$ by left-translation.
+- Use the lemma:
+\[
+\# (G/S_2) \equiv \Fix_{S_1}(G/S_2) \mod p
+.\]
+
+- $[G:S_2] = m$ is coprime to $p$, so there is a fixed point, say $xS_2$ where $gxS_2 = xS_2$ for all $g\in S_1$.
+\[
+gxS_2 = xS_2 \forall g\in S_1 \\
+\implies gx \in xS_2 \forall g\in S_1 \\
+\implies S_1 x \subseteq xS_2 \\
+\implies S_1 \subseteq xS_2 x\inv
+,\]
+where we now get equality since these sets have the same cardinality.
+
+:::
+
+
+### Sylow 3 (Numerical Constraints)
 
 :::{.theorem title="Sylow 3"}
 \envlist
 
-1. $n_p \divides m~$ (in particular, $n_p \leq m$),
+1. $n_p \divides m~$, and in particular, $n_p \leq m$.
 
-2. $n_p \equiv 1 \mod p$,
+2. $n_p \equiv 1 \mod p$.
 
 3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
 
 :::
 
-## Corollaries and Applications
 
+:::{.proof title="of Sylow 3"}
+\envlist
+
+- $n_p\equiv 1 \mod p$:
+  - Fix a $P\in \Syl_p(G)$, and let $P\actson \mcs \da \Syl_p(G)$ by conjugation.
+  - Apply the lemma to get $n_p \equiv \Fix_{\mcs}(P) \mod p$.
+    The claim is that there is just one fixed point.
+  - If $Q\in \Fix_{\mcs}(P)$, then $pQp\inv = Q$ for all $p\in P$, so $P$ normalizes $Q$ and $P \subseteq N_G(Q) \leq G$.
+  - Then $P, Q \in \Syl_p(N_G(Q))$, which by Sylow II are conjugate.
+  - Since $Q\normal N_G(Q)$, there is only one conjugate of $Q$, and $P=Q$.
+  - So $P$ is the only fixed point.
+
+- $n_p \divides m$:
+  - Let $G\actson X\da \Syl_p(G)$ by conjugation; this is transitive by Sylow II and there is one orbit.
+  - Then $\# X$ must divide $\$ G$, so $n_p$ divides $\# G = p^k m$.
+  - Using $n_p \equiv 1 \mod p$, we can't have $n_p\divides p^k$, and so $n^p$ must divide $m$.
+
+- $n_p = [G: N_G(P)]$ for any $P\in \Syl_p(G)$:
+  - Let $G\actson \Syl_p(G)$ by conjugation and apply orbit-stabilizer to get $n_p = [G: \Stab(P)]$
+  - Identify $\Stab(P) = N_G(P)$.
+:::
+
+## Corollaries and Applications
 
 :::{.corollary}
 By Sylow 3, $p$ does not divide $n_p$.
@@ -1957,16 +2220,17 @@ Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 :::
 
-## Proof of Sylow Theorems
-
-\todo[inline]{Proof of Sylows}
-
-
-
 ## Exercises
+
+
+:::{.exercise title="?"}
+\envlist
 
 - Let $G$ be a group of order $p$ with $v$ and $e$ positive integers, $p$ prime, $p > v$, and $v$ is not a multiple of $p$. 
   Show that $G$ has a normal Sylow p-subgroup.
+
+:::
+
 
 ## Automorphism Groups
 
@@ -2095,6 +2359,11 @@ We have $G \cong H \times K$ when
 
 :::
 
+:::{.exercise title="?"}
+Prove the "recognizing direct products" theorem.
+Can the conditions be relaxed?
+:::
+
 :::{.remark}
 Things are particularly nice when the orders of $H$ and $k$ are coprime.
 For 3, $x\in H \intersect K$ implies that the order of $x$ divides $\gcd(\# H, \# K) = 1$, so $H \intersect K = \ts{e}$.
@@ -2159,16 +2428,17 @@ We have $G \cong N \semidirect_\psi H$ when
 :::{.definition title="Invariant Factor Decomposition"}
 If $G$ is a finitely generated abelian group, then there is a decomposition
 $$
-G \cong \ZZ^r \times \prod_{k=1}^m \ZZ/n_k
+G \cong \ZZ^r \times \prod_{k=1}^m C_{n_k}
 \quad \text{ where } n_1 \divides \cdots \divides n_m
 ,$$
+into a free group and a finite number of cyclic groups,
 where $r\in \ZZ^{\geq 0}$ is unique and the $n_i$ are uniquely determined.
 :::
 
 :::{.definition title="Elementary Divisor Decomposition"}
-If $G$ is a finitely generated abelian group, then there is a unique list of (not necessarily distinct) prime powers such that
+If $G$ is a finitely generated abelian group, then there is a unique list of **not necessarily distinct** prime powers $p_k^{e_k}$ such that
 \[
-G \cong \ZZ^r \cross \prod_{k=1}^m \ZZ/p_k^{e_k}
+G \cong \ZZ^r \cross \prod_{k=1}^m C_{p^k}^{e_k} 
 ,\]
 where $r\in \ZZ^{\geq 0}$ is uniquely determined.
 
@@ -2185,29 +2455,38 @@ Given any presentation of a group as a product of cyclic groups $G = \prod \ZZ_i
 - For **elementary divisors**, just list out all of elements of the table individually, running across rows.
 - For **invariant factors**, iterate a process of taking the largest of each prime power (i.e. the bottom row) at each step, deleting that row, and continuing in the same fashion.
 
-> Note: this sounds much more complicated than it actually is!
+> Note: this sounds much more complicated than it actually is. Try it!
 
 :::
 
 :::{.example title="Abstract Example"}
+\envlist
+
+Suppose $G$ is given to you as a product of cyclic groups whose sizes factor in the following way
+\[
+p_1^{e_1}p_1^{e_2}p_1^{e_3} \cdot p_2^{f_1}p_2^{f_2} \cdot p_3^{g_1} p_3^{g_2} p_3^{g_3} \cdot p_4^{h_1}
+.\]
+
+Assemble these into a table, grouped by prime factor $p_i$, being careful not to separate primes from their exponents:
 
 | $p_1$       | $p_2$       | $p_3$       | $p_4$       |
 |-------------|-------------|-------------|-------------|
 | $p_1^{e_1}$ |             | $p_3^{g_1}$ |             |
 | $p_1^{e_2}$ | $p_2^{f_1}$ | $p_3^{g_2}$ |             |
-| $p_1^{e_3}$ | $p_2^{f_2}$ | $p_3^{g_3}$ | $p_4^{h_4}$ |
+| $p_1^{e_3}$ | $p_2^{f_2}$ | $p_3^{g_3}$ | $p_4^{h_1}$ |
 
-- Elementary divisors: take columns.
+
+For elementary divisors: take columns, which just amounts to listing them again:
 \[
-&\ZZ/p_1^{e_1} \cross \ZZ/p_1^{e_2} \cross \ZZ/p_1^{e_3} \\
+&\quad \ZZ/p_1^{e_1} \cross \ZZ/p_1^{e_2} \cross \ZZ/p_1^{e_3} \\
 &\quad \cross \ZZ/p_2^{f_1} \cross \ZZ/p_2^{f_2} \\
 &\quad \cross \ZZ/p_3^{g_1} \cross \ZZ/p_3^{g_2} \cross \ZZ/p_3^{g_3} \\
-&\quad \cross \ZZ/p_4^{h_4} 
+&\quad \cross \ZZ/p_4^{h_1} 
 .\]
 
-- Invariant factors: take rows (grouped by CRT)
+For invariant factors: take rows (grouped by CRT)
 \[
-& \ZZ / \qty{p_1^{e_3} p_2^{f_2} p_3^{g_3} p_4^{h_4}} \\
+& \quad \ZZ / \qty{p_1^{e_3} p_2^{f_2} p_3^{g_3} p_4^{h_1}} \\
 &\quad \cross \ZZ/ \qty{p_1^{e_2} p_2^{f_1} p_3^{g_2}} \\
 &\quad \cross \ZZ/\qty{p_1^{e_1} p_3^{g_1} }
 .\]
@@ -2259,7 +2538,7 @@ Make the table by factoring the order of each cyclic piece, being careful not to
 | $2^3$ | $5^2$ | $7$ |
 
 Reading across rows from bottom to top (and using CRT to merge everything within a row) yields invariant factors on the LHS below.
-Reading down columns, left to right (merging nothing) yields elementary divisors on the RHS:
+Reading down columns, left to right (merging nothing) yields elementary divisors on the right-hand side below
 
 \[
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
@@ -2371,25 +2650,31 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 :::{.proposition title="Classification of groups of order $p$"}
 Every group $G$ of prime order $p\geq 2$ is cyclic and thus isomorphic to $\ZZ/p$.
+:::
 
+:::{.proof title="?"}
 Supposing that $g\neq e$, it generates a cyclic subgroup $H \da \gens{g} \leq G$ of order dividing $p$ by Lagrange.
 Since $g\neq e$, $\#H = p = \# G$.
 :::
 
 :::{.proposition title="Classification of groups of order $p^2$"}
-Every group $G$ of order $p^2$ is abelian, and thus isomorphic to either $\ZZ/p^2$ or $(\ZZ/p)^2$.
+Every group $G$ of order $p^2$ is abelian, and thus isomorphic to either $C_{p^2}$ or $C_p^2$.
+:::
 
-Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$
+:::{.proof title="?"}
+Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$.
+By cases:
 
 - Since $G$ is a $p\dash$group, $G$ has nontrivial center, so $m\neq 1$
 - If $m=p$, then $G/Z(G)$ is cyclic and thus $G$ is abelian by the $G/Z(G)$ theorem.
 - If $m=p^2$, $Z(G) = G$ and $G$ is abelian, done.
+
 :::
 
 :::{.proposition title="Classification of groups of order $pq$"}
 If $G$ is a group of order $pq$ where without loss of generality $q<p$, then
 
-1. If $q\notdivides p-1$ then $G\cong S_p \cross S_q \cong \ZZ/p \cross \ZZ/q \cong \ZZ/pq$
+1. If $q\notdivides p-1$ then $G$ is cyclic and $G\cong S_p \cross S_q \cong C_{pq}$.
 2. If $q\divides p-1$ then $G\cong S_q \semidirect_\psi S_p$ where $S_p \normal G$ and $\psi: S_q \to \Aut(S_p)$, and $G$ has a presentation 
 \[
 G\cong \gens{a, b \st a^p, b^q, bab\inv = a^\ell} \\ \\ 
@@ -2473,11 +2758,91 @@ where
 - So $\psi \circ \pi_k: \ZZ/q \to \ZZ/(p-1)$ for $1\leq k \leq q-1$ yields $q-1$ distinct actions, and we're done.
 :::
 
+:::{.lemma title="Frattini's Argument"}
+If $N\normal G$ and $P\in \Syl_p(H)$ then $G = N_G(P)H$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $g\in G$, then since $P\leq H \normal G$ we have $gPg\inv \subseteq gHg\inv = H$.
+- So $P' \da gPg\inv \in \Syl_p(H)$ for all $g$, and since Sylows in $H$ are all conjugate, we can write $P' = h\inv Ph\inv$ for some $h\in H$.
+- This says $hPh\inv = gPg\inv$ and thus $P = (g\inv h)P (h\inv g) = (h\inv g)\inv P (h\inv g)$.
+- But then $g\inv h \in N_G(P)$ so $g\in N_G(P)H$.
+
+:::
+
+:::{.lemma title="$p$ groups are solvable"}
+Every finite $p$ group is solvable.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- By induction on $k$ in $\# G = p^k$: if $\# G = p$ then $G$ is abelian and automatically solvable. 
+- Inductively, for $\# G = p^k$, now consider $Z(G)\neq 1$ since we're in a $p\dash$group.
+- If $G/Z(G)$ is abelian, use the general fact: $H$ solvable and $G/H$ solvable implies $G$ solvable.
+  - Here $Z(G)$ and $G/Z(G)$ are both abelian and thus solvable.
+- Otherwise $G/Z(G)$ is a $p\dash$group of size $p^{k-1}$ and thus solvable by hypothesis.
+
+:::
+
+:::{.lemma title="$pq$ groups have normals the size of the biggest prime"}
+If $\# G = pq$ with $p<q$ distinct primes, then $G$ has a normal subgroup of size $q$.
+
+This is immediate from Sylow theory: $[n_q]_q = 1, n_q \divides p, p<q$ forces $n_q = 1$.
+:::
+
 :::{.proposition title="PQR Theorem"}
 If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 :::
 
+:::{.proof title="?"}
+\envlist
 
+Idea: 
+
+- Get a normal subgroup $R$ of order $r$, so $\# (G/R) = pq$.
+- Get a normal subgroup $Q_1$ of order $q$ in $G/R$, which corresponds to $Q\normal G$ of order $qr$ containing $R$.
+  Note that $R\normal Q$ since normality descends to subgroups.
+- Now $G\to Q\to R \to 1$ is a subnormal series whose quotients are all cyclic and thus abelian:
+  - $\#(G/Q) = pqr/qr = p$,
+  - $\#(Q/R) = qr/r = q$,
+  - $\#(R/1) = r$,
+
+:::
+
+:::{.remark}
+Proof of first claim: let $m\da \# G = pqr$, then $G$ has a normal subgroup of order $r$.
+
+- Claim: at least one of the Sylows for $p,q,$ or $r$ is normal.
+  - If none of the Sylow $p,q,r$ groups are normal, then $n_r \geq r$ and $n_p \geq q$.
+    Counting the contributions from just $\Syl_q(G)$ and $\Syl_p(G)$ yields
+  \[
+  n_q(q-1) + n_r(r-1) \geq pr(q-1) + pq(r-1) = pqr + p(qr -q - r)
+  .\]
+
+  - If this is to be at most $m$, it must be that $qr-q-r$ is negative (since $p>1$ and otherwise this would yield more than $pqr$ elements).
+  - But if this holds,
+  \[
+  qr-q-r \leq 0 \iff q(r-1) \leq r \iff q\leq {r\over r-1}
+  .\]
+    But $q>2$ be assumption, and $1\leq {r\over r-1}\leq 2$ for any number $r$. $\contradiction$.
+
+  - So there is one of $S_p , S_q, S_r$ that is normal in $G$.
+
+- Now if $S_r$ is normal we're done, so suppose not and $n_r > 1$.
+  Claim: we can get another subgroup of order $r$ 
+
+  - Let $N$ be the normal Sylow, so either $N\in \Syl_p(G)$ or $N\in \Syl_q(G)$.
+  - Then $G/N$ has order $r\ell$ for either $\ell = q$ or $\ell = p$ respectively.
+    
+  - In either case, $\ell < r$.
+    Using the lemma, $G/N$ has a normal subgroup of size $r$, say $R/N \leq G/N$.
+  - Then by the subgroup correspondence theorem, $R$ corresponds to a normal subgroup $R'\normal G$ of size $r\ell$ with $r<\ell$.
+  - Applying the same lemma to $R'$ immediately yields a normal subgroup $R''$ of order $r$ in $R'$
+  - Now use that $R'' \mathrm{\char} R'$ since Sylows are characteristic, and $R'\normal G$, so $R''\normal G$ too.
+:::
 
 ## Series of Groups
 
@@ -2527,13 +2892,27 @@ Equivalently, since $Z_i\normal G$, there is a quotient map $\pi:G\to G/Z_i$, so
 Set $G^{(0)} = G$ and $G^{(i+1)} = [G^{(i)}, G^{(i)}]$, then $G^{(0)} \geq G^{(1)} \geq \cdots$ is the *derived series* of $G$.
 :::
 
+## Solvability
+
+
+:::{.remark}
+A useful way to extract normal subgroups: let $G$ act on literally anything by $\phi: G\to \Aut(X)$.
+Then $\ker \phi \normal G$ is always a normal subgroup.
+Some examples:
+
+- $G\actson G$ by $x\mapsto gx$.
+- $G\actson \ts{H\leq G}$ by $H\mapsto gH$ or $H\mapsto gHg\inv$.
+- $G\actsons \ts{\Syl_p(G)}$ for a fixed $p$ by $S_p \mapsto gS_p g\inv$.
+- $G\actson H$ for $H\normal G$ by inner automorphisms $h\mapsto ghg\inv$.
+:::
+
+
 :::{.definition title="Solvable"}
 A group $G$ is **solvable** iff $G$ has a terminating normal series with abelian composition factors, i.e.
 \[
 G \da G_n > G_{n-1} > \cdots > G_2 > G_1 \da \ts{ e } && \text{ with } G^{i}/G^{i+1}\text{ abelian for all } i
 .\]
 :::
-
 
 :::{.remark}
 If $G = \Gal(L/K)$ is a Galois group corresponding to a polynomial $f$, then $G$ is solvable as a group iff $f$ is solvable in radicals: 
@@ -2543,7 +2922,6 @@ there is a tower of extensions $K = F_0 \subset F_1 \subset F_2 \subset \cdots \
 2. $F_m \supseteq \SF(f)$ contains a splitting field for $f$.
 :::
 
-
 :::{.theorem title="Characterization of Solvable"}
 A group $G$ is solvable iff its derived series terminates.
 :::
@@ -2552,16 +2930,31 @@ A group $G$ is solvable iff its derived series terminates.
 If $n\geq 4$ then $S_n$ is solvable.
 :::
 
-**Lemmas**:
+:::{.fact}
+Some useful facts about solvable groups:
 
 - $G$ is solvable iff $G$ has a terminating *derived series*.
 - Solvable groups satisfy the 2 out of 3 property
 - Abelian $\implies$ solvable
 - Every group of order less than 60 is solvable.
+:::
+
+
+
 
 
 
 # Ring Theory
+
+
+:::{.proposition title="Subring criteria"}
+A subset $S\subseteq R$ is a subring iff
+
+- $(S, +)$ forms an abelian subgroup (so closed under addition and contains inverses)
+- $(S, \cdot)$ forms a submonoid (so closed under multiplication)
+
+:::
+
 
 :::{.proposition title="Ideal Operations"}
 \envlist
@@ -2572,6 +2965,28 @@ If $n\geq 4$ then $S_n$ is solvable.
 - Ideals are *comaximal* if $I + J = \gens{ 1 }$.
 - If $I+J = \gens{ 1 }$ then $I \intersect J = IJ$. 
 :::
+
+
+:::{.definition title="Ideal generated by a set"}
+The ideal **generated** by $\ts{a, b}$ is defined as 
+\[
+\gens{a, b} \da Ra + Rb \da \ts{ r_1 a + r_2 b \st r_i \in R}
+.\]
+
+More generally for a set $S = \ts{s_k}$,
+\[
+\gens{S} \da \sum_{k=1}^{\# S} Rs_k \da \ts{ \sum r_k s_k \st r_k\in R, s_k\in S}
+.\]
+:::
+
+
+:::{.example title="?"}
+
+- $\gens{p, q} = \gens{\gcd(p, q)} \normal \ZZ$.
+
+:::
+
+
 
 ## Isomorphism Theorems
 
@@ -2726,14 +3141,6 @@ If $\mfm$ is maximal and $x \in R\sm \mfm$ then $\mfm + Rx = R = \gens{ 1}$.
 :::
 
 
-:::{.fact}
-The binomial expansion works in any ring:
-\[
-(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
-.\]
-
-This is useful when considering nilpotents or radicals.
-:::
 
 
 
@@ -2836,7 +3243,7 @@ a,b \in R\units\smz, \quad ab\divides p \implies a\divides p \text{ or }  b\divi
 
 :::{.fact}
 If $R$ is an integral domain, prime $\implies$ irreducible.
-If $R$ is a UFD, then prime $\iff$ irreducible.
+If $R$ is a UFD, then irreducible $\implies$ prime, so this is an iff.
 :::
 
 :::{.definition title="Associate Elements"}
@@ -2910,6 +3317,8 @@ An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $I\contains \mfm$ 
 - A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
 - An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
 - A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+- A ring with no maximal ideals: the Prüfer $p\dash$group $\ZZ(p^\infty) = \ts{\zeta_{p^k}}_{k=1}^{\infty}$ with the trivial ring structure $xy = 0$.
+  The subgroups are $H_k \da \ts{\zeta_{p^k}}$, which form an increasing chain that doesn't stabilize.
 :::
 
 :::{.definition title="Max Spectrum"}
@@ -2927,9 +3336,6 @@ Check norm to see irreducibility, but $3 \divides 9 = (2+\sqrt{-5})(2-\sqrt{-5})
 :::{.example}
 Maximal ideals of $R[x]$ are of the form $I = (x - a_i)$ for some $a_i \in R$.
 :::
-
-
-
 
 ## Types of Rings
 
@@ -2963,7 +3369,6 @@ Non-examples: $\ZZ/6, \Mat(2\times 2; k)$
 A **field** is a commutative division ring, i.e. every nonzero element is a uni, i.e. every nonzero element is a unit
 :::
 
-
 :::{.exercise title="?"}
 Show that TFAE:
 
@@ -2972,12 +3377,10 @@ Show that TFAE:
 - If $B\in \Field$ is nonzero then every ring morphism $A\to B$ is injective.
 :::
 
-
 :::{.remark}
 Every field is an integral domain, but e.g. $\ZZ$ is an integral domain that is not a field.
 
 :::
-
 
 :::{.definition title="Principal Ideal"}
 An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$, i.e. $I = Ra$.
@@ -2986,7 +3389,6 @@ An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I
 :::{.definition title="Principal Ideal Domain"}
 A ring $R$ is a **principal ideal domain** iff every ideal is principal.
 :::
-
 
 :::{.exercise title="?"}
 Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
@@ -3003,7 +3405,6 @@ where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates
 :::{.definition title="Noetherian"}
 A ring $R$ is **Noetherian** if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
 :::
-
 
 :::{.definition title="Reduced Ring"}
 A ring $R$ is **reduced** if $R$ contains no nonzero nilpotent elements. 
@@ -3022,7 +3423,6 @@ Show that if $R$ is a nonzero ring where every element is either a unit or nilpo
 Show that if $p\in \spec R$ then $R\localize{p}$ is local.
 :::
 
-
 :::{.exercise title="?"}
 Suppose $\mfm \in \mspec R$ is a proper maximal ideal.
 Show that under either of the following two conditions, $R$ is local:
@@ -3031,7 +3431,6 @@ Show that under either of the following two conditions, $R$ is local:
 - $1 + \mfm \subseteq R\units$
 
 :::
-
 
 :::{.solution}
 - Sketch: $\mfm$ must contain every non-unit.
@@ -3042,10 +3441,6 @@ Show that under either of the following two conditions, $R$ is local:
   - If $r\in R\sm \mfm$ then $\gens{r, \mfm} = R = \gens{ 1 }$ so $rt + m = 1$ for some $t\in R, m\in \mfm$, so $rt = 1-m \in 1 + \mfm \subseteq R\units$ by assumption.
     Now apply (1).
 :::
-
-
-
-
 
 :::{.definition title="Dedekind Domains"}
 A **Dedekind domain** is an integral domain for which the monoid $\Id(R)$ of nonzero ideals of $R$ satisfies unique factorization: every ideal can be decomposed uniquely into a product of prime ideals.
@@ -3110,12 +3505,9 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
    - *Proof*: $2 \mod 4$ is a zero divisor.
 :::
 
-
 :::{.proposition title="Polynomial rings over fields have division"}
 If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 :::
-
-
 
 :::{.proposition title="Characterizations of Rings"}
 - $R$ a commutative division ring $\implies R$ is a field
@@ -3128,13 +3520,9 @@ If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 - $R[x]$ a PID $\implies R$ is a field.
 :::
 
-
 :::{.example title="?"}
 A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
 :::
-
-
-
 
 ## Radicals
 
@@ -3157,6 +3545,47 @@ An ideal is **radical** iff $\rad{I} = I$.
 :::{.definition title="Nilpotent"}
 An element $r\in R$ is **nilpotent** if $r^n = 0$ for some $n \in \ZZ^{\geq 0}$.
 :::
+
+
+:::{.fact}
+The binomial expansion works in any ring:
+\[
+(a+b)^n = \sum_{k\leq n} {n\choose k} a^k b^{n-k}
+.\]
+
+This is useful when considering nilpotents or radicals.
+:::
+
+
+:::{.exercise title="?"}
+\envlist
+Notation: let $N$ or $N(R)$ be the set of nilpotents in $R$.
+Let $ZD$ or $ZD(R)$ be the set of zero divisors.
+Let $U, U(R), R\units$ be the units of $R$.
+
+- Show that every nilpotent is either zero or a zero divisor.
+  - Solution: $a^m=0$ with $a\neq 0$ and $m>1$, then $x x^{m-1} = 0$, so $x^{m-1}$ is a nontrivial element annihilating $x$.
+- Show that $R$ commutative and unital and $x$ nilpotent implies $1+x$ is a unit, and moreover $N + R\units = R\units$ (the sum of a nilpotent and unit is a unit).
+  - Solution: expand $1/(1+x) = \sum_{k=0}^\infty (-x)^k = \sum_{k=0}^n (-x)^k \da f(x)$, so $(1+x)f(x) =1$.
+  Now use that $RN = N$ since $x^n=0$ implies $(rx)^n = rxrx\cdots rx = r^n x^n = 0$.
+  Taking $n + u\in N + R\units$, then $u+n = u\inv(1 + u\inv n) \in R\units R\units$ since $u\inv n\in N$ and $1+u\inv\in R\units$ by the first part.
+
+- Show that $f(x) = \sum a_k x^k \in R[x]$ iff $f\in R[x]\units \iff a_0\in R\units, a_{k>1}\in N$.
+  - Solution: use that if $a_k$ is nilpotent, $a_k x^k$ is nilpotent.
+    Then $a_0$ a unit at $a_1 x$ nilpotent implies $a_0 + a_1 x$ is a unit, and inductively $f$ is a unit.
+    If $f$ is a unit, take $fg=1$ with $f = \sum_{k=0}^na_k x^k$ and $g = \sum_{k=0}^m a_k x^k$.
+    Write $fg(x) = \sum_{k=0}^{n+m} c_k x^k$ where $c_k = \sum_{j=0}^k a_j b_{k-j}$.
+    Using $fg=1$, $c_{0} = a_0 b_0 = 1$ so $a_0, b_0$ are units, and proceed inductively by descending coefficients, checking that $a_n b_m$ is the $r=0$ case.
+
+- Show that $f(x) \in N(R[x]) \iff a_k \in N(R)$ for all $k$.
+  - Solution: $f$ nilpotent with $f(x) = \sum a_k x^k$ implies $f^m=0$, and check the leading term $a_n^m x^{nm}$.
+    Induct down: $f, a_nx^n$ nilpotent implies $f - a_n x^n$ nilpotent.
+    Conversely, if $a_i^{n_i} = 0$, use that $N(R) \normal R$ form an ideal.
+
+- Show that $f\in ZD(R[x]) \iff f\neq 0$ and $rf(x) = 0$ for some $r\in R$.
+
+:::
+
 
 :::{.definition title="Nilradical"}
 The **nilradical** of $R \in \CRing$ is
@@ -3197,7 +3626,6 @@ Show that the nilradical is the intersection of all prime ideals.
 
 :::
 
-
 :::{.solution}
 
 > See A&M 1.8
@@ -3219,7 +3647,6 @@ Thus $ab\not \in \mfp$ so $f\not\in \mfp$.
 Letting $\mfp$ be arbitrary yields $f\not \in P$.
 :::
 
-
 :::{.exercise title="?"}
 Show that $\nilrad{R} = \Intersect_{p\in \spec R} p$ is the intersection of all prime ideals $p\normal R$.
 :::
@@ -3231,11 +3658,9 @@ The **Jacobson radical** $\jacobsonrad{R}$ is the intersection of all maximal id
 .\]
 :::
 
-
 :::{.exercise title="?"}
 Show $x\in \jacobsonrad{R} \iff 1-xR \subseteq R\units$.
 :::
-
 
 ## Structure Theorems
 
@@ -3274,23 +3699,19 @@ Every finite division ring is a field, i.e. finite division rings must be commut
 
 ## Zorn's Lemma
 
-
 :::{.definition title="Chain in a poset"}
 In a poset, a **chain** is a totally ordered subset.
 An **upper bound** on a subset $S$ of a poset $X$ is any $x\in X$ such that $s\leq x$ for all $s\in S$.
 :::
 
-
 :::{.theorem title="Zorn's Lemma"}
 If $P$ is a poset in which every chain has an upper bound, then $P$ has a maximal element.
 :::
-
 
 :::{.remark}
 You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
 To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
 :::
-
 
 :::{.proposition title="Existence of maximal ideals"}
 Every proper ideal is contained in a maximal ideal.
@@ -3325,13 +3746,7 @@ This follows because if $x\in R\sm R\units$, then $Rx \normal R$ and $Rx\neq R$ 
 Then there exists some $\bar \mfm \in \mspec R/Rx$, and by the correspondence theorem this lifts to some $\mfm \in \mspec R$ containing $Rx$.
 :::
 
-
-
-
-
-
 ## Unsorted
-
 
 :::{.fact}
 Division algorithm for Euclidean domains.
@@ -3339,7 +3754,6 @@ Division algorithm for Euclidean domains.
 \todo[inline]{todo}
 
 :::
-
 
 :::{.definition title="Field of fractions"}
 For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be constructed as 
@@ -3350,7 +3764,6 @@ For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be c
 > Checking transitivity requires having no nonzero zero divisors.
 
 :::
-
 
 :::{.definition title="Localization"}
 For $R\in \CRing$ and $S \subseteq R$ a *multiplicatively closed* subset, so $RS \subseteq S$ and $1_R\in S$, the **localization of $R$ at $S$** can be constructed as
@@ -3364,7 +3777,6 @@ R\localize{S} \da \qty{R\cross S} / \sim && (a, s)\sim (b, t) \iff \exists u\in 
 
 \todo[inline]{Universal property.}
 
-
 :::{.warnings}
 There is a canonical ring morphism
 \[
@@ -3374,8 +3786,6 @@ x &\mapsto {x\over 1}
 but this may not be injective.
 :::
 
-
-
 :::{.remark}
 For integral domains $R$, 
 \[
@@ -3384,16 +3794,14 @@ For integral domains $R$,
 
 :::
 
-
-
 :::{.theorem title="Hilbert Basis Theorem"}
 \todo[inline]{todo}
 
 :::
+
 :::{.definition title="Primary Ideal"}
 An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
-
 
 :::{.proposition title="Polynomial rings over UFDs are UFDs"}
 \todo[inline]{todo}
@@ -3402,8 +3810,61 @@ An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\i
 :::
 
 
+:::{.exercise title="?"}
+\envlist
+
+- Show that in a PID, every element can be written as a finite product of irreducibles.
+- Show that in a PID, every maximal ideal is generated by an *irreducible* element.
+- Show that any PID is Noetherian.
+- Show that not $\ZZ$ is Noetherian but not Artinian.
+  - Hint: take a chain $n\ZZ \contains n^2\ZZ \contains \cdots$.
+:::
+
+:::{.exercise title="?"}
+Show that $R[x]$ a PID $\iff R$ is a field.
+:::
+
+:::{.solution}
+Hint: take $r\in R$, then $\gens{r, x} = \gens{f}$ for some $f$.
+Write $r = fp$ and $x = fq$ for $p, q\in R[x]$, show $\deg f = 0$ and $\deg q = 1$.
+Write $f = c$ a constant, $q(x) = ax + b$ to get $c(ax+b)=x \implies ca=1 \implies c\in R\units \implies \gens{f} = R[x]$.
+Conclude by writing $1= ar_1(x) + xr_2(x)$, evaluate at $x=0$ to get $a\inv = r_1(0)$.
+:::
+
+
+
+
+# Number Theory
+
+
+:::{.proposition title="Properties of the norm"}
+Let $K$ be a number field and $N:K\to \ZZ$ be its norm function.
+
+- $N(ab) = N(a)N(b)$
+- $a\divides b \in K \implies N(a)\divides N(b)\in \ZZ$.
+- $a\in K\units \iff N(a) = \pm 1$.
+
+:::
+
+
+
+
+
 
 # General Field Theory
+
+
+:::{.remark}
+The most useful tricks of the trade:
+
+- $\# \GG_m(\GF(p^k)) = p^k-1$, since every element is invertible except 0.
+  You can use this to cook up strong numerical constraints on orders of elements.
+  E.g. if $a^{17}=1$ in some finite field of size $p^k$, $o(a)$ divides 17 and $o(a)$ divides $p^{k}-1$, so $o(a)$ divides $\gcd(17, p^{k}-1)$.
+- Multiplicativity in towers can force numerical divisibility constraints.
+  E.g. if $\alpha$ is a root of any irreducible $f$, take the tower $\SF(\alpha, k)/k(\alpha)/k$: then the degree of $\min_{\alpha, k}(x)\in k[x]$ divides the degree of the extension $[\SF(\alpha, k) :  k]$.
+- 
+:::
+
 
 ## Basics: Polynomials
 
@@ -3418,7 +3879,9 @@ For $R$ a UFD, a polynomial $p\in R[x]$ is **primitive** iff the greatest common
 
 :::{.theorem title="Gauss' Lemma"}
 Let $R$ be a UFD and $F$ its field of fractions.
-Then a primitive $p\in R[x]$ is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+Then a primitive $p\in R[x]$ (so e.g. $p$ monic) is irreducible in $R[x] \iff p$ is irreducible in $F[x]$.
+
+More precisely, if $p = AB$ is reducible in $F[x]$, then there exist $r,s\in F$ such that $rA, sB\in R[x]$ and $p = (rA)(sB)$ is a factorization in $R[x]$.
 :::
 
 :::{.corollary}
@@ -3649,6 +4112,42 @@ This has no roots in $k$.
 \todo{Proof}
 
 ## Cyclotomic Polynomials
+
+
+:::{.definition title="Euler's Totient Function"}
+\[
+\phi(n) \da \# \ts{ k\leq n \st \gcd(k ,n ) = 1}
+.\]
+:::
+
+
+:::{.remark}
+\envlist
+
+- $\phi(p) = p-1$, because every number $k\leq p-1$ is coprime to $p$.
+- $\phi(p^k) = p^{k} - p^{k-1}$, since there are $p^k$ total numbers less than $p^k$, most of which are coprime to $p$.
+  The ones to remove are those dividing $p^k$: the only divisors of $p^k$ are $p^\ell$ for $0\leq \ell \leq k$, and $\gcd(p^k, m) = p^\ell$ 
+  whenever $m=tp$ for $t = 1,2,3,\cdots,p^{k-1}$ (i.e. $m$ is divisible by some power of $p$, so the $p^{k-1}$ multiples of $p$ are possible).
+- $\phi$ is multiplicative (arithmetically, so only on prime powers!)
+
+:::
+
+
+
+:::{.example title="Some totient values"}
+\[
+\phi(1) &= 1 \\
+\phi(2) &= 1 \\
+\phi(3) &= 2 \\
+\phi(4) &= 2 \\
+\phi(6) &= 2 \\
+\phi(8) &= 4 \\
+.\]
+
+
+:::
+
+
 
 :::{.definition title="Cyclotomic Polynomials"}
 Let $\zeta_n = e^{2\pi i/n}$, then the **$n$th cyclotomic polynomial** is given by
@@ -3945,6 +4444,19 @@ A polynomial $f \in k[x]$ is **separable** iff $f$ has no repeated roots.
 
 :::
 
+:::{.definition title="Separable Field Extension"}
+Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
+The following are equivalent 
+
+- $L/k$ is a **separable** extension.
+- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
+- Every finite subextension $L'/k$ is separable.
+:::
+
+:::{.fact}
+If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::
+
 :::{.proposition title="Separability test: $\gcd$ with derivative"}
 $f$ is separable iff $\gcd(f, f')=1$, so $f, f'$ share no common roots.
 Moreover, the multiple roots of $f$ are precisely the roots of $\gcd(f, f')$.
@@ -3976,27 +4488,37 @@ So $(x-a)\divides q\da \gcd(f, f')$, and since $f$ is irreducible, it must be th
 Since $f'(a) = 0$, this forces $f'\divides f$, and since $\deg f' = \deg f - 1 < \deg f$ this forces $f' \equiv 0$.
 :::
 
-:::{.fact title="Irreducible implies separable in characteristic zero"}
-If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
-
-Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
-It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
-So this $\gcd$ is 1.
-:::
-
-:::{.fact title="Irreducible implies separable for perfect fields"}
+:::{.proposition title="Derivative completely detects separability"}
 \envlist
 
-- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
-  (In fact, it is the minimal polynomial of its roots.)
+- For any field $k$, $f\in k[x]$ is separable $\iff f'\not\equiv 0 \in k[x]$.
+- For $\ch k = 0$, irreducible implies separable.
+- For $\ch k = p$, irreducibles $f(x)$ are inseparable iff $f(x) = g(x^p)$ for some $g\in k[x]$.
 
-- Toward a contradiction, suppose $f$ is irreducible but inseparable.
-- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
-- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
+
+Thus for an irreducible polynomial $f$,
 \[
-f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
-,\]
-  making $f$ reducible. $\contradiction$
+f\text{ separable} \iff \gcd(f, f')=1 \iff f'\not\equiv 0 \iff_{\ch k = p} f(x) = g(x^p)
+.\]
+:::
+
+:::{.proof title="?"}
+- First part:
+  - $\not A\implies \not B$: 
+    - Let $f$ be irreducible, and suppose $f$ is separable.
+      If $d(x) \da \gcd(f, f') \neq 1$, then $f'$ can not divide $f$ since $f$ is irreducible, so $f$ divides $f'$.
+      But $\deg f' < f$ and $f\divides f'$ forces $f'\equiv 0$.
+  - $\not B \implies \not A$:
+    - If $f'\equiv 0$, then $d(x) \da \gcd(f, f') = \gcd(f, 0) = f \neq 1$ and $f$ is *not* separable.
+
+- Second part:
+  - If $\ch k = 0$ and $f$ is irreducible, then $\deg f \geq 2$ and $\deg f' \geq 1$ so $f' \neq 0$ and $f$ is thus separable.
+
+- Third part:
+  - $\impliedby$: If $f(x) = g(x^p)$ then $f'(x) = g'(x^p)\cdot px^{p-1}\eqiuv 0$.
+  - $\implies$: Let $f$ be irreducible and inseparable, so $f' \equiv 0 \in k[x]$.
+    Then $f(x) \da \sum_{k=0}^n a_k x^k$ implies $f'(x) \da \sum_{k=1}^{n}ka_k x^{k-1}$, which is zero iff $ka_k \equiv 0$ so $p$ divides $ka_k$.
+    So $a_k\not\equiv 0$ forces $p\divides k$, so $f = a_0 + a_px^p + a_{2p}x^{2p} + \cdots$.
 :::
 
 :::{.corollary title="Inseparable iff polynomial in characteristic powers"}
@@ -4027,17 +4549,27 @@ $\impliedby$:
 If $f(x) = q(x^p)$ for some $q$, the previous calculation shows $q$ has multiple roots, thus so does $f$, so $f$ is inseparable.
 :::
 
-:::{.definition title="Separable Field Extension"}
-Let $L/k$ be a field extension, $\alpha \in L$ be algebraic over $k$, and $f(x) \definedas\min(\alpha, k)$.
-The following are equivalent 
+:::{.fact title="Irreducible implies separable in characteristic zero"}
+If $\ch k = 0$ and $f\in k[x]^{\irr}$, then $f$ is automatically separable.
 
-- $L/k$ is a **separable** extension.
-- Every element ${\alpha} \in L$ is separable over $k$, so $\alpha$ has separable minimal polynomial $m(x)$ in some splitting field of $m$.
-- Every finite subextension $L'/k$ is separable.
+Why this is true: assuming $f$ is irreducible, $\gcd(f, f') = 1$ or $f$.
+It can't be $f$, since $f\divides f'$ would force $\deg f = \deg f' = 0$ and make $f$ a constant.
+So this $\gcd$ is 1.
 :::
 
-:::{.fact}
-If $\alpha \in K/k$ is separable, then $\alpha$ is separable in any larger field $L/K/k$ since the minimal polynomial over the larger field will divide the minimal polynomial over the smaller field. 
+:::{.fact title="Irreducible implies separable for perfect fields"}
+\envlist
+
+- Use that irreducible polynomial $f$ must have distinct roots, by the argument above.
+  (In fact, it is the minimal polynomial of its roots.)
+
+- Toward a contradiction, suppose $f$ is irreducible but inseparable.
+- Then $f(x) = g(x^p)$ for some $g(x) \da \sum a_k x^k$.
+- Since Frobenius is bijective, write $a_k = b_k^p$ for some $b_k$, then
+\[
+f(x) = \sum a_k x^{pk} = \sum b_k^p x^{pk} =\qty{ \sum b_k x^k }^p
+,\]
+  making $f$ reducible. $\contradiction$
 :::
 
 :::{.fact title="finite extensions of perfect fields are separable"}
@@ -4324,7 +4856,32 @@ H &\rightarrow \correspond{E^H \definedas ~\text{The fixed field of $H$}} \\
 - The compositum $F_1 F_2$ corresponds to $H_1 \intersect H_2$.
 
 - The subfield $F_1 \intersect F_2$ corresponds to $H_1 H_2$.
+
 :::
+
+
+:::{.remark}
+A trick for remembering the degree/index correspondence:
+
+\begin{tikzcd}
+	K &&&& 1 \\
+	\\
+	E &&&& {H \da \Gal(K/E)\hspace{4em}} \\
+	\\
+	F &&&& {G \da \Gal(K/F)\hspace{4em}}
+	\arrow["{[E:F]}", hook, from=5-1, to=3-1]
+	\arrow["{[K:E]}", hook, from=3-1, to=1-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{[K:F]}"', curve={height=30pt}, hook, from=5-1, to=1-1]
+	\arrow["{[H:1]}"', hook, from=1-5, to=3-5]
+	\arrow["{[G:H]}"', hook, from=3-5, to=5-5]
+	\arrow["{[G:1]}", curve={height=-30pt}, hook, from=1-5, to=5-5]
+	\arrow["{\Gal(K/\wait)}"', shift right=5, shorten <=18pt, Rightarrow, from=0, to=3-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwyLCJFIl0sWzAsMCwiSyJdLFswLDQsIkYiXSxbNCwwLCIxIl0sWzQsMiwiSCBcXGRhIFxcR2FsKEsvRSlcXGhzcGFjZXs0ZW19Il0sWzQsNCwiRyBcXGRhIFxcR2FsKEsvRilcXGhzcGFjZXs0ZW19Il0sWzIsMCwiW0U6Rl0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIltLOkVdIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJbSzpGXSIsMix7ImN1cnZlIjo1LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsIltIOjFdIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCJbRzpIXSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNSwiW0c6MV0iLDAseyJjdXJ2ZSI6LTUsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzgsNCwiXFxHYWwoSy9cXHdhaXQpIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV1d)
+
+:::
+
 
 :::{.theorem title="Splitting + Perfect implies Galois"}
 \envlist
@@ -4588,6 +5145,41 @@ Alternatively,
 
 # Galois Theory
 
+> Some useful exercises and solutions: <https://feog.github.io/chap4.pdf>
+
+:::{.remark}
+\envlist
+
+- Given $x\da \sqrt{a} + \sqrt{b}$, to find a minimal polynomial consider $x^2, x^3,\cdots$ and try to get a linear combination.
+  Then check if its irreducible.
+  - General strategy here: try to isolate radicals on one side, then raise both sides to that power.
+
+- To find a minimal polynomial for an element $\alpha$, figure out the dimension of $\QQ(\alpha)/\QQ$ -- say it's $n$, then $1, \alpha, \cdots, \alpha^n$ must be a $\QQ\dash$linearly dependent set, so you compute these powers and fiddle with $\QQ$ coefficients (or invert a matrix).
+- Useful trick: for $x \da \sqrt{a} + \sqrt{b}$, compute $x,x^2, x^3, x^4$ and write them in terms of the basis $\ts{1, \sqrt{a}, \sqrt{b}, \sqrt{ab}}$.
+ Then put this linear system into a matrix and invert:
+ \[
+   A\vector v = \vector c \da A \tv{1, \sqrt a, \sqrt b, \sqrt{ab} } = \tv{x, x^2, x^3, x^4}
+ .\]
+ Once you get $A\inv \vector x = \vector b$, read off the first row dotted against $\vector b$ to get a polynomial in $x$.
+ - In general: take $\alpha$, sort out the degree $n$ of the extension $\QQ(\alpha)/\QQ$, and use the basis $1,\alpha,\alpha^2,\cdots, \alpha^{n-1}$.
+
+- A trick to remember how degrees, indices and sizes match up: $L/K/F$ corresponds to $1/H/G$, and $[L:K] = [H:1] = \# H$, $[F:K] = [G:H]$, $[L:F] = [G:1] = \# G$, etc.
+
+- Trick: once you find $\SF(f)/\QQ$, if any subextension is not normal over $\QQ$, then $G$ can not be abelian.
+  - Example: $f(x) = x^3-2$ splits in $\QQ(\zeta_3, 2^{1\3})$ which is a non-normal extension $\QQ(2^{1\over 3})$, forcing $G= S_3$.
+
+- If $\alpha\beta \in \QQ$, then $\alpha \in \QQ(\beta)$ and vice-versa (I think).
+
+- Checking subgroup lattices: <https://hobbes.la.asu.edu/groups/groups.html>
+
+- De-nesting radicals:
+
+![](figures/2021-08-15_00-44-15.png)
+
+
+
+:::
+
 :::{.remark}
 Assume all extensions here are algebraic and finite.
 Let $f\in \QQ[x]$ with $n \da \deg f$.
@@ -4615,9 +5207,13 @@ Consider $f(x) \da x^5-9x+3$, let $L\da \SF(f)/\QQ$.
 - $L$ is Galois:
   - $L/\QQ$ is a finite extension over a perfect field and thus automatically separable.
   - $L/\QQ$ is the splitting field of a separable polynomial, and thus normal.
-- Since $L$ is Galois, $\# G = d \da [L: \QQ]$, so compute the degree.
-  - Since $f$ is irreducible, for any root $\alpha$, $[\QQ(\alpha): \QQ] = \deg f$ and thus $d=5$.
-- Possibilities: $S_5, A_5 , F_5\cong C_5\rtimes C_4, D_5, C_5$.
+- Since $L$ is Galois, $\# G = d \da [L: \QQ]$, so try to compute the degree by computing the splitting field (and its degree) explicitly.
+  - Here: difficult! The roots are complicated.
+- Since $L$ is Galois, $G\leq S_5$ is a transitive subgroup.
+  Possibilities: 
+  \[
+  S_5, A_5 , F_5\cong C_5\rtimes C_4, D_5, C_5
+  .\]
 - Claim: $G = S_5$.
   - Reduce mod 2: $(x^2 + x + 1) (x^3 + x^2 + 1)$, yielding a cycle type $(2, 3)$.
   This rules out 
@@ -4797,10 +5393,12 @@ The following are transitive subgroups of $S_n$ for small $n$, where blue groups
 Other useful facts:
 
 - $\# D_n = 2n$, $\#S_n = n!, \# A_n = n!/2$, and $\# F_5 = 20$.
-- $Q_8 \leq S_8$ is transitive and nonabelian of order 8, and has presentation
+- For degree 8 extensions (which sometimes arise as quadratic extensions of degree 4 extensions): 
+  $Q_8 \leq S_8$ is transitive and nonabelian of order 8, and has presentation
 \[
 Q_{8}=\left\langle\alpha, \beta \mid \alpha^{4}=\beta^{4}=1, \alpha \beta \alpha=\beta, \beta^{2}=\alpha^{2}\right\rangle
 .\]
+  Note that $Q_8 \leq S_8$ but $Q_8\not\leq S_{<7}$.
 
 - $F_5$ has presentation 
 \[
@@ -4817,13 +5415,19 @@ Q_{8}=\left\langle\alpha, \beta \mid \alpha^{4}=\beta^{4}=1, \alpha \beta \alpha
 \envlist
 By $n$ in $G\leq S_n$:
 
-- $n=4$:
-  - $C_2^2$ vs $C_4$: 
-  $C_2^2$ has two elements of order 2, the latter does not.
-  So a cycle of type $(2, 2)$ forces $C_2^2$.
-  - $S_4$ vs $A_4$: 
-  $S_4$ contains a Sylow-2 subgroup of order 8 (which divides $4! = 24$) but $A_4$ does not since it's of order $4!/2 = 12$ and $8\not\divides 12$.
-  - $D_4$ vs $Q_8$:
+$n=4$:
+
+- $C_2^2$ vs $C_4$: 
+
+  - $C_2^2$ has two elements of order 2, the latter does not.
+    So a cycle of type $(2, 2)$ forces $C_2^2$.
+
+- $S_4$ vs $A_4$: 
+
+  - $S_4$ contains a Sylow-2 subgroup of order 8 (which divides $4! = 24$) but $A_4$ does not since it's of order $4!/2 = 12$ and $8\not\divides 12$.
+  - If $G$ contains a transposition, then $G= S_4$ or $D_4$, since $A_4$ doesn't contain a transposition.
+
+- $D_4$ vs $Q_8$:
 
 - 5 roots:
   - $S_5$ is generated by any transposition and any 5-cycle.
@@ -4842,6 +5446,9 @@ The following are the cycle types that can occur:
 
 
 :::{.proposition title="Recognizing $A_n$ or $S_n$"}
+Useful fact: if $G \leq S_n$ for $n$ prime contains a 2-cycle and a $p\dash$cycle, then $G\cong S_n$.
+Note that for $n$ not prime, a transposition and an $n\dash$cycle isn't enough, since one needs the specific $n\dash$cycle $(1,2,\cdots,n)$ in general.
+
 If $n>2$ and $G$ contains a 3-cycle and an $n\dash$cycle, then $G = A_n$ or $S_n$.
 Note that by Orbit-Stabilizer $n\divides \# G$, and if $n$ is prime then by Cauchy there is an $n\dash$cycle (but this is not always the case).
 In fact, it suffices to find a $k\dash$cycle for any $k\geq n/2$, which can be found by reducing mod $p$ and examining cycle types.
@@ -4858,14 +5465,12 @@ Moreover, if $G$ contains a 2-cycle (transposition), then $G = S_n$.
 - $A_4$ does not contain a subgroup isomorphic to $C_2^2$.
 :::
 
-
 :::{.fact}
 Some useful generating sets: see <https://kconrad.math.uconn.edu/blurbs/grouptheory/genset.pdf>
 
 ![](figures/2021-08-09_18-51-08.png)
 
 :::
-
 
 ### Density: Cycle Types
 
@@ -5190,6 +5795,8 @@ A flow chart summarizing the full process:
 
 ![](figures/2021-07-20_22-06-48.png)
 
+
+See Hungerford 273 for classification.
 :::
 
 :::{.example title="Quartics using resolvent cubics"}
@@ -5333,7 +5940,8 @@ $n=3$:
 
 - $D_3 \cong S_3$
 - $A_3 \cong C_3$.
-- ![$S_3$](figures/2021-08-10_01-41-05.png)
+- ![$S_3$](figures/2021-08-14_18-01-02.png)
+- ![$S_3$ up to conjugacy](figures/2021-08-10_01-41-05.png)
 
 $n=4$:
 
@@ -5355,6 +5963,8 @@ Misc:
 
 # Modules
 
+## Definitions and Basics
+
 :::{.definition title="$R\dash$modules"}
 Four properties:
 
@@ -5375,6 +5985,9 @@ r. m(a\tensor b) = m(r.a \tensor b) = m(a\tensor r.b) && \forall r\in R, a,b \in
 $N\subseteq M$ is an $R\dash$submodule iff $N$ is nonempty and for every $r\in R$ and $x, y \in N$, we have $rx+y\in N$.
 :::
 
+:::{.definition title="Module Morphisms"}
+A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
+:::
 
 :::{.proposition title="One-step module morphism test"}
 A map $\phi: M\to N$ is a morphism in $\rmod$ iff
@@ -5389,6 +6002,20 @@ Quotients of modules are easier to reason about additively, writing $M/N = \ts{x
 Then $(x + N) + (y + N) = (x+y) + N$ and $(x+N)(y+N) = (xy) + N$.
 :::
 
+:::{.definition title="Simple modules"}
+A module is **simple** iff it has no nontrivial proper submodules.
+:::
+
+:::{.definition title="Indecomposable modules"}
+A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
+An **indecomposable** module is defined in the obvious way.
+:::
+
+:::{.definition title="Cyclic modules"}
+A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
+:::
+
+## Structure Theorems
 
 :::{.proposition title="Isomorphism theorems"}
 \[
@@ -5410,19 +6037,6 @@ Note that the lattice correspondence commutes with sums and intersections of sub
 
 :::
 
-
-
-
-
-
-
-
-## General Theory
-
-:::{.definition title="Module Morphisms"}
-A map $f: M\to N$ is a **morphism of modules** iff $f(rm + n) = rf(m) + f(n)$.
-:::
-
 :::{.proposition title="Recognizing direct sums"}
 If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following conditions hold:
 
@@ -5430,17 +6044,55 @@ If $M_1, M_2 \leq M$ are submodules, then $M = M_1 \oplus M_2$ if the following 
 - $M_1 \intersect M_2 = 0$
 :::
 
-:::{.definition title="Simple modules"}
-A module is **simple** iff it has no nontrivial proper submodules.
+
+## Exact Sequences
+
+:::{.definition title="Exact Sequences"}
+A sequence of \(R\dash\)module morphisms 
+\[
+0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
+\]
+is *exact* iff $\im d_i = \ker d_{i+1}$.
 :::
 
-:::{.definition title="Indecomposable modules"}
-A module $M$ is **decomposable** iff it admits a direct sum decomposition $M \cong M_1 \oplus M_2$ with $M_1, M_2 \neq 0$.
-An **indecomposable** module is defined in the obvious way.
+
+:::{.remark}
+Note that $C\cong B/d_1(A)$ always, but $B$ is not a direct sum of the outer terms unless the sequence splits.
 :::
 
-:::{.definition title="Cyclic modules"}
-A module $M$ is **cyclic** if there exists a single generator $m\in M$ such that $M = mR \da \gens{ m }$.
+
+:::{.definition title="Split Exact Sequences"}
+A short exact sequence 
+\[
+\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
+\]
+has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \id_{C}$.
+$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \id_A$.
+:::
+
+:::{.proposition title="Equivalent conditions for splitting SESs"}
+Let $\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2}  C \to 0$ be a SES, then TFAE
+
+- $\xi$ admits a right-splitting $s: C\to B$.
+- $C$ is projective.
+- $\xi$ admits a left-splitting $t: B\to A$.
+- $A$ is injective.
+- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
+
+:::
+
+:::{.proof title="?"}
+Right-splitting implies direct sum:
+
+- Use that $B \subset \ker d_2 + \im s$, writing $b = (b - sd_2(b) ) + sd_2(b)$ and noting
+\[
+d_2(b - sd_2(b)) = d_2(b) - d_2sd_2(b) = d_2(b) - d_2(b) = 0 
+.\]
+- Show $\ker d_2 \intersect \im s=0$, writing $b$ with $d_2(b) = 0$ and $b = s(c)$ for some $c$ yields
+\[
+0 = d_2(b) = d_2s(c) = \id_C(c) = c
+.\]
+
 :::
 
 ## Free and Projective Modules
@@ -5492,12 +6144,24 @@ Equivalently, defining $M_t \da \ts{ m\in M \st \exists r\in R, rm = 0_M }$ as t
 If $M_t = M$, we say $M$ is a **torsion module**.
 :::
 
-:::{.proposition title="Free implies torsionfree (generally)"}
-For $R$ an integral domain, any free \(R\dash\)module $M$ is torsionfree.
+:::{.proposition title="Free implies torsionfree"}
+For $R$ an integral domain, any finitely generated free \(R\dash\)module $M$ is torsionfree.
 :::
 
-\todo[inline]{Prove}
+:::{.proof title="that free implies torsionfree"}
+\envlist
 
+- If $M$ is finitely generated, write $M = \gens{X}$ with $X\da \ts{x_1, \cdots, x_m}$ and $\# X<\infty$ a finite generating set.
+- Since $M$ is free, there is some maximal subset of generators $\mcb \da \ts{x_1, \cdots, x_n} \subseteq X$ where $n\leq m$ that is linearly independent.
+- Consider $N\leq M$ defined by $\gens{\mcb}$; this is a basis for $N$ and makes $N$ free.
+  The claim is now that $M\cong N$, so that any maximal linearly independent subset of generators is all of $X$.
+- If $N \not\cong M$, set $\mcb^c \da X\sm \mcb = \ts{x_{n+1}, \cdots, x_m}$ to be all generators for $M$ that the basis $\mcb$ misses.
+- Then $\mcb^c \union \ts{x_{j}}$ for any $n+1\leq j \leq m$ has a linear dependence, and $r_j x_j + \sum_{k=1}^n r_n x_n = 0$ for some $r_j\neq 0$ implies $r_j x_j = - \sum_{k=1}^n r_n x_n$.
+- Let $r$ be the product of all of the scalars obtained this way, so $r = \prod_{k=n+1}^m r_j$, and consider the submodule $rX \leq N \leq M$.
+  We get $rM \leq N \leq M$ since $X$ is a generating set for $M$, so it now suffices to show $rM \cong M$.
+- Just define a map $\phi_r: M\surjects rM$ where $m\mapsto rm$, and note $\ker \phi_r =\ts{ m\in M \st rm = 0} = 0$ since $M$ is torsionfree.
+  So $M = M/\ker \phi_r \cong rM$.
+:::
 
 :::{.example title="A torsionfree module that is not free"}
 $\QQ \in \mods{\ZZ}$ is torsionfree, but not free as a \(\ZZ\dash\)module.
@@ -5526,6 +6190,39 @@ A module $P$ is **projective** iff it satisfies any of the following conditions:
 
   $P$ is a direct summand of a free module $F$, so $F = P \oplus T$ for some module $T\leq F$.
 
+- Splitting:
+
+  For every SES $0\to A\to B\to P\to 0$, there is a right section $P\to B$ such that $P\to B\to P = \id_P$.
+
+  > Note that this implies $B\cong \im(P\to B) \oplus \ker(B\to P)$.
+  
+- Exactness:
+
+  The (always left-exact) covariant hom functor $\Hom(P, \wait)$ is right-exact.
+:::
+
+:::{.remark}
+There is a nice way to remember the right diagrams for injective and projective modules.
+The slogan is that morphisms *out* of a projective module can be *pulled* back through epimorphisms/surjections, and morphisms *into* an injective module can be *pushed* forward through monomorphisms/injections.
+
+\begin{tikzcd}
+	&&&&&& P \\
+	\\
+	0 && A && B && C && 0 \\
+	\\
+	&& I
+	\arrow[from=3-1, to=3-3]
+	\arrow[hook, from=3-3, to=3-5]
+	\arrow[two heads, from=3-5, to=3-7]
+	\arrow[from=3-7, to=3-9]
+	\arrow["{\text{Pull back through surjection}}"', dashed, from=1-7, to=3-5]
+	\arrow["{\text{Push forward through injections}}", dashed, from=3-5, to=5-3]
+	\arrow[from=1-7, to=3-7]
+	\arrow[from=3-3, to=5-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNyxbMCwyLCIwIl0sWzIsMiwiQSJdLFs0LDIsIkIiXSxbNiwyLCJDIl0sWzgsMiwiMCJdLFs2LDAsIlAiXSxbMiw0LCJJIl0sWzAsMV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw0XSxbNSwyLCJcXHRleHR7UHVsbCBiYWNrIHRocm91Z2ggc3VyamVjdGlvbn0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiw2LCJcXHRleHR7UHVzaCBmb3J3YXJkIHRocm91Z2ggaW5qZWN0aW9uc30iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSwzXSxbMSw2XV0=)
+
 :::
 
 :::{.proposition title="Free implies projective"}
@@ -5533,7 +6230,58 @@ Any free $M\in \rmod$ is projective.
 :::
 
 :::{.proof title="?"}
-\todo[inline]{Todo: proof.}
+\envlist
+
+- Let $M$ be free, so that the universal property gives us this diagram:
+
+\begin{tikzcd}
+	M \\
+	\\
+	{\mathcal{B}} && N
+	\arrow["f", from=3-1, to=3-3]
+	\arrow["{\tilde f}", dashed, from=1-1, to=3-3]
+	\arrow["\iota", hook, from=3-1, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwyLCJcXG1hdGhjYWx7Qn0iXSxbMCwwLCJNIl0sWzIsMiwiTiJdLFswLDIsImYiXSxbMSwyLCJcXHRpbGRlIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXGlvdGEiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==)
+
+- To show $M$ is projective, we need to produce a lift in the following diagram, where $B, C$ are arbitrary:
+
+\begin{tikzcd}
+	&& M \\
+	\\
+	B && C && 0
+	\arrow[from=3-3, to=3-5]
+	\arrow["f", from=1-3, to=3-3]
+	\arrow["{\exists \tilde f}"', dashed, from=1-3, to=3-1]
+	\arrow["g", two heads, from=3-1, to=3-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMiwwLCJQIl0sWzIsMiwiQyJdLFswLDIsIkIiXSxbNCwyLCIwIl0sWzEsM10sWzAsMSwiZiJdLFswLDIsIlxcZXhpc3RzIFxcdGlsZGUgZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImciLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=)
+
+- It suffices to produce a map $\mathcal{B}\to B$, since the universal property then provides $M\to B$.
+  Here's the schematic:  
+
+\begin{tikzcd}
+	&& {\mathcal{B}} & {\ts{e_i}} \\
+	\\
+	&& M \\
+	\\
+	B && C && 0 \\
+	{\ts{g\inv f(e_i)}} && {} & {\ts{f(e_i)}}
+	\arrow[from=5-3, to=5-5]
+	\arrow["f", from=3-3, to=5-3]
+	\arrow["{\exists \tilde f}"', dashed, from=3-3, to=5-1]
+	\arrow["g", two heads, from=5-1, to=5-3]
+	\arrow[hook, from=1-3, to=3-3]
+	\arrow[dotted, maps to, from=1-4, to=6-4]
+	\arrow[dotted, maps to, from=6-4, to=6-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOSxbMiwyLCJNIl0sWzIsNCwiQyJdLFswLDQsIkIiXSxbNCw0LCIwIl0sWzIsMCwiXFxtYXRoY2Fse0J9Il0sWzMsMCwiXFx0c3tlX2l9Il0sWzIsNV0sWzMsNSwiXFx0c3tmKGVfaSl9Il0sWzAsNSwiXFx0c3tnXFxpbnYgZihlX2kpfSJdLFsxLDNdLFswLDEsImYiXSxbMCwyLCJcXGV4aXN0cyBcXHRpbGRlIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxLCJnIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn0sImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDgsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifSwiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d)
+
+- Here we write $\mcb \da \ts{e_i}$, included into $M$, and mapped by $f$ to $C$.
+  Then use surjectivity to choose preimages in $B$ under $g$ arbitrarily, and this defines a morphism $\mcb \to B$.
 
 :::
 
@@ -5542,42 +6290,6 @@ Let \( R_1, R_2 \) be two nontrivial rings and set \( R \da R_1 \oplus R_2 \).
 Then \( R_1, R_2 \) are projective \( R\dash \)modules by construction, but each factor contains \( R\dash \)torsion:
 setting \( e \da (0, 1) \in R \) we have \( e \actson R_1 = 0_{R_1} \).
 Since free implies torsionfree, \( R_1 \) can not be a free \(R\dash\)module.
-:::
-
-## Exact Sequences
-
-:::{.definition title="Exact Sequences"}
-A sequence of \(R\dash\)module morphisms 
-\[
-0 \mapsvia{d_1} A \mapsvia{d_2} B \mapsvia{d_3} C \to 0
-\]
-is *exact* iff $\im d_i = \ker d_{i+1}$.
-:::
-
-:::{.definition title="Split Exact Sequences"}
-A short exact sequence 
-\[
-\xi: 0 \to A \mapsvia{d_1} B \mapsvia{d_2} C \to 0
-\]
-has a **right-splitting** iff there exists a map $s: C\to B$ such that $d_2 \circ s = \one_{C}$.
-$\xi$ has a **left-splitting** iff there exists a map $t:B\to A$ such that $t \circ d_1 = \one_A$.
-:::
-
-:::{.proposition title="Classifying split SESs"}
-Let $\xi: 0 \to A \to B \to C \to 0$ be a SES, then TFAE
-
-- $\xi$ admits a right-splitting.
-- $\xi$ admits a left-splitting.
-- $\xi$ is isomorphic to a SES of the form $0\to A \to A \oplus C \to C \to 0$.
-:::
-
-:::{.proposition title="Splitting Exact Sequences"}
-A SES $\xi$ splits if any of the following conditions hold:
-
-- $C$ is free.
-- $C$ is projective.
-- $A$ is injective.
-
 :::
 
 ## Classification of Modules over a PID
@@ -5626,6 +6338,19 @@ But since $M \subset R$, we have $\alpha, m \in R$ and $\vector 0_M = 0_R$, and 
 Since $m \neq 0_R$, this forces $\alpha = 0_R$, which allows $\theset{m}$ to be a linearly independent set and thus a basis for $M$ as an $R\dash$module.
 
 :::
+
+
+:::{.remark}
+This says every module $M$ decomposes as $M \cong F_M \oplus M_t$ where $F_M$ is free (and thus torsionfree) and $M_t$ is torsion, and moreover $F_M \cong M/M_t$.
+
+That $M/M_t$ is torsionfree: suppose $r(m+ M_t) = M_t$, so $rm\in M_t$ is torsion.
+Then $r'(rm)=0$ for some $r'$, making $m$ torsion, and $m+ M_t = M_t$ is the zero coset.
+
+That $F_M \cong M/M_t$: take the SES $0\to M_t\to M \to F\to 0$ to get $F\cong M/M_t$.
+This splits since $F$ is free and thus projective, so $F\cong M \oplus M_t$.
+
+:::
+
 
 ## Algebraic Properties
 
@@ -5696,6 +6421,11 @@ $\ZZ/2 \tensor_\ZZ \ZZ/3 = 0$:
 
 
 # Linear Algebra
+
+
+:::{.remark}
+Algorithm for SNF: D&F page 479.
+:::
 
 :::{.remark}
 Some definitions:
@@ -8299,6 +9029,14 @@ What is $\ext(\ZZ/m\ZZ, \ZZ/n\ZZ)$?
 What is $\ext(\ZZ/m\ZZ, \ZZ)$?
 
 # Appendix: Extra Topics
+
+:::{.proposition title="NC Theorem"}
+$N_G(H) / C_G(H)$ is isomorphic to a subgroup of $\Aut(H)$.
+:::
+
+:::{.definition title="Normalizers Grow"}
+If for every proper $H<G$, $H\normal N_G(H)$ is again proper, then "normalizers grow" in $G$.
+:::
 
 ## Characteristic Subgroups
 

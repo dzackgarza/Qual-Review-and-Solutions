@@ -418,17 +418,14 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 Every group $G$ of prime order $p\geq 2$ is cyclic and thus isomorphic to $\ZZ/p$.
 :::
 
-
 :::{.proof title="?"}
 Supposing that $g\neq e$, it generates a cyclic subgroup $H \da \gens{g} \leq G$ of order dividing $p$ by Lagrange.
 Since $g\neq e$, $\#H = p = \# G$.
 :::
 
-
 :::{.proposition title="Classification of groups of order $p^2$"}
 Every group $G$ of order $p^2$ is abelian, and thus isomorphic to either $C_{p^2}$ or $C_p^2$.
 :::
-
 
 :::{.proof title="?"}
 Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$.
@@ -439,7 +436,6 @@ By cases:
 - If $m=p^2$, $Z(G) = G$ and $G$ is abelian, done.
 
 :::
-
 
 :::{.proposition title="Classification of groups of order $pq$"}
 If $G$ is a group of order $pq$ where without loss of generality $q<p$, then
@@ -557,18 +553,15 @@ Every finite $p$ group is solvable.
 
 :::
 
-
 :::{.lemma title="$pq$ groups have normals the size of the biggest prime"}
 If $\# G = pq$ with $p<q$ distinct primes, then $G$ has a normal subgroup of size $q$.
 
 This is immediate from Sylow theory: $[n_q]_q = 1, n_q \divides p, p<q$ forces $n_q = 1$.
 :::
 
-
 :::{.proposition title="PQR Theorem"}
 If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 :::
-
 
 :::{.proof title="?"}
 \envlist
@@ -585,9 +578,8 @@ Idea:
 
 :::
 
-
 :::{.remark}
-Aside: let $m\da \# G = pqr$, then $G$ has a normal subgroup of order $r$.
+Proof of first claim: let $m\da \# G = pqr$, then $G$ has a normal subgroup of order $r$.
 
 - Claim: at least one of the Sylows for $p,q,$ or $r$ is normal.
   - If none of the Sylow $p,q,r$ groups are normal, then $n_r \geq r$ and $n_p \geq q$.
@@ -614,7 +606,6 @@ Aside: let $m\da \# G = pqr$, then $G$ has a normal subgroup of order $r$.
   - In either case, $\ell < r$.
     Using the lemma, $G/N$ has a normal subgroup of size $r$, say $R/N \leq G/N$.
   - Then by the subgroup correspondence theorem, $R$ corresponds to a normal subgroup $R'\normal G$ of size $r\ell$ with $r<\ell$.
-  - Applying the same lemma to $R'$ immediately yields a subgroup of order $r$.
+  - Applying the same lemma to $R'$ immediately yields a normal subgroup $R''$ of order $r$ in $R'$
+  - Now use that $R'' \mathrm{\char} R'$ since Sylows are characteristic, and $R'\normal G$, so $R''\normal G$ too.
 :::
-
-
