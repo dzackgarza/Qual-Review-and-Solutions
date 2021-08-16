@@ -1,5 +1,35 @@
 # Group Theory
 
+:::{.remark}
+Summary of useful qual tips:
+
+- Slightly obvious but good to remember:
+  - Subgroups of abelian groups are automatically normal.
+  - If $N$ is normal in $G$, then $N$ is normal in any subgroup containing it.
+- Sizes and structure:
+  - Quotienting by bigger groups yields smaller indices:
+  \[
+  1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
+  .\]
+  - $x$ is central iff $[x] = \ts{e}$.
+  - Unions aren't (generally) subgroups, intersections always are.
+  - Coprime order subgroups intersect trivially.
+  - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
+- Conjugacy:
+  - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
+  - Conjugate subgroups have equal cardinality.
+  - Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
+  - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
+  - Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
+    Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
+    Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
+- Cosets:
+  - Cosets partition a group.
+  - Anything dealing with indices $[G:H]$: try just listing the cosets.
+  - $aH = bH \iff ab\inv \in H$.
+  - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
+
+:::
 ## Big List of Notation
 
 :::{.remark title="Notation"}
@@ -58,33 +88,6 @@ For any $p$ dividing the order of $G$, $\mathrm{Syl}_p(G)$ denotes the *set* of 
 :::
 
 
-:::{.remark}
-Summary of useful qual tips:
-
-- Sizes and structure:
-  - Quotienting by bigger groups yields smaller indices:
-  \[
-  1 \leq H \leq H \leq K \leq G \quad\text{ apply} [G: \wait] &&\implies \# G = [G:1] \geq [G:H] \geq [G:K] \geq [G:G] = 1
-  .\]
-  - $x$ is central iff $[x] = \ts{e}$.
-  - Unions aren't (generally) subgroups, intersections always are.
-  - Coprime order subgroups intersect trivially.
-  - Distinct subgroups of order $p^n, p^m$ can intersect trivially *or* in subgroups of order $p^{\ell}$.
-- Conjugacy:
-  - Sizes of conjugacy classes divide $\# G$ (by orbit-stabilizer).
-  - Conjugate subgroups have equal cardinality.
-  - Normal subgroups absorb conjugacy classes, and are thus unions of conjugacy classes.
-  - Reasoning about conjugacy classes: in $S_n$ they're precisely determined by cycle type, i.e. a partition of $n$.
-  - Remembering the class equation: for literally any group action $\phi: G\actson X$, one has $X = \Fix(\phi) \disjoint' \Orb(x_i)$ as a disjoint union of fixed points and nontrivial orbits, since orbits partition $X$.
-    Then take your action to be $G\actson G$ by $\phi: g.x\da gxg\inv$ to get $\Fix(\phi) = Z(G)$ and $\Orb(x_i) = \ts{gx_ig\inv} = [x_i]$ the conjugacy classes.
-    Now apply orbit stabilizer to get $\Orb(x) \cong G/\Stab(x)$ where $\Stab(x) = Z(x) = C_G(x)$ the centralizer.
-- Cosets:
-  - Cosets partition a group.
-  - Anything dealing with indices $[G:H]$: try just listing the cosets.
-  - $aH = bH \iff ab\inv \in H$.
-  - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
-
-:::
 
 
 ## Definitions

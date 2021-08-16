@@ -194,16 +194,17 @@ We have $G \cong N \semidirect_\psi H$ when
 :::{.definition title="Invariant Factor Decomposition"}
 If $G$ is a finitely generated abelian group, then there is a decomposition
 $$
-G \cong \ZZ^r \times \prod_{k=1}^m \ZZ/n_k
+G \cong \ZZ^r \times \prod_{k=1}^m C_{n_k}
 \quad \text{ where } n_1 \divides \cdots \divides n_m
 ,$$
+into a free group and a finite number of cyclic groups,
 where $r\in \ZZ^{\geq 0}$ is unique and the $n_i$ are uniquely determined.
 :::
 
 :::{.definition title="Elementary Divisor Decomposition"}
-If $G$ is a finitely generated abelian group, then there is a unique list of (not necessarily distinct) prime powers such that
+If $G$ is a finitely generated abelian group, then there is a unique list of **not necessarily distinct** prime powers $p_k^{e_k}$ such that
 \[
-G \cong \ZZ^r \cross \prod_{k=1}^m \ZZ/p_k^{e_k}
+G \cong \ZZ^r \cross \prod_{k=1}^m C_{p^k}^{e_k} 
 ,\]
 where $r\in \ZZ^{\geq 0}$ is uniquely determined.
 
@@ -220,29 +221,38 @@ Given any presentation of a group as a product of cyclic groups $G = \prod \ZZ_i
 - For **elementary divisors**, just list out all of elements of the table individually, running across rows.
 - For **invariant factors**, iterate a process of taking the largest of each prime power (i.e. the bottom row) at each step, deleting that row, and continuing in the same fashion.
 
-> Note: this sounds much more complicated than it actually is!
+> Note: this sounds much more complicated than it actually is. Try it!
 
 :::
 
 :::{.example title="Abstract Example"}
+\envlist
+
+Suppose $G$ is given to you as a product of cyclic groups whose sizes factor in the following way
+\[
+p_1^{e_1}p_1^{e_2}p_1^{e_3} \cdot p_2^{f_1}p_2^{f_2} \cdot p_3^{g_1} p_3^{g_2} p_3^{g_3} \cdot p_4^{h_1}
+.\]
+
+Assemble these into a table, grouped by prime factor $p_i$, being careful not to separate primes from their exponents:
 
 | $p_1$       | $p_2$       | $p_3$       | $p_4$       |
 |-------------|-------------|-------------|-------------|
 | $p_1^{e_1}$ |             | $p_3^{g_1}$ |             |
 | $p_1^{e_2}$ | $p_2^{f_1}$ | $p_3^{g_2}$ |             |
-| $p_1^{e_3}$ | $p_2^{f_2}$ | $p_3^{g_3}$ | $p_4^{h_4}$ |
+| $p_1^{e_3}$ | $p_2^{f_2}$ | $p_3^{g_3}$ | $p_4^{h_1}$ |
 
-- Elementary divisors: take columns.
+
+For elementary divisors: take columns, which just amounts to listing them again:
 \[
-&\ZZ/p_1^{e_1} \cross \ZZ/p_1^{e_2} \cross \ZZ/p_1^{e_3} \\
+&\quad \ZZ/p_1^{e_1} \cross \ZZ/p_1^{e_2} \cross \ZZ/p_1^{e_3} \\
 &\quad \cross \ZZ/p_2^{f_1} \cross \ZZ/p_2^{f_2} \\
 &\quad \cross \ZZ/p_3^{g_1} \cross \ZZ/p_3^{g_2} \cross \ZZ/p_3^{g_3} \\
-&\quad \cross \ZZ/p_4^{h_4} 
+&\quad \cross \ZZ/p_4^{h_1} 
 .\]
 
-- Invariant factors: take rows (grouped by CRT)
+For invariant factors: take rows (grouped by CRT)
 \[
-& \ZZ / \qty{p_1^{e_3} p_2^{f_2} p_3^{g_3} p_4^{h_4}} \\
+& \quad \ZZ / \qty{p_1^{e_3} p_2^{f_2} p_3^{g_3} p_4^{h_1}} \\
 &\quad \cross \ZZ/ \qty{p_1^{e_2} p_2^{f_1} p_3^{g_2}} \\
 &\quad \cross \ZZ/\qty{p_1^{e_1} p_3^{g_1} }
 .\]

@@ -1,10 +1,21 @@
 # Topics and Remarks 2
 
+
+:::{.remark}
+(DZG) on the structure of these notes: these are *extremely* disorganized at the moment, and only reflect some amalgamation of all of the random notes I made to myself while studying for qualifying exams.
+As a result, things are bound to be out of order, and likely useless pedagogically unless you've seen most of the material before.
+Moreover, this has been a long-running document (started in my undergrad years, so pre-2018), and since I've forgotten and rewritten certain things at various points, there may even be duplicated material (e.g. propositions stated/proved in multiple places, repeated exercises or statements, etc).
+
+In any case, I'd love to hear if you do find it useful!
+Readers are welcome to email me with any questions, comments, errors/typos, suggestions for improvement, or just to say hello! 😄
+:::
+
+
 :::{.remark}
 Adapted from remark written by Roy Smith, August 2006:
 
-As a general rule, students are responsible for knowing both the theory (proofs) and practical
-applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the Galois group of a given polynomial**) of the topics mentioned.
+"As a general rule, students are responsible for knowing both the theory (proofs) and practical
+applications (e.g. **how to find the Jordan or rational canonical form** of a given matrix, **or the Galois group of a given polynomial**) of the topics mentioned."
 
 :::
 
