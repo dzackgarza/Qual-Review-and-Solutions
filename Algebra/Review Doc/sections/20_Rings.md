@@ -557,7 +557,7 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 :::
 
 :::{.remark}
-Mnemonics:
+Sketch proofs of the inclusions:
 
 - Field $\implies$ Euclidean: given $x,y$ we need to write $x=qy+r$, so just take $q=y\inv$ and $r=0$.
 
@@ -574,15 +574,11 @@ Mnemonics:
 
 :::
 
-:::{.proposition title="PID implies UFD"}
-If $R$ is a PID, then every element in $R$ has a unique prime factorization.
-:::
-
 :::{.example title="showing these inclusions are strict"}
 \envlist
 
-- A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
-  - *Proof*: Use previous lemma, and $x$ is not invertible
+- A Euclidean Domain that is not a field: $k[x]$ for $k$ a field
+  - *Proof*: Use that $k$ a field implies $k[x]$ a  
 
 - A PID that is not a Euclidean Domain: $\ZZ\left[\frac{1 + \sqrt{-19}}{2}\right]$.
   - *Proof*: complicated.
@@ -597,10 +593,6 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 
 -  A ring that is not an integral domain: $\ZZ/(4)$
    - *Proof*: $[2]_4$ is a zero divisor since $[2]_4 [2]_4 = [0]_4$.
-:::
-
-:::{.proposition title="Polynomial rings over fields have division"}
-If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 :::
 
 :::{.proposition title="Characterizations of Rings"}
