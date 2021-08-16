@@ -53,7 +53,6 @@ Some setup and notation: assume
 :::
 
 
-
 ### Sylow 1 (Cauchy for Prime Powers)
 
 :::{.theorem title="Sylow 1"}
@@ -144,6 +143,16 @@ where we now get equality since these sets have the same cardinality.
 3. $n_p = [G : N_G(S_p)]$ where $N_G$ is the normalizer.
 
 :::
+
+
+:::{.proof title="?"}
+\envlist
+
+- $n_p\equiv 1 \mod p$:
+  - Let $G\actson \mcs \da \Syl_p(G)$ by conjugation, apply the lemma to get $n_p \equiv \Fix_{\mcs}(G) \mod p$.
+
+:::
+
 
 ## Corollaries and Applications
 
