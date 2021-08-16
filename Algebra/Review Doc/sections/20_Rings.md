@@ -552,6 +552,23 @@ Motivation: if $R = \OO_{X, x}$ is the ring of germs at $x$ of an algebraic vari
 
 ## Comparing and Transporting Ring Types
 
+:::{.proposition title="Characterizations of Rings"}
+\envlist
+
+- $R$ a commutative division ring $\implies R$ is a field
+- $R$ a finite integral domain $\implies R$ is a field.
+- $\FF$ a field $\iff \FF[x]$ is a PID.
+- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
+- $R$ is a UFD $\iff R[x]$ is a UFD.
+- $R$ a PID $\implies R[x]$ is a UFD
+- $R$ a PID $\implies R$ Noetherian
+- $R[x]$ a PID $\implies R$ is a field.
+:::
+
+:::{.example title="?"}
+A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
+:::
+
 :::{.proposition title="Big chain of inclusions"}
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
 :::
@@ -577,8 +594,9 @@ Sketch proofs of the inclusions:
 :::{.example title="showing these inclusions are strict"}
 \envlist
 
-- A Euclidean Domain that is not a field: $k[x]$ for $k$ a field
-  - *Proof*: Use that $k$ a field implies $k[x]$ a  
+- A Euclidean Domain that is not a field: $k[x]$ for $k$ a field.
+  - *Proof*: Use that $k$ a field implies $k[x]$ is a PID, and PID implies UFD.
+    But this is not a field since the element $x$ is not invertible.
 
 - A PID that is not a Euclidean Domain: $\ZZ\left[\frac{1 + \sqrt{-19}}{2}\right]$.
   - *Proof*: complicated.
@@ -595,22 +613,6 @@ Sketch proofs of the inclusions:
    - *Proof*: $[2]_4$ is a zero divisor since $[2]_4 [2]_4 = [0]_4$.
 :::
 
-:::{.proposition title="Characterizations of Rings"}
-\envlist
-
-- $R$ a commutative division ring $\implies R$ is a field
-- $R$ a finite integral domain $\implies R$ is a field.
-- $\FF$ a field $\iff \FF[x]$ is a PID.
-- $\FF$ is a field $\iff \FF$ is a commutative simple ring.
-- $R$ is a UFD $\iff R[x]$ is a UFD.
-- $R$ a PID $\implies R[x]$ is a UFD
-- $R$ a PID $\implies R$ Noetherian
-- $R[x]$ a PID $\implies R$ is a field.
-:::
-
-:::{.example title="?"}
-A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
-:::
 
 ## Radicals
 
@@ -620,14 +622,12 @@ For an ideal $I\normal R$, the **radical**
 \rad{I} \definedas \theset{r\in R\suchthat r^n\in I\text{ for some } n\geq 0}
 ,\] 
 so $x^n \in I \implies x\in \rad{I}$.
+
+An ideal is **radical** iff $\rad{I} = I$. 
 :::
 
 :::{.remark}
 In general, "radical" refers to "bad elements" of some type to be quotiented out, not necessarily $\sqrt{\wait}$.
-:::
-
-:::{.definition title="Radical Ideal"}
-An ideal is **radical** iff $\rad{I} = I$. 
 :::
 
 :::{.definition title="Nilpotent"}
