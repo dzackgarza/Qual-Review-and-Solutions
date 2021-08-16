@@ -570,6 +570,8 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 
 - A UFD that is not a PID: $\ZZ[x]$.
   - *Proof*: $\ZZ$ a UFD implies $\ZZ[x]$ is a UFD, but  $\gens{2, x} = 2\ZZ[x] + x\ZZ[x] = \ts{\sum r_ix^i \st r_0 \in 2\ZZ}$ is not principal. 
+    Why: if $\gens{2, x} = \gens{f}$ and $f$ is constant, then every polynomial in this ideal has even coefficients and thus misses $g(x) \da x$.
+    Otherwise, $\deg f \geq 1$ and we miss 2, which has degree zero.
 
 -  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
    - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
