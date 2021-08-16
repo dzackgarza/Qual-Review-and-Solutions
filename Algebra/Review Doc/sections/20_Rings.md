@@ -368,8 +368,10 @@ An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $\mfm \subsetneq I
 :::{.example title="Some counterexamples"}
 \envlist
 
-- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
-- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
+- A non-maximal, non-prime ideal: $m\ZZ \in \Id(\ZZ)$, since ideals here are prime iff $m$ is prime, and if $m$ is composite then $\ZZ/m$ is not a domain since it has nonzero zero divisors. 
+  For example, in $\ZZ/6$, $[3]$ is a zero divisors since $[2][3] = 0$.
+- An ideal that is both prime and maximal: $p\ZZ \in \Id(\ZZ)$.
+  Maximal since $\ZZ/p$ is a field, and maximal generally implies prime.
 - A prime ideal that is not maximal: $\gens{0} \in \Id(\ZZ)$.
   Alternatively, $\gens{x} \in R[x]$ over any integral domain since $R[x]/\gens{x} \cong R$ is a domain (making it maximal), but $R$ can be chosen not to be a field (making it non-prime).
 - A ring with no maximal ideals: the Prüfer $p\dash$group $\ZZ(p^\infty) = \ts{\zeta_{p^k}}_{k=1}^{\infty}$ with the trivial ring structure $xy = 0$.
