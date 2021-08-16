@@ -3188,29 +3188,42 @@ ab\in {\mathfrak{p}}\implies a\in {\mathfrak{p}}\text{ or } b\in {\mathfrak{p}}
 <p>In <span class="math inline">\(R\)</span> a UFD, an element <span class="math inline">\(r\in R\)</span> is prime <span class="math inline">\(\iff r\)</span> is irreducible.</p>
 </div>
 <div class="example proofenv" title="of why the converse doesn&#39;t hold">
-<p>For <span class="math inline">\(R\)</span> an integral domain, prime <span class="math inline">\(\implies\)</span> irreducible, but generally not the converse: 
-<span class="math display">
-\begin{align*}
-x^2 \operatorname{mod}{x^2 + x} \in {\mathbb{Q}}[x]/(x^2 + x)
-.\end{align*}
-<span> Check that <span class="math inline">\(x\)</span> is prime directly, but <span class="math inline">\(x=x\cdot x\)</span> and <span class="math inline">\(x\)</span> is not a unit.</p>
+<p>For <span class="math inline">\(R\)</span> an integral domain, prime <span class="math inline">\(\implies\)</span> irreducible, but generally not the converse. Take <span class="math inline">\(R \mathrel{\vcenter{:}}= k[x, y]/\left\langle{x^2-y^3}\right\rangle \cong k[x^2, y^3]\)</span>, which is a domain, But here <span class="math inline">\([x^2] = [y^3]\)</span> as equivalence classes where <span class="math inline">\([y^3]\)</span> is irreducible since every element in <span class="math inline">\(r\in R\)</span> has <span class="math inline">\(\deg_y(r) = 0,3,6,\cdots\)</span>. But <span class="math inline">\([y^3]\)</span> is not prime since it divides <span class="math inline">\([x^2]\)</span> but doesn’t divide <span class="math inline">\([x]\)</span>.</p>
 </div>
 <div class="definition proofenv" title="Prime Spectrum">
 <p>The <strong>prime spectrum</strong> (or just the <strong>spectrum</strong>) of <span class="math inline">\(R\)</span> is defined as 
 <span class="math display">
 \begin{align*}
-\operatorname{Spec}(R) = \left\{{{\operatorname{pr}}{~\trianglelefteq~}R {~\mathrel{\Big|}~}{\operatorname{pr}}\text{ is prime}}\right\}
+\operatorname{Spec}(R) = \left\{{{\mathfrak{p}}{~\trianglelefteq~}R {~\mathrel{\Big|}~}{\mathfrak{p}}\text{ is prime}}\right\}
 .\end{align*}
 <span></p>
 </div>
 <div class="definition proofenv" title="Maximal Ideal">
-<p>An ideal <span class="math inline">\({\mathfrak{m}}\)</span> is <strong>maximal</strong> iff whenever <span class="math inline">\(I{~\trianglelefteq~}R\)</span> with <span class="math inline">\(I\supseteq{\mathfrak{m}}\)</span> then <span class="math inline">\(I = R\)</span>.</p>
+<p>An ideal <span class="math inline">\({\mathfrak{m}}\)</span> is <strong>maximal</strong> iff whenever <span class="math inline">\(I{~\trianglelefteq~}R\)</span> with <span class="math inline">\({\mathfrak{m}}\subsetneq I\)</span> a proper containment then <span class="math inline">\(I = R\)</span>.</p>
 </div>
 <div class="example proofenv" title="Some counterexamples">
+<p>Some examples. Reminder: maximal always implies prime, and for PIDs, prime <em>and nonzero</em> implies maximal. Maximals quotient to fields, primes to domains.</p>
 <ul>
-<li>A non-maximal, non-prime ideal: <span class="math inline">\(\left\langle{ x^4 + 2x^2 + 1 }\right\rangle{~\trianglelefteq~}{\mathbb{C}}[x]\)</span></li>
-<li>An ideal that is both prime and maximal: <span class="math inline">\(\left\langle{ f }\right\rangle\)</span> for any <span class="math inline">\(f\in {\mathbb{Q}}[x]^{\mathrm{irr}}\)</span></li>
-<li>A prime ideal that is not maximal: <span class="math inline">\(\left\langle{ x-c }\right\rangle\in {\mathbb{R}}[x]\)</span>.</li>
+<li>Prime and maximal:
+<ul>
+<li><span class="math inline">\(p{\mathbb{Z}}\in \operatorname{Id}({\mathbb{Z}})\)</span>. Maximal (and thus prime) since <span class="math inline">\({\mathbb{Z}}/p\)</span> is a field and a domain.</li>
+<li><span class="math inline">\(\left\langle{2, x}\right\rangle \in \operatorname{Id}({\mathbb{Z}}[x])\)</span>. Maximal (and thus prime) <span class="math inline">\({\mathbb{Z}}[x]/\left\langle{2, x}\right\rangle \cong {\mathbb{Z}}/2\)</span> is a field and a domain.</li>
+</ul></li>
+<li>Prime but not maximal:
+<ul>
+<li><span class="math inline">\(\left\langle{0}\right\rangle \in \operatorname{Id}({\mathbb{Z}})\)</span>, since <span class="math inline">\(m{\mathbb{Z}}\supseteq\left\langle{0}\right\rangle\)</span> for any <span class="math inline">\(m\)</span>.</li>
+<li><span class="math inline">\(\left\langle{x}\right\rangle \in R[x]\)</span> over any integral domain since <span class="math inline">\(R[x]/\left\langle{x}\right\rangle \cong R\)</span> is a domain (making it maximal), but <span class="math inline">\(R\)</span> can be chosen not to be a field (making it non-prime).</li>
+</ul></li>
+<li>Not prime, not maximal:
+<ul>
+<li><span class="math inline">\(m{\mathbb{Z}}\in \operatorname{Id}({\mathbb{Z}})\)</span>, since <span class="math inline">\(m\)</span> composite implies <span class="math inline">\({\mathbb{Z}}/m\)</span> is not a domain since it has nonzero zero divisors. For example, in <span class="math inline">\({\mathbb{Z}}/6\)</span>, <span class="math inline">\([3]\)</span> is a zero divisors since <span class="math inline">\([2][3] = 0\)</span>.</li>
+</ul></li>
+<li>Useful examples:
+<ul>
+<li><span class="math inline">\(\operatorname{mSpec}{\mathbb{Z}}= \left\{{p{\mathbb{Z}}}\right\}\)</span> and <span class="math inline">\(\operatorname{Spec}{\mathbb{Z}}= \left\{{p{\mathbb{Z}}}\right\} \cup\left\langle{0}\right\rangle\)</span>.</li>
+<li><span class="math inline">\(\operatorname{mSpec}{\mathbb{C}}[x] = \left\{{x-a {~\mathrel{\Big|}~}a\in {\mathbb{C}}}\right\}\)</span>, since over a PID <span class="math inline">\(\left\langle{\alpha}\right\rangle\)</span> is maximal iff <span class="math inline">\(\alpha\)</span> is irreducible, and over <span class="math inline">\({\mathbb{C}}\)</span> irreducibles are degree 1.</li>
+<li><span class="math inline">\(\operatorname{mSpec}k[x_1, \cdots, x_{n}] = \left\{{\left\langle{x-a_1, x-a_2, \cdots, x-a_n}\right\rangle {~\mathrel{\Big|}~}a_k \in k}\right\}\)</span>.</li>
+</ul></li>
 <li>A ring with no maximal ideals: the Prüfer <span class="math inline">\(p{\hbox{-}}\)</span>group <span class="math inline">\({\mathbb{Z}}(p^\infty) = \left\{{\zeta_{p^k}}\right\}_{k=1}^{\infty}\)</span> with the trivial ring structure <span class="math inline">\(xy = 0\)</span>. The subgroups are <span class="math inline">\(H_k \mathrel{\vcenter{:}}=\left\{{\zeta_{p^k}}\right\}\)</span>, which form an increasing chain that doesn’t stabilize.</li>
 </ul>
 </div>
