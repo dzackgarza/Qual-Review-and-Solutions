@@ -149,7 +149,11 @@
 <li><a href="#elements"><span class="toc-section-number">4.3.2</span> Elements</a></li>
 <li><a href="#ideals"><span class="toc-section-number">4.3.3</span> Ideals</a></li>
 </ul></li>
-<li><a href="#types-of-rings"><span class="toc-section-number">4.4</span> Types of Rings</a></li>
+<li><a href="#types-of-rings"><span class="toc-section-number">4.4</span> Types of Rings</a>
+<ul>
+<li><a href="#the-big-ones"><span class="toc-section-number">4.4.1</span> The Big Ones</a></li>
+<li><a href="#others"><span class="toc-section-number">4.4.2</span> Others</a></li>
+</ul></li>
 <li><a href="#comparing-and-transporting-ring-types"><span class="toc-section-number">4.5</span> Comparing and Transporting Ring Types</a></li>
 <li><a href="#radicals"><span class="toc-section-number">4.6</span> Radicals</a></li>
 <li><a href="#structure-theorems"><span class="toc-section-number">4.7</span> Structure Theorems</a></li>
@@ -595,6 +599,7 @@
 <li><a href="#exercises-5"><span class="toc-section-number">16.2.1</span> Exercises</a></li>
 </ul></li>
 <li><a href="#nilpotent-groups"><span class="toc-section-number">16.3</span> Nilpotent Groups</a></li>
+<li><a href="#rings-2"><span class="toc-section-number">16.4</span> Rings</a></li>
 </ul></li>
 <li><a href="#uga-fall-2019-problem-sets"><span class="toc-section-number">17</span> UGA Fall 2019 Problem Sets</a>
 <ul>
@@ -3279,6 +3284,7 @@ a, b\in R\setminus\left\{{0}\right\}, ab = 0 \implies a = 0 {\operatorname{ { or
 <div class="remark proofenv">
 <p>Every field is an integral domain, but e.g. <span class="math inline">\({\mathbb{Z}}\)</span> is an integral domain that is not a field.</p>
 </div>
+<h3 data-number="4.4.1" id="the-big-ones"><span class="header-section-number">4.4.1</span> The Big Ones</h3>
 <div class="definition proofenv" title="Principal Ideal">
 <p>An ideal <span class="math inline">\(I {~\trianglelefteq~}R\)</span> if <strong>principal</strong> if there exists an <span class="math inline">\(a\in R\)</span> such that <span class="math inline">\(I = \left\langle{a}\right\rangle\)</span>, i.e. <span class="math inline">\(I = Ra\)</span>.</p>
 </div>
@@ -3296,6 +3302,10 @@ r = u \prod_{i=1}^n p_i
 \end{align*}
 <span> where <span class="math inline">\(u\in R^{\times}\)</span> and the <span class="math inline">\(p_i\)</span> irreducible, which is unique up to associates.</p>
 </div>
+<div class="definition proofenv" title="Euclidean Domain">
+<p>An integral domain <span class="math inline">\(R\)</span> is <strong>Euclidean</strong> if <span class="math inline">\(R\)</span> admits a degree function <span class="math inline">\(d:R\to {\mathbb{Z}}_{\geq 0}\)</span> such that for all <span class="math inline">\(x,y\in R\)</span> there exist <span class="math inline">\(q,r\in R\)</span> with <span class="math inline">\(x = qy + r\)</span> and either <span class="math inline">\(f(r) &lt; f(y)\)</span> or <span class="math inline">\(r=0\)</span>.</p>
+</div>
+<h3 data-number="4.4.2" id="others"><span class="header-section-number">4.4.2</span> Others</h3>
 <div class="definition proofenv" title="Noetherian">
 <p>A ring <span class="math inline">\(R\)</span> is <strong>Noetherian</strong> if the ACC holds: every ascending chain of ideals <span class="math inline">\(I_1 \leq I_2 \cdots\)</span> stabilizes in the sense that there exists some <span class="math inline">\(N\)</span> such that <span class="math inline">\(I_N = I_{N+1} = \cdots\)</span>.</p>
 </div>
@@ -3350,46 +3360,7 @@ r = u \prod_{i=1}^n p_i
 <div class="remark proofenv">
 <p>Motivation: if <span class="math inline">\(R = {\mathcal{O}}_{X, x}\)</span> is the ring of germs at <span class="math inline">\(x\)</span> of an algebraic variety <span class="math inline">\(X\)</span>, then <span class="math inline">\(R\)</span> is regular iff <span class="math inline">\(X\)</span> is nonsingular at <span class="math inline">\(x\)</span>.</p>
 </div>
-<div class="definition proofenv" title="Gorenstein Rings">
-<p>A commutative Noetherian ring <span class="math inline">\(R\)</span> is <strong>Gorenstein</strong> iff <span class="math inline">\(R\)</span> viewed as an <span class="math inline">\(R{\hbox{-}}\)</span>module has finite injective dimension.</p>
-</div>
-<div class="example proofenv" title="Why care about Gorenstein rings?">
-<p>If <span class="math inline">\(R\in {\mathsf{gr}\,}{\mathsf{Alg}_{/k} }\)</span> with <span class="math inline">\(\dim_k R &lt; \infty\)</span>, then <span class="math inline">\(R\)</span> decomposes as <span class="math inline">\(R = R_0 \oplus R_1 \oplus \cdots R_n\)</span> with <span class="math inline">\(R_0 \mathrel{\vcenter{:}}= k\)</span>, and <span class="math inline">\(R\)</span> is Gorenstein iff <span class="math inline">\(R\)</span> satisfies “Poincaré duality”: <span class="math inline">\(\dim_k R_0 = \dim_k R_m = 1\)</span> and there is a perfect pairing <span class="math inline">\(R_i \otimes_k R_{n-j} \to R_n\)</span>.</p>
-</div>
 <h2 data-number="4.5" id="comparing-and-transporting-ring-types"><span class="header-section-number">4.5</span> Comparing and Transporting Ring Types</h2>
-<div class="proposition proofenv" title="Big chain of inclusions">
-<p>Fields <span class="math inline">\(\subset\)</span> Euclidean domains <span class="math inline">\(\subset\)</span> PIDs <span class="math inline">\(\subset\)</span> UFDs <span class="math inline">\(\subset\)</span> Integral Domains <span class="math inline">\(\subset\)</span> Rings</p>
-</div>
-<div class="proposition proofenv" title="PID implies UFD">
-<p>If <span class="math inline">\(R\)</span> is a PID, then every element in <span class="math inline">\(R\)</span> has a unique prime factorization.</p>
-</div>
-<div class="example proofenv" title="showing these inclusions are strict">
-<ul>
-<li>A Euclidean Domain that is not a field: <span class="math inline">\({\mathbb{F}}[x]\)</span> for <span class="math inline">\({\mathbb{F}}\)</span> a field
-<ul>
-<li><em>Proof</em>: Use previous lemma, and <span class="math inline">\(x\)</span> is not invertible</li>
-</ul></li>
-<li>A PID that is not a Euclidean Domain: <span class="math inline">\({\mathbb{Z}}\left[\frac{1 + \sqrt{-19}}{2}\right]\)</span>.
-<ul>
-<li><em>Proof</em>: complicated.</li>
-</ul></li>
-<li>A UFD that is not a PID: <span class="math inline">\({\mathbb{F}}[x, y]\)</span>.
-<ul>
-<li><em>Proof</em>: <span class="math inline">\(\left\langle{x, y}\right\rangle\)</span> is not principal</li>
-</ul></li>
-<li>An integral domain that is not a UFD: <span class="math inline">\({\mathbb{Z}}[\sqrt{-5}]\)</span>
-<ul>
-<li><em>Proof</em>: <span class="math inline">\((2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3\)</span>, where all factors are irreducible (check norm).</li>
-</ul></li>
-<li>A ring that is not an integral domain: <span class="math inline">\({\mathbb{Z}}/(4)\)</span>
-<ul>
-<li><em>Proof</em>: <span class="math inline">\(2 \operatorname{mod}4\)</span> is a zero divisor.</li>
-</ul></li>
-</ul>
-</div>
-<div class="proposition proofenv" title="Polynomial rings over fields have division">
-<p>If <span class="math inline">\({\mathbb{F}}\)</span> a field then <span class="math inline">\({\mathbb{F}}[x]\)</span> is a Euclidean domain.</p>
-</div>
 <div class="proposition proofenv" title="Characterizations of Rings">
 <ul>
 <li><span class="math inline">\(R\)</span> a commutative division ring <span class="math inline">\(\implies R\)</span> is a field</li>
@@ -3405,6 +3376,45 @@ r = u \prod_{i=1}^n p_i
 <div class="example proofenv" title="?">
 <p>A polynomial ring over a PID is not necessarily a PID: take <span class="math inline">\(\left\langle{2, x}\right\rangle {~\trianglelefteq~}{\mathbb{Z}}[x]\)</span>.</p>
 </div>
+<div class="proposition proofenv" title="Big chain of inclusions">
+<p>Fields <span class="math inline">\(\subset\)</span> Euclidean domains <span class="math inline">\(\subset\)</span> PIDs <span class="math inline">\(\subset\)</span> UFDs <span class="math inline">\(\subset\)</span> Integral Domains <span class="math inline">\(\subset\)</span> Rings</p>
+</div>
+<div class="remark proofenv">
+<p>Sketch proofs of the inclusions:</p>
+<ul>
+<li><p>Field <span class="math inline">\(\implies\)</span> Euclidean: given <span class="math inline">\(x,y\)</span> we need to write <span class="math inline">\(x=qy+r\)</span>, so just take <span class="math inline">\(q=y^{-1}\)</span> and <span class="math inline">\(r=0\)</span>.</p></li>
+<li><p>Euclidean <span class="math inline">\(\implies\)</span> PID: to divide is to contain, and the Euclidean algorithm terminates to yield a gcd. Alternatively, pick an element <span class="math inline">\(a\in I\)</span> of minimal degree. If <span class="math inline">\(I\neq Ra\)</span> pick <span class="math inline">\(b\in Ra\)</span> that <span class="math inline">\(a\)</span> doesn’t divide and write <span class="math inline">\(b = aq + r\)</span> with <span class="math inline">\(d(r) &lt; d(a)\)</span>. Then <span class="math inline">\(r = b-aq \in I\)</span>. <span class="math inline">\(\contradiction\)</span></p></li>
+<li><p>PID <span class="math inline">\(\implies\)</span> UFD:</p>
+<ul>
+<li>To get existence, use that PIDS are Noetherian, maximals are generated by irreducibles, and irreducibles are prime. Write <span class="math inline">\(a =a_1 b_1\)</span> a proper factorization to get a proper containment <span class="math inline">\(\left\langle{a}\right\rangle \subset \left\langle{a_1}\right\rangle\)</span> that eventually stabilizes to yield an irreducible factor <span class="math inline">\(a_r\)</span>. Use the same idea to write <span class="math inline">\(a\)</span> as finitely many irreducible factors.</li>
+<li>To get uniqueness, write <span class="math inline">\(a = \prod p_i = \prod q_i\)</span> as primes and divide everything over.</li>
+</ul></li>
+</ul>
+</div>
+<div class="example proofenv" title="showing these inclusions are strict">
+<ul>
+<li>A Euclidean Domain that is not a field: <span class="math inline">\(k[x]\)</span> for <span class="math inline">\(k\)</span> a field.
+<ul>
+<li><em>Proof</em>: Use that <span class="math inline">\(k\)</span> a field implies <span class="math inline">\(k[x]\)</span> is a PID, and PID implies UFD. But this is not a field since the element <span class="math inline">\(x\)</span> is not invertible.</li>
+</ul></li>
+<li>A PID that is not a Euclidean Domain: <span class="math inline">\({\mathbb{Z}}\left[\frac{1 + \sqrt{-19}}{2}\right]\)</span>.
+<ul>
+<li><em>Proof</em>: complicated.</li>
+</ul></li>
+<li>A UFD that is not a PID: <span class="math inline">\({\mathbb{Z}}[x]\)</span>.
+<ul>
+<li><em>Proof</em>: <span class="math inline">\({\mathbb{Z}}\)</span> a UFD implies <span class="math inline">\({\mathbb{Z}}[x]\)</span> is a UFD, but <span class="math inline">\(\left\langle{2, x}\right\rangle = 2{\mathbb{Z}}[x] + x{\mathbb{Z}}[x] = \left\{{\sum r_ix^i {~\mathrel{\Big|}~}r_0 \in 2{\mathbb{Z}}}\right\}\)</span> is not principal. Why: if <span class="math inline">\(\left\langle{2, x}\right\rangle = \left\langle{f}\right\rangle\)</span> and <span class="math inline">\(f\)</span> is constant, then every polynomial in this ideal has even coefficients and thus misses <span class="math inline">\(g(x) \mathrel{\vcenter{:}}= x\)</span>. Otherwise, <span class="math inline">\(\deg f \geq 1\)</span> and we miss 2, which has degree zero.</li>
+</ul></li>
+<li>An integral domain that is not a UFD: <span class="math inline">\({\mathbb{Z}}[\sqrt{-5}]\)</span>
+<ul>
+<li><em>Proof</em>: <span class="math inline">\((2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3\)</span>, where all factors are irreducible (check norm).</li>
+</ul></li>
+<li>A ring that is not an integral domain: <span class="math inline">\({\mathbb{Z}}/(4)\)</span>
+<ul>
+<li><em>Proof</em>: <span class="math inline">\([2]_4\)</span> is a zero divisor since <span class="math inline">\([2]_4 [2]_4 = [0]_4\)</span>.</li>
+</ul></li>
+</ul>
+</div>
 <h2 data-number="4.6" id="radicals"><span class="header-section-number">4.6</span> Radicals</h2>
 <div class="definition proofenv" title="Radical of an Ideal">
 <p>For an ideal <span class="math inline">\(I{~\trianglelefteq~}R\)</span>, the <strong>radical</strong> 
@@ -3413,12 +3423,10 @@ r = u \prod_{i=1}^n p_i
 \sqrt{I} \mathrel{\vcenter{:}}=\left\{{r\in R{~\mathrel{\Big|}~}r^n\in I\text{ for some } n\geq 0}\right\}
 ,\end{align*}
 <span> so <span class="math inline">\(x^n \in I \implies x\in \sqrt{I}\)</span>.</p>
+<p>An ideal is <strong>radical</strong> iff <span class="math inline">\(\sqrt{I} = I\)</span>.</p>
 </div>
 <div class="remark proofenv">
 <p>In general, “radical” refers to “bad elements” of some type to be quotiented out, not necessarily <span class="math inline">\(\sqrt{{-}}\)</span>.</p>
-</div>
-<div class="definition proofenv" title="Radical Ideal">
-<p>An ideal is <strong>radical</strong> iff <span class="math inline">\(\sqrt{I} = I\)</span>.</p>
 </div>
 <div class="definition proofenv" title="Nilpotent">
 <p>An element <span class="math inline">\(r\in R\)</span> is <strong>nilpotent</strong> if <span class="math inline">\(r^n = 0\)</span> for some <span class="math inline">\(n \in {\mathbb{Z}}^{\geq 0}\)</span>.</p>
@@ -3458,7 +3466,7 @@ r = u \prod_{i=1}^n p_i
 <p>The <strong>nilradical</strong> of <span class="math inline">\(R \in \mathsf{CRing}\)</span> is 
 <span class="math display">
 \begin{align*}
-{\sqrt{0_{R}} } \mathrel{\vcenter{:}}=\left\{{x\in R {~\mathrel{\Big|}~}x \text{ is nilpotent}}\right\} = \sqrt{0}
+{\sqrt{0_{R}} } \mathrel{\vcenter{:}}=\left\{{x\in R {~\mathrel{\Big|}~}x \text{ is nilpotent}}\right\}
 .\end{align*}
 <span></p>
 </div>
@@ -3497,24 +3505,23 @@ r = u \prod_{i=1}^n p_i
 <blockquote>
 <p>See A&amp;M 1.8</p>
 </blockquote>
-<p>Write <span class="math inline">\(P\)</span> as the intersection of all prime ideals of <span class="math inline">\(R\)</span>.</p>
-<p><span class="math inline">\({\sqrt{0_{R}} } \subseteq P\)</span>: Suppose <span class="math inline">\(r\in {\sqrt{0_{R}} }\)</span> so <span class="math inline">\(r^n = 0\)</span> and let <span class="math inline">\({\mathfrak{p}}\in \operatorname{Spec}R\)</span>. Then use that <span class="math inline">\(0\in I\)</span> for any ideal: <span class="math inline">\(r^n = 0 \in {\mathfrak{p}}\implies r\in {\mathfrak{p}}\)</span> since <span class="math inline">\({\mathfrak{p}}\)</span> is prime.</p>
+<p>Write <span class="math inline">\(P\)</span> as the intersection of all prime ideals of <span class="math inline">\(R\)</span>.<br />
+</p>
+<p><span class="math inline">\({\sqrt{0_{R}} } \subseteq P\)</span>: Suppose <span class="math inline">\(r\in {\sqrt{0_{R}} }\)</span> so <span class="math inline">\(r^n = 0\)</span> and let <span class="math inline">\({\mathfrak{p}}\in \operatorname{Spec}R\)</span>. Then use that <span class="math inline">\(0\in I\)</span> for any ideal: <span class="math inline">\(r^n = 0 \in {\mathfrak{p}}\implies r\in {\mathfrak{p}}\)</span> since <span class="math inline">\({\mathfrak{p}}\)</span> is prime.<br />
+</p>
 <p><span class="math inline">\({\sqrt{0_{R}} }^c \subseteq P^c\)</span>: Fix <span class="math inline">\(f\)</span> non-nilpotent, we want to show <span class="math inline">\(f\)</span> is not in any prime ideal. set <span class="math inline">\(S \subseteq R\)</span> to be all ideals <span class="math inline">\(I\)</span> such that <span class="math inline">\(f^{&gt;0} \not \in I\)</span>. Apply Zorn’s lemma: <span class="math inline">\(S\neq \emptyset\)</span> since <span class="math inline">\(0\in S\)</span>, so after ordering <span class="math inline">\(I\)</span> by inclusions <span class="math inline">\(S\)</span> contains a maximal <span class="math inline">\({\mathfrak{p}}\)</span> which we claim is prime. If <span class="math inline">\(a,b \in {\mathfrak{p}}^c\)</span> then <span class="math inline">\({\mathfrak{p}}+ \left\langle{ a }\right\rangle\)</span> and <span class="math inline">\({\mathfrak{p}}+ \left\langle{b}\right\rangle supset {\mathfrak{p}}\)</span> strictly, and by maximality they aren’t in <span class="math inline">\(S\)</span>. So there exist <span class="math inline">\(m,n\)</span> such that <span class="math inline">\(f^m\in {\mathfrak{p}}+ \left\langle{ a }\right\rangle\)</span> and <span class="math inline">\(f^n \in {\mathfrak{p}}+ \left\langle{b}\right\rangle\)</span>. Then <span class="math inline">\(f^{m+n} \in {\mathfrak{p}}+ \left\langle{ab}\right\rangle\)</span>, so <span class="math inline">\({\mathfrak{p}}+ \left\langle{ab}\right\rangle\)</span> is not in <span class="math inline">\(S\)</span>. Thus <span class="math inline">\(ab\not \in {\mathfrak{p}}\)</span> so <span class="math inline">\(f\not\in {\mathfrak{p}}\)</span>. Letting <span class="math inline">\({\mathfrak{p}}\)</span> be arbitrary yields <span class="math inline">\(f\not \in P\)</span>.</p>
 </details>
 </div>
-<div class="exercise proofenv" title="?">
-<p>Show that <span class="math inline">\({\sqrt{0_{R}} } = \displaystyle\bigcap_{p\in \operatorname{Spec}R} p\)</span> is the intersection of all prime ideals <span class="math inline">\(p{~\trianglelefteq~}R\)</span>.</p>
-</div>
 <div class="definition proofenv" title="Jacobson Radical">
-<p>The <strong>Jacobson radical</strong> <span class="math inline">\({\sqrt{0_{R}} }\)</span> is the intersection of all maximal ideals, i.e. 
+<p>The <strong>Jacobson radical</strong> <span class="math inline">\({J ({R}) }\)</span> is the intersection of all maximal ideals, i.e. 
 <span class="math display">
 \begin{align*}  
-{\sqrt{0_{R}} } = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
+{J ({R}) } = \displaystyle\bigcap_{{\mathfrak{m}}\in \operatorname{mSpec}R} {\mathfrak{m}}
 .\end{align*}
 <span></p>
 </div>
 <div class="exercise proofenv" title="?">
-<p>Show <span class="math inline">\(x\in {\sqrt{0_{R}} } \iff 1-xR \subseteq R^{\times}\)</span>.</p>
+<p>Show <span class="math inline">\(x\in {J ({R}) } \iff 1-xR \subseteq R^{\times}\)</span>.</p>
 </div>
 <h2 data-number="4.7" id="structure-theorems"><span class="header-section-number">4.7</span> Structure Theorems</h2>
 <div class="definition proofenv" title="Simple Modules">
@@ -7847,6 +7854,13 @@ g &amp;\mapsto (xH\mapsto gxH)
 <li>Nilpotent groups satisfy the 2 out of 3 property.</li>
 <li><span class="math inline">\(G\)</span> has normal subgroups of order <span class="math inline">\(d\)</span> for <em>every</em> <span class="math inline">\(d\)</span> dividing <span class="math inline">\({\left\lvert {G} \right\rvert}\)</span></li>
 </ul>
+</div>
+<h2 data-number="16.4" id="rings-2"><span class="header-section-number">16.4</span> Rings</h2>
+<div class="definition proofenv" title="Gorenstein Rings">
+<p>A commutative Noetherian ring <span class="math inline">\(R\)</span> is <strong>Gorenstein</strong> iff <span class="math inline">\(R\)</span> viewed as an <span class="math inline">\(R{\hbox{-}}\)</span>module has finite injective dimension.</p>
+</div>
+<div class="example proofenv" title="Why care about Gorenstein rings?">
+<p>If <span class="math inline">\(R\in {\mathsf{gr}\,}{\mathsf{Alg}_{/k} }\)</span> with <span class="math inline">\(\dim_k R &lt; \infty\)</span>, then <span class="math inline">\(R\)</span> decomposes as <span class="math inline">\(R = R_0 \oplus R_1 \oplus \cdots R_n\)</span> with <span class="math inline">\(R_0 \mathrel{\vcenter{:}}= k\)</span>, and <span class="math inline">\(R\)</span> is Gorenstein iff <span class="math inline">\(R\)</span> satisfies “Poincaré duality”: <span class="math inline">\(\dim_k R_0 = \dim_k R_m = 1\)</span> and there is a perfect pairing <span class="math inline">\(R_i \otimes_k R_{n-j} \to R_n\)</span>.</p>
 </div>
 <h1 data-number="17" id="uga-fall-2019-problem-sets"><span class="header-section-number">17</span> UGA Fall 2019 Problem Sets</h1>
 <h2 data-number="17.1" id="problem-set-one"><span class="header-section-number">17.1</span> Problem Set One</h2>

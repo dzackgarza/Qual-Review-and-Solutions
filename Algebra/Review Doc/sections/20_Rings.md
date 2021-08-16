@@ -609,7 +609,7 @@ Sketch proofs of the inclusions:
 -  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
    - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
 
--  A ring that is not an integral domain: $\ZZ/(4)$
+-  A ring that is not an integral domain: $\ZZ/4$
    - *Proof*: $[2]_4$ is a zero divisor since $[2]_4 [2]_4 = [0]_4$.
 :::
 
@@ -764,9 +764,6 @@ M = \bigoplus_{j\in J} M_j
 with each \( M_j \) simple.
 :::
 
-:::{.theorem title="Krull"}
-Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
-:::
 
 :::{.theorem title="Artin-Wedderburn?"}
 If $R$ is a nonzero, unital, *semisimple* ring then 
@@ -798,6 +795,10 @@ If $P$ is a poset in which every chain has an upper bound, then $P$ has a maxima
 :::{.remark}
 You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
 To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
+:::
+
+:::{.theorem title="Krull"}
+Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
 :::
 
 :::{.proposition title="Existence of maximal ideals"}
