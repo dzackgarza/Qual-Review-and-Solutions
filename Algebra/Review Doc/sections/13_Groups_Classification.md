@@ -542,6 +542,22 @@ If $N\normal G$ and $P\in \Syl_p(H)$ then $G = N_G(P)H$.
 
 :::
 
+:::{.lemma title="$p$ groups are solvable"}
+Every finite $p$ group is solvable.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- By induction on $k$ in $\# G = p^k$: if $\# G = p$ then $G$ is abelian and automatically solvable. 
+- Inductively, for $\# G = p^k$, now consider $Z(G)\neq 1$ since we're in a $p\dash$group.
+- If $G/Z(G)$ is abelian, use the general fact: $H$ solvable and $G/H$ solvable implies $G$ solvable.
+  - Here $Z(G)$ and $G/Z(G)$ are both abelian and thus solvable.
+- Otherwise $G/Z(G)$ is a $p\dash$group of size $p^{k-1}$ and thus solvable by hypothesis.
+
+:::
+
+
 :::{.proposition title="PQR Theorem"}
 If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 :::
