@@ -560,7 +560,7 @@ Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Int
 Mnemonics:
 
 - Field $\implies$ UFD: given $x,y$ we need to write $x=qy+r$, so just take $q=y\inv$ and $r=0$.
-- UFD $\implies$ PID:
+- Euclidean $\implies$ PID:
 
 :::
 
