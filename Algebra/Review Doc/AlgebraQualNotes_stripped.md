@@ -3537,7 +3537,7 @@ f\text{ separable} \iff \gcd(f, f')=1 \iff f'\not\equiv 0 \iff_{\operatorname{ch
 -   Second part:
     -   If \( \operatorname{ch}k = 0 \) and \( f \) is irreducible, then \( \deg f \geq 2 \) and \( \deg f' \geq 1 \) so \( f' \neq 0 \) and \( f \) is thus separable.
 -   Third part:
-    -   \( \impliedby \): If \( f(x) = g(x^p) \) then \( f'(x) = g'(x^p)\cdot px^{p-1}\eqiuv 0 \).
+    -   \( \impliedby \): If \( f(x) = g(x^p) \) then \( f'(x) = g'(x^p)\cdot px^{p-1}\equiv 0 \).
     -   \( \implies \): Let \( f \) be irreducible and inseparable, so \( f' \equiv 0 \in k[x] \). Then \( f(x) \coloneqq\sum_{k=0}^n a_k x^k \) implies \( f'(x) \coloneqq\sum_{k=1}^{n}ka_k x^{k-1} \), which is zero iff \( ka_k \equiv 0 \) so \( p \) divides \( ka_k \). So \( a_k\not\equiv 0 \) forces \( p\divides k \), so \( f = a_0 + a_px^p + a_{2p}x^{2p} + \cdots \).
 :::
 
