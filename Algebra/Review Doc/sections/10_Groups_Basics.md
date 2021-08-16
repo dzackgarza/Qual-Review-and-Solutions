@@ -7,6 +7,7 @@ Summary of useful qual tips:
   - Subgroups of abelian groups are automatically normal.
   - If $N$ is normal in $G$, then $N$ is normal in any subgroup containing it.
   - If $N\leq G$ is the unique group of order $\# N$, then $N$ is normal (since any conjugate must have the same size).
+  - Using the subgroup correspondence: if $L/H\leq G/H$ then $L\leq G$ has size $\#(L/H)\#H$.
 - Sizes and structure:
   - Quotienting by bigger groups yields smaller indices:
   \[
@@ -29,6 +30,9 @@ Summary of useful qual tips:
   - Anything dealing with indices $[G:H]$: try just listing the cosets.
   - $aH = bH \iff ab\inv \in H$.
   - Showing subgroup containment: $K \subseteq H$ iff $kH = H$ for all $k\in K$.
+- Sylows:
+  - If $S_p$ is normal, then $S_p$ is characteristic.
+    This is useful if $H\leq G$ and $P\in\Syl_p(H)$ is normal in $H$, then $P$ is also normal in $G$.
 
 :::
 ## Big List of Notation
