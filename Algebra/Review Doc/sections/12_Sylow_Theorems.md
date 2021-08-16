@@ -68,11 +68,25 @@ In particular, Sylow $p\dash$subgroups always exist.
 \envlist
 
 - Let $\# G = p^k m$.
-- Idea: let $G\actson \ts{H\leq G}$ by left-translation.
-  Induct up by showing that if $\# H = p^i$ for $i\leq k$, one can product a bigger subgroup $\tilde H \contains H$ with $[\tilde H : H] = p$.
+  Idea: Induct up by showing that if $\# H = p^i$ for $i\leq k$, one can product a bigger subgroup $\tilde H \contains H$ with $[\tilde H : H] = p$.
   This makes $\# \tilde H = p^{i+1}$.
 - Let $H\leq G$ so that $H$ is a $p\dash$group.
+- Let $H\actson G/H$ by left-translation.
 - Use the lemma that $\#(G/H)\equiv \Fix_H(G/H)\mod p$
+- Identify $\Fix_H(G/H) = N_G(H)$, since fixing $xH$ means $gxH = xH \implies gHg\inv \subseteq H \implies gHg\inv = H$ for all $g\in G$.
+\[
+xH \in \Fix_H(G/H) 
+&\iff gxH &= xH \forall g\in H\\
+&\iff x\inv g x H \in H \forall g\in H\\
+&\iff x\inv H x\inv = H \\
+&\iff x\in N_G(H)
+,\]
+  so $\Fix_H(G/H) = \ts{gH \st g\in N(H)} = N_G(H)/ H$ are cosets whose representatives are normalizers of $H$.
+- Since $H\normal N_G(H)$, these cosets form a group.
+- We have $[G:H] = \#(N_G(H) / H)$, and if $i<k$ then $p$ divides $[G: H]$.
+- So $N_G(H)/H$ is a $p\dash$group and has a subgroup $L$ of order $p$ by Cauchy.
+- Use the subgroup correspondence: $L\leq N_G(H)/H$ corresponds to some $L' \leq G$ with $H \subseteq L' \subseteq N_G(H)$.
+
 
 :::
 
