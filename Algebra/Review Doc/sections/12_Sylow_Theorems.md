@@ -167,9 +167,7 @@ where we now get equality since these sets have the same cardinality.
   - Identify $\Stab(P) = N_G(P)$.
 :::
 
-
 ## Corollaries and Applications
-
 
 :::{.corollary}
 By Sylow 3, $p$ does not divide $n_p$.
@@ -186,13 +184,14 @@ Otherwise, it is contained in some $p\dash$subgroup $H^1$.
 Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zorn's lemma $H\definedas \union_i H^i$ is maximal and thus a Sylow $p\dash$subgroup.
 :::
 
-## Proof of Sylow Theorems
-
-\todo[inline]{Proof of Sylows}
-
-
-
 ## Exercises
+
+
+:::{.exercise title="?"}
+\envlist
 
 - Let $G$ be a group of order $p$ with $v$ and $e$ positive integers, $p$ prime, $p > v$, and $v$ is not a multiple of $p$. 
   Show that $G$ has a normal Sylow p-subgroup.
+
+:::
+
