@@ -387,7 +387,7 @@ Maximals quotient to fields, primes to domains.
     For example, in $\ZZ/6$, $[3]$ is a zero divisors since $[2][3] = 0$.
 - Useful examples:
   - $\mspec \ZZ = \ts{p\ZZ}$ and $\spec \ZZ = \ts{p\ZZ} \union \gens{0}$.
-  - $\mspec \CC[x] = \ts{x-a \st a\in \CC}$, since over a PID $\gens{\alpha}$ is maximal iff $\alpha$ is irreducible, and $\CC$ is algebraically closed.
+  - $\mspec \CC[x] = \ts{x-a \st a\in \CC}$, since over a PID $\gens{\alpha}$ is maximal iff $\alpha$ is irreducible, and over $\CC$ irreducibles are degree 1.
 
 - A ring with no maximal ideals: the Prüfer $p\dash$group $\ZZ(p^\infty) = \ts{\zeta_{p^k}}_{k=1}^{\infty}$ with the trivial ring structure $xy = 0$.
   The subgroups are $H_k \da \ts{\zeta_{p^k}}$, which form an increasing chain that doesn't stabilize.
