@@ -368,6 +368,8 @@ An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $\mfm \subsetneq I
 :::{.example title="Some counterexamples"}
 \envlist
 
+- $\mspec \ZZ = \ts{p\ZZ}$ and $\spec \ZZ = \ts{p\ZZ} \union \gens{0}$.
+- $\gens{2, x} \in \Id(\ZZ[x])$ is maximal.
 - A non-maximal, non-prime ideal: $m\ZZ \in \Id(\ZZ)$, since ideals here are prime iff $m$ is prime, and if $m$ is composite then $\ZZ/m$ is not a domain since it has nonzero zero divisors. 
   For example, in $\ZZ/6$, $[3]$ is a zero divisors since $[2][3] = 0$.
 - An ideal that is both prime and maximal: $p\ZZ \in \Id(\ZZ)$.
