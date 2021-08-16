@@ -573,24 +573,28 @@ If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 :::{.proof title="?"}
 \envlist
 
-- Idea: 
-  - Get a normal subgroup $R$ of order $r$, so $\# (G/R) = pq$.
-  - Get a normal subgroup $Q_1$ of order $q$ in $G/R$, which corresponds to $Q\normal G$ of order $qr$ containing $R$.
-    Note that $R\normal Q$ since normality descends to subgroups.
-  - Now $G\to Q\to R \to 1$ is a subnormal series whose quotients are all cyclic and thus abelian:
-    - $\#(G/Q) = pqr/qr = p$,
-    - $\#(Q/R) = qr/r = q$,
-    - $\#(R/1) = r$,
+Idea: 
 
-- Let $m\da \# G = pqr$.
-  The claim is that $G$ has a normal $S_r \in \Syl_r(G)$.
+- Get a normal subgroup $R$ of order $r$, so $\# (G/R) = pq$.
+- Get a normal subgroup $Q_1$ of order $q$ in $G/R$, which corresponds to $Q\normal G$ of order $qr$ containing $R$.
+  Note that $R\normal Q$ since normality descends to subgroups.
+- Now $G\to Q\to R \to 1$ is a subnormal series whose quotients are all cyclic and thus abelian:
+  - $\#(G/Q) = pqr/qr = p$,
+  - $\#(Q/R) = qr/r = q$,
+  - $\#(R/1) = r$,
+
+:::
+
+
+:::{.remark}
+Aside: let $m\da \# G = pqr$, then $G$ has a normal subgroup of order $r$.
 
 - Claim: at least one of the Sylows for $p,q,$ or $r$ is normal.
   - If none of the Sylow $p,q,r$ groups are normal, then $n_r \geq r$ and $n_p \geq q$.
     Counting the contributions from just $\Syl_q(G)$ and $\Syl_p(G)$ yields
-    \[
-    n_q(q-1) + n_r(r-1) \geq pr(q-1) + pq(r-1) = pqr + p(qr -q - r)
-    .\]
+  \[
+  n_q(q-1) + n_r(r-1) \geq pr(q-1) + pq(r-1) = pqr + p(qr -q - r)
+  .\]
 
   - If this is to be at most $m$, it must be that $qr-q-r$ is negative (since $p>1$ and otherwise this would yield more than $pqr$ elements).
   - But if this holds,
@@ -602,14 +606,15 @@ If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
   - So there is one of $S_p , S_q, S_r$ that is normal in $G$.
 
 - Now if $S_r$ is normal we're done, so suppose not and $n_r > 1$.
-  Claim: this is a contradiction.
+  Claim: we can get another subgroup of order $r$ 
 
   - Let $N$ be the normal Sylow, so either $N\in \Syl_p(G)$ or $N\in \Syl_q(G)$.
-  - Then $G/N$ has order $r\ell$ for either $\ell = p$ or $\ell = q$.
-    In either case, $\ell < r$.
-
-  - 
-
+  - Then $G/N$ has order $r\ell$ for either $\ell = q$ or $\ell = p$ respectively.
+    
+  - In either case, $\ell < r$.
+    Using the lemma, $G/N$ has a normal subgroup of size $r$, say $R/N \leq G/N$.
+  - Then by the subgroup correspondence theorem, $R$ corresponds to a normal subgroup $R'\normal G$ of size $r\ell$ with $r<\ell$.
+  - Applying the same lemma to $R'$ immediately yields a subgroup of order $r$.
 :::
 
 
