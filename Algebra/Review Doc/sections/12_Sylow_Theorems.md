@@ -40,6 +40,8 @@ If $G\actson X$ for $G$ a $p\dash$group, then letting $\Fix(G) \da \ts{x\in X \s
 
 ## Statements of Sylow
 
+> For full proofs (some of which I've borrowed), see Keith Conrad's notes: <https://kconrad.math.uconn.edu/blurbs/grouptheory/sylowpf.pdf>
+
 Write
 
 
@@ -63,8 +65,7 @@ If $\abs G = \prod p_i^{\alpha_i}$, then there exist subgroups of order $p_i^{\b
 In particular, Sylow $p\dash$subgroups always exist.
 :::
 
-
-:::{.proof title="?"}
+:::{.proof title="of Sylow 1: left translation"}
 \envlist
 
 - Let $\# G = p^k m$.
@@ -85,14 +86,14 @@ xH \in \Fix_H(G/H)
 - Since $H\normal N_G(H)$, these cosets form a group.
 - We have $[G:H] = \#(N_G(H) / H)$, and if $i<k$ then $p$ divides $[G: H]$.
 - So $N_G(H)/H$ is a $p\dash$group and has a subgroup $L$ of order $p$ by Cauchy.
-- Use the subgroup correspondence: $L\leq N_G(H)/H$ corresponds to some $L' \leq G$ with $H \subseteq L' \subseteq N_G(H)$.
+- Use the subgroup correspondence: $L\leq N_G(H)/H$ corresponds to some $L' \leq G$ with $H \subseteq L' \subseteq N_G(H)$ and $L = L'/H$.
+  Now use that $\# L = p$ implies $\#(L' / H) = [L':H] = p$, so $\# L' = [L':H]\#H = p\#H = p^{i+1}$ as desired.
 
 
 :::
 
 
 ### Sylow 2 (Sylows are Conjugate)
-
 
 :::{.theorem title="Sylow 2"}
 All Sylow$\dash p$ subgroups $S_p$ are conjugate, i.e.
