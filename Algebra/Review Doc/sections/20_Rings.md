@@ -593,6 +593,8 @@ If $\FF$ a field then $\FF[x]$ is a Euclidean domain.
 :::
 
 :::{.proposition title="Characterizations of Rings"}
+\envlist
+
 - $R$ a commutative division ring $\implies R$ is a field
 - $R$ a finite integral domain $\implies R$ is a field.
 - $\FF$ a field $\iff \FF[x]$ is a PID.
