@@ -562,6 +562,8 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
 :::
 
 :::{.example title="showing these inclusions are strict"}
+\envlist
+
 - A Euclidean Domain that is not a field: $\FF[x]$ for $\FF$ a field
   - *Proof*: Use previous lemma, and $x$ is not invertible
 
