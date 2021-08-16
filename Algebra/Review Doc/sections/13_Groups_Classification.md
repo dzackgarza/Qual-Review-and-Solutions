@@ -607,5 +607,5 @@ Proof of first claim: let $m\da \# G = pqr$, then $G$ has a normal subgroup of o
     Using the lemma, $G/N$ has a normal subgroup of size $r$, say $R/N \leq G/N$.
   - Then by the subgroup correspondence theorem, $R$ corresponds to a normal subgroup $R'\normal G$ of size $r\ell$ with $r<\ell$.
   - Applying the same lemma to $R'$ immediately yields a normal subgroup $R''$ of order $r$ in $R'$
-  - Now use that $R'' \mathrm{\char} R'$ since Sylows are characteristic, and $R'\normal G$, so $R''\normal G$ too.
+  - Now use that $R'' \operatorname{char} R'$ since Sylows are characteristic, and $R'\normal G$, so $R''\normal G$ too.
 :::

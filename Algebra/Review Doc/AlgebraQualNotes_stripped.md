@@ -2049,7 +2049,7 @@ Proof of first claim: let \( m\coloneqq\# G = pqr \), then \( G \) has a normal 
 
     -   Applying the same lemma to \( R' \) immediately yields a normal subgroup \( R'' \) of order \( r \) in \( R' \)
 
-    -   Now use that \( R'' \mathrm{\char} R' \) since Sylows are characteristic, and \( R'{~\trianglelefteq~}G \), so \( R''{~\trianglelefteq~}G \) too.
+    -   Now use that \( R'' \operatorname{char} R' \) since Sylows are characteristic, and \( R'{~\trianglelefteq~}G \), so \( R''{~\trianglelefteq~}G \) too.
 :::
 
 ## Series of Groups
