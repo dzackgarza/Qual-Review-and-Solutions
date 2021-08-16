@@ -151,3 +151,13 @@ For $G$ a finite group, TFAE:
 
 :::
 
+## Rings
+
+:::{.definition title="Gorenstein Rings"}
+A commutative Noetherian ring $R$ is **Gorenstein** iff $R$ viewed as an $R\dash$module has finite injective dimension.
+:::
+
+:::{.example title="Why care about Gorenstein rings?"}
+If $R\in \gr\kAlg$ with $\dim_k R < \infty$, then $R$ decomposes as $R = R_0 \oplus R_1 \oplus \cdots R_n$ with $R_0 \da k$, and $R$ is Gorenstein iff $R$ satisfies "Poincaré duality": $\dim_k R_0 = \dim_k R_m = 1$ and there is a perfect pairing $R_i \tensor_k R_{n-j} \to R_n$.
+:::
+
