@@ -444,7 +444,7 @@ By cases:
 :::{.proposition title="Classification of groups of order $pq$"}
 If $G$ is a group of order $pq$ where without loss of generality $q<p$, then
 
-1. If $q\notdivides p-1$ then $G\cong S_p \cross S_q \cong \ZZ/p \cross \ZZ/q \cong \ZZ/pq$
+1. If $q\notdivides p-1$ then $G$ is cyclic and $G\cong S_p \cross S_q \cong C_{pq}$.
 2. If $q\divides p-1$ then $G\cong S_q \semidirect_\psi S_p$ where $S_p \normal G$ and $\psi: S_q \to \Aut(S_p)$, and $G$ has a presentation 
 \[
 G\cong \gens{a, b \st a^p, b^q, bab\inv = a^\ell} \\ \\ 
@@ -530,6 +530,28 @@ where
 
 :::{.proposition title="PQR Theorem"}
 If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
+:::
+
+
+:::{.proof title="?"}
+\envlist
+
+- Let $m\da \# G = pqr$.
+- If none of the Sylow $p,q,r$ groups are normal, then $n_r \geq r$ and $n_p \geq q$.
+  Counting the contributions from just $\Syl_q(G)$ and $\Syl_p(G)$ yields
+  \[
+  n_q(q-1) + n_r(r-1) \geq pr(q-1) + pq(r-1) = pqr + p(qr -q - r)
+  .\]
+
+- If this is to be at most $m$, it must be that $qr-q-r$ is negative (since $p>1$ and otherwise this would yield more than $pqr$ elements).
+- But if this holds,
+\[
+qr-q-r \leq 0 \iff q(r-1) \leq r \iff q\leq {r\over r-1}
+.\]
+  But $q>2$ be assumption, and $1\leq {r\over r-1}\leq 2$ for any number $r$. $\contradiction$.
+
+
+
 :::
 
 
