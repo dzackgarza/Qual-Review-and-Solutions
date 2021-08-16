@@ -585,7 +585,7 @@ If $R$ is a PID, then every element in $R$ has a unique prime factorization.
    - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
 
 -  A ring that is not an integral domain: $\ZZ/(4)$
-   - *Proof*: $2 \mod 4$ is a zero divisor.
+   - *Proof*: $[2]_4$ is a zero divisor since $[2]_4 [2]_4 = [0]_4$.
 :::
 
 :::{.proposition title="Polynomial rings over fields have division"}
