@@ -528,6 +528,20 @@ where
 - So $\psi \circ \pi_k: \ZZ/q \to \ZZ/(p-1)$ for $1\leq k \leq q-1$ yields $q-1$ distinct actions, and we're done.
 :::
 
+:::{.lemma title="Frattini's Argument"}
+If $N\normal G$ and $P\in \Syl_p(H)$ then $G = N_G(P)H$.
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Let $g\in G$, then since $P\leq H \normal G$ we have $gPg\inv \subseteq gHg\inv = H$.
+- So $P' \da gPg\inv \in \Syl_p(H)$ for all $g$, and since Sylows in $H$ are all conjugate, we can write $P' = h\inv Ph\inv$ for some $h\in H$.
+- This says $hPh\inv = gPg\inv$ and thus $P = (g\inv h)P (h\inv g) = (h\inv g)\inv P (h\inv g)$.
+- But then $g\inv h \in N_G(P)$ so $g\in N_G(P)H$.
+
+:::
+
 :::{.proposition title="PQR Theorem"}
 If $|G| = pqr$ where $p<q<r$ are distinct primes then $G$ is solvable.
 :::
