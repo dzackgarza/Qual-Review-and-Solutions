@@ -455,6 +455,8 @@ Every field is an integral domain, but e.g. $\ZZ$ is an integral domain that is 
 
 :::
 
+### The Big Ones
+
 :::{.definition title="Principal Ideal"}
 An ideal $I \normal R$ if **principal** if there exists an $a\in R$ such that $I = \gens{a}$, i.e. $I = Ra$.
 :::
@@ -474,6 +476,13 @@ r = u \prod_{i=1}^n p_i
 \]
 where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::
+
+:::{.definition title="Euclidean Domain"}
+An integral domain $R$ is **Euclidean** if $R$ admits a degree function $d:R\to \ZZ_{\geq 0}$ such that for all $x,y\in R$ there exist $q,r\in R$ with $x = qy + r$ and either $f(r) < f(y)$ or $r=0$.
+:::
+
+
+### Others
 
 :::{.definition title="Noetherian"}
 A ring $R$ is **Noetherian** if the ACC holds: every ascending chain of ideals $I_1 \leq I_2 \cdots$ stabilizes in the sense that there exists some $N$ such that $I_N = I_{N+1} = \cdots$.
@@ -541,27 +550,19 @@ A commutative ring $R$ is **regular** if $R$ is Noetherian and for every $p\in \
 Motivation: if $R = \OO_{X, x}$ is the ring of germs at $x$ of an algebraic variety $X$, then $R$ is regular iff $X$ is nonsingular at $x$.
 :::
 
-:::{.definition title="Gorenstein Rings"}
-A commutative Noetherian ring $R$ is **Gorenstein** iff $R$ viewed as an $R\dash$module has finite injective dimension.
-:::
-
-:::{.example title="Why care about Gorenstein rings?"}
-If $R\in \gr\kAlg$ with $\dim_k R < \infty$, then $R$ decomposes as $R = R_0 \oplus R_1 \oplus \cdots R_n$ with $R_0 \da k$, and $R$ is Gorenstein iff $R$ satisfies "Poincaré duality": $\dim_k R_0 = \dim_k R_m = 1$ and there is a perfect pairing $R_i \tensor_k R_{n-j} \to R_n$.
-:::
-
 ## Comparing and Transporting Ring Types
 
 :::{.proposition title="Big chain of inclusions"}
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
 :::
 
-
 :::{.remark}
 Mnemonics:
 
 - Field $\implies$ UFD: given $x,y$ we need to write $x=qy+r$, so just take $q=y\inv$ and $r=0$.
-:::
+- UFD $\implies$ PID:
 
+:::
 
 :::{.proposition title="PID implies UFD"}
 If $R$ is a PID, then every element in $R$ has a unique prime factorization.
