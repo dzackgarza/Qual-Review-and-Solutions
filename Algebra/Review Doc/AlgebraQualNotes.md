@@ -3255,6 +3255,7 @@ Equivalently, $a\divides b$ and $b\divides a$.
 
 
 :::{.example title="of specs"}
+\envlist
 
 - $\Id(\ZZ) = \ts{ \gens{m} \st m \in \ZZ^{\geq 0}}$
 - $\mspec \ZZ = \ts{ \gens{p} \st p\neq 0 \text{ is prime} }$
@@ -3293,30 +3294,48 @@ In $R$ a UFD, an element $r\in R$ is prime $\iff r$ is irreducible.
 :::
 
 :::{.example title="of why the converse doesn't hold"}
-For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse:
-\[
-x^2 \mod{x^2 + x} \in \QQ[x]/(x^2 + x)
-.\] 
-Check that $x$ is prime directly, but $x=x\cdot x$ and $x$ is not a unit.
+For $R$ an integral domain, prime $\implies$ irreducible, but generally not the converse.
+Take $R \da k[x, y]/\gens{x^2-y^3} \cong k[x^2, y^3]$, which is a domain,
+But here $[x^2] = [y^3]$ as equivalence classes where $[y^3]$ is irreducible since every element in $r\in R$ has $\deg_y(r) = 0,3,6,\cdots$.
+But $[y^3]$ is not prime since it divides $[x^2]$ but doesn't divide $[x]$.
 :::
 
 :::{.definition title="Prime Spectrum"}
 The **prime spectrum** (or just the **spectrum**) of $R$ is defined as 
 \[
-\spec(R) = \theset{\pr \normal R \suchthat \pr \text{ is prime}}
+\spec(R) = \theset{\mfp \normal R \suchthat \mfp \text{ is prime}}
 .\]
 :::
 
 :::{.definition title="Maximal Ideal"}
-An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $I\contains \mfm$ then $I = R$.
+An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $\mfm \subsetneq I$ a proper containment then $I = R$.
 :::
 
-:::{.example title="Some counterexamples"}
-\envlist
 
-- A non-maximal, non-prime ideal: \( \gens{ x^4 + 2x^2 + 1 }\normal \CC[x]  \) 
-- An ideal that is both prime and maximal: \( \gens{ f }  \) for any $f\in \QQ[x]^\irr$
-- A prime ideal that is not maximal: \( \gens{ x-c }\in \RR[x]  \).
+
+
+
+:::{.example title="Some counterexamples"}
+Some examples.
+Reminder: maximal always implies prime, and for PIDs, prime *and nonzero* implies maximal.
+Maximals quotient to fields, primes to domains.
+
+- Prime and maximal: 
+  - $p\ZZ \in \Id(\ZZ)$.
+    Maximal (and thus prime) since $\ZZ/p$ is a field and a domain.
+  - $\gens{2, x} \in \Id(\ZZ[x])$.
+    Maximal (and thus prime) $\ZZ[x]/\gens{2, x} \cong \ZZ/2$ is a field and a domain.
+- Prime but not maximal: 
+  - $\gens{0} \in \Id(\ZZ)$, since $m\ZZ \contains \gens{0}$ for any $m$.
+  - $\gens{x} \in R[x]$ over any integral domain since $R[x]/\gens{x} \cong R$ is a domain (making it maximal), but $R$ can be chosen not to be a field (making it non-prime).
+- Not prime, not maximal:
+  - $m\ZZ \in \Id(\ZZ)$, since $m$ composite implies $\ZZ/m$ is not a domain since it has nonzero zero divisors. 
+    For example, in $\ZZ/6$, $[3]$ is a zero divisors since $[2][3] = 0$.
+- Useful examples:
+  - $\mspec \ZZ = \ts{p\ZZ}$ and $\spec \ZZ = \ts{p\ZZ} \union \gens{0}$.
+  - $\mspec \CC[x] = \ts{x-a \st a\in \CC}$, since over a PID $\gens{\alpha}$ is maximal iff $\alpha$ is irreducible, and over $\CC$ irreducibles are degree 1.
+  - $\mspec \kx{n} = \ts{\gens{x-a_1, x-a_2, \cdots, x-a_n} \st a_k \in k}$.
+
 - A ring with no maximal ideals: the Prüfer $p\dash$group $\ZZ(p^\infty) = \ts{\zeta_{p^k}}_{k=1}^{\infty}$ with the trivial ring structure $xy = 0$.
   The subgroups are $H_k \da \ts{\zeta_{p^k}}$, which form an increasing chain that doesn't stabilize.
 :::
@@ -3397,7 +3416,7 @@ Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
 :::{.definition title="Unique Factorization Domain"}
 A ring $R$ is a **unique factorization domain** iff $R$ is an integral domain and every $r\in R\smz$ admits a decomposition
 \[  
-r = u \prod_{i=1}^n p_i
+r = u \mfpod_{i=1}^n p_i
 \]
 where $u\in R\units$ and the $p_i$ irreducible, which is unique up to associates.
 :::

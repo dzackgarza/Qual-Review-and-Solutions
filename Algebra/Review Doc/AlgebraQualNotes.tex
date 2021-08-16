@@ -4404,6 +4404,8 @@ and \(b\divides a\).
 
 \begin{example}[of specs]
 
+\envlist
+
 \begin{itemize}
 \tightlist
 \item
@@ -4473,12 +4475,12 @@ irreducible.
 \begin{example}[of why the converse doesn't hold]
 
 For \(R\) an integral domain, prime \(\implies\) irreducible, but
-generally not the converse:
-\begin{align*}
-x^2 \operatorname{mod}{x^2 + x} \in {\mathbb{Q}}[x]/(x^2 + x)
-.\end{align*}
-Check that \(x\) is prime directly, but \(x=x\cdot x\) and \(x\) is not
-a unit.
+generally not the converse. Take
+\(R \coloneqq k[x, y]/\left\langle{x^2-y^3}\right\rangle \cong k[x^2, y^3]\),
+which is a domain, But here \([x^2] = [y^3]\) as equivalence classes
+where \([y^3]\) is irreducible since every element in \(r\in R\) has
+\(\deg_y(r) = 0,3,6,\cdots\). But \([y^3]\) is not prime since it
+divides \([x^2]\) but doesn't divide \([x]\).
 
 \end{example}
 
@@ -4487,7 +4489,7 @@ a unit.
 The \textbf{prime spectrum} (or just the \textbf{spectrum}) of \(R\) is
 defined as
 \begin{align*}
-\operatorname{Spec}(R) = \left\{{{\operatorname{pr}}{~\trianglelefteq~}R {~\mathrel{\Big|}~}{\operatorname{pr}}\text{ is prime}}\right\}
+\operatorname{Spec}(R) = \left\{{{\mathfrak{p}}{~\trianglelefteq~}R {~\mathrel{\Big|}~}{\mathfrak{p}}\text{ is prime}}\right\}
 .\end{align*}
 
 \end{definition}
@@ -4495,27 +4497,76 @@ defined as
 \begin{definition}[Maximal Ideal]
 
 An ideal \({\mathfrak{m}}\) is \textbf{maximal} iff whenever
-\(I{~\trianglelefteq~}R\) with \(I\supseteq{\mathfrak{m}}\) then
-\(I = R\).
+\(I{~\trianglelefteq~}R\) with \({\mathfrak{m}}\subsetneq I\) a proper
+containment then \(I = R\).
 
 \end{definition}
 
 \begin{example}[Some counterexamples]
 
-\envlist
+Some examples. Reminder: maximal always implies prime, and for PIDs,
+prime \emph{and nonzero} implies maximal. Maximals quotient to fields,
+primes to domains.
 
 \begin{itemize}
 \tightlist
 \item
-  A non-maximal, non-prime ideal:
-  \(\left\langle{ x^4 + 2x^2 + 1 }\right\rangle{~\trianglelefteq~}{\mathbb{C}}[x]\)
+  Prime and maximal:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(p{\mathbb{Z}}\in \operatorname{Id}({\mathbb{Z}})\). Maximal (and
+    thus prime) since \({\mathbb{Z}}/p\) is a field and a domain.
+  \item
+    \(\left\langle{2, x}\right\rangle \in \operatorname{Id}({\mathbb{Z}}[x])\).
+    Maximal (and thus prime)
+    \({\mathbb{Z}}[x]/\left\langle{2, x}\right\rangle \cong {\mathbb{Z}}/2\)
+    is a field and a domain.
+  \end{itemize}
 \item
-  An ideal that is both prime and maximal:
-  \(\left\langle{ f }\right\rangle\) for any
-  \(f\in {\mathbb{Q}}[x]^{\mathrm{irr}}\)
+  Prime but not maximal:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\left\langle{0}\right\rangle \in \operatorname{Id}({\mathbb{Z}})\),
+    since \(m{\mathbb{Z}}\supseteq\left\langle{0}\right\rangle\) for any
+    \(m\).
+  \item
+    \(\left\langle{x}\right\rangle \in R[x]\) over any integral domain
+    since \(R[x]/\left\langle{x}\right\rangle \cong R\) is a domain
+    (making it maximal), but \(R\) can be chosen not to be a field
+    (making it non-prime).
+  \end{itemize}
 \item
-  A prime ideal that is not maximal:
-  \(\left\langle{ x-c }\right\rangle\in {\mathbb{R}}[x]\).
+  Not prime, not maximal:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(m{\mathbb{Z}}\in \operatorname{Id}({\mathbb{Z}})\), since \(m\)
+    composite implies \({\mathbb{Z}}/m\) is not a domain since it has
+    nonzero zero divisors. For example, in \({\mathbb{Z}}/6\), \([3]\)
+    is a zero divisors since \([2][3] = 0\).
+  \end{itemize}
+\item
+  Useful examples:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\operatorname{mSpec}{\mathbb{Z}}= \left\{{p{\mathbb{Z}}}\right\}\)
+    and
+    \(\operatorname{Spec}{\mathbb{Z}}= \left\{{p{\mathbb{Z}}}\right\} \cup\left\langle{0}\right\rangle\).
+  \item
+    \(\operatorname{mSpec}{\mathbb{C}}[x] = \left\{{x-a {~\mathrel{\Big|}~}a\in {\mathbb{C}}}\right\}\),
+    since over a PID \(\left\langle{\alpha}\right\rangle\) is maximal
+    iff \(\alpha\) is irreducible, and over \({\mathbb{C}}\)
+    irreducibles are degree 1.
+  \item
+    \(\operatorname{mSpec}k[x_1, \cdots, x_{n}] = \left\{{\left\langle{x-a_1, x-a_2, \cdots, x-a_n}\right\rangle {~\mathrel{\Big|}~}a_k \in k}\right\}\).
+  \end{itemize}
 \item
   A ring with no maximal ideals: the Prüfer \(p{\hbox{-}}\)group
   \({\mathbb{Z}}(p^\infty) = \left\{{\zeta_{p^k}}\right\}_{k=1}^{\infty}\)
@@ -4653,7 +4704,7 @@ A ring \(R\) is a \textbf{unique factorization domain} iff \(R\) is an
 integral domain and every \(r\in R\setminus\left\{{0}\right\}\) admits a
 decomposition
 \begin{align*}  
-r = u \prod_{i=1}^n p_i
+r = u \mfpod_{i=1}^n p_i
 \end{align*}
 where \(u\in R^{\times}\) and the \(p_i\) irreducible, which is unique
 up to associates.
