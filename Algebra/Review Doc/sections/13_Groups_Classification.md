@@ -304,7 +304,7 @@ Make the table by factoring the order of each cyclic piece, being careful not to
 | $2^3$ | $5^2$ | $7$ |
 
 Reading across rows from bottom to top (and using CRT to merge everything within a row) yields invariant factors on the LHS below.
-Reading down columns, left to right (merging nothing) yields elementary divisors on the RHS:
+Reading down columns, left to right (merging nothing) yields elementary divisors on the right-hand side below
 
 \[
 \ZZ_2 \times \ZZ_2 \times \ZZ_{2^3 \cdot 5^2 \cdot 7}
@@ -416,20 +416,30 @@ General strategy: find a normal subgroup (usually a Sylow) and use recognition o
 
 :::{.proposition title="Classification of groups of order $p$"}
 Every group $G$ of prime order $p\geq 2$ is cyclic and thus isomorphic to $\ZZ/p$.
+:::
 
+
+:::{.proof title="?"}
 Supposing that $g\neq e$, it generates a cyclic subgroup $H \da \gens{g} \leq G$ of order dividing $p$ by Lagrange.
 Since $g\neq e$, $\#H = p = \# G$.
 :::
 
+
 :::{.proposition title="Classification of groups of order $p^2$"}
 Every group $G$ of order $p^2$ is abelian, and thus isomorphic to either $\ZZ/p^2$ or $(\ZZ/p)^2$.
+:::
 
-Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$
+
+:::{.proof title="?"}
+Quotient by the center to get $m\da \#G/Z(G) \in \ts{ 1, p, p^2 }$.
+By cases:
 
 - Since $G$ is a $p\dash$group, $G$ has nontrivial center, so $m\neq 1$
 - If $m=p$, then $G/Z(G)$ is cyclic and thus $G$ is abelian by the $G/Z(G)$ theorem.
 - If $m=p^2$, $Z(G) = G$ and $G$ is abelian, done.
+
 :::
+
 
 :::{.proposition title="Classification of groups of order $pq$"}
 If $G$ is a group of order $pq$ where without loss of generality $q<p$, then
