@@ -365,11 +365,16 @@ The **prime spectrum** (or just the **spectrum**) of $R$ is defined as
 An ideal $\mfm$ is **maximal** iff whenever $I\normal R$ with $\mfm \subsetneq I$ a proper containment then $I = R$.
 :::
 
+
+
+
+
 :::{.example title="Some counterexamples"}
-\envlist
+Some examples.
+Reminder: maximal always implies prime, and for PIDs, prime *and nonzero* implies maximal.
 
 - $\mspec \ZZ = \ts{p\ZZ}$ and $\spec \ZZ = \ts{p\ZZ} \union \gens{0}$.
-- $\gens{2, x} \in \Id(\ZZ[x])$ is maximal.
+- $\gens{2, x} \in \Id(\ZZ[x])$ is maximal but not prime since $
 - A non-maximal, non-prime ideal: $m\ZZ \in \Id(\ZZ)$, since ideals here are prime iff $m$ is prime, and if $m$ is composite then $\ZZ/m$ is not a domain since it has nonzero zero divisors. 
   For example, in $\ZZ/6$, $[3]$ is a zero divisors since $[2][3] = 0$.
 - An ideal that is both prime and maximal: $p\ZZ \in \Id(\ZZ)$.
