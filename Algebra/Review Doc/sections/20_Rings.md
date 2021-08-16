@@ -555,7 +555,13 @@ If $R\in \gr\kAlg$ with $\dim_k R < \infty$, then $R$ decomposes as $R = R_0 \op
 Fields $\subset$ Euclidean domains  $\subset$  PIDs $\subset$ UFDs $\subset$ Integral Domains  $\subset$ Rings
 :::
 
-\todo[inline]{Prove inclusions}
+
+:::{.remark}
+Mnemonics:
+
+- Field $\implies$ UFD: given $x,y$ we need to write $x=qy+r$, so just take $q=y\inv$ and $r=0$.
+:::
+
 
 :::{.proposition title="PID implies UFD"}
 If $R$ is a PID, then every element in $R$ has a unique prime factorization.

@@ -156,6 +156,7 @@ Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
 :::
 
 :::{.solution}
+\envlist
 
 :::{.proof title="of 1"}
 \envlist

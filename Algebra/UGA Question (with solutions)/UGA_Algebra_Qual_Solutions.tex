@@ -164,7 +164,9 @@ that
 [G: H\cap K] \leq [G: H] ~ [G:K]
 .\end{align*}
 
-http://www.ams.org/notices/200304/what-is.pdf :::\{.concept\} \envlist
+\begin{concept}
+
+\envlist
 
 \begin{itemize}
 \tightlist
@@ -176,8 +178,10 @@ http://www.ams.org/notices/200304/what-is.pdf :::\{.concept\} \envlist
 \item
   Fundamental theorem of cosets: \(xH = yH \iff xy^{-1}\in H\).
 \item
-  Common trick: just list out all of the darn cosets! :::
+  Common trick: just list out all of the darn cosets!
 \end{itemize}
+
+\end{concept}
 
 \begin{strategy}
 
@@ -1212,12 +1216,12 @@ Remark: see a more direct proof in
 
 \end{solution}
 
-\hypertarget{fall-2019-midterm-1-work}{%
+\hypertarget{fall-2019-midterm-1-done}{%
 \subsubsection{\texorpdfstring{Fall 2019 Midterm \#1
-\(\work\)}{Fall 2019 Midterm \#1 \textbackslash work}}\label{fall-2019-midterm-1-work}}
+\(\done\)}{Fall 2019 Midterm \#1 \textbackslash done}}\label{fall-2019-midterm-1-done}}
 
 Let \(G\) be a group of order \(p^2q\) for \(p, q\) prime. Show that
-\(G\) has a nontrivial normal subgroup.
+\(G\) has a nontrivial normal subgroup. :::
 
 \begin{solution}
 
@@ -1231,30 +1235,79 @@ Let \(G\) be a group of order \(p^2q\) for \(p, q\) prime. Show that
 \item
   In any case, we have
   \begin{align*}
-  n_p \divides q &,\, n_p \equiv 1 \operatorname{mod}p \implies n_p \in \left\{{ 1,q }\right\} \\ \\
-  n_q \divides p^2 &,\, n_q \equiv 1 \operatorname{mod}q \implies n_q \in \in \left\{{ 1, p, p^2}\right\} 
+  n_p \divides q &\implies n_p \in \left\{{ 1,q }\right\} \\ \\
+  n_q \divides p^2 &\implies n_q \in \left\{{ 1, p, p^2}\right\} 
   .\end{align*}
 \item
+  If \(n_p=1\) or \(n_q=1\), we're done, so suppose otherwise.
+\item
   \textbf{Case 1:} \(:p>q\).
-\item
-  If \(p>q\), then \(p\geq q+2\) since \(p+1\) can't be prime.
-\item
-  So \(q\) is not congruent to \(1\operatorname{mod}p\), forcing
-  \(n_p = 1\).
-\item
-  \textbf{Case 2:}: \(p< q\):
-\item
-  For the same reasons as above, \(p\not\equiv 1\operatorname{mod}q\)
-  forces \(n_q\neq p\).
-\item
-  If \(n_q = 1\), we're done.
-\item
-  If \(n_q = p^2\):
 
   \begin{itemize}
   \tightlist
   \item
-    Finer analysis\ldots.
+    Using that \([n_p]_p \equiv 1\), consider reducing elements in
+    \(\left\{{1, q}\right\} \operatorname{mod}p\).
+  \item
+    Since \(q<p\), we just have \(q\operatorname{mod}p = q\), and as
+    long as \(q\neq 1\) we have \(q\not\equiv 1\operatorname{mod}p\).
+    But since \(n_p\neq 1\) and \(n_p\neq q\), this is a contradiction.
+    \(\contradiction\)
+  \end{itemize}
+\item
+  \textbf{Case 2:} \(p< q\):
+
+  \begin{itemize}
+  \item
+    Using that \([n_q]_q \equiv 1\), consider reducing
+    \(\left\{{1, p, p^2}\right\}\operatorname{mod}q\).
+  \item
+    Since now \(p<q\), we have \(p\operatorname{mod}q = p\) itself, so
+    \(p\operatorname{mod}q \neq 1\) and we can rule it out.
+  \item
+    The remaining possibility is \(n_q = p^2\).
+  \item
+    Supposing that \(n_p \neq 1\), we have \(n_p=q\), so we can count
+    \begin{align*}
+    \text{Elements from Sylow } q: n_q( \# S_q - 1) &= p^2(q-1) + 1
+    ,\end{align*}
+    where we've used that distinct Sylow \(q\)s can only intersect at
+    the identity, and although Sylow \(p\)s \emph{can} intersect
+    trivially, they can also intersect in a subgroup of size \(p\).
+  \item
+    Suppose all Sylow \(p\)s intersect trivially, we get at least
+    \begin{align*}
+    \text{Elements from Sylow } p: n_p( \# S_p - 1) &= q(p^2-1) 
+    .\end{align*}
+    Then we get a count of how many elements the Sylow \(p\)s and \(q\)s
+    contribute:
+    \begin{align*}
+    q(p^2-1) + p^2(q-1) + 1
+    = p^2q - q + p^2q - p^2 + 1 
+    = p^2q + (p^2-1)(q-1)
+    > p^2q = \# G
+    ,\end{align*}
+    provided \((p^2-1)(q-1) \neq 0\), which is fine for \(p\geq 2\)
+    since this is at least \((2^2-1)(3-2) = 3\) (since \(p<q\) and
+    \(q=3\) is the next smallest prime). \(\contradiction\)
+  \item
+    Otherwise, we get two Sylow \(p\)s intersecting nontrivially, which
+    must be in a subgroup of order at least \(p\) since the intersection
+    is a subgroup of both. In this case, just considering these two
+    subgroups, we get
+    \begin{align*}
+    \text{Elements from Sylow } p: n_p( \# S_p - 1) &> p^2 + p^2 - p = 2p^2-p -1
+    .\end{align*}
+    Then a count:
+    \begin{align*}
+    p^2(q-1) + (2p^2-p - 1) + 1
+    &= p^2 q- p^2 + 2p^2 -p \\
+    &= p^2 q + p^2 -p \\
+    &= p^2q + p(p-1) \\
+    &> p^2q = \# G
+    ,\end{align*}
+    a contradiction since this inequality is strict provided
+    \(p\geq 2\). \(\contradiction\)
   \end{itemize}
 \end{itemize}
 
@@ -2438,28 +2491,143 @@ Show that there exist no simple groups of order 148.
 \hypertarget{commutative-algebra}{%
 \section{Commutative Algebra}\label{commutative-algebra}}
 
-\hypertarget{spring-2020-5-done}{%
-\subsection{\texorpdfstring{Spring 2020 \#5
-\(\done\)}{Spring 2020 \#5 \textbackslash done}}\label{spring-2020-5-done}}
+\hypertarget{ufds-pids-etc}{%
+\subsection{UFDs, PIDs, etc}\label{ufds-pids-etc}}
 
-Let \(R\) be a ring and \(f: M\to N\) and \(g: N\to M\) be
-\(R{\hbox{-}}\)module homomorphisms such that
-\(g\circ f = \operatorname{id}_M\). Show that
-\(N \cong \operatorname{im}f \oplus \ker g\).
-
-\hypertarget{fall-2019-3-work}{%
-\subsection{\texorpdfstring{Fall 2019 \#3
-\(\work\)}{Fall 2019 \#3 \textbackslash work}}\label{fall-2019-3-work}}
-
-Let \(R\) be a ring with the property that for every
-\(a \in R, a^2 = a\).
+\hypertarget{spring-2013-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2013 \#2
+\(\done\)}{Spring 2013 \#2 \textbackslash done}}\label{spring-2013-2-done}}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Prove that \(R\) has characteristic 2.
+  Define a \emph{Euclidean domain}.
 \item
-  Prove that \(R\) is commutative.
+  Define a \emph{unique factorization domain}.
+\item
+  Is a Euclidean domain an UFD? Give either a proof or a counterexample
+  with justification.
+\item
+  Is a UFD a Euclidean domain? Give either a proof or a counterexample
+  with justification.
+\end{enumerate}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  \(R\) is Euclidean iff it admits a Euclidean algorithm: there is a
+  degree function \(f: R\to {\mathbb{Z}}_{\geq 0}\) such that for all
+  \(a,b\in R\), there exist \(q, r\in R\) such that \(a = bq + r\) where
+  \(f(r) <f(b)\) or \(r=0\).
+\item
+  \(R\) is a UFD iff every \(r\in R\) can be written as
+  \(r = u \prod_{i=1}^n p_i\) with \(n\geq 0\), \(u\in R^{\times}\), and
+  \(p_i\) irreducible. This is unique up to associates of the \(p_i\)
+  and reordering.
+\item
+  Euclidean implies UFD:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Euclidean implies PID:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      If \(I \in \operatorname{Id}(R)\) one can use the degree function
+      to find any \(b \in I\) where \(f(b)\) is minimal.
+    \item
+      Then \(I = \left\langle{b}\right\rangle\), since if \(a\in I\) one
+      can write \(a = bq + r\) and use that
+      \(a-bq \in I \implies r\in I\).
+    \item
+      But by minimality, we can't have \(f(r)<f(b)\), so \(r=0\) and
+      \(a \divides b\), so \(b\in \left\langle{a}\right\rangle\).
+    \end{itemize}
+  \item
+    PID implies UFD:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Use that irreducible implies prime in a PID, so every \(x\in R\)
+      has some factorization into finitely many primes.
+    \item
+      Supposing \(x = u_p \prod_{i=1}^m p_i = u_q \prod_{i=1}^n q_i\),
+      use that \(p_1\) divides the LHS and so \(p_1\) divides the RHS.
+      WLOG, \(p_1\divides q_1\), so \(q_1 = u_1 p_1\) for
+      \(u\in R^{\times}\), so \(x = u_q u_1 p_1 \prod_{i=2}^m q_i\) by
+      rewriting a term on the RHS.
+    \item
+      Note that this makes \(p_1, q_1\) associates.
+    \item
+      Continuing up to \(m\), we get
+      \begin{align*}
+      x 
+      &= u_p \prod_{i=1}^m p_i \\
+      &= 
+      u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
+      \implies 
+      u_p 
+      &= u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
+      \tilde u 
+      &= \prod_{k=m+1}^n q_i
+      ,\end{align*}
+      where we've moved all units to the LHS. This makes \(p_i, q_i\)
+      associates for \(i\leq m\).
+    \item
+      But primes aren't units and the product of nontrivial primes can't
+      be a unit, so the right-hand side product must be empty.
+    \item
+      So \(m=n\) and all \(p_i, q_i\) are associate, QED.
+    \end{itemize}
+  \end{itemize}
+\item
+  UFD does not imply Euclidean:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It suffices to find a UFD that is not a PID.
+  \item
+    Take \(R \coloneqq{\mathbb{C}}[x, y]\), which is a UFD by the usual
+    factorization of polynomials. It is not a PID, since
+    \(\left\langle{2, x}\right\rangle\) is not principal.
+  \end{itemize}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2017-6-done}{%
+\subsubsection{\texorpdfstring{Fall 2017 \#6
+\(\done\)}{Fall 2017 \#6 \textbackslash done}}\label{fall-2017-6-done}}
+
+For a ring \(R\), let \(U(R)\) denote the multiplicative group of units
+in \(R\). Recall that in an integral domain \(R\), \(r \in R\) is called
+\emph{irreducible} if \(r\) is not a unit in R, and the only divisors of
+\(r\) have the form \(ru\) with \(u\) a unit in \(R\).
+
+We call a non-zero, non-unit \(r \in R\) \emph{prime} in \(R\) if
+\(r \divides ab \implies r \divides a\) or \(r \divides b\). Consider
+the ring \(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove \(R\) is an integral domain.
+\item
+  Show \(U(R) = \{\pm1\}\).
+\item
+  Show \(3, 2 + \sqrt{-5}\), and \(2 - \sqrt{-5}\) are irreducible in
+  \(R\).
+\item
+  Show 3 is not prime in \(R\).
+\item
+  Conclude \(R\) is not a PID.
 \end{enumerate}
 
 \begin{concept}
@@ -2469,107 +2637,283 @@ Let \(R\) be a ring with the property that for every
 \begin{itemize}
 \tightlist
 \item
-  Todo
+  Integral domain: \(ab=0 \implies a\neq 0 \text{ or } b\neq 0\).
+\item
+  Prime: \(p \divides ab \implies p\divides a\) or \(b\).
+\item
+  Reducible: \(a = xy\) where \(x, y\) are proper divisors.
+\item
+  Irreducible implies prime in a UFD.
 \end{itemize}
 
 \end{concept}
 
-\begin{strategy}
+\begin{solution}
 
 \envlist
 
 \begin{itemize}
 \tightlist
 \item
-  Just fiddle with direct computations.
+  \(R\) is an integral domain:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Let \(\alpha = a + b\sqrt{-5}\) and \(\beta = c + d \sqrt{-5}\) and
+    set
+    \(\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu, \mkern 1.5mu\overline{\mkern-1.5mu\beta\mkern-1.5mu}\mkern 1.5mu\)
+    be their conjugates.
+  \item
+    Then
+    \begin{align*}
+    0 = \alpha \beta = \alpha\mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5mu\beta\mkern 1.5mu\overline{\mkern-1.5mu\beta \mkern-1.5mu}\mkern 1.5mu= (a^2-5b^2)(c^2-5d^2) \in {\mathbb{Z}}
+    ,\end{align*}
+    so one factor is zero.
+  \item
+    If \(a^2 = 5b^2\) then \(a = \sqrt{5} b \not\in {\mathbb{Z}}\)
+    unless \(a=b=0\). Otherwise, the same argument forces \(c=d=0\).
+  \end{itemize}
 \item
-  Context hint: that we should be considering things like \(x^2\) and
-  \(a+b\).
+  The units are \(\pm 1\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use that \(u\in R^{\times}\implies N(u) = \pm 1\), and
+    \(N(\alpha) = \alpha \mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5mu= (a+b\sqrt{-5})(a-b\sqrt{-5}) = a^2 + 5b^2 = 1\)
+    forces \(b=0\) and \(a=\pm 1\).
+  \end{itemize}
+\item
+  Irreducible elements:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(2, 3\) are irreducible because if (say) \(3=xy\) then
+    \(N(x)N(y) = N(3) = 9\), and if neither \(x,y\) are units then
+    \(N(x) = N(y) = 3\). But \(N(a + b\sqrt{-5}) = a^2 + 5b^2\) and
+    \(a^2 + 5b^2 = 3\) has no solutions. The same argument works for
+    \(2\).
+  \item
+    \(2\pm \sqrt{-5}\) are irreducible because
+    \(N(2 + \sqrt{-5}) = 2^2 + 5(1) = 9\), and in fact
+    \(N(2 - \sqrt{-5}) = 2^2 + 5(-1)^2 = 9\). By the same argument as
+    above, this forces irreducibility.
+  \end{itemize}
+\item
+  \(3\) is not prime:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We can write \(6 = (3)(2) = (1 + \sqrt{-5})(1 - \sqrt{-5})\), so if
+    we assume \(3\) is prime we get \(3\divides (1 \pm \sqrt{-5})\).
+  \item
+    But writing \((1\pm \sqrt{-5}) = 3r\) for some \(r\in R\) yields
+    \begin{align*}
+    (1 \pm \sqrt{-5}) = 3(a + b\sqrt{-5}) \implies 3a=1, 3b = \pm 1
+    .\end{align*}
+    These have no solutions \(a, b\in {\mathbb{Z}}\). \(\contradiction\)
+  \end{itemize}
+\item
+  \(R\) is not a PID:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use that irreducibles are prime in a UFD, which is not true here.
+  \end{itemize}
 \end{itemize}
 
-\end{strategy}
+\end{solution}
+
+\hypertarget{spring-2017-4-done}{%
+\subsubsection{\texorpdfstring{Spring 2017 \#4
+\(\done\)}{Spring 2017 \#4 \textbackslash done}}\label{spring-2017-4-done}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(R\) be an integral domain with quotient field \(F\). Suppose
+  that \(p(x), a(x), b(x)\) are monic polynomials in \(F[x]\) with
+  \(p(x) = a(x) b(x)\) and with \(p(x) \in R[x]\), \(a(x)\) not in
+  \(R[x]\), and both \(a(x), b(x)\) not constant.
+
+  Prove that \(R\) is not a UFD.
+
+  \begin{quote}
+  (You may assume Gauss' lemma)
+  \end{quote}
+\item
+  Prove that \({\mathbb{Z}}[2\sqrt{2}]\) is not a UFD.
+
+  \begin{quote}
+  Hint: let \(p(x) = x^2-2\).
+  \end{quote}
+\end{enumerate}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Gauss' lemma: for \(R\) a UFD with fraction field \(F\), if \(f\) is
+  reducible in \(F[x]\) with \(f=pq\) then there are \(r,s\in R\) such
+  that \(f = (rp)(sq)\) reduces in \(R[x]\).
+\item
+  Corollary: \(R\) is a UFD iff \(R[x]\) is a UFD.
+\end{itemize}
+
+\end{concept}
 
 \begin{solution}
 
 \envlist
 
-\begin{proof}[of a]
+\begin{proof}[of 1]
 
-\begin{align*}
-2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
-.\end{align*}
-Note that this implies \(x = -x\) for all \(x\in R\).
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  The important assumption is \(a(x)\not\in R[x]\), we'll assume \(R\)
+  is a UFD and try to contradict this.
+\item
+  Write \(f(x) = a(x)b(x)\in F[x]\), then if \(R\) is a UFD we have
+  \(r,s\in F\) such that \(f(x) = ra(x) sb(x) \in R[x]\).
+\item
+  Since \(a(x), b(x)\) are monic and \(f=ab\), \(f\) is monic, and by
+  the factorization in \(R[x]\) we have \(rs=1\). So
+  \(r,s\in R^{\times}\).
+\item
+  Then using that \(ra(x)\in R[x]\), we have
+  \(r^{-1}ra(x) = a(x)\in R[x]\). \(\contradiction\)
+\end{itemize}
 
 \end{proof}
 
 \begin{proof}[of b]
 
-\begin{align*}
-a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
-&\implies ab + ba = 0 \\
-&\implies ab = -ba \\
-&\implies ab = ba \quad\text{by (a)}
-.\end{align*}
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Set \(R = {\mathbb{Z}}[2\sqrt 2], F = {\mathbb{Q}}[2\sqrt 2]\).
+\item
+  Let \(p(x) \coloneqq x^2-2 \in R[x]\) which splits as
+  \(p(x) = (x+ \sqrt{2} )(x - \sqrt{2} ) \coloneqq a(x) b(x) \in F[x]\).
+\item
+  Note neither \(a(x), b(x)\) are in \(R[x]\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Explicitly, every monic linear \(p\in R[x]\) is of the form
+    \(x + 2t\sqrt{2}\) with \(t\in {\mathbb{Z}}\), and
+    \(\pm \sqrt{2} \neq 2t\sqrt{2}\) for any \(t\).
+  \end{itemize}
+\item
+  So we have \(p(x) \in R[x]\) splitting as \(p=ab\) in \(F[x]\) with
+  \(a\not \in R[x]\), so part (a) applies.
+\end{itemize}
 
 \end{proof}
 
 \end{solution}
 
-\hypertarget{fall-2019-6-done}{%
-\subsection{\texorpdfstring{Fall 2019 \#6
-\(\done\)}{Fall 2019 \#6 \textbackslash done}}\label{fall-2019-6-done}}
+\hypertarget{ideals-prime-maximal-proper-principal-etc}{%
+\subsection{Ideals (Prime, Maximal, Proper, Principal,
+etc)}\label{ideals-prime-maximal-proper-principal-etc}}
 
-Let \(R\) be a commutative ring with multiplicative identity. Assume
-Zorn's Lemma.
+\hypertarget{fall-2013-3-done}{%
+\subsubsection{\texorpdfstring{Fall 2013 \#3
+\(\done\)}{Fall 2013 \#3 \textbackslash done}}\label{fall-2013-3-done}}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Show that
-  \begin{align*}
-  N = \{r \in R \mathrel{\Big|}r^n = 0 \text{ for some } n > 0\}
-  \end{align*}
-  is an ideal which is contained in any prime ideal.
+  Define \emph{prime ideal}, give an example of a nontrivial ideal in
+  the ring \({\mathbb{Z}}\) that is not prime, and prove that it is not
+  prime.
 \item
-  Let \(r\) be an element of \(R\) not in \(N\). Let \(S\) be the
-  collection of all proper ideals of \(R\) not containing any positive
-  power of \(r\). Use Zorn's Lemma to prove that there is a prime ideal
-  in \(S\).
-\item
-  Suppose that \(R\) has exactly one prime ideal \(P\) . Prove that
-  every element \(r\) of \(R\) is either nilpotent or a unit.
+  Define \emph{maximal ideal}, give an example of a nontrivial maximal
+  ideal in \({\mathbb{Z}}\) and prove that it is maximal.
 \end{enumerate}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \({\mathfrak{p}}\) is \textbf{prime} iff
+  \(xy\in {\mathfrak{p}}\implies x\in {\mathfrak{p}}\) or
+  \(y\in {\mathfrak{p}}\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    An ideal \(I{~\trianglelefteq~}{\mathbb{Z}}\) that is not prime:
+    \(I \coloneqq 8{\mathbb{Z}}\).
+  \item
+    For example, \(2\cdot 4\in 8{\mathbb{Z}}\) but neither 2 nor 4 is a
+    multiple of 8.
+  \end{itemize}
+\item
+  \({\mathfrak{m}}\) is \textbf{maximal} iff whenever
+  \(I\supseteq{\mathfrak{m}}\) is an ideal in \(R\), then either
+  \(I={\mathfrak{m}}\) or \(I = R\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A maximal ideal in \({\mathbb{Z}}\): \(p{\mathbb{Z}}\). This is
+    because primes are maximal in a PID and \(p{\mathbb{Z}}\) is a prime
+    ideal. Alternatively, ``to contain is to divide'' holds for Dedekind
+    domains, so
+    \(m{\mathbb{Z}}\supseteq p{\mathbb{Z}}\iff m\divides p\), which
+    forces \(m=1,p\), so either \(m{\mathbb{Z}}= p{\mathbb{Z}}\) or
+    \(m{\mathbb{Z}}= {\mathbb{Z}}\).
+  \end{itemize}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2014-8-work}{%
+\subsubsection{\texorpdfstring{Fall 2014 \#8
+\(\work\)}{Fall 2014 \#8 \textbackslash work}}\label{fall-2014-8-work}}
+
+Let \(R\) be a nonzero commutative ring without unit such that \(R\)
+does not contain a proper maximal ideal. Prove that for all \(x\in R\),
+the ideal \(xR\) is proper.
+
+\begin{quote}
+You may assume the axiom of choice.
+\end{quote}
+
+\hypertarget{fall-2014-7-done}{%
+\subsubsection{\texorpdfstring{Fall 2014 \#7
+\(\done\)}{Fall 2014 \#7 \textbackslash done}}\label{fall-2014-7-done}}
+
+Give a careful proof that \({\mathbb{C}}[x, y]\) is not a PID.
 
 \begin{concept}
 
 \envlist
 
 \begin{itemize}
+\tightlist
 \item
-  Prime ideal: \(\mathfrak{p}\) is prime iff
-  \(ab \in \mathfrak{p} \implies a\in \mathfrak{p}\) or
-  \(b\in \mathfrak{p}\).
+  If \(R[x]\) is a PID, then \(R\) is a field (not explicitly used).
 \item
-  Silly fact: 0 is in every ideal!
-\item
-  \textbf{Zorn's Lemma:} Given a poset, if every chain has an upper
-  bound, then there is a maximal element. (Chain: totally ordered
-  subset.)
-\item
-  \textbf{Corollary:} If \(S\subset R\) is multiplicatively closed with
-  \(0\not\in S\) then
-  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}J\cap S = \emptyset}\right\}\)
-  has a maximal element.
-
-  \todo[inline]{Prove this}
-\item
-  \textbf{Theorem:} If \(R\) is commutative, maximal \(\implies\) prime
-  for ideals.
-
-  \todo[inline]{Prove this}
-\item
-  \textbf{Theorem:} Non-units are contained in a maximal ideal. (See
-  HW?)
+  In \(P \coloneqq R[x_1, \cdots, x_n]\), there are degree functions
+  \(\deg_{x_n}: P\to {\mathbb{Z}}_{\geq 0}\).
 \end{itemize}
 
 \end{concept}
@@ -2578,72 +2922,62 @@ Zorn's Lemma.
 
 \envlist
 
-\begin{proof}[of a]
-
-\envlist
-
 \begin{itemize}
 \tightlist
 \item
-  Let \(\mathfrak{p}\) be prime and \(x\in N\).
+  The claim is that \(I \coloneqq\left\langle{x, y}\right\rangle\) is
+  not principal.
 \item
-  Then \(x^k = 0 \in \mathfrak{p}\) for some \(k\), and thus
-  \(x^k = x x^{k-1} \in \mathfrak p\).
+  Toward a contradiction, if so, then
+  \(\left\langle{x, y}\right\rangle = \left\langle{f}\right\rangle\).
 \item
-  Since \(\mathfrak p\) is prime, inductively we obtain
-  \(x\in\mathfrak p\).
+  So write \(x = fg\) for some \(g\in {\mathbb{C}}[x, y]\), then
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\deg_x(x) = 1\), so \(\deg_x(fg) = 1\) which forces
+    \(\deg_x(f) \leq 1\).
+  \item
+    \(\deg_y(y) = 1\), so \(\deg_y(fg) = 1\) which forces
+    \(\deg_y(f) \leq 1\).
+  \item
+    So \(f(x, y) = ax + by + c\) for some \(a,b,c\in {\mathbb{C}}\).
+  \item
+    \(\deg_x(y) = 0\) and thus \(\deg_x(fg) = 0\), forcing \(a=0\)
+  \item
+    \(\deg_y(x) = 0\) and thus \(\deg_y(fg) = 0\), forcing \(b=0\)
+  \item
+    So \(f(x, y) = c \in {\mathbb{C}}\).
+  \end{itemize}
+\item
+  But \({\mathbb{C}}[x]\) is a field, so \(c\) is a unit in
+  \({\mathbb{C}}\) and thus \({\mathbb{C}}[x, y]\), so
+  \(\left\langle{f}\right\rangle = \left\langle{c}\right\rangle = {\mathbb{C}}[x, y]\).
+\item
+  This is a contradiction, since
+  \(1\not\in \left\langle{x, y}\right\rangle\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Every element in \(\alpha(x, y) \in\left\langle{x, y}\right\rangle\)
+    is of the form \(\alpha(x, y) = xp(x, y) + yq(x, y)\).
+  \item
+    But \(\deg_x(\alpha) \geq 1, \deg_y(\alpha)\geq 1\), while
+    \(\deg_x(1) = \deg_y(1) = 0\).
+  \item
+    So \(\left\langle{x, y}\right\rangle \neq {\mathbb{C}}[x, y]\).
+  \end{itemize}
+\item
+  Alternatively, \(\left\langle{x, y}\right\rangle\) is proper since
+  \({\mathbb{C}}[x, y] / \left\langle{x, y}\right\rangle \cong {\mathbb{C}}\neq {\mathbb{C}}[x, y]\).
 \end{itemize}
-
-\end{proof}
-
-\begin{proof}[of b]
-
-\envlist
-
-\begin{itemize}
-\item
-  Let \(S = \left\{{r^k \mathrel{\Big|}k\in {\mathbb{N}}}\right\}\) be
-  the set of positive powers of \(r\).
-\item
-  Then \(S^2 \subseteq S\), since \(r^{k_1}r^{k_2} = r^{k_1+k_2}\) is
-  also a positive power of \(r\), and \(0\not\in S\) since \(r\neq 0\)
-  and \(r\not\in N\).
-\item
-  By the corollary,
-  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}I\cap S = \emptyset}\right\}\)
-  has a maximal element \(\mathfrak{p}\).
-\item
-  Since \(R\) is commutative, \(\mathfrak{p}\) is prime.
-\end{itemize}
-
-\end{proof}
-
-\begin{proof}[of c]
-
-\envlist
-
-\begin{itemize}
-\item
-  Suppose \(R\) has a unique prime ideal \(\mathfrak{p}\).
-\item
-  Suppose \(r\in R\) is not a unit, and toward a contradiction, suppose
-  that \(r\) is also not nilpotent.
-\item
-  Since \(r\) is not a unit, \(r\) is contained in some maximal (and
-  thus prime) ideal, and thus \(r \in \mathfrak{p}\).
-\item
-  Since \(r\not\in N\), by (b) there is a maximal ideal \(\mathfrak{m}\)
-  that avoids all positive powers of \(r\). Since \(\mathfrak{m}\) is
-  prime, we must have \(\mathfrak{m} = \mathfrak{p}\). But then
-  \(r\not\in \mathfrak{p}\), a contradiction.
-\end{itemize}
-
-\end{proof}
 
 \end{solution}
 
 \hypertarget{spring-2019-6-done}{%
-\subsection{\texorpdfstring{Spring 2019 \#6
+\subsubsection{\texorpdfstring{Spring 2019 \#6
 \(\done\)}{Spring 2019 \#6 \textbackslash done}}\label{spring-2019-6-done}}
 
 Let \(R\) be a commutative ring with 1.
@@ -2767,26 +3101,23 @@ Given a chain \(J_1 \subseteq \cdots\), there is an upper bound
 
 \end{proof}
 
-\begin{proof}[of c]
-
-\begin{itemize}
-\tightlist
-\item
-  We want to show \(J(R) = \mathfrak N(R)\).
-\end{itemize}
+\begin{proof}[of c: $J(R) = \mathfrak N(R)$]
 
 \(\mathfrak N(R) \subseteq J(R)\):
 
 \begin{itemize}
+\tightlist
 \item
-  We'll use the fact
-  \(x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx\) is a unit
-  \(\iff x\in J(R)\) by (b):
+  Use the fact \(x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx\)
+  is a unit \(\iff x\in J(R)\) by (b):
   \begin{align*}
   \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)^{-1}
   .\end{align*}
-\item
-  \(J(R) \subseteq \mathfrak N(R)\):
+\end{itemize}
+
+\(J(R) \subseteq \mathfrak N(R)\):
+
+\begin{itemize}
 \item
   Let \(x \in J(R) \setminus \mathfrak N(R)\).
 \item
@@ -2815,8 +3146,285 @@ Given a chain \(J_1 \subseteq \cdots\), there is an upper bound
 
 \end{solution}
 
+\hypertarget{spring-2018-8-done}{%
+\subsubsection{\texorpdfstring{Spring 2018 \#8
+\(\done\)}{Spring 2018 \#8 \textbackslash done}}\label{spring-2018-8-done}}
+
+Let \(R = C[0, 1]\) be the ring of continuous real-valued functions on
+the interval \([0, 1]\). Let I be an ideal of \(R\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(f \in I, a \in [0, 1]\) are such that \(f (a) \neq 0\),
+  then there exists \(g \in I\) such that \(g(x) \geq 0\) for all
+  \(x \in [0, 1]\), and \(g(x) > 0\) for all \(x\) in some open
+  neighborhood of \(a\).
+\item
+  If \(I \neq R\), show that the set
+  \(Z(I) = \{x \in [0, 1] {~\mathrel{\Big|}~}f(x) = 0 \text{ for all } f \in I\}\)
+  is nonempty.
+\item
+  Show that if \(I\) is maximal, then there exists \(x_0 \in [0, 1]\)
+  such that \(I = \{ f \in R {~\mathrel{\Big|}~}f (x_0 ) = 0\}\).
+\end{enumerate}
+
+\begin{remark}
+
+Cool problem, but pretty specific topological tricks needed.
+
+\end{remark}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \(c\coloneqq f(a)\neq 0\), noting that \(c\) may not be
+  positive.
+\item
+  By continuity, pick \({\varepsilon}\) small enough so that
+  \({\left\lvert {x-a} \right\rvert}<{\varepsilon}\implies {\left\lvert {f(x) - f(a)} \right\rvert} < c/2\).
+  Since we're on the interval, we have
+  \(f(x) \in (f(a) - c/2, f(a) + c/2) = (c/2, 3c/2)\) which is a ball of
+  radius \(c/2\) about \(c\), which thus doesn't intersect \(0\).
+\item
+  So \(f(x) \neq 0\) on this ball, and \(g \coloneqq f^2 > 0\) on it.
+  Note that ideals are closed under products, so \(g\in I\)
+\item
+  Moreover \(f^2(x) \geq 0\) since squares are non-negative, so
+  \(g\geq 0\) on \([0, 1]\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  By contrapositive, suppose \(V(I)= \emptyset\), we'll show \(I\)
+  contains a unit and thus \(I=R\).
+\item
+  For each fixed \(x\in [0, 1]\), since \(V(I)\) is empty there is some
+  \(f_x\) such that \(f_x(x) \neq 0\).
+\item
+  By (a), there is some \(g_x\) with \(g_x(x) > 0\) on a neighborhood
+  \(U_x\ni x\) and \(g_x \geq 0\) everywhere.
+\item
+  Ranging over all \(x\) yields a collection
+  \(\left\{{(g_x, U_x) {~\mathrel{\Big|}~}x\in [0, 1]}\right\}\) where
+  \(\left\{{U_x}\right\}\rightrightarrows[0, 1]\).
+\item
+  By compactness there is a finite subcover, yielding a finite
+  collection \(\left\{{(g_k, U_k)}\right\}_{k=1}^n\) for some \(n\).
+\item
+  Define the candidate unit as
+  \begin{align*}
+  G(x) \coloneqq{1\over \sum_{k=1}^n g_k(x)}
+  .\end{align*}
+\item
+  This is well-defined: fix an \(x\), then the denominator is zero at
+  \(x\) iff \(g_k(x) = 0\) for all \(k\). But since the \(U_k\) form an
+  open cover, \(x\in U_\ell\) for some \(\ell\), and \(g_\ell > 0\) on
+  \(U_\ell\).
+\item
+  Since ideals are closed under sums,
+  \(H\coloneqq{1\over G} \coloneqq\sum g_k \in I\). But \(H\) is clearly
+  a unit since \(HG = \operatorname{id}\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  If \(I{~\trianglelefteq~}R\) is maximal, \(I\neq R\), and so by (b) we
+  have \(V(I) \neq \emptyset\).
+\item
+  So there is some \(x_0\in[0, 1]\) with \(f(x_0) = 0\) for all
+  \(f\in I\).
+\item
+  Define
+  \({\mathfrak{m}}_{x_0} \coloneqq\left\{{f\in R {~\mathrel{\Big|}~}f(x_0) = 0}\right\}\),
+  which is clearly an ideal.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This is a proper ideal, since constant nonzero functions are
+    continuous and thus in \(R\), not not \({\mathfrak{m}}_{x_0}\).
+  \end{itemize}
+\item
+  We thus have \(I \subseteq {\mathfrak{m}}_{x_0}\), and by maximality
+  they are equal.
+\end{itemize}
+
+\end{proof}
+
+\todo[inline]{I'm not super convinced by c!}
+
+\end{solution}
+
+\hypertarget{zero-divisors-and-nilpotents}{%
+\subsection{Zero Divisors and
+Nilpotents}\label{zero-divisors-and-nilpotents}}
+
+\hypertarget{spring-2014-5-done}{%
+\subsubsection{\texorpdfstring{Spring 2014 \#5
+\(\done\)}{Spring 2014 \#5 \textbackslash done}}\label{spring-2014-5-done}}
+
+Let \(R\) be a commutative ring and \(a\in R\). Prove that \(a\) is not
+nilpotent \(\iff\) there exists a commutative ring \(S\) and a ring
+homomorphism \(\phi: R\to S\) such that \(\phi(a)\) is a unit.
+
+\begin{quote}
+Note: by definition, \(a\) is nilpotent \(\iff\) there is a natural
+number \(n\) such that \(a^n = 0\).
+\end{quote}
+
+\begin{solution}
+
+\(\not A\implies \not B\):
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \(a\) is nilpotent, so \(a^m = 0_R\), and suppose
+  \(\phi: R\to S\) is a ring morphism.
+\item
+  Ring morphisms send zero to zero, so
+  \(0_S = \phi(0_R) = \phi(a^m) = \phi(a)^m\) and \(\phi(a)\) is
+  nilpotent.
+\item
+  But nontrivial rings can't contain nilpotent units: if \(u\) is a unit
+  and \(ut= 1\) with \(u^k=0\), then \(1 = 1^k = (ut)^k = u^k t^k=0\)
+  and \(R=0\).
+\end{itemize}
+
+\(A\implies B\):
+
+\begin{itemize}
+\tightlist
+\item
+  If \(a\) is not nilpotent, localize at the infinite multiplicative
+  subset \(A \coloneqq\left\{{1, a, a^2, \cdots}\right\}\) to obtain
+  \(R \left[ { \scriptstyle A^{-1}} \right]\). Since \(0\not\in A\),
+  this is not the zero ring.
+\item
+  By the universal property, there is a map
+  \(\phi: R\to R \left[ { \scriptstyle A^{-1}} \right]\), and the claim
+  is that \(\phi(a)\) is a unit in
+  \(R \left[ { \scriptstyle A^{-1}} \right]\).
+\item
+  More directly,
+  \(\phi(a) = [a/1] \in \left\{{p,q {~\mathrel{\Big|}~}p\in R, q\in A}\right\}\),
+  which has inverse \([a/1]\).
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{spring-2021-5-done}{%
+\subsubsection{\texorpdfstring{Spring 2021 \#5
+\(\done\)}{Spring 2021 \#5 \textbackslash done}}\label{spring-2021-5-done}}
+
+\begin{problem}[Spring 2021]
+
+Suppose that \(f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x]\) is a zero
+divisor. Show that there is a nonzero
+\(a\in {\mathbb{Z}}/n{\mathbb{Z}}\) with \(af(x) = 0\).
+
+\end{problem}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Write \(f(x) = \sum_{k=0}^n a_k x^k\), and supposing it's a zero
+  divisor choose \(g(x) = \sum_{k=0}^m b_k x^k\) of minimal degree so
+  that \(g\neq 0, b_m\neq 0\), and \(f(x)g(x) = 0\).
+\item
+  The claim is that the top coefficient \(b_m\) will suffice.
+\item
+  Write the product:
+  \begin{align*}
+  0 = f(x)g(x) 
+  = (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
+  (b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
+  .\end{align*}
+\item
+  Equating coefficients, the coefficient for \(x^{m+n}\) must be zero,
+  so (\textbf{importantly}) \(a_n b_m = 0\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Since \(a_n b_m=0\), consider \(a_ng(x)\). This has degree
+    \(d_1 \leq m-1\) but satisfies \(a_ng(x)f(x) = a_n(g(x)f(x)) = 0\),
+    so by minimality \(a_ng(x) = 0\).
+  \item
+    This forces \(a_n b_0 = \cdots = a_n b_{m-1} = 0\), so \(a_n\)
+    annihilates all of the \(b_k\).
+  \end{itemize}
+\item
+  Now consider the coefficient of \(x^{m+n-1}\), given by
+  \(a_{n-1}b_m + a_{n}b_{m-1}\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The second term \(a_n b_{m-1}=0\) since \(a_n\) annihilates all
+    \(b_k\), so (\textbf{importantly}) \(a_{n-1} b_m = 0\).
+  \item
+    Considering now \(a_{n-1}g(x)\):
+
+    \begin{itemize}
+    \tightlist
+    \item
+      The same argument shows this has degree \(d_2 \leq m-1\) but
+      \(a_{n-1}g(x)f(x) = 0\), so \(a_{n-1}g(x) = 0\).
+    \item
+      So \(a_{n-1}\) annihilates all \(b_k\), and allowing this process
+      to continue inductively.
+    \end{itemize}
+  \end{itemize}
+\item
+  For good measure, the coefficient of \(x^{m+n-2}\) is
+  \(a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Note that \(a_n, a_{n-1}\) annihilate all \(b_k\), so
+    (\textbf{importantly}) \(a_{n-2} b_m=0\), and so on.
+  \end{itemize}
+\item
+  Thus \(a_k b_m = 0\) for all \(0\leq k \leq n\), and by linearity and
+  commutativity, we have
+  \begin{align*}
+  b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
+  .\end{align*}
+\end{itemize}
+
+\end{solution}
+
 \hypertarget{fall-2018-7-done}{%
-\subsection{\texorpdfstring{Fall 2018 \#7
+\subsubsection{\texorpdfstring{Fall 2018 \#7
 \(\done\)}{Fall 2018 \#7 \textbackslash done}}\label{fall-2018-7-done}}
 
 Let \(R\) be a commutative ring.
@@ -2860,7 +3468,11 @@ isomorphic to exactly one of the following:
 \begin{itemize}
 \tightlist
 \item
-  Todo
+  Testing module morphisms: \(\phi(sm + n) = s\phi(m) + \phi(n)\).
+\item
+  First isomorphism theorem used for sizes:
+  \(R/\ker f \cong \operatorname{im}f\), so
+  \(\# R = \# \ker f \cdot \# \operatorname{im}f\).
 \item
   See 1964 Annals ``Properties of rings with a finite number of zero
   divisors''
@@ -3023,273 +3635,11 @@ Let \(\phi_r(x) \coloneqq rx\) be the multiplication map.
 
 \end{solution}
 
-\hypertarget{spring-2018-5-work}{%
-\subsection{\texorpdfstring{Spring 2018 \#5
-\(\work\)}{Spring 2018 \#5 \textbackslash work}}\label{spring-2018-5-work}}
-
-Let
-\begin{align*}
-M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
-\quad \text{and} \quad 
-N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
-\end{align*}
-
-over a commutative ring \(R\), where \(b\) and \(x\) are units of \(R\).
-Prove that
-\begin{align*}
-M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
-\implies MN = 0
-.\end{align*}
-
-\hypertarget{spring-2018-8-work}{%
-\subsection{\texorpdfstring{Spring 2018 \#8
-\(\work\)}{Spring 2018 \#8 \textbackslash work}}\label{spring-2018-8-work}}
-
-Let \(R = C[0, 1]\) be the ring of continuous real-valued functions on
-the interval \([0, 1]\). Let I be an ideal of \(R\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that if \(f \in I, a \in [0, 1]\) are such that \(f (a) \neq 0\),
-  then there exists \(g \in I\) such that \(g(x) \geq 0\) for all
-  \(x \in [0, 1]\), and \(g(x) > 0\) for all \(x\) in some open
-  neighborhood of \(a\).
-\item
-  If \(I \neq R\), show that the set
-  \(Z(I) = \{x \in [0, 1] {~\mathrel{\Big|}~}f(x) = 0 \text{ for all } f \in I\}\)
-  is nonempty.
-\item
-  Show that if \(I\) is maximal, then there exists \(x_0 \in [0, 1]\)
-  such that \(I = \{ f \in R {~\mathrel{\Big|}~}f (x_0 ) = 0\}\).
-\end{enumerate}
-
-\hypertarget{fall-2017-5-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#5
-\(\work\)}{Fall 2017 \#5 \textbackslash work}}\label{fall-2017-5-work}}
-
-A ring \(R\) is called \emph{simple} if its only two-sided ideals are
-\(0\) and \(R\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Suppose \(R\) is a commutative ring with 1. Prove \(R\) is simple if
-  and only if \(R\) is a field.
-\item
-  Let \(k\) be a field. Show the ring \(M_n (k)\), \(n \times n\)
-  matrices with entries in \(k\), is a simple ring.
-\end{enumerate}
-
-\hypertarget{fall-2017-6-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#6
-\(\work\)}{Fall 2017 \#6 \textbackslash work}}\label{fall-2017-6-work}}
-
-For a ring \(R\), let \(U(R)\) denote the multiplicative group of units
-in \(R\). Recall that in an integral domain \(R\), \(r \in R\) is called
-\emph{irreducible} if \(r\) is not a unit in R, and the only divisors of
-\(r\) have the form \(ru\) with \(u\) a unit in \(R\).
-
-We call a non-zero, non-unit \(r \in R\) \emph{prime} in \(R\) if
-\(r \divides ab \implies r \divides a\) or \(r \divides b\). Consider
-the ring \(R = \{a + b \sqrt{-5}{~\mathrel{\Big|}~}a, b \in Z\}\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove \(R\) is an integral domain.
-\item
-  Show \(U(R) = \{\pm1\}\).
-\item
-  Show \(3, 2 + \sqrt{-5}\), and \(2 - \sqrt{-5}\) are irreducible in
-  \(R\).
-\item
-  Show 3 is not prime in \(R\).
-\item
-  Conclude \(R\) is not a PID.
-\end{enumerate}
-
-\hypertarget{spring-2017-3-work}{%
-\subsection{\texorpdfstring{Spring 2017 \#3
-\(\work\)}{Spring 2017 \#3 \textbackslash work}}\label{spring-2017-3-work}}
-
-Let \(R\) be a commutative ring with 1. Suppose that \(M\) is a free
-\(R{\hbox{-}}\)module with a finite basis \(X\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(I {~\trianglelefteq~}R\) be a proper ideal. Prove that \(M/IM\)
-  is a free \(R/I{\hbox{-}}\)module with basis \(X'\), where \(X'\) is
-  the image of \(X\) under the canonical map \(M\to M/IM\).
-\item
-  Prove that any two bases of \(M\) have the same number of elements.
-  You may assume that the result is true when \(R\) is a field.
-\end{enumerate}
-
-\hypertarget{spring-2017-4-work}{%
-\subsection{\texorpdfstring{Spring 2017 \#4
-\(\work\)}{Spring 2017 \#4 \textbackslash work}}\label{spring-2017-4-work}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(R\) be an integral domain with quotient field \(F\). Suppose
-  that \(p(x), a(x), b(x)\) are monic polynomials in \(F[x]\) with
-  \(p(x) = a(x) b(x)\) and with \(p(x) \in R[x]\), \(a(x)\) not in
-  \(R[x]\), and both \(a(x), b(x)\) not constant.
-
-  Prove that \(R\) is not a UFD.
-
-  \begin{quote}
-  (You may assume Gauss' lemma)
-  \end{quote}
-\item
-  Prove that \({\mathbb{Z}}[2\sqrt{2}]\) is not a UFD.
-
-  \begin{quote}
-  Hint: let \(p(x) = x^2-2\).
-  \end{quote}
-\end{enumerate}
-
-\hypertarget{spring-2016-8-work}{%
-\subsection{\texorpdfstring{Spring 2016 \#8
-\(\work\)}{Spring 2016 \#8 \textbackslash work}}\label{spring-2016-8-work}}
-
-Let \(R\) be a simple rng (a nonzero ring which is not assume to have a
-1, whose only two-sided ideals are \((0)\) and \(R\)) satisfying the
-following two conditions:
-
-\begin{enumerate}
-\def\labelenumi{\roman{enumi}.}
-\tightlist
-\item
-  \(R\) has no zero divisors, and
-\item
-  If \(x\in R\) with \(x\neq 0\) then \(2x\neq 0\), where
-  \(2x\coloneqq x+x\).
-\end{enumerate}
-
-Prove the following:
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  For each \(x\in R\) there is one and only one element \(y\in R\) such
-  that \(x = 2y\).
-\item
-  Suppose \(x,y\in R\) such that \(x\neq 0\) and \(2(xy) = x\), then
-  \(yz = zy\) for all \(z\in R\).
-\end{enumerate}
-
-\begin{quote}
-You can get partial credit for (b) by showing it in the case \(R\) has a
-1.
-\end{quote}
-
-\hypertarget{fall-2015-3-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#3
-\(\work\)}{Fall 2015 \#3 \textbackslash work}}\label{fall-2015-3-work}}
-
-Let \(R\) be a rng (a ring without 1) which contains an element \(u\)
-such that for all \(y\in R\), there exists an \(x\in R\) such that
-\(xu=y\).
-
-Prove that \(R\) contains a maximal left ideal.
-
-\begin{quote}
-Hint: imitate the proof (using Zorn's lemma) in the case where \(R\)
-does have a 1.
-\end{quote}
-
-\hypertarget{fall-2015-4-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#4
-\(\work\)}{Fall 2015 \#4 \textbackslash work}}\label{fall-2015-4-work}}
-
-Let \(R\) be a PID and \((a_1) < (a_2) < \cdots\) be an ascending chain
-of ideals in \(R\). Prove that for some \(n\), we have \((a_j) = (a_n)\)
-for all \(j\geq n\).
-
-\hypertarget{spring-2015-7-work}{%
-\subsection{\texorpdfstring{Spring 2015 \#7
-\(\work\)}{Spring 2015 \#7 \textbackslash work}}\label{spring-2015-7-work}}
-
-Let \(R\) be a commutative ring, and \(S\subset R\) be a nonempty subset
-that does not contain 0 such that for all \(x, y\in S\) we have
-\(xy\in S\). Let \({\mathcal{I}}\) be the set of all ideals
-\(I{~\trianglelefteq~}R\) such that \(I\cap S = \emptyset\).
-
-Show that for every ideal \(I\in {\mathcal{I}}\), there is an ideal
-\(J\in {\mathcal{I}}\) such that \(I\subset J\) and \(J\) is not
-properly contained in any other ideal in \({\mathcal{I}}\).
-
-Prove that every such ideal \(J\) is prime.
-
-\hypertarget{fall-2014-7-work}{%
-\subsection{\texorpdfstring{Fall 2014 \#7
-\(\work\)}{Fall 2014 \#7 \textbackslash work}}\label{fall-2014-7-work}}
-
-Give a careful proof that \({\mathbb{C}}[x, y]\) is not a PID.
-
-\hypertarget{fall-2014-8-work}{%
-\subsection{\texorpdfstring{Fall 2014 \#8
-\(\work\)}{Fall 2014 \#8 \textbackslash work}}\label{fall-2014-8-work}}
-
-Let \(R\) be a nonzero commutative ring without unit such that \(R\)
-does not contain a proper maximal ideal. Prove that for all \(x\in R\),
-the ideal \(xR\) is proper.
-
-\begin{quote}
-You may assume the axiom of choice.
-\end{quote}
-
-\hypertarget{spring-2014-5-work}{%
-\subsection{\texorpdfstring{Spring 2014 \#5
-\(\work\)}{Spring 2014 \#5 \textbackslash work}}\label{spring-2014-5-work}}
-
-Let \(R\) be a commutative ring and \(a\in R\). Prove that \(a\) is not
-nilpotent \(\iff\) there exists a commutative ring \(S\) and a ring
-homomorphism \(\phi: R\to S\) such that \(\phi(a)\) is a unit.
-
-\begin{quote}
-Note: by definition, \(a\) is nilpotent \(\iff\) there is a natural
-number \(n\) such that \(a^n = 0\).
-\end{quote}
-
-\hypertarget{spring-2014-6-work}{%
-\subsection{\texorpdfstring{Spring 2014 \#6
-\(\work\)}{Spring 2014 \#6 \textbackslash work}}\label{spring-2014-6-work}}
-
-\(R\) be a commutative ring with identity and let \(n\) be a positive
-integer.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that every surjective \(R{\hbox{-}}\)linear endomorphism
-  \(T: R^n \to R^n\) is injective.
-\item
-  Show that an injective \(R{\hbox{-}}\)linear endomorphism of \(R^n\)
-  need not be surjective.
-\end{enumerate}
-
-\hypertarget{fall-2013-3-work}{%
-\subsection{\texorpdfstring{Fall 2013 \#3
-\(\work\)}{Fall 2013 \#3 \textbackslash work}}\label{fall-2013-3-work}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Define \emph{prime ideal}, give an example of a nontrivial ideal in
-  the ring \({\mathbb{Z}}\) that is not prime, and prove that it is not
-  prime.
-\item
-  Define \emph{maximal ideal}, give an example of a nontrivial maximal
-  ideal in \({\mathbb{Z}}\) and prove that it is maximal.
-\end{enumerate}
+\hypertarget{zorns-lemma}{%
+\subsection{Zorn's Lemma}\label{zorns-lemma}}
 
 \hypertarget{fall-2013-4-work}{%
-\subsection{\texorpdfstring{Fall 2013 \#4
+\subsubsection{\texorpdfstring{Fall 2013 \#4
 \(\work\)}{Fall 2013 \#4 \textbackslash work}}\label{fall-2013-4-work}}
 
 Let \(R\) be a commutative ring with \(1\neq 0\). Recall that \(x\in R\)
@@ -3308,27 +3658,172 @@ is \emph{nilpotent} iff \(x^n = 0\) for some positive integer \(n\).
   \(S = \left\{{x^n {~\mathrel{\Big|}~}n\in {\mathbb{N}}}\right\}\).
   There is at least on ideal of \(R\) disjoint from \(S\), namely
   \((0)\).
-\end{enumerate}
 
-By Zorn's lemma the set of ideals disjoint from \(S\) has a maximal
-element with respect to inclusion, say \(I\). In other words, \(I\) is
-disjoint from \(S\) and if \(J\) is any ideal disjoint from \(S\) with
-\(I\subseteq J \subseteq R\) then \(J=I\) or \(J=R\).
+  By Zorn's lemma the set of ideals disjoint from \(S\) has a maximal
+  element with respect to inclusion, say \(I\). In other words, \(I\) is
+  disjoint from \(S\) and if \(J\) is any ideal disjoint from \(S\) with
+  \(I\subseteq J \subseteq R\) then \(J=I\) or \(J=R\).
 
-Show that \(I\) is a prime ideal.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
+  Show that \(I\) is a prime ideal.
 \item
   Deduce from (a) and (b) that the set of nilpotent elements of \(R\) is
   the intersection of all prime ideals of \(R\).
 \end{enumerate}
 
-\hypertarget{spring-2013-1-work}{%
-\subsection{\texorpdfstring{Spring 2013 \#1
-\(\work\)}{Spring 2013 \#1 \textbackslash work}}\label{spring-2013-1-work}}
+\hypertarget{fall-2015-3-done}{%
+\subsubsection{\texorpdfstring{Fall 2015 \#3
+\(\done\)}{Fall 2015 \#3 \textbackslash done}}\label{fall-2015-3-done}}
+
+Let \(R\) be a rng (a ring without 1) which contains an element \(u\)
+such that for all \(y\in R\), there exists an \(x\in R\) such that
+\(xu=y\).
+
+Prove that \(R\) contains a maximal left ideal.
+
+\begin{quote}
+Hint: imitate the proof (using Zorn's lemma) in the case where \(R\)
+does have a 1.
+\end{quote}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Define the map
+  \begin{align*}
+  \phi_u: R &\to R\\
+  x &\mapsto xu
+  ,\end{align*}
+  which is right-multiplication by \(u\). By assumption, \(\phi_u\) is
+  surjective, so the principal ideal \(Ru\) equals \(R\).
+\item
+  Then \(K \coloneqq\ker \phi_u \in \operatorname{Id}(R)\) is an ideal.
+\item
+  \(K\) is proper -- otherwise, noting \(Ru=R\), if \(K=R\) we have
+  \(Ru = 0\) and thus \(R=0\). So suppose \(R\neq 0\).
+\item
+  Take a poset
+  \(S \coloneqq\left\{{J\in \operatorname{Id}(R) {~\mathrel{\Big|}~}J \supseteq K, J\neq R}\right\}\),
+  the set of all ideals containing \(K\), ordered by subset inclusion.
+  Note that \(K \in S\), so \(S\) is nonempty.
+\item
+  Apply Zorn's lemma: let \(C: C_1 \subseteq C_2 \subseteq \cdots\) be a
+  chain (totally ordered sub-poset) in \(S\). If \(C\) is the empty
+  chain, \(K\) is an upper bound. Otherwise, if \(C\) is nonempty,
+  define \(\widehat{C} \coloneqq\displaystyle\bigcup_{i=1}^\infty C_i\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\widehat{C}\) is an ideal: if \(a,b\in \widehat{C}\), then
+    \(a\in C_i, b\in C_j\) for some \(i,j\). But without loss of
+    generality, using that chains are totally ordered,
+    \(C_i \subseteq C_j\), so \(a,b\in C_j\) and thus \(ab\in C_j\).
+    Similarly for \(x\in \widehat{C}\), \(x\in C_j\) for some \(j\), and
+    thus \(Rx \subseteq C_j\) since \(C_j\) is an ideal.
+  \item
+    \(\widehat{C}\) is in \(S\): It clearly contains \(K\), since for
+    example \(K \subseteq C_1 \subseteq \widehat{C}\).
+
+    \begin{itemize}
+    \tightlist
+    \item
+      That \(\widehat{C} \neq R\): an ideal equals \(R\) iff it contains
+      a unit. But if \(r\in \widehat{C}\) is a unit, \(r\in C_j\) for
+      some \(j\) is a unit, making \(C_j=R\). \(\contradiction\)
+    \end{itemize}
+  \end{itemize}
+\item
+  So by Zorn's lemma, \(\widehat{C}\) contains a maximal ideal
+  (incidentally containing \(K\)).
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{spring-2015-7-done}{%
+\subsubsection{\texorpdfstring{Spring 2015 \#7
+\(\done\)}{Spring 2015 \#7 \textbackslash done}}\label{spring-2015-7-done}}
+
+Let \(R\) be a commutative ring, and \(S\subset R\) be a nonempty subset
+that does not contain 0 such that for all \(x, y\in S\) we have
+\(xy\in S\). Let \({\mathcal{I}}\) be the set of all ideals
+\(I{~\trianglelefteq~}R\) such that \(I\cap S = \emptyset\).
+
+Show that for every ideal \(I\in {\mathcal{I}}\), there is an ideal
+\(J\in {\mathcal{I}}\) such that \(I\subset J\) and \(J\) is not
+properly contained in any other ideal in \({\mathcal{I}}\).
+
+Prove that every such ideal \(J\) is prime.
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Restating, take the poset
+  \(S\coloneqq\left\{{J\in \operatorname{Id}(R) {~\mathrel{\Big|}~}J \cap S = \emptyset, I\neq R, I \subseteq J}\right\}\)
+  ordered by inclusion. Note that \(S\) is nonempty since it contains
+  \(I\). It suffices to produce a maximal element of \(S\).
+\item
+  Applying Zorn's lemma, let \(C: C_1 \subseteq C_2 \subseteq \cdots\)
+  be a chain and define \(\widehat{C} \coloneqq\cup C_i\).
+\item
+  By standard arguments, \(\widehat{C} \in \operatorname{Id}(R)\) and
+  \(\widehat{C} \supseteq I\), and it suffices to show
+  \(\widehat{C} \cap S = \emptyset\) and \(\widehat{C}\neq R\).
+\item
+  \(\widehat{C} \cap S = \emptyset\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    By contradiction, if \(x\in \widehat{C} \cap S\) then \(x\in C_j\)
+    for some \(j\), and \(x\in S\). But then
+    \(x \in C_j \cap S = \emptyset\).
+  \end{itemize}
+\item
+  \(\widehat{C} \neq R\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    By contradiction, if so then
+    \(1 \in \widehat{C} \implies 1 \in C_j\) for some \(j\), forcing
+    \(C_j = R\).
+  \end{itemize}
+\item
+  So Zorn's lemma applies and we obtain some ideal \({\mathfrak{p}}\),
+  which we now claim is prime.
+\item
+  Let \(ab\in {\mathfrak{p}}\), we want to show \(a\in {\mathfrak{p}}\)
+  or \(b\in{\mathfrak{p}}\).
+\item
+  Suppose not, then neither \(a,b\in {\mathfrak{p}}\). By maximality,
+  \({\mathfrak{p}}+ Ra = R\), and so \({\mathfrak{p}}+ Ra\) intersects
+  \(S\). Similarly \({\mathfrak{p}}+ Rb = R\) so \({\mathfrak{p}}+ Rb\)
+  intersects \(S\).
+\item
+  Produce elements
+  \(x\coloneqq p_1 + r_1a, y\coloneqq p_2 + r_2b\in S\), then since
+  \(S\) is multiplicatively closed,
+  \begin{align*}
+  xy&\coloneqq(p_1 + r_1 a)(p_2 + r_2b)\in S \\
+  &\implies p_1 p_2 + p_1r_2 b + p_2 r_1 a + r_1 r_2 ab \in S \\ 
+  &\implies xy\in {\mathfrak{p}}+ {\mathfrak{p}}Rb + {\mathfrak{p}}Ra + R{\mathfrak{p}}&& \text{since } p_i, ab\in {\mathfrak{p}}\\
+  &\implies xy \in ({\mathfrak{p}}+ Rb + Ra + R){\mathfrak{p}}\subseteq {\mathfrak{p}}
+  .\end{align*}
+  But then \(xy\in S \cap{\mathfrak{p}}\), a contradiction.
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{spring-2013-1-done}{%
+\subsubsection{\texorpdfstring{Spring 2013 \#1
+\(\done\)}{Spring 2013 \#1 \textbackslash done}}\label{spring-2013-1-done}}
 
 Let \(R\) be a commutative ring.
 
@@ -3352,39 +3847,250 @@ Let \(R\) be a commutative ring.
   words, \(I = \operatorname{Ann}(\mu)\) but there does not exist
   \(\nu\in M\) with \(J = \operatorname{Ann}(\nu) \subsetneq R\) such
   that \(I\subsetneq J\).
+
+  Prove that \(I\) is a prime ideal.
 \end{enumerate}
 
-Prove that \(I\) is a prime ideal.
+\begin{solution}
 
-\hypertarget{spring-2013-2-work}{%
-\subsection{\texorpdfstring{Spring 2013 \#2
-\(\work\)}{Spring 2013 \#2 \textbackslash work}}\label{spring-2013-2-work}}
+\envlist
+
+\begin{proof}[part a and b]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Maximal: a proper ideal \(I{~\trianglelefteq~}R\), so \(I\neq R\),
+  such that if \(J\supseteq I\) is any other ideal, \(J = R\).
+\item
+  Existence of a maximal ideal: use that \(0\in \operatorname{Id}(R)\)
+  always, so
+  \(S\coloneqq\left\{{I\in \operatorname{Id}(R) {~\mathrel{\Big|}~}I\neq R}\right\}\)
+  is a nonempty poset under subset inclusion. Applying the usual Zorn's
+  lemma argument produces a maximal element.
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[part c]
+
+\(\impliedby\): By contrapositive: if \(r\in R\) is a unit and
+\({\mathfrak{m}}\) is maximal, then
+\(r\in {\mathfrak{m}}\implies {\mathfrak{m}}= R\), contradicting that
+\({\mathfrak{m}}\) is proper.
+
+\(\implies\):
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \(a\) is not a unit, we'll produce a maximal ideal containing
+  it.
+\item
+  Let \(I\coloneqq Ra\) be the principal ideal generated by \(a\), then
+  \(Ra \neq R\) since \(a\) is not a unit.
+\item
+  Take a poset
+  \(S \coloneqq\left\{{J\in \operatorname{Id}(R) {~\mathrel{\Big|}~}J\supseteq Ra, J\neq R}\right\}\)
+  ordered by set inclusion.
+
+  \begin{itemize}
+  \item
+    Let \(C_*\) be a chain in \(S\), set
+    \(\widehat{C} \coloneqq\cup C_i\). Then \(\widehat{C} \in S\):
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\widehat{C} \neq R\), since if so it contains a unit, forcing
+      some \(C_i\) to contain a unit and thus equal \(R\).
+    \item
+      \(\widehat{C} \supseteq Ra\), since
+      e.g.~\(\widehat{C} \supseteq C_1 \supseteq Ra\).
+    \item
+      \(\widehat{C}\) is an ideal since
+      \(xy\in \widehat{C} \implies x\in C_i, y\in C_j\) and
+      \(C_i \subseteq C_j\) without loss of generality, so
+      \(xy\in C_j \subseteq \widehat{C}\).
+    \end{itemize}
+  \end{itemize}
+\item
+  Then \(Ra \subseteq \widehat{C}\), some maximal ideal.
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of d]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Write \(I \coloneqq\operatorname{Ann}(u)\) for some \(u\), and toward
+  a contradiction suppose \(ab\in I\) but \(a,b\not\in I\).
+\item
+  Then \(abu=0\) but \(au\neq 0, bu\neq 0\).
+\item
+  Since \(abu=0\), we have \(a\in \operatorname{Ann}(bu)\). Note that
+  \(\operatorname{Ann}(bu) \supseteq\operatorname{Ann}(u)\), since
+  \(su = 0\implies bsu=sbu=0\).
+\item
+  We can't have \(\operatorname{Ann}(bu) = R\), since if \(sbu=0\) for
+  all \(s\in R\), so we could take \(s=1\) to get \(bu=0\) and
+  \(b\in \operatorname{Ann}(u)\).
+\item
+  By maximality, this forces
+  \(\operatorname{Ann}(u) = \operatorname{Ann}(bu)\), so
+  \(sbu = 0 \implies su=0\) for any \(s\in R\).
+\item
+  Now take \(s=a\), and since \(abu=0\) we get \(au=0\) and
+  \(a\in \operatorname{Ann}(u)\). \(\contradiction\)
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{fall-2019-6-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 \#6
+\(\done\)}{Fall 2019 \#6 \textbackslash done}}\label{fall-2019-6-done}}
+
+Let \(R\) be a commutative ring with multiplicative identity. Assume
+Zorn's Lemma.
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Define a \emph{Euclidean domain}.
+  Show that
+  \begin{align*}
+  N = \{r \in R \mathrel{\Big|}r^n = 0 \text{ for some } n > 0\}
+  \end{align*}
+  is an ideal which is contained in any prime ideal.
 \item
-  Define a \emph{unique factorization domain}.
+  Let \(r\) be an element of \(R\) not in \(N\). Let \(S\) be the
+  collection of all proper ideals of \(R\) not containing any positive
+  power of \(r\). Use Zorn's Lemma to prove that there is a prime ideal
+  in \(S\).
 \item
-  Is a Euclidean domain an UFD? Give either a proof or a counterexample
-  with justification.
-\item
-  Is a UFD a Euclidean domain? Give either a proof or a counterexample
-  with justification.
+  Suppose that \(R\) has exactly one prime ideal \(P\) . Prove that
+  every element \(r\) of \(R\) is either nilpotent or a unit.
 \end{enumerate}
 
-\hypertarget{spring-2021-5-done}{%
-\subsection{\texorpdfstring{Spring 2021 \#5
-\(\done\)}{Spring 2021 \#5 \textbackslash done}}\label{spring-2021-5-done}}
+\begin{concept}
 
-\begin{problem}[Spring 2021]
+\envlist
 
-Suppose that \(f(x) \in ({\mathbb{Z}}/n{\mathbb{Z}})[x]\) is a zero
-divisor. Show that there is a nonzero
-\(a\in {\mathbb{Z}}/n{\mathbb{Z}}\) with \(af(x) = 0\).
+\begin{itemize}
+\item
+  Prime ideal: \(\mathfrak{p}\) is prime iff
+  \(ab \in \mathfrak{p} \implies a\in \mathfrak{p}\) or
+  \(b\in \mathfrak{p}\).
+\item
+  Silly fact: 0 is in every ideal!
+\item
+  \textbf{Zorn's Lemma:} Given a poset, if every chain has an upper
+  bound, then there is a maximal element. (Chain: totally ordered
+  subset.)
+\item
+  \textbf{Corollary:} If \(S\subset R\) is multiplicatively closed with
+  \(0\not\in S\) then
+  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}J\cap S = \emptyset}\right\}\)
+  has a maximal element.
 
-\end{problem}
+  \todo[inline]{Prove this}
+\item
+  \textbf{Theorem:} If \(R\) is commutative, maximal \(\implies\) prime
+  for ideals.
+
+  \todo[inline]{Prove this}
+\item
+  \textbf{Theorem:} Non-units are contained in a maximal ideal. (See
+  HW?)
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(\mathfrak{p}\) be prime and \(x\in N\).
+\item
+  Then \(x^k = 0 \in \mathfrak{p}\) for some \(k\), and thus
+  \(x^k = x x^{k-1} \in \mathfrak p\).
+\item
+  Since \(\mathfrak p\) is prime, inductively we obtain
+  \(x\in\mathfrak p\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
+
+\begin{itemize}
+\item
+  Let \(S = \left\{{r^k \mathrel{\Big|}k\in {\mathbb{N}}}\right\}\) be
+  the set of positive powers of \(r\).
+\item
+  Then \(S^2 \subseteq S\), since \(r^{k_1}r^{k_2} = r^{k_1+k_2}\) is
+  also a positive power of \(r\), and \(0\not\in S\) since \(r\neq 0\)
+  and \(r\not\in N\).
+\item
+  By the corollary,
+  \(\left\{{I {~\trianglelefteq~}R {~\mathrel{\Big|}~}I\cap S = \emptyset}\right\}\)
+  has a maximal element \(\mathfrak{p}\).
+\item
+  Since \(R\) is commutative, \(\mathfrak{p}\) is prime.
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\item
+  Suppose \(R\) has a unique prime ideal \(\mathfrak{p}\).
+\item
+  Suppose \(r\in R\) is not a unit, and toward a contradiction, suppose
+  that \(r\) is also not nilpotent.
+\item
+  Since \(r\) is not a unit, \(r\) is contained in some maximal (and
+  thus prime) ideal, and thus \(r \in \mathfrak{p}\).
+\item
+  Since \(r\not\in N\), by (b) there is a maximal ideal \(\mathfrak{m}\)
+  that avoids all positive powers of \(r\). Since \(\mathfrak{m}\) is
+  prime, we must have \(\mathfrak{m} = \mathfrak{p}\). But then
+  \(r\not\in \mathfrak{p}\), a contradiction.
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{noetherian-rings}{%
+\subsection{Noetherian Rings}\label{noetherian-rings}}
+
+\hypertarget{fall-2015-4-done}{%
+\subsubsection{\texorpdfstring{Fall 2015 \#4
+\(\done\)}{Fall 2015 \#4 \textbackslash done}}\label{fall-2015-4-done}}
+
+Let \(R\) be a PID and \((a_1) < (a_2) < \cdots\) be an ascending chain
+of ideals in \(R\). Prove that for some \(n\), we have \((a_j) = (a_n)\)
+for all \(j\geq n\).
 
 \begin{solution}
 
@@ -3393,76 +4099,25 @@ divisor. Show that there is a nonzero
 \begin{itemize}
 \tightlist
 \item
-  Write \(f(x) = \sum_{k=0}^n a_k x^k\), and supposing it's a zero
-  divisor choose \(g(x) = \sum_{k=0}^m b_k x^k\) of minimal degree so
-  that \(g\neq 0, b_m\neq 0\), and \(f(x)g(x) = 0\).
+  Let \(I\coloneqq\cup Ra_i\) which is an ideal in a PID and thus
+  \(I = Rb\) for some \(b\).
 \item
-  The claim is that the top coefficient \(b_m\) will suffice.
+  Using that \(b\in I\), which is a union, we have \(Rb\in Ra_m\) for
+  some \(m\).
 \item
-  Write the product:
-  \begin{align*}
-  0 = f(x)g(x) 
-  = (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
-  (b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
-  .\end{align*}
+  Thus \(I = R_b \subseteq Ra_m\), and \(Ra_m \subseteq I\) by
+  definition of \(I\), so \(Rb = Ra_m\).
 \item
-  Equating coefficients, the coefficient for \(x^{m+n}\) must be zero,
-  so (\textbf{importantly}) \(a_n b_m = 0\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Since \(a_n b_m=0\), consider \(a_ng(x)\). This has degree
-    \(d_1 \leq m-1\) but satisfies \(a_ng(x)f(x) = a_n(g(x)f(x)) = 0\),
-    so by minimality \(a_ng(x) = 0\).
-  \item
-    This forces \(a_n b_0 = \cdots = a_n b_{m-1} = 0\), so \(a_n\)
-    annihilates all of the \(b_k\).
-  \end{itemize}
-\item
-  Now consider the coefficient of \(x^{m+n-1}\), given by
-  \(a_{n-1}b_m + a_{n}b_{m-1}\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    The second term \(a_n b_{m-1}=0\) since \(a_n\) annihilates all
-    \(b_k\), so (\textbf{importantly}) \(a_{n-1} b_m = 0\).
-  \item
-    Considering now \(a_{n-1}g(x)\):
-
-    \begin{itemize}
-    \tightlist
-    \item
-      The same argument shows this has degree \(d_2 \leq m-1\) but
-      \(a_{n-1}g(x)f(x) = 0\), so \(a_{n-1}g(x) = 0\).
-    \item
-      So \(a_{n-1}\) annihilates all \(b_k\), and allowing this process
-      to continue inductively.
-    \end{itemize}
-  \end{itemize}
-\item
-  For good measure, the coefficient of \(x^{m+n-2}\) is
-  \(a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Note that \(a_n, a_{n-1}\) annihilate all \(b_k\), so
-    (\textbf{importantly}) \(a_{n-2} b_m=0\), and so on.
-  \end{itemize}
-\item
-  Thus \(a_k b_m = 0\) for all \(0\leq k \leq n\), and by linearity and
-  commutativity, we have
-  \begin{align*}
-  b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
-  .\end{align*}
+  In particular, since \(Ra_{m} \subseteq Ra_{m+1}\) by assumption, and
+  \(Ra_{m+1} \subseteq Rb \subseteq Ra_m\) since \(Rb = I\), we have
+  \(Ra_m = Ra_{m+1}\). So inductively, the chain stabilizes at \(m\).
 \end{itemize}
 
 \end{solution}
 
-\hypertarget{spring-2021-6}{%
-\subsection{Spring 2021 \#6}\label{spring-2021-6}}
+\hypertarget{spring-2021-6-work}{%
+\subsubsection{\texorpdfstring{Spring 2021 \#6
+\(\work\)}{Spring 2021 \#6 \textbackslash work}}\label{spring-2021-6-work}}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -3533,59 +4188,25 @@ divisor. Show that there is a nonzero
 
 \end{solution}
 
-\hypertarget{fields-and-galois-theory}{%
-\section{Fields and Galois Theory}\label{fields-and-galois-theory}}
+\hypertarget{simple-rings}{%
+\subsection{Simple Rings}\label{simple-rings}}
 
-\hypertarget{star-fall-2016-5-work}{%
-\subsection{\texorpdfstring{\(\star\) Fall 2016 \#5
-\(\work\)}{\textbackslash star Fall 2016 \#5 \textbackslash work}}\label{star-fall-2016-5-work}}
+\hypertarget{fall-2017-5-done}{%
+\subsubsection{\texorpdfstring{Fall 2017 \#5
+\(\done\)}{Fall 2017 \#5 \textbackslash done}}\label{fall-2017-5-done}}
 
-How many monic irreducible polynomials over \({\mathbb{F}}_p\) of prime
-degree \(\ell\) are there? Justify your answer.
-
-\hypertarget{star-fall-2013-7-work}{%
-\subsection{\texorpdfstring{\(\star\) Fall 2013 \#7
-\(\work\)}{\textbackslash star Fall 2013 \#7 \textbackslash work}}\label{star-fall-2013-7-work}}
-
-Let \(F = {\mathbb{F}}_2\) and let
-\(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) denote
-its algebraic closure.
+A ring \(R\) is called \emph{simple} if its only two-sided ideals are
+\(0\) and \(R\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Show that
-  \(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) is
-  not a finite extension of \(F\).
+  Suppose \(R\) is a commutative ring with 1. Prove \(R\) is simple if
+  and only if \(R\) is a field.
 \item
-  Suppose that
-  \(\alpha \in \mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\)
-  satisfies \(\alpha^{17} = 1\) and \(\alpha\neq 1\). Show that
-  \(F(\alpha)/F\) has degree 8.
+  Let \(k\) be a field. Show the ring \(M_n (k)\), \(n \times n\)
+  matrices with entries in \(k\), is a simple ring.
 \end{enumerate}
-
-\hypertarget{fall-2019-4-done}{%
-\subsection{\texorpdfstring{Fall 2019 \#4
-\(\done\)}{Fall 2019 \#4 \textbackslash done}}\label{fall-2019-4-done}}
-
-Let \(F\) be a finite field with \(q\) elements. Let \(n\) be a positive
-integer relatively prime to \(q\) and let \(\omega\) be a primitive
-\(n\)th root of unity in an extension field of \(F\). Let
-\(E = F [\omega]\) and let \(k = [E : F]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that \(n\) divides \(q^{k}-1\).
-\item
-  Let \(m\) be the order of \(q\) in
-  \({\mathbb{Z}}/n{\mathbb{Z}}^{\times}\). Prove that \(m\) divides
-  \(k\).
-\item
-  Prove that \(m = k\).
-\end{enumerate}
-
-\todo[inline]{Revisit, tricky!}
 
 \begin{concept}
 
@@ -3594,10 +4215,1119 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
 \begin{itemize}
 \tightlist
 \item
-  \({\mathbb{F}}^{\times}\) is always cyclic for \({\mathbb{F}}\) a
-  field.
+  Nonzero proper ideals contain at least one nonzero element.
 \item
-  Lagrange: \(H\leq G \implies \#H \divides \# G\).
+  \(I=R\) when \(1\in I\).
+\item
+  Effects of special matrices: let \(A_{ij}\) be a matrix with only a 1
+  in the \(ij\) position.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Left-multiplying \(A_{ij}M\) moves row \(j\) to row \(i\) and zeros
+    out the rest of \(M\).
+  \item
+    Right-multiplying \(MA_{ij}\) moves column \(i\) to column \(j\) and
+    zeros out the rest.
+  \item
+    So \(A_{ij} M A_{kl}\) moves entry \(j, k\) to \(i, l\) and zeros
+    out the rest.
+  \end{itemize}
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\begin{proof}[of a]
+
+\(\implies\):
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose
+  \(\operatorname{Id}(R) = \left\{{\left\langle{0}\right\rangle, \left\langle{1}\right\rangle}\right\}\).
+  Then for any nonzero \(r\in R\), the ideal
+  \(\left\langle{r}\right\rangle = \left\langle{1}\right\rangle\) is the
+  entire ring.
+\item
+  In particular, \(1\in \left\langle{r}\right\rangle\), so we can write
+  \(a = tr\) for some \(t\in R\).
+\item
+  But then \(r\in R^{\times}\) with \(t\coloneqq r^{-1}\).
+\end{itemize}
+
+\(\impliedby\):
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \(R\) is a field and \(I\in \operatorname{Id}(R)\) is an
+  ideal.
+\item
+  If \(I \neq \left\langle{0}\right\rangle\) is proper and nontrivial,
+  then \(I\) contains at least one nonzero element \(a\in I\).
+\item
+  Since \(R\) is a field, \(a^{-1}\in R\), and \(aa^{-1}= 1\in I\)
+  forces \(I = \left\langle{1}\right\rangle\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\begin{itemize}
+\tightlist
+\item
+  Let \(J{~\trianglelefteq~}R\) be a nonzero two-sided ideal, noting
+  that \(R\) is noncommutative -- the claim is that \(J\) contains
+  \(I_n\), the \(n\times n\) identity matrix, and thus \(J = R\).
+\item
+  Pick a nonzero element \(M\in I\), then \(M\) has a nonzero entry
+  \(m{ij}\).
+\item
+  Let \(A_{ij}\) be the matrix with a 1 in the \(i,j\) position and
+  zeros elsewhere.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Left-multiplying \(A_{ij}M\) moves row \(j\) to row \(i\) and zeros
+    out the rest of \(M\).
+  \item
+    Right-multiplying \(MA_{ij}\) moves column \(i\) to column \(j\) and
+    zeros out the rest.
+  \item
+    So \(A_{ij} M A_{kl}\) moves entry \(j, k\) to \(i, l\) and zeros
+    out the rest.
+  \end{itemize}
+\item
+  So define \(B \coloneqq A_{i, i}MA_{j, i}\), which movies \(m_{ij}\)
+  to the \(i,i\) position on the diagonal and has zeros elsewhere.
+\item
+  Then \(m_{ij}^{-1}{\varepsilon}_{ii} \coloneqq A_{ii}\) is a matrix
+  with \(1\) in the \(i, i\) spot for any \(i\). Since \(I\) is an
+  ideal, we have \({\varepsilon}_{ii}\in I\) for every \(i\).
+\item
+  We can write the identity \(I_n\) as
+  \(\sum_{i=1}^n {\varepsilon}_{ii}\), so \(I_n \in I\) and \(I=R\).
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{spring-2016-8-done}{%
+\subsubsection{\texorpdfstring{Spring 2016 \#8
+\(\done\)}{Spring 2016 \#8 \textbackslash done}}\label{spring-2016-8-done}}
+
+Let \(R\) be a simple rng (a nonzero ring which is not assume to have a
+1, whose only two-sided ideals are \((0)\) and \(R\)) satisfying the
+following two conditions:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  \(R\) has no zero divisors, and
+\item
+  If \(x\in R\) with \(x\neq 0\) then \(2x\neq 0\), where
+  \(2x\coloneqq x+x\).
+\end{enumerate}
+
+Prove the following:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For each \(x\in R\) there is one and only one element \(y\in R\) such
+  that \(x = 2y\).
+\item
+  Suppose \(x,y\in R\) such that \(x\neq 0\) and \(2(xy) = x\), then
+  \(yz = zy\) for all \(z\in R\).
+\end{enumerate}
+
+\begin{quote}
+You can get partial credit for (b) by showing it in the case \(R\) has a
+1.
+\end{quote}
+
+\begin{remark}
+
+A general opinion is that this is not a great qual problem! Possibly
+worth skipping.
+
+\end{remark}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(R\) has no left zero divisors iff \(R\) has the left cancellation
+  property: \(xa=xb \implies a=b\).
+\item
+  \(R\) has no right zero divisors iff \(R\) has the right cancellation
+  property: \(ax=bx \implies a=b\).
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+Note: solutions borrowed from folks on Math twitter!
+
+\begin{proof}[part 1]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Existence: the claim is that
+  \(2R \coloneqq\left\{{2y {~\mathrel{\Big|}~}y\in R}\right\}\) is a
+  nontrivial two-sided ideal of \(R\), forcing \(2R = R\) by simpleness.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    That \(2R \neq 0\) follows from condition (1): Provided \(y\neq 0\),
+    we have \(2y\neq 0\), and so if \(R\neq 0\) then there exists some
+    nonzero \(a\in R\), in which case \(2a\neq 0\) and \(2a\in 2R\).
+  \item
+    That \(2R\) is a right ideal: clear, since
+    \((2y)\cdot r = 2(yr)\in 2R\).
+  \item
+    That \(2R\) is a left ideal: use that multiplication is
+    distributive:
+    \begin{align*}
+    r\cdot 2y \coloneqq r(y+y) = ry + ry \coloneqq 2(ry) \in 2R
+    .\end{align*}
+  \end{itemize}
+\item
+  So \(2R = R\) by simpleness.
+\item
+  Uniqueness:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use the contrapositive of condition (1), so that
+    \(2x = 0 \implies x=0\).
+  \item
+    Suppose toward a contradiction that \(x=2y_1 = 2y_2\), then
+    \begin{align*}
+    0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
+    .\end{align*}
+  \end{itemize}
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[part 2]
+
+\envlist
+
+\begin{itemize}
+\item
+  First we'll show \(z=2(yz)\):
+  \begin{align*}
+  xy + xy &= x \\
+  \implies xy + xy - x &= 0 \\
+  \implies xyz + xyz - xz &= 0 \\
+  \implies x(yz + yz - z) &= 0 \\
+  \implies yz + yz - z &= 0 && \text{since } x\neq 0 \text{ and no zero divisors }\\
+  \implies 2(yz) &= z 
+  .\end{align*}
+\item
+  Now we'll show \(z=2(zy)\):
+  \begin{align*}
+  yz + yz &= z \\
+  \implies zyz + zyz &= zz \\
+  \implies zyz + zyz - zz &= 0 \\
+  \implies (zy + zy - z)z &= 0\\
+  \implies z=0 \text{ or } zy+zy-z &= 0 && \text{ no zero divisors } 
+  .\end{align*}
+\item
+  Then if \(z=0\), we have \(yz = 0 = zy\) and we're done.
+\item
+  Otherwise, \(2(zy) = z\), and thus
+  \begin{align*}
+  2(zy) = z = 2(yz) \implies 2(zy - yz) = 0 \implies zy-yz = 0
+  ,\end{align*}
+  so \(zy=yz\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of 2, if $R$ is unital]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  If \(1\in R\),
+  \begin{align*}
+  2xy &= x \\
+  \implies 2xy-x &= 0 \\
+  \implies x(2y-1) &= 0 \\
+  \implies 2y-1 &= 0 && x\neq 0 \text{ and no zero divisors}\\
+  \implies 2y &= 1
+  .\end{align*}
+\item
+  Now use
+  \begin{align*}
+  1\cdot z &= z\cdot 1 \\
+  \implies (2y)z &= z(2y) \\
+  \implies (y+y)z &= z(y+y) \\
+  \implies yz+yz &= zy+zy \\
+  \implies 2(yz) &= 2(zy) \\
+  \implies 2(yz-zy) &= 0 \\
+  \implies yz-zy &= 0 \\
+  ,\end{align*}
+  using condition (2).
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{unsorted}{%
+\subsection{Unsorted}\label{unsorted}}
+
+\hypertarget{fall-2019-3-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 \#3
+\(\done\)}{Fall 2019 \#3 \textbackslash done}}\label{fall-2019-3-done}}
+
+Let \(R\) be a ring with the property that for every
+\(a \in R, a^2 = a\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that \(R\) has characteristic 2.
+\item
+  Prove that \(R\) is commutative.
+\end{enumerate}
+
+\begin{strategy}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Just fiddle with direct computations.
+\item
+  Context hint: that we should be considering things like \(x^2\) and
+  \(a+b\).
+\end{itemize}
+
+\end{strategy}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+\begin{align*}
+2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
+.\end{align*}
+Note that this implies \(x = -x\) for all \(x\in R\).
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\begin{align*}
+a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
+&\implies ab + ba = 0 \\
+&\implies ab = -ba \\
+&\implies ab = ba \quad\text{by (a)}
+.\end{align*}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{spring-2018-5-done}{%
+\subsubsection{\texorpdfstring{Spring 2018 \#5
+\(\done\)}{Spring 2018 \#5 \textbackslash done}}\label{spring-2018-5-done}}
+
+Let
+\begin{align*}
+M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
+\quad \text{and} \quad 
+N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
+\end{align*}
+
+over a commutative ring \(R\), where \(b\) and \(x\) are units of \(R\).
+Prove that
+\begin{align*}
+M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
+\implies MN = 0
+.\end{align*}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Multiply everything out to get
+  \begin{align*}
+  {
+  \begin{bmatrix}
+    {ax-by} & {au-bv} 
+  \\
+    {cx-dy} & {cu-dv}
+  \end{bmatrix}
+  }
+  ,\end{align*}
+  so it suffices to show \(cu=dv\) given
+  \begin{align*}
+  ax &= by \\
+  cx &= dy \\
+  au &= bv
+  .\end{align*}
+\item
+  Writing \(cu\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use that \(b\in R^{\times}\), left-multiply (1) by \(b^{-1}\) to get
+    \(b^{-1}a x = y\)
+  \item
+    Substitute \(y\) into (2) to get \(cx = d(b^{-1}a x)\).
+  \item
+    Since \(x\in R^{\times}\), right-multiply by \(x^{-1}\) to get
+    \(c = db^{-1}a\) and thus \(cu = db^{-1}a u\).
+  \item
+    Summary:
+    \begin{align*}
+    ax = by 
+    &\implies b^{-1}ax = y \\
+    &\implies cx = dy = d(b^{-1}a x) \\
+    &\implies c = db^{-1}a \\
+    &\implies cu = db^{-1}au 
+    .\end{align*}
+  \end{itemize}
+\item
+  Writing \(dv\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Left-multiply (3) by \(b^{-1}\) to get \(b^{-1}au = v\).
+  \item
+    Left-multiply by \(d\) to get \(db^{-1}au = dv\)
+  \item
+    Summary:
+    \begin{align*}
+    au = bv 
+    &\implies b^{-1}a u = v \\
+    &\implies db^{-1}au = dv
+    .\end{align*}
+  \end{itemize}
+\item
+  So
+  \begin{align*}
+  cu = db^{-1}a u = dv
+  .\end{align*}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{spring-2014-6-work}{%
+\subsubsection{\texorpdfstring{Spring 2014 \#6
+\(\work\)}{Spring 2014 \#6 \textbackslash work}}\label{spring-2014-6-work}}
+
+\(R\) be a commutative ring with identity and let \(n\) be a positive
+integer.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that every surjective \(R{\hbox{-}}\)linear endomorphism
+  \(T: R^n \to R^n\) is injective.
+\item
+  Show that an injective \(R{\hbox{-}}\)linear endomorphism of \(R^n\)
+  need not be surjective.
+\end{enumerate}
+
+\hypertarget{galois-theory}{%
+\section{Galois Theory}\label{galois-theory}}
+
+\hypertarget{general-galois-extensions}{%
+\subsection{General Galois Extensions}\label{general-galois-extensions}}
+
+\hypertarget{fall-2020-4-done}{%
+\subsubsection{\texorpdfstring{Fall 2020 \#4
+\(\done\)}{Fall 2020 \#4 \textbackslash done}}\label{fall-2020-4-done}}
+
+Let \(K\) be a Galois extension of \(F\), and let
+\(F \subset E \subset K\) be inclusions of fields. Let
+\(G \coloneqq{ \mathsf{Gal}} (K/F)\) and
+\(H \coloneqq{ \mathsf{Gal}} (K/E)\), and suppose \(H\) contains
+\(N_G(P)\), where \(P\) is a Sylow \(p\)-subgroup of \(G\) for \(p\) a
+prime. Prove that \([E: F] \equiv 1 \operatorname{mod}p\).
+
+\begin{concept}
+
+The correspondence:
+
+\begin{center}
+\begin{tikzcd}
+    K &&&& 1 \\
+    \\
+    E &&&& {H \coloneqq{ \mathsf{Gal}} (K/E)\hspace{4em}} \\
+    \\
+    F &&&& {G \coloneqq{ \mathsf{Gal}} (K/F)\hspace{4em}}
+    \arrow["{[E:F]}", hook, from=5-1, to=3-1]
+    \arrow["{[K:E]}", hook, from=3-1, to=1-1]
+    \arrow[""{name=0, anchor=center, inner sep=0}, "{[K:F]}"', curve={height=30pt}, hook, from=5-1, to=1-1]
+    \arrow["{[H:1]}"', hook, from=1-5, to=3-5]
+    \arrow["{[G:H]}"', hook, from=3-5, to=5-5]
+    \arrow["{[G:1]}", curve={height=-30pt}, hook, from=1-5, to=5-5]
+    \arrow["{{ \mathsf{Gal}} (K/{-})}"', shift right=5, shorten <=18pt, Rightarrow, from=0, to=3-5]
+\end{tikzcd}
+\end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsNixbMCwyLCJFIl0sWzAsMCwiSyJdLFswLDQsIkYiXSxbNCwwLCIxIl0sWzQsMiwiSCBcXGRhIFxcR2FsKEsvRSlcXGhzcGFjZXs0ZW19Il0sWzQsNCwiRyBcXGRhIFxcR2FsKEsvRilcXGhzcGFjZXs0ZW19Il0sWzIsMCwiW0U6Rl0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIltLOkVdIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJbSzpGXSIsMix7ImN1cnZlIjo1LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsIltIOjFdIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCJbRzpIXSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNSwiW0c6MV0iLDAseyJjdXJ2ZSI6LTUsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzgsNCwiXFxHYWwoSy9cXHdhaXQpIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV1d}{Link
+to Diagram}
+\end{quote}
+
+Normalizers:
+\begin{align*}
+N_G(P) = \left\{{g\in G {~\mathrel{\Big|}~}gPg^{-1}= P}\right\}
+.\end{align*}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Reduce to a group theory problem: \([E:F] = [G:H]\), despite the fact
+  that \(E/F\) is not necessarily Galois. This is because we can count
+  in towers:
+  \begin{align*}
+  [K:F] = [K:E][E:F] &\implies [G:1] = [K:E][H:1] \\
+  &\implies \# G = [K:E] \# H \\
+  &\implies [G:H] = {\# G \over \# H} = [K:E]
+  .\end{align*}
+\item
+  Essential fact: if \(P \in {\operatorname{Syl}}_p(G)\), we can use
+  that \(P \subseteq N_G(P) \subset H\) and so
+  \(P\in {\operatorname{Syl}}_p(H)\) as well.
+\item
+  Now use that \(N_G(P) \subseteq H\), and do Sylow theory for \(P\) in
+  both \(G\) and \(H\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Sylow 3 on \(G\) yields
+    \(n_p(G) = [G: N_G(P)] \equiv 1 \operatorname{mod}p\).
+  \item
+    Sylow 3 on \(H\) yields
+    \(n_p(H) = [G: N_H(P)] \equiv 1 \operatorname{mod}p\).
+  \end{itemize}
+\item
+  Claim: \(N_H(P) = N_G(P)\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We have \(N_H(P) \subseteq N_G(P)\) since \(H \subseteq G\), so
+    \(hPh^{-1}= P\) remains true regarding either \(h\in H\) or
+    \(h\in G\).
+  \item
+    For \(N_G(P) \subseteq N_H(P)\), use that \(N_G(P) \subseteq H\) and
+    so \(gPg^{-1}= P\) implies \(g\in H\), so \(g\in N_H(P)\).
+  \end{itemize}
+\item
+  Now morally one might want to apply an isomorphism theorem:
+  \begin{align*}
+  {G/ N_G(P) \over H/N_H(P)}=
+  {G/ N_H(P) \over H/N_H(P)}\cong
+  {G\over H}
+  ,\end{align*}
+  but we don't have normality. However, we can still get away with the
+  corresponding counting argument if everything is finite:
+  \begin{align*}
+  {[G: N_G(P)] \over [H:N_H(P)] }=
+  {[G: N_H(P)] \over [H:N_H(P)] }=
+  {\# G / \# N_H(P) \over \# H / \#N_H(P)}
+  = {\# G \over \# H} 
+  = [G: H]
+  .\end{align*}
+\item
+  We have an equation of the form \(n_p(G)/n_p(H) = m\), and we want to
+  show \(m\equiv 1 \operatorname{mod}p\). So write
+  \begin{align*}
+  {n_p(G) \over n_p(H) } 
+  = m \implies m n_p(H) &= n_p(G) \\
+  \implies m n_p(H) &\equiv n_p(G) \operatorname{mod}p \\
+  \implies m\cdot 1 &\equiv 1 \operatorname{mod}p \\
+  \implies m &\equiv 1 \operatorname{mod}p
+  .\end{align*}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2019-midterm-9-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#9
+\(\done\)}{Fall 2019 Midterm \#9 \textbackslash done}}\label{fall-2019-midterm-9-done}}
+
+Let \(n\geq 3\) and \(\zeta_n\) be a primitive \(n\)th root of unity.
+Show that
+\([{\mathbb{Q}}(\zeta_n + \zeta_n^{-1}): {\mathbb{Q}}] = \phi(n)/2\) for
+\(\phi\) the totient function.
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  Some notation: let \(\alpha_k \coloneqq\zeta_n^k + \zeta_n^{-k}\).
+\item
+  Let \(m(x)\) be the minimal polynomial of
+  \(\alpha_1 \coloneqq\zeta_n + \zeta_n^{-1}\). Note that
+  \(\alpha_1 \in {\mathbb{Q}}(\zeta_n)\).
+\item
+  Use that
+  \({ \mathsf{Gal}} ({\mathbb{Q}}(\zeta_n)/{\mathbb{Q}}) \cong C_n^{\times}\),
+  consisting of maps \(\sigma_k: \zeta \mapsto \zeta^k\) for
+  \(\gcd(k, n) = 1\), of which there are \(\phi(n)\) many.
+\item
+  Galois transitively permutes the roots of irreducible polynomials, so
+  the roots of \(m\) are precisely the Galois conjugates of \(\alpha\),
+  i.e.~the Galois orbit of \(\alpha\), so we can just compute it. For
+  illustrative purposes, suppose \(n\) is prime, then
+  \begin{align*}
+  \sigma_1(\zeta_n + \zeta_n^{-1}) &= \zeta_n + \zeta_n^{-1}=\alpha_1 \\
+  \sigma_2(\zeta_n + \zeta_n^{-1}) &= \zeta_n^2 + \zeta_n^{-2} = \alpha_2 \\
+  \sigma_3(\zeta_n + \zeta_n^{-1}) &= \zeta_n^3 + \zeta_n^{-3} = \alpha_3 \\
+  \vdots&\\
+  \sigma_{n-1}(\zeta_n + \zeta_n^{-1}) &= \zeta_n^{n-1} + \zeta_n^{-(n-1)} = \zeta_n^{-1} + \zeta_n^{1} = \alpha_1 \\
+  \sigma_{n-2}(\zeta_n + \zeta_n^{-1}) &= \zeta_n^{n-2} + \zeta_n^{-(n-2)} = \zeta_n^{-2} + \zeta_n^{2} = \alpha_2 \\
+  \sigma_{n-3}(\zeta_n + \zeta_n^{-1}) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3
+  ,\end{align*}
+  where we've used that \(\zeta^{k} = \zeta^{k\operatorname{mod}n}\).
+  From this, we see that \(\sigma_{k}(\alpha_1)=\sigma_{n-k}(\alpha_1)\)
+  and we pick up \((n-1)/2\) distinct conjugates.
+\item
+  For \(n\) not prime, the exact same argument runs through \(\phi(n)\)
+  values of \(k\) for \(\sigma_k\), and again yields
+  \(\sigma_{k}(\alpha_1) = \sigma_{\phi(n) - k}(\alpha_1)\). Matching
+  them up appropriately yields \(\phi(n)/2\) distinct roots.
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2019-midterm-10-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#10
+\(\done\)}{Fall 2019 Midterm \#10 \textbackslash done}}\label{fall-2019-midterm-10-done}}
+
+Let \(L/K\) be a finite normal extension.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(L/K\) is cyclic and \(E/K\) is normal with \(L/E/K\)
+  then \(L/E\) and \(E/K\) are cyclic.
+\item
+  Show that if \(L/K\) is cyclic then there exists exactly one extension
+  \(E/K\) of degree \(n\) with \(L/E/K\) for each divisor \(n\) of
+  \([L:K]\).
+\end{enumerate}
+
+\begin{solution}
+
+The setup:
+
+\begin{center}
+\begin{tikzcd}
+    L &&&& 1 \\
+    \\
+    E &&&& {H\coloneqq{ \mathsf{Gal}} (L/E)\hspace{4em} } \\
+    \\
+    K &&&& {G\coloneqq{ \mathsf{Gal}} (L/K) = C_n}
+    \arrow[from=1-5, to=3-5]
+    \arrow["n", from=3-5, to=5-5]
+    \arrow["n"', from=5-1, to=3-1]
+    \arrow["g", from=3-1, to=1-1]
+    \arrow["g", curve={height=-30pt}, from=5-1, to=1-1]
+    \arrow[curve={height=-30pt}, from=1-5, to=5-5]
+\end{tikzcd}
+\end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsNixbMCwwLCJMIl0sWzAsMiwiRSJdLFswLDQsIksiXSxbNCwwLCIxIl0sWzQsMiwiSFxcZGEgXFxHYWwoTC9FKSJdLFs0LDQsIkdcXGRhIFxcR2FsKEwvSykgPSBDX24iXSxbMyw0XSxbNCw1LCJuIl0sWzIsMSwibiIsMl0sWzEsMCwiZyJdLFsyLDAsImciLDAseyJjdXJ2ZSI6LTV9XSxbMyw1LCIiLDIseyJjdXJ2ZSI6LTV9XV0=}{Link
+to Diagram}
+\end{quote}
+
+Part 1:
+
+\begin{itemize}
+\tightlist
+\item
+  \(L/K\) is cyclic means \(L/K\) is Galois and
+  \(G\coloneqq{ \mathsf{Gal}} (L/K) = C_n\) for some \(n\).
+\item
+  By the FTGT, setting \(H \coloneqq{ \mathsf{Gal}} (L/E)\), we get
+  \(H {~\trianglelefteq~}G\) precisely because \(E/K\) is normal, and
+  \({ \mathsf{Gal}} (L/E) = G/H\).
+\item
+  But then if \(G\) is cyclic, \(H \leq G\) must be cyclic, and \(G/H\)
+  is cyclic as well since writing
+  \(G = C_n = \left\langle{x}\right\rangle\), we have
+  \(G/H = \left\langle{xH}\right\rangle\).
+\end{itemize}
+
+Part 2:
+
+\begin{itemize}
+\tightlist
+\item
+  Letting \(G\coloneqq{ \mathsf{Gal}} (L/K) = C_n\), by elementary group
+  theory we have subgroups \(H\coloneqq C_d \leq C_n\) for every \(d\)
+  dividing \(n\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A observation we'll need: every subgroup is normal here since \(G\)
+    is abelian.
+  \end{itemize}
+\item
+  By the fundamental theorem, taking the fixed field of
+  \(H \leq { \mathsf{Gal}} (L/K)\), we obtain some intermediate
+  extension \(E\coloneqq K^H\) fitting into a tower \(L/E/K\).
+\item
+  By the fundamental theorem, \([E: K] = [G:H] = n/d\), where we've used
+  that \(H{~\trianglelefteq~}G\).
+\item
+  Letting \(d\) range through divisors lets \(n/d\) range through
+  divisors, so we get extensions of every degree \(d\) dividing \(n\).
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2019-midterm-8-work}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#8
+\(\work\)}{Fall 2019 Midterm \#8 \textbackslash work}}\label{fall-2019-midterm-8-work}}
+
+Let \(k\) be a field of characteristic \(p\neq 0\) and \(f\in k[x]\)
+irreducible. Show that \(f(x) = g(x^{p^d})\) where \(g(x) \in k[x]\) is
+irreducible and separable.
+
+Conclude that every root of \(f\) has the same multiplicity \(p^d\) in
+the splitting field of \(f\) over \(k\).
+
+\hypertarget{fall-2019-midterm-7-work}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#7
+\(\work\)}{Fall 2019 Midterm \#7 \textbackslash work}}\label{fall-2019-midterm-7-work}}
+
+Show that a field \(k\) of characteristic \(p\neq 0\) is perfect
+\(\iff\) for every \(x\in k\) there exists a \(y\in k\) such that
+\(y^p=x\).
+
+\hypertarget{spring-2012-4-work}{%
+\subsubsection{\texorpdfstring{Spring 2012 \#4
+\(\work\)}{Spring 2012 \#4 \textbackslash work}}\label{spring-2012-4-work}}
+
+Let \(f(x) = x^7 - 3\in {\mathbb{Q}}[x]\) and \(E/{\mathbb{Q}}\) be a
+splitting field of \(f\) with \(\alpha \in E\) a root of \(f\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(E\) contains a primitive 7th root of unity.
+\item
+  Show that \(E\neq {\mathbb{Q}}(\alpha)\).
+\end{enumerate}
+
+\hypertarget{fall-2013-5-done}{%
+\subsubsection{\texorpdfstring{Fall 2013 \#5
+\(\done\)}{Fall 2013 \#5 \textbackslash done}}\label{fall-2013-5-done}}
+
+Let \(L/K\) be a finite extension of fields.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for \(L/K\) to be \emph{separable}.
+\item
+  Show that if \(K\) is a finite field, then \(L/K\) is always
+  separable.
+\item
+  Give an example of a finite extension \(L/K\) that is not separable.
+\end{enumerate}
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\item
+  \(L/k\) is \textbf{separable} iff every element \(\alpha\) is
+  separable, i.e.~the minimal polynomial \(m(x)\) of \(\alpha\) is a
+  separable polynomial, i.e.~\(m(x)\) has no repeated roots in (say) the
+  algebraic closure of \(L\) (or just any splitting field of \(m\)).
+\item
+  If \(\operatorname{ch}k = p\), suppose toward a contradiction that
+  \(L/k\) is not separable. Then there is some \(\alpha\) with an
+  inseparable (and irreducible) minimal polynomial \(f(x)\in k[x]\).
+\item
+  Claim: since \(f\) is inseparable and irreducible, \(f(x) = g(x^p)\)
+  for some \(g\in k[x]\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Note: write \(g(x) \coloneqq\sum a_k x^k\), so that
+    \(f(x) = \sum a_k (x^p)^k = \sum a_k x^{pk}\).
+  \end{itemize}
+\item
+  This is a contradiction, since it makes \(f\) reducible by using the
+  ``Freshman's dream'':
+  \begin{align*}
+  f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \coloneqq(h(x))^p 
+  .\end{align*}
+\item
+  Proof of claim: in \(\operatorname{ch}k = p, f\) inseparable
+  \(\implies f(x) = g(x^p)\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use that \(f\) is inseparable iff \(\gcd(f, f') \neq 1\), and since
+    \(f\) is irreducible this forces \(f' \equiv 0\), so \(ka_k = 0\)
+    for all \(k\).
+  \item
+    Then \(a_k\neq 0\) forces \(p\divides k\), so
+    \(f(x) = a_0 + a_px^p + a_{2p}x^{2p} + \cdots\) and one takes
+    \(g(x) \coloneqq\sum a_{kp}x^{kp}\).
+  \end{itemize}
+\item
+  A finite inseparable extension:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It's a theorem that finite extensions of perfect fields are
+    separable, so one needs a non-perfect field.
+  \item
+    Take
+    \(L/k \coloneqq{\mathbb{F}}_p(t^{1\over p}) / {\mathbb{F}}_p(t)\),
+    which is a degree \(p\) extension (although both fields are infinite
+    are characteristic \(p\)).
+  \item
+    Then the minimal polynomial of \(t\) is
+    \(f(x) \coloneqq x^p - t \in {\mathbb{F}}_p(t)[x]\), where
+    \(f'(x) = px^p \equiv 0\) Alternatively, just note that \(f\)
+    factors as \(f(x) = (x-t^{1\over p})^p\) in \(L[x]\), which has
+    multiple roots.
+  \end{itemize}
+\end{itemize}
+
+\end{solution}
+
+\hypertarget{fall-2012-4-work}{%
+\subsubsection{\texorpdfstring{Fall 2012 \#4
+\(\work\)}{Fall 2012 \#4 \textbackslash work}}\label{fall-2012-4-work}}
+
+Let \(f(x) \in {\mathbb{Q}}[x]\) be a polynomial and \(K\) be a
+splitting field of \(f\) over \({\mathbb{Q}}\). Assume that
+\([K:{\mathbb{Q}}] = 1225\) and show that \(f(x)\) is solvable by
+radicals.
+
+\hypertarget{galois-groups-concrete-computations}{%
+\subsection{Galois Groups: Concrete
+Computations}\label{galois-groups-concrete-computations}}
+
+\hypertarget{exercise-gx2-2}{%
+\subsubsection{\texorpdfstring{Exercise:
+\(G(x^2-2)\)}{Exercise: G(x\^{}2-2)}}\label{exercise-gx2-2}}
+
+\begin{exercise}[?]
+
+Compute the Galois group of \(x^2-2\).
+
+\end{exercise}
+
+\begin{solution}
+
+\({\mathbb{Z}}/2{\mathbb{Z}}\)?
+
+\end{solution}
+
+\hypertarget{exercise-gxp-2}{%
+\subsubsection{\texorpdfstring{Exercise:
+\(G(x^p-2)\)}{Exercise: G(x\^{}p-2)}}\label{exercise-gxp-2}}
+
+\begin{exercise}[?]
+
+Let \(p \in \mathbb{Z}\) be a prime number. Then describe the elements
+of the Galois group of the polynomial \(x^{p}-2\).
+
+\end{exercise}
+
+\begin{solution}
+
+\({\mathbb{Q}}(2^{1\over p}, \zeta_p)\), which has degree \(p(p-1)\) and
+is generated by the maps
+\begin{align*}
+\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
+\zeta & \mapsto \zeta^{b}
+.\end{align*}
+
+\end{solution}
+
+\hypertarget{fall-2020-3-work}{%
+\subsubsection{\texorpdfstring{Fall 2020 \#3
+\(\work\)}{Fall 2020 \#3 \textbackslash work}}\label{fall-2020-3-work}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for a finite extension of fields \(E\) over \(F\)
+  to be a \emph{Galois} extension.
+\item
+  Determine the Galois group of \(f(x) = x^3 - 7\) over
+  \({\mathbb{Q}}\), and justify your answer carefully.
+\item
+  Find all subfields of the splitting field of \(f(x)\) over
+  \({\mathbb{Q}}\).
+\end{enumerate}
+
+\begin{solution}
+
+Part a:
+
+\begin{itemize}
+\tightlist
+\item
+  A finite extension \(E/F\) is \textbf{Galois} if it is normal and
+  separable:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Normal: every \(f\in F[x]\) either has no roots in \(E\) or all
+    roots in \(E\).
+  \item
+    Separable: every element \(e\in E\) has a separable minimal
+    polynomial \(m(x)\), i.e.~\(m\) has no repeated roots.
+  \end{itemize}
+\end{itemize}
+
+Part b:
+
+\begin{itemize}
+\item
+  Note \(f\) is irreducible by Eisenstein with \(p=7\), and since
+  \({\mathbb{Q}}\) is perfect, irreducible implies separable.
+\item
+  Writing \(L \coloneqq\operatorname{SF}(f)/{\mathbb{Q}}\), this is a
+  Galois extension:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(L\) is separable: it is a finite extension of a perfect field,
+    which is automatically separable.
+  \item
+    \(L\) is normal: \(L\) is the splitting field of a separable
+    polynomial, and thus normal.
+  \end{itemize}
+\item
+  Since \(f\) is degree 3, we have
+  \(G\coloneqq{ \mathsf{Gal}} (L/k) \leq S_3\), and since \(G\) is a
+  transitive subgroup the only possibilities are
+  \begin{align*}
+  G = S_3 \cong D_3, A_3 \cong C_3
+  .\end{align*}
+\item
+  Factor \(x^3 - 7 = (x-\omega)(x-\zeta_3\omega)(x-\zeta_3^2\omega)\)
+  where \(\omega \coloneqq 7^{1\over 3}\) and \(\zeta_3\) is a primitive
+  3rd root of unity. Then \(L = {\mathbb{Q}}(\zeta_3, \omega)\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Aside: label the roots in this order, so
+    \(r_1 = \omega, r_2 = \zeta_3\omega, r_3 = \zeta_3^2\omega\).
+  \end{itemize}
+\item
+  Write \(\min_{\omega, {\mathbb{Q}}}(x) = x^3 - 7\) and let
+  \(L_0/{\mathbb{Q}}\coloneqq{\mathbb{Q}}(\omega)/{\mathbb{Q}}\) yields
+  \([L_0: {\mathbb{Q}}] = 3\).
+\item
+  Write
+  \(\min_{\zeta_3, {\mathbb{Q}}}(x) = (x^3-1)/(x-1) = x^2 + x + 1\), and
+  note that this is still the minimal polynomial over \(L_0\) since
+  \(L_0 \subseteq {\mathbb{R}}\) and
+  \(\zeta_3 \in {\mathbb{C}}\setminus{\mathbb{R}}\). So \([L:L_0] = 2\).
+\item
+  Counting in towers,
+  \begin{align*}
+  [L:{\mathbb{Q}}] = [L:L_0][L_0: {\mathbb{Q}}] = (2)(3) = 6
+  .\end{align*}
+\item
+  But \(\# S_3 = 6\) and \(\# A_3 = 3\), so \(G = S_3\).
+\item
+  Explicitly, since we can write
+  \(\operatorname{SF}(f) = {\mathbb{Q}}(\omega, \zeta_3)\), we can find
+  explicit generators:
+  \begin{align*}
+  \sigma:
+  &\begin{cases}
+  \omega &\mapsto \omega
+  &  
+  \\
+  \zeta_3 &\mapsto \zeta_3\cdot \zeta_3.
+  \end{cases}
+  &&
+  \implies \sigma \sim (1,2,3) \\
+  \tau:
+  &\begin{cases}
+  \omega &\mapsto \omega
+  &  
+  \\
+  \zeta_3 &\mapsto \mkern 1.5mu\overline{\mkern-1.5mu\zeta_3\mkern-1.5mu}\mkern 1.5mu.
+  \end{cases}
+  &&
+  \implies \tau \sim (2, 3)
+  .\end{align*}
+  So
+  \(G = \left\langle{\sigma, \tau {~\mathrel{\Big|}~}\sigma^3, \tau^2}\right\rangle\).
+\end{itemize}
+
+Part c:
+
+\begin{itemize}
+\tightlist
+\item
+  Note that the subgroup lattice for \(S_3\) looks like the following:
+\end{itemize}
+
+\includegraphics{figures/2021-08-14_18-00-51.png}
+
+\begin{itemize}
+\tightlist
+\item
+  Note that we can identify
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\tau = (2,3)\) which fixes \(r_1\)
+  \item
+    \(\sigma \tau = (1,2)\) which fixes \(r_3\)
+  \item
+    \(\sigma^2\tau = (1, 3)\) which fixes \(r_2\)
+  \item
+    \(\sigma = (1,2,3)\), for which we need to calculate the fixed
+    field. Using that \(\sigma(\omega) =\zeta\omega\) and
+    \(\sigma(\zeta)=\zeta\), supposing \(\sigma(\alpha) = \alpha\) we
+    have
+    \begin{align*}
+    \sigma(\alpha) &\coloneqq\sigma(a + b\zeta_3 + c\zeta_3^2 + d\omega + e\zeta_3\omega + f\zeta_3^2\omega) \\
+    &= a + b\zeta_3 + c\zeta_3^2 + d\zeta_3\omega + e\zeta_3^2\omega + f\omega \\
+    \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1(\omega + \zeta_3\omega + \zeta_3^2\omega) \\
+    \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1\omega (1 + \zeta_3+ \zeta_3^2) \\
+    \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 
+    ,\end{align*}
+    using the general fact that \(\sum_{k=0}^{n-1}\zeta_n^k = 0\). So
+    the fixed field is
+    \({\mathbb{Q}}(1, \zeta, \zeta^2) = {\mathbb{Q}}(\zeta)\).
+  \end{itemize}
+\item
+  We thus get the following lattice correspondence:
+\end{itemize}
+
+\begin{center}
+\begin{tikzcd}
+    && {{\mathbb{Q}}(\zeta_3,\omega)} \\
+    \\
+    {{\mathbb{Q}}(\omega) = {\mathbb{Q}}(r_1)} & {{\mathbb{Q}}(\zeta_3\omega) = {\mathbb{Q}}(r_2)} & {{\mathbb{Q}}(\zeta_3^2\omega) = {\mathbb{Q}}(r_3)} && {{\mathbb{Q}}(\zeta_3)} \\
+    \\
+    && {\mathbb{Q}}\\
+    && 1 \\
+    \\
+    {\left\langle{(2,3) = \tau}\right\rangle \cong C_2} & {\left\langle{(1,3) = \sigma^2\tau}\right\rangle \cong C_2} & {\left\langle{(1,2) = \sigma\tau}\right\rangle \cong C_2} && {\left\langle{(1,2,3) = \sigma}\right\rangle \cong C_3} \\
+    \\
+    && {\left\langle{\sigma, \tau}\right\rangle\cong S_3}
+    \arrow["3"{description}, from=5-3, to=3-1]
+    \arrow["3"{description}, from=5-3, to=3-3]
+    \arrow["2"{description}, from=3-1, to=1-3]
+    \arrow["2"{description}, from=3-2, to=1-3]
+    \arrow["2"{description}, from=3-3, to=1-3]
+    \arrow["2"{description}, from=5-3, to=3-5]
+    \arrow["3"{description}, from=3-5, to=1-3]
+    \arrow["3"{description}, from=5-3, to=3-2]
+    \arrow["2"{description}, from=6-3, to=8-1]
+    \arrow["3"{description}, from=8-1, to=10-3]
+    \arrow["3"{description}, from=8-3, to=10-3]
+    \arrow["2"{description}, from=6-3, to=8-3]
+    \arrow["3"{description}, from=6-3, to=8-5]
+    \arrow["2"{description}, from=8-5, to=10-3]
+    \arrow["3"{description}, from=8-2, to=10-3]
+    \arrow["2"{description}, from=6-3, to=8-2]
+\end{tikzcd}
+\end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHpldGFfMyxcXG9tZWdhKSJdLFswLDIsIlxcUVEoXFxvbWVnYSkgPSBcXFFRKHJfMSkiXSxbMiwyLCJcXFFRKFxcemV0YV8zXjJcXG9tZWdhKSA9IFxcUVEocl8zKSJdLFsyLDQsIlxcUVEiXSxbMSwyLCJcXFFRKFxcemV0YV8zXFxvbWVnYSkgPSBcXFFRKHJfMikiXSxbNCwyLCJcXFFRKFxcemV0YV8zKSJdLFswLDcsIlxcZ2Vuc3soMiwzKSA9IFxcdGF1fSBcXGNvbmcgQ18yIl0sWzIsOSwiXFxnZW5ze1xcc2lnbWEsIFxcdGF1fVxcY29uZyBTXzMiXSxbMiw1LCIxIl0sWzIsNywiXFxnZW5zeygxLDIpID0gXFxzaWdtYVxcdGF1fSBcXGNvbmcgQ18yIl0sWzQsNywiXFxnZW5zeygxLDIsMykgPSBcXHNpZ21hfSBcXGNvbmcgQ18zIl0sWzEsNywiXFxnZW5zeygxLDMpID0gXFxzaWdtYV4yXFx0YXV9IFxcY29uZyBDXzIiXSxbMywxLCIzIiwxXSxbMywyLCIzIiwxXSxbMSwwLCIyIiwxXSxbNCwwLCIyIiwxXSxbMiwwLCIyIiwxXSxbMyw1LCIyIiwxXSxbNSwwLCIzIiwxXSxbMyw0LCIzIiwxXSxbOCw2LCIyIiwxXSxbNiw3LCIzIiwxXSxbOSw3LCIzIiwxXSxbOCw5LCIyIiwxXSxbOCwxMCwiMyIsMV0sWzEwLDcsIjIiLDFdLFsxMSw3LCIzIiwxXSxbOCwxMSwiMiIsMV1d}{Link
+to Diagram}
+\end{quote}
+
+\end{solution}
+
+\hypertarget{spring-2021-4-work}{%
+\subsubsection{\texorpdfstring{Spring 2021 \#4
+\(\work\)}{Spring 2021 \#4 \textbackslash work}}\label{spring-2021-4-work}}
+
+Define
+\begin{align*}
+f(x) \coloneqq x^4 + 4x^2 + 64 \in {\mathbb{Q}}[x]
+.\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the splitting field \(K\) of \(f\) over \({\mathbb{Q}}\).
+\item
+  Find the Galois group \(G\) of \(f\).
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\end{enumerate}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Useful trick: given \(a + \sqrt{b}\), try to rewrite this as
+  \((\sqrt{c} + \sqrt{d})^2\) for some \(c, d\) to get a better basis
+  for \(\operatorname{SF}(f)\).
 \end{itemize}
 
 \end{concept}
@@ -3606,81 +5336,513 @@ integer relatively prime to \(q\) and let \(\omega\) be a primitive
 
 \envlist
 
-\begin{proof}[of a]
+\begin{itemize}
+\item
+  First consider \(g(z) \coloneqq z^2 + 4z + 64\). Applying the
+  quadratic formula yields
+  \begin{align*}
+  z = {-4 \pm \sqrt{16 - 64} \over 2} = -2 \pm {1\over 2}\sqrt{ -15 \cdot 16 } = -2 \pm 2i \sqrt{15}
+  .\end{align*}
+\item
+  Substituting \(z=x^2\) yields the splitting field of \(f\) as
+  \(L\coloneqq{\mathbb{Q}}(\pm \sqrt{ -2 \pm 2i\sqrt{15}})\).
 
-\envlist
+  \begin{itemize}
+  \tightlist
+  \item
+    Note that this factorization shows that \(f\) is irreducible over
+    \({\mathbb{Q}}\), since the two quadratic factors have irrational
+    coefficients and none of the roots are real.
+  \item
+    Irreducible implies separable over a perfect field, so
+    \(L/{\mathbb{Q}}\) is a separable extension.
+  \item
+    \(L\) is the splitting field of a separable polynomial and thus
+    normal, making \(L\) Galois.
+  \end{itemize}
+\item
+  In this form, it's not clear what the degree \([L:{\mathbb{Q}}]\) is,
+  so we can find a better basis by rewriting the roots of \(g\):
+  \begin{align*}
+  z = -2 \pm 2i\sqrt{15} = \qty{\sqrt{5}}^2 - \qty{\sqrt 3}^2 \pm 2i\sqrt{5}\sqrt{3} = (\sqrt 5 \pm i\sqrt{3})^2
+  ,\end{align*}
+  and so the roots of \(f\) are \(x = \pm \sqrt{5} \pm i\sqrt{3}\) and
+  \(L = {\mathbb{Q}}(\sqrt 5, i\sqrt 3)\).
+\item
+  Counting in towers,
+  \begin{align*}
+  [L:{\mathbb{Q}}] = [{\mathbb{Q}}(\sqrt 5, i \sqrt{3} ) : {\mathbb{Q}}\sqrt{5} ][{\mathbb{Q}}\sqrt{5} : {\mathbb{Q}}] = (2)(2) = 4
+  ,\end{align*}
+  where we've used that \(\min_{\sqrt 5, {\mathbb{Q}}}(x) = x^2-5\) and
+  \(\min_{i\sqrt 3, {\mathbb{Q}}}(x) = x^2 + 3\), which remains the
+  minimal polynomial over
+  \({\mathbb{Q}}(\sqrt 5) \subseteq {\mathbb{R}}\) since both roots are
+  not real.
+\item
+  So \(G\coloneqq{ \mathsf{Gal}} (L/{\mathbb{Q}}) \leq S_4\) is a
+  transitive subgroup of size 4, making it either \(C_4\) or \(C_2^2\).
+\item
+  Label the roots:
+  \begin{align*}
+  r_1 &= \sqrt 5 + i\sqrt 3 \\
+  r_2 &= \sqrt{5} - i \sqrt{3} \\
+  r_3 &= - \sqrt 5 + i\sqrt 3 = -r_2 \\
+  r_4 &= -\sqrt{5} - i\sqrt{3} = -r_1
+  .\end{align*}
+\item
+  We can start writing down automorphisms:
+  \begin{align*}
+  \sigma_1:
+  \begin{cases}
+  \sqrt 5 &\mapsto -\sqrt 5  
+  \\
+  i\sqrt 3 &\mapsto i\sqrt 3 .
+  \end{cases}
+  && \sigma_1 \sim (1,3)(2,4)
+  \\
+  \sigma_2
+  \begin{cases}
+  \sqrt 5 &\mapsto \sqrt 5  
+  \\
+  i\sqrt 3 &\mapsto -i\sqrt 3 .
+  \end{cases}
+  && \sigma_2 \sim (1, 2)(3, 4)
+  .\end{align*}
+  Note that these define automorphisms because we've specified what
+  happens to a basis and they send roots to other roots.
+\item
+  Checking that \(\sigma_1^2 = \sigma_2^2 = \operatorname{id}\), this
+  produces two distinct order 2 elements, forcing \(G \cong C_2^2\)
+  since \(C_4\) only has one order 2 element. Explicitly, we have
+  \begin{align*}
+  C_2^2 \cong G = \left\langle{\tau_1, \tau_2}\right\rangle = \left\{{\operatorname{id}, \tau_1, \tau_2, \tau_1 \tau_2}\right\} = \left\{{\operatorname{id}, (1,3)(2,4), (1,2)(3,4),  (1,4)(2,3) }\right\}
+  ,\end{align*}
+  and the generic subgroup lattice looks like:
+\end{itemize}
+
+\includegraphics{figures/2021-08-15_00-02-28.png}
 
 \begin{itemize}
 \item
-  Since \({\left\lvert {F} \right\rvert} = q\) and \([E:F] = k\), we
-  have \({\left\lvert {E} \right\rvert} = q^k\) and
-  \({\left\lvert {E^{\times}} \right\rvert} = q^k-1\).
+  Computing some fixed fields. Write \(i \sqrt{3} = x, \sqrt{5} = y\),
+  then elements in the splitting field are of the form
+  \(\alpha = 1 + ax + by + cxy\).
+
+  \begin{itemize}
+  \item
+    For \(\sigma_1\), we have \(x\mapsto -x\), so
+    \begin{align*}
+    \sigma_1(\alpha) = 1 - ax + by - cxy
+    = \alpha \implies a=-a=0, c=-c=0
+    ,\end{align*}
+    so this preserves \(1+by\), making the fixed field
+    \({\mathbb{Q}}(1, y) = {\mathbb{Q}}(i \sqrt{3})\).
+  \item
+    For \(\sigma_2\), we have \(y\mapsto -y\), so
+    \begin{align*}
+    \sigma_2(\alpha) = 1 +ax -by -cxy = \alpha \implies b=-b=0,c=-c=0
+    ,\end{align*}
+    preserving \(1 + ax\) and making the fixed field
+    \({\mathbb{Q}}(1, x) = {\mathbb{Q}}(\sqrt 5)\).
+  \item
+    For \(\sigma_1 \sigma_2\), we have \(x\mapsto -x\) and
+    \(y\mapsto -y\), so
+    \begin{align*}
+    \sigma_1\sigma_2(\alpha) = 1 -ax -by +cxy = \alpha \implies a=-a=-, b=-b=0
+    ,\end{align*}
+    preserving \(1 + cxy\) and yielding
+    \({\mathbb{Q}}(xy) = {\mathbb{Q}}(i\sqrt 3 \sqrt 5)\).
+  \end{itemize}
 \item
-  Noting that \(\zeta \in E^{\times}\) we must have
-  \(n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
-  by Lagrange's theorem.
+  So the lattice correspondence we get here is
 \end{itemize}
+
+\begin{center}
+\begin{tikzcd}
+    && {{\mathbb{Q}}(\sqrt{5}, i\sqrt{3})} \\
+    \\
+    {{\mathbb{Q}}(i \sqrt 3)} && {{\mathbb{Q}}(i\sqrt{3}\sqrt{5})} && {{\mathbb{Q}}(\sqrt 5)} \\
+    \\
+    && {\mathbb{Q}}\\
+    && 1 \\
+    {} &&&& {} \\
+    {\left\langle{\sigma_1}\right\rangle} && {\left\langle{\sigma_1\sigma_2}\right\rangle} && {\left\langle{\sigma_2}\right\rangle} \\
+    \\
+    && {G = \left\langle{\tau_1, \tau_2}\right\rangle}
+    \arrow["2"{description}, from=5-3, to=3-1]
+    \arrow["2"{description}, from=5-3, to=3-3]
+    \arrow["2"{description}, from=5-3, to=3-5]
+    \arrow["2"{description}, from=3-3, to=1-3]
+    \arrow["2"{description}, from=3-1, to=1-3]
+    \arrow["2"{description}, from=3-5, to=1-3]
+    \arrow["2"{description}, from=6-3, to=8-1]
+    \arrow["2"{description}, from=6-3, to=8-3]
+    \arrow["2"{description}, from=6-3, to=8-5]
+    \arrow["2"{description}, from=8-1, to=10-3]
+    \arrow["2"{description}, from=8-3, to=10-3]
+    \arrow["2"{description}, from=8-5, to=10-3]
+\end{tikzcd}
+\end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHNxcnR7NX0sIGlcXHNxcnR7M30pIl0sWzAsMiwiXFxRUShpIFxcc3FydCAzKSJdLFsyLDIsIlxcUVEoaVxcc3FydHszfVxcc3FydHs1fSkiXSxbNCwyLCJcXFFRKFxcc3FydCA1KSJdLFsyLDQsIlxcUVEiXSxbMiw1LCIxIl0sWzAsNl0sWzQsNl0sWzIsNywiXFxnZW5ze1xcc2lnbWFfMVxcc2lnbWFfMn0iXSxbMCw3LCJcXGdlbnN7XFxzaWdtYV8xfSJdLFs0LDcsIlxcZ2Vuc3tcXHNpZ21hXzJ9Il0sWzIsOSwiRyA9IFxcZ2Vuc3tcXHRhdV8xLCBcXHRhdV8yfSJdLFs0LDEsIjIiLDFdLFs0LDIsIjIiLDFdLFs0LDMsIjIiLDFdLFsyLDAsIjIiLDFdLFsxLDAsIjIiLDFdLFszLDAsIjIiLDFdLFs1LDksIjIiLDFdLFs1LDgsIjIiLDFdLFs1LDEwLCIyIiwxXSxbOSwxMSwiMiIsMV0sWzgsMTEsIjIiLDFdLFsxMCwxMSwiMiIsMV1d}{Link
+to Diagram}
+\end{quote}
+
+\end{solution}
+
+\hypertarget{fall-2019-midterm-6-work}{%
+\subsubsection{\texorpdfstring{Fall 2019 Midterm \#6
+\(\work\)}{Fall 2019 Midterm \#6 \textbackslash work}}\label{fall-2019-midterm-6-work}}
+
+Compute the Galois group of
+\(f(x) = x^3-3x -3\in {\mathbb{Q}}[x]/{\mathbb{Q}}\).
+
+\hypertarget{spring-2018-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2018 \#2
+\(\done\)}{Spring 2018 \#2 \textbackslash done}}\label{spring-2018-2-done}}
+
+Let \(f(x) = x^4 - 4x^2 + 2 \in {\mathbb{Q}}[x]\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the splitting field \(K\) of \(f\), and compute
+  \([K: {\mathbb{Q}}]\).
+\item
+  Find the Galois group \(G\) of \(f\), both as an explicit group of
+  automorphisms, and as a familiar abstract group to which it is
+  isomorphic.
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(k\).
+\end{enumerate}
+
+\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+Note that \(g(x) = x^2 - 4x + 2\) has roots \(\beta = 2 \pm \sqrt{2}\),
+and so \(f\) has roots
+\begin{align*}
+\alpha_1 &= \sqrt{2 + \sqrt 2} \\
+\alpha_2 &= \sqrt{2 - \sqrt 2} \\
+\alpha_3 &= -\alpha_1 \\
+\alpha_4 &= -\alpha_2
+.\end{align*}
+
+and splitting field \(K = {\mathbb{Q}}(\left\{{\alpha_i}\right\})\).
 
 \end{proof}
 
 \begin{proof}[of b]
 
-\envlist
+\(K\) is the splitting field of a separable polynomial and thus Galois
+over \({\mathbb{Q}}\). Moreover, Since \(f\) is irreducible by
+Eisenstein with \(p=2\), the Galois group is a transitive subgroup of
+\(S^4\), so the possibilities are:
 
 \begin{itemize}
 \tightlist
 \item
-  Rephrasing (a), we have
-  \begin{align*}
-  n \divides q^k-1 
-  &\iff q^k-1 \cong 0 \operatorname{mod}n \\
-  &\iff q^k \cong 1 \operatorname{mod}n \\
-  &\iff m \coloneqq o(q) \divides k
-  .\end{align*}
+  \(S_4\)
+\item
+  \(A_4\)
+\item
+  \(D_4\)
+\item
+  \({\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2)\)
+\item
+  \({\mathbb{Z}}/(4)\)
 \end{itemize}
+
+We can note that \(g\) splits over \(L \coloneqq{\mathbb{Q}}(\sqrt 2)\),
+an extension of degree 2.
+
+We can now note that \(\min(\alpha, L)\) is given by
+\(p(x) = x^2 - (2 + \sqrt 2)\), and so \([K: L] = 2\).
+
+We then have
+\begin{align*}
+[K: {\mathbb{Q}}] = [K: L] [L : {\mathbb{Q}}] = (2)(2) = 4
+.\end{align*}
+
+This
+\({\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = 4\),
+which leaves only two possibilities:
+
+\begin{itemize}
+\tightlist
+\item
+  \({\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2)\)
+\item
+  \({\mathbb{Z}}/(4)\)
+\end{itemize}
+
+We can next check orders of elements. Take
+\begin{align*}
+\sigma &\in { \mathsf{Gal}} (K/{\mathbb{Q}}) \\
+\alpha_1 &\mapsto \alpha_2
+.\end{align*}
+
+Computations show that
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha_1^2 \alpha_2^2 = 2\), so \(\alpha_1 \alpha_2 = \sqrt 2\)
+\item
+  \(\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2\)
+\end{itemize}
+
+and thus
+\begin{align*}
+\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
+&= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
+&= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
+&= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
+&= \frac{\alpha_2^2 - 2}{\alpha_2} \\
+&= \alpha_2 -2\alpha_2^{-1}\\
+&= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
+&= \alpha_2 -\alpha_1 \sqrt 2 \\
+&\neq \alpha_1
+,\end{align*}
+
+and so the order of \(\sigma\) is strictly greater than 2, and thus 4,
+and thus
+\({ \mathsf{Gal}} (K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4)\).
 
 \end{proof}
 
 \begin{proof}[of c]
 
-\envlist
-
-\begin{itemize}
-\item
-  Since \(m\divides k \iff k = \ell m\), (\textbf{claim}) there is an
-  intermediate subfield \(M\) such that
-  \begin{align*}
-  E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
-  ,\end{align*}
-
-  so \(M\) is a degree \(m\) extension of \(E\).
-\item
-  Now consider \(M^{\times}\).
-\item
-  By the argument in (a), \(n\) divides
-  \(q^m - 1 = {\left\lvert {M^{\times}} \right\rvert}\), and
-  \(M^{\times}\) is cyclic, so it contains a cyclic subgroup \(H\) of
-  order \(n\).
-\item
-  But then \(x\in H \implies p(x)\coloneqq x^n-1 = 0\), and since
-  \(p(x)\) has at most \(n\) roots in a field.
-\item
-  So \(H = \left\{{x \in M {~\mathrel{\Big|}~}x^n-1 = 0}\right\}\),
-  i.e.~\(H\) contains all solutions to \(x^n-1\) in \(E[x]\).
-\item
-  But \(\zeta\) is one such solution, so
-  \(\zeta \in H \subset M^{\times}\subset M\).
-\item
-  Since \(F[\zeta]\) is the smallest field extension containing
-  \(\zeta\), we must have \(F = M\), so \(\ell = 1\), and \(k = m\).
-\end{itemize}
+?? The subgroup of index 2 \(\left\langle{\sigma^2}\right\rangle\)
+corresponds to the field extension \(Q(\sqrt 2) / {\mathbb{Q}}\).
 
 \end{proof}
 
+\todo[inline]{Finish (c)}
+
 \end{solution}
 
+\hypertarget{spring-2020-4-work}{%
+\subsubsection{\texorpdfstring{Spring 2020 \#4
+\(\work\)}{Spring 2020 \#4 \textbackslash work}}\label{spring-2020-4-work}}
+
+Let \(f(x) = x^4-2 \in {\mathbb{Q}}[x]\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Define what it means for a finite extension field \(E\) of a field
+  \(F\) to be a Galois extension.
+\item
+  Determine the Galois group \({ \operatorname{Gal}} (E/{\mathbb{Q}})\)
+  for the polynomial \(f(x)\), and justify your answer carefully.
+\item
+  Exhibit a subfield \(K\) in \((b)\) such that
+  \({\mathbb{Q}}\leq K \leq E\) with \(K\) not a Galois extension over
+  \({\mathbb{Q}}\). Explain.
+\end{enumerate}
+
+\hypertarget{spring-2017-8-work}{%
+\subsubsection{\texorpdfstring{Spring 2017 \#8
+\(\work\)}{Spring 2017 \#8 \textbackslash work}}\label{spring-2017-8-work}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(K\) denote the splitting field of \(x^5 - 2\) over
+  \({\mathbb{Q}}\). Show that the Galois group of \(K/{\mathbb{Q}}\) is
+  isomorphic to the group of invertible matrices
+  \begin{align*}
+  \left(\begin{array}{ll}
+  a & b \\
+  0 & 1
+  \end{array}\right) 
+  {\quad \operatorname{where} \quad} a\in {\mathbb{F}}_5^{\times}\text{ and } b\in {\mathbb{F}}_5
+  .\end{align*}
+\item
+  Determine all intermediate fields between \(K\) and \({\mathbb{Q}}\)
+  which are Galois over \({\mathbb{Q}}\).
+\end{enumerate}
+
+\hypertarget{fall-2016-4-work}{%
+\subsubsection{\texorpdfstring{Fall 2016 \#4
+\(\work\)}{Fall 2016 \#4 \textbackslash work}}\label{fall-2016-4-work}}
+
+Set \(f(x) = x^3 - 5 \in {\mathbb{Q}}[x]\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find the splitting field \(K\) of \(f(x)\) over \({\mathbb{Q}}\).
+\item
+  Find the Galois group \(G\) of \(K\) over \({\mathbb{Q}}\).
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\end{enumerate}
+
+\hypertarget{spring-2016-2-work}{%
+\subsubsection{\texorpdfstring{Spring 2016 \#2
+\(\work\)}{Spring 2016 \#2 \textbackslash work}}\label{spring-2016-2-work}}
+
+Let \(K = {\mathbb{Q}}[\sqrt 2 + \sqrt 5]\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find \([K: {\mathbb{Q}}]\).
+\item
+  Show that \(K/{\mathbb{Q}}\) is Galois, and find the Galois group
+  \(G\) of \(K/{\mathbb{Q}}\).
+\item
+  Exhibit explicitly the correspondence between subgroups of \(G\) and
+  intermediate fields between \({\mathbb{Q}}\) and \(K\).
+\end{enumerate}
+
+\hypertarget{fall-2015-5-work}{%
+\subsubsection{\texorpdfstring{Fall 2015 \#5
+\(\work\)}{Fall 2015 \#5 \textbackslash work}}\label{fall-2015-5-work}}
+
+Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
+\(E = {\mathbb{Q}}(u)\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Find (with justification) the minimal polynomial \(f(x)\) of \(u\)
+  over \({\mathbb{Q}}\).
+\item
+  Show \(v\in E\), and show that \(E\) is a splitting field of \(f(x)\)
+  over \({\mathbb{Q}}\).
+\item
+  Determine the Galois group of \(E\) over \({\mathbb{Q}}\) and
+  determine all of the intermediate fields \(F\) such that
+  \({\mathbb{Q}}\subset F \subset E\).
+\end{enumerate}
+
+\hypertarget{spring-2015-5-work}{%
+\subsubsection{\texorpdfstring{Spring 2015 \#5
+\(\work\)}{Spring 2015 \#5 \textbackslash work}}\label{spring-2015-5-work}}
+
+Let \(f(x) = x^4 - 5 \in {\mathbb{Q}}[x]\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Compute the Galois group of \(f\) over \({\mathbb{Q}}\).
+\item
+  Compute the Galois group of \(f\) over \({\mathbb{Q}}(\sqrt{5})\).
+\end{enumerate}
+
+\hypertarget{fall-2014-3-work}{%
+\subsubsection{\texorpdfstring{Fall 2014 \#3
+\(\work\)}{Fall 2014 \#3 \textbackslash work}}\label{fall-2014-3-work}}
+
+Consider the polynomial \(f(x) = x^4 - 7 \in {\mathbb{Q}}[x]\) and let
+\(E/{\mathbb{Q}}\) be the splitting field of \(f\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the structure of the Galois group of \(E/{\mathbb{Q}}\)?
+\item
+  Give an explicit description of all of the intermediate subfields
+  \({\mathbb{Q}}\subset K \subset E\) in the form
+  \(K = {\mathbb{Q}}(\alpha), {\mathbb{Q}}(\alpha, \beta), \cdots\)
+  where \(\alpha, \beta\), etc are complex numbers. Describe the
+  corresponding subgroups of the Galois group.
+\end{enumerate}
+
+\hypertarget{fall-2013-6-work}{%
+\subsubsection{\texorpdfstring{Fall 2013 \#6
+\(\work\)}{Fall 2013 \#6 \textbackslash work}}\label{fall-2013-6-work}}
+
+Let \(K\) be the splitting field of \(x^4-2\) over \({\mathbb{Q}}\) and
+set \(G = { \operatorname{Gal}} (K/{\mathbb{Q}})\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(K/{\mathbb{Q}}\) contains both \({\mathbb{Q}}(i)\) and
+  \({\mathbb{Q}}(\sqrt[4]{2})\) and has degree 8 over \({\mathbb{Q}}\)/
+\item
+  Let \(N = { \operatorname{Gal}} (K/{\mathbb{Q}}(i))\) and
+  \(H = { \operatorname{Gal}} (K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that
+  \(N\) is normal in \(G\) and \(NH = G\).
+
+  \begin{quote}
+  Hint: what field is fixed by \(NH\)?
+  \end{quote}
+\item
+  Show that \({ \operatorname{Gal}} (K/{\mathbb{Q}})\) is generated by
+  elements \(\sigma, \tau\), of orders 4 and 2 respectively, with
+  \(\tau \sigma\tau^{-1}= \sigma^{-1}\).
+
+  \begin{quote}
+  Equivalently, show it is the dihedral group of order 8.
+  \end{quote}
+\item
+  How many distinct quartic subfields of \(K\) are there? Justify your
+  answer.
+\end{enumerate}
+
+\hypertarget{spring-2014-4-work}{%
+\subsubsection{\texorpdfstring{Spring 2014 \#4
+\(\work\)}{Spring 2014 \#4 \textbackslash work}}\label{spring-2014-4-work}}
+
+Let \(E\subset {\mathbb{C}}\) denote the splitting field over
+\({\mathbb{Q}}\) of the polynomial \(x^3 - 11\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that if \(n\) is a squarefree positive integer, then
+  \(\sqrt{n}\not\in E\).
+
+  \begin{quote}
+  Hint: you can describe all quadratic extensions of \({\mathbb{Q}}\)
+  contained in \(E\).
+  \end{quote}
+\item
+  Find the Galois group of \((x^3 - 11)(x^2 - 2)\) over
+  \({\mathbb{Q}}\).
+\item
+  Prove that the minimal polynomial of \(11^{1/3} + 2^{1/2}\) over
+  \({\mathbb{Q}}\) has degree 6.
+\end{enumerate}
+
+\hypertarget{spring-2013-8-work}{%
+\subsubsection{\texorpdfstring{Spring 2013 \#8
+\(\work\)}{Spring 2013 \#8 \textbackslash work}}\label{spring-2013-8-work}}
+
+Let \(F\) be the field with 2 elements and \(K\) a splitting field of
+\(f(x) = x^6 + x^3 + 1\) over \(F\). You may assume that \(f\) is
+irreducible over \(F\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(r\) is a root of \(f\) in \(K\), then \(r^9 = 1\) but
+  \(r^3\neq 1\).
+\item
+  Find \({ \operatorname{Gal}} (K/F)\) and express each intermediate
+  field between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
+  \(\beta \in K\).
+\end{enumerate}
+
+\hypertarget{galois-groups-indirect-computations-facts}{%
+\subsection{Galois Groups: Indirect Computations /
+Facts}\label{galois-groups-indirect-computations-facts}}
+
 \hypertarget{fall-2019-7-done}{%
-\subsection{\texorpdfstring{Fall 2019 \#7
+\subsubsection{\texorpdfstring{Fall 2019 \#7
 \(\done\)}{Fall 2019 \#7 \textbackslash done}}\label{fall-2019-7-done}}
 
 Let \(\zeta_n\) denote a primitive \(n\)th root of 1
@@ -3820,277 +5982,8 @@ theorem.
 
 \end{solution}
 
-\hypertarget{spring-2019-2-done}{%
-\subsection{\texorpdfstring{Spring 2019 \#2
-\(\done\)}{Spring 2019 \#2 \textbackslash done}}\label{spring-2019-2-done}}
-
-Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that if \(\pi(x) \in F[x]\) is irreducible of degree \(d\), then
-  \(\pi(x)\) divides \(x^{p^d} - x\).
-\item
-  Show that if \(\pi(x) \in F[x]\) is an irreducible polynomial that
-  divides \(x^{p^n} - x\), then \(\deg \pi(x)\) divides \(n\).
-\end{enumerate}
-
-\begin{concept}
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Go to a field extension.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Orders of multiplicative groups for finite fields are known.
-  \end{itemize}
-\item
-  \({\mathbb{GF}}(p^n)\) is the splitting field of
-  \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
-\item
-  \(x^{p^d} - x \divides x^{p^n} - x \iff d \divides n\)
-\item
-  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n\)
-\item
-  \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
-  degree \(d\) dividing \(n\).
-\end{itemize}
-
-\end{concept}
-
-\begin{solution}
-
-\envlist
-
-\begin{proof}[of a]
-
-We can consider the quotient
-\(K = \displaystyle{\frac{{\mathbb{F}}_p[x]}{\left\langle{\pi(x)}\right\rangle}}\),
-which since \(\pi(x)\) is irreducible is an extension of
-\({\mathbb{F}}_p\) of degree \(d\) and thus a field of size \(p^d\) with
-a natural quotient map of rings \(\rho: {\mathbb{F}}_p[x] \to K\).
-
-Since \(K^{\times}\) is a group of size \(p^d-1\), we know that for any
-\(y \in K^{\times}\), we have by Lagrange's theorem that the order of
-\(y\) divides \(p^d-1\) and so \(y^{p^d} = y\).
-
-So every element in \(K\) is a root of \(q(x) = x^{p^d}-x\).
-
-Since \(\rho\) is a ring morphism, we have
-
-\begin{align*}
-\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
-= 0 \in K \\
-&\iff q(x) \in \ker \rho \\
-&\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x
-,\end{align*}
-where we've used that ``to contain is to divide'' in the last step.
-
-\end{proof}
-
-\begin{proof}[of b]
-
-\begin{claim}
-
-\(\pi(x)\) divides \(x^{p^n}-x \iff \deg \pi\) divides \(n\).
-
-\end{claim}
-
-\begin{proof}[of claim, $\implies$]
-
-Let \(L \cong {\mathbb{GF}}(p^n)\) be the splitting field of
-\(\phi_n(x) \coloneqq x^{p^n}-x\); then since \(\pi \divides \phi_n\) by
-assumption, \(\pi\) splits in \(L\). Let \(\alpha \in L\) be any root of
-\(\pi\); then there is a tower of extensions
-\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\).
-
-Then \({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\), and so
-\begin{align*}
-n &= [L: {\mathbb{F}}_p] \\
-&= [L: {\mathbb{F}}_p(\alpha)]~[{\mathbb{F}}_p(\alpha): {\mathbb{F}}_p] \\
-&= \ell d
-,\end{align*}
-
-for some \(\ell \in {\mathbb{Z}}^{\geq 1}\), so \(d\) divides \(n\).
-
-\end{proof}
-
-\begin{proof}[of claim, $\impliedby$]
-
-\(\impliedby\): If \(d\divides n\), use the fact (claim) that
-\(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
-degree \(d\) dividing \(n\). So \(f = f_i\) for some \(i\).
-
-\end{proof}
-
-\end{proof}
-
-\end{solution}
-
-\hypertarget{spring-2019-8-done}{%
-\subsection{\texorpdfstring{Spring 2019 \#8
-\(\done\)}{Spring 2019 \#8 \textbackslash done}}\label{spring-2019-8-done}}
-
-Let \(\zeta = e^{2\pi i/8}\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  What is the degree of \({\mathbb{Q}}(\zeta)/{\mathbb{Q}}\)?
-\item
-  How many quadratic subfields of \({\mathbb{Q}}(\zeta)\) are there?
-\item
-  What is the degree of \({\mathbb{Q}}(\zeta, \sqrt[4] 2)\) over
-  \({\mathbb{Q}}\)?
-\end{enumerate}
-
-\begin{concept}
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  \(\zeta_n \coloneqq e^{2\pi i \over n}\), and \(\zeta_n^k\) is a
-  primitive \(n\)th root of unity \(\iff \gcd(n, k) = 1\)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    In general, \(\zeta_n^k\) is a primitive \({n \over \gcd(n, k)}\)th
-    root of unity.
-  \end{itemize}
-\item
-  \(\deg \Phi_n(x) = \phi(n)\)
-\item
-  \(\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)\)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Proof: for a nontrivial gcd, the possibilities are
-    \begin{align*}
-    p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
-    .\end{align*}
-  \end{itemize}
-\item
-  \({ \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times}\)
-\end{itemize}
-
-\end{concept}
-
-\begin{solution}
-
-\envlist
-
-Let \(K = {\mathbb{Q}}(\zeta)\).
-
-\begin{proof}[of a]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  \(\zeta \coloneqq e^{2\pi i / 8}\) is a primitive \(8\)th root of
-  unity
-\item
-  The minimal polynomial of an \(n\)th root of unity is the \(n\)th
-  cyclotomic polynomial \(\Phi_n\)
-\item
-  The degree of the field extension is the degree of \(\Phi_8\), which
-  is
-  \begin{align*}
-  \phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
-  .\end{align*}
-\item
-  So \([{\mathbb{Q}}(\zeta): {\mathbb{Q}}] = 4\).
-\end{itemize}
-
-\end{proof}
-
-\begin{proof}[of b]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  \({ \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4)\)
-  by general theory
-\item
-  \({\mathbb{Z}}/(4)\) has exactly one subgroup of index 2.
-\item
-  Thus there is exactly \textbf{one} intermediate field of degree 2 (a
-  quadratic extension).
-\end{itemize}
-
-\end{proof}
-
-\begin{proof}[of c]
-
-\envlist
-
-\begin{itemize}
-\item
-  Let \(L = {\mathbb{Q}}(\zeta, \sqrt[4] 2)\).
-\item
-  Note \({\mathbb{Q}}(\zeta) = {\mathbb{Q}}(i, \sqrt 2)\)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \({\mathbb{Q}}(i, \sqrt{2})\subseteq {\mathbb{Q}}(\zeta)\)
-
-    \begin{itemize}
-    \tightlist
-    \item
-      \(\zeta_8^2 = i\), and \(\zeta_8 = \sqrt{2}^{-1}+ i\sqrt{2}^{-1}\)
-      so \(\zeta_8 + \zeta_8 ^{-1}= 2/\sqrt{2} = \sqrt{2}\).
-    \end{itemize}
-  \item
-    \({\mathbb{Q}}(\zeta) \subseteq {\mathbb{Q}}(i, \sqrt{2})\):
-
-    \begin{itemize}
-    \tightlist
-    \item
-      \(\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}\).
-    \end{itemize}
-  \end{itemize}
-\item
-  Thus
-  \(L = {\mathbb{Q}}(i, \sqrt{2})(\sqrt[4]{2}) = {\mathbb{Q}}(i, \sqrt 2, \sqrt[4] 2) = {\mathbb{Q}}(i, \sqrt[4]{2})\).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Uses the fact that
-    \({\mathbb{Q}}(\sqrt 2) \subseteq {\mathbb{Q}}(\sqrt[4] 2)\) since
-    \(\sqrt[4]{2}^2 = \sqrt{2}\)
-  \end{itemize}
-\item
-  Conclude
-  \begin{align*}
-  [L: {\mathbb{Q}}] = [L: {\mathbb{Q}}(\sqrt[4] 2)] ~[{\mathbb{Q}}(\sqrt[4] 2): {\mathbb{Q}}] = 2 \cdot 4 = 8
-  \end{align*}
-  using the fact that the minimal polynomial of \(i\) over any subfield
-  of \({\mathbb{R}}\) is always \(x^2 + 1\), so
-  \(\min_{{\mathbb{Q}}(\sqrt[4] 2)}(i) = x^2 + 1\) which is degree 2.
-\end{itemize}
-
-\end{proof}
-
-\end{solution}
-
 \hypertarget{fall-2018-3-done}{%
-\subsection{\texorpdfstring{Fall 2018 \#3
+\subsubsection{\texorpdfstring{Fall 2018 \#3
 \(\done\)}{Fall 2018 \#3 \textbackslash done}}\label{fall-2018-3-done}}
 
 Let \(F \subset K \subset L\) be finite degree field extensions. For
@@ -4168,151 +6061,8 @@ polynomial (noting that it does not split \(x^4 - 2\) completely.)
 
 \end{solution}
 
-\hypertarget{spring-2018-2-done}{%
-\subsection{\texorpdfstring{Spring 2018 \#2
-\(\done\)}{Spring 2018 \#2 \textbackslash done}}\label{spring-2018-2-done}}
-
-Let \(f(x) = x^4 - 4x^2 + 2 \in {\mathbb{Q}}[x]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Find the splitting field \(K\) of \(f\), and compute
-  \([K: {\mathbb{Q}}]\).
-\item
-  Find the Galois group \(G\) of \(f\), both as an explicit group of
-  automorphisms, and as a familiar abstract group to which it is
-  isomorphic.
-\item
-  Exhibit explicitly the correspondence between subgroups of \(G\) and
-  intermediate fields between \({\mathbb{Q}}\) and \(k\).
-\end{enumerate}
-
-\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
-
-\begin{concept}
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Todo
-\end{itemize}
-
-\end{concept}
-
-\begin{solution}
-
-\envlist
-
-\begin{proof}[of a]
-
-Note that \(g(x) = x^2 - 4x + 2\) has roots \(\beta = 2 \pm \sqrt{2}\),
-and so \(f\) has roots
-\begin{align*}
-\alpha_1 &= \sqrt{2 + \sqrt 2} \\
-\alpha_2 &= \sqrt{2 - \sqrt 2} \\
-\alpha_3 &= -\alpha_1 \\
-\alpha_4 &= -\alpha_2
-.\end{align*}
-
-and splitting field \(K = {\mathbb{Q}}(\left\{{\alpha_i}\right\})\).
-
-\end{proof}
-
-\begin{proof}[of b]
-
-\(K\) is the splitting field of a separable polynomial and thus Galois
-over \({\mathbb{Q}}\). Moreover, Since \(f\) is irreducible by
-Eisenstein with \(p=2\), the Galois group is a transitive subgroup of
-\(S^4\), so the possibilities are:
-
-\begin{itemize}
-\tightlist
-\item
-  \(S_4\)
-\item
-  \(A_4\)
-\item
-  \(D_4\)
-\item
-  \({\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2)\)
-\item
-  \({\mathbb{Z}}/(4)\)
-\end{itemize}
-
-We can note that \(g\) splits over \(L \coloneqq{\mathbb{Q}}(\sqrt 2)\),
-an extension of degree 2.
-
-We can now note that \(\min(\alpha, L)\) is given by
-\(p(x) = x^2 - (2 + \sqrt 2)\), and so \([K: L] = 2\).
-
-We then have
-\begin{align*}
-[K: {\mathbb{Q}}] = [K: L] [L : {\mathbb{Q}}] = (2)(2) = 4
-.\end{align*}
-
-This
-\({\left\lvert {{ \mathsf{Gal}} (K/{\mathbb{Q}})} \right\rvert} = 4\),
-which leaves only two possibilities:
-
-\begin{itemize}
-\tightlist
-\item
-  \({\mathbb{Z}}/(2) \times{\mathbb{Z}}/(2)\)
-\item
-  \({\mathbb{Z}}/(4)\)
-\end{itemize}
-
-We can next check orders of elements. Take
-\begin{align*}
-\sigma &\in { \mathsf{Gal}} (K/{\mathbb{Q}}) \\
-\alpha_1 &\mapsto \alpha_2
-.\end{align*}
-
-Computations show that
-
-\begin{itemize}
-\tightlist
-\item
-  \(\alpha_1^2 \alpha_2^2 = 2\), so \(\alpha_1 \alpha_2 = \sqrt 2\)
-\item
-  \(\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2\)
-\end{itemize}
-
-and thus
-\begin{align*}
-\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
-&= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
-&= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
-&= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
-&= \frac{\alpha_2^2 - 2}{\alpha_2} \\
-&= \alpha_2 -2\alpha_2^{-1}\\
-&= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
-&= \alpha_2 -\alpha_1 \sqrt 2 \\
-&\neq \alpha_1
-,\end{align*}
-
-and so the order of \(\sigma\) is strictly greater than 2, and thus 4,
-and thus
-\({ \mathsf{Gal}} (K/{\mathbb{Q}}) = \left\{{\sigma^k {~\mathrel{\Big|}~}1\leq k \leq 4}\right\} \cong {\mathbb{Z}}/(4)\).
-
-\end{proof}
-
-\begin{proof}[of c]
-
-?? The subgroup of index 2 \(\left\langle{\sigma^2}\right\rangle\)
-corresponds to the field extension \(Q(\sqrt 2) / {\mathbb{Q}}\).
-
-\end{proof}
-
-\todo[inline]{Finish (c)}
-
-\end{solution}
-
 \hypertarget{spring-2018-3-done}{%
-\subsection{\texorpdfstring{Spring 2018 \#3
+\subsubsection{\texorpdfstring{Spring 2018 \#3
 \(\done\)}{Spring 2018 \#3 \textbackslash done}}\label{spring-2018-3-done}}
 
 Let \(K\) be a Galois extension of \({\mathbb{Q}}\) with Galois group
@@ -4444,43 +6194,8 @@ But if \(\sigma \in H_1 H_2\), then \(\sigma = \tau_1 \tau_2\) where
 
 \end{solution}
 
-\hypertarget{spring-2020-4-work}{%
-\subsection{\texorpdfstring{Spring 2020 \#4
-\(\work\)}{Spring 2020 \#4 \textbackslash work}}\label{spring-2020-4-work}}
-
-Let \(f(x) = x^4-2 \in {\mathbb{Q}}[x]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Define what it means for a finite extension field \(E\) of a field
-  \(F\) to be a Galois extension.
-\item
-  Determine the Galois group \({ \operatorname{Gal}} (E/{\mathbb{Q}})\)
-  for the polynomial \(f(x)\), and justify your answer carefully.
-\item
-  Exhibit a subfield \(K\) in \((b)\) such that
-  \({\mathbb{Q}}\leq K \leq E\) with \(K\) not a Galois extension over
-  \({\mathbb{Q}}\). Explain.
-\end{enumerate}
-
-\hypertarget{spring-2020-3-work}{%
-\subsection{\texorpdfstring{Spring 2020 \#3
-\(\work\)}{Spring 2020 \#3 \textbackslash work}}\label{spring-2020-3-work}}
-
-Let \(E\) be an extension field of \(F\) and \(\alpha\in E\) be
-algebraic of odd degree over \(F\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that \(F(\alpha) = F(\alpha^2)\).
-\item
-  Prove that \(\alpha^{2020}\) is algebraic of odd degree over \(F\).
-\end{enumerate}
-
 \hypertarget{fall-2017-4-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#4
+\subsubsection{\texorpdfstring{Fall 2017 \#4
 \(\work\)}{Fall 2017 \#4 \textbackslash work}}\label{fall-2017-4-work}}
 
 \begin{enumerate}
@@ -4500,22 +6215,8 @@ algebraic of odd degree over \(F\).
   \({\mathbb{Q}}\).
 \end{enumerate}
 
-\hypertarget{fall-2017-3-work}{%
-\subsection{\texorpdfstring{Fall 2017 \#3
-\(\work\)}{Fall 2017 \#3 \textbackslash work}}\label{fall-2017-3-work}}
-
-Let \(F\) be a field. Let \(f(x)\) be an irreducible polynomial in
-\(F[x]\) of degree \(n\) and let \(g(x)\) be any polynomial in \(F[x]\).
-Let \(p(x)\) be an irreducible factor (of degree \(m\)) of the
-polynomial \(f(g(x))\).
-
-Prove that \(n\) divides \(m\). Use this to prove that if \(r\) is an
-integer which is not a perfect square, and \(n\) is a positive integer
-then every irreducible factor of \(x^{2n} - r\) over \({\mathbb{Q}}[x]\)
-has even degree.
-
 \hypertarget{spring-2017-7-work}{%
-\subsection{\texorpdfstring{Spring 2017 \#7
+\subsubsection{\texorpdfstring{Spring 2017 \#7
 \(\work\)}{Spring 2017 \#7 \textbackslash work}}\label{spring-2017-7-work}}
 
 Let \(F\) be a field and let \(f(x) \in F[x]\).
@@ -4533,93 +6234,15 @@ Let \(F\) be a field and let \(f(x) \in F[x]\).
   Show that the extension \(E/F\) in (b) is a Galois extension.
 \end{enumerate}
 
-\hypertarget{spring-2017-8-work}{%
-\subsection{\texorpdfstring{Spring 2017 \#8
-\(\work\)}{Spring 2017 \#8 \textbackslash work}}\label{spring-2017-8-work}}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Let \(K\) denote the splitting field of \(x^5 - 2\) over
-  \({\mathbb{Q}}\). Show that the Galois group of \(K/{\mathbb{Q}}\) is
-  isomorphic to the group of invertible matrices
-  \begin{align*}
-  \left(\begin{array}{ll}
-  a & b \\
-  0 & 1
-  \end{array}\right) 
-  {\quad \operatorname{where} \quad} a\in {\mathbb{F}}_5^{\times}\text{ and } b\in {\mathbb{F}}_5
-  .\end{align*}
-\item
-  Determine all intermediate fields between \(K\) and \({\mathbb{Q}}\)
-  which are Galois over \({\mathbb{Q}}\).
-\end{enumerate}
-
-\hypertarget{fall-2016-4-work}{%
-\subsection{\texorpdfstring{Fall 2016 \#4
-\(\work\)}{Fall 2016 \#4 \textbackslash work}}\label{fall-2016-4-work}}
-
-Set \(f(x) = x^3 - 5 \in {\mathbb{Q}}[x]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Find the splitting field \(K\) of \(f(x)\) over \({\mathbb{Q}}\).
-\item
-  Find the Galois group \(G\) of \(K\) over \({\mathbb{Q}}\).
-\item
-  Exhibit explicitly the correspondence between subgroups of \(G\) and
-  intermediate fields between \({\mathbb{Q}}\) and \(K\).
-\end{enumerate}
-
-\hypertarget{spring-2016-2-work}{%
-\subsection{\texorpdfstring{Spring 2016 \#2
-\(\work\)}{Spring 2016 \#2 \textbackslash work}}\label{spring-2016-2-work}}
-
-Let \(K = {\mathbb{Q}}[\sqrt 2 + \sqrt 5]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Find \([K: {\mathbb{Q}}]\).
-\item
-  Show that \(K/{\mathbb{Q}}\) is Galois, and find the Galois group
-  \(G\) of \(K/{\mathbb{Q}}\).
-\item
-  Exhibit explicitly the correspondence between subgroups of \(G\) and
-  intermediate fields between \({\mathbb{Q}}\) and \(K\).
-\end{enumerate}
-
 \hypertarget{spring-2016-6-work}{%
-\subsection{\texorpdfstring{Spring 2016 \#6
+\subsubsection{\texorpdfstring{Spring 2016 \#6
 \(\work\)}{Spring 2016 \#6 \textbackslash work}}\label{spring-2016-6-work}}
 
 Let \(K\) be a Galois extension of a field \(F\) with \([K: F] = 2015\).
 Prove that \(K\) is an extension by radicals of the field \(F\).
 
-\hypertarget{fall-2015-5-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#5
-\(\work\)}{Fall 2015 \#5 \textbackslash work}}\label{fall-2015-5-work}}
-
-Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
-\(E = {\mathbb{Q}}(u)\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Find (with justification) the minimal polynomial \(f(x)\) of \(u\)
-  over \({\mathbb{Q}}\).
-\item
-  Show \(v\in E\), and show that \(E\) is a splitting field of \(f(x)\)
-  over \({\mathbb{Q}}\).
-\item
-  Determine the Galois group of \(E\) over \({\mathbb{Q}}\) and
-  determine all of the intermediate fields \(F\) such that
-  \({\mathbb{Q}}\subset F \subset E\).
-\end{enumerate}
-
 \hypertarget{fall-2015-6-work}{%
-\subsection{\texorpdfstring{Fall 2015 \#6
+\subsubsection{\texorpdfstring{Fall 2015 \#6
 \(\work\)}{Fall 2015 \#6 \textbackslash work}}\label{fall-2015-6-work}}
 
 \begin{enumerate}
@@ -4642,42 +6265,8 @@ Let \(u = \sqrt{2 + \sqrt{2}}\), \(v = \sqrt{2 - \sqrt{2}}\), and
   exist satisfying \([L: F] = 2\)? Give a proof or counterexample.
 \end{enumerate}
 
-\hypertarget{spring-2015-2-work}{%
-\subsection{\texorpdfstring{Spring 2015 \#2
-\(\work\)}{Spring 2015 \#2 \textbackslash work}}\label{spring-2015-2-work}}
-
-Let \({\mathbb{F}}\) be a finite field.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Give (with proof) the decomposition of the additive group
-  \(({\mathbb{F}}, +)\) into a direct sum of cyclic groups.
-\item
-  The \emph{exponent} of a finite group is the least common multiple of
-  the orders of its elements. Prove that a finite abelian group has an
-  element of order equal to its exponent.
-\item
-  Prove that the multiplicative group \(({\mathbb{F}}^{\times}, \cdot)\)
-  is cyclic.
-\end{enumerate}
-
-\hypertarget{spring-2015-5-work}{%
-\subsection{\texorpdfstring{Spring 2015 \#5
-\(\work\)}{Spring 2015 \#5 \textbackslash work}}\label{spring-2015-5-work}}
-
-Let \(f(x) = x^4 - 5 \in {\mathbb{Q}}[x]\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Compute the Galois group of \(f\) over \({\mathbb{Q}}\).
-\item
-  Compute the Galois group of \(f\) over \({\mathbb{Q}}(\sqrt{5})\).
-\end{enumerate}
-
 \hypertarget{fall-2014-1-work}{%
-\subsection{\texorpdfstring{Fall 2014 \#1
+\subsubsection{\texorpdfstring{Fall 2014 \#1
 \(\work\)}{Fall 2014 \#1 \textbackslash work}}\label{fall-2014-1-work}}
 
 Let \(f\in {\mathbb{Q}}[x]\) be an irreducible polynomial and \(L\) a
@@ -4694,118 +6283,8 @@ irreducibles in \(L[x]\).
   \({\mathbb{Q}}\), the conclusion of part (a) need not hold.
 \end{enumerate}
 
-\hypertarget{fall-2014-3-work}{%
-\subsection{\texorpdfstring{Fall 2014 \#3
-\(\work\)}{Fall 2014 \#3 \textbackslash work}}\label{fall-2014-3-work}}
-
-Consider the polynomial \(f(x) = x^4 - 7 \in {\mathbb{Q}}[x]\) and let
-\(E/{\mathbb{Q}}\) be the splitting field of \(f\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  What is the structure of the Galois group of \(E/{\mathbb{Q}}\)?
-\item
-  Give an explicit description of all of the intermediate subfields
-  \({\mathbb{Q}}\subset K \subset E\) in the form
-  \(K = {\mathbb{Q}}(\alpha), {\mathbb{Q}}(\alpha, \beta), \cdots\)
-  where \(\alpha, \beta\), etc are complex numbers. Describe the
-  corresponding subgroups of the Galois group.
-\end{enumerate}
-
-\hypertarget{spring-2014-3-work}{%
-\subsection{\texorpdfstring{Spring 2014 \#3
-\(\work\)}{Spring 2014 \#3 \textbackslash work}}\label{spring-2014-3-work}}
-
-Let \(F\subset C\) be a field extension with \(C\) algebraically closed.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that the intermediate field \(C_{\text{alg}} \subset C\)
-  consisting of elements algebraic over \(F\) is algebraically closed.
-\item
-  Prove that if \(F\to E\) is an algebraic extension, there exists a
-  homomorphism \(E\to C\) that is the identity on \(F\).
-\end{enumerate}
-
-\hypertarget{spring-2014-4-work}{%
-\subsection{\texorpdfstring{Spring 2014 \#4
-\(\work\)}{Spring 2014 \#4 \textbackslash work}}\label{spring-2014-4-work}}
-
-Let \(E\subset {\mathbb{C}}\) denote the splitting field over
-\({\mathbb{Q}}\) of the polynomial \(x^3 - 11\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Prove that if \(n\) is a squarefree positive integer, then
-  \(\sqrt{n}\not\in E\).
-
-  \begin{quote}
-  Hint: you can describe all quadratic extensions of \({\mathbb{Q}}\)
-  contained in \(E\).
-  \end{quote}
-\item
-  Find the Galois group of \((x^3 - 11)(x^2 - 2)\) over
-  \({\mathbb{Q}}\).
-\item
-  Prove that the minimal polynomial of \(11^{1/3} + 2^{1/2}\) over
-  \({\mathbb{Q}}\) has degree 6.
-\end{enumerate}
-
-\hypertarget{fall-2013-5-work}{%
-\subsection{\texorpdfstring{Fall 2013 \#5
-\(\work\)}{Fall 2013 \#5 \textbackslash work}}\label{fall-2013-5-work}}
-
-Let \(L/K\) be a finite extension of fields.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Define what it means for \(L/K\) to be \emph{separable}.
-\item
-  Show that if \(K\) is a finite field, then \(L/K\) is always
-  separable.
-\item
-  Give an example of a finite extension \(L/K\) that is not separable.
-\end{enumerate}
-
-\hypertarget{fall-2013-6-work}{%
-\subsection{\texorpdfstring{Fall 2013 \#6
-\(\work\)}{Fall 2013 \#6 \textbackslash work}}\label{fall-2013-6-work}}
-
-Let \(K\) be the splitting field of \(x^4-2\) over \({\mathbb{Q}}\) and
-set \(G = { \operatorname{Gal}} (K/{\mathbb{Q}})\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that \(K/{\mathbb{Q}}\) contains both \({\mathbb{Q}}(i)\) and
-  \({\mathbb{Q}}(\sqrt[4]{2})\) and has degree 8 over \({\mathbb{Q}}\)/
-\item
-  Let \(N = { \operatorname{Gal}} (K/{\mathbb{Q}}(i))\) and
-  \(H = { \operatorname{Gal}} (K/{\mathbb{Q}}(\sqrt[4]{2}))\). Show that
-  \(N\) is normal in \(G\) and \(NH = G\).
-
-  \begin{quote}
-  Hint: what field is fixed by \(NH\)?
-  \end{quote}
-\item
-  Show that \({ \operatorname{Gal}} (K/{\mathbb{Q}})\) is generated by
-  elements \(\sigma, \tau\), of orders 4 and 2 respectively, with
-  \(\tau \sigma\tau^{-1}= \sigma^{-1}\).
-
-  \begin{quote}
-  Equivalently, show it is the dihedral group of order 8.
-  \end{quote}
-\item
-  How many distinct quartic subfields of \(K\) are there? Justify your
-  answer.
-\end{enumerate}
-
 \hypertarget{spring-2013-7-work}{%
-\subsection{\texorpdfstring{Spring 2013 \#7
+\subsubsection{\texorpdfstring{Spring 2013 \#7
 \(\work\)}{Spring 2013 \#7 \textbackslash work}}\label{spring-2013-7-work}}
 
 Let \(f(x) = g(x) h(x) \in {\mathbb{Q}}[x]\) and \(E,B,C/{\mathbb{Q}}\)
@@ -4832,27 +6311,8 @@ be the splitting fields of \(f,g,h\) respectively.
   \(\alpha = \sqrt 2 + \sqrt 3\).
 \end{enumerate}
 
-\hypertarget{spring-2013-8-work}{%
-\subsection{\texorpdfstring{Spring 2013 \#8
-\(\work\)}{Spring 2013 \#8 \textbackslash work}}\label{spring-2013-8-work}}
-
-Let \(F\) be the field with 2 elements and \(K\) a splitting field of
-\(f(x) = x^6 + x^3 + 1\) over \(F\). You may assume that \(f\) is
-irreducible over \(F\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that if \(r\) is a root of \(f\) in \(K\), then \(r^9 = 1\) but
-  \(r^3\neq 1\).
-\item
-  Find \({ \operatorname{Gal}} (K/F)\) and express each intermediate
-  field between \(F\) and \(K\) as \(F(\beta)\) for an appropriate
-  \(\beta \in K\).
-\end{enumerate}
-
 \hypertarget{fall-2012-3-work}{%
-\subsection{\texorpdfstring{Fall 2012 \#3
+\subsubsection{\texorpdfstring{Fall 2012 \#3
 \(\work\)}{Fall 2012 \#3 \textbackslash work}}\label{fall-2012-3-work}}
 
 Let \(f(x) \in {\mathbb{Q}}[x]\) be an irreducible polynomial of degree
@@ -4860,118 +6320,12 @@ Let \(f(x) \in {\mathbb{Q}}[x]\) be an irreducible polynomial of degree
 the Galois group of \(f(x)\) over \({\mathbb{Q}}\) and justify your
 answer.
 
-\hypertarget{fall-2012-4-work}{%
-\subsection{\texorpdfstring{Fall 2012 \#4
-\(\work\)}{Fall 2012 \#4 \textbackslash work}}\label{fall-2012-4-work}}
-
-Let \(f(x) \in {\mathbb{Q}}[x]\) be a polynomial and \(K\) be a
-splitting field of \(f\) over \({\mathbb{Q}}\). Assume that
-\([K:{\mathbb{Q}}] = 1225\) and show that \(f(x)\) is solvable by
-radicals.
-
-\hypertarget{spring-2012-1-work}{%
-\subsection{\texorpdfstring{Spring 2012 \#1
-\(\work\)}{Spring 2012 \#1 \textbackslash work}}\label{spring-2012-1-work}}
-
-Suppose that \(F\subset E\) are fields such that \(E/F\) is Galois and
-\({\left\lvert {{ \operatorname{Gal}} (E/F)} \right\rvert} = 14\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that there exists a unique intermediate field \(K\) with
-  \(F\subset K \subset E\) such that \([K: F] = 2\).
-\item
-  Assume that there are at least two distinct intermediate subfields
-  \(F \subset L_1, L_2 \subset E\) with \([L_i: F]= 7\). Prove that
-  \({ \operatorname{Gal}} (E/F)\) is nonabelian.
-\end{enumerate}
-
-\hypertarget{spring-2012-4-work}{%
-\subsection{\texorpdfstring{Spring 2012 \#4
-\(\work\)}{Spring 2012 \#4 \textbackslash work}}\label{spring-2012-4-work}}
-
-Let \(f(x) = x^7 - 3\in {\mathbb{Q}}[x]\) and \(E/{\mathbb{Q}}\) be a
-splitting field of \(f\) with \(\alpha \in E\) a root of \(f\).
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that \(E\) contains a primitive 7th root of unity.
-\item
-  Show that \(E\neq {\mathbb{Q}}(\alpha)\).
-\end{enumerate}
-
-\hypertarget{fall-2019-midterm-6-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#6
-\(\work\)}{Fall 2019 Midterm \#6 \textbackslash work}}\label{fall-2019-midterm-6-work}}
-
-Compute the Galois group of
-\(f(x) = x^3-3x -3\in {\mathbb{Q}}[x]/{\mathbb{Q}}\).
-
-\hypertarget{fall-2019-midterm-7-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#7
-\(\work\)}{Fall 2019 Midterm \#7 \textbackslash work}}\label{fall-2019-midterm-7-work}}
-
-Show that a field \(k\) of characteristic \(p\neq 0\) is perfect
-\(\iff\) for every \(x\in k\) there exists a \(y\in k\) such that
-\(y^p=x\).
-
-\hypertarget{fall-2019-midterm-8-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#8
-\(\work\)}{Fall 2019 Midterm \#8 \textbackslash work}}\label{fall-2019-midterm-8-work}}
-
-Let \(k\) be a field of characteristic \(p\neq 0\) and \(f\in k[x]\)
-irreducible. Show that \(f(x) = g(x^{p^d})\) where \(g(x) \in k[x]\) is
-irreducible and separable.
-
-Conclude that every root of \(f\) has the same multiplicity \(p^d\) in
-the splitting field of \(f\) over \(k\).
-
-\hypertarget{fall-2019-midterm-9-work}{%
-\subsection{\texorpdfstring{Fall 2019 Midterm \#9
-\(\work\)}{Fall 2019 Midterm \#9 \textbackslash work}}\label{fall-2019-midterm-9-work}}
-
-Let \(n\geq 3\) and \(\zeta_n\) be a primitive \(n\)th root of unity.
-Show that
-\([{\mathbb{Q}}(\zeta_n + \zeta_n^{-1}): {\mathbb{Q}}] = \phi(n)/2\) for
-\(\phi\) the totient function. 10.
-
-Let \(L/K\) be a finite normal extension.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Show that if \(L/K\) is cyclic and \(E/K\) is normal with \(L/E/K\)
-  then \(L/E\) and \(E/K\) are cyclic.
-\item
-  Show that if \(L/K\) is cyclic then there exists exactly one extension
-  \(E/K\) of degree \(n\) with \(L/E/K\) for each divisor \(n\) of
-  \([L:K]\).
-\end{enumerate}
-
-\hypertarget{spring-2021-4-work}{%
-\subsection{\texorpdfstring{Spring 2021 \#4
-\(\work\)}{Spring 2021 \#4 \textbackslash work}}\label{spring-2021-4-work}}
-
-Define
-\begin{align*}
-f(x) \coloneqq x^4 + 4x^2 + 64 \in {\mathbb{Q}}[x]
-.\end{align*}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  Find the splitting field \(K\) of \(f\) over \({\mathbb{Q}}\).
-\item
-  Find the Galois group \(G\) of \(f\).
-\item
-  Exhibit explicitly the correspondence between subgroups of \(G\) and
-  intermediate fields between \({\mathbb{Q}}\) and \(K\).
-\end{enumerate}
+\hypertarget{pth-roots-and-xpk-x}{%
+\subsection{\texorpdfstring{\(p\)th Roots and
+\(x^{p^k}-x\)}{pth Roots and x\^{}\{p\^{}k\}-x}}\label{pth-roots-and-xpk-x}}
 
 \hypertarget{spring-2021-7-done}{%
-\subsection{\texorpdfstring{Spring 2021 \#7
+\subsubsection{\texorpdfstring{Spring 2021 \#7
 \(\done\)}{Spring 2021 \#7 \textbackslash done}}\label{spring-2021-7-done}}
 
 Let \(p\) be a prime number and let \(F\) be a field of characteristic
@@ -5153,72 +6507,603 @@ Let \(p\) be a prime number and let \(F\) be a field of characteristic
 
 \end{solution}
 
-\hypertarget{fall-2020-3-work}{%
-\subsection{\texorpdfstring{Fall 2020 \#3
-\(\work\)}{Fall 2020 \#3 \textbackslash work}}\label{fall-2020-3-work}}
+\hypertarget{fall-2019-4-done}{%
+\subsubsection{\texorpdfstring{Fall 2019 \#4
+\(\done\)}{Fall 2019 \#4 \textbackslash done}}\label{fall-2019-4-done}}
+
+Let \(F\) be a finite field with \(q\) elements. Let \(n\) be a positive
+integer relatively prime to \(q\) and let \(\omega\) be a primitive
+\(n\)th root of unity in an extension field of \(F\). Let
+\(E = F [\omega]\) and let \(k = [E : F]\).
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
-  Define what it means for a finite extension of fields \(E\) over \(F\)
-  to be a \emph{Galois} extension.
+  Prove that \(n\) divides \(q^{k}-1\).
 \item
-  Determine the Galois group of \(f(x) = x^3 - 7\) over
-  \({\mathbb{Q}}\), and justify your answer carefully.
+  Let \(m\) be the order of \(q\) in
+  \({\mathbb{Z}}/n{\mathbb{Z}}^{\times}\). Prove that \(m\) divides
+  \(k\).
 \item
-  Find all subfields of the splitting field of \(f(x)\) over
-  \({\mathbb{Q}}\).
+  Prove that \(m = k\).
 \end{enumerate}
 
-\hypertarget{fall-2020-4-work}{%
-\subsection{\texorpdfstring{Fall 2020 \#4
-\(\work\)}{Fall 2020 \#4 \textbackslash work}}\label{fall-2020-4-work}}
+\todo[inline]{Revisit, tricky!}
 
-Let \(K\) be a Galois extension of \(F\), and let
-\(F \subset E \subset K\) be inclusions of fields. Let
-\(G \coloneqq{ \mathsf{Gal}} (K/F)\) and
-\(H \coloneqq{ \mathsf{Gal}} (K/E)\), and suppose \(H\) contains
-\(N_G(P)\), where \(P\) is a Sylow \(p\)-subgroup of \(G\) for \(p\) a
-prime. Prove that \([E: F] \equiv 1 \operatorname{mod}p\).
+\begin{concept}
 
-\hypertarget{exercises}{%
-\subsection{Exercises}\label{exercises}}
+\envlist
 
-\begin{exercise}[?]
+\begin{itemize}
+\tightlist
+\item
+  \({\mathbb{F}}^{\times}\) is always cyclic for \({\mathbb{F}}\) a
+  field.
+\item
+  Lagrange: \(H\leq G \implies \#H \divides \# G\).
+\end{itemize}
 
-Let \(p \in \mathbb{Z}\) be a prime number. Then describe the elements
-of the Galois group of the polynomial \(x^{p}-2\).
-
-\end{exercise}
+\end{concept}
 
 \begin{solution}
 
-\({\mathbb{Q}}(2^{1\over p}, \zeta_p)\), which has degree \(p(p-1)\) and
-is generated by the maps
+\envlist
+
+\begin{proof}[of a]
+
+\envlist
+
+\begin{itemize}
+\item
+  Since \({\left\lvert {F} \right\rvert} = q\) and \([E:F] = k\), we
+  have \({\left\lvert {E} \right\rvert} = q^k\) and
+  \({\left\lvert {E^{\times}} \right\rvert} = q^k-1\).
+\item
+  Noting that \(\zeta \in E^{\times}\) we must have
+  \(n = o(\zeta) \divides {\left\lvert {E^{\times}} \right\rvert} = q^k-1\)
+  by Lagrange's theorem.
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Rephrasing (a), we have
+  \begin{align*}
+  n \divides q^k-1 
+  &\iff q^k-1 \cong 0 \operatorname{mod}n \\
+  &\iff q^k \cong 1 \operatorname{mod}n \\
+  &\iff m \coloneqq o(q) \divides k
+  .\end{align*}
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\item
+  Since \(m\divides k \iff k = \ell m\), (\textbf{claim}) there is an
+  intermediate subfield \(M\) such that
+  \begin{align*}
+  E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+  ,\end{align*}
+
+  so \(M\) is a degree \(m\) extension of \(E\).
+\item
+  Now consider \(M^{\times}\).
+\item
+  By the argument in (a), \(n\) divides
+  \(q^m - 1 = {\left\lvert {M^{\times}} \right\rvert}\), and
+  \(M^{\times}\) is cyclic, so it contains a cyclic subgroup \(H\) of
+  order \(n\).
+\item
+  But then \(x\in H \implies p(x)\coloneqq x^n-1 = 0\), and since
+  \(p(x)\) has at most \(n\) roots in a field.
+\item
+  So \(H = \left\{{x \in M {~\mathrel{\Big|}~}x^n-1 = 0}\right\}\),
+  i.e.~\(H\) contains all solutions to \(x^n-1\) in \(E[x]\).
+\item
+  But \(\zeta\) is one such solution, so
+  \(\zeta \in H \subset M^{\times}\subset M\).
+\item
+  Since \(F[\zeta]\) is the smallest field extension containing
+  \(\zeta\), we must have \(F = M\), so \(\ell = 1\), and \(k = m\).
+\end{itemize}
+
+\end{proof}
+
+\end{solution}
+
+\hypertarget{spring-2019-2-done}{%
+\subsubsection{\texorpdfstring{Spring 2019 \#2
+\(\done\)}{Spring 2019 \#2 \textbackslash done}}\label{spring-2019-2-done}}
+
+Let \(F = {\mathbb{F}}_p\) , where \(p\) is a prime number.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that if \(\pi(x) \in F[x]\) is irreducible of degree \(d\), then
+  \(\pi(x)\) divides \(x^{p^d} - x\).
+\item
+  Show that if \(\pi(x) \in F[x]\) is an irreducible polynomial that
+  divides \(x^{p^n} - x\), then \(\deg \pi(x)\) divides \(n\).
+\end{enumerate}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  Go to a field extension.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Orders of multiplicative groups for finite fields are known.
+  \end{itemize}
+\item
+  \({\mathbb{GF}}(p^n)\) is the splitting field of
+  \(x^{p^n} - x \in {\mathbb{F}}_p[x]\).
+\item
+  \(x^{p^d} - x \divides x^{p^n} - x \iff d \divides n\)
+\item
+  \({\mathbb{GF}}(p^d) \leq {\mathbb{GF}}(p^n) \iff d\divides n\)
+\item
+  \(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
+  degree \(d\) dividing \(n\).
+\end{itemize}
+
+\end{concept}
+
+\begin{solution}
+
+\envlist
+
+\begin{proof}[of a]
+
+We can consider the quotient
+\(K = \displaystyle{\frac{{\mathbb{F}}_p[x]}{\left\langle{\pi(x)}\right\rangle}}\),
+which since \(\pi(x)\) is irreducible is an extension of
+\({\mathbb{F}}_p\) of degree \(d\) and thus a field of size \(p^d\) with
+a natural quotient map of rings \(\rho: {\mathbb{F}}_p[x] \to K\).
+
+Since \(K^{\times}\) is a group of size \(p^d-1\), we know that for any
+\(y \in K^{\times}\), we have by Lagrange's theorem that the order of
+\(y\) divides \(p^d-1\) and so \(y^{p^d} = y\).
+
+So every element in \(K\) is a root of \(q(x) = x^{p^d}-x\).
+
+Since \(\rho\) is a ring morphism, we have
+
 \begin{align*}
-\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
-\zeta & \mapsto \zeta^{b}
-.\end{align*}
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
+&\iff q(x) \in \ker \rho \\
+&\iff q(x) \in \left\langle{\pi(x)}\right\rangle \\
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
+,\end{align*}
+where we've used that ``to contain is to divide'' in the last step.
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\begin{claim}
+
+\(\pi(x)\) divides \(x^{p^n}-x \iff \deg \pi\) divides \(n\).
+
+\end{claim}
+
+\begin{proof}[of claim, $\implies$]
+
+Let \(L \cong {\mathbb{GF}}(p^n)\) be the splitting field of
+\(\phi_n(x) \coloneqq x^{p^n}-x\); then since \(\pi \divides \phi_n\) by
+assumption, \(\pi\) splits in \(L\). Let \(\alpha \in L\) be any root of
+\(\pi\); then there is a tower of extensions
+\({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\).
+
+Then \({\mathbb{F}}_p \leq {\mathbb{F}}_p(\alpha) \leq L\), and so
+\begin{align*}
+n &= [L: {\mathbb{F}}_p] \\
+&= [L: {\mathbb{F}}_p(\alpha)]~[{\mathbb{F}}_p(\alpha): {\mathbb{F}}_p] \\
+&= \ell d
+,\end{align*}
+
+for some \(\ell \in {\mathbb{Z}}^{\geq 1}\), so \(d\) divides \(n\).
+
+\end{proof}
+
+\begin{proof}[of claim, $\impliedby$]
+
+\(\impliedby\): If \(d\divides n\), use the fact (claim) that
+\(x^{p^n} - x = \prod f_i(x)\) over all irreducible monic \(f_i\) of
+degree \(d\) dividing \(n\). So \(f = f_i\) for some \(i\).
+
+\end{proof}
+
+\end{proof}
 
 \end{solution}
 
-\begin{exercise}[?]
+\hypertarget{star-fall-2016-5-work}{%
+\subsubsection{\texorpdfstring{\(\star\) Fall 2016 \#5
+\(\work\)}{\textbackslash star Fall 2016 \#5 \textbackslash work}}\label{star-fall-2016-5-work}}
 
-Compute the Galois group of \(x^2-2\).
+How many monic irreducible polynomials over \({\mathbb{F}}_p\) of prime
+degree \(\ell\) are there? Justify your answer.
 
-\end{exercise}
+\hypertarget{star-fall-2013-7-work}{%
+\subsubsection{\texorpdfstring{\(\star\) Fall 2013 \#7
+\(\work\)}{\textbackslash star Fall 2013 \#7 \textbackslash work}}\label{star-fall-2013-7-work}}
+
+Let \(F = {\mathbb{F}}_2\) and let
+\(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) denote
+its algebraic closure.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that
+  \(\mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\) is
+  not a finite extension of \(F\).
+\item
+  Suppose that
+  \(\alpha \in \mkern 1.5mu\overline{\mkern-1.5muF\mkern-1.5mu}\mkern 1.5mu\)
+  satisfies \(\alpha^{17} = 1\) and \(\alpha\neq 1\). Show that
+  \(F(\alpha)/F\) has degree 8.
+\end{enumerate}
+
+\hypertarget{general-field-extensions}{%
+\subsection{General Field Extensions}\label{general-field-extensions}}
+
+\hypertarget{spring-2020-3-work}{%
+\subsubsection{\texorpdfstring{Spring 2020 \#3
+\(\work\)}{Spring 2020 \#3 \textbackslash work}}\label{spring-2020-3-work}}
+
+Let \(E\) be an extension field of \(F\) and \(\alpha\in E\) be
+algebraic of odd degree over \(F\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that \(F(\alpha) = F(\alpha^2)\).
+\item
+  Prove that \(\alpha^{2020}\) is algebraic of odd degree over \(F\).
+\end{enumerate}
+
+\hypertarget{spring-2012-1-work}{%
+\subsubsection{\texorpdfstring{Spring 2012 \#1
+\(\work\)}{Spring 2012 \#1 \textbackslash work}}\label{spring-2012-1-work}}
+
+Suppose that \(F\subset E\) are fields such that \(E/F\) is Galois and
+\({\left\lvert {{ \operatorname{Gal}} (E/F)} \right\rvert} = 14\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Show that there exists a unique intermediate field \(K\) with
+  \(F\subset K \subset E\) such that \([K: F] = 2\).
+\item
+  Assume that there are at least two distinct intermediate subfields
+  \(F \subset L_1, L_2 \subset E\) with \([L_i: F]= 7\). Prove that
+  \({ \operatorname{Gal}} (E/F)\) is nonabelian.
+\end{enumerate}
+
+\hypertarget{spring-2019-8-done}{%
+\subsubsection{\texorpdfstring{Spring 2019 \#8
+\(\done\)}{Spring 2019 \#8 \textbackslash done}}\label{spring-2019-8-done}}
+
+Let \(\zeta = e^{2\pi i/8}\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  What is the degree of \({\mathbb{Q}}(\zeta)/{\mathbb{Q}}\)?
+\item
+  How many quadratic subfields of \({\mathbb{Q}}(\zeta)\) are there?
+\item
+  What is the degree of \({\mathbb{Q}}(\zeta, \sqrt[4] 2)\) over
+  \({\mathbb{Q}}\)?
+\end{enumerate}
+
+\begin{concept}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(\zeta_n \coloneqq e^{2\pi i \over n}\), and \(\zeta_n^k\) is a
+  primitive \(n\)th root of unity \(\iff \gcd(n, k) = 1\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In general, \(\zeta_n^k\) is a primitive \({n \over \gcd(n, k)}\)th
+    root of unity.
+  \end{itemize}
+\item
+  \(\deg \Phi_n(x) = \phi(n)\)
+\item
+  \(\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Proof: for a nontrivial gcd, the possibilities are
+    \begin{align*}
+    p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+    .\end{align*}
+  \end{itemize}
+\item
+  \({ \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(n)^{\times}\)
+\end{itemize}
+
+\end{concept}
 
 \begin{solution}
 
-\({\mathbb{Z}}/2{\mathbb{Z}}\)?
+\envlist
+
+Let \(K = {\mathbb{Q}}(\zeta)\).
+
+\begin{proof}[of a]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \(\zeta \coloneqq e^{2\pi i / 8}\) is a primitive \(8\)th root of
+  unity
+\item
+  The minimal polynomial of an \(n\)th root of unity is the \(n\)th
+  cyclotomic polynomial \(\Phi_n\)
+\item
+  The degree of the field extension is the degree of \(\Phi_8\), which
+  is
+  \begin{align*}
+  \phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
+  .\end{align*}
+\item
+  So \([{\mathbb{Q}}(\zeta): {\mathbb{Q}}] = 4\).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of b]
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  \({ \mathsf{Gal}} ({\mathbb{Q}}(\zeta)/{\mathbb{Q}}) \cong {\mathbb{Z}}/(8)^{\times}\cong {\mathbb{Z}}/(4)\)
+  by general theory
+\item
+  \({\mathbb{Z}}/(4)\) has exactly one subgroup of index 2.
+\item
+  Thus there is exactly \textbf{one} intermediate field of degree 2 (a
+  quadratic extension).
+\end{itemize}
+
+\end{proof}
+
+\begin{proof}[of c]
+
+\envlist
+
+\begin{itemize}
+\item
+  Let \(L = {\mathbb{Q}}(\zeta, \sqrt[4] 2)\).
+\item
+  Note \({\mathbb{Q}}(\zeta) = {\mathbb{Q}}(i, \sqrt 2)\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \({\mathbb{Q}}(i, \sqrt{2})\subseteq {\mathbb{Q}}(\zeta)\)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\zeta_8^2 = i\), and \(\zeta_8 = \sqrt{2}^{-1}+ i\sqrt{2}^{-1}\)
+      so \(\zeta_8 + \zeta_8 ^{-1}= 2/\sqrt{2} = \sqrt{2}\).
+    \end{itemize}
+  \item
+    \({\mathbb{Q}}(\zeta) \subseteq {\mathbb{Q}}(i, \sqrt{2})\):
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}\).
+    \end{itemize}
+  \end{itemize}
+\item
+  Thus
+  \(L = {\mathbb{Q}}(i, \sqrt{2})(\sqrt[4]{2}) = {\mathbb{Q}}(i, \sqrt 2, \sqrt[4] 2) = {\mathbb{Q}}(i, \sqrt[4]{2})\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Uses the fact that
+    \({\mathbb{Q}}(\sqrt 2) \subseteq {\mathbb{Q}}(\sqrt[4] 2)\) since
+    \(\sqrt[4]{2}^2 = \sqrt{2}\)
+  \end{itemize}
+\item
+  Conclude
+  \begin{align*}
+  [L: {\mathbb{Q}}] = [L: {\mathbb{Q}}(\sqrt[4] 2)] ~[{\mathbb{Q}}(\sqrt[4] 2): {\mathbb{Q}}] = 2 \cdot 4 = 8
+  \end{align*}
+  using the fact that the minimal polynomial of \(i\) over any subfield
+  of \({\mathbb{R}}\) is always \(x^2 + 1\), so
+  \(\min_{{\mathbb{Q}}(\sqrt[4] 2)}(i) = x^2 + 1\) which is degree 2.
+\end{itemize}
+
+\end{proof}
 
 \end{solution}
+
+\hypertarget{fall-2017-3-work}{%
+\subsubsection{\texorpdfstring{Fall 2017 \#3
+\(\work\)}{Fall 2017 \#3 \textbackslash work}}\label{fall-2017-3-work}}
+
+Let \(F\) be a field. Let \(f(x)\) be an irreducible polynomial in
+\(F[x]\) of degree \(n\) and let \(g(x)\) be any polynomial in \(F[x]\).
+Let \(p(x)\) be an irreducible factor (of degree \(m\)) of the
+polynomial \(f(g(x))\).
+
+Prove that \(n\) divides \(m\). Use this to prove that if \(r\) is an
+integer which is not a perfect square, and \(n\) is a positive integer
+then every irreducible factor of \(x^{2n} - r\) over \({\mathbb{Q}}[x]\)
+has even degree.
+
+\hypertarget{spring-2015-2-work}{%
+\subsubsection{\texorpdfstring{Spring 2015 \#2
+\(\work\)}{Spring 2015 \#2 \textbackslash work}}\label{spring-2015-2-work}}
+
+Let \({\mathbb{F}}\) be a finite field.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Give (with proof) the decomposition of the additive group
+  \(({\mathbb{F}}, +)\) into a direct sum of cyclic groups.
+\item
+  The \emph{exponent} of a finite group is the least common multiple of
+  the orders of its elements. Prove that a finite abelian group has an
+  element of order equal to its exponent.
+\item
+  Prove that the multiplicative group \(({\mathbb{F}}^{\times}, \cdot)\)
+  is cyclic.
+\end{enumerate}
+
+\hypertarget{spring-2014-3-work}{%
+\subsubsection{\texorpdfstring{Spring 2014 \#3
+\(\work\)}{Spring 2014 \#3 \textbackslash work}}\label{spring-2014-3-work}}
+
+Let \(F\subset C\) be a field extension with \(C\) algebraically closed.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Prove that the intermediate field \(C_{\text{alg}} \subset C\)
+  consisting of elements algebraic over \(F\) is algebraically closed.
+\item
+  Prove that if \(F\to E\) is an algebraic extension, there exists a
+  homomorphism \(E\to C\) that is the identity on \(F\).
+\end{enumerate}
 
 \hypertarget{modules}{%
 \section{Modules}\label{modules}}
 
 \hypertarget{general-questions}{%
 \subsection{General Questions}\label{general-questions}}
+
+\hypertarget{spring-2017-3-work}{%
+\subsection{\texorpdfstring{Spring 2017 \#3
+\(\work\)}{Spring 2017 \#3 \textbackslash work}}\label{spring-2017-3-work}}
+
+Let \(R\) be a commutative ring with 1. Suppose that \(M\) is a free
+\(R{\hbox{-}}\)module with a finite basis \(X\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Let \(I {~\trianglelefteq~}R\) be a proper ideal. Prove that \(M/IM\)
+  is a free \(R/I{\hbox{-}}\)module with basis \(X'\), where \(X'\) is
+  the image of \(X\) under the canonical map \(M\to M/IM\).
+\item
+  Prove that any two bases of \(M\) have the same number of elements.
+  You may assume that the result is true when \(R\) is a field.
+\end{enumerate}
+
+\hypertarget{spring-2020-5-done}{%
+\subsection{\texorpdfstring{Spring 2020 \#5
+\(\done\)}{Spring 2020 \#5 \textbackslash done}}\label{spring-2020-5-done}}
+
+Let \(R\) be a ring and \(f: M\to N\) and \(g: N\to M\) be
+\(R{\hbox{-}}\)module homomorphisms such that
+\(g\circ f = \operatorname{id}_M\). Show that
+\(N \cong \operatorname{im}f \oplus \ker g\).
+
+\begin{solution}
+
+\envlist
+
+\begin{itemize}
+\tightlist
+\item
+  We have the following situation:
+\end{itemize}
+
+\begin{center}
+\begin{tikzcd}
+    M &&& N
+    \arrow["f", from=1-1, to=1-4]
+    \arrow["g"', curve={height=24pt}, dashed, from=1-4, to=1-1]
+\end{tikzcd}
+\end{center}
+
+\begin{quote}
+\href{https://q.uiver.app/?q=WzAsMixbMCwwLCJNIl0sWzMsMCwiTiJdLFswLDEsImYiXSxbMSwwLCJnIiwyLHsiY3VydmUiOjQsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==}{Link
+to Diagram}
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  Claim: \(\operatorname{im}f + \ker g \subseteq N\), and this is in
+  fact an equality.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For \(n\in N\), write
+    \begin{align*}
+    n = n + (f\circ g)(n) - (f\circ g)(n) = \qty{n - (f\circ g)(n) } + (f\circ g)(n)
+    .\end{align*}
+  \item
+    The first term is in \(\ker g\):
+    \begin{align*}
+    g \qty{ n - (f\circ g)(n) }
+    &= g(n) - (g\circ f \circ g)(n)\\
+    &= g(n) - (\operatorname{id}_N \circ g)(n)\\
+    &= g(n) - g(n) \\
+    &= 0
+    .\end{align*}
+  \item
+    The second term is clearly in \(\operatorname{im}f\).
+  \end{itemize}
+\item
+  Claim: the sum is direct.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Suppose \(n\in \ker(g) \cap\operatorname{im}(f)\), so \(g(n) = 0\)
+    and \(n=f(m)\) for some \(m\in M\). Then
+    \begin{align*}
+    0 = g(n) = g(f(m)) = (g\circ f)(m)
+    = \operatorname{id}_M(m) = m
+    ,\end{align*}
+    so \(m=0\) and since \(f\) is a morphism in \(R{\hbox{-}}\)modules,
+    \(n\coloneqq f(m) = 0\).
+  \end{itemize}
+\end{itemize}
+
+\end{solution}
 
 \hypertarget{fall-2018-6-done}{%
 \subsubsection{\texorpdfstring{Fall 2018 \#6
@@ -7342,12 +9227,8 @@ case find a matrix \(P\) such that \(P^{-1}AP\) is in JCF.
 
 \begin{solution}
 
-\envlist
-
-\begin{proof}[of a]
-
-Let \(A\) be the matrix in the question, and \(B\) be the matrix
-containing 1's in every entry.
+\textbf{Proof of (a)}: Let \(A\) be the matrix in the question, and
+\(B\) be the matrix containing 1's in every entry.
 
 \begin{itemize}
 \item
@@ -7429,8 +9310,6 @@ with eigenvalue \(\lambda_1 = p\).
   .\end{align*}
 \end{itemize}
 
-\end{proof}
-
 \begin{proof}[of claim 1]
 
 \envlist
@@ -7499,7 +9378,7 @@ zeros.
 
 \end{proof}
 
-\begin{proof}[of b]
+\textbf{Proof of (b)}:
 
 For \(F = {\mathbb{F}}_p\), all eigenvalues/vectors still lie in
 \({\mathbb{F}}_p\), but now \(-1 = p-1\), making
@@ -7585,8 +9464,6 @@ P = [\mathbf{v}_1, \mathbf{x}, \mathbf{p}_1, \cdots, \mathbf{p}_{p-2}] =
 1 & 0 & 0 & 0 & 0 & 0 \\
 \end{array}\right]
 .\end{align*}
-
-\end{proof}
 
 \end{solution}
 
@@ -8007,8 +9884,8 @@ Many many fundamental problems here:
   \(\phi\) and \(\psi\) simultaneously.
 \end{itemize}
 
-\hypertarget{galois-theory}{%
-\subsection{Galois Theory}\label{galois-theory}}
+\hypertarget{galois-theory-1}{%
+\subsection{Galois Theory}\label{galois-theory-1}}
 
 \begin{quote}
 Taken from here:

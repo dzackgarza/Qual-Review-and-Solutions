@@ -302,6 +302,7 @@
 \newcommand{\lci}[0]{\mathrm{lci}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\liea}[0]{{\mathfrak{a}}}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
 \newcommand{\lief}[0]{{\mathfrak{f}}}
@@ -791,7 +792,7 @@ Show that
 [G: H\intersect K] \leq [G: H] ~ [G:K]
 .\]
 
-http://www.ams.org/notices/200304/what-is.pdf
+
 :::{.concept}
 \envlist
 
@@ -799,6 +800,7 @@ http://www.ams.org/notices/200304/what-is.pdf
 - Counting in towers: $A\leq B \leq C \implies [C:A] = [C:B][B:A]$.
 - Fundamental theorem of cosets: $xH = yH \iff xy\inv \in H$.
 - Common trick: just list out all of the darn cosets!
+
 :::
 
 :::{.strategy}
@@ -1392,9 +1394,9 @@ t &\mapsto b
 :::
 
 
-### Fall 2019 Midterm #1  $\work$
+### Fall 2019 Midterm #1  $\done$
 Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontrivial normal subgroup.
-
+:::
 
 :::{.solution}
 \envlist
@@ -1403,22 +1405,55 @@ Let $G$ be a group of order $p^2q$ for $p, q$ prime. Show that $G$ has a nontriv
 - Cases: first assume $p>q$, then do $q<p$.
 - In any case, we have
 \[
-n_p \divides q &,\, n_p \equiv 1 \mod p \implies n_p \in \ts{ 1,q } \\ \\
-n_q \divides p^2 &,\, n_q \equiv 1 \mod q \implies n_q \in \in \ts{ 1, p, p^2} 
+n_p \divides q &\implies n_p \in \ts{ 1,q } \\ \\
+n_q \divides p^2 &\implies n_q \in \ts{ 1, p, p^2} 
 .\]
 
-- **Case 1:** $:p>q$.
-- If $p>q$, then $p\geq q+2$ since $p+1$ can't be prime.
-- So $q$ is not congruent to $1\mod p$, forcing $n_p = 1$.
+- If $n_p=1$ or $n_q=1$, we're done, so suppose otherwise.
 
-- **Case 2:**: $p< q$:
-- For the same reasons as above, $p\not\equiv 1\mod q$ forces $n_q\neq p$.
-- If $n_q = 1$, we're done. 
-- If $n_q = p^2$:
-  - Finer analysis....
+- **Case 1:** $:p>q$.
+  - Using that $[n_p]_p \equiv 1$, consider reducing elements in $\ts{1, q} \mod p$.
+  - Since $q<p$, we just have $q\mod p = q$, and as long as $q\neq 1$ we have $q\not\equiv 1\mod p$.
+    But since $n_p\neq 1$ and $n_p\neq q$, this is a contradiction. $\contradiction$
+
+- **Case 2:** $p< q$:
+  - Using that $[n_q]_q \equiv 1$, consider reducing $\ts{1, p, p^2}\mod q$.
+  - Since now $p<q$, we have $p\mod q = p$ itself, so $p\mod q \neq 1$ and we can rule it out.
+  - The remaining possibility is $n_q = p^2$.
+  - Supposing that $n_p \neq 1$, we have $n_p=q$, so we can count 
+  \[
+  \text{Elements from Sylow } q: n_q( \# S_q - 1) &= p^2(q-1) + 1
+  ,\]
+  where we've used that distinct Sylow $q$s can only intersect at the identity, and although Sylow $p$s *can* intersect trivially, they can also intersect in a subgroup of size $p$.
+  - Suppose all Sylow $p$s intersect trivially, we get at least
+  \[
+  \text{Elements from Sylow } p: n_p( \# S_p - 1) &= q(p^2-1) 
+  .\]
+  Then we get a count of how many elements the Sylow $p$s and $q$s contribute:
+  \[
+  q(p^2-1) + p^2(q-1) + 1
+  = p^2q - q + p^2q - p^2 + 1 
+  = p^2q + (p^2-1)(q-1)
+  > p^2q = \# G
+  ,\]
+  provided $(p^2-1)(q-1) \neq 0$, which is fine for $p\geq 2$ since this is at least $(2^2-1)(3-2) = 3$ (since $p<q$ and $q=3$ is the next smallest prime). $\contradiction$
+
+  - Otherwise, we get two Sylow $p$s intersecting nontrivially, which must be in a subgroup of order at least $p$ since the intersection is a subgroup of both.
+  In this case, just considering these two subgroups, we get
+  \[
+  \text{Elements from Sylow } p: n_p( \# S_p - 1) &> p^2 + p^2 - p = 2p^2-p -1
+  .\]
+  Then a count:
+  \[
+  p^2(q-1) + (2p^2-p - 1) + 1
+  &= p^2 q- p^2 + 2p^2 -p \\
+  &= p^2 q + p^2 -p \\
+  &= p^2q + p(p-1) \\
+  &> p^2q = \# G
+  ,\]
+  a contradiction since this inequality is strict provided $p\geq 2$. $\contradiction$
 
 :::
-
 
 ### Fall 2019 Midterm #4 $\work$
 Let $p$ be a prime. Show that $S_p = \gens{\tau, \sigma}$ where $\tau$ is a transposition and $\sigma$ is a $p\dash$cycle.
@@ -2149,135 +2184,254 @@ Show that there exist no simple groups of order 148.
 
 # Commutative Algebra
 
-## Spring 2020 #5 $\done$
-Let $R$ be a ring and $f: M\to N$ and $g: N\to M$ be $R\dash$module homomorphisms such that $g\circ f = \id_M$.
-Show that $N \cong \im f \oplus \ker g$.
+## UFDs, PIDs, etc
 
-## Fall 2019 #3 $\work$
-Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
+### Spring 2013 #2 $\done$
 
 a.
-Prove that $R$ has characteristic 2.
+Define a *Euclidean domain*.
 
 b.
-Prove that $R$ is commutative.
-
-:::{.concept}
-\envlist
-
-- Todo
-:::
-
-:::{.strategy}
-\envlist
-
-- Just fiddle with direct computations.
-- Context hint: that we should be considering things like $x^2$ and $a+b$.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-\[
-2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
-.\]
-Note that this implies $x = -x$ for all $x\in R$.
-:::
-
-:::{.proof title="of b"}
-\[
-a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
-&\implies ab + ba = 0 \\
-&\implies ab = -ba \\
-&\implies ab = ba \quad\text{by (a)}
-.\]
-
-:::
-
-:::
-
-## Fall 2019 #6 $\done$
-Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
-
-a.
-Show that
-$$
-N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
-$$
-is an ideal which is contained in any prime ideal.
-
-b.
-Let $r$ be an element of $R$ not in $N$.
-Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
-there is a prime ideal in $S$.
+Define a *unique factorization domain*.
 
 c.
-Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
+Is a Euclidean domain an UFD? 
+Give either a proof or a counterexample with justification.
+
+d.
+Is a UFD a Euclidean domain?
+Give either a proof or a counterexample with justification.
+
+
+:::{.solution}
+\envlist
+
+- $R$ is Euclidean iff it admits a Euclidean algorithm: there is a degree function $f: R\to \ZZ_{\geq 0}$ such that for all $a,b\in R$, there exist $q, r\in R$ such that $a = bq + r$ where $f(r) <f(b)$ or $r=0$.
+
+- $R$ is a UFD iff every $r\in R$ can be written as $r = u \prod_{i=1}^n p_i$ with $n\geq 0$, $u\in R\units$, and $p_i$ irreducible.
+  This is unique up to associates of the $p_i$ and reordering.
+
+- Euclidean implies UFD:
+  - Euclidean implies PID:
+    - If $I \in \Id(R)$ one can use the degree function to find any $b \in I$ where $f(b)$ is minimal.
+    - Then $I = \gens{b}$, since if $a\in I$ one can write $a = bq + r$ and use that $a-bq \in I \implies r\in I$.
+    - But by minimality, we can't have $f(r)<f(b)$, so $r=0$ and $a \divides b$, so $b\in \gens{a}$.
+    
+  - PID implies UFD:
+    - Use that irreducible implies prime in a PID, so every $x\in R$ has some factorization into finitely many primes.
+    - Supposing $x = u_p \prod_{i=1}^m p_i = u_q \prod_{i=1}^n q_i$, use that $p_1$ divides the LHS and so $p_1$ divides the RHS.
+    WLOG, $p_1\divides q_1$, so $q_1 = u_1 p_1$ for $u\in R\units$, so $x = u_q u_1 p_1 \prod_{i=2}^m q_i$ by rewriting a term on the RHS.
+    - Note that this makes $p_1, q_1$ associates.
+    - Continuing up to $m$, we get
+  \[
+  x 
+  &= u_p \prod_{i=1}^m p_i \\
+  &= 
+  u_q \prod_{i=1}^m u_i p_i \prod_{k=m+1}^n q_i \\
+  \implies 
+  u_p 
+  &= u_q \prod_{i=1}^m u_i \prod_{k=m+1}^n q_i \\
+  \tilde u 
+  &= \prod_{k=m+1}^n q_i
+  ,\]
+    where we've moved all units to the LHS.
+    This makes $p_i, q_i$ associates for $i\leq m$.
+    - But primes aren't units and the product of nontrivial primes can't be a unit, so the right-hand side product must be empty.
+    - So $m=n$ and all $p_i, q_i$ are associate, QED.
+
+- UFD does not imply Euclidean:
+  - It suffices to find a UFD that is not a PID.
+  - Take $R \da \CC[x, y]$, which is a UFD by the usual factorization of polynomials.
+  It is not a PID, since $\gens{2, x}$ is not principal.
+
+
+:::
+
+
+
+### Fall 2017 #6 $\done$
+For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
+
+We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
+Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
+
+a.
+Prove $R$ is an integral domain.
+
+b.
+Show $U(R) = \{\pm1\}$.
+
+c.
+Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
+
+d.
+Show 3 is not prime in $R$.
+
+e.
+Conclude $R$ is not a PID.
+
 
 :::{.concept}
 \envlist
 
-- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
-- Silly fact: 0 is in every ideal!
- 
-- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
- 
-- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
-
-  \todo[inline]{Prove this}
-
-- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
-
-  \todo[inline]{Prove this}
-
-- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
-
+- Integral domain: $ab=0 \implies a\neq 0 \text{ or } b\neq 0$.
+- Prime: $p \divides ab \implies p\divides a$ or $b$.
+- Reducible: $a = xy$ where $x, y$ are proper divisors.
+- Irreducible implies prime in a UFD.
 :::
 
 :::{.solution}
 \envlist
 
-:::{.proof title="of a"}
+- $R$ is an integral domain:
+  - Let $\alpha = a + b\sqrt{-5}$ and $\beta = c + d \sqrt{-5}$ and set $\bar \alpha, \bar \beta$ be their conjugates.
+  - Then
+  \[
+  0 = \alpha \beta = \alpha\bar\alpha \beta\bar\beta = (a^2-5b^2)(c^2-5d^2) \in \ZZ
+  ,\]
+  so one factor is zero.
+  - If $a^2 = 5b^2$ then $a = \sqrt{5} b \not\in \ZZ$ unless $a=b=0$.
+    Otherwise, the same argument forces $c=d=0$.
+
+- The units are $\pm 1$:
+  - Use that $u\in R\units \implies N(u) = \pm 1$, and $N(\alpha) = \alpha \bar\alpha = (a+b\sqrt{-5})(a-b\sqrt{-5}) = a^2 + 5b^2 = 1$
+    forces $b=0$ and $a=\pm 1$.
+
+- Irreducible elements:
+  - $2, 3$ are irreducible because if (say) $3=xy$ then $N(x)N(y) = N(3) = 9$, and if neither $x,y$ are units then $N(x) = N(y) = 3$.
+    But $N(a + b\sqrt{-5}) = a^2 + 5b^2$ and $a^2 + 5b^2 = 3$ has no solutions.
+    The same argument works for $2$.
+  - $2\pm \sqrt{-5}$ are irreducible because $N(2 + \sqrt{-5}) = 2^2 + 5(1) = 9$, and in fact $N(2 - \sqrt{-5}) = 2^2 + 5(-1)^2 = 9$.
+    By the same argument as above, this forces irreducibility.
+
+- $3$ is not prime: 
+  - We can write $6 = (3)(2) = (1 + \sqrt{-5})(1 - \sqrt{-5})$, so if we assume $3$ is prime we get $3\divides (1 \pm \sqrt{-5})$.
+  - But writing $(1\pm \sqrt{-5}) = 3r$ for some $r\in R$ yields 
+  \[
+  (1 \pm \sqrt{-5}) = 3(a + b\sqrt{-5}) \implies 3a=1, 3b = \pm 1
+  .\]
+  These have no solutions $a, b\in \ZZ$. $\contradiction$
+
+- $R$ is not a PID:
+  - Use that irreducibles are prime in a UFD, which is not true here. 
+
+:::
+
+### Spring 2017 #4 $\done$
+
+a.
+Let $R$ be an integral domain with quotient field $F$.
+Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
+
+  Prove that $R$ is not a UFD.
+
+  > (You may assume Gauss' lemma)
+
+b.
+Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
+
+  > Hint: let $p(x) = x^2-2$.
+
+:::{.concept}
 \envlist
 
-- Let $\mathfrak{p}$ be prime and $x\in N$.
-- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
-- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+- Gauss' lemma: for $R$ a UFD with fraction field $F$, if $f$ is reducible in $F[x]$ with $f=pq$ then there are $r,s\in R$ such that $f = (rp)(sq)$ reduces in $R[x]$.
+- Corollary: $R$ is a UFD iff $R[x]$ is a UFD.
 :::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of 1"}
+\envlist
+
+- The important assumption is $a(x)\not\in R[x]$, we'll assume $R$ is a UFD and try to contradict this.
+- Write $f(x) = a(x)b(x)\in F[x]$, then if $R$ is a UFD we have $r,s\in F$ such that $f(x) = ra(x) sb(x) \in R[x]$.
+- Since $a(x), b(x)$ are monic and $f=ab$, $f$ is monic, and by the factorization in $R[x]$ we have $rs=1$.
+  So $r,s\in R\units$.
+- Then using that $ra(x)\in R[x]$, we have $r\inv ra(x) = a(x)\in R[x]$. $\contradiction$
+
+:::
+
 
 :::{.proof title="of b"}
 \envlist
 
-- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
-
-- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
-
-- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
-
-- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+- Set $R = \ZZ[2\sqrt 2], F = \QQ[2\sqrt 2]$.
+- Let $p(x) \da x^2-2 \in R[x]$ which splits as $p(x) = (x+ \sqrt{2} )(x - \sqrt{2} ) \da a(x) b(x) \in F[x]$.
+- Note neither $a(x), b(x)$ are in $R[x]$.
+  - Explicitly, every monic linear $p\in R[x]$ is of the form $x + 2t\sqrt{2}$ with $t\in \ZZ$, and $\pm \sqrt{2} \neq 2t\sqrt{2}$ for any $t$.
+- So we have $p(x) \in R[x]$ splitting as $p=ab$ in $F[x]$ with $a\not \in R[x]$, so part (a) applies.
 
 :::
 
-:::{.proof title="of c"}
+:::
+
+## Ideals (Prime, Maximal, Proper, Principal, etc)
+
+### Fall 2013 #3 $\done$
+
+a.
+Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
+
+b.
+Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
+
+
+:::{.solution}
 \envlist
 
-- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
+- $\mfp$ is **prime** iff $xy\in \mfp \implies x\in \mfp$ or $y\in \mfp$.
+  - An ideal $I\normal \ZZ$ that is not prime: $I \da 8\ZZ$.
+  - For example, $2\cdot 4\in 8\ZZ$ but neither 2 nor 4 is a multiple of 8.
 
-- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
-
-- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
-
-- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
-Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
-  But then $r\not\in \mathfrak{p}$, a contradiction.
-
-:::
+- $\mfm$ is **maximal** iff whenever $I\contains \mfm$ is an ideal in $R$, then either $I=\mfm$ or $I = R$.
+  - A maximal ideal in $\ZZ$: $p\ZZ$.
+  This is because primes are maximal in a PID and $p\ZZ$ is a prime ideal.
+  Alternatively, "to contain is to divide" holds for Dedekind domains, so $m\ZZ \contains p\ZZ \iff m\divides p$, which forces $m=1,p$, so either $m\ZZ = p\ZZ$ or $m\ZZ = \ZZ$.
 
 :::
 
-## Spring 2019 #6 $\done$
+
+### Fall 2014 #8 $\work$
+Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
+Prove that for all $x\in R$, the ideal $xR$ is proper.
+
+> You may assume the axiom of choice.
+
+### Fall 2014 #7 $\done$
+Give a careful proof that $\CC[x, y]$ is not a PID.
+
+:::{.concept}
+\envlist
+
+- If $R[x]$ is a PID, then $R$ is a field (not explicitly used).
+- In $P \da R[x_1, \cdots, x_n]$, there are degree functions $\deg_{x_n}: P\to \ZZ_{\geq 0}$.
+:::
+
+:::{.solution}
+\envlist
+
+- The claim is that $I \da \gens{x, y}$ is not principal.
+- Toward a contradiction, if so, then $\gens{x, y} = \gens{f}$.
+- So write $x = fg$ for some $g\in \CC[x, y]$, then 
+  - $\deg_x(x) = 1$, so $\deg_x(fg) = 1$ which forces $\deg_x(f) \leq 1$.
+  - $\deg_y(y) = 1$, so $\deg_y(fg) = 1$ which forces $\deg_y(f) \leq 1$.
+  - So $f(x, y) = ax + by + c$ for some $a,b,c\in \CC$.
+  - $\deg_x(y) = 0$ and thus $\deg_x(fg) = 0$, forcing $a=0$
+  - $\deg_y(x) = 0$ and thus $\deg_y(fg) = 0$, forcing $b=0$
+  - So $f(x, y) = c \in \CC$.
+- But $\CC[x]$ is a field, so $c$ is a unit in $\CC$ and thus $\CC[x, y]$, so $\gens{f} = \gens{c} = \CC[x, y]$.
+- This is a contradiction, since $1\not\in \gens{x, y}$:
+  - Every element in $\alpha(x, y) \in\gens{x, y}$ is of the form $\alpha(x, y) = xp(x, y) + yq(x, y)$.
+  - But $\deg_x(\alpha) \geq 1, \deg_y(\alpha)\geq 1$, while $\deg_x(1) = \deg_y(1) = 0$.
+  - So $\gens{x, y} \neq \CC[x, y]$.
+- Alternatively, $\gens{x, y}$ is proper since $\CC[x, y] / \gens{x, y} \cong \CC \neq \CC[x, y]$.
+:::
+
+
+
+### Spring 2019 #6 $\done$
 Let $R$ be a commutative ring with 1.
 
 > Recall that $x \in R$ is nilpotent iff $xn = 0$ for
@@ -2370,17 +2524,15 @@ But $1\in R$, so we have
 
 :::
 
-:::{.proof title="of c"}
-- We want to show $J(R) = \mathfrak N(R)$.
-
+:::{.proof title="of c: $J(R) = \mathfrak N(R)$"}
 $\mathfrak N(R) \subseteq J(R)$:
 
-- We'll use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
+- Use the fact $x\in \mathfrak N(R) \implies x^n = 0 \implies 1 + rx$ is a unit $\iff x\in J(R)$ by (b):
 $$
 \sum_{k=1}^{n-1} (-x)^k = \frac{1 - (-x)^n}{1- (-x)} = (1+x)\inv
 .$$
 
-- $J(R) \subseteq \mathfrak N(R)$:
+$J(R) \subseteq \mathfrak N(R)$:
 
 - Let $x \in J(R) \setminus \mathfrak N(R)$.
 
@@ -2404,7 +2556,135 @@ But then $x\in \mm$ and $1-x \in \mm \implies x + (1-x) = 1 \in \mm$, a contradi
 
 :::
 
-## Fall 2018 #7 $\done$
+### Spring 2018 #8 $\done$
+Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
+
+a.
+Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
+
+b.
+If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
+
+c.
+Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
+
+:::{.remark}
+Cool problem, but pretty specific topological tricks needed.
+:::
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Suppose $c\da f(a)\neq 0$, noting that $c$ may not be positive.
+- By continuity, pick $\eps$ small enough so that $\abs{x-a}<\eps \implies \abs{f(x) - f(a)} < c/2$.
+  Since we're on the interval, we have $f(x) \in (f(a) - c/2, f(a) + c/2) = (c/2, 3c/2)$ which is a ball of radius $c/2$ about $c$, which thus doesn't intersect $0$.
+- So $f(x) \neq 0$ on this ball, and $g \da f^2 > 0$ on it.
+  Note that ideals are closed under products, so $g\in I$
+- Moreover $f^2(x) \geq 0$ since squares are non-negative, so $g\geq 0$ on $[0, 1]$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- By contrapositive, suppose $V(I)= \emptyset$, we'll show $I$ contains a unit and thus $I=R$.
+- For each fixed $x\in [0, 1]$, since $V(I)$ is empty there is some $f_x$ such that $f_x(x) \neq 0$.
+- By (a), there is some $g_x$ with $g_x(x) > 0$ on a neighborhood $U_x\ni x$ and $g_x \geq 0$ everywhere.
+- Ranging over all $x$ yields a collection $\ts{(g_x, U_x) \st x\in [0, 1]}$ where $\ts{U_x}\covers [0, 1]$.
+- By compactness there is a finite subcover, yielding a finite collection $\ts{(g_k, U_k)}_{k=1}^n$ for some $n$.
+- Define the candidate unit as 
+\[
+G(x) \da {1\over \sum_{k=1}^n g_k(x)}
+.\]
+- This is well-defined: fix an $x$, then the denominator is zero at $x$ iff $g_k(x) = 0$ for all $k$.
+  But since the $U_k$ form an open cover, $x\in U_\ell$ for some $\ell$, and $g_\ell > 0$ on $U_\ell$.
+- Since ideals are closed under sums, $H\da {1\over G} \da \sum g_k \in I$.
+  But $H$ is clearly a unit since $HG = \id$.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- If $I\normal R$ is maximal, $I\neq R$, and so by (b) we have $V(I) \neq \emptyset$.
+- So there is some $x_0\in[0, 1]$ with $f(x_0) = 0$ for all $f\in I$.
+- Define $\mfm_{x_0} \da \ts{f\in R \st f(x_0) = 0}$, which is clearly an ideal.
+  - This is a proper ideal, since constant nonzero functions are continuous and thus in $R$, not not $\mfm_{x_0}$.
+- We thus have $I \subseteq \mfm_{x_0}$, and by maximality they are equal.
+
+:::
+
+\todo[inline]{I'm not super convinced by c!}
+
+:::
+
+
+## Zero Divisors and Nilpotents
+
+### Spring 2014 #5 $\done$
+Let $R$ be a commutative ring and $a\in R$.
+Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
+
+> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
+
+
+:::{.solution}
+$\not A\implies \not B$:
+
+- Suppose $a$ is nilpotent, so $a^m = 0_R$, and suppose $\phi: R\to S$ is a ring morphism.
+- Ring morphisms send zero to zero, so $0_S = \phi(0_R) = \phi(a^m) = \phi(a)^m$ and $\phi(a)$ is nilpotent.
+- But nontrivial rings can't contain nilpotent units: if $u$ is a unit and $ut= 1$ with $u^k=0$, then $1 = 1^k = (ut)^k = u^k t^k=0$ and $R=0$.
+
+
+$A\implies B$:
+
+- If $a$ is not nilpotent, localize at the infinite multiplicative subset $A \da \ts{1, a, a^2, \cdots}$ to obtain $R\localize{A}$.
+  Since $0\not\in A$, this is not the zero ring.
+- By the universal property, there is a map $\phi: R\to R\localize{A}$, and the claim is that $\phi(a)$ is a unit in $R\localize{A}$.
+- More directly, $\phi(a) = [a/1] \in \ts{p,q \st p\in R, q\in A}$, which has inverse $[a/1]$.
+
+:::
+
+### Spring 2021 #5 $\done$
+
+:::{.problem title="Spring 2021"}
+Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
+Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+:::
+
+:::{.solution}
+\envlist
+
+- Write $f(x) = \sum_{k=0}^n a_k x^k$, and supposing it's a zero divisor choose $g(x) = \sum_{k=0}^m b_k x^k$ of minimal degree so that $g\neq 0, b_m\neq 0$, and $f(x)g(x) = 0$.
+- The claim is that the top coefficient $b_m$ will suffice.
+- Write the product:
+\[
+0 = f(x)g(x) 
+= (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
+(b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
+.\]
+- Equating coefficients, the coefficient for $x^{m+n}$ must be zero, so (**importantly**) $a_n b_m = 0$.
+  - Since $a_n b_m=0$, consider $a_ng(x)$.
+    This has degree $d_1 \leq m-1$ but satisfies $a_ng(x)f(x) = a_n(g(x)f(x)) = 0$, so by minimality $a_ng(x) = 0$.
+  - This forces $a_n b_0 = \cdots = a_n b_{m-1} = 0$, so $a_n$ annihilates all of the $b_k$.
+- Now consider the coefficient of $x^{m+n-1}$, given by $a_{n-1}b_m + a_{n}b_{m-1}$.
+  - The second term $a_n b_{m-1}=0$ since $a_n$ annihilates all $b_k$, so (**importantly**) $a_{n-1} b_m = 0$.
+  - Considering now $a_{n-1}g(x)$:
+    - The same argument shows this has degree $d_2 \leq m-1$ but $a_{n-1}g(x)f(x) = 0$, so $a_{n-1}g(x) = 0$.
+    - So $a_{n-1}$ annihilates all $b_k$, and allowing this process to continue inductively.
+- For good measure, the coefficient of $x^{m+n-2}$ is $a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}$.
+  - Note that $a_n, a_{n-1}$ annihilate all $b_k$, so (**importantly**) $a_{n-2} b_m=0$, and so on.
+
+- Thus $a_k b_m = 0$ for all $0\leq k \leq n$, and by linearity and commutativity, we have
+\[
+b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
+.\]
+
+:::
+
+### Fall 2018 #7 $\done$
 Let $R$ be a commutative ring.
 
 a.
@@ -2437,7 +2717,8 @@ following:
 :::{.concept}
 \envlist
 
-- Todo
+- Testing module morphisms: $\phi(sm + n) = s\phi(m) + \phi(n)$.
+- First isomorphism theorem used for sizes: $R/\ker f \cong \im f$, so $\# R = \# \ker f \cdot \# \im f$.
 - See 1964 Annals "Properties of rings with a finite number of zero divisors"
 :::
 
@@ -2548,159 +2829,11 @@ R &\cong \ZZ/(2)[t] / (t^2)
 
 :::
 
-## Spring 2018 #5 $\work$
-Let 
-\[
-M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
-\quad \text{and} \quad 
-N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
-\]
-
-over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
-Prove that
-\[
-M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
-\implies MN = 0
-.\]
-
-## Spring 2018 #8 $\work$
-Let $R = C[0, 1]$ be the ring of continuous real-valued functions on the interval $[0, 1]$. Let I be an ideal of $R$.
-
-a.
-Show that if $f \in I, a \in [0, 1]$ are such that $f (a) \neq 0$, then there exists $g \in I$ such that $g(x) \geq 0$ for all $x \in [0, 1]$, and $g(x) > 0$ for all $x$ in some open neighborhood of $a$.
-
-b.
-If $I \neq R$, show that the set $Z(I) = \{x \in [0, 1] \suchthat f(x) = 0 \text{ for all } f \in I\}$ is nonempty.
-
-c.
-Show that if $I$ is maximal, then there exists $x_0 \in [0, 1]$ such that $I = \{ f \in R \suchthat f (x_0 ) = 0\}$.
-
-## Fall 2017 #5 $\work$
-A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
-
-a.
-Suppose $R$ is a commutative ring with 1. Prove $R$ is simple if and only if $R$ is a field.
-
-b.
-Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries in $k$, is a simple ring.
-
-## Fall 2017 #6 $\work$
-For a ring $R$, let $U(R)$ denote the multiplicative group of units in $R$. Recall that in an integral domain $R$, $r \in R$ is called *irreducible* if $r$ is not a unit in R, and the only divisors of $r$ have the form $ru$ with $u$ a unit in $R$. 
-
-We call a non-zero, non-unit $r \in R$ *prime* in $R$ if $r \divides ab \implies r \divides a$ or $r \divides b$. 
-Consider the ring $R = \{a + b \sqrt{-5}\suchthat a, b \in Z\}$.
-
-a.
-Prove $R$ is an integral domain.
-
-b.
-Show $U(R) = \{\pm1\}$.
-
-c.
-Show $3, 2 + \sqrt{-5}$, and $2 - \sqrt{-5}$ are irreducible in $R$.
-
-d.
-Show 3 is not prime in $R$.
-
-e.
-Conclude $R$ is not a PID.
-
-## Spring 2017 #3 $\work$
-Let $R$ be a commutative ring with 1.
-Suppose that $M$ is a free $R\dash$module with a finite basis $X$.
-
-a.
-Let $I \normal R$ be a proper ideal.
-Prove that $M/IM$ is a free $R/I\dash$module with basis $X'$, where $X'$ is the image of $X$ under the canonical map $M\to M/IM$.
-
-b.
-Prove that any two bases of $M$ have the same number of elements.
-You may assume that the result is true when $R$ is a field.
 
 
-## Spring 2017 #4 $\work$
+## Zorn's Lemma
 
-a.
-Let $R$ be an integral domain with quotient field $F$.
-Suppose that $p(x), a(x), b(x)$ are monic polynomials in $F[x]$ with $p(x) = a(x) b(x)$ and with $p(x) \in R[x]$, $a(x)$ not in $R[x]$, and both $a(x), b(x)$ not constant.
-
-  Prove that $R$ is not a UFD.
-
-  > (You may assume Gauss' lemma)
-
-b.
-Prove that $\ZZ[2\sqrt{2}]$ is not a UFD.
-
-  > Hint: let $p(x) = x^2-2$.
-
-## Spring 2016 #8 $\work$
-Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
-
-i. $R$ has no zero divisors, and
-ii. If $x\in R$ with $x\neq 0$ then $2x\neq 0$, where $2x\definedas x+x$.
-
-Prove the following:
-
-a.
-For each $x\in R$ there is one and only one element $y\in R$ such that $x = 2y$.
-
-b.
-Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
-
-> You can get partial credit for (b) by showing it in the case $R$ has a 1.
-
-## Fall 2015 #3 $\work$
-Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
-
-Prove that $R$ contains a maximal left ideal.
-
-> Hint: imitate the proof (using Zorn's lemma) in the case where $R$ does have a 1.
-
-## Fall 2015 #4 $\work$
-Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
-Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
-
-## Spring 2015 #7 $\work$
-Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
-Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
-
-Show that for every ideal $I\in \mci$, there is an ideal $J\in \mci$ such that $I\subset J$ and $J$ is not properly contained in any other ideal in $\mci$.
-
-Prove that every such ideal $J$ is prime.
-
-## Fall 2014 #7 $\work$
-Give a careful proof that $\CC[x, y]$ is not a PID.
-
-## Fall 2014 #8 $\work$
-Let $R$ be a nonzero commutative ring without unit such that $R$ does not contain a proper maximal ideal.
-Prove that for all $x\in R$, the ideal $xR$ is proper.
-
-> You may assume the axiom of choice.
-
-## Spring 2014 #5 $\work$
-Let $R$ be a commutative ring and $a\in R$.
-Prove that $a$ is not nilpotent $\iff$ there exists a commutative ring $S$ and a ring homomorphism $\phi: R\to S$ such that $\phi(a)$ is a unit.
-
-> Note: by definition, $a$ is nilpotent $\iff$ there is a natural number $n$ such that $a^n = 0$.
-
-## Spring 2014 #6 $\work$
- $R$ be a commutative ring with identity and let $n$ be a positive integer.
-
-a.
-Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
-
-b.
-Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
-
-## Fall 2013 #3 $\work$
-
-a.
-Define *prime ideal*, give an example of a nontrivial ideal in the ring $\ZZ$ that is not prime, and prove that it is not prime.
-
-b.
-Define *maximal ideal*, give an example of a nontrivial maximal ideal in $\ZZ$ and prove that it is maximal.
-
-## Fall 2013 #4 $\work$
+### Fall 2013 #4 $\work$
 Let $R$ be a commutative ring with $1\neq 0$.
 Recall that $x\in R$ is *nilpotent* iff $x^n = 0$ for some positive integer $n$.
 
@@ -2711,18 +2844,92 @@ b.
 Show that if $x$ is nilpotent, then $x$ is contained in every prime ideal of $R$.
 
 c.
-Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
-There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
+  Suppose $x\in R$ is not nilpotent and let $S = \theset{x^n \suchthat n\in \NN}$.
+  There is at least on ideal of $R$ disjoint from $S$, namely $(0)$.
 
-By Zorn's lemma the set of ideals disjoint from $S$ has a maximal element with respect to inclusion, say $I$.
-In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $S$ with $I\subseteq J \subseteq R$ then $J=I$ or $J=R$.
+  By Zorn's lemma the set of ideals disjoint from $S$ has a maximal element with respect to inclusion, say $I$.
+  In other words, $I$ is disjoint from $S$ and if $J$ is any ideal disjoint from $S$ with $I\subseteq J \subseteq R$ then $J=I$ or $J=R$.
 
-Show that $I$ is a prime ideal.
+  Show that $I$ is a prime ideal.
 
 d. 
 Deduce from (a) and (b) that the set of nilpotent elements of $R$ is the intersection of all prime ideals of $R$.
 
-## Spring 2013 #1 $\work$
+### Fall 2015 #3 $\done$
+Let $R$ be a rng (a ring without 1) which contains an element $u$ such that for all $y\in R$, there exists an $x\in R$ such that $xu=y$.
+
+Prove that $R$ contains a maximal left ideal.
+
+> Hint: imitate the proof (using Zorn's lemma) in the case where $R$ does have a 1.
+
+:::{.solution}
+\envlist
+
+- Define the map
+\[
+\phi_u: R &\to R\\
+x &\mapsto xu
+,\]
+  which is right-multiplication by $u$.
+  By assumption, $\phi_u$ is surjective, so the principal ideal $Ru$ equals $R$.
+
+- Then $K \da \ker \phi_u \in \Id(R)$ is an ideal.
+- $K$ is proper -- otherwise, noting $Ru=R$, if $K=R$ we have $Ru = 0$ and thus $R=0$.
+  So suppose $R\neq 0$.
+- Take a poset $S \da \ts{J\in \Id(R) \st J \contains K, J\neq R}$, the set of all ideals containing $K$, ordered by subset inclusion.
+  Note that $K \in S$, so $S$ is nonempty.
+- Apply Zorn's lemma: let $C: C_1 \subseteq C_2 \subseteq \cdots$ be a chain (totally ordered sub-poset) in $S$.
+  If $C$ is the empty chain, $K$ is an upper bound.
+  Otherwise, if $C$ is nonempty, define $\hat{C} \da \Union_{i=1}^\infty C_i$.
+  - $\hat{C}$ is an ideal: if $a,b\in \hat{C}$, then $a\in C_i, b\in C_j$ for some $i,j$.
+  But without loss of generality, using that chains are totally ordered, $C_i \subseteq C_j$, so $a,b\in C_j$ and thus $ab\in C_j$.
+  Similarly for $x\in \hat{C}$, $x\in C_j$ for some $j$, and thus $Rx \subseteq C_j$ since $C_j$ is an ideal.
+  - $\hat{C}$ is in $S$:
+  It clearly contains $K$, since for example $K \subseteq C_1 \subseteq \hat{C}$.
+    - That $\hat{C} \neq R$: an ideal equals $R$ iff it contains a unit.
+    But if $r\in \hat{C}$ is a unit, $r\in C_j$ for some $j$ is a unit, making $C_j=R$. $\contradiction$
+- So by Zorn's lemma, $\hat{C}$ contains a maximal ideal (incidentally containing $K$).
+:::
+
+### Spring 2015 #7 $\done$
+Let $R$ be a commutative ring, and $S\subset R$ be a nonempty subset that does not contain 0 such that for all $x, y\in S$ we have $xy\in S$.
+Let $\mci$ be the set of all ideals $I\normal R$ such that $I\intersect S = \emptyset$.
+
+Show that for every ideal $I\in \mci$, there is an ideal $J\in \mci$ such that $I\subset J$ and $J$ is not properly contained in any other ideal in $\mci$.
+
+Prove that every such ideal $J$ is prime.
+
+
+:::{.solution}
+\envlist
+
+- Restating, take the poset $S\da \ts{J\in \Id(R) \st J \intersect S = \emptyset, I\neq R, I \subseteq J}$ ordered by inclusion.
+  Note that $S$ is nonempty since it contains $I$.
+  It suffices to produce a maximal element of $S$.
+- Applying Zorn's lemma, let $C: C_1 \subseteq C_2 \subseteq \cdots$ be a chain and define $\hat{C} \da \union C_i$.
+- By standard arguments, $\hat{C} \in \Id(R)$ and $\hat{C} \contains I$, and it suffices to show $\hat{C} \intersect S = \emptyset$ and $\hat{C}\neq R$.
+- $\hat{C} \intersect S = \emptyset$:
+  - By contradiction, if $x\in \hat{C} \intersect S$ then $x\in C_j$ for some $j$, and $x\in S$.
+    But then $x \in C_j \intersect S = \emptyset$.
+- $\hat{C} \neq R$:
+  - By contradiction, if so then $1 \in \hat{C} \implies 1 \in C_j$ for some $j$, forcing $C_j = R$.
+- So Zorn's lemma applies and we obtain some ideal $\mfp$, which we now claim is prime.
+- Let $ab\in \mfp$, we want to show $a\in \mfp$ or $b\in\mfp$.
+- Suppose not, then neither $a,b\in \mfp$. 
+  By maximality, $\mfp + Ra = R$, and so $\mfp + Ra$ intersects $S$.
+  Similarly $\mfp + Rb = R$ so $\mfp + Rb$ intersects $S$.
+- Produce elements $x\da p_1 + r_1a, y\da p_2 + r_2b\in S$, then since $S$ is multiplicatively closed,
+\[
+xy&\da (p_1 + r_1 a)(p_2 + r_2b)\in S \\
+&\implies p_1 p_2 + p_1r_2 b + p_2 r_1 a + r_1 r_2 ab \in S \\ 
+&\implies xy\in \mfp + \mfp Rb + \mfp Ra + R\mfp && \text{since } p_i, ab\in \mfp \\
+&\implies xy \in (\mfp + Rb + Ra + R)\mfp \subseteq \mfp
+.\]
+  But then $xy\in S \intersect \mfp$, a contradiction.
+
+:::
+
+### Spring 2013 #1 $\done$
 Let $R$ be a commutative ring.
 
 a.
@@ -2736,67 +2943,156 @@ Let $M$ be an $R\dash$module, and recall that for $0\neq \mu \in M$, the *annihi
 \[
 \ann(\mu) = \theset{r\in R \suchthat r\mu = 0}
 .\]
-Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property that there exists an element $\mu \in M$ such that $I = \ann(\mu)$ for some $\mu \in M$.
-In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \ann(\nu) \subsetneq R$ such that $I\subsetneq J$.
+  Suppose that $I$ is an ideal in $R$ which is maximal with respect to the property that there exists an element $\mu \in M$ such that $I = \ann(\mu)$ for some $\mu \in M$.
+  In other words, $I = \ann(\mu)$ but there does not exist $\nu\in M$ with $J = \ann(\nu) \subsetneq R$ such that $I\subsetneq J$.
 
-Prove that $I$ is a prime ideal.
+  Prove that $I$ is a prime ideal.
 
-## Spring 2013 #2 $\work$
+
+:::{.solution}
+\envlist
+
+:::{.proof title="part a and b"}
+\envlist
+
+- Maximal: a proper ideal $I\normal R$, so $I\neq R$, such that if $J\contains I$ is any other ideal, $J = R$.
+- Existence of a maximal ideal: use that $0\in \Id(R)$ always, so $S\da \ts{I\in \Id(R) \st I\neq R}$ is a nonempty poset under subset inclusion.
+  Applying the usual Zorn's lemma argument produces a maximal element.
+:::
+
+:::{.proof title="part c"}
+$\impliedby$:
+By contrapositive: if $r\in R$ is a unit and $\mfm$ is maximal, then $r\in \mfm \implies \mfm = R$, contradicting that $\mfm$ is proper.
+
+
+$\implies$:
+
+- Suppose $a$ is not a unit, we'll produce a maximal ideal containing it.
+- Let $I\da Ra$ be the principal ideal generated by $a$, then $Ra \neq R$ since $a$ is not a unit.
+- Take a poset $S \da \ts{J\in \Id(R) \st J\contains Ra, J\neq R}$ ordered by set inclusion.
+  - Let $C_*$ be a chain in $S$, set $\hat{C} \da \union C_i$.
+    Then $\hat{C} \in S$:
+
+    - $\hat{C} \neq R$, since if so it contains a unit, forcing some $C_i$ to contain a unit and thus equal $R$.
+    - $\hat{C} \contains Ra$, since e.g. $\hat{C} \contains C_1 \contains Ra$.
+    - $\hat{C}$ is an ideal since $xy\in \hat{C} \implies x\in C_i, y\in C_j$ and $C_i \subseteq C_j$ without loss of generality, so $xy\in C_j \subseteq \hat{C}$.
+- Then $Ra \subseteq \hat{C}$, some maximal ideal.
+
+:::
+
+:::{.proof title="of d"}
+\envlist
+
+- Write $I \da \Ann(u)$ for some $u$, and toward a contradiction suppose $ab\in I$ but $a,b\not\in I$.
+- Then $abu=0$ but $au\neq 0, bu\neq 0$.
+- Since $abu=0$, we have $a\in \Ann(bu)$.
+  Note that $\Ann(bu) \contains \Ann(u)$, since $su = 0\implies bsu=sbu=0$.
+- We can't have $\Ann(bu) = R$, since if $sbu=0$ for all $s\in R$, so we could take $s=1$ to get $bu=0$ and $b\in \Ann(u)$.
+- By maximality, this forces $\Ann(u) = \Ann(bu)$, so $sbu = 0 \implies su=0$ for any $s\in R$.
+- Now take $s=a$, and since $abu=0$ we get $au=0$ and $a\in \Ann(u)$. $\contradiction$
+
+:::
+
+
+:::
+
+### Fall 2019 #6 $\done$
+Let $R$ be a commutative ring with multiplicative identity. Assume Zorn's Lemma.
 
 a.
-Define a *Euclidean domain*.
+Show that
+$$
+N = \{r \in R \mid r^n = 0 \text{ for some } n > 0\}
+$$
+is an ideal which is contained in any prime ideal.
 
 b.
-Define a *unique factorization domain*.
+Let $r$ be an element of $R$ not in $N$.
+Let $S$ be the collection of all proper ideals of $R$ not containing any positive power of $r$. Use Zorn's Lemma to prove that
+there is a prime ideal in $S$.
 
 c.
-Is a Euclidean domain an UFD? 
-Give either a proof or a counterexample with justification.
+Suppose that $R$ has exactly one prime ideal $P$ . Prove that every element $r$ of $R$ is either nilpotent or a unit.
 
-d.
-Is a UFD a Euclidean domain?
-Give either a proof or a counterexample with justification.
+:::{.concept}
+\envlist
 
-## Spring 2021 #5 $\done$
+- Prime ideal: $\mathfrak{p}$ is prime iff $ab \in \mathfrak{p} \implies a\in \mathfrak{p}$ or $b\in \mathfrak{p}$.
+- Silly fact: 0 is in every ideal!
+ 
+- **Zorn's Lemma:** Given a poset, if every chain has an upper bound, then there is a maximal element. (Chain: totally ordered subset.)
+ 
+- **Corollary:** If $S\subset R$ is multiplicatively closed with $0\not\in S$ then $\theset{I \normal R \suchthat J\intersect S = \emptyset}$ has a maximal element.
 
-:::{.problem title="Spring 2021"}
-Suppose that $f(x) \in (\ZZ/n\ZZ)[x]$ is a zero divisor.
-Show that there is a nonzero $a\in \ZZ/n\ZZ$ with $af(x) = 0$.
+  \todo[inline]{Prove this}
+
+- **Theorem:** If $R$ is commutative, maximal $\implies$ prime for ideals.
+
+  \todo[inline]{Prove this}
+
+- **Theorem:** Non-units are contained in a maximal ideal. (See HW?)
+
 :::
 
 :::{.solution}
 \envlist
 
-- Write $f(x) = \sum_{k=0}^n a_k x^k$, and supposing it's a zero divisor choose $g(x) = \sum_{k=0}^m b_k x^k$ of minimal degree so that $g\neq 0, b_m\neq 0$, and $f(x)g(x) = 0$.
-- The claim is that the top coefficient $b_m$ will suffice.
-- Write the product:
-\[
-0 = f(x)g(x) 
-= (a_0 + \cdots + a_{n-1}x^{n-1} + a_n x^n)
-(b_0 + \cdots + b_{m-1}x^{m-1} + b_m x^m)
-.\]
-- Equating coefficients, the coefficient for $x^{m+n}$ must be zero, so (**importantly**) $a_n b_m = 0$.
-  - Since $a_n b_m=0$, consider $a_ng(x)$.
-    This has degree $d_1 \leq m-1$ but satisfies $a_ng(x)f(x) = a_n(g(x)f(x)) = 0$, so by minimality $a_ng(x) = 0$.
-  - This forces $a_n b_0 = \cdots = a_n b_{m-1} = 0$, so $a_n$ annihilates all of the $b_k$.
-- Now consider the coefficient of $x^{m+n-1}$, given by $a_{n-1}b_m + a_{n}b_{m-1}$.
-  - The second term $a_n b_{m-1}=0$ since $a_n$ annihilates all $b_k$, so (**importantly**) $a_{n-1} b_m = 0$.
-  - Considering now $a_{n-1}g(x)$:
-    - The same argument shows this has degree $d_2 \leq m-1$ but $a_{n-1}g(x)f(x) = 0$, so $a_{n-1}g(x) = 0$.
-    - So $a_{n-1}$ annihilates all $b_k$, and allowing this process to continue inductively.
-- For good measure, the coefficient of $x^{m+n-2}$ is $a_{n-2}b_m + a_{n-1}b_{m-1} + a_{n}b_{m-2}$.
-  - Note that $a_n, a_{n-1}$ annihilate all $b_k$, so (**importantly**) $a_{n-2} b_m=0$, and so on.
+:::{.proof title="of a"}
+\envlist
 
-- Thus $a_k b_m = 0$ for all $0\leq k \leq n$, and by linearity and commutativity, we have
-\[
-b_m f(x) = b_m \sum_{k=0}^n a_k x^k = \sum_{k=0}^n (b_m a_k) x^k = 0
-.\]
+- Let $\mathfrak{p}$ be prime and $x\in N$.
+- Then $x^k = 0 \in \mathfrak{p}$ for some $k$, and thus $x^k = x x^{k-1} \in \mathfrak p$.
+- Since $\mathfrak p$ is prime, inductively we obtain $x\in\mathfrak p$.
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Let $S = \theset{r^k \mid k\in \NN}$ be the set of positive powers of $r$. 
+
+- Then $S^2 \subseteq S$, since $r^{k_1}r^{k_2} = r^{k_1+k_2}$ is also a positive power of $r$, and $0\not\in S$ since $r\neq 0$ and $r\not\in N$.
+
+- By the corollary, $\theset{I \normal R \suchthat I\intersect S = \emptyset}$ has a maximal element $\mathfrak{p}$.
+
+- Since $R$ is commutative, $\mathfrak{p}$ is prime.
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Suppose $R$ has a unique prime ideal $\mathfrak{p}$.
+
+- Suppose $r\in R$ is not a unit, and toward a contradiction, suppose that $r$ is also not nilpotent.
+
+- Since $r$ is not a unit, $r$ is contained in some maximal (and thus prime) ideal, and thus $r \in \mathfrak{p}$.
+
+- Since $r\not\in N$, by (b) there is a maximal ideal $\mathfrak{m}$ that avoids all positive powers of $r$. 
+Since $\mathfrak{m}$ is prime, we must have $\mathfrak{m} = \mathfrak{p}$.
+  But then $r\not\in \mathfrak{p}$, a contradiction.
+
+:::
 
 :::
 
 
+## Noetherian Rings
 
-## Spring 2021 #6
+### Fall 2015 #4 $\done$
+Let $R$ be a PID and $(a_1) < (a_2) < \cdots$ be an ascending chain of ideals in $R$.
+Prove that for some $n$, we have $(a_j) = (a_n)$ for all $j\geq n$.
+
+:::{.solution}
+\envlist
+
+- Let $I\da \union Ra_i$ which is an ideal in a PID and thus $I = Rb$ for some $b$.
+- Using that $b\in I$, which is a union, we have $Rb\in Ra_m$ for some $m$.
+- Thus $I = R_b \subseteq Ra_m$, and $Ra_m \subseteq I$ by definition of $I$, so $Rb = Ra_m$.
+- In particular, since $Ra_{m} \subseteq Ra_{m+1}$ by assumption, and $Ra_{m+1} \subseteq Rb \subseteq Ra_m$ since $Rb = I$, we have $Ra_m = Ra_{m+1}$.
+  So inductively, the chain stabilizes at $m$.
+:::
+
+### Spring 2021 #6 $\work$
 
 a. 
 Carefully state the definition of **Noetherian** for a commutative ring $R$.
@@ -2839,46 +3135,190 @@ I \da \gens{S} = \sum_{k\in \ZZ_{\geq 1}} R\cdot 2x^k \da \ts{ \sum_{i=1}^m r_k(
 
 :::
 
+## Simple Rings
 
-# Fields and Galois Theory
-
-## $\star$ Fall 2016 #5 $\work$
-How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
-Justify your answer.
-
-
-## $\star$ Fall 2013 #7 $\work$
-Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
+### Fall 2017 #5 $\done$
+A ring \( R \) is called *simple* if its only two-sided ideals are $0$ and $R$.
 
 a.
-Show that $\bar F$ is not a finite extension of $F$.
+Suppose $R$ is a commutative ring with 1. Prove $R$ is simple if and only if $R$ is a field.
 
 b.
-Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
-Show that $F(\alpha)/F$ has degree 8.
+Let $k$ be a field. Show the ring $M_n (k)$, $n \times n$ matrices with entries in $k$, is a simple ring.
 
-## Fall 2019 #4 $\done$
-Let $F$ be a finite field with $q$ elements.
-Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
-Let $E = F [\omega]$ and let $k = [E : F]$.
-
-a.
-Prove that $n$ divides $q^{k}-1$.
-
-b. 
-Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
-Prove that $m$ divides $k$.
-
-c.
-Prove that $m = k$.
-
-\todo[inline]{Revisit, tricky!}
 
 :::{.concept}
 \envlist
 
-- $\FF\units$ is always cyclic for $\FF$ a field.
-- Lagrange: $H\leq G \implies \#H \divides \# G$.
+- Nonzero proper ideals contain at least one nonzero element.
+- $I=R$ when $1\in I$.
+- Effects of special matrices: let $A_{ij}$ be a matrix with only a 1 in the $ij$ position.
+  - Left-multiplying $A_{ij}M$ moves row $j$ to row $i$ and zeros out the rest of $M$.
+  - Right-multiplying $MA_{ij}$ moves column $i$ to column $j$ and zeros out the rest.
+  - So $A_{ij} M A_{kl}$ moves entry $j, k$ to $i, l$ and zeros out the rest.
+:::
+
+:::{.solution}
+
+:::{.proof title="of a"}
+$\implies$:
+
+- Suppose $\Id(R) = \ts{\gens{0}, \gens{1}}$.
+  Then for any nonzero $r\in R$, the ideal $\gens{r} = \gens{1}$ is the entire ring.
+- In particular, $1\in \gens{r}$, so we can write $a = tr$ for some $t\in R$.
+- But then $r\in R\units$ with $t\da r\inv$.
+
+$\impliedby$:
+
+- Suppose $R$ is a field and $I\in \Id(R)$ is an ideal.
+- If $I \neq \gens{0}$ is proper and nontrivial, then $I$ contains at least one nonzero element $a\in I$.
+- Since $R$ is a field, $a\inv \in R$, and $aa\inv = 1\in I$ forces $I = \gens{1}$.
+
+:::
+
+:::{.proof title="of b"}
+
+- Let $J\normal R$ be a nonzero two-sided ideal, noting that $R$ is noncommutative -- the claim is that $J$ contains $I_n$, the $n\times n$ identity matrix, and thus $J = R$.
+- Pick a nonzero element $M\in I$, then $M$ has a nonzero entry $m{ij}$.
+- Let $A_{ij}$ be the matrix with a 1 in the $i,j$ position and zeros elsewhere.
+  - Left-multiplying $A_{ij}M$ moves row $j$ to row $i$ and zeros out the rest of $M$.
+  - Right-multiplying $MA_{ij}$ moves column $i$ to column $j$ and zeros out the rest.
+  - So $A_{ij} M A_{kl}$ moves entry $j, k$ to $i, l$ and zeros out the rest.
+- So define $B \da A_{i, i}MA_{j, i}$, which movies $m_{ij}$ to the $i,i$ position on the diagonal and has zeros elsewhere.
+- Then $m_{ij}\inv \eps_{ii} \da A_{ii}$ is a matrix with $1$ in the $i, i$ spot for any $i$.
+  Since $I$ is an ideal, we have $\eps_{ii}\in I$ for every $i$.
+- We can write the identity $I_n$ as $\sum_{i=1}^n \eps_{ii}$, so $I_n \in I$ and $I=R$.
+
+:::
+
+:::
+
+### Spring 2016 #8 $\done$
+Let $R$ be a simple rng (a nonzero ring which is not assume to have a 1, whose only two-sided ideals are $(0)$ and $R$) satisfying the following two conditions:
+
+i. $R$ has no zero divisors, and
+ii. If $x\in R$ with $x\neq 0$ then $2x\neq 0$, where $2x\definedas x+x$.
+
+Prove the following:
+
+a.
+For each $x\in R$ there is one and only one element $y\in R$ such that $x = 2y$.
+
+b.
+Suppose $x,y\in R$ such that $x\neq 0$ and $2(xy) = x$, then $yz = zy$ for all $z\in R$.
+
+> You can get partial credit for (b) by showing it in the case $R$ has a 1.
+
+
+:::{.remark}
+A general opinion is that this is not a great qual problem! 
+Possibly worth skipping.
+:::
+
+
+:::{.concept}
+\envlist
+
+- $R$ has no left zero divisors iff $R$ has the left cancellation property: $xa=xb \implies a=b$.
+- $R$ has no right zero divisors iff $R$ has the right cancellation property: $ax=bx \implies a=b$.
+:::
+
+:::{.solution}
+Note: solutions borrowed from folks on Math twitter!
+
+:::{.proof title="part 1"}
+\envlist
+
+- Existence: the claim is that $2R \da \ts{2y \st y\in R}$ is a nontrivial two-sided ideal of $R$, forcing $2R = R$ by simpleness.
+  - That $2R \neq 0$ follows from condition (1):
+  Provided $y\neq 0$, we have $2y\neq 0$, and so if $R\neq 0$ then there exists some nonzero $a\in R$, in which case $2a\neq 0$ and $2a\in 2R$.
+  - That $2R$ is a right ideal: clear, since $(2y)\cdot r = 2(yr)\in 2R$.
+  - That $2R$ is a left ideal: use that multiplication is distributive:
+  \[
+  r\cdot 2y \da r(y+y) = ry + ry \da 2(ry) \in 2R
+  .\]
+- So $2R = R$ by simpleness.
+- Uniqueness: 
+  - Use the contrapositive of condition (1), so that $2x = 0 \implies x=0$.
+  - Suppose toward a contradiction that $x=2y_1 = 2y_2$, then
+  \[
+  0 = x-x = 2y_1 - 2y_2 = 2(y_1 - y_2) \implies y_1 - y_2 = 0 \implies y_1 = y_2
+  .\]
+:::
+
+:::{.proof title="part 2"}
+\envlist
+
+- First we'll show $z=2(yz)$:
+\[
+xy + xy &= x \\
+\implies xy + xy - x &= 0 \\
+\implies xyz + xyz - xz &= 0 \\
+\implies x(yz + yz - z) &= 0 \\
+\implies yz + yz - z &= 0 && \text{since } x\neq 0 \text{ and no zero divisors }\\
+\implies 2(yz) &= z 
+.\]
+
+- Now we'll show $z=2(zy)$:
+\[
+yz + yz &= z \\
+\implies zyz + zyz &= zz \\
+\implies zyz + zyz - zz &= 0 \\
+\implies (zy + zy - z)z &= 0\\
+\implies z=0 \text{ or } zy+zy-z &= 0 && \text{ no zero divisors } 
+.\]
+
+- Then if $z=0$, we have $yz = 0 = zy$ and we're done.
+- Otherwise, $2(zy) = z$, and thus
+\[
+2(zy) = z = 2(yz) \implies 2(zy - yz) = 0 \implies zy-yz = 0
+,\]
+so $zy=yz$.
+:::
+
+:::{.proof title="of 2, if $R$ is unital"}
+\envlist
+
+- If $1\in R$, 
+\[
+2xy &= x \\
+\implies 2xy-x &= 0 \\
+\implies x(2y-1) &= 0 \\
+\implies 2y-1 &= 0 && x\neq 0 \text{ and no zero divisors}\\
+\implies 2y &= 1
+.\]
+- Now use
+\[
+1\cdot z &= z\cdot 1 \\
+\implies (2y)z &= z(2y) \\
+\implies (y+y)z &= z(y+y) \\
+\implies yz+yz &= zy+zy \\
+\implies 2(yz) &= 2(zy) \\
+\implies 2(yz-zy) &= 0 \\
+\implies yz-zy &= 0 \\
+,\]
+using condition (2).
+:::
+
+:::
+
+## Unsorted
+
+### Fall 2019 #3 $\done$
+Let $R$ be a ring with the property that for every $a \in R, a^2 = a$.
+
+a.
+Prove that $R$ has characteristic 2.
+
+b.
+Prove that $R$ is commutative.
+
+
+:::{.strategy}
+\envlist
+
+- Just fiddle with direct computations.
+- Context hint: that we should be considering things like $x^2$ and $a+b$.
 
 :::
 
@@ -2886,53 +3326,852 @@ Prove that $m = k$.
 \envlist
 
 :::{.proof title="of a"}
-\envlist
-
-- Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
-
-- Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
-
+\[
+2a  = (2a)^2 = 4a^2 = 4a \implies 2a = 0
+.\]
+Note that this implies $x = -x$ for all $x\in R$.
 :::
 
 :::{.proof title="of b"}
-\envlist
-
-- Rephrasing (a), we have 
 \[
-n \divides q^k-1 
-&\iff q^k-1 \cong 0 \mod n \\
-&\iff q^k \cong 1 \mod n \\
-&\iff m \definedas o(q) \divides k
+a+b = (a+b)^2 &= a^2 + ab + ba + b^2 = a + ab + ba + b \\
+&\implies ab + ba = 0 \\
+&\implies ab = -ba \\
+&\implies ab = ba \quad\text{by (a)}
 .\]
 
 :::
 
-:::{.proof title="of c"}
+:::
+
+
+### Spring 2018 #5 $\done$
+Let 
+\[
+M=\left(\begin{array}{ll}{a} & {b} \\ {c} & {d}\end{array}\right)
+\quad \text{and} \quad 
+N=\left(\begin{array}{cc}{x} & {u} \\ {-y} & {-v}\end{array}\right)
+\]
+
+over a commutative ring $R$, where $b$ and $x$ are units of $R$. 
+Prove that
+\[
+M N=\left(\begin{array}{ll}{0} & {0} \\ {0} & {*}\end{array}\right)
+\implies MN = 0
+.\]
+
+:::{.solution}
 \envlist
 
-- Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
+- Multiply everything out to get
 \[
-E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+\matt{ax-by}{au-bv}{cx-dy}{cu-dv}
+,\]
+  so it suffices to show $cu=dv$ given
+  \[
+  ax &= by \\
+  cx &= dy \\
+  au &= bv
+  .\]
+
+- Writing $cu$:
+  - Use that $b\in R\units$, left-multiply (1) by $b\inv$ to get $b\inv a x = y$
+  - Substitute $y$ into (2) to get $cx = d(b\inv a x)$.
+  - Since $x\in R\units$, right-multiply by $x\inv$ to get $c = db\inv a$ and thus $cu = db\inv a u$.
+  - Summary:
+  \[
+  ax = by 
+  &\implies b\inv ax = y \\
+  &\implies cx = dy = d(b\inv a x) \\
+  &\implies c = db\inv a \\
+  &\implies cu = db\inv au 
+  .\]
+
+- Writing $dv$:
+  - Left-multiply (3) by $b\inv$ to get $b\inv au = v$.
+  - Left-multiply by $d$ to get $db\inv au = dv$
+  - Summary:
+  \[
+  au = bv 
+  &\implies b\inv a u = v \\
+  &\implies db\inv au = dv
+  .\]
+
+- So 
+\[
+cu = db\inv a u = dv
+.\]
+
+:::
+
+
+
+
+### Spring 2014 #6 $\work$
+ $R$ be a commutative ring with identity and let $n$ be a positive integer.
+
+a.
+Prove that every surjective $R\dash$linear endomorphism $T: R^n \to R^n$ is injective.
+
+b.
+Show that an injective $R\dash$linear endomorphism of $R^n$ need not be surjective.
+
+
+
+# Galois Theory 
+
+## General Galois Extensions
+
+### Fall 2020 #4 $\done$
+Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
+Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
+Prove that \( [E: F] \equiv 1 \mod p \).
+
+:::{.concept}
+The correspondence:
+
+\begin{tikzcd}
+	K &&&& 1 \\
+	\\
+	E &&&& {H \da \Gal(K/E)\hspace{4em}} \\
+	\\
+	F &&&& {G \da \Gal(K/F)\hspace{4em}}
+	\arrow["{[E:F]}", hook, from=5-1, to=3-1]
+	\arrow["{[K:E]}", hook, from=3-1, to=1-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{[K:F]}"', curve={height=30pt}, hook, from=5-1, to=1-1]
+	\arrow["{[H:1]}"', hook, from=1-5, to=3-5]
+	\arrow["{[G:H]}"', hook, from=3-5, to=5-5]
+	\arrow["{[G:1]}", curve={height=-30pt}, hook, from=1-5, to=5-5]
+	\arrow["{\Gal(K/\wait)}"', shift right=5, shorten <=18pt, Rightarrow, from=0, to=3-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwyLCJFIl0sWzAsMCwiSyJdLFswLDQsIkYiXSxbNCwwLCIxIl0sWzQsMiwiSCBcXGRhIFxcR2FsKEsvRSlcXGhzcGFjZXs0ZW19Il0sWzQsNCwiRyBcXGRhIFxcR2FsKEsvRilcXGhzcGFjZXs0ZW19Il0sWzIsMCwiW0U6Rl0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFswLDEsIltLOkVdIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJbSzpGXSIsMix7ImN1cnZlIjo1LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsIltIOjFdIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCJbRzpIXSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsNSwiW0c6MV0iLDAseyJjdXJ2ZSI6LTUsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzgsNCwiXFxHYWwoSy9cXHdhaXQpIiwyLHsib2Zmc2V0Ijo1LCJzaG9ydGVuIjp7InNvdXJjZSI6MjB9fV1d)
+
+Normalizers:
+\[
+N_G(P) = \ts{g\in G \st gPg\inv = P}
+.\]
+
+:::
+
+:::{.solution}
+\envlist
+
+- Reduce to a group theory problem: $[E:F] = [G:H]$, despite the fact that $E/F$ is not necessarily Galois.
+  This is because we can count in towers:
+  \[
+  [K:F] = [K:E][E:F] &\implies [G:1] = [K:E][H:1] \\
+  &\implies \# G = [K:E] \# H \\
+  &\implies [G:H] = {\# G \over \# H} = [K:E]
+  .\]
+
+- Essential fact: if $P \in \Syl_p(G)$, we can use that $P \subseteq N_G(P) \subset H$ and so $P\in \Syl_p(H)$ as well.
+- Now use that $N_G(P) \subseteq H$, and do Sylow theory for $P$ in both $G$ and $H$:
+  - Sylow 3 on $G$ yields $n_p(G) = [G: N_G(P)] \equiv 1 \mod p$.
+  - Sylow 3 on $H$ yields $n_p(H) = [G: N_H(P)] \equiv 1 \mod p$.
+- Claim: $N_H(P) = N_G(P)$.
+  - We have $N_H(P) \subseteq N_G(P)$ since $H \subseteq G$, so $hPh\inv = P$ remains true regarding either $h\in H$ or $h\in G$.
+  - For $N_G(P) \subseteq N_H(P)$, use that $N_G(P) \subseteq H$ and so $gPg\inv = P$ implies $g\in H$, so $g\in N_H(P)$.
+
+- Now morally one might want to apply an isomorphism theorem:
+\[
+{G/ N_G(P) \over H/N_H(P)}=
+{G/ N_H(P) \over H/N_H(P)}\cong
+{G\over H}
+,\]
+  but we don't have normality.
+  However, we can still get away with the corresponding counting argument if everything is finite:
+  \[
+  {[G: N_G(P)] \over [H:N_H(P)] }=
+  {[G: N_H(P)] \over [H:N_H(P)] }=
+  {\# G / \# N_H(P) \over \# H / \#N_H(P)}
+  = {\# G \over \# H} 
+  = [G: H]
+  .\]
+
+- We have an equation of the form $n_p(G)/n_p(H) = m$, and we want to show $m\equiv 1 \mod p$.
+  So write
+  \[
+  {n_p(G) \over n_p(H) } 
+  = m \implies m n_p(H) &= n_p(G) \\
+  \implies m n_p(H) &\equiv n_p(G) \mod p \\
+  \implies m\cdot 1 &\equiv 1 \mod p \\
+  \implies m &\equiv 1 \mod p
+  .\]
+
+:::
+
+### Fall 2019 Midterm #9  $\done$
+Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(\zeta_n + \zeta_n\inv): \QQ] = \phi(n)/2$ for $\phi$ the totient function.
+
+:::{.solution}
+\envlist
+
+- Some notation: let $\alpha_k \da \zeta_n^k + \zeta_n^{-k}$.
+- Let $m(x)$ be the minimal polynomial of $\alpha_1 \da \zeta_n + \zeta_n\inv$.
+  Note that $\alpha_1 \in \QQ(\zeta_n)$. 
+- Use that $\Gal(\QQ(\zeta_n)/\QQ) \cong C_n\units$, consisting of maps $\sigma_k: \zeta \mapsto \zeta^k$ for $\gcd(k, n) = 1$, of which there are $\phi(n)$ many.
+- Galois transitively permutes the roots of irreducible polynomials, so the roots of $m$ are precisely the Galois conjugates of $\alpha$, i.e. the Galois orbit of $\alpha$, so we can just compute it.
+  For illustrative purposes, suppose $n$ is prime, then
+  \[
+  \sigma_1(\zeta_n + \zeta_n\inv) &= \zeta_n + \zeta_n\inv =\alpha_1 \\
+  \sigma_2(\zeta_n + \zeta_n\inv) &= \zeta_n^2 + \zeta_n^{-2} = \alpha_2 \\
+  \sigma_3(\zeta_n + \zeta_n\inv) &= \zeta_n^3 + \zeta_n^{-3} = \alpha_3 \\
+  \vdots&\\
+  \sigma_{n-1}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-1} + \zeta_n^{-(n-1)} = \zeta_n^{-1} + \zeta_n^{1} = \alpha_1 \\
+  \sigma_{n-2}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-2} + \zeta_n^{-(n-2)} = \zeta_n^{-2} + \zeta_n^{2} = \alpha_2 \\
+  \sigma_{n-3}(\zeta_n + \zeta_n\inv) &= \zeta_n^{n-3} + \zeta_n^{-(n-3)} = \zeta_n^{-3} + \zeta_n^{3} = \alpha_3
+  ,\]
+  where we've used that $\zeta^{k} = \zeta^{k\mod n}$.
+  From this, we see that $\sigma_{k}(\alpha_1)=\sigma_{n-k}(\alpha_1)$ and we pick up $(n-1)/2$ distinct conjugates.
+
+- For $n$ not prime, the exact same argument runs through $\phi(n)$ values of $k$ for $\sigma_k$, and again yields $\sigma_{k}(\alpha_1) = \sigma_{\phi(n) - k}(\alpha_1)$.
+  Matching them up appropriately yields $\phi(n)/2$ distinct roots.
+:::
+
+
+### Fall 2019 Midterm #10 $\done$
+Let $L/K$ be a finite normal extension.
+
+a.
+Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
+
+b.
+Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
+
+:::{.solution}
+The setup:
+
+\begin{tikzcd}
+	L &&&& 1 \\
+	\\
+	E &&&& {H\da \Gal(L/E)\hspace{4em} } \\
+	\\
+	K &&&& {G\da \Gal(L/K) = C_n}
+	\arrow[from=1-5, to=3-5]
+	\arrow["n", from=3-5, to=5-5]
+	\arrow["n"', from=5-1, to=3-1]
+	\arrow["g", from=3-1, to=1-1]
+	\arrow["g", curve={height=-30pt}, from=5-1, to=1-1]
+	\arrow[curve={height=-30pt}, from=1-5, to=5-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMCwwLCJMIl0sWzAsMiwiRSJdLFswLDQsIksiXSxbNCwwLCIxIl0sWzQsMiwiSFxcZGEgXFxHYWwoTC9FKSJdLFs0LDQsIkdcXGRhIFxcR2FsKEwvSykgPSBDX24iXSxbMyw0XSxbNCw1LCJuIl0sWzIsMSwibiIsMl0sWzEsMCwiZyJdLFsyLDAsImciLDAseyJjdXJ2ZSI6LTV9XSxbMyw1LCIiLDIseyJjdXJ2ZSI6LTV9XV0=)
+
+
+Part 1:
+
+- $L/K$ is cyclic means $L/K$ is Galois and $G\da \Gal(L/K) = C_n$ for some $n$.
+- By the FTGT, setting $H \da \Gal(L/E)$, we get $H \normal G$ precisely because $E/K$ is normal, and $\Gal(L/E) = G/H$.
+- But then if $G$ is cyclic, $H \leq G$ must be cyclic, and $G/H$ is cyclic as well since writing $G = C_n = \gens{x}$, we have $G/H = \gens{xH}$.
+
+Part 2:
+
+- Letting $G\da\Gal(L/K) = C_n$, by elementary group theory we have subgroups $H\da C_d \leq C_n$ for every $d$ dividing $n$.
+  - A observation we'll need: every subgroup is normal here since $G$ is abelian.
+- By the fundamental theorem, taking the fixed field of $H \leq \Gal(L/K)$, we obtain some intermediate extension $E\da K^H$ fitting into a tower $L/E/K$.
+- By the fundamental theorem, $[E: K] = [G:H] = n/d$, where we've used that $H\normal G$.
+- Letting $d$ range through divisors lets $n/d$ range through divisors, so we get extensions of every degree $d$ dividing $n$.
+:::
+
+
+### Fall 2019 Midterm #8  $\work$
+Let $k$ be a field of characteristic $p\neq 0$ and $f\in k[x]$ irreducible. 
+Show that $f(x) = g(x^{p^d})$ where $g(x) \in k[x]$ is irreducible and separable. 
+
+Conclude that every root of $f$ has the same multiplicity $p^d$ in the splitting field of $f$ over $k$.
+
+### Fall 2019 Midterm #7  $\work$
+Show that a field $k$ of characteristic $p\neq 0$ is perfect $\iff$ for every $x\in k$ there exists a $y\in k$ such that $y^p=x$.
+
+### Spring 2012 #4 $\work$
+Let $f(x) = x^7 - 3\in \QQ[x]$ and $E/\QQ$ be a splitting field of $f$ with $\alpha \in E$ a root of $f$.
+
+a.
+Show that $E$ contains a primitive 7th root of unity.
+
+b.
+Show that $E\neq \QQ(\alpha)$.
+
+### Fall 2013 #5 $\done$
+Let $L/K$ be a finite extension of fields.
+
+a.
+Define what it means for $L/K$ to be *separable*.
+
+b.
+Show that if $K$ is a finite field, then $L/K$ is always separable.
+
+c.
+Give an example of a finite extension $L/K$ that is not separable.
+
+
+:::{.solution}
+\envlist
+
+- $L/k$ is **separable** iff every element $\alpha$ is separable, i.e. the minimal polynomial $m(x)$ of $\alpha$ is a separable polynomial, i.e. $m(x)$ has no repeated roots in (say) the algebraic closure of $L$ (or just any splitting field of $m$).
+
+- If $\ch k = p$, suppose toward a contradiction that $L/k$ is not separable.
+  Then there is some $\alpha$ with an inseparable (and irreducible) minimal polynomial $f(x)\in k[x]$.
+- Claim: since $f$ is inseparable and irreducible, $f(x) = g(x^p)$ for some $g\in k[x]$.
+  - Note: write $g(x) \da \sum a_k x^k$, so that $f(x) = \sum a_k (x^p)^k = \sum a_k x^{pk}$.
+- This is a contradiction, since it makes $f$ reducible by using the "Freshman's dream":
+\[
+f(x) = \sum a_k x^{pk} = \qty{ \sum a_k^{1\over p} x^k}^p \da (h(x))^p 
+.\]
+
+- Proof of claim: in $\ch k = p, f$ inseparable $\implies f(x) = g(x^p)$. 
+  - Use that $f$ is inseparable iff $\gcd(f, f') \neq 1$, and since $f$ is irreducible this forces $f' \equiv 0$, so $ka_k = 0$ for all $k$.
+  - Then $a_k\neq 0$ forces $p\divides k$, so $f(x) = a_0 + a_px^p + a_{2p}x^{2p} + \cdots$ and one takes $g(x) \da \sum a_{kp}x^{kp}$.
+
+- A finite inseparable extension:
+  - It's a theorem that finite extensions of perfect fields are separable, so one needs a non-perfect field.
+  - Take $L/k \da \FF_p(t^{1\over p}) / \FF_p(t)$, which is a degree $p$ extension (although both fields are infinite are characteristic $p$).
+  - Then the minimal polynomial of $t$ is $f(x) \da x^p - t \in \FF_p(t)[x]$, where $f'(x) = px^p \equiv 0$
+    Alternatively, just note that $f$ factors as $f(x) = (x-t^{1\over p})^p$ in $L[x]$, which has multiple roots.
+:::
+
+
+### Fall 2012 #4 $\work$
+Let $f(x) \in \QQ[x]$ be a polynomial and $K$ be a splitting field of $f$ over $\QQ$.
+Assume that $[K:\QQ] = 1225$ and show that $f(x)$ is solvable by radicals.
+
+## Galois Groups: Concrete Computations
+
+### Exercise: $G(x^2-2)$
+
+:::{.exercise title="?"}
+Compute the Galois group of $x^2-2$.
+:::
+
+
+:::{.solution}
+$\ZZ/2\ZZ$?
+:::
+
+
+
+### Exercise: $G(x^p-2)$
+
+:::{.exercise title="?"}
+Let $p \in \mathbb{Z}$ be a prime number.
+Then describe the elements of the Galois group of the polynomial $x^{p}-2$.
+:::
+
+:::{.solution}
+$\QQ(2^{1\over p}, \zeta_p)$, which has degree $p(p-1)$ and is generated by the maps
+\[
+\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
+\zeta & \mapsto \zeta^{b}
+.\]
+
+:::
+
+### Fall 2020 #3 $\work$
+
+a. Define what it means for a finite extension of fields $E$ over $F$ to be a *Galois* extension.
+
+b. Determine the Galois group of $f(x) = x^3 - 7$ over $\QQ$, and justify your answer carefully.
+
+c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
+
+
+:::{.solution}
+Part a:
+
+- A finite extension $E/F$ is **Galois** if it is normal and separable:
+  - Normal: every $f\in F[x]$ either has no roots in $E$ or all roots in $E$.
+  - Separable: every element $e\in E$ has a separable minimal polynomial $m(x)$, i.e. $m$ has no repeated roots.
+
+Part b:
+
+- Note $f$ is irreducible by Eisenstein with $p=7$, and since $\QQ$ is perfect, irreducible implies separable.
+- Writing $L \da \SF(f)/\QQ$, this is a Galois extension:
+  - $L$ is separable: it is a finite extension of a perfect field, which is automatically separable.
+  - $L$ is normal: $L$ is the splitting field of a separable polynomial, and thus normal.
+- Since $f$ is degree 3, we have $G\da \Gal(L/k) \leq S_3$, and since $G$ is a transitive subgroup the only possibilities are
+\[
+G = S_3 \cong D_3, A_3 \cong C_3
+.\]
+
+- Factor $x^3 - 7 = (x-\omega)(x-\zeta_3\omega)(x-\zeta_3^2\omega)$ where $\omega \da 7^{1\over 3}$ and $\zeta_3$ is a primitive 3rd root of unity.
+  Then $L = \QQ(\zeta_3, \omega)$.
+  - Aside: label the roots in this order, so $r_1 = \omega, r_2 = \zeta_3\omega, r_3 = \zeta_3^2\omega$.
+
+- Write $\min_{\omega, \QQ}(x) = x^3 - 7$ and let $L_0/\QQ \da \QQ(\omega)/\QQ$ yields $[L_0: \QQ] = 3$.
+- Write $\min_{\zeta_3, \QQ}(x) = (x^3-1)/(x-1) = x^2 + x + 1$, and note that this is still the minimal polynomial over $L_0$ since $L_0 \subseteq \RR$ and $\zeta_3 \in \CC\sm\RR$.
+  So $[L:L_0] = 2$.
+
+- Counting in towers,
+\[
+[L:\QQ] = [L:L_0][L_0: \QQ] = (2)(3) = 6
+.\]
+- But $\# S_3 = 6$ and $\# A_3 = 3$, so $G = S_3$.
+
+- Explicitly, since we can write $\SF(f) = \QQ(\omega, \zeta_3)$, we can find explicit generators:
+\[
+\sigma:
+&\begin{cases}
+\omega &\mapsto \omega
+&  
+\\
+\zeta_3 &\mapsto \zeta_3\cdot \zeta_3.
+\end{cases}
+&&
+\implies \sigma \sim (1,2,3) \\
+\tau:
+&\begin{cases}
+\omega &\mapsto \omega
+&  
+\\
+\zeta_3 &\mapsto \bar{\zeta_3}.
+\end{cases}
+&&
+\implies \tau \sim (2, 3)
+.\]
+  So $G = \gens{\sigma, \tau \st \sigma^3, \tau^2}$.
+
+Part c:
+
+- Note that the subgroup lattice for $S_3$ looks like the following:
+
+
+![](figures/2021-08-14_18-00-51.png)
+
+- Note that we can identify
+  - $\tau = (2,3)$ which fixes $r_1$
+  - $\sigma \tau = (1,2)$ which fixes $r_3$
+  - $\sigma^2\tau = (1, 3)$ which fixes $r_2$
+  - $\sigma = (1,2,3)$, for which we need to calculate the fixed field.
+  Using that $\sigma(\omega) =\zeta\omega$ and $\sigma(\zeta)=\zeta$,
+  supposing $\sigma(\alpha) = \alpha$ we have
+  \[
+  \sigma(\alpha) &\da \sigma(a + b\zeta_3 + c\zeta_3^2 + d\omega + e\zeta_3\omega + f\zeta_3^2\omega) \\
+  &= a + b\zeta_3 + c\zeta_3^2 + d\zeta_3\omega + e\zeta_3^2\omega + f\omega \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1(\omega + \zeta_3\omega + \zeta_3^2\omega) \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 + t_1\omega (1 + \zeta_3+ \zeta_3^2) \\
+  \implies \alpha &= a + b\zeta_3 + c\zeta_3^2 
+  ,\]
+  using the general fact that $\sum_{k=0}^{n-1}\zeta_n^k = 0$.
+  So the fixed field is $\QQ(1, \zeta, \zeta^2) = \QQ(\zeta)$.
+
+- We thus get the following lattice correspondence:
+
+\begin{tikzcd}
+	&& {\QQ(\zeta_3,\omega)} \\
+	\\
+	{\QQ(\omega) = \QQ(r_1)} & {\QQ(\zeta_3\omega) = \QQ(r_2)} & {\QQ(\zeta_3^2\omega) = \QQ(r_3)} && {\QQ(\zeta_3)} \\
+	\\
+	&& \QQ \\
+	&& 1 \\
+	\\
+	{\gens{(2,3) = \tau} \cong C_2} & {\gens{(1,3) = \sigma^2\tau} \cong C_2} & {\gens{(1,2) = \sigma\tau} \cong C_2} && {\gens{(1,2,3) = \sigma} \cong C_3} \\
+	\\
+	&& {\gens{\sigma, \tau}\cong S_3}
+	\arrow["3"{description}, from=5-3, to=3-1]
+	\arrow["3"{description}, from=5-3, to=3-3]
+	\arrow["2"{description}, from=3-1, to=1-3]
+	\arrow["2"{description}, from=3-2, to=1-3]
+	\arrow["2"{description}, from=3-3, to=1-3]
+	\arrow["2"{description}, from=5-3, to=3-5]
+	\arrow["3"{description}, from=3-5, to=1-3]
+	\arrow["3"{description}, from=5-3, to=3-2]
+	\arrow["2"{description}, from=6-3, to=8-1]
+	\arrow["3"{description}, from=8-1, to=10-3]
+	\arrow["3"{description}, from=8-3, to=10-3]
+	\arrow["2"{description}, from=6-3, to=8-3]
+	\arrow["3"{description}, from=6-3, to=8-5]
+	\arrow["2"{description}, from=8-5, to=10-3]
+	\arrow["3"{description}, from=8-2, to=10-3]
+	\arrow["2"{description}, from=6-3, to=8-2]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHpldGFfMyxcXG9tZWdhKSJdLFswLDIsIlxcUVEoXFxvbWVnYSkgPSBcXFFRKHJfMSkiXSxbMiwyLCJcXFFRKFxcemV0YV8zXjJcXG9tZWdhKSA9IFxcUVEocl8zKSJdLFsyLDQsIlxcUVEiXSxbMSwyLCJcXFFRKFxcemV0YV8zXFxvbWVnYSkgPSBcXFFRKHJfMikiXSxbNCwyLCJcXFFRKFxcemV0YV8zKSJdLFswLDcsIlxcZ2Vuc3soMiwzKSA9IFxcdGF1fSBcXGNvbmcgQ18yIl0sWzIsOSwiXFxnZW5ze1xcc2lnbWEsIFxcdGF1fVxcY29uZyBTXzMiXSxbMiw1LCIxIl0sWzIsNywiXFxnZW5zeygxLDIpID0gXFxzaWdtYVxcdGF1fSBcXGNvbmcgQ18yIl0sWzQsNywiXFxnZW5zeygxLDIsMykgPSBcXHNpZ21hfSBcXGNvbmcgQ18zIl0sWzEsNywiXFxnZW5zeygxLDMpID0gXFxzaWdtYV4yXFx0YXV9IFxcY29uZyBDXzIiXSxbMywxLCIzIiwxXSxbMywyLCIzIiwxXSxbMSwwLCIyIiwxXSxbNCwwLCIyIiwxXSxbMiwwLCIyIiwxXSxbMyw1LCIyIiwxXSxbNSwwLCIzIiwxXSxbMyw0LCIzIiwxXSxbOCw2LCIyIiwxXSxbNiw3LCIzIiwxXSxbOSw3LCIzIiwxXSxbOCw5LCIyIiwxXSxbOCwxMCwiMyIsMV0sWzEwLDcsIjIiLDFdLFsxMSw3LCIzIiwxXSxbOCwxMSwiMiIsMV1d)
+
+
+
+:::
+
+
+### Spring 2021 #4 $\work$
+
+Define
+\[
+f(x) \da x^4 + 4x^2 + 64 \in \QQ[x]
+.\]
+
+a. Find the splitting field $K$ of $f$ over $\QQ$.
+
+b. Find the Galois group $G$ of $f$.
+
+c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+
+:::{.concept}
+\envlist
+
+- Useful trick: given $a + \sqrt{b}$, try to rewrite this as $(\sqrt{c} + \sqrt{d})^2$ for some $c, d$ to get a better basis for $\SF(f)$.
+:::
+
+
+:::{.solution}
+\envlist
+
+- First consider $g(z) \da z^2 + 4z + 64$.
+  Applying the quadratic formula yields
+  \[
+  z = {-4 \pm \sqrt{16 - 64} \over 2} = -2 \pm {1\over 2}\sqrt{ -15 \cdot 16 } = -2 \pm 2i \sqrt{15}
+  .\]
+- Substituting $z=x^2$ yields the splitting field of $f$ as $L\da \QQ(\pm \sqrt{ -2 \pm 2i\sqrt{15}})$.
+
+  - Note that this factorization shows that $f$ is irreducible over $\QQ$, since the two quadratic factors have irrational coefficients and none of the roots are real.
+  - Irreducible implies separable over a perfect field, so $L/\QQ$ is a separable extension.
+  - $L$ is the splitting field of a separable polynomial and thus normal, making $L$ Galois.
+
+- In this form, it's not clear what the degree $[L:\QQ]$ is, so we can find a better basis by rewriting the roots of $g$:
+\[
+z = -2 \pm 2i\sqrt{15} = \qty{\sqrt{5}}^2 - \qty{\sqrt 3}^2 \pm 2i\sqrt{5}\sqrt{3} = (\sqrt 5 \pm i\sqrt{3})^2
+,\]
+and so the roots of $f$ are $x = \pm \sqrt{5} \pm i\sqrt{3}$ and $L = \QQ(\sqrt 5, i\sqrt 3)$.
+
+- Counting in towers, 
+\[
+[L:\QQ] = [\QQ(\sqrt 5, i \sqrt{3} ) : \QQ \sqrt{5} ][\QQ \sqrt{5} : \QQ] = (2)(2) = 4
+,\]
+where we've used that $\min_{\sqrt 5, \QQ}(x) = x^2-5$ and $\min_{i\sqrt 3, \QQ}(x) = x^2 + 3$, which remains the minimal polynomial over $\QQ(\sqrt 5) \subseteq \RR$ since both roots are not real.
+
+- So $G\da \Gal(L/\QQ) \leq S_4$ is a transitive subgroup of size 4, making it either $C_4$ or $C_2^2$.
+
+- Label the roots:
+\[
+r_1 &= \sqrt 5 + i\sqrt 3 \\
+r_2 &= \sqrt{5} - i \sqrt{3} \\
+r_3 &= - \sqrt 5 + i\sqrt 3 = -r_2 \\
+r_4 &= -\sqrt{5} - i\sqrt{3} = -r_1
+.\]
+
+
+- We can start writing down automorphisms: 
+\[
+\sigma_1:
+\begin{cases}
+\sqrt 5 &\mapsto -\sqrt 5  
+\\
+i\sqrt 3 &\mapsto i\sqrt 3 .
+\end{cases}
+&& \sigma_1 \sim (1,3)(2,4)
+\\
+\sigma_2
+\begin{cases}
+\sqrt 5 &\mapsto \sqrt 5  
+\\
+i\sqrt 3 &\mapsto -i\sqrt 3 .
+\end{cases}
+&& \sigma_2 \sim (1, 2)(3, 4)
+.\]
+  Note that these define automorphisms because we've specified what happens to a basis and they send roots to other roots.
+
+- Checking that $\sigma_1^2 = \sigma_2^2 = \id$, this produces two distinct order 2 elements, forcing $G \cong C_2^2$ since $C_4$ only has one order 2 element.
+  Explicitly, we have
+\[
+C_2^2 \cong G = \gens{\tau_1, \tau_2} = \ts{\id, \tau_1, \tau_2, \tau_1 \tau_2} = \ts{\id, (1,3)(2,4), (1,2)(3,4),  (1,4)(2,3) }
+,\]
+  and the generic subgroup lattice looks like:
+
+![](figures/2021-08-15_00-02-28.png)
+
+- Computing some fixed fields.
+  Write $i \sqrt{3} = x, \sqrt{5} = y$, then elements in the splitting field are of the form
+  $\alpha = 1 + ax + by + cxy$.
+
+  - For $\sigma_1$, we have $x\mapsto -x$, so
+  \[
+  \sigma_1(\alpha) = 1 - ax + by - cxy
+  = \alpha \implies a=-a=0, c=-c=0
+  ,\]
+  so this preserves $1+by$, making the fixed field $\QQ(1, y) = \QQ(i \sqrt{3})$.
+
+  - For $\sigma_2$, we have $y\mapsto -y$, so
+  \[
+  \sigma_2(\alpha) = 1 +ax -by -cxy = \alpha \implies b=-b=0,c=-c=0
+  ,\]
+  preserving $1 + ax$ and making the fixed field $\QQ(1, x) = \QQ(\sqrt 5)$.
+
+  - For $\sigma_1 \sigma_2$, we have $x\mapsto -x$ and $y\mapsto -y$, so
+  \[
+  \sigma_1\sigma_2(\alpha) = 1 -ax -by +cxy = \alpha \implies a=-a=-, b=-b=0
+  ,\]
+  preserving $1 + cxy$ and yielding $\QQ(xy) = \QQ(i\sqrt 3 \sqrt 5)$.
+
+
+
+
+- So the lattice correspondence we get here is
+
+\begin{tikzcd}
+	&& {\QQ(\sqrt{5}, i\sqrt{3})} \\
+	\\
+	{\QQ(i \sqrt 3)} && {\QQ(i\sqrt{3}\sqrt{5})} && {\QQ(\sqrt 5)} \\
+	\\
+	&& \QQ \\
+	&& 1 \\
+	{} &&&& {} \\
+	{\gens{\sigma_1}} && {\gens{\sigma_1\sigma_2}} && {\gens{\sigma_2}} \\
+	\\
+	&& {G = \gens{\tau_1, \tau_2}}
+	\arrow["2"{description}, from=5-3, to=3-1]
+	\arrow["2"{description}, from=5-3, to=3-3]
+	\arrow["2"{description}, from=5-3, to=3-5]
+	\arrow["2"{description}, from=3-3, to=1-3]
+	\arrow["2"{description}, from=3-1, to=1-3]
+	\arrow["2"{description}, from=3-5, to=1-3]
+	\arrow["2"{description}, from=6-3, to=8-1]
+	\arrow["2"{description}, from=6-3, to=8-3]
+	\arrow["2"{description}, from=6-3, to=8-5]
+	\arrow["2"{description}, from=8-1, to=10-3]
+	\arrow["2"{description}, from=8-3, to=10-3]
+	\arrow["2"{description}, from=8-5, to=10-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMTIsWzIsMCwiXFxRUShcXHNxcnR7NX0sIGlcXHNxcnR7M30pIl0sWzAsMiwiXFxRUShpIFxcc3FydCAzKSJdLFsyLDIsIlxcUVEoaVxcc3FydHszfVxcc3FydHs1fSkiXSxbNCwyLCJcXFFRKFxcc3FydCA1KSJdLFsyLDQsIlxcUVEiXSxbMiw1LCIxIl0sWzAsNl0sWzQsNl0sWzIsNywiXFxnZW5ze1xcc2lnbWFfMVxcc2lnbWFfMn0iXSxbMCw3LCJcXGdlbnN7XFxzaWdtYV8xfSJdLFs0LDcsIlxcZ2Vuc3tcXHNpZ21hXzJ9Il0sWzIsOSwiRyA9IFxcZ2Vuc3tcXHRhdV8xLCBcXHRhdV8yfSJdLFs0LDEsIjIiLDFdLFs0LDIsIjIiLDFdLFs0LDMsIjIiLDFdLFsyLDAsIjIiLDFdLFsxLDAsIjIiLDFdLFszLDAsIjIiLDFdLFs1LDksIjIiLDFdLFs1LDgsIjIiLDFdLFs1LDEwLCIyIiwxXSxbOSwxMSwiMiIsMV0sWzgsMTEsIjIiLDFdLFsxMCwxMSwiMiIsMV1d)
+
+
+
+:::
+
+
+
+### Fall 2019 Midterm #6  $\work$
+Compute the Galois group of $f(x) = x^3-3x -3\in \QQ[x]/\QQ$.
+
+### Spring 2018 #2 $\done$
+Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
+
+a.
+Find the splitting field $K$ of $f$, and compute $[K: \QQ]$.
+
+b.
+Find the Galois group $G$ of $f$, both as an explicit group of automorphisms, and as a familiar abstract group to which it is isomorphic.
+
+c.
+Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
+
+\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
+
+
+:::{.solution}
+\envlist
+
+:::{.proof title="of a"}
+Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
+\[
+\alpha_1 &= \sqrt{2 + \sqrt 2} \\
+\alpha_2 &= \sqrt{2 - \sqrt 2} \\
+\alpha_3 &= -\alpha_1 \\
+\alpha_4 &= -\alpha_2
+.\]
+
+and splitting field $K = \QQ(\theset{\alpha_i})$.
+
+:::
+
+:::{.proof title="of b"}
+$K$ is the splitting field of a separable polynomial and thus Galois over $\QQ$.
+Moreover, Since $f$ is irreducible by Eisenstein with $p=2$, the Galois group is a transitive subgroup of $S^4$, so the possibilities are:
+
+- $S_4$
+- $A_4$
+- $D_4$
+- $\ZZ/(2) \cross \ZZ/(2)$
+- $\ZZ/(4)$
+
+We can note that $g$ splits over $L \definedas \QQ(\sqrt 2)$, an extension of degree 2.
+
+We can now note that $\min(\alpha, L)$ is given by $p(x) = x^2 - (2 + \sqrt 2)$, and so $[K: L] = 2$.
+
+We then have
+\[
+[K: \QQ] = [K: L] [L : \QQ] = (2)(2) = 4
+.\]
+
+This $\abs{\Gal(K/\QQ)} = 4$, which leaves only two possibilities:
+
+- $\ZZ/(2) \cross \ZZ/(2)$
+- $\ZZ/(4)$
+
+We can next check orders of elements.
+Take
+\[
+\sigma &\in \Gal(K/\QQ) \\
+\alpha_1 &\mapsto \alpha_2
+.\]
+
+
+Computations show that 
+
+- $\alpha_1^2 \alpha_2^2 = 2$, so $\alpha_1 \alpha_2 = \sqrt 2$
+- $\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2$
+
+and thus
+\[
+\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
+&= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
+&= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
+&= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
+&= \frac{\alpha_2^2 - 2}{\alpha_2} \\
+&= \alpha_2 -2\alpha_2\inv \\
+&= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
+&= \alpha_2 -\alpha_1 \sqrt 2 \\
+&\neq \alpha_1
 ,\]
 
-  so $M$ is a degree $m$ extension of $E$.
+and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
 
-- Now consider $M\units$. 
-- By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
-
-- But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
-
-- So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
-
-- But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
-
-- Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
 
 :::
 
+:::{.proof title="of c"}
+?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
 :::
 
-## Fall 2019 #7 $\done$
+\todo[inline]{Finish (c)}
+
+:::
+
+### Spring 2020 #4 $\work$
+Let $f(x) = x^4-2 \in \QQ[x]$.
+
+a.
+Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
+
+b.
+Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
+
+c.
+Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
+
+
+
+### Spring 2017 #8 $\work$
+
+a.
+Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
+Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
+\[
+\left(\begin{array}{ll}
+a & b \\
+0 & 1
+\end{array}\right) 
+\qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
+.\]
+
+b.
+Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
+
+### Fall 2016 #4 $\work$
+Set $f(x) = x^3 - 5 \in \QQ[x]$.
+
+a.
+Find the splitting field $K$ of $f(x)$ over $\QQ$.
+
+b.
+Find the Galois group $G$ of $K$ over $\QQ$.
+
+c.
+Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+### Spring 2016 #2 $\work$
+Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
+
+a.
+Find $[K: \QQ]$.
+
+b.
+Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
+
+c.
+Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
+
+### Fall 2015 #5 $\work$
+Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
+
+a.
+Find (with justification) the minimal polynomial $f(x)$ of $u$ over $\QQ$.
+
+b.
+Show $v\in E$, and show that $E$ is a splitting field of $f(x)$ over $\QQ$.
+
+c.
+Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
+
+
+### Spring 2015 #5 $\work$
+Let $f(x) = x^4 - 5 \in \QQ[x]$.
+
+a.
+Compute the Galois group of $f$ over $\QQ$.
+
+b.
+Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
+
+### Fall 2014 #3 $\work$
+Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
+
+a.
+What is the structure of the Galois group of $E/\QQ$?
+
+b.
+Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
+Describe the corresponding subgroups of the Galois group.
+
+### Fall 2013 #6 $\work$
+Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
+
+a.
+Show that $K/\QQ$ contains both $\QQ(i)$ and $\QQ(\sqrt[4]{2})$ and has degree 8 over $\QQ$/
+
+b.
+Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
+Show that $N$ is normal in $G$ and $NH = G$.
+
+  > Hint: what field is fixed by $NH$?
+
+c.
+Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
+
+  > Equivalently, show it is the dihedral group of order 8.
+
+d.
+How many distinct quartic subfields of $K$ are there? 
+Justify your answer.
+
+### Spring 2014 #4 $\work$
+Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
+
+a.
+Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
+
+  > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
+
+b.
+Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
+
+c.
+Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
+
+### Spring 2013 #8 $\work$
+Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
+You may assume that $f$ is irreducible over $F$.
+
+a.
+Show that if $r$ is a root of $f$ in $K$, then $r^9 = 1$ but $r^3\neq 1$.
+
+b.
+Find $\gal(K/F)$ and express each intermediate field between $F$ and $K$ as $F(\beta)$ for an appropriate $\beta \in K$.
+
+## Galois Groups: Indirect Computations / Facts
+
+### Fall 2019 #7 $\done$
 Let $\zeta_n$ denote a primitive $n$th root of 1 $\in \QQ$.
 You may assume the roots of the minimal polynomial $p_n(x)$ of $\zeta_n$ are exactly the primitive $n$th roots of 1.
 
@@ -3021,165 +4260,7 @@ For some elements $\omega_i$ which exist by the primitive element theorem.
 
 :::
 
-## Spring 2019 #2 $\done$
-Let $F = \FF_p$ , where $p$ is a prime number.
-
-a.
-Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
-
-b.
-Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
-
-:::{.concept}
-\envlist
-
-- Go to a field extension.
-  - Orders of multiplicative groups for finite fields are known.
-- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
-- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
-- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
-- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
-
-Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
-
-So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
-
-Since $\rho$ is a ring morphism, we have
-
-\[
-\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
-= 0 \in K \\
-&\iff q(x) \in \ker \rho \\
-&\iff q(x) \in \generators{\pi(x)} \\
-&\iff \pi(x) \divides q(x) = x^{p^d}-x
-,\]
-  where we've used that "to contain is to divide" in the last step.
-
-
-:::
-
-:::{.proof title="of b"}
-
-:::{.claim}
-$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
-:::
-
-:::{.proof title="of claim, $\implies$"}
-Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
-Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
-
-Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
-\[
-n &= [L: \FF_p] \\
-&= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
-&= \ell d
-,\]
-
-for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
-
-:::
-
-:::{.proof title="of claim, $\impliedby$"}
-$\impliedby$:
-If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
-So $f = f_i$ for some $i$.
-
-:::
-
-:::
-
-:::
-
-## Spring 2019 #8 $\done$
-Let $\zeta = e^{2\pi i/8}$.
-
-a.
-What is the degree of $\QQ(\zeta)/\QQ$?
-
-b.
-How many quadratic subfields of $\QQ(\zeta)$ are there?
-
-c.
-What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
-
-:::{.concept}
-\envlist
-
-- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
-  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
-- $\deg \Phi_n(x) = \phi(n)$
-- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
-  - Proof: for a nontrivial gcd, the possibilities are 
-  \[
-  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
-  .\]
-
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
-
-:::
-
-:::{.solution}
-\envlist
-
-Let $K = \QQ(\zeta)$.
-
-:::{.proof title="of a"}
-\envlist
-
-- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
-- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
-- The degree of the field extension is the degree of $\Phi_8$, which is
-\[
-\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
-.\]
-- So $[\QQ(\zeta): \QQ] = 4$.
-
-:::
-
-:::{.proof title="of b"}
-\envlist
-
-- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
-- $\ZZ/(4)$ has exactly one subgroup of index 2.
-- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
-
-:::
-
-:::{.proof title="of c"}
-\envlist
-
-- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
-
-- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
-  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
-    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
-  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
-    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
-
-- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
-  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
-
-- Conclude
-\[
-[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
-\]
-  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
-
-
-:::
-
-
-:::
-
-## Fall 2018 #3 $\done$
+### Fall 2018 #3 $\done$
 Let $F \subset K \subset L$ be finite degree field extensions.
 For each of the following assertions, give a proof or a counterexample.
 
@@ -3232,107 +4313,8 @@ Then each successive extension is quadratic (thus Galois) but $\QQ(\sqrt[4] 2)$ 
 
 :::
 
-## Spring 2018 #2 $\done$
-Let $f(x) = x^4 - 4x^2 + 2 \in \QQ[x]$.
 
-a.
-Find the splitting field $K$ of $f$, and compute $[K: \QQ]$.
-
-b.
-Find the Galois group $G$ of $f$, both as an explicit group of automorphisms, and as a familiar abstract group to which it is isomorphic.
-
-c.
-Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $k$.
-
-\todo[inline]{Not the nicest proof! Would be better to replace the ad-hoc computations at the end.}
-
-:::{.concept}
-\envlist
-
-- Todo
-
-:::
-
-:::{.solution}
-\envlist
-
-:::{.proof title="of a"}
-Note that $g(x) = x^2 - 4x + 2$ has roots $\beta = 2 \pm \sqrt{2}$, and so $f$ has roots 
-\[
-\alpha_1 &= \sqrt{2 + \sqrt 2} \\
-\alpha_2 &= \sqrt{2 - \sqrt 2} \\
-\alpha_3 &= -\alpha_1 \\
-\alpha_4 &= -\alpha_2
-.\]
-
-and splitting field $K = \QQ(\theset{\alpha_i})$.
-
-:::
-
-:::{.proof title="of b"}
-$K$ is the splitting field of a separable polynomial and thus Galois over $\QQ$.
-Moreover, Since $f$ is irreducible by Eisenstein with $p=2$, the Galois group is a transitive subgroup of $S^4$, so the possibilities are:
-
-- $S_4$
-- $A_4$
-- $D_4$
-- $\ZZ/(2) \cross \ZZ/(2)$
-- $\ZZ/(4)$
-
-We can note that $g$ splits over $L \definedas \QQ(\sqrt 2)$, an extension of degree 2.
-
-We can now note that $\min(\alpha, L)$ is given by $p(x) = x^2 - (2 + \sqrt 2)$, and so $[K: L] = 2$.
-
-We then have
-\[
-[K: \QQ] = [K: L] [L : \QQ] = (2)(2) = 4
-.\]
-
-This $\abs{\Gal(K/\QQ)} = 4$, which leaves only two possibilities:
-
-- $\ZZ/(2) \cross \ZZ/(2)$
-- $\ZZ/(4)$
-
-We can next check orders of elements.
-Take
-\[
-\sigma &\in \Gal(K/\QQ) \\
-\alpha_1 &\mapsto \alpha_2
-.\]
-
-
-Computations show that 
-
-- $\alpha_1^2 \alpha_2^2 = 2$, so $\alpha_1 \alpha_2 = \sqrt 2$
-- $\alpha_1^2 = 2 + \sqrt 2 \implies \sqrt 2 = \alpha_1^2 - 2$
-
-and thus
-\[
-\sigma^2(\alpha_1) &= \sigma(\alpha_2) \\
-&= \sigma\left(\frac{\sqrt 2}{\alpha_1}\right) \\
-&= \frac{\sigma(\sqrt 2)}{\sigma(\alpha_1)} \\
-&= \frac{\sigma(\alpha_1^2 - 2)}{\alpha_2} \\
-&= \frac{\alpha_2^2 - 2}{\alpha_2} \\
-&= \alpha_2 -2\alpha_2\inv \\
-&= \alpha_2 - \frac{2\alpha_1}{\sqrt 2} \\
-&= \alpha_2 -\alpha_1 \sqrt 2 \\
-&\neq \alpha_1
-,\]
-
-and so the order of $\sigma$ is strictly greater than 2, and thus 4, and thus $\Gal(K/\QQ) = \theset{\sigma^k \suchthat 1\leq k \leq 4} \cong \ZZ/(4)$.
-
-
-:::
-
-:::{.proof title="of c"}
-?? The subgroup of index 2 $\generators{\sigma^2}$ corresponds to the field extension $Q(\sqrt 2) / \QQ$.
-:::
-
-\todo[inline]{Finish (c)}
-
-:::
-
-## Spring 2018 #3 $\done$
+### Spring 2018 #3 $\done$
 Let $K$ be a Galois extension of $\QQ$ with Galois group $G$, and let $E_1 , E_2$ be intermediate fields of $K$ which are the splitting fields of irreducible $f_i (x) \in \QQ[x]$. 
 
 Let $E = E_1 E_2 \subset K$. 
@@ -3425,28 +4407,7 @@ But if $\sigma \in H_1 H_2$, then $\sigma = \tau_1 \tau_2$ where $\tau_i$ is an 
 
 :::
 
-## Spring 2020 #4 $\work$
-Let $f(x) = x^4-2 \in \QQ[x]$.
-
-a.
-Define what it means for a finite extension field $E$ of a field $F$ to be a Galois extension.
-
-b.
-Determine the Galois group $\gal(E/\QQ)$ for the polynomial $f(x)$, and justify your answer carefully.
-
-c.
-Exhibit a subfield $K$ in $(b)$ such that $\QQ \leq K \leq E$ with $K$ not a Galois extension over $\QQ$. Explain.
-
-## Spring 2020 #3 $\work$
-Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
-
-a.
-Show that $F(\alpha) = F(\alpha^2)$.
-
-b.
-Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
-
-## Fall 2017 #4 $\work$
+### Fall 2017 #4 $\work$
 
 a.
 Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting field $K$ over $\QQ$ has Galois group $G = S_4$. 
@@ -3456,13 +4417,7 @@ Let $f (x)$ be an irreducible polynomial of degree 4 in $\QQ[x]$ whose splitting
 b.
 Prove that if $K$ is a Galois extension of $\QQ$ of degree 4, then there is an intermediate subfield between $K$ and $\QQ$.
 
-## Fall 2017 #3 $\work$
-Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
-be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
-
-Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
-
-## Spring 2017 #7 $\work$
+### Spring 2017 #7 $\work$
 Let $F$ be a field and let $f(x) \in F[x]$.
 
 a.
@@ -3477,65 +4432,12 @@ Fully justify your answer.
 c.
 Show that the extension $E/F$ in (b) is a Galois extension.
 
-## Spring 2017 #8 $\work$
-
-a.
-Let $K$ denote the splitting field of $x^5 - 2$ over $\QQ$.
-Show that the Galois group of $K/\QQ$ is isomorphic to the group of invertible matrices
-\[
-\left(\begin{array}{ll}
-a & b \\
-0 & 1
-\end{array}\right) 
-\qtext{where} a\in \FF_5\units \text{ and } b\in \FF_5
-.\]
-
-b.
-Determine all intermediate fields between $K$ and $\QQ$ which are Galois over $\QQ$.
-
-## Fall 2016 #4 $\work$
-Set $f(x) = x^3 - 5 \in \QQ[x]$.
-
-a.
-Find the splitting field $K$ of $f(x)$ over $\QQ$.
-
-b.
-Find the Galois group $G$ of $K$ over $\QQ$.
-
-c.
-Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
-
-## Spring 2016 #2 $\work$
-Let $K = \QQ[\sqrt 2 + \sqrt 5]$.
-
-a.
-Find $[K: \QQ]$.
-
-b.
-Show that $K/\QQ$ is Galois, and find the Galois group $G$ of $K/\QQ$.
-
-c.
-Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
-
-## Spring 2016 #6 $\work$
+### Spring 2016 #6 $\work$
 Let $K$ be a Galois extension of a field $F$ with $[K: F] = 2015$.
 Prove that $K$ is an extension by radicals of the field $F$.
 
 
-## Fall 2015 #5 $\work$
-Let $u = \sqrt{2 + \sqrt{2}}$, $v = \sqrt{2 - \sqrt{2}}$, and $E = \QQ(u)$.
-
-a.
-Find (with justification) the minimal polynomial $f(x)$ of $u$ over $\QQ$.
-
-b.
-Show $v\in E$, and show that $E$ is a splitting field of $f(x)$ over $\QQ$.
-
-c.
-Determine the Galois group of $E$ over $\QQ$ and determine all of the intermediate fields $F$ such that $\QQ \subset F \subset E$.
-
-
-## Fall 2015 #6 $\work$
+### Fall 2015 #6 $\work$
 
 a.
 Let $G$ be a finite group.
@@ -3551,29 +4453,7 @@ c.
 With $K/F$ as in (b), does an intermediate field $L$ necessarily exist satisfying $[L: F] = 2$?
 Give a proof or counterexample.
 
-## Spring 2015 #2 $\work$
-Let $\FF$ be a finite field.
-
-a.
-Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
-
-b.
-The *exponent* of a finite group is the least common multiple of the orders of its elements.
-Prove that a finite abelian group has an element of order equal to its exponent.
-
-c.
-Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
-
-## Spring 2015 #5 $\work$
-Let $f(x) = x^4 - 5 \in \QQ[x]$.
-
-a.
-Compute the Galois group of $f$ over $\QQ$.
-
-b.
-Compute the Galois group of $f$ over $\QQ(\sqrt{5})$.
-
-## Fall 2014 #1 $\work$
+### Fall 2014 #1 $\work$
 Let $f\in \QQ[x]$ be an irreducible polynomial and $L$ a finite Galois extension of $\QQ$.
 Let $f(x) = g_1(x)g_2(x)\cdots g_r(x)$ be a factorization of $f$ into irreducibles in $L[x]$.
 
@@ -3583,73 +4463,7 @@ Prove that each of the factors $g_i(x)$ has the same degree.
 b.
 Give an example showing that if $L$ is not Galois over $\QQ$, the conclusion of part (a) need not hold.
 
-## Fall 2014 #3 $\work$
-Consider the polynomial $f(x) = x^4 - 7 \in \QQ[x]$ and let $E/\QQ$ be the splitting field of $f$.
-
-a.
-What is the structure of the Galois group of $E/\QQ$?
-
-b.
-Give an explicit description of all of the intermediate subfields $\QQ \subset K \subset E$ in the form $K = \QQ(\alpha), \QQ(\alpha, \beta), \cdots$ where $\alpha, \beta$, etc are complex numbers.
-Describe the corresponding subgroups of the Galois group.
-
-## Spring 2014 #3 $\work$
-Let $F\subset C$ be a field extension with $C$ algebraically closed.
-
-a.
-Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
-
-b.
-Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
-
-## Spring 2014 #4 $\work$
-Let $E\subset \CC$ denote the splitting field over $\QQ$ of the polynomial $x^3 - 11$.
-
-a.
-Prove that if $n$ is a squarefree positive integer, then $\sqrt{n}\not\in E$.
-
-  > Hint: you can describe all quadratic extensions of $\QQ$ contained in $E$.
-
-b.
-Find the Galois group of $(x^3 - 11)(x^2 - 2)$ over $\QQ$.
-
-c.
-Prove that the minimal polynomial of $11^{1/3} + 2^{1/2}$ over $\QQ$ has degree 6.
-
-## Fall 2013 #5 $\work$
-Let $L/K$ be a finite extension of fields.
-
-a.
-Define what it means for $L/K$ to be *separable*.
-
-b.
-Show that if $K$ is a finite field, then $L/K$ is always separable.
-
-c.
-Give an example of a finite extension $L/K$ that is not separable.
-
-## Fall 2013 #6 $\work$
-Let $K$ be the splitting field of $x^4-2$ over $\QQ$ and set $G = \gal(K/\QQ)$.
-
-a.
-Show that $K/\QQ$ contains both $\QQ(i)$ and $\QQ(\sqrt[4]{2})$ and has degree 8 over $\QQ$/
-
-b.
-Let $N = \gal(K/\QQ(i))$ and $H = \gal(K/\QQ(\sqrt[4]{2}))$.
-Show that $N$ is normal in $G$ and $NH = G$.
-
-  > Hint: what field is fixed by $NH$?
-
-c.
-Show that $\gal(K/\QQ)$ is generated by elements $\sigma, \tau$, of orders 4 and 2 respectively, with $\tau \sigma\tau\inv = \sigma\inv$.
-
-  > Equivalently, show it is the dihedral group of order 8.
-
-d.
-How many distinct quartic subfields of $K$ are there? 
-Justify your answer.
-
-## Spring 2013 #7 $\work$
+### Spring 2013 #7 $\work$
 Let $f(x) = g(x) h(x) \in \QQ[x]$ and $E,B,C/\QQ$ be the splitting fields of $f,g,h$ respectively.
 
 a.
@@ -3667,83 +4481,14 @@ Under the hypothesis of (c), show that $\gal(E/\QQ) \cong \gal(E/B) \times \gal(
 e.
 Use (d) to describe $\gal(\QQ[\alpha]/\QQ)$ where $\alpha = \sqrt 2 + \sqrt 3$.
 
-## Spring 2013 #8 $\work$
-Let $F$ be the field with 2 elements and $K$ a splitting field of $f(x) = x^6 + x^3 + 1$ over $F$.
-You may assume that $f$ is irreducible over $F$.
-
-a.
-Show that if $r$ is a root of $f$ in $K$, then $r^9 = 1$ but $r^3\neq 1$.
-
-b.
-Find $\gal(K/F)$ and express each intermediate field between $F$ and $K$ as $F(\beta)$ for an appropriate $\beta \in K$.
-
-## Fall 2012 #3 $\work$
+### Fall 2012 #3 $\work$
 Let $f(x) \in \QQ[x]$ be an irreducible polynomial of degree 5.
 Assume that $f$ has all but two roots in $\RR$.
 Compute the Galois group of $f(x)$ over $\QQ$ and justify your answer.
 
-## Fall 2012 #4 $\work$
-Let $f(x) \in \QQ[x]$ be a polynomial and $K$ be a splitting field of $f$ over $\QQ$.
-Assume that $[K:\QQ] = 1225$ and show that $f(x)$ is solvable by radicals.
+## $p$th Roots and $x^{p^k}-x$
 
-## Spring 2012 #1 $\work$
-Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
-
-a.
-Show that there exists a unique intermediate field $K$ with $F\subset K \subset E$ such that $[K: F] = 2$.
-
-b.
-Assume that there are at least two distinct intermediate subfields $F \subset L_1, L_2 \subset E$ with $[L_i: F]= 7$.
-Prove that $\gal(E/F)$ is nonabelian.
-
-## Spring 2012 #4 $\work$
-Let $f(x) = x^7 - 3\in \QQ[x]$ and $E/\QQ$ be a splitting field of $f$ with $\alpha \in E$ a root of $f$.
-
-a.
-Show that $E$ contains a primitive 7th root of unity.
-
-b.
-Show that $E\neq \QQ(\alpha)$.
-
-## Fall 2019 Midterm #6  $\work$
-Compute the Galois group of $f(x) = x^3-3x -3\in \QQ[x]/\QQ$.
-
-## Fall 2019 Midterm #7  $\work$
-Show that a field $k$ of characteristic $p\neq 0$ is perfect $\iff$ for every $x\in k$ there exists a $y\in k$ such that $y^p=x$.
-
-## Fall 2019 Midterm #8  $\work$
-Let $k$ be a field of characteristic $p\neq 0$ and $f\in k[x]$ irreducible. 
-Show that $f(x) = g(x^{p^d})$ where $g(x) \in k[x]$ is irreducible and separable. 
-
-Conclude that every root of $f$ has the same multiplicity $p^d$ in the splitting field of $f$ over $k$.
-
-## Fall 2019 Midterm #9  $\work$
-Let $n\geq 3$ and $\zeta_n$ be a primitive $n$th root of unity. Show that $[\QQ(\zeta_n + \zeta_n\inv): \QQ] = \phi(n)/2$ for $\phi$ the totient function.
-10. 
-
-Let $L/K$ be a finite normal extension.
-
-a.
-Show that if $L/K$ is cyclic and $E/K$ is normal with $L/E/K$ then $L/E$ and $E/K$ are cyclic.
-
-b.
-Show that if $L/K$ is cyclic then there exists exactly one extension $E/K$ of degree $n$ with $L/E/K$ for each divisor $n$ of $[L:K]$.
-
-## Spring 2021 #4 $\work$
-
-Define
-\[
-f(x) \da x^4 + 4x^2 + 64 \in \QQ[x]
-.\]
-
-a. Find the splitting field $K$ of $f$ over $\QQ$.
-
-b. Find the Galois group $G$ of $f$.
-
-c. Exhibit explicitly the correspondence between subgroups of $G$ and intermediate fields between $\QQ$ and $K$.
-
-
-## Spring 2021 #7 $\done$
+### Spring 2021 #7 $\done$
 
 Let $p$ be a prime number and let $F$ be a field of characteristic $p$.
 Show that if $a\in F$ is not a $p$th power in $F$, then $x^p-a \in F[x]$ is irreducible.
@@ -3837,54 +4582,366 @@ a &= a^1\\
 
 
 
-## Fall 2020 #3 $\work$
+### Fall 2019 #4 $\done$
+Let $F$ be a finite field with $q$ elements.
+Let $n$ be a positive integer relatively prime to $q$ and let $\omega$ be a primitive $n$th root of unity in an extension field of $F$.
+Let $E = F [\omega]$ and let $k = [E : F]$.
 
-a. Define what it means for a finite extension of fields $E$ over $F$ to be a *Galois* extension.
+a.
+Prove that $n$ divides $q^{k}-1$.
 
-b. Determine the Galois group of $f(x) = x^3 - 7$ over $\QQ$, and justify your answer carefully.
+b. 
+Let $m$ be the order of $q$ in $\ZZ/n\ZZ\units$.
+Prove that $m$ divides $k$.
 
-c. Find all subfields of the splitting field of $f(x)$ over $\QQ$.
+c.
+Prove that $m = k$.
 
-## Fall 2020 #4 $\work$
+\todo[inline]{Revisit, tricky!}
 
-Let $K$ be a Galois extension of $F$, and let $F \subset E \subset K$ be inclusions of fields.
-Let $G \da \Gal(K/F)$ and $H \da \Gal(K/E)$, and suppose $H$ contains $N_G(P)$, where $P$ is a Sylow $p$-subgroup of $G$ for $p$ a prime.
-Prove that \( [E: F] \equiv 1 \mod p \).
+:::{.concept}
+\envlist
 
+- $\FF\units$ is always cyclic for $\FF$ a field.
+- Lagrange: $H\leq G \implies \#H \divides \# G$.
 
-## Exercises
-
-
-:::{.exercise title="?"}
-Let $p \in \mathbb{Z}$ be a prime number.
-Then describe the elements of the Galois group of the polynomial $x^{p}-2$.
 :::
 
 :::{.solution}
-$\QQ(2^{1\over p}, \zeta_p)$, which has degree $p(p-1)$ and is generated by the maps
+\envlist
+
+:::{.proof title="of a"}
+\envlist
+
+- Since $\abs{F} = q$ and $[E:F] = k$, we have $\abs{E} = q^k$ and $\abs{E\units} = q^k-1$.
+
+- Noting that $\zeta \in E\units$ we must have $n = o(\zeta) \divides \abs{E\units} = q^k-1$ by Lagrange's theorem.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- Rephrasing (a), we have 
 \[
-\sqrt[p]{2} & \mapsto \sqrt[p]{2} \zeta^{a} \\
-\zeta & \mapsto \zeta^{b}
+n \divides q^k-1 
+&\iff q^k-1 \cong 0 \mod n \\
+&\iff q^k \cong 1 \mod n \\
+&\iff m \definedas o(q) \divides k
 .\]
 
 :::
 
+:::{.proof title="of c"}
+\envlist
 
-:::{.exercise title="?"}
-Compute the Galois group of $x^2-2$.
+- Since $m\divides k \iff k = \ell m$, (**claim**) there is an intermediate subfield $M$ such that
+\[
+E \leq M \leq F \quad k = [F:E] = [F:M] [M:E] = \ell m
+,\]
+
+  so $M$ is a degree $m$ extension of $E$.
+
+- Now consider $M\units$. 
+- By the argument in (a), $n$ divides $q^m - 1 = \abs{M\units}$, and $M\units$ is cyclic, so it contains a cyclic subgroup $H$ of order $n$.
+
+- But then $x\in H \implies p(x)\definedas x^n-1 = 0$, and since $p(x)$ has at most $n$ roots in a field. 
+
+- So $H = \theset{x \in M \suchthat x^n-1 = 0}$, i.e. $H$ contains all solutions to $x^n-1$ in $E[x]$.
+
+- But $\zeta$ is one such solution, so $\zeta \in H \subset M\units \subset M$.
+
+- Since $F[\zeta]$ is the smallest field extension containing $\zeta$, we must have $F = M$, so $\ell = 1$, and $k = m$.
+
 :::
 
+:::
+
+
+### Spring 2019 #2 $\done$
+Let $F = \FF_p$ , where $p$ is a prime number.
+
+a.
+Show that if $\pi(x) \in F[x]$ is irreducible of degree $d$, then $\pi(x)$ divides $x^{p^d} - x$.
+
+b.
+Show that if $\pi(x) \in F[x]$ is an irreducible polynomial that divides $x^{p^n} - x$, then $\deg \pi(x)$ divides $n$.
+
+:::{.concept}
+\envlist
+
+- Go to a field extension.
+  - Orders of multiplicative groups for finite fields are known.
+- $\GF(p^n)$ is the splitting field of $x^{p^n} - x \in \FF_p[x]$.
+- $x^{p^d} - x \divides x^{p^n} - x \iff d \divides n$
+- $\GF(p^d) \leq \GF(p^n) \iff d\divides n$
+- $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$.
+
+:::
 
 :::{.solution}
-$\ZZ/2\ZZ$?
+\envlist
+
+:::{.proof title="of a"}
+We can consider the quotient $K = \displaystyle{\frac{\FF_p[x]}{\generators{\pi(x)}}}$, which since $\pi(x)$ is irreducible is an extension of $\FF_p$ of degree $d$ and thus a field of size $p^d$ with a natural quotient map of rings $\rho: \FF_p[x] \to K$.
+
+Since $K\units$ is a group of size $p^d-1$, we know that for any $y \in K\units$, we have by Lagrange's theorem that the order of $y$ divides $p^d-1$ and so $y^{p^d} = y$.
+
+So every element in $K$ is a root of $q(x) = x^{p^d}-x$.
+
+Since $\rho$ is a ring morphism, we have
+
+\[
+\rho(q(x)) = \rho(x^{p^d} - x) &= \rho(x)^{p^d} - \rho(x)
+= 0 \in K \\
+&\iff q(x) \in \ker \rho \\
+&\iff q(x) \in \generators{\pi(x)} \\
+&\iff \pi(x) \divides q(x) = x^{p^d}-x
+,\]
+  where we've used that "to contain is to divide" in the last step.
+
+
+:::
+
+:::{.proof title="of b"}
+
+:::{.claim}
+$\pi(x)$ divides $x^{p^n}-x \iff \deg \pi$ divides $n$.
+:::
+
+:::{.proof title="of claim, $\implies$"}
+Let $L \cong \GF(p^n)$ be the splitting field of $\phi_n(x) \definedas x^{p^n}-x$; then since $\pi \divides \phi_n$ by assumption, $\pi$ splits in $L$.
+Let $\alpha \in L$ be any root of $\pi$; then there is a tower of extensions $\FF_p \leq \FF_p(\alpha) \leq L$.
+
+Then $\FF_p \leq \FF_p(\alpha) \leq L$, and so
+\[
+n &= [L: \FF_p] \\
+&= [L: \FF_p(\alpha)]~[\FF_p(\alpha): \FF_p] \\
+&= \ell d
+,\]
+
+for some $\ell \in \ZZ^{\geq 1}$, so $d$ divides $n$.
+
+:::
+
+:::{.proof title="of claim, $\impliedby$"}
+$\impliedby$:
+If $d\divides n$, use the fact (claim) that $x^{p^n} - x = \prod f_i(x)$ over all irreducible monic $f_i$ of degree $d$ dividing $n$. 
+So $f = f_i$ for some $i$.
+
+:::
+
+:::
+
+:::
+
+### $\star$ Fall 2016 #5 $\work$
+How many monic irreducible polynomials over $\FF_p$ of prime degree $\ell$ are there?
+Justify your answer.
+
+
+### $\star$ Fall 2013 #7 $\work$
+Let $F = \FF_2$ and let $\bar F$ denote its algebraic closure.
+
+a.
+Show that $\bar F$ is not a finite extension of $F$.
+
+b.
+Suppose that $\alpha \in \bar F$ satisfies $\alpha^{17} = 1$ and $\alpha\neq 1$.
+Show that $F(\alpha)/F$ has degree 8.
+
+## General Field Extensions
+
+### Spring 2020 #3 $\work$
+Let $E$ be an extension field of $F$ and $\alpha\in E$ be algebraic of odd degree over $F$.
+
+a.
+Show that $F(\alpha) = F(\alpha^2)$.
+
+b.
+Prove that $\alpha^{2020}$ is algebraic of odd degree over $F$.
+
+
+### Spring 2012 #1 $\work$
+Suppose that $F\subset E$ are fields such that $E/F$ is Galois and $\abs{\gal(E/F)} = 14$.
+
+a.
+Show that there exists a unique intermediate field $K$ with $F\subset K \subset E$ such that $[K: F] = 2$.
+
+b.
+Assume that there are at least two distinct intermediate subfields $F \subset L_1, L_2 \subset E$ with $[L_i: F]= 7$.
+Prove that $\gal(E/F)$ is nonabelian.
+
+### Spring 2019 #8 $\done$
+Let $\zeta = e^{2\pi i/8}$.
+
+a.
+What is the degree of $\QQ(\zeta)/\QQ$?
+
+b.
+How many quadratic subfields of $\QQ(\zeta)$ are there?
+
+c.
+What is the degree of $\QQ(\zeta, \sqrt[4] 2)$ over $\QQ$?
+
+:::{.concept}
+\envlist
+
+- $\zeta_n \definedas e^{2\pi i \over n}$, and $\zeta_n^k$ is a primitive $n$th root of unity $\iff \gcd(n, k) = 1$
+  - In general, $\zeta_n^k$ is a primitive ${n \over \gcd(n, k)}$th root of unity.
+- $\deg \Phi_n(x) = \phi(n)$
+- $\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1)$ 
+  - Proof: for a nontrivial gcd, the possibilities are 
+  \[
+  p, 2p, 3p, 4p, \cdots, p^{k-2}p, p^{k-1}p
+  .\]
+
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(n)\units$
+
+:::
+
+:::{.solution}
+\envlist
+
+Let $K = \QQ(\zeta)$.
+
+:::{.proof title="of a"}
+\envlist
+
+- $\zeta \definedas e^{2\pi i / 8}$ is a primitive $8$th root of unity
+- The minimal polynomial of an $n$th root of unity is the $n$th cyclotomic polynomial $\Phi_n$
+- The degree of the field extension is the degree of $\Phi_8$, which is
+\[
+\phi(8) = \phi(2^3) = 2^{3-1} \cdot (2-1) = 4
+.\]
+- So $[\QQ(\zeta): \QQ] = 4$.
+
+:::
+
+:::{.proof title="of b"}
+\envlist
+
+- $\Gal(\QQ(\zeta)/\QQ) \cong \ZZ/(8)\units \cong \ZZ/(4)$ by general theory 
+- $\ZZ/(4)$ has exactly one subgroup of index 2.
+- Thus there is exactly **one** intermediate field of degree 2 (a quadratic extension).
+
+:::
+
+:::{.proof title="of c"}
+\envlist
+
+- Let $L = \QQ(\zeta, \sqrt[4] 2)$.
+
+- Note $\QQ(\zeta) = \QQ(i, \sqrt 2)$
+  - $\QQ(i, \sqrt{2})\subseteq \QQ(\zeta)$
+    - $\zeta_8^2 = i$, and $\zeta_8 = \sqrt{2}\inv + i\sqrt{2}\inv$ so $\zeta_8 + \zeta_8 \inv = 2/\sqrt{2} = \sqrt{2}$.
+  - $\QQ(\zeta) \subseteq \QQ(i, \sqrt{2})$: 
+    - $\zeta = e^{2\pi i / 8} = \sin(\pi/4) + i\cos(\pi/4) = {\sqrt 2 \over 2}\qty{1+i}$.
+
+- Thus $L = \QQ(i, \sqrt{2})(\sqrt[4]{2}) = \QQ(i, \sqrt 2, \sqrt[4] 2) = \QQ(i, \sqrt[4]{2})$.
+  - Uses the fact that $\QQ(\sqrt 2) \subseteq \QQ(\sqrt[4] 2)$ since $\sqrt[4]{2}^2 = \sqrt{2}$ 
+
+- Conclude
+\[
+[L: \QQ] = [L: \QQ(\sqrt[4] 2)] ~[\QQ(\sqrt[4] 2): \QQ] = 2 \cdot 4 = 8
+\]
+  using the fact that the minimal polynomial of $i$ over any subfield of $\RR$ is always $x^2 + 1$, so $\min_{\QQ(\sqrt[4] 2)}(i) = x^2 + 1$ which is degree 2.
+
+
 :::
 
 
+:::
+
+
+### Fall 2017 #3 $\work$
+Let $F$ be a field. Let $f(x)$ be an irreducible polynomial in $F[x]$ of degree $n$ and let $g(x)$
+be any polynomial in $F[x]$. Let $p(x)$ be an irreducible factor (of degree $m$) of the polynomial $f(g(x))$.
+
+Prove that $n$ divides $m$. Use this to prove that if $r$ is an integer which is not a perfect square, and $n$ is a positive integer then every irreducible factor of $x^{2n} - r$ over $\QQ[x]$ has even degree.
+
+### Spring 2015 #2 $\work$
+Let $\FF$ be a finite field.
+
+a.
+Give (with proof) the decomposition of the additive group $(\FF, +)$ into a direct sum of cyclic groups.
+
+b.
+The *exponent* of a finite group is the least common multiple of the orders of its elements.
+Prove that a finite abelian group has an element of order equal to its exponent.
+
+c.
+Prove that the multiplicative group $(\FF\units, \cdot)$ is cyclic.
+
+### Spring 2014 #3 $\work$
+Let $F\subset C$ be a field extension with $C$ algebraically closed.
+
+a.
+Prove that the intermediate field $C_{\text{alg}} \subset C$ consisting of elements algebraic over $F$ is algebraically closed.
+
+b.
+Prove that if $F\to E$ is an algebraic extension, there exists a homomorphism $E\to C$ that is the identity on $F$.
 
 
 # Modules
 
 ## General Questions
+
+## Spring 2017 #3 $\work$
+Let $R$ be a commutative ring with 1.
+Suppose that $M$ is a free $R\dash$module with a finite basis $X$.
+
+a.
+Let $I \normal R$ be a proper ideal.
+Prove that $M/IM$ is a free $R/I\dash$module with basis $X'$, where $X'$ is the image of $X$ under the canonical map $M\to M/IM$.
+
+b.
+Prove that any two bases of $M$ have the same number of elements.
+You may assume that the result is true when $R$ is a field.
+
+## Spring 2020 #5 $\done$
+Let $R$ be a ring and $f: M\to N$ and $g: N\to M$ be $R\dash$module homomorphisms such that $g\circ f = \id_M$.
+Show that $N \cong \im f \oplus \ker g$.
+
+
+:::{.solution}
+\envlist
+
+- We have the following situation:
+
+\begin{tikzcd}
+	M &&& N
+	\arrow["f", from=1-1, to=1-4]
+	\arrow["g"', curve={height=24pt}, dashed, from=1-4, to=1-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMixbMCwwLCJNIl0sWzMsMCwiTiJdLFswLDEsImYiXSxbMSwwLCJnIiwyLHsiY3VydmUiOjQsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==)
+
+- Claim: $\im f + \ker g \subseteq N$, and this is in fact an equality.
+  - For $n\in N$, write
+  \[
+  n = n + (f\circ g)(n) - (f\circ g)(n) = \qty{n - (f\circ g)(n) } + (f\circ g)(n)
+  .\]
+  - The first term is in $\ker g$:
+  \[
+  g \qty{ n - (f\circ g)(n) }
+  &= g(n) - (g\circ f \circ g)(n)\\
+  &= g(n) - (\id_N \circ g)(n)\\
+  &= g(n) - g(n) \\
+  &= 0
+  .\]
+  - The second term is clearly in $\im f$.
+- Claim: the sum is direct.
+  - Suppose $n\in \ker(g) \intersect \im(f)$, so $g(n) = 0$ and $n=f(m)$ for some $m\in M$.
+  Then
+  \[
+  0 = g(n) = g(f(m)) = (g\circ f)(m)
+  = \id_M(m) = m
+  ,\]
+  so $m=0$ and since $f$ is a morphism in \(R\dash\)modules, $n\da f(m) = 0$.
+:::
+
+
 
 ### Fall 2018 #6 $\done$
 Let $R$ be a commutative ring, and let $M$ be an $R\dash$module. 
@@ -5200,9 +6257,7 @@ matrix $P$ such that $P\inv AP$ is in JCF.
 :::
 
 :::{.solution}
-\envlist
-
-:::{.proof title="of a"}
+**Proof of (a)**:
 Let $A$ be the matrix in the question, and $B$ be the matrix containing 1's in every entry.
 
 - Noting that $B = A+I$, we have
@@ -5261,8 +6316,6 @@ P = [\vector v_1, \vector p_1, \cdots, \vector p_{p-1}] =
 \end{array}\right]
 .\]
 
-:::
-
 :::{.proof title="of claim 1"}
 \envlist
 
@@ -5304,7 +6357,8 @@ where the first equality follows from expanding along the first row and noting t
 
 :::
 
-:::{.proof title="of b"}
+**Proof of (b)**:
+
 For $F = \FF_p$, all eigenvalues/vectors still lie in $\FF_p$, but now $-1 = p-1$, making $(x-(p-1))(x+1)^{p-1} = (x+1)(x+1)^{p-1}$, so $\chi_{A, \FF_p}(x) = (x+1)^p$, and the Jordan blocks may merge.
 
 - A computation shows that $(A+I)^2 = pA = 0 \in M_p(\FF_p)$ and $(A+I) \neq 0$, so $\min_{A, \FF_p}(x) = (x+1)^2$.
@@ -5359,8 +6413,6 @@ P = [\vector v_1, \vector x, \vector p_1, \cdots, \vector p_{p-2}] =
 1 & 0 & 0 & 0 & 0 & 0 \\
 \end{array}\right]
 .\]
-
-:::
 
 :::
 
