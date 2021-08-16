@@ -2902,7 +2902,7 @@ Some examples:
 
 - $G\actson G$ by $x\mapsto gx$.
 - $G\actson \ts{H\leq G}$ by $H\mapsto gH$ or $H\mapsto gHg\inv$.
-- $G\actsons \ts{\Syl_p(G)}$ for a fixed $p$ by $S_p \mapsto gS_p g\inv$.
+- $G\actson \ts{\Syl_p(G)}$ for a fixed $p$ by $S_p \mapsto gS_p g\inv$.
 - $G\actson H$ for $H\normal G$ by inner automorphisms $h\mapsto ghg\inv$.
 :::
 

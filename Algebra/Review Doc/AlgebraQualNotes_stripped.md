@@ -2103,7 +2103,7 @@ A useful way to extract normal subgroups: let \( G \) act on literally anything 
 
 -   \( G\curvearrowright G \) by \( x\mapsto gx \).
 -   \( G\curvearrowright\left\{{H\leq G}\right\} \) by \( H\mapsto gH \) or \( H\mapsto gHg^{-1} \).
--   \( G\actsons \left\{{{\operatorname{Syl}}_p(G)}\right\} \) for a fixed \( p \) by \( S_p \mapsto gS_p g^{-1} \).
+-   \( G\curvearrowright\left\{{{\operatorname{Syl}}_p(G)}\right\} \) for a fixed \( p \) by \( S_p \mapsto gS_p g^{-1} \).
 -   \( G\curvearrowright H \) for \( H{~\trianglelefteq~}G \) by inner automorphisms \( h\mapsto ghg^{-1} \).
 :::
 
