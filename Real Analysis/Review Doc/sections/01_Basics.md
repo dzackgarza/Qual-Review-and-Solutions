@@ -59,7 +59,8 @@
 
 - Simplifications:
   - To show something for a measurable set, show it for bounded/compact/elementary sets and use approximations in measure.
-  - To show something for an arbitrary function, try to show it for continuous, bounded, compactly supported, simple, indicator functions, etc and use approximations in norm.
+  - To show something for an arbitrary function, try various dense classes of functions: 
+    continuous, bounded, compactly supported, simple, indicator functions, etc and use approximations in norm.
   - Replace $\eps\to 0$ with an arbitrary countable sequence ($x_n \to 0$)
     - Note: this is not always helpful, since you now have to predicate over all such sequences.
 
@@ -77,12 +78,9 @@
 
   - $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
-  - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
+  - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$ or $x\in [s, s+\eps]$.
 
-
-- Approximate by dense subsets of functions
-
-- Useful facts about compactly supported ($C_c(\RR)$) continuous functions:
+- Useful facts about continuous compactly supported ($C_c^0(\RR)$) functions:
   - Uniformly continuous
   - Bounded almost everywhere
 
@@ -100,7 +98,8 @@ If $X$ is complete, then absolutely convergent implies convergent.
 :::{.definition title="Continuity and Uniform Continuity"}
 A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
 \[
-\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \\
+\forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
 .\]
 
 $f$ is **uniformly continuous** iff
