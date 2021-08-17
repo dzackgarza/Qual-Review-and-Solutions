@@ -222,15 +222,15 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 
 How to derive these definitions: use that $\inf$ corresponds to intersections/existence and $\sup$ corresponds to unions/forall.
 
-- For $A \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n$:
-  - $x\in A \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
+- For $\liminf E_n$: 
+  - $x\in \liminf E_n \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
     So $x$ is in *all* but finitely many $n$.
   - How to remember:  $\liminf_{n} x_n = \sup_{n} \inf_{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
   - Alternatively: there exists an $n$ (union) such that for all $k\geq n$ (intersection)...
     
 
-- For $B \da \Intersect{N=1}^\infty \Union{n=N}^\infty E_n$:
-  - $x\in B \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
+- For $\limsup E_n$: 
+  - $x\in \limsup E_n \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
     So $x$ is an infinitely many $E_n$.
   - How to remember:  $\limsup_{n} x_n = \inf{n} \sup{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
   - Alternatively: for all $n$ (intersection) there exists a $k\geq n$ (union)...
