@@ -246,7 +246,7 @@ Why these are useful: for finite measure spaces,
 \[
 \mu\qty{\liminf_n E_n }\leq \liminf_n \mu(E_n) \leq \lim_n \mu(E_n) \leq \limsup_n \mu(E_n) \leq \mu\qty{\limsup_n E_n}
 .\]
-If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \limsup_n E_n$ (for example), in which case continuity of measure states
+If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \union_n E_n$, in which case continuity of measure states
 \[
 \mu\qty{\lim_n E_n} = \lim_n \mu(E_n)
 .\]
