@@ -67,13 +67,13 @@
   - Calculus techniques: Taylor series, IVT, MVT, etc.
   - Break up $\RR^n = \theset{\abs{x} \leq 1} \coprod \theset{\abs{x} > 1}$.
     - Or break integration region into disjoint annuli.
-  - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
+  - For pairs of functions $f, g$: break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
   - Tail estimates!
   - Most of what works for integrals will work for sums.
 
 - Measure theory:
 
-  - Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
+  - Always consider bounded sets, and if $E$ is unbounded write $E = \Union_{n\geq 0} \qty{ B_{n}(0) \intersect E}$ and use countable subadditivity or continuity of measure.
 
   - $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
