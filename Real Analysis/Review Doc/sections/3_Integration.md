@@ -57,7 +57,7 @@ Characteristic functions on measurable sets are automatically measurable, since 
 :::{.remark title="on notation"}
 \envlist
 
-- $L^+$: measurable functions
+- $L^+$: nonnegative measurable functions
 - $L^1$: Lebesgue integrable functions, so $\int \abs{f} < \infty$
 :::
 
@@ -160,7 +160,7 @@ As a consequence,
 If 
 
 - $f_n \in L^1$ with $f_n \to f$ almost everywhere, 
-- There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
+- There exist $g_n\geq 0 \in L^1$ nonnegative with $\abs{f_n} \leq g_n$,
 - $g_n\to g$ almost everywhere with $g\in L^1$, and 
 - $\lim \int g_n = \int g$, 
 
