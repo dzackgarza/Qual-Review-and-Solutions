@@ -185,7 +185,7 @@ Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 \implies \int f &\geq \limsup \int f_n
 .\]
 
-  - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
+  - Here we use $g_n - f_n \converges{n\to\infty}\too g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
 
 - $\int f \leq \liminf \int f_n$:
 \[
