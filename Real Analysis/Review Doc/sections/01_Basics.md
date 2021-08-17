@@ -211,7 +211,8 @@ Negated:[^Negated_uniform_convergence]
 The **outer measure** of a set is given by
 \[
 m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
-.\]
+,\]
+where $\abs{Q_i}$ is the standard Euclidean volume of a cube in $\RR^n$.
 :::
 
 :::{.definition title="Limsup and Liminf of Sets"}
@@ -246,7 +247,7 @@ Why these are useful: for finite measure spaces,
 \[
 \mu\qty{\liminf_n E_n }\leq \liminf_n \mu(E_n) \leq \lim_n \mu(E_n) \leq \limsup_n \mu(E_n) \leq \mu\qty{\limsup_n E_n}
 .\]
-If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \union_n E_n$, in which case continuity of measure states
+If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \union_n E_n$ if $E_n \increasesto E$ or $\lim_n E_n \da \intersect_n E_n$ if $E_n\decreasesto E$ in which case continuity of measure states
 \[
 \mu\qty{\lim_n E_n} = \lim_n \mu(E_n)
 .\]
