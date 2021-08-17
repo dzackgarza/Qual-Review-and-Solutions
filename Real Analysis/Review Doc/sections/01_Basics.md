@@ -143,13 +143,10 @@ This just says $S$ is not dense in any subset $S' \subseteq X$, by negating what
 A set is **meager** if it is a *countable* union of nowhere dense sets.
 :::
 
-:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
-
-[^Mnemonic_Ferme]: 
-Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
-
+:::{.definition title="Baire Space"}
+A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
 :::
+
 
 :::{.definition title="Limsup/Liminf"}
 \[  
@@ -204,6 +201,16 @@ Negated:[^Negated_uniform_convergence]
 .\]
 
 [^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
+
+:::
+
+### Measure Theory
+
+:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
+
+[^Mnemonic_Ferme]: 
+Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
 
 :::
 
@@ -266,17 +273,17 @@ In this case, we define $m(E) \da m_*(E)$.
 $f\in L^+$ iff $f$ is measurable and non-negative.
 :::
 
+### Integrals and $L^p$ Spaces
+
 :::{.definition title="Integrability"}
 A measurable function is **integrable** iff $\norm{f}_1 < \infty$.
 :::
 
-:::{.definition title="The Infinity Norm"}
+:::{.definition title="The Infinity Norm / Essential supremum / Essentially bounded"}
 \[
-\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat \mu\qty{\theset{\abs{f} \geq \alpha}} = 0}
 .\]
-:::
-
-:::{.definition title="Essentially Bounded Functions"}
+In words, this is the smallest upper bound that holds almost everywhere, so $\abs{f(x)} \leq \norm{f}_\infty$ holds for almost every $x$.
 A function $f:X \to \CC$ is **essentially bounded** iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
 :::
 
@@ -317,9 +324,6 @@ $$f * g(x)=\int f(x-y) g(y) d y .$$
 For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an **approximate identity**. 
 :::
 
-:::{.definition title="Baire Space"}
-A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
-:::
 
 ### Functional Analysis
 
