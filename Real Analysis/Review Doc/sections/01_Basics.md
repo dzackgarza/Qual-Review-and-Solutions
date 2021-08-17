@@ -220,18 +220,22 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 \limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n} 
 .\]
 
-How to derive these definitions:
+How to derive these definitions: use that $\inf$ corresponds to intersections/existence and $\sup$ corresponds to unions/forall.
 
 - For $A \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n$:
   - $x\in A \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
     So $x$ is in *all* but finitely many $n$.
+  - How to remember:  $\liminf_{n} x_n = \sup_{n} \inf_{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
+  - Alternatively: there exists an $n$ (union) such that for all $k\geq n$ (intersection)...
+    
 
 - For $B \da \Intersect{N=1}^\infty \Union{n=N}^\infty E_n$:
   - $x\in B \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
     So $x$ is an infinitely many $E_n$.
+  - How to remember:  $\limsup_{n} x_n = \inf{n} \sup{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
+  - Alternatively: for all $n$ (intersection) there exists a $k\geq n$ (union)...
 
-Note that $A\subseteq B$ since being in all but finitely many $E_n$ necessarily implies being in infinitely many.
-This corresponds to $\liminf_n E_n \subseteq \limsup_n E_n$.
+- It's also useful to note that $\liminf E_n \subseteq \limsup E_n$, since $\liminf E_n$ are elements that are eventually in all sets, and $\limsup E_n$ are elements in infinitely many sets.
   
 :::
 
