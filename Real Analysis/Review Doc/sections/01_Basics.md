@@ -321,10 +321,13 @@ For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\i
 ### Functional Analysis
 
 :::{.definition title="Dual Norm"}
-For $X$ a normed vector space and $\Lambda \in X\dual$, 
+For $X$ a normed vector space and $L \in X\dual$, the **dual norm** or **operator norm** is defined by
 \[
-\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
+\norm{L}_{X\dual} 
+\da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
+= \sup_{ \substack{x\in X \\ \norm{x} \leq  1} } \abs{L(x)}
 .\]
+
 :::
 
 :::{.definition title="Orthonormal sequence "}
@@ -355,13 +358,6 @@ H\dual \da \theset{L: H\to \CC \suchthat L \text{ is continuous }}
 A map $L: X \to \CC$ is a **linear functional** iff
 \[
 L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
-.\]
-:::
-
-:::{.definition title="Operator norm"}
-The **operator norm** of an operator \( L \) is defined as 
-\[
-\norm{L}_{X\dual} \da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
 .\]
 :::
 
