@@ -84,6 +84,36 @@
   - Uniformly continuous
   - Bounded almost everywhere
 
+## The Absolute Essentials
+
+:::{.proposition title="Convergent Sums Have Small Tails"}
+$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::
+
+:::{.theorem title="Uniform Limit Theorem"}
+If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
+
+[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
+
+:::
+
+:::{.proof}
+\envlist
+- Follows from an $\varepsilon/3$ argument: 
+  \[  
+  \abs{F(x) - F(y} \leq 
+  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
+  \leq \eps \to 0
+  .\]
+
+  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
+  - The middle $\eps/3$ comes from continuity of each $F_N$.
+- So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
+:::
+
+:::{.proposition title="Uniform Limits Commute with Integrals"}
+If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+:::
 
 ## Definitions
 
@@ -201,6 +231,10 @@ This just says $S$ is not dense in any subset $S' \subseteq X$, by negating what
 
 :::{.definition title="Meager Sets"}
 A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::
+
+:::{.proposition title="Finite unions of nowhere dense sets are still nowhere dense"}
+A *finite* union of nowhere dense is again nowhere dense.
 :::
 
 :::{.definition title="Baire Space"}
@@ -438,13 +472,7 @@ Take $f_k(x) = x^n$, which converges to $\chi(x=1)$.
 The limit is not continuous, so no subsequence can converge.
 :::
 
-:::{.proposition title="?"}
-A *finite* union of nowhere dense is again nowhere dense.
-:::
 
-:::{.proposition title="Convergent Sums Have Small Tails"}
-$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
-:::
 
 :::{.theorem title="Heine-Borel"}
 $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
@@ -593,30 +621,6 @@ is a **complete** metric space.
 In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 :::
 
-:::{.theorem title="Uniform Limit Theorem"}
-If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
-
-[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
-
-:::
-
-:::{.proof}
-\envlist
-- Follows from an $\varepsilon/3$ argument: 
-  \[  
-  \abs{F(x) - F(y} \leq 
-  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
-  \leq \eps \to 0
-  .\]
-
-  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
-  - The middle $\eps/3$ comes from continuity of each $F_N$.
-- So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
-:::
-
-:::{.proposition title="Uniform Limits Commute with Integrals"}
-If $f_n \to f$ uniformly, then $\int f_n = \int f$.
-:::
 
 ### Series
 
