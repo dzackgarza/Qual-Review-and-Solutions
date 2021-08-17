@@ -13,6 +13,9 @@ Some useful tricks:
 
 ## Abstract Measure Theory
 
+
+
+
 :::{.definition title="Measures on measurable spaces"}
 If $(X, \mcm)$ is a measurable space, then a **measure** is a function $\mu: \mcm \to [0,\infty]$ such that 
 
@@ -138,6 +141,10 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 
 :::
 
+:::{.definition title="Lebesgue Measurability"}
+A set $E$ is **measurable** iff it can be approximated by an open set in $m_*$, so there exists $G\contains E$ with $m_*(G\sm E) < \eps$.
+:::
+
 ## Measures on $\RR^d$
 
 :::{.proposition title="Opens are unions of almost disjoint intervals."}
@@ -156,7 +163,6 @@ Lebesgue measure is translation and dilation invariant.
     One can then show $m_*(E + k) \leq \sum \abs{Q_i + k} = \sum \abs{Q_i}\leq m_*(E) + \eps$ for all $\eps$, and get the reverse inequality by writing $E = (E+y)-y$.
   - For dilation, use that $m_*(t(A\disjoint B)) = tm_*(A\disjoint B)$, which is useful because we cover with disjoint cubes.
     Then use that $tQ_i \covers tE$ to get $tm_*(E) \leq t\sum \abs{Q_i} = \sum \abs{tQ_i} \leq m_*(tE) + \eps$ and similarly reverse to get equality.
-
 :::
 
 :::{.theorem title="Non-measurable sets exist"}
