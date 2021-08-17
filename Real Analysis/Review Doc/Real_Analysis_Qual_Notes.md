@@ -2,6 +2,7 @@
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Ell{ \mathrm{Ell} }
 \newcommand\Kahler[0]{\operatorname{Kähler}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
@@ -13,10 +14,9 @@
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
 \newcommand\rref{\operatorname{RREF}}
+\newcommand\RREF{\operatorname{RREF}}
 \newcommand{\Tatesymbol}{\operatorname{TateSymb}}
-\newcommand\taf{ \mathrm{taf} }
 \newcommand\tilt[0]{ { \flat } }
-\newcommand\tmf{ \mathrm{tmf} }
 \newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\Ag}[0]{{\mathcal{A}_g}}
@@ -86,9 +86,9 @@
 \newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\JCF}[0]{\operatorname{JCF}}
+\newcommand{\RCF}[0]{\operatorname{RCF}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
@@ -115,7 +115,6 @@
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
@@ -176,7 +175,7 @@
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\adjoint}[0]{\dagger}
 \newcommand{\adj}[0]{\operatorname{adj}}
 \newcommand{\ad}[0]{\operatorname{ad}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
@@ -185,7 +184,6 @@
 \newcommand{\arccot}[0]{\operatorname{arccot}}
 \newcommand{\arccsc}[0]{\operatorname{arccsc}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
 \newcommand{\bP}[0]{\operatorname{bP}}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\bbm}[0]{{\mathbb{M}}}
@@ -304,6 +302,7 @@
 \newcommand{\lci}[0]{\mathrm{lci}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\liea}[0]{{\mathfrak{a}}}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
 \newcommand{\lief}[0]{{\mathfrak{f}}}
@@ -385,6 +384,7 @@
 \newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{J ({#1}) }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\noeth}[0]{\mathrm{Noeth}}
 \newcommand{\nonzero}[0]{^{\bullet}}
@@ -469,7 +469,6 @@
 \newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
-\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\zbar}{\bar{z} }
@@ -487,14 +486,17 @@
 \renewcommand{\labelitemiii}{$\diamondsuit$}
 \renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
-\renewcommand{\mod}{\pmod}
+\renewcommand{\mod}{\operatorname{mod}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
 
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\aut}{Aut}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
 \DeclareMathOperator{\BiHol}{BiHol}
 \DeclareMathOperator{\Bl}{Bl}
 \DeclareMathOperator{\Br}{Br}
@@ -611,6 +613,7 @@
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
@@ -681,6 +684,7 @@
 
 
 \newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\E}[0]{{\mathsf{E}}}
 \newcommand{\T}[0]{{\mathsf{T}}}
 \newcommand{\K}[0]{{\mathsf{K}}}
 \newcommand{\G}[0]{{\mathsf{G}}}
@@ -722,10 +726,6 @@
   \operatorname{\textnormal{#1}}
 }
 
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
 
 
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
@@ -786,60 +786,195 @@
   \qty{ \forall \epsilon, \,\, \norm{a} < \eps} \implies a = 0
   .\]
 
-- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+- Continuity / differentiability: 
+  - Show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+  - In higher dimensions: intersect with a ball $B_R(\vector 0)\subset \RR^n$ about zero.
 
 - Simplifications:
-  - To show something for a measurable set, show it for bounded/compact/elementary sets/
-  - To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, $L^1$, etc
-  - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
-  - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
+  - To show something for a measurable set, show it for bounded/compact/elementary sets and use approximations in measure.
+  - To show something for an arbitrary function, try various dense classes of functions: 
+    continuous, bounded, compactly supported, simple, indicator functions, etc and use approximations in norm.
+  - Replace $\eps\to 0$ with an arbitrary countable sequence ($x_n \to 0$)
+    - Note: this is not always helpful, since you now have to predicate over all such sequences.
 
 - Integrals
   - Calculus techniques: Taylor series, IVT, MVT, etc.
   - Break up $\RR^n = \theset{\abs{x} \leq 1} \coprod \theset{\abs{x} > 1}$.
     - Or break integration region into disjoint annuli.
-  - Break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
+  - For pairs of functions $f, g$: break up into $\theset{f>g} \disjoint \theset{f=g} \disjoint \theset{f< g}$.
   - Tail estimates!
   - Most of what works for integrals will work for sums.
 
 - Measure theory:
 
-  - Always consider bounded sets, and if $E$ is unbounded write $E = \union_{n} B_{n}(0) \intersect E$ and use countable subadditivity or continuity of measure.
+  - Always consider bounded sets, and if $E$ is unbounded write $E = \Union_{n\geq 0} \qty{ B_{n}(0) \intersect E}$ and use countable subadditivity or continuity of measure.
 
   - $F_\sigma$ sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.
 
-  - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$.
+  - $s = \inf\theset{x\in X} \implies$ for every $\varepsilon$ there is an $x\in X$ such that $x \leq s + \varepsilon$ or $x\in [s, s+\eps]$.
 
-
-- Approximate by dense subsets of functions
-
-- Useful facts about compactly supported ($C_c(\RR)$) continuous functions:
+- Useful facts about continuous compactly supported ($C_c^0(\RR)$) functions:
   - Uniformly continuous
   - Bounded almost everywhere
 
+## The Absolute Essentials
+
+:::{.proposition title="Convergent Sums Have Small Tails"}
+$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
+:::
+
+:::{.theorem title="Uniform Limit Theorem"}
+If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
+
+[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
+
+:::
+
+:::{.proof}
+\envlist
+- Follows from an $\varepsilon/3$ argument: 
+  \[  
+  \abs{F(x) - F(y} \leq 
+  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
+  \leq \eps \to 0
+  .\]
+
+  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
+  - The middle $\eps/3$ comes from continuity of each $F_N$.
+- So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
+:::
+
+:::{.proposition title="Uniform Limits Commute with Integrals"}
+If $f_n \to f$ uniformly, then $\int f_n = \int f$.
+:::
+
+:::{.proposition title="Weak $M\dash$Test"}
+If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.[^note_about_pointwise_convergence]
+
+[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
+
+:::
+
+:::{.proposition title="The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+[^m_test_suffices]
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
+
+[^m_test_suffices]: 
+It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
+
+:::
+
+:::{.proposition title="Borel Characterization of Measurable Sets"}
+If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::
+
+:::{.proof title="of Borel characterization"}
+For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
+Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
+Take $N\da E\setminus K$, then $m(N) = 0$.
+:::
+
+:::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
+Suppose $E$ is measurable; then for every $\eps>0$,
+
+1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
+2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
+3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
+:::
+
+:::{.proof title="that measurable sets can be approximated"}
+\envlist
+
+- (1): Take $\theset{Q_{i}} \covers E$ and set $O = \union Q_{i}$.
+- (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
+  - Set $F = O^c$, so $F$ is closed.
+  - Then $F\subset E$ by taking complements of $O\supset E^c$
+  - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
+- (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
+  - Set $K_{n} = F\intersect \DD_{n}$, a ball of radius $n$ about $0$.
+  - Then $E\setminus K_{n} \searrow E\setminus F$
+  - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_{n}) < \eps$.
+:::
+
+
+## Quintessential Qual Problems
+
+
+:::{.exercise title="?"}
+\envlist
+
+- Prove the Lebesgue integral is translation/dilation invariant.
+- Prove continuity in $L_1$: $\norm{\tau_hf - f}\converges{h\to 0}\too 0$.
+- Prove that $E$ is measurable $\iff$ $E = F \disjoint Z$ with $F\in F_\sigma$ and $Z$ null $\iff$ $E = G\sm Z$ with $G\in G_\delta$ and $Z$ null.
+- Show that $m(E) = \sup_{K \subseteq E}m(K) \iff$ there exists $K = K(\eps)$ with $m(K) \in [m(E) - \eps, m(E)]$.
+  - What's most useful here is the proof technique, not so much the result itself.
+- Apply Fubini and Tonelli to literally anything.
+- Prove that $\norm{f}_p\to \norm{f}_\infty$ over a finite measure space.
+- Apply Cauchy-Schwarz to literally anything, in the form of $\norm{fg}_1 \leq \norm{f}_2 \norm{g}_2$.
+
+:::
+
+:::{.proposition title="Measurable Slices"}
+Let $E$ be a measurable subset of $\RR^n$. Then
+
+- For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
+- The function
+
+\[
+F: \RR^{n_1} &\to \RR \\
+x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
+\]
+is measurable and 
+\[
+m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
+= \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
+.\]
+:::
+
+:::{.proof title="of measurable slices"}
+\envlist
+
+$\implies$:
+
+- Let $f$ be measurable on $\RR^n$.
+- Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
+- Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
+
+
+$\impliedby$:
+
+- Let $A$ be measurable in $\RR^{n+1}$.
+- Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
+- By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
+- Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
+:::
 
 ## Definitions
 
-:::{.definition title="Completeness"}
-A metric space is **complete** if every Cauchy sequence converges.
-:::
+### Convergence and Continuity
 
-:::{.fact}
-If $X$ is complete, then absolutely convergent implies convergent.
+:::{.definition title="Limsup/Liminf"}
+\[  
+\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
+\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &= \sup_{n\geq 0} \inf_{j\geq n} a_j
+.\]
 :::
 
 :::{.definition title="Continuity and Uniform Continuity"}
-A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
+A function $f: \RR\to \RR$ is **continuous** on $X$ iff for all $x_0\in X$,
 \[
-\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+&\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall y, \abs{x_0 - y} < \delta &&\implies \abs{f(x_0) - f(y)} < \varepsilon \\
+\iff &\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall h, \abs{h} < \delta &&\implies \abs{f(x_0) - f(x_0 \pm h)} < \varepsilon
 .\]
 
-$f$ is **uniformly continuous** iff
+$f$ is **uniformly continuous** on $X$ iff
 
 \[
-  &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
-\iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
+  &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad \abs{x - y} < \delta &&\implies \abs{f(x) - f(y)} < \varepsilon \\
+\iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that} \quad \, \forall x, h, \quad \abs{h} < \delta &&\implies \abs{f(x) - f(x \pm h)} < \varepsilon
 .\]
+These follow from the substitutions $x_0-y = \mp h \implies y = x_0 \pm h$.
 :::
 
 :::{.remark}
@@ -864,29 +999,6 @@ for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
 .\]
 :::
 
-:::{.definition title="Nowhere Dense Sets"}
-A set $S$ is **nowhere dense** iff the closure of $S$ has empty interior iff every interval contains a subinterval that does not intersect $S$.
-:::
-
-:::{.definition title="Meager Sets"}
-A set is **meager** if it is a *countable* union of nowhere dense sets.
-:::
-
-:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
-
-[^Mnemonic_Ferme]: 
-Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
-
-:::
-
-:::{.definition title="Limsup/Liminf"}
-\[  
-\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
-\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &= \sup_{n\geq 0} \inf_{j\geq n} a_j
-.\]
-:::
-
 :::{.definition title="Topological Notions"}
 Let $X$ be a metric space and $A$ a subset.
 Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its closure.
@@ -895,9 +1007,7 @@ Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its 
 
 - An $\eps\dash$**neighborhood** of $p$ is an open ball $B_r(p) \da \ts{q \st d(p, q) < r}$ for some $r>0$.
 
-- A point $p\in X$ is an **accumulation point** of $A$ iff every neighborhood $U_p$ of $p$ contains a point $q\in Q$
-
-- A point $p\in X$ is a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$.
+- A point $p\in X$ is an **accumulation point** or a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$, so $q\neq p$.
 
 - If $p\in A$ and $p$ is not a limit point of $A$, then $p$ is an **isolated point** of $A$.
 
@@ -918,6 +1028,13 @@ Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its 
 
 :::
 
+:::{.definition title="Pointwise Convergence"}
+A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+:::
+
 :::{.definition title="Uniform Convergence"}
 \[
 (\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
@@ -931,48 +1048,90 @@ Negated:[^Negated_uniform_convergence]
 
 :::
 
-:::{.definition title="Pointwise Convergence"}
-A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
-\[  
-(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
+### Function Spaces
+
+:::{.definition title="Completeness"}
+A metric space is **complete** if every Cauchy sequence converges.
 :::
 
-:::{.proposition title="Implications of convergence"}
-Uniform $\implies$ pointwise $\implies$ almost everywhere $\implies$ (roughly) $L^1$ convergence.
-Why these can't be reversed:
+:::{.fact}
+If $X$ is complete, then absolutely convergent implies convergent.
+:::
 
-- Pointwise but not uniform???: ${1\over n}\one_{[0, n]}$
-- Almost everywhere but not pointwise???: $n \one_{[0, {1\over n} ] }$
-- $n \chi_{[n, n+1]}$????
+:::{.definition title="Nowhere Dense Sets"}
+Recall that a set $S$ in $X$ is **dense** $\iff$ every open $U\subseteq X$ intersects $S$.
+A set $S$ is **nowhere dense** in $X$ $\iff$ the closure of $S$ has empty interior $\iff$ every subset (or interval) contains an open set (or a subinterval) that does not intersect $S$.
+This just says $S$ is not dense in any subset $S' \subseteq X$, by negating what it means to be dense.
+:::
+
+:::{.definition title="Meager Sets"}
+A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::
+
+:::{.proposition title="Finite unions of nowhere dense sets are still nowhere dense"}
+A *finite* union of nowhere dense is again nowhere dense.
+:::
+
+:::{.definition title="Baire Space"}
+A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
+:::
+
+### Measure Theory
+
+:::{.definition title="Limsup and Liminf of Sets"}
+\[
+\liminf_{n} E_{n} \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for all but finitely many } n}  \\
+\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n} 
+.\]
+
+  
+:::
+
+:::{.remark}
+How to derive these definitions: use that $\inf$ corresponds to intersections/existence and $\sup$ corresponds to unions/forall.
+
+- For $\liminf E_n$: 
+  - $x\in \liminf E_n \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
+    So $x$ is in *all* but finitely many $n$.
+  - How to remember:  $\liminf_{n} x_n = \sup_{n} \inf_{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
+  - Alternatively: there exists an $n$ (union) such that for all $k\geq n$ (intersection)...
+    
+
+- For $\limsup E_n$: 
+  - $x\in \limsup E_n \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
+    So $x$ is an infinitely many $E_n$.
+  - How to remember:  $\limsup_{n} x_n = \inf{n} \sup{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
+  - Alternatively: for all $n$ (intersection) there exists a $k\geq n$ (union)...
+
+It's also useful to note that $\liminf E_n \subseteq \limsup E_n$, since $\liminf E_n$ are elements that are eventually in all sets, and $\limsup E_n$ are elements in infinitely many sets.
+
+Why these are useful: for finite measure spaces,
+\[
+\mu\qty{\liminf_n E_n }\leq \liminf_n \mu(E_n) \leq \lim_n \mu(E_n) \leq \limsup_n \mu(E_n) \leq \mu\qty{\limsup_n E_n}
+.\]
+If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \union_n E_n$ if $E_n \increasesto E$ or $\lim_n E_n \da \intersect_n E_n$ if $E_n\decreasesto E$ in which case continuity of measure states
+\[
+\mu\qty{\lim_n E_n} = \lim_n \mu(E_n)
+.\]
+
+
+
+:::
+
+:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
+
+[^Mnemonic_Ferme]: 
+Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
 :::
 
 :::{.definition title="Outer Measure"}
 The **outer measure** of a set is given by
 \[
 m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
-.\]
-:::
-
-:::{.definition title="Limsup and Liminf of Sets"}
-\[
-\liminf_{n} E_{n} \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for all but finitely many } n}  \\
-\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n}  \\
-.\]
-
-How to derive these definitions:
-
-- For $A \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_n$:
-  - $x\in A \iff$ there exists some $N$ such that $x\in \intersect_{n\geq N} E_n$, i.e. $x\in E_n$ for all $n\geq N$.
-    So $x$ is in *all* but finitely many $n$.
-
-- For $B \da \Intersect{N=1}^\infty \Union{n=N}^\infty E_n$:
-  - $x\in B \iff$ for every $N$, there exists some $n\geq N$ such that $x\in E_n$.
-    So $x$ is an infinitely many $E_n$.
-
-Note that $A\subseteq B$ since being in all but finitely many $E_n$ necessarily implies being in infinitely many.
-This corresponds to $\liminf_n E_n \subseteq \limsup_n E_n$.
-  
+,\]
+where $\abs{Q_i}$ is the standard Euclidean volume of a cube in $\RR^n$.
 :::
 
 :::{.definition title="Lebesgue Measurable Sets"}
@@ -984,17 +1143,17 @@ In this case, we define $m(E) \da m_*(E)$.
 $f\in L^+$ iff $f$ is measurable and non-negative.
 :::
 
+### Integrals and $L^p$ Spaces
+
 :::{.definition title="Integrability"}
 A measurable function is **integrable** iff $\norm{f}_1 < \infty$.
 :::
 
-:::{.definition title="The Infinity Norm"}
+:::{.definition title="The Infinity Norm / Essential supremum / Essentially bounded"}
 \[
-\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat m\theset{\abs{f} \geq \alpha} = 0}
+\norm{f}_\infty &\definedas \inf_{\alpha \geq 0} \theset{\alpha \suchthat \mu\qty{\theset{\abs{f} \geq \alpha}} = 0}
 .\]
-:::
-
-:::{.definition title="Essentially Bounded Functions"}
+In words, this is the smallest upper bound that holds almost everywhere, so $\abs{f(x)} \leq \norm{f}_\infty$ holds for almost every $x$.
 A function $f:X \to \CC$ is **essentially bounded** iff there exists a real number $c$ such that $\mu(\theset{\abs{f} > x}) = 0$, i.e. $\norm{f}_\infty < \infty$.
 :::
 
@@ -1005,13 +1164,6 @@ L^\infty(X)
 \definedas \theset{f: X\to \CC \suchthat \pnorm{f}\infty < \infty}
 .\]
 
-:::
-
-:::{.definition title="Dual Norm"}
-For $X$ a normed vector space and $\Lambda \in X\dual$, 
-\[
-\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
-.\]
 :::
 
 :::{.definition title="Convolution"}
@@ -1035,11 +1187,17 @@ $$f * g(x)=\int f(x-y) g(y) d y .$$
 For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an **approximate identity**. 
 :::
 
-:::{.definition title="Baire Space"}
-A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
-:::
-
 ### Functional Analysis
+
+:::{.definition title="Dual Norm"}
+For $X$ a normed vector space and $L \in X\dual$, the **dual norm** or **operator norm** is defined by
+\[
+\norm{L}_{X\dual} 
+\da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
+= \sup_{ \substack{x\in X \\ \norm{x} \leq  1} } \abs{L(x)}
+.\]
+
+:::
 
 :::{.definition title="Orthonormal sequence "}
 A countable collection of elements \( \ts{ u_i } \)  is **orthonormal** if and only if 
@@ -1069,13 +1227,6 @@ H\dual \da \theset{L: H\to \CC \suchthat L \text{ is continuous }}
 A map $L: X \to \CC$ is a **linear functional** iff
 \[
 L(\alpha\vector x + \vector y) = \alpha L(\vector x) + L(\vector y).
-.\]
-:::
-
-:::{.definition title="Operator norm"}
-The **operator norm** of an operator \( L \) is defined as 
-\[
-\norm{L}_{X\dual} \da \sup_{ \substack{x\in X \\ \norm{x} = 1} } \abs{L(x)}
 .\]
 :::
 
@@ -1156,13 +1307,7 @@ Take $f_k(x) = x^n$, which converges to $\chi(x=1)$.
 The limit is not continuous, so no subsequence can converge.
 :::
 
-:::{.proposition title="?"}
-A *finite* union of nowhere dense is again nowhere dense.
-:::
 
-:::{.proposition title="Convergent Sums Have Small Tails"}
-$$\sum a_n < \infty \implies a_n \to 0 \qtext{and} \sum_{k=N}^\infty a_n \converges{N\to\infty}\to 0$$
-:::
 
 :::{.theorem title="Heine-Borel"}
 $X\subseteq \RR^n$ is compact $\iff X$ is closed and bounded.
@@ -1229,7 +1374,7 @@ There *do not* exist functions that are discontinuous precisely on $\RR\setminus
 
 :::{.proof title="?"}
 $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
-$\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+Use that $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 :::
 
 :::{.proposition title="Lipschitz $\iff$ differentiable with bounded derivative."}
@@ -1246,7 +1391,7 @@ For $\ts{a_k}$ is a non-increasing sequence in $\RR$ then
 .\]
 :::
 
-:::{.proof title="?"}
+:::{.proof title="showing a useful trick"}
 Show that
 \[
 \sum a_k \leq \sum 2^k a_{2^k} \leq 2 \sum a_k
@@ -1254,7 +1399,7 @@ Show that
 using 
 \[
 \sum a_k = a_0 + a_1 + a_2 + a_3 + \cdots
-\leq \qty{a_1} + \qty{a_2 + a_2} + {a_3 + a_3 + a_3 + a_3} + \cdots \\
+\leq \qty{a_1} + \qty{a_2 + a_2} + \qty {a_3 + a_3 + a_3 + a_3} + \cdots \\
 \]
 where each group with $a_k$ has $2^k$ terms.
 
@@ -1311,30 +1456,6 @@ is a **complete** metric space.
 In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define $X$.
 :::
 
-:::{.theorem title="Uniform Limit Theorem"}
-If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is continuous. [^uniform_limit_is_cts]
-
-[^uniform_limit_is_cts]: Slogan: a uniform limit of continuous functions is continuous.
-
-:::
-
-:::{.proof}
-\envlist
-- Follows from an $\varepsilon/3$ argument: 
-  \[  
-  \abs{F(x) - F(y} \leq 
-  \abs{F(x) - F_N(x)} + \abs{F_N(x) - F_N(y)} + \abs{F_N(y) - F(y)} 
-  \leq \eps \to 0
-  .\]
-
-  - The first and last $\eps/3$ come from uniform convergence of $F_N\to F$.
-  - The middle $\eps/3$ comes from continuity of each $F_N$.
-- So just need to choose $N$ large enough and $\delta$ small enough to make all 3 $\varepsilon$ bounds hold.
-:::
-
-:::{.proposition title="Uniform Limits Commute with Integrals"}
-If $f_n \to f$ uniformly, then $\int f_n = \int f$.
-:::
 
 ### Series
 
@@ -1367,22 +1488,6 @@ If $\sum f_n$ converges then $f_n \to 0$ uniformly.
 If $f_n$ are continuous and $\sum f_n \to f$ converges uniformly, then $f$ is continuous.
 :::
 
-:::{.proposition title="Weak $M\dash$Test"}
-If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges.[^note_about_pointwise_convergence]
-
-[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
-
-:::
-
-:::{.proposition title="The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-[^m_test_suffices]
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
-
-[^m_test_suffices]: 
-It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
-
-:::
 
 :::{.proposition title="Cauchy criterion for sums"}
 $f_n$ are uniformly Cauchy (so $\norm{f_n - f_m}_\infty < \eps$) iff $f_n$ is uniformly convergent.
@@ -1448,7 +1553,7 @@ and $f_n'(0) \to 1$.
 .\]
 :::
 
-## "Almost" Theorems
+## Probabilist Tools: "Almost" Theorems
 
 :::{.theorem title="Egorov's Theorem"}
 Let $E \subseteq \RR^d$ be measurable of positive finite measure with $f_k\to f$ almost everywhere on $E$.
@@ -1629,13 +1734,16 @@ Some useful tricks:
 
 - $\mu(A\sm B) = \mu(A) - \mu(B)$ if $\mu(B) < \infty$
 - Write $f = f-f_n + f_n$
-- If $G$ is measurable, then there exists an $E \supseteq G$ such $m(G) \leq m(E) + \eps$
+- If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
 - If $E$ is measurable,
   - $E = F_{\delta} \disjoint N$ for $N$ a null set.
   - $E \disjoint N = G_{\delta}$ for $N$ a null set.
 :::
 
 ## Abstract Measure Theory
+
+
+
 
 :::{.definition title="Measures on measurable spaces"}
 If $(X, \mcm)$ is a measurable space, then a **measure** is a function $\mu: \mcm \to [0,\infty]$ such that 
@@ -1667,9 +1775,9 @@ Then
 :::{.proposition title="Continuity of Measure"}
 \[
 \text{Continuity from below:} \quad 
-E_{n} \nearrow E &\implies m(E_{n}) \to m(E) \\
+E_{n} \nearrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E) \\
 \text{Continuity from above:} \quad 
-m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
+m(E_{1}) < \infty \text{ and } E_{n} \searrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E)
 .\]
 
 Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.
@@ -1705,7 +1813,7 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 
   - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
   - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
-  - $x\not\in F_2$ but $x\in F_3$, and so on.
+  - $x\not\in F_2$ but $x\in F_3$ and thus $F_4, F_4,\cdots$, and so on.
 
 - Now take measures, and note that we get a telescoping sum:
 \[
@@ -1762,45 +1870,28 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 
 :::
 
+:::{.definition title="Lebesgue Measurability"}
+A set $E$ is **measurable** iff it can be approximated by an open set in $m_*$, so there exists $G\contains E$ with $m_*(G\sm E) < \eps$.
+:::
+
 ## Measures on $\RR^d$
 
-:::{.proposition title="Borel Characterization of Measurable Sets"}
-
-If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
-:::
 :::{.proposition title="Opens are unions of almost disjoint intervals."}
 Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
-:::
-
-:::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
-Suppose $E$ is measurable; then for every $\eps>0$,
-
-1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
-2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
-3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
-:::
-
-:::{.proof title="that measurable sets can be approximated"}
-\envlist
-
-- (1): Take $\theset{Q_{i}} \covers E$ and set $O = \union Q_{i}$.
-- (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
-  - Set $F = O^c$, so $F$ is closed.
-  - Then $F\subset E$ by taking complements of $O\supset E^c$
-  - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
-- (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
-  - Set $K_{n} = F\intersect \DD_{n}$, a ball of radius $n$ about $0$.
-  - Then $E\setminus K_{n} \searrow E\setminus F$
-  - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_{n}) < \eps$.
 :::
 
 :::{.proposition title="Translation and Dilation Invariance"}
 Lebesgue measure is translation and dilation invariant.
 :::
 
-:::{.proof title="(Todo) of translation/dilation invariance"}
-Obvious for cubes; if $Q_{i} \rightrightarrows E$ then $Q_{i} + k \rightrightarrows E + k$, etc.
-<!--\todo{Flesh out this proof.}-->
+:::{.proof title="of translation/dilation invariance"}
+\envlist
+
+- This is obvious for cubes: 
+  - For translation, if $Q_i \covers E$ then $Q_i + k \covers E + k$.
+    One can then show $m_*(E + k) \leq \sum \abs{Q_i + k} = \sum \abs{Q_i}\leq m_*(E) + \eps$ for all $\eps$, and get the reverse inequality by writing $E = (E+y)-y$.
+  - For dilation, use that $m_*(t(A\disjoint B)) = tm_*(A\disjoint B)$, which is useful because we cover with disjoint cubes.
+    Then use that $tQ_i \covers tE$ to get $tm_*(E) \leq t\sum \abs{Q_i} = \sum \abs{tQ_i} \leq m_*(tE) + \eps$ and similarly reverse to get equality.
 :::
 
 :::{.theorem title="Non-measurable sets exist"}
@@ -1814,13 +1905,6 @@ There is a non-measurable set $A\subseteq \RR$.
 - Enumerate the rationals in $[0, 1]$ as $q_{j}$, and define $N_{j} = N + q_{j}$. These intersect trivially.
 - Define $M \da \disjoint N_{j}$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
 - By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
-:::
-
-
-:::{.proof title="of Borel characterization"}
-For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
-Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
-Take $N\da E\setminus K$, then $m(N) = 0$.
 :::
 
 :::{.proposition title="Limsups/infs of measurable sets are measurable."}
@@ -1955,7 +2039,7 @@ Characteristic functions on measurable sets are automatically measurable, since 
 :::{.remark title="on notation"}
 \envlist
 
-- $L^+$: measurable functions
+- $L^+$: nonnegative measurable functions
 - $L^1$: Lebesgue integrable functions, so $\int \abs{f} < \infty$
 :::
 
@@ -2058,7 +2142,7 @@ As a consequence,
 If 
 
 - $f_n \in L^1$ with $f_n \to f$ almost everywhere, 
-- There exist $g_n \in L^1$ with $\abs{f_n} \leq g_n$, $g_n \geq 0$.
+- There exist $g_n\geq 0 \in L^1$ nonnegative with $\abs{f_n} \leq g_n$,
 - $g_n\to g$ almost everywhere with $g\in L^1$, and 
 - $\lim \int g_n = \int g$, 
 
@@ -2083,7 +2167,7 @@ Proceed by showing $\limsup \int f_n \leq \int f \leq \liminf \int f_n$:
 \implies \int f &\geq \limsup \int f_n
 .\]
 
-  - Here we use $g_n - f_n \converges{n\to\infty} g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
+  - Here we use $g_n - f_n \converges{n\to\infty}\too g-f$ with $0 \leq \abs{f_n} - f_n \leq g_n - f_n$, so $g_n - f_n$ are nonnegative (and measurable) and Fatou's lemma applies.
 
 - $\int f \leq \liminf \int f_n$:
 \[
@@ -2109,7 +2193,7 @@ If $f\in L^1$, then
 :::{.proof}
 Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
 \[
-\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
+\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \geq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
 ,\]
 so the DCT applies to $g_n$ and
 \[
@@ -2154,41 +2238,6 @@ For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$,
 
 :::{.theorem title="Fubini-Tonelli"}
 If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
-:::
-
-:::{.proposition title="Measurable Slices"}
-Let $E$ be a measurable subset of $\RR^n$. Then
-
-- For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
-- The function
-
-\[
-F: \RR^{n_1} &\to \RR \\
-x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
-\]
-is measurable and 
-\[
-m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
-= \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
-.\]
-:::
-
-:::{.proof title="of measurable slices"}
-\envlist
-
-$\implies$:
-
-- Let $f$ be measurable on $\RR^n$.
-- Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
-- Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
-
-
-$\impliedby$:
-
-- Let $A$ be measurable in $\RR^{n+1}$.
-- Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
-- By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
-- Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
 :::
 
 :::{.proposition title="Differentiating Under an Integral"}

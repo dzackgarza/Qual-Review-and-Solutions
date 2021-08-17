@@ -74,33 +74,39 @@
 <ul>
 <li><a href="#table-of-notation"><span class="toc-section-number">1.1</span> Table of Notation</a></li>
 <li><a href="#useful-techniques"><span class="toc-section-number">1.2</span> Useful Techniques</a></li>
-<li><a href="#definitions"><span class="toc-section-number">1.3</span> Definitions</a>
+<li><a href="#the-absolute-essentials"><span class="toc-section-number">1.3</span> The Absolute Essentials</a></li>
+<li><a href="#quintessential-qual-problems"><span class="toc-section-number">1.4</span> Quintessential Qual Problems</a></li>
+<li><a href="#definitions"><span class="toc-section-number">1.5</span> Definitions</a>
 <ul>
-<li><a href="#functional-analysis"><span class="toc-section-number">1.3.1</span> Functional Analysis</a></li>
+<li><a href="#convergence-and-continuity"><span class="toc-section-number">1.5.1</span> Convergence and Continuity</a></li>
+<li><a href="#function-spaces"><span class="toc-section-number">1.5.2</span> Function Spaces</a></li>
+<li><a href="#measure-theory"><span class="toc-section-number">1.5.3</span> Measure Theory</a></li>
+<li><a href="#integrals-and-lp-spaces"><span class="toc-section-number">1.5.4</span> Integrals and <span class="math inline">\(L^p\)</span> Spaces</a></li>
+<li><a href="#functional-analysis"><span class="toc-section-number">1.5.5</span> Functional Analysis</a></li>
 </ul></li>
-<li><a href="#theorems"><span class="toc-section-number">1.4</span> Theorems</a>
+<li><a href="#theorems"><span class="toc-section-number">1.6</span> Theorems</a>
 <ul>
-<li><a href="#topology-sets"><span class="toc-section-number">1.4.1</span> Topology / Sets</a></li>
-<li><a href="#functions"><span class="toc-section-number">1.4.2</span> Functions</a></li>
-<li><a href="#sequences-and-series"><span class="toc-section-number">1.4.3</span> Sequences and Series</a></li>
+<li><a href="#topology-sets"><span class="toc-section-number">1.6.1</span> Topology / Sets</a></li>
+<li><a href="#functions"><span class="toc-section-number">1.6.2</span> Functions</a></li>
+<li><a href="#sequences-and-series"><span class="toc-section-number">1.6.3</span> Sequences and Series</a></li>
 </ul></li>
-<li><a href="#uniform-convergence"><span class="toc-section-number">1.5</span> Uniform Convergence</a>
+<li><a href="#uniform-convergence"><span class="toc-section-number">1.7</span> Uniform Convergence</a>
 <ul>
-<li><a href="#series"><span class="toc-section-number">1.5.1</span> Series</a></li>
+<li><a href="#series"><span class="toc-section-number">1.7.1</span> Series</a></li>
 </ul></li>
-<li><a href="#commuting-limiting-operations"><span class="toc-section-number">1.6</span> Commuting Limiting Operations</a></li>
-<li><a href="#almost-theorems"><span class="toc-section-number">1.7</span> “Almost” Theorems</a></li>
-<li><a href="#slightly-advanced-stuff"><span class="toc-section-number">1.8</span> Slightly Advanced Stuff</a></li>
-<li><a href="#examples-and-counterexamples"><span class="toc-section-number">1.9</span> Examples and Counterexamples</a>
+<li><a href="#commuting-limiting-operations"><span class="toc-section-number">1.8</span> Commuting Limiting Operations</a></li>
+<li><a href="#probabilist-tools-almost-theorems"><span class="toc-section-number">1.9</span> Probabilist Tools: “Almost” Theorems</a></li>
+<li><a href="#slightly-advanced-stuff"><span class="toc-section-number">1.10</span> Slightly Advanced Stuff</a></li>
+<li><a href="#examples-and-counterexamples"><span class="toc-section-number">1.11</span> Examples and Counterexamples</a>
 <ul>
-<li><a href="#dirichlet-function"><span class="toc-section-number">1.9.1</span> Dirichlet function</a></li>
-<li><a href="#dirichlet-with-a-continuous-point"><span class="toc-section-number">1.9.2</span> Dirichlet with a Continuous Point</a></li>
-<li><a href="#dirichlet-with-a-differentiable-point"><span class="toc-section-number">1.9.3</span> Dirichlet with a Differentiable Point</a></li>
-<li><a href="#dirichlet-with-two-functions"><span class="toc-section-number">1.9.4</span> Dirichlet with Two Functions</a></li>
+<li><a href="#dirichlet-function"><span class="toc-section-number">1.11.1</span> Dirichlet function</a></li>
+<li><a href="#dirichlet-with-a-continuous-point"><span class="toc-section-number">1.11.2</span> Dirichlet with a Continuous Point</a></li>
+<li><a href="#dirichlet-with-a-differentiable-point"><span class="toc-section-number">1.11.3</span> Dirichlet with a Differentiable Point</a></li>
+<li><a href="#dirichlet-with-two-functions"><span class="toc-section-number">1.11.4</span> Dirichlet with Two Functions</a></li>
 </ul></li>
-<li><a href="#the-thomae-function"><span class="toc-section-number">1.10</span> The Thomae function:</a></li>
+<li><a href="#the-thomae-function"><span class="toc-section-number">1.12</span> The Thomae function:</a></li>
 </ul></li>
-<li><a href="#measure-theory"><span class="toc-section-number">2</span> Measure Theory</a>
+<li><a href="#measure-theory-1"><span class="toc-section-number">2</span> Measure Theory</a>
 <ul>
 <li><a href="#abstract-measure-theory"><span class="toc-section-number">2.1</span> Abstract Measure Theory</a></li>
 <li><a href="#outer-measure"><span class="toc-section-number">2.2</span> Outer Measure</a></li>
@@ -288,13 +294,19 @@ a=b \iff a\leq b \text{ and }  a\geq b
 .\end{align*}
 <span></li>
 </ul></li>
-<li><p>Continuity / differentiability: show it holds on <span class="math inline">\([-M, M]\)</span> for all <span class="math inline">\(M\)</span> to get it to hold on <span class="math inline">\({\mathbb{R}}\)</span>.</p></li>
+<li><p>Continuity / differentiability:</p>
+<ul>
+<li>Show it holds on <span class="math inline">\([-M, M]\)</span> for all <span class="math inline">\(M\)</span> to get it to hold on <span class="math inline">\({\mathbb{R}}\)</span>.</li>
+<li>In higher dimensions: intersect with a ball <span class="math inline">\(B_R(\mathbf{0})\subset {\mathbb{R}}^n\)</span> about zero.</li>
+</ul></li>
 <li><p>Simplifications:</p>
 <ul>
-<li>To show something for a measurable set, show it for bounded/compact/elementary sets/</li>
-<li>To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, <span class="math inline">\(L^1\)</span>, etc</li>
-<li>Replace a continuous sequence (<span class="math inline">\({\varepsilon}\to 0\)</span>) with an arbitrary countable sequence (<span class="math inline">\(x_n \to 0\)</span>)</li>
-<li>Intersect with a ball <span class="math inline">\(B_r(\mathbf{0})\subset {\mathbb{R}}^n\)</span>.</li>
+<li>To show something for a measurable set, show it for bounded/compact/elementary sets and use approximations in measure.</li>
+<li>To show something for an arbitrary function, try various dense classes of functions: continuous, bounded, compactly supported, simple, indicator functions, etc and use approximations in norm.</li>
+<li>Replace <span class="math inline">\({\varepsilon}\to 0\)</span> with an arbitrary countable sequence (<span class="math inline">\(x_n \to 0\)</span>)
+<ul>
+<li>Note: this is not always helpful, since you now have to predicate over all such sequences.</li>
+</ul></li>
 </ul></li>
 <li><p>Integrals</p>
 <ul>
@@ -303,45 +315,174 @@ a=b \iff a\leq b \text{ and }  a\geq b
 <ul>
 <li>Or break integration region into disjoint annuli.</li>
 </ul></li>
-<li>Break up into <span class="math inline">\(\left\{{f&gt;g}\right\} {\textstyle\coprod}\left\{{f=g}\right\} {\textstyle\coprod}\left\{{f&lt; g}\right\}\)</span>.</li>
+<li>For pairs of functions <span class="math inline">\(f, g\)</span>: break up into <span class="math inline">\(\left\{{f&gt;g}\right\} {\textstyle\coprod}\left\{{f=g}\right\} {\textstyle\coprod}\left\{{f&lt; g}\right\}\)</span>.</li>
 <li>Tail estimates!</li>
 <li>Most of what works for integrals will work for sums.</li>
 </ul></li>
 <li><p>Measure theory:</p>
 <ul>
-<li><p>Always consider bounded sets, and if <span class="math inline">\(E\)</span> is unbounded write <span class="math inline">\(E = \cup_{n} B_{n}(0) \cap E\)</span> and use countable subadditivity or continuity of measure.</p></li>
+<li><p>Always consider bounded sets, and if <span class="math inline">\(E\)</span> is unbounded write <span class="math inline">\(E = \displaystyle\bigcup_{n\geq 0} \qty{ B_{n}(0) \cap E}\)</span> and use countable subadditivity or continuity of measure.</p></li>
 <li><p><span class="math inline">\(F_\sigma\)</span> sets are Borel, so establish something for Borel sets and use this to extend it to Lebesgue.</p></li>
-<li><p><span class="math inline">\(s = \inf\left\{{x\in X}\right\} \implies\)</span> for every <span class="math inline">\(\varepsilon\)</span> there is an <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(x \leq s + \varepsilon\)</span>.</p></li>
+<li><p><span class="math inline">\(s = \inf\left\{{x\in X}\right\} \implies\)</span> for every <span class="math inline">\(\varepsilon\)</span> there is an <span class="math inline">\(x\in X\)</span> such that <span class="math inline">\(x \leq s + \varepsilon\)</span> or <span class="math inline">\(x\in [s, s+{\varepsilon}]\)</span>.</p></li>
 </ul></li>
-<li><p>Approximate by dense subsets of functions</p></li>
-<li><p>Useful facts about compactly supported (<span class="math inline">\(C_c({\mathbb{R}})\)</span>) continuous functions:</p>
+<li><p>Useful facts about continuous compactly supported (<span class="math inline">\(C_c^0({\mathbb{R}})\)</span>) functions:</p>
 <ul>
 <li>Uniformly continuous</li>
 <li>Bounded almost everywhere</li>
 </ul></li>
 </ul>
-<h2 data-number="1.3" id="definitions"><span class="header-section-number">1.3</span> Definitions</h2>
-<div class="definition proofenv" title="Completeness">
-<p>A metric space is <strong>complete</strong> if every Cauchy sequence converges.</p>
-</div>
-<div class="fact proofenv">
-<p>If <span class="math inline">\(X\)</span> is complete, then absolutely convergent implies convergent.</p>
-</div>
-<div class="definition proofenv" title="Continuity and Uniform Continuity">
-<p>A function <span class="math inline">\(f: {\mathbb{R}}\to {\mathbb{R}}\)</span> is <strong>continuous</strong> on a set <span class="math inline">\(X\)</span> iff 
+<h2 data-number="1.3" id="the-absolute-essentials"><span class="header-section-number">1.3</span> The Absolute Essentials</h2>
+<div class="proposition proofenv" title="Convergent Sums Have Small Tails">
+<p>
 <span class="math display">
-\begin{align*}
-\forall x_0 \in X, \forall {\varepsilon}&gt;0, \quad \exists\delta = \delta(x_0, {\varepsilon}) &gt;0 \quad\text{ such that }\quad \forall x\in X, \, {\left\lvert {x-x_0} \right\rvert}&lt;\delta \implies {\left\lvert {f(x) - f(x_0)} \right\rvert} &lt; {\varepsilon}
+\begin{align*}\sum a_n &lt; \infty \implies a_n \to 0 {\quad \operatorname{and} \quad} \sum_{k=N}^\infty a_n \overset{N\to\infty}\to 0\end{align*}
+<span></p>
+</div>
+<div class="theorem proofenv" title="Uniform Limit Theorem">
+<p>If <span class="math inline">\(f_n\to f\)</span> pointwise and uniformly with each <span class="math inline">\(f_n\)</span> continuous, then <span class="math inline">\(f\)</span> is continuous.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+<div class="proof proofenv">
+<details open><summary><i>(Click to expand proof)</i></summary>
+<ul>
+<li><p>Follows from an <span class="math inline">\(\varepsilon/3\)</span> argument: 
+<span class="math display">
+\begin{align*}  
+{\left\lvert {F(x) - F(y} \right\rvert} \leq 
+{\left\lvert {F(x) - F_N(x)} \right\rvert} + {\left\lvert {F_N(x) - F_N(y)} \right\rvert} + {\left\lvert {F_N(y) - F(y)} \right\rvert} 
+\leq {\varepsilon}\to 0
 .\end{align*}
 <span></p>
-<p><span class="math inline">\(f\)</span> is <strong>uniformly continuous</strong> iff</p>
+<ul>
+<li>The first and last <span class="math inline">\({\varepsilon}/3\)</span> come from uniform convergence of <span class="math inline">\(F_N\to F\)</span>.</li>
+<li>The middle <span class="math inline">\({\varepsilon}/3\)</span> comes from continuity of each <span class="math inline">\(F_N\)</span>.</li>
+</ul></li>
+<li><p>So just need to choose <span class="math inline">\(N\)</span> large enough and <span class="math inline">\(\delta\)</span> small enough to make all 3 <span class="math inline">\(\varepsilon\)</span> bounds hold.</p></li>
+</ul>
+</details>
+</div>
+<div class="proposition proofenv" title="Uniform Limits Commute with Integrals">
+<p>If <span class="math inline">\(f_n \to f\)</span> uniformly, then <span class="math inline">\(\int f_n = \int f\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Weak $M\dash$Test">
+<p>If <span class="math inline">\(f_n(x) \leq M_n\)</span> <strong>for a fixed <span class="math inline">\(x\)</span></strong> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then the series <span class="math inline">\(f(x) = \sum f_n(x)\)</span> converges pointwise.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</div>
+<div class="proposition proofenv" title="The Weierstrass $M\dash$Test">
+<p>If <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for each <span class="math inline">\(n\)</span> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then <span class="math inline">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly and absolutely on <span class="math inline">\(A\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Conversely, if <span class="math inline">\(\sum f_n\)</span> converges uniformly on <span class="math inline">\(A\)</span> then <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0\)</span>.</p>
+</div>
+<div class="proposition proofenv" title="Borel Characterization of Measurable Sets">
+<p>If <span class="math inline">\(E\)</span> is Lebesgue measurable, then <span class="math inline">\(E = H {\textstyle\coprod}N\)</span> where <span class="math inline">\(H \in F_\sigma\)</span> and <span class="math inline">\(N\)</span> is null.</p>
+</div>
+<div class="proof proofenv" title="of Borel characterization">
+<details open><summary><i>(Click to expand proof)</i></summary>
+<p>For every <span class="math inline">\(\frac 1 n\)</span> there exists a closed set <span class="math inline">\(K_{n} \subset E\)</span> such that <span class="math inline">\(m(E\setminus K_{n}) \leq \frac 1 n\)</span>. Take <span class="math inline">\(K = \cup K_{n}\)</span>, wlog <span class="math inline">\(K_{n} \nearrow K\)</span> so <span class="math inline">\(m(K) = \lim m(K_{n}) = m(E)\)</span>. Take <span class="math inline">\(N\mathrel{\vcenter{:}}= E\setminus K\)</span>, then <span class="math inline">\(m(N) = 0\)</span>.</p>
+</details>
+</div>
+<div class="theorem proofenv" title="Measurable sets can be approximated by open/closed/compact sets.">
+<p>Suppose <span class="math inline">\(E\)</span> is measurable; then for every <span class="math inline">\({\varepsilon}&gt;0\)</span>,</p>
+<ol type="1">
+<li>There exists an open <span class="math inline">\(O\supset E\)</span> with <span class="math inline">\(m(O\setminus E) &lt; {\varepsilon}\)</span></li>
+<li>There exists a closed <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}\)</span></li>
+<li>There exists a compact <span class="math inline">\(K\subset E\)</span> with <span class="math inline">\(m(E\setminus K) &lt; {\varepsilon}\)</span>.</li>
+</ol>
+</div>
+<div class="proof proofenv" title="that measurable sets can be approximated">
+<details open><summary><i>(Click to expand proof)</i></summary>
+<ul>
+<li>(1): Take <span class="math inline">\(\left\{{Q_{i}}\right\} \rightrightarrows E\)</span> and set <span class="math inline">\(O = \cup Q_{i}\)</span>.</li>
+<li>(2): Since <span class="math inline">\(E^c\)</span> is measurable, produce <span class="math inline">\(O\supset E^c\)</span> with <span class="math inline">\(m(O\setminus E^c) &lt; {\varepsilon}\)</span>.
+<ul>
+<li>Set <span class="math inline">\(F = O^c\)</span>, so <span class="math inline">\(F\)</span> is closed.</li>
+<li>Then <span class="math inline">\(F\subset E\)</span> by taking complements of <span class="math inline">\(O\supset E^c\)</span></li>
+<li><span class="math inline">\(E\setminus F = O\setminus E^c\)</span> and taking measures yields <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}\)</span></li>
+</ul></li>
+<li>(3): Pick <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}/2\)</span>.
+<ul>
+<li>Set <span class="math inline">\(K_{n} = F\cap{\mathbb{D}}_{n}\)</span>, a ball of radius <span class="math inline">\(n\)</span> about <span class="math inline">\(0\)</span>.</li>
+<li>Then <span class="math inline">\(E\setminus K_{n} \searrow E\setminus F\)</span></li>
+<li>Since <span class="math inline">\(m(E) &lt; \infty\)</span>, there is an <span class="math inline">\(N\)</span> such that <span class="math inline">\(n\geq N \implies m(E\setminus K_{n}) &lt; {\varepsilon}\)</span>.</li>
+</ul></li>
+</ul>
+</details>
+</div>
+<h2 data-number="1.4" id="quintessential-qual-problems"><span class="header-section-number">1.4</span> Quintessential Qual Problems</h2>
+<div class="exercise proofenv" title="?">
+<ul>
+<li>Prove the Lebesgue integral is translation/dilation invariant.</li>
+<li>Prove continuity in <span class="math inline">\(L_1\)</span>: <span class="math inline">\({\left\lVert {\tau_hf - f} \right\rVert}\overset{h\to 0}\longrightarrow 0\)</span>.</li>
+<li>Prove that <span class="math inline">\(E\)</span> is measurable <span class="math inline">\(\iff\)</span> <span class="math inline">\(E = F {\textstyle\coprod}Z\)</span> with <span class="math inline">\(F\in F_\sigma\)</span> and <span class="math inline">\(Z\)</span> null <span class="math inline">\(\iff\)</span> <span class="math inline">\(E = G\setminus Z\)</span> with <span class="math inline">\(G\in G_\delta\)</span> and <span class="math inline">\(Z\)</span> null.</li>
+<li>Show that <span class="math inline">\(m(E) = \sup_{K \subseteq E}m(K) \iff\)</span> there exists <span class="math inline">\(K = K({\varepsilon})\)</span> with <span class="math inline">\(m(K) \in [m(E) - {\varepsilon}, m(E)]\)</span>.
+<ul>
+<li>What’s most useful here is the proof technique, not so much the result itself.</li>
+</ul></li>
+<li>Apply Fubini and Tonelli to literally anything.</li>
+<li>Prove that <span class="math inline">\({\left\lVert {f} \right\rVert}_p\to {\left\lVert {f} \right\rVert}_\infty\)</span> over a finite measure space.</li>
+<li>Apply Cauchy-Schwarz to literally anything, in the form of <span class="math inline">\({\left\lVert {fg} \right\rVert}_1 \leq {\left\lVert {f} \right\rVert}_2 {\left\lVert {g} \right\rVert}_2\)</span>.</li>
+</ul>
+</div>
+<div class="proposition proofenv" title="Measurable Slices">
+<p>Let <span class="math inline">\(E\)</span> be a measurable subset of <span class="math inline">\({\mathbb{R}}^n\)</span>. Then</p>
+<ul>
+<li>For almost every <span class="math inline">\(x\in {\mathbb{R}}^{n_1}\)</span>, the slice <span class="math inline">\(E_x \mathrel{\vcenter{:}}=\left\{{y \in {\mathbb{R}}^{n_2} \mathrel{\Big|}(x,y) \in E}\right\}\)</span> is measurable in <span class="math inline">\({\mathbb{R}}^{n_2}\)</span>.</li>
+<li>The function</li>
+</ul>
 <p>
 <span class="math display">
 \begin{align*}
-  &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad {\left\lvert {x - y} \right\rvert} &lt; \delta \implies {\left\lvert {f(x) - f(y)} \right\rvert} &lt; \varepsilon \\
-\iff &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \mathrel{\Big|}\quad \forall x, y, \quad {\left\lvert {y} \right\rvert} &lt; \delta \implies {\left\lvert {f(x-y) - f(y)} \right\rvert} &lt; \varepsilon
+F: {\mathbb{R}}^{n_1} &amp;\to {\mathbb{R}}\\
+x &amp;\mapsto m(E_x) = \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy
+\end{align*}
+<span> is measurable and 
+<span class="math display">
+\begin{align*}
+m(E) = \int_{{\mathbb{R}}^{n_1}} m(E_x) ~dx 
+= \int_{{\mathbb{R}}^{n_1}} \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy ~dx
 .\end{align*}
 <span></p>
+</div>
+<div class="proof proofenv" title="of measurable slices">
+<details open><summary><i>(Click to expand proof)</i></summary>
+<p><span class="math inline">\(\implies\)</span>:</p>
+<ul>
+<li>Let <span class="math inline">\(f\)</span> be measurable on <span class="math inline">\({\mathbb{R}}^n\)</span>.</li>
+<li>Then the cylinders <span class="math inline">\(F(x, y) = f(x)\)</span> and <span class="math inline">\(G(x, y) = f(y)\)</span> are both measurable on <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
+<li>Write <span class="math inline">\(\mathcal{A} = \left\{{G \leq F}\right\} \cap\left\{{G \geq 0}\right\}\)</span>; both are measurable.</li>
+</ul>
+<p><span class="math inline">\(\impliedby\)</span>:</p>
+<ul>
+<li>Let <span class="math inline">\(A\)</span> be measurable in <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
+<li>Define <span class="math inline">\(A_x = \left\{{y\in {\mathbb{R}}\mathrel{\Big|}(x, y) \in \mathcal{A}}\right\}\)</span>, then <span class="math inline">\(m(A_x) = f(x)\)</span>.</li>
+<li>By the corollary, <span class="math inline">\(A_x\)</span> is measurable set, <span class="math inline">\(x \mapsto A_x\)</span> is a measurable function, and <span class="math inline">\(m(A) = \int f(x) ~dx\)</span>.</li>
+<li>Then explicitly, <span class="math inline">\(f(x) = \chi_{A}\)</span>, which makes <span class="math inline">\(f\)</span> a measurable function.</li>
+</ul>
+</details>
+</div>
+<h2 data-number="1.5" id="definitions"><span class="header-section-number">1.5</span> Definitions</h2>
+<h3 data-number="1.5.1" id="convergence-and-continuity"><span class="header-section-number">1.5.1</span> Convergence and Continuity</h3>
+<div class="definition proofenv" title="Limsup/Liminf">
+<p>
+<span class="math display">
+\begin{align*}  
+\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &amp;= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
+\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &amp;= \sup_{n\geq 0} \inf_{j\geq n} a_j
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="Continuity and Uniform Continuity">
+<p>A function <span class="math inline">\(f: {\mathbb{R}}\to {\mathbb{R}}\)</span> is <strong>continuous</strong> on <span class="math inline">\(X\)</span> iff for all <span class="math inline">\(x_0\in X\)</span>, 
+<span class="math display">
+\begin{align*}
+&amp;\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall y, {\left\lvert {x_0 - y} \right\rvert} &lt; \delta &amp;&amp;\implies {\left\lvert {f(x_0) - f(y)} \right\rvert} &lt; \varepsilon \\
+\iff &amp;\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall h, {\left\lvert {h} \right\rvert} &lt; \delta &amp;&amp;\implies {\left\lvert {f(x_0) - f(x_0 \pm h)} \right\rvert} &lt; \varepsilon
+.\end{align*}
+<span></p>
+<p><span class="math inline">\(f\)</span> is <strong>uniformly continuous</strong> on <span class="math inline">\(X\)</span> iff</p>
+<p>
+<span class="math display">
+\begin{align*}
+  &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad {\left\lvert {x - y} \right\rvert} &lt; \delta &amp;&amp;\implies {\left\lvert {f(x) - f(y)} \right\rvert} &lt; \varepsilon \\
+\iff &amp;\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that} \quad \, \forall x, h, \quad {\left\lvert {h} \right\rvert} &lt; \delta &amp;&amp;\implies {\left\lvert {f(x) - f(x \pm h)} \right\rvert} &lt; \varepsilon
+.\end{align*}
+<span> These follow from the substitutions <span class="math inline">\(x_0-y = \mp h \implies y = x_0 \pm h\)</span>.</p>
 </div>
 <div class="remark proofenv">
 <p>The main difference is that <span class="math inline">\(\delta\)</span> may depend on <span class="math inline">\(x_0\)</span> and <span class="math inline">\({\varepsilon}\)</span> in continuity, but only depends on <span class="math inline">\({\varepsilon}\)</span> in the uniform version. I.e. once <span class="math inline">\(\delta\)</span> is fixed, for continuity one may only range over <span class="math inline">\(x\)</span>, but in uniform continuity one can range over all pairs <span class="math inline">\(x,y\)</span>.</p>
@@ -364,31 +505,12 @@ a=b \iff a\leq b \text{ and }  a\geq b
 .\end{align*}
 <span></p>
 </div>
-<div class="definition proofenv" title="Nowhere Dense Sets">
-<p>A set <span class="math inline">\(S\)</span> is <strong>nowhere dense</strong> iff the closure of <span class="math inline">\(S\)</span> has empty interior iff every interval contains a subinterval that does not intersect <span class="math inline">\(S\)</span>.</p>
-</div>
-<div class="definition proofenv" title="Meager Sets">
-<p>A set is <strong>meager</strong> if it is a <em>countable</em> union of nowhere dense sets.</p>
-</div>
-<div class="definition proofenv" title="$F_\sigma$ and $G_\delta$ Sets">
-<p>An <span class="math inline">\(F_\sigma\)</span> set is a union of closed sets, and a <span class="math inline">\(G_\delta\)</span> set is an intersection of opens.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</div>
-<div class="definition proofenv" title="Limsup/Liminf">
-<p>
-<span class="math display">
-\begin{align*}  
-\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &amp;= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
-\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &amp;= \sup_{n\geq 0} \inf_{j\geq n} a_j
-.\end{align*}
-<span></p>
-</div>
 <div class="definition proofenv" title="Topological Notions">
 <p>Let <span class="math inline">\(X\)</span> be a metric space and <span class="math inline">\(A\)</span> a subset. Let <span class="math inline">\(A&#39;\)</span> denote the limit points of <span class="math inline">\(A\)</span>, and <span class="math inline">\(\mkern 1.5mu\overline{\mkern-1.5muA\mkern-1.5mu}\mkern 1.5mu \mathrel{\vcenter{:}}= A\cup A&#39;\)</span> to be its closure.</p>
 <ul>
 <li><p>A <strong>neighborhood</strong> of <span class="math inline">\(p\)</span> is an open set <span class="math inline">\(U_p\)</span> containing <span class="math inline">\(p\)</span>.</p></li>
 <li><p>An <span class="math inline">\({\varepsilon}{\hbox{-}}\)</span><strong>neighborhood</strong> of <span class="math inline">\(p\)</span> is an open ball <span class="math inline">\(B_r(p) \mathrel{\vcenter{:}}=\left\{{q {~\mathrel{\Big|}~}d(p, q) &lt; r}\right\}\)</span> for some <span class="math inline">\(r&gt;0\)</span>.</p></li>
-<li><p>A point <span class="math inline">\(p\in X\)</span> is an <strong>accumulation point</strong> of <span class="math inline">\(A\)</span> iff every neighborhood <span class="math inline">\(U_p\)</span> of <span class="math inline">\(p\)</span> contains a point <span class="math inline">\(q\in Q\)</span></p></li>
-<li><p>A point <span class="math inline">\(p\in X\)</span> is a <strong>limit point</strong> of <span class="math inline">\(A\)</span> iff every <em>punctured</em> neighborhood <span class="math inline">\(U_p\setminus\left\{{p}\right\}\)</span> contains a point <span class="math inline">\(q\in A\)</span>.</p></li>
+<li><p>A point <span class="math inline">\(p\in X\)</span> is an <strong>accumulation point</strong> or a <strong>limit point</strong> of <span class="math inline">\(A\)</span> iff every <em>punctured</em> neighborhood <span class="math inline">\(U_p\setminus\left\{{p}\right\}\)</span> contains a point <span class="math inline">\(q\in A\)</span>, so <span class="math inline">\(q\neq p\)</span>.</p></li>
 <li><p>If <span class="math inline">\(p\in A\)</span> and <span class="math inline">\(p\)</span> is not a limit point of <span class="math inline">\(A\)</span>, then <span class="math inline">\(p\)</span> is an <strong>isolated point</strong> of <span class="math inline">\(A\)</span>.</p></li>
 <li><p><span class="math inline">\(A\)</span> is <strong>closed</strong> iff <span class="math inline">\(A&#39; \subset A\)</span>, so <span class="math inline">\(A\)</span> contains all of its limit points.</p></li>
 <li><p>A point <span class="math inline">\(p\in A\)</span> is <strong>interior</strong> iff there is a neighborhood <span class="math inline">\(U_p \subset A\)</span> that is strictly contained in <span class="math inline">\(A\)</span>.</p></li>
@@ -401,19 +523,6 @@ a=b \iff a\leq b \text{ and }  a\geq b
 </ul></li>
 </ul>
 </div>
-<div class="definition proofenv" title="Uniform Convergence">
-<p>
-<span class="math display">
-\begin{align*}
-(\forall \varepsilon&gt;0)\left(\exists n_{0} = n_0({\varepsilon}) \right)(\forall x \in S)\left(\forall n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|&lt;\varepsilon\right)
-.\end{align*}
-<span> Negated:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 
-<span class="math display">
-\begin{align*}  
-(\exists \varepsilon&gt;0)\left(\forall n_{0} = n_0 ({\varepsilon}) \right)(\exists x = x(n_0) \in S)\left(\exists n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
-.\end{align*}
-<span></p>
-</div>
 <div class="definition proofenv" title="Pointwise Convergence">
 <p>A sequence of functions <span class="math inline">\(\left\{{ f_j }\right\}\)</span> is said to <strong>converge pointwise</strong> to <span class="math inline">\(f\)</span> if and only if 
 <span class="math display">
@@ -422,42 +531,87 @@ a=b \iff a\leq b \text{ and }  a\geq b
 .\end{align*}
 <span></p>
 </div>
-<div class="proposition proofenv" title="Implications of convergence">
-<p>Uniform <span class="math inline">\(\implies\)</span> pointwise <span class="math inline">\(\implies\)</span> almost everywhere <span class="math inline">\(\implies\)</span> (roughly) <span class="math inline">\(L^1\)</span> convergence. Why these can’t be reversed:</p>
+<div class="definition proofenv" title="Uniform Convergence">
+<p>
+<span class="math display">
+\begin{align*}
+(\forall \varepsilon&gt;0)\left(\exists n_{0} = n_0({\varepsilon}) \right)(\forall x \in S)\left(\forall n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|&lt;\varepsilon\right)
+.\end{align*}
+<span> Negated:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> 
+<span class="math display">
+\begin{align*}  
+(\exists \varepsilon&gt;0)\left(\forall n_{0} = n_0 ({\varepsilon}) \right)(\exists x = x(n_0) \in S)\left(\exists n&gt;n_{0}\right)\left(\left|f_{n}(x)-f(x)\right| \geq \varepsilon\right)
+.\end{align*}
+<span></p>
+</div>
+<h3 data-number="1.5.2" id="function-spaces"><span class="header-section-number">1.5.2</span> Function Spaces</h3>
+<div class="definition proofenv" title="Completeness">
+<p>A metric space is <strong>complete</strong> if every Cauchy sequence converges.</p>
+</div>
+<div class="fact proofenv">
+<p>If <span class="math inline">\(X\)</span> is complete, then absolutely convergent implies convergent.</p>
+</div>
+<div class="definition proofenv" title="Nowhere Dense Sets">
+<p>Recall that a set <span class="math inline">\(S\)</span> in <span class="math inline">\(X\)</span> is <strong>dense</strong> <span class="math inline">\(\iff\)</span> every open <span class="math inline">\(U\subseteq X\)</span> intersects <span class="math inline">\(S\)</span>. A set <span class="math inline">\(S\)</span> is <strong>nowhere dense</strong> in <span class="math inline">\(X\)</span> <span class="math inline">\(\iff\)</span> the closure of <span class="math inline">\(S\)</span> has empty interior <span class="math inline">\(\iff\)</span> every subset (or interval) contains an open set (or a subinterval) that does not intersect <span class="math inline">\(S\)</span>. This just says <span class="math inline">\(S\)</span> is not dense in any subset <span class="math inline">\(S&#39; \subseteq X\)</span>, by negating what it means to be dense.</p>
+</div>
+<div class="definition proofenv" title="Meager Sets">
+<p>A set is <strong>meager</strong> if it is a <em>countable</em> union of nowhere dense sets.</p>
+</div>
+<div class="proposition proofenv" title="Finite unions of nowhere dense sets are still nowhere dense">
+<p>A <em>finite</em> union of nowhere dense is again nowhere dense.</p>
+</div>
+<div class="definition proofenv" title="Baire Space">
+<p>A space <span class="math inline">\(X\)</span> is a <strong>Baire space</strong> if and only if every countable intersections of open, dense sets is still dense.</p>
+</div>
+<h3 data-number="1.5.3" id="measure-theory"><span class="header-section-number">1.5.3</span> Measure Theory</h3>
+<div class="definition proofenv" title="Limsup and Liminf of Sets">
+<p>
+<span class="math display">
+\begin{align*}
+\liminf_{n} E_{n} \mathrel{\vcenter{:}}=\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_{n} &amp;= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for all but finitely many } n}\right\}  \\
+\limsup_{n} E_{n} \mathrel{\vcenter{:}}=\displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^{\infty} E_{n} &amp;= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for infinitely many } n}\right\} 
+.\end{align*}
+<span></p>
+</div>
+<div class="remark proofenv">
+<p>How to derive these definitions: use that <span class="math inline">\(\inf\)</span> corresponds to intersections/existence and <span class="math inline">\(\sup\)</span> corresponds to unions/forall.</p>
 <ul>
-<li>Pointwise but not uniform???: <span class="math inline">\({1\over n}\one_{[0, n]}\)</span></li>
-<li>Almost everywhere but not pointwise???: <span class="math inline">\(n \one_{[0, {1\over n} ] }\)</span></li>
-<li><span class="math inline">\(n \chi_{[n, n+1]}\)</span>????</li>
+<li>For <span class="math inline">\(\liminf E_n\)</span>:
+<ul>
+<li><span class="math inline">\(x\in \liminf E_n \iff\)</span> there exists some <span class="math inline">\(N\)</span> such that <span class="math inline">\(x\in \cap_{n\geq N} E_n\)</span>, i.e. <span class="math inline">\(x\in E_n\)</span> for all <span class="math inline">\(n\geq N\)</span>. So <span class="math inline">\(x\)</span> is in <em>all</em> but finitely many <span class="math inline">\(n\)</span>.</li>
+<li>How to remember: <span class="math inline">\(\liminf_{n} x_n = \sup_{n} \inf_{k\geq n} x_n\)</span> for sequences, where sups look like unions and infs look like intersections.</li>
+<li>Alternatively: there exists an <span class="math inline">\(n\)</span> (union) such that for all <span class="math inline">\(k\geq n\)</span> (intersection)…</li>
+</ul></li>
+<li>For <span class="math inline">\(\limsup E_n\)</span>:
+<ul>
+<li><span class="math inline">\(x\in \limsup E_n \iff\)</span> for every <span class="math inline">\(N\)</span>, there exists some <span class="math inline">\(n\geq N\)</span> such that <span class="math inline">\(x\in E_n\)</span>. So <span class="math inline">\(x\)</span> is an infinitely many <span class="math inline">\(E_n\)</span>.</li>
+<li>How to remember: <span class="math inline">\(\limsup_{n} x_n = \inf{n} \sup{k\geq n} x_n\)</span> for sequences, where sups look like unions and infs look like intersections.</li>
+<li>Alternatively: for all <span class="math inline">\(n\)</span> (intersection) there exists a <span class="math inline">\(k\geq n\)</span> (union)…</li>
+</ul></li>
 </ul>
+<p>It’s also useful to note that <span class="math inline">\(\liminf E_n \subseteq \limsup E_n\)</span>, since <span class="math inline">\(\liminf E_n\)</span> are elements that are eventually in all sets, and <span class="math inline">\(\limsup E_n\)</span> are elements in infinitely many sets.</p>
+<p>Why these are useful: for finite measure spaces, 
+<span class="math display">
+\begin{align*}
+\mu\qty{\liminf_n E_n }\leq \liminf_n \mu(E_n) \leq \lim_n \mu(E_n) \leq \limsup_n \mu(E_n) \leq \mu\qty{\limsup_n E_n}
+.\end{align*}
+<span> If the <span class="math inline">\(\limsup\)</span> and <span class="math inline">\(\liminf\)</span> sets are equal, then one can define the set <span class="math inline">\(\lim_n E_n \mathrel{\vcenter{:}}=\cup_n E_n\)</span> if <span class="math inline">\(E_n \nearrow E\)</span> or <span class="math inline">\(\lim_n E_n \mathrel{\vcenter{:}}=\cap_n E_n\)</span> if <span class="math inline">\(E_n\searrow E\)</span> in which case continuity of measure states 
+<span class="math display">
+\begin{align*}
+\mu\qty{\lim_n E_n} = \lim_n \mu(E_n)
+.\end{align*}
+<span></p>
+</div>
+<div class="definition proofenv" title="$F_\sigma$ and $G_\delta$ Sets">
+<p>An <span class="math inline">\(F_\sigma\)</span> set is a union of closed sets, and a <span class="math inline">\(G_\delta\)</span> set is an intersection of opens.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 </div>
 <div class="definition proofenv" title="Outer Measure">
 <p>The <strong>outer measure</strong> of a set is given by 
 <span class="math display">
 \begin{align*}
 m_*(E) \mathrel{\vcenter{:}}=\inf_{\substack{\left\{{Q_{i}}\right\} \rightrightarrows E \\ \text{closed cubes}}} \sum {\left\lvert {Q_{i}} \right\rvert}
-.\end{align*}
-<span></p>
-</div>
-<div class="definition proofenv" title="Limsup and Liminf of Sets">
-<p>
-<span class="math display">
-\begin{align*}
-\liminf_{n} E_{n} \mathrel{\vcenter{:}}=\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_{n} &amp;= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for all but finitely many } n}\right\}  \\
-\limsup_{n} E_{n} \mathrel{\vcenter{:}}=\displaystyle\bigcap_{N=1}^\infty \displaystyle\bigcup_{n=N}^{\infty} E_{n} &amp;= \left\{{x {~\mathrel{\Big|}~}x\in E_{n} \text{ for infinitely many } n}\right\}  \\
-.\end{align*}
-<span></p>
-<p>How to derive these definitions:</p>
-<ul>
-<li>For <span class="math inline">\(A \mathrel{\vcenter{:}}=\displaystyle\bigcup_{N=1}^\infty \displaystyle\bigcap_{n=N}^\infty E_n\)</span>:
-<ul>
-<li><span class="math inline">\(x\in A \iff\)</span> there exists some <span class="math inline">\(N\)</span> such that <span class="math inline">\(x\in \cap_{n\geq N} E_n\)</span>, i.e. <span class="math inline">\(x\in E_n\)</span> for all <span class="math inline">\(n\geq N\)</span>. So <span class="math inline">\(x\)</span> is in <em>all</em> but finitely many <span class="math inline">\(n\)</span>.</li>
-</ul></li>
-<li>For <span class="math inline">\(B \mathrel{\vcenter{:}}=\displaystyle\bigcap{N=1}^\infty \displaystyle\bigcup{n=N}^\infty E_n\)</span>:
-<ul>
-<li><span class="math inline">\(x\in B \iff\)</span> for every <span class="math inline">\(N\)</span>, there exists some <span class="math inline">\(n\geq N\)</span> such that <span class="math inline">\(x\in E_n\)</span>. So <span class="math inline">\(x\)</span> is an infinitely many <span class="math inline">\(E_n\)</span>.</li>
-</ul></li>
-</ul>
-<p>Note that <span class="math inline">\(A\subseteq B\)</span> since being in all but finitely many <span class="math inline">\(E_n\)</span> necessarily implies being in infinitely many. This corresponds to <span class="math inline">\(\liminf_n E_n \subseteq \limsup_n E_n\)</span>.</p>
+,\end{align*}
+<span> where <span class="math inline">\({\left\lvert {Q_i} \right\rvert}\)</span> is the standard Euclidean volume of a cube in <span class="math inline">\({\mathbb{R}}^n\)</span>.</p>
 </div>
 <div class="definition proofenv" title="Lebesgue Measurable Sets">
 <p>A subset <span class="math inline">\(E\subseteq {\mathbb{R}}^n\)</span> is <strong>Lebesgue measurable</strong> iff for every <span class="math inline">\({\varepsilon}&gt; 0\)</span> there exists an open set <span class="math inline">\(O \supseteq E\)</span> such that <span class="math inline">\(m_*(O\setminus E) &lt; {\varepsilon}\)</span>. In this case, we define <span class="math inline">\(m(E) \mathrel{\vcenter{:}}= m_*(E)\)</span>.</p>
@@ -465,19 +619,17 @@ m_*(E) \mathrel{\vcenter{:}}=\inf_{\substack{\left\{{Q_{i}}\right\} \rightrighta
 <div class="definition proofenv" title="$L^+$: Measurable non-negative functions.">
 <p><span class="math inline">\(f\in L^+\)</span> iff <span class="math inline">\(f\)</span> is measurable and non-negative.</p>
 </div>
+<h3 data-number="1.5.4" id="integrals-and-lp-spaces"><span class="header-section-number">1.5.4</span> Integrals and <span class="math inline">\(L^p\)</span> Spaces</h3>
 <div class="definition proofenv" title="Integrability">
 <p>A measurable function is <strong>integrable</strong> iff <span class="math inline">\({\left\lVert {f} \right\rVert}_1 &lt; \infty\)</span>.</p>
 </div>
-<div class="definition proofenv" title="The Infinity Norm">
+<div class="definition proofenv" title="The Infinity Norm / Essential supremum / Essentially bounded">
 <p>
 <span class="math display">
 \begin{align*}
-{\left\lVert {f} \right\rVert}_\infty &amp;\mathrel{\vcenter{:}}=\inf_{\alpha \geq 0} \left\{{\alpha {~\mathrel{\Big|}~}m\left\{{{\left\lvert {f} \right\rvert} \geq \alpha}\right\} = 0}\right\}
+{\left\lVert {f} \right\rVert}_\infty &amp;\mathrel{\vcenter{:}}=\inf_{\alpha \geq 0} \left\{{\alpha {~\mathrel{\Big|}~}\mu\qty{\left\{{{\left\lvert {f} \right\rvert} \geq \alpha}\right\}} = 0}\right\}
 .\end{align*}
-<span></p>
-</div>
-<div class="definition proofenv" title="Essentially Bounded Functions">
-<p>A function <span class="math inline">\(f:X \to {\mathbb{C}}\)</span> is <strong>essentially bounded</strong> iff there exists a real number <span class="math inline">\(c\)</span> such that <span class="math inline">\(\mu(\left\{{{\left\lvert {f} \right\rvert} &gt; x}\right\}) = 0\)</span>, i.e. <span class="math inline">\({\left\lVert {f} \right\rVert}_\infty &lt; \infty\)</span>.</p>
+<span> In words, this is the smallest upper bound that holds almost everywhere, so <span class="math inline">\({\left\lvert {f(x)} \right\rvert} \leq {\left\lVert {f} \right\rVert}_\infty\)</span> holds for almost every <span class="math inline">\(x\)</span>. A function <span class="math inline">\(f:X \to {\mathbb{C}}\)</span> is <strong>essentially bounded</strong> iff there exists a real number <span class="math inline">\(c\)</span> such that <span class="math inline">\(\mu(\left\{{{\left\lvert {f} \right\rvert} &gt; x}\right\}) = 0\)</span>, i.e. <span class="math inline">\({\left\lVert {f} \right\rVert}_\infty &lt; \infty\)</span>.</p>
 </div>
 <div class="definition proofenv" title="$L^\infty$">
 <p>
@@ -486,14 +638,6 @@ m_*(E) \mathrel{\vcenter{:}}=\inf_{\substack{\left\{{Q_{i}}\right\} \rightrighta
 L^\infty(X)
 \mathrel{\vcenter{:}}=\left\{{f: X\to {\mathbb{C}}{~\mathrel{\Big|}~}f \text{ is essentially bounded }}\right\}
 \mathrel{\vcenter{:}}=\left\{{f: X\to {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lVert {f} \right\rVert}_{\infty }&lt; \infty}\right\}
-.\end{align*}
-<span></p>
-</div>
-<div class="definition proofenv" title="Dual Norm">
-<p>For <span class="math inline">\(X\)</span> a normed vector space and <span class="math inline">\(\Lambda \in X {}^{ \vee }\)</span>, 
-<span class="math display">
-\begin{align*}
-{\left\lVert {\Lambda} \right\rVert}_{X {}^{ \vee }} \mathrel{\vcenter{:}}=\sup_{\left\{{x\in X {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert}_X \leq 1}\right\}} {\left\lvert {f(x)} \right\rvert}
 .\end{align*}
 <span></p>
 </div>
@@ -522,10 +666,17 @@ L^\infty(X)
 <div class="definition proofenv" title="Approximations to the identity">
 <p>For <span class="math inline">\(\phi\in L^1\)</span>, the dilations satisfy <span class="math inline">\(\int \phi_{t} = \int \phi\)</span>, and if <span class="math inline">\(\int \phi = 1\)</span> then <span class="math inline">\(\phi\)</span> is an <strong>approximate identity</strong>.</p>
 </div>
-<div class="definition proofenv" title="Baire Space">
-<p>A space <span class="math inline">\(X\)</span> is a <strong>Baire space</strong> if and only if every countable intersections of open, dense sets is still dense.</p>
+<h3 data-number="1.5.5" id="functional-analysis"><span class="header-section-number">1.5.5</span> Functional Analysis</h3>
+<div class="definition proofenv" title="Dual Norm">
+<p>For <span class="math inline">\(X\)</span> a normed vector space and <span class="math inline">\(L \in X {}^{ \vee }\)</span>, the <strong>dual norm</strong> or <strong>operator norm</strong> is defined by 
+<span class="math display">
+\begin{align*}
+{\left\lVert {L} \right\rVert}_{X {}^{ \vee }} 
+\mathrel{\vcenter{:}}=\sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} = 1} } {\left\lvert {L(x)} \right\rvert}
+= \sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} \leq  1} } {\left\lvert {L(x)} \right\rvert}
+.\end{align*}
+<span></p>
 </div>
-<h3 data-number="1.3.1" id="functional-analysis"><span class="header-section-number">1.3.1</span> Functional Analysis</h3>
 <div class="definition proofenv" title="Orthonormal sequence ">
 <p>A countable collection of elements <span class="math inline">\(\left\{{ u_i }\right\}\)</span> is <strong>orthonormal</strong> if and only if</p>
 <ol type="1">
@@ -555,21 +706,13 @@ L(\alpha\mathbf{x} + \mathbf{y}) = \alpha L(\mathbf{x}) + L(\mathbf{y}).
 .\end{align*}
 <span></p>
 </div>
-<div class="definition proofenv" title="Operator norm">
-<p>The <strong>operator norm</strong> of an operator <span class="math inline">\(L\)</span> is defined as 
-<span class="math display">
-\begin{align*}
-{\left\lVert {L} \right\rVert}_{X {}^{ \vee }} \mathrel{\vcenter{:}}=\sup_{ \substack{x\in X \\ {\left\lVert {x} \right\rVert} = 1} } {\left\lvert {L(x)} \right\rvert}
-.\end{align*}
-<span></p>
-</div>
 <div class="definition proofenv" title="Banach Space">
 <p>A space is a <strong>Banach space</strong> if and only if it is a complete normed vector space.</p>
 </div>
 <div class="definition proofenv" title="Hilbert Space">
 <p>A <strong>Hilbert space</strong> is an inner product space which is a Banach space under the induced norm.</p>
 </div>
-<h2 data-number="1.4" id="theorems"><span class="header-section-number">1.4</span> Theorems</h2>
+<h2 data-number="1.6" id="theorems"><span class="header-section-number">1.6</span> Theorems</h2>
 <div class="theorem proofenv" title="Folland 0.25">
 <p>For <span class="math inline">\(E \subseteq (X, d)\)</span> a metric space, TFAE:</p>
 <ul>
@@ -605,7 +748,7 @@ x \in N_\varepsilon(c) \implies {\left\lvert {f^{(n)}(x)} \right\rvert} \leq M^n
 \end{align*}
 <span> then the Taylor expansion about <span class="math inline">\(c\)</span> converges on <span class="math inline">\(N_\varepsilon(c)\)</span>.</p>
 </div>
-<h3 data-number="1.4.1" id="topology-sets"><span class="header-section-number">1.4.1</span> Topology / Sets</h3>
+<h3 data-number="1.6.1" id="topology-sets"><span class="header-section-number">1.6.1</span> Topology / Sets</h3>
 <div class="theorem proofenv" title="Heine-Cantor">
 <p>Every continuous function <span class="math inline">\(f:X\to Y\)</span> where <span class="math inline">\(X\)</span> is a compact metric space is uniformly continuous.</p>
 </div>
@@ -629,15 +772,6 @@ x \in N_\varepsilon(c) \implies {\left\lvert {f^{(n)}(x)} \right\rvert} \leq M^n
 <details open><summary><i>(Click to expand proof)</i></summary>
 <p>Take <span class="math inline">\(f_k(x) = x^n\)</span>, which converges to <span class="math inline">\(\chi(x=1)\)</span>. The limit is not continuous, so no subsequence can converge.</p>
 </details>
-</div>
-<div class="proposition proofenv" title="?">
-<p>A <em>finite</em> union of nowhere dense is again nowhere dense.</p>
-</div>
-<div class="proposition proofenv" title="Convergent Sums Have Small Tails">
-<p>
-<span class="math display">
-\begin{align*}\sum a_n &lt; \infty \implies a_n \to 0 {\quad \operatorname{and} \quad} \sum_{k=N}^\infty a_n \overset{N\to\infty}\to 0\end{align*}
-<span></p>
 </div>
 <div class="theorem proofenv" title="Heine-Borel">
 <p><span class="math inline">\(X\subseteq {\mathbb{R}}^n\)</span> is compact <span class="math inline">\(\iff X\)</span> is closed and bounded.</p>
@@ -678,7 +812,7 @@ x \in N_\varepsilon(c) \implies {\left\lvert {f^{(n)}(x)} \right\rvert} \leq M^n
 <div class="lemma proofenv" title="?">
 <p>Any nonempty set which is bounded from above (resp. below) has a well-defined supremum (resp. infimum).</p>
 </div>
-<h3 data-number="1.4.2" id="functions"><span class="header-section-number">1.4.2</span> Functions</h3>
+<h3 data-number="1.6.2" id="functions"><span class="header-section-number">1.6.2</span> Functions</h3>
 <div class="proposition proofenv" title="Existence of Smooth Compactly Supported Functions">
 <p>There exist smooth compactly supported functions, e.g. take 
 <span class="math display">
@@ -700,13 +834,13 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 </div>
 <div class="proof proofenv" title="?">
 <details open><summary><i>(Click to expand proof)</i></summary>
-<p><span class="math inline">\(D_f\)</span> is always an <span class="math inline">\(F_\sigma\)</span> set, which follows by considering the oscillation <span class="math inline">\(\omega_f\)</span>. <span class="math inline">\(\omega_f(x) = 0 \iff f\)</span> is continuous at <span class="math inline">\(x\)</span>, and <span class="math inline">\(D_f = \cup_n A_{\frac 1 n}\)</span> where <span class="math inline">\(A_\varepsilon = \left\{{\omega_f \geq \varepsilon}\right\}\)</span> is closed.</p>
+<p><span class="math inline">\(D_f\)</span> is always an <span class="math inline">\(F_\sigma\)</span> set, which follows by considering the oscillation <span class="math inline">\(\omega_f\)</span>. Use that <span class="math inline">\(\omega_f(x) = 0 \iff f\)</span> is continuous at <span class="math inline">\(x\)</span>, and <span class="math inline">\(D_f = \cup_n A_{\frac 1 n}\)</span> where <span class="math inline">\(A_\varepsilon = \left\{{\omega_f \geq \varepsilon}\right\}\)</span> is closed.</p>
 </details>
 </div>
 <div class="proposition proofenv" title="Lipschitz $\iff$ differentiable with bounded derivative.">
 <p>A function <span class="math inline">\(f: (a, b) \to {\mathbb{R}}\)</span> is Lipschitz <span class="math inline">\(\iff f\)</span> is differentiable and <span class="math inline">\(f&#39;\)</span> is bounded. In this case, <span class="math inline">\({\left\lvert {f&#39;(x)} \right\rvert} \leq C\)</span>, the Lipschitz constant.</p>
 </div>
-<h3 data-number="1.4.3" id="sequences-and-series"><span class="header-section-number">1.4.3</span> Sequences and Series</h3>
+<h3 data-number="1.6.3" id="sequences-and-series"><span class="header-section-number">1.6.3</span> Sequences and Series</h3>
 <div class="proposition proofenv" title="The Cauchy condensation test">
 <p>For <span class="math inline">\(\left\{{a_k}\right\}\)</span> is a non-increasing sequence in <span class="math inline">\({\mathbb{R}}\)</span> then 
 <span class="math display">
@@ -715,7 +849,7 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 .\end{align*}
 <span></p>
 </div>
-<div class="proof proofenv" title="?">
+<div class="proof proofenv" title="showing a useful trick">
 <details open><summary><i>(Click to expand proof)</i></summary>
 <p>Show that 
 <span class="math display">
@@ -726,12 +860,12 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 <span class="math display">
 \begin{align*}
 \sum a_k = a_0 + a_1 + a_2 + a_3 + \cdots
-\leq \qty{a_1} + \qty{a_2 + a_2} + {a_3 + a_3 + a_3 + a_3} + \cdots \\
+\leq \qty{a_1} + \qty{a_2 + a_2} + \qty {a_3 + a_3 + a_3 + a_3} + \cdots \\
 \end{align*}
 <span> where each group with <span class="math inline">\(a_k\)</span> has <span class="math inline">\(2^k\)</span> terms.</p>
 </details>
 </div>
-<h2 data-number="1.5" id="uniform-convergence"><span class="header-section-number">1.5</span> Uniform Convergence</h2>
+<h2 data-number="1.7" id="uniform-convergence"><span class="header-section-number">1.7</span> Uniform Convergence</h2>
 <div class="proposition proofenv" title="Testing Uniform Convergence: The Sup Norm Test">
 <p><span class="math inline">\(f_n \to f\)</span> uniformly iff there exists an <span class="math inline">\(M_n\)</span> such that <span class="math inline">\({\left\lVert {f_n - f} \right\rVert}_\infty \leq M_n \to 0\)</span>.</p>
 </div>
@@ -771,32 +905,7 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 <div class="remark proofenv">
 <p>In other cases, you may need to show the limit is bounded, or has bounded derivative, or whatever other conditions define <span class="math inline">\(X\)</span>.</p>
 </div>
-<div class="theorem proofenv" title="Uniform Limit Theorem">
-<p>If <span class="math inline">\(f_n\to f\)</span> pointwise and uniformly with each <span class="math inline">\(f_n\)</span> continuous, then <span class="math inline">\(f\)</span> is continuous.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-</div>
-<div class="proof proofenv">
-<details open><summary><i>(Click to expand proof)</i></summary>
-<ul>
-<li><p>Follows from an <span class="math inline">\(\varepsilon/3\)</span> argument: 
-<span class="math display">
-\begin{align*}  
-{\left\lvert {F(x) - F(y} \right\rvert} \leq 
-{\left\lvert {F(x) - F_N(x)} \right\rvert} + {\left\lvert {F_N(x) - F_N(y)} \right\rvert} + {\left\lvert {F_N(y) - F(y)} \right\rvert} 
-\leq {\varepsilon}\to 0
-.\end{align*}
-<span></p>
-<ul>
-<li>The first and last <span class="math inline">\({\varepsilon}/3\)</span> come from uniform convergence of <span class="math inline">\(F_N\to F\)</span>.</li>
-<li>The middle <span class="math inline">\({\varepsilon}/3\)</span> comes from continuity of each <span class="math inline">\(F_N\)</span>.</li>
-</ul></li>
-<li><p>So just need to choose <span class="math inline">\(N\)</span> large enough and <span class="math inline">\(\delta\)</span> small enough to make all 3 <span class="math inline">\(\varepsilon\)</span> bounds hold.</p></li>
-</ul>
-</details>
-</div>
-<div class="proposition proofenv" title="Uniform Limits Commute with Integrals">
-<p>If <span class="math inline">\(f_n \to f\)</span> uniformly, then <span class="math inline">\(\int f_n = \int f\)</span>.</p>
-</div>
-<h3 data-number="1.5.1" id="series"><span class="header-section-number">1.5.1</span> Series</h3>
+<h3 data-number="1.7.1" id="series"><span class="header-section-number">1.7.1</span> Series</h3>
 <div class="proposition proofenv" title="p-tests">
 <p>Let <span class="math inline">\(n\)</span> be a fixed dimension and set <span class="math inline">\(B = \left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lVert {x} \right\rVert} \leq 1}\right\}\)</span>. 
 <span class="math display">
@@ -824,20 +933,14 @@ f(x) = e^{-\frac{1}{x^2}} \chi_{(0, \infty)}(x)
 <div class="corollary proofenv" title="Term by Term Continuity Theorem">
 <p>If <span class="math inline">\(f_n\)</span> are continuous and <span class="math inline">\(\sum f_n \to f\)</span> converges uniformly, then <span class="math inline">\(f\)</span> is continuous.</p>
 </div>
-<div class="proposition proofenv" title="Weak $M\dash$Test">
-<p>If <span class="math inline">\(f_n(x) \leq M_n\)</span> <strong>for a fixed <span class="math inline">\(x\)</span></strong> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then the series <span class="math inline">\(f(x) = \sum f_n(x)\)</span> converges.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-</div>
-<div class="proposition proofenv" title="The Weierstrass $M\dash$Test">
-<p>If <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for each <span class="math inline">\(n\)</span> where <span class="math inline">\(\sum M_n &lt; \infty\)</span>, then <span class="math inline">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly and absolutely on <span class="math inline">\(A\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Conversely, if <span class="math inline">\(\sum f_n\)</span> converges uniformly on <span class="math inline">\(A\)</span> then <span class="math inline">\(\sup_{x\in A} {\left\lvert {f_n(x)} \right\rvert} \to 0\)</span>.</p>
-</div>
 <div class="proposition proofenv" title="Cauchy criterion for sums">
 <p><span class="math inline">\(f_n\)</span> are uniformly Cauchy (so <span class="math inline">\({\left\lVert {f_n - f_m} \right\rVert}_\infty &lt; {\varepsilon}\)</span>) iff <span class="math inline">\(f_n\)</span> is uniformly convergent.</p>
 </div>
-<h4 data-number="1.5.1.1" id="derivatives"><span class="header-section-number">1.5.1.1</span> Derivatives</h4>
+<h4 data-number="1.7.1.1" id="derivatives"><span class="header-section-number">1.7.1.1</span> Derivatives</h4>
 <div class="theorem proofenv" title="Term by Term Differentiability Theorem">
 <p>If <span class="math inline">\(f_n\)</span> are differentiable, <span class="math inline">\(\sum f_n&#39; \to g\)</span> uniformly, and there exists one point<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="math inline">\(x_0\)</span> such that <span class="math inline">\(\sum f_n(x)\)</span> converges, then there exist an <span class="math inline">\(f\)</span> such that <span class="math inline">\(\sum f_n \to f\)</span> uniformly and <span class="math inline">\(f&#39; = g\)</span>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 </div>
-<h2 data-number="1.6" id="commuting-limiting-operations"><span class="header-section-number">1.6</span> Commuting Limiting Operations</h2>
+<h2 data-number="1.8" id="commuting-limiting-operations"><span class="header-section-number">1.8</span> Commuting Limiting Operations</h2>
 <div class="proposition proofenv" title="Limits of bounded functions need not be bounded">
 <p>
 <span class="math display">
@@ -892,7 +995,7 @@ f_n&#39;(x) = {1-nx^2 \over\qty{1 + nx^2}^2}
 .\end{align*}
 <span></p>
 </div>
-<h2 data-number="1.7" id="almost-theorems"><span class="header-section-number">1.7</span> “Almost” Theorems</h2>
+<h2 data-number="1.9" id="probabilist-tools-almost-theorems"><span class="header-section-number">1.9</span> Probabilist Tools: “Almost” Theorems</h2>
 <div class="theorem proofenv" title="Egorov&#39;s Theorem">
 <p>Let <span class="math inline">\(E \subseteq {\mathbb{R}}^d\)</span> be measurable of positive finite measure with <span class="math inline">\(f_k\to f\)</span> almost everywhere on <span class="math inline">\(E\)</span>. Then for every <span class="math inline">\({\varepsilon}&gt; 0\)</span> there is a closed <span class="math inline">\(A_{\varepsilon}\subseteq E\)</span> with <span class="math inline">\(\mu(E\setminus A_{\varepsilon}) &lt; {\varepsilon}\)</span> and <span class="math inline">\(f_k\to f\)</span> uniformly on <span class="math inline">\(A_{\varepsilon}\)</span>.</p>
 </div>
@@ -918,12 +1021,12 @@ F_{\varepsilon}\subset F &amp;&amp; \mu(E - F_{\varepsilon}) \leq {\varepsilon}
 <p><img src="data:image/png;base64,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" /></p>
 </details>
 </div>
-<h2 data-number="1.8" id="slightly-advanced-stuff"><span class="header-section-number">1.8</span> Slightly Advanced Stuff</h2>
+<h2 data-number="1.10" id="slightly-advanced-stuff"><span class="header-section-number">1.10</span> Slightly Advanced Stuff</h2>
 <div class="theorem proofenv" title="Weierstrass Approximation">
 <p>If <span class="math inline">\([a, b] \subset {\mathbb{R}}\)</span> is a closed interval and <span class="math inline">\(f\)</span> is continuous, then for every <span class="math inline">\({\varepsilon}&gt; 0\)</span> there exists a polynomial <span class="math inline">\(p_{\varepsilon}\)</span> such that <span class="math inline">\({\left\lVert {f- p_{\varepsilon}} \right\rVert}_{L^\infty([a, b])} \overset{{\varepsilon}\to 0}\to 0\)</span>.</p>
 <p>Equivalently, polynomials are dense in the Banach space <span class="math inline">\(C([0, 1], {\left\lVert {{-}} \right\rVert}_\infty)\)</span>.</p>
 </div>
-<h2 data-number="1.9" id="examples-and-counterexamples"><span class="header-section-number">1.9</span> Examples and Counterexamples</h2>
+<h2 data-number="1.11" id="examples-and-counterexamples"><span class="header-section-number">1.11</span> Examples and Counterexamples</h2>
 <div class="example proofenv" title="?">
 <p>A series of continuous functions that does <em>not</em> converge uniformly but is still continuous: 
 <span class="math display">
@@ -940,7 +1043,7 @@ g(x) \mathrel{\vcenter{:}}=\sum {1 \over 1 + n^2 x}
 <li>Where is/isn’t <span class="math inline">\(f\)</span> differentiable?</li>
 <li>Is <span class="math inline">\(f\)</span> Riemann integrable?</li>
 </ul>
-<h3 data-number="1.9.1" id="dirichlet-function"><span class="header-section-number">1.9.1</span> Dirichlet function</h3>
+<h3 data-number="1.11.1" id="dirichlet-function"><span class="header-section-number">1.11.1</span> Dirichlet function</h3>
 <p>
 <span class="math display">
 \begin{align*}
@@ -956,7 +1059,7 @@ b, &amp; \text{else}
 <li>Not integrable</li>
 <li>Differentiable nowhere</li>
 </ul>
-<h3 data-number="1.9.2" id="dirichlet-with-a-continuous-point"><span class="header-section-number">1.9.2</span> Dirichlet with a Continuous Point</h3>
+<h3 data-number="1.11.2" id="dirichlet-with-a-continuous-point"><span class="header-section-number">1.11.2</span> Dirichlet with a Continuous Point</h3>
 <p>
 <span class="math display">
 \begin{align*}
@@ -976,7 +1079,7 @@ x, &amp; x\in {\mathbb{Q}}\\
 </ul></li>
 <li>Differentiable nowhere</li>
 </ul>
-<h3 data-number="1.9.3" id="dirichlet-with-a-differentiable-point"><span class="header-section-number">1.9.3</span> Dirichlet with a Differentiable Point</h3>
+<h3 data-number="1.11.3" id="dirichlet-with-a-differentiable-point"><span class="header-section-number">1.11.3</span> Dirichlet with a Differentiable Point</h3>
 <p>
 <span class="math display">
 \begin{align*}
@@ -992,7 +1095,7 @@ x^2, &amp; x\in {\mathbb{Q}}\\
 <li>Not integrable</li>
 <li>Differentiable at 0</li>
 </ul>
-<h3 data-number="1.9.4" id="dirichlet-with-two-functions"><span class="header-section-number">1.9.4</span> Dirichlet with Two Functions</h3>
+<h3 data-number="1.11.4" id="dirichlet-with-two-functions"><span class="header-section-number">1.11.4</span> Dirichlet with Two Functions</h3>
 <p>
 <span class="math display">
 \begin{align*}
@@ -1036,7 +1139,7 @@ x, &amp; x\in {\mathbb{Q}}\\
 <span> So we have <span class="math inline">\(\underline{\int_0^1} f \lneq 0 \lneq \overline{\int_0^1} f\)</span>.</p>
 </details>
 </div>
-<h2 data-number="1.10" id="the-thomae-function"><span class="header-section-number">1.10</span> The Thomae function:</h2>
+<h2 data-number="1.12" id="the-thomae-function"><span class="header-section-number">1.12</span> The Thomae function:</h2>
 <p>
 <span class="math display">
 \begin{align*}
@@ -1058,13 +1161,13 @@ f ( x ) = \begin{cases}
 <li><p>Chapter 2: Exercises 2, 3, 7, 9 (in 9(c) you can use Exercise 1.29 without proof Exercises 10, 12, 13, 14, 16, 19 Exercises 24, 25, 28(a,b), 33, 34, 35, 38, 41 (note that 24 shows that upper sums are not needed in the definition of integrals, and the extra hypotheses also show that they are not desired either) Exercises 40, 44, 47, 49, 50, 51, 52, 54, 56, 58, 59</p></li>
 <li><p>Chapter 3: Exercises 3(b,c), 5, 6, 9, 12, 13, 14, 16, 20, 21, 22</p></li>
 </ul>
-<h1 data-number="2" id="measure-theory"><span class="header-section-number">2</span> Measure Theory</h1>
+<h1 data-number="2" id="measure-theory-1"><span class="header-section-number">2</span> Measure Theory</h1>
 <div class="fact proofenv">
 <p>Some useful tricks:</p>
 <ul>
 <li><span class="math inline">\(\mu(A\setminus B) = \mu(A) - \mu(B)\)</span> if <span class="math inline">\(\mu(B) &lt; \infty\)</span></li>
 <li>Write <span class="math inline">\(f = f-f_n + f_n\)</span></li>
-<li>If <span class="math inline">\(G\)</span> is measurable, then there exists an <span class="math inline">\(E \supseteq G\)</span> such <span class="math inline">\(m(G) \leq m(E) + {\varepsilon}\)</span></li>
+<li>If <span class="math inline">\(G\)</span> is measurable, then there for every <span class="math inline">\({\varepsilon}\)</span> there exists an open <span class="math inline">\(G \supseteq E\)</span> such <span class="math inline">\(m(G) \leq m(E) + {\varepsilon}\)</span></li>
 <li>If <span class="math inline">\(E\)</span> is measurable,
 <ul>
 <li><span class="math inline">\(E = F_{\delta} {\textstyle\coprod}N\)</span> for <span class="math inline">\(N\)</span> a null set.</li>
@@ -1109,9 +1212,9 @@ f ( x ) = \begin{cases}
 <span class="math display">
 \begin{align*}
 \text{Continuity from below:} \quad 
-E_{n} \nearrow E &amp;\implies m(E_{n}) \to m(E) \\
+E_{n} \nearrow E &amp;\implies m(E_{n}) \overset{n\to\infty}\longrightarrow m(E) \\
 \text{Continuity from above:} \quad 
-m(E_{1}) &lt; \infty \text{ and } E_{i} \searrow E &amp;\implies m(E_{i}) \to m(E)
+m(E_{1}) &lt; \infty \text{ and } E_{n} \searrow E &amp;\implies m(E_{n}) \overset{n\to\infty}\longrightarrow m(E)
 .\end{align*}
 <span></p>
 <p>Mnemonic: <span class="math inline">\(\lim_n \mu(E_n) = \mu(\lim E_n)\)</span>.</p>
@@ -1152,7 +1255,7 @@ F_1 = F {\textstyle\coprod}\displaystyle\coprod_{k=1}^{\infty} E_k
 <ul>
 <li>This is because <span class="math inline">\(x\in F_1\)</span> iff <span class="math inline">\(x\)</span> is in every <span class="math inline">\(F_k\)</span>, so in <span class="math inline">\(F\)</span>, <strong>or</strong></li>
 <li><span class="math inline">\(x\not \in F_1\)</span> but <span class="math inline">\(x\in F_2\)</span>, noting incidentally <span class="math inline">\(x\in F_3, F_4,\cdots\)</span>, <strong>or</strong>,</li>
-<li><span class="math inline">\(x\not\in F_2\)</span> but <span class="math inline">\(x\in F_3\)</span>, and so on.</li>
+<li><span class="math inline">\(x\not\in F_2\)</span> but <span class="math inline">\(x\in F_3\)</span> and thus <span class="math inline">\(F_4, F_4,\cdots\)</span>, and so on.</li>
 </ul></li>
 <li><p>Now take measures, and note that we get a telescoping sum: 
 <span class="math display">
@@ -1207,46 +1310,25 @@ X &amp;= A {\textstyle\coprod}(X\setminus A) \\
 <li>Disjoint<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Additivity: <span class="math inline">\(m_*(A {\textstyle\coprod}B) = m_*(A) + m_*(B)\)</span>.</li>
 </ol>
 </div>
-<h2 data-number="2.3" id="measures-on-mathbbrd"><span class="header-section-number">2.3</span> Measures on <span class="math inline">\({\mathbb{R}}^d\)</span></h2>
-<div class="proposition proofenv" title="Borel Characterization of Measurable Sets">
-<p>If <span class="math inline">\(E\)</span> is Lebesgue measurable, then <span class="math inline">\(E = H {\textstyle\coprod}N\)</span> where <span class="math inline">\(H \in F_\sigma\)</span> and <span class="math inline">\(N\)</span> is null.</p>
+<div class="definition proofenv" title="Lebesgue Measurability">
+<p>A set <span class="math inline">\(E\)</span> is <strong>measurable</strong> iff it can be approximated by an open set in <span class="math inline">\(m_*\)</span>, so there exists <span class="math inline">\(G\supseteq E\)</span> with <span class="math inline">\(m_*(G\setminus E) &lt; {\varepsilon}\)</span>.</p>
 </div>
+<h2 data-number="2.3" id="measures-on-mathbbrd"><span class="header-section-number">2.3</span> Measures on <span class="math inline">\({\mathbb{R}}^d\)</span></h2>
 <div class="proposition proofenv" title="Opens are unions of almost disjoint intervals.">
 <p>Every open subset of <span class="math inline">\({\mathbb{R}}\)</span> (resp <span class="math inline">\({\mathbb{R}}^n\)</span>) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).</p>
-</div>
-<div class="theorem proofenv" title="Measurable sets can be approximated by open/closed/compact sets.">
-<p>Suppose <span class="math inline">\(E\)</span> is measurable; then for every <span class="math inline">\({\varepsilon}&gt;0\)</span>,</p>
-<ol type="1">
-<li>There exists an open <span class="math inline">\(O\supset E\)</span> with <span class="math inline">\(m(O\setminus E) &lt; {\varepsilon}\)</span></li>
-<li>There exists a closed <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}\)</span></li>
-<li>There exists a compact <span class="math inline">\(K\subset E\)</span> with <span class="math inline">\(m(E\setminus K) &lt; {\varepsilon}\)</span>.</li>
-</ol>
-</div>
-<div class="proof proofenv" title="that measurable sets can be approximated">
-<details open><summary><i>(Click to expand proof)</i></summary>
-<ul>
-<li>(1): Take <span class="math inline">\(\left\{{Q_{i}}\right\} \rightrightarrows E\)</span> and set <span class="math inline">\(O = \cup Q_{i}\)</span>.</li>
-<li>(2): Since <span class="math inline">\(E^c\)</span> is measurable, produce <span class="math inline">\(O\supset E^c\)</span> with <span class="math inline">\(m(O\setminus E^c) &lt; {\varepsilon}\)</span>.
-<ul>
-<li>Set <span class="math inline">\(F = O^c\)</span>, so <span class="math inline">\(F\)</span> is closed.</li>
-<li>Then <span class="math inline">\(F\subset E\)</span> by taking complements of <span class="math inline">\(O\supset E^c\)</span></li>
-<li><span class="math inline">\(E\setminus F = O\setminus E^c\)</span> and taking measures yields <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}\)</span></li>
-</ul></li>
-<li>(3): Pick <span class="math inline">\(F\subset E\)</span> with <span class="math inline">\(m(E\setminus F) &lt; {\varepsilon}/2\)</span>.
-<ul>
-<li>Set <span class="math inline">\(K_{n} = F\cap{\mathbb{D}}_{n}\)</span>, a ball of radius <span class="math inline">\(n\)</span> about <span class="math inline">\(0\)</span>.</li>
-<li>Then <span class="math inline">\(E\setminus K_{n} \searrow E\setminus F\)</span></li>
-<li>Since <span class="math inline">\(m(E) &lt; \infty\)</span>, there is an <span class="math inline">\(N\)</span> such that <span class="math inline">\(n\geq N \implies m(E\setminus K_{n}) &lt; {\varepsilon}\)</span>.</li>
-</ul></li>
-</ul>
-</details>
 </div>
 <div class="proposition proofenv" title="Translation and Dilation Invariance">
 <p>Lebesgue measure is translation and dilation invariant.</p>
 </div>
-<div class="proof proofenv" title="(Todo) of translation/dilation invariance">
+<div class="proof proofenv" title="of translation/dilation invariance">
 <details open><summary><i>(Click to expand proof)</i></summary>
-<p>Obvious for cubes; if <span class="math inline">\(Q_{i} \rightrightarrows E\)</span> then <span class="math inline">\(Q_{i} + k \rightrightarrows E + k\)</span>, etc. <!--\todo{Flesh out this proof.}--></p>
+<ul>
+<li>This is obvious for cubes:
+<ul>
+<li>For translation, if <span class="math inline">\(Q_i \rightrightarrows E\)</span> then <span class="math inline">\(Q_i + k \rightrightarrows E + k\)</span>. One can then show <span class="math inline">\(m_*(E + k) \leq \sum {\left\lvert {Q_i + k} \right\rvert} = \sum {\left\lvert {Q_i} \right\rvert}\leq m_*(E) + {\varepsilon}\)</span> for all <span class="math inline">\({\varepsilon}\)</span>, and get the reverse inequality by writing <span class="math inline">\(E = (E+y)-y\)</span>.</li>
+<li>For dilation, use that <span class="math inline">\(m_*(t(A{\textstyle\coprod}B)) = tm_*(A{\textstyle\coprod}B)\)</span>, which is useful because we cover with disjoint cubes. Then use that <span class="math inline">\(tQ_i \rightrightarrows tE\)</span> to get <span class="math inline">\(tm_*(E) \leq t\sum {\left\lvert {Q_i} \right\rvert} = \sum {\left\lvert {tQ_i} \right\rvert} \leq m_*(tE) + {\varepsilon}\)</span> and similarly reverse to get equality.</li>
+</ul></li>
+</ul>
 </details>
 </div>
 <div class="theorem proofenv" title="Non-measurable sets exist">
@@ -1260,11 +1342,6 @@ X &amp;= A {\textstyle\coprod}(X\setminus A) \\
 <li>Define <span class="math inline">\(M \mathrel{\vcenter{:}}={\textstyle\coprod}N_{j}\)</span>, then <span class="math inline">\([0, 1) \subseteq M \subseteq [-1, 2)\)</span>, so the measure must be between 1 and 3.</li>
 <li>By translation invariance, <span class="math inline">\(m(N_{j}) = m(N)\)</span>, and disjoint additivity forces <span class="math inline">\(m(M) = 0\)</span>, a contradiction.</li>
 </ul>
-</details>
-</div>
-<div class="proof proofenv" title="of Borel characterization">
-<details open><summary><i>(Click to expand proof)</i></summary>
-<p>For every <span class="math inline">\(\frac 1 n\)</span> there exists a closed set <span class="math inline">\(K_{n} \subset E\)</span> such that <span class="math inline">\(m(E\setminus K_{n}) \leq \frac 1 n\)</span>. Take <span class="math inline">\(K = \cup K_{n}\)</span>, wlog <span class="math inline">\(K_{n} \nearrow K\)</span> so <span class="math inline">\(m(K) = \lim m(K_{n}) = m(E)\)</span>. Take <span class="math inline">\(N\mathrel{\vcenter{:}}= E\setminus K\)</span>, then <span class="math inline">\(m(N) = 0\)</span>.</p>
 </details>
 </div>
 <div class="proposition proofenv" title="Limsups/infs of measurable sets are measurable.">
@@ -1370,7 +1447,7 @@ X &amp;= A {\textstyle\coprod}(X\setminus A) \\
 </div>
 <div class="remark proofenv" title="on notation">
 <ul>
-<li><span class="math inline">\(L^+\)</span>: measurable functions</li>
+<li><span class="math inline">\(L^+\)</span>: nonnegative measurable functions</li>
 <li><span class="math inline">\(L^1\)</span>: Lebesgue integrable functions, so <span class="math inline">\(\int {\left\lvert {f} \right\rvert} &lt; \infty\)</span></li>
 </ul>
 </div>
@@ -1469,7 +1546,7 @@ s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
 <p>If</p>
 <ul>
 <li><span class="math inline">\(f_n \in L^1\)</span> with <span class="math inline">\(f_n \to f\)</span> almost everywhere,</li>
-<li>There exist <span class="math inline">\(g_n \in L^1\)</span> with <span class="math inline">\({\left\lvert {f_n} \right\rvert} \leq g_n\)</span>, <span class="math inline">\(g_n \geq 0\)</span>.</li>
+<li>There exist <span class="math inline">\(g_n\geq 0 \in L^1\)</span> nonnegative with <span class="math inline">\({\left\lvert {f_n} \right\rvert} \leq g_n\)</span>,</li>
 <li><span class="math inline">\(g_n\to g\)</span> almost everywhere with <span class="math inline">\(g\in L^1\)</span>, and</li>
 <li><span class="math inline">\(\lim \int g_n = \int g\)</span>,</li>
 </ul>
@@ -1496,7 +1573,7 @@ s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
 .\end{align*}
 <span></p>
 <ul>
-<li>Here we use <span class="math inline">\(g_n - f_n \overset{n\to\infty} g-f\)</span> with <span class="math inline">\(0 \leq {\left\lvert {f_n} \right\rvert} - f_n \leq g_n - f_n\)</span>, so <span class="math inline">\(g_n - f_n\)</span> are nonnegative (and measurable) and Fatou’s lemma applies.</li>
+<li>Here we use <span class="math inline">\(g_n - f_n \overset{n\to\infty}\longrightarrow g-f\)</span> with <span class="math inline">\(0 \leq {\left\lvert {f_n} \right\rvert} - f_n \leq g_n - f_n\)</span>, so <span class="math inline">\(g_n - f_n\)</span> are nonnegative (and measurable) and Fatou’s lemma applies.</li>
 </ul></li>
 <li><p><span class="math inline">\(\int f \leq \liminf \int f_n\)</span>: 
 <span class="math display">
@@ -1529,7 +1606,7 @@ s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
 <p>Let <span class="math inline">\(g_n = {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n - f} \right\rvert}\)</span>, then <span class="math inline">\(g_n \to {\left\lvert {f} \right\rvert}\)</span> and 
 <span class="math display">
 \begin{align*}
-{\left\lvert {g_n} \right\rvert} = {\left\lvert { {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n - f} \right\rvert} } \right\rvert} \leq {\left\lvert {f_n - (f_n - f)} \right\rvert} = {\left\lvert {f} \right\rvert} \in L^1
+{\left\lvert {g_n} \right\rvert} = {\left\lvert { {\left\lvert {f_n} \right\rvert} - {\left\lvert {f_n - f} \right\rvert} } \right\rvert} \geq {\left\lvert {f_n - (f_n - f)} \right\rvert} = {\left\lvert {f} \right\rvert} \in L^1
 ,\end{align*}
 <span> so the DCT applies to <span class="math inline">\(g_n\)</span> and 
 <span class="math display">
@@ -1575,43 +1652,6 @@ s(x) = \sum_{j=1}^n c_j \chi_{E_j}(x)
 </div>
 <div class="theorem proofenv" title="Fubini-Tonelli">
 <p>If any iterated integral is <strong>absolutely integrable</strong>, i.e. <span class="math inline">\(\int \int {\left\lvert {f(x, y)} \right\rvert} &lt; \infty\)</span>, then <span class="math inline">\(f\)</span> is integrable and <span class="math inline">\(\int f\)</span> equals any iterated integral.</p>
-</div>
-<div class="proposition proofenv" title="Measurable Slices">
-<p>Let <span class="math inline">\(E\)</span> be a measurable subset of <span class="math inline">\({\mathbb{R}}^n\)</span>. Then</p>
-<ul>
-<li>For almost every <span class="math inline">\(x\in {\mathbb{R}}^{n_1}\)</span>, the slice <span class="math inline">\(E_x \mathrel{\vcenter{:}}=\left\{{y \in {\mathbb{R}}^{n_2} \mathrel{\Big|}(x,y) \in E}\right\}\)</span> is measurable in <span class="math inline">\({\mathbb{R}}^{n_2}\)</span>.</li>
-<li>The function</li>
-</ul>
-<p>
-<span class="math display">
-\begin{align*}
-F: {\mathbb{R}}^{n_1} &amp;\to {\mathbb{R}}\\
-x &amp;\mapsto m(E_x) = \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy
-\end{align*}
-<span> is measurable and 
-<span class="math display">
-\begin{align*}
-m(E) = \int_{{\mathbb{R}}^{n_1}} m(E_x) ~dx 
-= \int_{{\mathbb{R}}^{n_1}} \int_{{\mathbb{R}}^{n_2}} \chi_{E_x} ~dy ~dx
-.\end{align*}
-<span></p>
-</div>
-<div class="proof proofenv" title="of measurable slices">
-<details open><summary><i>(Click to expand proof)</i></summary>
-<p><span class="math inline">\(\implies\)</span>:</p>
-<ul>
-<li>Let <span class="math inline">\(f\)</span> be measurable on <span class="math inline">\({\mathbb{R}}^n\)</span>.</li>
-<li>Then the cylinders <span class="math inline">\(F(x, y) = f(x)\)</span> and <span class="math inline">\(G(x, y) = f(y)\)</span> are both measurable on <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
-<li>Write <span class="math inline">\(\mathcal{A} = \left\{{G \leq F}\right\} \cap\left\{{G \geq 0}\right\}\)</span>; both are measurable.</li>
-</ul>
-<p><span class="math inline">\(\impliedby\)</span>:</p>
-<ul>
-<li>Let <span class="math inline">\(A\)</span> be measurable in <span class="math inline">\({\mathbb{R}}^{n+1}\)</span>.</li>
-<li>Define <span class="math inline">\(A_x = \left\{{y\in {\mathbb{R}}\mathrel{\Big|}(x, y) \in \mathcal{A}}\right\}\)</span>, then <span class="math inline">\(m(A_x) = f(x)\)</span>.</li>
-<li>By the corollary, <span class="math inline">\(A_x\)</span> is measurable set, <span class="math inline">\(x \mapsto A_x\)</span> is a measurable function, and <span class="math inline">\(m(A) = \int f(x) ~dx\)</span>.</li>
-<li>Then explicitly, <span class="math inline">\(f(x) = \chi_{A}\)</span>, which makes <span class="math inline">\(f\)</span> a measurable function.</li>
-</ul>
-</details>
 </div>
 <div class="proposition proofenv" title="Differentiating Under an Integral">
 <p>If <span class="math inline">\({\left\lvert {{\frac{\partial }{\partial t}\,}f(x, t)} \right\rvert} \leq g(x) \in L^1\)</span>, then letting <span class="math inline">\(F(t) = \int f(x, t) ~dt\)</span>, 
@@ -3117,11 +3157,11 @@ AB \leq {A^p \over p} + {B^q \over q}
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Mnemonic: “F” stands for <em>ferme</em>, which is “closed” in French, and <span class="math inline">\(\sigma\)</span> corresponds to a “sum,” i.e. a union.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>Slogan: to negate, find a bad <span class="math inline">\(x\)</span> depending on <span class="math inline">\(n_0\)</span> that are larger than some <span class="math inline">\({\varepsilon}\)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>Slogan: a uniform limit of continuous functions is continuous.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>Note that this is only pointwise convergence of <span class="math inline">\(f\)</span>, whereas the full <span class="math inline">\(M{\hbox{-}}\)</span>test gives uniform convergence.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>It suffices to show <span class="math inline">\({\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for some <span class="math inline">\(M_n\)</span> not depending on <span class="math inline">\(x\)</span>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Slogan: a uniform limit of continuous functions is continuous.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Note that this is only pointwise convergence of <span class="math inline">\(f\)</span>, whereas the full <span class="math inline">\(M{\hbox{-}}\)</span>test gives uniform convergence.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>It suffices to show <span class="math inline">\({\left\lvert {f_n(x)} \right\rvert} \leq M_n\)</span> for some <span class="math inline">\(M_n\)</span> not depending on <span class="math inline">\(x\)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Slogan: to negate, find a bad <span class="math inline">\(x\)</span> depending on <span class="math inline">\(n_0\)</span> that are larger than some <span class="math inline">\({\varepsilon}\)</span>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Mnemonic: “F” stands for <em>ferme</em>, which is “closed” in French, and <span class="math inline">\(\sigma\)</span> corresponds to a “sum,” i.e. a union.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6" role="doc-endnote"><p>So this implicitly holds if <span class="math inline">\(f\)</span> is the pointwise limit of <span class="math inline">\(f_n\)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7" role="doc-endnote"><p>See Abbott theorem 6.4.3, pp 168.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8" role="doc-endnote"><p>This holds for outer measure <strong>iff</strong> <span class="math inline">\(\mathrm{dist}(A, B) &gt; 0\)</span>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
