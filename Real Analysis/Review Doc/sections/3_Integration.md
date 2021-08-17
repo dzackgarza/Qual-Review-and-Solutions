@@ -211,7 +211,7 @@ If $f\in L^1$, then
 :::{.proof}
 Let $g_n = \abs{f_n} - \abs{f_n - f}$, then $g_n \to \abs{f}$ and 
 \[
-\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \leq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
+\abs{g_n} = \abs{ \abs{f_n} - \abs{f_n - f} } \geq \abs{f_n - (f_n - f)} = \abs{f} \in L^1
 ,\]
 so the DCT applies to $g_n$ and
 \[
