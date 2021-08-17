@@ -113,26 +113,8 @@ Using $\pi_1(\CC\units) = \ZZ$, the induced maps are $p_*(1) = 2$ and $f_*(1) = 
 But then $p_* \circ f_*$ is multiplication by $2n$, contradicting $p_* \circ f_* = \id$ by functoriality.
 :::
 
-:::{.definition title="Laplace Transform"}
-\[
-\mcl(f, \xi) \da \int_\RR e^{-\xi x} f(x) \dx
-.\]
-
-- $f(t) = c \mapstofrom F(s) = cs\inv$
-- $f(t) = e^{at} \mapstofrom F(s) = (s-a)\inv$.
-- $f(t) = t \mapstofrom F(s) = s^{-2}$.
-- $f(t) = \cos(at) \mapstofrom F(s) = s(s^2 + a^2)\inv$.
-
-:::
-
 :::{.remark}
 \[
 \hat{f}(\xi) \da \mcl(f, i\xi) \da \int_\RR f(x) e^{-i\xi x} \dx
 .\]
-:::
-
-:::{.fact title="Table of Laplace Transforms"}
-
-![](figures/2021-07-29_21-14-27.png)
-![](figures/2021-07-29_21-14-42.png)
 :::

@@ -189,9 +189,9 @@ w^{1\over \alpha} &\mapsfrom w
 .\]
 Note that if you look at the image of $\HH$ under $z\mapsto z^{\alpha}$, you get
 \[
-\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } \\
+\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } 
 .\]
-For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < w^{1\over \alpha}$.
+For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < \alpha \pi$.
 
 **Boundary behavior:**
 
@@ -209,6 +209,7 @@ z &\mapstofrom {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 .\]
 
 Idea: compose some known functions.
+
 ![](figures/image_2020-07-22-13-22-46.png)
 
 \[

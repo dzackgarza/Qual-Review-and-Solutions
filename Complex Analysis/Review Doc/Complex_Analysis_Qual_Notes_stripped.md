@@ -1556,14 +1556,14 @@ Check: do you need residues at all?? You may be able to just compute an integral
 ::: {.fact title="Integrating $z^k$ around $S^1$ powers residues"}
 The major fact that reduces integrals to residues:
 \[
-\int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= \int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
+\int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= i\int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
 =
 \begin{cases}
 2\pi i & k=-1 
 \\
 0 & \text{else}.
 \end{cases}
-.\]
+\]
 Thus
 \[
 \int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}
@@ -2101,9 +2101,9 @@ w^{1\over \alpha} &\mapsfrom w
 .\]
 Note that if you look at the image of \( {\mathbb{H}} \) under \( z\mapsto z^{\alpha} \), you get
 \[
-\left\{{z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \pi }\right\} &\rightleftharpoons\left\{{0 < \operatorname{Arg}(w) < \alpha \pi }\right\} \\
+\left\{{z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \pi }\right\} &\rightleftharpoons\left\{{0 < \operatorname{Arg}(w) < \alpha \pi }\right\} 
 .\]
-For the inverse, choose a branch cut of \( \log \) deleting the negative real axis, or more generally fix \( 0 < \arg w < w^{1\over \alpha} \).
+For the inverse, choose a branch cut of \( \log \) deleting the negative real axis, or more generally fix \( 0 < \arg w < \alpha \pi \).
 
 **Boundary behavior:**
 
@@ -2119,7 +2119,9 @@ F: S_{\alpha} &\to {\mathbb{D}}\\ \\
 z &\rightleftharpoons{z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 .\]
 
-Idea: compose some known functions. ![](figures/image_2020-07-22-13-22-46.png)
+Idea: compose some known functions.
+
+![](figures/image_2020-07-22-13-22-46.png)
 
 \[
 S_{\alpha} &\to S_{\pi} = {\mathbb{H}}\to {\mathbb{D}}\\
@@ -2290,10 +2292,6 @@ Schwarz lemma.
 ```{=tex}
 \todo[inline]{Equicontinuity}
 ```
-# Linear Fractional Transformations
-
-# Montel's Theorem
-
 # Unsorted Theorems
 
 ::: {.theorem title="Riemann's Removable Singularity Theorem"}
@@ -2525,25 +2523,10 @@ z & \mapsto z^2
 so \( p\circ f = \operatorname{id} \). Using \( \pi_1({\mathbb{C}}^{\times}) = {\mathbb{Z}} \), the induced maps are \( p_*(1) = 2 \) and \( f_*(1) = n \) for some \( n\in {\mathbb{Z}} \). But then \( p_* \circ f_* \) is multiplication by \( 2n \), contradicting \( p_* \circ f_* = \operatorname{id} \) by functoriality.
 :::
 
-::: {.definition title="Laplace Transform"}
-\[
-{\mathcal{L}}(f, \xi) \coloneqq\int_{\mathbb{R}}e^{-\xi x} f(x) \,dx
-.\]
-
--   \( f(t) = c \rightleftharpoons F(s) = cs^{-1} \)
--   \( f(t) = e^{at} \rightleftharpoons F(s) = (s-a)^{-1} \).
--   \( f(t) = t \rightleftharpoons F(s) = s^{-2} \).
--   \( f(t) = \cos(at) \rightleftharpoons F(s) = s(s^2 + a^2)^{-1} \).
-:::
-
 ::: {.remark}
 \[
 \widehat{f}(\xi) \coloneqq{\mathcal{L}}(f, i\xi) \coloneqq\int_{\mathbb{R}}f(x) e^{-i\xi x} \,dx
 .\]
-:::
-
-::: {.fact title="Table of Laplace Transforms"}
-![](figures/2021-07-29_21-14-27.png) ![](figures/2021-07-29_21-14-42.png)
 :::
 
 Basics
@@ -2567,45 +2550,3 @@ Basics
 -   Show that if each \( f_n \) is holomorphic on \( \Omega \) and \( F \coloneqq\sum f_n \) converges uniformly on every compact subset of \( \Omega \), then \( F \) is holomorphic.
 
 -   Show that if \( f \) is once complex differentiable at each point of \( \Omega \), then \( f \) is holomorphic.
-
-# Draft of Problem Book
-
--   Prove the triangle inequality
--   Prove the reverse triangle inequality
--   Show that \( \sum z^{k-1}/k \) converges for all \( z\in S^1 \) except \( z=1 \).
--   What is an example of a noncontinuous limit of continuous functions?
--   Show that the uniform limit of continuous functions is continuous.
--   Show that \( f \) is holomorphic if and only if \( \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf = 0 \).
--   Show \( n^{1\over n} \overset{n\to \infty } \to 1 \).
--   Show that if \( f \) is holomorphic with \( f'=0 \) on \( \Omega \) then \( f \) is constant.
--   Show that holomorphic implies analytic.
--   Use Cauchy's inequality to prove Liouville's theorem
-
-::: {.problem title="?"}
-What is a pair of conformal equivalences between \( {\mathbb{H}} \) and \( {\mathbb{D}} \)?
-
-::: {.solution}
-\[
-F: HH &\to {\mathbb{D}}\\
-z & \mapsto {i-z \over i+z}
-\\
-\\
-G: {\mathbb{D}}&\to {\mathbb{H}}\\
-w &\mapsto i{1-w \over 1 + w}
-.\]
-
-> Mnemonic: any point in \( {\mathbb{H}} \) is closer to \( i \) than \( -i \), so \( {\left\lvert {F(z)} \right\rvert} < 1 \).
-
--   Maps \( {\mathbb{R}}\to S^1\setminus\left\{{-1}\right\} \).
-:::
-:::
-
-::: {.problem title="?"}
-What is conformal equivalence \( {\mathbb{H}}\rightleftharpoons S \coloneqq\left\{{w\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < \arg(w) < \alpha \pi}\right\} \)?
-
-::: {.solution}
-\[
-f(z) = z^ \alpha
-.\]
-:::
-:::

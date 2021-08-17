@@ -26,14 +26,14 @@ You may be able to just compute an integral!
 :::{.fact title="Integrating $z^k$ around $S^1$ powers residues"}
 The major fact that reduces integrals to residues: 
 \[
-\int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = \int_0^{2\pi} e^{i(k+1)\theta \dtheta }
+\int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = i\int_0^{2\pi} e^{i(k+1)\theta \dtheta }
 =
 \begin{cases}
 2\pi i & k=-1 
 \\
 0 & \text{else}.
 \end{cases}
-.\]
+\]
 Thus
 \[
 \int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}

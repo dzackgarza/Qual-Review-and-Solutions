@@ -1,4 +1,0 @@
-# Linear Fractional Transformations
-
-
-

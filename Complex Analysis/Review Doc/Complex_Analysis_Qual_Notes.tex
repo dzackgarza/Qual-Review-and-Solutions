@@ -2496,14 +2496,14 @@ integral!
 
 The major fact that reduces integrals to residues:
 \begin{align*}
-\int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= \int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
+\int_\gamma z^k \,dz= \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \,d\theta= i\int_0^{2\pi} e^{i(k+1)\theta \,d\theta}
 =
 \begin{cases}
 2\pi i & k=-1 
 \\
 0 & \text{else}.
 \end{cases}
-.\end{align*}
+\end{align*}
 Thus
 \begin{align*}
 \int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}
@@ -3256,10 +3256,10 @@ w^{1\over \alpha} &\mapsfrom w
 Note that if you look at the image of \({\mathbb{H}}\) under
 \(z\mapsto z^{\alpha}\), you get
 \begin{align*}
-\left\{{z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \pi }\right\} &\rightleftharpoons\left\{{0 < \operatorname{Arg}(w) < \alpha \pi }\right\} \\
+\left\{{z {~\mathrel{\Big|}~}0 < \operatorname{Arg}(z) < \pi }\right\} &\rightleftharpoons\left\{{0 < \operatorname{Arg}(w) < \alpha \pi }\right\} 
 .\end{align*}
 For the inverse, choose a branch cut of \(\log\) deleting the negative
-real axis, or more generally fix \(0 < \arg w < w^{1\over \alpha}\).
+real axis, or more generally fix \(0 < \arg w < \alpha \pi\).
 
 \textbf{Boundary behavior:}
 
@@ -3287,6 +3287,7 @@ z &\rightleftharpoons{z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 .\end{align*}
 
 Idea: compose some known functions.
+
 \includegraphics{figures/image_2020-07-22-13-22-46.png}
 
 \begin{align*}
@@ -3547,13 +3548,6 @@ Schwarz lemma.
 \todo[inline]{Schwarz lemma}
 
 \todo[inline]{Equicontinuity}
-
-\hypertarget{linear-fractional-transformations}{%
-\section{Linear Fractional
-Transformations}\label{linear-fractional-transformations}}
-
-\hypertarget{montels-theorem}{%
-\section{Montel's Theorem}\label{montels-theorem}}
 
 \hypertarget{unsorted-theorems}{%
 \section{Unsorted Theorems}\label{unsorted-theorems}}
@@ -3985,26 +3979,6 @@ then \(p_* \circ f_*\) is multiplication by \(2n\), contradicting
 
 \end{solution}
 
-\begin{definition}[Laplace Transform]
-
-\begin{align*}
-{\mathcal{L}}(f, \xi) \coloneqq\int_{\mathbb{R}}e^{-\xi x} f(x) \,dx
-.\end{align*}
-
-\begin{itemize}
-\tightlist
-\item
-  \(f(t) = c \rightleftharpoons F(s) = cs^{-1}\)
-\item
-  \(f(t) = e^{at} \rightleftharpoons F(s) = (s-a)^{-1}\).
-\item
-  \(f(t) = t \rightleftharpoons F(s) = s^{-2}\).
-\item
-  \(f(t) = \cos(at) \rightleftharpoons F(s) = s(s^2 + a^2)^{-1}\).
-\end{itemize}
-
-\end{definition}
-
 \begin{remark}
 
 \begin{align*}
@@ -4012,13 +3986,6 @@ then \(p_* \circ f_*\) is multiplication by \(2n\), contradicting
 .\end{align*}
 
 \end{remark}
-
-\begin{fact}[Table of Laplace Transforms]
-
-\includegraphics{figures/2021-07-29_21-14-27.png}
-\includegraphics{figures/2021-07-29_21-14-42.png}
-
-\end{fact}
 
 Basics
 
@@ -4064,82 +4031,6 @@ Basics
   Show that if \(f\) is once complex differentiable at each point of
   \(\Omega\), then \(f\) is holomorphic.
 \end{itemize}
-
-\hypertarget{draft-of-problem-book}{%
-\section{Draft of Problem Book}\label{draft-of-problem-book}}
-
-\begin{itemize}
-\tightlist
-\item
-  Prove the triangle inequality
-\item
-  Prove the reverse triangle inequality
-\item
-  Show that \(\sum z^{k-1}/k\) converges for all \(z\in S^1\) except
-  \(z=1\).
-\item
-  What is an example of a noncontinuous limit of continuous functions?
-\item
-  Show that the uniform limit of continuous functions is continuous.
-\item
-  Show that \(f\) is holomorphic if and only if
-  \(\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muf = 0\).
-\item
-  Show \(n^{1\over n} \overset{n\to \infty } \to 1\).
-\item
-  Show that if \(f\) is holomorphic with \(f'=0\) on \(\Omega\) then
-  \(f\) is constant.
-\item
-  Show that holomorphic implies analytic.
-\item
-  Use Cauchy's inequality to prove Liouville's theorem
-\end{itemize}
-
-\begin{problem}[?]
-
-What is a pair of conformal equivalences between \({\mathbb{H}}\) and
-\({\mathbb{D}}\)?
-
-\begin{solution}
-
-\begin{align*}
-F: HH &\to {\mathbb{D}}\\
-z & \mapsto {i-z \over i+z}
-\\
-\\
-G: {\mathbb{D}}&\to {\mathbb{H}}\\
-w &\mapsto i{1-w \over 1 + w}
-.\end{align*}
-
-\begin{quote}
-Mnemonic: any point in \({\mathbb{H}}\) is closer to \(i\) than \(-i\),
-so \({\left\lvert {F(z)} \right\rvert} < 1\).
-\end{quote}
-
-\begin{itemize}
-\tightlist
-\item
-  Maps \({\mathbb{R}}\to S^1\setminus\left\{{-1}\right\}\).
-\end{itemize}
-
-\end{solution}
-
-\end{problem}
-
-\begin{problem}[?]
-
-What is conformal equivalence
-\({\mathbb{H}}\rightleftharpoons S \coloneqq\left\{{w\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < \arg(w) < \alpha \pi}\right\}\)?
-
-\begin{solution}
-
-\begin{align*}
-f(z) = z^ \alpha
-.\end{align*}
-
-\end{solution}
-
-\end{problem}
 
 
 \printbibliography[title=Bibliography]

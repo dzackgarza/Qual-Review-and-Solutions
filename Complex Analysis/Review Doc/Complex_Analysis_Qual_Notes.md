@@ -2,6 +2,7 @@
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Ell{ \mathrm{Ell} }
 \newcommand\Kahler[0]{\operatorname{Kähler}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
@@ -13,10 +14,9 @@
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
 \newcommand\rref{\operatorname{RREF}}
+\newcommand\RREF{\operatorname{RREF}}
 \newcommand{\Tatesymbol}{\operatorname{TateSymb}}
-\newcommand\taf{ \mathrm{taf} }
 \newcommand\tilt[0]{ { \flat } }
-\newcommand\tmf{ \mathrm{tmf} }
 \newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\Ag}[0]{{\mathcal{A}_g}}
@@ -86,9 +86,9 @@
 \newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\JCF}[0]{\operatorname{JCF}}
+\newcommand{\RCF}[0]{\operatorname{RCF}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
@@ -115,7 +115,6 @@
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
@@ -176,7 +175,7 @@
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\adjoint}[0]{\dagger}
 \newcommand{\adj}[0]{\operatorname{adj}}
 \newcommand{\ad}[0]{\operatorname{ad}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
@@ -185,7 +184,6 @@
 \newcommand{\arccot}[0]{\operatorname{arccot}}
 \newcommand{\arccsc}[0]{\operatorname{arccsc}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
 \newcommand{\bP}[0]{\operatorname{bP}}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\bbm}[0]{{\mathbb{M}}}
@@ -304,6 +302,7 @@
 \newcommand{\lci}[0]{\mathrm{lci}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\liea}[0]{{\mathfrak{a}}}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
 \newcommand{\lief}[0]{{\mathfrak{f}}}
@@ -385,6 +384,7 @@
 \newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{J ({#1}) }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\noeth}[0]{\mathrm{Noeth}}
 \newcommand{\nonzero}[0]{^{\bullet}}
@@ -469,7 +469,6 @@
 \newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
-\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\zbar}{\bar{z} }
@@ -487,14 +486,17 @@
 \renewcommand{\labelitemiii}{$\diamondsuit$}
 \renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
-\renewcommand{\mod}{\pmod}
+\renewcommand{\mod}{\operatorname{mod}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
 
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\aut}{Aut}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
 \DeclareMathOperator{\BiHol}{BiHol}
 \DeclareMathOperator{\Bl}{Bl}
 \DeclareMathOperator{\Br}{Br}
@@ -611,6 +613,7 @@
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
@@ -681,6 +684,7 @@
 
 
 \newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\E}[0]{{\mathsf{E}}}
 \newcommand{\T}[0]{{\mathsf{T}}}
 \newcommand{\K}[0]{{\mathsf{K}}}
 \newcommand{\G}[0]{{\mathsf{G}}}
@@ -722,10 +726,6 @@
   \operatorname{\textnormal{#1}}
 }
 
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
 
 
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
@@ -2402,14 +2402,14 @@ You may be able to just compute an integral!
 :::{.fact title="Integrating $z^k$ around $S^1$ powers residues"}
 The major fact that reduces integrals to residues: 
 \[
-\int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = \int_0^{2\pi} e^{i(k+1)\theta \dtheta }
+\int_\gamma z^k \dz = \int_0^{2\pi} e^{ik\theta} ie^{i\theta } \dtheta = i\int_0^{2\pi} e^{i(k+1)\theta \dtheta }
 =
 \begin{cases}
 2\pi i & k=-1 
 \\
 0 & \text{else}.
 \end{cases}
-.\]
+\]
 Thus
 \[
 \int \sum_{k\geq -M} c_k z^k = \sum_{k\geq -M} \int c_k z^k = 2\pi i c_{-1}
@@ -2986,9 +2986,9 @@ w^{1\over \alpha} &\mapsfrom w
 .\]
 Note that if you look at the image of $\HH$ under $z\mapsto z^{\alpha}$, you get
 \[
-\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } \\
+\ts{z \st 0 < \Arg(z) < \pi } &\mapstofrom \ts{0 < \Arg(w) < \alpha \pi } 
 .\]
-For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < w^{1\over \alpha}$.
+For the inverse, choose a branch cut of $\log$ deleting the negative real axis, or more generally fix $0 < \arg w < \alpha \pi$.
 
 **Boundary behavior:**
 
@@ -3006,6 +3006,7 @@ z &\mapstofrom {z^{\pi\over \alpha} - i \over z^{\pi\over\alpha} + i}
 .\]
 
 Idea: compose some known functions.
+
 ![](figures/image_2020-07-22-13-22-46.png)
 
 \[
@@ -3208,14 +3209,6 @@ Schwarz lemma.
 
 
 
-
-
-# Linear Fractional Transformations
-
-
-
-
-# Montel's Theorem
 
 
 # Unsorted Theorems
@@ -3489,28 +3482,10 @@ Using $\pi_1(\CC\units) = \ZZ$, the induced maps are $p_*(1) = 2$ and $f_*(1) = 
 But then $p_* \circ f_*$ is multiplication by $2n$, contradicting $p_* \circ f_* = \id$ by functoriality.
 :::
 
-:::{.definition title="Laplace Transform"}
-\[
-\mcl(f, \xi) \da \int_\RR e^{-\xi x} f(x) \dx
-.\]
-
-- $f(t) = c \mapstofrom F(s) = cs\inv$
-- $f(t) = e^{at} \mapstofrom F(s) = (s-a)\inv$.
-- $f(t) = t \mapstofrom F(s) = s^{-2}$.
-- $f(t) = \cos(at) \mapstofrom F(s) = s(s^2 + a^2)\inv$.
-
-:::
-
 :::{.remark}
 \[
 \hat{f}(\xi) \da \mcl(f, i\xi) \da \int_\RR f(x) e^{-i\xi x} \dx
 .\]
-:::
-
-:::{.fact title="Table of Laplace Transforms"}
-
-![](figures/2021-07-29_21-14-27.png)
-![](figures/2021-07-29_21-14-42.png)
 :::
 
 Basics
@@ -3529,58 +3504,4 @@ Basics
 - Show that if $\theset{f_n}$ is a sequence of holomorphic functions converging uniformly to a function $f$ on every compact subset of $\Omega$, then $f$ is holomorphic on $\Omega$ and $\theset{f_n'}$ converges uniformly to $f'$ on every such compact subset.
 - Show that if each $f_n$ is holomorphic on $\Omega$ and $F \definedas \sum f_n$ converges uniformly on every compact subset of $\Omega$, then $F$ is holomorphic.
 - Show that if $f$ is once complex differentiable at each point of $\Omega$, then $f$ is holomorphic.
-
-
-# Draft of Problem Book
-
-
-
-- Prove the triangle inequality
-- Prove the reverse triangle inequality
-- Show that $\sum z^{k-1}/k$ converges for all $z\in S^1$ except $z=1$.
-- What is an example of a noncontinuous limit of continuous functions?
-- Show that the uniform limit of continuous functions is continuous.
-- Show that $f$ is holomorphic if and only if $\bar\del f = 0$.
-- Show $n^{1\over n} \converges{n\to \infty } \to 1$.
-- Show that if $f$ is holomorphic with $f'=0$ on $\Omega$ then $f$ is constant.
-- Show that holomorphic implies analytic.
-- Use Cauchy's inequality to prove Liouville's theorem
-
-
-:::{.problem title="?"}
-What is a pair of conformal equivalences between $\HH$ and $\DD$?
-
-:::{.solution}
-\[
-F: HH &\to \DD \\
-z & \mapsto {i-z \over i+z}
-\\
-\\
-G: \DD &\to \HH \\
-w &\mapsto i{1-w \over 1 + w}
-.\]
-
-> Mnemonic: any point in $\HH$ is closer to $i$ than $-i$, so $\abs{F(z)} < 1$.
-
-- Maps $\RR\to S^1\sm\ts{-1}$.
-
-:::
-
-:::
-
-:::{.problem title="?"}
-What is conformal equivalence $\HH \mapstofrom S \da \ts{w\in \CC \st 0 < \arg(w) < \alpha \pi}$?
-
-
-:::{.solution}
-\[
-f(z) = z^ \alpha
-.\]
-
-:::
-
-:::
-
-
-
 
