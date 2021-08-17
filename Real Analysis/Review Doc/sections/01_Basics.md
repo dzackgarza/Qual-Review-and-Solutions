@@ -511,7 +511,7 @@ There *do not* exist functions that are discontinuous precisely on $\RR\setminus
 
 :::{.proof title="?"}
 $D_f$ is always an $F_\sigma$ set, which follows by considering the oscillation $\omega_f$.
-$\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
+Use that $\omega_f(x) = 0 \iff f$ is continuous at $x$, and $D_f = \union_n A_{\frac 1 n}$ where $A_\varepsilon = \theset{\omega_f \geq \varepsilon}$ is closed.
 :::
 
 :::{.proposition title="Lipschitz $\iff$ differentiable with bounded derivative."}
@@ -528,7 +528,7 @@ For $\ts{a_k}$ is a non-increasing sequence in $\RR$ then
 .\]
 :::
 
-:::{.proof title="?"}
+:::{.proof title="showing a useful trick"}
 Show that
 \[
 \sum a_k \leq \sum 2^k a_{2^k} \leq 2 \sum a_k
@@ -536,7 +536,7 @@ Show that
 using 
 \[
 \sum a_k = a_0 + a_1 + a_2 + a_3 + \cdots
-\leq \qty{a_1} + \qty{a_2 + a_2} + {a_3 + a_3 + a_3 + a_3} + \cdots \\
+\leq \qty{a_1} + \qty{a_2 + a_2} + \qty {a_3 + a_3 + a_3 + a_3} + \cdots \\
 \]
 where each group with $a_k$ has $2^k$ terms.
 
