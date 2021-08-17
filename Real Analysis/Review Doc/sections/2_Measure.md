@@ -43,9 +43,9 @@ Then
 :::{.proposition title="Continuity of Measure"}
 \[
 \text{Continuity from below:} \quad 
-E_{n} \nearrow E &\implies m(E_{n}) \to m(E) \\
+E_{n} \nearrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E) \\
 \text{Continuity from above:} \quad 
-m(E_{1}) < \infty \text{ and } E_{i} \searrow E &\implies m(E_{i}) \to m(E)
+m(E_{1}) < \infty \text{ and } E_{n} \searrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E)
 .\]
 
 Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.

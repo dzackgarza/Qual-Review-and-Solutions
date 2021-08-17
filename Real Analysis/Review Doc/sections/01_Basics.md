@@ -115,6 +115,23 @@ If $f_n\to f$ pointwise and uniformly with each $f_n$ continuous, then $f$ is co
 If $f_n \to f$ uniformly, then $\int f_n = \int f$.
 :::
 
+:::{.proposition title="Weak $M\dash$Test"}
+If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges pointwise.[^note_about_pointwise_convergence]
+
+[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
+
+:::
+
+:::{.proposition title="The Weierstrass $M\dash$Test"}
+If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
+[^m_test_suffices]
+Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
+
+[^m_test_suffices]: 
+It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
+
+:::
+
 ## Definitions
 
 ### Convergence and Continuity
@@ -653,22 +670,6 @@ If $\sum f_n$ converges then $f_n \to 0$ uniformly.
 If $f_n$ are continuous and $\sum f_n \to f$ converges uniformly, then $f$ is continuous.
 :::
 
-:::{.proposition title="Weak $M\dash$Test"}
-If $f_n(x) \leq M_n$ **for a fixed $x$** where $\sum M_n < \infty$, then the series $f(x) = \sum f_n(x)$ converges.[^note_about_pointwise_convergence]
-
-[^note_about_pointwise_convergence]: Note that this is only pointwise convergence of $f$, whereas the full $M\dash$test gives uniform convergence.
-
-:::
-
-:::{.proposition title="The Weierstrass $M\dash$Test"}
-If $\sup_{x\in A} \abs{f_n(x)} \leq M_n$ for each $n$ where $\sum M_n < \infty$, then $\sum_{n=1}^\infty f_n(x)$ converges uniformly and absolutely on $A$.
-[^m_test_suffices]
-Conversely, if $\sum f_n$ converges uniformly on $A$ then $\sup_{x\in A} \abs{f_n(x)} \to 0$. 
-
-[^m_test_suffices]: 
-It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
-
-:::
 
 :::{.proposition title="Cauchy criterion for sums"}
 $f_n$ are uniformly Cauchy (so $\norm{f_n - f_m}_\infty < \eps$) iff $f_n$ is uniformly convergent.
@@ -734,7 +735,7 @@ and $f_n'(0) \to 1$.
 .\]
 :::
 
-## "Almost" Theorems
+## Probabilist Tools: "Almost" Theorems
 
 :::{.theorem title="Egorov's Theorem"}
 Let $E \subseteq \RR^d$ be measurable of positive finite measure with $f_k\to f$ almost everywhere on $E$.
