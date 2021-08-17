@@ -144,14 +144,19 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
 :::
 
-
 :::{.proposition title="Translation and Dilation Invariance"}
 Lebesgue measure is translation and dilation invariant.
 :::
 
-:::{.proof title="(Todo) of translation/dilation invariance"}
-Obvious for cubes; if $Q_{i} \rightrightarrows E$ then $Q_{i} + k \rightrightarrows E + k$, etc.
-<!--\todo{Flesh out this proof.}-->
+:::{.proof title="of translation/dilation invariance"}
+\envlist
+
+- This is obvious for cubes: 
+  - For translation, if $Q_i \covers E$ then $Q_i + k \covers E + k$.
+    One can then show $m_*(E + k) \leq \sum \abs{Q_i + k} = \sum \abs{Q_i}\leq m_*(E) + \eps$ for all $\eps$, and get the reverse inequality by writing $E = (E+y)-y$.
+  - For dilation, use that $m_*(t(A\disjoint B)) = tm_*(A\disjoint B)$, which is useful because we cover with disjoint cubes.
+    Then use that $tQ_i \covers tE$ to get $tm_*(E) \leq t\sum \abs{Q_i} = \sum \abs{tQ_i} \leq m_*(tE) + \eps$ and similarly reverse to get equality.
+
 :::
 
 :::{.theorem title="Non-measurable sets exist"}
