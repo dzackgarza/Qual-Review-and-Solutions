@@ -96,17 +96,17 @@ If $X$ is complete, then absolutely convergent implies convergent.
 :::
 
 :::{.definition title="Continuity and Uniform Continuity"}
-A function $f: \RR\to \RR$ is **continuous** on a set $X$ iff
+A function $f: \RR\to \RR$ is **continuous** at a point $x_0$ if
 \[
-\forall x_0 \in X, \forall \eps>0, \quad \exists\delta = \delta(x_0, \eps) >0 \quad\text{ such that }\quad \\
-\forall x\in X, \, \abs{x-x_0}<\delta \implies \abs{f(x) - f(x_0)} < \eps
+&\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall y, \abs{x_0 - y} < \delta \implies \abs{f(x_0) - f(y)} < \varepsilon \\
+&\forall \varepsilon \quad \exists \delta(\varepsilon, x_0) \text{ such that }\quad \forall h, \abs{h} < \delta \implies \abs{f(x_0) - f(x_0 \pm h)} < \varepsilon
 .\]
 
-$f$ is **uniformly continuous** iff
+$f$ is **uniformly continuous** on $X$ iff
 
 \[
   &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that }\quad \forall x, y, \in X \quad \abs{x - y} < \delta \implies \abs{f(x) - f(y)} < \varepsilon \\
-\iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \mid \quad \forall x, y, \quad \abs{y} < \delta \implies \abs{f(x-y) - f(y)} < \varepsilon
+\iff &\forall \varepsilon \quad \exists \delta(\varepsilon) \text{ such that} \quad \, \forall x, h, \quad \abs{h} < \delta \implies \abs{f(x-h) - f(y)} < \varepsilon
 .\]
 :::
 
