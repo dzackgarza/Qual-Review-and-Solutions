@@ -258,41 +258,6 @@ For $f(x, y)$ **integrable**, for almost every $x\in \RR^n$,
 If any iterated integral is **absolutely integrable**, i.e. $\int \int \abs{f(x, y)} < \infty$, then $f$ is integrable and $\int f$ equals any iterated integral.
 :::
 
-:::{.proposition title="Measurable Slices"}
-Let $E$ be a measurable subset of $\RR^n$. Then
-
-- For almost every $x\in \RR^{n_1}$, the slice $E_x \definedas \theset{y \in \RR^{n_2} \mid  (x,y) \in E}$ is measurable in $\RR^{n_2}$.
-- The function
-
-\[
-F: \RR^{n_1} &\to \RR \\
-x &\mapsto m(E_x) = \int_{\RR^{n_2}} \chi_{E_x} ~dy
-\]
-is measurable and 
-\[
-m(E) = \int_{\RR^{n_1}} m(E_x) ~dx 
-= \int_{\RR^{n_1}} \int_{\RR^{n_2}} \chi_{E_x} ~dy ~dx
-.\]
-:::
-
-:::{.proof title="of measurable slices"}
-\envlist
-
-$\implies$:
-
-- Let $f$ be measurable on $\RR^n$.
-- Then the cylinders $F(x, y) = f(x)$ and $G(x, y) = f(y)$ are both measurable on $\RR^{n+1}$.
-- Write $\mathcal{A} = \theset{G \leq F} \intersect \theset{G \geq 0}$; both are measurable.
-
-
-$\impliedby$:
-
-- Let $A$ be measurable in $\RR^{n+1}$.
-- Define $A_x = \theset{y\in \RR \mid (x, y) \in \mathcal{A}}$, then $m(A_x) = f(x)$.
-- By the corollary, $A_x$ is measurable set, $x \mapsto A_x$ is a measurable function, and $m(A) = \int f(x) ~dx$.
-- Then explicitly, $f(x) = \chi_{A}$, which makes $f$ a measurable function.
-:::
-
 :::{.proposition title="Differentiating Under an Integral"}
 If $\abs{\dd{}{t}f(x, t)} \leq g(x) \in L^1$, then letting $F(t) = \int f(x, t) ~dt$,
 \[
