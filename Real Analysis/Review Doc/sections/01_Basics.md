@@ -56,8 +56,8 @@
 - Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
 
 - Simplifications:
-  - To show something for a measurable set, show it for bounded/compact/elementary sets/
-  - To show something for a function, show it for continuous, bounded, compactly supported, simple, chi functions, $L^1$, etc
+  - To show something for a measurable set, show it for bounded/compact/elementary sets.
+  - To show something for an arbitrary function, try to show it for continuous, bounded, compactly supported, simple, indicator functions, etc and approximate.
   - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
   - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
 
