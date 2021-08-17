@@ -207,24 +207,7 @@ A set is **meager** if it is a *countable* union of nowhere dense sets.
 A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
 :::
 
-
 ### Measure Theory
-
-:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
-An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
-
-[^Mnemonic_Ferme]: 
-Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
-
-:::
-
-:::{.definition title="Outer Measure"}
-The **outer measure** of a set is given by
-\[
-m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
-,\]
-where $\abs{Q_i}$ is the standard Euclidean volume of a cube in $\RR^n$.
-:::
 
 :::{.definition title="Limsup and Liminf of Sets"}
 \[
@@ -234,7 +217,6 @@ where $\abs{Q_i}$ is the standard Euclidean volume of a cube in $\RR^n$.
 
   
 :::
-
 
 :::{.remark}
 How to derive these definitions: use that $\inf$ corresponds to intersections/existence and $\sup$ corresponds to unions/forall.
@@ -267,6 +249,21 @@ If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim
 
 :::
 
+:::{.definition title="$F_\sigma$ and $G_\delta$ Sets"}
+An $F_\sigma$ set is a union of closed sets, and a $G_\delta$ set is an intersection of opens. [^Mnemonic_Ferme]
+
+[^Mnemonic_Ferme]: 
+Mnemonic: "F" stands for *ferme*, which is "closed" in French, and $\sigma$ corresponds to a "sum", i.e. a union.
+
+:::
+
+:::{.definition title="Outer Measure"}
+The **outer measure** of a set is given by
+\[
+m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cubes}}} \sum \abs{Q_{i}}
+,\]
+where $\abs{Q_i}$ is the standard Euclidean volume of a cube in $\RR^n$.
+:::
 
 :::{.definition title="Lebesgue Measurable Sets"}
 A subset $E\subseteq \RR^n$ is **Lebesgue measurable** iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
@@ -300,13 +297,6 @@ L^\infty(X)
 
 :::
 
-:::{.definition title="Dual Norm"}
-For $X$ a normed vector space and $\Lambda \in X\dual$, 
-\[
-\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
-.\]
-:::
-
 :::{.definition title="Convolution"}
 $$f * g(x)=\int f(x-y) g(y) d y .$$
 :::
@@ -328,8 +318,14 @@ $$f * g(x)=\int f(x-y) g(y) d y .$$
 For $\phi\in L^1$, the dilations satisfy $\int \phi_{t} = \int \phi$, and if $\int \phi = 1$ then $\phi$ is an **approximate identity**. 
 :::
 
-
 ### Functional Analysis
+
+:::{.definition title="Dual Norm"}
+For $X$ a normed vector space and $\Lambda \in X\dual$, 
+\[
+\norm{\Lambda}_{X\dual} \definedas \sup_{\theset{x\in X \suchthat \norm{x}_X \leq 1}} \abs{f(x)}
+.\]
+:::
 
 :::{.definition title="Orthonormal sequence "}
 A countable collection of elements \( \ts{ u_i } \)  is **orthonormal** if and only if 
