@@ -1,27 +1,85 @@
 ## Automorphism Groups
 
 :::{.fact}
-\envlist
+Some facts about common automorphism groups, and how to count and reason about them.
+There's a good reference here: <https://www.whitman.edu/documents/Academics/Mathematics/SeniorProject_BrianSloan.pdf>
 
--  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
 
-- $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
-\[  
-\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+Let $\varphi$ be the totient function, and note that a cyclic group $C_n$ has precisely $\phi(n)$ choices of generators.
+One can compute
+\[
+\phi(p) &= p-1 \\
+\phi(p^k) &= p^{k-1}(p - 1) \\
+\phi(p^kq^\ell) &= \phi(p^k)\phi(q^\ell) \quad\text{when } \gcd(q, p) = 1
 .\]
-  
-  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
 
-- $\Aut(\ZZ/n\ZZ) \cong \qty{\ZZ/n\ZZ}\units \cong \ZZ/\varphi(n)\ZZ$ where $\varphi$ is the totient function.
+- Automorphisms of cyclic groups are completely known:
+\[
+\Aut(C_n) \cong C_n\units 
+,\]
+which has size $\phi(n)$ but is not generally isomorphic to $C_{\phi(n)}$
 
-  - $\varphi(p^k) = p^{k-1}(p-1)$
+:::{.warnings}
+Warning: $C_n\units$ is not always cyclic!! 
+For example, $C_8\units \cong C_2^2 \neq C_{4}$.
+In fact, $C_n\units$ cyclic iff $n=2,4,p^k, 2p^k$ for $p$ an odd prime.
+:::
+
+
+- For $p$ an odd prime, $\Aut(C_p) \cong C_p\units \cong C_{p-1}$ is cyclic. 
+
+- For $p^k$ an odd prime power, $\Aut(C_{p^k}) \cong C_{\varphi(p^k)}$ is cyclic.
+
+- For $2^k$ with $k\geq 1$, $C_{2^k}\units \cong C_{2}\times C_{2^{k-2}}$.
 
 - If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
+  One can then compute a general order by factoring $n = \prod_{k=1}^\ell p_k^{n_k}$ to get a decomposition 
+\[
+C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}} 
+,\]
+  and thus
+  \[
+  \Aut(C_n) 
+  &\cong \Aut\qty{\prod_{k=1}^{\ell} C_{p_k^{n_k}} }\\
+  &\cong \prod_{k=1}^\ell \Aut\qty{C_{p_k^{n_k}}} \\
+  &\cong \prod_{k=1}^\ell C_{p_k^{n_k}}\units \\
+  &\cong C_{2^{\ell}}\units \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{p_k^{n_k}}\units \\
+  &\cong \qty{C_2 \cross C_{2^{\ell-2}} } \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} && m_k \da \varphi(p_k^{n_k}) \\
+  &\cong \qty{C_2 \cross C_{2^{\ell-2}} } \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} &&  m_k \da p_k^{n_k-1}(p_k-1)  
+  .\]
+
+
+
+- $\Aut(C_p^n) \cong \GL_n(\FF_p)$ which has size 
+\[
+\# \GL_n(\FF_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
+.\]
+
+
+- Counting homs: $\# \Hom_\Grp(C_n, C_m) = \gcd(n ,m)$.
+
+
+-  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
+  - So if $\GL_n$ shows up in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms).
 
 - $\Inn(G) \cong G/Z(G)$.
 
+:::
+
+
+:::{.example title="?"}
+Some examples of writing automorphism groups as products of cyclic groups:
+\[
+\Aut(C_{2^2\cdot 3}) &\cong \Aut(C_{2^2})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{2-2}}} \cross C_{\phi(3)} = \qty{C_2}\cross C_2 \\
+\Aut(C_{2^3\cdot 3}) &\cong \Aut(C_{2^3})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{3-2}}}\cross C_{\phi(3)} = \qty{C_2 \cross C_2}\cross C_2 \\
+\Aut(C_{2^4\cdot 3}) &\cong \Aut(C_{2^4})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{4-2}}}\cross C_{\phi(3)} = \qty{C_2 \cross C_{2^2}}\cross C_2\\
+\Aut(C_{2^2\cdot 7}) &\cong \Aut(C_{2^2})\cross \Aut(C_7) \cong \qty{C_2 \cross C_{2^{2-2}}}\cross C_{\phi(7)}\cong C_2 \cross C_6 \\
+\Aut(C_{2\cdot 3\cdot 5}) &\cong \Aut(C_2) \cross \Aut(C_3) \cross \Aut(C_5) \cong 1\cross C_{\phi(3)}\cross C_{\phi(5)} \cong C_2 \cross C_4
+.\]
+
 
 :::
+
 
 ## Isomorphism Theorems
 

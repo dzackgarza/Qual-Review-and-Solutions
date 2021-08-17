@@ -132,7 +132,7 @@ $k$ is perfect (using the irreducible implies separable condition) if either
 :::{.proof title="?"}
 For $\ch k = 0$, use that irreducible implies separable.
 
-For $\ch k = p$, show that $k_p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
+For $\ch k = p$, show that $k^p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
 
 - Supposing $k^p\neq k$, choose $a\in k$ not a $p$th power.
 - Note that $f(x) \da x^p-a$ has only one root in $\bar{k}$: in a splitting field, any root $r$ satisfies $r^p=a$, so 
@@ -256,7 +256,6 @@ f(x) \da 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 .\]
 This has no roots in $k$.
 :::
-\todo{Proof}
 
 ## Cyclotomic Polynomials
 
@@ -362,15 +361,17 @@ If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some 
 
 ## Misc
 
-:::{.proposition title="?"}
-If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
-:::
-
 :::{.definition title="Elementary Symmetric Functions"}
 \todo[inline]{todo}
 :::
 
 ## Exercises
+
+
+:::{.exercise title="?"}
+If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
+:::
+
 
 :::{.exercise title="?"}
 Show 
@@ -381,6 +382,7 @@ x^\ell - 1 \divides x^m-1 \iff \ell\divides m
 
 :::{.solution}
 $\implies$
+
 - Write $m = \ell q + r$ with $0\leq r < \ell$.
 - Write 
 \[
@@ -392,6 +394,9 @@ p(x) = {x^m-1 \over x^\ell - 1}
 where $p,q$ are polynomial by divisibility.
 - So the remaining ratio must be polynomial, but since $r<\ell$ is strict this forces $r=0$.
   Thus $\ell \divides m$.
+
+\todo[inline]{I don't like this proof!}
+
 
 $\impliedby$:
 

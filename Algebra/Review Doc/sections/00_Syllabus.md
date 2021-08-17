@@ -1,4 +1,4 @@
-# Topics and Remarks 2
+# Topics and Remarks
 
 
 :::{.remark}

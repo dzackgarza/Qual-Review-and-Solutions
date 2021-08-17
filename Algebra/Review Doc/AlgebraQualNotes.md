@@ -731,7 +731,7 @@
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
-# Topics and Remarks 2
+# Topics and Remarks
 
 
 :::{.remark}
@@ -2195,7 +2195,7 @@ where we now get equality since these sets have the same cardinality.
 
 - $n_p \divides m$:
   - Let $G\actson X\da \Syl_p(G)$ by conjugation; this is transitive by Sylow II and there is one orbit.
-  - Then $\# X$ must divide $\$ G$, so $n_p$ divides $\# G = p^k m$.
+  - Then $\# X$ must divide $\# G$, so $n_p$ divides $\# G = p^k m$.
   - Using $n_p \equiv 1 \mod p$, we can't have $n_p\divides p^k$, and so $n^p$ must divide $m$.
 
 - $n_p = [G: N_G(P)]$ for any $P\in \Syl_p(G)$:
@@ -2235,27 +2235,85 @@ Inductively this yields a chain $H \subsetneq H^1 \subsetneq \cdots$, and by Zor
 ## Automorphism Groups
 
 :::{.fact}
-\envlist
+Some facts about common automorphism groups, and how to count and reason about them.
+There's a good reference here: <https://www.whitman.edu/documents/Academics/Mathematics/SeniorProject_BrianSloan.pdf>
 
--  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
 
-- $\Aut\qty{ \qty{\ZZ/p\ZZ}^n } \cong \GL(n, \FF_p)$, which has size 
-\[  
-\abs{\Aut(\ZZ/(p)^n)} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+Let $\varphi$ be the totient function, and note that a cyclic group $C_n$ has precisely $\phi(n)$ choices of generators.
+One can compute
+\[
+\phi(p) &= p-1 \\
+\phi(p^k) &= p^{k-1}(p - 1) \\
+\phi(p^kq^\ell) &= \phi(p^k)\phi(q^\ell) \quad\text{when } \gcd(q, p) = 1
 .\]
-  
-  - If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
 
-- $\Aut(\ZZ/n\ZZ) \cong \qty{\ZZ/n\ZZ}\units \cong \ZZ/\varphi(n)\ZZ$ where $\varphi$ is the totient function.
+- Automorphisms of cyclic groups are completely known:
+\[
+\Aut(C_n) \cong C_n\units 
+,\]
+which has size $\phi(n)$ but is not generally isomorphic to $C_{\phi(n)}$
 
-  - $\varphi(p^k) = p^{k-1}(p-1)$
+:::{.warnings}
+Warning: $C_n\units$ is not always cyclic!! 
+For example, $C_8\units \cong C_2^2 \neq C_{4}$.
+In fact, $C_n\units$ cyclic iff $n=2,4,p^k, 2p^k$ for $p$ an odd prime.
+:::
+
+
+- For $p$ an odd prime, $\Aut(C_p) \cong C_p\units \cong C_{p-1}$ is cyclic. 
+
+- For $p^k$ an odd prime power, $\Aut(C_{p^k}) \cong C_{\varphi(p^k)}$ is cyclic.
+
+- For $2^k$ with $k\geq 1$, $C_{2^k}\units \cong C_{2}\times C_{2^{k-2}}$.
 
 - If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
+  One can then compute a general order by factoring $n = \prod_{k=1}^\ell p_k^{n_k}$ to get a decomposition 
+\[
+C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}} 
+,\]
+  and thus
+  \[
+  \Aut(C_n) 
+  &\cong \Aut\qty{\prod_{k=1}^{\ell} C_{p_k^{n_k}} }\\
+  &\cong \prod_{k=1}^\ell \Aut\qty{C_{p_k^{n_k}}} \\
+  &\cong \prod_{k=1}^\ell C_{p_k^{n_k}}\units \\
+  &\cong C_{2^{\ell}}\units \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{p_k^{n_k}}\units \\
+  &\cong \qty{C_2 \cross C_{2^{\ell-2}} } \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} && m_k \da \varphi(p_k^{n_k}) \\
+  &\cong \qty{C_2 \cross C_{2^{\ell-2}} } \cross \prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} &&  m_k \da p_k^{n_k-1}(p_k-1)  
+  .\]
+
+
+
+- $\Aut(C_p^n) \cong \GL_n(\FF_p)$ which has size 
+\[
+\# \GL_n(\FF_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
+.\]
+
+
+- Counting homs: $\# \Hom_\Grp(C_n, C_m) = \gcd(n ,m)$.
+
+
+-  If $\sigma \in \Aut(H)$ and $\tau \in \Aut(N)$, then \(N \semidirect_\psi H \cong N \semidirect_{\tau \circ \psi \circ \sigma} H\).
+  - So if $\GL_n$ shows up in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms).
 
 - $\Inn(G) \cong G/Z(G)$.
 
+:::
+
+
+:::{.example title="?"}
+Some examples of writing automorphism groups as products of cyclic groups:
+\[
+\Aut(C_{2^2\cdot 3}) &\cong \Aut(C_{2^2})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{2-2}}} \cross C_{\phi(3)} = \qty{C_2}\cross C_2 \\
+\Aut(C_{2^3\cdot 3}) &\cong \Aut(C_{2^3})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{3-2}}}\cross C_{\phi(3)} = \qty{C_2 \cross C_2}\cross C_2 \\
+\Aut(C_{2^4\cdot 3}) &\cong \Aut(C_{2^4})\cross \Aut(C_3) \cong \qty{C_2 \cross C_{2^{4-2}}}\cross C_{\phi(3)} = \qty{C_2 \cross C_{2^2}}\cross C_2\\
+\Aut(C_{2^2\cdot 7}) &\cong \Aut(C_{2^2})\cross \Aut(C_7) \cong \qty{C_2 \cross C_{2^{2-2}}}\cross C_{\phi(7)}\cong C_2 \cross C_6 \\
+\Aut(C_{2\cdot 3\cdot 5}) &\cong \Aut(C_2) \cross \Aut(C_3) \cross \Aut(C_5) \cong 1\cross C_{\phi(3)}\cross C_{\phi(5)} \cong C_2 \cross C_4
+.\]
+
 
 :::
+
 
 ## Isomorphism Theorems
 
@@ -3412,7 +3470,14 @@ A ring $R$ is a **principal ideal domain** iff every ideal is principal.
 :::
 
 :::{.exercise title="?"}
-Show that if $R$ is a PID then $\spec R \subseteq \mspec R$.
+Let $R$ be a PID.
+
+- Show primes are maximal, so $\spec R \subseteq \mspec R$ and nonzero ideals are prime iff maximal.
+- Show that $R$ is Noetherian.
+- Show that every element is a finite product of irreducibles.
+- Show that in a PID, every maximal ideal is generated by an *irreducible* element.
+- Show that not $\ZZ$ is Noetherian but not Artinian.
+  - Hint: take a chain $n\ZZ \contains n^2\ZZ \contains \cdots$.
 :::
 
 :::{.definition title="Unique Factorization Domain"}
@@ -3508,8 +3573,19 @@ Motivation: if $R = \OO_{X, x}$ is the ring of germs at $x$ of an algebraic vari
 - $R$ is a UFD $\iff R[x]$ is a UFD.
 - $R$ a PID $\implies R[x]$ is a UFD
 - $R$ a PID $\implies R$ Noetherian
-- $R[x]$ a PID $\implies R$ is a field.
 :::
+
+:::{.exercise title="?"}
+Show that $R[x]$ a PID $\iff R$ is a field.
+:::
+
+:::{.solution}
+Hint: take $r\in R$, then $\gens{r, x} = \gens{f}$ for some $f$.
+Write $r = fp$ and $x = fq$ for $p, q\in R[x]$, show $\deg f = 0$ and $\deg q = 1$.
+Write $f = c$ a constant, $q(x) = ax + b$ to get $c(ax+b)=x \implies ca=1 \implies c\in R\units \implies \gens{f} = R[x]$.
+Conclude by writing $1= ar_1(x) + xr_2(x)$, evaluate at $x=0$ to get $a\inv = r_1(0)$.
+:::
+
 
 :::{.example title="?"}
 A polynomial ring over a PID is not necessarily a PID: take $\gens{2, x} \normal \ZZ[x]$.
@@ -3555,7 +3631,7 @@ Sketch proofs of the inclusions:
 -  An integral domain that is not a UFD: $\ZZ[\sqrt{-5}]$
    - *Proof*: $(2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3$, where all factors are irreducible (check norm).
 
--  A ring that is not an integral domain: $\ZZ/(4)$
+-  A ring that is not an integral domain: $\ZZ/4$
    - *Proof*: $[2]_4$ is a zero divisor since $[2]_4 [2]_4 = [0]_4$.
 :::
 
@@ -3619,7 +3695,6 @@ Let $U, U(R), R\units$ be the units of $R$.
 - Show that $f\in ZD(R[x]) \iff f\neq 0$ and $rf(x) = 0$ for some $r\in R$.
 
 :::
-
 
 :::{.definition title="Nilradical"}
 The **nilradical** of $R \in \CRing$ is
@@ -3703,23 +3778,20 @@ A ring \( R \) is simple if and only if it is simple as an \(R\dash\)module, i.e
 :::
 
 :::{.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition 
+A module \( M \) is **semisimple** if and only if it admits a decomposition 
 \[
 M = \bigoplus_{j\in J} M_j
 \]
 with each \( M_j \) simple.
 :::
 
-:::{.theorem title="Krull"}
-Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
-:::
 
 :::{.theorem title="Artin-Wedderburn?"}
 If $R$ is a nonzero, unital, *semisimple* ring then 
 \[
 R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)
 ,\]
-a finite sum of matrix rings over division rings.
+a finite sum of $n_i\times n_i$ matrix rings over division rings $D_i$.
 :::
 
 :::{.corollary}
@@ -3744,6 +3816,10 @@ If $P$ is a poset in which every chain has an upper bound, then $P$ has a maxima
 :::{.remark}
 You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate.
 To use Zorn's lemma, you need to take an arbitrary chain in your poset $X$, produce an upper bound $U$ (e.g. by taking a union), and showing that $U$ is still in $X$ (i.e. it still satisfies the right predicate).
+:::
+
+:::{.theorem title="Krull"}
+Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
 :::
 
 :::{.proposition title="Existence of maximal ideals"}
@@ -3791,7 +3867,7 @@ Division algorithm for Euclidean domains.
 :::{.definition title="Field of fractions"}
 For $R\in \CRing$ an integral domain, the **field of fractions** of $R$ can be constructed as 
 \[
-\ff(R) \da \qty{R \cross R\nonzero}/\sim && (a,s)\sim bt \iff at-bs = 0_R
+\ff(R) \da \qty{R \cross R\nonzero}/\sim && (a,s)\sim (b, t) \iff at-bs = 0_R
 .\]
 
 > Checking transitivity requires having no nonzero zero divisors.
@@ -3836,34 +3912,6 @@ For integral domains $R$,
 An ideal $I\normal R$ is **primary** iff whenever $pq\in I$, $p\in I$ and $q^n\in I$ for some $n$.
 :::
 
-:::{.proposition title="Polynomial rings over UFDs are UFDs"}
-\todo[inline]{todo}
-
-
-:::
-
-
-:::{.exercise title="?"}
-\envlist
-
-- Show that in a PID, every element can be written as a finite product of irreducibles.
-- Show that in a PID, every maximal ideal is generated by an *irreducible* element.
-- Show that any PID is Noetherian.
-- Show that not $\ZZ$ is Noetherian but not Artinian.
-  - Hint: take a chain $n\ZZ \contains n^2\ZZ \contains \cdots$.
-:::
-
-:::{.exercise title="?"}
-Show that $R[x]$ a PID $\iff R$ is a field.
-:::
-
-:::{.solution}
-Hint: take $r\in R$, then $\gens{r, x} = \gens{f}$ for some $f$.
-Write $r = fp$ and $x = fq$ for $p, q\in R[x]$, show $\deg f = 0$ and $\deg q = 1$.
-Write $f = c$ a constant, $q(x) = ax + b$ to get $c(ax+b)=x \implies ca=1 \implies c\in R\units \implies \gens{f} = R[x]$.
-Conclude by writing $1= ar_1(x) + xr_2(x)$, evaluate at $x=0$ to get $a\inv = r_1(0)$.
-:::
-
 
 
 
@@ -3878,7 +3926,6 @@ Let $K$ be a number field and $N:K\to \ZZ$ be its norm function.
 - $a\in K\units \iff N(a) = \pm 1$.
 
 :::
-
 
 
 
@@ -4018,7 +4065,7 @@ $k$ is perfect (using the irreducible implies separable condition) if either
 :::{.proof title="?"}
 For $\ch k = 0$, use that irreducible implies separable.
 
-For $\ch k = p$, show that $k_p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
+For $\ch k = p$, show that $k^p\neq k \iff$ irreducible does *not* imply separable, so there exists an inseparable irreducible.
 
 - Supposing $k^p\neq k$, choose $a\in k$ not a $p$th power.
 - Note that $f(x) \da x^p-a$ has only one root in $\bar{k}$: in a splitting field, any root $r$ satisfies $r^p=a$, so 
@@ -4142,7 +4189,6 @@ f(x) \da 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 .\]
 This has no roots in $k$.
 :::
-\todo{Proof}
 
 ## Cyclotomic Polynomials
 
@@ -4248,15 +4294,17 @@ If $K_{/\QQ}$ is an abelian extension, then $K \subseteq \QQ(\zeta_m)$ for some 
 
 ## Misc
 
-:::{.proposition title="?"}
-If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
-:::
-
 :::{.definition title="Elementary Symmetric Functions"}
 \todo[inline]{todo}
 :::
 
 ## Exercises
+
+
+:::{.exercise title="?"}
+If $f\in k[x]^{\irr}$ with $\ch k = p$, then there is a unique separable $g\in k[x]^{\irr}$ such that $f(x) = g(x^{p^k})$ for some unique $k$.
+:::
+
 
 :::{.exercise title="?"}
 Show 
@@ -4267,6 +4315,7 @@ x^\ell - 1 \divides x^m-1 \iff \ell\divides m
 
 :::{.solution}
 $\implies$
+
 - Write $m = \ell q + r$ with $0\leq r < \ell$.
 - Write 
 \[
@@ -4278,6 +4327,9 @@ p(x) = {x^m-1 \over x^\ell - 1}
 where $p,q$ are polynomial by divisibility.
 - So the remaining ratio must be polynomial, but since $r<\ell$ is strict this forces $r=0$.
   Thus $\ell \divides m$.
+
+\todo[inline]{I don't like this proof!}
+
 
 $\impliedby$:
 
@@ -4991,7 +5043,7 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
 
 3. (Compositing property)
-Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
+Whenever $L/k, K/k\in \mcs$, the amalgam $LK/k \in \mcs$ as well:
 
 \begin{tikzcd}
 	& LK \\
@@ -5199,7 +5251,7 @@ Alternatively,
 - A trick to remember how degrees, indices and sizes match up: $L/K/F$ corresponds to $1/H/G$, and $[L:K] = [H:1] = \# H$, $[F:K] = [G:H]$, $[L:F] = [G:1] = \# G$, etc.
 
 - Trick: once you find $\SF(f)/\QQ$, if any subextension is not normal over $\QQ$, then $G$ can not be abelian.
-  - Example: $f(x) = x^3-2$ splits in $\QQ(\zeta_3, 2^{1\over 3})$ which is a non-normal extension $\QQ(2^{1\over 3})$, forcing $G= S_3$.
+  - Example: $f(x) = x^3-2$ splits in $\QQ(\zeta_3, 2^{1\over 3})$ which has a non-normal subextension $\QQ(2^{1\over 3})$, forcing $G= S_3$.
 
 - If $\alpha\beta \in \QQ$, then $\alpha \in \QQ(\beta)$ and vice-versa (I think).
 

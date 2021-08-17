@@ -13,4 +13,3 @@ Let $K$ be a number field and $N:K\to \ZZ$ be its norm function.
 
 
 
-

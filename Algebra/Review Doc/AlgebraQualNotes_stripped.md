@@ -11,7 +11,7 @@
 
 
 
-# Topics and Remarks 2
+# Topics and Remarks
 
 ::: {.remark}
 (DZG) on the structure of these notes: these are *extremely* disorganized at the moment, and only reflect some amalgamation of all of the random notes I made to myself while studying for qualifying exams. As a result, things are bound to be out of order, and likely useless pedagogically unless you've seen most of the material before. Moreover, this has been a long-running document (started in my undergrad years, so pre-2018), and since I've forgotten and rewritten certain things at various points, there may even be duplicated material (e.g. propositions stated/proved in multiple places, repeated exercises or statements, etc).
@@ -1435,7 +1435,7 @@ n_p = 1 \iff S_p {~\trianglelefteq~}G
     -   So \( P \) is the only fixed point.
 -   \( n_p \divides m \):
     -   Let \( G\curvearrowright X\coloneqq{\operatorname{Syl}}_p(G) \) by conjugation; this is transitive by Sylow II and there is one orbit.
-    -   Then \( \# X \) must divide \( \$ G \), so \( n_p \) divides \( \# G = p^k m \).
+    -   Then \( \# X \) must divide \( \# G \), so \( n_p \) divides \( \# G = p^k m \).
     -   Using \( n_p \equiv 1 \operatorname{mod}p \), we can't have \( n_p\divides p^k \), and so \( n^p \) must divide \( m \).
 -   \( n_p = [G: N_G(P)] \) for any \( P\in {\operatorname{Syl}}_p(G) \):
     -   Let \( G\curvearrowright{\operatorname{Syl}}_p(G) \) by conjugation and apply orbit-stabilizer to get \( n_p = [G: {\operatorname{Stab}}(P)] \)
@@ -1468,25 +1468,69 @@ Let \( H \leq G \) be a \( p{\hbox{-}} \)subgroup. If \( H \) is not *properly* 
 ## Automorphism Groups
 
 ::: {.fact}
-```{=tex}
-\envlist
-```
--   If \( \sigma \in \mathop{\mathrm{Aut}}(H) \) and \( \tau \in \mathop{\mathrm{Aut}}(N) \), then \( N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H \).
+Some facts about common automorphism groups, and how to count and reason about them. There's a good reference here: <https://www.whitman.edu/documents/Academics/Mathematics/SeniorProject_BrianSloan.pdf>
 
--   \( \mathop{\mathrm{Aut}}\qty{ \qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n } \cong \operatorname{GL}(n, {\mathbb{F}}_p) \), which has size
-    \[  
-    {\left\lvert {\mathop{\mathrm{Aut}}({\mathbb{Z}}/(p)^n)} \right\rvert} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
+Let \( \varphi \) be the totient function, and note that a cyclic group \( C_n \) has precisely \( \phi(n) \) choices of generators. One can compute
+\[
+\phi(p) &= p-1 \\
+\phi(p^k) &= p^{k-1}(p - 1) \\
+\phi(p^kq^\ell) &= \phi(p^k)\phi(q^\ell) \quad\text{when } \gcd(q, p) = 1
+.\]
+
+-   Automorphisms of cyclic groups are completely known:
+    \[
+    \mathop{\mathrm{Aut}}(C_n) \cong C_n^{\times}
+    ,\]
+    which has size \( \phi(n) \) but is not generally isomorphic to \( C_{\phi(n)} \)
+
+::: {.warnings}
+Warning: \( C_n^{\times} \) is not always cyclic!! For example, \( C_8^{\times}\cong C_2^2 \neq C_{4} \). In fact, \( C_n^{\times} \) cyclic iff \( n=2,4,p^k, 2p^k \) for \( p \) an odd prime.
+:::
+
+-   For \( p \) an odd prime, \( \mathop{\mathrm{Aut}}(C_p) \cong C_p^{\times}\cong C_{p-1} \) is cyclic.
+
+-   For \( p^k \) an odd prime power, \( \mathop{\mathrm{Aut}}(C_{p^k}) \cong C_{\varphi(p^k)} \) is cyclic.
+
+-   For \( 2^k \) with \( k\geq 1 \), \( C_{2^k}^{\times}\cong C_{2}\times C_{2^{k-2}} \).
+
+-   If \( G, H \) have coprime order then \( \mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H) \). One can then compute a general order by factoring \( n = \prod_{k=1}^\ell p_k^{n_k} \) to get a decomposition
+    \[
+    C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}} 
+    ,\]
+    and thus
+    \[
+    \mathop{\mathrm{Aut}}(C_n) 
+    &\cong \mathop{\mathrm{Aut}}\qty{\prod_{k=1}^{\ell} C_{p_k^{n_k}} }\\
+    &\cong \prod_{k=1}^\ell \mathop{\mathrm{Aut}}\qty{C_{p_k^{n_k}}} \\
+    &\cong \prod_{k=1}^\ell C_{p_k^{n_k}}^{\times}\\
+    &\cong C_{2^{\ell}}^{\times}\times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{p_k^{n_k}}^{\times}\\
+    &\cong \qty{C_2 \times C_{2^{\ell-2}} } \times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} && m_k \coloneqq\varphi(p_k^{n_k}) \\
+    &\cong \qty{C_2 \times C_{2^{\ell-2}} } \times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} &&  m_k \coloneqq p_k^{n_k-1}(p_k-1)  
     .\]
 
-    -   If this occurs in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms)
+-   \( \mathop{\mathrm{Aut}}(C_p^n) \cong \operatorname{GL}_n({\mathbb{F}}_p) \) which has size
+    \[
+    \# \operatorname{GL}_n({\mathbb{F}}_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
+    .\]
 
--   \( \mathop{\mathrm{Aut}}({\mathbb{Z}}/n{\mathbb{Z}}) \cong \qty{{\mathbb{Z}}/n{\mathbb{Z}}}^{\times}\cong {\mathbb{Z}}/\varphi(n){\mathbb{Z}} \) where \( \varphi \) is the totient function.
+-   Counting homs: \( \# \mathop{\mathrm{Hom}}_{\mathsf{Grp}}(C_n, C_m) = \gcd(n ,m) \).
 
-    -   \( \varphi(p^k) = p^{k-1}(p-1) \)
+-   If \( \sigma \in \mathop{\mathrm{Aut}}(H) \) and \( \tau \in \mathop{\mathrm{Aut}}(N) \), then \( N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H \).
 
--   If \( G, H \) have coprime order then \( \mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H) \).
+-   So if \( \operatorname{GL}_n \) shows up in a semidirect product, it suffices to consider similarity classes of matrices (i.e. just use canonical forms).
 
 -   \( \mathop{\mathrm{Inn}}(G) \cong G/Z(G) \).
+:::
+
+::: {.example title="?"}
+Some examples of writing automorphism groups as products of cyclic groups:
+\[
+\mathop{\mathrm{Aut}}(C_{2^2\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^2})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{2-2}}} \times C_{\phi(3)} = \qty{C_2}\times C_2 \\
+\mathop{\mathrm{Aut}}(C_{2^3\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^3})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{3-2}}}\times C_{\phi(3)} = \qty{C_2 \times C_2}\times C_2 \\
+\mathop{\mathrm{Aut}}(C_{2^4\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^4})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{4-2}}}\times C_{\phi(3)} = \qty{C_2 \times C_{2^2}}\times C_2\\
+\mathop{\mathrm{Aut}}(C_{2^2\cdot 7}) &\cong \mathop{\mathrm{Aut}}(C_{2^2})\times\mathop{\mathrm{Aut}}(C_7) \cong \qty{C_2 \times C_{2^{2-2}}}\times C_{\phi(7)}\cong C_2 \times C_6 \\
+\mathop{\mathrm{Aut}}(C_{2\cdot 3\cdot 5}) &\cong \mathop{\mathrm{Aut}}(C_2) \times\mathop{\mathrm{Aut}}(C_3) \times\mathop{\mathrm{Aut}}(C_5) \cong 1\times C_{\phi(3)}\times C_{\phi(5)} \cong C_2 \times C_4
+.\]
 :::
 
 ## Isomorphism Theorems
@@ -2536,7 +2580,14 @@ A ring \( R \) is a **principal ideal domain** iff every ideal is principal.
 :::
 
 ::: {.exercise title="?"}
-Show that if \( R \) is a PID then \( \operatorname{Spec}R \subseteq \operatorname{mSpec}R \).
+Let \( R \) be a PID.
+
+-   Show primes are maximal, so \( \operatorname{Spec}R \subseteq \operatorname{mSpec}R \) and nonzero ideals are prime iff maximal.
+-   Show that \( R \) is Noetherian.
+-   Show that every element is a finite product of irreducibles.
+-   Show that in a PID, every maximal ideal is generated by an *irreducible* element.
+-   Show that not \( {\mathbb{Z}} \) is Noetherian but not Artinian.
+    -   Hint: take a chain \( n{\mathbb{Z}}\supseteq n^2{\mathbb{Z}}\supseteq\cdots \).
 :::
 
 ::: {.definition title="Unique Factorization Domain"}
@@ -2624,7 +2675,14 @@ Motivation: if \( R = {\mathcal{O}}_{X, x} \) is the ring of germs at \( x \) of
 -   \( R \) is a UFD \( \iff R[x] \) is a UFD.
 -   \( R \) a PID \( \implies R[x] \) is a UFD
 -   \( R \) a PID \( \implies R \) Noetherian
--   \( R[x] \) a PID \( \implies R \) is a field.
+:::
+
+::: {.exercise title="?"}
+Show that \( R[x] \) a PID \( \iff R \) is a field.
+:::
+
+::: {.solution}
+Hint: take \( r\in R \), then \( \left\langle{r, x}\right\rangle = \left\langle{f}\right\rangle \) for some \( f \). Write \( r = fp \) and \( x = fq \) for \( p, q\in R[x] \), show \( \deg f = 0 \) and \( \deg q = 1 \). Write \( f = c \) a constant, \( q(x) = ax + b \) to get \( c(ax+b)=x \implies ca=1 \implies c\in R^{\times}\implies \left\langle{f}\right\rangle = R[x] \). Conclude by writing \( 1= ar_1(x) + xr_2(x) \), evaluate at \( x=0 \) to get \( a^{-1}= r_1(0) \).
 :::
 
 ::: {.example title="?"}
@@ -2660,7 +2718,7 @@ Sketch proofs of the inclusions:
     -   *Proof*: \( {\mathbb{Z}} \) a UFD implies \( {\mathbb{Z}}[x] \) is a UFD, but \( \left\langle{2, x}\right\rangle = 2{\mathbb{Z}}[x] + x{\mathbb{Z}}[x] = \left\{{\sum r_ix^i {~\mathrel{\Big|}~}r_0 \in 2{\mathbb{Z}}}\right\} \) is not principal. Why: if \( \left\langle{2, x}\right\rangle = \left\langle{f}\right\rangle \) and \( f \) is constant, then every polynomial in this ideal has even coefficients and thus misses \( g(x) \coloneqq x \). Otherwise, \( \deg f \geq 1 \) and we miss 2, which has degree zero.
 -   An integral domain that is not a UFD: \( {\mathbb{Z}}[\sqrt{-5}] \)
     -   *Proof*: \( (2+\sqrt{-5})(2-\sqrt{-5})=9=3\cdot 3 \), where all factors are irreducible (check norm).
--   A ring that is not an integral domain: \( {\mathbb{Z}}/(4) \)
+-   A ring that is not an integral domain: \( {\mathbb{Z}}/4 \)
     -   *Proof*: \( [2]_4 \) is a zero divisor since \( [2]_4 [2]_4 = [0]_4 \).
 :::
 
@@ -2774,15 +2832,11 @@ A module \( M \) is **simple** iff every submodule \( M' \leq M \) is either \( 
 :::
 
 ::: {.definition title="Semisimple Modules"}
-A module \( M \) is **simple** if and only if it admits a decomposition
+A module \( M \) is **semisimple** if and only if it admits a decomposition
 \[
 M = \bigoplus_{j\in J} M_j
 \]
 with each \( M_j \) simple.
-:::
-
-::: {.theorem title="Krull"}
-Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
 :::
 
 ::: {.theorem title="Artin-Wedderburn?"}
@@ -2790,7 +2844,7 @@ If \( R \) is a nonzero, unital, *semisimple* ring then
 \[
 R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)
 ,\]
-a finite sum of matrix rings over division rings.
+a finite sum of \( n_i\times n_i \) matrix rings over division rings \( D_i \).
 :::
 
 ::: {.corollary}
@@ -2813,6 +2867,10 @@ If \( P \) is a poset in which every chain has an upper bound, then \( P \) has 
 
 ::: {.remark}
 You can always form a subset poset, and restrict with any sub-collection thereof with a set predicate. To use Zorn's lemma, you need to take an arbitrary chain in your poset \( X \), produce an upper bound \( U \) (e.g. by taking a union), and showing that \( U \) is still in \( X \) (i.e. it still satisfies the right predicate).
+:::
+
+::: {.theorem title="Krull"}
+Every ring has a proper maximal ideal, and any proper ideal is contained in a maximal ideal.
 :::
 
 ::: {.proposition title="Existence of maximal ideals"}
@@ -2857,7 +2915,7 @@ Division algorithm for Euclidean domains.
 ::: {.definition title="Field of fractions"}
 For \( R\in \mathsf{CRing} \) an integral domain, the **field of fractions** of \( R \) can be constructed as
 \[
-\operatorname{ff}(R) \coloneqq\qty{R \times R^{\bullet}}/\sim && (a,s)\sim bt \iff at-bs = 0_R
+\operatorname{ff}(R) \coloneqq\qty{R \times R^{\bullet}}/\sim && (a,s)\sim (b, t) \iff at-bs = 0_R
 .\]
 
 > Checking transitivity requires having no nonzero zero divisors.
@@ -2899,31 +2957,6 @@ For integral domains \( R \),
 
 ::: {.definition title="Primary Ideal"}
 An ideal \( I{~\trianglelefteq~}R \) is **primary** iff whenever \( pq\in I \), \( p\in I \) and \( q^n\in I \) for some \( n \).
-:::
-
-::: {.proposition title="Polynomial rings over UFDs are UFDs"}
-```{=tex}
-\todo[inline]{todo}
-```
-:::
-
-::: {.exercise title="?"}
-```{=tex}
-\envlist
-```
--   Show that in a PID, every element can be written as a finite product of irreducibles.
--   Show that in a PID, every maximal ideal is generated by an *irreducible* element.
--   Show that any PID is Noetherian.
--   Show that not \( {\mathbb{Z}} \) is Noetherian but not Artinian.
-    -   Hint: take a chain \( n{\mathbb{Z}}\supseteq n^2{\mathbb{Z}}\supseteq\cdots \).
-:::
-
-::: {.exercise title="?"}
-Show that \( R[x] \) a PID \( \iff R \) is a field.
-:::
-
-::: {.solution}
-Hint: take \( r\in R \), then \( \left\langle{r, x}\right\rangle = \left\langle{f}\right\rangle \) for some \( f \). Write \( r = fp \) and \( x = fq \) for \( p, q\in R[x] \), show \( \deg f = 0 \) and \( \deg q = 1 \). Write \( f = c \) a constant, \( q(x) = ax + b \) to get \( c(ax+b)=x \implies ca=1 \implies c\in R^{\times}\implies \left\langle{f}\right\rangle = R[x] \). Conclude by writing \( 1= ar_1(x) + xr_2(x) \), evaluate at \( x=0 \) to get \( a^{-1}= r_1(0) \).
 :::
 
 # Number Theory
@@ -3057,7 +3090,7 @@ Example of a non-perfect field: \( {\mathbb{F}}_p(t) \). Use that \( f(x) \colon
 ::: {.proof title="?"}
 For \( \operatorname{ch}k = 0 \), use that irreducible implies separable.
 
-For \( \operatorname{ch}k = p \), show that \( k_p\neq k \iff \) irreducible does *not* imply separable, so there exists an inseparable irreducible.
+For \( \operatorname{ch}k = p \), show that \( k^p\neq k \iff \) irreducible does *not* imply separable, so there exists an inseparable irreducible.
 
 -   Supposing \( k^p\neq k \), choose \( a\in k \) not a \( p \)th power.
 
@@ -3181,9 +3214,6 @@ f(x) \coloneqq 1 +\prod_{j=1}^n (x-a_j) \in k[x]
 This has no roots in \( k \).
 :::
 
-```{=tex}
-\todo{Proof}
-```
 ## Cyclotomic Polynomials
 
 ::: {.definition title="Euler's Totient Function"}
@@ -3274,10 +3304,6 @@ If \( K_{/{\mathbb{Q}}} \) is an abelian extension, then \( K \subseteq {\mathbb
 
 ## Misc
 
-::: {.proposition title="?"}
-If \( f\in k[x]^{{\mathrm{irr}}} \) with \( \operatorname{ch}k = p \), then there is a unique separable \( g\in k[x]^{{\mathrm{irr}}} \) such that \( f(x) = g(x^{p^k}) \) for some unique \( k \).
-:::
-
 ::: {.definition title="Elementary Symmetric Functions"}
 ```{=tex}
 \todo[inline]{todo}
@@ -3287,6 +3313,10 @@ If \( f\in k[x]^{{\mathrm{irr}}} \) with \( \operatorname{ch}k = p \), then ther
 ## Exercises
 
 ::: {.exercise title="?"}
+If \( f\in k[x]^{{\mathrm{irr}}} \) with \( \operatorname{ch}k = p \), then there is a unique separable \( g\in k[x]^{{\mathrm{irr}}} \) such that \( f(x) = g(x^{p^k}) \) for some unique \( k \).
+:::
+
+::: {.exercise title="?"}
 Show
 \[
 x^\ell - 1 \divides x^m-1 \iff \ell\divides m
@@ -3294,15 +3324,22 @@ x^\ell - 1 \divides x^m-1 \iff \ell\divides m
 :::
 
 ::: {.solution}
-\( \implies \) - Write \( m = \ell q + r \) with \( 0\leq r < \ell \). - Write
-\[
-p(x) = {x^m-1 \over x^\ell - 1}
-= {x^{lq+r} -1 \over x^\ell - 1}
-= x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
-= q(x) + {x^r-1 \over x^\ell - 1}
-,\]
-where \( p,q \) are polynomial by divisibility. - So the remaining ratio must be polynomial, but since \( r<\ell \) is strict this forces \( r=0 \). Thus \( \ell \divides m \).
+\( \implies \)
 
+-   Write \( m = \ell q + r \) with \( 0\leq r < \ell \).
+-   Write
+    \[
+    p(x) = {x^m-1 \over x^\ell - 1}
+    = {x^{lq+r} -1 \over x^\ell - 1}
+    = x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
+    = q(x) + {x^r-1 \over x^\ell - 1}
+    ,\]
+    where \( p,q \) are polynomial by divisibility.
+-   So the remaining ratio must be polynomial, but since \( r<\ell \) is strict this forces \( r=0 \). Thus \( \ell \divides m \).
+
+```{=tex}
+\todo[inline]{I don't like this proof!}
+```
 \( \impliedby \):
 
 -   Write \( m = \ell q + r \), then \( r=0 \) by divisibility.
@@ -3963,7 +4000,7 @@ A collection of field extensions \( \mathcal{S} \) is **distinguished** iff
 ```
 > [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMSwyLCJrIl0sWzIsMSwiSyJdLFswLDEsIkwiXSxbMSwwLCJMSyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDMsIlxcdGhlcmVmb3JlIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d)
 
-3.  (Compositing property) Whenever \( L/k, K/k\in {\mathcal{S}} \), the amalgam \( KL/k \in {\mathcal{S}} \) as well:
+3.  (Compositing property) Whenever \( L/k, K/k\in {\mathcal{S}} \), the amalgam \( LK/k \in {\mathcal{S}} \) as well:
 
 ```{=tex}
 \begin{tikzcd}
@@ -4167,7 +4204,7 @@ Alternatively,
 
 -   Trick: once you find \( \operatorname{SF}(f)/{\mathbb{Q}} \), if any subextension is not normal over \( {\mathbb{Q}} \), then \( G \) can not be abelian.
 
-    -   Example: \( f(x) = x^3-2 \) splits in \( {\mathbb{Q}}(\zeta_3, 2^{1\over 3}) \) which is a non-normal extension \( {\mathbb{Q}}(2^{1\over 3}) \), forcing \( G= S_3 \).
+    -   Example: \( f(x) = x^3-2 \) splits in \( {\mathbb{Q}}(\zeta_3, 2^{1\over 3}) \) which has a non-normal subextension \( {\mathbb{Q}}(2^{1\over 3}) \), forcing \( G= S_3 \).
 
 -   If \( \alpha\beta \in {\mathbb{Q}} \), then \( \alpha \in {\mathbb{Q}}(\beta) \) and vice-versa (I think).
 

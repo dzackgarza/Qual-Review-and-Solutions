@@ -670,7 +670,7 @@ A collection of field extensions $\mathcal{S}$ is **distinguished** iff
 
 
 3. (Compositing property)
-Whenever $L/k, K/k\in \mcs$, the amalgam $KL/k \in \mcs$ as well:
+Whenever $L/k, K/k\in \mcs$, the amalgam $LK/k \in \mcs$ as well:
 
 \begin{tikzcd}
 	& LK \\

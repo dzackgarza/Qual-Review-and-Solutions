@@ -50,8 +50,8 @@
 \tableofcontents
 \newpage
 
-\hypertarget{topics-and-remarks-2}{%
-\section{Topics and Remarks 2}\label{topics-and-remarks-2}}
+\hypertarget{topics-and-remarks}{%
+\section{Topics and Remarks}\label{topics-and-remarks}}
 
 \begin{remark}
 
@@ -2625,7 +2625,7 @@ Constraints)}\label{sylow-3-numerical-constraints}}
     Let \(G\curvearrowright X\coloneqq{\operatorname{Syl}}_p(G)\) by
     conjugation; this is transitive by Sylow II and there is one orbit.
   \item
-    Then \(\# X\) must divide \(\$ G\), so \(n_p\) divides
+    Then \(\# X\) must divide \(\# G\), so \(n_p\) divides
     \(\# G = p^k m\).
   \item
     Using \(n_p \equiv 1 \operatorname{mod}p\), we can't have
@@ -2698,43 +2698,102 @@ in some \(p{\hbox{-}}\)subgroup \(H^1\). Inductively this yields a chain
 
 \begin{fact}
 
-\envlist
+Some facts about common automorphism groups, and how to count and reason
+about them. There's a good reference here:
+\url{https://www.whitman.edu/documents/Academics/Mathematics/SeniorProject_BrianSloan.pdf}
+
+Let \(\varphi\) be the totient function, and note that a cyclic group
+\(C_n\) has precisely \(\phi(n)\) choices of generators. One can compute
+\begin{align*}
+\phi(p) &= p-1 \\
+\phi(p^k) &= p^{k-1}(p - 1) \\
+\phi(p^kq^\ell) &= \phi(p^k)\phi(q^\ell) \quad\text{when } \gcd(q, p) = 1
+.\end{align*}
 
 \begin{itemize}
+\tightlist
+\item
+  Automorphisms of cyclic groups are completely known:
+  \begin{align*}
+  \mathop{\mathrm{Aut}}(C_n) \cong C_n^{\times}
+  ,\end{align*}
+  which has size \(\phi(n)\) but is not generally isomorphic to
+  \(C_{\phi(n)}\)
+\end{itemize}
+
+\begin{warnings}
+
+Warning: \(C_n^{\times}\) is not always cyclic!! For example,
+\(C_8^{\times}\cong C_2^2 \neq C_{4}\). In fact, \(C_n^{\times}\) cyclic
+iff \(n=2,4,p^k, 2p^k\) for \(p\) an odd prime.
+
+\end{warnings}
+
+\begin{itemize}
+\item
+  For \(p\) an odd prime,
+  \(\mathop{\mathrm{Aut}}(C_p) \cong C_p^{\times}\cong C_{p-1}\) is
+  cyclic.
+\item
+  For \(p^k\) an odd prime power,
+  \(\mathop{\mathrm{Aut}}(C_{p^k}) \cong C_{\varphi(p^k)}\) is cyclic.
+\item
+  For \(2^k\) with \(k\geq 1\),
+  \(C_{2^k}^{\times}\cong C_{2}\times C_{2^{k-2}}\).
+\item
+  If \(G, H\) have coprime order then
+  \(\mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H)\).
+  One can then compute a general order by factoring
+  \(n = \prod_{k=1}^\ell p_k^{n_k}\) to get a decomposition
+  \begin{align*}
+  C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}} 
+  ,\end{align*}
+  and thus
+  \begin{align*}
+  \mathop{\mathrm{Aut}}(C_n) 
+  &\cong \mathop{\mathrm{Aut}}\qty{\prod_{k=1}^{\ell} C_{p_k^{n_k}} }\\
+  &\cong \prod_{k=1}^\ell \mathop{\mathrm{Aut}}\qty{C_{p_k^{n_k}}} \\
+  &\cong \prod_{k=1}^\ell C_{p_k^{n_k}}^{\times}\\
+  &\cong C_{2^{\ell}}^{\times}\times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{p_k^{n_k}}^{\times}\\
+  &\cong \qty{C_2 \times C_{2^{\ell-2}} } \times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} && m_k \coloneqq\varphi(p_k^{n_k}) \\
+  &\cong \qty{C_2 \times C_{2^{\ell-2}} } \times\prod_{\substack{k=1 \\ p_k\neq 2} }^\ell C_{m_k} &&  m_k \coloneqq p_k^{n_k-1}(p_k-1)  
+  .\end{align*}
+\item
+  \(\mathop{\mathrm{Aut}}(C_p^n) \cong \operatorname{GL}_n({\mathbb{F}}_p)\)
+  which has size
+  \begin{align*}
+  \# \operatorname{GL}_n({\mathbb{F}}_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
+  .\end{align*}
+\item
+  Counting homs:
+  \(\# \mathop{\mathrm{Hom}}_{\mathsf{Grp}}(C_n, C_m) = \gcd(n ,m)\).
 \item
   If \(\sigma \in \mathop{\mathrm{Aut}}(H)\) and
   \(\tau \in \mathop{\mathrm{Aut}}(N)\), then
   \(N \rtimes_\psi H \cong N \rtimes_{\tau \circ \psi \circ \sigma} H\).
 \item
-  \(\mathop{\mathrm{Aut}}\qty{ \qty{{\mathbb{Z}}/p{\mathbb{Z}}}^n } \cong \operatorname{GL}(n, {\mathbb{F}}_p)\),
-  which has size
-  \begin{align*}  
-  {\left\lvert {\mathop{\mathrm{Aut}}({\mathbb{Z}}/(p)^n)} \right\rvert} = (p^n-1)(p^n-p)\cdots(p^n-p^{n-1})
-  .\end{align*}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If this occurs in a semidirect product, it suffices to consider
-    similarity classes of matrices (i.e.~just use canonical forms)
-  \end{itemize}
-\item
-  \(\mathop{\mathrm{Aut}}({\mathbb{Z}}/n{\mathbb{Z}}) \cong \qty{{\mathbb{Z}}/n{\mathbb{Z}}}^{\times}\cong {\mathbb{Z}}/\varphi(n){\mathbb{Z}}\)
-  where \(\varphi\) is the totient function.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \(\varphi(p^k) = p^{k-1}(p-1)\)
-  \end{itemize}
-\item
-  If \(G, H\) have coprime order then
-  \(\mathop{\mathrm{Aut}}(G \times H) \cong \mathop{\mathrm{Aut}}(G) \times\mathop{\mathrm{Aut}}(H)\).
+  So if \(\operatorname{GL}_n\) shows up in a semidirect product, it
+  suffices to consider similarity classes of matrices (i.e.~just use
+  canonical forms).
 \item
   \(\mathop{\mathrm{Inn}}(G) \cong G/Z(G)\).
 \end{itemize}
 
 \end{fact}
+
+\begin{example}[?]
+
+Some examples of writing automorphism groups as products of cyclic
+groups:
+\begin{align*}
+\mathop{\mathrm{Aut}}(C_{2^2\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^2})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{2-2}}} \times C_{\phi(3)} = \qty{C_2}\times C_2 \\
+\mathop{\mathrm{Aut}}(C_{2^3\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^3})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{3-2}}}\times C_{\phi(3)} = \qty{C_2 \times C_2}\times C_2 \\
+\mathop{\mathrm{Aut}}(C_{2^4\cdot 3}) &\cong \mathop{\mathrm{Aut}}(C_{2^4})\times\mathop{\mathrm{Aut}}(C_3) \cong \qty{C_2 \times C_{2^{4-2}}}\times C_{\phi(3)} = \qty{C_2 \times C_{2^2}}\times C_2\\
+\mathop{\mathrm{Aut}}(C_{2^2\cdot 7}) &\cong \mathop{\mathrm{Aut}}(C_{2^2})\times\mathop{\mathrm{Aut}}(C_7) \cong \qty{C_2 \times C_{2^{2-2}}}\times C_{\phi(7)}\cong C_2 \times C_6 \\
+\mathop{\mathrm{Aut}}(C_{2\cdot 3\cdot 5}) &\cong \mathop{\mathrm{Aut}}(C_2) \times\mathop{\mathrm{Aut}}(C_3) \times\mathop{\mathrm{Aut}}(C_5) \cong 1\times C_{\phi(3)}\times C_{\phi(5)} \cong C_2 \times C_4
+.\end{align*}
+
+\end{example}
 
 \hypertarget{isomorphism-theorems}{%
 \subsection{Isomorphism Theorems}\label{isomorphism-theorems}}
@@ -4696,8 +4755,31 @@ principal.
 
 \begin{exercise}[?]
 
-Show that if \(R\) is a PID then
-\(\operatorname{Spec}R \subseteq \operatorname{mSpec}R\).
+Let \(R\) be a PID.
+
+\begin{itemize}
+\tightlist
+\item
+  Show primes are maximal, so
+  \(\operatorname{Spec}R \subseteq \operatorname{mSpec}R\) and nonzero
+  ideals are prime iff maximal.
+\item
+  Show that \(R\) is Noetherian.
+\item
+  Show that every element is a finite product of irreducibles.
+\item
+  Show that in a PID, every maximal ideal is generated by an
+  \emph{irreducible} element.
+\item
+  Show that not \({\mathbb{Z}}\) is Noetherian but not Artinian.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Hint: take a chain
+    \(n{\mathbb{Z}}\supseteq n^2{\mathbb{Z}}\supseteq\cdots\).
+  \end{itemize}
+\end{itemize}
 
 \end{exercise}
 
@@ -4888,11 +4970,28 @@ Types}\label{comparing-and-transporting-ring-types}}
   \(R\) a PID \(\implies R[x]\) is a UFD
 \item
   \(R\) a PID \(\implies R\) Noetherian
-\item
-  \(R[x]\) a PID \(\implies R\) is a field.
 \end{itemize}
 
 \end{proposition}
+
+\begin{exercise}[?]
+
+Show that \(R[x]\) a PID \(\iff R\) is a field.
+
+\end{exercise}
+
+\begin{solution}
+
+Hint: take \(r\in R\), then
+\(\left\langle{r, x}\right\rangle = \left\langle{f}\right\rangle\) for
+some \(f\). Write \(r = fp\) and \(x = fq\) for \(p, q\in R[x]\), show
+\(\deg f = 0\) and \(\deg q = 1\). Write \(f = c\) a constant,
+\(q(x) = ax + b\) to get
+\(c(ax+b)=x \implies ca=1 \implies c\in R^{\times}\implies \left\langle{f}\right\rangle = R[x]\).
+Conclude by writing \(1= ar_1(x) + xr_2(x)\), evaluate at \(x=0\) to get
+\(a^{-1}= r_1(0)\).
+
+\end{solution}
 
 \begin{example}[?]
 
@@ -4993,7 +5092,7 @@ Sketch proofs of the inclusions:
     factors are irreducible (check norm).
   \end{itemize}
 \item
-  A ring that is not an integral domain: \({\mathbb{Z}}/(4)\)
+  A ring that is not an integral domain: \({\mathbb{Z}}/4\)
 
   \begin{itemize}
   \tightlist
@@ -5234,7 +5333,7 @@ ideals.
 
 \begin{definition}[Semisimple Modules]
 
-A module \(M\) is \textbf{simple} if and only if it admits a
+A module \(M\) is \textbf{semisimple} if and only if it admits a
 decomposition
 \begin{align*}
 M = \bigoplus_{j\in J} M_j
@@ -5243,20 +5342,14 @@ with each \(M_j\) simple.
 
 \end{definition}
 
-\begin{theorem}[Krull]
-
-Every ring has a proper maximal ideal, and any proper ideal is contained
-in a maximal ideal.
-
-\end{theorem}
-
 \begin{theorem}[Artin-Wedderburn?]
 
 If \(R\) is a nonzero, unital, \emph{semisimple} ring then
 \begin{align*}
 R \cong \bigoplus_{i=1}^m \mathrm{Mat}(n_i, D_i)
 ,\end{align*}
-a finite sum of matrix rings over division rings.
+a finite sum of \(n_i\times n_i\) matrix rings over division rings
+\(D_i\).
 
 \end{theorem}
 
@@ -5301,6 +5394,13 @@ arbitrary chain in your poset \(X\), produce an upper bound \(U\)
 (i.e.~it still satisfies the right predicate).
 
 \end{remark}
+
+\begin{theorem}[Krull]
+
+Every ring has a proper maximal ideal, and any proper ideal is contained
+in a maximal ideal.
+
+\end{theorem}
 
 \begin{proposition}[Existence of maximal ideals]
 
@@ -5367,7 +5467,7 @@ Division algorithm for Euclidean domains.
 For \(R\in \mathsf{CRing}\) an integral domain, the \textbf{field of
 fractions} of \(R\) can be constructed as
 \begin{align*}
-\operatorname{ff}(R) \coloneqq\qty{R \times R^{\bullet}}/\sim && (a,s)\sim bt \iff at-bs = 0_R
+\operatorname{ff}(R) \coloneqq\qty{R \times R^{\bullet}}/\sim && (a,s)\sim (b, t) \iff at-bs = 0_R
 .\end{align*}
 
 \begin{quote}
@@ -5426,58 +5526,6 @@ An ideal \(I{~\trianglelefteq~}R\) is \textbf{primary} iff whenever
 \(pq\in I\), \(p\in I\) and \(q^n\in I\) for some \(n\).
 
 \end{definition}
-
-\begin{proposition}[Polynomial rings over UFDs are UFDs]
-
-\todo[inline]{todo}
-
-\end{proposition}
-
-\begin{exercise}[?]
-
-\envlist
-
-\begin{itemize}
-\tightlist
-\item
-  Show that in a PID, every element can be written as a finite product
-  of irreducibles.
-\item
-  Show that in a PID, every maximal ideal is generated by an
-  \emph{irreducible} element.
-\item
-  Show that any PID is Noetherian.
-\item
-  Show that not \({\mathbb{Z}}\) is Noetherian but not Artinian.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Hint: take a chain
-    \(n{\mathbb{Z}}\supseteq n^2{\mathbb{Z}}\supseteq\cdots\).
-  \end{itemize}
-\end{itemize}
-
-\end{exercise}
-
-\begin{exercise}[?]
-
-Show that \(R[x]\) a PID \(\iff R\) is a field.
-
-\end{exercise}
-
-\begin{solution}
-
-Hint: take \(r\in R\), then
-\(\left\langle{r, x}\right\rangle = \left\langle{f}\right\rangle\) for
-some \(f\). Write \(r = fp\) and \(x = fq\) for \(p, q\in R[x]\), show
-\(\deg f = 0\) and \(\deg q = 1\). Write \(f = c\) a constant,
-\(q(x) = ax + b\) to get
-\(c(ax+b)=x \implies ca=1 \implies c\in R^{\times}\implies \left\langle{f}\right\rangle = R[x]\).
-Conclude by writing \(1= ar_1(x) + xr_2(x)\), evaluate at \(x=0\) to get
-\(a^{-1}= r_1(0)\).
-
-\end{solution}
 
 \hypertarget{number-theory}{%
 \section{Number Theory}\label{number-theory}}
@@ -5705,7 +5753,7 @@ either
 
 For \(\operatorname{ch}k = 0\), use that irreducible implies separable.
 
-For \(\operatorname{ch}k = p\), show that \(k_p\neq k \iff\) irreducible
+For \(\operatorname{ch}k = p\), show that \(k^p\neq k \iff\) irreducible
 does \emph{not} imply separable, so there exists an inseparable
 irreducible.
 
@@ -5908,8 +5956,6 @@ This has no roots in \(k\).
 
 \end{proof}
 
-\todo{Proof}
-
 \hypertarget{cyclotomic-polynomials}{%
 \subsection{Cyclotomic Polynomials}\label{cyclotomic-polynomials}}
 
@@ -6043,14 +6089,6 @@ If \(K_{/{\mathbb{Q}}}\) is an abelian extension, then
 \hypertarget{misc}{%
 \subsection{Misc}\label{misc}}
 
-\begin{proposition}[?]
-
-If \(f\in k[x]^{{\mathrm{irr}}}\) with \(\operatorname{ch}k = p\), then
-there is a unique separable \(g\in k[x]^{{\mathrm{irr}}}\) such that
-\(f(x) = g(x^{p^k})\) for some unique \(k\).
-
-\end{proposition}
-
 \begin{definition}[Elementary Symmetric Functions]
 
 \todo[inline]{todo}
@@ -6059,6 +6097,14 @@ there is a unique separable \(g\in k[x]^{{\mathrm{irr}}}\) such that
 
 \hypertarget{exercises-2}{%
 \subsection{Exercises}\label{exercises-2}}
+
+\begin{exercise}[?]
+
+If \(f\in k[x]^{{\mathrm{irr}}}\) with \(\operatorname{ch}k = p\), then
+there is a unique separable \(g\in k[x]^{{\mathrm{irr}}}\) such that
+\(f(x) = g(x^{p^k})\) for some unique \(k\).
+
+\end{exercise}
 
 \begin{exercise}[?]
 
@@ -6071,16 +6117,27 @@ x^\ell - 1 \divides x^m-1 \iff \ell\divides m
 
 \begin{solution}
 
-\(\implies\) - Write \(m = \ell q + r\) with \(0\leq r < \ell\). - Write
-\begin{align*}
-p(x) = {x^m-1 \over x^\ell - 1}
-= {x^{lq+r} -1 \over x^\ell - 1}
-= x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
-= q(x) + {x^r-1 \over x^\ell - 1}
-,\end{align*}
-where \(p,q\) are polynomial by divisibility. - So the remaining ratio
-must be polynomial, but since \(r<\ell\) is strict this forces \(r=0\).
-Thus \(\ell \divides m\).
+\(\implies\)
+
+\begin{itemize}
+\tightlist
+\item
+  Write \(m = \ell q + r\) with \(0\leq r < \ell\).
+\item
+  Write
+  \begin{align*}
+  p(x) = {x^m-1 \over x^\ell - 1}
+  = {x^{lq+r} -1 \over x^\ell - 1}
+  = x^r{x^{lq} - 1 \over x^\ell - 1} + {x^r - 1 \over x^\ell - 1}
+  = q(x) + {x^r-1 \over x^\ell - 1}
+  ,\end{align*}
+  where \(p,q\) are polynomial by divisibility.
+\item
+  So the remaining ratio must be polynomial, but since \(r<\ell\) is
+  strict this forces \(r=0\). Thus \(\ell \divides m\).
+\end{itemize}
+
+\todo[inline]{I don't like this proof!}
 
 \(\impliedby\):
 
@@ -7271,7 +7328,7 @@ to Diagram}
 \tightlist
 \item
   (Compositing property) Whenever \(L/k, K/k\in {\mathcal{S}}\), the
-  amalgam \(KL/k \in {\mathcal{S}}\) as well:
+  amalgam \(LK/k \in {\mathcal{S}}\) as well:
 \end{enumerate}
 
 \begin{center}
@@ -7627,8 +7684,8 @@ Some useful exercises and solutions:
   \tightlist
   \item
     Example: \(f(x) = x^3-2\) splits in
-    \({\mathbb{Q}}(\zeta_3, 2^{1\over 3})\) which is a non-normal
-    extension \({\mathbb{Q}}(2^{1\over 3})\), forcing \(G= S_3\).
+    \({\mathbb{Q}}(\zeta_3, 2^{1\over 3})\) which has a non-normal
+    subextension \({\mathbb{Q}}(2^{1\over 3})\), forcing \(G= S_3\).
   \end{itemize}
 \item
   If \(\alpha\beta \in {\mathbb{Q}}\), then

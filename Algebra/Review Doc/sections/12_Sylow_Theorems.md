@@ -159,7 +159,7 @@ where we now get equality since these sets have the same cardinality.
 
 - $n_p \divides m$:
   - Let $G\actson X\da \Syl_p(G)$ by conjugation; this is transitive by Sylow II and there is one orbit.
-  - Then $\# X$ must divide $\$ G$, so $n_p$ divides $\# G = p^k m$.
+  - Then $\# X$ must divide $\# G$, so $n_p$ divides $\# G = p^k m$.
   - Using $n_p \equiv 1 \mod p$, we can't have $n_p\divides p^k$, and so $n^p$ must divide $m$.
 
 - $n_p = [G: N_G(P)]$ for any $P\in \Syl_p(G)$:
