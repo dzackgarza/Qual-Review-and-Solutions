@@ -134,7 +134,7 @@ for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
 :::
 
 :::{.definition title="Nowhere Dense Sets"}
-A set $S$ is **nowhere dense** $\iff$ the closure of $S$ has empty interior $\iff$ every interval contains a subinterval that does not intersect $S$.
+A set $S$ is **nowhere dense** $\iff$ the closure of $S$ has empty interior $\iff$ every interval contains an open set (or a subinterval) that does not intersect $S$.
 :::
 
 :::{.definition title="Meager Sets"}
