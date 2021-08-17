@@ -53,13 +53,15 @@
   \qty{ \forall \epsilon, \,\, \norm{a} < \eps} \implies a = 0
   .\]
 
-- Continuity / differentiability: show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+- Continuity / differentiability: 
+  - Show it holds on $[-M, M]$ for all $M$ to get it to hold on $\RR$.
+  - In higher dimensions: intersect with a ball $B_R(\vector 0)\subset \RR^n$ about zero.
 
 - Simplifications:
-  - To show something for a measurable set, show it for bounded/compact/elementary sets.
-  - To show something for an arbitrary function, try to show it for continuous, bounded, compactly supported, simple, indicator functions, etc and approximate.
-  - Replace a continuous sequence ($\eps\to 0$) with an arbitrary countable sequence ($x_n \to 0$)
-  - Intersect with a ball $B_r(\vector 0)\subset \RR^n$.
+  - To show something for a measurable set, show it for bounded/compact/elementary sets and use approximations in measure.
+  - To show something for an arbitrary function, try to show it for continuous, bounded, compactly supported, simple, indicator functions, etc and use approximations in norm.
+  - Replace $\eps\to 0$ with an arbitrary countable sequence ($x_n \to 0$)
+    - Note: this is not always helpful, since you now have to predicate over all such sequences.
 
 - Integrals
   - Calculus techniques: Taylor series, IVT, MVT, etc.
