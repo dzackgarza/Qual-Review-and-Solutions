@@ -30,6 +30,11 @@ then $f$ is a rotation.
 - $\abs{f(z_0)} = \abs{z_0}\implies f$ is a rotation:
   - $g$ attains a maximum on $\abs{z}\leq 1$, making it constant, so $f(z) = cz$.
   - Then $\abs{z_0} = \abs{f(z_0)} = \abs{cz_0}$ since $f(z_0) = z_0$, so $\abs{c} = 1$ and $c = e^{i\theta}$ for some $\theta$.
+- $\abs{f'(0)} \leq 1$ with equality iff $f$ is a rotation:
+  - Note that $f(0) = 0$, so we can write $g(z) = \lim_{z\to 0} {f(z) - f(0) \over z-0} \da f'(0)$.
+  - So $1 = \abs{f'(0)} = \abs{g(0)}$.
+  - Combined with the MMP and that $\abs{g(z)}\leq 1$ on the disc, $g$ is constant and again $f(z) = cz$ with $\abs{c} = 1$.
+
 :::
 
 
