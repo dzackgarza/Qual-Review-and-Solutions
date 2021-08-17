@@ -87,12 +87,13 @@
 
 ## Definitions
 
-:::{.definition title="Completeness"}
-A metric space is **complete** if every Cauchy sequence converges.
-:::
+### Convergence and Continuity
 
-:::{.fact}
-If $X$ is complete, then absolutely convergent implies convergent.
+:::{.definition title="Limsup/Liminf"}
+\[  
+\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
+\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &= \sup_{n\geq 0} \inf_{j\geq n} a_j
+.\]
 :::
 
 :::{.definition title="Continuity and Uniform Continuity"}
@@ -130,28 +131,6 @@ for a fixed $\eps$ take $\delta(\eps) \da \eps/C$, then
 &\leq C \delta \\
 &= C \qty{\eps/C} \\
 &= \eps
-.\]
-:::
-
-:::{.definition title="Nowhere Dense Sets"}
-Recall that a set $S$ in $X$ is **dense** $\iff$ every open $U\subseteq X$ intersects $S$.
-A set $S$ is **nowhere dense** in $X$ $\iff$ the closure of $S$ has empty interior $\iff$ every subset (or interval) contains an open set (or a subinterval) that does not intersect $S$.
-This just says $S$ is not dense in any subset $S' \subseteq X$, by negating what it means to be dense.
-:::
-
-:::{.definition title="Meager Sets"}
-A set is **meager** if it is a *countable* union of nowhere dense sets.
-:::
-
-:::{.definition title="Baire Space"}
-A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
-:::
-
-
-:::{.definition title="Limsup/Liminf"}
-\[  
-\limsup_n a_n = \lim_{n\to \infty} \sup_{j\geq n} a_j &= \inf_{n\geq 0} \sup_{j\geq n} a_j \\ 
-\liminf_n a_n = \lim_{n\to \infty} \inf_{j\geq n} a_j &= \sup_{n\geq 0} \inf_{j\geq n} a_j
 .\]
 :::
 
@@ -203,6 +182,31 @@ Negated:[^Negated_uniform_convergence]
 [^Negated_uniform_convergence]: Slogan: to negate, find a bad $x$ depending on $n_0$ that are larger than some $\eps$.
 
 :::
+
+### Function Spaces
+
+:::{.definition title="Completeness"}
+A metric space is **complete** if every Cauchy sequence converges.
+:::
+
+:::{.fact}
+If $X$ is complete, then absolutely convergent implies convergent.
+:::
+
+:::{.definition title="Nowhere Dense Sets"}
+Recall that a set $S$ in $X$ is **dense** $\iff$ every open $U\subseteq X$ intersects $S$.
+A set $S$ is **nowhere dense** in $X$ $\iff$ the closure of $S$ has empty interior $\iff$ every subset (or interval) contains an open set (or a subinterval) that does not intersect $S$.
+This just says $S$ is not dense in any subset $S' \subseteq X$, by negating what it means to be dense.
+:::
+
+:::{.definition title="Meager Sets"}
+A set is **meager** if it is a *countable* union of nowhere dense sets.
+:::
+
+:::{.definition title="Baire Space"}
+A space $X$ is a **Baire space** if and only if every countable intersections of open, dense sets is still dense.
+:::
+
 
 ### Measure Theory
 
