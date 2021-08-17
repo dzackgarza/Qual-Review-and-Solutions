@@ -132,6 +132,16 @@ It suffices to show $\abs{f_n(x)} \leq M_n$ for some $M_n$ not depending on $x$.
 
 :::
 
+:::{.proposition title="Borel Characterization of Measurable Sets"}
+If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
+:::
+
+:::{.proof title="of Borel characterization"}
+For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
+Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
+Take $N\da E\setminus K$, then $m(N) = 0$.
+:::
+
 ## Definitions
 
 ### Convergence and Continuity

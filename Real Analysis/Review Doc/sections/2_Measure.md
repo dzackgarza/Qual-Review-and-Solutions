@@ -5,7 +5,7 @@ Some useful tricks:
 
 - $\mu(A\sm B) = \mu(A) - \mu(B)$ if $\mu(B) < \infty$
 - Write $f = f-f_n + f_n$
-- If $G$ is measurable, then there exists an $E \supseteq G$ such $m(G) \leq m(E) + \eps$
+- If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
 - If $E$ is measurable,
   - $E = F_{\delta} \disjoint N$ for $N$ a null set.
   - $E \disjoint N = G_{\delta}$ for $N$ a null set.
@@ -81,7 +81,7 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 
   - This is because $x\in F_1$ iff $x$ is in every $F_k$, so in $F$, **or**
   - $x\not \in F_1$ but $x\in F_2$, noting incidentally $x\in F_3, F_4,\cdots$, **or**,
-  - $x\not\in F_2$ but $x\in F_3$, and so on.
+  - $x\not\in F_2$ but $x\in F_3$ and thus $F_4, F_4,\cdots$, and so on.
 
 - Now take measures, and note that we get a telescoping sum:
 \[
@@ -140,10 +140,6 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 
 ## Measures on $\RR^d$
 
-:::{.proposition title="Borel Characterization of Measurable Sets"}
-
-If $E$ is Lebesgue measurable, then $E = H \disjoint N$ where $H \in F_\sigma$ and $N$ is null.
-:::
 :::{.proposition title="Opens are unions of almost disjoint intervals."}
 Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
 :::
@@ -192,12 +188,6 @@ There is a non-measurable set $A\subseteq \RR$.
 - By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
 :::
 
-
-:::{.proof title="of Borel characterization"}
-For every $\frac 1 n$ there exists a closed set $K_{n} \subset E$ such that $m(E\setminus K_{n}) \leq \frac 1 n$.
-Take $K = \union K_{n}$, wlog $K_{n} \nearrow K$ so $m(K) = \lim m(K_{n}) = m(E)$.
-Take $N\da E\setminus K$, then $m(N) = 0$.
-:::
 
 :::{.proposition title="Limsups/infs of measurable sets are measurable."}
 If $A_{n}$ are all measurable, $\limsup A_{n}$ and $\liminf A_{n}$ are measurable.
