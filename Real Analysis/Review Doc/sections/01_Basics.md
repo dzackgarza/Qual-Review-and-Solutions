@@ -207,16 +207,6 @@ Negated:[^Negated_uniform_convergence]
 
 :::
 
-
-:::{.proposition title="Implications of convergence"}
-Uniform $\implies$ pointwise $\implies$ almost everywhere $\implies$ (roughly) $L^1$ convergence.
-Why these can't be reversed:
-
-- Pointwise but not uniform???: ${1\over n}\one_{[0, n]}$
-- Almost everywhere but not pointwise???: $n \one_{[0, {1\over n} ] }$
-- $n \chi_{[n, n+1]}$????
-:::
-
 :::{.definition title="Outer Measure"}
 The **outer measure** of a set is given by
 \[
@@ -227,7 +217,7 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 :::{.definition title="Limsup and Liminf of Sets"}
 \[
 \liminf_{n} E_{n} \da \Union_{N=1}^\infty \Intersect_{n=N}^\infty E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for all but finitely many } n}  \\
-\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n}  \\
+\limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n} 
 .\]
 
 How to derive these definitions:
