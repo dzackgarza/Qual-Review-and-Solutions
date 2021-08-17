@@ -144,27 +144,6 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
 :::
 
-:::{.theorem title="Measurable sets can be approximated by open/closed/compact sets."}
-Suppose $E$ is measurable; then for every $\eps>0$,
-
-1. There exists an open $O\supset E$ with $m(O\setminus E) < \eps$
-2. There exists a closed $F\subset E$ with $m(E\setminus F) < \eps$
-3. There exists a compact $K\subset E$ with $m(E\setminus K) < \eps$.
-:::
-
-:::{.proof title="that measurable sets can be approximated"}
-\envlist
-
-- (1): Take $\theset{Q_{i}} \covers E$ and set $O = \union Q_{i}$.
-- (2): Since $E^c$ is measurable, produce $O\supset E^c$ with $m(O\setminus E^c) < \eps$.
-  - Set $F = O^c$, so $F$ is closed.
-  - Then $F\subset E$ by taking complements of $O\supset E^c$
-  - $E\setminus F = O\setminus E^c$ and taking measures yields $m(E\setminus F) < \eps$
-- (3): Pick $F\subset E$ with $m(E\setminus F) < \eps/2$.
-  - Set $K_{n} = F\intersect \DD_{n}$, a ball of radius $n$ about $0$.
-  - Then $E\setminus K_{n} \searrow E\setminus F$
-  - Since $m(E) < \infty$, there is an $N$ such that $n\geq N \implies m(E\setminus K_{n}) < \eps$.
-:::
 
 :::{.proposition title="Translation and Dilation Invariance"}
 Lebesgue measure is translation and dilation invariant.
@@ -187,7 +166,6 @@ There is a non-measurable set $A\subseteq \RR$.
 - Define $M \da \disjoint N_{j}$, then $[0, 1) \subseteq  M \subseteq [-1, 2)$, so the measure must be between 1 and 3.
 - By translation invariance, $m(N_{j}) = m(N)$, and disjoint additivity forces $m(M) = 0$, a contradiction.
 :::
-
 
 :::{.proposition title="Limsups/infs of measurable sets are measurable."}
 If $A_{n}$ are all measurable, $\limsup A_{n}$ and $\liminf A_{n}$ are measurable.
