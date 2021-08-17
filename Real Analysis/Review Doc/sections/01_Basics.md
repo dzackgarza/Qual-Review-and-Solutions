@@ -220,6 +220,11 @@ m_*(E) \da \inf_{\substack{\theset{Q_{i}} \rightrightarrows E \\ \text{closed cu
 \limsup_{n} E_{n} \da \Intersect_{N=1}^\infty \Union_{n=N}^{\infty} E_{n} &= \theset{x \suchthat x\in E_{n} \text{ for infinitely many } n} 
 .\]
 
+  
+:::
+
+
+:::{.remark}
 How to derive these definitions: use that $\inf$ corresponds to intersections/existence and $\sup$ corresponds to unions/forall.
 
 - For $\liminf E_n$: 
@@ -235,9 +240,21 @@ How to derive these definitions: use that $\inf$ corresponds to intersections/ex
   - How to remember:  $\limsup_{n} x_n = \inf{n} \sup{k\geq n} x_n$ for sequences, where sups look like unions and infs look like intersections.
   - Alternatively: for all $n$ (intersection) there exists a $k\geq n$ (union)...
 
-- It's also useful to note that $\liminf E_n \subseteq \limsup E_n$, since $\liminf E_n$ are elements that are eventually in all sets, and $\limsup E_n$ are elements in infinitely many sets.
-  
+It's also useful to note that $\liminf E_n \subseteq \limsup E_n$, since $\liminf E_n$ are elements that are eventually in all sets, and $\limsup E_n$ are elements in infinitely many sets.
+
+Why these are useful: for finite measure spaces,
+\[
+\mu\qty{\liminf_n E_n }\leq \liminf_n \mu(E_n) \leq \lim_n \mu(E_n) \leq \limsup_n \mu(E_n) \leq \mu\qty{\limsup_n E_n}
+.\]
+If the $\limsup$ and $\liminf$ sets are equal, then one can define the set $\lim_n E_n \da \limsup_n E_n$ (for example), in which case continuity of measure states
+\[
+\mu\qty{\lim_n E_n} = \lim_n \mu(E_n)
+.\]
+
+
+
 :::
+
 
 :::{.definition title="Lebesgue Measurable Sets"}
 A subset $E\subseteq \RR^n$ is **Lebesgue measurable** iff for every $\eps> 0$ there exists an open set $O \supseteq E$ such that $m_*(O\setminus E) < \eps$.
