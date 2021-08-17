@@ -166,9 +166,7 @@ Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its 
 
 - An $\eps\dash$**neighborhood** of $p$ is an open ball $B_r(p) \da \ts{q \st d(p, q) < r}$ for some $r>0$.
 
-- A point $p\in X$ is an **accumulation point** of $A$ iff every neighborhood $U_p$ of $p$ contains a point $q\in Q$
-
-- A point $p\in X$ is a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$.
+- A point $p\in X$ is an **accumulation point** or a **limit point** of $A$ iff every *punctured* neighborhood $U_p\sm\ts{p}$ contains a point $q\in A$, so $q\neq p$.
 
 - If $p\in A$ and $p$ is not a limit point of $A$, then $p$ is an **isolated point** of $A$.
 
@@ -189,6 +187,13 @@ Let $A'$ denote the limit points of $A$, and $\bar{A} \da A\union A'$ to be its 
 
 :::
 
+:::{.definition title="Pointwise Convergence"}
+A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
+\[  
+(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
+.\]
+:::
+
 :::{.definition title="Uniform Convergence"}
 \[
 (\forall \varepsilon>0)\left(\exists n_{0} = n_0(\eps) \right)(\forall x \in S)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
@@ -202,12 +207,6 @@ Negated:[^Negated_uniform_convergence]
 
 :::
 
-:::{.definition title="Pointwise Convergence"}
-A sequence of functions \( \ts{ f_j } \)  is said to **converge pointwise** to \( f \) if and only if 
-\[  
-(\forall \varepsilon>0)(\forall x \in S)\left(\exists n_{0} = n_0(x, \eps) \right)\left(\forall n>n_{0}\right)\left(\left|f_{n}(x)-f(x)\right|<\varepsilon\right)
-.\]
-:::
 
 :::{.proposition title="Implications of convergence"}
 Uniform $\implies$ pointwise $\implies$ almost everywhere $\implies$ (roughly) $L^1$ convergence.
