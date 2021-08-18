@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Preface
 
 I'd like to thank the following individuals for their contributions to this document:
@@ -7,7 +19,9 @@ I'd like to thank the following individuals for their contributions to this docu
 -   Mentzelos Melistas, for explaining and documenting many solutions to these questions.
 -   Jingzhi Tie, for supplying many additional problems and solutions.
 
-# Topology and Functions of One Variable (8155a)
+> On notation: I sometimes use \( f_x \coloneqq{\frac{\partial f}{\partial x}\,} \) to denote partial derivatives, and \( {{\partial}}_z^n f \) as \( f^{(n)}(z) \).
+
+# Topology and Functions of One Variable
 
 ## 1 \( \work \) {#work}
 
@@ -35,7 +49,7 @@ Suppose \( \left\{{g_n}\right\} \) is a uniformly convergent sequence of functio
 Let \( f \) be differentiable on \( [a, b] \). Say that \( f \) is *uniformly differentiable* iff
 
 \[  
-\forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad {\left\lvert {x-y} \right\rvert} < \delta \implies {\left\lvert { {f(x) - f(y) \over x-y}  - f'(y)} \right\rvert}  < \varepsilon
+\forall \varepsilon > 0,\, \exists \delta > 0 \text{ such that } \quad {\left\lvert {x-y} \right\rvert} < \delta \implies {\left\lvert { {f(x) - f(y) \over x-y}  - f'(y)} \right\rvert}  < {\varepsilon}
 .\]
 
 Prove that \( f \) is uniformly differentiable on \( [a, b] \iff f' \) is continuous on \( [a, b] \).
@@ -63,9 +77,18 @@ Prove that if \( \left\{{f_n}\right\} \) converges pointwise to \( 0 \) on \( [0
 
 Show that if \( E\subset [0, 1] \) is uncountable, then there is some \( t\in {\mathbb{R}} \) such that \( E\cap(-\infty ,t) \) and \( E\cap(t, \infty) \) are also uncountable.
 
-# Several Variables (8155h)
-
 ## 1 \( \work \) {#work-9}
+
+Suppose \( f, g: [0, 1] \to {\mathbb{R}} \) where \( f \) is Riemann integrable and for \( x, y\in [0, 1] \),
+\[
+{\left\lvert {g(x) - g(y)} \right\rvert} \leq {\left\lvert {f(x) - f(y)} \right\rvert}
+.\]
+
+Prove that \( g \) is Riemann integrable.
+
+# Several Variables
+
+## 1 \( \work \) {#work-10}
 
 Is the following function continuous, differentiable, continuously differentiable?
 \[  
@@ -77,71 +100,53 @@ f(x, y) &=
 \end{cases}
 \]
 
-## 2 \( \work \) {#work-10}
+## 2 \( \work \) {#work-11}
 
-### a \( \work \) {#a-work}
+a.  \( \work \) Complete this definition: "\( f: {\mathbb{R}}^n\to {\mathbb{R}}^m \) is real-differentiable a point \( p\in {\mathbb{R}}^n \) iff there exists a linear transformation..."
 
-Complete this definition: "\( f: {\mathbb{R}}^n\to {\mathbb{R}}^m \) is real-differentiable a point \( p\in {\mathbb{R}}^n \) iff there exists a linear transformation..."
+b.  \( \work \) Give an example of a function \( f:{\mathbb{R}}^2\to {\mathbb{R}} \) whose first-order partial derivatives exist everywhere but \( f \) is not differentiable at \( (0, 0) \).
 
-### b \( \work \) {#b-work}
+c.  \( \work \) Give an example of a function \( f: {\mathbb{R}}^2 \to {\mathbb{R}} \) which is real-differentiable everywhere but nowhere complex-differentiable.
 
-Give an example of a function \( f:{\mathbb{R}}^2\to {\mathbb{R}} \) whose first-order partial derivatives exist everywhere but \( f \) is not differentiable at \( (0, 0) \).
-
-### c \( \work \) {#c-work}
-
-Give an example of a function \( f: {\mathbb{R}}^2 \to {\mathbb{R}} \) which is real-differentiable everywhere but nowhere complex-differentiable.
-
-## 3 \( \work \) {#work-11}
+## 3 \( \work \) {#work-12}
 
 Let \( f:{\mathbb{R}}^2\to {\mathbb{R}} \).
 
-### a \( \work \) {#a-work-1}
+a.  \( \work \) Define in terms of linear transformations what it means for \( f \) to be differentiable at a point \( (a, b) \in {\mathbb{R}}^2 \).
 
-Define in terms of linear transformations what it means for \( f \) to be differentiable at a point \( (a, b) \in {\mathbb{R}}^2 \).
+b.  \( \work \) State a version of the inverse function theorem in this setting.
 
-### b \( \work \) {#b-work-1}
+c.  \( \work \) Identify \( {\mathbb{R}}^2 \) with \( {\mathbb{C}} \) and give a necessary and sufficient condition for a real-differentiable function at \( (a, b) \) to be complex differentiable at the point \( a+ib \).
 
-State a version of the inverse function theorem in this setting.
-
-### c \( \work \) {#c-work-1}
-
-Identify \( {\mathbb{R}}^2 \) with \( {\mathbb{C}} \) and give a necessary and sufficient condition for a real-differentiable function at \( (a, b) \) to be complex differentiable at the point \( a+ib \).
-
-## 4 \( \work \) {#work-12}
+## 4 \( \work \) {#work-13}
 
 Let \( f = u+iv \) be complex-differentiable with continuous partial derivatives at a point \( z = re^{i\theta} \) with \( r\neq 0 \). Show that
 \[  
 {\frac{\partial u}{\partial r}\,} = {1\over r}{\frac{\partial v}{\partial \theta}\,} \qquad {\frac{\partial v}{\partial r}\,} = -{1\over r}{\frac{\partial u}{\partial \theta}\,}
 .\]
 
-## 5 \( \work \) {#work-13}
+## 5 \( \work \) {#work-14}
 
 Let \( P = (1, 3) \in {\mathbb{R}}^2 \) and define
 \[  
 f(s, t) \coloneqq ps^3 -6st + t^2
 .\]
 
-### a \( \work \) {#a-work-2}
+a.  \( \work \) State the conclusion of the implicit function theorem concerning \( f(s, t) = 0 \) when \( f \) is considered a function \( {\mathbb{R}}^2\to{\mathbb{R}} \).
 
-State the conclusion of the implicit function theorem concerning \( f(s, t) = 0 \) when \( f \) is considered a function \( {\mathbb{R}}^2\to{\mathbb{R}} \).
+b.  \( \work \) State the above conclusion when \( f \) is considered a function \( {\mathbb{C}}^2\to {\mathbb{C}} \).
 
-### b \( \work \) {#b-work-2}
-
-State the above conclusion when \( f \) is considered a function \( {\mathbb{C}}^2\to {\mathbb{C}} \).
-
-### c \( \work \) {#c-work-2}
-
-Use the implicit function theorem for a function \( {\mathbb{R}}\times{\mathbb{R}}^2 \to {\mathbb{R}}^2 \) to prove (b).
+c.  \( \work \) Use the implicit function theorem for a function \( {\mathbb{R}}\times{\mathbb{R}}^2 \to {\mathbb{R}}^2 \) to prove (b).
 
 > There are various approaches: using the definition of the complex derivative, the Cauchy-Riemann equations, considering total derivatives, etc.
 
-## 6 \( \work \) {#work-14}
+## 6 \( \work \) {#work-15}
 
 Let \( F:{\mathbb{R}}^2\to {\mathbb{R}} \) be continuously differentiable with \( F(0, 0) = 0 \) and \( {\left\lVert {\nabla F(0, 0)} \right\rVert} < 1 \).
 
 Prove that there is some real number \( r> 0 \) such that \( {\left\lvert {F(x, y)} \right\rvert} < r \) whenever \( {\left\lVert {(x, y)} \right\rVert} < r \).
 
-## 7 \( \work \) {#work-15}
+## 7 \( \work \) {#work-16}
 
 State the most general version of the implicit function theorem for real functions and outline how it can be proved using the inverse function theorem.
 
@@ -163,38 +168,207 @@ Give an example of a
 
 Show that \( f(z) = z^2 \) is uniformly continuous in any open disk \( |z| < R \), where \( R>0 \) is fixed, but it is not uniformly continuous on \( \mathbb C \).
 
-### 1 {#section-2}
+1.  Show that the function \( u=u(x,y) \) given by
+    \[
+    u(x,y)=\frac{e^{ny}-e^{-ny}}{2n^2}\sin nx\quad \text{for}\ n\in {\mathbf N}
+    \]
+    is the solution on \( D=\{(x,y)\ | x^2+y^2<1\} \) of the Cauchy problem for the Laplace equation
+    \[\frac{\partial ^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=0,\quad
+    u(x,0)=0,\quad \frac{\partial u}{\partial y}(x,0)=\frac{\sin nx}{n}.\]
 
-Show that the function \( u=u(x,y) \) given by
+2.  Show that there exist points \( (x,y)\in D \) such that \( \displaystyle{\limsup_{n\to\infty} |u(x,y)|=\infty} \).
+
+### Tie's Extra Questions: Fall 2009
+
+Let \( f=u+iv \) be differentiable (i.e. \( f'(z) \) exists) with continuous partial derivatives at a point \( z=re^{i\theta} \), \( r\not= 0 \). Show that
+\[\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta},\quad
+\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}.\]
+
+## Spring 2020 HW 1 \# 10
+
+a.  Show that in polar coordinates, the Cauchy-Riemann equations take the form
+    \[
+    \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \text { and } \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta}
+    .\]
+
+b.  Use (a) to show that the logarithm function, defined as
+    \[
+    \log z=\log r+i \theta \text { where } z=r e^{i \theta} \text { with }-\pi<\theta<\pi
+    .\]
+    is holomorphic on the region \( r> 0, -\pi < \theta < \pi \).
+
+Also show that this function is not continuous in \( r>0 \).
+
+# Complex Arithmetic
+
+## Spring 2020 HW 1 \# 1
+
+Geometrically describe the following subsets of \( {\mathbb{C}} \):
+
+a.  \( {\left\lvert {z-1} \right\rvert} = 1 \)
+b.  \( {\left\lvert {z-1} \right\rvert} = 2{\left\lvert {z-2} \right\rvert} \)
+c.  \( 1/z = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \)
+d.  \( \Re(z) = 3 \)
+e.  \( \Im(z) = a \) with \( a\in {\mathbb{R}} \).
+f.  \( \Re(z) > a \) with \( a\in {\mathbb{R}} \).
+g.  \( {\left\lvert {z-1} \right\rvert} < 2{\left\lvert {z-2} \right\rvert} \)
+
+## Spring 2020 HW 1 \# 2
+
+Prove the following inequality, and explain when equality holds:
 \[
-u(x,y)=\frac{e^{ny}-e^{-ny}}{2n^2}\sin nx\quad \text{for}\ n\in {\mathbf N}
-\]
-is the solution on \( D=\{(x,y)\ | x^2+y^2<1\} \) of the Cauchy problem for the Laplace equation
-\[\frac{\partial ^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=0,\quad
-u(x,0)=0,\quad \frac{\partial u}{\partial y}(x,0)=\frac{\sin nx}{n}.\]
+{\left\lvert {z+w} \right\rvert} \geq {\left\lvert { {\left\lvert {z} \right\rvert} - {\left\lvert {w} \right\rvert} } \right\rvert}
+.\]
 
-### 2 {#section-3}
+## Spring 2020 HW 1 \# 3
 
-Show that there exist points \( (x,y)\in D \) such that \( \displaystyle{\limsup_{n\to\infty} |u(x,y)|=\infty} \).
+Prove that the following polynomial has its roots outside of the unit circle:
+\[
+p(z) = z^3 + 2z + 4
+.\]
+
+> Hint: What is the maximum value of the modulus of the first two terms if \( {\left\lvert {z} \right\rvert} \leq 1 \)?
+
+## Spring 2020 HW 1 \# 4
+
+a.  Prove that if \( c>0 \),
+    \[
+    {\left\lvert {w_1} \right\rvert} = c{\left\lvert {w_2} \right\rvert} \implies {\left\lvert {w_1 - c^2 w_2} \right\rvert} = c{\left\lvert {w_1 - w_2} \right\rvert}
+    .\]
+
+b.  Prove that if \( c>0 \) and \( c\neq 1 \), with \( z_1\neq z_2 \), then the following equation represents a circle:
+    \[
+    {\left\lvert {z-z_1 \over z-z_2} \right\rvert} = c
+    .\]
+    Find its center and radius.
+
+> Hint: use part (a)
+
+## Spring 2020 HW 1 \# 5
+
+a.  Let \( z, w \in {\mathbb{C}} \) with \( \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu w \neq 1 \). Prove that
+    \[
+    {\left\lvert {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \right\rvert} < 1 \quad\text{ if } {\left\lvert {z} \right\rvert}<1,~ {\left\lvert {w} \right\rvert} < 1
+    \]
+    with equality when \( {\left\lvert {z} \right\rvert} = 1 \) or \( {\left\lvert {w} \right\rvert} = 1 \).
+
+b.  Prove that for a fixed \( w\in {\mathbb{D}} \), the mapping \( F: z\mapsto {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \) satisfies
+
+-   \( F \) maps \( {\mathbb{D}} \) to itself and is holomorphic.
+-   \( F(0) = w \) and \( F(w) = 0 \).
+-   \( {\left\lvert {z} \right\rvert} = 1 \) implies \( {\left\lvert {F(z)} \right\rvert} = 1 \).
+
+## Spring 2020 HW 1 \# 6
+
+Use \( n \)th roots of unity to show that
+\[
+2^{n-1} \sin\qty{\pi \over n} \sin\qty{2\pi \over n} \cdots \sin\qty{(n-1)\pi \over n} = n
+.\]
+
+> Hint:
+> \[
+> 1 - \cos(2\theta) &= 2\sin^2(\theta) \\
+> 2 \sin(2\theta) &= 2\sin(\theta) \cos(\theta)
+> .\]
+
+## Spring 2020 HW 1 \# 11
+
+Prove that the distinct complex numbers \( z_1, z_2, z_3 \) are the vertices of an equilateral triangle if and only if
+\[
+z_{1}^{2}+z_{2}^{2}+z_{3}^{2}=z_{1} z_{2}+z_{2} z_{3}+z_{3} z_{1}
+.\]
+
+# Holomorphicity
+
+## Spring 2020 HW 1 \# 7
+
+Prove that \( f(z) = {\left\lvert {z} \right\rvert}^2 \) has a derivative at \( z=0 \) and nowhere else.
+
+## Spring 2020 HW 1 \# 8
+
+Let \( f(z) \) be analytic in a domain, and prove that \( f \) is constant if it satisfies any of the following conditions:
+
+a.  \( {\left\lvert {f(z)} \right\rvert} \) is constant.
+b.  \( \Re(f(z)) \) is constant.
+c.  \( \arg(f(z)) \) is constant.
+d.  \( \mkern 1.5mu\overline{\mkern-1.5muf(z)\mkern-1.5mu}\mkern 1.5mu \) is analytic.
+
+How do you generalize (a) and (b)?
+
+## Spring 2020 HW 1 \# 9
+
+Prove that if \( z\mapsto f(z) \) is analytic, then \( z \mapsto \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) is analytic.
+
+### Spring 20202 HW 2 \# 2.6.10
+
+Can every continuous function on \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \) be uniformly approximated by polynomials in the variable \( z \)?
+
+> Hint: compare to Weierstrass for the real interval.
+
+::: {.solution}
+No: polynomials are holomorphic and the uniform limit of holomorphic functions is holomorphic. However, \( f(z) \coloneqq\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \) is continuous on \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \) but not holomorphic.
+:::
+
+### Spring 20202 HW 2 \# 2.6.13
+
+Suppose \( f \) is analytic, defined on all of \( {\mathbb{C}} \), and for each \( z_0 \in {\mathbb{C}} \) there is at least one coefficient in the expansion \( f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n \) is zero. Prove that \( f \) is a polynomial.
+
+> Hint: use the fact that \( c_n n! = f^{(n)}(z_0) \) and use a countability argument.
+
+::: {.solution}
+The claim is that there is some \( N \) such that \( {\frac{\partial ^N f}{\partial z^N}\,} \equiv 0 \), making \( f \) a polynomial. If no derivative is identically zero, the following set is countable:
+\[
+\displaystyle\bigcup_{n\in {\mathbb{N}}} {\frac{\partial ^n f}{\partial z^n}\,}^{-1}(0)
+.\]
+This is because each derivative is analytic and the zeros of an analytic function are countable. But by hypothesis this set is uncountable.
+:::
+
+### Spring 20202 HW 2 \# 2.6.14
+
+Suppose that \( f \) is holomorphic in an open set containing \( {\mathbb{D}} \) except for a pole \( z_0 \in {{\partial}}{\mathbb{D}} \). Let \( \sum_{n=0}^\infty a_n z^n \) be the power series expansion of \( f \) in \( {\mathbb{D}} \), and show that \( \lim \frac{a_n}{a_{n+1}} = z_0 \).
+
+> [Solution](https://math.stackexchange.com/questions/1358964/show-that-lim-limits-n-fraca-na-n1-z-0?rq=1)
+
+### Spring 20202 HW 2 \# 1
+
+Let \( a_n\neq 0 \) and show that
+\[
+\lim_{n\to \infty} {{\left\lvert {a_{n+1}} \right\rvert} \over {\left\lvert {a_n} \right\rvert}} = L \implies \lim_{n\to\infty} {\left\lvert {a_n} \right\rvert}^{1\over n} = L
+.\]
+
+In particular, this shows that when applicable, the ratio test can be used to calculate the radius of convergence of a power series.
+
+### Spring 20202 HW 2 \# 2
+
+Let \( f \) be a power series centered at the origin. Prove that \( f \) has a power series expansion about any point in its disc of convergence.
+
+### Spring 20202 HW 2 \# 3
+
+Prove the following:
+
+a.  \( \sum_{n} nz^n \) does not converge at any point of \( S^1 \)
+
+b.  \( \sum_n {z^n \over n^2} \) converges at every point of \( S^1 \).
+
+c.  \( \sum_n {z^n \over n} \) converges at every point of \( S^1 \) except \( z=1 \).
+
+### Spring 20202 HW 2 \# 5
+
+Assume \( f \) is continuous in the region \( \left\{{x+iy {~\mathrel{\Big|}~}x\geq x_0, ~ 0\leq y \leq b}\right\} \), and the following limit exists independent of \( y \):
+\[
+\lim_{x\to +\infty}f(x+iy) = A
+.\]
+
+Show that if \( \gamma_x \coloneqq\left\{{z = x+it {~\mathrel{\Big|}~}0 \leq t \leq b}\right\} \), then
+\[
+\lim_{x\to +\infty} \int_{\gamma_x} f(z) \,dz = iAb
+.\]
 
 # Integrals and Cauchy's Theorem (8155d)
 
-> Some interesting problems: 3, 4, 9, 10.
-
-## 1 \( \work \) {#work-16}
-
-Suppose \( f, g: [0, 1] \to {\mathbb{R}} \) where \( f \) is Riemann integrable and for \( x, y\in [0, 1] \),
-\[
-{\left\lvert {g(x) - g(y)} \right\rvert} \leq {\left\lvert {f(x) - f(y)} \right\rvert}
-.\]
-
-Prove that \( g \) is Riemann integrable.
-
 ## 2 \( \work \) {#work-17}
 
-State and prove Green's Theorem for rectangles.
-
-Then use it to prove Cauchy's Theory for functions that are analytic in a rectangle.
+State and prove Green's Theorem for rectangles. Use this to prove Cauchy's Theorem for functions that are analytic in a rectangle.
 
 ## 3 \( \work \) {#work-18}
 
@@ -218,16 +392,14 @@ Show that
 
 Prove that there is no sequence of polynomials that uniformly converge to \( f(z) = {1\over z} \) on \( S^1 \).
 
-::: {.solution}
-```{=tex}
-\hfill
-```
 ::: {.concept}
 ```{=tex}
-\hfill
+\envlist
 ```
+-   Uniform limit of holomorphic function is holomorphic
 :::
 
+::: {.solution}
 -   By Cauchy's integral formula, \( \int_{S^1} f = 2\pi i \)
 -   If \( p_j \) is any polynomial, then \( p_j \) is holomorphic in \( {\mathbb{D}} \), so \( \int_{S^1} p_j = 0 \).
 -   Contradiction: compact sets in \( {\mathbb{C}} \) are bounded, so
@@ -287,12 +459,12 @@ Suppose that \( f: {\mathbb{C}}\to{\mathbb{C}} \) is continuous everywhere and a
 -   Let \( \Delta \subset D \) be a triangle in \( D \).
 -   Case 1: If \( \Delta \cap{\mathbb{R}}= 0 \), then \( f \) is holomorphic on \( \Delta \) and \( \int_\Delta f = 0 \).
 -   Case 2: one side or vertex of \( \Delta \) intersects \( {\mathbb{R}} \), and wlog the rest of \( \Delta \) is in \( {\mathbb{H}}^+ \).
-    -   Then let \( \Delta_\varepsilon \) be the perturbation \( \Delta + i\varepsilon= \left\{{z+ i\varepsilon{~\mathrel{\Big|}~}z\in \Delta}\right\} \); then \( \Delta_\varepsilon\cap{\mathbb{R}}= 0 \) and \( \int_{\Delta_\varepsilon} f = 0 \).
-    -   Now let \( \varepsilon\to 0 \) and conclude by continuity of \( f \) (???)
+    -   Then let \( \Delta_{\varepsilon} \) be the perturbation \( \Delta + i{\varepsilon}= \left\{{z+ i{\varepsilon}{~\mathrel{\Big|}~}z\in \Delta}\right\} \); then \( \Delta_{\varepsilon}\cap{\mathbb{R}}= 0 \) and \( \int_{\Delta_{\varepsilon}} f = 0 \).
+    -   Now let \( {\varepsilon}\to 0 \) and conclude by continuity of \( f \) (???)
         -   We want `\begin{align*}
-            \int_{\Delta_\varepsilon} f = \int_a^b f(\gamma_\varepsilon(t)) \gamma_\varepsilon'(t)\,dt \overset{\varepsilon\to 0}\to \int_a^b f(\gamma(t)) \gamma_\varepsilon'(t)\,dt =\int_{\Delta}  f
-            \end{align*}`{=tex} where \( \gamma_\varepsilon, \gamma \) are curves parametrizing \( \Delta_\varepsilon, \Delta \) respectively.
-        -   Since \( \gamma, \gamma_\varepsilon \) are closed and bounded in \( {\mathbb{C}} \), they are compact subsets. Thus it suffices to show that \( f(\gamma_\varepsilon(t)) \gamma_\varepsilon'(t) \) converges uniformly to \( f(\gamma(t))\gamma'(t) \).
+            \int_{\Delta_{\varepsilon}} f = \int_a^b f(\gamma_{\varepsilon}(t)) \gamma_{\varepsilon}'(t)\,dt \overset{{\varepsilon}\to 0}\to \int_a^b f(\gamma(t)) \gamma_{\varepsilon}'(t)\,dt =\int_{\Delta}  f
+            \end{align*}`{=tex} where \( \gamma_{\varepsilon}, \gamma \) are curves parametrizing \( \Delta_{\varepsilon}, \Delta \) respectively.
+        -   Since \( \gamma, \gamma_{\varepsilon} \) are closed and bounded in \( {\mathbb{C}} \), they are compact subsets. Thus it suffices to show that \( f(\gamma_{\varepsilon}(t)) \gamma_{\varepsilon}'(t) \) converges uniformly to \( f(\gamma(t))\gamma'(t) \).
         -   ??
 -   Case 3: \( \Delta \) intersects both \( {\mathbb{H}}^+ \) and \( {\mathbb{H}}^- \).
     -   Break into smaller triangles, each of which falls into one of the previous two cases.
@@ -326,11 +498,169 @@ Prove Liouville's theorem: suppose \( f:{\mathbb{C}}\to{\mathbb{C}} \) is entire
 
 # Extra
 
-## ? {#section-4}
+## ? {#section-2}
 
 Assume \( f \) is continuous in the region: \( 0< |z-a| \leq R, \; 0 \leq \arg(z-a) \leq \beta_0 \) (\( 0 < \beta_0 \leq 2 \pi \)) and the limit \( \displaystyle \lim_{z \rightarrow a} (z-a) f(z) = A \) exists. Show that
 \[\lim_{r \rightarrow 0} \int_{\gamma_r} f(z) dz  = i A \beta_0 \; , \; \;\]
 where \( \gamma_r : = \{ z \; | \; z = a + r e^{it}, \; 0 \leq t \leq \beta_0 \}. \)
+
+### Tie's Extra Questions: Fall 2009
+
+Let \( f \) be a continuous function in the region
+\[D=\{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert}>R, 0\leq \arg z\leq \theta\}\quad\text{where}\quad
+1\leq \theta \leq 2\pi.\]
+If there exists \( k \) such that \( \displaystyle{\lim_{z\to\infty} zf(z)=k} \) for \( z \) in the region \( D \). Show that
+\[\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,\]
+where \( L \) is the part of the circle \( |z|=R' \) which lies in the region \( D \).
+
+### Spring 2020 HW 2 \# 2.6.5
+
+Suppose \( f\in C_{\mathbb{C}}^1(\Omega) \) and \( T\subset \Omega \) is a triangle with \( T^\circ \subset \Omega \). 1. Apply Green's theorem to show that \( \int_T f(z) ~dz = 0 \).
+
+2.  Assume that \( f' \) is continuous and prove Goursat's theorem.
+
+> Hint: Green's theorem states
+> \[
+> \int_{T} F d x+G d y=\int_{T^\circ}\left(\frac{\partial G}{\partial x}-\frac{\partial F}{\partial y}\right) d x d y
+> .\]
+
+### Spring 2020 HW 2 \# 2.6.6
+
+Suppose that \( f \) is holomorphic on a punctured open set \( \Omega\setminus\left\{{w_0}\right\} \) and let \( T\subset \Omega \) be a triangle containing \( w_0 \). Prove that if \( f \) is bounded near \( w_0 \), then \( \int_T f(z) ~dz = 0 \).
+
+### Spring 2020 HW 2 \# 2.6.7
+
+Suppose \( f: {\mathbb{D}}\to {\mathbb{C}} \) is holomorphic and let \( d \coloneqq\sup_{z, w\in {\mathbb{D}}}{\left\lvert {f(z) - f(w)} \right\rvert} \) be the diameter of the image of \( f \). Show that \( 2 {\left\lvert {f'(0)} \right\rvert} \leq d \), and that equality holds iff \( f \) is linear, so \( f(z) = a_1 z + a_2 \).
+
+> Hint:
+> \[
+> 2f'(0) = \frac{1}{2\pi i} \int_{{\left\lvert {\xi } \right\rvert}= r} \frac{ f(\xi) - f(-\xi)  }{\xi^2} ~d\xi
+> \]
+> whenever \( 0<r<1 \).
+
+### Spring 2020 HW 2 \# 2.6.8
+
+Suppose that \( f \) is holomorphic on the strip \( S = \left\{{x+iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},~ -1<y<1}\right\} \) with \( {\left\lvert {f(z)} \right\rvert} \leq A \qty{1 + {\left\lvert {z} \right\rvert}}^\nu \) for \( \nu \) some fixed real number. Show that for all \( z\in S \), for each integer \( n\geq 0 \) there exists an \( A_n \geq 0 \) such that \( {\left\lvert {f^{(n)}(x)} \right\rvert} \leq A_n (1 + {\left\lvert {x} \right\rvert})^\nu \) for all \( x\in {\mathbb{R}} \).
+
+> Hint: Use the Cauchy inequalities.
+
+### Spring 2020 HW 2 \# 2.6.9
+
+Let \( \Omega \subset {\mathbb{C}} \) be open and bounded and \( \phi: \Omega \to \Omega \) holomorphic. Prove that if there exists a point \( z_0 \in \Omega \) such that \( \phi(z_0) = z_0 \) and \( \phi'(z_0) = 1 \), then \( \phi \) is linear.
+
+> Hint: assume \( z_0 = 0 \) (explain why this can be done) and write \( \phi(z) = z + a_n z^n + O(z^{n+1}) \) near \( 0 \). Let \( \phi_k = \phi \circ \phi \circ \cdots \circ \phi \) and prove that \( \phi_k(z) = z + ka_nz^n + O(z^{n+1}) \). Apply Cauchy's inequalities and let \( k\to \infty \) to conclude.
+
+### Spring 2020 HW 2 \# 6
+
+Show by example that there exists a function \( f(z) \) that is holomorphic on \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < {\left\lvert {z} \right\rvert} < 1}\right\} \) and for all \( r<1 \),
+\[
+\int_{{\left\lvert {z} \right\rvert} = r} f(z) \, dz = 0
+,\]
+but \( f \) is not holomorphic at \( z=0 \).
+
+### Spring 2020 HW 2 \# 7
+
+Let \( f \) be analytic on a region \( R \) and suppose \( f'(z_0) \neq 0 \) for some \( z_0 \in R \). Show that if \( C \) is a circle of sufficiently small radius centered at \( z_0 \), then
+\[
+\frac{2 \pi i}{f^{\prime}\left(z_{0}\right)}=\int_{C} \frac{d z}{f(z)-f\left(z_{0}\right)}
+.\]
+
+> Hint: use the inverse function theorem.
+
+### Spring 2020 HW 2 \# 8
+
+Assume two functions \( u, b: {\mathbb{R}}^2 \to {\mathbb{R}} \) have continuous partial derivatives at \( (x_0 ,y_0) \). Show that \( f \coloneqq u + iv \) has derivative \( f'(z_0) \) at \( z_0 = x_0 + iy_0 \) if and only if
+\[
+\lim _{r \rightarrow 0} \frac{1}{\pi r^{2}} \int_{\left|z-z_{0}\right|=r} f(z) d z=0
+.\]
+
+### Spring 2020 HW 2 \# 9 (Cauchy's Formula for Exterior Regions)
+
+Let \( \gamma \) be a piecewise smooth simple closed curve with interior \( \Omega_1 \) and exterior \( \Omega_2 \). Assume \( f' \) exists in an open set containing \( \gamma \) and \( \Omega_2 \) with \( \lim_{z\to \infty} f(z) = A \). Show that
+\[
+\frac{1}{2 \pi i} \int_{\gamma} \frac{f(\xi)}{\xi-z} d \xi=\left\{\begin{array}{ll}
+A, & \text { if } z \in \Omega_{1} \\
+-f(z)+A, & \text { if } z \in \Omega_{2}
+\end{array}\right.
+.\]
+
+### Spring 2020 HW 2 \# 10
+
+Let \( f(z) \) be bounded and analytic in \( {\mathbb{C}} \). Let \( a\neq b \) be any fixed complex numbers. Show that the following limit exists:
+\[
+\lim_{R\to \infty} \int_{{\left\lvert {z} \right\rvert} = R} {f(z) \over (z-a)(z-b)} \,dz
+.\]
+
+Use this to show that \( f(z) \) must be constant.
+
+### Spring 2020 HW 2 \# 11
+
+Suppose \( f(z) \) is entire and
+\[
+\lim_{z\to\infty} {f(z) \over z} = 0
+.\]
+
+Show that \( f(z) \) is a constant.
+
+### Spring 2020 HW 2 \# 12
+
+Let \( f \) be analytic in a domain \( D \) and \( \gamma \) be a closed curve in \( D \). For any \( z_0\in D \) not on \( \gamma \), show that
+\[
+\int_{\gamma} \frac{f^{\prime}(z)}{\left(z-z_{0}\right)} d z=\int_{\gamma} \frac{f(z)}{\left(z-z_{0}\right)^{2}} d z
+.\]
+Give a generalization of this result.
+
+### Spring 2020 HW 2 \# 13
+
+Compute
+\[
+\int_{{\left\lvert {z} \right\rvert} = 1} \qty{z + {1\over z}}^{2n} {dz \over z}
+\]
+and use it to show that
+\[
+\int_0^{2\pi} \cos^{2n}(\theta) \, d\theta = 2\pi \qty{1\cdot 3 \cdot 5 \cdots (2n-1) \over 2 \cdot 4 \cdot 6 \cdots (2n)}
+.\]
+
+### Entire and \( O \) of polynomial implies polynomial \( \done \) {#entire-and-o-of-polynomial-implies-polynomial-done}
+
+::: {.problem title="?"}
+Let \( f(z) \) be entire and assume that \( {\left\lvert {f(z)} \right\rvert} \leq M |z|^2 \) outside of some disk for some constant \( M \). Show that \( f(z) \) is a polynomial in \( z \) of degree \( \leq 2 \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Prove a more general statement: if \( {\left\lvert {f(z)} \right\rvert} \leq M{\left\lvert {z} \right\rvert}^n \), then \( f \) is a polynomial of degree at most \( n \).
+
+-   Since \( f \) is entire, it is analytic everywhere, so \( f(z) = \sum_{k\geq 0}c_k z^k \) where \( c_k = f^{(k)}(0)/n! \) is given by the coefficient of its Taylor expansion about \( z=0 \).
+
+-   Applying Cauchy's estimate, on a circle of radius \( R \),
+    \[
+    {\left\lvert {f^{(k)}(0)} \right\rvert} \leq { \sup_{\gamma}{\left\lvert {f(z)} \right\rvert} n! \over R^k} \leq {M{\left\lvert {z} \right\rvert}^n n! \over R^k} = {M R^n n! \over R^k} 
+    .\]
+
+-   So for \( k \geq n+1 \), this goes to zero as \( R\to \infty \), so \( {\left\lvert {f^{k}(0)} \right\rvert} = 0 \) for all such \( k \).
+
+-   But then \( f \) is a power series annihilated by taking \( n+1 \) derivatives, so it is a polynomial of degree at most \( n \).
+:::
+
+## Uniform sequence implies uniform derivatives \( \done \) {#uniform-sequence-implies-uniform-derivatives-done}
+
+::: {.problem title="?"}
+Let \( a_n(z) \) be an analytic sequence in a domain \( D \) such that \( \displaystyle \sum_{n=0}^\infty |a_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \). Show that \( \displaystyle \sum_{n=0}^\infty |a'_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
+:::
+
+::: {.solution}
+```{=tex}
+\envlist
+```
+-   Show a stronger statement: if \( f_n\to f \) uniformly with each \( f_n \) holomorphic on every compact subset of \( D \) then \( f_n'\to f' \) on every compact subset of \( D \).
+
+-   We have \( {\left\lVert {f_n-f} \right\rVert}_{\infty, D}\to 0 \), the sup norm on \( D \).
+
+-   Pick a \( \gamma \) in \( ^\circ{D} \)
+:::
 
 # Liouville's Theorem, Power Series (8155e)
 
@@ -338,17 +668,11 @@ where \( \gamma_r : = \{ z \; | \; z = a + r e^{it}, \; 0 \leq t \leq \beta_0 \}
 
 Suppose \( f \) is analytic on a region \( \Omega \) such that \( {\mathbb{D}}\subseteq \Omega \subseteq {\mathbb{C}} \) and \( f(z) = \sum_{n=0}^\infty a_n z^n \) is a power series with radius of convergence exactly 1.
 
-### a \( \done \) {#a-done}
+a.  \( \done \) Give an example of such an \( f \) that converges at every point of \( S^1 \).
 
-Give an example of such an \( f \) that converges at every point of \( S^1 \).
+b.  \( \work \) Give an example of such an \( f \) which is analytic at \( 1 \) but \( \sum_{n=0}^\infty a_n \) diverges.
 
-### b \( \work \) {#b-work-3}
-
-Give an example of such an \( f \) which is analytic at \( 1 \) but \( \sum_{n=0}^\infty a_n \) diverges.
-
-### c \( \work \) {#c-work-3}
-
-Prove that \( f \) can not be analytic at *every* point of \( S^1 \).
+c.  \( \work \) Prove that \( f \) can not be analytic at *every* point of \( S^1 \).
 
 ```{=tex}
 \todo[inline]{Missing part (c)}
@@ -363,7 +687,7 @@ Prove that \( f \) can not be analytic at *every* point of \( S^1 \).
 ```
 :::
 
-### a \( \done \) {#a-done-1}
+a.  \( \done \)
 
 -   Take \( \sum {z^n \over n^2} \)
 -   Then
@@ -371,7 +695,7 @@ Prove that \( f \) can not be analytic at *every* point of \( S^1 \).
     which is summable
 -   So the series converges for \( {\left\lvert {z} \right\rvert}\leq 1 \).
 
-### b \( \work \) {#b-work-4}
+b.  \( \work \)
 
 -   Take \( \sum {z^n \over n} \);
 
@@ -401,17 +725,11 @@ c.  ?
 
 Suppose \( f \) is entire and has Taylor series \( \sum a_n z^n \) about 0.
 
-### a \( \work \) {#a-work-3}
+a.  \( \work \) Express \( a_n \) as a contour integral along the circle \( {\left\lvert {z} \right\rvert} = R \).
 
-Express \( a_n \) as a contour integral along the circle \( {\left\lvert {z} \right\rvert} = R \).
+b.  \( \work \) Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of \( {\mathbb{C}} \).
 
-### b \( \work \) {#b-work-5}
-
-Apply (a) to show that the above Taylor series converges uniformly on every bounded subset of \( {\mathbb{C}} \).
-
-### c \( \work \) {#c-work-4}
-
-Determine those functions \( f \) for which the above Taylor series converges uniformly on all of \( {\mathbb{C}} \).
+c.  \( \work \) Determine those functions \( f \) for which the above Taylor series converges uniformly on all of \( {\mathbb{C}} \).
 
 ## 3 \( \work \) {#work-24}
 
@@ -496,7 +814,7 @@ Prove this list is complete.
     -   Check \( g \) is holomorphic on \( D\setminus\left\{{0}\right\} \), clear since the only singularity of \( g \) is \( z=0 \).
 -   By Riemann's removable singularity theorem, the singularity \( z = 0 \) is removable and \( g \) has an extension to an entire function \( \tilde g \).
 -   By continuity, we have \( {\left\lvert {\tilde g(z)} \right\rvert} \leq 1 \) on all of \( {\mathbb{C}} \)
-    -   If not, then \( {\left\lvert {\tilde g(0)} \right\rvert} = 1+\varepsilon> 1 \), but then there would be a domain \( \Omega \subseteq {\mathbb{C}}\setminus\left\{{0}\right\} \) such that \( 1 < {\left\lvert {\tilde g(z)} \right\rvert} \leq 1 +\varepsilon \) on \( \Omega \), a contradiction.
+    -   If not, then \( {\left\lvert {\tilde g(0)} \right\rvert} = 1+{\varepsilon}> 1 \), but then there would be a domain \( \Omega \subseteq {\mathbb{C}}\setminus\left\{{0}\right\} \) such that \( 1 < {\left\lvert {\tilde g(z)} \right\rvert} \leq 1 +{\varepsilon} \) on \( \Omega \), a contradiction.
 -   By Liouville, \( \tilde g \) is constant, so \( \tilde g(z) = c_0 \) with \( {\left\lvert {c_0} \right\rvert} \leq 1 \)
 -   Thus \( f(z) = c_0^{-1}z \coloneqq cz \) where \( {\left\lvert {c} \right\rvert}\geq 1 \)
 
@@ -507,13 +825,9 @@ Thus all such functions are of the form \( f(z) = cz \) for some \( c\in {\mathb
 
 Suppose \( \sum_{n=0}^\infty a_n z^n \) converges for some \( z_0 \neq 0 \).
 
-### a \( \work \) {#a-work-4}
+a.  \( \work \) Prove that the series converges absolutely for each \( z \) with \( {\left\lvert {z} \right\rvert} < {\left\lvert {z} \right\rvert}_0 \).
 
-Prove that the series converges absolutely for each \( z \) with \( {\left\lvert {z} \right\rvert} < {\left\lvert {z} \right\rvert}_0 \).
-
-### b \( \work \) {#b-work-6}
-
-Suppose \( 0 < r < {\left\lvert {z_0} \right\rvert} \) and show that the series converges uniformly on \( {\left\lvert {z} \right\rvert} \leq r \).
+b.  \( \work \) Suppose \( 0 < r < {\left\lvert {z_0} \right\rvert} \) and show that the series converges uniformly on \( {\left\lvert {z} \right\rvert} \leq r \).
 
 ## 8 \( \work \) {#work-27}
 
@@ -540,7 +854,7 @@ Prove that the following series converges uniformly on the set \( \left\{{z {~\m
 
 # Extra
 
-## ? {#section-5}
+## Tie's Questions
 
 Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded* open set \( \Omega \). Show without using Picard's theorems that \( f(z) \) is a constant.
 
@@ -548,20 +862,67 @@ Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded*
 
 Show without using Picard's theorems that \( f(z) \) is a constant.
 
-## ? {#section-6}
+## Tie's Questions
 
-### 1 {#section-7}
-
-Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \).
+1.  Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \).
 
 Show that for \( r <R \),
 \[
 \frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta = \sum_{n=0}^\infty |c_n|^2 r^{2n}
 .\]
 
-### 2 {#section-8}
+2.  Deduce Liouville's theorem from (1).
 
-Deduce Liouville's theorem from (1).
+### Tie's Extra Questions: Fall 2009
+
+Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that
+\[|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.\]
+Show that
+
+1.  \( f \) is a polynomial and
+2.  the degree of \( f \) is at least \( N \).
+
+### Tie's Extra Questions: Fall 2009
+
+Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded* open set \( \Omega \). Show without using Picard's theorems that \( f(z) \) is a constant.
+
+### Tie's Extra Questions: Fall 2009
+
+Let \( f(z) \) be entire and assume that \( f(z) \leq M |z|^2 \) outside some disk for some constant \( M \). Show that \( f(z) \) is a polynomial in \( z \) of degree \( \leq 2 \).
+
+### Spring 20202 HW 2 \# 4
+
+Without using Cauchy's integral formula, show that if \( {\left\lvert {a} \right\rvert} < r < {\left\lvert {b} \right\rvert} \), then
+\[
+\int_{\gamma} \frac{d z}{(z-\alpha)(z-\beta)}=\frac{2 \pi i}{\alpha-\beta}
+\]
+where \( \gamma \) denotes the circle centered at the origin of radius \( r \) with positive orientation.
+
+> Hint: take a Laurent expansion.
+
+### Spring 20202 HW 3 \# 1
+
+Prove that if \( f \) has two Laurent series expansions,
+\[
+f(z) = \sum c_n(z-a)^n \quad\text{and}\quad f(z) = \sum c_n'(z-a)^n
+\]
+then \( c_n = c_n' \).
+
+### Spring 20202 HW 3 \# 2
+
+Find Laurent series expansions of
+\[
+\frac{1}{1-z^2} + \frac{1}{3-z}
+\]
+How many such expansions are there? In what domains are each valid?
+
+### Spring 20202 HW 3 \# 3
+
+Let \( P, Q \) be polynomials with no common zeros. Assume \( a \) is a root of \( Q \). Find the principal part of \( P/Q \) at \( z=a \) in terms of \( P \) and \( Q \) if \( a \) is (1) a simple root, and (2) a double root.
+
+### Spring 20202 HW 3 \# 5
+
+Show that if \( f \) is entire and \( \lim_{z\to\infty}f(z) = \infty \), then \( f \) is a polynomial.
 
 # Laurent Expansions and Singularities (8155f)
 
@@ -714,75 +1075,9 @@ Idea: show their \( f-g \) is analytic by taking away all of the negative powers
 :::
 :::
 
-# Conformal Maps (8155c)
-
-> Notation: \( {\mathbb{D}} \) is the open unit disc, \( {\mathbb{H}} \) is the open upper half-plane.
-
-## 1 \( \work \) {#work-36}
-
-Find a conformal map from \( {\mathbb{D}} \) to \( {\mathbb{H}} \).
-
-## 2 \( \work \) {#work-37}
-
-Find a conformal map from the strip \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < \Im(z) < 1}\right\} \) to \( {\mathbb{H}} \).
-
-## 3 \( \work \) {#work-38}
-
-Find a fractional linear transformation \( T \) which maps \( {\mathbb{H}} \) to \( {\mathbb{D}} \), and explicitly describe the image of the first quadrant under \( T \).
-
-## 4 \( \work \) {#work-39}
-
-Find a conformal map from \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z-i} \right\rvert} > 1,\, \Re(z) > 0}\right\} \) to \( {\mathbb{H}} \).
-
-## 5 \( \work \) {#work-40}
-
-Find a conformal map from \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} < 1,\, {\left\lvert {z - {1\over 2}} \right\rvert} > {1\over 2} }\right\} \) to \( {\mathbb{D}} \).
-
-## 6 \( \work \) {#work-41}
-
-Find a conformal map from \( \left\{{{\left\lvert {z-1} \right\rvert} < 2}\right\} \cap\left\{{{\left\lvert {z+1} \right\rvert} < 2}\right\} \) to \( {\mathbb{H}} \).
-
-## 7 \( \work \) {#work-42}
-
-Let \( \Omega \) be the region inside the unit circle \( {\left\lvert {z} \right\rvert} = 1 \) and outside the circle \( {\left\lvert {z-{1\over 4}} \right\rvert} = {1\over 4} \).
-
-Find an injective conformal map from \( \Omega \) onto some annulus \( \left\{{r < {\left\lvert {z} \right\rvert} < 1}\right\} \) for constant \( r \).
-
-## 8 \( \work \) {#work-43}
-
-Let \( D \) be the region obtained by deleting the real interval \( [0, 1) \) from \( {\mathbb{D}} \); find a conformal map from \( D \) to \( {\mathbb{D}} \).
-
-## 9 \( \work \) {#work-44}
-
-Find a conformal map from \( {\mathbb{C}}\setminus\left\{{x\in {\mathbb{R}}{~\mathrel{\Big|}~}x\leq 0}\right\} \) to \( {\mathbb{D}} \).
-
-## 10 \( \work \) {#work-45}
-
-Find a conformal map from \( {\mathbb{C}}\setminus\left\{{x\in {\mathbb{R}}{~\mathrel{\Big|}~}x\geq 1}\right\} \) to \( {\mathbb{D}} \).
-
-## 11 \( \work \) {#work-46}
-
-Find a bijective conformal map from \( G \) to \( {\mathbb{H}} \), where
-\[  
-G \coloneqq\left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z-1} \right\rvert} < \sqrt 2,\, {\left\lvert {z+1} \right\rvert} < \sqrt 2}\right\} \setminus [0, i)
-.\]
-
-## 12 \( \work \) {#work-47}
-
-Prove that TFAE for a Möbius transformation \( T \) given by \( T(z) = {az + b \over cz + d} \):
-
-a.  \( T \) maps \( {\mathbb{R}}\cup\left\{{\infty}\right\} \) to itself.
-b.  It is possible to choose \( a,b,c,d \) to be real numbers.
-c.  \( \mkern 1.5mu\overline{\mkern-1.5muT(z)\mkern-1.5mu}\mkern 1.5mu = T(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu) \) for every \( z\in {\mathbb{CP}}^1 \).
-d.  There exist \( \alpha\in {\mathbb{R}}, \beta \in {\mathbb{C}}\setminus {\mathbb{R}} \) such that \( T(\alpha) = \alpha \) and \( T(\mkern 1.5mu\overline{\mkern-1.5mu\beta\mkern-1.5mu}\mkern 1.5mu) = \mkern 1.5mu\overline{\mkern-1.5muT(\beta)\mkern-1.5mu}\mkern 1.5mu \).
-
-## 13 {#section-9}
-
-Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
-
 # Residues
 
-## \( \work \) {#work-48}
+## \( \work \) {#work-36}
 
 ::: {.problem title="?"}
 Calculate
@@ -791,7 +1086,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-49}
+## \( \work \) {#work-37}
 
 ::: {.problem title="?"}
 Let \( a>0 \) and calculate
@@ -800,7 +1095,7 @@ Let \( a>0 \) and calculate
 .\]
 :::
 
-## \( \work \) {#work-50}
+## \( \work \) {#work-38}
 
 ::: {.problem title="?"}
 Calculate
@@ -809,7 +1104,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-51}
+## \( \work \) {#work-39}
 
 ::: {.problem title="?"}
 Calculate
@@ -818,7 +1113,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-52}
+## \( \work \) {#work-40}
 
 ::: {.problem title="?"}
 Let \( a>0 \) and calculate
@@ -827,7 +1122,7 @@ Let \( a>0 \) and calculate
 .\]
 :::
 
-## \( \work \) {#work-53}
+## \( \work \) {#work-41}
 
 ::: {.problem title="?"}
 Calculate
@@ -836,7 +1131,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-54}
+## \( \work \) {#work-42}
 
 ::: {.problem title="?"}
 Calculate
@@ -845,7 +1140,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-55}
+## \( \work \) {#work-43}
 
 ::: {.problem title="?"}
 Calculate
@@ -854,7 +1149,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-56}
+## \( \work \) {#work-44}
 
 ::: {.problem title="?"}
 Calculate
@@ -863,7 +1158,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-57}
+## \( \work \) {#work-45}
 
 ::: {.problem title="?"}
 Let \( a>0 \) and calculate
@@ -872,7 +1167,7 @@ Let \( a>0 \) and calculate
 .\]
 :::
 
-## \( \work \) {#work-58}
+## \( \work \) {#work-46}
 
 ::: {.problem title="?"}
 Calculate
@@ -881,7 +1176,7 @@ Calculate
 .\]
 :::
 
-## \( \work \) {#work-59}
+## \( \work \) {#work-47}
 
 ::: {.problem title="?"}
 Let \( n\in {\mathbb{Z}}^{\geq 1} \) and \( 0<\theta<\pi \) and show that
@@ -890,7 +1185,7 @@ Let \( n\in {\mathbb{Z}}^{\geq 1} \) and \( 0<\theta<\pi \) and show that
 .\]
 :::
 
-## \( \work \) {#work-60}
+## \( \work \) {#work-48}
 
 ::: {.problem title="?"}
 Suppose \( a>b>0 \) and calculate
@@ -901,7 +1196,7 @@ Suppose \( a>b>0 \) and calculate
 
 # Extra Questions
 
-## \( \work \) {#work-61}
+## \( \work \) {#work-49}
 
 ::: {.problem title="?"}
 Suppose that \( f \) is an analytic function in the region \( D \) which contains the point \( a \). Let
@@ -920,7 +1215,7 @@ parameter}.\]
     where \( w \) is the zero from (1).
 :::
 
-## \( \work \) {#work-62}
+## \( \work \) {#work-50}
 
 ::: {.problem title="?"}
 Evaluate
@@ -929,7 +1224,7 @@ Evaluate
 .\]
 :::
 
-## \( \work \) {#work-63}
+## \( \work \) {#work-51}
 
 ::: {.problem title="?"}
 Show that
@@ -975,6 +1270,240 @@ Show that
 -   And the original integral is \( {1\over 2}I = \pi e^{-b} \over 2b \).
 :::
 
+### Tie's Extra Questions: Fall 2009
+
+Suppose that \( f \) is an analytic function in the region \( D \) which contains the point \( a \). Let
+\[F(z)= z-a-qf(z),\quad \text{where}~ q \ \text{is a complex parameter}.\]
+
+(1) Let \( K\subset D \) be a circle with the center at point \( a \) and also we assume that \( f(z)\not =0 \) for \( z\in K \). Prove that the function \( F \) has one and only one zero \( z=w \) on the closed disc \( \mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \) whose boundary is the circle \( K \) if \( \displaystyle{ |q|<\min_{z\in K} \frac{|z-a|}{|f(z)|}.} \)\
+
+(2) Let \( G(z) \) be an analytic function on the disk \( \mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \). Apply the residue theorem to prove that \( \displaystyle{ \frac{G(w)}{F'(w)}=\frac{1}{2\pi i}\int_K \frac{G(z)}{F(z)} dz,} \) where \( w \) is the zero from (1).\
+
+(3) If \( z\in K \), prove that the function \( \displaystyle{\frac{1}{F(z)}} \) can be represented as a convergent series with respect to \( q \): \( \displaystyle{ \frac{1}{F(z)}=\sum_{n=0}^{\infty} \frac{(qf(z))^n}{(z-a)^{n+1}}.} \)
+
+### Tie's Extra Questions: Fall 2009
+
+Evaluate
+\[\displaystyle{ \int_{0}^{\infty}\frac{x\sin x}{x^2+a^2} \,
+dx }.\]
+
+### Tie's Extra Questions: Fall 2009
+
+Show that
+\[
+\displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} \,dx
+= \frac{\pi}{n\sin \frac{a\pi}{n}}
+\]
+using complex analysis, \( 0 < a \leq n \). Here \( n \) is a positive integer.
+
+### Spring 20202 HW 2 \# 2.6.1
+
+Show that
+\[
+\int_{0}^{\infty} \sin \left(x^{2}\right) d x=\int_{0}^{\infty} \cos \left(x^{2}\right) d x=\frac{\sqrt{2 \pi}}{4}
+.\]
+
+> Hint: integrate \( e^{-x^2} \) over the following contour, using the fact that \( \int_{-\infty}^{\infty} e^{-x^{2}} d x=\sqrt{\pi} \):
+
+![Image](figures/2020-02-03-13:51.png)\
+
+### Spring 20202 HW 2 \# 2.6.2
+
+Show that
+
+\[
+\int_{0}^{\infty} \frac{\sin x}{x} d x=\frac{\pi}{2}
+.\]
+
+> Hint: use the fact that this integral equals \( \frac{1}{2 i} \int_{-\infty}^{\infty} \frac{e^{i x}-1}{x} d x \), and integrate around an indented semicircle.
+
+### Spring 20202 HW 3 \# 3.8.1
+
+Use the following formula to show that the complex zeros of \( \sin(\pi z) \) are exactly the integers, and they are each of order 1:
+\[
+\sin \pi z=\frac{e^{i \pi z}-e^{-i \pi z}}{2 i}
+.\]
+
+Calculate the residue of \( {1\over \sin(\pi z)} \) at \( z=n\in {\mathbb{Z}} \).
+
+### Spring 20202 HW 3 \# 3.8.2
+
+Evaluate the integral
+\[
+\int_{\mathbb{R}}{dx \over 1 + x^4}
+.\]
+
+What are the poles of \( {1\over 1 + z^4} \) ?
+
+### Spring 20202 HW 3 \# 3.8.4
+
+Show that
+\[
+\int_{-\infty}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x=\pi e^{-a}, \quad \text { for all } a>0
+.\]
+
+### Spring 20202 HW 3 \# 3.8.5
+
+Show that if \( \xi\in {\mathbb{R}} \), then
+\[
+\int_{-\infty}^{\infty} \frac{e^{-2 \pi i x \xi}}{\left(1+x^{2}\right)^{2}} d x=\frac{\pi}{2}(1+2 \pi|\xi|) e^{-2 \pi|\xi|}
+.\]
+
+### Spring 20202 HW 3 \# 3.8.6
+
+Show that
+\[
+\int_{-\infty}^{\infty} \frac{d x}{\left(1+x^{2}\right)^{n+1}}=\frac{1 \cdot 3 \cdot 5 \cdots(2 n-1)}{2 \cdot 4 \cdot 6 \cdots(2 n)} \cdot \pi
+.\]
+
+### Spring 20202 HW 3 \# 3.8.7
+
+Show that
+\[
+\int_{0}^{2 \pi} \frac{d \theta}{(a+\cos \theta)^{2}}=\frac{2 \pi a}{\left(a^{2}-1\right)^{3 / 2}}, \quad \text { whenever } a>1
+.\]
+
+### Spring 20202 HW 3 \# 3.8.8
+
+Show that if \( a,b\in {\mathbb{R}} \) with \( a > {\left\lvert {b} \right\rvert} \), then
+\[
+\int_{0}^{2 \pi} \frac{d \theta}{a+b \cos \theta}=\frac{2 \pi}{\sqrt{a^{2}-b^{2}}}
+.\]
+
+### Spring 20202 HW 3 \# 3.8.9
+
+Show that
+\[
+\int_{0}^{1} \log (\sin \pi x) d x=-\log 2
+.\]
+
+> Hint: use the following contour.
+>
+> ![](figures/image_2020-06-17-21-52-40.png)
+
+### Spring 20202 HW 3 \# 3.8.10
+
+Show that if \( a>0 \), then
+\[
+\int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x=\frac{\pi}{2 a} \log a
+.\]
+
+> Hint: use the following contour.
+>
+> ![](figures/image_2020-06-17-21-53-19.png)
+
+### Spring 20202 HW 3 \# 6
+
+a.  Show (without using 3.8.9 in the S&S) that
+    \[
+    \int_0^{2\pi} \log{\left\lvert {1 - e^{i\theta}} \right\rvert}~d\theta = 0
+    \]
+
+b.  Show that this identity is equivalent to S&S 3.8.9:
+    \[
+    \int_0^1 \log(\sin(\pi x)) ~dx = -\log 2
+    .\]
+
+### Spring 20202 HW 3 \# 7
+
+Let \( 0<a<4 \) and evaluate
+\[
+\int_0^\infty \frac{x^{\alpha-1}}{1+x^3} ~dx
+\]
+
+### Spring 20202 HW 3 \# 10
+
+For \( a> 0 \), evaluate
+\[
+\int_0^{\pi/2} \frac{d\theta}{a + \sin^2 \theta}
+\]
+
+# Conformal Maps (8155c)
+
+> Notation: \( {\mathbb{D}} \) is the open unit disc, \( {\mathbb{H}} \) is the open upper half-plane.
+
+## 1 \( \work \) {#work-52}
+
+Find a conformal map from \( {\mathbb{D}} \) to \( {\mathbb{H}} \).
+
+## 2 \( \work \) {#work-53}
+
+Find a conformal map from the strip \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < \Im(z) < 1}\right\} \) to \( {\mathbb{H}} \).
+
+## 3 \( \work \) {#work-54}
+
+Find a fractional linear transformation \( T \) which maps \( {\mathbb{H}} \) to \( {\mathbb{D}} \), and explicitly describe the image of the first quadrant under \( T \).
+
+## 4 \( \work \) {#work-55}
+
+Find a conformal map from \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z-i} \right\rvert} > 1,\, \Re(z) > 0}\right\} \) to \( {\mathbb{H}} \).
+
+## 5 \( \work \) {#work-56}
+
+Find a conformal map from \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert} < 1,\, {\left\lvert {z - {1\over 2}} \right\rvert} > {1\over 2} }\right\} \) to \( {\mathbb{D}} \).
+
+## 6 \( \work \) {#work-57}
+
+Find a conformal map from \( \left\{{{\left\lvert {z-1} \right\rvert} < 2}\right\} \cap\left\{{{\left\lvert {z+1} \right\rvert} < 2}\right\} \) to \( {\mathbb{H}} \).
+
+## 7 \( \work \) {#work-58}
+
+Let \( \Omega \) be the region inside the unit circle \( {\left\lvert {z} \right\rvert} = 1 \) and outside the circle \( {\left\lvert {z-{1\over 4}} \right\rvert} = {1\over 4} \).
+
+Find an injective conformal map from \( \Omega \) onto some annulus \( \left\{{r < {\left\lvert {z} \right\rvert} < 1}\right\} \) for constant \( r \).
+
+## 8 \( \work \) {#work-59}
+
+Let \( D \) be the region obtained by deleting the real interval \( [0, 1) \) from \( {\mathbb{D}} \); find a conformal map from \( D \) to \( {\mathbb{D}} \).
+
+## 9 \( \work \) {#work-60}
+
+Find a conformal map from \( {\mathbb{C}}\setminus\left\{{x\in {\mathbb{R}}{~\mathrel{\Big|}~}x\leq 0}\right\} \) to \( {\mathbb{D}} \).
+
+## 10 \( \work \) {#work-61}
+
+Find a conformal map from \( {\mathbb{C}}\setminus\left\{{x\in {\mathbb{R}}{~\mathrel{\Big|}~}x\geq 1}\right\} \) to \( {\mathbb{D}} \).
+
+## 11 \( \work \) {#work-62}
+
+Find a bijective conformal map from \( G \) to \( {\mathbb{H}} \), where
+\[  
+G \coloneqq\left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}{\left\lvert {z-1} \right\rvert} < \sqrt 2,\, {\left\lvert {z+1} \right\rvert} < \sqrt 2}\right\} \setminus [0, i)
+.\]
+
+## 12 \( \work \) {#work-63}
+
+Prove that TFAE for a Möbius transformation \( T \) given by \( T(z) = {az + b \over cz + d} \):
+
+a.  \( T \) maps \( {\mathbb{R}}\cup\left\{{\infty}\right\} \) to itself.
+b.  It is possible to choose \( a,b,c,d \) to be real numbers.
+c.  \( \mkern 1.5mu\overline{\mkern-1.5muT(z)\mkern-1.5mu}\mkern 1.5mu = T(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu) \) for every \( z\in {\mathbb{CP}}^1 \).
+d.  There exist \( \alpha\in {\mathbb{R}}, \beta \in {\mathbb{C}}\setminus {\mathbb{R}} \) such that \( T(\alpha) = \alpha \) and \( T(\mkern 1.5mu\overline{\mkern-1.5mu\beta\mkern-1.5mu}\mkern 1.5mu) = \mkern 1.5mu\overline{\mkern-1.5muT(\beta)\mkern-1.5mu}\mkern 1.5mu \).
+
+## 13 {#section-3}
+
+Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
+
+### Tie's Extra Questions: Fall 2009
+
+Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
+
+# Maps of the Disc
+
+## Spring 2020 HW 1 \# 5
+
+a.  Let \( z, w \in {\mathbb{C}} \) with \( \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu w \neq 1 \). Prove that
+    \[
+    {\left\lvert {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \right\rvert} < 1 \quad\text{ if } {\left\lvert {z} \right\rvert}<1,~ {\left\lvert {w} \right\rvert} < 1
+    \]
+    with equality when \( {\left\lvert {z} \right\rvert} = 1 \) or \( {\left\lvert {w} \right\rvert} = 1 \).
+
+b.  Prove that for a fixed \( w\in {\mathbb{D}} \), the mapping \( F: z\mapsto {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \) satisfies
+
+-   \( F \) maps \( {\mathbb{D}} \) to itself and is holomorphic.
+-   \( F(0) = w \) and \( F(w) = 0 \).
+-   \( {\left\lvert {z} \right\rvert} = 1 \) implies \( {\left\lvert {F(z)} \right\rvert} = 1 \).
+
 # Rouche's Theorem (8155h)
 
 ## 1 \( \done \) {#done-9}
@@ -1008,7 +1537,7 @@ Note
 
 -   Set \( g_n(z) \coloneqq p_n(z) / e^z \), then \( g_n \to 1 \) uniformly on \( \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu \).
 
--   Choose \( n\gg 0 \) so that \( {\left\lvert {f(z) - 1} \right\rvert} < \varepsilon< 1 \) for all \( z\in \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu \).
+-   Choose \( n\gg 0 \) so that \( {\left\lvert {f(z) - 1} \right\rvert} < {\varepsilon}< 1 \) for all \( z\in \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu \).
 
 -   So take \( h(z) = 1 \), then on \( {{\partial}}N \),?
 :::
@@ -1078,7 +1607,7 @@ has \( n \) solutions in the open unit disc if \( {\left\lvert {a} \right\rvert}
 
 ## 6 \( \work \) {#work-65}
 
-Let \( f \) be analytic in a domain \( D \) and fix \( z_0 \in D \) with \( w_0 \coloneqq f(z_0) \). Suppose \( z_0 \) is a zero of \( f(z) - w_0 \) with finite multiplicity \( m \). Show that there exists \( \delta >0 \) and \( \varepsilon> 0 \) such that for each \( w \) such that \( 0 < {\left\lvert {w-w_0} \right\rvert} < \varepsilon \), the equation \( f(z) - w = 0 \) has exactly \( m \) *distinct* solutions inside the disc \( {\left\lvert {z-z_0} \right\rvert} < \delta \).
+Let \( f \) be analytic in a domain \( D \) and fix \( z_0 \in D \) with \( w_0 \coloneqq f(z_0) \). Suppose \( z_0 \) is a zero of \( f(z) - w_0 \) with finite multiplicity \( m \). Show that there exists \( \delta >0 \) and \( {\varepsilon}> 0 \) such that for each \( w \) such that \( 0 < {\left\lvert {w-w_0} \right\rvert} < {\varepsilon} \), the equation \( f(z) - w = 0 \) has exactly \( m \) *distinct* solutions inside the disc \( {\left\lvert {z-z_0} \right\rvert} < \delta \).
 
 ## 7 \( \work \) {#work-66}
 
@@ -1111,7 +1640,7 @@ Use Rouche's theorem to prove the Fundamental Theorem of Algebra.
 
 # Extras
 
-## ? {#section-10}
+## ? {#section-4}
 
 Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra:
 
@@ -1121,12 +1650,38 @@ P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)
 \]
 is a polynomial of degree \( n \), then it has \( n \) zeros in \( \mathbb{C} \).
 
-## ? {#section-11}
+## ? {#section-5}
 
 Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that
 \[|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.\]
 
 Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least \( N \).
+
+### Tie's Extra Questions: Fall 2009
+
+Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: If
+\[P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)\]
+is a polynomial of degree n, then it has n zeros in \( \mathbb C \).
+
+### Spring 20202 HW 3 \# 8
+
+Prove the fundamental theorem of Algebra using
+
+a.  Rouche's Theorem.
+
+b.  The maximum modulus principle.
+
+### Spring 20202 HW 3 \# 11
+
+Find the number of roots of \( p(z) = 4z^4 - 6z + 3 \) in \( {\left\lvert {z} \right\rvert} < 1 \) and \( 1 < {\left\lvert {z} \right\rvert} < 2 \) respectively.
+
+### Spring 20202 HW 3 \# 12
+
+Prove that \( z^4 + 2z^3 -2z + 10 \) has exactly one root in each open quadrant.
+
+### Spring 20202 HW 3 \# 13
+
+Prove that for \( a> 0 \), \( z\tan z - a \) has only real roots.
 
 # Schwarz Lemma and Reflection Principle (8155i)
 
@@ -1134,18 +1689,18 @@ Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least
 
 Suppose \( f:{\mathbb{D}}\to{\mathbb{D}} \) is analytic and admits a continuous extension \( \tilde f: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu\to \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \) such that \( {\left\lvert {z} \right\rvert} = 1 \implies {\left\lvert {f(z)} \right\rvert} = 1 \).
 
-### a \( \work \) {#a-work-5}
+### a \( \work \) {#a-work}
 
 Prove that \( f \) is a rational function.
 
-### b \( \work \) {#b-work-7}
+### b \( \work \) {#b-work}
 
 Suppose that \( z=0 \) is the unique zero of \( f \). Show that
 \[  
 \exists n\in {\mathbb{N}}, \lambda \in S^1 {\quad \operatorname{ such that } \quad}f(z) = \lambda z^n
 .\]
 
-### c \( \work \) {#c-work-5}
+### c \( \work \) {#c-work}
 
 Suppose that \( a_1, \cdots, a_n \in {\mathbb{D}} \) are the zeros of \( f \) and prove that
 \[  
@@ -1194,18 +1749,18 @@ Suppose \( f:{\mathbb{D}}\to{\mathbb{D}} \) is analytic, has a single zero of or
 
 ## 7 \( \work \) {#work-76}
 
-### a \( \work \) {#a-work-6}
+### a \( \work \) {#a-work-1}
 
 State the standard Schwarz reflection principle involving reflection across the real axis.
 
-### b \( \work \) {#b-work-8}
+### b \( \work \) {#b-work-1}
 
 Give a linear fractional transformation \( T \) mapping \( {\mathbb{D}} \) to \( {\mathbb{H}} \). Let \( g(z) = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \), and show
 \[  
 (T^{-1} \circ g \circ T)(z) = 1/\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu
 .\]
 
-### c \( \work \) {#c-work-6}
+### c \( \work \) {#c-work-1}
 
 Suppose that \( f \) is holomorphic on \( {\mathbb{D}} \), continuous on \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \), and real on \( S^1 \). Show that \( f \) must be constant.
 
@@ -1233,513 +1788,77 @@ Suppose \( f:{\mathbb{D}}\to {\mathbb{D}} \) is analytic. Prove that
 \forall a\in {\mathbb{D}}, \qquad {{\left\lvert {f'(a)} \right\rvert} \over 1 - {\left\lvert {f(a)} \right\rvert}^2 } \leq {1 \over 1 - {\left\lvert {a} \right\rvert}^2}
 .\]
 
-# Unsorted/Unknown
-
-## ? {#section-12}
-
-## ? {#section-13}
-
-Let \( f \) be a continuous function in the region
-\[
-D=\{z\ |  |z|>R, 0\leq \arg Z\leq \theta\}\quad\text{where}\quad 0\leq \theta \leq 2\pi
-.\]
-If there exists \( k \) such that \( \displaystyle{\lim_{z\to\infty} zf(z)=k} \) for \( z \) in the region \( D \).
-
-Show that
-\[\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,\]
-where \( L \) is the part of the circle \( |z|=R' \) which lies in the region \( D \).
-
-## 3 {#section-14}
-
-If \( z\in K \), prove that the function \( \displaystyle{\frac{1}{F(z)}} \) can be represented as a convergent series with respect to \( q \):
-\[
-\displaystyle{
-\frac{1}{F(z)}=\sum_{n=0}^{\infty} \frac{(qf(z))^n}{(z-a)^{n+1}}.}\]
-
-## ? {#section-15}
-
-Show that
-\[
-\displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}}
-\]
-using complex analysis, \( 0< a < n \).
-
-> Here \( n \) is a positive integer.
-
-## 11. {#section-16}
+### Tie's Extra Questions: Fall 2009
 
 Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 \).
 
-### a {#a}
+1.  Show that \( g \) has a unique fixed point in \( |z| < 1 \).
 
-Show that \( g \) has a unique fixed point in \( |z| < 1 \).
+2.  What happens if we replace \( |g(z)| < 1 \) with \( |g(z)|\leq 1 \) for \( |z|=1 \)? Give an example if (a) is not true or give an proof if (a) is still true.
 
-### b {#b}
+3.  What happens if we simply assume that \( f \) is analytic for \( |z| < 1 \) and \( |f(z)| < 1 \) for \( |z| < 1 \)? Suppose that \( f(z) \not\equiv z \). Can f have more than one fixed point in \( |z| < 1 \)?
 
-What happens if we replace \( |g(z)| < 1 \) with \( |g(z)|\leq 1 \) for \( |z|=1 \)?
+> Hint: The map \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) may be useful.
 
-Give an example if (a) is not true or give an proof if (a) is still true.
-
-### c {#c}
-
-What happens if we simply assume that \( f \) is analytic for \( |z| < 1 \) and \( |f(z)| < 1 \) for \( |z| < 1 \)? Suppose that \( f(z)\not\equiv z \).
-
-Can \( f \) have more than one fixed point in\( |z| < 1 \)?
-
-> Hint: The map
-> \[\displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}}\]
-> may be useful.
-
-## ? {#section-17}
-
-Let \( f(z) \) be entire and assume that \( f(z) \leq M |z|^2 \) outside some disk for some constant \( M \).
-
-Show that \( f(z) \) is a polynomial in \( z \) of degree \( \leq 2 \).
-
-## ? {#section-18}
-
-Let \( a_n(z) \) be an analytic sequence in a domain \( D \) such that \( \displaystyle \sum_{n=0}^\infty |a_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
-
-Show that \( \displaystyle \sum_{n=0}^\infty |a'_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
-
-## 16 {#section-19}
-
-Let \( f(z) \) be analytic in an open set \( \Omega \) except possibly at a point \( z_0 \) inside \( \Omega \).
-
-Show that if \( f(z) \) is bounded in near \( z_0 \), then \( \displaystyle \int_\Delta f(z) dz = 0 \) for all triangles \( \Delta \) in \( \Omega \).
-
-# Riemann Mapping and Casorati-Weierstrass
-
-## 10. {#section-20}
-
-Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called univalent) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
-
-# Spring 2020 Homework 1
-
-## 1 {#section-21}
-
-Geometrically describe the following subsets of \( {\mathbb{C}} \):
-
-a.  \( {\left\lvert {z-1} \right\rvert} = 1 \)
-b.  \( {\left\lvert {z-1} \right\rvert} = 2{\left\lvert {z-2} \right\rvert} \)
-c.  \( 1/z = \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu \)
-d.  \( \Re(z) = 3 \)
-e.  \( \Im(z) = a \) with \( a\in {\mathbb{R}} \).
-f.  \( \Re(z) > a \) with \( a\in {\mathbb{R}} \).
-g.  \( {\left\lvert {z-1} \right\rvert} < 2{\left\lvert {z-2} \right\rvert} \)
-
-## 2 {#section-22}
-
-Prove the following inequality, and explain when equality holds:
-\[
-{\left\lvert {z+w} \right\rvert} \geq {\left\lvert { {\left\lvert {z} \right\rvert} - {\left\lvert {w} \right\rvert} } \right\rvert}
-.\]
-
-## 3 {#section-23}
-
-Prove that the following polynomial has its roots outside of the unit circle:
-\[
-p(z) = z^3 + 2z + 4
-.\]
-
-> Hint: What is the maximum value of the modulus of the first two terms if \( {\left\lvert {z} \right\rvert} \leq 1 \)?
-
-## 4 {#section-24}
-
-a.  Prove that if \( c>0 \),
-    \[
-    {\left\lvert {w_1} \right\rvert} = c{\left\lvert {w_2} \right\rvert} \implies {\left\lvert {w_1 - c^2 w_2} \right\rvert} = c{\left\lvert {w_1 - w_2} \right\rvert}
-    .\]
-
-b.  Prove that if \( c>0 \) and \( c\neq 1 \), with \( z_1\neq z_2 \), then the following equation represents a circle:
-    \[
-     {\left\lvert {z-z_1 \over z-z_2} \right\rvert} = c
-     .\]
-    Find its center and radius.
-
-    > Hint: use part (a)
-
-## 5 {#section-25}
-
-a.  Let \( z, w \in {\mathbb{C}} \) with \( \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu w \neq 1 \). Prove that
-    \[
-     {\left\lvert {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \right\rvert} < 1 \quad\text{ if } {\left\lvert {z} \right\rvert}<1,~ {\left\lvert {w} \right\rvert} < 1
-     \]
-    with equality when \( {\left\lvert {z} \right\rvert} = 1 \) or \( {\left\lvert {w} \right\rvert} = 1 \).
-
-b.  Prove that for a fixed \( w\in {\mathbb{D}} \), the mapping \( F: z\mapsto {w-z \over 1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z} \) satisfies
-
-    -   \( F \) maps \( {\mathbb{D}} \) to itself and is holomorphic.
-    -   \( F(0) = w \) and \( F(w) = 0 \).
-    -   \( {\left\lvert {z} \right\rvert} = 1 \) implies \( {\left\lvert {F(z)} \right\rvert} = 1 \).
-
-## 6 {#section-26}
-
-Use \( n \)th roots of unity to show that
-\[
-2^{n-1} \sin\qty{\pi \over n} \sin\qty{2\pi \over n} \cdots \sin\qty{(n-1)\pi \over n} = n
-.\]
-
-> Hint:
-> \[
-> 1 - \cos(2\theta) &= 2\sin^2(\theta) \\
-> 2 \sin(2\theta) &= 2\sin(\theta) \cos(\theta)
-> .\]
-
-## 7 {#section-27}
-
-Prove that \( f(z) = {\left\lvert {z} \right\rvert}^2 \) has a derivative at \( z=0 \) and nowhere else.
-
-## 8 {#section-28}
-
-Let \( f(z) \) be analytic in a domain, and prove that \( f \) is constant if it satisfies any of the following conditions:
-
-a.  \( {\left\lvert {f(z)} \right\rvert} \) is constant.
-b.  \( \Re(f(z)) \) is constant.
-c.  \( \arg(f(z)) \) is constant.
-d.  \( \mkern 1.5mu\overline{\mkern-1.5muf(z)\mkern-1.5mu}\mkern 1.5mu \) is analytic.
-
-How do you generalize (a) and (b)?
-
-## 9 {#section-29}
-
-Prove that if \( z\mapsto f(z) \) is analytic, then \( z \mapsto \mkern 1.5mu\overline{\mkern-1.5muf(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) is analytic.
-
-## 10 {#section-30}
-
-a.  Show that in polar coordinates, the Cauchy-Riemann equations take the form
-    \[
-      \frac{\partial u}{\partial r}=\frac{1}{r} \frac{\partial v}{\partial \theta} \text { and } \frac{\partial v}{\partial r}=-\frac{1}{r} \frac{\partial u}{\partial \theta}
-      .\]
-
-b.  Use (a) to show that the logarithm function, defined as
-    \[
-      \log z=\log r+i \theta \text { where } z=r e^{i \theta} \text { with }-\pi<\theta<\pi
-      .\]
-    is holomorphic on the region \( r> 0, -\pi < \theta < \pi \).
-
-Also show that this function is not continuous in \( r>0 \).
-
-## 11 {#section-31}
-
-Prove that the distinct complex numbers \( z_1, z_2, z_3 \) are the vertices of an equilateral triangle if and only if
-\[
-z_{1}^{2}+z_{2}^{2}+z_{3}^{2}=z_{1} z_{2}+z_{2} z_{3}+z_{3} z_{1}
-.\]
-
-# Spring 2020 Homework 2
-
-> Note on notation: I sometimes use \( f_x \coloneqq{\frac{\partial f}{\partial x}\,} \) to denote partial derivatives, and \( {{\partial}}_z^n f \) as \( f^{(n)}(z) \).
-
-## Stein And Shakarchi
-
-### 2.6.1 {#section-32}
-
-Show that
-\[
-\int_{0}^{\infty} \sin \left(x^{2}\right) d x=\int_{0}^{\infty} \cos \left(x^{2}\right) d x=\frac{\sqrt{2 \pi}}{4}
-.\]
-
-> Hint: integrate \( e^{-x^2} \) over the following contour, using the fact that \( \int_{-\infty}^{\infty} e^{-x^{2}} d x=\sqrt{\pi} \):
-
-![Image](figures/2020-02-03-13:51.png)\
-
-### 2.6.2 {#section-33}
-
-Show that
-
-\[
-\int_{0}^{\infty} \frac{\sin x}{x} d x=\frac{\pi}{2}
-.\]
-
-> Hint: use the fact that this integral equals \( \frac{1}{2 i} \int_{-\infty}^{\infty} \frac{e^{i x}-1}{x} d x \), and integrate around an indented semicircle.
-
-### 2.6.5 {#section-34}
-
-Suppose \( f\in C_{\mathbb{C}}^1(\Omega) \) and \( T\subset \Omega \) is a triangle with \( T^\circ \subset \Omega \). Apply Green's theorem to show that \( \int_T f(z) ~dz = 0 \).
-
-Assume that \( f' \) is continuous and prove Goursat's theorem.
-
-> Hint: Green's theorem states
-
-\[
-\int_{T} F d x+G d y=\int_{T^\circ}\left(\frac{\partial G}{\partial x}-\frac{\partial F}{\partial y}\right) d x d y
-.\]
-
-### 2.6.6 {#section-35}
-
-Suppose that \( f \) is holomorphic on a punctured open set \( \Omega\setminus\left\{{w_0}\right\} \) and let \( T\subset \Omega \) be a triangle containing \( w_0 \). Prove that if \( f \) is bounded near \( w_0 \), then \( \int_T f(z) ~dz = 0 \).
-
-### 2.6.7 {#section-36}
-
-Suppose \( f: {\mathbb{D}}\to {\mathbb{C}} \) is holomorphic and let \( d \coloneqq\sup_{z, w\in {\mathbb{D}}}{\left\lvert {f(z) - f(w)} \right\rvert} \) be the diameter of the image of \( f \). Show that \( 2 {\left\lvert {f'(0)} \right\rvert} \leq d \), and that equality holds iff \( f \) is linear, so \( f(z) = a_1 z + a_2 \).
-
-> Hint: \( 2f'(0) = \frac{1}{2\pi i} \int_{{\left\lvert {\xi } \right\rvert}= r} \frac{ f(\xi) - f(-\xi) }{\xi^2} ~d\xi \) whenever \( 0<r<1 \).
-
-### 2.6.8 {#section-37}
-
-Suppose that \( f \) is holomorphic on the strip \( S = \left\{{x+iy {~\mathrel{\Big|}~}x\in {\mathbb{R}},~ -1<y<1}\right\} \) with \( {\left\lvert {f(z)} \right\rvert} \leq A \qty{1 + {\left\lvert {z} \right\rvert}}^\nu \) for \( \nu \) some fixed real number. Show that for all \( z\in S \), for each integer \( n\geq 0 \) there exists an \( A_n \geq 0 \) such that \( {\left\lvert {f^{(n)}(x)} \right\rvert} \leq A_n (1 + {\left\lvert {x} \right\rvert})^\nu \) for all \( x\in {\mathbb{R}} \).
-
-> Hint: Use the Cauchy inequalities.
-
-### 2.6.9 {#section-38}
-
-Let \( \Omega \subset {\mathbb{C}} \) be open and bounded and \( \phi: \Omega \to \Omega \) holomorphic. Prove that if there exists a point \( z_0 \in \Omega \) such that \( \phi(z_0) = z_0 \) and \( \phi'(z_0) = 1 \), then \( \phi \) is linear.
-
-> Hint: assume \( z_0 = 0 \) (explain why this can be done) and write \( \phi(z) = z + a_n z^n + O(z^{n+1}) \) near \( 0 \). Let \( \phi_k = \phi \circ \phi \circ \cdots \circ \phi \) and prove that \( \phi_k(z) = z + ka_nz^n + O(z^{n+1}) \). Apply Cauchy's inequalities and let \( k\to \infty \) to conclude.
-
-### 2.6.10 {#section-39}
-
-Can every continuous function on \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \) be uniformly approximated by polynomials in the variable \( z \)?
-
-> Hint: compare to Weierstrass for the real interval.
-
-### 2.6.13 {#section-40}
-
-Suppose \( f \) is analytic, defined on all of \( {\mathbb{C}} \), and for each \( z_0 \in {\mathbb{C}} \) there is at least one coefficient in the expansion \( f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n \) is zero. Prove that \( f \) is a polynomial.
-
-> Hint: use the fact that \( c_n n! = f^{(n)}(z_0) \) and use a countability argument.
-
-### 2.6.14 {#section-41}
-
-Suppose that \( f \) is holomorphic in an open set containing \( {\mathbb{D}} \) except for a pole \( z_0 \in {{\partial}}{\mathbb{D}} \). Let \( \sum_{n=0}^\infty a_n z^n \) be the power series expansion of \( f \) in \( {\mathbb{D}} \), and show that \( \lim \frac{a_n}{a_{n+1}} = z_0 \).
-
-### 2.6.15 {#section-42}
+### Spring 20202 HW 2 \# 2.6.15
 
 Suppose \( f \) is continuous and nonvanishing on \( \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu \), and holomorphic in \( {\mathbb{D}} \). Prove that if \( {\left\lvert {z} \right\rvert} = 1 \implies {\left\lvert {f(z)} \right\rvert} = 1 \), then \( f \) is constant.
 
 > Hint: Extend \( f \) to all of \( {\mathbb{C}} \) by \( f(z) = 1/ \mkern 1.5mu\overline{\mkern-1.5muf(1/\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu)\mkern-1.5mu}\mkern 1.5mu \) for any \( {\left\lvert {z} \right\rvert} > 1 \), and argue as in the Schwarz reflection principle.
 
-## Additional Problems
+# Riemann Mapping and Casorati-Weierstrass
 
-### 1 {#section-43}
+### Spring 20202 HW 3 \# 4
 
-Let \( a_n\neq 0 \) and show that
-\[
-\lim_{n\to \infty} {{\left\lvert {a_{n+1}} \right\rvert} \over {\left\lvert {a_n} \right\rvert}} = L \implies \lim_{n\to\infty} {\left\lvert {a_n} \right\rvert}^{1\over n} = L
-.\]
+Let \( f \) be non-constant, analytic in \( {\left\lvert {z} \right\rvert} > 0 \), where \( f(z_n) = 0 \) for infinitely many points \( z_n \) with \( \lim_{n\to\infty} z_n = 0 \).
 
-In particular, this shows that when applicable, the ratio test can be used to calculate the radius of convergence of a power series.
+Show that \( z=0 \) is an essential singularity for \( f \).
 
-### 2 {#section-44}
+> Example: \( f(z) = \sin(1/z) \).
 
-Let \( f \) be a power series centered at the origin. Prove that \( f \) has a power series expansion about any point in its disc of convergence.
+## 10. {#section-6}
 
-### 3 {#section-45}
+Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called univalent) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
 
-Prove the following:
+### Tie's Extra Questions: Fall 2009
 
-a.  \( \sum_{n} nz^n \) does not converge at any point of \( S^1 \)
+Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called *univalent*) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
 
-b.  \( \sum_n {z^n \over n^2} \) converges at every point of \( S^1 \).
-
-c.  \( \sum_n {z^n \over n} \) converges at every point of \( S^1 \) except \( z=1 \).
-
-### 4 {#section-46}
-
-Without using Cauchy's integral formula, show that if \( {\left\lvert {a} \right\rvert} < r < {\left\lvert {b} \right\rvert} \), then
-\[
-\int_{\gamma} \frac{d z}{(z-\alpha)(z-\beta)}=\frac{2 \pi i}{\alpha-\beta}
-\]
-where \( \gamma \) denotes the circle centered at the origin of radius \( r \) with positive orientation.
-
-### 5 {#section-47}
-
-Assume \( f \) is continuous in the region \( \left\{{x+iy {~\mathrel{\Big|}~}x\geq x_0, ~ 0\leq y \leq b}\right\} \), and the following limit exists independent of \( y \):
-\[
-\lim_{x\to +\infty}f(x+iy) = A
-.\]
-
-Show that if \( \gamma_x \coloneqq\left\{{z = x+it {~\mathrel{\Big|}~}0 \leq t \leq b}\right\} \), then
-\[
-\lim_{x\to +\infty} \int_{\gamma_x} f(z) \,dz = iAb
-.\]
-
-### 6 {#section-48}
-
-Show by example that there exists a function \( f(z) \) that is holomorphic on \( \left\{{z\in {\mathbb{C}}{~\mathrel{\Big|}~}0 < {\left\lvert {z} \right\rvert} < 1}\right\} \) and for all \( r<1 \),
-\[
-\int_{{\left\lvert {z} \right\rvert} = r} f(z) \, dz = 0
-,\]
-but \( f \) is not holomorphic at \( z=0 \).
-
-### 7 {#section-49}
-
-Let \( f \) be analytic on a region \( R \) and suppose \( f'(z_0) \neq 0 \) for some \( z_0 \in R \). Show that if \( C \) is a circle of sufficiently small radius centered at \( z_0 \), then
-\[
-\frac{2 \pi i}{f^{\prime}\left(z_{0}\right)}=\int_{C} \frac{d z}{f(z)-f\left(z_{0}\right)}
-.\]
-
-> Hint: use the inverse function theorem.
-
-### 8 {#section-50}
-
-Assume two functions \( u, b: {\mathbb{R}}^2 \to {\mathbb{R}} \) have continuous partial derivatives at \( (x_0 ,y_0) \). Show that \( f \coloneqq u + iv \) has derivative \( f'(z_0) \) at \( z_0 = =x_0 + iy_0 \) if and only if
-\[
-\lim _{r \rightarrow 0} \frac{1}{\pi r^{2}} \int_{\left|z-z_{0}\right|=r} f(z) d z=0
-.\]
-
-### 9 (Cauchy's Formula for Exterior Regions)
-
-Let \( \gamma \) be a piecewise smooth simple closed curve with interior \( \Omega_1 \) and exterior \( \Omega_2 \). Assume \( f' \) exists in an open set containing \( \gamma \) and \( \Omega_2 \) with \( \lim_{z\to \infty} f(z) = A \). Show that
-\[
-\frac{1}{2 \pi i} \int_{\gamma} \frac{f(\xi)}{\xi-z} d \xi=\left\{\begin{array}{ll}
-A, & \text { if } z \in \Omega_{1} \\
--f(z)+A, & \text { if } z \in \Omega_{2}
-\end{array}\right.
-.\]
-
-### 10 {#section-51}
-
-Let \( f(z) \) be bounded and analytic in \( {\mathbb{C}} \). Let \( a\neq b \) be any fixed complex numbers. Show that the following limit exists:
-\[
-\lim_{R\to \infty} \int_{{\left\lvert {z} \right\rvert} = R} {f(z) \over (z-a)(z-b)} \,dz
-.\]
-
-Use this to show that \( f(z) \) must be constant.
-
-### 11 {#section-52}
-
-Suppose \( f(z) \) is entire and
-\[
-\lim_{z\to\infty} {f(z) \over z} = 0
-.\]
-
-Show that \( f(z) \) is a constant.
-
-### 12 {#section-53}
-
-Let \( f \) be analytic in a domain \( D \) and \( \gamma \) be a closed curve in \( D \). For any \( z_0\in D \) not on \( \gamma \), show that
-\[
-\int_{\gamma} \frac{f^{\prime}(z)}{\left(z-z_{0}\right)} d z=\int_{\gamma} \frac{f(z)}{\left(z-z_{0}\right)^{2}} d z
-.\]
-Give a generalization of this result.
-
-### 13 {#section-54}
-
-Compute
-\[
-\int_{{\left\lvert {z} \right\rvert} = 1} \qty{z + {1\over z}}^{2n} {dz \over z}
-\]
-and use it to show that
-\[
-\int_0^{2\pi} \cos^{2n}(\theta) \, d\theta = 2\pi \qty{1\cdot 3 \cdot 5 \cdots (2n-1) \over 2 \cdot 4 \cdot 6 \cdots (2n)}
-.\]
-
-# Spring 2020 Homework 3
-
-## Stein and Shakarchi
-
-### 3.8.1 {#section-55}
-
-Use the following formula to show that the complex zeros of \( \sin(\pi z) \) are exactly the integers, and they are each of order 1:
-\[
-\sin \pi z=\frac{e^{i \pi z}-e^{-i \pi z}}{2 i}
-.\]
-
-Calculate the residue of \( {1\over \sin(\pi z)} \) at \( z=n\in {\mathbb{Z}} \).
-
-### 3.8.2 {#section-56}
-
-Evaluate the integral
-\[
-\int_{\mathbb{R}}{dx \over 1 + x^4}
-.\]
-
-What are the poles of \( {1\over 1 + z^4} \) ?
-
-### 3.8.4 {#section-57}
-
-Show that
-\[
-\int_{-\infty}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x=\pi e^{-a}, \quad \text { for all } a>0
-.\]
-
-### 3.8.5 {#section-58}
-
-Show that if \( \xi\in {\mathbb{R}} \), then
-\[
-\int_{-\infty}^{\infty} \frac{e^{-2 \pi i x \xi}}{\left(1+x^{2}\right)^{2}} d x=\frac{\pi}{2}(1+2 \pi|\xi|) e^{-2 \pi|\xi|}
-.\]
-
-### 3.8.6 {#section-59}
-
-Show that
-\[
-\int_{-\infty}^{\infty} \frac{d x}{\left(1+x^{2}\right)^{n+1}}=\frac{1 \cdot 3 \cdot 5 \cdots(2 n-1)}{2 \cdot 4 \cdot 6 \cdots(2 n)} \cdot \pi
-.\]
-
-### 3.8.7 {#section-60}
-
-Show that
-\[
-\int_{0}^{2 \pi} \frac{d \theta}{(a+\cos \theta)^{2}}=\frac{2 \pi a}{\left(a^{2}-1\right)^{3 / 2}}, \quad \text { whenever } a>1
-.\]
-
-### 3.8.8 {#section-61}
-
-Show that if \( a,b\in {\mathbb{R}} \) with \( a > {\left\lvert {b} \right\rvert} \), then
-\[
-\int_{0}^{2 \pi} \frac{d \theta}{a+b \cos \theta}=\frac{2 \pi}{\sqrt{a^{2}-b^{2}}}
-.\]
-
-### 3.8.9 {#section-62}
-
-Show that
-\[
-\int_{0}^{1} \log (\sin \pi x) d x=-\log 2
-.\]
-
-> Hint: use the following contour.
->
-> ![](figures/image_2020-06-17-21-52-40.png)
-
-### 3.8.10 {#section-63}
-
-Show that if \( a>0 \), then
-\[
-\int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x=\frac{\pi}{2 a} \log a
-.\]
-
-> Hint: use the following contour.
->
-> ![](figures/image_2020-06-17-21-53-19.png)
-
-### 3.8.14 {#section-64}
+### Spring 20202 HW 3 \# 3.8.14
 
 Prove that all entire functions that are injective are of the form \( f(z) = az + b \) with \( a,b\in {\mathbb{C}} \) and \( a\neq 0 \).
 
 > Hint: Apply the Casorati-Weierstrass theorem to \( f(1/z) \).
 
-### 3.8.15 {#section-65}
+### Spring 20202 HW 3 \# 3.8.15
 
 Use the Cauchy inequalities or the maximum modulus principle to solve the following problems:
 
 a.  Prove that if \( f \) is an entire function that satisfies
     \[
-     \sup _{|z|=R}|f(z)| \leq A R^{k}+B
-     \]
+    \sup _{|z|=R}|f(z)| \leq A R^{k}+B
+    \]
     for all \( R>0 \), some integer \( k\geq 0 \), and some constants \( A, B > 0 \), then \( f \) is a polynomial of degree \( \leq k \).
 
 b.  Show that if \( f \) is holomorphic in the unit disc, is bounded, and converges uniformly to zero in the sector \( \theta < \arg(z) < \phi \) as \( {\left\lvert {z} \right\rvert} \to 0 \), then \( f \equiv 0 \).
 
 c.  Let \( w_1, \cdots w_n \) be points on \( S^1 \subset {\mathbb{C}} \). Prove that there exists a point \( z\in S^1 \) such that the product of the distances from \( z \) to the points \( w_j \) is at least 1.
 
-    Conclude that there exists a point \( w\in S^1 \) such that the product of the above distances is *exactly* 1.
+Conclude that there exists a point \( w\in S^1 \) such that the product of the above distances is *exactly* 1.
 
 d.  Show that if the real part of an entire function is bounded, then \( f \) is constant.
 
-### 3.8.17 {#section-66}
+### Spring 20202 HW 3 \# 3.8.17
 
 Let \( f \) be non-constant and holomorphic in an open set containing the closed unit disc.
 
 a.  Show that if \( {\left\lvert {f(z)} \right\rvert} = 1 \) whenever \( {\left\lvert {z} \right\rvert} = 1 \), then the image of \( f \) contains the unit disc.
 
-    > Hint: Show that \( f(z) = w_0 \) has a root for every \( w_0 \in {\mathbb{D}} \), for which it suffices to show that \( f(z) = 0 \) has a root. Conclude using the maximum modulus principle.
+> Hint: Show that \( f(z) = w_0 \) has a root for every \( w_0 \in {\mathbb{D}} \), for which it suffices to show that \( f(z) = 0 \) has a root. Conclude using the maximum modulus principle.
 
 b.  If \( {\left\lvert {f(z)} \right\rvert} \geq 1 \) whenever \( {\left\lvert {z} \right\rvert} = 1 \) and there exists a \( z_0\in {\mathbb{D}} \) such that \( {\left\lvert {f(z_0)} \right\rvert} < 1 \), then the image of \( f \) contains the unit disc.
 
-### 3.8.19 {#section-67}
+### Spring 20202 HW 3 \# 3.8.19
 
 Prove that maximum principle for harmonic functions, i.e.
 
@@ -1752,168 +1871,27 @@ b.  Suppose \( \Omega \) is a region with compact closure \( \mkern 1.5mu\overli
 
 > Hint: to prove (a), assume \( u \) attains a local maximum at \( z_0 \). Let \( f \) be holomorphic near \( z_0 \) with \( \Re(f) = u \), and show that \( f \) is not an open map. Then (a) implies (b).
 
-## Extra Problems
+### Spring 20202 HW 3 \# 9
 
-### 1 {#section-68}
+Let \( f \) be analytic in a region \( D \) and \( \gamma \) a rectifiable curve in \( D \) with interior in \( D \).
 
-Problem
-:   Prove that if \( f \) has two Laurent series expansions,
-    \[
-      f(z) = \sum c_n(z-a)^n \quad\text{and}\quad f(z) = \sum c_n'(z-a)^n
-      \]
-    then \( c_n = c_n' \).
+Prove that if \( f(z) \) is real for all \( z\in \gamma \), then \( f \) is constant.
 
-### 2 {#section-69}
+### Spring 20202 HW 3 \# 14
 
-Problem
-:   Find Laurent series expansions of
-    \[
-      \frac{1}{1-z^2} + \frac{1}{3-z}
-      \]
-    How many such expansions are there? In what domains are each valid?
+Let \( f \) be nonzero, analytic on a bounded region \( \Omega \) and continuous on its closure \( \overline \Omega \).
 
-### 3 {#section-70}
-
-Problem
-:   Let \( P, Q \) be polynomials with no common zeros. Assume \( a \) is a root of \( Q \). Find the principal part of \( P/Q \) at \( z=a \) in terms of \( P \) and \( Q \) if \( a \) is (1) a simple root, and (2) a double root.
-
-### 4 {#section-71}
-
-Problem
-
-:   Let \( f \) be non-constant, analytic in \( {\left\lvert {z} \right\rvert} > 0 \), where \( f(z_n) = 0 \) for infinitely many points \( z_n \) with \( \lim_{n\to\infty} z_n = 0 \).
-
-    Show that \( z=0 \) is an essential singularity for \( f \).
-
-    > Example: \( f(z) = \sin(1/z) \).
-
-### 5 {#section-72}
-
-Problem
-:   Show that if \( f \) is entire and \( \lim_{z\to\infty}f(z) = \infty \), then \( f \) is a polynomial.
-
-### 6 {#section-73}
-
-Problem
-
-:   ```{=tex}
-    \hfill
-    ```
-    a.  Show (without using 3.8.9 in the S&S) that
-        \[
-        \int_0^{2\pi} \log{\left\lvert {1 - e^{i\theta}} \right\rvert}~d\theta = 0
-        \]
-    b.  Show that this identity is equivalent to S&S 3.8.9:
-        \[
-        \int_0^1 \log(\sin(\pi x)) ~dx = -\log 2
-        .\]
-
-### 7 {#section-74}
-
-Problem
-:   Let \( 0<a<4 \) and evaluate
-    \[
-      \int_0^\infty \frac{x^{\alpha-1}}{1+x^3} ~dx
-      \]
-
-### 8 {#section-75}
-
-Problem
-
-:   Prove the fundamental theorem of Algebra using
-
-    a.  Rouche's Theorem.
-    b.  The maximum modulus principle.
-
-### 9 {#section-76}
-
-Problem
-
-:   Let \( f \) be analytic in a region \( D \) and \( \gamma \) a rectifiable curve in \( D \) with interior in \( D \).
-
-    Prove that if \( f(z) \) is real for all \( z\in \gamma \), then \( f \) is constant.
-
-### 10 {#section-77}
-
-Problem
-:   For \( a> 0 \), evaluate
-    \[
-      \int_0^{\pi/2} \frac{d\theta}{a + \sin^2 \theta}
-      \]
-
-### 11 {#section-78}
-
-Problem
-:   Find the number of roots of \( p(z) = 4z^4 - 6z + 3 \) in \( {\left\lvert {z} \right\rvert} < 1 \) and \( 1 < {\left\lvert {z} \right\rvert} < 2 \) respectively.
-
-### 12 {#section-79}
-
-Problem
-:   Prove that \( z^4 + 2z^3 -2z + 10 \) has exactly one root in each open quadrant.
-
-### 13 {#section-80}
-
-Problem
-:   Prove that for \( a> 0 \), \( z\tan z - a \) has only real roots.
-
-### 14 {#section-81}
-
-Problem
-
-:   Let \( f \) be nonzero, analytic on a bounded region \( \Omega \) and continuous on its closure \( \overline \Omega \).
-
-    Show that if \( {\left\lvert {f(z)} \right\rvert} \equiv M \) is constant for \( z\in \partial \Omega \), then \( f(z) \equiv Me^{i\theta} \) for some real constant \( \theta \).
+Show that if \( {\left\lvert {f(z)} \right\rvert} \equiv M \) is constant for \( z\in \partial \Omega \), then \( f(z) \equiv Me^{i\theta} \) for some real constant \( \theta \).
 
 # Extra Questions from Jingzhi Tie
 
-## Fall 2009
+## 16 {#section-7}
 
-### ? {#section-82}
+Let \( f(z) \) be analytic in an open set \( \Omega \) except possibly at a point \( z_0 \) inside \( \Omega \).
 
-(1) Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \). Show that for \( r <R \),
-    \[\frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta =
-    \sum_{n=0}^\infty |c_n|^2 r^{2n} \; .\]
+Show that if \( f(z) \) is bounded in near \( z_0 \), then \( \displaystyle \int_\Delta f(z) dz = 0 \) for all triangles \( \Delta \) in \( \Omega \).
 
-(2) Deduce Liouville's theorem from (1).
-
-### ? {#section-83}
-
-Let \( f \) be a continuous function in the region
-\[D=\{z {~\mathrel{\Big|}~}{\left\lvert {z} \right\rvert}>R, 0\leq \arg z\leq \theta\}\quad\text{where}\quad
-1\leq \theta \leq 2\pi.\]
-If there exists \( k \) such that \( \displaystyle{\lim_{z\to\infty} zf(z)=k} \) for \( z \) in the region \( D \). Show that
-\[\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,\]
-where \( L \) is the part of the circle \( |z|=R' \) which lies in the region \( D \).
-
-### ? {#section-84}
-
-Suppose that \( f \) is an analytic function in the region \( D \) which contains the point \( a \). Let
-\[F(z)= z-a-qf(z),\quad \text{where}~ q \ \text{is a complex
-parameter}.\]
-
-(1) Let \( K\subset D \) be a circle with the center at point \( a \) and also we assume that \( f(z)\not =0 \) for \( z\in K \). Prove that the function \( F \) has one and only one zero \( z=w \) on the closed disc \( \mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \) whose boundary is the circle \( K \) if \( \displaystyle{ |q|<\min_{z\in K} \frac{|z-a|}{|f(z)|}.} \)\
-
-(2) Let \( G(z) \) be an analytic function on the disk \( \mkern 1.5mu\overline{\mkern-1.5muK\mkern-1.5mu}\mkern 1.5mu \). Apply the residue theorem to prove that \( \displaystyle{ \frac{G(w)}{F'(w)}=\frac{1}{2\pi i}\int_K \frac{G(z)}{F(z)} dz,} \) where \( w \) is the zero from (1).\
-
-(3) If \( z\in K \), prove that the function \( \displaystyle{\frac{1}{F(z)}} \) can be represented as a convergent series with respect to \( q \): \( \displaystyle{ \frac{1}{F(z)}=\sum_{n=0}^{\infty} \frac{(qf(z))^n}{(z-a)^{n+1}}.} \)
-
-### ? {#section-85}
-
-Evaluate
-\[\displaystyle{ \int_{0}^{\infty}\frac{x\sin x}{x^2+a^2} \,
-dx }.\]
-
-### ? {#section-86}
-
-Let \( f=u+iv \) be differentiable (i.e. \( f'(z) \) exists) with continuous partial derivatives at a point \( z=re^{i\theta} \), \( r\not= 0 \). Show that
-\[\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta},\quad
-\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}.\]
-
-### ? {#section-87}
-
-Show that \( \displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}} \) using complex analysis, \( 0< a < n \). Here \( n \) is a positive integer.
-
-### ? {#section-88}
+### Tie's Extra Questions: Fall 2009
 
 For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\int_0^{\infty} e^{-t}t^{s-1} dt} \).
 
@@ -1924,73 +1902,23 @@ For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\
 
 > Hint: You may need \( \displaystyle{\Gamma(1-s)=t \int_0^{\infty}e^{-vt}(vt)^{-s} dv} \) for \( t>0 \).
 
-### ? {#section-89}
+## Fall 2009
 
-Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: If
-\[P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)\]
-is a polynomial of degree n, then it has n zeros in \( \mathbb C \).
-
-### ? {#section-90}
-
-Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that
-\[|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.\]
-Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least \( N \).
-
-### ? {#section-91}
-
-Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called *univalent*) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
-
-### ? {#section-92}
-
-Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 \).
-
-1.  Show that \( g \) has a unique fixed point in \( |z| < 1 \).
-
-2.  What happens if we replace \( |g(z)| < 1 \) with \( |g(z)|\leq 1 \) for \( |z|=1 \)? Give an example if (a) is not true or give an proof if (a) is still true.
-
-3.  What happens if we simply assume that \( f \) is analytic for \( |z| < 1 \) and \( |f(z)| < 1 \) for \( |z| < 1 \)? Suppose that \( f(z) \not\equiv z \). Can f have more than one fixed point in \( |z| < 1 \)?
-
-> Hint: The map \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) may be useful.
-
-### ? {#section-93}
-
-Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
-
-### ? {#section-94}
-
-Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded* open set \( \Omega \). Show without using Picard's theorems that \( f(z) \) is a constant.
-
-### ? {#section-95}
-
-(1) Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \). Show that for \( r <R \),
-    \[\frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta
-    = \sum_{n=0}^\infty |c_n|^2 r^{2n} \; .\]
-
-(2) Deduce Liouville's theorem from (1).
-
-### ? {#section-96}
-
-Let \( f(z) \) be entire and assume that \( f(z) \leq M |z|^2 \) outside some disk for some constant \( M \). Show that \( f(z) \) is a polynomial in \( z \) of degree \( \leq 2 \).
-
-### ? {#section-97}
-
-Let \( a_n(z) \) be an analytic sequence in a domain \( D \) such that \( \displaystyle \sum_{n=0}^\infty |a_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \). Show that \( \displaystyle \sum_{n=0}^\infty |a'_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
-
-### ? {#section-98}
+### Tie's Extra Questions: Fall 2009
 
 Let \( f(z) \) be analytic in an open set \( \Omega \) except possibly at a point \( z_0 \) inside \( \Omega \). Show that if \( f(z) \) is bounded in near \( z_0 \), then \( \displaystyle \int_\Delta f(z) dz = 0 \) for all triangles \( \Delta \) in \( \Omega \).
 
-### ? {#section-99}
+### Tie's Extra Questions: Fall 2009
 
 Assume \( f \) is continuous in the region: \( 0< |z-a| \leq R, \; 0 \leq \arg(z-a) \leq \beta_0 \) (\( 0 < \beta_0 \leq 2 \pi \)) and the limit \( \displaystyle \lim_{z \rightarrow a} (z-a) f(z) = A \) exists. Show that
 \[\lim_{r \rightarrow 0} \int_{\gamma_r} f(z) dz  = i A \beta_0 \; , \; \;\]
 where \( \gamma_r : = \{ z \; | \; z = a + r e^{it}, \; 0 \leq t \leq \beta_0 \}. \)
 
-### ? {#section-100}
+### Tie's Extra Questions: Fall 2009
 
 Show that \( f(z) = z^2 \) is uniformly continuous in any open disk \( |z| < R \), where \( R>0 \) is fixed, but it is not uniformly continuous on \( \mathbb C \).
 
-### ? {#section-101}
+### Tie's Extra Questions: Fall 2009
 
 (1) Show that the function \( u=u(x,y) \) given by
     \[u(x,y)=\frac{e^{ny}-e^{-ny}}{2n^2}\sin nx\quad \text{for}\ n\in {\mathbf N}\]
@@ -2001,15 +1929,7 @@ Show that \( f(z) = z^2 \) is uniformly continuous in any open disk \( |z| < R \
 
 ## Fall 2011
 
-### ? {#section-102}
-
-(1) Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \). Show that for \( r <R \),
-    \[\frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta =
-    \sum_{n=0}^\infty |c_n|^2 r^{2n} \; .\]
-
-(2) Deduce Liouville's theorem from (1).
-
-### ? {#section-103}
+### Tie's Extra Questions: Fall 2011
 
 Let \( f \) be a continuous function in the region
 \[D=\{z\ |  |z|>R, 0\leq \arg Z\leq \theta\}\quad\text{where}\quad
@@ -2018,7 +1938,7 @@ If there exists \( k \) such that \( \displaystyle{\lim_{z\to\infty} zf(z)=k} \)
 \[\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,\]
 where \( L \) is the part of the circle \( |z|=R' \) which lies in the region \( D \).
 
-### ? {#section-104}
+### Tie's Extra Questions: Fall 2011
 
 Suppose that \( f \) is an analytic function in the region \( D \) which contains the point \( a \). Let
 \[F(z)= z-a-qf(z),\quad \text{where}\quad q \ \text{is a complex
@@ -2030,21 +1950,21 @@ parameter}.\]
 
 (3) If \( z\in K \), prove that the function \( \displaystyle{\frac{1}{F(z)}} \) can be represented as a convergent series with respect to \( q \): \( \displaystyle{ \frac{1}{F(z)}=\sum_{n=0}^{\infty} \frac{(qf(z))^n}{(z-a)^{n+1}}.} \)
 
-### ? {#section-105}
+### Tie's Extra Questions: Fall 2011
 
 Evaluate \( \displaystyle{ \int_{0}^{\infty}\frac{x\sin x}{x^2+a^2} \, dx } \).
 
-### ? {#section-106}
+### Tie's Extra Questions: Fall 2011
 
 Let \( f=u+iv \) be differentiable (i.e. \( f'(z) \) exists) with continuous partial derivatives at a point \( z=re^{i\theta} \), \( r\not= 0 \). Show that
 \[\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta},\quad
 \frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}.\]
 
-### ? {#section-107}
+### Tie's Extra Questions: Fall 2011
 
 Show that \( \displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}} \) using complex analysis, \( 0< a < n \). Here \( n \) is a positive integer.
 
-### ? {#section-108}
+### Tie's Extra Questions: Fall 2011
 
 For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\int_0^{\infty} e^{-t}t^{s-1} dt} \).
 
@@ -2055,23 +1975,13 @@ For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\
 
 > Hint: You may need \( \displaystyle{\Gamma(1-s)=t \int_0^{\infty}e^{-vt}(vt)^{-s} dv} \) for \( t>0 \).
 
-### ? {#section-109}
+### Tie's Extra Questions: Fall 2011
 
 Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: If
 \[P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)\]
 is a polynomial of degree n, then it has n zeros in \( \mathbb C \).
 
-### ? {#section-110}
-
-Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that
-\[|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.\]
-Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least \( N \).
-
-### ? {#section-111}
-
-Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called univalent) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
-
-### ? {#section-112}
+### Tie's Extra Questions: Fall 2011
 
 Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 \).
 
@@ -2083,45 +1993,25 @@ Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 
 
 > Hint: The map \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) may be useful.
 
-### ? {#section-113}
+### Tie's Extra Questions: Fall 2011
 
 Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
 
-### ? {#section-114}
-
-Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded* open set \( \Omega \). Show without using Picard's theorems that \( f(z) \) is a constant.
-
-### ? {#section-115}
-
-Let \( f(z) \) be entire and assume values of \( f(z) \) lie outside a *bounded* open set \( \Omega \). Show without using Picard's theorems that \( f(z) \) is a constant.
-
-### ? {#section-116}
-
-(1) Assume \( \displaystyle f(z) = \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \). Show that for \( r <R \),
-    \[\frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta
-    = \sum_{n=0}^\infty |c_n|^2 r^{2n} \; .\]
-
-(2) Deduce Liouville's theorem from (1).
-
-### ? {#section-117}
+### Tie's Extra Questions: Fall 2011
 
 Let \( f(z) \) be entire and assume that \( f(z) \leq M |z|^2 \) outside some disk for some constant \( M \). Show that \( f(z) \) is a polynomial in \( z \) of degree \( \leq 2 \).
 
-### ? {#section-118}
-
-Let \( a_n(z) \) be an analytic sequence in a domain \( D \) such that \( \displaystyle \sum_{n=0}^\infty |a_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \). Show that \( \displaystyle \sum_{n=0}^\infty |a'_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
-
-### ? {#section-119}
+### Tie's Extra Questions: Fall 2011
 
 Let \( f(z) \) be analytic in an open set \( \Omega \) except possibly at a point \( z_0 \) inside \( \Omega \). Show that if \( f(z) \) is bounded in near \( z_0 \), then \( \displaystyle \int_\Delta f(z) dz = 0 \) for all triangles \( \Delta \) in \( \Omega \).
 
-### ? {#section-120}
+### Tie's Extra Questions: Fall 2011
 
 Assume \( f \) is continuous in the region: \( 0< |z-a| \leq R, \; 0 \leq \arg(z-a) \leq \beta_0 \) (\( 0 < \beta_0 \leq 2 \pi \)) and the limit \( \displaystyle \lim_{z \rightarrow a} (z-a) f(z) = A \) exists. Show that
 \[\lim_{r \rightarrow 0} \int_{\gamma_r} f(z) dz  = i A \beta_0 \; , \; \;\]
 where \( \gamma_r : = \{ z \; | \; z = a + r e^{it}, \; 0 \leq t \leq \beta_0 \}. \)
 
-### ? {#section-121}
+### Tie's Extra Questions: Fall 2011
 
 Show that \( f(z) = z^2 \) is uniformly continuous in any open disk \( |z| < R \), where \( R>0 \) is fixed, but it is not uniformly continuous on \( \mathbb C \).
 
@@ -2134,7 +2024,7 @@ Show that \( f(z) = z^2 \) is uniformly continuous in any open disk \( |z| < R \
 
 ## Spring 2014
 
-### ? {#section-122}
+### Tie's Extra Questions: Spring 2014
 
 The question provides some insight into Cauchy's theorem. Solve the problem without using the Cauchy theorem.
 
@@ -2144,38 +2034,21 @@ The question provides some insight into Cauchy's theorem. Solve the problem with
 
 3.  Show that if \( |a|<r<|b| \), then \( \displaystyle{\int_{\gamma}\frac{dz}{(z-a)(z-b)} dz=\frac{2\pi i}{a-b}} \). Here \( \gamma \) denotes the circle centered at the origin, of radius \( r \), with the positive orientation.
 
-### ? {#section-123}
-
-(1) Assume the infinite series \( \displaystyle \sum_{n=0}^\infty c_n z^n \) converges in \( |z| < R \) and let \( f(z) \) be the limit. Show that for \( r <R \),
-    \[\frac{1}{2 \pi} \int_0^{2 \pi} |f(r e^{i \theta})|^2 d \theta =
-    \sum_{n=0}^\infty |c_n|^2 r^{2n} \; .\]
-
-(2) Deduce Liouville's theorem from (1). Liouville's theorem: If \( f(z) \) is entire and bounded, then \( f \) is constant.
-
-### ? {#section-124}
-
-Let \( f \) be a continuous function in the region
-\[D=\{z\ |  |z|>R, 0\leq \arg Z\leq \theta\}\quad\text{where}\quad
-0\leq \theta \leq 2\pi.\]
-If there exists \( k \) such that \( \displaystyle{\lim_{z\to\infty} zf(z)=k} \) for \( z \) in the region \( D \). Show that
-\[\lim_{R'\to\infty} \int_{L} f(z) dz=i\theta k,\]
-where \( L \) is the part of the circle \( |z|=R' \) which lies in the region \( D \).
-
-### ? {#section-125}
+### Tie's Extra Questions: Spring 2014
 
 Evaluate \( \displaystyle{ \int_{0}^{\infty}\frac{x\sin x}{x^2+a^2} \, dx } \).
 
-### ? {#section-126}
+### Tie's Extra Questions: Spring 2014
 
 Let \( f=u+iv \) be differentiable (i.e. \( f'(z) \) exists) with continuous partial derivatives at a point \( z=re^{i\theta} \), \( r\not= 0 \). Show that
 \[\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta},\quad
 \frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}.\]
 
-### ? {#section-127}
+### Tie's Extra Questions: Spring 2014
 
 Show that \( \displaystyle \int_0^\infty \frac{x^{a-1}}{1+x^n} dx=\frac{\pi}{n\sin \frac{a\pi}{n}} \) using complex analysis, \( 0< a < n \). Here \( n \) is a positive integer.
 
-### ? {#section-128}
+### Tie's Extra Questions: Spring 2014
 
 For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\int_0^{\infty} e^{-t}t^{s-1} dt} \).
 
@@ -2186,23 +2059,23 @@ For \( s>0 \), the **gamma function** is defined by \( \displaystyle{\Gamma(s)=\
 
 > Hint: You may need \( \displaystyle{\Gamma(1-s)=t \int_0^{\infty}e^{-vt}(vt)^{-s} dv} \) for \( t>0 \).
 
-### ? {#section-129}
+### Tie's Extra Questions: Spring 2014
 
 Apply Rouché's Theorem to prove the Fundamental Theorem of Algebra: If
 \[P_n(z) = a_0 + a_1z + \cdots + a_{n-1}z^{n-1} + a_nz^n\quad  (a_n \neq 0)\]
 is a polynomial of degree n, then it has n zeros in \( \mathbf C \).
 
-### ? {#section-130}
+### Tie's Extra Questions: Spring 2014
 
 Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that
 \[|f(z)| \geq A |z|^N\ \text{for}\ |z| \geq R.\]
 Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least \( N \).
 
-### ? {#section-131}
+### Tie's Extra Questions: Spring 2014
 
 Let \( f: {\mathbb C} \rightarrow {\mathbb C} \) be an injective analytic (also called univalent) function. Show that there exist complex numbers \( a \neq 0 \) and \( b \) such that \( f(z) = az + b \).
 
-### ? {#section-132}
+### Tie's Extra Questions: Spring 2014
 
 Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 \).
 
@@ -2214,17 +2087,17 @@ Let \( g \) be analytic for \( |z|\leq 1 \) and \( |g(z)| < 1 \) for \( |z| = 1 
 
 > Hint: The map \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) may be useful.
 
-### ? {#section-133}
+### Tie's Extra Questions: Spring 2014
 
 Find a conformal map from \( D = \{z :\  |z| < 1,\ |z - 1/2| > 1/2\} \) to the unit disk \( \Delta=\{z: \ |z|<1\} \).
 
 ## Fall 2015
 
-### ? {#section-134}
+### Tie's Extra Questions: Fall 2015
 
 Let \( a_n \neq 0 \) and assume that \( \displaystyle \lim_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_n|} = L \). Show that \( \displaystyle \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} = L. %p_n^{\frac{1}{n}} = L. \) In particular, this shows that when applicable, the ratio test can be used to calculate the radius of convergence of a power series.
 
-### ? {#section-135}
+### Tie's Extra Questions: Fall 2015
 
 (a) Let \( z, w \) be complex numbers, such that \( \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu w \neq 1 \). Prove that
     \[{\left\lvert {\frac{w - z}{1 - \mkern 1.5mu\overline{\mkern-1.5muw\mkern-1.5mu}\mkern 1.5mu z}} \right\rvert} < 1 \; \; \; \mbox{if} \; |z| < 1 \; \mbox{and}\; |w| < 1,\]
@@ -2248,7 +2121,7 @@ Let \( a_n \neq 0 \) and assume that \( \displaystyle \lim_{n \rightarrow \infty
 
 > Hint: Calculate \( F \circ F \).
 
-### ? {#section-136}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Use \( n \)-th roots of unity (i.e. solutions of \( z^n - 1 =0 \)) to show that
 \[2^{n-1} \sin\frac{\pi}{n} \sin\frac{2\pi}{n} \cdots \sin\frac{(n-1)\pi}{n}
@@ -2268,7 +2141,7 @@ Use \( n \)-th roots of unity (i.e. solutions of \( z^n - 1 =0 \)) to show that
     \mbox{where} \; z = r e^{i \theta } \; \mbox{with} \; - \pi < \theta < \pi\]
     is a holomorphic function in the region \( r>0, \; - \pi < \theta < \pi \). Also show that \( \log z \) defined above is not continuous in \( r>0 \).
 
-### ? {#section-137}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Assume \( f \) is continuous in the region: \( x \geq x_0, \; 0 \leq y \leq b \) and the limit
 \[\displaystyle \lim_{x \rightarrow + \infty} f(x + iy) = A\]
@@ -2276,7 +2149,7 @@ exists uniformly with respect to \( y \) (independent of \( y \)). Show that
 \[\lim_{x \rightarrow + \infty} \int_{\gamma_x} f(z) dz  = iA b \; , \; \;\]
 where \( \gamma_x : = \{ z \; | \; z = x + it, \; 0 \leq t \leq b\}. \)
 
-### ? {#section-138}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 (Cauchy's formula for "exterior" region) Let \( \gamma \) be piecewise smooth simple closed curve with interior \( \Omega_1 \) and exterior \( \Omega_2 \). Assume \( f'(z) \) exists in an open set containing \( \gamma \) and \( \Omega_2 \) and \( \lim_{z \rightarrow \infty } f(z) = A \). Show that
 \[\frac{1}{2 \pi i} \int_\gamma \frac{f(\xi)}{\xi - z} \, d \xi =
@@ -2285,31 +2158,31 @@ A,          &     \text{if\ $z \in \Omega_1$}, \\
 -f (z) + A, &  \text{if\ $z \in \Omega_2$}
 \end{cases}\]
 
-### ? {#section-139}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Let \( f(z) \) be bounded and analytic in \( \mathbb C \). Let \( a \neq b \) be any fixed complex numbers. Show that the following limit exists
 \[\lim_{R \rightarrow \infty} \int_{|z|=R} \frac{f(z)}{(z-a)(z-b)} dz.\]
 Use this to show that \( f(z) \) must be a constant (Liouville's theorem).
 
-### ? {#section-140}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Prove by *justifying all steps* that for all \( \xi \in {\mathbb C} \) we have \( \displaystyle e^{- \pi \xi^2} = \int_{- \infty}^\infty e^{- \pi x^2} e^{2 \pi i x \xi} dx \; . \)
 
 > Hint: You may use that fact in Example 1 on p. 42 of the textbook without proof, i.e., you may assume the above is true for real values of \( \xi \).
 
-### ? {#section-141}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Suppose that \( f \) is holomorphic in an open set containing the closed unit disc, except for a pole at \( z_0 \) on the unit circle. Let \( \displaystyle %f(z) = \sum_{n = 1}^\infty a_n z^n f(z) = \sum_{n = 1}^\infty c_n z^n \) denote the the power series in the open disc. Show that (1) \( c_n \neq 0 \) for all large enough \( n \)'s, and (2) \( \displaystyle \lim_{n \rightarrow \infty} \frac{c_n}{c_{n+1}}= z_0 \).
 
-### ? {#section-142}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Let \( f(z) \) be a non-constant analytic function in \( |z|>0 \) such that \( f(z_n) = 0 \) for infinite many points \( z_n \) with \( \lim_{n \rightarrow \infty} z_n =0 \). Show that \( z=0 \) is an essential singularity for \( f(z) \). (An example of such a function is \( f(z) = \sin (1/z) \).)
 
-### ? {#section-143}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Let \( f \) be entire and suppose that \( \lim_{z \rightarrow \infty} f(z) = \infty \). Show that \( f \) is a polynomial.
 
-### ? {#section-144}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Expand the following functions into Laurent series in the indicated regions:
 
@@ -2317,19 +2190,19 @@ Expand the following functions into Laurent series in the indicated regions:
 
 (b) \( \displaystyle f(z) = \sin \frac{z}{1-z}, \; \; 0 < |z-1| < + \infty \)
 
-### ? {#section-145}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Assume \( f(z) \) is analytic in region \( D \) and \( \Gamma \) is a rectifiable curve in \( D \) with interior in \( D \). Prove that if \( f(z) \) is real for all \( z \in \Gamma \), then \( f(z) \) is a constant.
 
-### ? {#section-146}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Find the number of roots of \( z^4 - 6z + 3 =0 \) in \( |z|<1 \) and \( 1 < |z| < 2 \) respectively.
 
-### ? {#section-147}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Prove that \( z^4 + 2 z^3 - 2z + 10 =0 \) has exactly one root in each open quadrant.
 
-### ? {#section-148}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 (1) Let \( f(z) \in H({\mathbb D}) \), \( \text{Re}(f(z)) >0 \), \( f(0)= a>0 \). Show that
     \[|\frac{f(z)-a}{f(z)+a}| \leq |z|, \; \; \;
@@ -2337,28 +2210,24 @@ Prove that \( z^4 + 2 z^3 - 2z + 10 =0 \) has exactly one root in each open quad
 
 (2) Show that the above is still true if \( \text{Re}(f(z)) >0 \) is replaced with \( \text{Re}(f(z)) \geq 0 \).
 
-### ? {#section-149}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Assume \( f(z) \) is analytic in \( {\mathbb D} \) and \( f(0)=0 \) and is not a rotation (i.e. \( f(z) \neq e^{i \theta} z \)). Show that \( \displaystyle \sum_{n=1}^\infty f^{n}(z) \) converges uniformly to an analytic function on compact subsets of \( {\mathbb D} \), where \( f^{n+1}(z) = f(f^{n}(z)) \).
 
-### ? {#section-150}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Let \( f(z) = \sum_{n=0}^\infty c_n z^n \) be analytic and one-to-one in \( |z| < 1 \). For \( 0<r<1 \), let \( D_r \) be the disk \( |z|<r \). Show that the area of \( f(D_r) \) is finite and is given by
 \[S = \pi \sum_{n=1}^\infty n |c_n|^2 r^{2n}.\]
 (Note that in general the area of \( f(D_1) \) is infinite.)
 
-### ? {#section-151}
+### Tie's Extra Questions: Fall 2015\#\#\# Tie's Extra Questions: Fall 2015
 
 Let \( f(z) = \sum_{n= -\infty}^\infty c_n z^n \) be analytic and one-to-one in \( r_0< |z| < R_0 \). For \( r_0<r<R<R_0 \), let \( D(r,R) \) be the annulus \( r<|z|<R \). Show that the area of \( f(D(r,R)) \) is finite and is given by
 \[S = \pi \sum_{n=- \infty}^\infty n |c_n|^2 (R^{2n} - r^{2n}).\]
 
 ## Spring 2015
 
-### ? {#section-152}
-
-Let \( a_n(z) \) be an analytic sequence in a domain \( D \) such that \( \displaystyle \sum_{n=0}^\infty |a_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \). Show that \( \displaystyle \sum_{n=0}^\infty |a'_n(z)| \) converges uniformly on bounded and closed sub-regions of \( D \).
-
-### ? {#section-153}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f_n, f \) be analytic functions on the unit disk \( {\mathbb D} \). Show that the following are equivalent.
 
@@ -2366,42 +2235,42 @@ Let \( f_n, f \) be analytic functions on the unit disk \( {\mathbb D} \). Show 
 
 (ii) \( \int_{|z|= r} |f_n(z) - f(z)| \, |dz| \) converges to \( 0 \) if \( 0< r<1 \).
 
-### ? {#section-154}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) and \( g \) be non-zero analytic functions on a region \( \Omega \). Assume \( |f(z)| = |g(z)| \) for all \( z \) in \( \Omega \). Show that \( f(z) = e^{i \theta} g(z) \) in \( \Omega \) for some \( 0 \leq \theta < 2 \pi \).
 
-### ? {#section-155}
+### Tie's Extra Questions: Spring 2015
 
 Suppose \( f \) is analytic in an open set containing the unit disc \( \mathbb D \) and \( |f(z)| =1 \) when \( |z| \)=1. Show that either \( f(z) = e^{i \theta} \) for some \( \theta \in \mathbb R \) or there are finite number of \( z_k \in \mathbb D \), \( k \leq n \) and \( \theta \in \mathbb R \) such that \( \displaystyle f(z) = e^{i\theta} \prod_{k=1}^n \frac{z-z_k}{1 - \mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu_k z } \, . \)
 
 > Also cf. Stein et al, 1.4.7, 3.8.17
 
-### ? {#section-156}
+### Tie's Extra Questions: Spring 2015
 
 (1) Let \( p(z) \) be a polynomial, \( R>0 \) any positive number, and \( m \geq 1 \) an integer. Let \( M_R = \sup \{ |z^{m} p(z) - 1|: |z| = R \} \). Show that \( M_R>1 \).
 
 (2) Let \( m \geq 1 \) be an integer and \( K = \{z \in {\mathbb C}: r \leq |z| \leq R \} \) where \( r<R \). Show (i) using (1) as well as, (ii) without using (1) that there exists a positive number \( \varepsilon_0>0 \) such that for each polynomial \( p(z) \),
     \[\sup \{|p(z) - z^{-m}|: z \in K  \} \geq \varepsilon_0 \, .\]
 
-### ? {#section-157}
+### Tie's Extra Questions: Spring 2015
 
 Let \( \displaystyle f(z) = \frac{1}{z} + \frac{1}{z^2 -1} \). Find all the Laurent series of \( f \) and describe the largest annuli in which these series are valid.
 
-### ? {#section-158}
+### Tie's Extra Questions: Spring 2015
 
 Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that \( |f(z)| \leq A |z|^N \) for \( |z| \geq R \). Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at most \( N \).
 
-### ? {#section-159}
+### Tie's Extra Questions: Spring 2015
 
 Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N \) such that \( |f(z)| \geq A |z|^N \) for \( |z| \geq R \). Show that (i) \( f \) is a polynomial and (ii) the degree of \( f \) is at least \( N \).
 
-### ? {#section-160}
+### Tie's Extra Questions: Spring 2015
 
 (1) Explicitly write down an example of a non-zero analytic function in \( |z|<1 \) which has infinitely zeros in \( |z|<1 \).
 
 (2) Why does not the phenomenon in (1) contradict the uniqueness theorem?
 
-### ? {#section-161}
+### Tie's Extra Questions: Spring 2015
 
 (1) Assume \( u \) is harmonic on open set \( O \) and \( z_n \) is a sequence in \( O \) such that \( u(z_n) = 0 \) and \( \lim z_n \in O \). Prove or disprove that \( u \) is identically zero. What if \( O \) is a region?
 
@@ -2413,7 +2282,7 @@ Suppose \( f \) is entire and there exist \( A, R >0 \) and natural number \( N 
 
 > Hint: Verify the mean value property for your new function obtained by Schwarz reflection principle.
 
-### ? {#section-162}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) be holomorphic in a neighborhood of \( D_r(z_0) \). Show that for any \( s<r \), there exists a constant \( c>0 \) such that
 \[||f||_{(\infty, s)} \leq c ||f||_{(1, r)},\]
@@ -2421,13 +2290,13 @@ where \( \displaystyle |f||_{(\infty, s)} = \text{sup}_{z \in D_s(z_0)}|f(z)| \)
 
 > Note: Exercise 3.8.20 on p.107 in Stein et al is a straightforward consequence of this stronger result using the integral form of the Cauchy-Schwarz inequality in real analysis.
 
-### ? {#section-163}
+### Tie's Extra Questions: Spring 2015
 
 (1) Let \( f \) be analytic in \( \Omega: 0<|z-a|<r \) except at a sequence of poles \( a_n \in \Omega \) with \( \lim_{n \rightarrow \infty} a_n = a \). Show that for any \( w \in \mathbb C \), there exists a sequence \( z_n \in \Omega \) such that \( \lim_{n \rightarrow \infty} f(z_n) = w \).
 
 (2) Explain the similarity and difference between the above assertion and the Weierstrass-Casorati theorem.
 
-### ? {#section-164}
+### Tie's Extra Questions: Spring 2015
 
 Compute the following integrals.
 
@@ -2435,7 +2304,7 @@ Compute the following integrals.
 
 \( iv \) \( \displaystyle \int_0^{\frac{\pi}{2}} \frac{d \theta}{a+ \sin ^2 \theta}, \) \( a >0 \). (v) \( \displaystyle \int_{|z|=2} \frac{1}{(z^{5} -1) (z-3)} \, dz \) (v) \( \displaystyle \int_{- \infty}^{\infty} \frac{\sin \pi a}{\cosh \pi x + \cos \pi a} e^{- i x \xi} \, d x \), \( 0< a <1 \), \( \xi \in \mathbb R \) (vi) \( \displaystyle \int_{|z| = 1} \cot^2 z \, dz \).
 
-### ? {#section-165}
+### Tie's Extra Questions: Spring 2015
 
 Compute the following integrals.
 
@@ -2445,33 +2314,33 @@ Compute the following integrals.
 
 \( iii \) \( \displaystyle \int_0^\infty \frac{\log x}{1 + x^n} \, dx \), \( n \geq 2 \) (iv) \( \displaystyle \int_0^\infty \frac{\log x}{(1 + x^2)^2} dx \) (v) \( \displaystyle \int_0^{\pi} \log|1 - a \sin \theta| d \theta \), \( a \in \mathbb C \)
 
-### ? {#section-166}
+### Tie's Extra Questions: Spring 2015
 
 Let \( 0<r<1 \). Show that polynomials \( P_n(z) = 1 + 2z + 3 z^2 + \cdots + n z^{n-1} \) have no zeros in \( |z|<r \) for all sufficiently large \( n \)'s.
 
-### ? {#section-167}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) be an analytic function on a region \( \Omega \). Show that \( f \) is a constant if there is a simple closed curve \( \gamma \) in \( \Omega \) such that its image \( f(\gamma) \) is contained in the real axis.
 
-### ? {#section-168}
+### Tie's Extra Questions: Spring 2015
 
 (1) Show that \( \displaystyle \frac{\pi^2}{\sin^2 \pi z} \) and \( \displaystyle g(z) = \sum_{n = - \infty}^{ \infty} \frac{1}{(z-n)^2} \) have the same principal part at each integer point.
 
 (2) Show that \( \displaystyle h(z) = \frac{\pi^2}{\sin^2 \pi z} - g(z) \) is bounded on \( \mathbb C \) and conclude that \( \displaystyle \frac{\pi^2}{\sin^2 \pi z} = \sum_{n = - \infty}^{ \infty} \frac{1}{(z-n)^2} \, . \)
 
-### ? {#section-169}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f(z) \) be an analytic function on \( {\mathbb C} \backslash \{ z_0 \} \), where \( z_0 \) is a fixed point. Assume that \( f(z) \) is bijective from \( {\mathbb C} \backslash \{ z_0 \} \) onto its image, and that \( f(z) \) is bounded outside \( D_r(z_0) \), where \( r \) is some fixed positive number. Show that there exist \( a, b, c, d \in \mathbb C \) with \( ad-bc \neq 0 \), \( c \neq 0 \) such that \( \displaystyle f(z) = \frac{az + b}{cz + d} \).
 
-### ? {#section-170}
+### Tie's Extra Questions: Spring 2015
 
 Assume \( f(z) \) is analytic in \( {\mathbb D}: |z|<1 \) and \( f(0)=0 \) and is not a rotation (i.e. \( f(z) \neq e^{i \theta} z \)). Show that \( \displaystyle \sum_{n=1}^\infty f^{n}(z) \) converges uniformly to an analytic function on compact subsets of \( {\mathbb D} \), where \( f^{n+1}(z) = f(f^{n}(z)) \).
 
-### ? {#section-171}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) be a non-constant analytic function on \( \mathbb D \) with \( f(\mathbb D) \subseteq \mathbb D \). Use \( \psi_{a} (f(z)) \) (where \( a=f(0) \), \( \displaystyle \psi_a(z) = \frac{a - z}{1 - \mkern 1.5mu\overline{\mkern-1.5mua\mkern-1.5mu}\mkern 1.5muz} \)) to prove that \( \displaystyle \frac{|f(0)| - |z|}{1 + |f(0)||z|} \leq |f(z)| \leq \frac{|f(0)| + |z|}{1 - |f(0)||z|} \).
 
-### ? {#section-172}
+### Tie's Extra Questions: Spring 2015
 
 Find a conformal map
 
@@ -2482,20 +2351,20 @@ Find a conformal map
 3.  from the intersection of the disk \( |z + i| < \sqrt{2} \) with \( {\mathbb H} \) to \( {\mathbb D} \).
 
 4.  from \( {\mathbb D} \backslash [a, 1) \) to \( {\mathbb D} \backslash [0, 1) \) (\( 0<a<1) \).
-    \[ Short solution
-    possible using Blaschke factor\]
+
+    > Short solution possible using Blaschke factor.
 
 5.  from \( \{ z: |z| < 1, \text{Re}(z) > 0 \} \backslash (0, 1/2] \) to \( \mathbb H \).
 
-### ? {#section-173}
+### Tie's Extra Questions: Spring 2015
 
 Let \( C \) and \( C' \) be two circles and let \( z_1 \in C \), \( z_2 \notin C \), \( z'_1 \in C' \), \( z'_2 \notin C' \). Show that there is a unique fractional linear transformation \( f \) with \( f(C) = C' \) and \( f(z_1) = z'_1 \), \( f(z_2) = z'_2 \).
 
-### ? {#section-174}
+### Tie's Extra Questions: Spring 2015
 
 Assume \( f_n \in H(\Omega) \) is a sequence of holomorphic functions on the region \( \Omega \) that are uniformly bounded on compact subsets and \( f \in H(\Omega) \) is such that the set \( \displaystyle \{z \in \Omega: \lim_{n \rightarrow \infty} f_n(z) = f(z) \} \) has a limit point in \( \Omega \). Show that \( f_n \) converges to \( f \) uniformly on compact subsets of \( \Omega \).
 
-### ? {#section-175}
+### Tie's Extra Questions: Spring 2015
 
 Let \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) with \( |\alpha|<1 \) and \( {\mathbb D}=\{z:\ |z|<1\} \). Prove that
 
@@ -2503,29 +2372,29 @@ Let \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\m
 
 -   \( \displaystyle{\frac{1}{\pi}\iint_{{\mathbb D}} |\psi'_{\alpha}| dx dy =\frac{1-|\alpha|^2}{|\alpha|^2} \log \frac{1}{1-|\alpha|^2}} \).
 
-### ? {#section-176}
+### Tie's Extra Questions: Spring 2015
 
 Prove that \( \displaystyle{f(z)=-\frac{1}{2}\left(z+\frac{1}{z}\right)} \) is a conformal map from half disc \( \{z=x+iy:\ |z|<1,\ y>0\} \) to upper half plane \( {\mathbb H}=\{z=x+iy:\ y>0\} \).
 
-### ? {#section-177}
+### Tie's Extra Questions: Spring 2015
 
 Let \( \Omega \) be a simply connected open set and let \( \gamma \) be a simple closed contour in \( \Omega \) and enclosing a bounded region \( U \) anticlockwise. Let \( f: \ \Omega \to {\mathbb C} \) be a holomorphic function and \( |f(z)|\leq M \) for all \( z\in \gamma \). Prove that \( |f(z)|\leq M \) for all \( z\in U \).
 
-### ? {#section-178}
+### Tie's Extra Questions: Spring 2015
 
 Compute the following integrals. (i) \( \displaystyle \int_0^\infty \frac{x^{a-1}}{1 + x^n} \, dx \), \( 0< a < n \) (ii) \( \displaystyle \int_0^\infty \frac{\log x}{(1 + x^2)^2}\, dx \)
 
-### ? {#section-179}
+### Tie's Extra Questions: Spring 2015
 
 Let \( 0<r<1 \). Show that polynomials \( P_n(z) = 1 + 2z + 3 z^2 + \cdots + n z^{n-1} \) have no zeros in \( |z|<r \) for all sufficiently large \( n \)'s.
 
-### ? {#section-180}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) be holomorphic in a neighborhood of \( D_r(z_0) \). Show that for any \( s<r \), there exists a constant \( c>0 \) such that
 \[\|f\|_{(\infty, s)} \leq c \|f\|_{(1, r)},\]
 where \( \displaystyle \|f\|_{(\infty, s)} = \text{sup}_{z \in D_s(z_0)}|f(z)| \) and \( \displaystyle \|f\|_{(1, r)} = \int_{D_r(z_0)} |f(z)|dx dy \).
 
-### ? {#section-181}
+### Tie's Extra Questions: Spring 2015
 
 Let \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5muz}} \) with \( |\alpha|<1 \) and \( {\mathbb D}=\{z:\ |z|<1\} \). Prove that
 
@@ -2535,19 +2404,19 @@ Let \( \displaystyle{\psi_{\alpha}(z)=\frac{\alpha-z}{1-\mkern 1.5mu\overline{\m
 
 Prove that \( \displaystyle{f(z)=-\frac{1}{2}\left(z+\frac{1}{z}\right)} \) is a conformal map from half disc \( \{z=x+iy:\ |z|<1,\ y>0\} \) to upper half plane \( \mathbb H=\{z=x+iy:\ y>0\} \).
 
-### ? {#section-182}
+### Tie's Extra Questions: Spring 2015
 
 Let \( \Omega \) be a simply connected open set and let \( \gamma \) be a simple closed contour in \( \Omega \) and enclosing a bounded region \( U \) anticlockwise. Let \( f: \ \Omega \to {\mathbb C} \) be a holomorphic function and \( |f(z)|\leq M \) for all \( z\in \gamma \). Prove that \( |f(z)|\leq M \) for all \( z\in U \).
 
-### ? {#section-183}
+### Tie's Extra Questions: Spring 2015
 
 Compute the following integrals. (i) \( \displaystyle \int_0^\infty \frac{x^{a-1}}{1 + x^n} \, dx \), \( 0< a < n \) (ii) \( \displaystyle \int_0^\infty \frac{\log x}{(1 + x^2)^2}\, dx \)
 
-### ? {#section-184}
+### Tie's Extra Questions: Spring 2015
 
 Let \( 0<r<1 \). Show that polynomials \( P_n(z) = 1 + 2z + 3 z^2 + \cdots + n z^{n-1} \) have no zeros in \( |z|<r \) for all sufficiently large \( n \)'s.
 
-### ? {#section-185}
+### Tie's Extra Questions: Spring 2015
 
 Let \( f \) be holomorphic in a neighborhood of \( D_r(z_0) \). Show that for any \( s<r \), there exists a constant \( c>0 \) such that
 \[\|f\|_{(\infty, s)} \leq c \|f\|_{(1, r)},\]
@@ -2555,7 +2424,7 @@ where \( \displaystyle \|f\|_{(\infty, s)} = \text{sup}_{z \in D_s(z_0)}|f(z)| \
 
 ## Fall 2016
 
-### ? {#section-186}
+### Tie's Extra Questions: Fall 2016
 
 Let \( u(x,y) \) be harmonic and have continuous partial derivatives of order three in an open disc of radius \( R>0 \).
 
@@ -2570,7 +2439,7 @@ Let \( u(x,y) \) be harmonic and have continuous partial derivatives of order th
 
     (ii) Prove that \( v(x,y) \) is harmonic in this disc.
 
-### ? {#section-187}
+### Tie's Extra Questions: Fall 2016
 
 (a) \( f(z)= u(x,y) +i v(x,y) \) be analytic in a domain \( D\subset {\mathbb C} \). Let \( z_0=(x_0,y_0) \) be a point in \( D \) which is in the intersection of the curves \( u(x,y)= c_1 \) and \( v(x,y)=c_2 \), where \( c_1 \) and \( c_2 \) are constants. Suppose that \( f'(z_0)\neq 0 \). Prove that the lines tangent to these curves at \( z_0 \) are perpendicular.
 
@@ -2583,7 +2452,7 @@ Let \( u(x,y) \) be harmonic and have continuous partial derivatives of order th
 ```
 (ii) What are the angles of intersections between the level curves \( \mbox{\textrm Re}{(f)}=0 \) and \( \mbox{\textrm Im}{(f)} \)? Is your answer in agreement with part a) of this question?
 
-### ? {#section-188}
+### Tie's Extra Questions: Fall 2016
 
 (a) \( f: D\rightarrow {\mathbb C} \) be a continuous function, where \( D\subset {\mathbb C} \) is a domain.Let \( \alpha:[a,b]\rightarrow D \) be a smooth curve. Give a precise definition of the *complex line integral*
     \[\int_{\alpha} f.\]
@@ -2593,7 +2462,7 @@ Let \( u(x,y) \) be harmonic and have continuous partial derivatives of order th
 
 (c) Let \( C_R \) be the circle \( |z|=R \), described in the counterclockwise direction, where \( R>1 \). Provide an upper bound for \( \big | \int_{C_R} \dfrac{\log{(z)} }{z^2} \big |, \) which depends [only]{.ul} on \( R \) and other constants.
 
-### ? {#section-189}
+### Tie's Extra Questions: Fall 2016
 
 (a) Let Let \( f:{\mathbb C}\rightarrow {\mathbb C} \) be an entire function. Assume the existence of a non-negative integer \( m \), and of positive constants \( L \) and \( R \), such that for all \( z \) with \( |z|>R \) the inequality
     \[|f(z)| \leq L |z|^m\]
@@ -2603,27 +2472,73 @@ Let \( u(x,y) \) be harmonic and have continuous partial derivatives of order th
     \[\mbox{\textrm Re} (f) \leq M.\]
     Prove that \( f \) must be a constant.
 
-### ? {#section-190}
+### Tie's Extra Questions: Fall 2016
 
 Prove that all the roots of the complex polynomial
 \[z^7 - 5 z^3 +12 =0\]
 lie between the circles \( |z|=1 \) and \( |z|=2 \).
 
-### ? {#section-191}
+### Tie's Extra Questions: Fall 2016
 
 (a) Let \( F \) be an analytic function inside and on a simple closed curve \( C \), except for a pole of order \( m\geq 1 \) at \( z=a \) inside \( C \). Prove that
 
-\[\frac{1}{2 \pi i}\oint_{C} F(\tau) d\tau = 
+\[\frac{1}{2 \pi i}\oint_{C} F(\tau) d\tau =
 \lim_{\tau\rightarrow a} \frac{d^{m-1}}{d\tau^{m-1}}\big((\tau-a)^m F(\tau))\big).\]
 
 (b) Evaluate
     \[\oint_{C}\frac{e^{\tau}}{(\tau^2+\pi^2)^2}d\tau\]
     where \( C \) is the circle \( |z|=4 \).
 
-### ? {#section-192}
+### Tie's Extra Questions: Fall 2016
 
 Find the conformal map that takes the upper half-plane comformally onto the half-strip \( \{ w=x+iy:\ -\pi/2<x<\pi/2\ y>0\} \).
 
-### ? {#section-193}
+### Tie's Extra Questions: Fall 2016
 
 Compute the integral \( \displaystyle{\int_{-\infty}^{\infty} \frac{e^{-2\pi ix\xi}}{\cosh\pi x}dx} \) where \( \displaystyle{\cosh z=\frac{e^{z}+e^{-z}}{2}} \).
+
+# Fall 2021
+
+## Fall 2021 \#1
+
+Let \( f(z) \) be an analytic function on \( |z|<1 \). Prove that \( f(z) \) is necessarily a constant if \( f(\mkern 1.5mu\overline{\mkern-1.5muz\mkern-1.5mu}\mkern 1.5mu) \) is also analytic.
+
+## Fall 2021 \#2
+
+Let \( \gamma(t) \) be a piecewise smooth curve in \( \mathbb{C}, t \in[0,1] \). Let \( F(w) \) be a continuous function on \( \gamma \). Show that \( f(z) \) defined by
+\[
+f(z):=\int_{\gamma} \frac{F(w)}{w-z} d w
+\]
+is analytic on the complement of the curve \( \gamma \).
+
+## Fall 2021 \#3
+
+Suppose \( n \geq 2 \). Use a wedge of angle \( \frac{2 \pi}{n} \) to evaluate the integral
+\[
+I=\int_{0}^{\infty} \frac{1}{1+x^{n}} d x
+\]
+
+## Fall 2021 \#4
+
+Prove that the sequence \( \left(1+\frac{z}{n}\right)^{n} \) converges uniformly to \( e^{z} \) on compact subsets of \( \mathbb{C} \).
+
+> Hint: \( e^{\pi \log w_{n}}=w_{n}^{n} \) and \( e^{x} \) is uniform continuous on compact subsets of \( \mathbb{C} \).
+
+## Fall 2021 \#5
+
+Assume \( f \) is an entire function such that \( |f(z)|=1 \) on \( |z|=1 \). Prove that \( f(z)=e^{i \theta} z^{n} \), where \( \theta \) is a real number and \( n \) a non-negative integer.
+
+> Suggestion: First use the maximum and minimum modulus theorem to show
+> \[f(z)=e^{i \theta} \prod_{k=1}^{n} \frac{z-z_{k}}{1-\mkern 1.5mu\overline{\mkern-1.5muz_{k}\mkern-1.5mu}\mkern 1.5mu z}\]
+> if \( f \) has zeros.
+
+## Fall 2021 \#6
+
+Show that if \( f: D(0, R) \rightarrow \mathbb{C} \) is holomorphic, with \( |f(z)| \leq M \) for some \( M>0 \), then
+\[
+\left|\frac{f(z)-f(0)}{M^{2}-\overline{f(0)} f(z)}\right| \leq \frac{|z|}{M R} .
+\]
+
+## Fall 2021 \#7
+
+Find a conformal map from the intersection of \( |z-1|<2 \) and \( |z+1|<2 \) to the upper half plane.
