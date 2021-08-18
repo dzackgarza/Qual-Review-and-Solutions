@@ -4875,3 +4875,422 @@ Apply Fubini-Tonelli to commute two sums:
 &\coloneqq\sum_{1\leq k \leq M} \mu(E_k)
 .\]
 :::
+
+# Midterm Exam 2 (December 2014)
+
+## 1 {#section}
+
+> Note: (a) is a repeat.
+
+-   Let \( \Lambda\in L^2(X) {}^{ \vee } \).
+    -   Show that \( M\coloneqq\left\{{f\in L^2(X) {~\mathrel{\Big|}~}\Lambda(f) = 0}\right\} \subseteq L^2(X) \) is a closed subspace, and \( L^2(X) = M \oplus M\perp \).
+    -   Prove that there exists a unique \( g\in L^2(X) \) such that \( \Lambda(f) = \int_X g \mkern 1.5mu\overline{\mkern-1.5muf\mkern-1.5mu}\mkern 1.5mu \).
+
+## 2 {#section-1}
+
+a.  In parts:
+
+-   Given a definition of \( L^\infty({\mathbb{R}}^n) \).
+-   Verify that \( {\left\lVert {{-}} \right\rVert}_\infty \) defines a norm on \( L^\infty({\mathbb{R}}^n) \).
+-   Carefully proved that \( (L^\infty({\mathbb{R}}^n), {\left\lVert {{-}} \right\rVert}_\infty) \) is a Banach space.
+
+b.  Prove that for any measurable \( f:{\mathbb{R}}^n \to {\mathbb{C}} \),
+    \[
+    L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \subset L^2({\mathbb{R}}^n) {\quad \operatorname{and} \quad} {\left\lVert {f} \right\rVert}_2 \leq {\left\lVert {f} \right\rVert}_1^{1\over 2} \cdot {\left\lVert {f} \right\rVert}_\infty^{1\over 2}
+    .\]
+
+## 3 {#section-2}
+
+a.  Prove that if \( f, g: {\mathbb{R}}^n\to {\mathbb{C}} \) is both measurable then \( F(x, y) \coloneqq f(x) \) and \( h(x, y)\coloneqq f(x-y) g(y) \) is measurable on \( {\mathbb{R}}^n\times{\mathbb{R}}^n \).
+
+b.  Show that if \( f\in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) and \( g\in L^1({\mathbb{R}}^n) \), then \( f\ast g \in L^1({\mathbb{R}}^n) \cap L^\infty({\mathbb{R}}^n) \) is well defined, and carefully show that it satisfies the following properties:
+    \[
+    {\left\lVert {f\ast g} \right\rVert}_\infty &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_\infty
+    {\left\lVert {f\ast g} \right\rVert}_1      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_1
+    {\left\lVert {f\ast g} \right\rVert}_2      &\leq {\left\lVert {g} \right\rVert}_1 {\left\lVert {f} \right\rVert}_2
+    .\]
+
+> Hint: first show \( {\left\lvert {f\ast g} \right\rvert}^2 \leq {\left\lVert {g} \right\rVert}_1 \qty{ {\left\lvert {f} \right\rvert}^2 \ast {\left\lvert {g} \right\rvert}} \).
+
+## 4 (Weierstrass Approximation Theorem)
+
+> Note: (a) is a repeat.
+
+Let \( f: [0, 1]\to {\mathbb{R}} \) be continuous, and prove the Weierstrass approximation theorem: for any \( {\varepsilon}> 0 \) there exists a polynomial \( P \) such that \( {\left\lVert {f - P} \right\rVert}_{\infty} < {\varepsilon} \).
+
+# Midterm Exam 1 (October 2018)
+
+## Problem 1
+
+`\label{equivalence_of_approximating_measures}`{=tex} Let \( E \subseteq {\mathbb{R}}^n \) be bounded. Prove the following are equivalent:
+
+1.  For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that
+    \[
+    F \subseteq E \subseteq G && m(G\setminus F) < \epsilon
+    .\]
+
+2.  There exists a \( G_ \delta \) set \( V \) and an \( F_ \sigma \) set \( H \) such that
+    \[
+    m(V\setminus H) = 0
+    .\]
+
+## Problem 2
+
+Let \( \left\{{ f_k }\right\} _{k=1}^{\infty } \) be a sequence of extended real-valued Lebesgue measurable functions.
+
+a.  Prove that \( \sup_k f_k \) is a Lebesgue measurable function.
+
+b.  Prove that if \( \lim_{k \to \infty } f_k(x) \) exists for every \( x \in {\mathbb{R}}^n \) then \( \lim_{k\to \infty } f_k \) is also a measurable function.
+
+## Problem 3
+
+### a
+
+Prove that if \( E \subseteq {\mathbb{R}}^n \) is a Lebesgue measurable set, then for any \( h \in {\mathbb{R}} \) the set
+\[
+E+h \coloneqq\left\{{x + h {~\mathrel{\Big|}~}x\in E }\right\}
+\]
+is also Lebesgue measurable and satisfies \( m(E + h) = m(E) \).
+
+### b
+
+Prove that if \( f \) is a non-negative measurable function on \( {\mathbb{R}}^n \) and \( h\in {\mathbb{R}}^n \) then the function
+\[
+\tau_h d(x) \coloneqq f(x-h)
+\]
+is a non-negative measurable function and
+\[
+\int f(x) \,dx= \int f(x-h) \,dx
+.\]
+
+## Problem 4
+
+Let \( f: {\mathbb{R}}^n\to {\mathbb{R}} \) be a Lebesgue measurable function.
+
+a.  Prove that for all \( \alpha> 0 \) ,
+    \[
+    A_ \alpha  \coloneqq\left\{{x\in {\mathbb{R}}^n {~\mathrel{\Big|}~}{\left\lvert { f(x) } \right\rvert} > \alpha}\right\} \implies m(A_ \alpha) \leq {1\over \alpha} \int {\left\lvert {f (x)} \right\rvert} \,dx
+    .\]
+
+b.  Prove that
+    \[
+    \int {\left\lvert { f(x) } \right\rvert} \,dx= 0 \iff f = 0 \text{ almost everywhere}
+    .\]
+
+## Problem 5
+
+Let \( \left\{{ f_k }\right\}_{k=1}^{\infty } \subseteq L^2([0, 1]) \) be a sequence which *converges in \( L^1 \)* to a function \( f \).
+
+a.  Prove that \( f\in L^1([0, 1]) \).
+
+b.  Give an example illustrating that \( f_k \) may not converge to \( f \) almost everywhere.
+
+c.  Prove that \( \left\{{f_k}\right\} \) must contain a subsequence that converges to \( f \) almost everywhere.
+
+# Midterm Exam 2 (November 2018)
+
+## Problem 1
+
+Let \( f, g\in L^1([0, 1]) \), define \( F(x) = \int_0^x f(y)\,dy \) and \( G(x) = \int_0^x g(y)\,dy \), and show
+\[
+\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
+.\]
+
+## Problem 2
+
+Let \( \phi\in L^1({\mathbb{R}}^n) \) such that \( \int \phi = 1 \) and define \( \phi_t(x) = t^{-n}\phi(t^{-1}x) \). Show that if \( f \) is bounded and uniformly continuous then \( f\ast \phi_t \overset{t\to 0}\to f \) uniformly.
+
+## Problem 3
+
+Let \( g\in L^\infty([0, 1]) \).
+
+a.  Prove
+    \[
+    {\left\lVert {g} \right\rVert}_{L^p([0, 1])}  \overset{p\to\infty}\to {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])}
+    .\]
+
+b.  Prove that the map
+    \[
+    \Lambda_g: L^1([0, 1]) &\to {\mathbb{C}}\\
+    f &\mapsto \int_0^1 fg
+    \]
+    defines an element of \( L^1([0, 1]) {}^{ \vee } \) with \( {\left\lVert {\Lambda_g} \right\rVert}_{L^1([0, 1]) {}^{ \vee }}= {\left\lVert {g} \right\rVert}_{L^\infty([0, 1])} \).
+
+## Problem 4
+
+See `\cref{hilbert_space_exam_question}`{=tex}
+
+# Practice Exam (November 2014)
+
+## Problem 1
+
+Let \( m_*(E) \) denote the Lebesgue outer measure of a set \( E \subseteq {\mathbb{R}}^n \).
+
+a.  Prove using the definition of Lebesgue outer measure that
+    \[
+    m \qty{ \displaystyle\bigcup_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
+    .\]
+
+b.  Prove that for any \( E \subseteq {\mathbb{R}}^n \) and any \( \epsilon> 0 \) there exists an open set \( G \) with \( E \subseteq G \) and
+    \[
+    m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
+    .\]
+
+## Problem 2
+
+a.  See `\cref{equivalence_of_approximating_measures}`{=tex}
+
+b.  Let \( f_k \) be a sequence of extended real-valued Lebesgue measurable function.
+
+    i.  Prove that \( \inf_k f_k, \sup_k f_k \) are both Lebesgue measurable function.
+
+        *Hint: argue that*
+        \[
+        \left\{{x {~\mathrel{\Big|}~}\inf_k f_k(x) < a}\right\} = \displaystyle\bigcup_k \left\{{x {~\mathrel{\Big|}~}f_k(x) < a}\right\}
+        .\]
+
+    ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
+
+## Problem 3
+
+a.  Prove that if \( f, g\in L^+({\mathbb{R}}) \) then
+    \[
+    \int(f +g) = \int f + \int g
+    .\]
+    Extend this to establish that if \( \left\{{ f_k}\right\} \subseteq L^+({\mathbb{R}}^n) \) then
+    \[
+      \int \sum_k f_k = \sum_k \int f_k
+      .\]
+
+b.  Let \( \left\{{E_j}\right\}_{j\in {\mathbb{N}}} \subseteq \mathcal{M}({\mathbb{R}}^n) \) with \( E_j \nearrow E \). Use the countable additivity of \( \mu_f \) on \( \mathcal{M}({\mathbb{R}}^n) \) established above to show that
+    \[
+      \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
+      .\]
+
+## Problem 4
+
+a.  Show that \( f\in L^1({\mathbb{R}}^n) \implies {\left\lvert {f(x)} \right\rvert} < \infty \) almost everywhere.
+
+b.  Show that if \( \left\{{f_k}\right\} \subseteq L^1({\mathbb{R}}^n) \) with \( \sum {\left\lVert {f_k} \right\rVert}_1 < \infty \) then \( \sum f_k \) converges almost everywhere and in \( L^1 \).
+
+c.  Use the Dominated Convergence Theorem to evaluate
+    \[
+    \lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \,dx
+    .\]
+
+# Practice Exam (November 2014)
+
+## 1: Fubini-Tonelli
+
+a.  Carefully state Tonelli's theorem for a nonnegative function \( F(x, t) \) on \( {\mathbb{R}}^n\times{\mathbb{R}} \).
+
+b.  Let \( f:{\mathbb{R}}^n\to [0, \infty] \) and define
+    \[
+    {\mathcal{A}}\coloneqq\left\{{(x, t) \in {\mathbb{R}}^n\times{\mathbb{R}}{~\mathrel{\Big|}~}0\leq t \leq f(x)}\right\}
+    .\]
+
+    Prove the validity of the following two statements:
+
+    1.  \( f \) is Lebesgue measurable on \( {\mathbb{R}}^{n} \iff {\mathcal{A}} \) is a Lebesgue measurable subset of \( {\mathbb{R}}^{n+1} \).
+    2.  If \( f \) is Lebesgue measurable on \( {\mathbb{R}}^n \) then
+        \[
+        m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}{~\mathrel{\Big|}~}f(x) \geq t\right\}\right) d t
+        .\]
+
+## 2: Convolutions and the Fourier Transform
+
+a.  Let \( f, g\in L^1({\mathbb{R}}^n) \) and give a definition of \( f\ast g \).
+
+b.  Prove that if \( f, g \) are integrable and bounded, then
+    \[
+    (f\ast g)(x) \overset{{\left\lvert {x} \right\rvert}\to\infty}\to 0
+    .\]
+
+c.  In parts:
+
+    1.  Define the *Fourier transform* of an integrable function \( f \) on \( {\mathbb{R}}^n \).
+    2.  Give an outline of the proof of the Fourier inversion formula.
+    3.  Give an example of a function \( f\in L^1({\mathbb{R}}^n) \) such that \( \widehat{f} \) is not in \( L^1({\mathbb{R}}^n) \).
+
+## 3: Hilbert Spaces
+
+`\label{hilbert_space_exam_question}`{=tex}
+
+Let \( \left\{{u_n}\right\}_{n=1}^\infty \) be an orthonormal sequence in a Hilbert space \( H \).
+
+a.  Let \( x\in H \) and verify that
+    \[
+    \left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
+    =
+    \|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+    .\]
+    for any \( N\in {\mathbb{N}} \) and deduce that
+    \[
+    \sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
+    .\]
+
+b.  Let \( \left\{{a_n}\right\}_{n\in {\mathbb{N}}} \in \ell^2({\mathbb{N}}) \) and prove that there exists an \( x\in H \) such that \( a_n = {\left\langle {x},~{u_n} \right\rangle} \) for all \( n\in {\mathbb{N}} \), and moreover \( x \) may be chosen such that
+    \[
+    {\left\lVert {x} \right\rVert}_H = \qty{ \sum_{n\in {\mathbb{N}}} {\left\lvert {a_n} \right\rvert}^2}^{1\over 2}
+    .\]
+
+c.  Prove that if \( \left\{{u_n}\right\} \) is *complete*, Bessel's inequality becomes an equality.
+
+::: {.solution title="part b"}
+```{=tex}
+\envlist
+```
+-   Take \( \left\{{a_n}\right\} \in \ell^2 \), then note that \( \sum {\left\lvert {a_n} \right\rvert}^2 < \infty \implies \) the tails vanish.
+
+-   Define \( x \coloneqq\displaystyle\lim_{N\to\infty} S_N \) where \( S_N = \sum_{k=1}^N a_k u_k \)
+
+-   \( \left\{{S_N}\right\} \) is Cauchy and \( H \) is complete, so \( x\in H \).
+
+-   By construction,
+    \[
+    {\left\langle {x},~{u_n} \right\rangle} = {\left\langle {\sum_k a_k u_k},~{u_n} \right\rangle} = \sum_k a_k {\left\langle {u_k},~{u_n} \right\rangle} = a_n 
+    \]
+    since the \( u_k \) are all orthogonal.
+
+-   By Pythagoras since the \( u_k \) are normal,
+    \[
+    {\left\lVert {x} \right\rVert}^2 = {\left\lVert {\sum_k a_k u_k} \right\rVert}^2 = \sum_k {\left\lVert {a_k u_k} \right\rVert}^2 = \sum_k {\left\lvert {a_k} \right\rvert}^2
+    .\]
+:::
+
+::: {.solution title="part c"}
+Let \( x \) and \( u_n \) be arbitrary.
+
+\[
+{\left\langle {x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle}
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+{\left\langle {\sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+\sum_{k=1}^\infty  {\left\langle {{\left\langle {x},~{u_k} \right\rangle}u_k },~{u_n} \right\rangle} \\
+&=
+{\left\langle {x},~{u_n} \right\rangle}
+-
+\sum_{k=1}^\infty  {\left\langle {x},~{u_k} \right\rangle} {\left\langle {u_k },~{u_n} \right\rangle} \\
+&= {\left\langle {x},~{u_n} \right\rangle} - {\left\langle {x},~{u_n} \right\rangle} = 0 \\
+\implies 
+x - \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle}u_k &= 0 \quad\text{by completeness}
+.\]
+
+So
+\[
+x = \sum_{k=1}^\infty {\left\langle {x},~{u_k} \right\rangle} u_k
+\implies
+{\left\lVert {x} \right\rVert}^2 = \sum_{k=1}^\infty {\left\lvert {{\left\langle {x},~{u_k} \right\rangle}} \right\rvert}^2. \hfill\blacksquare
+.\]
+:::
+
+## 4: \( L^p \) Spaces {#lp-spaces}
+
+a.  Prove Holder's inequality: let \( f\in L^p, g\in L^q \) with \( p, q \) conjugate, and show that
+    \[
+    {\left\lVert {fg} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p} \cdot {\left\lVert {g} \right\rVert}_{q}
+    .\]
+
+b.  Prove Minkowski's Inequality:
+    \[
+    1\leq p < \infty \implies {\left\lVert {f+g} \right\rVert}_{p} \leq {\left\lVert {f} \right\rVert}_{p}+ {\left\lVert {g} \right\rVert}_{p}
+    .\]
+    Conclude that if \( f, g\in L^p({\mathbb{R}}^n) \) then so is \( f+g \).
+
+c.  Let \( X = [0, 1] \subset {\mathbb{R}} \).
+
+    1.  Give a definition of the Banach space \( L^\infty(X) \) of essentially bounded functions of \( X \).
+
+    2.  Let \( f \) be non-negative and measurable on \( X \), prove that
+        \[
+         \int_X f(x)^p \,dx \overset{p\to\infty}\to
+         \begin{dcases}
+         \infty \quad\text{or} \\
+         m\qty{\left\{{f^{-1}(1)}\right\}}
+         \end{dcases}
+         ,\]
+        and characterize the functions of each type
+
+::: {.solution}
+\[
+\int f^p 
+&= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
+&= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
+&= \int_{x < 1} f^p + m(\left\{{f = 1}\right\}) + \int_{x > 1} f^p \\
+&\overset{p\to\infty}\to 0  + m(\left\{{f = 1}\right\}) + 
+\begin{cases} 
+0 & m(\left\{{x\geq 1}\right\}) = 0 \\ 
+\infty & m(\left\{{x\geq 1}\right\}) > 0.
+\end{cases}
+\]
+:::
+
+## 5: Dual Spaces
+
+Let \( X \) be a normed vector space.
+
+a.  Give the definition of what it means for a map \( L:X\to {\mathbb{C}} \) to be a *linear functional*.
+
+b.  Define what it means for \( L \) to be *bounded* and show \( L \) is bounded \( \iff L \) is continuous.
+
+c.  Prove that \( (X {}^{ \vee }, {\left\lVert {{-}} \right\rVert}_{^{\operatorname{op}}}) \) is a Banach space.
+
+# Fall 2021
+
+## Fall 2021 \#1
+
+Let \( \left\{x_{n}\right\}_{n-1}^{\infty} \) be a sequence of real numbers such that \( x_{1}>0 \) and
+\[
+x_{n+1}=1-\left(2+x_{n}\right)^{-1}=\frac{1+x_{n}}{2+x_{n}} \text {. }
+\]
+Prove that the sequence \( \left\{x_{n}\right\} \) converges, and find its limit.
+
+## Fall 2021 \#2
+
+a.  Let \( F \subset \mathbb{R} \) be closed, and define
+    \[
+    \delta_{F}(y):=\inf _{x \in F}|x-y| .
+    \]
+    For \( y \notin F \), show that
+    \[
+    \int_{F}|x-y|^{-2} d x \leq \frac{2}{\delta_F(y)},
+    \]
+
+b.  Let \( F \subset \mathbb{R} \) be a closed set whose complement has finite measure, i.e. \( m(R \backslash F)< \) `\infty`{=tex}. Define the function
+    \[
+    I(x):=\int_{\mathbb{R}} \frac{\delta_{F}(y)}{|x-y|^{2}} d y
+    \]
+    Prove that \( I(x)=\infty \) if \( x \notin F \), however \( I(x)<\infty \) for almost every \( x \in F \).
+
+    > Hint: investigate \( \int_{F} I(x) d x \).
+
+## Fall 2021 \#3
+
+Recall that a set \( E \subset \mathbb{R}^{d} \) is measurable if for every \( c>0 \) there is an open set \( U \subseteq {\mathbb{R}}^d \) such that \( m^{*}(U \setminus E)<\epsilon \).
+
+a.  Prove that if \( E \) is measurable then for all \( \epsilon>0 \) there exists an elementary \( \operatorname{set} F \), such that \( m(E \Delta F)<\epsilon \).
+
+    Here \( m(E) \) denotes the Lebesgue measure of \( E \), a set \( F \) is called elementary if it is a finite union of rectangles and \( E \Delta F \) denotes the symmetric difference of the sets \( E \) and \( F \).
+
+b.  Let \( E \subset \mathbb{R} \) be a measurable set, such that \( 0<m(E)<\infty \). Use part (a) to show that
+    \[
+    \lim _{n \rightarrow \infty} \int_{E} \sin (n t) d t=0
+    \]
+
+## Fall 2021 \#4
+
+Let \( f \) be a measurable function on \( \mathbb{R} \). Show that the graph of \( f \) has measure zero in \( \mathbb{R}^{2} \).
+
+## Fall 2021 \#5
+
+Consider the Hilbert space \( \mathcal{H}=L^{2}([0,1]) \).
+
+a.  Prove that of \( E \subset \mathcal{H} \) is closed and convex then \( E \) contains an element of smallest norm.
+
+    > Hint: Show that if \( \left\|f_{n}\right\|_{2} \rightarrow \min \left\{f \in E:\|f\|_{2}\right\} \) then \( \left\{f_{n}\right\} \) is a Cauchy sequence.
+
+b.  Construct a non-empty closed subset \( E \subset \mathcal{H} \) which does not contain an element of smallest norm.

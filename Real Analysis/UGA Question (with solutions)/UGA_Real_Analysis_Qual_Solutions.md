@@ -2,20 +2,21 @@
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
 \newcommand\Fix{ \mathrm{Fix} }
+\newcommand\Ell{ \mathrm{Ell} }
 \newcommand\Kahler[0]{\operatorname{Kähler}}
 \newcommand\Prinbun{\mathrm{Bun}^{\mathrm{prin}}}
 \newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \newcommand\compact[0]{\operatorname{cpt}}
 \newcommand\hyp[0]{{\operatorname{hyp}}}
 \newcommand\jan{\operatorname{Jan}}
+\newcommand\curl{\operatorname{curl}}
 \newcommand\kbar{ { \bar{k} } }
 \newcommand\ksep{ { k\sep } }
 \newcommand\mypound{\scalebox{0.8}{\raisebox{0.4ex}{\#}}}
 \newcommand\rref{\operatorname{RREF}}
+\newcommand\RREF{\operatorname{RREF}}
 \newcommand{\Tatesymbol}{\operatorname{TateSymb}}
-\newcommand\taf{ \mathrm{taf} }
 \newcommand\tilt[0]{ { \flat } }
-\newcommand\tmf{ \mathrm{tmf} }
 \newcommand\vecc[2]{\textcolor{#1}{\textbf{#2}}}
 \newcommand{\Af}[0]{{\mathbb{A}}}
 \newcommand{\Ag}[0]{{\mathcal{A}_g}}
@@ -45,10 +46,13 @@
 \newcommand{\EKL}[0]{{\mathrm{EKL}}}
 \newcommand{\EO}[0]{{\operatorname{EO}}}
 \newcommand{\Emb}[0]{{\operatorname{Emb}}}
+\newcommand{\minor}[0]{{\operatorname{minor}}}
 \newcommand{\Et}{\text{Ét}}
-\newcommand{\Extalgebra}[0]{\bigwedge}
-\newcommand{\Extalg}[0]{\bigwedge}
-\newcommand{\Extprod}[0]{\bigwedge}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Extpower}[0]{\bigwedge\nolimits}
+\newcommand{\Extalgebra}[0]{\bigwedge\nolimits}
+\newcommand{\Extalg}[0]{\Extalgebra}
+\newcommand{\Extprod}[0]{\bigwedge\nolimits}
 \newcommand{\Ext}{\operatorname{Ext} }
 \newcommand{\FFbar}[0]{{ \bar{ \mathbb{F}} }}
 \newcommand{\FFpn}[0]{{\mathbb{F}_{p^n}}}
@@ -82,9 +86,9 @@
 \newcommand{\Honda}[0]{\mathrm{\operatorname{Honda}}}
 \newcommand{\Hsh}{{ \mathcal{H} }}
 \newcommand{\Id}[0]{\operatorname{Id}}
-\newcommand{\Inn}[0]{{\operatorname{Inn}}}
 \newcommand{\Intersect}[0]{\displaystyle\bigcap}
-\newcommand{\JCF}[0]{\mathrm{JCF}}
+\newcommand{\JCF}[0]{\operatorname{JCF}}
+\newcommand{\RCF}[0]{\operatorname{RCF}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\KK}[0]{{\mathbb{K}}}
 \newcommand{\KH}[0]{ \K^{\scriptscriptstyle \mathrm{H}} }
@@ -111,7 +115,6 @@
 \newcommand{\Op}[0]{{\operatorname{Op}}}
 \newcommand{\Orb}[0]{{\mathrm{Orb}}}
 \newcommand{\Orth}[0]{{\operatorname{O}}}
-\newcommand{\Out}[0]{{\operatorname{Out}}}
 \newcommand{\PD}[0]{\mathrm{PD}}
 \newcommand{\PGL}[0]{\operatorname{PGL}}
 \newcommand{\PP}[0]{{\mathbb{P}}}
@@ -138,7 +141,6 @@
 \newcommand{\SP}[0]{{\operatorname{SP}}}
 \newcommand{\SU}[0]{{\operatorname{SU}}}
 \newcommand{\Sgn}[0]{{ \Sigma_{g, n} }}
-\newcommand{\Sing}[0]{{\operatorname{Sing}}}
 \newcommand{\Sm}[0]{{\operatorname{Sm}}}
 \newcommand{\SpSp}[0]{{\mathbb{S}}}
 \newcommand{\Spec}[0]{\operatorname{Spec}}
@@ -172,7 +174,7 @@
 \newcommand{\ab}[0]{{\operatorname{ab}}}
 \newcommand{\actsonl}[0]{\curvearrowleft}
 \newcommand{\actson}[0]{\curvearrowright}
-\newcommand{\adjoint}[0]{\leftrightarrows}
+\newcommand{\adjoint}[0]{\dagger}
 \newcommand{\adj}[0]{\operatorname{adj}}
 \newcommand{\ad}[0]{\operatorname{ad}}
 \newcommand{\afp}[0]{A_{/\FF_p}}
@@ -181,7 +183,6 @@
 \newcommand{\arccot}[0]{\operatorname{arccot}}
 \newcommand{\arccsc}[0]{\operatorname{arccsc}}
 \newcommand{\arcsec}[0]{\operatorname{arcsec}}
-\newcommand{\aut}[0]{\operatorname{Aut}}
 \newcommand{\bP}[0]{\operatorname{bP}}
 \newcommand{\barz}{\bar{z} }
 \newcommand{\bbm}[0]{{\mathbb{M}}}
@@ -235,17 +236,18 @@
 \newcommand{\disjoint}[0]{{\textstyle\coprod}}
 \newcommand{\dist}[0]{\operatorname{dist}}
 \newcommand{\dlog}[0]{\operatorname{dLog}}
-\newcommand{\dmu}{\,d\mu}
 \newcommand{\dom}[0]{\operatorname{dom}}
+\newcommand{\dual}[0]{ {}^{ \vee }}
+\newcommand{\dmu}{\,d\mu}
 \newcommand{\dr}{\,dr}
 \newcommand{\ds}{\,ds}
 \newcommand{\dtheta}{\,d\theta}
 \newcommand{\dt}{\,dt}
-\newcommand{\dual}[0]{ {}^{ \vee }}
 \newcommand{\du}{\,du}
 \newcommand{\dw}{\,dw}
 \newcommand{\dxi}{\,d\xi}
 \newcommand{\dx}{\,dx}
+\newcommand{\dA}{\,dA}
 \newcommand{\dy}{\,dy}
 \newcommand{\dzbar}{\,d\bar{z} }
 \newcommand{\dzeta}{\,d\zeta}
@@ -299,6 +301,7 @@
 \newcommand{\lci}[0]{\mathrm{lci}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\liealgk}[0]{{ \liealg_{/k} }}
+\newcommand{\liea}[0]{{\mathfrak{a}}}
 \newcommand{\lieb}[0]{{\mathfrak{b}}}
 \newcommand{\lied}[0]{{\mathfrak{d}}}
 \newcommand{\lief}[0]{{\mathfrak{f}}}
@@ -371,6 +374,7 @@
 \newcommand{\mltext}[1]{\left\{\begin{array}{c}#1\end{array}\right\}}
 \newcommand{\mm}[0]{{\mathfrak{m}}}
 \newcommand{\mot}[0]{{ \mathrm{mot}} }
+\newcommand{\cell}[0]{{ \mathrm{cell}} }
 \newcommand{\mspec}[0]{\operatorname{mSpec}}
 \newcommand{\ms}[0]{\xrightarrow{\sim}}
 \newcommand{\multinomial}[1]{\left(\!\!{#1}\!\!\right)}
@@ -379,6 +383,7 @@
 \newcommand{\mviso}[0]{{\mapsvia{\sim}}} 
 \newcommand{\nd}[0]{\operatorname{nd}}
 \newcommand{\nilrad}[1]{{\sqrt{0_{#1}} }}
+\newcommand{\jacobsonrad}[1]{{J ({#1}) }}
 \newcommand{\nil}[0]{{\operatorname{nil}}}
 \newcommand{\noeth}[0]{\mathrm{Noeth}}
 \newcommand{\nonzero}[0]{^{\bullet}}
@@ -418,7 +423,8 @@
 \newcommand{\shom}{ {\mathcal{H}}\kern-0.5pt{\operatorname{om}}}
 \newcommand{\signature}[0]{\operatorname{sig}}
 \newcommand{\sign}[0]{\operatorname{sign}}
-\newcommand{\sing}[0]{{\operatorname{Sing}}}
+\newcommand{\Sing}[0]{{\operatorname{Sing}}}
+\newcommand{\sing}[0]{{\mathrm{sing}}}
 \newcommand{\slope}[0]{{\mathrm{slope}}}
 \newcommand{\smts}[1]{\setminus\theset{#1}}
 \newcommand{\smz}[0]{\setminus\theset{0}}
@@ -463,7 +469,6 @@
 \newcommand{\vhat}[1]{\widehat{ \vector{#1} }}
 \newcommand{\vol}[0]{\operatorname{vol}}
 \newcommand{\wait}[0]{{-}}
-\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\wt}[0]{{\operatorname{wt}}}
 \newcommand{\zar}[0]{{\mathrm{zar}}}
 \newcommand{\zbar}{\bar{z} }
@@ -481,14 +486,17 @@
 \renewcommand{\labelitemiii}{$\diamondsuit$}
 \renewcommand{\labelitemiv}{$\diamondsuit$}
 \renewcommand{\mid}[0]{\mathrel{\Big|}}
-\renewcommand{\mod}{\pmod}
+\renewcommand{\mod}{\operatorname{mod}}
 \renewcommand{\qed}[0]{\hfill\blacksquare}
 \renewcommand{\too}[0]{\longrightarrow}
 \renewcommand{\vector}[1]{\mathbf{#1}}
 
 \DeclareMathOperator*{\eq}{=}
 \DeclareMathOperator*{\hocolim}{hocolim}
+\DeclareMathOperator{\aut}{Aut}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
 \DeclareMathOperator{\BiHol}{BiHol}
 \DeclareMathOperator{\Bl}{Bl}
 \DeclareMathOperator{\Br}{Br}
@@ -605,6 +613,7 @@
 \newcommand{\fractionalpart}[1]{\theset{#1}}
 \newcommand{\integerpart}[1]{\left[ {#1}\right] }
 \newcommand{\zadjoin}[1]{\mathbb{Z}\left[ {#1} \right]}
+\newcommand{\wedgeprod}[0]{\vee}
 \newcommand{\Wedgepower}[0]{\bigwedge\nolimits}
 \def\multichoose#1#2{{\left(\kern-.3em\left(\genfrac{}{}{0pt}{}{#1}{#2}\right)\kern-.3em\right)}}
 \newcommand\elts[2]{{ {#1}_1, {#1}_2, \cdots, {#1}_{#2}}}
@@ -675,6 +684,7 @@
 
 
 \newcommand{\B}[0]{{\mathsf{B}}}
+\newcommand{\E}[0]{{\mathsf{E}}}
 \newcommand{\T}[0]{{\mathsf{T}}}
 \newcommand{\K}[0]{{\mathsf{K}}}
 \newcommand{\G}[0]{{\mathsf{G}}}
@@ -698,6 +708,16 @@
   {#3} & {#4}
 \end{bmatrix}
 }}
+\newcommand{\mattt}[9]{{
+\begin{bmatrix}
+  {#1} & {#2} & {#3}
+\\
+  {#4} & {#5} & {#6}
+\\
+  {#7} & {#8} & {#9}
+\end{bmatrix}
+}}
+
 \newcommand\stacksymbol[3]{
   \mathrel{\stackunder[2pt]{\stackon[4pt]{$#3$}{$\scriptscriptstyle#1$}}{
   $\scriptscriptstyle#2$}}
@@ -706,10 +726,6 @@
   \operatorname{\textnormal{#1}}
 }
 
-\newcommand{\dcoset}[3]{
-    {\textstyle #1}
-    \mkern-4mu\scalebox{1.5}{$\diagdown$}\mkern-5mu^{\textstyle #2}
-    \mkern-4mu\scalebox{1.5}{$\diagup$}\mkern-5mu{\textstyle #3} }
 
 
 %\newcommand{\strike}[1]{{\enclose{\horizontalstrike}{#1}}}
@@ -5457,3 +5473,454 @@ Apply Fubini-Tonelli to commute two sums:
 
 
 
+
+# Midterm Exam 2 (December 2014)
+
+## 1
+
+> Note: (a) is a repeat.
+
+- Let $\Lambda\in L^2(X)\dual$.
+  - Show that $M\definedas \theset{f\in L^2(X) \suchthat \Lambda(f) = 0} \subseteq L^2(X)$ is a closed subspace, and $L^2(X) = M \oplus M\perp$.
+  - Prove that there exists a unique $g\in L^2(X)$ such that $\Lambda(f) = \int_X g \bar f$.
+
+## 2
+
+a. In parts:
+  - Given a definition of $L^\infty(\RR^n)$.
+  - Verify that $\norm{\wait}_\infty$ defines a norm on $L^\infty(\RR^n)$.
+  - Carefully proved that $(L^\infty(\RR^n), \norm{\wait}_\infty)$ is a Banach space.
+
+b. Prove that for any measurable $f:\RR^n \to \CC$,
+\[
+L^1(\RR^n) \intersect L^\infty(\RR^n) \subset L^2(\RR^n) \qtext{and} \norm{f}_2 \leq \norm{f}_1^{1\over 2} \cdot \norm{f}_\infty^{1\over 2}
+.\]
+
+## 3
+
+a. Prove that if $f, g: \RR^n\to \CC$ is both measurable then $F(x, y) \definedas f(x)$ and $h(x, y)\definedas f(x-y) g(y)$ is measurable on $\RR^n\cross \RR^n$.
+
+b. Show that if $f\in L^1(\RR^n) \intersect L^\infty(\RR^n)$ and $g\in L^1(\RR^n)$, then $f\ast g \in L^1(\RR^n) \intersect L^\infty(\RR^n)$ is well defined, and carefully show that it satisfies the following properties:
+\[
+\norm{f\ast g}_\infty &\leq \norm{g}_1 \norm{f}_\infty
+\norm{f\ast g}_1      &\leq \norm{g}_1 \norm{f}_1
+\norm{f\ast g}_2      &\leq \norm{g}_1 \norm{f}_2
+.\]
+
+> Hint: first show $\abs{f\ast g}^2 \leq \norm{g}_1 \qty{ \abs{f}^2 \ast \abs{g}}$.
+
+## 4 (Weierstrass Approximation Theorem)
+
+> Note: (a) is a repeat.
+
+Let $f: [0, 1]\to \RR$ be continuous, and prove the Weierstrass approximation theorem: for any $\eps> 0$ there exists a polynomial $P$ such that $\norm{f - P}_{\infty} < \eps$.
+
+# Midterm Exam 1 (October 2018)
+
+## Problem 1
+\label{equivalence_of_approximating_measures}
+Let $E \subseteq \RR^n$ be bounded.
+Prove the following are equivalent: 
+
+1. For any \( \epsilon>0 \) there exists and open set \( G \) and a closed set \( F \) such that 
+\[
+F \subseteq E \subseteq G && m(G\sm F) < \epsilon
+.\]
+
+2. There exists a \( G_ \delta \) set $V$ and an \( F_ \sigma \) set $H$ such that 
+\[
+m(V\sm H) = 0
+.\]
+
+## Problem 2
+
+Let \( \ts{ f_k } _{k=1}^{\infty } \) be a sequence of extended real-valued Lebesgue measurable functions.
+
+a. Prove that \( \sup_k f_k \) is a Lebesgue measurable function.
+
+b. Prove that if \( \lim_{k \to \infty } f_k(x) \) exists for every \( x \in \RR^n \) then \( \lim_{k\to \infty } f_k \) is also a measurable function.
+
+
+## Problem 3
+
+### a
+
+Prove that if \( E \subseteq \RR^n \) is a Lebesgue measurable set, then for any \( h \in \RR \) the set
+\[
+E+h \da \ts{x + h \st x\in E }
+\]
+is also Lebesgue measurable and satisfies \( m(E + h) = m(E) \).
+
+### b
+
+Prove that if $f$ is a non-negative measurable function on $\RR^n$ and $h\in \RR^n$ then the function
+\[
+\tau_h d(x) \da f(x-h)
+\]
+is a non-negative measurable function and
+\[
+\int f(x) \dx = \int f(x-h) \dx
+.\]
+
+
+## Problem 4
+
+Let $f: \RR^n\to \RR$ be a Lebesgue measurable function.
+
+a. Prove that for all \( \alpha> 0 \) ,
+\[
+A_ \alpha  \da \ts{x\in \RR^n \st \abs{ f(x) } > \alpha} \implies m(A_ \alpha) \leq {1\over \alpha} \int \abs{f (x)} \dx
+.\]
+
+b. Prove that 
+\[
+\int \abs{ f(x) } \dx = 0 \iff f = 0 \text{ almost everywhere}
+.\]
+
+
+## Problem 5
+
+Let \( \ts{ f_k }_{k=1}^{\infty } \subseteq L^2([0, 1]) \) be a sequence which *converges in $L^1$* to a function $f$.
+
+a. Prove that $f\in L^1([0, 1])$.
+
+b. Give an example illustrating that $f_k$ may not converge to $f$ almost everywhere.
+
+c. Prove that $\ts{f_k}$ must contain a subsequence that converges to $f$ almost everywhere.
+
+# Midterm Exam 2 (November 2018)
+
+## Problem 1 
+
+Let $f, g\in L^1([0, 1])$, define $F(x) = \int_0^x f(y)\dy$ and $G(x) = \int_0^x g(y)\dy$, and show
+\[
+\int_0^1 F(x)g(x) \,dx = F(1)G(1) - \int_0^1 f(x) G(x) \, dx
+.\]
+
+## Problem 2
+Let $\phi\in L^1(\RR^n)$ such that $\int \phi = 1$ and define $\phi_t(x) = t^{-n}\phi(t\inv x)$.
+Show that if $f$ is bounded and uniformly continuous then $f\ast \phi_t \converges{t\to 0}\to f$ uniformly.
+
+## Problem 3
+
+Let $g\in L^\infty([0, 1])$.
+
+a. Prove
+\[
+\norm{g}_{L^p([0, 1])}  \converges{p\to\infty}\to \norm{g}_{L^\infty([0, 1])}
+.\]
+
+b. Prove that the map
+\[
+\Lambda_g: L^1([0, 1]) &\to \CC \\
+f &\mapsto \int_0^1 fg
+\]
+  defines an element of $L^1([0, 1])\dual$ with $\norm{\Lambda_g}_{L^1([0, 1])\dual}= \norm{g}_{L^\infty([0, 1])}$.
+
+
+## Problem 4
+
+See
+\cref{hilbert_space_exam_question}
+
+# Practice Exam (November 2014)
+
+## Problem 1
+
+Let $m_*(E)$ denote the Lebesgue outer measure of a set \( E \subseteq \RR^n \).
+
+a. Prove using the definition of Lebesgue outer measure that
+\[
+m \qty{ \Union_{j=1}^{\infty } E_j  } \leq \sum_{j=1}^{\infty } m_*(E_j) 
+.\]
+
+b. Prove that for any \( E \subseteq \RR^n \) and any \( \epsilon> 0 \) there exists an open set $G$ with $E \subseteq G$ and
+\[
+m_*(E) \leq m_*(G) \leq m_*(E) + \epsilon
+.\]
+
+## Problem 2
+
+a. See \cref{equivalence_of_approximating_measures}
+
+b. Let $f_k$ be a sequence of extended real-valued Lebesgue measurable function.
+
+    i. Prove that $\inf_k f_k, \sup_k f_k$ are both Lebesgue measurable function.
+    
+        *Hint: argue that*
+\[
+\ts{x \st \inf_k f_k(x) < a} = \Union_k \ts{x \st f_k(x) < a}
+.\]
+
+    ii. Carefully state Fatou's Lemma and deduce the Monotone Converge Theorem from it.
+
+
+## Problem 3
+
+a. Prove that if $f, g\in L^+(\RR)$ then 
+\[
+\int(f +g) = \int f + \int g
+.\]
+  Extend this to establish that if $\ts{ f_k} \subseteq L^+(\RR^n)$ then
+  \[
+  \int \sum_k f_k = \sum_k \int f_k
+  .\]
+
+
+b. Let $\ts{E_j}_{j\in \NN} \subseteq \mathcal{M}(\RR^n)$ with $E_j \nearrow E$. 
+  Use the countable additivity of $\mu_f$ on \( \mathcal{M}(\RR^n)  \) established above to show that
+  \[
+  \mu_f(E) = \lim_{j\to \infty } \mu_f(E_j)
+  .\]
+
+## Problem 4
+
+a. Show that $f\in L^1(\RR^n) \implies \abs{f(x)} < \infty$ almost everywhere.
+
+b. Show that if $\ts{f_k} \subseteq L^1(\RR^n)$ with $\sum \norm{f_k}_1 < \infty$ then $\sum f_k$ converges almost everywhere and in $L^1$.
+
+c. Use the Dominated Convergence Theorem to evaluate
+\[
+\lim_{t\to 0} \int_0^1 {e^{tx^2} - 1 \over t} \dx
+.\]
+
+
+
+
+# Practice Exam (November 2014)
+
+## 1: Fubini-Tonelli
+
+a.
+Carefully state Tonelli's theorem for a nonnegative function $F(x, t)$ on $\RR^n\cross \RR$.
+
+b.
+  Let $f:\RR^n\to [0, \infty]$ and define
+\[
+\mca \definedas \theset{(x, t) \in \RR^n\cross \RR \suchthat 0\leq t \leq f(x)}
+.\]
+
+  Prove the validity of the following two statements:
+
+  1. $f$ is Lebesgue measurable on $\RR^{n} \iff \mca$ is a Lebesgue measurable subset of $\RR^{n+1}$.
+  2. If $f$ is Lebesgue measurable on $\RR^n$ then
+  \[
+  m(\mathcal{A})=\int_{\mathbb{R}^{n}} f(x) d x=\int_{0}^{\infty} m\left(\left\{x \in \mathbb{R}^{n}\suchthat f(x) \geq t\right\}\right) d t
+  .\]
+
+
+## 2: Convolutions and the Fourier Transform
+
+a.
+Let $f, g\in L^1(\RR^n)$ and give a definition of $f\ast g$.
+
+b.
+Prove that if $f, g$ are integrable and bounded, then
+\[
+(f\ast g)(x) \converges{\abs x\to\infty}\to 0
+.\]
+
+
+c. In parts:
+
+    1. Define the *Fourier transform* of an integrable function $f$ on $\RR^n$.
+    2. Give an outline of the proof of the Fourier inversion formula.
+    3. Give an example of a function $f\in L^1(\RR^n)$ such that $\hat{f}$ is not in $L^1(\RR^n)$.
+
+
+## 3: Hilbert Spaces
+\label{hilbert_space_exam_question}
+
+Let $\theset{u_n}_{n=1}^\infty$ be an orthonormal sequence in a Hilbert space $H$.
+
+a. Let $x\in H$ and verify that 
+\[
+\left\|x-\sum_{n=1}^{N}\left\langle x, u_{n}\right\rangle u_{n}\right\|_H^{2}
+=
+\|x\|_H^{2}-\sum_{n=1}^{N}\left|\left\langle x, u_{n}\right\rangle\right|^{2}
+.\]
+for any $N\in \NN$ and deduce that
+\[
+\sum_{n=1}^{\infty}\left|\left\langle x, u_{n}\right\rangle\right|^{2} \leq\|x\|_H^{2}
+.\]
+
+b. Let $\theset{a_n}_{n\in \NN} \in \ell^2(\NN)$ and prove that there exists an $x\in H$ such that $a_n = \inner{x}{u_n}$ for all $n\in \NN$, and moreover $x$ may be chosen such that 
+\[
+\norm{x}_H = \qty{ \sum_{n\in \NN} \abs{a_n}^2}^{1\over 2}
+.\]
+
+c. Prove that if $\theset{u_n}$ is *complete*, Bessel's inequality becomes an equality.
+
+:::{.solution title="part b"}
+\envlist
+
+- Take $\theset{a_n} \in \ell^2$, then note that $\sum \abs{a_n}^2 < \infty \implies$ the tails vanish.
+
+- Define $x \definedas \displaystyle\lim_{N\to\infty} S_N$ where $S_N = \sum_{k=1}^N a_k u_k$
+
+- $\theset{S_N}$ is Cauchy and $H$ is complete, so $x\in H$.
+
+- By construction, 
+\[
+\inner{x}{u_n} = \inner{\sum_k a_k u_k}{u_n} = \sum_k a_k \inner{u_k}{u_n} = a_n 
+\]
+since the $u_k$ are all orthogonal.
+
+- By Pythagoras since the $u_k$ are normal,
+\[
+\norm{x}^2 = \norm{\sum_k a_k u_k}^2 = \sum_k \norm{a_k u_k}^2 = \sum_k \abs{a_k}^2
+.\]
+
+:::
+
+:::{.solution title="part c"}
+Let $x$ and $u_n$ be arbitrary. 
+
+\[
+\inner{x - \sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n}
+&=
+\inner{x}{u_n}
+-
+\inner{\sum_{k=1}^\infty \inner{x}{u_k}u_k }{u_n} \\
+&=
+\inner{x}{u_n}
+-
+\sum_{k=1}^\infty  \inner{\inner{x}{u_k}u_k }{u_n} \\
+&=
+\inner{x}{u_n}
+-
+\sum_{k=1}^\infty  \inner{x}{u_k} \inner{u_k }{u_n} \\
+&= \inner{x}{u_n} - \inner{x}{u_n} = 0 \\
+\implies 
+x - \sum_{k=1}^\infty \inner{x}{u_k}u_k &= 0 \quad\text{by completeness}
+.\]
+
+So 
+\[
+x = \sum_{k=1}^\infty \inner{x}{u_k} u_k
+\implies
+\norm{x}^2 = \sum_{k=1}^\infty \abs{\inner{x}{u_k}}^2. \qed
+.\]
+
+
+:::
+
+## 4: $L^p$ Spaces
+
+
+a. Prove Holder's inequality:
+  let $f\in L^p, g\in L^q$ with $p, q$ conjugate, and show that
+\[
+\pnorm{fg}p \leq \pnorm{f}p \cdot \pnorm{g}q
+.\]
+
+b. Prove Minkowski's Inequality:
+\[
+1\leq p < \infty \implies \pnorm{f+g}{p} \leq \pnorm{f}{p}+ \pnorm{g}{p}
+.\]
+Conclude that if $f, g\in L^p(\RR^n)$ then so is $f+g$.
+
+c. Let $X = [0, 1] \subset \RR$.
+
+    1. Give a definition of the Banach space $L^\infty(X)$ of essentially bounded functions of $X$.
+
+    2. Let $f$ be non-negative and measurable on $X$, prove that
+    \[
+    \int_X f(x)^p \,dx \converges{p\to\infty}\to
+    \begin{dcases}
+    \infty \quad\text{or} \\
+    m\qty{\theset{f\inv(1)}}
+    \end{dcases}
+    ,\]
+    and characterize the functions of each type
+
+
+:::{.solution}
+\[
+\int f^p 
+&= \int_{x < 1} f^p + \int_{x=1}f^p + \int_{x > 1} f^p\\
+&= \int_{x < 1} f^p + \int_{x=1}1 + \int_{x > 1} f^p \\
+&= \int_{x < 1} f^p + m(\theset{f = 1}) + \int_{x > 1} f^p \\
+&\converges{p\to\infty}\to 0  + m(\theset{f = 1}) + 
+\begin{cases} 
+0 & m(\theset{x\geq 1}) = 0 \\ 
+\infty & m(\theset{x\geq 1}) > 0.
+\end{cases}
+\] 
+
+:::
+
+## 5: Dual Spaces
+
+Let $X$ be a normed vector space.
+
+a. Give the definition of what it means for a map $L:X\to \CC$ to be a *linear functional*.
+
+b. Define what it means for $L$ to be *bounded* and show $L$ is bounded $\iff L$ is continuous.
+
+c. Prove that $(X\dual, \norm{\wait}_{\op})$ is a Banach space.
+
+
+# Fall 2021
+
+## Fall 2021 #1
+
+Let $\left\{x_{n}\right\}_{n-1}^{\infty}$ be a sequence of real numbers such that $x_{1}>0$ and
+\[
+x_{n+1}=1-\left(2+x_{n}\right)^{-1}=\frac{1+x_{n}}{2+x_{n}} \text {. }
+\]
+Prove that the sequence $\left\{x_{n}\right\}$ converges, and find its limit.
+
+## Fall 2021 #2
+
+a.
+Let $F \subset \mathbb{R}$ be closed, and define
+\[
+\delta_{F}(y):=\inf _{x \in F}|x-y| .
+\]
+For $y \notin F$, show that
+\[
+\int_{F}|x-y|^{-2} d x \leq \frac{2}{\delta_F(y)},
+\]
+b.
+Let $F \subset \mathbb{R}$ be a closed set whose complement has finite measure, i.e. $m(R \backslash F)<$
+\infty. Define the function
+\[
+I(x):=\int_{\mathbb{R}} \frac{\delta_{F}(y)}{|x-y|^{2}} d y
+\]
+Prove that $I(x)=\infty$ if $x \notin F$, however $I(x)<\infty$ for almost every $x \in F$. 
+
+  > Hint: investigate $\int_{F} I(x) d x$.
+
+
+## Fall 2021 #3
+
+Recall that a set $E \subset \mathbb{R}^{d}$ is measurable if for every $c>0$ there is an open set $U \subseteq \RR^d$ such that $m^{*}(U \sm E)<\epsilon$.
+
+a.
+Prove that if $E$ is measurable then for all $\epsilon>0$ there exists an elementary $\operatorname{set} F$, such that $m(E \Delta F)<\epsilon$. 
+
+  Here $m(E)$ denotes the Lebesgue measure of $E$, a set $F$ is called elementary if it is a finite union of rectangles and $E \Delta F$ denotes the symmetric difference of the sets $E$ and $F$.
+
+b.
+Let $E \subset \mathbb{R}$ be a measurable set, such that $0<m(E)<\infty$. Use part (a) to show that
+\[
+\lim _{n \rightarrow \infty} \int_{E} \sin (n t) d t=0
+\]
+
+## Fall 2021 #4
+
+Let $f$ be a measurable function on $\mathbb{R}$. Show that the graph of $f$ has measure zero in $\mathbb{R}^{2}$.
+
+## Fall 2021 #5
+
+
+Consider the Hilbert space $\mathcal{H}=L^{2}([0,1])$.
+
+a.
+Prove that of $E \subset \mathcal{H}$ is closed and convex then $E$ contains an element of smallest norm. 
+
+  > Hint: Show that if $\left\|f_{n}\right\|_{2} \rightarrow \min \left\{f \in E:\|f\|_{2}\right\}$ then $\left\{f_{n}\right\}$ is a Cauchy sequence.
+
+b.
+Construct a non-empty closed subset $E \subset \mathcal{H}$ which does not contain an element of smallest norm.
