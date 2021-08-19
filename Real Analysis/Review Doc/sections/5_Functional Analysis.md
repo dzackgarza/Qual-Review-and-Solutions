@@ -1,11 +1,31 @@
 # Functional Analysis
 
-## General Facts
-
+## $L^p$ Spaces
 
 :::{.remark}
 For any measure space $(X, M, \mu)$, one can define $L^2(\mu)$ with the inner product $\inner{f}{g} \da \int_X f\bar{g} d\mu$.
 :::
+
+
+:::{.proposition title="$L^p$ spaces are Banach"}
+
+:::
+
+
+:::{.proposition title="Duals of $L^p$ spaces"}
+For $p\inv + q\inv = 1$, with $1<p<\infty$, there is an isomorphism of Banach spaces
+\[
+\kappa: L^p(\mu) &\to L^q(\mu) \\
+f &\mapsto (g \mapsto \int_X f g d\mu )
+.\]
+
+This is surjective by Radon-Nikodym, and an isometry by Holder's inequality, which is enough to be an isometric isomorphism.
+
+:::
+
+
+## General Facts
+
 
 
 :::{.remark}
@@ -16,9 +36,7 @@ Working with inner products:
 x\neq 0 \implies \inner{x}{x} > 0 .
 .\]
 We define $\norm{x} \da \sqrt{\inner{x}{x}}$.
-
 :::
-
 
 :::{.fact title="Cauchy-Schwarz"}
 For $x, y\in H$,
