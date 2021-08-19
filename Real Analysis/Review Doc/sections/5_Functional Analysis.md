@@ -8,6 +8,18 @@ For any measure space $(X, M, \mu)$, one can define $L^2(\mu)$ with the inner pr
 :::
 
 
+:::{.remark}
+Working with inner products:
+\[
+\inner{tx + sy}{z} &= t\inner{x}{z} + s\inner{y}{z} \\
+\inner{x}{y} &= \bar{\inner{y}{x}} \\
+x\neq 0 \implies \inner{x}{x} > 0 .
+.\]
+We define $\norm{x} \da \sqrt{\inner{x}{x}}$.
+
+:::
+
+
 :::{.fact title="Cauchy-Schwarz"}
 For $x, y\in H$,
 \[
