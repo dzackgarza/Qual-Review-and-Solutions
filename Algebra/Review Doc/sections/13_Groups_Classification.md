@@ -83,6 +83,7 @@ Some concrete examples of $C_m\units$ for various $m$:
 - $m=3: C_2$
 - $m=4: C_2$
 - $m=5: C_2$
+- $m=6: C_2$
 - $m=7: C_6$
 - $m=8: C_2\times C_2$
 - $m=9: C_6$
