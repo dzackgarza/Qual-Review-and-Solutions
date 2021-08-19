@@ -1,14 +1,30 @@
 # Functional Analysis
 
-## Theorems
-
+## General Facts
 
 :::{.fact title="Pythagoras"}
 \[
-\inner{v}{w} = 0 \implies \norm{v+w} = \norm{v} + \norm{w}
+\inner{v}{w} = 0 \implies \norm{v+w}^2 = \norm{v}^2 + \norm{w}^2
 .\]
+More generally, if $x_i \perp x_j$ for all $i\neq j$, then
+\[
+\norm{\sum_k x_k }_H^2 = \sum_k \norm{x_k}_H^2
+.\]
+
 :::
 
+
+:::{.fact title="Polarization"}
+For all $x, y\in H$,
+\[
+4 \inner{x}{y} = \norm{x+y}^2 - \norm{x-y}^2 +i\qty{\norm{x+iy}^2 - \norm{x-iy}^2}
+.\]
+
+
+:::
+
+
+## Fourier Coefficients
 
 :::{.theorem title="Bessel's Inequality"}
 For any orthonormal set $\theset{u_{n}} \subseteq \mch$ a Hilbert space (not necessarily a basis),
@@ -105,6 +121,43 @@ $$\Lambda(u) = \Lambda(\Lambda(x) z - \Lambda(z) x) = \Lambda(x) \Lambda(z) - \L
 
 :::
 
+:::{.theorem title="Riesz-Fischer"}
+Let $U = \theset{u_{n}}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
+
+1. There is an isometric surjection
+
+\[
+\mathcal{H} &\to \ell^2(\NN) \\
+\vector x &\mapsto \theset{\inner{\vector x}{\vector u_{n}}}_{n=1}^\infty
+\]
+
+i.e. if $\theset{a_{n}} \in \ell^2(\NN)$, so $\sum \abs{a_{n}}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
+$$
+a_{n} = \inner{\vector x}{\vector u_{n}} \quad \forall n.
+$$
+
+2. $\vector x$ can be chosen such that
+$$
+\norm{\vector x}^2 = \sum \abs{a_{n}}^2
+$$
+
+> Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_{n}}$ is **complete**, i.e. $\inner{\vector x}{\vector u_{n}} = 0$ for all $n$ implies $\vector x = \vector 0$.
+
+:::
+
+:::{.proof title="?"}
+\envlist
+
+- Given $\theset{a_{n}}$, define $S_{N} = \sum^N a_{n} \vector u_{n}$.
+- $S_{N}$ is Cauchy in $\mathcal{H}$ and so $S_{N} \to \vector x$ for some $\vector x \in \mathcal{H}$.
+- $\inner{x}{u_{n}} = \inner{x - S_{N}}{u_{n}} + \inner{S_{N}}{u_{n}} \to a_{n}$
+- By construction, $\norm{x-S_{N}}^2 = \norm{x}^2 - \sum^N \abs{a_{n}}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_{n}}^2$.
+
+:::
+
+
+## Operator Norms
+
 :::{.theorem title="Functionals are continuous if and only if bounded"}
 Let $L:X \to \CC$ be a linear functional, then the following are equivalent:
 
@@ -180,38 +233,5 @@ n, m \geq N \implies \norm{L_{n} - L_{m}} < \varepsilon \implies \abs{L_{m}(x) -
 
 :::
 
-:::{.theorem title="Riesz-Fischer"}
-Let $U = \theset{u_{n}}_{n=1}^\infty$ be an orthonormal set (not necessarily a basis), then
-
-1. There is an isometric surjection
-
-\[
-\mathcal{H} &\to \ell^2(\NN) \\
-\vector x &\mapsto \theset{\inner{\vector x}{\vector u_{n}}}_{n=1}^\infty
-\]
-
-i.e. if $\theset{a_{n}} \in \ell^2(\NN)$, so $\sum \abs{a_{n}}^2 < \infty$, then there exists a $\vector x \in \mathcal{H}$ such that
-$$
-a_{n} = \inner{\vector x}{\vector u_{n}} \quad \forall n.
-$$
-
-2. $\vector x$ can be chosen such that
-$$
-\norm{\vector x}^2 = \sum \abs{a_{n}}^2
-$$
-
-> Note: the choice of $\vector x$ is unique $\iff$ $\theset{u_{n}}$ is **complete**, i.e. $\inner{\vector x}{\vector u_{n}} = 0$ for all $n$ implies $\vector x = \vector 0$.
-
-:::
-
-:::{.proof title="?"}
-\envlist
-
-- Given $\theset{a_{n}}$, define $S_{N} = \sum^N a_{n} \vector u_{n}$.
-- $S_{N}$ is Cauchy in $\mathcal{H}$ and so $S_{N} \to \vector x$ for some $\vector x \in \mathcal{H}$.
-- $\inner{x}{u_{n}} = \inner{x - S_{N}}{u_{n}} + \inner{S_{N}}{u_{n}} \to a_{n}$
-- By construction, $\norm{x-S_{N}}^2 = \norm{x}^2 - \sum^N \abs{a_{n}}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_{n}}^2$.
-
-:::
 
 
