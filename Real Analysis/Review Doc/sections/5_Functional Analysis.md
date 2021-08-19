@@ -2,6 +2,21 @@
 
 ## General Facts
 
+
+:::{.remark}
+For any measure space $(X, M, \mu)$, one can define $L^2(\mu)$ with the inner product $\inner{f}{g} \da \int_X f\bar{g} d\mu$.
+:::
+
+
+:::{.fact title="Cauchy-Schwarz"}
+For $x, y\in H$,
+\[
+\abs{ \inner{x}{y}} \leq \norm{x} \norm{y}
+,\]
+with equality iff $x, y$ are linearly independent.
+:::
+
+
 :::{.fact title="Pythagoras"}
 \[
 \inner{v}{w} = 0 \implies \norm{v+w}^2 = \norm{v}^2 + \norm{w}^2
@@ -19,9 +34,28 @@ For all $x, y\in H$,
 \[
 4 \inner{x}{y} = \norm{x+y}^2 - \norm{x-y}^2 +i\qty{\norm{x+iy}^2 - \norm{x-iy}^2}
 .\]
+:::
+
+
+:::{.fact title="Parallelogram law"}
+For all $x, y\in H$, 
+\[
+\norm{x+y}^2 + \norm{x-y}^2 = 2\qty{\norm{x}^2 + \norm{y}^2 }
+.\]
+:::
+
+
+:::{.proposition title="Convergence implies convergence of inner products"}
+If $x_k\to x$ and $y_k\to y$ in $H$, then $\inner{x_k}{y_k} \to \inner{x}{y}$.
+Proof:
+\[
+\abs{\inner{x_k}{y_k} - \inner{x}{y} } =\abs{\inner{x_n - x}{y_n} + \inner{x}{y_n-y} } \leq \norm{x_n - x}\norm{y_n} + \norm{x} \norm{y_n - y}
+.\]
 
 
 :::
+
+
 
 
 ## Fourier Coefficients
