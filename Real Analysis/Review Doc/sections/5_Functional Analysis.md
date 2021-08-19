@@ -27,7 +27,6 @@ This is surjective by Radon-Nikodym, and an isometry by Holder's inequality, whi
 ## General Facts
 
 
-
 :::{.remark}
 Working with inner products:
 \[
@@ -298,4 +297,14 @@ n, m \geq N \implies \norm{L_{n} - L_{m}} < \varepsilon \implies \abs{L_{m}(x) -
 :::
 
 
+## Misc
+
+
+:::{.remark}
+Big theorems for Banach spaces:
+
+- Uniform boundedness principle
+- Open mapping theorem
+- Closed graph theorem
+:::
 
