@@ -354,6 +354,7 @@ This is maybe easier to remember for Lie algebras: there
 C_{\lieg}(\lieh) = \ts{x\in \lieg \st [xh] = 0 \,\forall h\in \lieh }
 N_{\lieg}(\lieh) = \ts{x\in \lieg \st [xh] \in \lieh \,\forall h\in \lieh }
 .\]
+So $[x, \wait]_{\lieh} = 0$ for central $x$ and $\im [x, \wait]_{\lieh} \subseteq \lieh$ for normal elements.
 :::
 
 :::{.definition title="Center"}
