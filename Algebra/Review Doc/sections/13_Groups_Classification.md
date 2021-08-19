@@ -31,6 +31,7 @@ In fact, $C_n\units$ cyclic iff $n=2,4,p^k, 2p^k$ for $p$ an odd prime.
 
 - For $p^k$ an odd prime power, $\Aut(C_{p^k}) \cong C_{\varphi(p^k)}$ is cyclic.
 
+
 - For $2^k$ with $k\geq 1$, $C_{2^k}\units \cong C_{2}\times C_{2^{k-2}}$.
 
 - If $G, H$ have coprime order then $\Aut(G \cross H) \cong \Aut(G) \cross  \Aut(H)$.
@@ -55,6 +56,9 @@ C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}}
 \[
 \# \GL_n(\FF_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
 .\]
+
+- $\Aut(C_m^n)$ for $m$ not prime: no clue!
+  For $n=2$, this seems to be a wreath product $\Aut(C_m) \wr C_2$.
 
 
 - Counting homs: $\# \Hom_\Grp(C_n, C_m) = \gcd(n ,m)$.
