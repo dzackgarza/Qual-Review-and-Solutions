@@ -84,6 +84,11 @@
   - Uniformly continuous
   - Bounded almost everywhere
 
+- Pass to a subsequence!
+
+- Add and subtract a thing. 
+  Eg, $\norm{T_nx_n - Tx} = \norm{T_nx_n - Tx_n + Tx_n - Tx}$.
+
 ## The Absolute Essentials
 
 :::{.proposition title="Convergent Sums Have Small Tails"}
