@@ -2,6 +2,7 @@
 
 :::{.fact}
 Some facts about common automorphism groups, and how to count and reason about them.
+We have essentially a complete classification for homs between cyclic groups $C_m$ and any of their automorphism groups $\Aut(C_m)$, so for example $\Hom(C_m, C_n), \Hom(C_m, \Aut(C_n)), \Hom(\Aut(C_m), C_n)$, etc.
 There's a good reference here: <https://www.whitman.edu/documents/Academics/Mathematics/SeniorProject_BrianSloan.pdf>
 
 
