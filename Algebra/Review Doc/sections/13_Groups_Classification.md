@@ -77,7 +77,15 @@ Some examples of writing automorphism groups as products of cyclic groups:
 \Aut(C_{2\cdot 3\cdot 5}) &\cong \Aut(C_2) \cross \Aut(C_3) \cross \Aut(C_5) \cong 1\cross C_{\phi(3)}\cross C_{\phi(5)} \cong C_2 \cross C_4
 .\]
 
+Some concrete examples of $C_m\units$ for various $m$:
 
+- $m=2: 0$
+- $m=3: C_2$
+- $m=4: C_2$
+- $m=5: C_2$
+- $m=7: C_6$
+- $m=8: C_2^2$
+- $m=9: C_6$
 :::
 
 
