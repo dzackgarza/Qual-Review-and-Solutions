@@ -346,7 +346,14 @@ Contrast to the centralizer: these don't have to fix $H$ pointwise, but instead 
 :::
 
 :::{.remark}
-$C_G(S) \normal N_G(H)$ for any $H$.
+$C_G(H) \normal N_G(H)$ for any $H$.
+The main difference between these is that $C_G(S)$ has to centralize $H$ pointwise, where $N_G(H)$ allows the weaker condition of centralizing $H$ as a set (potentially permuting elements within $H$).
+
+This is maybe easier to remember for Lie algebras: there
+\[
+C_{\lieg}(\lieh) = \ts{x\in \lieg \st [xh] = 0 \,\forall h\in \lieh }
+N_{\lieg}(\lieh) = \ts{x\in \lieg \st [xh] \in \lieh \,\forall h\in \lieh }
+.\]
 :::
 
 :::{.definition title="Center"}
