@@ -84,7 +84,7 @@ Some concrete examples of $C_m\units$ for various $m$:
 - $m=4: C_2$
 - $m=5: C_2$
 - $m=7: C_6$
-- $m=8: C_2^2$
+- $m=8: C_2\times C_2$
 - $m=9: C_6$
 - $m=10: C_4$
 - $m=11: C_{10}$
@@ -717,3 +717,4 @@ Proof of first claim: let $m\da \# G = pqr$, then $G$ has a normal subgroup of o
   - Applying the same lemma to $R'$ immediately yields a normal subgroup $R''$ of order $r$ in $R'$
   - Now use that $R'' \operatorname{char} R'$ since Sylows are characteristic, and $R'\normal G$, so $R''\normal G$ too.
 :::
+
