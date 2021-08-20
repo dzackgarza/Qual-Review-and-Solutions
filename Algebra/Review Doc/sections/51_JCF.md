@@ -84,12 +84,12 @@ E_{\lambda_i} &= \dim(A - \lambda_i I)
   - The number of (usual) eigenvector associated to $\lambda_i$, i.e. the dimension of their span.
 
 - $A$ is diagonalizable iff $\dim E_{\lambda_i} = m_i$ for all $i$.
+- Eigenvectors for distinct Jordan blocks are linearly independent.
 
 [^why_largest_block]: 
 This is because $(x-\lambda_i)^{\ell_i}$ annihilates a Jordan block of size $\ell_i$, along with any blocks of size $k\leq \ell_i$.
 
 :::
-
 
 :::{.example title="?"}
 Suppose $A$ is $5\times 5$ with 
@@ -110,7 +110,6 @@ Some deductions:
   - So this must be $J_1 \oplus J_1$
 
 :::
-
 
 :::{.warnings}
 The data of $\min_A(t), \chi_A(t)$ is **not** enough to uniquely determine $\JCF(A)$.
