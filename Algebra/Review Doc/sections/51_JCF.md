@@ -2,6 +2,22 @@
 
 > Useful reference: <https://mattbaker.blog/2015/07/31/the-jordan-canonical-form/>
 
+
+:::{.remark title="Sketch proof of existence of JCF"}
+\envlist
+
+- Let $f:V\to V$, say $f$ is decomposable iff $V$ splits into a direct sum of $f\dash$invariant subspaces.
+- In this case, $f$ has a block form and restricts to an indecomposable map on the invariant subspaces, so only consider those.
+- For any indecomposable $h$, there is an integer $m\geq 1$ such that $V = \ker h^m \oplus \im h^m$.
+- Find an eigenvalue $fv = \lambda v$ and apply this fact to $h\da f - \lambda I$.
+- Since $V$ is irreducible and $v\in \ker h$, this forces $V = \ker h^m$, making $h$ nilpotent of some minimal degree $k\leq m$, so $h^k = 0$.
+- Then one can find a cyclic vector $w$ where $h^kw = 0$ but $h^{k-1}w \neq 0$, so $\ts{w, hw, \cdots, h^{k-1}w}$ is a basis for $V$.
+  - That $k=\dim V$ follows because any $k< \dim v$ would yield a proper $f\dash$invariant subspace.
+- The matrix of any cyclic vector is exactly a Jordan block.
+
+:::
+
+
 ## Facts
 
 :::{.fact}
