@@ -116,8 +116,6 @@ The data of $\min_A(t), \chi_A(t)$ is **not** enough to uniquely determine $\JCF
 Counterexample: there are two distinct possibilities for $4\times 4$ matrices with $\min_A(t) = t^2$ and $\chi_A(t) = t^4$, namely $J_2 \oplus J_2$ and $J_2 \oplus J_1 \oplus J_1$.
 :::
 
-
-
 :::{.lemma title="?"}
 The elementary divisors of $A$ are the minimal polynomials of the Jordan blocks.
 :::
