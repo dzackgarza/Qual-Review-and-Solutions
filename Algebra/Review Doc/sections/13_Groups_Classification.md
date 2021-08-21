@@ -56,6 +56,7 @@ C_n= C_{\prod_{k=1}^\ell p_k^{n_k}}= \prod_{k=1}^{\ell} C_{p_k^{n_k}}
 \[
 \# \GL_n(\FF_p) = \prod_{k=0}^{n-1}(p^n-p^k) = (p^n-1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1})
 .\]
+![](figures/2021-08-20_19-45-33.png)
 
 - $\Aut(C_m^n)$ for $m$ not prime: no clue!
   For $n=2$, this seems to be a wreath product $\Aut(C_m) \wr C_2$.
