@@ -478,8 +478,9 @@ Fubini-Tonelli, and sketch region to change integration bounds, and continuity i
 ## Lp Facts
 
 :::{.proposition title="Dense subspaces of $L^2(I)$ "}
-The following are dense subspaces of $L^2([0, 1])$:
+The following are dense subspaces of $L^2([0, 1])$ and $L^1(\RR)$:
 
+- Bounded measurable functions with bounded support
 - Simple functions
 - Step functions
 - $C_0([0, 1])$
