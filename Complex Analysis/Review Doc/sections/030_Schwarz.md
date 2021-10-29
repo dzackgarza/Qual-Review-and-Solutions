@@ -17,6 +17,8 @@ then $f$ is a rotation.
 :::
 
 
+![](figures/2021-10-29_02-32-14.png)
+
 :::{.proof title="?"}
 \envlist
 
