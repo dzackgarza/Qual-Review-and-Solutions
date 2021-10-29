@@ -1,5 +1,7 @@
 # Preliminaries
 
+- Since $\CC$ is a field, $\CC[x]$ is a UFD.
+
 :::{.definition title="Toy contour"}
 A closed Jordan curve that separates $\CC$ into an exterior and interior region is referred to as a **toy contour**.
 :::
@@ -62,7 +64,6 @@ z^{\alpha} \da e^{\alpha \Log(z)}
 .\]
 :::
 
-
 :::{.warnings}
 It's tempting to define
 \[
@@ -71,7 +72,6 @@ z^{1\over n} \da (re^{i\theta})^{1\over n} = r^{1\over n} e^{i\theta \over n}
 but this requires a branch cut to ensure continuity.
 
 :::
-
 
 :::{.remark}
 Note the problem: for $z\da x+i0 \in \RR^{\leq 0}$, just above the axis consider $z_+ \da x + i\eps$ and $z_- \da x-i\eps$.
@@ -83,7 +83,6 @@ Then
 So $\log$ can't even be made continuous if one crosses the branch.
 The issue is the **branch point** or **branch singularity** at $z=0$.
 :::
-
 
 :::{.theorem title="Existence of log of a function"}
 If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
@@ -284,7 +283,10 @@ In this case, $a = f'(z_0)$.
 \da \del_{\bar z}
 ={1\over 2}\qty{ \del_x + i\del_y}
 .\]
-Moreover, $f' = \del f + \delbar f$.
+Moreover, the 1-form corresponding to $f$ can be written as 
+\[
+df = \del f + \delbar f = \dd{F}{z} \dz + \dd{F}{\zbar}\dzbar
+.\]
 
 Written slightly more explicitly:
 \[
@@ -659,8 +661,6 @@ For $z=1$:
 .\]
 :::
 
-
 :::{.exercise title="?"}
 Show that a real-valued holomorphic function must be constant.
 :::
-
