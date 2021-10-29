@@ -39,3 +39,12 @@ A nowhere differentiable function:
 ![](figures/2021-10-29_16-57-12.png)
 
 Monotone functions are differentiable almost everywhere.
+
+
+![](figures/2021-10-29_17-28-39.png)
+
+
+:::{.exercise title="?"}
+Can there be a function $f:I\to \RR$ that is continuous on $\QQ$ and discontinuous otherwise?
+:::
+
