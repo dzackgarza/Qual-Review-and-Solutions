@@ -84,6 +84,8 @@ So $\log$ can't even be made continuous if one crosses the branch.
 The issue is the **branch point** or **branch singularity** at $z=0$.
 :::
 
+
+- Since $\CC$ is a field, $\CC[x]$ is a UFD.
 :::{.theorem title="Existence of log of a function"}
 If $f$ is holomorphic and nonvanishing on a simply-connected region $\Omega$, then there exists a holomorphic $G$ on $\Omega$ such that
 \[
@@ -356,13 +358,11 @@ v_{xx} + u_{yx} = 0 \implies v_{xx} + v_{yy} = 0 \\ \\
 
 ### Exercises
 
-:::{.proposition title="Injectivity Relates to Derivatives"}
-If $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
+
+:::{.exercise title="Injectivity relates to derivatives"}
+Show that if $z_0$ is a zero of $f'$ of order $n$, then $f$ is $(n+1)$-to-one in a neighborhood of $z_0$.
 :::
 
-:::{.proof}
-?
-:::
 
 \todo[inline]{proof}
 
@@ -428,6 +428,12 @@ If $f$ is holomorphic on $\Omega$ and any of the following hold, then $f$ is con
 \todo[inline]{Finish}
 
 ## Power Series
+
+
+![](figures/2021-10-28_21-22-12.png)
+
+
+![](figures/2021-10-28_21-22-35.png)
 
 :::{.theorem title="Improved Taylor's Theorem"}
 If $f$ is holomorphic on a region $\Omega$ with $\closure{ D_R(z_0)} \subseteq \Omega$, and for every $z\in D_r(z_0)$, $f$ has a power series expansion of the following form:
