@@ -19,6 +19,15 @@ Show that $\del_{\log}(fg) = \del_{\log} f + \del_{\log} g$, i.e.
 .\]
 :::
 
+
+:::{.remark}
+Note that the logarithmic derivative picks up the valuation:
+\[
+d \qty{ \log(f) } = {f'\over f}\dz  \implies \Res_{z=p}(d \log(f) ) = v_p(f)
+.\]
+
+:::
+
 :::{.definition title="Winding Number"}
 For $\gamma \subseteq \Omega$ a closed curve not passing through a point $z_0$, the **winding number of $\gamma$ about $z_0$** (or the **index**) is defined as
 \[
@@ -136,7 +145,6 @@ Use the following contour:
 
 Take $g(z) \da 2e^z < f(z) \da f(z) \da z+3$.
 :::
-
 
 
 

@@ -137,6 +137,9 @@ As a special case, if $z_0$ is a simple pole of $f$, then
 .\]
 :::
 
+
+![](figures/2021-10-29_01-33-46.png)
+
 :::{.corollary title="Better derivative formula that sometimes works for simple poles"}
 
 If additionally $f=g/h$ where $h(z_0) = 0$ and $h'(z_0)\neq 0$, 
@@ -179,8 +182,11 @@ Calculate the residue of $1/\sin(\pi x)$ at $z=n\in \ZZ$.
 :::
 
 ![image_2021-05-17-13-32-46](figures/image_2021-05-17-13-32-46.png)
+
 ![image_2021-05-17-13-32-57](figures/image_2021-05-17-13-32-57.png)
+
 ![image_2021-05-17-13-33-12](figures/image_2021-05-17-13-33-12.png)
+
 ![image_2021-05-17-13-33-30](figures/image_2021-05-17-13-33-30.png)
 
 :::{.exercise title="?"}
