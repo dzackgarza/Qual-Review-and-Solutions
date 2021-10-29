@@ -32,3 +32,8 @@
 ![](figures/2021-10-29_16-51-23.png)
 
 ![](figures/2021-10-29_16-55-00.png)
+
+A nowhere differentiable function:
+
+
+![](figures/2021-10-29_16-57-12.png)
