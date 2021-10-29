@@ -1,5 +1,6 @@
 ---
-order:50
+title: Basics
+order: 50
 ---
 
 # Functional Analysis

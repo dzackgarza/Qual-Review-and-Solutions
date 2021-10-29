@@ -1,3 +1,7 @@
+---
+order: 9010
+---
+
 # Extra Problems from Problem Sets
 
 ## 2010 6.1

@@ -1,3 +1,8 @@
+---
+title: Basics
+order: 9900
+---
+
 # Appendix: Undergrad Material
 
 
