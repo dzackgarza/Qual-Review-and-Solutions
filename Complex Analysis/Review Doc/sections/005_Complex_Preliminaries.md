@@ -285,6 +285,13 @@ In this case, $a = f'(z_0)$.
 ={1\over 2}\qty{ \del_x + i\del_y}
 .\]
 Moreover, $f' = \del f + \delbar f$.
+
+Written slightly more explicitly:
+\[
+\dd{F}{z} = {1\over 2}\qty{\dd{F}{x} + {1\over i}\dd{F}{y} } && 
+\dd{F}{\zbar} = {1\over 2}\qty{\dd{F}{x} - {1\over i}\dd{F}{y} } 
+.\]
+
 :::
 
 :::{.proposition title="Holomorphic iff delbar vanishes"}
