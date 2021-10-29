@@ -95,6 +95,8 @@
   - Measurable functions are almost continuous,
   - Pointwise convergent sequences of measurable functions are almost uniformly convergent.
 
+- $L^p$ spaces shrink as $p\nearrow \infty$ (by Holder).
+
 - Every Borel is $F_\sigma$ up to a null set.
 
 ## The Absolute Essentials
