@@ -15,6 +15,15 @@ What to use when:
   \int_{0}^{2 \pi} \frac{d \theta}{1+a^{2}-2 a \cos \theta}=\int_{S^{1}} \frac{i d z}{(z-a)(a z-1)}=2 \pi i\left(i /\left(a^{2}-1\right)\right)=\frac{2 \pi}{1-a^{2}}
   .\]
 
+- $f(z) = z^a g(z)$ with $g$ rational: semicircle $[0,R] \union S_1(R) \union i[0, R]$ to get $(1-i^a)\int f$
+  E.g. setting $w \da e^{\pi i a \over 2}$, 
+  \[
+  \int_{0}^{\infty} \frac{x^{a}}{1+x^{2}} d x =
+  \frac{\pi\left(i^{a}-(-i)^{a}\right)}{\left(1-1^{a}\right)}=\pi \frac{\omega-\omega^{3}}{1-\omega^{4}}=\frac{\pi}{\omega+\omega^{-1}}=\frac{\pi}{2 \cos (\pi a / 2)}
+  ,\]
+  where for $a = 1/3$ this yields $\pi/\sqrt 3$.
+
+
 :::
 
 
