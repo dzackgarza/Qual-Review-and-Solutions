@@ -1,3 +1,8 @@
+---
+order: 0
+title: Basics
+---
+
 # Basics
 
 ## Table of Notation

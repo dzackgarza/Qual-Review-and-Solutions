@@ -1,3 +1,7 @@
+---
+order: 10
+---
+
 # Measure Theory
 
 :::{.fact}
