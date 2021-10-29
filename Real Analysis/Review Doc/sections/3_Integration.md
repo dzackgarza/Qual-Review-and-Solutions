@@ -2,7 +2,6 @@
 
 ## Unsorted 
 
-
 :::{.definition title="Measurable Function"}
 A function $f: (X, \mcm_X) \to (Y, \mcm_Y)$ is **$(\mcm_X, \mcm_Y)\dash$measurable** iff $f\inv(\mcm_Y) \subseteq \mcm_X$.
 Equivalently, if $\mce_Y$ is a generating set for $\mcb_Y$, $f\inv(\mce_Y) \subseteq \mcb_X$.
