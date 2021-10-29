@@ -8,8 +8,13 @@ We freely abuse notation!
 What to use when:
 
 - $f(z) = p(z)/q(z)$: if $f\in L^1(\RR)$, integrate over semicircle in Q1 or a pie slice $[0, R] \union S_1(R) \union \zeta[0, R]$.
-  E.g. $\int_\RR {1\over 1 + x^n}\dx = {(\pi / n) \over \sin\qty{\pi \over n}}$
+  E.g. $\int_{\RR_{\geq 0} } {1\over 1 + x^n}\dx = {(\pi / n) \over \sin\qty{\pi \over n}}$
 - $f(z) = R(\cos\theta, \sin\theta)$ a rational function of sines/cosines: set $z= e^{i\theta}$ and integrate over $S^1$.
+  E.g.
+  \[
+  \int_{0}^{2 \pi} \frac{d \theta}{1+a^{2}-2 a \cos \theta}=\int_{S^{1}} \frac{i d z}{(z-a)(a z-1)}=2 \pi i\left(i /\left(a^{2}-1\right)\right)=\frac{2 \pi}{1-a^{2}}
+  .\]
+
 :::
 
 
