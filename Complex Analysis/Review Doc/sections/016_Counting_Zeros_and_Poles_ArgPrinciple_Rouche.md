@@ -127,6 +127,11 @@ The number of zeros/poles are determined by a dominating function.
 \todo[inline]{Prove}
 
 
+![](figures/2021-10-29_01-39-19.png)
+
+
+![](figures/2021-10-29_01-39-43.png)
+
 :::{.exercise title="?"}
 Show that $h(z) =z^5 + 3z + 1$ has 5 zeros in $\abs z \leq 2$.
 :::
