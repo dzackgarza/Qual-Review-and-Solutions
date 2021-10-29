@@ -1,13 +1,19 @@
 # Zeros and Singularities
 
+
+:::{.remark}
+On notation: for an analytic function $f$ expanded as a power series about $a$, write $v_a(f)$ as the $a\dash$adic valuation of $f$: expanding $f(z) = \sum_{k\in \ZZ} a_k (z-a)^k$ about $a$, define $v_a(f) = n$ iff $a_n\neq 0$ but $a_{\leq n} = 0$.
+:::
+
+
 :::{.definition title="Singularity"}
 A point $z_0$ is an **isolated singularity** if $f(z_0)$ is undefined but $f(z)$ is defined in a punctured neighborhood $D(z_0)\sm\ts{z_0}$ of $z_0$.
 
 There are three types of isolated singularities:
 
-- Removable singularities
-- Poles 
-- Essential singularities
+- Removable singularities, so $v_a(f) \in [0, \infty)$
+- Poles, so $v_a(f) \in (-\infty, 0)$
+- Essential singularities, so $v_a(f) = -\infty$, e.g. $\sin(z\inv )$ at $z=0$.
 :::
 
 :::{.definition title="Removable Singularities"}
@@ -18,6 +24,7 @@ Equivalently,
 \lim_{z\to z_0}(z-z_0) f(z) = 0
 .\]
 Equivalently, $f$ is bounded on a neighborhood of $z_0$.
+Equivalently, $v_{z_0}(f) \geq 0$
 :::
 
 :::{.remark}
@@ -58,12 +65,9 @@ A similar example: $\qty{z(z-1)}^{1\over 2}$ has two branch singularities at $z=
 
 
 
-
-
 :::{.theorem title="Extension over removable singularities"}
 If $f$ is holomorphic on $\Omega\sm\ts{z_0}$ where $z_0$ is a removable singularity, then there is a unique holomorphic extension of $f$ to all of $\Omega$.
 :::
-
 
 :::{.proof title="?"}
 Take $\gamma$ to be a circle centered at $z_0$ and use
@@ -75,6 +79,10 @@ This is valid for $z\neq z_0$, but the right-hand side is analytic. (?)
 
 \todo[inline]{Revisit}
 
+
+![](figures/2021-10-29_01-30-50.png)
+
+![](figures/2021-10-29_01-31-06.png)
 
 
 :::{.theorem title="Improved Taylor Remainder Theorem"}
