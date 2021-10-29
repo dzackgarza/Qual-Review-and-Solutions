@@ -6,11 +6,9 @@
 For any measure space $(X, M, \mu)$, one can define $L^2(\mu)$ with the inner product $\inner{f}{g} \da \int_X f\bar{g} d\mu$.
 :::
 
-
 :::{.proposition title="$L^p$ spaces are Banach"}
-
+?
 :::
-
 
 :::{.proposition title="Duals of $L^p$ spaces"}
 For $p\inv + q\inv = 1$, with $1<p<\infty$, there is an isomorphism of Banach spaces
@@ -23,9 +21,7 @@ This is surjective by Radon-Nikodym, and an isometry by Holder's inequality, whi
 
 :::
 
-
 ## General Facts
-
 
 :::{.remark}
 Working with inner products:
@@ -45,7 +41,6 @@ For $x, y\in H$,
 with equality iff $x, y$ are linearly independent.
 :::
 
-
 :::{.fact title="Pythagoras"}
 \[
 \inner{v}{w} = 0 \implies \norm{v+w}^2 = \norm{v}^2 + \norm{w}^2
@@ -57,7 +52,6 @@ More generally, if $x_i \perp x_j$ for all $i\neq j$, then
 
 :::
 
-
 :::{.fact title="Polarization"}
 For all $x, y\in H$,
 \[
@@ -65,14 +59,12 @@ For all $x, y\in H$,
 .\]
 :::
 
-
 :::{.fact title="Parallelogram law"}
 For all $x, y\in H$, 
 \[
 \norm{x+y}^2 + \norm{x-y}^2 = 2\qty{\norm{x}^2 + \norm{y}^2 }
 .\]
 :::
-
 
 :::{.proposition title="Convergence implies convergence of inner products"}
 If $x_k\to x$ and $y_k\to y$ in $H$, then $\inner{x_k}{y_k} \to \inner{x}{y}$.
@@ -83,8 +75,6 @@ Proof:
 
 
 :::
-
-
 
 
 ## Fourier Coefficients
@@ -217,7 +207,6 @@ $$
 - By construction, $\norm{x-S_{N}}^2 = \norm{x}^2 - \sum^N \abs{a_{n}}^2 \to 0$, so $\norm{x}^2 = \sum^\infty \abs{a_{n}}^2$.
 
 :::
-
 
 ## Operator Norms
 

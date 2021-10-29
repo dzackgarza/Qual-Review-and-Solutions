@@ -89,6 +89,8 @@
 - Add and subtract a thing. 
   Eg, $\norm{T_nx_n - Tx} = \norm{T_nx_n - Tx_n + Tx_n - Tx}$.
 
+- $(a_k) \in \ell^2(\ZZ)$ is much weaker than $(a_k) \in \ell^1(\ZZ)$.
+
 ## The Absolute Essentials
 
 :::{.proposition title="Convergent Sums Have Small Tails"}
