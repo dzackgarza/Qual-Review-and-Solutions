@@ -90,6 +90,12 @@
   Eg, $\norm{T_nx_n - Tx} = \norm{T_nx_n - Tx_n + Tx_n - Tx}$.
 
 - $(a_k) \in \ell^2(\ZZ)$ is much weaker than $(a_k) \in \ell^1(\ZZ)$.
+- Littlewood's principles:
+  - Measurable sets are almost finite unions of intervals,
+  - Measurable functions are almost continuous,
+  - Pointwise convergent sequences of measurable functions are almost uniformly convergent.
+
+- Every Borel is $F_\sigma$ up to a null set.
 
 ## The Absolute Essentials
 
