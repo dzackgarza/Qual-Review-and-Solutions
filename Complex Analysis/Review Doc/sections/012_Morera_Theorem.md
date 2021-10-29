@@ -20,7 +20,6 @@ Commute limit with integral and apply Morera's theorem.
 This can be applied to series of the form $\sum_k f_k(z)$.
 :::
 
-
 ### Symmetric Regions
 
 In this section, take $\Omega$ to be a region symmetric about the real axis, so $z\in \Omega \iff \bar{z} \in \Omega$.
@@ -57,7 +56,4 @@ Apply the symmetry principle.
 :::{.remark}
 $\HH^+, \HH^-$ can be replaced with any region symmetric about a line segment $L\subseteq \RR$.
 :::
-
-
-
 
