@@ -4,6 +4,12 @@
 :::{.remark}
 Pedantic warning: $\Res_{z=p}(f)$ should really be $\Res_{z=p}(df)$ for $df = f(z) \dz$, since it's only an invariant of the 1-form $df$ and not necessarily $f$ itself.
 We freely abuse notation!
+
+What to use when:
+
+- $f(z) = p(z)/q(z)$: if $f\in L^1(\RR)$, integrate over semicircle in Q1 or a pie slice $[0, R] \union S_1(R) \union \zeta[0, R]$.
+  E.g. $\int_\RR {1\over 1 + x^n}\dx = {(\pi / n) \over \sin\qty{\pi \over n}}$
+- $f(z) = R(\cos\theta, \sin\theta)$ a rational function of sines/cosines: set $z= e^{i\theta}$ and integrate over $S^1$.
 :::
 
 
