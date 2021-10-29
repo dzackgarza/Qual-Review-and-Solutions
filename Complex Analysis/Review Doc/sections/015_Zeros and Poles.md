@@ -183,3 +183,6 @@ Consider $f(z) - P(z)$, subtracting off the principal part at each pole $z_0$, t
 A singularity of a holomorphic function is removable if and only if the function is bounded in some punctured neighborhood of the singular point.
 :::
 
+## Exercises
+
+- Show that $\sin(z)/z$ has no poles.
