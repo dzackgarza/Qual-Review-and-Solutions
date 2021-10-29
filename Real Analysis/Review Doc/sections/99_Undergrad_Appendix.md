@@ -48,3 +48,9 @@ Monotone functions are differentiable almost everywhere.
 Can there be a function $f:I\to \RR$ that is continuous on $\QQ$ and discontinuous otherwise?
 :::
 
+
+:::{.solution}
+![](figures/2021-10-29_18-23-37.png)
+:::
+
+
