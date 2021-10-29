@@ -37,3 +37,5 @@ A nowhere differentiable function:
 
 
 ![](figures/2021-10-29_16-57-12.png)
+
+Monotone functions are differentiable almost everywhere.
