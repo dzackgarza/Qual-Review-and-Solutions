@@ -7,7 +7,10 @@ order: 20
 :::{.fact}
 Some useful tricks:
 
-- $\mu(A\sm B) = \mu(A) - \mu(B)$ if $\mu(B) < \infty$
+- \[
+\mu(A\sm B) = \mu(A) - \mu(B)
+\quad \text{if } \mu(B) < \infty
+.\]
 - Write $f = f-f_n + f_n$
 - If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
 - If $E$ is measurable,
