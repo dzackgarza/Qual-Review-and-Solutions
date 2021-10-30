@@ -11,6 +11,15 @@ Show that
 .\]
 :::
 
+asdasd
+
+
+:::{.solution}
+oh boy
+
+:::
+
+
 ## 2010 6.2
 
 Show that 
