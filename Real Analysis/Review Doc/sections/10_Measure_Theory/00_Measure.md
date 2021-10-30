@@ -13,9 +13,11 @@ Some useful tricks:
 .\]
 - When in doubt, write $f = f-f_n + f_n$ and use the triangle inequality.
 - If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
-- If $E$ is measurable,
-  - $E = F_{\delta} \disjoint N$ for $N$ a null set.
-  - $E \disjoint N = G_{\delta}$ for $N$ a null set.
+- If $E$ is measurable, there are null sets $N$ such that 
+\[
+E = F_\sigma \disjoint N && E \disjoint N = G_\delta
+.\]
+
 :::
 
 ## Abstract Measure Theory
