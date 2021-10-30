@@ -11,8 +11,6 @@ Show that
 .\]
 :::
 
-
-
 asdsa
 
 :::{.solution}
