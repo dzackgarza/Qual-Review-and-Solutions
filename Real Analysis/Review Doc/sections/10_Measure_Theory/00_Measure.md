@@ -220,11 +220,9 @@ $$
 Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
 :::
 
-
 :::{.definition title="$\sigma\dash$finiteness"}
 A measure space $(X, \mcm, \mu)$ is **$\sigma\dash$finite** if $X$ can be written as a union of countably many measurable sets with finite measure.
 :::
-
 
 :::{.proposition title="Regularity of measure"}
 If $(X, \mcb, \mu)$ is a Borel measure space where $\mu$ is finite on all balls of finite radius, then for any $E \in \mcb$ and any $\eps>0$,
@@ -240,10 +238,7 @@ Show that $E$ is measurable iff $E$ is regular in either sense above.
 
 ## Exercises
 
-
 :::{.problem title="?"}
 Show that if $\sum \mu(E_k) < \infty$ then almost every $x\in X$ is in at most finitely many $E_k$.
 :::
-
-
 
