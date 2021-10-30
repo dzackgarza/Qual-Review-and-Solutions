@@ -4,7 +4,6 @@ order: 20
 
 # Measure Theory
 
-
 :::{.fact}
 Some useful tricks:
 
@@ -12,7 +11,7 @@ Some useful tricks:
 \mu(A\sm B) = \mu(A) - \mu(B)
 \quad \text{if } \mu(B) < \infty
 .\]
-- Write $f = f-f_n + f_n$
+- When in doubt, write $f = f-f_n + f_n$
 - If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
 - If $E$ is measurable,
   - $E = F_{\delta} \disjoint N$ for $N$ a null set.
