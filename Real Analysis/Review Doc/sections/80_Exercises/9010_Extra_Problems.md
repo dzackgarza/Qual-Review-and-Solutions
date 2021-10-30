@@ -6,13 +6,13 @@
 :::{.problem title="?"}
 Show that 
 \[
-\int_{\BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p < n \\
+\int_{\BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p < n \\ \\ \\ 
 \int_{\RR^n\sm \BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p > n 
 .\]
 :::
 
-
 ## 2010 6.2
+
 
 Show that 
 \[
