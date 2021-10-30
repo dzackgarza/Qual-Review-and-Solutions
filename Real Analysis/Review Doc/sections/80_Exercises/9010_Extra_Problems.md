@@ -11,7 +11,6 @@ Show that
 .\]
 :::
 
-asdasd
 
 
 :::{.solution}
