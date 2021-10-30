@@ -22,7 +22,6 @@ E = F_\sigma \disjoint N && E \disjoint N = G_\delta
 
 ## Abstract Measure Theory
 
-
 :::{.definition title="Measures on measurable spaces"}
 If $(X, \mcm)$ is a measurable space, then a **measure** is a function $\mu: \mcm \to [0,\infty]$ such that 
 
