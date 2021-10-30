@@ -12,8 +12,13 @@ Some useful tricks:
 \quad \text{if } \mu(B) < \infty
 .\]
 - When in doubt, write $f = f-f_n + f_n$ and use the triangle inequality.
-- If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
-- If $E$ is Borel, there are null sets $N$ such that 
+- Measurable sets are well-approximated by opens:
+\[
+G\in \mcm \implies \forall \eps, \exists G = G(\eps) \text{ such that }\,\, m(G) \leq m(E) + \eps
+.\]
+
+If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
+- Borels are $F_\sigma$ or $G_\delta$ up to null sets, i.e. if $E$ is Borel, there are measure zero sets $N$ such that
 \[
 E = F_\sigma \disjoint N && E \disjoint N = G_\delta
 .\]
