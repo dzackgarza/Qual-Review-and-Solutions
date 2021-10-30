@@ -21,7 +21,6 @@ G\in \mcm \implies \forall \eps, \exists G = G(\eps) \text{ such that }\,\, m(G)
 \[
 E = F_\sigma \disjoint N && E \disjoint N = G_\delta
 .\]
-
 :::
 
 ## Abstract Measure Theory
