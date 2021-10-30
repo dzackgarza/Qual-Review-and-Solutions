@@ -251,6 +251,3 @@ Show that if $\sum \mu(E_k) < \infty$ then almost every $x\in X$ is in at most f
 
 
 
-
-
-
