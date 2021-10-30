@@ -17,7 +17,6 @@ Some useful tricks:
 G\in \mcm \implies \forall \eps, \exists G = G(\eps) \text{ such that }\,\, m(G) \leq m(E) + \eps
 .\]
 
-If $G$ is measurable, then there for every $\eps$ there exists an open $G \contains E$ such $m(G) \leq m(E) + \eps$
 - Borels are $F_\sigma$ or $G_\delta$ up to null sets, i.e. if $E$ is Borel, there are measure zero sets $N$ such that
 \[
 E = F_\sigma \disjoint N && E \disjoint N = G_\delta
@@ -62,7 +61,7 @@ E_{n} \nearrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E) \\
 m(E_{1}) < \infty \text{ and } E_{n} \searrow E &\implies m(E_{n}) \converges{n\to\infty}\too m(E)
 .\]
 
-Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$.
+Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$ where $\lim_n E_n = E\da \union_N E_n$ for $E_n \increaseto E$ and $\lim_n E_n = E \da \intersect_n E_n$ for $E_n\decreasesto E$.
 :::
 
 :::{.proof title="sketches"}
