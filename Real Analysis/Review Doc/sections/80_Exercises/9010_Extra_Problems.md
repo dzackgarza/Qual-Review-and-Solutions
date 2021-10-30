@@ -10,10 +10,14 @@ Show that
 .\]
 :::
 
+asdsa
+
 :::{.solution}
 oh boy
 
 :::
+
+qweqweq
 
 
 ## 2010 6.2
