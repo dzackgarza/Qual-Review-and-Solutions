@@ -2,7 +2,6 @@
 
 ## 2010 6.1
 
-
 :::{.problem title="?"}
 Show that 
 \[
@@ -10,10 +9,6 @@ Show that
 \int_{\RR^n\sm \BB^n} {1 \over \abs{x}^p } \dx &< \infty \iff p > n 
 .\]
 :::
-
-asdsa
-
-
 
 :::{.solution}
 oh boy
