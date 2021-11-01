@@ -10,14 +10,11 @@ Show that
 .\]
 :::
 
-asdsa
 
 :::{.solution}
-oh boy
-
+Todo
 :::
 
-qweqweq
 
 
 
@@ -27,6 +24,10 @@ Show that
 \[
 \int_{\RR^n} \abs{ f} = \int_0^{\infty } m(A_t)\dt && A_t \da \ts{x\in \RR^n \st \abs{f(x)} > t}
 .\]
+
+:::{.solution}
+Todo
+:::
 
 ## 2010 6.5
 
@@ -42,6 +43,9 @@ b. Show that if $x\in F^c$ then $I_F(x) = \infty$.
 c. Show that $I_F(x) < \infty$ for almost every $x$
 
 
+:::{.solution}
+Todo
+:::
 
 
 ## 2010 7.1

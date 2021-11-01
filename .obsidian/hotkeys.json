@@ -1,0 +1,87 @@
+{
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:toggle-fold": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "/"
+    }
+  ],
+  "open-with-default-app:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "workspace:close": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "W"
+    }
+  ],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:insert-wikilink": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "K"
+    }
+  ],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Delete"
+    }
+  ],
+  "file-explorer:move-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ]
+}

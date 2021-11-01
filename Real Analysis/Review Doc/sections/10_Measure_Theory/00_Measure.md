@@ -23,9 +23,6 @@ E = F_\sigma \disjoint N && E \disjoint N = G_\delta
 .\]
 :::
 
-
-## Abstract Measure Theory
-
 :::{.definition title="Measures on measurable spaces"}
 If $(X, \mcm)$ is a measurable space, then a **measure** is a function $\mu: \mcm \to [0,\infty]$ such that 
 
@@ -65,15 +62,15 @@ Mnemonic: $\lim_n \mu(E_n) = \mu(\lim E_n)$ where $\lim_n E_n = E\da \union_N E_
 :::
 
 :::{.proof title="sketches"}
-\envlist
+Idea: break into disjoint annuli!
 
 - From below: break into disjoint annuli $A_{2} = E_{2}\setminus E_{1}$, 
-  - Apply countable disjoint additivity to $E = \disjoint A_{i}$.
 
+  - Apply countable disjoint additivity to $E = \disjoint A_{i}$.
 - From above: funny step, use $E_{1} = (\disjoint E_{j}\setminus E_{j+1}) \disjoint (\intersect E_{j})$.
   - Taking measures yields a telescoping sum, and use countable additivity, then finiteness to subtract.
 
-![image_2021-05-28-23-29-31](figures/image_2021-05-28-23-29-31.png)
+  ![image_2021-05-28-23-29-31](figures/image_2021-05-28-23-29-31.png)
 
 
 :::
@@ -137,7 +134,7 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 - Now use that $\lim_{N\to\infty}\mu(F_{N+1}) = \lim_{N\to\infty} \mu(F_N)$ to conclude.
 :::
 
-## Outer Measure
+# Outer Measure
 
 :::{.proposition title="Properties of Outer Measure"}
 \envlist
@@ -155,7 +152,7 @@ F_1 = F \disjoint \Disjoint_{k=1}^{\infty} E_k
 A set $E$ is **measurable** iff it can be approximated by an open set in $m_*$, so there exists $G\contains E$ with $m_*(G\sm E) < \eps$.
 :::
 
-## Measures on $\RR^d$
+# Measures on $\RR^d$
 
 :::{.proposition title="Opens are unions of almost disjoint intervals."}
 Every open subset of $\RR$ (resp $\RR^n$) can be written as a unique countable union of disjoint (resp. almost disjoint) intervals (resp. cubes).
@@ -228,7 +225,7 @@ $$
 Take the cone on $f$ to get $F(x, y) = f(x)$, then compose $F$ with the linear transformation $T = [1, -1; 1, 0]$.
 :::
 
-:::{.definition title="$\sigma\dash$finiteness"}
+:::{.definition title="Sigma finiteness"}
 A measure space $(X, \mcm, \mu)$ is **$\sigma\dash$finite** if $X$ can be written as a union of countably many measurable sets with finite measure.
 :::
 
@@ -240,13 +237,4 @@ If $(X, \mcb, \mu)$ is a Borel measure space where $\mu$ is finite on all balls 
 
 :::
 
-:::{.problem title="?"}
-Show that $E$ is measurable iff $E$ is regular in either sense above.
-:::
-
-## Exercises
-
-:::{.problem title="?"}
-Show that if $\sum \mu(E_k) < \infty$ then almost every $x\in X$ is in at most finitely many $E_k$.
-:::
 
